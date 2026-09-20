@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository shows roughly 12,535 stars and 842 forks as of September 2026',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to OpenLLM\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — see that page for how OpenLLM compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to OpenLLM\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory) — see that page for how OpenLLM compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -213,14 +213,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'openllm-competitors',
         title: 'Competitors and Alternatives',
-        content: 'OpenLLM is one of several tools that wrap open-weight model inference behind an OpenAI-compatible API. Here is how it sits next to other options in the inference-server segment — see the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) for the full catalog, and the dedicated [OpenLLM vs. vLLM comparison](#openllm-vs-vllm) above for the closest head-to-head.',
+        content: 'OpenLLM is one of several tools that wrap open-weight model inference behind an OpenAI-compatible API. Here is how it sits next to other options in the inference-server segment — see the [Local LLM Software Directory](https://www.promptquorum.com/directory) for the full catalog, and the dedicated [OpenLLM vs. vLLM comparison](#openllm-vs-vllm) above for the closest head-to-head.',
         items: [
           '**[vLLM](/power-local-llm/vllm-explained)** — the high-throughput inference engine OpenLLM can use as a backend; evaluate it directly if raw serving throughput is your main concern. See the dedicated comparison section above.',
           '**[SGLang](/power-local-llm/sglang-explained)** — another high-performance inference engine and serving framework, often compared to vLLM on throughput and structured-generation features.',
           '**[LocalAI](/power-local-llm/localai-explained)** — a free, open-source, OpenAI-compatible local inference server with a broader focus on running multiple model types (text, image, audio) behind one API.',
           '**[LiteLLM](/power-local-llm/litellm-review)** — a proxy/SDK that presents a unified OpenAI-compatible interface across many different LLM providers and self-hosted backends, including OpenLLM itself.',
         ],
-        note: 'This is not an exhaustive list of inference-serving tools — see the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including OpenLLM\'s own directory entry.',
+        note: 'This is not an exhaustive list of inference-serving tools — see the [Local LLM Software Directory](https://www.promptquorum.com/directory) for the full, regularly updated catalog, including OpenLLM\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -276,7 +276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including OpenLLM\'s directory entry.',
+          '[Local LLM Software Directory 2026](https://www.promptquorum.com/directory) — the full catalog of local AI tools this article belongs to, including OpenLLM\'s directory entry.',
           '[vLLM Explained](/power-local-llm/vllm-explained) — a deeper look at the high-throughput inference engine OpenLLM can use as a backend, and the closest head-to-head comparison covered above.',
           '[SGLang Explained](/power-local-llm/sglang-explained) — another inference-serving engine in the same segment, compared on throughput and structured-generation features.',
           '[LiteLLM Review](/power-local-llm/litellm-review) — a unifying proxy/SDK layer that can sit in front of OpenLLM and other self-hosted or cloud LLM backends.',
@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Das GitHub-Repository zeigt Stand September 2026 rund 12.535 Sterne und 842 Forks',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu OpenLLMs Eintrag im [lokalen KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie OpenLLM im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu OpenLLMs Eintrag im [lokalen KI-Software-Verzeichnis](https://www.promptquorum.com/directory) — dort finden Sie einen schnellen Überblick, wie OpenLLM im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -495,14 +495,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'openllm-competitors',
         title: 'Wettbewerber und Alternativen',
-        content: 'OpenLLM ist eines von mehreren Tools, die die Inferenz quelloffener Modelle hinter einer OpenAI-kompatiblen API kapseln. So ordnet es sich neben anderen Optionen im Inferenzserver-Segment ein — siehe das [lokale KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) für den vollständigen Katalog und den dedizierten [OpenLLM-vs.-vLLM-Vergleich](#openllm-vs-vllm) oben für den direktesten Vergleich.',
+        content: 'OpenLLM ist eines von mehreren Tools, die die Inferenz quelloffener Modelle hinter einer OpenAI-kompatiblen API kapseln. So ordnet es sich neben anderen Optionen im Inferenzserver-Segment ein — siehe das [lokale KI-Software-Verzeichnis](https://www.promptquorum.com/directory) für den vollständigen Katalog und den dedizierten [OpenLLM-vs.-vLLM-Vergleich](#openllm-vs-vllm) oben für den direktesten Vergleich.',
         items: [
           '**[vLLM](/de/power-local-llm/vllm-explained)** — die Hochdurchsatz-Inferenz-Engine, die OpenLLM als Backend nutzen kann; direkt evaluieren, wenn roher Serving-Durchsatz Ihr Hauptanliegen ist. Siehe den dedizierten Vergleichsabschnitt oben.',
           '**[SGLang](/de/power-local-llm/sglang-explained)** — eine weitere Hochleistungs-Inferenz-Engine und Serving-Framework, oft mit vLLM bei Durchsatz und Funktionen für strukturierte Generierung verglichen.',
           '**[LocalAI](/de/power-local-llm/localai-explained)** — ein kostenloser, quelloffener, OpenAI-kompatibler lokaler Inferenzserver mit breiterem Fokus auf mehrere Modelltypen (Text, Bild, Audio) hinter einer API.',
           '**[LiteLLM](/de/power-local-llm/litellm-review)** — ein Proxy/SDK, das über viele verschiedene LLM-Anbieter und selbst gehostete Backends, einschließlich OpenLLM selbst, eine einheitliche OpenAI-kompatible Schnittstelle bereitstellt.',
         ],
-        note: 'Dies ist keine vollständige Liste von Inferenz-Serving-Tools — siehe das [lokale KI-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich OpenLLMs eigenem Verzeichniseintrag.',
+        note: 'Dies ist keine vollständige Liste von Inferenz-Serving-Tools — siehe das [lokale KI-Software-Verzeichnis](https://www.promptquorum.com/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich OpenLLMs eigenem Verzeichniseintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -558,7 +558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Lokales KI-Software-Verzeichnis 2026](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich OpenLLMs Verzeichniseintrag.',
+          '[Lokales KI-Software-Verzeichnis 2026](https://www.promptquorum.com/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich OpenLLMs Verzeichniseintrag.',
           '[vLLM erklärt](/de/power-local-llm/vllm-explained) — ein tieferer Blick auf die Hochdurchsatz-Inferenz-Engine, die OpenLLM als Backend nutzen kann, und der direkteste Vergleich, der oben behandelt wird.',
           '[SGLang erklärt](/de/power-local-llm/sglang-explained) — eine weitere Inferenz-Serving-Engine im selben Segment, verglichen nach Durchsatz und Funktionen für strukturierte Generierung.',
           '[LiteLLM Review](/de/power-local-llm/litellm-review) — eine vereinheitlichende Proxy-/SDK-Schicht, die vor OpenLLM und anderen selbst gehosteten oder Cloud-LLM-Backends sitzen kann.',
@@ -637,7 +637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub affiche environ 12 535 étoiles et 842 forks en septembre 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche d\'OpenLLM dans l\'[annuaire de logiciels LLM locaux](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment OpenLLM se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cette review est le complément approfondi de la fiche d\'OpenLLM dans l\'[annuaire de logiciels LLM locaux](https://www.promptquorum.com/directory) — consultez cette page pour voir comment OpenLLM se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -777,14 +777,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'openllm-competitors',
         title: 'Concurrents et alternatives',
-        content: 'OpenLLM est l\'un des nombreux outils qui enveloppent l\'inférence de modèles à poids ouverts derrière une API compatible OpenAI. Voici comment il se situe face à d\'autres options du segment des serveurs d\'inférence — voir l\'[annuaire de logiciels LLM locaux](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) pour le catalogue complet, et le [comparatif dédié OpenLLM vs. vLLM](#openllm-vs-vllm) ci-dessus pour le face-à-face le plus direct.',
+        content: 'OpenLLM est l\'un des nombreux outils qui enveloppent l\'inférence de modèles à poids ouverts derrière une API compatible OpenAI. Voici comment il se situe face à d\'autres options du segment des serveurs d\'inférence — voir l\'[annuaire de logiciels LLM locaux](https://www.promptquorum.com/directory) pour le catalogue complet, et le [comparatif dédié OpenLLM vs. vLLM](#openllm-vs-vllm) ci-dessus pour le face-à-face le plus direct.',
         items: [
           '**[vLLM](/fr/power-local-llm/vllm-explained)** — le moteur d\'inférence à haut débit qu\'OpenLLM peut utiliser comme backend ; à évaluer directement si le débit brut de serving est votre priorité. Voir la section de comparaison dédiée ci-dessus.',
           '**[SGLang](/fr/power-local-llm/sglang-explained)** — un autre moteur d\'inférence et framework de serving haute performance, souvent comparé à vLLM sur le débit et les fonctionnalités de génération structurée.',
           '**[LocalAI](/fr/power-local-llm/localai-explained)** — un serveur d\'inférence local gratuit, open source, compatible OpenAI, avec un focus plus large sur plusieurs types de modèles (texte, image, audio) derrière une seule API.',
           '**[LiteLLM](/fr/power-local-llm/litellm-review)** — un proxy/SDK qui offre une interface unifiée compatible OpenAI sur de nombreux fournisseurs LLM différents et backends auto-hébergés, y compris OpenLLM lui-même.',
         ],
-        note: 'Cette liste n\'est pas exhaustive des outils de serving d\'inférence — voir l\'[annuaire de logiciels LLM locaux](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la fiche d\'OpenLLM elle-même.',
+        note: 'Cette liste n\'est pas exhaustive des outils de serving d\'inférence — voir l\'[annuaire de logiciels LLM locaux](https://www.promptquorum.com/directory) pour le catalogue complet et régulièrement mis à jour, incluant la fiche d\'OpenLLM elle-même.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Annuaire de logiciels LLM locaux 2026](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant la fiche d\'OpenLLM.',
+          '[Annuaire de logiciels LLM locaux 2026](https://www.promptquorum.com/directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant la fiche d\'OpenLLM.',
           '[vLLM expliqué](/fr/power-local-llm/vllm-explained) — un regard approfondi sur le moteur d\'inférence à haut débit qu\'OpenLLM peut utiliser comme backend, et le comparatif le plus direct traité ci-dessus.',
           '[SGLang expliqué](/fr/power-local-llm/sglang-explained) — un autre moteur de serving d\'inférence du même segment, comparé sur le débit et les fonctionnalités de génération structurée.',
           '[LiteLLM Review](/fr/power-local-llm/litellm-review) — une couche proxy/SDK unificatrice qui peut se placer devant OpenLLM et d\'autres backends LLM auto-hébergés ou cloud.',
@@ -919,7 +919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHubリポジトリは2026年9月時点で約12,535スター、842フォークを記録',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)内のOpenLLMの項目を補完する詳細版です — 他の数十種類のローカルAIツールとの比較は同ページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)内のOpenLLMの項目を補完する詳細版です — 他の数十種類のローカルAIツールとの比較は同ページを参照してください。' },
         ],
       },
       overview: {
@@ -1059,14 +1059,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'openllm-competitors',
         title: '競合とその他の選択肢',
-        content: 'OpenLLMは、オープンウェイトモデルの推論をOpenAI互換APIの背後でラップする複数のツールの1つである。推論サーバーのセグメントにおける他の選択肢との位置関係は以下の通り — 全カタログは[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)を、最も直接的な比較は上記の[OpenLLM vs. vLLM比較](#openllm-vs-vllm)を参照。',
+        content: 'OpenLLMは、オープンウェイトモデルの推論をOpenAI互換APIの背後でラップする複数のツールの1つである。推論サーバーのセグメントにおける他の選択肢との位置関係は以下の通り — 全カタログは[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)を、最も直接的な比較は上記の[OpenLLM vs. vLLM比較](#openllm-vs-vllm)を参照。',
         items: [
           '**[vLLM](/ja/power-local-llm/vllm-explained)** — OpenLLMがバックエンドとして利用できる高スループット推論エンジン。生のサービングスループットが主な関心事であれば直接評価する価値がある。詳細は上記の比較セクションを参照。',
           '**[SGLang](/ja/power-local-llm/sglang-explained)** — 同じく高性能な推論エンジン兼サービングフレームワークで、スループットや構造化生成機能の面でvLLMとよく比較される。',
           '**[LocalAI](/ja/power-local-llm/localai-explained)** — 無料・オープンソースでOpenAI互換のローカル推論サーバーで、テキスト・画像・音声など複数のモデルタイプを1つのAPIの背後で扱うことに、より広くフォーカスしている。',
           '**[LiteLLM](/ja/power-local-llm/litellm-review)** — OpenLLM自体を含む、多数のLLMプロバイダーやセルフホスト型バックエンドに対して、統一されたOpenAI互換インターフェースを提供するプロキシ／SDK。',
         ],
-        note: 'これは推論サービングツールの網羅的なリストではない — OpenLLM自体のディレクトリ項目を含む、定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)を参照。',
+        note: 'これは推論サービングツールの網羅的なリストではない — OpenLLM自体のディレクトリ項目を含む、定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)を参照。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1122,7 +1122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — この記事が属する、OpenLLMのディレクトリ項目を含むローカルAIツールの完全なカタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](https://www.promptquorum.com/directory) — この記事が属する、OpenLLMのディレクトリ項目を含むローカルAIツールの完全なカタログ。',
           '[vLLM解説](/ja/power-local-llm/vllm-explained) — OpenLLMがバックエンドとして利用できる高スループット推論エンジンをより詳しく解説し、上記で扱った最も直接的な比較も収録。',
           '[SGLang解説](/ja/power-local-llm/sglang-explained) — 同じセグメントの別の推論サービングエンジンで、スループットと構造化生成機能の観点で比較。',
           '[LiteLLMレビュー](/ja/power-local-llm/litellm-review) — OpenLLmや他のセルフホスト型・クラウド型LLMバックエンドの前段に置ける、統一プロキシ／SDKレイヤー。',
@@ -1201,7 +1201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至2026年9月，GitHub仓库约有12,535颗星和842次分叉',
         ],
         callouts: [
-          { type: 'note', text: '本文是[本地大模型软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中OpenLLM条目的深度补充版——想快速了解OpenLLM与其他数十款本地AI工具的对比，请参阅该页面。' },
+          { type: 'note', text: '本文是[本地大模型软件目录](https://www.promptquorum.com/directory)中OpenLLM条目的深度补充版——想快速了解OpenLLM与其他数十款本地AI工具的对比，请参阅该页面。' },
         ],
       },
       overview: {
@@ -1341,14 +1341,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'openllm-competitors',
         title: '竞品与替代方案',
-        content: 'OpenLLM是众多将开源权重模型推理封装在OpenAI兼容API背后的工具之一。以下是它在推理服务器这一细分领域与其他选项的对比——完整目录请参阅[本地大模型软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)，最直接的对比请参阅上文专门的[OpenLLM vs. vLLM对比](#openllm-vs-vllm)。',
+        content: 'OpenLLM是众多将开源权重模型推理封装在OpenAI兼容API背后的工具之一。以下是它在推理服务器这一细分领域与其他选项的对比——完整目录请参阅[本地大模型软件目录](https://www.promptquorum.com/directory)，最直接的对比请参阅上文专门的[OpenLLM vs. vLLM对比](#openllm-vs-vllm)。',
         items: [
           '**[vLLM](/power-local-llm/vllm-explained)**——OpenLLM可作为后端使用的高吞吐推理引擎；如果原始服务吞吐是你的主要关切，值得直接评估。详见上方专门的对比部分。',
           '**[SGLang](/power-local-llm/sglang-explained)**——另一款高性能推理引擎兼服务框架，常在吞吐量和结构化生成功能方面与vLLM对比。',
           '**[LocalAI](/power-local-llm/localai-explained)**——一款免费开源、OpenAI兼容的本地推理服务器，更侧重于在同一API背后运行多种模型类型（文本、图像、音频）。',
           '**[LiteLLM](/power-local-llm/litellm-review)**——一个代理/SDK，能在众多不同的大模型提供商和自托管后端（包括OpenLLM本身）之上提供统一的OpenAI兼容接口。',
         ],
-        note: '这并非推理服务工具的完整列表——完整且定期更新的目录，包括OpenLLM自身的条目，请参阅[本地大模型软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)。',
+        note: '这并非推理服务工具的完整列表——完整且定期更新的目录，包括OpenLLM自身的条目，请参阅[本地大模型软件目录](https://www.promptquorum.com/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1404,7 +1404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026本地大模型软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)——本文所属的本地AI工具完整目录，包含OpenLLM的目录条目。',
+          '[2026本地大模型软件目录](https://www.promptquorum.com/directory)——本文所属的本地AI工具完整目录，包含OpenLLM的目录条目。',
           '[vLLM详解](/power-local-llm/vllm-explained)——深入解读OpenLLM可作为后端使用的高吞吐推理引擎，也是上文提到的最直接对比对象。',
           '[SGLang详解](/power-local-llm/sglang-explained)——同一细分领域的另一款推理服务引擎，在吞吐量和结构化生成功能上进行对比。',
           '[LiteLLM测评](/power-local-llm/litellm-review)——一层统一的代理/SDK，可置于OpenLLM及其他自托管或云端大模型后端之前。',
@@ -1483,7 +1483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El repositorio de GitHub muestra unas 12.535 estrellas y 842 forks en septiembre de 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de OpenLLM en el [Directorio de Software LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara OpenLLM con decenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de OpenLLM en el [Directorio de Software LLM Local](https://www.promptquorum.com/directory) — consulta esa página para ver de un vistazo cómo se compara OpenLLM con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1623,14 +1623,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'openllm-competitors',
         title: 'Competidores y alternativas',
-        content: 'OpenLLM es una de varias herramientas que envuelven la inferencia de modelos de peso abierto detrás de una API compatible con OpenAI. Así se sitúa junto a otras opciones en el segmento de servidores de inferencia — consulta el [Directorio de Software LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para el catálogo completo, y la [comparativa dedicada OpenLLM vs. vLLM](#openllm-vs-vllm) más arriba para el enfrentamiento más directo.',
+        content: 'OpenLLM es una de varias herramientas que envuelven la inferencia de modelos de peso abierto detrás de una API compatible con OpenAI. Así se sitúa junto a otras opciones en el segmento de servidores de inferencia — consulta el [Directorio de Software LLM Local](https://www.promptquorum.com/directory) para el catálogo completo, y la [comparativa dedicada OpenLLM vs. vLLM](#openllm-vs-vllm) más arriba para el enfrentamiento más directo.',
         items: [
           '**[vLLM](/es/power-local-llm/vllm-explained)** — el motor de inferencia de alto rendimiento que OpenLLM puede usar como backend; evalúalo directamente si el rendimiento bruto de serving es tu preocupación principal. Ver la sección de comparación dedicada más arriba.',
           '**[SGLang](/es/power-local-llm/sglang-explained)** — otro motor de inferencia y framework de serving de alto rendimiento, a menudo comparado con vLLM en rendimiento y funciones de generación estructurada.',
           '**[LocalAI](/es/power-local-llm/localai-explained)** — un servidor de inferencia local gratuito, de código abierto y compatible con OpenAI, con un enfoque más amplio en ejecutar varios tipos de modelo (texto, imagen, audio) detrás de una sola API.',
           '**[LiteLLM](/es/power-local-llm/litellm-review)** — un proxy/SDK que presenta una interfaz unificada compatible con OpenAI sobre muchos proveedores de LLM distintos y backends autoalojados, incluido OpenLLM mismo.',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas de serving de inferencia — consulta el [Directorio de Software LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluyendo la propia ficha de OpenLLM.',
+        note: 'Esta no es una lista exhaustiva de herramientas de serving de inferencia — consulta el [Directorio de Software LLM Local](https://www.promptquorum.com/directory) para el catálogo completo y actualizado regularmente, incluyendo la propia ficha de OpenLLM.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1686,7 +1686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software LLM Local 2026](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de OpenLLM.',
+          '[Directorio de Software LLM Local 2026](https://www.promptquorum.com/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de OpenLLM.',
           '[vLLM explicado](/es/power-local-llm/vllm-explained) — una mirada más profunda al motor de inferencia de alto rendimiento que OpenLLM puede usar como backend, y la comparativa más directa cubierta más arriba.',
           '[SGLang explicado](/es/power-local-llm/sglang-explained) — otro motor de serving de inferencia en el mismo segmento, comparado en rendimiento y funciones de generación estructurada.',
           '[LiteLLM Review](/es/power-local-llm/litellm-review) — una capa de proxy/SDK unificadora que puede situarse delante de OpenLLM y otros backends de LLM autoalojados o en la nube.',
@@ -1765,7 +1765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub mostra cerca de 12.535 estrelas e 842 forks em setembro de 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da ficha do OpenLLM no [Diretório de Software LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o OpenLLM com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta review é o complemento aprofundado da ficha do OpenLLM no [Diretório de Software LLM Local](https://www.promptquorum.com/directory) — veja essa página para comparar rapidamente o OpenLLM com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1905,14 +1905,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'openllm-competitors',
         title: 'Concorrentes e alternativas',
-        content: 'O OpenLLM é uma entre várias ferramentas que envolvem a inferência de modelos de peso aberto atrás de uma API compatível com OpenAI. Veja como ele se posiciona ao lado de outras opções no segmento de servidores de inferência — consulte o [Diretório de Software LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para o catálogo completo, e a [comparação dedicada OpenLLM vs. vLLM](#openllm-vs-vllm) acima para o confronto mais direto.',
+        content: 'O OpenLLM é uma entre várias ferramentas que envolvem a inferência de modelos de peso aberto atrás de uma API compatível com OpenAI. Veja como ele se posiciona ao lado de outras opções no segmento de servidores de inferência — consulte o [Diretório de Software LLM Local](https://www.promptquorum.com/directory) para o catálogo completo, e a [comparação dedicada OpenLLM vs. vLLM](#openllm-vs-vllm) acima para o confronto mais direto.',
         items: [
           '**[vLLM](/pt/power-local-llm/vllm-explained)** — o motor de inferência de alto throughput que o OpenLLM pode usar como backend; avalie diretamente se o throughput bruto de serving é sua principal preocupação. Veja a seção de comparação dedicada acima.',
           '**[SGLang](/pt/power-local-llm/sglang-explained)** — outro motor de inferência e framework de serving de alto desempenho, frequentemente comparado ao vLLM em throughput e recursos de geração estruturada.',
           '**[LocalAI](/pt/power-local-llm/localai-explained)** — um servidor de inferência local gratuito, open source e compatível com OpenAI, com foco mais amplo em rodar múltiplos tipos de modelo (texto, imagem, áudio) atrás de uma única API.',
           '**[LiteLLM](/pt/power-local-llm/litellm-review)** — um proxy/SDK que apresenta uma interface unificada compatível com OpenAI sobre muitos provedores de LLM diferentes e backends auto-hospedados, incluindo o próprio OpenLLM.',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas de serving de inferência — consulte o [Diretório de Software LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do OpenLLM.',
+        note: 'Esta não é uma lista exaustiva de ferramentas de serving de inferência — consulte o [Diretório de Software LLM Local](https://www.promptquorum.com/directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do OpenLLM.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1968,7 +1968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software LLM Local 2026](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do OpenLLM.',
+          '[Diretório de Software LLM Local 2026](https://www.promptquorum.com/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do OpenLLM.',
           '[vLLM explicado](/pt/power-local-llm/vllm-explained) — um olhar mais profundo sobre o motor de inferência de alto throughput que o OpenLLM pode usar como backend, e a comparação mais direta abordada acima.',
           '[SGLang explicado](/pt/power-local-llm/sglang-explained) — outro motor de serving de inferência no mesmo segmento, comparado em throughput e recursos de geração estruturada.',
           '[LiteLLM Review](/pt/power-local-llm/litellm-review) — uma camada unificadora de proxy/SDK que pode ficar na frente do OpenLLM e de outros backends de LLM auto-hospedados ou na nuvem.',
@@ -2047,7 +2047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مستودع GitHub يُظهر نحو 12,535 نجمة و842 تفرعًا اعتبارًا من سبتمبر 2026',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة مكمّلة معمّقة لبطاقة OpenLLM في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمقارنة سريعة بين OpenLLM وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة مكمّلة معمّقة لبطاقة OpenLLM في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory) — راجع تلك الصفحة لمقارنة سريعة بين OpenLLM وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2187,14 +2187,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'openllm-competitors',
         title: 'المنافسون والبدائل',
-        content: 'OpenLLM واحد من عدة أدوات تغلّف استدلال النماذج مفتوحة الأوزان خلف واجهة برمجية متوافقة مع OpenAI. إليك كيف يقف إلى جانب خيارات أخرى في قطاع خوادم الاستدلال — راجع [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) للكتالوج الكامل، والمقارنة المخصصة [OpenLLM مقابل vLLM](#openllm-vs-vllm) أعلاه لأقرب مواجهة مباشرة.',
+        content: 'OpenLLM واحد من عدة أدوات تغلّف استدلال النماذج مفتوحة الأوزان خلف واجهة برمجية متوافقة مع OpenAI. إليك كيف يقف إلى جانب خيارات أخرى في قطاع خوادم الاستدلال — راجع [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory) للكتالوج الكامل، والمقارنة المخصصة [OpenLLM مقابل vLLM](#openllm-vs-vllm) أعلاه لأقرب مواجهة مباشرة.',
         items: [
           '**[vLLM](/power-local-llm/vllm-explained)** — محرك الاستدلال عالي الإنتاجية الذي يمكن لـ OpenLLM استخدامه كخلفية؛ قيّمه مباشرة إذا كانت إنتاجية التقديم الخام همّك الأساسي. راجع قسم المقارنة المخصص أعلاه.',
           '**[SGLang](/power-local-llm/sglang-explained)** — محرك استدلال وإطار تقديم آخر عالي الأداء، غالبًا ما يُقارَن بـ vLLM من حيث الإنتاجية ومزايا التوليد المُهيكَل.',
           '**[LocalAI](/power-local-llm/localai-explained)** — خادم استدلال محلي مجاني ومفتوح المصدر ومتوافق مع OpenAI، بتركيز أوسع على تشغيل أنواع نماذج متعددة (نص، صورة، صوت) خلف واجهة برمجية واحدة.',
           '**[LiteLLM](/power-local-llm/litellm-review)** — وكيل/حزمة تطوير برمجيات (SDK) يقدّم واجهة موحدة متوافقة مع OpenAI عبر العديد من موفّري نماذج اللغة المختلفين والخلفيات المستضافة ذاتيًا، بما فيها OpenLLM نفسه.',
         ],
-        note: 'هذه ليست قائمة شاملة لأدوات تقديم الاستدلال — راجع [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) للكتالوج الكامل والمحدَّث بانتظام، بما في ذلك بطاقة OpenLLM نفسها.',
+        note: 'هذه ليست قائمة شاملة لأدوات تقديم الاستدلال — راجع [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory) للكتالوج الكامل والمحدَّث بانتظام، بما في ذلك بطاقة OpenLLM نفسها.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2250,7 +2250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة المحلية 2026](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك بطاقة OpenLLM.',
+          '[دليل برمجيات نماذج اللغة المحلية 2026](https://www.promptquorum.com/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك بطاقة OpenLLM.',
           '[شرح vLLM](/power-local-llm/vllm-explained) — نظرة أعمق على محرك الاستدلال عالي الإنتاجية الذي يمكن لـ OpenLLM استخدامه كخلفية، وأقرب مقارنة مباشرة تناولتها هذه المراجعة أعلاه.',
           '[شرح SGLang](/power-local-llm/sglang-explained) — محرك تقديم استدلال آخر في نفس القطاع، تمت مقارنته من حيث الإنتاجية ومزايا التوليد المُهيكَل.',
           '[مراجعة LiteLLM](/power-local-llm/litellm-review) — طبقة وكيل/حزمة تطوير برمجيات موحّدة يمكن وضعها أمام OpenLLM وخلفيات نماذج لغوية أخرى مستضافة ذاتيًا أو سحابيًا.',
@@ -2329,7 +2329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub 저장소는 2026년 9월 기준 약 12,535개의 스타와 842개의 포크를 기록하고 있습니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 실린 OpenLLM 항목을 보완하는 심화 자료입니다 — OpenLLM이 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 실린 OpenLLM 항목을 보완하는 심화 자료입니다 — OpenLLM이 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2469,14 +2469,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'openllm-competitors',
         title: '경쟁 제품과 대안',
-        content: 'OpenLLM은 오픈 웨이트 모델 추론을 OpenAI 호환 API 뒤에서 감싸는 여러 도구 중 하나입니다. 추론 서버 세그먼트에서 다른 옵션들과 비교했을 때 OpenLLM의 위치는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)를, 가장 직접적인 비교는 위의 전용 [OpenLLM vs. vLLM 비교](#openllm-vs-vllm)를 참고하세요.',
+        content: 'OpenLLM은 오픈 웨이트 모델 추론을 OpenAI 호환 API 뒤에서 감싸는 여러 도구 중 하나입니다. 추론 서버 세그먼트에서 다른 옵션들과 비교했을 때 OpenLLM의 위치는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)를, 가장 직접적인 비교는 위의 전용 [OpenLLM vs. vLLM 비교](#openllm-vs-vllm)를 참고하세요.',
         items: [
           '**[vLLM](/power-local-llm/vllm-explained)** — OpenLLM이 백엔드로 사용할 수 있는 고처리량 추론 엔진. 원시 서빙 처리량이 주된 관심사라면 직접 평가할 가치가 있습니다. 자세한 내용은 위의 전용 비교 섹션을 참고하세요.',
           '**[SGLang](/power-local-llm/sglang-explained)** — 또 다른 고성능 추론 엔진이자 서빙 프레임워크로, 처리량과 구조화된 생성 기능 면에서 vLLM과 자주 비교됩니다.',
           '**[LocalAI](/power-local-llm/localai-explained)** — 무료 오픈소스, OpenAI 호환 로컬 추론 서버로, 텍스트·이미지·오디오 등 여러 모델 유형을 하나의 API 뒤에서 실행하는 데 더 폭넓게 초점을 둡니다.',
           '**[LiteLLM](/power-local-llm/litellm-review)** — OpenLLM 자체를 포함해 다양한 LLM 제공업체와 셀프호스팅 백엔드에 걸쳐 통합된 OpenAI 호환 인터페이스를 제공하는 프록시/SDK입니다.',
         ],
-        note: '이는 추론 서빙 도구의 전체 목록이 아닙니다 — OpenLLM 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이는 추론 서빙 도구의 전체 목록이 아닙니다 — OpenLLM 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2532,7 +2532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[2026 로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 이 글이 속한, OpenLLM의 디렉터리 항목을 포함한 로컬 AI 도구 전체 카탈로그입니다.',
+          '[2026 로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory) — 이 글이 속한, OpenLLM의 디렉터리 항목을 포함한 로컬 AI 도구 전체 카탈로그입니다.',
           '[vLLM 해설](/power-local-llm/vllm-explained) — OpenLLM이 백엔드로 사용할 수 있는 고처리량 추론 엔진을 더 깊이 살펴보며, 위에서 다룬 가장 직접적인 비교도 포함합니다.',
           '[SGLang 해설](/power-local-llm/sglang-explained) — 동일한 세그먼트의 또 다른 추론 서빙 엔진으로, 처리량과 구조화된 생성 기능 면에서 비교합니다.',
           '[LiteLLM 리뷰](/power-local-llm/litellm-review) — OpenLLM 및 기타 셀프호스팅·클라우드 LLM 백엔드 앞에 둘 수 있는 통합 프록시/SDK 계층입니다.',

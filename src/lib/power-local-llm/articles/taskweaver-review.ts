@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Install via `git clone` + `pip install -r requirements.txt` — no PyPI package',
         ],
         callouts: [
-          { type: 'note', text: 'TaskWeaver is archived and no longer under active development — treat it as a reference implementation or a fit for an existing deployment, not a starting point for new production work. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for how TaskWeaver compares to actively maintained agent frameworks.' },
+          { type: 'note', text: 'TaskWeaver is archived and no longer under active development — treat it as a reference implementation or a fit for an existing deployment, not a starting point for new production work. See the [Local LLM Software Directory](/directory) for how TaskWeaver compares to actively maintained agent frameworks.' },
         ],
       },
       history: {
@@ -265,7 +265,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Semantic Kernel Review: Features, Pricing, Alternatives](/power-local-llm/semantic-kernel-review) — Microsoft\'s actively developed enterprise orchestration SDK, for teams that need ongoing support.',
           '[CrewAI Review: Features, Pricing, Alternatives](/power-local-llm/crewai-review) — a role-based, actively maintained multi-agent framework for teams that need broader agent-to-agent workflows.',
           '[LangGraph Review: Features, Pricing, Alternatives](/power-local-llm/langgraph-review) — an actively maintained, stateful graph-based workflow framework, for inspectable and resumable agent runs.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including where TaskWeaver fits among agent frameworks.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools this article belongs to, including where TaskWeaver fits among agent frameworks.',
         ],
       },
     },
@@ -340,7 +340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installation über `git clone` + `pip install -r requirements.txt` — kein PyPI-Paket',
         ],
         callouts: [
-          { type: 'note', text: 'TaskWeaver ist archiviert und wird nicht mehr aktiv weiterentwickelt — behandeln Sie es als Referenzimplementierung oder als Lösung für eine bestehende Installation, nicht als Ausgangspunkt für neue Produktivarbeit. Im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) sieht man auf einen Blick, wie TaskWeaver im Vergleich zu aktiv gepflegten Agenten-Frameworks abschneidet.' },
+          { type: 'note', text: 'TaskWeaver ist archiviert und wird nicht mehr aktiv weiterentwickelt — behandeln Sie es als Referenzimplementierung oder als Lösung für eine bestehende Installation, nicht als Ausgangspunkt für neue Produktivarbeit. Im [Local LLM Software Directory](/de/directory) sieht man auf einen Blick, wie TaskWeaver im Vergleich zu aktiv gepflegten Agenten-Frameworks abschneidet.' },
         ],
       },
       history: {
@@ -533,7 +533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Semantic Kernel im Test: Funktionen, Preise, Alternativen](/de/power-local-llm/semantic-kernel-review) — Microsofts aktiv weiterentwickeltes Enterprise-Orchestrierungs-SDK, für Teams, die laufenden Support benötigen.',
           '[CrewAI im Test: Funktionen, Preise, Alternativen](/de/power-local-llm/crewai-review) — ein rollenbasiertes, aktiv gepflegtes Multi-Agenten-Framework für Teams mit breiteren Agent-zu-Agent-Workflows.',
           '[LangGraph im Test: Funktionen, Preise, Alternativen](/de/power-local-llm/langgraph-review) — ein aktiv gepflegtes, zustandsbehaftetes graphbasiertes Workflow-Framework für inspizierbare und fortsetzbare Agentenläufe.',
-          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von TaskWeaver unter den Agenten-Frameworks.',
+          '[Local LLM Software Directory](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von TaskWeaver unter den Agenten-Frameworks.',
         ],
       },
     },
@@ -608,7 +608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installation via `git clone` + `pip install -r requirements.txt` — pas de paquet PyPI',
         ],
         callouts: [
-          { type: 'note', text: "TaskWeaver est archivé et n'est plus développé activement — à considérer comme une implémentation de référence ou une solution pour un déploiement existant, pas comme point de départ pour un nouveau projet en production. Voir le [Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour situer TaskWeaver par rapport aux frameworks d'agents activement maintenus." },
+          { type: 'note', text: "TaskWeaver est archivé et n'est plus développé activement — à considérer comme une implémentation de référence ou une solution pour un déploiement existant, pas comme point de départ pour un nouveau projet en production. Voir le [Répertoire des logiciels LLM locaux](/fr/directory) pour situer TaskWeaver par rapport aux frameworks d'agents activement maintenus." },
         ],
       },
       history: {
@@ -801,7 +801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[Avis Semantic Kernel : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/semantic-kernel-review) — le SDK d'orchestration entreprise de Microsoft activement développé, pour les équipes ayant besoin d'un support continu.",
           "[Avis CrewAI : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/crewai-review) — un framework multi-agents basé sur des rôles, activement maintenu, pour des workflows agent-à-agent plus larges.",
           '[Avis LangGraph : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/langgraph-review) — un framework de workflow avec état, basé sur un graphe, activement maintenu, pour des exécutions d\'agents inspectables et reprenables.',
-          '[Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils IA locaux auquel appartient cet article, avec la place de TaskWeaver parmi les frameworks d\'agents.',
+          '[Répertoire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils IA locaux auquel appartient cet article, avec la place de TaskWeaver parmi les frameworks d\'agents.',
         ],
       },
     },
@@ -876,7 +876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instalación mediante `git clone` + `pip install -r requirements.txt` — sin paquete PyPI',
         ],
         callouts: [
-          { type: 'note', text: 'TaskWeaver está archivado y ya no se desarrolla activamente — trátelo como una implementación de referencia o una solución para un despliegue existente, no como punto de partida para un nuevo proyecto en producción. Consulte el [Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) para ver cómo se compara TaskWeaver con frameworks de agentes activamente mantenidos.' },
+          { type: 'note', text: 'TaskWeaver está archivado y ya no se desarrolla activamente — trátelo como una implementación de referencia o una solución para un despliegue existente, no como punto de partida para un nuevo proyecto en producción. Consulte el [Directorio de software LLM local](/es/directory) para ver cómo se compara TaskWeaver con frameworks de agentes activamente mantenidos.' },
         ],
       },
       history: {
@@ -1069,7 +1069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de Semantic Kernel: funciones, precios, alternativas](/es/power-local-llm/semantic-kernel-review) — el SDK de orquestación empresarial de Microsoft en desarrollo activo, para equipos que necesitan soporte continuo.',
           '[Reseña de CrewAI: funciones, precios, alternativas](/es/power-local-llm/crewai-review) — un framework multiagente basado en roles y activamente mantenido, para flujos de trabajo agente a agente más amplios.',
           '[Reseña de LangGraph: funciones, precios, alternativas](/es/power-local-llm/langgraph-review) — un framework de flujo de trabajo con estado, basado en grafos y activamente mantenido, para ejecuciones de agentes inspeccionables y reanudables.',
-          '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja TaskWeaver entre los frameworks de agentes.',
+          '[Directorio de software LLM local](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja TaskWeaver entre los frameworks de agentes.',
         ],
       },
     },
@@ -1144,7 +1144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instalação via `git clone` + `pip install -r requirements.txt` — sem pacote PyPI',
         ],
         callouts: [
-          { type: 'note', text: 'O TaskWeaver está arquivado e não está mais em desenvolvimento ativo — trate-o como uma implementação de referência ou uma solução para uma implantação existente, não como ponto de partida para um novo projeto em produção. Veja o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) para comparar o TaskWeaver com frameworks de agentes mantidos ativamente.' },
+          { type: 'note', text: 'O TaskWeaver está arquivado e não está mais em desenvolvimento ativo — trate-o como uma implementação de referência ou uma solução para uma implantação existente, não como ponto de partida para um novo projeto em produção. Veja o [Diretório de Software LLM Local](/pt/directory) para comparar o TaskWeaver com frameworks de agentes mantidos ativamente.' },
         ],
       },
       history: {
@@ -1337,7 +1337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do Semantic Kernel: recursos, preços, alternativas](/pt/power-local-llm/semantic-kernel-review) — o SDK de orquestração empresarial da Microsoft em desenvolvimento ativo, para equipes que precisam de suporte contínuo.',
           '[Análise do CrewAI: recursos, preços, alternativas](/pt/power-local-llm/crewai-review) — um framework multiagente baseado em papéis e mantido ativamente, para fluxos de trabalho agente a agente mais amplos.',
           '[Análise do LangGraph: recursos, preços, alternativas](/pt/power-local-llm/langgraph-review) — um framework de fluxo de trabalho com estado, baseado em grafo e mantido ativamente, para execuções de agentes inspecionáveis e retomáveis.',
-          '[Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o TaskWeaver se encaixa entre os frameworks de agentes.',
+          '[Diretório de Software LLM Local](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o TaskWeaver se encaixa entre os frameworks de agentes.',
         ],
       },
     },
@@ -1412,7 +1412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`git clone` + `pip install -r requirements.txt`でインストール——PyPIパッケージなし',
         ],
         callouts: [
-          { type: 'note', text: 'TaskWeaverはアーカイブされており、もはや活発に開発されていません——新規の本番開発の出発点としてではなく、参考実装または既存導入向けの選択肢として扱ってください。TaskWeaverが活発にメンテナンスされているエージェントフレームワークとどう比較されるかは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。' },
+          { type: 'note', text: 'TaskWeaverはアーカイブされており、もはや活発に開発されていません——新規の本番開発の出発点としてではなく、参考実装または既存導入向けの選択肢として扱ってください。TaskWeaverが活発にメンテナンスされているエージェントフレームワークとどう比較されるかは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。' },
         ],
       },
       history: {
@@ -1605,7 +1605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Semantic Kernelレビュー：機能・料金・代替ツール](/ja/power-local-llm/semantic-kernel-review) — 継続的なサポートが必要なチーム向けに、Microsoftが活発に開発しているエンタープライズ統合SDK。',
           '[CrewAIレビュー：機能・料金・代替ツール](/ja/power-local-llm/crewai-review) — より広いエージェント間ワークフローが必要なチーム向けの、役割ベースで活発にメンテナンスされるマルチエージェントフレームワーク。',
           '[LangGraphレビュー：機能・料金・代替ツール](/ja/power-local-llm/langgraph-review) — 検査・再開可能なエージェント実行のための、活発にメンテナンスされるステートフルなグラフベースのワークフローフレームワーク。',
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの完全カタログ。エージェントフレームワークの中でTaskWeaverがどこに位置するかを含む。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/directory) — この記事が属するローカルAIツールの完全カタログ。エージェントフレームワークの中でTaskWeaverがどこに位置するかを含む。',
         ],
       },
     },
@@ -1680,7 +1680,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '通过`git clone` + `pip install -r requirements.txt`安装——没有PyPI软件包',
         ],
         callouts: [
-          { type: 'note', text: 'TaskWeaver已被归档，不再处于积极开发状态——应将其视为参考实现，或适用于已有部署的方案，而非新生产项目的起点。关于TaskWeaver与仍在积极维护的智能体框架相比表现如何，请参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。' },
+          { type: 'note', text: 'TaskWeaver已被归档，不再处于积极开发状态——应将其视为参考实现，或适用于已有部署的方案，而非新生产项目的起点。关于TaskWeaver与仍在积极维护的智能体框架相比表现如何，请参见[本地LLM软件目录](/zh/directory)。' },
         ],
       },
       history: {
@@ -1873,7 +1873,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Semantic Kernel评测：功能、定价、替代方案](/zh/power-local-llm/semantic-kernel-review) — 微软正在积极开发的企业编排SDK，适合需要持续支持的团队。',
           '[CrewAI评测：功能、定价、替代方案](/zh/power-local-llm/crewai-review) — 一个基于角色、积极维护的多智能体框架，适合更广泛的智能体间工作流。',
           '[LangGraph评测：功能、定价、替代方案](/zh/power-local-llm/langgraph-review) — 一个积极维护的有状态、基于图的工作流框架，适合可检查、可恢复的智能体运行。',
-          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地AI工具目录，包含TaskWeaver在智能体框架中的定位。',
+          '[本地LLM软件目录](/zh/directory) — 本文所属的完整本地AI工具目录，包含TaskWeaver在智能体框架中的定位。',
         ],
       },
     },
@@ -1948,7 +1948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'التثبيت عبر `git clone` + `pip install -r requirements.txt` — لا توجد حزمة PyPI',
         ],
         callouts: [
-          { type: 'note', text: 'TaskWeaver مؤرشف ولم يعد قيد التطوير النشط — يجب اعتباره تنفيذًا مرجعيًا أو خيارًا مناسبًا لنشر قائم بالفعل، وليس نقطة انطلاق لعمل إنتاجي جديد. راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) لمعرفة كيف يقارَن TaskWeaver بأطر عمل الوكلاء المدعومة بنشاط.' },
+          { type: 'note', text: 'TaskWeaver مؤرشف ولم يعد قيد التطوير النشط — يجب اعتباره تنفيذًا مرجعيًا أو خيارًا مناسبًا لنشر قائم بالفعل، وليس نقطة انطلاق لعمل إنتاجي جديد. راجع [دليل برمجيات LLM المحلية](/ar/directory) لمعرفة كيف يقارَن TaskWeaver بأطر عمل الوكلاء المدعومة بنشاط.' },
         ],
       },
       history: {
@@ -2141,7 +2141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة Semantic Kernel: الميزات والتسعير والبدائل](/ar/power-local-llm/semantic-kernel-review) — SDK تنسيق للمؤسسات من Microsoft يُطوَّر بنشاط، للفرق التي تحتاج إلى دعم مستمر.',
           '[مراجعة CrewAI: الميزات والتسعير والبدائل](/ar/power-local-llm/crewai-review) — إطار عمل متعدد الوكلاء قائم على الأدوار ويُصان بنشاط، لسير عمل أوسع بين الوكلاء.',
           '[مراجعة LangGraph: الميزات والتسعير والبدائل](/ar/power-local-llm/langgraph-review) — إطار عمل سير عمل يحتفظ بحالته ومبني على رسم بياني ويُصان بنشاط، لتشغيل وكلاء قابل للفحص والاستئناف.',
-          '[دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك موقع TaskWeaver بين أطر عمل الوكلاء.',
+          '[دليل برمجيات LLM المحلية](/ar/directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك موقع TaskWeaver بين أطر عمل الوكلاء.',
         ],
       },
     },
@@ -2216,7 +2216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`git clone` + `pip install -r requirements.txt`로 설치 — PyPI 패키지 없음',
         ],
         callouts: [
-          { type: 'note', text: 'TaskWeaver는 보관 처리되어 더 이상 활발히 개발되지 않습니다 — 새 프로덕션 작업의 출발점이 아니라 참조 구현이나 기존 배포에 적합한 선택지로 취급하세요. TaskWeaver가 활발히 유지보수되는 에이전트 프레임워크와 어떻게 비교되는지는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.' },
+          { type: 'note', text: 'TaskWeaver는 보관 처리되어 더 이상 활발히 개발되지 않습니다 — 새 프로덕션 작업의 출발점이 아니라 참조 구현이나 기존 배포에 적합한 선택지로 취급하세요. TaskWeaver가 활발히 유지보수되는 에이전트 프레임워크와 어떻게 비교되는지는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.' },
         ],
       },
       history: {
@@ -2409,7 +2409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Semantic Kernel 리뷰: 기능, 가격, 대안](/ko/power-local-llm/semantic-kernel-review) — 지속적인 지원이 필요한 팀을 위한, Microsoft가 적극적으로 개발 중인 엔터프라이즈 오케스트레이션 SDK.',
           '[CrewAI 리뷰: 기능, 가격, 대안](/ko/power-local-llm/crewai-review) — 더 넓은 에이전트 간 워크플로를 위한, 역할 기반의 적극적으로 유지보수되는 다중 에이전트 프레임워크.',
           '[LangGraph 리뷰: 기능, 가격, 대안](/ko/power-local-llm/langgraph-review) — 검사 및 재개 가능한 에이전트 실행을 위한, 적극적으로 유지보수되는 상태 유지형 그래프 기반 워크플로 프레임워크.',
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, 에이전트 프레임워크 중 TaskWeaver의 위치를 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, 에이전트 프레임워크 중 TaskWeaver의 위치를 포함합니다.',
         ],
       },
     },

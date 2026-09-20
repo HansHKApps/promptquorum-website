@@ -92,7 +92,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Requires iPhone 14+, iPad mini (7th gen)+, an Apple Silicon Mac, or Apple Vision Pro',
           'Developer: Zijie Deng, an independent developer — not a company with a publicly disclosed size or funding',
           'Distinct product from the separate paid app "AI on Device" by developer Eduardo Dominguez Menendez — see the naming disambiguation section',
-          'This is a companion piece to On Device AI\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory)',
+          'This is a companion piece to On Device AI\'s entry in the [Local LLM Software Directory](/directory)',
         ],
         callouts: [
           { type: 'note', text: `This review describes what On Device AI states about itself on [ondevice-ai.app](${APP_SITE_URL}) and its [App Store listing](${APP_STORE_URL}). PromptQuorum has not independently benchmarked its on-device inference speed across the 200+ supported models, and has not independently verified its no-data-collection claim during local processing — those are the developer's stated design, not third-party-audited guarantees.` },
@@ -165,7 +165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Device': 'Mac', 'Minimum requirement': `Apple Silicon only, macOS 15+ — [get it on the App Store](${APP_STORE_URL})` },
           { 'Device': 'Vision Pro', 'Minimum requirement': `visionOS 2.0+ — [get it on the App Store](${APP_STORE_URL})` },
         ],
-        note: 'On Device AI\'s own listing recommends 6GB or more of device RAM for optimal performance. There is no Android or Windows release — if you need a cross-platform option, check the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for local-model apps that cover those platforms.',
+        note: 'On Device AI\'s own listing recommends 6GB or more of device RAM for optimal performance. There is no Android or Windows release — if you need a cross-platform option, check the [Local LLM Software Directory](/directory) for local-model apps that cover those platforms.',
       },
       pricing: {
         id: 'pricing',
@@ -219,14 +219,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Competitors and Alternatives',
-        content: 'On Device AI competes with a small set of apps that also run open-weight models locally on Apple devices. Here is how it sits next to the closest options — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'On Device AI competes with a small set of apps that also run open-weight models locally on Apple devices. Here is how it sits next to the closest options — see the [Local LLM Software Directory](/directory) for the full catalog.',
         items: [
           '**[Enclave AI](/power-local-llm/enclave-ai-review-2026)** — a free iPhone/iPad/Mac app from a different independent developer offering hundreds of downloadable open-source models plus personalized assistants, document interaction, and Siri/Shortcuts automation; a closer feature-for-feature peer to On Device AI than the fixed-model apps below.',
           '**[Noema](/power-local-llm/noema-review)** — another on-device model-chat app for Apple platforms; see the dedicated review for its specific model library and feature set.',
           '**[Solair AI](/power-local-llm/solair-ai-review)** — an additional on-device AI app covered separately; compare its model selection and pricing against On Device AI\'s $3.99-$99.99 in-app purchase range.',
           '**["AI on Device"](/power-local-llm/ai-on-device-review)** — not the same app as this review\'s subject, despite the near-identical name. It is a $4.99 one-time-purchase app from a different developer (Eduardo Dominguez Menendez) that runs a single fixed 3-billion-parameter, 2-bit-quantized model and requires an Apple Intelligence-compatible device, rather than offering a 200+ model library.',
         ],
-        note: 'This is not an exhaustive list of on-device Apple AI apps — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog.',
+        note: 'This is not an exhaustive list of on-device Apple AI apps — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -280,7 +280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including On Device AI\'s directory entry in the mobile section.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including On Device AI\'s directory entry in the mobile section.',
           '[AI on Device Review](/power-local-llm/ai-on-device-review) — the separate, similarly named, single-fixed-model paid app; read this if that is the app you meant to look up.',
           '[Enclave AI Review](/power-local-llm/enclave-ai-review-2026) — a closer feature peer: another free app offering hundreds of downloadable local models on Apple devices.',
           '[Noema Review](/power-local-llm/noema-review) — another on-device model-chat app for Apple platforms.',
@@ -363,7 +363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Erfordert iPhone 14+, iPad mini (7. Gen)+, einen Apple-Silicon-Mac oder Apple Vision Pro',
           'Entwickler: Zijie Deng, ein unabhängiger Entwickler — kein Unternehmen mit öffentlich bekannter Größe oder Finanzierung',
           'Anderes Produkt als die separate kostenpflichtige App „AI on Device" von Entwickler Eduardo Dominguez Menendez — siehe den Abschnitt zur Namensverwechslung',
-          'Diese Review ist der Begleitartikel zum Eintrag von On Device AI im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory)',
+          'Diese Review ist der Begleitartikel zum Eintrag von On Device AI im [Local LLM Software Directory](/de/directory)',
         ],
         callouts: [
           { type: 'note', text: `Diese Review beschreibt, was On Device AI auf [ondevice-ai.app](${APP_SITE_URL}) und im [App-Store-Eintrag](${APP_STORE_URL}) über sich selbst angibt. PromptQuorum hat weder die Inferenzgeschwindigkeit über die 200+ unterstützten Modelle hinweg unabhängig gemessen noch die Angabe zur fehlenden Datensammlung bei der lokalen Verarbeitung unabhängig geprüft — das sind die vom Entwickler angegebenen Design-Eigenschaften, keine extern geprüften Garantien.` },
@@ -436,7 +436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Gerät': 'Mac', 'Mindestanforderung': `Nur Apple Silicon, macOS 15+ — [im App Store holen](${APP_STORE_URL})` },
           { 'Gerät': 'Vision Pro', 'Mindestanforderung': `visionOS 2.0+ — [im App Store holen](${APP_STORE_URL})` },
         ],
-        note: 'On Device AIs eigener Eintrag empfiehlt für optimale Leistung mindestens 6 GB Arbeitsspeicher. Es gibt keine Android- oder Windows-Version — falls Sie eine plattformübergreifende Option benötigen, prüfen Sie das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) nach lokalen Modell-Apps für diese Plattformen.',
+        note: 'On Device AIs eigener Eintrag empfiehlt für optimale Leistung mindestens 6 GB Arbeitsspeicher. Es gibt keine Android- oder Windows-Version — falls Sie eine plattformübergreifende Option benötigen, prüfen Sie das [Local LLM Software Directory](/de/directory) nach lokalen Modell-Apps für diese Plattformen.',
       },
       pricing: {
         id: 'pricing',
@@ -490,14 +490,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Konkurrenten und Alternativen',
-        content: 'On Device AI konkurriert mit einer kleinen Gruppe von Apps, die ebenfalls Open-Weight-Modelle lokal auf Apple-Geräten ausführen. So schneidet die App im Vergleich zu den nächstliegenden Optionen ab — den vollständigen Katalog finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        content: 'On Device AI konkurriert mit einer kleinen Gruppe von Apps, die ebenfalls Open-Weight-Modelle lokal auf Apple-Geräten ausführen. So schneidet die App im Vergleich zu den nächstliegenden Optionen ab — den vollständigen Katalog finden Sie im [Local LLM Software Directory](/de/directory).',
         items: [
           '**[Enclave AI](/de/power-local-llm/enclave-ai-review-2026)** — eine kostenlose iPhone-/iPad-/Mac-App eines anderen unabhängigen Entwicklers mit Hunderten herunterladbaren Open-Source-Modellen sowie personalisierten Assistenten, Dokumenten-Interaktion und Siri-/Kurzbefehle-Automatisierung; funktional der nächstliegende Vergleich zu On Device AI gegenüber den unten genannten Apps mit festem Modell.',
           '**[Noema](/de/power-local-llm/noema-review)** — eine weitere On-Device-Modell-Chat-App für Apple-Plattformen; siehe die eigene Review für Modellbibliothek und Funktionsumfang.',
           '**[Solair AI](/de/power-local-llm/solair-ai-review)** — eine weitere, separat getestete On-Device-KI-App; vergleichen Sie deren Modellauswahl und Preise mit On Device AIs In-App-Kauf-Spanne von 3,99 $ bis 99,99 $.',
           '**["AI on Device"](/de/power-local-llm/ai-on-device-review)** — trotz des fast identischen Namens nicht dieselbe App wie das Thema dieser Review. Es handelt sich um eine einmalig 4,99 $ kostende App eines anderen Entwicklers (Eduardo Dominguez Menendez), die ein einzelnes festes 3-Milliarden-Parameter-Modell mit 2-Bit-Quantisierung ausführt und ein Apple-Intelligence-kompatibles Gerät voraussetzt, statt eine Bibliothek mit 200+ Modellen zu bieten.',
         ],
-        note: 'Dies ist keine vollständige Liste aller On-Device-KI-Apps für Apple — den vollständigen, regelmäßig aktualisierten Katalog finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine vollständige Liste aller On-Device-KI-Apps für Apple — den vollständigen, regelmäßig aktualisierten Katalog finden Sie im [Local LLM Software Directory](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -551,7 +551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von On Device AI im Mobile-Bereich.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von On Device AI im Mobile-Bereich.',
           '[AI on Device Review](/de/power-local-llm/ai-on-device-review) — die separate, ähnlich benannte App mit festem Modell; lesen Sie diese, falls Sie eigentlich diese App gesucht haben.',
           '[Enclave AI Review](/de/power-local-llm/enclave-ai-review-2026) — der funktional nächstliegende Vergleich: eine weitere kostenlose App mit Hunderten herunterladbaren lokalen Modellen für Apple-Geräte.',
           '[Noema Review](/de/power-local-llm/noema-review) — eine weitere On-Device-Modell-Chat-App für Apple-Plattformen.',
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nécessite un iPhone 14+, un iPad mini (7e gén.)+, un Mac Apple Silicon ou un Apple Vision Pro',
           "Développeur : Zijie Deng, développeur indépendant — pas une entreprise à la taille ou au financement publiquement communiqués",
           'Produit distinct de l\'application payante séparée « AI on Device » du développeur Eduardo Dominguez Menendez — voir la section de clarification sur les noms',
-          'Cet avis est le complément de la fiche de On Device AI dans le [Répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory)',
+          'Cet avis est le complément de la fiche de On Device AI dans le [Répertoire de logiciels LLM locaux](/fr/directory)',
         ],
         callouts: [
           { type: 'note', text: `Cet avis décrit ce que On Device AI déclare sur [ondevice-ai.app](${APP_SITE_URL}) et sur sa [fiche App Store](${APP_STORE_URL}). PromptQuorum n'a pas mesuré indépendamment sa vitesse d'inférence sur l'ensemble des 200+ modèles pris en charge, ni vérifié indépendamment son affirmation d'absence de collecte de données pendant le traitement local — ce sont les caractéristiques de conception déclarées par le développeur, pas des garanties auditées par un tiers.` },
@@ -707,7 +707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Appareil': 'Mac', 'Configuration minimale': `Apple Silicon uniquement, macOS 15+ — [obtenir sur l'App Store](${APP_STORE_URL})` },
           { 'Appareil': 'Vision Pro', 'Configuration minimale': `visionOS 2.0+ — [obtenir sur l'App Store](${APP_STORE_URL})` },
         ],
-        note: "La fiche de On Device AI recommande elle-même 6 Go ou plus de mémoire vive pour des performances optimales. Il n'existe pas de version Android ou Windows — pour une option multiplateforme, consultez le [Répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour des applications de modèles locaux couvrant ces plateformes.",
+        note: "La fiche de On Device AI recommande elle-même 6 Go ou plus de mémoire vive pour des performances optimales. Il n'existe pas de version Android ou Windows — pour une option multiplateforme, consultez le [Répertoire de logiciels LLM locaux](/fr/directory) pour des applications de modèles locaux couvrant ces plateformes.",
       },
       pricing: {
         id: 'pricing',
@@ -761,14 +761,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Concurrents et alternatives',
-        content: "On Device AI est en concurrence avec un petit nombre d'applications qui exécutent également des modèles open-weight localement sur des appareils Apple. Voici comment elle se positionne face aux options les plus proches — consultez le [Répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.",
+        content: "On Device AI est en concurrence avec un petit nombre d'applications qui exécutent également des modèles open-weight localement sur des appareils Apple. Voici comment elle se positionne face aux options les plus proches — consultez le [Répertoire de logiciels LLM locaux](/fr/directory) pour le catalogue complet.",
         items: [
           "**[Enclave AI](/fr/power-local-llm/enclave-ai-review-2026)** — une application gratuite iPhone/iPad/Mac d'un autre développeur indépendant offrant des centaines de modèles open source téléchargeables, avec assistants personnalisés, interaction documentaire et automatisation Siri/raccourcis ; un pair fonctionnel plus proche de On Device AI que les applications à modèle fixe ci-dessous.",
           "**[Noema](/fr/power-local-llm/noema-review)** — une autre application de chat par modèle local sur plateformes Apple ; voir l'avis dédié pour sa bibliothèque de modèles et son ensemble de fonctionnalités spécifiques.",
           "**[Solair AI](/fr/power-local-llm/solair-ai-review)** — une autre application d'IA sur l'appareil couverte séparément ; comparez sa sélection de modèles et ses tarifs à la fourchette d'achats intégrés de 3,99 $ à 99,99 $ de On Device AI.",
           "**[« AI on Device »](/fr/power-local-llm/ai-on-device-review)** — malgré un nom presque identique, ce n'est pas la même application que le sujet de cet avis. C'est une application à 4,99 $ à l'achat unique d'un autre développeur (Eduardo Dominguez Menendez) qui exécute un seul modèle fixe de 3 milliards de paramètres quantifié en 2 bits et nécessite un appareil compatible Apple Intelligence, plutôt que d'offrir une bibliothèque de 200+ modèles.",
         ],
-        note: "Cette liste n'est pas exhaustive pour les applications d'IA sur l'appareil pour Apple — consultez le [Répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, régulièrement mis à jour.",
+        note: "Cette liste n'est pas exhaustive pour les applications d'IA sur l'appareil pour Apple — consultez le [Répertoire de logiciels LLM locaux](/fr/directory) pour le catalogue complet, régulièrement mis à jour.",
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -822,7 +822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          "[Répertoire de logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d'outils d'IA locale auquel appartient cet article, incluant la fiche de On Device AI dans la section mobile.",
+          "[Répertoire de logiciels LLM locaux 2026](/fr/directory) — le catalogue complet d'outils d'IA locale auquel appartient cet article, incluant la fiche de On Device AI dans la section mobile.",
           '[Avis AI on Device](/fr/power-local-llm/ai-on-device-review) — l\'application distincte, au nom similaire, à modèle unique fixe ; à lire si c\'est cette application que vous cherchiez.',
           "[Avis Enclave AI](/fr/power-local-llm/enclave-ai-review-2026) — le pair fonctionnel le plus proche : une autre application gratuite offrant des centaines de modèles locaux téléchargeables sur les appareils Apple.",
           '[Avis Noema](/fr/power-local-llm/noema-review) — une autre application de chat par modèle local sur plateformes Apple.',
@@ -905,7 +905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Requiere iPhone 14+, iPad mini (7.ª gen.)+, un Mac con Apple Silicon o Apple Vision Pro',
           'Desarrollador: Zijie Deng, desarrollador independiente — no una empresa con tamaño o financiación públicamente conocidos',
           'Producto distinto de la app de pago independiente "AI on Device" del desarrollador Eduardo Dominguez Menendez — ver la sección de aclaración de nombres',
-          'Esta reseña es la pieza complementaria a la ficha de On Device AI en el [Directorio de software de LLM locales](/es/power-local-llm/local-llm-software-directory)',
+          'Esta reseña es la pieza complementaria a la ficha de On Device AI en el [Directorio de software de LLM locales](/es/directory)',
         ],
         callouts: [
           { type: 'note', text: `Esta reseña describe lo que On Device AI declara sobre sí misma en [ondevice-ai.app](${APP_SITE_URL}) y en su [ficha de App Store](${APP_STORE_URL}). PromptQuorum no ha evaluado de forma independiente su velocidad de inferencia en los 200+ modelos admitidos, ni ha verificado de forma independiente su afirmación de no recolección de datos durante el procesamiento local — son características de diseño declaradas por el desarrollador, no garantías auditadas por terceros.` },
@@ -978,7 +978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Dispositivo': 'Mac', 'Requisito mínimo': `Solo Apple Silicon, macOS 15+ — [consíguela en la App Store](${APP_STORE_URL})` },
           { 'Dispositivo': 'Vision Pro', 'Requisito mínimo': `visionOS 2.0+ — [consíguela en la App Store](${APP_STORE_URL})` },
         ],
-        note: 'La propia ficha de On Device AI recomienda 6 GB o más de RAM del dispositivo para un rendimiento óptimo. No hay versión para Android o Windows — si necesitas una opción multiplataforma, revisa el [Directorio de software de LLM locales](/es/power-local-llm/local-llm-software-directory) para apps de modelos locales que cubran esas plataformas.',
+        note: 'La propia ficha de On Device AI recomienda 6 GB o más de RAM del dispositivo para un rendimiento óptimo. No hay versión para Android o Windows — si necesitas una opción multiplataforma, revisa el [Directorio de software de LLM locales](/es/directory) para apps de modelos locales que cubran esas plataformas.',
       },
       pricing: {
         id: 'pricing',
@@ -1032,14 +1032,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Competidores y alternativas',
-        content: 'On Device AI compite con un pequeño grupo de apps que también ejecutan modelos de pesos abiertos localmente en dispositivos Apple. Así se compara con las opciones más cercanas — consulta el [Directorio de software de LLM locales](/es/power-local-llm/local-llm-software-directory) para el catálogo completo.',
+        content: 'On Device AI compite con un pequeño grupo de apps que también ejecutan modelos de pesos abiertos localmente en dispositivos Apple. Así se compara con las opciones más cercanas — consulta el [Directorio de software de LLM locales](/es/directory) para el catálogo completo.',
         items: [
           '**[Enclave AI](/es/power-local-llm/enclave-ai-review-2026)** — una app gratuita para iPhone/iPad/Mac de otro desarrollador independiente que ofrece cientos de modelos de código abierto descargables, además de asistentes personalizados, interacción con documentos y automatización con Siri/Atajos; un par funcional más cercano a On Device AI que las apps de modelo fijo de abajo.',
           '**[Noema](/es/power-local-llm/noema-review)** — otra app de chat con modelo local en plataformas Apple; consulta la reseña dedicada para ver su biblioteca de modelos y conjunto de funciones específicos.',
           '**[Solair AI](/es/power-local-llm/solair-ai-review)** — otra app de IA en el dispositivo cubierta por separado; compara su selección de modelos y precios con el rango de compras dentro de la app de $3.99-$99.99 de On Device AI.',
           '**["AI on Device"](/es/power-local-llm/ai-on-device-review)** — pese al nombre casi idéntico, no es la misma app que el tema de esta reseña. Es una app de pago único de $4.99 de otro desarrollador (Eduardo Dominguez Menendez) que ejecuta un único modelo fijo de 3.000 millones de parámetros cuantizado a 2 bits y requiere un dispositivo compatible con Apple Intelligence, en vez de ofrecer una biblioteca de 200+ modelos.',
         ],
-        note: 'Esta no es una lista exhaustiva de apps de IA en el dispositivo para Apple — consulta el [Directorio de software de LLM locales](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente.',
+        note: 'Esta no es una lista exhaustiva de apps de IA en el dispositivo para Apple — consulta el [Directorio de software de LLM locales](/es/directory) para el catálogo completo y actualizado regularmente.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1093,7 +1093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de LLM locales 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de On Device AI en la sección móvil.',
+          '[Directorio de software de LLM locales 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de On Device AI en la sección móvil.',
           '[Reseña de AI on Device](/es/power-local-llm/ai-on-device-review) — la app distinta, de nombre parecido, con un único modelo fijo; léela si es esa la app que buscabas.',
           '[Reseña de Enclave AI](/es/power-local-llm/enclave-ai-review-2026) — el par funcional más cercano: otra app gratuita que ofrece cientos de modelos locales descargables en dispositivos Apple.',
           '[Reseña de Noema](/es/power-local-llm/noema-review) — otra app de chat con modelo local en plataformas Apple.',
@@ -1176,7 +1176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'iPhone 14以降、iPad mini(第7世代)以降、Apple SiliconMac、またはApple Vision Proが必要',
           '開発者:Zijie Deng、独立系開発者——公開された規模や資金調達のある企業ではない',
           '開発者Eduardo Dominguez Menendezによる別の有料アプリ「AI on Device」とは異なる製品——名称の違いに関する説明を参照',
-          '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるOn Device AIの項目を補足する記事です',
+          '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるOn Device AIの項目を補足する記事です',
         ],
         callouts: [
           { type: 'note', text: `本レビューは、On Device AIが[ondevice-ai.app](${APP_SITE_URL})と[App Store掲載情報](${APP_STORE_URL})で自社について述べている内容を紹介するものです。PromptQuorumは、対応する200以上のモデル全体でのオンデバイス推論速度を独自にベンチマークしておらず、ローカル処理中のデータ非収集の主張も独自に検証していません——これらは開発者が述べている設計方針であり、第三者が監査した保証ではありません。` },
@@ -1249,7 +1249,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '端末': 'Mac', '最小要件': `Apple Siliconのみ、macOS 15以降——[App Storeで入手](${APP_STORE_URL})` },
           { '端末': 'Vision Pro', '最小要件': `visionOS 2.0以降——[App Storeで入手](${APP_STORE_URL})` },
         ],
-        note: 'On Device AI自身の掲載情報では、最適なパフォーマンスのために端末メモリ6GB以上を推奨しています。AndroidやWindows版はありません——複数プラットフォームに対応する選択肢が必要な場合は、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)で該当プラットフォームをカバーするローカルモデルアプリを確認してください。',
+        note: 'On Device AI自身の掲載情報では、最適なパフォーマンスのために端末メモリ6GB以上を推奨しています。AndroidやWindows版はありません——複数プラットフォームに対応する選択肢が必要な場合は、[ローカルLLMソフトウェアディレクトリ](/ja/directory)で該当プラットフォームをカバーするローカルモデルアプリを確認してください。',
       },
       pricing: {
         id: 'pricing',
@@ -1303,14 +1303,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '競合とその他の選択肢',
-        content: 'On Device AIは、Apple端末上でオープンウェイトモデルをローカル実行する少数のアプリと競合しています。最も近い選択肢との比較は以下のとおりです——完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        content: 'On Device AIは、Apple端末上でオープンウェイトモデルをローカル実行する少数のアプリと競合しています。最も近い選択肢との比較は以下のとおりです——完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)をご覧ください。',
         items: [
           '**[Enclave AI](/ja/power-local-llm/enclave-ai-review-2026)** — 別の独立系開発者による無料のiPhone/iPad/Macアプリで、数百のダウンロード可能なオープンソースモデルに加え、パーソナライズされたアシスタント、ドキュメント連携、Siri/ショートカット自動化を提供。下記の固定モデルアプリよりも、機能面ではOn Device AIに近い存在です。',
           '**[Noema](/ja/power-local-llm/noema-review)** — Appleプラットフォーム向けの別のオンデバイスモデルチャットアプリ。具体的なモデルライブラリと機能セットは専用レビューをご覧ください。',
           '**[Solair AI](/ja/power-local-llm/solair-ai-review)** — 別途レビューしているもう1つのオンデバイスAIアプリ。モデル選択肢と料金を、On Device AIの3.99ドル~99.99ドルのアプリ内課金範囲と比較してみてください。',
           '**「[AI on Device](/ja/power-local-llm/ai-on-device-review)」** — 名前はほぼ同一ですが、本レビューの対象とは同じアプリではありません。別の開発者(Eduardo Dominguez Menendez)による一括4.99ドルのアプリで、200以上のモデルライブラリを提供する代わりに、2ビット量子化された固定の30億パラメータモデル1つを実行し、Apple Intelligence対応端末を必要とします。',
         ],
-        note: 'これはApple向けオンデバイスAIアプリの網羅的なリストではありません——定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'これはApple向けオンデバイスAIアプリの網羅的なリストではありません——定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)をご覧ください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1364,7 +1364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの完全なカタログで、モバイルセクションにOn Device AIの掲載項目も含まれます。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — 本記事が属するローカルAIツールの完全なカタログで、モバイルセクションにOn Device AIの掲載項目も含まれます。',
           '[AI on Deviceレビュー](/ja/power-local-llm/ai-on-device-review) — 名前は似ていますが別の、固定1モデルのアプリ。こちらのアプリをお探しの場合はご覧ください。',
           '[Enclave AIレビュー](/ja/power-local-llm/enclave-ai-review-2026) — 機能面で最も近い比較対象:Apple端末向けに数百のダウンロード可能なローカルモデルを提供する、もう1つの無料アプリ。',
           '[Noemaレビュー](/ja/power-local-llm/noema-review) — Appleプラットフォーム向けの別のオンデバイスモデルチャットアプリ。',
@@ -1447,7 +1447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '需要iPhone 14+、iPad mini(第7代)+、Apple芯片Mac或Apple Vision Pro',
           '开发者:Zijie Deng,独立开发者——并非公开披露规模或融资情况的公司',
           '与开发者Eduardo Dominguez Menendez推出的独立付费应用"AI on Device"是不同产品——参见名称区分部分',
-          '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中On Device AI条目的配套文章',
+          '本评测是[本地LLM软件目录](/zh/directory)中On Device AI条目的配套文章',
         ],
         callouts: [
           { type: 'note', text: `本评测介绍的是On Device AI在[ondevice-ai.app](${APP_SITE_URL})及[App Store页面](${APP_STORE_URL})上对自身的描述。PromptQuorum尚未独立测试其在200多种支持模型上的设备端推理速度,也未独立验证其在本地处理期间不收集数据的说法——这些是开发者所述的设计特性,而非经第三方审计的保证。` },
@@ -1520,7 +1520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '设备': 'Mac', '最低要求': `仅限Apple芯片,macOS 15+——[在App Store获取](${APP_STORE_URL})` },
           { '设备': 'Vision Pro', '最低要求': `visionOS 2.0+——[在App Store获取](${APP_STORE_URL})` },
         ],
-        note: 'On Device AI自身页面建议设备内存达到6GB或以上以获得最佳性能。目前没有Android或Windows版本——如果你需要跨平台方案,可查看[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory),了解覆盖这些平台的本地模型应用。',
+        note: 'On Device AI自身页面建议设备内存达到6GB或以上以获得最佳性能。目前没有Android或Windows版本——如果你需要跨平台方案,可查看[本地LLM软件目录](/zh/directory),了解覆盖这些平台的本地模型应用。',
       },
       pricing: {
         id: 'pricing',
@@ -1574,14 +1574,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '竞品与替代方案',
-        content: 'On Device AI与一小批同样在Apple设备上本地运行开放权重模型的应用相互竞争。以下是它与最接近的几个选项的比较——完整目录请参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'On Device AI与一小批同样在Apple设备上本地运行开放权重模型的应用相互竞争。以下是它与最接近的几个选项的比较——完整目录请参见[本地LLM软件目录](/zh/directory)。',
         items: [
           '**[Enclave AI](/zh/power-local-llm/enclave-ai-review-2026)** — 由另一位独立开发者打造的免费iPhone/iPad/Mac应用,提供数百种可下载的开源模型,并配有个性化助手、文档交互以及Siri/快捷指令自动化;与下方的固定模型应用相比,它在功能上与On Device AI更为接近。',
           '**[Noema](/zh/power-local-llm/noema-review)** — 另一款面向Apple平台的设备端模型聊天应用;具体模型库和功能集请参见专门评测。',
           '**[Solair AI](/zh/power-local-llm/solair-ai-review)** — 另一款单独评测的设备端AI应用;可将其模型选择和定价与On Device AI 3.99美元-99.99美元的应用内购买范围进行比较。',
           '**"[AI on Device](/zh/power-local-llm/ai-on-device-review)"** — 尽管名称几乎相同,但与本评测的主题并非同一款应用。它是另一位开发者(Eduardo Dominguez Menendez)推出的一次性4.99美元应用,运行一个经2位量化的固定30亿参数模型,并要求支持Apple Intelligence的设备,而不是提供200多种模型的模型库。',
         ],
-        note: '这并非Apple设备端AI应用的完整列表——完整且定期更新的目录请参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非Apple设备端AI应用的完整列表——完整且定期更新的目录请参见[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1635,7 +1635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地AI工具目录,其中包含移动板块中On Device AI的目录条目。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的完整本地AI工具目录,其中包含移动板块中On Device AI的目录条目。',
           '[AI on Device评测](/zh/power-local-llm/ai-on-device-review) — 名称相似但独立的单一固定模型付费应用;如果你要找的是那款应用,请阅读此文。',
           '[Enclave AI评测](/zh/power-local-llm/enclave-ai-review-2026) — 功能上最接近的对比对象:另一款为Apple设备提供数百种可下载本地模型的免费应用。',
           '[Noema评测](/zh/power-local-llm/noema-review) — 另一款面向Apple平台的设备端模型聊天应用。',
@@ -1718,7 +1718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Requer iPhone 14+, iPad mini (7ª ger.)+, um Mac com Apple Silicon ou Apple Vision Pro',
           'Desenvolvedor: Zijie Deng, desenvolvedor independente — não uma empresa com porte ou financiamento divulgados publicamente',
           'Produto distinto do app pago separado "AI on Device" do desenvolvedor Eduardo Dominguez Menendez — veja a seção de esclarecimento sobre nomes',
-          'Este review é a peça complementar à ficha do On Device AI no [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory)',
+          'Este review é a peça complementar à ficha do On Device AI no [Diretório de Software de LLM Local](/pt/directory)',
         ],
         callouts: [
           { type: 'note', text: `Este review descreve o que o On Device AI declara sobre si mesmo em [ondevice-ai.app](${APP_SITE_URL}) e em sua [ficha na App Store](${APP_STORE_URL}). A PromptQuorum não testou de forma independente sua velocidade de inferência nos 200+ modelos suportados, nem verificou de forma independente sua alegação de não coleta de dados durante o processamento local — essas são características de design declaradas pelo desenvolvedor, não garantias auditadas por terceiros.` },
@@ -1791,7 +1791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Dispositivo': 'Mac', 'Requisito mínimo': `Somente Apple Silicon, macOS 15+ — [obter na App Store](${APP_STORE_URL})` },
           { 'Dispositivo': 'Vision Pro', 'Requisito mínimo': `visionOS 2.0+ — [obter na App Store](${APP_STORE_URL})` },
         ],
-        note: 'A própria ficha do On Device AI recomenda 6 GB ou mais de RAM do dispositivo para desempenho ideal. Não há versão para Android ou Windows — se você precisar de uma opção multiplataforma, confira o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para apps de modelos locais que cobrem essas plataformas.',
+        note: 'A própria ficha do On Device AI recomenda 6 GB ou mais de RAM do dispositivo para desempenho ideal. Não há versão para Android ou Windows — se você precisar de uma opção multiplataforma, confira o [Diretório de Software de LLM Local](/pt/directory) para apps de modelos locais que cobrem essas plataformas.',
       },
       pricing: {
         id: 'pricing',
@@ -1845,14 +1845,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Concorrentes e alternativas',
-        content: 'O On Device AI compete com um pequeno grupo de apps que também executam modelos de pesos abertos localmente em dispositivos Apple. Veja como ele se compara às opções mais próximas — confira o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'O On Device AI compete com um pequeno grupo de apps que também executam modelos de pesos abertos localmente em dispositivos Apple. Veja como ele se compara às opções mais próximas — confira o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo.',
         items: [
           '**[Enclave AI](/pt/power-local-llm/enclave-ai-review-2026)** — um app gratuito para iPhone/iPad/Mac de outro desenvolvedor independente que oferece centenas de modelos de código aberto para baixar, além de assistentes personalizados, interação com documentos e automação Siri/Atalhos; um par funcional mais próximo do On Device AI do que os apps de modelo fixo abaixo.',
           '**[Noema](/pt/power-local-llm/noema-review)** — outro app de chat com modelo local no dispositivo para plataformas Apple; veja o review dedicado para sua biblioteca de modelos e conjunto de recursos específicos.',
           '**[Solair AI](/pt/power-local-llm/solair-ai-review)** — outro app de IA no dispositivo coberto separadamente; compare sua seleção de modelos e preços com a faixa de compras dentro do app de $3,99-$99,99 do On Device AI.',
           '**"[AI on Device](/pt/power-local-llm/ai-on-device-review)"** — apesar do nome quase idêntico, não é o mesmo app do assunto deste review. É um app de pagamento único de $4,99 de outro desenvolvedor (Eduardo Dominguez Menendez) que executa um único modelo fixo de 3 bilhões de parâmetros quantizado em 2 bits e exige um dispositivo compatível com Apple Intelligence, em vez de oferecer uma biblioteca de 200+ modelos.',
         ],
-        note: 'Esta não é uma lista exaustiva de apps de IA no dispositivo para Apple — confira o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente.',
+        note: 'Esta não é uma lista exaustiva de apps de IA no dispositivo para Apple — confira o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo e atualizado regularmente.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1906,7 +1906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura relacionada',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do On Device AI na seção de dispositivos móveis.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do On Device AI na seção de dispositivos móveis.',
           '[Review do AI on Device](/pt/power-local-llm/ai-on-device-review) — o app separado, de nome parecido, com um único modelo fixo; leia se for esse o app que você procurava.',
           '[Review do Enclave AI](/pt/power-local-llm/enclave-ai-review-2026) — o par funcional mais próximo: outro app gratuito que oferece centenas de modelos locais para baixar em dispositivos Apple.',
           '[Review do Noema](/pt/power-local-llm/noema-review) — outro app de chat com modelo local no dispositivo para plataformas Apple.',
@@ -1989,7 +1989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يتطلب iPhone 14+، أو iPad mini (الجيل السابع)+، أو Mac بمعالج Apple Silicon، أو Apple Vision Pro',
           'المطور: Zijie Deng، مطور مستقل — وليس شركة ذات حجم أو تمويل معلن للعموم',
           'منتج مختلف عن التطبيق المدفوع المنفصل "AI on Device" للمطور Eduardo Dominguez Menendez — راجع قسم توضيح الأسماء',
-          'هذه المراجعة هي المقال المكمل لسجل On Device AI في [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory)',
+          'هذه المراجعة هي المقال المكمل لسجل On Device AI في [دليل برمجيات LLM المحلية](/ar/directory)',
         ],
         callouts: [
           { type: 'note', text: `تصف هذه المراجعة ما يذكره On Device AI عن نفسه على [ondevice-ai.app](${APP_SITE_URL}) وفي [سجله على App Store](${APP_STORE_URL}). لم تختبر PromptQuorum بشكل مستقل سرعة الاستدلال على الجهاز عبر النماذج الأكثر من 200 المدعومة، ولم تتحقق بشكل مستقل من ادعائه بعدم جمع البيانات أثناء المعالجة المحلية — هذه خصائص تصميم يذكرها المطور، وليست ضمانات خضعت لتدقيق طرف ثالث.` },
@@ -2062,7 +2062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الجهاز': 'Mac', 'الحد الأدنى للمتطلبات': `معالج Apple Silicon فقط، macOS 15+‎ — [احصل عليه من App Store](${APP_STORE_URL})` },
           { 'الجهاز': 'Vision Pro', 'الحد الأدنى للمتطلبات': `visionOS 2.0+‎ — [احصل عليه من App Store](${APP_STORE_URL})` },
         ],
-        note: 'يوصي سجل On Device AI نفسه بذاكرة وصول عشوائي لا تقل عن 6 غيغابايت للحصول على أداء مثالي. لا توجد نسخة لأندرويد أو ويندوز — إذا كنت بحاجة إلى خيار متعدد المنصات، راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على تطبيقات نماذج محلية تغطي تلك المنصات.',
+        note: 'يوصي سجل On Device AI نفسه بذاكرة وصول عشوائي لا تقل عن 6 غيغابايت للحصول على أداء مثالي. لا توجد نسخة لأندرويد أو ويندوز — إذا كنت بحاجة إلى خيار متعدد المنصات، راجع [دليل برمجيات LLM المحلية](/ar/directory) للاطلاع على تطبيقات نماذج محلية تغطي تلك المنصات.',
       },
       pricing: {
         id: 'pricing',
@@ -2116,14 +2116,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'المنافسون والبدائل',
-        content: 'ينافس On Device AI مجموعة صغيرة من التطبيقات التي تشغّل أيضًا نماذج مفتوحة الأوزان محليًا على أجهزة Apple. إليك كيف يقارن بأقرب الخيارات — راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل.',
+        content: 'ينافس On Device AI مجموعة صغيرة من التطبيقات التي تشغّل أيضًا نماذج مفتوحة الأوزان محليًا على أجهزة Apple. إليك كيف يقارن بأقرب الخيارات — راجع [دليل برمجيات LLM المحلية](/ar/directory) للاطلاع على الكتالوج الكامل.',
         items: [
           '**[Enclave AI](/ar/power-local-llm/enclave-ai-review-2026)** — تطبيق مجاني لأجهزة iPhone/iPad/Mac من مطور مستقل آخر، يوفّر مئات النماذج مفتوحة المصدر القابلة للتنزيل إضافة إلى مساعدين مخصصين والتفاعل مع المستندات وأتمتة عبر Siri/الاختصارات؛ نظير وظيفي أقرب إلى On Device AI من تطبيقات النموذج الثابت أدناه.',
           '**[Noema](/ar/power-local-llm/noema-review)** — تطبيق آخر لدردشة النماذج على الجهاز لمنصات Apple؛ راجع المراجعة المخصصة للاطلاع على مكتبة نماذجه ومجموعة ميزاته المحددة.',
           '**[Solair AI](/ar/power-local-llm/solair-ai-review)** — تطبيق آخر للذكاء الاصطناعي على الجهاز تمت مراجعته بشكل منفصل؛ قارن اختيار نماذجه وأسعاره بنطاق مشتريات On Device AI داخل التطبيق البالغ 3.99-99.99 دولارًا.',
           '**"[AI on Device](/ar/power-local-llm/ai-on-device-review)"** — رغم الاسم شبه المطابق، إنه ليس نفس تطبيق موضوع هذه المراجعة. إنه تطبيق بسعر دفعة واحدة قدره 4.99 دولارًا من مطور آخر (Eduardo Dominguez Menendez)، يشغّل نموذجًا واحدًا ثابتًا بثلاثة مليارات معامل بدقة 2 بت، ويتطلب جهازًا متوافقًا مع Apple Intelligence، بدلاً من تقديم مكتبة تضم أكثر من 200 نموذج.',
         ],
-        note: 'هذه ليست قائمة شاملة لتطبيقات الذكاء الاصطناعي على الجهاز لأنظمة Apple — راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل والمُحدَّث بانتظام.',
+        note: 'هذه ليست قائمة شاملة لتطبيقات الذكاء الاصطناعي على الجهاز لأنظمة Apple — راجع [دليل برمجيات LLM المحلية](/ar/directory) للاطلاع على الكتالوج الكامل والمُحدَّث بانتظام.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2177,7 +2177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك سجل On Device AI في قسم الأجهزة المحمولة.',
+          '[دليل برمجيات LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك سجل On Device AI في قسم الأجهزة المحمولة.',
           '[مراجعة AI on Device](/ar/power-local-llm/ai-on-device-review) — التطبيق المنفصل المشابه في الاسم بنموذج ثابت واحد؛ اقرأه إذا كان هذا هو التطبيق الذي تبحث عنه.',
           '[مراجعة Enclave AI](/ar/power-local-llm/enclave-ai-review-2026) — النظير الوظيفي الأقرب: تطبيق مجاني آخر يوفّر مئات النماذج المحلية القابلة للتنزيل على أجهزة Apple.',
           '[مراجعة Noema](/ar/power-local-llm/noema-review) — تطبيق آخر لدردشة النماذج على الجهاز لمنصات Apple.',
@@ -2260,7 +2260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'iPhone 14+, iPad mini(7세대)+, Apple 실리콘 Mac, 또는 Apple Vision Pro 필요',
           '개발자: Zijie Deng, 독립 개발자——공개적으로 알려진 규모나 자금 조달 내역이 있는 기업이 아님',
           '개발자 Eduardo Dominguez Menendez의 별도 유료 앱 "AI on Device"와는 다른 제품——이름 구분 섹션 참조',
-          '본 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 On Device AI 항목을 보완하는 문서입니다',
+          '본 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 On Device AI 항목을 보완하는 문서입니다',
         ],
         callouts: [
           { type: 'note', text: `본 리뷰는 On Device AI가 [ondevice-ai.app](${APP_SITE_URL})와 [App Store 등록 정보](${APP_STORE_URL})에서 스스로 밝힌 내용을 다룹니다. PromptQuorum은 지원되는 200개 이상의 모델 전반에 걸친 온디바이스 추론 속도를 독립적으로 벤치마크하지 않았으며, 로컬 처리 중 데이터를 수집하지 않는다는 주장도 독립적으로 검증하지 않았습니다——이는 개발자가 밝힌 설계 특성일 뿐, 제3자가 감사한 보증이 아닙니다.` },
@@ -2333,7 +2333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '기기': 'Mac', '최소 요구 사항': `Apple 실리콘 전용, macOS 15+ — [App Store에서 받기](${APP_STORE_URL})` },
           { '기기': 'Vision Pro', '최소 요구 사항': `visionOS 2.0+ — [App Store에서 받기](${APP_STORE_URL})` },
         ],
-        note: 'On Device AI 자체 등록 정보는 최적의 성능을 위해 기기 메모리 6GB 이상을 권장합니다. Android나 Windows 버전은 없습니다——여러 플랫폼을 지원하는 대안이 필요하다면, 해당 플랫폼을 다루는 로컬 모델 앱에 대해 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 확인하시기 바랍니다.',
+        note: 'On Device AI 자체 등록 정보는 최적의 성능을 위해 기기 메모리 6GB 이상을 권장합니다. Android나 Windows 버전은 없습니다——여러 플랫폼을 지원하는 대안이 필요하다면, 해당 플랫폼을 다루는 로컬 모델 앱에 대해 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 확인하시기 바랍니다.',
       },
       pricing: {
         id: 'pricing',
@@ -2387,14 +2387,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '경쟁 제품 및 대안',
-        content: 'On Device AI는 Apple 기기에서 오픈 웨이트 모델을 로컬로 실행하는 소수의 다른 앱들과 경쟁합니다. 가장 가까운 선택지들과 비교한 내용은 다음과 같습니다——전체 목록은 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참조하십시오.',
+        content: 'On Device AI는 Apple 기기에서 오픈 웨이트 모델을 로컬로 실행하는 소수의 다른 앱들과 경쟁합니다. 가장 가까운 선택지들과 비교한 내용은 다음과 같습니다——전체 목록은 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참조하십시오.',
         items: [
           '**[Enclave AI](/ko/power-local-llm/enclave-ai-review-2026)** — 다른 독립 개발자가 만든 무료 iPhone/iPad/Mac 앱으로, 다운로드 가능한 수백 개의 오픈소스 모델과 함께 개인화된 어시스턴트, 문서 상호작용, Siri/단축어 자동화를 제공합니다. 아래의 고정 모델 앱들보다 기능 면에서 On Device AI에 더 가까운 대상입니다.',
           '**[Noema](/ko/power-local-llm/noema-review)** — Apple 플랫폼용 또 다른 온디바이스 모델 채팅 앱입니다. 구체적인 모델 라이브러리와 기능 구성은 전용 리뷰를 참조하십시오.',
           '**[Solair AI](/ko/power-local-llm/solair-ai-review)** — 별도로 리뷰한 또 다른 온디바이스 AI 앱입니다. 모델 선택지와 요금을 On Device AI의 3.99달러-99.99달러 인앱 구매 범위와 비교해 보십시오.',
           '**"[AI on Device](/ko/power-local-llm/ai-on-device-review)"** — 이름은 거의 동일하지만 본 리뷰의 대상과 같은 앱이 아닙니다. 다른 개발자(Eduardo Dominguez Menendez)가 만든 일회성 4.99달러 앱으로, 200개 이상의 모델 라이브러리를 제공하는 대신 2비트로 양자화된 고정된 30억 매개변수 모델 1개를 실행하며 Apple Intelligence 호환 기기를 요구합니다.',
         ],
-        note: '이는 Apple용 온디바이스 AI 앱의 전체 목록이 아닙니다——정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참조하십시오.',
+        note: '이는 Apple용 온디바이스 AI 앱의 전체 목록이 아닙니다——정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참조하십시오.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2448,7 +2448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 본 문서가 속한 로컬 AI 도구의 전체 카탈로그로, 모바일 섹션에 있는 On Device AI 등록 항목도 포함됩니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 본 문서가 속한 로컬 AI 도구의 전체 카탈로그로, 모바일 섹션에 있는 On Device AI 등록 항목도 포함됩니다.',
           '[AI on Device 리뷰](/ko/power-local-llm/ai-on-device-review) — 이름은 비슷하지만 별개인, 고정 단일 모델 앱입니다. 그 앱을 찾고 계셨다면 읽어 보십시오.',
           '[Enclave AI 리뷰](/ko/power-local-llm/enclave-ai-review-2026) — 가장 가까운 기능적 대응 앱: Apple 기기용으로 다운로드 가능한 수백 개의 로컬 모델을 제공하는 또 다른 무료 앱입니다.',
           '[Noema 리뷰](/ko/power-local-llm/noema-review) — Apple 플랫폼용 또 다른 온디바이스 모델 채팅 앱입니다.',

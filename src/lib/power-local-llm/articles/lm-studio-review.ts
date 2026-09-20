@@ -77,7 +77,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Developed by Element Labs, Inc.; a separate companion product, Bionic (launched July 2026), adds an autonomous coding/work agent on top of LM Studio\'s model runtime, with its own paid tiers',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to LM Studio\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how LM Studio compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to LM Studio\'s entry in the [Local LLM Software Directory](/directory) — see that page for how LM Studio compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -215,14 +215,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'lm-studio-competitors',
         title: 'LM Studio vs. Other Local Chat Apps',
-        content: 'LM Studio is one of several apps that combine local model inference with a graphical interface. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, and the dedicated [LM Studio vs. Ollama comparison](#lm-studio-vs-ollama) above for the closest head-to-head.',
+        content: 'LM Studio is one of several apps that combine local model inference with a graphical interface. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/directory) for the full catalog, and the dedicated [LM Studio vs. Ollama comparison](#lm-studio-vs-ollama) above for the closest head-to-head.',
         items: [
           '**[Ollama](https://ollama.com)** — a CLI-first, fully open-source (MIT) tool covering similar ground (local inference, OpenAI-compatible API) with an official desktop GUI added in July 2025; see the [Ollama review](/power-local-llm/ollama-review) and the comparison section above for a direct match-up.',
           '**[Jan](https://jan.ai)** — a free, open-source desktop chat app that runs models locally via llama.cpp and can also connect to cloud providers; see the [Jan review](/power-local-llm/jan-review) and the existing [LM Studio vs. Jan vs. GPT4All comparison](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) for a direct three-way comparison that already covers LM Studio against this app.',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — an open-source local chat client from Nomic AI, focused on a simple, fully offline experience; see the [GPT4All review](/power-local-llm/gpt4all-review) and the same three-way comparison linked above.',
           '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — a llama.cpp-based runtime with a built-in web UI, historically popular for creative writing and roleplay use cases; see the [KoboldCpp review](/power-local-llm/koboldcpp-review).',
         ],
-        note: 'This is not an exhaustive list of local-first chat clients — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including LM Studio\'s own directory entry.',
+        note: 'This is not an exhaustive list of local-first chat clients — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including LM Studio\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -280,7 +280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including LM Studio\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including LM Studio\'s directory entry.',
           '[Ollama Review](/power-local-llm/ollama-review) — a direct CLI-first, fully open-source alternative to LM Studio.',
           '[LM Studio vs. Jan vs. GPT4All](/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — a direct three-way comparison covering LM Studio against two other local-only chat clients in detail.',
           '[Jan Review](/power-local-llm/jan-review) — a free, open-source desktop chat app with optional cloud-provider connections.',
@@ -364,7 +364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Entwickelt von Element Labs, Inc.; ein separates Begleitprodukt namens Bionic (gestartet im Juli 2026) fügt einen autonomen Coding-/Arbeits-Agenten auf Basis von LM Studios Modell-Laufzeitumgebung hinzu, mit eigenen kostenpflichtigen Stufen',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu LM Studios Eintrag im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie LM Studio im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu LM Studios Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie LM Studio im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -502,14 +502,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'lm-studio-competitors',
         title: 'LM Studio vs. andere lokale Chat-Apps',
-        content: 'LM Studio ist eine von mehreren Apps, die lokale Modell-Inferenz mit einer grafischen Oberfläche kombinieren. Hier sehen Sie, wie es sich im Vergleich zu anderen Optionen in diesem Bereich einordnet — den vollständigen Katalog finden Sie im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory), den direkten Vergleich im Abschnitt [LM Studio vs. Ollama](#lm-studio-vs-ollama) oben.',
+        content: 'LM Studio ist eine von mehreren Apps, die lokale Modell-Inferenz mit einer grafischen Oberfläche kombinieren. Hier sehen Sie, wie es sich im Vergleich zu anderen Optionen in diesem Bereich einordnet — den vollständigen Katalog finden Sie im [lokalen KI-Software-Verzeichnis](/de/directory), den direkten Vergleich im Abschnitt [LM Studio vs. Ollama](#lm-studio-vs-ollama) oben.',
         items: [
           '**[Ollama](https://ollama.com)** — ein CLI-first, vollständig quelloffenes (MIT) Tool mit ähnlichem Funktionsumfang (lokale Inferenz, OpenAI-kompatible API), seit Juli 2025 mit offizieller Desktop-GUI; siehe den [Ollama Review](/de/power-local-llm/ollama-review) und den Vergleichsabschnitt oben für einen direkten Vergleich.',
           '**[Jan](https://jan.ai)** — eine kostenlose, quelloffene Desktop-Chat-App, die Modelle lokal via llama.cpp ausführt und sich auch mit Cloud-Anbietern verbinden kann; siehe den [Jan Review](/de/power-local-llm/jan-review) und den bestehenden [LM Studio vs. Jan vs. GPT4All-Vergleich](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) für einen direkten Dreiervergleich, der LM Studio gegen diese App bereits ausführlich behandelt.',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — ein quelloffener lokaler Chat-Client von Nomic AI, fokussiert auf eine einfache, vollständig offline funktionierende Erfahrung; siehe den [GPT4All Review](/de/power-local-llm/gpt4all-review) und denselben oben verlinkten Dreiervergleich.',
           '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — eine llama.cpp-basierte Laufzeitumgebung mit eingebauter Web-UI, historisch beliebt für kreatives Schreiben und Rollenspiel; siehe den [KoboldCpp Review](/de/power-local-llm/koboldcpp-review).',
         ],
-        note: 'Dies ist keine erschöpfende Liste lokal-first Chat-Clients — den vollständigen, regelmäßig aktualisierten Katalog einschließlich LM Studios eigenem Verzeichniseintrag finden Sie im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine erschöpfende Liste lokal-first Chat-Clients — den vollständigen, regelmäßig aktualisierten Katalog einschließlich LM Studios eigenem Verzeichniseintrag finden Sie im [lokalen KI-Software-Verzeichnis](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -567,7 +567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich LM Studios Verzeichniseintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich LM Studios Verzeichniseintrag.',
           '[Ollama Review](/de/power-local-llm/ollama-review) — eine direkte CLI-first, vollständig quelloffene Alternative zu LM Studio.',
           '[LM Studio vs. Jan vs. GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — ein direkter Dreiervergleich, der LM Studio ausführlich gegen zwei andere lokal-only Chat-Clients stellt.',
           '[Jan Review](/de/power-local-llm/jan-review) — eine kostenlose, quelloffene Desktop-Chat-App mit optionalen Cloud-Anbieter-Verbindungen.',
@@ -651,7 +651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Développé par Element Labs, Inc. ; un produit compagnon distinct, Bionic (lancé en juillet 2026), ajoute un agent autonome de codage/travail par-dessus le moteur d\'exécution de modèles de LM Studio, avec ses propres offres payantes',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément détaillé de la fiche de LM Studio dans le [répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment LM Studio se compare, en un coup d\'œil, à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cette review est le complément détaillé de la fiche de LM Studio dans le [répertoire des logiciels d\'IA locale](/fr/directory) — consultez cette page pour voir comment LM Studio se compare, en un coup d\'œil, à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -789,14 +789,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'lm-studio-competitors',
         title: 'LM Studio face aux autres applications de chat local',
-        content: 'LM Studio fait partie de plusieurs applications qui combinent inférence de modèles locale et interface graphique. Voici comment il se positionne face à d\'autres options dans ce domaine — consultez le [répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, et la comparaison dédiée [LM Studio vs. Ollama](#lm-studio-vs-ollama) ci-dessus pour le face-à-face le plus proche.',
+        content: 'LM Studio fait partie de plusieurs applications qui combinent inférence de modèles locale et interface graphique. Voici comment il se positionne face à d\'autres options dans ce domaine — consultez le [répertoire des logiciels d\'IA locale](/fr/directory) pour le catalogue complet, et la comparaison dédiée [LM Studio vs. Ollama](#lm-studio-vs-ollama) ci-dessus pour le face-à-face le plus proche.',
         items: [
           '**[Ollama](https://ollama.com)** — un outil d\'abord en ligne de commande, entièrement open source (MIT), couvrant un terrain similaire (inférence locale, API compatible OpenAI) avec une interface graphique de bureau officielle ajoutée en juillet 2025 ; voir le [Ollama Review](/fr/power-local-llm/ollama-review) et la section de comparaison ci-dessus pour un face-à-face direct.',
           '**[Jan](https://jan.ai)** — une application de chat de bureau gratuite et open source qui exécute des modèles localement via llama.cpp et peut aussi se connecter à des fournisseurs cloud ; voir le [Jan Review](/fr/power-local-llm/jan-review) et la comparaison existante [LM Studio vs. Jan vs. GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) pour un face-à-face direct à trois qui couvre déjà LM Studio face à cette application.',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — un client de chat local open source de Nomic AI, axé sur une expérience simple et entièrement hors ligne ; voir le [GPT4All Review](/fr/power-local-llm/gpt4all-review) et la même comparaison à trois liée ci-dessus.',
           '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — un moteur d\'exécution basé sur llama.cpp avec une interface web intégrée, historiquement populaire pour l\'écriture créative et le jeu de rôle ; voir le [KoboldCpp Review](/fr/power-local-llm/koboldcpp-review).',
         ],
-        note: 'Ceci n\'est pas une liste exhaustive des clients de chat local-first — consultez le [répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de LM Studio.',
+        note: 'Ceci n\'est pas une liste exhaustive des clients de chat local-first — consultez le [répertoire des logiciels d\'IA locale](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de LM Studio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -854,7 +854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche de LM Studio.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche de LM Studio.',
           '[Ollama Review](/fr/power-local-llm/ollama-review) — une alternative directe CLI-first, entièrement open source, à LM Studio.',
           '[LM Studio vs. Jan vs. GPT4All](/fr/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — une comparaison directe à trois couvrant LM Studio face à deux autres clients de chat local en détail.',
           '[Jan Review](/fr/power-local-llm/jan-review) — une application de chat de bureau gratuite et open source avec des connexions optionnelles à des fournisseurs cloud.',
@@ -938,7 +938,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desarrollado por Element Labs, Inc.; un producto complementario independiente, Bionic (lanzado en julio de 2026), añade un agente autónomo de codificación/trabajo sobre el motor de ejecución de modelos de LM Studio, con sus propios niveles de pago',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de LM Studio en el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) — consulte esa página para ver de un vistazo cómo se compara LM Studio con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de LM Studio en el [directorio de software de IA local](/es/directory) — consulte esa página para ver de un vistazo cómo se compara LM Studio con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1076,14 +1076,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'lm-studio-competitors',
         title: 'LM Studio frente a otras apps de chat local',
-        content: 'LM Studio es una de varias aplicaciones que combinan inferencia de modelos local con una interfaz gráfica. Así se posiciona frente a otras opciones en ese espacio — vea el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, y la comparación dedicada [LM Studio vs. Ollama](#lm-studio-vs-ollama) más arriba para el enfrentamiento más cercano.',
+        content: 'LM Studio es una de varias aplicaciones que combinan inferencia de modelos local con una interfaz gráfica. Así se posiciona frente a otras opciones en ese espacio — vea el [directorio de software de IA local](/es/directory) para el catálogo completo, y la comparación dedicada [LM Studio vs. Ollama](#lm-studio-vs-ollama) más arriba para el enfrentamiento más cercano.',
         items: [
           '**[Ollama](https://ollama.com)** — una herramienta centrada en la línea de comandos, totalmente de código abierto (MIT), que cubre un terreno similar (inferencia local, API compatible con OpenAI) con una GUI de escritorio oficial añadida en julio de 2025; vea la [review de Ollama](/es/power-local-llm/ollama-review) y la sección de comparación anterior para un enfrentamiento directo.',
           '**[Jan](https://jan.ai)** — una aplicación de chat de escritorio gratuita y de código abierto que ejecuta modelos localmente vía llama.cpp y también puede conectarse a proveedores en la nube; vea la [review de Jan](/es/power-local-llm/jan-review) y la comparación existente [LM Studio vs. Jan vs. GPT4All](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) para un enfrentamiento directo a tres que ya cubre LM Studio frente a esta aplicación.',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — un cliente de chat local de código abierto de Nomic AI, centrado en una experiencia simple y completamente sin conexión; vea la [review de GPT4All](/es/power-local-llm/gpt4all-review) y la misma comparación a tres enlazada anteriormente.',
           '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — un motor de ejecución basado en llama.cpp con una interfaz web integrada, históricamente popular para escritura creativa y roleplay; vea la [review de KoboldCpp](/es/power-local-llm/koboldcpp-review).',
         ],
-        note: 'Esta no es una lista exhaustiva de clientes de chat local-first — vea el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluyendo la propia ficha de LM Studio.',
+        note: 'Esta no es una lista exhaustiva de clientes de chat local-first — vea el [directorio de software de IA local](/es/directory) para el catálogo completo y actualizado regularmente, incluyendo la propia ficha de LM Studio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1141,7 +1141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de LM Studio.',
+          '[Local LLM Software Directory 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de LM Studio.',
           '[Review de Ollama](/es/power-local-llm/ollama-review) — una alternativa directa CLI-first, totalmente de código abierto, a LM Studio.',
           '[LM Studio vs. Jan vs. GPT4All](/es/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — una comparación directa a tres que cubre LM Studio frente a otros dos clientes de chat local en detalle.',
           '[Review de Jan](/es/power-local-llm/jan-review) — una aplicación de chat de escritorio gratuita y de código abierto con conexiones opcionales a proveedores en la nube.',
@@ -1225,7 +1225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desenvolvido pela Element Labs, Inc.; um produto complementar separado, Bionic (lançado em julho de 2026), adiciona um agente autônomo de codificação/trabalho sobre o motor de execução de modelos do LM Studio, com seus próprios níveis pagos',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do LM Studio no [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o LM Studio com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do LM Studio no [diretório de software de IA local](/pt/directory) — veja essa página para comparar rapidamente o LM Studio com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1363,14 +1363,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'lm-studio-competitors',
         title: 'LM Studio em comparação a outros apps de chat local',
-        content: 'O LM Studio é um de vários aplicativos que combinam inferência de modelos locais com uma interface gráfica. Veja como ele se posiciona em relação a outras opções nesse espaço — veja o [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, e a comparação dedicada [LM Studio vs. Ollama](#lm-studio-vs-ollama) acima para o confronto mais próximo.',
+        content: 'O LM Studio é um de vários aplicativos que combinam inferência de modelos locais com uma interface gráfica. Veja como ele se posiciona em relação a outras opções nesse espaço — veja o [diretório de software de IA local](/pt/directory) para o catálogo completo, e a comparação dedicada [LM Studio vs. Ollama](#lm-studio-vs-ollama) acima para o confronto mais próximo.',
         items: [
           '**[Ollama](https://ollama.com)** — uma ferramenta centrada em linha de comando, totalmente de código aberto (MIT), cobrindo terreno semelhante (inferência local, API compatível com OpenAI) com uma GUI de desktop oficial adicionada em julho de 2025; veja a [review do Ollama](/pt/power-local-llm/ollama-review) e a seção de comparação acima para um confronto direto.',
           '**[Jan](https://jan.ai)** — um aplicativo de chat de desktop gratuito e de código aberto que executa modelos localmente via llama.cpp e também pode se conectar a provedores de nuvem; veja a [review do Jan](/pt/power-local-llm/jan-review) e a comparação existente [LM Studio vs. Jan vs. GPT4All](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) para um confronto direto a três que já cobre o LM Studio contra este aplicativo.',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — um cliente de chat local de código aberto da Nomic AI, focado em uma experiência simples e totalmente offline; veja a [review do GPT4All](/pt/power-local-llm/gpt4all-review) e a mesma comparação a três vinculada acima.',
           '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — um runtime baseado em llama.cpp com uma interface web embutida, historicamente popular para escrita criativa e roleplay; veja a [review do KoboldCpp](/pt/power-local-llm/koboldcpp-review).',
         ],
-        note: 'Esta não é uma lista exaustiva de clientes de chat local-first — veja o [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do LM Studio.',
+        note: 'Esta não é uma lista exaustiva de clientes de chat local-first — veja o [diretório de software de IA local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do LM Studio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1428,7 +1428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do LM Studio.',
+          '[Local LLM Software Directory 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do LM Studio.',
           '[Review do Ollama](/pt/power-local-llm/ollama-review) — uma alternativa direta CLI-first, totalmente de código aberto, ao LM Studio.',
           '[LM Studio vs. Jan vs. GPT4All](/pt/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — uma comparação direta a três cobrindo o LM Studio contra outros dois clientes de chat local em detalhe.',
           '[Review do Jan](/pt/power-local-llm/jan-review) — um aplicativo de chat de desktop gratuito e de código aberto com conexões opcionais a provedores de nuvem.',
@@ -1512,7 +1512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Element Labs, Inc.が開発。別の姉妹製品であるBionic（2026年7月に開始）は、LM Studioのモデルランタイムの上に自律的なコーディング/作業エージェントを追加し、独自の有料階層を持つ',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるLM Studioのエントリーの詳細版です——他の数十のローカルAIツールとLM Studioが一目でどう比較されるかは、そのページをご覧ください。' },
+          { type: 'note', text: 'このレビューは、[ローカルAIソフトウェアディレクトリ](/ja/directory)にあるLM Studioのエントリーの詳細版です——他の数十のローカルAIツールとLM Studioが一目でどう比較されるかは、そのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1650,14 +1650,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'lm-studio-competitors',
         title: 'LM Studioと他のローカルチャットアプリとの比較',
-        content: 'LM Studioは、ローカルモデル推論とグラフィカルインターフェースを組み合わせた複数のアプリの1つです。この分野の他の選択肢と比べてLM Studioがどう位置づけられるかを紹介します——完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を、最も近い一騎打ちは上記の[LM Studio vs. Ollamaの比較](#lm-studio-vs-ollama)を参照してください。',
+        content: 'LM Studioは、ローカルモデル推論とグラフィカルインターフェースを組み合わせた複数のアプリの1つです。この分野の他の選択肢と比べてLM Studioがどう位置づけられるかを紹介します——完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/directory)を、最も近い一騎打ちは上記の[LM Studio vs. Ollamaの比較](#lm-studio-vs-ollama)を参照してください。',
         items: [
           '**[Ollama](https://ollama.com)** — 2025年7月に公式デスクトップGUIが追加された、CLIファーストで完全にオープンソース（MIT）な、似た領域（ローカル推論、OpenAI互換API）をカバーするツール。直接の比較は[Ollamaレビュー](/ja/power-local-llm/ollama-review)と上記の比較セクションを参照。',
           '**[Jan](https://jan.ai)** — llama.cpp経由でローカルにモデルを実行し、クラウドプロバイダーにも接続できる、無料でオープンソースのデスクトップチャットアプリ。[Janレビュー](/ja/power-local-llm/jan-review)と、このアプリに対するLM Studioをすでに詳しく扱っている既存の[LM Studio vs. Jan vs. GPT4Allの比較](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)を参照。',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — シンプルで完全にオフラインな体験に焦点を当てた、Nomic AIによるオープンソースのローカルチャットクライアント。[GPT4Allレビュー](/ja/power-local-llm/gpt4all-review)と、上記でリンクした同じ三者比較を参照。',
           '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — 組み込みのWeb UIを備え、歴史的に創作やロールプレイ用途で人気のある、llama.cppベースのランタイム。[KoboldCppレビュー](/ja/power-local-llm/koboldcpp-review)を参照。',
         ],
-        note: 'これはローカルファーストのチャットクライアントの網羅的なリストではありません——LM Studio自身のディレクトリエントリーを含む、定期的に更新される完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはローカルファーストのチャットクライアントの網羅的なリストではありません——LM Studio自身のディレクトリエントリーを含む、定期的に更新される完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1715,7 +1715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — LM Studioのディレクトリエントリーを含む、この記事が属するローカルAIツールの完全なカタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — LM Studioのディレクトリエントリーを含む、この記事が属するローカルAIツールの完全なカタログ。',
           '[Ollamaレビュー](/ja/power-local-llm/ollama-review) — LM Studioの直接的なCLIファーストで完全にオープンソースな代替。',
           '[LM Studio vs. Jan vs. GPT4All](/ja/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 他の2つのローカル専用チャットクライアントに対するLM Studioを詳しく扱う直接的な三者比較。',
           '[Janレビュー](/ja/power-local-llm/jan-review) — クラウドプロバイダーへの任意の接続を備えた、無料でオープンソースのデスクトップチャットアプリ。',
@@ -1799,7 +1799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '由Element Labs, Inc.开发；一款独立的配套产品Bionic（于2026年7月推出）在LM Studio的模型运行时之上增加了自主编码/工作智能体功能，拥有自己的付费层级',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)中LM Studio条目的深度配套文章——如需一目了然地了解LM Studio与数十种其他本地AI工具的对比，请参阅该页面。' },
+          { type: 'note', text: '本评测是[本地AI软件目录](/zh/directory)中LM Studio条目的深度配套文章——如需一目了然地了解LM Studio与数十种其他本地AI工具的对比，请参阅该页面。' },
         ],
       },
       overview: {
@@ -1937,14 +1937,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'lm-studio-competitors',
         title: 'LM Studio与其他本地聊天应用的对比',
-        content: 'LM Studio是将本地模型推理与图形界面结合的多款应用之一。以下是它与该领域其他选项的对比——完整目录请参阅[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)，最接近的正面对比请参阅上方专门的[LM Studio vs. Ollama对比](#lm-studio-vs-ollama)。',
+        content: 'LM Studio是将本地模型推理与图形界面结合的多款应用之一。以下是它与该领域其他选项的对比——完整目录请参阅[本地AI软件目录](/zh/directory)，最接近的正面对比请参阅上方专门的[LM Studio vs. Ollama对比](#lm-studio-vs-ollama)。',
         items: [
           '**[Ollama](https://ollama.com)** — 一款以命令行为主、完全开源（MIT）的工具，覆盖类似领域（本地推理、OpenAI兼容API），2025年7月新增了官方桌面GUI；直接对比请参阅[Ollama评测](/zh/power-local-llm/ollama-review)和上方的对比部分。',
           '**[Jan](https://jan.ai)** — 一款免费、开源的桌面聊天应用，通过llama.cpp在本地运行模型，也可连接云端提供商；参阅[Jan评测](/zh/power-local-llm/jan-review)以及已经详细对比LM Studio与该应用的现有[LM Studio vs. Jan vs. GPT4All对比](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)。',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — Nomic AI推出的开源本地聊天客户端，专注于简单、完全离线的体验；参阅[GPT4All评测](/zh/power-local-llm/gpt4all-review)以及上方链接的同一个三方对比。',
           '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — 另一款基于llama.cpp的运行时，内置Web界面，历来在创意写作和角色扮演用例中广受欢迎；参阅[KoboldCpp评测](/zh/power-local-llm/koboldcpp-review)。',
         ],
-        note: '这并非本地优先聊天客户端的详尽列表——完整且定期更新的目录（包括LM Studio自身的目录条目）请参阅[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非本地优先聊天客户端的详尽列表——完整且定期更新的目录（包括LM Studio自身的目录条目）请参阅[本地AI软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2002,7 +2002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包含LM Studio的目录条目。',
+          '[2026本地LLM软件目录](/zh/directory) — 本文所属的本地AI工具完整目录，包含LM Studio的目录条目。',
           '[Ollama评测](/zh/power-local-llm/ollama-review) — LM Studio的直接CLI优先、完全开源的替代方案。',
           '[LM Studio vs. Jan vs. GPT4All](/zh/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 详细对比LM Studio与另外两款本地专用聊天客户端的直接三方对比。',
           '[Jan评测](/zh/power-local-llm/jan-review) — 一款免费、开源的桌面聊天应用，可选连接云端提供商。',
@@ -2086,7 +2086,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Element Labs, Inc.가 개발했습니다; 별도의 동반 제품인 Bionic(2026년 7월 출시)은 LM Studio의 모델 런타임 위에 자율 코딩/작업 에이전트를 추가하며 자체 유료 계층을 가지고 있습니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 LM Studio 항목의 심층 보완 자료입니다 — LM Studio가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)에 있는 LM Studio 항목의 심층 보완 자료입니다 — LM Studio가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2224,14 +2224,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'lm-studio-competitors',
         title: 'LM Studio와 다른 로컬 채팅 앱 비교',
-        content: 'LM Studio는 로컬 모델 추론과 그래픽 인터페이스를 결합한 여러 앱 중 하나입니다. 이 영역에서 다른 옵션들과 비교해 LM Studio가 어떻게 자리매김하는지 살펴보세요 — 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를, 가장 근접한 정면 비교는 위의 [LM Studio vs. Ollama 비교](#lm-studio-vs-ollama)를 참고하세요.',
+        content: 'LM Studio는 로컬 모델 추론과 그래픽 인터페이스를 결합한 여러 앱 중 하나입니다. 이 영역에서 다른 옵션들과 비교해 LM Studio가 어떻게 자리매김하는지 살펴보세요 — 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)를, 가장 근접한 정면 비교는 위의 [LM Studio vs. Ollama 비교](#lm-studio-vs-ollama)를 참고하세요.',
         items: [
           '**[Ollama](https://ollama.com)** — 2025년 7월 공식 데스크톱 GUI가 추가된, 명령줄 중심의 완전히 오픈소스(MIT)인 도구로 유사한 영역(로컬 추론, OpenAI 호환 API)을 다룹니다. 직접적인 비교는 [Ollama 리뷰](/ko/power-local-llm/ollama-review)와 위의 비교 섹션을 참고하세요.',
           '**[Jan](https://jan.ai)** — llama.cpp를 통해 로컬에서 모델을 실행하며 클라우드 제공업체에도 연결할 수 있는 무료 오픈소스 데스크톱 채팅 앱. [Jan 리뷰](/ko/power-local-llm/jan-review)와, 이 앱에 대한 LM Studio를 이미 자세히 다루는 기존의 [LM Studio vs. Jan vs. GPT4All 비교](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026)를 참고하세요.',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — 단순하고 완전히 오프라인인 경험에 초점을 맞춘 Nomic AI의 오픈소스 로컬 채팅 클라이언트. [GPT4All 리뷰](/ko/power-local-llm/gpt4all-review)와 위에서 링크한 동일한 삼자 비교를 참고하세요.',
           '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — 내장 웹 UI를 갖춘, 역사적으로 창작 글쓰기와 롤플레이 용도로 인기 있는 또 다른 llama.cpp 기반 런타임. [KoboldCpp 리뷰](/ko/power-local-llm/koboldcpp-review)를 참고하세요.',
         ],
-        note: '이는 로컬 우선 채팅 클라이언트의 완전한 목록이 아닙니다 — LM Studio 자체의 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이는 로컬 우선 채팅 클라이언트의 완전한 목록이 아닙니다 — LM Studio 자체의 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2289,7 +2289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[2026 로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — LM Studio의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
+          '[2026 로컬 LLM 소프트웨어 디렉터리](/ko/directory) — LM Studio의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
           '[Ollama 리뷰](/ko/power-local-llm/ollama-review) — 완전히 오픈소스인 직접적인 CLI 우선 대안.',
           '[LM Studio vs. Jan vs. GPT4All](/ko/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — 다른 두 로컬 전용 채팅 클라이언트에 대한 LM Studio를 자세히 다루는 직접적인 삼자 비교.',
           '[Jan 리뷰](/ko/power-local-llm/jan-review) — 클라우드 제공업체 연결을 선택할 수 있는 무료 오픈소스 데스크톱 채팅 앱.',
@@ -2373,7 +2373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تُطوّره شركة Element Labs, Inc.؛ يضيف منتج مرافق منفصل باسم Bionic (أُطلق في يوليو 2026) عميلًا ذكيًا مستقلًا للبرمجة/العمل فوق بيئة تشغيل نماذج LM Studio، وله مستويات مدفوعة خاصة به',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافقة المتعمّقة لمدخل LM Studio في [دليل برامج الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف تقارَن LM Studio بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافقة المتعمّقة لمدخل LM Studio في [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تقارَن LM Studio بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2511,14 +2511,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'lm-studio-competitors',
         title: 'LM Studio مقارنةً بتطبيقات الدردشة المحلية الأخرى',
-        content: 'يُعد LM Studio واحدًا من عدة تطبيقات تجمع بين الاستدلال المحلي للنماذج وواجهة رسومية. إليك كيف يقارَن مع خيارات أخرى في هذا المجال — راجع [دليل برامج الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل، والمقارنة المخصَّصة [LM Studio مقابل Ollama](#lm-studio-vs-ollama) أعلاه لأقرب مواجهة مباشرة.',
+        content: 'يُعد LM Studio واحدًا من عدة تطبيقات تجمع بين الاستدلال المحلي للنماذج وواجهة رسومية. إليك كيف يقارَن مع خيارات أخرى في هذا المجال — راجع [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) للاطلاع على الكتالوج الكامل، والمقارنة المخصَّصة [LM Studio مقابل Ollama](#lm-studio-vs-ollama) أعلاه لأقرب مواجهة مباشرة.',
         items: [
           '**[Ollama](https://ollama.com)** — أداة تعطي الأولوية لسطر الأوامر، مفتوحة المصدر بالكامل (MIT)، تغطي مجالًا مشابهًا (استدلال محلي، واجهة API متوافقة مع OpenAI) مع واجهة رسومية رسمية لسطح المكتب أُضيفت في يوليو 2025؛ راجع [مراجعة Ollama](/ar/power-local-llm/ollama-review) وقسم المقارنة أعلاه لمواجهة مباشرة.',
           '**[Jan](https://jan.ai)** — تطبيق دردشة سطح مكتب مجاني ومفتوح المصدر يشغّل النماذج محليًا عبر llama.cpp ويمكنه أيضًا الاتصال بمزودي الخدمة السحابية؛ راجع [مراجعة Jan](/ar/power-local-llm/jan-review) والمقارنة الحالية [LM Studio مقابل Jan مقابل GPT4All](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) لمواجهة مباشرة ثلاثية تغطي بالفعل LM Studio مقابل هذا التطبيق بالتفصيل.',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — عميل دردشة محلي مفتوح المصدر من Nomic AI، يركّز على تجربة بسيطة وتعمل بالكامل دون اتصال بالإنترنت؛ راجع [مراجعة GPT4All](/ar/power-local-llm/gpt4all-review) ونفس المقارنة الثلاثية المرتبطة أعلاه.',
           '**[KoboldCpp](https://github.com/LostRuins/koboldcpp)** — بيئة تشغيل أخرى قائمة على llama.cpp مع واجهة ويب مدمجة، اشتهرت تاريخيًا في الكتابة الإبداعية وتقمّص الأدوار؛ راجع [مراجعة KoboldCpp](/ar/power-local-llm/koboldcpp-review).',
         ],
-        note: 'هذه ليست قائمة شاملة لعملاء الدردشة المحلية أولًا — راجع [دليل برامج الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل الذي يُحدَّث بانتظام، بما في ذلك مدخل LM Studio نفسه.',
+        note: 'هذه ليست قائمة شاملة لعملاء الدردشة المحلية أولًا — راجع [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) للاطلاع على الكتالوج الكامل الذي يُحدَّث بانتظام، بما في ذلك مدخل LM Studio نفسه.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2576,7 +2576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برامج الذكاء الاصطناعي المحلي 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال، بما في ذلك مدخل LM Studio.',
+          '[دليل برامج الذكاء الاصطناعي المحلي 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال، بما في ذلك مدخل LM Studio.',
           '[مراجعة Ollama](/ar/power-local-llm/ollama-review) — بديل مباشر لـLM Studio يعطي الأولوية لسطر الأوامر ومفتوح المصدر بالكامل.',
           '[LM Studio مقابل Jan مقابل GPT4All](/ar/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — مقارنة ثلاثية مباشرة تغطي LM Studio مقابل عميلَي دردشة محليَّين آخرَين بالتفصيل.',
           '[مراجعة Jan](/ar/power-local-llm/jan-review) — تطبيق دردشة سطح مكتب مجاني ومفتوح المصدر مع اتصالات اختيارية بمزودي الخدمة السحابية.',

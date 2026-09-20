@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "autogpt-local-review-2026",
         "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
@@ -70,14 +78,6 @@
         "slug": "local-deep-research-review",
         "title": "Local Deep Research Review 2026: Self-Hosted, Cited AI Research Agent",
         "url": "/power-local-llm/local-deep-research-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mlx-serve-review",
-        "title": "mlx-serve Review 2026: Native Zig Inference Server for Apple Silicon",
-        "url": "/power-local-llm/mlx-serve-review",
         "dateModified": "2026-09-19",
         "tier": "about"
       }
@@ -836,6 +836,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "llama-cpp-explained",
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
@@ -896,14 +904,6 @@
         "slug": "copilot-for-obsidian-review",
         "title": "Copilot for Obsidian Review 2026: Local-Model AI Agent for Your Vault",
         "url": "/power-local-llm/copilot-for-obsidian-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "gpustack-review",
-        "title": "GPUStack Review 2026: Open-Source GPU Cluster Manager for Local AI",
-        "url": "/power-local-llm/gpustack-review",
         "dateModified": "2026-09-12",
         "tier": "about"
       }
@@ -1132,6 +1132,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "vane-review",
         "title": "Vane Review 2026: Self-Hosted AI Answering Engine (Formerly Perplexica)",
@@ -1180,14 +1188,6 @@
         "tier": "about"
       },
       {
-        "cluster": "local-llms",
-        "slug": "cherry-studio-ai-desktop-client-2026",
-        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
-        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
-        "dateModified": "2026-09-03",
-        "tier": "about"
-      },
-      {
         "cluster": "power-local-llm",
         "slug": "h2ogpt-review-2026",
         "title": "h2oGPT Review 2026: Features, Setup, and Why the Project Is Archived",
@@ -1218,19 +1218,19 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "enchanted-review",
         "title": "Enchanted Review 2026: Native macOS/iOS Ollama Client",
         "url": "/power-local-llm/enchanted-review",
         "dateModified": "2026-09-05",
-        "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "cherry-studio-ai-desktop-client-2026",
-        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
-        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
-        "dateModified": "2026-09-03",
         "tier": "about"
       },
       {
@@ -1298,9 +1298,9 @@
       {
         "cluster": "local-llms",
         "slug": "cherry-studio-ai-desktop-client-2026",
-        "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
+        "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
         "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
-        "dateModified": "2026-09-03",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -2192,9 +2192,17 @@
         "url": "/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-20",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "Big-AGI": {
@@ -7485,7 +7493,7 @@
         "title": "exo Review: Distributed AI Inference Across Multiple Devices",
         "url": "/power-local-llm/exo-review",
         "dateModified": "2026-09-12",
-        "tier": "about"
+        "tier": "mentioned"
       }
     ],
     "totalCount": 4,
@@ -8954,6 +8962,14 @@
         "tier": "about"
       },
       {
+        "cluster": "local-llms",
+        "slug": "cherry-studio-ai-desktop-client-2026",
+        "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
+        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
+        "dateModified": "2026-09-20",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "power-local-llm",
         "slug": "nanobot-review",
         "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
@@ -9016,17 +9032,9 @@
         "url": "/power-local-llm/dreamserver-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "funclip-review",
-        "title": "FunClip Review: Self-Hosted AI Video Clipping With FunASR",
-        "url": "/power-local-llm/funclip-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 173,
+    "totalCount": 174,
     "capped": true
   },
   "Qdrant": {

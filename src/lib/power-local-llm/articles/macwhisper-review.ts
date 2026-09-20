@@ -27,7 +27,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'MacWhisper',
     title: 'MacWhisper Review (2026): Local Speech-to-Text for Mac',
     seoTitle: 'MacWhisper Review 2026: Local STT App for Mac',
-    intro: "MacWhisper is a macOS application at [macwhisper.com](https://www.macwhisper.com), built by [Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper), that transcribes audio and video files, meeting recordings, and live dictation using OpenAI's Whisper models and Nvidia's Parakeet models — running on your own Mac rather than a cloud API. It ships as a free tier and a Pro tier sold as a **one-time purchase** (not a subscription) directly from [Good Snooze's Gumroad page](https://goodsnooze.gumroad.com/l/macwhisper), with a separate Mac App Store listing (\"Whisper Transcription\") that uses a different pricing structure — covered in detail below. This review is a companion to MacWhisper's entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), and compares it against two developer-facing local speech-to-text tools this site has already reviewed: [whisper.cpp](/power-local-llm/whisper-cpp-review) and [faster-whisper](/power-local-llm/faster-whisper-review).",
+    intro: "MacWhisper is a macOS application at [macwhisper.com](https://www.macwhisper.com), built by [Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper), that transcribes audio and video files, meeting recordings, and live dictation using OpenAI's Whisper models and Nvidia's Parakeet models — running on your own Mac rather than a cloud API. It ships as a free tier and a Pro tier sold as a **one-time purchase** (not a subscription) directly from [Good Snooze's Gumroad page](https://goodsnooze.gumroad.com/l/macwhisper), with a separate Mac App Store listing (\"Whisper Transcription\") that uses a different pricing structure — covered in detail below. This review is a companion to MacWhisper's entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory), and compares it against two developer-facing local speech-to-text tools this site has already reviewed: [whisper.cpp](/power-local-llm/whisper-cpp-review) and [faster-whisper](/power-local-llm/faster-whisper-review).",
     metaDescription: "MacWhisper review 2026: Mac app for local speech-to-text using Whisper and Nvidia Parakeet models. Free vs €64 one-time Pro pricing, App Store pricing, download links, and how it compares to whisper.cpp and faster-whisper.",
     readTime: '10 min read',
     targetKeywords: [
@@ -85,7 +85,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mac App Store rating: 3.9/5 from 158 ratings (verified on the App Store listing, September 2026) — the only citable public engagement number; no independent popularity ranking was found for the Gumroad-distributed version',
         ],
         callouts: [
-          { type: 'note', text: "MacWhisper sits in the same sub-segment as [whisper.cpp](/power-local-llm/whisper-cpp-review) and [faster-whisper](/power-local-llm/faster-whisper-review) — all three run local speech-to-text — but MacWhisper trades their free, developer-facing CLI/library approach for a paid, packaged, point-and-click Mac app. See the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) for how it fits among other local speech tools." },
+          { type: 'note', text: "MacWhisper sits in the same sub-segment as [whisper.cpp](/power-local-llm/whisper-cpp-review) and [faster-whisper](/power-local-llm/faster-whisper-review) — all three run local speech-to-text — but MacWhisper trades their free, developer-facing CLI/library approach for a paid, packaged, point-and-click Mac app. See the [Local LLM Software Directory](https://www.promptquorum.com/directory) for how it fits among other local speech tools." },
         ],
       },
       overview: {
@@ -120,7 +120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-macwhisper',
         title: 'Download MacWhisper for Mac',
-        content: "**This review is a companion to MacWhisper's entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — check the directory for how it's classified alongside other local speech-to-text tools. The links below are the two official distribution channels; always confirm you're on the official domain or the Apple-verified App Store listing before purchasing.",
+        content: "**This review is a companion to MacWhisper's entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory)** — check the directory for how it's classified alongside other local speech-to-text tools. The links below are the two official distribution channels; always confirm you're on the official domain or the Apple-verified App Store listing before purchasing.",
         columns: ['Channel', 'Download'],
         rows: [
           { 'Channel': 'Direct (Free + Pro, one-time purchase)', 'Download': '[goodsnooze.gumroad.com/l/macwhisper](https://goodsnooze.gumroad.com/l/macwhisper)' },
@@ -228,7 +228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Whisper.cpp Review: Local Speech-to-Text in Pure C/C++](/power-local-llm/whisper-cpp-review) — the free, open-source, cross-platform CLI/library alternative for developers who don\'t need a GUI.',
           '[faster-whisper Review: CTranslate2-Accelerated Local Speech-to-Text](/power-local-llm/faster-whisper-review) — a free, open-source Python library option, also cross-platform.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including where MacWhisper fits among speech-to-text apps.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — the full catalog of local AI tools this article belongs to, including where MacWhisper fits among speech-to-text apps.',
         ],
       },
     },
@@ -245,7 +245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'MacWhisper',
     title: 'MacWhisper Review (2026): Lokale Sprache-zu-Text-App für Mac',
     seoTitle: 'MacWhisper Review 2026: Lokale STT-App für Mac',
-    intro: "MacWhisper ist eine macOS-Anwendung unter [macwhisper.com](https://www.macwhisper.com) von [Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper), die Audio- und Videodateien, Meeting-Aufnahmen und Live-Diktate mithilfe der Whisper-Modelle von OpenAI und der Parakeet-Modelle von Nvidia transkribiert — ausgeführt auf dem eigenen Mac statt über eine Cloud-API. Die App gibt es als kostenlose Stufe und eine Pro-Stufe, die als **Einmalkauf** (kein Abonnement) direkt über [Good Snoozes Gumroad-Seite](https://goodsnooze.gumroad.com/l/macwhisper) verkauft wird; zusätzlich existiert ein separater Mac-App-Store-Eintrag (\"Whisper Transcription\") mit anderer Preisstruktur — Details unten. Diese Bewertung ergänzt den Eintrag von MacWhisper im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) und vergleicht die App mit zwei entwicklerorientierten lokalen Sprache-zu-Text-Tools, die diese Seite bereits bewertet hat: [whisper.cpp](/de/power-local-llm/whisper-cpp-review) und [faster-whisper](/de/power-local-llm/faster-whisper-review).",
+    intro: "MacWhisper ist eine macOS-Anwendung unter [macwhisper.com](https://www.macwhisper.com) von [Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper), die Audio- und Videodateien, Meeting-Aufnahmen und Live-Diktate mithilfe der Whisper-Modelle von OpenAI und der Parakeet-Modelle von Nvidia transkribiert — ausgeführt auf dem eigenen Mac statt über eine Cloud-API. Die App gibt es als kostenlose Stufe und eine Pro-Stufe, die als **Einmalkauf** (kein Abonnement) direkt über [Good Snoozes Gumroad-Seite](https://goodsnooze.gumroad.com/l/macwhisper) verkauft wird; zusätzlich existiert ein separater Mac-App-Store-Eintrag (\"Whisper Transcription\") mit anderer Preisstruktur — Details unten. Diese Bewertung ergänzt den Eintrag von MacWhisper im [Local LLM Software Directory](https://www.promptquorum.com/directory) und vergleicht die App mit zwei entwicklerorientierten lokalen Sprache-zu-Text-Tools, die diese Seite bereits bewertet hat: [whisper.cpp](/de/power-local-llm/whisper-cpp-review) und [faster-whisper](/de/power-local-llm/faster-whisper-review).",
     metaDescription: "MacWhisper Review 2026: Mac-App für lokale Sprache-zu-Text-Umwandlung mit Whisper- und Nvidia-Parakeet-Modellen. Kostenlos vs. €64 einmalige Pro-Version, App-Store-Preise, Downloads und Vergleich mit whisper.cpp und faster-whisper.",
     readTime: '10 Min. Lesezeit',
     targetKeywords: [
@@ -303,7 +303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mac-App-Store-Bewertung: 3,9/5 bei 158 Bewertungen (im App-Store-Eintrag verifiziert, September 2026) — die einzige belastbare öffentliche Kennzahl; für die über Gumroad vertriebene Version wurde kein unabhängiges Popularitätsranking gefunden',
         ],
         callouts: [
-          { type: 'note', text: "MacWhisper gehört zum selben Teilsegment wie [whisper.cpp](/de/power-local-llm/whisper-cpp-review) und [faster-whisper](/de/power-local-llm/faster-whisper-review) — alle drei führen lokale Sprache-zu-Text-Umwandlung aus —, tauscht deren kostenlosen, entwicklerorientierten CLI-/Bibliotheks-Ansatz aber gegen eine kostenpflichtige, verpackte, klickbare Mac-App ein. Im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) sehen Sie, wo es unter anderen lokalen Sprach-Tools einzuordnen ist." },
+          { type: 'note', text: "MacWhisper gehört zum selben Teilsegment wie [whisper.cpp](/de/power-local-llm/whisper-cpp-review) und [faster-whisper](/de/power-local-llm/faster-whisper-review) — alle drei führen lokale Sprache-zu-Text-Umwandlung aus —, tauscht deren kostenlosen, entwicklerorientierten CLI-/Bibliotheks-Ansatz aber gegen eine kostenpflichtige, verpackte, klickbare Mac-App ein. Im [Local LLM Software Directory](https://www.promptquorum.com/directory) sehen Sie, wo es unter anderen lokalen Sprach-Tools einzuordnen ist." },
         ],
       },
       overview: {
@@ -338,7 +338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-macwhisper',
         title: 'MacWhisper für Mac herunterladen',
-        content: "**Diese Bewertung ergänzt den Eintrag von MacWhisper im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — dort sehen Sie, wie es neben anderen lokalen Sprache-zu-Text-Tools eingeordnet ist. Die folgenden Links sind die beiden offiziellen Vertriebskanäle; prüfen Sie vor dem Kauf immer, dass Sie sich auf der offiziellen Domain bzw. dem Apple-verifizierten App-Store-Eintrag befinden.",
+        content: "**Diese Bewertung ergänzt den Eintrag von MacWhisper im [Local LLM Software Directory](https://www.promptquorum.com/directory)** — dort sehen Sie, wie es neben anderen lokalen Sprache-zu-Text-Tools eingeordnet ist. Die folgenden Links sind die beiden offiziellen Vertriebskanäle; prüfen Sie vor dem Kauf immer, dass Sie sich auf der offiziellen Domain bzw. dem Apple-verifizierten App-Store-Eintrag befinden.",
         columns: ['Kanal', 'Download'],
         rows: [
           { 'Kanal': 'Direkt (kostenlos + Pro, Einmalkauf)', 'Download': '[goodsnooze.gumroad.com/l/macwhisper](https://goodsnooze.gumroad.com/l/macwhisper)' },
@@ -446,7 +446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Whisper.cpp Review: Lokale Sprache-zu-Text-Umwandlung in reinem C/C++](/de/power-local-llm/whisper-cpp-review) — die kostenlose, quelloffene, plattformübergreifende CLI-/Bibliotheks-Alternative für Entwickler ohne GUI-Bedarf.',
           '[faster-whisper Review: CTranslate2-beschleunigte lokale Sprache-zu-Text-Umwandlung](/de/power-local-llm/faster-whisper-review) — eine kostenlose, quelloffene Python-Bibliothek, ebenfalls plattformübergreifend.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von MacWhisper unter Sprache-zu-Text-Apps.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von MacWhisper unter Sprache-zu-Text-Apps.',
         ],
       },
     },
@@ -463,7 +463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'MacWhisper',
     title: 'MacWhisper Review (2026) : Transcription vocale locale pour Mac',
     seoTitle: 'MacWhisper Review 2026 : App STT locale pour Mac',
-    intro: "MacWhisper est une application macOS sur [macwhisper.com](https://www.macwhisper.com), développée par [Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper), qui transcrit des fichiers audio et vidéo, des enregistrements de réunions et de la dictée en direct grâce aux modèles Whisper d'OpenAI et aux modèles Parakeet de Nvidia — exécutés sur votre propre Mac plutôt que via une API cloud. Elle propose un niveau gratuit et un niveau Pro vendu en **achat unique** (pas d'abonnement) directement sur la [page Gumroad de Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper), avec une fiche séparée sur le Mac App Store (\"Whisper Transcription\") utilisant une structure tarifaire différente — détaillée ci-dessous. Cet avis complète l'entrée de MacWhisper dans le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), et le compare à deux outils de transcription vocale locale destinés aux développeurs déjà évalués sur ce site : [whisper.cpp](/fr/power-local-llm/whisper-cpp-review) et [faster-whisper](/fr/power-local-llm/faster-whisper-review).",
+    intro: "MacWhisper est une application macOS sur [macwhisper.com](https://www.macwhisper.com), développée par [Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper), qui transcrit des fichiers audio et vidéo, des enregistrements de réunions et de la dictée en direct grâce aux modèles Whisper d'OpenAI et aux modèles Parakeet de Nvidia — exécutés sur votre propre Mac plutôt que via une API cloud. Elle propose un niveau gratuit et un niveau Pro vendu en **achat unique** (pas d'abonnement) directement sur la [page Gumroad de Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper), avec une fiche séparée sur le Mac App Store (\"Whisper Transcription\") utilisant une structure tarifaire différente — détaillée ci-dessous. Cet avis complète l'entrée de MacWhisper dans le [Local LLM Software Directory](https://www.promptquorum.com/directory), et le compare à deux outils de transcription vocale locale destinés aux développeurs déjà évalués sur ce site : [whisper.cpp](/fr/power-local-llm/whisper-cpp-review) et [faster-whisper](/fr/power-local-llm/faster-whisper-review).",
     metaDescription: "MacWhisper review 2026 : application Mac de transcription vocale locale utilisant les modèles Whisper et Nvidia Parakeet. Gratuit vs Pro à 64 € en achat unique, prix sur l'App Store, liens de téléchargement et comparaison avec whisper.cpp et faster-whisper.",
     readTime: '10 min de lecture',
     targetKeywords: [
@@ -521,7 +521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Note Mac App Store : 3,9/5 pour 158 notes (vérifiée sur la fiche App Store, septembre 2026) — le seul chiffre d\'engagement public citable ; aucun classement de popularité indépendant trouvé pour la version distribuée via Gumroad',
         ],
         callouts: [
-          { type: 'note', text: "MacWhisper appartient au même sous-segment que [whisper.cpp](/fr/power-local-llm/whisper-cpp-review) et [faster-whisper](/fr/power-local-llm/faster-whisper-review) — les trois exécutent de la transcription vocale locale — mais MacWhisper échange leur approche gratuite en CLI/bibliothèque pour développeurs contre une application Mac payante, packagée et cliquable. Consultez le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) pour voir où elle se situe parmi les autres outils vocaux locaux." },
+          { type: 'note', text: "MacWhisper appartient au même sous-segment que [whisper.cpp](/fr/power-local-llm/whisper-cpp-review) et [faster-whisper](/fr/power-local-llm/faster-whisper-review) — les trois exécutent de la transcription vocale locale — mais MacWhisper échange leur approche gratuite en CLI/bibliothèque pour développeurs contre une application Mac payante, packagée et cliquable. Consultez le [Local LLM Software Directory](https://www.promptquorum.com/directory) pour voir où elle se situe parmi les autres outils vocaux locaux." },
         ],
       },
       overview: {
@@ -556,7 +556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-macwhisper',
         title: 'Télécharger MacWhisper pour Mac',
-        content: "**Cet avis complète l'entrée de MacWhisper dans le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — consultez le répertoire pour voir comment il est classé parmi les autres outils de transcription vocale locale. Les liens ci-dessous sont les deux canaux de distribution officiels ; vérifiez toujours que vous êtes sur le domaine officiel ou la fiche App Store vérifiée par Apple avant d'acheter.",
+        content: "**Cet avis complète l'entrée de MacWhisper dans le [Local LLM Software Directory](https://www.promptquorum.com/directory)** — consultez le répertoire pour voir comment il est classé parmi les autres outils de transcription vocale locale. Les liens ci-dessous sont les deux canaux de distribution officiels ; vérifiez toujours que vous êtes sur le domaine officiel ou la fiche App Store vérifiée par Apple avant d'acheter.",
         columns: ['Canal', 'Téléchargement'],
         rows: [
           { 'Canal': 'Direct (gratuit + Pro, achat unique)', 'Téléchargement': '[goodsnooze.gumroad.com/l/macwhisper](https://goodsnooze.gumroad.com/l/macwhisper)' },
@@ -664,7 +664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Whisper.cpp Review : transcription vocale locale en C/C++ pur](/fr/power-local-llm/whisper-cpp-review) — l\'alternative gratuite, open source et multiplateforme en CLI/bibliothèque pour les développeurs qui n\'ont pas besoin d\'interface graphique.',
           '[faster-whisper Review : transcription vocale locale accélérée par CTranslate2](/fr/power-local-llm/faster-whisper-review) — une option de bibliothèque Python gratuite et open source, également multiplateforme.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, avec la place de MacWhisper parmi les applications de transcription vocale.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, avec la place de MacWhisper parmi les applications de transcription vocale.',
         ],
       },
     },
@@ -681,7 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'MacWhisper',
     title: 'MacWhisper Review (2026): Transcripción de voz local para Mac',
     seoTitle: 'MacWhisper Review 2026: App STT local para Mac',
-    intro: "MacWhisper es una aplicación de macOS en [macwhisper.com](https://www.macwhisper.com), creada por [Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper), que transcribe archivos de audio y vídeo, grabaciones de reuniones y dictado en vivo usando los modelos Whisper de OpenAI y los modelos Parakeet de Nvidia — ejecutados en tu propio Mac en lugar de una API en la nube. Incluye un nivel gratuito y un nivel Pro que se vende como **compra única** (no una suscripción) directamente en la [página de Gumroad de Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper), con una ficha separada en la Mac App Store (\"Whisper Transcription\") que usa una estructura de precios distinta, detallada más abajo. Esta reseña es complementaria a la entrada de MacWhisper en el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), y lo compara con dos herramientas de transcripción de voz local orientadas a desarrolladores que este sitio ya ha reseñado: [whisper.cpp](/es/power-local-llm/whisper-cpp-review) y [faster-whisper](/es/power-local-llm/faster-whisper-review).",
+    intro: "MacWhisper es una aplicación de macOS en [macwhisper.com](https://www.macwhisper.com), creada por [Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper), que transcribe archivos de audio y vídeo, grabaciones de reuniones y dictado en vivo usando los modelos Whisper de OpenAI y los modelos Parakeet de Nvidia — ejecutados en tu propio Mac en lugar de una API en la nube. Incluye un nivel gratuito y un nivel Pro que se vende como **compra única** (no una suscripción) directamente en la [página de Gumroad de Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper), con una ficha separada en la Mac App Store (\"Whisper Transcription\") que usa una estructura de precios distinta, detallada más abajo. Esta reseña es complementaria a la entrada de MacWhisper en el [Local LLM Software Directory](https://www.promptquorum.com/directory), y lo compara con dos herramientas de transcripción de voz local orientadas a desarrolladores que este sitio ya ha reseñado: [whisper.cpp](/es/power-local-llm/whisper-cpp-review) y [faster-whisper](/es/power-local-llm/faster-whisper-review).",
     metaDescription: "MacWhisper review 2026: app de Mac para transcripción de voz local con modelos Whisper y Nvidia Parakeet. Gratis vs Pro a 64 € de pago único, precios en la App Store, enlaces de descarga y comparación con whisper.cpp y faster-whisper.",
     readTime: '10 min de lectura',
     targetKeywords: [
@@ -739,7 +739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Valoración en la Mac App Store: 3,9/5 con 158 valoraciones (verificado en la ficha de la App Store, septiembre de 2026) — la única cifra pública de participación citable; no se encontró ningún ranking de popularidad independiente para la versión distribuida por Gumroad',
         ],
         callouts: [
-          { type: 'note', text: "MacWhisper está en el mismo subsegmento que [whisper.cpp](/es/power-local-llm/whisper-cpp-review) y [faster-whisper](/es/power-local-llm/faster-whisper-review) — los tres ejecutan transcripción de voz local —, pero MacWhisper cambia su enfoque gratuito de CLI/biblioteca para desarrolladores por una app de Mac de pago, empaquetada y de apuntar y hacer clic. Consulta el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para ver dónde encaja entre otras herramientas de voz locales." },
+          { type: 'note', text: "MacWhisper está en el mismo subsegmento que [whisper.cpp](/es/power-local-llm/whisper-cpp-review) y [faster-whisper](/es/power-local-llm/faster-whisper-review) — los tres ejecutan transcripción de voz local —, pero MacWhisper cambia su enfoque gratuito de CLI/biblioteca para desarrolladores por una app de Mac de pago, empaquetada y de apuntar y hacer clic. Consulta el [Local LLM Software Directory](https://www.promptquorum.com/directory) para ver dónde encaja entre otras herramientas de voz locales." },
         ],
       },
       overview: {
@@ -774,7 +774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-macwhisper',
         title: 'Descargar MacWhisper para Mac',
-        content: "**Esta reseña es complementaria a la entrada de MacWhisper en el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — consulta el directorio para ver cómo está clasificado junto a otras herramientas de transcripción de voz local. Los enlaces siguientes son los dos canales de distribución oficiales; confirma siempre que estás en el dominio oficial o en la ficha de la App Store verificada por Apple antes de comprar.",
+        content: "**Esta reseña es complementaria a la entrada de MacWhisper en el [Local LLM Software Directory](https://www.promptquorum.com/directory)** — consulta el directorio para ver cómo está clasificado junto a otras herramientas de transcripción de voz local. Los enlaces siguientes son los dos canales de distribución oficiales; confirma siempre que estás en el dominio oficial o en la ficha de la App Store verificada por Apple antes de comprar.",
         columns: ['Canal', 'Descarga'],
         rows: [
           { 'Canal': 'Directo (gratis + Pro, pago único)', 'Descarga': '[goodsnooze.gumroad.com/l/macwhisper](https://goodsnooze.gumroad.com/l/macwhisper)' },
@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Whisper.cpp Review: transcripción de voz local en C/C++ puro](/es/power-local-llm/whisper-cpp-review) — la alternativa gratuita, de código abierto y multiplataforma en CLI/biblioteca para desarrolladores que no necesitan interfaz gráfica.',
           '[faster-whisper Review: transcripción de voz local acelerada con CTranslate2](/es/power-local-llm/faster-whisper-review) — una opción de biblioteca Python gratuita y de código abierto, también multiplataforma.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja MacWhisper entre las apps de transcripción de voz.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja MacWhisper entre las apps de transcripción de voz.',
         ],
       },
     },
@@ -899,7 +899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'MacWhisper',
     title: 'MacWhisper Review (2026): Transcrição de voz local para Mac',
     seoTitle: 'MacWhisper Review 2026: App STT local para Mac',
-    intro: "MacWhisper é um aplicativo macOS em [macwhisper.com](https://www.macwhisper.com), desenvolvido pela [Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper), que transcreve arquivos de áudio e vídeo, gravações de reuniões e ditado ao vivo usando os modelos Whisper da OpenAI e os modelos Parakeet da Nvidia — rodando no seu próprio Mac em vez de uma API na nuvem. Ele oferece um nível gratuito e um nível Pro vendido como **compra única** (não uma assinatura) diretamente na [página do Gumroad da Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper), com uma listagem separada na Mac App Store (\"Whisper Transcription\") que usa uma estrutura de preços diferente — detalhada abaixo. Esta análise complementa a entrada do MacWhisper no [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), e o compara com duas ferramentas de transcrição de voz local voltadas a desenvolvedores já analisadas neste site: [whisper.cpp](/pt/power-local-llm/whisper-cpp-review) e [faster-whisper](/pt/power-local-llm/faster-whisper-review).",
+    intro: "MacWhisper é um aplicativo macOS em [macwhisper.com](https://www.macwhisper.com), desenvolvido pela [Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper), que transcreve arquivos de áudio e vídeo, gravações de reuniões e ditado ao vivo usando os modelos Whisper da OpenAI e os modelos Parakeet da Nvidia — rodando no seu próprio Mac em vez de uma API na nuvem. Ele oferece um nível gratuito e um nível Pro vendido como **compra única** (não uma assinatura) diretamente na [página do Gumroad da Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper), com uma listagem separada na Mac App Store (\"Whisper Transcription\") que usa uma estrutura de preços diferente — detalhada abaixo. Esta análise complementa a entrada do MacWhisper no [Local LLM Software Directory](https://www.promptquorum.com/directory), e o compara com duas ferramentas de transcrição de voz local voltadas a desenvolvedores já analisadas neste site: [whisper.cpp](/pt/power-local-llm/whisper-cpp-review) e [faster-whisper](/pt/power-local-llm/faster-whisper-review).",
     metaDescription: "MacWhisper review 2026: app de Mac para transcrição de voz local com modelos Whisper e Nvidia Parakeet. Gratuito vs Pro de €64 em compra única, preços na App Store, links de download e comparação com whisper.cpp e faster-whisper.",
     readTime: '10 min de leitura',
     targetKeywords: [
@@ -957,7 +957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Avaliação na Mac App Store: 3,9/5 com 158 avaliações (verificado na listagem da App Store, setembro de 2026) — o único número público de engajamento citável; nenhum ranking de popularidade independente foi encontrado para a versão distribuída pelo Gumroad',
         ],
         callouts: [
-          { type: 'note', text: "O MacWhisper está no mesmo subsegmento que o [whisper.cpp](/pt/power-local-llm/whisper-cpp-review) e o [faster-whisper](/pt/power-local-llm/faster-whisper-review) — os três executam transcrição de voz local —, mas o MacWhisper troca a abordagem gratuita de CLI/biblioteca voltada a desenvolvedores por um app de Mac pago, empacotado e de apontar e clicar. Veja o [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para saber onde ele se encaixa entre outras ferramentas de voz locais." },
+          { type: 'note', text: "O MacWhisper está no mesmo subsegmento que o [whisper.cpp](/pt/power-local-llm/whisper-cpp-review) e o [faster-whisper](/pt/power-local-llm/faster-whisper-review) — os três executam transcrição de voz local —, mas o MacWhisper troca a abordagem gratuita de CLI/biblioteca voltada a desenvolvedores por um app de Mac pago, empacotado e de apontar e clicar. Veja o [Local LLM Software Directory](https://www.promptquorum.com/directory) para saber onde ele se encaixa entre outras ferramentas de voz locais." },
         ],
       },
       overview: {
@@ -992,7 +992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-macwhisper',
         title: 'Baixar o MacWhisper para Mac',
-        content: "**Esta análise complementa a entrada do MacWhisper no [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — confira o diretório para ver como ele é classificado junto a outras ferramentas de transcrição de voz local. Os links abaixo são os dois canais de distribuição oficiais; sempre confirme que você está no domínio oficial ou na listagem da App Store verificada pela Apple antes de comprar.",
+        content: "**Esta análise complementa a entrada do MacWhisper no [Local LLM Software Directory](https://www.promptquorum.com/directory)** — confira o diretório para ver como ele é classificado junto a outras ferramentas de transcrição de voz local. Os links abaixo são os dois canais de distribuição oficiais; sempre confirme que você está no domínio oficial ou na listagem da App Store verificada pela Apple antes de comprar.",
         columns: ['Canal', 'Download'],
         rows: [
           { 'Canal': 'Direto (gratuito + Pro, compra única)', 'Download': '[goodsnooze.gumroad.com/l/macwhisper](https://goodsnooze.gumroad.com/l/macwhisper)' },
@@ -1100,7 +1100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Whisper.cpp Review: transcrição de voz local em C/C++ puro](/pt/power-local-llm/whisper-cpp-review) — a alternativa gratuita, de código aberto e multiplataforma em CLI/biblioteca para desenvolvedores que não precisam de interface gráfica.',
           '[faster-whisper Review: transcrição de voz local acelerada por CTranslate2](/pt/power-local-llm/faster-whisper-review) — uma opção de biblioteca Python gratuita e de código aberto, também multiplataforma.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o MacWhisper se encaixa entre os apps de transcrição de voz.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o MacWhisper se encaixa entre os apps de transcrição de voz.',
         ],
       },
     },
@@ -1117,7 +1117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'MacWhisper',
     title: 'MacWhisperレビュー (2026年): Mac向けローカル音声文字起こし',
     seoTitle: 'MacWhisperレビュー2026: Mac向けローカルSTT',
-    intro: "MacWhisperは[macwhisper.com](https://www.macwhisper.com)で提供される[Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper)開発のmacOSアプリで、OpenAIのWhisperモデルとNvidiaのParakeetモデルを使い、音声・動画ファイル、会議録音、ライブ音声入力をクラウドAPIではなく自分のMac上で文字起こしする。無料プランと、[Good SnoozeのGumroadページ](https://goodsnooze.gumroad.com/l/macwhisper)で直接販売される**買い切り**（サブスクリプションではない）のProプランがあり、別途、異なる料金体系のMac App Storeリスト（「Whisper Transcription」）も存在する（詳細は後述）。本レビューは[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)内のMacWhisperの掲載を補完するもので、本サイトが既にレビューした開発者向けのローカル音声文字起こしツール2つ、[whisper.cpp](/ja/power-local-llm/whisper-cpp-review)と[faster-whisper](/ja/power-local-llm/faster-whisper-review)と比較する。",
+    intro: "MacWhisperは[macwhisper.com](https://www.macwhisper.com)で提供される[Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper)開発のmacOSアプリで、OpenAIのWhisperモデルとNvidiaのParakeetモデルを使い、音声・動画ファイル、会議録音、ライブ音声入力をクラウドAPIではなく自分のMac上で文字起こしする。無料プランと、[Good SnoozeのGumroadページ](https://goodsnooze.gumroad.com/l/macwhisper)で直接販売される**買い切り**（サブスクリプションではない）のProプランがあり、別途、異なる料金体系のMac App Storeリスト（「Whisper Transcription」）も存在する（詳細は後述）。本レビューは[Local LLM Software Directory](https://www.promptquorum.com/directory)内のMacWhisperの掲載を補完するもので、本サイトが既にレビューした開発者向けのローカル音声文字起こしツール2つ、[whisper.cpp](/ja/power-local-llm/whisper-cpp-review)と[faster-whisper](/ja/power-local-llm/faster-whisper-review)と比較する。",
     metaDescription: "MacWhisperレビュー2026:WhisperとNvidia ParakeetモデルによるMac向けローカル音声文字起こしアプリ。無料版と買い切り64ユーロのPro版、App Store価格、ダウンロードリンク、whisper.cppやfaster-whisperとの比較。",
     readTime: '読了時間: 10分',
     targetKeywords: [
@@ -1175,7 +1175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mac App Store評価: 5点満点中3.9点、158件の評価（App Storeリストで確認、2026年9月時点）——唯一の引用可能な公開エンゲージメント数値。Gumroad配布版については独立した人気ランキングは見つからなかった',
         ],
         callouts: [
-          { type: 'note', text: "MacWhisperは[whisper.cpp](/ja/power-local-llm/whisper-cpp-review)や[faster-whisper](/ja/power-local-llm/faster-whisper-review)と同じサブセグメントに属する——3つともローカル音声文字起こしを実行するが、MacWhisperはそれらの無料で開発者向けのCLI/ライブラリのアプローチを、有料でパッケージ化されたクリック操作のMacアプリに置き換えている。他のローカル音声ツールの中での位置づけは[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)を参照。" },
+          { type: 'note', text: "MacWhisperは[whisper.cpp](/ja/power-local-llm/whisper-cpp-review)や[faster-whisper](/ja/power-local-llm/faster-whisper-review)と同じサブセグメントに属する——3つともローカル音声文字起こしを実行するが、MacWhisperはそれらの無料で開発者向けのCLI/ライブラリのアプローチを、有料でパッケージ化されたクリック操作のMacアプリに置き換えている。他のローカル音声ツールの中での位置づけは[Local LLM Software Directory](https://www.promptquorum.com/directory)を参照。" },
         ],
       },
       overview: {
@@ -1210,7 +1210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-macwhisper',
         title: 'Mac向けMacWhisperのダウンロード',
-        content: "**本レビューは[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)内のMacWhisperの掲載を補完するものであり**、他のローカル音声文字起こしツールと並べてどう分類されているかはディレクトリを確認してほしい。以下は2つの公式配布チャネルへのリンクであり、購入前には必ず公式ドメインまたはApple確認済みのApp Storeリストであることを確認すること。",
+        content: "**本レビューは[Local LLM Software Directory](https://www.promptquorum.com/directory)内のMacWhisperの掲載を補完するものであり**、他のローカル音声文字起こしツールと並べてどう分類されているかはディレクトリを確認してほしい。以下は2つの公式配布チャネルへのリンクであり、購入前には必ず公式ドメインまたはApple確認済みのApp Storeリストであることを確認すること。",
         columns: ['チャネル', 'ダウンロード'],
         rows: [
           { 'チャネル': '直接（無料+Pro、買い切り）', 'ダウンロード': '[goodsnooze.gumroad.com/l/macwhisper](https://goodsnooze.gumroad.com/l/macwhisper)' },
@@ -1318,7 +1318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Whisper.cppレビュー: 純粋なC/C++によるローカル音声文字起こし](/ja/power-local-llm/whisper-cpp-review) — GUIを必要としない開発者向けの、無料でオープンソースなクロスプラットフォームのCLI/ライブラリ代替案。',
           '[faster-whisperレビュー: CTranslate2高速化ローカル音声文字起こし](/ja/power-local-llm/faster-whisper-review) — 無料でオープンソースのPythonライブラリの選択肢、こちらもクロスプラットフォーム。',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。音声文字起こしアプリの中でMacWhisperがどう位置づけられているかも含む。',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — 本記事が属するローカルAIツールの全カタログ。音声文字起こしアプリの中でMacWhisperがどう位置づけられているかも含む。',
         ],
       },
     },
@@ -1335,7 +1335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'MacWhisper',
     title: 'MacWhisper评测(2026):Mac本地语音转文字应用',
     seoTitle: 'MacWhisper评测2026:Mac本地STT应用',
-    intro: "MacWhisper是[macwhisper.com](https://www.macwhisper.com)上的一款macOS应用,由[Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper)开发,使用OpenAI的Whisper模型和Nvidia的Parakeet模型转录音频、视频文件、会议录音和实时听写——运行在你自己的Mac上而非通过云端API。它提供免费版,以及在[Good Snooze的Gumroad页面](https://goodsnooze.gumroad.com/l/macwhisper)直接销售的**一次性购买**(非订阅)的Pro版,此外还有一个采用不同定价结构的独立Mac App Store条目(\"Whisper Transcription\"),详见下文。本评测是MacWhisper在[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)条目的配套内容,并将其与本站已评测过的两款面向开发者的本地语音转文字工具进行比较:[whisper.cpp](/zh/power-local-llm/whisper-cpp-review)和[faster-whisper](/zh/power-local-llm/faster-whisper-review)。",
+    intro: "MacWhisper是[macwhisper.com](https://www.macwhisper.com)上的一款macOS应用,由[Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper)开发,使用OpenAI的Whisper模型和Nvidia的Parakeet模型转录音频、视频文件、会议录音和实时听写——运行在你自己的Mac上而非通过云端API。它提供免费版,以及在[Good Snooze的Gumroad页面](https://goodsnooze.gumroad.com/l/macwhisper)直接销售的**一次性购买**(非订阅)的Pro版,此外还有一个采用不同定价结构的独立Mac App Store条目(\"Whisper Transcription\"),详见下文。本评测是MacWhisper在[Local LLM Software Directory](https://www.promptquorum.com/directory)条目的配套内容,并将其与本站已评测过的两款面向开发者的本地语音转文字工具进行比较:[whisper.cpp](/zh/power-local-llm/whisper-cpp-review)和[faster-whisper](/zh/power-local-llm/faster-whisper-review)。",
     metaDescription: "MacWhisper评测2026:使用Whisper和Nvidia Parakeet模型的Mac本地语音转文字应用。免费版对比一次性64欧元的Pro版、App Store定价、下载链接,以及与whisper.cpp、faster-whisper的比较。",
     readTime: '阅读时间:10分钟',
     targetKeywords: [
@@ -1393,7 +1393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mac App Store评分:5分中的3.9分,共158条评分(在App Store条目上验证,2026年9月)——唯一可引用的公开参与度数据;未找到针对Gumroad发行版本的独立人气排名',
         ],
         callouts: [
-          { type: 'note', text: "MacWhisper与[whisper.cpp](/zh/power-local-llm/whisper-cpp-review)和[faster-whisper](/zh/power-local-llm/faster-whisper-review)属于同一细分领域——三者都执行本地语音转文字,但MacWhisper将它们免费、面向开发者的命令行/库方式,换成了一款收费、打包好、点击即用的Mac应用。参见[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)了解它在其他本地语音工具中的定位。" },
+          { type: 'note', text: "MacWhisper与[whisper.cpp](/zh/power-local-llm/whisper-cpp-review)和[faster-whisper](/zh/power-local-llm/faster-whisper-review)属于同一细分领域——三者都执行本地语音转文字,但MacWhisper将它们免费、面向开发者的命令行/库方式,换成了一款收费、打包好、点击即用的Mac应用。参见[Local LLM Software Directory](https://www.promptquorum.com/directory)了解它在其他本地语音工具中的定位。" },
         ],
       },
       overview: {
@@ -1428,7 +1428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-macwhisper',
         title: '下载Mac版MacWhisper',
-        content: "**本评测是MacWhisper在[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)条目的配套内容**——可在目录中查看它与其他本地语音转文字工具的分类关系。以下链接是两个官方发行渠道;购买前请务必确认你处于官方域名或经Apple验证的App Store条目上。",
+        content: "**本评测是MacWhisper在[Local LLM Software Directory](https://www.promptquorum.com/directory)条目的配套内容**——可在目录中查看它与其他本地语音转文字工具的分类关系。以下链接是两个官方发行渠道;购买前请务必确认你处于官方域名或经Apple验证的App Store条目上。",
         columns: ['渠道', '下载'],
         rows: [
           { '渠道': '直接购买(免费+Pro,一次性)', '下载': '[goodsnooze.gumroad.com/l/macwhisper](https://goodsnooze.gumroad.com/l/macwhisper)' },
@@ -1536,7 +1536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Whisper.cpp评测:纯C/C++实现的本地语音转文字](/zh/power-local-llm/whisper-cpp-review) — 面向不需要GUI的开发者的免费、开源、跨平台CLI/库替代方案。',
           '[faster-whisper评测:CTranslate2加速的本地语音转文字](/zh/power-local-llm/faster-whisper-review) — 一个免费、开源的Python库选项,同样跨平台。',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录,包含MacWhisper在语音转文字应用中的定位。',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — 本文所属的本地AI工具完整目录,包含MacWhisper在语音转文字应用中的定位。',
         ],
       },
     },
@@ -1553,7 +1553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'MacWhisper',
     title: 'مراجعة MacWhisper (2026): تحويل الكلام إلى نص محليًا على Mac',
     seoTitle: 'مراجعة MacWhisper 2026: تطبيق STT محلي لـ Mac',
-    intro: "MacWhisper تطبيق macOS متاح على [macwhisper.com](https://www.macwhisper.com)، طورته شركة [Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper)، يحوّل ملفات الصوت والفيديو وتسجيلات الاجتماعات والإملاء المباشر إلى نص باستخدام نماذج Whisper من OpenAI ونماذج Parakeet من Nvidia — ويعمل على جهاز Mac الخاص بك بدلاً من واجهة برمجة سحابية. يتوفر بمستوى مجاني ومستوى Pro يُباع كـ**شراء لمرة واحدة** (وليس اشتراكًا) مباشرة عبر [صفحة Good Snooze على Gumroad](https://goodsnooze.gumroad.com/l/macwhisper)، مع وجود قائمة منفصلة على متجر Mac App Store (\"Whisper Transcription\") تستخدم هيكل تسعير مختلفًا — موضّح أدناه بالتفصيل. هذه المراجعة مكمّلة لإدراج MacWhisper في [دليل برامج الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)، وتقارنه بأداتين لتحويل الكلام إلى نص محليًا موجهتين للمطورين سبق أن راجعهما هذا الموقع: [whisper.cpp](/ar/power-local-llm/whisper-cpp-review) و[faster-whisper](/ar/power-local-llm/faster-whisper-review).",
+    intro: "MacWhisper تطبيق macOS متاح على [macwhisper.com](https://www.macwhisper.com)، طورته شركة [Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper)، يحوّل ملفات الصوت والفيديو وتسجيلات الاجتماعات والإملاء المباشر إلى نص باستخدام نماذج Whisper من OpenAI ونماذج Parakeet من Nvidia — ويعمل على جهاز Mac الخاص بك بدلاً من واجهة برمجة سحابية. يتوفر بمستوى مجاني ومستوى Pro يُباع كـ**شراء لمرة واحدة** (وليس اشتراكًا) مباشرة عبر [صفحة Good Snooze على Gumroad](https://goodsnooze.gumroad.com/l/macwhisper)، مع وجود قائمة منفصلة على متجر Mac App Store (\"Whisper Transcription\") تستخدم هيكل تسعير مختلفًا — موضّح أدناه بالتفصيل. هذه المراجعة مكمّلة لإدراج MacWhisper في [دليل برامج الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory)، وتقارنه بأداتين لتحويل الكلام إلى نص محليًا موجهتين للمطورين سبق أن راجعهما هذا الموقع: [whisper.cpp](/ar/power-local-llm/whisper-cpp-review) و[faster-whisper](/ar/power-local-llm/faster-whisper-review).",
     metaDescription: "مراجعة MacWhisper 2026: تطبيق Mac لتحويل الكلام إلى نص محليًا باستخدام نماذج Whisper وNvidia Parakeet. مقارنة النسخة المجانية بنسخة Pro بسعر 64 يورو لمرة واحدة، أسعار App Store، روابط التنزيل، ومقارنة مع whisper.cpp وfaster-whisper.",
     readTime: 'وقت القراءة: 10 دقائق',
     targetKeywords: [
@@ -1611,7 +1611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تقييم متجر Mac App Store: 3.9/5 بناءً على 158 تقييمًا (تم التحقق منه على صفحة المتجر، سبتمبر 2026) — وهو الرقم العام الوحيد القابل للاستشهاد؛ لم يُعثر على أي تصنيف شعبية مستقل للنسخة الموزعة عبر Gumroad',
         ],
         callouts: [
-          { type: 'note', text: "ينتمي MacWhisper إلى نفس الفئة الفرعية مثل [whisper.cpp](/ar/power-local-llm/whisper-cpp-review) و[faster-whisper](/ar/power-local-llm/faster-whisper-review) — إذ تنفّذ الأدوات الثلاث تحويل الكلام إلى نص محليًا — لكن MacWhisper يستبدل نهجهما المجاني الموجّه للمطورين (سطر أوامر/مكتبة) بتطبيق Mac مدفوع، جاهز، وسهل الاستخدام بالنقر. راجع [دليل برامج الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) لمعرفة موقعه بين أدوات الصوت المحلية الأخرى." },
+          { type: 'note', text: "ينتمي MacWhisper إلى نفس الفئة الفرعية مثل [whisper.cpp](/ar/power-local-llm/whisper-cpp-review) و[faster-whisper](/ar/power-local-llm/faster-whisper-review) — إذ تنفّذ الأدوات الثلاث تحويل الكلام إلى نص محليًا — لكن MacWhisper يستبدل نهجهما المجاني الموجّه للمطورين (سطر أوامر/مكتبة) بتطبيق Mac مدفوع، جاهز، وسهل الاستخدام بالنقر. راجع [دليل برامج الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory) لمعرفة موقعه بين أدوات الصوت المحلية الأخرى." },
         ],
       },
       overview: {
@@ -1646,7 +1646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-macwhisper',
         title: 'تنزيل MacWhisper لأجهزة Mac',
-        content: "**هذه المراجعة مكمّلة لإدراج MacWhisper في [دليل برامج الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — راجع الدليل لمعرفة تصنيفه إلى جانب أدوات تحويل الكلام إلى نص المحلية الأخرى. الروابط أدناه هي قناتا التوزيع الرسميتين؛ تأكد دائمًا من أنك على النطاق الرسمي أو صفحة App Store الموثّقة من Apple قبل الشراء.",
+        content: "**هذه المراجعة مكمّلة لإدراج MacWhisper في [دليل برامج الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory)** — راجع الدليل لمعرفة تصنيفه إلى جانب أدوات تحويل الكلام إلى نص المحلية الأخرى. الروابط أدناه هي قناتا التوزيع الرسميتين؛ تأكد دائمًا من أنك على النطاق الرسمي أو صفحة App Store الموثّقة من Apple قبل الشراء.",
         columns: ['القناة', 'التنزيل'],
         rows: [
           { 'القناة': 'مباشر (مجاني + Pro، شراء لمرة واحدة)', 'التنزيل': '[goodsnooze.gumroad.com/l/macwhisper](https://goodsnooze.gumroad.com/l/macwhisper)' },
@@ -1754,7 +1754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[مراجعة Whisper.cpp: تحويل الكلام إلى نص محليًا بلغة C/C++ خالصة](/ar/power-local-llm/whisper-cpp-review) — البديل المجاني ومفتوح المصدر وعابر المنصات (سطر أوامر/مكتبة) للمطورين الذين لا يحتاجون إلى واجهة رسومية.',
           '[مراجعة faster-whisper: تحويل الكلام إلى نص محليًا بتسريع CTranslate2](/ar/power-local-llm/faster-whisper-review) — خيار مكتبة Python مجانية ومفتوحة المصدر، وعابرة للمنصات أيضًا.',
-          '[دليل برامج الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك موقع MacWhisper بين تطبيقات تحويل الكلام إلى نص.',
+          '[دليل برامج الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك موقع MacWhisper بين تطبيقات تحويل الكلام إلى نص.',
         ],
       },
     },
@@ -1771,7 +1771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'MacWhisper',
     title: 'MacWhisper 리뷰 (2026년): Mac용 로컬 음성-텍스트 변환',
     seoTitle: 'MacWhisper 리뷰 2026: Mac용 로컬 STT 앱',
-    intro: "MacWhisper는 [Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper)가 만든 [macwhisper.com](https://www.macwhisper.com)의 macOS 애플리케이션으로, OpenAI의 Whisper 모델과 Nvidia의 Parakeet 모델을 사용해 오디오·비디오 파일, 회의 녹음, 실시간 받아쓰기를 클라우드 API가 아닌 사용자의 Mac에서 직접 텍스트로 변환한다. 무료 등급과, [Good Snooze의 Gumroad 페이지](https://goodsnooze.gumroad.com/l/macwhisper)에서 직접 판매되는 **일회성 구매**(구독이 아님) Pro 등급이 있으며, 별도로 다른 가격 구조를 가진 Mac App Store 목록(\"Whisper Transcription\")도 존재한다 — 아래에서 자세히 다룬다. 이 리뷰는 [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 실린 MacWhisper 항목을 보완하며, 본 사이트가 이미 리뷰한 개발자 대상 로컬 음성-텍스트 변환 도구 두 가지, [whisper.cpp](/ko/power-local-llm/whisper-cpp-review)와 [faster-whisper](/ko/power-local-llm/faster-whisper-review)와 비교한다.",
+    intro: "MacWhisper는 [Good Snooze](https://goodsnooze.gumroad.com/l/macwhisper)가 만든 [macwhisper.com](https://www.macwhisper.com)의 macOS 애플리케이션으로, OpenAI의 Whisper 모델과 Nvidia의 Parakeet 모델을 사용해 오디오·비디오 파일, 회의 녹음, 실시간 받아쓰기를 클라우드 API가 아닌 사용자의 Mac에서 직접 텍스트로 변환한다. 무료 등급과, [Good Snooze의 Gumroad 페이지](https://goodsnooze.gumroad.com/l/macwhisper)에서 직접 판매되는 **일회성 구매**(구독이 아님) Pro 등급이 있으며, 별도로 다른 가격 구조를 가진 Mac App Store 목록(\"Whisper Transcription\")도 존재한다 — 아래에서 자세히 다룬다. 이 리뷰는 [Local LLM Software Directory](https://www.promptquorum.com/directory)에 실린 MacWhisper 항목을 보완하며, 본 사이트가 이미 리뷰한 개발자 대상 로컬 음성-텍스트 변환 도구 두 가지, [whisper.cpp](/ko/power-local-llm/whisper-cpp-review)와 [faster-whisper](/ko/power-local-llm/faster-whisper-review)와 비교한다.",
     metaDescription: "MacWhisper 리뷰 2026: Whisper 및 Nvidia Parakeet 모델을 사용하는 Mac용 로컬 음성-텍스트 변환 앱. 무료 버전과 일회성 구매 64유로 Pro 버전 비교, App Store 가격, 다운로드 링크, whisper.cpp·faster-whisper와의 비교.",
     readTime: '읽는 시간: 10분',
     targetKeywords: [
@@ -1829,7 +1829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mac App Store 평점: 5점 만점에 3.9점, 158개 평가(App Store 목록에서 확인, 2026년 9월) — 인용 가능한 유일한 공개 참여 지표이며, Gumroad로 배포되는 버전에 대한 독립적인 인기 순위는 발견되지 않음',
         ],
         callouts: [
-          { type: 'note', text: "MacWhisper는 [whisper.cpp](/ko/power-local-llm/whisper-cpp-review), [faster-whisper](/ko/power-local-llm/faster-whisper-review)와 같은 하위 세그먼트에 속한다 — 셋 모두 로컬 음성-텍스트 변환을 수행하지만, MacWhisper는 이들의 무료 개발자 대상 CLI/라이브러리 방식을, 유료로 패키징된 클릭 한 번의 Mac 앱으로 대체한다. 다른 로컬 음성 도구들 사이에서 어떤 위치에 있는지는 [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)를 참고하라." },
+          { type: 'note', text: "MacWhisper는 [whisper.cpp](/ko/power-local-llm/whisper-cpp-review), [faster-whisper](/ko/power-local-llm/faster-whisper-review)와 같은 하위 세그먼트에 속한다 — 셋 모두 로컬 음성-텍스트 변환을 수행하지만, MacWhisper는 이들의 무료 개발자 대상 CLI/라이브러리 방식을, 유료로 패키징된 클릭 한 번의 Mac 앱으로 대체한다. 다른 로컬 음성 도구들 사이에서 어떤 위치에 있는지는 [Local LLM Software Directory](https://www.promptquorum.com/directory)를 참고하라." },
         ],
       },
       overview: {
@@ -1864,7 +1864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-macwhisper',
         title: 'Mac용 MacWhisper 다운로드',
-        content: "**이 리뷰는 [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 실린 MacWhisper 항목을 보완한다** — 다른 로컬 음성-텍스트 변환 도구들 사이에서 어떻게 분류되는지는 디렉터리를 확인하라. 아래 링크는 두 개의 공식 배포 채널이며, 구매 전에는 항상 공식 도메인이거나 Apple에서 검증한 App Store 목록인지 확인할 것.",
+        content: "**이 리뷰는 [Local LLM Software Directory](https://www.promptquorum.com/directory)에 실린 MacWhisper 항목을 보완한다** — 다른 로컬 음성-텍스트 변환 도구들 사이에서 어떻게 분류되는지는 디렉터리를 확인하라. 아래 링크는 두 개의 공식 배포 채널이며, 구매 전에는 항상 공식 도메인이거나 Apple에서 검증한 App Store 목록인지 확인할 것.",
         columns: ['채널', '다운로드'],
         rows: [
           { '채널': '직접(무료 + Pro, 일회성 구매)', '다운로드': '[goodsnooze.gumroad.com/l/macwhisper](https://goodsnooze.gumroad.com/l/macwhisper)' },
@@ -1972,7 +1972,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Whisper.cpp 리뷰: 순수 C/C++로 구현된 로컬 음성-텍스트 변환](/ko/power-local-llm/whisper-cpp-review) — GUI가 필요 없는 개발자를 위한 무료, 오픈소스, 크로스플랫폼 CLI/라이브러리 대안.',
           '[faster-whisper 리뷰: CTranslate2로 가속된 로컬 음성-텍스트 변환](/ko/power-local-llm/faster-whisper-review) — 무료 오픈소스 Python 라이브러리 옵션으로, 역시 크로스플랫폼이다.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, 음성-텍스트 변환 앱 중 MacWhisper의 위치도 포함한다.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, 음성-텍스트 변환 앱 중 MacWhisper의 위치도 포함한다.',
         ],
       },
     },

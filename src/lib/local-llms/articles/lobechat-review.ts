@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A hosted alternative, LobeHub Cloud, starts at $9.9/month for people who do not want to self-host.',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to LobeChat\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- see that page for how LobeChat compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to LobeChat\'s entry in the [Local LLM Software Directory](/directory) -- see that page for how LobeChat compares at a glance to dozens of other local AI tools.' },
         ],
       },
       quickFacts: {
@@ -200,9 +200,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**LobeChat**', 'Best for': 'Polished UI, agent builder, plugin marketplace', 'Self-hosted': 'Yes (Docker/Vercel/Zeabur)', 'Built-in RAG': 'Yes', 'License': 'LobeHub Community (Apache-based)' },
           { 'Tool': '**[Open WebUI](/local-llms/open-webui-review)**', 'Best for': 'Multi-user front end tightly tied to Ollama', 'Self-hosted': 'Yes (Docker/pip)', 'Built-in RAG': 'Yes', 'License': 'Open WebUI License (BSD-derived)' },
           { 'Tool': '**[LibreChat](/power-local-llm/librechat-review)**', 'Best for': 'Managing many cloud provider API keys in one UI', 'Self-hosted': 'Yes (Docker)', 'Built-in RAG': 'Yes', 'License': 'MIT' },
-          { 'Tool': '**[Cherry Studio](/local-llms/cherry-studio-ai-desktop-client)**', 'Best for': 'Single-user desktop client, no server to run', 'Self-hosted': 'No (native desktop app)', 'Built-in RAG': 'Yes', 'License': 'Custom (source-available)' },
+          { 'Tool': '**[Cherry Studio](/local-llms/cherry-studio-ai-desktop-client)**', 'Best for': 'Single-user desktop client, no server to run', 'Self-hosted': 'No (native desktop app)', 'Built-in RAG': 'Yes', 'License': 'AGPL 3.0' },
         ],
-        note: 'For character/roleplay-focused chat instead of a general-purpose assistant, see [Open WebUI vs SillyTavern](/local-llms/open-webui-vs-sillytavern). For the full catalog, see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).',
+        note: 'For character/roleplay-focused chat instead of a general-purpose assistant, see [Open WebUI vs SillyTavern](/local-llms/open-webui-vs-sillytavern). For the full catalog, see the [Local LLM Software Directory](/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -232,14 +232,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Competitors and Alternatives',
-        content: 'LobeChat sits in a segment of self-hosted, multi-provider chat interfaces. Here is how it compares to the closest alternatives in that same category -- see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, including LobeChat\'s own directory entry.',
+        content: 'LobeChat sits in a segment of self-hosted, multi-provider chat interfaces. Here is how it compares to the closest alternatives in that same category -- see the [Local LLM Software Directory](/directory) for the full catalog, including LobeChat\'s own directory entry.',
         items: [
           '**[Open WebUI](/local-llms/open-webui-review)** -- a self-hosted, multi-user chat interface most tightly integrated with Ollama and local-first workflows; less emphasis on an agent/plugin marketplace than LobeChat.',
           '**[LibreChat](/power-local-llm/librechat-review)** -- an MIT-licensed self-hosted interface that leans toward managing many cloud provider API keys behind one shared UI.',
           '**[Cherry Studio](/local-llms/cherry-studio-ai-desktop-client)** -- a single-user desktop client rather than a self-hosted server, for people who want zero server setup.',
           '**[SillyTavern](/local-llms/sillytavern-review)** -- a self-hosted front end focused on character/roleplay chat rather than general-purpose assistant use; see [Open WebUI vs SillyTavern](/local-llms/open-webui-vs-sillytavern) for how that use case differs.',
         ],
-        note: 'This is not an exhaustive list of self-hosted chat interfaces -- see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including LobeChat\'s own directory entry.',
+        note: 'This is not an exhaustive list of self-hosted chat interfaces -- see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including LobeChat\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- the full catalog of local AI tools this article belongs to, including LobeChat\'s own directory entry.',
+          '[Local LLM Software Directory](/directory) -- the full catalog of local AI tools this article belongs to, including LobeChat\'s own directory entry.',
           '[Open WebUI Review](/local-llms/open-webui-review) -- a self-hosted alternative most tightly integrated with Ollama.',
           '[LibreChat Review](/power-local-llm/librechat-review) -- a self-hosted alternative for managing many cloud provider API keys.',
           '[Cherry Studio](/local-llms/cherry-studio-ai-desktop-client) -- a single-user desktop alternative that needs no server.',
@@ -409,7 +409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Eine gehostete Alternative, LobeHub Cloud, startet bei 9,9 $/Monat für alle, die nicht selbst hosten wollen.',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test ist der ausführliche Begleitartikel zu LobeChats Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) -- dort finden Sie einen Überblick, wie LobeChat im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Dieser Test ist der ausführliche Begleitartikel zu LobeChats Eintrag im [Local LLM Software Directory](/de/directory) -- dort finden Sie einen Überblick, wie LobeChat im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       quickFacts: {
@@ -493,9 +493,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**LobeChat**', 'Am besten für': 'Gepflegte UI, Agenten-Builder, Plugin-Marktplatz', 'Selbst gehostet': 'Ja (Docker/Vercel/Zeabur)', 'Integriertes RAG': 'Ja', 'Lizenz': 'LobeHub Community (Apache-basiert)' },
           { 'Tool': '**[Open WebUI](/de/local-llms/open-webui-review)**', 'Am besten für': 'Mehrbenutzer-Frontend, eng an Ollama gebunden', 'Selbst gehostet': 'Ja (Docker/pip)', 'Integriertes RAG': 'Ja', 'Lizenz': 'Open WebUI License (BSD-basiert)' },
           { 'Tool': '**[LibreChat](/de/power-local-llm/librechat-review)**', 'Am besten für': 'Verwaltung vieler Cloud-Anbieter-API-Schlüssel in einer UI', 'Selbst gehostet': 'Ja (Docker)', 'Integriertes RAG': 'Ja', 'Lizenz': 'MIT' },
-          { 'Tool': '**[Cherry Studio](/de/local-llms/cherry-studio-ai-desktop-client)**', 'Am besten für': 'Einzelbenutzer-Desktop-Client, kein Server nötig', 'Selbst gehostet': 'Nein (native Desktop-App)', 'Integriertes RAG': 'Ja', 'Lizenz': 'Eigene (quelloffen einsehbar)' },
+          { 'Tool': '**[Cherry Studio](/de/local-llms/cherry-studio-ai-desktop-client)**', 'Am besten für': 'Einzelbenutzer-Desktop-Client, kein Server nötig', 'Selbst gehostet': 'Nein (native Desktop-App)', 'Integriertes RAG': 'Ja', 'Lizenz': 'AGPL 3.0' },
         ],
-        note: 'Für charakter-/rollenspielfokussierten Chat statt eines Allzweck-Assistenten siehe [Open WebUI vs SillyTavern](/de/local-llms/open-webui-vs-sillytavern). Für den vollständigen Katalog siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Für charakter-/rollenspielfokussierten Chat statt eines Allzweck-Assistenten siehe [Open WebUI vs SillyTavern](/de/local-llms/open-webui-vs-sillytavern). Für den vollständigen Katalog siehe das [Local LLM Software Directory](/de/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -525,14 +525,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Konkurrenz und Alternativen',
-        content: 'LobeChat befindet sich in einem Segment selbst gehosteter, Multi-Anbieter-Chat-Oberflächen. So schneidet es im Vergleich zu den nächstliegenden Alternativen in derselben Kategorie ab -- siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog, einschließlich LobeChats eigenem Directory-Eintrag.',
+        content: 'LobeChat befindet sich in einem Segment selbst gehosteter, Multi-Anbieter-Chat-Oberflächen. So schneidet es im Vergleich zu den nächstliegenden Alternativen in derselben Kategorie ab -- siehe das [Local LLM Software Directory](/de/directory) für den vollständigen Katalog, einschließlich LobeChats eigenem Directory-Eintrag.',
         items: [
           '**[Open WebUI](/de/local-llms/open-webui-review)** -- eine selbst gehostete, mehrbenutzerfähige Chat-Oberfläche, am engsten mit Ollama und lokalen Workflows verzahnt; weniger Fokus auf einen Agenten-/Plugin-Marktplatz als LobeChat.',
           '**[LibreChat](/de/power-local-llm/librechat-review)** -- eine MIT-lizenzierte, selbst gehostete Oberfläche, die eher auf die Verwaltung vieler Cloud-Anbieter-API-Schlüssel in einer gemeinsamen UI setzt.',
           '**[Cherry Studio](/de/local-llms/cherry-studio-ai-desktop-client)** -- ein Einzelbenutzer-Desktop-Client statt eines selbst gehosteten Servers, für alle, die null Server-Setup wollen.',
           '**[SillyTavern](/de/local-llms/sillytavern-review)** -- ein selbst gehostetes Frontend, das auf Charakter-/Rollenspiel-Chat statt auf einen Allzweck-Assistenten fokussiert ist; siehe [Open WebUI vs SillyTavern](/de/local-llms/open-webui-vs-sillytavern) für die Unterschiede in diesem Anwendungsfall.',
         ],
-        note: 'Dies ist keine vollständige Liste selbst gehosteter Chat-Oberflächen -- siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich LobeChats eigenem Directory-Eintrag.',
+        note: 'Dies ist keine vollständige Liste selbst gehosteter Chat-Oberflächen -- siehe das [Local LLM Software Directory](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich LobeChats eigenem Directory-Eintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -567,7 +567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) -- der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich LobeChats eigenem Directory-Eintrag.',
+          '[Local LLM Software Directory](/de/directory) -- der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich LobeChats eigenem Directory-Eintrag.',
           '[Open WebUI im Test](/de/local-llms/open-webui-review) -- eine selbst gehostete Alternative, am engsten mit Ollama verzahnt.',
           '[LibreChat im Test](/de/power-local-llm/librechat-review) -- eine selbst gehostete Alternative zur Verwaltung vieler Cloud-Anbieter-API-Schlüssel.',
           '[Cherry Studio](/de/local-llms/cherry-studio-ai-desktop-client) -- eine Einzelbenutzer-Desktop-Alternative, die keinen Server braucht.',
@@ -702,7 +702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Une alternative hébergée, LobeHub Cloud, démarre à 9,9 $/mois pour ceux qui ne veulent pas s'auto-héberger.",
         ],
         callouts: [
-          { type: 'note', text: "Ce test est le complément approfondi de la fiche de LobeChat dans l'[Annuaire des Logiciels LLM Locaux](/fr/power-local-llm/local-llm-software-directory) -- consultez cette page pour voir comment LobeChat se compare en un coup d'œil à des dizaines d'autres outils d'IA locale." },
+          { type: 'note', text: "Ce test est le complément approfondi de la fiche de LobeChat dans l'[Annuaire des Logiciels LLM Locaux](/fr/directory) -- consultez cette page pour voir comment LobeChat se compare en un coup d'œil à des dizaines d'autres outils d'IA locale." },
         ],
       },
       quickFacts: {
@@ -786,9 +786,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Outil': '**LobeChat**', 'Idéal pour': "Interface soignée, créateur d'agents, marketplace de plugins", 'Auto-hébergé': 'Oui (Docker/Vercel/Zeabur)', 'RAG intégré': 'Oui', 'Licence': 'LobeHub Community (basée Apache)' },
           { 'Outil': '**[Open WebUI](/fr/local-llms/open-webui-review)**', 'Idéal pour': 'Frontend multi-utilisateurs étroitement lié à Ollama', 'Auto-hébergé': 'Oui (Docker/pip)', 'RAG intégré': 'Oui', 'Licence': 'Open WebUI License (basée BSD)' },
           { 'Outil': '**[LibreChat](/fr/power-local-llm/librechat-review)**', 'Idéal pour': "Gestion de nombreuses clés API de fournisseurs cloud dans une seule UI", 'Auto-hébergé': 'Oui (Docker)', 'RAG intégré': 'Oui', 'Licence': 'MIT' },
-          { 'Outil': '**[Cherry Studio](/fr/local-llms/cherry-studio-ai-desktop-client)**', 'Idéal pour': 'Client bureau mono-utilisateur, aucun serveur à gérer', 'Auto-hébergé': 'Non (application bureau native)', 'RAG intégré': 'Oui', 'Licence': 'Propriétaire (accès source)' },
+          { 'Outil': '**[Cherry Studio](/fr/local-llms/cherry-studio-ai-desktop-client)**', 'Idéal pour': 'Client bureau mono-utilisateur, aucun serveur à gérer', 'Auto-hébergé': 'Non (application bureau native)', 'RAG intégré': 'Oui', 'Licence': 'AGPL 3.0' },
         ],
-        note: "Pour un chat orienté personnage/roleplay plutôt qu'un assistant généraliste, voir [Open WebUI vs SillyTavern](/fr/local-llms/open-webui-vs-sillytavern). Pour le catalogue complet, voir l'[Annuaire des Logiciels LLM Locaux](/fr/power-local-llm/local-llm-software-directory).",
+        note: "Pour un chat orienté personnage/roleplay plutôt qu'un assistant généraliste, voir [Open WebUI vs SillyTavern](/fr/local-llms/open-webui-vs-sillytavern). Pour le catalogue complet, voir l'[Annuaire des Logiciels LLM Locaux](/fr/directory).",
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -818,14 +818,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Concurrents et alternatives',
-        content: "LobeChat se situe dans un segment d'interfaces de chat auto-hébergées multi-fournisseurs. Voici comment elle se compare aux alternatives les plus proches dans cette même catégorie -- voir l'[Annuaire des Logiciels LLM Locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, y compris la fiche propre de LobeChat.",
+        content: "LobeChat se situe dans un segment d'interfaces de chat auto-hébergées multi-fournisseurs. Voici comment elle se compare aux alternatives les plus proches dans cette même catégorie -- voir l'[Annuaire des Logiciels LLM Locaux](/fr/directory) pour le catalogue complet, y compris la fiche propre de LobeChat.",
         items: [
           "**[Open WebUI](/fr/local-llms/open-webui-review)** -- une interface de chat auto-hébergée et multi-utilisateurs la plus étroitement intégrée à Ollama et aux workflows locaux ; moins d'accent sur une marketplace d'agents/plugins que LobeChat.",
           "**[LibreChat](/fr/power-local-llm/librechat-review)** -- une interface auto-hébergée sous licence MIT qui penche vers la gestion de nombreuses clés API de fournisseurs cloud derrière une seule UI partagée.",
           "**[Cherry Studio](/fr/local-llms/cherry-studio-ai-desktop-client)** -- un client bureau mono-utilisateur plutôt qu'un serveur auto-hébergé, pour ceux qui veulent zéro configuration serveur.",
           "**[SillyTavern](/fr/local-llms/sillytavern-review)** -- un frontend auto-hébergé axé sur le chat personnage/roleplay plutôt qu'un usage d'assistant généraliste ; voir [Open WebUI vs SillyTavern](/fr/local-llms/open-webui-vs-sillytavern) pour les différences de cas d'usage.",
         ],
-        note: "Ce n'est pas une liste exhaustive des interfaces de chat auto-hébergées -- voir l'[Annuaire des Logiciels LLM Locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, y compris la fiche propre de LobeChat.",
+        note: "Ce n'est pas une liste exhaustive des interfaces de chat auto-hébergées -- voir l'[Annuaire des Logiciels LLM Locaux](/fr/directory) pour le catalogue complet et régulièrement mis à jour, y compris la fiche propre de LobeChat.",
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -858,7 +858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          "[Annuaire des Logiciels LLM Locaux](/fr/power-local-llm/local-llm-software-directory) -- le catalogue complet d'outils d'IA locale auquel appartient cet article, y compris la fiche propre de LobeChat.",
+          "[Annuaire des Logiciels LLM Locaux](/fr/directory) -- le catalogue complet d'outils d'IA locale auquel appartient cet article, y compris la fiche propre de LobeChat.",
           "[Test d'Open WebUI](/fr/local-llms/open-webui-review) -- une alternative auto-hébergée la plus étroitement intégrée à Ollama.",
           "[Test de LibreChat](/fr/power-local-llm/librechat-review) -- une alternative auto-hébergée pour gérer de nombreuses clés API de fournisseurs cloud.",
           "[Cherry Studio](/fr/local-llms/cherry-studio-ai-desktop-client) -- une alternative bureau mono-utilisateur qui ne nécessite aucun serveur.",
@@ -993,7 +993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'セルフホストしたくない人向けのホスト型代替、LobeHub Cloudは月額9.9ドルから利用できます。',
         ],
         callouts: [
-          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるLobeChatのエントリーの詳細版です。そちらのページでは、LobeChatと他の数十個のローカルAIツールを一目で比較できます。' },
+          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるLobeChatのエントリーの詳細版です。そちらのページでは、LobeChatと他の数十個のローカルAIツールを一目で比較できます。' },
         ],
       },
       quickFacts: {
@@ -1077,9 +1077,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ツール': '**LobeChat**', '最適な用途': '洗練されたUI、エージェントビルダー、プラグインマーケットプレイス', 'セルフホスト': 'あり（Docker/Vercel/Zeabur）', '内蔵RAG': 'あり', 'ライセンス': 'LobeHub Community（Apacheベース）' },
           { 'ツール': '**[Open WebUI](/ja/local-llms/open-webui-review)**', '最適な用途': 'Ollamaに密接に結びついたマルチユーザーフロントエンド', 'セルフホスト': 'あり（Docker/pip）', '内蔵RAG': 'あり', 'ライセンス': 'Open WebUI License（BSDベース）' },
           { 'ツール': '**[LibreChat](/ja/power-local-llm/librechat-review)**', '最適な用途': '1つのUIで多数のクラウドプロバイダーAPIキーを管理', 'セルフホスト': 'あり（Docker）', '内蔵RAG': 'あり', 'ライセンス': 'MIT' },
-          { 'ツール': '**[Cherry Studio](/ja/local-llms/cherry-studio-ai-desktop-client)**', '最適な用途': 'サーバー不要のシングルユーザー向けデスクトップクライアント', 'セルフホスト': 'なし（ネイティブデスクトップアプリ）', '内蔵RAG': 'あり', 'ライセンス': '独自（ソース公開）' },
+          { 'ツール': '**[Cherry Studio](/ja/local-llms/cherry-studio-ai-desktop-client)**', '最適な用途': 'サーバー不要のシングルユーザー向けデスクトップクライアント', 'セルフホスト': 'なし（ネイティブデスクトップアプリ）', '内蔵RAG': 'あり', 'ライセンス': 'AGPL 3.0' },
         ],
-        note: '汎用アシスタントではなくキャラクター/ロールプレイ重視のチャットには、[Open WebUI vs SillyTavern](/ja/local-llms/open-webui-vs-sillytavern)を参照してください。全カタログについては[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: '汎用アシスタントではなくキャラクター/ロールプレイ重視のチャットには、[Open WebUI vs SillyTavern](/ja/local-llms/open-webui-vs-sillytavern)を参照してください。全カタログについては[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1109,14 +1109,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '競合・代替ツール',
-        content: 'LobeChatは、セルフホスト型でマルチプロバイダー対応のチャットUIというセグメントに位置します。同じカテゴリー内で最も近い代替ツールとの比較は次のとおりです -- 全カタログ（LobeChat自身のディレクトリエントリーを含む）については[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        content: 'LobeChatは、セルフホスト型でマルチプロバイダー対応のチャットUIというセグメントに位置します。同じカテゴリー内で最も近い代替ツールとの比較は次のとおりです -- 全カタログ（LobeChat自身のディレクトリエントリーを含む）については[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
         items: [
           '**[Open WebUI](/ja/local-llms/open-webui-review)** -- Ollamaとローカル優先のワークフローに最も密接に統合された、セルフホスト型のマルチユーザーチャットUI。LobeChatほどエージェント/プラグインマーケットプレイスを重視していません。',
           '**[LibreChat](/ja/power-local-llm/librechat-review)** -- MITライセンスのセルフホスト型UIで、1つの共有UIで多数のクラウドプロバイダーAPIキーを管理する方向に寄っています。',
           '**[Cherry Studio](/ja/local-llms/cherry-studio-ai-desktop-client)** -- セルフホスト型サーバーではなく、サーバー設定不要を求める人向けのシングルユーザー向けデスクトップクライアント。',
           '**[SillyTavern](/ja/local-llms/sillytavern-review)** -- 汎用アシスタント用途ではなく、キャラクター/ロールプレイチャットに重点を置いたセルフホスト型フロントエンド。この用途の違いについては[Open WebUI vs SillyTavern](/ja/local-llms/open-webui-vs-sillytavern)を参照してください。',
         ],
-        note: 'これはセルフホスト型チャットUIの網羅的なリストではありません -- LobeChat自身のディレクトリエントリーを含む、定期的に更新される完全なカタログについては[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはセルフホスト型チャットUIの網羅的なリストではありません -- LobeChat自身のディレクトリエントリーを含む、定期的に更新される完全なカタログについては[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1149,7 +1149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) -- この記事が属する、LobeChat自身のディレクトリエントリーを含むローカルAIツールの完全なカタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/directory) -- この記事が属する、LobeChat自身のディレクトリエントリーを含むローカルAIツールの完全なカタログ。',
           '[Open WebUIレビュー](/ja/local-llms/open-webui-review) -- Ollamaに最も密接に統合されたセルフホスト型の代替ツール。',
           '[LibreChatレビュー](/ja/power-local-llm/librechat-review) -- 多数のクラウドプロバイダーAPIキーを管理するためのセルフホスト型の代替ツール。',
           '[Cherry Studio](/ja/local-llms/cherry-studio-ai-desktop-client) -- サーバー不要のシングルユーザー向けデスクトップの代替ツール。',
@@ -1284,7 +1284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '托管替代方案LobeHub Cloud起价为每月9.9美元，适合不想自托管的用户。',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中LobeChat条目的深度补充——该页面提供了LobeChat与其他数十款本地AI工具的一览式比较。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中LobeChat条目的深度补充——该页面提供了LobeChat与其他数十款本地AI工具的一览式比较。' },
         ],
       },
       quickFacts: {
@@ -1368,9 +1368,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '工具': '**LobeChat**', '最适合': '精良UI、智能体构建器、插件市场', '自托管': '是（Docker/Vercel/Zeabur）', '内置RAG': '是', '许可证': 'LobeHub Community（基于Apache）' },
           { '工具': '**[Open WebUI](/zh/local-llms/open-webui-review)**', '最适合': '与Ollama紧密集成的多用户前端', '自托管': '是（Docker/pip）', '内置RAG': '是', '许可证': 'Open WebUI License（基于BSD）' },
           { '工具': '**[LibreChat](/zh/power-local-llm/librechat-review)**', '最适合': '在一个UI中管理多个云端提供商API密钥', '自托管': '是（Docker）', '内置RAG': '是', '许可证': 'MIT' },
-          { '工具': '**[Cherry Studio](/zh/local-llms/cherry-studio-ai-desktop-client)**', '最适合': '无需服务器的单用户桌面客户端', '自托管': '否（原生桌面应用）', '内置RAG': '是', '许可证': '自定义（源代码可见）' },
+          { '工具': '**[Cherry Studio](/zh/local-llms/cherry-studio-ai-desktop-client)**', '最适合': '无需服务器的单用户桌面客户端', '自托管': '否（原生桌面应用）', '内置RAG': '是', '许可证': 'AGPL 3.0' },
         ],
-        note: '如果你需要的是角色/角色扮演聊天而非通用助手，请参阅[Open WebUI vs SillyTavern](/zh/local-llms/open-webui-vs-sillytavern)。完整目录请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '如果你需要的是角色/角色扮演聊天而非通用助手，请参阅[Open WebUI vs SillyTavern](/zh/local-llms/open-webui-vs-sillytavern)。完整目录请参阅[本地LLM软件目录](/zh/directory)。',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1400,14 +1400,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '竞品与替代方案',
-        content: 'LobeChat属于自托管、多提供商聊天界面这一细分领域。以下是它与同类别中最接近的替代方案的比较——完整目录（包括LobeChat自身的目录条目）请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'LobeChat属于自托管、多提供商聊天界面这一细分领域。以下是它与同类别中最接近的替代方案的比较——完整目录（包括LobeChat自身的目录条目）请参阅[本地LLM软件目录](/zh/directory)。',
         items: [
           '**[Open WebUI](/zh/local-llms/open-webui-review)** —— 与Ollama和本地优先工作流集成最紧密的自托管多用户聊天界面；对智能体/插件市场的侧重不如LobeChat。',
           '**[LibreChat](/zh/power-local-llm/librechat-review)** —— MIT许可的自托管界面，更倾向于在一个共享UI中管理多个云端提供商的API密钥。',
           '**[Cherry Studio](/zh/local-llms/cherry-studio-ai-desktop-client)** —— 面向想要零服务器配置的用户的单用户桌面客户端，而非自托管服务器。',
           '**[SillyTavern](/zh/local-llms/sillytavern-review)** —— 专注于角色/角色扮演聊天而非通用助手用途的自托管前端；不同用例的区别请参阅[Open WebUI vs SillyTavern](/zh/local-llms/open-webui-vs-sillytavern)。',
         ],
-        note: '这不是自托管聊天界面的完整列表——完整且定期更新的目录（包括LobeChat自身的目录条目）请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这不是自托管聊天界面的完整列表——完整且定期更新的目录（包括LobeChat自身的目录条目）请参阅[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1440,7 +1440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) —— 本文所属的本地AI工具完整目录，包括LobeChat自身的目录条目。',
+          '[本地LLM软件目录](/zh/directory) —— 本文所属的本地AI工具完整目录，包括LobeChat自身的目录条目。',
           '[Open WebUI评测](/zh/local-llms/open-webui-review) —— 与Ollama集成最紧密的自托管替代方案。',
           '[LibreChat评测](/zh/power-local-llm/librechat-review) —— 用于管理多个云端提供商API密钥的自托管替代方案。',
           '[Cherry Studio](/zh/local-llms/cherry-studio-ai-desktop-client) —— 无需服务器的单用户桌面替代方案。',
@@ -1575,7 +1575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Una alternativa alojada, LobeHub Cloud, empieza en 9.9 $/mes para quienes no quieren autoalojarla.',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de LobeChat en el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) -- consulta esa página para ver cómo se compara LobeChat, de un vistazo, con decenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de LobeChat en el [Directorio de Software LLM Local](/es/directory) -- consulta esa página para ver cómo se compara LobeChat, de un vistazo, con decenas de otras herramientas de IA local.' },
         ],
       },
       quickFacts: {
@@ -1659,9 +1659,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': '**LobeChat**', 'Mejor para': 'UI cuidada, creador de agentes, marketplace de plugins', 'Autoalojado': 'Sí (Docker/Vercel/Zeabur)', 'RAG integrado': 'Sí', 'Licencia': 'LobeHub Community (basada en Apache)' },
           { 'Herramienta': '**[Open WebUI](/es/local-llms/open-webui-review)**', 'Mejor para': 'Frontend multiusuario muy ligado a Ollama', 'Autoalojado': 'Sí (Docker/pip)', 'RAG integrado': 'Sí', 'Licencia': 'Open WebUI License (basada en BSD)' },
           { 'Herramienta': '**[LibreChat](/es/power-local-llm/librechat-review)**', 'Mejor para': 'Gestionar muchas claves API de proveedores en la nube en una UI', 'Autoalojado': 'Sí (Docker)', 'RAG integrado': 'Sí', 'Licencia': 'MIT' },
-          { 'Herramienta': '**[Cherry Studio](/es/local-llms/cherry-studio-ai-desktop-client)**', 'Mejor para': 'Cliente de escritorio monousuario, sin servidor que gestionar', 'Autoalojado': 'No (app de escritorio nativa)', 'RAG integrado': 'Sí', 'Licencia': 'Personalizada (fuente disponible)' },
+          { 'Herramienta': '**[Cherry Studio](/es/local-llms/cherry-studio-ai-desktop-client)**', 'Mejor para': 'Cliente de escritorio monousuario, sin servidor que gestionar', 'Autoalojado': 'No (app de escritorio nativa)', 'RAG integrado': 'Sí', 'Licencia': 'AGPL 3.0' },
         ],
-        note: 'Para chat centrado en personajes/rol en vez de un asistente de propósito general, consulta [Open WebUI vs SillyTavern](/es/local-llms/open-webui-vs-sillytavern). Para el catálogo completo, consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory).',
+        note: 'Para chat centrado en personajes/rol en vez de un asistente de propósito general, consulta [Open WebUI vs SillyTavern](/es/local-llms/open-webui-vs-sillytavern). Para el catálogo completo, consulta el [Directorio de Software LLM Local](/es/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1691,14 +1691,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Competidores y alternativas',
-        content: 'LobeChat se ubica en un segmento de interfaces de chat autoalojadas multiproveedor. Así se compara con las alternativas más cercanas en esa misma categoría -- consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, incluida la propia entrada de LobeChat.',
+        content: 'LobeChat se ubica en un segmento de interfaces de chat autoalojadas multiproveedor. Así se compara con las alternativas más cercanas en esa misma categoría -- consulta el [Directorio de Software LLM Local](/es/directory) para el catálogo completo, incluida la propia entrada de LobeChat.',
         items: [
           '**[Open WebUI](/es/local-llms/open-webui-review)** -- una interfaz de chat autoalojada y multiusuario más integrada con Ollama y los flujos locales; menos énfasis en un marketplace de agentes/plugins que LobeChat.',
           '**[LibreChat](/es/power-local-llm/librechat-review)** -- una interfaz autoalojada bajo licencia MIT que se inclina hacia gestionar muchas claves API de proveedores en la nube tras una sola UI compartida.',
           '**[Cherry Studio](/es/local-llms/cherry-studio-ai-desktop-client)** -- un cliente de escritorio monousuario en vez de un servidor autoalojado, para quienes quieren cero configuración de servidor.',
           '**[SillyTavern](/es/local-llms/sillytavern-review)** -- un frontend autoalojado centrado en chat de personajes/rol en vez de uso como asistente de propósito general; consulta [Open WebUI vs SillyTavern](/es/local-llms/open-webui-vs-sillytavern) para ver cómo difiere ese caso de uso.',
         ],
-        note: 'Esta no es una lista exhaustiva de interfaces de chat autoalojadas -- consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de LobeChat.',
+        note: 'Esta no es una lista exhaustiva de interfaces de chat autoalojadas -- consulta el [Directorio de Software LLM Local](/es/directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de LobeChat.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1731,7 +1731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) -- el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia entrada de LobeChat.',
+          '[Directorio de Software LLM Local](/es/directory) -- el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia entrada de LobeChat.',
           '[Reseña de Open WebUI](/es/local-llms/open-webui-review) -- una alternativa autoalojada más integrada con Ollama.',
           '[Reseña de LibreChat](/es/power-local-llm/librechat-review) -- una alternativa autoalojada para gestionar muchas claves API de proveedores en la nube.',
           '[Cherry Studio](/es/local-llms/cherry-studio-ai-desktop-client) -- una alternativa de escritorio monousuario que no necesita servidor.',
@@ -1866,7 +1866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Uma alternativa hospedada, o LobeHub Cloud, começa em US$ 9,9/mês para quem não quer auto-hospedar.',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do LobeChat no [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) -- veja essa página para comparar o LobeChat, de relance, com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do LobeChat no [Diretório de Software LLM Local](/pt/directory) -- veja essa página para comparar o LobeChat, de relance, com dezenas de outras ferramentas de IA local.' },
         ],
       },
       quickFacts: {
@@ -1950,9 +1950,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '**LobeChat**', 'Melhor para': 'UI bem cuidada, criador de agentes, marketplace de plugins', 'Auto-hospedado': 'Sim (Docker/Vercel/Zeabur)', 'RAG integrado': 'Sim', 'Licença': 'LobeHub Community (baseada em Apache)' },
           { 'Ferramenta': '**[Open WebUI](/pt/local-llms/open-webui-review)**', 'Melhor para': 'Frontend multiusuário fortemente ligado ao Ollama', 'Auto-hospedado': 'Sim (Docker/pip)', 'RAG integrado': 'Sim', 'Licença': 'Open WebUI License (baseada em BSD)' },
           { 'Ferramenta': '**[LibreChat](/pt/power-local-llm/librechat-review)**', 'Melhor para': 'Gerenciar muitas chaves de API de provedores na nuvem em uma UI', 'Auto-hospedado': 'Sim (Docker)', 'RAG integrado': 'Sim', 'Licença': 'MIT' },
-          { 'Ferramenta': '**[Cherry Studio](/pt/local-llms/cherry-studio-ai-desktop-client)**', 'Melhor para': 'Cliente desktop monousuário, sem servidor para gerenciar', 'Auto-hospedado': 'Não (aplicativo desktop nativo)', 'RAG integrado': 'Sim', 'Licença': 'Personalizada (fonte disponível)' },
+          { 'Ferramenta': '**[Cherry Studio](/pt/local-llms/cherry-studio-ai-desktop-client)**', 'Melhor para': 'Cliente desktop monousuário, sem servidor para gerenciar', 'Auto-hospedado': 'Não (aplicativo desktop nativo)', 'RAG integrado': 'Sim', 'Licença': 'AGPL 3.0' },
         ],
-        note: 'Para chat focado em personagens/roleplay em vez de um assistente de propósito geral, veja [Open WebUI vs SillyTavern](/pt/local-llms/open-webui-vs-sillytavern). Para o catálogo completo, veja o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory).',
+        note: 'Para chat focado em personagens/roleplay em vez de um assistente de propósito geral, veja [Open WebUI vs SillyTavern](/pt/local-llms/open-webui-vs-sillytavern). Para o catálogo completo, veja o [Diretório de Software LLM Local](/pt/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1982,14 +1982,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Concorrentes e alternativas',
-        content: 'O LobeChat está em um segmento de interfaces de chat auto-hospedadas e multiprovedor. Veja como ele se compara às alternativas mais próximas nessa mesma categoria -- veja o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, incluindo a própria entrada do LobeChat.',
+        content: 'O LobeChat está em um segmento de interfaces de chat auto-hospedadas e multiprovedor. Veja como ele se compara às alternativas mais próximas nessa mesma categoria -- veja o [Diretório de Software LLM Local](/pt/directory) para o catálogo completo, incluindo a própria entrada do LobeChat.',
         items: [
           '**[Open WebUI](/pt/local-llms/open-webui-review)** -- uma interface de chat auto-hospedada e multiusuário mais fortemente integrada ao Ollama e a fluxos de trabalho locais; menos foco em um marketplace de agentes/plugins do que o LobeChat.',
           '**[LibreChat](/pt/power-local-llm/librechat-review)** -- uma interface auto-hospedada sob licença MIT que tende a gerenciar muitas chaves de API de provedores na nuvem atrás de uma única UI compartilhada.',
           '**[Cherry Studio](/pt/local-llms/cherry-studio-ai-desktop-client)** -- um cliente desktop monousuário em vez de um servidor auto-hospedado, para quem quer zero configuração de servidor.',
           '**[SillyTavern](/pt/local-llms/sillytavern-review)** -- um frontend auto-hospedado focado em chat de personagens/roleplay em vez de uso como assistente de propósito geral; veja [Open WebUI vs SillyTavern](/pt/local-llms/open-webui-vs-sillytavern) para as diferenças desse caso de uso.',
         ],
-        note: 'Esta não é uma lista exaustiva de interfaces de chat auto-hospedadas -- veja o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e regularmente atualizado, incluindo a própria entrada do LobeChat.',
+        note: 'Esta não é uma lista exaustiva de interfaces de chat auto-hospedadas -- veja o [Diretório de Software LLM Local](/pt/directory) para o catálogo completo e regularmente atualizado, incluindo a própria entrada do LobeChat.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2022,7 +2022,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) -- o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do LobeChat.',
+          '[Diretório de Software LLM Local](/pt/directory) -- o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do LobeChat.',
           '[Análise do Open WebUI](/pt/local-llms/open-webui-review) -- uma alternativa auto-hospedada mais fortemente integrada ao Ollama.',
           '[Análise do LibreChat](/pt/power-local-llm/librechat-review) -- uma alternativa auto-hospedada para gerenciar muitas chaves de API de provedores na nuvem.',
           '[Cherry Studio](/pt/local-llms/cherry-studio-ai-desktop-client) -- uma alternativa desktop monousuário que não precisa de servidor.',
@@ -2157,7 +2157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'البديل المستضاف، LobeHub Cloud، يبدأ من 9.9 دولار شهريًا لمن لا يريد الاستضافة الذاتية.',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لسجل LobeChat في [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) -- راجع تلك الصفحة لمعرفة كيف تقارن LobeChat بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لسجل LobeChat في [دليل برمجيات LLM المحلية](/ar/directory) -- راجع تلك الصفحة لمعرفة كيف تقارن LobeChat بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       quickFacts: {
@@ -2241,9 +2241,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': '**LobeChat**', 'الأنسب لـ': 'واجهة مصقولة، أداة بناء وكلاء، متجر إضافات', 'استضافة ذاتية': 'نعم (Docker/Vercel/Zeabur)', 'RAG مدمج': 'نعم', 'الرخصة': 'LobeHub Community (قائمة على Apache)' },
           { 'الأداة': '**[Open WebUI](/ar/local-llms/open-webui-review)**', 'الأنسب لـ': 'واجهة متعددة المستخدمين مرتبطة بشدة بـ Ollama', 'استضافة ذاتية': 'نعم (Docker/pip)', 'RAG مدمج': 'نعم', 'الرخصة': 'Open WebUI License (قائمة على BSD)' },
           { 'الأداة': '**[LibreChat](/ar/power-local-llm/librechat-review)**', 'الأنسب لـ': 'إدارة مفاتيح API لعدة مزودين سحابيين في واجهة واحدة', 'استضافة ذاتية': 'نعم (Docker)', 'RAG مدمج': 'نعم', 'الرخصة': 'MIT' },
-          { 'الأداة': '**[Cherry Studio](/ar/local-llms/cherry-studio-ai-desktop-client)**', 'الأنسب لـ': 'عميل سطح مكتب لمستخدم واحد، بلا خادم لإدارته', 'استضافة ذاتية': 'لا (تطبيق سطح مكتب أصلي)', 'RAG مدمج': 'نعم', 'الرخصة': 'مخصصة (مصدر متاح للاطلاع)' },
+          { 'الأداة': '**[Cherry Studio](/ar/local-llms/cherry-studio-ai-desktop-client)**', 'الأنسب لـ': 'عميل سطح مكتب لمستخدم واحد، بلا خادم لإدارته', 'استضافة ذاتية': 'لا (تطبيق سطح مكتب أصلي)', 'RAG مدمج': 'نعم', 'الرخصة': 'AGPL 3.0' },
         ],
-        note: 'للدردشة التي تركز على الشخصيات/لعب الأدوار بدلًا من مساعد عام الغرض، راجع [Open WebUI مقابل SillyTavern](/ar/local-llms/open-webui-vs-sillytavern). للكتالوج الكامل، راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory).',
+        note: 'للدردشة التي تركز على الشخصيات/لعب الأدوار بدلًا من مساعد عام الغرض، راجع [Open WebUI مقابل SillyTavern](/ar/local-llms/open-webui-vs-sillytavern). للكتالوج الكامل، راجع [دليل برمجيات LLM المحلية](/ar/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2273,14 +2273,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'المنافسون والبدائل',
-        content: 'تقع LobeChat ضمن قطاع واجهات الدردشة ذاتية الاستضافة متعددة المزودين. إليك كيف تقارن بأقرب البدائل في نفس الفئة -- راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل، بما في ذلك سجل LobeChat الخاص.',
+        content: 'تقع LobeChat ضمن قطاع واجهات الدردشة ذاتية الاستضافة متعددة المزودين. إليك كيف تقارن بأقرب البدائل في نفس الفئة -- راجع [دليل برمجيات LLM المحلية](/ar/directory) للكتالوج الكامل، بما في ذلك سجل LobeChat الخاص.',
         items: [
           '**[Open WebUI](/ar/local-llms/open-webui-review)** -- واجهة دردشة ذاتية الاستضافة ومتعددة المستخدمين الأكثر تكاملًا مع Ollama وسير العمل المحلي أولًا؛ تركيز أقل على متجر وكلاء/إضافات مقارنة بـ LobeChat.',
           '**[LibreChat](/ar/power-local-llm/librechat-review)** -- واجهة ذاتية الاستضافة برخصة MIT تميل إلى إدارة مفاتيح API لعدة مزودين سحابيين خلف واجهة مشتركة واحدة.',
           '**[Cherry Studio](/ar/local-llms/cherry-studio-ai-desktop-client)** -- عميل سطح مكتب لمستخدم واحد بدلًا من خادم ذاتي الاستضافة، لمن يريد صفر إعداد للخادم.',
           '**[SillyTavern](/ar/local-llms/sillytavern-review)** -- واجهة ذاتية الاستضافة تركز على دردشة الشخصيات/لعب الأدوار بدلًا من استخدام مساعد عام الغرض؛ راجع [Open WebUI مقابل SillyTavern](/ar/local-llms/open-webui-vs-sillytavern) لمعرفة كيف يختلف هذا الاستخدام.',
         ],
-        note: 'هذه ليست قائمة شاملة لواجهات الدردشة ذاتية الاستضافة -- راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل والمحدَّث بانتظام، بما في ذلك سجل LobeChat الخاص.',
+        note: 'هذه ليست قائمة شاملة لواجهات الدردشة ذاتية الاستضافة -- راجع [دليل برمجيات LLM المحلية](/ar/directory) للكتالوج الكامل والمحدَّث بانتظام، بما في ذلك سجل LobeChat الخاص.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2313,7 +2313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) -- الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك سجل LobeChat الخاص.',
+          '[دليل برمجيات LLM المحلية](/ar/directory) -- الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك سجل LobeChat الخاص.',
           '[مراجعة Open WebUI](/ar/local-llms/open-webui-review) -- بديل ذاتي الاستضافة الأكثر تكاملًا مع Ollama.',
           '[مراجعة LibreChat](/ar/power-local-llm/librechat-review) -- بديل ذاتي الاستضافة لإدارة مفاتيح API لعدة مزودين سحابيين.',
           '[Cherry Studio](/ar/local-llms/cherry-studio-ai-desktop-client) -- بديل سطح مكتب لمستخدم واحد لا يحتاج إلى خادم.',
@@ -2448,7 +2448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '셀프 호스팅을 원하지 않는 사용자를 위한 호스팅 대안인 LobeHub Cloud는 월 9.9달러부터 시작합니다.',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 LobeChat 항목의 심층 보완 자료입니다 -- 해당 페이지에서 LobeChat이 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지 확인할 수 있습니다.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 LobeChat 항목의 심층 보완 자료입니다 -- 해당 페이지에서 LobeChat이 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지 확인할 수 있습니다.' },
         ],
       },
       quickFacts: {
@@ -2532,9 +2532,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': '**LobeChat**', '적합한 용도': '세련된 UI, 에이전트 빌더, 플러그인 마켓플레이스', '셀프 호스팅': '가능(Docker/Vercel/Zeabur)', '내장 RAG': '있음', '라이선스': 'LobeHub Community(Apache 기반)' },
           { '도구': '**[Open WebUI](/ko/local-llms/open-webui-review)**', '적합한 용도': 'Ollama와 긴밀하게 연결된 다중 사용자 프런트엔드', '셀프 호스팅': '가능(Docker/pip)', '내장 RAG': '있음', '라이선스': 'Open WebUI License(BSD 기반)' },
           { '도구': '**[LibreChat](/ko/power-local-llm/librechat-review)**', '적합한 용도': '하나의 UI에서 여러 클라우드 제공업체 API 키 관리', '셀프 호스팅': '가능(Docker)', '내장 RAG': '있음', '라이선스': 'MIT' },
-          { '도구': '**[Cherry Studio](/ko/local-llms/cherry-studio-ai-desktop-client)**', '적합한 용도': '서버가 필요 없는 단일 사용자용 데스크톱 클라이언트', '셀프 호스팅': '불가(네이티브 데스크톱 앱)', '내장 RAG': '있음', '라이선스': '자체 라이선스(소스 공개)' },
+          { '도구': '**[Cherry Studio](/ko/local-llms/cherry-studio-ai-desktop-client)**', '적합한 용도': '서버가 필요 없는 단일 사용자용 데스크톱 클라이언트', '셀프 호스팅': '불가(네이티브 데스크톱 앱)', '내장 RAG': '있음', '라이선스': 'AGPL 3.0' },
         ],
-        note: '범용 어시스턴트가 아니라 캐릭터/롤플레이 중심 채팅이 필요하다면 [Open WebUI vs SillyTavern](/ko/local-llms/open-webui-vs-sillytavern)을 참고하십시오. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.',
+        note: '범용 어시스턴트가 아니라 캐릭터/롤플레이 중심 채팅이 필요하다면 [Open WebUI vs SillyTavern](/ko/local-llms/open-webui-vs-sillytavern)을 참고하십시오. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오.',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2564,14 +2564,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '경쟁 제품 및 대안',
-        content: 'LobeChat은 셀프 호스팅되는 멀티 제공업체 채팅 UI라는 영역에 속합니다. 같은 카테고리 내 가장 가까운 대안과 비교한 내용은 다음과 같습니다 -- 전체 카탈로그(LobeChat 자체 항목 포함)는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.',
+        content: 'LobeChat은 셀프 호스팅되는 멀티 제공업체 채팅 UI라는 영역에 속합니다. 같은 카테고리 내 가장 가까운 대안과 비교한 내용은 다음과 같습니다 -- 전체 카탈로그(LobeChat 자체 항목 포함)는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오.',
         items: [
           '**[Open WebUI](/ko/local-llms/open-webui-review)** -- Ollama 및 로컬 우선 워크플로우와 가장 긴밀하게 통합된 셀프 호스팅 다중 사용자 채팅 UI입니다. LobeChat만큼 에이전트/플러그인 마켓플레이스에 중점을 두지는 않습니다.',
           '**[LibreChat](/ko/power-local-llm/librechat-review)** -- MIT 라이선스를 따르는 셀프 호스팅 UI로, 하나의 공유 UI 뒤에서 여러 클라우드 제공업체 API 키를 관리하는 쪽에 더 가깝습니다.',
           '**[Cherry Studio](/ko/local-llms/cherry-studio-ai-desktop-client)** -- 셀프 호스팅 서버가 아니라, 서버 설정이 전혀 필요 없는 사용자를 위한 단일 사용자용 데스크톱 클라이언트입니다.',
           '**[SillyTavern](/ko/local-llms/sillytavern-review)** -- 범용 어시스턴트 용도가 아니라 캐릭터/롤플레이 채팅에 초점을 맞춘 셀프 호스팅 프런트엔드입니다. 이 용도의 차이는 [Open WebUI vs SillyTavern](/ko/local-llms/open-webui-vs-sillytavern)을 참고하십시오.',
         ],
-        note: '이는 셀프 호스팅 채팅 UI의 전체 목록이 아닙니다 -- 정기적으로 업데이트되는 전체 카탈로그(LobeChat 자체 항목 포함)는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.',
+        note: '이는 셀프 호스팅 채팅 UI의 전체 목록이 아닙니다 -- 정기적으로 업데이트되는 전체 카탈로그(LobeChat 자체 항목 포함)는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2604,7 +2604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 글',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) -- 이 글이 속한, LobeChat 자체 항목을 포함한 로컬 AI 도구 전체 카탈로그입니다.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) -- 이 글이 속한, LobeChat 자체 항목을 포함한 로컬 AI 도구 전체 카탈로그입니다.',
           '[Open WebUI 리뷰](/ko/local-llms/open-webui-review) -- Ollama와 가장 긴밀하게 통합된 셀프 호스팅 대안입니다.',
           '[LibreChat 리뷰](/ko/power-local-llm/librechat-review) -- 여러 클라우드 제공업체 API 키를 관리하기 위한 셀프 호스팅 대안입니다.',
           '[Cherry Studio](/ko/local-llms/cherry-studio-ai-desktop-client) -- 서버가 필요 없는 단일 사용자용 데스크톱 대안입니다.',

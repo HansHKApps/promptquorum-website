@@ -71,7 +71,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Install: `pip install camel-ai`, requires configuring an LLM backend via `ModelFactory` before running a role-playing session',
         ],
         callouts: [
-          { type: 'note', text: "CAMEL's core job is role-based agent collaboration for building or studying multi-agent systems, closest in category to AutoGen and CrewAI. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for how CAMEL fits among agent frameworks at a glance." },
+          { type: 'note', text: "CAMEL's core job is role-based agent collaboration for building or studying multi-agent systems, closest in category to AutoGen and CrewAI. See the [Local LLM Software Directory](/directory) for how CAMEL fits among agent frameworks at a glance." },
         ],
       },
       history: {
@@ -260,7 +260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[CrewAI Review: Features, Pricing, Alternatives](/power-local-llm/crewai-review) — a venture-funded, role-based multi-agent framework with an optional paid deployment platform, for teams that want commercial support behind a similar agent-team concept.',
           '[LangGraph Review: Features, Pricing, Alternatives](/power-local-llm/langgraph-review) — a stateful, graph-based agent framework, for workflows that need explicit branching and persistence rather than a role-playing conversation loop.',
           "[DSPy Review: Features, Optimizers, Alternatives](/power-local-llm/dspy-review) — a prompt/weight optimization framework for a single pipeline, solving a different problem than CAMEL's multi-agent coordination.",
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including where CAMEL fits among agent frameworks.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools this article belongs to, including where CAMEL fits among agent frameworks.',
         ],
       },
     },
@@ -334,7 +334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installation: `pip install camel-ai`, erfordert das Konfigurieren eines LLM-Backends über `ModelFactory` vor der ersten Role-Playing-Sitzung',
         ],
         callouts: [
-          { type: 'note', text: "CAMELs Kernaufgabe ist rollenbasierte Agenten-Zusammenarbeit zum Aufbau oder Studium von Multi-Agent-Systemen — konzeptionell am nächsten an AutoGen und CrewAI. Im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) sehen Sie, wo CAMEL unter Agenten-Frameworks einzuordnen ist." },
+          { type: 'note', text: "CAMELs Kernaufgabe ist rollenbasierte Agenten-Zusammenarbeit zum Aufbau oder Studium von Multi-Agent-Systemen — konzeptionell am nächsten an AutoGen und CrewAI. Im [Local LLM Software Directory](/de/directory) sehen Sie, wo CAMEL unter Agenten-Frameworks einzuordnen ist." },
         ],
       },
       history: {
@@ -523,7 +523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[CrewAI Review: Funktionen, Preise, Alternativen](/de/power-local-llm/crewai-review) — ein venture-finanziertes, rollenbasiertes Multi-Agent-Framework mit optionaler kostenpflichtiger Deployment-Plattform, für Teams, die kommerziellen Support hinter einem ähnlichen Agenten-Team-Konzept wollen.',
           '[LangGraph Review: Funktionen, Preise, Alternativen](/de/power-local-llm/langgraph-review) — ein zustandsbehaftetes, graphbasiertes Agenten-Framework, für Workflows, die explizite Verzweigung und Persistenz statt einer Role-Playing-Konversationsschleife benötigen.',
           "[DSPy Review: Funktionen, Optimizer, Alternativen](/de/power-local-llm/dspy-review) — ein Prompt-/Weight-Optimierungsframework für eine einzelne Pipeline, das ein anderes Problem löst als CAMELs Multi-Agent-Koordination.",
-          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von CAMEL unter Agenten-Frameworks.',
+          '[Local LLM Software Directory](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von CAMEL unter Agenten-Frameworks.',
         ],
       },
     },
@@ -597,7 +597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installation : `pip install camel-ai`, nécessite de configurer un backend LLM via `ModelFactory` avant la première session de role-playing',
         ],
         callouts: [
-          { type: 'note', text: "La mission principale de CAMEL est la collaboration d'agents basée sur des rôles, pour construire ou étudier des systèmes multi-agents — au plus proche d'AutoGen et de CrewAI. Consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour voir où CAMEL se situe parmi les frameworks d'agents." },
+          { type: 'note', text: "La mission principale de CAMEL est la collaboration d'agents basée sur des rôles, pour construire ou étudier des systèmes multi-agents — au plus proche d'AutoGen et de CrewAI. Consultez le [Local LLM Software Directory](/fr/directory) pour voir où CAMEL se situe parmi les frameworks d'agents." },
         ],
       },
       history: {
@@ -786,7 +786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Avis CrewAI : fonctionnalités, prix, alternatives](/fr/power-local-llm/crewai-review) — un framework multi-agents basé sur des rôles, financé par du capital-risque, avec une plateforme de déploiement payante optionnelle, pour les équipes voulant un support commercial derrière un concept d\'équipe d\'agents similaire.',
           '[Avis LangGraph : fonctionnalités, prix, alternatives](/fr/power-local-llm/langgraph-review) — un framework d\'agents avec état, basé sur des graphes, pour les workflows nécessitant un branchement explicite et une persistance plutôt qu\'une boucle de conversation par role-playing.',
           "[Avis DSPy : fonctionnalités, optimizers, alternatives](/fr/power-local-llm/dspy-review) — un framework d'optimisation de prompts/poids pour un pipeline unique, qui résout un problème différent de la coordination multi-agents de CAMEL.",
-          '[Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, y compris la place de CAMEL parmi les frameworks d\'agents.',
+          '[Local LLM Software Directory](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, y compris la place de CAMEL parmi les frameworks d\'agents.',
         ],
       },
     },
@@ -860,7 +860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instalación: `pip install camel-ai`, requiere configurar un backend LLM mediante `ModelFactory` antes de la primera sesión de role-playing',
         ],
         callouts: [
-          { type: 'note', text: "La función principal de CAMEL es la colaboración de agentes basada en roles, para construir o estudiar sistemas multiagente — lo más cercano conceptualmente a AutoGen y CrewAI. Consulta el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) para ver dónde encaja CAMEL entre los frameworks de agentes." },
+          { type: 'note', text: "La función principal de CAMEL es la colaboración de agentes basada en roles, para construir o estudiar sistemas multiagente — lo más cercano conceptualmente a AutoGen y CrewAI. Consulta el [Local LLM Software Directory](/es/directory) para ver dónde encaja CAMEL entre los frameworks de agentes." },
         ],
       },
       history: {
@@ -1049,7 +1049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de CrewAI: funciones, precios, alternativas](/es/power-local-llm/crewai-review) — un framework multiagente basado en roles y financiado con capital de riesgo, con una plataforma de despliegue de pago opcional, para equipos que quieren soporte comercial detrás de un concepto de equipo de agentes similar.',
           '[Reseña de LangGraph: funciones, precios, alternativas](/es/power-local-llm/langgraph-review) — un framework de agentes con estado, basado en grafos, para workflows que necesitan ramificación explícita y persistencia en lugar de un bucle de conversación por role-playing.',
           "[Reseña de DSPy: funciones, optimizers, alternativas](/es/power-local-llm/dspy-review) — un framework de optimización de prompts/pesos para un único pipeline, que resuelve un problema distinto de la coordinación multiagente de CAMEL.",
-          '[Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja CAMEL entre los frameworks de agentes.',
+          '[Local LLM Software Directory](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja CAMEL entre los frameworks de agentes.',
         ],
       },
     },
@@ -1123,7 +1123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instalação: `pip install camel-ai`, requer configurar um backend de LLM via `ModelFactory` antes da primeira sessão de role-playing',
         ],
         callouts: [
-          { type: 'note', text: "A função central do CAMEL é a colaboração de agentes baseada em papéis, para construir ou estudar sistemas multiagente — o mais próximo conceitualmente do AutoGen e do CrewAI. Veja o [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) para saber onde o CAMEL se encaixa entre os frameworks de agentes." },
+          { type: 'note', text: "A função central do CAMEL é a colaboração de agentes baseada em papéis, para construir ou estudar sistemas multiagente — o mais próximo conceitualmente do AutoGen e do CrewAI. Veja o [Local LLM Software Directory](/pt/directory) para saber onde o CAMEL se encaixa entre os frameworks de agentes." },
         ],
       },
       history: {
@@ -1312,7 +1312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do CrewAI: recursos, preços, alternativas](/pt/power-local-llm/crewai-review) — um framework multiagente baseado em papéis, financiado por capital de risco, com uma plataforma de implantação paga opcional, para equipes que querem suporte comercial atrás de um conceito de time de agentes semelhante.',
           '[Análise do LangGraph: recursos, preços, alternativas](/pt/power-local-llm/langgraph-review) — um framework de agentes com estado, baseado em grafos, para workflows que precisam de ramificação explícita e persistência em vez de um loop de conversação por role-playing.',
           "[Análise do DSPy: recursos, optimizers, alternativas](/pt/power-local-llm/dspy-review) — um framework de otimização de prompts/pesos para um único pipeline, que resolve um problema diferente da coordenação multiagente do CAMEL.",
-          '[Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o CAMEL se encaixa entre os frameworks de agentes.',
+          '[Local LLM Software Directory](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o CAMEL se encaixa entre os frameworks de agentes.',
         ],
       },
     },
@@ -1386,7 +1386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'インストール：`pip install camel-ai`。ロールプレイング・セッションを実行する前に`ModelFactory`経由でLLMバックエンドを設定する必要がある',
         ],
         callouts: [
-          { type: 'note', text: "CAMELの中核機能は、マルチエージェントシステムを構築・研究するための役割ベースのエージェント協調であり、概念上AutoGenやCrewAIに最も近い。CAMELがエージェントフレームワークの中でどこに位置づけられるかは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を参照。" },
+          { type: 'note', text: "CAMELの中核機能は、マルチエージェントシステムを構築・研究するための役割ベースのエージェント協調であり、概念上AutoGenやCrewAIに最も近い。CAMELがエージェントフレームワークの中でどこに位置づけられるかは、[Local LLM Software Directory](/ja/directory)を参照。" },
         ],
       },
       history: {
@@ -1575,7 +1575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[CrewAIレビュー：機能、料金、代替ツール](/ja/power-local-llm/crewai-review) — オプションの有料デプロイプラットフォームを備えた、ベンチャー資金による役割ベースのマルチエージェントフレームワーク。同様のエージェントチームの概念の背後に商用サポートを求めるチーム向け。',
           '[LangGraphレビュー：機能、料金、代替ツール](/ja/power-local-llm/langgraph-review) — ステートフルでグラフベースのエージェントフレームワーク。ロールプレイングの会話ループではなく、明示的な分岐と永続性が必要なワークフロー向け。',
           "[DSPyレビュー：機能、オプティマイザ、代替ツール](/ja/power-local-llm/dspy-review) — 単一パイプライン向けのプロンプト／重み最適化フレームワークで、CAMELのマルチエージェント協調とは異なる問題を解決する。",
-          '[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの完全なカタログ。エージェントフレームワークの中でCAMELがどこに位置づけられるかも含む。',
+          '[Local LLM Software Directory](/ja/directory) — 本記事が属するローカルAIツールの完全なカタログ。エージェントフレームワークの中でCAMELがどこに位置づけられるかも含む。',
         ],
       },
     },
@@ -1649,7 +1649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '安装：`pip install camel-ai`，运行角色扮演会话前需通过`ModelFactory`配置LLM后端',
         ],
         callouts: [
-          { type: 'note', text: "CAMEL的核心任务是基于角色的智能体协作，用于构建或研究多智能体系统，概念上最接近AutoGen和CrewAI。请参阅[Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory)，了解CAMEL在众多智能体框架中的定位。" },
+          { type: 'note', text: "CAMEL的核心任务是基于角色的智能体协作，用于构建或研究多智能体系统，概念上最接近AutoGen和CrewAI。请参阅[Local LLM Software Directory](/zh/directory)，了解CAMEL在众多智能体框架中的定位。" },
         ],
       },
       history: {
@@ -1838,7 +1838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[CrewAI评测：功能、价格、替代方案](/zh/power-local-llm/crewai-review) — 一个获得风险投资、基于角色的多智能体框架，配有可选的付费部署平台，适合希望在类似智能体团队概念背后获得商业支持的团队。',
           '[LangGraph评测：功能、价格、替代方案](/zh/power-local-llm/langgraph-review) — 一个有状态、基于图的智能体框架，适合需要显式分支和持久化、而非角色扮演对话循环的工作流。',
           "[DSPy评测：功能、优化器、替代方案](/zh/power-local-llm/dspy-review) — 一个面向单一流水线的提示/权重优化框架，解决的是与CAMEL多智能体协调不同的问题。",
-          '[Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包括CAMEL在众多智能体框架中的定位。',
+          '[Local LLM Software Directory](/zh/directory) — 本文所属的本地AI工具完整目录，包括CAMEL在众多智能体框架中的定位。',
         ],
       },
     },
@@ -1912,7 +1912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'التثبيت: `pip install camel-ai`، يتطلب تهيئة واجهة خلفية لنموذج اللغة عبر `ModelFactory` قبل أول جلسة لعب أدوار',
         ],
         callouts: [
-          { type: 'note', text: "المهمة الأساسية لـ CAMEL هي التعاون بين الوكلاء القائم على الأدوار، لبناء أو دراسة أنظمة متعددة الوكلاء — الأقرب مفاهيميًا إلى AutoGen وCrewAI. راجع [Local LLM Software Directory](/ar/power-local-llm/local-llm-software-directory) لمعرفة موقع CAMEL بين أطر عمل الوكلاء." },
+          { type: 'note', text: "المهمة الأساسية لـ CAMEL هي التعاون بين الوكلاء القائم على الأدوار، لبناء أو دراسة أنظمة متعددة الوكلاء — الأقرب مفاهيميًا إلى AutoGen وCrewAI. راجع [Local LLM Software Directory](/ar/directory) لمعرفة موقع CAMEL بين أطر عمل الوكلاء." },
         ],
       },
       history: {
@@ -2101,7 +2101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة CrewAI: الميزات والأسعار والبدائل](/ar/power-local-llm/crewai-review) — إطار عمل متعدد الوكلاء قائم على الأدوار وبتمويل رأس مال مخاطر، مع منصة نشر مدفوعة اختيارية، للفرق التي تريد دعمًا تجاريًا خلف مفهوم فريق وكلاء مشابه.',
           '[مراجعة LangGraph: الميزات والأسعار والبدائل](/ar/power-local-llm/langgraph-review) — إطار عمل وكلاء ذو حالة وقائم على الرسوم البيانية، لتدفقات العمل التي تحتاج تفرّعًا صريحًا واستمرارية بدلاً من حلقة محادثة لعب الأدوار.',
           "[مراجعة DSPy: الميزات وأدوات التحسين والبدائل](/ar/power-local-llm/dspy-review) — إطار عمل لتحسين التعليمات/الأوزان لخط أنابيب واحد، يحل مشكلة مختلفة عن تنسيق CAMEL متعدد الوكلاء.",
-          '[Local LLM Software Directory](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك موقع CAMEL بين أطر عمل الوكلاء.',
+          '[Local LLM Software Directory](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك موقع CAMEL بين أطر عمل الوكلاء.',
         ],
       },
     },
@@ -2175,7 +2175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '설치: `pip install camel-ai`, 첫 롤플레잉 세션을 실행하기 전에 `ModelFactory`를 통해 LLM 백엔드를 구성해야 함',
         ],
         callouts: [
-          { type: 'note', text: 'CAMEL의 핵심 역할은 멀티 에이전트 시스템을 구축하거나 연구하기 위한 역할 기반 에이전트 협업이며, 개념적으로 AutoGen 및 CrewAI에 가장 가깝습니다. CAMEL이 에이전트 프레임워크 중 어디에 위치하는지는 [Local LLM Software Directory](/ko/power-local-llm/local-llm-software-directory)를 참조하십시오.' },
+          { type: 'note', text: 'CAMEL의 핵심 역할은 멀티 에이전트 시스템을 구축하거나 연구하기 위한 역할 기반 에이전트 협업이며, 개념적으로 AutoGen 및 CrewAI에 가장 가깝습니다. CAMEL이 에이전트 프레임워크 중 어디에 위치하는지는 [Local LLM Software Directory](/ko/directory)를 참조하십시오.' },
         ],
       },
       history: {
@@ -2364,7 +2364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[CrewAI 리뷰: 기능, 가격, 대안](/ko/power-local-llm/crewai-review) — 벤처 투자를 받은 역할 기반 멀티 에이전트 프레임워크로 선택적 유료 배포 플랫폼을 제공하며, 비슷한 에이전트 팀 개념 뒤에 상업적 지원을 원하는 팀에 적합합니다.',
           '[LangGraph 리뷰: 기능, 가격, 대안](/ko/power-local-llm/langgraph-review) — 상태 기반, 그래프 기반 에이전트 프레임워크로, 롤플레잉 대화 루프 대신 명시적 분기와 지속성이 필요한 워크플로우에 적합합니다.',
           "[DSPy 리뷰: 기능, 옵티마이저, 대안](/ko/power-local-llm/dspy-review) — 단일 파이프라인을 위한 프롬프트/가중치 최적화 프레임워크로, CAMEL의 멀티 에이전트 조율과는 다른 문제를 해결합니다.",
-          '[Local LLM Software Directory](/ko/power-local-llm/local-llm-software-directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그로, CAMEL이 에이전트 프레임워크 중 어디에 위치하는지도 포함합니다.',
+          '[Local LLM Software Directory](/ko/directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그로, CAMEL이 에이전트 프레임워크 중 어디에 위치하는지도 포함합니다.',
         ],
       },
     },

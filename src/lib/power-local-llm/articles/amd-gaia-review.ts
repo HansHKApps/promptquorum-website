@@ -77,7 +77,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository shows 1,539 stars, verified against [github.com/amd/gaia](https://github.com/amd/gaia) on September 5, 2026',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to AMD GAIA\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how GAIA compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to AMD GAIA\'s entry in the [Local LLM Software Directory](/directory) — see that page for how GAIA compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -217,13 +217,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'amd-gaia-competitors',
         title: 'AMD GAIA vs. Other Local AI Tools',
-        content: 'AMD GAIA sits in the local agent-framework segment, alongside general-purpose runtimes that a reader evaluating GAIA is also likely comparing — especially since both of the closest comparisons below explicitly run on hardware GAIA\'s NPU acceleration does not cover. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'AMD GAIA sits in the local agent-framework segment, alongside general-purpose runtimes that a reader evaluating GAIA is also likely comparing — especially since both of the closest comparisons below explicitly run on hardware GAIA\'s NPU acceleration does not cover. See the [Local LLM Software Directory](/directory) for the full catalog.',
         items: [
           '**[Ollama](/power-local-llm/ollama-review)** — a general-purpose local model runtime and API that runs on any Mac, Windows, or Linux machine, with no NPU requirement; GAIA can even use Ollama as one of its own backends. The better default choice if your hardware is not AMD Ryzen AI, or if you want the widest possible hardware and model-library support. See the full [Ollama review](/power-local-llm/ollama-review).',
           '**[LM Studio](/power-local-llm/lm-studio-review)** — a GUI-first desktop app for local inference, also hardware-agnostic (Mac, Windows, Linux, no NPU required), with a built-in model browser and document-chat feature. A closer fit than GAIA if you want a polished graphical app rather than a CLI-and-hub developer framework. See the full [LM Studio review](/power-local-llm/lm-studio-review).',
           '**[Docker Model Runner](/power-local-llm/docker-model-runner-review)** — a CLI-and-API feature bundled with Docker Desktop/Engine for developers who already live in a Docker workflow; like Ollama and LM Studio, it has no NPU-specific requirement, making it another hardware-agnostic option to weigh against GAIA\'s AMD-specific acceleration. See the full [Docker Model Runner review](/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'This is not an exhaustive list of local-agent or local-inference tools — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including AMD GAIA\'s own directory entry.',
+        note: 'This is not an exhaustive list of local-agent or local-inference tools — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including AMD GAIA\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -279,7 +279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including AMD GAIA\'s own directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including AMD GAIA\'s own directory entry.',
           '[Ollama Review](/power-local-llm/ollama-review) — a hardware-agnostic local model runtime that can also serve as one of GAIA\'s own backends.',
           '[LM Studio Review](/power-local-llm/lm-studio-review) — a GUI-first, hardware-agnostic alternative for readers who want a polished desktop app instead of a CLI-and-hub framework.',
           '[Docker Model Runner Review](/power-local-llm/docker-model-runner-review) — another hardware-agnostic option for developers already using Docker.',
@@ -362,7 +362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub-Repository zeigt 1.539 Sterne, geprüft gegen [github.com/amd/gaia](https://github.com/amd/gaia) am 5. September 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu AMD GAIAs Eintrag im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie GAIA im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu AMD GAIAs Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie GAIA im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -502,13 +502,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'amd-gaia-competitors',
         title: 'AMD GAIA vs. andere lokale KI-Tools',
-        content: 'AMD GAIA sitzt im Segment lokaler Agenten-Frameworks, neben Allzweck-Laufzeitumgebungen, die jemand, der GAIA bewertet, wahrscheinlich ebenfalls vergleicht — vor allem, da die beiden nachstehenden nächsten Vergleiche ausdrücklich auf Hardware laufen, die GAIAs NPU-Beschleunigung nicht abdeckt. Den vollständigen Katalog finden Sie im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory).',
+        content: 'AMD GAIA sitzt im Segment lokaler Agenten-Frameworks, neben Allzweck-Laufzeitumgebungen, die jemand, der GAIA bewertet, wahrscheinlich ebenfalls vergleicht — vor allem, da die beiden nachstehenden nächsten Vergleiche ausdrücklich auf Hardware laufen, die GAIAs NPU-Beschleunigung nicht abdeckt. Den vollständigen Katalog finden Sie im [lokalen KI-Software-Verzeichnis](/de/directory).',
         items: [
           '**[Ollama](/de/power-local-llm/ollama-review)** — eine Allzweck-Laufzeitumgebung und API für lokale Modelle, die auf jedem Mac, Windows- oder Linux-Rechner läuft, ohne NPU-Voraussetzung; GAIA kann Ollama sogar als eines seiner eigenen Backends nutzen. Die bessere Standardwahl, wenn Ihre Hardware nicht AMD Ryzen AI ist oder Sie die breitestmögliche Hardware- und Modellbibliotheks-Unterstützung wünschen. Vollständige [Ollama-Review](/de/power-local-llm/ollama-review).',
           '**[LM Studio](/de/power-local-llm/lm-studio-review)** — eine GUI-first-Desktop-App für lokale Inferenz, ebenfalls hardwareunabhängig (Mac, Windows, Linux, keine NPU nötig), mit eingebautem Modell-Browser und Dokument-Chat-Funktion. Passender als GAIA, wenn Sie eine ausgereifte grafische App statt eines CLI-und-Hub-Entwickler-Frameworks wünschen. Vollständige [LM Studio-Review](/de/power-local-llm/lm-studio-review).',
           '**[Docker Model Runner](/de/power-local-llm/docker-model-runner-review)** — eine in Docker Desktop/Engine integrierte CLI-und-API-Funktion für Entwickler, die bereits in einem Docker-Workflow arbeiten; wie Ollama und LM Studio hat es keine NPU-spezifische Voraussetzung und ist damit eine weitere hardwareunabhängige Option, die man gegen GAIAs AMD-spezifische Beschleunigung abwägen kann. Vollständige [Docker-Model-Runner-Review](/de/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'Dies ist keine erschöpfende Liste lokaler Agenten- oder Inferenz-Tools — den vollständigen, regelmäßig aktualisierten Katalog, einschließlich AMD GAIAs eigenem Verzeichniseintrag, finden Sie im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine erschöpfende Liste lokaler Agenten- oder Inferenz-Tools — den vollständigen, regelmäßig aktualisierten Katalog, einschließlich AMD GAIAs eigenem Verzeichniseintrag, finden Sie im [lokalen KI-Software-Verzeichnis](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -564,7 +564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Lokales KI-Software-Verzeichnis 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich AMD GAIAs eigenem Verzeichniseintrag.',
+          '[Lokales KI-Software-Verzeichnis 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich AMD GAIAs eigenem Verzeichniseintrag.',
           '[Ollama-Review](/de/power-local-llm/ollama-review) — eine hardwareunabhängige lokale Laufzeitumgebung, die auch als eines von GAIAs eigenen Backends dienen kann.',
           '[LM-Studio-Review](/de/power-local-llm/lm-studio-review) — eine GUI-first, hardwareunabhängige Alternative für Leser, die eine ausgereifte Desktop-App statt eines CLI-und-Hub-Frameworks wünschen.',
           '[Docker-Model-Runner-Review](/de/power-local-llm/docker-model-runner-review) — eine weitere hardwareunabhängige Option für Entwickler, die bereits Docker nutzen.',
@@ -647,7 +647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub affiche 1 539 étoiles, vérifiées sur [github.com/amd/gaia](https://github.com/amd/gaia) le 5 septembre 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche d\'AMD GAIA dans le [répertoire des logiciels IA locaux](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment GAIA se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche d\'AMD GAIA dans le [répertoire des logiciels IA locaux](/fr/directory) — consultez cette page pour voir comment GAIA se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -787,13 +787,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'amd-gaia-competitors',
         title: 'AMD GAIA vs. autres outils d\'IA locaux',
-        content: 'AMD GAIA se situe dans le segment des frameworks d\'agents locaux, aux côtés de runtimes généralistes qu\'une personne évaluant GAIA compare probablement aussi — d\'autant que les deux comparaisons les plus proches ci-dessous fonctionnent explicitement sur du matériel que l\'accélération NPU de GAIA ne couvre pas. Consultez le [répertoire des logiciels IA locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        content: 'AMD GAIA se situe dans le segment des frameworks d\'agents locaux, aux côtés de runtimes généralistes qu\'une personne évaluant GAIA compare probablement aussi — d\'autant que les deux comparaisons les plus proches ci-dessous fonctionnent explicitement sur du matériel que l\'accélération NPU de GAIA ne couvre pas. Consultez le [répertoire des logiciels IA locaux](/fr/directory) pour le catalogue complet.',
         items: [
           '**[Ollama](/fr/power-local-llm/ollama-review)** — un runtime de modèle local généraliste et une API qui fonctionne sur n\'importe quel Mac, PC Windows ou Linux, sans exigence de NPU ; GAIA peut même utiliser Ollama comme l\'un de ses propres backends. Le meilleur choix par défaut si votre matériel n\'est pas AMD Ryzen AI, ou si vous voulez la plus large compatibilité matérielle et bibliothèque de modèles possible. Voir l\'[avis complet sur Ollama](/fr/power-local-llm/ollama-review).',
           '**[LM Studio](/fr/power-local-llm/lm-studio-review)** — une application de bureau axée sur l\'interface graphique pour l\'inférence locale, également indépendante du matériel (Mac, Windows, Linux, aucun NPU requis), avec un navigateur de modèles intégré et une fonction de chat avec documents. Un choix plus adapté que GAIA si vous voulez une application graphique aboutie plutôt qu\'un framework CLI-et-hub pour développeurs. Voir l\'[avis complet sur LM Studio](/fr/power-local-llm/lm-studio-review).',
           '**[Docker Model Runner](/fr/power-local-llm/docker-model-runner-review)** — une fonctionnalité CLI-et-API intégrée à Docker Desktop/Engine pour les développeurs déjà habitués à un flux de travail Docker ; comme Ollama et LM Studio, elle n\'a aucune exigence spécifique de NPU, ce qui en fait une autre option indépendante du matériel à peser face à l\'accélération spécifique à AMD de GAIA. Voir l\'[avis complet sur Docker Model Runner](/fr/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'Ce n\'est pas une liste exhaustive des outils d\'agents ou d\'inférence locaux — consultez le [répertoire des logiciels IA locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, y compris la propre fiche d\'AMD GAIA dans le répertoire.',
+        note: 'Ce n\'est pas une liste exhaustive des outils d\'agents ou d\'inférence locaux — consultez le [répertoire des logiciels IA locaux](/fr/directory) pour le catalogue complet et régulièrement mis à jour, y compris la propre fiche d\'AMD GAIA dans le répertoire.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -849,7 +849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire des logiciels IA locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, y compris la propre fiche d\'AMD GAIA dans le répertoire.',
+          '[Répertoire des logiciels IA locaux 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, y compris la propre fiche d\'AMD GAIA dans le répertoire.',
           '[Avis sur Ollama](/fr/power-local-llm/ollama-review) — un runtime de modèle local indépendant du matériel qui peut aussi servir de backend à GAIA.',
           '[Avis sur LM Studio](/fr/power-local-llm/lm-studio-review) — une alternative graphique et indépendante du matériel pour les lecteurs qui veulent une application de bureau aboutie plutôt qu\'un framework CLI-et-hub.',
           '[Avis sur Docker Model Runner](/fr/power-local-llm/docker-model-runner-review) — une autre option indépendante du matériel pour les développeurs déjà utilisateurs de Docker.',
@@ -932,7 +932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El repositorio de GitHub muestra 1.539 estrellas, verificadas en [github.com/amd/gaia](https://github.com/amd/gaia) el 5 de septiembre de 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la ficha de AMD GAIA en el [Directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara GAIA con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la ficha de AMD GAIA en el [Directorio de software de IA local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara GAIA con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1072,13 +1072,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'amd-gaia-competitors',
         title: 'AMD GAIA vs. otras herramientas de IA local',
-        content: 'AMD GAIA se ubica en el segmento de frameworks de agentes locales, junto a runtimes de propósito general que alguien que evalúa GAIA probablemente también esté comparando — especialmente porque las dos comparaciones más cercanas de abajo funcionan explícitamente en hardware que la aceleración por NPU de GAIA no cubre. Consulta el [Directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo.',
+        content: 'AMD GAIA se ubica en el segmento de frameworks de agentes locales, junto a runtimes de propósito general que alguien que evalúa GAIA probablemente también esté comparando — especialmente porque las dos comparaciones más cercanas de abajo funcionan explícitamente en hardware que la aceleración por NPU de GAIA no cubre. Consulta el [Directorio de software de IA local](/es/directory) para el catálogo completo.',
         items: [
           '**[Ollama](/es/power-local-llm/ollama-review)** — un runtime de modelo local de propósito general y una API que funciona en cualquier Mac, PC con Windows o Linux, sin requisito de NPU; GAIA incluso puede usar Ollama como uno de sus propios backends. La mejor opción por defecto si tu hardware no es AMD Ryzen AI, o si quieres la mayor compatibilidad de hardware y biblioteca de modelos posible. Consulta la [reseña completa de Ollama](/es/power-local-llm/ollama-review).',
           '**[LM Studio](/es/power-local-llm/lm-studio-review)** — una app de escritorio orientada a interfaz gráfica para inferencia local, también independiente del hardware (Mac, Windows, Linux, sin necesidad de NPU), con un navegador de modelos integrado y una función de chat con documentos. Una opción más adecuada que GAIA si quieres una app gráfica pulida en lugar de un framework de desarrollador basado en CLI y hub. Consulta la [reseña completa de LM Studio](/es/power-local-llm/lm-studio-review).',
           '**[Docker Model Runner](/es/power-local-llm/docker-model-runner-review)** — una función de CLI y API incluida en Docker Desktop/Engine para desarrolladores que ya trabajan con Docker; como Ollama y LM Studio, no tiene ningún requisito específico de NPU, lo que la convierte en otra opción independiente del hardware a considerar frente a la aceleración específica de AMD de GAIA. Consulta la [reseña completa de Docker Model Runner](/es/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas de agentes o inferencia local — consulta el [Directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la propia ficha de AMD GAIA en el directorio.',
+        note: 'Esta no es una lista exhaustiva de herramientas de agentes o inferencia local — consulta el [Directorio de software de IA local](/es/directory) para el catálogo completo y actualizado regularmente, incluida la propia ficha de AMD GAIA en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1134,7 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de IA local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia ficha de AMD GAIA en el directorio.',
+          '[Directorio de software de IA local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia ficha de AMD GAIA en el directorio.',
           '[Reseña de Ollama](/es/power-local-llm/ollama-review) — un runtime de modelo local independiente del hardware que también puede servir como uno de los backends de GAIA.',
           '[Reseña de LM Studio](/es/power-local-llm/lm-studio-review) — una alternativa gráfica e independiente del hardware para quienes quieren una app de escritorio pulida en lugar de un framework de CLI y hub.',
           '[Reseña de Docker Model Runner](/es/power-local-llm/docker-model-runner-review) — otra opción independiente del hardware para desarrolladores que ya usan Docker.',
@@ -1217,7 +1217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub mostra 1.539 estrelas, verificadas em [github.com/amd/gaia](https://github.com/amd/gaia) em 5 de setembro de 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da ficha do AMD GAIA no [Diretório de Software de IA Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o GAIA com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da ficha do AMD GAIA no [Diretório de Software de IA Local](/pt/directory) — veja essa página para comparar rapidamente o GAIA com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1357,13 +1357,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'amd-gaia-competitors',
         title: 'AMD GAIA vs. outras ferramentas de IA local',
-        content: 'O AMD GAIA está no segmento de frameworks de agentes locais, ao lado de runtimes de propósito geral que quem avalia o GAIA provavelmente também está comparando — especialmente porque as duas comparações mais próximas abaixo rodam explicitamente em hardware que a aceleração por NPU do GAIA não cobre. Veja o [Diretório de Software de IA Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'O AMD GAIA está no segmento de frameworks de agentes locais, ao lado de runtimes de propósito geral que quem avalia o GAIA provavelmente também está comparando — especialmente porque as duas comparações mais próximas abaixo rodam explicitamente em hardware que a aceleração por NPU do GAIA não cobre. Veja o [Diretório de Software de IA Local](/pt/directory) para o catálogo completo.',
         items: [
           '**[Ollama](/pt/power-local-llm/ollama-review)** — um runtime de modelo local de propósito geral e uma API que roda em qualquer Mac, PC com Windows ou Linux, sem exigência de NPU; o GAIA pode até usar o Ollama como um de seus próprios backends. A melhor escolha padrão se seu hardware não for AMD Ryzen AI, ou se você quiser a mais ampla compatibilidade de hardware e biblioteca de modelos possível. Veja a [análise completa do Ollama](/pt/power-local-llm/ollama-review).',
           '**[LM Studio](/pt/power-local-llm/lm-studio-review)** — um aplicativo de desktop voltado à interface gráfica para inferência local, também independente de hardware (Mac, Windows, Linux, sem exigir NPU), com um navegador de modelos embutido e um recurso de chat com documentos. Uma escolha mais adequada que o GAIA se você quiser um aplicativo gráfico polido em vez de um framework para desenvolvedores baseado em CLI e hub. Veja a [análise completa do LM Studio](/pt/power-local-llm/lm-studio-review).',
           '**[Docker Model Runner](/pt/power-local-llm/docker-model-runner-review)** — um recurso de CLI e API incluído no Docker Desktop/Engine para desenvolvedores que já trabalham em um fluxo Docker; como o Ollama e o LM Studio, não tem nenhuma exigência específica de NPU, tornando-se outra opção independente de hardware a considerar diante da aceleração específica da AMD no GAIA. Veja a [análise completa do Docker Model Runner](/pt/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas de agentes ou inferência local — veja o [Diretório de Software de IA Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do AMD GAIA no diretório.',
+        note: 'Esta não é uma lista exaustiva de ferramentas de agentes ou inferência local — veja o [Diretório de Software de IA Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do AMD GAIA no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1419,7 +1419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software de IA Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria ficha do AMD GAIA no diretório.',
+          '[Diretório de Software de IA Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria ficha do AMD GAIA no diretório.',
           '[Análise do Ollama](/pt/power-local-llm/ollama-review) — um runtime de modelo local independente de hardware que também pode servir como um dos backends do GAIA.',
           '[Análise do LM Studio](/pt/power-local-llm/lm-studio-review) — uma alternativa gráfica e independente de hardware para quem quer um aplicativo de desktop polido em vez de um framework de CLI e hub.',
           '[Análise do Docker Model Runner](/pt/power-local-llm/docker-model-runner-review) — outra opção independente de hardware para desenvolvedores que já usam Docker.',
@@ -1502,7 +1502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHubリポジトリは2026年9月5日時点で[github.com/amd/gaia](https://github.com/amd/gaia)で検証された1,539個のスターを表示',
         ],
         callouts: [
-          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるAMD GAIAのエントリーを深掘りする姉妹記事です。GAIAが他の数十のローカルAIツールと比べてどう位置づけられるか、一目で確認できます。' },
+          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるAMD GAIAのエントリーを深掘りする姉妹記事です。GAIAが他の数十のローカルAIツールと比べてどう位置づけられるか、一目で確認できます。' },
         ],
       },
       overview: {
@@ -1642,13 +1642,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'amd-gaia-competitors',
         title: 'AMD GAIA vs. 他のローカルAIツール',
-        content: 'AMD GAIAはローカルエージェントフレームワークのセグメントに位置し、GAIAを評価する人がおそらく比較対象にする汎用ランタイムと並んでいます — 特に、以下の最も近い2つの比較対象は、GAIAのNPU高速化がカバーしないハードウェアで明示的に動作するためです。全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        content: 'AMD GAIAはローカルエージェントフレームワークのセグメントに位置し、GAIAを評価する人がおそらく比較対象にする汎用ランタイムと並んでいます — 特に、以下の最も近い2つの比較対象は、GAIAのNPU高速化がカバーしないハードウェアで明示的に動作するためです。全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
         items: [
           '**[Ollama](/ja/power-local-llm/ollama-review)** — 任意のMac、Windows、LinuxマシンでNPU不要で動作する汎用のローカルモデルランタイムとAPI。GAIAは自身のバックエンドの一つとしてOllamaを使用することさえ可能。お使いのハードウェアがAMD Ryzen AIでない場合、または可能な限り幅広いハードウェアとモデルライブラリのサポートを求める場合のより良い既定の選択肢。[Ollamaレビュー](/ja/power-local-llm/ollama-review)全文を参照。',
           '**[LM Studio](/ja/power-local-llm/lm-studio-review)** — GUI中心のローカル推論向けデスクトップアプリで、同様にハードウェア非依存(Mac、Windows、Linux、NPU不要)。組み込みのモデルブラウザとドキュメントチャット機能を搭載。CLI・ハブ形式の開発者向けフレームワークではなく洗練されたグラフィカルアプリが欲しい場合、GAIAよりも適した選択肢。[LM Studioレビュー](/ja/power-local-llm/lm-studio-review)全文を参照。',
           '**[Docker Model Runner](/ja/power-local-llm/docker-model-runner-review)** — 既にDockerワークフローで作業している開発者向けに、Docker Desktop/Engineに組み込まれたCLI・API機能。OllamaやLM Studio同様、NPU固有の要件はなく、GAIAのAMD固有の高速化と比較検討できる、もう一つのハードウェア非依存の選択肢。[Docker Model Runnerレビュー](/ja/power-local-llm/docker-model-runner-review)全文を参照。',
         ],
-        note: 'これはローカルエージェントやローカル推論ツールの網羅的なリストではありません — AMD GAIA自体のディレクトリエントリーを含む、完全かつ定期的に更新されるカタログについては[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはローカルエージェントやローカル推論ツールの網羅的なリストではありません — AMD GAIA自体のディレクトリエントリーを含む、完全かつ定期的に更新されるカタログについては[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1704,7 +1704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — 本記事が属する、AMD GAIA自体のディレクトリエントリーを含むローカルAIツールの完全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — 本記事が属する、AMD GAIA自体のディレクトリエントリーを含むローカルAIツールの完全カタログ。',
           '[Ollamaレビュー](/ja/power-local-llm/ollama-review) — GAIA自身のバックエンドの一つとしても機能する、ハードウェア非依存のローカルモデルランタイム。',
           '[LM Studioレビュー](/ja/power-local-llm/lm-studio-review) — CLI・ハブ形式のフレームワークではなく洗練されたデスクトップアプリを求める読者向けの、GUI中心でハードウェア非依存の代替。',
           '[Docker Model Runnerレビュー](/ja/power-local-llm/docker-model-runner-review) — 既にDockerを使用している開発者向けの、もう一つのハードウェア非依存の選択肢。',
@@ -1787,7 +1787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub仓库显示1,539个星标,已于2026年9月5日在[github.com/amd/gaia](https://github.com/amd/gaia)验证',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中AMD GAIA词条的深度补充——请访问该页面,一目了然地了解GAIA与其他数十种本地AI工具的对比情况。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中AMD GAIA词条的深度补充——请访问该页面,一目了然地了解GAIA与其他数十种本地AI工具的对比情况。' },
         ],
       },
       overview: {
@@ -1927,13 +1927,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'amd-gaia-competitors',
         title: 'AMD GAIA与其他本地AI工具对比',
-        content: 'AMD GAIA位于本地代理框架这一细分领域,与评估GAIA的读者很可能也在比较的通用运行时并列——尤其是因为下面这两项最接近的对比对象,都明确可以在GAIA的NPU加速无法覆盖的硬件上运行。完整目录请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'AMD GAIA位于本地代理框架这一细分领域,与评估GAIA的读者很可能也在比较的通用运行时并列——尤其是因为下面这两项最接近的对比对象,都明确可以在GAIA的NPU加速无法覆盖的硬件上运行。完整目录请参阅[本地LLM软件目录](/zh/directory)。',
         items: [
           '**[Ollama](/zh/power-local-llm/ollama-review)**——一个通用本地模型运行时和API,可在任何Mac、Windows或Linux机器上运行,无需NPU;GAIA甚至可以将Ollama用作自己的后端之一。如果你的硬件不是AMD Ryzen AI,或者你想要尽可能广泛的硬件和模型库支持,这是更好的默认选择。完整的[Ollama评测](/zh/power-local-llm/ollama-review)。',
           '**[LM Studio](/zh/power-local-llm/lm-studio-review)**——一款以图形界面为主的本地推理桌面应用,同样与硬件无关(Mac、Windows、Linux,无需NPU),内置模型浏览器和文档对话功能。如果你想要一款成熟的图形化应用,而不是CLI加hub形式的开发者框架,这比GAIA更合适。完整的[LM Studio评测](/zh/power-local-llm/lm-studio-review)。',
           '**[Docker Model Runner](/zh/power-local-llm/docker-model-runner-review)**——一项内置于Docker Desktop/Engine中的CLI和API功能,适合已经在使用Docker工作流的开发者;与Ollama和LM Studio一样,它没有任何特定的NPU要求,是另一个可与GAIA的AMD专属加速相权衡的、与硬件无关的选项。完整的[Docker Model Runner评测](/zh/power-local-llm/docker-model-runner-review)。',
         ],
-        note: '这并非本地代理或本地推理工具的详尽清单——完整、定期更新的目录(包括AMD GAIA自己的目录词条)请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非本地代理或本地推理工具的详尽清单——完整、定期更新的目录(包括AMD GAIA自己的目录词条)请参阅[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1989,7 +1989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地AI工具目录,包括AMD GAIA自己的目录词条。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的完整本地AI工具目录,包括AMD GAIA自己的目录词条。',
           '[Ollama评测](/zh/power-local-llm/ollama-review) — 一款与硬件无关的本地模型运行时,也可作为GAIA自身的后端之一。',
           '[LM Studio评测](/zh/power-local-llm/lm-studio-review) — 面向希望使用成熟桌面应用而非CLI加hub框架的读者的图形化、与硬件无关的替代方案。',
           '[Docker Model Runner评测](/zh/power-local-llm/docker-model-runner-review) — 面向已经在使用Docker的开发者的另一个与硬件无关的选项。',
@@ -2072,7 +2072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُظهر مستودع GitHub 1,539 نجمة، تم التحقق منها عبر [github.com/amd/gaia](https://github.com/amd/gaia) في 5 سبتمبر 2026',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لقيد AMD GAIA في [دليل برمجيات الذكاء الاصطناعي المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارَن GAIA بلمحة سريعة بعشرات من أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لقيد AMD GAIA في [دليل برمجيات الذكاء الاصطناعي المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن GAIA بلمحة سريعة بعشرات من أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2212,13 +2212,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'amd-gaia-competitors',
         title: 'AMD GAIA مقابل أدوات الذكاء الاصطناعي المحلية الأخرى',
-        content: 'يقع AMD GAIA ضمن قطاع أطر عمل الوكلاء المحليين، إلى جانب بيئات تشغيل عامة الغرض من المرجَّح أن يقارِن بها أيضًا من يقيّم GAIA — خصوصًا أن أقرب مقارنتين أدناه تعملان صراحة على أجهزة لا يغطيها تسريع NPU الخاص بـ GAIA. راجع [دليل برمجيات الذكاء الاصطناعي المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل.',
+        content: 'يقع AMD GAIA ضمن قطاع أطر عمل الوكلاء المحليين، إلى جانب بيئات تشغيل عامة الغرض من المرجَّح أن يقارِن بها أيضًا من يقيّم GAIA — خصوصًا أن أقرب مقارنتين أدناه تعملان صراحة على أجهزة لا يغطيها تسريع NPU الخاص بـ GAIA. راجع [دليل برمجيات الذكاء الاصطناعي المحلية](/ar/directory) للاطلاع على الكتالوج الكامل.',
         items: [
           '**[Ollama](/ar/power-local-llm/ollama-review)** — بيئة تشغيل نماذج محلية عامة الغرض وواجهة برمجة تطبيقات تعمل على أي جهاز Mac أو Windows أو Linux، دون الحاجة إلى NPU؛ ويمكن لـ GAIA حتى استخدام Ollama كواحدة من خلفياته الخاصة. الخيار الافتراضي الأفضل إذا لم تكن أجهزتك من فئة AMD Ryzen AI، أو إذا كنت تريد أوسع دعم ممكن للأجهزة ومكتبة النماذج. راجع [مراجعة Ollama](/ar/power-local-llm/ollama-review) الكاملة.',
           '**[LM Studio](/ar/power-local-llm/lm-studio-review)** — تطبيق سطح مكتب يركّز على الواجهة الرسومية للاستدلال المحلي، وهو أيضًا مستقل عن الأجهزة (Mac، Windows، Linux، دون الحاجة إلى NPU)، مع متصفّح نماذج مدمج وميزة محادثة مع المستندات. خيار أنسب من GAIA إذا كنت تريد تطبيقًا رسوميًا ناضجًا بدلًا من إطار عمل للمطورين يعتمد على سطر الأوامر والمركز. راجع [مراجعة LM Studio](/ar/power-local-llm/lm-studio-review) الكاملة.',
           '**[Docker Model Runner](/ar/power-local-llm/docker-model-runner-review)** — ميزة سطر أوامر وواجهة برمجة تطبيقات مدمجة في Docker Desktop/Engine للمطورين الذين يعملون بالفعل ضمن سير عمل Docker؛ مثل Ollama وLM Studio، لا يوجد لديه أي متطلب خاص بـ NPU، ما يجعله خيارًا آخر مستقلًا عن الأجهزة يمكن موازنته مقابل تسريع GAIA الخاص بـ AMD. راجع [مراجعة Docker Model Runner](/ar/power-local-llm/docker-model-runner-review) الكاملة.',
         ],
-        note: 'هذه ليست قائمة شاملة لأدوات الوكلاء أو الاستدلال المحلية — راجع [دليل برمجيات الذكاء الاصطناعي المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك قيد AMD GAIA الخاص به في الدليل.',
+        note: 'هذه ليست قائمة شاملة لأدوات الوكلاء أو الاستدلال المحلية — راجع [دليل برمجيات الذكاء الاصطناعي المحلية](/ar/directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك قيد AMD GAIA الخاص به في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2274,7 +2274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات الذكاء الاصطناعي المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك قيد AMD GAIA الخاص به في الدليل.',
+          '[دليل برمجيات الذكاء الاصطناعي المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك قيد AMD GAIA الخاص به في الدليل.',
           '[مراجعة Ollama](/ar/power-local-llm/ollama-review) — بيئة تشغيل نماذج محلية مستقلة عن الأجهزة يمكن أن تعمل أيضًا كواحدة من خلفيات GAIA الخاصة.',
           '[مراجعة LM Studio](/ar/power-local-llm/lm-studio-review) — بديل رسومي ومستقل عن الأجهزة للقراء الذين يريدون تطبيق سطح مكتب ناضجًا بدلًا من إطار عمل يعتمد على سطر الأوامر والمركز.',
           '[مراجعة Docker Model Runner](/ar/power-local-llm/docker-model-runner-review) — خيار آخر مستقل عن الأجهزة للمطورين الذين يستخدمون Docker بالفعل.',
@@ -2357,7 +2357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub 저장소는 2026년 9월 5일 [github.com/amd/gaia](https://github.com/amd/gaia)에서 검증된 1,539개의 스타를 표시',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 AMD GAIA 항목을 심층적으로 다루는 자매 글입니다. GAIA가 수십 개의 다른 로컬 AI 도구와 비교했을 때 어떤 위치에 있는지 한눈에 확인하려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 AMD GAIA 항목을 심층적으로 다루는 자매 글입니다. GAIA가 수십 개의 다른 로컬 AI 도구와 비교했을 때 어떤 위치에 있는지 한눈에 확인하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2497,13 +2497,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'amd-gaia-competitors',
         title: 'AMD GAIA vs. 다른 로컬 AI 도구',
-        content: 'AMD GAIA는 로컬 에이전트 프레임워크 부문에 속하며, GAIA를 평가하는 사람이 함께 비교할 가능성이 높은 범용 런타임들과 나란히 놓입니다 — 특히 아래의 가장 가까운 두 비교 대상은 GAIA의 NPU 가속이 다루지 않는 하드웨어에서도 명시적으로 작동합니다. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        content: 'AMD GAIA는 로컬 에이전트 프레임워크 부문에 속하며, GAIA를 평가하는 사람이 함께 비교할 가능성이 높은 범용 런타임들과 나란히 놓입니다 — 특히 아래의 가장 가까운 두 비교 대상은 GAIA의 NPU 가속이 다루지 않는 하드웨어에서도 명시적으로 작동합니다. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
         items: [
           '**[Ollama](/ko/power-local-llm/ollama-review)** — NPU 요구 사항 없이 모든 Mac, Windows, Linux 머신에서 실행되는 범용 로컬 모델 런타임 및 API. GAIA는 심지어 Ollama를 자체 백엔드 중 하나로 사용할 수도 있습니다. 하드웨어가 AMD Ryzen AI가 아니거나, 가능한 한 폭넓은 하드웨어 및 모델 라이브러리 지원을 원하는 경우 더 나은 기본 선택지입니다. [Ollama 리뷰](/ko/power-local-llm/ollama-review) 전문을 참고하세요.',
           '**[LM Studio](/ko/power-local-llm/lm-studio-review)** — GUI 중심의 로컬 추론용 데스크톱 앱으로, 마찬가지로 하드웨어에 구애받지 않으며(Mac, Windows, Linux, NPU 불필요), 내장된 모델 브라우저와 문서 대화 기능을 갖추고 있습니다. CLI와 허브 형태의 개발자용 프레임워크가 아니라 완성도 높은 그래픽 앱을 원한다면 GAIA보다 더 적합한 선택지입니다. [LM Studio 리뷰](/ko/power-local-llm/lm-studio-review) 전문을 참고하세요.',
           '**[Docker Model Runner](/ko/power-local-llm/docker-model-runner-review)** — 이미 Docker 워크플로를 사용 중인 개발자를 위해 Docker Desktop/Engine에 내장된 CLI 및 API 기능입니다. Ollama, LM Studio와 마찬가지로 NPU 관련 요구 사항이 없어, GAIA의 AMD 전용 가속과 견줄 수 있는 또 다른 하드웨어 독립적 선택지입니다. [Docker Model Runner 리뷰](/ko/power-local-llm/docker-model-runner-review) 전문을 참고하세요.',
         ],
-        note: '이는 로컬 에이전트나 로컬 추론 도구의 전체 목록이 아닙니다 — AMD GAIA 자체의 디렉터리 항목을 포함한 완전하고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이는 로컬 에이전트나 로컬 추론 도구의 전체 목록이 아닙니다 — AMD GAIA 자체의 디렉터리 항목을 포함한 완전하고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2559,7 +2559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한, AMD GAIA 자체의 디렉터리 항목을 포함한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 글이 속한, AMD GAIA 자체의 디렉터리 항목을 포함한 로컬 AI 도구의 전체 카탈로그.',
           '[Ollama 리뷰](/ko/power-local-llm/ollama-review) — GAIA 자체의 백엔드 중 하나로도 사용될 수 있는, 하드웨어에 구애받지 않는 로컬 모델 런타임.',
           '[LM Studio 리뷰](/ko/power-local-llm/lm-studio-review) — CLI와 허브 형태의 프레임워크가 아니라 완성도 높은 데스크톱 앱을 원하는 독자를 위한, GUI 중심의 하드웨어 독립적 대안.',
           '[Docker Model Runner 리뷰](/ko/power-local-llm/docker-model-runner-review) — 이미 Docker를 사용 중인 개발자를 위한 또 다른 하드웨어 독립적 선택지.',

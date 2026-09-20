@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Agnai Review (2026): Self-Hostable AI Roleplay Chat',
     seoTitle: 'Agnai Review 2026: AI Roleplay Chat Platform',
     intro:
-      'Agnai ([agnai.chat](https://agnai.chat)), maintained on GitHub as [agnaistic/agnai](https://github.com/agnaistic/agnai), is an open-source AI roleplay chat platform licensed under the GNU Affero General Public License v3.0 (AGPL-3.0). Unlike an app that bundles its own model, Agnai is a frontend that dispatches conversations to external AI services you connect — Kobold-compatible backends, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter, and Mancer. It runs either hosted at agnai.chat with no install, or self-hosted via an npm package or Docker, with MongoDB and Redis both optional. This review is a companion to Agnai\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) and covers what Agnai actually supports, how self-hosting works, and how it compares with SillyTavern, Backyard AI, and RisuAI.',
+      'Agnai ([agnai.chat](https://agnai.chat)), maintained on GitHub as [agnaistic/agnai](https://github.com/agnaistic/agnai), is an open-source AI roleplay chat platform licensed under the GNU Affero General Public License v3.0 (AGPL-3.0). Unlike an app that bundles its own model, Agnai is a frontend that dispatches conversations to external AI services you connect — Kobold-compatible backends, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter, and Mancer. It runs either hosted at agnai.chat with no install, or self-hosted via an npm package or Docker, with MongoDB and Redis both optional. This review is a companion to Agnai\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory) and covers what Agnai actually supports, how self-hosting works, and how it compares with SillyTavern, Backyard AI, and RisuAI.',
     metaDescription:
       'Agnai review 2026: open-source AI roleplay chat, self-host via npm or Docker (MongoDB optional), 9 supported AI services, character cards, group chat, and comparison with SillyTavern and RisuAI.',
     twitterDescription:
@@ -86,7 +86,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Core features: multi-user/multi-bot group conversations, character cards in four persona formats (W++, Square Bracket Format, Boostyle, plain text), Memory/Lore books, and AI-assisted character generation.',
           'The hosted version at [agnai.chat](https://agnai.chat) needs no install and offers a free tier plus an optional paid subscription for priority access to Agnai\'s own hosted models.',
           'Agnai does not list Ollama as a native AI service — connecting an Ollama-served model works only through an OpenAI-compatible proxy layer, not a direct integration.',
-          'Compare with [SillyTavern](/local-llms/sillytavern-review), [Backyard AI](/power-local-llm/backyard-ai-review-local-roleplay-2026), and [RisuAI](/power-local-llm/risuai-review) — companion entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+          'Compare with [SillyTavern](/local-llms/sillytavern-review), [Backyard AI](/power-local-llm/backyard-ai-review-local-roleplay-2026), and [RisuAI](/power-local-llm/risuai-review) — companion entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory).',
         ],
       },
       whatIsAgnai: {
@@ -241,7 +241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — comprehensive app and tool directory for all platforms, including Agnai\'s own entry.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — comprehensive app and tool directory for all platforms, including Agnai\'s own entry.',
           '[SillyTavern Review](/local-llms/sillytavern-review) — the extension-rich, Ollama-compatible alternative with the largest configuration surface.',
           '[Backyard AI Review: Local AI Character Chat and Roleplay](/power-local-llm/backyard-ai-review-local-roleplay-2026) — a closed-source, single-installer alternative for readers who want zero configuration.',
           '[RisuAI Review](/power-local-llm/risuai-review) — another open-source roleplay frontend, positioned between Agnai\'s multi-tenancy and Backyard AI\'s simplicity.',
@@ -260,7 +260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Agnai im Test (2026): Selbst hostbarer KI-Rollenspiel-Chat',
     seoTitle: 'Agnai Test 2026: KI-Rollenspiel-Chat-Plattform',
     intro:
-      'Agnai ([agnai.chat](https://agnai.chat)), auf GitHub als [agnaistic/agnai](https://github.com/agnaistic/agnai) gepflegt, ist eine Open-Source-Plattform für KI-Rollenspiel-Chat unter der GNU Affero General Public License v3.0 (AGPL-3.0). Anders als eine App mit eingebautem Modell ist Agnai ein Frontend, das Gespräche an extern angebundene KI-Dienste weiterleitet — Kobold-kompatible Backends, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter und Mancer. Es läuft entweder gehostet auf agnai.chat ohne Installation, oder selbst gehostet über ein npm-Paket oder Docker, wobei MongoDB und Redis beide optional sind. Dieser Test ist ein Begleittext zu Agnais Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) und behandelt, was Agnai tatsächlich unterstützt, wie Self-Hosting funktioniert und wie es sich mit SillyTavern, Backyard AI und RisuAI vergleicht.',
+      'Agnai ([agnai.chat](https://agnai.chat)), auf GitHub als [agnaistic/agnai](https://github.com/agnaistic/agnai) gepflegt, ist eine Open-Source-Plattform für KI-Rollenspiel-Chat unter der GNU Affero General Public License v3.0 (AGPL-3.0). Anders als eine App mit eingebautem Modell ist Agnai ein Frontend, das Gespräche an extern angebundene KI-Dienste weiterleitet — Kobold-kompatible Backends, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter und Mancer. Es läuft entweder gehostet auf agnai.chat ohne Installation, oder selbst gehostet über ein npm-Paket oder Docker, wobei MongoDB und Redis beide optional sind. Dieser Test ist ein Begleittext zu Agnais Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/directory) und behandelt, was Agnai tatsächlich unterstützt, wie Self-Hosting funktioniert und wie es sich mit SillyTavern, Backyard AI und RisuAI vergleicht.',
     metaDescription:
       'Agnai Test 2026: Open-Source KI-Rollenspiel-Chat, Self-Hosting per npm oder Docker (MongoDB optional), 9 unterstützte KI-Dienste, Charakterkarten, Gruppenchat und Vergleich mit SillyTavern und RisuAI.',
     twitterDescription:
@@ -343,7 +343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kernfunktionen: Gruppengespräche mit mehreren Nutzern/Bots, Charakterkarten in vier Persona-Formaten (W++, Square Bracket Format, Boostyle, Klartext), Memory/Lore-Books und KI-gestützte Charaktererstellung.',
           'Die gehostete Version auf [agnai.chat](https://agnai.chat) benötigt keine Installation und bietet eine kostenlose Stufe plus ein optionales kostenpflichtiges Abo für priorisierten Zugriff auf Agnais eigene gehostete Modelle.',
           'Agnai führt Ollama nicht als native KI-Dienst auf — die Anbindung eines über Ollama bereitgestellten Modells funktioniert nur über eine OpenAI-kompatible Proxy-Schicht, keine direkte Integration.',
-          'Vergleich mit [SillyTavern](/de/local-llms/sillytavern-review), [Backyard AI](/de/power-local-llm/backyard-ai-review-local-roleplay-2026) und [RisuAI](/de/power-local-llm/risuai-review) — Begleiteintrag im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+          'Vergleich mit [SillyTavern](/de/local-llms/sillytavern-review), [Backyard AI](/de/power-local-llm/backyard-ai-review-local-roleplay-2026) und [RisuAI](/de/power-local-llm/risuai-review) — Begleiteintrag im [Local LLM Software Directory](https://www.promptquorum.com/directory).',
         ],
       },
       whatIsAgnai: {
@@ -498,7 +498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — umfassendes App- und Tool-Verzeichnis für alle Plattformen, inklusive Agnais eigenem Eintrag.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — umfassendes App- und Tool-Verzeichnis für alle Plattformen, inklusive Agnais eigenem Eintrag.',
           '[SillyTavern im Test](/de/local-llms/sillytavern-review) — die erweiterungsreiche, Ollama-kompatible Alternative mit der größten Konfigurationsfläche.',
           '[Backyard AI im Test: Lokaler KI-Charakter-Chat und Rollenspiel](/de/power-local-llm/backyard-ai-review-local-roleplay-2026) — eine Closed-Source-Alternative mit einem Installer für Leser, die keine Konfiguration wollen.',
           '[RisuAI im Test](/de/power-local-llm/risuai-review) — ein weiteres Open-Source-Rollenspiel-Frontend zwischen Agnais Multi-Tenancy und der Einfachheit von Backyard AI.',
@@ -517,7 +517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Agnai : Avis (2026) sur ce Chat de Jeu de Rôle IA Auto-Hébergeable',
     seoTitle: 'Agnai 2026 : Plateforme de Chat de Jeu de Rôle IA',
     intro:
-      'Agnai ([agnai.chat](https://agnai.chat)), maintenu sur GitHub sous [agnaistic/agnai](https://github.com/agnaistic/agnai), est une plateforme open source de chat de jeu de rôle IA sous licence GNU Affero General Public License v3.0 (AGPL-3.0). Contrairement à une application qui embarque son propre modèle, Agnai est un frontend qui envoie les conversations vers des services IA externes que vous connectez — backends compatibles Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter et Mancer. Il fonctionne soit hébergé sur agnai.chat sans installation, soit auto-hébergé via un paquet npm ou Docker, MongoDB et Redis étant tous deux optionnels. Cet avis complète la fiche d\'Agnai dans le [Répertoire de logiciels LLM locaux](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) et couvre ce qu\'Agnai prend réellement en charge, le fonctionnement de l\'auto-hébergement, et la comparaison avec SillyTavern, Backyard AI et RisuAI.',
+      'Agnai ([agnai.chat](https://agnai.chat)), maintenu sur GitHub sous [agnaistic/agnai](https://github.com/agnaistic/agnai), est une plateforme open source de chat de jeu de rôle IA sous licence GNU Affero General Public License v3.0 (AGPL-3.0). Contrairement à une application qui embarque son propre modèle, Agnai est un frontend qui envoie les conversations vers des services IA externes que vous connectez — backends compatibles Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter et Mancer. Il fonctionne soit hébergé sur agnai.chat sans installation, soit auto-hébergé via un paquet npm ou Docker, MongoDB et Redis étant tous deux optionnels. Cet avis complète la fiche d\'Agnai dans le [Répertoire de logiciels LLM locaux](https://www.promptquorum.com/directory) et couvre ce qu\'Agnai prend réellement en charge, le fonctionnement de l\'auto-hébergement, et la comparaison avec SillyTavern, Backyard AI et RisuAI.',
     metaDescription:
       'Avis Agnai 2026 : chat de jeu de rôle IA open source, auto-hébergement via npm ou Docker (MongoDB optionnel), 9 services IA supportés, cartes de personnages, chat de groupe, comparaison avec SillyTavern et RisuAI.',
     twitterDescription:
@@ -600,7 +600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fonctionnalités clés : conversations de groupe multi-utilisateurs/multi-bots, cartes de personnages en quatre formats de persona (W++, Square Bracket Format, Boostyle, texte brut), livres de mémoire/lore, et génération de personnages assistée par IA.',
           'La version hébergée sur [agnai.chat](https://agnai.chat) ne nécessite aucune installation et propose un palier gratuit plus un abonnement payant optionnel pour un accès prioritaire aux propres modèles hébergés d\'Agnai.',
           'Agnai ne liste pas Ollama comme service IA natif — connecter un modèle servi par Ollama ne fonctionne que via une couche proxy compatible OpenAI, pas une intégration directe.',
-          'Comparaison avec [SillyTavern](/fr/local-llms/sillytavern-review), [Backyard AI](/fr/power-local-llm/backyard-ai-review-local-roleplay-2026) et [RisuAI](/fr/power-local-llm/risuai-review) — fiche complémentaire dans le [Répertoire de logiciels LLM locaux](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+          'Comparaison avec [SillyTavern](/fr/local-llms/sillytavern-review), [Backyard AI](/fr/power-local-llm/backyard-ai-review-local-roleplay-2026) et [RisuAI](/fr/power-local-llm/risuai-review) — fiche complémentaire dans le [Répertoire de logiciels LLM locaux](https://www.promptquorum.com/directory).',
         ],
       },
       whatIsAgnai: {
@@ -755,7 +755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire de logiciels LLM locaux](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — répertoire complet d\'applications et d\'outils pour toutes les plateformes, incluant la fiche d\'Agnai.',
+          '[Répertoire de logiciels LLM locaux](https://www.promptquorum.com/directory) — répertoire complet d\'applications et d\'outils pour toutes les plateformes, incluant la fiche d\'Agnai.',
           '[Avis SillyTavern](/fr/local-llms/sillytavern-review) — l\'alternative riche en extensions et compatible Ollama, avec la plus grande surface de configuration.',
           '[Avis Backyard AI : Chat de Personnage IA Local et Jeu de Rôle](/fr/power-local-llm/backyard-ai-review-local-roleplay-2026) — une alternative closed-source à installeur unique pour les lecteurs qui veulent zéro configuration.',
           '[Avis RisuAI](/fr/power-local-llm/risuai-review) — un autre frontend de jeu de rôle open source, positionné entre la multi-tenance d\'Agnai et la simplicité de Backyard AI.',
@@ -774,7 +774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Agnai: Reseña (2026) del Chat de Rol IA Autoalojable',
     seoTitle: 'Agnai 2026: Plataforma de Chat de Rol con IA',
     intro:
-      'Agnai ([agnai.chat](https://agnai.chat)), mantenido en GitHub como [agnaistic/agnai](https://github.com/agnaistic/agnai), es una plataforma de chat de rol con IA de código abierto bajo la licencia GNU Affero General Public License v3.0 (AGPL-3.0). A diferencia de una app que incluye su propio modelo, Agnai es un frontend que envía las conversaciones a servicios de IA externos que tú conectas — backends compatibles con Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter y Mancer. Funciona alojado en agnai.chat sin instalación, o autoalojado mediante un paquete npm o Docker, con MongoDB y Redis ambos opcionales. Esta reseña complementa la ficha de Agnai en el [Directorio de software de LLM locales](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) y explica qué soporta realmente Agnai, cómo funciona el autoalojamiento y cómo se compara con SillyTavern, Backyard AI y RisuAI.',
+      'Agnai ([agnai.chat](https://agnai.chat)), mantenido en GitHub como [agnaistic/agnai](https://github.com/agnaistic/agnai), es una plataforma de chat de rol con IA de código abierto bajo la licencia GNU Affero General Public License v3.0 (AGPL-3.0). A diferencia de una app que incluye su propio modelo, Agnai es un frontend que envía las conversaciones a servicios de IA externos que tú conectas — backends compatibles con Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter y Mancer. Funciona alojado en agnai.chat sin instalación, o autoalojado mediante un paquete npm o Docker, con MongoDB y Redis ambos opcionales. Esta reseña complementa la ficha de Agnai en el [Directorio de software de LLM locales](https://www.promptquorum.com/directory) y explica qué soporta realmente Agnai, cómo funciona el autoalojamiento y cómo se compara con SillyTavern, Backyard AI y RisuAI.',
     metaDescription:
       'Reseña de Agnai 2026: chat de rol IA de código abierto, autoalojamiento vía npm o Docker (MongoDB opcional), 9 servicios de IA soportados, tarjetas de personajes, chat grupal y comparación con SillyTavern y RisuAI.',
     twitterDescription:
@@ -857,7 +857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Funciones clave: conversaciones grupales multiusuario/multibot, tarjetas de personajes en cuatro formatos de persona (W++, Square Bracket Format, Boostyle, texto plano), libros de memoria/lore y generación de personajes asistida por IA.',
           'La versión alojada en [agnai.chat](https://agnai.chat) no necesita instalación y ofrece un nivel gratuito más una suscripción de pago opcional para acceso prioritario a los modelos alojados propios de Agnai.',
           'Agnai no lista a Ollama como servicio de IA nativo — conectar un modelo servido por Ollama solo funciona mediante una capa proxy compatible con OpenAI, no una integración directa.',
-          'Comparación con [SillyTavern](/es/local-llms/sillytavern-review), [Backyard AI](/es/power-local-llm/backyard-ai-review-local-roleplay-2026) y [RisuAI](/es/power-local-llm/risuai-review) — ficha complementaria en el [Directorio de software de LLM locales](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+          'Comparación con [SillyTavern](/es/local-llms/sillytavern-review), [Backyard AI](/es/power-local-llm/backyard-ai-review-local-roleplay-2026) y [RisuAI](/es/power-local-llm/risuai-review) — ficha complementaria en el [Directorio de software de LLM locales](https://www.promptquorum.com/directory).',
         ],
       },
       whatIsAgnai: {
@@ -1012,7 +1012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de LLM locales](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — directorio completo de apps y herramientas para todas las plataformas, incluida la ficha propia de Agnai.',
+          '[Directorio de software de LLM locales](https://www.promptquorum.com/directory) — directorio completo de apps y herramientas para todas las plataformas, incluida la ficha propia de Agnai.',
           '[Reseña de SillyTavern](/es/local-llms/sillytavern-review) — la alternativa rica en extensiones y compatible con Ollama, con la mayor superficie de configuración.',
           '[Reseña de Backyard AI: Chat de Personajes IA Local y Rol](/es/power-local-llm/backyard-ai-review-local-roleplay-2026) — una alternativa de código cerrado con un solo instalador para quienes quieren cero configuración.',
           '[Reseña de RisuAI](/es/power-local-llm/risuai-review) — otro frontend de rol de código abierto, posicionado entre la configuración multiusuario de Agnai y la simplicidad de Backyard AI.',
@@ -1031,7 +1031,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Agnai: Análise (2026) do Chat de Roleplay com IA Auto-Hospedável',
     seoTitle: 'Agnai 2026: Plataforma de Chat de Roleplay com IA',
     intro:
-      'O Agnai ([agnai.chat](https://agnai.chat)), mantido no GitHub como [agnaistic/agnai](https://github.com/agnaistic/agnai), é uma plataforma de chat de roleplay com IA de código aberto sob a licença GNU Affero General Public License v3.0 (AGPL-3.0). Diferente de um app que embute seu próprio modelo, o Agnai é um frontend que envia conversas para serviços de IA externos que você conecta — backends compatíveis com Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter e Mancer. Ele roda hospedado em agnai.chat sem instalação, ou auto-hospedado via um pacote npm ou Docker, com MongoDB e Redis ambos opcionais. Esta análise complementa a ficha do Agnai no [Diretório de Software de LLMs Locais](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) e cobre o que o Agnai realmente suporta, como funciona a auto-hospedagem e como ele se compara ao SillyTavern, Backyard AI e RisuAI.',
+      'O Agnai ([agnai.chat](https://agnai.chat)), mantido no GitHub como [agnaistic/agnai](https://github.com/agnaistic/agnai), é uma plataforma de chat de roleplay com IA de código aberto sob a licença GNU Affero General Public License v3.0 (AGPL-3.0). Diferente de um app que embute seu próprio modelo, o Agnai é um frontend que envia conversas para serviços de IA externos que você conecta — backends compatíveis com Kobold, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter e Mancer. Ele roda hospedado em agnai.chat sem instalação, ou auto-hospedado via um pacote npm ou Docker, com MongoDB e Redis ambos opcionais. Esta análise complementa a ficha do Agnai no [Diretório de Software de LLMs Locais](https://www.promptquorum.com/directory) e cobre o que o Agnai realmente suporta, como funciona a auto-hospedagem e como ele se compara ao SillyTavern, Backyard AI e RisuAI.',
     metaDescription:
       'Análise do Agnai 2026: chat de roleplay com IA de código aberto, auto-hospedagem via npm ou Docker (MongoDB opcional), 9 serviços de IA suportados, cartões de personagem, chat em grupo e comparação com SillyTavern e RisuAI.',
     twitterDescription:
@@ -1114,7 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Recursos principais: conversas em grupo multiusuário/multibot, cartões de personagem em quatro formatos de persona (W++, Square Bracket Format, Boostyle, texto simples), livros de memória/lore e geração de personagens assistida por IA.',
           'A versão hospedada em [agnai.chat](https://agnai.chat) não precisa de instalação e oferece um nível gratuito mais uma assinatura paga opcional para acesso prioritário aos modelos hospedados próprios do Agnai.',
           'O Agnai não lista o Ollama como serviço de IA nativo — conectar um modelo servido pelo Ollama só funciona via uma camada de proxy compatível com OpenAI, não uma integração direta.',
-          'Comparação com [SillyTavern](/pt/local-llms/sillytavern-review), [Backyard AI](/pt/power-local-llm/backyard-ai-review-local-roleplay-2026) e [RisuAI](/pt/power-local-llm/risuai-review) — ficha complementar no [Diretório de Software de LLMs Locais](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+          'Comparação com [SillyTavern](/pt/local-llms/sillytavern-review), [Backyard AI](/pt/power-local-llm/backyard-ai-review-local-roleplay-2026) e [RisuAI](/pt/power-local-llm/risuai-review) — ficha complementar no [Diretório de Software de LLMs Locais](https://www.promptquorum.com/directory).',
         ],
       },
       whatIsAgnai: {
@@ -1269,7 +1269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software de LLMs Locais](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — diretório completo de apps e ferramentas para todas as plataformas, incluindo a própria ficha do Agnai.',
+          '[Diretório de Software de LLMs Locais](https://www.promptquorum.com/directory) — diretório completo de apps e ferramentas para todas as plataformas, incluindo a própria ficha do Agnai.',
           '[Análise do SillyTavern](/pt/local-llms/sillytavern-review) — a alternativa rica em extensões e compatível com Ollama, com a maior superfície de configuração.',
           '[Análise do Backyard AI: Chat de Personagens IA Local e Roleplay](/pt/power-local-llm/backyard-ai-review-local-roleplay-2026) — uma alternativa de código fechado com instalador único para quem quer zero configuração.',
           '[Análise do RisuAI](/pt/power-local-llm/risuai-review) — outro frontend de roleplay open source, posicionado entre o multiusuário do Agnai e a simplicidade do Backyard AI.',
@@ -1288,7 +1288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Agnaiレビュー(2026):セルフホスト可能なAIロールプレイチャット',
     seoTitle: 'Agnaiレビュー2026:AIロールプレイチャット基盤',
     intro:
-      'Agnai([agnai.chat](https://agnai.chat))はGitHub上で[agnaistic/agnai](https://github.com/agnaistic/agnai)として管理されている、GNU Affero General Public License v3.0(AGPL-3.0)のオープンソースAIロールプレイチャット基盤です。独自モデルを内蔵するアプリとは異なり、AgnaiはKobold互換バックエンド、NovelAI、AI Horde、Goose、OpenAI、Anthropic Claude、Replicate、OpenRouter、Mancerなど、接続した外部AIサービスに会話を振り分けるフロントエンドです。インストール不要のagnai.chatでホスト利用するか、npmパッケージまたはDockerでセルフホストでき、MongoDBとRedisはいずれも任意です。本レビューは[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)内のAgnaiのエントリーを補完するもので、Agnaiが実際にサポートする機能、セルフホストの仕組み、SillyTavern・Backyard AI・RisuAIとの比較を扱います。',
+      'Agnai([agnai.chat](https://agnai.chat))はGitHub上で[agnaistic/agnai](https://github.com/agnaistic/agnai)として管理されている、GNU Affero General Public License v3.0(AGPL-3.0)のオープンソースAIロールプレイチャット基盤です。独自モデルを内蔵するアプリとは異なり、AgnaiはKobold互換バックエンド、NovelAI、AI Horde、Goose、OpenAI、Anthropic Claude、Replicate、OpenRouter、Mancerなど、接続した外部AIサービスに会話を振り分けるフロントエンドです。インストール不要のagnai.chatでホスト利用するか、npmパッケージまたはDockerでセルフホストでき、MongoDBとRedisはいずれも任意です。本レビューは[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)内のAgnaiのエントリーを補完するもので、Agnaiが実際にサポートする機能、セルフホストの仕組み、SillyTavern・Backyard AI・RisuAIとの比較を扱います。',
     metaDescription:
       'Agnaiレビュー2026:オープンソースAIロールプレイチャット、npmまたはDockerでのセルフホスト(MongoDB任意)、9つの対応AIサービス、キャラクターカード、グループチャット、SillyTavernとRisuAIとの比較。',
     twitterDescription:
@@ -1371,7 +1371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '主な機能:マルチユーザー/マルチボットのグループ会話、4種類のペルソナ形式(W++、Square Bracket Format、Boostyle、プレーンテキスト)のキャラクターカード、Memory/Loreブック、AI支援のキャラクター生成。',
           '[agnai.chat](https://agnai.chat)のホスト版はインストール不要で、無料枠に加え、Agnai自身のホスト型モデルへの優先アクセスを提供する任意の有料サブスクリプションがある。',
           'AgnaiはOllamaをネイティブAIサービスとして記載していない — Ollamaで提供されるモデルの接続はOpenAI互換プロキシ層経由でのみ機能し、直接統合ではない。',
-          '[SillyTavern](/ja/local-llms/sillytavern-review)、[Backyard AI](/ja/power-local-llm/backyard-ai-review-local-roleplay-2026)、[RisuAI](/ja/power-local-llm/risuai-review)との比較 — [ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)内の関連エントリー。',
+          '[SillyTavern](/ja/local-llms/sillytavern-review)、[Backyard AI](/ja/power-local-llm/backyard-ai-review-local-roleplay-2026)、[RisuAI](/ja/power-local-llm/risuai-review)との比較 — [ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)内の関連エントリー。',
         ],
       },
       whatIsAgnai: {
@@ -1526,7 +1526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — Agnai自身のエントリーを含む、全プラットフォーム対応の包括的なアプリ・ツールディレクトリ。',
+          '[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory) — Agnai自身のエントリーを含む、全プラットフォーム対応の包括的なアプリ・ツールディレクトリ。',
           '[SillyTavernレビュー](/ja/local-llms/sillytavern-review) — 拡張機能が豊富でOllama互換、最大の設定範囲を持つ代替ツール。',
           '[Backyard AIレビュー:ローカルAIキャラクターチャットとロールプレイ](/ja/power-local-llm/backyard-ai-review-local-roleplay-2026) — 設定不要を求める読者向けのインストーラー1本のクローズドソース代替ツール。',
           '[RisuAIレビュー](/ja/power-local-llm/risuai-review) — Agnaiのマルチテナントと Backyard AIのシンプルさの中間に位置する、もう一つのオープンソースロールプレイフロントエンド。',
@@ -1545,7 +1545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Agnai评测(2026):可自托管的AI角色扮演聊天平台',
     seoTitle: 'Agnai评测2026:AI角色扮演聊天平台',
     intro:
-      'Agnai([agnai.chat](https://agnai.chat))在GitHub上以[agnaistic/agnai](https://github.com/agnaistic/agnai)维护,是一个采用GNU Affero通用公共许可证v3.0(AGPL-3.0)的开源AI角色扮演聊天平台。与内置自有模型的应用不同,Agnai是一个前端,把对话分发给你所连接的外部AI服务——兼容Kobold的后端、NovelAI、AI Horde、Goose、OpenAI、Anthropic Claude、Replicate、OpenRouter和Mancer。它既可以在agnai.chat上免安装托管使用,也可以通过npm包或Docker自托管,MongoDB和Redis均为可选。本评测是[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中Agnai条目的配套内容,涵盖Agnai实际支持的功能、自托管的原理,以及它与SillyTavern、Backyard AI和RisuAI的比较。',
+      'Agnai([agnai.chat](https://agnai.chat))在GitHub上以[agnaistic/agnai](https://github.com/agnaistic/agnai)维护,是一个采用GNU Affero通用公共许可证v3.0(AGPL-3.0)的开源AI角色扮演聊天平台。与内置自有模型的应用不同,Agnai是一个前端,把对话分发给你所连接的外部AI服务——兼容Kobold的后端、NovelAI、AI Horde、Goose、OpenAI、Anthropic Claude、Replicate、OpenRouter和Mancer。它既可以在agnai.chat上免安装托管使用,也可以通过npm包或Docker自托管,MongoDB和Redis均为可选。本评测是[本地LLM软件目录](https://www.promptquorum.com/directory)中Agnai条目的配套内容,涵盖Agnai实际支持的功能、自托管的原理,以及它与SillyTavern、Backyard AI和RisuAI的比较。',
     metaDescription:
       'Agnai评测2026:开源AI角色扮演聊天,通过npm或Docker自托管(MongoDB可选),支持9种AI服务,角色卡,群聊,以及与SillyTavern和RisuAI的比较。',
     twitterDescription:
@@ -1628,7 +1628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '核心功能:多用户/多机器人群聊、四种角色格式(W++、Square Bracket Format、Boostyle、纯文本)的角色卡、Memory/Lore书,以及AI辅助角色生成。',
           '[agnai.chat](https://agnai.chat)的托管版免安装,提供免费层级,外加可选付费订阅以优先访问Agnai自有的托管模型。',
           'Agnai未将Ollama列为原生AI服务——连接由Ollama提供的模型只能通过OpenAI兼容代理层实现,而非直接集成。',
-          '与[SillyTavern](/zh/local-llms/sillytavern-review)、[Backyard AI](/zh/power-local-llm/backyard-ai-review-local-roleplay-2026)和[RisuAI](/zh/power-local-llm/risuai-review)的比较——[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中的配套条目。',
+          '与[SillyTavern](/zh/local-llms/sillytavern-review)、[Backyard AI](/zh/power-local-llm/backyard-ai-review-local-roleplay-2026)和[RisuAI](/zh/power-local-llm/risuai-review)的比较——[本地LLM软件目录](https://www.promptquorum.com/directory)中的配套条目。',
         ],
       },
       whatIsAgnai: {
@@ -1783,7 +1783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) —— 涵盖所有平台的完整应用与工具目录,包含Agnai自己的条目。',
+          '[本地LLM软件目录](https://www.promptquorum.com/directory) —— 涵盖所有平台的完整应用与工具目录,包含Agnai自己的条目。',
           '[SillyTavern评测](/zh/local-llms/sillytavern-review) —— 扩展丰富、兼容Ollama、配置面最广的替代方案。',
           '[Backyard AI评测:本地AI角色聊天与角色扮演](/zh/power-local-llm/backyard-ai-review-local-roleplay-2026) —— 面向想要零配置读者的单安装程序闭源替代方案。',
           '[RisuAI评测](/zh/power-local-llm/risuai-review) —— 另一个开源角色扮演前端,介于Agnai的多租户与Backyard AI的简单性之间。',
@@ -1802,7 +1802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مراجعة Agnai (2026): منصة دردشة تقمص أدوار بالذكاء الاصطناعي قابلة للاستضافة الذاتية',
     seoTitle: 'مراجعة Agnai 2026: منصة دردشة تقمص أدوار بالذكاء الاصطناعي',
     intro:
-      'Agnai ([agnai.chat](https://agnai.chat))، الذي يُصان على GitHub باسم [agnaistic/agnai](https://github.com/agnaistic/agnai)، هو منصة مفتوحة المصدر لدردشة تقمص الأدوار بالذكاء الاصطناعي مرخّصة بموجب رخصة جنو أفيرو العمومية العامة الإصدار 3.0 (AGPL-3.0). على عكس تطبيق يضمّ نموذجه الخاص، فإن Agnai واجهة أمامية توجّه المحادثات إلى خدمات ذكاء اصطناعي خارجية تقوم أنت بربطها — خلفيات متوافقة مع Kobold، وNovelAI، وAI Horde، وGoose، وOpenAI، وAnthropic Claude، وReplicate، وOpenRouter، وMancer. يعمل إما مستضافًا على agnai.chat دون أي تثبيت، أو مستضافًا ذاتيًا عبر حزمة npm أو Docker، مع كون MongoDB وRedis اختياريَين كليهما. هذه المراجعة مكمّلة لمدخل Agnai في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) وتغطي ما يدعمه Agnai فعليًا، وكيفية عمل الاستضافة الذاتية، ومقارنته بـ SillyTavern وBackyard AI وRisuAI.',
+      'Agnai ([agnai.chat](https://agnai.chat))، الذي يُصان على GitHub باسم [agnaistic/agnai](https://github.com/agnaistic/agnai)، هو منصة مفتوحة المصدر لدردشة تقمص الأدوار بالذكاء الاصطناعي مرخّصة بموجب رخصة جنو أفيرو العمومية العامة الإصدار 3.0 (AGPL-3.0). على عكس تطبيق يضمّ نموذجه الخاص، فإن Agnai واجهة أمامية توجّه المحادثات إلى خدمات ذكاء اصطناعي خارجية تقوم أنت بربطها — خلفيات متوافقة مع Kobold، وNovelAI، وAI Horde، وGoose، وOpenAI، وAnthropic Claude، وReplicate، وOpenRouter، وMancer. يعمل إما مستضافًا على agnai.chat دون أي تثبيت، أو مستضافًا ذاتيًا عبر حزمة npm أو Docker، مع كون MongoDB وRedis اختياريَين كليهما. هذه المراجعة مكمّلة لمدخل Agnai في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory) وتغطي ما يدعمه Agnai فعليًا، وكيفية عمل الاستضافة الذاتية، ومقارنته بـ SillyTavern وBackyard AI وRisuAI.',
     metaDescription:
       'مراجعة Agnai 2026: دردشة تقمص أدوار مفتوحة المصدر بالذكاء الاصطناعي، استضافة ذاتية عبر npm أو Docker (MongoDB اختياري)، 9 خدمات ذكاء اصطناعي مدعومة، بطاقات شخصيات، دردشة جماعية، ومقارنة مع SillyTavern وRisuAI.',
     twitterDescription:
@@ -1885,7 +1885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الميزات الأساسية: محادثات جماعية متعددة المستخدمين/متعددة الروبوتات، وبطاقات شخصيات بأربعة تنسيقات شخصية (W++، وSquare Bracket Format، وBoostyle، والنص العادي)، وكتب الذاكرة/الخلفية القصصية، وتوليد الشخصيات بمساعدة الذكاء الاصطناعي.',
           'النسخة المستضافة على [agnai.chat](https://agnai.chat) لا تحتاج إلى تثبيت وتوفّر مستوى مجانيًا إضافة إلى اشتراك مدفوع اختياري للوصول ذي الأولوية إلى نماذج Agnai المستضافة الخاصة.',
           'لا يُدرج Agnai خدمة Ollama كخدمة ذكاء اصطناعي أصيلة — لا يعمل ربط نموذج مقدَّم عبر Ollama إلا من خلال طبقة وكيل متوافقة مع OpenAI، لا كتكامل مباشر.',
-          'مقارنة مع [SillyTavern](/ar/local-llms/sillytavern-review)، و[Backyard AI](/ar/power-local-llm/backyard-ai-review-local-roleplay-2026)، و[RisuAI](/ar/power-local-llm/risuai-review) — مدخل مكمّل في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+          'مقارنة مع [SillyTavern](/ar/local-llms/sillytavern-review)، و[Backyard AI](/ar/power-local-llm/backyard-ai-review-local-roleplay-2026)، و[RisuAI](/ar/power-local-llm/risuai-review) — مدخل مكمّل في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory).',
         ],
       },
       whatIsAgnai: {
@@ -2040,7 +2040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — دليل شامل للتطبيقات والأدوات لجميع المنصات، بما في ذلك مدخل Agnai الخاص.',
+          '[دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory) — دليل شامل للتطبيقات والأدوات لجميع المنصات، بما في ذلك مدخل Agnai الخاص.',
           '[مراجعة SillyTavern](/ar/local-llms/sillytavern-review) — البديل الغني بالإضافات والمتوافق مع Ollama، بأكبر مساحة إعداد.',
           '[مراجعة Backyard AI: دردشة شخصيات محلية وتقمص أدوار بالذكاء الاصطناعي](/ar/power-local-llm/backyard-ai-review-local-roleplay-2026) — بديل مغلق المصدر بمثبّت واحد للقرّاء الراغبين في صفر إعداد.',
           '[مراجعة RisuAI](/ar/power-local-llm/risuai-review) — واجهة تقمص أدوار أخرى مفتوحة المصدر، تقع بين تعدد المستأجرين في Agnai وبساطة Backyard AI.',
@@ -2059,7 +2059,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Agnai 리뷰(2026): 셀프 호스팅 가능한 AI 롤플레이 채팅',
     seoTitle: 'Agnai 리뷰 2026: AI 롤플레이 채팅 플랫폼',
     intro:
-      'GitHub에서 [agnaistic/agnai](https://github.com/agnaistic/agnai)로 관리되는 Agnai([agnai.chat](https://agnai.chat))는 GNU Affero General Public License v3.0(AGPL-3.0) 하에 배포되는 오픈소스 AI 롤플레이 채팅 플랫폼입니다. 자체 모델을 내장한 앱과 달리 Agnai는 사용자가 연결한 외부 AI 서비스 — Kobold 호환 백엔드, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter, Mancer — 로 대화를 전달하는 프런트엔드입니다. 설치 없이 agnai.chat에서 호스팅 버전으로 사용하거나, npm 패키지 또는 Docker로 셀프 호스팅할 수 있으며 MongoDB와 Redis는 모두 선택 사항입니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 Agnai 항목을 보완하며, Agnai가 실제로 지원하는 기능, 셀프 호스팅 방법, SillyTavern·Backyard AI·RisuAI와의 비교를 다룹니다.',
+      'GitHub에서 [agnaistic/agnai](https://github.com/agnaistic/agnai)로 관리되는 Agnai([agnai.chat](https://agnai.chat))는 GNU Affero General Public License v3.0(AGPL-3.0) 하에 배포되는 오픈소스 AI 롤플레이 채팅 플랫폼입니다. 자체 모델을 내장한 앱과 달리 Agnai는 사용자가 연결한 외부 AI 서비스 — Kobold 호환 백엔드, NovelAI, AI Horde, Goose, OpenAI, Anthropic Claude, Replicate, OpenRouter, Mancer — 로 대화를 전달하는 프런트엔드입니다. 설치 없이 agnai.chat에서 호스팅 버전으로 사용하거나, npm 패키지 또는 Docker로 셀프 호스팅할 수 있으며 MongoDB와 Redis는 모두 선택 사항입니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 있는 Agnai 항목을 보완하며, Agnai가 실제로 지원하는 기능, 셀프 호스팅 방법, SillyTavern·Backyard AI·RisuAI와의 비교를 다룹니다.',
     metaDescription:
       'Agnai 리뷰 2026: 오픈소스 AI 롤플레이 채팅, npm 또는 Docker로 셀프 호스팅(MongoDB 선택), 9개 지원 AI 서비스, 캐릭터 카드, 그룹 채팅, SillyTavern·RisuAI와의 비교.',
     twitterDescription:
@@ -2142,7 +2142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '핵심 기능: 다중 사용자/다중 봇 그룹 대화, 4가지 페르소나 형식(W++, Square Bracket Format, Boostyle, 일반 텍스트)의 캐릭터 카드, Memory/Lore 북, AI 지원 캐릭터 생성.',
           '[agnai.chat](https://agnai.chat)의 호스팅 버전은 설치가 필요 없으며, Agnai 자체 호스팅 모델에 우선 접근할 수 있는 선택적 유료 구독과 함께 무료 등급을 제공합니다.',
           'Agnai는 Ollama를 네이티브 AI 서비스로 기재하지 않습니다 — Ollama가 제공하는 모델 연결은 직접 통합이 아니라 OpenAI 호환 프록시 계층을 통해서만 작동합니다.',
-          '[SillyTavern](/ko/local-llms/sillytavern-review), [Backyard AI](/ko/power-local-llm/backyard-ai-review-local-roleplay-2026), [RisuAI](/ko/power-local-llm/risuai-review)와의 비교 — [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) 내 관련 항목.',
+          '[SillyTavern](/ko/local-llms/sillytavern-review), [Backyard AI](/ko/power-local-llm/backyard-ai-review-local-roleplay-2026), [RisuAI](/ko/power-local-llm/risuai-review)와의 비교 — [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory) 내 관련 항목.',
         ],
       },
       whatIsAgnai: {
@@ -2297,7 +2297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — Agnai 자체 항목을 포함해 모든 플랫폼을 아우르는 포괄적인 앱·도구 디렉터리.',
+          '[로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory) — Agnai 자체 항목을 포함해 모든 플랫폼을 아우르는 포괄적인 앱·도구 디렉터리.',
           '[SillyTavern 리뷰](/ko/local-llms/sillytavern-review) — 확장 기능이 풍부하고 Ollama와 호환되며 가장 넓은 설정 범위를 가진 대안.',
           '[Backyard AI 리뷰: 로컬 AI 캐릭터 채팅과 롤플레이](/ko/power-local-llm/backyard-ai-review-local-roleplay-2026) — 설정이 전혀 필요 없길 원하는 독자를 위한 단일 설치 프로그램의 클로즈드 소스 대안.',
           '[RisuAI 리뷰](/ko/power-local-llm/risuai-review) — Agnai의 멀티 테넌트와 Backyard AI의 단순함 사이에 자리한 또 다른 오픈소스 롤플레이 프런트엔드.',

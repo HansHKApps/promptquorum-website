@@ -56,7 +56,7 @@ export const LOCALE_ROUTED_ROOTS = [
   'power-local-llm', 'prompt-bites', 'smart-home', 'balcony-solar',
   'prompt-engineering', 'local-llms', 'blog', 'frameworks',
   'compare', 'features', 'how-it-works', 'faq', 'about', 'privacy',
-  'waitlist', 'download', 'pq-apps',
+  'waitlist', 'download', 'pq-apps', 'directory',
 ] as const;
 
 export const RTL_LANGS = ['ar'] as const;

@@ -69,7 +69,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Optional "PhoneClaw Gateway" pairs with a Mac on the same local network to use Mac-side Ollama, Codex CLI, or Antigravity CLI models for larger tasks',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to PhoneClaw\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how PhoneClaw compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to PhoneClaw\'s entry in the [Local LLM Software Directory](/directory) — see that page for how PhoneClaw compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -143,14 +143,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'phoneclaw-competitors',
         title: 'PhoneClaw vs. Other AI Agent Tools',
-        content: 'PhoneClaw sits in the broader category of autonomous AI agents — tools that let a model take actions rather than just answer questions — though it is unusual in targeting a phone\'s own native functions specifically. Here is how it compares to other agent tools in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).',
+        content: 'PhoneClaw sits in the broader category of autonomous AI agents — tools that let a model take actions rather than just answer questions — though it is unusual in targeting a phone\'s own native functions specifically. Here is how it compares to other agent tools in the [Local LLM Software Directory](/directory).',
         items: [
           '**[Msty Go](https://msty.app)** — a cross-platform local AI chat and agent app; unlike PhoneClaw, it is not focused on controlling a phone\'s native calendar/reminders/camera functions specifically. See the [Msty Go review](/power-local-llm/msty-go-review).',
           '**[Open Interpreter](https://openinterpreter.com)** — an open-source agent framework that lets a model execute code and control a computer via natural language, aimed at desktops rather than phones. See the [Open Interpreter review](/power-local-llm/open-interpreter-review).',
           '**[Agent Zero](https://github.com/frdel/agent-zero)** — a general-purpose, self-hosted autonomous agent framework for computer tasks, not phone-specific device integrations. See the [Agent Zero review](/power-local-llm/agent-zero-review).',
           '**[Leon AI](https://getleon.ai)** — an open-source personal assistant framework you self-host on a server, rather than an on-device iPhone app. See the [Leon AI review](/power-local-llm/leon-ai-review).',
         ],
-        note: 'PhoneClaw\'s specific niche — an on-device agent that directly controls iOS calendar, reminders, contacts, and camera — has few close, phone-native competitors as of this review. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog of agent and mobile AI tools.',
+        note: 'PhoneClaw\'s specific niche — an on-device agent that directly controls iOS calendar, reminders, contacts, and camera — has few close, phone-native competitors as of this review. See the [Local LLM Software Directory](/directory) for the full catalog of agent and mobile AI tools.',
       },
       whoShouldUse: {
         id: 'who-should-use-phoneclaw',
@@ -213,7 +213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'What is Mac Gateway?', a: 'Mac Gateway is an optional PhoneClaw feature that pairs your iPhone with a Mac on the same local network, so PhoneClaw can route larger requests to Mac-side Ollama, Codex CLI, or Antigravity CLI models when a task exceeds what the phone can run on its own.' },
           { q: 'How many GitHub stars does PhoneClaw have?', a: 'The [GitHub API](https://api.github.com/repos/kellyvv/PhoneClaw) showed 1,244 stars and 168 forks as of September 12, 2026. Check the repository directly for the current count.' },
           { q: 'Has PromptQuorum tested PhoneClaw hands-on?', a: 'This review is based on PhoneClaw\'s own repository, README documentation, and license file, cross-checked against the GitHub API for star count and license — it does not claim independent benchmarking of PhoneClaw\'s on-device model performance.' },
-          { q: 'What are the closest alternatives to PhoneClaw?', a: 'Broader AI agent tools covering some overlapping ground include Msty Go, Open Interpreter, Agent Zero, and Leon AI — though none of them target an iPhone\'s native calendar/reminders/camera functions the way PhoneClaw does. See the comparison section above and the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for more.' },
+          { q: 'What are the closest alternatives to PhoneClaw?', a: 'Broader AI agent tools covering some overlapping ground include Msty Go, Open Interpreter, Agent Zero, and Leon AI — though none of them target an iPhone\'s native calendar/reminders/camera functions the way PhoneClaw does. See the comparison section above and the [Local LLM Software Directory](/directory) for more.' },
         ],
       },
       sources: {
@@ -229,7 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including PhoneClaw\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including PhoneClaw\'s directory entry.',
           '[Msty Go Review 2026](/power-local-llm/msty-go-review) — a cross-platform local AI agent app, for comparison.',
           '[Open Interpreter Review](/power-local-llm/open-interpreter-review) — an open-source agent framework for controlling a computer via natural language.',
           '[Agent Zero Review](/power-local-llm/agent-zero-review) — a self-hosted, general-purpose autonomous agent framework.',
@@ -304,7 +304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Optionales „PhoneClaw Gateway" koppelt sich mit einem Mac im selben lokalen Netzwerk, um Mac-seitige Ollama-, Codex-CLI- oder Antigravity-CLI-Modelle für größere Aufgaben zu nutzen',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu PhoneClaws Eintrag im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie PhoneClaw im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu PhoneClaws Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie PhoneClaw im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -378,14 +378,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'phoneclaw-competitors',
         title: 'PhoneClaw vs. andere KI-Agenten-Tools',
-        content: 'PhoneClaw gehört zur breiteren Kategorie autonomer KI-Agenten — Tools, die ein Modell handeln lassen, statt nur Fragen zu beantworten —, ist aber ungewöhnlich, weil es speziell auf die nativen Funktionen eines Telefons abzielt. So schneidet es im Vergleich zu anderen Agenten-Tools im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) ab.',
+        content: 'PhoneClaw gehört zur breiteren Kategorie autonomer KI-Agenten — Tools, die ein Modell handeln lassen, statt nur Fragen zu beantworten —, ist aber ungewöhnlich, weil es speziell auf die nativen Funktionen eines Telefons abzielt. So schneidet es im Vergleich zu anderen Agenten-Tools im [lokalen KI-Software-Verzeichnis](/de/directory) ab.',
         items: [
           '**[Msty Go](https://msty.app)** — eine plattformübergreifende lokale KI-Chat- und Agenten-App; anders als PhoneClaw ist sie nicht speziell auf die Steuerung der nativen Kalender-/Erinnerungs-/Kamera-Funktionen eines Telefons ausgerichtet. Siehe den [Msty Go Review](/de/power-local-llm/msty-go-review).',
           '**[Open Interpreter](https://openinterpreter.com)** — ein Open-Source-Agenten-Framework, mit dem ein Modell Code ausführen und einen Computer per natürlicher Sprache steuern kann, ausgerichtet auf Desktops statt Telefone. Siehe den [Open Interpreter Review](/de/power-local-llm/open-interpreter-review).',
           '**[Agent Zero](https://github.com/frdel/agent-zero)** — ein universelles, selbstgehostetes autonomes Agenten-Framework für Computeraufgaben, keine telefonspezifischen Geräteintegrationen. Siehe den [Agent Zero Review](/de/power-local-llm/agent-zero-review).',
           '**[Leon AI](https://getleon.ai)** — ein quelloffenes Framework für persönliche Assistenten, das man selbst auf einem Server hostet, statt eine On-Device-iPhone-App zu sein. Siehe den [Leon AI Review](/de/power-local-llm/leon-ai-review).',
         ],
-        note: 'PhoneClaws spezifische Nische — ein On-Device-Agent, der direkt iOS-Kalender, -Erinnerungen, -Kontakte und -Kamera steuert — hat zum Zeitpunkt dieser Review nur wenige enge, telefonnative Wettbewerber. Siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog an Agenten- und Mobil-KI-Tools.',
+        note: 'PhoneClaws spezifische Nische — ein On-Device-Agent, der direkt iOS-Kalender, -Erinnerungen, -Kontakte und -Kamera steuert — hat zum Zeitpunkt dieser Review nur wenige enge, telefonnative Wettbewerber. Siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen Katalog an Agenten- und Mobil-KI-Tools.',
       },
       whoShouldUse: {
         id: 'who-should-use-phoneclaw',
@@ -448,7 +448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Was ist Mac Gateway?', a: 'Mac Gateway ist eine optionale PhoneClaw-Funktion, die Ihr iPhone mit einem Mac im selben lokalen Netzwerk koppelt, sodass PhoneClaw größere Anfragen an Mac-seitige Ollama-, Codex-CLI- oder Antigravity-CLI-Modelle weiterleiten kann, wenn eine Aufgabe die Fähigkeiten des Telefons allein übersteigt.' },
           { q: 'Wie viele GitHub-Sterne hat PhoneClaw?', a: 'Die [GitHub API](https://api.github.com/repos/kellyvv/PhoneClaw) zeigte zum 12. September 2026 1.244 Sterne und 168 Forks. Prüfen Sie das Repository direkt für die aktuelle Zahl.' },
           { q: 'Hat PromptQuorum PhoneClaw praktisch getestet?', a: 'Diese Review basiert auf PhoneClaws eigenem Repository, der README-Dokumentation und der Lizenzdatei, abgeglichen mit der GitHub API für Sternezahl und Lizenz — sie beansprucht kein unabhängiges Benchmarking der On-Device-Modellleistung von PhoneClaw.' },
-          { q: 'Was sind die nächstliegenden Alternativen zu PhoneClaw?', a: 'Breitere KI-Agenten-Tools mit teilweise überschneidendem Funktionsumfang sind unter anderem Msty Go, Open Interpreter, Agent Zero und Leon AI — allerdings zielt keines davon so wie PhoneClaw speziell auf die nativen Kalender-/Erinnerungs-/Kamera-Funktionen eines iPhones ab. Siehe den Vergleichsabschnitt oben und das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für mehr.' },
+          { q: 'Was sind die nächstliegenden Alternativen zu PhoneClaw?', a: 'Breitere KI-Agenten-Tools mit teilweise überschneidendem Funktionsumfang sind unter anderem Msty Go, Open Interpreter, Agent Zero und Leon AI — allerdings zielt keines davon so wie PhoneClaw speziell auf die nativen Kalender-/Erinnerungs-/Kamera-Funktionen eines iPhones ab. Siehe den Vergleichsabschnitt oben und das [lokale KI-Software-Verzeichnis](/de/directory) für mehr.' },
         ],
       },
       sources: {
@@ -464,7 +464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich PhoneClaws Verzeichniseintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich PhoneClaws Verzeichniseintrag.',
           '[Msty Go Review 2026](/de/power-local-llm/msty-go-review) — eine plattformübergreifende lokale KI-Agenten-App, zum Vergleich.',
           '[Open Interpreter Review](/de/power-local-llm/open-interpreter-review) — ein Open-Source-Agenten-Framework zur Steuerung eines Computers per natürlicher Sprache.',
           '[Agent Zero Review](/de/power-local-llm/agent-zero-review) — ein selbstgehostetes, universelles autonomes Agenten-Framework.',
@@ -539,7 +539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le « PhoneClaw Gateway » optionnel se couple avec un Mac sur le même réseau local pour utiliser des modèles Mac côté Ollama, Codex CLI ou Antigravity CLI pour des tâches plus lourdes',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de PhoneClaw dans le [répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment PhoneClaw se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de PhoneClaw dans le [répertoire des logiciels d\'IA locale](/fr/directory) — consultez cette page pour voir comment PhoneClaw se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -613,14 +613,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'phoneclaw-competitors',
         title: 'PhoneClaw face aux autres outils d\'agents IA',
-        content: 'PhoneClaw appartient à la catégorie plus large des agents IA autonomes — des outils qui permettent à un modèle d\'agir plutôt que de simplement répondre à des questions —, bien qu\'il soit inhabituel en ciblant spécifiquement les fonctions natives d\'un téléphone. Voici comment il se compare à d\'autres outils d\'agents dans le [répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory).',
+        content: 'PhoneClaw appartient à la catégorie plus large des agents IA autonomes — des outils qui permettent à un modèle d\'agir plutôt que de simplement répondre à des questions —, bien qu\'il soit inhabituel en ciblant spécifiquement les fonctions natives d\'un téléphone. Voici comment il se compare à d\'autres outils d\'agents dans le [répertoire des logiciels d\'IA locale](/fr/directory).',
         items: [
           '**[Msty Go](https://msty.app)** — une application de chat et d\'agent IA locale multiplateforme ; contrairement à PhoneClaw, elle ne se concentre pas spécifiquement sur le contrôle des fonctions natives calendrier/rappels/caméra d\'un téléphone. Voir la [review de Msty Go](/fr/power-local-llm/msty-go-review).',
           '**[Open Interpreter](https://openinterpreter.com)** — un framework d\'agent open source permettant à un modèle d\'exécuter du code et de contrôler un ordinateur en langage naturel, destiné aux ordinateurs de bureau plutôt qu\'aux téléphones. Voir la [review d\'Open Interpreter](/fr/power-local-llm/open-interpreter-review).',
           '**[Agent Zero](https://github.com/frdel/agent-zero)** — un framework d\'agent autonome auto-hébergé et généraliste pour des tâches informatiques, sans intégrations spécifiques à un téléphone. Voir la [review d\'Agent Zero](/fr/power-local-llm/agent-zero-review).',
           '**[Leon AI](https://getleon.ai)** — un framework d\'assistant personnel open source que vous auto-hébergez sur un serveur, plutôt qu\'une application iPhone sur l\'appareil. Voir la [review de Leon AI](/fr/power-local-llm/leon-ai-review).',
         ],
-        note: 'La niche spécifique de PhoneClaw — un agent sur l\'appareil qui contrôle directement le calendrier, les rappels, les contacts et la caméra iOS — compte peu de concurrents proches et nativement téléphoniques au moment de cette review. Voir le [répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet des outils d\'agents et d\'IA mobile.',
+        note: 'La niche spécifique de PhoneClaw — un agent sur l\'appareil qui contrôle directement le calendrier, les rappels, les contacts et la caméra iOS — compte peu de concurrents proches et nativement téléphoniques au moment de cette review. Voir le [répertoire des logiciels d\'IA locale](/fr/directory) pour le catalogue complet des outils d\'agents et d\'IA mobile.',
       },
       whoShouldUse: {
         id: 'who-should-use-phoneclaw',
@@ -683,7 +683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Qu\'est-ce que Mac Gateway ?', a: 'Mac Gateway est une fonctionnalité optionnelle de PhoneClaw qui couple votre iPhone avec un Mac sur le même réseau local, afin que PhoneClaw puisse acheminer des requêtes plus lourdes vers des modèles Mac côté Ollama, Codex CLI ou Antigravity CLI lorsqu\'une tâche dépasse ce que le téléphone peut exécuter seul.' },
           { q: 'Combien d\'étoiles GitHub PhoneClaw a-t-il ?', a: 'L\'[API GitHub](https://api.github.com/repos/kellyvv/PhoneClaw) affichait 1 244 étoiles et 168 forks au 12 septembre 2026. Vérifiez le dépôt directement pour le nombre actuel.' },
           { q: 'PromptQuorum a-t-il testé PhoneClaw de manière pratique ?', a: 'Cette review s\'appuie sur le dépôt propre de PhoneClaw, sa documentation README et son fichier de licence, recoupés avec l\'API GitHub pour le nombre d\'étoiles et la licence — elle ne prétend pas à un benchmarking indépendant des performances des modèles sur l\'appareil de PhoneClaw.' },
-          { q: 'Quelles sont les alternatives les plus proches de PhoneClaw ?', a: 'Des outils d\'agents IA plus larges couvrant un terrain partiellement similaire incluent Msty Go, Open Interpreter, Agent Zero et Leon AI — bien qu\'aucun ne cible les fonctions natives calendrier/rappels/caméra d\'un iPhone comme le fait PhoneClaw. Voir la section de comparaison ci-dessus et le [répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) pour plus d\'options.' },
+          { q: 'Quelles sont les alternatives les plus proches de PhoneClaw ?', a: 'Des outils d\'agents IA plus larges couvrant un terrain partiellement similaire incluent Msty Go, Open Interpreter, Agent Zero et Leon AI — bien qu\'aucun ne cible les fonctions natives calendrier/rappels/caméra d\'un iPhone comme le fait PhoneClaw. Voir la section de comparaison ci-dessus et le [répertoire des logiciels d\'IA locale](/fr/directory) pour plus d\'options.' },
         ],
       },
       sources: {
@@ -699,7 +699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire des logiciels d\'IA locale 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche de PhoneClaw.',
+          '[Répertoire des logiciels d\'IA locale 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche de PhoneClaw.',
           '[Review de Msty Go 2026](/fr/power-local-llm/msty-go-review) — une application d\'agent IA locale multiplateforme, à titre de comparaison.',
           '[Review d\'Open Interpreter](/fr/power-local-llm/open-interpreter-review) — un framework d\'agent open source pour contrôler un ordinateur en langage naturel.',
           '[Review d\'Agent Zero](/fr/power-local-llm/agent-zero-review) — un framework d\'agent autonome auto-hébergé et généraliste.',
@@ -774,7 +774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El "PhoneClaw Gateway" opcional se empareja con un Mac en la misma red local para usar modelos de Mac vía Ollama, Codex CLI o Antigravity CLI en tareas más grandes',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de PhoneClaw en el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) — consulte esa página para ver de un vistazo cómo se compara PhoneClaw con decenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de PhoneClaw en el [directorio de software de IA local](/es/directory) — consulte esa página para ver de un vistazo cómo se compara PhoneClaw con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -848,14 +848,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'phoneclaw-competitors',
         title: 'PhoneClaw frente a otras herramientas de agentes de IA',
-        content: 'PhoneClaw se sitúa en la categoría más amplia de agentes de IA autónomos — herramientas que permiten que un modelo actúe en lugar de solo responder preguntas —, aunque es inusual al dirigirse específicamente a las funciones nativas de un teléfono. Así se compara con otras herramientas de agentes en el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory).',
+        content: 'PhoneClaw se sitúa en la categoría más amplia de agentes de IA autónomos — herramientas que permiten que un modelo actúe en lugar de solo responder preguntas —, aunque es inusual al dirigirse específicamente a las funciones nativas de un teléfono. Así se compara con otras herramientas de agentes en el [directorio de software de IA local](/es/directory).',
         items: [
           '**[Msty Go](https://msty.app)** — una app de chat y agente de IA local multiplataforma; a diferencia de PhoneClaw, no se centra específicamente en controlar las funciones nativas de calendario/recordatorios/cámara de un teléfono. Vea la [review de Msty Go](/es/power-local-llm/msty-go-review).',
           '**[Open Interpreter](https://openinterpreter.com)** — un framework de agente de código abierto que permite a un modelo ejecutar código y controlar un ordenador mediante lenguaje natural, orientado a ordenadores de escritorio en lugar de teléfonos. Vea la [review de Open Interpreter](/es/power-local-llm/open-interpreter-review).',
           '**[Agent Zero](https://github.com/frdel/agent-zero)** — un framework de agente autónomo autoalojado y de propósito general para tareas informáticas, no integraciones específicas para teléfonos. Vea la [review de Agent Zero](/es/power-local-llm/agent-zero-review).',
           '**[Leon AI](https://getleon.ai)** — un framework de asistente personal de código abierto que se autoaloja en un servidor, en lugar de ser una app en el dispositivo para iPhone. Vea la [review de Leon AI](/es/power-local-llm/leon-ai-review).',
         ],
-        note: 'El nicho específico de PhoneClaw — un agente en el dispositivo que controla directamente el calendario, los recordatorios, los contactos y la cámara de iOS — tiene pocos competidores cercanos y nativos de teléfono al momento de esta review. Vea el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo de herramientas de agentes e IA móvil.',
+        note: 'El nicho específico de PhoneClaw — un agente en el dispositivo que controla directamente el calendario, los recordatorios, los contactos y la cámara de iOS — tiene pocos competidores cercanos y nativos de teléfono al momento de esta review. Vea el [directorio de software de IA local](/es/directory) para el catálogo completo de herramientas de agentes e IA móvil.',
       },
       whoShouldUse: {
         id: 'who-should-use-phoneclaw',
@@ -918,7 +918,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Qué es Mac Gateway?', a: 'Mac Gateway es una función opcional de PhoneClaw que empareja su iPhone con un Mac en la misma red local, de modo que PhoneClaw pueda enrutar solicitudes más grandes a modelos de Mac vía Ollama, Codex CLI o Antigravity CLI cuando una tarea supera lo que el teléfono puede ejecutar por sí solo.' },
           { q: '¿Cuántas estrellas de GitHub tiene PhoneClaw?', a: 'La [API de GitHub](https://api.github.com/repos/kellyvv/PhoneClaw) mostraba 1.244 estrellas y 168 forks al 12 de septiembre de 2026. Compruebe el repositorio directamente para la cifra actual.' },
           { q: '¿Ha probado PromptQuorum PhoneClaw de forma práctica?', a: 'Esta review se basa en el propio repositorio de PhoneClaw, su documentación README y su archivo de licencia, contrastados con la API de GitHub para el número de estrellas y la licencia — no afirma haber realizado un benchmarking independiente del rendimiento de los modelos en el dispositivo de PhoneClaw.' },
-          { q: '¿Cuáles son las alternativas más cercanas a PhoneClaw?', a: 'Herramientas de agentes de IA más amplias con alcance parcialmente similar incluyen Msty Go, Open Interpreter, Agent Zero y Leon AI — aunque ninguna se dirige a las funciones nativas de calendario/recordatorios/cámara de un iPhone como lo hace PhoneClaw. Vea la sección de comparación anterior y el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) para más opciones.' },
+          { q: '¿Cuáles son las alternativas más cercanas a PhoneClaw?', a: 'Herramientas de agentes de IA más amplias con alcance parcialmente similar incluyen Msty Go, Open Interpreter, Agent Zero y Leon AI — aunque ninguna se dirige a las funciones nativas de calendario/recordatorios/cámara de un iPhone como lo hace PhoneClaw. Vea la sección de comparación anterior y el [directorio de software de IA local](/es/directory) para más opciones.' },
         ],
       },
       sources: {
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de IA local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de PhoneClaw.',
+          '[Directorio de software de IA local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de PhoneClaw.',
           '[Review de Msty Go 2026](/es/power-local-llm/msty-go-review) — una app de agente de IA local multiplataforma, para comparar.',
           '[Review de Open Interpreter](/es/power-local-llm/open-interpreter-review) — un framework de agente de código abierto para controlar un ordenador mediante lenguaje natural.',
           '[Review de Agent Zero](/es/power-local-llm/agent-zero-review) — un framework de agente autónomo autoalojado y de propósito general.',
@@ -1009,7 +1009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O "PhoneClaw Gateway" opcional pareia com um Mac na mesma rede local para usar modelos do lado Mac via Ollama, Codex CLI ou Antigravity CLI em tarefas maiores',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da ficha do PhoneClaw no [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o PhoneClaw com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta review é o complemento aprofundado da ficha do PhoneClaw no [diretório de software de IA local](/pt/directory) — veja essa página para comparar rapidamente o PhoneClaw com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1083,14 +1083,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'phoneclaw-competitors',
         title: 'PhoneClaw vs. outras ferramentas de agentes de IA',
-        content: 'O PhoneClaw está na categoria mais ampla de agentes de IA autônomos — ferramentas que permitem que um modelo aja em vez de apenas responder perguntas —, embora seja incomum por mirar especificamente nas funções nativas de um telefone. Veja como ele se compara a outras ferramentas de agentes no [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory).',
+        content: 'O PhoneClaw está na categoria mais ampla de agentes de IA autônomos — ferramentas que permitem que um modelo aja em vez de apenas responder perguntas —, embora seja incomum por mirar especificamente nas funções nativas de um telefone. Veja como ele se compara a outras ferramentas de agentes no [diretório de software de IA local](/pt/directory).',
         items: [
           '**[Msty Go](https://msty.app)** — um app de chat e agente de IA local multiplataforma; ao contrário do PhoneClaw, não é focado especificamente em controlar as funções nativas de calendário/lembretes/câmera de um telefone. Veja a [review do Msty Go](/pt/power-local-llm/msty-go-review).',
           '**[Open Interpreter](https://openinterpreter.com)** — um framework de agente de código aberto que permite que um modelo execute código e controle um computador via linguagem natural, voltado para desktops em vez de telefones. Veja a [review do Open Interpreter](/pt/power-local-llm/open-interpreter-review).',
           '**[Agent Zero](https://github.com/frdel/agent-zero)** — um framework de agente autônomo auto-hospedado e de propósito geral para tarefas de computador, sem integrações específicas para telefones. Veja a [review do Agent Zero](/pt/power-local-llm/agent-zero-review).',
           '**[Leon AI](https://getleon.ai)** — um framework de assistente pessoal de código aberto que você auto-hospeda em um servidor, em vez de ser um app no dispositivo para iPhone. Veja a [review do Leon AI](/pt/power-local-llm/leon-ai-review).',
         ],
-        note: 'O nicho específico do PhoneClaw — um agente no dispositivo que controla diretamente calendário, lembretes, contatos e câmera do iOS — tem poucos concorrentes próximos e nativos de telefone no momento desta review. Veja o [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo de ferramentas de agentes e IA móvel.',
+        note: 'O nicho específico do PhoneClaw — um agente no dispositivo que controla diretamente calendário, lembretes, contatos e câmera do iOS — tem poucos concorrentes próximos e nativos de telefone no momento desta review. Veja o [diretório de software de IA local](/pt/directory) para o catálogo completo de ferramentas de agentes e IA móvel.',
       },
       whoShouldUse: {
         id: 'who-should-use-phoneclaw',
@@ -1153,7 +1153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'O que é o Mac Gateway?', a: 'Mac Gateway é um recurso opcional do PhoneClaw que pareia seu iPhone com um Mac na mesma rede local, para que o PhoneClaw possa encaminhar solicitações maiores a modelos do lado Mac via Ollama, Codex CLI ou Antigravity CLI quando uma tarefa exceder o que o telefone pode executar sozinho.' },
           { q: 'Quantas estrelas no GitHub o PhoneClaw tem?', a: 'A [API do GitHub](https://api.github.com/repos/kellyvv/PhoneClaw) mostrava 1.244 estrelas e 168 forks em 12 de setembro de 2026. Confira o repositório diretamente para o número atual.' },
           { q: 'A PromptQuorum testou o PhoneClaw na prática?', a: 'Esta review se baseia no próprio repositório do PhoneClaw, na documentação README e no arquivo de licença, cruzados com a API do GitHub para número de estrelas e licença — não alega ter feito um benchmarking independente do desempenho dos modelos no dispositivo do PhoneClaw.' },
-          { q: 'Quais são as alternativas mais próximas do PhoneClaw?', a: 'Ferramentas de agentes de IA mais amplas com alcance parcialmente semelhante incluem Msty Go, Open Interpreter, Agent Zero e Leon AI — embora nenhuma delas mire nas funções nativas de calendário/lembretes/câmera de um iPhone como o PhoneClaw faz. Veja a seção de comparação acima e o [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory) para mais opções.' },
+          { q: 'Quais são as alternativas mais próximas do PhoneClaw?', a: 'Ferramentas de agentes de IA mais amplas com alcance parcialmente semelhante incluem Msty Go, Open Interpreter, Agent Zero e Leon AI — embora nenhuma delas mire nas funções nativas de calendário/lembretes/câmera de um iPhone como o PhoneClaw faz. Veja a seção de comparação acima e o [diretório de software de IA local](/pt/directory) para mais opções.' },
         ],
       },
       sources: {
@@ -1169,7 +1169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software de IA local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do PhoneClaw.',
+          '[Diretório de software de IA local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do PhoneClaw.',
           '[Review do Msty Go 2026](/pt/power-local-llm/msty-go-review) — um app de agente de IA local multiplataforma, para comparação.',
           '[Review do Open Interpreter](/pt/power-local-llm/open-interpreter-review) — um framework de agente de código aberto para controlar um computador via linguagem natural.',
           '[Review do Agent Zero](/pt/power-local-llm/agent-zero-review) — um framework de agente autônomo auto-hospedado e de propósito geral.',
@@ -1244,7 +1244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'オプションの「PhoneClaw Gateway」が同一ローカルネットワーク上のMacとペアリングし、より大きなタスクにMac側のOllama、Codex CLI、Antigravity CLIモデルを利用可能',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるPhoneClawのエントリーの詳細版です。PhoneClawが他の数十ものローカルAIツールと比べてどう位置づけられるかは、そちらのページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[ローカルAIソフトウェアディレクトリ](/ja/directory)にあるPhoneClawのエントリーの詳細版です。PhoneClawが他の数十ものローカルAIツールと比べてどう位置づけられるかは、そちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1318,14 +1318,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'phoneclaw-competitors',
         title: 'PhoneClaw対他のAIエージェントツール',
-        content: 'PhoneClawは、モデルが質問に答えるだけでなく行動を取れるようにするツールという、自律型AIエージェントというより広いカテゴリーに属しますが、電話自体のネイティブ機能を特に対象としている点で異色です。[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にある他のエージェントツールとの比較は以下の通りです。',
+        content: 'PhoneClawは、モデルが質問に答えるだけでなく行動を取れるようにするツールという、自律型AIエージェントというより広いカテゴリーに属しますが、電話自体のネイティブ機能を特に対象としている点で異色です。[ローカルAIソフトウェアディレクトリ](/ja/directory)にある他のエージェントツールとの比較は以下の通りです。',
         items: [
           '**[Msty Go](https://msty.app)** — クロスプラットフォームのローカルAIチャット・エージェントアプリ。PhoneClawと異なり、電話のネイティブなカレンダー/リマインダー/カメラ機能の制御を特に重視していない。[Msty Goレビュー](/ja/power-local-llm/msty-go-review)を参照。',
           '**[Open Interpreter](https://openinterpreter.com)** — モデルがコードを実行し自然言語でコンピューターを操作できるオープンソースのエージェントフレームワークで、電話ではなくデスクトップ向け。[Open Interpreterレビュー](/ja/power-local-llm/open-interpreter-review)を参照。',
           '**[Agent Zero](https://github.com/frdel/agent-zero)** — コンピュータータスク向けの汎用的なセルフホスト型自律エージェントフレームワークで、電話固有のデバイス連携ではない。[Agent Zeroレビュー](/ja/power-local-llm/agent-zero-review)を参照。',
           '**[Leon AI](https://getleon.ai)** — オンデバイスのiPhoneアプリではなく、サーバー上でセルフホストするオープンソースのパーソナルアシスタントフレームワーク。[Leon AIレビュー](/ja/power-local-llm/leon-ai-review)を参照。',
         ],
-        note: 'iOSのカレンダー、リマインダー、連絡先、カメラを直接制御するオンデバイスエージェントというPhoneClaw特有のニッチには、このレビュー時点で近い電話ネイティブの競合はほとんどありません。エージェントおよびモバイルAIツールの完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'iOSのカレンダー、リマインダー、連絡先、カメラを直接制御するオンデバイスエージェントというPhoneClaw特有のニッチには、このレビュー時点で近い電話ネイティブの競合はほとんどありません。エージェントおよびモバイルAIツールの完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       whoShouldUse: {
         id: 'who-should-use-phoneclaw',
@@ -1388,7 +1388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Mac Gatewayとは何ですか？', a: 'Mac Gatewayは、iPhoneを同一ローカルネットワーク上のMacとペアリングするPhoneClawのオプション機能で、タスクが電話単体で処理できる範囲を超える場合に、より大きなリクエストをMac側のOllama、Codex CLI、Antigravity CLIモデルに回すことができます。' },
           { q: 'PhoneClawのGitHubスター数はいくつですか？', a: '[GitHub API](https://api.github.com/repos/kellyvv/PhoneClaw)によれば、2026年9月12日時点で1,244個のスターと168個のフォークがありました。現在の数値はリポジトリで直接確認してください。' },
           { q: 'PromptQuorumはPhoneClawを実際にテストしましたか？', a: 'このレビューは、PhoneClaw自身のリポジトリ、READMEのドキュメント、ライセンスファイルに基づき、スター数とライセンスについてはGitHub APIと突き合わせています。PhoneClawのオンデバイスモデル性能について独立したベンチマークを行ったとは主張していません。' },
-          { q: 'PhoneClawに最も近い代替手段は何ですか？', a: '部分的に重なる範囲をカバーするより広いAIエージェントツールには、Msty Go、Open Interpreter、Agent Zero、Leon AIなどがありますが、いずれもPhoneClawのようにiPhoneのネイティブなカレンダー/リマインダー/カメラ機能を対象とはしていません。詳しくは上の比較セクションと[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。' },
+          { q: 'PhoneClawに最も近い代替手段は何ですか？', a: '部分的に重なる範囲をカバーするより広いAIエージェントツールには、Msty Go、Open Interpreter、Agent Zero、Leon AIなどがありますが、いずれもPhoneClawのようにiPhoneのネイティブなカレンダー/リマインダー/カメラ機能を対象とはしていません。詳しくは上の比較セクションと[ローカルAIソフトウェアディレクトリ](/ja/directory)を参照してください。' },
         ],
       },
       sources: {
@@ -1404,7 +1404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルAIソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの完全なカタログ。PhoneClawのディレクトリエントリーを含む。',
+          '[ローカルAIソフトウェアディレクトリ2026](/ja/directory) — この記事が属する、ローカルAIツールの完全なカタログ。PhoneClawのディレクトリエントリーを含む。',
           '[Msty Goレビュー2026](/ja/power-local-llm/msty-go-review) — 比較のための、クロスプラットフォームのローカルAIエージェントアプリ。',
           '[Open Interpreterレビュー](/ja/power-local-llm/open-interpreter-review) — 自然言語でコンピューターを制御するオープンソースのエージェントフレームワーク。',
           '[Agent Zeroレビュー](/ja/power-local-llm/agent-zero-review) — セルフホスト型の汎用自律エージェントフレームワーク。',
@@ -1479,7 +1479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '可选的"PhoneClaw Gateway"与同一局域网内的Mac配对，用于更大任务时使用Mac端的Ollama、Codex CLI或Antigravity CLI模型',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)中PhoneClaw条目的深度补充——该页面展示了PhoneClaw与数十种其他本地AI工具相比的一览对比。' },
+          { type: 'note', text: '本评测是[本地AI软件目录](/zh/directory)中PhoneClaw条目的深度补充——该页面展示了PhoneClaw与数十种其他本地AI工具相比的一览对比。' },
         ],
       },
       overview: {
@@ -1553,14 +1553,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'phoneclaw-competitors',
         title: 'PhoneClaw与其他AI代理工具的对比',
-        content: 'PhoneClaw属于更广泛的自主AI代理类别——即让模型能够采取行动而不只是回答问题的工具——尽管它专门针对手机自身原生功能这一点相当独特。以下是它与[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)中其他代理工具的对比。',
+        content: 'PhoneClaw属于更广泛的自主AI代理类别——即让模型能够采取行动而不只是回答问题的工具——尽管它专门针对手机自身原生功能这一点相当独特。以下是它与[本地AI软件目录](/zh/directory)中其他代理工具的对比。',
         items: [
           '**[Msty Go](https://msty.app)** — 一款跨平台的本地AI聊天与代理应用；与PhoneClaw不同，它并未专门聚焦于控制手机原生的日历/提醒事项/相机功能。参阅[Msty Go评测](/zh/power-local-llm/msty-go-review)。',
           '**[Open Interpreter](https://openinterpreter.com)** — 一款开源代理框架，让模型能够通过自然语言执行代码并控制电脑，面向桌面而非手机。参阅[Open Interpreter评测](/zh/power-local-llm/open-interpreter-review)。',
           '**[Agent Zero](https://github.com/frdel/agent-zero)** — 一款用于电脑任务的通用型自托管自主代理框架，并非针对手机的设备集成。参阅[Agent Zero评测](/zh/power-local-llm/agent-zero-review)。',
           '**[Leon AI](https://getleon.ai)** — 一款你自行在服务器上托管的开源个人助理框架，而不是设备端的iPhone应用。参阅[Leon AI评测](/zh/power-local-llm/leon-ai-review)。',
         ],
-        note: '截至本评测时，PhoneClaw这种直接控制iOS日历、提醒事项、联系人和相机的设备端代理这一特定细分领域，几乎没有紧密贴合的手机原生竞品。完整的代理与移动AI工具目录，请参阅[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '截至本评测时，PhoneClaw这种直接控制iOS日历、提醒事项、联系人和相机的设备端代理这一特定细分领域，几乎没有紧密贴合的手机原生竞品。完整的代理与移动AI工具目录，请参阅[本地AI软件目录](/zh/directory)。',
       },
       whoShouldUse: {
         id: 'who-should-use-phoneclaw',
@@ -1623,7 +1623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Mac Gateway是什么？', a: 'Mac Gateway是PhoneClaw的一项可选功能，可将你的iPhone与同一局域网内的Mac配对，以便在任务超出手机单机处理能力时，将更大的请求转发给Mac端的Ollama、Codex CLI或Antigravity CLI模型。' },
           { q: 'PhoneClaw有多少GitHub star？', a: '根据[GitHub API](https://api.github.com/repos/kellyvv/PhoneClaw)，截至2026年9月12日，star数为1,244，fork数为168。请直接在仓库中查看当前数字。' },
           { q: 'PromptQuorum对PhoneClaw进行过实际测试吗？', a: '本评测基于PhoneClaw自身的仓库、README文档和许可证文件，并与GitHub API核对了star数和许可证信息——并未声称对PhoneClaw设备端模型性能进行过独立基准测试。' },
-          { q: 'PhoneClaw最接近的替代品有哪些？', a: '涵盖部分相似领域的更广泛AI代理工具包括Msty Go、Open Interpreter、Agent Zero和Leon AI——不过它们都没有像PhoneClaw那样专门针对iPhone原生的日历/提醒事项/相机功能。更多内容请参阅上方的对比部分和[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)。' },
+          { q: 'PhoneClaw最接近的替代品有哪些？', a: '涵盖部分相似领域的更广泛AI代理工具包括Msty Go、Open Interpreter、Agent Zero和Leon AI——不过它们都没有像PhoneClaw那样专门针对iPhone原生的日历/提醒事项/相机功能。更多内容请参阅上方的对比部分和[本地AI软件目录](/zh/directory)。' },
         ],
       },
       sources: {
@@ -1639,7 +1639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地AI软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包含PhoneClaw的目录条目。',
+          '[本地AI软件目录2026](/zh/directory) — 本文所属的本地AI工具完整目录，包含PhoneClaw的目录条目。',
           '[Msty Go评测2026](/zh/power-local-llm/msty-go-review) — 一款跨平台的本地AI代理应用，用于对比。',
           '[Open Interpreter评测](/zh/power-local-llm/open-interpreter-review) — 一款用于以自然语言控制电脑的开源代理框架。',
           '[Agent Zero评测](/zh/power-local-llm/agent-zero-review) — 一款自托管的通用型自主代理框架。',
@@ -1714,7 +1714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ميزة "PhoneClaw Gateway" الاختيارية تقترن بجهاز Mac على نفس الشبكة المحلية لاستخدام نماذج جانب Mac مثل Ollama وCodex CLI وAntigravity CLI للمهام الأكبر',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المعمّق لإدخال PhoneClaw في [دليل برامج الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن PhoneClaw بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المعمّق لإدخال PhoneClaw في [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن PhoneClaw بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -1788,14 +1788,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'phoneclaw-competitors',
         title: 'PhoneClaw مقابل أدوات وكلاء الذكاء الاصطناعي الأخرى',
-        content: 'يقع PhoneClaw ضمن الفئة الأوسع لوكلاء الذكاء الاصطناعي المستقلين — أدوات تتيح لنموذج اتخاذ إجراءات بدلاً من مجرد الإجابة عن الأسئلة — رغم أنه غير معتاد في استهدافه الوظائف الأصلية للهاتف تحديداً. إليك كيف يُقارَن بأدوات الوكلاء الأخرى في [دليل برامج الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory).',
+        content: 'يقع PhoneClaw ضمن الفئة الأوسع لوكلاء الذكاء الاصطناعي المستقلين — أدوات تتيح لنموذج اتخاذ إجراءات بدلاً من مجرد الإجابة عن الأسئلة — رغم أنه غير معتاد في استهدافه الوظائف الأصلية للهاتف تحديداً. إليك كيف يُقارَن بأدوات الوكلاء الأخرى في [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory).',
         items: [
           '**[Msty Go](https://msty.app)** — تطبيق دردشة ووكيل ذكاء اصطناعي محلي متعدد المنصات؛ خلافاً لـ PhoneClaw، لا يركّز تحديداً على التحكم في وظائف التقويم/التذكيرات/الكاميرا الأصلية للهاتف. راجع [مراجعة Msty Go](/ar/power-local-llm/msty-go-review).',
           '**[Open Interpreter](https://openinterpreter.com)** — إطار عمل وكيل مفتوح المصدر يتيح لنموذج تنفيذ كود والتحكم في حاسوب عبر اللغة الطبيعية، موجّه لأجهزة سطح المكتب لا الهواتف. راجع [مراجعة Open Interpreter](/ar/power-local-llm/open-interpreter-review).',
           '**[Agent Zero](https://github.com/frdel/agent-zero)** — إطار عمل وكيل مستقل عام الغرض وذاتي الاستضافة لمهام الحاسوب، وليس تكاملات خاصة بالهاتف. راجع [مراجعة Agent Zero](/ar/power-local-llm/agent-zero-review).',
           '**[Leon AI](https://getleon.ai)** — إطار عمل مساعد شخصي مفتوح المصدر تستضيفه بنفسك على خادم، بدلاً من كونه تطبيق آيفون على الجهاز. راجع [مراجعة Leon AI](/ar/power-local-llm/leon-ai-review).',
         ],
-        note: 'المجال المتخصص الذي يشغله PhoneClaw تحديداً — وكيل على الجهاز يتحكم مباشرة في تقويم iOS وتذكيراته وجهات اتصاله وكاميرته — له منافسون قليلون قريبون وأصليون على مستوى الهاتف حتى وقت كتابة هذه المراجعة. راجع [دليل برامج الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل لأدوات الوكلاء والذكاء الاصطناعي على الجوال.',
+        note: 'المجال المتخصص الذي يشغله PhoneClaw تحديداً — وكيل على الجهاز يتحكم مباشرة في تقويم iOS وتذكيراته وجهات اتصاله وكاميرته — له منافسون قليلون قريبون وأصليون على مستوى الهاتف حتى وقت كتابة هذه المراجعة. راجع [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) للحصول على الكتالوج الكامل لأدوات الوكلاء والذكاء الاصطناعي على الجوال.',
       },
       whoShouldUse: {
         id: 'who-should-use-phoneclaw',
@@ -1858,7 +1858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ما هو Mac Gateway؟', a: 'Mac Gateway ميزة اختيارية في PhoneClaw تقرن آيفونك بجهاز Mac على نفس الشبكة المحلية، بحيث يمكن لـ PhoneClaw توجيه الطلبات الأكبر إلى نماذج جانب Mac مثل Ollama أو Codex CLI أو Antigravity CLI عندما تتجاوز مهمة ما قدرة الهاتف وحده.' },
           { q: 'كم عدد نجوم GitHub التي حصل عليها PhoneClaw؟', a: 'أظهرت [واجهة برمجة تطبيقات GitHub](https://api.github.com/repos/kellyvv/PhoneClaw) 1,244 نجمة و168 نسخة متفرعة اعتباراً من 12 سبتمبر 2026. تحقق من المستودع مباشرة للحصول على العدد الحالي.' },
           { q: 'هل اختبرت PromptQuorum تطبيق PhoneClaw عملياً؟', a: 'تعتمد هذه المراجعة على مستودع PhoneClaw نفسه ووثائق README وملف الترخيص، مع مقارنتها بواجهة برمجة تطبيقات GitHub لعدد النجوم والترخيص — ولا تدّعي إجراء اختبار مقارن مستقل لأداء نماذج PhoneClaw على الجهاز.' },
-          { q: 'ما أقرب البدائل لـ PhoneClaw؟', a: 'تشمل أدوات وكلاء الذكاء الاصطناعي الأوسع التي تغطي نطاقاً متداخلاً جزئياً Msty Go وOpen Interpreter وAgent Zero وLeon AI — رغم أن أياً منها لا يستهدف وظائف التقويم/التذكيرات/الكاميرا الأصلية لآيفون كما يفعل PhoneClaw. راجع قسم المقارنة أعلاه و[دليل برامج الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory) للمزيد.' },
+          { q: 'ما أقرب البدائل لـ PhoneClaw؟', a: 'تشمل أدوات وكلاء الذكاء الاصطناعي الأوسع التي تغطي نطاقاً متداخلاً جزئياً Msty Go وOpen Interpreter وAgent Zero وLeon AI — رغم أن أياً منها لا يستهدف وظائف التقويم/التذكيرات/الكاميرا الأصلية لآيفون كما يفعل PhoneClaw. راجع قسم المقارنة أعلاه و[دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) للمزيد.' },
         ],
       },
       sources: {
@@ -1874,7 +1874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برامج الذكاء الاصطناعي المحلي 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال PhoneClaw في الدليل.',
+          '[دليل برامج الذكاء الاصطناعي المحلي 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال PhoneClaw في الدليل.',
           '[مراجعة Msty Go 2026](/ar/power-local-llm/msty-go-review) — تطبيق وكيل ذكاء اصطناعي محلي متعدد المنصات، للمقارنة.',
           '[مراجعة Open Interpreter](/ar/power-local-llm/open-interpreter-review) — إطار عمل وكيل مفتوح المصدر للتحكم في حاسوب عبر اللغة الطبيعية.',
           '[مراجعة Agent Zero](/ar/power-local-llm/agent-zero-review) — إطار عمل وكيل مستقل عام الغرض وذاتي الاستضافة.',
@@ -1949,7 +1949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '선택적 "PhoneClaw Gateway"가 같은 로컬 네트워크의 Mac과 페어링해 더 큰 작업에 Mac 측 Ollama, Codex CLI, Antigravity CLI 모델을 활용',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 PhoneClaw 항목의 심층 보완판입니다 — PhoneClaw가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)에 있는 PhoneClaw 항목의 심층 보완판입니다 — PhoneClaw가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2023,14 +2023,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'phoneclaw-competitors',
         title: 'PhoneClaw 대 다른 AI 에이전트 도구',
-        content: 'PhoneClaw는 모델이 단순히 질문에 답하는 것을 넘어 행동을 취할 수 있게 하는 도구인 자율 AI 에이전트라는 더 넓은 범주에 속하지만, 휴대폰 자체의 네이티브 기능을 구체적으로 겨냥한다는 점에서 독특합니다. [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 다른 에이전트 도구와 어떻게 비교되는지 아래에 정리했습니다.',
+        content: 'PhoneClaw는 모델이 단순히 질문에 답하는 것을 넘어 행동을 취할 수 있게 하는 도구인 자율 AI 에이전트라는 더 넓은 범주에 속하지만, 휴대폰 자체의 네이티브 기능을 구체적으로 겨냥한다는 점에서 독특합니다. [로컬 AI 소프트웨어 디렉터리](/ko/directory)에 있는 다른 에이전트 도구와 어떻게 비교되는지 아래에 정리했습니다.',
         items: [
           '**[Msty Go](https://msty.app)** — 크로스 플랫폼 로컬 AI 채팅 및 에이전트 앱; PhoneClaw와 달리 휴대폰의 네이티브 캘린더/알림/카메라 기능 제어에 구체적으로 초점을 맞추지 않음; [Msty Go 리뷰](/ko/power-local-llm/msty-go-review) 참고.',
           '**[Open Interpreter](https://openinterpreter.com)** — 모델이 코드를 실행하고 자연어로 컴퓨터를 제어할 수 있게 하는 오픈소스 에이전트 프레임워크로, 휴대폰이 아닌 데스크톱을 대상으로 함; [Open Interpreter 리뷰](/ko/power-local-llm/open-interpreter-review) 참고.',
           '**[Agent Zero](https://github.com/frdel/agent-zero)** — 컴퓨터 작업을 위한 범용 셀프 호스팅 자율 에이전트 프레임워크로, 휴대폰 전용 기기 통합이 아님; [Agent Zero 리뷰](/ko/power-local-llm/agent-zero-review) 참고.',
           '**[Leon AI](https://getleon.ai)** — 온디바이스 아이폰 앱이 아니라 서버에서 직접 셀프 호스팅하는 오픈소스 개인 비서 프레임워크; [Leon AI 리뷰](/ko/power-local-llm/leon-ai-review) 참고.',
         ],
-        note: 'iOS 캘린더, 알림, 연락처, 카메라를 직접 제어하는 온디바이스 에이전트라는 PhoneClaw의 특정 틈새 시장은, 이 리뷰 작성 시점 기준으로 가깝고 휴대폰 네이티브인 경쟁자가 거의 없습니다. 에이전트 및 모바일 AI 도구의 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: 'iOS 캘린더, 알림, 연락처, 카메라를 직접 제어하는 온디바이스 에이전트라는 PhoneClaw의 특정 틈새 시장은, 이 리뷰 작성 시점 기준으로 가깝고 휴대폰 네이티브인 경쟁자가 거의 없습니다. 에이전트 및 모바일 AI 도구의 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       whoShouldUse: {
         id: 'who-should-use-phoneclaw',
@@ -2093,7 +2093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Mac Gateway란 무엇인가요?', a: 'Mac Gateway는 아이폰을 같은 로컬 네트워크의 Mac과 페어링하는 PhoneClaw의 선택적 기능으로, 작업이 휴대폰 단독으로 처리할 수 있는 범위를 넘어설 때 더 큰 요청을 Mac 측 Ollama, Codex CLI, Antigravity CLI 모델로 전달할 수 있게 합니다.' },
           { q: 'PhoneClaw의 GitHub 스타 수는 몇 개인가요?', a: '[GitHub API](https://api.github.com/repos/kellyvv/PhoneClaw)에 따르면 2026년 9월 12일 기준 스타 1,244개, 포크 168개였습니다. 현재 수치는 저장소에서 직접 확인하세요.' },
           { q: 'PromptQuorum이 PhoneClaw를 실제로 테스트했나요?', a: '이 리뷰는 PhoneClaw 자체 저장소, README 문서, 라이선스 파일에 근거하며, 스타 수와 라이선스는 GitHub API와 대조했습니다 — PhoneClaw의 온디바이스 모델 성능에 대한 독자적인 벤치마킹을 수행했다고 주장하지는 않습니다.' },
-          { q: 'PhoneClaw와 가장 가까운 대안은 무엇인가요?', a: '부분적으로 비슷한 영역을 다루는 더 넓은 AI 에이전트 도구로는 Msty Go, Open Interpreter, Agent Zero, Leon AI 등이 있지만, 이들 중 어느 것도 PhoneClaw처럼 아이폰의 네이티브 캘린더/알림/카메라 기능을 겨냥하지는 않습니다. 자세한 내용은 위의 비교 섹션과 [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.' },
+          { q: 'PhoneClaw와 가장 가까운 대안은 무엇인가요?', a: '부분적으로 비슷한 영역을 다루는 더 넓은 AI 에이전트 도구로는 Msty Go, Open Interpreter, Agent Zero, Leon AI 등이 있지만, 이들 중 어느 것도 PhoneClaw처럼 아이폰의 네이티브 캘린더/알림/카메라 기능을 겨냥하지는 않습니다. 자세한 내용은 위의 비교 섹션과 [로컬 AI 소프트웨어 디렉터리](/ko/directory)를 참고하세요.' },
         ],
       },
       sources: {
@@ -2109,7 +2109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 AI 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — PhoneClaw의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 AI 소프트웨어 디렉터리 2026](/ko/directory) — PhoneClaw의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
           '[Msty Go 리뷰 2026](/ko/power-local-llm/msty-go-review) — 비교를 위한 크로스 플랫폼 로컬 AI 에이전트 앱.',
           '[Open Interpreter 리뷰](/ko/power-local-llm/open-interpreter-review) — 자연어로 컴퓨터를 제어하는 오픈소스 에이전트 프레임워크.',
           '[Agent Zero 리뷰](/ko/power-local-llm/agent-zero-review) — 셀프 호스팅 범용 자율 에이전트 프레임워크.',

@@ -244,7 +244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp Explained](/power-local-llm/llama-cpp-explained) — the widest-hardware-support alternative, actively maintained across NVIDIA, AMD, Apple Silicon, and CPU-only setups.',
           '[KoboldCpp Review](/power-local-llm/koboldcpp-review) — a single-file, zero-install engine built on llama.cpp, for a different use case (roleplay/story writing) than ExLlama\'s speed focus.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools, including other quantization-focused engines.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools, including other quantization-focused engines.',
         ],
       },
     },
@@ -490,7 +490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp erklärt](/de/power-local-llm/llama-cpp-explained) — die Alternative mit der breitesten Hardware-Unterstützung, aktiv gepflegt über NVIDIA-, AMD-, Apple-Silicon- und reine CPU-Setups hinweg.',
           '[KoboldCpp Review](/de/power-local-llm/koboldcpp-review) — eine Single-File-, Zero-Install-Engine auf Basis von llama.cpp, für einen anderen Anwendungsfall (Rollenspiel/Story-Schreiben) als den Geschwindigkeitsfokus von ExLlama.',
-          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, einschließlich weiterer quantisierungsfokussierter Engines.',
+          '[Local LLM Software Directory](/de/directory) — der vollständige Katalog lokaler KI-Tools, einschließlich weiterer quantisierungsfokussierter Engines.',
         ],
       },
     },
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp expliqué](/fr/power-local-llm/llama-cpp-explained) — l\'alternative au support matériel le plus large, activement maintenue sur NVIDIA, AMD, Apple Silicon, et les installations CPU uniquement.',
           '[Avis KoboldCpp](/fr/power-local-llm/koboldcpp-review) — un moteur en un seul fichier, zéro installation, basé sur llama.cpp, pour un cas d\'usage différent (roleplay/écriture d\'histoires) du focus vitesse d\'ExLlama.',
-          '[Répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale, incluant d\'autres moteurs axés sur la quantification.',
+          '[Répertoire de logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d\'IA locale, incluant d\'autres moteurs axés sur la quantification.',
         ],
       },
     },
@@ -982,7 +982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp explicado](/es/power-local-llm/llama-cpp-explained) — la alternativa con el soporte de hardware más amplio, activamente mantenida en configuraciones NVIDIA, AMD, Apple Silicon, y solo CPU.',
           '[Reseña de KoboldCpp](/es/power-local-llm/koboldcpp-review) — un motor de un solo archivo, sin instalación, construido sobre llama.cpp, para un caso de uso distinto (rol/escritura de historias) al enfoque en velocidad de ExLlama.',
-          '[Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local, incluyendo otros motores centrados en cuantización.',
+          '[Directorio de software de LLM local](/es/directory) — el catálogo completo de herramientas de IA local, incluyendo otros motores centrados en cuantización.',
         ],
       },
     },
@@ -1228,7 +1228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp解説](/ja/power-local-llm/llama-cpp-explained) — NVIDIA、AMD、Apple Silicon、CPUのみのセットアップにわたって積極的にメンテナンスされている、最も幅広いハードウェア対応の代替ツール。',
           '[KoboldCppレビュー](/ja/power-local-llm/koboldcpp-review) — llama.cpp上に構築された、単一ファイルでインストール不要のエンジン。ExLlamaの速度重視とは異なる用途(ロールプレイ/ストーリー執筆)向け。',
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — 他の量子化重視のエンジンを含む、ローカルAIツールの全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/directory) — 他の量子化重視のエンジンを含む、ローカルAIツールの全カタログ。',
         ],
       },
     },
@@ -1474,7 +1474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp详解](/zh/power-local-llm/llama-cpp-explained) — 支持硬件范围最广的替代方案,在NVIDIA、AMD、Apple Silicon和纯CPU搭建上都得到积极维护。',
           '[KoboldCpp评测](/zh/power-local-llm/koboldcpp-review) — 一个基于llama.cpp构建的单文件、零安装引擎,面向与ExLlama速度导向不同的用例(角色扮演/故事写作)。',
-          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本地AI工具的完整目录,包括其他专注于量化的引擎。',
+          '[本地LLM软件目录](/zh/directory) — 本地AI工具的完整目录,包括其他专注于量化的引擎。',
         ],
       },
     },
@@ -1720,7 +1720,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp Explicado](/pt/power-local-llm/llama-cpp-explained) — a alternativa com o suporte de hardware mais amplo, ativamente mantida em configurações NVIDIA, AMD, Apple Silicon e apenas CPU.',
           '[Análise do KoboldCpp](/pt/power-local-llm/koboldcpp-review) — uma engine de arquivo único, zero instalação, construída sobre o llama.cpp, para um caso de uso diferente (roleplay/escrita de histórias) do foco em velocidade do ExLlama.',
-          '[Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local, incluindo outras engines focadas em quantização.',
+          '[Diretório de Software LLM Local](/pt/directory) — o catálogo completo de ferramentas de IA local, incluindo outras engines focadas em quantização.',
         ],
       },
     },
@@ -1820,7 +1820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       relatedReading: { id: 'related-reading', title: 'قراءات ذات صلة',
-        items: ['[llama.cpp Explained](/ar/power-local-llm/llama-cpp-explained) — البديل الأوسع دعمًا للعتاد، ويُصان بنشاط عبر إعدادات NVIDIA وAMD وApple Silicon والمعالج المركزي فقط.', '[KoboldCpp Review](/ar/power-local-llm/koboldcpp-review) — محرك آخر بملف واحد بلا تثبيت مبني على llama.cpp، لحالة استخدام مختلفة (لعب الأدوار/كتابة القصص) عن تركيز ExLlama على السرعة.', '[Local LLM Software Directory](/ar/power-local-llm/local-llm-software-directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلي، بما فيها محركات أخرى مركزة على التكميم.'],
+        items: ['[llama.cpp Explained](/ar/power-local-llm/llama-cpp-explained) — البديل الأوسع دعمًا للعتاد، ويُصان بنشاط عبر إعدادات NVIDIA وAMD وApple Silicon والمعالج المركزي فقط.', '[KoboldCpp Review](/ar/power-local-llm/koboldcpp-review) — محرك آخر بملف واحد بلا تثبيت مبني على llama.cpp، لحالة استخدام مختلفة (لعب الأدوار/كتابة القصص) عن تركيز ExLlama على السرعة.', '[Local LLM Software Directory](/ar/directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلي، بما فيها محركات أخرى مركزة على التكميم.'],
       },
     },
   },
@@ -1919,7 +1919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       relatedReading: { id: 'related-reading', title: '관련 읽을거리',
-        items: ['[llama.cpp Explained](/ko/power-local-llm/llama-cpp-explained) — 가장 폭넓은 하드웨어 지원을 갖춘 대안으로, NVIDIA·AMD·Apple Silicon·CPU 전용 구성 전반에서 활발히 유지 관리된다.', '[KoboldCpp Review](/ko/power-local-llm/koboldcpp-review) — llama.cpp를 기반으로 한 또 다른 단일 파일, 설치 불필요 엔진으로, ExLlama의 속도 중심과 달리 롤플레이와 창작에 초점을 맞춘다.', '[Local LLM Software Directory](/ko/power-local-llm/local-llm-software-directory) — 다른 양자화 중심 엔진을 포함한 로컬 AI 도구 전체 카탈로그.'],
+        items: ['[llama.cpp Explained](/ko/power-local-llm/llama-cpp-explained) — 가장 폭넓은 하드웨어 지원을 갖춘 대안으로, NVIDIA·AMD·Apple Silicon·CPU 전용 구성 전반에서 활발히 유지 관리된다.', '[KoboldCpp Review](/ko/power-local-llm/koboldcpp-review) — llama.cpp를 기반으로 한 또 다른 단일 파일, 설치 불필요 엔진으로, ExLlama의 속도 중심과 달리 롤플레이와 창작에 초점을 맞춘다.', '[Local LLM Software Directory](/ko/directory) — 다른 양자화 중심 엔진을 포함한 로컬 AI 도구 전체 카탈로그.'],
       },
     },
   },

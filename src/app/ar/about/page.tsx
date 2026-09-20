@@ -223,7 +223,7 @@ export default function ArAboutPage() {
                   <div className="text-text-primary font-semibold mb-1">محتوى النماذج المحلية</div>
                   <div className="text-sm text-text-secondary">أدلة لتشغيل نماذج اللغة الكبيرة على جهازك الخاص — الإعداد والمتطلبات والمقارنات.</div>
                 </Link>
-                <Link href="/ar/power-local-llm/local-llm-software-directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                <Link href="/ar/directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
                   <div className="text-text-primary font-semibold mb-1">دليل برمجيات النماذج المحلية</div>
                   <div className="text-sm text-text-secondary">دليل قابل للبحث لتطبيقات وأدوات النماذج المحلية، مع مقارنة جنبًا إلى جنب.</div>
                 </Link>

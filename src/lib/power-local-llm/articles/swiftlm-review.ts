@@ -76,7 +76,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '768 GitHub stars and 53 forks as of this review (2026-09-18); repository created March 21, 2026, with releases shipping roughly every 1–2 days in the weeks before this review',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to SwiftLM\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how SwiftLM compares at a glance to dozens of other local AI tools. It is based on SwiftLM\'s own GitHub repository, README, and release history, not on independent PromptQuorum benchmarking of SharpAI\'s published performance figures.' },
+          { type: 'note', text: 'This review is the deep-dive companion to SwiftLM\'s entry in the [Local LLM Software Directory](/directory) — see that page for how SwiftLM compares at a glance to dozens of other local AI tools. It is based on SwiftLM\'s own GitHub repository, README, and release history, not on independent PromptQuorum benchmarking of SharpAI\'s published performance figures.' },
         ],
       },
       overview: {
@@ -221,7 +221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'mlx-lm', 'Best known for': 'Apple\'s own Python reference library for running LLMs on MLX', 'Link': '[mlx-lm Explained](/power-local-llm/mlx-lm-explained)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'This is not an exhaustive list of Apple Silicon inference tools — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including SwiftLM\'s own directory entry.',
+        note: 'This is not an exhaustive list of Apple Silicon inference tools — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including SwiftLM\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -277,7 +277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including SwiftLM\'s own directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including SwiftLM\'s own directory entry.',
           '[oMLX Review](/power-local-llm/omlx-review) — another native MLX inference server for Apple Silicon, with a menu-bar app and SSD-tiered KV cache.',
           '[Rapid-MLX Review](/power-local-llm/rapid-mlx-review) — a native MLX inference server that also serves local image, video, and audio generation.',
           '[mlx-lm Explained](/power-local-llm/mlx-lm-explained) — Apple\'s own Python reference library for running LLMs on MLX, the implementation SwiftLM positions itself against.',
@@ -359,7 +359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '768 GitHub-Stars und 53 Forks zum Zeitpunkt dieses Tests (18.09.2026); Repository erstellt am 21. März 2026, mit Releases, die in den Wochen vor diesem Test etwa alle 1–2 Tage erschienen',
           ],
           callouts: [
-            { type: 'note', text: 'Dieser Test ist die ausführliche Ergänzung zum SwiftLM-Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) – dort finden sich alle lokalen KI-Tools im schnellen Vergleich. Grundlage sind SwiftLMs eigenes GitHub-Repository, README und Release-Historie, nicht unabhängige PromptQuorum-Benchmarks der von SharpAI veröffentlichten Leistungswerte.' },
+            { type: 'note', text: 'Dieser Test ist die ausführliche Ergänzung zum SwiftLM-Eintrag im [Local LLM Software Directory](/de/directory) – dort finden sich alle lokalen KI-Tools im schnellen Vergleich. Grundlage sind SwiftLMs eigenes GitHub-Repository, README und Release-Historie, nicht unabhängige PromptQuorum-Benchmarks der von SharpAI veröffentlichten Leistungswerte.' },
           ],
         },
         overview: {
@@ -504,7 +504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Tool': 'mlx-lm', 'Bekannt für': 'Apples eigene Python-Referenzbibliothek zum Ausführen von LLMs auf MLX', 'Link': '[mlx-lm erklärt](/de/power-local-llm/mlx-lm-explained)' },
           ],
           columns: ['Tool', 'Bekannt für', 'Link'],
-          note: 'Dies ist keine vollständige Liste aller Apple-Silicon-Inferenz-Tools — das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) enthält den vollständigen, regelmäßig aktualisierten Katalog, einschließlich SwiftLMs eigenem Verzeichniseintrag.',
+          note: 'Dies ist keine vollständige Liste aller Apple-Silicon-Inferenz-Tools — das [Local LLM Software Directory](/de/directory) enthält den vollständigen, regelmäßig aktualisierten Katalog, einschließlich SwiftLMs eigenem Verzeichniseintrag.',
         },
         commonMistakes: {
           id: 'common-mistakes',
@@ -560,7 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Weiterführende Artikel',
           items: [
-            '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich SwiftLMs eigenem Verzeichniseintrag.',
+            '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich SwiftLMs eigenem Verzeichniseintrag.',
             '[oMLX Test](/de/power-local-llm/omlx-review) — ein weiterer nativer MLX-Inferenzserver für Apple Silicon, mit Menüleisten-App und SSD-gestuftem KV-Cache.',
             '[Rapid-MLX Test](/de/power-local-llm/rapid-mlx-review) — ein nativer MLX-Inferenzserver, der zusätzlich lokale Bild-, Video- und Audiogenerierung bereitstellt.',
             '[mlx-lm erklärt](/de/power-local-llm/mlx-lm-explained) — Apples eigene Python-Referenzbibliothek zum Ausführen von LLMs auf MLX, die Implementierung, gegen die sich SwiftLM selbst positioniert.',
@@ -642,7 +642,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '768 étoiles GitHub et 53 forks au moment de cette revue (18/09/2026) ; dépôt créé le 21 mars 2026, avec des versions publiées environ tous les 1 à 2 jours dans les semaines précédant cette revue',
           ],
           callouts: [
-            { type: 'note', text: 'Cette revue est le complément détaillé de l\'entrée de SwiftLM dans l\'[Annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — voir cette page pour comparer SwiftLM en un coup d\'œil à des dizaines d\'autres outils d\'IA locale. Elle s\'appuie sur le dépôt GitHub, le README et l\'historique des versions de SwiftLM lui-même, pas sur un benchmark indépendant de PromptQuorum des chiffres de performance publiés par SharpAI.' },
+            { type: 'note', text: 'Cette revue est le complément détaillé de l\'entrée de SwiftLM dans l\'[Annuaire des logiciels LLM locaux](/fr/directory) — voir cette page pour comparer SwiftLM en un coup d\'œil à des dizaines d\'autres outils d\'IA locale. Elle s\'appuie sur le dépôt GitHub, le README et l\'historique des versions de SwiftLM lui-même, pas sur un benchmark indépendant de PromptQuorum des chiffres de performance publiés par SharpAI.' },
           ],
         },
         overview: {
@@ -787,7 +787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Tool': 'mlx-lm', 'Best known for': 'La propre bibliothèque de référence Python d\'Apple pour exécuter des LLM sur MLX', 'Link': '[mlx-lm expliqué](/fr/power-local-llm/mlx-lm-explained)' },
           ],
           columns: ['Outil', 'Connu pour', 'Lien'],
-          note: 'Ceci n\'est pas une liste exhaustive des outils d\'inférence pour Apple Silicon — consultez l\'[Annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée propre à SwiftLM dans l\'annuaire.',
+          note: 'Ceci n\'est pas une liste exhaustive des outils d\'inférence pour Apple Silicon — consultez l\'[Annuaire des logiciels LLM locaux](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée propre à SwiftLM dans l\'annuaire.',
         },
         commonMistakes: {
           id: 'common-mistakes',
@@ -843,7 +843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Lectures complémentaires',
           items: [
-            '[Annuaire des logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant l\'entrée propre à SwiftLM dans l\'annuaire.',
+            '[Annuaire des logiciels LLM locaux 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant l\'entrée propre à SwiftLM dans l\'annuaire.',
             '[Revue oMLX](/fr/power-local-llm/omlx-review) — un autre serveur d\'inférence MLX natif pour Apple Silicon, avec une app dans la barre de menus et un cache KV à niveaux SSD.',
             '[Revue Rapid-MLX](/fr/power-local-llm/rapid-mlx-review) — un serveur d\'inférence MLX natif qui sert aussi la génération locale d\'images, vidéos et audio.',
             '[mlx-lm expliqué](/fr/power-local-llm/mlx-lm-explained) — la propre bibliothèque de référence Python d\'Apple pour exécuter des LLM sur MLX, l\'implémentation face à laquelle SwiftLM se positionne.',
@@ -925,7 +925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '768 estrellas y 53 forks en GitHub al momento de esta reseña (18-09-2026); repositorio creado el 21 de marzo de 2026, con lanzamientos aproximadamente cada 1–2 días en las semanas previas a esta reseña',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la ficha de SwiftLM en el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara SwiftLM de un vistazo con docenas de otras herramientas de IA local. Se basa en el propio repositorio de GitHub, el README y el historial de lanzamientos de SwiftLM, no en pruebas de rendimiento independientes de PromptQuorum sobre las cifras publicadas por SharpAI.' },
+          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la ficha de SwiftLM en el [Directorio de Software de LLM Local](/es/directory) — consulta esa página para ver cómo se compara SwiftLM de un vistazo con docenas de otras herramientas de IA local. Se basa en el propio repositorio de GitHub, el README y el historial de lanzamientos de SwiftLM, no en pruebas de rendimiento independientes de PromptQuorum sobre las cifras publicadas por SharpAI.' },
         ],
       },
       overview: {
@@ -1070,7 +1070,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'mlx-lm', 'Best known for': 'Biblioteca de referencia en Python de la propia Apple para ejecutar LLMs en MLX', 'Link': '[mlx-lm explicado](/es/power-local-llm/mlx-lm-explained)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Esta no es una lista exhaustiva de herramientas de inferencia para Apple Silicon — consulta el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) para ver el catálogo completo y actualizado periódicamente, incluida la propia ficha de SwiftLM en el directorio.',
+        note: 'Esta no es una lista exhaustiva de herramientas de inferencia para Apple Silicon — consulta el [Directorio de Software de LLM Local](/es/directory) para ver el catálogo completo y actualizado periódicamente, incluida la propia ficha de SwiftLM en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1126,7 +1126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software de LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia ficha de SwiftLM en el directorio.',
+          '[Directorio de Software de LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia ficha de SwiftLM en el directorio.',
           '[Reseña de oMLX](/es/power-local-llm/omlx-review) — otro servidor de inferencia MLX nativo para Apple Silicon, con app de menú y caché KV escalonada en SSD.',
           '[Reseña de Rapid-MLX](/es/power-local-llm/rapid-mlx-review) — un servidor de inferencia MLX nativo que también sirve generación local de imagen, video y audio.',
           '[mlx-lm explicado](/es/power-local-llm/mlx-lm-explained) — la biblioteca de referencia en Python de la propia Apple para ejecutar LLMs en MLX, la implementación frente a la que se posiciona SwiftLM.',
@@ -1208,7 +1208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '768 estrelas e 53 forks no GitHub no momento desta análise (18/09/2026); repositório criado em 21 de março de 2026, com lançamentos ocorrendo aproximadamente a cada 1–2 dias nas semanas anteriores a esta análise',
           ],
           callouts: [
-            { type: 'note', text: 'Esta análise é o aprofundamento complementar à entrada do SwiftLM no [Diretório de Softwares de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o SwiftLM com dezenas de outras ferramentas de IA local. Ela é baseada no próprio repositório do SwiftLM no GitHub, no README e no histórico de lançamentos, e não em testes de desempenho independentes feitos pela PromptQuorum sobre os números publicados pela SharpAI.' },
+            { type: 'note', text: 'Esta análise é o aprofundamento complementar à entrada do SwiftLM no [Diretório de Softwares de LLM Local](/pt/directory) — veja essa página para comparar rapidamente o SwiftLM com dezenas de outras ferramentas de IA local. Ela é baseada no próprio repositório do SwiftLM no GitHub, no README e no histórico de lançamentos, e não em testes de desempenho independentes feitos pela PromptQuorum sobre os números publicados pela SharpAI.' },
           ],
         },
         overview: {
@@ -1353,7 +1353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Tool': 'mlx-lm', 'Best known for': 'Biblioteca de referência em Python, da própria Apple, para executar LLMs no MLX', 'Link': '[mlx-lm Explicado](/pt/power-local-llm/mlx-lm-explained)' },
           ],
           columns: ['Tool', 'Best known for', 'Link'],
-          note: 'Esta não é uma lista exaustiva de ferramentas de inferência para Apple Silicon — veja o [Diretório de Softwares de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do SwiftLM no diretório.',
+          note: 'Esta não é uma lista exaustiva de ferramentas de inferência para Apple Silicon — veja o [Diretório de Softwares de LLM Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do SwiftLM no diretório.',
         },
         commonMistakes: {
           id: 'common-mistakes',
@@ -1409,7 +1409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: 'Leitura Relacionada',
           items: [
-            '[Diretório de Softwares de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do SwiftLM no diretório.',
+            '[Diretório de Softwares de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do SwiftLM no diretório.',
             '[Avaliação do oMLX](/pt/power-local-llm/omlx-review) — outro servidor de inferência MLX nativo para Apple Silicon, com app na barra de menus e cache KV em camadas via SSD.',
             '[Avaliação do Rapid-MLX](/pt/power-local-llm/rapid-mlx-review) — um servidor de inferência MLX nativo que também serve geração local de imagem, vídeo e áudio.',
             '[mlx-lm Explicado](/pt/power-local-llm/mlx-lm-explained) — a biblioteca de referência em Python, da própria Apple, para executar LLMs no MLX, a implementação contra a qual o SwiftLM se posiciona.',
@@ -1491,7 +1491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '本レビュー時点（2026年9月18日）でGitHubスター768個、フォーク53件。リポジトリは2026年3月21日に作成され、レビュー公開前の数週間ではおよそ1〜2日ごとにリリースが出ていた',
         ],
         callouts: [
-          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)内のSwiftLMのエントリーを補完する詳細版である — SwiftLMが他の数十件のローカルAIツールとどう比較されるかは同ページを参照のこと。本レビューはSwiftLM自身のGitHubリポジトリ、README、リリース履歴に基づいており、SharpAIが公表した性能数値についてPromptQuorumが独自にベンチマークしたものではない。' },
+          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)内のSwiftLMのエントリーを補完する詳細版である — SwiftLMが他の数十件のローカルAIツールとどう比較されるかは同ページを参照のこと。本レビューはSwiftLM自身のGitHubリポジトリ、README、リリース履歴に基づいており、SharpAIが公表した性能数値についてPromptQuorumが独自にベンチマークしたものではない。' },
         ],
       },
       overview: {
@@ -1636,7 +1636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'mlx-lm', 'Best known for': 'MLX上でLLMを実行するためのApple自身のPythonリファレンスライブラリ', 'Link': '[mlx-lm解説](/ja/power-local-llm/mlx-lm-explained)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'これはApple Silicon向け推論ツールの網羅的なリストではない — 全カタログについては[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照。SwiftLM自身のディレクトリエントリーも定期的に更新されている。',
+        note: 'これはApple Silicon向け推論ツールの網羅的なリストではない — 全カタログについては[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照。SwiftLM自身のディレクトリエントリーも定期的に更新されている。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1692,7 +1692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。SwiftLM自身のディレクトリエントリーを含む。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — 本記事が属するローカルAIツールの全カタログ。SwiftLM自身のディレクトリエントリーを含む。',
           '[oMLXレビュー](/ja/power-local-llm/omlx-review) — メニューバーアプリとSSD階層型KVキャッシュを備える、Apple Silicon向けのもう一つのネイティブMLX推論サーバー。',
           '[Rapid-MLXレビュー](/ja/power-local-llm/rapid-mlx-review) — ローカルでの画像・動画・音声生成も提供するネイティブMLX推論サーバー。',
           '[mlx-lm解説](/ja/power-local-llm/mlx-lm-explained) — MLX上でLLMを実行するためのApple自身のPythonリファレンスライブラリで、SwiftLMが対比の対象とする実装。',
@@ -1774,7 +1774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至本评测时（2026 年 9 月 18 日），GitHub 星标数为 768，分叉数为 53；仓库创建于 2026 年 3 月 21 日，在本评测发布前的数周内，版本发布节奏大约为每 1–2 天一次',
         ],
         callouts: [
-          { type: 'note', text: '本评测是 SwiftLM 在[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)中条目的深度补充版本——欲了解 SwiftLM 与数十款其他本地 AI 工具的概览对比，请参阅该页面。本评测基于 SwiftLM 自身的 GitHub 仓库、README 和发布历史，而非 PromptQuorum 对 SharpAI 公布的性能数据进行的独立基准测试。' },
+          { type: 'note', text: '本评测是 SwiftLM 在[本地 LLM 软件目录](/zh/directory)中条目的深度补充版本——欲了解 SwiftLM 与数十款其他本地 AI 工具的概览对比，请参阅该页面。本评测基于 SwiftLM 自身的 GitHub 仓库、README 和发布历史，而非 PromptQuorum 对 SharpAI 公布的性能数据进行的独立基准测试。' },
         ],
       },
       overview: {
@@ -1919,7 +1919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'mlx-lm', 'Best known for': 'Apple 官方用于在 MLX 上运行 LLM 的 Python 参考库', 'Link': '[mlx-lm 详解](/zh/power-local-llm/mlx-lm-explained)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: '这并非 Apple Silicon 推理工具的完整列表——完整、定期更新的目录请参阅[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)，其中也包含 SwiftLM 自身的目录条目。',
+        note: '这并非 Apple Silicon 推理工具的完整列表——完整、定期更新的目录请参阅[本地 LLM 软件目录](/zh/directory)，其中也包含 SwiftLM 自身的目录条目。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1975,7 +1975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地 LLM 软件目录 2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地 AI 工具完整目录，包括 SwiftLM 自身的目录条目。',
+          '[本地 LLM 软件目录 2026](/zh/directory) — 本文所属的本地 AI 工具完整目录，包括 SwiftLM 自身的目录条目。',
           '[oMLX 评测](/zh/power-local-llm/omlx-review) — 另一款面向 Apple Silicon 的原生 MLX 推理服务器，配备菜单栏应用和 SSD 分层 KV 缓存。',
           '[Rapid-MLX 评测](/zh/power-local-llm/rapid-mlx-review) — 一款原生 MLX 推理服务器，同时在本地提供图像、视频和音频生成服务。',
           '[mlx-lm 详解](/zh/power-local-llm/mlx-lm-explained) — Apple 官方用于在 MLX 上运行 LLM 的 Python 参考库，也是 SwiftLM 所对标的实现。',
@@ -2057,7 +2057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '768 نجمة و53 نسخة متفرعة على GitHub حتى وقت كتابة هذه المراجعة (18 سبتمبر 2026)؛ أُنشئ المستودع في 21 مارس 2026، مع إصدارات صدرت بمعدل يوم إلى يومين تقريبًا خلال الأسابيع التي سبقت هذه المراجعة',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الشرح المتعمق المرافق لمدخل SwiftLM في [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارن SwiftLM بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى. تستند هذه المراجعة إلى مستودع SwiftLM الخاص على GitHub وملف README وسجل الإصدارات، وليس إلى اختبارات أداء مستقلة أجرتها PromptQuorum للأرقام التي نشرتها SharpAI.' },
+          { type: 'note', text: 'هذه المراجعة هي الشرح المتعمق المرافق لمدخل SwiftLM في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارن SwiftLM بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى. تستند هذه المراجعة إلى مستودع SwiftLM الخاص على GitHub وملف README وسجل الإصدارات، وليس إلى اختبارات أداء مستقلة أجرتها PromptQuorum للأرقام التي نشرتها SharpAI.' },
         ],
       },
       overview: {
@@ -2202,7 +2202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'mlx-lm', 'Best known for': 'مكتبة Python المرجعية الخاصة بـ Apple لتشغيل نماذج LLM على MLX', 'Link': '[شرح mlx-lm](/ar/power-local-llm/mlx-lm-explained)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'هذه ليست قائمة شاملة لأدوات الاستدلال الخاصة بـ Apple Silicon — راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الفهرس الكامل الذي يُحدَّث بانتظام، بما في ذلك مدخل SwiftLM الخاص في الدليل.',
+        note: 'هذه ليست قائمة شاملة لأدوات الاستدلال الخاصة بـ Apple Silicon — راجع [دليل برمجيات LLM المحلية](/ar/directory) للاطلاع على الفهرس الكامل الذي يُحدَّث بانتظام، بما في ذلك مدخل SwiftLM الخاص في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2258,7 +2258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل SwiftLM الخاص في الدليل.',
+          '[دليل برمجيات LLM المحلية 2026](/ar/directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل SwiftLM الخاص في الدليل.',
           '[مراجعة oMLX](/ar/power-local-llm/omlx-review) — خادم استدلال MLX أصلي آخر لأجهزة Apple Silicon، مع تطبيق في شريط القوائم وذاكرة تخزين مؤقت KV متدرّجة عبر SSD.',
           '[مراجعة Rapid-MLX](/ar/power-local-llm/rapid-mlx-review) — خادم استدلال MLX أصلي يقدّم أيضًا توليد الصور والفيديو والصوت محليًا.',
           '[شرح mlx-lm](/ar/power-local-llm/mlx-lm-explained) — مكتبة Python المرجعية الخاصة بـ Apple لتشغيل نماذج LLM على MLX، وهو التنفيذ الذي يضع SwiftLM نفسه في مقابله.',
@@ -2340,7 +2340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이 리뷰 시점(2026년 9월 18일) 기준 GitHub 스타 768개, 포크 53개; 저장소는 2026년 3월 21일 생성되었으며, 리뷰 공개 이전 몇 주 동안 약 1~2일마다 릴리스가 출시되었습니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 실린 SwiftLM 항목을 보완하는 심층 리뷰입니다 — SwiftLM이 수십 개의 다른 로컬 AI 도구와 어떻게 비교되는지는 해당 페이지를 참고하십시오. 이 리뷰는 SwiftLM 자체의 GitHub 저장소, README, 릴리스 이력을 기반으로 하며, SharpAI가 공개한 성능 수치를 PromptQuorum이 독립적으로 벤치마크한 것은 아닙니다.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 실린 SwiftLM 항목을 보완하는 심층 리뷰입니다 — SwiftLM이 수십 개의 다른 로컬 AI 도구와 어떻게 비교되는지는 해당 페이지를 참고하십시오. 이 리뷰는 SwiftLM 자체의 GitHub 저장소, README, 릴리스 이력을 기반으로 하며, SharpAI가 공개한 성능 수치를 PromptQuorum이 독립적으로 벤치마크한 것은 아닙니다.' },
         ],
       },
       overview: {
@@ -2485,7 +2485,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'mlx-lm', 'Best known for': 'MLX에서 LLM을 실행하기 위한 Apple 자체 Python 레퍼런스 라이브러리', 'Link': '[mlx-lm 설명](/ko/power-local-llm/mlx-lm-explained)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: '이는 Apple Silicon 추론 도구의 전체 목록이 아닙니다 — 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오. SwiftLM 자체의 디렉터리 항목도 포함되어 있습니다.',
+        note: '이는 Apple Silicon 추론 도구의 전체 목록이 아닙니다 — 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오. SwiftLM 자체의 디렉터리 항목도 포함되어 있습니다.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2541,7 +2541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, SwiftLM 자체의 디렉터리 항목을 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, SwiftLM 자체의 디렉터리 항목을 포함합니다.',
           '[oMLX 리뷰](/ko/power-local-llm/omlx-review) — Apple Silicon을 위한 또 다른 네이티브 MLX 추론 서버로, 메뉴바 앱과 SSD 계층형 KV 캐시를 갖추고 있습니다.',
           '[Rapid-MLX 리뷰](/ko/power-local-llm/rapid-mlx-review) — 이미지, 비디오, 오디오 생성도 로컬로 제공하는 네이티브 MLX 추론 서버.',
           '[mlx-lm 설명](/ko/power-local-llm/mlx-lm-explained) — MLX에서 LLM을 실행하기 위한 Apple 자체 Python 레퍼런스 라이브러리로, SwiftLM이 스스로를 견주는 구현입니다.',

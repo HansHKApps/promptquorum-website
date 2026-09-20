@@ -78,7 +78,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'NVIDIA\'s own blog post on RTX acceleration for Hyperlink reports indexing up to 3x faster and inference up to 2x faster on RTX GPUs versus CPU-only — a vendor claim this review has not independently reproduced.',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Hyperlink\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Hyperlink compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Hyperlink\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Hyperlink compares at a glance to dozens of other local AI tools.' },
           { type: 'note', text: 'Hyperlink is closed-source, so this review cannot independently verify its on-device/no-upload claims the way it could for an open-source tool. Those claims come from Nexa AI\'s own documentation and are corroborated by NVIDIA\'s official blog post on the RTX integration (see Sources) — not from PromptQuorum\'s own network testing.' },
         ],
       },
@@ -200,14 +200,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'hyperlink-competitors',
         title: 'Competitors and Alternatives',
-        content: 'Hyperlink sits in the local document-search and personal-knowledge-assistant category — tools that let you ask questions of your own files or notes with a local or self-hosted backend. Here is how it compares to other options reviewed on PromptQuorum; see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'Hyperlink sits in the local document-search and personal-knowledge-assistant category — tools that let you ask questions of your own files or notes with a local or self-hosted backend. Here is how it compares to other options reviewed on PromptQuorum; see the [Local LLM Software Directory](/directory) for the full catalog.',
         items: [
           '**[Khoj](https://khoj.dev)** — an open-source, self-hostable "AI second brain" with very similar positioning to Hyperlink (search and chat with your own documents and notes), but open-source rather than closed. See the [Khoj review](/power-local-llm/khoj-ai-second-brain-review).',
           '**[PrivateGPT](https://github.com/zylon-ai/private-gpt)** — an open-source, self-hosted tool for asking questions of your own documents entirely offline, aimed more at developers comfortable running a local server than a polished consumer app. See the [PrivateGPT review](/power-local-llm/privategpt-review).',
           '**[Quivr](https://github.com/QuivrHQ/quivr)** — an open-source, self-hosted "second brain" for uploading and querying your own files and knowledge base. See the [Quivr review](/power-local-llm/quivr-self-hosted-knowledge-assistant-review).',
           '**[AnythingLLM](https://anythingllm.com)** — an open-source desktop and self-hosted app for chatting with your own documents, with a more configurable backend (choice of local or cloud models) than Hyperlink\'s fixed pipeline. See the [AnythingLLM review](/power-local-llm/anythingllm-review).',
         ],
-        note: 'The clearest dividing line in this category is open-source-and-self-hosted versus closed-source-and-installed: Hyperlink is the only entry here without a public source repository, trading auditability for a simpler, ready-made desktop install. This is not an exhaustive list — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Hyperlink\'s own directory entry.',
+        note: 'The clearest dividing line in this category is open-source-and-self-hosted versus closed-source-and-installed: Hyperlink is the only entry here without a public source repository, trading auditability for a simpler, ready-made desktop install. This is not an exhaustive list — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Hyperlink\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -262,7 +262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Hyperlink\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Hyperlink\'s directory entry.',
           '[Khoj Review](/power-local-llm/khoj-ai-second-brain-review) — the closest open-source alternative to Hyperlink, self-hostable and auditable.',
           '[PrivateGPT Review](/power-local-llm/privategpt-review) — a self-hosted, fully offline document Q&A tool for readers comfortable running a local server.',
           '[Quivr Review](/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — another open-source "second brain" for your own files and knowledge base.',
@@ -347,7 +347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'NVIDIAs eigener Blogbeitrag zur RTX-Beschleunigung für Hyperlink berichtet von bis zu 3-fach schnellerer Indizierung und bis zu 2-fach schnellerer Inferenz auf RTX-GPUs gegenüber reiner CPU-Verarbeitung — eine Herstellerangabe, die dieser Test nicht unabhängig reproduziert hat.',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test ist der ausführliche Begleitartikel zu Hyperlinks Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort findet sich der Vergleich von Hyperlink mit Dutzenden anderer lokaler KI-Tools auf einen Blick.' },
+          { type: 'note', text: 'Dieser Test ist der ausführliche Begleitartikel zu Hyperlinks Eintrag im [Local LLM Software Directory](/de/directory) — dort findet sich der Vergleich von Hyperlink mit Dutzenden anderer lokaler KI-Tools auf einen Blick.' },
           { type: 'note', text: 'Hyperlink ist Closed Source, daher kann dieser Test die Angaben zu lokaler Verarbeitung/keinem Upload nicht so unabhängig prüfen wie bei einem Open-Source-Tool. Diese Angaben stammen aus Nexa AIs eigener Dokumentation und werden durch NVIDIAs offiziellen Blogbeitrag zur RTX-Integration (siehe Quellen) bestätigt — nicht aus eigenen Netzwerktests von PromptQuorum.' },
         ],
       },
@@ -469,14 +469,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'hyperlink-competitors',
         title: 'Konkurrenten und Alternativen',
-        content: 'Hyperlink ist in der Kategorie lokale Dokumentensuche und persönlicher Wissensassistent angesiedelt — Tools, mit denen man eigene Dateien oder Notizen mit lokalem oder selbst gehostetem Backend befragen kann. So schneidet die App im Vergleich zu anderen auf PromptQuorum getesteten Optionen ab; den vollständigen Katalog gibt es im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        content: 'Hyperlink ist in der Kategorie lokale Dokumentensuche und persönlicher Wissensassistent angesiedelt — Tools, mit denen man eigene Dateien oder Notizen mit lokalem oder selbst gehostetem Backend befragen kann. So schneidet die App im Vergleich zu anderen auf PromptQuorum getesteten Optionen ab; den vollständigen Katalog gibt es im [Local LLM Software Directory](/de/directory).',
         items: [
           '**[Khoj](https://khoj.dev)** — ein Open-Source, selbst hostbares „KI-Zweitgehirn" mit sehr ähnlicher Ausrichtung wie Hyperlink (eigene Dokumente und Notizen durchsuchen und befragen), aber Open Source statt closed. Siehe den [Khoj-Test](/de/power-local-llm/khoj-ai-second-brain-review).',
           '**[PrivateGPT](https://github.com/zylon-ai/private-gpt)** — ein Open-Source, selbst gehostetes Tool, um eigene Dokumente vollständig offline zu befragen, eher an Entwickler gerichtet, die mit einem lokalen Server umgehen können, als an eine ausgereifte Endkunden-App. Siehe den [PrivateGPT-Test](/de/power-local-llm/privategpt-review).',
           '**[Quivr](https://github.com/QuivrHQ/quivr)** — ein Open-Source, selbst gehostetes „Zweitgehirn" zum Hochladen und Befragen eigener Dateien und Wissensbasis. Siehe den [Quivr-Test](/de/power-local-llm/quivr-self-hosted-knowledge-assistant-review).',
           '**[AnythingLLM](https://anythingllm.com)** — eine Open-Source-Desktop- und selbst gehostete App zum Chatten mit eigenen Dokumenten, mit einem konfigurierbareren Backend (Wahl zwischen lokalen oder Cloud-Modellen) als Hyperlinks feste Pipeline. Siehe den [AnythingLLM-Test](/de/power-local-llm/anythingllm-review).',
         ],
-        note: 'Die klarste Trennlinie in dieser Kategorie verläuft zwischen Open-Source-und-selbst-gehostet und closed-source-und-installiert: Hyperlink ist der einzige Eintrag hier ohne öffentliches Quell-Repository und tauscht Prüfbarkeit gegen eine einfachere, fertige Desktop-Installation. Das ist keine erschöpfende Liste — den vollständigen, regelmäßig aktualisierten Katalog einschließlich Hyperlinks eigenem Verzeichniseintrag gibt es im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Die klarste Trennlinie in dieser Kategorie verläuft zwischen Open-Source-und-selbst-gehostet und closed-source-und-installiert: Hyperlink ist der einzige Eintrag hier ohne öffentliches Quell-Repository und tauscht Prüfbarkeit gegen eine einfachere, fertige Desktop-Installation. Das ist keine erschöpfende Liste — den vollständigen, regelmäßig aktualisierten Katalog einschließlich Hyperlinks eigenem Verzeichniseintrag gibt es im [Local LLM Software Directory](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -531,7 +531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Hyperlinks Verzeichniseintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Hyperlinks Verzeichniseintrag.',
           '[Khoj-Test](/de/power-local-llm/khoj-ai-second-brain-review) — die naheliegendste Open-Source-Alternative zu Hyperlink, selbst hostbar und prüfbar.',
           '[PrivateGPT-Test](/de/power-local-llm/privategpt-review) — ein selbst gehostetes, vollständig offline laufendes Dokument-Q&A-Tool für alle, die mit einem lokalen Server umgehen können.',
           '[Quivr-Test](/de/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — ein weiteres Open-Source-„Zweitgehirn" für eigene Dateien und Wissensbasis.',
@@ -616,7 +616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le billet de blog de NVIDIA sur l\'accélération RTX pour Hyperlink rapporte une indexation jusqu\'à 3 fois plus rapide et une inférence jusqu\'à 2 fois plus rapide sur GPU RTX par rapport au CPU seul — une affirmation du fournisseur que cet avis n\'a pas reproduite de manière indépendante.',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément détaillé de la fiche de Hyperlink dans le [répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer Hyperlink en un coup d\'œil à des dizaines d\'autres outils IA locaux.' },
+          { type: 'note', text: 'Cet avis est le complément détaillé de la fiche de Hyperlink dans le [répertoire de logiciels LLM locaux](/fr/directory) — consultez cette page pour comparer Hyperlink en un coup d\'œil à des dizaines d\'autres outils IA locaux.' },
           { type: 'note', text: 'Hyperlink étant à code source fermé, cet avis ne peut pas vérifier de manière indépendante ses affirmations de traitement local / absence d\'envoi comme il le ferait pour un outil open source. Ces affirmations proviennent de la documentation propre de Nexa AI et sont corroborées par le billet de blog officiel de NVIDIA sur l\'intégration RTX (voir Sources) — pas de tests réseau réalisés par PromptQuorum.' },
         ],
       },
@@ -738,14 +738,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'hyperlink-competitors',
         title: 'Concurrents et alternatives',
-        content: 'Hyperlink se situe dans la catégorie recherche documentaire locale et assistant de connaissances personnel — des outils permettant d\'interroger ses propres fichiers ou notes avec un backend local ou auto-hébergé. Voici comment elle se compare à d\'autres options testées sur PromptQuorum ; voir le [répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        content: 'Hyperlink se situe dans la catégorie recherche documentaire locale et assistant de connaissances personnel — des outils permettant d\'interroger ses propres fichiers ou notes avec un backend local ou auto-hébergé. Voici comment elle se compare à d\'autres options testées sur PromptQuorum ; voir le [répertoire de logiciels LLM locaux](/fr/directory) pour le catalogue complet.',
         items: [
           '**[Khoj](https://khoj.dev)** — un « second cerveau IA » open source et auto-hébergeable, au positionnement très proche de Hyperlink (rechercher et discuter avec ses propres documents et notes), mais open source plutôt que fermé. Voir l\'[avis Khoj](/fr/power-local-llm/khoj-ai-second-brain-review).',
           '**[PrivateGPT](https://github.com/zylon-ai/private-gpt)** — un outil open source et auto-hébergé pour interroger ses propres documents entièrement hors ligne, plutôt destiné aux développeurs à l\'aise avec l\'exécution d\'un serveur local qu\'à une application grand public aboutie. Voir l\'[avis PrivateGPT](/fr/power-local-llm/privategpt-review).',
           '**[Quivr](https://github.com/QuivrHQ/quivr)** — un « second cerveau » open source et auto-hébergé pour téléverser et interroger ses propres fichiers et sa base de connaissances. Voir l\'[avis Quivr](/fr/power-local-llm/quivr-self-hosted-knowledge-assistant-review).',
           '**[AnythingLLM](https://anythingllm.com)** — une application de bureau et auto-hébergée open source pour discuter avec ses propres documents, avec un backend plus configurable (choix de modèles locaux ou cloud) que le pipeline fixe de Hyperlink. Voir l\'[avis AnythingLLM](/fr/power-local-llm/anythingllm-review).',
         ],
-        note: 'La ligne de partage la plus nette dans cette catégorie oppose open source et auto-hébergé à code source fermé et installé : Hyperlink est ici la seule entrée sans dépôt source public, échangeant l\'auditabilité contre une installation de bureau plus simple et clé en main. Cette liste n\'est pas exhaustive — voir le [répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de Hyperlink.',
+        note: 'La ligne de partage la plus nette dans cette catégorie oppose open source et auto-hébergé à code source fermé et installé : Hyperlink est ici la seule entrée sans dépôt source public, échangeant l\'auditabilité contre une installation de bureau plus simple et clé en main. Cette liste n\'est pas exhaustive — voir le [répertoire de logiciels LLM locaux](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de Hyperlink.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -800,7 +800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire de logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant la fiche de Hyperlink.',
+          '[Répertoire de logiciels LLM locaux 2026](/fr/directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant la fiche de Hyperlink.',
           '[Avis Khoj](/fr/power-local-llm/khoj-ai-second-brain-review) — l\'alternative open source la plus proche de Hyperlink, auto-hébergeable et auditable.',
           '[Avis PrivateGPT](/fr/power-local-llm/privategpt-review) — un outil de questions-réponses documentaires auto-hébergé et entièrement hors ligne, pour les lecteurs à l\'aise avec un serveur local.',
           '[Avis Quivr](/fr/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — un autre « second cerveau » open source pour ses propres fichiers et sa base de connaissances.',
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'HyperlinkのRTXアクセラレーションに関するNVIDIA自身のブログ記事では、RTX GPUでCPUのみの場合と比較してインデックス化が最大3倍、推論が最大2倍高速化すると報告されているが、これはこのレビューが独自に再現検証したものではないベンダー側の主張である。',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるHyperlinkのエントリーを深掘りした関連記事です——他の数多くのローカルAIツールとHyperlinkを一目で比較するには、そちらのページをご覧ください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるHyperlinkのエントリーを深掘りした関連記事です——他の数多くのローカルAIツールとHyperlinkを一目で比較するには、そちらのページをご覧ください。' },
           { type: 'note', text: 'Hyperlinkはクローズドソースのため、本レビューはオープンソースツールのようにオンデバイス処理・アップロードなしという主張を独自に検証することはできません。これらの主張はNexa AI自身のドキュメントによるもので、RTX統合に関するNVIDIAの公式ブログ記事(出典を参照)でも裏付けられていますが、PromptQuorum自身のネットワークテストによるものではありません。' },
         ],
       },
@@ -1007,14 +1007,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'hyperlink-competitors',
         title: '競合・代替アプリ',
-        content: 'Hyperlinkは、ローカル文書検索・パーソナルナレッジアシスタントというカテゴリーに位置します。ローカルまたは自前ホストのバックエンドで、自分のファイルやメモに質問できるツール群です。以下は、PromptQuorumでレビューした他の選択肢との比較です。全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        content: 'Hyperlinkは、ローカル文書検索・パーソナルナレッジアシスタントというカテゴリーに位置します。ローカルまたは自前ホストのバックエンドで、自分のファイルやメモに質問できるツール群です。以下は、PromptQuorumでレビューした他の選択肢との比較です。全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
         items: [
           '**[Khoj](https://khoj.dev)** — オープンソースで自前ホスト可能な「AIセカンドブレイン」で、自分の文書やメモを検索・チャットするという点でHyperlinkと非常によく似た位置づけだが、クローズドではなくオープンソースである点が異なる。詳細は[Khojレビュー](/ja/power-local-llm/khoj-ai-second-brain-review)を参照。',
           '**[PrivateGPT](https://github.com/zylon-ai/private-gpt)** — 自分の文書を完全オフラインで質問できる、オープンソースで自前ホストのツール。洗練された一般消費者向けアプリというより、ローカルサーバーの運用に抵抗のない開発者向け。詳細は[PrivateGPTレビュー](/ja/power-local-llm/privategpt-review)を参照。',
           '**[Quivr](https://github.com/QuivrHQ/quivr)** — 自分のファイルやナレッジベースをアップロードして質問できる、オープンソースで自前ホストの「セカンドブレイン」。詳細は[Quivrレビュー](/ja/power-local-llm/quivr-self-hosted-knowledge-assistant-review)を参照。',
           '**[AnythingLLM](https://anythingllm.com)** — 自分の文書とチャットできる、オープンソースのデスクトップ・自前ホスト両対応アプリで、Hyperlinkの固定パイプラインよりも設定の自由度が高いバックエンド(ローカルモデルとクラウドモデルの選択が可能)を持つ。詳細は[AnythingLLMレビュー](/ja/power-local-llm/anythingllm-review)を参照。',
         ],
-        note: 'このカテゴリーで最も明確な分かれ目は、オープンソース・自前ホストか、クローズドソース・インストール型かという点です。Hyperlinkは、公開されたソースリポジトリを持たない唯一のエントリーであり、検証可能性を手放す代わりに、よりシンプルで完成品としてのデスクトップインストールを提供します。これは網羅的なリストではありません——Hyperlink自身のディレクトリエントリーを含む、定期的に更新される全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'このカテゴリーで最も明確な分かれ目は、オープンソース・自前ホストか、クローズドソース・インストール型かという点です。Hyperlinkは、公開されたソースリポジトリを持たない唯一のエントリーであり、検証可能性を手放す代わりに、よりシンプルで完成品としてのデスクトップインストールを提供します。これは網羅的なリストではありません——Hyperlink自身のディレクトリエントリーを含む、定期的に更新される全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1069,7 +1069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの全カタログ。Hyperlinkのディレクトリエントリーを含む。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — この記事が属する、ローカルAIツールの全カタログ。Hyperlinkのディレクトリエントリーを含む。',
           '[Khojレビュー](/ja/power-local-llm/khoj-ai-second-brain-review) — Hyperlinkに最も近いオープンソースの代替。自前ホスト可能で監査もできる。',
           '[PrivateGPTレビュー](/ja/power-local-llm/privategpt-review) — ローカルサーバーの運用に抵抗のない読者向けの、自前ホストで完全オフラインの文書Q&Aツール。',
           '[Quivrレビュー](/ja/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — 自分のファイルやナレッジベース向けの、もう一つのオープンソース「セカンドブレイン」。',
@@ -1154,7 +1154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'NVIDIA自己关于Hyperlink的RTX加速的博客文章称,在RTX GPU上,相比仅使用CPU,索引速度最高提升3倍,推理速度最高提升2倍——这是厂商的说法,本评测未独立重现。',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Hyperlink条目的深度补充——想一眼比较Hyperlink与其他数十种本地AI工具,请查看该页面。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Hyperlink条目的深度补充——想一眼比较Hyperlink与其他数十种本地AI工具,请查看该页面。' },
           { type: 'note', text: '由于Hyperlink是闭源软件,本评测无法像对开源工具那样独立核实其本地处理/不上传的说法。这些说法来自Nexa AI自身的文档,并得到了NVIDIA关于RTX集成的官方博客文章(见资料来源)的佐证——并非来自PromptQuorum自己的网络测试。' },
         ],
       },
@@ -1276,14 +1276,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'hyperlink-competitors',
         title: '竞品与替代方案',
-        content: 'Hyperlink属于本地文档搜索与个人知识助手这一类别——即允许你用本地或自托管后端来询问自己文件或笔记内容的工具。以下是它与PromptQuorum评测过的其他选项的对比;完整目录见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'Hyperlink属于本地文档搜索与个人知识助手这一类别——即允许你用本地或自托管后端来询问自己文件或笔记内容的工具。以下是它与PromptQuorum评测过的其他选项的对比;完整目录见[本地LLM软件目录](/zh/directory)。',
         items: [
           '**[Khoj](https://khoj.dev)** — 一款开源、可自行托管的"AI第二大脑",定位与Hyperlink非常相似(搜索并与自己的文档和笔记对话),但它是开源而非闭源。详见[Khoj评测](/zh/power-local-llm/khoj-ai-second-brain-review)。',
           '**[PrivateGPT](https://github.com/zylon-ai/private-gpt)** — 一款开源、自托管的工具,可完全离线地询问自己的文档内容,更面向愿意运行本地服务器的开发者,而非追求精致体验的普通消费者应用。详见[PrivateGPT评测](/zh/power-local-llm/privategpt-review)。',
           '**[Quivr](https://github.com/QuivrHQ/quivr)** — 一款开源、自托管的"第二大脑",用于上传和查询自己的文件与知识库。详见[Quivr评测](/zh/power-local-llm/quivr-self-hosted-knowledge-assistant-review)。',
           '**[AnythingLLM](https://anythingllm.com)** — 一款开源的桌面及自托管应用,可与自己的文档对话,其后端配置的灵活性(可选择本地或云端模型)高于Hyperlink固定的处理流程。详见[AnythingLLM评测](/zh/power-local-llm/anythingllm-review)。',
         ],
-        note: '这一类别中最清晰的分界线在于"开源且自托管"与"闭源且直接安装"之间:Hyperlink是这里唯一没有公开源代码仓库的产品,它以牺牲可审计性为代价,换取更简单、开箱即用的桌面安装体验。以上并非详尽列表——包含Hyperlink自身条目在内的完整目录会定期更新,详见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这一类别中最清晰的分界线在于"开源且自托管"与"闭源且直接安装"之间:Hyperlink是这里唯一没有公开源代码仓库的产品,它以牺牲可审计性为代价,换取更简单、开箱即用的桌面安装体验。以上并非详尽列表——包含Hyperlink自身条目在内的完整目录会定期更新,详见[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1338,7 +1338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地AI工具目录,包含Hyperlink的目录条目。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的完整本地AI工具目录,包含Hyperlink的目录条目。',
           '[Khoj评测](/zh/power-local-llm/khoj-ai-second-brain-review) — Hyperlink最接近的开源替代方案,可自托管且可审计。',
           '[PrivateGPT评测](/zh/power-local-llm/privategpt-review) — 一款自托管、完全离线运行的文档问答工具,适合能够运行本地服务器的读者。',
           '[Quivr评测](/zh/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — 另一款面向个人文件与知识库的开源"第二大脑"。',
@@ -1423,7 +1423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La propia entrada de blog de NVIDIA sobre la aceleración RTX para Hyperlink informa de una indexación hasta 3 veces más rápida y una inferencia hasta 2 veces más rápida en GPU RTX frente a solo CPU: una afirmación del fabricante que esta reseña no ha reproducido de forma independiente.',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de Hyperlink en el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara Hyperlink de un vistazo con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de Hyperlink en el [Directorio de Software de LLM Local](/es/directory) — consulta esa página para ver cómo se compara Hyperlink de un vistazo con docenas de otras herramientas de IA local.' },
           { type: 'note', text: 'Como Hyperlink es de código cerrado, esta reseña no puede verificar de forma independiente sus afirmaciones sobre el procesamiento en el dispositivo y la ausencia de subidas, como sí podría hacerlo con una herramienta de código abierto. Esas afirmaciones provienen de la documentación propia de Nexa AI y están corroboradas por la entrada oficial del blog de NVIDIA sobre la integración RTX (ver Fuentes), no de pruebas de red realizadas por PromptQuorum.' },
         ],
       },
@@ -1545,14 +1545,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'hyperlink-competitors',
         title: 'Competidores y Alternativas',
-        content: 'Hyperlink se sitúa en la categoría de búsqueda local de documentos y asistentes personales de conocimiento: herramientas que te permiten hacer preguntas sobre tus propios archivos o notas con un backend local o autoalojado. Así se compara con otras opciones reseñadas en PromptQuorum; consulta el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) para ver el catálogo completo.',
+        content: 'Hyperlink se sitúa en la categoría de búsqueda local de documentos y asistentes personales de conocimiento: herramientas que te permiten hacer preguntas sobre tus propios archivos o notas con un backend local o autoalojado. Así se compara con otras opciones reseñadas en PromptQuorum; consulta el [Directorio de Software de LLM Local](/es/directory) para ver el catálogo completo.',
         items: [
           '**[Khoj](https://khoj.dev)** — un "segundo cerebro de IA" de código abierto y autoalojable con un posicionamiento muy similar al de Hyperlink (buscar y chatear con tus propios documentos y notas), pero de código abierto en lugar de cerrado. Consulta la [reseña de Khoj](/es/power-local-llm/khoj-ai-second-brain-review).',
           '**[PrivateGPT](https://github.com/zylon-ai/private-gpt)** — una herramienta de código abierto y autoalojada para hacer preguntas sobre tus propios documentos completamente sin conexión, dirigida más a desarrolladores cómodos ejecutando un servidor local que a una app de consumo pulida. Consulta la [reseña de PrivateGPT](/es/power-local-llm/privategpt-review).',
           '**[Quivr](https://github.com/QuivrHQ/quivr)** — un "segundo cerebro" de código abierto y autoalojado para subir y consultar tus propios archivos y base de conocimiento. Consulta la [reseña de Quivr](/es/power-local-llm/quivr-self-hosted-knowledge-assistant-review).',
           '**[AnythingLLM](https://anythingllm.com)** — una app de escritorio y autoalojada de código abierto para chatear con tus propios documentos, con un backend más configurable (elección de modelos locales o en la nube) que el flujo fijo de Hyperlink. Consulta la [reseña de AnythingLLM](/es/power-local-llm/anythingllm-review).',
         ],
-        note: 'La línea divisoria más clara en esta categoría es de código abierto y autoalojado frente a código cerrado e instalado: Hyperlink es la única entrada aquí sin un repositorio de código público, intercambiando auditabilidad por una instalación de escritorio más sencilla y lista para usar. Esta no es una lista exhaustiva: consulta el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) para ver el catálogo completo y actualizado regularmente, incluida la propia entrada de directorio de Hyperlink.',
+        note: 'La línea divisoria más clara en esta categoría es de código abierto y autoalojado frente a código cerrado e instalado: Hyperlink es la única entrada aquí sin un repositorio de código público, intercambiando auditabilidad por una instalación de escritorio más sencilla y lista para usar. Esta no es una lista exhaustiva: consulta el [Directorio de Software de LLM Local](/es/directory) para ver el catálogo completo y actualizado regularmente, incluida la propia entrada de directorio de Hyperlink.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1607,7 +1607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas Relacionadas',
         items: [
-          '[Directorio de Software de LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de directorio de Hyperlink.',
+          '[Directorio de Software de LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de directorio de Hyperlink.',
           '[Reseña de Khoj](/es/power-local-llm/khoj-ai-second-brain-review) — la alternativa de código abierto más cercana a Hyperlink, autoalojable y auditable.',
           '[Reseña de PrivateGPT](/es/power-local-llm/privategpt-review) — una herramienta autoalojada y totalmente sin conexión para preguntas y respuestas sobre tus propios documentos, para lectores cómodos ejecutando un servidor local.',
           '[Reseña de Quivr](/es/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — otro "segundo cerebro" de código abierto para tus propios archivos y base de conocimiento.',
@@ -1692,7 +1692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A própria postagem no blog da NVIDIA sobre aceleração RTX para o Hyperlink relata indexação até 3x mais rápida e inferência até 2x mais rápida em GPUs RTX versus somente CPU — uma alegação do fabricante que esta análise não reproduziu de forma independente.',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Hyperlink no [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar o Hyperlink rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Hyperlink no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar o Hyperlink rapidamente com dezenas de outras ferramentas de IA local.' },
           { type: 'note', text: 'Como o Hyperlink é de código fechado, esta análise não pode verificar de forma independente suas afirmações sobre processamento no dispositivo e ausência de upload, como poderia fazer com uma ferramenta de código aberto. Essas afirmações vêm da própria documentação da Nexa AI e são corroboradas pela postagem oficial do blog da NVIDIA sobre a integração RTX (veja Fontes) — não de testes de rede feitos pela PromptQuorum.' },
         ],
       },
@@ -1814,14 +1814,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'hyperlink-competitors',
         title: 'Concorrentes e Alternativas',
-        content: 'O Hyperlink se encaixa na categoria de busca local de documentos e assistentes pessoais de conhecimento — ferramentas que permitem fazer perguntas sobre seus próprios arquivos ou notas com um backend local ou auto-hospedado. Veja como ele se compara a outras opções analisadas na PromptQuorum; consulte o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'O Hyperlink se encaixa na categoria de busca local de documentos e assistentes pessoais de conhecimento — ferramentas que permitem fazer perguntas sobre seus próprios arquivos ou notas com um backend local ou auto-hospedado. Veja como ele se compara a outras opções analisadas na PromptQuorum; consulte o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo.',
         items: [
           '**[Khoj](https://khoj.dev)** — um "segundo cérebro de IA" de código aberto e auto-hospedável com posicionamento muito similar ao do Hyperlink (buscar e conversar com seus próprios documentos e notas), mas de código aberto em vez de fechado. Veja a [análise do Khoj](/pt/power-local-llm/khoj-ai-second-brain-review).',
           '**[PrivateGPT](https://github.com/zylon-ai/private-gpt)** — uma ferramenta de código aberto e auto-hospedada para fazer perguntas sobre seus próprios documentos totalmente offline, voltada mais para desenvolvedores confortáveis rodando um servidor local do que um app de consumo polido. Veja a [análise do PrivateGPT](/pt/power-local-llm/privategpt-review).',
           '**[Quivr](https://github.com/QuivrHQ/quivr)** — um "segundo cérebro" de código aberto e auto-hospedado para enviar e consultar seus próprios arquivos e base de conhecimento. Veja a [análise do Quivr](/pt/power-local-llm/quivr-self-hosted-knowledge-assistant-review).',
           '**[AnythingLLM](https://anythingllm.com)** — um app de desktop e auto-hospedado de código aberto para conversar com seus próprios documentos, com um backend mais configurável (escolha de modelos locais ou na nuvem) do que o pipeline fixo do Hyperlink. Veja a [análise do AnythingLLM](/pt/power-local-llm/anythingllm-review).',
         ],
-        note: 'A linha divisória mais clara nesta categoria é código aberto e auto-hospedado versus código fechado e instalado: o Hyperlink é a única entrada aqui sem um repositório de código público, trocando auditabilidade por uma instalação de desktop mais simples e pronta para uso. Esta não é uma lista exaustiva — consulte o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada de diretório do Hyperlink.',
+        note: 'A linha divisória mais clara nesta categoria é código aberto e auto-hospedado versus código fechado e instalado: o Hyperlink é a única entrada aqui sem um repositório de código público, trocando auditabilidade por uma instalação de desktop mais simples e pronta para uso. Esta não é uma lista exaustiva — consulte o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada de diretório do Hyperlink.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1876,7 +1876,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras Relacionadas',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada de diretório do Hyperlink.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada de diretório do Hyperlink.',
           '[Análise do Khoj](/pt/power-local-llm/khoj-ai-second-brain-review) — a alternativa de código aberto mais próxima do Hyperlink, auto-hospedável e auditável.',
           '[Análise do PrivateGPT](/pt/power-local-llm/privategpt-review) — uma ferramenta auto-hospedada e totalmente offline de perguntas e respostas sobre documentos, para leitores confortáveis rodando um servidor local.',
           '[Análise do Quivr](/pt/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — outro "segundo cérebro" de código aberto para seus próprios arquivos e base de conhecimento.',
@@ -1961,7 +1961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تفيد تدوينة NVIDIA نفسها حول تسريع RTX لتطبيق Hyperlink بأن الفهرسة أسرع حتى 3 مرات والاستدلال أسرع حتى مرتين على معالجات RTX مقارنة بالمعالجة عبر CPU فقط — وهو ادعاء من الشركة المصنّعة لم تُعِد هذه المراجعة إنتاجه بشكل مستقل.',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لإدخال Hyperlink في [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارَن Hyperlink بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لإدخال Hyperlink في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن Hyperlink بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
           { type: 'note', text: 'بما أن Hyperlink برنامج مغلق المصدر، لا يمكن لهذه المراجعة التحقق بشكل مستقل من ادعاءات المعالجة على الجهاز وعدم الرفع كما يمكنها فعل ذلك مع أداة مفتوحة المصدر. تأتي هذه الادعاءات من توثيق Nexa AI نفسها، وتؤكدها تدوينة NVIDIA الرسمية حول تكامل RTX (انظر المصادر) — وليس من اختبارات شبكة أجرتها PromptQuorum بنفسها.' },
         ],
       },
@@ -2083,14 +2083,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'hyperlink-competitors',
         title: 'المنافسون والبدائل',
-        content: 'يقع Hyperlink ضمن فئة بحث المستندات المحلي والمساعدين الشخصيين للمعرفة — أدوات تتيح لك طرح أسئلة حول ملفاتك أو ملاحظاتك الخاصة عبر واجهة خلفية محلية أو مستضافة ذاتيًا. إليك كيف يُقارَن بخيارات أخرى تمت مراجعتها على PromptQuorum؛ راجع [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل.',
+        content: 'يقع Hyperlink ضمن فئة بحث المستندات المحلي والمساعدين الشخصيين للمعرفة — أدوات تتيح لك طرح أسئلة حول ملفاتك أو ملاحظاتك الخاصة عبر واجهة خلفية محلية أو مستضافة ذاتيًا. إليك كيف يُقارَن بخيارات أخرى تمت مراجعتها على PromptQuorum؛ راجع [دليل برمجيات نماذج اللغة المحلية](/ar/directory) للاطلاع على الكتالوج الكامل.',
         items: [
           '**[Khoj](https://khoj.dev)** — "دماغ ثانٍ بالذكاء الاصطناعي" مفتوح المصدر وقابل للاستضافة الذاتية بموقع مشابه جدًا لـHyperlink (البحث والمحادثة مع مستنداتك وملاحظاتك الخاصة)، لكنه مفتوح المصدر بدلًا من مغلق. راجع [مراجعة Khoj](/ar/power-local-llm/khoj-ai-second-brain-review).',
           '**[PrivateGPT](https://github.com/zylon-ai/private-gpt)** — أداة مفتوحة المصدر ومستضافة ذاتيًا لطرح الأسئلة حول مستنداتك الخاصة دون اتصال بالإنترنت تمامًا، موجَّهة أكثر للمطورين المرتاحين لتشغيل خادم محلي بدلًا من تطبيق استهلاكي أنيق. راجع [مراجعة PrivateGPT](/ar/power-local-llm/privategpt-review).',
           '**[Quivr](https://github.com/QuivrHQ/quivr)** — "دماغ ثانٍ" مفتوح المصدر ومستضاف ذاتيًا لرفع واستعلام ملفاتك وقاعدة معرفتك الخاصة. راجع [مراجعة Quivr](/ar/power-local-llm/quivr-self-hosted-knowledge-assistant-review).',
           '**[AnythingLLM](https://anythingllm.com)** — تطبيق سطح مكتب مفتوح المصدر ومستضاف ذاتيًا للمحادثة مع مستنداتك الخاصة، بواجهة خلفية أكثر قابلية للتهيئة (اختيار نماذج محلية أو سحابية) مقارنة بمسار Hyperlink الثابت. راجع [مراجعة AnythingLLM](/ar/power-local-llm/anythingllm-review).',
         ],
-        note: 'أوضح خط فاصل في هذه الفئة هو بين مفتوح المصدر ومستضاف ذاتيًا مقابل مغلق المصدر ومثبَّت: Hyperlink هو الإدخال الوحيد هنا بدون مستودع كود عام، مقايضًا إمكانية التدقيق بتثبيت سطح مكتب أبسط وجاهز. هذه ليست قائمة شاملة — راجع [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدخال دليل Hyperlink نفسه.',
+        note: 'أوضح خط فاصل في هذه الفئة هو بين مفتوح المصدر ومستضاف ذاتيًا مقابل مغلق المصدر ومثبَّت: Hyperlink هو الإدخال الوحيد هنا بدون مستودع كود عام، مقايضًا إمكانية التدقيق بتثبيت سطح مكتب أبسط وجاهز. هذه ليست قائمة شاملة — راجع [دليل برمجيات نماذج اللغة المحلية](/ar/directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدخال دليل Hyperlink نفسه.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2145,7 +2145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك إدخال دليل Hyperlink.',
+          '[دليل برمجيات نماذج اللغة المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك إدخال دليل Hyperlink.',
           '[مراجعة Khoj](/ar/power-local-llm/khoj-ai-second-brain-review) — أقرب بديل مفتوح المصدر لـHyperlink، قابل للاستضافة الذاتية والتدقيق.',
           '[مراجعة PrivateGPT](/ar/power-local-llm/privategpt-review) — أداة مستضافة ذاتيًا ودون اتصال بالإنترنت تمامًا للإجابة عن الأسئلة حول المستندات، للقراء المرتاحين لتشغيل خادم محلي.',
           '[مراجعة Quivr](/ar/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — "دماغ ثانٍ" آخر مفتوح المصدر لملفاتك وقاعدة معرفتك الخاصة.',
@@ -2230,7 +2230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hyperlink용 RTX 가속에 관한 NVIDIA 자체 블로그 게시물은 CPU 전용 처리 대비 RTX GPU에서 인덱싱 최대 3배, 추론 최대 2배 빠르다고 보고합니다 — 이는 제조사 주장이며 이 리뷰가 독립적으로 재현한 것은 아닙니다.',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 Hyperlink 항목의 심층 분석 보완편입니다 — Hyperlink가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지 확인하려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Hyperlink 항목의 심층 분석 보완편입니다 — Hyperlink가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지 확인하려면 해당 페이지를 참고하세요.' },
           { type: 'note', text: 'Hyperlink는 클로즈드 소스이므로, 이 리뷰는 오픈소스 도구에 대해서처럼 온디바이스 처리 및 업로드 없음 주장을 독립적으로 검증할 수 없습니다. 이러한 주장은 Nexa AI 자체 문서에서 나온 것이며, RTX 통합에 관한 NVIDIA의 공식 블로그 게시물(출처 참고)로 뒷받침되지만, PromptQuorum 자체의 네트워크 테스트에 의한 것은 아닙니다.' },
         ],
       },
@@ -2352,14 +2352,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'hyperlink-competitors',
         title: '경쟁 제품 및 대안',
-        content: 'Hyperlink는 로컬 또는 자체 호스팅 백엔드로 자신의 파일이나 메모에 질문할 수 있게 해주는 도구인 로컬 문서 검색 및 개인 지식 비서 카테고리에 속합니다. PromptQuorum에서 리뷰한 다른 옵션과 어떻게 비교되는지는 다음과 같습니다. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        content: 'Hyperlink는 로컬 또는 자체 호스팅 백엔드로 자신의 파일이나 메모에 질문할 수 있게 해주는 도구인 로컬 문서 검색 및 개인 지식 비서 카테고리에 속합니다. PromptQuorum에서 리뷰한 다른 옵션과 어떻게 비교되는지는 다음과 같습니다. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
         items: [
           '**[Khoj](https://khoj.dev)** — Hyperlink와 매우 유사한 포지셔닝(자신의 문서와 메모를 검색하고 채팅)을 가진 오픈 소스이자 자체 호스팅 가능한 "AI 세컨드 브레인"이지만, 비공개가 아닌 오픈 소스입니다. [Khoj 리뷰](/ko/power-local-llm/khoj-ai-second-brain-review)를 참고하세요.',
           '**[PrivateGPT](https://github.com/zylon-ai/private-gpt)** — 자신의 문서에 완전히 오프라인으로 질문할 수 있는 오픈 소스 자체 호스팅 도구로, 세련된 소비자 앱보다는 로컬 서버 운영에 익숙한 개발자를 더 대상으로 합니다. [PrivateGPT 리뷰](/ko/power-local-llm/privategpt-review)를 참고하세요.',
           '**[Quivr](https://github.com/QuivrHQ/quivr)** — 자신의 파일과 지식 베이스를 업로드하고 질의할 수 있는 오픈 소스 자체 호스팅 "세컨드 브레인"입니다. [Quivr 리뷰](/ko/power-local-llm/quivr-self-hosted-knowledge-assistant-review)를 참고하세요.',
           '**[AnythingLLM](https://anythingllm.com)** — 자신의 문서와 채팅할 수 있는 오픈 소스 데스크톱 및 자체 호스팅 앱으로, Hyperlink의 고정된 파이프라인보다 더 구성 가능한 백엔드(로컬 또는 클라우드 모델 선택)를 제공합니다. [AnythingLLM 리뷰](/ko/power-local-llm/anythingllm-review)를 참고하세요.',
         ],
-        note: '이 카테고리에서 가장 명확한 구분선은 오픈 소스·자체 호스팅 대 비공개 소스·설치형입니다. Hyperlink는 여기서 공개 코드 저장소가 없는 유일한 항목으로, 감사 가능성을 더 간단하고 즉시 사용 가능한 데스크톱 설치와 맞바꿉니다. 이는 완전한 목록이 아닙니다 — Hyperlink 자체 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이 카테고리에서 가장 명확한 구분선은 오픈 소스·자체 호스팅 대 비공개 소스·설치형입니다. Hyperlink는 여기서 공개 코드 저장소가 없는 유일한 항목으로, 감사 가능성을 더 간단하고 즉시 사용 가능한 데스크톱 설치와 맞바꿉니다. 이는 완전한 목록이 아닙니다 — Hyperlink 자체 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2414,7 +2414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — Hyperlink의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그입니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — Hyperlink의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그입니다.',
           '[Khoj 리뷰](/ko/power-local-llm/khoj-ai-second-brain-review) — Hyperlink에 가장 가까운 오픈 소스 대안으로, 자체 호스팅 및 감사가 가능합니다.',
           '[PrivateGPT 리뷰](/ko/power-local-llm/privategpt-review) — 로컬 서버 운영에 익숙한 독자를 위한 자체 호스팅 완전 오프라인 문서 Q&A 도구입니다.',
           '[Quivr 리뷰](/ko/power-local-llm/quivr-self-hosted-knowledge-assistant-review) — 자신의 파일과 지식 베이스를 위한 또 다른 오픈 소스 "세컨드 브레인"입니다.',

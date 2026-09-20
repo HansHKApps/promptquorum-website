@@ -70,7 +70,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Roughly 5,700 GitHub stars and 497 forks as of this review',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Lemonade\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Lemonade compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Lemonade\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Lemonade compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -214,7 +214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama Review](/power-local-llm/ollama-review) — a broad, well-established local model library and community, for comparison against Lemonade\'s hardware-specific optimizations.',
           '[LM Studio Review](/power-local-llm/lm-studio-review) — a polished GUI-first alternative for browsing and chatting with local models.',
           '[Docker Model Runner Review](/power-local-llm/docker-model-runner-review) — a local model server built into Docker Desktop, for teams already standardized on Docker.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -287,7 +287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Rund 5.700 GitHub-Sterne und 497 Forks zum Zeitpunkt dieser Review',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu Lemonades Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort sehen Sie auf einen Blick, wie Lemonade im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu Lemonades Eintrag im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie Lemonade im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -432,7 +432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama Review](/de/power-local-llm/ollama-review) — eine breite, etablierte lokale Modellbibliothek und Community, zum Vergleich mit Lemonades hardwarespezifischen Optimierungen.',
           '[LM Studio Review](/de/power-local-llm/lm-studio-review) — eine ausgereifte, GUI-orientierte Alternative zum Durchsuchen und Chatten mit lokalen Modellen.',
           '[Docker Model Runner Review](/de/power-local-llm/docker-model-runner-review) — ein in Docker Desktop integrierter lokaler Modellserver, für Teams, die bereits auf Docker setzen.',
-          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software Directory](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -505,7 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Environ 5 700 étoiles GitHub et 497 forks au moment de cette review',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de Lemonade dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer Lemonade en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de Lemonade dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour comparer Lemonade en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -649,7 +649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Lemonade Review Ollama](/fr/power-local-llm/ollama-review) — une large bibliothèque de modèles locaux et communauté établie, à comparer aux optimisations matérielles spécifiques de Lemonade.',
           '[LM Studio Review](/fr/power-local-llm/lm-studio-review) — une alternative soignée axée sur l\'interface graphique pour parcourir et discuter avec des modèles locaux.',
           '[Docker Model Runner Review](/fr/power-local-llm/docker-model-runner-review) — un serveur de modèles local intégré à Docker Desktop, pour les équipes déjà standardisées sur Docker.',
-          '[Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
+          '[Local LLM Software Directory](/fr/directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
         ],
       },
     },
@@ -722,7 +722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '本レビュー時点でGitHubスター約5,700件、フォーク約497件',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)内のLemonadeの項目を深掘りする内容です——他の数十のローカルAIツールとLemonadeを一目で比較するには、そちらのページを参照してください。' },
+          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)内のLemonadeの項目を深掘りする内容です——他の数十のローカルAIツールとLemonadeを一目で比較するには、そちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -866,7 +866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollamaレビュー](/ja/power-local-llm/ollama-review) — Lemonadeのハードウェア固有の最適化と比較するための、幅広く定評のあるローカルモデルライブラリとコミュニティ。',
           '[LM Studioレビュー](/ja/power-local-llm/lm-studio-review) — ローカルモデルの閲覧やチャットのための、洗練されたGUI優先の代替ツール。',
           '[Docker Model Runnerレビュー](/ja/power-local-llm/docker-model-runner-review) — Docker Desktopに組み込まれたローカルモデルサーバー。すでにDockerに標準化しているチーム向け。',
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/directory) — 本記事が属するローカルAIツールの全カタログ。',
         ],
       },
     },
@@ -939,7 +939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至本评测约有5,700颗GitHub星标和497次分支（fork）',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Lemonade条目的深入版本——请查看该页面，一览Lemonade与其他数十款本地AI工具的对比。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Lemonade条目的深入版本——请查看该页面，一览Lemonade与其他数十款本地AI工具的对比。' },
         ],
       },
       overview: {
@@ -1083,7 +1083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama评测](/zh/power-local-llm/ollama-review) — 用于与Lemonade的硬件专属优化进行对比的、广泛且成熟的本地模型库和社区。',
           '[LM Studio评测](/zh/power-local-llm/lm-studio-review) — 用于浏览和与本地模型对话的、精致GUI优先的替代方案。',
           '[Docker Model Runner评测](/zh/power-local-llm/docker-model-runner-review) — 内置于Docker Desktop的本地模型服务器，适合已在使用Docker的团队。',
-          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录。',
+          '[本地LLM软件目录](/zh/directory) — 本文所属的本地AI工具完整目录。',
         ],
       },
     },
@@ -1156,7 +1156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Aproximadamente 5.700 estrellas en GitHub y 497 forks al momento de esta review',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento detallado de la ficha de Lemonade en el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — consulta esa página para comparar Lemonade de un vistazo con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta review es el complemento detallado de la ficha de Lemonade en el [Local LLM Software Directory](/es/directory) — consulta esa página para comparar Lemonade de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1300,7 +1300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Review de Ollama](/es/power-local-llm/ollama-review) — una amplia biblioteca de modelos locales y una comunidad consolidada, para comparar con las optimizaciones específicas de hardware de Lemonade.',
           '[Review de LM Studio](/es/power-local-llm/lm-studio-review) — una alternativa pulida centrada en la GUI para explorar y chatear con modelos locales.',
           '[Review de Docker Model Runner](/es/power-local-llm/docker-model-runner-review) — un servidor de modelos local integrado en Docker Desktop, para equipos ya estandarizados en Docker.',
-          '[Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Local LLM Software Directory](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1373,7 +1373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Aproximadamente 5.700 estrelas no GitHub e 497 forks no momento desta review',
         ],
         callouts: [
-          { type: 'note', text: 'Esta avaliação é o complemento aprofundado da entrada do Lemonade no [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar o Lemonade rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta avaliação é o complemento aprofundado da entrada do Lemonade no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar o Lemonade rapidamente com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1517,7 +1517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Review do Ollama](/pt/power-local-llm/ollama-review) — uma ampla biblioteca de modelos locais e comunidade consolidada, para comparar com as otimizações específicas de hardware do Lemonade.',
           '[Review do LM Studio](/pt/power-local-llm/lm-studio-review) — uma alternativa refinada e centrada em GUI para explorar e conversar com modelos locais.',
           '[Review do Docker Model Runner](/pt/power-local-llm/docker-model-runner-review) — um servidor de modelos local embutido no Docker Desktop, para equipes já padronizadas em Docker.',
-          '[Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Local LLM Software Directory](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -1590,7 +1590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'نحو 5,700 نجمة و497 نسخة متفرعة (fork) على GitHub وقت كتابة هذه المراجعة',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لسجل Lemonade في [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمقارنة Lemonade بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لسجل Lemonade في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة Lemonade بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -1734,7 +1734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة Ollama](/ar/power-local-llm/ollama-review) — مكتبة نماذج محلية واسعة ومجتمع راسخ، للمقارنة مع تحسينات Lemonade الخاصة بالعتاد.',
           '[مراجعة LM Studio](/ar/power-local-llm/lm-studio-review) — بديل متقن يركز على الواجهة الرسومية لتصفح النماذج المحلية والدردشة معها.',
           '[مراجعة Docker Model Runner](/ar/power-local-llm/docker-model-runner-review) — خادم نماذج محلي مدمج في Docker Desktop، للفرق التي توحّدت بالفعل على Docker.',
-          '[دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
+          '[دليل برمجيات نماذج اللغة المحلية](/ar/directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
         ],
       },
     },
@@ -1807,7 +1807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이 리뷰 작성 시점 기준 GitHub 스타 약 5,700개, 포크 약 497개',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 등록된 Lemonade 항목의 심층 버전입니다 — Lemonade를 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등록된 Lemonade 항목의 심층 버전입니다 — Lemonade를 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {
@@ -1951,7 +1951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama 리뷰](/ko/power-local-llm/ollama-review) — Lemonade의 하드웨어별 최적화와 비교할 수 있는, 폭넓고 자리 잡은 로컬 모델 라이브러리와 커뮤니티.',
           '[LM Studio 리뷰](/ko/power-local-llm/lm-studio-review) — 로컬 모델을 탐색하고 대화하기 위한, GUI 중심의 세련된 대안.',
           '[Docker Model Runner 리뷰](/ko/power-local-llm/docker-model-runner-review) — Docker Desktop에 내장된 로컬 모델 서버로, 이미 Docker에 표준화된 팀에 적합.',
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },

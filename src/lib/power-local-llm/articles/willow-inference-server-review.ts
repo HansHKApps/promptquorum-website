@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository ([github.com/toverainc/willow-inference-server](https://github.com/toverainc/willow-inference-server)) shows roughly 510 stars as of September 2026; commit activity is bursty rather than continuous — treat this as a smaller, slower-moving project than a heavily staffed commercial one',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Willow Inference Server\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Willow Inference Server\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -207,7 +207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'wis-competitors',
         title: 'Willow Inference Server vs. Other Speech Tools',
-        content: 'Willow Inference Server is one of several self-hosted options for local speech recognition and synthesis. Here is how it sits next to other tools in that space — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, and the dedicated [Willow Inference Server vs. whisper.cpp comparison](#wis-vs-whispercpp) above for the closest head-to-head.',
+        content: 'Willow Inference Server is one of several self-hosted options for local speech recognition and synthesis. Here is how it sits next to other tools in that space — see the [Local LLM Software Directory](/directory) for the full catalog, and the dedicated [Willow Inference Server vs. whisper.cpp comparison](#wis-vs-whispercpp) above for the closest head-to-head.',
         items: [
           '**[whisper.cpp](/power-local-llm/whisper-cpp-review)** — a lightweight, CPU-friendly C/C++ port of OpenAI\'s Whisper for transcription only, with no built-in server, WebRTC, or TTS; see the dedicated comparison section above.',
           '**[Faster Whisper](/power-local-llm/faster-whisper-review)** — a CTranslate2-based reimplementation of Whisper focused on inference speed; a library to embed rather than a ready-made ASR/TTS server like WIS.',
@@ -216,7 +216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Bark TTS](/power-local-llm/bark-tts-review)** — a generative text-to-speech model capable of non-speech audio (laughter, pauses); a different TTS engine choice than WIS\'s bundled XTTS pipeline.',
           '**[MacWhisper](/power-local-llm/macwhisper-review)** — a native macOS desktop app for Whisper transcription; a GUI desktop alternative for users who do not need WIS\'s server/WebRTC deployment model at all.',
         ],
-        note: 'This is not an exhaustive list of self-hosted speech tools — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Willow Inference Server\'s own directory entry.',
+        note: 'This is not an exhaustive list of self-hosted speech tools — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Willow Inference Server\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Willow Inference Server\'s directory entry alongside other speech tools covered above.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Willow Inference Server\'s directory entry alongside other speech tools covered above.',
           '[whisper.cpp Review](/power-local-llm/whisper-cpp-review) — a lightweight, CPU-friendly Whisper transcription library, compared directly to Willow Inference Server above.',
           '[Local Whisper STT Comparison 2026](/power-local-llm/local-whisper-stt-comparison-2026) — a broader look at self-hosted Whisper-based transcription options beyond Willow Inference Server.',
           '[Local TTS Voice Cloning: Piper, Coqui, XTTS](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — a deeper look at the voice-cloning TTS approach Willow Inference Server\'s bundled XTTS pipeline also uses.',
@@ -352,7 +352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Das GitHub-Repository ([github.com/toverainc/willow-inference-server](https://github.com/toverainc/willow-inference-server)) zeigt Stand September 2026 rund 510 Sterne; die Commit-Aktivität verläuft in Schüben statt kontinuierlich — betrachten Sie dies als kleineres, langsamer voranschreitendes Projekt als ein stark besetztes kommerzielles',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zum Eintrag von Willow Inference Server im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie es im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zum Eintrag von Willow Inference Server im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie es im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -485,7 +485,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'wis-competitors',
         title: 'Willow Inference Server vs. andere Sprach-Tools',
-        content: 'Willow Inference Server ist eine von mehreren selbst gehosteten Optionen für lokale Spracherkennung und -synthese. So schneidet es im Vergleich zu anderen Tools in diesem Bereich ab — siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog und den eigenen [Vergleich Willow Inference Server vs. whisper.cpp](#wis-vs-whispercpp) oben für den direktesten Vergleich.',
+        content: 'Willow Inference Server ist eine von mehreren selbst gehosteten Optionen für lokale Spracherkennung und -synthese. So schneidet es im Vergleich zu anderen Tools in diesem Bereich ab — siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen Katalog und den eigenen [Vergleich Willow Inference Server vs. whisper.cpp](#wis-vs-whispercpp) oben für den direktesten Vergleich.',
         items: [
           '**[whisper.cpp](/de/power-local-llm/whisper-cpp-review)** — ein leichtgewichtiger, CPU-freundlicher C/C++-Port von OpenAIs Whisper nur für Transkription, ohne eingebauten Server, WebRTC oder TTS; siehe den eigenen Vergleichsabschnitt oben.',
           '**[Faster Whisper](/de/power-local-llm/faster-whisper-review)** — eine auf CTranslate2 basierende Neuimplementierung von Whisper mit Fokus auf Inferenzgeschwindigkeit; eine einzubettende Bibliothek statt eines fertigen ASR-/TTS-Servers wie WIS.',
@@ -494,7 +494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Bark TTS](/de/power-local-llm/bark-tts-review)** — ein generatives Text-zu-Sprache-Modell, das auch nicht-sprachliches Audio (Lachen, Pausen) erzeugen kann; eine andere TTS-Engine-Wahl als die von WIS gebündelte XTTS-Pipeline.',
           '**[MacWhisper](/de/power-local-llm/macwhisper-review)** — eine native macOS-Desktop-App für Whisper-Transkription; eine grafische Desktop-Alternative für Nutzer, die das Server-/WebRTC-Bereitstellungsmodell von WIS überhaupt nicht benötigen.',
         ],
-        note: 'Dies ist keine erschöpfende Liste selbst gehosteter Sprach-Tools — siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Verzeichniseintrags von Willow Inference Server.',
+        note: 'Dies ist keine erschöpfende Liste selbst gehosteter Sprach-Tools — siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Verzeichniseintrags von Willow Inference Server.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -550,7 +550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Lokales KI-Software-Verzeichnis 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von Willow Inference Server neben anderen oben behandelten Sprach-Tools.',
+          '[Lokales KI-Software-Verzeichnis 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von Willow Inference Server neben anderen oben behandelten Sprach-Tools.',
           '[whisper.cpp Review](/de/power-local-llm/whisper-cpp-review) — eine leichtgewichtige, CPU-freundliche Whisper-Transkriptionsbibliothek, oben direkt mit Willow Inference Server verglichen.',
           '[Lokaler Whisper-STT-Vergleich 2026](/de/power-local-llm/local-whisper-stt-comparison-2026) — ein breiterer Blick auf selbst gehostete Whisper-basierte Transkriptionsoptionen über Willow Inference Server hinaus.',
           '[Lokales TTS-Stimmklonen: Piper, Coqui, XTTS](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — ein tieferer Blick auf den Stimmklon-Ansatz, den auch die gebündelte XTTS-Pipeline von Willow Inference Server verwendet.',
@@ -630,7 +630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub ([github.com/toverainc/willow-inference-server](https://github.com/toverainc/willow-inference-server)) affiche environ 510 étoiles en septembre 2026 ; l\'activité des commits se fait par rafales plutôt que de manière continue — considérez ceci comme un projet plus petit et plus lent qu\'un projet commercial fortement doté en personnel',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Willow Inference Server dans le [Répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment il se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Willow Inference Server dans le [Répertoire des logiciels d\'IA locale](/fr/directory) — consultez cette page pour voir comment il se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -763,7 +763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'wis-competitors',
         title: 'Willow Inference Server vs. autres outils vocaux',
-        content: 'Willow Inference Server est l\'une des nombreuses options auto-hébergées pour la reconnaissance et la synthèse vocales locales. Voici comment il se positionne face à d\'autres outils dans ce domaine — voir le [Répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, et la comparaison dédiée [Willow Inference Server vs. whisper.cpp](#wis-vs-whispercpp) ci-dessus pour le face-à-face le plus proche.',
+        content: 'Willow Inference Server est l\'une des nombreuses options auto-hébergées pour la reconnaissance et la synthèse vocales locales. Voici comment il se positionne face à d\'autres outils dans ce domaine — voir le [Répertoire des logiciels d\'IA locale](/fr/directory) pour le catalogue complet, et la comparaison dédiée [Willow Inference Server vs. whisper.cpp](#wis-vs-whispercpp) ci-dessus pour le face-à-face le plus proche.',
         items: [
           '**[whisper.cpp](/fr/power-local-llm/whisper-cpp-review)** — un portage C/C++ léger et adapté au CPU de Whisper d\'OpenAI, pour la transcription uniquement, sans serveur intégré, WebRTC ou TTS ; voir la section de comparaison dédiée ci-dessus.',
           '**[Faster Whisper](/fr/power-local-llm/faster-whisper-review)** — une réimplémentation de Whisper basée sur CTranslate2, axée sur la vitesse d\'inférence ; une bibliothèque à intégrer plutôt qu\'un serveur ASR/TTS prêt à l\'emploi comme WIS.',
@@ -772,7 +772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Bark TTS](/fr/power-local-llm/bark-tts-review)** — un modèle de synthèse vocale génératif capable de produire de l\'audio non vocal (rires, pauses) ; un choix de moteur TTS différent du pipeline XTTS intégré de WIS.',
           '**[MacWhisper](/fr/power-local-llm/macwhisper-review)** — une application de bureau macOS native pour la transcription Whisper ; une alternative de bureau graphique pour les utilisateurs qui n\'ont pas du tout besoin du modèle de déploiement serveur/WebRTC de WIS.',
         ],
-        note: 'Cette liste d\'outils vocaux auto-hébergés n\'est pas exhaustive — voir le [Répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de Willow Inference Server.',
+        note: 'Cette liste d\'outils vocaux auto-hébergés n\'est pas exhaustive — voir le [Répertoire des logiciels d\'IA locale](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de Willow Inference Server.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -828,7 +828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire des logiciels d\'IA locale 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche de Willow Inference Server aux côtés des autres outils vocaux évoqués ci-dessus.',
+          '[Répertoire des logiciels d\'IA locale 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche de Willow Inference Server aux côtés des autres outils vocaux évoqués ci-dessus.',
           '[Avis whisper.cpp](/fr/power-local-llm/whisper-cpp-review) — une bibliothèque de transcription Whisper légère et adaptée au CPU, comparée directement à Willow Inference Server ci-dessus.',
           '[Comparaison Whisper local STT 2026](/fr/power-local-llm/local-whisper-stt-comparison-2026) — un panorama plus large des options de transcription basées sur Whisper auto-hébergées au-delà de Willow Inference Server.',
           '[Clonage de voix TTS local : Piper, Coqui, XTTS](/fr/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — un regard plus approfondi sur l\'approche de clonage vocal que le pipeline XTTS intégré de Willow Inference Server utilise aussi.',
@@ -908,7 +908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHubリポジトリ（[github.com/toverainc/willow-inference-server](https://github.com/toverainc/willow-inference-server)）は2026年9月時点で約510スターを記録。コミット活動は継続的というより断続的で、人員豊富な商用プロジェクトよりも小規模でペースの遅いプロジェクトと捉えるべき',
         ],
         callouts: [
-          { type: 'note', text: '本レビューは[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるWillow Inference Serverのエントリーの詳細版です。他の数十のローカルAIツールと一目で比較できます。' },
+          { type: 'note', text: '本レビューは[ローカルAIソフトウェアディレクトリ](/ja/directory)にあるWillow Inference Serverのエントリーの詳細版です。他の数十のローカルAIツールと一目で比較できます。' },
         ],
       },
       overview: {
@@ -1041,7 +1041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'wis-competitors',
         title: 'Willow Inference Server vs. 他の音声ツール',
-        content: 'Willow Inference Serverは、ローカルの音声認識・合成向けの複数あるセルフホスト型選択肢の1つです。この分野の他のツールとの比較は以下の通りです——全カタログは[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を、最も近い一対一比較は上記の専用[Willow Inference Server vs. whisper.cpp比較](#wis-vs-whispercpp)をご覧ください。',
+        content: 'Willow Inference Serverは、ローカルの音声認識・合成向けの複数あるセルフホスト型選択肢の1つです。この分野の他のツールとの比較は以下の通りです——全カタログは[ローカルAIソフトウェアディレクトリ](/ja/directory)を、最も近い一対一比較は上記の専用[Willow Inference Server vs. whisper.cpp比較](#wis-vs-whispercpp)をご覧ください。',
         items: [
           '**[whisper.cpp](/ja/power-local-llm/whisper-cpp-review)** — OpenAIのWhisperを文字起こし専用に移植した軽量でCPUに優しいC/C++実装で、組み込みサーバー、WebRTC、TTSはなし。詳細は上記の専用比較セクションを参照。',
           '**[Faster Whisper](/ja/power-local-llm/faster-whisper-review)** — 推論速度に重点を置いたCTranslate2ベースのWhisper再実装。WISのような既製のASR/TTSサーバーではなく、組み込み用のライブラリ。',
@@ -1050,7 +1050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Bark TTS](/ja/power-local-llm/bark-tts-review)** — 笑い声やポーズなどの非音声オーディオも生成できる生成型テキスト読み上げモデル。WISがバンドルするXTTSパイプラインとは異なるTTSエンジンの選択肢。',
           '**[MacWhisper](/ja/power-local-llm/macwhisper-review)** — Whisper文字起こし用のネイティブmacOSデスクトップアプリ。WISのサーバー/WebRTCデプロイモデルをまったく必要としないユーザー向けのGUIデスクトップ代替。',
         ],
-        note: 'これはセルフホスト型音声ツールの網羅的なリストではありません——Willow Inference Server自身のディレクトリエントリーを含む、定期的に更新される完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはセルフホスト型音声ツールの網羅的なリストではありません——Willow Inference Server自身のディレクトリエントリーを含む、定期的に更新される完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1106,7 +1106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルAIソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの完全カタログ。上記で取り上げた他の音声ツールと並んでWillow Inference Serverのディレクトリエントリーも含む。',
+          '[ローカルAIソフトウェアディレクトリ2026](/ja/directory) — 本記事が属するローカルAIツールの完全カタログ。上記で取り上げた他の音声ツールと並んでWillow Inference Serverのディレクトリエントリーも含む。',
           '[whisper.cppレビュー](/ja/power-local-llm/whisper-cpp-review) — 軽量でCPUに優しいWhisper文字起こしライブラリ。上記でWillow Inference Serverと直接比較。',
           '[ローカルWhisper STT比較2026](/ja/power-local-llm/local-whisper-stt-comparison-2026) — Willow Inference Server以外のセルフホスト型Whisperベース文字起こしの選択肢をより広く紹介。',
           '[ローカルTTS音声クローン: Piper、Coqui、XTTS](/ja/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — Willow Inference Serverがバンドルするxttsパイプラインも使用する音声クローンの手法をより深く解説。',
@@ -1186,7 +1186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至2026年9月，GitHub仓库（[github.com/toverainc/willow-inference-server](https://github.com/toverainc/willow-inference-server)）显示约510颗星；提交活动呈阵发性而非持续性——应将其视为一个规模较小、节奏较慢的项目，而非人手充足的商业项目',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)中Willow Inference Server条目的深度版本——请查看该页面，了解它与其他数十款本地AI工具的一览对比。' },
+          { type: 'note', text: '本评测是[本地AI软件目录](/zh/directory)中Willow Inference Server条目的深度版本——请查看该页面，了解它与其他数十款本地AI工具的一览对比。' },
         ],
       },
       overview: {
@@ -1319,7 +1319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'wis-competitors',
         title: 'Willow Inference Server 对比其他语音工具',
-        content: 'Willow Inference Server是本地语音识别与合成领域众多自托管选择之一。以下是它与该领域其他工具的对比——完整目录请见[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)，最接近的一对一比较请见上方专门的[Willow Inference Server对比whisper.cpp](#wis-vs-whispercpp)。',
+        content: 'Willow Inference Server是本地语音识别与合成领域众多自托管选择之一。以下是它与该领域其他工具的对比——完整目录请见[本地AI软件目录](/zh/directory)，最接近的一对一比较请见上方专门的[Willow Inference Server对比whisper.cpp](#wis-vs-whispercpp)。',
         items: [
           '**[whisper.cpp](/zh/power-local-llm/whisper-cpp-review)** — 一个轻量、适合CPU的OpenAI Whisper的C/C++移植版，仅用于转录，不含内置服务器、WebRTC或TTS；详见上方专门的比较部分。',
           '**[Faster Whisper](/zh/power-local-llm/faster-whisper-review)** — 一个基于CTranslate2、专注于推理速度的Whisper重新实现；是一个可嵌入的库，而非像WIS这样的现成ASR/TTS服务器。',
@@ -1328,7 +1328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Bark TTS](/zh/power-local-llm/bark-tts-review)** — 一个能够生成非语音音频（笑声、停顿）的生成式文本转语音模型；与WIS内置的XTTS流水线相比是不同的TTS引擎选择。',
           '**[MacWhisper](/zh/power-local-llm/macwhisper-review)** — 一款用于Whisper转录的原生macOS桌面应用；适合完全不需要WIS服务器/WebRTC部署模式的用户的图形化桌面替代方案。',
         ],
-        note: '这并非自托管语音工具的详尽列表——完整且定期更新的目录，包括Willow Inference Server自身的目录条目，请见[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非自托管语音工具的详尽列表——完整且定期更新的目录，包括Willow Inference Server自身的目录条目，请见[本地AI软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1384,7 +1384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地AI软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包含Willow Inference Server的目录条目及上文提到的其他语音工具。',
+          '[本地AI软件目录2026](/zh/directory) — 本文所属的本地AI工具完整目录，包含Willow Inference Server的目录条目及上文提到的其他语音工具。',
           '[whisper.cpp评测](/zh/power-local-llm/whisper-cpp-review) — 一个轻量、适合CPU的Whisper转录库，上文已与Willow Inference Server直接比较。',
           '[本地Whisper STT对比2026](/zh/power-local-llm/local-whisper-stt-comparison-2026) — 除Willow Inference Server之外，更广泛地介绍自托管的基于Whisper的转录选择。',
           '[本地TTS语音克隆：Piper、Coqui、XTTS](/zh/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — 深入探讨Willow Inference Server内置的XTTS流水线同样使用的语音克隆方法。',
@@ -1464,7 +1464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El repositorio de GitHub ([github.com/toverainc/willow-inference-server](https://github.com/toverainc/willow-inference-server)) muestra unas 510 estrellas a septiembre de 2026; la actividad de commits es intermitente en lugar de continua — considera esto un proyecto más pequeño y de ritmo más lento que uno comercial con mucho personal',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la ficha de Willow Inference Server en el [Directorio de Software de IA Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara de un vistazo con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la ficha de Willow Inference Server en el [Directorio de Software de IA Local](/es/directory) — consulta esa página para ver cómo se compara de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1597,7 +1597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'wis-competitors',
         title: 'Willow Inference Server vs. otras herramientas de voz',
-        content: 'Willow Inference Server es una de varias opciones autoalojadas para el reconocimiento y la síntesis de voz local. Así se posiciona frente a otras herramientas de este ámbito — consulta el [Directorio de Software de IA Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, y la comparación dedicada [Willow Inference Server vs. whisper.cpp](#wis-vs-whispercpp) más arriba para el enfrentamiento directo más cercano.',
+        content: 'Willow Inference Server es una de varias opciones autoalojadas para el reconocimiento y la síntesis de voz local. Así se posiciona frente a otras herramientas de este ámbito — consulta el [Directorio de Software de IA Local](/es/directory) para el catálogo completo, y la comparación dedicada [Willow Inference Server vs. whisper.cpp](#wis-vs-whispercpp) más arriba para el enfrentamiento directo más cercano.',
         items: [
           '**[whisper.cpp](/es/power-local-llm/whisper-cpp-review)** — un port ligero en C/C++, apto para CPU, del Whisper de OpenAI, solo para transcripción, sin servidor integrado, WebRTC ni TTS; consulta la sección de comparación dedicada más arriba.',
           '**[Faster Whisper](/es/power-local-llm/faster-whisper-review)** — una reimplementación de Whisper basada en CTranslate2, centrada en la velocidad de inferencia; una librería para integrar en lugar de un servidor ASR/TTS listo para usar como WIS.',
@@ -1606,7 +1606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Bark TTS](/es/power-local-llm/bark-tts-review)** — un modelo generativo de texto a voz capaz de producir audio no hablado (risas, pausas); una elección de motor TTS distinta a la canalización XTTS integrada de WIS.',
           '**[MacWhisper](/es/power-local-llm/macwhisper-review)** — una app de escritorio nativa de macOS para transcripción Whisper; una alternativa de escritorio con interfaz gráfica para usuarios que no necesitan en absoluto el modelo de despliegue servidor/WebRTC de WIS.',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas de voz autoalojadas — consulta el [Directorio de Software de IA Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la propia ficha de Willow Inference Server.',
+        note: 'Esta no es una lista exhaustiva de herramientas de voz autoalojadas — consulta el [Directorio de Software de IA Local](/es/directory) para el catálogo completo y actualizado regularmente, incluida la propia ficha de Willow Inference Server.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1662,7 +1662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software de IA Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de Willow Inference Server junto a otras herramientas de voz mencionadas arriba.',
+          '[Directorio de Software de IA Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de Willow Inference Server junto a otras herramientas de voz mencionadas arriba.',
           '[Reseña de whisper.cpp](/es/power-local-llm/whisper-cpp-review) — una librería de transcripción Whisper ligera y apta para CPU, comparada directamente con Willow Inference Server arriba.',
           '[Comparación de Whisper local STT 2026](/es/power-local-llm/local-whisper-stt-comparison-2026) — una visión más amplia de las opciones de transcripción autoalojadas basadas en Whisper más allá de Willow Inference Server.',
           '[Clonación de voz TTS local: Piper, Coqui, XTTS](/es/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — un vistazo más profundo al enfoque de clonación de voz que también usa la canalización XTTS integrada de Willow Inference Server.',
@@ -1742,7 +1742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub ([github.com/toverainc/willow-inference-server](https://github.com/toverainc/willow-inference-server)) mostra cerca de 510 estrelas em setembro de 2026; a atividade de commits acontece em rajadas em vez de contínua — considere este um projeto menor e mais lento do que um projeto comercial com equipe extensa',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da ficha do Willow Inference Server no [Diretório de Software de IA Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da ficha do Willow Inference Server no [Diretório de Software de IA Local](/pt/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1875,7 +1875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'wis-competitors',
         title: 'Willow Inference Server vs. outras ferramentas de voz',
-        content: 'O Willow Inference Server é uma entre várias opções auto-hospedadas para reconhecimento e síntese de voz locais. Veja como ele se posiciona em relação a outras ferramentas nesse espaço — consulte o [Diretório de Software de IA Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, e a comparação dedicada [Willow Inference Server vs. whisper.cpp](#wis-vs-whispercpp) acima para o confronto mais direto.',
+        content: 'O Willow Inference Server é uma entre várias opções auto-hospedadas para reconhecimento e síntese de voz locais. Veja como ele se posiciona em relação a outras ferramentas nesse espaço — consulte o [Diretório de Software de IA Local](/pt/directory) para o catálogo completo, e a comparação dedicada [Willow Inference Server vs. whisper.cpp](#wis-vs-whispercpp) acima para o confronto mais direto.',
         items: [
           '**[whisper.cpp](/pt/power-local-llm/whisper-cpp-review)** — uma portabilidade leve e amigável à CPU do Whisper da OpenAI em C/C++, apenas para transcrição, sem servidor integrado, WebRTC ou TTS; veja a seção de comparação dedicada acima.',
           '**[Faster Whisper](/pt/power-local-llm/faster-whisper-review)** — uma reimplementação do Whisper baseada em CTranslate2, focada em velocidade de inferência; uma biblioteca para incorporar, em vez de um servidor ASR/TTS pronto para uso como o WIS.',
@@ -1884,7 +1884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Bark TTS](/pt/power-local-llm/bark-tts-review)** — um modelo generativo de texto para voz capaz de produzir áudio não falado (risadas, pausas); uma escolha de motor de TTS diferente do pipeline XTTS empacotado pelo WIS.',
           '**[MacWhisper](/pt/power-local-llm/macwhisper-review)** — um aplicativo de desktop nativo para macOS para transcrição Whisper; uma alternativa de desktop com interface gráfica para usuários que não precisam do modelo de implantação servidor/WebRTC do WIS de forma alguma.',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas de voz auto-hospedadas — consulte o [Diretório de Software de IA Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do Willow Inference Server.',
+        note: 'Esta não é uma lista exaustiva de ferramentas de voz auto-hospedadas — consulte o [Diretório de Software de IA Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do Willow Inference Server.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1940,7 +1940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software de IA Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do Willow Inference Server ao lado de outras ferramentas de voz abordadas acima.',
+          '[Diretório de Software de IA Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do Willow Inference Server ao lado de outras ferramentas de voz abordadas acima.',
           '[Análise do whisper.cpp](/pt/power-local-llm/whisper-cpp-review) — uma biblioteca de transcrição Whisper leve e amigável à CPU, comparada diretamente com o Willow Inference Server acima.',
           '[Comparação de Whisper local STT 2026](/pt/power-local-llm/local-whisper-stt-comparison-2026) — um panorama mais amplo das opções de transcrição auto-hospedadas baseadas em Whisper além do Willow Inference Server.',
           '[Clonagem de voz TTS local: Piper, Coqui, XTTS](/pt/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — um olhar mais aprofundado sobre a abordagem de clonagem de voz que o pipeline XTTS empacotado pelo Willow Inference Server também usa.',
@@ -2020,7 +2020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُظهر مستودع GitHub ([github.com/toverainc/willow-inference-server](https://github.com/toverainc/willow-inference-server)) نحو 510 نجمة اعتبارًا من سبتمبر 2026؛ ونشاط التعديلات متقطع وليس مستمرًا — اعتبر هذا مشروعًا أصغر وأبطأ وتيرة مقارنة بمشروع تجاري ذي طاقم كبير',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي النسخة المتعمقة المرافقة لمدخل Willow Inference Server في [دليل برمجيات الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارن بلمحة سريعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي النسخة المتعمقة المرافقة لمدخل Willow Inference Server في [دليل برمجيات الذكاء الاصطناعي المحلي](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارن بلمحة سريعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2153,7 +2153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'wis-competitors',
         title: 'Willow Inference Server مقابل أدوات صوتية أخرى',
-        content: 'Willow Inference Server هو أحد عدة خيارات مستضافة ذاتيًا للتعرف على الكلام وتركيبه محليًا. إليك كيف يتموضع مقارنة بأدوات أخرى في هذا المجال — راجع [دليل برمجيات الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل، والمقارنة المخصصة [Willow Inference Server مقابل whisper.cpp](#wis-vs-whispercpp) أعلاه لأقرب مواجهة مباشرة.',
+        content: 'Willow Inference Server هو أحد عدة خيارات مستضافة ذاتيًا للتعرف على الكلام وتركيبه محليًا. إليك كيف يتموضع مقارنة بأدوات أخرى في هذا المجال — راجع [دليل برمجيات الذكاء الاصطناعي المحلي](/ar/directory) للحصول على الكتالوج الكامل، والمقارنة المخصصة [Willow Inference Server مقابل whisper.cpp](#wis-vs-whispercpp) أعلاه لأقرب مواجهة مباشرة.',
         items: [
           '**[whisper.cpp](/ar/power-local-llm/whisper-cpp-review)** — منفذ خفيف الوزن ومناسب للمعالج بلغتَي C/C++ لنموذج Whisper من OpenAI مخصص للتفريغ فقط، دون خادم مدمج أو WebRTC أو TTS؛ راجع قسم المقارنة المخصص أعلاه.',
           '**[Faster Whisper](/ar/power-local-llm/faster-whisper-review)** — إعادة تنفيذ لـWhisper مبنية على CTranslate2 وتركز على سرعة الاستدلال؛ مكتبة يمكن دمجها بدلاً من خادم ASR/TTS جاهز مثل WIS.',
@@ -2162,7 +2162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Bark TTS](/ar/power-local-llm/bark-tts-review)** — نموذج توليدي لتحويل النص إلى كلام قادر على إنتاج صوت غير كلامي (ضحك، توقفات)؛ خيار محرك TTS مختلف عن خط أنابيب XTTS المدمج في WIS.',
           '**[MacWhisper](/ar/power-local-llm/macwhisper-review)** — تطبيق سطح مكتب أصلي لنظام macOS لتفريغ Whisper؛ بديل واجهة رسومية لسطح المكتب للمستخدمين الذين لا يحتاجون إطلاقًا إلى نموذج النشر عبر خادم/WebRTC الخاص بـWIS.',
         ],
-        note: 'هذه ليست قائمة شاملة بالأدوات الصوتية المستضافة ذاتيًا — راجع [دليل برمجيات الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل الذي يُحدَّث بانتظام، بما في ذلك مدخل Willow Inference Server الخاص به.',
+        note: 'هذه ليست قائمة شاملة بالأدوات الصوتية المستضافة ذاتيًا — راجع [دليل برمجيات الذكاء الاصطناعي المحلي](/ar/directory) للحصول على الكتالوج الكامل الذي يُحدَّث بانتظام، بما في ذلك مدخل Willow Inference Server الخاص به.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2218,7 +2218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات الذكاء الاصطناعي المحلي 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك مدخل Willow Inference Server إلى جانب أدوات صوتية أخرى تناولناها أعلاه.',
+          '[دليل برمجيات الذكاء الاصطناعي المحلي 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك مدخل Willow Inference Server إلى جانب أدوات صوتية أخرى تناولناها أعلاه.',
           '[مراجعة whisper.cpp](/ar/power-local-llm/whisper-cpp-review) — مكتبة تفريغ Whisper خفيفة الوزن ومناسبة للمعالج، قُورنت مباشرة بـWillow Inference Server أعلاه.',
           '[مقارنة Whisper المحلي لتحويل الكلام إلى نص 2026](/ar/power-local-llm/local-whisper-stt-comparison-2026) — نظرة أوسع على خيارات التفريغ المستضافة ذاتيًا القائمة على Whisper بخلاف Willow Inference Server.',
           '[استنساخ صوت TTS محلي: Piper وCoqui وXTTS](/ar/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — نظرة أعمق على أسلوب استنساخ الصوت الذي يستخدمه أيضًا خط أنابيب XTTS المدمج في Willow Inference Server.',
@@ -2298,7 +2298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub 저장소([github.com/toverainc/willow-inference-server](https://github.com/toverainc/willow-inference-server))는 2026년 9월 기준 약 510개의 스타를 보유하며, 커밋 활동은 지속적이라기보다 단속적임 — 인력이 풍부한 상업 프로젝트보다 규모가 작고 속도가 느린 프로젝트로 간주해야 함',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 Willow Inference Server 항목의 심층 버전입니다 — 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 확인하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)에 있는 Willow Inference Server 항목의 심층 버전입니다 — 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 확인하세요.' },
         ],
       },
       overview: {
@@ -2431,7 +2431,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'wis-competitors',
         title: 'Willow Inference Server vs. 다른 음성 도구',
-        content: 'Willow Inference Server는 로컬 음성 인식 및 합성을 위한 여러 셀프호스팅 옵션 중 하나입니다. 이 분야의 다른 도구들과 비교하면 다음과 같습니다 — 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를, 가장 가까운 일대일 비교는 위의 전용 [Willow Inference Server vs. whisper.cpp 비교](#wis-vs-whispercpp)를 참고하세요.',
+        content: 'Willow Inference Server는 로컬 음성 인식 및 합성을 위한 여러 셀프호스팅 옵션 중 하나입니다. 이 분야의 다른 도구들과 비교하면 다음과 같습니다 — 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)를, 가장 가까운 일대일 비교는 위의 전용 [Willow Inference Server vs. whisper.cpp 비교](#wis-vs-whispercpp)를 참고하세요.',
         items: [
           '**[whisper.cpp](/ko/power-local-llm/whisper-cpp-review)** — OpenAI Whisper를 전사 전용으로 이식한 가볍고 CPU 친화적인 C/C++ 구현으로, 내장 서버, WebRTC, TTS가 없음; 위의 전용 비교 섹션 참고.',
           '**[Faster Whisper](/ko/power-local-llm/faster-whisper-review)** — 추론 속도에 중점을 둔 CTranslate2 기반 Whisper 재구현으로, WIS 같은 완성형 ASR/TTS 서버가 아니라 내장용 라이브러리.',
@@ -2440,7 +2440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Bark TTS](/ko/power-local-llm/bark-tts-review)** — 웃음이나 멈춤 같은 비언어 오디오도 만들 수 있는 생성형 텍스트 음성 변환 모델로, WIS가 번들한 XTTS 파이프라인과는 다른 TTS 엔진 선택지.',
           '**[MacWhisper](/ko/power-local-llm/macwhisper-review)** — Whisper 전사를 위한 네이티브 macOS 데스크톱 앱으로, WIS의 서버/WebRTC 배포 모델이 전혀 필요 없는 사용자를 위한 GUI 데스크톱 대안.',
         ],
-        note: '이는 셀프호스팅 음성 도구의 전체 목록이 아닙니다 — Willow Inference Server 자체 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이는 셀프호스팅 음성 도구의 전체 목록이 아닙니다 — Willow Inference Server 자체 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2496,7 +2496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 AI 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 음성 도구와 함께 Willow Inference Server의 디렉터리 항목도 포함합니다.',
+          '[로컬 AI 소프트웨어 디렉터리 2026](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 음성 도구와 함께 Willow Inference Server의 디렉터리 항목도 포함합니다.',
           '[whisper.cpp 리뷰](/ko/power-local-llm/whisper-cpp-review) — 가볍고 CPU 친화적인 Whisper 전사 라이브러리로, 위에서 Willow Inference Server와 직접 비교했습니다.',
           '[로컬 Whisper STT 비교 2026](/ko/power-local-llm/local-whisper-stt-comparison-2026) — Willow Inference Server 외의 셀프호스팅 Whisper 기반 전사 옵션을 더 폭넓게 살펴봅니다.',
           '[로컬 TTS 음성 클로닝: Piper, Coqui, XTTS](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — Willow Inference Server가 번들한 XTTS 파이프라인도 사용하는 음성 클로닝 방식을 더 깊이 다룹니다.',

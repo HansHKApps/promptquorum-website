@@ -33,6 +33,10 @@ function invertMap(map: Record<string, string>): Record<string, string> {
 }
 
 function articleUrl(hub: string, slug: string, lang: string): string {
+  // The software directory lives at top-level /directory, not under its cluster hub.
+  if (hub === 'power-local-llm' && slug === DIRECTORY_ARTICLE_SLUG) {
+    return lang === 'en' ? '/directory' : `/${lang}/directory`
+  }
   // Every cluster is served at /<hub>/<slug> (en) or /<lang>/<hub>/<slug> (non-en).
   return lang === 'en' ? `/${hub}/${slug}` : `/${lang}/${hub}/${slug}`
 }

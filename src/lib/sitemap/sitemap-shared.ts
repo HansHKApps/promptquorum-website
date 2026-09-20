@@ -93,6 +93,11 @@ export function getImagesForPage(path: string): Array<{ url: string; title?: str
     if (key) return extractImagesFromArticle(metadata['prompt-engineering'], key)
   }
 
+  if (path === '/directory') {
+    const key = POWER_LLM_SLUG_TO_KEY['local-llm-software-directory']
+    if (key) return extractImagesFromArticle(metadata['power-local-llm'], key)
+  }
+
   if (path.startsWith('/power-local-llm/')) {
     const slug = path.replace('/power-local-llm/', '')
     const key = POWER_LLM_SLUG_TO_KEY[slug]
@@ -146,6 +151,11 @@ export function availableLangsForPath(path: string): readonly string[] | null {
     ['/smart-home/', metadata['smart-home'], SMART_HOME_SLUG_TO_KEY],
     ['/balcony-solar/', metadata['balcony-solar'], BALCONY_SOLAR_SLUG_TO_KEY],
   ]
+  if (path === '/directory') {
+    const key = POWER_LLM_SLUG_TO_KEY['local-llm-software-directory']
+    const langs = key ? metadata['power-local-llm'][key]?.langs : undefined
+    return langs?.length ? langs : ['en']
+  }
   for (const [prefix, cluster, slugMap] of clusters) {
     if (path.startsWith(prefix)) {
       const slug = path.slice(prefix.length)

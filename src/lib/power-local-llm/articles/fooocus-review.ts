@@ -337,7 +337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion Review: Free Local Text-to-Image Models](/power-local-llm/stable-diffusion-review) — the underlying open-weights model family Fooocus runs, including license terms and version history.',
           '[Local AI Image Generation vs. Cloud: FLUX, SD 3.5, Qwen-Image vs. Adobe Firefly & getimg.ai](/power-local-llm/local-ai-image-generation-vs-cloud) — a deeper comparison of local image model families for readers who outgrow Fooocus\'s SDXL-only scope.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — comprehensive app and tool directory for all platforms.',
+          '[Local LLM Software Directory 2026](/directory) — comprehensive app and tool directory for all platforms.',
         ],
       },
     },
@@ -668,7 +668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion Test: Kostenlose lokale Text-zu-Bild-Modelle](/de/power-local-llm/stable-diffusion-review) — die zugrunde liegende offene Modellfamilie, auf der Fooocus läuft, samt Lizenzbedingungen und Versionshistorie.',
           '[Lokale KI-Bildgenerierung vs. Cloud: FLUX, SD 3.5, Qwen-Image vs. Adobe Firefly & getimg.ai](/de/power-local-llm/local-ai-image-generation-vs-cloud) — ein tieferer Vergleich lokaler Bildmodell-Familien für Leser:innen, die über Fooocus\' reinen SDXL-Fokus hinauswachsen.',
-          '[Verzeichnis lokaler LLM-Software 2026](/de/power-local-llm/local-llm-software-directory) — umfassendes App- und Tool-Verzeichnis für alle Plattformen.',
+          '[Verzeichnis lokaler LLM-Software 2026](/de/directory) — umfassendes App- und Tool-Verzeichnis für alle Plattformen.',
         ],
       },
     },
@@ -999,7 +999,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion: Análisis de los modelos locales gratuitos de texto a imagen](/es/power-local-llm/stable-diffusion-review) — la familia de modelos abiertos subyacente sobre la que funciona Fooocus, incluidas las condiciones de licencia y el historial de versiones.',
           '[Generación de imágenes con IA local frente a la nube: FLUX, SD 3.5, Qwen-Image frente a Adobe Firefly y getimg.ai](/es/power-local-llm/local-ai-image-generation-vs-cloud) — una comparación más profunda de familias de modelos de imagen locales para quien supere el enfoque exclusivo en SDXL de Fooocus.',
-          '[Directorio de software de LLM local 2026](/es/power-local-llm/local-llm-software-directory) — directorio completo de aplicaciones y herramientas para todas las plataformas.',
+          '[Directorio de software de LLM local 2026](/es/directory) — directorio completo de aplicaciones y herramientas para todas las plataformas.',
         ],
       },
     },
@@ -1330,7 +1330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion : test des modèles locaux gratuits de texte à image](/fr/power-local-llm/stable-diffusion-review) — la famille de modèles ouverts sous-jacente sur laquelle fonctionne Fooocus, avec conditions de licence et historique des versions.',
           '[Génération d\'images IA locale contre cloud : FLUX, SD 3.5, Qwen-Image contre Adobe Firefly et getimg.ai](/fr/power-local-llm/local-ai-image-generation-vs-cloud) — une comparaison plus approfondie des familles de modèles d\'images locaux pour les lecteurs dépassant le périmètre SDXL exclusif de Fooocus.',
-          '[Répertoire des logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — répertoire complet d\'applications et d\'outils pour toutes les plateformes.',
+          '[Répertoire des logiciels LLM locaux 2026](/fr/directory) — répertoire complet d\'applications et d\'outils pour toutes les plateformes.',
         ],
       },
     },
@@ -1661,7 +1661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusionレビュー:無料のローカルText-to-Imageモデル](/ja/power-local-llm/stable-diffusion-review) — Fooocusが動作する基盤となるオープンウェイトモデルファミリーについて、ライセンス条件やバージョン履歴を含めて解説。',
           '[ローカルAI画像生成 vs. クラウド:FLUX、SD 3.5、Qwen-Image vs. Adobe Firefly & getimg.ai](/ja/power-local-llm/local-ai-image-generation-vs-cloud) — FooocusのSDXL限定という範囲を超えたい読者向けに、ローカル画像モデルファミリーをより深く比較。',
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — 全プラットフォーム対応の包括的なアプリ・ツールディレクトリ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — 全プラットフォーム対応の包括的なアプリ・ツールディレクトリ。',
         ],
       },
     },
@@ -1992,7 +1992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion: Análise dos modelos locais gratuitos de texto para imagem](/pt/power-local-llm/stable-diffusion-review) — a família de modelos abertos subjacente sobre a qual o Fooocus roda, incluindo termos de licença e histórico de versões.',
           '[Geração de imagens com IA local vs. nuvem: FLUX, SD 3.5, Qwen-Image vs. Adobe Firefly e getimg.ai](/pt/power-local-llm/local-ai-image-generation-vs-cloud) — uma comparação mais aprofundada de famílias de modelos de imagem locais para leitores que superam o escopo exclusivo de SDXL do Fooocus.',
-          '[Diretório de software de LLM local 2026](/pt/power-local-llm/local-llm-software-directory) — diretório completo de aplicativos e ferramentas para todas as plataformas.',
+          '[Diretório de software de LLM local 2026](/pt/directory) — diretório completo de aplicativos e ferramentas para todas as plataformas.',
         ],
       },
     },
@@ -2323,7 +2323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[مراجعة Stable Diffusion: نماذج مجانية محلية للتحويل من نص إلى صورة](/ar/power-local-llm/stable-diffusion-review) — عائلة النماذج المفتوحة الأساسية التي تعمل عليها Fooocus، بما في ذلك شروط الرخصة وتاريخ الإصدارات.',
           '[توليد الصور بالذكاء الاصطناعي محليًا مقابل السحابة: FLUX وSD 3.5 وQwen-Image مقابل Adobe Firefly وgetimg.ai](/ar/power-local-llm/local-ai-image-generation-vs-cloud) — مقارنة أعمق لعائلات نماذج الصور المحلية للقراء الذين يتجاوزون نطاق Fooocus المقتصر على SDXL.',
-          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — دليل شامل للتطبيقات والأدوات لجميع المنصات.',
+          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/directory) — دليل شامل للتطبيقات والأدوات لجميع المنصات.',
         ],
       },
     },
@@ -2654,7 +2654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion评测:免费的本地文本生成图像模型](/zh/power-local-llm/stable-diffusion-review) — Fooocus所运行的底层开放权重模型系列,包括许可条款和版本历史。',
           '[本地AI图像生成 vs. 云端:FLUX、SD 3.5、Qwen-Image 对比 Adobe Firefly 与 getimg.ai](/zh/power-local-llm/local-ai-image-generation-vs-cloud) — 面向那些超出Fooocus纯SDXL范围的读者,对本地图像模型系列进行更深入的比较。',
-          '[2026年本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 覆盖所有平台的全面应用与工具目录。',
+          '[2026年本地LLM软件目录](/zh/directory) — 覆盖所有平台的全面应用与工具目录。',
         ],
       },
     },
@@ -2985,7 +2985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion 리뷰: 무료 로컬 텍스트-이미지 모델](/ko/power-local-llm/stable-diffusion-review) — Fooocus가 작동하는 기반이 되는 오픈 웨이트 모델 계열로, 라이선스 조건과 버전 이력을 포함합니다.',
           '[로컬 AI 이미지 생성 vs. 클라우드: FLUX, SD 3.5, Qwen-Image vs. Adobe Firefly & getimg.ai](/ko/power-local-llm/local-ai-image-generation-vs-cloud) — Fooocus의 SDXL 전용 범위를 넘어서고자 하는 독자를 위한, 로컬 이미지 모델 계열에 대한 더 깊은 비교.',
-          '[2026년 로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 모든 플랫폼을 아우르는 종합 앱 및 도구 디렉터리.',
+          '[2026년 로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 모든 플랫폼을 아우르는 종합 앱 및 도구 디렉터리.',
         ],
       },
     },

@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Instead of running separate tools for chat, coding help, and image generation, Locally Uncensored gives you one installer that manages all of them on your own PC. Your phone or tablet can reach the model running on that PC by scanning a QR code, without the model itself running on the phone. The app is free; a separate paid service exists only for people who want cloud GPU power instead of using their own hardware.' },
         ],
         items: [
-          'Free and open-source; the [GitHub LICENSE](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE) is AGPL-3.0-only, matching this app\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory)',
+          'Free and open-source; the [GitHub LICENSE](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE) is AGPL-3.0-only, matching this app\'s entry in the [Local LLM Software Directory](/directory)',
           'Runs on Windows 10/11 and Linux (.deb, .rpm, .AppImage); no macOS build as of this review — the project\'s own materials describe macOS support as planned, not shipped',
           'Works as a front end that detects and connects to existing local backends — [Ollama](https://ollama.com), [llama.cpp](https://github.com/ggml-org/llama.cpp), [KoboldCpp](https://github.com/LostRuins/koboldcpp), [LocalAI](https://localai.io), vLLM, and [LM Studio](https://lmstudio.ai) among them — or its own bundled "LU Engine" when none are installed',
           'Covers chat, coding assistance, and image generation (the last via an automatically configured [ComfyUI](https://www.comfy.org) install) in one interface',
@@ -81,7 +81,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Built by an independent developer using the GitHub handle [PurpleDoubleD](https://github.com/PurpleDoubleD), who described the project\'s origin — switching between a terminal running Ollama and multiple ComfyUI browser tabs — in a [dev.to post](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda)',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Locally Uncensored\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Locally Uncensored\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -210,14 +210,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Competitors and Alternatives',
-        content: 'Locally Uncensored competes most directly with other desktop apps that combine local model chat with a simple, single-installer setup. Here is how it compares to a few others in that segment — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'Locally Uncensored competes most directly with other desktop apps that combine local model chat with a simple, single-installer setup. Here is how it compares to a few others in that segment — see the [Local LLM Software Directory](/directory) for the full catalog.',
         items: [
           '**[Jan](https://jan.ai)** — a free, open-source desktop chat app built around its own bundled llama.cpp engine, with optional cloud-provider connections and a local API server; narrower in scope than Locally Uncensored (chat-focused, no built-in image generation), but with broader official platform coverage including macOS. See the [Jan review](/power-local-llm/jan-review).',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — an established open-source, local-first chat client from Nomic AI, similarly free with no built-in image-generation feature. See the [Jan vs. GPT4All comparison](/power-local-llm/jan-review#jan-vs-gpt4all) for how these more chat-focused apps compare to each other.',
           '**[AnythingLLM](https://anythingllm.com)** — a document-chat and RAG-focused desktop/self-hosted app; a better fit than Locally Uncensored if retrieval over your own documents, rather than image generation, is the main feature you need. See the [AnythingLLM review](/power-local-llm/anythingllm-review).',
           '**[Open WebUI](https://openwebui.com)** — a self-hosted, browser-based chat interface typically deployed alongside Ollama, often in a container, rather than installed as a native desktop app; a comparison point for anyone deciding between a native installer and a self-hosted web interface.',
         ],
-        note: 'This is not an exhaustive list of local-first chat clients — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including this app\'s own directory entry.',
+        note: 'This is not an exhaustive list of local-first chat clients — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including this app\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including this app\'s directory entry alongside other chat clients covered above.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including this app\'s directory entry alongside other chat clients covered above.',
           '[Jan Review](/power-local-llm/jan-review) — a free, open-source desktop chat app with a narrower chat-and-cloud-connection focus and broader official platform coverage.',
           '[AnythingLLM Review](/power-local-llm/anythingllm-review) — a document-chat and RAG-focused alternative if retrieval over your own files, rather than image generation, is the priority.',
         ],
@@ -341,7 +341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Statt getrennte Tools für Chat, Programmierhilfe und Bildgenerierung zu betreiben, bietet Locally Uncensored einen einzigen Installer, der all das auf Ihrem eigenen PC verwaltet. Ihr Smartphone oder Tablet erreicht das auf diesem PC laufende Modell durch Scannen eines QR-Codes, ohne dass das Modell selbst auf dem Smartphone läuft. Die App ist kostenlos; ein separater kostenpflichtiger Dienst existiert nur für alle, die Cloud-GPU-Leistung statt eigener Hardware nutzen möchten.' },
         ],
         items: [
-          'Kostenlos und quelloffen; die [GitHub-LICENSE](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE) ist AGPL-3.0-only, was dem Eintrag dieser App im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) entspricht',
+          'Kostenlos und quelloffen; die [GitHub-LICENSE](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE) ist AGPL-3.0-only, was dem Eintrag dieser App im [lokalen KI-Software-Verzeichnis](/de/directory) entspricht',
           'Läuft unter Windows 10/11 und Linux (.deb, .rpm, .AppImage); kein macOS-Build zum Zeitpunkt dieser Review — die eigenen Projektmaterialien beschreiben macOS-Unterstützung als geplant, nicht als ausgeliefert',
           'Dient als Oberfläche, die bestehende lokale Backends erkennt und verbindet — [Ollama](https://ollama.com), [llama.cpp](https://github.com/ggml-org/llama.cpp), [KoboldCpp](https://github.com/LostRuins/koboldcpp), [LocalAI](https://localai.io), vLLM und [LM Studio](https://lmstudio.ai) darunter — oder die eigene mitgelieferte "LU Engine", wenn keines installiert ist',
           'Deckt Chat, Programmierhilfe und Bildgenerierung (Letzteres über eine automatisch konfigurierte [ComfyUI](https://www.comfy.org)-Installation) in einer Oberfläche ab',
@@ -350,7 +350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Entwickelt von einem unabhängigen Entwickler unter dem GitHub-Namen [PurpleDoubleD](https://github.com/PurpleDoubleD), der den Ursprung des Projekts — der Wechsel zwischen einem Ollama-Terminal und mehreren ComfyUI-Browser-Tabs — in einem [dev.to-Beitrag](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda) beschreibt',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zum Eintrag von Locally Uncensored im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie die App im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zum Eintrag von Locally Uncensored im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie die App im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -479,14 +479,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Konkurrenten und Alternativen',
-        content: 'Locally Uncensored konkurriert am direktesten mit anderen Desktop-Apps, die lokalen Modell-Chat mit einer einfachen Ein-Installer-Einrichtung verbinden. So schneidet die App im Vergleich zu einigen anderen in diesem Segment ab — den vollständigen Katalog finden Sie im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory).',
+        content: 'Locally Uncensored konkurriert am direktesten mit anderen Desktop-Apps, die lokalen Modell-Chat mit einer einfachen Ein-Installer-Einrichtung verbinden. So schneidet die App im Vergleich zu einigen anderen in diesem Segment ab — den vollständigen Katalog finden Sie im [lokalen KI-Software-Verzeichnis](/de/directory).',
         items: [
           '**[Jan](https://jan.ai)** — eine kostenlose, quelloffene Desktop-Chat-App rund um eine eigene mitgelieferte llama.cpp-Engine, mit optionalen Cloud-Anbieter-Verbindungen und einem lokalen API-Server; enger im Umfang als Locally Uncensored (chat-fokussiert, keine eingebaute Bildgenerierung), aber mit breiterer offizieller Plattformabdeckung inklusive macOS. Siehe die [Jan Review](/de/power-local-llm/jan-review).',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — ein etablierter quelloffener, lokal-first Chat-Client von Nomic AI, ebenfalls kostenlos und ohne eingebaute Bildgenerierungsfunktion. Siehe den [Jan-vs.-GPT4All-Vergleich](/de/power-local-llm/jan-review#jan-vs-gpt4all) für einen Vergleich dieser stärker chat-fokussierten Apps untereinander.',
           '**[AnythingLLM](https://anythingllm.com)** — eine dokumentenbasierte, RAG-fokussierte Desktop-/Self-Hosting-App; besser geeignet als Locally Uncensored, wenn Abfragen über eigene Dokumente statt Bildgenerierung die Hauptfunktion ist, die Sie benötigen. Siehe die [AnythingLLM Review](/de/power-local-llm/anythingllm-review).',
           '**[Open WebUI](https://openwebui.com)** — eine selbst gehostete, browserbasierte Chat-Oberfläche, typischerweise zusammen mit Ollama betrieben, oft in einem Container, statt als native Desktop-App installiert — ein Vergleichspunkt für alle, die zwischen einem nativen Installer und einer selbst gehosteten Web-Oberfläche entscheiden.',
         ],
-        note: 'Dies ist keine vollständige Liste lokal-first Chat-Clients — den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Verzeichniseintrags dieser App, finden Sie im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine vollständige Liste lokal-first Chat-Clients — den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Verzeichniseintrags dieser App, finden Sie im [lokalen KI-Software-Verzeichnis](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -541,7 +541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Lokales KI-Software-Verzeichnis 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags dieser App neben anderen oben behandelten Chat-Clients.',
+          '[Lokales KI-Software-Verzeichnis 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags dieser App neben anderen oben behandelten Chat-Clients.',
           '[Jan Review](/de/power-local-llm/jan-review) — eine kostenlose, quelloffene Desktop-Chat-App mit engerem Fokus auf Chat und Cloud-Anbindung sowie breiterer offizieller Plattformabdeckung.',
           '[AnythingLLM Review](/de/power-local-llm/anythingllm-review) — eine dokumentenbasierte, RAG-fokussierte Alternative, wenn Abfragen über eigene Dateien statt Bildgenerierung im Vordergrund steht.',
         ],
@@ -610,7 +610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Plutôt que d\'utiliser des outils séparés pour le chat, l\'aide au code et la génération d\'images, Locally Uncensored propose un seul installeur qui gère tout cela sur votre propre PC. Votre téléphone ou tablette peut accéder au modèle exécuté sur ce PC en scannant un QR code, sans que le modèle lui-même tourne sur le téléphone. L\'application est gratuite ; un service payant distinct n\'existe que pour ceux qui veulent de la puissance GPU dans le cloud plutôt que d\'utiliser leur propre matériel.' },
         ],
         items: [
-          'Gratuite et open source ; la [LICENSE GitHub](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE) est AGPL-3.0-only, ce qui correspond à l\'entrée de cette application dans l\'[Annuaire des logiciels IA locaux](/fr/power-local-llm/local-llm-software-directory)',
+          'Gratuite et open source ; la [LICENSE GitHub](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE) est AGPL-3.0-only, ce qui correspond à l\'entrée de cette application dans l\'[Annuaire des logiciels IA locaux](/fr/directory)',
           'Fonctionne sous Windows 10/11 et Linux (.deb, .rpm, .AppImage) ; aucune version macOS au moment de cet avis — les propres documents du projet décrivent le support macOS comme prévu, non livré',
           'Sert d\'interface qui détecte et se connecte aux moteurs locaux existants — [Ollama](https://ollama.com), [llama.cpp](https://github.com/ggml-org/llama.cpp), [KoboldCpp](https://github.com/LostRuins/koboldcpp), [LocalAI](https://localai.io) et [LM Studio](https://lmstudio.ai) parmi eux — ou son propre "LU Engine" intégré si aucun n\'est installé',
           'Couvre le chat, l\'aide au code et la génération d\'images (cette dernière via une installation [ComfyUI](https://www.comfy.org) configurée automatiquement) dans une seule interface',
@@ -619,7 +619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Créée par un développeur indépendant sous le pseudonyme GitHub [PurpleDoubleD](https://github.com/PurpleDoubleD), qui décrit l\'origine du projet — jongler entre un terminal Ollama et plusieurs onglets ComfyUI — dans un [billet dev.to](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda)',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de Locally Uncensored dans l\'[Annuaire des logiciels IA locaux](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment l\'application se compare en un coup d\'œil à des dizaines d\'autres outils IA locaux.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de Locally Uncensored dans l\'[Annuaire des logiciels IA locaux](/fr/directory) — consultez cette page pour voir comment l\'application se compare en un coup d\'œil à des dizaines d\'autres outils IA locaux.' },
         ],
       },
       overview: {
@@ -748,14 +748,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Concurrents et alternatives',
-        content: 'Locally Uncensored est en concurrence la plus directe avec d\'autres applications de bureau qui combinent chat sur modèle local et une installation simple, en un seul installeur. Voici comment elle se compare à quelques autres dans ce segment — consultez l\'[Annuaire des logiciels IA locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        content: 'Locally Uncensored est en concurrence la plus directe avec d\'autres applications de bureau qui combinent chat sur modèle local et une installation simple, en un seul installeur. Voici comment elle se compare à quelques autres dans ce segment — consultez l\'[Annuaire des logiciels IA locaux](/fr/directory) pour le catalogue complet.',
         items: [
           '**[Jan](https://jan.ai)** — une application de chat de bureau gratuite et open source construite autour de son propre moteur llama.cpp intégré, avec connexions optionnelles à des fournisseurs cloud et un serveur API local ; plus restreinte que Locally Uncensored (centrée sur le chat, sans génération d\'images intégrée), mais avec une couverture de plateformes officielle plus large incluant macOS. Voir l\'[avis sur Jan](/fr/power-local-llm/jan-review).',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — un client de chat local établi et open source de Nomic AI, également gratuit et sans fonction de génération d\'images intégrée. Voir la [comparaison Jan vs. GPT4All](/fr/power-local-llm/jan-review#jan-vs-gpt4all) pour voir comment ces applications plus centrées sur le chat se comparent entre elles.',
           '**[AnythingLLM](https://anythingllm.com)** — une application de bureau/auto-hébergée centrée sur le chat documentaire et la RAG ; mieux adaptée que Locally Uncensored si la recherche dans vos propres documents, plutôt que la génération d\'images, est la fonctionnalité principale dont vous avez besoin. Voir l\'[avis sur AnythingLLM](/fr/power-local-llm/anythingllm-review).',
           '**[Open WebUI](https://openwebui.com)** — une interface de chat auto-hébergée basée sur le navigateur, généralement déployée aux côtés d\'Ollama, souvent dans un conteneur, plutôt qu\'installée comme application de bureau native ; un point de comparaison pour quiconque hésite entre un installeur natif et une interface web auto-hébergée.',
         ],
-        note: 'Cette liste n\'est pas exhaustive des clients de chat local — consultez l\'[Annuaire des logiciels IA locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée propre de cette application dans l\'annuaire.',
+        note: 'Cette liste n\'est pas exhaustive des clients de chat local — consultez l\'[Annuaire des logiciels IA locaux](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée propre de cette application dans l\'annuaire.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -810,7 +810,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Annuaire des logiciels IA locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant l\'entrée d\'annuaire de cette application aux côtés des autres clients de chat évoqués ci-dessus.',
+          '[Annuaire des logiciels IA locaux 2026](/fr/directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant l\'entrée d\'annuaire de cette application aux côtés des autres clients de chat évoqués ci-dessus.',
           '[Avis sur Jan](/fr/power-local-llm/jan-review) — une application de chat de bureau gratuite et open source, plus centrée sur le chat et les connexions cloud, avec une couverture de plateformes officielle plus large.',
           '[Avis sur AnythingLLM](/fr/power-local-llm/anythingllm-review) — une alternative centrée sur le chat documentaire et la RAG, si la recherche dans vos propres fichiers plutôt que la génération d\'images est la priorité.',
         ],
@@ -879,7 +879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'En lugar de usar herramientas separadas para chat, ayuda con código y generación de imágenes, Locally Uncensored ofrece un único instalador que gestiona todo eso en tu propio PC. Tu teléfono o tablet puede acceder al modelo que corre en ese PC escaneando un código QR, sin que el modelo se ejecute en el teléfono. La app es gratuita; existe un servicio de pago independiente solo para quienes quieren potencia de GPU en la nube en vez de usar su propio hardware.' },
         ],
         items: [
-          'Gratuita y de código abierto; la [LICENSE de GitHub](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE) es AGPL-3.0-only, lo que coincide con la entrada de esta app en el [Directorio de software de IA local](/es/power-local-llm/local-llm-software-directory)',
+          'Gratuita y de código abierto; la [LICENSE de GitHub](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE) es AGPL-3.0-only, lo que coincide con la entrada de esta app en el [Directorio de software de IA local](/es/directory)',
           'Funciona en Windows 10/11 y Linux (.deb, .rpm, .AppImage); sin versión para macOS al momento de esta reseña — los propios materiales del proyecto describen el soporte de macOS como previsto, no publicado',
           'Funciona como interfaz que detecta y se conecta a backends locales existentes — [Ollama](https://ollama.com), [llama.cpp](https://github.com/ggml-org/llama.cpp), [KoboldCpp](https://github.com/LostRuins/koboldcpp), [LocalAI](https://localai.io) y [LM Studio](https://lmstudio.ai) entre ellos — o su propio "LU Engine" incluido si no hay ninguno instalado',
           'Cubre chat, ayuda con código y generación de imágenes (esta última mediante una instalación de [ComfyUI](https://www.comfy.org) configurada automáticamente) en una sola interfaz',
@@ -888,7 +888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Creada por un desarrollador independiente con el usuario de GitHub [PurpleDoubleD](https://github.com/PurpleDoubleD), que describe el origen del proyecto — alternar entre una terminal con Ollama y varias pestañas de ComfyUI — en una [publicación en dev.to](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de Locally Uncensored en el [Directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara de un vistazo con decenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de Locally Uncensored en el [Directorio de software de IA local](/es/directory) — consulta esa página para ver cómo se compara de un vistazo con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1017,14 +1017,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Competidores y alternativas',
-        content: 'Locally Uncensored compite más directamente con otras apps de escritorio que combinan chat con modelo local y una instalación sencilla en un solo instalador. Así se compara con algunas otras en ese segmento — consulta el [Directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo.',
+        content: 'Locally Uncensored compite más directamente con otras apps de escritorio que combinan chat con modelo local y una instalación sencilla en un solo instalador. Así se compara con algunas otras en ese segmento — consulta el [Directorio de software de IA local](/es/directory) para el catálogo completo.',
         items: [
           '**[Jan](https://jan.ai)** — una app de chat de escritorio gratuita y de código abierto construida alrededor de su propio motor llama.cpp incluido, con conexiones opcionales a proveedores en la nube y un servidor API local; más limitada en alcance que Locally Uncensored (centrada en chat, sin generación de imágenes integrada), pero con mayor cobertura oficial de plataformas, incluyendo macOS. Ver la [reseña de Jan](/es/power-local-llm/jan-review).',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — un cliente de chat local establecido y de código abierto de Nomic AI, también gratuito y sin función de generación de imágenes integrada. Ver la [comparación Jan vs. GPT4All](/es/power-local-llm/jan-review#jan-vs-gpt4all) para ver cómo se comparan entre sí estas apps más centradas en el chat.',
           '**[AnythingLLM](https://anythingllm.com)** — una app de escritorio/autoalojada centrada en chat documental y RAG; mejor opción que Locally Uncensored si la búsqueda en tus propios documentos, en lugar de la generación de imágenes, es la función principal que necesitas. Ver la [reseña de AnythingLLM](/es/power-local-llm/anythingllm-review).',
           '**[Open WebUI](https://openwebui.com)** — una interfaz de chat autoalojada basada en navegador, normalmente desplegada junto a Ollama, a menudo en un contenedor, en lugar de instalarse como app de escritorio nativa; un punto de comparación para quien esté decidiendo entre un instalador nativo y una interfaz web autoalojada.',
         ],
-        note: 'Esta no es una lista exhaustiva de clientes de chat local — consulta el [Directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluyendo la propia entrada de esta app en el directorio.',
+        note: 'Esta no es una lista exhaustiva de clientes de chat local — consulta el [Directorio de software de IA local](/es/directory) para el catálogo completo y actualizado regularmente, incluyendo la propia entrada de esta app en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1079,7 +1079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de IA local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la entrada de esta app en el directorio junto a otros clientes de chat mencionados arriba.',
+          '[Directorio de software de IA local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la entrada de esta app en el directorio junto a otros clientes de chat mencionados arriba.',
           '[Reseña de Jan](/es/power-local-llm/jan-review) — una app de chat de escritorio gratuita y de código abierto con un enfoque más limitado en chat y conexiones a la nube, y mayor cobertura oficial de plataformas.',
           '[Reseña de AnythingLLM](/es/power-local-llm/anythingllm-review) — una alternativa centrada en chat documental y RAG, si la búsqueda en tus propios archivos, en lugar de la generación de imágenes, es la prioridad.',
         ],
@@ -1148,7 +1148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Em vez de usar ferramentas separadas para chat, ajuda com código e geração de imagens, o Locally Uncensored oferece um único instalador que gerencia tudo isso no seu próprio PC. Seu celular ou tablet pode acessar o modelo que roda nesse PC escaneando um QR code, sem que o modelo em si seja executado no celular. O app é gratuito; existe um serviço pago separado apenas para quem quer poder computacional de GPU na nuvem em vez de usar o próprio hardware.' },
         ],
         items: [
-          'Gratuito e de código aberto; o [LICENSE do GitHub](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE) é AGPL-3.0-only, o que corresponde à entrada deste app no [Diretório de Software de IA Local](/pt/power-local-llm/local-llm-software-directory)',
+          'Gratuito e de código aberto; o [LICENSE do GitHub](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE) é AGPL-3.0-only, o que corresponde à entrada deste app no [Diretório de Software de IA Local](/pt/directory)',
           'Roda em Windows 10/11 e Linux (.deb, .rpm, .AppImage); sem versão para macOS até esta análise — os próprios materiais do projeto descrevem o suporte a macOS como planejado, não lançado',
           'Funciona como interface que detecta e se conecta a backends locais existentes — [Ollama](https://ollama.com), [llama.cpp](https://github.com/ggml-org/llama.cpp), [KoboldCpp](https://github.com/LostRuins/koboldcpp), [LocalAI](https://localai.io) e [LM Studio](https://lmstudio.ai) entre eles — ou o próprio "LU Engine" embutido, caso nenhum esteja instalado',
           'Cobre chat, ajuda com código e geração de imagens (esta última por meio de uma instalação do [ComfyUI](https://www.comfy.org) configurada automaticamente) em uma única interface',
@@ -1157,7 +1157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Criado por um desenvolvedor independente com o usuário do GitHub [PurpleDoubleD](https://github.com/PurpleDoubleD), que descreve a origem do projeto — alternar entre um terminal com Ollama e várias abas do ComfyUI no navegador — em uma [publicação no dev.to](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Locally Uncensored no [Diretório de Software de IA Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Locally Uncensored no [Diretório de Software de IA Local](/pt/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1286,14 +1286,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Concorrentes e alternativas',
-        content: 'O Locally Uncensored compete mais diretamente com outros apps de desktop que combinam chat com modelo local e uma configuração simples em um único instalador. Veja como ele se compara a alguns outros nesse segmento — consulte o [Diretório de Software de IA Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'O Locally Uncensored compete mais diretamente com outros apps de desktop que combinam chat com modelo local e uma configuração simples em um único instalador. Veja como ele se compara a alguns outros nesse segmento — consulte o [Diretório de Software de IA Local](/pt/directory) para o catálogo completo.',
         items: [
           '**[Jan](https://jan.ai)** — um app de chat de desktop gratuito e de código aberto construído em torno do próprio motor llama.cpp embutido, com conexões opcionais a provedores de nuvem e um servidor de API local; mais restrito em escopo que o Locally Uncensored (focado em chat, sem geração de imagens embutida), mas com cobertura oficial de plataformas mais ampla, incluindo macOS. Veja a [análise do Jan](/pt/power-local-llm/jan-review).',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — um cliente de chat local estabelecido e de código aberto da Nomic AI, também gratuito e sem função de geração de imagens embutida. Veja a [comparação Jan vs. GPT4All](/pt/power-local-llm/jan-review#jan-vs-gpt4all) para ver como esses apps mais focados em chat se comparam entre si.',
           '**[AnythingLLM](https://anythingllm.com)** — um app de desktop/autogerenciado focado em chat com documentos e RAG; melhor opção que o Locally Uncensored se buscar em seus próprios documentos, em vez de geração de imagens, for o recurso principal de que você precisa. Veja a [análise do AnythingLLM](/pt/power-local-llm/anythingllm-review).',
           '**[Open WebUI](https://openwebui.com)** — uma interface de chat autogerenciada baseada em navegador, normalmente implantada junto com o Ollama, muitas vezes em um contêiner, em vez de instalada como app de desktop nativo; um ponto de comparação para quem está decidindo entre um instalador nativo e uma interface web autogerenciada.',
         ],
-        note: 'Esta não é uma lista exaustiva de clientes de chat local — consulte o [Diretório de Software de IA Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada deste app no diretório.',
+        note: 'Esta não é uma lista exaustiva de clientes de chat local — consulte o [Diretório de Software de IA Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada deste app no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1348,7 +1348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software de IA Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada deste app no diretório ao lado de outros clientes de chat mencionados acima.',
+          '[Diretório de Software de IA Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada deste app no diretório ao lado de outros clientes de chat mencionados acima.',
           '[Análise do Jan](/pt/power-local-llm/jan-review) — um app de chat de desktop gratuito e de código aberto com foco mais restrito em chat e conexões de nuvem, e cobertura oficial de plataformas mais ampla.',
           '[Análise do AnythingLLM](/pt/power-local-llm/anythingllm-review) — uma alternativa focada em chat com documentos e RAG, se a busca em seus próprios arquivos, em vez de geração de imagens, for a prioridade.',
         ],
@@ -1417,7 +1417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'チャット・コーディング支援・画像生成をそれぞれ別のツールで行う代わりに、Locally Uncensoredは1つのインストーラーで、それら全てを自分のPC上でまとめて管理します。スマホやタブレットは、QRコードをスキャンするだけでそのPC上で動いているモデルにアクセスでき、モデル自体がスマホ上で動くわけではありません。アプリ自体は無料で、自分のハードウェアの代わりにクラウドGPUを使いたい人向けの別料金サービスが存在するだけです。' },
         ],
         items: [
-          '無料・オープンソース。[GitHubのLICENSE](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE)はAGPL-3.0-onlyで、[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)のこのアプリのライセンス表記と一致',
+          '無料・オープンソース。[GitHubのLICENSE](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE)はAGPL-3.0-onlyで、[ローカルAIソフトウェアディレクトリ](/ja/directory)のこのアプリのライセンス表記と一致',
           'Windows 10/11とLinux（.deb、.rpm、.AppImage）に対応。本レビュー時点でmacOS版はなく、プロジェクトの資料では計画中とされ、公開はされていない',
           '既存のローカルバックエンドを検出して接続するフロントエンド — [Ollama](https://ollama.com)、[llama.cpp](https://github.com/ggml-org/llama.cpp)、[KoboldCpp](https://github.com/LostRuins/koboldcpp)、[LocalAI](https://localai.io)、[LM Studio](https://lmstudio.ai)などが対象、いずれもなければ独自バンドルの「LU Engine」を使用',
           'チャット、コーディング支援、画像生成（自動設定される[ComfyUI](https://www.comfy.org)インストールを通じて）を1つのインターフェースでカバー',
@@ -1426,7 +1426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHubの[PurpleDoubleD](https://github.com/PurpleDoubleD)名義の個人開発者が制作。Ollamaのターミナルと複数のComfyUIブラウザタブを行き来する不便さがプロジェクトの発端だったと、[dev.toの投稿](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda)で説明している',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)に掲載されたLocally Uncensoredの項目を深掘りする内容です。他の数十種類のローカルAIツールとの一覧比較はそちらのページをご覧ください。' },
+          { type: 'note', text: 'このレビューは、[ローカルAIソフトウェアディレクトリ](/ja/directory)に掲載されたLocally Uncensoredの項目を深掘りする内容です。他の数十種類のローカルAIツールとの一覧比較はそちらのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1555,14 +1555,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '競合とその代替候補',
-        content: 'Locally Uncensoredは、ローカルモデルでのチャットとシンプルな単一インストーラーのセットアップを組み合わせた他のデスクトップアプリと最も直接的に競合します。この分野における他の選択肢との比較を以下に示します — 全カタログは[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        content: 'Locally Uncensoredは、ローカルモデルでのチャットとシンプルな単一インストーラーのセットアップを組み合わせた他のデスクトップアプリと最も直接的に競合します。この分野における他の選択肢との比較を以下に示します — 全カタログは[ローカルAIソフトウェアディレクトリ](/ja/directory)をご覧ください。',
         items: [
           '**[Jan](https://jan.ai)** — 独自バンドルのllama.cppエンジンを中心に構築された無料・オープンソースのデスクトップチャットアプリで、クラウドプロバイダーへのオプション接続とローカルAPIサーバーを備える。Locally Uncensoredより対応範囲は狭い（チャット中心で画像生成機能は内蔵されていない）が、macOSを含む公式プラットフォーム対応はより広い。[Janのレビュー](/ja/power-local-llm/jan-review)を参照。',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — Nomic AIによる定評のあるオープンソースのローカルファーストチャットクライアントで、同様に無料だが画像生成機能は内蔵していない。よりチャット中心のこれらのアプリ同士の比較は[Jan対GPT4Allの比較](/ja/power-local-llm/jan-review#jan-vs-gpt4all)を参照。',
           '**[AnythingLLM](https://anythingllm.com)** — ドキュメントチャットとRAGに特化したデスクトップ/セルフホスト型アプリ。画像生成ではなく自分のドキュメントに対する検索が主な要件であれば、Locally Uncensoredより適している。[AnythingLLMのレビュー](/ja/power-local-llm/anythingllm-review)を参照。',
           '**[Open WebUI](https://openwebui.com)** — 通常はOllamaと組み合わせてコンテナ上などで動かす、セルフホスト型のブラウザベースのチャットインターフェース。ネイティブデスクトップアプリとしてインストールするのではなく、比較検討の材料として挙げられる。',
         ],
-        note: 'これはローカルファーストなチャットクライアントの網羅的なリストではありません — このアプリ自体のディレクトリ項目を含む、定期的に更新される完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'これはローカルファーストなチャットクライアントの網羅的なリストではありません — このアプリ自体のディレクトリ項目を含む、定期的に更新される完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/directory)をご覧ください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1617,7 +1617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルAIソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、上記で紹介した他のチャットクライアントとともにこのアプリのディレクトリ項目も含む、ローカルAIツールの完全カタログ。',
+          '[ローカルAIソフトウェアディレクトリ2026](/ja/directory) — この記事が属する、上記で紹介した他のチャットクライアントとともにこのアプリのディレクトリ項目も含む、ローカルAIツールの完全カタログ。',
           '[Janのレビュー](/ja/power-local-llm/jan-review) — チャットとクラウド接続によりフォーカスした、無料・オープンソースのデスクトップチャットアプリで、公式プラットフォーム対応もより広い。',
           '[AnythingLLMのレビュー](/ja/power-local-llm/anythingllm-review) — 画像生成ではなく自分のファイルに対する検索を優先するなら、ドキュメントチャットとRAGに特化した代替アプリ。',
         ],
@@ -1686,7 +1686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '与其为聊天、代码辅助和图像生成分别使用不同工具,Locally Uncensored提供单个安装包,在你自己的电脑上统一管理这一切。你的手机或平板只需扫描二维码即可访问那台电脑上运行的模型,模型本身并不在手机上运行。该应用是免费的;一项独立的付费服务仅面向那些希望使用云端GPU算力而非自有硬件的人。' },
         ],
         items: [
-          '免费开源;[GitHub上的LICENSE](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE)为AGPL-3.0-only,与[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中该应用的许可证记录一致',
+          '免费开源;[GitHub上的LICENSE](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE)为AGPL-3.0-only,与[本地LLM软件目录](/zh/directory)中该应用的许可证记录一致',
           '支持Windows 10/11和Linux（.deb、.rpm、.AppImage）;截至本评测尚无macOS版本——项目方自己的资料将macOS支持描述为计划中,而非已发布',
           '作为前端检测并连接现有本地后端——包括[Ollama](https://ollama.com)、[llama.cpp](https://github.com/ggml-org/llama.cpp)、[KoboldCpp](https://github.com/LostRuins/koboldcpp)、[LocalAI](https://localai.io)和[LM Studio](https://lmstudio.ai)——若均未安装,则使用自带的"LU Engine"',
           '在一个界面内覆盖聊天、代码辅助和图像生成（图像生成通过自动配置的[ComfyUI](https://www.comfy.org)安装完成）',
@@ -1695,7 +1695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '由GitHub用户名为[PurpleDoubleD](https://github.com/PurpleDoubleD)的独立开发者创建,在一篇[dev.to文章](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda)中描述了项目的起源——在运行Ollama的终端和多个ComfyUI浏览器标签之间来回切换的困扰',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Locally Uncensored条目的深度补充——请查看该页面,快速了解它与数十款其他本地AI工具相比的表现。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Locally Uncensored条目的深度补充——请查看该页面,快速了解它与数十款其他本地AI工具相比的表现。' },
         ],
       },
       overview: {
@@ -1824,14 +1824,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '竞品与替代方案',
-        content: 'Locally Uncensored最直接的竞争对手,是那些将本地模型聊天与简单的单一安装包设置相结合的其他桌面应用。以下是它与该细分领域中几款产品的比较——完整目录请见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'Locally Uncensored最直接的竞争对手,是那些将本地模型聊天与简单的单一安装包设置相结合的其他桌面应用。以下是它与该细分领域中几款产品的比较——完整目录请见[本地LLM软件目录](/zh/directory)。',
         items: [
           '**[Jan](https://jan.ai)** — 一款免费开源的桌面聊天应用,围绕自带的llama.cpp引擎构建,支持可选的云服务商连接和本地API服务器;功能范围比Locally Uncensored更窄（专注聊天,未内置图像生成）,但官方支持的平台更广,包括macOS。参见[Jan评测](/zh/power-local-llm/jan-review)。',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — Nomic AI推出的一款成熟的开源本地优先聊天客户端,同样免费,但未内置图像生成功能。这些更专注于聊天的应用之间的对比,参见[Jan对比GPT4All](/zh/power-local-llm/jan-review#jan-vs-gpt4all)。',
           '**[AnythingLLM](https://anythingllm.com)** — 一款专注于文档聊天和RAG的桌面/自托管应用;如果你需要的主要功能是检索自己的文档而非图像生成,它比Locally Uncensored更合适。参见[AnythingLLM评测](/zh/power-local-llm/anythingllm-review)。',
           '**[Open WebUI](https://openwebui.com)** — 一款自托管的、基于浏览器的聊天界面,通常与Ollama搭配部署,常运行在容器中,而非作为原生桌面应用安装;可作为在原生安装包和自托管Web界面之间做选择时的参考对比。',
         ],
-        note: '这并非本地优先聊天客户端的详尽列表——完整且定期更新的目录（包括该应用自身的目录条目）请见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非本地优先聊天客户端的详尽列表——完整且定期更新的目录（包括该应用自身的目录条目）请见[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1886,7 +1886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录,其中包含该应用的目录条目,以及上文提到的其他聊天客户端。',
+          '[2026本地LLM软件目录](/zh/directory) — 本文所属的本地AI工具完整目录,其中包含该应用的目录条目,以及上文提到的其他聊天客户端。',
           '[Jan评测](/zh/power-local-llm/jan-review) — 一款专注于聊天与云连接的免费开源桌面聊天应用,官方支持的平台更广。',
           '[AnythingLLM评测](/zh/power-local-llm/anythingllm-review) — 如果检索自己的文件而非图像生成才是优先需求,这是一款专注于文档聊天和RAG的替代应用。',
         ],
@@ -1955,7 +1955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'بدلًا من استخدام أدوات منفصلة للدردشة والمساعدة في البرمجة وتوليد الصور، يوفّر Locally Uncensored مُثبِّتًا واحدًا يدير كل ذلك على جهاز الكمبيوتر الخاص بك. يمكن لهاتفك أو جهازك اللوحي الوصول إلى النموذج العامل على ذلك الكمبيوتر بمسح رمز QR فقط، دون أن يعمل النموذج نفسه على الهاتف. التطبيق مجاني؛ وتوجد خدمة مدفوعة منفصلة فقط لمن يريدون قوة معالجة GPU سحابية بدلًا من استخدام أجهزتهم الخاصة.' },
         ],
         items: [
-          'مجاني ومفتوح المصدر؛ ملف [LICENSE على GitHub](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE) هو AGPL-3.0-only، وهو ما يتطابق مع مدخل هذا التطبيق في [دليل برامج الذكاء الاصطناعي المحلية](/ar/power-local-llm/local-llm-software-directory)',
+          'مجاني ومفتوح المصدر؛ ملف [LICENSE على GitHub](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE) هو AGPL-3.0-only، وهو ما يتطابق مع مدخل هذا التطبيق في [دليل برامج الذكاء الاصطناعي المحلية](/ar/directory)',
           'يعمل على Windows 10/11 وLinux (.deb وَ.rpm وَ.AppImage)؛ لا يوجد إصدار لنظام macOS حتى وقت هذه المراجعة — تصف مواد المشروع نفسها دعم macOS بأنه مخطَّط له، لا أنه متاح',
           'يعمل كواجهة أمامية تكتشف وتتصل بمحركات محلية موجودة مسبقًا — من بينها [Ollama](https://ollama.com) وَ[llama.cpp](https://github.com/ggml-org/llama.cpp) وَ[KoboldCpp](https://github.com/LostRuins/koboldcpp) وَ[LocalAI](https://localai.io) وَ[LM Studio](https://lmstudio.ai) — أو محركه المدمج الخاص "LU Engine" إذا لم يكن أي منها مُثبَّتًا',
           'يغطي الدردشة والمساعدة في البرمجة وتوليد الصور (هذا الأخير عبر تثبيت [ComfyUI](https://www.comfy.org) يُهيَّأ تلقائيًا) في واجهة واحدة',
@@ -1964,7 +1964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أنشأه مطوّر مستقل يستخدم اسم المستخدم [PurpleDoubleD](https://github.com/PurpleDoubleD) على GitHub، وقد وصف أصل المشروع — التنقّل بين طرفية تشغّل Ollama وعدة تبويبات متصفح لِComfyUI — في [منشور على dev.to](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda)',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمّق لمدخل Locally Uncensored في [دليل برامج الذكاء الاصطناعي المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن هذا التطبيق بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمّق لمدخل Locally Uncensored في [دليل برامج الذكاء الاصطناعي المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن هذا التطبيق بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2093,14 +2093,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'المنافسون والبدائل',
-        content: 'ينافس Locally Uncensored بشكل مباشر تطبيقات سطح مكتب أخرى تجمع بين الدردشة عبر نموذج محلي وإعداد بسيط بمُثبِّت واحد. إليك كيف يُقارَن ببعض التطبيقات الأخرى في هذا القطاع — راجع [دليل برامج الذكاء الاصطناعي المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل.',
+        content: 'ينافس Locally Uncensored بشكل مباشر تطبيقات سطح مكتب أخرى تجمع بين الدردشة عبر نموذج محلي وإعداد بسيط بمُثبِّت واحد. إليك كيف يُقارَن ببعض التطبيقات الأخرى في هذا القطاع — راجع [دليل برامج الذكاء الاصطناعي المحلية](/ar/directory) للاطلاع على الكتالوج الكامل.',
         items: [
           '**[Jan](https://jan.ai)** — تطبيق دردشة سطح مكتب مجاني ومفتوح المصدر مبني حول محرك llama.cpp مدمج خاص به، مع اتصالات اختيارية بمزوّدي خدمات سحابية وخادم API محلي؛ نطاقه أضيق من Locally Uncensored (يركّز على الدردشة، بلا توليد صور مدمج)، لكنه يوفّر تغطية منصات رسمية أوسع تشمل macOS. راجع [مراجعة Jan](/ar/power-local-llm/jan-review).',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — عميل دردشة محلي راسخ ومفتوح المصدر من Nomic AI، وهو أيضًا مجاني وبلا ميزة توليد صور مدمجة. راجع [مقارنة Jan مقابل GPT4All](/ar/power-local-llm/jan-review#jan-vs-gpt4all) لمعرفة كيف تُقارَن هذه التطبيقات الأكثر تركيزًا على الدردشة ببعضها البعض.',
           '**[AnythingLLM](https://anythingllm.com)** — تطبيق سطح مكتب/مُستضاف ذاتيًا يركّز على الدردشة مع المستندات وَRAG؛ خيار أفضل من Locally Uncensored إذا كان البحث في مستنداتك الخاصة، لا توليد الصور، هو الميزة الرئيسية التي تحتاجها. راجع [مراجعة AnythingLLM](/ar/power-local-llm/anythingllm-review).',
           '**[Open WebUI](https://openwebui.com)** — واجهة دردشة مُستضافة ذاتيًا وقائمة على المتصفح، تُنشَر عادةً إلى جانب Ollama، وغالبًا داخل حاوية، بدلًا من تثبيتها كتطبيق سطح مكتب أصلي؛ نقطة مقارنة لمن يتردد بين مُثبِّت أصلي وواجهة ويب مُستضافة ذاتيًا.',
         ],
-        note: 'هذه ليست قائمة شاملة لعملاء الدردشة المحلية — راجع [دليل برامج الذكاء الاصطناعي المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك مدخل هذا التطبيق الخاص في الدليل.',
+        note: 'هذه ليست قائمة شاملة لعملاء الدردشة المحلية — راجع [دليل برامج الذكاء الاصطناعي المحلية](/ar/directory) للاطلاع على الكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك مدخل هذا التطبيق الخاص في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2155,7 +2155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برامج الذكاء الاصطناعي المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، ويتضمّن مدخل هذا التطبيق في الدليل إلى جانب عملاء الدردشة الآخرين المذكورين أعلاه.',
+          '[دليل برامج الذكاء الاصطناعي المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، ويتضمّن مدخل هذا التطبيق في الدليل إلى جانب عملاء الدردشة الآخرين المذكورين أعلاه.',
           '[مراجعة Jan](/ar/power-local-llm/jan-review) — تطبيق دردشة سطح مكتب مجاني ومفتوح المصدر يركّز بشكل أضيق على الدردشة واتصالات السحابة، مع تغطية منصات رسمية أوسع.',
           '[مراجعة AnythingLLM](/ar/power-local-llm/anythingllm-review) — بديل يركّز على الدردشة مع المستندات وَRAG، إذا كان البحث في ملفاتك الخاصة، لا توليد الصور، هو الأولوية.',
         ],
@@ -2224,7 +2224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: '채팅, 코드 지원, 이미지 생성을 각각 별도의 도구로 사용하는 대신, Locally Uncensored는 설치 파일 하나로 이 모든 것을 자신의 PC에서 관리합니다. 스마트폰이나 태블릿은 QR 코드를 스캔하는 것만으로 그 PC에서 실행 중인 모델에 접근할 수 있으며, 모델 자체가 스마트폰에서 실행되는 것은 아닙니다. 이 앱은 무료이며, 별도의 유료 서비스는 자신의 하드웨어 대신 클라우드 GPU 성능을 사용하고 싶은 사람들만을 위해 존재합니다.' },
         ],
         items: [
-          '무료 오픈소스; [GitHub LICENSE](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE)는 AGPL-3.0-only로, [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 기재된 이 앱의 라이선스와 일치',
+          '무료 오픈소스; [GitHub LICENSE](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE)는 AGPL-3.0-only로, [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 기재된 이 앱의 라이선스와 일치',
           'Windows 10/11과 Linux(.deb, .rpm, .AppImage)에서 실행; 이 리뷰 시점에는 macOS 버전이 없으며, 프로젝트 자체 자료는 macOS 지원을 출시가 아닌 계획 중인 것으로 설명',
           '기존 로컬 백엔드를 감지하고 연결하는 프런트엔드로 작동 — [Ollama](https://ollama.com), [llama.cpp](https://github.com/ggml-org/llama.cpp), [KoboldCpp](https://github.com/LostRuins/koboldcpp), [LocalAI](https://localai.io), [LM Studio](https://lmstudio.ai) 등이 포함되며, 아무것도 설치되어 있지 않으면 자체 번들 "LU Engine" 사용',
           '채팅, 코드 지원, 이미지 생성(마지막은 자동으로 설정되는 [ComfyUI](https://www.comfy.org) 설치를 통해)을 하나의 인터페이스에서 처리',
@@ -2233,7 +2233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub 사용자명 [PurpleDoubleD](https://github.com/PurpleDoubleD)를 쓰는 독립 개발자가 제작; Ollama 터미널과 여러 ComfyUI 브라우저 탭을 오가야 했던 것이 이 프로젝트의 시작이었다고 [dev.to 게시글](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda)에서 설명',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 Locally Uncensored 항목의 심층 버전입니다 — 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Locally Uncensored 항목의 심층 버전입니다 — 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2362,14 +2362,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '경쟁 제품 및 대안',
-        content: 'Locally Uncensored는 로컬 모델 채팅과 간단한 단일 설치 파일 설정을 결합한 다른 데스크톱 앱들과 가장 직접적으로 경쟁합니다. 이 세그먼트에서 몇몇 다른 제품과 어떻게 비교되는지는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        content: 'Locally Uncensored는 로컬 모델 채팅과 간단한 단일 설치 파일 설정을 결합한 다른 데스크톱 앱들과 가장 직접적으로 경쟁합니다. 이 세그먼트에서 몇몇 다른 제품과 어떻게 비교되는지는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
         items: [
           '**[Jan](https://jan.ai)** — 자체 번들 llama.cpp 엔진을 중심으로 구축된 무료 오픈소스 데스크톱 채팅 앱으로, 클라우드 제공업체에 대한 선택적 연결과 로컬 API 서버를 제공합니다. Locally Uncensored보다 범위는 좁지만(채팅 중심이며 내장 이미지 생성 없음), macOS를 포함한 공식 플랫폼 지원 범위는 더 넓습니다. [Jan 리뷰](/ko/power-local-llm/jan-review) 참고.',
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — Nomic AI가 만든 정평 있는 오픈소스 로컬 우선 채팅 클라이언트로, 마찬가지로 무료이며 내장 이미지 생성 기능은 없습니다. 채팅에 더 집중한 이 두 앱을 서로 비교한 [Jan 대 GPT4All 비교](/ko/power-local-llm/jan-review#jan-vs-gpt4all)를 참고하세요.',
           '**[AnythingLLM](https://anythingllm.com)** — 문서 채팅과 RAG에 특화된 데스크톱/자체 호스팅 앱으로, 이미지 생성이 아니라 자신의 문서에 대한 검색이 필요한 주요 기능이라면 Locally Uncensored보다 더 나은 선택입니다. [AnythingLLM 리뷰](/ko/power-local-llm/anythingllm-review) 참고.',
           '**[Open WebUI](https://openwebui.com)** — 일반적으로 Ollama와 함께 배포되는 자체 호스팅 브라우저 기반 채팅 인터페이스로, 흔히 컨테이너에서 실행되며 네이티브 데스크톱 앱으로 설치되지 않습니다. 네이티브 설치 파일과 자체 호스팅 웹 인터페이스 사이에서 고민하는 사람에게 비교 대상이 됩니다.',
         ],
-        note: '이는 로컬 우선 채팅 클라이언트의 전체 목록이 아닙니다 — 이 앱 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이는 로컬 우선 채팅 클라이언트의 전체 목록이 아닙니다 — 이 앱 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2424,7 +2424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[2026 로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 채팅 클라이언트들과 함께 이 앱의 디렉터리 항목도 포함합니다.',
+          '[2026 로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 채팅 클라이언트들과 함께 이 앱의 디렉터리 항목도 포함합니다.',
           '[Jan 리뷰](/ko/power-local-llm/jan-review) — 채팅과 클라우드 연결에 더 집중된 무료 오픈소스 데스크톱 채팅 앱으로, 공식 플랫폼 지원 범위가 더 넓습니다.',
           '[AnythingLLM 리뷰](/ko/power-local-llm/anythingllm-review) — 이미지 생성이 아니라 자신의 파일에 대한 검색이 우선순위라면, 문서 채팅과 RAG에 특화된 대안입니다.',
         ],

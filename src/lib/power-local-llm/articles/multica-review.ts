@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '49,736 GitHub stars is an unusually fast climb for a repository created January 13, 2026 — treat it as a caveated signal, not an unqualified one (see the dedicated section below)',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Multica\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Multica compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Multica\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Multica compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -86,7 +86,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Canonical repository: [github.com/multica-ai/multica](https://github.com/multica-ai/multica), created on **January 13, 2026**, per GitHub\'s own repository metadata',
           'As of this review, the repository has shipped 5,281+ commits from 30 contributors, with releases roughly every 1–3 days and the latest tagged release, v0.4.43, dated September 11, 2026',
         ],
-        note: 'Multica does not run or host AI models itself — it is an orchestration and review layer sitting on top of coding-agent CLIs you already have (or install separately), such as Claude Code or Cursor. If you are looking for a tool that runs local LLMs directly, see PromptQuorum\'s [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) instead.',
+        note: 'Multica does not run or host AI models itself — it is an orchestration and review layer sitting on top of coding-agent CLIs you already have (or install separately), such as Claude Code or Cursor. If you are looking for a tool that runs local LLMs directly, see PromptQuorum\'s [Local LLM Software Directory](/directory) instead.',
       },
       starCaveat: {
         id: 'star-count-caveat',
@@ -181,7 +181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             list: [
               'You use a single agent CLI by yourself and do not need cross-team assignment or review — that use case may not need an orchestration layer at all',
               'A commercial-hosting or embedding decision depends on exact license terms — read Multica\'s own LICENSE file first, since it is not plain Apache-2.0',
-              'You need a tool that runs or fine-tunes AI models directly rather than orchestrating existing agent CLIs — see PromptQuorum\'s [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for that category instead',
+              'You need a tool that runs or fine-tunes AI models directly rather than orchestrating existing agent CLIs — see PromptQuorum\'s [Local LLM Software Directory](/directory) for that category instead',
               'You want a single-file, minimal-dependency agent tool rather than a full workspace with a server component and dashboard — see the lighter-weight alternatives below',
             ],
           },
@@ -190,14 +190,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'multica-competitors',
         title: 'Multica vs. Other Agent Orchestration Tools',
-        content: 'Multica sits in a broader category of tools for running or coordinating autonomous AI agents. Here is how it differs from four other tools PromptQuorum has reviewed in the same space — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'Multica sits in a broader category of tools for running or coordinating autonomous AI agents. Here is how it differs from four other tools PromptQuorum has reviewed in the same space — see the [Local LLM Software Directory](/directory) for the full catalog.',
         items: [
           '**[AutoGPT](/power-local-llm/autogpt-local-review-2026)** — a single autonomous-agent framework that plans and executes its own multi-step goals; Multica does not plan goals itself, it assigns and tracks work performed by separate agent CLIs like Claude Code, so the two solve different problems (autonomous goal-chasing vs. human-directed task assignment).',
           '**[CrewAI](/power-local-llm/crewai-review)** — a Python library/framework for building your own multi-agent systems in code; Multica is a ready-made workspace with a UI and dashboard, not a library you write agent logic against.',
           '**[Open Interpreter](/power-local-llm/open-interpreter-review)** — a single local agent that executes code directly on your machine through natural-language instructions; Multica does not execute code itself, it coordinates and reviews work done by whichever agent CLI (potentially including tools like Open Interpreter) you assign a task to.',
           '**[Aider](/power-local-llm/aider-review)** — a terminal-based AI pair-programming tool for one developer working with one model at a time; Multica can assign work to Aider-style CLI tools as one of its 26 supported agents but adds team-level assignment, tracking, and review on top.',
         ],
-        note: 'This is not an exhaustive list of agent tools — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Multica\'s own directory entry.',
+        note: 'This is not an exhaustive list of agent tools — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Multica\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -252,7 +252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Multica\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Multica\'s directory entry.',
           '[AutoGPT Local Review](/power-local-llm/autogpt-local-review-2026) — a dedicated look at a single autonomous-agent framework, the closest philosophical contrast to Multica\'s human-directed assignment model.',
           '[CrewAI Review](/power-local-llm/crewai-review) — the code-first, library-based alternative for teams that want to build custom multi-agent logic instead of using a ready-made workspace.',
           '[Aider Review](/power-local-llm/aider-review) — a terminal-based single-developer pair-programming tool, one of the agent-CLI types Multica can assign work to.',
@@ -330,7 +330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '49.736 GitHub-Sterne sind ein ungewöhnlich schneller Anstieg für ein am 13. Januar 2026 erstelltes Repository — als vorbehaltbehaftetes Signal lesen, nicht als uneingeschränkte Tatsache (siehe eigenen Abschnitt unten)',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu Multicas Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort sehen Sie auf einen Blick, wie Multica im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu Multicas Eintrag im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie Multica im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -344,7 +344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kanonisches Repository: [github.com/multica-ai/multica](https://github.com/multica-ai/multica), laut GitHub-Metadaten erstellt am **13. Januar 2026**',
           'Stand dieser Review verzeichnet das Repository über 5.281 Commits von 30 Contributorn, mit Releases etwa alle 1–3 Tage; das jüngste getaggte Release, v0.4.43, datiert vom 11. September 2026',
         ],
-        note: 'Multica führt keine KI-Modelle selbst aus oder hostet sie — es ist eine Orchestrierungs- und Prüfschicht, die auf Coding-Agenten-CLIs aufsetzt, die Sie bereits nutzen (oder separat installieren), etwa Claude Code oder Cursor. Wer ein Tool sucht, das lokale LLMs direkt ausführt, findet das im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) von PromptQuorum.',
+        note: 'Multica führt keine KI-Modelle selbst aus oder hostet sie — es ist eine Orchestrierungs- und Prüfschicht, die auf Coding-Agenten-CLIs aufsetzt, die Sie bereits nutzen (oder separat installieren), etwa Claude Code oder Cursor. Wer ein Tool sucht, das lokale LLMs direkt ausführt, findet das im [Local LLM Software Directory](/de/directory) von PromptQuorum.',
       },
       starCaveat: {
         id: 'star-count-caveat',
@@ -439,7 +439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             list: [
               'Sie allein ein einzelnes Agenten-CLI nutzen und keine teamübergreifende Zuweisung oder Prüfung benötigen — dieser Anwendungsfall braucht möglicherweise gar keine Orchestrierungsschicht',
               'Eine Entscheidung zu kommerziellem Hosting oder Einbettung von den genauen Lizenzbedingungen abhängt — lesen Sie zuerst Multicas eigene LICENSE-Datei, da sie nicht schlicht Apache-2.0 ist',
-              'Sie ein Tool benötigen, das KI-Modelle direkt ausführt oder fine-tuned, statt bestehende Agenten-CLIs zu orchestrieren — für diese Kategorie siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) von PromptQuorum',
+              'Sie ein Tool benötigen, das KI-Modelle direkt ausführt oder fine-tuned, statt bestehende Agenten-CLIs zu orchestrieren — für diese Kategorie siehe das [Local LLM Software Directory](/de/directory) von PromptQuorum',
               'Sie ein Einzeldatei-Tool mit minimalen Abhängigkeiten statt eines vollständigen Arbeitsbereichs mit Serverkomponente und Dashboard möchten — siehe die leichtgewichtigeren Alternativen unten',
             ],
           },
@@ -448,14 +448,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'multica-competitors',
         title: 'Multica vs. andere Agenten-Orchestrierungs-Tools',
-        content: 'Multica gehört zu einer breiteren Kategorie von Tools zum Ausführen oder Koordinieren autonomer KI-Agenten. So unterscheidet es sich von vier weiteren Tools, die PromptQuorum im selben Bereich besprochen hat — das vollständige Verzeichnis finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        content: 'Multica gehört zu einer breiteren Kategorie von Tools zum Ausführen oder Koordinieren autonomer KI-Agenten. So unterscheidet es sich von vier weiteren Tools, die PromptQuorum im selben Bereich besprochen hat — das vollständige Verzeichnis finden Sie im [Local LLM Software Directory](/de/directory).',
         items: [
           '**[AutoGPT](/de/power-local-llm/autogpt-local-review-2026)** — ein einzelnes autonomes Agenten-Framework, das eigene mehrstufige Ziele plant und ausführt; Multica plant keine Ziele selbst, sondern weist Arbeit separaten Agenten-CLIs wie Claude Code zu und verfolgt sie — beide lösen unterschiedliche Probleme (autonome Zielverfolgung vs. menschengesteuerte Aufgabenzuweisung).',
           '**[CrewAI](/de/power-local-llm/crewai-review)** — eine Python-Bibliothek/ein Framework zum Bauen eigener Multi-Agenten-Systeme im Code; Multica ist ein fertiger Arbeitsbereich mit Oberfläche und Dashboard, keine Bibliothek, gegen die Sie Agentenlogik schreiben.',
           '**[Open Interpreter](/de/power-local-llm/open-interpreter-review)** — ein einzelner lokaler Agent, der Code über natürlichsprachliche Anweisungen direkt auf Ihrer Maschine ausführt; Multica führt selbst keinen Code aus, sondern koordiniert und prüft Arbeit, die vom jeweils zugewiesenen Agenten-CLI (möglicherweise auch Tools wie Open Interpreter) erledigt wird.',
           '**[Aider](/de/power-local-llm/aider-review)** — ein terminalbasiertes KI-Pair-Programming-Tool für eine Entwicklerin mit einem Modell zur Zeit; Multica kann Aider-artigen CLI-Tools als einen seiner 26 unterstützten Agenten Arbeit zuweisen, fügt aber Zuweisung, Verfolgung und Prüfung auf Teamebene hinzu.',
         ],
-        note: 'Dies ist keine erschöpfende Liste von Agenten-Tools — das vollständige, regelmäßig aktualisierte Verzeichnis inklusive Multicas eigenem Eintrag finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine erschöpfende Liste von Agenten-Tools — das vollständige, regelmäßig aktualisierte Verzeichnis inklusive Multicas eigenem Eintrag finden Sie im [Local LLM Software Directory](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -510,7 +510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — das vollständige Verzeichnis lokaler KI-Tools, zu dem dieser Artikel gehört, inklusive Multicas Eintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — das vollständige Verzeichnis lokaler KI-Tools, zu dem dieser Artikel gehört, inklusive Multicas Eintrag.',
           '[AutoGPT Local Review](/de/power-local-llm/autogpt-local-review-2026) — ein eigener Blick auf ein einzelnes autonomes Agenten-Framework, der philosophisch stärkste Kontrast zu Multicas menschengesteuertem Zuweisungsmodell.',
           '[CrewAI Review](/de/power-local-llm/crewai-review) — die code-first, bibliotheksbasierte Alternative für Teams, die eigene Multi-Agenten-Logik statt eines fertigen Arbeitsbereichs bauen möchten.',
           '[Aider Review](/de/power-local-llm/aider-review) — ein terminalbasiertes Pair-Programming-Tool für eine Entwicklerin, einer der Agenten-CLI-Typen, denen Multica Arbeit zuweisen kann.',
@@ -588,7 +588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '49 736 étoiles GitHub constituent une progression inhabituellement rapide pour un dépôt créé le 13 janvier 2026 — à lire comme un signal nuancé, pas comme un fait absolu (voir la section dédiée ci-dessous)',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis complète l\'entrée de Multica dans le [Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir en un coup d\'œil comment Multica se compare à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cet avis complète l\'entrée de Multica dans le [Répertoire des logiciels LLM locaux](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment Multica se compare à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -602,7 +602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Dépôt canonique : [github.com/multica-ai/multica](https://github.com/multica-ai/multica), créé le **13 janvier 2026** selon les métadonnées propres du dépôt GitHub',
           'Au moment de cet avis, le dépôt affiche plus de 5 281 commits provenant de 30 contributeurs, avec des versions publiées environ tous les 1 à 3 jours ; la dernière version étiquetée, v0.4.43, date du 11 septembre 2026',
         ],
-        note: 'Multica n\'exécute ni n\'héberge lui-même de modèles IA — c\'est une couche d\'orchestration et de révision posée sur des CLI d\'agents de codage que vous possédez déjà (ou installez séparément), comme Claude Code ou Cursor. Pour un outil qui exécute directement des LLM locaux, consultez plutôt le [Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) de PromptQuorum.',
+        note: 'Multica n\'exécute ni n\'héberge lui-même de modèles IA — c\'est une couche d\'orchestration et de révision posée sur des CLI d\'agents de codage que vous possédez déjà (ou installez séparément), comme Claude Code ou Cursor. Pour un outil qui exécute directement des LLM locaux, consultez plutôt le [Répertoire des logiciels LLM locaux](/fr/directory) de PromptQuorum.',
       },
       starCaveat: {
         id: 'star-count-caveat',
@@ -697,7 +697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             list: [
               'Vous utilisez seul une unique CLI d\'agent et n\'avez pas besoin d\'assignation ou de révision inter-équipes — ce cas d\'usage n\'a peut-être besoin d\'aucune couche d\'orchestration',
               'Une décision d\'hébergement commercial ou d\'intégration dépend des termes exacts de la licence — lisez d\'abord le fichier LICENSE de Multica lui-même, car ce n\'est pas une simple Apache-2.0',
-              'Vous avez besoin d\'un outil qui exécute ou fine-tune des modèles IA directement plutôt que d\'orchestrer des CLI d\'agents existantes — voir plutôt le [Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) de PromptQuorum pour cette catégorie',
+              'Vous avez besoin d\'un outil qui exécute ou fine-tune des modèles IA directement plutôt que d\'orchestrer des CLI d\'agents existantes — voir plutôt le [Répertoire des logiciels LLM locaux](/fr/directory) de PromptQuorum pour cette catégorie',
               'Vous préférez un outil d\'agent monofichier à dépendances minimales plutôt qu\'un espace de travail complet avec composante serveur et tableau de bord — voir les alternatives plus légères ci-dessous',
             ],
           },
@@ -706,14 +706,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'multica-competitors',
         title: 'Multica face aux autres outils d\'orchestration d\'agents',
-        content: 'Multica appartient à une catégorie plus large d\'outils pour exécuter ou coordonner des agents IA autonomes. Voici en quoi il diffère de quatre autres outils que PromptQuorum a évalués dans le même domaine — consultez le [Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        content: 'Multica appartient à une catégorie plus large d\'outils pour exécuter ou coordonner des agents IA autonomes. Voici en quoi il diffère de quatre autres outils que PromptQuorum a évalués dans le même domaine — consultez le [Répertoire des logiciels LLM locaux](/fr/directory) pour le catalogue complet.',
         items: [
           '**[AutoGPT](/fr/power-local-llm/autogpt-local-review-2026)** — un framework d\'agent autonome unique qui planifie et exécute ses propres objectifs multi-étapes ; Multica ne planifie pas d\'objectifs lui-même, il assigne et suit du travail réalisé par des CLI d\'agents distinctes comme Claude Code — les deux résolvent des problèmes différents (poursuite autonome d\'objectifs contre assignation de tâches dirigée par l\'humain).',
           '**[CrewAI](/fr/power-local-llm/crewai-review)** — une bibliothèque/framework Python pour construire ses propres systèmes multi-agents en code ; Multica est un espace de travail prêt à l\'emploi avec interface et tableau de bord, pas une bibliothèque contre laquelle écrire de la logique d\'agent.',
           '**[Open Interpreter](/fr/power-local-llm/open-interpreter-review)** — un agent local unique qui exécute du code directement sur votre machine via des instructions en langage naturel ; Multica n\'exécute pas de code lui-même, il coordonne et révise le travail réalisé par la CLI d\'agent assignée (potentiellement y compris des outils comme Open Interpreter).',
           '**[Aider](/fr/power-local-llm/aider-review)** — un outil de pair-programming IA en ligne de commande pour un développeur travaillant avec un modèle à la fois ; Multica peut assigner du travail à des outils CLI de type Aider comme l\'un de ses 26 agents pris en charge, mais y ajoute l\'assignation, le suivi et la révision au niveau de l\'équipe.',
         ],
-        note: 'Cette liste n\'est pas exhaustive — consultez le [Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée propre de Multica.',
+        note: 'Cette liste n\'est pas exhaustive — consultez le [Répertoire des logiciels LLM locaux](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée propre de Multica.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -768,7 +768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'À lire aussi',
         items: [
-          '[Répertoire des logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant l\'entrée de Multica.',
+          '[Répertoire des logiciels LLM locaux 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant l\'entrée de Multica.',
           '[Avis AutoGPT Local](/fr/power-local-llm/autogpt-local-review-2026) — un regard dédié sur un framework d\'agent autonome unique, le contraste philosophique le plus net avec le modèle d\'assignation dirigée par l\'humain de Multica.',
           '[Avis CrewAI](/fr/power-local-llm/crewai-review) — l\'alternative code-first, basée sur une bibliothèque, pour les équipes qui veulent construire leur propre logique multi-agents plutôt que d\'utiliser un espace de travail prêt à l\'emploi.',
           '[Avis Aider](/fr/power-local-llm/aider-review) — un outil de pair-programming en ligne de commande pour un développeur seul, l\'un des types de CLI d\'agents auxquels Multica peut assigner du travail.',
@@ -846,7 +846,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '49,736のGitHubスターは、2026年1月13日作成のリポジトリとしては異例な急成長 — 無条件の事実としてではなく、注意点付きのシグナルとして読むこと(詳細は下記の専用セクション)',
         ],
         callouts: [
-          { type: 'note', text: '本レビューは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるMulticaのエントリーを深掘りする補足記事です — 他の数十のローカルAIツールとの比較は同ページをご覧ください。' },
+          { type: 'note', text: '本レビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるMulticaのエントリーを深掘りする補足記事です — 他の数十のローカルAIツールとの比較は同ページをご覧ください。' },
         ],
       },
       overview: {
@@ -860,7 +860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '正式なリポジトリ:[github.com/multica-ai/multica](https://github.com/multica-ai/multica)、GitHub自身のリポジトリメタデータによれば**2026年1月13日**に作成',
           '本レビュー時点で、リポジトリは30名のコントリビューターによる5,281件超のコミットを記録し、リリース間隔はおよそ1〜3日ごと、最新のタグ付きリリースv0.4.43は2026年9月11日付',
         ],
-        note: 'MulticaはAIモデル自体を実行・ホストしません — Claude CodeやCursorなど、すでに所有している(または別途インストールする)コーディングエージェントCLIの上に乗る、オーケストレーションとレビューの層です。ローカルLLMを直接実行するツールをお探しの場合は、PromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'MulticaはAIモデル自体を実行・ホストしません — Claude CodeやCursorなど、すでに所有している(または別途インストールする)コーディングエージェントCLIの上に乗る、オーケストレーションとレビューの層です。ローカルLLMを直接実行するツールをお探しの場合は、PromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/directory)をご覧ください。',
       },
       starCaveat: {
         id: 'star-count-caveat',
@@ -955,7 +955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             list: [
               '自分一人で単一のエージェントCLIを使用しており、チーム横断の割り当てやレビューを必要としていない — この用途にはオーケストレーション層自体が不要な可能性がある',
               '商用ホスティングや組み込みに関する判断が正確なライセンス条項に左右される — 単純なApache-2.0ではないため、まずMulticaのLICENSEファイル自体を確認すること',
-              '既存のエージェントCLIをオーケストレーションするのではなく、AIモデルを直接実行またはファインチューニングするツールが必要 — そのカテゴリはPromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照',
+              '既存のエージェントCLIをオーケストレーションするのではなく、AIモデルを直接実行またはファインチューニングするツールが必要 — そのカテゴリはPromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照',
               'サーバー部分とダッシュボードを備えた完全なワークスペースではなく、依存関係が最小の単一ファイルのエージェントツールを求めている — 下記の軽量な代替ツールを参照',
             ],
           },
@@ -964,14 +964,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'multica-competitors',
         title: 'Multica対他のエージェント管理ツール',
-        content: 'Multicaは、自律的なAIエージェントを実行・調整するツールという、より広いカテゴリに属しています。PromptQuorumが同分野でレビューした他の4つのツールとの違いは以下の通りです — 完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        content: 'Multicaは、自律的なAIエージェントを実行・調整するツールという、より広いカテゴリに属しています。PromptQuorumが同分野でレビューした他の4つのツールとの違いは以下の通りです — 完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
         items: [
           '**[AutoGPT](/ja/power-local-llm/autogpt-local-review-2026)** — 独自の多段階目標を計画・実行する単一の自律エージェントフレームワーク。Multica自体は目標を計画せず、Claude Codeのような個別のエージェントCLIが行った作業を割り当て・追跡する — 両者は異なる問題(自律的な目標追求 対 人間主導のタスク割り当て)を解決する。',
           '**[CrewAI](/ja/power-local-llm/crewai-review)** — コードで独自のマルチエージェントシステムを構築するためのPythonライブラリ/フレームワーク。Multicaはエージェントロジックを書き込む対象のライブラリではなく、UIとダッシュボードを備えた既製のワークスペース。',
           '**[Open Interpreter](/ja/power-local-llm/open-interpreter-review)** — 自然言語の指示を通じて自分のマシン上で直接コードを実行する単一のローカルエージェント。Multica自体はコードを実行せず、割り当てられたエージェントCLI(Open Interpreterのようなツールを含む可能性がある)が行った作業を調整・レビューする。',
           '**[Aider](/ja/power-local-llm/aider-review)** — 一度に1つのモデルで作業する1人の開発者向けの、ターミナルベースのAIペアプログラミングツール。Multicaは、26種類の対応エージェントの1つとしてAiderのようなCLIツールに作業を割り当てられるが、その上にチームレベルの割り当て・追跡・レビューを追加する。',
         ],
-        note: 'これはエージェントツールの網羅的なリストではありません — Multica自身のディレクトリエントリーを含む、完全かつ定期的に更新されるカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはエージェントツールの網羅的なリストではありません — Multica自身のディレクトリエントリーを含む、完全かつ定期的に更新されるカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1026,7 +1026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — Multicaのディレクトリエントリーを含む、本記事が属するローカルAIツールの完全なカタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — Multicaのディレクトリエントリーを含む、本記事が属するローカルAIツールの完全なカタログ。',
           '[AutoGPT Localレビュー](/ja/power-local-llm/autogpt-local-review-2026) — 単一の自律エージェントフレームワークを深掘りする記事で、人間主導の割り当てモデルであるMulticaとの思想的な対比が最も鮮明。',
           '[CrewAIレビュー](/ja/power-local-llm/crewai-review) — 既製のワークスペースではなく、独自のマルチエージェントロジックを構築したいチーム向けの、コード中心・ライブラリベースの代替手段。',
           '[Aiderレビュー](/ja/power-local-llm/aider-review) — 1人の開発者向けのターミナルベースのペアプログラミングツールで、Multicaが作業を割り当てられるエージェントCLIの一種。',
@@ -1104,7 +1104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '49,736个GitHub星标对于一个2026年1月13日创建的仓库来说是异常快速的增长——请将其视为带保留条件的信号,而非无保留的事实(详见下方专门章节)',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Multica条目的深度补充——欲了解Multica与数十种其他本地AI工具的一览对比,请参阅该页面。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Multica条目的深度补充——欲了解Multica与数十种其他本地AI工具的一览对比,请参阅该页面。' },
         ],
       },
       overview: {
@@ -1118,7 +1118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '规范仓库:[github.com/multica-ai/multica](https://github.com/multica-ai/multica),据GitHub自身仓库元数据,创建于**2026年1月13日**',
           '截至本评测时,该仓库已由30位贡献者提交超过5,281次代码提交,发布节奏大约每1至3天一次,最新标记版本v0.4.43发布于2026年9月11日',
         ],
-        note: 'Multica本身不运行或托管AI模型——它是叠加在你已经拥有(或另行安装)的编程智能体CLI(如Claude Code或Cursor)之上的编排与审查层。如果你需要的是能直接运行本地LLM的工具,请参阅PromptQuorum的[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: 'Multica本身不运行或托管AI模型——它是叠加在你已经拥有(或另行安装)的编程智能体CLI(如Claude Code或Cursor)之上的编排与审查层。如果你需要的是能直接运行本地LLM的工具,请参阅PromptQuorum的[本地LLM软件目录](/zh/directory)。',
       },
       starCaveat: {
         id: 'star-count-caveat',
@@ -1213,7 +1213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             list: [
               '你独自使用单一智能体CLI,不需要跨团队分配或审查——这种场景可能根本不需要编排层',
               '商业托管或嵌入方面的决策取决于确切许可条款——请先阅读Multica自身的LICENSE文件,因为它并非单纯的Apache-2.0',
-              '你需要的是直接运行或微调AI模型的工具,而不是编排已有智能体CLI的工具——该类别请参阅PromptQuorum的[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)',
+              '你需要的是直接运行或微调AI模型的工具,而不是编排已有智能体CLI的工具——该类别请参阅PromptQuorum的[本地LLM软件目录](/zh/directory)',
               '你想要的是单文件、依赖极少的智能体工具,而不是带有服务器组件和仪表盘的完整工作台——请参阅下方更轻量的替代方案',
             ],
           },
@@ -1222,14 +1222,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'multica-competitors',
         title: 'Multica与其他智能体编排工具对比',
-        content: 'Multica属于运行或协调自主AI智能体这一更广泛的工具类别。以下是它与PromptQuorum在同一领域评测过的另外四款工具的区别——完整目录请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'Multica属于运行或协调自主AI智能体这一更广泛的工具类别。以下是它与PromptQuorum在同一领域评测过的另外四款工具的区别——完整目录请参阅[本地LLM软件目录](/zh/directory)。',
         items: [
           '**[AutoGPT](/zh/power-local-llm/autogpt-local-review-2026)** ——一个自行规划并执行多步骤目标的单体自主智能体框架;Multica本身不规划目标,而是为Claude Code等独立的智能体CLI分配并追踪工作——两者解决的是不同的问题(自主追逐目标 对比 人类主导的任务分配)。',
           '**[CrewAI](/zh/power-local-llm/crewai-review)** ——一个用代码构建自定义多智能体系统的Python库/框架;Multica是一个带有界面和仪表盘的现成工作台,而非供你编写智能体逻辑的库。',
           '**[Open Interpreter](/zh/power-local-llm/open-interpreter-review)** ——一个通过自然语言指令直接在你机器上执行代码的单体本地智能体;Multica本身不执行代码,而是协调并审查被分配任务的智能体CLI(可能包括Open Interpreter这类工具)所完成的工作。',
           '**[Aider](/zh/power-local-llm/aider-review)** ——一个面向单个开发者、一次使用一个模型的终端AI结对编程工具;Multica可以将工作分配给Aider这类CLI工具,作为其支持的26种智能体之一,但在此基础上增加了团队层面的分配、追踪和审查。',
         ],
-        note: '以上并非智能体工具的完整清单——完整且持续更新的目录(包括Multica自身的条目)请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '以上并非智能体工具的完整清单——完整且持续更新的目录(包括Multica自身的条目)请参阅[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1284,7 +1284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) ——本文所属的本地AI工具完整目录,包含Multica的目录条目。',
+          '[2026本地LLM软件目录](/zh/directory) ——本文所属的本地AI工具完整目录,包含Multica的目录条目。',
           '[AutoGPT本地评测](/zh/power-local-llm/autogpt-local-review-2026) ——对单体自主智能体框架的专门解读,在理念上与Multica的人类主导分配模式形成最鲜明的对比。',
           '[CrewAI评测](/zh/power-local-llm/crewai-review) ——面向希望自行构建多智能体逻辑、而非使用现成工作台的团队的代码优先、基于库的替代方案。',
           '[Aider评测](/zh/power-local-llm/aider-review) ——面向单个开发者的终端结对编程工具,是Multica可以分配任务的智能体CLI类型之一。',
@@ -1362,7 +1362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '49.736 estrellas en GitHub son un aumento inusualmente rápido para un repositorio creado el 13 de enero de 2026 — léalo como una señal con matices, no como un hecho sin reservas (ver la sección dedicada más abajo)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de Multica en el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) — consulte esa página para ver de un vistazo cómo se compara Multica con decenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de Multica en el [Directorio de Software LLM Local](/es/directory) — consulte esa página para ver de un vistazo cómo se compara Multica con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1376,7 +1376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Repositorio canónico: [github.com/multica-ai/multica](https://github.com/multica-ai/multica), creado el **13 de enero de 2026**, según los propios metadatos del repositorio de GitHub',
           'A la fecha de esta reseña, el repositorio registra más de 5.281 commits de 30 colaboradores, con lanzamientos aproximadamente cada 1 a 3 días; el último lanzamiento etiquetado, v0.4.43, es del 11 de septiembre de 2026',
         ],
-        note: 'Multica no ejecuta ni aloja modelos de IA por sí mismo — es una capa de orquestación y revisión que se apoya en las CLI de agentes de codificación que ya tiene (o instala por separado), como Claude Code o Cursor. Si busca una herramienta que ejecute LLM locales directamente, consulte en su lugar el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) de PromptQuorum.',
+        note: 'Multica no ejecuta ni aloja modelos de IA por sí mismo — es una capa de orquestación y revisión que se apoya en las CLI de agentes de codificación que ya tiene (o instala por separado), como Claude Code o Cursor. Si busca una herramienta que ejecute LLM locales directamente, consulte en su lugar el [Directorio de Software LLM Local](/es/directory) de PromptQuorum.',
       },
       starCaveat: {
         id: 'star-count-caveat',
@@ -1471,7 +1471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             list: [
               'Usa una única CLI de agente por su cuenta y no necesita asignación o revisión entre equipos — ese caso de uso quizá no necesite ninguna capa de orquestación',
               'Una decisión de alojamiento comercial o integración depende de los términos exactos de la licencia — lea primero el propio archivo LICENSE de Multica, ya que no es Apache-2.0 sin más',
-              'Necesita una herramienta que ejecute o ajuste modelos de IA directamente en lugar de orquestar CLI de agentes existentes — consulte en su lugar el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) de PromptQuorum para esa categoría',
+              'Necesita una herramienta que ejecute o ajuste modelos de IA directamente en lugar de orquestar CLI de agentes existentes — consulte en su lugar el [Directorio de Software LLM Local](/es/directory) de PromptQuorum para esa categoría',
               'Quiere una herramienta de agente de archivo único con dependencias mínimas en lugar de un espacio de trabajo completo con componente de servidor y panel — vea las alternativas más ligeras a continuación',
             ],
           },
@@ -1480,14 +1480,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'multica-competitors',
         title: 'Multica frente a otras herramientas de orquestación de agentes',
-        content: 'Multica se ubica en una categoría más amplia de herramientas para ejecutar o coordinar agentes de IA autónomos. Así se diferencia de otras cuatro herramientas que PromptQuorum ha reseñado en el mismo espacio — consulte el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo.',
+        content: 'Multica se ubica en una categoría más amplia de herramientas para ejecutar o coordinar agentes de IA autónomos. Así se diferencia de otras cuatro herramientas que PromptQuorum ha reseñado en el mismo espacio — consulte el [Directorio de Software LLM Local](/es/directory) para el catálogo completo.',
         items: [
           '**[AutoGPT](/es/power-local-llm/autogpt-local-review-2026)** — un marco de agente autónomo único que planifica y ejecuta sus propios objetivos de varios pasos; Multica no planifica objetivos por sí mismo, sino que asigna y sigue el trabajo realizado por CLI de agentes independientes como Claude Code, así que ambos resuelven problemas distintos (persecución autónoma de objetivos frente a asignación de tareas dirigida por humanos).',
           '**[CrewAI](/es/power-local-llm/crewai-review)** — una biblioteca/marco de Python para construir sus propios sistemas multiagente en código; Multica es un espacio de trabajo listo para usar con interfaz y panel, no una biblioteca contra la que escribir lógica de agentes.',
           '**[Open Interpreter](/es/power-local-llm/open-interpreter-review)** — un único agente local que ejecuta código directamente en su máquina mediante instrucciones en lenguaje natural; Multica no ejecuta código por sí mismo, sino que coordina y revisa el trabajo realizado por la CLI de agente que se le asigne a una tarea (potencialmente incluyendo herramientas como Open Interpreter).',
           '**[Aider](/es/power-local-llm/aider-review)** — una herramienta de programación en pareja con IA basada en terminal para un desarrollador que trabaja con un modelo a la vez; Multica puede asignar trabajo a herramientas CLI tipo Aider como uno de sus 26 agentes compatibles, pero añade asignación, seguimiento y revisión a nivel de equipo por encima.',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas de agentes — consulte el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, que incluye la propia entrada de Multica.',
+        note: 'Esta no es una lista exhaustiva de herramientas de agentes — consulte el [Directorio de Software LLM Local](/es/directory) para el catálogo completo y actualizado regularmente, que incluye la propia entrada de Multica.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1542,7 +1542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la entrada de Multica.',
+          '[Directorio de Software LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la entrada de Multica.',
           '[Reseña de AutoGPT Local](/es/power-local-llm/autogpt-local-review-2026) — una mirada dedicada a un único marco de agente autónomo, el contraste filosófico más cercano al modelo de asignación dirigida por humanos de Multica.',
           '[Reseña de CrewAI](/es/power-local-llm/crewai-review) — la alternativa basada en código y biblioteca para equipos que quieren construir su propia lógica multiagente en lugar de usar un espacio de trabajo listo para usar.',
           '[Reseña de Aider](/es/power-local-llm/aider-review) — una herramienta de programación en pareja basada en terminal para un solo desarrollador, uno de los tipos de CLI de agentes a los que Multica puede asignar trabajo.',
@@ -1620,7 +1620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '49.736 estrelas no GitHub são um crescimento incomumente rápido para um repositório criado em 13 de janeiro de 2026 — leia como um sinal com ressalvas, não como um fato absoluto (veja a seção dedicada abaixo)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Multica no [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o Multica com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Multica no [Diretório de Software LLM Local](/pt/directory) — veja essa página para comparar rapidamente o Multica com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1634,7 +1634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Repositório canônico: [github.com/multica-ai/multica](https://github.com/multica-ai/multica), criado em **13 de janeiro de 2026**, segundo os próprios metadados do repositório no GitHub',
           'Até esta análise, o repositório registra mais de 5.281 commits de 30 colaboradores, com lançamentos aproximadamente a cada 1 a 3 dias; o lançamento mais recente com tag, v0.4.43, é de 11 de setembro de 2026',
         ],
-        note: 'O Multica não executa nem hospeda modelos de IA por conta própria — é uma camada de orquestração e revisão que se apoia em CLIs de agentes de codificação que você já possui (ou instala separadamente), como Claude Code ou Cursor. Se você procura uma ferramenta que execute LLMs locais diretamente, veja o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) da PromptQuorum.',
+        note: 'O Multica não executa nem hospeda modelos de IA por conta própria — é uma camada de orquestração e revisão que se apoia em CLIs de agentes de codificação que você já possui (ou instala separadamente), como Claude Code ou Cursor. Se você procura uma ferramenta que execute LLMs locais diretamente, veja o [Diretório de Software LLM Local](/pt/directory) da PromptQuorum.',
       },
       starCaveat: {
         id: 'star-count-caveat',
@@ -1729,7 +1729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             list: [
               'Você usa sozinho uma única CLI de agente e não precisa de atribuição ou revisão entre equipes — esse caso de uso talvez nem precise de uma camada de orquestração',
               'Uma decisão de hospedagem comercial ou incorporação depender dos termos exatos da licença — leia primeiro o próprio arquivo LICENSE do Multica, já que não é uma Apache-2.0 simples',
-              'Você precisa de uma ferramenta que execute ou faça fine-tuning de modelos de IA diretamente, em vez de orquestrar CLIs de agentes existentes — veja o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) da PromptQuorum para essa categoria',
+              'Você precisa de uma ferramenta que execute ou faça fine-tuning de modelos de IA diretamente, em vez de orquestrar CLIs de agentes existentes — veja o [Diretório de Software LLM Local](/pt/directory) da PromptQuorum para essa categoria',
               'Você quer uma ferramenta de agente de arquivo único com dependências mínimas, em vez de um workspace completo com componente de servidor e painel — veja as alternativas mais leves abaixo',
             ],
           },
@@ -1738,14 +1738,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'multica-competitors',
         title: 'Multica vs. outras ferramentas de orquestração de agentes',
-        content: 'O Multica se encaixa em uma categoria mais ampla de ferramentas para executar ou coordenar agentes de IA autônomos. Veja como ele difere de outras quatro ferramentas que a PromptQuorum analisou no mesmo espaço — veja o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'O Multica se encaixa em uma categoria mais ampla de ferramentas para executar ou coordenar agentes de IA autônomos. Veja como ele difere de outras quatro ferramentas que a PromptQuorum analisou no mesmo espaço — veja o [Diretório de Software LLM Local](/pt/directory) para o catálogo completo.',
         items: [
           '**[AutoGPT](/pt/power-local-llm/autogpt-local-review-2026)** — um framework de agente autônomo único que planeja e executa seus próprios objetivos em várias etapas; o Multica não planeja objetivos por conta própria, ele atribui e acompanha trabalho feito por CLIs de agentes separadas como o Claude Code, então os dois resolvem problemas diferentes (busca autônoma de objetivos versus atribuição de tarefas dirigida por humanos).',
           '**[CrewAI](/pt/power-local-llm/crewai-review)** — uma biblioteca/framework Python para construir seus próprios sistemas multiagente em código; o Multica é um workspace pronto para uso, com interface e painel, não uma biblioteca contra a qual você escreve lógica de agentes.',
           '**[Open Interpreter](/pt/power-local-llm/open-interpreter-review)** — um único agente local que executa código diretamente na sua máquina por meio de instruções em linguagem natural; o Multica não executa código por conta própria, ele coordena e revisa o trabalho feito pela CLI de agente atribuída a uma tarefa (potencialmente incluindo ferramentas como o Open Interpreter).',
           '**[Aider](/pt/power-local-llm/aider-review)** — uma ferramenta de programação em pares com IA baseada em terminal para um desenvolvedor trabalhando com um modelo por vez; o Multica pode atribuir trabalho a ferramentas de CLI do tipo Aider como um de seus 26 agentes compatíveis, mas acrescenta atribuição, acompanhamento e revisão no nível da equipe.',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas de agentes — veja o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Multica.',
+        note: 'Esta não é uma lista exaustiva de ferramentas de agentes — veja o [Diretório de Software LLM Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Multica.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1800,7 +1800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Multica.',
+          '[Diretório de Software LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Multica.',
           '[Análise do AutoGPT Local](/pt/power-local-llm/autogpt-local-review-2026) — um olhar dedicado a um único framework de agente autônomo, o contraste filosófico mais próximo do modelo de atribuição dirigida por humanos do Multica.',
           '[Análise do CrewAI](/pt/power-local-llm/crewai-review) — a alternativa baseada em código e biblioteca para equipes que querem construir sua própria lógica multiagente em vez de usar um workspace pronto.',
           '[Análise do Aider](/pt/power-local-llm/aider-review) — uma ferramenta de programação em pares baseada em terminal para um único desenvolvedor, um dos tipos de CLI de agentes aos quais o Multica pode atribuir trabalho.',
@@ -1878,7 +1878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يمثّل 49,736 نجمة على GitHub ارتفاعًا سريعًا بشكل غير معتاد لمستودع أُنشئ في 13 يناير 2026 — يُقرأ كإشارة مشروطة لا كحقيقة غير مشروطة (انظر القسم المخصص أدناه)',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المعمّق لإدراج Multica في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة للاطلاع سريعًا على مقارنة Multica بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المكمّل المعمّق لإدراج Multica في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) — راجع تلك الصفحة للاطلاع سريعًا على مقارنة Multica بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -1892,7 +1892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'المستودع الرسمي: [github.com/multica-ai/multica](https://github.com/multica-ai/multica)، أُنشئ في **13 يناير 2026** وفق بيانات GitHub الوصفية الخاصة بالمستودع نفسه',
           'حتى وقت إعداد هذه المراجعة، سجّل المستودع أكثر من 5,281 التزامًا (commit) من 30 مساهمًا، مع إصدارات تقريبًا كل 1 إلى 3 أيام؛ وآخر إصدار موسوم، v0.4.43، بتاريخ 11 سبتمبر 2026',
         ],
-        note: 'لا يشغّل Multica أو يستضيف نماذج ذكاء اصطناعي بنفسه — إنه طبقة تنسيق ومراجعة تعمل فوق واجهات سطر أوامر لوكلاء برمجة تمتلكها بالفعل (أو تثبّتها بشكل منفصل)، مثل Claude Code أو Cursor. إذا كنت تبحث عن أداة تشغّل نماذج لغة كبيرة محلية مباشرة، راجع بدلًا من ذلك [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) من PromptQuorum.',
+        note: 'لا يشغّل Multica أو يستضيف نماذج ذكاء اصطناعي بنفسه — إنه طبقة تنسيق ومراجعة تعمل فوق واجهات سطر أوامر لوكلاء برمجة تمتلكها بالفعل (أو تثبّتها بشكل منفصل)، مثل Claude Code أو Cursor. إذا كنت تبحث عن أداة تشغّل نماذج لغة كبيرة محلية مباشرة، راجع بدلًا من ذلك [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) من PromptQuorum.',
       },
       starCaveat: {
         id: 'star-count-caveat',
@@ -1987,7 +1987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             list: [
               'كنت تستخدم واجهة سطر أوامر واحدة لوكيل بمفردك ولا تحتاج إلى إسناد أو مراجعة عبر الفرق — قد لا تحتاج حالة الاستخدام هذه إلى طبقة تنسيق أصلًا',
               'اعتمد قرار استضافة تجارية أو دمج على شروط الترخيص الدقيقة — اقرأ ملف LICENSE الخاص بـMultica نفسه أولًا، لأنه ليس Apache-2.0 بسيطة',
-              'احتجت إلى أداة تشغّل أو تضبط نماذج ذكاء اصطناعي مباشرة بدلًا من تنسيق واجهات سطر أوامر قائمة للوكلاء — راجع بدلًا من ذلك [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) من PromptQuorum لهذه الفئة',
+              'احتجت إلى أداة تشغّل أو تضبط نماذج ذكاء اصطناعي مباشرة بدلًا من تنسيق واجهات سطر أوامر قائمة للوكلاء — راجع بدلًا من ذلك [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) من PromptQuorum لهذه الفئة',
               'أردت أداة وكيل بملف واحد وبأقل قدر من التبعيات بدلًا من مساحة عمل كاملة بمكوّن خادم ولوحة تحكم — راجع البدائل الأخف أدناه',
             ],
           },
@@ -1996,14 +1996,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'multica-competitors',
         title: 'Multica مقابل أدوات تنسيق الوكلاء الأخرى',
-        content: 'يندرج Multica ضمن فئة أوسع من أدوات تشغيل أو تنسيق وكلاء الذكاء الاصطناعي المستقلة. إليك كيف يختلف عن أربع أدوات أخرى راجعتها PromptQuorum في المجال نفسه — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل.',
+        content: 'يندرج Multica ضمن فئة أوسع من أدوات تشغيل أو تنسيق وكلاء الذكاء الاصطناعي المستقلة. إليك كيف يختلف عن أربع أدوات أخرى راجعتها PromptQuorum في المجال نفسه — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) للاطلاع على الكتالوج الكامل.',
         items: [
           '**[AutoGPT](/ar/power-local-llm/autogpt-local-review-2026)** — إطار عمل لوكيل مستقل واحد يخطط لأهدافه متعددة الخطوات وينفذها بنفسه؛ لا يخطط Multica للأهداف بنفسه، بل يُسند العمل الذي تنجزه واجهات سطر أوامر منفصلة للوكلاء مثل Claude Code ويتابعه — فكلاهما يحل مشكلة مختلفة (سعي مستقل للأهداف مقابل إسناد مهام موجّه بشريًا).',
           '**[CrewAI](/ar/power-local-llm/crewai-review)** — مكتبة/إطار عمل بلغة Python لبناء أنظمة متعددة الوكلاء خاصة بك في الكود؛ Multica مساحة عمل جاهزة بواجهة ولوحة تحكم، وليست مكتبة تكتب منطق الوكلاء بمقابلها.',
           '**[Open Interpreter](/ar/power-local-llm/open-interpreter-review)** — وكيل محلي واحد ينفّذ الكود مباشرة على جهازك عبر تعليمات بلغة طبيعية؛ لا ينفّذ Multica الكود بنفسه، بل ينسّق ويراجع العمل الذي تنجزه واجهة سطر أوامر الوكيل المسندة إليها المهمة (وقد تشمل أدوات مثل Open Interpreter نفسها).',
           '**[Aider](/ar/power-local-llm/aider-review)** — أداة برمجة زوجية بالذكاء الاصطناعي قائمة على الطرفية لمطوّر واحد يعمل بنموذج واحد في كل مرة؛ يمكن لـMultica إسناد العمل إلى أدوات سطر أوامر شبيهة بـAider كأحد وكلائه الـ26 المدعومين، لكنه يضيف فوق ذلك الإسناد والمتابعة والمراجعة على مستوى الفريق.',
         ],
-        note: 'هذه ليست قائمة شاملة بأدوات الوكلاء — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدراج Multica نفسه.',
+        note: 'هذه ليست قائمة شاملة بأدوات الوكلاء — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدراج Multica نفسه.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2058,7 +2058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة الكبيرة المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدراج Multica.',
+          '[دليل برمجيات نماذج اللغة الكبيرة المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدراج Multica.',
           '[مراجعة AutoGPT المحلي](/ar/power-local-llm/autogpt-local-review-2026) — نظرة مخصصة على إطار عمل وكيل مستقل واحد، وهو التناقض الفلسفي الأقرب لنموذج الإسناد الموجّه بشريًا في Multica.',
           '[مراجعة CrewAI](/ar/power-local-llm/crewai-review) — البديل القائم على الكود والمكتبة للفرق التي تريد بناء منطق متعدد الوكلاء خاص بها بدلًا من استخدام مساحة عمل جاهزة.',
           '[مراجعة Aider](/ar/power-local-llm/aider-review) — أداة برمجة زوجية قائمة على الطرفية لمطوّر واحد، وهي أحد أنواع واجهات سطر أوامر الوكلاء التي يمكن لـMultica إسناد العمل إليها.',
@@ -2136,7 +2136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub 스타 49,736개는 2026년 1월 13일 생성된 저장소치고 이례적으로 빠른 증가 — 무조건적인 사실이 아니라 유의사항이 붙은 신호로 읽을 것(아래 전용 섹션 참고)',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 Multica 항목을 심층적으로 다루는 보충 콘텐츠입니다 — Multica가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Multica 항목을 심층적으로 다루는 보충 콘텐츠입니다 — Multica가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2150,7 +2150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '정식 저장소: [github.com/multica-ai/multica](https://github.com/multica-ai/multica), GitHub 자체 저장소 메타데이터 기준 **2026년 1월 13일** 생성',
           '이 리뷰 시점 기준 해당 저장소는 30명의 기여자가 남긴 5,281건 이상의 커밋을 기록하고 있으며, 대략 1~3일마다 새 릴리스가 나오고 최신 태그 버전인 v0.4.43은 2026년 9월 11일자',
         ],
-        note: 'Multica 자체는 AI 모델을 실행하거나 호스팅하지 않는다 — 이미 보유하고 있거나(또는 별도로 설치한) Claude Code, Cursor 같은 코딩 에이전트 CLI 위에 얹히는 오케스트레이션·검토 계층이다. 로컬 LLM을 직접 실행하는 도구를 찾는다면 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하라.',
+        note: 'Multica 자체는 AI 모델을 실행하거나 호스팅하지 않는다 — 이미 보유하고 있거나(또는 별도로 설치한) Claude Code, Cursor 같은 코딩 에이전트 CLI 위에 얹히는 오케스트레이션·검토 계층이다. 로컬 LLM을 직접 실행하는 도구를 찾는다면 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하라.',
       },
       starCaveat: {
         id: 'star-count-caveat',
@@ -2245,7 +2245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             list: [
               '단일 에이전트 CLI를 혼자 사용하며 팀 간 배정이나 검토가 필요 없을 때 — 이런 사용 사례에는 오케스트레이션 계층 자체가 불필요할 수 있음',
               '상업적 호스팅이나 임베딩 관련 결정이 정확한 라이선스 조건에 달려 있을 때 — 단순한 Apache-2.0이 아니므로 먼저 Multica 자체 LICENSE 파일을 읽을 것',
-              '기존 에이전트 CLI를 오케스트레이션하는 대신 AI 모델을 직접 실행하거나 파인튜닝하는 도구가 필요할 때 — 해당 범주는 대신 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고',
+              '기존 에이전트 CLI를 오케스트레이션하는 대신 AI 모델을 직접 실행하거나 파인튜닝하는 도구가 필요할 때 — 해당 범주는 대신 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고',
               '서버 구성요소와 대시보드를 갖춘 완전한 워크스페이스보다 의존성이 최소화된 단일 파일 에이전트 도구를 원할 때 — 아래의 더 가벼운 대안을 참고',
             ],
           },
@@ -2254,14 +2254,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'multica-competitors',
         title: 'Multica 대 다른 에이전트 관리 도구',
-        content: 'Multica는 자율 AI 에이전트를 실행하거나 조율하는 더 넓은 범주의 도구에 속한다. PromptQuorum이 같은 영역에서 리뷰한 다른 네 가지 도구와 어떻게 다른지 살펴보자 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하라.',
+        content: 'Multica는 자율 AI 에이전트를 실행하거나 조율하는 더 넓은 범주의 도구에 속한다. PromptQuorum이 같은 영역에서 리뷰한 다른 네 가지 도구와 어떻게 다른지 살펴보자 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하라.',
         items: [
           '**[AutoGPT](/ko/power-local-llm/autogpt-local-review-2026)** — 스스로 다단계 목표를 계획하고 실행하는 단일 자율 에이전트 프레임워크; Multica 자체는 목표를 계획하지 않고 Claude Code 같은 별도 에이전트 CLI가 수행한 작업을 배정·추적한다 — 둘은 서로 다른 문제(자율적 목표 추구 대 인간 주도 작업 배정)를 해결한다.',
           '**[CrewAI](/ko/power-local-llm/crewai-review)** — 코드로 자체 멀티 에이전트 시스템을 구축하는 Python 라이브러리/프레임워크; Multica는 에이전트 로직을 작성해 넣는 라이브러리가 아니라 UI와 대시보드를 갖춘 완성형 워크스페이스다.',
           '**[Open Interpreter](/ko/power-local-llm/open-interpreter-review)** — 자연어 지시를 통해 사용자의 기기에서 직접 코드를 실행하는 단일 로컬 에이전트; Multica 자체는 코드를 실행하지 않고, 작업이 배정된 에이전트 CLI(경우에 따라 Open Interpreter 같은 도구도 포함될 수 있음)가 수행한 작업을 조율하고 검토한다.',
           '**[Aider](/ko/power-local-llm/aider-review)** — 한 번에 한 모델로 작업하는 개발자 한 명을 위한 터미널 기반 AI 페어 프로그래밍 도구; Multica는 지원하는 26종 에이전트 중 하나로 Aider 같은 CLI 도구에 작업을 배정할 수 있지만, 그 위에 팀 차원의 배정·추적·검토 기능을 더한다.',
         ],
-        note: '이는 에이전트 도구의 전체 목록이 아니다 — Multica 자체 디렉터리 항목을 포함한 완전하고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하라.',
+        note: '이는 에이전트 도구의 전체 목록이 아니다 — Multica 자체 디렉터리 항목을 포함한 완전하고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하라.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2316,7 +2316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[2026 로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — Multica의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
+          '[2026 로컬 LLM 소프트웨어 디렉터리](/ko/directory) — Multica의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
           '[AutoGPT 로컬 리뷰](/ko/power-local-llm/autogpt-local-review-2026) — 단일 자율 에이전트 프레임워크를 다룬 전용 리뷰로, Multica의 인간 주도 배정 모델과 철학적으로 가장 뚜렷하게 대비된다.',
           '[CrewAI 리뷰](/ko/power-local-llm/crewai-review) — 완성형 워크스페이스 대신 자체 멀티 에이전트 로직을 구축하고 싶은 팀을 위한 코드 중심의 라이브러리 기반 대안.',
           '[Aider 리뷰](/ko/power-local-llm/aider-review) — 개발자 한 명을 위한 터미널 기반 페어 프로그래밍 도구로, Multica가 작업을 배정할 수 있는 에이전트 CLI 유형 중 하나.',

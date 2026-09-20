@@ -116,7 +116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'It is free to install with no account or subscription, funded through Ko-fi donations and GitHub Sponsors, with no evidence of a paid tier or affiliate program.',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Page Assist\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- see that page for how Page Assist compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Page Assist\'s entry in the [Local LLM Software Directory](/directory) -- see that page for how Page Assist compares at a glance to dozens of other local AI tools.' },
         ],
       },
       quickFacts: {
@@ -206,7 +206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**[NextChat](/local-llms/nextchat-review)**', 'Best for': 'Fastest possible deploy, smallest footprint', 'Deployment': 'Self-hosted (Docker/Vercel) or native app', 'Deploy speed': 'One-click Vercel, ~100 KB load', 'License': 'MIT' },
           { 'Tool': '**[Open WebUI](/local-llms/open-webui-review)**', 'Best for': 'Multi-user front end tightly tied to Ollama', 'Deployment': 'Self-hosted (Docker/pip)', 'Deploy speed': 'Docker only, no Vercel button', 'License': 'Open WebUI License (BSD-derived)' },
         ],
-        note: 'For a wider five-way look including Chatbox, see [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). For the full catalog, see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).',
+        note: 'For a wider five-way look including Chatbox, see [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). For the full catalog, see the [Local LLM Software Directory](/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -236,14 +236,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Competitors and Alternatives',
-        content: 'Page Assist shares the "Web UIs & Browser Frontends" category in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) with LobeChat, Big-AGI, and NextChat, though those three are self-hosted server apps you deploy, while Page Assist is a browser extension you install directly -- no server, no deployment step. Here is how it compares to the closest alternatives in that shared directory segment.',
+        content: 'Page Assist shares the "Web UIs & Browser Frontends" category in the [Local LLM Software Directory](/directory) with LobeChat, Big-AGI, and NextChat, though those three are self-hosted server apps you deploy, while Page Assist is a browser extension you install directly -- no server, no deployment step. Here is how it compares to the closest alternatives in that shared directory segment.',
         items: [
           '**[LobeChat](/local-llms/lobechat-review)** -- a self-hosted, multi-provider chat interface with a plugin marketplace and agent builder, deployed to Docker or Vercel rather than installed as an extension.',
           '**[Big-AGI](/local-llms/big-agi-review)** -- a self-hosted or hosted, MIT-licensed interface whose standout feature is comparing multiple models on one prompt at once (Beam).',
           '**[NextChat](/local-llms/nextchat-review)** -- the lightest-weight self-hosted chat interface in the same directory segment, deployable with one click to Vercel.',
           '**[Open WebUI](/local-llms/open-webui-review)** -- a self-hosted, multi-user chat interface most tightly integrated with Ollama, for teams that want a shared server rather than a per-browser extension.',
         ],
-        note: 'This is not an exhaustive list of local-model chat tools -- see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Page Assist\'s own directory entry.',
+        note: 'This is not an exhaustive list of local-model chat tools -- see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Page Assist\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -275,7 +275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- the full catalog of local AI tools this article belongs to, including Page Assist\'s own directory entry.',
+          '[Local LLM Software Directory](/directory) -- the full catalog of local AI tools this article belongs to, including Page Assist\'s own directory entry.',
           '[LobeChat Review](/local-llms/lobechat-review) -- a self-hosted alternative with a plugin marketplace and agent builder.',
           '[Big-AGI Review](/local-llms/big-agi-review) -- a self-hosted or hosted alternative built around comparing multiple models on one prompt.',
           '[NextChat Review](/local-llms/nextchat-review) -- the lightest-weight self-hosted alternative in the same directory segment.',
@@ -410,7 +410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Die Installation ist kostenlos, ohne Konto oder Abo, finanziert über Ko-fi-Spenden und GitHub Sponsors, ohne Hinweis auf eine kostenpflichtige Stufe oder ein Partnerprogramm.',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test ist der ausführliche Begleitartikel zum Eintrag von Page Assist im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) -- dort sehen Sie auf einen Blick, wie Page Assist im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Dieser Test ist der ausführliche Begleitartikel zum Eintrag von Page Assist im [Local LLM Software Directory](/de/directory) -- dort sehen Sie auf einen Blick, wie Page Assist im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       quickFacts: {
@@ -500,7 +500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**[NextChat](/de/local-llms/nextchat-review)**', 'Am besten für': 'Schnellstmögliches Deploy, kleinster Fußabdruck', 'Bereitstellung': 'Selbst gehostet (Docker/Vercel) oder native App', 'Deploy-Geschwindigkeit': 'Ein-Klick-Vercel, ~100 KB Ladegröße', 'Lizenz': 'MIT' },
           { 'Tool': '**[Open WebUI](/de/local-llms/open-webui-review)**', 'Am besten für': 'Multi-User-Frontend, eng an Ollama gebunden', 'Bereitstellung': 'Selbst gehostet (Docker/pip)', 'Deploy-Geschwindigkeit': 'Nur Docker, kein Vercel-Button', 'Lizenz': 'Open WebUI License (BSD-basiert)' },
         ],
-        note: 'Für einen breiteren Fünf-Wege-Vergleich inklusive Chatbox siehe [LobeChat vs. Big-AGI vs. NextChat vs. Page Assist vs. Chatbox](/de/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Für den vollständigen Katalog siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Für einen breiteren Fünf-Wege-Vergleich inklusive Chatbox siehe [LobeChat vs. Big-AGI vs. NextChat vs. Page Assist vs. Chatbox](/de/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Für den vollständigen Katalog siehe das [Local LLM Software Directory](/de/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -530,14 +530,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Konkurrenten und Alternativen',
-        content: 'Page Assist teilt sich die Kategorie "Web UIs & Browser Frontends" im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) mit LobeChat, Big-AGI und NextChat, wobei diese drei selbst gehostete Server-Apps sind, die Sie deployen, während Page Assist eine Browser-Erweiterung ist, die Sie direkt installieren -- kein Server, kein Deployment-Schritt. So schneidet es im Vergleich zu den nächsten Alternativen in diesem geteilten Directory-Segment ab.',
+        content: 'Page Assist teilt sich die Kategorie "Web UIs & Browser Frontends" im [Local LLM Software Directory](/de/directory) mit LobeChat, Big-AGI und NextChat, wobei diese drei selbst gehostete Server-Apps sind, die Sie deployen, während Page Assist eine Browser-Erweiterung ist, die Sie direkt installieren -- kein Server, kein Deployment-Schritt. So schneidet es im Vergleich zu den nächsten Alternativen in diesem geteilten Directory-Segment ab.',
         items: [
           '**[LobeChat](/de/local-llms/lobechat-review)** -- eine selbst gehostete Multi-Provider-Chat-Oberfläche mit Plugin-Marktplatz und Agent-Builder, deployt auf Docker oder Vercel statt als Erweiterung installiert.',
           '**[Big-AGI](/de/local-llms/big-agi-review)** -- eine selbst gehostete oder gehostete, MIT-lizenzierte Oberfläche, deren herausragende Funktion der gleichzeitige Vergleich mehrerer Modelle bei einem Prompt ist (Beam).',
           '**[NextChat](/de/local-llms/nextchat-review)** -- die leichtgewichtigste selbst gehostete Chat-Oberfläche im selben Directory-Segment, mit einem Klick auf Vercel deploybar.',
           '**[Open WebUI](/de/local-llms/open-webui-review)** -- eine selbst gehostete Multi-User-Chat-Oberfläche, am engsten mit Ollama integriert, für Teams, die einen gemeinsamen Server statt einer Pro-Browser-Erweiterung wollen.',
         ],
-        note: 'Dies ist keine vollständige Liste von Chat-Tools für lokale Modelle -- siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Directory-Eintrags von Page Assist.',
+        note: 'Dies ist keine vollständige Liste von Chat-Tools für lokale Modelle -- siehe das [Local LLM Software Directory](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Directory-Eintrags von Page Assist.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -569,7 +569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) -- der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des eigenen Directory-Eintrags von Page Assist.',
+          '[Local LLM Software Directory](/de/directory) -- der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des eigenen Directory-Eintrags von Page Assist.',
           '[LobeChat Test](/de/local-llms/lobechat-review) -- eine selbst gehostete Alternative mit Plugin-Marktplatz und Agent-Builder.',
           '[Big-AGI Test](/de/local-llms/big-agi-review) -- eine selbst gehostete oder gehostete Alternative rund um den Vergleich mehrerer Modelle bei einem Prompt.',
           '[NextChat Test](/de/local-llms/nextchat-review) -- die leichtgewichtigste selbst gehostete Alternative im selben Directory-Segment.',
@@ -704,7 +704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installation gratuite sans compte ni abonnement, financée par des dons Ko-fi et GitHub Sponsors, sans preuve de palier payant ni programme d\'affiliation.',
         ],
         callouts: [
-          { type: 'note', text: 'Ce test est l\'article approfondi complémentaire à la fiche de Page Assist dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) -- consultez cette page pour voir en un coup d\'œil comment Page Assist se compare à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Ce test est l\'article approfondi complémentaire à la fiche de Page Assist dans le [Local LLM Software Directory](/fr/directory) -- consultez cette page pour voir en un coup d\'œil comment Page Assist se compare à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       quickFacts: {
@@ -794,7 +794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Outil': '**[NextChat](/fr/local-llms/nextchat-review)**', 'Idéal pour': 'Déploiement le plus rapide, empreinte minimale', 'Déploiement': 'Auto-hébergé (Docker/Vercel) ou app native', 'Vitesse de déploiement': 'Vercel en un clic, ~100 Ko', 'Licence': 'MIT' },
           { 'Outil': '**[Open WebUI](/fr/local-llms/open-webui-review)**', 'Idéal pour': 'Frontend multi-utilisateur étroitement lié à Ollama', 'Déploiement': 'Auto-hébergé (Docker/pip)', 'Vitesse de déploiement': 'Docker seul, pas de bouton Vercel', 'Licence': 'Open WebUI License (dérivée BSD)' },
         ],
-        note: 'Pour une comparaison élargie à cinq outils incluant Chatbox, voir [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/fr/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Pour le catalogue complet, voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory).',
+        note: 'Pour une comparaison élargie à cinq outils incluant Chatbox, voir [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/fr/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Pour le catalogue complet, voir le [Local LLM Software Directory](/fr/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -824,14 +824,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Concurrents et alternatives',
-        content: 'Page Assist partage la catégorie "Web UIs & Browser Frontends" du [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) avec LobeChat, Big-AGI et NextChat, bien que ces trois derniers soient des applications serveur auto-hébergées que vous déployez, tandis que Page Assist est une extension de navigateur que vous installez directement -- sans serveur, sans étape de déploiement. Voici comment il se compare aux alternatives les plus proches de ce segment partagé de l\'annuaire.',
+        content: 'Page Assist partage la catégorie "Web UIs & Browser Frontends" du [Local LLM Software Directory](/fr/directory) avec LobeChat, Big-AGI et NextChat, bien que ces trois derniers soient des applications serveur auto-hébergées que vous déployez, tandis que Page Assist est une extension de navigateur que vous installez directement -- sans serveur, sans étape de déploiement. Voici comment il se compare aux alternatives les plus proches de ce segment partagé de l\'annuaire.',
         items: [
           '**[LobeChat](/fr/local-llms/lobechat-review)** -- une interface de chat multi-fournisseurs auto-hébergée avec marketplace de plugins et agent builder, déployée sur Docker ou Vercel plutôt qu\'installée comme extension.',
           '**[Big-AGI](/fr/local-llms/big-agi-review)** -- une interface auto-hébergée ou hébergée, sous licence MIT, dont la fonctionnalité phare est de comparer plusieurs modèles sur un même prompt à la fois (Beam).',
           '**[NextChat](/fr/local-llms/nextchat-review)** -- l\'interface de chat auto-hébergée la plus légère du même segment de l\'annuaire, déployable en un clic sur Vercel.',
           '**[Open WebUI](/fr/local-llms/open-webui-review)** -- une interface de chat auto-hébergée et multi-utilisateur la plus étroitement intégrée à Ollama, pour les équipes qui veulent un serveur partagé plutôt qu\'une extension par navigateur.',
         ],
-        note: 'Cette liste n\'est pas exhaustive pour les outils de chat sur modèles locaux -- voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de Page Assist dans l\'annuaire.',
+        note: 'Cette liste n\'est pas exhaustive pour les outils de chat sur modèles locaux -- voir le [Local LLM Software Directory](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de Page Assist dans l\'annuaire.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -863,7 +863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Pour aller plus loin',
         items: [
-          '[Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) -- le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant la propre fiche de Page Assist dans l\'annuaire.',
+          '[Local LLM Software Directory](/fr/directory) -- le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant la propre fiche de Page Assist dans l\'annuaire.',
           '[Test LobeChat](/fr/local-llms/lobechat-review) -- une alternative auto-hébergée avec marketplace de plugins et agent builder.',
           '[Test Big-AGI](/fr/local-llms/big-agi-review) -- une alternative auto-hébergée ou hébergée conçue autour de la comparaison de plusieurs modèles sur un même prompt.',
           '[Test NextChat](/fr/local-llms/nextchat-review) -- l\'alternative auto-hébergée la plus légère du même segment de l\'annuaire.',
@@ -998,7 +998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'アカウントやサブスクリプションなしで無料でインストールでき、Ko-fi寄付とGitHub Sponsorsで運営されており、有料プランやアフィリエイトプログラムの証拠は見つかりませんでした。',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるPage Assistの掲載情報を補完する詳細記事です——他の数十種類のローカルAIツールとPage Assistがどう比較されるかは、そちらのページをご覧ください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるPage Assistの掲載情報を補完する詳細記事です——他の数十種類のローカルAIツールとPage Assistがどう比較されるかは、そちらのページをご覧ください。' },
         ],
       },
       quickFacts: {
@@ -1088,7 +1088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ツール': '**[NextChat](/ja/local-llms/nextchat-review)**', '最適な用途': '最速の展開、最小のフットプリント', '展開方法': 'セルフホスト（Docker/Vercel）またはネイティブアプリ', '展開速度': 'ワンクリックVercel、約100KB', 'ライセンス': 'MIT' },
           { 'ツール': '**[Open WebUI](/ja/local-llms/open-webui-review)**', '最適な用途': 'Ollamaと密に統合されたマルチユーザーフロントエンド', '展開方法': 'セルフホスト（Docker/pip）', '展開速度': 'Dockerのみ、Vercelボタンなし', 'ライセンス': 'Open WebUI License（BSD派生）' },
         ],
-        note: 'Chatboxを含む5つの幅広い比較については、[LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/ja/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)をご覧ください。全カタログについては、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'Chatboxを含む5つの幅広い比較については、[LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/ja/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)をご覧ください。全カタログについては、[ローカルLLMソフトウェアディレクトリ](/ja/directory)をご覧ください。',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1118,14 +1118,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '競合・代替ツール',
-        content: 'Page Assistは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)の「Web UIs & Browser Frontends」カテゴリーをLobeChat、Big-AGI、NextChatと共有していますが、これら3つはデプロイするセルフホスト型サーバーアプリであるのに対し、Page Assistは直接インストールするブラウザ拡張機能で、サーバーもデプロイ作業も不要です。この共有ディレクトリセグメント内で最も近い代替ツールとの比較は以下の通りです。',
+        content: 'Page Assistは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)の「Web UIs & Browser Frontends」カテゴリーをLobeChat、Big-AGI、NextChatと共有していますが、これら3つはデプロイするセルフホスト型サーバーアプリであるのに対し、Page Assistは直接インストールするブラウザ拡張機能で、サーバーもデプロイ作業も不要です。この共有ディレクトリセグメント内で最も近い代替ツールとの比較は以下の通りです。',
         items: [
           '**[LobeChat](/ja/local-llms/lobechat-review)**——プラグイン市場とエージェントビルダーを備えたセルフホスト型のマルチプロバイダーチャットインターフェース。拡張機能ではなく、DockerやVercelにデプロイします。',
           '**[Big-AGI](/ja/local-llms/big-agi-review)**——セルフホストまたはホスト型のMITライセンスインターフェースで、1つのプロンプトで一度に複数モデルを比較する機能（Beam）が特徴です。',
           '**[NextChat](/ja/local-llms/nextchat-review)**——同じディレクトリセグメントの中で最も軽量なセルフホスト型チャットインターフェースで、Vercelにワンクリックでデプロイ可能です。',
           '**[Open WebUI](/ja/local-llms/open-webui-review)**——ブラウザごとの拡張機能ではなく共有サーバーを求めるチームのために、Ollamaと最も密に統合されたセルフホスト型のマルチユーザーチャットインターフェースです。',
         ],
-        note: 'これはローカルモデル用チャットツールの網羅的なリストではありません——Page Assist自身のディレクトリ掲載情報を含む、定期的に更新される完全なカタログについては、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'これはローカルモデル用チャットツールの網羅的なリストではありません——Page Assist自身のディレクトリ掲載情報を含む、定期的に更新される完全なカタログについては、[ローカルLLMソフトウェアディレクトリ](/ja/directory)をご覧ください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1157,7 +1157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)——この記事が属するローカルAIツールの全カタログ。Page Assist自身のディレクトリ掲載情報を含みます。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/directory)——この記事が属するローカルAIツールの全カタログ。Page Assist自身のディレクトリ掲載情報を含みます。',
           '[LobeChatレビュー](/ja/local-llms/lobechat-review)——プラグイン市場とエージェントビルダーを備えたセルフホスト型の代替ツール。',
           '[Big-AGIレビュー](/ja/local-llms/big-agi-review)——1つのプロンプトで複数モデルを比較することを中心に構築された、セルフホストまたはホスト型の代替ツール。',
           '[NextChatレビュー](/ja/local-llms/nextchat-review)——同じディレクトリセグメントの中で最も軽量なセルフホスト型の代替ツール。',
@@ -1292,7 +1292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '安装免费，无需账户或订阅，通过Ko-fi捐赠和GitHub Sponsors获得资金支持，未发现付费套餐或联盟计划的证据。',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Page Assist条目的深度配套文章——请前往该页面查看Page Assist与数十款其他本地AI工具的一览对比。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Page Assist条目的深度配套文章——请前往该页面查看Page Assist与数十款其他本地AI工具的一览对比。' },
         ],
       },
       quickFacts: {
@@ -1382,7 +1382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '工具': '**[NextChat](/zh/local-llms/nextchat-review)**', '最适合': '最快的部署速度、最小的体积', '部署方式': '自托管（Docker/Vercel）或原生应用', '部署速度': '一键Vercel，约100KB', '许可证': 'MIT' },
           { '工具': '**[Open WebUI](/zh/local-llms/open-webui-review)**', '最适合': '与Ollama紧密集成的多用户前端', '部署方式': '自托管（Docker/pip）', '部署速度': '仅限Docker，无Vercel按钮', '许可证': 'Open WebUI License（基于BSD）' },
         ],
-        note: '如需查看包含Chatbox在内的更广泛五方对比，请参见[LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/zh/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)。完整目录请参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '如需查看包含Chatbox在内的更广泛五方对比，请参见[LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/zh/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)。完整目录请参见[本地LLM软件目录](/zh/directory)。',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1412,14 +1412,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '竞品与替代方案',
-        content: 'Page Assist与LobeChat、Big-AGI和NextChat共享[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中的"Web UIs & Browser Frontends"类别，不过这三者是你需要部署的自托管服务器应用，而Page Assist是你直接安装的浏览器扩展——无需服务器、无需部署步骤。以下是它与该共享目录分类中最接近的替代方案的对比。',
+        content: 'Page Assist与LobeChat、Big-AGI和NextChat共享[本地LLM软件目录](/zh/directory)中的"Web UIs & Browser Frontends"类别，不过这三者是你需要部署的自托管服务器应用，而Page Assist是你直接安装的浏览器扩展——无需服务器、无需部署步骤。以下是它与该共享目录分类中最接近的替代方案的对比。',
         items: [
           '**[LobeChat](/zh/local-llms/lobechat-review)**——一款自托管的多提供商聊天界面，具有插件市场和智能体构建器，部署到Docker或Vercel，而非以扩展形式安装。',
           '**[Big-AGI](/zh/local-llms/big-agi-review)**——一款自托管或托管的MIT许可界面，其代表性功能是同时在一个提示词下比较多个模型（Beam）。',
           '**[NextChat](/zh/local-llms/nextchat-review)**——同一目录分类中最轻量的自托管聊天界面，可一键部署到Vercel。',
           '**[Open WebUI](/zh/local-llms/open-webui-review)**——一款与Ollama集成最紧密的自托管多用户聊天界面，适合想要共享服务器而非按浏览器安装扩展的团队。',
         ],
-        note: '这并非本地模型聊天工具的详尽列表——完整且定期更新的目录（包括Page Assist自身的目录条目）请参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非本地模型聊天工具的详尽列表——完整且定期更新的目录（包括Page Assist自身的目录条目）请参见[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1451,7 +1451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)——本文所属的本地AI工具完整目录，包含Page Assist自身的目录条目。',
+          '[本地LLM软件目录](/zh/directory)——本文所属的本地AI工具完整目录，包含Page Assist自身的目录条目。',
           '[LobeChat评测](/zh/local-llms/lobechat-review)——一款拥有插件市场和智能体构建器的自托管替代方案。',
           '[Big-AGI评测](/zh/local-llms/big-agi-review)——一款围绕在同一提示词下比较多个模型而打造的自托管或托管替代方案。',
           '[NextChat评测](/zh/local-llms/nextchat-review)——同一目录分类中最轻量的自托管替代方案。',
@@ -1586,7 +1586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Es gratis de instalar sin cuenta ni suscripción, se financia mediante donaciones en Ko-fi y GitHub Sponsors, y no hay evidencia de un plan de pago ni de un programa de afiliados.',
         ],
         callouts: [
-          { type: 'note', text: 'Este análisis es el artículo detallado complementario a la ficha de Page Assist en el [directorio de software para LLM local](/es/power-local-llm/local-llm-software-directory) -- consulta esa página para ver de un vistazo cómo se compara Page Assist con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Este análisis es el artículo detallado complementario a la ficha de Page Assist en el [directorio de software para LLM local](/es/directory) -- consulta esa página para ver de un vistazo cómo se compara Page Assist con docenas de otras herramientas de IA local.' },
         ],
       },
       quickFacts: {
@@ -1676,7 +1676,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': '**[NextChat](/es/local-llms/nextchat-review)**', 'Ideal para': 'Despliegue más rápido posible, menor peso', 'Despliegue': 'Autoalojado (Docker/Vercel) o app nativa', 'Velocidad de despliegue': 'Vercel en un clic, ~100 KB', 'Licencia': 'MIT' },
           { 'Herramienta': '**[Open WebUI](/es/local-llms/open-webui-review)**', 'Ideal para': 'Frontend multiusuario muy ligado a Ollama', 'Despliegue': 'Autoalojado (Docker/pip)', 'Velocidad de despliegue': 'Solo Docker, sin botón de Vercel', 'Licencia': 'Open WebUI License (derivada de BSD)' },
         ],
-        note: 'Para una comparativa más amplia de cinco herramientas que incluye Chatbox, consulta [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/es/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Para el catálogo completo, consulta el [directorio de software para LLM local](/es/power-local-llm/local-llm-software-directory).',
+        note: 'Para una comparativa más amplia de cinco herramientas que incluye Chatbox, consulta [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/es/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Para el catálogo completo, consulta el [directorio de software para LLM local](/es/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1706,14 +1706,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Competidores y alternativas',
-        content: 'Page Assist comparte la categoría "Web UIs & Browser Frontends" del [directorio de software para LLM local](/es/power-local-llm/local-llm-software-directory) con LobeChat, Big-AGI y NextChat, aunque estas tres son aplicaciones de servidor autoalojadas que tú despliegas, mientras que Page Assist es una extensión de navegador que instalas directamente -- sin servidor, sin paso de despliegue. Así se compara con las alternativas más cercanas dentro de ese segmento compartido del directorio.',
+        content: 'Page Assist comparte la categoría "Web UIs & Browser Frontends" del [directorio de software para LLM local](/es/directory) con LobeChat, Big-AGI y NextChat, aunque estas tres son aplicaciones de servidor autoalojadas que tú despliegas, mientras que Page Assist es una extensión de navegador que instalas directamente -- sin servidor, sin paso de despliegue. Así se compara con las alternativas más cercanas dentro de ese segmento compartido del directorio.',
         items: [
           '**[LobeChat](/es/local-llms/lobechat-review)** -- una interfaz de chat multi-proveedor autoalojada con marketplace de plugins y agent builder, desplegada en Docker o Vercel en lugar de instalarse como extensión.',
           '**[Big-AGI](/es/local-llms/big-agi-review)** -- una interfaz autoalojada o alojada, con licencia MIT, cuya función distintiva es comparar varios modelos en un mismo prompt a la vez (Beam).',
           '**[NextChat](/es/local-llms/nextchat-review)** -- la interfaz de chat autoalojada más ligera dentro del mismo segmento del directorio, desplegable en un clic en Vercel.',
           '**[Open WebUI](/es/local-llms/open-webui-review)** -- una interfaz de chat autoalojada multiusuario más estrechamente integrada con Ollama, para equipos que quieren un servidor compartido en lugar de una extensión por navegador.',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas de chat para modelos locales -- consulta el [directorio de software para LLM local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado periódicamente, incluida la propia ficha de Page Assist en el directorio.',
+        note: 'Esta no es una lista exhaustiva de herramientas de chat para modelos locales -- consulta el [directorio de software para LLM local](/es/directory) para el catálogo completo y actualizado periódicamente, incluida la propia ficha de Page Assist en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1745,7 +1745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software para LLM local](/es/power-local-llm/local-llm-software-directory) -- el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia ficha de Page Assist en el directorio.',
+          '[Directorio de software para LLM local](/es/directory) -- el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia ficha de Page Assist en el directorio.',
           '[Análisis de LobeChat](/es/local-llms/lobechat-review) -- una alternativa autoalojada con marketplace de plugins y agent builder.',
           '[Análisis de Big-AGI](/es/local-llms/big-agi-review) -- una alternativa autoalojada o alojada diseñada en torno a comparar varios modelos en un mismo prompt.',
           '[Análisis de NextChat](/es/local-llms/nextchat-review) -- la alternativa autoalojada más ligera dentro del mismo segmento del directorio.',
@@ -1880,7 +1880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A instalação é gratuita, sem conta ou assinatura, financiada por doações no Ko-fi e pelo GitHub Sponsors, sem evidência de plano pago ou programa de afiliados.',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o artigo aprofundado complementar à listagem do Page Assist no [diretório de software para LLM local](/pt/power-local-llm/local-llm-software-directory) -- veja essa página para comparar rapidamente o Page Assist com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o artigo aprofundado complementar à listagem do Page Assist no [diretório de software para LLM local](/pt/directory) -- veja essa página para comparar rapidamente o Page Assist com dezenas de outras ferramentas de IA local.' },
         ],
       },
       quickFacts: {
@@ -1970,7 +1970,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '**[NextChat](/pt/local-llms/nextchat-review)**', 'Ideal para': 'Implantação mais rápida possível, menor peso', 'Implantação': 'Auto-hospedado (Docker/Vercel) ou app nativo', 'Velocidade de implantação': 'Vercel em um clique, ~100 KB', 'Licença': 'MIT' },
           { 'Ferramenta': '**[Open WebUI](/pt/local-llms/open-webui-review)**', 'Ideal para': 'Frontend multiusuário fortemente ligado ao Ollama', 'Implantação': 'Auto-hospedado (Docker/pip)', 'Velocidade de implantação': 'Apenas Docker, sem botão Vercel', 'Licença': 'Open WebUI License (derivada de BSD)' },
         ],
-        note: 'Para uma comparação mais ampla de cinco ferramentas incluindo o Chatbox, veja [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/pt/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Para o catálogo completo, veja o [diretório de software para LLM local](/pt/power-local-llm/local-llm-software-directory).',
+        note: 'Para uma comparação mais ampla de cinco ferramentas incluindo o Chatbox, veja [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/pt/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Para o catálogo completo, veja o [diretório de software para LLM local](/pt/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2000,14 +2000,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Concorrentes e alternativas',
-        content: 'O Page Assist compartilha a categoria "Web UIs & Browser Frontends" no [diretório de software para LLM local](/pt/power-local-llm/local-llm-software-directory) com LobeChat, Big-AGI e NextChat, embora esses três sejam aplicativos de servidor auto-hospedados que você implanta, enquanto o Page Assist é uma extensão de navegador que você instala diretamente -- sem servidor, sem etapa de implantação. Veja como ele se compara às alternativas mais próximas nesse segmento compartilhado do diretório.',
+        content: 'O Page Assist compartilha a categoria "Web UIs & Browser Frontends" no [diretório de software para LLM local](/pt/directory) com LobeChat, Big-AGI e NextChat, embora esses três sejam aplicativos de servidor auto-hospedados que você implanta, enquanto o Page Assist é uma extensão de navegador que você instala diretamente -- sem servidor, sem etapa de implantação. Veja como ele se compara às alternativas mais próximas nesse segmento compartilhado do diretório.',
         items: [
           '**[LobeChat](/pt/local-llms/lobechat-review)** -- uma interface de chat multi-provedor auto-hospedada com marketplace de plugins e agent builder, implantada no Docker ou na Vercel em vez de instalada como extensão.',
           '**[Big-AGI](/pt/local-llms/big-agi-review)** -- uma interface auto-hospedada ou hospedada, com licença MIT, cujo recurso característico é comparar vários modelos no mesmo prompt de uma vez (Beam).',
           '**[NextChat](/pt/local-llms/nextchat-review)** -- a interface de chat auto-hospedada mais leve do mesmo segmento do diretório, implantável em um clique na Vercel.',
           '**[Open WebUI](/pt/local-llms/open-webui-review)** -- uma interface de chat auto-hospedada multiusuário mais fortemente integrada ao Ollama, para equipes que querem um servidor compartilhado em vez de uma extensão por navegador.',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas de chat para modelos locais -- veja o [diretório de software para LLM local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e regularmente atualizado, incluindo a própria listagem do Page Assist no diretório.',
+        note: 'Esta não é uma lista exaustiva de ferramentas de chat para modelos locais -- veja o [diretório de software para LLM local](/pt/directory) para o catálogo completo e regularmente atualizado, incluindo a própria listagem do Page Assist no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2039,7 +2039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software para LLM local](/pt/power-local-llm/local-llm-software-directory) -- o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria listagem do Page Assist no diretório.',
+          '[Diretório de software para LLM local](/pt/directory) -- o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria listagem do Page Assist no diretório.',
           '[Análise do LobeChat](/pt/local-llms/lobechat-review) -- uma alternativa auto-hospedada com marketplace de plugins e agent builder.',
           '[Análise do Big-AGI](/pt/local-llms/big-agi-review) -- uma alternativa auto-hospedada ou hospedada construída em torno da comparação de vários modelos no mesmo prompt.',
           '[Análise do NextChat](/pt/local-llms/nextchat-review) -- a alternativa auto-hospedada mais leve do mesmo segmento do diretório.',
@@ -2174,7 +2174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'التثبيت مجاني دون حساب أو اشتراك، وتُموَّل عبر تبرعات Ko-fi وGitHub Sponsors، ولا يوجد دليل على وجود خطة مدفوعة أو برنامج إحالة.',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة مقال تفصيلي مكمّل لبطاقة Page Assist في [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) -- راجع تلك الصفحة لمعرفة كيف تقارن Page Assist بلمحة سريعة مع عشرات الأدوات الأخرى للذكاء الاصطناعي المحلي.' },
+          { type: 'note', text: 'هذه المراجعة مقال تفصيلي مكمّل لبطاقة Page Assist في [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) -- راجع تلك الصفحة لمعرفة كيف تقارن Page Assist بلمحة سريعة مع عشرات الأدوات الأخرى للذكاء الاصطناعي المحلي.' },
         ],
       },
       quickFacts: {
@@ -2264,7 +2264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': '**[NextChat](/ar/local-llms/nextchat-review)**', 'الأنسب لـ': 'أسرع نشر ممكن، وأصغر حجم', 'طريقة النشر': 'ذاتية الاستضافة (Docker/Vercel) أو تطبيق أصلي', 'سرعة النشر': 'Vercel بنقرة واحدة، حوالي 100 كيلوبايت', 'الرخصة': 'MIT' },
           { 'الأداة': '**[Open WebUI](/ar/local-llms/open-webui-review)**', 'الأنسب لـ': 'واجهة متعددة المستخدمين مرتبطة بإحكام بـ Ollama', 'طريقة النشر': 'ذاتية الاستضافة (Docker/pip)', 'سرعة النشر': 'Docker فقط، دون زر Vercel', 'الرخصة': 'Open WebUI License (مشتقة من BSD)' },
         ],
-        note: 'لمقارنة أوسع لخمس أدوات تشمل Chatbox، راجع [LobeChat مقابل Big-AGI مقابل NextChat مقابل Page Assist مقابل Chatbox](/ar/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). للكتالوج الكامل، راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory).',
+        note: 'لمقارنة أوسع لخمس أدوات تشمل Chatbox، راجع [LobeChat مقابل Big-AGI مقابل NextChat مقابل Page Assist مقابل Chatbox](/ar/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). للكتالوج الكامل، راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2294,14 +2294,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'المنافسون والبدائل',
-        content: 'تشترك Page Assist في فئة "Web UIs & Browser Frontends" ضمن [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) مع LobeChat وBig-AGI وNextChat، رغم أن هذه الثلاثة تطبيقات خوادم ذاتية الاستضافة تنشرها بنفسك، بينما Page Assist إضافة متصفح تثبّتها مباشرة -- دون خادم أو خطوة نشر. إليك كيف تقارَن بأقرب البدائل ضمن قسم الدليل المشترك هذا.',
+        content: 'تشترك Page Assist في فئة "Web UIs & Browser Frontends" ضمن [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) مع LobeChat وBig-AGI وNextChat، رغم أن هذه الثلاثة تطبيقات خوادم ذاتية الاستضافة تنشرها بنفسك، بينما Page Assist إضافة متصفح تثبّتها مباشرة -- دون خادم أو خطوة نشر. إليك كيف تقارَن بأقرب البدائل ضمن قسم الدليل المشترك هذا.',
         items: [
           '**[LobeChat](/ar/local-llms/lobechat-review)** -- واجهة دردشة ذاتية الاستضافة متعددة المزوّدين مع سوق إضافات وأداة بناء وكلاء، تُنشر على Docker أو Vercel بدلاً من تثبيتها كإضافة.',
           '**[Big-AGI](/ar/local-llms/big-agi-review)** -- واجهة ذاتية الاستضافة أو مستضافة برخصة MIT، وميزتها المميزة مقارنة عدة نماذج في نفس الوقت على نفس الطلب (Beam).',
           '**[NextChat](/ar/local-llms/nextchat-review)** -- أخف واجهة دردشة ذاتية الاستضافة ضمن نفس قسم الدليل، قابلة للنشر بنقرة واحدة على Vercel.',
           '**[Open WebUI](/ar/local-llms/open-webui-review)** -- واجهة دردشة ذاتية الاستضافة متعددة المستخدمين الأكثر تكاملاً مع Ollama، للفرق التي تريد خادماً مشتركاً بدلاً من إضافة لكل متصفح.',
         ],
-        note: 'هذه ليست قائمة شاملة لأدوات الدردشة بالنماذج المحلية -- راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل المحدَّث بانتظام، بما في ذلك بطاقة Page Assist الخاصة بها في الدليل.',
+        note: 'هذه ليست قائمة شاملة لأدوات الدردشة بالنماذج المحلية -- راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) للكتالوج الكامل المحدَّث بانتظام، بما في ذلك بطاقة Page Assist الخاصة بها في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2333,7 +2333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) -- الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال، بما في ذلك بطاقة Page Assist الخاصة بها في الدليل.',
+          '[دليل برمجيات النماذج اللغوية المحلية](/ar/directory) -- الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال، بما في ذلك بطاقة Page Assist الخاصة بها في الدليل.',
           '[مراجعة LobeChat](/ar/local-llms/lobechat-review) -- بديل ذاتي الاستضافة مع سوق إضافات وأداة بناء وكلاء.',
           '[مراجعة Big-AGI](/ar/local-llms/big-agi-review) -- بديل ذاتي الاستضافة أو مستضاف مبني حول مقارنة عدة نماذج على نفس الطلب.',
           '[مراجعة NextChat](/ar/local-llms/nextchat-review) -- أخف بديل ذاتي الاستضافة ضمن نفس قسم الدليل.',
@@ -2468,7 +2468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '계정이나 구독 없이 무료로 설치할 수 있으며, Ko-fi 기부와 GitHub Sponsors로 자금을 조달하고, 유료 요금제나 제휴 프로그램의 증거는 발견되지 않았습니다.',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 Page Assist 항목을 보완하는 심층 기사입니다 -- Page Assist가 수십 개의 다른 로컬 AI 도구와 어떻게 한눈에 비교되는지는 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Page Assist 항목을 보완하는 심층 기사입니다 -- Page Assist가 수십 개의 다른 로컬 AI 도구와 어떻게 한눈에 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       quickFacts: {
@@ -2558,7 +2558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': '**[NextChat](/ko/local-llms/nextchat-review)**', '적합한 용도': '가장 빠른 배포, 가장 가벼운 용량', '배포 방식': '셀프 호스팅(Docker/Vercel) 또는 네이티브 앱', '배포 속도': '원클릭 Vercel, 약 100KB 로딩', '라이선스': 'MIT' },
           { '도구': '**[Open WebUI](/ko/local-llms/open-webui-review)**', '적합한 용도': 'Ollama와 긴밀히 통합된 멀티유저 프런트엔드', '배포 방식': '셀프 호스팅(Docker/pip)', '배포 속도': 'Docker만 지원, Vercel 버튼 없음', '라이선스': 'Open WebUI License(BSD 파생)' },
         ],
-        note: 'Chatbox를 포함한 더 폭넓은 5자 비교는 [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/ko/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)를 참고하세요. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: 'Chatbox를 포함한 더 폭넓은 5자 비교는 [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/ko/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)를 참고하세요. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2588,14 +2588,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '경쟁 제품 및 대안',
-        content: 'Page Assist는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에서 LobeChat, Big-AGI, NextChat과 "Web UIs & Browser Frontends" 카테고리를 공유하지만, 이 세 제품은 직접 배포하는 셀프 호스팅 서버 앱인 반면 Page Assist는 직접 설치하는 브라우저 확장 프로그램으로 서버도 배포 단계도 필요하지 않습니다. 이 공유 디렉터리 세그먼트 안에서 가장 가까운 대안과 비교하면 다음과 같습니다.',
+        content: 'Page Assist는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에서 LobeChat, Big-AGI, NextChat과 "Web UIs & Browser Frontends" 카테고리를 공유하지만, 이 세 제품은 직접 배포하는 셀프 호스팅 서버 앱인 반면 Page Assist는 직접 설치하는 브라우저 확장 프로그램으로 서버도 배포 단계도 필요하지 않습니다. 이 공유 디렉터리 세그먼트 안에서 가장 가까운 대안과 비교하면 다음과 같습니다.',
         items: [
           '**[LobeChat](/ko/local-llms/lobechat-review)** -- 플러그인 마켓플레이스와 에이전트 빌더를 갖춘 셀프 호스팅 멀티프로바이더 채팅 인터페이스로, 확장 프로그램이 아니라 Docker나 Vercel에 배포합니다.',
           '**[Big-AGI](/ko/local-llms/big-agi-review)** -- 셀프 호스팅 또는 호스팅형 MIT 라이선스 인터페이스로, 대표 기능은 하나의 프롬프트로 여러 모델을 동시에 비교하는 것입니다(Beam).',
           '**[NextChat](/ko/local-llms/nextchat-review)** -- 같은 디렉터리 세그먼트 안에서 가장 가벼운 셀프 호스팅 채팅 인터페이스로, Vercel에 원클릭 배포가 가능합니다.',
           '**[Open WebUI](/ko/local-llms/open-webui-review)** -- 브라우저별 확장 프로그램보다 공유 서버를 원하는 팀을 위해 Ollama와 가장 긴밀하게 통합된 셀프 호스팅 멀티유저 채팅 인터페이스입니다.',
         ],
-        note: '이는 로컬 모델 채팅 도구의 전체 목록이 아닙니다 -- Page Assist 자체의 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이는 로컬 모델 채팅 도구의 전체 목록이 아닙니다 -- Page Assist 자체의 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2627,7 +2627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) -- 이 글이 속한 로컬 AI 도구 전체 카탈로그로, Page Assist 자체의 디렉터리 항목을 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) -- 이 글이 속한 로컬 AI 도구 전체 카탈로그로, Page Assist 자체의 디렉터리 항목을 포함합니다.',
           '[LobeChat 리뷰](/ko/local-llms/lobechat-review) -- 플러그인 마켓플레이스와 에이전트 빌더를 갖춘 셀프 호스팅 대안입니다.',
           '[Big-AGI 리뷰](/ko/local-llms/big-agi-review) -- 하나의 프롬프트로 여러 모델을 비교하는 것을 중심으로 만들어진 셀프 호스팅 또는 호스팅형 대안입니다.',
           '[NextChat 리뷰](/ko/local-llms/nextchat-review) -- 같은 디렉터리 세그먼트 안에서 가장 가벼운 셀프 호스팅 대안입니다.',

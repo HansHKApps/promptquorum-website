@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion Review (2026)](/power-local-llm/stable-diffusion-review) — the underlying open-weights model family InvokeAI, ComfyUI, and AUTOMATIC1111 all run.',
           '[Local AI Image Generation vs. Cloud](/power-local-llm/local-ai-image-generation-vs-cloud) — comparison of local image tools against cloud services like Midjourney and Adobe Firefly.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — comprehensive app and tool directory for all platforms.',
+          '[Local LLM Software Directory 2026](/directory) — comprehensive app and tool directory for all platforms.',
         ],
       },
     },
@@ -681,7 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion Test (2026)](/de/power-local-llm/stable-diffusion-review) — die zugrunde liegende offene Modellfamilie, die InvokeAI, ComfyUI und AUTOMATIC1111 alle ausführen.',
           '[Lokale KI-Bildgenerierung vs. Cloud](/de/power-local-llm/local-ai-image-generation-vs-cloud) — Vergleich lokaler Bild-Tools mit Cloud-Diensten wie Midjourney und Adobe Firefly.',
-          '[Local LLM Software-Verzeichnis 2026](/de/power-local-llm/local-llm-software-directory) — umfassendes App- und Tool-Verzeichnis für alle Plattformen.',
+          '[Local LLM Software-Verzeichnis 2026](/de/directory) — umfassendes App- und Tool-Verzeichnis für alle Plattformen.',
         ],
       },
     },
@@ -1007,7 +1007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Análisis de Stable Diffusion (2026)](/es/power-local-llm/stable-diffusion-review) — la familia de modelos abiertos subyacente que ejecutan InvokeAI, ComfyUI y AUTOMATIC1111.',
           '[Generación local de imágenes con IA frente a la nube](/es/power-local-llm/local-ai-image-generation-vs-cloud) — comparación de herramientas locales de imagen frente a servicios en la nube como Midjourney y Adobe Firefly.',
-          '[Directorio de software de LLM local 2026](/es/power-local-llm/local-llm-software-directory) — directorio completo de apps y herramientas para todas las plataformas.',
+          '[Directorio de software de LLM local 2026](/es/directory) — directorio completo de apps y herramientas para todas las plataformas.',
         ],
       },
     },
@@ -1333,7 +1333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Test de Stable Diffusion (2026)](/fr/power-local-llm/stable-diffusion-review) — la famille de modèles ouverts sous-jacente qu\'exécutent InvokeAI, ComfyUI et AUTOMATIC1111.',
           '[Génération locale d\'images IA vs. cloud](/fr/power-local-llm/local-ai-image-generation-vs-cloud) — comparaison des outils d\'image locaux avec des services cloud comme Midjourney et Adobe Firefly.',
-          '[Annuaire des logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — annuaire complet d\'applications et d\'outils pour toutes les plateformes.',
+          '[Annuaire des logiciels LLM locaux 2026](/fr/directory) — annuaire complet d\'applications et d\'outils pour toutes les plateformes.',
         ],
       },
     },
@@ -1659,7 +1659,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusionレビュー(2026)](/ja/power-local-llm/stable-diffusion-review) — InvokeAI、ComfyUI、AUTOMATIC1111がすべて実行する基盤となるオープンウェイトモデルファミリー。',
           '[ローカルAI画像生成 vs. クラウド](/ja/power-local-llm/local-ai-image-generation-vs-cloud) — MidjourneyやAdobe Fireflyなどのクラウドサービスとローカル画像ツールの比較。',
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — 全プラットフォーム対応の包括的なアプリ・ツールディレクトリ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — 全プラットフォーム対応の包括的なアプリ・ツールディレクトリ。',
         ],
       },
     },
@@ -1985,7 +1985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Análise do Stable Diffusion (2026)](/pt/power-local-llm/stable-diffusion-review) — a família de modelos abertos subjacente que InvokeAI, ComfyUI e AUTOMATIC1111 executam.',
           '[Geração local de imagens por IA vs. nuvem](/pt/power-local-llm/local-ai-image-generation-vs-cloud) — comparação de ferramentas locais de imagem com serviços em nuvem como Midjourney e Adobe Firefly.',
-          '[Diretório de software de LLM local 2026](/pt/power-local-llm/local-llm-software-directory) — diretório completo de apps e ferramentas para todas as plataformas.',
+          '[Diretório de software de LLM local 2026](/pt/directory) — diretório completo de apps e ferramentas para todas as plataformas.',
         ],
       },
     },
@@ -2311,7 +2311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[مراجعة Stable Diffusion (2026)](/ar/power-local-llm/stable-diffusion-review) — عائلة النماذج المفتوحة الأساسية التي تشغّلها InvokeAI وComfyUI وAUTOMATIC1111.',
           '[توليد الصور بالذكاء الاصطناعي محلياً مقابل السحابة](/ar/power-local-llm/local-ai-image-generation-vs-cloud) — مقارنة أدوات الصور المحلية بخدمات سحابية مثل Midjourney وAdobe Firefly.',
-          '[دليل برمجيات LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — دليل شامل للتطبيقات والأدوات على جميع المنصات.',
+          '[دليل برمجيات LLM المحلية 2026](/ar/directory) — دليل شامل للتطبيقات والأدوات على جميع المنصات.',
         ],
       },
     },
@@ -2637,7 +2637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion评测(2026)](/zh/power-local-llm/stable-diffusion-review)——InvokeAI、ComfyUI和AUTOMATIC1111共同运行的底层开放权重模型系列。',
           '[本地AI图像生成与云端对比](/zh/power-local-llm/local-ai-image-generation-vs-cloud)——本地图像工具与Midjourney、Adobe Firefly等云端服务的比较。',
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory)——覆盖所有平台的全面应用与工具目录。',
+          '[本地LLM软件目录2026](/zh/directory)——覆盖所有平台的全面应用与工具目录。',
         ],
       },
     },
@@ -2963,7 +2963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Stable Diffusion 리뷰(2026)](/ko/power-local-llm/stable-diffusion-review) — InvokeAI, ComfyUI, AUTOMATIC1111이 모두 실행하는 기본 오픈 웨이트 모델 계열.',
           '[로컬 AI 이미지 생성 대 클라우드](/ko/power-local-llm/local-ai-image-generation-vs-cloud) — Midjourney, Adobe Firefly 같은 클라우드 서비스와 로컬 이미지 도구의 비교.',
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 모든 플랫폼을 아우르는 종합 앱 및 도구 디렉터리.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 모든 플랫폼을 아우르는 종합 앱 및 도구 디렉터리.',
         ],
       },
     },

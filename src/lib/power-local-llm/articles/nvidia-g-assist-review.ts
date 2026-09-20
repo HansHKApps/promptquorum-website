@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'NVIDIA Project G-Assist',
     title: 'NVIDIA Project G-Assist Review 2026: On-Device RTX AI Assistant, Requirements, and Setup',
     seoTitle: 'NVIDIA G-Assist Review 2026: RTX AI Assistant Setup',
-    intro: 'NVIDIA Project G-Assist ([nvidia.com/en-us/software/nvidia-app/g-assist](https://www.nvidia.com/en-us/software/nvidia-app/g-assist/)) is an on-device AI assistant for GeForce RTX PCs, built into the [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/) rather than sold as a separate download. It runs a small language model locally on a supported RTX GPU to answer questions, tune game and system settings, monitor performance, and control compatible peripherals, without sending those requests to the cloud. This review is the deep-dive companion to G-Assist\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory), covering exactly what G-Assist does, its GPU and driver requirements, how to install and enable it, what is and is not open source, and how it compares to other on-device personal AI assistants.',
+    intro: 'NVIDIA Project G-Assist ([nvidia.com/en-us/software/nvidia-app/g-assist](https://www.nvidia.com/en-us/software/nvidia-app/g-assist/)) is an on-device AI assistant for GeForce RTX PCs, built into the [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/) rather than sold as a separate download. It runs a small language model locally on a supported RTX GPU to answer questions, tune game and system settings, monitor performance, and control compatible peripherals, without sending those requests to the cloud. This review is the deep-dive companion to G-Assist\'s entry in the [Local LLM Software Directory](/directory), covering exactly what G-Assist does, its GPU and driver requirements, how to install and enable it, what is and is not open source, and how it compares to other on-device personal AI assistants.',
     metaDescription: 'NVIDIA Project G-Assist runs an on-device AI model on RTX GPUs to tune games and monitor systems. Verified GPU/driver requirements, setup steps, and open-source status for 2026.',
     readTime: '11 min read',
     targetKeywords: [
@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Activated with the Alt+G shortcut once installed; voice commands require an RTX 30-series GPU or newer',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to G-Assist\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how G-Assist compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to G-Assist\'s entry in the [Local LLM Software Directory](/directory) — see that page for how G-Assist compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -192,7 +192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'g-assist-competitors',
         title: 'G-Assist vs. Other On-Device Personal AI Assistants',
-        content: 'G-Assist sits in a narrow niche — a GPU-vendor-specific, on-device tuning assistant — but it is still worth comparing against broader on-device personal assistants and the closest cloud-based alternative. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full personal-assistants category.',
+        content: 'G-Assist sits in a narrow niche — a GPU-vendor-specific, on-device tuning assistant — but it is still worth comparing against broader on-device personal assistants and the closest cloud-based alternative. See the [Local LLM Software Directory](/directory) for the full personal-assistants category.',
         items: [
           '**[Windows Copilot for Gaming](https://www.windowscentral.com/artificial-intelligence/copilot-for-gaming-vs-nvidia-project-g-assist)** — Microsoft\'s cloud-backed assistant built into Windows\' Game Bar; unlike G-Assist, its core processing happens in Microsoft\'s cloud rather than on your own GPU, and it is not tied to a specific GPU vendor. See [Windows Central\'s hands-on comparison](https://www.windowscentral.com/artificial-intelligence/copilot-for-gaming-vs-nvidia-project-g-assist) of both tools.',
           '**[Voxa](/power-local-llm/voxa-review)** — a local-first desktop voice assistant with optional cloud voice, covering a broader "ask your PC things" use case rather than GPU/game-specific tuning; see the full [Voxa review](/power-local-llm/voxa-review).',
@@ -283,7 +283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including G-Assist\'s directory entry alongside other personal assistants covered above.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including G-Assist\'s directory entry alongside other personal assistants covered above.',
           '[Voxa Review](/power-local-llm/voxa-review) — a local-first desktop voice assistant with optional cloud voice, for a broader cross-platform "ask your PC things" comparison.',
           '[Jarvis Review](/power-local-llm/jarvis-mac-review) — a Mac-focused voice assistant, useful if you split time between an RTX PC and a Mac.',
           '[Atomic Bot Review](/power-local-llm/atomic-bot-review) — a desktop/cloud AI coworker app aimed at broader task automation.',
@@ -303,7 +303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'NVIDIA Project G-Assist',
     title: 'NVIDIA Project G-Assist Review 2026: On-Device-RTX-KI-Assistent, Voraussetzungen und Einrichtung',
     seoTitle: 'NVIDIA G-Assist Review 2026: RTX-KI-Assistent einrichten',
-    intro: 'NVIDIA Project G-Assist ([nvidia.com/en-us/software/nvidia-app/g-assist](https://www.nvidia.com/en-us/software/nvidia-app/g-assist/)) ist ein lokal auf dem Gerät laufender KI-Assistent für GeForce-RTX-PCs, der in die [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/) integriert ist und nicht als separater Download angeboten wird. Er führt ein kleines Sprachmodell lokal auf einer unterstützten RTX-GPU aus, um Fragen zu beantworten, Spiel- und Systemeinstellungen anzupassen, die Leistung zu überwachen und kompatible Peripheriegeräte zu steuern — ohne diese Anfragen in die Cloud zu senden. Diese Review ist das vertiefende Begleitstück zu G-Assists Eintrag im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) und behandelt genau, was G-Assist kann, welche GPU- und Treiberanforderungen gelten, wie man es installiert und aktiviert, was daran quelloffen ist und was nicht, sowie wie es im Vergleich zu anderen lokalen persönlichen KI-Assistenten abschneidet.',
+    intro: 'NVIDIA Project G-Assist ([nvidia.com/en-us/software/nvidia-app/g-assist](https://www.nvidia.com/en-us/software/nvidia-app/g-assist/)) ist ein lokal auf dem Gerät laufender KI-Assistent für GeForce-RTX-PCs, der in die [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/) integriert ist und nicht als separater Download angeboten wird. Er führt ein kleines Sprachmodell lokal auf einer unterstützten RTX-GPU aus, um Fragen zu beantworten, Spiel- und Systemeinstellungen anzupassen, die Leistung zu überwachen und kompatible Peripheriegeräte zu steuern — ohne diese Anfragen in die Cloud zu senden. Diese Review ist das vertiefende Begleitstück zu G-Assists Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) und behandelt genau, was G-Assist kann, welche GPU- und Treiberanforderungen gelten, wie man es installiert und aktiviert, was daran quelloffen ist und was nicht, sowie wie es im Vergleich zu anderen lokalen persönlichen KI-Assistenten abschneidet.',
     metaDescription: 'NVIDIA Project G-Assist führt ein lokales KI-Modell auf RTX-GPUs aus, um Spiele anzupassen und Systeme zu überwachen. Geprüfte GPU-/Treiberanforderungen, Einrichtung und Open-Source-Status für 2026.',
     readTime: '11 Min. Lesezeit',
     targetKeywords: [
@@ -362,7 +362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Wird nach der Installation mit der Tastenkombination Alt+G aktiviert; Sprachbefehle erfordern eine RTX-30-Serie-GPU oder neuer',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu G-Assists Eintrag im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie G-Assist im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu G-Assists Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie G-Assist im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -481,7 +481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'g-assist-competitors',
         title: 'G-Assist vs. andere lokale persönliche KI-Assistenten',
-        content: 'G-Assist besetzt eine enge Nische — einen herstellerspezifischen, lokal laufenden Anpassungs-Assistenten für eine bestimmte GPU-Marke —, lohnt sich aber dennoch mit breiteren lokalen persönlichen Assistenten und der nächstliegenden cloud-basierten Alternative zu vergleichen. Die vollständige Kategorie persönlicher Assistenten finden Sie im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory).',
+        content: 'G-Assist besetzt eine enge Nische — einen herstellerspezifischen, lokal laufenden Anpassungs-Assistenten für eine bestimmte GPU-Marke —, lohnt sich aber dennoch mit breiteren lokalen persönlichen Assistenten und der nächstliegenden cloud-basierten Alternative zu vergleichen. Die vollständige Kategorie persönlicher Assistenten finden Sie im [lokalen KI-Software-Verzeichnis](/de/directory).',
         items: [
           '**[Windows Copilot for Gaming](https://www.windowscentral.com/artificial-intelligence/copilot-for-gaming-vs-nvidia-project-g-assist)** — Microsofts Cloud-basierter Assistent, integriert in die Windows-Game-Bar; anders als G-Assist läuft seine Kernverarbeitung in Microsofts Cloud statt auf Ihrer eigenen GPU, und er ist nicht an einen bestimmten GPU-Hersteller gebunden. Siehe [Windows Centrals praktischen Vergleich](https://www.windowscentral.com/artificial-intelligence/copilot-for-gaming-vs-nvidia-project-g-assist) beider Tools.',
           '**[Voxa](/de/power-local-llm/voxa-review)** — ein lokal-first Desktop-Sprachassistent mit optionaler Cloud-Stimme, der einen breiteren "Frag deinen PC alles"-Anwendungsfall abdeckt statt GPU-/spielspezifischer Anpassung; siehe die vollständige [Voxa-Review](/de/power-local-llm/voxa-review).',
@@ -572,7 +572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Lokales KI-Software-Verzeichnis 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich G-Assists Verzeichniseintrag neben anderen oben behandelten persönlichen Assistenten.',
+          '[Lokales KI-Software-Verzeichnis 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich G-Assists Verzeichniseintrag neben anderen oben behandelten persönlichen Assistenten.',
           '[Voxa Review](/de/power-local-llm/voxa-review) — ein lokal-first Desktop-Sprachassistent mit optionaler Cloud-Stimme, für einen breiteren plattformübergreifenden "Frag deinen PC alles"-Vergleich.',
           '[Jarvis Review](/de/power-local-llm/jarvis-mac-review) — ein Mac-fokussierter Sprachassistent, nützlich, wenn Sie sich zwischen einem RTX-PC und einem Mac aufteilen.',
           '[Atomic Bot Review](/de/power-local-llm/atomic-bot-review) — eine Desktop-/Cloud-KI-Kollegen-App, die auf breitere Aufgabenautomatisierung abzielt.',
@@ -592,7 +592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'NVIDIA Project G-Assist',
     title: 'NVIDIA Project G-Assist : Avis 2026 sur l\'assistant IA RTX embarqué, prérequis et installation',
     seoTitle: 'NVIDIA G-Assist Avis 2026 : Installer l\'assistant IA RTX',
-    intro: 'NVIDIA Project G-Assist ([nvidia.com/en-us/software/nvidia-app/g-assist](https://www.nvidia.com/en-us/software/nvidia-app/g-assist/)) est un assistant IA fonctionnant sur l\'appareil pour les PC GeForce RTX, intégré à la [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/) plutôt que vendu comme un téléchargement séparé. Il exécute un petit modèle de langage localement sur un GPU RTX pris en charge pour répondre aux questions, ajuster les paramètres de jeu et système, surveiller les performances et contrôler des périphériques compatibles, sans envoyer ces requêtes vers le cloud. Cet avis est le complément approfondi de la fiche de G-Assist dans le [Répertoire de logiciels IA locaux](/fr/power-local-llm/local-llm-software-directory), couvrant exactement ce que fait G-Assist, ses exigences GPU et pilote, comment l\'installer et l\'activer, ce qui est et n\'est pas open source, et comment il se compare à d\'autres assistants IA personnels fonctionnant sur l\'appareil.',
+    intro: 'NVIDIA Project G-Assist ([nvidia.com/en-us/software/nvidia-app/g-assist](https://www.nvidia.com/en-us/software/nvidia-app/g-assist/)) est un assistant IA fonctionnant sur l\'appareil pour les PC GeForce RTX, intégré à la [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/) plutôt que vendu comme un téléchargement séparé. Il exécute un petit modèle de langage localement sur un GPU RTX pris en charge pour répondre aux questions, ajuster les paramètres de jeu et système, surveiller les performances et contrôler des périphériques compatibles, sans envoyer ces requêtes vers le cloud. Cet avis est le complément approfondi de la fiche de G-Assist dans le [Répertoire de logiciels IA locaux](/fr/directory), couvrant exactement ce que fait G-Assist, ses exigences GPU et pilote, comment l\'installer et l\'activer, ce qui est et n\'est pas open source, et comment il se compare à d\'autres assistants IA personnels fonctionnant sur l\'appareil.',
     metaDescription: 'NVIDIA Project G-Assist exécute un modèle IA embarqué sur les GPU RTX pour ajuster les jeux et surveiller les systèmes. Exigences GPU/pilote, installation et statut open source vérifiés pour 2026.',
     readTime: '11 min de lecture',
     targetKeywords: [
@@ -651,7 +651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Activé avec le raccourci Alt+G une fois installé ; les commandes vocales nécessitent un GPU RTX série 30 ou plus récent',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de G-Assist dans le [Répertoire de logiciels IA locaux](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment G-Assist se compare en un coup d\'œil à des dizaines d\'autres outils IA locaux.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de G-Assist dans le [Répertoire de logiciels IA locaux](/fr/directory) — consultez cette page pour voir comment G-Assist se compare en un coup d\'œil à des dizaines d\'autres outils IA locaux.' },
         ],
       },
       overview: {
@@ -770,7 +770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'g-assist-competitors',
         title: 'G-Assist face à d\'autres assistants IA personnels embarqués',
-        content: 'G-Assist occupe une niche étroite — un assistant d\'ajustement embarqué spécifique à un fabricant de GPU — mais il reste utile de le comparer à des assistants personnels embarqués plus généraux et à l\'alternative cloud la plus proche. Consultez le [Répertoire de logiciels IA locaux](/fr/power-local-llm/local-llm-software-directory) pour la catégorie complète des assistants personnels.',
+        content: 'G-Assist occupe une niche étroite — un assistant d\'ajustement embarqué spécifique à un fabricant de GPU — mais il reste utile de le comparer à des assistants personnels embarqués plus généraux et à l\'alternative cloud la plus proche. Consultez le [Répertoire de logiciels IA locaux](/fr/directory) pour la catégorie complète des assistants personnels.',
         items: [
           '**[Windows Copilot for Gaming](https://www.windowscentral.com/artificial-intelligence/copilot-for-gaming-vs-nvidia-project-g-assist)** — l\'assistant de Microsoft appuyé sur le cloud, intégré à la Game Bar de Windows ; contrairement à G-Assist, son traitement principal s\'effectue dans le cloud de Microsoft plutôt que sur votre propre GPU, et il n\'est lié à aucun fabricant de GPU spécifique. Voir la [comparaison pratique de Windows Central](https://www.windowscentral.com/artificial-intelligence/copilot-for-gaming-vs-nvidia-project-g-assist) des deux outils.',
           '**[Voxa](/fr/power-local-llm/voxa-review)** — un assistant vocal de bureau local en priorité avec voix cloud optionnelle, couvrant un cas d\'usage plus large de « demander tout à son PC » plutôt qu\'un ajustement spécifique GPU/jeu ; voir l\'[avis complet sur Voxa](/fr/power-local-llm/voxa-review).',
@@ -861,7 +861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire de logiciels IA locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant la fiche de G-Assist aux côtés d\'autres assistants personnels traités ci-dessus.',
+          '[Répertoire de logiciels IA locaux 2026](/fr/directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant la fiche de G-Assist aux côtés d\'autres assistants personnels traités ci-dessus.',
           '[Avis sur Voxa](/fr/power-local-llm/voxa-review) — un assistant vocal de bureau local en priorité avec voix cloud optionnelle, pour une comparaison multiplateforme plus large de « demander tout à son PC ».',
           '[Avis sur Jarvis](/fr/power-local-llm/jarvis-mac-review) — un assistant vocal axé sur Mac, utile si vous partagez votre temps entre un PC RTX et un Mac.',
           '[Avis sur Atomic Bot](/fr/power-local-llm/atomic-bot-review) — une application « collègue » IA de bureau/cloud visant une automatisation de tâches plus large.',
@@ -881,7 +881,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'NVIDIA Project G-Assist',
     title: 'NVIDIA Project G-Assist: Análisis 2026 del asistente de IA RTX en el dispositivo, requisitos e instalación',
     seoTitle: 'NVIDIA G-Assist 2026: Configurar el asistente de IA RTX',
-    intro: 'NVIDIA Project G-Assist ([nvidia.com/en-us/software/nvidia-app/g-assist](https://www.nvidia.com/en-us/software/nvidia-app/g-assist/)) es un asistente de IA que funciona en el dispositivo para PC GeForce RTX, integrado en la [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/) en lugar de venderse como una descarga independiente. Ejecuta un modelo de lenguaje pequeño localmente en una GPU RTX compatible para responder preguntas, ajustar configuraciones de juegos y del sistema, monitorear el rendimiento y controlar periféricos compatibles, sin enviar esas solicitudes a la nube. Este análisis es el complemento detallado de la ficha de G-Assist en el [Directorio de software de IA local](/es/power-local-llm/local-llm-software-directory), y cubre exactamente qué hace G-Assist, sus requisitos de GPU y controlador, cómo instalarlo y activarlo, qué es y qué no es de código abierto, y cómo se compara con otros asistentes personales de IA en el dispositivo.',
+    intro: 'NVIDIA Project G-Assist ([nvidia.com/en-us/software/nvidia-app/g-assist](https://www.nvidia.com/en-us/software/nvidia-app/g-assist/)) es un asistente de IA que funciona en el dispositivo para PC GeForce RTX, integrado en la [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/) en lugar de venderse como una descarga independiente. Ejecuta un modelo de lenguaje pequeño localmente en una GPU RTX compatible para responder preguntas, ajustar configuraciones de juegos y del sistema, monitorear el rendimiento y controlar periféricos compatibles, sin enviar esas solicitudes a la nube. Este análisis es el complemento detallado de la ficha de G-Assist en el [Directorio de software de IA local](/es/directory), y cubre exactamente qué hace G-Assist, sus requisitos de GPU y controlador, cómo instalarlo y activarlo, qué es y qué no es de código abierto, y cómo se compara con otros asistentes personales de IA en el dispositivo.',
     metaDescription: 'NVIDIA Project G-Assist ejecuta un modelo de IA en el dispositivo en GPU RTX para ajustar juegos y monitorear sistemas. Requisitos de GPU/controlador, instalación y estado de código abierto verificados para 2026.',
     readTime: '11 min de lectura',
     targetKeywords: [
@@ -940,7 +940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Se activa con el atajo Alt+G una vez instalado; los comandos de voz requieren una GPU RTX serie 30 o posterior',
         ],
         callouts: [
-          { type: 'note', text: 'Este análisis es el complemento detallado de la ficha de G-Assist en el [Directorio de software de IA local](/es/power-local-llm/local-llm-software-directory); consulta esa página para ver de un vistazo cómo se compara G-Assist con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Este análisis es el complemento detallado de la ficha de G-Assist en el [Directorio de software de IA local](/es/directory); consulta esa página para ver de un vistazo cómo se compara G-Assist con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1059,7 +1059,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'g-assist-competitors',
         title: 'G-Assist frente a otros asistentes personales de IA en el dispositivo',
-        content: 'G-Assist ocupa un nicho estrecho: un asistente de ajuste en el dispositivo específico de un fabricante de GPU, pero aun así vale la pena compararlo con asistentes personales en el dispositivo más amplios y con la alternativa basada en la nube más cercana. Consulta el [Directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) para la categoría completa de asistentes personales.',
+        content: 'G-Assist ocupa un nicho estrecho: un asistente de ajuste en el dispositivo específico de un fabricante de GPU, pero aun así vale la pena compararlo con asistentes personales en el dispositivo más amplios y con la alternativa basada en la nube más cercana. Consulta el [Directorio de software de IA local](/es/directory) para la categoría completa de asistentes personales.',
         items: [
           '**[Windows Copilot for Gaming](https://www.windowscentral.com/artificial-intelligence/copilot-for-gaming-vs-nvidia-project-g-assist)** — el asistente de Microsoft respaldado por la nube, integrado en la Game Bar de Windows; a diferencia de G-Assist, su procesamiento principal ocurre en la nube de Microsoft en lugar de en tu propia GPU, y no está vinculado a ningún fabricante de GPU específico. Consulta la [comparación práctica de Windows Central](https://www.windowscentral.com/artificial-intelligence/copilot-for-gaming-vs-nvidia-project-g-assist) de ambas herramientas.',
           '**[Voxa](/es/power-local-llm/voxa-review)** — un asistente de voz de escritorio local en primer lugar con voz en la nube opcional, que cubre un caso de uso más amplio de "pregúntale a tu PC cualquier cosa" en lugar de un ajuste específico de GPU/juego; consulta el [análisis completo de Voxa](/es/power-local-llm/voxa-review).',
@@ -1150,7 +1150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de IA local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de G-Assist junto a otros asistentes personales mencionados arriba.',
+          '[Directorio de software de IA local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de G-Assist junto a otros asistentes personales mencionados arriba.',
           '[Análisis de Voxa](/es/power-local-llm/voxa-review) — un asistente de voz de escritorio local en primer lugar con voz en la nube opcional, para una comparación multiplataforma más amplia de "pregúntale a tu PC cualquier cosa".',
           '[Análisis de Jarvis](/es/power-local-llm/jarvis-mac-review) — un asistente de voz enfocado en Mac, útil si divides tu tiempo entre un PC con RTX y una Mac.',
           '[Análisis de Atomic Bot](/es/power-local-llm/atomic-bot-review) — una aplicación "compañero de trabajo" de IA de escritorio/nube orientada a una automatización de tareas más amplia.',
@@ -1170,7 +1170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'NVIDIA Project G-Assist',
     title: 'NVIDIA Project G-Assist: Análise 2026 do assistente de IA RTX no dispositivo, requisitos e instalação',
     seoTitle: 'NVIDIA G-Assist 2026: Configurar o assistente de IA RTX',
-    intro: 'O NVIDIA Project G-Assist ([nvidia.com/en-us/software/nvidia-app/g-assist](https://www.nvidia.com/en-us/software/nvidia-app/g-assist/)) é um assistente de IA que roda no dispositivo para PCs GeForce RTX, integrado ao [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/) em vez de vendido como um download separado. Ele executa um modelo de linguagem pequeno localmente em uma GPU RTX compatível para responder perguntas, ajustar configurações de jogos e do sistema, monitorar o desempenho e controlar periféricos compatíveis, sem enviar essas solicitações para a nuvem. Esta análise é o complemento aprofundado da ficha do G-Assist no [Diretório de Software de IA Local](/pt/power-local-llm/local-llm-software-directory), cobrindo exatamente o que o G-Assist faz, seus requisitos de GPU e driver, como instalá-lo e ativá-lo, o que é e o que não é código aberto, e como ele se compara a outros assistentes pessoais de IA no dispositivo.',
+    intro: 'O NVIDIA Project G-Assist ([nvidia.com/en-us/software/nvidia-app/g-assist](https://www.nvidia.com/en-us/software/nvidia-app/g-assist/)) é um assistente de IA que roda no dispositivo para PCs GeForce RTX, integrado ao [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/) em vez de vendido como um download separado. Ele executa um modelo de linguagem pequeno localmente em uma GPU RTX compatível para responder perguntas, ajustar configurações de jogos e do sistema, monitorar o desempenho e controlar periféricos compatíveis, sem enviar essas solicitações para a nuvem. Esta análise é o complemento aprofundado da ficha do G-Assist no [Diretório de Software de IA Local](/pt/directory), cobrindo exatamente o que o G-Assist faz, seus requisitos de GPU e driver, como instalá-lo e ativá-lo, o que é e o que não é código aberto, e como ele se compara a outros assistentes pessoais de IA no dispositivo.',
     metaDescription: 'O NVIDIA Project G-Assist executa um modelo de IA no dispositivo em GPUs RTX para ajustar jogos e monitorar sistemas. Requisitos de GPU/driver, instalação e status de código aberto verificados para 2026.',
     readTime: '11 min de leitura',
     targetKeywords: [
@@ -1229,7 +1229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ativado com o atalho Alt+G após a instalação; comandos de voz exigem uma GPU RTX série 30 ou mais recente',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da ficha do G-Assist no [Diretório de Software de IA Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o G-Assist com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da ficha do G-Assist no [Diretório de Software de IA Local](/pt/directory) — veja essa página para comparar rapidamente o G-Assist com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1348,7 +1348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'g-assist-competitors',
         title: 'G-Assist vs. outros assistentes pessoais de IA no dispositivo',
-        content: 'O G-Assist ocupa um nicho estreito — um assistente de ajuste no dispositivo específico de um fabricante de GPU —, mas ainda vale a pena compará-lo com assistentes pessoais no dispositivo mais amplos e com a alternativa baseada em nuvem mais próxima. Veja o [Diretório de Software de IA Local](/pt/power-local-llm/local-llm-software-directory) para a categoria completa de assistentes pessoais.',
+        content: 'O G-Assist ocupa um nicho estreito — um assistente de ajuste no dispositivo específico de um fabricante de GPU —, mas ainda vale a pena compará-lo com assistentes pessoais no dispositivo mais amplos e com a alternativa baseada em nuvem mais próxima. Veja o [Diretório de Software de IA Local](/pt/directory) para a categoria completa de assistentes pessoais.',
         items: [
           '**[Windows Copilot for Gaming](https://www.windowscentral.com/artificial-intelligence/copilot-for-gaming-vs-nvidia-project-g-assist)** — o assistente da Microsoft apoiado em nuvem, integrado à Game Bar do Windows; ao contrário do G-Assist, seu processamento principal ocorre na nuvem da Microsoft em vez de na sua própria GPU, e não está vinculado a nenhum fabricante de GPU específico. Veja a [comparação prática da Windows Central](https://www.windowscentral.com/artificial-intelligence/copilot-for-gaming-vs-nvidia-project-g-assist) entre as duas ferramentas.',
           '**[Voxa](/pt/power-local-llm/voxa-review)** — um assistente de voz de desktop local em primeiro lugar com voz em nuvem opcional, cobrindo um caso de uso mais amplo de "pergunte qualquer coisa ao seu PC" em vez de ajuste específico de GPU/jogo; veja a [análise completa da Voxa](/pt/power-local-llm/voxa-review).',
@@ -1439,7 +1439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software de IA Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do G-Assist ao lado de outros assistentes pessoais abordados acima.',
+          '[Diretório de Software de IA Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do G-Assist ao lado de outros assistentes pessoais abordados acima.',
           '[Análise da Voxa](/pt/power-local-llm/voxa-review) — um assistente de voz de desktop local em primeiro lugar com voz em nuvem opcional, para uma comparação multiplataforma mais ampla de "pergunte qualquer coisa ao seu PC".',
           '[Análise da Jarvis](/pt/power-local-llm/jarvis-mac-review) — um assistente de voz focado em Mac, útil se você divide o tempo entre um PC com RTX e um Mac.',
           '[Análise da Atomic Bot](/pt/power-local-llm/atomic-bot-review) — um aplicativo "colega de trabalho" de IA de desktop/nuvem voltado para automação de tarefas mais ampla.',
@@ -1459,7 +1459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'NVIDIA Project G-Assist',
     title: 'NVIDIA Project G-Assistレビュー2026：オンデバイスRTX AIアシスタントの要件と設定方法',
     seoTitle: 'NVIDIA G-Assistレビュー2026：RTX AIアシスタントの設定',
-    intro: 'NVIDIA Project G-Assist（[nvidia.com/en-us/software/nvidia-app/g-assist](https://www.nvidia.com/en-us/software/nvidia-app/g-assist/)）は、GeForce RTX PC向けのオンデバイスAIアシスタントで、単独のダウンロード製品としてではなく[NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/)に組み込まれています。対応するRTX GPU上でローカルに小型言語モデルを実行し、質問への回答、ゲームやシステム設定の調整、パフォーマンスの監視、対応周辺機器の制御を、リクエストをクラウドに送信せずに行います。本レビューは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるG-Assistの項目を補完する詳細な解説で、G-Assistが実際に何をするか、GPUおよびドライバー要件、インストールと有効化の方法、何がオープンソースで何がそうでないか、他のオンデバイス型パーソナルAIアシスタントとの比較を扱います。',
+    intro: 'NVIDIA Project G-Assist（[nvidia.com/en-us/software/nvidia-app/g-assist](https://www.nvidia.com/en-us/software/nvidia-app/g-assist/)）は、GeForce RTX PC向けのオンデバイスAIアシスタントで、単独のダウンロード製品としてではなく[NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/)に組み込まれています。対応するRTX GPU上でローカルに小型言語モデルを実行し、質問への回答、ゲームやシステム設定の調整、パフォーマンスの監視、対応周辺機器の制御を、リクエストをクラウドに送信せずに行います。本レビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるG-Assistの項目を補完する詳細な解説で、G-Assistが実際に何をするか、GPUおよびドライバー要件、インストールと有効化の方法、何がオープンソースで何がそうでないか、他のオンデバイス型パーソナルAIアシスタントとの比較を扱います。',
     metaDescription: 'NVIDIA Project G-AssistはRTX GPU上でオンデバイスAIモデルを実行し、ゲームの調整とシステム監視を行います。2026年時点で検証済みのGPU/ドライバー要件、設定手順、オープンソース状況を解説。',
     readTime: '読了時間 約11分',
     targetKeywords: [
@@ -1518,7 +1518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'インストール後はAlt+Gのショートカットで起動。音声コマンドにはRTX 30シリーズ以降のGPUが必要',
         ],
         callouts: [
-          { type: 'note', text: '本レビューは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるG-Assistの項目を補完する詳細な解説です。他の数十のローカルAIツールとG-Assistを一目で比較できます。' },
+          { type: 'note', text: '本レビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるG-Assistの項目を補完する詳細な解説です。他の数十のローカルAIツールとG-Assistを一目で比較できます。' },
         ],
       },
       overview: {
@@ -1637,7 +1637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'g-assist-competitors',
         title: 'G-Assist vs. 他のオンデバイス型パーソナルAIアシスタント',
-        content: 'G-Assistは、特定のGPUベンダーに固有のオンデバイス型調整アシスタントという狭いニッチに位置していますが、より幅広いオンデバイス型パーソナルアシスタントや最も近いクラウドベースの代替との比較にも価値があります。パーソナルアシスタントカテゴリの全体像は[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        content: 'G-Assistは、特定のGPUベンダーに固有のオンデバイス型調整アシスタントという狭いニッチに位置していますが、より幅広いオンデバイス型パーソナルアシスタントや最も近いクラウドベースの代替との比較にも価値があります。パーソナルアシスタントカテゴリの全体像は[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
         items: [
           '**[Windows Copilot for Gaming](https://www.windowscentral.com/artificial-intelligence/copilot-for-gaming-vs-nvidia-project-g-assist)** — WindowsのGame Barに組み込まれた、Microsoftのクラウドベースのアシスタント。G-Assistとは異なり、コア処理は自分のGPU上ではなくMicrosoftのクラウドで行われ、特定のGPUベンダーに縛られない。両ツールの[Windows Centralによる実機比較](https://www.windowscentral.com/artificial-intelligence/copilot-for-gaming-vs-nvidia-project-g-assist)を参照。',
           '**[Voxa](/ja/power-local-llm/voxa-review)** — ローカル優先のデスクトップ音声アシスタントで、クラウド音声をオプションで利用可能。GPU/ゲームに特化した調整というより「PCに何でも聞く」というより幅広いユースケースをカバーする。詳細は[Voxaの全文レビュー](/ja/power-local-llm/voxa-review)を参照。',
@@ -1728,7 +1728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。上記で扱った他のパーソナルアシスタントとともにG-Assistのディレクトリ項目を掲載。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — 本記事が属するローカルAIツールの全カタログ。上記で扱った他のパーソナルアシスタントとともにG-Assistのディレクトリ項目を掲載。',
           '[Voxaレビュー](/ja/power-local-llm/voxa-review) — クラウド音声をオプションで利用できるローカル優先のデスクトップ音声アシスタント。「PCに何でも聞く」というより幅広いクロスプラットフォーム比較のために。',
           '[Jarvisレビュー](/ja/power-local-llm/jarvis-mac-review) — Macに特化した音声アシスタント。RTX PCとMacを使い分けている場合に有用。',
           '[Atomic Botレビュー](/ja/power-local-llm/atomic-bot-review) — より幅広いタスク自動化を目指すデスクトップ/クラウドのAI同僚アプリ。',
@@ -1748,7 +1748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'NVIDIA Project G-Assist',
     title: 'NVIDIA Project G-Assist评测2026：设备端RTX AI助手的要求与设置',
     seoTitle: 'NVIDIA G-Assist评测2026：设置RTX AI助手',
-    intro: 'NVIDIA Project G-Assist（[nvidia.com/en-us/software/nvidia-app/g-assist](https://www.nvidia.com/en-us/software/nvidia-app/g-assist/)）是面向GeForce RTX电脑的设备端AI助手，内置于[NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/)中，而非作为单独下载出售。它在支持的RTX GPU上本地运行一个小型语言模型，用于回答问题、调整游戏和系统设置、监控性能，以及控制兼容外设，而不会将这些请求发送到云端。本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中G-Assist条目的深度补充，详细说明了G-Assist的具体功能、GPU和驱动要求、安装与启用方法、哪些部分是开源、哪些不是，以及它与其他设备端个人AI助手的对比情况。',
+    intro: 'NVIDIA Project G-Assist（[nvidia.com/en-us/software/nvidia-app/g-assist](https://www.nvidia.com/en-us/software/nvidia-app/g-assist/)）是面向GeForce RTX电脑的设备端AI助手，内置于[NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/)中，而非作为单独下载出售。它在支持的RTX GPU上本地运行一个小型语言模型，用于回答问题、调整游戏和系统设置、监控性能，以及控制兼容外设，而不会将这些请求发送到云端。本评测是[本地LLM软件目录](/zh/directory)中G-Assist条目的深度补充，详细说明了G-Assist的具体功能、GPU和驱动要求、安装与启用方法、哪些部分是开源、哪些不是，以及它与其他设备端个人AI助手的对比情况。',
     metaDescription: 'NVIDIA Project G-Assist在RTX GPU上运行设备端AI模型，用于调整游戏和监控系统。2026年经核实的GPU/驱动要求、设置步骤和开源状态。',
     readTime: '预计阅读11分钟',
     targetKeywords: [
@@ -1807,7 +1807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '安装后使用Alt+G快捷键激活；语音命令需要RTX 30系列或更新的GPU',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中G-Assist条目的深度补充——请查看该页面，一览G-Assist与数十种其他本地AI工具的对比情况。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中G-Assist条目的深度补充——请查看该页面，一览G-Assist与数十种其他本地AI工具的对比情况。' },
         ],
       },
       overview: {
@@ -1926,7 +1926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'g-assist-competitors',
         title: 'G-Assist与其他设备端个人AI助手的比较',
-        content: 'G-Assist所处的是一个狭窄的细分领域——一种特定GPU厂商专属的设备端调整助手——但仍值得将其与更广泛的设备端个人助手以及最接近的云端替代方案进行比较。个人助手的完整分类请参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'G-Assist所处的是一个狭窄的细分领域——一种特定GPU厂商专属的设备端调整助手——但仍值得将其与更广泛的设备端个人助手以及最接近的云端替代方案进行比较。个人助手的完整分类请参见[本地LLM软件目录](/zh/directory)。',
         items: [
           '**[Windows Copilot for Gaming](https://www.windowscentral.com/artificial-intelligence/copilot-for-gaming-vs-nvidia-project-g-assist)** —— 微软内置于Windows游戏栏中的云端助手；与G-Assist不同，它的核心处理在微软云端而非您自己的GPU上进行，也不与任何特定GPU厂商绑定。可参见[Windows Central对两款工具的实测对比](https://www.windowscentral.com/artificial-intelligence/copilot-for-gaming-vs-nvidia-project-g-assist)。',
           '**[Voxa](/zh/power-local-llm/voxa-review)** —— 一款本地优先的桌面语音助手，可选云端语音，覆盖的是更广泛的"什么都能问电脑"场景，而非GPU/游戏专属调整；详见[Voxa完整评测](/zh/power-local-llm/voxa-review)。',
@@ -2017,7 +2017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) —— 本文所属的完整本地AI工具目录，其中包含G-Assist的目录条目及上文提到的其他个人助手。',
+          '[本地LLM软件目录2026](/zh/directory) —— 本文所属的完整本地AI工具目录，其中包含G-Assist的目录条目及上文提到的其他个人助手。',
           '[Voxa评测](/zh/power-local-llm/voxa-review) —— 一款本地优先的桌面语音助手，可选云端语音，可用于更广泛的跨平台"什么都能问电脑"对比。',
           '[Jarvis评测](/zh/power-local-llm/jarvis-mac-review) —— 一款专注于Mac的语音助手，如果您同时使用RTX电脑和Mac会很有用。',
           '[Atomic Bot评测](/zh/power-local-llm/atomic-bot-review) —— 一款面向更广泛任务自动化的桌面/云端AI同事应用。',
@@ -2037,7 +2037,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'NVIDIA Project G-Assist',
     title: 'مراجعة NVIDIA Project G-Assist لعام 2026: مساعد ذكاء اصطناعي على الجهاز لبطاقات RTX، المتطلبات، والإعداد',
     seoTitle: 'مراجعة NVIDIA G-Assist 2026: إعداد مساعد RTX الذكي',
-    intro: 'NVIDIA Project G-Assist ([nvidia.com/en-us/software/nvidia-app/g-assist](https://www.nvidia.com/en-us/software/nvidia-app/g-assist/)) هو مساعد ذكاء اصطناعي يعمل على الجهاز مخصص لأجهزة الكمبيوتر المزوّدة بـ GeForce RTX، ومدمج داخل تطبيق [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/) بدلاً من أن يُباع كتنزيل منفصل. يشغّل نموذج لغة صغيرًا محليًا على بطاقة RTX مدعومة للإجابة عن الأسئلة، وضبط إعدادات الألعاب والنظام، ومراقبة الأداء، والتحكم في الأجهزة الطرفية المتوافقة، دون إرسال هذه الطلبات إلى السحابة. هذه المراجعة هي المرافق المُعمّق لإدخال G-Assist في [دليل برمجيات الذكاء الاصطناعي المحلية](/ar/power-local-llm/local-llm-software-directory)، وتغطي بالضبط ما يفعله G-Assist، ومتطلبات بطاقة الرسومات وتعريفها، وكيفية تثبيته وتفعيله، وما هو مفتوح المصدر وما ليس كذلك، وكيف يُقارن بمساعدين شخصيين آخرين للذكاء الاصطناعي يعملون على الجهاز.',
+    intro: 'NVIDIA Project G-Assist ([nvidia.com/en-us/software/nvidia-app/g-assist](https://www.nvidia.com/en-us/software/nvidia-app/g-assist/)) هو مساعد ذكاء اصطناعي يعمل على الجهاز مخصص لأجهزة الكمبيوتر المزوّدة بـ GeForce RTX، ومدمج داخل تطبيق [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/) بدلاً من أن يُباع كتنزيل منفصل. يشغّل نموذج لغة صغيرًا محليًا على بطاقة RTX مدعومة للإجابة عن الأسئلة، وضبط إعدادات الألعاب والنظام، ومراقبة الأداء، والتحكم في الأجهزة الطرفية المتوافقة، دون إرسال هذه الطلبات إلى السحابة. هذه المراجعة هي المرافق المُعمّق لإدخال G-Assist في [دليل برمجيات الذكاء الاصطناعي المحلية](/ar/directory)، وتغطي بالضبط ما يفعله G-Assist، ومتطلبات بطاقة الرسومات وتعريفها، وكيفية تثبيته وتفعيله، وما هو مفتوح المصدر وما ليس كذلك، وكيف يُقارن بمساعدين شخصيين آخرين للذكاء الاصطناعي يعملون على الجهاز.',
     metaDescription: 'يشغّل NVIDIA Project G-Assist نموذج ذكاء اصطناعي على الجهاز على بطاقات RTX لضبط الألعاب ومراقبة الأنظمة. متطلبات بطاقة الرسومات/التعريف، خطوات الإعداد، وحالة المصدر المفتوح موثّقة لعام 2026.',
     readTime: 'وقت القراءة ١١ دقيقة',
     targetKeywords: [
@@ -2096,7 +2096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُفعَّل باختصار Alt+G بعد التثبيت؛ تتطلب الأوامر الصوتية بطاقة من سلسلة RTX 30 أو أحدث',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المُعمّق لإدخال G-Assist في [دليل برمجيات الذكاء الاصطناعي المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يُقارن G-Assist بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المُعمّق لإدخال G-Assist في [دليل برمجيات الذكاء الاصطناعي المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارن G-Assist بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2215,7 +2215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'g-assist-competitors',
         title: 'G-Assist مقابل مساعدين شخصيين آخرين للذكاء الاصطناعي يعملون على الجهاز',
-        content: 'يشغل G-Assist مكانة ضيّقة — مساعد ضبط يعمل على الجهاز وخاص بشركة مصنّعة معيّنة لبطاقات الرسومات — لكن يظل من المفيد مقارنته بمساعدين شخصيين أوسع نطاقًا يعملون على الجهاز، وبأقرب بديل يعتمد على السحابة. راجع [دليل برمجيات الذكاء الاصطناعي المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على فئة المساعدين الشخصيين كاملةً.',
+        content: 'يشغل G-Assist مكانة ضيّقة — مساعد ضبط يعمل على الجهاز وخاص بشركة مصنّعة معيّنة لبطاقات الرسومات — لكن يظل من المفيد مقارنته بمساعدين شخصيين أوسع نطاقًا يعملون على الجهاز، وبأقرب بديل يعتمد على السحابة. راجع [دليل برمجيات الذكاء الاصطناعي المحلية](/ar/directory) للاطلاع على فئة المساعدين الشخصيين كاملةً.',
         items: [
           '**[Windows Copilot for Gaming](https://www.windowscentral.com/artificial-intelligence/copilot-for-gaming-vs-nvidia-project-g-assist)** — مساعد مايكروسوفت المعتمد على السحابة والمدمج في شريط الألعاب Game Bar في Windows؛ خلافًا لـG-Assist، تتم معالجته الأساسية في سحابة مايكروسوفت وليس على بطاقة الرسومات الخاصة بك، وهو غير مرتبط بأي شركة مصنّعة معيّنة لبطاقات الرسومات. راجع [المقارنة العملية من Windows Central](https://www.windowscentral.com/artificial-intelligence/copilot-for-gaming-vs-nvidia-project-g-assist) بين الأداتين.',
           '**[Voxa](/ar/power-local-llm/voxa-review)** — مساعد صوتي لسطح المكتب محلي أولاً مع خيار صوت سحابي، يغطي حالة استخدام أوسع نطاقًا وهي "اسأل حاسوبك عن أي شيء" بدلاً من الضبط الخاص ببطاقة الرسومات/الألعاب؛ راجع [مراجعة Voxa الكاملة](/ar/power-local-llm/voxa-review).',
@@ -2306,7 +2306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات الذكاء الاصطناعي المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، ويتضمن إدخال G-Assist إلى جانب مساعدين شخصيين آخرين تمت تغطيتهم أعلاه.',
+          '[دليل برمجيات الذكاء الاصطناعي المحلية 2026](/ar/directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، ويتضمن إدخال G-Assist إلى جانب مساعدين شخصيين آخرين تمت تغطيتهم أعلاه.',
           '[مراجعة Voxa](/ar/power-local-llm/voxa-review) — مساعد صوتي لسطح المكتب محلي أولاً مع خيار صوت سحابي، لمقارنة أوسع عبر منصات متعددة حول "اسأل حاسوبك عن أي شيء".',
           '[مراجعة Jarvis](/ar/power-local-llm/jarvis-mac-review) — مساعد صوتي مخصص لأجهزة Mac، مفيد إذا كنت تقسّم وقتك بين جهاز مزوّد بـRTX وجهاز Mac.',
           '[مراجعة Atomic Bot](/ar/power-local-llm/atomic-bot-review) — تطبيق "زميل عمل" بالذكاء الاصطناعي لسطح المكتب/السحابة يستهدف أتمتة مهام أوسع نطاقًا.',
@@ -2326,7 +2326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'NVIDIA Project G-Assist',
     title: 'NVIDIA Project G-Assist 리뷰 2026: 온디바이스 RTX AI 어시스턴트 요구 사항과 설정',
     seoTitle: 'NVIDIA G-Assist 리뷰 2026: RTX AI 어시스턴트 설정',
-    intro: 'NVIDIA Project G-Assist([nvidia.com/en-us/software/nvidia-app/g-assist](https://www.nvidia.com/en-us/software/nvidia-app/g-assist/))는 GeForce RTX PC를 위한 온디바이스 AI 어시스턴트로, 별도의 다운로드 제품이 아니라 [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/)에 내장되어 있습니다. 지원되는 RTX GPU에서 소형 언어 모델을 로컬로 실행하여 질문에 답하고, 게임 및 시스템 설정을 조정하고, 성능을 모니터링하며, 호환 주변기기를 제어하되, 이러한 요청을 클라우드로 전송하지 않습니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 G-Assist 항목을 보완하는 심층 자료로, G-Assist가 정확히 무엇을 하는지, GPU 및 드라이버 요구 사항, 설치 및 활성화 방법, 무엇이 오픈소스이고 무엇이 아닌지, 그리고 다른 온디바이스 개인용 AI 어시스턴트와 어떻게 비교되는지를 다룹니다.',
+    intro: 'NVIDIA Project G-Assist([nvidia.com/en-us/software/nvidia-app/g-assist](https://www.nvidia.com/en-us/software/nvidia-app/g-assist/))는 GeForce RTX PC를 위한 온디바이스 AI 어시스턴트로, 별도의 다운로드 제품이 아니라 [NVIDIA App](https://www.nvidia.com/en-us/software/nvidia-app/)에 내장되어 있습니다. 지원되는 RTX GPU에서 소형 언어 모델을 로컬로 실행하여 질문에 답하고, 게임 및 시스템 설정을 조정하고, 성능을 모니터링하며, 호환 주변기기를 제어하되, 이러한 요청을 클라우드로 전송하지 않습니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 G-Assist 항목을 보완하는 심층 자료로, G-Assist가 정확히 무엇을 하는지, GPU 및 드라이버 요구 사항, 설치 및 활성화 방법, 무엇이 오픈소스이고 무엇이 아닌지, 그리고 다른 온디바이스 개인용 AI 어시스턴트와 어떻게 비교되는지를 다룹니다.',
     metaDescription: 'NVIDIA Project G-Assist는 RTX GPU에서 온디바이스 AI 모델을 실행해 게임을 조정하고 시스템을 모니터링합니다. 2026년 기준으로 검증된 GPU/드라이버 요구 사항, 설정 단계, 오픈소스 상태를 다룹니다.',
     readTime: '읽는 시간 약 11분',
     targetKeywords: [
@@ -2385,7 +2385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '설치 후 Alt+G 단축키로 활성화되며, 음성 명령에는 RTX 30 시리즈 이상 GPU가 필요합니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 G-Assist 항목을 보완하는 심층 자료입니다 — 수십 개의 다른 로컬 AI 도구와 G-Assist를 한눈에 비교하려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 G-Assist 항목을 보완하는 심층 자료입니다 — 수십 개의 다른 로컬 AI 도구와 G-Assist를 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2504,7 +2504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'g-assist-competitors',
         title: 'G-Assist vs. 다른 온디바이스 개인용 AI 어시스턴트',
-        content: 'G-Assist는 특정 GPU 제조사에 국한된 온디바이스 조정 어시스턴트라는 좁은 틈새 영역을 차지하고 있지만, 더 폭넓은 온디바이스 개인용 어시스턴트 및 가장 가까운 클라우드 기반 대안과 비교해 볼 가치는 여전히 있습니다. 개인용 어시스턴트 전체 카테고리는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        content: 'G-Assist는 특정 GPU 제조사에 국한된 온디바이스 조정 어시스턴트라는 좁은 틈새 영역을 차지하고 있지만, 더 폭넓은 온디바이스 개인용 어시스턴트 및 가장 가까운 클라우드 기반 대안과 비교해 볼 가치는 여전히 있습니다. 개인용 어시스턴트 전체 카테고리는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
         items: [
           '**[Windows Copilot for Gaming](https://www.windowscentral.com/artificial-intelligence/copilot-for-gaming-vs-nvidia-project-g-assist)** — Windows의 게임 바에 내장된 Microsoft의 클라우드 기반 어시스턴트로, G-Assist와 달리 핵심 처리가 여러분의 GPU가 아니라 Microsoft의 클라우드에서 이루어지며 특정 GPU 제조사에 종속되지 않습니다. 두 도구를 비교한 [Windows Central의 실사용 비교](https://www.windowscentral.com/artificial-intelligence/copilot-for-gaming-vs-nvidia-project-g-assist)를 참고하세요.',
           '**[Voxa](/ko/power-local-llm/voxa-review)** — 클라우드 음성을 선택적으로 사용할 수 있는 로컬 우선 데스크톱 음성 어시스턴트로, GPU/게임 전용 조정보다는 "PC에 무엇이든 물어보기"라는 더 폭넓은 사용 사례를 다룹니다. 자세한 내용은 [Voxa 전체 리뷰](/ko/power-local-llm/voxa-review)를 참고하세요.',
@@ -2595,7 +2595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 개인용 어시스턴트와 함께 G-Assist의 디렉터리 항목을 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 개인용 어시스턴트와 함께 G-Assist의 디렉터리 항목을 포함합니다.',
           '[Voxa 리뷰](/ko/power-local-llm/voxa-review) — 클라우드 음성을 선택적으로 사용할 수 있는 로컬 우선 데스크톱 음성 어시스턴트로, "PC에 무엇이든 물어보기"에 대한 더 폭넓은 크로스 플랫폼 비교를 위한 자료입니다.',
           '[Jarvis 리뷰](/ko/power-local-llm/jarvis-mac-review) — Mac에 특화된 음성 어시스턴트로, RTX PC와 Mac을 함께 사용하는 경우 유용합니다.',
           '[Atomic Bot 리뷰](/ko/power-local-llm/atomic-bot-review) — 더 폭넓은 작업 자동화를 목표로 하는 데스크톱/클라우드 AI 동료 앱입니다.',

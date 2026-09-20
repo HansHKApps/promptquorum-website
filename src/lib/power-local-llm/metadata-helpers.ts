@@ -14,7 +14,14 @@ import { ALL_LANGS, toOutputLocale, type Lang } from '@/lib/i18n/constants'
 
 const BASE = 'https://www.promptquorum.com'
 
+// The software directory is served at top-level /directory, not under /power-local-llm.
+export const DIRECTORY_ARTICLE_SLUG = 'local-llm-software-directory'
+export const DIRECTORY_PATH = '/directory'
+
 function pathFor(lang: Lang, slug?: string): string {
+  if (slug === DIRECTORY_ARTICLE_SLUG) {
+    return lang === 'en' ? DIRECTORY_PATH : `/${lang}${DIRECTORY_PATH}`
+  }
   const suffix = slug ? `/${slug}` : ''
   return lang === 'en'
     ? `/power-local-llm${suffix}`

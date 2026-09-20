@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Available on macOS, Linux, and — as a fully official, stable platform since October 2025 — Windows, via a DirectX-based rendering backend',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Zed\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Zed compares at a glance to dozens of other local-AI-capable tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Zed\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Zed compares at a glance to dozens of other local-AI-capable tools.' },
         ],
       },
       overview: {
@@ -206,14 +206,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'zed-competitors',
         title: 'Competitors and Alternatives',
-        content: 'Zed sits in the same segment as several other AI-capable code editors and IDE plugins with local-model support. This review is the deep-dive companion to Zed\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for the full catalog.',
+        content: 'Zed sits in the same segment as several other AI-capable code editors and IDE plugins with local-model support. This review is the deep-dive companion to Zed\'s entry in the [Local LLM Software Directory](/directory) — see that page for the full catalog.',
         items: [
           '**[Continue.dev](https://continue.dev)** — an open-source IDE plugin (VS Code and JetBrains) rather than a standalone editor, with similarly broad local-model provider support; see the [Continue.dev review](/power-local-llm/continue-dev-review).',
           '**[Cline](https://cline.bot)** — a VS Code extension built around an autonomous coding agent, with local-model support through Ollama and LM Studio; see the [Cline review](/power-local-llm/cline-review).',
           '**[Cursor](https://cursor.com)** — a VS Code fork with a closed-source AI layer; see the [Cursor local mode review](/power-local-llm/cursor-local-mode-review) and the [head-to-head comparison](#zed-vs-cursor) above.',
           '**[Windsurf](https://windsurf.com)** — another VS Code-fork-based AI editor competing directly with Cursor and Zed on built-in agent features; see the [Windsurf review](/power-local-llm/windsurf-review).',
         ],
-        note: 'This is not an exhaustive list — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Zed\'s own directory entry and other code-assistant tools such as [Twinny](/power-local-llm/twinny-review).',
+        note: 'This is not an exhaustive list — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Zed\'s own directory entry and other code-assistant tools such as [Twinny](/power-local-llm/twinny-review).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Zed\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Zed\'s directory entry.',
           '[Continue.dev Review](/power-local-llm/continue-dev-review) — an open-source IDE plugin alternative to switching editors entirely.',
           '[Cline Review](/power-local-llm/cline-review) — a VS Code extension built around an autonomous coding agent with local-model support.',
           '[Cursor Local Mode Review](/power-local-llm/cursor-local-mode-review) — a VS Code-fork competitor with a closed-source AI layer.',
@@ -353,7 +353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Verfügbar für macOS, Linux und — seit Oktober 2025 als vollständig offizielle, stabile Plattform — Windows, über ein DirectX-basiertes Rendering-Backend',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zu Zeds Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie den Vergleich zu Dutzenden weiterer lokal-KI-fähiger Tools auf einen Blick.' },
+          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zu Zeds Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie den Vergleich zu Dutzenden weiterer lokal-KI-fähiger Tools auf einen Blick.' },
         ],
       },
       overview: {
@@ -485,14 +485,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'zed-competitors',
         title: 'Konkurrenten und Alternativen',
-        content: 'Zed befindet sich im selben Segment wie mehrere andere KI-fähige Code-Editoren und IDE-Plugins mit lokaler Modellunterstützung. Diese Review ist die vertiefende Ergänzung zu Zeds Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie den vollständigen Katalog.',
+        content: 'Zed befindet sich im selben Segment wie mehrere andere KI-fähige Code-Editoren und IDE-Plugins mit lokaler Modellunterstützung. Diese Review ist die vertiefende Ergänzung zu Zeds Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie den vollständigen Katalog.',
         items: [
           '**[Continue.dev](https://continue.dev)** — ein quelloffenes IDE-Plugin (VS Code und JetBrains) statt eines eigenständigen Editors, mit ähnlich breiter Unterstützung lokaler Modellanbieter; siehe die [Continue.dev-Review](/de/power-local-llm/continue-dev-review).',
           '**[Cline](https://cline.bot)** — eine VS-Code-Erweiterung rund um einen autonomen Coding-Agenten, mit lokaler Modellunterstützung über Ollama und LM Studio; siehe die [Cline-Review](/de/power-local-llm/cline-review).',
           '**[Cursor](https://cursor.com)** — ein VS-Code-Fork mit einer Closed-Source-KI-Schicht; siehe die [Cursor-Local-Mode-Review](/de/power-local-llm/cursor-local-mode-review) und den [direkten Vergleich](#zed-vs-cursor) oben.',
           '**[Windsurf](https://windsurf.com)** — ein weiterer, auf einem VS-Code-Fork basierender KI-Editor, der direkt mit Cursor und Zed bei integrierten Agentenfunktionen konkurriert; siehe die [Windsurf-Review](/de/power-local-llm/windsurf-review).',
         ],
-        note: 'Dies ist keine vollständige Liste — siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Zeds eigenem Directory-Eintrag und weiterer Code-Assistant-Tools wie [Twinny](/de/power-local-llm/twinny-review).',
+        note: 'Dies ist keine vollständige Liste — siehe das [Local LLM Software Directory](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Zeds eigenem Directory-Eintrag und weiterer Code-Assistant-Tools wie [Twinny](/de/power-local-llm/twinny-review).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -551,7 +551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Zeds Directory-Eintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Zeds Directory-Eintrag.',
           '[Continue.dev-Review](/de/power-local-llm/continue-dev-review) — eine quelloffene IDE-Plugin-Alternative, ohne komplett den Editor zu wechseln.',
           '[Cline-Review](/de/power-local-llm/cline-review) — eine VS-Code-Erweiterung rund um einen autonomen Coding-Agenten mit lokaler Modellunterstützung.',
           '[Cursor-Local-Mode-Review](/de/power-local-llm/cursor-local-mode-review) — ein VS-Code-Fork-Konkurrent mit Closed-Source-KI-Schicht.',
@@ -632,7 +632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Disponible sur macOS, Linux et — depuis octobre 2025 en tant que plateforme officielle et stable à part entière — Windows, via un backend de rendu basé sur DirectX',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément détaillé de la fiche de Zed dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer Zed en un coup d\'œil à des dizaines d\'autres outils compatibles IA locale.' },
+          { type: 'note', text: 'Cette review est le complément détaillé de la fiche de Zed dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour comparer Zed en un coup d\'œil à des dizaines d\'autres outils compatibles IA locale.' },
         ],
       },
       overview: {
@@ -764,14 +764,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'zed-competitors',
         title: 'Concurrents et alternatives',
-        content: 'Zed se situe dans le même segment que plusieurs autres éditeurs de code et plugins IDE compatibles IA avec support de modèles locaux. Cette review est le complément détaillé de la fiche de Zed dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour le catalogue complet.',
+        content: 'Zed se situe dans le même segment que plusieurs autres éditeurs de code et plugins IDE compatibles IA avec support de modèles locaux. Cette review est le complément détaillé de la fiche de Zed dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour le catalogue complet.',
         items: [
           '**[Continue.dev](https://continue.dev)** — un plugin IDE open source (VS Code et JetBrains) plutôt qu\'un éditeur autonome, avec un support de fournisseurs de modèles locaux tout aussi large ; voir la [review Continue.dev](/fr/power-local-llm/continue-dev-review).',
           '**[Cline](https://cline.bot)** — une extension VS Code construite autour d\'un agent de codage autonome, avec un support de modèles locaux via Ollama et LM Studio ; voir la [review Cline](/fr/power-local-llm/cline-review).',
           '**[Cursor](https://cursor.com)** — un fork de VS Code avec une couche IA à code source fermé ; voir la [review du mode local de Cursor](/fr/power-local-llm/cursor-local-mode-review) et la [comparaison directe](#zed-vs-cursor) ci-dessus.',
           '**[Windsurf](https://windsurf.com)** — un autre éditeur IA basé sur un fork de VS Code, en concurrence directe avec Cursor et Zed sur les fonctions d\'agent intégrées ; voir la [review Windsurf](/fr/power-local-llm/windsurf-review).',
         ],
-        note: 'Cette liste n\'est pas exhaustive — voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de Zed et d\'autres outils d\'assistance au code comme [Twinny](/fr/power-local-llm/twinny-review).',
+        note: 'Cette liste n\'est pas exhaustive — voir le [Local LLM Software Directory](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de Zed et d\'autres outils d\'assistance au code comme [Twinny](/fr/power-local-llm/twinny-review).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -830,7 +830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils IA locale auquel appartient cet article, incluant la fiche de Zed.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet d\'outils IA locale auquel appartient cet article, incluant la fiche de Zed.',
           '[Review Continue.dev](/fr/power-local-llm/continue-dev-review) — une alternative sous forme de plugin IDE open source, sans changer complètement d\'éditeur.',
           '[Review Cline](/fr/power-local-llm/cline-review) — une extension VS Code construite autour d\'un agent de codage autonome avec support de modèles locaux.',
           '[Review du mode local de Cursor](/fr/power-local-llm/cursor-local-mode-review) — un concurrent fork de VS Code avec une couche IA à code source fermé.',
@@ -911,7 +911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Disponible en macOS, Linux y — desde octubre de 2025 como plataforma oficial y estable — Windows, mediante un backend de renderizado basado en DirectX',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento detallado de la ficha de Zed en el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara Zed de un vistazo con decenas de otras herramientas con capacidad de IA local.' },
+          { type: 'note', text: 'Esta review es el complemento detallado de la ficha de Zed en el [Local LLM Software Directory](/es/directory) — consulta esa página para ver cómo se compara Zed de un vistazo con decenas de otras herramientas con capacidad de IA local.' },
         ],
       },
       overview: {
@@ -1043,14 +1043,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'zed-competitors',
         title: 'Competidores y alternativas',
-        content: 'Zed se sitúa en el mismo segmento que otros editores de código y plugins de IDE con capacidad de IA y soporte de modelos locales. Esta review es el complemento detallado de la ficha de Zed en el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — consulta esa página para el catálogo completo.',
+        content: 'Zed se sitúa en el mismo segmento que otros editores de código y plugins de IDE con capacidad de IA y soporte de modelos locales. Esta review es el complemento detallado de la ficha de Zed en el [Local LLM Software Directory](/es/directory) — consulta esa página para el catálogo completo.',
         items: [
           '**[Continue.dev](https://continue.dev)** — un plugin de IDE de código abierto (VS Code y JetBrains) en lugar de un editor independiente, con un soporte de proveedores de modelos locales igualmente amplio; ver la [review de Continue.dev](/es/power-local-llm/continue-dev-review).',
           '**[Cline](https://cline.bot)** — una extensión de VS Code construida alrededor de un agente de codificación autónomo, con soporte de modelos locales mediante Ollama y LM Studio; ver la [review de Cline](/es/power-local-llm/cline-review).',
           '**[Cursor](https://cursor.com)** — un fork de VS Code con una capa de IA de código fuente cerrado; ver la [review del modo local de Cursor](/es/power-local-llm/cursor-local-mode-review) y la [comparación directa](#zed-vs-cursor) anterior.',
           '**[Windsurf](https://windsurf.com)** — otro editor de IA basado en un fork de VS Code que compite directamente con Cursor y Zed en funciones de agente integradas; ver la [review de Windsurf](/es/power-local-llm/windsurf-review).',
         ],
-        note: 'Esta no es una lista exhaustiva — ver el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluyendo la propia ficha de Zed y otras herramientas de asistencia de código como [Twinny](/es/power-local-llm/twinny-review).',
+        note: 'Esta no es una lista exhaustiva — ver el [Local LLM Software Directory](/es/directory) para el catálogo completo y actualizado regularmente, incluyendo la propia ficha de Zed y otras herramientas de asistencia de código como [Twinny](/es/power-local-llm/twinny-review).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1109,7 +1109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de Zed.',
+          '[Local LLM Software Directory 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de Zed.',
           '[Review de Continue.dev](/es/power-local-llm/continue-dev-review) — una alternativa de plugin de IDE de código abierto sin cambiar completamente de editor.',
           '[Review de Cline](/es/power-local-llm/cline-review) — una extensión de VS Code construida alrededor de un agente de codificación autónomo con soporte de modelos locales.',
           '[Review del modo local de Cursor](/es/power-local-llm/cursor-local-mode-review) — un competidor fork de VS Code con una capa de IA de código fuente cerrado.',
@@ -1190,7 +1190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Disponível para macOS, Linux e — desde outubro de 2025 como plataforma oficial e estável — Windows, via um backend de renderização baseado em DirectX',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Zed no [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar o Zed rapidamente com dezenas de outras ferramentas com IA local.' },
+          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Zed no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar o Zed rapidamente com dezenas de outras ferramentas com IA local.' },
         ],
       },
       overview: {
@@ -1322,14 +1322,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'zed-competitors',
         title: 'Concorrentes e alternativas',
-        content: 'O Zed está no mesmo segmento que vários outros editores de código e plugins de IDE com IA e suporte a modelos locais. Esta review é o complemento aprofundado da entrada do Zed no [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — veja essa página para o catálogo completo.',
+        content: 'O Zed está no mesmo segmento que vários outros editores de código e plugins de IDE com IA e suporte a modelos locais. Esta review é o complemento aprofundado da entrada do Zed no [Local LLM Software Directory](/pt/directory) — veja essa página para o catálogo completo.',
         items: [
           '**[Continue.dev](https://continue.dev)** — um plugin de IDE open source (VS Code e JetBrains) em vez de um editor independente, com suporte a provedores de modelos locais igualmente amplo; veja a [review do Continue.dev](/pt/power-local-llm/continue-dev-review).',
           '**[Cline](https://cline.bot)** — uma extensão do VS Code construída em torno de um agente de codificação autônomo, com suporte a modelos locais via Ollama e LM Studio; veja a [review do Cline](/pt/power-local-llm/cline-review).',
           '**[Cursor](https://cursor.com)** — um fork do VS Code com uma camada de IA de código fechado; veja a [review do modo local do Cursor](/pt/power-local-llm/cursor-local-mode-review) e a [comparação direta](#zed-vs-cursor) acima.',
           '**[Windsurf](https://windsurf.com)** — outro editor de IA baseado em fork do VS Code, competindo diretamente com o Cursor e o Zed em recursos de agente integrados; veja a [review do Windsurf](/pt/power-local-llm/windsurf-review).',
         ],
-        note: 'Esta não é uma lista exaustiva — veja o [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Zed no diretório e outras ferramentas de assistência de código como o [Twinny](/pt/power-local-llm/twinny-review).',
+        note: 'Esta não é uma lista exaustiva — veja o [Local LLM Software Directory](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Zed no diretório e outras ferramentas de assistência de código como o [Twinny](/pt/power-local-llm/twinny-review).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1388,7 +1388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Zed no diretório.',
+          '[Local LLM Software Directory 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Zed no diretório.',
           '[Review do Continue.dev](/pt/power-local-llm/continue-dev-review) — uma alternativa em plugin de IDE open source sem trocar completamente de editor.',
           '[Review do Cline](/pt/power-local-llm/cline-review) — uma extensão do VS Code construída em torno de um agente de codificação autônomo com suporte a modelos locais.',
           '[Review do modo local do Cursor](/pt/power-local-llm/cursor-local-mode-review) — um concorrente fork do VS Code com uma camada de IA de código fechado.',
@@ -1469,7 +1469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'macOS、Linux、そして2025年10月以降は完全に公式かつ安定したプラットフォームとなったWindowsで、DirectXベースのレンダリングバックエンドを通じて利用可能',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)のZedの項目を掘り下げた記事です——他の数十のローカルAI対応ツールとの一覧比較はそのページを参照してください。' },
+          { type: 'note', text: 'このレビューは[Local LLM Software Directory](/ja/directory)のZedの項目を掘り下げた記事です——他の数十のローカルAI対応ツールとの一覧比較はそのページを参照してください。' },
         ],
       },
       overview: {
@@ -1601,14 +1601,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'zed-competitors',
         title: '競合製品と代替手段',
-        content: 'Zedは、ローカルモデル対応を持つ他の複数のAI対応コードエディタやIDEプラグインと同じセグメントに位置します。このレビューは[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)のZedの項目を掘り下げた記事です——完全なカタログはそのページを参照してください。',
+        content: 'Zedは、ローカルモデル対応を持つ他の複数のAI対応コードエディタやIDEプラグインと同じセグメントに位置します。このレビューは[Local LLM Software Directory](/ja/directory)のZedの項目を掘り下げた記事です——完全なカタログはそのページを参照してください。',
         items: [
           '**[Continue.dev](https://continue.dev)** — 単体エディタではなくオープンソースのIDEプラグイン（VS CodeおよびJetBrains）で、同様に幅広いローカルモデルプロバイダーに対応。[Continue.devレビュー](/ja/power-local-llm/continue-dev-review)を参照。',
           '**[Cline](https://cline.bot)** — 自律型コーディングエージェントを中心に構築されたVS Code拡張機能で、OllamaとLM Studio経由のローカルモデル対応あり。[Clineレビュー](/ja/power-local-llm/cline-review)を参照。',
           '**[Cursor](https://cursor.com)** — クローズドソースのAI層を持つVS Codeのフォーク。[Cursorローカルモードレビュー](/ja/power-local-llm/cursor-local-mode-review)と上記の[直接比較](#zed-vs-cursor)を参照。',
           '**[Windsurf](https://windsurf.com)** — 別のVS Codeフォークベースのエージェント機能をめぐって、CursorやZedと直接競合するAIエディタ。[Windsurfレビュー](/ja/power-local-llm/windsurf-review)を参照。',
         ],
-        note: 'これは網羅的なリストではありません——Zed自身のディレクトリ項目や[Twinny](/ja/power-local-llm/twinny-review)などの他のコードアシスタントツールを含む、完全かつ定期的に更新されるカタログについては[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これは網羅的なリストではありません——Zed自身のディレクトリ項目や[Twinny](/ja/power-local-llm/twinny-review)などの他のコードアシスタントツールを含む、完全かつ定期的に更新されるカタログについては[Local LLM Software Directory](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1667,7 +1667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、Zedのディレクトリ項目を含むローカルAIツールの完全カタログ。',
+          '[Local LLM Software Directory 2026](/ja/directory) — この記事が属する、Zedのディレクトリ項目を含むローカルAIツールの完全カタログ。',
           '[Continue.devレビュー](/ja/power-local-llm/continue-dev-review) — エディタを完全に乗り換えずに済む、オープンソースのIDEプラグイン代替手段。',
           '[Clineレビュー](/ja/power-local-llm/cline-review) — 自律型コーディングエージェントを中心に構築された、ローカルモデル対応のVS Code拡張機能。',
           '[Cursorローカルモードレビュー](/ja/power-local-llm/cursor-local-mode-review) — クローズドソースのAI層を持つVS Codeフォーク系の競合製品。',
@@ -1748,7 +1748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '适用于macOS、Linux，以及——自2025年10月起作为完全正式、稳定的平台——通过基于DirectX的渲染后端支持的Windows',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Zed条目的深度补充——该页面可让你一览Zed与数十款其他本地AI工具的对比情况。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Zed条目的深度补充——该页面可让你一览Zed与数十款其他本地AI工具的对比情况。' },
         ],
       },
       overview: {
@@ -1880,14 +1880,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'zed-competitors',
         title: '竞品与替代方案',
-        content: 'Zed与其他多款具备本地模型支持的AI代码编辑器和IDE插件属于同一细分市场。本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Zed条目的深度补充——完整目录请参见该页面。',
+        content: 'Zed与其他多款具备本地模型支持的AI代码编辑器和IDE插件属于同一细分市场。本评测是[本地LLM软件目录](/zh/directory)中Zed条目的深度补充——完整目录请参见该页面。',
         items: [
           '**[Continue.dev](https://continue.dev)** — 一款开源IDE插件（支持VS Code和JetBrains），而非独立编辑器，本地模型提供方支持同样广泛；参见[Continue.dev评测](/zh/power-local-llm/continue-dev-review)。',
           '**[Cline](https://cline.bot)** — 一款围绕自主编码代理构建的VS Code扩展，通过Ollama和LM Studio支持本地模型；参见[Cline评测](/zh/power-local-llm/cline-review)。',
           '**[Cursor](https://cursor.com)** — 一款带有闭源AI层的VS Code分支；参见[Cursor本地模式评测](/zh/power-local-llm/cursor-local-mode-review)以及上方的[正面对比](#zed-vs-cursor)。',
           '**[Windsurf](https://windsurf.com)** — 另一款基于VS Code分支的AI编辑器，在内置代理功能上与Cursor和Zed直接竞争；参见[Windsurf评测](/zh/power-local-llm/windsurf-review)。',
         ],
-        note: '这不是一份详尽的列表——完整且定期更新的目录（包括Zed自己的目录条目以及[Twinny](/zh/power-local-llm/twinny-review)等其他代码辅助工具）请参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这不是一份详尽的列表——完整且定期更新的目录（包括Zed自己的目录条目以及[Twinny](/zh/power-local-llm/twinny-review)等其他代码辅助工具）请参见[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1946,7 +1946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地AI工具目录，包含Zed的目录条目。',
+          '[2026本地LLM软件目录](/zh/directory) — 本文所属的完整本地AI工具目录，包含Zed的目录条目。',
           '[Continue.dev评测](/zh/power-local-llm/continue-dev-review) — 一款开源IDE插件替代方案，无需完全更换编辑器。',
           '[Cline评测](/zh/power-local-llm/cline-review) — 一款围绕自主编码代理构建、支持本地模型的VS Code扩展。',
           '[Cursor本地模式评测](/zh/power-local-llm/cursor-local-mode-review) — 一款带有闭源AI层的VS Code分支竞品。',
@@ -2027,7 +2027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'متوفر على macOS وLinux — ومنذ أكتوبر 2025 كمنصة رسمية ومستقرة بالكامل — على Windows، عبر خلفية عرض قائمة على DirectX',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لإدخال Zed في [دليل برامج LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارَن Zed بلمحة سريعة بعشرات الأدوات الأخرى القادرة على العمل بذكاء اصطناعي محلي.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لإدخال Zed في [دليل برامج LLM المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن Zed بلمحة سريعة بعشرات الأدوات الأخرى القادرة على العمل بذكاء اصطناعي محلي.' },
         ],
       },
       overview: {
@@ -2159,14 +2159,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'zed-competitors',
         title: 'المنافسون والبدائل',
-        content: 'يقع Zed في نفس الفئة مع عدة محررات أكواد وإضافات IDE أخرى مدعومة بالذكاء الاصطناعي وتدعم النماذج المحلية. هذه المراجعة هي المرافق المتعمق لإدخال Zed في [دليل برامج LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة للاطلاع على الكتالوج الكامل.',
+        content: 'يقع Zed في نفس الفئة مع عدة محررات أكواد وإضافات IDE أخرى مدعومة بالذكاء الاصطناعي وتدعم النماذج المحلية. هذه المراجعة هي المرافق المتعمق لإدخال Zed في [دليل برامج LLM المحلية](/ar/directory) — راجع تلك الصفحة للاطلاع على الكتالوج الكامل.',
         items: [
           '**[Continue.dev](https://continue.dev)** — إضافة IDE مفتوحة المصدر (لـ VS Code وJetBrains) بدلاً من محرر مستقل، مع دعم واسع بالمثل لمزوّدي النماذج المحلية؛ راجع [مراجعة Continue.dev](/ar/power-local-llm/continue-dev-review).',
           '**[Cline](https://cline.bot)** — إضافة VS Code مبنية حول وكيل برمجة مستقل، مع دعم نماذج محلية عبر Ollama وLM Studio؛ راجع [مراجعة Cline](/ar/power-local-llm/cline-review).',
           '**[Cursor](https://cursor.com)** — نسخة متفرعة من VS Code بطبقة ذكاء اصطناعي مغلقة المصدر؛ راجع [مراجعة وضع Cursor المحلي](/ar/power-local-llm/cursor-local-mode-review) و[المقارنة المباشرة](#zed-vs-cursor) أعلاه.',
           '**[Windsurf](https://windsurf.com)** — محرر ذكاء اصطناعي آخر مبني على نسخة متفرعة من VS Code، يتنافس مباشرة مع Cursor وZed في ميزات الوكيل المدمجة؛ راجع [مراجعة Windsurf](/ar/power-local-llm/windsurf-review).',
         ],
-        note: 'هذه ليست قائمة شاملة — راجع [دليل برامج LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل والمحدّث بانتظام، بما في ذلك إدخال Zed الخاص في الدليل وأدوات مساعدة الكود الأخرى مثل [Twinny](/ar/power-local-llm/twinny-review).',
+        note: 'هذه ليست قائمة شاملة — راجع [دليل برامج LLM المحلية](/ar/directory) للاطلاع على الكتالوج الكامل والمحدّث بانتظام، بما في ذلك إدخال Zed الخاص في الدليل وأدوات مساعدة الكود الأخرى مثل [Twinny](/ar/power-local-llm/twinny-review).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2225,7 +2225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برامج LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال Zed في الدليل.',
+          '[دليل برامج LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال Zed في الدليل.',
           '[مراجعة Continue.dev](/ar/power-local-llm/continue-dev-review) — بديل على شكل إضافة IDE مفتوحة المصدر دون تغيير المحرر بالكامل.',
           '[مراجعة Cline](/ar/power-local-llm/cline-review) — إضافة VS Code مبنية حول وكيل برمجة مستقل بدعم نماذج محلية.',
           '[مراجعة وضع Cursor المحلي](/ar/power-local-llm/cursor-local-mode-review) — منافس على شكل نسخة متفرعة من VS Code بطبقة ذكاء اصطناعي مغلقة المصدر.',
@@ -2306,7 +2306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'macOS, Linux에서 사용 가능하며, 2025년 10월부터 완전히 공식적이고 안정적인 플랫폼이 된 Windows에서는 DirectX 기반 렌더링 백엔드를 통해 사용 가능',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 실린 Zed 항목을 깊이 있게 다룬 자매 콘텐츠입니다 — 로컬 AI를 지원하는 수십 가지 다른 도구와 Zed를 한눈에 비교하려면 해당 페이지를 참조하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 실린 Zed 항목을 깊이 있게 다룬 자매 콘텐츠입니다 — 로컬 AI를 지원하는 수십 가지 다른 도구와 Zed를 한눈에 비교하려면 해당 페이지를 참조하세요.' },
         ],
       },
       overview: {
@@ -2438,14 +2438,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'zed-competitors',
         title: '경쟁 제품 및 대안',
-        content: 'Zed는 로컬 모델 지원을 갖춘 다른 여러 AI 지원 코드 에디터 및 IDE 플러그인과 같은 영역에 속합니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 실린 Zed 항목을 깊이 있게 다룬 자매 콘텐츠입니다 — 전체 카탈로그는 해당 페이지를 참조하세요.',
+        content: 'Zed는 로컬 모델 지원을 갖춘 다른 여러 AI 지원 코드 에디터 및 IDE 플러그인과 같은 영역에 속합니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 실린 Zed 항목을 깊이 있게 다룬 자매 콘텐츠입니다 — 전체 카탈로그는 해당 페이지를 참조하세요.',
         items: [
           '**[Continue.dev](https://continue.dev)** — 독립형 에디터가 아닌 오픈소스 IDE 플러그인(VS Code 및 JetBrains)으로, 비슷하게 폭넓은 로컬 모델 제공업체 지원을 갖춤. [Continue.dev 리뷰](/ko/power-local-llm/continue-dev-review) 참조.',
           '**[Cline](https://cline.bot)** — 자율 코딩 에이전트를 중심으로 구축된 VS Code 확장 기능으로, Ollama와 LM Studio를 통한 로컬 모델 지원을 갖춤. [Cline 리뷰](/ko/power-local-llm/cline-review) 참조.',
           '**[Cursor](https://cursor.com)** — 비공개 소스 AI 계층을 가진 VS Code 포크. [Cursor 로컬 모드 리뷰](/ko/power-local-llm/cursor-local-mode-review)와 위의 [정면 비교](#zed-vs-cursor) 참조.',
           '**[Windsurf](https://windsurf.com)** — 내장 에이전트 기능을 두고 Cursor 및 Zed와 직접 경쟁하는, 또 다른 VS Code 포크 기반 AI 에디터. [Windsurf 리뷰](/ko/power-local-llm/windsurf-review) 참조.',
         ],
-        note: '이는 전체 목록이 아닙니다 — Zed 자체의 디렉터리 항목과 [Twinny](/ko/power-local-llm/twinny-review) 같은 다른 코드 어시스턴트 도구를 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참조하세요.',
+        note: '이는 전체 목록이 아닙니다 — Zed 자체의 디렉터리 항목과 [Twinny](/ko/power-local-llm/twinny-review) 같은 다른 코드 어시스턴트 도구를 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참조하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2504,7 +2504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — Zed의 디렉터리 항목을 포함해 이 글이 속한 전체 로컬 AI 도구 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — Zed의 디렉터리 항목을 포함해 이 글이 속한 전체 로컬 AI 도구 카탈로그.',
           '[Continue.dev 리뷰](/ko/power-local-llm/continue-dev-review) — 에디터를 완전히 교체하지 않아도 되는 오픈소스 IDE 플러그인 대안.',
           '[Cline 리뷰](/ko/power-local-llm/cline-review) — 자율 코딩 에이전트를 중심으로 구축된, 로컬 모델을 지원하는 VS Code 확장 기능.',
           '[Cursor 로컬 모드 리뷰](/ko/power-local-llm/cursor-local-mode-review) — 비공개 소스 AI 계층을 가진 VS Code 포크 경쟁 제품.',

@@ -117,7 +117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Self-hosting is free forever under the plain MIT license; a hosted version at big-agi.com offers a free tier plus an optional Pro plan at $9/month, billed annually.',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Big-AGI\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- see that page for how Big-AGI compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Big-AGI\'s entry in the [Local LLM Software Directory](/directory) -- see that page for how Big-AGI compares at a glance to dozens of other local AI tools.' },
         ],
       },
       quickFacts: {
@@ -205,7 +205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**[Open WebUI](/local-llms/open-webui-review)**', 'Best for': 'Multi-user front end tightly tied to Ollama', 'Self-hosted': 'Yes (Docker/pip)', 'Multi-model compare': 'No', 'License': 'Open WebUI License (BSD-derived)' },
           { 'Tool': '**[LibreChat](/power-local-llm/librechat-review)**', 'Best for': 'Managing many cloud provider API keys in one UI', 'Self-hosted': 'Yes (Docker)', 'Multi-model compare': 'No', 'License': 'MIT' },
         ],
-        note: 'For a wider five-way look including NextChat, Page Assist, and Chatbox, see [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). For the full catalog, see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).',
+        note: 'For a wider five-way look including NextChat, Page Assist, and Chatbox, see [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). For the full catalog, see the [Local LLM Software Directory](/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -235,14 +235,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Competitors and Alternatives',
-        content: 'Big-AGI sits in a segment of self-hosted, multi-provider chat interfaces. Here is how it compares to the closest alternatives in that same category -- see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, including Big-AGI\'s own directory entry.',
+        content: 'Big-AGI sits in a segment of self-hosted, multi-provider chat interfaces. Here is how it compares to the closest alternatives in that same category -- see the [Local LLM Software Directory](/directory) for the full catalog, including Big-AGI\'s own directory entry.',
         items: [
           '**[LobeChat](/local-llms/lobechat-review)** -- a self-hosted, multi-provider chat interface with a more developed plugin marketplace and agent builder, but licensed under the LobeHub Community License rather than plain MIT.',
           '**[Open WebUI](/local-llms/open-webui-review)** -- a self-hosted, multi-user chat interface most tightly integrated with Ollama and local-first workflows, without a built-in multi-model compare feature.',
           '**[LibreChat](/power-local-llm/librechat-review)** -- an MIT-licensed self-hosted interface that leans toward managing many cloud provider API keys behind one shared UI.',
           '**[Cherry Studio](/local-llms/cherry-studio-ai-desktop-client)** -- a single-user desktop client rather than a self-hosted server, for people who want zero server setup.',
         ],
-        note: 'This is not an exhaustive list of self-hosted chat interfaces -- see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Big-AGI\'s own directory entry.',
+        note: 'This is not an exhaustive list of self-hosted chat interfaces -- see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Big-AGI\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -275,7 +275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- the full catalog of local AI tools this article belongs to, including Big-AGI\'s own directory entry.',
+          '[Local LLM Software Directory](/directory) -- the full catalog of local AI tools this article belongs to, including Big-AGI\'s own directory entry.',
           '[LobeChat Review](/local-llms/lobechat-review) -- a self-hosted alternative with a more developed plugin marketplace and agent builder.',
           '[Open WebUI Review](/local-llms/open-webui-review) -- a self-hosted alternative most tightly integrated with Ollama.',
           '[LibreChat Review](/power-local-llm/librechat-review) -- a self-hosted alternative for managing many cloud provider API keys.',
@@ -411,7 +411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Self-Hosting ist unter der reinen MIT-Lizenz dauerhaft kostenlos; eine gehostete Version unter big-agi.com bietet eine kostenlose Stufe plus einen optionalen Pro-Plan für 9 $/Monat, jährlich abgerechnet.',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test ist die Vertiefung zu Big-AGIs Eintrag im [Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory) -- dort sehen Sie auf einen Blick, wie Big-AGI im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Dieser Test ist die Vertiefung zu Big-AGIs Eintrag im [Verzeichnis lokaler LLM-Software](/de/directory) -- dort sehen Sie auf einen Blick, wie Big-AGI im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       quickFacts: {
@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**[Open WebUI](/de/local-llms/open-webui-review)**', 'Am besten für': 'Multi-User-Frontend, eng an Ollama gebunden', 'Selbst gehostet': 'Ja (Docker/pip)', 'Multi-Modell-Vergleich': 'Nein', 'Lizenz': 'Open WebUI License (BSD-basiert)' },
           { 'Tool': '**[LibreChat](/de/power-local-llm/librechat-review)**', 'Am besten für': 'Viele Cloud-Anbieter-API-Schlüssel in einer UI verwalten', 'Selbst gehostet': 'Ja (Docker)', 'Multi-Modell-Vergleich': 'Nein', 'Lizenz': 'MIT' },
         ],
-        note: 'Für einen breiteren Fünf-Wege-Vergleich mit NextChat, Page Assist und Chatbox siehe [LobeChat vs. Big-AGI vs. NextChat vs. Page Assist vs. Chatbox](/de/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Für den vollständigen Katalog siehe das [Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Für einen breiteren Fünf-Wege-Vergleich mit NextChat, Page Assist und Chatbox siehe [LobeChat vs. Big-AGI vs. NextChat vs. Page Assist vs. Chatbox](/de/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Für den vollständigen Katalog siehe das [Verzeichnis lokaler LLM-Software](/de/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -529,14 +529,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Konkurrenz und Alternativen',
-        content: 'Big-AGI gehört zum Segment der selbst gehosteten, Multi-Provider-Chat-Oberflächen. So schneidet es im Vergleich zu den nächstliegenden Alternativen in dieser Kategorie ab -- den vollständigen Katalog inklusive Big-AGIs eigenem Verzeichniseintrag finden Sie im [Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory).',
+        content: 'Big-AGI gehört zum Segment der selbst gehosteten, Multi-Provider-Chat-Oberflächen. So schneidet es im Vergleich zu den nächstliegenden Alternativen in dieser Kategorie ab -- den vollständigen Katalog inklusive Big-AGIs eigenem Verzeichniseintrag finden Sie im [Verzeichnis lokaler LLM-Software](/de/directory).',
         items: [
           '**[LobeChat](/de/local-llms/lobechat-review)** -- eine selbst gehostete Multi-Provider-Chat-Oberfläche mit weiter entwickeltem Plugin-Marktplatz und Agenten-Builder, aber unter der LobeHub Community License statt reinem MIT.',
           '**[Open WebUI](/de/local-llms/open-webui-review)** -- eine selbst gehostete Multi-User-Chat-Oberfläche, am engsten mit Ollama und lokalen Workflows verzahnt, ohne integrierte Multi-Modell-Vergleichsfunktion.',
           '**[LibreChat](/de/power-local-llm/librechat-review)** -- eine MIT-lizenzierte selbst gehostete Oberfläche, die eher auf die Verwaltung vieler Cloud-Anbieter-API-Schlüssel in einer gemeinsamen UI setzt.',
           '**[Cherry Studio](/de/local-llms/cherry-studio-ai-desktop-client)** -- ein Single-User-Desktop-Client statt eines selbst gehosteten Servers, für alle, die kein Server-Setup wollen.',
         ],
-        note: 'Dies ist keine vollständige Liste selbst gehosteter Chat-Oberflächen -- den vollständigen, regelmäßig aktualisierten Katalog inklusive Big-AGIs eigenem Verzeichniseintrag finden Sie im [Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine vollständige Liste selbst gehosteter Chat-Oberflächen -- den vollständigen, regelmäßig aktualisierten Katalog inklusive Big-AGIs eigenem Verzeichniseintrag finden Sie im [Verzeichnis lokaler LLM-Software](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -570,7 +570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory) -- der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, inklusive Big-AGIs eigenem Verzeichniseintrag.',
+          '[Verzeichnis lokaler LLM-Software](/de/directory) -- der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, inklusive Big-AGIs eigenem Verzeichniseintrag.',
           '[LobeChat im Test](/de/local-llms/lobechat-review) -- eine selbst gehostete Alternative mit weiter entwickeltem Plugin-Marktplatz und Agenten-Builder.',
           '[Open WebUI im Test](/de/local-llms/open-webui-review) -- eine selbst gehostete Alternative, am engsten mit Ollama verzahnt.',
           '[LibreChat im Test](/de/power-local-llm/librechat-review) -- eine selbst gehostete Alternative zur Verwaltung vieler Cloud-Anbieter-API-Schlüssel.',
@@ -705,7 +705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'L\'auto-hébergement est gratuit indéfiniment sous licence MIT pure ; une version hébergée sur big-agi.com propose un niveau gratuit plus un plan Pro optionnel à 9 $/mois, facturé annuellement.',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Big-AGI dans l\'[Annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) -- consultez cette page pour voir comment Big-AGI se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Big-AGI dans l\'[Annuaire des logiciels LLM locaux](/fr/directory) -- consultez cette page pour voir comment Big-AGI se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       quickFacts: {
@@ -793,7 +793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Outil': '**[Open WebUI](/fr/local-llms/open-webui-review)**', 'Idéal pour': 'Frontend multi-utilisateur étroitement lié à Ollama', 'Auto-hébergé': 'Oui (Docker/pip)', 'Comparaison multi-modèle': 'Non', 'Licence': 'Open WebUI License (dérivée BSD)' },
           { 'Outil': '**[LibreChat](/fr/power-local-llm/librechat-review)**', 'Idéal pour': 'Gérer de nombreuses clés API de fournisseurs cloud dans une UI', 'Auto-hébergé': 'Oui (Docker)', 'Comparaison multi-modèle': 'Non', 'Licence': 'MIT' },
         ],
-        note: 'Pour une comparaison plus large à cinq, incluant NextChat, Page Assist et Chatbox, voir [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/fr/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Pour le catalogue complet, voir l\'[Annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory).',
+        note: 'Pour une comparaison plus large à cinq, incluant NextChat, Page Assist et Chatbox, voir [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/fr/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Pour le catalogue complet, voir l\'[Annuaire des logiciels LLM locaux](/fr/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -823,14 +823,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Concurrents et alternatives',
-        content: 'Big-AGI se situe dans le segment des interfaces de chat auto-hébergées et multi-fournisseurs. Voici comment elle se compare aux alternatives les plus proches de cette catégorie -- consultez l\'[Annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, y compris la fiche propre de Big-AGI.',
+        content: 'Big-AGI se situe dans le segment des interfaces de chat auto-hébergées et multi-fournisseurs. Voici comment elle se compare aux alternatives les plus proches de cette catégorie -- consultez l\'[Annuaire des logiciels LLM locaux](/fr/directory) pour le catalogue complet, y compris la fiche propre de Big-AGI.',
         items: [
           '**[LobeChat](/fr/local-llms/lobechat-review)** -- une interface de chat auto-hébergée et multi-fournisseurs avec une marketplace de plugins et un créateur d\'agents plus développés, mais sous licence LobeHub Community plutôt que MIT pure.',
           '**[Open WebUI](/fr/local-llms/open-webui-review)** -- une interface de chat auto-hébergée et multi-utilisateur la plus étroitement intégrée à Ollama et aux workflows locaux, sans fonction de comparaison multi-modèle intégrée.',
           '**[LibreChat](/fr/power-local-llm/librechat-review)** -- une interface auto-hébergée sous licence MIT qui privilégie la gestion de nombreuses clés API de fournisseurs cloud derrière une seule UI partagée.',
           '**[Cherry Studio](/fr/local-llms/cherry-studio-ai-desktop-client)** -- un client de bureau mono-utilisateur plutôt qu\'un serveur auto-hébergé, pour ceux qui veulent zéro configuration serveur.',
         ],
-        note: 'Ceci n\'est pas une liste exhaustive des interfaces de chat auto-hébergées -- voir l\'[Annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, y compris la fiche propre de Big-AGI.',
+        note: 'Ceci n\'est pas une liste exhaustive des interfaces de chat auto-hébergées -- voir l\'[Annuaire des logiciels LLM locaux](/fr/directory) pour le catalogue complet et régulièrement mis à jour, y compris la fiche propre de Big-AGI.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -863,7 +863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) -- le catalogue complet d\'outils d\'IA locale auquel appartient cet article, y compris la fiche propre de Big-AGI.',
+          '[Annuaire des logiciels LLM locaux](/fr/directory) -- le catalogue complet d\'outils d\'IA locale auquel appartient cet article, y compris la fiche propre de Big-AGI.',
           '[Avis LobeChat](/fr/local-llms/lobechat-review) -- une alternative auto-hébergée avec une marketplace de plugins et un créateur d\'agents plus développés.',
           '[Avis Open WebUI](/fr/local-llms/open-webui-review) -- une alternative auto-hébergée la plus étroitement intégrée à Ollama.',
           '[Avis LibreChat](/fr/power-local-llm/librechat-review) -- une alternative auto-hébergée pour gérer de nombreuses clés API de fournisseurs cloud.',
@@ -998,7 +998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '純粋なMITライセンスの下で自己ホストは永久に無料。big-agi.comのホスト版は無料プランに加え、月額9ドル（年払い）の任意Proプランを提供します。',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるBig-AGIの掲載情報を深掘りする記事です -- Big-AGIが他の数十のローカルAIツールと一目でどう比較されるかは、そちらのページをご覧ください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるBig-AGIの掲載情報を深掘りする記事です -- Big-AGIが他の数十のローカルAIツールと一目でどう比較されるかは、そちらのページをご覧ください。' },
         ],
       },
       quickFacts: {
@@ -1086,7 +1086,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ツール': '**[Open WebUI](/ja/local-llms/open-webui-review)**', '最適な用途': 'Ollamaと密接に統合されたマルチユーザーフロントエンド', '自己ホスト': 'あり（Docker/pip）', 'マルチモデル比較': 'なし', 'ライセンス': 'Open WebUI License（BSD派生）' },
           { 'ツール': '**[LibreChat](/ja/power-local-llm/librechat-review)**', '最適な用途': '多数のクラウドプロバイダーAPIキーを1つのUIで管理', '自己ホスト': 'あり（Docker）', 'マルチモデル比較': 'なし', 'ライセンス': 'MIT' },
         ],
-        note: 'NextChat、Page Assist、Chatboxを含むより広範な5製品比較については、[LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/ja/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)を参照してください。全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'NextChat、Page Assist、Chatboxを含むより広範な5製品比較については、[LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/ja/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)を参照してください。全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)をご覧ください。',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1116,14 +1116,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '競合と代替ツール',
-        content: 'Big-AGIは、自己ホスト型マルチプロバイダーチャットインターフェースのセグメントに位置します。同カテゴリーの最も近い代替ツールとの比較は以下のとおりです -- 全カタログ（Big-AGI自身のディレクトリ掲載を含む）は[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        content: 'Big-AGIは、自己ホスト型マルチプロバイダーチャットインターフェースのセグメントに位置します。同カテゴリーの最も近い代替ツールとの比較は以下のとおりです -- 全カタログ（Big-AGI自身のディレクトリ掲載を含む）は[ローカルLLMソフトウェアディレクトリ](/ja/directory)をご覧ください。',
         items: [
           '**[LobeChat](/ja/local-llms/lobechat-review)** -- より発展したプラグインマーケットプレイスとエージェントビルダーを持つ自己ホスト型マルチプロバイダーチャットインターフェースですが、純粋なMITではなくLobeHub Community Licenseの下で提供されます。',
           '**[Open WebUI](/ja/local-llms/open-webui-review)** -- Ollamaとローカル優先ワークフローに最も密接に統合された自己ホスト型マルチユーザーチャットインターフェースで、内蔵のマルチモデル比較機能はありません。',
           '**[LibreChat](/ja/power-local-llm/librechat-review)** -- 1つの共有UIの背後で多数のクラウドプロバイダーAPIキーを管理することに重点を置く、MITライセンスの自己ホスト型インターフェース。',
           '**[Cherry Studio](/ja/local-llms/cherry-studio-ai-desktop-client)** -- サーバー設定を一切不要としたい人向けの、自己ホスト型サーバーではなく単一ユーザー向けデスクトップクライアント。',
         ],
-        note: 'これは自己ホスト型チャットインターフェースの網羅的なリストではありません -- Big-AGI自身のディレクトリ掲載を含む、完全で定期的に更新されるカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'これは自己ホスト型チャットインターフェースの網羅的なリストではありません -- Big-AGI自身のディレクトリ掲載を含む、完全で定期的に更新されるカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)をご覧ください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1156,7 +1156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) -- この記事が属する、Big-AGI自身のディレクトリ掲載を含むローカルAIツールの全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/directory) -- この記事が属する、Big-AGI自身のディレクトリ掲載を含むローカルAIツールの全カタログ。',
           '[LobeChatレビュー](/ja/local-llms/lobechat-review) -- より発展したプラグインマーケットプレイスとエージェントビルダーを持つ自己ホスト型の代替ツール。',
           '[Open WebUIレビュー](/ja/local-llms/open-webui-review) -- Ollamaに最も密接に統合された自己ホスト型の代替ツール。',
           '[LibreChatレビュー](/ja/power-local-llm/librechat-review) -- 多数のクラウドプロバイダーAPIキーを管理するための自己ホスト型の代替ツール。',
@@ -1291,7 +1291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '在纯 MIT 许可证下自托管永久免费；big-agi.com 上的托管版本提供免费套餐,以及每月 9 美元（按年计费）的可选 Pro 计划。',
         ],
         callouts: [
-          { type: 'note', text: '本评测是 Big-AGI 在[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)中条目的深度补充——该页面展示了 Big-AGI 与其他数十种本地 AI 工具的一览对比。' },
+          { type: 'note', text: '本评测是 Big-AGI 在[本地 LLM 软件目录](/zh/directory)中条目的深度补充——该页面展示了 Big-AGI 与其他数十种本地 AI 工具的一览对比。' },
         ],
       },
       quickFacts: {
@@ -1379,7 +1379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '工具': '**[Open WebUI](/zh/local-llms/open-webui-review)**', '最适合': '与 Ollama 紧密集成的多用户前端', '自托管': '是（Docker/pip）', '多模型对比': '否', '许可证': 'Open WebUI License（源自 BSD）' },
           { '工具': '**[LibreChat](/zh/power-local-llm/librechat-review)**', '最适合': '在一个 UI 中管理多个云提供商 API 密钥', '自托管': '是（Docker）', '多模型对比': '否', '许可证': 'MIT' },
         ],
-        note: '若需包含 NextChat、Page Assist 和 Chatbox 的更全面五方对比,请参阅 [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/zh/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)。完整目录请见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '若需包含 NextChat、Page Assist 和 Chatbox 的更全面五方对比,请参阅 [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/zh/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)。完整目录请见[本地 LLM 软件目录](/zh/directory)。',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1409,14 +1409,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '竞品与替代方案',
-        content: 'Big-AGI 属于自托管、多提供商聊天界面这一细分领域。以下是它与该类别中最接近的替代方案的对比——完整目录（包括 Big-AGI 自身的目录条目）请见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'Big-AGI 属于自托管、多提供商聊天界面这一细分领域。以下是它与该类别中最接近的替代方案的对比——完整目录（包括 Big-AGI 自身的目录条目）请见[本地 LLM 软件目录](/zh/directory)。',
         items: [
           '**[LobeChat](/zh/local-llms/lobechat-review)** —— 一款自托管的多提供商聊天界面,拥有更成熟的插件市场和代理构建器,但采用 LobeHub Community License 而非纯 MIT 许可证。',
           '**[Open WebUI](/zh/local-llms/open-webui-review)** —— 与 Ollama 和本地优先工作流集成最紧密的自托管多用户聊天界面,没有内置的多模型对比功能。',
           '**[LibreChat](/zh/power-local-llm/librechat-review)** —— 一款 MIT 许可的自托管界面,更倾向于在一个共享 UI 背后管理多个云提供商 API 密钥。',
           '**[Cherry Studio](/zh/local-llms/cherry-studio-ai-desktop-client)** —— 一款单用户桌面客户端,而非自托管服务器,适合想要零服务器设置的用户。',
         ],
-        note: '这并非自托管聊天界面的详尽列表——完整且定期更新的目录（包括 Big-AGI 自身的目录条目）请见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非自托管聊天界面的详尽列表——完整且定期更新的目录（包括 Big-AGI 自身的目录条目）请见[本地 LLM 软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1449,7 +1449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory) —— 本文所属的本地 AI 工具完整目录,包括 Big-AGI 自身的目录条目。',
+          '[本地 LLM 软件目录](/zh/directory) —— 本文所属的本地 AI 工具完整目录,包括 Big-AGI 自身的目录条目。',
           '[LobeChat 评测](/zh/local-llms/lobechat-review) —— 一款拥有更成熟插件市场和代理构建器的自托管替代方案。',
           '[Open WebUI 评测](/zh/local-llms/open-webui-review) —— 一款与 Ollama 集成最紧密的自托管替代方案。',
           '[LibreChat 评测](/zh/power-local-llm/librechat-review) —— 一款用于管理多个云提供商 API 密钥的自托管替代方案。',
@@ -1584,7 +1584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Auto-alojarlo es gratis para siempre bajo licencia MIT pura; una versión alojada en big-agi.com ofrece un nivel gratuito más un plan Pro opcional a 9 $/mes, facturado anualmente.',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario de la ficha de Big-AGI en el [Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) -- consulta esa página para ver cómo se compara Big-AGI de un vistazo con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario de la ficha de Big-AGI en el [Directorio de software LLM local](/es/directory) -- consulta esa página para ver cómo se compara Big-AGI de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       quickFacts: {
@@ -1672,7 +1672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': '**[Open WebUI](/es/local-llms/open-webui-review)**', 'Mejor para': 'Frontend multi-usuario muy ligado a Ollama', 'Auto-alojado': 'Sí (Docker/pip)', 'Comparación multi-modelo': 'No', 'Licencia': 'Open WebUI License (derivada de BSD)' },
           { 'Herramienta': '**[LibreChat](/es/power-local-llm/librechat-review)**', 'Mejor para': 'Gestionar muchas claves API de proveedores en la nube en una sola UI', 'Auto-alojado': 'Sí (Docker)', 'Comparación multi-modelo': 'No', 'Licencia': 'MIT' },
         ],
-        note: 'Para una comparativa más amplia de cinco herramientas que incluye NextChat, Page Assist y Chatbox, consulta [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/es/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Para el catálogo completo, consulta el [Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory).',
+        note: 'Para una comparativa más amplia de cinco herramientas que incluye NextChat, Page Assist y Chatbox, consulta [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/es/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Para el catálogo completo, consulta el [Directorio de software LLM local](/es/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1702,14 +1702,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Competidores y alternativas',
-        content: 'Big-AGI se sitúa en el segmento de interfaces de chat auto-alojadas y multi-proveedor. Así se compara con las alternativas más cercanas en esa misma categoría -- consulta el [Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, incluyendo la propia ficha de Big-AGI.',
+        content: 'Big-AGI se sitúa en el segmento de interfaces de chat auto-alojadas y multi-proveedor. Así se compara con las alternativas más cercanas en esa misma categoría -- consulta el [Directorio de software LLM local](/es/directory) para el catálogo completo, incluyendo la propia ficha de Big-AGI.',
         items: [
           '**[LobeChat](/es/local-llms/lobechat-review)** -- una interfaz de chat auto-alojada y multi-proveedor con un marketplace de plugins y creador de agentes más desarrollados, pero con licencia LobeHub Community en lugar de MIT pura.',
           '**[Open WebUI](/es/local-llms/open-webui-review)** -- una interfaz de chat auto-alojada y multi-usuario más integrada con Ollama y flujos de trabajo locales, sin función de comparación multi-modelo incorporada.',
           '**[LibreChat](/es/power-local-llm/librechat-review)** -- una interfaz auto-alojada con licencia MIT que se inclina hacia la gestión de muchas claves API de proveedores en la nube tras una sola UI compartida.',
           '**[Cherry Studio](/es/local-llms/cherry-studio-ai-desktop-client)** -- un cliente de escritorio para un solo usuario en lugar de un servidor auto-alojado, para quienes quieren cero configuración de servidor.',
         ],
-        note: 'Esta no es una lista exhaustiva de interfaces de chat auto-alojadas -- consulta el [Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluyendo la propia ficha de Big-AGI.',
+        note: 'Esta no es una lista exhaustiva de interfaces de chat auto-alojadas -- consulta el [Directorio de software LLM local](/es/directory) para el catálogo completo y actualizado regularmente, incluyendo la propia ficha de Big-AGI.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1742,7 +1742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) -- el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la propia ficha de Big-AGI.',
+          '[Directorio de software LLM local](/es/directory) -- el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la propia ficha de Big-AGI.',
           '[Reseña de LobeChat](/es/local-llms/lobechat-review) -- una alternativa auto-alojada con un marketplace de plugins y creador de agentes más desarrollados.',
           '[Reseña de Open WebUI](/es/local-llms/open-webui-review) -- una alternativa auto-alojada más integrada con Ollama.',
           '[Reseña de LibreChat](/es/power-local-llm/librechat-review) -- una alternativa auto-alojada para gestionar muchas claves API de proveedores en la nube.',
@@ -1877,7 +1877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Auto-hospedar é gratuito para sempre sob a licença MIT pura; uma versão hospedada em big-agi.com oferece um nível gratuito além de um plano Pro opcional de US$ 9/mês, cobrado anualmente.',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Big-AGI no [Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) -- veja essa página para comparar o Big-AGI rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Big-AGI no [Diretório de software de LLM local](/pt/directory) -- veja essa página para comparar o Big-AGI rapidamente com dezenas de outras ferramentas de IA local.' },
         ],
       },
       quickFacts: {
@@ -1965,7 +1965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '**[Open WebUI](/pt/local-llms/open-webui-review)**', 'Melhor para': 'Front-end multi-usuário fortemente ligado ao Ollama', 'Auto-hospedado': 'Sim (Docker/pip)', 'Comparação multi-modelo': 'Não', 'Licença': 'Open WebUI License (derivada de BSD)' },
           { 'Ferramenta': '**[LibreChat](/pt/power-local-llm/librechat-review)**', 'Melhor para': 'Gerenciar muitas chaves de API de provedores na nuvem em uma UI', 'Auto-hospedado': 'Sim (Docker)', 'Comparação multi-modelo': 'Não', 'Licença': 'MIT' },
         ],
-        note: 'Para uma comparação mais ampla com cinco ferramentas, incluindo NextChat, Page Assist e Chatbox, veja [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/pt/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Para o catálogo completo, veja o [Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory).',
+        note: 'Para uma comparação mais ampla com cinco ferramentas, incluindo NextChat, Page Assist e Chatbox, veja [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/pt/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Para o catálogo completo, veja o [Diretório de software de LLM local](/pt/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1995,14 +1995,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Concorrentes e alternativas',
-        content: 'O Big-AGI se situa no segmento de interfaces de chat auto-hospedadas e multi-provedor. Veja como ele se compara às alternativas mais próximas nessa mesma categoria -- consulte o [Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, incluindo a própria entrada do Big-AGI no diretório.',
+        content: 'O Big-AGI se situa no segmento de interfaces de chat auto-hospedadas e multi-provedor. Veja como ele se compara às alternativas mais próximas nessa mesma categoria -- consulte o [Diretório de software de LLM local](/pt/directory) para o catálogo completo, incluindo a própria entrada do Big-AGI no diretório.',
         items: [
           '**[LobeChat](/pt/local-llms/lobechat-review)** -- uma interface de chat auto-hospedada e multi-provedor com um marketplace de plugins e criador de agentes mais desenvolvidos, mas licenciada sob a LobeHub Community License em vez de MIT pura.',
           '**[Open WebUI](/pt/local-llms/open-webui-review)** -- uma interface de chat auto-hospedada e multi-usuário mais integrada ao Ollama e a fluxos de trabalho locais, sem recurso de comparação multi-modelo integrado.',
           '**[LibreChat](/pt/power-local-llm/librechat-review)** -- uma interface auto-hospedada sob licença MIT que tende a gerenciar muitas chaves de API de provedores na nuvem atrás de uma única UI compartilhada.',
           '**[Cherry Studio](/pt/local-llms/cherry-studio-ai-desktop-client)** -- um cliente de desktop para um único usuário em vez de um servidor auto-hospedado, para quem quer zero configuração de servidor.',
         ],
-        note: 'Esta não é uma lista exaustiva de interfaces de chat auto-hospedadas -- consulte o [Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e regularmente atualizado, incluindo a própria entrada do Big-AGI no diretório.',
+        note: 'Esta não é uma lista exaustiva de interfaces de chat auto-hospedadas -- consulte o [Diretório de software de LLM local](/pt/directory) para o catálogo completo e regularmente atualizado, incluindo a própria entrada do Big-AGI no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2035,7 +2035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) -- o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do Big-AGI no diretório.',
+          '[Diretório de software de LLM local](/pt/directory) -- o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do Big-AGI no diretório.',
           '[Análise do LobeChat](/pt/local-llms/lobechat-review) -- uma alternativa auto-hospedada com um marketplace de plugins e criador de agentes mais desenvolvidos.',
           '[Análise do Open WebUI](/pt/local-llms/open-webui-review) -- uma alternativa auto-hospedada mais integrada ao Ollama.',
           '[Análise do LibreChat](/pt/power-local-llm/librechat-review) -- uma alternativa auto-hospedada para gerenciar muitas chaves de API de provedores na nuvem.',
@@ -2170,7 +2170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الاستضافة الذاتية مجانية إلى الأبد بموجب رخصة MIT الخالصة؛ وتوفر النسخة المستضافة على big-agi.com مستوى مجانيًا بالإضافة إلى خطة Pro اختيارية بسعر 9 دولارات شهريًا، تُدفع سنويًا.',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المعمّق لإدراج Big-AGI في [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) -- راجع تلك الصفحة لمعرفة كيف يقارَن Big-AGI بلمحة سريعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المكمّل المعمّق لإدراج Big-AGI في [دليل برمجيات LLM المحلية](/ar/directory) -- راجع تلك الصفحة لمعرفة كيف يقارَن Big-AGI بلمحة سريعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       quickFacts: {
@@ -2258,7 +2258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': '**[Open WebUI](/ar/local-llms/open-webui-review)**', 'الأنسب لـ': 'واجهة أمامية متعددة المستخدمين مرتبطة بشدة بـ Ollama', 'استضافة ذاتية': 'نعم (Docker/pip)', 'مقارنة متعددة النماذج': 'لا', 'الرخصة': 'Open WebUI License (مشتقة من BSD)' },
           { 'الأداة': '**[LibreChat](/ar/power-local-llm/librechat-review)**', 'الأنسب لـ': 'إدارة العديد من مفاتيح API لمزودين سحابيين في واجهة واحدة', 'استضافة ذاتية': 'نعم (Docker)', 'مقارنة متعددة النماذج': 'لا', 'الرخصة': 'MIT' },
         ],
-        note: 'لمقارنة أوسع تشمل خمس أدوات، بما فيها NextChat وPage Assist وChatbox، راجع [LobeChat مقابل Big-AGI مقابل NextChat مقابل Page Assist مقابل Chatbox](/ar/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). للكتالوج الكامل، راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory).',
+        note: 'لمقارنة أوسع تشمل خمس أدوات، بما فيها NextChat وPage Assist وChatbox، راجع [LobeChat مقابل Big-AGI مقابل NextChat مقابل Page Assist مقابل Chatbox](/ar/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). للكتالوج الكامل، راجع [دليل برمجيات LLM المحلية](/ar/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2288,14 +2288,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'المنافسون والبدائل',
-        content: 'يقع Big-AGI ضمن فئة واجهات الدردشة ذاتية الاستضافة متعددة المزودين. إليك كيف يقارَن بأقرب البدائل في نفس الفئة -- راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل، بما في ذلك إدراج Big-AGI الخاص في الدليل.',
+        content: 'يقع Big-AGI ضمن فئة واجهات الدردشة ذاتية الاستضافة متعددة المزودين. إليك كيف يقارَن بأقرب البدائل في نفس الفئة -- راجع [دليل برمجيات LLM المحلية](/ar/directory) للكتالوج الكامل، بما في ذلك إدراج Big-AGI الخاص في الدليل.',
         items: [
           '**[LobeChat](/ar/local-llms/lobechat-review)** -- واجهة دردشة ذاتية الاستضافة متعددة المزودين بسوق إضافات ومنشئ وكلاء أكثر تطورًا، لكن برخصة LobeHub Community بدلًا من MIT الخالصة.',
           '**[Open WebUI](/ar/local-llms/open-webui-review)** -- واجهة دردشة ذاتية الاستضافة متعددة المستخدمين الأكثر تكاملًا مع Ollama وسير العمل المحلي أولًا، دون ميزة مقارنة متعددة النماذج مدمجة.',
           '**[LibreChat](/ar/power-local-llm/librechat-review)** -- واجهة ذاتية الاستضافة برخصة MIT تميل إلى إدارة العديد من مفاتيح API لمزودين سحابيين خلف واجهة واحدة مشتركة.',
           '**[Cherry Studio](/ar/local-llms/cherry-studio-ai-desktop-client)** -- عميل سطح مكتب لمستخدم واحد بدلًا من خادم ذاتي الاستضافة، لمن يريد صفر إعداد خادم.',
         ],
-        note: 'هذه ليست قائمة شاملة لواجهات الدردشة ذاتية الاستضافة -- راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدراج Big-AGI الخاص في الدليل.',
+        note: 'هذه ليست قائمة شاملة لواجهات الدردشة ذاتية الاستضافة -- راجع [دليل برمجيات LLM المحلية](/ar/directory) للكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدراج Big-AGI الخاص في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2328,7 +2328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) -- الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك إدراج Big-AGI الخاص في الدليل.',
+          '[دليل برمجيات LLM المحلية](/ar/directory) -- الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك إدراج Big-AGI الخاص في الدليل.',
           '[مراجعة LobeChat](/ar/local-llms/lobechat-review) -- بديل ذاتي الاستضافة بسوق إضافات ومنشئ وكلاء أكثر تطورًا.',
           '[مراجعة Open WebUI](/ar/local-llms/open-webui-review) -- بديل ذاتي الاستضافة الأكثر تكاملًا مع Ollama.',
           '[مراجعة LibreChat](/ar/power-local-llm/librechat-review) -- بديل ذاتي الاستضافة لإدارة العديد من مفاتيح API لمزودين سحابيين.',
@@ -2463,7 +2463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '순수 MIT 라이선스 아래 셀프 호스팅은 영구히 무료이며, big-agi.com의 호스팅 버전은 무료 플랜에 더해 월 9달러(연간 결제)인 선택적 Pro 플랜을 제공합니다.',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 Big-AGI 항목을 심층적으로 다루는 글입니다 -- Big-AGI가 다른 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Big-AGI 항목을 심층적으로 다루는 글입니다 -- Big-AGI가 다른 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       quickFacts: {
@@ -2551,7 +2551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': '**[Open WebUI](/ko/local-llms/open-webui-review)**', '가장 적합한 용도': 'Ollama와 긴밀히 통합된 멀티 유저 프런트엔드', '셀프 호스팅': '가능(Docker/pip)', '멀티 모델 비교': '불가능', '라이선스': 'Open WebUI License(BSD 파생)' },
           { '도구': '**[LibreChat](/ko/power-local-llm/librechat-review)**', '가장 적합한 용도': '하나의 UI에서 여러 클라우드 제공업체 API 키 관리', '셀프 호스팅': '가능(Docker)', '멀티 모델 비교': '불가능', '라이선스': 'MIT' },
         ],
-        note: 'NextChat, Page Assist, Chatbox까지 포함한 더 폭넓은 다섯 가지 비교는 [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/ko/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)를 참고하세요. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에서 확인할 수 있습니다.',
+        note: 'NextChat, Page Assist, Chatbox까지 포함한 더 폭넓은 다섯 가지 비교는 [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/ko/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)를 참고하세요. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에서 확인할 수 있습니다.',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2581,14 +2581,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '경쟁 제품과 대안',
-        content: 'Big-AGI는 셀프 호스팅 멀티 제공업체 채팅 인터페이스 세그먼트에 속합니다. 동일 카테고리에서 가장 가까운 대안과의 비교는 다음과 같습니다 -- Big-AGI 자체 디렉터리 항목을 포함한 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에서 확인하세요.',
+        content: 'Big-AGI는 셀프 호스팅 멀티 제공업체 채팅 인터페이스 세그먼트에 속합니다. 동일 카테고리에서 가장 가까운 대안과의 비교는 다음과 같습니다 -- Big-AGI 자체 디렉터리 항목을 포함한 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에서 확인하세요.',
         items: [
           '**[LobeChat](/ko/local-llms/lobechat-review)** -- 더 발전된 플러그인 마켓플레이스와 에이전트 빌더를 갖춘 셀프 호스팅 멀티 제공업체 채팅 인터페이스이지만, 순수 MIT가 아닌 LobeHub Community License로 제공됩니다.',
           '**[Open WebUI](/ko/local-llms/open-webui-review)** -- Ollama 및 로컬 우선 워크플로우와 가장 긴밀하게 통합된 셀프 호스팅 멀티 유저 채팅 인터페이스로, 내장 멀티 모델 비교 기능은 없습니다.',
           '**[LibreChat](/ko/power-local-llm/librechat-review)** -- 하나의 공유 UI 뒤에서 여러 클라우드 제공업체 API 키를 관리하는 데 중점을 둔 MIT 라이선스 셀프 호스팅 인터페이스.',
           '**[Cherry Studio](/ko/local-llms/cherry-studio-ai-desktop-client)** -- 서버 설정이 전혀 필요 없는 것을 원하는 사람을 위한, 셀프 호스팅 서버가 아닌 단일 사용자용 데스크톱 클라이언트.',
         ],
-        note: '이는 셀프 호스팅 채팅 인터페이스의 총망라 목록이 아닙니다 -- Big-AGI 자체 디렉터리 항목을 포함한 완전하고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에서 확인하세요.',
+        note: '이는 셀프 호스팅 채팅 인터페이스의 총망라 목록이 아닙니다 -- Big-AGI 자체 디렉터리 항목을 포함한 완전하고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에서 확인하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2621,7 +2621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) -- 이 글이 속한, Big-AGI 자체 디렉터리 항목을 포함한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) -- 이 글이 속한, Big-AGI 자체 디렉터리 항목을 포함한 로컬 AI 도구 전체 카탈로그.',
           '[LobeChat 리뷰](/ko/local-llms/lobechat-review) -- 더 발전된 플러그인 마켓플레이스와 에이전트 빌더를 갖춘 셀프 호스팅 대안.',
           '[Open WebUI 리뷰](/ko/local-llms/open-webui-review) -- Ollama와 가장 긴밀하게 통합된 셀프 호스팅 대안.',
           '[LibreChat 리뷰](/ko/power-local-llm/librechat-review) -- 여러 클라우드 제공업체 API 키를 관리하기 위한 셀프 호스팅 대안.',

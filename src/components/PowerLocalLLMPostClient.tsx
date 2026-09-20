@@ -1271,7 +1271,7 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, dir
         </div>
 
         {/* Cross-language links */}
-        <LangLinksBar cluster="power-local-llm" slug={slug} availableLangs={availableLangs ?? Object.keys(articleData)} initialLang={lang} />
+        <LangLinksBar cluster={isDirectoryPage ? 'directory' : 'power-local-llm'} slug={isDirectoryPage ? '' : slug} availableLangs={availableLangs ?? Object.keys(articleData)} initialLang={lang} />
 
         {/* Founder-reviewed fact-check credit — mirrors the badge/banner shown on
             this tool's directory tile/drawer (ToolCard.tsx/ToolDrawer.tsx),

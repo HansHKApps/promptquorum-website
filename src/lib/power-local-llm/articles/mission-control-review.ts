@@ -219,7 +219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'OpenHands', 'Best known for': 'Free, open-source, self-hosted autonomous coding-agent platform', 'Link': '[OpenHands review](/power-local-llm/openhands-review)' },
           { 'Tool': 'Cline', 'Best known for': 'Open-source, autonomous agent extension for VS Code and JetBrains', 'Link': '[Cline review](/power-local-llm/cline-review)' },
         ],
-        note: 'This list reflects tools commonly discussed alongside Mission Control in the agent-orchestration and observability space, not an independent PromptQuorum ranking — verify each tool\'s current scope and pricing before choosing. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        note: 'This list reflects tools commonly discussed alongside Mission Control in the agent-orchestration and observability space, not an independent PromptQuorum ranking — verify each tool\'s current scope and pricing before choosing. See the [Local LLM Software Directory](/directory) for the full catalog.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -273,7 +273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Mission Control\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Mission Control\'s directory entry.',
           '[Langfuse Review](/power-local-llm/langfuse-review) — an LLM observability and tracing platform, for comparison against Mission Control\'s agent-dispatch focus.',
           '[nanobot Review](/power-local-llm/nanobot-review) — a self-hosted personal AI agent with persistent memory and MCP tools.',
           '[OpenHands Review](/power-local-llm/openhands-review) — a free, open-source, self-hosted autonomous coding-agent platform.',
@@ -498,7 +498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'OpenHands', 'Am bekanntesten für': 'Kostenlose, quelloffene, selbst gehostete autonome Coding-Agent-Plattform', 'Link': '[OpenHands-Test](/de/power-local-llm/openhands-review)' },
           { 'Tool': 'Cline', 'Am bekanntesten für': 'Quelloffene, autonome Agent-Erweiterung für VS Code und JetBrains', 'Link': '[Cline-Test](/de/power-local-llm/cline-review)' },
         ],
-        note: 'Diese Liste spiegelt Tools wider, die im Bereich Agent-Orchestrierung und Observability häufig zusammen mit Mission Control genannt werden, kein eigenständiges Ranking von PromptQuorum – prüfen Sie Umfang und Preise jedes Tools vor der Wahl. Das vollständige Verzeichnis finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Diese Liste spiegelt Tools wider, die im Bereich Agent-Orchestrierung und Observability häufig zusammen mit Mission Control genannt werden, kein eigenständiges Ranking von PromptQuorum – prüfen Sie Umfang und Preise jedes Tools vor der Wahl. Das vollständige Verzeichnis finden Sie im [Local LLM Software Directory](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -552,7 +552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von Mission Control.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von Mission Control.',
           '[Langfuse-Test](/de/power-local-llm/langfuse-review) — eine Plattform für LLM-Observability und Tracing, zum Vergleich mit dem Agent-Dispatch-Fokus von Mission Control.',
           '[nanobot-Test](/de/power-local-llm/nanobot-review) — ein selbst gehosteter persönlicher KI-Agent mit dauerhaftem Gedächtnis und MCP-Tools.',
           '[OpenHands-Test](/de/power-local-llm/openhands-review) — eine kostenlose, quelloffene, selbst gehostete autonome Coding-Agent-Plattform.',
@@ -777,7 +777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Outil': 'OpenHands', 'Réputé pour': 'Plateforme d\'agent de codage autonome gratuite, open source et auto-hébergée', 'Lien': '[avis OpenHands](/fr/power-local-llm/openhands-review)' },
           { 'Outil': 'Cline', 'Réputé pour': 'Extension d\'agent autonome open source pour VS Code et JetBrains', 'Lien': '[avis Cline](/fr/power-local-llm/cline-review)' },
         ],
-        note: 'Cette liste reflète les outils habituellement mentionnés aux côtés de Mission Control dans l\'espace de l\'orchestration et de l\'observabilité des agents, et non un classement indépendant de PromptQuorum — vérifiez le périmètre et les tarifs actuels de chaque outil avant de choisir. Voir le [Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        note: 'Cette liste reflète les outils habituellement mentionnés aux côtés de Mission Control dans l\'espace de l\'orchestration et de l\'observabilité des agents, et non un classement indépendant de PromptQuorum — vérifiez le périmètre et les tarifs actuels de chaque outil avant de choisir. Voir le [Répertoire des logiciels LLM locaux](/fr/directory) pour le catalogue complet.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -831,7 +831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecture complémentaire',
         items: [
-          '[Répertoire des logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale dont fait partie cet article, incluant la fiche de Mission Control.',
+          '[Répertoire des logiciels LLM locaux 2026](/fr/directory) — le catalogue complet des outils d\'IA locale dont fait partie cet article, incluant la fiche de Mission Control.',
           '[Avis Langfuse](/fr/power-local-llm/langfuse-review) — une plateforme d\'observabilité et de traçage LLM, à comparer avec l\'orientation répartition d\'agents de Mission Control.',
           '[Avis nanobot](/fr/power-local-llm/nanobot-review) — un agent IA personnel auto-hébergé avec mémoire persistante et outils MCP.',
           '[Avis OpenHands](/fr/power-local-llm/openhands-review) — une plateforme d\'agent de codage autonome gratuite, open source et auto-hébergée.',
@@ -1056,7 +1056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ツール': 'OpenHands', '主な特徴': '無料・オープンソースのセルフホスト型自律コーディングエージェント・プラットフォーム', 'リンク': '[OpenHandsレビュー](/ja/power-local-llm/openhands-review)' },
           { 'ツール': 'Cline', '主な特徴': 'VS CodeおよびJetBrains向けのオープンソースな自律エージェント拡張機能', 'リンク': '[Clineレビュー](/ja/power-local-llm/cline-review)' },
         ],
-        note: 'このリストは、エージェントオーケストレーションとobservabilityの領域でMission Controlと並んでよく取り上げられるツールを反映したものであり、PromptQuorum独自のランキングではありません——選定前に各ツールの現在の範囲と料金を確認してください。全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'このリストは、エージェントオーケストレーションとobservabilityの領域でMission Controlと並んでよく取り上げられるツールを反映したものであり、PromptQuorum独自のランキングではありません——選定前に各ツールの現在の範囲と料金を確認してください。全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1110,7 +1110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ 2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの全カタログ。Mission Controlのディレクトリ項目も含みます。',
+          '[ローカルLLMソフトウェアディレクトリ 2026](/ja/directory) — この記事が属する、ローカルAIツールの全カタログ。Mission Controlのディレクトリ項目も含みます。',
           '[Langfuseレビュー](/ja/power-local-llm/langfuse-review) — LLM observabilityとトレーシングのプラットフォーム。Mission Controlのエージェントディスパッチへの注力と比較できます。',
           '[nanobotレビュー](/ja/power-local-llm/nanobot-review) — 永続的なメモリとMCPツールを備えたセルフホスト型の個人向けAIエージェント。',
           '[OpenHandsレビュー](/ja/power-local-llm/openhands-review) — 無料・オープンソースのセルフホスト型自律コーディングエージェント・プラットフォーム。',
@@ -1335,7 +1335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '工具': 'OpenHands', '主要特点': '免费开源、自托管的自主编程代理平台', '链接': '[OpenHands 评测](/zh/power-local-llm/openhands-review)' },
           { '工具': 'Cline', '主要特点': '面向 VS Code 和 JetBrains 的开源自主代理扩展', '链接': '[Cline 评测](/zh/power-local-llm/cline-review)' },
         ],
-        note: '此列表反映的是在代理编排与可观测性领域中常与 Mission Control 一同被提及的工具,并非 PromptQuorum 独立排名——选择前请核实各工具当前的功能范围和定价。完整目录请参见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '此列表反映的是在代理编排与可观测性领域中常与 Mission Control 一同被提及的工具,并非 PromptQuorum 独立排名——选择前请核实各工具当前的功能范围和定价。完整目录请参见[本地 LLM 软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1389,7 +1389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026 本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)——本文所属的完整本地 AI 工具目录,其中包含 Mission Control 的目录条目。',
+          '[2026 本地 LLM 软件目录](/zh/directory)——本文所属的完整本地 AI 工具目录,其中包含 Mission Control 的目录条目。',
           '[Langfuse 评测](/zh/power-local-llm/langfuse-review)——一个 LLM 可观测性与追踪平台,可与 Mission Control 的代理分派定位进行对比。',
           '[nanobot 评测](/zh/power-local-llm/nanobot-review)——一款带持久记忆和 MCP 工具的自托管个人 AI 代理。',
           '[OpenHands 评测](/zh/power-local-llm/openhands-review)——一个免费开源、自托管的自主编程代理平台。',
@@ -1614,7 +1614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': 'OpenHands', 'Conocida por': 'Plataforma de agente de codificación autónomo, gratuita, de código abierto y autoalojada', 'Enlace': '[Reseña de OpenHands](/es/power-local-llm/openhands-review)' },
           { 'Herramienta': 'Cline', 'Conocida por': 'Extensión de agente autónomo de código abierto para VS Code y JetBrains', 'Enlace': '[Reseña de Cline](/es/power-local-llm/cline-review)' },
         ],
-        note: 'Esta lista refleja herramientas comúnmente discutidas junto a Mission Control en el espacio de orquestación y observabilidad de agentes, no un ranking independiente de PromptQuorum — verifica el alcance y el precio actuales de cada herramienta antes de elegir. Consulta el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) para ver el catálogo completo.',
+        note: 'Esta lista refleja herramientas comúnmente discutidas junto a Mission Control en el espacio de orquestación y observabilidad de agentes, no un ranking independiente de PromptQuorum — verifica el alcance y el precio actuales de cada herramienta antes de elegir. Consulta el [Directorio de Software de LLM Local](/es/directory) para ver el catálogo completo.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1668,7 +1668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas Relacionadas',
         items: [
-          '[Directorio de Software de LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de Mission Control en el directorio.',
+          '[Directorio de Software de LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de Mission Control en el directorio.',
           '[Reseña de Langfuse](/es/power-local-llm/langfuse-review) — una plataforma de observabilidad y trazabilidad de LLM, para comparar con el enfoque de asignación de agentes de Mission Control.',
           '[Reseña de nanobot](/es/power-local-llm/nanobot-review) — un agente de IA personal autoalojado con memoria persistente y herramientas MCP.',
           '[Reseña de OpenHands](/es/power-local-llm/openhands-review) — una plataforma de agente de codificación autónomo, gratuita, de código abierto y autoalojada.',
@@ -1893,7 +1893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': 'OpenHands', 'Mais conhecida por': 'Plataforma gratuita, de código aberto e self-hosted de agente de codificação autônomo', 'Link': '[Análise do OpenHands](/pt/power-local-llm/openhands-review)' },
           { 'Ferramenta': 'Cline', 'Mais conhecida por': 'Extensão de agente autônomo de código aberto para VS Code e JetBrains', 'Link': '[Análise do Cline](/pt/power-local-llm/cline-review)' },
         ],
-        note: 'Esta lista reflete ferramentas comumente discutidas junto ao Mission Control no espaço de orquestração e observabilidade de agentes, e não um ranking independente da PromptQuorum — verifique o escopo e o preço atuais de cada ferramenta antes de escolher. Veja o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        note: 'Esta lista reflete ferramentas comumente discutidas junto ao Mission Control no espaço de orquestração e observabilidade de agentes, e não um ranking independente da PromptQuorum — verifique o escopo e o preço atuais de cada ferramenta antes de escolher. Veja o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1947,7 +1947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura Relacionada',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Mission Control no diretório.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Mission Control no diretório.',
           '[Análise do Langfuse](/pt/power-local-llm/langfuse-review) — uma plataforma de observabilidade e rastreamento de LLMs, para comparação com o foco do Mission Control em despacho de agentes.',
           '[Análise do nanobot](/pt/power-local-llm/nanobot-review) — um agente pessoal de IA self-hosted com memória persistente e ferramentas MCP.',
           '[Análise do OpenHands](/pt/power-local-llm/openhands-review) — uma plataforma gratuita, de código aberto e self-hosted de agente de codificação autônomo.',
@@ -2172,7 +2172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': 'OpenHands', 'الأشهر في': 'منصة وكيل ترميز مستقلة مجانية ومفتوحة المصدر وذاتية الاستضافة', 'الرابط': '[مراجعة OpenHands](/ar/power-local-llm/openhands-review)' },
           { 'الأداة': 'Cline', 'الأشهر في': 'إضافة وكيل مستقل مفتوحة المصدر لـ VS Code وJetBrains', 'الرابط': '[مراجعة Cline](/ar/power-local-llm/cline-review)' },
         ],
-        note: 'تعكس هذه القائمة أدوات يشيع مناقشتها إلى جانب Mission Control في مجال تنسيق الوكلاء والمراقبة، وليست تصنيفًا مستقلًا من PromptQuorum — تحقق من نطاق وتسعير كل أداة الحالي قبل الاختيار. راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل.',
+        note: 'تعكس هذه القائمة أدوات يشيع مناقشتها إلى جانب Mission Control في مجال تنسيق الوكلاء والمراقبة، وليست تصنيفًا مستقلًا من PromptQuorum — تحقق من نطاق وتسعير كل أداة الحالي قبل الاختيار. راجع [دليل برمجيات LLM المحلية](/ar/directory) للكتالوج الكامل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2226,7 +2226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي تنتمي إليها هذه المقالة، بما في ذلك إدراج Mission Control في الدليل.',
+          '[دليل برمجيات LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي تنتمي إليها هذه المقالة، بما في ذلك إدراج Mission Control في الدليل.',
           '[مراجعة Langfuse](/ar/power-local-llm/langfuse-review) — منصة مراقبة وتتبع لنماذج اللغة الكبيرة (LLM)، للمقارنة مع تركيز Mission Control على توزيع مهام الوكلاء.',
           '[مراجعة nanobot](/ar/power-local-llm/nanobot-review) — وكيل ذكاء اصطناعي شخصي ذاتي الاستضافة بذاكرة دائمة وأدوات MCP.',
           '[مراجعة OpenHands](/ar/power-local-llm/openhands-review) — منصة وكيل ترميز مستقلة مجانية ومفتوحة المصدر وذاتية الاستضافة.',
@@ -2451,7 +2451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': 'OpenHands', '대표 강점': '무료 오픈소스 셀프 호스팅 자율 코딩 에이전트 플랫폼', '링크': '[OpenHands 리뷰](/ko/power-local-llm/openhands-review)' },
           { '도구': 'Cline', '대표 강점': 'VS Code와 JetBrains용 오픈소스 자율 에이전트 확장 프로그램', '링크': '[Cline 리뷰](/ko/power-local-llm/cline-review)' },
         ],
-        note: '이 목록은 에이전트 오케스트레이션 및 관측 영역에서 Mission Control과 함께 자주 언급되는 도구를 정리한 것으로, PromptQuorum의 독자적인 순위가 아닙니다 — 선택 전에 각 도구의 현재 범위와 요금제를 직접 확인하시기 바랍니다. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.',
+        note: '이 목록은 에이전트 오케스트레이션 및 관측 영역에서 Mission Control과 함께 자주 언급되는 도구를 정리한 것으로, PromptQuorum의 독자적인 순위가 아닙니다 — 선택 전에 각 도구의 현재 범위와 요금제를 직접 확인하시기 바랍니다. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2505,7 +2505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — Mission Control의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그입니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — Mission Control의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그입니다.',
           '[Langfuse 리뷰](/ko/power-local-llm/langfuse-review) — Mission Control의 에이전트 배정 중심 접근과 비교할 수 있는 LLM 관측 및 트레이싱 플랫폼입니다.',
           '[nanobot 리뷰](/ko/power-local-llm/nanobot-review) — 영구 메모리와 MCP 도구를 갖춘 셀프 호스팅 개인용 AI 에이전트입니다.',
           '[OpenHands 리뷰](/ko/power-local-llm/openhands-review) — 무료 오픈소스 셀프 호스팅 자율 코딩 에이전트 플랫폼입니다.',

@@ -896,10 +896,10 @@
     "cluster": "local-llms"
   },
   {
-    "title": "Cherry Studio in 2026: The Free Multi-Provider AI Desktop Client",
-    "excerpt": "Cherry Studio connects dozens of AI providers, local models, and RAG knowledge bases in one free desktop app. AGPL 3.0, no vendor lock-in. Full 2026 review.",
+    "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
+    "excerpt": "Cherry Studio 2.0 rebuilds the free AGPL 3.0 desktop app around AI Agents: MCP tools, knowledge bases, local models via Ollama, many providers. 2026 review.",
     "publishDate": "2026-09-03",
-    "dateModified": "2026-09-03",
+    "dateModified": "2026-09-20",
     "url": "/local-llms/cherry-studio-ai-desktop-client",
     "cluster": "local-llms"
   },

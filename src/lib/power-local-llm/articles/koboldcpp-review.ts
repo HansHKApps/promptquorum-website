@@ -231,7 +231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp Explained](/power-local-llm/llama-cpp-explained) — the inference engine KoboldCpp is built on top of.',
           '[vLLM Explained](/power-local-llm/vllm-explained) — a production-serving engine for the opposite use case: high-concurrency, multi-user throughput.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools, including other llama.cpp-based apps.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools, including other llama.cpp-based apps.',
         ],
       },
     },
@@ -465,7 +465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp Explained](/de/power-local-llm/llama-cpp-explained) — die Inferenz-Engine, auf der KoboldCpp aufbaut.',
           '[vLLM Explained](/de/power-local-llm/vllm-explained) — eine Produktions-Serving-Engine für den gegenteiligen Anwendungsfall: hoher Durchsatz für viele Nutzer gleichzeitig.',
-          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, einschließlich weiterer auf llama.cpp basierender Apps.',
+          '[Local LLM Software Directory](/de/directory) — der vollständige Katalog lokaler KI-Tools, einschließlich weiterer auf llama.cpp basierender Apps.',
         ],
       },
     },
@@ -699,7 +699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp Explained](/fr/power-local-llm/llama-cpp-explained) — le moteur d\'inférence sur lequel KoboldCpp est construit.',
           '[vLLM Explained](/fr/power-local-llm/vllm-explained) — un moteur de production pour l\'usage inverse : débit élevé et multi-utilisateurs.',
-          '[Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale, y compris d\'autres applications basées sur llama.cpp.',
+          '[Local LLM Software Directory](/fr/directory) — le catalogue complet des outils d\'IA locale, y compris d\'autres applications basées sur llama.cpp.',
         ],
       },
     },
@@ -933,7 +933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp Explained](/es/power-local-llm/llama-cpp-explained) — el motor de inferencia sobre el que se construye KoboldCpp.',
           '[vLLM Explained](/es/power-local-llm/vllm-explained) — un motor de producción para el caso de uso opuesto: alto rendimiento y multiusuario.',
-          '[Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local, incluidas otras apps basadas en llama.cpp.',
+          '[Local LLM Software Directory](/es/directory) — el catálogo completo de herramientas de IA local, incluidas otras apps basadas en llama.cpp.',
         ],
       },
     },
@@ -1167,7 +1167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp Explained](/ja/power-local-llm/llama-cpp-explained) — KoboldCppの基盤となっている推論エンジン。',
           '[vLLM Explained](/ja/power-local-llm/vllm-explained) — 高スループット・マルチユーザーという正反対の用途向けの本番配信エンジン。',
-          '[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory) — llama.cppを基盤とする他のアプリを含む、ローカルAIツールの全カタログ。',
+          '[Local LLM Software Directory](/ja/directory) — llama.cppを基盤とする他のアプリを含む、ローカルAIツールの全カタログ。',
         ],
       },
     },
@@ -1401,7 +1401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp Explained](/zh/power-local-llm/llama-cpp-explained) —— KoboldCpp 所基于构建的推理引擎。',
           '[vLLM Explained](/zh/power-local-llm/vllm-explained) —— 面向相反使用场景(高并发、多用户吞吐量)的生产级服务引擎。',
-          '[Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory) —— 本地 AI 工具完整目录,包括其他基于 llama.cpp 的应用。',
+          '[Local LLM Software Directory](/zh/directory) —— 本地 AI 工具完整目录,包括其他基于 llama.cpp 的应用。',
         ],
       },
     },
@@ -1635,7 +1635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp Explained](/pt/power-local-llm/llama-cpp-explained) — o motor de inferência sobre o qual o KoboldCpp é construído.',
           '[vLLM Explained](/pt/power-local-llm/vllm-explained) — um motor de produção para o caso de uso oposto: alto throughput e multiusuário.',
-          '[Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local, incluindo outros apps baseados em llama.cpp.',
+          '[Local LLM Software Directory](/pt/directory) — o catálogo completo de ferramentas de IA local, incluindo outros apps baseados em llama.cpp.',
         ],
       },
     },
@@ -1869,7 +1869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp Explained](/ar/power-local-llm/llama-cpp-explained) — محرك الاستدلال الذي يُبنى عليه KoboldCpp.',
           '[vLLM Explained](/ar/power-local-llm/vllm-explained) — محرك إنتاجي لحالة الاستخدام المعاكسة: إنتاجية عالية ومستخدمون متعددون.',
-          '[Local LLM Software Directory](/ar/power-local-llm/local-llm-software-directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلي، بما فيها تطبيقات أخرى مبنية على llama.cpp.',
+          '[Local LLM Software Directory](/ar/directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلي، بما فيها تطبيقات أخرى مبنية على llama.cpp.',
         ],
       },
     },
@@ -2103,7 +2103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[llama.cpp Explained](/ko/power-local-llm/llama-cpp-explained) — KoboldCpp의 기반이 되는 추론 엔진.',
           '[vLLM Explained](/ko/power-local-llm/vllm-explained) — 정반대의 사용 사례인 높은 처리량·멀티유저를 위한 프로덕션 서빙 엔진.',
-          '[Local LLM Software Directory](/ko/power-local-llm/local-llm-software-directory) — llama.cpp 기반의 다른 앱을 포함한 로컬 AI 도구 전체 카탈로그.',
+          '[Local LLM Software Directory](/ko/directory) — llama.cpp 기반의 다른 앱을 포함한 로컬 AI 도구 전체 카탈로그.',
         ],
       },
     },

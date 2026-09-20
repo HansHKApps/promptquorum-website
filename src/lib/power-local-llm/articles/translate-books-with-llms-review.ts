@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'TranslateBooksWithLLMs',
     title: 'TranslateBooksWithLLMs Review: Translate Full Books With a Local or Cloud LLM',
     seoTitle: 'TranslateBooksWithLLMs Review 2026: Book Translation App',
-    intro: 'TranslateBooksWithLLMs ([github.com/hydropix/TranslateBooksWithLLMs](https://github.com/hydropix/TranslateBooksWithLLMs)), often shortened to "TBL," is a free, open-source application for translating full-length books, subtitles, and documents using either a local model through [Ollama](https://ollama.com) or a cloud LLM provider. It ships as a downloadable desktop app for Windows and macOS, a browser-based web UI (`localhost:5000`) for anyone running it from source or Docker, and a command-line interface for scripted or batch use. This review covers what it actually does, how to install it, what it costs, and who it fits. This review is a companion piece to TranslateBooksWithLLMs\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+    intro: 'TranslateBooksWithLLMs ([github.com/hydropix/TranslateBooksWithLLMs](https://github.com/hydropix/TranslateBooksWithLLMs)), often shortened to "TBL," is a free, open-source application for translating full-length books, subtitles, and documents using either a local model through [Ollama](https://ollama.com) or a cloud LLM provider. It ships as a downloadable desktop app for Windows and macOS, a browser-based web UI (`localhost:5000`) for anyone running it from source or Docker, and a command-line interface for scripted or batch use. This review covers what it actually does, how to install it, what it costs, and who it fits. This review is a companion piece to TranslateBooksWithLLMs\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory).',
     metaDescription: 'TranslateBooksWithLLMs (TBL) is a free, open-source app that translates full books, EPUBs, and subtitles with a local Ollama model or cloud LLMs. Install and pricing for 2026.',
     readTime: '11 min read',
     targetKeywords: [
@@ -217,7 +217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Khoj', 'Best known for': 'Self-hostable, open-source personal AI "second brain" answering questions over your own documents', 'Link': '[Khoj review](/power-local-llm/khoj-ai-second-brain-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Neither Karakeep nor Khoj translates documents — they are included here as the closest local-LLM-powered, document-oriented productivity tools already reviewed on PromptQuorum, not as direct feature-for-feature TranslateBooksWithLLMs alternatives. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog if a closer match is added later.',
+        note: 'Neither Karakeep nor Khoj translates documents — they are included here as the closest local-LLM-powered, document-oriented productivity tools already reviewed on PromptQuorum, not as direct feature-for-feature TranslateBooksWithLLMs alternatives. See the [Local LLM Software Directory](/directory) for the full catalog if a closer match is added later.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -278,7 +278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Karakeep Review](/power-local-llm/karakeep-review) — a self-hostable, AI-assisted bookmark-and-notes app for comparison as another local-LLM document tool.',
           '[Khoj Review](/power-local-llm/khoj-ai-second-brain-review) — a self-hostable personal AI assistant that indexes and answers questions over your own documents.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including TranslateBooksWithLLMs\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including TranslateBooksWithLLMs\'s directory entry.',
         ],
       },
     },
@@ -294,7 +294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'TranslateBooksWithLLMs',
     title: 'TranslateBooksWithLLMs im Test: Ganze Bücher mit einem lokalen oder Cloud-LLM übersetzen',
     seoTitle: 'TranslateBooksWithLLMs Test 2026: Buchübersetzungs-App',
-    intro: 'TranslateBooksWithLLMs ([github.com/hydropix/TranslateBooksWithLLMs](https://github.com/hydropix/TranslateBooksWithLLMs)), oft „TBL" abgekürzt, ist eine kostenlose Open-Source-Anwendung zum Übersetzen ganzer Bücher, Untertitel und Dokumente – entweder mit einem lokalen Modell über [Ollama](https://ollama.com) oder mit einem Cloud-LLM-Anbieter. Die App gibt es als herunterladbare Desktop-Anwendung für Windows und macOS, als browserbasierte Web-UI (`localhost:5000`) für alle, die sie aus dem Quellcode oder via Docker betreiben, sowie als Kommandozeilen-Tool für skriptgesteuerte oder Batch-Nutzung. Dieser Test behandelt, was die App tatsächlich leistet, wie man sie installiert, was sie kostet und für wen sie geeignet ist. Dieser Test ergänzt den TranslateBooksWithLLMs-Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/de/power-local-llm/local-llm-software-directory).',
+    intro: 'TranslateBooksWithLLMs ([github.com/hydropix/TranslateBooksWithLLMs](https://github.com/hydropix/TranslateBooksWithLLMs)), oft „TBL" abgekürzt, ist eine kostenlose Open-Source-Anwendung zum Übersetzen ganzer Bücher, Untertitel und Dokumente – entweder mit einem lokalen Modell über [Ollama](https://ollama.com) oder mit einem Cloud-LLM-Anbieter. Die App gibt es als herunterladbare Desktop-Anwendung für Windows und macOS, als browserbasierte Web-UI (`localhost:5000`) für alle, die sie aus dem Quellcode oder via Docker betreiben, sowie als Kommandozeilen-Tool für skriptgesteuerte oder Batch-Nutzung. Dieser Test behandelt, was die App tatsächlich leistet, wie man sie installiert, was sie kostet und für wen sie geeignet ist. Dieser Test ergänzt den TranslateBooksWithLLMs-Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/de/directory).',
     metaDescription: 'TranslateBooksWithLLMs (TBL) ist eine kostenlose Open-Source-App, die ganze Bücher, EPUBs und Untertitel mit einem lokalen Ollama-Modell oder Cloud-LLMs übersetzt. Installation und Preise für 2026.',
     readTime: '11 Min. Lesezeit',
     targetKeywords: [
@@ -498,7 +498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Khoj', 'Best known for': 'Selbst hostbares, quelloffenes persönliches KI-„zweites Gehirn", das Fragen über die eigenen Dokumente beantwortet', 'Link': '[Khoj-Test](/de/power-local-llm/khoj-ai-second-brain-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Weder Karakeep noch Khoj übersetzen Dokumente – sie sind hier als die auf PromptQuorum bereits getesteten, lokal-LLM-gestützten, dokumentenorientierten Produktivitätswerkzeuge aufgeführt, die am nächsten liegen, nicht als direkte, funktionsgleiche Alternativen zu TranslateBooksWithLLMs. Siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog, falls später ein näherer Treffer hinzukommt.',
+        note: 'Weder Karakeep noch Khoj übersetzen Dokumente – sie sind hier als die auf PromptQuorum bereits getesteten, lokal-LLM-gestützten, dokumentenorientierten Produktivitätswerkzeuge aufgeführt, die am nächsten liegen, nicht als direkte, funktionsgleiche Alternativen zu TranslateBooksWithLLMs. Siehe das [Local LLM Software Directory](/de/directory) für den vollständigen Katalog, falls später ein näherer Treffer hinzukommt.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -559,7 +559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Karakeep-Test](/de/power-local-llm/karakeep-review) – eine selbst hostbare, KI-gestützte Lesezeichen- und Notiz-App zum Vergleich als weiteres lokal-LLM-gestütztes Dokumentenwerkzeug.',
           '[Khoj-Test](/de/power-local-llm/khoj-ai-second-brain-review) – ein selbst hostbarer persönlicher KI-Assistent, der eigene Dokumente indiziert und Fragen dazu beantwortet.',
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) – der vollständige Katalog lokaler KI-Werkzeuge, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von TranslateBooksWithLLMs.',
+          '[Local LLM Software Directory 2026](/de/directory) – der vollständige Katalog lokaler KI-Werkzeuge, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von TranslateBooksWithLLMs.',
         ],
       },
     },
@@ -575,7 +575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'TranslateBooksWithLLMs',
     title: 'Avis TranslateBooksWithLLMs : traduire des livres entiers avec un LLM local ou cloud',
     seoTitle: 'Avis TranslateBooksWithLLMs 2026 : appli de traduction de livres',
-    intro: 'TranslateBooksWithLLMs ([github.com/hydropix/TranslateBooksWithLLMs](https://github.com/hydropix/TranslateBooksWithLLMs)), souvent abrégé « TBL », est une application open source gratuite pour traduire des livres entiers, des sous-titres et des documents, avec un modèle local via [Ollama](https://ollama.com) ou un fournisseur de LLM cloud. Elle existe sous forme d\'application de bureau téléchargeable pour Windows et macOS, d\'interface web dans le navigateur (`localhost:5000`) pour ceux qui l\'exécutent depuis les sources ou via Docker, et d\'interface en ligne de commande pour un usage scripté ou par lots. Cet avis couvre ce que l\'outil fait réellement, comment l\'installer, son coût, et à qui il convient. Cet avis complète la fiche de TranslateBooksWithLLMs dans le [répertoire de logiciels LLM locaux](https://www.promptquorum.com/fr/power-local-llm/local-llm-software-directory).',
+    intro: 'TranslateBooksWithLLMs ([github.com/hydropix/TranslateBooksWithLLMs](https://github.com/hydropix/TranslateBooksWithLLMs)), souvent abrégé « TBL », est une application open source gratuite pour traduire des livres entiers, des sous-titres et des documents, avec un modèle local via [Ollama](https://ollama.com) ou un fournisseur de LLM cloud. Elle existe sous forme d\'application de bureau téléchargeable pour Windows et macOS, d\'interface web dans le navigateur (`localhost:5000`) pour ceux qui l\'exécutent depuis les sources ou via Docker, et d\'interface en ligne de commande pour un usage scripté ou par lots. Cet avis couvre ce que l\'outil fait réellement, comment l\'installer, son coût, et à qui il convient. Cet avis complète la fiche de TranslateBooksWithLLMs dans le [répertoire de logiciels LLM locaux](https://www.promptquorum.com/fr/directory).',
     metaDescription: 'TranslateBooksWithLLMs (TBL) est une appli open source gratuite qui traduit des livres entiers, des EPUB et des sous-titres avec un modèle Ollama local ou des LLM cloud. Installation et tarifs 2026.',
     readTime: '11 min de lecture',
     targetKeywords: [
@@ -779,7 +779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Khoj', 'Best known for': 'Assistant IA personnel « second cerveau » auto-hébergeable et open source qui répond aux questions sur vos propres documents', 'Link': '[Avis Khoj](/fr/power-local-llm/khoj-ai-second-brain-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Ni Karakeep ni Khoj ne traduisent de documents — ils sont inclus ici comme les outils de productivité orientés documents et propulsés par un LLM local les plus proches déjà testés sur PromptQuorum, et non comme des alternatives directes et équivalentes en fonctionnalités à TranslateBooksWithLLMs. Voir le [répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet si une correspondance plus proche est ajoutée ultérieurement.',
+        note: 'Ni Karakeep ni Khoj ne traduisent de documents — ils sont inclus ici comme les outils de productivité orientés documents et propulsés par un LLM local les plus proches déjà testés sur PromptQuorum, et non comme des alternatives directes et équivalentes en fonctionnalités à TranslateBooksWithLLMs. Voir le [répertoire de logiciels LLM locaux](/fr/directory) pour le catalogue complet si une correspondance plus proche est ajoutée ultérieurement.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Avis Karakeep](/fr/power-local-llm/karakeep-review) — une application de favoris et notes auto-hébergeable assistée par IA, à titre de comparaison en tant qu\'autre outil de documents propulsé par un LLM local.',
           '[Avis Khoj](/fr/power-local-llm/khoj-ai-second-brain-review) — un assistant IA personnel auto-hébergeable qui indexe et répond aux questions sur vos propres documents.',
-          '[Répertoire de logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, y compris la fiche de TranslateBooksWithLLMs.',
+          '[Répertoire de logiciels LLM locaux 2026](/fr/directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, y compris la fiche de TranslateBooksWithLLMs.',
         ],
       },
     },
@@ -856,7 +856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'TranslateBooksWithLLMs',
     title: 'TranslateBooksWithLLMsレビュー: ローカルまたはクラウドLLMで書籍を丸ごと翻訳する',
     seoTitle: 'TranslateBooksWithLLMsレビュー2026: 書籍翻訳アプリ',
-    intro: 'TranslateBooksWithLLMs([github.com/hydropix/TranslateBooksWithLLMs](https://github.com/hydropix/TranslateBooksWithLLMs))は、しばしば「TBL」と略される、書籍全体、字幕、文書を[Ollama](https://ollama.com)経由のローカルモデルまたはクラウドLLMプロバイダーで翻訳できる無料のオープンソースアプリケーションです。Windows・macOS向けのダウンロード可能なデスクトップアプリ、ソースコードやDocker経由で実行するユーザー向けのブラウザベースWeb UI(`localhost:5000`)、スクリプトやバッチ処理向けのコマンドラインインターフェースとして提供されています。本レビューでは、実際の機能、インストール方法、費用、そしてどのような人に向いているかを解説します。本レビューは、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/ja/power-local-llm/local-llm-software-directory)内のTranslateBooksWithLLMsのエントリーと対をなす記事です。',
+    intro: 'TranslateBooksWithLLMs([github.com/hydropix/TranslateBooksWithLLMs](https://github.com/hydropix/TranslateBooksWithLLMs))は、しばしば「TBL」と略される、書籍全体、字幕、文書を[Ollama](https://ollama.com)経由のローカルモデルまたはクラウドLLMプロバイダーで翻訳できる無料のオープンソースアプリケーションです。Windows・macOS向けのダウンロード可能なデスクトップアプリ、ソースコードやDocker経由で実行するユーザー向けのブラウザベースWeb UI(`localhost:5000`)、スクリプトやバッチ処理向けのコマンドラインインターフェースとして提供されています。本レビューでは、実際の機能、インストール方法、費用、そしてどのような人に向いているかを解説します。本レビューは、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/ja/directory)内のTranslateBooksWithLLMsのエントリーと対をなす記事です。',
     metaDescription: 'TranslateBooksWithLLMs(TBL)は、ローカルのOllamaモデルまたはクラウドLLMで書籍全体、EPUB、字幕を翻訳できる無料のオープンソースアプリです。2026年のインストール方法と料金を解説。',
     readTime: '読了時間11分',
     targetKeywords: [
@@ -1060,7 +1060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Khoj', 'Best known for': '自分の文書について質問に答える、セルフホスト可能でオープンソースの「セカンドブレイン」型AIパーソナルアシスタント', 'Link': '[Khojレビュー](/ja/power-local-llm/khoj-ai-second-brain-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'KarakeepもKhojも文書を翻訳するツールではありません。ここでは、PromptQuorumで既にレビューされているローカルLLM搭載の文書志向な生産性ツールの中で最も近いものとして掲載しているのであり、TranslateBooksWithLLMsの機能面での直接的な代替候補としてではありません。今後より近い候補が追加された場合に備え、完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'KarakeepもKhojも文書を翻訳するツールではありません。ここでは、PromptQuorumで既にレビューされているローカルLLM搭載の文書志向な生産性ツールの中で最も近いものとして掲載しているのであり、TranslateBooksWithLLMsの機能面での直接的な代替候補としてではありません。今後より近い候補が追加された場合に備え、完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1121,7 +1121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Karakeepレビュー](/ja/power-local-llm/karakeep-review) — 比較対象となる、もう一つのローカルLLM搭載文書ツールであるセルフホスト可能なAI支援ブックマーク・メモアプリ。',
           '[Khojレビュー](/ja/power-local-llm/khoj-ai-second-brain-review) — 自分の文書を索引化し質問に答える、セルフホスト可能なパーソナルAIアシスタント。',
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — TranslateBooksWithLLMsのディレクトリエントリーを含む、この記事が属するローカルAIツールの完全なカタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — TranslateBooksWithLLMsのディレクトリエントリーを含む、この記事が属するローカルAIツールの完全なカタログ。',
         ],
       },
     },
@@ -1137,7 +1137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'TranslateBooksWithLLMs',
     title: 'TranslateBooksWithLLMs评测：用本地或云端LLM翻译整本书',
     seoTitle: 'TranslateBooksWithLLMs评测2026：图书翻译应用',
-    intro: 'TranslateBooksWithLLMs([github.com/hydropix/TranslateBooksWithLLMs](https://github.com/hydropix/TranslateBooksWithLLMs))常被简称为"TBL"，是一款免费开源应用，可通过[Ollama](https://ollama.com)本地模型或云端LLM提供商翻译整本书、字幕和文档。它提供适用于Windows和macOS的可下载桌面应用、供从源码或Docker运行的用户使用的基于浏览器的Web界面(`localhost:5000`)，以及用于脚本化或批量使用的命令行界面。本评测介绍它实际能做什么、如何安装、费用如何，以及适合哪些人使用。本评测是TranslateBooksWithLLMs在[本地LLM软件目录](https://www.promptquorum.com/zh/power-local-llm/local-llm-software-directory)中条目的配套文章。',
+    intro: 'TranslateBooksWithLLMs([github.com/hydropix/TranslateBooksWithLLMs](https://github.com/hydropix/TranslateBooksWithLLMs))常被简称为"TBL"，是一款免费开源应用，可通过[Ollama](https://ollama.com)本地模型或云端LLM提供商翻译整本书、字幕和文档。它提供适用于Windows和macOS的可下载桌面应用、供从源码或Docker运行的用户使用的基于浏览器的Web界面(`localhost:5000`)，以及用于脚本化或批量使用的命令行界面。本评测介绍它实际能做什么、如何安装、费用如何，以及适合哪些人使用。本评测是TranslateBooksWithLLMs在[本地LLM软件目录](https://www.promptquorum.com/zh/directory)中条目的配套文章。',
     metaDescription: 'TranslateBooksWithLLMs(TBL)是一款免费开源应用，可用本地Ollama模型或云端LLM翻译整本书、EPUB和字幕。了解2026年的安装方法与价格。',
     readTime: '阅读时间11分钟',
     targetKeywords: [
@@ -1341,7 +1341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Khoj', 'Best known for': '一款可自托管、开源的个人AI"第二大脑"，能就你自己的文档回答问题', 'Link': '[Khoj评测](/zh/power-local-llm/khoj-ai-second-brain-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Karakeep和Khoj都不翻译文档——它们被列在此处，是因为它们是PromptQuorum已评测的、以文档为核心的本地LLM驱动生产力工具中最接近的选项，而不是TranslateBooksWithLLMs功能对等的直接替代品。如果日后有更接近的选项加入，请查看[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)获取完整目录。',
+        note: 'Karakeep和Khoj都不翻译文档——它们被列在此处，是因为它们是PromptQuorum已评测的、以文档为核心的本地LLM驱动生产力工具中最接近的选项，而不是TranslateBooksWithLLMs功能对等的直接替代品。如果日后有更接近的选项加入，请查看[本地LLM软件目录](/zh/directory)获取完整目录。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1402,7 +1402,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Karakeep评测](/zh/power-local-llm/karakeep-review) ——一款可自托管、具备AI辅助功能的书签与笔记应用，作为另一款本地LLM驱动文档工具的对比参考。',
           '[Khoj评测](/zh/power-local-llm/khoj-ai-second-brain-review) ——一款可自托管的个人AI助手，能为你自己的文档建立索引并回答相关问题。',
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) ——本文所属的本地AI工具完整目录，其中包含TranslateBooksWithLLMs的目录条目。',
+          '[本地LLM软件目录2026](/zh/directory) ——本文所属的本地AI工具完整目录，其中包含TranslateBooksWithLLMs的目录条目。',
         ],
       },
     },
@@ -1418,7 +1418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'TranslateBooksWithLLMs',
     title: 'Análisis de TranslateBooksWithLLMs: traduce libros completos con un LLM local o en la nube',
     seoTitle: 'Análisis de TranslateBooksWithLLMs 2026: app de traducción de libros',
-    intro: 'TranslateBooksWithLLMs ([github.com/hydropix/TranslateBooksWithLLMs](https://github.com/hydropix/TranslateBooksWithLLMs)), a menudo abreviado como "TBL", es una aplicación gratuita y de código abierto para traducir libros completos, subtítulos y documentos usando un modelo local a través de [Ollama](https://ollama.com) o un proveedor de LLM en la nube. Está disponible como aplicación de escritorio descargable para Windows y macOS, como interfaz web en el navegador (`localhost:5000`) para quienes la ejecutan desde el código fuente o con Docker, y como interfaz de línea de comandos para uso mediante scripts o por lotes. Este análisis cubre lo que hace realmente, cómo instalarla, cuánto cuesta y a quién le conviene. Este análisis es un complemento de la entrada de TranslateBooksWithLLMs en el [directorio de software de LLM local](https://www.promptquorum.com/es/power-local-llm/local-llm-software-directory).',
+    intro: 'TranslateBooksWithLLMs ([github.com/hydropix/TranslateBooksWithLLMs](https://github.com/hydropix/TranslateBooksWithLLMs)), a menudo abreviado como "TBL", es una aplicación gratuita y de código abierto para traducir libros completos, subtítulos y documentos usando un modelo local a través de [Ollama](https://ollama.com) o un proveedor de LLM en la nube. Está disponible como aplicación de escritorio descargable para Windows y macOS, como interfaz web en el navegador (`localhost:5000`) para quienes la ejecutan desde el código fuente o con Docker, y como interfaz de línea de comandos para uso mediante scripts o por lotes. Este análisis cubre lo que hace realmente, cómo instalarla, cuánto cuesta y a quién le conviene. Este análisis es un complemento de la entrada de TranslateBooksWithLLMs en el [directorio de software de LLM local](https://www.promptquorum.com/es/directory).',
     metaDescription: 'TranslateBooksWithLLMs (TBL) es una app gratuita y de código abierto que traduce libros completos, EPUB y subtítulos con un modelo Ollama local o LLM en la nube. Instalación y precios para 2026.',
     readTime: '11 min de lectura',
     targetKeywords: [
@@ -1622,7 +1622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Khoj', 'Best known for': 'Asistente de IA personal "segundo cerebro" autoalojable y de código abierto que responde preguntas sobre tus propios documentos', 'Link': '[Análisis de Khoj](/es/power-local-llm/khoj-ai-second-brain-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Ni Karakeep ni Khoj traducen documentos — se incluyen aquí como las herramientas de productividad orientadas a documentos y impulsadas por LLM local ya analizadas en PromptQuorum que más se acercan, no como alternativas directas y equivalentes en funciones a TranslateBooksWithLLMs. Consulta el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para ver el catálogo completo si más adelante se añade una coincidencia más cercana.',
+        note: 'Ni Karakeep ni Khoj traducen documentos — se incluyen aquí como las herramientas de productividad orientadas a documentos y impulsadas por LLM local ya analizadas en PromptQuorum que más se acercan, no como alternativas directas y equivalentes en funciones a TranslateBooksWithLLMs. Consulta el [directorio de software de LLM local](/es/directory) para ver el catálogo completo si más adelante se añade una coincidencia más cercana.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1683,7 +1683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Análisis de Karakeep](/es/power-local-llm/karakeep-review) — una app de marcadores y notas autoalojable y asistida por IA, para comparar como otra herramienta de documentos impulsada por LLM local.',
           '[Análisis de Khoj](/es/power-local-llm/khoj-ai-second-brain-review) — un asistente de IA personal autoalojable que indexa y responde preguntas sobre tus propios documentos.',
-          '[Directorio de software de LLM local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de directorio de TranslateBooksWithLLMs.',
+          '[Directorio de software de LLM local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de directorio de TranslateBooksWithLLMs.',
         ],
       },
     },
@@ -1699,7 +1699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'TranslateBooksWithLLMs',
     title: 'Análise do TranslateBooksWithLLMs: traduza livros completos com um LLM local ou na nuvem',
     seoTitle: 'Análise do TranslateBooksWithLLMs 2026: app de tradução de livros',
-    intro: 'O TranslateBooksWithLLMs ([github.com/hydropix/TranslateBooksWithLLMs](https://github.com/hydropix/TranslateBooksWithLLMs)), muitas vezes abreviado como "TBL", é um aplicativo gratuito e de código aberto para traduzir livros completos, legendas e documentos usando um modelo local via [Ollama](https://ollama.com) ou um provedor de LLM na nuvem. Ele está disponível como aplicativo de desktop para download no Windows e macOS, como interface web no navegador (`localhost:5000`) para quem o executa a partir do código-fonte ou via Docker, e como interface de linha de comando para uso via script ou em lote. Esta análise cobre o que ele realmente faz, como instalá-lo, quanto custa e para quem ele é indicado. Esta análise complementa a entrada do TranslateBooksWithLLMs no [diretório de software de LLM local](https://www.promptquorum.com/pt/power-local-llm/local-llm-software-directory).',
+    intro: 'O TranslateBooksWithLLMs ([github.com/hydropix/TranslateBooksWithLLMs](https://github.com/hydropix/TranslateBooksWithLLMs)), muitas vezes abreviado como "TBL", é um aplicativo gratuito e de código aberto para traduzir livros completos, legendas e documentos usando um modelo local via [Ollama](https://ollama.com) ou um provedor de LLM na nuvem. Ele está disponível como aplicativo de desktop para download no Windows e macOS, como interface web no navegador (`localhost:5000`) para quem o executa a partir do código-fonte ou via Docker, e como interface de linha de comando para uso via script ou em lote. Esta análise cobre o que ele realmente faz, como instalá-lo, quanto custa e para quem ele é indicado. Esta análise complementa a entrada do TranslateBooksWithLLMs no [diretório de software de LLM local](https://www.promptquorum.com/pt/directory).',
     metaDescription: 'O TranslateBooksWithLLMs (TBL) é um app gratuito e de código aberto que traduz livros completos, EPUBs e legendas com um modelo Ollama local ou LLMs na nuvem. Instalação e preços para 2026.',
     readTime: '11 min de leitura',
     targetKeywords: [
@@ -1903,7 +1903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Khoj', 'Best known for': 'Assistente de IA pessoal "segundo cérebro" auto-hospedável e de código aberto que responde perguntas sobre seus próprios documentos', 'Link': '[Análise do Khoj](/pt/power-local-llm/khoj-ai-second-brain-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Nem o Karakeep nem o Khoj traduzem documentos — eles são incluídos aqui como as ferramentas de produtividade orientadas a documentos com tecnologia de LLM local mais próximas já analisadas na PromptQuorum, não como alternativas diretas e equivalentes em recursos ao TranslateBooksWithLLMs. Consulte o [diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, caso uma correspondência mais próxima seja adicionada posteriormente.',
+        note: 'Nem o Karakeep nem o Khoj traduzem documentos — eles são incluídos aqui como as ferramentas de produtividade orientadas a documentos com tecnologia de LLM local mais próximas já analisadas na PromptQuorum, não como alternativas diretas e equivalentes em recursos ao TranslateBooksWithLLMs. Consulte o [diretório de software de LLM local](/pt/directory) para o catálogo completo, caso uma correspondência mais próxima seja adicionada posteriormente.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1964,7 +1964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Análise do Karakeep](/pt/power-local-llm/karakeep-review) — um app de favoritos e notas auto-hospedável assistido por IA, para comparação como outra ferramenta de documentos com tecnologia de LLM local.',
           '[Análise do Khoj](/pt/power-local-llm/khoj-ai-second-brain-review) — um assistente de IA pessoal auto-hospedável que indexa e responde perguntas sobre seus próprios documentos.',
-          '[Diretório de software de LLM local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada de diretório do TranslateBooksWithLLMs.',
+          '[Diretório de software de LLM local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada de diretório do TranslateBooksWithLLMs.',
         ],
       },
     },
@@ -1980,7 +1980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'TranslateBooksWithLLMs',
     title: 'مراجعة TranslateBooksWithLLMs: ترجمة كتب كاملة باستخدام نموذج لغوي محلي أو سحابي',
     seoTitle: 'مراجعة TranslateBooksWithLLMs 2026: تطبيق ترجمة الكتب',
-    intro: 'TranslateBooksWithLLMs ([github.com/hydropix/TranslateBooksWithLLMs](https://github.com/hydropix/TranslateBooksWithLLMs))، الذي يُختصر غالبًا بـ"TBL"، هو تطبيق مجاني ومفتوح المصدر لترجمة الكتب الكاملة والترجمات المصاحبة والمستندات، إما باستخدام نموذج محلي عبر [Ollama](https://ollama.com) أو موفر نموذج لغوي كبير سحابي. يتوفر كتطبيق سطح مكتب قابل للتنزيل على Windows وmacOS، وواجهة ويب تعمل عبر المتصفح (`localhost:5000`) لمن يشغّلونه من الكود المصدري أو عبر Docker، وواجهة سطر أوامر للاستخدام النصي أو الدُفعي. تتناول هذه المراجعة ما يفعله التطبيق فعليًا، وكيفية تثبيته، وتكلفته، ولمن يناسب. هذه المراجعة مكمّلة لمدخل TranslateBooksWithLLMs في [دليل برمجيات النماذج اللغوية المحلية](https://www.promptquorum.com/ar/power-local-llm/local-llm-software-directory).',
+    intro: 'TranslateBooksWithLLMs ([github.com/hydropix/TranslateBooksWithLLMs](https://github.com/hydropix/TranslateBooksWithLLMs))، الذي يُختصر غالبًا بـ"TBL"، هو تطبيق مجاني ومفتوح المصدر لترجمة الكتب الكاملة والترجمات المصاحبة والمستندات، إما باستخدام نموذج محلي عبر [Ollama](https://ollama.com) أو موفر نموذج لغوي كبير سحابي. يتوفر كتطبيق سطح مكتب قابل للتنزيل على Windows وmacOS، وواجهة ويب تعمل عبر المتصفح (`localhost:5000`) لمن يشغّلونه من الكود المصدري أو عبر Docker، وواجهة سطر أوامر للاستخدام النصي أو الدُفعي. تتناول هذه المراجعة ما يفعله التطبيق فعليًا، وكيفية تثبيته، وتكلفته، ولمن يناسب. هذه المراجعة مكمّلة لمدخل TranslateBooksWithLLMs في [دليل برمجيات النماذج اللغوية المحلية](https://www.promptquorum.com/ar/directory).',
     metaDescription: 'TranslateBooksWithLLMs (TBL) هو تطبيق مجاني ومفتوح المصدر يترجم كتبًا كاملة وملفات EPUB وترجمات مصاحبة باستخدام نموذج Ollama محلي أو نماذج لغوية سحابية. التثبيت والأسعار لعام 2026.',
     readTime: 'وقت القراءة 11 دقيقة',
     targetKeywords: [
@@ -2184,7 +2184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Khoj', 'Best known for': 'مساعد ذكاء اصطناعي شخصي "دماغ ثانٍ" قابل للاستضافة الذاتية ومفتوح المصدر يجيب عن أسئلة حول مستنداتك الخاصة', 'Link': '[مراجعة Khoj](/ar/power-local-llm/khoj-ai-second-brain-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'لا يقوم Karakeep ولا Khoj بترجمة المستندات — أُدرِجا هنا باعتبارهما أقرب أدوات إنتاجية موجهة للمستندات وتعمل بنماذج لغوية كبيرة محلية سبق مراجعتها على PromptQuorum، وليس كبدائل مباشرة ومكافئة من حيث الميزات لـTranslateBooksWithLLMs. راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل إذا أُضيف تطابق أقرب لاحقًا.',
+        note: 'لا يقوم Karakeep ولا Khoj بترجمة المستندات — أُدرِجا هنا باعتبارهما أقرب أدوات إنتاجية موجهة للمستندات وتعمل بنماذج لغوية كبيرة محلية سبق مراجعتها على PromptQuorum، وليس كبدائل مباشرة ومكافئة من حيث الميزات لـTranslateBooksWithLLMs. راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) للاطلاع على الكتالوج الكامل إذا أُضيف تطابق أقرب لاحقًا.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2245,7 +2245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[مراجعة Karakeep](/ar/power-local-llm/karakeep-review) — تطبيق إشارات مرجعية وملاحظات قابل للاستضافة الذاتية بمساعدة الذكاء الاصطناعي، للمقارنة كأداة مستندات أخرى تعمل بنموذج لغوي كبير محلي.',
           '[مراجعة Khoj](/ar/power-local-llm/khoj-ai-second-brain-review) — مساعد ذكاء اصطناعي شخصي قابل للاستضافة الذاتية يفهرس مستنداتك الخاصة ويجيب عن أسئلة حولها.',
-          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك مدخل دليل TranslateBooksWithLLMs.',
+          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك مدخل دليل TranslateBooksWithLLMs.',
         ],
       },
     },
@@ -2261,7 +2261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'TranslateBooksWithLLMs',
     title: 'TranslateBooksWithLLMs 리뷰: 로컬 또는 클라우드 LLM으로 책 한 권을 통째로 번역하기',
     seoTitle: 'TranslateBooksWithLLMs 리뷰 2026: 도서 번역 앱',
-    intro: 'TranslateBooksWithLLMs([github.com/hydropix/TranslateBooksWithLLMs](https://github.com/hydropix/TranslateBooksWithLLMs))는 흔히 "TBL"로 줄여 부르며, [Ollama](https://ollama.com)를 통한 로컬 모델 또는 클라우드 LLM 제공업체를 사용해 책 전체, 자막, 문서를 번역할 수 있는 무료 오픈소스 애플리케이션입니다. Windows·macOS용 다운로드 가능한 데스크톱 앱, 소스 코드나 Docker로 실행하는 사용자를 위한 브라우저 기반 웹 UI(`localhost:5000`), 스크립트 또는 배치 사용을 위한 명령줄 인터페이스로 제공됩니다. 이 리뷰에서는 실제로 무엇을 할 수 있는지, 설치 방법, 비용, 그리고 누구에게 적합한지를 다룹니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/ko/power-local-llm/local-llm-software-directory)에 있는 TranslateBooksWithLLMs 항목과 짝을 이루는 글입니다.',
+    intro: 'TranslateBooksWithLLMs([github.com/hydropix/TranslateBooksWithLLMs](https://github.com/hydropix/TranslateBooksWithLLMs))는 흔히 "TBL"로 줄여 부르며, [Ollama](https://ollama.com)를 통한 로컬 모델 또는 클라우드 LLM 제공업체를 사용해 책 전체, 자막, 문서를 번역할 수 있는 무료 오픈소스 애플리케이션입니다. Windows·macOS용 다운로드 가능한 데스크톱 앱, 소스 코드나 Docker로 실행하는 사용자를 위한 브라우저 기반 웹 UI(`localhost:5000`), 스크립트 또는 배치 사용을 위한 명령줄 인터페이스로 제공됩니다. 이 리뷰에서는 실제로 무엇을 할 수 있는지, 설치 방법, 비용, 그리고 누구에게 적합한지를 다룹니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/ko/directory)에 있는 TranslateBooksWithLLMs 항목과 짝을 이루는 글입니다.',
     metaDescription: 'TranslateBooksWithLLMs(TBL)는 로컬 Ollama 모델이나 클라우드 LLM으로 책 전체, EPUB, 자막을 번역할 수 있는 무료 오픈소스 앱입니다. 2026년 기준 설치 방법과 가격을 소개합니다.',
     readTime: '읽는 시간 11분',
     targetKeywords: [
@@ -2465,7 +2465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Khoj', 'Best known for': '자신의 문서에 대한 질문에 답하는 자체 호스팅 가능한 오픈소스 개인 AI "제2의 두뇌"', 'Link': '[Khoj 리뷰](/ko/power-local-llm/khoj-ai-second-brain-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Karakeep와 Khoj 모두 문서를 번역하지는 않습니다. 이 두 도구는 PromptQuorum에서 이미 리뷰한, 문서를 중심으로 한 로컬 LLM 기반 생산성 도구 중 가장 가까운 것으로 여기에 포함되었을 뿐, TranslateBooksWithLLMs와 기능적으로 동등한 직접적인 대안은 아닙니다. 이후 더 근접한 대상이 추가될 경우를 대비해 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: 'Karakeep와 Khoj 모두 문서를 번역하지는 않습니다. 이 두 도구는 PromptQuorum에서 이미 리뷰한, 문서를 중심으로 한 로컬 LLM 기반 생산성 도구 중 가장 가까운 것으로 여기에 포함되었을 뿐, TranslateBooksWithLLMs와 기능적으로 동등한 직접적인 대안은 아닙니다. 이후 더 근접한 대상이 추가될 경우를 대비해 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2526,7 +2526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Karakeep 리뷰](/ko/power-local-llm/karakeep-review) — 또 다른 로컬 LLM 기반 문서 도구와 비교해 볼 수 있는, 자체 호스팅 가능한 AI 지원 북마크·메모 앱.',
           '[Khoj 리뷰](/ko/power-local-llm/khoj-ai-second-brain-review) — 자신의 문서를 색인화하고 관련 질문에 답해 주는 자체 호스팅 가능한 개인 AI 어시스턴트.',
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — TranslateBooksWithLLMs의 디렉터리 항목을 포함해, 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — TranslateBooksWithLLMs의 디렉터리 항목을 포함해, 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },

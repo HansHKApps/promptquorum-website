@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository ([github.com/Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily)) shows roughly 30,898 stars as of September 2026',
         ],
         callouts: [
-          { type: 'note', text: "This review is the deep-dive companion to Meetily's entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Meetily compares at a glance to dozens of other local AI tools." },
+          { type: 'note', text: "This review is the deep-dive companion to Meetily's entry in the [Local LLM Software Directory](/directory) — see that page for how Meetily compares at a glance to dozens of other local AI tools." },
         ],
       },
       overview: {
@@ -199,14 +199,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'meetily-competitors',
         title: 'Meetily vs. Other Local Speech Tools',
-        content: "Meetily sits inside a broader local speech-to-text and personal-assistant space. Here is how it compares to other tools in that space — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, and the dedicated [Meetily vs. MacWhisper comparison](#meetily-vs-macwhisper) above for the closest head-to-head.",
+        content: "Meetily sits inside a broader local speech-to-text and personal-assistant space. Here is how it compares to other tools in that space — see the [Local LLM Software Directory](/directory) for the full catalog, and the dedicated [Meetily vs. MacWhisper comparison](#meetily-vs-macwhisper) above for the closest head-to-head.",
         items: [
           '**[MacWhisper](/power-local-llm/macwhisper-review)** — a macOS-only app for transcribing existing audio/video files and live dictation, built on the same family of Whisper and Parakeet models Meetily uses; see the dedicated comparison section above.',
           "**[whisper.cpp](/power-local-llm/whisper-cpp-review)** — the open-source C/C++ inference engine that powers Whisper transcription across many local tools, including the engine family Meetily's own transcription is built on.",
           '**[Faster Whisper](/power-local-llm/faster-whisper-review)** — another local Whisper-based transcription engine, optimized for speed via CTranslate2; a relevant option if you only need transcription without the live-meeting-capture and summarization layer.',
           '**[Voxa](/power-local-llm/voxa-review)** — a local voice assistant in the broader personal-assistants category; a relevant comparison if you want a local AI assistant beyond meeting notes specifically.',
         ],
-        note: "This is not an exhaustive list — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Meetily's own directory entry.",
+        note: "This is not an exhaustive list — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Meetily's own directory entry.",
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -262,7 +262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          "[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Meetily's directory entry.",
+          "[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Meetily's directory entry.",
           '[MacWhisper Review](/power-local-llm/macwhisper-review) — a macOS-only local transcription app for existing audio/video files, compared directly to Meetily above.',
           "[whisper.cpp Review](/power-local-llm/whisper-cpp-review) — the open-source inference engine underlying Meetily's own transcription.",
           '[Voxa Review](/power-local-llm/voxa-review) — a local voice assistant in the broader personal-assistants category.',
@@ -341,7 +341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Das GitHub-Repository ([github.com/Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily)) zeigt Stand September 2026 rund 30.898 Sterne',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Meetilys Eintrag im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie Meetily im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Meetilys Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie Meetily im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -467,14 +467,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'meetily-competitors',
         title: 'Meetily vs. andere lokale Speech-Tools',
-        content: 'Meetily befindet sich in einem breiteren Feld lokaler Speech-to-Text- und Personal-Assistant-Tools. So schneidet es im Vergleich zu anderen Tools in diesem Bereich ab — siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog und den dedizierten [Meetily-vs.-MacWhisper-Vergleich](#meetily-vs-macwhisper) oben für das direkteste Duell.',
+        content: 'Meetily befindet sich in einem breiteren Feld lokaler Speech-to-Text- und Personal-Assistant-Tools. So schneidet es im Vergleich zu anderen Tools in diesem Bereich ab — siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen Katalog und den dedizierten [Meetily-vs.-MacWhisper-Vergleich](#meetily-vs-macwhisper) oben für das direkteste Duell.',
         items: [
           '**[MacWhisper](/de/power-local-llm/macwhisper-review)** — eine nur unter macOS verfügbare App zur Transkription bestehender Audio-/Videodateien und Live-Diktat, gebaut auf derselben Familie von Whisper- und Parakeet-Modellen, die auch Meetily nutzt; siehe den dedizierten Vergleichsabschnitt oben.',
           '**[whisper.cpp](/de/power-local-llm/whisper-cpp-review)** — die quelloffene C/C++-Inferenz-Engine, die Whisper-Transkription in vielen lokalen Tools antreibt, einschließlich der Engine-Familie, auf der Meetilys eigene Transkription basiert.',
           '**[Faster Whisper](/de/power-local-llm/faster-whisper-review)** — eine weitere lokale, Whisper-basierte Transkriptions-Engine, auf Geschwindigkeit optimiert über CTranslate2; eine relevante Option, wenn Sie nur Transkription ohne die Live-Meeting-Erfassungs- und Zusammenfassungsschicht benötigen.',
           '**[Voxa](/de/power-local-llm/voxa-review)** — ein lokaler Sprachassistent in der breiteren Kategorie Personal Assistants; ein relevanter Vergleich, wenn Sie einen lokalen KI-Assistenten über Meeting-Notizen hinaus suchen.',
         ],
-        note: 'Dies ist keine erschöpfende Liste — siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Meetilys eigenem Verzeichniseintrag.',
+        note: 'Dies ist keine erschöpfende Liste — siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Meetilys eigenem Verzeichniseintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -530,7 +530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Lokales KI-Software-Verzeichnis 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Meetilys Verzeichniseintrag.',
+          '[Lokales KI-Software-Verzeichnis 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Meetilys Verzeichniseintrag.',
           '[MacWhisper Review](/de/power-local-llm/macwhisper-review) — eine nur unter macOS verfügbare lokale Transkriptions-App für bestehende Audio-/Videodateien, oben direkt mit Meetily verglichen.',
           '[whisper.cpp Review](/de/power-local-llm/whisper-cpp-review) — die quelloffene Inferenz-Engine, auf der Meetilys eigene Transkription basiert.',
           '[Voxa Review](/de/power-local-llm/voxa-review) — ein lokaler Sprachassistent in der breiteren Kategorie Personal Assistants.',
@@ -609,7 +609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub ([github.com/Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily)) affiche environ 30 898 étoiles en septembre 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Meetily dans le [répertoire des logiciels IA locaux](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment Meetily se compare rapidement à des dizaines d\'autres outils IA locaux.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Meetily dans le [répertoire des logiciels IA locaux](/fr/directory) — consultez cette page pour voir comment Meetily se compare rapidement à des dizaines d\'autres outils IA locaux.' },
         ],
       },
       overview: {
@@ -735,14 +735,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'meetily-competitors',
         title: 'Meetily vs. autres outils vocaux locaux',
-        content: 'Meetily se situe dans un espace plus large d\'outils locaux de reconnaissance vocale et d\'assistants personnels. Voici comment il se compare à d\'autres outils de cet espace — consultez le [répertoire des logiciels IA locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, et le [comparatif dédié Meetily vs. MacWhisper](#meetily-vs-macwhisper) ci-dessus pour le duel le plus direct.',
+        content: 'Meetily se situe dans un espace plus large d\'outils locaux de reconnaissance vocale et d\'assistants personnels. Voici comment il se compare à d\'autres outils de cet espace — consultez le [répertoire des logiciels IA locaux](/fr/directory) pour le catalogue complet, et le [comparatif dédié Meetily vs. MacWhisper](#meetily-vs-macwhisper) ci-dessus pour le duel le plus direct.',
         items: [
           '**[MacWhisper](/fr/power-local-llm/macwhisper-review)** — une application réservée à macOS pour transcrire des fichiers audio/vidéo existants et dicter en direct, construite sur la même famille de modèles Whisper et Parakeet que Meetily ; voir le comparatif dédié ci-dessus.',
           '**[whisper.cpp](/fr/power-local-llm/whisper-cpp-review)** — le moteur d\'inférence open source en C/C++ qui alimente la transcription Whisper dans de nombreux outils locaux, y compris la famille de moteurs sur laquelle repose la propre transcription de Meetily.',
           '**[Faster Whisper](/fr/power-local-llm/faster-whisper-review)** — un autre moteur de transcription local basé sur Whisper, optimisé pour la vitesse via CTranslate2 ; une option pertinente si vous n\'avez besoin que de transcription, sans la couche de capture de réunion en direct et de résumé.',
           '**[Voxa](/fr/power-local-llm/voxa-review)** — un assistant vocal local dans la catégorie plus large des assistants personnels ; un comparatif pertinent si vous cherchez un assistant IA local au-delà des seules notes de réunion.',
         ],
-        note: 'Cette liste n\'est pas exhaustive — consultez le [répertoire des logiciels IA locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de Meetily.',
+        note: 'Cette liste n\'est pas exhaustive — consultez le [répertoire des logiciels IA locaux](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de Meetily.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -798,7 +798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'À lire aussi',
         items: [
-          '[Répertoire des logiciels IA locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils IA locaux auquel appartient cet article, incluant la fiche de Meetily.',
+          '[Répertoire des logiciels IA locaux 2026](/fr/directory) — le catalogue complet des outils IA locaux auquel appartient cet article, incluant la fiche de Meetily.',
           '[Avis MacWhisper](/fr/power-local-llm/macwhisper-review) — une application de transcription locale réservée à macOS pour les fichiers audio/vidéo existants, comparée directement à Meetily ci-dessus.',
           '[Avis whisper.cpp](/fr/power-local-llm/whisper-cpp-review) — le moteur d\'inférence open source sur lequel repose la propre transcription de Meetily.',
           '[Avis Voxa](/fr/power-local-llm/voxa-review) — un assistant vocal local dans la catégorie plus large des assistants personnels.',
@@ -877,7 +877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHubリポジトリ（[github.com/Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily)）は2026年9月時点で約30,898スターを記録',
         ],
         callouts: [
-          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるMeetilyのエントリーを深掘りする補足コンテンツです。他の数十のローカルAIツールとの比較は同ページを参照してください。' },
+          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるMeetilyのエントリーを深掘りする補足コンテンツです。他の数十のローカルAIツールとの比較は同ページを参照してください。' },
         ],
       },
       overview: {
@@ -1003,14 +1003,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'meetily-competitors',
         title: 'Meetily vs. 他のローカル音声ツール',
-        content: 'Meetilyは、より広いローカル音声認識・パーソナルアシスタント分野に位置しています。この分野の他のツールとの比較は以下の通りです — 全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を、最も直接的な比較は上記の[Meetily vs. MacWhisper比較](#meetily-vs-macwhisper)を参照してください。',
+        content: 'Meetilyは、より広いローカル音声認識・パーソナルアシスタント分野に位置しています。この分野の他のツールとの比較は以下の通りです — 全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を、最も直接的な比較は上記の[Meetily vs. MacWhisper比較](#meetily-vs-macwhisper)を参照してください。',
         items: [
           '**[MacWhisper](/ja/power-local-llm/macwhisper-review)** — 既存の音声・動画ファイルの文字起こしとライブディクテーション向けのmacOS専用アプリで、Meetilyが使うのと同じWhisper・Parakeetモデルファミリーをベースにしている。詳細は上記の比較セクションを参照。',
           '**[whisper.cpp](/ja/power-local-llm/whisper-cpp-review)** — 多くのローカルツールでWhisper文字起こしを支えるオープンソースのC/C++推論エンジンで、Meetily自身の文字起こしが基づくエンジンファミリーでもある。',
           '**[Faster Whisper](/ja/power-local-llm/faster-whisper-review)** — CTranslate2で速度最適化された、別のローカルWhisperベースの文字起こしエンジン。ライブ会議キャプチャと要約レイヤーが不要で文字起こしだけ必要な場合の選択肢。',
           '**[Voxa](/ja/power-local-llm/voxa-review)** — より広いパーソナルアシスタント分野に属するローカル音声アシスタント。会議メモに限らずローカルAIアシスタントを探している場合の比較対象。',
         ],
-        note: 'これは網羅的なリストではありません — Meetily自身のディレクトリエントリーを含む、定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これは網羅的なリストではありません — Meetily自身のディレクトリエントリーを含む、定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1066,7 +1066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの完全なカタログ。Meetilyのディレクトリエントリーを含む。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — この記事が属する、ローカルAIツールの完全なカタログ。Meetilyのディレクトリエントリーを含む。',
           '[MacWhisperレビュー](/ja/power-local-llm/macwhisper-review) — 既存の音声・動画ファイル向けのmacOS専用ローカル文字起こしアプリ。上記でMeetilyと直接比較。',
           '[whisper.cppレビュー](/ja/power-local-llm/whisper-cpp-review) — Meetily自身の文字起こしの基盤となるオープンソース推論エンジン。',
           '[Voxaレビュー](/ja/power-local-llm/voxa-review) — より広いパーソナルアシスタント分野のローカル音声アシスタント。',
@@ -1145,7 +1145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub仓库（[github.com/Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily)）截至2026年9月显示约30,898颗星',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Meetily条目的深度补充——该页面提供了Meetily与其他数十款本地AI工具的一览式对比。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Meetily条目的深度补充——该页面提供了Meetily与其他数十款本地AI工具的一览式对比。' },
         ],
       },
       overview: {
@@ -1271,14 +1271,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'meetily-competitors',
         title: 'Meetily与其他本地语音工具对比',
-        content: 'Meetily处于更广泛的本地语音转文字和个人助手领域中。以下是它与该领域其他工具的对比——完整目录见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)，最直接的对比见上方专门的[Meetily与MacWhisper对比](#meetily-vs-macwhisper)。',
+        content: 'Meetily处于更广泛的本地语音转文字和个人助手领域中。以下是它与该领域其他工具的对比——完整目录见[本地LLM软件目录](/zh/directory)，最直接的对比见上方专门的[Meetily与MacWhisper对比](#meetily-vs-macwhisper)。',
         items: [
           '**[MacWhisper](/zh/power-local-llm/macwhisper-review)** — 一款仅限macOS的应用，用于转录已有音频/视频文件和实时听写，基于与Meetily相同的Whisper和Parakeet模型系列构建；详见上方专门的对比部分。',
           '**[whisper.cpp](/zh/power-local-llm/whisper-cpp-review)** — 一个开源的C/C++推理引擎，为许多本地工具（包括Meetily自身转录所基于的引擎系列）提供Whisper转录能力。',
           '**[Faster Whisper](/zh/power-local-llm/faster-whisper-review)** — 另一款本地的、基于Whisper的转录引擎，通过CTranslate2针对速度进行了优化；如果你只需要转录功能，不需要实时会议捕获和摘要层，这是一个相关选项。',
           '**[Voxa](/zh/power-local-llm/voxa-review)** — 更广泛个人助手类别中的一款本地语音助手；如果你想要的是不局限于会议记录的本地AI助手，这是一个相关对比对象。',
         ],
-        note: '这并非详尽列表——完整且定期更新的目录（包括Meetily自身的目录条目）见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非详尽列表——完整且定期更新的目录（包括Meetily自身的目录条目）见[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1334,7 +1334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地AI工具目录，包含Meetily的目录条目。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的完整本地AI工具目录，包含Meetily的目录条目。',
           '[MacWhisper评测](/zh/power-local-llm/macwhisper-review) — 一款仅限macOS、用于已有音频/视频文件的本地转录应用，上方已与Meetily直接对比。',
           '[whisper.cpp评测](/zh/power-local-llm/whisper-cpp-review) — Meetily自身转录功能所基于的开源推理引擎。',
           '[Voxa评测](/zh/power-local-llm/voxa-review) — 更广泛个人助手类别中的一款本地语音助手。',
@@ -1413,7 +1413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El repositorio de GitHub ([github.com/Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily)) muestra aproximadamente 30.898 estrellas en septiembre de 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Este análisis es el complemento en profundidad de la entrada de Meetily en el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara Meetily de un vistazo con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Este análisis es el complemento en profundidad de la entrada de Meetily en el [Directorio de Software LLM Local](/es/directory) — consulta esa página para ver cómo se compara Meetily de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1539,14 +1539,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'meetily-competitors',
         title: 'Meetily frente a otras herramientas de voz locales',
-        content: 'Meetily se sitúa dentro de un espacio más amplio de herramientas locales de voz a texto y asistentes personales. Así se compara con otras herramientas de ese espacio — consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, y el [comparativo dedicado Meetily vs. MacWhisper](#meetily-vs-macwhisper) de arriba para el enfrentamiento más directo.',
+        content: 'Meetily se sitúa dentro de un espacio más amplio de herramientas locales de voz a texto y asistentes personales. Así se compara con otras herramientas de ese espacio — consulta el [Directorio de Software LLM Local](/es/directory) para el catálogo completo, y el [comparativo dedicado Meetily vs. MacWhisper](#meetily-vs-macwhisper) de arriba para el enfrentamiento más directo.',
         items: [
           '**[MacWhisper](/es/power-local-llm/macwhisper-review)** — una app exclusiva de macOS para transcribir archivos de audio/vídeo existentes y dictado en vivo, construida sobre la misma familia de modelos Whisper y Parakeet que usa Meetily; consulta la sección de comparación dedicada más arriba.',
           '**[whisper.cpp](/es/power-local-llm/whisper-cpp-review)** — el motor de inferencia de código abierto en C/C++ que impulsa la transcripción Whisper en muchas herramientas locales, incluida la familia de motores en la que se basa la propia transcripción de Meetily.',
           '**[Faster Whisper](/es/power-local-llm/faster-whisper-review)** — otro motor de transcripción local basado en Whisper, optimizado para velocidad mediante CTranslate2; una opción relevante si solo necesitas transcripción sin la capa de captura de reuniones en vivo y resumen.',
           '**[Voxa](/es/power-local-llm/voxa-review)** — un asistente de voz local dentro de la categoría más amplia de asistentes personales; una comparación relevante si buscas un asistente de IA local más allá de las notas de reunión específicamente.',
         ],
-        note: 'Esta no es una lista exhaustiva — consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de directorio de Meetily.',
+        note: 'Esta no es una lista exhaustiva — consulta el [Directorio de Software LLM Local](/es/directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de directorio de Meetily.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1602,7 +1602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de directorio de Meetily.',
+          '[Directorio de Software LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de directorio de Meetily.',
           '[Análisis de MacWhisper](/es/power-local-llm/macwhisper-review) — una app de transcripción local exclusiva de macOS para archivos de audio/vídeo existentes, comparada directamente con Meetily arriba.',
           '[Análisis de whisper.cpp](/es/power-local-llm/whisper-cpp-review) — el motor de inferencia de código abierto en el que se basa la propia transcripción de Meetily.',
           '[Análisis de Voxa](/es/power-local-llm/voxa-review) — un asistente de voz local dentro de la categoría más amplia de asistentes personales.',
@@ -1681,7 +1681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub ([github.com/Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily)) mostra cerca de 30.898 estrelas em setembro de 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Meetily no [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o Meetily com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Meetily no [Diretório de Software LLM Local](/pt/directory) — veja essa página para comparar rapidamente o Meetily com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1807,14 +1807,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'meetily-competitors',
         title: 'Meetily vs. outras ferramentas de voz locais',
-        content: 'O Meetily está inserido em um espaço mais amplo de ferramentas locais de voz para texto e assistentes pessoais. Veja como ele se compara a outras ferramentas desse espaço — consulte o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, e a [comparação dedicada Meetily vs. MacWhisper](#meetily-vs-macwhisper) acima para o confronto mais direto.',
+        content: 'O Meetily está inserido em um espaço mais amplo de ferramentas locais de voz para texto e assistentes pessoais. Veja como ele se compara a outras ferramentas desse espaço — consulte o [Diretório de Software LLM Local](/pt/directory) para o catálogo completo, e a [comparação dedicada Meetily vs. MacWhisper](#meetily-vs-macwhisper) acima para o confronto mais direto.',
         items: [
           '**[MacWhisper](/pt/power-local-llm/macwhisper-review)** — um app exclusivo do macOS para transcrever arquivos de áudio/vídeo existentes e ditado ao vivo, construído sobre a mesma família de modelos Whisper e Parakeet que o Meetily usa; veja a seção de comparação dedicada acima.',
           '**[whisper.cpp](/pt/power-local-llm/whisper-cpp-review)** — o mecanismo de inferência de código aberto em C/C++ que alimenta a transcrição Whisper em muitas ferramentas locais, incluindo a família de mecanismos na qual se baseia a própria transcrição do Meetily.',
           '**[Faster Whisper](/pt/power-local-llm/faster-whisper-review)** — outro mecanismo de transcrição local baseado em Whisper, otimizado para velocidade via CTranslate2; uma opção relevante se você só precisa de transcrição, sem a camada de captura de reunião ao vivo e resumo.',
           '**[Voxa](/pt/power-local-llm/voxa-review)** — um assistente de voz local na categoria mais ampla de assistentes pessoais; uma comparação relevante se você busca um assistente de IA local além das notas de reunião especificamente.',
         ],
-        note: 'Esta não é uma lista exaustiva — consulte o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada de diretório do Meetily.',
+        note: 'Esta não é uma lista exaustiva — consulte o [Diretório de Software LLM Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada de diretório do Meetily.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1870,7 +1870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada de diretório do Meetily.',
+          '[Diretório de Software LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada de diretório do Meetily.',
           '[Análise do MacWhisper](/pt/power-local-llm/macwhisper-review) — um app de transcrição local exclusivo do macOS para arquivos de áudio/vídeo existentes, comparado diretamente ao Meetily acima.',
           '[Análise do whisper.cpp](/pt/power-local-llm/whisper-cpp-review) — o mecanismo de inferência de código aberto no qual se baseia a própria transcrição do Meetily.',
           '[Análise do Voxa](/pt/power-local-llm/voxa-review) — um assistente de voz local na categoria mais ampla de assistentes pessoais.',
@@ -1949,7 +1949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُظهر مستودع GitHub ([github.com/Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily)) نحو 30,898 نجمة اعتباراً من سبتمبر 2026',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمق لإدخال Meetily في [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارن Meetily بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمق لإدخال Meetily في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارن Meetily بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2075,14 +2075,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'meetily-competitors',
         title: 'Meetily مقابل أدوات الصوت المحلية الأخرى',
-        content: 'يقع Meetily ضمن مجال أوسع من أدوات تحويل الصوت إلى نص والمساعدين الشخصيين المحلية. إليك كيف يقارن مع أدوات أخرى في هذا المجال — راجع [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل، و[مقارنة Meetily مقابل MacWhisper](#meetily-vs-macwhisper) أعلاه للمواجهة الأكثر مباشرة.',
+        content: 'يقع Meetily ضمن مجال أوسع من أدوات تحويل الصوت إلى نص والمساعدين الشخصيين المحلية. إليك كيف يقارن مع أدوات أخرى في هذا المجال — راجع [دليل برمجيات نماذج اللغة المحلية](/ar/directory) للحصول على الكتالوج الكامل، و[مقارنة Meetily مقابل MacWhisper](#meetily-vs-macwhisper) أعلاه للمواجهة الأكثر مباشرة.',
         items: [
           '**[MacWhisper](/ar/power-local-llm/macwhisper-review)** — تطبيق حصري لنظام macOS لنسخ ملفات صوت/فيديو موجودة والإملاء المباشر، مبني على نفس عائلة نماذج Whisper وParakeet التي يستخدمها Meetily؛ راجع قسم المقارنة المخصص أعلاه.',
           '**[whisper.cpp](/ar/power-local-llm/whisper-cpp-review)** — محرك الاستدلال مفتوح المصدر بلغة C/C++ الذي يشغّل نسخ Whisper في العديد من الأدوات المحلية، بما في ذلك عائلة المحركات التي يعتمد عليها نسخ Meetily نفسه.',
           '**[Faster Whisper](/ar/power-local-llm/faster-whisper-review)** — محرك نسخ محلي آخر قائم على Whisper، محسّن للسرعة عبر CTranslate2؛ خيار مناسب إذا كنت تحتاج فقط إلى النسخ دون طبقة التقاط الاجتماعات المباشرة والتلخيص.',
           '**[Voxa](/ar/power-local-llm/voxa-review)** — مساعد صوتي محلي ضمن فئة المساعدين الشخصيين الأوسع؛ مقارنة مناسبة إذا كنت تبحث عن مساعد ذكاء اصطناعي محلي يتجاوز ملاحظات الاجتماعات تحديداً.',
         ],
-        note: 'هذه ليست قائمة شاملة — راجع [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدخال Meetily الخاص في الدليل.',
+        note: 'هذه ليست قائمة شاملة — راجع [دليل برمجيات نماذج اللغة المحلية](/ar/directory) للحصول على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدخال Meetily الخاص في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2138,7 +2138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك إدخال Meetily في الدليل.',
+          '[دليل برمجيات نماذج اللغة المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك إدخال Meetily في الدليل.',
           '[مراجعة MacWhisper](/ar/power-local-llm/macwhisper-review) — تطبيق نسخ محلي حصري لنظام macOS لملفات الصوت/الفيديو الموجودة، تمت مقارنته مباشرة بـ Meetily أعلاه.',
           '[مراجعة whisper.cpp](/ar/power-local-llm/whisper-cpp-review) — محرك الاستدلال مفتوح المصدر الذي يعتمد عليه نسخ Meetily نفسه.',
           '[مراجعة Voxa](/ar/power-local-llm/voxa-review) — مساعد صوتي محلي ضمن فئة المساعدين الشخصيين الأوسع.',
@@ -2217,7 +2217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub 저장소([github.com/Zackriya-Solutions/meetily](https://github.com/Zackriya-Solutions/meetily))는 2026년 9월 기준 약 30,898개의 스타를 기록',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 실린 Meetily 항목의 심층 보완 자료입니다 — 수십 개의 다른 로컬 AI 도구와 Meetily를 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 실린 Meetily 항목의 심층 보완 자료입니다 — 수십 개의 다른 로컬 AI 도구와 Meetily를 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {
@@ -2343,14 +2343,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'meetily-competitors',
         title: 'Meetily vs. 다른 로컬 음성 도구',
-        content: 'Meetily는 로컬 음성-텍스트 변환 및 개인 비서라는 더 넓은 영역에 속해 있습니다. 이 영역의 다른 도구들과 비교하면 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를, 가장 직접적인 비교는 위의 [Meetily vs. MacWhisper 비교](#meetily-vs-macwhisper)를 참고하십시오.',
+        content: 'Meetily는 로컬 음성-텍스트 변환 및 개인 비서라는 더 넓은 영역에 속해 있습니다. 이 영역의 다른 도구들과 비교하면 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를, 가장 직접적인 비교는 위의 [Meetily vs. MacWhisper 비교](#meetily-vs-macwhisper)를 참고하십시오.',
         items: [
           '**[MacWhisper](/ko/power-local-llm/macwhisper-review)** — 기존 오디오/비디오 파일 전사와 실시간 받아쓰기를 위한 macOS 전용 앱으로, Meetily가 사용하는 것과 동일한 Whisper 및 Parakeet 모델 계열을 기반으로 구축되었습니다; 자세한 내용은 위의 비교 섹션을 참고하십시오.',
           '**[whisper.cpp](/ko/power-local-llm/whisper-cpp-review)** — 많은 로컬 도구에서 Whisper 전사를 구동하는 오픈소스 C/C++ 추론 엔진으로, Meetily 자체 전사의 기반이 되는 엔진 계열이기도 합니다.',
           '**[Faster Whisper](/ko/power-local-llm/faster-whisper-review)** — CTranslate2를 통해 속도에 최적화된 또 다른 로컬 Whisper 기반 전사 엔진으로, 실시간 회의 캡처와 요약 계층 없이 전사만 필요한 경우 관련성 있는 선택지입니다.',
           '**[Voxa](/ko/power-local-llm/voxa-review)** — 더 넓은 개인 비서 카테고리에 속하는 로컬 음성 비서로, 회의록에 국한되지 않는 로컬 AI 비서를 찾는 경우 관련성 있는 비교 대상입니다.',
         ],
-        note: '이는 완전한 목록이 아닙니다 — Meetily 자체의 디렉터리 항목을 포함하여 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.',
+        note: '이는 완전한 목록이 아닙니다 — Meetily 자체의 디렉터리 항목을 포함하여 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2406,7 +2406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — Meetily의 디렉터리 항목을 포함하여 이 글이 속한 전체 로컬 AI 도구 카탈로그입니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — Meetily의 디렉터리 항목을 포함하여 이 글이 속한 전체 로컬 AI 도구 카탈로그입니다.',
           '[MacWhisper 리뷰](/ko/power-local-llm/macwhisper-review) — 기존 오디오/비디오 파일을 위한 macOS 전용 로컬 전사 앱으로, 위에서 Meetily와 직접 비교했습니다.',
           '[whisper.cpp 리뷰](/ko/power-local-llm/whisper-cpp-review) — Meetily 자체 전사의 기반이 되는 오픈소스 추론 엔진입니다.',
           '[Voxa 리뷰](/ko/power-local-llm/voxa-review) — 더 넓은 개인 비서 카테고리에 속하는 로컬 음성 비서입니다.',

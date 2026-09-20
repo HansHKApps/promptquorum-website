@@ -223,7 +223,7 @@ export default function JaAboutPage() {
                   <div className="text-text-primary font-semibold mb-1">ローカルLLMコンテンツ</div>
                   <div className="text-sm text-text-secondary">自分のハードウェアでLLMを動かすためのガイド — セットアップ、必要要件、比較。</div>
                 </Link>
-                <Link href="/ja/power-local-llm/local-llm-software-directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                <Link href="/ja/directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
                   <div className="text-text-primary font-semibold mb-1">ローカルLLMソフトウェアディレクトリ</div>
                   <div className="text-sm text-text-secondary">ローカルLLMアプリ・ツールを横並びで比較できる検索可能なディレクトリ。</div>
                 </Link>

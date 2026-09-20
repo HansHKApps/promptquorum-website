@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Developed by Unsloth AI, a US-based organization per its GitHub profile; the repository was created in November 2023 and the `unsloth` PyPI package has shipped 241 releases since its first upload in August 2024',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Unsloth\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Unsloth compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Unsloth\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Unsloth compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -208,14 +208,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'unsloth-competitors',
         title: 'Unsloth vs. Other Fine-Tuning Tools',
-        content: 'Unsloth is one of several tools for fine-tuning models on your own hardware. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, and the dedicated [Unsloth vs. Axolotl vs. MLX-LM comparison](#unsloth-vs-axolotl) above for the closest head-to-head.',
+        content: 'Unsloth is one of several tools for fine-tuning models on your own hardware. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/directory) for the full catalog, and the dedicated [Unsloth vs. Axolotl vs. MLX-LM comparison](#unsloth-vs-axolotl) above for the closest head-to-head.',
         items: [
           '**[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** — an Apache-2.0 fine-tuning framework whose documented strength is multi-node training and the widest alignment-method surface of the three; see the dedicated comparison section above and PromptQuorum\'s [full fine-tuning framework comparison](/local-llms/best-llm-fine-tuning-framework-2026).',
           '**[MLX-LM](https://github.com/ml-explore/mlx-lm)** — Apple\'s own MIT-licensed, Apple-Silicon-native library for running and fine-tuning LLMs; see the [MLX-LM review](/power-local-llm/mlx-lm-explained) for a dedicated look.',
           '**[Together.ai](https://www.together.ai)** and **[Fireworks.ai](https://fireworks.ai)** — cloud fine-tuning APIs that charge per training token instead of requiring you to own a GPU; PromptQuorum\'s [fine-tuning framework comparison](/local-llms/best-llm-fine-tuning-framework-2026) covers Together.ai\'s pricing directly.',
           '**[Ollama](https://ollama.com)** and **[LM Studio](https://lmstudio.ai)** — local inference tools for *running* models rather than training them; a common pattern is fine-tuning with Unsloth, exporting to GGUF, then running the result in Ollama or LM Studio. See the [Ollama review](/power-local-llm/ollama-review) and [LM Studio review](/power-local-llm/lm-studio-review).',
         ],
-        note: 'This is not an exhaustive list of fine-tuning tools — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Unsloth\'s own directory entry.',
+        note: 'This is not an exhaustive list of fine-tuning tools — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Unsloth\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Unsloth\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Unsloth\'s directory entry.',
           '[Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud](/local-llms/best-llm-fine-tuning-framework-2026) — a direct comparison covering Unsloth against Axolotl, MLX-LM, and cloud fine-tuning APIs in depth.',
           '[MLX-LM Explained](/power-local-llm/mlx-lm-explained) — a dedicated review of Apple\'s own Apple-Silicon-native alternative.',
           '[Fine-Tuning Local LLMs with LoRA](/local-llms/fine-tuning-local-llms-lora) — a deeper look at the LoRA technique Unsloth and others use to fine-tune efficiently.',
@@ -350,7 +350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Entwickelt von Unsloth AI, laut GitHub-Profil ein in den USA ansässiges Unternehmen; das Repository wurde im November 2023 erstellt, und das `unsloth`-PyPI-Paket verzeichnet seit dem ersten Upload im August 2024 241 Releases',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu Unsloths Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort sehen Sie auf einen Blick, wie Unsloth im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu Unsloths Eintrag im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie Unsloth im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -486,14 +486,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'unsloth-competitors',
         title: 'Unsloth vs. andere Fine-Tuning-Tools',
-        content: 'Unsloth ist eines von mehreren Tools zum Fine-Tuning von Modellen auf eigener Hardware. So steht es im Vergleich zu anderen Optionen in diesem Bereich — die vollständige Übersicht finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory), und den direkten Vergleich mit den nächsten Konkurrenten im dedizierten [Unsloth-vs.-Axolotl-vs.-MLX-LM-Vergleich](#unsloth-vs-axolotl) oben.',
+        content: 'Unsloth ist eines von mehreren Tools zum Fine-Tuning von Modellen auf eigener Hardware. So steht es im Vergleich zu anderen Optionen in diesem Bereich — die vollständige Übersicht finden Sie im [Local LLM Software Directory](/de/directory), und den direkten Vergleich mit den nächsten Konkurrenten im dedizierten [Unsloth-vs.-Axolotl-vs.-MLX-LM-Vergleich](#unsloth-vs-axolotl) oben.',
         items: [
           '**[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** — ein Apache-2.0-Fine-Tuning-Framework, dessen dokumentierte Stärke Multi-Node-Training und die breiteste Alignment-Methodenabdeckung der drei ist; siehe den dedizierten Vergleichsabschnitt oben und PromptQuorums [vollständigen Vergleich der Fine-Tuning-Frameworks](/de/local-llms/best-llm-fine-tuning-framework-2026).',
           '**[MLX-LM](https://github.com/ml-explore/mlx-lm)** — Apples eigene, MIT-lizenzierte, Apple-Silicon-native Bibliothek zum Ausführen und Fine-Tunen von LLMs; siehe die [MLX-LM-Review](/de/power-local-llm/mlx-lm-explained) für einen dedizierten Blick.',
           '**[Together.ai](https://www.together.ai)** und **[Fireworks.ai](https://fireworks.ai)** — Cloud-Fine-Tuning-APIs, die pro Trainings-Token abrechnen, statt eine eigene GPU vorauszusetzen; PromptQuorums [Vergleich der Fine-Tuning-Frameworks](/de/local-llms/best-llm-fine-tuning-framework-2026) behandelt die Preise von Together.ai direkt.',
           '**[Ollama](https://ollama.com)** und **[LM Studio](https://lmstudio.ai)** — lokale Inferenz-Tools zum *Ausführen* von Modellen statt zum Trainieren; ein gängiges Muster ist, mit Unsloth zu fine-tunen, nach GGUF zu exportieren und das Ergebnis dann in Ollama oder LM Studio auszuführen. Siehe die [Ollama-Review](/de/power-local-llm/ollama-review) und die [LM-Studio-Review](/de/power-local-llm/lm-studio-review).',
         ],
-        note: 'Dies ist keine erschöpfende Liste von Fine-Tuning-Tools — die vollständige, regelmäßig aktualisierte Übersicht finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory), einschließlich Unsloths eigenem Directory-Eintrag.',
+        note: 'Dies ist keine erschöpfende Liste von Fine-Tuning-Tools — die vollständige, regelmäßig aktualisierte Übersicht finden Sie im [Local LLM Software Directory](/de/directory), einschließlich Unsloths eigenem Directory-Eintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -550,7 +550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Unsloths Directory-Eintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Unsloths Directory-Eintrag.',
           '[Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud](/de/local-llms/best-llm-fine-tuning-framework-2026) — ein direkter Vergleich von Unsloth mit Axolotl, MLX-LM und Cloud-Fine-Tuning-APIs.',
           '[MLX-LM Explained](/de/power-local-llm/mlx-lm-explained) — eine dedizierte Review von Apples eigener, Apple-Silicon-nativer Alternative.',
           '[Fine-Tuning lokaler LLMs mit LoRA](/de/local-llms/fine-tuning-local-llms-lora) — ein tieferer Blick auf die LoRA-Technik, die Unsloth und andere zum effizienten Fine-Tuning nutzen.',
@@ -628,7 +628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Développé par Unsloth AI, une organisation basée aux États-Unis selon son profil GitHub ; le dépôt a été créé en novembre 2023, et le paquet PyPI `unsloth` compte 241 versions depuis son premier envoi en août 2024",
         ],
         callouts: [
-          { type: 'note', text: "Ce test est le complément approfondi de la fiche d'Unsloth dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir en un coup d'œil comment Unsloth se compare à des dizaines d'autres outils d'IA locale." },
+          { type: 'note', text: "Ce test est le complément approfondi de la fiche d'Unsloth dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir en un coup d'œil comment Unsloth se compare à des dizaines d'autres outils d'IA locale." },
         ],
       },
       overview: {
@@ -764,14 +764,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'unsloth-competitors',
         title: 'Unsloth face aux autres outils de fine-tuning',
-        content: "Unsloth est l'un de plusieurs outils pour le fine-tuning de modèles sur votre propre matériel. Voici comment il se positionne face aux autres options dans cet espace — voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, et la [comparaison dédiée Unsloth vs. Axolotl vs. MLX-LM](#unsloth-vs-axolotl) ci-dessus pour le face-à-face le plus proche.",
+        content: "Unsloth est l'un de plusieurs outils pour le fine-tuning de modèles sur votre propre matériel. Voici comment il se positionne face aux autres options dans cet espace — voir le [Local LLM Software Directory](/fr/directory) pour le catalogue complet, et la [comparaison dédiée Unsloth vs. Axolotl vs. MLX-LM](#unsloth-vs-axolotl) ci-dessus pour le face-à-face le plus proche.",
         items: [
           "**[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** — un framework de fine-tuning Apache-2.0 dont la force documentée est l'entraînement multi-nœuds et la couverture méthode d'alignement la plus large des trois ; voir la section de comparaison dédiée ci-dessus et la [comparaison complète des frameworks de fine-tuning](/fr/local-llms/best-llm-fine-tuning-framework-2026) de PromptQuorum.",
           "**[MLX-LM](https://github.com/ml-explore/mlx-lm)** — la propre bibliothèque d'Apple, sous licence MIT, native Apple Silicon, pour exécuter et fine-tuner des LLM ; voir la [revue MLX-LM](/fr/power-local-llm/mlx-lm-explained) pour un regard dédié.",
           "**[Together.ai](https://www.together.ai)** et **[Fireworks.ai](https://fireworks.ai)** — des API de fine-tuning cloud qui facturent au token d'entraînement au lieu d'exiger de posséder un GPU ; la [comparaison des frameworks de fine-tuning](/fr/local-llms/best-llm-fine-tuning-framework-2026) de PromptQuorum couvre directement les tarifs de Together.ai.",
           "**[Ollama](https://ollama.com)** et **[LM Studio](https://lmstudio.ai)** — des outils d'inférence locale pour *exécuter* des modèles plutôt que les entraîner ; un schéma courant consiste à fine-tuner avec Unsloth, exporter vers GGUF, puis exécuter le résultat dans Ollama ou LM Studio. Voir la [revue Ollama](/fr/power-local-llm/ollama-review) et la [revue LM Studio](/fr/power-local-llm/lm-studio-review).",
         ],
-        note: "Cette liste n'est pas exhaustive — voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche d'Unsloth dans le répertoire.",
+        note: "Cette liste n'est pas exhaustive — voir le [Local LLM Software Directory](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche d'Unsloth dans le répertoire.",
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -828,7 +828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          "[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d'IA locale auquel appartient cet article, incluant la fiche d'Unsloth dans le répertoire.",
+          "[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils d'IA locale auquel appartient cet article, incluant la fiche d'Unsloth dans le répertoire.",
           "[Best LLM Fine-Tuning Framework 2026 : Unsloth vs Axolotl vs Cloud](/fr/local-llms/best-llm-fine-tuning-framework-2026) — une comparaison directe d'Unsloth face à Axolotl, MLX-LM et aux API de fine-tuning cloud.",
           "[MLX-LM Explained](/fr/power-local-llm/mlx-lm-explained) — un test dédié de l'alternative native Apple Silicon d'Apple.",
           "[Fine-Tuning Local LLMs with LoRA](/fr/local-llms/fine-tuning-local-llms-lora) — un regard plus approfondi sur la technique LoRA qu'Unsloth et d'autres utilisent pour un fine-tuning efficace.",
@@ -906,7 +906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desarrollado por Unsloth AI, una organización con sede en EE. UU. según su perfil de GitHub; el repositorio se creó en noviembre de 2023 y el paquete `unsloth` de PyPI ha publicado 241 versiones desde su primera subida en agosto de 2024',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de Unsloth en el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara Unsloth con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de Unsloth en el [Directorio de Software de LLM Local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara Unsloth con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1042,14 +1042,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'unsloth-competitors',
         title: 'Unsloth frente a otras herramientas de fine-tuning',
-        content: 'Unsloth es una de varias herramientas para hacer fine-tuning de modelos en tu propio hardware. Así se posiciona frente a otras opciones en este espacio — consulta el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, y la [comparación dedicada Unsloth vs. Axolotl vs. MLX-LM](#unsloth-vs-axolotl) anterior para el enfrentamiento más cercano.',
+        content: 'Unsloth es una de varias herramientas para hacer fine-tuning de modelos en tu propio hardware. Así se posiciona frente a otras opciones en este espacio — consulta el [Directorio de Software de LLM Local](/es/directory) para el catálogo completo, y la [comparación dedicada Unsloth vs. Axolotl vs. MLX-LM](#unsloth-vs-axolotl) anterior para el enfrentamiento más cercano.',
         items: [
           '**[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** — un framework de fine-tuning con licencia Apache-2.0 cuya fortaleza documentada es el entrenamiento multi-nodo y la superficie de métodos de alineación más amplia de los tres; consulta la sección de comparación dedicada anterior y la [comparación completa de frameworks de fine-tuning](/es/local-llms/best-llm-fine-tuning-framework-2026) de PromptQuorum.',
           '**[MLX-LM](https://github.com/ml-explore/mlx-lm)** — la librería propia de Apple, con licencia MIT y nativa de Apple Silicon, para ejecutar y hacer fine-tuning de LLMs; consulta la [reseña de MLX-LM](/es/power-local-llm/mlx-lm-explained) para un análisis dedicado.',
           '**[Together.ai](https://www.together.ai)** y **[Fireworks.ai](https://fireworks.ai)** — APIs de fine-tuning en la nube que cobran por token de entrenamiento en lugar de requerir que tengas una GPU propia; la [comparación de frameworks de fine-tuning](/es/local-llms/best-llm-fine-tuning-framework-2026) de PromptQuorum cubre directamente el precio de Together.ai.',
           '**[Ollama](https://ollama.com)** y **[LM Studio](https://lmstudio.ai)** — herramientas de inferencia local para *ejecutar* modelos en lugar de entrenarlos; un patrón habitual es hacer fine-tuning con Unsloth, exportar a GGUF, y luego ejecutar el resultado en Ollama o LM Studio. Consulta la [reseña de Ollama](/es/power-local-llm/ollama-review) y la [reseña de LM Studio](/es/power-local-llm/lm-studio-review).',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas de fine-tuning — consulta el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de Unsloth en el directorio.',
+        note: 'Esta no es una lista exhaustiva de herramientas de fine-tuning — consulta el [Directorio de Software de LLM Local](/es/directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de Unsloth en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1106,7 +1106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software de LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de Unsloth en el directorio.',
+          '[Directorio de Software de LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de Unsloth en el directorio.',
           '[Mejor Framework de Fine-Tuning de LLM 2026: Unsloth vs Axolotl vs Cloud](/es/local-llms/best-llm-fine-tuning-framework-2026) — una comparación directa que analiza a Unsloth frente a Axolotl, MLX-LM y las APIs de fine-tuning en la nube en profundidad.',
           '[MLX-LM Explained](/es/power-local-llm/mlx-lm-explained) — una reseña dedicada a la alternativa propia de Apple, nativa de Apple Silicon.',
           '[Fine-Tuning de LLMs Locales con LoRA](/es/local-llms/fine-tuning-local-llms-lora) — un análisis más profundo de la técnica LoRA que usan Unsloth y otros para hacer fine-tuning de forma eficiente.',
@@ -1184,7 +1184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desenvolvido pela Unsloth AI, uma organização sediada nos EUA segundo seu perfil no GitHub; o repositório foi criado em novembro de 2023 e o pacote `unsloth` no PyPI lançou 241 versões desde o primeiro upload em agosto de 2024',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Unsloth no [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para uma comparação rápida entre o Unsloth e dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Unsloth no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para uma comparação rápida entre o Unsloth e dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1320,14 +1320,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'unsloth-competitors',
         title: 'Unsloth em comparação com outras ferramentas de fine-tuning',
-        content: 'O Unsloth é uma entre várias ferramentas para fazer fine-tuning de modelos no seu próprio hardware. Veja como ele se posiciona em relação a outras opções nesse espaço — consulte o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, e a [comparação dedicada Unsloth vs. Axolotl vs. MLX-LM](#unsloth-vs-axolotl) acima para o confronto mais direto.',
+        content: 'O Unsloth é uma entre várias ferramentas para fazer fine-tuning de modelos no seu próprio hardware. Veja como ele se posiciona em relação a outras opções nesse espaço — consulte o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo, e a [comparação dedicada Unsloth vs. Axolotl vs. MLX-LM](#unsloth-vs-axolotl) acima para o confronto mais direto.',
         items: [
           '**[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** — um framework de fine-tuning com licença Apache-2.0 cujo ponto forte documentado é o treinamento multi-node e a maior superfície de métodos de alinhamento entre os três; veja a seção de comparação dedicada acima e a [comparação completa de frameworks de fine-tuning](/pt/local-llms/best-llm-fine-tuning-framework-2026) da PromptQuorum.',
           '**[MLX-LM](https://github.com/ml-explore/mlx-lm)** — a biblioteca própria da Apple, com licença MIT e nativa de Apple Silicon, para rodar e fazer fine-tuning de LLMs; veja a [análise do MLX-LM](/pt/power-local-llm/mlx-lm-explained) para um olhar dedicado.',
           '**[Together.ai](https://www.together.ai)** e **[Fireworks.ai](https://fireworks.ai)** — APIs de fine-tuning na nuvem que cobram por token de treinamento em vez de exigir que você tenha uma GPU própria; a [comparação de frameworks de fine-tuning](/pt/local-llms/best-llm-fine-tuning-framework-2026) da PromptQuorum cobre diretamente o preço do Together.ai.',
           '**[Ollama](https://ollama.com)** e **[LM Studio](https://lmstudio.ai)** — ferramentas de inferência local para *rodar* modelos em vez de treiná-los; um padrão comum é fazer fine-tuning com o Unsloth, exportar para GGUF, e depois rodar o resultado no Ollama ou no LM Studio. Veja a [análise do Ollama](/pt/power-local-llm/ollama-review) e a [análise do LM Studio](/pt/power-local-llm/lm-studio-review).',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas de fine-tuning — veja o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Unsloth no diretório.',
+        note: 'Esta não é uma lista exaustiva de ferramentas de fine-tuning — veja o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Unsloth no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1384,7 +1384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Unsloth no diretório.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Unsloth no diretório.',
           '[Melhor Framework de Fine-Tuning de LLM 2026: Unsloth vs Axolotl vs Cloud](/pt/local-llms/best-llm-fine-tuning-framework-2026) — uma comparação direta que analisa o Unsloth em relação ao Axolotl, ao MLX-LM e às APIs de fine-tuning na nuvem em profundidade.',
           '[MLX-LM Explained](/pt/power-local-llm/mlx-lm-explained) — uma análise dedicada à alternativa própria da Apple, nativa de Apple Silicon.',
           '[Fine-Tuning de LLMs Locais com LoRA](/pt/local-llms/fine-tuning-local-llms-lora) — um olhar mais profundo sobre a técnica LoRA que o Unsloth e outros usam para fazer fine-tuning de forma eficiente.',
@@ -1462,7 +1462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHubプロフィールによれば米国拠点の組織であるUnsloth AIが開発。リポジトリは2023年11月に作成され、`unsloth` PyPIパッケージは2024年8月の初回アップロード以来241回のリリースを重ねている',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)におけるUnslothの項目を掘り下げた記事です。他の数十のローカルAIツールとの一覧比較はそちらのページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)におけるUnslothの項目を掘り下げた記事です。他の数十のローカルAIツールとの一覧比較はそちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1598,14 +1598,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'unsloth-competitors',
         title: 'Unsloth vs. 他のファインチューニングツール',
-        content: 'Unslothは、自分のハードウェア上でモデルをファインチューニングするための複数のツールのうちの1つです。この分野の他の選択肢との位置づけを以下にまとめます — 全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を、最も近い一騎打ち比較は上記の[Unsloth vs. Axolotl vs. MLX-LM比較](#unsloth-vs-axolotl)を参照してください。',
+        content: 'Unslothは、自分のハードウェア上でモデルをファインチューニングするための複数のツールのうちの1つです。この分野の他の選択肢との位置づけを以下にまとめます — 全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を、最も近い一騎打ち比較は上記の[Unsloth vs. Axolotl vs. MLX-LM比較](#unsloth-vs-axolotl)を参照してください。',
         items: [
           '**[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** — Apache-2.0ライセンスのファインチューニングフレームワークで、文書化された強みはマルチノードトレーニングと、3つの中で最も幅広いアライメント手法の範囲です。上記の専用比較セクションと、PromptQuorumの[ファインチューニングフレームワーク完全比較](/ja/local-llms/best-llm-fine-tuning-framework-2026)を参照してください。',
           '**[MLX-LM](https://github.com/ml-explore/mlx-lm)** — AppleによるMITライセンスの、Apple Siliconネイティブなライブラリで、LLMの実行とファインチューニングに使われます。専用の解説は[MLX-LM レビュー](/ja/power-local-llm/mlx-lm-explained)を参照してください。',
           '**[Together.ai](https://www.together.ai)** と **[Fireworks.ai](https://fireworks.ai)** — GPUを所有する代わりにトレーニングトークン単位で課金するクラウドファインチューニングAPIです。PromptQuorumの[ファインチューニングフレームワーク比較](/ja/local-llms/best-llm-fine-tuning-framework-2026)では、Together.aiの料金体系を直接取り上げています。',
           '**[Ollama](https://ollama.com)** と **[LM Studio](https://lmstudio.ai)** — トレーニングではなくモデルを*実行*するためのローカル推論ツールです。よくあるパターンとして、Unslothでファインチューニングし、GGUFにエクスポートして、その結果をOllamaやLM Studioで実行します。[Ollama レビュー](/ja/power-local-llm/ollama-review)と[LM Studio レビュー](/ja/power-local-llm/lm-studio-review)を参照してください。',
         ],
-        note: 'これはファインチューニングツールの網羅的なリストではありません — Unslothの独自のディレクトリ項目を含む、定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはファインチューニングツールの網羅的なリストではありません — Unslothの独自のディレクトリ項目を含む、定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1662,7 +1662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ 2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの完全なカタログ。Unslothのディレクトリ項目を含む。',
+          '[ローカルLLMソフトウェアディレクトリ 2026](/ja/directory) — この記事が属する、ローカルAIツールの完全なカタログ。Unslothのディレクトリ項目を含む。',
           '[ファインチューニングフレームワーク完全比較 2026：Unsloth vs Axolotl vs クラウド](/ja/local-llms/best-llm-fine-tuning-framework-2026) — Unslothを、Axolotl、MLX-LM、クラウドファインチューニングAPIと詳しく比較する記事。',
           '[MLX-LM 解説](/ja/power-local-llm/mlx-lm-explained) — AppleによるApple Siliconネイティブな代替ツールの専用レビュー。',
           '[LoRAによるローカルLLMのファインチューニング](/ja/local-llms/fine-tuning-local-llms-lora) — UnslothなどがLLMを効率よくファインチューニングするために使うLoRA手法をより深く掘り下げた記事。',
@@ -1740,7 +1740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '由 Unsloth AI 开发，根据其 GitHub 资料显示为美国注册的组织；仓库创建于 2023 年 11 月，`unsloth` PyPI 包自 2024 年 8 月首次发布以来已发布 241 个版本',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)中 Unsloth 条目的深度解读——如需查看 Unsloth 与其他数十款本地 AI 工具的对比，请参阅该页面。' },
+          { type: 'note', text: '本评测是[本地 LLM 软件目录](/zh/directory)中 Unsloth 条目的深度解读——如需查看 Unsloth 与其他数十款本地 AI 工具的对比，请参阅该页面。' },
         ],
       },
       overview: {
@@ -1876,14 +1876,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'unsloth-competitors',
         title: 'Unsloth 与其他微调工具对比',
-        content: 'Unsloth 是众多在自有硬件上微调模型的工具之一。以下是它在这一领域中相对于其他选项的定位——完整目录请参见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)，最接近的一对一对比请参见上文的[Unsloth vs. Axolotl vs. MLX-LM 对比](#unsloth-vs-axolotl)。',
+        content: 'Unsloth 是众多在自有硬件上微调模型的工具之一。以下是它在这一领域中相对于其他选项的定位——完整目录请参见[本地 LLM 软件目录](/zh/directory)，最接近的一对一对比请参见上文的[Unsloth vs. Axolotl vs. MLX-LM 对比](#unsloth-vs-axolotl)。',
         items: [
           '**[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** — 一款 Apache-2.0 许可的微调框架，其文档记录的优势在于多节点训练，以及三者中最广泛的对齐方法覆盖；请参见上文的专门对比部分，以及 PromptQuorum 的[完整微调框架对比](/zh/local-llms/best-llm-fine-tuning-framework-2026)。',
           '**[MLX-LM](https://github.com/ml-explore/mlx-lm)** — Apple 自己的 MIT 许可、Apple Silicon 原生库，用于运行和微调 LLM；详细介绍请参见[MLX-LM 评测](/zh/power-local-llm/mlx-lm-explained)。',
           '**[Together.ai](https://www.together.ai)** 和 **[Fireworks.ai](https://fireworks.ai)** — 按训练 token 计费的云端微调 API，而不要求你自己拥有 GPU；PromptQuorum 的[微调框架对比](/zh/local-llms/best-llm-fine-tuning-framework-2026)直接介绍了 Together.ai 的定价。',
           '**[Ollama](https://ollama.com)** 和 **[LM Studio](https://lmstudio.ai)** — 用于*运行*模型而非训练模型的本地推理工具；一种常见模式是先用 Unsloth 微调，导出为 GGUF，再在 Ollama 或 LM Studio 中运行结果。请参见[Ollama 评测](/zh/power-local-llm/ollama-review)和[LM Studio 评测](/zh/power-local-llm/lm-studio-review)。',
         ],
-        note: '这并非微调工具的详尽列表——完整且定期更新的目录（包括 Unsloth 自己的目录条目）请参见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非微调工具的详尽列表——完整且定期更新的目录（包括 Unsloth 自己的目录条目）请参见[本地 LLM 软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1940,7 +1940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地 LLM 软件目录 2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地 AI 工具完整目录，包含 Unsloth 的目录条目。',
+          '[本地 LLM 软件目录 2026](/zh/directory) — 本文所属的本地 AI 工具完整目录，包含 Unsloth 的目录条目。',
           '[2026 年最佳 LLM 微调框架：Unsloth vs Axolotl vs 云端](/zh/local-llms/best-llm-fine-tuning-framework-2026) — 一篇将 Unsloth 与 Axolotl、MLX-LM 及云端微调 API 进行深入对比的文章。',
           '[MLX-LM 详解](/zh/power-local-llm/mlx-lm-explained) — 对 Apple 自家 Apple Silicon 原生替代方案的专门评测。',
           '[用 LoRA 微调本地 LLM](/zh/local-llms/fine-tuning-local-llms-lora) — 深入介绍 Unsloth 等工具用于高效微调的 LoRA 技术。',
@@ -2018,7 +2018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub 프로필에 따르면 미국 소재 조직인 Unsloth AI가 개발했으며, 저장소는 2023년 11월에 생성되었고, `unsloth` PyPI 패키지는 2024년 8월 최초 업로드 이후 241회의 릴리스를 기록했습니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 등재된 Unsloth 항목의 심층 분석 자료입니다 — 다른 수십 개의 로컬 AI 도구와 Unsloth를 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등재된 Unsloth 항목의 심층 분석 자료입니다 — 다른 수십 개의 로컬 AI 도구와 Unsloth를 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {
@@ -2154,14 +2154,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'unsloth-competitors',
         title: 'Unsloth와 다른 파인튜닝 도구 비교',
-        content: 'Unsloth는 자신의 하드웨어에서 모델을 파인튜닝하는 여러 도구 중 하나입니다. 이 분야의 다른 옵션과 비교했을 때 Unsloth의 위치는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를, 가장 가까운 정면 비교는 위의 전용 [Unsloth vs. Axolotl vs. MLX-LM 비교](#unsloth-vs-axolotl)를 참고하십시오.',
+        content: 'Unsloth는 자신의 하드웨어에서 모델을 파인튜닝하는 여러 도구 중 하나입니다. 이 분야의 다른 옵션과 비교했을 때 Unsloth의 위치는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를, 가장 가까운 정면 비교는 위의 전용 [Unsloth vs. Axolotl vs. MLX-LM 비교](#unsloth-vs-axolotl)를 참고하십시오.',
         items: [
           '**[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** — Apache-2.0 파인튜닝 프레임워크로, 문서화된 강점은 멀티 노드 학습과 셋 중 가장 넓은 정렬 방법 범위입니다. 위의 전용 비교 섹션과 PromptQuorum의 [전체 파인튜닝 프레임워크 비교](/ko/local-llms/best-llm-fine-tuning-framework-2026)를 참고하십시오.',
           '**[MLX-LM](https://github.com/ml-explore/mlx-lm)** — Apple 자체의 MIT 라이선스 Apple Silicon 네이티브 라이브러리로, LLM을 실행하고 파인튜닝합니다. 전용으로 다룬 [MLX-LM 리뷰](/ko/power-local-llm/mlx-lm-explained)를 참고하십시오.',
           '**[Together.ai](https://www.together.ai)**와 **[Fireworks.ai](https://fireworks.ai)** — GPU를 소유할 필요 없이 학습 토큰당 요금을 부과하는 클라우드 파인튜닝 API입니다. PromptQuorum의 [파인튜닝 프레임워크 비교](/ko/local-llms/best-llm-fine-tuning-framework-2026)에서 Together.ai의 가격을 직접 다룹니다.',
           '**[Ollama](https://ollama.com)**와 **[LM Studio](https://lmstudio.ai)** — 모델을 학습하는 대신 *실행*하기 위한 로컬 추론 도구입니다. Unsloth로 파인튜닝한 뒤 GGUF로 내보내고, 그 결과물을 Ollama나 LM Studio에서 실행하는 것이 일반적인 패턴입니다. [Ollama 리뷰](/ko/power-local-llm/ollama-review)와 [LM Studio 리뷰](/ko/power-local-llm/lm-studio-review)를 참고하십시오.',
         ],
-        note: '이는 파인튜닝 도구의 전체 목록이 아닙니다 — Unsloth 자체의 디렉터리 항목을 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.',
+        note: '이는 파인튜닝 도구의 전체 목록이 아닙니다 — Unsloth 자체의 디렉터리 항목을 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2218,7 +2218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — Unsloth의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그입니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — Unsloth의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그입니다.',
           '[최고의 LLM 파인튜닝 프레임워크 2026: Unsloth vs Axolotl vs Cloud](/ko/local-llms/best-llm-fine-tuning-framework-2026) — Unsloth를 Axolotl, MLX-LM, 클라우드 파인튜닝 API와 심도 있게 비교한 글입니다.',
           '[MLX-LM Explained](/ko/power-local-llm/mlx-lm-explained) — Apple 자체의 Apple Silicon 네이티브 대안을 전용으로 다룬 리뷰입니다.',
           '[LoRA로 로컬 LLM 파인튜닝하기](/ko/local-llms/fine-tuning-local-llms-lora) — Unsloth 등이 효율적인 파인튜닝을 위해 사용하는 LoRA 기법을 더 깊이 살펴보는 글입니다.',
@@ -2296,7 +2296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'طوّرتها Unsloth AI، وهي منظمة مقرها الولايات المتحدة وفقًا لملفها على GitHub؛ أُنشئ المستودع في نوفمبر 2023، وأصدرت حزمة `unsloth` على PyPI 241 إصدارًا منذ أول رفع لها في أغسطس 2024',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الشرح المتعمق المرافق لمدخل Unsloth في [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمقارنة سريعة بين Unsloth وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي الشرح المتعمق المرافق لمدخل Unsloth في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة بين Unsloth وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2432,14 +2432,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'unsloth-competitors',
         title: 'Unsloth مقابل أدوات الضبط الأخرى',
-        content: 'Unsloth واحدة من عدة أدوات لضبط النماذج على جهازك الخاص. إليك كيف تتموضع مقارنة بخيارات أخرى في هذا المجال — راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل، و[مقارنة Unsloth مقابل Axolotl مقابل MLX-LM](#unsloth-vs-axolotl) المخصصة أعلاه للمواجهة الأقرب مباشرة.',
+        content: 'Unsloth واحدة من عدة أدوات لضبط النماذج على جهازك الخاص. إليك كيف تتموضع مقارنة بخيارات أخرى في هذا المجال — راجع [دليل برمجيات LLM المحلية](/ar/directory) للاطلاع على الكتالوج الكامل، و[مقارنة Unsloth مقابل Axolotl مقابل MLX-LM](#unsloth-vs-axolotl) المخصصة أعلاه للمواجهة الأقرب مباشرة.',
         items: [
           '**[Axolotl](https://github.com/axolotl-ai-cloud/axolotl)** — إطار عمل للضبط بترخيص Apache-2.0، وقوته الموثقة هي التدريب متعدد العقد وأوسع تغطية لطرق المحاذاة بين الثلاثة؛ راجع قسم المقارنة المخصص أعلاه و[مقارنة أطر الضبط الدقيق الكاملة](/ar/local-llms/best-llm-fine-tuning-framework-2026) الخاصة بـ PromptQuorum.',
           '**[MLX-LM](https://github.com/ml-explore/mlx-lm)** — مكتبة Apple الخاصة، بترخيص MIT، وأصلية لـ Apple Silicon، لتشغيل نماذج LLM وضبطها؛ راجع [مراجعة MLX-LM](/ar/power-local-llm/mlx-lm-explained) للاطلاع على نظرة مخصصة.',
           '**[Together.ai](https://www.together.ai)** و**[Fireworks.ai](https://fireworks.ai)** — واجهات برمجة تطبيقات سحابية للضبط تفرض رسومًا لكل رمز تدريب بدلاً من اشتراط امتلاك بطاقة GPU؛ تغطي [مقارنة أطر الضبط الدقيق](/ar/local-llms/best-llm-fine-tuning-framework-2026) الخاصة بـ PromptQuorum تسعير Together.ai مباشرة.',
           '**[Ollama](https://ollama.com)** و**[LM Studio](https://lmstudio.ai)** — أدوات استدلال محلية *لتشغيل* النماذج بدلاً من تدريبها؛ من الأنماط الشائعة الضبط باستخدام Unsloth، والتصدير إلى GGUF، ثم تشغيل النتيجة في Ollama أو LM Studio. راجع [مراجعة Ollama](/ar/power-local-llm/ollama-review) و[مراجعة LM Studio](/ar/power-local-llm/lm-studio-review).',
         ],
-        note: 'هذه ليست قائمة شاملة لأدوات الضبط الدقيق — راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل المحدَّث بانتظام، بما في ذلك مدخل Unsloth الخاص في الدليل.',
+        note: 'هذه ليست قائمة شاملة لأدوات الضبط الدقيق — راجع [دليل برمجيات LLM المحلية](/ar/directory) للاطلاع على الكتالوج الكامل المحدَّث بانتظام، بما في ذلك مدخل Unsloth الخاص في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2496,7 +2496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل Unsloth في الدليل.',
+          '[دليل برمجيات LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل Unsloth في الدليل.',
           '[أفضل إطار عمل لضبط نماذج LLM 2026: Unsloth مقابل Axolotl مقابل السحابة](/ar/local-llms/best-llm-fine-tuning-framework-2026) — مقارنة مباشرة تغطي Unsloth مقابل Axolotl وMLX-LM وواجهات برمجة التطبيقات السحابية للضبط الدقيق.',
           '[MLX-LM Explained](/ar/power-local-llm/mlx-lm-explained) — مراجعة مخصصة لبديل Apple الأصلي الخاص بـ Apple Silicon.',
           '[ضبط نماذج LLM المحلية باستخدام LoRA](/ar/local-llms/fine-tuning-local-llms-lora) — نظرة أعمق على تقنية LoRA التي تستخدمها Unsloth وغيرها للضبط الفعّال.',

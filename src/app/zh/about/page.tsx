@@ -222,7 +222,7 @@ export default function ZhAboutPage() {
                   <div className="text-text-primary font-semibold mb-1">本地LLM内容</div>
                   <div className="text-sm text-text-secondary">在自己的硬件上运行LLM的指南——搭建、硬件要求与对比。</div>
                 </Link>
-                <Link href="/zh/power-local-llm/local-llm-software-directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                <Link href="/zh/directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
                   <div className="text-text-primary font-semibold mb-1">本地LLM软件目录</div>
                   <div className="text-sm text-text-secondary">可搜索的本地LLM应用与工具目录，方便逐一对比。</div>
                 </Link>

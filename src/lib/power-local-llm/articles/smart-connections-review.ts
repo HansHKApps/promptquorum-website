@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Install via Obsidian\'s Community Plugins directory (search "Smart Connections") or manually from [GitHub](https://github.com/brianpetro/obsidian-smart-connections)',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Smart Connections\' entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how it compares at a glance to dozens of other local-AI-capable tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Smart Connections\' entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local-AI-capable tools.' },
           { type: 'note', text: 'The plugin\'s license changed in 2026 from GPLv3 to a source-available license (see the License and Pricing section below) — it is not accurate to describe the current version as "open source" or "GPL."' },
         ],
       },
@@ -185,7 +185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Logseq Copilot Review](/power-local-llm/logseq-copilot-review)** — the Logseq-ecosystem equivalent: an AI chat plugin for a different outliner-based notes app.',
           '**[Joplin AI Agent Review](/power-local-llm/joplin-ai-agent-review)** — the Joplin-ecosystem equivalent: an AI agent plugin for a different notes app.',
         ],
-        note: 'See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for Smart Connections\' own directory entry alongside the full catalog of local AI tools, and PromptQuorum\'s [Ollama review](/power-local-llm/ollama-review) or [LM Studio review](/power-local-llm/lm-studio-review) for the local-model backends the chat-focused alternatives above connect to.',
+        note: 'See the [Local LLM Software Directory](/directory) for Smart Connections\' own directory entry alongside the full catalog of local AI tools, and PromptQuorum\'s [Ollama review](/power-local-llm/ollama-review) or [LM Studio review](/power-local-llm/lm-studio-review) for the local-model backends the chat-focused alternatives above connect to.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -241,7 +241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Smart Connections\' directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Smart Connections\' directory entry.',
           '[Local LLM With Obsidian 2026](/power-local-llm/local-llm-with-obsidian-2026) — a pillar guide to the wider local-LLM-in-Obsidian ecosystem, covering Smart Connections alongside other plugin options.',
           '[Obsidian and Logseq AI Plugins, Compared](/power-local-llm/obsidian-logseq-ai-plugins) — a multi-plugin comparison covering Smart Connections, Copilot for Obsidian, and other AI options across both notes apps.',
           '[Ollama Review](/power-local-llm/ollama-review) — a local-model backend used by the chat-focused alternatives discussed in this review.',
@@ -321,7 +321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installation über Obsidians Community-Plugins-Verzeichnis (Suche nach „Smart Connections") oder manuell von [GitHub](https://github.com/brianpetro/obsidian-smart-connections)',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zu Smart Connections\' Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie den Vergleich zu Dutzenden weiterer lokal-KI-fähiger Tools auf einen Blick.' },
+          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zu Smart Connections\' Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie den Vergleich zu Dutzenden weiterer lokal-KI-fähiger Tools auf einen Blick.' },
           { type: 'note', text: 'Die Lizenz des Plugins wechselte 2026 von GPLv3 zu einer quellverfügbaren Lizenz (siehe Abschnitt Lizenz und Preise unten) — es ist nicht korrekt, die aktuelle Version als „Open Source" oder „GPL" zu bezeichnen.' },
         ],
       },
@@ -433,7 +433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Logseq Copilot Review](/de/power-local-llm/logseq-copilot-review)** — die Logseq-Entsprechung: ein KI-Chat-Plugin für eine andere Outliner-basierte Notiz-App.',
           '**[Joplin AI Agent Review](/de/power-local-llm/joplin-ai-agent-review)** — die Joplin-Entsprechung: ein KI-Agenten-Plugin für eine andere Notiz-App.',
         ],
-        note: 'Siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für Smart Connections\' eigenen Verzeichniseintrag neben dem vollständigen Katalog lokaler KI-Tools, sowie PromptQuorums [Ollama Review](/de/power-local-llm/ollama-review) oder [LM Studio Review](/de/power-local-llm/lm-studio-review) für die lokalen Modell-Backends, mit denen sich die oben genannten chat-fokussierten Alternativen verbinden.',
+        note: 'Siehe das [Local LLM Software Directory](/de/directory) für Smart Connections\' eigenen Verzeichniseintrag neben dem vollständigen Katalog lokaler KI-Tools, sowie PromptQuorums [Ollama Review](/de/power-local-llm/ollama-review) oder [LM Studio Review](/de/power-local-llm/lm-studio-review) für die lokalen Modell-Backends, mit denen sich die oben genannten chat-fokussierten Alternativen verbinden.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -489,7 +489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Smart Connections\' Verzeichniseintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Smart Connections\' Verzeichniseintrag.',
           '[Local LLM With Obsidian 2026](/de/power-local-llm/local-llm-with-obsidian-2026) — ein Leitfaden zum weiteren lokalen-LLM-in-Obsidian-Ökosystem, der Smart Connections neben anderen Plugin-Optionen behandelt.',
           '[Obsidian and Logseq AI Plugins, Compared](/de/power-local-llm/obsidian-logseq-ai-plugins) — ein Mehr-Plugin-Vergleich zu Smart Connections, Copilot for Obsidian und anderen KI-Optionen in beiden Notiz-Apps.',
           '[Ollama Review](/de/power-local-llm/ollama-review) — ein lokales Modell-Backend, das von den in dieser Review besprochenen chat-fokussierten Alternativen genutzt wird.',
@@ -569,7 +569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installation via le répertoire Community Plugins d\'Obsidian (rechercher « Smart Connections ») ou manuellement depuis [GitHub](https://github.com/brianpetro/obsidian-smart-connections)',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de l\'entrée de Smart Connections dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir en un coup d\'œil comment il se compare à des dizaines d\'autres outils IA locaux.' },
+          { type: 'note', text: 'Cette review est le complément approfondi de l\'entrée de Smart Connections dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment il se compare à des dizaines d\'autres outils IA locaux.' },
           { type: 'note', text: 'La licence du plugin est passée en 2026 de GPLv3 à une licence à code source disponible (voir la section Licence et tarifs ci-dessous) — il n\'est plus exact de décrire la version actuelle comme « open source » ou « GPL ».' },
         ],
       },
@@ -681,7 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Logseq Copilot Review](/fr/power-local-llm/logseq-copilot-review)** — l\'équivalent pour l\'écosystème Logseq : un plugin de chat IA pour une autre application de notes basée sur un outliner.',
           '**[Joplin AI Agent Review](/fr/power-local-llm/joplin-ai-agent-review)** — l\'équivalent pour l\'écosystème Joplin : un plugin d\'agent IA pour une autre application de notes.',
         ],
-        note: 'Voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour la propre fiche de Smart Connections aux côtés du catalogue complet d\'outils IA locaux, ainsi que les [Ollama Review](/fr/power-local-llm/ollama-review) et [LM Studio Review](/fr/power-local-llm/lm-studio-review) de PromptQuorum pour les backends de modèles locaux auxquels se connectent les alternatives orientées chat ci-dessus.',
+        note: 'Voir le [Local LLM Software Directory](/fr/directory) pour la propre fiche de Smart Connections aux côtés du catalogue complet d\'outils IA locaux, ainsi que les [Ollama Review](/fr/power-local-llm/ollama-review) et [LM Studio Review](/fr/power-local-llm/lm-studio-review) de PromptQuorum pour les backends de modèles locaux auxquels se connectent les alternatives orientées chat ci-dessus.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -737,7 +737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant la fiche de Smart Connections.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant la fiche de Smart Connections.',
           '[Local LLM With Obsidian 2026](/fr/power-local-llm/local-llm-with-obsidian-2026) — un guide de référence sur l\'écosystème plus large des LLM locaux dans Obsidian, couvrant Smart Connections aux côtés d\'autres options de plugins.',
           '[Obsidian and Logseq AI Plugins, Compared](/fr/power-local-llm/obsidian-logseq-ai-plugins) — une comparaison multi-plugins couvrant Smart Connections, Copilot for Obsidian et d\'autres options IA sur les deux applications de notes.',
           '[Ollama Review](/fr/power-local-llm/ollama-review) — un backend de modèle local utilisé par les alternatives orientées chat évoquées dans cette review.',
@@ -817,7 +817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Obsidianのコミュニティプラグインディレクトリ（「Smart Connections」を検索）経由、または[GitHub](https://github.com/brianpetro/obsidian-smart-connections)から手動でインストール',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)内のSmart Connectionsのエントリーを掘り下げた記事です — 他の数十のローカルAI対応ツールとの比較は同ページをご覧ください。' },
+          { type: 'note', text: 'このレビューは[Local LLM Software Directory](/ja/directory)内のSmart Connectionsのエントリーを掘り下げた記事です — 他の数十のローカルAI対応ツールとの比較は同ページをご覧ください。' },
           { type: 'note', text: 'このプラグインのライセンスは2026年にGPLv3からソース公開型ライセンスに変更されました（下記「ライセンスと料金」参照）— 現在のバージョンを「オープンソース」や「GPL」と表現するのは正確ではありません。' },
         ],
       },
@@ -929,7 +929,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Logseq Copilotレビュー](/ja/power-local-llm/logseq-copilot-review)** — Logseqエコシステムにおける同等製品：別のアウトライナー型ノートアプリ向けのAIチャットプラグイン。',
           '**[Joplin AI Agentレビュー](/ja/power-local-llm/joplin-ai-agent-review)** — Joplinエコシステムにおける同等製品：別のノートアプリ向けのAIエージェントプラグイン。',
         ],
-        note: 'ローカルAIツールの全カタログと合わせたSmart Connections自身のディレクトリエントリーについては[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を、上記のチャット中心の代替製品が接続するローカルモデルバックエンドについてはPromptQuorumの[Ollamaレビュー](/ja/power-local-llm/ollama-review)や[LM Studioレビュー](/ja/power-local-llm/lm-studio-review)をご覧ください。',
+        note: 'ローカルAIツールの全カタログと合わせたSmart Connections自身のディレクトリエントリーについては[Local LLM Software Directory](/ja/directory)を、上記のチャット中心の代替製品が接続するローカルモデルバックエンドについてはPromptQuorumの[Ollamaレビュー](/ja/power-local-llm/ollama-review)や[LM Studioレビュー](/ja/power-local-llm/lm-studio-review)をご覧ください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -985,7 +985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの全カタログ。Smart Connectionsのディレクトリエントリーも含む。',
+          '[Local LLM Software Directory 2026](/ja/directory) — この記事が属する、ローカルAIツールの全カタログ。Smart Connectionsのディレクトリエントリーも含む。',
           '[Local LLM With Obsidian 2026](/ja/power-local-llm/local-llm-with-obsidian-2026) — Obsidianにおけるローカルllmエコシステム全体のガイドで、他のプラグイン選択肢と並んでSmart Connectionsを扱う。',
           '[Obsidian and Logseq AI Plugins, Compared](/ja/power-local-llm/obsidian-logseq-ai-plugins) — Smart Connections、Copilot for Obsidian、その他のAIオプションを両方のノートアプリで比較する複数プラグイン比較記事。',
           '[Ollamaレビュー](/ja/power-local-llm/ollama-review) — 本レビューで取り上げたチャット中心の代替製品が使用するローカルモデルバックエンドの一つ。',
@@ -1065,7 +1065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '可通过Obsidian的社区插件目录（搜索"Smart Connections"）安装，或从[GitHub](https://github.com/brianpetro/obsidian-smart-connections)手动安装',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory)中Smart Connections条目的深度补充——请查看该页面，一览它与数十款其他支持本地AI的工具的对比。' },
+          { type: 'note', text: '本评测是[Local LLM Software Directory](/zh/directory)中Smart Connections条目的深度补充——请查看该页面，一览它与数十款其他支持本地AI的工具的对比。' },
           { type: 'note', text: '该插件的许可证于2026年从GPLv3变更为源代码可用许可证（见下方"许可证与定价"部分）——将当前版本描述为"开源"或"GPL"并不准确。' },
         ],
       },
@@ -1177,7 +1177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Logseq Copilot评测](/zh/power-local-llm/logseq-copilot-review)** — Logseq生态系统中的同类产品：为另一款大纲式笔记应用打造的AI聊天插件。',
           '**[Joplin AI Agent评测](/zh/power-local-llm/joplin-ai-agent-review)** — Joplin生态系统中的同类产品：为另一款笔记应用打造的AI Agent插件。',
         ],
-        note: '有关Smart Connections自身的目录条目及本地AI工具完整目录，请参阅[Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory)；有关上述聊天导向替代方案所连接的本地模型后端，请参阅PromptQuorum的[Ollama评测](/zh/power-local-llm/ollama-review)或[LM Studio评测](/zh/power-local-llm/lm-studio-review)。',
+        note: '有关Smart Connections自身的目录条目及本地AI工具完整目录，请参阅[Local LLM Software Directory](/zh/directory)；有关上述聊天导向替代方案所连接的本地模型后端，请参阅PromptQuorum的[Ollama评测](/zh/power-local-llm/ollama-review)或[LM Studio评测](/zh/power-local-llm/lm-studio-review)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1233,7 +1233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[Local LLM Software Directory 2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包含Smart Connections的目录条目。',
+          '[Local LLM Software Directory 2026](/zh/directory) — 本文所属的本地AI工具完整目录，包含Smart Connections的目录条目。',
           '[Local LLM With Obsidian 2026](/zh/power-local-llm/local-llm-with-obsidian-2026) — 关于Obsidian中更广泛本地LLM生态系统的指南，介绍了Smart Connections以及其他插件选择。',
           '[Obsidian and Logseq AI Plugins, Compared](/zh/power-local-llm/obsidian-logseq-ai-plugins) — 涵盖Smart Connections、Copilot for Obsidian以及两款笔记应用中其他AI选项的多插件对比。',
           '[Ollama评测](/zh/power-local-llm/ollama-review) — 本评测中提到的聊天导向替代方案所使用的本地模型后端之一。',
@@ -1313,7 +1313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Se instala desde el directorio de plugins de la comunidad de Obsidian (buscar "Smart Connections") o manualmente desde [GitHub](https://github.com/brianpetro/obsidian-smart-connections)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de Smart Connections en el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de Smart Connections en el [Local LLM Software Directory](/es/directory) — consulta esa página para ver de un vistazo cómo se compara con docenas de otras herramientas de IA local.' },
           { type: 'note', text: 'La licencia del plugin cambió en 2026 de GPLv3 a una licencia de código disponible (ver la sección de Licencia y precios más abajo) — no es exacto describir la versión actual como "de código abierto" o "GPL".' },
         ],
       },
@@ -1425,7 +1425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Logseq Copilot Review](/es/power-local-llm/logseq-copilot-review)** — el equivalente en el ecosistema Logseq: un plugin de chat con IA para otra aplicación de notas basada en outliner.',
           '**[Joplin AI Agent Review](/es/power-local-llm/joplin-ai-agent-review)** — el equivalente en el ecosistema Joplin: un plugin de agente de IA para otra aplicación de notas.',
         ],
-        note: 'Consulta el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) para ver la propia ficha de Smart Connections junto al catálogo completo de herramientas de IA local, y las reviews de [Ollama](/es/power-local-llm/ollama-review) o [LM Studio](/es/power-local-llm/lm-studio-review) de PromptQuorum para los backends de modelos locales a los que se conectan las alternativas centradas en chat mencionadas arriba.',
+        note: 'Consulta el [Local LLM Software Directory](/es/directory) para ver la propia ficha de Smart Connections junto al catálogo completo de herramientas de IA local, y las reviews de [Ollama](/es/power-local-llm/ollama-review) o [LM Studio](/es/power-local-llm/lm-studio-review) de PromptQuorum para los backends de modelos locales a los que se conectan las alternativas centradas en chat mencionadas arriba.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1481,7 +1481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de Smart Connections.',
+          '[Local LLM Software Directory 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de Smart Connections.',
           '[Local LLM With Obsidian 2026](/es/power-local-llm/local-llm-with-obsidian-2026) — una guía de referencia sobre el ecosistema más amplio de LLM locales en Obsidian, que cubre Smart Connections junto a otras opciones de plugins.',
           '[Obsidian and Logseq AI Plugins, Compared](/es/power-local-llm/obsidian-logseq-ai-plugins) — una comparación multiplugin que cubre Smart Connections, Copilot for Obsidian y otras opciones de IA en ambas aplicaciones de notas.',
           '[Ollama Review](/es/power-local-llm/ollama-review) — un backend de modelo local usado por las alternativas centradas en chat mencionadas en esta review.',
@@ -1561,7 +1561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instalação pelo diretório de Community Plugins do Obsidian (busque por "Smart Connections") ou manualmente pelo [GitHub](https://github.com/brianpetro/obsidian-smart-connections)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Smart Connections no [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Smart Connections no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
           { type: 'note', text: 'A licença do plugin mudou em 2026, de GPLv3 para uma licença de código disponível (veja a seção Licença e preços abaixo) — não é correto descrever a versão atual como "código aberto" ou "GPL".' },
         ],
       },
@@ -1673,7 +1673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Logseq Copilot Review](/pt/power-local-llm/logseq-copilot-review)** — o equivalente no ecossistema Logseq: um plugin de chat com IA para outro aplicativo de notas baseado em outliner.',
           '**[Joplin AI Agent Review](/pt/power-local-llm/joplin-ai-agent-review)** — o equivalente no ecossistema Joplin: um plugin de agente de IA para outro aplicativo de notas.',
         ],
-        note: 'Veja o [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) para a própria ficha do Smart Connections ao lado do catálogo completo de ferramentas de IA local, e as reviews de [Ollama](/pt/power-local-llm/ollama-review) ou [LM Studio](/pt/power-local-llm/lm-studio-review) da PromptQuorum para os backends de modelos locais aos quais se conectam as alternativas focadas em chat mencionadas acima.',
+        note: 'Veja o [Local LLM Software Directory](/pt/directory) para a própria ficha do Smart Connections ao lado do catálogo completo de ferramentas de IA local, e as reviews de [Ollama](/pt/power-local-llm/ollama-review) ou [LM Studio](/pt/power-local-llm/lm-studio-review) da PromptQuorum para os backends de modelos locais aos quais se conectam as alternativas focadas em chat mencionadas acima.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1729,7 +1729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do Smart Connections.',
+          '[Local LLM Software Directory 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do Smart Connections.',
           '[Local LLM With Obsidian 2026](/pt/power-local-llm/local-llm-with-obsidian-2026) — um guia de referência sobre o ecossistema mais amplo de LLMs locais no Obsidian, cobrindo o Smart Connections ao lado de outras opções de plugins.',
           '[Obsidian and Logseq AI Plugins, Compared](/pt/power-local-llm/obsidian-logseq-ai-plugins) — uma comparação multiplugin cobrindo o Smart Connections, o Copilot for Obsidian e outras opções de IA em ambos os aplicativos de notas.',
           '[Ollama Review](/pt/power-local-llm/ollama-review) — um backend de modelo local usado pelas alternativas focadas em chat discutidas nesta review.',
@@ -1809,7 +1809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'التثبيت عبر دليل Community Plugins في Obsidian (ابحث عن "Smart Connections") أو يدويًا من [GitHub](https://github.com/brianpetro/obsidian-smart-connections)',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لمدخل Smart Connections في [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف تقارن بسرعة بعشرات الأدوات الأخرى القادرة على العمل بالذكاء الاصطناعي محليًا.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لمدخل Smart Connections في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تقارن بسرعة بعشرات الأدوات الأخرى القادرة على العمل بالذكاء الاصطناعي محليًا.' },
           { type: 'note', text: 'تغيّر ترخيص الإضافة في 2026 من GPLv3 إلى ترخيص متاح المصدر (انظر قسم الترخيص والأسعار أدناه) — ليس من الدقيق وصف النسخة الحالية بأنها "مفتوحة المصدر" أو "GPL".' },
         ],
       },
@@ -1921,7 +1921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[مراجعة Logseq Copilot](/ar/power-local-llm/logseq-copilot-review)** — النظير في نظام Logseq: إضافة دردشة بالذكاء الاصطناعي لتطبيق ملاحظات آخر قائم على الـoutliner.',
           '**[مراجعة Joplin AI Agent](/ar/power-local-llm/joplin-ai-agent-review)** — النظير في نظام Joplin: إضافة وكيل ذكاء اصطناعي لتطبيق ملاحظات آخر.',
         ],
-        note: 'راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) لمدخل Smart Connections الخاص بها إلى جانب الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية، وراجع [مراجعة Ollama](/ar/power-local-llm/ollama-review) أو [مراجعة LM Studio](/ar/power-local-llm/lm-studio-review) من PromptQuorum للاطلاع على خلفيات النماذج المحلية التي تتصل بها البدائل المرتكزة على الدردشة أعلاه.',
+        note: 'راجع [دليل برمجيات LLM المحلية](/ar/directory) لمدخل Smart Connections الخاص بها إلى جانب الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية، وراجع [مراجعة Ollama](/ar/power-local-llm/ollama-review) أو [مراجعة LM Studio](/ar/power-local-llm/lm-studio-review) من PromptQuorum للاطلاع على خلفيات النماذج المحلية التي تتصل بها البدائل المرتكزة على الدردشة أعلاه.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1977,7 +1977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل Smart Connections.',
+          '[دليل برمجيات LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل Smart Connections.',
           '[Local LLM With Obsidian 2026](/ar/power-local-llm/local-llm-with-obsidian-2026) — دليل مرجعي حول نظام LLM المحلي الأوسع في Obsidian، يغطي Smart Connections إلى جانب خيارات إضافات أخرى.',
           '[Obsidian and Logseq AI Plugins, Compared](/ar/power-local-llm/obsidian-logseq-ai-plugins) — مقارنة متعددة الإضافات تغطي Smart Connections وCopilot for Obsidian وخيارات ذكاء اصطناعي أخرى في تطبيقي الملاحظات كليهما.',
           '[مراجعة Ollama](/ar/power-local-llm/ollama-review) — خلفية نموذج محلي تستخدمها البدائل المرتكزة على الدردشة التي نوقشت في هذه المراجعة.',
@@ -2057,7 +2057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Obsidian 커뮤니티 플러그인 디렉터리("Smart Connections" 검색)를 통해 설치하거나 [GitHub](https://github.com/brianpetro/obsidian-smart-connections)에서 수동 설치',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 등재된 Smart Connections 항목을 심층적으로 다루는 자료입니다 — 다른 수십 개의 로컬 AI 지원 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등재된 Smart Connections 항목을 심층적으로 다루는 자료입니다 — 다른 수십 개의 로컬 AI 지원 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
           { type: 'note', text: '이 플러그인의 라이선스는 2026년에 GPLv3에서 소스 공개형 라이선스로 변경되었습니다(아래 "라이선스 및 가격" 섹션 참조) — 현재 버전을 "오픈소스" 또는 "GPL"로 표현하는 것은 정확하지 않습니다.' },
         ],
       },
@@ -2169,7 +2169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Logseq Copilot 리뷰](/ko/power-local-llm/logseq-copilot-review)** — Logseq 생태계의 동급 제품: 다른 아웃라이너 기반 노트 앱을 위한 AI 채팅 플러그인.',
           '**[Joplin AI Agent 리뷰](/ko/power-local-llm/joplin-ai-agent-review)** — Joplin 생태계의 동급 제품: 다른 노트 앱을 위한 AI 에이전트 플러그인.',
         ],
-        note: 'Smart Connections 자체의 디렉터리 항목과 로컬 AI 도구 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하고, 위의 채팅 중심 대안들이 연결되는 로컬 모델 백엔드에 대해서는 PromptQuorum의 [Ollama 리뷰](/ko/power-local-llm/ollama-review)나 [LM Studio 리뷰](/ko/power-local-llm/lm-studio-review)를 참고하세요.',
+        note: 'Smart Connections 자체의 디렉터리 항목과 로컬 AI 도구 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하고, 위의 채팅 중심 대안들이 연결되는 로컬 모델 백엔드에 대해서는 PromptQuorum의 [Ollama 리뷰](/ko/power-local-llm/ollama-review)나 [LM Studio 리뷰](/ko/power-local-llm/lm-studio-review)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2225,7 +2225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 문서가 속한 로컬 AI 도구 전체 카탈로그로, Smart Connections의 디렉터리 항목을 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 문서가 속한 로컬 AI 도구 전체 카탈로그로, Smart Connections의 디렉터리 항목을 포함합니다.',
           '[Local LLM With Obsidian 2026](/ko/power-local-llm/local-llm-with-obsidian-2026) — Obsidian 내 더 넓은 로컬 LLM 생태계에 대한 가이드로, 다른 플러그인 옵션과 함께 Smart Connections를 다룹니다.',
           '[Obsidian and Logseq AI Plugins, Compared](/ko/power-local-llm/obsidian-logseq-ai-plugins) — 두 노트 앱 전반의 Smart Connections, Copilot for Obsidian 및 기타 AI 옵션을 다루는 다중 플러그인 비교 자료입니다.',
           '[Ollama 리뷰](/ko/power-local-llm/ollama-review) — 이 리뷰에서 다룬 채팅 중심 대안들이 사용하는 로컬 모델 백엔드 중 하나입니다.',

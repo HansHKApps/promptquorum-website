@@ -71,7 +71,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Founded in 2023 and went through Y Combinator\'s Winter 2023 (W23) batch',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Langfuse\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Langfuse compares at a glance to other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Langfuse\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Langfuse compares at a glance to other local AI tools.' },
         ],
       },
       overview: {
@@ -260,7 +260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Langfuse\'s own directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Langfuse\'s own directory entry.',
           '[LiteLLM Review](/power-local-llm/litellm-review) — an LLM gateway/router often used alongside an observability tool like Langfuse.',
           '[LangChain Review](/power-local-llm/langchain-review) — the framework Langfuse most commonly instruments via its callback handler.',
           '[Dify Review](/power-local-llm/dify-ai-workflow-builder-review) — a broader LLMOps/workflow-builder platform with its own tracing and evaluation features.',
@@ -337,7 +337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gegründet 2023 und durchlief Y Combinators Winter-2023-Batch (W23)',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der vertiefende Begleitartikel zu Langfuses Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie auf einen Blick, wie Langfuse im Vergleich zu anderen lokalen KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist der vertiefende Begleitartikel zu Langfuses Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie auf einen Blick, wie Langfuse im Vergleich zu anderen lokalen KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -526,7 +526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Langfuses eigenem Directory-Eintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Langfuses eigenem Directory-Eintrag.',
           '[LiteLLM Review](/de/power-local-llm/litellm-review) — ein LLM-Gateway/-Router, das häufig ergänzend zu einem Observability-Tool wie Langfuse eingesetzt wird.',
           '[LangChain Review](/de/power-local-llm/langchain-review) — das Framework, das Langfuse über seinen Callback-Handler am häufigsten instrumentiert.',
           '[Dify Review](/de/power-local-llm/dify-ai-workflow-builder-review) — eine breitere LLMOps-/Workflow-Builder-Plattform mit eigenen Tracing- und Evaluierungsfunktionen.',
@@ -603,7 +603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fondée en 2023, issue de la promotion Winter 2023 (W23) de Y Combinator',
         ],
         callouts: [
-          { type: 'note', text: 'Cette revue est le complément approfondi de la fiche Langfuse dans le [Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment Langfuse se compare en un coup d\'œil aux autres outils IA locaux.' },
+          { type: 'note', text: 'Cette revue est le complément approfondi de la fiche Langfuse dans le [Répertoire des logiciels LLM locaux](/fr/directory) — consultez cette page pour voir comment Langfuse se compare en un coup d\'œil aux autres outils IA locaux.' },
         ],
       },
       overview: {
@@ -792,7 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire des logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant la propre fiche de Langfuse dans le répertoire.',
+          '[Répertoire des logiciels LLM locaux 2026](/fr/directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant la propre fiche de Langfuse dans le répertoire.',
           '[Revue LiteLLM](/fr/power-local-llm/litellm-review) — une gateway/routeur LLM souvent utilisée aux côtés d\'un outil d\'observabilité comme Langfuse.',
           '[Revue LangChain](/fr/power-local-llm/langchain-review) — le framework que Langfuse instrumente le plus couramment via son gestionnaire de callback.',
           '[Revue Dify](/fr/power-local-llm/dify-ai-workflow-builder-review) — une plateforme LLMOps/workflow-builder plus large avec ses propres fonctionnalités de traçage et d\'évaluation.',
@@ -869,7 +869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '2023年設立で、Y CombinatorのWinter 2023（W23）バッチを経ている',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるLangfuseの項目を掘り下げた記事です。他のローカルAIツールとの一覧比較はそちらのページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるLangfuseの項目を掘り下げた記事です。他のローカルAIツールとの一覧比較はそちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1058,7 +1058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — Langfuse自身のディレクトリ項目を含む、この記事が属するローカルAIツールの全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — Langfuse自身のディレクトリ項目を含む、この記事が属するローカルAIツールの全カタログ。',
           '[LiteLLMレビュー](/ja/power-local-llm/litellm-review) — Langfuseのようなオブザーバビリティツールとよく併用されるLLMゲートウェイ／ルーター。',
           '[LangChainレビュー](/ja/power-local-llm/langchain-review) — Langfuseがコールバックハンドラーを通じて最もよく計装するフレームワーク。',
           '[Difyレビュー](/ja/power-local-llm/dify-ai-workflow-builder-review) — 独自のトレーシングと評価機能を持つ、より広範なLLMOps／ワークフロービルダー基盤。',
@@ -1135,7 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '成立于 2023 年，曾入选 Y Combinator 2023 年冬季（W23）批次',
         ],
         callouts: [
-          { type: 'note', text: '本文是 [本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory) 中 Langfuse 条目的深度解读——想一览 Langfuse 与其他本地 AI 工具的对比，可参阅该页面。' },
+          { type: 'note', text: '本文是 [本地 LLM 软件目录](/zh/directory) 中 Langfuse 条目的深度解读——想一览 Langfuse 与其他本地 AI 工具的对比，可参阅该页面。' },
         ],
       },
       overview: {
@@ -1324,7 +1324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026 本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)——本文所属的完整本地 AI 工具目录，其中包含 Langfuse 自己的目录条目。',
+          '[2026 本地 LLM 软件目录](/zh/directory)——本文所属的完整本地 AI 工具目录，其中包含 Langfuse 自己的目录条目。',
           '[LiteLLM 评测](/zh/power-local-llm/litellm-review)——一个常与 Langfuse 这类可观测性工具搭配使用的 LLM 网关/路由工具。',
           '[LangChain 评测](/zh/power-local-llm/langchain-review)——Langfuse 最常通过其回调处理器进行埋点的那个框架。',
           '[Dify 评测](/zh/power-local-llm/dify-ai-workflow-builder-review)——一个更全面的 LLMOps/工作流构建平台，自带链路追踪和评估功能。',
@@ -1401,7 +1401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fundada en 2023, pasó por la promoción de invierno 2023 (W23) de Y Combinator',
         ],
         callouts: [
-          { type: 'note', text: 'Este análisis es la versión en profundidad de la entrada de Langfuse en el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara Langfuse a simple vista con otras herramientas de IA local.' },
+          { type: 'note', text: 'Este análisis es la versión en profundidad de la entrada de Langfuse en el [Directorio de Software LLM Local](/es/directory) — consulta esa página para ver cómo se compara Langfuse a simple vista con otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1590,7 +1590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas Relacionadas',
         items: [
-          '[Directorio de Software LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia entrada de Langfuse en el directorio.',
+          '[Directorio de Software LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia entrada de Langfuse en el directorio.',
           '[Análisis de LiteLLM](/es/power-local-llm/litellm-review) — una pasarela/enrutador de LLM que a menudo se usa junto a una herramienta de observabilidad como Langfuse.',
           '[Análisis de LangChain](/es/power-local-llm/langchain-review) — el framework que Langfuse instrumenta con más frecuencia mediante su gestor de callbacks.',
           '[Análisis de Dify](/es/power-local-llm/dify-ai-workflow-builder-review) — una plataforma más amplia de LLMOps/creación de flujos de trabajo con sus propias funciones de trazabilidad y evaluación.',
@@ -1667,7 +1667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fundado em 2023 e passou pelo lote Winter 2023 (W23) da Y Combinator',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Langfuse no [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar o Langfuse rapidamente com outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Langfuse no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar o Langfuse rapidamente com outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1856,7 +1856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura Relacionada',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada própria do Langfuse no diretório.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada própria do Langfuse no diretório.',
           '[Análise do LiteLLM](/pt/power-local-llm/litellm-review) — um gateway/roteador de LLM frequentemente usado junto com uma ferramenta de observabilidade como o Langfuse.',
           '[Análise do LangChain](/pt/power-local-llm/langchain-review) — o framework que o Langfuse mais comumente instrumenta via seu callback handler.',
           '[Análise do Dify](/pt/power-local-llm/dify-ai-workflow-builder-review) — uma plataforma mais ampla de LLMOps/construção de workflows, com seus próprios recursos de rastreamento e avaliação.',
@@ -1933,7 +1933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تأسس عام 2023 ومرّ ببرنامج Y Combinator لدفعة شتاء 2023 (W23)',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الشرح المتعمق المرافق لمدخل Langfuse في [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمقارنة سريعة بين Langfuse وأدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي الشرح المتعمق المرافق لمدخل Langfuse في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة بين Langfuse وأدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2122,7 +2122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي تنتمي إليها هذه المقالة، بما في ذلك مدخل Langfuse الخاص في الدليل.',
+          '[دليل برمجيات LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي تنتمي إليها هذه المقالة، بما في ذلك مدخل Langfuse الخاص في الدليل.',
           '[مراجعة LiteLLM](/ar/power-local-llm/litellm-review) — بوابة/موجِّه للنماذج اللغوية الكبيرة غالبًا ما يُستخدم إلى جانب أداة مراقبة مثل Langfuse.',
           '[مراجعة LangChain](/ar/power-local-llm/langchain-review) — إطار العمل الذي يدمج معه Langfuse عادة عبر معالج الاستدعاء الخاص به.',
           '[مراجعة Dify](/ar/power-local-llm/dify-ai-workflow-builder-review) — منصة أوسع لبناء تدفقات عمل LLMOps بميزات تتبّع وتقييم خاصة بها.',
@@ -2199,7 +2199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '2023년 설립되었으며 Y Combinator 2023년 겨울(W23) 배치를 거쳤습니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 실린 Langfuse 항목의 심층 분석 버전입니다 — Langfuse가 다른 로컬 AI 도구들과 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 실린 Langfuse 항목의 심층 분석 버전입니다 — Langfuse가 다른 로컬 AI 도구들과 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2388,7 +2388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — Langfuse 자체 디렉터리 항목을 포함해, 이 글이 속한 로컬 AI 도구 전체 카탈로그입니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — Langfuse 자체 디렉터리 항목을 포함해, 이 글이 속한 로컬 AI 도구 전체 카탈로그입니다.',
           '[LiteLLM 리뷰](/ko/power-local-llm/litellm-review) — Langfuse 같은 옵저버빌리티 도구와 함께 자주 사용되는 LLM 게이트웨이/라우터입니다.',
           '[LangChain 리뷰](/ko/power-local-llm/langchain-review) — Langfuse가 콜백 핸들러를 통해 가장 흔히 계측하는 프레임워크입니다.',
           '[Dify 리뷰](/ko/power-local-llm/dify-ai-workflow-builder-review) — 자체 트레이싱 및 평가 기능을 갖춘 더 폭넓은 LLMOps/워크플로 빌더 플랫폼입니다.',

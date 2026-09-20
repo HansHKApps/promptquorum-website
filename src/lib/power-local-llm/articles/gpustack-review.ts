@@ -78,7 +78,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository shows 5,607 stars, verified against [github.com/gpustack/gpustack](https://github.com/gpustack/gpustack) on September 5, 2026',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to GPUStack\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how GPUStack compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to GPUStack\'s entry in the [Local LLM Software Directory](/directory) — see that page for how GPUStack compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -208,13 +208,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'gpustack-competitors',
         title: 'GPUStack vs. Other Local AI Tools',
-        content: 'GPUStack sits in the runtimes-and-managers segment of the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory), but its multi-GPU, multi-machine cluster-orchestration design sets it apart from most tools in that category, which run on a single device. No other FeatureAppPost review on this site covers a true multi-GPU-cluster peer to GPUStack as of this review\'s publish date — the closest comparisons below are single-machine runtimes, which honestly solve a different problem: running a model on one device, not scaling across many.',
+        content: 'GPUStack sits in the runtimes-and-managers segment of the [Local LLM Software Directory](/directory), but its multi-GPU, multi-machine cluster-orchestration design sets it apart from most tools in that category, which run on a single device. No other FeatureAppPost review on this site covers a true multi-GPU-cluster peer to GPUStack as of this review\'s publish date — the closest comparisons below are single-machine runtimes, which honestly solve a different problem: running a model on one device, not scaling across many.',
         items: [
           '**[Ollama](/power-local-llm/ollama-review)** — a general-purpose local model runtime for a single machine, fully MIT-licensed, with a broad model library. The closest single-machine alternative if you do not need cluster orchestration across multiple GPUs or machines. See the full [Ollama review](/power-local-llm/ollama-review).',
           '**[LM Studio](/power-local-llm/lm-studio-review)** — a GUI-first desktop app for local inference on one device, aimed at end users rather than cluster administrators. A closer fit than GPUStack if you want a polished chat app on a single laptop. See the full [LM Studio review](/power-local-llm/lm-studio-review).',
           '**[Docker Model Runner](/power-local-llm/docker-model-runner-review)** — a CLI-and-API feature bundled with Docker Desktop/Engine for running models on a single machine; another single-device option to weigh against GPUStack\'s cluster-orchestration approach if your workload does not need multiple GPUs pooled together. See the full [Docker Model Runner review](/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'For a broader look at enterprise-grade inference-serving stacks (vLLM, TGI, NVIDIA NIM) rather than a single dedicated product review, see this site\'s [comparison of enterprise LLM inference servers](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — GPUStack itself can orchestrate vLLM, SGLang, and TensorRT-LLM as backends rather than competing with them directly. This is not an exhaustive list of local-AI tools — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, including GPUStack\'s own directory entry.',
+        note: 'For a broader look at enterprise-grade inference-serving stacks (vLLM, TGI, NVIDIA NIM) rather than a single dedicated product review, see this site\'s [comparison of enterprise LLM inference servers](/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) — GPUStack itself can orchestrate vLLM, SGLang, and TensorRT-LLM as backends rather than competing with them directly. This is not an exhaustive list of local-AI tools — see the [Local LLM Software Directory](/directory) for the full catalog, including GPUStack\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -269,7 +269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including GPUStack\'s own directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including GPUStack\'s own directory entry.',
           '[Ollama Review](/power-local-llm/ollama-review) — a fully open-source, single-machine local model runtime with a broad model library.',
           '[LM Studio Review](/power-local-llm/lm-studio-review) — a GUI-first, single-machine alternative for readers who want a polished desktop app instead of a self-hosted cluster tool.',
           '[Docker Model Runner Review](/power-local-llm/docker-model-runner-review) — another single-machine, developer-focused option for teams already using Docker.',
@@ -354,7 +354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub-Repository zeigt 5.607 Sterne, geprüft gegen [github.com/gpustack/gpustack](https://github.com/gpustack/gpustack) am 5. September 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zum Eintrag von GPUStack im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie, wie GPUStack im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zum Eintrag von GPUStack im [Local LLM Software Directory](/de/directory) — dort finden Sie, wie GPUStack im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -484,13 +484,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'gpustack-competitors',
         title: 'GPUStack vs. andere lokale KI-Tools',
-        content: 'GPUStack ist im Segment Runtimes-und-Manager des [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) angesiedelt, aber sein Multi-GPU-, Multi-Maschinen-Cluster-Orchestrierungsdesign hebt es von den meisten Tools dieser Kategorie ab, die auf einem einzelnen Gerät laufen. Keine andere FeatureAppPost-Review auf dieser Seite behandelt zum Zeitpunkt der Veröffentlichung dieser Review ein echtes Multi-GPU-Cluster-Pendant zu GPUStack — die folgenden nächstliegenden Vergleiche sind Einzelgeräte-Runtimes, die ehrlich gesagt ein anderes Problem lösen: ein Modell auf einem Gerät auszuführen, nicht über viele hinweg zu skalieren.',
+        content: 'GPUStack ist im Segment Runtimes-und-Manager des [Local LLM Software Directory](/de/directory) angesiedelt, aber sein Multi-GPU-, Multi-Maschinen-Cluster-Orchestrierungsdesign hebt es von den meisten Tools dieser Kategorie ab, die auf einem einzelnen Gerät laufen. Keine andere FeatureAppPost-Review auf dieser Seite behandelt zum Zeitpunkt der Veröffentlichung dieser Review ein echtes Multi-GPU-Cluster-Pendant zu GPUStack — die folgenden nächstliegenden Vergleiche sind Einzelgeräte-Runtimes, die ehrlich gesagt ein anderes Problem lösen: ein Modell auf einem Gerät auszuführen, nicht über viele hinweg zu skalieren.',
         items: [
           '**[Ollama](/de/power-local-llm/ollama-review)** — eine universelle lokale Modell-Runtime für ein einzelnes Gerät, vollständig MIT-lizenziert, mit einer breiten Modellbibliothek. Die nächstliegende Einzelgeräte-Alternative, wenn Sie keine Cluster-Orchestrierung über mehrere GPUs oder Maschinen benötigen. Vollständige [Ollama-Review](/de/power-local-llm/ollama-review).',
           '**[LM Studio](/de/power-local-llm/lm-studio-review)** — eine GUI-first-Desktop-App für lokale Inferenz auf einem Gerät, gerichtet an Endnutzer statt Cluster-Administratoren. Eine passendere Wahl als GPUStack, wenn Sie eine ausgereifte Chat-App auf einem einzelnen Laptop möchten. Vollständige [LM-Studio-Review](/de/power-local-llm/lm-studio-review).',
           '**[Docker Model Runner](/de/power-local-llm/docker-model-runner-review)** — eine mit Docker Desktop/Engine gebündelte CLI-und-API-Funktion zum Ausführen von Modellen auf einem einzelnen Gerät; eine weitere Einzelgeräte-Option, die Sie gegen GPUStacks Cluster-Orchestrierungsansatz abwägen können, wenn Ihre Arbeitslast keine gebündelten mehreren GPUs benötigt. Vollständige [Docker-Model-Runner-Review](/de/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'Für einen breiteren Blick auf Enterprise-Inferenz-Serving-Stacks (vLLM, TGI, NVIDIA NIM) statt einer einzelnen dedizierten Produkt-Review siehe den [Vergleich der Enterprise-LLM-Inferenz-Server](/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) dieser Seite — GPUStack selbst kann vLLM, SGLang und TensorRT-LLM als Backends orchestrieren, statt direkt mit ihnen zu konkurrieren. Dies ist keine erschöpfende Liste lokaler KI-Tools — das vollständige Verzeichnis, einschließlich GPUStacks eigenem Eintrag, finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Für einen breiteren Blick auf Enterprise-Inferenz-Serving-Stacks (vLLM, TGI, NVIDIA NIM) statt einer einzelnen dedizierten Produkt-Review siehe den [Vergleich der Enterprise-LLM-Inferenz-Server](/de/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) dieser Seite — GPUStack selbst kann vLLM, SGLang und TensorRT-LLM als Backends orchestrieren, statt direkt mit ihnen zu konkurrieren. Dies ist keine erschöpfende Liste lokaler KI-Tools — das vollständige Verzeichnis, einschließlich GPUStacks eigenem Eintrag, finden Sie im [Local LLM Software Directory](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -545,7 +545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Themen',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — das vollständige Verzeichnis lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich GPUStacks eigenem Verzeichniseintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — das vollständige Verzeichnis lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich GPUStacks eigenem Verzeichniseintrag.',
           '[Ollama-Review](/de/power-local-llm/ollama-review) — eine vollständig quelloffene Einzelgeräte-Runtime für lokale Modelle mit breiter Modellbibliothek.',
           '[LM-Studio-Review](/de/power-local-llm/lm-studio-review) — eine GUI-first-Einzelgeräte-Alternative für Leser, die eine ausgereifte Desktop-App statt eines selbst gehosteten Cluster-Tools möchten.',
           '[Docker-Model-Runner-Review](/de/power-local-llm/docker-model-runner-review) — eine weitere Einzelgeräte-, entwicklerorientierte Option für Teams, die bereits Docker nutzen.',
@@ -630,7 +630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub affiche 5 607 étoiles, vérifié sur [github.com/gpustack/gpustack](https://github.com/gpustack/gpustack) le 5 septembre 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Cette revue est le complément approfondi de l\'entrée de GPUStack dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment GPUStack se positionne face à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cette revue est le complément approfondi de l\'entrée de GPUStack dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir comment GPUStack se positionne face à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -760,13 +760,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'gpustack-competitors',
         title: 'GPUStack vs. autres outils d\'IA locale',
-        content: 'GPUStack se situe dans le segment gestionnaires-et-environnements-d\'exécution du [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory), mais sa conception d\'orchestration de cluster multi-GPU, multimachine le distingue de la plupart des outils de cette catégorie, qui fonctionnent sur un seul appareil. Aucune autre revue FeatureAppPost de ce site ne couvre un véritable pendant multi-GPU en cluster à GPUStack à la date de publication de cette revue — les comparaisons les plus proches ci-dessous sont des environnements monomachine, qui résolvent honnêtement un problème différent : exécuter un modèle sur un appareil, pas le faire évoluer sur plusieurs.',
+        content: 'GPUStack se situe dans le segment gestionnaires-et-environnements-d\'exécution du [Local LLM Software Directory](/fr/directory), mais sa conception d\'orchestration de cluster multi-GPU, multimachine le distingue de la plupart des outils de cette catégorie, qui fonctionnent sur un seul appareil. Aucune autre revue FeatureAppPost de ce site ne couvre un véritable pendant multi-GPU en cluster à GPUStack à la date de publication de cette revue — les comparaisons les plus proches ci-dessous sont des environnements monomachine, qui résolvent honnêtement un problème différent : exécuter un modèle sur un appareil, pas le faire évoluer sur plusieurs.',
         items: [
           '**[Ollama](/fr/power-local-llm/ollama-review)** — un environnement d\'exécution local polyvalent pour une seule machine, entièrement sous licence MIT, avec une large bibliothèque de modèles. L\'alternative monomachine la plus proche si vous n\'avez pas besoin d\'orchestration de cluster sur plusieurs GPU ou machines. Voir la [revue Ollama](/fr/power-local-llm/ollama-review) complète.',
           '**[LM Studio](/fr/power-local-llm/lm-studio-review)** — une application de bureau GUI-first pour l\'inférence locale sur un seul appareil, destinée aux utilisateurs finaux plutôt qu\'aux administrateurs de cluster. Un choix plus adapté que GPUStack si vous voulez une application de chat soignée sur un seul ordinateur portable. Voir la [revue LM Studio](/fr/power-local-llm/lm-studio-review) complète.',
           '**[Docker Model Runner](/fr/power-local-llm/docker-model-runner-review)** — une fonctionnalité CLI et API intégrée à Docker Desktop/Engine pour exécuter des modèles sur une seule machine ; une autre option monomachine à comparer à l\'approche d\'orchestration de cluster de GPUStack si votre charge de travail n\'a pas besoin de plusieurs GPU mutualisés. Voir la [revue Docker Model Runner](/fr/power-local-llm/docker-model-runner-review) complète.',
         ],
-        note: 'Pour un regard plus large sur les piles de service d\'inférence de niveau entreprise (vLLM, TGI, NVIDIA NIM) plutôt qu\'une revue dédiée à un seul produit, voir la [comparaison des serveurs d\'inférence LLM d\'entreprise](/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) de ce site — GPUStack peut lui-même orchestrer vLLM, SGLang et TensorRT-LLM comme moteurs plutôt que de leur faire directement concurrence. Ceci n\'est pas une liste exhaustive des outils d\'IA locale — voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, y compris l\'entrée propre de GPUStack.',
+        note: 'Pour un regard plus large sur les piles de service d\'inférence de niveau entreprise (vLLM, TGI, NVIDIA NIM) plutôt qu\'une revue dédiée à un seul produit, voir la [comparaison des serveurs d\'inférence LLM d\'entreprise](/fr/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) de ce site — GPUStack peut lui-même orchestrer vLLM, SGLang et TensorRT-LLM comme moteurs plutôt que de leur faire directement concurrence. Ceci n\'est pas une liste exhaustive des outils d\'IA locale — voir le [Local LLM Software Directory](/fr/directory) pour le catalogue complet, y compris l\'entrée propre de GPUStack.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -821,7 +821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, y compris l\'entrée propre de GPUStack.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, y compris l\'entrée propre de GPUStack.',
           '[Revue Ollama](/fr/power-local-llm/ollama-review) — un environnement d\'exécution local monomachine entièrement open source avec une large bibliothèque de modèles.',
           '[Revue LM Studio](/fr/power-local-llm/lm-studio-review) — une alternative monomachine GUI-first pour les lecteurs voulant une application de bureau soignée plutôt qu\'un outil de cluster auto-hébergé.',
           '[Revue Docker Model Runner](/fr/power-local-llm/docker-model-runner-review) — une autre option monomachine orientée développeur pour les équipes utilisant déjà Docker.',
@@ -906,7 +906,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHubリポジトリは2026年9月5日時点で[github.com/gpustack/gpustack](https://github.com/gpustack/gpustack)に対して検証済みの5,607スターを記録',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるGPUStackのエントリーを深掘りした記事です——他の数十のローカルAIツールと比べてGPUStackがどう位置づけられるかは、そちらのページをご覧ください。' },
+          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるGPUStackのエントリーを深掘りした記事です——他の数十のローカルAIツールと比べてGPUStackがどう位置づけられるかは、そちらのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1036,13 +1036,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'gpustack-competitors',
         title: 'GPUStack vs. 他のローカルAIツール',
-        content: 'GPUStackは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)のランタイム・マネージャーセグメントに位置しますが、そのマルチGPU・マルチマシンのクラスターオーケストレーション設計は、単一デバイスで動作するこのカテゴリーのほとんどのツールとは一線を画しています。本レビューの公開時点で、GPUStackの真のマルチGPUクラスター上の対抗馬を扱う他のFeatureAppPostレビューは当サイトにはありません——以下の最も近い比較対象は単一マシンランタイムであり、正直に言えば異なる問題（多数にわたってスケールすることではなく、1台のデバイスでモデルを動かすこと）を解決しています。',
+        content: 'GPUStackは[ローカルLLMソフトウェアディレクトリ](/ja/directory)のランタイム・マネージャーセグメントに位置しますが、そのマルチGPU・マルチマシンのクラスターオーケストレーション設計は、単一デバイスで動作するこのカテゴリーのほとんどのツールとは一線を画しています。本レビューの公開時点で、GPUStackの真のマルチGPUクラスター上の対抗馬を扱う他のFeatureAppPostレビューは当サイトにはありません——以下の最も近い比較対象は単一マシンランタイムであり、正直に言えば異なる問題（多数にわたってスケールすることではなく、1台のデバイスでモデルを動かすこと）を解決しています。',
         items: [
           '**[Ollama](/ja/power-local-llm/ollama-review)** ——単一マシン向けの汎用ローカルモデルランタイムで、完全にMITライセンス、幅広いモデルライブラリを持つ。複数のGPUやマシンにわたるクラスターオーケストレーションが不要な場合、最も近い単一マシンの代替手段。[Ollamaレビュー](/ja/power-local-llm/ollama-review)全文を参照。',
           '**[LM Studio](/ja/power-local-llm/lm-studio-review)** ——1台のデバイス上でのローカル推論向けのGUIファーストのデスクトップアプリで、クラスター管理者ではなくエンドユーザーを対象としている。1台のノートPCで洗練されたチャットアプリが欲しい場合、GPUStackよりも適した選択肢。[LM Studioレビュー](/ja/power-local-llm/lm-studio-review)全文を参照。',
           '**[Docker Model Runner](/ja/power-local-llm/docker-model-runner-review)** ——単一マシンでモデルを実行するためにDocker Desktop/Engineにバンドルされたcli・APIの機能。ワークロードが複数GPUのプールを必要としない場合、GPUStackのクラスターオーケストレーションアプローチと比較検討できるもう1つの単一デバイス向け選択肢。[Docker Model Runnerレビュー](/ja/power-local-llm/docker-model-runner-review)全文を参照。',
         ],
-        note: '単一の専用製品レビューではなく、エンタープライズ級の推論サービングスタック（vLLM、TGI、NVIDIA NIM）をより広く見るには、当サイトの[エンタープライズLLM推論サーバー比較](/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)を参照してください——GPUStack自体はvLLM、SGLang、TensorRT-LLMをバックエンドとしてオーケストレーションでき、それらと直接競合するものではありません。これはローカルAIツールの網羅的なリストではありません——完全なカタログは、GPUStack自身のディレクトリエントリーを含め、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: '単一の専用製品レビューではなく、エンタープライズ級の推論サービングスタック（vLLM、TGI、NVIDIA NIM）をより広く見るには、当サイトの[エンタープライズLLM推論サーバー比較](/ja/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)を参照してください——GPUStack自体はvLLM、SGLang、TensorRT-LLMをバックエンドとしてオーケストレーションでき、それらと直接競合するものではありません。これはローカルAIツールの網羅的なリストではありません——完全なカタログは、GPUStack自身のディレクトリエントリーを含め、[ローカルLLMソフトウェアディレクトリ](/ja/directory)をご覧ください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1097,7 +1097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory)——この記事が属する、GPUStack自身のディレクトリエントリーを含むローカルAIツールの完全なカタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory)——この記事が属する、GPUStack自身のディレクトリエントリーを含むローカルAIツールの完全なカタログ。',
           '[Ollamaレビュー](/ja/power-local-llm/ollama-review)——幅広いモデルライブラリを持つ、完全にオープンソースの単一マシン向けローカルモデルランタイム。',
           '[LM Studioレビュー](/ja/power-local-llm/lm-studio-review)——セルフホスト型のクラスターツールではなく洗練されたデスクトップアプリが欲しい読者向けの、GUIファーストの単一マシン代替手段。',
           '[Docker Model Runnerレビュー](/ja/power-local-llm/docker-model-runner-review)——既にDockerを使用しているチーム向けの、もう1つの単一マシン・開発者向け選択肢。',
@@ -1182,7 +1182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至2026年9月5日，经与[github.com/gpustack/gpustack](https://github.com/gpustack/gpustack)核实，其GitHub仓库显示为5,607颗星',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中GPUStack条目的深度补充——请查看该页面了解GPUStack与其他数十种本地AI工具的整体对比。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中GPUStack条目的深度补充——请查看该页面了解GPUStack与其他数十种本地AI工具的整体对比。' },
         ],
       },
       overview: {
@@ -1312,13 +1312,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'gpustack-competitors',
         title: 'GPUStack与其他本地AI工具对比',
-        content: 'GPUStack位于[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中的运行环境与管理器细分领域，但其多GPU、多机器的集群编排设计，使其区别于该类别中大多数在单一设备上运行的工具。截至本评测发布时，本站没有其他FeatureAppPost评测涵盖GPUStack在多GPU集群方面的真正对等产品——以下最接近的比较对象是单机运行环境，坦率地说，它们解决的是一个不同的问题：在单一设备上运行模型，而不是跨多台设备扩展。',
+        content: 'GPUStack位于[本地LLM软件目录](/zh/directory)中的运行环境与管理器细分领域，但其多GPU、多机器的集群编排设计，使其区别于该类别中大多数在单一设备上运行的工具。截至本评测发布时，本站没有其他FeatureAppPost评测涵盖GPUStack在多GPU集群方面的真正对等产品——以下最接近的比较对象是单机运行环境，坦率地说，它们解决的是一个不同的问题：在单一设备上运行模型，而不是跨多台设备扩展。',
         items: [
           '**[Ollama](/zh/power-local-llm/ollama-review)** ——一款面向单一机器的通用本地模型运行环境，完全采用MIT许可，拥有广泛的模型库。如果您不需要跨多个GPU或机器的集群编排，这是最接近的单机替代方案。请参阅完整的[Ollama评测](/zh/power-local-llm/ollama-review)。',
           '**[LM Studio](/zh/power-local-llm/lm-studio-review)** ——一款面向单一设备本地推理的GUI优先桌面应用，目标用户是终端用户而非集群管理员。如果您想在一台笔记本电脑上使用精致的聊天应用，它比GPUStack更合适。请参阅完整的[LM Studio评测](/zh/power-local-llm/lm-studio-review)。',
           '**[Docker Model Runner](/zh/power-local-llm/docker-model-runner-review)** ——一项随Docker Desktop/Engine捆绑的CLI与API功能，用于在单一机器上运行模型；如果您的工作负载不需要整合多个GPU，这是另一个可以与GPUStack的集群编排方式进行权衡的单设备选项。请参阅完整的[Docker Model Runner评测](/zh/power-local-llm/docker-model-runner-review)。',
         ],
-        note: '如果想更广泛地了解企业级推理服务栈（vLLM、TGI、NVIDIA NIM），而不是单一产品的专门评测，请参阅本站的[企业级LLM推理服务器对比](/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)——GPUStack本身可以将vLLM、SGLang和TensorRT-LLM编排为后端，而不是与它们直接竞争。这并非本地AI工具的详尽列表——完整目录（包括GPUStack自身的目录条目）请参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '如果想更广泛地了解企业级推理服务栈（vLLM、TGI、NVIDIA NIM），而不是单一产品的专门评测，请参阅本站的[企业级LLM推理服务器对比](/zh/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)——GPUStack本身可以将vLLM、SGLang和TensorRT-LLM编排为后端，而不是与它们直接竞争。这并非本地AI工具的详尽列表——完整目录（包括GPUStack自身的目录条目）请参见[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1373,7 +1373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)——本文所属的本地AI工具完整目录，包括GPUStack自身的目录条目。',
+          '[2026本地LLM软件目录](/zh/directory)——本文所属的本地AI工具完整目录，包括GPUStack自身的目录条目。',
           '[Ollama评测](/zh/power-local-llm/ollama-review)——一款完全开源、拥有广泛模型库的单机本地模型运行环境。',
           '[LM Studio评测](/zh/power-local-llm/lm-studio-review)——面向希望获得精致桌面应用而非自托管集群工具的读者的GUI优先单机替代方案。',
           '[Docker Model Runner评测](/zh/power-local-llm/docker-model-runner-review)——另一个面向已经使用Docker的团队的单机、开发者导向选项。',
@@ -1458,7 +1458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El repositorio de GitHub muestra 5.607 estrellas, verificadas en [github.com/gpustack/gpustack](https://github.com/gpustack/gpustack) el 5 de septiembre de 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Este análisis es el complemento en profundidad de la entrada de GPUStack en el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) — consulte esa página para ver cómo se compara GPUStack a simple vista con decenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Este análisis es el complemento en profundidad de la entrada de GPUStack en el [Directorio de Software LLM Local](/es/directory) — consulte esa página para ver cómo se compara GPUStack a simple vista con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1588,13 +1588,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'gpustack-competitors',
         title: 'GPUStack frente a otras herramientas de IA local',
-        content: 'GPUStack se sitúa en el segmento de entornos y gestores del [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory), pero su diseño de orquestación de clústeres multi-GPU y multi-máquina lo distingue de la mayoría de las herramientas de esa categoría, que funcionan en un solo dispositivo. Ningún otro análisis FeatureAppPost de este sitio cubre un verdadero equivalente de GPUStack en clústeres multi-GPU a fecha de publicación de este análisis — las comparaciones más cercanas a continuación son entornos de una sola máquina, que, con honestidad, resuelven un problema diferente: ejecutar un modelo en un dispositivo, no escalar en muchos.',
+        content: 'GPUStack se sitúa en el segmento de entornos y gestores del [Directorio de Software LLM Local](/es/directory), pero su diseño de orquestación de clústeres multi-GPU y multi-máquina lo distingue de la mayoría de las herramientas de esa categoría, que funcionan en un solo dispositivo. Ningún otro análisis FeatureAppPost de este sitio cubre un verdadero equivalente de GPUStack en clústeres multi-GPU a fecha de publicación de este análisis — las comparaciones más cercanas a continuación son entornos de una sola máquina, que, con honestidad, resuelven un problema diferente: ejecutar un modelo en un dispositivo, no escalar en muchos.',
         items: [
           '**[Ollama](/es/power-local-llm/ollama-review)** — un entorno de modelo local de propósito general para una sola máquina, completamente licenciado bajo MIT, con una amplia biblioteca de modelos. La alternativa de una sola máquina más cercana si no necesita orquestación de clústeres en varias GPU o máquinas. Consulte el [análisis completo de Ollama](/es/power-local-llm/ollama-review).',
           '**[LM Studio](/es/power-local-llm/lm-studio-review)** — una aplicación de escritorio con interfaz gráfica prioritaria para inferencia local en un solo dispositivo, dirigida a usuarios finales en lugar de administradores de clústeres. Una opción más adecuada que GPUStack si quiere una aplicación de chat pulida en un solo portátil. Consulte el [análisis completo de LM Studio](/es/power-local-llm/lm-studio-review).',
           '**[Docker Model Runner](/es/power-local-llm/docker-model-runner-review)** — una función de CLI y API integrada en Docker Desktop/Engine para ejecutar modelos en una sola máquina; otra opción de un solo dispositivo a considerar frente al enfoque de orquestación de clústeres de GPUStack si su carga de trabajo no necesita agrupar varias GPU. Consulte el [análisis completo de Docker Model Runner](/es/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'Para una visión más amplia de las pilas de servicio de inferencia de nivel empresarial (vLLM, TGI, NVIDIA NIM) en lugar de un análisis dedicado a un solo producto, consulte la [comparación de servidores de inferencia LLM empresariales](/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) de este sitio — el propio GPUStack puede orquestar vLLM, SGLang y TensorRT-LLM como backends en lugar de competir directamente con ellos. Esta no es una lista exhaustiva de herramientas de IA local — consulte el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, incluida la propia entrada de directorio de GPUStack.',
+        note: 'Para una visión más amplia de las pilas de servicio de inferencia de nivel empresarial (vLLM, TGI, NVIDIA NIM) en lugar de un análisis dedicado a un solo producto, consulte la [comparación de servidores de inferencia LLM empresariales](/es/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) de este sitio — el propio GPUStack puede orquestar vLLM, SGLang y TensorRT-LLM como backends en lugar de competir directamente con ellos. Esta no es una lista exhaustiva de herramientas de IA local — consulte el [Directorio de Software LLM Local](/es/directory) para el catálogo completo, incluida la propia entrada de directorio de GPUStack.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1649,7 +1649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia entrada de directorio de GPUStack.',
+          '[Directorio de Software LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia entrada de directorio de GPUStack.',
           '[Análisis de Ollama](/es/power-local-llm/ollama-review) — un entorno de modelo local de una sola máquina completamente de código abierto con una amplia biblioteca de modelos.',
           '[Análisis de LM Studio](/es/power-local-llm/lm-studio-review) — una alternativa de una sola máquina con interfaz gráfica prioritaria para lectores que quieren una aplicación de escritorio pulida en lugar de una herramienta de clúster autoalojada.',
           '[Análisis de Docker Model Runner](/es/power-local-llm/docker-model-runner-review) — otra opción de una sola máquina orientada a desarrolladores para equipos que ya usan Docker.',
@@ -1734,7 +1734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub mostra 5.607 estrelas, verificadas em [github.com/gpustack/gpustack](https://github.com/gpustack/gpustack) em 5 de setembro de 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do GPUStack no [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para saber como o GPUStack se compara, de forma resumida, a dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do GPUStack no [Diretório de Software LLM Local](/pt/directory) — veja essa página para saber como o GPUStack se compara, de forma resumida, a dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1864,13 +1864,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'gpustack-competitors',
         title: 'GPUStack vs. outras ferramentas de IA local',
-        content: 'O GPUStack está no segmento de ambientes e gerenciadores do [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory), mas seu design de orquestração de cluster multi-GPU e multi-máquina o diferencia da maioria das ferramentas dessa categoria, que rodam em um único dispositivo. Nenhuma outra análise FeatureAppPost deste site cobre um verdadeiro equivalente multi-GPU em cluster do GPUStack até a data de publicação desta análise — as comparações mais próximas abaixo são ambientes de máquina única, que, honestamente, resolvem um problema diferente: rodar um modelo em um dispositivo, e não escalar em muitos.',
+        content: 'O GPUStack está no segmento de ambientes e gerenciadores do [Diretório de Software LLM Local](/pt/directory), mas seu design de orquestração de cluster multi-GPU e multi-máquina o diferencia da maioria das ferramentas dessa categoria, que rodam em um único dispositivo. Nenhuma outra análise FeatureAppPost deste site cobre um verdadeiro equivalente multi-GPU em cluster do GPUStack até a data de publicação desta análise — as comparações mais próximas abaixo são ambientes de máquina única, que, honestamente, resolvem um problema diferente: rodar um modelo em um dispositivo, e não escalar em muitos.',
         items: [
           '**[Ollama](/pt/power-local-llm/ollama-review)** — um ambiente de modelo local de propósito geral para uma única máquina, totalmente licenciado sob MIT, com uma ampla biblioteca de modelos. A alternativa de máquina única mais próxima se você não precisa de orquestração de cluster em várias GPUs ou máquinas. Veja a [análise completa do Ollama](/pt/power-local-llm/ollama-review).',
           '**[LM Studio](/pt/power-local-llm/lm-studio-review)** — um aplicativo de desktop com interface gráfica em primeiro lugar para inferência local em um único dispositivo, voltado a usuários finais em vez de administradores de cluster. Uma opção mais adequada que o GPUStack se você quer um aplicativo de chat polido em um único notebook. Veja a [análise completa do LM Studio](/pt/power-local-llm/lm-studio-review).',
           '**[Docker Model Runner](/pt/power-local-llm/docker-model-runner-review)** — um recurso de CLI e API empacotado com o Docker Desktop/Engine para rodar modelos em uma única máquina; outra opção de dispositivo único a considerar frente à abordagem de orquestração de cluster do GPUStack, caso sua carga de trabalho não precise agrupar várias GPUs. Veja a [análise completa do Docker Model Runner](/pt/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'Para uma visão mais ampla das pilhas de serviço de inferência de nível empresarial (vLLM, TGI, NVIDIA NIM) em vez de uma análise dedicada a um único produto, veja a [comparação de servidores de inferência LLM empresariais](/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) deste site — o próprio GPUStack pode orquestrar vLLM, SGLang e TensorRT-LLM como backends, em vez de competir diretamente com eles. Esta não é uma lista exaustiva de ferramentas de IA local — veja o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, incluindo a própria entrada de diretório do GPUStack.',
+        note: 'Para uma visão mais ampla das pilhas de serviço de inferência de nível empresarial (vLLM, TGI, NVIDIA NIM) em vez de uma análise dedicada a um único produto, veja a [comparação de servidores de inferência LLM empresariais](/pt/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) deste site — o próprio GPUStack pode orquestrar vLLM, SGLang e TensorRT-LLM como backends, em vez de competir diretamente com eles. Esta não é uma lista exaustiva de ferramentas de IA local — veja o [Diretório de Software LLM Local](/pt/directory) para o catálogo completo, incluindo a própria entrada de diretório do GPUStack.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1925,7 +1925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada de diretório do GPUStack.',
+          '[Diretório de Software LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada de diretório do GPUStack.',
           '[Análise do Ollama](/pt/power-local-llm/ollama-review) — um ambiente de modelo local de máquina única totalmente open source, com uma ampla biblioteca de modelos.',
           '[Análise do LM Studio](/pt/power-local-llm/lm-studio-review) — uma alternativa de máquina única com interface gráfica em primeiro lugar para leitores que querem um aplicativo de desktop polido em vez de uma ferramenta de cluster autogerenciada.',
           '[Análise do Docker Model Runner](/pt/power-local-llm/docker-model-runner-review) — outra opção de máquina única voltada a desenvolvedores para equipes que já usam Docker.',
@@ -2010,7 +2010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُظهر مستودع GitHub 5,607 نجمة، تم التحقق منها على [github.com/gpustack/gpustack](https://github.com/gpustack/gpustack) في 5 سبتمبر 2026',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لإدخال GPUStack في [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارن GPUStack بسرعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لإدخال GPUStack في [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارن GPUStack بسرعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2140,13 +2140,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'gpustack-competitors',
         title: 'GPUStack مقابل أدوات الذكاء الاصطناعي المحلية الأخرى',
-        content: 'يقع GPUStack ضمن فئة بيئات التشغيل ومديري الأدوات في [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory)، لكن تصميمه القائم على تنسيق عناقيد متعددة وحدات المعالجة الرسومية والأجهزة يميّزه عن معظم الأدوات في تلك الفئة، والتي تعمل على جهاز واحد. لا تغطي أي مراجعة FeatureAppPost أخرى في هذا الموقع نظيرًا حقيقيًا لـ GPUStack في العناقيد متعددة وحدات المعالجة الرسومية حتى تاريخ نشر هذه المراجعة — أقرب المقارنات أدناه هي بيئات الجهاز الواحد، والتي تحل بصراحة مشكلة مختلفة: تشغيل نموذج على جهاز واحد، وليس التوسّع عبر أجهزة عديدة.',
+        content: 'يقع GPUStack ضمن فئة بيئات التشغيل ومديري الأدوات في [دليل برمجيات النماذج اللغوية المحلية](/ar/directory)، لكن تصميمه القائم على تنسيق عناقيد متعددة وحدات المعالجة الرسومية والأجهزة يميّزه عن معظم الأدوات في تلك الفئة، والتي تعمل على جهاز واحد. لا تغطي أي مراجعة FeatureAppPost أخرى في هذا الموقع نظيرًا حقيقيًا لـ GPUStack في العناقيد متعددة وحدات المعالجة الرسومية حتى تاريخ نشر هذه المراجعة — أقرب المقارنات أدناه هي بيئات الجهاز الواحد، والتي تحل بصراحة مشكلة مختلفة: تشغيل نموذج على جهاز واحد، وليس التوسّع عبر أجهزة عديدة.',
         items: [
           '**[Ollama](/ar/power-local-llm/ollama-review)** — بيئة نموذج محلي عامة الغرض لجهاز واحد، مرخّصة بالكامل بموجب MIT، ولديها مكتبة نماذج واسعة. أقرب بديل أحادي الجهاز إذا لم تكن بحاجة إلى تنسيق عناقيد عبر عدة وحدات معالجة رسومية أو أجهزة. راجع [مراجعة Ollama](/ar/power-local-llm/ollama-review) الكاملة.',
           '**[LM Studio](/ar/power-local-llm/lm-studio-review)** — تطبيق سطح مكتب يعتمد على واجهة رسومية أولاً للاستدلال المحلي على جهاز واحد، موجّه للمستخدمين النهائيين وليس لمديري العناقيد. خيار أنسب من GPUStack إذا كنت تريد تطبيق دردشة أنيقًا على حاسوب محمول واحد. راجع [مراجعة LM Studio](/ar/power-local-llm/lm-studio-review) الكاملة.',
           '**[Docker Model Runner](/ar/power-local-llm/docker-model-runner-review)** — ميزة سطر أوامر وواجهة برمجة تطبيقات مدمجة مع Docker Desktop/Engine لتشغيل النماذج على جهاز واحد؛ خيار آخر لجهاز واحد يمكن مقارنته بنهج GPUStack في تنسيق العناقيد إذا كان عبء عملك لا يحتاج إلى تجميع عدة وحدات معالجة رسومية. راجع [مراجعة Docker Model Runner](/ar/power-local-llm/docker-model-runner-review) الكاملة.',
         ],
-        note: 'للحصول على نظرة أوسع على حزم خدمة الاستدلال على مستوى المؤسسات (vLLM وTGI وNVIDIA NIM) بدلاً من مراجعة مخصصة لمنتج واحد، راجع [مقارنة خوادم استدلال النماذج اللغوية المؤسسية](/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) الخاصة بهذا الموقع — يمكن لـ GPUStack نفسه تنسيق vLLM وSGLang وTensorRT-LLM كمحركات بدلاً من منافستها مباشرة. هذه ليست قائمة شاملة لأدوات الذكاء الاصطناعي المحلية — راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل، بما في ذلك إدخال دليل GPUStack نفسه.',
+        note: 'للحصول على نظرة أوسع على حزم خدمة الاستدلال على مستوى المؤسسات (vLLM وTGI وNVIDIA NIM) بدلاً من مراجعة مخصصة لمنتج واحد، راجع [مقارنة خوادم استدلال النماذج اللغوية المؤسسية](/ar/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim) الخاصة بهذا الموقع — يمكن لـ GPUStack نفسه تنسيق vLLM وSGLang وTensorRT-LLM كمحركات بدلاً من منافستها مباشرة. هذه ليست قائمة شاملة لأدوات الذكاء الاصطناعي المحلية — راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) للحصول على الكتالوج الكامل، بما في ذلك إدخال دليل GPUStack نفسه.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2201,7 +2201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال دليل GPUStack نفسه.',
+          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال دليل GPUStack نفسه.',
           '[مراجعة Ollama](/ar/power-local-llm/ollama-review) — بيئة نموذج محلي أحادية الجهاز مفتوحة المصدر بالكامل مع مكتبة نماذج واسعة.',
           '[مراجعة LM Studio](/ar/power-local-llm/lm-studio-review) — بديل أحادي الجهاز يعتمد على واجهة رسومية أولاً للقراء الذين يريدون تطبيق سطح مكتب أنيقًا بدلاً من أداة عنقود ذاتية الاستضافة.',
           '[مراجعة Docker Model Runner](/ar/power-local-llm/docker-model-runner-review) — خيار آخر أحادي الجهاز موجّه للمطورين للفرق التي تستخدم Docker بالفعل.',
@@ -2286,7 +2286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub 저장소는 2026년 9월 5일 [github.com/gpustack/gpustack](https://github.com/gpustack/gpustack) 기준으로 검증된 5,607개의 스타를 기록',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 GPUStack 항목을 심층적으로 다루는 글입니다 — GPUStack이 다른 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 GPUStack 항목을 심층적으로 다루는 글입니다 — GPUStack이 다른 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2416,13 +2416,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'gpustack-competitors',
         title: 'GPUStack vs. 다른 로컬 AI 도구',
-        content: 'GPUStack은 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)의 런타임/매니저 부문에 속하지만, 멀티 GPU·멀티 머신 클러스터 오케스트레이션 설계는 단일 기기에서 실행되는 해당 카테고리의 대다수 도구와 GPUStack을 구분짓습니다. 이 리뷰 발행 시점 기준, 이 사이트의 다른 FeatureAppPost 리뷰 중 GPUStack의 진정한 멀티 GPU 클러스터 상대를 다루는 것은 없습니다 — 아래의 가장 가까운 비교 대상은 단일 머신 런타임이며, 솔직히 말해 이들은 다른 문제, 즉 여러 대에 걸쳐 확장하는 것이 아니라 한 대의 기기에서 모델을 실행하는 문제를 해결합니다.',
+        content: 'GPUStack은 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)의 런타임/매니저 부문에 속하지만, 멀티 GPU·멀티 머신 클러스터 오케스트레이션 설계는 단일 기기에서 실행되는 해당 카테고리의 대다수 도구와 GPUStack을 구분짓습니다. 이 리뷰 발행 시점 기준, 이 사이트의 다른 FeatureAppPost 리뷰 중 GPUStack의 진정한 멀티 GPU 클러스터 상대를 다루는 것은 없습니다 — 아래의 가장 가까운 비교 대상은 단일 머신 런타임이며, 솔직히 말해 이들은 다른 문제, 즉 여러 대에 걸쳐 확장하는 것이 아니라 한 대의 기기에서 모델을 실행하는 문제를 해결합니다.',
         items: [
           '**[Ollama](/ko/power-local-llm/ollama-review)** — 단일 머신용 범용 로컬 모델 런타임으로, 완전한 MIT 라이선스이며 방대한 모델 라이브러리를 갖추고 있습니다. 여러 GPU나 머신에 걸친 클러스터 오케스트레이션이 필요 없다면 가장 가까운 단일 머신 대안입니다. 전체 [Ollama 리뷰](/ko/power-local-llm/ollama-review)를 참고하세요.',
           '**[LM Studio](/ko/power-local-llm/lm-studio-review)** — 단일 기기에서의 로컬 추론을 위한 GUI 우선 데스크톱 앱으로, 클러스터 관리자가 아니라 최종 사용자를 대상으로 합니다. 노트북 한 대에서 세련된 채팅 앱을 원한다면 GPUStack보다 더 적합한 선택입니다. 전체 [LM Studio 리뷰](/ko/power-local-llm/lm-studio-review)를 참고하세요.',
           '**[Docker Model Runner](/ko/power-local-llm/docker-model-runner-review)** — 단일 머신에서 모델을 실행하기 위해 Docker Desktop/Engine에 번들로 제공되는 CLI 및 API 기능입니다. 워크로드가 여러 GPU를 모을 필요가 없다면 GPUStack의 클러스터 오케스트레이션 방식과 비교해볼 만한 또 다른 단일 기기 옵션입니다. 전체 [Docker Model Runner 리뷰](/ko/power-local-llm/docker-model-runner-review)를 참고하세요.',
         ],
-        note: '단일 제품에 대한 전용 리뷰가 아니라 엔터프라이즈급 추론 서빙 스택(vLLM, TGI, NVIDIA NIM)을 더 폭넓게 살펴보려면 이 사이트의 [엔터프라이즈 LLM 추론 서버 비교](/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)를 참고하세요 — GPUStack 자체는 vLLM, SGLang, TensorRT-LLM을 백엔드로 오케스트레이션할 수 있으며 이들과 직접 경쟁하는 관계가 아닙니다. 이는 로컬 AI 도구의 전체 목록이 아닙니다 — GPUStack 자체의 디렉터리 항목을 포함한 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '단일 제품에 대한 전용 리뷰가 아니라 엔터프라이즈급 추론 서빙 스택(vLLM, TGI, NVIDIA NIM)을 더 폭넓게 살펴보려면 이 사이트의 [엔터프라이즈 LLM 추론 서버 비교](/ko/power-local-llm/enterprise-llm-inference-servers-vllm-tgi-nim)를 참고하세요 — GPUStack 자체는 vLLM, SGLang, TensorRT-LLM을 백엔드로 오케스트레이션할 수 있으며 이들과 직접 경쟁하는 관계가 아닙니다. 이는 로컬 AI 도구의 전체 목록이 아닙니다 — GPUStack 자체의 디렉터리 항목을 포함한 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2477,7 +2477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[2026 로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, GPUStack 자체의 디렉터리 항목을 포함합니다.',
+          '[2026 로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, GPUStack 자체의 디렉터리 항목을 포함합니다.',
           '[Ollama 리뷰](/ko/power-local-llm/ollama-review) — 방대한 모델 라이브러리를 갖춘 완전한 오픈소스 단일 머신 로컬 모델 런타임입니다.',
           '[LM Studio 리뷰](/ko/power-local-llm/lm-studio-review) — 셀프 호스팅 클러스터 도구 대신 세련된 데스크톱 앱을 원하는 독자를 위한 GUI 우선 단일 머신 대안입니다.',
           '[Docker Model Runner 리뷰](/ko/power-local-llm/docker-model-runner-review) — 이미 Docker를 사용 중인 팀을 위한 또 다른 단일 머신, 개발자 중심 옵션입니다.',

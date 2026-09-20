@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Distributed as the `@blockrun/clawrouter` npm package; also installs as a plugin for the [OpenClaw](/power-local-llm/openclaw-review) coding agent',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to ClawRouter\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how ClawRouter compares at a glance to dozens of other local AI tools. It is based on ClawRouter\'s own README, GitHub repository, and release history, not hands-on benchmarking by PromptQuorum.' },
+          { type: 'note', text: 'This review is the deep-dive companion to ClawRouter\'s entry in the [Local LLM Software Directory](/directory) — see that page for how ClawRouter compares at a glance to dozens of other local AI tools. It is based on ClawRouter\'s own README, GitHub repository, and release history, not hands-on benchmarking by PromptQuorum.' },
         ],
       },
       overview: {
@@ -228,7 +228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Plano', 'Best known for': 'LLM routing/gateway tool covered separately in this cluster', 'Link': '[Plano review](/power-local-llm/plano-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'This list reflects other routers/gateways covered in PromptQuorum\'s Local LLM Software Directory, not an independent ranking — verify each tool\'s current pricing and feature set before choosing. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        note: 'This list reflects other routers/gateways covered in PromptQuorum\'s Local LLM Software Directory, not an independent ranking — verify each tool\'s current pricing and feature set before choosing. See the [Local LLM Software Directory](/directory) for the full catalog.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -283,7 +283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including ClawRouter\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including ClawRouter\'s directory entry.',
           '[LiteLLM Review](/power-local-llm/litellm-review) — a widely used, bring-your-own-keys open-source LLM gateway, for comparison against ClawRouter\'s automated routing.',
           '[Plano Review](/power-local-llm/plano-review) — another LLM routing/gateway tool covered in the same cluster.',
           '[OpenClaw Review](/power-local-llm/openclaw-review) — the coding agent ClawRouter installs into as a first-party plugin.',
@@ -362,7 +362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Verteilt als npm-Paket `@blockrun/clawrouter`; installierbar auch als Plugin für den Coding-Agenten [OpenClaw](/de/power-local-llm/openclaw-review)',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu ClawRouters Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie den schnellen Vergleich mit Dutzenden weiterer lokaler KI-Tools. Sie basiert auf ClawRouters eigener README, dem GitHub-Repository und der Release-Historie, nicht auf eigenen Benchmarks von PromptQuorum.' },
+          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu ClawRouters Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie den schnellen Vergleich mit Dutzenden weiterer lokaler KI-Tools. Sie basiert auf ClawRouters eigener README, dem GitHub-Repository und der Release-Historie, nicht auf eigenen Benchmarks von PromptQuorum.' },
         ],
       },
       overview: {
@@ -517,7 +517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Plano', 'Bekannt für': 'LLM-Routing-/Gateway-Tool, separat in diesem Cluster behandelt', 'Link': '[Plano-Review](/de/power-local-llm/plano-review)' },
         ],
         columns: ['Tool', 'Bekannt für', 'Link'],
-        note: 'Diese Liste spiegelt weitere Router/Gateways aus PromptQuorums Local LLM Software Directory wider, keine unabhängige Rangfolge — prüfen Sie Preise und Funktionsumfang jedes Tools vor einer Entscheidung selbst. Den vollständigen Katalog finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Diese Liste spiegelt weitere Router/Gateways aus PromptQuorums Local LLM Software Directory wider, keine unabhängige Rangfolge — prüfen Sie Preise und Funktionsumfang jedes Tools vor einer Entscheidung selbst. Den vollständigen Katalog finden Sie im [Local LLM Software Directory](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -572,7 +572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, inklusive ClawRouters Eintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, inklusive ClawRouters Eintrag.',
           '[LiteLLM-Review](/de/power-local-llm/litellm-review) — ein weit verbreitetes, quelloffenes LLM-Gateway mit eigenen API-Keys, zum Vergleich mit ClawRouters automatisiertem Routing.',
           '[Plano-Review](/de/power-local-llm/plano-review) — ein weiteres LLM-Routing-/Gateway-Tool aus demselben Cluster.',
           '[OpenClaw-Review](/de/power-local-llm/openclaw-review) — der Coding-Agent, in den sich ClawRouter als First-Party-Plugin installiert.',
@@ -651,7 +651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Distribué sous forme de package npm `@blockrun/clawrouter` ; s\'installe aussi comme plugin pour l\'agent de codage [OpenClaw](/fr/power-local-llm/openclaw-review)',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément détaillé de la fiche ClawRouter dans l\'[Annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer ClawRouter en un coup d\'œil à des dizaines d\'autres outils IA locaux. Il s\'appuie sur le README de ClawRouter, son dépôt GitHub et son historique de versions, et non sur un benchmark pratique réalisé par PromptQuorum.' },
+          { type: 'note', text: 'Cet avis est le complément détaillé de la fiche ClawRouter dans l\'[Annuaire des logiciels LLM locaux](/fr/directory) — consultez cette page pour comparer ClawRouter en un coup d\'œil à des dizaines d\'autres outils IA locaux. Il s\'appuie sur le README de ClawRouter, son dépôt GitHub et son historique de versions, et non sur un benchmark pratique réalisé par PromptQuorum.' },
         ],
       },
       overview: {
@@ -806,7 +806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Plano', 'Best known for': 'Outil de routage/passerelle LLM couvert séparément dans ce cluster', 'Link': '[Avis Plano](/fr/power-local-llm/plano-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Cette liste reflète d\'autres routeurs/passerelles couverts dans l\'Annuaire des logiciels LLM locaux de PromptQuorum, pas un classement indépendant — vérifiez les tarifs et fonctionnalités actuels de chaque outil avant de choisir. Consultez l\'[Annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        note: 'Cette liste reflète d\'autres routeurs/passerelles couverts dans l\'Annuaire des logiciels LLM locaux de PromptQuorum, pas un classement indépendant — vérifiez les tarifs et fonctionnalités actuels de chaque outil avant de choisir. Consultez l\'[Annuaire des logiciels LLM locaux](/fr/directory) pour le catalogue complet.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -861,7 +861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Annuaire des logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils IA locaux dont fait partie cet article, incluant la fiche annuaire de ClawRouter.',
+          '[Annuaire des logiciels LLM locaux 2026](/fr/directory) — le catalogue complet d\'outils IA locaux dont fait partie cet article, incluant la fiche annuaire de ClawRouter.',
           '[Avis LiteLLM](/fr/power-local-llm/litellm-review) — une passerelle LLM open source largement utilisée, avec vos propres clés, pour comparaison avec le routage automatisé de ClawRouter.',
           '[Avis Plano](/fr/power-local-llm/plano-review) — un autre outil de routage/passerelle LLM couvert dans le même cluster.',
           '[Avis OpenClaw](/fr/power-local-llm/openclaw-review) — l\'agent de codage dans lequel ClawRouter s\'installe comme plugin officiel.',
@@ -940,7 +940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Distribuido como el paquete npm `@blockrun/clawrouter`; también se instala como plugin para el agente de codificación [OpenClaw](/es/power-local-llm/openclaw-review)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de ClawRouter en el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara ClawRouter de un vistazo con docenas de otras herramientas de IA local. Se basa en el propio README de ClawRouter, su repositorio de GitHub y el historial de versiones, no en pruebas prácticas realizadas por PromptQuorum.' },
+          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de ClawRouter en el [Directorio de Software de LLM Local](/es/directory) — consulta esa página para ver cómo se compara ClawRouter de un vistazo con docenas de otras herramientas de IA local. Se basa en el propio README de ClawRouter, su repositorio de GitHub y el historial de versiones, no en pruebas prácticas realizadas por PromptQuorum.' },
         ],
       },
       overview: {
@@ -1095,7 +1095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': 'Plano', 'Más conocido por': 'Herramienta de enrutamiento/gateway de LLM cubierta por separado en este clúster', 'Enlace': '[Reseña de Plano](/es/power-local-llm/plano-review)' },
         ],
         columns: ['Herramienta', 'Más conocido por', 'Enlace'],
-        note: 'Esta lista refleja otros routers/gateways cubiertos en el Directorio de Software de LLM Local de PromptQuorum, no es un ranking independiente — verifica el precio y las funciones actuales de cada herramienta antes de elegir. Consulta el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo.',
+        note: 'Esta lista refleja otros routers/gateways cubiertos en el Directorio de Software de LLM Local de PromptQuorum, no es un ranking independiente — verifica el precio y las funciones actuales de cada herramienta antes de elegir. Consulta el [Directorio de Software de LLM Local](/es/directory) para el catálogo completo.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1150,7 +1150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas Relacionadas',
         items: [
-          '[Directorio de Software de LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la entrada de ClawRouter en el directorio.',
+          '[Directorio de Software de LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la entrada de ClawRouter en el directorio.',
           '[Reseña de LiteLLM](/es/power-local-llm/litellm-review) — un gateway de LLM de código abierto ampliamente usado con claves propias, para comparar con el enrutamiento automatizado de ClawRouter.',
           '[Reseña de Plano](/es/power-local-llm/plano-review) — otra herramienta de enrutamiento/gateway de LLM cubierta en el mismo clúster.',
           '[Reseña de OpenClaw](/es/power-local-llm/openclaw-review) — el agente de codificación en el que ClawRouter se instala como plugin propio.',
@@ -1229,7 +1229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`@blockrun/clawrouter`というnpmパッケージとして配布されており、コーディングエージェント[OpenClaw](/ja/power-local-llm/openclaw-review)用のプラグインとしてもインストール可能',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)内のClawRouterのエントリーを深掘りする姉妹記事です。他の数十のローカルAIツールとの一覧比較はそちらのページをご覧ください。本レビューはClawRouter自身のREADME、GitHubリポジトリ、リリース履歴に基づくものであり、PromptQuorumによる実機ベンチマークではありません。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)内のClawRouterのエントリーを深掘りする姉妹記事です。他の数十のローカルAIツールとの一覧比較はそちらのページをご覧ください。本レビューはClawRouter自身のREADME、GitHubリポジトリ、リリース履歴に基づくものであり、PromptQuorumによる実機ベンチマークではありません。' },
         ],
       },
       overview: {
@@ -1384,7 +1384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Plano', 'Best known for': '本クラスターで別途取り上げているLLMルーティング／ゲートウェイツール', 'Link': '[Planoレビュー](/ja/power-local-llm/plano-review)' },
         ],
         columns: ['ツール', '主な特徴', 'リンク'],
-        note: 'このリストは、PromptQuorumのローカルLLMソフトウェアディレクトリで取り上げている他のルーター／ゲートウェイを反映したものであり、独立したランキングではありません——選ぶ前に各ツールの現在の料金と機能セットを確認してください。全カタログについては[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'このリストは、PromptQuorumのローカルLLMソフトウェアディレクトリで取り上げている他のルーター／ゲートウェイを反映したものであり、独立したランキングではありません——選ぶ前に各ツールの現在の料金と機能セットを確認してください。全カタログについては[ローカルLLMソフトウェアディレクトリ](/ja/directory)をご覧ください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1439,7 +1439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。ClawRouterのディレクトリ掲載情報を含む。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — 本記事が属するローカルAIツールの全カタログ。ClawRouterのディレクトリ掲載情報を含む。',
           '[LiteLLMレビュー](/ja/power-local-llm/litellm-review) — ClawRouterの自動ルーティングと比較するための、広く使われている持ち込みAPIキー方式のオープンソースLLMゲートウェイ。',
           '[Planoレビュー](/ja/power-local-llm/plano-review) — 同じクラスターで取り上げている、もう一つのLLMルーティング／ゲートウェイツール。',
           '[OpenClawレビュー](/ja/power-local-llm/openclaw-review) — ClawRouterがファーストパーティプラグインとしてインストールされる、コーディングエージェント。',
@@ -1518,7 +1518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '以 `@blockrun/clawrouter` npm 包形式分发；同时也可作为 [OpenClaw](/zh/power-local-llm/openclaw-review) 编程智能体的插件安装',
         ],
         callouts: [
-          { type: 'note', text: '本评测是 ClawRouter 在[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)中条目的深度配套文章——该页面展示了 ClawRouter 与其他数十款本地 AI 工具的一览式对比。本文内容基于 ClawRouter 自身的 README、GitHub 仓库和发布历史，并非 PromptQuorum 的实测基准测试。' },
+          { type: 'note', text: '本评测是 ClawRouter 在[本地 LLM 软件目录](/zh/directory)中条目的深度配套文章——该页面展示了 ClawRouter 与其他数十款本地 AI 工具的一览式对比。本文内容基于 ClawRouter 自身的 README、GitHub 仓库和发布历史，并非 PromptQuorum 的实测基准测试。' },
         ],
       },
       overview: {
@@ -1673,7 +1673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Plano', 'Best known for': '同一集群中另一款 LLM 路由/网关工具', 'Link': '[Plano 评测](/zh/power-local-llm/plano-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: '此列表反映了 PromptQuorum《本地 LLM 软件目录》中收录的其他路由器/网关工具，并非独立排名——选择前请核实各工具当前的价格和功能。完整目录请见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '此列表反映了 PromptQuorum《本地 LLM 软件目录》中收录的其他路由器/网关工具，并非独立排名——选择前请核实各工具当前的价格和功能。完整目录请见[本地 LLM 软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1728,7 +1728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026 年本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory) —— 本文所属的本地 AI 工具完整目录，包含 ClawRouter 的目录条目。',
+          '[2026 年本地 LLM 软件目录](/zh/directory) —— 本文所属的本地 AI 工具完整目录，包含 ClawRouter 的目录条目。',
           '[LiteLLM 评测](/zh/power-local-llm/litellm-review) —— 一款广泛使用、需自带密钥的开源 LLM 网关，可与 ClawRouter 的自动化路由对比。',
           '[Plano 评测](/zh/power-local-llm/plano-review) —— 同一集群中另一款 LLM 路由/网关工具。',
           '[OpenClaw 评测](/zh/power-local-llm/openclaw-review) —— ClawRouter 作为一等插件安装进入的编程智能体。',
@@ -1807,7 +1807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Distribuído como o pacote npm `@blockrun/clawrouter`; também se instala como plugin para o agente de codificação [OpenClaw](/pt/power-local-llm/openclaw-review)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o aprofundamento complementar à entrada do ClawRouter no [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o ClawRouter com dezenas de outras ferramentas de IA local. Ela é baseada no próprio README do ClawRouter, no repositório GitHub e no histórico de lançamentos, não em testes práticos feitos pela PromptQuorum.' },
+          { type: 'note', text: 'Esta análise é o aprofundamento complementar à entrada do ClawRouter no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar rapidamente o ClawRouter com dezenas de outras ferramentas de IA local. Ela é baseada no próprio README do ClawRouter, no repositório GitHub e no histórico de lançamentos, não em testes práticos feitos pela PromptQuorum.' },
         ],
       },
       overview: {
@@ -1962,7 +1962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Plano', 'Best known for': 'Ferramenta de roteamento/gateway de LLM coberta separadamente neste conjunto', 'Link': '[Análise do Plano](/pt/power-local-llm/plano-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Esta lista reflete outros roteadores/gateways cobertos no Diretório de Software de LLM Local da PromptQuorum, não uma classificação independente — verifique o preço e o conjunto de recursos atuais de cada ferramenta antes de escolher. Veja o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        note: 'Esta lista reflete outros roteadores/gateways cobertos no Diretório de Software de LLM Local da PromptQuorum, não uma classificação independente — verifique o preço e o conjunto de recursos atuais de cada ferramenta antes de escolher. Veja o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2017,7 +2017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras Relacionadas',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do ClawRouter no diretório.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do ClawRouter no diretório.',
           '[Análise do LiteLLM](/pt/power-local-llm/litellm-review) — um gateway de LLM de código aberto amplamente usado, no qual você traz suas próprias chaves, para comparação com o roteamento automatizado do ClawRouter.',
           '[Análise do Plano](/pt/power-local-llm/plano-review) — outra ferramenta de roteamento/gateway de LLM coberta no mesmo conjunto.',
           '[Análise do OpenClaw](/pt/power-local-llm/openclaw-review) — o agente de codificação no qual o ClawRouter se instala como plugin oficial.',
@@ -2096,7 +2096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُوزَّع كحزمة npm باسم `@blockrun/clawrouter`؛ ويُثبَّت أيضًا كإضافة لوكيل البرمجة [OpenClaw](/ar/power-local-llm/openclaw-review)',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الشريك المتعمق لإدخال ClawRouter في [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارن ClawRouter سريعًا بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى. تستند هذه المراجعة إلى ملف README ومستودع GitHub وسجل الإصدارات الخاصة بـ ClawRouter، وليس إلى اختبار عملي أجرته PromptQuorum.' },
+          { type: 'note', text: 'هذه المراجعة هي الشريك المتعمق لإدخال ClawRouter في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارن ClawRouter سريعًا بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى. تستند هذه المراجعة إلى ملف README ومستودع GitHub وسجل الإصدارات الخاصة بـ ClawRouter، وليس إلى اختبار عملي أجرته PromptQuorum.' },
         ],
       },
       overview: {
@@ -2251,7 +2251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': 'Plano', 'الأشهر في': 'أداة توجيه/بوابة لنماذج اللغة تُغطى بشكل منفصل في هذه المجموعة', 'الرابط': '[مراجعة Plano](/ar/power-local-llm/plano-review)' },
         ],
         columns: ['الأداة', 'الأشهر في', 'الرابط'],
-        note: 'تعكس هذه القائمة موجهات/بوابات أخرى مُغطاة في دليل PromptQuorum لبرمجيات نماذج اللغة المحلية، وليست ترتيبًا مستقلاً — تحقق من الأسعار والميزات الحالية لكل أداة قبل الاختيار. راجع [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل.',
+        note: 'تعكس هذه القائمة موجهات/بوابات أخرى مُغطاة في دليل PromptQuorum لبرمجيات نماذج اللغة المحلية، وليست ترتيبًا مستقلاً — تحقق من الأسعار والميزات الحالية لكل أداة قبل الاختيار. راجع [دليل برمجيات نماذج اللغة المحلية](/ar/directory) للكتالوج الكامل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2306,7 +2306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي تنتمي إليه هذه المقالة، بما في ذلك إدخال ClawRouter في الدليل.',
+          '[دليل برمجيات نماذج اللغة المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي تنتمي إليه هذه المقالة، بما في ذلك إدخال ClawRouter في الدليل.',
           '[مراجعة LiteLLM](/ar/power-local-llm/litellm-review) — بوابة نماذج لغة مفتوحة المصدر واسعة الاستخدام تعتمد على مفاتيحك الخاصة، للمقارنة مع توجيه ClawRouter الآلي.',
           '[مراجعة Plano](/ar/power-local-llm/plano-review) — أداة توجيه/بوابة أخرى لنماذج اللغة مُغطاة في المجموعة نفسها.',
           '[مراجعة OpenClaw](/ar/power-local-llm/openclaw-review) — وكيل البرمجة الذي يُثبَّت ClawRouter فيه كإضافة أصلية.',
@@ -2385,7 +2385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`@blockrun/clawrouter` npm 패키지로 배포되며, [OpenClaw](/ko/power-local-llm/openclaw-review) 코딩 에이전트의 플러그인으로도 설치됩니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 등재된 ClawRouter 항목의 심화 버전입니다 — ClawRouter가 다른 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하십시오. 이 리뷰는 ClawRouter의 README, GitHub 저장소, 릴리스 이력을 근거로 작성되었으며, PromptQuorum이 직접 벤치마킹한 결과가 아닙니다.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등재된 ClawRouter 항목의 심화 버전입니다 — ClawRouter가 다른 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하십시오. 이 리뷰는 ClawRouter의 README, GitHub 저장소, 릴리스 이력을 근거로 작성되었으며, PromptQuorum이 직접 벤치마킹한 결과가 아닙니다.' },
         ],
       },
       overview: {
@@ -2540,7 +2540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': 'Plano', '대표 특징': '같은 클러스터에서 별도로 다루는 LLM 라우팅/게이트웨이 도구', '링크': '[Plano 리뷰](/ko/power-local-llm/plano-review)' },
         ],
         columns: ['도구', '대표 특징', '링크'],
-        note: '이 목록은 PromptQuorum의 로컬 LLM 소프트웨어 디렉터리에서 다루는 다른 라우터/게이트웨이를 반영한 것이며, 독립적인 순위가 아닙니다 — 선택하기 전에 각 도구의 현재 가격과 기능을 직접 확인하십시오. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.',
+        note: '이 목록은 PromptQuorum의 로컬 LLM 소프트웨어 디렉터리에서 다루는 다른 라우터/게이트웨이를 반영한 것이며, 독립적인 순위가 아닙니다 — 선택하기 전에 각 도구의 현재 가격과 기능을 직접 확인하십시오. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2595,7 +2595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 글',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — ClawRouter의 디렉터리 항목을 포함해, 이 글이 속한 로컬 AI 도구 전체 카탈로그입니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — ClawRouter의 디렉터리 항목을 포함해, 이 글이 속한 로컬 AI 도구 전체 카탈로그입니다.',
           '[LiteLLM 리뷰](/ko/power-local-llm/litellm-review) — ClawRouter의 자동화된 라우팅과 비교할 수 있는, 직접 API 키를 준비하는 널리 쓰이는 오픈소스 LLM 게이트웨이입니다.',
           '[Plano 리뷰](/ko/power-local-llm/plano-review) — 같은 클러스터에서 다루는 또 다른 LLM 라우팅/게이트웨이 도구입니다.',
           '[OpenClaw 리뷰](/ko/power-local-llm/openclaw-review) — ClawRouter가 퍼스트파티 플러그인으로 설치되는 코딩 에이전트입니다.',

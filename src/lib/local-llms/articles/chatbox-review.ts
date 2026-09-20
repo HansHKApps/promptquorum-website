@@ -115,7 +115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'It supports image generation via DALL-E-3 when connected to an OpenAI API key, alongside Markdown, LaTeX, and code-syntax rendering, and is the only one of five compared chat-client apps with a confirmed affiliate program.',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Chatbox\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- see that page for how Chatbox compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Chatbox\'s entry in the [Local LLM Software Directory](/directory) -- see that page for how Chatbox compares at a glance to dozens of other local AI tools.' },
         ],
       },
       quickFacts: {
@@ -207,7 +207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**[Big-AGI](/local-llms/big-agi-review)**', 'Best for': 'Comparing several models on one prompt (Beam)', 'Deployment': 'Self-hosted or hosted', 'Price': 'Free self-hosted / Pro $10.99mo', 'License': 'MIT' },
           { 'Tool': '**[NextChat](/local-llms/nextchat-review)**', 'Best for': 'Fastest possible deploy, smallest footprint', 'Deployment': 'Self-hosted (Docker/Vercel) or native app', 'Price': 'Free self-hosted', 'License': 'MIT' },
         ],
-        note: 'For a wider five-way look at these same apps, see [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). For the full catalog, see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).',
+        note: 'For a wider five-way look at these same apps, see [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). For the full catalog, see the [Local LLM Software Directory](/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -237,14 +237,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Competitors and Alternatives',
-        content: 'Chatbox shares the "Web UIs & Browser Frontends" category in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) with LobeChat, Big-AGI, NextChat, and Page Assist, but the five split into two genuinely different groups. Chatbox and Page Assist are both installable end-user clients -- an app or a browser extension you get directly, with no server to run -- while LobeChat, Big-AGI, and NextChat are self-hosted web apps you deploy yourself. The closest comparison for Chatbox is Page Assist, not the three self-hosted apps.',
+        content: 'Chatbox shares the "Web UIs & Browser Frontends" category in the [Local LLM Software Directory](/directory) with LobeChat, Big-AGI, NextChat, and Page Assist, but the five split into two genuinely different groups. Chatbox and Page Assist are both installable end-user clients -- an app or a browser extension you get directly, with no server to run -- while LobeChat, Big-AGI, and NextChat are self-hosted web apps you deploy yourself. The closest comparison for Chatbox is Page Assist, not the three self-hosted apps.',
         items: [
           '**[Page Assist](/local-llms/page-assist-review)** -- the other genuinely installable client in this group: a free, MIT-licensed browser extension rather than a native app, with no paid tier and no cross-platform mobile app.',
           '**[LobeChat](/local-llms/lobechat-review)** -- a self-hosted, multi-provider chat interface with a plugin marketplace and agent builder, deployed to Docker or Vercel rather than installed directly.',
           '**[Big-AGI](/local-llms/big-agi-review)** -- a self-hosted or hosted, MIT-licensed interface whose standout feature is comparing multiple models on one prompt at once (Beam).',
           '**[NextChat](/local-llms/nextchat-review)** -- the lightest-weight self-hosted chat interface in the same directory segment, deployable with one click to Vercel.',
         ],
-        note: 'This is not an exhaustive list of local-model chat tools -- see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Chatbox\'s own directory entry.',
+        note: 'This is not an exhaustive list of local-model chat tools -- see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Chatbox\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -276,7 +276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- the full catalog of local AI tools this article belongs to, including Chatbox\'s own directory entry.',
+          '[Local LLM Software Directory](/directory) -- the full catalog of local AI tools this article belongs to, including Chatbox\'s own directory entry.',
           '[Page Assist Review](/local-llms/page-assist-review) -- the other genuinely installable end-user client in the same directory segment, as a free browser extension instead of a native app.',
           '[LobeChat Review](/local-llms/lobechat-review) -- a self-hosted alternative with a plugin marketplace and agent builder.',
           '[Big-AGI Review](/local-llms/big-agi-review) -- a self-hosted or hosted alternative built around comparing multiple models on one prompt.',
@@ -411,7 +411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Es unterstützt Bildgenerierung über DALL-E-3 bei Verbindung mit einem OpenAI-API-Schlüssel, dazu Markdown-, LaTeX- und Code-Syntax-Darstellung, und ist als einzige von fünf verglichenen Chat-Client-Apps mit bestätigtem Partnerprogramm verfügbar.',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test ist die vertiefende Ergänzung zu Chatbox\' Eintrag im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- dort finden Sie den Vergleich von Chatbox mit Dutzenden anderer lokaler KI-Tools auf einen Blick.' },
+          { type: 'note', text: 'Dieser Test ist die vertiefende Ergänzung zu Chatbox\' Eintrag im [Local LLM Software Directory](/directory) -- dort finden Sie den Vergleich von Chatbox mit Dutzenden anderer lokaler KI-Tools auf einen Blick.' },
         ],
       },
       quickFacts: {
@@ -503,7 +503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '**[Big-AGI](/de/local-llms/big-agi-review)**', 'Am besten für': 'Mehrere Modelle bei einem Prompt vergleichen (Beam)', 'Deployment': 'Self-hosted oder gehostet', 'Preis': 'Kostenlos self-hosted / Pro 10,99 $/Mon.', 'Lizenz': 'MIT' },
           { 'Tool': '**[NextChat](/de/local-llms/nextchat-review)**', 'Am besten für': 'Schnellstmögliches Deployment, kleinster Fußabdruck', 'Deployment': 'Self-hosted (Docker/Vercel) oder native App', 'Preis': 'Kostenlos self-hosted', 'Lizenz': 'MIT' },
         ],
-        note: 'Für einen breiteren Fünf-Wege-Vergleich dieser Apps siehe [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/de/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Für den vollständigen Katalog siehe das [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).',
+        note: 'Für einen breiteren Fünf-Wege-Vergleich dieser Apps siehe [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/de/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Für den vollständigen Katalog siehe das [Local LLM Software Directory](/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -533,14 +533,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Konkurrenten und Alternativen',
-        content: 'Chatbox teilt sich die Kategorie "Web UIs & Browser Frontends" im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) mit LobeChat, Big-AGI, NextChat und Page Assist, doch die fünf teilen sich in zwei tatsächlich unterschiedliche Gruppen. Chatbox und Page Assist sind beide direkt installierbare Endnutzer-Clients -- eine App oder eine Browser-Erweiterung, die Sie direkt beziehen, ohne Server zu betreiben -- während LobeChat, Big-AGI und NextChat selbst gehostete Webanwendungen sind, die Sie selbst deployen. Der nächste Vergleich für Chatbox ist Page Assist, nicht die drei selbst gehosteten Apps.',
+        content: 'Chatbox teilt sich die Kategorie "Web UIs & Browser Frontends" im [Local LLM Software Directory](/directory) mit LobeChat, Big-AGI, NextChat und Page Assist, doch die fünf teilen sich in zwei tatsächlich unterschiedliche Gruppen. Chatbox und Page Assist sind beide direkt installierbare Endnutzer-Clients -- eine App oder eine Browser-Erweiterung, die Sie direkt beziehen, ohne Server zu betreiben -- während LobeChat, Big-AGI und NextChat selbst gehostete Webanwendungen sind, die Sie selbst deployen. Der nächste Vergleich für Chatbox ist Page Assist, nicht die drei selbst gehosteten Apps.',
         items: [
           '**[Page Assist](/de/local-llms/page-assist-review)** -- der andere tatsächlich direkt installierbare Client in dieser Gruppe: eine kostenlose, MIT-lizenzierte Browser-Erweiterung statt einer nativen App, ohne kostenpflichtige Stufe und ohne plattformübergreifende Mobil-App.',
           '**[LobeChat](/de/local-llms/lobechat-review)** -- eine selbst gehostete, Multi-Anbieter-Chat-Oberfläche mit Plugin-Marktplatz und Agent-Builder, deployed auf Docker oder Vercel statt direkt installiert.',
           '**[Big-AGI](/de/local-llms/big-agi-review)** -- eine selbst gehostete oder gehostete, MIT-lizenzierte Oberfläche, deren herausragende Funktion der Vergleich mehrerer Modelle bei einem Prompt (Beam) ist.',
           '**[NextChat](/de/local-llms/nextchat-review)** -- die leichtgewichtigste selbst gehostete Chat-Oberfläche im selben Verzeichnis-Segment, mit einem Klick auf Vercel deploybar.',
         ],
-        note: 'Dies ist keine vollständige Liste aller Chat-Tools für lokale Modelle -- siehe das [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Chatbox\' eigenem Verzeichniseintrag.',
+        note: 'Dies ist keine vollständige Liste aller Chat-Tools für lokale Modelle -- siehe das [Local LLM Software Directory](/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Chatbox\' eigenem Verzeichniseintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -572,7 +572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Chatbox\' eigenem Verzeichniseintrag.',
+          '[Local LLM Software Directory](/directory) -- der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Chatbox\' eigenem Verzeichniseintrag.',
           '[Page Assist im Test](/de/local-llms/page-assist-review) -- der andere echte, direkt installierbare Endnutzer-Client im selben Verzeichnis-Segment, als kostenlose Browser-Erweiterung statt einer nativen App.',
           '[LobeChat im Test](/de/local-llms/lobechat-review) -- eine selbst gehostete Alternative mit Plugin-Marktplatz und Agent-Builder.',
           '[Big-AGI im Test](/de/local-llms/big-agi-review) -- eine selbst gehostete oder gehostete Alternative, gebaut rund um den Vergleich mehrerer Modelle bei einem Prompt.',
@@ -707,7 +707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Il prend en charge la génération d\'images via DALL-E-3 avec une clé API OpenAI connectée, en plus du rendu Markdown, LaTeX et de la coloration syntaxique du code, et est la seule des cinq applications de chat comparées avec un programme d\'affiliation confirmé.',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Chatbox dans le [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- consultez cette page pour voir comment Chatbox se compare d\'un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Chatbox dans le [Local LLM Software Directory](/directory) -- consultez cette page pour voir comment Chatbox se compare d\'un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       quickFacts: {
@@ -799,7 +799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Outil': '**[Big-AGI](/fr/local-llms/big-agi-review)**', 'Idéal pour': 'Comparer plusieurs modèles sur un même prompt (Beam)', 'Déploiement': 'Auto-hébergé ou hébergé', 'Prix': 'Gratuit auto-hébergé / Pro 10,99 $/mois', 'Licence': 'MIT' },
           { 'Outil': '**[NextChat](/fr/local-llms/nextchat-review)**', 'Idéal pour': 'Déploiement le plus rapide possible, empreinte minimale', 'Déploiement': 'Auto-hébergé (Docker/Vercel) ou application native', 'Prix': 'Gratuit auto-hébergé', 'Licence': 'MIT' },
         ],
-        note: 'Pour un comparatif plus large de ces mêmes applications, voir [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/fr/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Pour le catalogue complet, voir le [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).',
+        note: 'Pour un comparatif plus large de ces mêmes applications, voir [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/fr/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Pour le catalogue complet, voir le [Local LLM Software Directory](/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -829,14 +829,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Concurrents et alternatives',
-        content: 'Chatbox partage la catégorie « Web UIs & Browser Frontends » du [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) avec LobeChat, Big-AGI, NextChat et Page Assist, mais les cinq se répartissent en deux groupes réellement différents. Chatbox et Page Assist sont tous deux de véritables clients installables directement par l\'utilisateur final -- une application ou une extension de navigateur que vous obtenez directement, sans serveur à exécuter -- tandis que LobeChat, Big-AGI et NextChat sont des applications web auto-hébergées que vous déployez vous-même. Le comparatif le plus pertinent pour Chatbox est Page Assist, pas les trois applications auto-hébergées.',
+        content: 'Chatbox partage la catégorie « Web UIs & Browser Frontends » du [Local LLM Software Directory](/directory) avec LobeChat, Big-AGI, NextChat et Page Assist, mais les cinq se répartissent en deux groupes réellement différents. Chatbox et Page Assist sont tous deux de véritables clients installables directement par l\'utilisateur final -- une application ou une extension de navigateur que vous obtenez directement, sans serveur à exécuter -- tandis que LobeChat, Big-AGI et NextChat sont des applications web auto-hébergées que vous déployez vous-même. Le comparatif le plus pertinent pour Chatbox est Page Assist, pas les trois applications auto-hébergées.',
         items: [
           '**[Page Assist](/fr/local-llms/page-assist-review)** -- l\'autre client réellement installable directement dans ce groupe : une extension de navigateur gratuite sous licence MIT plutôt qu\'une application native, sans offre payante ni application mobile multiplateforme.',
           '**[LobeChat](/fr/local-llms/lobechat-review)** -- une interface de chat multi-fournisseurs auto-hébergée avec marketplace de plugins et agent builder, déployée sur Docker ou Vercel plutôt qu\'installée directement.',
           '**[Big-AGI](/fr/local-llms/big-agi-review)** -- une interface auto-hébergée ou hébergée sous licence MIT dont la fonctionnalité phare est la comparaison de plusieurs modèles sur un même prompt (Beam).',
           '**[NextChat](/fr/local-llms/nextchat-review)** -- l\'interface de chat auto-hébergée la plus légère du même segment de l\'annuaire, déployable en un clic sur Vercel.',
         ],
-        note: 'Ceci n\'est pas une liste exhaustive des outils de chat pour modèles locaux -- voir le [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la fiche propre de Chatbox dans l\'annuaire.',
+        note: 'Ceci n\'est pas une liste exhaustive des outils de chat pour modèles locaux -- voir le [Local LLM Software Directory](/directory) pour le catalogue complet et régulièrement mis à jour, incluant la fiche propre de Chatbox dans l\'annuaire.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -868,7 +868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant la fiche propre de Chatbox dans l\'annuaire.',
+          '[Local LLM Software Directory](/directory) -- le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant la fiche propre de Chatbox dans l\'annuaire.',
           '[Avis Page Assist](/fr/local-llms/page-assist-review) -- l\'autre client réellement installable directement dans le même segment de l\'annuaire, sous forme d\'extension de navigateur gratuite plutôt que d\'application native.',
           '[Avis LobeChat](/fr/local-llms/lobechat-review) -- une alternative auto-hébergée avec marketplace de plugins et agent builder.',
           '[Avis Big-AGI](/fr/local-llms/big-agi-review) -- une alternative auto-hébergée ou hébergée construite autour de la comparaison de plusieurs modèles sur un même prompt.',
@@ -1003,7 +1003,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Admite generación de imágenes mediante DALL-E-3 al conectar una clave API de OpenAI, junto con renderizado de Markdown, LaTeX y resaltado de sintaxis de código, y es la única de cinco apps de chat comparadas con un programa de afiliados confirmado.',
         ],
         callouts: [
-          { type: 'note', text: 'Este análisis es el complemento en profundidad de la ficha de Chatbox en el [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- consulta esa página para ver cómo se compara Chatbox de un vistazo con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Este análisis es el complemento en profundidad de la ficha de Chatbox en el [Local LLM Software Directory](/directory) -- consulta esa página para ver cómo se compara Chatbox de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       quickFacts: {
@@ -1095,7 +1095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': '**[Big-AGI](/es/local-llms/big-agi-review)**', 'Ideal para': 'Comparar varios modelos en un mismo prompt (Beam)', 'Despliegue': 'Autoalojado o alojado', 'Precio': 'Gratis autoalojado / Pro 10,99 $/mes', 'Licencia': 'MIT' },
           { 'Herramienta': '**[NextChat](/es/local-llms/nextchat-review)**', 'Ideal para': 'Despliegue lo más rápido posible, huella mínima', 'Despliegue': 'Autoalojado (Docker/Vercel) o app nativa', 'Precio': 'Gratis autoalojado', 'Licencia': 'MIT' },
         ],
-        note: 'Para una comparativa más amplia de estas mismas apps, consulta [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/es/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Para el catálogo completo, consulta el [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).',
+        note: 'Para una comparativa más amplia de estas mismas apps, consulta [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/es/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Para el catálogo completo, consulta el [Local LLM Software Directory](/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1125,14 +1125,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Competidores y alternativas',
-        content: 'Chatbox comparte la categoría "Web UIs & Browser Frontends" del [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) con LobeChat, Big-AGI, NextChat y Page Assist, pero los cinco se dividen en dos grupos realmente distintos. Chatbox y Page Assist son ambos clientes genuinamente instalables directamente por el usuario final -- una app o una extensión de navegador que obtienes directamente, sin servidor que ejecutar -- mientras que LobeChat, Big-AGI y NextChat son apps web autoalojadas que despliegas tú mismo. La comparación más cercana para Chatbox es Page Assist, no las tres apps autoalojadas.',
+        content: 'Chatbox comparte la categoría "Web UIs & Browser Frontends" del [Local LLM Software Directory](/directory) con LobeChat, Big-AGI, NextChat y Page Assist, pero los cinco se dividen en dos grupos realmente distintos. Chatbox y Page Assist son ambos clientes genuinamente instalables directamente por el usuario final -- una app o una extensión de navegador que obtienes directamente, sin servidor que ejecutar -- mientras que LobeChat, Big-AGI y NextChat son apps web autoalojadas que despliegas tú mismo. La comparación más cercana para Chatbox es Page Assist, no las tres apps autoalojadas.',
         items: [
           '**[Page Assist](/es/local-llms/page-assist-review)** -- el otro cliente genuinamente instalable directamente en este grupo: una extensión de navegador gratuita con licencia MIT en lugar de una app nativa, sin nivel de pago ni app móvil multiplataforma.',
           '**[LobeChat](/es/local-llms/lobechat-review)** -- una interfaz de chat multi-proveedor autoalojada con marketplace de plugins y agent builder, desplegada en Docker o Vercel en lugar de instalada directamente.',
           '**[Big-AGI](/es/local-llms/big-agi-review)** -- una interfaz autoalojada o alojada con licencia MIT cuya función destacada es comparar varios modelos con un mismo prompt a la vez (Beam).',
           '**[NextChat](/es/local-llms/nextchat-review)** -- la interfaz de chat autoalojada más ligera del mismo segmento del directorio, desplegable con un clic en Vercel.',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas de chat para modelos locales -- consulta el [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la propia ficha de Chatbox en el directorio.',
+        note: 'Esta no es una lista exhaustiva de herramientas de chat para modelos locales -- consulta el [Local LLM Software Directory](/directory) para el catálogo completo y actualizado regularmente, incluida la propia ficha de Chatbox en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1164,7 +1164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia ficha de Chatbox en el directorio.',
+          '[Local LLM Software Directory](/directory) -- el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia ficha de Chatbox en el directorio.',
           '[Análisis de Page Assist](/es/local-llms/page-assist-review) -- el otro cliente genuinamente instalable directamente en el mismo segmento del directorio, como extensión de navegador gratuita en lugar de app nativa.',
           '[Análisis de LobeChat](/es/local-llms/lobechat-review) -- una alternativa autoalojada con marketplace de plugins y agent builder.',
           '[Análisis de Big-AGI](/es/local-llms/big-agi-review) -- una alternativa autoalojada o alojada construida en torno a comparar varios modelos con un mismo prompt.',
@@ -1299,7 +1299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ele suporta geração de imagens via DALL-E-3 quando conectado com uma chave de API OpenAI, além de renderização de Markdown, LaTeX e destaque de sintaxe de código, e é o único entre cinco apps de chat comparados com programa de afiliados confirmado.',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Chatbox no [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- veja essa página para comparar o Chatbox rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Chatbox no [Local LLM Software Directory](/directory) -- veja essa página para comparar o Chatbox rapidamente com dezenas de outras ferramentas de IA local.' },
         ],
       },
       quickFacts: {
@@ -1391,7 +1391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': '**[Big-AGI](/pt/local-llms/big-agi-review)**', 'Melhor para': 'Comparar vários modelos no mesmo prompt (Beam)', 'Implantação': 'Auto-hospedado ou hospedado', 'Preço': 'Gratuito auto-hospedado / Pro US$ 10,99/mês', 'Licença': 'MIT' },
           { 'Ferramenta': '**[NextChat](/pt/local-llms/nextchat-review)**', 'Melhor para': 'Implantação mais rápida possível, menor pegada', 'Implantação': 'Auto-hospedado (Docker/Vercel) ou app nativo', 'Preço': 'Gratuito auto-hospedado', 'Licença': 'MIT' },
         ],
-        note: 'Para uma comparação mais ampla desses mesmos apps, veja [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/pt/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Para o catálogo completo, veja o [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).',
+        note: 'Para uma comparação mais ampla desses mesmos apps, veja [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/pt/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). Para o catálogo completo, veja o [Local LLM Software Directory](/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1421,14 +1421,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Concorrentes e alternativas',
-        content: 'O Chatbox compartilha a categoria "Web UIs & Browser Frontends" no [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) com LobeChat, Big-AGI, NextChat e Page Assist, mas os cinco se dividem em dois grupos genuinamente diferentes. Chatbox e Page Assist são ambos clientes genuinamente instaláveis diretamente pelo usuário final -- um app ou uma extensão de navegador que você obtém diretamente, sem servidor para rodar -- enquanto LobeChat, Big-AGI e NextChat são apps web auto-hospedados que você mesmo implanta. A comparação mais próxima para o Chatbox é o Page Assist, não os três apps auto-hospedados.',
+        content: 'O Chatbox compartilha a categoria "Web UIs & Browser Frontends" no [Local LLM Software Directory](/directory) com LobeChat, Big-AGI, NextChat e Page Assist, mas os cinco se dividem em dois grupos genuinamente diferentes. Chatbox e Page Assist são ambos clientes genuinamente instaláveis diretamente pelo usuário final -- um app ou uma extensão de navegador que você obtém diretamente, sem servidor para rodar -- enquanto LobeChat, Big-AGI e NextChat são apps web auto-hospedados que você mesmo implanta. A comparação mais próxima para o Chatbox é o Page Assist, não os três apps auto-hospedados.',
         items: [
           '**[Page Assist](/pt/local-llms/page-assist-review)** -- o outro cliente genuinamente instalável diretamente neste grupo: uma extensão de navegador gratuita sob licença MIT em vez de um app nativo, sem nível pago e sem app móvel multiplataforma.',
           '**[LobeChat](/pt/local-llms/lobechat-review)** -- uma interface de chat multi-provedor auto-hospedada com marketplace de plugins e agent builder, implantada no Docker ou na Vercel em vez de instalada diretamente.',
           '**[Big-AGI](/pt/local-llms/big-agi-review)** -- uma interface auto-hospedada ou hospedada, sob licença MIT, cujo recurso de destaque é comparar vários modelos no mesmo prompt ao mesmo tempo (Beam).',
           '**[NextChat](/pt/local-llms/nextchat-review)** -- a interface de chat auto-hospedada mais leve no mesmo segmento do diretório, implantável com um clique na Vercel.',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas de chat para modelos locais -- veja o [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Chatbox no diretório.',
+        note: 'Esta não é uma lista exaustiva de ferramentas de chat para modelos locais -- veja o [Local LLM Software Directory](/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Chatbox no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1460,7 +1460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do Chatbox no diretório.',
+          '[Local LLM Software Directory](/directory) -- o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do Chatbox no diretório.',
           '[Análise do Page Assist](/pt/local-llms/page-assist-review) -- o outro cliente genuinamente instalável diretamente no mesmo segmento do diretório, como extensão de navegador gratuita em vez de app nativo.',
           '[Análise do LobeChat](/pt/local-llms/lobechat-review) -- uma alternativa auto-hospedada com marketplace de plugins e agent builder.',
           '[Análise do Big-AGI](/pt/local-llms/big-agi-review) -- uma alternativa auto-hospedada ou hospedada construída em torno de comparar vários modelos no mesmo prompt.',
@@ -1595,7 +1595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OpenAIのAPIキーを接続するとDALL-E-3による画像生成に対応し、Markdown、LaTeX、コードのシンタックスハイライト表示もでき、比較した5つのチャットクライアントアプリの中で唯一、確認済みのアフィリエイトプログラムを持ちます。',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは[Local LLM Software Directory](/power-local-llm/local-llm-software-directory)内のChatboxのエントリーを補完する詳細版です -- 他の数十のローカルAIツールとChatboxを一目で比較したい場合はそちらをご覧ください。' },
+          { type: 'note', text: 'このレビューは[Local LLM Software Directory](/directory)内のChatboxのエントリーを補完する詳細版です -- 他の数十のローカルAIツールとChatboxを一目で比較したい場合はそちらをご覧ください。' },
         ],
       },
       quickFacts: {
@@ -1687,7 +1687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ツール': '**[Big-AGI](/ja/local-llms/big-agi-review)**', '最適な用途': '同一プロンプトで複数モデルを比較（Beam）', 'デプロイ方式': 'セルフホストまたはホスト型', '価格': 'セルフホストは無料／Pro月額10.99ドル', 'ライセンス': 'MIT' },
           { 'ツール': '**[NextChat](/ja/local-llms/nextchat-review)**', '最適な用途': '可能な限り最速のデプロイ、最小のフットプリント', 'デプロイ方式': 'セルフホスト（Docker/Vercel）またはネイティブアプリ', '価格': 'セルフホストは無料', 'ライセンス': 'MIT' },
         ],
-        note: 'これら5つのアプリをより広く比較したものは、[LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/ja/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)をご覧ください。全カタログは[Local LLM Software Directory](/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'これら5つのアプリをより広く比較したものは、[LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/ja/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)をご覧ください。全カタログは[Local LLM Software Directory](/directory)をご覧ください。',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1717,14 +1717,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '競合とその他の選択肢',
-        content: 'Chatboxは[Local LLM Software Directory](/power-local-llm/local-llm-software-directory)の「Web UIs & Browser Frontends」カテゴリーをLobeChat、Big-AGI、NextChat、Page Assistと共有していますが、5つは実質的に異なる2つのグループに分かれます。ChatboxとPage Assistはどちらも、サーバーを実行する必要がなくエンドユーザーが直接入手できるアプリまたはブラウザ拡張機能として、真にインストール可能なクライアントです。一方、LobeChat、Big-AGI、NextChatは自分でデプロイするセルフホスト型のWebアプリです。Chatboxに最も近い比較対象は、3つのセルフホスト型アプリではなくPage Assistです。',
+        content: 'Chatboxは[Local LLM Software Directory](/directory)の「Web UIs & Browser Frontends」カテゴリーをLobeChat、Big-AGI、NextChat、Page Assistと共有していますが、5つは実質的に異なる2つのグループに分かれます。ChatboxとPage Assistはどちらも、サーバーを実行する必要がなくエンドユーザーが直接入手できるアプリまたはブラウザ拡張機能として、真にインストール可能なクライアントです。一方、LobeChat、Big-AGI、NextChatは自分でデプロイするセルフホスト型のWebアプリです。Chatboxに最も近い比較対象は、3つのセルフホスト型アプリではなくPage Assistです。',
         items: [
           '**[Page Assist](/ja/local-llms/page-assist-review)** -- このグループのもう1つの真に直接インストール可能なクライアント：ネイティブアプリではなく、有料プランやクロスプラットフォームのモバイルアプリのないMITライセンスの無料ブラウザ拡張機能。',
           '**[LobeChat](/ja/local-llms/lobechat-review)** -- プラグインマーケットプレイスとエージェントビルダーを備えた、直接インストールではなくDockerやVercelにデプロイするセルフホスト型のマルチプロバイダーチャットインターフェース。',
           '**[Big-AGI](/ja/local-llms/big-agi-review)** -- セルフホストまたはホスト型のMITライセンスインターフェースで、同一プロンプトで複数モデルを一度に比較すること（Beam）が特長です。',
           '**[NextChat](/ja/local-llms/nextchat-review)** -- 同じディレクトリセグメントの中で最も軽量なセルフホスト型チャットインターフェースで、Vercelにワンクリックでデプロイできます。',
         ],
-        note: 'これはローカルモデル向けチャットツールの網羅的なリストではありません -- Chatbox自身のディレクトリエントリーを含む、定期的に更新される完全なカタログは[Local LLM Software Directory](/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'これはローカルモデル向けチャットツールの網羅的なリストではありません -- Chatbox自身のディレクトリエントリーを含む、定期的に更新される完全なカタログは[Local LLM Software Directory](/directory)をご覧ください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1756,7 +1756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) -- この記事が属する、ローカルAIツールの完全なカタログ。Chatbox自身のディレクトリエントリーも含む。',
+          '[Local LLM Software Directory](/directory) -- この記事が属する、ローカルAIツールの完全なカタログ。Chatbox自身のディレクトリエントリーも含む。',
           '[Page Assistレビュー](/ja/local-llms/page-assist-review) -- 同じディレクトリセグメント内で、ネイティブアプリではなく無料のブラウザ拡張機能として、もう1つの真に直接インストール可能なエンドユーザークライアント。',
           '[LobeChatレビュー](/ja/local-llms/lobechat-review) -- プラグインマーケットプレイスとエージェントビルダーを備えたセルフホスト型の代替。',
           '[Big-AGIレビュー](/ja/local-llms/big-agi-review) -- 同一プロンプトで複数モデルを比較することを中心に構築された、セルフホストまたはホスト型の代替。',
@@ -1891,7 +1891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '连接OpenAI API密钥后支持通过DALL-E-3生成图片，同时支持Markdown、LaTeX渲染和代码语法高亮，是比较的五款聊天客户端应用中唯一拥有确认联盟计划的产品。',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/power-local-llm/local-llm-software-directory)中Chatbox条目的深度补充——请查看该页面，一览Chatbox与数十款其他本地AI工具的对比。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/directory)中Chatbox条目的深度补充——请查看该页面，一览Chatbox与数十款其他本地AI工具的对比。' },
         ],
       },
       quickFacts: {
@@ -1983,7 +1983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '工具': '**[Big-AGI](/zh/local-llms/big-agi-review)**', '最适合': '在同一提示词下比较多个模型（Beam）', '部署方式': '自托管或托管', '价格': '自托管免费／Pro每月10.99美元', '许可证': 'MIT' },
           { '工具': '**[NextChat](/zh/local-llms/nextchat-review)**', '最适合': '尽可能最快的部署，占用空间最小', '部署方式': '自托管（Docker/Vercel）或原生应用', '价格': '自托管免费', '许可证': 'MIT' },
         ],
-        note: '如需更全面地比较这些应用，请查看[LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/zh/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)。完整目录请查看[本地LLM软件目录](/power-local-llm/local-llm-software-directory)。',
+        note: '如需更全面地比较这些应用，请查看[LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/zh/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)。完整目录请查看[本地LLM软件目录](/directory)。',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2013,14 +2013,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '竞品与替代方案',
-        content: 'Chatbox与LobeChat、Big-AGI、NextChat和Page Assist共享[本地LLM软件目录](/power-local-llm/local-llm-software-directory)中的"Web UIs & Browser Frontends"（网页界面与浏览器前端）类别，但这五款产品实际上分为两个截然不同的群体。Chatbox和Page Assist都是真正可供终端用户直接安装的客户端——一款应用或浏览器扩展，直接获取即可，无需运行服务器；而LobeChat、Big-AGI和NextChat则是需要你自行部署的自托管Web应用。对Chatbox而言，最贴近的对比对象是Page Assist，而非那三款自托管应用。',
+        content: 'Chatbox与LobeChat、Big-AGI、NextChat和Page Assist共享[本地LLM软件目录](/directory)中的"Web UIs & Browser Frontends"（网页界面与浏览器前端）类别，但这五款产品实际上分为两个截然不同的群体。Chatbox和Page Assist都是真正可供终端用户直接安装的客户端——一款应用或浏览器扩展，直接获取即可，无需运行服务器；而LobeChat、Big-AGI和NextChat则是需要你自行部署的自托管Web应用。对Chatbox而言，最贴近的对比对象是Page Assist，而非那三款自托管应用。',
         items: [
           '**[Page Assist](/zh/local-llms/page-assist-review)**——此群体中另一款真正可直接安装的客户端：一款采用MIT许可证的免费浏览器扩展，而非原生应用，没有付费层级，也没有跨平台移动应用。',
           '**[LobeChat](/zh/local-llms/lobechat-review)**——一款自托管的多服务商聊天界面，具备插件市场和Agent构建器，需部署到Docker或Vercel，而非直接安装。',
           '**[Big-AGI](/zh/local-llms/big-agi-review)**——一款自托管或托管的MIT许可证界面，其突出功能是可同时在同一提示词下比较多个模型（Beam）。',
           '**[NextChat](/zh/local-llms/nextchat-review)**——同一目录细分中最轻量的自托管聊天界面，可一键部署到Vercel。',
         ],
-        note: '这并非本地模型聊天工具的详尽列表——完整且定期更新的目录，包括Chatbox自身的目录条目，请查看[本地LLM软件目录](/power-local-llm/local-llm-software-directory)。',
+        note: '这并非本地模型聊天工具的详尽列表——完整且定期更新的目录，包括Chatbox自身的目录条目，请查看[本地LLM软件目录](/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2052,7 +2052,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[本地LLM软件目录](/power-local-llm/local-llm-software-directory)——本文所属的本地AI工具完整目录，包括Chatbox自身的目录条目。',
+          '[本地LLM软件目录](/directory)——本文所属的本地AI工具完整目录，包括Chatbox自身的目录条目。',
           '[Page Assist评测](/zh/local-llms/page-assist-review)——同一目录细分中另一款真正可直接安装的终端用户客户端，以免费浏览器扩展而非原生应用形式提供。',
           '[LobeChat评测](/zh/local-llms/lobechat-review)——一款具备插件市场和Agent构建器的自托管替代方案。',
           '[Big-AGI评测](/zh/local-llms/big-agi-review)——一款围绕在同一提示词下比较多个模型而构建的自托管或托管替代方案。',
@@ -2187,7 +2187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يدعم توليد الصور عبر DALL-E-3 عند الاتصال بمفتاح API من OpenAI، إلى جانب عرض Markdown وLaTeX وتمييز صيغة الشيفرة، وهو التطبيق الوحيد من بين خمسة تطبيقات دردشة تمت مقارنتها الذي يمتلك برنامج إحالة مؤكداً.',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لمدخل Chatbox في [دليل برمجيات LLM المحلية](/power-local-llm/local-llm-software-directory) -- راجع تلك الصفحة لمعرفة كيف يقارَن Chatbox بلمحة سريعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لمدخل Chatbox في [دليل برمجيات LLM المحلية](/directory) -- راجع تلك الصفحة لمعرفة كيف يقارَن Chatbox بلمحة سريعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       quickFacts: {
@@ -2279,7 +2279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': '**[Big-AGI](/ar/local-llms/big-agi-review)**', 'الأفضل لـ': 'مقارنة عدة نماذج على موجّه واحد (Beam)', 'النشر': 'استضافة ذاتية أو مستضافة', 'السعر': 'مجاني ذاتي الاستضافة / Pro بـ 10.99$ شهرياً', 'الرخصة': 'MIT' },
           { 'الأداة': '**[NextChat](/ar/local-llms/nextchat-review)**', 'الأفضل لـ': 'أسرع نشر ممكن، أصغر بصمة', 'النشر': 'استضافة ذاتية (Docker/Vercel) أو تطبيق أصلي', 'السعر': 'مجاني ذاتي الاستضافة', 'الرخصة': 'MIT' },
         ],
-        note: 'لمقارنة أوسع لهذه التطبيقات الخمسة نفسها، راجع [LobeChat مقابل Big-AGI مقابل NextChat مقابل Page Assist مقابل Chatbox](/ar/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). للكتالوج الكامل، راجع [دليل برمجيات LLM المحلية](/power-local-llm/local-llm-software-directory).',
+        note: 'لمقارنة أوسع لهذه التطبيقات الخمسة نفسها، راجع [LobeChat مقابل Big-AGI مقابل NextChat مقابل Page Assist مقابل Chatbox](/ar/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared). للكتالوج الكامل، راجع [دليل برمجيات LLM المحلية](/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2309,14 +2309,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'المنافسون والبدائل',
-        content: 'يشترك Chatbox في فئة "واجهات الويب وواجهات المتصفح" ضمن [دليل برمجيات LLM المحلية](/power-local-llm/local-llm-software-directory) مع LobeChat وBig-AGI وNextChat وPage Assist، لكن الخمسة تنقسم إلى مجموعتين مختلفتين فعلياً. Chatbox وPage Assist كلاهما عميلان قابلان للتثبيت فعلياً مباشرة من قِبل المستخدم النهائي -- تطبيق أو إضافة متصفح تحصل عليها مباشرة، دون خادم لتشغيله -- بينما LobeChat وBig-AGI وNextChat تطبيقات ويب ذاتية الاستضافة تنشرها بنفسك. أقرب مقارنة لـ Chatbox هي Page Assist، وليست التطبيقات الثلاثة ذاتية الاستضافة.',
+        content: 'يشترك Chatbox في فئة "واجهات الويب وواجهات المتصفح" ضمن [دليل برمجيات LLM المحلية](/directory) مع LobeChat وBig-AGI وNextChat وPage Assist، لكن الخمسة تنقسم إلى مجموعتين مختلفتين فعلياً. Chatbox وPage Assist كلاهما عميلان قابلان للتثبيت فعلياً مباشرة من قِبل المستخدم النهائي -- تطبيق أو إضافة متصفح تحصل عليها مباشرة، دون خادم لتشغيله -- بينما LobeChat وBig-AGI وNextChat تطبيقات ويب ذاتية الاستضافة تنشرها بنفسك. أقرب مقارنة لـ Chatbox هي Page Assist، وليست التطبيقات الثلاثة ذاتية الاستضافة.',
         items: [
           '**[Page Assist](/ar/local-llms/page-assist-review)** -- العميل الآخر القابل للتثبيت فعلياً مباشرة في هذه المجموعة: إضافة متصفح مجانية برخصة MIT بدلاً من تطبيق أصلي، دون خطة مدفوعة ودون تطبيق جوال متعدد المنصات.',
           '**[LobeChat](/ar/local-llms/lobechat-review)** -- واجهة دردشة متعددة المزودين ذاتية الاستضافة مع سوق إضافات وأداة بناء وكلاء، تُنشر على Docker أو Vercel بدلاً من التثبيت المباشر.',
           '**[Big-AGI](/ar/local-llms/big-agi-review)** -- واجهة ذاتية الاستضافة أو مستضافة برخصة MIT تتمثل ميزتها البارزة في مقارنة عدة نماذج على موجّه واحد في آن واحد (Beam).',
           '**[NextChat](/ar/local-llms/nextchat-review)** -- واجهة الدردشة ذاتية الاستضافة الأخف وزناً في القطاع نفسه من الدليل، قابلة للنشر بنقرة واحدة على Vercel.',
         ],
-        note: 'هذه ليست قائمة شاملة لأدوات الدردشة الخاصة بالنماذج المحلية -- راجع [دليل برمجيات LLM المحلية](/power-local-llm/local-llm-software-directory) للكتالوج الكامل المُحدَّث بانتظام، بما في ذلك مدخل Chatbox الخاص في الدليل.',
+        note: 'هذه ليست قائمة شاملة لأدوات الدردشة الخاصة بالنماذج المحلية -- راجع [دليل برمجيات LLM المحلية](/directory) للكتالوج الكامل المُحدَّث بانتظام، بما في ذلك مدخل Chatbox الخاص في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2348,7 +2348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات LLM المحلية](/power-local-llm/local-llm-software-directory) -- الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل Chatbox الخاص في الدليل.',
+          '[دليل برمجيات LLM المحلية](/directory) -- الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل Chatbox الخاص في الدليل.',
           '[مراجعة Page Assist](/ar/local-llms/page-assist-review) -- العميل الآخر القابل للتثبيت فعلياً مباشرة في القطاع نفسه من الدليل، كإضافة متصفح مجانية بدلاً من تطبيق أصلي.',
           '[مراجعة LobeChat](/ar/local-llms/lobechat-review) -- بديل ذاتي الاستضافة مع سوق إضافات وأداة بناء وكلاء.',
           '[مراجعة Big-AGI](/ar/local-llms/big-agi-review) -- بديل ذاتي الاستضافة أو مستضاف مبني حول مقارنة عدة نماذج على موجّه واحد.',
@@ -2483,7 +2483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OpenAI API 키를 연결하면 DALL-E-3를 통한 이미지 생성을 지원하며, Markdown, LaTeX, 코드 구문 강조 표시도 지원하고, 비교한 5개 채팅 클라이언트 앱 중 확인된 제휴 프로그램을 가진 유일한 앱입니다.',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)에 있는 Chatbox 항목을 보완하는 심층 분석입니다 -- 수십 개의 다른 로컬 AI 도구와 Chatbox를 한눈에 비교하려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/directory)에 있는 Chatbox 항목을 보완하는 심층 분석입니다 -- 수십 개의 다른 로컬 AI 도구와 Chatbox를 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       quickFacts: {
@@ -2575,7 +2575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': '**[Big-AGI](/ko/local-llms/big-agi-review)**', '적합한 용도': '하나의 프롬프트로 여러 모델 비교(Beam)', '배포 방식': '셀프 호스팅 또는 호스팅', '가격': '셀프 호스팅 무료 / Pro 월 10.99달러', '라이선스': 'MIT' },
           { '도구': '**[NextChat](/ko/local-llms/nextchat-review)**', '적합한 용도': '가능한 가장 빠른 배포, 가장 작은 용량', '배포 방식': '셀프 호스팅(Docker/Vercel) 또는 네이티브 앱', '가격': '셀프 호스팅 무료', '라이선스': 'MIT' },
         ],
-        note: '이 다섯 앱을 더 폭넓게 비교한 내용은 [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/ko/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)를 참고하세요. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이 다섯 앱을 더 폭넓게 비교한 내용은 [LobeChat vs Big-AGI vs NextChat vs Page Assist vs Chatbox](/ko/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared)를 참고하세요. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/directory)를 참고하세요.',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2605,14 +2605,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '경쟁 제품 및 대안',
-        content: 'Chatbox는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)의 "웹 UI 및 브라우저 프런트엔드" 카테고리를 LobeChat, Big-AGI, NextChat, Page Assist와 공유하지만, 다섯 개는 실질적으로 서로 다른 두 그룹으로 나뉩니다. Chatbox와 Page Assist는 둘 다 서버를 실행할 필요 없이 최종 사용자가 직접 받는 앱이나 브라우저 확장 프로그램으로, 실제로 직접 설치 가능한 클라이언트입니다. 반면 LobeChat, Big-AGI, NextChat은 직접 배포해야 하는 셀프 호스팅 웹 앱입니다. Chatbox에 가장 가까운 비교 대상은 세 개의 셀프 호스팅 앱이 아니라 Page Assist입니다.',
+        content: 'Chatbox는 [로컬 LLM 소프트웨어 디렉터리](/directory)의 "웹 UI 및 브라우저 프런트엔드" 카테고리를 LobeChat, Big-AGI, NextChat, Page Assist와 공유하지만, 다섯 개는 실질적으로 서로 다른 두 그룹으로 나뉩니다. Chatbox와 Page Assist는 둘 다 서버를 실행할 필요 없이 최종 사용자가 직접 받는 앱이나 브라우저 확장 프로그램으로, 실제로 직접 설치 가능한 클라이언트입니다. 반면 LobeChat, Big-AGI, NextChat은 직접 배포해야 하는 셀프 호스팅 웹 앱입니다. Chatbox에 가장 가까운 비교 대상은 세 개의 셀프 호스팅 앱이 아니라 Page Assist입니다.',
         items: [
           '**[Page Assist](/ko/local-llms/page-assist-review)** -- 이 그룹에서 실제로 직접 설치 가능한 또 다른 클라이언트: 네이티브 앱이 아닌, 유료 등급이나 크로스플랫폼 모바일 앱이 없는 MIT 라이선스 무료 브라우저 확장 프로그램입니다.',
           '**[LobeChat](/ko/local-llms/lobechat-review)** -- 직접 설치가 아니라 Docker나 Vercel에 배포하는, 플러그인 마켓플레이스와 에이전트 빌더를 갖춘 셀프 호스팅 다중 제공업체 채팅 인터페이스입니다.',
           '**[Big-AGI](/ko/local-llms/big-agi-review)** -- 하나의 프롬프트로 여러 모델을 동시에 비교하는 기능(Beam)이 돋보이는, 셀프 호스팅 또는 호스팅되는 MIT 라이선스 인터페이스입니다.',
           '**[NextChat](/ko/local-llms/nextchat-review)** -- 같은 디렉터리 세그먼트에서 가장 가벼운 셀프 호스팅 채팅 인터페이스로, Vercel에 원클릭으로 배포할 수 있습니다.',
         ],
-        note: '이는 로컬 모델용 채팅 도구의 총망라 목록이 아닙니다 -- Chatbox 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이는 로컬 모델용 채팅 도구의 총망라 목록이 아닙니다 -- Chatbox 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2644,7 +2644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory) -- 이 글이 속한 로컬 AI 도구 전체 카탈로그로, Chatbox 자체의 디렉터리 항목도 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리](/directory) -- 이 글이 속한 로컬 AI 도구 전체 카탈로그로, Chatbox 자체의 디렉터리 항목도 포함합니다.',
           '[Page Assist 리뷰](/ko/local-llms/page-assist-review) -- 같은 디렉터리 세그먼트에서 네이티브 앱이 아닌 무료 브라우저 확장 프로그램으로 제공되는, 실제로 직접 설치 가능한 또 다른 최종 사용자 클라이언트.',
           '[LobeChat 리뷰](/ko/local-llms/lobechat-review) -- 플러그인 마켓플레이스와 에이전트 빌더를 갖춘 셀프 호스팅 대안.',
           '[Big-AGI 리뷰](/ko/local-llms/big-agi-review) -- 하나의 프롬프트로 여러 모델을 비교하는 기능을 중심으로 만들어진 셀프 호스팅 또는 호스팅 대안.',

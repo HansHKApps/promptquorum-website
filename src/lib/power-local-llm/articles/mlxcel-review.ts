@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Over 467 GitHub stars as of this review',
         ],
         callouts: [
-          { type: 'note', text: 'This review is based on the mlxcel GitHub repository, its README, and its linked documentation. It does not repeat mlxcel\'s own published performance comparisons against mlx-lm and mlx-vlm as independently verified facts — those figures come from the project\'s own benchmark methodology and should be treated as vendor-reported, not PromptQuorum-tested. This review is the deep-dive companion to mlxcel\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).' },
+          { type: 'note', text: 'This review is based on the mlxcel GitHub repository, its README, and its linked documentation. It does not repeat mlxcel\'s own published performance comparisons against mlx-lm and mlx-vlm as independently verified facts — those figures come from the project\'s own benchmark methodology and should be treated as vendor-reported, not PromptQuorum-tested. This review is the deep-dive companion to mlxcel\'s entry in the [Local LLM Software Directory](/directory).' },
         ],
       },
       overview: {
@@ -270,7 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[vllm-mlx Review](/power-local-llm/vllm-mlx-review) — a Python-based Apple Silicon inference server with vLLM-style continuous batching.',
           '[oMLX Review](/power-local-llm/omlx-review) — another Apple Silicon inference server, with SSD-backed prompt caching.',
           '[Rapid-MLX Review](/power-local-llm/rapid-mlx-review) — a native MLX inference server focused on serving speed.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -345,7 +345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Über 467 GitHub-Sterne zum Zeitpunkt dieses Tests',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test basiert auf dem mlxcel-GitHub-Repository, dessen README und der verlinkten Dokumentation. Er übernimmt mlxcels eigene veröffentlichte Performance-Vergleiche mit mlx-lm und mlx-vlm nicht als unabhängig verifizierte Fakten – diese Zahlen stammen aus der eigenen Benchmark-Methodik des Projekts und sind als herstellerseitig gemeldet zu betrachten, nicht als von PromptQuorum getestet. Dieser Test ist der Deep-Dive-Begleiter zu mlxcels Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).' },
+          { type: 'note', text: 'Dieser Test basiert auf dem mlxcel-GitHub-Repository, dessen README und der verlinkten Dokumentation. Er übernimmt mlxcels eigene veröffentlichte Performance-Vergleiche mit mlx-lm und mlx-vlm nicht als unabhängig verifizierte Fakten – diese Zahlen stammen aus der eigenen Benchmark-Methodik des Projekts und sind als herstellerseitig gemeldet zu betrachten, nicht als von PromptQuorum getestet. Dieser Test ist der Deep-Dive-Begleiter zu mlxcels Eintrag im [Local LLM Software Directory](/de/directory).' },
         ],
       },
       overview: {
@@ -531,7 +531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[vllm-mlx Review](/de/power-local-llm/vllm-mlx-review) — ein Python-basierter Apple-Silicon-Inferenz-Server mit vLLM-artigem Continuous Batching.',
           '[oMLX Review](/de/power-local-llm/omlx-review) — ein weiterer Apple-Silicon-Inferenz-Server mit SSD-gestütztem Prompt-Caching.',
           '[Rapid-MLX Review](/de/power-local-llm/rapid-mlx-review) — ein nativer MLX-Inferenz-Server mit Fokus auf Serving-Geschwindigkeit.',
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -606,7 +606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Plus de 467 étoiles GitHub au moment de ce test',
         ],
         callouts: [
-          { type: 'note', text: 'Ce test s\'appuie sur le dépôt GitHub de mlxcel, son README et sa documentation liée. Il ne reprend pas les comparaisons de performance publiées par mlxcel lui-même face à mlx-lm et mlx-vlm comme des faits vérifiés indépendamment — ces chiffres proviennent de la méthodologie de benchmark propre au projet et doivent être considérés comme rapportés par l\'éditeur, non testés par PromptQuorum. Ce test est le complément approfondi de la fiche de mlxcel dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory).' },
+          { type: 'note', text: 'Ce test s\'appuie sur le dépôt GitHub de mlxcel, son README et sa documentation liée. Il ne reprend pas les comparaisons de performance publiées par mlxcel lui-même face à mlx-lm et mlx-vlm comme des faits vérifiés indépendamment — ces chiffres proviennent de la méthodologie de benchmark propre au projet et doivent être considérés comme rapportés par l\'éditeur, non testés par PromptQuorum. Ce test est le complément approfondi de la fiche de mlxcel dans le [Local LLM Software Directory](/fr/directory).' },
         ],
       },
       overview: {
@@ -792,7 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[vllm-mlx Review](/fr/power-local-llm/vllm-mlx-review) — un serveur d\'inférence Apple Silicon basé sur Python avec batching continu façon vLLM.',
           '[oMLX Review](/fr/power-local-llm/omlx-review) — un autre serveur d\'inférence Apple Silicon, avec cache de prompts sur SSD.',
           '[Rapid-MLX Review](/fr/power-local-llm/rapid-mlx-review) — un serveur d\'inférence MLX natif axé sur la vitesse de serving.',
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
         ],
       },
     },
@@ -867,7 +867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'このレビュー時点でGitHubスター467件超',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューはmlxcelのGitHubリポジトリ、README、および関連ドキュメントに基づいています。mlxcel自身が公開しているmlx-lmやmlx-vlmとの性能比較を独立検証済みの事実としては扱っていません — これらの数値はプロジェクト自身のベンチマーク手法によるもので、PromptQuorumが検証したものではなく、開発元発表の情報として扱うべきです。このレビューは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)内のmlxcelの項目を深掘りする姉妹記事です。' },
+          { type: 'note', text: 'このレビューはmlxcelのGitHubリポジトリ、README、および関連ドキュメントに基づいています。mlxcel自身が公開しているmlx-lmやmlx-vlmとの性能比較を独立検証済みの事実としては扱っていません — これらの数値はプロジェクト自身のベンチマーク手法によるもので、PromptQuorumが検証したものではなく、開発元発表の情報として扱うべきです。このレビューは、[Local LLM Software Directory](/ja/directory)内のmlxcelの項目を深掘りする姉妹記事です。' },
         ],
       },
       overview: {
@@ -1053,7 +1053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[vllm-mlx Review](/ja/power-local-llm/vllm-mlx-review) — vLLM方式の継続バッチングを備えたPythonベースのApple Silicon推論サーバー。',
           '[oMLX Review](/ja/power-local-llm/omlx-review) — SSDベースのプロンプトキャッシュを備えた、もう1つのApple Silicon推論サーバー。',
           '[Rapid-MLX Review](/ja/power-local-llm/rapid-mlx-review) — サービング速度に重点を置いたネイティブMLX推論サーバー。',
-          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの完全カタログ。',
+          '[Local LLM Software Directory 2026](/ja/directory) — この記事が属する、ローカルAIツールの完全カタログ。',
         ],
       },
     },
@@ -1128,7 +1128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至本评测时，GitHub star 数超过 467',
         ],
         callouts: [
-          { type: 'note', text: '本评测基于 mlxcel 的 GitHub 仓库、README 及其关联文档撰写。文中不将 mlxcel 自行发布的、与 mlx-lm 和 mlx-vlm 的性能对比数据视为独立核实的事实——这些数据来自项目自身的基准测试方法，应视为厂商自报数据，而非 PromptQuorum 实测结果。本评测是 [Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory) 中 mlxcel 条目的深度配套文章。' },
+          { type: 'note', text: '本评测基于 mlxcel 的 GitHub 仓库、README 及其关联文档撰写。文中不将 mlxcel 自行发布的、与 mlx-lm 和 mlx-vlm 的性能对比数据视为独立核实的事实——这些数据来自项目自身的基准测试方法，应视为厂商自报数据，而非 PromptQuorum 实测结果。本评测是 [Local LLM Software Directory](/zh/directory) 中 mlxcel 条目的深度配套文章。' },
         ],
       },
       overview: {
@@ -1314,7 +1314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[vllm-mlx Review](/zh/power-local-llm/vllm-mlx-review) — 一款基于 Python 的 Apple Silicon 推理服务器，采用 vLLM 式连续批处理。',
           '[oMLX Review](/zh/power-local-llm/omlx-review) — 另一款 Apple Silicon 推理服务器，带 SSD 支持的提示词缓存。',
           '[Rapid-MLX Review](/zh/power-local-llm/rapid-mlx-review) — 一款专注于服务速度的原生 MLX 推理服务器。',
-          '[Local LLM Software Directory 2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地 AI 工具完整目录。',
+          '[Local LLM Software Directory 2026](/zh/directory) — 本文所属的本地 AI 工具完整目录。',
         ],
       },
     },
@@ -1389,7 +1389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Más de 467 estrellas en GitHub al momento de este análisis',
         ],
         callouts: [
-          { type: 'note', text: 'Este análisis se basa en el repositorio de GitHub de mlxcel, su README y su documentación enlazada. No trata las comparaciones de rendimiento publicadas por el propio mlxcel frente a mlx-lm y mlx-vlm como hechos verificados de forma independiente —esas cifras provienen de la metodología de benchmark del propio proyecto y deben considerarse reportadas por el proveedor, no probadas por PromptQuorum. Este análisis es el complemento en profundidad de la entrada de mlxcel en el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory).' },
+          { type: 'note', text: 'Este análisis se basa en el repositorio de GitHub de mlxcel, su README y su documentación enlazada. No trata las comparaciones de rendimiento publicadas por el propio mlxcel frente a mlx-lm y mlx-vlm como hechos verificados de forma independiente —esas cifras provienen de la metodología de benchmark del propio proyecto y deben considerarse reportadas por el proveedor, no probadas por PromptQuorum. Este análisis es el complemento en profundidad de la entrada de mlxcel en el [Local LLM Software Directory](/es/directory).' },
         ],
       },
       overview: {
@@ -1575,7 +1575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[vllm-mlx Review](/es/power-local-llm/vllm-mlx-review) — un servidor de inferencia para Apple Silicon basado en Python con batching continuo estilo vLLM.',
           '[oMLX Review](/es/power-local-llm/omlx-review) — otro servidor de inferencia para Apple Silicon, con caché de prompts respaldada por SSD.',
           '[Rapid-MLX Review](/es/power-local-llm/rapid-mlx-review) — un servidor de inferencia MLX nativo centrado en la velocidad de servicio.',
-          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Local LLM Software Directory 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1650,7 +1650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mais de 467 estrelas no GitHub no momento desta análise',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é baseada no repositório do mlxcel no GitHub, seu README e sua documentação vinculada. Ela não trata as comparações de desempenho publicadas pelo próprio mlxcel frente ao mlx-lm e ao mlx-vlm como fatos verificados de forma independente — esses números vêm da própria metodologia de benchmark do projeto e devem ser tratados como informados pelo desenvolvedor, não testados pela PromptQuorum. Esta análise é o complemento aprofundado da entrada do mlxcel no [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory).' },
+          { type: 'note', text: 'Esta análise é baseada no repositório do mlxcel no GitHub, seu README e sua documentação vinculada. Ela não trata as comparações de desempenho publicadas pelo próprio mlxcel frente ao mlx-lm e ao mlx-vlm como fatos verificados de forma independente — esses números vêm da própria metodologia de benchmark do projeto e devem ser tratados como informados pelo desenvolvedor, não testados pela PromptQuorum. Esta análise é o complemento aprofundado da entrada do mlxcel no [Local LLM Software Directory](/pt/directory).' },
         ],
       },
       overview: {
@@ -1836,7 +1836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[vllm-mlx Review](/pt/power-local-llm/vllm-mlx-review) — um servidor de inferência para Apple Silicon baseado em Python com batching contínuo no estilo vLLM.',
           '[oMLX Review](/pt/power-local-llm/omlx-review) — outro servidor de inferência para Apple Silicon, com cache de prompts apoiado em SSD.',
           '[Rapid-MLX Review](/pt/power-local-llm/rapid-mlx-review) — um servidor de inferência MLX nativo focado em velocidade de serving.',
-          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Local LLM Software Directory 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -1911,7 +1911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أكثر من 467 نجمة على GitHub وقت إعداد هذه المراجعة',
         ],
         callouts: [
-          { type: 'note', text: 'تستند هذه المراجعة إلى مستودع mlxcel على GitHub وملف README الخاص به والوثائق المرتبطة به. لا تتعامل المراجعة مع مقارنات الأداء التي نشرتها mlxcel بنفسها مقابل mlx-lm وmlx-vlm باعتبارها حقائق تم التحقق منها بشكل مستقل — فهذه الأرقام مستمدة من منهجية القياس (benchmark) الخاصة بالمشروع نفسه، وينبغي التعامل معها كبيانات صادرة عن الجهة المطوِّرة، وليست مختبَرة من قِبَل PromptQuorum. هذه المراجعة هي المرافق التفصيلي لإدراج mlxcel في [دليل برامج LLM المحلية](/ar/power-local-llm/local-llm-software-directory).' },
+          { type: 'note', text: 'تستند هذه المراجعة إلى مستودع mlxcel على GitHub وملف README الخاص به والوثائق المرتبطة به. لا تتعامل المراجعة مع مقارنات الأداء التي نشرتها mlxcel بنفسها مقابل mlx-lm وmlx-vlm باعتبارها حقائق تم التحقق منها بشكل مستقل — فهذه الأرقام مستمدة من منهجية القياس (benchmark) الخاصة بالمشروع نفسه، وينبغي التعامل معها كبيانات صادرة عن الجهة المطوِّرة، وليست مختبَرة من قِبَل PromptQuorum. هذه المراجعة هي المرافق التفصيلي لإدراج mlxcel في [دليل برامج LLM المحلية](/ar/directory).' },
         ],
       },
       overview: {
@@ -2097,7 +2097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[vllm-mlx Review](/ar/power-local-llm/vllm-mlx-review) — خادم استدلال لأجهزة Apple Silicon مبني على Python بتجميع مستمر على طراز vLLM.',
           '[oMLX Review](/ar/power-local-llm/omlx-review) — خادم استدلال آخر لأجهزة Apple Silicon، مع تخزين مؤقت للطلبات مدعوم بـ SSD.',
           '[Rapid-MLX Review](/ar/power-local-llm/rapid-mlx-review) — خادم استدلال MLX أصلي يركّز على سرعة الخدمة.',
-          '[Local LLM Software Directory 2026](/ar/power-local-llm/local-llm-software-directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
+          '[Local LLM Software Directory 2026](/ar/directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
         ],
       },
     },
@@ -2172,7 +2172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이 리뷰 작성 시점 기준 GitHub 스타 467개 이상',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 mlxcel의 GitHub 저장소, README, 그리고 연결된 문서를 기반으로 작성되었습니다. mlxcel 자체가 발표한 mlx-lm 및 mlx-vlm과의 성능 비교 결과를 독립적으로 검증된 사실로 다루지 않습니다 — 이 수치들은 프로젝트 자체의 벤치마크 방법론에서 나온 것으로, PromptQuorum이 검증한 것이 아니라 개발사가 발표한 정보로 취급해야 합니다. 이 리뷰는 [Local LLM Software Directory](/ko/power-local-llm/local-llm-software-directory) 내 mlxcel 항목을 심층적으로 다루는 자매 글입니다.' },
+          { type: 'note', text: '이 리뷰는 mlxcel의 GitHub 저장소, README, 그리고 연결된 문서를 기반으로 작성되었습니다. mlxcel 자체가 발표한 mlx-lm 및 mlx-vlm과의 성능 비교 결과를 독립적으로 검증된 사실로 다루지 않습니다 — 이 수치들은 프로젝트 자체의 벤치마크 방법론에서 나온 것으로, PromptQuorum이 검증한 것이 아니라 개발사가 발표한 정보로 취급해야 합니다. 이 리뷰는 [Local LLM Software Directory](/ko/directory) 내 mlxcel 항목을 심층적으로 다루는 자매 글입니다.' },
         ],
       },
       overview: {
@@ -2358,7 +2358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[vllm-mlx Review](/ko/power-local-llm/vllm-mlx-review) — vLLM 방식 연속 배칭을 갖춘 Python 기반 Apple Silicon 추론 서버.',
           '[oMLX Review](/ko/power-local-llm/omlx-review) — SSD 기반 프롬프트 캐싱을 갖춘 또 다른 Apple Silicon 추론 서버.',
           '[Rapid-MLX Review](/ko/power-local-llm/rapid-mlx-review) — 서빙 속도에 초점을 맞춘 네이티브 MLX 추론 서버.',
-          '[Local LLM Software Directory 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[Local LLM Software Directory 2026](/ko/directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },
