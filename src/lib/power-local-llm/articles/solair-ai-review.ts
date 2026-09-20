@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Solair AI',
     title: 'Solair AI Review (2026): Local-First iOS Assistant, Tested',
     seoTitle: 'Solair AI Review 2026: iOS App, Pricing, Privacy',
-    intro: "Solair AI is a free iOS, iPadOS, and macOS app by developer [Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823) that runs AI chat, voice, vision, and document analysis on-device, with an optional bring-your-own-API-key connection to cloud providers like Claude, ChatGPT, and Grok. This review is a companion to Solair AI's entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), and compares it against three other local-first iOS chat apps this site has already reviewed: [Liquid Apollo](/power-local-llm/liquid-apollo-review), [Noema](/power-local-llm/noema-review), and [Off Grid AI](/power-local-llm/off-grid-ai-review).",
+    intro: "Solair AI is a free iOS, iPadOS, and macOS app by developer [Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823) that runs AI chat, voice, vision, and document analysis on-device, with an optional bring-your-own-API-key connection to cloud providers like Claude, ChatGPT, and Grok. This review is a companion to Solair AI's entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory), and compares it against three other local-first iOS chat apps this site has already reviewed: [Liquid Apollo](/power-local-llm/liquid-apollo-review), [Noema](/power-local-llm/noema-review), and [Off Grid AI](/power-local-llm/off-grid-ai-review).",
     metaDescription: "Solair AI review: free iOS/iPadOS/macOS app running 60+ on-device models, with optional BYOK cloud fallback to Claude, ChatGPT, and Grok. Pricing, privacy model, requirements, and how it compares to Liquid Apollo, Noema, and Off Grid AI.",
     readTime: '9 min read',
     targetKeywords: [
@@ -71,7 +71,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Requires iOS 26, iPadOS 26, or macOS 26 (Apple Silicon) or later',
         ],
         callouts: [
-          { type: 'note', text: "Solair AI is a general-purpose local AI chat app, the same sub-segment as [Liquid Apollo](/power-local-llm/liquid-apollo-review), [Noema](/power-local-llm/noema-review), and [Off Grid AI](/power-local-llm/off-grid-ai-review). See the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) for how it fits among other mobile chat apps." },
+          { type: 'note', text: "Solair AI is a general-purpose local AI chat app, the same sub-segment as [Liquid Apollo](/power-local-llm/liquid-apollo-review), [Noema](/power-local-llm/noema-review), and [Off Grid AI](/power-local-llm/off-grid-ai-review). See the [Local LLM Software Directory](https://www.promptquorum.com/directory) for how it fits among other mobile chat apps." },
         ],
       },
       overview: {
@@ -105,7 +105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       download: {
         id: 'get-solair-ai',
         title: 'Get Solair AI',
-        content: "**This review is a companion to Solair AI's entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — check the directory for how it's classified alongside other mobile AI chat apps. Solair AI is distributed only through Apple's App Store; there is no direct-download or sideload option documented by the developer.",
+        content: "**This review is a companion to Solair AI's entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory)** — check the directory for how it's classified alongside other mobile AI chat apps. Solair AI is distributed only through Apple's App Store; there is no direct-download or sideload option documented by the developer.",
         columns: ['Platform', 'Download'],
         rows: [
           { 'Platform': 'iPhone / iPad / Mac / Apple Watch / Vision', 'Download': '[apps.apple.com/us/app/solair-local-ai/id6758450823](https://apps.apple.com/us/app/solair-local-ai/id6758450823)' },
@@ -231,7 +231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Noema Review](/power-local-llm/noema-review) — a focused on-device chat app for iPhone, iPad, and Mac.',
           '[Off Grid AI Review](/power-local-llm/off-grid-ai-review) — a local-first chat app with Android and Windows support beyond Apple platforms.',
           '[Private LLM Review](/power-local-llm/private-llm-review) — a local-only iOS/Mac chat app with no cloud fallback at all.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including where Solair AI fits among mobile chat apps.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — the full catalog of local AI tools this article belongs to, including where Solair AI fits among mobile chat apps.',
         ],
       },
     },
@@ -248,7 +248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Solair AI',
     title: 'Solair AI Review (2026): Lokaler iOS-Assistent im Test',
     seoTitle: 'Solair AI Review 2026: iOS-App, Preise, Datenschutz',
-    intro: "Solair AI ist eine kostenlose iOS-, iPadOS- und macOS-App des Entwicklers [Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823), die Chat, Sprache, Bilderkennung und Dokumentenanalyse direkt auf dem Gerät ausführt, mit optionaler Anbindung an Cloud-Anbieter wie Claude, ChatGPT und Grok über einen eigenen API-Schlüssel. Diese Bewertung ist ein Begleitartikel zu Solair AIs Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) und vergleicht die App mit drei weiteren lokalen iOS-Chat-Apps, die diese Seite bereits bewertet hat: [Liquid Apollo](/de/power-local-llm/liquid-apollo-review), [Noema](/de/power-local-llm/noema-review) und [Off Grid AI](/de/power-local-llm/off-grid-ai-review).",
+    intro: "Solair AI ist eine kostenlose iOS-, iPadOS- und macOS-App des Entwicklers [Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823), die Chat, Sprache, Bilderkennung und Dokumentenanalyse direkt auf dem Gerät ausführt, mit optionaler Anbindung an Cloud-Anbieter wie Claude, ChatGPT und Grok über einen eigenen API-Schlüssel. Diese Bewertung ist ein Begleitartikel zu Solair AIs Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/directory) und vergleicht die App mit drei weiteren lokalen iOS-Chat-Apps, die diese Seite bereits bewertet hat: [Liquid Apollo](/de/power-local-llm/liquid-apollo-review), [Noema](/de/power-local-llm/noema-review) und [Off Grid AI](/de/power-local-llm/off-grid-ai-review).",
     metaDescription: "Solair AI Review: kostenlose iOS/iPadOS/macOS-App mit über 60 lokalen Modellen, optionalem Cloud-Fallback (eigener API-Schlüssel) zu Claude, ChatGPT und Grok. Preise, Datenschutz, Voraussetzungen und Vergleich mit Liquid Apollo, Noema und Off Grid AI.",
     readTime: '9 Min. Lesezeit',
     targetKeywords: [
@@ -305,7 +305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Erfordert iOS 26, iPadOS 26 oder macOS 26 (Apple Silicon) oder neuer',
         ],
         callouts: [
-          { type: 'note', text: "Solair AI ist eine allgemeine lokale KI-Chat-App, im selben Teilsegment wie [Liquid Apollo](/de/power-local-llm/liquid-apollo-review), [Noema](/de/power-local-llm/noema-review) und [Off Grid AI](/de/power-local-llm/off-grid-ai-review). Im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) sehen Sie, wo sie unter anderen mobilen Chat-Apps einzuordnen ist." },
+          { type: 'note', text: "Solair AI ist eine allgemeine lokale KI-Chat-App, im selben Teilsegment wie [Liquid Apollo](/de/power-local-llm/liquid-apollo-review), [Noema](/de/power-local-llm/noema-review) und [Off Grid AI](/de/power-local-llm/off-grid-ai-review). Im [Local LLM Software Directory](https://www.promptquorum.com/directory) sehen Sie, wo sie unter anderen mobilen Chat-Apps einzuordnen ist." },
         ],
       },
       overview: {
@@ -339,7 +339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       download: {
         id: 'get-solair-ai',
         title: 'Solair AI herunterladen',
-        content: "**Diese Bewertung ist ein Begleitartikel zu Solair AIs Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — dort sehen Sie, wie die App neben anderen mobilen KI-Chat-Apps eingeordnet ist. Solair AI wird ausschließlich über Apples App Store vertrieben; es gibt keinen vom Entwickler dokumentierten Direkt-Download oder Sideload.",
+        content: "**Diese Bewertung ist ein Begleitartikel zu Solair AIs Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/directory)** — dort sehen Sie, wie die App neben anderen mobilen KI-Chat-Apps eingeordnet ist. Solair AI wird ausschließlich über Apples App Store vertrieben; es gibt keinen vom Entwickler dokumentierten Direkt-Download oder Sideload.",
         columns: ['Plattform', 'Download'],
         rows: [
           { 'Plattform': 'iPhone / iPad / Mac / Apple Watch / Vision', 'Download': '[apps.apple.com/us/app/solair-local-ai/id6758450823](https://apps.apple.com/us/app/solair-local-ai/id6758450823)' },
@@ -465,7 +465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Noema Review](/de/power-local-llm/noema-review) — eine fokussierte lokale Chat-App für iPhone, iPad und Mac.',
           '[Off Grid AI Review](/de/power-local-llm/off-grid-ai-review) — eine lokale Chat-App mit Android- und Windows-Unterstützung über Apple-Plattformen hinaus.',
           '[Private LLM Review](/de/power-local-llm/private-llm-review) — eine rein lokale iOS/Mac-Chat-App ganz ohne Cloud-Fallback.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Solair AI unter mobilen Chat-Apps.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Solair AI unter mobilen Chat-Apps.',
         ],
       },
     },
@@ -482,7 +482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Solair AI',
     title: 'Avis Solair AI (2026) : assistant iOS local testé',
     seoTitle: 'Avis Solair AI 2026 : app iOS, prix, confidentialité',
-    intro: "Solair AI est une application gratuite pour iOS, iPadOS et macOS développée par [Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823), qui exécute le chat IA, la voix, la vision et l'analyse de documents directement sur l'appareil, avec une connexion optionnelle à des fournisseurs cloud comme Claude, ChatGPT et Grok via votre propre clé API. Cet avis est le complément de la fiche de Solair AI dans le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), et compare l'application à trois autres apps de chat iOS locales déjà évaluées sur ce site : [Liquid Apollo](/fr/power-local-llm/liquid-apollo-review), [Noema](/fr/power-local-llm/noema-review) et [Off Grid AI](/fr/power-local-llm/off-grid-ai-review).",
+    intro: "Solair AI est une application gratuite pour iOS, iPadOS et macOS développée par [Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823), qui exécute le chat IA, la voix, la vision et l'analyse de documents directement sur l'appareil, avec une connexion optionnelle à des fournisseurs cloud comme Claude, ChatGPT et Grok via votre propre clé API. Cet avis est le complément de la fiche de Solair AI dans le [Local LLM Software Directory](https://www.promptquorum.com/directory), et compare l'application à trois autres apps de chat iOS locales déjà évaluées sur ce site : [Liquid Apollo](/fr/power-local-llm/liquid-apollo-review), [Noema](/fr/power-local-llm/noema-review) et [Off Grid AI](/fr/power-local-llm/off-grid-ai-review).",
     metaDescription: "Avis Solair AI : app gratuite iOS/iPadOS/macOS exécutant plus de 60 modèles locaux, avec repli cloud optionnel (clé API personnelle) vers Claude, ChatGPT et Grok. Prix, confidentialité, prérequis et comparaison avec Liquid Apollo, Noema et Off Grid AI.",
     readTime: '9 min de lecture',
     targetKeywords: [
@@ -539,7 +539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Nécessite iOS 26, iPadOS 26 ou macOS 26 (Apple Silicon) ou version ultérieure",
         ],
         callouts: [
-          { type: 'note', text: "Solair AI est une application de chat IA locale généraliste, dans le même sous-segment que [Liquid Apollo](/fr/power-local-llm/liquid-apollo-review), [Noema](/fr/power-local-llm/noema-review) et [Off Grid AI](/fr/power-local-llm/off-grid-ai-review). Voir le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) pour sa place parmi les autres apps de chat mobiles." },
+          { type: 'note', text: "Solair AI est une application de chat IA locale généraliste, dans le même sous-segment que [Liquid Apollo](/fr/power-local-llm/liquid-apollo-review), [Noema](/fr/power-local-llm/noema-review) et [Off Grid AI](/fr/power-local-llm/off-grid-ai-review). Voir le [Local LLM Software Directory](https://www.promptquorum.com/directory) pour sa place parmi les autres apps de chat mobiles." },
         ],
       },
       overview: {
@@ -573,7 +573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       download: {
         id: 'get-solair-ai',
         title: 'Télécharger Solair AI',
-        content: "**Cet avis est le complément de la fiche de Solair AI dans le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — consultez le répertoire pour voir comment elle est classée parmi les autres apps de chat IA mobiles. Solair AI n'est distribuée que via l'App Store d'Apple ; aucune option de téléchargement direct ou de sideload n'est documentée par le développeur.",
+        content: "**Cet avis est le complément de la fiche de Solair AI dans le [Local LLM Software Directory](https://www.promptquorum.com/directory)** — consultez le répertoire pour voir comment elle est classée parmi les autres apps de chat IA mobiles. Solair AI n'est distribuée que via l'App Store d'Apple ; aucune option de téléchargement direct ou de sideload n'est documentée par le développeur.",
         columns: ['Plateforme', 'Téléchargement'],
         rows: [
           { 'Plateforme': 'iPhone / iPad / Mac / Apple Watch / Vision', 'Téléchargement': '[apps.apple.com/us/app/solair-local-ai/id6758450823](https://apps.apple.com/us/app/solair-local-ai/id6758450823)' },
@@ -699,7 +699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[Avis Noema](/fr/power-local-llm/noema-review) — une app de chat locale ciblée pour iPhone, iPad et Mac.",
           "[Avis Off Grid AI](/fr/power-local-llm/off-grid-ai-review) — une app de chat locale avec support Android et Windows au-delà des plateformes Apple.",
           "[Avis Private LLM](/fr/power-local-llm/private-llm-review) — une app de chat iOS/Mac exclusivement locale, sans aucun repli cloud.",
-          "[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d'IA locale dont fait partie cet article, avec la place de Solair AI parmi les apps de chat mobiles.",
+          "[Local LLM Software Directory](https://www.promptquorum.com/directory) — le catalogue complet des outils d'IA locale dont fait partie cet article, avec la place de Solair AI parmi les apps de chat mobiles.",
         ],
       },
     },
@@ -716,7 +716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Solair AI',
     title: 'Solair AIレビュー(2026):ローカル優先iOSアシスタントを検証',
     seoTitle: 'Solair AIレビュー2026:iOSアプリ、料金、プライバシー',
-    intro: "Solair AIは、開発者[Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823)による無料のiOS・iPadOS・macOSアプリで、チャット、音声、画像認識、文書分析をすべて端末上で実行し、Claude、ChatGPT、Grokといったクラウドプロバイダーへの接続を自分のAPIキーを使ってオプションで行えます。本レビューは[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)内のSolair AIの項目に付随するもので、本サイトが既にレビュー済みの他の3つのローカル優先iOSチャットアプリ、[Liquid Apollo](/ja/power-local-llm/liquid-apollo-review)、[Noema](/ja/power-local-llm/noema-review)、[Off Grid AI](/ja/power-local-llm/off-grid-ai-review)と比較しています。",
+    intro: "Solair AIは、開発者[Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823)による無料のiOS・iPadOS・macOSアプリで、チャット、音声、画像認識、文書分析をすべて端末上で実行し、Claude、ChatGPT、Grokといったクラウドプロバイダーへの接続を自分のAPIキーを使ってオプションで行えます。本レビューは[Local LLM Software Directory](https://www.promptquorum.com/directory)内のSolair AIの項目に付随するもので、本サイトが既にレビュー済みの他の3つのローカル優先iOSチャットアプリ、[Liquid Apollo](/ja/power-local-llm/liquid-apollo-review)、[Noema](/ja/power-local-llm/noema-review)、[Off Grid AI](/ja/power-local-llm/off-grid-ai-review)と比較しています。",
     metaDescription: "Solair AIレビュー:60以上のオンデバイスモデルを実行する無料のiOS/iPadOS/macOSアプリ。Claude、ChatGPT、Grokへのオプションのクラウドフォールバック(自己APIキー)対応。料金、プライバシーモデル、要件、Liquid Apollo・Noema・Off Grid AIとの比較。",
     readTime: '9分で読めます',
     targetKeywords: [
@@ -773,7 +773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'iOS 26、iPadOS 26、macOS 26(Apple Silicon)以降が必須',
         ],
         callouts: [
-          { type: 'note', text: "Solair AIは汎用ローカルAIチャットアプリであり、[Liquid Apollo](/ja/power-local-llm/liquid-apollo-review)、[Noema](/ja/power-local-llm/noema-review)、[Off Grid AI](/ja/power-local-llm/off-grid-ai-review)と同じサブセグメントに位置します。他のモバイルチャットアプリとの位置づけは[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)をご覧ください。" },
+          { type: 'note', text: "Solair AIは汎用ローカルAIチャットアプリであり、[Liquid Apollo](/ja/power-local-llm/liquid-apollo-review)、[Noema](/ja/power-local-llm/noema-review)、[Off Grid AI](/ja/power-local-llm/off-grid-ai-review)と同じサブセグメントに位置します。他のモバイルチャットアプリとの位置づけは[Local LLM Software Directory](https://www.promptquorum.com/directory)をご覧ください。" },
         ],
       },
       overview: {
@@ -807,7 +807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       download: {
         id: 'get-solair-ai',
         title: 'Solair AIを入手する',
-        content: "**本レビューは[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)内のSolair AIの項目に付随するものです**——他のモバイルAIチャットアプリと並んでどのように分類されているかはディレクトリをご確認ください。Solair AIはApple App Storeのみで配布されており、開発者が公開している直接ダウンロードやサイドロードの選択肢はありません。",
+        content: "**本レビューは[Local LLM Software Directory](https://www.promptquorum.com/directory)内のSolair AIの項目に付随するものです**——他のモバイルAIチャットアプリと並んでどのように分類されているかはディレクトリをご確認ください。Solair AIはApple App Storeのみで配布されており、開発者が公開している直接ダウンロードやサイドロードの選択肢はありません。",
         columns: ['プラットフォーム', 'ダウンロード'],
         rows: [
           { 'プラットフォーム': 'iPhone / iPad / Mac / Apple Watch / Vision', 'ダウンロード': '[apps.apple.com/us/app/solair-local-ai/id6758450823](https://apps.apple.com/us/app/solair-local-ai/id6758450823)' },
@@ -933,7 +933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Noemaレビュー](/ja/power-local-llm/noema-review) — iPhone、iPad、Mac向けの集中したオンデバイスチャットアプリ。',
           '[Off Grid AIレビュー](/ja/power-local-llm/off-grid-ai-review) — Appleプラットフォームを超えてAndroidとWindowsに対応するローカル優先チャットアプリ。',
           '[Private LLMレビュー](/ja/power-local-llm/private-llm-review) — クラウドフォールバックが一切ない、ローカル専用のiOS/Macチャットアプリ。',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。モバイルチャットアプリの中でのSolair AIの位置づけも含まれます。',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — 本記事が属するローカルAIツールの全カタログ。モバイルチャットアプリの中でのSolair AIの位置づけも含まれます。',
         ],
       },
     },
@@ -950,7 +950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Solair AI',
     title: 'Solair AI评测(2026):本地优先iOS助手实测',
     seoTitle: 'Solair AI评测2026:iOS应用、价格、隐私',
-    intro: "Solair AI是开发者[Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823)推出的免费iOS、iPadOS和macOS应用,在设备端运行聊天、语音、视觉和文档分析,并可选择使用用户自己的API密钥连接Claude、ChatGPT和Grok等云端服务商。本评测是[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中Solair AI条目的配套文章,并将其与本站已评测的另外三款本地优先iOS聊天应用进行比较:[Liquid Apollo](/zh/power-local-llm/liquid-apollo-review)、[Noema](/zh/power-local-llm/noema-review)和[Off Grid AI](/zh/power-local-llm/off-grid-ai-review)。",
+    intro: "Solair AI是开发者[Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823)推出的免费iOS、iPadOS和macOS应用,在设备端运行聊天、语音、视觉和文档分析,并可选择使用用户自己的API密钥连接Claude、ChatGPT和Grok等云端服务商。本评测是[本地LLM软件目录](https://www.promptquorum.com/directory)中Solair AI条目的配套文章,并将其与本站已评测的另外三款本地优先iOS聊天应用进行比较:[Liquid Apollo](/zh/power-local-llm/liquid-apollo-review)、[Noema](/zh/power-local-llm/noema-review)和[Off Grid AI](/zh/power-local-llm/off-grid-ai-review)。",
     metaDescription: "Solair AI评测:免费的iOS/iPadOS/macOS应用,运行60多个设备端模型,可选择自带密钥连接Claude、ChatGPT和Grok作为云端回退。价格、隐私模式、系统要求,以及与Liquid Apollo、Noema、Off Grid AI的对比。",
     readTime: '阅读需9分钟',
     targetKeywords: [
@@ -1007,7 +1007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '需要iOS 26、iPadOS 26或macOS 26(Apple Silicon)或更高版本',
         ],
         callouts: [
-          { type: 'note', text: 'Solair AI是一款通用的本地AI聊天应用,与[Liquid Apollo](/zh/power-local-llm/liquid-apollo-review)、[Noema](/zh/power-local-llm/noema-review)和[Off Grid AI](/zh/power-local-llm/off-grid-ai-review)属于同一细分领域。查看[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)了解它在其他移动聊天应用中的定位。' },
+          { type: 'note', text: 'Solair AI是一款通用的本地AI聊天应用,与[Liquid Apollo](/zh/power-local-llm/liquid-apollo-review)、[Noema](/zh/power-local-llm/noema-review)和[Off Grid AI](/zh/power-local-llm/off-grid-ai-review)属于同一细分领域。查看[本地LLM软件目录](https://www.promptquorum.com/directory)了解它在其他移动聊天应用中的定位。' },
         ],
       },
       overview: {
@@ -1041,7 +1041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       download: {
         id: 'get-solair-ai',
         title: '获取Solair AI',
-        content: "**本评测是[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中Solair AI条目的配套文章**——请查看目录了解它与其他移动AI聊天应用相比是如何分类的。Solair AI仅通过Apple App Store分发;开发者未提供任何直接下载或旁加载选项。",
+        content: "**本评测是[本地LLM软件目录](https://www.promptquorum.com/directory)中Solair AI条目的配套文章**——请查看目录了解它与其他移动AI聊天应用相比是如何分类的。Solair AI仅通过Apple App Store分发;开发者未提供任何直接下载或旁加载选项。",
         columns: ['平台', '下载'],
         rows: [
           { '平台': 'iPhone / iPad / Mac / Apple Watch / Vision', '下载': '[apps.apple.com/us/app/solair-local-ai/id6758450823](https://apps.apple.com/us/app/solair-local-ai/id6758450823)' },
@@ -1167,7 +1167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Noema评测](/zh/power-local-llm/noema-review) — 面向iPhone、iPad和Mac的专注型设备端聊天应用。',
           '[Off Grid AI评测](/zh/power-local-llm/off-grid-ai-review) — 一款除Apple平台外还支持Android和Windows的本地优先聊天应用。',
           '[Private LLM评测](/zh/power-local-llm/private-llm-review) — 一款完全没有云端回退的纯本地iOS/Mac聊天应用。',
-          '[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录,其中包括Solair AI在移动聊天应用中的定位。',
+          '[本地LLM软件目录](https://www.promptquorum.com/directory) — 本文所属的本地AI工具完整目录,其中包括Solair AI在移动聊天应用中的定位。',
         ],
       },
     },
@@ -1184,7 +1184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Solair AI',
     title: 'Reseña de Solair AI (2026): asistente local para iOS probado',
     seoTitle: 'Reseña de Solair AI 2026: app iOS, precios, privacidad',
-    intro: "Solair AI es una app gratuita para iOS, iPadOS y macOS del desarrollador [Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823) que ejecuta chat, voz, visión y análisis de documentos en el propio dispositivo, con una conexión opcional mediante tu propia clave API a proveedores en la nube como Claude, ChatGPT y Grok. Esta reseña es un complemento de la entrada de Solair AI en el [Directorio de Software de LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), y la compara con otras tres apps de chat local para iOS ya reseñadas en este sitio: [Liquid Apollo](/es/power-local-llm/liquid-apollo-review), [Noema](/es/power-local-llm/noema-review) y [Off Grid AI](/es/power-local-llm/off-grid-ai-review).",
+    intro: "Solair AI es una app gratuita para iOS, iPadOS y macOS del desarrollador [Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823) que ejecuta chat, voz, visión y análisis de documentos en el propio dispositivo, con una conexión opcional mediante tu propia clave API a proveedores en la nube como Claude, ChatGPT y Grok. Esta reseña es un complemento de la entrada de Solair AI en el [Directorio de Software de LLM Local](https://www.promptquorum.com/directory), y la compara con otras tres apps de chat local para iOS ya reseñadas en este sitio: [Liquid Apollo](/es/power-local-llm/liquid-apollo-review), [Noema](/es/power-local-llm/noema-review) y [Off Grid AI](/es/power-local-llm/off-grid-ai-review).",
     metaDescription: "Reseña de Solair AI: app gratuita para iOS/iPadOS/macOS que ejecuta más de 60 modelos locales, con reserva opcional en la nube (clave API propia) a Claude, ChatGPT y Grok. Precios, modelo de privacidad, requisitos y comparación con Liquid Apollo, Noema y Off Grid AI.",
     readTime: '9 min de lectura',
     targetKeywords: [
@@ -1241,7 +1241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Requiere iOS 26, iPadOS 26 o macOS 26 (Apple Silicon) o posterior',
         ],
         callouts: [
-          { type: 'note', text: "Solair AI es una app de chat de IA local de propósito general, en el mismo subsegmento que [Liquid Apollo](/es/power-local-llm/liquid-apollo-review), [Noema](/es/power-local-llm/noema-review) y [Off Grid AI](/es/power-local-llm/off-grid-ai-review). Consulta el [Directorio de Software de LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para ver cómo encaja entre otras apps de chat móviles." },
+          { type: 'note', text: "Solair AI es una app de chat de IA local de propósito general, en el mismo subsegmento que [Liquid Apollo](/es/power-local-llm/liquid-apollo-review), [Noema](/es/power-local-llm/noema-review) y [Off Grid AI](/es/power-local-llm/off-grid-ai-review). Consulta el [Directorio de Software de LLM Local](https://www.promptquorum.com/directory) para ver cómo encaja entre otras apps de chat móviles." },
         ],
       },
       overview: {
@@ -1275,7 +1275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       download: {
         id: 'get-solair-ai',
         title: 'Obtener Solair AI',
-        content: "**Esta reseña es un complemento de la entrada de Solair AI en el [Directorio de Software de LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — consulta el directorio para ver cómo está clasificada junto a otras apps de chat de IA móviles. Solair AI se distribuye únicamente a través de la App Store de Apple; el desarrollador no documenta ninguna opción de descarga directa o sideload.",
+        content: "**Esta reseña es un complemento de la entrada de Solair AI en el [Directorio de Software de LLM Local](https://www.promptquorum.com/directory)** — consulta el directorio para ver cómo está clasificada junto a otras apps de chat de IA móviles. Solair AI se distribuye únicamente a través de la App Store de Apple; el desarrollador no documenta ninguna opción de descarga directa o sideload.",
         columns: ['Plataforma', 'Descarga'],
         rows: [
           { 'Plataforma': 'iPhone / iPad / Mac / Apple Watch / Vision', 'Descarga': '[apps.apple.com/us/app/solair-local-ai/id6758450823](https://apps.apple.com/us/app/solair-local-ai/id6758450823)' },
@@ -1401,7 +1401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de Noema](/es/power-local-llm/noema-review) — una app de chat local enfocada para iPhone, iPad y Mac.',
           '[Reseña de Off Grid AI](/es/power-local-llm/off-grid-ai-review) — una app de chat local con soporte para Android y Windows más allá de las plataformas Apple.',
           '[Reseña de Private LLM](/es/power-local-llm/private-llm-review) — una app de chat solo local para iOS/Mac, sin ninguna reserva en la nube.',
-          '[Directorio de Software de LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja Solair AI entre las apps de chat móviles.',
+          '[Directorio de Software de LLM Local](https://www.promptquorum.com/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja Solair AI entre las apps de chat móviles.',
         ],
       },
     },
@@ -1418,7 +1418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Solair AI',
     title: 'Análise do Solair AI (2026): assistente local para iOS testado',
     seoTitle: 'Análise do Solair AI 2026: app iOS, preços, privacidade',
-    intro: "O Solair AI é um app gratuito para iOS, iPadOS e macOS do desenvolvedor [Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823) que executa chat, voz, visão e análise de documentos diretamente no dispositivo, com conexão opcional via chave de API própria a provedores de nuvem como Claude, ChatGPT e Grok. Esta análise é um complemento à entrada do Solair AI no [Diretório de Software de LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), e o compara com outros três apps de chat local para iOS já analisados neste site: [Liquid Apollo](/pt/power-local-llm/liquid-apollo-review), [Noema](/pt/power-local-llm/noema-review) e [Off Grid AI](/pt/power-local-llm/off-grid-ai-review).",
+    intro: "O Solair AI é um app gratuito para iOS, iPadOS e macOS do desenvolvedor [Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823) que executa chat, voz, visão e análise de documentos diretamente no dispositivo, com conexão opcional via chave de API própria a provedores de nuvem como Claude, ChatGPT e Grok. Esta análise é um complemento à entrada do Solair AI no [Diretório de Software de LLM Local](https://www.promptquorum.com/directory), e o compara com outros três apps de chat local para iOS já analisados neste site: [Liquid Apollo](/pt/power-local-llm/liquid-apollo-review), [Noema](/pt/power-local-llm/noema-review) e [Off Grid AI](/pt/power-local-llm/off-grid-ai-review).",
     metaDescription: "Análise do Solair AI: app gratuito iOS/iPadOS/macOS com mais de 60 modelos locais, fallback opcional na nuvem (chave de API própria) para Claude, ChatGPT e Grok. Preços, modelo de privacidade, requisitos e comparação com Liquid Apollo, Noema e Off Grid AI.",
     readTime: '9 min de leitura',
     targetKeywords: [
@@ -1475,7 +1475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Requer iOS 26, iPadOS 26 ou macOS 26 (Apple Silicon) ou posterior',
         ],
         callouts: [
-          { type: 'note', text: "O Solair AI é um app de chat de IA local genérico, no mesmo subsegmento de [Liquid Apollo](/pt/power-local-llm/liquid-apollo-review), [Noema](/pt/power-local-llm/noema-review) e [Off Grid AI](/pt/power-local-llm/off-grid-ai-review). Veja o [Diretório de Software de LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para entender como ele se encaixa entre outros apps de chat móveis." },
+          { type: 'note', text: "O Solair AI é um app de chat de IA local genérico, no mesmo subsegmento de [Liquid Apollo](/pt/power-local-llm/liquid-apollo-review), [Noema](/pt/power-local-llm/noema-review) e [Off Grid AI](/pt/power-local-llm/off-grid-ai-review). Veja o [Diretório de Software de LLM Local](https://www.promptquorum.com/directory) para entender como ele se encaixa entre outros apps de chat móveis." },
         ],
       },
       overview: {
@@ -1509,7 +1509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       download: {
         id: 'get-solair-ai',
         title: 'Obter o Solair AI',
-        content: "**Esta análise é um complemento à entrada do Solair AI no [Diretório de Software de LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — consulte o diretório para ver como ele é classificado ao lado de outros apps de chat de IA móveis. O Solair AI é distribuído apenas pela App Store da Apple; não há opção de download direto ou sideload documentada pelo desenvolvedor.",
+        content: "**Esta análise é um complemento à entrada do Solair AI no [Diretório de Software de LLM Local](https://www.promptquorum.com/directory)** — consulte o diretório para ver como ele é classificado ao lado de outros apps de chat de IA móveis. O Solair AI é distribuído apenas pela App Store da Apple; não há opção de download direto ou sideload documentada pelo desenvolvedor.",
         columns: ['Plataforma', 'Download'],
         rows: [
           { 'Plataforma': 'iPhone / iPad / Mac / Apple Watch / Vision', 'Download': '[apps.apple.com/us/app/solair-local-ai/id6758450823](https://apps.apple.com/us/app/solair-local-ai/id6758450823)' },
@@ -1635,7 +1635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do Noema](/pt/power-local-llm/noema-review) — um app de chat local focado para iPhone, iPad e Mac.',
           '[Análise do Off Grid AI](/pt/power-local-llm/off-grid-ai-review) — um app de chat local com suporte a Android e Windows além das plataformas Apple.',
           '[Análise do Private LLM](/pt/power-local-llm/private-llm-review) — um app de chat somente local para iOS/Mac, sem nenhum fallback na nuvem.',
-          '[Diretório de Software de LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o Solair AI se encaixa entre os apps de chat móveis.',
+          '[Diretório de Software de LLM Local](https://www.promptquorum.com/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o Solair AI se encaixa entre os apps de chat móveis.',
         ],
       },
     },
@@ -1652,7 +1652,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Solair AI',
     title: 'مراجعة Solair AI (2026): مساعد iOS محلي تم اختباره',
     seoTitle: 'مراجعة Solair AI 2026: تطبيق iOS، الأسعار، الخصوصية',
-    intro: "Solair AI هو تطبيق مجاني لأنظمة iOS وiPadOS وmacOS من المطوّر [Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823)، يُشغّل الدردشة والصوت والرؤية وتحليل المستندات مباشرة على الجهاز، مع اتصال اختياري بمفتاح API خاص بك بمزوّدي خدمات سحابية مثل Claude وChatGPT وGrok. هذه المراجعة مكمّلة لمدخل Solair AI في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)، وتقارنه بثلاثة تطبيقات دردشة محلية أخرى لنظام iOS سبق أن راجعها هذا الموقع: [Liquid Apollo](/ar/power-local-llm/liquid-apollo-review) و[Noema](/ar/power-local-llm/noema-review) و[Off Grid AI](/ar/power-local-llm/off-grid-ai-review).",
+    intro: "Solair AI هو تطبيق مجاني لأنظمة iOS وiPadOS وmacOS من المطوّر [Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823)، يُشغّل الدردشة والصوت والرؤية وتحليل المستندات مباشرة على الجهاز، مع اتصال اختياري بمفتاح API خاص بك بمزوّدي خدمات سحابية مثل Claude وChatGPT وGrok. هذه المراجعة مكمّلة لمدخل Solair AI في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory)، وتقارنه بثلاثة تطبيقات دردشة محلية أخرى لنظام iOS سبق أن راجعها هذا الموقع: [Liquid Apollo](/ar/power-local-llm/liquid-apollo-review) و[Noema](/ar/power-local-llm/noema-review) و[Off Grid AI](/ar/power-local-llm/off-grid-ai-review).",
     metaDescription: "مراجعة Solair AI: تطبيق مجاني لأنظمة iOS/iPadOS/macOS يشغّل أكثر من 60 نموذجاً محلياً، مع خيار احتياطي سحابي اختياري (مفتاح API خاص) لـClaude وChatGPT وGrok. الأسعار، نموذج الخصوصية، المتطلبات، ومقارنة مع Liquid Apollo وNoema وOff Grid AI.",
     readTime: 'وقت القراءة 9 دقائق',
     targetKeywords: [
@@ -1709,7 +1709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يتطلب iOS 26 أو iPadOS 26 أو macOS 26 (Apple Silicon) أو أحدث',
         ],
         callouts: [
-          { type: 'note', text: "Solair AI تطبيق دردشة ذكاء اصطناعي محلي عام، في نفس الفئة الفرعية مثل [Liquid Apollo](/ar/power-local-llm/liquid-apollo-review) و[Noema](/ar/power-local-llm/noema-review) و[Off Grid AI](/ar/power-local-llm/off-grid-ai-review). راجع [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) لمعرفة موقعه بين تطبيقات الدردشة المحمولة الأخرى." },
+          { type: 'note', text: "Solair AI تطبيق دردشة ذكاء اصطناعي محلي عام، في نفس الفئة الفرعية مثل [Liquid Apollo](/ar/power-local-llm/liquid-apollo-review) و[Noema](/ar/power-local-llm/noema-review) و[Off Grid AI](/ar/power-local-llm/off-grid-ai-review). راجع [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory) لمعرفة موقعه بين تطبيقات الدردشة المحمولة الأخرى." },
         ],
       },
       overview: {
@@ -1743,7 +1743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       download: {
         id: 'get-solair-ai',
         title: 'الحصول على Solair AI',
-        content: "**هذه المراجعة مكمّلة لمدخل Solair AI في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — راجع الدليل لمعرفة كيفية تصنيفه إلى جانب تطبيقات الدردشة الأخرى القائمة على الذكاء الاصطناعي للأجهزة المحمولة. يُوزَّع Solair AI فقط عبر متجر تطبيقات Apple؛ لا يوجد خيار تنزيل مباشر أو تثبيت جانبي موثّق من قِبَل المطوّر.",
+        content: "**هذه المراجعة مكمّلة لمدخل Solair AI في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory)** — راجع الدليل لمعرفة كيفية تصنيفه إلى جانب تطبيقات الدردشة الأخرى القائمة على الذكاء الاصطناعي للأجهزة المحمولة. يُوزَّع Solair AI فقط عبر متجر تطبيقات Apple؛ لا يوجد خيار تنزيل مباشر أو تثبيت جانبي موثّق من قِبَل المطوّر.",
         columns: ['المنصة', 'التنزيل'],
         rows: [
           { 'المنصة': 'آيفون / آيباد / Mac / Apple Watch / Vision', 'التنزيل': '[apps.apple.com/us/app/solair-local-ai/id6758450823](https://apps.apple.com/us/app/solair-local-ai/id6758450823)' },
@@ -1869,7 +1869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة Noema](/ar/power-local-llm/noema-review) — تطبيق دردشة محلي مركّز لأجهزة آيفون وآيباد وMac.',
           '[مراجعة Off Grid AI](/ar/power-local-llm/off-grid-ai-review) — تطبيق دردشة محلي يدعم Android وWindows بالإضافة إلى منصات Apple.',
           '[مراجعة Private LLM](/ar/power-local-llm/private-llm-review) — تطبيق دردشة محلي فقط لأنظمة iOS/Mac، دون أي احتياطي سحابي على الإطلاق.',
-          '[دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك موقع Solair AI بين تطبيقات الدردشة المحمولة.',
+          '[دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك موقع Solair AI بين تطبيقات الدردشة المحمولة.',
         ],
       },
     },
@@ -1886,7 +1886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Solair AI',
     title: 'Solair AI 리뷰(2026): 로컬 우선 iOS 비서 실제 테스트',
     seoTitle: 'Solair AI 리뷰 2026: iOS 앱, 가격, 개인정보 보호',
-    intro: "Solair AI는 개발자 [Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823)가 만든 무료 iOS, iPadOS, macOS 앱으로, 채팅, 음성, 시각, 문서 분석을 기기에서 직접 실행하며, 사용자 자신의 API 키를 이용해 Claude, ChatGPT, Grok 같은 클라우드 제공업체에 선택적으로 연결할 수 있습니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) 내 Solair AI 항목에 대한 보충 자료이며, 본 사이트가 이미 리뷰한 다른 세 가지 로컬 우선 iOS 채팅 앱, 즉 [Liquid Apollo](/ko/power-local-llm/liquid-apollo-review), [Noema](/ko/power-local-llm/noema-review), [Off Grid AI](/ko/power-local-llm/off-grid-ai-review)와 비교합니다.",
+    intro: "Solair AI는 개발자 [Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823)가 만든 무료 iOS, iPadOS, macOS 앱으로, 채팅, 음성, 시각, 문서 분석을 기기에서 직접 실행하며, 사용자 자신의 API 키를 이용해 Claude, ChatGPT, Grok 같은 클라우드 제공업체에 선택적으로 연결할 수 있습니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory) 내 Solair AI 항목에 대한 보충 자료이며, 본 사이트가 이미 리뷰한 다른 세 가지 로컬 우선 iOS 채팅 앱, 즉 [Liquid Apollo](/ko/power-local-llm/liquid-apollo-review), [Noema](/ko/power-local-llm/noema-review), [Off Grid AI](/ko/power-local-llm/off-grid-ai-review)와 비교합니다.",
     metaDescription: "Solair AI 리뷰: 60개 이상의 온디바이스 모델을 실행하는 무료 iOS/iPadOS/macOS 앱. Claude, ChatGPT, Grok에 대한 선택적 클라우드 폴백(자체 API 키) 지원. 가격, 개인정보 보호 모델, 요구 사항, Liquid Apollo·Noema·Off Grid AI와의 비교.",
     readTime: '읽는 데 9분',
     targetKeywords: [
@@ -1943,7 +1943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'iOS 26, iPadOS 26, macOS 26(Apple Silicon) 이상 필요',
         ],
         callouts: [
-          { type: 'note', text: "Solair AI는 [Liquid Apollo](/ko/power-local-llm/liquid-apollo-review), [Noema](/ko/power-local-llm/noema-review), [Off Grid AI](/ko/power-local-llm/off-grid-ai-review)와 같은 세부 세그먼트에 속하는 범용 로컬 AI 채팅 앱입니다. 다른 모바일 채팅 앱들 사이에서 이 앱이 어디에 위치하는지는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)를 참고하세요." },
+          { type: 'note', text: "Solair AI는 [Liquid Apollo](/ko/power-local-llm/liquid-apollo-review), [Noema](/ko/power-local-llm/noema-review), [Off Grid AI](/ko/power-local-llm/off-grid-ai-review)와 같은 세부 세그먼트에 속하는 범용 로컬 AI 채팅 앱입니다. 다른 모바일 채팅 앱들 사이에서 이 앱이 어디에 위치하는지는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)를 참고하세요." },
         ],
       },
       overview: {
@@ -1977,7 +1977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       download: {
         id: 'get-solair-ai',
         title: 'Solair AI 받기',
-        content: "**이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) 내 Solair AI 항목에 대한 보충 자료입니다** — 다른 모바일 AI 채팅 앱들과 함께 어떻게 분류되어 있는지는 디렉터리를 확인하세요. Solair AI는 Apple App Store를 통해서만 배포되며, 개발자가 문서화한 직접 다운로드나 사이드로드 옵션은 없습니다.",
+        content: "**이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory) 내 Solair AI 항목에 대한 보충 자료입니다** — 다른 모바일 AI 채팅 앱들과 함께 어떻게 분류되어 있는지는 디렉터리를 확인하세요. Solair AI는 Apple App Store를 통해서만 배포되며, 개발자가 문서화한 직접 다운로드나 사이드로드 옵션은 없습니다.",
         columns: ['플랫폼', '다운로드'],
         rows: [
           { '플랫폼': 'iPhone / iPad / Mac / Apple Watch / Vision', '다운로드': '[apps.apple.com/us/app/solair-local-ai/id6758450823](https://apps.apple.com/us/app/solair-local-ai/id6758450823)' },
@@ -2103,7 +2103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Noema 리뷰](/ko/power-local-llm/noema-review) — iPhone, iPad, Mac을 위한 집중된 온디바이스 채팅 앱.',
           '[Off Grid AI 리뷰](/ko/power-local-llm/off-grid-ai-review) — Apple 플랫폼 외에 Android와 Windows도 지원하는 로컬 우선 채팅 앱.',
           '[Private LLM 리뷰](/ko/power-local-llm/private-llm-review) — 클라우드 폴백이 전혀 없는 로컬 전용 iOS/Mac 채팅 앱.',
-          '[로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, 모바일 채팅 앱들 사이에서 Solair AI가 어디에 위치하는지도 포함되어 있습니다.',
+          '[로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, 모바일 채팅 앱들 사이에서 Solair AI가 어디에 위치하는지도 포함되어 있습니다.',
         ],
       },
     },

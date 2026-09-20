@@ -83,7 +83,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Made by Draw Things, Inc.; the app was built by developer Liu Liu, who publicly launched it in November 2022',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Draw Things\' entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Draw Things compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Draw Things\' entry in the [Local LLM Software Directory](/directory) — see that page for how Draw Things compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -221,7 +221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'draw-things-competitors',
         title: 'Draw Things vs. Other Local Image Generators',
-        content: 'Draw Things is one of several tools for running Stable Diffusion-family models locally. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, and the dedicated [Draw Things vs. ComfyUI comparison](#draw-things-vs-comfyui) above for the closest head-to-head.',
+        content: 'Draw Things is one of several tools for running Stable Diffusion-family models locally. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/directory) for the full catalog, and the dedicated [Draw Things vs. ComfyUI comparison](#draw-things-vs-comfyui) above for the closest head-to-head.',
         items: [
           '**[ComfyUI](/power-local-llm/comfyui-review)** — a free, open-source, node-based image-generation editor for Windows, Mac, and Linux; see the dedicated comparison section above, including the official gRPC bridge between the two tools.',
           '**[AUTOMATIC1111 (Stable Diffusion WebUI)](/power-local-llm/automatic1111-review)** — a free, open-source, browser-based Stable Diffusion interface, historically the most widely used community WebUI; unlike Draw Things, it is desktop-only (no native mobile app) and runs through a local web server rather than a native GUI.',
@@ -229,7 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Fooocus](/power-local-llm/fooocus-review)** — a free, open-source, simplified Stable Diffusion interface built to minimize manual parameter tuning; closer to Draw Things in its "fewer knobs, faster result" philosophy, but desktop-only and without Draw Things\' native mobile apps or on-device LoRA training.',
           '**[Stable Diffusion](/power-local-llm/stable-diffusion-review)** — the underlying open-weight model family that Draw Things (and every tool listed above) can run; see the dedicated review for the model\'s own licensing and hardware requirements, separate from any specific app that runs it.',
         ],
-        note: 'This is not an exhaustive list of local image-generation tools — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Draw Things\' own directory entry.',
+        note: 'This is not an exhaustive list of local image-generation tools — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Draw Things\' own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -291,7 +291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Draw Things\' directory entry alongside other image-generation apps.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Draw Things\' directory entry alongside other image-generation apps.',
           '[ComfyUI Review](/power-local-llm/comfyui-review) — a direct look at Draw Things\' closest local image-generation counterpart, the free node-based editor it officially bridges to.',
           '[AUTOMATIC1111 Review](/power-local-llm/automatic1111-review) — the long-running open-source, browser-based Stable Diffusion WebUI, for readers who want a desktop-only, fully open-source alternative.',
           '[Stable Diffusion Review](/power-local-llm/stable-diffusion-review) — a closer look at the underlying open-weight model family Draw Things runs, separate from any specific application.',
@@ -372,7 +372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Herausgegeben von Draw Things, Inc.; die App wurde von Entwickler Liu Liu programmiert, der sie im November 2022 öffentlich vorstellte',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der Deep-Dive-Begleitartikel zum Draw-Things-Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie den Vergleich von Draw Things mit Dutzenden anderer lokaler KI-Tools auf einen Blick.' },
+          { type: 'note', text: 'Diese Review ist der Deep-Dive-Begleitartikel zum Draw-Things-Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie den Vergleich von Draw Things mit Dutzenden anderer lokaler KI-Tools auf einen Blick.' },
         ],
       },
       overview: {
@@ -510,7 +510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'draw-things-competitors',
         title: 'Draw Things vs. andere lokale Bildgeneratoren',
-        content: 'Draw Things ist eines von mehreren Tools zum lokalen Ausführen von Stable-Diffusion-Modellen. So schneidet es im Vergleich zu anderen Optionen in diesem Bereich ab — den vollständigen Katalog finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory), und den direkten Vergleich mit dem naheliegendsten Konkurrenten im [Draw-Things-vs-ComfyUI-Vergleich](#draw-things-vs-comfyui) oben.',
+        content: 'Draw Things ist eines von mehreren Tools zum lokalen Ausführen von Stable-Diffusion-Modellen. So schneidet es im Vergleich zu anderen Optionen in diesem Bereich ab — den vollständigen Katalog finden Sie im [Local LLM Software Directory](/de/directory), und den direkten Vergleich mit dem naheliegendsten Konkurrenten im [Draw-Things-vs-ComfyUI-Vergleich](#draw-things-vs-comfyui) oben.',
         items: [
           '**[ComfyUI](/de/power-local-llm/comfyui-review)** — ein kostenloser, quelloffener, knotenbasierter Bildgenerierungs-Editor für Windows, Mac und Linux; siehe den dedizierten Vergleichsabschnitt oben, einschließlich der offiziellen gRPC-Brücke zwischen beiden Tools.',
           '**[AUTOMATIC1111 (Stable Diffusion WebUI)](/de/power-local-llm/automatic1111-review)** — eine kostenlose, quelloffene, browserbasierte Stable-Diffusion-Oberfläche, historisch die am weitesten verbreitete Community-WebUI; im Gegensatz zu Draw Things nur für Desktop (keine native mobile App) und läuft über einen lokalen Webserver statt über eine native GUI.',
@@ -518,7 +518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Fooocus](/de/power-local-llm/fooocus-review)** — eine kostenlose, quelloffene, vereinfachte Stable-Diffusion-Oberfläche, die manuelles Parameter-Tuning minimieren soll; näher an Draw Things\' Philosophie „weniger Regler, schnelleres Ergebnis", aber nur Desktop und ohne Draw Things\' native mobile Apps oder On-Device-LoRA-Training.',
           '**[Stable Diffusion](/de/power-local-llm/stable-diffusion-review)** — die zugrunde liegende Open-Weight-Modellfamilie, die Draw Things (und alle oben genannten Tools) ausführen kann; siehe die dedizierte Review für die Lizenzierung und Hardware-Anforderungen des Modells selbst, unabhängig von der jeweiligen App.',
         ],
-        note: 'Dies ist keine vollständige Liste lokaler Bildgenerierungs-Tools — den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Verzeichniseintrags von Draw Things, finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine vollständige Liste lokaler Bildgenerierungs-Tools — den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Verzeichniseintrags von Draw Things, finden Sie im [Local LLM Software Directory](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -580,7 +580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Draw-Things-Verzeichniseintrags neben weiteren Bildgenerierungs-Apps.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Draw-Things-Verzeichniseintrags neben weiteren Bildgenerierungs-Apps.',
           '[ComfyUI Review](/de/power-local-llm/comfyui-review) — ein direkter Blick auf das nächstliegende lokale Bildgenerierungs-Gegenstück zu Draw Things, den kostenlosen knotenbasierten Editor, mit dem eine offizielle Brücke besteht.',
           '[AUTOMATIC1111 Review](/de/power-local-llm/automatic1111-review) — die langjährige quelloffene, browserbasierte Stable-Diffusion-WebUI, für Leser, die eine reine Desktop-, vollständig quelloffene Alternative suchen.',
           '[Stable Diffusion Review](/de/power-local-llm/stable-diffusion-review) — ein genauerer Blick auf die zugrunde liegende Open-Weight-Modellfamilie, die Draw Things ausführt, unabhängig von der jeweiligen Anwendung.',
@@ -661,7 +661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Éditée par Draw Things, Inc. ; l\'application a été créée par le développeur Liu Liu, qui l\'a lancée publiquement en novembre 2022',
         ],
         callouts: [
-          { type: 'note', text: 'Ce test est le complément détaillé de la fiche Draw Things dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment Draw Things se compare, en un coup d\'œil, à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Ce test est le complément détaillé de la fiche Draw Things dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir comment Draw Things se compare, en un coup d\'œil, à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -799,7 +799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'draw-things-competitors',
         title: 'Draw Things face aux autres générateurs d\'images locaux',
-        content: 'Draw Things est l\'un des nombreux outils permettant d\'exécuter localement des modèles de la famille Stable Diffusion. Voici comment elle se positionne face aux autres options de ce domaine — consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, et la [comparaison dédiée Draw Things face à ComfyUI](#draw-things-vs-comfyui) ci-dessus pour le duel le plus proche.',
+        content: 'Draw Things est l\'un des nombreux outils permettant d\'exécuter localement des modèles de la famille Stable Diffusion. Voici comment elle se positionne face aux autres options de ce domaine — consultez le [Local LLM Software Directory](/fr/directory) pour le catalogue complet, et la [comparaison dédiée Draw Things face à ComfyUI](#draw-things-vs-comfyui) ci-dessus pour le duel le plus proche.',
         items: [
           '**[ComfyUI](/fr/power-local-llm/comfyui-review)** — un éditeur gratuit, open source, à base de nœuds pour la génération d\'images sous Windows, Mac et Linux ; voir la section de comparaison dédiée ci-dessus, y compris le pont gRPC officiel entre les deux outils.',
           '**[AUTOMATIC1111 (Stable Diffusion WebUI)](/fr/power-local-llm/automatic1111-review)** — une interface Stable Diffusion gratuite, open source et basée sur navigateur, historiquement la WebUI communautaire la plus utilisée ; contrairement à Draw Things, elle est réservée au bureau (pas d\'application mobile native) et fonctionne via un serveur web local plutôt qu\'une interface graphique native.',
@@ -807,7 +807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Fooocus](/fr/power-local-llm/fooocus-review)** — une interface Stable Diffusion gratuite, open source et simplifiée, conçue pour minimiser le réglage manuel des paramètres ; plus proche de la philosophie « moins de réglages, résultat plus rapide » de Draw Things, mais réservée au bureau et sans les applications mobiles natives ni l\'entraînement de LoRA sur l\'appareil de Draw Things.',
           '**[Stable Diffusion](/fr/power-local-llm/stable-diffusion-review)** — la famille de modèles à poids ouverts sous-jacente que Draw Things (et tous les outils listés ci-dessus) peut exécuter ; voir le test dédié pour la licence et les exigences matérielles du modèle lui-même, indépendamment de l\'application qui l\'exécute.',
         ],
-        note: 'Cette liste n\'est pas exhaustive des outils de génération d\'images locale — consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la fiche de Draw Things elle-même.',
+        note: 'Cette liste n\'est pas exhaustive des outils de génération d\'images locale — consultez le [Local LLM Software Directory](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la fiche de Draw Things elle-même.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -869,7 +869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche de Draw Things aux côtés d\'autres applications de génération d\'images.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche de Draw Things aux côtés d\'autres applications de génération d\'images.',
           '[Test ComfyUI](/fr/power-local-llm/comfyui-review) — un regard direct sur l\'équivalent local de génération d\'images le plus proche de Draw Things, l\'éditeur gratuit à base de nœuds avec lequel il dispose d\'un pont officiel.',
           '[Test AUTOMATIC1111](/fr/power-local-llm/automatic1111-review) — la WebUI Stable Diffusion open source et basée sur navigateur de longue date, pour les lecteurs qui veulent une alternative réservée au bureau et entièrement open source.',
           '[Test Stable Diffusion](/fr/power-local-llm/stable-diffusion-review) — un regard plus approfondi sur la famille de modèles à poids ouverts sous-jacente que Draw Things exécute, indépendamment de l\'application spécifique.',
@@ -950,7 +950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Draw Things, Inc.が提供。アプリは開発者Liu Liu氏が制作し、2022年11月に公開した',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)にあるDraw Thingsのエントリーの詳細解説版です。他の数十のローカルAIツールとの比較は同ページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](/ja/directory)にあるDraw Thingsのエントリーの詳細解説版です。他の数十のローカルAIツールとの比較は同ページを参照してください。' },
         ],
       },
       overview: {
@@ -1088,7 +1088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'draw-things-competitors',
         title: 'Draw Things対他のローカル画像生成ツール',
-        content: 'Draw Thingsは、Stable Diffusion系モデルをローカルで実行するための複数のツールの1つです。この分野における他の選択肢との位置づけは以下の通りです。完全なカタログは[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を、最も近い一騎打ち比較は上記の[Draw Things対ComfyUI比較](#draw-things-vs-comfyui)を参照してください。',
+        content: 'Draw Thingsは、Stable Diffusion系モデルをローカルで実行するための複数のツールの1つです。この分野における他の選択肢との位置づけは以下の通りです。完全なカタログは[Local LLM Software Directory](/ja/directory)を、最も近い一騎打ち比較は上記の[Draw Things対ComfyUI比較](#draw-things-vs-comfyui)を参照してください。',
         items: [
           '**[ComfyUI](/ja/power-local-llm/comfyui-review)** — Windows、Mac、Linux向けの無料・オープンソースのノードベース画像生成エディタ。両ツール間の公式gRPCブリッジを含め、上記の専用比較セクションを参照。',
           '**[AUTOMATIC1111（Stable Diffusion WebUI）](/ja/power-local-llm/automatic1111-review)** — 無料・オープンソースのブラウザベースStable Diffusionインターフェースで、歴史的に最も広く使われてきたコミュニティWebUI。Draw Thingsと異なりデスクトップ専用（ネイティブモバイルアプリなし）で、ネイティブGUIではなくローカルWebサーバー経由で動作する。',
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Fooocus](/ja/power-local-llm/fooocus-review)** — 手動のパラメータ調整を最小限に抑えるよう構築された、無料・オープンソースの簡素化されたStable Diffusionインターフェース。「操作項目を減らし、より速く結果を得る」というDraw Thingsの哲学に近いが、デスクトップ専用で、Draw Thingsのネイティブモバイルアプリやオンデバイスクトレーニングはない。',
           '**[Stable Diffusion](/ja/power-local-llm/stable-diffusion-review)** — Draw Things（および上記のすべてのツール）が実行できる基盤となるオープンウェイトモデルファミリー。特定のアプリとは別に、モデル自体のライセンスとハードウェア要件については専用レビューを参照。',
         ],
-        note: 'これは、ローカル画像生成ツールの網羅的なリストではありません。Draw Things自身のディレクトリエントリを含む、完全かつ定期的に更新されるカタログは[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これは、ローカル画像生成ツールの網羅的なリストではありません。Draw Things自身のディレクトリエントリを含む、完全かつ定期的に更新されるカタログは[Local LLM Software Directory](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1158,7 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — 本記事が属する、他の画像生成アプリと並ぶDraw Thingsのディレクトリエントリを含む、ローカルAIツールの完全カタログ。',
+          '[Local LLM Software Directory 2026](/ja/directory) — 本記事が属する、他の画像生成アプリと並ぶDraw Thingsのディレクトリエントリを含む、ローカルAIツールの完全カタログ。',
           '[ComfyUI レビュー](/ja/power-local-llm/comfyui-review) — Draw Thingsに最も近いローカル画像生成の同等品であり、公式にブリッジ接続されている無料ノードベースエディタを直接解説。',
           '[AUTOMATIC1111 レビュー](/ja/power-local-llm/automatic1111-review) — デスクトップ専用で完全にオープンソースな代替を求める読者向けに、長年運用されてきたオープンソースのブラウザベースStable Diffusion WebUI。',
           '[Stable Diffusion レビュー](/ja/power-local-llm/stable-diffusion-review) — 特定のアプリケーションとは切り離して、Draw Thingsが実行する基盤のオープンウェイトモデルファミリーを詳しく解説。',
@@ -1239,7 +1239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '由Draw Things, Inc.出品；该应用由开发者Liu Liu打造，他于2022年11月公开发布该应用',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Draw Things条目的深度解析版——请前往该页面查看Draw Things与数十种其他本地AI工具的一览对比。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Draw Things条目的深度解析版——请前往该页面查看Draw Things与数十种其他本地AI工具的一览对比。' },
         ],
       },
       overview: {
@@ -1377,7 +1377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'draw-things-competitors',
         title: 'Draw Things对比其他本地图像生成工具',
-        content: 'Draw Things是本地运行Stable Diffusion系列模型的多种工具之一。以下是它与该领域其他选项的对比——完整目录请见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)，最接近的正面对比请见上文的[Draw Things对比ComfyUI](#draw-things-vs-comfyui)专项内容。',
+        content: 'Draw Things是本地运行Stable Diffusion系列模型的多种工具之一。以下是它与该领域其他选项的对比——完整目录请见[本地LLM软件目录](/zh/directory)，最接近的正面对比请见上文的[Draw Things对比ComfyUI](#draw-things-vs-comfyui)专项内容。',
         items: [
           '**[ComfyUI](/zh/power-local-llm/comfyui-review)** — 一款适用于Windows、Mac和Linux的免费、开源、基于节点的图像生成编辑器；详见上文专项对比部分，包括两个工具间的官方gRPC桥接。',
           '**[AUTOMATIC1111（Stable Diffusion WebUI）](/zh/power-local-llm/automatic1111-review)** — 一款免费、开源、基于浏览器的Stable Diffusion界面，历史上是使用最广泛的社区WebUI；与Draw Things不同，它仅限桌面（没有原生移动应用），通过本地Web服务器运行，而非原生GUI。',
@@ -1385,7 +1385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Fooocus](/zh/power-local-llm/fooocus-review)** — 一款免费、开源、简化版的Stable Diffusion界面，旨在最大限度减少手动参数调整；在"减少操作、更快出结果"的理念上更接近Draw Things，但仅限桌面，没有Draw Things的原生移动应用或设备端LoRA训练。',
           '**[Stable Diffusion](/zh/power-local-llm/stable-diffusion-review)** — Draw Things（以及上述所有工具）都能运行的底层开放权重模型家族；关于模型本身的授权和硬件要求，独立于任何具体应用，详见专项评测。',
         ],
-        note: '这并非本地图像生成工具的完整列表 — 完整且定期更新的目录，包括Draw Things自己的目录条目，请见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非本地图像生成工具的完整列表 — 完整且定期更新的目录，包括Draw Things自己的目录条目，请见[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1447,7 +1447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包括Draw Things的目录条目及其他图像生成应用。',
+          '[2026本地LLM软件目录](/zh/directory) — 本文所属的本地AI工具完整目录，包括Draw Things的目录条目及其他图像生成应用。',
           '[ComfyUI评测](/zh/power-local-llm/comfyui-review) — 直接了解Draw Things最接近的本地图像生成对应产品，即与其官方桥接的免费节点式编辑器。',
           '[AUTOMATIC1111评测](/zh/power-local-llm/automatic1111-review) — 历史悠久的开源、基于浏览器的Stable Diffusion WebUI，适合希望使用纯桌面、完全开源替代方案的读者。',
           '[Stable Diffusion评测](/zh/power-local-llm/stable-diffusion-review) — 深入了解Draw Things所运行的底层开放权重模型家族，与具体应用无关。',
@@ -1528,7 +1528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desarrollada por Draw Things, Inc.; la app fue programada por Liu Liu, quien la lanzó públicamente en noviembre de 2022',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis a fondo complementario a la ficha de Draw Things en el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory); consulta esa página para ver cómo se compara Draw Things de un vistazo con decenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el análisis a fondo complementario a la ficha de Draw Things en el [Directorio de Software LLM Local](/es/directory); consulta esa página para ver cómo se compara Draw Things de un vistazo con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1666,7 +1666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'draw-things-competitors',
         title: 'Draw Things frente a otros generadores de imágenes locales',
-        content: 'Draw Things es una de varias herramientas para ejecutar localmente modelos de la familia Stable Diffusion. Así se compara con otras opciones en ese espacio; consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, y la [comparación dedicada Draw Things frente a ComfyUI](#draw-things-vs-comfyui) más arriba para el enfrentamiento más cercano.',
+        content: 'Draw Things es una de varias herramientas para ejecutar localmente modelos de la familia Stable Diffusion. Así se compara con otras opciones en ese espacio; consulta el [Directorio de Software LLM Local](/es/directory) para el catálogo completo, y la [comparación dedicada Draw Things frente a ComfyUI](#draw-things-vs-comfyui) más arriba para el enfrentamiento más cercano.',
         items: [
           '**[ComfyUI](/es/power-local-llm/comfyui-review)** — un editor gratuito, de código abierto y basado en nodos para generación de imágenes en Windows, Mac y Linux; consulta la sección de comparación dedicada más arriba, incluido el puente gRPC oficial entre ambas herramientas.',
           '**[AUTOMATIC1111 (Stable Diffusion WebUI)](/es/power-local-llm/automatic1111-review)** — una interfaz de Stable Diffusion gratuita, de código abierto y basada en navegador, históricamente la WebUI comunitaria más utilizada; a diferencia de Draw Things, es solo de escritorio (sin app móvil nativa) y funciona a través de un servidor web local en lugar de una GUI nativa.',
@@ -1674,7 +1674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Fooocus](/es/power-local-llm/fooocus-review)** — una interfaz de Stable Diffusion gratuita, de código abierto y simplificada, construida para minimizar el ajuste manual de parámetros; más cercana a la filosofía de Draw Things de "menos ajustes, resultado más rápido", pero solo de escritorio y sin las apps móviles nativas de Draw Things ni su entrenamiento de LoRA en el dispositivo.',
           '**[Stable Diffusion](/es/power-local-llm/stable-diffusion-review)** — la familia de modelos de pesos abiertos subyacente que Draw Things (y todas las herramientas listadas arriba) puede ejecutar; consulta la reseña dedicada para conocer la licencia y los requisitos de hardware del propio modelo, independientemente de cualquier app específica que lo ejecute.',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas de generación de imágenes local; consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la propia ficha de directorio de Draw Things.',
+        note: 'Esta no es una lista exhaustiva de herramientas de generación de imágenes local; consulta el [Directorio de Software LLM Local](/es/directory) para el catálogo completo y actualizado regularmente, incluida la propia ficha de directorio de Draw Things.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1736,7 +1736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de directorio de Draw Things junto a otras apps de generación de imágenes.',
+          '[Directorio de Software LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de directorio de Draw Things junto a otras apps de generación de imágenes.',
           '[Reseña de ComfyUI](/es/power-local-llm/comfyui-review) — un vistazo directo al equivalente de generación de imágenes local más cercano a Draw Things, el editor gratuito basado en nodos con el que tiene un puente oficial.',
           '[Reseña de AUTOMATIC1111](/es/power-local-llm/automatic1111-review) — la WebUI de Stable Diffusion de código abierto y basada en navegador de larga trayectoria, para lectores que quieren una alternativa solo de escritorio y totalmente de código abierto.',
           '[Reseña de Stable Diffusion](/es/power-local-llm/stable-diffusion-review) — un vistazo más detallado a la familia de modelos de pesos abiertos subyacente que ejecuta Draw Things, independientemente de cualquier aplicación específica.',
@@ -1817,7 +1817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desenvolvido pela Draw Things, Inc.; o app foi programado pelo desenvolvedor Liu Liu, que o lançou publicamente em novembro de 2022',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da ficha do Draw Things no [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar o Draw Things rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da ficha do Draw Things no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar o Draw Things rapidamente com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1955,7 +1955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'draw-things-competitors',
         title: 'Draw Things vs. outros geradores de imagem locais',
-        content: 'O Draw Things é uma entre várias ferramentas para rodar localmente modelos da família Stable Diffusion. Veja como ele se posiciona em relação a outras opções nesse espaço — consulte o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, e a [comparação dedicada Draw Things vs. ComfyUI](#draw-things-vs-comfyui) acima para o confronto mais próximo.',
+        content: 'O Draw Things é uma entre várias ferramentas para rodar localmente modelos da família Stable Diffusion. Veja como ele se posiciona em relação a outras opções nesse espaço — consulte o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo, e a [comparação dedicada Draw Things vs. ComfyUI](#draw-things-vs-comfyui) acima para o confronto mais próximo.',
         items: [
           '**[ComfyUI](/pt/power-local-llm/comfyui-review)** — um editor gratuito, de código aberto e baseado em nós para geração de imagens no Windows, Mac e Linux; veja a seção de comparação dedicada acima, incluindo a ponte gRPC oficial entre as duas ferramentas.',
           '**[AUTOMATIC1111 (Stable Diffusion WebUI)](/pt/power-local-llm/automatic1111-review)** — uma interface Stable Diffusion gratuita, de código aberto e baseada em navegador, historicamente a WebUI da comunidade mais usada; diferente do Draw Things, é apenas desktop (sem app mobile nativo) e roda através de um servidor web local em vez de uma GUI nativa.',
@@ -1963,7 +1963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Fooocus](/pt/power-local-llm/fooocus-review)** — uma interface Stable Diffusion gratuita, de código aberto e simplificada, construída para minimizar o ajuste manual de parâmetros; mais próxima da filosofia "menos ajustes, resultado mais rápido" do Draw Things, mas apenas desktop e sem os apps mobile nativos ou o treinamento de LoRA no dispositivo do Draw Things.',
           '**[Stable Diffusion](/pt/power-local-llm/stable-diffusion-review)** — a família de modelos de pesos abertos subjacente que o Draw Things (e todas as ferramentas listadas acima) pode executar; veja a análise dedicada para a licença e os requisitos de hardware do próprio modelo, separadamente de qualquer aplicativo específico que o execute.',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas de geração de imagens local — consulte o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha de diretório do Draw Things.',
+        note: 'Esta não é uma lista exaustiva de ferramentas de geração de imagens local — consulte o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha de diretório do Draw Things.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2025,7 +2025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha de diretório do Draw Things ao lado de outros apps de geração de imagens.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha de diretório do Draw Things ao lado de outros apps de geração de imagens.',
           '[Análise do ComfyUI](/pt/power-local-llm/comfyui-review) — um olhar direto sobre o equivalente de geração de imagens local mais próximo do Draw Things, o editor gratuito baseado em nós com o qual ele tem uma ponte oficial.',
           '[Análise do AUTOMATIC1111](/pt/power-local-llm/automatic1111-review) — a WebUI Stable Diffusion de código aberto e baseada em navegador de longa data, para leitores que querem uma alternativa apenas desktop e totalmente de código aberto.',
           '[Análise do Stable Diffusion](/pt/power-local-llm/stable-diffusion-review) — um olhar mais aprofundado sobre a família de modelos de pesos abertos subjacente que o Draw Things executa, separadamente de qualquer aplicativo específico.',
@@ -2106,7 +2106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'من تطوير Draw Things, Inc.؛ برمجه المطور Liu Liu، الذي أطلقه علنًا في نوفمبر 2022',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمّق لإدخال Draw Things في [دليل برامج نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن Draw Things بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمّق لإدخال Draw Things في [دليل برامج نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن Draw Things بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2244,7 +2244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'draw-things-competitors',
         title: 'Draw Things مقابل أدوات توليد الصور المحلية الأخرى',
-        content: 'Draw Things هو واحد من عدة أدوات لتشغيل نماذج عائلة Stable Diffusion محليًا. إليك كيف يقف مقارنة بخيارات أخرى في هذا المجال — راجع [دليل برامج نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل، وقارن مباشرة أعلاه في [مقارنة Draw Things مقابل ComfyUI](#draw-things-vs-comfyui) المخصصة لأقرب منافسة له.',
+        content: 'Draw Things هو واحد من عدة أدوات لتشغيل نماذج عائلة Stable Diffusion محليًا. إليك كيف يقف مقارنة بخيارات أخرى في هذا المجال — راجع [دليل برامج نماذج اللغة المحلية](/ar/directory) للحصول على الكتالوج الكامل، وقارن مباشرة أعلاه في [مقارنة Draw Things مقابل ComfyUI](#draw-things-vs-comfyui) المخصصة لأقرب منافسة له.',
         items: [
           '**[ComfyUI](/ar/power-local-llm/comfyui-review)** — محرر مجاني ومفتوح المصدر قائم على العُقد لتوليد الصور على Windows وMac وLinux؛ راجع قسم المقارنة المخصص أعلاه، بما في ذلك الجسر الرسمي عبر gRPC بين الأداتين.',
           '**[AUTOMATIC1111 (واجهة Stable Diffusion على الويب)](/ar/power-local-llm/automatic1111-review)** — واجهة Stable Diffusion مجانية ومفتوحة المصدر تعمل عبر المتصفح، وهي تاريخيًا أكثر واجهات الويب المجتمعية استخدامًا؛ خلافًا لـDraw Things، فهي مخصصة لسطح المكتب فقط (دون تطبيق أصلي للأجهزة المحمولة) وتعمل عبر خادم ويب محلي بدلًا من واجهة رسومية أصلية.',
@@ -2252,7 +2252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Fooocus](/ar/power-local-llm/fooocus-review)** — واجهة Stable Diffusion مجانية ومفتوحة المصدر ومبسّطة، مصمَّمة لتقليل ضبط المعلمات يدويًا إلى أدنى حد؛ أقرب إلى فلسفة Draw Things القائمة على "أدوات تحكم أقل، نتيجة أسرع"، لكنها مخصصة لسطح المكتب فقط ودون تطبيقات Draw Things المحمولة الأصلية أو تدريب LoRA على الجهاز.',
           '**[Stable Diffusion](/ar/power-local-llm/stable-diffusion-review)** — عائلة النماذج مفتوحة الأوزان الأساسية التي يمكن لـDraw Things (وكل الأدوات المذكورة أعلاه) تشغيلها؛ راجع المراجعة المخصصة لمعرفة ترخيص النموذج نفسه ومتطلبات الأجهزة الخاصة به، بمعزل عن أي تطبيق محدد يشغّله.',
         ],
-        note: 'هذه ليست قائمة شاملة بأدوات توليد الصور المحلية — راجع [دليل برامج نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدخال دليل Draw Things نفسه.',
+        note: 'هذه ليست قائمة شاملة بأدوات توليد الصور المحلية — راجع [دليل برامج نماذج اللغة المحلية](/ar/directory) للحصول على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدخال دليل Draw Things نفسه.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2314,7 +2314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برامج نماذج اللغة المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال دليل Draw Things إلى جانب تطبيقات توليد صور أخرى.',
+          '[دليل برامج نماذج اللغة المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال دليل Draw Things إلى جانب تطبيقات توليد صور أخرى.',
           '[مراجعة ComfyUI](/ar/power-local-llm/comfyui-review) — نظرة مباشرة على أقرب نظير لـDraw Things في توليد الصور المحلي، وهو المحرر المجاني القائم على العُقد الذي يرتبط به Draw Things عبر جسر رسمي.',
           '[مراجعة AUTOMATIC1111](/ar/power-local-llm/automatic1111-review) — واجهة Stable Diffusion العريقة المفتوحة المصدر والعاملة عبر المتصفح، للقراء الراغبين في بديل مخصص لسطح المكتب فقط ومفتوح المصدر بالكامل.',
           '[مراجعة Stable Diffusion](/ar/power-local-llm/stable-diffusion-review) — نظرة أعمق على عائلة النماذج مفتوحة الأوزان الأساسية التي يشغّلها Draw Things، بمعزل عن أي تطبيق محدد.',
@@ -2395,7 +2395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Draw Things, Inc.가 개발했으며, 이 앱은 개발자 Liu Liu가 제작해 2022년 11월에 공개적으로 출시함',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 Draw Things 항목의 심층 분석 버전입니다 — Draw Things가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참조하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Draw Things 항목의 심층 분석 버전입니다 — Draw Things가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참조하세요.' },
         ],
       },
       overview: {
@@ -2533,7 +2533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'draw-things-competitors',
         title: 'Draw Things와 다른 로컬 이미지 생성 도구 비교',
-        content: 'Draw Things는 Stable Diffusion 계열 모델을 로컬로 실행하는 여러 도구 중 하나입니다. 이 분야의 다른 옵션과 비교하면 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를, 가장 가까운 직접 비교는 위의 [Draw Things와 ComfyUI 비교](#draw-things-vs-comfyui)를 참조하세요.',
+        content: 'Draw Things는 Stable Diffusion 계열 모델을 로컬로 실행하는 여러 도구 중 하나입니다. 이 분야의 다른 옵션과 비교하면 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를, 가장 가까운 직접 비교는 위의 [Draw Things와 ComfyUI 비교](#draw-things-vs-comfyui)를 참조하세요.',
         items: [
           '**[ComfyUI](/ko/power-local-llm/comfyui-review)** — Windows, Mac, Linux용 무료 오픈소스 노드 기반 이미지 생성 편집기로, 두 도구 간의 공식 gRPC 브리지를 포함해 위의 전용 비교 섹션을 참조하세요.',
           '**[AUTOMATIC1111(Stable Diffusion WebUI)](/ko/power-local-llm/automatic1111-review)** — 무료 오픈소스 브라우저 기반 Stable Diffusion 인터페이스로, 역사적으로 가장 널리 사용된 커뮤니티 WebUI입니다. Draw Things와 달리 데스크톱 전용(네이티브 모바일 앱 없음)이며, 네이티브 GUI가 아닌 로컬 웹 서버를 통해 실행됩니다.',
@@ -2541,7 +2541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Fooocus](/ko/power-local-llm/fooocus-review)** — 수동 파라미터 조정을 최소화하도록 만들어진 무료 오픈소스 간소화 Stable Diffusion 인터페이스입니다. "조작 항목을 줄이고 더 빠르게 결과를 얻는다"는 Draw Things의 철학에 가깝지만, 데스크톱 전용이며 Draw Things의 네이티브 모바일 앱이나 온디바이스 LoRA 학습은 없습니다.',
           '**[Stable Diffusion](/ko/power-local-llm/stable-diffusion-review)** — Draw Things(및 위에 나열된 모든 도구)가 실행할 수 있는 기반 오픈 웨이트 모델 계열입니다. 특정 앱과는 별개로 모델 자체의 라이선스와 하드웨어 요구 사항은 전용 리뷰를 참조하세요.',
         ],
-        note: '이는 로컬 이미지 생성 도구의 완전한 목록이 아닙니다 — Draw Things 자체의 디렉터리 항목을 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참조하세요.',
+        note: '이는 로컬 이미지 생성 도구의 완전한 목록이 아닙니다 — Draw Things 자체의 디렉터리 항목을 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참조하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2603,7 +2603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[2026 로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, 다른 이미지 생성 앱들과 나란히 있는 Draw Things의 디렉터리 항목을 포함합니다.',
+          '[2026 로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, 다른 이미지 생성 앱들과 나란히 있는 Draw Things의 디렉터리 항목을 포함합니다.',
           '[ComfyUI 리뷰](/ko/power-local-llm/comfyui-review) — Draw Things와 공식적으로 연결된, 가장 가까운 로컬 이미지 생성 대응 제품인 무료 노드 기반 편집기를 직접 살펴봅니다.',
           '[AUTOMATIC1111 리뷰](/ko/power-local-llm/automatic1111-review) — 데스크톱 전용의 완전한 오픈소스 대안을 원하는 독자를 위한, 오랜 역사를 가진 오픈소스 브라우저 기반 Stable Diffusion WebUI입니다.',
           '[Stable Diffusion 리뷰](/ko/power-local-llm/stable-diffusion-review) — 특정 애플리케이션과 무관하게, Draw Things가 실행하는 기반 오픈 웨이트 모델 계열을 더 깊이 살펴봅니다.',

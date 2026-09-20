@@ -70,7 +70,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Latest tagged GitHub release is v0.3.1 (July 12, 2024); most recent repository push was November 10, 2025 — a real gap between the newest commit activity and the latest version tag',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the companion to Langchain-Chatchat\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the companion to Langchain-Chatchat\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -214,7 +214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Haystack (deepset)', 'Best known for': 'Open-source RAG and search-pipeline framework from deepset', 'Link': '[Haystack review](/power-local-llm/haystack-deepset-rag-framework-review)' },
           { 'Tool': 'MaxKB', 'Best known for': 'Self-hosted knowledge-base Q&A platform, also Chinese-origin', 'Link': '[MaxKB review](/power-local-llm/maxkb-review)' },
         ],
-        note: 'This list reflects tools commonly compared to Langchain-Chatchat in the self-hosted RAG/document-chat segment, not an independent PromptQuorum ranking — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, and verify each tool\'s current feature set and license before choosing.',
+        note: 'This list reflects tools commonly compared to Langchain-Chatchat in the self-hosted RAG/document-chat segment, not an independent PromptQuorum ranking — see the [Local LLM Software Directory](/directory) for the full catalog, and verify each tool\'s current feature set and license before choosing.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -269,7 +269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Langchain-Chatchat\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Langchain-Chatchat\'s directory entry.',
           '[RAGFlow Review](/power-local-llm/ragflow-document-understanding-rag-review) — a self-hosted RAG tool focused on deep, layout-aware document understanding, for comparison.',
           '[LlamaIndex Review](/power-local-llm/llamaindex-rag-framework-review) — a general-purpose open-source RAG/data framework for connecting LLMs to your own data.',
           '[MaxKB Review](/power-local-llm/maxkb-review) — another self-hosted, Chinese-origin knowledge-base Q&A platform.',
@@ -345,7 +345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Die neueste getaggte GitHub-Version ist v0.3.1 (12. Juli 2024); der letzte Push ins Repository erfolgte am 10. November 2025 — eine reale Lücke zwischen der jüngsten Commit-Aktivität und dem letzten Versions-Tag',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist die begleitende Vertiefung zum Eintrag von Langchain-Chatchat im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — dort sehen Sie auf einen Blick, wie sich das Tool im Vergleich zu Dutzenden anderer lokaler KI-Tools einordnet.' },
+          { type: 'note', text: 'Diese Review ist die begleitende Vertiefung zum Eintrag von Langchain-Chatchat im [Local LLM Software Directory](/directory) — dort sehen Sie auf einen Blick, wie sich das Tool im Vergleich zu Dutzenden anderer lokaler KI-Tools einordnet.' },
         ],
       },
       overview: {
@@ -489,7 +489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Haystack (deepset)', 'Best known for': 'Open-Source-RAG- und Suchpipeline-Framework von deepset', 'Link': '[Haystack-Review](/de/power-local-llm/haystack-deepset-rag-framework-review)' },
           { 'Tool': 'MaxKB', 'Best known for': 'Selbst gehostete Wissensdatenbank-Q&A-Plattform, ebenfalls chinesischen Ursprungs', 'Link': '[MaxKB-Review](/de/power-local-llm/maxkb-review)' },
         ],
-        note: 'Diese Liste spiegelt Tools wider, die häufig mit Langchain-Chatchat im Segment selbst gehosteter RAG-/Dokumenten-Chat-Tools verglichen werden, nicht ein unabhängiges PromptQuorum-Ranking — siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog, und prüfen Sie den aktuellen Funktionsumfang und die Lizenz jedes Tools, bevor Sie sich entscheiden.',
+        note: 'Diese Liste spiegelt Tools wider, die häufig mit Langchain-Chatchat im Segment selbst gehosteter RAG-/Dokumenten-Chat-Tools verglichen werden, nicht ein unabhängiges PromptQuorum-Ranking — siehe das [Local LLM Software Directory](/de/directory) für den vollständigen Katalog, und prüfen Sie den aktuellen Funktionsumfang und die Lizenz jedes Tools, bevor Sie sich entscheiden.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -544,7 +544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von Langchain-Chatchat.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von Langchain-Chatchat.',
           '[RAGFlow-Review](/de/power-local-llm/ragflow-document-understanding-rag-review) — ein selbst gehostetes RAG-Tool mit Fokus auf tiefes, layoutbewusstes Dokumentenverständnis, zum Vergleich.',
           '[LlamaIndex-Review](/de/power-local-llm/llamaindex-rag-framework-review) — ein Allzweck-Open-Source-RAG-/Daten-Framework, um LLMs mit eigenen Daten zu verbinden.',
           '[MaxKB-Review](/de/power-local-llm/maxkb-review) — eine weitere selbst gehostete Wissensdatenbank-Q&A-Plattform chinesischen Ursprungs.',
@@ -620,7 +620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La dernière version taguée sur GitHub est v0.3.1 (12 juillet 2024) ; le dernier push sur le dépôt date du 10 novembre 2025 — un réel décalage entre l\'activité de commit la plus récente et la dernière version taguée',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément détaillé de l\'entrée de Langchain-Chatchat dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir en un coup d\'œil comment il se compare à des dizaines d\'autres outils IA locaux.' },
+          { type: 'note', text: 'Cet avis est le complément détaillé de l\'entrée de Langchain-Chatchat dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment il se compare à des dizaines d\'autres outils IA locaux.' },
         ],
       },
       overview: {
@@ -764,7 +764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Haystack (deepset)', 'Best known for': 'Framework RAG et pipeline de recherche open source de deepset', 'Link': '[Avis Haystack](/fr/power-local-llm/haystack-deepset-rag-framework-review)' },
           { 'Tool': 'MaxKB', 'Best known for': 'Plateforme de questions-réponses sur base de connaissances auto-hébergée, également d\'origine chinoise', 'Link': '[Avis MaxKB](/fr/power-local-llm/maxkb-review)' },
         ],
-        note: 'Cette liste reflète les outils couramment comparés à Langchain-Chatchat dans le segment des outils RAG/chat documentaire auto-hébergés, et non un classement indépendant de PromptQuorum — consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, et vérifiez les fonctionnalités actuelles et la licence de chaque outil avant de choisir.',
+        note: 'Cette liste reflète les outils couramment comparés à Langchain-Chatchat dans le segment des outils RAG/chat documentaire auto-hébergés, et non un classement indépendant de PromptQuorum — consultez le [Local LLM Software Directory](/fr/directory) pour le catalogue complet, et vérifiez les fonctionnalités actuelles et la licence de chaque outil avant de choisir.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -819,7 +819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Pour aller plus loin',
         items: [
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils IA locaux auquel appartient cet article, avec l\'entrée de Langchain-Chatchat dans le répertoire.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils IA locaux auquel appartient cet article, avec l\'entrée de Langchain-Chatchat dans le répertoire.',
           '[Avis RAGFlow](/fr/power-local-llm/ragflow-document-understanding-rag-review) — un outil RAG auto-hébergé centré sur une compréhension documentaire profonde et sensible à la mise en page, pour comparaison.',
           '[Avis LlamaIndex](/fr/power-local-llm/llamaindex-rag-framework-review) — un framework RAG/données open source polyvalent pour connecter des LLM à vos propres données.',
           '[Avis MaxKB](/fr/power-local-llm/maxkb-review) — une autre plateforme de questions-réponses sur base de connaissances auto-hébergée, également d\'origine chinoise.',
@@ -895,7 +895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '最新のタグ付きGitHubリリースはv0.3.1（2024年7月12日）。リポジトリへの直近のpushは2025年11月10日 — 最新のコミット活動と最新バージョンタグの間に実際のギャップがある',
         ],
         callouts: [
-          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)内のLangchain-Chatchatの項目に付随する詳細レビューです — 他の数十のローカルAIツールとの比較は同ページで一覧できます。' },
+          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)内のLangchain-Chatchatの項目に付随する詳細レビューです — 他の数十のローカルAIツールとの比較は同ページで一覧できます。' },
         ],
       },
       overview: {
@@ -1039,7 +1039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Haystack（deepset）', 'Best known for': 'deepset提供のオープンソースRAG・検索パイプラインフレームワーク', 'Link': '[Haystackレビュー](/ja/power-local-llm/haystack-deepset-rag-framework-review)' },
           { 'Tool': 'MaxKB', 'Best known for': '自前ホスト型のナレッジベースQ&Aプラットフォームで、こちらも中国発', 'Link': '[MaxKBレビュー](/ja/power-local-llm/maxkb-review)' },
         ],
-        note: 'このリストは、自前ホスト型RAG/ドキュメントチャットのセグメントでLangchain-Chatchatとよく比較されるツールを反映したもので、PromptQuorum独自のランキングではありません — 全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照し、選定前に各ツールの現在の機能とライセンスを確認してください。',
+        note: 'このリストは、自前ホスト型RAG/ドキュメントチャットのセグメントでLangchain-Chatchatとよく比較されるツールを反映したもので、PromptQuorum独自のランキングではありません — 全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照し、選定前に各ツールの現在の機能とライセンスを確認してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1094,7 +1094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — 本記事が属する、ローカルAIツールの完全カタログ。Langchain-Chatchatのディレクトリ項目も含む。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — 本記事が属する、ローカルAIツールの完全カタログ。Langchain-Chatchatのディレクトリ項目も含む。',
           '[RAGFlowレビュー](/ja/power-local-llm/ragflow-document-understanding-rag-review) — レイアウトを考慮した深いドキュメント理解に重点を置いた自前ホスト型RAGツールとの比較用。',
           '[LlamaIndexレビュー](/ja/power-local-llm/llamaindex-rag-framework-review) — LLMを自分のデータに接続するための汎用オープンソースRAG/データフレームワーク。',
           '[MaxKBレビュー](/ja/power-local-llm/maxkb-review) — もう一つの自前ホスト型・中国発のナレッジベースQ&Aプラットフォーム。',
@@ -1170,7 +1170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '最新的 GitHub 标记版本为 v0.3.1（2024 年 7 月 12 日）；仓库最近一次推送为 2025 年 11 月 10 日——最新提交活动与最新版本标记之间存在明显差距',
         ],
         callouts: [
-          { type: 'note', text: '本评测是 Langchain-Chatchat 在[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)中条目的深度配套文章——可在该页面一览它与数十款其他本地 AI 工具的对比。' },
+          { type: 'note', text: '本评测是 Langchain-Chatchat 在[本地 LLM 软件目录](/zh/directory)中条目的深度配套文章——可在该页面一览它与数十款其他本地 AI 工具的对比。' },
         ],
       },
       overview: {
@@ -1314,7 +1314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Haystack（deepset）', 'Best known for': '由 deepset 打造的开源 RAG 与搜索流程框架', 'Link': '[Haystack 评测](/zh/power-local-llm/haystack-deepset-rag-framework-review)' },
           { 'Tool': 'MaxKB', 'Best known for': '自托管知识库问答平台，同样源自中国', 'Link': '[MaxKB 评测](/zh/power-local-llm/maxkb-review)' },
         ],
-        note: '此列表反映的是在自托管 RAG/文档问答细分领域中常被拿来与 Langchain-Chatchat 比较的工具，并非 PromptQuorum 独立的排名——完整目录请参见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)，选择前请核实每款工具当前的功能与许可证。',
+        note: '此列表反映的是在自托管 RAG/文档问答细分领域中常被拿来与 Langchain-Chatchat 比较的工具，并非 PromptQuorum 独立的排名——完整目录请参见[本地 LLM 软件目录](/zh/directory)，选择前请核实每款工具当前的功能与许可证。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1369,7 +1369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[2026 本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地 AI 工具目录，包含 Langchain-Chatchat 的目录条目。',
+          '[2026 本地 LLM 软件目录](/zh/directory) — 本文所属的完整本地 AI 工具目录，包含 Langchain-Chatchat 的目录条目。',
           '[RAGFlow 评测](/zh/power-local-llm/ragflow-document-understanding-rag-review) — 一款专注于深度、布局感知型文档理解的自托管 RAG 工具，可用于对比。',
           '[LlamaIndex 评测](/zh/power-local-llm/llamaindex-rag-framework-review) — 用于将 LLM 连接到自有数据的通用开源 RAG/数据框架。',
           '[MaxKB 评测](/zh/power-local-llm/maxkb-review) — 另一款自托管、同样源自中国的知识库问答平台。',
@@ -1445,7 +1445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La última versión etiquetada en GitHub es v0.3.1 (12 de julio de 2024); el push más reciente al repositorio fue el 10 de noviembre de 2025 — una brecha real entre la actividad de commits más reciente y la última etiqueta de versión',
         ],
         callouts: [
-          { type: 'note', text: 'Este análisis es el complemento detallado de la entrada de Langchain-Chatchat en el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Este análisis es el complemento detallado de la entrada de Langchain-Chatchat en el [Directorio de Software de LLM Local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1589,7 +1589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Haystack (deepset)', 'Best known for': 'Framework RAG y de pipeline de búsqueda de código abierto de deepset', 'Link': '[Análisis de Haystack](/es/power-local-llm/haystack-deepset-rag-framework-review)' },
           { 'Tool': 'MaxKB', 'Best known for': 'Plataforma de preguntas y respuestas sobre base de conocimiento autoalojada, también de origen chino', 'Link': '[Análisis de MaxKB](/es/power-local-llm/maxkb-review)' },
         ],
-        note: 'Esta lista refleja herramientas que suelen compararse con Langchain-Chatchat en el segmento de RAG/chat documental autoalojado, no un ranking independiente de PromptQuorum — consulta el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, y verifica el conjunto de funciones y la licencia actuales de cada herramienta antes de elegir.',
+        note: 'Esta lista refleja herramientas que suelen compararse con Langchain-Chatchat en el segmento de RAG/chat documental autoalojado, no un ranking independiente de PromptQuorum — consulta el [Directorio de Software de LLM Local](/es/directory) para el catálogo completo, y verifica el conjunto de funciones y la licencia actuales de cada herramienta antes de elegir.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1644,7 +1644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software de LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de Langchain-Chatchat en el directorio.',
+          '[Directorio de Software de LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de Langchain-Chatchat en el directorio.',
           '[Análisis de RAGFlow](/es/power-local-llm/ragflow-document-understanding-rag-review) — una herramienta RAG autoalojada centrada en la comprensión profunda de documentos y sensible al diseño, para comparar.',
           '[Análisis de LlamaIndex](/es/power-local-llm/llamaindex-rag-framework-review) — un framework RAG/de datos de código abierto y propósito general para conectar LLM a tus propios datos.',
           '[Análisis de MaxKB](/es/power-local-llm/maxkb-review) — otra plataforma de preguntas y respuestas sobre base de conocimiento autoalojada, también de origen chino.',
@@ -1720,7 +1720,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A versão marcada mais recente no GitHub é v0.3.1 (12 de julho de 2024); o push mais recente ao repositório foi em 10 de novembro de 2025 — uma lacuna real entre a atividade de commits mais recente e a última tag de versão',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento detalhado da entrada do Langchain-Chatchat no [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente como ele se posiciona em relação a dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento detalhado da entrada do Langchain-Chatchat no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar rapidamente como ele se posiciona em relação a dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1864,7 +1864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Haystack (deepset)', 'Best known for': 'Framework RAG e de pipeline de busca de código aberto da deepset', 'Link': '[Análise do Haystack](/pt/power-local-llm/haystack-deepset-rag-framework-review)' },
           { 'Tool': 'MaxKB', 'Best known for': 'Plataforma de perguntas e respostas sobre base de conhecimento auto-hospedada, também de origem chinesa', 'Link': '[Análise do MaxKB](/pt/power-local-llm/maxkb-review)' },
         ],
-        note: 'Esta lista reflete ferramentas comumente comparadas ao Langchain-Chatchat no segmento de RAG/chat de documentos auto-hospedado, não um ranking independente da PromptQuorum — veja o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, e verifique o conjunto de funcionalidades e a licença atuais de cada ferramenta antes de escolher.',
+        note: 'Esta lista reflete ferramentas comumente comparadas ao Langchain-Chatchat no segmento de RAG/chat de documentos auto-hospedado, não um ranking independente da PromptQuorum — veja o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo, e verifique o conjunto de funcionalidades e a licença atuais de cada ferramenta antes de escolher.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1919,7 +1919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Langchain-Chatchat no diretório.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Langchain-Chatchat no diretório.',
           '[Análise do RAGFlow](/pt/power-local-llm/ragflow-document-understanding-rag-review) — uma ferramenta RAG auto-hospedada focada em compreensão profunda de documentos e sensível ao layout, para comparação.',
           '[Análise do LlamaIndex](/pt/power-local-llm/llamaindex-rag-framework-review) — um framework RAG/de dados de código aberto e propósito geral para conectar LLMs aos seus próprios dados.',
           '[Análise do MaxKB](/pt/power-local-llm/maxkb-review) — outra plataforma de perguntas e respostas sobre base de conhecimento auto-hospedada, também de origem chinesa.',
@@ -1995,7 +1995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أحدث إصدار موسوم على GitHub هو v0.3.1 (12 يوليو 2024)؛ وكان آخر دفع إلى المستودع في 10 نوفمبر 2025 — وهي فجوة حقيقية بين أحدث نشاط للالتزامات (commits) وآخر وسم إصدار',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافقة التفصيلية لمدخل Langchain-Chatchat في [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارَن بلمحة سريعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافقة التفصيلية لمدخل Langchain-Chatchat في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن بلمحة سريعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2139,7 +2139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Haystack (deepset)', 'Best known for': 'إطار عمل RAG وخط أنابيب بحث مفتوح المصدر من deepset', 'Link': '[مراجعة Haystack](/ar/power-local-llm/haystack-deepset-rag-framework-review)' },
           { 'Tool': 'MaxKB', 'Best known for': 'منصة أسئلة وأجوبة على قاعدة معرفة ذاتية الاستضافة، وهي أيضًا من أصل صيني', 'Link': '[مراجعة MaxKB](/ar/power-local-llm/maxkb-review)' },
         ],
-        note: 'تعكس هذه القائمة الأدوات التي تُقارَن عادةً بـLangchain-Chatchat في فئة RAG/محادثة المستندات ذاتية الاستضافة، وليست تصنيفًا مستقلًا من PromptQuorum — راجع [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) للحصول على الفهرس الكامل، وتحقق من مجموعة ميزات كل أداة ورخصتها الحالية قبل الاختيار.',
+        note: 'تعكس هذه القائمة الأدوات التي تُقارَن عادةً بـLangchain-Chatchat في فئة RAG/محادثة المستندات ذاتية الاستضافة، وليست تصنيفًا مستقلًا من PromptQuorum — راجع [دليل برمجيات نماذج اللغة المحلية](/ar/directory) للحصول على الفهرس الكامل، وتحقق من مجموعة ميزات كل أداة ورخصتها الحالية قبل الاختيار.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2194,7 +2194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل Langchain-Chatchat في الدليل.',
+          '[دليل برمجيات نماذج اللغة المحلية 2026](/ar/directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل Langchain-Chatchat في الدليل.',
           '[مراجعة RAGFlow](/ar/power-local-llm/ragflow-document-understanding-rag-review) — أداة RAG ذاتية الاستضافة تركّز على فهم عميق للمستندات ومراعٍ لتخطيط الصفحة، للمقارنة.',
           '[مراجعة LlamaIndex](/ar/power-local-llm/llamaindex-rag-framework-review) — إطار عمل RAG/بيانات مفتوح المصدر متعدد الأغراض لربط النماذج اللغوية الكبيرة ببياناتك الخاصة.',
           '[مراجعة MaxKB](/ar/power-local-llm/maxkb-review) — منصة أخرى ذاتية الاستضافة للأسئلة والأجوبة على قاعدة معرفة، من أصل صيني أيضًا.',
@@ -2270,7 +2270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub의 가장 최근 태그 버전은 v0.3.1(2024년 7월 12일)이며, 저장소에 대한 가장 최근 푸시는 2025년 11월 10일 — 최근 커밋 활동과 최신 버전 태그 사이에 실제 격차가 존재함',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 실린 Langchain-Chatchat 항목의 심화 버전입니다 — 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 실린 Langchain-Chatchat 항목의 심화 버전입니다 — 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2414,7 +2414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Haystack(deepset)', 'Best known for': 'deepset이 만든 오픈소스 RAG·검색 파이프라인 프레임워크', 'Link': '[Haystack 리뷰](/ko/power-local-llm/haystack-deepset-rag-framework-review)' },
           { 'Tool': 'MaxKB', 'Best known for': '자체 호스팅 지식베이스 질의응답 플랫폼으로, 역시 중국 출신', 'Link': '[MaxKB 리뷰](/ko/power-local-llm/maxkb-review)' },
         ],
-        note: '이 목록은 자체 호스팅 RAG/문서 채팅 세그먼트에서 Langchain-Chatchat과 흔히 비교되는 도구를 반영한 것으로, PromptQuorum의 독립적인 순위가 아닙니다 — 전체 목록은 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하고, 선택 전에 각 도구의 현재 기능과 라이선스를 확인하세요.',
+        note: '이 목록은 자체 호스팅 RAG/문서 채팅 세그먼트에서 Langchain-Chatchat과 흔히 비교되는 도구를 반영한 것으로, PromptQuorum의 독립적인 순위가 아닙니다 — 전체 목록은 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하고, 선택 전에 각 도구의 현재 기능과 라이선스를 확인하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2469,7 +2469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 아티클',
         items: [
-          '[2026 로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, Langchain-Chatchat의 디렉터리 항목도 포함되어 있습니다.',
+          '[2026 로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, Langchain-Chatchat의 디렉터리 항목도 포함되어 있습니다.',
           '[RAGFlow 리뷰](/ko/power-local-llm/ragflow-document-understanding-rag-review) — 레이아웃을 고려한 깊이 있는 문서 이해에 중점을 둔 자체 호스팅 RAG 도구로, 비교 참고용입니다.',
           '[LlamaIndex 리뷰](/ko/power-local-llm/llamaindex-rag-framework-review) — LLM을 자신의 데이터에 연결하기 위한 범용 오픈소스 RAG/데이터 프레임워크입니다.',
           '[MaxKB 리뷰](/ko/power-local-llm/maxkb-review) — 역시 중국에서 시작된 또 다른 자체 호스팅 지식베이스 질의응답 플랫폼입니다.',

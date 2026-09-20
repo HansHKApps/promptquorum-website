@@ -71,7 +71,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '5,890 GitHub stars as of this review (github.com/Michael-A-Kuykendall/shimmy, verified via GitHub API)',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Shimmy\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Shimmy compares at a glance to dozens of other local AI tools. It is based on Shimmy\'s own README, changelog, and release notes, not hands-on benchmarking by PromptQuorum.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Shimmy\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Shimmy compares at a glance to dozens of other local AI tools. It is based on Shimmy\'s own README, changelog, and release notes, not hands-on benchmarking by PromptQuorum.' },
         ],
       },
       overview: {
@@ -215,7 +215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'llama.cpp', 'Best known for': 'The C/C++ inference engine that Ollama and many other tools are built on top of', 'Link': '[llama.cpp Explained](/power-local-llm/llama-cpp-explained)' },
           { 'Tool': 'LMDeploy', 'Best known for': 'High-throughput LLM serving and quantization, aimed at production workloads', 'Link': '[LMDeploy Review](/power-local-llm/lmdeploy-review)' },
         ],
-        note: 'This is not an exhaustive list of local inference servers — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Shimmy\'s own directory entry.',
+        note: 'This is not an exhaustive list of local inference servers — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Shimmy\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -273,7 +273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama Review](/power-local-llm/ollama-review) — the most widely adopted one-command local LLM runtime, for direct comparison against lightweight Shimmy.',
           '[llama.cpp Explained](/power-local-llm/llama-cpp-explained) — the C/C++ inference engine underlying Ollama and many other local tools, for context on what Shimmy\'s own Rust engine replaces.',
           '[LMDeploy Review](/power-local-llm/lmdeploy-review) — a high-throughput serving and quantization tool for teams with production workloads beyond Shimmy\'s current scope.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -347,7 +347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '5.890 GitHub-Stars zum Zeitpunkt dieser Review (github.com/Michael-A-Kuykendall/shimmy, verifiziert über die GitHub-API)',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der ausführliche Begleitartikel zu Shimmys Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Vergleich von Shimmy mit Dutzenden anderer lokaler KI-Tools. Sie basiert auf Shimmys eigenem README, Changelog und Release Notes, nicht auf praktischen Benchmarks von PromptQuorum.' },
+          { type: 'note', text: 'Diese Review ist der ausführliche Begleitartikel zu Shimmys Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie einen schnellen Vergleich von Shimmy mit Dutzenden anderer lokaler KI-Tools. Sie basiert auf Shimmys eigenem README, Changelog und Release Notes, nicht auf praktischen Benchmarks von PromptQuorum.' },
         ],
       },
       overview: {
@@ -491,7 +491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'llama.cpp', 'Bekannt für': 'Die C/C++-Inferenz-Engine, auf der Ollama und viele andere Tools aufbauen', 'Link': '[llama.cpp Explained](/de/power-local-llm/llama-cpp-explained)' },
           { 'Tool': 'LMDeploy', 'Bekannt für': 'Hochdurchsatz-LLM-Serving und Quantisierung, ausgerichtet auf Produktions-Workloads', 'Link': '[LMDeploy Review](/de/power-local-llm/lmdeploy-review)' },
         ],
-        note: 'Dies ist keine erschöpfende Liste lokaler Inferenzserver — siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Shimmys eigenem Verzeichniseintrag.',
+        note: 'Dies ist keine erschöpfende Liste lokaler Inferenzserver — siehe das [Local LLM Software Directory](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Shimmys eigenem Verzeichniseintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -551,7 +551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama Review](/de/power-local-llm/ollama-review) — die am weitesten verbreitete Ein-Befehl-Laufzeitumgebung für lokale LLMs, zum direkten Vergleich mit dem schlanken Shimmy.',
           '[llama.cpp Explained](/de/power-local-llm/llama-cpp-explained) — die C/C++-Inferenz-Engine, die Ollama und vielen anderen lokalen Tools zugrunde liegt, als Kontext dafür, was Shimmys eigene Rust-Engine ersetzt.',
           '[LMDeploy Review](/de/power-local-llm/lmdeploy-review) — ein Hochdurchsatz-Serving- und Quantisierungs-Tool für Teams mit Produktions-Workloads jenseits von Shimmys aktuellem Umfang.',
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -625,7 +625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '5 890 étoiles GitHub au moment de cette review (github.com/Michael-A-Kuykendall/shimmy, vérifié via l\'API GitHub)',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de l\'entrée de Shimmy dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer Shimmy en un coup d\'œil à des dizaines d\'autres outils d\'IA locale. Elle s\'appuie sur le README, le changelog et les notes de version de Shimmy, pas sur un benchmark pratique réalisé par PromptQuorum.' },
+          { type: 'note', text: 'Cette review est le complément approfondi de l\'entrée de Shimmy dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour comparer Shimmy en un coup d\'œil à des dizaines d\'autres outils d\'IA locale. Elle s\'appuie sur le README, le changelog et les notes de version de Shimmy, pas sur un benchmark pratique réalisé par PromptQuorum.' },
         ],
       },
       overview: {
@@ -769,7 +769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Outil': 'llama.cpp', 'Connu pour': 'Le moteur d\'inférence C/C++ sur lequel Ollama et de nombreux autres outils sont construits', 'Lien': '[llama.cpp Explained](/fr/power-local-llm/llama-cpp-explained)' },
           { 'Outil': 'LMDeploy', 'Connu pour': 'Serving LLM à haut débit et quantification, destiné aux charges de production', 'Lien': '[LMDeploy Review](/fr/power-local-llm/lmdeploy-review)' },
         ],
-        note: 'Ceci n\'est pas une liste exhaustive des serveurs d\'inférence locale — consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, régulièrement mis à jour, incluant la propre fiche de Shimmy dans ce répertoire.',
+        note: 'Ceci n\'est pas une liste exhaustive des serveurs d\'inférence locale — consultez le [Local LLM Software Directory](/fr/directory) pour le catalogue complet, régulièrement mis à jour, incluant la propre fiche de Shimmy dans ce répertoire.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -827,7 +827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama Review](/fr/power-local-llm/ollama-review) — le runtime LLM local en une commande le plus largement adopté, pour une comparaison directe avec le léger Shimmy.',
           '[llama.cpp Explained](/fr/power-local-llm/llama-cpp-explained) — le moteur d\'inférence C/C++ sous-jacent à Ollama et à de nombreux autres outils locaux, pour comprendre ce que remplace le propre moteur Rust de Shimmy.',
           '[LMDeploy Review](/fr/power-local-llm/lmdeploy-review) — un outil de serving et de quantification à haut débit pour les équipes ayant des charges de production dépassant le périmètre actuel de Shimmy.',
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
         ],
       },
     },
@@ -901,7 +901,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'このレビュー時点でGitHubスター数5,890(github.com/Michael-A-Kuykendall/shimmy、GitHub API経由で確認)',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるShimmyの項目を掘り下げた記事です。他の数十のローカルAIツールとの比較の全体像はそちらのページを参照してください。本レビューはShimmy自身のREADME、変更履歴、リリースノートに基づいており、PromptQuorumによる実機ベンチマークではありません。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるShimmyの項目を掘り下げた記事です。他の数十のローカルAIツールとの比較の全体像はそちらのページを参照してください。本レビューはShimmy自身のREADME、変更履歴、リリースノートに基づいており、PromptQuorumによる実機ベンチマークではありません。' },
         ],
       },
       overview: {
@@ -1045,7 +1045,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ツール': 'llama.cpp', '主な特徴': 'Ollamaをはじめ多くのツールが基盤とするC/C++推論エンジン', 'リンク': '[llama.cpp解説](/ja/power-local-llm/llama-cpp-explained)' },
           { 'ツール': 'LMDeploy', '主な特徴': '本番ワークロード向けの高スループットLLM提供と量子化', 'リンク': '[LMDeployレビュー](/ja/power-local-llm/lmdeploy-review)' },
         ],
-        note: 'これはローカル推論サーバーの網羅的なリストではありません。Shimmy自身のディレクトリ項目を含む、定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはローカル推論サーバーの網羅的なリストではありません。Shimmy自身のディレクトリ項目を含む、定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1103,7 +1103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollamaレビュー](/ja/power-local-llm/ollama-review) — 軽量なShimmyと直接比較するための、最も広く採用されているワンコマンドのローカルLLMランタイム。',
           '[llama.cpp解説](/ja/power-local-llm/llama-cpp-explained) — Ollamaをはじめ多くのローカルツールの基盤となっているC/C++推論エンジン。Shimmy独自のRustエンジンが何を置き換えているかを理解する参考として。',
           '[LMDeployレビュー](/ja/power-local-llm/lmdeploy-review) — Shimmyの現在の対象範囲を超える本番ワークロードを持つチーム向けの、高スループットな提供・量子化ツール。',
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの完全なカタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — この記事が属するローカルAIツールの完全なカタログ。',
         ],
       },
     },
@@ -1177,7 +1177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至本评测时,GitHub星标数达5,890(github.com/Michael-A-Kuykendall/shimmy,已通过GitHub API核实)',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Shimmy条目的深度补充——该页面提供了Shimmy与数十款其他本地AI工具的快速对比。本评测基于Shimmy自身的README、更新日志和发布说明,并非PromptQuorum的实测基准测试。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Shimmy条目的深度补充——该页面提供了Shimmy与数十款其他本地AI工具的快速对比。本评测基于Shimmy自身的README、更新日志和发布说明,并非PromptQuorum的实测基准测试。' },
         ],
       },
       overview: {
@@ -1321,7 +1321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '工具': 'llama.cpp', '主要特点': 'Ollama及众多其他工具所基于的C/C++推理引擎', '链接': '[llama.cpp详解](/zh/power-local-llm/llama-cpp-explained)' },
           { '工具': 'LMDeploy', '主要特点': '面向生产环境工作负载的高吞吐量LLM服务与量化工具', '链接': '[LMDeploy评测](/zh/power-local-llm/lmdeploy-review)' },
         ],
-        note: '这并非本地推理服务器的详尽列表——完整且定期更新的目录(包括Shimmy自身在目录中的条目)请参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非本地推理服务器的详尽列表——完整且定期更新的目录(包括Shimmy自身在目录中的条目)请参见[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1379,7 +1379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama评测](/zh/power-local-llm/ollama-review) — 采用最广泛的一键式本地LLM运行环境,可与轻量级的Shimmy直接对比。',
           '[llama.cpp详解](/zh/power-local-llm/llama-cpp-explained) — Ollama及众多其他本地工具所基于的C/C++推理引擎,有助于理解Shimmy自研的Rust引擎所替代的内容。',
           '[LMDeploy评测](/zh/power-local-llm/lmdeploy-review) — 面向超出Shimmy当前范围的生产工作负载团队的高吞吐量服务与量化工具。',
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的本地AI工具完整目录。',
         ],
       },
     },
@@ -1453,7 +1453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '5.890 estrellas en GitHub al momento de esta review (github.com/Michael-A-Kuykendall/shimmy, verificado vía la API de GitHub)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de Shimmy en el [Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara Shimmy de un vistazo con docenas de otras herramientas de IA local. Se basa en el propio README, changelog y notas de versión de Shimmy, no en benchmarks prácticos realizados por PromptQuorum.' },
+          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de Shimmy en el [Directorio de software de LLM local](/es/directory) — consulta esa página para ver cómo se compara Shimmy de un vistazo con docenas de otras herramientas de IA local. Se basa en el propio README, changelog y notas de versión de Shimmy, no en benchmarks prácticos realizados por PromptQuorum.' },
         ],
       },
       overview: {
@@ -1597,7 +1597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': 'llama.cpp', 'Conocida por': 'El motor de inferencia en C/C++ sobre el que se construyen Ollama y muchas otras herramientas', 'Enlace': '[llama.cpp Explained](/es/power-local-llm/llama-cpp-explained)' },
           { 'Herramienta': 'LMDeploy', 'Conocida por': 'Servicio de LLM de alto rendimiento y cuantización, orientado a cargas de trabajo de producción', 'Enlace': '[LMDeploy Review](/es/power-local-llm/lmdeploy-review)' },
         ],
-        note: 'Esta no es una lista exhaustiva de servidores de inferencia local — consulta el [Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, actualizado regularmente, que incluye la propia entrada de Shimmy en el directorio.',
+        note: 'Esta no es una lista exhaustiva de servidores de inferencia local — consulta el [Directorio de software de LLM local](/es/directory) para el catálogo completo, actualizado regularmente, que incluye la propia entrada de Shimmy en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1655,7 +1655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama Review](/es/power-local-llm/ollama-review) — el runtime de LLM local de un comando más adoptado, para una comparación directa con el ligero Shimmy.',
           '[llama.cpp Explained](/es/power-local-llm/llama-cpp-explained) — el motor de inferencia en C/C++ que subyace a Ollama y a muchas otras herramientas locales, como contexto de lo que reemplaza el propio motor Rust de Shimmy.',
           '[LMDeploy Review](/es/power-local-llm/lmdeploy-review) — una herramienta de servicio y cuantización de alto rendimiento para equipos con cargas de trabajo de producción más allá del alcance actual de Shimmy.',
-          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Local LLM Software Directory 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1729,7 +1729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '5.890 estrelas no GitHub no momento desta review (github.com/Michael-A-Kuykendall/shimmy, verificado via API do GitHub)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Shimmy no [Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar o Shimmy rapidamente com dezenas de outras ferramentas de IA local. Ela se baseia no próprio README, changelog e notas de versão do Shimmy, não em benchmarks práticos feitos pela PromptQuorum.' },
+          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Shimmy no [Diretório de software de LLM local](/pt/directory) — veja essa página para comparar o Shimmy rapidamente com dezenas de outras ferramentas de IA local. Ela se baseia no próprio README, changelog e notas de versão do Shimmy, não em benchmarks práticos feitos pela PromptQuorum.' },
         ],
       },
       overview: {
@@ -1873,7 +1873,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': 'llama.cpp', 'Mais conhecida por': 'O motor de inferência C/C++ sobre o qual o Ollama e muitas outras ferramentas são construídos', 'Link': '[llama.cpp Explained](/pt/power-local-llm/llama-cpp-explained)' },
           { 'Ferramenta': 'LMDeploy', 'Mais conhecida por': 'Serving de LLM de alto throughput e quantização, voltado a cargas de trabalho de produção', 'Link': '[LMDeploy Review](/pt/power-local-llm/lmdeploy-review)' },
         ],
-        note: 'Esta não é uma lista exaustiva de servidores de inferência local — veja o [Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, atualizado regularmente, incluindo a própria entrada do Shimmy no diretório.',
+        note: 'Esta não é uma lista exaustiva de servidores de inferência local — veja o [Diretório de software de LLM local](/pt/directory) para o catálogo completo, atualizado regularmente, incluindo a própria entrada do Shimmy no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1931,7 +1931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama Review](/pt/power-local-llm/ollama-review) — o runtime de LLM local de um comando mais amplamente adotado, para comparação direta com o leve Shimmy.',
           '[llama.cpp Explained](/pt/power-local-llm/llama-cpp-explained) — o motor de inferência C/C++ que fundamenta o Ollama e muitas outras ferramentas locais, como contexto sobre o que o próprio motor Rust do Shimmy substitui.',
           '[LMDeploy Review](/pt/power-local-llm/lmdeploy-review) — uma ferramenta de serving e quantização de alto throughput para equipes com cargas de trabalho de produção além do escopo atual do Shimmy.',
-          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Local LLM Software Directory 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -2005,7 +2005,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '5,890 نجمة على GitHub وقت إعداد هذه المراجعة (github.com/Michael-A-Kuykendall/shimmy، تم التحقق عبر واجهة برمجة تطبيقات GitHub)',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المعمّق لمدخل Shimmy في [دليل برامج LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمقارنة سريعة بين Shimmy وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى. تستند هذه المراجعة إلى ملف README الخاص بـ Shimmy وسجل التغييرات وملاحظات الإصدارات، وليس إلى اختبارات أداء عملية أجرتها PromptQuorum.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المعمّق لمدخل Shimmy في [دليل برامج LLM المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة بين Shimmy وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى. تستند هذه المراجعة إلى ملف README الخاص بـ Shimmy وسجل التغييرات وملاحظات الإصدارات، وليس إلى اختبارات أداء عملية أجرتها PromptQuorum.' },
         ],
       },
       overview: {
@@ -2149,7 +2149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': 'llama.cpp', 'الأكثر شهرة بـ': 'محرك الاستدلال بلغتي C وC++ الذي بُني عليه Ollama والعديد من الأدوات الأخرى', 'الرابط': '[شرح llama.cpp](/ar/power-local-llm/llama-cpp-explained)' },
           { 'الأداة': 'LMDeploy', 'الأكثر شهرة بـ': 'تقديم LLM بإنتاجية عالية وتكميم، موجّه لأحمال عمل الإنتاج', 'الرابط': '[مراجعة LMDeploy](/ar/power-local-llm/lmdeploy-review)' },
         ],
-        note: 'هذه ليست قائمة شاملة لخوادم الاستدلال المحلية — راجع [دليل برامج LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل المُحدَّث بانتظام، بما في ذلك مدخل Shimmy نفسه في الدليل.',
+        note: 'هذه ليست قائمة شاملة لخوادم الاستدلال المحلية — راجع [دليل برامج LLM المحلية](/ar/directory) للكتالوج الكامل المُحدَّث بانتظام، بما في ذلك مدخل Shimmy نفسه في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2207,7 +2207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة Ollama](/ar/power-local-llm/ollama-review) — بيئة تشغيل LLM المحلية الأكثر اعتمادًا بأمر واحد، للمقارنة المباشرة مع Shimmy الخفيف.',
           '[شرح llama.cpp](/ar/power-local-llm/llama-cpp-explained) — محرك الاستدلال بلغتي C وC++ الذي يقوم عليه Ollama والعديد من الأدوات المحلية الأخرى، كسياق لما يحل محله محرك Rust الخاص بـ Shimmy.',
           '[مراجعة LMDeploy](/ar/power-local-llm/lmdeploy-review) — أداة تقديم وتكميم بإنتاجية عالية للفرق ذات أحمال عمل إنتاجية تتجاوز نطاق Shimmy الحالي.',
-          '[دليل برامج LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
+          '[دليل برامج LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
         ],
       },
     },
@@ -2281,7 +2281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이 리뷰 작성 시점 기준 GitHub 스타 5,890개(github.com/Michael-A-Kuykendall/shimmy, GitHub API로 확인)',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 Shimmy 항목의 심층 보완 자료입니다. 다른 수십 개의 로컬 AI 도구와 Shimmy를 한눈에 비교하려면 해당 페이지를 참고하십시오. 이 리뷰는 Shimmy 자체의 README, 변경 이력, 릴리스 노트에 기반한 것이며 PromptQuorum이 직접 진행한 벤치마크가 아닙니다.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Shimmy 항목의 심층 보완 자료입니다. 다른 수십 개의 로컬 AI 도구와 Shimmy를 한눈에 비교하려면 해당 페이지를 참고하십시오. 이 리뷰는 Shimmy 자체의 README, 변경 이력, 릴리스 노트에 기반한 것이며 PromptQuorum이 직접 진행한 벤치마크가 아닙니다.' },
         ],
       },
       overview: {
@@ -2425,7 +2425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': 'llama.cpp', '주요 특징': 'Ollama를 비롯한 많은 도구가 기반으로 삼는 C/C++ 추론 엔진', '링크': '[llama.cpp 설명](/ko/power-local-llm/llama-cpp-explained)' },
           { '도구': 'LMDeploy', '주요 특징': '프로덕션 워크로드를 겨냥한 고처리량 LLM 서빙 및 양자화', '링크': '[LMDeploy 리뷰](/ko/power-local-llm/lmdeploy-review)' },
         ],
-        note: '이는 로컬 추론 서버의 총망라 목록이 아닙니다 — Shimmy 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.',
+        note: '이는 로컬 추론 서버의 총망라 목록이 아닙니다 — Shimmy 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2483,7 +2483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Ollama 리뷰](/ko/power-local-llm/ollama-review) — 경량 Shimmy와 직접 비교하기 위한, 가장 널리 채택된 원 커맨드 로컬 LLM 런타임.',
           '[llama.cpp 설명](/ko/power-local-llm/llama-cpp-explained) — Ollama를 비롯한 많은 로컬 도구가 기반으로 삼는 C/C++ 추론 엔진으로, Shimmy 자체 Rust 엔진이 대체하는 것이 무엇인지 이해하기 위한 배경 자료.',
           '[LMDeploy 리뷰](/ko/power-local-llm/lmdeploy-review) — Shimmy의 현재 범위를 넘어서는 프로덕션 워크로드를 가진 팀을 위한 고처리량 서빙 및 양자화 도구.',
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 문서가 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 문서가 속한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },

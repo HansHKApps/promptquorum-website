@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Zilliz Cloud](https://zilliz.com/cloud) is a separate, optional managed-hosting service from Zilliz — not required to run Milvus yourself',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Milvus\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Milvus compares at a glance to dozens of other local AI tools, including other vector databases.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Milvus\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Milvus compares at a glance to dozens of other local AI tools, including other vector databases.' },
         ],
       },
       overview: {
@@ -213,13 +213,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'milvus-competitors',
         title: 'Milvus vs. Other Vector Databases',
-        content: 'Milvus is one of several open-source vector databases commonly used in local and self-hosted RAG stacks. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, and the dedicated [Milvus vs. Qdrant comparison](#milvus-vs-qdrant) above for the closest head-to-head.',
+        content: 'Milvus is one of several open-source vector databases commonly used in local and self-hosted RAG stacks. See the [Local LLM Software Directory](/directory) for the full catalog, and the dedicated [Milvus vs. Qdrant comparison](#milvus-vs-qdrant) above for the closest head-to-head.',
         items: [
           '**[Qdrant](https://qdrant.tech)** — a Rust-based open-source vector database with a simpler operational footprint, popular for small-to-mid-scale self-hosted RAG; see the dedicated comparison section above and the [Qdrant review](/power-local-llm/qdrant-review).',
           '**[Chroma](https://www.trychroma.com)** — a lightweight, developer-friendly open-source embedding database often used for quick local RAG prototyping; see the [Chroma review](/power-local-llm/chroma-review).',
           '**[txtai](https://neuml.github.io/txtai)** — an embedded, Python-native vector/semantic-search library that runs in-process rather than as a separate server, a lighter-weight alternative for smaller local projects; see the [txtai review](/power-local-llm/txtai-embedded-vector-database-review).',
         ],
-        note: 'This is not an exhaustive list of open-source vector databases — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Milvus\'s own directory entry. (Editorial note: the Qdrant and Chroma reviews linked above are being published in the same content batch as this Milvus review and may not be live yet at every moment between publication — txtai\'s review is the one same-segment vector-database review already live on PromptQuorum as of this review\'s publish date.)',
+        note: 'This is not an exhaustive list of open-source vector databases — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Milvus\'s own directory entry. (Editorial note: the Qdrant and Chroma reviews linked above are being published in the same content batch as this Milvus review and may not be live yet at every moment between publication — txtai\'s review is the one same-segment vector-database review already live on PromptQuorum as of this review\'s publish date.)',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -279,7 +279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Milvus\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Milvus\'s directory entry.',
           '[Qdrant Review](/power-local-llm/qdrant-review) — a Rust-based open-source vector database with a lighter operational footprint, compared directly against Milvus above.',
           '[Chroma Review](/power-local-llm/chroma-review) — a lightweight, developer-friendly open-source embedding database popular for local RAG prototyping.',
           '[txtai Review](/power-local-llm/txtai-embedded-vector-database-review) — an embedded, Python-native vector-search library that runs in-process rather than as a separate server.',
@@ -358,7 +358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Zilliz Cloud](https://zilliz.com/cloud) ist ein separater, optionaler verwalteter Hosting-Dienst von Zilliz — nicht erforderlich, um Milvus selbst zu betreiben',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test ist der vertiefende Begleitartikel zu Milvus\' Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort sieht man auf einen Blick, wie Milvus im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet, einschließlich anderer Vektordatenbanken.' },
+          { type: 'note', text: 'Dieser Test ist der vertiefende Begleitartikel zu Milvus\' Eintrag im [Local LLM Software Directory](/de/directory) — dort sieht man auf einen Blick, wie Milvus im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet, einschließlich anderer Vektordatenbanken.' },
         ],
       },
       overview: {
@@ -498,13 +498,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'milvus-competitors',
         title: 'Milvus vs. andere Vektordatenbanken',
-        content: 'Milvus ist eine von mehreren quelloffenen Vektordatenbanken, die häufig in lokalen und selbst gehosteten RAG-Stacks eingesetzt werden. Siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog und den dedizierten [Milvus-vs.-Qdrant-Vergleich](#milvus-vs-qdrant) oben für den nächstliegenden direkten Vergleich.',
+        content: 'Milvus ist eine von mehreren quelloffenen Vektordatenbanken, die häufig in lokalen und selbst gehosteten RAG-Stacks eingesetzt werden. Siehe das [Local LLM Software Directory](/de/directory) für den vollständigen Katalog und den dedizierten [Milvus-vs.-Qdrant-Vergleich](#milvus-vs-qdrant) oben für den nächstliegenden direkten Vergleich.',
         items: [
           '**[Qdrant](https://qdrant.tech)** — eine in Rust geschriebene quelloffene Vektordatenbank mit einfacherem operativem Footprint, beliebt für selbst gehostetes RAG im kleinen bis mittleren Maßstab; siehe den dedizierten Vergleichsabschnitt oben und den [Qdrant-Test](/de/power-local-llm/qdrant-review).',
           '**[Chroma](https://www.trychroma.com)** — eine leichtgewichtige, entwicklerfreundliche quelloffene Embedding-Datenbank, oft für schnelles lokales RAG-Prototyping genutzt; siehe den [Chroma-Test](/de/power-local-llm/chroma-review).',
           '**[txtai](https://neuml.github.io/txtai)** — eine eingebettete, Python-native Vektor-/Semantiksuche-Bibliothek, die in-process statt als separater Server läuft, eine leichtgewichtigere Alternative für kleinere lokale Projekte; siehe den [txtai-Test](/de/power-local-llm/txtai-embedded-vector-database-review).',
         ],
-        note: 'Dies ist keine vollständige Liste quelloffener Vektordatenbanken — siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Milvus\' eigenem Directory-Eintrag. (Redaktioneller Hinweis: Die oben verlinkten Tests zu Qdrant und Chroma werden im selben Content-Batch wie dieser Milvus-Test veröffentlicht und sind möglicherweise nicht zu jedem Zeitpunkt zwischen den Veröffentlichungen bereits live — txtais Test ist der eine bereits live verfügbare Vektordatenbank-Test im selben Segment auf PromptQuorum, Stand des Veröffentlichungsdatums dieses Tests.)',
+        note: 'Dies ist keine vollständige Liste quelloffener Vektordatenbanken — siehe das [Local LLM Software Directory](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Milvus\' eigenem Directory-Eintrag. (Redaktioneller Hinweis: Die oben verlinkten Tests zu Qdrant und Chroma werden im selben Content-Batch wie dieser Milvus-Test veröffentlicht und sind möglicherweise nicht zu jedem Zeitpunkt zwischen den Veröffentlichungen bereits live — txtais Test ist der eine bereits live verfügbare Vektordatenbank-Test im selben Segment auf PromptQuorum, Stand des Veröffentlichungsdatums dieses Tests.)',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -564,7 +564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Milvus\' Directory-Eintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Milvus\' Directory-Eintrag.',
           '[Qdrant-Test](/de/power-local-llm/qdrant-review) — eine in Rust geschriebene quelloffene Vektordatenbank mit leichterem operativem Footprint, oben direkt mit Milvus verglichen.',
           '[Chroma-Test](/de/power-local-llm/chroma-review) — eine leichtgewichtige, entwicklerfreundliche quelloffene Embedding-Datenbank, beliebt für lokales RAG-Prototyping.',
           '[txtai-Test](/de/power-local-llm/txtai-embedded-vector-database-review) — eine eingebettete, Python-native Vektorsuche-Bibliothek, die in-process statt als separater Server läuft.',
@@ -643,7 +643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Zilliz Cloud](https://zilliz.com/cloud) est un service d\'hébergement géré séparé et optionnel de Zilliz — non requis pour exécuter Milvus vous-même',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de Milvus dans l\'[annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment Milvus se compare en un coup d\'œil à des dizaines d\'autres outils IA locaux, y compris d\'autres bases de données vectorielles.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de Milvus dans l\'[annuaire des logiciels LLM locaux](/fr/directory) — consultez cette page pour voir comment Milvus se compare en un coup d\'œil à des dizaines d\'autres outils IA locaux, y compris d\'autres bases de données vectorielles.' },
         ],
       },
       overview: {
@@ -783,13 +783,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'milvus-competitors',
         title: 'Milvus vs. autres bases de données vectorielles',
-        content: 'Milvus est l\'une des nombreuses bases de données vectorielles open source couramment utilisées dans les piles RAG locales et auto-hébergées. Voir l\'[annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, et la [comparaison dédiée Milvus vs. Qdrant](#milvus-vs-qdrant) ci-dessus pour le face-à-face le plus proche.',
+        content: 'Milvus est l\'une des nombreuses bases de données vectorielles open source couramment utilisées dans les piles RAG locales et auto-hébergées. Voir l\'[annuaire des logiciels LLM locaux](/fr/directory) pour le catalogue complet, et la [comparaison dédiée Milvus vs. Qdrant](#milvus-vs-qdrant) ci-dessus pour le face-à-face le plus proche.',
         items: [
           '**[Qdrant](https://qdrant.tech)** — une base de données vectorielle open source basée sur Rust avec une empreinte opérationnelle plus simple, populaire pour le RAG auto-hébergé de petite à moyenne échelle ; voir la section de comparaison dédiée ci-dessus et l\'[avis Qdrant](/fr/power-local-llm/qdrant-review).',
           '**[Chroma](https://www.trychroma.com)** — une base de données d\'embeddings open source légère et conviviale pour les développeurs, souvent utilisée pour le prototypage RAG local rapide ; voir l\'[avis Chroma](/fr/power-local-llm/chroma-review).',
           '**[txtai](https://neuml.github.io/txtai)** — une bibliothèque de recherche vectorielle/sémantique embarquée et native Python qui s\'exécute en processus plutôt que comme un serveur séparé, une alternative plus légère pour les plus petits projets locaux ; voir l\'[avis txtai](/fr/power-local-llm/txtai-embedded-vector-database-review).',
         ],
-        note: 'Ce n\'est pas une liste exhaustive des bases de données vectorielles open source — voir l\'[annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, y compris l\'entrée propre de Milvus dans l\'annuaire. (Note éditoriale : les avis Qdrant et Chroma liés ci-dessus sont publiés dans le même lot de contenu que cet avis Milvus et pourraient ne pas encore être en ligne à chaque instant entre les publications — l\'avis txtai est le seul avis de base de données vectorielle du même segment déjà en ligne sur PromptQuorum à la date de parution de cet avis.)',
+        note: 'Ce n\'est pas une liste exhaustive des bases de données vectorielles open source — voir l\'[annuaire des logiciels LLM locaux](/fr/directory) pour le catalogue complet et régulièrement mis à jour, y compris l\'entrée propre de Milvus dans l\'annuaire. (Note éditoriale : les avis Qdrant et Chroma liés ci-dessus sont publiés dans le même lot de contenu que cet avis Milvus et pourraient ne pas encore être en ligne à chaque instant entre les publications — l\'avis txtai est le seul avis de base de données vectorielle du même segment déjà en ligne sur PromptQuorum à la date de parution de cet avis.)',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -849,7 +849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Annuaire des logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils IA locaux auquel appartient cet article, y compris l\'entrée d\'annuaire de Milvus.',
+          '[Annuaire des logiciels LLM locaux 2026](/fr/directory) — le catalogue complet des outils IA locaux auquel appartient cet article, y compris l\'entrée d\'annuaire de Milvus.',
           '[Avis Qdrant](/fr/power-local-llm/qdrant-review) — une base de données vectorielle open source basée sur Rust avec une empreinte opérationnelle plus légère, comparée directement à Milvus ci-dessus.',
           '[Avis Chroma](/fr/power-local-llm/chroma-review) — une base de données d\'embeddings open source légère et conviviale pour les développeurs, populaire pour le prototypage RAG local.',
           '[Avis txtai](/fr/power-local-llm/txtai-embedded-vector-database-review) — une bibliothèque de recherche vectorielle embarquée et native Python qui s\'exécute en processus plutôt que comme un serveur séparé.',
@@ -928,7 +928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Zilliz Cloud](https://zilliz.com/cloud)はZillizが提供する別個の任意のマネージドホスティングサービスであり、Milvus自体を運用するために必須ではない',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるMilvusのエントリーを掘り下げた詳細版です。Milvusが他のベクトルデータベースを含む数十種類のローカルAIツールと比べてどう位置づけられるかは、そちらのページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるMilvusのエントリーを掘り下げた詳細版です。Milvusが他のベクトルデータベースを含む数十種類のローカルAIツールと比べてどう位置づけられるかは、そちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1068,13 +1068,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'milvus-competitors',
         title: 'Milvusと他のベクトルデータベースの比較',
-        content: 'Milvusは、ローカルやセルフホストのRAGスタックで一般的に使われる、複数のオープンソースベクトルデータベースの1つです。全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を、最も近い一騎討ちの比較は上記の専用[Milvus vs. Qdrant比較](#milvus-vs-qdrant)を参照してください。',
+        content: 'Milvusは、ローカルやセルフホストのRAGスタックで一般的に使われる、複数のオープンソースベクトルデータベースの1つです。全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を、最も近い一騎討ちの比較は上記の専用[Milvus vs. Qdrant比較](#milvus-vs-qdrant)を参照してください。',
         items: [
           '**[Qdrant](https://qdrant.tech)** — Rustベースのオープンソースベクトルデータベースで、よりシンプルな運用負荷を持ち、小〜中規模のセルフホストRAGで人気。上記の専用比較セクションと[Qdrantレビュー](/ja/power-local-llm/qdrant-review)を参照。',
           '**[Chroma](https://www.trychroma.com)** — 軽量で開発者に扱いやすいオープンソースのエンベディングデータベースで、ローカルRAGの手早い試作によく使われる。[Chromaレビュー](/ja/power-local-llm/chroma-review)を参照。',
           '**[txtai](https://neuml.github.io/txtai)** — 独立したサーバーとしてではなくプロセス内で動作する、組み込み型でPythonネイティブなベクトル/セマンティック検索ライブラリで、より小規模なローカルプロジェクト向けの軽量な代替。[txtaiレビュー](/ja/power-local-llm/txtai-embedded-vector-database-review)を参照。',
         ],
-        note: 'これはオープンソースのベクトルデータベースの網羅的なリストではありません。Milvus自体のディレクトリエントリーを含む全カタログは、定期的に更新される[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。（編集部注：上記でリンクしているQdrantとChromaのレビューは、このMilvusレビューと同じコンテンツバッチで公開作業が進んでおり、公開までの間は常に公開済みとは限りません。txtaiのレビューは、このレビューの公開日時点でPromptQuorum上にすでに公開されている、同セグメントのベクトルデータベースレビューです。）',
+        note: 'これはオープンソースのベクトルデータベースの網羅的なリストではありません。Milvus自体のディレクトリエントリーを含む全カタログは、定期的に更新される[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。（編集部注：上記でリンクしているQdrantとChromaのレビューは、このMilvusレビューと同じコンテンツバッチで公開作業が進んでおり、公開までの間は常に公開済みとは限りません。txtaiのレビューは、このレビューの公開日時点でPromptQuorum上にすでに公開されている、同セグメントのベクトルデータベースレビューです。）',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1134,7 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの全カタログ。Milvusのディレクトリエントリーを含む。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — この記事が属する、ローカルAIツールの全カタログ。Milvusのディレクトリエントリーを含む。',
           '[Qdrantレビュー](/ja/power-local-llm/qdrant-review) — Rustベースのオープンソースベクトルデータベースで、運用負荷が軽く、上記でMilvusと直接比較。',
           '[Chromaレビュー](/ja/power-local-llm/chroma-review) — 軽量で開発者に扱いやすいオープンソースのエンベディングデータベースで、ローカルRAGの試作で人気。',
           '[txtaiレビュー](/ja/power-local-llm/txtai-embedded-vector-database-review) — 独立したサーバーとしてではなくプロセス内で動作する、組み込み型でPythonネイティブなベクトル検索ライブラリ。',
@@ -1213,7 +1213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Zilliz Cloud](https://zilliz.com/cloud) 是 Zilliz 提供的独立可选托管服务——并非自行运行 Milvus 的必要条件',
         ],
         callouts: [
-          { type: 'note', text: '本评测是 Milvus 在[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)中条目的深度补充——该页面可让你一览 Milvus 与其他数十款本地 AI 工具（包括其他向量数据库）的对比。' },
+          { type: 'note', text: '本评测是 Milvus 在[本地 LLM 软件目录](/zh/directory)中条目的深度补充——该页面可让你一览 Milvus 与其他数十款本地 AI 工具（包括其他向量数据库）的对比。' },
         ],
       },
       overview: {
@@ -1353,13 +1353,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'milvus-competitors',
         title: 'Milvus 对比其他向量数据库',
-        content: 'Milvus 是本地及自托管 RAG 技术栈中常用的多款开源向量数据库之一。完整目录请参见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)，最接近的正面对比请参见上方专门的 [Milvus 对比 Qdrant](#milvus-vs-qdrant) 章节。',
+        content: 'Milvus 是本地及自托管 RAG 技术栈中常用的多款开源向量数据库之一。完整目录请参见[本地 LLM 软件目录](/zh/directory)，最接近的正面对比请参见上方专门的 [Milvus 对比 Qdrant](#milvus-vs-qdrant) 章节。',
         items: [
           '**[Qdrant](https://qdrant.tech)**——一款基于 Rust 的开源向量数据库，运维更简单，在中小规模自托管 RAG 场景中很受欢迎；参见上方专门的对比章节和 [Qdrant 评测](/zh/power-local-llm/qdrant-review)。',
           '**[Chroma](https://www.trychroma.com)**——一款轻量、对开发者友好的开源嵌入数据库，常用于快速的本地 RAG 原型开发；参见 [Chroma 评测](/zh/power-local-llm/chroma-review)。',
           '**[txtai](https://neuml.github.io/txtai)**——一款嵌入式、Python 原生的向量/语义搜索库，以进程内方式运行而非作为独立服务器，适合小型本地项目的更轻量替代方案；参见 [txtai 评测](/zh/power-local-llm/txtai-embedded-vector-database-review)。',
         ],
-        note: '这并非开源向量数据库的完整列表——完整且持续更新的目录，包括 Milvus 自己的条目，请参见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)。（编辑说明：上方链接的 Qdrant 和 Chroma 评测与本篇 Milvus 评测属于同一批次发布的内容，在发布过程中的某些时间点可能尚未全部上线——截至本评测发布之日，txtai 的评测是该细分领域中唯一已经在 PromptQuorum 上线的同类向量数据库评测。）',
+        note: '这并非开源向量数据库的完整列表——完整且持续更新的目录，包括 Milvus 自己的条目，请参见[本地 LLM 软件目录](/zh/directory)。（编辑说明：上方链接的 Qdrant 和 Chroma 评测与本篇 Milvus 评测属于同一批次发布的内容，在发布过程中的某些时间点可能尚未全部上线——截至本评测发布之日，txtai 的评测是该细分领域中唯一已经在 PromptQuorum 上线的同类向量数据库评测。）',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1419,7 +1419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026 本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)——本文所属的本地 AI 工具完整目录，包含 Milvus 的目录条目。',
+          '[2026 本地 LLM 软件目录](/zh/directory)——本文所属的本地 AI 工具完整目录，包含 Milvus 的目录条目。',
           '[Qdrant 评测](/zh/power-local-llm/qdrant-review)——一款基于 Rust 的开源向量数据库，运维负担更轻，与 Milvus 的直接对比见上文。',
           '[Chroma 评测](/zh/power-local-llm/chroma-review)——一款轻量、对开发者友好的开源嵌入数据库，在本地 RAG 原型开发中很受欢迎。',
           '[txtai 评测](/zh/power-local-llm/txtai-embedded-vector-database-review)——一款嵌入式、Python 原生的向量检索库，以进程内方式运行而非作为独立服务器。',
@@ -1498,7 +1498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Zilliz Cloud](https://zilliz.com/cloud) es un servicio de hospedaje gestionado independiente y opcional de Zilliz, no necesario para ejecutar Milvus por tu cuenta',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de Milvus en el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara Milvus con docenas de otras herramientas de IA local, incluidas otras bases de datos vectoriales.' },
+          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de Milvus en el [Directorio de Software LLM Local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara Milvus con docenas de otras herramientas de IA local, incluidas otras bases de datos vectoriales.' },
         ],
       },
       overview: {
@@ -1638,13 +1638,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'milvus-competitors',
         title: 'Milvus vs. Otras Bases de Datos Vectoriales',
-        content: 'Milvus es una de varias bases de datos vectoriales de código abierto usadas habitualmente en stacks RAG locales y autoalojados. Consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para ver el catálogo completo, y la [comparación dedicada Milvus vs. Qdrant](#milvus-vs-qdrant) más arriba para el enfrentamiento directo más cercano.',
+        content: 'Milvus es una de varias bases de datos vectoriales de código abierto usadas habitualmente en stacks RAG locales y autoalojados. Consulta el [Directorio de Software LLM Local](/es/directory) para ver el catálogo completo, y la [comparación dedicada Milvus vs. Qdrant](#milvus-vs-qdrant) más arriba para el enfrentamiento directo más cercano.',
         items: [
           '**[Qdrant](https://qdrant.tech)** — una base de datos vectorial de código abierto basada en Rust con una huella operativa más sencilla, popular para RAG autoalojado de pequeña a mediana escala; consulta la sección de comparación dedicada más arriba y la [reseña de Qdrant](/es/power-local-llm/qdrant-review).',
           '**[Chroma](https://www.trychroma.com)** — una base de datos de embeddings de código abierto ligera y fácil de usar para desarrolladores, usada a menudo para prototipos RAG locales rápidos; consulta la [reseña de Chroma](/es/power-local-llm/chroma-review).',
           '**[txtai](https://neuml.github.io/txtai)** — una librería embebida y nativa de Python para búsqueda vectorial/semántica que se ejecuta dentro del proceso en lugar de como un servidor separado, una alternativa más ligera para proyectos locales más pequeños; consulta la [reseña de txtai](/es/power-local-llm/txtai-embedded-vector-database-review).',
         ],
-        note: 'Esta no es una lista exhaustiva de bases de datos vectoriales de código abierto; consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para ver el catálogo completo y actualizado regularmente, incluida la entrada propia de Milvus en el directorio. (Nota editorial: las reseñas de Qdrant y Chroma enlazadas arriba se están publicando en el mismo lote de contenido que esta reseña de Milvus y puede que no estén activas en todo momento entre la publicación; la reseña de txtai es la única reseña de base de datos vectorial del mismo segmento ya activa en PromptQuorum a la fecha de publicación de esta reseña.)',
+        note: 'Esta no es una lista exhaustiva de bases de datos vectoriales de código abierto; consulta el [Directorio de Software LLM Local](/es/directory) para ver el catálogo completo y actualizado regularmente, incluida la entrada propia de Milvus en el directorio. (Nota editorial: las reseñas de Qdrant y Chroma enlazadas arriba se están publicando en el mismo lote de contenido que esta reseña de Milvus y puede que no estén activas en todo momento entre la publicación; la reseña de txtai es la única reseña de base de datos vectorial del mismo segmento ya activa en PromptQuorum a la fecha de publicación de esta reseña.)',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1704,7 +1704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas Relacionadas',
         items: [
-          '[Directorio de Software LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de Milvus en el directorio.',
+          '[Directorio de Software LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de Milvus en el directorio.',
           '[Reseña de Qdrant](/es/power-local-llm/qdrant-review) — una base de datos vectorial de código abierto basada en Rust con una huella operativa más ligera, comparada directamente con Milvus más arriba.',
           '[Reseña de Chroma](/es/power-local-llm/chroma-review) — una base de datos de embeddings de código abierto ligera y fácil de usar para desarrolladores, popular para prototipos RAG locales.',
           '[Reseña de txtai](/es/power-local-llm/txtai-embedded-vector-database-review) — una librería de búsqueda vectorial embebida y nativa de Python que se ejecuta dentro del proceso en lugar de como un servidor separado.',
@@ -1783,7 +1783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O [Zilliz Cloud](https://zilliz.com/cloud) é um serviço de hospedagem gerenciada separado e opcional da Zilliz — não é necessário para rodar o Milvus por conta própria',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o aprofundamento complementar à entrada do Milvus no [Diretório de Softwares de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar o Milvus rapidamente com dezenas de outras ferramentas locais de IA, incluindo outros bancos de dados vetoriais.' },
+          { type: 'note', text: 'Esta análise é o aprofundamento complementar à entrada do Milvus no [Diretório de Softwares de LLM Local](/pt/directory) — veja essa página para comparar o Milvus rapidamente com dezenas de outras ferramentas locais de IA, incluindo outros bancos de dados vetoriais.' },
         ],
       },
       overview: {
@@ -1923,13 +1923,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'milvus-competitors',
         title: 'Milvus vs. Outros Bancos de Dados Vetoriais',
-        content: 'O Milvus é um dos vários bancos de dados vetoriais de código aberto comumente usados em stacks de RAG locais e self-hosted. Veja o [Diretório de Softwares de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, e a [comparação dedicada Milvus vs. Qdrant](#milvus-vs-qdrant) acima para o confronto direto mais próximo.',
+        content: 'O Milvus é um dos vários bancos de dados vetoriais de código aberto comumente usados em stacks de RAG locais e self-hosted. Veja o [Diretório de Softwares de LLM Local](/pt/directory) para o catálogo completo, e a [comparação dedicada Milvus vs. Qdrant](#milvus-vs-qdrant) acima para o confronto direto mais próximo.',
         items: [
           '**[Qdrant](https://qdrant.tech)** — um banco de dados vetorial de código aberto baseado em Rust, com uma pegada operacional mais simples, popular para RAG self-hosted de pequena e média escala; veja a seção de comparação dedicada acima e a [análise do Qdrant](/pt/power-local-llm/qdrant-review).',
           '**[Chroma](https://www.trychroma.com)** — um banco de dados de embeddings leve e amigável para desenvolvedores, de código aberto, frequentemente usado para prototipagem rápida de RAG local; veja a [análise do Chroma](/pt/power-local-llm/chroma-review).',
           '**[txtai](https://neuml.github.io/txtai)** — uma biblioteca embarcada de busca vetorial/semântica nativa em Python que roda no mesmo processo em vez de como um servidor separado, uma alternativa mais leve para projetos locais menores; veja a [análise do txtai](/pt/power-local-llm/txtai-embedded-vector-database-review).',
         ],
-        note: 'Esta não é uma lista exaustiva de bancos de dados vetoriais de código aberto — veja o [Diretório de Softwares de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e regularmente atualizado, incluindo a própria entrada do Milvus no diretório. (Nota editorial: as análises do Qdrant e do Chroma linkadas acima estão sendo publicadas no mesmo lote de conteúdo desta análise do Milvus e podem ainda não estar no ar em todo momento entre as publicações — a análise do txtai é a única análise do mesmo segmento de banco de dados vetorial já no ar na PromptQuorum na data de publicação desta análise.)',
+        note: 'Esta não é uma lista exaustiva de bancos de dados vetoriais de código aberto — veja o [Diretório de Softwares de LLM Local](/pt/directory) para o catálogo completo e regularmente atualizado, incluindo a própria entrada do Milvus no diretório. (Nota editorial: as análises do Qdrant e do Chroma linkadas acima estão sendo publicadas no mesmo lote de conteúdo desta análise do Milvus e podem ainda não estar no ar em todo momento entre as publicações — a análise do txtai é a única análise do mesmo segmento de banco de dados vetorial já no ar na PromptQuorum na data de publicação desta análise.)',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1989,7 +1989,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura Relacionada',
         items: [
-          '[Diretório de Softwares de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas locais de IA ao qual este artigo pertence, incluindo a entrada do Milvus no diretório.',
+          '[Diretório de Softwares de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas locais de IA ao qual este artigo pertence, incluindo a entrada do Milvus no diretório.',
           '[Análise do Qdrant](/pt/power-local-llm/qdrant-review) — um banco de dados vetorial de código aberto baseado em Rust, com uma pegada operacional mais leve, comparado diretamente ao Milvus acima.',
           '[Análise do Chroma](/pt/power-local-llm/chroma-review) — um banco de dados de embeddings leve e amigável para desenvolvedores, de código aberto, popular para prototipagem local de RAG.',
           '[Análise do txtai](/pt/power-local-llm/txtai-embedded-vector-database-review) — uma biblioteca embarcada de busca vetorial nativa em Python que roda no mesmo processo em vez de como um servidor separado.',
@@ -2068,7 +2068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Zilliz Cloud](https://zilliz.com/cloud) خدمة استضافة مُدارة منفصلة واختيارية من Zilliz — وليست مطلوبة لتشغيل Milvus بنفسك',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الرفيقة المتعمقة لمدخل Milvus في [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن Milvus بلمحة سريعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى، بما في ذلك قواعد بيانات متجهية أخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي الرفيقة المتعمقة لمدخل Milvus في [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن Milvus بلمحة سريعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى، بما في ذلك قواعد بيانات متجهية أخرى.' },
         ],
       },
       overview: {
@@ -2208,13 +2208,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'milvus-competitors',
         title: 'Milvus مقابل قواعد البيانات المتجهية الأخرى',
-        content: 'Milvus واحدة من عدة قواعد بيانات متجهية مفتوحة المصدر شائعة الاستخدام في حزم RAG المحلية وذاتية الاستضافة. راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل، و[مقارنة Milvus مقابل Qdrant](#milvus-vs-qdrant) المخصصة أعلاه للاطلاع على أقرب مواجهة مباشرة.',
+        content: 'Milvus واحدة من عدة قواعد بيانات متجهية مفتوحة المصدر شائعة الاستخدام في حزم RAG المحلية وذاتية الاستضافة. راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) للاطلاع على الكتالوج الكامل، و[مقارنة Milvus مقابل Qdrant](#milvus-vs-qdrant) المخصصة أعلاه للاطلاع على أقرب مواجهة مباشرة.',
         items: [
           '**[Qdrant](https://qdrant.tech)** — قاعدة بيانات متجهية مفتوحة المصدر مكتوبة بلغة Rust ذات بصمة تشغيلية أبسط، شائعة لتطبيقات RAG ذاتية الاستضافة صغيرة إلى متوسطة النطاق؛ راجع قسم المقارنة المخصص أعلاه و[مراجعة Qdrant](/ar/power-local-llm/qdrant-review).',
           '**[Chroma](https://www.trychroma.com)** — قاعدة بيانات تضمين مفتوحة المصدر خفيفة وسهلة للمطورين، تُستخدم غالبًا للنماذج الأولية السريعة لـ RAG المحلي؛ راجع [مراجعة Chroma](/ar/power-local-llm/chroma-review).',
           '**[txtai](https://neuml.github.io/txtai)** — مكتبة بحث متجهي/دلالي مضمّنة وأصيلة بلغة Python تعمل ضمن العملية نفسها بدلًا من خادم منفصل، بديل أخف للمشاريع المحلية الأصغر؛ راجع [مراجعة txtai](/ar/power-local-llm/txtai-embedded-vector-database-review).',
         ],
-        note: 'هذه ليست قائمة شاملة لقواعد البيانات المتجهية مفتوحة المصدر — راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل المحدَّث بانتظام، بما في ذلك مدخل Milvus الخاص به. (ملاحظة تحريرية: تُنشَر مراجعتا Qdrant وChroma المرتبطتان أعلاه ضمن الدفعة المحتوى نفسها التي تضم مراجعة Milvus هذه وقد لا تكونان مباشرتين بعد في كل لحظة بين النشر — مراجعة txtai هي مراجعة قاعدة البيانات المتجهية الوحيدة من القطاع نفسه المباشرة فعليًا على PromptQuorum حتى تاريخ نشر هذه المراجعة.)',
+        note: 'هذه ليست قائمة شاملة لقواعد البيانات المتجهية مفتوحة المصدر — راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) للاطلاع على الكتالوج الكامل المحدَّث بانتظام، بما في ذلك مدخل Milvus الخاص به. (ملاحظة تحريرية: تُنشَر مراجعتا Qdrant وChroma المرتبطتان أعلاه ضمن الدفعة المحتوى نفسها التي تضم مراجعة Milvus هذه وقد لا تكونان مباشرتين بعد في كل لحظة بين النشر — مراجعة txtai هي مراجعة قاعدة البيانات المتجهية الوحيدة من القطاع نفسه المباشرة فعليًا على PromptQuorum حتى تاريخ نشر هذه المراجعة.)',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2274,7 +2274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي تنتمي إليها هذه المقالة، بما في ذلك مدخل Milvus.',
+          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي تنتمي إليها هذه المقالة، بما في ذلك مدخل Milvus.',
           '[مراجعة Qdrant](/ar/power-local-llm/qdrant-review) — قاعدة بيانات متجهية مفتوحة المصدر مكتوبة بلغة Rust ذات بصمة تشغيلية أخف، تمت مقارنتها مباشرة بـ Milvus أعلاه.',
           '[مراجعة Chroma](/ar/power-local-llm/chroma-review) — قاعدة بيانات تضمين مفتوحة المصدر خفيفة وسهلة للمطورين، شائعة للنماذج الأولية المحلية لـ RAG.',
           '[مراجعة txtai](/ar/power-local-llm/txtai-embedded-vector-database-review) — مكتبة بحث متجهي مضمّنة وأصيلة بلغة Python تعمل ضمن العملية نفسها بدلًا من خادم منفصل.',
@@ -2353,7 +2353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Zilliz Cloud](https://zilliz.com/cloud)는 Zilliz가 제공하는 별도의 선택적 관리형 호스팅 서비스로, Milvus를 직접 운영하는 데는 필요하지 않음',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 실린 Milvus 항목의 심층 분석판입니다 — Milvus가 다른 벡터 데이터베이스를 포함한 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 실린 Milvus 항목의 심층 분석판입니다 — Milvus가 다른 벡터 데이터베이스를 포함한 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2493,13 +2493,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'milvus-competitors',
         title: 'Milvus vs. 다른 벡터 데이터베이스',
-        content: 'Milvus는 로컬 및 셀프 호스팅 RAG 스택에서 흔히 사용되는 여러 오픈소스 벡터 데이터베이스 중 하나입니다. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를, 가장 가까운 직접 비교는 위의 전용 [Milvus vs. Qdrant 비교](#milvus-vs-qdrant)를 참고하세요.',
+        content: 'Milvus는 로컬 및 셀프 호스팅 RAG 스택에서 흔히 사용되는 여러 오픈소스 벡터 데이터베이스 중 하나입니다. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를, 가장 가까운 직접 비교는 위의 전용 [Milvus vs. Qdrant 비교](#milvus-vs-qdrant)를 참고하세요.',
         items: [
           '**[Qdrant](https://qdrant.tech)** — 더 간단한 운영 부담을 가진 Rust 기반 오픈소스 벡터 데이터베이스로, 중소 규모 셀프 호스팅 RAG에서 인기가 있습니다. 위의 전용 비교 섹션과 [Qdrant 리뷰](/ko/power-local-llm/qdrant-review)를 참고하세요.',
           '**[Chroma](https://www.trychroma.com)** — 빠른 로컬 RAG 프로토타이핑에 자주 사용되는 가볍고 개발자 친화적인 오픈소스 임베딩 데이터베이스입니다. [Chroma 리뷰](/ko/power-local-llm/chroma-review)를 참고하세요.',
           '**[txtai](https://neuml.github.io/txtai)** — 별도의 서버가 아니라 프로세스 내에서 실행되는 임베디드 Python 네이티브 벡터/시맨틱 검색 라이브러리로, 소규모 로컬 프로젝트를 위한 더 가벼운 대안입니다. [txtai 리뷰](/ko/power-local-llm/txtai-embedded-vector-database-review)를 참고하세요.',
         ],
-        note: '이는 오픈소스 벡터 데이터베이스의 전체 목록이 아닙니다 — Milvus 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요. (편집 참고: 위에 링크된 Qdrant와 Chroma 리뷰는 이 Milvus 리뷰와 같은 콘텐츠 배치로 게시되고 있어 공개 사이의 모든 시점에 항상 라이브 상태가 아닐 수 있습니다 — txtai 리뷰는 이 리뷰의 게시일 기준으로 PromptQuorum에 이미 라이브 상태인, 같은 분야의 벡터 데이터베이스 리뷰입니다.)',
+        note: '이는 오픈소스 벡터 데이터베이스의 전체 목록이 아닙니다 — Milvus 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요. (편집 참고: 위에 링크된 Qdrant와 Chroma 리뷰는 이 Milvus 리뷰와 같은 콘텐츠 배치로 게시되고 있어 공개 사이의 모든 시점에 항상 라이브 상태가 아닐 수 있습니다 — txtai 리뷰는 이 리뷰의 게시일 기준으로 PromptQuorum에 이미 라이브 상태인, 같은 분야의 벡터 데이터베이스 리뷰입니다.)',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2559,7 +2559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — Milvus의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — Milvus의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
           '[Qdrant 리뷰](/ko/power-local-llm/qdrant-review) — 위에서 Milvus와 직접 비교된, 운영 부담이 더 가벼운 Rust 기반 오픈소스 벡터 데이터베이스.',
           '[Chroma 리뷰](/ko/power-local-llm/chroma-review) — 로컬 RAG 프로토타이핑에 인기 있는 가볍고 개발자 친화적인 오픈소스 임베딩 데이터베이스.',
           '[txtai 리뷰](/ko/power-local-llm/txtai-embedded-vector-database-review) — 별도의 서버가 아니라 프로세스 내에서 실행되는 임베디드 Python 네이티브 벡터 검색 라이브러리.',

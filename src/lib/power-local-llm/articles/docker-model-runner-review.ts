@@ -77,7 +77,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No separate cost — the feature ships with Docker Desktop; whether Docker Desktop itself needs a paid subscription depends on company size',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Docker Model Runner\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Docker Model Runner\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors-and-alternatives',
         title: 'Competitors and Alternatives',
-        content: 'Docker Model Runner sits in the local-inference-runtime segment alongside CLI-first engines and desktop apps that wrap the same underlying engines. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'Docker Model Runner sits in the local-inference-runtime segment alongside CLI-first engines and desktop apps that wrap the same underlying engines. See the [Local LLM Software Directory](/directory) for the full catalog.',
         items: [
           '**[llama.cpp](/power-local-llm/llama-cpp-explained)** — the inference engine Docker Model Runner itself uses for CPU/Apple Silicon; running it directly instead gives you control over build flags and quantization that Docker\'s wrapper does not expose.',
           '**[vLLM](/power-local-llm/vllm-explained)** — the same GPU-serving engine Docker Model Runner uses for production workloads; running it directly is the better fit if you need vLLM\'s full configuration surface rather than Docker\'s simplified CLI on top of it.',
@@ -204,7 +204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Jan](/power-local-llm/jan-review)** — a free, open-source desktop app with a graphical chat window built on the same llama.cpp engine, for developers who want a point-and-click interface instead of a CLI-and-API workflow.',
           '**[GPT4All](/power-local-llm/gpt4all-review)** — another open-source, llama.cpp-based local chat app, for the same "I want a window, not a terminal" use case as Jan.',
         ],
-        note: 'This is not an exhaustive list of local-runtime tools — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Docker Model Runner\'s own directory entry.',
+        note: 'This is not an exhaustive list of local-runtime tools — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Docker Model Runner\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -260,7 +260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Docker Model Runner\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Docker Model Runner\'s directory entry.',
           '[llama.cpp Explained](/power-local-llm/llama-cpp-explained) — the inference engine Docker Model Runner uses for CPU and Apple Silicon.',
           '[vLLM Explained](/power-local-llm/vllm-explained) — the inference engine Docker Model Runner uses for NVIDIA-GPU-backed production serving.',
           '[Jan Review](/power-local-llm/jan-review) — a desktop-app alternative for developers who want a graphical chat window instead of a CLI-and-API workflow.',
@@ -340,7 +340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Keine zusätzlichen Kosten — die Funktion ist Teil von Docker Desktop; ob Docker Desktop selbst ein kostenpflichtiges Abonnement benötigt, hängt von der Unternehmensgröße ab',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zum Eintrag von Docker Model Runner im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie es im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zum Eintrag von Docker Model Runner im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie es im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -459,7 +459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors-and-alternatives',
         title: 'Wettbewerber und Alternativen',
-        content: 'Docker Model Runner ordnet sich im Segment lokaler Inferenz-Runtimes ein, neben CLI-first-Engines und Desktop-Apps, die dieselben zugrunde liegenden Engines einbetten. Siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog.',
+        content: 'Docker Model Runner ordnet sich im Segment lokaler Inferenz-Runtimes ein, neben CLI-first-Engines und Desktop-Apps, die dieselben zugrunde liegenden Engines einbetten. Siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen Katalog.',
         items: [
           '**[llama.cpp](/de/power-local-llm/llama-cpp-explained)** — die Inferenz-Engine, die Docker Model Runner selbst für CPU/Apple Silicon nutzt; die direkte Verwendung gibt Ihnen Kontrolle über Build-Flags und Quantisierung, die Dockers Wrapper nicht offenlegt.',
           '**[vLLM](/de/power-local-llm/vllm-explained)** — dieselbe GPU-Serving-Engine, die Docker Model Runner für Produktions-Workloads nutzt; die direkte Verwendung ist die bessere Wahl, wenn Sie den vollen Konfigurationsumfang von vLLM benötigen statt Dockers vereinfachter CLI darüber.',
@@ -467,7 +467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Jan](/de/power-local-llm/jan-review)** — eine kostenlose, quelloffene Desktop-App mit grafischem Chat-Fenster auf Basis derselben llama.cpp-Engine, für Entwickler, die statt eines CLI-und-API-Workflows eine Point-and-Click-Oberfläche möchten.',
           '**[GPT4All](/de/power-local-llm/gpt4all-review)** — eine weitere quelloffene, llama.cpp-basierte lokale Chat-App, für denselben "Ich möchte ein Fenster, kein Terminal"-Anwendungsfall wie Jan.',
         ],
-        note: 'Dies ist keine erschöpfende Liste lokaler Runtime-Tools — siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Verzeichniseintrags von Docker Model Runner.',
+        note: 'Dies ist keine erschöpfende Liste lokaler Runtime-Tools — siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Verzeichniseintrags von Docker Model Runner.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -523,7 +523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Lokales KI-Software-Verzeichnis 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von Docker Model Runner.',
+          '[Lokales KI-Software-Verzeichnis 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von Docker Model Runner.',
           '[llama.cpp Explained](/de/power-local-llm/llama-cpp-explained) — die Inferenz-Engine, die Docker Model Runner für CPU und Apple Silicon nutzt.',
           '[vLLM Explained](/de/power-local-llm/vllm-explained) — die Inferenz-Engine, die Docker Model Runner für NVIDIA-GPU-gestütztes Produktions-Serving nutzt.',
           '[Jan Review](/de/power-local-llm/jan-review) — eine Desktop-App-Alternative für Entwickler, die ein grafisches Chat-Fenster statt eines CLI-und-API-Workflows möchten.',
@@ -603,7 +603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Aucun coût supplémentaire — la fonctionnalité est livrée avec Docker Desktop ; la nécessité d\'un abonnement payant pour Docker Desktop lui-même dépend de la taille de l\'entreprise',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément détaillé de la fiche de Docker Model Runner dans le [Répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir en un coup d\'œil comment il se compare à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cet avis est le complément détaillé de la fiche de Docker Model Runner dans le [Répertoire des logiciels d\'IA locale](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment il se compare à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -722,7 +722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors-and-alternatives',
         title: 'Concurrents et alternatives',
-        content: 'Docker Model Runner se situe dans le segment des runtimes d\'inférence locale, aux côtés de moteurs CLI-first et d\'applications de bureau qui enveloppent les mêmes moteurs sous-jacents. Voir le [Répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        content: 'Docker Model Runner se situe dans le segment des runtimes d\'inférence locale, aux côtés de moteurs CLI-first et d\'applications de bureau qui enveloppent les mêmes moteurs sous-jacents. Voir le [Répertoire des logiciels d\'IA locale](/fr/directory) pour le catalogue complet.',
         items: [
           '**[llama.cpp](/fr/power-local-llm/llama-cpp-explained)** — le moteur d\'inférence que Docker Model Runner utilise lui-même pour CPU/Apple Silicon ; l\'exécuter directement vous donne un contrôle sur les options de compilation et la quantification que le wrapper de Docker n\'expose pas.',
           '**[vLLM](/fr/power-local-llm/vllm-explained)** — le même moteur de service GPU que Docker Model Runner utilise pour les charges de travail de production ; l\'exécuter directement convient mieux si vous avez besoin de toute la surface de configuration de vLLM plutôt que de la CLI simplifiée de Docker par-dessus.',
@@ -730,7 +730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Jan](/fr/power-local-llm/jan-review)** — une application de bureau gratuite et open source avec une fenêtre de chat graphique, construite sur le même moteur llama.cpp, pour les développeurs qui veulent une interface point-and-click plutôt qu\'un flux CLI-et-API.',
           '**[GPT4All](/fr/power-local-llm/gpt4all-review)** — une autre application de chat locale open source basée sur llama.cpp, pour le même cas d\'usage « je veux une fenêtre, pas un terminal » que Jan.',
         ],
-        note: 'Ceci n\'est pas une liste exhaustive des outils de runtime local — voir le [Répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de Docker Model Runner dans le répertoire.',
+        note: 'Ceci n\'est pas une liste exhaustive des outils de runtime local — voir le [Répertoire des logiciels d\'IA locale](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de Docker Model Runner dans le répertoire.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -786,7 +786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire des logiciels d\'IA locale 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant la fiche de Docker Model Runner dans le répertoire.',
+          '[Répertoire des logiciels d\'IA locale 2026](/fr/directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant la fiche de Docker Model Runner dans le répertoire.',
           '[llama.cpp Explained](/fr/power-local-llm/llama-cpp-explained) — le moteur d\'inférence utilisé par Docker Model Runner pour CPU et Apple Silicon.',
           '[vLLM Explained](/fr/power-local-llm/vllm-explained) — le moteur d\'inférence utilisé par Docker Model Runner pour le service de production adossé à un GPU NVIDIA.',
           '[Jan Review](/fr/power-local-llm/jan-review) — une alternative en application de bureau pour les développeurs qui veulent une fenêtre de chat graphique plutôt qu\'un flux CLI-et-API.',
@@ -866,7 +866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '追加コストなし——この機能はDocker Desktopに付属。Docker Desktop自体に有料サブスクリプションが必要かどうかは企業規模による',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)におけるDocker Model Runnerの項目を掘り下げた記事です。他の数十のローカルAIツールとの一覧比較はそちらのページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)におけるDocker Model Runnerの項目を掘り下げた記事です。他の数十のローカルAIツールとの一覧比較はそちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -985,7 +985,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors-and-alternatives',
         title: '競合とその他の選択肢',
-        content: 'Docker Model Runnerは、同じ基盤エンジンをラップするCLIファーストのエンジンやデスクトップアプリと並んで、ローカル推論ランタイムのセグメントに位置します。全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        content: 'Docker Model Runnerは、同じ基盤エンジンをラップするCLIファーストのエンジンやデスクトップアプリと並んで、ローカル推論ランタイムのセグメントに位置します。全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
         items: [
           '**[llama.cpp](/ja/power-local-llm/llama-cpp-explained)** — Docker Model Runner自体がCPU/Apple Silicon向けに使用している推論エンジン。直接使うことで、Dockerのラッパーが公開していないビルドフラグや量子化のコントロールが得られます。',
           '**[vLLM](/ja/power-local-llm/vllm-explained)** — Docker Model Runnerが本番ワークロード向けに使用しているのと同じGPUサービングエンジン。Dockerの簡略化されたCLIの上ではなく、vLLMの設定オプションをフルに使いたい場合は、直接実行する方が適しています。',
@@ -993,7 +993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Jan](/ja/power-local-llm/jan-review)** — 同じllama.cppエンジンをベースにした、グラフィカルなチャットウィンドウを持つ無料・オープンソースのデスクトップアプリ。CLIとAPIのワークフローよりポイント＆クリックのインターフェースを求める開発者向けです。',
           '**[GPT4All](/ja/power-local-llm/gpt4all-review)** — Janと同じ「ターミナルではなくウィンドウが欲しい」というユースケース向けの、もう一つのオープンソースでllama.cppベースのローカルチャットアプリです。',
         ],
-        note: 'これはローカルランタイムツールの網羅的なリストではありません。全カタログと定期的な更新については、Docker Model Runner自体のディレクトリ項目を含む[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはローカルランタイムツールの網羅的なリストではありません。全カタログと定期的な更新については、Docker Model Runner自体のディレクトリ項目を含む[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1049,7 +1049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの全カタログ。Docker Model Runnerのディレクトリ項目を含みます。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — この記事が属するローカルAIツールの全カタログ。Docker Model Runnerのディレクトリ項目を含みます。',
           '[llama.cpp解説記事](/ja/power-local-llm/llama-cpp-explained) — Docker Model RunnerがCPUとApple Silicon向けに使用する推論エンジン。',
           '[vLLM解説記事](/ja/power-local-llm/vllm-explained) — Docker Model RunnerがNVIDIA GPUベースの本番サービング向けに使用する推論エンジン。',
           '[Janレビュー](/ja/power-local-llm/jan-review) — CLIとAPIのワークフローよりグラフィカルなチャットウィンドウを求める開発者向けのデスクトップアプリの代替案。',
@@ -1129,7 +1129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '无额外费用——该功能随Docker Desktop提供；Docker Desktop本身是否需要付费订阅取决于企业规模',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Docker Model Runner条目的深度配套文章——该页面提供了它与数十款其他本地AI工具的一览式对比。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Docker Model Runner条目的深度配套文章——该页面提供了它与数十款其他本地AI工具的一览式对比。' },
         ],
       },
       overview: {
@@ -1248,7 +1248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors-and-alternatives',
         title: '竞品与替代方案',
-        content: 'Docker Model Runner属于本地推理运行时这一细分领域，与封装同类底层引擎的CLI优先型引擎和桌面应用并列。完整目录见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'Docker Model Runner属于本地推理运行时这一细分领域，与封装同类底层引擎的CLI优先型引擎和桌面应用并列。完整目录见[本地LLM软件目录](/zh/directory)。',
         items: [
           '**[llama.cpp](/zh/power-local-llm/llama-cpp-explained)** — Docker Model Runner自身在CPU/Apple Silicon上使用的推理引擎；直接使用它可以获得Docker封装层未开放的构建参数和量化控制权。',
           '**[vLLM](/zh/power-local-llm/vllm-explained)** — Docker Model Runner在生产工作负载中使用的同一款GPU服务引擎；如果你需要vLLM完整的配置能力，而不满足于Docker简化过的CLI，直接使用它会更合适。',
@@ -1256,7 +1256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Jan](/zh/power-local-llm/jan-review)** — 一款基于同一款llama.cpp引擎、带图形化聊天窗口的免费开源桌面应用，适合希望使用点选式界面而非CLI加API工作流的开发者。',
           '**[GPT4All](/zh/power-local-llm/gpt4all-review)** — 另一款开源的、基于llama.cpp的本地聊天应用，满足与Jan相同的"要窗口不要终端"需求。',
         ],
-        note: '这并非本地运行时工具的详尽列表——完整且定期更新的目录，包括Docker Model Runner自身的目录条目，请见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非本地运行时工具的详尽列表——完整且定期更新的目录，包括Docker Model Runner自身的目录条目，请见[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1312,7 +1312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包含Docker Model Runner的目录条目。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的本地AI工具完整目录，包含Docker Model Runner的目录条目。',
           '[llama.cpp深度解析](/zh/power-local-llm/llama-cpp-explained) — Docker Model Runner在CPU和Apple Silicon上使用的推理引擎。',
           '[vLLM深度解析](/zh/power-local-llm/vllm-explained) — Docker Model Runner在基于NVIDIA GPU的生产服务中使用的推理引擎。',
           '[Jan评测](/zh/power-local-llm/jan-review) — 面向希望使用图形化聊天窗口而非CLI加API工作流的开发者的桌面应用替代方案。',
@@ -1392,7 +1392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Sin costo adicional — la función viene con Docker Desktop; que Docker Desktop en sí necesite una suscripción de pago depende del tamaño de la empresa',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de Docker Model Runner en el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara con decenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de Docker Model Runner en el [Directorio de Software de LLM Local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1511,7 +1511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors-and-alternatives',
         title: 'Competidores y alternativas',
-        content: 'Docker Model Runner se ubica en el segmento de runtimes de inferencia local, junto a motores CLI-first y aplicaciones de escritorio que envuelven los mismos motores subyacentes. Ver el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo.',
+        content: 'Docker Model Runner se ubica en el segmento de runtimes de inferencia local, junto a motores CLI-first y aplicaciones de escritorio que envuelven los mismos motores subyacentes. Ver el [Directorio de Software de LLM Local](/es/directory) para el catálogo completo.',
         items: [
           '**[llama.cpp](/es/power-local-llm/llama-cpp-explained)** — el motor de inferencia que el propio Docker Model Runner usa para CPU/Apple Silicon; usarlo directamente te da control sobre flags de compilación y cuantización que el wrapper de Docker no expone.',
           '**[vLLM](/es/power-local-llm/vllm-explained)** — el mismo motor de servicio en GPU que Docker Model Runner usa para cargas de trabajo de producción; usarlo directamente conviene más si necesitas toda la superficie de configuración de vLLM en lugar de la CLI simplificada de Docker sobre él.',
@@ -1519,7 +1519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Jan](/es/power-local-llm/jan-review)** — una aplicación de escritorio gratuita y open source con una ventana de chat gráfica, construida sobre el mismo motor llama.cpp, para desarrolladores que quieren una interfaz apuntar-y-hacer-clic en lugar de un flujo de CLI y API.',
           '**[GPT4All](/es/power-local-llm/gpt4all-review)** — otra aplicación de chat local open source basada en llama.cpp, para el mismo caso de uso de "quiero una ventana, no una terminal" que Jan.',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas de runtime local — ver el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluyendo la propia entrada de Docker Model Runner en el directorio.',
+        note: 'Esta no es una lista exhaustiva de herramientas de runtime local — ver el [Directorio de Software de LLM Local](/es/directory) para el catálogo completo y actualizado regularmente, incluyendo la propia entrada de Docker Model Runner en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1575,7 +1575,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software de LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la entrada de Docker Model Runner en el directorio.',
+          '[Directorio de Software de LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la entrada de Docker Model Runner en el directorio.',
           '[llama.cpp Explicado](/es/power-local-llm/llama-cpp-explained) — el motor de inferencia que Docker Model Runner usa para CPU y Apple Silicon.',
           '[vLLM Explicado](/es/power-local-llm/vllm-explained) — el motor de inferencia que Docker Model Runner usa para servicio de producción con GPU NVIDIA.',
           '[Reseña de Jan](/es/power-local-llm/jan-review) — una alternativa en aplicación de escritorio para desarrolladores que quieren una ventana de chat gráfica en lugar de un flujo de CLI y API.',
@@ -1655,7 +1655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Sem custo adicional — o recurso vem com o Docker Desktop; se o Docker Desktop em si precisa de uma assinatura paga depende do porte da empresa',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Docker Model Runner no [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Docker Model Runner no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1774,7 +1774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors-and-alternatives',
         title: 'Concorrentes e alternativas',
-        content: 'O Docker Model Runner se posiciona no segmento de runtimes de inferência local, ao lado de mecanismos CLI-first e aplicativos de desktop que envolvem os mesmos mecanismos subjacentes. Veja o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'O Docker Model Runner se posiciona no segmento de runtimes de inferência local, ao lado de mecanismos CLI-first e aplicativos de desktop que envolvem os mesmos mecanismos subjacentes. Veja o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo.',
         items: [
           '**[llama.cpp](/pt/power-local-llm/llama-cpp-explained)** — o mecanismo de inferência que o próprio Docker Model Runner usa para CPU/Apple Silicon; executá-lo diretamente dá controle sobre flags de build e quantização que o wrapper do Docker não expõe.',
           '**[vLLM](/pt/power-local-llm/vllm-explained)** — o mesmo mecanismo de serviço em GPU que o Docker Model Runner usa para cargas de trabalho de produção; executá-lo diretamente é melhor se você precisa de toda a superfície de configuração do vLLM em vez da CLI simplificada do Docker por cima dele.',
@@ -1782,7 +1782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Jan](/pt/power-local-llm/jan-review)** — um aplicativo de desktop gratuito e open source com uma janela de chat gráfica, construído sobre o mesmo mecanismo llama.cpp, para desenvolvedores que querem uma interface de apontar-e-clicar em vez de um fluxo de CLI e API.',
           '**[GPT4All](/pt/power-local-llm/gpt4all-review)** — outro aplicativo de chat local open source baseado em llama.cpp, para o mesmo caso de uso de "quero uma janela, não um terminal" que o Jan.',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas de runtime local — veja o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Docker Model Runner no diretório.',
+        note: 'Esta não é uma lista exaustiva de ferramentas de runtime local — veja o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Docker Model Runner no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1838,7 +1838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Docker Model Runner no diretório.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Docker Model Runner no diretório.',
           '[llama.cpp Explicado](/pt/power-local-llm/llama-cpp-explained) — o mecanismo de inferência que o Docker Model Runner usa para CPU e Apple Silicon.',
           '[vLLM Explicado](/pt/power-local-llm/vllm-explained) — o mecanismo de inferência que o Docker Model Runner usa para serviço de produção com GPU NVIDIA.',
           '[Análise do Jan](/pt/power-local-llm/jan-review) — uma alternativa em aplicativo de desktop para desenvolvedores que querem uma janela de chat gráfica em vez de um fluxo de CLI e API.',
@@ -1918,7 +1918,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'دون أي تكلفة إضافية — تأتي الميزة مع Docker Desktop؛ وحاجة Docker Desktop نفسه لاشتراك مدفوع تعتمد على حجم الشركة',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمّق لإدخال Docker Model Runner في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف تقارن بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمّق لإدخال Docker Model Runner في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تقارن بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2037,7 +2037,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors-and-alternatives',
         title: 'المنافسون والبدائل',
-        content: 'تقع Docker Model Runner في فئة أدوات تشغيل الاستدلال المحلي، إلى جانب محركات تعتمد على واجهة الأوامر أولًا وتطبيقات سطح مكتب تُغلّف نفس المحركات الأساسية. راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل.',
+        content: 'تقع Docker Model Runner في فئة أدوات تشغيل الاستدلال المحلي، إلى جانب محركات تعتمد على واجهة الأوامر أولًا وتطبيقات سطح مكتب تُغلّف نفس المحركات الأساسية. راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) للاطلاع على الكتالوج الكامل.',
         items: [
           '**[llama.cpp](/ar/power-local-llm/llama-cpp-explained)** — محرك الاستدلال الذي تستخدمه Docker Model Runner نفسها لوحدات CPU وشرائح Apple Silicon؛ تشغيله مباشرة يمنحك تحكمًا في خيارات البناء والتكميم لا تكشف عنها طبقة تغليف Docker.',
           '**[vLLM](/ar/power-local-llm/vllm-explained)** — نفس محرك الخدمة عبر وحدة معالجة الرسوميات الذي تستخدمه Docker Model Runner لأحمال العمل الإنتاجية؛ تشغيله مباشرة يناسب أكثر إذا احتجت إلى كامل مساحة إعدادات vLLM بدلًا من واجهة أوامر Docker المبسّطة فوقه.',
@@ -2045,7 +2045,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Jan](/ar/power-local-llm/jan-review)** — تطبيق سطح مكتب مجاني ومفتوح المصدر بنافذة دردشة رسومية، مبني على نفس محرك llama.cpp، للمطورين الذين يريدون واجهة بالنقر بدلًا من سير عمل يعتمد على واجهة الأوامر وواجهة برمجية.',
           '**[GPT4All](/ar/power-local-llm/gpt4all-review)** — تطبيق دردشة محلي آخر مفتوح المصدر ومبني على llama.cpp، لنفس حالة الاستخدام "أريد نافذة، لا طرفية" التي يخدمها Jan.',
         ],
-        note: 'هذه ليست قائمة شاملة لأدوات التشغيل المحلي — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدخال Docker Model Runner الخاص بها في الدليل.',
+        note: 'هذه ليست قائمة شاملة لأدوات التشغيل المحلي — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدخال Docker Model Runner الخاص بها في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2101,7 +2101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة الكبيرة المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك إدخال Docker Model Runner في الدليل.',
+          '[دليل برمجيات نماذج اللغة الكبيرة المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك إدخال Docker Model Runner في الدليل.',
           '[شرح llama.cpp](/ar/power-local-llm/llama-cpp-explained) — محرك الاستدلال الذي تستخدمه Docker Model Runner لوحدات CPU وApple Silicon.',
           '[شرح vLLM](/ar/power-local-llm/vllm-explained) — محرك الاستدلال الذي تستخدمه Docker Model Runner للخدمة الإنتاجية المعتمدة على وحدة معالجة NVIDIA.',
           '[مراجعة Jan](/ar/power-local-llm/jan-review) — بديل بتطبيق سطح مكتب للمطورين الذين يريدون نافذة دردشة رسومية بدلًا من سير عمل يعتمد على واجهة الأوامر وواجهة برمجية.',
@@ -2181,7 +2181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '추가 비용 없음 — 이 기능은 Docker Desktop에 포함되어 있으며, Docker Desktop 자체의 유료 구독 필요 여부는 기업 규모에 따라 결정됨',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 등록된 Docker Model Runner 항목의 심층 분석 콘텐츠입니다 — 수십 개의 다른 로컬 AI 도구와 한눈에 비교해 보려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등록된 Docker Model Runner 항목의 심층 분석 콘텐츠입니다 — 수십 개의 다른 로컬 AI 도구와 한눈에 비교해 보려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2300,7 +2300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors-and-alternatives',
         title: '경쟁 서비스 및 대안',
-        content: 'Docker Model Runner는 동일한 기반 엔진을 감싼 CLI 우선 엔진 및 데스크톱 애플리케이션과 함께 로컬 추론 런타임 영역에 속합니다. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        content: 'Docker Model Runner는 동일한 기반 엔진을 감싼 CLI 우선 엔진 및 데스크톱 애플리케이션과 함께 로컬 추론 런타임 영역에 속합니다. 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
         items: [
           '**[llama.cpp](/ko/power-local-llm/llama-cpp-explained)** — Docker Model Runner 자체가 CPU/Apple Silicon용으로 사용하는 추론 엔진입니다. 이를 직접 사용하면 Docker의 래퍼가 노출하지 않는 빌드 플래그와 양자화에 대한 제어권을 얻을 수 있습니다.',
           '**[vLLM](/ko/power-local-llm/vllm-explained)** — Docker Model Runner가 프로덕션 워크로드에 사용하는 것과 동일한 GPU 서빙 엔진입니다. Docker의 단순화된 CLI가 아니라 vLLM의 전체 설정 범위가 필요하다면 직접 사용하는 편이 더 적합합니다.',
@@ -2308,7 +2308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Jan](/ko/power-local-llm/jan-review)** — 동일한 llama.cpp 엔진을 기반으로 한 무료 오픈소스 데스크톱 애플리케이션으로, 그래픽 채팅 창을 제공합니다. CLI와 API 기반 워크플로 대신 클릭 방식의 인터페이스를 원하는 개발자에게 적합합니다.',
           '**[GPT4All](/ko/power-local-llm/gpt4all-review)** — llama.cpp 기반의 또 다른 오픈소스 로컬 채팅 애플리케이션으로, Jan과 마찬가지로 "터미널이 아니라 창을 원한다"는 사용 사례에 해당합니다.',
         ],
-        note: '이는 로컬 런타임 도구의 전체 목록이 아닙니다 — Docker Model Runner 자체의 디렉터리 항목을 포함해, 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이는 로컬 런타임 도구의 전체 목록이 아닙니다 — Docker Model Runner 자체의 디렉터리 항목을 포함해, 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2364,7 +2364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, Docker Model Runner의 디렉터리 항목을 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, Docker Model Runner의 디렉터리 항목을 포함합니다.',
           '[llama.cpp 해설](/ko/power-local-llm/llama-cpp-explained) — Docker Model Runner가 CPU와 Apple Silicon용으로 사용하는 추론 엔진입니다.',
           '[vLLM 해설](/ko/power-local-llm/vllm-explained) — Docker Model Runner가 NVIDIA GPU 기반 프로덕션 서빙용으로 사용하는 추론 엔진입니다.',
           '[Jan 리뷰](/ko/power-local-llm/jan-review) — CLI와 API 기반 워크플로 대신 그래픽 채팅 창을 원하는 개발자를 위한 데스크톱 애플리케이션 대안입니다.',

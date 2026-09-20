@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository ([github.com/nicedreamzapp/claude-code-local](https://github.com/nicedreamzapp/claude-code-local)) shows 3,314 stars and 625 forks as of September 2026',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to claude-code-local\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to claude-code-local\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
           { type: 'note', text: 'Naming note: "claude-code-local" repurposes Anthropic\'s Claude Code client/CLI to talk to a different, locally-hosted open-weight model. It is not an Anthropic product, and it does not make Anthropic\'s Claude model run offline.' },
         ],
       },
@@ -203,13 +203,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'claude-code-local vs. Other Local Coding-Assistant Setups',
-        content: 'claude-code-local is one of several ways to get AI coding assistance running against a local model instead of a cloud API. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'claude-code-local is one of several ways to get AI coding assistance running against a local model instead of a cloud API. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/directory) for the full catalog.',
         items: [
           '**[oMLX](https://github.com/omlx-io/omlx)** — a general-purpose Apple Silicon MLX inference server with SSD-backed model caching; unlike claude-code-local, it is not built specifically around Claude Code\'s API format, but it is the closest comparison for anyone choosing an MLX-based local backend on a Mac. See the [oMLX review](/power-local-llm/omlx-review).',
           '**[Aider](https://aider.chat)** — a terminal-based, model-agnostic AI pair-programming tool that works with local models via any OpenAI-compatible endpoint, git-integrated by design; a good comparison if you want a coding CLI built local-first from the start rather than a shim in front of Anthropic\'s client. See the [Aider review](/power-local-llm/aider-review).',
           '**[Cline](https://github.com/cline/cline)** — an open-source, VS Code-based autonomous coding agent that also supports local models through OpenAI-compatible endpoints; a good comparison if you prefer an IDE-embedded agent over a terminal-first workflow. See the [Cline review](/power-local-llm/cline-review).',
         ],
-        note: 'This is not an exhaustive list of local coding-assistant options — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including claude-code-local\'s own directory entry.',
+        note: 'This is not an exhaustive list of local coding-assistant options — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including claude-code-local\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -266,7 +266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including claude-code-local\'s directory entry alongside other coding-assistant tools covered above.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including claude-code-local\'s directory entry alongside other coding-assistant tools covered above.',
           '[oMLX Review](/power-local-llm/omlx-review) — a general-purpose Apple Silicon MLX inference server, the closest comparison for choosing an MLX-based local backend.',
           '[Aider Review](/power-local-llm/aider-review) — a terminal-based, model-agnostic AI pair-programming tool built local-first from the start.',
           '[Cline Review](/power-local-llm/cline-review) — an open-source, VS Code-based coding agent that also supports local models.',
@@ -345,7 +345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Das GitHub-Repository ([github.com/nicedreamzapp/claude-code-local](https://github.com/nicedreamzapp/claude-code-local)) zeigt mit Stand September 2026 3.314 Sterne und 625 Forks',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der ausführliche Begleittext zum Eintrag von claude-code-local im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen Überblick, wie es im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist der ausführliche Begleittext zum Eintrag von claude-code-local im [Local LLM Software Directory](/de/directory) — dort finden Sie einen Überblick, wie es im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
           { type: 'note', text: 'Hinweis zur Namensgebung: „claude-code-local" nutzt Anthropics Claude-Code-Client/CLI um, damit dieser mit einem anderen, lokal gehosteten offenen Modell spricht. Es ist kein Anthropic-Produkt und lässt Anthropics Claude-Modell nicht offline laufen.' },
         ],
       },
@@ -475,13 +475,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'claude-code-local im Vergleich zu anderen lokalen Coding-Assistant-Setups',
-        content: 'claude-code-local ist einer von mehreren Wegen, KI-Coding-Unterstützung gegen ein lokales Modell statt gegen eine Cloud-API laufen zu lassen. Hier sehen Sie, wie es im Vergleich zu anderen Optionen in diesem Bereich steht — den vollständigen Katalog finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        content: 'claude-code-local ist einer von mehreren Wegen, KI-Coding-Unterstützung gegen ein lokales Modell statt gegen eine Cloud-API laufen zu lassen. Hier sehen Sie, wie es im Vergleich zu anderen Optionen in diesem Bereich steht — den vollständigen Katalog finden Sie im [Local LLM Software Directory](/de/directory).',
         items: [
           '**[oMLX](https://github.com/omlx-io/omlx)** — ein universeller MLX-Inferenzserver für Apple Silicon mit SSD-gestütztem Modell-Caching; anders als claude-code-local nicht speziell um das API-Format von Claude Code herum aufgebaut, aber der nächstliegende Vergleich für alle, die ein MLX-basiertes lokales Backend auf einem Mac wählen. Siehe die [oMLX-Review](/de/power-local-llm/omlx-review).',
           '**[Aider](https://aider.chat)** — ein terminalbasiertes, modellunabhängiges KI-Pair-Programming-Tool, das über jeden OpenAI-kompatiblen Endpunkt mit lokalen Modellen funktioniert und von Haus aus Git-integriert ist; ein guter Vergleich, wenn Sie eine von Anfang an local-first aufgebaute Coding-CLI möchten statt eines Shims vor Anthropics Client. Siehe die [Aider-Review](/de/power-local-llm/aider-review).',
           '**[Cline](https://github.com/cline/cline)** — ein quelloffener, auf VS Code basierender autonomer Coding-Agent, der ebenfalls lokale Modelle über OpenAI-kompatible Endpunkte unterstützt; ein guter Vergleich, wenn Sie einen in die IDE eingebetteten Agenten einem terminal-first-Workflow vorziehen. Siehe die [Cline-Review](/de/power-local-llm/cline-review).',
         ],
-        note: 'Dies ist keine erschöpfende Liste lokaler Coding-Assistant-Optionen — den vollständigen, regelmäßig aktualisierten Katalog inklusive dem eigenen Directory-Eintrag von claude-code-local finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine erschöpfende Liste lokaler Coding-Assistant-Optionen — den vollständigen, regelmäßig aktualisierten Katalog inklusive dem eigenen Directory-Eintrag von claude-code-local finden Sie im [Local LLM Software Directory](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -540,7 +540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Directory-Eintrags von claude-code-local neben anderen oben behandelten Coding-Assistant-Tools.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Directory-Eintrags von claude-code-local neben anderen oben behandelten Coding-Assistant-Tools.',
           '[oMLX Review](/de/power-local-llm/omlx-review) — ein universeller MLX-Inferenzserver für Apple Silicon, der nächstliegende Vergleich für die Wahl eines MLX-basierten lokalen Backends.',
           '[Aider Review](/de/power-local-llm/aider-review) — ein terminalbasiertes, modellunabhängiges KI-Pair-Programming-Tool, von Anfang an local-first aufgebaut.',
           '[Cline Review](/de/power-local-llm/cline-review) — ein quelloffener, auf VS Code basierender Coding-Agent, der ebenfalls lokale Modelle unterstützt.',
@@ -619,7 +619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub ([github.com/nicedreamzapp/claude-code-local](https://github.com/nicedreamzapp/claude-code-local)) affiche 3 314 étoiles et 625 forks en septembre 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de claude-code-local dans le [répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer le projet en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de claude-code-local dans le [répertoire des logiciels LLM locaux](/fr/directory) — consultez cette page pour comparer le projet en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
           { type: 'note', text: 'Remarque sur le nom : « claude-code-local » détourne le client/CLI Claude Code d\'Anthropic pour dialoguer avec un modèle ouvert différent, hébergé localement. Ce n\'est pas un produit Anthropic, et cela ne fait pas fonctionner le modèle Claude d\'Anthropic hors ligne.' },
         ],
       },
@@ -749,13 +749,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'claude-code-local face aux autres configurations d\'assistants de codage locaux',
-        content: 'claude-code-local est l\'une des nombreuses façons de faire fonctionner une assistance IA au codage avec un modèle local plutôt qu\'une API cloud. Voici sa place face aux autres options dans ce domaine — consultez le [répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        content: 'claude-code-local est l\'une des nombreuses façons de faire fonctionner une assistance IA au codage avec un modèle local plutôt qu\'une API cloud. Voici sa place face aux autres options dans ce domaine — consultez le [répertoire des logiciels LLM locaux](/fr/directory) pour le catalogue complet.',
         items: [
           '**[oMLX](https://github.com/omlx-io/omlx)** — un serveur d\'inférence MLX généraliste pour Apple Silicon avec mise en cache de modèles sur SSD ; contrairement à claude-code-local, il n\'est pas construit spécifiquement autour du format d\'API de Claude Code, mais reste la comparaison la plus proche pour quiconque choisit un backend local basé sur MLX sur Mac. Voir l\'[avis oMLX](/fr/power-local-llm/omlx-review).',
           '**[Aider](https://aider.chat)** — un outil de programmation en binôme IA en terminal, agnostique du modèle, qui fonctionne avec des modèles locaux via tout point de terminaison compatible OpenAI, intégré à git par conception ; une bonne comparaison si vous voulez une CLI de codage conçue local en premier lieu plutôt qu\'une couche de compatibilité devant le client d\'Anthropic. Voir l\'[avis Aider](/fr/power-local-llm/aider-review).',
           '**[Cline](https://github.com/cline/cline)** — un agent de codage autonome open source basé sur VS Code, qui prend aussi en charge les modèles locaux via des points de terminaison compatibles OpenAI ; une bonne comparaison si vous préférez un agent intégré à l\'IDE plutôt qu\'un workflow centré sur le terminal. Voir l\'[avis Cline](/fr/power-local-llm/cline-review).',
         ],
-        note: 'Cette liste n\'est pas exhaustive des options d\'assistants de codage locaux — consultez le [répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de claude-code-local.',
+        note: 'Cette liste n\'est pas exhaustive des options d\'assistants de codage locaux — consultez le [répertoire des logiciels LLM locaux](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de claude-code-local.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -812,7 +812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures associées',
         items: [
-          '[Répertoire des logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale dont cet article fait partie, incluant la fiche de claude-code-local aux côtés des autres outils d\'assistance au codage évoqués ci-dessus.',
+          '[Répertoire des logiciels LLM locaux 2026](/fr/directory) — le catalogue complet d\'outils d\'IA locale dont cet article fait partie, incluant la fiche de claude-code-local aux côtés des autres outils d\'assistance au codage évoqués ci-dessus.',
           '[Avis oMLX](/fr/power-local-llm/omlx-review) — un serveur d\'inférence MLX généraliste pour Apple Silicon, la comparaison la plus proche pour choisir un backend local basé sur MLX.',
           '[Avis Aider](/fr/power-local-llm/aider-review) — un outil de programmation en binôme IA en terminal, agnostique du modèle, conçu local en premier lieu dès le départ.',
           '[Avis Cline](/fr/power-local-llm/cline-review) — un agent de codage open source basé sur VS Code, qui prend aussi en charge les modèles locaux.',
@@ -891,7 +891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub 仓库（[github.com/nicedreamzapp/claude-code-local](https://github.com/nicedreamzapp/claude-code-local)）截至 2026 年 9 月显示 3,314 颗星和 625 次分叉',
         ],
         callouts: [
-          { type: 'note', text: '本评测是 claude-code-local 在[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)条目的深度补充版——该页面展示了它与数十款其他本地 AI 工具的横向对比。' },
+          { type: 'note', text: '本评测是 claude-code-local 在[本地 LLM 软件目录](/zh/directory)条目的深度补充版——该页面展示了它与数十款其他本地 AI 工具的横向对比。' },
           { type: 'note', text: '命名说明："claude-code-local"重新利用了 Anthropic 的 Claude Code 客户端/CLI，使其与另一个本地托管的开源权重模型对话。它不是 Anthropic 的产品，也不会让 Anthropic 的 Claude 模型离线运行。' },
         ],
       },
@@ -1021,13 +1021,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'claude-code-local 与其他本地编程助手方案对比',
-        content: 'claude-code-local 是让 AI 编程辅助功能在本地模型而非云端 API 上运行的多种方式之一。以下是它与该领域其他选项的对比情况——完整目录请参见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'claude-code-local 是让 AI 编程辅助功能在本地模型而非云端 API 上运行的多种方式之一。以下是它与该领域其他选项的对比情况——完整目录请参见[本地 LLM 软件目录](/zh/directory)。',
         items: [
           '**[oMLX](https://github.com/omlx-io/omlx)**——一款通用的 Apple Silicon MLX 推理服务器，带有基于 SSD 的模型缓存；与 claude-code-local 不同，它并非专门围绕 Claude Code 的 API 格式构建，但对于想在 Mac 上选择基于 MLX 的本地后端的用户来说，它是最接近的对比对象。参见 [oMLX 评测](/zh/power-local-llm/omlx-review)。',
           '**[Aider](https://aider.chat)**——一款基于终端、与模型无关的 AI 结对编程工具，可通过任意 OpenAI 兼容端点使用本地模型，并从设计上集成了 git；如果你想要一款从一开始就以本地优先构建的编程 CLI，而不是套在 Anthropic 客户端外面的适配层，它是很好的对比对象。参见 [Aider 评测](/zh/power-local-llm/aider-review)。',
           '**[Cline](https://github.com/cline/cline)**——一款开源、基于 VS Code 的自主编程智能体，同样支持通过 OpenAI 兼容端点使用本地模型；如果你更喜欢嵌入 IDE 的智能体，而不是以终端为先的工作流，它是很好的对比对象。参见 [Cline 评测](/zh/power-local-llm/cline-review)。',
         ],
-        note: '这并非本地编程助手方案的完整列表——完整且持续更新的目录，包括 claude-code-local 自身的目录条目，请参见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非本地编程助手方案的完整列表——完整且持续更新的目录，包括 claude-code-local 自身的目录条目，请参见[本地 LLM 软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1084,7 +1084,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[2026 本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地 AI 工具目录，包含 claude-code-local 及上文提及的其他编程助手工具的目录条目。',
+          '[2026 本地 LLM 软件目录](/zh/directory) — 本文所属的完整本地 AI 工具目录，包含 claude-code-local 及上文提及的其他编程助手工具的目录条目。',
           '[oMLX 评测](/zh/power-local-llm/omlx-review) — 一款通用的 Apple Silicon MLX 推理服务器，是选择基于 MLX 的本地后端时最接近的对比对象。',
           '[Aider 评测](/zh/power-local-llm/aider-review) — 一款基于终端、与模型无关的 AI 结对编程工具，从一开始就以本地优先构建。',
           '[Cline 评测](/zh/power-local-llm/cline-review) — 一款开源、基于 VS Code 的编程智能体，同样支持本地模型。',
@@ -1163,7 +1163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El repositorio de GitHub ([github.com/nicedreamzapp/claude-code-local](https://github.com/nicedreamzapp/claude-code-local)) muestra 3.314 estrellas y 625 forks a septiembre de 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de claude-code-local en el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara, de un vistazo, con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de claude-code-local en el [directorio de software de LLM local](/es/directory) — consulta esa página para ver cómo se compara, de un vistazo, con docenas de otras herramientas de IA local.' },
           { type: 'note', text: 'Nota sobre el nombre: "claude-code-local" reutiliza el cliente/CLI Claude Code de Anthropic para comunicarse con un modelo distinto, de peso abierto y alojado localmente. No es un producto de Anthropic, y no hace que el modelo Claude de Anthropic se ejecute sin conexión.' },
         ],
       },
@@ -1293,13 +1293,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'claude-code-local frente a otras configuraciones locales de asistente de programación',
-        content: 'claude-code-local es una de varias formas de obtener asistencia de programación con IA funcionando contra un modelo local en lugar de una API en la nube. Así se ubica junto a otras opciones en ese espacio — consulta el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para ver el catálogo completo.',
+        content: 'claude-code-local es una de varias formas de obtener asistencia de programación con IA funcionando contra un modelo local en lugar de una API en la nube. Así se ubica junto a otras opciones en ese espacio — consulta el [directorio de software de LLM local](/es/directory) para ver el catálogo completo.',
         items: [
           '**[oMLX](https://github.com/omlx-io/omlx)** — un servidor de inferencia MLX de propósito general para Apple Silicon con caché de modelos respaldada por SSD; a diferencia de claude-code-local, no está construido específicamente alrededor del formato de API de Claude Code, pero es la comparación más cercana para quien elija un backend local basado en MLX en una Mac. Consulta la [reseña de oMLX](/es/power-local-llm/omlx-review).',
           '**[Aider](https://aider.chat)** — una herramienta de programación en pareja con IA, basada en terminal y agnóstica de modelo, que funciona con modelos locales mediante cualquier endpoint compatible con OpenAI, integrada con git por diseño; una buena comparación si quieres una CLI de programación construida local-first desde el inicio, en lugar de una capa de compatibilidad frente al cliente de Anthropic. Consulta la [reseña de Aider](/es/power-local-llm/aider-review).',
           '**[Cline](https://github.com/cline/cline)** — un agente de programación autónomo de código abierto, basado en VS Code, que también soporta modelos locales mediante endpoints compatibles con OpenAI; una buena comparación si prefieres un agente integrado en el IDE en lugar de un flujo de trabajo centrado en la terminal. Consulta la [reseña de Cline](/es/power-local-llm/cline-review).',
         ],
-        note: 'Esta no es una lista exhaustiva de opciones locales de asistente de programación — consulta el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para ver el catálogo completo y actualizado regularmente, incluida la entrada propia de claude-code-local en el directorio.',
+        note: 'Esta no es una lista exhaustiva de opciones locales de asistente de programación — consulta el [directorio de software de LLM local](/es/directory) para ver el catálogo completo y actualizado regularmente, incluida la entrada propia de claude-code-local en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1356,7 +1356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de LLM local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de directorio propia de claude-code-local junto a otras herramientas de asistencia de programación cubiertas arriba.',
+          '[Directorio de software de LLM local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de directorio propia de claude-code-local junto a otras herramientas de asistencia de programación cubiertas arriba.',
           '[Reseña de oMLX](/es/power-local-llm/omlx-review) — un servidor de inferencia MLX de propósito general para Apple Silicon, la comparación más cercana para elegir un backend local basado en MLX.',
           '[Reseña de Aider](/es/power-local-llm/aider-review) — una herramienta de programación en pareja con IA, basada en terminal y agnóstica de modelo, construida local-first desde el inicio.',
           '[Reseña de Cline](/es/power-local-llm/cline-review) — un agente de programación de código abierto basado en VS Code que también soporta modelos locales.',
@@ -1435,7 +1435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHubリポジトリ（[github.com/nicedreamzapp/claude-code-local](https://github.com/nicedreamzapp/claude-code-local)）は2026年9月時点で3,314スター、625フォーク',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)内のclaude-code-localのエントリーを深掘りしたものです。他の数十のローカルAIツールとの比較は、そちらのページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)内のclaude-code-localのエントリーを深掘りしたものです。他の数十のローカルAIツールとの比較は、そちらのページを参照してください。' },
           { type: 'note', text: '命名についての注記: 「claude-code-local」は、Anthropicの Claude Codeクライアント/CLIを転用し、別の、ローカルにホストされたオープンウェイトモデルと会話させるものです。Anthropicの製品ではなく、Anthropicの実際のClaudeモデルをオフラインで動かすものでもありません。' },
         ],
       },
@@ -1565,13 +1565,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'claude-code-local vs. 他のローカルコーディングアシスタント構成',
-        content: 'claude-code-localは、クラウドAPIの代わりにローカルモデルに対してAIコーディング支援を動かすいくつかの方法のひとつです。この分野の他の選択肢との位置づけを見てみましょう — 全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        content: 'claude-code-localは、クラウドAPIの代わりにローカルモデルに対してAIコーディング支援を動かすいくつかの方法のひとつです。この分野の他の選択肢との位置づけを見てみましょう — 全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
         items: [
           '**[oMLX](https://github.com/omlx-io/omlx)** — SSDバックのモデルキャッシュを備えた汎用のApple Silicon MLX推論サーバー。claude-code-localと違いClaude CodeのAPI形式専用には作られていませんが、MacでMLXベースのローカルバックエンドを選ぶ場合には最も近い比較対象です。[oMLXレビュー](/ja/power-local-llm/omlx-review)を参照。',
           '**[Aider](https://aider.chat)** — ターミナルベースでモデルに依存しないAIペアプログラミングツールで、OpenAI互換エンドポイント経由でローカルモデルに対応し、設計段階からgitと統合されています。Anthropicクライアントの前にシムを置くのではなく、最初からローカルファーストで作られたコーディングCLIが欲しい場合に良い比較対象です。[Aiderレビュー](/ja/power-local-llm/aider-review)を参照。',
           '**[Cline](https://github.com/cline/cline)** — OpenAI互換エンドポイント経由でローカルモデルにも対応する、VS Codeベースの自律型コーディングエージェント（オープンソース）。ターミナルファーストのワークフローよりIDE組み込みのエージェントを好む場合に良い比較対象です。[Clineレビュー](/ja/power-local-llm/cline-review)を参照。',
         ],
-        note: 'これはローカルコーディングアシスタントの選択肢を網羅したリストではありません — claude-code-local自体のディレクトリエントリーを含む、定期的に更新される全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはローカルコーディングアシスタントの選択肢を網羅したリストではありません — claude-code-local自体のディレクトリエントリーを含む、定期的に更新される全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1628,7 +1628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — 上記で取り上げた他のコーディングアシスタントツールと並ぶclaude-code-localのディレクトリエントリーを含む、この記事が属するローカルAIツールの全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — 上記で取り上げた他のコーディングアシスタントツールと並ぶclaude-code-localのディレクトリエントリーを含む、この記事が属するローカルAIツールの全カタログ。',
           '[oMLXレビュー](/ja/power-local-llm/omlx-review) — 汎用のApple Silicon MLX推論サーバーで、MLXベースのローカルバックエンドを選ぶ際に最も近い比較対象。',
           '[Aiderレビュー](/ja/power-local-llm/aider-review) — 最初からローカルファーストで作られた、ターミナルベースでモデルに依存しないAIペアプログラミングツール。',
           '[Clineレビュー](/ja/power-local-llm/cline-review) — ローカルモデルにも対応する、オープンソースのVS Codeベースのコーディングエージェント。',
@@ -1707,7 +1707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub 저장소([github.com/nicedreamzapp/claude-code-local](https://github.com/nicedreamzapp/claude-code-local))는 2026년 9월 기준 3,314개의 스타와 625개의 포크를 기록함',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 등재된 claude-code-local 항목의 심층 분석 자료입니다 — 다른 수십 개의 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등재된 claude-code-local 항목의 심층 분석 자료입니다 — 다른 수십 개의 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
           { type: 'note', text: '명칭 관련 참고: "claude-code-local"은 Anthropic의 Claude Code 클라이언트/CLI를 재활용하여 다른 로컬 호스팅 오픈 웨이트 모델과 통신하도록 만든 것입니다. Anthropic의 제품이 아니며, Anthropic의 Claude 모델을 오프라인으로 실행시키지 않습니다.' },
         ],
       },
@@ -1837,13 +1837,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'claude-code-local과 다른 로컬 코딩 어시스턴트 구성 비교',
-        content: 'claude-code-local은 클라우드 API 대신 로컬 모델을 기반으로 AI 코딩 지원을 받을 수 있는 여러 방법 중 하나입니다. 이 분야의 다른 옵션들과 비교하면 다음과 같습니다 — 전체 목록은 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        content: 'claude-code-local은 클라우드 API 대신 로컬 모델을 기반으로 AI 코딩 지원을 받을 수 있는 여러 방법 중 하나입니다. 이 분야의 다른 옵션들과 비교하면 다음과 같습니다 — 전체 목록은 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
         items: [
           '**[oMLX](https://github.com/omlx-io/omlx)** — SSD 기반 모델 캐싱을 갖춘 범용 Apple Silicon MLX 추론 서버입니다. claude-code-local과 달리 Claude Code의 API 형식에 특화되어 있지는 않지만, Mac에서 MLX 기반 로컬 백엔드를 선택하려는 사람에게 가장 가까운 비교 대상입니다. [oMLX 리뷰](/ko/power-local-llm/omlx-review)를 참고하세요.',
           '**[Aider](https://aider.chat)** — OpenAI 호환 엔드포인트를 통해 로컬 모델과 함께 작동하는 터미널 기반, 모델 독립적 AI 페어 프로그래밍 도구로, git 통합이 기본으로 설계되어 있습니다. Anthropic 클라이언트 앞단의 셰임이 아니라 처음부터 로컬 우선으로 설계된 코딩 CLI를 원한다면 좋은 비교 대상입니다. [Aider 리뷰](/ko/power-local-llm/aider-review)를 참고하세요.',
           '**[Cline](https://github.com/cline/cline)** — OpenAI 호환 엔드포인트를 통해 로컬 모델도 지원하는 오픈소스 VS Code 기반 자율 코딩 에이전트입니다. 터미널 우선 워크플로보다 IDE에 내장된 에이전트를 선호한다면 좋은 비교 대상입니다. [Cline 리뷰](/ko/power-local-llm/cline-review)를 참고하세요.',
         ],
-        note: '이는 로컬 코딩 어시스턴트 옵션의 전체 목록이 아닙니다 — claude-code-local 자체의 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 목록은 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이는 로컬 코딩 어시스턴트 옵션의 전체 목록이 아닙니다 — claude-code-local 자체의 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 목록은 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1900,7 +1900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 문서가 속한 로컬 AI 도구 전체 목록으로, 위에서 다룬 다른 코딩 어시스턴트 도구들과 함께 claude-code-local의 디렉터리 항목도 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 문서가 속한 로컬 AI 도구 전체 목록으로, 위에서 다룬 다른 코딩 어시스턴트 도구들과 함께 claude-code-local의 디렉터리 항목도 포함합니다.',
           '[oMLX 리뷰](/ko/power-local-llm/omlx-review) — 범용 Apple Silicon MLX 추론 서버로, MLX 기반 로컬 백엔드를 선택할 때 가장 가까운 비교 대상입니다.',
           '[Aider 리뷰](/ko/power-local-llm/aider-review) — 처음부터 로컬 우선으로 설계된 터미널 기반, 모델 독립적 AI 페어 프로그래밍 도구입니다.',
           '[Cline 리뷰](/ko/power-local-llm/cline-review) — 로컬 모델도 지원하는 오픈소스 VS Code 기반 코딩 에이전트입니다.',
@@ -1979,7 +1979,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مستودع GitHub ([github.com/nicedreamzapp/claude-code-local](https://github.com/nicedreamzapp/claude-code-local)) يُظهر 3,314 نجمة و625 تفرعًا (forks) حتى سبتمبر 2026',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الجزء التفصيلي المكمّل لإدراج claude-code-local ضمن [دليل برامج نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة للاطلاع على مقارنة سريعة بينه وبين عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي الجزء التفصيلي المكمّل لإدراج claude-code-local ضمن [دليل برامج نماذج اللغة الكبيرة المحلية](/ar/directory) — راجع تلك الصفحة للاطلاع على مقارنة سريعة بينه وبين عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
           { type: 'note', text: 'ملاحظة حول التسمية: يعيد "claude-code-local" توظيف عميل/أداة Claude Code التابعة لـ Anthropic للتواصل مع نموذج آخر مفتوح الأوزان يعمل محليًا. وهو ليس منتجًا من Anthropic، ولا يجعل نموذج Claude التابع لها يعمل دون اتصال بالإنترنت.' },
         ],
       },
@@ -2109,13 +2109,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'claude-code-local مقابل إعدادات المساعدة البرمجية المحلية الأخرى',
-        content: 'claude-code-local هو أحد الطرق العديدة للحصول على مساعدة برمجية بالذكاء الاصطناعي تعمل مقابل نموذج محلي بدلًا من واجهة برمجة تطبيقات سحابية. فيما يلي موقعه مقارنة بخيارات أخرى في هذا المجال — راجع [دليل برامج نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل.',
+        content: 'claude-code-local هو أحد الطرق العديدة للحصول على مساعدة برمجية بالذكاء الاصطناعي تعمل مقابل نموذج محلي بدلًا من واجهة برمجة تطبيقات سحابية. فيما يلي موقعه مقارنة بخيارات أخرى في هذا المجال — راجع [دليل برامج نماذج اللغة الكبيرة المحلية](/ar/directory) للاطلاع على الكتالوج الكامل.',
         items: [
           '**[oMLX](https://github.com/omlx-io/omlx)** — خادم استدلال عام الغرض مبني أصلًا على MLX لأجهزة Apple Silicon، مع تخزين مؤقت للنماذج مدعوم بمحرك أقراص SSD؛ خلافًا لـ claude-code-local، لم يُبنَ خصيصًا حول صيغة واجهة برمجة تطبيقات Claude Code، لكنه أقرب مقارنة لمن يختار محرك خلفية محلي مبني على MLX على جهاز Mac. راجع [مراجعة oMLX](/ar/power-local-llm/omlx-review).',
           '**[Aider](https://aider.chat)** — أداة برمجة زوجية بالذكاء الاصطناعي تعمل في الطرفية ومستقلة عن النموذج، تعمل مع النماذج المحلية عبر أي نقطة نهاية متوافقة مع OpenAI، ومصمَّمة بتكامل مع git؛ مقارنة جيدة إذا أردت أداة سطر أوامر برمجية مبنية محليًا منذ البداية بدلًا من طبقة توافق أمام عميل Anthropic. راجع [مراجعة Aider](/ar/power-local-llm/aider-review).',
           '**[Cline](https://github.com/cline/cline)** — وكيل برمجة مستقل مفتوح المصدر مبني على VS Code، يدعم أيضًا النماذج المحلية عبر نقاط نهاية متوافقة مع OpenAI؛ مقارنة جيدة إذا فضّلت وكيلًا مدمجًا في بيئة التطوير على سير عمل يعتمد أساسًا على الطرفية. راجع [مراجعة Cline](/ar/power-local-llm/cline-review).',
         ],
-        note: 'هذه ليست قائمة شاملة لخيارات المساعدة البرمجية المحلية — راجع [دليل برامج نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدراج claude-code-local الخاص به ضمن الدليل.',
+        note: 'هذه ليست قائمة شاملة لخيارات المساعدة البرمجية المحلية — راجع [دليل برامج نماذج اللغة الكبيرة المحلية](/ar/directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدراج claude-code-local الخاص به ضمن الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2172,7 +2172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برامج نماذج اللغة الكبيرة المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي تنتمي إليها هذه المقالة، بما في ذلك إدراج claude-code-local الخاص به إلى جانب أدوات المساعدة البرمجية الأخرى المذكورة أعلاه.',
+          '[دليل برامج نماذج اللغة الكبيرة المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي تنتمي إليها هذه المقالة، بما في ذلك إدراج claude-code-local الخاص به إلى جانب أدوات المساعدة البرمجية الأخرى المذكورة أعلاه.',
           '[مراجعة oMLX](/ar/power-local-llm/omlx-review) — خادم استدلال عام الغرض مبني أصلًا على MLX لأجهزة Apple Silicon، وهو أقرب مقارنة لاختيار محرك خلفية محلي مبني على MLX.',
           '[مراجعة Aider](/ar/power-local-llm/aider-review) — أداة برمجة زوجية بالذكاء الاصطناعي تعمل في الطرفية ومستقلة عن النموذج، مبنية محليًا منذ البداية.',
           '[مراجعة Cline](/ar/power-local-llm/cline-review) — وكيل برمجة مستقل مفتوح المصدر مبني على VS Code، يدعم أيضًا النماذج المحلية.',
@@ -2251,7 +2251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub ([github.com/nicedreamzapp/claude-code-local](https://github.com/nicedreamzapp/claude-code-local)) mostra 3.314 estrelas e 625 forks em setembro de 2026',
         ],
         callouts: [
-          { type: 'note', text: 'Esta avaliação é o complemento aprofundado da entrada do claude-code-local no [Diretório de Softwares de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar o projeto rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta avaliação é o complemento aprofundado da entrada do claude-code-local no [Diretório de Softwares de LLM Local](/pt/directory) — veja essa página para comparar o projeto rapidamente com dezenas de outras ferramentas de IA local.' },
           { type: 'note', text: 'Nota sobre o nome: "claude-code-local" reaproveita o cliente/CLI Claude Code da Anthropic para conversar com um modelo open-weight diferente, hospedado localmente. Não é um produto da Anthropic, e não faz o modelo Claude da Anthropic rodar offline.' },
         ],
       },
@@ -2381,13 +2381,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'claude-code-local vs. Outras Configurações de Assistente de Código Local',
-        content: 'O claude-code-local é uma entre várias formas de rodar assistência de código com IA contra um modelo local, em vez de uma API na nuvem. Veja como ele se posiciona ao lado de outras opções nesse espaço — confira o [Diretório de Softwares de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'O claude-code-local é uma entre várias formas de rodar assistência de código com IA contra um modelo local, em vez de uma API na nuvem. Veja como ele se posiciona ao lado de outras opções nesse espaço — confira o [Diretório de Softwares de LLM Local](/pt/directory) para o catálogo completo.',
         items: [
           '**[oMLX](https://github.com/omlx-io/omlx)** — um servidor de inferência MLX de propósito geral para Apple Silicon, com cache de modelo baseado em SSD; ao contrário do claude-code-local, não é construído especificamente em torno do formato de API do Claude Code, mas é a comparação mais próxima para quem escolhe um backend local baseado em MLX em um Mac. Veja a [avaliação do oMLX](/pt/power-local-llm/omlx-review).',
           '**[Aider](https://aider.chat)** — uma ferramenta de programação em par com IA baseada em terminal, agnóstica de modelo, que funciona com modelos locais através de qualquer endpoint compatível com a API da OpenAI, integrada ao git por design; uma boa comparação se você quer uma CLI de código construída local-first desde o início, em vez de uma camada de compatibilidade na frente do cliente da Anthropic. Veja a [avaliação do Aider](/pt/power-local-llm/aider-review).',
           '**[Cline](https://github.com/cline/cline)** — um agente de código autônomo open source, baseado no VS Code, que também suporta modelos locais através de endpoints compatíveis com a API da OpenAI; uma boa comparação se você prefere um agente embutido na IDE em vez de um fluxo de trabalho voltado a terminal. Veja a [avaliação do Cline](/pt/power-local-llm/cline-review).',
         ],
-        note: 'Esta não é uma lista exaustiva de opções de assistente de código local — veja o [Diretório de Softwares de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, atualizado regularmente, incluindo a própria entrada do claude-code-local no diretório.',
+        note: 'Esta não é uma lista exaustiva de opções de assistente de código local — veja o [Diretório de Softwares de LLM Local](/pt/directory) para o catálogo completo, atualizado regularmente, incluindo a própria entrada do claude-code-local no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2444,7 +2444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura Relacionada',
         items: [
-          '[Diretório de Softwares de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do claude-code-local no diretório, ao lado de outras ferramentas de assistente de código cobertas acima.',
+          '[Diretório de Softwares de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do claude-code-local no diretório, ao lado de outras ferramentas de assistente de código cobertas acima.',
           '[Avaliação do oMLX](/pt/power-local-llm/omlx-review) — um servidor de inferência MLX de propósito geral para Apple Silicon, a comparação mais próxima para escolher um backend local baseado em MLX.',
           '[Avaliação do Aider](/pt/power-local-llm/aider-review) — uma ferramenta de programação em par com IA baseada em terminal, agnóstica de modelo, construída local-first desde o início.',
           '[Avaliação do Cline](/pt/power-local-llm/cline-review) — um agente de código open source, baseado no VS Code, que também suporta modelos locais.',

@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Multi-agent cooperation: any agent can spin up subordinate agents to delegate research, coding, or review work',
         ],
         callouts: [
-          { type: 'note', text: 'Agent Zero has changed significantly since its original description as a minimal coding agent — the current release adds a full Linux desktop, browser automation, and document co-editing. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for how Agent Zero compares to other agent frameworks at a glance.' },
+          { type: 'note', text: 'Agent Zero has changed significantly since its original description as a minimal coding agent — the current release adds a full Linux desktop, browser automation, and document co-editing. See the [Local LLM Software Directory](/directory) for how Agent Zero compares to other agent frameworks at a glance.' },
         ],
       },
       history: {
@@ -266,7 +266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[SuperAGI Review: Features, Pricing, Alternatives](/power-local-llm/superagi-review) — another GUI-based, independent open-source autonomous agent project.',
           '[CrewAI Review: Features, Pricing, Alternatives](/power-local-llm/crewai-review) — a code-first, role-based multi-agent framework, for teams that want to embed orchestration into their own application instead of running a standalone Docker app.',
           '[AutoGen Review: Features, Pricing, Alternatives](/power-local-llm/autogen-review) — Microsoft Research\'s multi-agent conversation framework, now in maintenance mode, for historical comparison.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including where Agent Zero fits among agent frameworks.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools this article belongs to, including where Agent Zero fits among agent frameworks.',
         ],
       },
     },
@@ -341,7 +341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Multi-Agenten-Zusammenarbeit: jeder Agent kann untergeordnete Agenten starten, um Recherche-, Coding- oder Review-Arbeit zu delegieren',
         ],
         callouts: [
-          { type: 'note', text: 'Agent Zero hat sich seit seiner ursprünglichen Beschreibung als minimaler Coding-Agent deutlich verändert — die aktuelle Version bringt einen vollständigen Linux-Desktop, Browser-Automatisierung und gemeinsame Dokumentbearbeitung mit. Im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) sieht man auf einen Blick, wie Agent Zero im Vergleich zu anderen Agenten-Frameworks abschneidet.' },
+          { type: 'note', text: 'Agent Zero hat sich seit seiner ursprünglichen Beschreibung als minimaler Coding-Agent deutlich verändert — die aktuelle Version bringt einen vollständigen Linux-Desktop, Browser-Automatisierung und gemeinsame Dokumentbearbeitung mit. Im [Local LLM Software Directory](/de/directory) sieht man auf einen Blick, wie Agent Zero im Vergleich zu anderen Agenten-Frameworks abschneidet.' },
         ],
       },
       history: {
@@ -535,7 +535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[SuperAGI Review: Funktionen, Preise, Alternativen](/de/power-local-llm/superagi-review) — ein weiteres GUI-basiertes, unabhängiges Open-Source-Projekt für autonome Agenten.',
           '[CrewAI Review: Funktionen, Preise, Alternativen](/de/power-local-llm/crewai-review) — ein code-first, rollenbasiertes Multi-Agenten-Framework für Teams, die Orchestrierung in ihre eigene Anwendung einbetten wollen, statt eine eigenständige Docker-App zu betreiben.',
           '[AutoGen Review: Funktionen, Preise, Alternativen](/de/power-local-llm/autogen-review) — das Multi-Agenten-Konversationsframework von Microsoft Research, inzwischen im Wartungsmodus, zum historischen Vergleich.',
-          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Agent Zero unter den Agenten-Frameworks.',
+          '[Local LLM Software Directory](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Agent Zero unter den Agenten-Frameworks.',
         ],
       },
     },
@@ -610,7 +610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Coopération multi-agents : tout agent peut créer des agents subordonnés pour déléguer la recherche, le codage ou la relecture",
         ],
         callouts: [
-          { type: 'note', text: "Agent Zero a beaucoup évolué depuis sa description initiale d'agent de codage minimaliste — la version actuelle ajoute un bureau Linux complet, l'automatisation du navigateur et la co-édition de documents. Voir le [Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour situer Agent Zero par rapport aux autres frameworks d'agents en un coup d'œil." },
+          { type: 'note', text: "Agent Zero a beaucoup évolué depuis sa description initiale d'agent de codage minimaliste — la version actuelle ajoute un bureau Linux complet, l'automatisation du navigateur et la co-édition de documents. Voir le [Répertoire des logiciels LLM locaux](/fr/directory) pour situer Agent Zero par rapport aux autres frameworks d'agents en un coup d'œil." },
         ],
       },
       history: {
@@ -804,7 +804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Avis SuperAGI : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/superagi-review) — un autre projet d\'agent autonome open source indépendant, basé sur une interface graphique.',
           "[Avis CrewAI : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/crewai-review) — un framework multi-agent axé code et basé sur des rôles, pour les équipes qui veulent intégrer l'orchestration dans leur propre application plutôt que d'exécuter une application Docker autonome.",
           '[Avis AutoGen : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/autogen-review) — le framework de conversation multi-agent de Microsoft Research, désormais en mode maintenance, à titre de comparaison historique.',
-          "[Répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils IA locaux auquel appartient cet article, avec la place d'Agent Zero parmi les frameworks d'agents.",
+          "[Répertoire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils IA locaux auquel appartient cet article, avec la place d'Agent Zero parmi les frameworks d'agents.",
         ],
       },
     },
@@ -879,7 +879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cooperación multiagente: cualquier agente puede crear agentes subordinados para delegar investigación, código o revisión',
         ],
         callouts: [
-          { type: 'note', text: 'Agent Zero ha cambiado de forma significativa desde su descripción original como agente de código minimalista — la versión actual añade un escritorio Linux completo, automatización de navegador y coedición de documentos. Consulta el [Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) para ver de un vistazo cómo se compara Agent Zero con otros frameworks de agentes.' },
+          { type: 'note', text: 'Agent Zero ha cambiado de forma significativa desde su descripción original como agente de código minimalista — la versión actual añade un escritorio Linux completo, automatización de navegador y coedición de documentos. Consulta el [Directorio de software LLM local](/es/directory) para ver de un vistazo cómo se compara Agent Zero con otros frameworks de agentes.' },
         ],
       },
       history: {
@@ -1073,7 +1073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análisis de SuperAGI: funciones, precio, alternativas](/es/power-local-llm/superagi-review) — otro proyecto de agente autónomo de código abierto, independiente y basado en GUI.',
           '[Análisis de CrewAI: funciones, precio, alternativas](/es/power-local-llm/crewai-review) — un framework multiagente basado en roles y orientado al código, para equipos que quieren incrustar la orquestación en su propia aplicación en lugar de ejecutar una app Docker independiente.',
           '[Análisis de AutoGen: funciones, precio, alternativas](/es/power-local-llm/autogen-review) — el framework de conversación multiagente de Microsoft Research, ahora en modo mantenimiento, para comparación histórica.',
-          '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja Agent Zero entre los frameworks de agentes.',
+          '[Directorio de software LLM local](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja Agent Zero entre los frameworks de agentes.',
         ],
       },
     },
@@ -1148,7 +1148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cooperação multiagente: qualquer agente pode criar agentes subordinados para delegar pesquisa, codificação ou revisão de trabalho',
         ],
         callouts: [
-          { type: 'note', text: 'O Agent Zero mudou bastante desde sua descrição original como agente de codificação minimalista — a versão atual adiciona um desktop Linux completo, automação de navegador e coedição de documentos. Veja o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) para comparar o Agent Zero com outros frameworks de agentes rapidamente.' },
+          { type: 'note', text: 'O Agent Zero mudou bastante desde sua descrição original como agente de codificação minimalista — a versão atual adiciona um desktop Linux completo, automação de navegador e coedição de documentos. Veja o [Diretório de Software LLM Local](/pt/directory) para comparar o Agent Zero com outros frameworks de agentes rapidamente.' },
         ],
       },
       history: {
@@ -1342,7 +1342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do SuperAGI: Recursos, Preço, Alternativas](/pt/power-local-llm/superagi-review) — outro projeto de agente autônomo open-source e independente, baseado em GUI.',
           '[Análise do CrewAI: Recursos, Preço, Alternativas](/pt/power-local-llm/crewai-review) — um framework multiagente por papéis, voltado a código, para equipes que querem embutir orquestração na própria aplicação em vez de rodar um app Docker independente.',
           '[Análise do AutoGen: Recursos, Preço, Alternativas](/pt/power-local-llm/autogen-review) — o framework de conversação multiagente da Microsoft Research, agora em modo manutenção, para comparação histórica.',
-          '[Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o Agent Zero se encaixa entre os frameworks de agentes.',
+          '[Diretório de Software LLM Local](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o Agent Zero se encaixa entre os frameworks de agentes.',
         ],
       },
     },
@@ -1417,7 +1417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'マルチエージェント連携:どのエージェントもサブエージェントを起動し、調査・コーディング・レビュー作業を委任できる',
         ],
         callouts: [
-          { type: 'note', text: 'Agent Zeroは、当初の「最小構成のコーディングエージェント」という説明から大きく変化している——現行版はフルのLinuxデスクトップ、ブラウザ自動操作、ドキュメント共同編集を追加している。Agent Zeroが他のエージェントフレームワークと比べてどう位置づけられるかは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を参照。' },
+          { type: 'note', text: 'Agent Zeroは、当初の「最小構成のコーディングエージェント」という説明から大きく変化している——現行版はフルのLinuxデスクトップ、ブラウザ自動操作、ドキュメント共同編集を追加している。Agent Zeroが他のエージェントフレームワークと比べてどう位置づけられるかは、[Local LLM Software Directory](/ja/directory)を参照。' },
         ],
       },
       history: {
@@ -1611,7 +1611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[SuperAGIレビュー:機能・料金・代替ツール](/ja/power-local-llm/superagi-review) —— GUIベースで独立したもう1つのオープンソース自律エージェントプロジェクト。',
           '[CrewAIレビュー:機能・料金・代替ツール](/ja/power-local-llm/crewai-review) —— スタンドアロンのDockerアプリを実行するのではなく、自分のアプリケーションにオーケストレーションを組み込みたいチーム向けの、コードファーストでロールベースのマルチエージェントフレームワーク。',
           '[AutoGenレビュー:機能・料金・代替ツール](/ja/power-local-llm/autogen-review) —— Microsoft Researchによるマルチエージェント対話フレームワーク、現在は保守モードにあり、歴史的な比較対象として。',
-          '[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory) —— この記事が属する、ローカルAIツールの全カタログ。Agent Zeroがエージェントフレームワークの中でどう位置づけられるかも含む。',
+          '[Local LLM Software Directory](/ja/directory) —— この記事が属する、ローカルAIツールの全カタログ。Agent Zeroがエージェントフレームワークの中でどう位置づけられるかも含む。',
         ],
       },
     },
@@ -1686,7 +1686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '多智能体协作：任何智能体都可以创建下属智能体，委派研究、编码或审查工作',
         ],
         callouts: [
-          { type: 'note', text: '自最初被描述为极简编码智能体以来，Agent Zero 已发生显著变化——当前版本新增了完整的 Linux 桌面、浏览器自动化和文档协同编辑功能。可参考[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)，快速了解 Agent Zero 与其他智能体框架的对比。' },
+          { type: 'note', text: '自最初被描述为极简编码智能体以来，Agent Zero 已发生显著变化——当前版本新增了完整的 Linux 桌面、浏览器自动化和文档协同编辑功能。可参考[本地 LLM 软件目录](/zh/directory)，快速了解 Agent Zero 与其他智能体框架的对比。' },
         ],
       },
       history: {
@@ -1880,7 +1880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[SuperAGI 评测：功能、定价、替代方案](/zh/power-local-llm/superagi-review) —— 另一个基于 GUI、独立维护的开源自主智能体项目。',
           '[CrewAI 评测：功能、定价、替代方案](/zh/power-local-llm/crewai-review) —— 一个代码优先、基于角色的多智能体框架，适合希望将编排能力嵌入自身应用而非运行独立 Docker 应用的团队。',
           '[AutoGen 评测：功能、定价、替代方案](/zh/power-local-llm/autogen-review) —— 微软研究院推出的多智能体对话框架，现已进入维护模式，可作历史对比参考。',
-          '[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory) —— 本文所属的本地 AI 工具完整目录，包含 Agent Zero 在智能体框架中的定位。',
+          '[本地 LLM 软件目录](/zh/directory) —— 本文所属的本地 AI 工具完整目录，包含 Agent Zero 在智能体框架中的定位。',
         ],
       },
     },
@@ -1955,7 +1955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تعاون متعدد الوكلاء: يمكن لأي وكيل إنشاء وكلاء فرعيين لتفويض أعمال البحث أو البرمجة أو المراجعة',
         ],
         callouts: [
-          { type: 'note', text: 'تغيّر Agent Zero بشكل كبير منذ وصفه الأصلي كوكيل برمجي بسيط — يضيف الإصدار الحالي سطح مكتب لينكس كاملًا وأتمتة للمتصفح وتحريرًا مشتركًا للمستندات. راجع [دليل برمجيات النماذج المحلية](/ar/power-local-llm/local-llm-software-directory) لمعرفة كيف يقارن Agent Zero بأطر عمل الوكلاء الأخرى بنظرة سريعة.' },
+          { type: 'note', text: 'تغيّر Agent Zero بشكل كبير منذ وصفه الأصلي كوكيل برمجي بسيط — يضيف الإصدار الحالي سطح مكتب لينكس كاملًا وأتمتة للمتصفح وتحريرًا مشتركًا للمستندات. راجع [دليل برمجيات النماذج المحلية](/ar/directory) لمعرفة كيف يقارن Agent Zero بأطر عمل الوكلاء الأخرى بنظرة سريعة.' },
         ],
       },
       history: {
@@ -2149,7 +2149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة SuperAGI: المزايا والأسعار والبدائل](/ar/power-local-llm/superagi-review) — مشروع وكيل مستقل آخر مفتوح المصدر وقائم على واجهة رسومية.',
           '[مراجعة CrewAI: المزايا والأسعار والبدائل](/ar/power-local-llm/crewai-review) — إطار عمل متعدد الوكلاء قائم على الأدوار وعلى الكود، للفرق التي تريد تضمين التنسيق داخل تطبيقها الخاص بدلًا من تشغيل تطبيق Docker مستقل.',
           '[مراجعة AutoGen: المزايا والأسعار والبدائل](/ar/power-local-llm/autogen-review) — إطار محادثة متعدد الوكلاء من Microsoft Research، في وضع صيانة الآن، للمقارنة التاريخية.',
-          '[دليل برمجيات النماذج المحلية](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي تنتمي إليه هذه المقالة، بما في ذلك موقع Agent Zero بين أطر عمل الوكلاء.',
+          '[دليل برمجيات النماذج المحلية](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي تنتمي إليه هذه المقالة، بما في ذلك موقع Agent Zero بين أطر عمل الوكلاء.',
         ],
       },
     },
@@ -2224,7 +2224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '멀티 에이전트 협업: 모든 에이전트가 하위 에이전트를 만들어 리서치, 코딩, 리뷰 작업을 위임 가능',
         ],
         callouts: [
-          { type: 'note', text: 'Agent Zero는 원래 최소한의 코딩 에이전트로 소개되었던 시절과 비교해 크게 달라졌습니다 — 현재 릴리스는 완전한 리눅스 데스크톱, 브라우저 자동화, 문서 공동 편집을 추가했습니다. Agent Zero가 다른 에이전트 프레임워크와 어떻게 비교되는지는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.' },
+          { type: 'note', text: 'Agent Zero는 원래 최소한의 코딩 에이전트로 소개되었던 시절과 비교해 크게 달라졌습니다 — 현재 릴리스는 완전한 리눅스 데스크톱, 브라우저 자동화, 문서 공동 편집을 추가했습니다. Agent Zero가 다른 에이전트 프레임워크와 어떻게 비교되는지는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.' },
         ],
       },
       history: {
@@ -2418,7 +2418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[SuperAGI 리뷰: 기능, 가격, 대안](/ko/power-local-llm/superagi-review) — 또 다른 GUI 기반의 독립 오픈소스 자율 에이전트 프로젝트입니다.',
           '[CrewAI 리뷰: 기능, 가격, 대안](/ko/power-local-llm/crewai-review) — 독립 실행형 Docker 앱 대신 자신의 애플리케이션에 오케스트레이션을 임베드하려는 팀을 위한 코드 우선 역할 기반 멀티 에이전트 프레임워크입니다.',
           '[AutoGen 리뷰: 기능, 가격, 대안](/ko/power-local-llm/autogen-review) — Microsoft Research의 멀티 에이전트 대화 프레임워크로, 현재 유지보수 모드이며 역사적 비교를 위한 항목입니다.',
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 에이전트 프레임워크 사이에서 Agent Zero의 위치를 확인할 수 있습니다.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 에이전트 프레임워크 사이에서 Agent Zero의 위치를 확인할 수 있습니다.',
         ],
       },
     },

@@ -112,7 +112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Get LocalAI',
         content: [
           '**LocalAI: Offline AI Chat LLM is available only from Google Play.**',
-          'This review is a companion to PromptQuorum\'s [Local LLM Software Directory](/power-local-llm/local-llm-software-directory), which indexes local-AI tools across platforms, including this app\'s own entry.',
+          'This review is a companion to PromptQuorum\'s [Local LLM Software Directory](/directory), which indexes local-AI tools across platforms, including this app\'s own entry.',
         ],
         columns: ['Channel', 'Get It'],
         rows: [
@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Layla Review](/power-local-llm/layla-review) — a paid, cross-platform on-device companion app with an optional cloud mode.',
           '[RikkaHub Review](/power-local-llm/rikkahub-review) — another free, open-source Android local-AI chat app.',
           '[PocketPal AI Review](/power-local-llm/pocketpal-ai-review) — a free, open-source local-AI app with iOS and some Android support.',
-          '[The Complete Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — a broader directory of local-LLM tools across platforms.',
+          '[The Complete Local LLM Software Directory](/directory) — a broader directory of local-LLM tools across platforms.',
         ],
       },
     },
@@ -452,7 +452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LocalAI holen',
         content: [
           '**LocalAI: Offline AI Chat LLM ist nur über Google Play erhältlich.**',
-          'Dieser Test ist eine Ergänzung zu PromptQuorums [Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory), das lokale KI-Tools über Plattformen hinweg auflistet, einschließlich des eigenen Eintrags dieser App.',
+          'Dieser Test ist eine Ergänzung zu PromptQuorums [Verzeichnis lokaler LLM-Software](/de/directory), das lokale KI-Tools über Plattformen hinweg auflistet, einschließlich des eigenen Eintrags dieser App.',
         ],
         columns: ['Kanal', 'Holen'],
         rows: [
@@ -671,7 +671,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Layla-Test](/de/power-local-llm/layla-review) — eine kostenpflichtige, plattformübergreifende On-Device-Begleit-App mit optionalem Cloud-Modus.',
           '[RikkaHub-Test](/de/power-local-llm/rikkahub-review) — eine weitere kostenlose, quelloffene Android-Chat-App für lokale KI.',
           '[PocketPal-AI-Test](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene lokale KI-App mit iOS- und teilweiser Android-Unterstützung.',
-          '[Das vollständige lokale LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — ein umfassenderes Verzeichnis lokaler LLM-Tools über Plattformen hinweg.',
+          '[Das vollständige lokale LLM-Software-Verzeichnis](/de/directory) — ein umfassenderes Verzeichnis lokaler LLM-Tools über Plattformen hinweg.',
         ],
       },
     },
@@ -792,7 +792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Obtenir LocalAI',
         content: [
           '**LocalAI: Offline AI Chat LLM n\'est disponible que sur Google Play.**',
-          'Ce test complète le [répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) de PromptQuorum, qui recense les outils d\'IA locale sur toutes les plateformes, y compris la fiche de cette application.',
+          'Ce test complète le [répertoire de logiciels LLM locaux](/fr/directory) de PromptQuorum, qui recense les outils d\'IA locale sur toutes les plateformes, y compris la fiche de cette application.',
         ],
         columns: ['Canal', 'Obtenir'],
         rows: [
@@ -1011,7 +1011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Test de Layla](/fr/power-local-llm/layla-review) — une application compagne payante et multiplateforme sur l\'appareil, avec un mode cloud optionnel.',
           '[Test de RikkaHub](/fr/power-local-llm/rikkahub-review) — une autre application de chat IA locale gratuite et open source pour Android.',
           '[Test de PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) — une application d\'IA locale gratuite et open source avec prise en charge iOS et partielle sur Android.',
-          '[Le répertoire complet des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — un répertoire plus large d\'outils LLM locaux sur toutes les plateformes.',
+          '[Le répertoire complet des logiciels LLM locaux](/fr/directory) — un répertoire plus large d\'outils LLM locaux sur toutes les plateformes.',
         ],
       },
     },
@@ -1132,7 +1132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Consigue LocalAI',
         content: [
           '**LocalAI: Offline AI Chat LLM solo está disponible en Google Play.**',
-          'Esta reseña complementa el [Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) de PromptQuorum, que indexa herramientas de IA local en distintas plataformas, incluida la propia ficha de esta app.',
+          'Esta reseña complementa el [Directorio de software LLM local](/es/directory) de PromptQuorum, que indexa herramientas de IA local en distintas plataformas, incluida la propia ficha de esta app.',
         ],
         columns: ['Canal', 'Cómo conseguirla'],
         rows: [
@@ -1351,7 +1351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de Layla](/es/power-local-llm/layla-review) — una app de acompañamiento en el dispositivo de pago y multiplataforma con un modo en la nube opcional.',
           '[Reseña de RikkaHub](/es/power-local-llm/rikkahub-review) — otra app de chat de IA local para Android gratuita y de código abierto.',
           '[Reseña de PocketPal AI](/es/power-local-llm/pocketpal-ai-review) — una app de IA local gratuita y de código abierto con soporte para iOS y parcial para Android.',
-          '[El directorio completo de software LLM local](/es/power-local-llm/local-llm-software-directory) — un directorio más amplio de herramientas de LLM local en distintas plataformas.',
+          '[El directorio completo de software LLM local](/es/directory) — un directorio más amplio de herramientas de LLM local en distintas plataformas.',
         ],
       },
     },
@@ -1472,7 +1472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Obter o LocalAI',
         content: [
           '**LocalAI: Offline AI Chat LLM está disponível apenas na Google Play.**',
-          'Esta análise complementa o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) da PromptQuorum, que indexa ferramentas de IA local em diversas plataformas, incluindo a própria entrada deste app.',
+          'Esta análise complementa o [Diretório de Software de LLM Local](/pt/directory) da PromptQuorum, que indexa ferramentas de IA local em diversas plataformas, incluindo a própria entrada deste app.',
         ],
         columns: ['Canal', 'Onde Obter'],
         rows: [
@@ -1691,7 +1691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do Layla](/pt/power-local-llm/layla-review) — um app pago e multiplataforma de companhia no dispositivo, com modo em nuvem opcional.',
           '[Análise do RikkaHub](/pt/power-local-llm/rikkahub-review) — outro app de chat com IA local gratuito e de código aberto para Android.',
           '[Análise do PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) — um app de IA local gratuito e de código aberto com suporte a iOS e parcial ao Android.',
-          '[O Diretório Completo de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — um diretório mais amplo de ferramentas de LLM local em diversas plataformas.',
+          '[O Diretório Completo de Software de LLM Local](/pt/directory) — um diretório mais amplo de ferramentas de LLM local em diversas plataformas.',
         ],
       },
     },
@@ -1812,7 +1812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LocalAIを入手する',
         content: [
           '**LocalAI: Offline AI Chat LLMはGoogle Playからのみ入手できる。**',
-          '本レビューは、プラットフォーム横断でローカルAIツールを索引化しているPromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)の補足記事であり、そこにはこのアプリ自体の項目も含まれている。',
+          '本レビューは、プラットフォーム横断でローカルAIツールを索引化しているPromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/directory)の補足記事であり、そこにはこのアプリ自体の項目も含まれている。',
         ],
         columns: ['チャネル', '入手方法'],
         rows: [
@@ -2031,7 +2031,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Laylaレビュー](/ja/power-local-llm/layla-review) ―― オプションのクラウドモードを備えた有料でクロスプラットフォームのオンデバイス伴走アプリ。',
           '[RikkaHubレビュー](/ja/power-local-llm/rikkahub-review) ―― もう一つの無料オープンソースAndroidローカルAIチャットアプリ。',
           '[PocketPal AIレビュー](/ja/power-local-llm/pocketpal-ai-review) ―― iOSと一部Androidに対応した無料オープンソースのローカルAIアプリ。',
-          '[完全なローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) ―― プラットフォーム横断でローカルLLMツールを網羅するより広範なディレクトリ。',
+          '[完全なローカルLLMソフトウェアディレクトリ](/ja/directory) ―― プラットフォーム横断でローカルLLMツールを網羅するより広範なディレクトリ。',
         ],
       },
     },
@@ -2152,7 +2152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '获取LocalAI',
         content: [
           '**LocalAI: Offline AI Chat LLM仅通过Google Play提供。**',
-          '本次评测是PromptQuorum[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)的配套内容,该目录收录了各平台的本地AI工具,也包括这款应用本身的条目。',
+          '本次评测是PromptQuorum[本地LLM软件目录](/zh/directory)的配套内容,该目录收录了各平台的本地AI工具,也包括这款应用本身的条目。',
         ],
         columns: ['渠道', '获取方式'],
         rows: [
@@ -2371,7 +2371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Layla评测](/zh/power-local-llm/layla-review)——一款付费、跨平台的设备本地陪伴应用,提供可选的云端模式。',
           '[RikkaHub评测](/zh/power-local-llm/rikkahub-review)——另一款免费、开源的Android本地AI聊天应用。',
           '[PocketPal AI评测](/zh/power-local-llm/pocketpal-ai-review)——一款免费、开源的本地AI应用,支持iOS及部分Android机型。',
-          '[完整的本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)——一个覆盖各平台本地LLM工具的更全面目录。',
+          '[完整的本地LLM软件目录](/zh/directory)——一个覆盖各平台本地LLM工具的更全面目录。',
         ],
       },
     },
@@ -2492,7 +2492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الحصول على LocalAI',
         content: [
           '**LocalAI: Offline AI Chat LLM متوفر فقط عبر Google Play.**',
-          'هذه المراجعة مكمّلة لـ[دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) من PromptQuorum، الذي يفهرس أدوات الذكاء الاصطناعي المحلي عبر المنصات، بما فيها إدخال هذا التطبيق نفسه.',
+          'هذه المراجعة مكمّلة لـ[دليل برمجيات LLM المحلية](/ar/directory) من PromptQuorum، الذي يفهرس أدوات الذكاء الاصطناعي المحلي عبر المنصات، بما فيها إدخال هذا التطبيق نفسه.',
         ],
         columns: ['القناة', 'الحصول عليه'],
         rows: [
@@ -2711,7 +2711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة Layla](/ar/power-local-llm/layla-review) — تطبيق مرافق مدفوع وعابر للمنصات يعمل على الجهاز، مع وضع سحابي اختياري.',
           '[مراجعة RikkaHub](/ar/power-local-llm/rikkahub-review) — تطبيق دردشة ذكاء اصطناعي محلي آخر مجاني ومفتوح المصدر لأندرويد.',
           '[مراجعة PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) — تطبيق ذكاء اصطناعي محلي مجاني ومفتوح المصدر يدعم iOS وبعض أجهزة أندرويد.',
-          '[الدليل الكامل لبرمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — دليل أوسع لأدوات LLM المحلية عبر المنصات.',
+          '[الدليل الكامل لبرمجيات LLM المحلية](/ar/directory) — دليل أوسع لأدوات LLM المحلية عبر المنصات.',
         ],
       },
     },
@@ -2832,7 +2832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LocalAI 받기',
         content: [
           '**LocalAI: Offline AI Chat LLM은 Google Play에서만 이용할 수 있습니다.**',
-          '이 리뷰는 플랫폼 전반의 로컬 AI 도구를 정리한 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)와 함께 보는 자료이며, 이 앱의 자체 항목도 포함되어 있습니다.',
+          '이 리뷰는 플랫폼 전반의 로컬 AI 도구를 정리한 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)와 함께 보는 자료이며, 이 앱의 자체 항목도 포함되어 있습니다.',
         ],
         columns: ['채널', '받기'],
         rows: [
@@ -3051,7 +3051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Layla 리뷰](/ko/power-local-llm/layla-review) — 선택적 클라우드 모드가 있는 유료 크로스플랫폼 온디바이스 동반 앱.',
           '[RikkaHub 리뷰](/ko/power-local-llm/rikkahub-review) — 또 다른 무료 오픈소스 안드로이드 로컬 AI 채팅 앱.',
           '[PocketPal AI 리뷰](/ko/power-local-llm/pocketpal-ai-review) — iOS와 일부 안드로이드를 지원하는 무료 오픈소스 로컬 AI 앱.',
-          '[전체 로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 플랫폼 전반의 로컬 LLM 도구를 더 광범위하게 정리한 디렉터리.',
+          '[전체 로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 플랫폼 전반의 로컬 LLM 도구를 더 광범위하게 정리한 디렉터리.',
         ],
       },
     },

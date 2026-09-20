@@ -1,9 +1,11 @@
-import type { Page } from '../sitemap-shared'
+import { metadata, articleLastmod, type Page } from '../sitemap-shared'
+import { POWER_LLM_SLUG_TO_KEY } from '@/lib/power-local-llm/slugs'
 
 // Combined STATIC_PAGES + FRAMEWORK_PAGES: both small and static, sharing one child sitemap.
 export const PAGES: Page[] = [
   { path: '', priority: 1.0, changefreq: 'weekly', lastmod: '2026-03-16' },
   { path: '/pq-apps', priority: 0.9, changefreq: 'weekly', lastmod: '2026-09-20' },
+  { path: '/directory', priority: 0.9, changefreq: 'weekly', lastmod: articleLastmod(metadata['power-local-llm'], POWER_LLM_SLUG_TO_KEY['local-llm-software-directory'], '2026-09-20') },
   { path: '/about', priority: 0.5, changefreq: 'monthly', lastmod: '2026-03-16' },
   { path: '/waitlist', priority: 0.6, changefreq: 'monthly', lastmod: '2026-03-16' },
   { path: '/privacy', priority: 0.3, changefreq: 'monthly', lastmod: '2026-03-15' },

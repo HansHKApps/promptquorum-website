@@ -71,7 +71,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "The project's own README recommends [Aider](/power-local-llm/aider-review) as a maintained alternative CLI",
         ],
         callouts: [
-          { type: 'note', text: "GPT Engineer's core job was full-codebase generation from a single prompt, closest in category to other early autonomous coding agents like AutoGPT and Open Interpreter. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for how it fits among agent frameworks and coding tools at a glance." },
+          { type: 'note', text: "GPT Engineer's core job was full-codebase generation from a single prompt, closest in category to other early autonomous coding agents like AutoGPT and Open Interpreter. See the [Local LLM Software Directory](/directory) for how it fits among agent frameworks and coding tools at a glance." },
         ],
       },
       history: {
@@ -258,7 +258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[OpenHands Review: The Open-Source Answer to Devin](/power-local-llm/openhands-review) — a maintained autonomous coding agent that runs code in a sandboxed environment, for end-to-end tasks beyond one-shot generation.',
           '[AutoGPT Review 2026: Classic Agent vs. Hosted Platform](/power-local-llm/autogpt-local-review) — another early-2023 autonomous-agent project, useful for comparing how different pioneers of the category have (or haven\'t) kept developing.',
           '[CAMEL Review: Features, Role-Playing, Alternatives](/power-local-llm/camel-review) — an actively maintained multi-agent framework, for teams that need two or more agents collaborating rather than one-shot codebase generation.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including where GPT Engineer fits among coding and agent tools.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools this article belongs to, including where GPT Engineer fits among coding and agent tools.',
         ],
       },
     },
@@ -332,7 +332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Die eigene README des Projekts empfiehlt [Aider](/de/power-local-llm/aider-review) als gepflegte Alternative-CLI',
         ],
         callouts: [
-          { type: 'note', text: "GPT Engineers Kernaufgabe war die Generierung einer vollständigen Codebasis aus einer einzigen Prompt — konzeptionell am nächsten an anderen frühen autonomen Coding-Agenten wie AutoGPT und Open Interpreter. Im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) sehen Sie, wo es unter Agenten-Frameworks und Coding-Tools einzuordnen ist." },
+          { type: 'note', text: "GPT Engineers Kernaufgabe war die Generierung einer vollständigen Codebasis aus einer einzigen Prompt — konzeptionell am nächsten an anderen frühen autonomen Coding-Agenten wie AutoGPT und Open Interpreter. Im [Local LLM Software Directory](/de/directory) sehen Sie, wo es unter Agenten-Frameworks und Coding-Tools einzuordnen ist." },
         ],
       },
       history: {
@@ -519,7 +519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[OpenHands Review: Die quelloffene Antwort auf Devin](/de/power-local-llm/openhands-review) — ein gepflegter autonomer Coding-Agent, der Code in sandboxed Umgebung ausführt, für durchgängige Aufgaben über einmalige Generierung hinaus.',
           '[AutoGPT Review 2026: Klassischer Agent vs. gehostete Plattform](/de/power-local-llm/autogpt-local-review) — ein weiteres Projekt eines autonomen Agenten aus früh-2023, nützlich zum Vergleich, wie unterschiedlich Pioniere dieser Kategorie weiterentwickelt wurden (oder nicht).',
           '[CAMEL Review: Funktionen, Role-Playing, Alternativen](/de/power-local-llm/camel-review) — ein aktiv gepflegtes Multi-Agent-Framework, für Teams, die zwei oder mehr zusammenarbeitende Agenten statt einmaliger Codebasis-Generierung benötigen.',
-          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von GPT Engineer unter Coding- und Agenten-Tools.',
+          '[Local LLM Software Directory](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von GPT Engineer unter Coding- und Agenten-Tools.',
         ],
       },
     },
@@ -593,7 +593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le propre README du projet recommande [Aider](/fr/power-local-llm/aider-review) comme CLI alternative maintenue',
         ],
         callouts: [
-          { type: 'note', text: "La mission centrale de GPT Engineer était la génération de base de code complète à partir d'un seul prompt, proche d'autres premiers agents de codage autonomes comme AutoGPT et Open Interpreter. Consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour voir en un coup d'œil où il se situe parmi les frameworks d'agents et outils de codage." },
+          { type: 'note', text: "La mission centrale de GPT Engineer était la génération de base de code complète à partir d'un seul prompt, proche d'autres premiers agents de codage autonomes comme AutoGPT et Open Interpreter. Consultez le [Local LLM Software Directory](/fr/directory) pour voir en un coup d'œil où il se situe parmi les frameworks d'agents et outils de codage." },
         ],
       },
       history: {
@@ -780,7 +780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Avis OpenHands : la réponse open source à Devin](/fr/power-local-llm/openhands-review) — un agent de codage autonome maintenu qui exécute du code dans un environnement sandboxé, pour des tâches de bout en bout au-delà de la génération ponctuelle.',
           '[Avis AutoGPT 2026 : agent classique vs plateforme hébergée](/fr/power-local-llm/autogpt-local-review) — un autre projet d\'agent autonome de début 2023, utile pour comparer comment différents pionniers de la catégorie ont (ou non) continué à se développer.',
           '[Avis CAMEL : fonctionnalités, jeu de rôle, alternatives](/fr/power-local-llm/camel-review) — un framework multi-agent activement maintenu, pour les équipes ayant besoin de deux agents ou plus collaborant plutôt que d\'une génération ponctuelle de base de code.',
-          '[Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel cet article appartient, y compris la place de GPT Engineer parmi les outils de codage et d\'agents.',
+          '[Local LLM Software Directory](/fr/directory) — le catalogue complet des outils d\'IA locale auquel cet article appartient, y compris la place de GPT Engineer parmi les outils de codage et d\'agents.',
         ],
       },
     },
@@ -854,7 +854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El propio README del proyecto recomienda [Aider](/es/power-local-llm/aider-review) como CLI alternativa mantenida',
         ],
         callouts: [
-          { type: 'note', text: "La función central de GPT Engineer era la generación de una base de código completa a partir de un único prompt, cercana a otros primeros agentes de codificación autónomos como AutoGPT y Open Interpreter. Consulta el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) para ver de un vistazo dónde encaja entre frameworks de agentes y herramientas de codificación." },
+          { type: 'note', text: "La función central de GPT Engineer era la generación de una base de código completa a partir de un único prompt, cercana a otros primeros agentes de codificación autónomos como AutoGPT y Open Interpreter. Consulta el [Local LLM Software Directory](/es/directory) para ver de un vistazo dónde encaja entre frameworks de agentes y herramientas de codificación." },
         ],
       },
       history: {
@@ -1041,7 +1041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de OpenHands: la respuesta de código abierto a Devin](/es/power-local-llm/openhands-review) — un agente de codificación autónomo mantenido que ejecuta código en un entorno sandboxed, para tareas de extremo a extremo más allá de la generación puntual.',
           '[Reseña de AutoGPT 2026: agente clásico vs. plataforma alojada](/es/power-local-llm/autogpt-local-review) — otro proyecto de agente autónomo de principios de 2023, útil para comparar cómo distintos pioneros de la categoría han (o no) seguido desarrollándose.',
           '[Reseña de CAMEL: funciones, juego de roles, alternativas](/es/power-local-llm/camel-review) — un framework multiagente activamente mantenido, para equipos que necesitan dos o más agentes colaborando en lugar de generación puntual de una base de código.',
-          '[Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja GPT Engineer entre herramientas de codificación y agentes.',
+          '[Local LLM Software Directory](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja GPT Engineer entre herramientas de codificación y agentes.',
         ],
       },
     },
@@ -1115,7 +1115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O próprio README do projeto recomenda o [Aider](/pt/power-local-llm/aider-review) como CLI alternativa mantida',
         ],
         callouts: [
-          { type: 'note', text: "A função central do GPT Engineer era a geração de uma base de código completa a partir de um único prompt, próxima de outros primeiros agentes de codificação autônomos como AutoGPT e Open Interpreter. Veja o [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) para ver rapidamente onde ele se encaixa entre frameworks de agentes e ferramentas de codificação." },
+          { type: 'note', text: "A função central do GPT Engineer era a geração de uma base de código completa a partir de um único prompt, próxima de outros primeiros agentes de codificação autônomos como AutoGPT e Open Interpreter. Veja o [Local LLM Software Directory](/pt/directory) para ver rapidamente onde ele se encaixa entre frameworks de agentes e ferramentas de codificação." },
         ],
       },
       history: {
@@ -1302,7 +1302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do OpenHands: a resposta de código aberto ao Devin](/pt/power-local-llm/openhands-review) — um agente de codificação autônomo mantido que executa código em ambiente isolado, para tarefas de ponta a ponta além da geração pontual.',
           '[Análise do AutoGPT 2026: agente clássico vs. plataforma hospedada](/pt/power-local-llm/autogpt-local-review) — outro projeto de agente autônomo do início de 2023, útil para comparar como diferentes pioneiros da categoria continuaram (ou não) a se desenvolver.',
           '[Análise do CAMEL: recursos, role-playing, alternativas](/pt/power-local-llm/camel-review) — um framework multiagente ativamente mantido, para equipes que precisam de dois ou mais agentes colaborando em vez de geração pontual de base de código.',
-          '[Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o GPT Engineer se encaixa entre ferramentas de codificação e agentes.',
+          '[Local LLM Software Directory](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o GPT Engineer se encaixa entre ferramentas de codificação e agentes.',
         ],
       },
     },
@@ -1376,7 +1376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'プロジェクト自身のREADMEが、保守されている代替CLIとして[Aider](/ja/power-local-llm/aider-review)を推奨している',
         ],
         callouts: [
-          { type: 'note', text: "GPT Engineerの中核的な役割は、単一のプロンプトからのフルコードベース生成であり、AutoGPTやOpen Interpreterなど他の初期の自律型コーディングエージェントに最も近いカテゴリーに位置する。エージェントフレームワークやコーディングツールの中での位置付けは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)で一覧できる。" },
+          { type: 'note', text: "GPT Engineerの中核的な役割は、単一のプロンプトからのフルコードベース生成であり、AutoGPTやOpen Interpreterなど他の初期の自律型コーディングエージェントに最も近いカテゴリーに位置する。エージェントフレームワークやコーディングツールの中での位置付けは、[Local LLM Software Directory](/ja/directory)で一覧できる。" },
         ],
       },
       history: {
@@ -1563,7 +1563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[OpenHandsレビュー：Devinへのオープンソースの回答](/ja/power-local-llm/openhands-review) — サンドボックス環境でコードを実行する、保守されている自律型コーディングエージェント。一度きりの生成を超えた一気通貫タスク向け。',
           '[AutoGPTレビュー2026：クラシックエージェント vs. ホスト型プラットフォーム](/ja/power-local-llm/autogpt-local-review) — もう1つの2023年初期の自律型エージェントプロジェクトで、このカテゴリーの各パイオニアがどのように発展し続けたか（あるいは続けなかったか）を比較するのに役立つ。',
           '[CAMELレビュー：機能、ロールプレイ、代替案](/ja/power-local-llm/camel-review) — 一度きりのコードベース生成ではなく、2つ以上のエージェントが協働する必要があるチーム向けの、能動的に保守されているマルチエージェントフレームワーク。',
-          '[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの完全なカタログ。コーディング・エージェントツールの中でGPT Engineerがどこに位置するかも含む。',
+          '[Local LLM Software Directory](/ja/directory) — 本記事が属するローカルAIツールの完全なカタログ。コーディング・エージェントツールの中でGPT Engineerがどこに位置するかも含む。',
         ],
       },
     },
@@ -1637,7 +1637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '项目自身的README推荐[Aider](/zh/power-local-llm/aider-review)作为维护中的替代CLI',
         ],
         callouts: [
-          { type: 'note', text: "GPT Engineer的核心作用是根据单个提示生成完整代码库，这一类别与AutoGPT、Open Interpreter等其他早期自主编码智能体最为接近。可在[Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory)中一览它在智能体框架和编码工具中的定位。" },
+          { type: 'note', text: "GPT Engineer的核心作用是根据单个提示生成完整代码库，这一类别与AutoGPT、Open Interpreter等其他早期自主编码智能体最为接近。可在[Local LLM Software Directory](/zh/directory)中一览它在智能体框架和编码工具中的定位。" },
         ],
       },
       history: {
@@ -1824,7 +1824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[OpenHands评测：Devin的开源回应](/zh/power-local-llm/openhands-review) — 一款持续维护、在沙箱环境中运行代码的自主编码智能体，适用于超越一次性生成的端到端任务。',
           '[AutoGPT评测2026：经典智能体与托管平台对比](/zh/power-local-llm/autogpt-local-review) — 另一个2023年早期的自主智能体项目，有助于比较该类别的不同先驱者是否（以及如何）继续发展。',
           '[CAMEL评测：功能、角色扮演、替代方案](/zh/power-local-llm/camel-review) — 一款积极维护的多智能体框架，适合需要两个或更多智能体协作、而非一次性代码库生成的团队。',
-          '[Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，其中包含GPT Engineer在编码和智能体工具中的定位。',
+          '[Local LLM Software Directory](/zh/directory) — 本文所属的本地AI工具完整目录，其中包含GPT Engineer在编码和智能体工具中的定位。',
         ],
       },
     },
@@ -1898,7 +1898,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ملف README الخاص بالمشروع نفسه يوصي بـ [Aider](/ar/power-local-llm/aider-review) كواجهة سطر أوامر بديلة مُصانة',
         ],
         callouts: [
-          { type: 'note', text: "كانت الوظيفة الأساسية لـ GPT Engineer هي توليد قاعدة كود كاملة من تعليمة واحدة، وهي الأقرب من فئة عملاء البرمجة المستقلين المبكرين الآخرين مثل AutoGPT وOpen Interpreter. راجع [Local LLM Software Directory](/ar/power-local-llm/local-llm-software-directory) لمعرفة موقعه بسرعة بين أطر عمل العملاء وأدوات البرمجة." },
+          { type: 'note', text: "كانت الوظيفة الأساسية لـ GPT Engineer هي توليد قاعدة كود كاملة من تعليمة واحدة، وهي الأقرب من فئة عملاء البرمجة المستقلين المبكرين الآخرين مثل AutoGPT وOpen Interpreter. راجع [Local LLM Software Directory](/ar/directory) لمعرفة موقعه بسرعة بين أطر عمل العملاء وأدوات البرمجة." },
         ],
       },
       history: {
@@ -2085,7 +2085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة OpenHands: الرد مفتوح المصدر على Devin](/ar/power-local-llm/openhands-review) — عميل برمجة مستقل مُصان يُشغّل الكود في بيئة معزولة، لمهام شاملة تتجاوز التوليد لمرة واحدة.',
           '[مراجعة AutoGPT 2026: العميل الكلاسيكي مقابل المنصة المستضافة](/ar/power-local-llm/autogpt-local-review) — مشروع عميل مستقل آخر من أوائل 2023، مفيد لمقارنة كيفية استمرار (أو عدم استمرار) رواد هذه الفئة المختلفين في التطور.',
           '[مراجعة CAMEL: الميزات، لعب الأدوار، البدائل](/ar/power-local-llm/camel-review) — إطار عمل متعدد العملاء مُصان بنشاط، للفرق التي تحتاج إلى تعاون عميلين أو أكثر بدلاً من توليد قاعدة كود لمرة واحدة.',
-          '[Local LLM Software Directory](/ar/power-local-llm/local-llm-software-directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك موقع GPT Engineer بين أدوات البرمجة والعملاء.',
+          '[Local LLM Software Directory](/ar/directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك موقع GPT Engineer بين أدوات البرمجة والعملاء.',
         ],
       },
     },
@@ -2159,7 +2159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '프로젝트 자체 README는 유지보수되는 대체 CLI로 [Aider](/ko/power-local-llm/aider-review)를 추천한다',
         ],
         callouts: [
-          { type: 'note', text: "GPT Engineer의 핵심 역할은 단일 프롬프트로부터 전체 코드베이스를 생성하는 것으로, AutoGPT나 Open Interpreter 같은 다른 초기 자율 코딩 에이전트와 가장 가까운 카테고리에 속한다. 에이전트 프레임워크와 코딩 도구 사이에서 이 도구가 어디에 위치하는지는 [Local LLM Software Directory](/ko/power-local-llm/local-llm-software-directory)에서 한눈에 확인할 수 있다." },
+          { type: 'note', text: "GPT Engineer의 핵심 역할은 단일 프롬프트로부터 전체 코드베이스를 생성하는 것으로, AutoGPT나 Open Interpreter 같은 다른 초기 자율 코딩 에이전트와 가장 가까운 카테고리에 속한다. 에이전트 프레임워크와 코딩 도구 사이에서 이 도구가 어디에 위치하는지는 [Local LLM Software Directory](/ko/directory)에서 한눈에 확인할 수 있다." },
         ],
       },
       history: {
@@ -2346,7 +2346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[OpenHands 리뷰: Devin에 대한 오픈소스의 답](/ko/power-local-llm/openhands-review) — 샌드박스 환경에서 코드를 실행하는, 유지보수되는 자율 코딩 에이전트로, 일회성 생성을 넘어선 엔드투엔드 작업에 적합.',
           '[AutoGPT 리뷰 2026: 클래식 에이전트 대 호스팅 플랫폼](/ko/power-local-llm/autogpt-local-review) — 2023년 초기의 또 다른 자율 에이전트 프로젝트로, 이 카테고리의 여러 선구자들이 어떻게(혹은 어떻게 하지 않고) 계속 발전해왔는지 비교하는 데 유용.',
           '[CAMEL 리뷰: 기능, 롤플레잉, 대안](/ko/power-local-llm/camel-review) — 일회성 코드베이스 생성이 아니라 두 개 이상의 에이전트가 협업해야 하는 팀을 위한, 능동적으로 유지보수되는 멀티 에이전트 프레임워크.',
-          '[Local LLM Software Directory](/ko/power-local-llm/local-llm-software-directory) — 본 문서가 속한 로컬 AI 도구의 전체 카탈로그로, 코딩 및 에이전트 도구 사이에서 GPT Engineer가 어디에 위치하는지도 포함.',
+          '[Local LLM Software Directory](/ko/directory) — 본 문서가 속한 로컬 AI 도구의 전체 카탈로그로, 코딩 및 에이전트 도구 사이에서 GPT Engineer가 어디에 위치하는지도 포함.',
         ],
       },
     },

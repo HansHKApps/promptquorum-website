@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Commonly used as the vector-store backend inside LangChain and LlamaIndex RAG pipelines, paired with local embedding models via Ollama or cloud embedding APIs',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Chroma\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Chroma compares at a glance to dozens of other local and self-hosted AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Chroma\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Chroma compares at a glance to dozens of other local and self-hosted AI tools.' },
         ],
       },
       overview: {
@@ -215,7 +215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Haystack (deepset)', 'Best known for': 'Open-source RAG and search pipeline framework from deepset', 'Link': '[Haystack review](/power-local-llm/haystack-deepset-rag-framework-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'This is not an exhaustive list of vector databases and retrieval tools — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Chroma\'s own directory entry.',
+        note: 'This is not an exhaustive list of vector databases and retrieval tools — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Chroma\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -273,7 +273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Chroma\'s own directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Chroma\'s own directory entry.',
           '[Qdrant Review](/power-local-llm/qdrant-review) — a Rust-based, self-hostable vector database with more extensive metadata filtering, compared head-to-head against Chroma above.',
           '[cognee Review](/power-local-llm/cognee-review) — a knowledge-graph-based agent-memory library, for comparison against Chroma\'s flat vector-similarity approach.',
           '[LangChain Review](/power-local-llm/langchain-review) — a general-purpose LLM application framework that commonly uses Chroma as its vector-store backend.',
@@ -383,7 +383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Wird häufig als Vektorspeicher-Backend in LangChain- und LlamaIndex-RAG-Pipelines eingesetzt, kombiniert mit lokalen Embedding-Modellen über Ollama oder Cloud-Embedding-APIs',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der Deep-Dive-Begleiter zu Chromas Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie, wie sich Chroma im Vergleich zu Dutzenden anderer lokaler und selbst gehosteter KI-Tools auf einen Blick schlägt.' },
+          { type: 'note', text: 'Diese Review ist der Deep-Dive-Begleiter zu Chromas Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie, wie sich Chroma im Vergleich zu Dutzenden anderer lokaler und selbst gehosteter KI-Tools auf einen Blick schlägt.' },
         ],
       },
       overview: {
@@ -526,7 +526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Haystack (deepset)', 'Best known for': 'Quelloffenes RAG- und Suchpipeline-Framework von deepset', 'Link': '[Haystack Review](/de/power-local-llm/haystack-deepset-rag-framework-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Dies ist keine erschöpfende Liste von Vektordatenbanken und Retrieval-Tools — siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Chromas eigenem Directory-Eintrag.',
+        note: 'Dies ist keine erschöpfende Liste von Vektordatenbanken und Retrieval-Tools — siehe das [Local LLM Software Directory](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Chromas eigenem Directory-Eintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -584,7 +584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Chromas eigenem Directory-Eintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Chromas eigenem Directory-Eintrag.',
           '[Qdrant Review](/de/power-local-llm/qdrant-review) — eine Rust-basierte, selbst hostbare Vektordatenbank mit umfangreicherer Metadatenfilterung, oben im direkten Vergleich mit Chroma.',
           '[cognee Review](/de/power-local-llm/cognee-review) — eine wissensgraphbasierte Agenten-Gedächtnisbibliothek, zum Vergleich mit Chromas flachem Vektorähnlichkeitsansatz.',
           '[LangChain Review](/de/power-local-llm/langchain-review) — ein Allzweck-LLM-Anwendungs-Framework, das Chroma häufig als Vektorspeicher-Backend nutzt.',
@@ -694,7 +694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Couramment utilisé comme backend de stockage vectoriel dans les pipelines RAG LangChain et LlamaIndex, associé à des modèles d\'embedding locaux via Ollama ou des API d\'embedding cloud',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de Chroma dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir en un coup d\'œil comment Chroma se compare à des dizaines d\'autres outils IA locaux et auto-hébergés.' },
+          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de Chroma dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment Chroma se compare à des dizaines d\'autres outils IA locaux et auto-hébergés.' },
         ],
       },
       overview: {
@@ -837,7 +837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Haystack (deepset)', 'Best known for': 'Framework open source de pipeline RAG et de recherche développé par deepset', 'Link': '[Review de Haystack](/fr/power-local-llm/haystack-deepset-rag-framework-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Cette liste n\'est pas exhaustive des bases de données vectorielles et outils de récupération — consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de Chroma dans le répertoire.',
+        note: 'Cette liste n\'est pas exhaustive des bases de données vectorielles et outils de récupération — consultez le [Local LLM Software Directory](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de Chroma dans le répertoire.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -895,7 +895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locaux auquel appartient cet article, incluant la propre fiche de Chroma dans le répertoire.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils d\'IA locaux auquel appartient cet article, incluant la propre fiche de Chroma dans le répertoire.',
           '[Review de Qdrant](/fr/power-local-llm/qdrant-review) — une base de données vectorielle auto-hébergeable écrite en Rust, avec un filtrage de métadonnées plus étendu, comparée directement à Chroma ci-dessus.',
           '[Review de cognee](/fr/power-local-llm/cognee-review) — une bibliothèque de mémoire d\'agent basée sur un graphe de connaissances, à comparer à l\'approche de similarité vectorielle plate de Chroma.',
           '[Review de LangChain](/fr/power-local-llm/langchain-review) — un framework d\'application LLM généraliste qui utilise couramment Chroma comme backend de magasin vectoriel.',
@@ -1005,7 +1005,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'LangChainやLlamaIndexのRAGパイプライン内でベクトルストアのバックエンドとしてよく使われ、Ollama経由のローカル埋め込みモデルやクラウド埋め込みAPIと組み合わされる',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるChromaのエントリーを深掘りする補完記事です——他の何十ものローカル/セルフホスト型AIツールとChromaを一目で比較したい場合はそちらのページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるChromaのエントリーを深掘りする補完記事です——他の何十ものローカル/セルフホスト型AIツールとChromaを一目で比較したい場合はそちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1148,7 +1148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Haystack(deepset)', 'Best known for': 'deepset提供のオープンソースRAG・検索パイプラインフレームワーク', 'Link': '[Haystackレビュー](/ja/power-local-llm/haystack-deepset-rag-framework-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'これはベクトルデータベースとリトリーバルツールの網羅的なリストではありません——Chroma自身のディレクトリエントリーを含む、定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはベクトルデータベースとリトリーバルツールの網羅的なリストではありません——Chroma自身のディレクトリエントリーを含む、定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1206,7 +1206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) —— この記事が属する、Chroma自身のディレクトリエントリーを含むローカルAIツールの完全なカタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) —— この記事が属する、Chroma自身のディレクトリエントリーを含むローカルAIツールの完全なカタログ。',
           '[Qdrantレビュー](/ja/power-local-llm/qdrant-review) —— より豊富なメタデータフィルタリングを持つRustベースのセルフホスト型ベクトルデータベース。上記でChromaと正面から比較している。',
           '[cogneeレビュー](/ja/power-local-llm/cognee-review) —— ナレッジグラフベースのエージェントメモリライブラリ。Chromaの単純なベクトル類似度アプローチとの比較用。',
           '[LangChainレビュー](/ja/power-local-llm/langchain-review) —— Chromaをベクトルストアのバックエンドとしてよく利用する汎用LLMアプリケーションフレームワーク。',
@@ -1318,7 +1318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '常被用作 LangChain 和 LlamaIndex RAG 管道中的向量存储后端,搭配通过 Ollama 运行的本地嵌入模型或云端嵌入 API 使用',
         ],
         callouts: [
-          { type: 'note', text: '本测评是 Chroma 在 [本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory) 词条的深度补充——该页面可以让你一眼看清 Chroma 与其他数十款本地及自托管 AI 工具的对比情况。' },
+          { type: 'note', text: '本测评是 Chroma 在 [本地 LLM 软件目录](/zh/directory) 词条的深度补充——该页面可以让你一眼看清 Chroma 与其他数十款本地及自托管 AI 工具的对比情况。' },
         ],
       },
       overview: {
@@ -1461,7 +1461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Haystack(deepset)', 'Best known for': 'deepset 推出的开源 RAG 与搜索管道框架', 'Link': '[Haystack 测评](/zh/power-local-llm/haystack-deepset-rag-framework-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: '这并非向量数据库和检索工具的完整列表——完整且定期更新的目录请参见 [本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory),其中也包含 Chroma 自己的目录词条。',
+        note: '这并非向量数据库和检索工具的完整列表——完整且定期更新的目录请参见 [本地 LLM 软件目录](/zh/directory),其中也包含 Chroma 自己的目录词条。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1519,7 +1519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[2026 本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)——本文所属的本地 AI 工具完整目录,其中也包含 Chroma 自己的目录词条。',
+          '[2026 本地 LLM 软件目录](/zh/directory)——本文所属的本地 AI 工具完整目录,其中也包含 Chroma 自己的目录词条。',
           '[Qdrant 测评](/zh/power-local-llm/qdrant-review)——一款基于 Rust、可自托管、拥有更丰富元数据过滤能力的向量数据库,上文已与 Chroma 做了正面对比。',
           '[cognee 测评](/zh/power-local-llm/cognee-review)——一款基于知识图谱的代理记忆库,可与 Chroma 的扁平向量相似度方案做对比。',
           '[LangChain 测评](/zh/power-local-llm/langchain-review)——一款通用型 LLM 应用框架,常将 Chroma 用作其向量存储后端。',
@@ -1629,7 +1629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Se usa habitualmente como backend de almacén de vectores dentro de pipelines RAG de LangChain y LlamaIndex, combinado con modelos de embedding locales vía Ollama o APIs de embedding en la nube',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de Chroma en el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara Chroma con decenas de otras herramientas de IA locales y autoalojadas.' },
+          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de Chroma en el [Directorio de Software LLM Local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara Chroma con decenas de otras herramientas de IA locales y autoalojadas.' },
         ],
       },
       overview: {
@@ -1772,7 +1772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Haystack (deepset)', 'Best known for': 'Framework de código abierto de pipelines de RAG y búsqueda de deepset', 'Link': '[review de Haystack](/es/power-local-llm/haystack-deepset-rag-framework-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Esta no es una lista exhaustiva de bases de datos de vectores y herramientas de recuperación — consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado con regularidad, incluida la propia entrada de directorio de Chroma.',
+        note: 'Esta no es una lista exhaustiva de bases de datos de vectores y herramientas de recuperación — consulta el [Directorio de Software LLM Local](/es/directory) para el catálogo completo y actualizado con regularidad, incluida la propia entrada de directorio de Chroma.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1830,7 +1830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia entrada de directorio de Chroma.',
+          '[Directorio de Software LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia entrada de directorio de Chroma.',
           '[Review de Qdrant](/es/power-local-llm/qdrant-review) — una base de datos de vectores autoalojable basada en Rust con un filtrado de metadatos más extenso, comparada cara a cara con Chroma más arriba.',
           '[Review de cognee](/es/power-local-llm/cognee-review) — una biblioteca de memoria de agente basada en grafos de conocimiento, para comparar con el enfoque de similitud vectorial plana de Chroma.',
           '[Review de LangChain](/es/power-local-llm/langchain-review) — un framework de aplicación LLM de propósito general que usa habitualmente Chroma como backend de almacén de vectores.',
@@ -1940,7 +1940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Comumente usado como backend de vector store dentro de pipelines RAG do LangChain e do LlamaIndex, combinado com modelos de embedding locais via Ollama ou APIs de embedding na nuvem',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Chroma no [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar o Chroma rapidamente com dezenas de outras ferramentas de IA locais e autohospedadas.' },
+          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Chroma no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar o Chroma rapidamente com dezenas de outras ferramentas de IA locais e autohospedadas.' },
         ],
       },
       overview: {
@@ -2083,7 +2083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Haystack (deepset)', 'Best known for': 'Framework open-source de RAG e pipeline de busca da deepset', 'Link': '[review do Haystack](/pt/power-local-llm/haystack-deepset-rag-framework-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Esta não é uma lista exaustiva de bancos de dados vetoriais e ferramentas de retrieval — veja o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Chroma no diretório.',
+        note: 'Esta não é uma lista exaustiva de bancos de dados vetoriais e ferramentas de retrieval — veja o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Chroma no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2141,7 +2141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura Relacionada',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do Chroma no diretório.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do Chroma no diretório.',
           '[Review do Qdrant](/pt/power-local-llm/qdrant-review) — um banco de dados vetorial autohospedável baseado em Rust, com filtragem de metadados mais extensa, comparado diretamente com o Chroma acima.',
           '[Review do cognee](/pt/power-local-llm/cognee-review) — uma biblioteca de memória de agente baseada em grafo de conhecimento, para comparação com a abordagem de similaridade vetorial simples do Chroma.',
           '[Review do LangChain](/pt/power-local-llm/langchain-review) — um framework de aplicação LLM de propósito geral que comumente usa o Chroma como seu backend de vector store.',
@@ -2251,7 +2251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تُستخدم عادة كطبقة تخزين متجهات خلفية داخل خطوط أنابيب RAG المبنية على LangChain وLlamaIndex، مقترنة بنماذج تضمين محلية عبر Ollama أو واجهات تضمين سحابية',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الرفيقة المعمّقة لمدخل Chroma في [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف تقارَن Chroma بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية والذاتية الاستضافة الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي الرفيقة المعمّقة لمدخل Chroma في [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تقارَن Chroma بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية والذاتية الاستضافة الأخرى.' },
         ],
       },
       overview: {
@@ -2394,7 +2394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Haystack (deepset)', 'Best known for': 'إطار عمل خطوط أنابيب RAG والبحث مفتوح المصدر من deepset', 'Link': '[مراجعة Haystack](/ar/power-local-llm/haystack-deepset-rag-framework-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'هذه ليست قائمة شاملة لقواعد بيانات المتجهات وأدوات الاسترجاع — راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك مدخل Chroma الخاص به.',
+        note: 'هذه ليست قائمة شاملة لقواعد بيانات المتجهات وأدوات الاسترجاع — راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك مدخل Chroma الخاص به.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2452,7 +2452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل Chroma الخاص به.',
+          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل Chroma الخاص به.',
           '[مراجعة Qdrant](/ar/power-local-llm/qdrant-review) — قاعدة بيانات متجهات ذاتية الاستضافة مبنية بلغة Rust بتصفية بيانات وصفية أكثر شمولًا، جرت مقارنتها وجهًا لوجه مع Chroma أعلاه.',
           '[مراجعة cognee](/ar/power-local-llm/cognee-review) — مكتبة ذاكرة عوامل قائمة على رسم معرفي، للمقارنة مع نهج Chroma المسطح القائم على تشابه المتجهات.',
           '[مراجعة LangChain](/ar/power-local-llm/langchain-review) — إطار عمل تطبيقات نماذج لغوية عام الغرض يستخدم Chroma عادة كطبقة تخزين متجهات خلفية.',
@@ -2562,7 +2562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'LangChain과 LlamaIndex RAG 파이프라인 내부의 벡터 저장소 백엔드로 흔히 사용되며, Ollama를 통한 로컬 임베딩 모델이나 클라우드 임베딩 API와 함께 짝지어 사용됨',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 등록된 Chroma 항목의 심층 분석판입니다 — Chroma가 수십 개의 다른 로컬 및 셀프 호스팅 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등록된 Chroma 항목의 심층 분석판입니다 — Chroma가 수십 개의 다른 로컬 및 셀프 호스팅 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2705,7 +2705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Haystack(deepset)', 'Best known for': 'deepset의 오픈소스 RAG 및 검색 파이프라인 프레임워크', 'Link': '[Haystack 리뷰](/ko/power-local-llm/haystack-deepset-rag-framework-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: '이는 벡터 데이터베이스와 검색 도구의 전체 목록이 아닙니다 — Chroma 자체의 디렉터리 항목을 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이는 벡터 데이터베이스와 검색 도구의 전체 목록이 아닙니다 — Chroma 자체의 디렉터리 항목을 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2763,7 +2763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — Chroma 자체 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그입니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — Chroma 자체 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그입니다.',
           '[Qdrant 리뷰](/ko/power-local-llm/qdrant-review) — 더 폭넓은 메타데이터 필터링을 갖춘 Rust 기반 셀프 호스팅 벡터 데이터베이스로, 위에서 Chroma와 직접 비교했습니다.',
           '[cognee 리뷰](/ko/power-local-llm/cognee-review) — 지식 그래프 기반 에이전트 메모리 라이브러리로, Chroma의 평면적 벡터 유사도 접근 방식과 비교할 수 있습니다.',
           '[LangChain 리뷰](/ko/power-local-llm/langchain-review) — Chroma를 벡터 저장소 백엔드로 흔히 사용하는 범용 LLM 애플리케이션 프레임워크입니다.',

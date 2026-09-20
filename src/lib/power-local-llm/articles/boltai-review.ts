@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'BoltAI',
     title: 'BoltAI Review 2026: Native Mac AI App, Ollama Ready',
     seoTitle: 'BoltAI Review 2026: Native Mac AI App',
-    intro: 'BoltAI ([boltai.com](https://boltai.com)) is a native macOS chat application that connects to cloud AI providers (OpenAI, Anthropic, Google, Mistral, Azure, Amazon Bedrock) and to local models through [Ollama](https://ollama.com) and LM Studio, all from the same window. It ships as a one-time-purchase Mac app rather than a subscription, with a free trial to test it first. This review is the deep-dive on BoltAI\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory), covering what it actually does, what it costs, and where it fits next to other native desktop chat clients.',
+    intro: 'BoltAI ([boltai.com](https://boltai.com)) is a native macOS chat application that connects to cloud AI providers (OpenAI, Anthropic, Google, Mistral, Azure, Amazon Bedrock) and to local models through [Ollama](https://ollama.com) and LM Studio, all from the same window. It ships as a one-time-purchase Mac app rather than a subscription, with a free trial to test it first. This review is the deep-dive on BoltAI\'s entry in the [Local LLM Software Directory](/directory), covering what it actually does, what it costs, and where it fits next to other native desktop chat clients.',
     metaDescription: 'BoltAI runs cloud providers and local Ollama/LM Studio models in one native Mac app. Verified 2026 pricing ($79–$199 one-time), downloads, and features.',
     readTime: '11 min read',
     targetKeywords: [
@@ -88,7 +88,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Data storage: BoltAI states that "all your chats and configurations are stored in your local machine," per its [about page](https://boltai.com/about)',
           'Developer: a bootstrapped, self-funded indie product built and run by Daniel Nguyen — not a venture-backed company',
         ],
-        note: 'This review is the deep-dive on BoltAI\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory), where it is tagged with hybrid locality (cloud + local), a freemium-then-paid pricing model, closed-source licensing, and macOS-only platform support. See that directory for how BoltAI compares to dozens of other local-AI tools across every category.',
+        note: 'This review is the deep-dive on BoltAI\'s entry in the [Local LLM Software Directory](/directory), where it is tagged with hybrid locality (cloud + local), a freemium-then-paid pricing model, closed-source licensing, and macOS-only platform support. See that directory for how BoltAI compares to dozens of other local-AI tools across every category.',
       },
       history: {
         id: 'boltai-history',
@@ -208,7 +208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'boltai-competitors',
         title: 'BoltAI vs. Other Local Chat Apps',
-        content: 'BoltAI is one of several desktop apps that combine local and cloud model chat. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'BoltAI is one of several desktop apps that combine local and cloud model chat. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/directory) for the full catalog.',
         items: [
           '**[Msty](/power-local-llm/msty-review)** — a cross-platform (macOS, Windows, Linux) local+cloud chat app with a genuinely free core tier that includes RAG and agent features; unlike BoltAI, Msty is not macOS-only and its base tier costs nothing rather than requiring a one-time purchase.',
           '**[Enchanted](/power-local-llm/enchanted-review)** — a free, open-source native Mac/iOS client built specifically for Ollama, narrower in scope than BoltAI but with visible source code and no cloud-provider layer.',
@@ -218,7 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Open WebUI](/local-llms/open-webui-review)** — a self-hosted, browser-based interface typically run alongside Ollama; unlike BoltAI, it is open source and deployed as a web app rather than a native macOS client.',
           '**[Chatbox](https://chatboxai.app)** — a cross-platform (including mobile) chat client supporting multiple cloud providers and local models via Ollama, without BoltAI\'s macOS-specific shortcut/AI Command layer.',
         ],
-        note: 'This is not an exhaustive list of local-first chat clients — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including BoltAI\'s own directory entry.',
+        note: 'This is not an exhaustive list of local-first chat clients — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including BoltAI\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -280,7 +280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including BoltAI\'s directory entry alongside other chat clients covered above.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including BoltAI\'s directory entry alongside other chat clients covered above.',
           '[Msty Review 2026](/power-local-llm/msty-review) — a cross-platform local+cloud chat app with a genuinely free core tier, a useful comparison if BoltAI\'s macOS-only, paid model does not fit.',
           '[Enchanted Review](/power-local-llm/enchanted-review) — a free, open-source native Mac/iOS client built specifically for Ollama, the closer comparison covered in this review.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — a deeper look at RAG-focused tools if document search matters more to you than BoltAI\'s productivity features.',
@@ -300,7 +300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'BoltAI',
     title: 'BoltAI Review 2026: Native Mac-KI-App mit Ollama-Support',
     seoTitle: 'BoltAI Review 2026: Native Mac-KI-App',
-    intro: 'BoltAI ([boltai.com](https://boltai.com)) ist eine native macOS-Chat-Anwendung, die sich mit Cloud-KI-Anbietern (OpenAI, Anthropic, Google, Mistral, Azure, Amazon Bedrock) sowie mit lokalen Modellen über [Ollama](https://ollama.com) und LM Studio verbindet — alles im selben Fenster. Die App wird als Einmalkauf verkauft, nicht als Abonnement, mit einer kostenlosen Testversion zum Ausprobieren. Diese Review ist der ausführliche Deep-Dive zu BoltAIs Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) und behandelt, was die App tatsächlich kann, was sie kostet und wo sie sich im Vergleich zu anderen nativen Desktop-Chat-Clients einordnet.',
+    intro: 'BoltAI ([boltai.com](https://boltai.com)) ist eine native macOS-Chat-Anwendung, die sich mit Cloud-KI-Anbietern (OpenAI, Anthropic, Google, Mistral, Azure, Amazon Bedrock) sowie mit lokalen Modellen über [Ollama](https://ollama.com) und LM Studio verbindet — alles im selben Fenster. Die App wird als Einmalkauf verkauft, nicht als Abonnement, mit einer kostenlosen Testversion zum Ausprobieren. Diese Review ist der ausführliche Deep-Dive zu BoltAIs Eintrag im [Local LLM Software Directory](/de/directory) und behandelt, was die App tatsächlich kann, was sie kostet und wo sie sich im Vergleich zu anderen nativen Desktop-Chat-Clients einordnet.',
     metaDescription: 'BoltAI vereint Cloud-Anbieter und lokale Ollama/LM-Studio-Modelle in einer nativen Mac-App. Geprüfte Preise 2026 (79–199 $ einmalig), Downloads und Funktionen.',
     readTime: '11 Min. Lesezeit',
     targetKeywords: [
@@ -374,7 +374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Datenspeicherung: BoltAI gibt laut eigener [Über-uns-Seite](https://boltai.com/about) an, dass "alle Chats und Konfigurationen lokal auf Ihrem Rechner gespeichert" werden',
           'Entwickler: ein bootstrapped, selbstfinanziertes Indie-Produkt, aufgebaut und betrieben von Daniel Nguyen — kein von Risikokapital finanziertes Unternehmen',
         ],
-        note: 'Diese Review ist der Deep-Dive zu BoltAIs Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory), wo die App mit hybrider Lokalität (Cloud + lokal), einem Freemium-dann-kostenpflichtig-Modell, Closed-Source-Lizenzierung und ausschließlicher macOS-Unterstützung gelistet ist. Dort finden Sie auch den Vergleich zu Dutzenden weiteren Local-AI-Tools über alle Kategorien hinweg.',
+        note: 'Diese Review ist der Deep-Dive zu BoltAIs Eintrag im [Local LLM Software Directory](/de/directory), wo die App mit hybrider Lokalität (Cloud + lokal), einem Freemium-dann-kostenpflichtig-Modell, Closed-Source-Lizenzierung und ausschließlicher macOS-Unterstützung gelistet ist. Dort finden Sie auch den Vergleich zu Dutzenden weiteren Local-AI-Tools über alle Kategorien hinweg.',
       },
       history: {
         id: 'boltai-history',
@@ -494,7 +494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'boltai-competitors',
         title: 'BoltAI vs. andere lokale Chat-Apps',
-        content: 'BoltAI ist eine von mehreren Desktop-Apps, die lokalen und Cloud-Modell-Chat kombinieren. So ordnet sie sich neben anderen Optionen in diesem Bereich ein — den vollständigen Katalog finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        content: 'BoltAI ist eine von mehreren Desktop-Apps, die lokalen und Cloud-Modell-Chat kombinieren. So ordnet sie sich neben anderen Optionen in diesem Bereich ein — den vollständigen Katalog finden Sie im [Local LLM Software Directory](/de/directory).',
         items: [
           '**[Msty](/de/power-local-llm/msty-review)** — eine plattformübergreifende (macOS, Windows, Linux) Local+Cloud-Chat-App mit einer tatsächlich kostenlosen Kernstufe, die RAG- und Agenten-Funktionen umfasst; anders als BoltAI ist Msty nicht auf macOS beschränkt, und die Basisstufe kostet nichts statt einen Einmalkauf zu erfordern.',
           '**[Enchanted](/de/power-local-llm/enchanted-review)** — ein kostenloser, quelloffener nativer Mac/iOS-Client, speziell für Ollama gebaut, im Umfang enger gefasst als BoltAI, aber mit einsehbarem Quellcode und ohne Cloud-Anbieter-Ebene.',
@@ -504,7 +504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Open WebUI](/de/local-llms/open-webui-review)** — eine selbst gehostete, browserbasierte Oberfläche, typischerweise zusammen mit Ollama betrieben; anders als BoltAI ist sie Open Source und wird als Web-App statt als nativer macOS-Client bereitgestellt.',
           '**[Chatbox](https://chatboxai.app)** — ein plattformübergreifender (einschließlich mobiler) Chat-Client mit Unterstützung für mehrere Cloud-Anbieter und lokale Modelle über Ollama, ohne BoltAIs macOS-spezifische Shortcut-/AI-Command-Ebene.',
         ],
-        note: 'Dies ist keine erschöpfende Liste lokal-first Chat-Clients — den vollständigen, regelmäßig aktualisierten Katalog, einschließlich BoltAIs eigenem Directory-Eintrag, finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine erschöpfende Liste lokal-first Chat-Clients — den vollständigen, regelmäßig aktualisierten Katalog, einschließlich BoltAIs eigenem Directory-Eintrag, finden Sie im [Local LLM Software Directory](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -566,7 +566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich BoltAIs Directory-Eintrag neben anderen oben behandelten Chat-Clients.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich BoltAIs Directory-Eintrag neben anderen oben behandelten Chat-Clients.',
           '[Msty Review 2026](/de/power-local-llm/msty-review) — eine plattformübergreifende Local+Cloud-Chat-App mit einer tatsächlich kostenlosen Kernstufe, ein nützlicher Vergleich, falls BoltAIs macOS-only, kostenpflichtiges Modell nicht passt.',
           '[Enchanted Review](/de/power-local-llm/enchanted-review) — ein kostenloser, quelloffener nativer Mac/iOS-Client, speziell für Ollama gebaut, der engere Vergleich in dieser Review.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — ein tieferer Blick auf RAG-fokussierte Tools, falls Ihnen Dokumentensuche wichtiger ist als BoltAIs Produktivitätsfunktionen.',
@@ -586,7 +586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'BoltAI',
     title: 'BoltAI Avis 2026 : application IA native pour Mac, compatible Ollama',
     seoTitle: 'BoltAI Avis 2026 : application IA native Mac',
-    intro: 'BoltAI ([boltai.com](https://boltai.com)) est une application de chat native pour macOS qui se connecte à des fournisseurs d\'IA cloud (OpenAI, Anthropic, Google, Mistral, Azure, Amazon Bedrock) ainsi qu\'à des modèles locaux via [Ollama](https://ollama.com) et LM Studio, le tout dans la même fenêtre. Elle est vendue en achat unique plutôt que par abonnement, avec un essai gratuit pour la tester au préalable. Cet article est le dossier complet sur la fiche BoltAI du [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory), et couvre ce que l\'application fait réellement, son prix, et sa place face aux autres clients de chat natifs pour ordinateur.',
+    intro: 'BoltAI ([boltai.com](https://boltai.com)) est une application de chat native pour macOS qui se connecte à des fournisseurs d\'IA cloud (OpenAI, Anthropic, Google, Mistral, Azure, Amazon Bedrock) ainsi qu\'à des modèles locaux via [Ollama](https://ollama.com) et LM Studio, le tout dans la même fenêtre. Elle est vendue en achat unique plutôt que par abonnement, avec un essai gratuit pour la tester au préalable. Cet article est le dossier complet sur la fiche BoltAI du [Local LLM Software Directory](/fr/directory), et couvre ce que l\'application fait réellement, son prix, et sa place face aux autres clients de chat natifs pour ordinateur.',
     metaDescription: 'BoltAI réunit fournisseurs cloud et modèles locaux Ollama/LM Studio dans une app Mac native. Prix 2026 vérifiés (79–199 $ en achat unique), téléchargements et fonctions.',
     readTime: '11 min de lecture',
     targetKeywords: [
@@ -660,7 +660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Stockage des données : BoltAI indique, selon sa [page à propos](https://boltai.com/about), que « toutes vos conversations et configurations sont stockées sur votre machine locale »',
           'Développeur : un produit indépendant, autofinancé, conçu et géré par Daniel Nguyen — pas une entreprise financée par du capital-risque',
         ],
-        note: 'Cet article est le dossier complet sur la fiche BoltAI dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory), où elle est classée avec une localité hybride (cloud + local), un modèle tarifaire freemium puis payant, une licence à code source fermé et une prise en charge exclusivement macOS. Consultez ce répertoire pour comparer BoltAI à des dizaines d\'autres outils d\'IA locale dans toutes les catégories.',
+        note: 'Cet article est le dossier complet sur la fiche BoltAI dans le [Local LLM Software Directory](/fr/directory), où elle est classée avec une localité hybride (cloud + local), un modèle tarifaire freemium puis payant, une licence à code source fermé et une prise en charge exclusivement macOS. Consultez ce répertoire pour comparer BoltAI à des dizaines d\'autres outils d\'IA locale dans toutes les catégories.',
       },
       history: {
         id: 'boltai-history',
@@ -780,7 +780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'boltai-competitors',
         title: 'BoltAI face aux autres apps de chat locales',
-        content: 'BoltAI fait partie de plusieurs applications de bureau qui combinent chat local et chat cloud. Voici comment elle se positionne face à d\'autres options dans cet espace — consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        content: 'BoltAI fait partie de plusieurs applications de bureau qui combinent chat local et chat cloud. Voici comment elle se positionne face à d\'autres options dans cet espace — consultez le [Local LLM Software Directory](/fr/directory) pour le catalogue complet.',
         items: [
           '**[Msty](/fr/power-local-llm/msty-review)** — une application de chat local+cloud multiplateforme (macOS, Windows, Linux) avec une formule de base réellement gratuite incluant RAG et fonctions d\'agents ; contrairement à BoltAI, Msty n\'est pas limitée à macOS et sa formule de base ne coûte rien plutôt que de nécessiter un achat unique.',
           '**[Enchanted](/fr/power-local-llm/enchanted-review)** — un client natif gratuit et open source pour Mac/iOS construit spécifiquement pour Ollama, plus restreint que BoltAI mais avec un code source visible et sans couche fournisseur cloud.',
@@ -790,7 +790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Open WebUI](/fr/local-llms/open-webui-review)** — une interface auto-hébergée basée sur navigateur, généralement exécutée aux côtés d\'Ollama ; contrairement à BoltAI, elle est open source et déployée comme application web plutôt que comme client macOS natif.',
           '**[Chatbox](https://chatboxai.app)** — un client de chat multiplateforme (mobile inclus) prenant en charge plusieurs fournisseurs cloud et des modèles locaux via Ollama, sans la couche raccourci/AI Command spécifique à macOS de BoltAI.',
         ],
-        note: 'Ceci n\'est pas une liste exhaustive des clients de chat local-first — consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la fiche propre de BoltAI.',
+        note: 'Ceci n\'est pas une liste exhaustive des clients de chat local-first — consultez le [Local LLM Software Directory](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la fiche propre de BoltAI.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -852,7 +852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Pour aller plus loin',
         items: [
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant la fiche de BoltAI aux côtés d\'autres clients de chat traités ci-dessus.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant la fiche de BoltAI aux côtés d\'autres clients de chat traités ci-dessus.',
           '[Msty Review 2026](/fr/power-local-llm/msty-review) — une application de chat local+cloud multiplateforme avec une formule de base réellement gratuite, une comparaison utile si le modèle payant et macOS-only de BoltAI ne vous convient pas.',
           '[Enchanted Review](/fr/power-local-llm/enchanted-review) — un client natif gratuit et open source pour Mac/iOS construit spécifiquement pour Ollama, la comparaison la plus proche traitée dans cet article.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — un examen plus approfondi des outils axés RAG si la recherche documentaire compte plus pour vous que les fonctions de productivité de BoltAI.',
@@ -872,7 +872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'BoltAI',
     title: 'BoltAI Reseña 2026: app nativa de IA para Mac, compatible con Ollama',
     seoTitle: 'BoltAI Reseña 2026: app nativa de IA para Mac',
-    intro: 'BoltAI ([boltai.com](https://boltai.com)) es una aplicación de chat nativa para macOS que se conecta a proveedores de IA en la nube (OpenAI, Anthropic, Google, Mistral, Azure, Amazon Bedrock) y a modelos locales a través de [Ollama](https://ollama.com) y LM Studio, todo desde la misma ventana. Se vende como una compra única en lugar de una suscripción, con una prueba gratuita para probarla antes. Este artículo es el análisis a fondo de la ficha de BoltAI en el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory), y cubre qué hace realmente, cuánto cuesta y cómo se compara con otros clientes de chat nativos para escritorio.',
+    intro: 'BoltAI ([boltai.com](https://boltai.com)) es una aplicación de chat nativa para macOS que se conecta a proveedores de IA en la nube (OpenAI, Anthropic, Google, Mistral, Azure, Amazon Bedrock) y a modelos locales a través de [Ollama](https://ollama.com) y LM Studio, todo desde la misma ventana. Se vende como una compra única en lugar de una suscripción, con una prueba gratuita para probarla antes. Este artículo es el análisis a fondo de la ficha de BoltAI en el [Local LLM Software Directory](/es/directory), y cubre qué hace realmente, cuánto cuesta y cómo se compara con otros clientes de chat nativos para escritorio.',
     metaDescription: 'BoltAI combina proveedores en la nube y modelos locales Ollama/LM Studio en una app nativa para Mac. Precios 2026 verificados (79–199 $ únicos), descargas y funciones.',
     readTime: '11 min de lectura',
     targetKeywords: [
@@ -946,7 +946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Almacenamiento de datos: BoltAI indica, según su [página "Acerca de"](https://boltai.com/about), que "todos tus chats y configuraciones se almacenan en tu equipo local"',
           'Desarrollador: un producto independiente y autofinanciado, creado y gestionado por Daniel Nguyen — no una empresa financiada por capital de riesgo',
         ],
-        note: 'Este artículo es el análisis a fondo de la ficha de BoltAI en el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory), donde está etiquetada con localidad híbrida (nube + local), un modelo de precios freemium y luego de pago, licencia de código cerrado y soporte exclusivo para macOS. Consulta ese directorio para ver cómo se compara BoltAI con docenas de otras herramientas de IA local en todas las categorías.',
+        note: 'Este artículo es el análisis a fondo de la ficha de BoltAI en el [Local LLM Software Directory](/es/directory), donde está etiquetada con localidad híbrida (nube + local), un modelo de precios freemium y luego de pago, licencia de código cerrado y soporte exclusivo para macOS. Consulta ese directorio para ver cómo se compara BoltAI con docenas de otras herramientas de IA local en todas las categorías.',
       },
       history: {
         id: 'boltai-history',
@@ -1066,7 +1066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'boltai-competitors',
         title: 'BoltAI frente a otras apps de chat locales',
-        content: 'BoltAI es una de varias apps de escritorio que combinan chat local y en la nube. Así se posiciona frente a otras opciones en ese espacio — consulta el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) para el catálogo completo.',
+        content: 'BoltAI es una de varias apps de escritorio que combinan chat local y en la nube. Así se posiciona frente a otras opciones en ese espacio — consulta el [Local LLM Software Directory](/es/directory) para el catálogo completo.',
         items: [
           '**[Msty](/es/power-local-llm/msty-review)** — una app de chat local+nube multiplataforma (macOS, Windows, Linux) con un plan base genuinamente gratuito que incluye RAG y funciones de agentes; a diferencia de BoltAI, Msty no está limitada a macOS y su plan base no cuesta nada en lugar de requerir una compra única.',
           '**[Enchanted](/es/power-local-llm/enchanted-review)** — un cliente nativo gratuito y de código abierto para Mac/iOS construido específicamente para Ollama, más limitado en alcance que BoltAI pero con código fuente visible y sin capa de proveedores en la nube.',
@@ -1076,7 +1076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Open WebUI](/es/local-llms/open-webui-review)** — una interfaz autoalojada basada en navegador, típicamente ejecutada junto a Ollama; a diferencia de BoltAI, es de código abierto y se despliega como app web en lugar de cliente nativo de macOS.',
           '**[Chatbox](https://chatboxai.app)** — un cliente de chat multiplataforma (incluido móvil) compatible con múltiples proveedores en la nube y modelos locales vía Ollama, sin la capa de atajo/AI Command específica de macOS de BoltAI.',
         ],
-        note: 'Esta no es una lista exhaustiva de clientes de chat local-first — consulta el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la propia ficha de BoltAI.',
+        note: 'Esta no es una lista exhaustiva de clientes de chat local-first — consulta el [Local LLM Software Directory](/es/directory) para el catálogo completo y actualizado regularmente, incluida la propia ficha de BoltAI.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1138,7 +1138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de BoltAI junto a otros clientes de chat tratados arriba.',
+          '[Local LLM Software Directory 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de BoltAI junto a otros clientes de chat tratados arriba.',
           '[Msty Review 2026](/es/power-local-llm/msty-review) — una app de chat local+nube multiplataforma con un plan base genuinamente gratuito, una comparación útil si el modelo de pago y exclusivo de macOS de BoltAI no te encaja.',
           '[Enchanted Review](/es/power-local-llm/enchanted-review) — un cliente nativo gratuito y de código abierto para Mac/iOS construido específicamente para Ollama, la comparación más cercana tratada en esta reseña.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — un análisis más profundo de herramientas centradas en RAG si la búsqueda documental te importa más que las funciones de productividad de BoltAI.',
@@ -1158,7 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'BoltAI',
     title: 'BoltAI Review 2026: app nativo de IA para Mac, com suporte a Ollama',
     seoTitle: 'BoltAI Review 2026: app nativo de IA para Mac',
-    intro: 'O BoltAI ([boltai.com](https://boltai.com)) é um aplicativo de chat nativo para macOS que se conecta a provedores de IA em nuvem (OpenAI, Anthropic, Google, Mistral, Azure, Amazon Bedrock) e a modelos locais via [Ollama](https://ollama.com) e LM Studio, tudo na mesma janela. Ele é vendido como compra única em vez de assinatura, com um teste gratuito para experimentar antes. Esta análise é o aprofundamento sobre a ficha do BoltAI no [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory), cobrindo o que ele realmente faz, quanto custa e como se compara a outros clientes de chat nativos para desktop.',
+    intro: 'O BoltAI ([boltai.com](https://boltai.com)) é um aplicativo de chat nativo para macOS que se conecta a provedores de IA em nuvem (OpenAI, Anthropic, Google, Mistral, Azure, Amazon Bedrock) e a modelos locais via [Ollama](https://ollama.com) e LM Studio, tudo na mesma janela. Ele é vendido como compra única em vez de assinatura, com um teste gratuito para experimentar antes. Esta análise é o aprofundamento sobre a ficha do BoltAI no [Local LLM Software Directory](/pt/directory), cobrindo o que ele realmente faz, quanto custa e como se compara a outros clientes de chat nativos para desktop.',
     metaDescription: 'BoltAI une provedores em nuvem e modelos locais Ollama/LM Studio em um app nativo para Mac. Preços 2026 verificados (79–199 $ pagamento único), downloads e recursos.',
     readTime: '11 min de leitura',
     targetKeywords: [
@@ -1232,7 +1232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Armazenamento de dados: o BoltAI declara, segundo sua [página sobre](https://boltai.com/about), que "todos os seus chats e configurações são armazenados na sua máquina local"',
           'Desenvolvedor: um produto independente e autofinanciado, criado e operado por Daniel Nguyen — não uma empresa financiada por capital de risco',
         ],
-        note: 'Esta análise é o aprofundamento sobre a ficha do BoltAI no [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory), onde ele está classificado com localidade híbrida (nuvem + local), um modelo de preços freemium seguido de pago, licenciamento de código fechado e suporte exclusivo a macOS. Consulte esse diretório para ver como o BoltAI se compara a dezenas de outras ferramentas de IA local em todas as categorias.',
+        note: 'Esta análise é o aprofundamento sobre a ficha do BoltAI no [Local LLM Software Directory](/pt/directory), onde ele está classificado com localidade híbrida (nuvem + local), um modelo de preços freemium seguido de pago, licenciamento de código fechado e suporte exclusivo a macOS. Consulte esse diretório para ver como o BoltAI se compara a dezenas de outras ferramentas de IA local em todas as categorias.',
       },
       history: {
         id: 'boltai-history',
@@ -1352,7 +1352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'boltai-competitors',
         title: 'BoltAI vs. outros apps de chat locais',
-        content: 'O BoltAI é um entre vários apps de desktop que combinam chat local e em nuvem. Veja como ele se posiciona ao lado de outras opções nesse espaço — consulte o [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'O BoltAI é um entre vários apps de desktop que combinam chat local e em nuvem. Veja como ele se posiciona ao lado de outras opções nesse espaço — consulte o [Local LLM Software Directory](/pt/directory) para o catálogo completo.',
         items: [
           '**[Msty](/pt/power-local-llm/msty-review)** — um app de chat local+nuvem multiplataforma (macOS, Windows, Linux) com um plano base genuinamente gratuito que inclui RAG e recursos de agentes; ao contrário do BoltAI, o Msty não é exclusivo de macOS e seu plano base não custa nada em vez de exigir uma compra única.',
           '**[Enchanted](/pt/power-local-llm/enchanted-review)** — um cliente nativo gratuito e de código aberto para Mac/iOS construído especificamente para o Ollama, mais limitado em escopo do que o BoltAI, mas com código-fonte visível e sem camada de provedores em nuvem.',
@@ -1362,7 +1362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Open WebUI](/pt/local-llms/open-webui-review)** — uma interface auto-hospedada baseada em navegador, tipicamente rodada junto ao Ollama; ao contrário do BoltAI, é de código aberto e implantada como app web em vez de cliente nativo de macOS.',
           '**[Chatbox](https://chatboxai.app)** — um cliente de chat multiplataforma (incluindo mobile) compatível com múltiplos provedores em nuvem e modelos locais via Ollama, sem a camada de atalho/AI Command específica de macOS do BoltAI.',
         ],
-        note: 'Esta não é uma lista exaustiva de clientes de chat local-first — consulte o [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do BoltAI.',
+        note: 'Esta não é uma lista exaustiva de clientes de chat local-first — consulte o [Local LLM Software Directory](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do BoltAI.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1424,7 +1424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do BoltAI ao lado de outros clientes de chat abordados acima.',
+          '[Local LLM Software Directory 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do BoltAI ao lado de outros clientes de chat abordados acima.',
           '[Msty Review 2026](/pt/power-local-llm/msty-review) — um app de chat local+nuvem multiplataforma com um plano base genuinamente gratuito, uma comparação útil caso o modelo pago e exclusivo de macOS do BoltAI não se encaixe.',
           '[Enchanted Review](/pt/power-local-llm/enchanted-review) — um cliente nativo gratuito e de código aberto para Mac/iOS construído especificamente para o Ollama, a comparação mais próxima abordada nesta análise.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — uma análise mais aprofundada de ferramentas focadas em RAG caso a busca documental importe mais para você do que os recursos de produtividade do BoltAI.',
@@ -1444,7 +1444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'BoltAI',
     title: 'BoltAIレビュー2026：Ollama対応のネイティブMac AIアプリ',
     seoTitle: 'BoltAIレビュー2026：ネイティブMac AIアプリ',
-    intro: 'BoltAI（[boltai.com](https://boltai.com)）は、クラウドAIプロバイダー（OpenAI、Anthropic、Google、Mistral、Azure、Amazon Bedrock）と、[Ollama](https://ollama.com)・LM Studio経由のローカルモデルの両方に、同じウィンドウから接続できるネイティブmacOSチャットアプリです。サブスクリプションではなく買い切り型で販売されており、購入前に試せる無料トライアルがあります。本レビューは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)にあるBoltAIのエントリーを詳しく掘り下げたもので、実際にできること、料金、他のネイティブデスクトップチャットクライアントとの位置づけを扱います。',
+    intro: 'BoltAI（[boltai.com](https://boltai.com)）は、クラウドAIプロバイダー（OpenAI、Anthropic、Google、Mistral、Azure、Amazon Bedrock）と、[Ollama](https://ollama.com)・LM Studio経由のローカルモデルの両方に、同じウィンドウから接続できるネイティブmacOSチャットアプリです。サブスクリプションではなく買い切り型で販売されており、購入前に試せる無料トライアルがあります。本レビューは、[Local LLM Software Directory](/ja/directory)にあるBoltAIのエントリーを詳しく掘り下げたもので、実際にできること、料金、他のネイティブデスクトップチャットクライアントとの位置づけを扱います。',
     metaDescription: 'BoltAIはクラウドプロバイダーとローカルのOllama/LM Studioモデルを1つのネイティブMacアプリで統合。2026年検証済み料金（79〜199ドル買い切り）、ダウンロード、機能を解説。',
     readTime: '11分で読める',
     targetKeywords: [
@@ -1518,7 +1518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'データ保存：BoltAIは[アバウトページ](https://boltai.com/about)で「チャットと設定はすべてローカルマシンに保存される」と述べている',
           '開発元：ベンチャー資本の支援を受けていない、Daniel Nguyen氏が個人で構築・運営する自己資金のインディー製品',
         ],
-        note: '本レビューは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)にあるBoltAIのエントリーを詳しく掘り下げたものです。同ディレクトリではBoltAIはハイブリッドなローカリティ（クラウド＋ローカル）、フリーミアムからの有料移行モデル、クローズドソースライセンス、macOS専用のプラットフォーム対応というタグが付いています。他の数十種類のローカルAIツールとの比較は同ディレクトリを参照してください。',
+        note: '本レビューは、[Local LLM Software Directory](/ja/directory)にあるBoltAIのエントリーを詳しく掘り下げたものです。同ディレクトリではBoltAIはハイブリッドなローカリティ（クラウド＋ローカル）、フリーミアムからの有料移行モデル、クローズドソースライセンス、macOS専用のプラットフォーム対応というタグが付いています。他の数十種類のローカルAIツールとの比較は同ディレクトリを参照してください。',
       },
       history: {
         id: 'boltai-history',
@@ -1638,7 +1638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'boltai-competitors',
         title: 'BoltAI vs. 他のローカルチャットアプリ',
-        content: 'BoltAIは、ローカルとクラウドのモデルチャットを組み合わせたデスクトップアプリの1つです。この分野の他の選択肢との位置づけは以下の通りです — 全カタログは[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        content: 'BoltAIは、ローカルとクラウドのモデルチャットを組み合わせたデスクトップアプリの1つです。この分野の他の選択肢との位置づけは以下の通りです — 全カタログは[Local LLM Software Directory](/ja/directory)を参照してください。',
         items: [
           '**[Msty](/ja/power-local-llm/msty-review)** — RAGとエージェント機能を含む本当に無料のコアプランを持つ、クロスプラットフォーム（macOS、Windows、Linux）のローカル＋クラウドチャットアプリ。BoltAIと異なりMsty専用ではなく、ベースプランは買い切りを要求せず無料。',
           '**[Enchanted](/ja/power-local-llm/enchanted-review)** — Ollamaに特化して作られた無料でオープンソースのネイティブMac/iOSクライアントで、BoltAIより範囲は狭いが、ソースコードが公開されておりクラウドプロバイダー層を持たない。',
@@ -1648,7 +1648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Open WebUI](/ja/local-llms/open-webui-review)** — 通常Ollamaと組み合わせて実行される、セルフホスト型のブラウザベースインターフェース。BoltAIと異なりオープンソースで、ネイティブmacOSクライアントではなくWebアプリとしてデプロイされる。',
           '**[Chatbox](https://chatboxai.app)** — 複数のクラウドプロバイダーとOllama経由のローカルモデルに対応したクロスプラットフォーム（モバイル含む）チャットクライアントで、BoltAIのmacOS特有のショートカット／AI Command層は持たない。',
         ],
-        note: 'これはローカルファーストなチャットクライアントの網羅的なリストではありません — BoltAI自身のディレクトリエントリーを含む、定期的に更新される完全なカタログについては[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはローカルファーストなチャットクライアントの網羅的なリストではありません — BoltAI自身のディレクトリエントリーを含む、定期的に更新される完全なカタログについては[Local LLM Software Directory](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1710,7 +1710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの完全なカタログ。上記で扱った他のチャットクライアントとともにBoltAIのディレクトリエントリーを含む。',
+          '[Local LLM Software Directory 2026](/ja/directory) — この記事が属するローカルAIツールの完全なカタログ。上記で扱った他のチャットクライアントとともにBoltAIのディレクトリエントリーを含む。',
           '[Msty Review 2026](/ja/power-local-llm/msty-review) — 本当に無料のコアプランを持つクロスプラットフォームのローカル＋クラウドチャットアプリ。BoltAIのmacOS専用・有料モデルが合わない場合に有用な比較。',
           '[Enchanted Review](/ja/power-local-llm/enchanted-review) — Ollamaに特化して作られた無料でオープンソースのネイティブMac/iOSクライアントで、本レビューで扱った最も近い比較対象。',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — BoltAIの生産性機能よりドキュメント検索の方が重要な場合、RAGに焦点を当てたツールをより深く見られる。',
@@ -1730,7 +1730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'BoltAI',
     title: 'BoltAI评测2026：支持Ollama的原生Mac AI应用',
     seoTitle: 'BoltAI评测2026：原生Mac AI应用',
-    intro: 'BoltAI（[boltai.com](https://boltai.com)）是一款原生macOS聊天应用,可以在同一窗口中连接云端AI提供商（OpenAI、Anthropic、Google、Mistral、Azure、Amazon Bedrock）以及通过[Ollama](https://ollama.com)和LM Studio运行的本地模型。它以一次性买断的方式销售,而非订阅制,并提供免费试用供购买前测试。本文是[Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory)中BoltAI条目的深度解析,内容涵盖它实际能做什么、价格如何,以及它与其他原生桌面聊天客户端相比处于什么位置。',
+    intro: 'BoltAI（[boltai.com](https://boltai.com)）是一款原生macOS聊天应用,可以在同一窗口中连接云端AI提供商（OpenAI、Anthropic、Google、Mistral、Azure、Amazon Bedrock）以及通过[Ollama](https://ollama.com)和LM Studio运行的本地模型。它以一次性买断的方式销售,而非订阅制,并提供免费试用供购买前测试。本文是[Local LLM Software Directory](/zh/directory)中BoltAI条目的深度解析,内容涵盖它实际能做什么、价格如何,以及它与其他原生桌面聊天客户端相比处于什么位置。',
     metaDescription: 'BoltAI在一款原生Mac应用中整合云端提供商与本地Ollama/LM Studio模型。2026年经核实的定价（79–199美元一次性买断）、下载方式和功能。',
     readTime: '阅读约11分钟',
     targetKeywords: [
@@ -1804,7 +1804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '数据存储：据其[关于页面](https://boltai.com/about)介绍,BoltAI表示"你的所有聊天记录和配置都存储在本地设备上"',
           '开发者：一款自筹资金的独立产品,由Daniel Nguyen一人构建和运营——不是一家风险投资支持的公司',
         ],
-        note: '本文是[Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory)中BoltAI条目的深度解析,在该目录中BoltAI被标记为混合本地性（云端+本地）、先免费后付费的定价模式、闭源许可以及仅支持macOS的平台。查看该目录可了解BoltAI与其他数十种本地AI工具在各个类别中的对比。',
+        note: '本文是[Local LLM Software Directory](/zh/directory)中BoltAI条目的深度解析,在该目录中BoltAI被标记为混合本地性（云端+本地）、先免费后付费的定价模式、闭源许可以及仅支持macOS的平台。查看该目录可了解BoltAI与其他数十种本地AI工具在各个类别中的对比。',
       },
       history: {
         id: 'boltai-history',
@@ -1924,7 +1924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'boltai-competitors',
         title: 'BoltAI与其他本地聊天应用的对比',
-        content: 'BoltAI是众多结合本地与云端模型聊天的桌面应用之一。以下是它与该领域其他选项的对比——完整目录见[Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'BoltAI是众多结合本地与云端模型聊天的桌面应用之一。以下是它与该领域其他选项的对比——完整目录见[Local LLM Software Directory](/zh/directory)。',
         items: [
           '**[Msty](/zh/power-local-llm/msty-review)** — 一款跨平台（macOS、Windows、Linux）的本地+云端聊天应用,拥有真正免费、包含RAG和代理功能的核心档位;与BoltAI不同,Msty不限于macOS,其基础档位免费,而非要求一次性买断。',
           '**[Enchanted](/zh/power-local-llm/enchanted-review)** — 一款专为Ollama打造的免费开源原生Mac/iOS客户端,功能范围比BoltAI窄,但源代码可见,且没有云端提供商层。',
@@ -1934,7 +1934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Open WebUI](/zh/local-llms/open-webui-review)** — 一款自托管、基于浏览器的界面,通常与Ollama搭配运行;与BoltAI不同,它是开源的,并作为Web应用而非原生macOS客户端部署。',
           '**[Chatbox](https://chatboxai.app)** — 一款跨平台（含移动端）聊天客户端,支持多个云端提供商以及通过Ollama运行的本地模型,但没有BoltAI那种macOS特有的快捷键/AI Command层。',
         ],
-        note: '这并非本地优先聊天客户端的详尽列表——完整、定期更新的目录（含BoltAI自身的目录条目）见[Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非本地优先聊天客户端的详尽列表——完整、定期更新的目录（含BoltAI自身的目录条目）见[Local LLM Software Directory](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1996,7 +1996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[Local LLM Software Directory 2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录,包含BoltAI的目录条目以及上文提到的其他聊天客户端。',
+          '[Local LLM Software Directory 2026](/zh/directory) — 本文所属的本地AI工具完整目录,包含BoltAI的目录条目以及上文提到的其他聊天客户端。',
           '[Msty Review 2026](/zh/power-local-llm/msty-review) — 一款跨平台的本地+云端聊天应用,拥有真正免费的核心档位,如果BoltAI仅限macOS的付费模式不适合你,这是一个有用的对比。',
           '[Enchanted Review](/zh/power-local-llm/enchanted-review) — 一款专为Ollama打造的免费开源原生Mac/iOS客户端,是本文中涉及的最接近的对比对象。',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 如果文档搜索对你比BoltAI的生产力功能更重要,可深入了解专注于RAG的工具。',
@@ -2016,7 +2016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'BoltAI',
     title: 'مراجعة BoltAI 2026: تطبيق ذكاء اصطناعي أصلي لـ Mac يدعم Ollama',
     seoTitle: 'مراجعة BoltAI 2026: تطبيق أصلي لـ Mac',
-    intro: 'BoltAI ([boltai.com](https://boltai.com)) هو تطبيق محادثة أصلي (native) لنظام macOS يتصل بمزوّدي الذكاء الاصطناعي السحابي (OpenAI وAnthropic وGoogle وMistral وAzure وAmazon Bedrock) وبالنماذج المحلية عبر [Ollama](https://ollama.com) وLM Studio، كل ذلك من نفس النافذة. يُباع كشراء لمرة واحدة بدلًا من اشتراك، مع نسخة تجريبية مجانية لتجربته أولًا. هذه المراجعة هي التغطية المعمّقة لمدخل BoltAI في [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory)، وتغطي ما يفعله التطبيق فعليًا وتكلفته وموقعه مقارنة بعملاء المحادثة الأصليين الآخرين لسطح المكتب.',
+    intro: 'BoltAI ([boltai.com](https://boltai.com)) هو تطبيق محادثة أصلي (native) لنظام macOS يتصل بمزوّدي الذكاء الاصطناعي السحابي (OpenAI وAnthropic وGoogle وMistral وAzure وAmazon Bedrock) وبالنماذج المحلية عبر [Ollama](https://ollama.com) وLM Studio، كل ذلك من نفس النافذة. يُباع كشراء لمرة واحدة بدلًا من اشتراك، مع نسخة تجريبية مجانية لتجربته أولًا. هذه المراجعة هي التغطية المعمّقة لمدخل BoltAI في [دليل برمجيات LLM المحلية](/ar/directory)، وتغطي ما يفعله التطبيق فعليًا وتكلفته وموقعه مقارنة بعملاء المحادثة الأصليين الآخرين لسطح المكتب.',
     metaDescription: 'يجمع BoltAI بين مزوّدي السحابة ونماذج Ollama/LM Studio المحلية في تطبيق Mac أصلي واحد. أسعار 2026 موثقة (79–199 دولارًا لمرة واحدة)، روابط التنزيل والميزات.',
     readTime: '11 دقائق للقراءة',
     targetKeywords: [
@@ -2090,7 +2090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تخزين البيانات: يذكر BoltAI في [صفحة "حول"](https://boltai.com/about) أن "جميع محادثاتك وإعداداتك تُخزَّن على جهازك المحلي"',
           'المطور: منتج مستقل وممول ذاتيًا، بناه ويديره Daniel Nguyen — وليس شركة مدعومة برأس مال استثماري',
         ],
-        note: 'هذه المراجعة هي التغطية المعمّقة لمدخل BoltAI في [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory)، حيث يُصنَّف بمحلّية هجينة (سحابية + محلية)، ونموذج تسعير مجاني ثم مدفوع، وترخيص مغلق المصدر، ودعم حصري لـ macOS. راجع ذلك الدليل لمعرفة كيف يقارن BoltAI بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى في جميع الفئات.',
+        note: 'هذه المراجعة هي التغطية المعمّقة لمدخل BoltAI في [دليل برمجيات LLM المحلية](/ar/directory)، حيث يُصنَّف بمحلّية هجينة (سحابية + محلية)، ونموذج تسعير مجاني ثم مدفوع، وترخيص مغلق المصدر، ودعم حصري لـ macOS. راجع ذلك الدليل لمعرفة كيف يقارن BoltAI بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى في جميع الفئات.',
       },
       history: {
         id: 'boltai-history',
@@ -2210,7 +2210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'boltai-competitors',
         title: 'BoltAI مقابل تطبيقات المحادثة المحلية الأخرى',
-        content: 'BoltAI واحد من عدة تطبيقات سطح مكتب تجمع بين المحادثة المحلية والسحابية. إليك كيف يقف مقارنة بخيارات أخرى في هذا المجال — راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل.',
+        content: 'BoltAI واحد من عدة تطبيقات سطح مكتب تجمع بين المحادثة المحلية والسحابية. إليك كيف يقف مقارنة بخيارات أخرى في هذا المجال — راجع [دليل برمجيات LLM المحلية](/ar/directory) للاطلاع على الكتالوج الكامل.',
         items: [
           '**[Msty](/ar/power-local-llm/msty-review)** — تطبيق محادثة محلي+سحابي متعدد المنصات (macOS وWindows وLinux) بخطة أساسية مجانية فعليًا تشمل RAG وميزات الوكلاء؛ خلافًا لـ BoltAI، لا يقتصر Msty على macOS وخطته الأساسية لا تكلف شيئًا بدلًا من طلب شراء لمرة واحدة.',
           '**[Enchanted](/ar/power-local-llm/enchanted-review)** — عميل أصلي مجاني ومفتوح المصدر لـ Mac/iOS مبني خصيصًا لـ Ollama، أضيق نطاقًا من BoltAI لكن بكود مصدري مرئي ودون طبقة مزوّد سحابي.',
@@ -2220,7 +2220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Open WebUI](/ar/local-llms/open-webui-review)** — واجهة مستضافة ذاتيًا تعمل عبر المتصفح، تُشغَّل عادة إلى جانب Ollama؛ خلافًا لـ BoltAI، فهي مفتوحة المصدر وتُنشر كتطبيق ويب بدلًا من عميل macOS أصلي.',
           '**[Chatbox](https://chatboxai.app)** — عميل محادثة متعدد المنصات (بما في ذلك الجوال) يدعم عدة مزوّدين سحابيين ونماذج محلية عبر Ollama، دون طبقة الاختصار/AI Command الخاصة بـ macOS في BoltAI.',
         ],
-        note: 'هذه ليست قائمة شاملة لعملاء المحادثة المحلية الأولوية — راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك مدخل BoltAI الخاص به في الدليل.',
+        note: 'هذه ليست قائمة شاملة لعملاء المحادثة المحلية الأولوية — راجع [دليل برمجيات LLM المحلية](/ar/directory) للحصول على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك مدخل BoltAI الخاص به في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2282,7 +2282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل BoltAI إلى جانب عملاء المحادثة الآخرين المذكورين أعلاه.',
+          '[دليل برمجيات LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل BoltAI إلى جانب عملاء المحادثة الآخرين المذكورين أعلاه.',
           '[مراجعة Msty 2026](/ar/power-local-llm/msty-review) — تطبيق محادثة محلي+سحابي متعدد المنصات بخطة أساسية مجانية فعليًا، مقارنة مفيدة إذا لم يناسبك نموذج BoltAI المدفوع والحصري لـ macOS.',
           '[مراجعة Enchanted](/ar/power-local-llm/enchanted-review) — عميل أصلي مجاني ومفتوح المصدر لـ Mac/iOS مبني خصيصًا لـ Ollama، وهو المقارنة الأقرب التي تناولتها هذه المراجعة.',
           '[AnythingLLM مقابل PrivateGPT مقابل Open WebUI RAG](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — نظرة أعمق على أدوات RAG المتخصصة إذا كان البحث في المستندات يهمك أكثر من ميزات إنتاجية BoltAI.',
@@ -2302,7 +2302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'BoltAI',
     title: 'BoltAI 리뷰 2026: Ollama를 지원하는 네이티브 Mac AI 앱',
     seoTitle: 'BoltAI 리뷰 2026: 네이티브 Mac AI 앱',
-    intro: 'BoltAI([boltai.com](https://boltai.com))는 클라우드 AI 제공업체(OpenAI, Anthropic, Google, Mistral, Azure, Amazon Bedrock)와 [Ollama](https://ollama.com), LM Studio를 통한 로컬 모델 모두에 하나의 창에서 연결할 수 있는 네이티브 macOS 채팅 애플리케이션입니다. 구독제가 아닌 일회성 구매 방식으로 판매되며, 먼저 사용해 볼 수 있는 무료 체험판이 제공됩니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 BoltAI 항목을 심층적으로 다룬 것으로, 실제로 무엇을 할 수 있는지, 비용은 얼마인지, 다른 네이티브 데스크톱 채팅 클라이언트와 비교했을 때 어떤 위치에 있는지를 다룹니다.',
+    intro: 'BoltAI([boltai.com](https://boltai.com))는 클라우드 AI 제공업체(OpenAI, Anthropic, Google, Mistral, Azure, Amazon Bedrock)와 [Ollama](https://ollama.com), LM Studio를 통한 로컬 모델 모두에 하나의 창에서 연결할 수 있는 네이티브 macOS 채팅 애플리케이션입니다. 구독제가 아닌 일회성 구매 방식으로 판매되며, 먼저 사용해 볼 수 있는 무료 체험판이 제공됩니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 BoltAI 항목을 심층적으로 다룬 것으로, 실제로 무엇을 할 수 있는지, 비용은 얼마인지, 다른 네이티브 데스크톱 채팅 클라이언트와 비교했을 때 어떤 위치에 있는지를 다룹니다.',
     metaDescription: 'BoltAI는 클라우드 제공업체와 로컬 Ollama/LM Studio 모델을 하나의 네이티브 Mac 앱에서 결합합니다. 검증된 2026년 가격(79~199달러 일회성 구매), 다운로드, 기능을 확인하세요.',
     readTime: '11분 읽기',
     targetKeywords: [
@@ -2376,7 +2376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '데이터 저장: BoltAI는 [소개 페이지](https://boltai.com/about)에서 "모든 채팅과 설정이 로컬 기기에 저장된다"고 명시합니다',
           '개발사: 벤처 자본의 지원을 받지 않는, Daniel Nguyen이 직접 구축하고 운영하는 자체 자금 조달 인디 제품',
         ],
-        note: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 BoltAI 항목을 심층적으로 다룬 것입니다. 해당 디렉터리에서 BoltAI는 하이브리드 로컬리티(클라우드 + 로컬), 프리미엄 이후 유료 전환 가격 모델, 소스 비공개 라이선스, macOS 전용 플랫폼 지원으로 태그되어 있습니다. 다른 수십 개의 로컬 AI 도구와 BoltAI가 각 카테고리에서 어떻게 비교되는지는 해당 디렉터리를 참조하십시오.',
+        note: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 BoltAI 항목을 심층적으로 다룬 것입니다. 해당 디렉터리에서 BoltAI는 하이브리드 로컬리티(클라우드 + 로컬), 프리미엄 이후 유료 전환 가격 모델, 소스 비공개 라이선스, macOS 전용 플랫폼 지원으로 태그되어 있습니다. 다른 수십 개의 로컬 AI 도구와 BoltAI가 각 카테고리에서 어떻게 비교되는지는 해당 디렉터리를 참조하십시오.',
       },
       history: {
         id: 'boltai-history',
@@ -2496,7 +2496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'boltai-competitors',
         title: 'BoltAI와 다른 로컬 채팅 앱 비교',
-        content: 'BoltAI는 로컬 및 클라우드 모델 채팅을 결합한 여러 데스크톱 앱 중 하나입니다. 이 분야의 다른 옵션과 비교했을 때 BoltAI가 어디에 위치하는지 살펴봅니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참조하십시오.',
+        content: 'BoltAI는 로컬 및 클라우드 모델 채팅을 결합한 여러 데스크톱 앱 중 하나입니다. 이 분야의 다른 옵션과 비교했을 때 BoltAI가 어디에 위치하는지 살펴봅니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참조하십시오.',
         items: [
           '**[Msty](/ko/power-local-llm/msty-review)** — RAG와 에이전트 기능을 포함한 진짜 무료 코어 플랜을 갖춘 크로스 플랫폼(macOS, Windows, Linux) 로컬+클라우드 채팅 앱입니다; BoltAI와 달리 Msty는 macOS 전용이 아니며 기본 플랜은 일회성 구매를 요구하지 않고 무료입니다.',
           '**[Enchanted](/ko/power-local-llm/enchanted-review)** — Ollama 전용으로 특화되어 만들어진 무료 오픈소스 네이티브 Mac/iOS 클라이언트로, BoltAI보다 범위는 좁지만 소스 코드가 공개되어 있고 클라우드 제공업체 계층이 없습니다.',
@@ -2506,7 +2506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Open WebUI](/ko/local-llms/open-webui-review)** — 일반적으로 Ollama와 함께 실행되는, 자체 호스팅 브라우저 기반 인터페이스입니다; BoltAI와 달리 오픈소스이며 네이티브 macOS 클라이언트가 아닌 웹 앱으로 배포됩니다.',
           '**[Chatbox](https://chatboxai.app)** — 여러 클라우드 제공업체와 Ollama를 통한 로컬 모델을 지원하는 크로스 플랫폼(모바일 포함) 채팅 클라이언트로, BoltAI의 macOS 고유 단축키/AI Command 계층은 없습니다.',
         ],
-        note: '이는 로컬 우선 채팅 클라이언트의 총망라 목록이 아닙니다 — BoltAI 자체의 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참조하십시오.',
+        note: '이는 로컬 우선 채팅 클라이언트의 총망라 목록이 아닙니다 — BoltAI 자체의 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참조하십시오.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2568,7 +2568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 채팅 클라이언트와 함께 BoltAI의 디렉터리 항목을 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 채팅 클라이언트와 함께 BoltAI의 디렉터리 항목을 포함합니다.',
           '[Msty 리뷰 2026](/ko/power-local-llm/msty-review) — 진짜 무료 코어 플랜을 갖춘 크로스 플랫폼 로컬+클라우드 채팅 앱으로, BoltAI의 macOS 전용 유료 모델이 맞지 않을 경우 유용한 비교 대상입니다.',
           '[Enchanted 리뷰](/ko/power-local-llm/enchanted-review) — Ollama 전용으로 특화되어 만들어진 무료 오픈소스 네이티브 Mac/iOS 클라이언트로, 이 리뷰에서 다룬 가장 근접한 비교 대상입니다.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI RAG](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 문서 검색이 BoltAI의 생산성 기능보다 더 중요하다면 RAG 중심 도구를 더 깊이 살펴볼 수 있습니다.',

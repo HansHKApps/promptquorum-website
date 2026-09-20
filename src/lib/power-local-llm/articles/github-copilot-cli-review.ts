@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "The Free tier includes Copilot CLI access, but usage is capped by the Free plan's overall allowances (2,000 code completions and 50 chat requests per month)",
         ],
         callouts: [
-          { type: 'note', text: "This review is the deep-dive companion to GitHub Copilot CLI's entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how it compares at a glance to other terminal-based coding agents, including ones designed local-first from the start." },
+          { type: 'note', text: "This review is the deep-dive companion to GitHub Copilot CLI's entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to other terminal-based coding agents, including ones designed local-first from the start." },
         ],
       },
       overview: {
@@ -207,14 +207,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'copilot-cli-competitors',
         title: 'Competitors and Alternatives',
-        content: "GitHub Copilot CLI sits in the same segment as several other terminal-based AI coding agents. This review is the deep-dive companion to GitHub Copilot CLI's entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for the full catalog.",
+        content: "GitHub Copilot CLI sits in the same segment as several other terminal-based AI coding agents. This review is the deep-dive companion to GitHub Copilot CLI's entry in the [Local LLM Software Directory](/directory) — see that page for the full catalog.",
         items: [
           '**[Aider](https://aider.chat)** — an open-source terminal coding agent with local models as a first-class, not opt-in, option; see the [Aider review](/power-local-llm/aider-review) and the [head-to-head comparison](#copilot-cli-vs-aider) above.',
           "**OpenCode** — another terminal-based coding agent; see PromptQuorum's [OpenCode review](/power-local-llm/opencode-review).",
           '**Shell-GPT** — a lighter-weight command-line AI assistant; see the [Shell-GPT review](/power-local-llm/shell-gpt-review).',
           '**Tabby** — a self-hosted AI coding assistant built to run entirely on your own infrastructure; see the [Tabby review](/power-local-llm/tabby-review).',
         ],
-        note: 'This is not an exhaustive list — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog of terminal-based and IDE-integrated coding agents.',
+        note: 'This is not an exhaustive list — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog of terminal-based and IDE-integrated coding agents.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -269,7 +269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including GitHub Copilot CLI\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including GitHub Copilot CLI\'s directory entry.',
           '[Aider Review](/power-local-llm/aider-review) — an open-source terminal coding agent with local models as a first-class option.',
           '[OpenCode Review](/power-local-llm/opencode-review) — another terminal-based AI coding agent.',
           '[Shell-GPT Review](/power-local-llm/shell-gpt-review) — a lighter-weight command-line AI assistant.',
@@ -350,7 +350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Die Free-Stufe enthält Zugang zu Copilot CLI, ist aber durch die allgemeinen Kontingente des Free-Plans begrenzt (2.000 Code-Vervollständigungen und 50 Chat-Anfragen pro Monat)',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zum Eintrag von GitHub Copilot CLI im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort sehen Sie auf einen Blick, wie es sich mit anderen terminalbasierten Coding-Agenten vergleicht, einschließlich solcher, die von Anfang an lokal-first konzipiert wurden.' },
+          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zum Eintrag von GitHub Copilot CLI im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie es sich mit anderen terminalbasierten Coding-Agenten vergleicht, einschließlich solcher, die von Anfang an lokal-first konzipiert wurden.' },
         ],
       },
       overview: {
@@ -483,14 +483,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'copilot-cli-competitors',
         title: 'Konkurrenten und Alternativen',
-        content: 'GitHub Copilot CLI befindet sich im selben Segment wie mehrere andere terminalbasierte KI-Coding-Agenten. Diese Review ist die vertiefende Ergänzung zum Eintrag von GitHub Copilot CLI im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie den vollständigen Katalog.',
+        content: 'GitHub Copilot CLI befindet sich im selben Segment wie mehrere andere terminalbasierte KI-Coding-Agenten. Diese Review ist die vertiefende Ergänzung zum Eintrag von GitHub Copilot CLI im [Local LLM Software Directory](/de/directory) — dort finden Sie den vollständigen Katalog.',
         items: [
           '**[Aider](https://aider.chat)** — ein Open-Source-Coding-Agent fürs Terminal mit lokalen Modellen als vollwertiger, nicht optionaler Möglichkeit; siehe den [Aider Review](/de/power-local-llm/aider-review) und den [direkten Vergleich](#copilot-cli-vs-aider) oben.',
           '**OpenCode** — ein weiterer terminalbasierter Coding-Agent; siehe PromptQuorums [OpenCode Review](/de/power-local-llm/opencode-review).',
           '**Shell-GPT** — ein leichtgewichtigerer KI-Assistent für die Kommandozeile; siehe den [Shell-GPT Review](/de/power-local-llm/shell-gpt-review).',
           '**Tabby** — ein selbst gehosteter KI-Coding-Assistent, der vollständig auf Ihrer eigenen Infrastruktur laufen soll; siehe den [Tabby Review](/de/power-local-llm/tabby-review).',
         ],
-        note: 'Dies ist keine erschöpfende Liste — den vollständigen, regelmäßig aktualisierten Katalog terminalbasierter und in IDEs integrierter Coding-Agenten finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine erschöpfende Liste — den vollständigen, regelmäßig aktualisierten Katalog terminalbasierter und in IDEs integrierter Coding-Agenten finden Sie im [Local LLM Software Directory](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -545,7 +545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Werkzeuge, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von GitHub Copilot CLI.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Werkzeuge, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von GitHub Copilot CLI.',
           '[Aider Review](/de/power-local-llm/aider-review) — ein Open-Source-Coding-Agent fürs Terminal mit lokalen Modellen als vollwertiger Option.',
           '[OpenCode Review](/de/power-local-llm/opencode-review) — ein weiterer terminalbasierter KI-Coding-Agent.',
           '[Shell-GPT Review](/de/power-local-llm/shell-gpt-review) — ein leichtgewichtigerer KI-Assistent für die Kommandozeile.',
@@ -626,7 +626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Le niveau Free inclut l'accès à Copilot CLI, mais l'usage est plafonné par les allocations globales du plan Free (2 000 complétions de code et 50 requêtes de chat par mois)",
         ],
         callouts: [
-          { type: 'note', text: "Cette review est le complément approfondi de la fiche de GitHub Copilot CLI dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer d'un coup d'œil avec d'autres agents de codage en terminal, y compris ceux conçus local-first dès le départ." },
+          { type: 'note', text: "Cette review est le complément approfondi de la fiche de GitHub Copilot CLI dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour comparer d'un coup d'œil avec d'autres agents de codage en terminal, y compris ceux conçus local-first dès le départ." },
         ],
       },
       overview: {
@@ -759,14 +759,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'copilot-cli-competitors',
         title: 'Concurrents et alternatives',
-        content: "GitHub Copilot CLI se situe dans le même segment que plusieurs autres agents de codage IA en terminal. Cette review est le complément approfondi de la fiche de GitHub Copilot CLI dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour le catalogue complet.",
+        content: "GitHub Copilot CLI se situe dans le même segment que plusieurs autres agents de codage IA en terminal. Cette review est le complément approfondi de la fiche de GitHub Copilot CLI dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour le catalogue complet.",
         items: [
           "**[Aider](https://aider.chat)** — un agent de codage en terminal open source avec les modèles locaux comme option de premier plan, non optionnelle ; voir l'[avis Aider](/fr/power-local-llm/aider-review) et la [comparaison directe](#copilot-cli-vs-aider) ci-dessus.",
           "**OpenCode** — un autre agent de codage en terminal ; voir l'[avis OpenCode](/fr/power-local-llm/opencode-review) de PromptQuorum.",
           "**Shell-GPT** — un assistant IA en ligne de commande plus léger ; voir l'[avis Shell-GPT](/fr/power-local-llm/shell-gpt-review).",
           "**Tabby** — un assistant de codage IA auto-hébergé conçu pour fonctionner entièrement sur votre propre infrastructure ; voir l'[avis Tabby](/fr/power-local-llm/tabby-review).",
         ],
-        note: "Cette liste n'est pas exhaustive — consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour des agents de codage en terminal et intégrés aux IDE.",
+        note: "Cette liste n'est pas exhaustive — consultez le [Local LLM Software Directory](/fr/directory) pour le catalogue complet et régulièrement mis à jour des agents de codage en terminal et intégrés aux IDE.",
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -821,7 +821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          "[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils IA locaux auquel cet article appartient, y compris la fiche de GitHub Copilot CLI.",
+          "[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils IA locaux auquel cet article appartient, y compris la fiche de GitHub Copilot CLI.",
           "[Avis Aider](/fr/power-local-llm/aider-review) — un agent de codage en terminal open source avec les modèles locaux comme option de premier plan.",
           '[Avis OpenCode](/fr/power-local-llm/opencode-review) — un autre agent de codage IA en terminal.',
           '[Avis Shell-GPT](/fr/power-local-llm/shell-gpt-review) — un assistant IA en ligne de commande plus léger.',
@@ -902,7 +902,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El nivel Free incluye acceso a Copilot CLI, pero el uso está limitado por las asignaciones generales del plan Free (2.000 finalizaciones de código y 50 solicitudes de chat al mes)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de GitHub Copilot CLI en el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — consulta esa página para comparar de un vistazo con otros agentes de codificación en terminal, incluidos los diseñados local-first desde el principio.' },
+          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de GitHub Copilot CLI en el [Local LLM Software Directory](/es/directory) — consulta esa página para comparar de un vistazo con otros agentes de codificación en terminal, incluidos los diseñados local-first desde el principio.' },
         ],
       },
       overview: {
@@ -1035,14 +1035,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'copilot-cli-competitors',
         title: 'Competidores y alternativas',
-        content: 'GitHub Copilot CLI se sitúa en el mismo segmento que varios otros agentes de codificación con IA en terminal. Esta review es el complemento en profundidad de la ficha de GitHub Copilot CLI en el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — consulta esa página para el catálogo completo.',
+        content: 'GitHub Copilot CLI se sitúa en el mismo segmento que varios otros agentes de codificación con IA en terminal. Esta review es el complemento en profundidad de la ficha de GitHub Copilot CLI en el [Local LLM Software Directory](/es/directory) — consulta esa página para el catálogo completo.',
         items: [
           '**[Aider](https://aider.chat)** — un agente de codificación en terminal de código abierto con los modelos locales como opción de primer nivel, no opcional; ver la [review de Aider](/es/power-local-llm/aider-review) y la [comparación directa](#copilot-cli-vs-aider) arriba.',
           "**OpenCode** — otro agente de codificación en terminal; ver la [review de OpenCode](/es/power-local-llm/opencode-review) de PromptQuorum.",
           '**Shell-GPT** — un asistente de IA de línea de comandos más ligero; ver la [review de Shell-GPT](/es/power-local-llm/shell-gpt-review).',
           '**Tabby** — un asistente de codificación con IA autoalojado diseñado para funcionar completamente en tu propia infraestructura; ver la [review de Tabby](/es/power-local-llm/tabby-review).',
         ],
-        note: 'Esta no es una lista exhaustiva — consulta el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente de agentes de codificación en terminal e integrados en IDE.',
+        note: 'Esta no es una lista exhaustiva — consulta el [Local LLM Software Directory](/es/directory) para el catálogo completo y actualizado regularmente de agentes de codificación en terminal e integrados en IDE.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1097,7 +1097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de GitHub Copilot CLI.',
+          '[Local LLM Software Directory 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de GitHub Copilot CLI.',
           '[Review de Aider](/es/power-local-llm/aider-review) — un agente de codificación en terminal de código abierto con modelos locales como opción de primer nivel.',
           '[Review de OpenCode](/es/power-local-llm/opencode-review) — otro agente de codificación con IA en terminal.',
           '[Review de Shell-GPT](/es/power-local-llm/shell-gpt-review) — un asistente de IA de línea de comandos más ligero.',
@@ -1178,7 +1178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O nível Free inclui acesso ao Copilot CLI, mas o uso é limitado pelas cotas gerais do plano Free (2.000 completions de código e 50 solicitações de chat por mês)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do GitHub Copilot CLI no [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — consulte essa página para comparar rapidamente com outros agentes de codificação em terminal, incluindo os projetados como local-first desde o início.' },
+          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do GitHub Copilot CLI no [Local LLM Software Directory](/pt/directory) — consulte essa página para comparar rapidamente com outros agentes de codificação em terminal, incluindo os projetados como local-first desde o início.' },
         ],
       },
       overview: {
@@ -1311,14 +1311,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'copilot-cli-competitors',
         title: 'Concorrentes e alternativas',
-        content: 'O GitHub Copilot CLI está no mesmo segmento que vários outros agentes de codificação com IA em terminal. Esta review é o complemento aprofundado da entrada do GitHub Copilot CLI no [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — consulte essa página para o catálogo completo.',
+        content: 'O GitHub Copilot CLI está no mesmo segmento que vários outros agentes de codificação com IA em terminal. Esta review é o complemento aprofundado da entrada do GitHub Copilot CLI no [Local LLM Software Directory](/pt/directory) — consulte essa página para o catálogo completo.',
         items: [
           '**[Aider](https://aider.chat)** — um agente de codificação em terminal de código aberto com modelos locais como opção de primeira classe, não opcional; veja a [review do Aider](/pt/power-local-llm/aider-review) e a [comparação direta](#copilot-cli-vs-aider) acima.',
           "**OpenCode** — outro agente de codificação em terminal; veja a [review do OpenCode](/pt/power-local-llm/opencode-review) da PromptQuorum.",
           '**Shell-GPT** — um assistente de IA de linha de comando mais leve; veja a [review do Shell-GPT](/pt/power-local-llm/shell-gpt-review).',
           '**Tabby** — um assistente de codificação com IA autogerenciado, feito para rodar totalmente na sua própria infraestrutura; veja a [review do Tabby](/pt/power-local-llm/tabby-review).',
         ],
-        note: 'Esta não é uma lista exaustiva — consulte o [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente de agentes de codificação em terminal e integrados a IDEs.',
+        note: 'Esta não é uma lista exaustiva — consulte o [Local LLM Software Directory](/pt/directory) para o catálogo completo e atualizado regularmente de agentes de codificação em terminal e integrados a IDEs.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1373,7 +1373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do GitHub Copilot CLI.',
+          '[Local LLM Software Directory 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do GitHub Copilot CLI.',
           '[Review do Aider](/pt/power-local-llm/aider-review) — um agente de codificação em terminal de código aberto com modelos locais como opção de primeira classe.',
           '[Review do OpenCode](/pt/power-local-llm/opencode-review) — outro agente de codificação com IA em terminal.',
           '[Review do Shell-GPT](/pt/power-local-llm/shell-gpt-review) — um assistente de IA de linha de comando mais leve.',
@@ -1454,7 +1454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Freeプランにも Copilot CLI へのアクセスは含まれるが、Freeプラン全体の利用枠（月2,000回のコード補完、月50回のチャットリクエスト）に制限される',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)にあるGitHub Copilot CLIのエントリーを補完する詳細版です。他のターミナル型コーディングエージェント（最初からローカルファーストで設計されたものを含む）との比較は同ページをご覧ください。' },
+          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](/ja/directory)にあるGitHub Copilot CLIのエントリーを補完する詳細版です。他のターミナル型コーディングエージェント（最初からローカルファーストで設計されたものを含む）との比較は同ページをご覧ください。' },
         ],
       },
       overview: {
@@ -1587,14 +1587,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'copilot-cli-competitors',
         title: '競合・代替ツール',
-        content: 'GitHub Copilot CLIは、他の複数のターミナル型AIコーディングエージェントと同じセグメントに位置します。このレビューは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)にあるGitHub Copilot CLIのエントリーを補完する詳細版です。完全なカタログは同ページをご覧ください。',
+        content: 'GitHub Copilot CLIは、他の複数のターミナル型AIコーディングエージェントと同じセグメントに位置します。このレビューは、[Local LLM Software Directory](/ja/directory)にあるGitHub Copilot CLIのエントリーを補完する詳細版です。完全なカタログは同ページをご覧ください。',
         items: [
           '**[Aider](https://aider.chat)** — ローカルモデルをオプションではなく第一級の選択肢とするオープンソースのターミナル型コーディングエージェント。[Aiderレビュー](/ja/power-local-llm/aider-review)と、上記の[直接比較](#copilot-cli-vs-aider)を参照。',
           '**OpenCode** — もう一つのターミナル型コーディングエージェント。PromptQuorumの[OpenCodeレビュー](/ja/power-local-llm/opencode-review)を参照。',
           '**Shell-GPT** — より軽量なコマンドライン型AIアシスタント。[Shell-GPTレビュー](/ja/power-local-llm/shell-gpt-review)を参照。',
           '**Tabby** — 自分のインフラ上で完全に動作するよう設計された自己ホスト型AIコーディングアシスタント。[Tabbyレビュー](/ja/power-local-llm/tabby-review)を参照。',
         ],
-        note: 'これは網羅的なリストではありません — ターミナル型およびIDE統合型コーディングエージェントの完全かつ定期的に更新されるカタログは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'これは網羅的なリストではありません — ターミナル型およびIDE統合型コーディングエージェントの完全かつ定期的に更新されるカタログは、[Local LLM Software Directory](/ja/directory)をご覧ください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1649,7 +1649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — GitHub Copilot CLIのディレクトリエントリーを含む、この記事が属するローカルAIツールの完全なカタログ。',
+          '[Local LLM Software Directory 2026](/ja/directory) — GitHub Copilot CLIのディレクトリエントリーを含む、この記事が属するローカルAIツールの完全なカタログ。',
           '[Aiderレビュー](/ja/power-local-llm/aider-review) — ローカルモデルを第一級の選択肢とするオープンソースのターミナル型コーディングエージェント。',
           '[OpenCodeレビュー](/ja/power-local-llm/opencode-review) — もう一つのターミナル型AIコーディングエージェント。',
           '[Shell-GPTレビュー](/ja/power-local-llm/shell-gpt-review) — より軽量なコマンドライン型AIアシスタント。',
@@ -1730,7 +1730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Free档位包含Copilot CLI的访问权限，但使用量受Free计划整体额度限制（每月2,000次代码补全和50次聊天请求）',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地大语言模型软件目录](/zh/power-local-llm/local-llm-software-directory)中GitHub Copilot CLI条目的深度补充——如需与其他终端编程代理（包括从一开始就以本地优先设计的工具）一目了然地比较，请查阅该页面。' },
+          { type: 'note', text: '本评测是[本地大语言模型软件目录](/zh/directory)中GitHub Copilot CLI条目的深度补充——如需与其他终端编程代理（包括从一开始就以本地优先设计的工具）一目了然地比较，请查阅该页面。' },
         ],
       },
       overview: {
@@ -1863,14 +1863,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'copilot-cli-competitors',
         title: '竞品与替代方案',
-        content: 'GitHub Copilot CLI与其他几款终端AI编程代理处于同一细分领域。本评测是[本地大语言模型软件目录](/zh/power-local-llm/local-llm-software-directory)中GitHub Copilot CLI条目的深度补充——完整目录请查阅该页面。',
+        content: 'GitHub Copilot CLI与其他几款终端AI编程代理处于同一细分领域。本评测是[本地大语言模型软件目录](/zh/directory)中GitHub Copilot CLI条目的深度补充——完整目录请查阅该页面。',
         items: [
           '**[Aider](https://aider.chat)**——一款开源终端编程代理，将本地模型作为一流选项而非可选功能；参见[Aider评测](/zh/power-local-llm/aider-review)以及上方的[直接比较](#copilot-cli-vs-aider)。',
           '**OpenCode**——另一款终端编程代理；参见PromptQuorum的[OpenCode评测](/zh/power-local-llm/opencode-review)。',
           '**Shell-GPT**——一款更轻量的命令行AI助手；参见[Shell-GPT评测](/zh/power-local-llm/shell-gpt-review)。',
           '**Tabby**——一款设计为完全在你自己基础设施上运行的自托管AI编程助手；参见[Tabby评测](/zh/power-local-llm/tabby-review)。',
         ],
-        note: '这并非详尽清单——完整且定期更新的终端及IDE集成编程代理目录，请查阅[本地大语言模型软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非详尽清单——完整且定期更新的终端及IDE集成编程代理目录，请查阅[本地大语言模型软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1925,7 +1925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地大语言模型软件目录 2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包括GitHub Copilot CLI的目录条目。',
+          '[本地大语言模型软件目录 2026](/zh/directory) — 本文所属的本地AI工具完整目录，包括GitHub Copilot CLI的目录条目。',
           '[Aider评测](/zh/power-local-llm/aider-review) — 一款将本地模型作为一流选项的开源终端编程代理。',
           '[OpenCode评测](/zh/power-local-llm/opencode-review) — 另一款终端AI编程代理。',
           '[Shell-GPT评测](/zh/power-local-llm/shell-gpt-review) — 一款更轻量的命令行AI助手。',
@@ -2006,7 +2006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تتضمن فئة Free الوصول إلى Copilot CLI، لكن الاستخدام محدود بحصص خطة Free الإجمالية (2000 إكمال شيفرة و50 طلب دردشة شهريًا)',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمّق لمدخل GitHub Copilot CLI في [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمقارنة سريعة مع وكلاء برمجة أخرى عبر الطرفية، بما في ذلك تلك المصممة لتكون محلية أولًا منذ البداية.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمّق لمدخل GitHub Copilot CLI في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة مع وكلاء برمجة أخرى عبر الطرفية، بما في ذلك تلك المصممة لتكون محلية أولًا منذ البداية.' },
         ],
       },
       overview: {
@@ -2139,14 +2139,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'copilot-cli-competitors',
         title: 'المنافسون والبدائل',
-        content: 'يقع GitHub Copilot CLI في نفس الفئة مع عدة وكلاء برمجة أخرى بالذكاء الاصطناعي عبر الطرفية. هذه المراجعة هي المرافق المتعمّق لمدخل GitHub Copilot CLI في [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة للحصول على الكتالوج الكامل.',
+        content: 'يقع GitHub Copilot CLI في نفس الفئة مع عدة وكلاء برمجة أخرى بالذكاء الاصطناعي عبر الطرفية. هذه المراجعة هي المرافق المتعمّق لمدخل GitHub Copilot CLI في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة للحصول على الكتالوج الكامل.',
         items: [
           '**[Aider](https://aider.chat)** — وكيل برمجة عبر الطرفية مفتوح المصدر يعامل النماذج المحلية كخيار من الدرجة الأولى وليس اختياريًا؛ راجع [مراجعة Aider](/ar/power-local-llm/aider-review) و[المقارنة المباشرة](#copilot-cli-vs-aider) أعلاه.',
           '**OpenCode** — وكيل برمجة آخر عبر الطرفية؛ راجع [مراجعة OpenCode](/ar/power-local-llm/opencode-review) من PromptQuorum.',
           '**Shell-GPT** — مساعد ذكاء اصطناعي أخف وزنًا عبر سطر الأوامر؛ راجع [مراجعة Shell-GPT](/ar/power-local-llm/shell-gpt-review).',
           '**Tabby** — مساعد برمجة بالذكاء الاصطناعي مستضاف ذاتيًا مصمم للعمل بالكامل على بنيتك التحتية الخاصة؛ راجع [مراجعة Tabby](/ar/power-local-llm/tabby-review).',
         ],
-        note: 'هذه ليست قائمة شاملة — راجع [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل والمحدَّث بانتظام لوكلاء البرمجة عبر الطرفية والمدمجة في بيئات التطوير.',
+        note: 'هذه ليست قائمة شاملة — راجع [دليل برمجيات نماذج اللغة المحلية](/ar/directory) للحصول على الكتالوج الكامل والمحدَّث بانتظام لوكلاء البرمجة عبر الطرفية والمدمجة في بيئات التطوير.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2201,7 +2201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل GitHub Copilot CLI في الدليل.',
+          '[دليل برمجيات نماذج اللغة المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل GitHub Copilot CLI في الدليل.',
           '[مراجعة Aider](/ar/power-local-llm/aider-review) — وكيل برمجة عبر الطرفية مفتوح المصدر يعامل النماذج المحلية كخيار من الدرجة الأولى.',
           '[مراجعة OpenCode](/ar/power-local-llm/opencode-review) — وكيل برمجة آخر بالذكاء الاصطناعي عبر الطرفية.',
           '[مراجعة Shell-GPT](/ar/power-local-llm/shell-gpt-review) — مساعد ذكاء اصطناعي أخف وزنًا عبر سطر الأوامر.',
@@ -2282,7 +2282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Free 등급에는 Copilot CLI 접근이 포함되지만, 사용량은 Free 요금제 전체 할당량(월 2,000회 코드 완성, 월 50회 채팅 요청)으로 제한됨',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)의 GitHub Copilot CLI 항목을 보완하는 심층 리뷰입니다 — 처음부터 로컬 우선으로 설계된 도구를 포함한 다른 터미널 기반 코딩 에이전트와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)의 GitHub Copilot CLI 항목을 보완하는 심층 리뷰입니다 — 처음부터 로컬 우선으로 설계된 도구를 포함한 다른 터미널 기반 코딩 에이전트와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2415,14 +2415,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'copilot-cli-competitors',
         title: '경쟁 제품 및 대안',
-        content: 'GitHub Copilot CLI는 여러 다른 터미널 기반 AI 코딩 에이전트와 동일한 세그먼트에 속합니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)의 GitHub Copilot CLI 항목을 보완하는 심층 리뷰입니다 — 전체 카탈로그는 해당 페이지를 참고하세요.',
+        content: 'GitHub Copilot CLI는 여러 다른 터미널 기반 AI 코딩 에이전트와 동일한 세그먼트에 속합니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)의 GitHub Copilot CLI 항목을 보완하는 심층 리뷰입니다 — 전체 카탈로그는 해당 페이지를 참고하세요.',
         items: [
           '**[Aider](https://aider.chat)** — 로컬 모델을 선택 사항이 아닌 최우선 옵션으로 다루는 오픈소스 터미널 코딩 에이전트. [Aider 리뷰](/ko/power-local-llm/aider-review)와 위의 [직접 비교](#copilot-cli-vs-aider) 참조.',
           '**OpenCode** — 또 다른 터미널 기반 코딩 에이전트. PromptQuorum의 [OpenCode 리뷰](/ko/power-local-llm/opencode-review) 참조.',
           '**Shell-GPT** — 더 가벼운 명령줄 AI 어시스턴트. [Shell-GPT 리뷰](/ko/power-local-llm/shell-gpt-review) 참조.',
           '**Tabby** — 자신의 인프라에서 완전히 실행되도록 설계된 자체 호스팅 AI 코딩 어시스턴트. [Tabby 리뷰](/ko/power-local-llm/tabby-review) 참조.',
         ],
-        note: '이것은 전체 목록이 아닙니다 — 터미널 기반 및 IDE 통합 코딩 에이전트의 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이것은 전체 목록이 아닙니다 — 터미널 기반 및 IDE 통합 코딩 에이전트의 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2477,7 +2477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — GitHub Copilot CLI의 디렉터리 항목을 포함하여 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — GitHub Copilot CLI의 디렉터리 항목을 포함하여 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
           '[Aider 리뷰](/ko/power-local-llm/aider-review) — 로컬 모델을 최우선 옵션으로 다루는 오픈소스 터미널 코딩 에이전트.',
           '[OpenCode 리뷰](/ko/power-local-llm/opencode-review) — 또 다른 터미널 기반 AI 코딩 에이전트.',
           '[Shell-GPT 리뷰](/ko/power-local-llm/shell-gpt-review) — 더 가벼운 명령줄 AI 어시스턴트.',

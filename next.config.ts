@@ -575,12 +575,22 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/power-local-llm/local-llm-software-directory-2026',
-        destination: '/power-local-llm/local-llm-software-directory',
+        destination: '/directory',
         permanent: true,
       },
       {
         source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/local-llm-software-directory-2026',
-        destination: '/:lang/power-local-llm/local-llm-software-directory',
+        destination: '/:lang/directory',
+        permanent: true,
+      },
+      {
+        source: '/power-local-llm/local-llm-software-directory',
+        destination: '/directory',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/local-llm-software-directory',
+        destination: '/:lang/directory',
         permanent: true,
       },
       {

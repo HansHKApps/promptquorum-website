@@ -150,7 +150,7 @@ function balconySolarHref(lang: string) {
 }
 
 function directoryHref(lang: string) {
-  const path = '/power-local-llm/local-llm-software-directory'
+  const path = '/directory'
   return lang === 'en' ? path : `/${lang}${path}`
 }
 

@@ -140,7 +140,9 @@ const COMING_SOON_COPY: Partial<Record<Lang, { badge: string; bodyArticle: strin
 // ─── ARTICLE PAGE ───────────────────────────────────────────────────────────
 
 export function getArticleStaticParams() {
-  return Object.keys(POWER_LLM_SLUG_TO_KEY).map((slug) => ({ slug }))
+  return Object.keys(POWER_LLM_SLUG_TO_KEY)
+    .filter((slug) => slug !== LOCAL_AI_DIRECTORY_SLUG) // served at /directory
+    .map((slug) => ({ slug }))
 }
 
 export async function buildArticleMetadata(slug: string, lang: Lang): Promise<Metadata> {

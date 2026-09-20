@@ -77,7 +77,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Acquired by [Anaconda in July 2026](https://www.anaconda.com/press/anaconda-acquires-kilo-code); Anaconda\'s own announcement describes Kilo Code as used by more than 3 million developers at the time of the deal',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Kilo Code\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — see that page for how Kilo Code compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Kilo Code\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory) — see that page for how Kilo Code compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -267,7 +267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Cline Review](/power-local-llm/cline-review) — an open-source, autonomous coding agent extension for VS Code and JetBrains, for comparison against Kilo Code.',
           '[Aider Review](/power-local-llm/aider-review) — a free, open-source, terminal-native AI pair programming CLI.',
           '[Continue.dev Review](/power-local-llm/continue-dev-review) — a discontinued, model-agnostic open-source coding assistant extension.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -343,7 +343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Im Juli 2026 [von Anaconda übernommen](https://www.anaconda.com/press/anaconda-acquires-kilo-code); Anacondas eigene Ankündigung beschreibt Kilo Code als von mehr als 3 Millionen Entwicklern genutzt zum Zeitpunkt der Übernahme',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der ausführliche Begleittext zu Kilo Codes Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — dort sehen Sie auf einen Blick, wie Kilo Code im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist der ausführliche Begleittext zu Kilo Codes Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/directory) — dort sehen Sie auf einen Blick, wie Kilo Code im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -533,7 +533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Cline Review](/de/power-local-llm/cline-review) — eine quelloffene, autonome Coding-Agenten-Erweiterung für VS Code und JetBrains, zum Vergleich mit Kilo Code.',
           '[Aider Review](/de/power-local-llm/aider-review) — eine kostenlose, quelloffene, terminalbasierte KI-Pair-Programming-CLI.',
           '[Continue.dev Review](/de/power-local-llm/continue-dev-review) — eine eingestellte, modellunabhängige quelloffene Coding-Assistent-Erweiterung.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -609,7 +609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Racheté par [Anaconda en juillet 2026](https://www.anaconda.com/press/anaconda-acquires-kilo-code) ; l\'annonce d\'Anaconda elle-même décrit Kilo Code comme utilisé par plus de 3 millions de développeurs au moment du rachat',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément détaillé de la fiche de Kilo Code dans le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer Kilo Code en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cette review est le complément détaillé de la fiche de Kilo Code dans le [Local LLM Software Directory](https://www.promptquorum.com/directory) — consultez cette page pour comparer Kilo Code en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -799,7 +799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Avis Cline](/fr/power-local-llm/cline-review) — une extension d\'agent de codage autonome et open source pour VS Code et JetBrains, à comparer avec Kilo Code.',
           '[Avis Aider](/fr/power-local-llm/aider-review) — une CLI de pair-programming IA gratuite, open source et centrée terminal.',
           '[Avis Continue.dev](/fr/power-local-llm/continue-dev-review) — une extension d\'assistant de codage open source et agnostique vis-à-vis du modèle, désormais arrêtée.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale dont fait partie cet article.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — le catalogue complet d\'outils d\'IA locale dont fait partie cet article.',
         ],
       },
     },
@@ -875,7 +875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Adquirido por [Anaconda en julio de 2026](https://www.anaconda.com/press/anaconda-acquires-kilo-code); el propio anuncio de Anaconda describe a Kilo Code como usado por más de 3 millones de desarrolladores en el momento del acuerdo',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento detallado de la ficha de Kilo Code en el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — consulta esa página para comparar Kilo Code de un vistazo con decenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta review es el complemento detallado de la ficha de Kilo Code en el [Local LLM Software Directory](https://www.promptquorum.com/directory) — consulta esa página para comparar Kilo Code de un vistazo con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1065,7 +1065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Review de Cline](/es/power-local-llm/cline-review) — una extensión de agente de codificación autónomo y open source para VS Code y JetBrains, para comparar con Kilo Code.',
           '[Review de Aider](/es/power-local-llm/aider-review) — una CLI de pair programming con IA gratuita, open source y centrada en terminal.',
           '[Review de Continue.dev](/es/power-local-llm/continue-dev-review) — una extensión de asistente de codificación open source y agnóstica de modelo, ya descontinuada.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1141,7 +1141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Adquirido pela [Anaconda em julho de 2026](https://www.anaconda.com/press/anaconda-acquires-kilo-code); o próprio anúncio da Anaconda descreve o Kilo Code como usado por mais de 3 milhões de desenvolvedores no momento do negócio',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento detalhado da ficha do Kilo Code no [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — veja essa página para comparar o Kilo Code rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta review é o complemento detalhado da ficha do Kilo Code no [Local LLM Software Directory](https://www.promptquorum.com/directory) — veja essa página para comparar o Kilo Code rapidamente com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1331,7 +1331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Review do Cline](/pt/power-local-llm/cline-review) — uma extensão de agente de codificação autônomo e open source para VS Code e JetBrains, para comparar com o Kilo Code.',
           '[Review do Aider](/pt/power-local-llm/aider-review) — uma CLI de pair programming com IA gratuita, open source e voltada ao terminal.',
           '[Review do Continue.dev](/pt/power-local-llm/continue-dev-review) — uma extensão de assistente de codificação open source e agnóstica de modelo, já descontinuada.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -1407,7 +1407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[2026年7月にAnacondaに買収された](https://www.anaconda.com/press/anaconda-acquires-kilo-code)。Anacondaの発表自体では、買収時点でKilo Codeは300万人を超える開発者に使われていたとされている',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)にあるKilo Codeのエントリーの詳細版です。他の数十のローカルAIツールとKilo Codeを一目で比較するには、そのページをご覧ください。' },
+          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](https://www.promptquorum.com/directory)にあるKilo Codeのエントリーの詳細版です。他の数十のローカルAIツールとKilo Codeを一目で比較するには、そのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1597,7 +1597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Clineレビュー](/ja/power-local-llm/cline-review) — Kilo Codeとの比較のための、VS CodeとJetBrains向けのオープンソースの自律型コーディングエージェント拡張機能。',
           '[Aiderレビュー](/ja/power-local-llm/aider-review) — 無料でオープンソース、ターミナルベースのAIペアプログラミングCLI。',
           '[Continue.devレビュー](/ja/power-local-llm/continue-dev-review) — 提供終了した、モデル非依存のオープンソースコーディングアシスタント拡張機能。',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの完全なカタログ。',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — この記事が属するローカルAIツールの完全なカタログ。',
         ],
       },
     },
@@ -1673,7 +1673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[已于2026年7月被Anaconda收购](https://www.anaconda.com/press/anaconda-acquires-kilo-code)；Anaconda自己的公告称，收购时Kilo Code的开发者用户已超过300万',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地大模型软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中Kilo Code条目的深度补充版——想一目了然地将Kilo Code与其他数十款本地AI工具比较，请查看该页面。' },
+          { type: 'note', text: '本评测是[本地大模型软件目录](https://www.promptquorum.com/directory)中Kilo Code条目的深度补充版——想一目了然地将Kilo Code与其他数十款本地AI工具比较，请查看该页面。' },
         ],
       },
       overview: {
@@ -1863,7 +1863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Cline评测](/zh/power-local-llm/cline-review) — 一款面向VS Code和JetBrains的开源自主编码代理扩展，用于与Kilo Code比较。',
           '[Aider评测](/zh/power-local-llm/aider-review) — 一款免费、开源、以终端为中心的AI结对编程CLI。',
           '[Continue.dev评测](/zh/power-local-llm/continue-dev-review) — 一款已停止维护、与模型无关的开源编码助手扩展。',
-          '[本地大模型软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录。',
+          '[本地大模型软件目录](https://www.promptquorum.com/directory) — 本文所属的本地AI工具完整目录。',
         ],
       },
     },
@@ -1939,7 +1939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[استحوذت عليه Anaconda في يوليو 2026](https://www.anaconda.com/press/anaconda-acquires-kilo-code)؛ ويصف إعلان Anaconda نفسه Kilo Code بأنه كان يُستخدم من قبل أكثر من 3 ملايين مطوّر وقت الصفقة',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي النسخة التفصيلية المرافقة لمدخل Kilo Code في [دليل برمجيات النماذج المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمقارنة Kilo Code بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي النسخة التفصيلية المرافقة لمدخل Kilo Code في [دليل برمجيات النماذج المحلية](https://www.promptquorum.com/directory) — راجع تلك الصفحة لمقارنة Kilo Code بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2129,7 +2129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة Cline](/ar/power-local-llm/cline-review) — إضافة وكيل برمجة مستقل ومفتوحة المصدر لـ VS Code وJetBrains، للمقارنة مع Kilo Code.',
           '[مراجعة Aider](/ar/power-local-llm/aider-review) — أداة CLI مجانية ومفتوحة المصدر للبرمجة الزوجية بالذكاء الاصطناعي من الطرفية.',
           '[مراجعة Continue.dev](/ar/power-local-llm/continue-dev-review) — إضافة مساعد برمجة مفتوحة المصدر ومستقلة عن النموذج، توقفت الآن.',
-          '[دليل برمجيات النماذج المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
+          '[دليل برمجيات النماذج المحلية](https://www.promptquorum.com/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
         ],
       },
     },
@@ -2205,7 +2205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[2026년 7월 Anaconda에 인수](https://www.anaconda.com/press/anaconda-acquires-kilo-code)되었으며, Anaconda 자체 발표에서는 인수 당시 Kilo Code를 300만 명 이상의 개발자가 사용한 것으로 설명합니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 Kilo Code 항목의 심층 보완판입니다 — 수십 개의 다른 로컬 AI 도구와 Kilo Code를 한눈에 비교하려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 있는 Kilo Code 항목의 심층 보완판입니다 — 수십 개의 다른 로컬 AI 도구와 Kilo Code를 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2395,7 +2395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Cline 리뷰](/ko/power-local-llm/cline-review) — VS Code와 JetBrains용 오픈소스 자율 코딩 에이전트 확장 프로그램으로, Kilo Code와 비교해 볼 수 있습니다.',
           '[Aider 리뷰](/ko/power-local-llm/aider-review) — 무료 오픈소스이며 터미널 중심인 AI 페어 프로그래밍 CLI입니다.',
           '[Continue.dev 리뷰](/ko/power-local-llm/continue-dev-review) — 서비스가 종료된, 모델 독립적인 오픈소스 코딩 어시스턴트 확장 프로그램입니다.',
-          '[로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그입니다.',
+          '[로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그입니다.',
         ],
       },
     },

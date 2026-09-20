@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A separate paid option, Blinko Cloud, offers managed hosting for people who do not want to run their own server; the self-hosted edition remains fully free',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Blinko\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Blinko compares at a glance to dozens of other local and self-hosted AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Blinko\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Blinko compares at a glance to dozens of other local and self-hosted AI tools.' },
         ],
       },
       overview: {
@@ -213,14 +213,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'blinko-competitors',
         title: 'Blinko vs. Other Self-Hosted Notes and Bookmark Apps',
-        content: 'Blinko is one of several self-hosted tools adding AI-powered search and organization on top of personal knowledge capture. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, and the dedicated [Blinko vs. Karakeep comparison](#blinko-vs-karakeep) above for the closest head-to-head.',
+        content: 'Blinko is one of several self-hosted tools adding AI-powered search and organization on top of personal knowledge capture. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/directory) for the full catalog, and the dedicated [Blinko vs. Karakeep comparison](#blinko-vs-karakeep) above for the closest head-to-head.',
         items: [
           '**[Karakeep](https://karakeep.app)** — a self-hosted bookmark manager with AI auto-tagging; see the dedicated comparison section above and the [Karakeep review](/power-local-llm/karakeep-review) for full details.',
           '**[Joplin AI Agent](https://joplinapp.org)** — an AI agent layered on top of Joplin, the established open-source note-taking app, rather than a from-scratch AI-native tool like Blinko; see the [Joplin AI Agent review](/power-local-llm/joplin-ai-agent-review).',
           '**[Logseq Copilot](https://logseq.com)** — an AI assistant for Logseq, a local-first, outliner-style notes tool with a different note structure than Blinko\'s card-based capture; see the [Logseq Copilot review](/power-local-llm/logseq-copilot-review).',
           '**[Smart Connections](https://obsidian.md)** — an AI-powered RAG plugin for Obsidian, aimed at users who already have an established Obsidian vault rather than starting fresh with a new note app; see the [Smart Connections review](/power-local-llm/smart-connections-review).',
         ],
-        note: 'This is not an exhaustive list of self-hosted, AI-enhanced notes and bookmark tools — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Blinko\'s own directory entry.',
+        note: 'This is not an exhaustive list of self-hosted, AI-enhanced notes and bookmark tools — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Blinko\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -277,7 +277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local and self-hosted AI tools this article belongs to, including Blinko\'s directory entry alongside the notes and bookmark apps covered above.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local and self-hosted AI tools this article belongs to, including Blinko\'s directory entry alongside the notes and bookmark apps covered above.',
           '[Karakeep Review](/power-local-llm/karakeep-review) — a self-hosted bookmark manager with AI auto-tagging, the closest head-to-head comparison to Blinko in this review.',
           '[Joplin AI Agent Review](/power-local-llm/joplin-ai-agent-review) — an AI agent built on top of the established open-source Joplin note-taking app.',
           '[Smart Connections Review](/power-local-llm/smart-connections-review) — an AI-powered RAG plugin for Obsidian, for readers who already have an established Obsidian vault.',
@@ -356,7 +356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Eine separate kostenpflichtige Option, Blinko Cloud, bietet Managed-Hosting für alle, die keinen eigenen Server betreiben möchten; die selbst gehostete Edition bleibt vollständig kostenlos',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der ausführliche Begleitartikel zu Blinkos Eintrag im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — dort sehen Sie auf einen Blick, wie Blinko im Vergleich zu Dutzenden anderer lokaler und selbst gehosteter KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist der ausführliche Begleitartikel zu Blinkos Eintrag im [Local LLM Software Directory](/directory) — dort sehen Sie auf einen Blick, wie Blinko im Vergleich zu Dutzenden anderer lokaler und selbst gehosteter KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -496,14 +496,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'blinko-competitors',
         title: 'Blinko vs. andere selbst gehostete Notiz- und Lesezeichen-Apps',
-        content: 'Blinko ist eines von mehreren selbst gehosteten Tools, die KI-gestützte Suche und Organisation auf die persönliche Wissenserfassung aufsetzen. So steht es im Vergleich zu anderen Optionen in diesem Bereich — den vollständigen Katalog finden Sie im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory), das direkteste Duell im dedizierten [Blinko-vs.-Karakeep-Vergleich](#blinko-vs-karakeep) oben.',
+        content: 'Blinko ist eines von mehreren selbst gehosteten Tools, die KI-gestützte Suche und Organisation auf die persönliche Wissenserfassung aufsetzen. So steht es im Vergleich zu anderen Optionen in diesem Bereich — den vollständigen Katalog finden Sie im [Local LLM Software Directory](/directory), das direkteste Duell im dedizierten [Blinko-vs.-Karakeep-Vergleich](#blinko-vs-karakeep) oben.',
         items: [
           '**[Karakeep](https://karakeep.app)** — ein selbst gehosteter Lesezeichen-Manager mit KI-Auto-Tagging; siehe den dedizierten Vergleichsabschnitt oben und die [Karakeep-Review](/power-local-llm/karakeep-review) für alle Details.',
           '**[Joplin AI Agent](https://joplinapp.org)** — ein KI-Agent, der auf Joplin aufsetzt, der etablierten Open-Source-Notiz-App, statt wie Blinko ein von Grund auf KI-natives Tool zu sein; siehe die [Joplin-AI-Agent-Review](/power-local-llm/joplin-ai-agent-review).',
           '**[Logseq Copilot](https://logseq.com)** — ein KI-Assistent für Logseq, ein lokal-first, Outliner-basiertes Notiz-Tool mit einer anderen Notizstruktur als Blinkos kartenbasierte Erfassung; siehe die [Logseq-Copilot-Review](/power-local-llm/logseq-copilot-review).',
           '**[Smart Connections](https://obsidian.md)** — ein KI-gestütztes RAG-Plugin für Obsidian, gedacht für Nutzer mit einem bereits etablierten Obsidian-Vault statt für den Neustart mit einer neuen Notiz-App; siehe die [Smart-Connections-Review](/power-local-llm/smart-connections-review).',
         ],
-        note: 'Dies ist keine erschöpfende Liste selbst gehosteter, KI-erweiterter Notiz- und Lesezeichen-Tools — den vollständigen, regelmäßig aktualisierten Katalog inklusive Blinkos eigenem Directory-Eintrag finden Sie im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine erschöpfende Liste selbst gehosteter, KI-erweiterter Notiz- und Lesezeichen-Tools — den vollständigen, regelmäßig aktualisierten Katalog inklusive Blinkos eigenem Directory-Eintrag finden Sie im [Local LLM Software Directory](/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -560,7 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler und selbst gehosteter KI-Tools, zu dem dieser Artikel gehört, inklusive Blinkos Directory-Eintrag neben den oben behandelten Notiz- und Lesezeichen-Apps.',
+          '[Local LLM Software Directory 2026](/directory) — der vollständige Katalog lokaler und selbst gehosteter KI-Tools, zu dem dieser Artikel gehört, inklusive Blinkos Directory-Eintrag neben den oben behandelten Notiz- und Lesezeichen-Apps.',
           '[Karakeep-Review](/power-local-llm/karakeep-review) — ein selbst gehosteter Lesezeichen-Manager mit KI-Auto-Tagging, der direkteste Vergleich zu Blinko in dieser Review.',
           '[Joplin-AI-Agent-Review](/power-local-llm/joplin-ai-agent-review) — ein KI-Agent, der auf der etablierten Open-Source-Notiz-App Joplin aufsetzt.',
           '[Smart-Connections-Review](/power-local-llm/smart-connections-review) — ein KI-gestütztes RAG-Plugin für Obsidian, für Leserinnen und Leser mit einem bereits etablierten Obsidian-Vault.',
@@ -639,7 +639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Une offre payante distincte, Blinko Cloud, propose un hébergement géré pour qui ne veut pas gérer son propre serveur ; l\'édition auto-hébergée reste entièrement gratuite',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de Blinko dans le [Répertoire de logiciels LLM locaux](/power-local-llm/local-llm-software-directory) — voir cette page pour comparer Blinko en un coup d\'œil à des dizaines d\'autres outils IA locaux et auto-hébergés.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de Blinko dans le [Répertoire de logiciels LLM locaux](/directory) — voir cette page pour comparer Blinko en un coup d\'œil à des dizaines d\'autres outils IA locaux et auto-hébergés.' },
         ],
       },
       overview: {
@@ -779,14 +779,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'blinko-competitors',
         title: 'Blinko vs autres applis de notes et favoris auto-hébergées',
-        content: 'Blinko est l\'un des nombreux outils auto-hébergés ajoutant recherche et organisation par IA sur la capture de connaissances personnelles. Voici comment il se positionne face à d\'autres options dans cet espace — voir le [Répertoire de logiciels LLM locaux](/power-local-llm/local-llm-software-directory) pour le catalogue complet, et la comparaison dédiée [Blinko vs Karakeep](#blinko-vs-karakeep) ci-dessus pour le face-à-face le plus proche.',
+        content: 'Blinko est l\'un des nombreux outils auto-hébergés ajoutant recherche et organisation par IA sur la capture de connaissances personnelles. Voici comment il se positionne face à d\'autres options dans cet espace — voir le [Répertoire de logiciels LLM locaux](/directory) pour le catalogue complet, et la comparaison dédiée [Blinko vs Karakeep](#blinko-vs-karakeep) ci-dessus pour le face-à-face le plus proche.',
         items: [
           '**[Karakeep](https://karakeep.app)** — un gestionnaire de favoris auto-hébergé avec tagging automatique par IA ; voir la section de comparaison dédiée ci-dessus et l\'[avis Karakeep](/power-local-llm/karakeep-review) pour tous les détails.',
           '**[Joplin AI Agent](https://joplinapp.org)** — un agent IA superposé à Joplin, l\'appli de notes open source établie, plutôt qu\'un outil IA-natif conçu à partir de zéro comme Blinko ; voir l\'[avis Joplin AI Agent](/power-local-llm/joplin-ai-agent-review).',
           '**[Logseq Copilot](https://logseq.com)** — un assistant IA pour Logseq, un outil de notes local-first de type outliner, avec une structure de notes différente de la capture par cartes de Blinko ; voir l\'[avis Logseq Copilot](/power-local-llm/logseq-copilot-review).',
           '**[Smart Connections](https://obsidian.md)** — un plugin RAG propulsé par IA pour Obsidian, destiné aux utilisateurs ayant déjà un coffre Obsidian établi plutôt qu\'à ceux qui démarrent avec une nouvelle appli de notes ; voir l\'[avis Smart Connections](/power-local-llm/smart-connections-review).',
         ],
-        note: 'Ceci n\'est pas une liste exhaustive des outils de notes et favoris auto-hébergés dotés d\'IA — voir le [Répertoire de logiciels LLM locaux](/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée du répertoire propre à Blinko.',
+        note: 'Ceci n\'est pas une liste exhaustive des outils de notes et favoris auto-hébergés dotés d\'IA — voir le [Répertoire de logiciels LLM locaux](/directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée du répertoire propre à Blinko.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -843,7 +843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire de logiciels LLM locaux 2026](/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils IA locaux et auto-hébergés auquel appartient cet article, incluant l\'entrée de répertoire de Blinko aux côtés des applis de notes et favoris couvertes ci-dessus.',
+          '[Répertoire de logiciels LLM locaux 2026](/directory) — le catalogue complet d\'outils IA locaux et auto-hébergés auquel appartient cet article, incluant l\'entrée de répertoire de Blinko aux côtés des applis de notes et favoris couvertes ci-dessus.',
           '[Avis Karakeep](/power-local-llm/karakeep-review) — un gestionnaire de favoris auto-hébergé avec tagging automatique par IA, la comparaison face-à-face la plus proche de Blinko dans cet avis.',
           '[Avis Joplin AI Agent](/power-local-llm/joplin-ai-agent-review) — un agent IA construit sur l\'appli de notes open source établie Joplin.',
           '[Avis Smart Connections](/power-local-llm/smart-connections-review) — un plugin RAG propulsé par IA pour Obsidian, pour les lecteurs ayant déjà un coffre Obsidian établi.',
@@ -922,7 +922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Existe una opción de pago separada, Blinko Cloud, que ofrece alojamiento gestionado para quienes no quieren administrar su propio servidor; la edición autoalojada sigue siendo totalmente gratuita',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de Blinko en el [Directorio de Software LLM Local](/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara Blinko de un vistazo con docenas de otras herramientas de IA local y autoalojada.' },
+          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de Blinko en el [Directorio de Software LLM Local](/directory) — consulta esa página para ver cómo se compara Blinko de un vistazo con docenas de otras herramientas de IA local y autoalojada.' },
         ],
       },
       overview: {
@@ -1062,14 +1062,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'blinko-competitors',
         title: 'Blinko vs. otras apps autoalojadas de notas y marcadores',
-        content: 'Blinko es una de varias herramientas autoalojadas que añaden búsqueda y organización potenciadas por IA sobre la captura personal de conocimiento. Así se sitúa junto a otras opciones de ese espacio — consulta el [Directorio de Software LLM Local](/power-local-llm/local-llm-software-directory) para el catálogo completo, y la [comparación dedicada Blinko vs. Karakeep](#blinko-vs-karakeep) anterior para el enfrentamiento más cercano.',
+        content: 'Blinko es una de varias herramientas autoalojadas que añaden búsqueda y organización potenciadas por IA sobre la captura personal de conocimiento. Así se sitúa junto a otras opciones de ese espacio — consulta el [Directorio de Software LLM Local](/directory) para el catálogo completo, y la [comparación dedicada Blinko vs. Karakeep](#blinko-vs-karakeep) anterior para el enfrentamiento más cercano.',
         items: [
           '**[Karakeep](https://karakeep.app)** — un gestor de marcadores autoalojado con etiquetado automático por IA; ver la sección de comparación dedicada anterior y la [reseña de Karakeep](/power-local-llm/karakeep-review) para todos los detalles.',
           '**[Joplin AI Agent](https://joplinapp.org)** — un agente de IA construido sobre Joplin, la consolidada app de notas de código abierto, en vez de una herramienta nativa de IA desde cero como Blinko; ver la [reseña de Joplin AI Agent](/power-local-llm/joplin-ai-agent-review).',
           '**[Logseq Copilot](https://logseq.com)** — un asistente de IA para Logseq, una herramienta de notas tipo esquema y local-first con una estructura de notas distinta a la captura en tarjetas de Blinko; ver la [reseña de Logseq Copilot](/power-local-llm/logseq-copilot-review).',
           '**[Smart Connections](https://obsidian.md)** — un plugin de RAG potenciado por IA para Obsidian, orientado a usuarios que ya tienen una bóveda de Obsidian establecida en vez de empezar de cero con una nueva app de notas; ver la [reseña de Smart Connections](/power-local-llm/smart-connections-review).',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas autoalojadas de notas y marcadores mejoradas con IA — consulta el [Directorio de Software LLM Local](/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada del directorio de Blinko.',
+        note: 'Esta no es una lista exhaustiva de herramientas autoalojadas de notas y marcadores mejoradas con IA — consulta el [Directorio de Software LLM Local](/directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada del directorio de Blinko.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1126,7 +1126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software LLM Local 2026](/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local y autoalojada al que pertenece este artículo, incluida la entrada del directorio de Blinko junto a las apps de notas y marcadores cubiertas arriba.',
+          '[Directorio de Software LLM Local 2026](/directory) — el catálogo completo de herramientas de IA local y autoalojada al que pertenece este artículo, incluida la entrada del directorio de Blinko junto a las apps de notas y marcadores cubiertas arriba.',
           '[Reseña de Karakeep](/power-local-llm/karakeep-review) — un gestor de marcadores autoalojado con etiquetado automático por IA, la comparación cara a cara más cercana a Blinko en esta reseña.',
           '[Reseña de Joplin AI Agent](/power-local-llm/joplin-ai-agent-review) — un agente de IA construido sobre la consolidada app de notas de código abierto Joplin.',
           '[Reseña de Smart Connections](/power-local-llm/smart-connections-review) — un plugin de RAG potenciado por IA para Obsidian, para lectores que ya tienen una bóveda de Obsidian establecida.',
@@ -1205,7 +1205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '自分でサーバーを運用したくない人向けに、別料金のBlinko Cloudというマネージドホスティングも用意されている——セルフホスト版は引き続き完全無料',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)にあるBlinkoの項目を深掘りする姉妹記事です。他の数十種類のローカル・セルフホストAIツールとの比較は同ページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/directory)にあるBlinkoの項目を深掘りする姉妹記事です。他の数十種類のローカル・セルフホストAIツールとの比較は同ページを参照してください。' },
         ],
       },
       overview: {
@@ -1345,14 +1345,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'blinko-competitors',
         title: 'Blinko vs. 他のセルフホスト型ノート・ブックマークアプリ',
-        content: 'Blinkoは、個人の知識記録の上にAI搭載の検索・整理機能を追加する、複数のセルフホスト型ツールの1つです。この分野で他の選択肢とどう位置づけられるかを紹介します。全カタログは[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)を、最も近い一騎打ちの比較は上記の[Blinko vs. Karakeep比較](#blinko-vs-karakeep)を参照してください。',
+        content: 'Blinkoは、個人の知識記録の上にAI搭載の検索・整理機能を追加する、複数のセルフホスト型ツールの1つです。この分野で他の選択肢とどう位置づけられるかを紹介します。全カタログは[ローカルLLMソフトウェアディレクトリ](/directory)を、最も近い一騎打ちの比較は上記の[Blinko vs. Karakeep比較](#blinko-vs-karakeep)を参照してください。',
         items: [
           '**[Karakeep](https://karakeep.app)** — AI自動タグ付けを備えたセルフホスト型ブックマークマネージャー。詳細は上記の比較セクションと[Karakeepレビュー](/power-local-llm/karakeep-review)を参照。',
           '**[Joplin AI Agent](https://joplinapp.org)** — Blinkoのようなゼロから作られたAIネイティブツールではなく、確立されたオープンソースノートアプリJoplinの上にAIエージェントを重ねたもの。詳細は[Joplin AI Agentレビュー](/power-local-llm/joplin-ai-agent-review)を参照。',
           '**[Logseq Copilot](https://logseq.com)** — ローカルファーストのアウトライナー型ノートツールLogseq向けのAIアシスタントで、Blinkoのカード型記録とはノート構造が異なる。詳細は[Logseq Copilotレビュー](/power-local-llm/logseq-copilot-review)を参照。',
           '**[Smart Connections](https://obsidian.md)** — Obsidian向けのAI搭載RAGプラグインで、新しいノートアプリを一から始めるのではなく、既存のObsidianボールトを持つユーザー向け。詳細は[Smart Connectionsレビュー](/power-local-llm/smart-connections-review)を参照。',
         ],
-        note: 'これはセルフホスト型でAIを強化したノート・ブックマークツールの網羅的なリストではありません。Blinko自身のディレクトリ項目を含む、定期的に更新される全カタログは[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはセルフホスト型でAIを強化したノート・ブックマークツールの網羅的なリストではありません。Blinko自身のディレクトリ項目を含む、定期的に更新される全カタログは[ローカルLLMソフトウェアディレクトリ](/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1409,7 +1409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/power-local-llm/local-llm-software-directory) — この記事が属する、ローカル・セルフホストAIツールの全カタログ。上記で扱ったノート・ブックマークアプリとともにBlinkoのディレクトリ項目も掲載。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/directory) — この記事が属する、ローカル・セルフホストAIツールの全カタログ。上記で扱ったノート・ブックマークアプリとともにBlinkoのディレクトリ項目も掲載。',
           '[Karakeepレビュー](/power-local-llm/karakeep-review) — AI自動タグ付けを備えたセルフホスト型ブックマークマネージャー。このレビューでBlinkoに最も近い一騎打ちの比較対象。',
           '[Joplin AI Agentレビュー](/power-local-llm/joplin-ai-agent-review) — 確立されたオープンソースノートアプリJoplinの上に構築されたAIエージェント。',
           '[Smart Connectionsレビュー](/power-local-llm/smart-connections-review) — 既存のObsidianボールトを持つ読者向けの、Obsidian用AI搭載RAGプラグイン。',
@@ -1488,7 +1488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '另有一个单独付费的 Blinko Cloud 选项,为不想自行运维服务器的用户提供托管服务;自托管版本依然完全免费',
         ],
         callouts: [
-          { type: 'note', text: '本评测是 [本地 LLM 软件目录](/power-local-llm/local-llm-software-directory) 中 Blinko 条目的深度补充——想了解 Blinko 与其他数十款本地及自托管 AI 工具的整体对比,请查看该页面。' },
+          { type: 'note', text: '本评测是 [本地 LLM 软件目录](/directory) 中 Blinko 条目的深度补充——想了解 Blinko 与其他数十款本地及自托管 AI 工具的整体对比,请查看该页面。' },
         ],
       },
       overview: {
@@ -1628,14 +1628,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'blinko-competitors',
         title: 'Blinko 对比其他自托管笔记与书签应用',
-        content: 'Blinko 是在个人知识捕捉基础上加入 AI 驱动搜索与整理能力的多款自托管工具之一。以下是它在这一领域中与其他方案的对比——完整目录见 [本地 LLM 软件目录](/power-local-llm/local-llm-software-directory),而与 Blinko 最直接对标的方案请参见上文专门的 [Blinko vs. Karakeep 对比](#blinko-vs-karakeep)。',
+        content: 'Blinko 是在个人知识捕捉基础上加入 AI 驱动搜索与整理能力的多款自托管工具之一。以下是它在这一领域中与其他方案的对比——完整目录见 [本地 LLM 软件目录](/directory),而与 Blinko 最直接对标的方案请参见上文专门的 [Blinko vs. Karakeep 对比](#blinko-vs-karakeep)。',
         items: [
           '**[Karakeep](https://karakeep.app)**——一款带 AI 自动打标签功能的自托管书签管理工具;详见上文专门对比部分,以及 [Karakeep 评测](/power-local-llm/karakeep-review) 的完整介绍。',
           '**[Joplin AI Agent](https://joplinapp.org)**——在成熟的开源笔记应用 Joplin 之上叠加的 AI 代理,而不是像 Blinko 那样从零打造的 AI 原生工具;详见 [Joplin AI Agent 评测](/power-local-llm/joplin-ai-agent-review)。',
           '**[Logseq Copilot](https://logseq.com)**——为 Logseq 打造的 AI 助手,Logseq 是一款本地优先的大纲式笔记工具,笔记结构与 Blinko 的卡片式捕捉不同;详见 [Logseq Copilot 评测](/power-local-llm/logseq-copilot-review)。',
           '**[Smart Connections](https://obsidian.md)**——面向 Obsidian 的 AI 驱动 RAG 插件,适合已经建立起 Obsidian 知识库、而不是从零开始使用新笔记应用的用户;详见 [Smart Connections 评测](/power-local-llm/smart-connections-review)。',
         ],
-        note: '这并非自托管、AI 增强笔记与书签工具的完整列表——完整且持续更新的目录(包括 Blinko 自身的目录条目)请参见 [本地 LLM 软件目录](/power-local-llm/local-llm-software-directory)。',
+        note: '这并非自托管、AI 增强笔记与书签工具的完整列表——完整且持续更新的目录(包括 Blinko 自身的目录条目)请参见 [本地 LLM 软件目录](/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1692,7 +1692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地 LLM 软件目录 2026](/power-local-llm/local-llm-software-directory)——本文所属的本地及自托管 AI 工具完整目录,包含 Blinko 的目录条目,以及上文提到的笔记与书签类应用。',
+          '[本地 LLM 软件目录 2026](/directory)——本文所属的本地及自托管 AI 工具完整目录,包含 Blinko 的目录条目,以及上文提到的笔记与书签类应用。',
           '[Karakeep 评测](/power-local-llm/karakeep-review)——一款带 AI 自动打标签功能的自托管书签管理工具,是本评测中与 Blinko 最直接对标的方案。',
           '[Joplin AI Agent 评测](/power-local-llm/joplin-ai-agent-review)——一个构建在成熟开源笔记应用 Joplin 之上的 AI 代理。',
           '[Smart Connections 评测](/power-local-llm/smart-connections-review)——面向 Obsidian 的 AI 驱动 RAG 插件,适合已经建立起 Obsidian 知识库的读者。',
@@ -1771,7 +1771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Uma opção paga separada, o Blinko Cloud, oferece hospedagem gerenciada para quem não quer manter o próprio servidor; a edição autohospedada continua totalmente gratuita',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Blinko no [Diretório de Software LLM Local](/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o Blinko com dezenas de outras ferramentas de IA local e autohospedada.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Blinko no [Diretório de Software LLM Local](/directory) — veja essa página para comparar rapidamente o Blinko com dezenas de outras ferramentas de IA local e autohospedada.' },
         ],
       },
       overview: {
@@ -1911,14 +1911,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'blinko-competitors',
         title: 'Blinko vs. Outros Apps Autohospedados de Notas e Favoritos',
-        content: 'O Blinko é uma entre várias ferramentas autohospedadas que adicionam busca e organização com IA sobre a captura de conhecimento pessoal. Veja como ele se posiciona em relação a outras opções desse espaço — consulte o [Diretório de Software LLM Local](/power-local-llm/local-llm-software-directory) para o catálogo completo, e a [comparação dedicada Blinko vs. Karakeep](#blinko-vs-karakeep) acima para o confronto mais direto.',
+        content: 'O Blinko é uma entre várias ferramentas autohospedadas que adicionam busca e organização com IA sobre a captura de conhecimento pessoal. Veja como ele se posiciona em relação a outras opções desse espaço — consulte o [Diretório de Software LLM Local](/directory) para o catálogo completo, e a [comparação dedicada Blinko vs. Karakeep](#blinko-vs-karakeep) acima para o confronto mais direto.',
         items: [
           '**[Karakeep](https://karakeep.app)** — um gerenciador de favoritos autohospedado com marcação automática por IA; veja a seção de comparação dedicada acima e a [análise do Karakeep](/power-local-llm/karakeep-review) para todos os detalhes.',
           '**[Joplin AI Agent](https://joplinapp.org)** — um agente de IA construído sobre o Joplin, o consagrado app de anotações de código aberto, em vez de uma ferramenta nativa de IA construída do zero como o Blinko; veja a [análise do Joplin AI Agent](/power-local-llm/joplin-ai-agent-review).',
           '**[Logseq Copilot](https://logseq.com)** — um assistente de IA para o Logseq, uma ferramenta de notas local-first em estilo outliner com uma estrutura de notas diferente da captura em cartões do Blinko; veja a [análise do Logseq Copilot](/power-local-llm/logseq-copilot-review).',
           '**[Smart Connections](https://obsidian.md)** — um plugin de busca RAG com IA para o Obsidian, voltado a usuários que já têm um cofre (vault) Obsidian estabelecido em vez de começar do zero com um novo app de notas; veja a [análise do Smart Connections](/power-local-llm/smart-connections-review).',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas autohospedadas de notas e favoritos aprimoradas por IA — veja o [Diretório de Software LLM Local](/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Blinko no diretório.',
+        note: 'Esta não é uma lista exaustiva de ferramentas autohospedadas de notas e favoritos aprimoradas por IA — veja o [Diretório de Software LLM Local](/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do Blinko no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1975,7 +1975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura Relacionada',
         items: [
-          '[Diretório de Software LLM Local 2026](/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local e autohospedada ao qual este artigo pertence, incluindo a entrada do Blinko no diretório ao lado dos apps de notas e favoritos cobertos acima.',
+          '[Diretório de Software LLM Local 2026](/directory) — o catálogo completo de ferramentas de IA local e autohospedada ao qual este artigo pertence, incluindo a entrada do Blinko no diretório ao lado dos apps de notas e favoritos cobertos acima.',
           '[Análise do Karakeep](/power-local-llm/karakeep-review) — um gerenciador de favoritos autohospedado com marcação automática por IA, a comparação mais direta com o Blinko nesta análise.',
           '[Análise do Joplin AI Agent](/power-local-llm/joplin-ai-agent-review) — um agente de IA construído sobre o consagrado app de anotações de código aberto Joplin.',
           '[Análise do Smart Connections](/power-local-llm/smart-connections-review) — um plugin de busca RAG com IA para o Obsidian, para quem já tem um cofre (vault) Obsidian estabelecido.',
@@ -2054,7 +2054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'خيار مدفوع منفصل، Blinko Cloud، يوفر استضافة مُدارة لمن لا يريدون تشغيل خادمهم الخاص؛ وتبقى نسخة الاستضافة الذاتية مجانية بالكامل',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الرفيقة المتعمقة لمدخل Blinko في [دليل برمجيات النماذج اللغوية المحلية](/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارَن Blinko بسرعة بعشرات الأدوات الأخرى للذكاء الاصطناعي المحلي وذاتي الاستضافة.' },
+          { type: 'note', text: 'هذه المراجعة هي الرفيقة المتعمقة لمدخل Blinko في [دليل برمجيات النماذج اللغوية المحلية](/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن Blinko بسرعة بعشرات الأدوات الأخرى للذكاء الاصطناعي المحلي وذاتي الاستضافة.' },
         ],
       },
       overview: {
@@ -2194,14 +2194,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'blinko-competitors',
         title: 'Blinko مقابل تطبيقات ملاحظات وإشارات مرجعية ذاتية الاستضافة الأخرى',
-        content: 'Blinko واحد من عدة أدوات ذاتية الاستضافة تضيف بحثاً وتنظيماً مدعومين بالذكاء الاصطناعي فوق التقاط المعرفة الشخصية. إليك موقعه بجانب خيارات أخرى في هذا المجال — راجع [دليل برمجيات النماذج اللغوية المحلية](/power-local-llm/local-llm-software-directory) للكتالوج الكامل، و[مقارنة Blinko مقابل Karakeep](#blinko-vs-karakeep) المخصصة أعلاه للمقارنة الوجهاً لوجه الأقرب.',
+        content: 'Blinko واحد من عدة أدوات ذاتية الاستضافة تضيف بحثاً وتنظيماً مدعومين بالذكاء الاصطناعي فوق التقاط المعرفة الشخصية. إليك موقعه بجانب خيارات أخرى في هذا المجال — راجع [دليل برمجيات النماذج اللغوية المحلية](/directory) للكتالوج الكامل، و[مقارنة Blinko مقابل Karakeep](#blinko-vs-karakeep) المخصصة أعلاه للمقارنة الوجهاً لوجه الأقرب.',
         items: [
           '**[Karakeep](https://karakeep.app)** — مدير إشارات مرجعية ذاتي الاستضافة بوسم تلقائي بالذكاء الاصطناعي؛ راجع قسم المقارنة المخصص أعلاه و[مراجعة Karakeep](/power-local-llm/karakeep-review) للتفاصيل الكاملة.',
           '**[Joplin AI Agent](https://joplinapp.org)** — وكيل ذكاء اصطناعي مضاف فوق Joplin، تطبيق الملاحظات مفتوح المصدر الراسخ، بدلاً من أداة أصلية بالذكاء الاصطناعي من الصفر مثل Blinko؛ راجع [مراجعة Joplin AI Agent](/power-local-llm/joplin-ai-agent-review).',
           '**[Logseq Copilot](https://logseq.com)** — مساعد ذكاء اصطناعي لـLogseq، أداة ملاحظات محلية أولاً بأسلوب المخطط التفصيلي ببنية ملاحظات مختلفة عن التقاط Blinko القائم على البطاقات؛ راجع [مراجعة Logseq Copilot](/power-local-llm/logseq-copilot-review).',
           '**[Smart Connections](https://obsidian.md)** — إضافة RAG مدعومة بالذكاء الاصطناعي لـObsidian، موجهة لمن لديهم بالفعل خزنة Obsidian قائمة بدلاً من البدء من جديد بتطبيق ملاحظات جديد؛ راجع [مراجعة Smart Connections](/power-local-llm/smart-connections-review).',
         ],
-        note: 'هذه ليست قائمة شاملة لأدوات الملاحظات والإشارات المرجعية ذاتية الاستضافة المعزَّزة بالذكاء الاصطناعي — راجع [دليل برمجيات النماذج اللغوية المحلية](/power-local-llm/local-llm-software-directory) للكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك مدخل Blinko الخاص في الدليل.',
+        note: 'هذه ليست قائمة شاملة لأدوات الملاحظات والإشارات المرجعية ذاتية الاستضافة المعزَّزة بالذكاء الاصطناعي — راجع [دليل برمجيات النماذج اللغوية المحلية](/directory) للكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك مدخل Blinko الخاص في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2258,7 +2258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات النماذج اللغوية المحلية 2026](/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية وذاتية الاستضافة التي ينتمي إليها هذا المقال، بما في ذلك مدخل Blinko في الدليل إلى جانب تطبيقات الملاحظات والإشارات المرجعية المذكورة أعلاه.',
+          '[دليل برمجيات النماذج اللغوية المحلية 2026](/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية وذاتية الاستضافة التي ينتمي إليها هذا المقال، بما في ذلك مدخل Blinko في الدليل إلى جانب تطبيقات الملاحظات والإشارات المرجعية المذكورة أعلاه.',
           '[مراجعة Karakeep](/power-local-llm/karakeep-review) — مدير إشارات مرجعية ذاتي الاستضافة بوسم تلقائي بالذكاء الاصطناعي، أقرب مقارنة وجهاً لوجه مع Blinko في هذه المراجعة.',
           '[مراجعة Joplin AI Agent](/power-local-llm/joplin-ai-agent-review) — وكيل ذكاء اصطناعي مبني فوق تطبيق Joplin مفتوح المصدر الراسخ للملاحظات.',
           '[مراجعة Smart Connections](/power-local-llm/smart-connections-review) — إضافة RAG مدعومة بالذكاء الاصطناعي لـObsidian، لمن لديهم بالفعل خزنة Obsidian قائمة.',
@@ -2337,7 +2337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '별도의 유료 옵션인 Blinko Cloud는 서버를 직접 운영하고 싶지 않은 사용자를 위한 관리형 호스팅을 제공하며, 셀프 호스팅 버전은 계속 완전히 무료로 유지됨',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)에 있는 Blinko 항목의 심층 분석 버전입니다 — Blinko가 수십 개의 다른 로컬 및 셀프 호스팅 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/directory)에 있는 Blinko 항목의 심층 분석 버전입니다 — Blinko가 수십 개의 다른 로컬 및 셀프 호스팅 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2477,14 +2477,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'blinko-competitors',
         title: 'Blinko vs. 다른 셀프 호스팅 노트 및 북마크 앱',
-        content: 'Blinko는 개인 지식 캡처 위에 AI 기반 검색과 정리를 추가한 여러 셀프 호스팅 도구 중 하나입니다. 이 영역의 다른 옵션들과 Blinko가 어떻게 비교되는지는 다음과 같습니다 — 전체 목록은 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를, 가장 가까운 맞대결 비교는 위의 전용 [Blinko vs. Karakeep 비교](#blinko-vs-karakeep)를 참고하세요.',
+        content: 'Blinko는 개인 지식 캡처 위에 AI 기반 검색과 정리를 추가한 여러 셀프 호스팅 도구 중 하나입니다. 이 영역의 다른 옵션들과 Blinko가 어떻게 비교되는지는 다음과 같습니다 — 전체 목록은 [로컬 LLM 소프트웨어 디렉터리](/directory)를, 가장 가까운 맞대결 비교는 위의 전용 [Blinko vs. Karakeep 비교](#blinko-vs-karakeep)를 참고하세요.',
         items: [
           '**[Karakeep](https://karakeep.app)** — AI 자동 태깅을 갖춘 셀프 호스팅 북마크 관리자 — 위의 전용 비교 섹션과 [Karakeep 리뷰](/power-local-llm/karakeep-review)에서 전체 내용을 확인하세요.',
           '**[Joplin AI Agent](https://joplinapp.org)** — Blinko 같은 처음부터 AI 네이티브인 도구가 아니라, 이미 확립된 오픈소스 노트 앱인 Joplin 위에 얹힌 AI 에이전트 — [Joplin AI Agent 리뷰](/power-local-llm/joplin-ai-agent-review)를 참고하세요.',
           '**[Logseq Copilot](https://logseq.com)** — Blinko의 카드 기반 캡처와 다른 노트 구조를 가진 로컬 우선 아웃라이너형 노트 도구 Logseq를 위한 AI 어시스턴트 — [Logseq Copilot 리뷰](/power-local-llm/logseq-copilot-review)를 참고하세요.',
           '**[Smart Connections](https://obsidian.md)** — 새 노트 앱으로 처음 시작하는 대신 이미 구축된 Obsidian 보관함이 있는 사용자를 겨냥한 Obsidian용 AI 기반 RAG 플러그인 — [Smart Connections 리뷰](/power-local-llm/smart-connections-review)를 참고하세요.',
         ],
-        note: '이 목록은 셀프 호스팅 AI 강화 노트 및 북마크 도구의 전체 목록이 아닙니다 — Blinko의 디렉터리 항목을 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이 목록은 셀프 호스팅 AI 강화 노트 및 북마크 도구의 전체 목록이 아닙니다 — Blinko의 디렉터리 항목을 포함한 전체적이고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2541,7 +2541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/power-local-llm/local-llm-software-directory) — 위에서 다룬 노트 및 북마크 앱과 함께 Blinko의 디렉터리 항목을 포함한, 이 기사가 속한 로컬 및 셀프 호스팅 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/directory) — 위에서 다룬 노트 및 북마크 앱과 함께 Blinko의 디렉터리 항목을 포함한, 이 기사가 속한 로컬 및 셀프 호스팅 AI 도구의 전체 카탈로그.',
           '[Karakeep 리뷰](/power-local-llm/karakeep-review) — AI 자동 태깅을 갖춘 셀프 호스팅 북마크 관리자로, 이 리뷰에서 Blinko와 가장 가까운 맞대결 비교 대상.',
           '[Joplin AI Agent 리뷰](/power-local-llm/joplin-ai-agent-review) — 이미 확립된 오픈소스 노트 앱 Joplin 위에 구축된 AI 에이전트.',
           '[Smart Connections 리뷰](/power-local-llm/smart-connections-review) — 이미 구축된 Obsidian 보관함이 있는 독자를 위한 Obsidian용 AI 기반 RAG 플러그인.',

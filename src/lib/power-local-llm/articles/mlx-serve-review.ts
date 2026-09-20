@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Developed by [David Dalcu](https://github.com/ddalcu); ships near-daily tagged releases as of this review',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to mlx-serve\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how mlx-serve compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to mlx-serve\'s entry in the [Local LLM Software Directory](/directory) — see that page for how mlx-serve compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -210,7 +210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'mlx-serve-competitors',
         title: 'mlx-serve vs. Other MLX Inference Tools',
-        content: 'mlx-serve is one of several Apple-Silicon-focused inference servers that have emerged around Apple\'s MLX framework. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, and the dedicated [mlx-serve vs. Ollama comparison](#mlx-serve-vs-ollama) above for the closest cross-platform head-to-head.',
+        content: 'mlx-serve is one of several Apple-Silicon-focused inference servers that have emerged around Apple\'s MLX framework. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/directory) for the full catalog, and the dedicated [mlx-serve vs. Ollama comparison](#mlx-serve-vs-ollama) above for the closest cross-platform head-to-head.',
         items: [
           '**[MLX LM](https://github.com/ml-explore/mlx-lm)** — Apple\'s own Python library and command-line tools for running and fine-tuning language models with MLX; lower-level and Python-based, unlike mlx-serve\'s standalone Zig binary. See the [MLX LM explainer](/power-local-llm/mlx-lm-explained) for a deeper look at the underlying library mlx-serve\'s native dispatch builds on.',
           '**[omlx](/power-local-llm/omlx-review)** — another Apple-Silicon-focused local inference option; see the dedicated review for how its feature set and API compatibility compare to mlx-serve\'s.',
@@ -218,7 +218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[LoRAX](/power-local-llm/lorax-review)** — a multi-LoRA-adapter serving framework; relevant if your workflow needs to serve many fine-tuned adapters from one base model rather than a single model per server, which is not mlx-serve\'s design point.',
           '**[Ollama](https://ollama.com)** — a cross-platform local model server; see the dedicated comparison section above for how it differs from mlx-serve on platform scope and native engine.',
         ],
-        note: 'This is not an exhaustive list of Apple-Silicon inference servers — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including mlx-serve\'s own directory entry.',
+        note: 'This is not an exhaustive list of Apple-Silicon inference servers — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including mlx-serve\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -274,7 +274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including mlx-serve\'s directory entry alongside other inference engines covered above.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including mlx-serve\'s directory entry alongside other inference engines covered above.',
           '[MLX LM Explained](/power-local-llm/mlx-lm-explained) — a deeper look at Apple\'s own MLX library that mlx-serve\'s native model dispatch is built on.',
           '[omlx Review](/power-local-llm/omlx-review) — another Apple-Silicon-focused local inference tool, compared directly to mlx-serve above.',
           '[Apple MLX vs. NVIDIA CUDA for Local LLMs](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — a broader look at the MLX ecosystem mlx-serve is part of, against the CUDA alternative on non-Apple hardware.',
@@ -353,7 +353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Entwickelt von [David Dalcu](https://github.com/ddalcu); liefert Stand dieser Review nahezu tägliche getaggte Releases',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zum Eintrag von mlx-serve im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie mlx-serve im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zum Eintrag von mlx-serve im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie mlx-serve im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -490,7 +490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'mlx-serve-competitors',
         title: 'mlx-serve vs. andere MLX-Inferenz-Tools',
-        content: 'mlx-serve ist einer von mehreren Apple-Silicon-fokussierten Inferenzservern, die rund um Apples MLX-Framework entstanden sind. So schneidet es im Vergleich zu anderen Optionen in diesem Bereich ab — siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog und den eigenen [mlx-serve-vs.-Ollama-Vergleich](#mlx-serve-vs-ollama) oben für den plattformübergreifend direktesten Vergleich.',
+        content: 'mlx-serve ist einer von mehreren Apple-Silicon-fokussierten Inferenzservern, die rund um Apples MLX-Framework entstanden sind. So schneidet es im Vergleich zu anderen Optionen in diesem Bereich ab — siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen Katalog und den eigenen [mlx-serve-vs.-Ollama-Vergleich](#mlx-serve-vs-ollama) oben für den plattformübergreifend direktesten Vergleich.',
         items: [
           '**[MLX LM](https://github.com/ml-explore/mlx-lm)** — Apples eigene Python-Bibliothek und Kommandozeilen-Tools zum Ausführen und Feintunen von Sprachmodellen mit MLX; tiefer angesiedelt und Python-basiert, im Gegensatz zur eigenständigen Zig-Binärdatei von mlx-serve. Siehe die [MLX-LM-Erklärung](/de/power-local-llm/mlx-lm-explained) für einen tieferen Blick auf die zugrunde liegende Bibliothek, auf der das native Dispatch von mlx-serve aufbaut.',
           '**[omlx](/de/power-local-llm/omlx-review)** — eine weitere Apple-Silicon-fokussierte lokale Inferenzoption; siehe die eigene Review für den Vergleich von Funktionsumfang und API-Kompatibilität mit mlx-serve.',
@@ -498,7 +498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[LoRAX](/de/power-local-llm/lorax-review)** — ein Serving-Framework für mehrere LoRA-Adapter; relevant, wenn Ihr Workflow viele feingetunte Adapter aus einem Basismodell statt eines einzelnen Modells pro Server bedienen muss, was nicht der Designschwerpunkt von mlx-serve ist.',
           '**[Ollama](https://ollama.com)** — ein plattformübergreifender lokaler Modellserver; siehe den eigenen Vergleichsabschnitt oben für die Unterschiede zu mlx-serve bei Plattformumfang und nativer Engine.',
         ],
-        note: 'Dies ist keine erschöpfende Liste von Apple-Silicon-Inferenzservern — siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Verzeichniseintrags von mlx-serve.',
+        note: 'Dies ist keine erschöpfende Liste von Apple-Silicon-Inferenzservern — siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Verzeichniseintrags von mlx-serve.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -554,7 +554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Lokales KI-Software-Verzeichnis 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von mlx-serve neben anderen oben behandelten Inferenz-Engines.',
+          '[Lokales KI-Software-Verzeichnis 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von mlx-serve neben anderen oben behandelten Inferenz-Engines.',
           '[MLX LM erklärt](/de/power-local-llm/mlx-lm-explained) — ein tieferer Blick auf Apples eigene MLX-Bibliothek, auf der das native Modell-Dispatch von mlx-serve aufbaut.',
           '[omlx Review](/de/power-local-llm/omlx-review) — ein weiteres Apple-Silicon-fokussiertes lokales Inferenz-Tool, oben direkt mit mlx-serve verglichen.',
           '[Apple MLX vs. NVIDIA CUDA für lokale LLMs](/de/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — ein breiterer Blick auf das MLX-Ökosystem, zu dem mlx-serve gehört, im Vergleich zur CUDA-Alternative auf Nicht-Apple-Hardware.',
@@ -633,7 +633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Développé par [David Dalcu](https://github.com/ddalcu) ; publie des versions taguées quasi quotidiennes au moment de cette revue',
         ],
         callouts: [
-          { type: 'note', text: 'Cette revue est le complément détaillé de la fiche de mlx-serve dans le [Répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir en un coup d\'œil comment mlx-serve se compare à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cette revue est le complément détaillé de la fiche de mlx-serve dans le [Répertoire des logiciels d\'IA locale](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment mlx-serve se compare à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -770,7 +770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'mlx-serve-competitors',
         title: 'mlx-serve vs. autres outils d\'inférence MLX',
-        content: 'mlx-serve est l\'un de plusieurs serveurs d\'inférence axés sur Apple Silicon apparus autour du framework MLX d\'Apple. Voici comment il se positionne face à d\'autres options dans ce domaine — consultez le [Répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, et la [comparaison dédiée mlx-serve vs. Ollama](#mlx-serve-vs-ollama) ci-dessus pour le face-à-face multiplateforme le plus proche.',
+        content: 'mlx-serve est l\'un de plusieurs serveurs d\'inférence axés sur Apple Silicon apparus autour du framework MLX d\'Apple. Voici comment il se positionne face à d\'autres options dans ce domaine — consultez le [Répertoire des logiciels d\'IA locale](/fr/directory) pour le catalogue complet, et la [comparaison dédiée mlx-serve vs. Ollama](#mlx-serve-vs-ollama) ci-dessus pour le face-à-face multiplateforme le plus proche.',
         items: [
           '**[MLX LM](https://github.com/ml-explore/mlx-lm)** — la bibliothèque Python et les outils en ligne de commande propres à Apple pour exécuter et affiner des modèles de langage avec MLX ; de plus bas niveau et basée sur Python, contrairement au binaire Zig autonome de mlx-serve. Voir l\'[explication de MLX LM](/fr/power-local-llm/mlx-lm-explained) pour un aperçu plus approfondi de la bibliothèque sous-jacente sur laquelle s\'appuie la répartition native de mlx-serve.',
           '**[omlx](/fr/power-local-llm/omlx-review)** — une autre option d\'inférence locale axée sur Apple Silicon ; voir la revue dédiée pour comparer son ensemble de fonctionnalités et sa compatibilité API à ceux de mlx-serve.',
@@ -778,7 +778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[LoRAX](/fr/power-local-llm/lorax-review)** — un framework de service multi-adaptateurs LoRA ; pertinent si votre workflow doit servir de nombreux adaptateurs affinés depuis un modèle de base plutôt qu\'un seul modèle par serveur, ce qui n\'est pas l\'axe de conception de mlx-serve.',
           '**[Ollama](https://ollama.com)** — un serveur de modèles locaux multiplateforme ; voir la section de comparaison dédiée ci-dessus pour ses différences avec mlx-serve en matière de portée de plateformes et de moteur natif.',
         ],
-        note: 'Ceci n\'est pas une liste exhaustive des serveurs d\'inférence Apple Silicon — consultez le [Répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de mlx-serve dans le répertoire.',
+        note: 'Ceci n\'est pas une liste exhaustive des serveurs d\'inférence Apple Silicon — consultez le [Répertoire des logiciels d\'IA locale](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de mlx-serve dans le répertoire.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -834,7 +834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire des logiciels d\'IA locale 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant la fiche de mlx-serve aux côtés d\'autres moteurs d\'inférence couverts ci-dessus.',
+          '[Répertoire des logiciels d\'IA locale 2026](/fr/directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant la fiche de mlx-serve aux côtés d\'autres moteurs d\'inférence couverts ci-dessus.',
           '[MLX LM expliqué](/fr/power-local-llm/mlx-lm-explained) — un aperçu plus approfondi de la bibliothèque MLX propre à Apple sur laquelle s\'appuie la répartition native des modèles de mlx-serve.',
           '[Revue d\'omlx](/fr/power-local-llm/omlx-review) — un autre outil d\'inférence locale axé sur Apple Silicon, comparé directement à mlx-serve ci-dessus.',
           '[Apple MLX vs. NVIDIA CUDA pour les LLM locaux](/fr/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — un aperçu plus large de l\'écosystème MLX dont mlx-serve fait partie, face à l\'alternative CUDA sur du matériel non-Apple.',
@@ -913,7 +913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[David Dalcu](https://github.com/ddalcu)氏が開発しており、本レビュー時点でほぼ毎日タグ付きリリースが行われています',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)におけるmlx-serveの項目を掘り下げた記事です。他の数十のローカルAIツールとの一覧比較はそちらのページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)におけるmlx-serveの項目を掘り下げた記事です。他の数十のローカルAIツールとの一覧比較はそちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1050,7 +1050,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'mlx-serve-competitors',
         title: 'mlx-serve vs. 他のMLX推論ツール',
-        content: 'mlx-serveは、AppleのMLXフレームワークを中心に登場した複数のApple Silicon特化型推論サーバーの1つです。この分野の他の選択肢との位置づけを以下にまとめます — 全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を、最も近いクロスプラットフォームの一騎打ち比較は上記の専用の[mlx-serve vs. Ollama比較](#mlx-serve-vs-ollama)を参照してください。',
+        content: 'mlx-serveは、AppleのMLXフレームワークを中心に登場した複数のApple Silicon特化型推論サーバーの1つです。この分野の他の選択肢との位置づけを以下にまとめます — 全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を、最も近いクロスプラットフォームの一騎打ち比較は上記の専用の[mlx-serve vs. Ollama比較](#mlx-serve-vs-ollama)を参照してください。',
         items: [
           '**[MLX LM](https://github.com/ml-explore/mlx-lm)** — MLXを使って言語モデルを実行・ファインチューニングするためのApple独自のPythonライブラリとコマンドラインツールで、mlx-serveの単体Zigバイナリとは異なり、より低レベルでPythonベースです。mlx-serveのネイティブディスパッチが基盤とする基盤ライブラリについての詳しい解説は[MLX LMの解説](/ja/power-local-llm/mlx-lm-explained)を参照してください。',
           '**[omlx](/ja/power-local-llm/omlx-review)** — 別のApple Silicon特化型ローカル推論オプションです。機能セットとAPI互換性がmlx-serveとどう比較されるかは専用のレビューを参照してください。',
@@ -1058,7 +1058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[LoRAX](/ja/power-local-llm/lorax-review)** — マルチLoRAアダプター提供フレームワークです。サーバーごとに単一モデルではなく、1つのベースモデルから多数のファインチューニング済みアダプターを提供する必要があるワークフローに関連します。これはmlx-serveの設計上の焦点ではありません。',
           '**[Ollama](https://ollama.com)** — クロスプラットフォームのローカルモデルサーバーです。プラットフォーム範囲とネイティブエンジンに関するmlx-serveとの違いは、上記の専用比較セクションを参照してください。',
         ],
-        note: 'これはApple Silicon推論サーバーの網羅的なリストではありません — mlx-serve自身のディレクトリ項目を含む、定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはApple Silicon推論サーバーの網羅的なリストではありません — mlx-serve自身のディレクトリ項目を含む、定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1114,7 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ 2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの完全なカタログ。上記で扱った他の推論エンジンと並んでmlx-serveのディレクトリ項目も掲載。',
+          '[ローカルLLMソフトウェアディレクトリ 2026](/ja/directory) — この記事が属する、ローカルAIツールの完全なカタログ。上記で扱った他の推論エンジンと並んでmlx-serveのディレクトリ項目も掲載。',
           '[MLX LM 解説](/ja/power-local-llm/mlx-lm-explained) — mlx-serveのネイティブモデルディスパッチの基盤となる、Apple独自のMLXライブラリについての詳しい解説。',
           '[omlx レビュー](/ja/power-local-llm/omlx-review) — 別のApple Silicon特化型ローカル推論ツールで、上記でmlx-serveと直接比較しています。',
           '[Apple MLX vs. NVIDIA CUDA（ローカルLLM向け）](/ja/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — mlx-serveが属するMLXエコシステムを、非Appleハードウェア上のCUDA代替とより広く比較した記事。',
@@ -1193,7 +1193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '由 [David Dalcu](https://github.com/ddalcu) 开发；截至本评测，项目几乎每天都有打标签的发布',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)中 mlx-serve 条目的深度解读——如需快速了解 mlx-serve 与其他数十款本地 AI 工具的对比，请查看该页面。' },
+          { type: 'note', text: '本评测是[本地 LLM 软件目录](/zh/directory)中 mlx-serve 条目的深度解读——如需快速了解 mlx-serve 与其他数十款本地 AI 工具的对比，请查看该页面。' },
         ],
       },
       overview: {
@@ -1330,7 +1330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'mlx-serve-competitors',
         title: 'mlx-serve vs. 其他 MLX 推理工具',
-        content: 'mlx-serve 是围绕苹果 MLX 框架涌现出的多个专注 Apple Silicon 的推理服务器之一。以下是它在这一领域中与其他选项相比的定位——完整目录请参见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)，最直接的跨平台正面对比请参见上文专门的[mlx-serve vs. Ollama 对比](#mlx-serve-vs-ollama)。',
+        content: 'mlx-serve 是围绕苹果 MLX 框架涌现出的多个专注 Apple Silicon 的推理服务器之一。以下是它在这一领域中与其他选项相比的定位——完整目录请参见[本地 LLM 软件目录](/zh/directory)，最直接的跨平台正面对比请参见上文专门的[mlx-serve vs. Ollama 对比](#mlx-serve-vs-ollama)。',
         items: [
           '**[MLX LM](https://github.com/ml-explore/mlx-lm)** —— 苹果自研的 Python 库及命令行工具，用于使用 MLX 运行和微调语言模型；相比 mlx-serve 独立的 Zig 二进制文件，它层级更低、基于 Python。关于 mlx-serve 原生调度所依赖的底层库的更深入介绍，请参见 [MLX LM 详解](/zh/power-local-llm/mlx-lm-explained)。',
           '**[omlx](/zh/power-local-llm/omlx-review)** —— 另一款专注 Apple Silicon 的本地推理选择；其功能集和 API 兼容性与 mlx-serve 的对比请参见专门的评测。',
@@ -1338,7 +1338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[LoRAX](/zh/power-local-llm/lorax-review)** —— 一款多 LoRA 适配器服务框架；如果您的工作流需要从一个基础模型服务多个微调适配器，而非每台服务器单一模型，这一点就与您相关——这并非 mlx-serve 的设计重点。',
           '**[Ollama](https://ollama.com)** —— 一款跨平台的本地模型服务器；它在平台支持范围和原生引擎方面与 mlx-serve 的差异，请参见上文专门的对比部分。',
         ],
-        note: '这并非专注 Apple Silicon 的推理服务器的完整列表——完整且定期更新的目录（包括 mlx-serve 自己的目录条目）请参见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非专注 Apple Silicon 的推理服务器的完整列表——完整且定期更新的目录（包括 mlx-serve 自己的目录条目）请参见[本地 LLM 软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1394,7 +1394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[2026本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地 AI 工具完整目录，包括上文提到的其他推理引擎及 mlx-serve 自己的目录条目。',
+          '[2026本地LLM软件目录](/zh/directory) — 本文所属的本地 AI 工具完整目录，包括上文提到的其他推理引擎及 mlx-serve 自己的目录条目。',
           '[MLX LM 详解](/zh/power-local-llm/mlx-lm-explained) — 深入介绍 mlx-serve 原生模型调度所依赖的苹果自研 MLX 库。',
           '[omlx 评测](/zh/power-local-llm/omlx-review) — 另一款专注 Apple Silicon 的本地推理工具，上文已与 mlx-serve 直接对比。',
           '[Apple MLX vs. NVIDIA CUDA（面向本地 LLM）](/zh/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — 更全面地审视 mlx-serve 所属的 MLX 生态系统，与非苹果硬件上的 CUDA 替代方案对比。',
@@ -1473,7 +1473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desarrollado por [David Dalcu](https://github.com/ddalcu); publica lanzamientos etiquetados casi diarios al momento de esta reseña',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de mlx-serve en el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara mlx-serve con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de mlx-serve en el [Directorio de Software de LLM Local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara mlx-serve con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1610,7 +1610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'mlx-serve-competitors',
         title: 'mlx-serve vs. otras herramientas de inferencia MLX',
-        content: 'mlx-serve es uno de varios servidores de inferencia centrados en Apple Silicon que han surgido en torno al framework MLX de Apple. Así se posiciona frente a otras opciones en este espacio — consulta el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, y la [comparación dedicada mlx-serve vs. Ollama](#mlx-serve-vs-ollama) más arriba para el enfrentamiento multiplataforma más cercano.',
+        content: 'mlx-serve es uno de varios servidores de inferencia centrados en Apple Silicon que han surgido en torno al framework MLX de Apple. Así se posiciona frente a otras opciones en este espacio — consulta el [Directorio de Software de LLM Local](/es/directory) para el catálogo completo, y la [comparación dedicada mlx-serve vs. Ollama](#mlx-serve-vs-ollama) más arriba para el enfrentamiento multiplataforma más cercano.',
         items: [
           '**[MLX LM](https://github.com/ml-explore/mlx-lm)** — la propia biblioteca Python y herramientas de línea de comandos de Apple para ejecutar y afinar modelos de lenguaje con MLX; de nivel más bajo y basada en Python, a diferencia del binario Zig independiente de mlx-serve. Consulta la [explicación de MLX LM](/es/power-local-llm/mlx-lm-explained) para un análisis más profundo de la biblioteca subyacente sobre la que se construye el despacho nativo de mlx-serve.',
           '**[omlx](/es/power-local-llm/omlx-review)** — otra opción de inferencia local centrada en Apple Silicon; consulta la reseña dedicada para ver cómo se comparan su conjunto de funciones y compatibilidad de API con mlx-serve.',
@@ -1618,7 +1618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[LoRAX](/es/power-local-llm/lorax-review)** — un framework de servicio multi-adaptador LoRA; relevante si tu flujo de trabajo necesita servir muchos adaptadores afinados desde un modelo base en lugar de un solo modelo por servidor, lo cual no es el enfoque de diseño de mlx-serve.',
           '**[Ollama](https://ollama.com)** — un servidor de modelos locales multiplataforma; consulta la sección de comparación dedicada anterior para ver cómo difiere de mlx-serve en alcance de plataformas y motor nativo.',
         ],
-        note: 'Esta no es una lista exhaustiva de servidores de inferencia para Apple Silicon — consulta el [Directorio de Software de LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de mlx-serve en el directorio.',
+        note: 'Esta no es una lista exhaustiva de servidores de inferencia para Apple Silicon — consulta el [Directorio de Software de LLM Local](/es/directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de mlx-serve en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1674,7 +1674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectura relacionada',
         items: [
-          '[Directorio de Software de LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de mlx-serve en el directorio junto a otros motores de inferencia cubiertos anteriormente.',
+          '[Directorio de Software de LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de mlx-serve en el directorio junto a otros motores de inferencia cubiertos anteriormente.',
           '[MLX LM explicado](/es/power-local-llm/mlx-lm-explained) — un análisis más profundo de la propia biblioteca MLX de Apple sobre la que se construye el despacho nativo de modelos de mlx-serve.',
           '[Reseña de omlx](/es/power-local-llm/omlx-review) — otra herramienta de inferencia local centrada en Apple Silicon, comparada directamente con mlx-serve anteriormente.',
           '[Apple MLX vs. NVIDIA CUDA para LLMs locales](/es/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — una mirada más amplia al ecosistema MLX del que forma parte mlx-serve, frente a la alternativa CUDA en hardware no Apple.',
@@ -1753,7 +1753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desenvolvido por [David Dalcu](https://github.com/ddalcu); lança versões com tag quase diariamente no momento desta análise',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do mlx-serve no [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para uma comparação rápida entre o mlx-serve e dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do mlx-serve no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para uma comparação rápida entre o mlx-serve e dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1890,7 +1890,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'mlx-serve-competitors',
         title: 'mlx-serve vs. outras ferramentas de inferência MLX',
-        content: 'O mlx-serve é um dos vários servidores de inferência focados em Apple Silicon que surgiram em torno do framework MLX da Apple. Veja como ele se posiciona em relação a outras opções nesse espaço — consulte o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, e a [comparação dedicada mlx-serve vs. Ollama](#mlx-serve-vs-ollama) acima para o confronto multiplataforma mais próximo.',
+        content: 'O mlx-serve é um dos vários servidores de inferência focados em Apple Silicon que surgiram em torno do framework MLX da Apple. Veja como ele se posiciona em relação a outras opções nesse espaço — consulte o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo, e a [comparação dedicada mlx-serve vs. Ollama](#mlx-serve-vs-ollama) acima para o confronto multiplataforma mais próximo.',
         items: [
           '**[MLX LM](https://github.com/ml-explore/mlx-lm)** — a própria biblioteca Python e as ferramentas de linha de comando da Apple para rodar e ajustar modelos de linguagem com MLX; de nível mais baixo e baseada em Python, diferente do binário Zig independente do mlx-serve. Veja a [explicação do MLX LM](/pt/power-local-llm/mlx-lm-explained) para um olhar mais profundo sobre a biblioteca subjacente na qual o despacho nativo do mlx-serve é construído.',
           '**[omlx](/pt/power-local-llm/omlx-review)** — outra opção de inferência local focada em Apple Silicon; veja a análise dedicada para ver como seu conjunto de recursos e compatibilidade de API se comparam ao mlx-serve.',
@@ -1898,7 +1898,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[LoRAX](/pt/power-local-llm/lorax-review)** — um framework de serviço multi-adaptador LoRA; relevante se seu fluxo de trabalho precisa servir muitos adaptadores ajustados a partir de um modelo base em vez de um único modelo por servidor, o que não é o foco de design do mlx-serve.',
           '**[Ollama](https://ollama.com)** — um servidor de modelos locais multiplataforma; veja a seção de comparação dedicada acima para ver como ele difere do mlx-serve em escopo de plataformas e motor nativo.',
         ],
-        note: 'Esta não é uma lista exaustiva de servidores de inferência para Apple Silicon — consulte o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do mlx-serve no diretório.',
+        note: 'Esta não é uma lista exaustiva de servidores de inferência para Apple Silicon — consulte o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do mlx-serve no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1954,7 +1954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do mlx-serve no diretório ao lado de outros motores de inferência cobertos acima.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do mlx-serve no diretório ao lado de outros motores de inferência cobertos acima.',
           '[MLX LM explicado](/pt/power-local-llm/mlx-lm-explained) — um olhar mais profundo sobre a própria biblioteca MLX da Apple na qual o despacho nativo de modelos do mlx-serve é construído.',
           '[Análise do omlx](/pt/power-local-llm/omlx-review) — outra ferramenta de inferência local focada em Apple Silicon, comparada diretamente ao mlx-serve acima.',
           '[Apple MLX vs. NVIDIA CUDA para LLMs locais](/pt/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — um olhar mais amplo sobre o ecossistema MLX do qual o mlx-serve faz parte, em comparação com a alternativa CUDA em hardware não Apple.',
@@ -2033,7 +2033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'طوّره [David Dalcu](https://github.com/ddalcu)؛ يصدر إصدارات موسومة شبه يومية وقت كتابة هذه المراجعة',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الشرح المتعمق المرافق لمدخل mlx-serve في [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمقارنة سريعة بين mlx-serve وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي الشرح المتعمق المرافق لمدخل mlx-serve في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة بين mlx-serve وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2170,7 +2170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'mlx-serve-competitors',
         title: 'mlx-serve مقابل أدوات استدلال MLX الأخرى',
-        content: 'mlx-serve هو أحد عدة خوادم استدلال تركّز على Apple Silicon ظهرت حول إطار عمل MLX من Apple. إليك كيف يتموضع مقارنة بخيارات أخرى في هذا المجال — راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل، و[المقارنة المخصصة بين mlx-serve وOllama](#mlx-serve-vs-ollama) أعلاه للمواجهة الأقرب عبر المنصات.',
+        content: 'mlx-serve هو أحد عدة خوادم استدلال تركّز على Apple Silicon ظهرت حول إطار عمل MLX من Apple. إليك كيف يتموضع مقارنة بخيارات أخرى في هذا المجال — راجع [دليل برمجيات LLM المحلية](/ar/directory) للاطلاع على الكتالوج الكامل، و[المقارنة المخصصة بين mlx-serve وOllama](#mlx-serve-vs-ollama) أعلاه للمواجهة الأقرب عبر المنصات.',
         items: [
           '**[MLX LM](https://github.com/ml-explore/mlx-lm)** — مكتبة Python الخاصة بـ Apple وأدوات سطر الأوامر لتشغيل وضبط نماذج اللغة باستخدام MLX؛ ذات مستوى أدنى وقائمة على Python، على عكس ملف mlx-serve الثنائي المستقل بلغة Zig. راجع [شرح MLX LM](/ar/power-local-llm/mlx-lm-explained) لمزيد من التفصيل حول المكتبة الأساسية التي يُبنى عليها التوجيه الأصلي لـ mlx-serve.',
           '**[omlx](/ar/power-local-llm/omlx-review)** — خيار استدلال محلي آخر يركّز على Apple Silicon؛ راجع المراجعة المخصصة لمعرفة كيف تقارن مجموعة ميزاته وتوافقه مع واجهات البرمجة بـ mlx-serve.',
@@ -2178,7 +2178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[LoRAX](/ar/power-local-llm/lorax-review)** — إطار عمل لتقديم محوّلات LoRA متعددة؛ مهم إذا كان سير عملك يحتاج إلى تقديم العديد من المحوّلات المضبوطة من نموذج أساسي واحد بدلاً من نموذج واحد لكل خادم، وهو ما لا يمثّل نقطة تصميم mlx-serve.',
           '**[Ollama](https://ollama.com)** — خادم نماذج محلي عبر المنصات؛ راجع قسم المقارنة المخصص أعلاه لمعرفة كيف يختلف عن mlx-serve في نطاق دعم المنصات والمحرك الأصلي.',
         ],
-        note: 'هذه ليست قائمة شاملة بخوادم استدلال Apple Silicon — راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك مدخل mlx-serve الخاص في الدليل.',
+        note: 'هذه ليست قائمة شاملة بخوادم استدلال Apple Silicon — راجع [دليل برمجيات LLM المحلية](/ar/directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك مدخل mlx-serve الخاص في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2234,7 +2234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل mlx-serve في الدليل إلى جانب محركات الاستدلال الأخرى المذكورة أعلاه.',
+          '[دليل برمجيات LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل mlx-serve في الدليل إلى جانب محركات الاستدلال الأخرى المذكورة أعلاه.',
           '[شرح MLX LM](/ar/power-local-llm/mlx-lm-explained) — نظرة أكثر تعمقًا على مكتبة MLX الخاصة بشركة Apple التي يُبنى عليها توجيه النماذج الأصلي لـ mlx-serve.',
           '[مراجعة omlx](/ar/power-local-llm/omlx-review) — أداة استدلال محلية أخرى تركّز على Apple Silicon، تمت مقارنتها مباشرة بـ mlx-serve أعلاه.',
           '[Apple MLX مقابل NVIDIA CUDA لنماذج LLM المحلية](/ar/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — نظرة أوسع على منظومة MLX التي ينتمي إليها mlx-serve، مقارنة ببديل CUDA على عتاد غير تابع لشركة Apple.',
@@ -2313,7 +2313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[David Dalcu](https://github.com/ddalcu)가 개발했으며, 이 리뷰 작성 시점 기준 거의 매일 태그 릴리스가 이루어지고 있습니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 수록된 mlx-serve 항목을 심층적으로 다룬 글입니다 — mlx-serve가 수십 개의 다른 로컬 AI 도구와 비교해 어떤 위치에 있는지 한눈에 보려면 해당 페이지를 참고하십시오.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 수록된 mlx-serve 항목을 심층적으로 다룬 글입니다 — mlx-serve가 수십 개의 다른 로컬 AI 도구와 비교해 어떤 위치에 있는지 한눈에 보려면 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {
@@ -2450,7 +2450,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'mlx-serve-competitors',
         title: 'mlx-serve vs. 다른 MLX 추론 도구',
-        content: 'mlx-serve는 Apple의 MLX 프레임워크를 중심으로 등장한 여러 Apple Silicon 중심 추론 서버 중 하나입니다. 이 분야의 다른 옵션들과 비교했을 때 mlx-serve가 어디에 위치하는지 살펴보겠습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를, 가장 가까운 크로스 플랫폼 정면 비교는 위의 전용 [mlx-serve vs. Ollama 비교](#mlx-serve-vs-ollama)를 참고하십시오.',
+        content: 'mlx-serve는 Apple의 MLX 프레임워크를 중심으로 등장한 여러 Apple Silicon 중심 추론 서버 중 하나입니다. 이 분야의 다른 옵션들과 비교했을 때 mlx-serve가 어디에 위치하는지 살펴보겠습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를, 가장 가까운 크로스 플랫폼 정면 비교는 위의 전용 [mlx-serve vs. Ollama 비교](#mlx-serve-vs-ollama)를 참고하십시오.',
         items: [
           '**[MLX LM](https://github.com/ml-explore/mlx-lm)** — MLX를 사용하여 언어 모델을 실행하고 파인튜닝하기 위한 Apple 자체 Python 라이브러리 및 명령줄 도구로, mlx-serve의 독립형 Zig 바이너리와 달리 더 저수준이며 Python 기반입니다. mlx-serve의 네이티브 디스패치가 기반으로 하는 기본 라이브러리에 대한 더 자세한 설명은 [MLX LM 설명](/ko/power-local-llm/mlx-lm-explained)을 참고하십시오.',
           '**[omlx](/ko/power-local-llm/omlx-review)** — Apple Silicon 중심의 또 다른 로컬 추론 옵션입니다. 기능 구성과 API 호환성이 mlx-serve와 어떻게 비교되는지는 전용 리뷰를 참고하십시오.',
@@ -2458,7 +2458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[LoRAX](/ko/power-local-llm/lorax-review)** — 다중 LoRA 어댑터 서빙 프레임워크입니다. 워크플로우가 서버당 단일 모델이 아니라 하나의 기본 모델에서 여러 파인튜닝된 어댑터를 서빙해야 하는 경우 관련이 있으며, 이는 mlx-serve의 설계 초점이 아닙니다.',
           '**[Ollama](https://ollama.com)** — 크로스 플랫폼 로컬 모델 서버입니다. 플랫폼 범위와 네이티브 엔진 측면에서 mlx-serve와 어떻게 다른지는 위의 전용 비교 섹션을 참고하십시오.',
         ],
-        note: '이는 Apple Silicon 추론 서버의 총망라한 목록이 아닙니다 — mlx-serve 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.',
+        note: '이는 Apple Silicon 추론 서버의 총망라한 목록이 아닙니다 — mlx-serve 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2514,7 +2514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 추론 엔진과 함께 mlx-serve의 디렉터리 항목도 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 추론 엔진과 함께 mlx-serve의 디렉터리 항목도 포함합니다.',
           '[MLX LM 설명](/ko/power-local-llm/mlx-lm-explained) — mlx-serve의 네이티브 모델 디스패치가 기반으로 하는 Apple 자체 MLX 라이브러리에 대한 더 자세한 설명.',
           '[omlx 리뷰](/ko/power-local-llm/omlx-review) — Apple Silicon 중심의 또 다른 로컬 추론 도구로, 위에서 mlx-serve와 직접 비교했습니다.',
           '[Apple MLX vs. NVIDIA CUDA(로컬 LLM용)](/ko/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — mlx-serve가 속한 MLX 생태계를 비Apple 하드웨어의 CUDA 대안과 더 폭넓게 비교한 글.',

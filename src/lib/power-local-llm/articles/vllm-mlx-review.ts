@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Over 1,580 GitHub stars as of this review',
         ],
         callouts: [
-          { type: 'note', text: 'This review is based on the vllm-mlx GitHub repository, its README, its documentation site, and its PyPI package listing. It does not repeat vllm-mlx\'s own published throughput benchmarks as independently verified facts — those figures come from the project\'s own README and should be treated as vendor-reported, not PromptQuorum-tested. This review is the deep-dive companion to vllm-mlx\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).' },
+          { type: 'note', text: 'This review is based on the vllm-mlx GitHub repository, its README, its documentation site, and its PyPI package listing. It does not repeat vllm-mlx\'s own published throughput benchmarks as independently verified facts — those figures come from the project\'s own README and should be treated as vendor-reported, not PromptQuorum-tested. This review is the deep-dive companion to vllm-mlx\'s entry in the [Local LLM Software Directory](/directory).' },
         ],
       },
       overview: {
@@ -270,7 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[oMLX Review](/power-local-llm/omlx-review) — another Apple Silicon inference server, with SSD-backed prompt caching.',
           '[Rapid-MLX Review](/power-local-llm/rapid-mlx-review) — a native MLX inference server focused on serving speed.',
           '[mlxcel Review](/power-local-llm/mlxcel-review) — a Rust-native MLX runtime for LLMs, VLMs, embeddings, and audio.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -345,7 +345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Über 1.580 GitHub-Stars zum Zeitpunkt dieses Tests',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test basiert auf dem GitHub-Repository von vllm-mlx, dessen README, der Dokumentations-Website und dem PyPI-Paketeintrag. Die vom Projekt selbst veröffentlichten Durchsatz-Benchmarks werden nicht als unabhängig verifizierte Fakten wiedergegeben — diese Werte stammen aus dem README des Projekts und sind als herstellerseitig gemeldet zu behandeln, nicht als von PromptQuorum getestet. Dieser Test ist der ausführliche Begleitartikel zum vllm-mlx-Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).' },
+          { type: 'note', text: 'Dieser Test basiert auf dem GitHub-Repository von vllm-mlx, dessen README, der Dokumentations-Website und dem PyPI-Paketeintrag. Die vom Projekt selbst veröffentlichten Durchsatz-Benchmarks werden nicht als unabhängig verifizierte Fakten wiedergegeben — diese Werte stammen aus dem README des Projekts und sind als herstellerseitig gemeldet zu behandeln, nicht als von PromptQuorum getestet. Dieser Test ist der ausführliche Begleitartikel zum vllm-mlx-Eintrag im [Local LLM Software Directory](/de/directory).' },
         ],
       },
       overview: {
@@ -543,7 +543,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[oMLX Review](/de/power-local-llm/omlx-review) — ein weiterer Apple-Silicon-Inferenzserver mit SSD-gestütztem Prompt-Caching.',
           '[Rapid-MLX Review](/de/power-local-llm/rapid-mlx-review) — ein nativer MLX-Inferenzserver mit Fokus auf Serving-Geschwindigkeit.',
           '[mlxcel Review](/de/power-local-llm/mlxcel-review) — ein Rust-natives MLX-Runtime für LLMs, VLMs, Embeddings und Audio.',
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -618,7 +618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Plus de 1 580 étoiles GitHub au moment de cet avis',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis s\'appuie sur le dépôt GitHub de vllm-mlx, son README, son site de documentation et sa fiche PyPI. Il ne reprend pas les benchmarks de débit publiés par vllm-mlx comme des faits vérifiés indépendamment — ces chiffres proviennent du README du projet et doivent être considérés comme déclarés par l\'éditeur, non testés par PromptQuorum. Cet avis complète l\'entrée de vllm-mlx dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory).' },
+          { type: 'note', text: 'Cet avis s\'appuie sur le dépôt GitHub de vllm-mlx, son README, son site de documentation et sa fiche PyPI. Il ne reprend pas les benchmarks de débit publiés par vllm-mlx comme des faits vérifiés indépendamment — ces chiffres proviennent du README du projet et doivent être considérés comme déclarés par l\'éditeur, non testés par PromptQuorum. Cet avis complète l\'entrée de vllm-mlx dans le [Local LLM Software Directory](/fr/directory).' },
         ],
       },
       overview: {
@@ -816,7 +816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Avis oMLX](/fr/power-local-llm/omlx-review) — un autre serveur d\'inférence Apple Silicon, avec cache de prompts sur SSD.',
           '[Avis Rapid-MLX](/fr/power-local-llm/rapid-mlx-review) — un serveur d\'inférence MLX natif axé sur la vitesse de serving.',
           '[Avis mlxcel](/fr/power-local-llm/mlxcel-review) — un runtime MLX natif Rust pour LLM, VLM, embeddings et audio.',
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
         ],
       },
     },
@@ -891,7 +891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'このレビュー時点でGitHubスターは1,580を超える',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、vllm-mlxのGitHubリポジトリ、README、ドキュメントサイト、PyPIパッケージ掲載情報に基づいています。vllm-mlx自身が公表しているスループットベンチマークについては、独立検証済みの事実としては扱っていません——これらの数値はプロジェクト自身のREADMEに由来するもので、PromptQuorumがテストした結果ではなく、開発者側の報告値として扱うべきです。このレビューは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)内のvllm-mlxのエントリーを補足する詳細版です。' },
+          { type: 'note', text: 'このレビューは、vllm-mlxのGitHubリポジトリ、README、ドキュメントサイト、PyPIパッケージ掲載情報に基づいています。vllm-mlx自身が公表しているスループットベンチマークについては、独立検証済みの事実としては扱っていません——これらの数値はプロジェクト自身のREADMEに由来するもので、PromptQuorumがテストした結果ではなく、開発者側の報告値として扱うべきです。このレビューは、[Local LLM Software Directory](/ja/directory)内のvllm-mlxのエントリーを補足する詳細版です。' },
         ],
       },
       overview: {
@@ -1089,7 +1089,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[oMLXレビュー](/ja/power-local-llm/omlx-review) — SSDバックのプロンプトキャッシュを備えた、もう一つのApple Silicon推論サーバー。',
           '[Rapid-MLXレビュー](/ja/power-local-llm/rapid-mlx-review) — サービング速度に重点を置いたネイティブMLX推論サーバー。',
           '[mlxcelレビュー](/ja/power-local-llm/mlxcel-review) — LLM、VLM、埋め込み、音声向けのRustネイティブMLXランタイム。',
-          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの総合カタログ。',
+          '[Local LLM Software Directory 2026](/ja/directory) — この記事が属する、ローカルAIツールの総合カタログ。',
         ],
       },
     },
@@ -1164,7 +1164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至本评测时，GitHub星标数已超过1,580',
         ],
         callouts: [
-          { type: 'note', text: '本评测基于vllm-mlx的GitHub仓库、README、文档网站及PyPI包信息。评测未将vllm-mlx自行发布的吞吐量基准数据作为独立验证的事实呈现——这些数字来自项目自身的README，应视为厂商自报数据，而非PromptQuorum实测结果。本评测是[Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory)中vllm-mlx条目的深度配套文章。' },
+          { type: 'note', text: '本评测基于vllm-mlx的GitHub仓库、README、文档网站及PyPI包信息。评测未将vllm-mlx自行发布的吞吐量基准数据作为独立验证的事实呈现——这些数字来自项目自身的README，应视为厂商自报数据，而非PromptQuorum实测结果。本评测是[Local LLM Software Directory](/zh/directory)中vllm-mlx条目的深度配套文章。' },
         ],
       },
       overview: {
@@ -1362,7 +1362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[oMLX评测](/zh/power-local-llm/omlx-review) — 另一款具备SSD支持提示缓存的Apple Silicon推理服务器。',
           '[Rapid-MLX评测](/zh/power-local-llm/rapid-mlx-review) — 一款专注于serving速度的原生MLX推理服务器。',
           '[mlxcel评测](/zh/power-local-llm/mlxcel-review) — 一款面向LLM、VLM、嵌入和音频的Rust原生MLX运行时。',
-          '[Local LLM Software Directory 2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录。',
+          '[Local LLM Software Directory 2026](/zh/directory) — 本文所属的本地AI工具完整目录。',
         ],
       },
     },
@@ -1437,7 +1437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Más de 1.580 estrellas en GitHub al momento de esta reseña',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña se basa en el repositorio de GitHub de vllm-mlx, su README, su sitio de documentación y su ficha en PyPI. No presenta los benchmarks de rendimiento publicados por el propio vllm-mlx como hechos verificados de forma independiente — esas cifras provienen del README del proyecto y deben tratarse como reportadas por el desarrollador, no probadas por PromptQuorum. Esta reseña es el complemento en profundidad de la entrada de vllm-mlx en el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory).' },
+          { type: 'note', text: 'Esta reseña se basa en el repositorio de GitHub de vllm-mlx, su README, su sitio de documentación y su ficha en PyPI. No presenta los benchmarks de rendimiento publicados por el propio vllm-mlx como hechos verificados de forma independiente — esas cifras provienen del README del proyecto y deben tratarse como reportadas por el desarrollador, no probadas por PromptQuorum. Esta reseña es el complemento en profundidad de la entrada de vllm-mlx en el [Local LLM Software Directory](/es/directory).' },
         ],
       },
       overview: {
@@ -1635,7 +1635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de oMLX](/es/power-local-llm/omlx-review) — otro servidor de inferencia para Apple Silicon, con caché de prompts respaldada en SSD.',
           '[Reseña de Rapid-MLX](/es/power-local-llm/rapid-mlx-review) — un servidor de inferencia MLX nativo centrado en la velocidad de serving.',
           '[Reseña de mlxcel](/es/power-local-llm/mlxcel-review) — un runtime MLX nativo en Rust para LLM, VLM, embeddings y audio.',
-          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Local LLM Software Directory 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1710,7 +1710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mais de 1.580 estrelas no GitHub no momento desta análise',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é baseada no repositório GitHub do vllm-mlx, seu README, seu site de documentação e sua página no PyPI. Ela não trata os benchmarks de throughput publicados pelo próprio vllm-mlx como fatos verificados de forma independente — esses números vêm do README do projeto e devem ser tratados como relatados pelo próprio desenvolvedor, não testados pela PromptQuorum. Esta análise é o complemento aprofundado da entrada do vllm-mlx no [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory).' },
+          { type: 'note', text: 'Esta análise é baseada no repositório GitHub do vllm-mlx, seu README, seu site de documentação e sua página no PyPI. Ela não trata os benchmarks de throughput publicados pelo próprio vllm-mlx como fatos verificados de forma independente — esses números vêm do README do projeto e devem ser tratados como relatados pelo próprio desenvolvedor, não testados pela PromptQuorum. Esta análise é o complemento aprofundado da entrada do vllm-mlx no [Local LLM Software Directory](/pt/directory).' },
         ],
       },
       overview: {
@@ -1908,7 +1908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do oMLX](/pt/power-local-llm/omlx-review) — outro servidor de inferência para Apple Silicon, com cache de prompts apoiado em SSD.',
           '[Análise do Rapid-MLX](/pt/power-local-llm/rapid-mlx-review) — um servidor de inferência MLX nativo focado em velocidade de serving.',
           '[Análise do mlxcel](/pt/power-local-llm/mlxcel-review) — um runtime MLX nativo em Rust para LLMs, VLMs, embeddings e áudio.',
-          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Local LLM Software Directory 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -1983,7 +1983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أكثر من 1,580 نجمة على GitHub حتى وقت كتابة هذه المراجعة',
         ],
         callouts: [
-          { type: 'note', text: 'تستند هذه المراجعة إلى مستودع vllm-mlx على GitHub وملف README الخاص به وموقعه التوثيقي وصفحته على PyPI. ولا تُقدَّم فيها معايير الأداء المنشورة من قِبل vllm-mlx نفسه على أنها حقائق تم التحقق منها بشكل مستقل — فهذه الأرقام مأخوذة من ملف README الخاص بالمشروع، ويجب التعامل معها كأرقام أبلغ عنها المطور، وليست نتائج اختبرتها PromptQuorum. تُعد هذه المراجعة المكمّل المعمّق لإدخال vllm-mlx في [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory).' },
+          { type: 'note', text: 'تستند هذه المراجعة إلى مستودع vllm-mlx على GitHub وملف README الخاص به وموقعه التوثيقي وصفحته على PyPI. ولا تُقدَّم فيها معايير الأداء المنشورة من قِبل vllm-mlx نفسه على أنها حقائق تم التحقق منها بشكل مستقل — فهذه الأرقام مأخوذة من ملف README الخاص بالمشروع، ويجب التعامل معها كأرقام أبلغ عنها المطور، وليست نتائج اختبرتها PromptQuorum. تُعد هذه المراجعة المكمّل المعمّق لإدخال vllm-mlx في [دليل برمجيات LLM المحلية](/ar/directory).' },
         ],
       },
       overview: {
@@ -2181,7 +2181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة oMLX](/ar/power-local-llm/omlx-review) — خادم استدلال آخر على Apple Silicon، مزوّد بتخزين مؤقت للمطالبات مدعوم بـSSD.',
           '[مراجعة Rapid-MLX](/ar/power-local-llm/rapid-mlx-review) — خادم استدلال MLX أصلي يركّز على سرعة serving.',
           '[مراجعة mlxcel](/ar/power-local-llm/mlxcel-review) — بيئة تشغيل MLX أصلية بلغة Rust لنماذج LLM وVLM والتضمينات والصوت.',
-          '[Local LLM Software Directory 2026](/ar/power-local-llm/local-llm-software-directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
+          '[Local LLM Software Directory 2026](/ar/directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
         ],
       },
     },
@@ -2256,7 +2256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이 리뷰 작성 시점 기준 GitHub 스타 1,580개 이상 보유',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 vllm-mlx의 GitHub 저장소, README, 문서 사이트, PyPI 패키지 정보를 바탕으로 작성되었습니다. vllm-mlx가 자체적으로 공개한 처리량 벤치마크는 독립적으로 검증된 사실로 다루지 않습니다 — 해당 수치는 프로젝트 자체 README에서 나온 것으로, PromptQuorum이 직접 테스트한 결과가 아니라 개발자가 보고한 수치로 취급해야 합니다. 이 리뷰는 [Local LLM Software Directory](/ko/power-local-llm/local-llm-software-directory)에 등재된 vllm-mlx 항목의 심화 버전입니다.' },
+          { type: 'note', text: '이 리뷰는 vllm-mlx의 GitHub 저장소, README, 문서 사이트, PyPI 패키지 정보를 바탕으로 작성되었습니다. vllm-mlx가 자체적으로 공개한 처리량 벤치마크는 독립적으로 검증된 사실로 다루지 않습니다 — 해당 수치는 프로젝트 자체 README에서 나온 것으로, PromptQuorum이 직접 테스트한 결과가 아니라 개발자가 보고한 수치로 취급해야 합니다. 이 리뷰는 [Local LLM Software Directory](/ko/directory)에 등재된 vllm-mlx 항목의 심화 버전입니다.' },
         ],
       },
       overview: {
@@ -2454,7 +2454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[oMLX 리뷰](/ko/power-local-llm/omlx-review) — SSD 기반 프롬프트 캐싱을 갖춘 또 다른 Apple Silicon 추론 서버입니다.',
           '[Rapid-MLX 리뷰](/ko/power-local-llm/rapid-mlx-review) — 서빙 속도에 중점을 둔 네이티브 MLX 추론 서버입니다.',
           '[mlxcel 리뷰](/ko/power-local-llm/mlxcel-review) — LLM, VLM, 임베딩, 오디오를 위한 Rust 네이티브 MLX 런타임입니다.',
-          '[Local LLM Software Directory 2026](/ko/power-local-llm/local-llm-software-directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그입니다.',
+          '[Local LLM Software Directory 2026](/ko/directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그입니다.',
         ],
       },
     },

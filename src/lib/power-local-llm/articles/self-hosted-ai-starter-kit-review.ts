@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Curated and maintained by [n8n](https://n8n.io), the low-code workflow automation company behind the [n8n platform itself](/power-local-llm/n8n-review)',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to the Self-hosted AI Starter Kit\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to the Self-hosted AI Starter Kit\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -210,14 +210,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'starter-kit-competitors',
         title: 'Starter Kit vs. Other Local AI Workflow Tools',
-        content: 'The Self-hosted AI Starter Kit sits in the workflow-automation and RAG-framework space alongside several other self-hostable options. Here is how it compares to nearby tools — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, and the dedicated [Starter Kit vs. plain n8n comparison](#starter-kit-vs-n8n) above for the closest head-to-head.',
+        content: 'The Self-hosted AI Starter Kit sits in the workflow-automation and RAG-framework space alongside several other self-hostable options. Here is how it compares to nearby tools — see the [Local LLM Software Directory](/directory) for the full catalog, and the dedicated [Starter Kit vs. plain n8n comparison](#starter-kit-vs-n8n) above for the closest head-to-head.',
         items: [
           '**[n8n](https://n8n.io)** — the workflow-automation platform this kit is built on top of; see the dedicated comparison section above and the full [n8n review](/power-local-llm/n8n-review) for its own standalone install and licensing detail.',
           '**[LangChain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)** — a self-hosted RAG and knowledge-base application with its own built-in UI, rather than a general-purpose workflow-automation canvas; see the [LangChain-Chatchat review](/power-local-llm/langchain-chatchat-review) if a dedicated document-chat app fits your need better than a workflow builder.',
           '**[RAGFlow](https://github.com/infiniflow/ragflow)** — a deep document-understanding RAG engine focused on parsing complex documents (tables, layouts) more thoroughly than a general workflow tool; see the [RAGFlow review](/power-local-llm/ragflow-document-understanding-rag-review).',
           '**[Haystack](https://haystack.deepset.ai)** — a Python-first RAG framework for developers who want to write pipeline code directly rather than use a visual workflow builder; see the [Haystack review](/power-local-llm/haystack-deepset-rag-framework-review).',
         ],
-        note: 'This is not an exhaustive list of local AI workflow and RAG tools — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including this starter kit\'s own directory entry.',
+        note: 'This is not an exhaustive list of local AI workflow and RAG tools — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including this starter kit\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -274,7 +274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including this starter kit\'s directory entry alongside other RAG and workflow tools covered above.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including this starter kit\'s directory entry alongside other RAG and workflow tools covered above.',
           '[n8n Review](/power-local-llm/n8n-review) — a full review of the workflow-automation platform this starter kit is built around, covered in the dedicated comparison section above.',
           '[RAGFlow Review](/power-local-llm/ragflow-document-understanding-rag-review) — a purpose-built RAG engine for deep document understanding, if you need more than a workflow-automation canvas.',
           '[Local RAG on Your PDFs, Step by Step](/power-local-llm/local-rag-on-your-pdfs-step-by-step) — a hands-on RAG walkthrough that pairs well with the local vector-database setup this kit provides.',
@@ -352,7 +352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kuratiert und gepflegt von [n8n](https://n8n.io), dem Low-Code-Workflow-Automatisierungsunternehmen hinter der [n8n-Plattform selbst](/power-local-llm/n8n-review)',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test ist das vertiefende Gegenstück zum Eintrag des Self-hosted AI Starter Kits im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — dort finden Sie den Vergleich auf einen Blick mit Dutzenden anderen lokalen KI-Tools.' },
+          { type: 'note', text: 'Dieser Test ist das vertiefende Gegenstück zum Eintrag des Self-hosted AI Starter Kits im [Local LLM Software Directory](/directory) — dort finden Sie den Vergleich auf einen Blick mit Dutzenden anderen lokalen KI-Tools.' },
         ],
       },
       overview: {
@@ -490,14 +490,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'starter-kit-competitors',
         title: 'Starter Kit vs. andere lokale KI-Workflow-Tools',
-        content: 'Das Self-hosted AI Starter Kit ist im Bereich Workflow-Automatisierung und RAG-Frameworks neben mehreren anderen selbst hostbaren Optionen angesiedelt. So schneidet es im Vergleich zu verwandten Tools ab — den vollständigen Katalog liefert das [Local LLM Software Directory](/power-local-llm/local-llm-software-directory), und den direktesten Vergleich der [dedizierte Starter-Kit-vs.-reines-n8n-Vergleich](#starter-kit-vs-n8n) oben.',
+        content: 'Das Self-hosted AI Starter Kit ist im Bereich Workflow-Automatisierung und RAG-Frameworks neben mehreren anderen selbst hostbaren Optionen angesiedelt. So schneidet es im Vergleich zu verwandten Tools ab — den vollständigen Katalog liefert das [Local LLM Software Directory](/directory), und den direktesten Vergleich der [dedizierte Starter-Kit-vs.-reines-n8n-Vergleich](#starter-kit-vs-n8n) oben.',
         items: [
           '**[n8n](https://n8n.io)** — die Workflow-Automatisierungsplattform, auf der dieses Kit aufbaut; siehe den dedizierten Vergleichsabschnitt oben sowie den vollständigen [n8n-Test](/power-local-llm/n8n-review) für eigene Installations- und Lizenzdetails.',
           '**[LangChain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)** — eine Self-Hosted RAG- und Wissensdatenbank-Anwendung mit eigener integrierter Oberfläche statt einer universellen Workflow-Automatisierungs-Canvas; siehe den [LangChain-Chatchat-Test](/power-local-llm/langchain-chatchat-review), falls eine dedizierte Dokument-Chat-App besser passt als ein Workflow-Builder.',
           '**[RAGFlow](https://github.com/infiniflow/ragflow)** — eine RAG-Engine für tiefes Dokumentenverständnis, fokussiert auf das gründlichere Parsen komplexer Dokumente (Tabellen, Layouts) als ein allgemeines Workflow-Tool; siehe den [RAGFlow-Test](/power-local-llm/ragflow-document-understanding-rag-review).',
           '**[Haystack](https://haystack.deepset.ai)** — ein Python-first-RAG-Framework für Entwickler, die Pipeline-Code direkt schreiben möchten, statt einen visuellen Workflow-Builder zu nutzen; siehe den [Haystack-Test](/power-local-llm/haystack-deepset-rag-framework-review).',
         ],
-        note: 'Dies ist keine erschöpfende Liste lokaler KI-Workflow- und RAG-Tools — den vollständigen, regelmäßig aktualisierten Katalog inklusive des Eintrags dieses Starter Kits liefert das [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine erschöpfende Liste lokaler KI-Workflow- und RAG-Tools — den vollständigen, regelmäßig aktualisierten Katalog inklusive des Eintrags dieses Starter Kits liefert das [Local LLM Software Directory](/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -554,7 +554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags dieses Starter Kits neben anderen oben behandelten RAG- und Workflow-Tools.',
+          '[Local LLM Software Directory 2026](/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags dieses Starter Kits neben anderen oben behandelten RAG- und Workflow-Tools.',
           '[n8n-Test](/power-local-llm/n8n-review) — ein vollständiger Test der Workflow-Automatisierungsplattform, um die dieses Starter Kit gebaut ist, behandelt im dedizierten Vergleichsabschnitt oben.',
           '[RAGFlow-Test](/power-local-llm/ragflow-document-understanding-rag-review) — eine zweckgebundene RAG-Engine für tiefes Dokumentenverständnis, falls mehr als eine Workflow-Automatisierungs-Canvas benötigt wird.',
           '[Lokales RAG auf Ihren PDFs, Schritt für Schritt](/power-local-llm/local-rag-on-your-pdfs-step-by-step) — eine praktische RAG-Anleitung, die gut zum lokalen Vektordatenbank-Setup dieses Kits passt.',
@@ -632,7 +632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Conçu et maintenu par [n8n](https://n8n.io), l\'entreprise d\'automatisation de workflows low-code derrière la [plateforme n8n elle-même](/power-local-llm/n8n-review)',
         ],
         callouts: [
-          { type: 'note', text: 'Ce test est le complément approfondi de l\'entrée du Self-hosted AI Starter Kit dans le [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — consultez cette page pour un comparatif rapide avec des dizaines d\'autres outils IA locaux.' },
+          { type: 'note', text: 'Ce test est le complément approfondi de l\'entrée du Self-hosted AI Starter Kit dans le [Local LLM Software Directory](/directory) — consultez cette page pour un comparatif rapide avec des dizaines d\'autres outils IA locaux.' },
         ],
       },
       overview: {
@@ -770,14 +770,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'starter-kit-competitors',
         title: 'Starter Kit vs. autres outils de workflow IA local',
-        content: 'Le Self-hosted AI Starter Kit se situe dans l\'espace de l\'automatisation de workflows et des frameworks RAG, aux côtés de plusieurs autres options auto-hébergeables. Voici comment il se compare aux outils voisins — consultez le [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) pour le catalogue complet, et le [comparatif dédié Starter Kit vs. n8n seul](#starter-kit-vs-n8n) ci-dessus pour le face-à-face le plus proche.',
+        content: 'Le Self-hosted AI Starter Kit se situe dans l\'espace de l\'automatisation de workflows et des frameworks RAG, aux côtés de plusieurs autres options auto-hébergeables. Voici comment il se compare aux outils voisins — consultez le [Local LLM Software Directory](/directory) pour le catalogue complet, et le [comparatif dédié Starter Kit vs. n8n seul](#starter-kit-vs-n8n) ci-dessus pour le face-à-face le plus proche.',
         items: [
           '**[n8n](https://n8n.io)** — la plateforme d\'automatisation de workflows sur laquelle ce kit est construit ; voir le comparatif dédié ci-dessus et le [test n8n](/power-local-llm/n8n-review) complet pour ses propres modalités d\'installation et de licence.',
           '**[LangChain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)** — une application RAG et base de connaissances auto-hébergée dotée de sa propre interface intégrée, plutôt qu\'une canvas d\'automatisation de workflows généraliste ; voir le [test LangChain-Chatchat](/power-local-llm/langchain-chatchat-review) si une application de chat documentaire dédiée convient mieux qu\'un constructeur de workflows.',
           '**[RAGFlow](https://github.com/infiniflow/ragflow)** — un moteur RAG de compréhension documentaire approfondie, axé sur l\'analyse de documents complexes (tableaux, mises en page) plus poussée qu\'un outil de workflow généraliste ; voir le [test RAGFlow](/power-local-llm/ragflow-document-understanding-rag-review).',
           '**[Haystack](https://haystack.deepset.ai)** — un framework RAG Python-first pour les développeurs qui préfèrent écrire directement le code du pipeline plutôt qu\'utiliser un constructeur de workflows visuel ; voir le [test Haystack](/power-local-llm/haystack-deepset-rag-framework-review).',
         ],
-        note: 'Cette liste n\'est pas exhaustive des outils IA locaux et RAG — consultez le [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée propre de ce starter kit.',
+        note: 'Cette liste n\'est pas exhaustive des outils IA locaux et RAG — consultez le [Local LLM Software Directory](/directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée propre de ce starter kit.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -834,7 +834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'À lire aussi',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — le catalogue complet des outils IA locaux auquel appartient cet article, incluant l\'entrée de ce starter kit aux côtés des autres outils RAG et de workflow évoqués ci-dessus.',
+          '[Local LLM Software Directory 2026](/directory) — le catalogue complet des outils IA locaux auquel appartient cet article, incluant l\'entrée de ce starter kit aux côtés des autres outils RAG et de workflow évoqués ci-dessus.',
           '[Test n8n](/power-local-llm/n8n-review) — un test complet de la plateforme d\'automatisation de workflows autour de laquelle ce starter kit est construit, couvert dans le comparatif dédié ci-dessus.',
           '[Test RAGFlow](/power-local-llm/ragflow-document-understanding-rag-review) — un moteur RAG dédié à la compréhension documentaire approfondie, si vous avez besoin de plus qu\'une canvas d\'automatisation de workflows.',
           '[RAG local sur vos PDF, étape par étape](/power-local-llm/local-rag-on-your-pdfs-step-by-step) — un guide pratique de RAG qui complète bien la configuration de base de données vectorielle locale offerte par ce kit.',
@@ -912,7 +912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Creado y mantenido por [n8n](https://n8n.io), la empresa de automatización de workflows low-code detrás de la [propia plataforma n8n](/power-local-llm/n8n-review)',
         ],
         callouts: [
-          { type: 'note', text: 'Este análisis es el complemento en profundidad de la entrada del Self-hosted AI Starter Kit en el [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — consulta esa página para verlo comparado de un vistazo con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Este análisis es el complemento en profundidad de la entrada del Self-hosted AI Starter Kit en el [Local LLM Software Directory](/directory) — consulta esa página para verlo comparado de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1050,14 +1050,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'starter-kit-competitors',
         title: 'Starter Kit frente a otras herramientas de workflow de IA local',
-        content: 'El Self-hosted AI Starter Kit se ubica en el espacio de la automatización de workflows y los frameworks RAG, junto a varias otras opciones autoalojables. Así se compara con herramientas cercanas — consulta el [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) para el catálogo completo, y la [comparativa dedicada Starter Kit vs. n8n solo](#starter-kit-vs-n8n) más arriba para el enfrentamiento más directo.',
+        content: 'El Self-hosted AI Starter Kit se ubica en el espacio de la automatización de workflows y los frameworks RAG, junto a varias otras opciones autoalojables. Así se compara con herramientas cercanas — consulta el [Local LLM Software Directory](/directory) para el catálogo completo, y la [comparativa dedicada Starter Kit vs. n8n solo](#starter-kit-vs-n8n) más arriba para el enfrentamiento más directo.',
         items: [
           '**[n8n](https://n8n.io)** — la plataforma de automatización de workflows sobre la que se construye este kit; consulta la sección de comparación dedicada arriba y el [análisis completo de n8n](/power-local-llm/n8n-review) para sus propios detalles de instalación y licencia.',
           '**[LangChain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)** — una aplicación de RAG y base de conocimiento autoalojada con su propia interfaz integrada, en lugar de un lienzo de automatización de workflows de propósito general; consulta el [análisis de LangChain-Chatchat](/power-local-llm/langchain-chatchat-review) si te encaja mejor una app dedicada de chat con documentos que un constructor de workflows.',
           '**[RAGFlow](https://github.com/infiniflow/ragflow)** — un motor RAG de comprensión documental profunda, centrado en analizar documentos complejos (tablas, maquetación) con más detalle que una herramienta de workflow genérica; consulta el [análisis de RAGFlow](/power-local-llm/ragflow-document-understanding-rag-review).',
           '**[Haystack](https://haystack.deepset.ai)** — un framework RAG orientado a Python para desarrolladores que prefieren escribir directamente el código del pipeline en lugar de usar un constructor de workflows visual; consulta el [análisis de Haystack](/power-local-llm/haystack-deepset-rag-framework-review).',
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas de IA local y RAG — consulta el [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado con regularidad, incluida la propia entrada de este starter kit.',
+        note: 'Esta no es una lista exhaustiva de herramientas de IA local y RAG — consulta el [Local LLM Software Directory](/directory) para el catálogo completo y actualizado con regularidad, incluida la propia entrada de este starter kit.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1114,7 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de este starter kit junto a otras herramientas RAG y de workflow mencionadas arriba.',
+          '[Local LLM Software Directory 2026](/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de este starter kit junto a otras herramientas RAG y de workflow mencionadas arriba.',
           '[Análisis de n8n](/power-local-llm/n8n-review) — un análisis completo de la plataforma de automatización de workflows sobre la que se construye este starter kit, cubierto en la sección de comparación dedicada arriba.',
           '[Análisis de RAGFlow](/power-local-llm/ragflow-document-understanding-rag-review) — un motor RAG dedicado a la comprensión profunda de documentos, si necesitas más que un lienzo de automatización de workflows.',
           '[RAG local sobre tus PDF, paso a paso](/power-local-llm/local-rag-on-your-pdfs-step-by-step) — una guía práctica de RAG que combina bien con la configuración de base de datos vectorial local que ofrece este kit.',
@@ -1192,7 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Selecionado e mantido pela [n8n](https://n8n.io), a empresa de automação de workflows low-code por trás da [própria plataforma n8n](/power-local-llm/n8n-review)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Self-hosted AI Starter Kit no [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — veja essa página para uma comparação rápida com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Self-hosted AI Starter Kit no [Local LLM Software Directory](/directory) — veja essa página para uma comparação rápida com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1330,14 +1330,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'starter-kit-competitors',
         title: 'Starter Kit vs. outras ferramentas de workflow de IA local',
-        content: 'O Self-hosted AI Starter Kit está no espaço de automação de workflows e frameworks RAG, ao lado de várias outras opções que podem ser self-hosted. Veja como ele se compara a ferramentas próximas — consulte o [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) para o catálogo completo, e a [comparação dedicada Starter Kit vs. n8n puro](#starter-kit-vs-n8n) acima para o confronto mais direto.',
+        content: 'O Self-hosted AI Starter Kit está no espaço de automação de workflows e frameworks RAG, ao lado de várias outras opções que podem ser self-hosted. Veja como ele se compara a ferramentas próximas — consulte o [Local LLM Software Directory](/directory) para o catálogo completo, e a [comparação dedicada Starter Kit vs. n8n puro](#starter-kit-vs-n8n) acima para o confronto mais direto.',
         items: [
           '**[n8n](https://n8n.io)** — a plataforma de automação de workflows sobre a qual este kit é construído; veja a seção de comparação dedicada acima e a [análise completa do n8n](/power-local-llm/n8n-review) para seus próprios detalhes de instalação e licenciamento.',
           '**[LangChain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)** — uma aplicação de RAG e base de conhecimento self-hosted com interface própria integrada, em vez de uma tela de automação de workflows de propósito geral; veja a [análise do LangChain-Chatchat](/power-local-llm/langchain-chatchat-review) se um app dedicado de chat com documentos servir melhor do que um construtor de workflows.',
           '**[RAGFlow](https://github.com/infiniflow/ragflow)** — um motor RAG de compreensão profunda de documentos, focado em analisar documentos complexos (tabelas, layouts) de forma mais completa do que uma ferramenta de workflow genérica; veja a [análise do RAGFlow](/power-local-llm/ragflow-document-understanding-rag-review).',
           '**[Haystack](https://haystack.deepset.ai)** — um framework RAG voltado a Python para desenvolvedores que preferem escrever o código do pipeline diretamente em vez de usar um construtor visual de workflows; veja a [análise do Haystack](/power-local-llm/haystack-deepset-rag-framework-review).',
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas de IA local e RAG — consulte o [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada deste starter kit.',
+        note: 'Esta não é uma lista exaustiva de ferramentas de IA local e RAG — consulte o [Local LLM Software Directory](/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada deste starter kit.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1394,7 +1394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada deste starter kit junto a outras ferramentas de RAG e workflow abordadas acima.',
+          '[Local LLM Software Directory 2026](/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada deste starter kit junto a outras ferramentas de RAG e workflow abordadas acima.',
           '[Análise do n8n](/power-local-llm/n8n-review) — uma análise completa da plataforma de automação de workflows sobre a qual este starter kit é construído, coberta na seção de comparação dedicada acima.',
           '[Análise do RAGFlow](/power-local-llm/ragflow-document-understanding-rag-review) — um motor RAG dedicado à compreensão profunda de documentos, caso você precise de mais do que uma tela de automação de workflows.',
           '[RAG local nos seus PDFs, passo a passo](/power-local-llm/local-rag-on-your-pdfs-step-by-step) — um guia prático de RAG que combina bem com a configuração de banco de dados vetorial local que este kit oferece.',
@@ -1472,7 +1472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[n8nプラットフォーム自体](/power-local-llm/n8n-review)の背後にあるローコードワークフロー自動化企業である[n8n](https://n8n.io)がキュレーション・保守',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)内にあるSelf-hosted AI Starter Kitのエントリーに対応する詳細版です。他の数十のローカルAIツールとの比較は、そちらのページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/directory)内にあるSelf-hosted AI Starter Kitのエントリーに対応する詳細版です。他の数十のローカルAIツールとの比較は、そちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1610,14 +1610,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'starter-kit-competitors',
         title: 'Starter Kit vs. 他のローカルAIワークフローツール',
-        content: 'Self-hosted AI Starter Kitは、ワークフロー自動化とRAGフレームワークの領域で、他のいくつかのセルフホスト可能な選択肢と並んで位置づけられます。近い立ち位置のツールとの比較は以下の通りです。全カタログは[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)を、最も近い比較は上記の[Starter Kit vs. 単体のn8n比較](#starter-kit-vs-n8n)専用セクションを参照してください。',
+        content: 'Self-hosted AI Starter Kitは、ワークフロー自動化とRAGフレームワークの領域で、他のいくつかのセルフホスト可能な選択肢と並んで位置づけられます。近い立ち位置のツールとの比較は以下の通りです。全カタログは[ローカルLLMソフトウェアディレクトリ](/directory)を、最も近い比較は上記の[Starter Kit vs. 単体のn8n比較](#starter-kit-vs-n8n)専用セクションを参照してください。',
         items: [
           '**[n8n](https://n8n.io)** — このキットが構築されている土台となるワークフロー自動化プラットフォーム。上記の専用比較セクションと、独立したインストール・ライセンス詳細を扱う[n8nレビュー](/power-local-llm/n8n-review)全体を参照。',
           '**[LangChain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)** — 独自の組み込みUIを持つセルフホスト型のRAG・ナレッジベースアプリケーションで、汎用のワークフロー自動化キャンバスではない。汎用ワークフロービルダーよりも専用の文書チャットアプリが合う場合は[LangChain-Chatchatレビュー](/power-local-llm/langchain-chatchat-review)を参照。',
           '**[RAGFlow](https://github.com/infiniflow/ragflow)** — 汎用ワークフローツールよりも徹底的に複雑な文書（表、レイアウト）を解析することに特化した、深い文書理解型のRAGエンジン。[RAGFlowレビュー](/power-local-llm/ragflow-document-understanding-rag-review)を参照。',
           '**[Haystack](https://haystack.deepset.ai)** — ビジュアルなワークフロービルダーではなく、パイプラインコードを直接書きたい開発者向けのPythonファーストなRAGフレームワーク。[Haystackレビュー](/power-local-llm/haystack-deepset-rag-framework-review)を参照。',
         ],
-        note: 'これはローカルAIワークフローとRAGツールの網羅的なリストではありません。この定期的に更新される全カタログ（本スターターキット自身のディレクトリエントリーを含む）は[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはローカルAIワークフローとRAGツールの網羅的なリストではありません。この定期的に更新される全カタログ（本スターターキット自身のディレクトリエントリーを含む）は[ローカルLLMソフトウェアディレクトリ](/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1674,7 +1674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。本スターターキットのディレクトリエントリーや、上記で扱った他のRAG・ワークフローツールも含む。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/directory) — 本記事が属するローカルAIツールの全カタログ。本スターターキットのディレクトリエントリーや、上記で扱った他のRAG・ワークフローツールも含む。',
           '[n8nレビュー](/power-local-llm/n8n-review) — このスターターキットの土台となるワークフロー自動化プラットフォームの全体レビュー。上記の専用比較セクションでも扱っている。',
           '[RAGFlowレビュー](/power-local-llm/ragflow-document-understanding-rag-review) — ワークフロー自動化キャンバス以上の機能が必要な場合向けの、深い文書理解に特化したRAGエンジン。',
           '[PDFに対するローカルRAG、ステップバイステップ](/power-local-llm/local-rag-on-your-pdfs-step-by-step) — このキットが提供するローカルベクトルデータベース構成と相性の良い、実践的なRAGウォークスルー。',
@@ -1752,7 +1752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '由低代码工作流自动化公司[n8n](https://n8n.io)整理维护，也是[n8n平台本身](/power-local-llm/n8n-review)的开发方',
         ],
         callouts: [
-          { type: 'note', text: '这篇评测是[本地LLM软件目录](/power-local-llm/local-llm-software-directory)中Self-hosted AI Starter Kit条目的深度补充版——想了解它与其他数十款本地AI工具的一览式对比，请查看该页面。' },
+          { type: 'note', text: '这篇评测是[本地LLM软件目录](/directory)中Self-hosted AI Starter Kit条目的深度补充版——想了解它与其他数十款本地AI工具的一览式对比，请查看该页面。' },
         ],
       },
       overview: {
@@ -1890,14 +1890,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'starter-kit-competitors',
         title: 'Starter Kit vs. 其他本地AI工作流工具',
-        content: 'Self-hosted AI Starter Kit处于工作流自动化与RAG框架这一领域，与其他几款可自托管的方案并存。以下是它与相邻工具的对比——完整目录见[本地LLM软件目录](/power-local-llm/local-llm-software-directory)，最接近的对比可参考上方专门的[Starter Kit vs. 原生n8n对比](#starter-kit-vs-n8n)。',
+        content: 'Self-hosted AI Starter Kit处于工作流自动化与RAG框架这一领域，与其他几款可自托管的方案并存。以下是它与相邻工具的对比——完整目录见[本地LLM软件目录](/directory)，最接近的对比可参考上方专门的[Starter Kit vs. 原生n8n对比](#starter-kit-vs-n8n)。',
         items: [
           '**[n8n](https://n8n.io)**——本套件所构建的底层工作流自动化平台；参见上方专门的对比小节，以及涵盖其独立安装与许可细节的完整[n8n评测](/power-local-llm/n8n-review)。',
           '**[LangChain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)**——一款带有内置UI的自托管RAG与知识库应用，而非通用的工作流自动化画布；如果一个专门的文档对话应用比工作流构建器更适合你，可参见[LangChain-Chatchat评测](/power-local-llm/langchain-chatchat-review)。',
           '**[RAGFlow](https://github.com/infiniflow/ragflow)**——一款专注于深度文档理解的RAG引擎，在解析复杂文档（表格、版式）方面比通用工作流工具更彻底；参见[RAGFlow评测](/power-local-llm/ragflow-document-understanding-rag-review)。',
           '**[Haystack](https://haystack.deepset.ai)**——一个以Python为核心的RAG框架，适合想直接编写流水线代码而非使用可视化工作流构建器的开发者；参见[Haystack评测](/power-local-llm/haystack-deepset-rag-framework-review)。',
         ],
-        note: '这并非本地AI工作流和RAG工具的详尽列表——完整、定期更新的目录（包含本starter kit自身的目录条目）请见[本地LLM软件目录](/power-local-llm/local-llm-software-directory)。',
+        note: '这并非本地AI工作流和RAG工具的详尽列表——完整、定期更新的目录（包含本starter kit自身的目录条目）请见[本地LLM软件目录](/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1954,7 +1954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026本地LLM软件目录](/power-local-llm/local-llm-software-directory)——本文所属的本地AI工具完整目录，包含本starter kit自身的目录条目，以及上文提到的其他RAG和工作流工具。',
+          '[2026本地LLM软件目录](/directory)——本文所属的本地AI工具完整目录，包含本starter kit自身的目录条目，以及上文提到的其他RAG和工作流工具。',
           '[n8n评测](/power-local-llm/n8n-review)——对本starter kit所构建的工作流自动化平台的完整评测，也在上方专门的对比小节中出现过。',
           '[RAGFlow评测](/power-local-llm/ragflow-document-understanding-rag-review)——如果你需要的不只是一个工作流自动化画布，这是一款专为深度文档理解打造的RAG引擎。',
           '[在你的PDF上做本地RAG，分步指南](/power-local-llm/local-rag-on-your-pdfs-step-by-step)——一篇实操性的RAG教程，与本套件提供的本地向量数据库配置相得益彰。',
@@ -2032,7 +2032,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تُعِدّه وتحافظ عليه [n8n](https://n8n.io)، شركة أتمتة سير العمل منخفضة الكود التي تقف خلف [منصة n8n نفسها](/power-local-llm/n8n-review)',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي النسخة المتعمّقة المرافقة لمدخل Self-hosted AI Starter Kit في [دليل برمجيات النماذج اللغوية المحلية](/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن سريعًا بعشرات الأدوات المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي النسخة المتعمّقة المرافقة لمدخل Self-hosted AI Starter Kit في [دليل برمجيات النماذج اللغوية المحلية](/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن سريعًا بعشرات الأدوات المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2170,14 +2170,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'starter-kit-competitors',
         title: 'Starter Kit مقابل أدوات سير العمل المحلية الأخرى',
-        content: 'يقع Self-hosted AI Starter Kit في مساحة أتمتة سير العمل وأطر عمل RAG إلى جانب عدة خيارات أخرى قابلة للاستضافة الذاتية. إليك كيف يُقارَن بالأدوات القريبة منه — راجع [دليل برمجيات النماذج اللغوية المحلية](/power-local-llm/local-llm-software-directory) للكتالوج الكامل، وقسم [مقارنة Starter Kit مقابل n8n وحدها](#starter-kit-vs-n8n) المخصص أعلاه للمقارنة الأقرب مباشرة.',
+        content: 'يقع Self-hosted AI Starter Kit في مساحة أتمتة سير العمل وأطر عمل RAG إلى جانب عدة خيارات أخرى قابلة للاستضافة الذاتية. إليك كيف يُقارَن بالأدوات القريبة منه — راجع [دليل برمجيات النماذج اللغوية المحلية](/directory) للكتالوج الكامل، وقسم [مقارنة Starter Kit مقابل n8n وحدها](#starter-kit-vs-n8n) المخصص أعلاه للمقارنة الأقرب مباشرة.',
         items: [
           '**[n8n](https://n8n.io)** — منصة أتمتة سير العمل التي بُنيت هذه الحزمة فوقها؛ راجع قسم المقارنة المخصص أعلاه و[مراجعة n8n](/power-local-llm/n8n-review) الكاملة لتفاصيل تثبيتها المستقل وترخيصها.',
           '**[LangChain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)** — تطبيق RAG وقاعدة معرفية مستضاف ذاتيًا بواجهة مستخدم مدمجة خاصة به، وليس لوحة أتمتة سير عمل عامة الغرض؛ راجع [مراجعة LangChain-Chatchat](/power-local-llm/langchain-chatchat-review) إذا كان تطبيق محادثة مستندات مخصص يناسب احتياجك أكثر من منشئ سير عمل.',
           '**[RAGFlow](https://github.com/infiniflow/ragflow)** — محرك RAG لفهم المستندات العميق يركّز على تحليل المستندات المعقّدة (الجداول والتخطيطات) بشكل أشمل من أداة سير عمل عامة؛ راجع [مراجعة RAGFlow](/power-local-llm/ragflow-document-understanding-rag-review).',
           '**[Haystack](https://haystack.deepset.ai)** — إطار عمل RAG يركّز على Python للمطورين الذين يريدون كتابة كود خط الأنابيب مباشرة بدلًا من استخدام منشئ سير عمل مرئي؛ راجع [مراجعة Haystack](/power-local-llm/haystack-deepset-rag-framework-review).',
         ],
-        note: 'هذه ليست قائمة شاملة لأدوات سير العمل المحلي وRAG — راجع [دليل برمجيات النماذج اللغوية المحلية](/power-local-llm/local-llm-software-directory) للكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك مدخل هذه الحزمة نفسها في الدليل.',
+        note: 'هذه ليست قائمة شاملة لأدوات سير العمل المحلي وRAG — راجع [دليل برمجيات النماذج اللغوية المحلية](/directory) للكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك مدخل هذه الحزمة نفسها في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2234,7 +2234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات النماذج اللغوية المحلية 2026](/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك مدخل هذه الحزمة في الدليل إلى جانب أدوات RAG وسير العمل الأخرى المذكورة أعلاه.',
+          '[دليل برمجيات النماذج اللغوية المحلية 2026](/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك مدخل هذه الحزمة في الدليل إلى جانب أدوات RAG وسير العمل الأخرى المذكورة أعلاه.',
           '[مراجعة n8n](/power-local-llm/n8n-review) — مراجعة كاملة لمنصة أتمتة سير العمل التي بُنيت هذه الحزمة حولها، وردت في قسم المقارنة المخصص أعلاه.',
           '[مراجعة RAGFlow](/power-local-llm/ragflow-document-understanding-rag-review) — محرك RAG مصمَّم خصيصًا لفهم المستندات العميق، إذا كنت تحتاج إلى أكثر من لوحة أتمتة سير عمل.',
           '[RAG محلي على ملفات PDF الخاصة بك، خطوة بخطوة](/power-local-llm/local-rag-on-your-pdfs-step-by-step) — دليل RAG عملي يتكامل جيدًا مع إعداد قاعدة البيانات المتجهية المحلية الذي توفره هذه الحزمة.',
@@ -2312,7 +2312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[n8n 플랫폼 자체](/power-local-llm/n8n-review)를 만든 로우코드 워크플로 자동화 기업인 [n8n](https://n8n.io)이 큐레이션하고 유지관리',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)에 있는 Self-hosted AI Starter Kit 항목의 심화 버전입니다. 다른 수십 개의 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참조하십시오.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/directory)에 있는 Self-hosted AI Starter Kit 항목의 심화 버전입니다. 다른 수십 개의 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참조하십시오.' },
         ],
       },
       overview: {
@@ -2450,14 +2450,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'starter-kit-competitors',
         title: 'Starter Kit 대 다른 로컬 AI 워크플로 도구',
-        content: 'Self-hosted AI Starter Kit는 워크플로 자동화 및 RAG 프레임워크 영역에서 셀프호스팅 가능한 다른 여러 옵션과 나란히 위치합니다. 인접한 도구와의 비교는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를, 가장 근접한 일대일 비교는 위의 전용 [Starter Kit 대 일반 n8n 비교](#starter-kit-vs-n8n) 섹션을 참조하십시오.',
+        content: 'Self-hosted AI Starter Kit는 워크플로 자동화 및 RAG 프레임워크 영역에서 셀프호스팅 가능한 다른 여러 옵션과 나란히 위치합니다. 인접한 도구와의 비교는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/directory)를, 가장 근접한 일대일 비교는 위의 전용 [Starter Kit 대 일반 n8n 비교](#starter-kit-vs-n8n) 섹션을 참조하십시오.',
         items: [
           '**[n8n](https://n8n.io)** — 이 키트가 구축된 바탕이 되는 워크플로 자동화 플랫폼; 위의 전용 비교 섹션과, 독립적인 설치 및 라이선스 세부사항을 다루는 전체 [n8n 리뷰](/power-local-llm/n8n-review)를 참조하십시오.',
           '**[LangChain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)** — 범용 워크플로 자동화 캔버스가 아니라 자체 내장 UI를 갖춘 셀프호스트형 RAG 및 지식베이스 애플리케이션; 워크플로 빌더보다 전용 문서 채팅 앱이 필요에 더 잘 맞는다면 [LangChain-Chatchat 리뷰](/power-local-llm/langchain-chatchat-review)를 참조하십시오.',
           '**[RAGFlow](https://github.com/infiniflow/ragflow)** — 범용 워크플로 도구보다 더 철저하게 복잡한 문서(표, 레이아웃)를 파싱하는 데 초점을 맞춘 심층 문서 이해형 RAG 엔진; [RAGFlow 리뷰](/power-local-llm/ragflow-document-understanding-rag-review)를 참조하십시오.',
           '**[Haystack](https://haystack.deepset.ai)** — 비주얼 워크플로 빌더 대신 파이프라인 코드를 직접 작성하고 싶은 개발자를 위한 Python 중심 RAG 프레임워크; [Haystack 리뷰](/power-local-llm/haystack-deepset-rag-framework-review)를 참조하십시오.',
         ],
-        note: '이는 로컬 AI 워크플로 및 RAG 도구의 전체 목록이 아닙니다 — 이 스타터 키트 자체의 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를 참조하십시오.',
+        note: '이는 로컬 AI 워크플로 및 RAG 도구의 전체 목록이 아닙니다 — 이 스타터 키트 자체의 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/directory)를 참조하십시오.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2514,7 +2514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[2026 로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그로, 위에서 다룬 다른 RAG 및 워크플로 도구와 함께 이 스타터 키트 자체의 디렉터리 항목도 포함합니다.',
+          '[2026 로컬 LLM 소프트웨어 디렉터리](/directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그로, 위에서 다룬 다른 RAG 및 워크플로 도구와 함께 이 스타터 키트 자체의 디렉터리 항목도 포함합니다.',
           '[n8n 리뷰](/power-local-llm/n8n-review) — 이 스타터 키트가 구축된 바탕이 되는 워크플로 자동화 플랫폼에 대한 전체 리뷰로, 위의 전용 비교 섹션에서도 다루었습니다.',
           '[RAGFlow 리뷰](/power-local-llm/ragflow-document-understanding-rag-review) — 워크플로 자동화 캔버스 이상의 기능이 필요하다면, 심층 문서 이해를 위해 목적에 맞게 구축된 RAG 엔진입니다.',
           '[PDF에 대한 로컬 RAG, 단계별 안내](/power-local-llm/local-rag-on-your-pdfs-step-by-step) — 이 키트가 제공하는 로컬 벡터 데이터베이스 설정과 잘 어울리는 실전 RAG 안내서입니다.',

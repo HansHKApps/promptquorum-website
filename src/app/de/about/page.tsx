@@ -223,7 +223,7 @@ export default function DeAboutPage() {
                   <div className="text-text-primary font-semibold mb-1">Lokale-LLM-Inhalte</div>
                   <div className="text-sm text-text-secondary">Anleitungen zum Betrieb von LLMs auf eigener Hardware — Einrichtung, Anforderungen und Vergleiche.</div>
                 </Link>
-                <Link href="/de/power-local-llm/local-llm-software-directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                <Link href="/de/directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
                   <div className="text-text-primary font-semibold mb-1">Verzeichnis für lokale LLM-Software</div>
                   <div className="text-sm text-text-secondary">Ein durchsuchbares Verzeichnis lokaler LLM-Apps und -Tools im direkten Vergleich.</div>
                 </Link>

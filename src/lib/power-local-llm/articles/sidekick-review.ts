@@ -71,7 +71,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Over 3,300 GitHub stars as of this review, per GitHub API',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Sidekick\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Sidekick compares at a glance to dozens of other local AI tools. It is based on Sidekick\'s own GitHub repository, README, and setup guide, not hands-on benchmarking by PromptQuorum.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Sidekick\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Sidekick compares at a glance to dozens of other local AI tools. It is based on Sidekick\'s own GitHub repository, README, and setup guide, not hands-on benchmarking by PromptQuorum.' },
         ],
       },
       overview: {
@@ -221,7 +221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Msty', 'Best known for': 'Cross-platform (macOS/Windows/Linux) local and cloud chat client with built-in RAG', 'Link': '[Msty Review](/power-local-llm/msty-review)' },
           { 'Tool': 'Khoj', 'Best known for': 'Self-hosted, document-focused AI assistant with retrieval over personal files', 'Link': '[Khoj Review](/power-local-llm/khoj-ai-second-brain-review)' },
         ],
-        note: 'This is not an exhaustive list of local chat apps — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Sidekick\'s own directory entry.',
+        note: 'This is not an exhaustive list of local chat apps — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Sidekick\'s own directory entry.',
       },
       faq: {
         id: 'faq',
@@ -254,7 +254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Enchanted Review](/power-local-llm/enchanted-review) — an open-source native macOS and iOS chat client for local models via Ollama, for direct comparison against Sidekick.',
           '[BoltAI Review](/power-local-llm/boltai-review) — a native macOS AI chat app with system-wide shortcuts, for readers weighing native Mac chat apps.',
           '[Khoj Review](/power-local-llm/khoj-ai-second-brain-review) — a self-hosted, document-focused AI assistant with a similar retrieval-augmented approach to Sidekick\'s "Experts."',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Über 3.300 GitHub-Stars zum Zeitpunkt dieser Review, laut GitHub-API',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der ausführliche Begleitartikel zu Sidekicks Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Vergleich von Sidekick mit Dutzenden anderer lokaler KI-Tools. Sie basiert auf Sidekicks eigenem GitHub-Repository, README und Setup-Anleitung, nicht auf praktischen Benchmarks von PromptQuorum.' },
+          { type: 'note', text: 'Diese Review ist der ausführliche Begleitartikel zu Sidekicks Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie einen schnellen Vergleich von Sidekick mit Dutzenden anderer lokaler KI-Tools. Sie basiert auf Sidekicks eigenem GitHub-Repository, README und Setup-Anleitung, nicht auf praktischen Benchmarks von PromptQuorum.' },
         ],
       },
       overview: {
@@ -479,7 +479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Msty', 'Bekannt für': 'Plattformübergreifender (macOS/Windows/Linux) lokaler und Cloud-Chat-Client mit integriertem RAG', 'Link': '[Msty Review](/de/power-local-llm/msty-review)' },
           { 'Tool': 'Khoj', 'Bekannt für': 'Selbst gehosteter, dokumentenorientierter KI-Assistent mit Retrieval über persönliche Dateien', 'Link': '[Khoj Review](/de/power-local-llm/khoj-ai-second-brain-review)' },
         ],
-        note: 'Dies ist keine vollständige Liste lokaler Chat-Apps — siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Sidekicks eigenem Verzeichniseintrag.',
+        note: 'Dies ist keine vollständige Liste lokaler Chat-Apps — siehe das [Local LLM Software Directory](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Sidekicks eigenem Verzeichniseintrag.',
       },
       faq: {
         id: 'faq',
@@ -512,7 +512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Enchanted Review](/de/power-local-llm/enchanted-review) — ein quelloffener nativer macOS- und iOS-Chat-Client für lokale Modelle über Ollama, zum direkten Vergleich mit Sidekick.',
           '[BoltAI Review](/de/power-local-llm/boltai-review) — eine native macOS-KI-Chat-App mit systemweiten Shortcuts, für Leser, die native Mac-Chat-Apps vergleichen.',
           '[Khoj Review](/de/power-local-llm/khoj-ai-second-brain-review) — ein selbst gehosteter, dokumentenorientierter KI-Assistent mit einem Retrieval-Augmented-Ansatz ähnlich Sidekicks "Experts".',
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -586,7 +586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Plus de 3 300 étoiles GitHub au moment de cette review, selon l\'API GitHub',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de l\'entrée de Sidekick dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer Sidekick en un coup d\'œil à des dizaines d\'autres outils d\'IA locale. Elle s\'appuie sur le dépôt GitHub, le README et le guide d\'installation de Sidekick, pas sur un benchmark pratique réalisé par PromptQuorum.' },
+          { type: 'note', text: 'Cette review est le complément approfondi de l\'entrée de Sidekick dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour comparer Sidekick en un coup d\'œil à des dizaines d\'autres outils d\'IA locale. Elle s\'appuie sur le dépôt GitHub, le README et le guide d\'installation de Sidekick, pas sur un benchmark pratique réalisé par PromptQuorum.' },
         ],
       },
       overview: {
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Outil': 'Msty', 'Réputé pour': 'Client de chat local et cloud multiplateforme (macOS/Windows/Linux) avec RAG intégré', 'Lien': '[Msty Review](/fr/power-local-llm/msty-review)' },
           { 'Outil': 'Khoj', 'Réputé pour': 'Assistant IA auto-hébergé, axé sur les documents, avec récupération sur fichiers personnels', 'Lien': '[Khoj Review](/fr/power-local-llm/khoj-ai-second-brain-review)' },
         ],
-        note: 'Ceci n\'est pas une liste exhaustive des apps de chat locales — consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre entrée de Sidekick dans l\'annuaire.',
+        note: 'Ceci n\'est pas une liste exhaustive des apps de chat locales — consultez le [Local LLM Software Directory](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre entrée de Sidekick dans l\'annuaire.',
       },
       faq: {
         id: 'faq',
@@ -769,7 +769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Enchanted Review](/fr/power-local-llm/enchanted-review) — un client de chat open source natif macOS et iOS pour modèles locaux via Ollama, pour une comparaison directe avec Sidekick.',
           '[BoltAI Review](/fr/power-local-llm/boltai-review) — une app de chat IA macOS native avec raccourcis système, pour les lecteurs comparant les apps de chat Mac natives.',
           '[Khoj Review](/fr/power-local-llm/khoj-ai-second-brain-review) — un assistant IA auto-hébergé, axé sur les documents, avec une approche de génération augmentée par récupération similaire aux « Experts » de Sidekick.',
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article.',
         ],
       },
     },
@@ -843,7 +843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub APIによると、このレビュー時点でGitHubスター数は3,300超',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるSidekickの項目を掘り下げたものです。他の数十のローカルAIツールとの比較概要はそちらを参照してください。本記事はSidekick自身のGitHubリポジトリ、README、セットアップガイドに基づいており、PromptQuorumによる実機ベンチマークではありません。' },
+          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるSidekickの項目を掘り下げたものです。他の数十のローカルAIツールとの比較概要はそちらを参照してください。本記事はSidekick自身のGitHubリポジトリ、README、セットアップガイドに基づいており、PromptQuorumによる実機ベンチマークではありません。' },
         ],
       },
       overview: {
@@ -993,7 +993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ツール': 'Msty', '主な特徴': '内蔵RAGを備えたクロスプラットフォーム(macOS/Windows/Linux)のローカル・クラウド両対応チャットクライアント', 'リンク': '[Mstyレビュー](/ja/power-local-llm/msty-review)' },
           { 'ツール': 'Khoj', '主な特徴': '個人ファイルに対する検索を備えた、セルフホスト型のドキュメント特化AIアシスタント', 'リンク': '[Khojレビュー](/ja/power-local-llm/khoj-ai-second-brain-review)' },
         ],
-        note: 'これはローカルチャットアプリの網羅的なリストではありません。Sidekick自身のディレクトリ項目を含む、定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはローカルチャットアプリの網羅的なリストではありません。Sidekick自身のディレクトリ項目を含む、定期的に更新される完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       faq: {
         id: 'faq',
@@ -1026,7 +1026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Enchantedレビュー](/ja/power-local-llm/enchanted-review) — Ollama経由のローカルモデル向けオープンソース・ネイティブmacOS/iOSチャットクライアント。Sidekickとの直接比較に。',
           '[BoltAIレビュー](/ja/power-local-llm/boltai-review) — システム全体のショートカットを備えたネイティブmacOS AIチャットアプリ。ネイティブMacチャットアプリを比較検討する読者向け。',
           '[Khojレビュー](/ja/power-local-llm/khoj-ai-second-brain-review) — Sidekickの「Experts」と似た検索拡張アプローチを持つ、セルフホスト型のドキュメント特化AIアシスタント。',
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの完全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — この記事が属するローカルAIツールの完全カタログ。',
         ],
       },
     },
@@ -1100,7 +1100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至本评测时,根据GitHub API,GitHub星标数超过3,300',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Sidekick条目的深度补充——该页面提供了Sidekick与数十款其他本地AI工具的快速对比。本评测基于Sidekick自身的GitHub仓库、README和安装指南,并非PromptQuorum的实测基准测试。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Sidekick条目的深度补充——该页面提供了Sidekick与数十款其他本地AI工具的快速对比。本评测基于Sidekick自身的GitHub仓库、README和安装指南,并非PromptQuorum的实测基准测试。' },
         ],
       },
       overview: {
@@ -1250,7 +1250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '工具': 'Msty', '主要特点': '跨平台(macOS/Windows/Linux)本地与云端聊天客户端,内置RAG功能', '链接': '[Msty评测](/zh/power-local-llm/msty-review)' },
           { '工具': 'Khoj', '主要特点': '自托管、文档处理型AI助手,可检索个人文件', '链接': '[Khoj评测](/zh/power-local-llm/khoj-ai-second-brain-review)' },
         ],
-        note: '这并非本地聊天应用的完整列表——请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)获取完整的、定期更新的目录,其中也包含Sidekick自己的目录条目。',
+        note: '这并非本地聊天应用的完整列表——请参阅[本地LLM软件目录](/zh/directory)获取完整的、定期更新的目录,其中也包含Sidekick自己的目录条目。',
       },
       faq: {
         id: 'faq',
@@ -1283,7 +1283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Enchanted评测](/zh/power-local-llm/enchanted-review) — 一款开源的原生macOS和iOS聊天客户端,通过Ollama使用本地模型,可与Sidekick直接对比。',
           '[BoltAI评测](/zh/power-local-llm/boltai-review) — 一款带有系统级快捷键的原生macOS AI聊天应用,适合正在比较原生Mac聊天应用的读者。',
           '[Khoj评测](/zh/power-local-llm/khoj-ai-second-brain-review) — 一款自托管、文档处理型AI助手,其检索增强方式与Sidekick的"Experts"功能类似。',
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地AI工具目录。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的完整本地AI工具目录。',
         ],
       },
     },
@@ -1357,7 +1357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Más de 3.300 estrellas en GitHub al momento de esta review, según la API de GitHub',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de Sidekick en el [Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara Sidekick de un vistazo con docenas de otras herramientas de IA local. Se basa en el propio repositorio de GitHub, README y guía de instalación de Sidekick, no en benchmarks prácticos realizados por PromptQuorum.' },
+          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de Sidekick en el [Directorio de software de LLM local](/es/directory) — consulta esa página para ver cómo se compara Sidekick de un vistazo con docenas de otras herramientas de IA local. Se basa en el propio repositorio de GitHub, README y guía de instalación de Sidekick, no en benchmarks prácticos realizados por PromptQuorum.' },
         ],
       },
       overview: {
@@ -1507,7 +1507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': 'Msty', 'Conocida por': 'Cliente de chat local y en la nube multiplataforma (macOS/Windows/Linux) con RAG integrado', 'Enlace': '[Msty Review](/es/power-local-llm/msty-review)' },
           { 'Herramienta': 'Khoj', 'Conocida por': 'Asistente de IA autoalojado centrado en documentos, con recuperación sobre archivos personales', 'Enlace': '[Khoj Review](/es/power-local-llm/khoj-ai-second-brain-review)' },
         ],
-        note: 'Esta no es una lista exhaustiva de apps de chat locales — consulta el [Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, actualizado regularmente, que incluye la propia entrada de Sidekick en el directorio.',
+        note: 'Esta no es una lista exhaustiva de apps de chat locales — consulta el [Directorio de software de LLM local](/es/directory) para el catálogo completo, actualizado regularmente, que incluye la propia entrada de Sidekick en el directorio.',
       },
       faq: {
         id: 'faq',
@@ -1540,7 +1540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Enchanted Review](/es/power-local-llm/enchanted-review) — un cliente de chat nativo y de código abierto para macOS e iOS, para modelos locales vía Ollama, para una comparación directa con Sidekick.',
           '[BoltAI Review](/es/power-local-llm/boltai-review) — una app de chat con IA nativa para macOS con atajos en todo el sistema, para lectores que evalúan apps de chat nativas para Mac.',
           '[Khoj Review](/es/power-local-llm/khoj-ai-second-brain-review) — un asistente de IA autoalojado y centrado en documentos, con un enfoque de recuperación similar al de los "Experts" de Sidekick.',
-          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Local LLM Software Directory 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1614,7 +1614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mais de 3.300 estrelas no GitHub no momento desta review, segundo a API do GitHub',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Sidekick no [Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar o Sidekick rapidamente com dezenas de outras ferramentas de IA local. Ela se baseia no próprio repositório GitHub, README e guia de instalação do Sidekick, não em benchmarks práticos feitos pela PromptQuorum.' },
+          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Sidekick no [Diretório de software de LLM local](/pt/directory) — veja essa página para comparar o Sidekick rapidamente com dezenas de outras ferramentas de IA local. Ela se baseia no próprio repositório GitHub, README e guia de instalação do Sidekick, não em benchmarks práticos feitos pela PromptQuorum.' },
         ],
       },
       overview: {
@@ -1764,7 +1764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': 'Msty', 'Mais conhecida por': 'Cliente de chat local e em nuvem multiplataforma (macOS/Windows/Linux) com RAG integrado', 'Link': '[Msty Review](/pt/power-local-llm/msty-review)' },
           { 'Ferramenta': 'Khoj', 'Mais conhecida por': 'Assistente de IA autohospedado e focado em documentos, com recuperação sobre arquivos pessoais', 'Link': '[Khoj Review](/pt/power-local-llm/khoj-ai-second-brain-review)' },
         ],
-        note: 'Esta não é uma lista exaustiva de apps de chat local — veja o [Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, atualizado regularmente, incluindo a própria entrada do Sidekick no diretório.',
+        note: 'Esta não é uma lista exaustiva de apps de chat local — veja o [Diretório de software de LLM local](/pt/directory) para o catálogo completo, atualizado regularmente, incluindo a própria entrada do Sidekick no diretório.',
       },
       faq: {
         id: 'faq',
@@ -1797,7 +1797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Enchanted Review](/pt/power-local-llm/enchanted-review) — um cliente de chat nativo de código aberto para macOS e iOS, para modelos locais via Ollama, para comparação direta com o Sidekick.',
           '[BoltAI Review](/pt/power-local-llm/boltai-review) — um app de chat de IA nativo para macOS com atalhos em todo o sistema, para leitores que avaliam apps de chat nativos para Mac.',
           '[Khoj Review](/pt/power-local-llm/khoj-ai-second-brain-review) — um assistente de IA autohospedado e focado em documentos, com uma abordagem de recuperação semelhante aos "Experts" do Sidekick.',
-          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Local LLM Software Directory 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -1871,7 +1871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أكثر من 3,300 نجمة على GitHub وقت إعداد هذه المراجعة، بحسب واجهة برمجة تطبيقات GitHub',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المعمّق لمدخل Sidekick في [دليل برامج LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمقارنة سريعة بين Sidekick وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى. تستند إلى مستودع Sidekick الخاص على GitHub وملف README ودليل الإعداد، وليس إلى اختبارات أداء عملية أجرتها PromptQuorum.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المعمّق لمدخل Sidekick في [دليل برامج LLM المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة بين Sidekick وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى. تستند إلى مستودع Sidekick الخاص على GitHub وملف README ودليل الإعداد، وليس إلى اختبارات أداء عملية أجرتها PromptQuorum.' },
         ],
       },
       overview: {
@@ -2021,7 +2021,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': 'Msty', 'الأكثر شهرة بـ': 'عميل محادثة محلي وسحابي متعدد المنصات (macOS/Windows/Linux) بتوليد معزَّز بالاسترجاع مدمج', 'الرابط': '[مراجعة Msty](/ar/power-local-llm/msty-review)' },
           { 'الأداة': 'Khoj', 'الأكثر شهرة بـ': 'مساعد ذكاء اصطناعي ذاتي الاستضافة يركّز على المستندات باسترجاع اعتمادًا على الملفات الشخصية', 'الرابط': '[مراجعة Khoj](/ar/power-local-llm/khoj-ai-second-brain-review)' },
         ],
-        note: 'هذه ليست قائمة شاملة لتطبيقات المحادثة المحلية — راجع [دليل برامج LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للكتالوج الكامل المُحدَّث بانتظام، بما في ذلك مدخل Sidekick نفسه في الدليل.',
+        note: 'هذه ليست قائمة شاملة لتطبيقات المحادثة المحلية — راجع [دليل برامج LLM المحلية](/ar/directory) للكتالوج الكامل المُحدَّث بانتظام، بما في ذلك مدخل Sidekick نفسه في الدليل.',
       },
       faq: {
         id: 'faq',
@@ -2054,7 +2054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة Enchanted](/ar/power-local-llm/enchanted-review) — عميل محادثة مفتوح المصدر وأصلي لنظامي macOS وiOS للنماذج المحلية عبر Ollama، للمقارنة المباشرة مع Sidekick.',
           '[مراجعة BoltAI](/ar/power-local-llm/boltai-review) — تطبيق محادثة ذكاء اصطناعي أصلي على macOS باختصارات على مستوى النظام، لمن يزن خيارات تطبيقات المحادثة الأصلية على Mac.',
           '[مراجعة Khoj](/ar/power-local-llm/khoj-ai-second-brain-review) — مساعد ذكاء اصطناعي ذاتي الاستضافة يركّز على المستندات بنهج معزَّز بالاسترجاع مشابه لميزة "الخبراء" في Sidekick.',
-          '[دليل برامج LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
+          '[دليل برامج LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
         ],
       },
     },
@@ -2128,7 +2128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이 리뷰 작성 시점 기준 GitHub API에 따르면 GitHub 스타 3,300개 이상',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 Sidekick 항목의 심층 보완 자료입니다. 다른 수십 개의 로컬 AI 도구와 Sidekick을 한눈에 비교하려면 해당 페이지를 참고하십시오. 이 리뷰는 Sidekick 자체의 GitHub 저장소, README, 설치 가이드에 기반한 것이며 PromptQuorum이 직접 진행한 벤치마크가 아닙니다.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Sidekick 항목의 심층 보완 자료입니다. 다른 수십 개의 로컬 AI 도구와 Sidekick을 한눈에 비교하려면 해당 페이지를 참고하십시오. 이 리뷰는 Sidekick 자체의 GitHub 저장소, README, 설치 가이드에 기반한 것이며 PromptQuorum이 직접 진행한 벤치마크가 아닙니다.' },
         ],
       },
       overview: {
@@ -2278,7 +2278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': 'Msty', '주요 특징': '내장 RAG를 갖춘 크로스플랫폼(macOS/Windows/Linux) 로컬 및 클라우드 채팅 클라이언트', '링크': '[Msty 리뷰](/ko/power-local-llm/msty-review)' },
           { '도구': 'Khoj', '주요 특징': '개인 파일에 대한 검색을 지원하는 자체 호스팅 문서 중심 AI 어시스턴트', '링크': '[Khoj 리뷰](/ko/power-local-llm/khoj-ai-second-brain-review)' },
         ],
-        note: '이는 로컬 채팅 앱의 총망라 목록이 아닙니다 — Sidekick 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.',
+        note: '이는 로컬 채팅 앱의 총망라 목록이 아닙니다 — Sidekick 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오.',
       },
       faq: {
         id: 'faq',
@@ -2311,7 +2311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Enchanted 리뷰](/ko/power-local-llm/enchanted-review) — Sidekick과 직접 비교하기 위한, Ollama를 통해 로컬 모델을 사용하는 오픈소스 네이티브 macOS 및 iOS 채팅 클라이언트.',
           '[BoltAI 리뷰](/ko/power-local-llm/boltai-review) — 네이티브 Mac 채팅 앱을 검토하는 독자를 위한, 시스템 전역 단축키를 갖춘 네이티브 macOS AI 채팅 앱.',
           '[Khoj 리뷰](/ko/power-local-llm/khoj-ai-second-brain-review) — Sidekick의 "Experts"와 유사한 검색 증강 방식을 사용하는, 자체 호스팅 문서 중심 AI 어시스턴트.',
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 문서가 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 문서가 속한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },

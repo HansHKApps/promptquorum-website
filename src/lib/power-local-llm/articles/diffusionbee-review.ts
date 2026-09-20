@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'DiffusionBee',
     title: 'DiffusionBee Review (2026): Local Stable Diffusion for Mac',
     seoTitle: 'DiffusionBee Review 2026: One-Click Stable Diffusion for Mac',
-    intro: "DiffusionBee is a free, open-source ([AGPL-3.0](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/blob/master/LICENSE) licensed) macOS application, at [diffusionbee.com](https://diffusionbee.com) with source code at [github.com/divamgupta/diffusionbee-stable-diffusion-ui](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui), that packages Stable Diffusion into a downloadable `.dmg` installer with a graphical interface — no Python environment, terminal commands, or node graph required. This makes it a simpler, more polished alternative to running [ComfyUI](/power-local-llm/comfyui-review), [Fooocus](/power-local-llm/fooocus-review), or [AUTOMATIC1111](/power-local-llm/automatic1111-review) yourself, at the cost of being Mac-only and less configurable. This review is a companion to DiffusionBee's entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), and covers the app's real feature set, license, hardware requirements, download links, and how it compares against the other Stable Diffusion front-ends this site has reviewed.",
+    intro: "DiffusionBee is a free, open-source ([AGPL-3.0](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/blob/master/LICENSE) licensed) macOS application, at [diffusionbee.com](https://diffusionbee.com) with source code at [github.com/divamgupta/diffusionbee-stable-diffusion-ui](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui), that packages Stable Diffusion into a downloadable `.dmg` installer with a graphical interface — no Python environment, terminal commands, or node graph required. This makes it a simpler, more polished alternative to running [ComfyUI](/power-local-llm/comfyui-review), [Fooocus](/power-local-llm/fooocus-review), or [AUTOMATIC1111](/power-local-llm/automatic1111-review) yourself, at the cost of being Mac-only and less configurable. This review is a companion to DiffusionBee's entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory), and covers the app's real feature set, license, hardware requirements, download links, and how it compares against the other Stable Diffusion front-ends this site has reviewed.",
     metaDescription: "DiffusionBee review 2026: free, AGPL-3.0 macOS app for local Stable Diffusion, Apple Silicon + Intel builds, offline generation, and how it compares with ComfyUI, Fooocus, and AUTOMATIC1111.",
     readTime: '9 min read',
     targetKeywords: [
@@ -80,7 +80,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Features per diffusionbee.com: text-to-image, image-to-image, generative fill, upscaling, image variants, model training, control images, and a canvas mode',
         ],
         callouts: [
-          { type: 'note', text: "DiffusionBee sits in the same sub-segment as [ComfyUI](/power-local-llm/comfyui-review), [Fooocus](/power-local-llm/fooocus-review), and [AUTOMATIC1111](/power-local-llm/automatic1111-review) — all four run Stable Diffusion locally, but DiffusionBee trades their configurability for a packaged, no-setup Mac app. See the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) for how it fits among other local image-generation tools." },
+          { type: 'note', text: "DiffusionBee sits in the same sub-segment as [ComfyUI](/power-local-llm/comfyui-review), [Fooocus](/power-local-llm/fooocus-review), and [AUTOMATIC1111](/power-local-llm/automatic1111-review) — all four run Stable Diffusion locally, but DiffusionBee trades their configurability for a packaged, no-setup Mac app. See the [Local LLM Software Directory](https://www.promptquorum.com/directory) for how it fits among other local image-generation tools." },
         ],
       },
       overview: {
@@ -114,7 +114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-diffusionbee',
         title: 'Download DiffusionBee for Mac',
-        content: "**This review is a companion to DiffusionBee's entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — check the directory for how it's classified alongside other local image-generation tools. Direct download links below are from the official [diffusionbee.com/download](https://diffusionbee.com/download) page; always confirm you're on the official domain before downloading a `.dmg` file.",
+        content: "**This review is a companion to DiffusionBee's entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory)** — check the directory for how it's classified alongside other local image-generation tools. Direct download links below are from the official [diffusionbee.com/download](https://diffusionbee.com/download) page; always confirm you're on the official domain before downloading a `.dmg` file.",
         columns: ['Platform', 'Download'],
         rows: [
           { 'Platform': 'macOS — Apple Silicon (M1/M2/M3)', 'Download': '[DiffusionBee_MPS_arm64-2.5.1.dmg](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/releases/download/2.5.1/DiffusionBee_MPS_arm64-2.5.1.dmg)' },
@@ -226,7 +226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux](/power-local-llm/comfyui-review) — the node-graph alternative for readers who want reusable, shareable pipelines across Mac, Windows, and Linux.',
           '[Fooocus Review: The Simplest Local Stable Diffusion UI](/power-local-llm/fooocus-review) — another simplicity-focused option, cross-platform, with a browser-based interface instead of a native app.',
           '[AUTOMATIC1111 Review: Stable Diffusion WebUI Explained](/power-local-llm/automatic1111-review) — the tool with the largest extension ecosystem for readers who outgrow DiffusionBee\'s built-in feature set.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including where DiffusionBee fits among image-generation apps.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — the full catalog of local AI tools this article belongs to, including where DiffusionBee fits among image-generation apps.',
         ],
       },
     },
@@ -243,7 +243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'DiffusionBee',
     title: 'DiffusionBee Review (2026): Lokales Stable Diffusion für Mac',
     seoTitle: 'DiffusionBee Review 2026: Stable Diffusion per Klick für Mac',
-    intro: "DiffusionBee ist eine kostenlose, quelloffene ([AGPL-3.0](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/blob/master/LICENSE)-lizenzierte) macOS-App unter [diffusionbee.com](https://diffusionbee.com) mit Quellcode auf [github.com/divamgupta/diffusionbee-stable-diffusion-ui](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui), die Stable Diffusion in einen herunterladbaren `.dmg`-Installer mit grafischer Oberfläche verpackt — ohne Python-Umgebung, Terminal-Befehle oder Node-Graph. Das macht sie zu einer einfacheren, aufgeräumteren Alternative zu [ComfyUI](/de/power-local-llm/comfyui-review), [Fooocus](/de/power-local-llm/fooocus-review) oder [AUTOMATIC1111](/de/power-local-llm/automatic1111-review) — auf Kosten der Beschränkung auf Mac und geringerer Konfigurierbarkeit. Diese Bewertung ergänzt den Eintrag von DiffusionBee im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) und behandelt den tatsächlichen Funktionsumfang, die Lizenz, die Hardwareanforderungen, die Download-Links sowie den Vergleich mit den anderen auf dieser Seite besprochenen Stable-Diffusion-Oberflächen.",
+    intro: "DiffusionBee ist eine kostenlose, quelloffene ([AGPL-3.0](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/blob/master/LICENSE)-lizenzierte) macOS-App unter [diffusionbee.com](https://diffusionbee.com) mit Quellcode auf [github.com/divamgupta/diffusionbee-stable-diffusion-ui](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui), die Stable Diffusion in einen herunterladbaren `.dmg`-Installer mit grafischer Oberfläche verpackt — ohne Python-Umgebung, Terminal-Befehle oder Node-Graph. Das macht sie zu einer einfacheren, aufgeräumteren Alternative zu [ComfyUI](/de/power-local-llm/comfyui-review), [Fooocus](/de/power-local-llm/fooocus-review) oder [AUTOMATIC1111](/de/power-local-llm/automatic1111-review) — auf Kosten der Beschränkung auf Mac und geringerer Konfigurierbarkeit. Diese Bewertung ergänzt den Eintrag von DiffusionBee im [Local LLM Software Directory](https://www.promptquorum.com/directory) und behandelt den tatsächlichen Funktionsumfang, die Lizenz, die Hardwareanforderungen, die Download-Links sowie den Vergleich mit den anderen auf dieser Seite besprochenen Stable-Diffusion-Oberflächen.",
     metaDescription: "DiffusionBee Review 2026: kostenlose, AGPL-3.0-lizenzierte macOS-App für lokales Stable Diffusion, Apple-Silicon- und Intel-Builds, Offline-Generierung und Vergleich mit ComfyUI, Fooocus und AUTOMATIC1111.",
     readTime: '9 Min. Lesezeit',
     targetKeywords: [
@@ -300,7 +300,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Funktionen laut diffusionbee.com: Text-zu-Bild, Bild-zu-Bild, Generative Fill, Upscaling, Bildvarianten, Modelltraining, Control Images und ein Canvas-Modus',
         ],
         callouts: [
-          { type: 'note', text: "DiffusionBee gehört zum selben Teilsegment wie [ComfyUI](/de/power-local-llm/comfyui-review), [Fooocus](/de/power-local-llm/fooocus-review) und [AUTOMATIC1111](/de/power-local-llm/automatic1111-review) — alle vier führen Stable Diffusion lokal aus, DiffusionBee tauscht deren Konfigurierbarkeit jedoch gegen eine verpackte, setup-freie Mac-App ein. Im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) sehen Sie, wo es unter anderen lokalen Bildgenerierungs-Tools einzuordnen ist." },
+          { type: 'note', text: "DiffusionBee gehört zum selben Teilsegment wie [ComfyUI](/de/power-local-llm/comfyui-review), [Fooocus](/de/power-local-llm/fooocus-review) und [AUTOMATIC1111](/de/power-local-llm/automatic1111-review) — alle vier führen Stable Diffusion lokal aus, DiffusionBee tauscht deren Konfigurierbarkeit jedoch gegen eine verpackte, setup-freie Mac-App ein. Im [Local LLM Software Directory](https://www.promptquorum.com/directory) sehen Sie, wo es unter anderen lokalen Bildgenerierungs-Tools einzuordnen ist." },
         ],
       },
       overview: {
@@ -334,7 +334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-diffusionbee',
         title: 'DiffusionBee für Mac herunterladen',
-        content: "**Diese Bewertung ergänzt den Eintrag von DiffusionBee im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — dort sehen Sie, wie es neben anderen lokalen Bildgenerierungs-Tools eingeordnet ist. Die direkten Download-Links unten stammen von der offiziellen Seite [diffusionbee.com/download](https://diffusionbee.com/download); prüfen Sie vor dem Herunterladen einer `.dmg`-Datei immer, dass Sie sich auf der offiziellen Domain befinden.",
+        content: "**Diese Bewertung ergänzt den Eintrag von DiffusionBee im [Local LLM Software Directory](https://www.promptquorum.com/directory)** — dort sehen Sie, wie es neben anderen lokalen Bildgenerierungs-Tools eingeordnet ist. Die direkten Download-Links unten stammen von der offiziellen Seite [diffusionbee.com/download](https://diffusionbee.com/download); prüfen Sie vor dem Herunterladen einer `.dmg`-Datei immer, dass Sie sich auf der offiziellen Domain befinden.",
         columns: ['Plattform', 'Download'],
         rows: [
           { 'Plattform': 'macOS — Apple Silicon (M1/M2/M3)', 'Download': '[DiffusionBee_MPS_arm64-2.5.1.dmg](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/releases/download/2.5.1/DiffusionBee_MPS_arm64-2.5.1.dmg)' },
@@ -446,7 +446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ComfyUI Review: Kostenlose Node-basierte UI für Stable Diffusion & Flux](/de/power-local-llm/comfyui-review) — die Node-Graph-Alternative für wiederverwendbare, teilbare Pipelines auf Mac, Windows und Linux.',
           '[Fooocus Review: Die einfachste lokale Stable-Diffusion-UI](/de/power-local-llm/fooocus-review) — eine weitere auf Einfachheit ausgelegte, plattformübergreifende Option mit browserbasierter statt nativer Oberfläche.',
           '[AUTOMATIC1111 Review: Stable Diffusion WebUI erklärt](/de/power-local-llm/automatic1111-review) — das Tool mit dem größten Erweiterungsökosystem für alle, die DiffusionBees eingebaute Funktionen übersteigen.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von DiffusionBee unter Bildgenerierungs-Apps.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von DiffusionBee unter Bildgenerierungs-Apps.',
         ],
       },
     },
@@ -463,7 +463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'DiffusionBee',
     title: 'DiffusionBee Review (2026) : Stable Diffusion local pour Mac',
     seoTitle: 'DiffusionBee Review 2026 : Stable Diffusion en un clic sur Mac',
-    intro: "DiffusionBee est une application macOS gratuite et open source (licence [AGPL-3.0](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/blob/master/LICENSE)), disponible sur [diffusionbee.com](https://diffusionbee.com) avec le code source sur [github.com/divamgupta/diffusionbee-stable-diffusion-ui](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui), qui intègre Stable Diffusion dans un installeur `.dmg` téléchargeable avec interface graphique — sans environnement Python, ligne de commande ni graphe de nœuds. C'est donc une alternative plus simple et plus soignée à [ComfyUI](/fr/power-local-llm/comfyui-review), [Fooocus](/fr/power-local-llm/fooocus-review) ou [AUTOMATIC1111](/fr/power-local-llm/automatic1111-review), au prix d'une exclusivité Mac et d'une configurabilité réduite. Cet article accompagne la fiche de DiffusionBee dans le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) et couvre les fonctionnalités réelles de l'app, sa licence, ses exigences matérielles, ses liens de téléchargement, ainsi qu'une comparaison avec les autres interfaces Stable Diffusion déjà passées en revue sur ce site.",
+    intro: "DiffusionBee est une application macOS gratuite et open source (licence [AGPL-3.0](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/blob/master/LICENSE)), disponible sur [diffusionbee.com](https://diffusionbee.com) avec le code source sur [github.com/divamgupta/diffusionbee-stable-diffusion-ui](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui), qui intègre Stable Diffusion dans un installeur `.dmg` téléchargeable avec interface graphique — sans environnement Python, ligne de commande ni graphe de nœuds. C'est donc une alternative plus simple et plus soignée à [ComfyUI](/fr/power-local-llm/comfyui-review), [Fooocus](/fr/power-local-llm/fooocus-review) ou [AUTOMATIC1111](/fr/power-local-llm/automatic1111-review), au prix d'une exclusivité Mac et d'une configurabilité réduite. Cet article accompagne la fiche de DiffusionBee dans le [Local LLM Software Directory](https://www.promptquorum.com/directory) et couvre les fonctionnalités réelles de l'app, sa licence, ses exigences matérielles, ses liens de téléchargement, ainsi qu'une comparaison avec les autres interfaces Stable Diffusion déjà passées en revue sur ce site.",
     metaDescription: "DiffusionBee review 2026 : application macOS gratuite sous licence AGPL-3.0 pour Stable Diffusion local, builds Apple Silicon et Intel, génération hors ligne, et comparaison avec ComfyUI, Fooocus et AUTOMATIC1111.",
     readTime: '9 min de lecture',
     targetKeywords: [
@@ -520,7 +520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fonctionnalités selon diffusionbee.com : texte-vers-image, image-vers-image, generative fill, upscaling, variantes d\'image, entraînement de modèles, images de contrôle et un mode canvas',
         ],
         callouts: [
-          { type: 'note', text: "DiffusionBee appartient au même sous-segment que [ComfyUI](/fr/power-local-llm/comfyui-review), [Fooocus](/fr/power-local-llm/fooocus-review) et [AUTOMATIC1111](/fr/power-local-llm/automatic1111-review) — ces quatre outils exécutent Stable Diffusion en local, mais DiffusionBee échange leur configurabilité contre une application Mac packagée, sans installation. Consultez le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) pour voir sa place parmi les autres outils de génération d'images locale." },
+          { type: 'note', text: "DiffusionBee appartient au même sous-segment que [ComfyUI](/fr/power-local-llm/comfyui-review), [Fooocus](/fr/power-local-llm/fooocus-review) et [AUTOMATIC1111](/fr/power-local-llm/automatic1111-review) — ces quatre outils exécutent Stable Diffusion en local, mais DiffusionBee échange leur configurabilité contre une application Mac packagée, sans installation. Consultez le [Local LLM Software Directory](https://www.promptquorum.com/directory) pour voir sa place parmi les autres outils de génération d'images locale." },
         ],
       },
       overview: {
@@ -554,7 +554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-diffusionbee',
         title: 'Télécharger DiffusionBee pour Mac',
-        content: "**Cet article accompagne la fiche de DiffusionBee dans le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — consultez-le pour voir comment il est classé parmi les autres outils locaux de génération d'images. Les liens de téléchargement directs ci-dessous proviennent de la page officielle [diffusionbee.com/download](https://diffusionbee.com/download) ; vérifiez toujours que vous êtes sur le domaine officiel avant de télécharger un fichier `.dmg`.",
+        content: "**Cet article accompagne la fiche de DiffusionBee dans le [Local LLM Software Directory](https://www.promptquorum.com/directory)** — consultez-le pour voir comment il est classé parmi les autres outils locaux de génération d'images. Les liens de téléchargement directs ci-dessous proviennent de la page officielle [diffusionbee.com/download](https://diffusionbee.com/download) ; vérifiez toujours que vous êtes sur le domaine officiel avant de télécharger un fichier `.dmg`.",
         columns: ['Plateforme', 'Téléchargement'],
         rows: [
           { 'Plateforme': 'macOS — Apple Silicon (M1/M2/M3)', 'Téléchargement': '[DiffusionBee_MPS_arm64-2.5.1.dmg](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/releases/download/2.5.1/DiffusionBee_MPS_arm64-2.5.1.dmg)' },
@@ -666,7 +666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "[ComfyUI Review : interface gratuite à base de nœuds pour Stable Diffusion & Flux](/fr/power-local-llm/comfyui-review) — l'alternative en graphe de nœuds pour des pipelines réutilisables et partageables sur Mac, Windows et Linux.",
           "[Fooocus Review : l'interface Stable Diffusion locale la plus simple](/fr/power-local-llm/fooocus-review) — une autre option axée sur la simplicité, multiplateforme, avec une interface web plutôt qu'une application native.",
           "[AUTOMATIC1111 Review : Stable Diffusion WebUI expliqué](/fr/power-local-llm/automatic1111-review) — l'outil avec le plus grand écosystème d'extensions pour ceux qui dépassent les fonctionnalités intégrées de DiffusionBee.",
-          "[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d'IA locale auquel appartient cet article, y compris la place de DiffusionBee parmi les applications de génération d'images.",
+          "[Local LLM Software Directory](https://www.promptquorum.com/directory) — le catalogue complet des outils d'IA locale auquel appartient cet article, y compris la place de DiffusionBee parmi les applications de génération d'images.",
         ],
       },
     },
@@ -683,7 +683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'DiffusionBee',
     title: 'DiffusionBeeレビュー (2026年): Mac向けローカルStable Diffusion',
     seoTitle: 'DiffusionBeeレビュー2026: Mac向けワンクリックStable Diffusion',
-    intro: "DiffusionBeeは無料でオープンソースの([AGPL-3.0](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/blob/master/LICENSE)ライセンス)macOSアプリで、[diffusionbee.com](https://diffusionbee.com)で公開されており、ソースコードは[github.com/divamgupta/diffusionbee-stable-diffusion-ui](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui)にあります。Stable Diffusionをダウンロード可能な`.dmg`インストーラーとグラフィカルインターフェースにパッケージ化しており、Python環境もターミナルコマンドもノードグラフも不要です。これにより、[ComfyUI](/ja/power-local-llm/comfyui-review)、[Fooocus](/ja/power-local-llm/fooocus-review)、[AUTOMATIC1111](/ja/power-local-llm/automatic1111-review)を自分で動かすよりもシンプルで洗練された代替手段となりますが、Mac専用で設定の自由度が低いという代償があります。本レビューは[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)におけるDiffusionBeeの掲載項目と対をなすもので、アプリの実際の機能セット、ライセンス、ハードウェア要件、ダウンロードリンク、そして本サイトでレビュー済みの他のStable Diffusionフロントエンドとの比較を扱います。",
+    intro: "DiffusionBeeは無料でオープンソースの([AGPL-3.0](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/blob/master/LICENSE)ライセンス)macOSアプリで、[diffusionbee.com](https://diffusionbee.com)で公開されており、ソースコードは[github.com/divamgupta/diffusionbee-stable-diffusion-ui](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui)にあります。Stable Diffusionをダウンロード可能な`.dmg`インストーラーとグラフィカルインターフェースにパッケージ化しており、Python環境もターミナルコマンドもノードグラフも不要です。これにより、[ComfyUI](/ja/power-local-llm/comfyui-review)、[Fooocus](/ja/power-local-llm/fooocus-review)、[AUTOMATIC1111](/ja/power-local-llm/automatic1111-review)を自分で動かすよりもシンプルで洗練された代替手段となりますが、Mac専用で設定の自由度が低いという代償があります。本レビューは[Local LLM Software Directory](https://www.promptquorum.com/directory)におけるDiffusionBeeの掲載項目と対をなすもので、アプリの実際の機能セット、ライセンス、ハードウェア要件、ダウンロードリンク、そして本サイトでレビュー済みの他のStable Diffusionフロントエンドとの比較を扱います。",
     metaDescription: "DiffusionBeeレビュー2026: 無料・AGPL-3.0ライセンスのローカルStable Diffusion用macOSアプリ。Apple SiliconとIntelビルド、オフライン生成、ComfyUI・Fooocus・AUTOMATIC1111との比較。",
     readTime: '9分で読めます',
     targetKeywords: [
@@ -740,7 +740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'diffusionbee.comによる機能: text-to-image、image-to-image、ジェネレーティブフィル、アップスケーリング、画像バリアント、モデルトレーニング、コントロール画像、キャンバスモード',
         ],
         callouts: [
-          { type: 'note', text: "DiffusionBeeは、[ComfyUI](/ja/power-local-llm/comfyui-review)、[Fooocus](/ja/power-local-llm/fooocus-review)、[AUTOMATIC1111](/ja/power-local-llm/automatic1111-review)と同じサブセグメントに属します — この4つはすべてStable Diffusionをローカルで実行しますが、DiffusionBeeはそれらの設定自由度を、セットアップ不要のパッケージ化されたMacアプリと引き換えにしています。他のローカル画像生成ツールの中での位置づけについては[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)を参照してください。" },
+          { type: 'note', text: "DiffusionBeeは、[ComfyUI](/ja/power-local-llm/comfyui-review)、[Fooocus](/ja/power-local-llm/fooocus-review)、[AUTOMATIC1111](/ja/power-local-llm/automatic1111-review)と同じサブセグメントに属します — この4つはすべてStable Diffusionをローカルで実行しますが、DiffusionBeeはそれらの設定自由度を、セットアップ不要のパッケージ化されたMacアプリと引き換えにしています。他のローカル画像生成ツールの中での位置づけについては[Local LLM Software Directory](https://www.promptquorum.com/directory)を参照してください。" },
         ],
       },
       overview: {
@@ -774,7 +774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-diffusionbee',
         title: 'Mac向けDiffusionBeeのダウンロード',
-        content: "**本レビューは、[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)におけるDiffusionBeeの掲載項目と対をなすものです** — 他のローカル画像生成ツールと並んでどう分類されているか、そちらも確認してください。以下の直接ダウンロードリンクは公式の[diffusionbee.com/download](https://diffusionbee.com/download)ページからのものです。`.dmg`ファイルをダウンロードする前に、必ず公式ドメインであることを確認してください。",
+        content: "**本レビューは、[Local LLM Software Directory](https://www.promptquorum.com/directory)におけるDiffusionBeeの掲載項目と対をなすものです** — 他のローカル画像生成ツールと並んでどう分類されているか、そちらも確認してください。以下の直接ダウンロードリンクは公式の[diffusionbee.com/download](https://diffusionbee.com/download)ページからのものです。`.dmg`ファイルをダウンロードする前に、必ず公式ドメインであることを確認してください。",
         columns: ['プラットフォーム', 'ダウンロード'],
         rows: [
           { 'プラットフォーム': 'macOS — Apple Silicon (M1/M2/M3)', 'ダウンロード': '[DiffusionBee_MPS_arm64-2.5.1.dmg](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/releases/download/2.5.1/DiffusionBee_MPS_arm64-2.5.1.dmg)' },
@@ -886,7 +886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ComfyUIレビュー: Stable Diffusion & Flux向けの無料ノードベースUI](/ja/power-local-llm/comfyui-review) — Mac、Windows、Linuxをまたいで再利用・共有可能なパイプラインを求める読者向けのノードグラフの代替。',
           '[Fooocusレビュー: 最もシンプルなローカルStable Diffusion UI](/ja/power-local-llm/fooocus-review) — ネイティブアプリではなくブラウザベースのインターフェースを持つ、もう一つのシンプルさ重視のクロスプラットフォームな選択肢。',
           '[AUTOMATIC1111レビュー: Stable Diffusion WebUIを解説](/ja/power-local-llm/automatic1111-review) — DiffusionBeeの内蔵機能セットでは物足りなくなった読者向けの、最大の拡張機能エコシステムを持つツール。',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。画像生成アプリの中でのDiffusionBeeの位置づけも含む。',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — 本記事が属するローカルAIツールの全カタログ。画像生成アプリの中でのDiffusionBeeの位置づけも含む。',
         ],
       },
     },
@@ -903,7 +903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'DiffusionBee',
     title: 'DiffusionBee评测(2026):Mac本地Stable Diffusion应用',
     seoTitle: 'DiffusionBee评测2026:一键式Mac版Stable Diffusion',
-    intro: "DiffusionBee是一款免费、开源(采用[AGPL-3.0](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/blob/master/LICENSE)许可证)的macOS应用,官网为[diffusionbee.com](https://diffusionbee.com),源代码位于[github.com/divamgupta/diffusionbee-stable-diffusion-ui](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui)。它将Stable Diffusion打包成一个可下载的`.dmg`安装包和图形界面——无需Python环境、终端命令或节点图。这使它成为比自己搭建[ComfyUI](/zh/power-local-llm/comfyui-review)、[Fooocus](/zh/power-local-llm/fooocus-review)或[AUTOMATIC1111](/zh/power-local-llm/automatic1111-review)更简单、更精致的替代方案,代价是仅支持Mac且可配置性较低。本文是[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中DiffusionBee条目的配套评测,涵盖该应用的真实功能集、许可证、硬件要求、下载链接,以及与本站已评测的其他Stable Diffusion前端的对比。",
+    intro: "DiffusionBee是一款免费、开源(采用[AGPL-3.0](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/blob/master/LICENSE)许可证)的macOS应用,官网为[diffusionbee.com](https://diffusionbee.com),源代码位于[github.com/divamgupta/diffusionbee-stable-diffusion-ui](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui)。它将Stable Diffusion打包成一个可下载的`.dmg`安装包和图形界面——无需Python环境、终端命令或节点图。这使它成为比自己搭建[ComfyUI](/zh/power-local-llm/comfyui-review)、[Fooocus](/zh/power-local-llm/fooocus-review)或[AUTOMATIC1111](/zh/power-local-llm/automatic1111-review)更简单、更精致的替代方案,代价是仅支持Mac且可配置性较低。本文是[本地LLM软件目录](https://www.promptquorum.com/directory)中DiffusionBee条目的配套评测,涵盖该应用的真实功能集、许可证、硬件要求、下载链接,以及与本站已评测的其他Stable Diffusion前端的对比。",
     metaDescription: "DiffusionBee评测2026:免费、AGPL-3.0许可的本地Stable Diffusion macOS应用,支持Apple Silicon与Intel构建、离线生成,并与ComfyUI、Fooocus、AUTOMATIC1111对比。",
     readTime: '9分钟阅读',
     targetKeywords: [
@@ -960,7 +960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '据diffusionbee.com介绍的功能:文生图、图生图、生成式填充、放大、图像变体、模型训练、控制图像和画布模式',
         ],
         callouts: [
-          { type: 'note', text: "DiffusionBee与[ComfyUI](/zh/power-local-llm/comfyui-review)、[Fooocus](/zh/power-local-llm/fooocus-review)和[AUTOMATIC1111](/zh/power-local-llm/automatic1111-review)属于同一细分领域——这四款工具都在本地运行Stable Diffusion,但DiffusionBee用它们的可配置性换取了一个打包好、无需配置的Mac应用。参见[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory),了解它在其他本地图像生成工具中的定位。" },
+          { type: 'note', text: "DiffusionBee与[ComfyUI](/zh/power-local-llm/comfyui-review)、[Fooocus](/zh/power-local-llm/fooocus-review)和[AUTOMATIC1111](/zh/power-local-llm/automatic1111-review)属于同一细分领域——这四款工具都在本地运行Stable Diffusion,但DiffusionBee用它们的可配置性换取了一个打包好、无需配置的Mac应用。参见[本地LLM软件目录](https://www.promptquorum.com/directory),了解它在其他本地图像生成工具中的定位。" },
         ],
       },
       overview: {
@@ -994,7 +994,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-diffusionbee',
         title: '下载Mac版DiffusionBee',
-        content: "**本文是[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中DiffusionBee条目的配套评测**——请查阅该目录,了解它与其他本地图像生成工具相比的分类方式。以下直接下载链接均来自官方的[diffusionbee.com/download](https://diffusionbee.com/download)页面;下载`.dmg`文件前请务必确认所处域名为官方域名。",
+        content: "**本文是[本地LLM软件目录](https://www.promptquorum.com/directory)中DiffusionBee条目的配套评测**——请查阅该目录,了解它与其他本地图像生成工具相比的分类方式。以下直接下载链接均来自官方的[diffusionbee.com/download](https://diffusionbee.com/download)页面;下载`.dmg`文件前请务必确认所处域名为官方域名。",
         columns: ['平台', '下载'],
         rows: [
           { '平台': 'macOS — Apple Silicon (M1/M2/M3)', '下载': '[DiffusionBee_MPS_arm64-2.5.1.dmg](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/releases/download/2.5.1/DiffusionBee_MPS_arm64-2.5.1.dmg)' },
@@ -1106,7 +1106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ComfyUI评测:面向Stable Diffusion与Flux的免费节点式UI](/zh/power-local-llm/comfyui-review) —— 面向希望在Mac、Windows和Linux上使用可复用、可分享流程的读者的节点图替代方案。',
           '[Fooocus评测:最简单的本地Stable Diffusion UI](/zh/power-local-llm/fooocus-review) —— 另一款注重简洁、跨平台的选择,采用基于浏览器而非原生应用的界面。',
           '[AUTOMATIC1111评测:详解Stable Diffusion WebUI](/zh/power-local-llm/automatic1111-review) —— 面向那些超出DiffusionBee内置功能集需求的读者,拥有最大扩展生态的工具。',
-          '[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) —— 本文所属的本地AI工具完整目录,包含DiffusionBee在图像生成类应用中的定位。',
+          '[本地LLM软件目录](https://www.promptquorum.com/directory) —— 本文所属的本地AI工具完整目录,包含DiffusionBee在图像生成类应用中的定位。',
         ],
       },
     },
@@ -1123,7 +1123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'DiffusionBee',
     title: 'DiffusionBee Review (2026): Stable Diffusion local para Mac',
     seoTitle: 'DiffusionBee Review 2026: Stable Diffusion con un clic en Mac',
-    intro: "DiffusionBee es una aplicación de macOS gratuita y de código abierto (licencia [AGPL-3.0](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/blob/master/LICENSE)), disponible en [diffusionbee.com](https://diffusionbee.com) con el código fuente en [github.com/divamgupta/diffusionbee-stable-diffusion-ui](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui), que empaqueta Stable Diffusion en un instalador `.dmg` descargable con interfaz gráfica, sin necesidad de un entorno Python, comandos de terminal ni un grafo de nodos. Esto la convierte en una alternativa más sencilla y pulida frente a usar [ComfyUI](/es/power-local-llm/comfyui-review), [Fooocus](/es/power-local-llm/fooocus-review) o [AUTOMATIC1111](/es/power-local-llm/automatic1111-review) por tu cuenta, a costa de ser exclusiva de Mac y menos configurable. Esta reseña acompaña la ficha de DiffusionBee en el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) y cubre el conjunto real de funciones de la app, su licencia, los requisitos de hardware, los enlaces de descarga y cómo se compara con las demás interfaces de Stable Diffusion reseñadas en este sitio.",
+    intro: "DiffusionBee es una aplicación de macOS gratuita y de código abierto (licencia [AGPL-3.0](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/blob/master/LICENSE)), disponible en [diffusionbee.com](https://diffusionbee.com) con el código fuente en [github.com/divamgupta/diffusionbee-stable-diffusion-ui](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui), que empaqueta Stable Diffusion en un instalador `.dmg` descargable con interfaz gráfica, sin necesidad de un entorno Python, comandos de terminal ni un grafo de nodos. Esto la convierte en una alternativa más sencilla y pulida frente a usar [ComfyUI](/es/power-local-llm/comfyui-review), [Fooocus](/es/power-local-llm/fooocus-review) o [AUTOMATIC1111](/es/power-local-llm/automatic1111-review) por tu cuenta, a costa de ser exclusiva de Mac y menos configurable. Esta reseña acompaña la ficha de DiffusionBee en el [Local LLM Software Directory](https://www.promptquorum.com/directory) y cubre el conjunto real de funciones de la app, su licencia, los requisitos de hardware, los enlaces de descarga y cómo se compara con las demás interfaces de Stable Diffusion reseñadas en este sitio.",
     metaDescription: "DiffusionBee review 2026: app de macOS gratuita bajo licencia AGPL-3.0 para Stable Diffusion local, builds de Apple Silicon e Intel, generación sin conexión y comparación con ComfyUI, Fooocus y AUTOMATIC1111.",
     readTime: '9 min de lectura',
     targetKeywords: [
@@ -1180,7 +1180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Funciones según diffusionbee.com: texto a imagen, imagen a imagen, generative fill, escalado, variantes de imagen, entrenamiento de modelos, imágenes de control y un modo lienzo',
         ],
         callouts: [
-          { type: 'note', text: "DiffusionBee pertenece al mismo subsegmento que [ComfyUI](/es/power-local-llm/comfyui-review), [Fooocus](/es/power-local-llm/fooocus-review) y [AUTOMATIC1111](/es/power-local-llm/automatic1111-review) — las cuatro ejecutan Stable Diffusion en local, pero DiffusionBee cambia su configurabilidad por una app de Mac empaquetada y sin instalación. Consulta el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para ver cómo encaja entre otras herramientas locales de generación de imágenes." },
+          { type: 'note', text: "DiffusionBee pertenece al mismo subsegmento que [ComfyUI](/es/power-local-llm/comfyui-review), [Fooocus](/es/power-local-llm/fooocus-review) y [AUTOMATIC1111](/es/power-local-llm/automatic1111-review) — las cuatro ejecutan Stable Diffusion en local, pero DiffusionBee cambia su configurabilidad por una app de Mac empaquetada y sin instalación. Consulta el [Local LLM Software Directory](https://www.promptquorum.com/directory) para ver cómo encaja entre otras herramientas locales de generación de imágenes." },
         ],
       },
       overview: {
@@ -1214,7 +1214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-diffusionbee',
         title: 'Descargar DiffusionBee para Mac',
-        content: "**Esta reseña acompaña la ficha de DiffusionBee en el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — consúltalo para ver cómo está clasificada junto a otras herramientas locales de generación de imágenes. Los enlaces de descarga directa de abajo proceden de la página oficial [diffusionbee.com/download](https://diffusionbee.com/download); confirma siempre que estás en el dominio oficial antes de descargar un archivo `.dmg`.",
+        content: "**Esta reseña acompaña la ficha de DiffusionBee en el [Local LLM Software Directory](https://www.promptquorum.com/directory)** — consúltalo para ver cómo está clasificada junto a otras herramientas locales de generación de imágenes. Los enlaces de descarga directa de abajo proceden de la página oficial [diffusionbee.com/download](https://diffusionbee.com/download); confirma siempre que estás en el dominio oficial antes de descargar un archivo `.dmg`.",
         columns: ['Plataforma', 'Descarga'],
         rows: [
           { 'Plataforma': 'macOS — Apple Silicon (M1/M2/M3)', 'Descarga': '[DiffusionBee_MPS_arm64-2.5.1.dmg](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/releases/download/2.5.1/DiffusionBee_MPS_arm64-2.5.1.dmg)' },
@@ -1326,7 +1326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de ComfyUI: UI gratuita basada en nodos para Stable Diffusion y Flux](/es/power-local-llm/comfyui-review) — la alternativa en grafo de nodos para lectores que quieren pipelines reutilizables y compartibles en Mac, Windows y Linux.',
           '[Reseña de Fooocus: la UI local de Stable Diffusion más sencilla](/es/power-local-llm/fooocus-review) — otra opción centrada en la simplicidad, multiplataforma, con interfaz web en lugar de app nativa.',
           '[Reseña de AUTOMATIC1111: Stable Diffusion WebUI explicado](/es/power-local-llm/automatic1111-review) — la herramienta con el mayor ecosistema de extensiones para quienes se quedan cortos con las funciones integradas de DiffusionBee.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja DiffusionBee entre las apps de generación de imágenes.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja DiffusionBee entre las apps de generación de imágenes.',
         ],
       },
     },
@@ -1343,7 +1343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'DiffusionBee',
     title: 'DiffusionBee Review (2026): Stable Diffusion local para Mac',
     seoTitle: 'DiffusionBee Review 2026: Stable Diffusion em um clique no Mac',
-    intro: "O DiffusionBee é um aplicativo macOS gratuito e de código aberto (licença [AGPL-3.0](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/blob/master/LICENSE)), disponível em [diffusionbee.com](https://diffusionbee.com) com o código-fonte em [github.com/divamgupta/diffusionbee-stable-diffusion-ui](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui), que embala o Stable Diffusion em um instalador `.dmg` baixável com interface gráfica — sem precisar de ambiente Python, comandos de terminal ou grafo de nós. Isso o torna uma alternativa mais simples e polida a rodar [ComfyUI](/pt/power-local-llm/comfyui-review), [Fooocus](/pt/power-local-llm/fooocus-review) ou [AUTOMATIC1111](/pt/power-local-llm/automatic1111-review) por conta própria, ao custo de ser exclusivo para Mac e menos configurável. Esta análise é complementar à ficha do DiffusionBee no [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) e cobre o conjunto real de funcionalidades do app, sua licença, requisitos de hardware, links de download e como ele se compara às outras interfaces de Stable Diffusion já avaliadas neste site.",
+    intro: "O DiffusionBee é um aplicativo macOS gratuito e de código aberto (licença [AGPL-3.0](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/blob/master/LICENSE)), disponível em [diffusionbee.com](https://diffusionbee.com) com o código-fonte em [github.com/divamgupta/diffusionbee-stable-diffusion-ui](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui), que embala o Stable Diffusion em um instalador `.dmg` baixável com interface gráfica — sem precisar de ambiente Python, comandos de terminal ou grafo de nós. Isso o torna uma alternativa mais simples e polida a rodar [ComfyUI](/pt/power-local-llm/comfyui-review), [Fooocus](/pt/power-local-llm/fooocus-review) ou [AUTOMATIC1111](/pt/power-local-llm/automatic1111-review) por conta própria, ao custo de ser exclusivo para Mac e menos configurável. Esta análise é complementar à ficha do DiffusionBee no [Local LLM Software Directory](https://www.promptquorum.com/directory) e cobre o conjunto real de funcionalidades do app, sua licença, requisitos de hardware, links de download e como ele se compara às outras interfaces de Stable Diffusion já avaliadas neste site.",
     metaDescription: "DiffusionBee review 2026: app macOS gratuito sob licença AGPL-3.0 para Stable Diffusion local, builds para Apple Silicon e Intel, geração offline e comparação com ComfyUI, Fooocus e AUTOMATIC1111.",
     readTime: '9 min de leitura',
     targetKeywords: [
@@ -1400,7 +1400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Funcionalidades segundo diffusionbee.com: texto para imagem, imagem para imagem, generative fill, upscaling, variantes de imagem, treinamento de modelos, imagens de controle e um modo canvas',
         ],
         callouts: [
-          { type: 'note', text: "O DiffusionBee está no mesmo subsegmento que [ComfyUI](/pt/power-local-llm/comfyui-review), [Fooocus](/pt/power-local-llm/fooocus-review) e [AUTOMATIC1111](/pt/power-local-llm/automatic1111-review) — os quatro rodam Stable Diffusion localmente, mas o DiffusionBee troca a configurabilidade deles por um app Mac empacotado, sem instalação. Veja o [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) para entender onde ele se encaixa entre outras ferramentas locais de geração de imagens." },
+          { type: 'note', text: "O DiffusionBee está no mesmo subsegmento que [ComfyUI](/pt/power-local-llm/comfyui-review), [Fooocus](/pt/power-local-llm/fooocus-review) e [AUTOMATIC1111](/pt/power-local-llm/automatic1111-review) — os quatro rodam Stable Diffusion localmente, mas o DiffusionBee troca a configurabilidade deles por um app Mac empacotado, sem instalação. Veja o [Local LLM Software Directory](https://www.promptquorum.com/directory) para entender onde ele se encaixa entre outras ferramentas locais de geração de imagens." },
         ],
       },
       overview: {
@@ -1434,7 +1434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-diffusionbee',
         title: 'Baixar o DiffusionBee para Mac',
-        content: "**Esta análise é complementar à ficha do DiffusionBee no [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — consulte-o para ver como ele é classificado junto a outras ferramentas locais de geração de imagens. Os links de download direto abaixo vêm da página oficial [diffusionbee.com/download](https://diffusionbee.com/download); sempre confirme que está no domínio oficial antes de baixar um arquivo `.dmg`.",
+        content: "**Esta análise é complementar à ficha do DiffusionBee no [Local LLM Software Directory](https://www.promptquorum.com/directory)** — consulte-o para ver como ele é classificado junto a outras ferramentas locais de geração de imagens. Os links de download direto abaixo vêm da página oficial [diffusionbee.com/download](https://diffusionbee.com/download); sempre confirme que está no domínio oficial antes de baixar um arquivo `.dmg`.",
         columns: ['Plataforma', 'Download'],
         rows: [
           { 'Plataforma': 'macOS — Apple Silicon (M1/M2/M3)', 'Download': '[DiffusionBee_MPS_arm64-2.5.1.dmg](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/releases/download/2.5.1/DiffusionBee_MPS_arm64-2.5.1.dmg)' },
@@ -1546,7 +1546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ComfyUI Review: UI gratuita baseada em nós para Stable Diffusion & Flux](/pt/power-local-llm/comfyui-review) — a alternativa em grafo de nós para leitores que querem pipelines reutilizáveis e compartilháveis no Mac, Windows e Linux.',
           '[Fooocus Review: a UI local de Stable Diffusion mais simples](/pt/power-local-llm/fooocus-review) — outra opção focada em simplicidade, multiplataforma, com interface baseada em navegador em vez de app nativo.',
           '[AUTOMATIC1111 Review: Stable Diffusion WebUI explicado](/pt/power-local-llm/automatic1111-review) — a ferramenta com o maior ecossistema de extensões para leitores que ultrapassam o conjunto de funcionalidades embutidas do DiffusionBee.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o DiffusionBee se encaixa entre os apps de geração de imagens.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o DiffusionBee se encaixa entre os apps de geração de imagens.',
         ],
       },
     },
@@ -1563,7 +1563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'DiffusionBee',
     title: 'مراجعة DiffusionBee (2026): تشغيل Stable Diffusion محليًا على Mac',
     seoTitle: 'مراجعة DiffusionBee 2026: Stable Diffusion بنقرة واحدة على Mac',
-    intro: "DiffusionBee تطبيق macOS مجاني ومفتوح المصدر (برخصة [AGPL-3.0](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/blob/master/LICENSE))، متاح على [diffusionbee.com](https://diffusionbee.com) وكوده المصدري على [github.com/divamgupta/diffusionbee-stable-diffusion-ui](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui)، يُغلّف Stable Diffusion داخل حزمة تثبيت `.dmg` قابلة للتنزيل مع واجهة رسومية — دون الحاجة إلى بيئة Python أو أوامر طرفية أو مخطط عُقد. هذا يجعله بديلاً أبسط وأكثر احترافية لتشغيل [ComfyUI](/ar/power-local-llm/comfyui-review) أو [Fooocus](/ar/power-local-llm/fooocus-review) أو [AUTOMATIC1111](/ar/power-local-llm/automatic1111-review) بنفسك، على حساب الاقتصار على Mac وانخفاض إمكانية التخصيص. هذه المراجعة مكمّلة لصفحة DiffusionBee في [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)، وتتناول مجموعة الميزات الفعلية للتطبيق، ورخصته، ومتطلبات الأجهزة، وروابط التنزيل، ومقارنته بواجهات Stable Diffusion الأخرى التي راجعها هذا الموقع.",
+    intro: "DiffusionBee تطبيق macOS مجاني ومفتوح المصدر (برخصة [AGPL-3.0](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/blob/master/LICENSE))، متاح على [diffusionbee.com](https://diffusionbee.com) وكوده المصدري على [github.com/divamgupta/diffusionbee-stable-diffusion-ui](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui)، يُغلّف Stable Diffusion داخل حزمة تثبيت `.dmg` قابلة للتنزيل مع واجهة رسومية — دون الحاجة إلى بيئة Python أو أوامر طرفية أو مخطط عُقد. هذا يجعله بديلاً أبسط وأكثر احترافية لتشغيل [ComfyUI](/ar/power-local-llm/comfyui-review) أو [Fooocus](/ar/power-local-llm/fooocus-review) أو [AUTOMATIC1111](/ar/power-local-llm/automatic1111-review) بنفسك، على حساب الاقتصار على Mac وانخفاض إمكانية التخصيص. هذه المراجعة مكمّلة لصفحة DiffusionBee في [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory)، وتتناول مجموعة الميزات الفعلية للتطبيق، ورخصته، ومتطلبات الأجهزة، وروابط التنزيل، ومقارنته بواجهات Stable Diffusion الأخرى التي راجعها هذا الموقع.",
     metaDescription: "مراجعة DiffusionBee 2026: تطبيق macOS مجاني برخصة AGPL-3.0 لتشغيل Stable Diffusion محليًا، إصدارات لـ Apple Silicon وIntel، توليد بلا اتصال، ومقارنة مع ComfyUI وFooocus وAUTOMATIC1111.",
     readTime: '9 دقائق قراءة',
     targetKeywords: [
@@ -1620,7 +1620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الميزات وفق diffusionbee.com: تحويل النص إلى صورة، الصورة إلى صورة، التعبئة التوليدية، تحسين الدقة، متغيرات الصور، تدريب النماذج، صور التحكّم، ووضع لوحة الرسم',
         ],
         callouts: [
-          { type: 'note', text: "ينتمي DiffusionBee إلى نفس الفئة الفرعية التي تضم [ComfyUI](/ar/power-local-llm/comfyui-review) و[Fooocus](/ar/power-local-llm/fooocus-review) و[AUTOMATIC1111](/ar/power-local-llm/automatic1111-review) — تشغّل الأدوات الأربع Stable Diffusion محليًا، لكن DiffusionBee يقايض إمكانية تخصيصها بتطبيق Mac معبأ لا يتطلب إعدادًا. راجع [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) لمعرفة موقعه بين أدوات توليد الصور المحلية الأخرى." },
+          { type: 'note', text: "ينتمي DiffusionBee إلى نفس الفئة الفرعية التي تضم [ComfyUI](/ar/power-local-llm/comfyui-review) و[Fooocus](/ar/power-local-llm/fooocus-review) و[AUTOMATIC1111](/ar/power-local-llm/automatic1111-review) — تشغّل الأدوات الأربع Stable Diffusion محليًا، لكن DiffusionBee يقايض إمكانية تخصيصها بتطبيق Mac معبأ لا يتطلب إعدادًا. راجع [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory) لمعرفة موقعه بين أدوات توليد الصور المحلية الأخرى." },
         ],
       },
       overview: {
@@ -1654,7 +1654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-diffusionbee',
         title: 'تنزيل DiffusionBee لأجهزة Mac',
-        content: "**هذه المراجعة مكمّلة لصفحة DiffusionBee في [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — راجعه لمعرفة كيفية تصنيفه إلى جانب أدوات توليد الصور المحلية الأخرى. روابط التنزيل المباشر أدناه من الصفحة الرسمية [diffusionbee.com/download](https://diffusionbee.com/download)؛ تأكد دائمًا من أنك على النطاق الرسمي قبل تنزيل ملف `.dmg`.",
+        content: "**هذه المراجعة مكمّلة لصفحة DiffusionBee في [دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory)** — راجعه لمعرفة كيفية تصنيفه إلى جانب أدوات توليد الصور المحلية الأخرى. روابط التنزيل المباشر أدناه من الصفحة الرسمية [diffusionbee.com/download](https://diffusionbee.com/download)؛ تأكد دائمًا من أنك على النطاق الرسمي قبل تنزيل ملف `.dmg`.",
         columns: ['المنصة', 'التنزيل'],
         rows: [
           { 'المنصة': 'macOS — Apple Silicon (M1/M2/M3)', 'التنزيل': '[DiffusionBee_MPS_arm64-2.5.1.dmg](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/releases/download/2.5.1/DiffusionBee_MPS_arm64-2.5.1.dmg)' },
@@ -1766,7 +1766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة ComfyUI: واجهة مجانية قائمة على العُقد لـ Stable Diffusion وFlux](/ar/power-local-llm/comfyui-review) — البديل القائم على مخطط العُقد للقراء الراغبين في مسارات عمل قابلة لإعادة الاستخدام والمشاركة على Mac وWindows وLinux.',
           '[مراجعة Fooocus: أبسط واجهة محلية لـ Stable Diffusion](/ar/power-local-llm/fooocus-review) — خيار آخر يركز على البساطة، متعدد المنصات، بواجهة عبر المتصفح بدلاً من تطبيق أصلي.',
           '[مراجعة AUTOMATIC1111: شرح Stable Diffusion WebUI](/ar/power-local-llm/automatic1111-review) — الأداة ذات أكبر نظام بيئي للإضافات لمن تجاوزت احتياجاتهم مجموعة ميزات DiffusionBee المدمجة.',
-          '[دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال، بما في ذلك موقع DiffusionBee بين تطبيقات توليد الصور.',
+          '[دليل برمجيات الذكاء الاصطناعي المحلي](https://www.promptquorum.com/directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلي الذي ينتمي إليه هذا المقال، بما في ذلك موقع DiffusionBee بين تطبيقات توليد الصور.',
         ],
       },
     },
@@ -1783,7 +1783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'DiffusionBee',
     title: 'DiffusionBee 리뷰 (2026년): Mac용 로컬 Stable Diffusion',
     seoTitle: 'DiffusionBee 리뷰 2026: Mac용 원클릭 Stable Diffusion',
-    intro: "DiffusionBee는 무료 오픈소스([AGPL-3.0](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/blob/master/LICENSE) 라이선스) macOS 앱으로, [diffusionbee.com](https://diffusionbee.com)에서 제공되며 소스 코드는 [github.com/divamgupta/diffusionbee-stable-diffusion-ui](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui)에 있습니다. Stable Diffusion을 다운로드 가능한 `.dmg` 설치 파일과 그래픽 인터페이스로 패키징하여, Python 환경이나 터미널 명령어, 노드 그래프가 전혀 필요 없습니다. 이는 [ComfyUI](/ko/power-local-llm/comfyui-review), [Fooocus](/ko/power-local-llm/fooocus-review), [AUTOMATIC1111](/ko/power-local-llm/automatic1111-review)을 직접 실행하는 것보다 더 간단하고 정돈된 대안이 되지만, Mac 전용이며 설정 자유도가 낮다는 대가가 있습니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 등재된 DiffusionBee 항목과 짝을 이루며, 앱의 실제 기능 세트, 라이선스, 하드웨어 요구 사항, 다운로드 링크, 그리고 본 사이트에서 이미 리뷰한 다른 Stable Diffusion 프런트엔드와의 비교를 다룹니다.",
+    intro: "DiffusionBee는 무료 오픈소스([AGPL-3.0](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/blob/master/LICENSE) 라이선스) macOS 앱으로, [diffusionbee.com](https://diffusionbee.com)에서 제공되며 소스 코드는 [github.com/divamgupta/diffusionbee-stable-diffusion-ui](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui)에 있습니다. Stable Diffusion을 다운로드 가능한 `.dmg` 설치 파일과 그래픽 인터페이스로 패키징하여, Python 환경이나 터미널 명령어, 노드 그래프가 전혀 필요 없습니다. 이는 [ComfyUI](/ko/power-local-llm/comfyui-review), [Fooocus](/ko/power-local-llm/fooocus-review), [AUTOMATIC1111](/ko/power-local-llm/automatic1111-review)을 직접 실행하는 것보다 더 간단하고 정돈된 대안이 되지만, Mac 전용이며 설정 자유도가 낮다는 대가가 있습니다. 이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 등재된 DiffusionBee 항목과 짝을 이루며, 앱의 실제 기능 세트, 라이선스, 하드웨어 요구 사항, 다운로드 링크, 그리고 본 사이트에서 이미 리뷰한 다른 Stable Diffusion 프런트엔드와의 비교를 다룹니다.",
     metaDescription: "DiffusionBee 리뷰 2026: 무료 AGPL-3.0 라이선스의 로컬 Stable Diffusion용 macOS 앱, Apple Silicon 및 Intel 빌드, 오프라인 생성, ComfyUI·Fooocus·AUTOMATIC1111과의 비교.",
     readTime: '9분 소요',
     targetKeywords: [
@@ -1840,7 +1840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'diffusionbee.com에 따른 기능: 텍스트-이미지 변환, 이미지-이미지 변환, 생성형 채우기, 업스케일링, 이미지 변형, 모델 훈련, 컨트롤 이미지, 캔버스 모드',
         ],
         callouts: [
-          { type: 'note', text: "DiffusionBee는 [ComfyUI](/ko/power-local-llm/comfyui-review), [Fooocus](/ko/power-local-llm/fooocus-review), [AUTOMATIC1111](/ko/power-local-llm/automatic1111-review)과 같은 하위 세그먼트에 속합니다 — 네 가지 모두 Stable Diffusion을 로컬에서 실행하지만, DiffusionBee는 그들의 설정 자유도를 설정이 필요 없는 패키징된 Mac 앱과 맞바꿉니다. 다른 로컬 이미지 생성 도구들 사이에서의 위치는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)를 참고하세요." },
+          { type: 'note', text: "DiffusionBee는 [ComfyUI](/ko/power-local-llm/comfyui-review), [Fooocus](/ko/power-local-llm/fooocus-review), [AUTOMATIC1111](/ko/power-local-llm/automatic1111-review)과 같은 하위 세그먼트에 속합니다 — 네 가지 모두 Stable Diffusion을 로컬에서 실행하지만, DiffusionBee는 그들의 설정 자유도를 설정이 필요 없는 패키징된 Mac 앱과 맞바꿉니다. 다른 로컬 이미지 생성 도구들 사이에서의 위치는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)를 참고하세요." },
         ],
       },
       overview: {
@@ -1874,7 +1874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-diffusionbee',
         title: 'Mac용 DiffusionBee 다운로드',
-        content: "**이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 등재된 DiffusionBee 항목과 짝을 이룹니다** — 다른 로컬 이미지 생성 도구들과 함께 어떻게 분류되어 있는지 확인해 보세요. 아래의 직접 다운로드 링크는 공식 [diffusionbee.com/download](https://diffusionbee.com/download) 페이지에서 가져온 것입니다. `.dmg` 파일을 다운로드하기 전에 항상 공식 도메인에 있는지 확인하세요.",
+        content: "**이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 등재된 DiffusionBee 항목과 짝을 이룹니다** — 다른 로컬 이미지 생성 도구들과 함께 어떻게 분류되어 있는지 확인해 보세요. 아래의 직접 다운로드 링크는 공식 [diffusionbee.com/download](https://diffusionbee.com/download) 페이지에서 가져온 것입니다. `.dmg` 파일을 다운로드하기 전에 항상 공식 도메인에 있는지 확인하세요.",
         columns: ['플랫폼', '다운로드'],
         rows: [
           { '플랫폼': 'macOS — Apple Silicon (M1/M2/M3)', '다운로드': '[DiffusionBee_MPS_arm64-2.5.1.dmg](https://github.com/divamgupta/diffusionbee-stable-diffusion-ui/releases/download/2.5.1/DiffusionBee_MPS_arm64-2.5.1.dmg)' },
@@ -1986,7 +1986,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[ComfyUI 리뷰: Stable Diffusion 및 Flux를 위한 무료 노드 기반 UI](/ko/power-local-llm/comfyui-review) — Mac, Windows, Linux 전반에서 재사용 및 공유 가능한 파이프라인을 원하는 독자를 위한 노드 그래프 대안.',
           '[Fooocus 리뷰: 가장 간단한 로컬 Stable Diffusion UI](/ko/power-local-llm/fooocus-review) — 네이티브 앱 대신 브라우저 기반 인터페이스를 사용하는, 단순함에 초점을 맞춘 또 다른 크로스 플랫폼 선택지.',
           '[AUTOMATIC1111 리뷰: Stable Diffusion WebUI 해설](/ko/power-local-llm/automatic1111-review) — DiffusionBee의 내장 기능 세트를 넘어서는 독자를 위한, 가장 큰 확장 기능 생태계를 가진 도구.',
-          '[로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그로, 이미지 생성 앱 중 DiffusionBee의 위치도 포함.',
+          '[로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그로, 이미지 생성 앱 중 DiffusionBee의 위치도 포함.',
         ],
       },
     },

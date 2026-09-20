@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Integrates with Claude Code, Cursor, LangGraph, CrewAI, OpenClaw, and Model Context Protocol (MCP) tooling',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to cognee\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how cognee compares at a glance to dozens of other local and self-hosted AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to cognee\'s entry in the [Local LLM Software Directory](/directory) — see that page for how cognee compares at a glance to dozens of other local and self-hosted AI tools.' },
         ],
       },
       overview: {
@@ -212,7 +212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'txtai', 'Best known for': 'Lightweight embedded vector database and semantic search library', 'Link': '[txtai review](/power-local-llm/txtai-embedded-vector-database-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'This is not an exhaustive list of memory and retrieval tools — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including cognee\'s own directory entry.',
+        note: 'This is not an exhaustive list of memory and retrieval tools — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including cognee\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -268,7 +268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including cognee\'s own directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including cognee\'s own directory entry.',
           '[Chroma Review](/power-local-llm/chroma-review) — a self-hostable vector database often paired with retrieval and memory layers like cognee.',
           '[LangChain Review](/power-local-llm/langchain-review) — a general-purpose LLM application framework that can be combined with cognee\'s memory layer.',
           '[LlamaIndex Review](/power-local-llm/llamaindex-rag-framework-review) — a data-indexing framework for LLM applications, for comparison against cognee\'s knowledge-graph approach.',
@@ -378,7 +378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Integriert sich mit Claude Code, Cursor, LangGraph, CrewAI, OpenClaw und Model-Context-Protocol-(MCP)-Tooling',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der Deep-Dive-Begleiter zu cognees Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie, wie sich cognee im Vergleich zu Dutzenden anderer lokaler und selbst gehosteter KI-Tools auf einen Blick schlägt.' },
+          { type: 'note', text: 'Diese Review ist der Deep-Dive-Begleiter zu cognees Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie, wie sich cognee im Vergleich zu Dutzenden anderer lokaler und selbst gehosteter KI-Tools auf einen Blick schlägt.' },
         ],
       },
       overview: {
@@ -518,7 +518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'txtai', 'Best known for': 'Leichtgewichtige eingebettete Vektordatenbank und Bibliothek für semantische Suche', 'Link': '[txtai Review](/de/power-local-llm/txtai-embedded-vector-database-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Dies ist keine erschöpfende Liste von Gedächtnis- und Retrieval-Tools — siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich cognees eigenem Directory-Eintrag.',
+        note: 'Dies ist keine erschöpfende Liste von Gedächtnis- und Retrieval-Tools — siehe das [Local LLM Software Directory](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich cognees eigenem Directory-Eintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich cognees eigenem Directory-Eintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich cognees eigenem Directory-Eintrag.',
           '[Chroma Review](/de/power-local-llm/chroma-review) — eine selbst hostbare Vektordatenbank, die häufig mit Retrieval- und Gedächtnisschichten wie cognee kombiniert wird.',
           '[LangChain Review](/de/power-local-llm/langchain-review) — ein Allzweck-Framework für LLM-Anwendungen, das mit cognees Gedächtnisschicht kombiniert werden kann.',
           '[LlamaIndex Review](/de/power-local-llm/llamaindex-rag-framework-review) — ein Daten-Indexierungs-Framework für LLM-Anwendungen, zum Vergleich mit cognees Wissensgraph-Ansatz.',
@@ -684,7 +684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'S\'intègre avec Claude Code, Cursor, LangGraph, CrewAI, OpenClaw et les outils Model Context Protocol (MCP)',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de cognee dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment cognee se compare en un coup d\'œil à des dizaines d\'autres outils IA locaux et auto-hébergés.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de cognee dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir comment cognee se compare en un coup d\'œil à des dizaines d\'autres outils IA locaux et auto-hébergés.' },
         ],
       },
       overview: {
@@ -824,7 +824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'txtai', 'Best known for': 'Base de données vectorielle embarquée légère et bibliothèque de recherche sémantique', 'Link': '[Avis txtai](/fr/power-local-llm/txtai-embedded-vector-database-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Ceci n\'est pas une liste exhaustive des outils de mémoire et de récupération — voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée de cognee lui-même.',
+        note: 'Ceci n\'est pas une liste exhaustive des outils de mémoire et de récupération — voir le [Local LLM Software Directory](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée de cognee lui-même.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -880,7 +880,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant l\'entrée de cognee lui-même.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant l\'entrée de cognee lui-même.',
           '[Avis Chroma](/fr/power-local-llm/chroma-review) — une base de données vectorielle auto-hébergeable souvent associée aux couches de récupération et de mémoire comme cognee.',
           '[Avis LangChain](/fr/power-local-llm/langchain-review) — un framework généraliste pour applications LLM qui peut être combiné avec la couche de mémoire de cognee.',
           '[Avis LlamaIndex](/fr/power-local-llm/llamaindex-rag-framework-review) — un framework d\'indexation de données pour applications LLM, à comparer avec l\'approche de graphe de connaissances de cognee.',
@@ -990,7 +990,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Claude Code、Cursor、LangGraph、CrewAI、OpenClaw、Model Context Protocol（MCP）ツールと統合',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるcogneeのエントリーの詳細版です。cogneeが他の多数のローカル・セルフホスト型AIツールと比べてどう位置づけられるかは、そちらのページをご覧ください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるcogneeのエントリーの詳細版です。cogneeが他の多数のローカル・セルフホスト型AIツールと比べてどう位置づけられるかは、そちらのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1130,7 +1130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'txtai', 'Best known for': '軽量な組み込み型ベクトルデータベースとセマンティック検索ライブラリ', 'Link': '[txtaiレビュー](/ja/power-local-llm/txtai-embedded-vector-database-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'これはメモリ・検索ツールの網羅的なリストではありません——cognee自身のディレクトリエントリーを含む、完全で定期的に更新されるカタログについては[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはメモリ・検索ツールの網羅的なリストではありません——cognee自身のディレクトリエントリーを含む、完全で定期的に更新されるカタログについては[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1186,7 +1186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、cognee自身のディレクトリエントリーを含むローカルAIツールの完全なカタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — この記事が属する、cognee自身のディレクトリエントリーを含むローカルAIツールの完全なカタログ。',
           '[Chroomaレビュー](/ja/power-local-llm/chroma-review) — cogneeのような検索・メモリ層とよく組み合わされる、セルフホスト可能なベクトルデータベース。',
           '[LangChainレビュー](/ja/power-local-llm/langchain-review) — cogneeのメモリ層と組み合わせられる汎用LLMアプリケーションフレームワーク。',
           '[LlamaIndexレビュー](/ja/power-local-llm/llamaindex-rag-framework-review) — cogneeの知識グラフアプローチと比較するための、LLMアプリケーション向けデータインデックス作成フレームワーク。',
@@ -1296,7 +1296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '与Claude Code、Cursor、LangGraph、CrewAI、OpenClaw及Model Context Protocol（MCP）工具集成',
         ],
         callouts: [
-          { type: 'note', text: '本评测是cognee在[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)条目的深度补充——该页面展示了cognee与数十款其他本地及自托管AI工具的一览对比。' },
+          { type: 'note', text: '本评测是cognee在[本地LLM软件目录](/zh/directory)条目的深度补充——该页面展示了cognee与数十款其他本地及自托管AI工具的一览对比。' },
         ],
       },
       overview: {
@@ -1436,7 +1436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'txtai', 'Best known for': '轻量级嵌入式向量数据库和语义搜索库', 'Link': '[txtai评测](/zh/power-local-llm/txtai-embedded-vector-database-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: '这并非记忆与检索工具的完整列表——完整且定期更新的目录（包括cognee自身的条目）请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非记忆与检索工具的完整列表——完整且定期更新的目录（包括cognee自身的条目）请参阅[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1492,7 +1492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地AI工具目录，包含cognee自身的目录条目。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的完整本地AI工具目录，包含cognee自身的目录条目。',
           '[Chroma评测](/zh/power-local-llm/chroma-review) — 一款可自托管的向量数据库，常与cognee这类检索和记忆层搭配使用。',
           '[LangChain评测](/zh/power-local-llm/langchain-review) — 一个通用LLM应用框架，可与cognee的记忆层结合使用。',
           '[LlamaIndex评测](/zh/power-local-llm/llamaindex-rag-framework-review) — 一个LLM应用数据索引框架，可与cognee的知识图谱方案对比。',
@@ -1602,7 +1602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Se integra con Claude Code, Cursor, LangGraph, CrewAI, OpenClaw y herramientas del Model Context Protocol (MCP)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de cognee en el [Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara cognee de un vistazo con docenas de otras herramientas de IA locales y autoalojadas.' },
+          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de cognee en el [Directorio de software de LLM local](/es/directory) — consulta esa página para ver cómo se compara cognee de un vistazo con docenas de otras herramientas de IA locales y autoalojadas.' },
         ],
       },
       overview: {
@@ -1742,7 +1742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'txtai', 'Best known for': 'Base de datos vectorial embebida ligera y librería de búsqueda semántica', 'Link': '[Reseña de txtai](/es/power-local-llm/txtai-embedded-vector-database-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Esta no es una lista exhaustiva de herramientas de memoria y recuperación — consulta el [Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado periódicamente, incluyendo la propia entrada de cognee.',
+        note: 'Esta no es una lista exhaustiva de herramientas de memoria y recuperación — consulta el [Directorio de software de LLM local](/es/directory) para el catálogo completo y actualizado periódicamente, incluyendo la propia entrada de cognee.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1798,7 +1798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de LLM local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la propia entrada de cognee.',
+          '[Directorio de software de LLM local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la propia entrada de cognee.',
           '[Reseña de Chroma](/es/power-local-llm/chroma-review) — una base de datos vectorial autoalojable que suele combinarse con capas de recuperación y memoria como cognee.',
           '[Reseña de LangChain](/es/power-local-llm/langchain-review) — un framework de aplicaciones LLM de propósito general que puede combinarse con la capa de memoria de cognee.',
           '[Reseña de LlamaIndex](/es/power-local-llm/llamaindex-rag-framework-review) — un framework de indexación de datos para aplicaciones LLM, para comparar con el enfoque de grafo de conocimiento de cognee.',
@@ -1908,7 +1908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Integra-se com Claude Code, Cursor, LangGraph, CrewAI, OpenClaw e ferramentas do Model Context Protocol (MCP)',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do cognee no [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — consulte essa página para ver como o cognee se compara, em resumo, a dezenas de outras ferramentas de IA locais e auto-hospedadas.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do cognee no [Diretório de Software de LLM Local](/pt/directory) — consulte essa página para ver como o cognee se compara, em resumo, a dezenas de outras ferramentas de IA locais e auto-hospedadas.' },
         ],
       },
       overview: {
@@ -2048,7 +2048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'txtai', 'Best known for': 'Banco de dados vetorial embutido leve e biblioteca de busca semântica', 'Link': '[Análise do txtai](/pt/power-local-llm/txtai-embedded-vector-database-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'Esta não é uma lista exaustiva de ferramentas de memória e recuperação — veja o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do cognee.',
+        note: 'Esta não é uma lista exaustiva de ferramentas de memória e recuperação — veja o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do cognee.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2104,7 +2104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do cognee.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada do cognee.',
           '[Análise do Chroma](/pt/power-local-llm/chroma-review) — um banco de dados vetorial auto-hospedável frequentemente combinado com camadas de recuperação e memória como o cognee.',
           '[Análise do LangChain](/pt/power-local-llm/langchain-review) — um framework de aplicações LLM de propósito geral que pode ser combinado com a camada de memória do cognee.',
           '[Análise do LlamaIndex](/pt/power-local-llm/llamaindex-rag-framework-review) — um framework de indexação de dados para aplicações LLM, para comparação com a abordagem de grafo de conhecimento do cognee.',
@@ -2214,7 +2214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تتكامل مع Claude Code وCursor وLangGraph وCrewAI وOpenClaw وأدوات Model Context Protocol (MCP)',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الرفيق المعمّق لمُدخل cognee في [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف تقارن cognee بلمحة سريعة مع عشرات الأدوات المحلية والمستضافة ذاتيًا الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي الرفيق المعمّق لمُدخل cognee في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تقارن cognee بلمحة سريعة مع عشرات الأدوات المحلية والمستضافة ذاتيًا الأخرى.' },
         ],
       },
       overview: {
@@ -2354,7 +2354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'txtai', 'Best known for': 'قاعدة بيانات متجهية مضمَّنة خفيفة الوزن ومكتبة بحث دلالي', 'Link': '[مراجعة txtai](/ar/power-local-llm/txtai-embedded-vector-database-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'هذه ليست قائمة شاملة لأدوات الذاكرة والاسترجاع — راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل المُحدَّث بانتظام، بما في ذلك مُدخل cognee نفسه.',
+        note: 'هذه ليست قائمة شاملة لأدوات الذاكرة والاسترجاع — راجع [دليل برمجيات LLM المحلية](/ar/directory) للحصول على الكتالوج الكامل المُحدَّث بانتظام، بما في ذلك مُدخل cognee نفسه.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2410,7 +2410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مُدخل cognee نفسه.',
+          '[دليل برمجيات LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مُدخل cognee نفسه.',
           '[مراجعة Chroma](/ar/power-local-llm/chroma-review) — قاعدة بيانات متجهية قابلة للاستضافة الذاتية تُقرَن غالبًا مع طبقات استرجاع وذاكرة مثل cognee.',
           '[مراجعة LangChain](/ar/power-local-llm/langchain-review) — إطار عمل عام لتطبيقات LLM يمكن دمجه مع طبقة ذاكرة cognee.',
           '[مراجعة LlamaIndex](/ar/power-local-llm/llamaindex-rag-framework-review) — إطار فهرسة بيانات لتطبيقات LLM، للمقارنة مع نهج المخطط المعرفي في cognee.',
@@ -2520,7 +2520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Claude Code, Cursor, LangGraph, CrewAI, OpenClaw 및 Model Context Protocol(MCP) 도구와 통합됩니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 cognee 항목의 심층 버전입니다 — cognee가 수십 개의 다른 로컬 및 셀프 호스팅 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하십시오.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 cognee 항목의 심층 버전입니다 — cognee가 수십 개의 다른 로컬 및 셀프 호스팅 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {
@@ -2660,7 +2660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'txtai', 'Best known for': '경량 임베디드 벡터 데이터베이스 및 시맨틱 검색 라이브러리', 'Link': '[txtai 리뷰](/ko/power-local-llm/txtai-embedded-vector-database-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: '이는 메모리 및 검색 도구의 전체 목록이 아닙니다 — cognee 자체 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.',
+        note: '이는 메모리 및 검색 도구의 전체 목록이 아닙니다 — cognee 자체 디렉터리 항목을 포함한 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2716,7 +2716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한, cognee 자체 디렉터리 항목을 포함한 로컬 AI 도구의 전체 카탈로그입니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 글이 속한, cognee 자체 디렉터리 항목을 포함한 로컬 AI 도구의 전체 카탈로그입니다.',
           '[Chroma 리뷰](/ko/power-local-llm/chroma-review) — cognee와 같은 검색 및 메모리 레이어와 자주 함께 사용되는 셀프 호스팅 가능한 벡터 데이터베이스입니다.',
           '[LangChain 리뷰](/ko/power-local-llm/langchain-review) — cognee의 메모리 레이어와 결합할 수 있는 범용 LLM 애플리케이션 프레임워크입니다.',
           '[LlamaIndex 리뷰](/ko/power-local-llm/llamaindex-rag-framework-review) — cognee의 지식 그래프 접근 방식과 비교하기 위한, LLM 애플리케이션을 위한 데이터 인덱싱 프레임워크입니다.',

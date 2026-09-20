@@ -69,7 +69,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Bundles chat/agents, deep research, document editing, email (IMAP/SMTP), notes, tasks, calendar (CalDAV), and an image gallery/editor in one self-hosted workspace',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Odysseus\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Odysseus compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Odysseus\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Odysseus compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -142,14 +142,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'odysseus-competitors',
         title: 'Odysseus vs. Other Self-Hosted AI Workspaces',
-        content: 'Odysseus is one of several self-hosted, open-source tools that combine chat with additional productivity or agent features. Here is how it compares to others in that same space — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'Odysseus is one of several self-hosted, open-source tools that combine chat with additional productivity or agent features. Here is how it compares to others in that same space — see the [Local LLM Software Directory](/directory) for the full catalog.',
         items: [
           '**[Msty](https://msty.app)** — a desktop-first local AI chat app with a simpler, single-app install (no Docker required) but a narrower feature set than Odysseus\'s email/calendar/document bundle; see the [Msty review](/power-local-llm/msty-review).',
           '**[AnythingLLM](https://anythingllm.com)** — a self-hosted, open-source workspace focused on retrieval-augmented generation (RAG) and document chat rather than Odysseus\'s broader email/calendar/research scope; see the [AnythingLLM review](/power-local-llm/anythingllm-review).',
           '**[Khoj](https://khoj.dev)** — a self-hosted, open-source "second brain" assistant focused on personal knowledge search and notes, a narrower productivity focus than Odysseus\'s all-in-one workspace; see the [Khoj review](/power-local-llm/khoj-ai-second-brain-review).',
           '**[LibreChat](https://librechat.ai)** — a self-hosted, open-source chat interface supporting many model providers, with a plugin/agent system but without Odysseus\'s built-in email and calendar tools; see the [LibreChat review](/power-local-llm/librechat-review).',
         ],
-        note: 'This is not an exhaustive list of self-hosted AI workspaces — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Odysseus\'s own directory entry.',
+        note: 'This is not an exhaustive list of self-hosted AI workspaces — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Odysseus\'s own directory entry.',
       },
       whoShouldUse: {
         id: 'who-should-use-odysseus',
@@ -212,7 +212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'How many GitHub stars does Odysseus have?', a: 'The [GitHub API](https://api.github.com/repos/odysseus-dev/odysseus) showed 87,156 stars and 860 forks as of September 12, 2026. Check the repository directly for the current count, since a fast-growing project\'s star count changes frequently.' },
           { q: 'Is Odysseus a cloud service?', a: 'No. Odysseus is self-hosted — you run it yourself via Docker on your own computer or server. There is no official Odysseus cloud/SaaS product.' },
           { q: 'Has PromptQuorum tested Odysseus hands-on?', a: 'This review is based on Odysseus\'s own repository, README documentation, license file, and independent press coverage of its origin, cross-checked against the GitHub API for star count and license — it does not claim independent benchmarking of Odysseus\'s AI output quality.' },
-          { q: 'What are the closest alternatives to Odysseus?', a: 'Self-hosted, open-source tools covering overlapping ground include AnythingLLM (RAG/document chat), Khoj (personal knowledge search), and LibreChat (multi-provider chat) — see the comparison section above and the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for more.' },
+          { q: 'What are the closest alternatives to Odysseus?', a: 'Self-hosted, open-source tools covering overlapping ground include AnythingLLM (RAG/document chat), Khoj (personal knowledge search), and LibreChat (multi-provider chat) — see the comparison section above and the [Local LLM Software Directory](/directory) for more.' },
         ],
       },
       sources: {
@@ -229,7 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Odysseus\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Odysseus\'s directory entry.',
           '[AnythingLLM Review](/power-local-llm/anythingllm-review) — another self-hosted, open-source AI workspace, focused on document chat and RAG.',
           '[Khoj Review](/power-local-llm/khoj-ai-second-brain-review) — a self-hosted personal knowledge assistant, for comparison against Odysseus\'s broader scope.',
           '[LibreChat Review](/power-local-llm/librechat-review) — a self-hosted, multi-provider chat interface, for comparison.',
@@ -304,7 +304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Vereint Chat/Agenten, Tiefenrecherche, Dokumentbearbeitung, E-Mail (IMAP/SMTP), Notizen, Aufgaben, Kalender (CalDAV) und eine Bildergalerie/-editor in einem selbstgehosteten Arbeitsbereich',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Odysseus\' Eintrag im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie Odysseus im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Odysseus\' Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie Odysseus im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -377,14 +377,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'odysseus-competitors',
         title: 'Odysseus vs. andere selbstgehostete KI-Arbeitsbereiche',
-        content: 'Odysseus ist eines von mehreren selbstgehosteten, quelloffenen Tools, die Chat mit zusätzlichen Produktivitäts- oder Agentenfunktionen verbinden. So schneidet es im Vergleich zu anderen Optionen in diesem Bereich ab — den vollständigen Katalog finden Sie im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory).',
+        content: 'Odysseus ist eines von mehreren selbstgehosteten, quelloffenen Tools, die Chat mit zusätzlichen Produktivitäts- oder Agentenfunktionen verbinden. So schneidet es im Vergleich zu anderen Optionen in diesem Bereich ab — den vollständigen Katalog finden Sie im [lokalen KI-Software-Verzeichnis](/de/directory).',
         items: [
           '**[Msty](https://msty.app)** — eine Desktop-first-lokale-KI-Chat-App mit einfacherer Einzel-App-Installation (kein Docker nötig), aber einem schmaleren Funktionsumfang als Odysseus\' E-Mail-/Kalender-/Dokumentenpaket; siehe den [Msty Review](/de/power-local-llm/msty-review).',
           '**[AnythingLLM](https://anythingllm.com)** — ein selbstgehosteter, quelloffener Arbeitsbereich mit Fokus auf Retrieval-Augmented Generation (RAG) und Dokumenten-Chat statt Odysseus\' breiterem E-Mail-/Kalender-/Recherche-Umfang; siehe den [AnythingLLM Review](/de/power-local-llm/anythingllm-review).',
           '**[Khoj](https://khoj.dev)** — ein selbstgehosteter, quelloffener „Second Brain"-Assistent mit Fokus auf persönliche Wissenssuche und Notizen, ein schmalerer Produktivitätsfokus als Odysseus\' All-in-One-Arbeitsbereich; siehe den [Khoj Review](/de/power-local-llm/khoj-ai-second-brain-review).',
           '**[LibreChat](https://librechat.ai)** — eine selbstgehostete, quelloffene Chat-Oberfläche mit Unterstützung vieler Modellanbieter und einem Plugin-/Agenten-System, aber ohne Odysseus\' eingebaute E-Mail- und Kalender-Tools; siehe den [LibreChat Review](/de/power-local-llm/librechat-review).',
         ],
-        note: 'Dies ist keine erschöpfende Liste selbstgehosteter KI-Arbeitsbereiche — den vollständigen, regelmäßig aktualisierten Katalog einschließlich Odysseus\' eigenem Verzeichniseintrag finden Sie im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine erschöpfende Liste selbstgehosteter KI-Arbeitsbereiche — den vollständigen, regelmäßig aktualisierten Katalog einschließlich Odysseus\' eigenem Verzeichniseintrag finden Sie im [lokalen KI-Software-Verzeichnis](/de/directory).',
       },
       whoShouldUse: {
         id: 'who-should-use-odysseus',
@@ -447,7 +447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Wie viele GitHub-Sterne hat Odysseus?', a: 'Die [GitHub API](https://api.github.com/repos/odysseus-dev/odysseus) zeigte zum 12. September 2026 87.156 Sterne und 860 Forks. Prüfen Sie das Repository direkt für die aktuelle Zahl, da sich die Sternezahl eines schnell wachsenden Projekts häufig ändert.' },
           { q: 'Ist Odysseus ein Cloud-Dienst?', a: 'Nein. Odysseus ist selbstgehostet — Sie betreiben es selbst per Docker auf eigenem Computer oder Server. Es gibt kein offizielles Odysseus-Cloud-/SaaS-Produkt.' },
           { q: 'Hat PromptQuorum Odysseus praktisch getestet?', a: 'Diese Review basiert auf Odysseus\' eigenem Repository, der README-Dokumentation, der Lizenzdatei und unabhängiger Presseberichterstattung über seinen Ursprung, abgeglichen mit der GitHub API für Sternezahl und Lizenz — sie beansprucht kein unabhängiges Benchmarking der KI-Ausgabequalität von Odysseus.' },
-          { q: 'Was sind die nächstliegenden Alternativen zu Odysseus?', a: 'Selbstgehostete, quelloffene Tools mit überschneidendem Funktionsumfang sind unter anderem AnythingLLM (RAG/Dokumenten-Chat), Khoj (persönliche Wissenssuche) und LibreChat (Multi-Anbieter-Chat) — siehe den Vergleichsabschnitt oben und das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für mehr.' },
+          { q: 'Was sind die nächstliegenden Alternativen zu Odysseus?', a: 'Selbstgehostete, quelloffene Tools mit überschneidendem Funktionsumfang sind unter anderem AnythingLLM (RAG/Dokumenten-Chat), Khoj (persönliche Wissenssuche) und LibreChat (Multi-Anbieter-Chat) — siehe den Vergleichsabschnitt oben und das [lokale KI-Software-Verzeichnis](/de/directory) für mehr.' },
         ],
       },
       sources: {
@@ -464,7 +464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Odysseus\' Verzeichniseintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Odysseus\' Verzeichniseintrag.',
           '[AnythingLLM Review](/de/power-local-llm/anythingllm-review) — ein weiterer selbstgehosteter, quelloffener KI-Arbeitsbereich mit Fokus auf Dokumenten-Chat und RAG.',
           '[Khoj Review](/de/power-local-llm/khoj-ai-second-brain-review) — ein selbstgehosteter persönlicher Wissensassistent, zum Vergleich mit Odysseus\' breiterem Umfang.',
           '[LibreChat Review](/de/power-local-llm/librechat-review) — eine selbstgehostete Multi-Anbieter-Chat-Oberfläche, zum Vergleich.',
@@ -539,7 +539,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Regroupe chat/agents, recherche approfondie, édition de documents, e-mail (IMAP/SMTP), notes, tâches, calendrier (CalDAV) et une galerie/éditeur d\'images dans un espace de travail auto-hébergé',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche d\'Odysseus dans le [répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment Odysseus se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cette review est le complément approfondi de la fiche d\'Odysseus dans le [répertoire des logiciels d\'IA locale](/fr/directory) — consultez cette page pour voir comment Odysseus se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -612,14 +612,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'odysseus-competitors',
         title: 'Odysseus face aux autres espaces de travail IA auto-hébergés',
-        content: 'Odysseus fait partie de plusieurs outils auto-hébergés et open source combinant le chat avec des fonctionnalités de productivité ou d\'agents supplémentaires. Voici comment il se compare à d\'autres options dans ce même domaine — consultez le [répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        content: 'Odysseus fait partie de plusieurs outils auto-hébergés et open source combinant le chat avec des fonctionnalités de productivité ou d\'agents supplémentaires. Voici comment il se compare à d\'autres options dans ce même domaine — consultez le [répertoire des logiciels d\'IA locale](/fr/directory) pour le catalogue complet.',
         items: [
           '**[Msty](https://msty.app)** — une application de chat IA locale desktop-first avec une installation plus simple en une seule application (pas besoin de Docker), mais un ensemble de fonctionnalités plus restreint que le pack e-mail/calendrier/documents d\'Odysseus ; voir la [review de Msty](/fr/power-local-llm/msty-review).',
           '**[AnythingLLM](https://anythingllm.com)** — un espace de travail auto-hébergé et open source axé sur la génération augmentée par récupération (RAG) et le chat de documents plutôt que sur le périmètre plus large e-mail/calendrier/recherche d\'Odysseus ; voir la [review d\'AnythingLLM](/fr/power-local-llm/anythingllm-review).',
           '**[Khoj](https://khoj.dev)** — un assistant « second cerveau » auto-hébergé et open source axé sur la recherche de connaissances personnelles et les notes, un périmètre de productivité plus restreint que l\'espace de travail tout-en-un d\'Odysseus ; voir la [review de Khoj](/fr/power-local-llm/khoj-ai-second-brain-review).',
           '**[LibreChat](https://librechat.ai)** — une interface de chat auto-hébergée et open source prenant en charge de nombreux fournisseurs de modèles, avec un système de plugins/agents, mais sans les outils intégrés d\'e-mail et de calendrier d\'Odysseus ; voir la [review de LibreChat](/fr/power-local-llm/librechat-review).',
         ],
-        note: 'Cette liste n\'est pas exhaustive concernant les espaces de travail IA auto-hébergés — consultez le [répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche d\'Odysseus.',
+        note: 'Cette liste n\'est pas exhaustive concernant les espaces de travail IA auto-hébergés — consultez le [répertoire des logiciels d\'IA locale](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche d\'Odysseus.',
       },
       whoShouldUse: {
         id: 'who-should-use-odysseus',
@@ -682,7 +682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Combien d\'étoiles GitHub Odysseus a-t-il ?', a: 'L\'[API GitHub](https://api.github.com/repos/odysseus-dev/odysseus) affichait 87 156 étoiles et 860 forks au 12 septembre 2026. Vérifiez le dépôt directement pour le nombre actuel, car le nombre d\'étoiles d\'un projet en croissance rapide change fréquemment.' },
           { q: 'Odysseus est-il un service cloud ?', a: 'Non. Odysseus est auto-hébergé — vous l\'exécutez vous-même via Docker sur votre propre ordinateur ou serveur. Il n\'existe pas de produit cloud/SaaS officiel d\'Odysseus.' },
           { q: 'PromptQuorum a-t-il testé Odysseus de manière pratique ?', a: 'Cette review s\'appuie sur le dépôt propre d\'Odysseus, sa documentation README, son fichier de licence et la couverture presse indépendante de son origine, recoupés avec l\'API GitHub pour le nombre d\'étoiles et la licence — elle ne prétend pas à un benchmarking indépendant de la qualité des sorties IA d\'Odysseus.' },
-          { q: 'Quelles sont les alternatives les plus proches d\'Odysseus ?', a: 'Les outils auto-hébergés et open source couvrant un terrain similaire incluent AnythingLLM (RAG/chat de documents), Khoj (recherche de connaissances personnelles) et LibreChat (chat multi-fournisseurs) — voir la section de comparaison ci-dessus et le [répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) pour plus d\'options.' },
+          { q: 'Quelles sont les alternatives les plus proches d\'Odysseus ?', a: 'Les outils auto-hébergés et open source couvrant un terrain similaire incluent AnythingLLM (RAG/chat de documents), Khoj (recherche de connaissances personnelles) et LibreChat (chat multi-fournisseurs) — voir la section de comparaison ci-dessus et le [répertoire des logiciels d\'IA locale](/fr/directory) pour plus d\'options.' },
         ],
       },
       sources: {
@@ -699,7 +699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire des logiciels d\'IA locale 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche d\'Odysseus.',
+          '[Répertoire des logiciels d\'IA locale 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche d\'Odysseus.',
           '[Review d\'AnythingLLM](/fr/power-local-llm/anythingllm-review) — un autre espace de travail IA auto-hébergé et open source, axé sur le chat de documents et le RAG.',
           '[Review de Khoj](/fr/power-local-llm/khoj-ai-second-brain-review) — un assistant de connaissances personnelles auto-hébergé, à comparer au périmètre plus large d\'Odysseus.',
           '[Review de LibreChat](/fr/power-local-llm/librechat-review) — une interface de chat auto-hébergée multi-fournisseurs, à titre de comparaison.',
@@ -774,7 +774,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Agrupa chat/agentes, investigación profunda, edición de documentos, correo (IMAP/SMTP), notas, tareas, calendario (CalDAV) y una galería/editor de imágenes en un espacio de trabajo autoalojado',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de Odysseus en el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) — consulte esa página para ver de un vistazo cómo se compara Odysseus con decenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de Odysseus en el [directorio de software de IA local](/es/directory) — consulte esa página para ver de un vistazo cómo se compara Odysseus con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -847,14 +847,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'odysseus-competitors',
         title: 'Odysseus frente a otros espacios de trabajo de IA autoalojados',
-        content: 'Odysseus es una de varias herramientas autoalojadas y de código abierto que combinan chat con funciones adicionales de productividad o de agentes. Así se compara con otras opciones en ese mismo espacio — consulte el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo.',
+        content: 'Odysseus es una de varias herramientas autoalojadas y de código abierto que combinan chat con funciones adicionales de productividad o de agentes. Así se compara con otras opciones en ese mismo espacio — consulte el [directorio de software de IA local](/es/directory) para el catálogo completo.',
         items: [
           '**[Msty](https://msty.app)** — una app de chat de IA local orientada primero al escritorio, con una instalación más simple de una sola aplicación (sin necesidad de Docker), pero con un conjunto de funciones más reducido que el paquete de correo/calendario/documentos de Odysseus; vea la [review de Msty](/es/power-local-llm/msty-review).',
           '**[AnythingLLM](https://anythingllm.com)** — un espacio de trabajo autoalojado y de código abierto centrado en la generación aumentada por recuperación (RAG) y el chat de documentos, en lugar del alcance más amplio de correo/calendario/investigación de Odysseus; vea la [review de AnythingLLM](/es/power-local-llm/anythingllm-review).',
           '**[Khoj](https://khoj.dev)** — un asistente autoalojado y de código abierto tipo "segundo cerebro" centrado en la búsqueda de conocimiento personal y las notas, un enfoque de productividad más reducido que el espacio de trabajo todo en uno de Odysseus; vea la [review de Khoj](/es/power-local-llm/khoj-ai-second-brain-review).',
           '**[LibreChat](https://librechat.ai)** — una interfaz de chat autoalojada y de código abierto compatible con muchos proveedores de modelos, con un sistema de plugins/agentes, pero sin las herramientas integradas de correo y calendario de Odysseus; vea la [review de LibreChat](/es/power-local-llm/librechat-review).',
         ],
-        note: 'Esta no es una lista exhaustiva de espacios de trabajo de IA autoalojados — vea el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluyendo la propia ficha de Odysseus.',
+        note: 'Esta no es una lista exhaustiva de espacios de trabajo de IA autoalojados — vea el [directorio de software de IA local](/es/directory) para el catálogo completo y actualizado regularmente, incluyendo la propia ficha de Odysseus.',
       },
       whoShouldUse: {
         id: 'who-should-use-odysseus',
@@ -917,7 +917,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Cuántas estrellas de GitHub tiene Odysseus?', a: 'La [API de GitHub](https://api.github.com/repos/odysseus-dev/odysseus) mostraba 87.156 estrellas y 860 forks al 12 de septiembre de 2026. Compruebe el repositorio directamente para la cifra actual, ya que el número de estrellas de un proyecto en rápido crecimiento cambia con frecuencia.' },
           { q: '¿Es Odysseus un servicio en la nube?', a: 'No. Odysseus es autoalojado — usted mismo lo ejecuta mediante Docker en su propio ordenador o servidor. No existe un producto oficial de nube/SaaS de Odysseus.' },
           { q: '¿Ha probado PromptQuorum Odysseus de forma práctica?', a: 'Esta review se basa en el propio repositorio de Odysseus, su documentación README, su archivo de licencia y la cobertura de prensa independiente sobre su origen, contrastados con la API de GitHub para el número de estrellas y la licencia — no afirma haber realizado un benchmarking independiente de la calidad de las salidas de IA de Odysseus.' },
-          { q: '¿Cuáles son las alternativas más cercanas a Odysseus?', a: 'Entre las herramientas autoalojadas y de código abierto con un alcance similar están AnythingLLM (RAG/chat de documentos), Khoj (búsqueda de conocimiento personal) y LibreChat (chat multiproveedor) — vea la sección de comparación anterior y el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) para más opciones.' },
+          { q: '¿Cuáles son las alternativas más cercanas a Odysseus?', a: 'Entre las herramientas autoalojadas y de código abierto con un alcance similar están AnythingLLM (RAG/chat de documentos), Khoj (búsqueda de conocimiento personal) y LibreChat (chat multiproveedor) — vea la sección de comparación anterior y el [directorio de software de IA local](/es/directory) para más opciones.' },
         ],
       },
       sources: {
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de IA local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de Odysseus.',
+          '[Directorio de software de IA local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de Odysseus.',
           '[Review de AnythingLLM](/es/power-local-llm/anythingllm-review) — otro espacio de trabajo de IA autoalojado y de código abierto, centrado en el chat de documentos y RAG.',
           '[Review de Khoj](/es/power-local-llm/khoj-ai-second-brain-review) — un asistente de conocimiento personal autoalojado, para comparar con el alcance más amplio de Odysseus.',
           '[Review de LibreChat](/es/power-local-llm/librechat-review) — una interfaz de chat autoalojada multiproveedor, a modo de comparación.',
@@ -1009,7 +1009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Reúne chat/agentes, pesquisa aprofundada, edição de documentos, e-mail (IMAP/SMTP), notas, tarefas, calendário (CalDAV) e uma galeria/editor de imagens em um espaço de trabalho auto-hospedado',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da ficha do Odysseus no [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o Odysseus com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta review é o complemento aprofundado da ficha do Odysseus no [diretório de software de IA local](/pt/directory) — veja essa página para comparar rapidamente o Odysseus com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1082,14 +1082,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'odysseus-competitors',
         title: 'Odysseus vs. outros espaços de trabalho de IA auto-hospedados',
-        content: 'O Odysseus é uma de várias ferramentas auto-hospedadas e de código aberto que combinam chat com recursos adicionais de produtividade ou de agentes. Veja como ele se compara a outras opções nesse mesmo espaço — consulte o [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'O Odysseus é uma de várias ferramentas auto-hospedadas e de código aberto que combinam chat com recursos adicionais de produtividade ou de agentes. Veja como ele se compara a outras opções nesse mesmo espaço — consulte o [diretório de software de IA local](/pt/directory) para o catálogo completo.',
         items: [
           '**[Msty](https://msty.app)** — um app de chat de IA local com foco em desktop, com instalação mais simples em um único aplicativo (sem necessidade de Docker), mas um conjunto de recursos mais restrito que o pacote de e-mail/calendário/documentos do Odysseus; veja a [review do Msty](/pt/power-local-llm/msty-review).',
           '**[AnythingLLM](https://anythingllm.com)** — um espaço de trabalho auto-hospedado e de código aberto focado em geração aumentada por recuperação (RAG) e chat de documentos, em vez do escopo mais amplo de e-mail/calendário/pesquisa do Odysseus; veja a [review do AnythingLLM](/pt/power-local-llm/anythingllm-review).',
           '**[Khoj](https://khoj.dev)** — um assistente "segundo cérebro" auto-hospedado e de código aberto, focado em busca de conhecimento pessoal e notas, um foco de produtividade mais restrito que o espaço de trabalho tudo em um do Odysseus; veja a [review do Khoj](/pt/power-local-llm/khoj-ai-second-brain-review).',
           '**[LibreChat](https://librechat.ai)** — uma interface de chat auto-hospedada e de código aberto com suporte a muitos provedores de modelo, com um sistema de plugins/agentes, mas sem as ferramentas integradas de e-mail e calendário do Odysseus; veja a [review do LibreChat](/pt/power-local-llm/librechat-review).',
         ],
-        note: 'Esta não é uma lista exaustiva de espaços de trabalho de IA auto-hospedados — veja o [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do Odysseus.',
+        note: 'Esta não é uma lista exaustiva de espaços de trabalho de IA auto-hospedados — veja o [diretório de software de IA local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do Odysseus.',
       },
       whoShouldUse: {
         id: 'who-should-use-odysseus',
@@ -1152,7 +1152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Quantas estrelas no GitHub o Odysseus tem?', a: 'A [API do GitHub](https://api.github.com/repos/odysseus-dev/odysseus) mostrava 87.156 estrelas e 860 forks em 12 de setembro de 2026. Confira o repositório diretamente para o número atual, já que a contagem de estrelas de um projeto em rápido crescimento muda com frequência.' },
           { q: 'O Odysseus é um serviço em nuvem?', a: 'Não. O Odysseus é auto-hospedado — você mesmo o executa via Docker no seu próprio computador ou servidor. Não existe um produto oficial de nuvem/SaaS do Odysseus.' },
           { q: 'A PromptQuorum testou o Odysseus na prática?', a: 'Esta review se baseia no próprio repositório do Odysseus, na documentação README, no arquivo de licença e na cobertura de imprensa independente sobre sua origem, cruzados com a API do GitHub para número de estrelas e licença — não alega ter feito um benchmarking independente da qualidade das saídas de IA do Odysseus.' },
-          { q: 'Quais são as alternativas mais próximas do Odysseus?', a: 'Ferramentas auto-hospedadas e de código aberto com escopo semelhante incluem AnythingLLM (RAG/chat de documentos), Khoj (busca de conhecimento pessoal) e LibreChat (chat multiprovedor) — veja a seção de comparação acima e o [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory) para mais opções.' },
+          { q: 'Quais são as alternativas mais próximas do Odysseus?', a: 'Ferramentas auto-hospedadas e de código aberto com escopo semelhante incluem AnythingLLM (RAG/chat de documentos), Khoj (busca de conhecimento pessoal) e LibreChat (chat multiprovedor) — veja a seção de comparação acima e o [diretório de software de IA local](/pt/directory) para mais opções.' },
         ],
       },
       sources: {
@@ -1169,7 +1169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software de IA local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do Odysseus.',
+          '[Diretório de software de IA local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do Odysseus.',
           '[Review do AnythingLLM](/pt/power-local-llm/anythingllm-review) — outro espaço de trabalho de IA auto-hospedado e de código aberto, focado em chat de documentos e RAG.',
           '[Review do Khoj](/pt/power-local-llm/khoj-ai-second-brain-review) — um assistente de conhecimento pessoal auto-hospedado, para comparar com o escopo mais amplo do Odysseus.',
           '[Review do LibreChat](/pt/power-local-llm/librechat-review) — uma interface de chat auto-hospedada multiprovedor, para comparação.',
@@ -1244,7 +1244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'チャット/エージェント、ディープリサーチ、文書編集、メール（IMAP/SMTP）、メモ、タスク、カレンダー（CalDAV）、画像ギャラリー/エディタを1つのセルフホスト型ワークスペースに統合',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるOdysseusのエントリーの詳細版です。Odysseusが他の数十ものローカルAIツールと比べてどう位置づけられるかは、そちらのページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[ローカルAIソフトウェアディレクトリ](/ja/directory)にあるOdysseusのエントリーの詳細版です。Odysseusが他の数十ものローカルAIツールと比べてどう位置づけられるかは、そちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1317,14 +1317,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'odysseus-competitors',
         title: 'Odysseus対他のセルフホスト型AIワークスペース',
-        content: 'Odysseusは、チャットに追加の生産性機能やエージェント機能を組み合わせた、セルフホスト型のオープンソースツールの1つです。同じ領域の他の選択肢との比較は以下の通りです — 完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        content: 'Odysseusは、チャットに追加の生産性機能やエージェント機能を組み合わせた、セルフホスト型のオープンソースツールの1つです。同じ領域の他の選択肢との比較は以下の通りです — 完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/directory)を参照してください。',
         items: [
           '**[Msty](https://msty.app)** — デスクトップファーストのローカルAIチャットアプリで、Docker不要のよりシンプルな単一アプリインストールが可能だが、Odysseusのメール/カレンダー/文書のバンドルより機能セットは狭い。[Mstyレビュー](/ja/power-local-llm/msty-review)を参照。',
           '**[AnythingLLM](https://anythingllm.com)** — Odysseusのより広いメール/カレンダー/リサーチの範囲ではなく、検索拡張生成（RAG）と文書チャットに重点を置いたセルフホスト型のオープンソースワークスペース。[AnythingLLMレビュー](/ja/power-local-llm/anythingllm-review)を参照。',
           '**[Khoj](https://khoj.dev)** — 個人の知識検索とメモに重点を置いた、セルフホスト型のオープンソース「セカンドブレイン」アシスタントで、Odysseusのオールインワンワークスペースより生産性面での焦点は狭い。[Khojレビュー](/ja/power-local-llm/khoj-ai-second-brain-review)を参照。',
           '**[LibreChat](https://librechat.ai)** — 多くのモデルプロバイダーに対応した、セルフホスト型のオープンソースチャットインターフェースで、プラグイン/エージェントシステムを備えるが、Odysseusの内蔵メール・カレンダーツールはない。[LibreChatレビュー](/ja/power-local-llm/librechat-review)を参照。',
         ],
-        note: 'これはセルフホスト型AIワークスペースの網羅的なリストではありません — Odysseus自身のディレクトリエントリーを含む、定期的に更新される完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはセルフホスト型AIワークスペースの網羅的なリストではありません — Odysseus自身のディレクトリエントリーを含む、定期的に更新される完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       whoShouldUse: {
         id: 'who-should-use-odysseus',
@@ -1387,7 +1387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'OdysseusのGitHubスター数はいくつですか？', a: '[GitHub API](https://api.github.com/repos/odysseus-dev/odysseus)によれば、2026年9月12日時点で87,156個のスターと860個のフォークがありました。急成長するプロジェクトのスター数は頻繁に変わるため、現在の数値はリポジトリで直接確認してください。' },
           { q: 'Odysseusはクラウドサービスですか？', a: 'いいえ。Odysseusはセルフホスト型で、自分のコンピューターやサーバー上でDocker経由で自分自身が運用します。公式のOdysseusクラウド/SaaS製品はありません。' },
           { q: 'PromptQuorumはOdysseusを実際にテストしましたか？', a: 'このレビューは、Odysseus自身のリポジトリ、READMEのドキュメント、ライセンスファイル、そしてその由来に関する独立系報道に基づき、スター数とライセンスについてはGitHub APIと突き合わせています。OdysseusのAI出力品質について独立したベンチマークを行ったとは主張していません。' },
-          { q: 'Odysseusに最も近い代替手段は何ですか？', a: '同様の範囲をカバーするセルフホスト型のオープンソースツールには、AnythingLLM（RAG/文書チャット）、Khoj（個人の知識検索）、LibreChat（複数プロバイダー対応チャット）などがあります。詳しくは上の比較セクションと[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。' },
+          { q: 'Odysseusに最も近い代替手段は何ですか？', a: '同様の範囲をカバーするセルフホスト型のオープンソースツールには、AnythingLLM（RAG/文書チャット）、Khoj（個人の知識検索）、LibreChat（複数プロバイダー対応チャット）などがあります。詳しくは上の比較セクションと[ローカルAIソフトウェアディレクトリ](/ja/directory)を参照してください。' },
         ],
       },
       sources: {
@@ -1404,7 +1404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルAIソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの完全なカタログ。Odysseusのディレクトリエントリーを含む。',
+          '[ローカルAIソフトウェアディレクトリ2026](/ja/directory) — この記事が属する、ローカルAIツールの完全なカタログ。Odysseusのディレクトリエントリーを含む。',
           '[AnythingLLMレビュー](/ja/power-local-llm/anythingllm-review) — 文書チャットとRAGに重点を置いた、もう1つのセルフホスト型オープンソースAIワークスペース。',
           '[Khojレビュー](/ja/power-local-llm/khoj-ai-second-brain-review) — Odysseusのより広い範囲と比較するための、セルフホスト型の個人向け知識アシスタント。',
           '[LibreChatレビュー](/ja/power-local-llm/librechat-review) — 比較のための、セルフホスト型の複数プロバイダー対応チャットインターフェース。',
@@ -1479,7 +1479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '将聊天/代理、深度研究、文档编辑、邮件（IMAP/SMTP）、笔记、任务、日历（CalDAV）以及图片库/编辑器整合进一个自托管工作空间',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)中Odysseus条目的深度补充——该页面展示了Odysseus与数十种其他本地AI工具相比的一览对比。' },
+          { type: 'note', text: '本评测是[本地AI软件目录](/zh/directory)中Odysseus条目的深度补充——该页面展示了Odysseus与数十种其他本地AI工具相比的一览对比。' },
         ],
       },
       overview: {
@@ -1552,14 +1552,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'odysseus-competitors',
         title: 'Odysseus与其他自托管AI工作空间的对比',
-        content: 'Odysseus是众多将聊天与额外生产力或代理功能相结合的自托管开源工具之一。以下是它在这一领域与其他选项的对比——完整目录请参阅[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'Odysseus是众多将聊天与额外生产力或代理功能相结合的自托管开源工具之一。以下是它在这一领域与其他选项的对比——完整目录请参阅[本地AI软件目录](/zh/directory)。',
         items: [
           '**[Msty](https://msty.app)** — 一款以桌面为先的本地AI聊天应用，安装更简单（单一应用，无需Docker），但功能集比Odysseus的邮件/日历/文档组合要窄；参阅[Msty评测](/zh/power-local-llm/msty-review)。',
           '**[AnythingLLM](https://anythingllm.com)** — 一款自托管的开源工作空间，专注于检索增强生成（RAG）和文档聊天，而非Odysseus更广泛的邮件/日历/研究范围；参阅[AnythingLLM评测](/zh/power-local-llm/anythingllm-review)。',
           '**[Khoj](https://khoj.dev)** — 一款自托管的开源"第二大脑"助手，专注于个人知识搜索和笔记，其生产力定位比Odysseus的一体化工作空间要窄；参阅[Khoj评测](/zh/power-local-llm/khoj-ai-second-brain-review)。',
           '**[LibreChat](https://librechat.ai)** — 一款自托管的开源聊天界面，支持众多模型提供方，具备插件/代理系统，但没有Odysseus内置的邮件和日历工具；参阅[LibreChat评测](/zh/power-local-llm/librechat-review)。',
         ],
-        note: '这不是自托管AI工作空间的详尽列表——完整且定期更新的目录（包括Odysseus自身的目录条目）请参阅[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这不是自托管AI工作空间的详尽列表——完整且定期更新的目录（包括Odysseus自身的目录条目）请参阅[本地AI软件目录](/zh/directory)。',
       },
       whoShouldUse: {
         id: 'who-should-use-odysseus',
@@ -1622,7 +1622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Odysseus有多少GitHub star？', a: '根据[GitHub API](https://api.github.com/repos/odysseus-dev/odysseus)，截至2026年9月12日，star数为87,156，fork数为860。由于快速增长的项目star数变化频繁，请直接在仓库中查看当前数字。' },
           { q: 'Odysseus是云服务吗？', a: '不是。Odysseus是自托管的——你通过Docker在自己的电脑或服务器上自行运行它。目前没有官方的Odysseus云/SaaS产品。' },
           { q: 'PromptQuorum对Odysseus进行过实际测试吗？', a: '本评测基于Odysseus自身的仓库、README文档、许可证文件，以及关于其起源的独立媒体报道，并与GitHub API核对了star数和许可证信息——并未声称对Odysseus的AI输出质量进行过独立基准测试。' },
-          { q: 'Odysseus最接近的替代品有哪些？', a: '涵盖类似领域的自托管开源工具包括AnythingLLM（RAG/文档聊天）、Khoj（个人知识搜索）和LibreChat（多提供方聊天）——更多内容请参阅上方的对比部分和[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)。' },
+          { q: 'Odysseus最接近的替代品有哪些？', a: '涵盖类似领域的自托管开源工具包括AnythingLLM（RAG/文档聊天）、Khoj（个人知识搜索）和LibreChat（多提供方聊天）——更多内容请参阅上方的对比部分和[本地AI软件目录](/zh/directory)。' },
         ],
       },
       sources: {
@@ -1639,7 +1639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地AI软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包含Odysseus的目录条目。',
+          '[本地AI软件目录2026](/zh/directory) — 本文所属的本地AI工具完整目录，包含Odysseus的目录条目。',
           '[AnythingLLM评测](/zh/power-local-llm/anythingllm-review) — 另一款自托管的开源AI工作空间，专注于文档聊天和RAG。',
           '[Khoj评测](/zh/power-local-llm/khoj-ai-second-brain-review) — 一款自托管的个人知识助手，可与Odysseus更广泛的功能范围对比。',
           '[LibreChat评测](/zh/power-local-llm/librechat-review) — 一款自托管的多提供方聊天界面，用于对比。',
@@ -1714,7 +1714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يجمع الدردشة/الوكلاء والبحث المعمّق وتحرير المستندات والبريد الإلكتروني (IMAP/SMTP) والملاحظات والمهام والتقويم (CalDAV) ومعرض/محرر صور في مساحة عمل واحدة ذاتية الاستضافة',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المعمّق لإدخال Odysseus في [دليل برامج الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف تُقارَن Odysseus بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المعمّق لإدخال Odysseus في [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تُقارَن Odysseus بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -1787,14 +1787,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'odysseus-competitors',
         title: 'Odysseus مقابل مساحات عمل ذكاء اصطناعي أخرى ذاتية الاستضافة',
-        content: 'Odysseus هي واحدة من عدة أدوات ذاتية الاستضافة ومفتوحة المصدر تجمع بين الدردشة وميزات إنتاجية أو وكلاء إضافية. إليك كيف تُقارَن بخيارات أخرى في هذا المجال نفسه — راجع [دليل برامج الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل.',
+        content: 'Odysseus هي واحدة من عدة أدوات ذاتية الاستضافة ومفتوحة المصدر تجمع بين الدردشة وميزات إنتاجية أو وكلاء إضافية. إليك كيف تُقارَن بخيارات أخرى في هذا المجال نفسه — راجع [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) للحصول على الكتالوج الكامل.',
         items: [
           '**[Msty](https://msty.app)** — تطبيق دردشة ذكاء اصطناعي محلي يُركّز على سطح المكتب، بتثبيت أبسط في تطبيق واحد (لا حاجة إلى Docker)، لكن بمجموعة ميزات أضيق من حزمة البريد الإلكتروني/التقويم/المستندات في Odysseus؛ راجع [مراجعة Msty](/ar/power-local-llm/msty-review).',
           '**[AnythingLLM](https://anythingllm.com)** — مساحة عمل ذاتية الاستضافة ومفتوحة المصدر تركز على التوليد المعزّز بالاسترجاع (RAG) والدردشة حول المستندات بدلاً من النطاق الأوسع للبريد الإلكتروني/التقويم/البحث في Odysseus؛ راجع [مراجعة AnythingLLM](/ar/power-local-llm/anythingllm-review).',
           '**[Khoj](https://khoj.dev)** — مساعد "دماغ ثانٍ" ذاتي الاستضافة ومفتوح المصدر يركز على البحث في المعرفة الشخصية والملاحظات، بتركيز إنتاجي أضيق من مساحة عمل Odysseus الشاملة؛ راجع [مراجعة Khoj](/ar/power-local-llm/khoj-ai-second-brain-review).',
           '**[LibreChat](https://librechat.ai)** — واجهة دردشة ذاتية الاستضافة ومفتوحة المصدر تدعم العديد من مزودي النماذج، مع نظام إضافات/وكلاء، لكن بدون أدوات البريد الإلكتروني والتقويم المدمجة في Odysseus؛ راجع [مراجعة LibreChat](/ar/power-local-llm/librechat-review).',
         ],
-        note: 'هذه ليست قائمة شاملة لمساحات عمل الذكاء الاصطناعي ذاتية الاستضافة — راجع [دليل برامج الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك إدخال Odysseus الخاص في الدليل.',
+        note: 'هذه ليست قائمة شاملة لمساحات عمل الذكاء الاصطناعي ذاتية الاستضافة — راجع [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) للحصول على الكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك إدخال Odysseus الخاص في الدليل.',
       },
       whoShouldUse: {
         id: 'who-should-use-odysseus',
@@ -1857,7 +1857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'كم عدد نجوم GitHub التي حصل عليها Odysseus؟', a: 'أظهرت [واجهة برمجة تطبيقات GitHub](https://api.github.com/repos/odysseus-dev/odysseus) 87,156 نجمة و860 نسخة متفرعة اعتباراً من 12 سبتمبر 2026. تحقق من المستودع مباشرة للحصول على العدد الحالي، لأن عدد نجوم مشروع سريع النمو يتغير كثيراً.' },
           { q: 'هل Odysseus خدمة سحابية؟', a: 'لا. Odysseus ذاتية الاستضافة — تشغّلها بنفسك عبر Docker على جهازك أو خادمك الخاص. لا يوجد منتج سحابي/SaaS رسمي من Odysseus.' },
           { q: 'هل اختبرت PromptQuorum برنامج Odysseus عملياً؟', a: 'تعتمد هذه المراجعة على مستودع Odysseus نفسه، ووثائق README، وملف الترخيص، والتغطية الصحفية المستقلة لأصله، مع مقارنتها بواجهة برمجة تطبيقات GitHub لعدد النجوم والترخيص — ولا تدّعي إجراء اختبار مقارن مستقل لجودة مخرجات الذكاء الاصطناعي في Odysseus.' },
-          { q: 'ما أقرب البدائل لـ Odysseus؟', a: 'تشمل الأدوات ذاتية الاستضافة ومفتوحة المصدر التي تغطي نطاقاً متداخلاً AnythingLLM (RAG/الدردشة حول المستندات) وKhoj (البحث في المعرفة الشخصية) وLibreChat (الدردشة متعددة المزودين) — راجع قسم المقارنة أعلاه و[دليل برامج الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory) للمزيد.' },
+          { q: 'ما أقرب البدائل لـ Odysseus؟', a: 'تشمل الأدوات ذاتية الاستضافة ومفتوحة المصدر التي تغطي نطاقاً متداخلاً AnythingLLM (RAG/الدردشة حول المستندات) وKhoj (البحث في المعرفة الشخصية) وLibreChat (الدردشة متعددة المزودين) — راجع قسم المقارنة أعلاه و[دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) للمزيد.' },
         ],
       },
       sources: {
@@ -1874,7 +1874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برامج الذكاء الاصطناعي المحلي 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال Odysseus في الدليل.',
+          '[دليل برامج الذكاء الاصطناعي المحلي 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال Odysseus في الدليل.',
           '[مراجعة AnythingLLM](/ar/power-local-llm/anythingllm-review) — مساحة عمل ذكاء اصطناعي أخرى ذاتية الاستضافة ومفتوحة المصدر، تركز على الدردشة حول المستندات وRAG.',
           '[مراجعة Khoj](/ar/power-local-llm/khoj-ai-second-brain-review) — مساعد معرفة شخصية ذاتي الاستضافة، للمقارنة مع نطاق Odysseus الأوسع.',
           '[مراجعة LibreChat](/ar/power-local-llm/librechat-review) — واجهة دردشة ذاتية الاستضافة متعددة المزودين، للمقارنة.',
@@ -1949,7 +1949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '채팅/에이전트, 심층 리서치, 문서 편집, 이메일(IMAP/SMTP), 메모, 작업, 캘린더(CalDAV), 이미지 갤러리/편집기를 하나의 셀프 호스팅 워크스페이스에 결합',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 Odysseus 항목의 심층 보완판입니다 — Odysseus가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)에 있는 Odysseus 항목의 심층 보완판입니다 — Odysseus가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2022,14 +2022,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'odysseus-competitors',
         title: 'Odysseus 대 다른 셀프 호스팅 AI 워크스페이스',
-        content: 'Odysseus는 채팅에 추가적인 생산성 또는 에이전트 기능을 결합한 여러 셀프 호스팅 오픈소스 도구 중 하나입니다. 같은 영역의 다른 옵션들과 어떻게 비교되는지 아래에 정리했습니다 — 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        content: 'Odysseus는 채팅에 추가적인 생산성 또는 에이전트 기능을 결합한 여러 셀프 호스팅 오픈소스 도구 중 하나입니다. 같은 영역의 다른 옵션들과 어떻게 비교되는지 아래에 정리했습니다 — 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
         items: [
           '**[Msty](https://msty.app)** — 데스크톱 우선의 로컬 AI 채팅 앱으로, 단일 앱 설치가 더 간단하지만(Docker 불필요) Odysseus의 이메일/캘린더/문서 묶음보다 기능 범위가 좁음; [Msty 리뷰](/ko/power-local-llm/msty-review) 참고.',
           '**[AnythingLLM](https://anythingllm.com)** — Odysseus의 더 넓은 이메일/캘린더/리서치 범위 대신 검색 증강 생성(RAG)과 문서 채팅에 초점을 맞춘 셀프 호스팅 오픈소스 워크스페이스; [AnythingLLM 리뷰](/ko/power-local-llm/anythingllm-review) 참고.',
           '**[Khoj](https://khoj.dev)** — 개인 지식 검색과 메모에 초점을 맞춘 셀프 호스팅 오픈소스 "두 번째 뇌" 비서로, Odysseus의 올인원 워크스페이스보다 생산성 초점이 좁음; [Khoj 리뷰](/ko/power-local-llm/khoj-ai-second-brain-review) 참고.',
           '**[LibreChat](https://librechat.ai)** — 많은 모델 제공업체를 지원하는 셀프 호스팅 오픈소스 채팅 인터페이스로, 플러그인/에이전트 시스템을 갖췄지만 Odysseus의 내장 이메일 및 캘린더 도구는 없음; [LibreChat 리뷰](/ko/power-local-llm/librechat-review) 참고.',
         ],
-        note: '이것이 셀프 호스팅 AI 워크스페이스의 총망라 목록은 아닙니다 — Odysseus 자체 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이것이 셀프 호스팅 AI 워크스페이스의 총망라 목록은 아닙니다 — Odysseus 자체 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       whoShouldUse: {
         id: 'who-should-use-odysseus',
@@ -2092,7 +2092,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Odysseus의 GitHub 스타 수는 몇 개인가요?', a: '[GitHub API](https://api.github.com/repos/odysseus-dev/odysseus)에 따르면 2026년 9월 12일 기준 스타 87,156개, 포크 860개였습니다. 빠르게 성장하는 프로젝트의 스타 수는 자주 바뀌므로 현재 수치는 저장소에서 직접 확인하세요.' },
           { q: 'Odysseus는 클라우드 서비스인가요?', a: '아니요. Odysseus는 셀프 호스팅으로, 자신의 컴퓨터나 서버에서 Docker를 통해 직접 실행합니다. 공식 Odysseus 클라우드/SaaS 제품은 없습니다.' },
           { q: 'PromptQuorum이 Odysseus를 실제로 테스트했나요?', a: '이 리뷰는 Odysseus 자체 저장소, README 문서, 라이선스 파일, 그리고 그 기원에 관한 독립 언론 보도에 근거하며, 스타 수와 라이선스는 GitHub API와 대조했습니다 — Odysseus의 AI 출력 품질에 대한 독자적인 벤치마킹을 수행했다고 주장하지는 않습니다.' },
-          { q: 'Odysseus와 가장 가까운 대안은 무엇인가요?', a: '비슷한 영역을 다루는 셀프 호스팅 오픈소스 도구로는 AnythingLLM(RAG/문서 채팅), Khoj(개인 지식 검색), LibreChat(다중 제공업체 채팅) 등이 있습니다 — 자세한 내용은 위의 비교 섹션과 [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.' },
+          { q: 'Odysseus와 가장 가까운 대안은 무엇인가요?', a: '비슷한 영역을 다루는 셀프 호스팅 오픈소스 도구로는 AnythingLLM(RAG/문서 채팅), Khoj(개인 지식 검색), LibreChat(다중 제공업체 채팅) 등이 있습니다 — 자세한 내용은 위의 비교 섹션과 [로컬 AI 소프트웨어 디렉터리](/ko/directory)를 참고하세요.' },
         ],
       },
       sources: {
@@ -2109,7 +2109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 AI 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — Odysseus의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 AI 소프트웨어 디렉터리 2026](/ko/directory) — Odysseus의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
           '[AnythingLLM 리뷰](/ko/power-local-llm/anythingllm-review) — 문서 채팅과 RAG에 초점을 맞춘 또 다른 셀프 호스팅 오픈소스 AI 워크스페이스.',
           '[Khoj 리뷰](/ko/power-local-llm/khoj-ai-second-brain-review) — Odysseus의 더 넓은 범위와 비교할 셀프 호스팅 개인 지식 비서.',
           '[LibreChat 리뷰](/ko/power-local-llm/librechat-review) — 비교를 위한 셀프 호스팅 다중 제공업체 채팅 인터페이스.',

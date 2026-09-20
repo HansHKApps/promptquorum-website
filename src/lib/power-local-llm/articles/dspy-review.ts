@@ -71,7 +71,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Install: `pip install dspy`, requires configuring an LLM provider before running a program',
         ],
         callouts: [
-          { type: 'note', text: "DSPy solves a different problem than most agent frameworks in this series — it optimizes the prompts inside a pipeline rather than orchestrating multi-agent conversations. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for how DSPy fits among agent and pipeline frameworks." },
+          { type: 'note', text: "DSPy solves a different problem than most agent frameworks in this series — it optimizes the prompts inside a pipeline rather than orchestrating multi-agent conversations. See the [Local LLM Software Directory](/directory) for how DSPy fits among agent and pipeline frameworks." },
         ],
       },
       history: {
@@ -258,7 +258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LlamaIndex Review: RAG Framework](/power-local-llm/llamaindex-rag-framework-review) — a RAG-focused data framework for retrieval-augmented pipelines, another Python framework in the same building-blocks category as DSPy.',
           '[Semantic Kernel Review: Features, Pricing, Alternatives](/power-local-llm/semantic-kernel-review) — Microsoft\'s enterprise orchestration SDK for structured prompt and skill composition, for teams working in .NET/Python/Java.',
           '[CrewAI Review: Features, Pricing, Alternatives](/power-local-llm/crewai-review) — a role-based multi-agent framework, for teams that need agent coordination rather than prompt optimization.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including where DSPy fits among agent and pipeline frameworks.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools this article belongs to, including where DSPy fits among agent and pipeline frameworks.',
         ],
       },
     },
@@ -332,7 +332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installation: `pip install dspy`, erfordert das Konfigurieren eines LLM-Anbieters vor dem ersten Programmlauf',
         ],
         callouts: [
-          { type: 'note', text: "DSPy löst ein anderes Problem als die meisten Agenten-Frameworks in dieser Serie — es optimiert die Prompts innerhalb einer Pipeline, statt Multi-Agent-Gespräche zu orchestrieren. Im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) sehen Sie, wo DSPy unter Agenten- und Pipeline-Frameworks einzuordnen ist." },
+          { type: 'note', text: "DSPy löst ein anderes Problem als die meisten Agenten-Frameworks in dieser Serie — es optimiert die Prompts innerhalb einer Pipeline, statt Multi-Agent-Gespräche zu orchestrieren. Im [Local LLM Software Directory](/de/directory) sehen Sie, wo DSPy unter Agenten- und Pipeline-Frameworks einzuordnen ist." },
         ],
       },
       history: {
@@ -519,7 +519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LlamaIndex Review: RAG-Framework](/de/power-local-llm/llamaindex-rag-framework-review) — ein RAG-fokussiertes Daten-Framework für Retrieval-Augmented-Pipelines, ein weiteres Python-Framework in derselben Baustein-Kategorie wie DSPy.',
           '[Semantic Kernel Review: Funktionen, Preise, Alternativen](/de/power-local-llm/semantic-kernel-review) — Microsofts Enterprise-Orchestrierungs-SDK für strukturierte Prompt- und Skill-Komposition, für Teams mit .NET/Python/Java.',
           '[CrewAI Review: Funktionen, Preise, Alternativen](/de/power-local-llm/crewai-review) — ein rollenbasiertes Multi-Agent-Framework, für Teams, die Agentenkoordination statt Prompt-Optimierung brauchen.',
-          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von DSPy unter Agenten- und Pipeline-Frameworks.',
+          '[Local LLM Software Directory](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von DSPy unter Agenten- und Pipeline-Frameworks.',
         ],
       },
     },
@@ -593,7 +593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Installation : `pip install dspy`, nécessite de configurer un fournisseur LLM avant d'exécuter un programme",
         ],
         callouts: [
-          { type: 'note', text: "DSPy résout un problème différent de la plupart des frameworks d'agents de cette série — il optimise les prompts à l'intérieur d'un pipeline plutôt que d'orchestrer des conversations multi-agents. Consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour voir où DSPy se situe parmi les frameworks d'agents et de pipelines." },
+          { type: 'note', text: "DSPy résout un problème différent de la plupart des frameworks d'agents de cette série — il optimise les prompts à l'intérieur d'un pipeline plutôt que d'orchestrer des conversations multi-agents. Consultez le [Local LLM Software Directory](/fr/directory) pour voir où DSPy se situe parmi les frameworks d'agents et de pipelines." },
         ],
       },
       history: {
@@ -780,7 +780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Avis LlamaIndex : framework RAG](/fr/power-local-llm/llamaindex-rag-framework-review) — un framework de données axé RAG pour les pipelines de génération augmentée par récupération, un autre framework Python de la même catégorie de briques que DSPy.',
           '[Avis Semantic Kernel : fonctionnalités, prix, alternatives](/fr/power-local-llm/semantic-kernel-review) — le SDK d\'orchestration entreprise de Microsoft pour la composition structurée de prompts et compétences, pour les équipes travaillant en .NET/Python/Java.',
           '[Avis CrewAI : fonctionnalités, prix, alternatives](/fr/power-local-llm/crewai-review) — un framework multi-agents basé sur les rôles, pour les équipes ayant besoin de coordination d\'agents plutôt que d\'optimisation de prompts.',
-          '[Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, y compris la place de DSPy parmi les frameworks d\'agents et de pipelines.',
+          '[Local LLM Software Directory](/fr/directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, y compris la place de DSPy parmi les frameworks d\'agents et de pipelines.',
         ],
       },
     },
@@ -854,7 +854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instalación: `pip install dspy`, requiere configurar un proveedor de LLM antes de ejecutar un programa',
         ],
         callouts: [
-          { type: 'note', text: "DSPy resuelve un problema distinto al de la mayoría de los frameworks de agentes de esta serie: optimiza los prompts dentro de un pipeline en lugar de orquestar conversaciones multiagente. Consulte el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) para ver dónde encaja DSPy entre los frameworks de agentes y pipelines." },
+          { type: 'note', text: "DSPy resuelve un problema distinto al de la mayoría de los frameworks de agentes de esta serie: optimiza los prompts dentro de un pipeline en lugar de orquestar conversaciones multiagente. Consulte el [Local LLM Software Directory](/es/directory) para ver dónde encaja DSPy entre los frameworks de agentes y pipelines." },
         ],
       },
       history: {
@@ -1041,7 +1041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de LlamaIndex: framework RAG](/es/power-local-llm/llamaindex-rag-framework-review) — un framework de datos enfocado en RAG para pipelines de generación aumentada por recuperación, otro framework de Python en la misma categoría de bloques que DSPy.',
           '[Reseña de Semantic Kernel: funciones, precios, alternativas](/es/power-local-llm/semantic-kernel-review) — el SDK de orquestación empresarial de Microsoft para composición estructurada de prompts y skills, para equipos que trabajan en .NET/Python/Java.',
           '[Reseña de CrewAI: funciones, precios, alternativas](/es/power-local-llm/crewai-review) — un framework multiagente basado en roles, para equipos que necesitan coordinación de agentes en lugar de optimización de prompts.',
-          '[Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluido dónde encaja DSPy entre los frameworks de agentes y pipelines.',
+          '[Local LLM Software Directory](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluido dónde encaja DSPy entre los frameworks de agentes y pipelines.',
         ],
       },
     },
@@ -1115,7 +1115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instalação: `pip install dspy`, requer configurar um provedor de LLM antes de executar um programa',
         ],
         callouts: [
-          { type: 'note', text: "O DSPy resolve um problema diferente da maioria dos frameworks de agentes desta série — ele otimiza os prompts dentro de um pipeline em vez de orquestrar conversas multiagente. Veja o [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) para entender onde o DSPy se encaixa entre frameworks de agentes e pipelines." },
+          { type: 'note', text: "O DSPy resolve um problema diferente da maioria dos frameworks de agentes desta série — ele otimiza os prompts dentro de um pipeline em vez de orquestrar conversas multiagente. Veja o [Local LLM Software Directory](/pt/directory) para entender onde o DSPy se encaixa entre frameworks de agentes e pipelines." },
         ],
       },
       history: {
@@ -1302,7 +1302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do LlamaIndex: framework RAG](/pt/power-local-llm/llamaindex-rag-framework-review) — um framework de dados focado em RAG para pipelines de geração aumentada por recuperação, outro framework Python na mesma categoria de blocos de construção que o DSPy.',
           '[Análise do Semantic Kernel: recursos, preços, alternativas](/pt/power-local-llm/semantic-kernel-review) — o SDK de orquestração empresarial da Microsoft para composição estruturada de prompts e skills, para equipes trabalhando em .NET/Python/Java.',
           '[Análise do CrewAI: recursos, preços, alternativas](/pt/power-local-llm/crewai-review) — um framework multiagente baseado em papéis, para equipes que precisam de coordenação de agentes em vez de otimização de prompts.',
-          '[Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o DSPy se encaixa entre frameworks de agentes e pipelines.',
+          '[Local LLM Software Directory](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o DSPy se encaixa entre frameworks de agentes e pipelines.',
         ],
       },
     },
@@ -1376,7 +1376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'インストール：`pip install dspy`、プログラム実行前にLLMプロバイダーの設定が必要',
         ],
         callouts: [
-          { type: 'note', text: "DSPyはこのシリーズの他の多くのエージェントフレームワークとは異なる問題を解決するものです——マルチエージェントの会話をオーケストレーションするのではなく、パイプライン内のプロンプトを最適化します。DSPyがエージェント/パイプラインフレームワークの中でどこに位置するかは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を参照してください。" },
+          { type: 'note', text: "DSPyはこのシリーズの他の多くのエージェントフレームワークとは異なる問題を解決するものです——マルチエージェントの会話をオーケストレーションするのではなく、パイプライン内のプロンプトを最適化します。DSPyがエージェント/パイプラインフレームワークの中でどこに位置するかは、[Local LLM Software Directory](/ja/directory)を参照してください。" },
         ],
       },
       history: {
@@ -1563,7 +1563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LlamaIndexレビュー：RAGフレームワーク](/ja/power-local-llm/llamaindex-rag-framework-review) — 検索拡張パイプライン向けのRAG特化データフレームワークで、DSPyと同じ構成要素カテゴリに属する別のPythonフレームワーク。',
           '[Semantic Kernelレビュー：機能、料金、代替ツール](/ja/power-local-llm/semantic-kernel-review) — .NET/Python/Javaで作業するチーム向けの、構造化されたプロンプトとスキル構成のためのMicrosoftのエンタープライズ・オーケストレーションSDK。',
           '[CrewAIレビュー：機能、料金、代替ツール](/ja/power-local-llm/crewai-review) — プロンプト最適化ではなくエージェント調整を必要とするチーム向けの、ロールベースのマルチエージェントフレームワーク。',
-          '[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの全カタログ。エージェント/パイプラインフレームワークの中でDSPyがどこに位置するかを含む。',
+          '[Local LLM Software Directory](/ja/directory) — この記事が属するローカルAIツールの全カタログ。エージェント/パイプラインフレームワークの中でDSPyがどこに位置するかを含む。',
         ],
       },
     },
@@ -1637,7 +1637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '安装：`pip install dspy`，运行程序前需要先配置LLM提供商',
         ],
         callouts: [
-          { type: 'note', text: "DSPy解决的问题与本系列中大多数智能体框架不同——它优化的是管道内部的提示词，而不是编排多智能体对话。参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)，了解DSPy在智能体与管道框架中的定位。" },
+          { type: 'note', text: "DSPy解决的问题与本系列中大多数智能体框架不同——它优化的是管道内部的提示词，而不是编排多智能体对话。参见[本地LLM软件目录](/zh/directory)，了解DSPy在智能体与管道框架中的定位。" },
         ],
       },
       history: {
@@ -1824,7 +1824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LlamaIndex评测：RAG框架](/zh/power-local-llm/llamaindex-rag-framework-review) — 面向检索增强型管道的RAG专用数据框架，是与DSPy同属构建模块类别的另一个Python框架。',
           '[Semantic Kernel评测：功能、价格、替代方案](/zh/power-local-llm/semantic-kernel-review) — 微软面向.NET/Python/Java团队的企业级编排SDK，用于结构化提示词和技能组合。',
           '[CrewAI评测：功能、价格、替代方案](/zh/power-local-llm/crewai-review) — 面向需要智能体协调而非提示词优化团队的、基于角色的多智能体框架。',
-          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，其中包含DSPy在智能体与管道框架中的定位。',
+          '[本地LLM软件目录](/zh/directory) — 本文所属的本地AI工具完整目录，其中包含DSPy在智能体与管道框架中的定位。',
         ],
       },
     },
@@ -1898,7 +1898,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'التثبيت: `pip install dspy`، ويتطلب إعداد مزوّد نموذج لغة قبل تشغيل أي برنامج',
         ],
         callouts: [
-          { type: 'note', text: "يحل DSPy مشكلة مختلفة عن معظم أطر عمل الوكلاء في هذه السلسلة — فهو يُحسِّن المُوجِّهات داخل خط أنابيب بدلًا من تنسيق محادثات متعددة الوكلاء. راجع [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) لمعرفة مكانة DSPy بين أطر عمل الوكلاء وخطوط الأنابيب." },
+          { type: 'note', text: "يحل DSPy مشكلة مختلفة عن معظم أطر عمل الوكلاء في هذه السلسلة — فهو يُحسِّن المُوجِّهات داخل خط أنابيب بدلًا من تنسيق محادثات متعددة الوكلاء. راجع [دليل برمجيات نماذج اللغة المحلية](/ar/directory) لمعرفة مكانة DSPy بين أطر عمل الوكلاء وخطوط الأنابيب." },
         ],
       },
       history: {
@@ -2085,7 +2085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة LlamaIndex: إطار عمل RAG](/ar/power-local-llm/llamaindex-rag-framework-review) — إطار بيانات مركّز على RAG لخطوط أنابيب الاسترجاع المُعزَّز، وهو إطار Python آخر ضمن فئة اللبنات نفسها التي ينتمي إليها DSPy.',
           '[مراجعة Semantic Kernel: الميزات والأسعار والبدائل](/ar/power-local-llm/semantic-kernel-review) — حزمة تطوير برمجيات مايكروسوفت المؤسسية لتنسيق تأليف المُوجِّهات والمهارات المُهيكَل، للفرق العاملة بـ.NET/Python/Java.',
           '[مراجعة CrewAI: الميزات والأسعار والبدائل](/ar/power-local-llm/crewai-review) — إطار عمل متعدد الوكلاء قائم على الأدوار، للفرق التي تحتاج تنسيق وكلاء لا تحسين مُوجِّهات.',
-          '[دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مكانة DSPy بين أطر عمل الوكلاء وخطوط الأنابيب.',
+          '[دليل برمجيات نماذج اللغة المحلية](/ar/directory) — الفهرس الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مكانة DSPy بين أطر عمل الوكلاء وخطوط الأنابيب.',
         ],
       },
     },
@@ -2159,7 +2159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '설치: `pip install dspy`, 프로그램 실행 전 LLM 제공업체 설정 필요',
         ],
         callouts: [
-          { type: 'note', text: "DSPy는 이 시리즈의 대부분 에이전트 프레임워크와는 다른 문제를 해결합니다 — 멀티 에이전트 대화를 오케스트레이션하는 대신 파이프라인 내부의 프롬프트를 최적화합니다. DSPy가 에이전트 및 파이프라인 프레임워크 사이에서 어디에 위치하는지는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요." },
+          { type: 'note', text: "DSPy는 이 시리즈의 대부분 에이전트 프레임워크와는 다른 문제를 해결합니다 — 멀티 에이전트 대화를 오케스트레이션하는 대신 파이프라인 내부의 프롬프트를 최적화합니다. DSPy가 에이전트 및 파이프라인 프레임워크 사이에서 어디에 위치하는지는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요." },
         ],
       },
       history: {
@@ -2346,7 +2346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LlamaIndex 리뷰: RAG 프레임워크](/ko/power-local-llm/llamaindex-rag-framework-review) — 검색 증강 파이프라인을 위한 RAG 중심 데이터 프레임워크로, DSPy와 동일한 빌딩 블록 카테고리에 속하는 또 다른 Python 프레임워크.',
           '[Semantic Kernel 리뷰: 기능, 가격, 대안](/ko/power-local-llm/semantic-kernel-review) — .NET/Python/Java로 작업하는 팀을 위한, 구조화된 프롬프트와 스킬 구성을 위한 마이크로소프트의 엔터프라이즈 오케스트레이션 SDK.',
           '[CrewAI 리뷰: 기능, 가격, 대안](/ko/power-local-llm/crewai-review) — 프롬프트 최적화가 아니라 에이전트 조정이 필요한 팀을 위한, 역할 기반 멀티 에이전트 프레임워크.',
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그로, DSPy가 에이전트 및 파이프라인 프레임워크 사이에서 어디에 위치하는지도 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그로, DSPy가 에이전트 및 파이프라인 프레임워크 사이에서 어디에 위치하는지도 포함합니다.',
         ],
       },
     },

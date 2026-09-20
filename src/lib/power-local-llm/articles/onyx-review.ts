@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Roughly 32,000 GitHub stars as of this review',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Onyx\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Onyx compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Onyx\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Onyx compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -237,7 +237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AnythingLLM Review](/power-local-llm/anythingllm-review) — a lighter-weight, MIT-licensed self-hosted document chat tool.',
           '[PrivateGPT Review](/power-local-llm/privategpt-review) — a fully offline, enterprise-leaning RAG tool.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI for RAG](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — a three-way RAG tool comparison.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Rund 32.000 GitHub-Sterne zum Zeitpunkt dieser Review',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu Onyx\' Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort sehen Sie auf einen Blick, wie Onyx im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu Onyx\' Eintrag im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie Onyx im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -478,7 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AnythingLLM Review](/de/power-local-llm/anythingllm-review) — ein schlankeres, MIT-lizenziertes, selbst gehostetes Dokumenten-Chat-Tool.',
           '[PrivateGPT Review](/de/power-local-llm/privategpt-review) — ein vollständig offline betreibbares, enterprise-orientiertes RAG-Tool.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI für RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — ein Dreiervergleich von RAG-Tools.',
-          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software Directory](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -553,7 +553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Environ 32 000 étoiles GitHub au moment de cette review',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche d\'Onyx dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer Onyx en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cette review est le complément approfondi de la fiche d\'Onyx dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour comparer Onyx en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -718,7 +718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AnythingLLM Review](/fr/power-local-llm/anythingllm-review) — un outil de chat documentaire auto-hébergé plus léger, sous licence MIT.',
           '[PrivateGPT Review](/fr/power-local-llm/privategpt-review) — un outil RAG entièrement hors ligne, orienté entreprise.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI pour le RAG](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — une comparaison à trois d\'outils RAG.',
-          '[Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
+          '[Local LLM Software Directory](/fr/directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
         ],
       },
     },
@@ -793,7 +793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '本レビュー時点でGitHubスター約32,000件',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)内のOnyxの項目を深掘りする内容です——他の数十のローカルAIツールとOnyxを一目で比較するには、そちらのページを参照してください。' },
+          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)内のOnyxの項目を深掘りする内容です——他の数十のローカルAIツールとOnyxを一目で比較するには、そちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -958,7 +958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AnythingLLMレビュー](/ja/power-local-llm/anythingllm-review) — より軽量な、MITライセンスのセルフホスト型ドキュメントチャットツール。',
           '[PrivateGPTレビュー](/ja/power-local-llm/privategpt-review) — 完全オフライン対応の、エンタープライズ向けRAGツール。',
           '[RAG向けAnythingLLM vs. PrivateGPT vs. Open WebUI](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 3つのRAGツールの比較。',
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/directory) — 本記事が属するローカルAIツールの全カタログ。',
         ],
       },
     },
@@ -1033,7 +1033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至本评测约有32,000颗GitHub星标',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Onyx条目的深入版本——请查看该页面，一览Onyx与其他数十款本地AI工具的对比。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Onyx条目的深入版本——请查看该页面，一览Onyx与其他数十款本地AI工具的对比。' },
         ],
       },
       overview: {
@@ -1198,7 +1198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AnythingLLM评测](/zh/power-local-llm/anythingllm-review) — 一款更轻量的、MIT许可的自托管文档聊天工具。',
           '[PrivateGPT评测](/zh/power-local-llm/privategpt-review) — 一款完全离线、企业导向的RAG工具。',
           '[面向RAG的AnythingLLM对比PrivateGPT对比Open WebUI](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 三款RAG工具的对比。',
-          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录。',
+          '[本地LLM软件目录](/zh/directory) — 本文所属的本地AI工具完整目录。',
         ],
       },
     },
@@ -1273,7 +1273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Aproximadamente 32.000 estrellas en GitHub al momento de esta review',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento detallado de la ficha de Onyx en el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — consulta esa página para comparar Onyx de un vistazo con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta review es el complemento detallado de la ficha de Onyx en el [Local LLM Software Directory](/es/directory) — consulta esa página para comparar Onyx de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1438,7 +1438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Review de AnythingLLM](/es/power-local-llm/anythingllm-review) — una herramienta de chat documental autoalojada más ligera, con licencia MIT.',
           '[Review de PrivateGPT](/es/power-local-llm/privategpt-review) — una herramienta RAG totalmente offline y orientada a empresas.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI para RAG](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — una comparación de tres herramientas RAG.',
-          '[Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Local LLM Software Directory](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1513,7 +1513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Aproximadamente 32.000 estrelas no GitHub no momento desta review',
         ],
         callouts: [
-          { type: 'note', text: 'Esta avaliação é o complemento aprofundado da entrada do Onyx no [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar o Onyx rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta avaliação é o complemento aprofundado da entrada do Onyx no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar o Onyx rapidamente com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1678,7 +1678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Review do AnythingLLM](/pt/power-local-llm/anythingllm-review) — uma ferramenta de chat de documentos auto-hospedada mais leve, com licença MIT.',
           '[Review do PrivateGPT](/pt/power-local-llm/privategpt-review) — uma ferramenta RAG totalmente offline e voltada a empresas.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI para RAG](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — uma comparação de três ferramentas RAG.',
-          '[Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Local LLM Software Directory](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -1753,7 +1753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'نحو 32,000 نجمة على GitHub وقت كتابة هذه المراجعة',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لسجل Onyx في [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمقارنة Onyx بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لسجل Onyx في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة Onyx بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -1918,7 +1918,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة AnythingLLM](/ar/power-local-llm/anythingllm-review) — أداة دردشة مستندات ذاتية الاستضافة أخف برخصة MIT.',
           '[مراجعة PrivateGPT](/ar/power-local-llm/privategpt-review) — أداة RAG بدون اتصال بالكامل وموجَّهة للمؤسسات.',
           '[AnythingLLM مقابل PrivateGPT مقابل Open WebUI لـ RAG](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — مقارنة بين ثلاث أدوات RAG.',
-          '[دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
+          '[دليل برمجيات نماذج اللغة المحلية](/ar/directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال.',
         ],
       },
     },
@@ -1993,7 +1993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이 리뷰 작성 시점 기준 GitHub 스타 약 32,000개',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 등록된 Onyx 항목의 심층 버전입니다 — Onyx를 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등록된 Onyx 항목의 심층 버전입니다 — Onyx를 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {
@@ -2158,7 +2158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[AnythingLLM 리뷰](/ko/power-local-llm/anythingllm-review) — 더 가벼운 MIT 라이선스 자체 호스팅 문서 채팅 도구.',
           '[PrivateGPT 리뷰](/ko/power-local-llm/privategpt-review) — 완전 오프라인, 엔터프라이즈 지향 RAG 도구.',
           '[RAG를 위한 AnythingLLM vs. PrivateGPT vs. Open WebUI](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — 세 가지 RAG 도구 비교.',
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },

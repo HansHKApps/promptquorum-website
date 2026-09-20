@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Developed by [Deta](https://deta.surf); this open-source release replaces an earlier closed-source "managed Surf" product that bundled AI, code signing, and auto-updates',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Surf\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Surf compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Surf\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Surf compares at a glance to dozens of other local AI tools.' },
           { type: 'note', text: 'This review covers [github.com/deta/surf](https://github.com/deta/surf), the Deta-team "Personal AI Notebook" app. It is unrelated to steel-dev/surf.new, a separate browser-automation project with a similar name — do not confuse the two when searching.' },
         ],
       },
@@ -203,13 +203,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'surf-competitors',
         title: 'Surf vs. Other Self-Hosted Notes and Knowledge Apps',
-        content: 'Surf is one of several self-hosted tools that combine personal knowledge management with AI, storing data locally and letting you choose your model. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'Surf is one of several self-hosted tools that combine personal knowledge management with AI, storing data locally and letting you choose your model. Here is how it sits next to other options in that space — see the [Local LLM Software Directory](/directory) for the full catalog.',
         items: [
           '**[Karakeep](https://karakeep.app)** — a self-hosted bookmark manager with AI auto-tagging; narrower in scope than Surf (bookmarks specifically, not a general file/PDF/web library) but a good fit if bookmark organization is your main need. See the [Karakeep review](/power-local-llm/karakeep-review).',
           '**[Blinko](https://github.com/blinko-space/blinko)** — a self-hosted AI notes app with RAG search over your own notes; closer to Surf\'s "AI over your own content" idea, but built around notes rather than a mixed files/PDF/web library. See the [Blinko review](/power-local-llm/blinko-review).',
           '**[Khoj](https://khoj.dev)** — a self-hosted "second brain" that indexes your documents, notes, and (optionally) online content for AI search and chat; a comparable breadth of source types to Surf, with a different UI model (chat-first rather than notebook-first). See the [Khoj review](/power-local-llm/khoj-ai-second-brain-review).',
         ],
-        note: 'This is not an exhaustive list of self-hosted knowledge and notes apps — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Surf\'s own directory entry.',
+        note: 'This is not an exhaustive list of self-hosted knowledge and notes apps — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Surf\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -267,7 +267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Surf\'s directory entry alongside other knowledge and notes apps covered above.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Surf\'s directory entry alongside other knowledge and notes apps covered above.',
           '[Karakeep Review](/power-local-llm/karakeep-review) — a self-hosted bookmark manager with AI auto-tagging, narrower in scope than Surf but a close comparison for bookmark-focused workflows.',
           '[Blinko Review](/power-local-llm/blinko-review) — a self-hosted AI notes app with RAG search, the closest comparison for "AI over your own notes."',
           '[Khoj Review](/power-local-llm/khoj-ai-second-brain-review) — a self-hosted second brain with a similar breadth of source types to Surf, built chat-first rather than notebook-first.',
@@ -346,7 +346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Entwickelt von [Deta](https://deta.surf); diese Open-Source-Version ersetzt ein früheres, closed-source „managed Surf"-Produkt mit integrierter KI, Code-Signierung und automatischen Updates',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der ausführliche Begleittext zu Surfs Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen Überblick, wie Surf im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist der ausführliche Begleittext zu Surfs Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie einen Überblick, wie Surf im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
           { type: 'note', text: 'Diese Review behandelt [github.com/deta/surf](https://github.com/deta/surf), die „Personal AI Notebook"-App des Deta-Teams. Sie ist nicht verwandt mit steel-dev/surf.new, einem separaten Browser-Automatisierungsprojekt mit ähnlichem Namen — verwechseln Sie die beiden bei der Suche nicht.' },
         ],
       },
@@ -476,13 +476,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'surf-competitors',
         title: 'Surf im Vergleich zu anderen selbst gehosteten Notiz- und Wissens-Apps',
-        content: 'Surf ist eines von mehreren selbst gehosteten Tools, die persönliches Wissensmanagement mit KI verbinden, Daten lokal speichern und Ihnen die Wahl des Modells überlassen. Hier sehen Sie, wie es im Vergleich zu anderen Optionen in diesem Bereich steht — den vollständigen Katalog finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        content: 'Surf ist eines von mehreren selbst gehosteten Tools, die persönliches Wissensmanagement mit KI verbinden, Daten lokal speichern und Ihnen die Wahl des Modells überlassen. Hier sehen Sie, wie es im Vergleich zu anderen Optionen in diesem Bereich steht — den vollständigen Katalog finden Sie im [Local LLM Software Directory](/de/directory).',
         items: [
           '**[Karakeep](https://karakeep.app)** — ein selbst gehosteter Lesezeichen-Manager mit KI-Auto-Tagging; enger im Umfang als Surf (speziell Lesezeichen, keine allgemeine Datei-/PDF-/Web-Bibliothek), aber gut geeignet, wenn die Organisation von Lesezeichen Ihr Hauptbedarf ist. Siehe die [Karakeep-Review](/de/power-local-llm/karakeep-review).',
           '**[Blinko](https://github.com/blinko-space/blinko)** — eine selbst gehostete KI-Notiz-App mit RAG-Suche über Ihre eigenen Notizen; näher an Surfs Idee „KI über Ihre eigenen Inhalte", aber um Notizen statt um eine gemischte Datei-/PDF-/Web-Bibliothek herum aufgebaut. Siehe die [Blinko-Review](/de/power-local-llm/blinko-review).',
           '**[Khoj](https://khoj.dev)** — ein selbst gehostetes „zweites Gehirn", das Ihre Dokumente, Notizen und (optional) Online-Inhalte für KI-Suche und -Chat indexiert; eine vergleichbare Bandbreite an Quelltypen wie Surf, mit einem anderen UI-Modell (Chat-first statt Notebook-first). Siehe die [Khoj-Review](/de/power-local-llm/khoj-ai-second-brain-review).',
         ],
-        note: 'Dies ist keine erschöpfende Liste selbst gehosteter Wissens- und Notiz-Apps — den vollständigen, regelmäßig aktualisierten Katalog inklusive Surfs eigenem Directory-Eintrag finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine erschöpfende Liste selbst gehosteter Wissens- und Notiz-Apps — den vollständigen, regelmäßig aktualisierten Katalog inklusive Surfs eigenem Directory-Eintrag finden Sie im [Local LLM Software Directory](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -542,7 +542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Surfs eigenem Directory-Eintrag neben anderen oben behandelten Wissens- und Notiz-Apps.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Surfs eigenem Directory-Eintrag neben anderen oben behandelten Wissens- und Notiz-Apps.',
           '[Karakeep Review](/de/power-local-llm/karakeep-review) — ein selbst gehosteter Lesezeichen-Manager mit KI-Auto-Tagging, enger im Umfang als Surf, aber ein naheliegender Vergleich für lesezeichen-zentrierte Workflows.',
           '[Blinko Review](/de/power-local-llm/blinko-review) — eine selbst gehostete KI-Notiz-App mit RAG-Suche, der nächstliegende Vergleich für „KI über die eigenen Notizen".',
           '[Khoj Review](/de/power-local-llm/khoj-ai-second-brain-review) — ein selbst gehostetes zweites Gehirn mit ähnlicher Bandbreite an Quelltypen wie Surf, aufgebaut Chat-first statt Notebook-first.',
@@ -621,7 +621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Développé par [Deta](https://deta.surf) ; cette version open source remplace un précédent produit fermé « managed Surf » qui intégrait IA, signature de code et mises à jour automatiques',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Surf dans le [répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer Surf en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Surf dans le [répertoire des logiciels LLM locaux](/fr/directory) — consultez cette page pour comparer Surf en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
           { type: 'note', text: 'Cet avis porte sur [github.com/deta/surf](https://github.com/deta/surf), l\'application « Personal AI Notebook » de l\'équipe Deta. Elle n\'a aucun rapport avec steel-dev/surf.new, un projet distinct d\'automatisation de navigateur au nom similaire — ne confondez pas les deux lors de vos recherches.' },
         ],
       },
@@ -751,13 +751,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'surf-competitors',
         title: 'Surf face aux autres applications de notes et de connaissances auto-hébergées',
-        content: 'Surf fait partie des outils auto-hébergés combinant gestion des connaissances personnelles et IA, stockant les données localement et laissant le choix du modèle. Voici sa place face aux autres options dans ce domaine — consultez le [répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        content: 'Surf fait partie des outils auto-hébergés combinant gestion des connaissances personnelles et IA, stockant les données localement et laissant le choix du modèle. Voici sa place face aux autres options dans ce domaine — consultez le [répertoire des logiciels LLM locaux](/fr/directory) pour le catalogue complet.',
         items: [
           '**[Karakeep](https://karakeep.app)** — un gestionnaire de marque-pages auto-hébergé avec étiquetage automatique par IA ; plus restreint que Surf (uniquement les marque-pages, pas une bibliothèque générale fichiers/PDF/web), mais bien adapté si l\'organisation des marque-pages est votre besoin principal. Voir l\'[avis Karakeep](/fr/power-local-llm/karakeep-review).',
           '**[Blinko](https://github.com/blinko-space/blinko)** — une application de notes IA auto-hébergée avec recherche RAG sur vos propres notes ; plus proche de l\'idée « IA sur votre propre contenu » de Surf, mais construite autour des notes plutôt que d\'une bibliothèque mixte fichiers/PDF/web. Voir l\'[avis Blinko](/fr/power-local-llm/blinko-review).',
           '**[Khoj](https://khoj.dev)** — un « second cerveau » auto-hébergé qui indexe vos documents, notes et (en option) contenus en ligne pour la recherche et la discussion IA ; une variété de types de sources comparable à Surf, avec un modèle d\'interface différent (discussion en premier plutôt que carnet en premier plan). Voir l\'[avis Khoj](/fr/power-local-llm/khoj-ai-second-brain-review).',
         ],
-        note: 'Cette liste n\'est pas exhaustive des applications de connaissances et de notes auto-hébergées — consultez le [répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de Surf.',
+        note: 'Cette liste n\'est pas exhaustive des applications de connaissances et de notes auto-hébergées — consultez le [répertoire des logiciels LLM locaux](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de Surf.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -815,7 +815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures associées',
         items: [
-          '[Répertoire des logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale dont cet article fait partie, incluant la fiche de Surf aux côtés des autres applications de connaissances et de notes évoquées ci-dessus.',
+          '[Répertoire des logiciels LLM locaux 2026](/fr/directory) — le catalogue complet d\'outils d\'IA locale dont cet article fait partie, incluant la fiche de Surf aux côtés des autres applications de connaissances et de notes évoquées ci-dessus.',
           '[Avis Karakeep](/fr/power-local-llm/karakeep-review) — un gestionnaire de marque-pages auto-hébergé avec étiquetage automatique par IA, plus restreint que Surf mais une comparaison proche pour les workflows centrés sur les marque-pages.',
           '[Avis Blinko](/fr/power-local-llm/blinko-review) — une application de notes IA auto-hébergée avec recherche RAG, la comparaison la plus proche pour « IA sur vos propres notes ».',
           '[Avis Khoj](/fr/power-local-llm/khoj-ai-second-brain-review) — un second cerveau auto-hébergé avec une variété de types de sources comparable à Surf, conçu discussion en premier plutôt que carnet en premier plan.',
@@ -894,7 +894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Deta](https://deta.surf)が開発。このオープンソース版は、組み込みAI・コード署名・自動更新を備えた以前のクローズドソース製品「managed Surf」の後継',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるSurfのエントリーを詳しく解説したものです——他の数十種類のローカルAIツールとの比較は同ページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるSurfのエントリーを詳しく解説したものです——他の数十種類のローカルAIツールとの比較は同ページを参照してください。' },
           { type: 'note', text: 'このレビューが対象とするのは、Detaチームによる「Personal AI Notebook」アプリ[github.com/deta/surf](https://github.com/deta/surf)です。名前が似ているブラウザ自動化プロジェクト「steel-dev/surf.new」とは無関係なので、検索時に混同しないよう注意してください。' },
         ],
       },
@@ -1024,13 +1024,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'surf-competitors',
         title: '他のセルフホスト型ノート・ナレッジアプリとの比較',
-        content: 'Surfは、個人のナレッジマネジメントとAIを組み合わせ、データをローカルに保存しモデルを自由に選べるセルフホスト型ツールの1つです。同分野の他の選択肢との位置づけは以下の通りです——全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        content: 'Surfは、個人のナレッジマネジメントとAIを組み合わせ、データをローカルに保存しモデルを自由に選べるセルフホスト型ツールの1つです。同分野の他の選択肢との位置づけは以下の通りです——全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
         items: [
           '**[Karakeep](https://karakeep.app)** — AI自動タグ付け機能を持つセルフホスト型ブックマークマネージャー。Surfよりも範囲が狭く(汎用のファイル/PDF/Webライブラリではなくブックマーク専門)、ブックマーク整理が主目的なら適している。[Karakeepレビュー](/ja/power-local-llm/karakeep-review)を参照。',
           '**[Blinko](https://github.com/blinko-space/blinko)** — 自分のノートに対するRAG検索を備えたセルフホスト型AIノートアプリ。Surfの「自分のコンテンツに対するAI」という考え方に近いが、ファイル/PDF/Webの混在ライブラリではなくノート中心に設計されている。[Blinkoレビュー](/ja/power-local-llm/blinko-review)を参照。',
           '**[Khoj](https://khoj.dev)** — ドキュメント、ノート、(オプションで)オンラインコンテンツをインデックス化し、AI検索とチャットを提供するセルフホスト型「セカンドブレイン」。ソースの種類の幅はSurfに匹敵するが、UIモデルが異なる(ノート優先ではなくチャット優先)。[Khojレビュー](/ja/power-local-llm/khoj-ai-second-brain-review)を参照。',
         ],
-        note: 'これはセルフホスト型ナレッジ・ノートアプリの網羅的なリストではありません——Surf自身のディレクトリエントリーを含む、定期的に更新される全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはセルフホスト型ナレッジ・ノートアプリの網羅的なリストではありません——Surf自身のディレクトリエントリーを含む、定期的に更新される全カタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1088,7 +1088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。上記で紹介した他のナレッジ・ノートアプリとともに、Surfのディレクトリエントリーも掲載。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — 本記事が属するローカルAIツールの全カタログ。上記で紹介した他のナレッジ・ノートアプリとともに、Surfのディレクトリエントリーも掲載。',
           '[Karakeepレビュー](/ja/power-local-llm/karakeep-review) — AI自動タグ付け機能を持つセルフホスト型ブックマークマネージャー。Surfより範囲は狭いが、ブックマーク中心のワークフローとの比較に最適。',
           '[Blinkoレビュー](/ja/power-local-llm/blinko-review) — RAG検索を備えたセルフホスト型AIノートアプリ。「自分のノートに対するAI」という観点で最も近い比較対象。',
           '[Khojレビュー](/ja/power-local-llm/khoj-ai-second-brain-review) — Surfと同程度の幅広いソースタイプに対応するセルフホスト型セカンドブレイン。ノート優先ではなくチャット優先で構築。',
@@ -1167,7 +1167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '由 [Deta](https://deta.surf) 开发；此开源版本取代了此前包含内置 AI、代码签名和自动更新功能的闭源"托管版 Surf"产品',
         ],
         callouts: [
-          { type: 'note', text: '本评测是 Surf 在[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)条目的深度补充版——该页面展示了 Surf 与数十款其他本地 AI 工具的横向对比。' },
+          { type: 'note', text: '本评测是 Surf 在[本地 LLM 软件目录](/zh/directory)条目的深度补充版——该页面展示了 Surf 与数十款其他本地 AI 工具的横向对比。' },
           { type: 'note', text: '本评测涵盖的是 [github.com/deta/surf](https://github.com/deta/surf)，即 Deta 团队开发的"个人 AI 笔记本"应用。它与 steel-dev/surf.new（一个名称相似但完全无关的浏览器自动化项目）没有任何关系——搜索时请勿混淆两者。' },
         ],
       },
@@ -1297,13 +1297,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'surf-competitors',
         title: 'Surf 与其他自托管笔记及知识管理应用对比',
-        content: 'Surf 是众多将个人知识管理与 AI 结合、把数据存储在本地并允许你自行选择模型的自托管工具之一。以下是它与该领域其他选项的对比情况——完整目录请参见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'Surf 是众多将个人知识管理与 AI 结合、把数据存储在本地并允许你自行选择模型的自托管工具之一。以下是它与该领域其他选项的对比情况——完整目录请参见[本地 LLM 软件目录](/zh/directory)。',
         items: [
           '**[Karakeep](https://karakeep.app)**——一款带有 AI 自动标签功能的自托管书签管理工具；其功能范围比 Surf 更窄（专注于书签，而非通用的文件/PDF/网页资料库），但如果书签整理是你的主要需求，它是很好的选择。参见 [Karakeep 评测](/zh/power-local-llm/karakeep-review)。',
           '**[Blinko](https://github.com/blinko-space/blinko)**——一款带有 RAG 搜索功能的自托管 AI 笔记应用，可对你自己的笔记进行检索；其"基于自有内容的 AI"理念更接近 Surf，但构建围绕的是笔记而非文件/PDF/网页混合资料库。参见 [Blinko 评测](/zh/power-local-llm/blinko-review)。',
           '**[Khoj](https://khoj.dev)**——一款自托管的"第二大脑"应用，可对你的文档、笔记以及（可选的）在线内容建立索引，用于 AI 搜索和对话；其覆盖的来源类型广度与 Surf 相当，但采用不同的 UI 模式（以对话为先，而非以笔记本为先）。参见 [Khoj 评测](/zh/power-local-llm/khoj-ai-second-brain-review)。',
         ],
-        note: '这并非自托管知识与笔记应用的完整列表——完整且持续更新的目录，包括 Surf 自身的目录条目，请参见[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非自托管知识与笔记应用的完整列表——完整且持续更新的目录，包括 Surf 自身的目录条目，请参见[本地 LLM 软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1361,7 +1361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[2026 本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地 AI 工具目录，包含 Surf 及上文提及的其他知识与笔记类应用的目录条目。',
+          '[2026 本地 LLM 软件目录](/zh/directory) — 本文所属的完整本地 AI 工具目录，包含 Surf 及上文提及的其他知识与笔记类应用的目录条目。',
           '[Karakeep 评测](/zh/power-local-llm/karakeep-review) — 一款带有 AI 自动标签功能的自托管书签管理工具，功能范围比 Surf 更窄，但对以书签为核心的工作流是很好的对比对象。',
           '[Blinko 评测](/zh/power-local-llm/blinko-review) — 一款带有 RAG 搜索功能的自托管 AI 笔记应用，是"基于自有笔记的 AI"这一场景下最接近的对比对象。',
           '[Khoj 评测](/zh/power-local-llm/khoj-ai-second-brain-review) — 一款自托管的第二大脑应用，来源类型广度与 Surf 相近，但构建方式以对话为先，而非以笔记本为先。',
@@ -1440,7 +1440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desarrollada por [Deta](https://deta.surf); esta versión de código abierto reemplaza a un producto anterior de código cerrado, "managed Surf", que incluía IA integrada, firma de código y actualizaciones automáticas',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de Surf en el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara Surf, de un vistazo, con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de Surf en el [directorio de software de LLM local](/es/directory) — consulta esa página para ver cómo se compara Surf, de un vistazo, con docenas de otras herramientas de IA local.' },
           { type: 'note', text: 'Esta reseña cubre [github.com/deta/surf](https://github.com/deta/surf), la app "Personal AI Notebook" del equipo de Deta. No tiene relación con steel-dev/surf.new, un proyecto independiente de automatización de navegador con un nombre similar — no confundas los dos proyectos al buscar.' },
         ],
       },
@@ -1570,13 +1570,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'surf-competitors',
         title: 'Surf frente a otras apps de notas y conocimiento autoalojadas',
-        content: 'Surf es una de varias herramientas autoalojadas que combinan gestión personal del conocimiento con IA, guardando los datos localmente y dejándote elegir tu modelo. Así se ubica junto a otras opciones en ese espacio — consulta el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para ver el catálogo completo.',
+        content: 'Surf es una de varias herramientas autoalojadas que combinan gestión personal del conocimiento con IA, guardando los datos localmente y dejándote elegir tu modelo. Así se ubica junto a otras opciones en ese espacio — consulta el [directorio de software de LLM local](/es/directory) para ver el catálogo completo.',
         items: [
           '**[Karakeep](https://karakeep.app)** — un gestor de marcadores autoalojado con etiquetado automático mediante IA; más limitado en alcance que Surf (marcadores específicamente, no una biblioteca general de archivos/PDF/web), pero una buena opción si organizar marcadores es tu necesidad principal. Consulta la [reseña de Karakeep](/es/power-local-llm/karakeep-review).',
           '**[Blinko](https://github.com/blinko-space/blinko)** — una app autoalojada de notas con IA y búsqueda RAG sobre tus propias notas; más cercana a la idea de "IA sobre tu propio contenido" de Surf, pero construida alrededor de notas en lugar de una biblioteca mixta de archivos/PDF/web. Consulta la [reseña de Blinko](/es/power-local-llm/blinko-review).',
           '**[Khoj](https://khoj.dev)** — un "segundo cerebro" autoalojado que indexa tus documentos, notas y (opcionalmente) contenido en línea para búsqueda y chat con IA; una amplitud de tipos de fuentes comparable a la de Surf, con un modelo de interfaz distinto (centrado en el chat en lugar de en el cuaderno). Consulta la [reseña de Khoj](/es/power-local-llm/khoj-ai-second-brain-review).',
         ],
-        note: 'Esta no es una lista exhaustiva de apps de notas y conocimiento autoalojadas — consulta el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para ver el catálogo completo y actualizado regularmente, incluida la entrada propia de Surf en el directorio.',
+        note: 'Esta no es una lista exhaustiva de apps de notas y conocimiento autoalojadas — consulta el [directorio de software de LLM local](/es/directory) para ver el catálogo completo y actualizado regularmente, incluida la entrada propia de Surf en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1634,7 +1634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de LLM local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de directorio propia de Surf junto a otras apps de conocimiento y notas cubiertas arriba.',
+          '[Directorio de software de LLM local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de directorio propia de Surf junto a otras apps de conocimiento y notas cubiertas arriba.',
           '[Reseña de Karakeep](/es/power-local-llm/karakeep-review) — un gestor de marcadores autoalojado con etiquetado automático mediante IA, más limitado en alcance que Surf, pero una comparación cercana para flujos de trabajo centrados en marcadores.',
           '[Reseña de Blinko](/es/power-local-llm/blinko-review) — una app autoalojada de notas con IA y búsqueda RAG, la comparación más cercana para "IA sobre tus propias notas".',
           '[Reseña de Khoj](/es/power-local-llm/khoj-ai-second-brain-review) — un segundo cerebro autoalojado con una amplitud de tipos de fuentes similar a la de Surf, construido centrado en el chat en lugar de en el cuaderno.',
@@ -1713,7 +1713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'طوّرته [Deta](https://deta.surf)؛ يحل هذا الإصدار مفتوح المصدر محل منتج "Surf المُدار" السابق مغلق المصدر الذي تضمّن ذكاءً اصطناعيًا مدمجًا وتوقيع كود وتحديثات تلقائية',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المقال المتعمّق المرافق لإدراج Surf في [دليل برامج نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارن Surf بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المقال المتعمّق المرافق لإدراج Surf في [دليل برامج نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارن Surf بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
           { type: 'note', text: 'تغطي هذه المراجعة [github.com/deta/surf](https://github.com/deta/surf)، تطبيق "دفتر الملاحظات الشخصي بالذكاء الاصطناعي" من فريق Deta. وهو غير مرتبط بمشروع steel-dev/surf.new، وهو مشروع أتمتة متصفح منفصل يحمل اسمًا مشابهًا — لا تخلط بينهما عند البحث.' },
         ],
       },
@@ -1843,13 +1843,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'surf-competitors',
         title: 'Surf مقابل تطبيقات الملاحظات والمعرفة الأخرى ذاتية الاستضافة',
-        content: 'Surf واحد من عدة أدوات ذاتية الاستضافة تجمع بين إدارة المعرفة الشخصية والذكاء الاصطناعي، وتخزّن البيانات محليًا وتتيح لك اختيار نموذجك. إليك كيف يقع بالمقارنة مع خيارات أخرى في هذا المجال — راجع [دليل برامج نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل.',
+        content: 'Surf واحد من عدة أدوات ذاتية الاستضافة تجمع بين إدارة المعرفة الشخصية والذكاء الاصطناعي، وتخزّن البيانات محليًا وتتيح لك اختيار نموذجك. إليك كيف يقع بالمقارنة مع خيارات أخرى في هذا المجال — راجع [دليل برامج نماذج اللغة المحلية](/ar/directory) للحصول على الكتالوج الكامل.',
         items: [
           '**[Karakeep](https://karakeep.app)** — مدير إشارات مرجعية ذاتي الاستضافة مع وسم تلقائي بالذكاء الاصطناعي؛ نطاقه أضيق من Surf (إشارات مرجعية تحديدًا، وليس مكتبة عامة للملفات/PDF/الويب) لكنه خيار جيد إذا كان تنظيم الإشارات المرجعية هو احتياجك الأساسي. راجع [مراجعة Karakeep](/ar/power-local-llm/karakeep-review).',
           '**[Blinko](https://github.com/blinko-space/blinko)** — تطبيق ملاحظات ذاتي الاستضافة بالذكاء الاصطناعي مع بحث RAG على ملاحظاتك الخاصة؛ أقرب إلى فكرة "الذكاء الاصطناعي فوق محتواك الخاص" التي يتبناها Surf، لكنه مبني حول الملاحظات وليس مكتبة مختلطة من الملفات/PDF/الويب. راجع [مراجعة Blinko](/ar/power-local-llm/blinko-review).',
           '**[Khoj](https://khoj.dev)** — "دماغ ثانٍ" ذاتي الاستضافة يفهرس مستنداتك وملاحظاتك و(اختياريًا) المحتوى عبر الإنترنت للبحث والمحادثة بالذكاء الاصطناعي؛ اتساع مماثل لأنواع المصادر مقارنةً بـ Surf، مع نموذج واجهة مستخدم مختلف (محادثة أولاً بدلاً من دفتر ملاحظات أولاً). راجع [مراجعة Khoj](/ar/power-local-llm/khoj-ai-second-brain-review).',
         ],
-        note: 'هذه ليست قائمة شاملة لتطبيقات المعرفة والملاحظات ذاتية الاستضافة — راجع [دليل برامج نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدراج Surf الخاص في الدليل.',
+        note: 'هذه ليست قائمة شاملة لتطبيقات المعرفة والملاحظات ذاتية الاستضافة — راجع [دليل برامج نماذج اللغة المحلية](/ar/directory) للحصول على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدراج Surf الخاص في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1907,7 +1907,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برامج نماذج اللغة المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك إدراج Surf في الدليل إلى جانب تطبيقات المعرفة والملاحظات الأخرى المذكورة أعلاه.',
+          '[دليل برامج نماذج اللغة المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية التي ينتمي إليها هذا المقال، بما في ذلك إدراج Surf في الدليل إلى جانب تطبيقات المعرفة والملاحظات الأخرى المذكورة أعلاه.',
           '[مراجعة Karakeep](/ar/power-local-llm/karakeep-review) — مدير إشارات مرجعية ذاتي الاستضافة مع وسم تلقائي بالذكاء الاصطناعي، نطاقه أضيق من Surf لكنه مقارنة قريبة لسير العمل المرتكز على الإشارات المرجعية.',
           '[مراجعة Blinko](/ar/power-local-llm/blinko-review) — تطبيق ملاحظات ذاتي الاستضافة بالذكاء الاصطناعي مع بحث RAG، وهو أقرب مقارنة لفكرة "الذكاء الاصطناعي فوق ملاحظاتك الخاصة".',
           '[مراجعة Khoj](/ar/power-local-llm/khoj-ai-second-brain-review) — "دماغ ثانٍ" ذاتي الاستضافة باتساع مماثل لأنواع المصادر مقارنةً بـ Surf، مبني على أساس المحادثة أولاً بدلاً من دفتر الملاحظات أولاً.',
@@ -1986,7 +1986,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Deta](https://deta.surf)가 개발했으며, 이 오픈소스 릴리스는 AI 내장, 코드 서명, 자동 업데이트를 포함했던 이전의 폐쇄형 소스 "매니지드 Surf" 제품을 대체합니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 등록된 Surf 항목의 심층 분석판입니다 — Surf가 수십 개의 다른 로컬 AI 도구와 비교해 한눈에 어떤 위치에 있는지는 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등록된 Surf 항목의 심층 분석판입니다 — Surf가 수십 개의 다른 로컬 AI 도구와 비교해 한눈에 어떤 위치에 있는지는 해당 페이지를 참고하세요.' },
           { type: 'note', text: '이 리뷰는 Deta 팀의 "Personal AI Notebook" 앱인 [github.com/deta/surf](https://github.com/deta/surf)를 다룹니다. 이름이 비슷한 별개의 브라우저 자동화 프로젝트인 steel-dev/surf.new와는 무관하므로, 검색 시 혼동하지 않도록 주의하세요.' },
         ],
       },
@@ -2116,13 +2116,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'surf-competitors',
         title: 'Surf와 다른 셀프 호스팅 노트·지식 관리 앱 비교',
-        content: 'Surf는 개인 지식 관리와 AI를 결합해 데이터를 로컬에 저장하고 모델을 직접 선택할 수 있게 해주는 여러 셀프 호스팅 도구 중 하나입니다. 이 분야에서 다른 옵션들과 비교했을 때 Surf가 어떤 위치에 있는지 살펴보겠습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        content: 'Surf는 개인 지식 관리와 AI를 결합해 데이터를 로컬에 저장하고 모델을 직접 선택할 수 있게 해주는 여러 셀프 호스팅 도구 중 하나입니다. 이 분야에서 다른 옵션들과 비교했을 때 Surf가 어떤 위치에 있는지 살펴보겠습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
         items: [
           '**[Karakeep](https://karakeep.app)** — AI 자동 태깅 기능을 갖춘 셀프 호스팅 북마크 관리자로, Surf보다 범위가 좁습니다(일반적인 파일·PDF·웹 라이브러리가 아니라 북마크에 특화되어 있음). 북마크 정리가 주된 목적이라면 좋은 선택입니다. [Karakeep 리뷰](/ko/power-local-llm/karakeep-review)를 참고하세요.',
           '**[Blinko](https://github.com/blinko-space/blinko)** — 자신의 노트에 대한 RAG 검색을 제공하는 셀프 호스팅 AI 노트 앱으로, "자신의 콘텐츠에 대한 AI"라는 개념에서는 Surf와 더 가깝지만, 다양한 파일·PDF·웹 라이브러리가 아니라 노트 중심으로 구축되어 있습니다. [Blinko 리뷰](/ko/power-local-llm/blinko-review)를 참고하세요.',
           '**[Khoj](https://khoj.dev)** — 문서, 노트, (선택적으로) 온라인 콘텐츠를 색인화해 AI 검색과 채팅에 활용하는 셀프 호스팅 "세컨드 브레인"입니다. Surf와 비슷한 폭의 소스 유형을 다루지만 UI 모델은 다릅니다(노트 우선이 아니라 채팅 우선). [Khoj 리뷰](/ko/power-local-llm/khoj-ai-second-brain-review)를 참고하세요.',
         ],
-        note: '이는 셀프 호스팅 지식·노트 관리 앱의 전체 목록이 아닙니다 — Surf의 디렉터리 항목을 포함한 전체 카탈로그는 정기적으로 업데이트되는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에서 확인하세요.',
+        note: '이는 셀프 호스팅 지식·노트 관리 앱의 전체 목록이 아닙니다 — Surf의 디렉터리 항목을 포함한 전체 카탈로그는 정기적으로 업데이트되는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에서 확인하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2180,7 +2180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 지식·노트 관리 앱들과 함께 Surf의 디렉터리 항목도 포함되어 있습니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 위에서 다룬 다른 지식·노트 관리 앱들과 함께 Surf의 디렉터리 항목도 포함되어 있습니다.',
           '[Karakeep 리뷰](/ko/power-local-llm/karakeep-review) — AI 자동 태깅을 갖춘 셀프 호스팅 북마크 관리자로, Surf보다 범위는 좁지만 북마크 중심 워크플로에서는 밀접하게 비교할 수 있습니다.',
           '[Blinko 리뷰](/ko/power-local-llm/blinko-review) — RAG 검색을 갖춘 셀프 호스팅 AI 노트 앱으로, "자신의 노트에 대한 AI"라는 개념에 가장 가까운 비교 대상입니다.',
           '[Khoj 리뷰](/ko/power-local-llm/khoj-ai-second-brain-review) — Surf와 비슷한 폭의 소스 유형을 다루는 셀프 호스팅 세컨드 브레인으로, 노트 우선이 아니라 채팅 우선으로 구축되었습니다.',
@@ -2259,7 +2259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desenvolvido pela [Deta](https://deta.surf); esta versão open source substitui um produto anterior de código fechado chamado "managed Surf", que reunia IA, assinatura de código e atualizações automáticas',
         ],
         callouts: [
-          { type: 'note', text: 'Esta avaliação é o complemento aprofundado da entrada do Surf no [Diretório de Softwares de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar o Surf rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta avaliação é o complemento aprofundado da entrada do Surf no [Diretório de Softwares de LLM Local](/pt/directory) — veja essa página para comparar o Surf rapidamente com dezenas de outras ferramentas de IA local.' },
           { type: 'note', text: 'Esta avaliação cobre o [github.com/deta/surf](https://github.com/deta/surf), o aplicativo "Personal AI Notebook" da equipe da Deta. Ele não tem relação com o steel-dev/surf.new, um projeto separado de automação de navegador com nome parecido — não confunda os dois ao pesquisar.' },
         ],
       },
@@ -2389,13 +2389,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'surf-competitors',
         title: 'Surf vs. Outros Aplicativos de Notas e Conhecimento Self-Hosted',
-        content: 'O Surf é uma entre várias ferramentas self-hosted que combinam gestão pessoal de conhecimento com IA, armazenando dados localmente e permitindo que você escolha seu modelo. Veja como ele se posiciona ao lado de outras opções nesse espaço — confira o [Diretório de Softwares de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'O Surf é uma entre várias ferramentas self-hosted que combinam gestão pessoal de conhecimento com IA, armazenando dados localmente e permitindo que você escolha seu modelo. Veja como ele se posiciona ao lado de outras opções nesse espaço — confira o [Diretório de Softwares de LLM Local](/pt/directory) para o catálogo completo.',
         items: [
           '**[Karakeep](https://karakeep.app)** — um gerenciador de marcadores self-hosted com marcação automática por IA; mais restrito em escopo do que o Surf (marcadores especificamente, não uma biblioteca geral de arquivos/PDF/web), mas uma boa opção se organizar marcadores é sua necessidade principal. Veja a [avaliação do Karakeep](/pt/power-local-llm/karakeep-review).',
           '**[Blinko](https://github.com/blinko-space/blinko)** — um aplicativo de notas com IA self-hosted, com busca RAG sobre suas próprias notas; mais próximo da ideia de "IA sobre o seu próprio conteúdo" do Surf, mas construído em torno de notas, e não de uma biblioteca mista de arquivos/PDF/web. Veja a [avaliação do Blinko](/pt/power-local-llm/blinko-review).',
           '**[Khoj](https://khoj.dev)** — um "segundo cérebro" self-hosted que indexa seus documentos, notas e (opcionalmente) conteúdo online para busca e chat com IA; uma amplitude de tipos de fonte comparável à do Surf, com um modelo de interface diferente (voltado a chat primeiro, em vez de notebook primeiro). Veja a [avaliação do Khoj](/pt/power-local-llm/khoj-ai-second-brain-review).',
         ],
-        note: 'Esta não é uma lista exaustiva de aplicativos self-hosted de conhecimento e notas — veja o [Diretório de Softwares de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, atualizado regularmente, incluindo a própria entrada do Surf no diretório.',
+        note: 'Esta não é uma lista exaustiva de aplicativos self-hosted de conhecimento e notas — veja o [Diretório de Softwares de LLM Local](/pt/directory) para o catálogo completo, atualizado regularmente, incluindo a própria entrada do Surf no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2453,7 +2453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leitura Relacionada',
         items: [
-          '[Diretório de Softwares de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Surf no diretório ao lado de outros aplicativos de conhecimento e notas cobertos acima.',
+          '[Diretório de Softwares de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Surf no diretório ao lado de outros aplicativos de conhecimento e notas cobertos acima.',
           '[Avaliação do Karakeep](/pt/power-local-llm/karakeep-review) — um gerenciador de marcadores self-hosted com marcação automática por IA, mais restrito em escopo do que o Surf, mas uma comparação próxima para fluxos de trabalho focados em marcadores.',
           '[Avaliação do Blinko](/pt/power-local-llm/blinko-review) — um aplicativo de notas com IA self-hosted, com busca RAG, a comparação mais próxima para "IA sobre suas próprias notas".',
           '[Avaliação do Khoj](/pt/power-local-llm/khoj-ai-second-brain-review) — um segundo cérebro self-hosted com uma amplitude de tipos de fonte semelhante à do Surf, construído voltado a chat em vez de notebook primeiro.',

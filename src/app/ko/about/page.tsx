@@ -223,7 +223,7 @@ export default function KoAboutPage() {
                   <div className="text-text-primary font-semibold mb-1">로컬 LLM 콘텐츠</div>
                   <div className="text-sm text-text-secondary">자신의 하드웨어에서 LLM을 실행하는 가이드 — 설치, 요구 사항, 비교.</div>
                 </Link>
-                <Link href="/ko/power-local-llm/local-llm-software-directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                <Link href="/ko/directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
                   <div className="text-text-primary font-semibold mb-1">로컬 LLM 소프트웨어 디렉터리</div>
                   <div className="text-sm text-text-secondary">로컬 LLM 앱과 도구를 나란히 비교할 수 있는 검색 가능한 디렉터리.</div>
                 </Link>

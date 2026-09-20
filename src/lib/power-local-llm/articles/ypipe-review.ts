@@ -68,7 +68,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installs via JBang (`jbang ypipe@iunera/ypipe`), platform-specific binaries (Windows, macOS Apple Silicon, Linux), or a universal JAR for any Java environment',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Ypipe\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Ypipe compares at a glance to dozens of other local AI tools. Given Ypipe\'s early-stage status, this review leans especially heavily on direct quotes from its own repository rather than independent testing.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Ypipe\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Ypipe compares at a glance to dozens of other local AI tools. Given Ypipe\'s early-stage status, this review leans especially heavily on direct quotes from its own repository rather than independent testing.' },
         ],
       },
       overview: {
@@ -133,7 +133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — a free, open-source local chat app with a long track record; see the [GPT4All review](/power-local-llm/gpt4all-review) for a tool with a stable, mature license (unlike Ypipe\'s time-limited preview license).',
           '**[Docker Model Runner](https://www.docker.com/products/model-runner/)** — a model-serving tool from an established company (Docker Inc.) with a mature product history, for comparison against Ypipe\'s early-preview status from a much newer vendor. See the [Docker Model Runner review](/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'If you need a local AI tool you can rely on today, the established alternatives above have open-source licenses, much larger user bases, and multi-year track records that Ypipe — a 13-star technical preview — does not yet have. See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        note: 'If you need a local AI tool you can rely on today, the established alternatives above have open-source licenses, much larger user bases, and multi-year track records that Ypipe — a 13-star technical preview — does not yet have. See the [Local LLM Software Directory](/directory) for the full catalog.',
       },
       whoShouldUse: {
         id: 'who-should-use-ypipe',
@@ -195,7 +195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'What is SmartPipes?', a: 'SmartPipes is Ypipe\'s visual, drag-and-drop workflow builder for chaining local GGUF models, MCP tool calls, JavaScript logic, and media synthesis steps, with a REST API and web-form publishing option.' },
           { q: 'Does Ypipe work fully offline?', a: 'Ypipe is positioned as an "airgapped" tool designed for offline use once models are downloaded. This review has not independently verified that claim through security testing — treat it as the vendor\'s own positioning rather than an independently audited fact.' },
           { q: 'Has PromptQuorum tested Ypipe hands-on?', a: 'This review is based on Ypipe\'s own repository, README documentation, and license terms, cross-checked against the GitHub API for star count and activity — it does not claim independent benchmarking of Ypipe\'s inference performance or security posture.' },
-          { q: 'What are more established alternatives to Ypipe?', a: 'Ollama, Jan, GPT4All, and Docker Model Runner are open-source or vendor-backed tools with far larger user bases and longer track records — see the comparison section above and the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for more.' },
+          { q: 'What are more established alternatives to Ypipe?', a: 'Ollama, Jan, GPT4All, and Docker Model Runner are open-source or vendor-backed tools with far larger user bases and longer track records — see the comparison section above and the [Local LLM Software Directory](/directory) for more.' },
         ],
       },
       sources: {
@@ -211,7 +211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Ypipe\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Ypipe\'s directory entry.',
           '[Ollama Review 2026](/power-local-llm/ollama-review) — a widely used, open-source local runtime, for comparison against Ypipe\'s early-preview status.',
           '[Jan Review](/power-local-llm/jan-review) — an established, open-source desktop app for local models.',
           '[GPT4All Review](/power-local-llm/gpt4all-review) — a long-running, open-source local chat app.',
@@ -285,7 +285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installation per JBang (`jbang ypipe@iunera/ypipe`), plattformspezifischen Binärdateien (Windows, macOS Apple Silicon, Linux) oder einer universellen JAR-Datei für jede Java-Umgebung',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Ypipes Eintrag im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie Ypipe im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet. Angesichts von Ypipes frühem Reifegrad stützt sich diese Review besonders stark auf direkte Zitate aus dem eigenen Repository statt auf unabhängige Tests.' },
+          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Ypipes Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie Ypipe im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet. Angesichts von Ypipes frühem Reifegrad stützt sich diese Review besonders stark auf direkte Zitate aus dem eigenen Repository statt auf unabhängige Tests.' },
         ],
       },
       overview: {
@@ -350,7 +350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — eine kostenlose, quelloffene lokale Chat-App mit langer Erfolgsgeschichte; siehe den [GPT4All Review](/de/power-local-llm/gpt4all-review) für ein Tool mit stabiler, ausgereifter Lizenz (anders als Ypipes zeitlich begrenzte Vorschau-Lizenz).',
           '**[Docker Model Runner](https://www.docker.com/products/model-runner/)** — ein Modell-Serving-Tool eines etablierten Unternehmens (Docker Inc.) mit reifer Produktgeschichte, zum Vergleich mit Ypipes frühem Vorschau-Status von einem deutlich neueren Anbieter. Siehe den [Docker Model Runner Review](/de/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'Wenn Sie ein lokales KI-Tool benötigen, auf das Sie sich schon heute verlassen können, bieten die oben genannten etablierten Alternativen Open-Source-Lizenzen, deutlich größere Nutzerbasen und mehrjährige Erfolgsgeschichten, die Ypipe — eine technische Vorschau mit 13 Sternen — noch nicht vorweisen kann. Siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog.',
+        note: 'Wenn Sie ein lokales KI-Tool benötigen, auf das Sie sich schon heute verlassen können, bieten die oben genannten etablierten Alternativen Open-Source-Lizenzen, deutlich größere Nutzerbasen und mehrjährige Erfolgsgeschichten, die Ypipe — eine technische Vorschau mit 13 Sternen — noch nicht vorweisen kann. Siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen Katalog.',
       },
       whoShouldUse: {
         id: 'who-should-use-ypipe',
@@ -412,7 +412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Was ist SmartPipes?', a: 'SmartPipes ist Ypipes visueller Drag-and-Drop-Workflow-Builder zum Verketten lokaler GGUF-Modelle, MCP-Tool-Aufrufe, JavaScript-Logik und Medien-Synthese-Schritte, mit REST-API und Webformular-Veröffentlichungsoption.' },
           { q: 'Funktioniert Ypipe vollständig offline?', a: 'Ypipe wird als „air-gapped"-Tool positioniert, konzipiert für den Offline-Einsatz, sobald Modelle heruntergeladen sind. Diese Review hat diese Aussage nicht unabhängig per Sicherheitstest verifiziert — behandeln Sie sie als Positionierung des Herstellers, nicht als unabhängig geprüfte Tatsache.' },
           { q: 'Hat PromptQuorum Ypipe praktisch getestet?', a: 'Diese Review basiert auf Ypipes eigenem Repository, der README-Dokumentation und den Lizenzbedingungen, abgeglichen mit der GitHub API für Sternezahl und Aktivität — sie beansprucht kein unabhängiges Benchmarking der Inferenzleistung oder Sicherheitslage von Ypipe.' },
-          { q: 'Was sind etabliertere Alternativen zu Ypipe?', a: 'Ollama, Jan, GPT4All und Docker Model Runner sind quelloffene oder herstellergestützte Tools mit deutlich größeren Nutzerbasen und längeren Erfolgsgeschichten — siehe den Vergleichsabschnitt oben und das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für mehr.' },
+          { q: 'Was sind etabliertere Alternativen zu Ypipe?', a: 'Ollama, Jan, GPT4All und Docker Model Runner sind quelloffene oder herstellergestützte Tools mit deutlich größeren Nutzerbasen und längeren Erfolgsgeschichten — siehe den Vergleichsabschnitt oben und das [lokale KI-Software-Verzeichnis](/de/directory) für mehr.' },
         ],
       },
       sources: {
@@ -428,7 +428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Ypipes Verzeichniseintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Ypipes Verzeichniseintrag.',
           '[Ollama Review 2026](/de/power-local-llm/ollama-review) — eine breit genutzte, quelloffene lokale Laufzeitumgebung, zum Vergleich mit Ypipes frühem Vorschau-Status.',
           '[Jan Review](/de/power-local-llm/jan-review) — eine etablierte, quelloffene Desktop-App für lokale Modelle.',
           '[GPT4All Review](/de/power-local-llm/gpt4all-review) — eine langjährige, quelloffene lokale Chat-App.',
@@ -502,7 +502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'S\'installe via JBang (`jbang ypipe@iunera/ypipe`), des binaires spécifiques à la plateforme (Windows, macOS Apple Silicon, Linux), ou un JAR universel pour tout environnement Java',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche d\'Ypipe dans le [répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment Ypipe se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale. Étant donné le stade précoce d\'Ypipe, cette review s\'appuie particulièrement sur des citations directes de son propre dépôt plutôt que sur des tests indépendants.' },
+          { type: 'note', text: 'Cette review est le complément approfondi de la fiche d\'Ypipe dans le [répertoire des logiciels d\'IA locale](/fr/directory) — consultez cette page pour voir comment Ypipe se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale. Étant donné le stade précoce d\'Ypipe, cette review s\'appuie particulièrement sur des citations directes de son propre dépôt plutôt que sur des tests indépendants.' },
         ],
       },
       overview: {
@@ -567,7 +567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — une application de chat locale gratuite et open source avec un long historique ; voir la [review de GPT4All](/fr/power-local-llm/gpt4all-review) pour un outil avec une licence stable et mature (contrairement à la licence d\'aperçu limitée dans le temps d\'Ypipe).',
           '**[Docker Model Runner](https://www.docker.com/products/model-runner/)** — un outil de service de modèles d\'une entreprise établie (Docker Inc.) avec un historique de produit mature, pour comparer avec le statut d\'aperçu précoce d\'Ypipe venant d\'un fournisseur bien plus récent. Voir la [review de Docker Model Runner](/fr/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'Si vous avez besoin d\'un outil IA local sur lequel compter dès aujourd\'hui, les alternatives établies ci-dessus disposent de licences open source, de bases d\'utilisateurs bien plus grandes et d\'historiques de plusieurs années qu\'Ypipe — un aperçu technique à 13 étoiles — n\'a pas encore. Voir le [répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        note: 'Si vous avez besoin d\'un outil IA local sur lequel compter dès aujourd\'hui, les alternatives établies ci-dessus disposent de licences open source, de bases d\'utilisateurs bien plus grandes et d\'historiques de plusieurs années qu\'Ypipe — un aperçu technique à 13 étoiles — n\'a pas encore. Voir le [répertoire des logiciels d\'IA locale](/fr/directory) pour le catalogue complet.',
       },
       whoShouldUse: {
         id: 'who-should-use-ypipe',
@@ -629,7 +629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Qu\'est-ce que SmartPipes ?', a: 'SmartPipes est le constructeur de workflows visuel par glisser-déposer d\'Ypipe pour enchaîner des modèles GGUF locaux, des appels d\'outils MCP, de la logique JavaScript et des étapes de synthèse média, avec une API REST et une option de publication par formulaire web.' },
           { q: 'Ypipe fonctionne-t-il entièrement hors ligne ?', a: 'Ypipe est positionné comme un outil « isolé » conçu pour un usage hors ligne une fois les modèles téléchargés. Cette review n\'a pas vérifié cette affirmation de manière indépendante par des tests de sécurité — traitez-la comme le positionnement propre du fournisseur, pas comme un fait audité de manière indépendante.' },
           { q: 'PromptQuorum a-t-il testé Ypipe de manière pratique ?', a: 'Cette review s\'appuie sur le dépôt propre d\'Ypipe, sa documentation README et ses conditions de licence, recoupés avec l\'API GitHub pour le nombre d\'étoiles et l\'activité — elle ne prétend pas à un benchmarking indépendant des performances d\'inférence ou de la posture de sécurité d\'Ypipe.' },
-          { q: 'Quelles sont des alternatives plus établies à Ypipe ?', a: 'Ollama, Jan, GPT4All et Docker Model Runner sont des outils open source ou soutenus par un fournisseur avec des bases d\'utilisateurs bien plus grandes et des historiques plus longs — voir la section de comparaison ci-dessus et le [répertoire des logiciels d\'IA locale](/fr/power-local-llm/local-llm-software-directory) pour plus d\'options.' },
+          { q: 'Quelles sont des alternatives plus établies à Ypipe ?', a: 'Ollama, Jan, GPT4All et Docker Model Runner sont des outils open source ou soutenus par un fournisseur avec des bases d\'utilisateurs bien plus grandes et des historiques plus longs — voir la section de comparaison ci-dessus et le [répertoire des logiciels d\'IA locale](/fr/directory) pour plus d\'options.' },
         ],
       },
       sources: {
@@ -645,7 +645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire des logiciels d\'IA locale 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche d\'Ypipe.',
+          '[Répertoire des logiciels d\'IA locale 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche d\'Ypipe.',
           '[Review d\'Ollama 2026](/fr/power-local-llm/ollama-review) — un moteur local open source largement utilisé, à comparer au statut d\'aperçu précoce d\'Ypipe.',
           '[Review de Jan](/fr/power-local-llm/jan-review) — une application de bureau open source établie pour les modèles locaux.',
           '[Review de GPT4All](/fr/power-local-llm/gpt4all-review) — une application de chat locale open source de longue date.',
@@ -719,7 +719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Se instala vía JBang (`jbang ypipe@iunera/ypipe`), binarios específicos por plataforma (Windows, macOS Apple Silicon, Linux), o un JAR universal para cualquier entorno Java',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de Ypipe en el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) — consulte esa página para ver de un vistazo cómo se compara Ypipe con decenas de otras herramientas de IA local. Dado el estado temprano de Ypipe, esta review se apoya especialmente en citas directas de su propio repositorio en lugar de pruebas independientes.' },
+          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de Ypipe en el [directorio de software de IA local](/es/directory) — consulte esa página para ver de un vistazo cómo se compara Ypipe con decenas de otras herramientas de IA local. Dado el estado temprano de Ypipe, esta review se apoya especialmente en citas directas de su propio repositorio en lugar de pruebas independientes.' },
         ],
       },
       overview: {
@@ -784,7 +784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — una aplicación de chat local gratuita y de código abierto con un largo historial; vea la [review de GPT4All](/es/power-local-llm/gpt4all-review) para una herramienta con una licencia estable y madura (a diferencia de la licencia de vista previa limitada en el tiempo de Ypipe).',
           '**[Docker Model Runner](https://www.docker.com/products/model-runner/)** — una herramienta de servicio de modelos de una empresa establecida (Docker Inc.) con un historial de producto maduro, para comparar con el estado de vista previa temprana de Ypipe, de un proveedor mucho más nuevo. Vea la [review de Docker Model Runner](/es/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'Si necesita una herramienta de IA local en la que confiar hoy mismo, las alternativas establecidas anteriores tienen licencias de código abierto, bases de usuarios mucho más grandes e historiales de varios años que Ypipe — una vista previa técnica con 13 estrellas — aún no tiene. Vea el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo.',
+        note: 'Si necesita una herramienta de IA local en la que confiar hoy mismo, las alternativas establecidas anteriores tienen licencias de código abierto, bases de usuarios mucho más grandes e historiales de varios años que Ypipe — una vista previa técnica con 13 estrellas — aún no tiene. Vea el [directorio de software de IA local](/es/directory) para el catálogo completo.',
       },
       whoShouldUse: {
         id: 'who-should-use-ypipe',
@@ -846,7 +846,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Qué es SmartPipes?', a: 'SmartPipes es el constructor de flujos de trabajo visual de arrastrar y soltar de Ypipe para encadenar modelos GGUF locales, llamadas a herramientas MCP, lógica JavaScript y pasos de síntesis multimedia, con una API REST y opción de publicación mediante formulario web.' },
           { q: '¿Funciona Ypipe completamente sin conexión?', a: 'Ypipe se posiciona como una herramienta "con air gap" diseñada para uso sin conexión una vez descargados los modelos. Esta review no ha verificado de forma independiente esa afirmación mediante pruebas de seguridad — trátela como el posicionamiento propio del proveedor, no como un hecho auditado de forma independiente.' },
           { q: '¿Ha probado PromptQuorum Ypipe de forma práctica?', a: 'Esta review se basa en el propio repositorio de Ypipe, su documentación README y sus condiciones de licencia, contrastados con la API de GitHub para el número de estrellas y actividad — no afirma haber realizado un benchmarking independiente del rendimiento de inferencia o la postura de seguridad de Ypipe.' },
-          { q: '¿Cuáles son alternativas más establecidas a Ypipe?', a: 'Ollama, Jan, GPT4All y Docker Model Runner son herramientas de código abierto o respaldadas por un proveedor con bases de usuarios mucho más grandes e historiales más largos — vea la sección de comparación anterior y el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) para más opciones.' },
+          { q: '¿Cuáles son alternativas más establecidas a Ypipe?', a: 'Ollama, Jan, GPT4All y Docker Model Runner son herramientas de código abierto o respaldadas por un proveedor con bases de usuarios mucho más grandes e historiales más largos — vea la sección de comparación anterior y el [directorio de software de IA local](/es/directory) para más opciones.' },
         ],
       },
       sources: {
@@ -862,7 +862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de IA local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de Ypipe.',
+          '[Directorio de software de IA local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de Ypipe.',
           '[Review de Ollama 2026](/es/power-local-llm/ollama-review) — un entorno de ejecución local de código abierto ampliamente usado, para comparar con el estado de vista previa temprana de Ypipe.',
           '[Review de Jan](/es/power-local-llm/jan-review) — una aplicación de escritorio de código abierto establecida para modelos locales.',
           '[Review de GPT4All](/es/power-local-llm/gpt4all-review) — una aplicación de chat local de código abierto de larga trayectoria.',
@@ -936,7 +936,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instala-se via JBang (`jbang ypipe@iunera/ypipe`), binários específicos por plataforma (Windows, macOS Apple Silicon, Linux), ou um JAR universal para qualquer ambiente Java',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da ficha do Ypipe no [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o Ypipe com dezenas de outras ferramentas de IA local. Dado o estágio inicial do Ypipe, esta review se apoia especialmente em citações diretas do próprio repositório em vez de testes independentes.' },
+          { type: 'note', text: 'Esta review é o complemento aprofundado da ficha do Ypipe no [diretório de software de IA local](/pt/directory) — veja essa página para comparar rapidamente o Ypipe com dezenas de outras ferramentas de IA local. Dado o estágio inicial do Ypipe, esta review se apoia especialmente em citações diretas do próprio repositório em vez de testes independentes.' },
         ],
       },
       overview: {
@@ -1001,7 +1001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — um app de chat local gratuito e de código aberto com um longo histórico; veja a [review do GPT4All](/pt/power-local-llm/gpt4all-review) para uma ferramenta com licença estável e madura (ao contrário da licença de prévia limitada no tempo do Ypipe).',
           '**[Docker Model Runner](https://www.docker.com/products/model-runner/)** — uma ferramenta de serving de modelos de uma empresa estabelecida (Docker Inc.) com um histórico de produto maduro, para comparação com o status de prévia inicial do Ypipe, de um fornecedor muito mais novo. Veja a [review do Docker Model Runner](/pt/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'Se você precisa de uma ferramenta de IA local em que possa confiar hoje, as alternativas estabelecidas acima têm licenças de código aberto, bases de usuários muito maiores e históricos de vários anos que o Ypipe — uma prévia técnica com 13 estrelas — ainda não tem. Veja o [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        note: 'Se você precisa de uma ferramenta de IA local em que possa confiar hoje, as alternativas estabelecidas acima têm licenças de código aberto, bases de usuários muito maiores e históricos de vários anos que o Ypipe — uma prévia técnica com 13 estrelas — ainda não tem. Veja o [diretório de software de IA local](/pt/directory) para o catálogo completo.',
       },
       whoShouldUse: {
         id: 'who-should-use-ypipe',
@@ -1063,7 +1063,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'O que é o SmartPipes?', a: 'SmartPipes é o construtor de fluxos de trabalho visual de arrastar e soltar do Ypipe para encadear modelos GGUF locais, chamadas de ferramentas MCP, lógica JavaScript e etapas de síntese de mídia, com API REST e opção de publicação por formulário web.' },
           { q: 'O Ypipe funciona totalmente offline?', a: 'O Ypipe é posicionado como uma ferramenta "com air gap" projetada para uso offline depois que os modelos são baixados. Esta review não verificou de forma independente essa afirmação por meio de testes de segurança — trate-a como o posicionamento do próprio fornecedor, não como um fato auditado de forma independente.' },
           { q: 'A PromptQuorum testou o Ypipe na prática?', a: 'Esta review se baseia no próprio repositório do Ypipe, na documentação README e nos termos de licença, cruzados com a API do GitHub para número de estrelas e atividade — não alega ter feito um benchmarking independente do desempenho de inferência ou da postura de segurança do Ypipe.' },
-          { q: 'Quais são alternativas mais estabelecidas ao Ypipe?', a: 'Ollama, Jan, GPT4All e Docker Model Runner são ferramentas de código aberto ou respaldadas por fornecedor com bases de usuários muito maiores e históricos mais longos — veja a seção de comparação acima e o [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory) para mais opções.' },
+          { q: 'Quais são alternativas mais estabelecidas ao Ypipe?', a: 'Ollama, Jan, GPT4All e Docker Model Runner são ferramentas de código aberto ou respaldadas por fornecedor com bases de usuários muito maiores e históricos mais longos — veja a seção de comparação acima e o [diretório de software de IA local](/pt/directory) para mais opções.' },
         ],
       },
       sources: {
@@ -1079,7 +1079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software de IA local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do Ypipe.',
+          '[Diretório de software de IA local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do Ypipe.',
           '[Review do Ollama 2026](/pt/power-local-llm/ollama-review) — um ambiente de execução local de código aberto amplamente usado, para comparação com o status de prévia inicial do Ypipe.',
           '[Review do Jan](/pt/power-local-llm/jan-review) — um aplicativo de desktop de código aberto estabelecido para modelos locais.',
           '[Review do GPT4All](/pt/power-local-llm/gpt4all-review) — um app de chat local de código aberto de longa data.',
@@ -1153,7 +1153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'JBang（`jbang ypipe@iunera/ypipe`）、プラットフォーム別バイナリ（Windows、macOS Apple Silicon、Linux）、またはあらゆるJava環境向けの汎用JARでインストール',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるYpipeのエントリーの詳細版です。Ypipeが他の数十ものローカルAIツールと比べてどう位置づけられるかは、そちらのページを参照してください。Ypipeの初期段階という性質上、このレビューは独立したテストよりも、自身のリポジトリからの直接引用に特に重点を置いています。' },
+          { type: 'note', text: 'このレビューは、[ローカルAIソフトウェアディレクトリ](/ja/directory)にあるYpipeのエントリーの詳細版です。Ypipeが他の数十ものローカルAIツールと比べてどう位置づけられるかは、そちらのページを参照してください。Ypipeの初期段階という性質上、このレビューは独立したテストよりも、自身のリポジトリからの直接引用に特に重点を置いています。' },
         ],
       },
       overview: {
@@ -1218,7 +1218,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — 長い実績を持つ無料オープンソースのローカルチャットアプリ。Ypipeの期間限定プレビューライセンスとは異なり、安定した成熟したライセンスを持つツールとして[GPT4Allレビュー](/ja/power-local-llm/gpt4all-review)を参照。',
           '**[Docker Model Runner](https://www.docker.com/products/model-runner/)** — 確立された企業（Docker Inc.）によるモデルサービングツールで、成熟した製品の歴史を持つ。はるかに新しいベンダーによるYpipeの初期プレビュー段階との比較として。[Docker Model Runnerレビュー](/ja/power-local-llm/docker-model-runner-review)を参照。',
         ],
-        note: '今日から頼れるローカルAIツールが必要な場合、上記の確立された代替ツールにはオープンソースライセンス、はるかに大きなユーザーベース、そしてYpipe——13スターの技術プレビュー——がまだ持っていない複数年の実績があります。完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: '今日から頼れるローカルAIツールが必要な場合、上記の確立された代替ツールにはオープンソースライセンス、はるかに大きなユーザーベース、そしてYpipe——13スターの技術プレビュー——がまだ持っていない複数年の実績があります。完全なカタログは[ローカルAIソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       whoShouldUse: {
         id: 'who-should-use-ypipe',
@@ -1280,7 +1280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'SmartPipesとは何ですか？', a: 'SmartPipesは、ローカルGGUFモデル、MCPツール呼び出し、JavaScriptロジック、メディア合成ステップを連結するYpipeのビジュアルなドラッグ＆ドロップワークフロービルダーで、REST APIとWebフォーム公開オプションを備えます。' },
           { q: 'Ypipeは完全にオフラインで動作しますか？', a: 'Ypipeは、モデルをダウンロードすればオフライン利用向けに設計された「エアギャップ」ツールとして位置づけられています。このレビューは、その主張をセキュリティテストによって独自に検証してはいません——独立して監査された事実としてではなく、ベンダー自身の位置づけとして扱ってください。' },
           { q: 'PromptQuorumはYpipeを実際にテストしましたか？', a: 'このレビューは、Ypipe自身のリポジトリ、READMEのドキュメント、ライセンス条件に基づき、スター数と活動状況についてはGitHub APIと突き合わせています。Ypipeの推論性能やセキュリティ体制について独立したベンチマークを行ったとは主張していません。' },
-          { q: 'Ypipeのより確立された代替手段は何ですか？', a: 'Ollama、Jan、GPT4All、Docker Model Runnerは、はるかに大きなユーザーベースと長い実績を持つオープンソースまたはベンダー支援のツールです。詳しくは上の比較セクションと[ローカルAIソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。' },
+          { q: 'Ypipeのより確立された代替手段は何ですか？', a: 'Ollama、Jan、GPT4All、Docker Model Runnerは、はるかに大きなユーザーベースと長い実績を持つオープンソースまたはベンダー支援のツールです。詳しくは上の比較セクションと[ローカルAIソフトウェアディレクトリ](/ja/directory)を参照してください。' },
         ],
       },
       sources: {
@@ -1296,7 +1296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルAIソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの完全なカタログ。Ypipeのディレクトリエントリーを含む。',
+          '[ローカルAIソフトウェアディレクトリ2026](/ja/directory) — この記事が属する、ローカルAIツールの完全なカタログ。Ypipeのディレクトリエントリーを含む。',
           '[Ollamaレビュー2026](/ja/power-local-llm/ollama-review) — Ypipeの初期プレビュー段階と比較するための、広く使われているオープンソースのローカルランタイム。',
           '[Janレビュー](/ja/power-local-llm/jan-review) — ローカルモデル向けの確立されたオープンソースデスクトップアプリ。',
           '[GPT4Allレビュー](/ja/power-local-llm/gpt4all-review) — 長年運営されているオープンソースのローカルチャットアプリ。',
@@ -1370,7 +1370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '通过JBang（`jbang ypipe@iunera/ypipe`）、特定平台二进制文件（Windows、macOS Apple芯片、Linux）或适用于任何Java环境的通用JAR安装',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)中Ypipe条目的深度补充——该页面展示了Ypipe与数十种其他本地AI工具相比的一览对比。鉴于Ypipe的早期阶段，本评测尤其依赖其自身仓库的直接引用，而非独立测试。' },
+          { type: 'note', text: '本评测是[本地AI软件目录](/zh/directory)中Ypipe条目的深度补充——该页面展示了Ypipe与数十种其他本地AI工具相比的一览对比。鉴于Ypipe的早期阶段，本评测尤其依赖其自身仓库的直接引用，而非独立测试。' },
         ],
       },
       overview: {
@@ -1435,7 +1435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — 一款拥有长期记录的免费开源本地聊天应用；参阅[GPT4All评测](/zh/power-local-llm/gpt4all-review)，它拥有稳定成熟的许可证（不同于Ypipe限时的预览许可证）。',
           '**[Docker Model Runner](https://www.docker.com/products/model-runner/)** — 一款来自成熟公司（Docker Inc.）、拥有成熟产品历史的模型服务工具，可与来自更年轻厂商的Ypipe早期预览状态形成对比。参阅[Docker Model Runner评测](/zh/power-local-llm/docker-model-runner-review)。',
         ],
-        note: '如果你需要一款今天就能依赖的本地AI工具，上述成熟的替代方案拥有开源许可证、规模大得多的用户群，以及Ypipe——一款仅有13个star的技术预览版——尚不具备的多年使用记录。完整目录请参阅[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '如果你需要一款今天就能依赖的本地AI工具，上述成熟的替代方案拥有开源许可证、规模大得多的用户群，以及Ypipe——一款仅有13个star的技术预览版——尚不具备的多年使用记录。完整目录请参阅[本地AI软件目录](/zh/directory)。',
       },
       whoShouldUse: {
         id: 'who-should-use-ypipe',
@@ -1497,7 +1497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'SmartPipes是什么？', a: 'SmartPipes是Ypipe的可视化拖放式工作流构建器，用于串联本地GGUF模型、MCP工具调用、JavaScript逻辑和媒体合成步骤，并提供REST API和网页表单发布选项。' },
           { q: 'Ypipe能完全离线运行吗？', a: 'Ypipe被定位为一款"物理隔离"工具，设计为模型下载完成后即可离线使用。本评测并未通过安全测试独立验证这一说法——请将其视为厂商自身的定位，而非经独立审计的事实。' },
           { q: 'PromptQuorum对Ypipe进行过实际测试吗？', a: '本评测基于Ypipe自身的仓库、README文档和许可条款，并与GitHub API核对了star数和活跃度——并未声称对Ypipe的推理性能或安全态势进行过独立基准测试。' },
-          { q: 'Ypipe更成熟的替代品有哪些？', a: 'Ollama、Jan、GPT4All和Docker Model Runner都是开源或有厂商支持的工具，拥有规模大得多的用户群和更长的使用记录——更多内容请参阅上方的对比部分和[本地AI软件目录](/zh/power-local-llm/local-llm-software-directory)。' },
+          { q: 'Ypipe更成熟的替代品有哪些？', a: 'Ollama、Jan、GPT4All和Docker Model Runner都是开源或有厂商支持的工具，拥有规模大得多的用户群和更长的使用记录——更多内容请参阅上方的对比部分和[本地AI软件目录](/zh/directory)。' },
         ],
       },
       sources: {
@@ -1513,7 +1513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地AI软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包含Ypipe的目录条目。',
+          '[本地AI软件目录2026](/zh/directory) — 本文所属的本地AI工具完整目录，包含Ypipe的目录条目。',
           '[Ollama评测2026](/zh/power-local-llm/ollama-review) — 一款被广泛使用的开源本地运行时，用于与Ypipe的早期预览状态对比。',
           '[Jan评测](/zh/power-local-llm/jan-review) — 一款成熟的开源本地模型桌面应用。',
           '[GPT4All评测](/zh/power-local-llm/gpt4all-review) — 一款运营已久的开源本地聊天应用。',
@@ -1587,7 +1587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تُثبَّت عبر JBang (`jbang ypipe@iunera/ypipe`)، أو ملفات ثنائية حسب المنصة (Windows وmacOS Apple Silicon وLinux)، أو ملف JAR عام لأي بيئة Java',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المعمّق لإدخال Ypipe في [دليل برامج الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف تُقارَن Ypipe بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى. نظراً للمرحلة المبكرة لـ Ypipe، تعتمد هذه المراجعة بشكل خاص على اقتباسات مباشرة من مستودعها الخاص بدلاً من الاختبار المستقل.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المعمّق لإدخال Ypipe في [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تُقارَن Ypipe بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى. نظراً للمرحلة المبكرة لـ Ypipe، تعتمد هذه المراجعة بشكل خاص على اقتباسات مباشرة من مستودعها الخاص بدلاً من الاختبار المستقل.' },
         ],
       },
       overview: {
@@ -1652,7 +1652,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — تطبيق دردشة محلي مجاني ومفتوح المصدر بسجل طويل؛ راجع [مراجعة GPT4All](/ar/power-local-llm/gpt4all-review) للاطلاع على أداة برخصة مستقرة وناضجة (خلافاً لرخصة معاينة Ypipe المحدودة زمنياً).',
           '**[Docker Model Runner](https://www.docker.com/products/model-runner/)** — أداة لخدمة النماذج من شركة راسخة (Docker Inc.) بتاريخ منتج ناضج، للمقارنة مع حالة معاينة Ypipe المبكرة من مزوّد أحدث بكثير. راجع [مراجعة Docker Model Runner](/ar/power-local-llm/docker-model-runner-review).',
         ],
-        note: 'إذا كنت بحاجة إلى أداة ذكاء اصطناعي محلي يمكنك الاعتماد عليها اليوم، فإن البدائل الراسخة أعلاه تتمتع برخص مفتوحة المصدر وقواعد مستخدمين أكبر بكثير وسجلات لسنوات متعددة لا تملكها Ypipe بعد — وهي معاينة تقنية بـ13 نجمة فقط. راجع [دليل برامج الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل.',
+        note: 'إذا كنت بحاجة إلى أداة ذكاء اصطناعي محلي يمكنك الاعتماد عليها اليوم، فإن البدائل الراسخة أعلاه تتمتع برخص مفتوحة المصدر وقواعد مستخدمين أكبر بكثير وسجلات لسنوات متعددة لا تملكها Ypipe بعد — وهي معاينة تقنية بـ13 نجمة فقط. راجع [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) للحصول على الكتالوج الكامل.',
       },
       whoShouldUse: {
         id: 'who-should-use-ypipe',
@@ -1714,7 +1714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ما هو SmartPipes؟', a: 'SmartPipes هي أداة بناء سير العمل البصرية بالسحب والإفلات الخاصة بـ Ypipe لربط نماذج GGUF المحلية واستدعاءات أدوات MCP ومنطق JavaScript وخطوات توليف الوسائط، مع واجهة برمجة تطبيقات REST وخيار نشر عبر نموذج ويب.' },
           { q: 'هل تعمل Ypipe دون اتصال بالكامل؟', a: 'تُوضع Ypipe في موقع أداة "معزولة تماماً" مصممة للاستخدام دون اتصال بمجرد تنزيل النماذج. لم تتحقق هذه المراجعة من هذا الادعاء بشكل مستقل عبر اختبار أمني — تعامل معه كموقع المزوّد نفسه، وليس كحقيقة مُدقَّقة بشكل مستقل.' },
           { q: 'هل اختبرت PromptQuorum تطبيق Ypipe عملياً؟', a: 'تعتمد هذه المراجعة على مستودع Ypipe نفسه ووثائق README وشروط الترخيص، مع مقارنتها بواجهة برمجة تطبيقات GitHub لعدد النجوم والنشاط — ولا تدّعي إجراء اختبار مقارن مستقل لأداء الاستدلال أو الوضع الأمني لـ Ypipe.' },
-          { q: 'ما البدائل الأكثر رسوخاً لـ Ypipe؟', a: 'تشمل Ollama وJan وGPT4All وDocker Model Runner أدوات مفتوحة المصدر أو مدعومة من مزوّد بقواعد مستخدمين أكبر بكثير وسجلات أطول — راجع قسم المقارنة أعلاه و[دليل برامج الذكاء الاصطناعي المحلي](/ar/power-local-llm/local-llm-software-directory) للمزيد.' },
+          { q: 'ما البدائل الأكثر رسوخاً لـ Ypipe؟', a: 'تشمل Ollama وJan وGPT4All وDocker Model Runner أدوات مفتوحة المصدر أو مدعومة من مزوّد بقواعد مستخدمين أكبر بكثير وسجلات أطول — راجع قسم المقارنة أعلاه و[دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) للمزيد.' },
         ],
       },
       sources: {
@@ -1730,7 +1730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برامج الذكاء الاصطناعي المحلي 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال Ypipe في الدليل.',
+          '[دليل برامج الذكاء الاصطناعي المحلي 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال Ypipe في الدليل.',
           '[مراجعة Ollama 2026](/ar/power-local-llm/ollama-review) — بيئة تشغيل محلية مفتوحة المصدر مستخدمة على نطاق واسع، للمقارنة مع حالة معاينة Ypipe المبكرة.',
           '[مراجعة Jan](/ar/power-local-llm/jan-review) — تطبيق سطح مكتب راسخ ومفتوح المصدر للنماذج المحلية.',
           '[مراجعة GPT4All](/ar/power-local-llm/gpt4all-review) — تطبيق دردشة محلي مفتوح المصدر يعمل منذ فترة طويلة.',
@@ -1804,7 +1804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'JBang(`jbang ypipe@iunera/ypipe`), 플랫폼별 바이너리(Windows, macOS Apple 실리콘, Linux), 또는 모든 Java 환경용 범용 JAR로 설치',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 Ypipe 항목의 심층 보완판입니다 — Ypipe가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요. Ypipe의 초기 단계 특성상, 이 리뷰는 독립적인 테스트보다 자체 저장소의 직접 인용에 특히 크게 의존합니다.' },
+          { type: 'note', text: '이 리뷰는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)에 있는 Ypipe 항목의 심층 보완판입니다 — Ypipe가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요. Ypipe의 초기 단계 특성상, 이 리뷰는 독립적인 테스트보다 자체 저장소의 직접 인용에 특히 크게 의존합니다.' },
         ],
       },
       overview: {
@@ -1869,7 +1869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[GPT4All](https://www.nomic.ai/gpt4all)** — 오랜 실적을 가진 무료 오픈소스 로컬 채팅 앱; Ypipe의 기한이 있는 프리뷰 라이선스와 달리 안정적이고 성숙한 라이선스를 가진 도구는 [GPT4All 리뷰](/ko/power-local-llm/gpt4all-review) 참고.',
           '**[Docker Model Runner](https://www.docker.com/products/model-runner/)** — 자리 잡은 기업(Docker Inc.)의 모델 서빙 도구로 성숙한 제품 이력을 가짐; 훨씬 더 신생 벤더인 Ypipe의 초기 프리뷰 상태와 비교하기 위함. [Docker Model Runner 리뷰](/ko/power-local-llm/docker-model-runner-review) 참고.',
         ],
-        note: '오늘 당장 의존할 수 있는 로컬 AI 도구가 필요하다면, 위의 자리 잡은 대안들은 오픈소스 라이선스, 훨씬 더 큰 사용자 기반, 그리고 스타 13개짜리 기술 프리뷰인 Ypipe가 아직 갖추지 못한 다년간의 실적을 보유하고 있습니다. 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '오늘 당장 의존할 수 있는 로컬 AI 도구가 필요하다면, 위의 자리 잡은 대안들은 오픈소스 라이선스, 훨씬 더 큰 사용자 기반, 그리고 스타 13개짜리 기술 프리뷰인 Ypipe가 아직 갖추지 못한 다년간의 실적을 보유하고 있습니다. 전체 카탈로그는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       whoShouldUse: {
         id: 'who-should-use-ypipe',
@@ -1931,7 +1931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'SmartPipes란 무엇인가요?', a: 'SmartPipes는 로컬 GGUF 모델, MCP 도구 호출, JavaScript 로직, 미디어 합성 단계를 연결하는 Ypipe의 시각적 드래그 앤 드롭 워크플로 빌더로, REST API와 웹 폼 게시 옵션을 제공합니다.' },
           { q: 'Ypipe는 완전히 오프라인으로 작동하나요?', a: 'Ypipe는 모델을 다운로드하면 오프라인 사용을 위해 설계된 "에어갭" 도구로 포지셔닝되어 있습니다. 이 리뷰는 보안 테스트를 통해 그 주장을 독립적으로 검증하지 않았습니다 — 독립적으로 감사된 사실이 아니라 벤더 자체의 포지셔닝으로 취급하세요.' },
           { q: 'PromptQuorum이 Ypipe를 실제로 테스트했나요?', a: '이 리뷰는 Ypipe 자체 저장소, README 문서, 라이선스 조건에 근거하며, 스타 수와 활동은 GitHub API와 대조했습니다 — Ypipe의 추론 성능이나 보안 태세에 대한 독자적인 벤치마킹을 수행했다고 주장하지는 않습니다.' },
-          { q: 'Ypipe보다 더 자리 잡은 대안은 무엇인가요?', a: 'Ollama, Jan, GPT4All, Docker Model Runner는 훨씬 더 큰 사용자 기반과 더 긴 실적을 가진 오픈소스 또는 벤더 지원 도구입니다 — 자세한 내용은 위의 비교 섹션과 [로컬 AI 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.' },
+          { q: 'Ypipe보다 더 자리 잡은 대안은 무엇인가요?', a: 'Ollama, Jan, GPT4All, Docker Model Runner는 훨씬 더 큰 사용자 기반과 더 긴 실적을 가진 오픈소스 또는 벤더 지원 도구입니다 — 자세한 내용은 위의 비교 섹션과 [로컬 AI 소프트웨어 디렉터리](/ko/directory)를 참고하세요.' },
         ],
       },
       sources: {
@@ -1947,7 +1947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 AI 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — Ypipe의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 AI 소프트웨어 디렉터리 2026](/ko/directory) — Ypipe의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구 전체 카탈로그.',
           '[Ollama 리뷰 2026](/ko/power-local-llm/ollama-review) — Ypipe의 초기 프리뷰 상태와 비교할, 널리 사용되는 오픈소스 로컬 런타임.',
           '[Jan 리뷰](/ko/power-local-llm/jan-review) — 로컬 모델을 위한 자리 잡은 오픈소스 데스크톱 앱.',
           '[GPT4All 리뷰](/ko/power-local-llm/gpt4all-review) — 오랫동안 운영되어 온 오픈소스 로컬 채팅 앱.',

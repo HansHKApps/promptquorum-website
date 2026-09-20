@@ -170,7 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'atomic-agent-vs-alternatives',
         title: 'Atomic Agent vs. Alternatives — Competitors and Alternatives',
-        content: 'Atomic Agent sits among a broader field of local-first and open-source AI agents and agent frameworks. The table below compares it against tools in the same agent-frameworks segment of the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).',
+        content: 'Atomic Agent sits among a broader field of local-first and open-source AI agents and agent frameworks. The table below compares it against tools in the same agent-frameworks segment of the [Local LLM Software Directory](/directory).',
         columns: ['Tool', 'Interface', 'License', 'Local Inference', 'Best For'],
         rows: [
           { 'Tool': 'Atomic Agent', 'Interface': 'CLI (GUI waitlisted)', 'License': 'MIT', 'Local Inference': 'llama.cpp, default', 'Best For': 'Terminal users wanting a local-first agent' },
@@ -229,7 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including where Atomic Agent fits among agent frameworks.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools this article belongs to, including where Atomic Agent fits among agent frameworks.',
           '[Open Interpreter Review](/power-local-llm/open-interpreter-review) — another terminal-based agent for running code with open models, for a close comparison against Atomic Agent\'s CLI-first approach.',
           '[OpenHands Review: The Open-Source Answer to Devin](/power-local-llm/openhands-review) — a self-hosted autonomous coding agent platform, for teams that need a more coding-benchmark-focused alternative.',
           '[CrewAI Review](/power-local-llm/crewai-review) — a Python framework for role-based multi-agent crews, for teams that want to write code against a framework rather than run a standalone CLI agent.',
@@ -399,7 +399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'atomic-agent-vs-alternatives',
         title: 'Atomic Agent vs. Alternativen — Wettbewerber und Alternativen',
-        content: 'Atomic Agent steht in einem breiteren Feld lokal-first und quelloffener KI-Agenten und Agenten-Frameworks. Die folgende Tabelle vergleicht es mit Tools im gleichen Agenten-Framework-Segment des [Local LLM Software-Verzeichnisses](/de/power-local-llm/local-llm-software-directory).',
+        content: 'Atomic Agent steht in einem breiteren Feld lokal-first und quelloffener KI-Agenten und Agenten-Frameworks. Die folgende Tabelle vergleicht es mit Tools im gleichen Agenten-Framework-Segment des [Local LLM Software-Verzeichnisses](/de/directory).',
         columns: ['Tool', 'Schnittstelle', 'Lizenz', 'Lokale Inferenz', 'Am besten für'],
         rows: [
           { 'Tool': 'Atomic Agent', 'Schnittstelle': 'CLI (GUI Warteliste)', 'Lizenz': 'MIT', 'Lokale Inferenz': 'llama.cpp, Standard', 'Am besten für': 'Terminal-Nutzer, die einen lokal-first Agenten wollen' },
@@ -458,7 +458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Atomic Agent unter den Agenten-Frameworks.',
+          '[Local LLM Software-Verzeichnis](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Atomic Agent unter den Agenten-Frameworks.',
           '[Open Interpreter im Test](/de/power-local-llm/open-interpreter-review) — ein weiterer terminalbasierter Agent zum Ausführen von Code mit offenen Modellen, für einen direkten Vergleich mit Atomic Agents CLI-first-Ansatz.',
           '[OpenHands im Test: Die Open-Source-Antwort auf Devin](/de/power-local-llm/openhands-review) — eine selbst gehostete Plattform für autonome Coding-Agenten, für Teams, die eine stärker auf Coding-Benchmarks fokussierte Alternative brauchen.',
           '[CrewAI im Test](/de/power-local-llm/crewai-review) — ein Python-Framework für rollenbasierte Multi-Agenten-Teams, für Teams, die lieber Code gegen ein Framework schreiben als einen eigenständigen CLI-Agenten auszuführen.',
@@ -628,7 +628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'atomic-agent-vs-alternatives',
         title: 'Atomic Agent vs. alternatives — concurrents et alternatives',
-        content: 'Atomic Agent se situe dans un ensemble plus large d\'agents IA et de frameworks d\'agents locaux et open source. Le tableau ci-dessous le compare à des outils du même segment « frameworks d\'agents » de l\'[Annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory).',
+        content: 'Atomic Agent se situe dans un ensemble plus large d\'agents IA et de frameworks d\'agents locaux et open source. Le tableau ci-dessous le compare à des outils du même segment « frameworks d\'agents » de l\'[Annuaire des logiciels LLM locaux](/fr/directory).',
         columns: ['Outil', 'Interface', 'Licence', 'Inférence locale', 'Idéal pour'],
         rows: [
           { 'Outil': 'Atomic Agent', 'Interface': 'CLI (interface graphique en liste d\'attente)', 'Licence': 'MIT', 'Inférence locale': 'llama.cpp, par défaut', 'Idéal pour': 'Utilisateurs de terminal voulant un agent local-first' },
@@ -687,7 +687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Pour aller plus loin',
         items: [
-          '[Annuaire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils IA locaux auquel appartient cet article, avec la place d\'Atomic Agent parmi les frameworks d\'agents.',
+          '[Annuaire des logiciels LLM locaux](/fr/directory) — le catalogue complet des outils IA locaux auquel appartient cet article, avec la place d\'Atomic Agent parmi les frameworks d\'agents.',
           '[Open Interpreter : notre avis](/fr/power-local-llm/open-interpreter-review) — un autre agent basé sur un terminal pour exécuter du code avec des modèles ouverts, pour une comparaison directe avec l\'approche CLI-first d\'Atomic Agent.',
           '[OpenHands : la réponse open source à Devin](/fr/power-local-llm/openhands-review) — une plateforme auto-hébergée d\'agents de codage autonomes, pour les équipes qui ont besoin d\'une alternative plus centrée sur les benchmarks de codage.',
           '[CrewAI : notre avis](/fr/power-local-llm/crewai-review) — un framework Python pour des équipes multi-agents basées sur des rôles, pour les équipes qui préfèrent écrire du code contre un framework plutôt qu\'exécuter un agent CLI autonome.',
@@ -857,7 +857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'atomic-agent-vs-alternatives',
         title: 'Atomic Agent vs. alternativas — competidores y alternativas',
-        content: 'Atomic Agent se sitúa dentro de un campo más amplio de agentes de IA y frameworks de agentes locales y de código abierto. La tabla siguiente lo compara con herramientas del mismo segmento de frameworks de agentes del [Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory).',
+        content: 'Atomic Agent se sitúa dentro de un campo más amplio de agentes de IA y frameworks de agentes locales y de código abierto. La tabla siguiente lo compara con herramientas del mismo segmento de frameworks de agentes del [Directorio de software LLM local](/es/directory).',
         columns: ['Herramienta', 'Interfaz', 'Licencia', 'Inferencia local', 'Mejor para'],
         rows: [
           { 'Herramienta': 'Atomic Agent', 'Interfaz': 'CLI (GUI en lista de espera)', 'Licencia': 'MIT', 'Inferencia local': 'llama.cpp, por defecto', 'Mejor para': 'Usuarios de terminal que quieren un agente local-first' },
@@ -916,7 +916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja Atomic Agent entre los frameworks de agentes.',
+          '[Directorio de software LLM local](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja Atomic Agent entre los frameworks de agentes.',
           '[Reseña de Open Interpreter](/es/power-local-llm/open-interpreter-review) — otro agente basado en terminal para ejecutar código con modelos abiertos, para una comparación directa con el enfoque CLI-first de Atomic Agent.',
           '[OpenHands: la respuesta open source a Devin](/es/power-local-llm/openhands-review) — una plataforma autoalojada de agentes de codificación autónomos, para equipos que necesitan una alternativa más centrada en benchmarks de codificación.',
           '[Reseña de CrewAI](/es/power-local-llm/crewai-review) — un framework de Python para equipos multiagente basados en roles, para equipos que prefieren escribir código contra un framework en lugar de ejecutar un agente CLI independiente.',
@@ -1086,7 +1086,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'atomic-agent-vs-alternatives',
         title: 'Atomic Agent vs. alternativas — concorrentes e alternativas',
-        content: 'O Atomic Agent está em um campo mais amplo de agentes de IA e frameworks de agentes locais e de código aberto. A tabela abaixo o compara com ferramentas do mesmo segmento de frameworks de agentes do [Diretório de software LLM local](/pt/power-local-llm/local-llm-software-directory).',
+        content: 'O Atomic Agent está em um campo mais amplo de agentes de IA e frameworks de agentes locais e de código aberto. A tabela abaixo o compara com ferramentas do mesmo segmento de frameworks de agentes do [Diretório de software LLM local](/pt/directory).',
         columns: ['Ferramenta', 'Interface', 'Licença', 'Inferência local', 'Melhor para'],
         rows: [
           { 'Ferramenta': 'Atomic Agent', 'Interface': 'CLI (GUI em lista de espera)', 'Licença': 'MIT', 'Inferência local': 'llama.cpp, padrão', 'Melhor para': 'Usuários de terminal que querem um agente local-first' },
@@ -1145,7 +1145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software LLM local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o Atomic Agent se encaixa entre os frameworks de agentes.',
+          '[Diretório de software LLM local](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o Atomic Agent se encaixa entre os frameworks de agentes.',
           '[Análise do Open Interpreter](/pt/power-local-llm/open-interpreter-review) — outro agente baseado em terminal para executar código com modelos abertos, para uma comparação direta com a abordagem CLI-first do Atomic Agent.',
           '[OpenHands: a resposta open source ao Devin](/pt/power-local-llm/openhands-review) — uma plataforma auto-hospedada de agentes de codificação autônomos, para equipes que precisam de uma alternativa mais focada em benchmarks de codificação.',
           '[Análise do CrewAI](/pt/power-local-llm/crewai-review) — um framework Python para equipes multiagente baseadas em papéis, para equipes que preferem escrever código contra um framework em vez de rodar um agente CLI independente.',
@@ -1315,7 +1315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'atomic-agent-vs-alternatives',
         title: 'Atomic Agent対代替ツール——競合・代替ツール',
-        content: 'Atomic Agentは、ローカルファーストかつオープンソースのAIエージェント・エージェントフレームワークという、より広い分野に位置します。以下の表は、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)における同じエージェントフレームワーク区分のツールと比較したものです。',
+        content: 'Atomic Agentは、ローカルファーストかつオープンソースのAIエージェント・エージェントフレームワークという、より広い分野に位置します。以下の表は、[ローカルLLMソフトウェアディレクトリ](/ja/directory)における同じエージェントフレームワーク区分のツールと比較したものです。',
         columns: ['ツール', 'インターフェース', 'ライセンス', 'ローカル推論', '最適な用途'],
         rows: [
           { 'ツール': 'Atomic Agent', 'インターフェース': 'CLI（GUIはウェイトリスト）', 'ライセンス': 'MIT', 'ローカル推論': 'llama.cpp、デフォルト', '最適な用途': 'ローカルファーストエージェントを求めるターミナルユーザー' },
@@ -1374,7 +1374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — 本記事が属するローカルAIツールの全カタログ。エージェントフレームワークの中でAtomic Agentがどこに位置するかを含む。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/directory) — 本記事が属するローカルAIツールの全カタログ。エージェントフレームワークの中でAtomic Agentがどこに位置するかを含む。',
           '[Open Interpreterレビュー](/ja/power-local-llm/open-interpreter-review) — オープンモデルでコードを実行する別のターミナルベースエージェント。Atomic AgentのCLIファーストなアプローチとの直接比較に。',
           '[OpenHandsレビュー：Devinへのオープンソースの答え](/ja/power-local-llm/openhands-review) — 自律型コーディングエージェントのセルフホスト型プラットフォーム。コーディングベンチマークをより重視する代替が必要なチーム向け。',
           '[CrewAIレビュー](/ja/power-local-llm/crewai-review) — ロールベースのマルチエージェントチーム向けPythonフレームワーク。スタンドアロンCLIエージェントを実行するよりフレームワークに対してコードを書きたいチーム向け。',
@@ -1544,7 +1544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'atomic-agent-vs-alternatives',
         title: 'Atomic Agent 对比其他方案——竞品与替代方案',
-        content: 'Atomic Agent 处于本地优先、开源 AI 代理与代理框架这一更广泛领域之中。下表将其与[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory)中同属代理框架分类的工具进行比较。',
+        content: 'Atomic Agent 处于本地优先、开源 AI 代理与代理框架这一更广泛领域之中。下表将其与[本地 LLM 软件目录](/zh/directory)中同属代理框架分类的工具进行比较。',
         columns: ['工具', '界面', '许可证', '本地推理', '最适合'],
         rows: [
           { '工具': 'Atomic Agent', '界面': 'CLI（GUI 候补中）', '许可证': 'MIT', '本地推理': 'llama.cpp，默认', '最适合': '希望获得本地优先代理的终端用户' },
@@ -1603,7 +1603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[本地 LLM 软件目录](/zh/power-local-llm/local-llm-software-directory) —— 本文所属的本地 AI 工具完整目录,包括 Atomic Agent 在代理框架中的定位。',
+          '[本地 LLM 软件目录](/zh/directory) —— 本文所属的本地 AI 工具完整目录,包括 Atomic Agent 在代理框架中的定位。',
           '[Open Interpreter 评测](/zh/power-local-llm/open-interpreter-review) —— 另一款基于终端、使用开放模型运行代码的代理,可与 Atomic Agent 的 CLI 优先方案直接对比。',
           '[OpenHands 评测：开源版 Devin](/zh/power-local-llm/openhands-review) —— 一个自托管的自主编码代理平台,适合需要更侧重编码基准测试的替代方案的团队。',
           '[CrewAI 评测](/zh/power-local-llm/crewai-review) —— 一款用于基于角色的多代理团队的 Python 框架,适合更愿意针对框架编写代码而非运行独立 CLI 代理的团队。',
@@ -1773,7 +1773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'atomic-agent-vs-alternatives',
         title: 'Atomic Agent مقابل البدائل — المنافسون والبدائل',
-        content: 'يقع Atomic Agent ضمن مجال أوسع من وكلاء الذكاء الاصطناعي وأطر عمل الوكلاء المحلية ومفتوحة المصدر. يقارن الجدول أدناه بينه وبين أدوات في نفس فئة أطر عمل الوكلاء ضمن [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory).',
+        content: 'يقع Atomic Agent ضمن مجال أوسع من وكلاء الذكاء الاصطناعي وأطر عمل الوكلاء المحلية ومفتوحة المصدر. يقارن الجدول أدناه بينه وبين أدوات في نفس فئة أطر عمل الوكلاء ضمن [دليل برمجيات LLM المحلية](/ar/directory).',
         columns: ['الأداة', 'الواجهة', 'الترخيص', 'الاستدلال المحلي', 'الأنسب لـ'],
         rows: [
           { 'الأداة': 'Atomic Agent', 'الواجهة': 'CLI (الواجهة الرسومية في قائمة الانتظار)', 'الترخيص': 'MIT', 'الاستدلال المحلي': 'llama.cpp، افتراضيًا', 'الأنسب لـ': 'مستخدمو الطرفية الراغبون في وكيل محلي أولاً' },
@@ -1832,7 +1832,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مكانة Atomic Agent بين أطر عمل الوكلاء.',
+          '[دليل برمجيات LLM المحلية](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مكانة Atomic Agent بين أطر عمل الوكلاء.',
           '[مراجعة Open Interpreter](/ar/power-local-llm/open-interpreter-review) — وكيل آخر مبني على الطرفية لتشغيل الكود مع نماذج مفتوحة، لمقارنة مباشرة مع نهج Atomic Agent القائم على الواجهة النصية أولًا.',
           '[مراجعة OpenHands: الإجابة مفتوحة المصدر على Devin](/ar/power-local-llm/openhands-review) — منصة استضافة ذاتية لوكلاء برمجة مستقلين، للفرق التي تحتاج بديلًا أكثر تركيزًا على معايير أداء البرمجة.',
           '[مراجعة CrewAI](/ar/power-local-llm/crewai-review) — إطار عمل Python لفرق وكلاء متعددة قائمة على الأدوار، للفرق التي تفضّل كتابة كود ضد إطار عمل بدلًا من تشغيل وكيل CLI مستقل.',
@@ -2002,7 +2002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'atomic-agent-vs-alternatives',
         title: 'Atomic Agent 대 대안 — 경쟁 제품 및 대안',
-        content: 'Atomic Agent는 로컬 우선이며 오픈소스인 AI 에이전트 및 에이전트 프레임워크라는 더 넓은 분야에 속해 있습니다. 아래 표는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)의 동일한 에이전트 프레임워크 부문에 속한 도구들과 이를 비교한 것입니다.',
+        content: 'Atomic Agent는 로컬 우선이며 오픈소스인 AI 에이전트 및 에이전트 프레임워크라는 더 넓은 분야에 속해 있습니다. 아래 표는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)의 동일한 에이전트 프레임워크 부문에 속한 도구들과 이를 비교한 것입니다.',
         columns: ['도구', '인터페이스', '라이선스', '로컬 추론', '가장 적합한 용도'],
         rows: [
           { '도구': 'Atomic Agent', '인터페이스': 'CLI(GUI는 대기자 명단)', '라이선스': 'MIT', '로컬 추론': 'llama.cpp, 기본값', '가장 적합한 용도': '로컬 우선 에이전트를 원하는 터미널 사용자' },
@@ -2061,7 +2061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 에이전트 프레임워크 중 Atomic Agent의 위치도 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, 에이전트 프레임워크 중 Atomic Agent의 위치도 포함합니다.',
           '[Open Interpreter 리뷰](/ko/power-local-llm/open-interpreter-review) — 오픈 모델로 코드를 실행하는 또 다른 터미널 기반 에이전트로, Atomic Agent의 CLI 우선 접근 방식과 직접 비교하기에 좋습니다.',
           '[OpenHands 리뷰: Devin에 대한 오픈소스의 답](/ko/power-local-llm/openhands-review) — 자율 코딩 에이전트를 위한 자체 호스팅 플랫폼으로, 코딩 벤치마크에 더 집중한 대안이 필요한 팀을 위한 선택지입니다.',
           '[CrewAI 리뷰](/ko/power-local-llm/crewai-review) — 역할 기반 멀티 에이전트 팀을 위한 Python 프레임워크로, 독립 실행형 CLI 에이전트를 실행하기보다 프레임워크에 대해 코드를 작성하고 싶은 팀을 위한 선택지입니다.',

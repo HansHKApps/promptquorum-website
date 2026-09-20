@@ -76,7 +76,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Per the project\'s own [docs/NEWS.md](https://github.com/FoundationAgents/MetaGPT/blob/main/docs/NEWS.md), the MetaGPT research paper was accepted for oral presentation (described there as "top 1.2%") at ICLR 2024, ranking #1 in the LLM-based Agent category — this is the project\'s own claim, not independently re-verified by PromptQuorum against ICLR\'s official program',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the single-subject companion to MetaGPT\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how MetaGPT compares at a glance to dozens of other local and hybrid AI tools. For a side-by-side look at MetaGPT alongside two unrelated apps, see the separate [multi-agent frameworks comparison](/power-local-llm/metagpt-agnai-risuai-explained).' },
+          { type: 'note', text: 'This review is the single-subject companion to MetaGPT\'s entry in the [Local LLM Software Directory](/directory) — see that page for how MetaGPT compares at a glance to dozens of other local and hybrid AI tools. For a side-by-side look at MetaGPT alongside two unrelated apps, see the separate [multi-agent frameworks comparison](/power-local-llm/metagpt-agnai-risuai-explained).' },
         ],
       },
       overview: {
@@ -117,7 +117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Initialize configuration: run `metagpt --init-config` to create `~/.metagpt/config2.yaml`, then edit it to set your LLM provider\'s `api_type`, `model`, `base_url`, and `api_key`.',
           'Run it: from the command line, `metagpt "Create a 2048 game"` generates a project in a local `./workspace` directory; from Python, `from metagpt.software_company import generate_repo` and call `generate_repo("Create a 2048 game")` to use it as a library instead.',
         ],
-        note: 'This is a companion piece to MetaGPT\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how MetaGPT\'s install method and interface type compare to other tools in the directory at a glance.',
+        note: 'This is a companion piece to MetaGPT\'s entry in the [Local LLM Software Directory](/directory) — see that page for how MetaGPT\'s install method and interface type compare to other tools in the directory at a glance.',
         faqs: [
           { q: 'Do I need an OpenAI account to run MetaGPT?', a: 'MetaGPT itself does not host or resell model access — you configure whichever LLM provider you want in `~/.metagpt/config2.yaml`. The project\'s example config lists OpenAI-compatible, Azure, and Ollama-style `api_type` entries, so a locally hosted model reachable over an OpenAI-compatible API is a documented option, not just cloud providers.' },
           { q: 'Why does MetaGPT need Node.js and pnpm if it is a Python framework?', a: 'The project\'s own README states Node.js and pnpm must be installed "before actual use," in addition to the Python package — this review did not find a detailed public explanation of which specific MetaGPT feature depends on the Node.js toolchain, so treat it as a documented prerequisite rather than an optional step.' },
@@ -165,7 +165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'metagpt-vs-alternatives',
         title: 'MetaGPT vs. Alternatives',
-        content: 'MetaGPT is one of several multi-agent frameworks in the agent-orchestration space, each built around a different coordination philosophy. Here is how its SOP-based, software-company-simulation approach compares to the closest alternatives — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'MetaGPT is one of several multi-agent frameworks in the agent-orchestration space, each built around a different coordination philosophy. Here is how its SOP-based, software-company-simulation approach compares to the closest alternatives — see the [Local LLM Software Directory](/directory) for the full catalog.',
         itemHeadings: true,
         columns: ['Framework', 'Coordination Model', 'How It Differs From MetaGPT'],
         rows: [
@@ -174,7 +174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Framework': '[LangGraph](/power-local-llm/langgraph-review)', 'Coordination Model': 'Graph-based orchestration with explicit nodes, edges, branching, and state', 'How It Differs From MetaGPT': 'LangGraph is a low-level orchestration engine you use to build any agent workflow, including a MetaGPT-like one; MetaGPT instead ships a pre-built software-company workflow rather than a graph-building toolkit.' },
           { 'Framework': '[AutoGPT](/power-local-llm/autogpt-local-review-2026)', 'Coordination Model': 'Single autonomous agent pursuing an open-ended goal with a task loop', 'How It Differs From MetaGPT': 'AutoGPT centers on one agent looping toward a goal with minimal role structure; MetaGPT splits the work across multiple specialized roles following a fixed process instead of one agent iterating alone.' },
         ],
-        note: 'This is not an exhaustive list of multi-agent frameworks — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including MetaGPT\'s own directory entry.',
+        note: 'This is not an exhaustive list of multi-agent frameworks — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including MetaGPT\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -230,7 +230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local and hybrid AI tools this article belongs to, including MetaGPT\'s directory entry.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local and hybrid AI tools this article belongs to, including MetaGPT\'s directory entry.',
           '[Multi-Agent Frameworks Compared: MetaGPT, Agnai, and RisuAI](/power-local-llm/metagpt-agnai-risuai-explained) — a side-by-side look at MetaGPT alongside two unrelated chat-focused tools.',
           '[CrewAI Review](/power-local-llm/crewai-review) — the closest philosophical match, using a role-based "crew" abstraction for general-purpose tasks.',
           '[AutoGen Review](/power-local-llm/autogen-review) — a free-form, conversation-driven multi-agent framework with code-execution agents.',
@@ -308,7 +308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Laut dem eigenen [docs/NEWS.md](https://github.com/FoundationAgents/MetaGPT/blob/main/docs/NEWS.md) des Projekts wurde das MetaGPT-Forschungspapier für eine mündliche Präsentation (dort als "top 1,2 %" bezeichnet) auf der ICLR 2024 angenommen und belegte Platz 1 in der Kategorie LLM-basierte Agenten — dies ist eine Eigenangabe des Projekts, die von PromptQuorum nicht unabhängig gegen das offizielle ICLR-Programm verifiziert wurde',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das Einzel-Tool-Begleitstück zu MetaGPTs Eintrag im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie MetaGPT im Vergleich zu Dutzenden anderer lokaler und hybrider KI-Tools abschneidet. Für einen direkten Vergleich von MetaGPT mit zwei nicht verwandten Apps siehe den separaten [Multi-Agenten-Frameworks-Vergleich](/de/power-local-llm/metagpt-agnai-risuai-explained).' },
+          { type: 'note', text: 'Diese Review ist das Einzel-Tool-Begleitstück zu MetaGPTs Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie MetaGPT im Vergleich zu Dutzenden anderer lokaler und hybrider KI-Tools abschneidet. Für einen direkten Vergleich von MetaGPT mit zwei nicht verwandten Apps siehe den separaten [Multi-Agenten-Frameworks-Vergleich](/de/power-local-llm/metagpt-agnai-risuai-explained).' },
         ],
       },
       overview: {
@@ -349,7 +349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Konfiguration initialisieren: Führen Sie `metagpt --init-config` aus, um `~/.metagpt/config2.yaml` zu erstellen, und bearbeiten Sie sie dann, um `api_type`, `model`, `base_url` und `api_key` Ihres LLM-Anbieters festzulegen.',
           'Ausführen: Über die Kommandozeile erzeugt `metagpt "Create a 2048 game"` ein Projekt in einem lokalen `./workspace`-Verzeichnis; aus Python heraus importieren Sie `from metagpt.software_company import generate_repo` und rufen `generate_repo("Create a 2048 game")` auf, um es stattdessen als Bibliothek zu nutzen.',
         ],
-        note: 'Dies ist ein Begleitstück zu MetaGPTs Eintrag im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — dort finden Sie auf einen Blick, wie sich MetaGPTs Installationsmethode und Schnittstellentyp im Vergleich zu anderen Tools im Verzeichnis verhalten.',
+        note: 'Dies ist ein Begleitstück zu MetaGPTs Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie auf einen Blick, wie sich MetaGPTs Installationsmethode und Schnittstellentyp im Vergleich zu anderen Tools im Verzeichnis verhalten.',
         faqs: [
           { q: 'Brauche ich ein OpenAI-Konto, um MetaGPT auszuführen?', a: 'MetaGPT selbst hostet oder verkauft keinen Modellzugang weiter — Sie konfigurieren in `~/.metagpt/config2.yaml`, welchen LLM-Anbieter Sie nutzen möchten. Die Beispielkonfiguration des Projekts listet unter anderem OpenAI-kompatible, Azure- und Ollama-artige `api_type`-Einträge, sodass ein lokal gehostetes Modell mit OpenAI-kompatibler API eine dokumentierte Option ist, nicht nur Cloud-Anbieter.' },
           { q: 'Warum braucht MetaGPT Node.js und pnpm, wenn es ein Python-Framework ist?', a: 'Das eigene README des Projekts gibt an, dass Node.js und pnpm zusätzlich zum Python-Paket "vor der eigentlichen Nutzung" installiert sein müssen — diese Review fand keine ausführliche öffentliche Erklärung, welche konkrete MetaGPT-Funktion von der Node.js-Toolchain abhängt; behandeln Sie es daher als dokumentierte Voraussetzung, nicht als optionalen Schritt.' },
@@ -397,7 +397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'metagpt-vs-alternatives',
         title: 'MetaGPT vs. Alternativen',
-        content: 'MetaGPT ist eines von mehreren Multi-Agenten-Frameworks im Bereich der Agenten-Orchestrierung, jedes mit einer anderen Koordinationsphilosophie. So schneidet sein SOP-basierter Softwarefirma-Simulationsansatz im Vergleich zu den nächstliegenden Alternativen ab — siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog.',
+        content: 'MetaGPT ist eines von mehreren Multi-Agenten-Frameworks im Bereich der Agenten-Orchestrierung, jedes mit einer anderen Koordinationsphilosophie. So schneidet sein SOP-basierter Softwarefirma-Simulationsansatz im Vergleich zu den nächstliegenden Alternativen ab — siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen Katalog.',
         itemHeadings: true,
         columns: ['Framework', 'Koordinationsmodell', 'Unterschied zu MetaGPT'],
         rows: [
@@ -406,7 +406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Framework': '[LangGraph](/de/power-local-llm/langgraph-review)', 'Koordinationsmodell': 'Graphbasierte Orchestrierung mit expliziten Knoten, Kanten, Verzweigungen und Zustand', 'Unterschied zu MetaGPT': 'LangGraph ist eine Low-Level-Orchestrierungs-Engine, mit der Sie jeden Agenten-Workflow bauen können, auch einen MetaGPT-ähnlichen; MetaGPT liefert stattdessen einen fertigen Softwarefirma-Workflow statt eines Graph-Bau-Toolkits.' },
           { 'Framework': '[AutoGPT](/de/power-local-llm/autogpt-local-review-2026)', 'Koordinationsmodell': 'Einzelner autonomer Agent, der mit einer Aufgabenschleife ein offenes Ziel verfolgt', 'Unterschied zu MetaGPT': 'AutoGPT konzentriert sich auf einen Agenten, der sich mit minimaler Rollenstruktur einem Ziel annähert; MetaGPT teilt die Arbeit stattdessen auf mehrere spezialisierte Rollen auf, die einem festen Prozess folgen, statt dass ein Agent allein iteriert.' },
         ],
-        note: 'Dies ist keine erschöpfende Liste von Multi-Agenten-Frameworks — siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich MetaGPTs eigenem Verzeichniseintrag.',
+        note: 'Dies ist keine erschöpfende Liste von Multi-Agenten-Frameworks — siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich MetaGPTs eigenem Verzeichniseintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -462,7 +462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Lokales KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler und hybrider KI-Tools, zu dem dieser Artikel gehört, einschließlich MetaGPTs Verzeichniseintrag.',
+          '[Lokales KI-Software-Verzeichnis](/de/directory) — der vollständige Katalog lokaler und hybrider KI-Tools, zu dem dieser Artikel gehört, einschließlich MetaGPTs Verzeichniseintrag.',
           '[Multi-Agenten-Frameworks im Vergleich: MetaGPT, Agnai und RisuAI](/de/power-local-llm/metagpt-agnai-risuai-explained) — ein direkter Vergleich von MetaGPT mit zwei nicht verwandten, chatfokussierten Tools.',
           '[CrewAI Review](/de/power-local-llm/crewai-review) — die philosophisch nächstliegende Entsprechung, mit einer rollenbasierten „Crew"-Abstraktion für allgemeine Aufgaben.',
           '[AutoGen Review](/de/power-local-llm/autogen-review) — ein freies, konversationsgetriebenes Multi-Agenten-Framework mit Code-Ausführungs-Agenten.',
@@ -540,7 +540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Selon le propre [docs/NEWS.md](https://github.com/FoundationAgents/MetaGPT/blob/main/docs/NEWS.md) du projet, l\'article de recherche MetaGPT a été accepté pour une présentation orale (décrite là comme « top 1,2 % ») à l\'ICLR 2024, se classant #1 dans la catégorie agents basés sur LLM — c\'est une affirmation propre du projet, non revérifiée indépendamment par PromptQuorum face au programme officiel de l\'ICLR',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément mono-sujet à l\'entrée de MetaGPT dans le [Répertoire des logiciels de LLM locaux](/fr/power-local-llm/local-llm-software-directory) — voyez cette page pour comparer d\'un coup d\'œil MetaGPT à des dizaines d\'autres outils d\'IA locaux et hybrides. Pour une comparaison côte à côte de MetaGPT avec deux applications sans rapport, voyez la [comparaison des frameworks multi-agents](/fr/power-local-llm/metagpt-agnai-risuai-explained) distincte.' },
+          { type: 'note', text: 'Cette review est le complément mono-sujet à l\'entrée de MetaGPT dans le [Répertoire des logiciels de LLM locaux](/fr/directory) — voyez cette page pour comparer d\'un coup d\'œil MetaGPT à des dizaines d\'autres outils d\'IA locaux et hybrides. Pour une comparaison côte à côte de MetaGPT avec deux applications sans rapport, voyez la [comparaison des frameworks multi-agents](/fr/power-local-llm/metagpt-agnai-risuai-explained) distincte.' },
         ],
       },
       overview: {
@@ -581,7 +581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Initialisez la configuration : exécutez `metagpt --init-config` pour créer `~/.metagpt/config2.yaml`, puis modifiez-le pour définir le `api_type`, `model`, `base_url` et `api_key` de votre fournisseur LLM.',
           'Exécutez-le : en ligne de commande, `metagpt "Create a 2048 game"` génère un projet dans un répertoire local `./workspace` ; depuis Python, importez `from metagpt.software_company import generate_repo` et appelez `generate_repo("Create a 2048 game")` pour l\'utiliser comme bibliothèque à la place.',
         ],
-        note: 'Ceci est un complément à l\'entrée de MetaGPT dans le [Répertoire des logiciels de LLM locaux](/fr/power-local-llm/local-llm-software-directory) — voyez cette page pour comparer d\'un coup d\'œil la méthode d\'installation et le type d\'interface de MetaGPT à d\'autres outils du répertoire.',
+        note: 'Ceci est un complément à l\'entrée de MetaGPT dans le [Répertoire des logiciels de LLM locaux](/fr/directory) — voyez cette page pour comparer d\'un coup d\'œil la méthode d\'installation et le type d\'interface de MetaGPT à d\'autres outils du répertoire.',
         faqs: [
           { q: 'Ai-je besoin d\'un compte OpenAI pour exécuter MetaGPT ?', a: 'MetaGPT lui-même n\'héberge ni ne revend d\'accès à des modèles — vous configurez le fournisseur LLM de votre choix dans `~/.metagpt/config2.yaml`. L\'exemple de configuration du projet liste des entrées `api_type` compatibles OpenAI, Azure et de type Ollama, un modèle hébergé localement et accessible via une API compatible OpenAI est donc une option documentée, pas seulement les fournisseurs cloud.' },
           { q: 'Pourquoi MetaGPT a-t-il besoin de Node.js et pnpm alors que c\'est un framework Python ?', a: 'Le propre README du projet indique que Node.js et pnpm doivent être installés « avant l\'utilisation réelle », en plus du paquet Python — cette review n\'a pas trouvé d\'explication publique détaillée sur la fonctionnalité précise de MetaGPT qui dépend de la chaîne d\'outils Node.js ; traitez-le donc comme un prérequis documenté plutôt qu\'une étape optionnelle.' },
@@ -629,7 +629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'metagpt-vs-alternatives',
         title: 'MetaGPT face aux alternatives',
-        content: 'MetaGPT est l\'un des nombreux frameworks multi-agents du domaine de l\'orchestration d\'agents, chacun construit autour d\'une philosophie de coordination différente. Voici comment son approche basée sur une SOP simulant une entreprise logicielle se compare aux alternatives les plus proches — voyez le [Répertoire des logiciels de LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        content: 'MetaGPT est l\'un des nombreux frameworks multi-agents du domaine de l\'orchestration d\'agents, chacun construit autour d\'une philosophie de coordination différente. Voici comment son approche basée sur une SOP simulant une entreprise logicielle se compare aux alternatives les plus proches — voyez le [Répertoire des logiciels de LLM locaux](/fr/directory) pour le catalogue complet.',
         itemHeadings: true,
         columns: ['Framework', 'Modèle de coordination', 'Différence avec MetaGPT'],
         rows: [
@@ -638,7 +638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Framework': '[LangGraph](/fr/power-local-llm/langgraph-review)', 'Modèle de coordination': 'Orchestration basée sur un graphe avec nœuds, arêtes, branchements et état explicites', 'Différence avec MetaGPT': 'LangGraph est un moteur d\'orchestration bas niveau que vous utilisez pour construire n\'importe quel workflow d\'agents, y compris un workflow de type MetaGPT ; MetaGPT fournit à la place un workflow d\'entreprise logicielle prêt à l\'emploi plutôt qu\'une boîte à outils de construction de graphes.' },
           { 'Framework': '[AutoGPT](/fr/power-local-llm/autogpt-local-review-2026)', 'Modèle de coordination': 'Un agent autonome unique poursuivant un objectif ouvert avec une boucle de tâches', 'Différence avec MetaGPT': 'AutoGPT se concentre sur un agent qui boucle vers un objectif avec une structure de rôles minimale ; MetaGPT répartit plutôt le travail entre plusieurs rôles spécialisés suivant un processus fixe, au lieu qu\'un seul agent itère seul.' },
         ],
-        note: 'Ceci n\'est pas une liste exhaustive de frameworks multi-agents — voyez le [Répertoire des logiciels de LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, y compris l\'entrée propre de MetaGPT dans le répertoire.',
+        note: 'Ceci n\'est pas une liste exhaustive de frameworks multi-agents — voyez le [Répertoire des logiciels de LLM locaux](/fr/directory) pour le catalogue complet et régulièrement mis à jour, y compris l\'entrée propre de MetaGPT dans le répertoire.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -694,7 +694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire des logiciels de LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locaux et hybrides auquel appartient cet article, incluant l\'entrée de MetaGPT dans le répertoire.',
+          '[Répertoire des logiciels de LLM locaux](/fr/directory) — le catalogue complet d\'outils d\'IA locaux et hybrides auquel appartient cet article, incluant l\'entrée de MetaGPT dans le répertoire.',
           '[Frameworks multi-agents comparés : MetaGPT, Agnai et RisuAI](/fr/power-local-llm/metagpt-agnai-risuai-explained) — une comparaison côte à côte de MetaGPT avec deux outils sans rapport axés sur le chat.',
           '[CrewAI Review](/fr/power-local-llm/crewai-review) — la correspondance philosophique la plus proche, utilisant une abstraction de « crew » basée sur des rôles pour des tâches générales.',
           '[AutoGen Review](/fr/power-local-llm/autogen-review) — un framework multi-agents libre et piloté par la conversation, avec des agents d\'exécution de code.',
@@ -772,7 +772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'プロジェクト自身の[docs/NEWS.md](https://github.com/FoundationAgents/MetaGPT/blob/main/docs/NEWS.md)によれば、MetaGPTの研究論文はICLR 2024で口頭発表(そこでは「top 1.2%」と表現)として採択され、LLMベースエージェント部門で1位にランクされた — これはプロジェクト自身の主張であり、PromptQuorumがICLRの公式プログラムに照らして独自に再検証したものではない',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるMetaGPTのエントリーを補完する単体レビューです。MetaGPTが他の数十のローカル・ハイブリッドAIツールと一目でどう比較されるかはそちらのページを参照してください。無関係な2つのアプリと並べたMetaGPTの比較は、別記事の[マルチエージェントフレームワーク比較](/ja/power-local-llm/metagpt-agnai-risuai-explained)を参照してください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるMetaGPTのエントリーを補完する単体レビューです。MetaGPTが他の数十のローカル・ハイブリッドAIツールと一目でどう比較されるかはそちらのページを参照してください。無関係な2つのアプリと並べたMetaGPTの比較は、別記事の[マルチエージェントフレームワーク比較](/ja/power-local-llm/metagpt-agnai-risuai-explained)を参照してください。' },
         ],
       },
       overview: {
@@ -813,7 +813,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '設定を初期化する:`metagpt --init-config` を実行して `~/.metagpt/config2.yaml` を作成し、編集してLLMプロバイダーの `api_type`、`model`、`base_url`、`api_key` を設定する。',
           '実行する:コマンドラインでは `metagpt "Create a 2048 game"` がローカルの `./workspace` ディレクトリにプロジェクトを生成する。Pythonからは `from metagpt.software_company import generate_repo` をインポートし、`generate_repo("Create a 2048 game")` を呼び出すことでライブラリとして使用できる。',
         ],
-        note: 'これは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるMetaGPTのエントリーを補完する記事です。MetaGPTのインストール方法やインターフェースの種類がディレクトリ内の他のツールとどう比較されるか、そちらのページで一目で確認できます。',
+        note: 'これは[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるMetaGPTのエントリーを補完する記事です。MetaGPTのインストール方法やインターフェースの種類がディレクトリ内の他のツールとどう比較されるか、そちらのページで一目で確認できます。',
         faqs: [
           { q: 'MetaGPTを実行するのにOpenAIアカウントが必要ですか?', a: 'MetaGPT自体はモデルアクセスをホストも再販もしません — `~/.metagpt/config2.yaml` で好きなLLMプロバイダーを設定します。プロジェクトのサンプル設定には、OpenAI互換、Azure、Ollama系の `api_type` エントリーが記載されており、クラウドプロバイダーだけでなく、OpenAI互換APIでアクセス可能なローカルホスト型モデルもドキュメント化されたオプションです。' },
           { q: 'MetaGPTはPythonフレームワークなのに、なぜNode.jsとpnpmが必要なのですか?', a: 'プロジェクト自身のREADMEには、Pythonパッケージに加えてNode.jsとpnpmを「実際の利用前に」インストールする必要があると記されています。本レビューでは、MetaGPTの具体的などの機能がNode.jsツールチェーンに依存しているかを詳しく説明する公開資料は見つかりませんでした。そのため、任意の手順ではなく、ドキュメント化された前提条件として扱ってください。' },
@@ -861,7 +861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'metagpt-vs-alternatives',
         title: 'MetaGPTと代替ツールの比較',
-        content: 'MetaGPTは、エージェントオーケストレーション分野にある複数のマルチエージェントフレームワークの1つであり、それぞれ異なる連携思想に基づいて構築されています。MetaGPTのSOPベースでソフトウェア会社を模倣するアプローチが、最も近い代替ツールとどう比較されるかを以下に示します — 完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        content: 'MetaGPTは、エージェントオーケストレーション分野にある複数のマルチエージェントフレームワークの1つであり、それぞれ異なる連携思想に基づいて構築されています。MetaGPTのSOPベースでソフトウェア会社を模倣するアプローチが、最も近い代替ツールとどう比較されるかを以下に示します — 完全なカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
         itemHeadings: true,
         columns: ['フレームワーク', '連携モデル', 'MetaGPTとの違い'],
         rows: [
@@ -870,7 +870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'フレームワーク': '[LangGraph](/ja/power-local-llm/langgraph-review)', '連携モデル': '明示的なノード、エッジ、分岐、状態を持つグラフベースのオーケストレーション', 'MetaGPTとの違い': 'LangGraphは、MetaGPTに似たものを含め、あらゆるエージェントワークフローを構築するために使う低レベルのオーケストレーションエンジン。MetaGPTは代わりに、グラフ構築ツールキットではなく、既製のソフトウェア会社ワークフローを提供する。' },
           { 'フレームワーク': '[AutoGPT](/ja/power-local-llm/autogpt-local-review-2026)', '連携モデル': 'タスクループでオープンエンドな目標を追求する単一の自律型エージェント', 'MetaGPTとの違い': 'AutoGPTは最小限の役割構造で目標に向かってループする単一のエージェントを中心とする。MetaGPTは代わりに、単一のエージェントが単独で反復するのではなく、固定プロセスに従う複数の専門役割に作業を分割する。' },
         ],
-        note: 'これはマルチエージェントフレームワークの網羅的なリストではありません — 完全かつ定期的に更新されるカタログ(MetaGPT自身のディレクトリエントリーを含む)は[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはマルチエージェントフレームワークの網羅的なリストではありません — 完全かつ定期的に更新されるカタログ(MetaGPT自身のディレクトリエントリーを含む)は[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -926,7 +926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — 本記事が属する、ローカル・ハイブリッドAIツールの完全なカタログ。MetaGPTのディレクトリエントリーを含む。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/directory) — 本記事が属する、ローカル・ハイブリッドAIツールの完全なカタログ。MetaGPTのディレクトリエントリーを含む。',
           '[マルチエージェントフレームワーク比較:MetaGPT、Agnai、RisuAI](/ja/power-local-llm/metagpt-agnai-risuai-explained) — MetaGPTと、無関係な2つのチャット中心ツールを並べて比較。',
           '[CrewAIレビュー](/ja/power-local-llm/crewai-review) — 汎用タスク向けの役割ベース「クルー」抽象化を使う、思想的に最も近いツール。',
           '[AutoGenレビュー](/ja/power-local-llm/autogen-review) — コード実行エージェントを備えた、自由形式で対話駆動のマルチエージェントフレームワーク。',
@@ -1004,7 +1004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '根据项目自身的[docs/NEWS.md](https://github.com/FoundationAgents/MetaGPT/blob/main/docs/NEWS.md),MetaGPT的研究论文被ICLR 2024接受为口头报告(该文档中称为"top 1.2%"),在基于LLM的智能体类别中排名第一——这是项目自身的说法,PromptQuorum未独立对照ICLR官方项目单进行再验证',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中MetaGPT条目的单一主题深度评测配套文章——关于MetaGPT与数十款其他本地及混合AI工具的一览对比,请参阅该页面。若想将MetaGPT与两款无关应用并列比较,请参阅另一篇[多智能体框架对比](/zh/power-local-llm/metagpt-agnai-risuai-explained)文章。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中MetaGPT条目的单一主题深度评测配套文章——关于MetaGPT与数十款其他本地及混合AI工具的一览对比,请参阅该页面。若想将MetaGPT与两款无关应用并列比较,请参阅另一篇[多智能体框架对比](/zh/power-local-llm/metagpt-agnai-risuai-explained)文章。' },
         ],
       },
       overview: {
@@ -1045,7 +1045,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '初始化配置:运行 `metagpt --init-config` 创建 `~/.metagpt/config2.yaml`,然后编辑它以设置你所用LLM提供商的 `api_type`、`model`、`base_url` 和 `api_key`。',
           '运行:在命令行中,`metagpt "Create a 2048 game"` 会在本地 `./workspace` 目录中生成一个项目;在Python中,导入 `from metagpt.software_company import generate_repo` 并调用 `generate_repo("Create a 2048 game")`,即可将其作为库使用。',
         ],
-        note: '这是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中MetaGPT条目的配套文章——该页面可让你一览MetaGPT的安装方式和接口类型与目录中其他工具相比处于什么位置。',
+        note: '这是[本地LLM软件目录](/zh/directory)中MetaGPT条目的配套文章——该页面可让你一览MetaGPT的安装方式和接口类型与目录中其他工具相比处于什么位置。',
         faqs: [
           { q: '运行MetaGPT需要OpenAI账户吗?', a: 'MetaGPT本身不托管也不转售模型访问权限——你在 `~/.metagpt/config2.yaml` 中配置自己想要的LLM提供商。项目的示例配置列出了兼容OpenAI、Azure和类Ollama的 `api_type` 条目,因此通过兼容OpenAI的API访问的本地托管模型也是一个有文档记录的选项,并不仅限于云端提供商。' },
           { q: 'MetaGPT明明是Python框架,为什么还需要Node.js和pnpm?', a: '项目自身的README说明,除了Python包之外,Node.js和pnpm都需要"在实际使用前"安装——本评测没有找到详细的公开说明来解释MetaGPT的哪个具体功能依赖Node.js工具链,因此应将其视为有文档记录的前置条件,而不是可选步骤。' },
@@ -1093,7 +1093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'metagpt-vs-alternatives',
         title: 'MetaGPT与替代方案对比',
-        content: 'MetaGPT是智能体编排领域众多多智能体框架之一,每个框架背后都有不同的协调理念。以下是它基于SOP、模拟软件公司的方式与最接近的几个替代方案相比的情况——完整目录请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        content: 'MetaGPT是智能体编排领域众多多智能体框架之一,每个框架背后都有不同的协调理念。以下是它基于SOP、模拟软件公司的方式与最接近的几个替代方案相比的情况——完整目录请参阅[本地LLM软件目录](/zh/directory)。',
         itemHeadings: true,
         columns: ['框架', '协调模型', '与MetaGPT的区别'],
         rows: [
@@ -1102,7 +1102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '框架': '[LangGraph](/zh/power-local-llm/langgraph-review)', '协调模型': '基于图的编排,具有显式的节点、边、分支和状态', '与MetaGPT的区别': 'LangGraph是一个底层编排引擎,可用来构建任意智能体工作流,包括类似MetaGPT的流程;MetaGPT则提供一个开箱即用的软件公司工作流,而不是构建图的工具包。' },
           { '框架': '[AutoGPT](/zh/power-local-llm/autogpt-local-review-2026)', '协调模型': '单一自主智能体,通过任务循环追求开放性目标', '与MetaGPT的区别': 'AutoGPT围绕一个以最简角色结构、不断循环朝目标推进的智能体展开;MetaGPT则把工作拆分给多个遵循固定流程的专门角色,而不是由单一智能体独自迭代。' },
         ],
-        note: '这并非多智能体框架的详尽清单——完整且定期更新的目录(包括MetaGPT自身的目录条目)请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非多智能体框架的详尽清单——完整且定期更新的目录(包括MetaGPT自身的目录条目)请参阅[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1158,7 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) —— 本文所属的本地及混合AI工具完整目录,包含MetaGPT的目录条目。',
+          '[本地LLM软件目录](/zh/directory) —— 本文所属的本地及混合AI工具完整目录,包含MetaGPT的目录条目。',
           '[多智能体框架对比:MetaGPT、Agnai与RisuAI](/zh/power-local-llm/metagpt-agnai-risuai-explained) —— 将MetaGPT与两款无关的、以聊天为核心的工具并列比较。',
           '[CrewAI评测](/zh/power-local-llm/crewai-review) —— 理念上最接近的对手,使用面向通用任务的基于角色的"团队"抽象。',
           '[AutoGen评测](/zh/power-local-llm/autogen-review) —— 一个自由形式、对话驱动的多智能体框架,配备代码执行智能体。',
@@ -1236,7 +1236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Según el propio [docs/NEWS.md](https://github.com/FoundationAgents/MetaGPT/blob/main/docs/NEWS.md) del proyecto, el artículo de investigación de MetaGPT fue aceptado para presentación oral (descrita allí como "top 1.2%") en ICLR 2024, ocupando el puesto #1 en la categoría de agentes basados en LLM — esta es una afirmación propia del proyecto, no verificada de forma independiente por PromptQuorum contra el programa oficial de ICLR',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento de un solo tema a la entrada de MetaGPT en el [Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara MetaGPT de un vistazo con docenas de otras herramientas de IA locales e híbridas. Para una comparación directa de MetaGPT junto a dos aplicaciones no relacionadas, consulta la [comparación de frameworks multiagente](/es/power-local-llm/metagpt-agnai-risuai-explained) por separado.' },
+          { type: 'note', text: 'Esta reseña es el complemento de un solo tema a la entrada de MetaGPT en el [Directorio de software de LLM local](/es/directory) — consulta esa página para ver cómo se compara MetaGPT de un vistazo con docenas de otras herramientas de IA locales e híbridas. Para una comparación directa de MetaGPT junto a dos aplicaciones no relacionadas, consulta la [comparación de frameworks multiagente](/es/power-local-llm/metagpt-agnai-risuai-explained) por separado.' },
         ],
       },
       overview: {
@@ -1277,7 +1277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Inicializa la configuración: ejecuta `metagpt --init-config` para crear `~/.metagpt/config2.yaml`, y luego edítalo para establecer el `api_type`, `model`, `base_url` y `api_key` de tu proveedor de LLM.',
           'Ejecútalo: desde la línea de comandos, `metagpt "Create a 2048 game"` genera un proyecto en un directorio local `./workspace`; desde Python, importa `from metagpt.software_company import generate_repo` y llama a `generate_repo("Create a 2048 game")` para usarlo como biblioteca en su lugar.',
         ],
-        note: 'Este es un artículo complementario a la entrada de MetaGPT en el [Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se comparan el método de instalación y el tipo de interfaz de MetaGPT con otras herramientas del directorio.',
+        note: 'Este es un artículo complementario a la entrada de MetaGPT en el [Directorio de software de LLM local](/es/directory) — consulta esa página para ver de un vistazo cómo se comparan el método de instalación y el tipo de interfaz de MetaGPT con otras herramientas del directorio.',
         faqs: [
           { q: '¿Necesito una cuenta de OpenAI para ejecutar MetaGPT?', a: 'MetaGPT en sí no aloja ni revende acceso a modelos — tú configuras el proveedor de LLM que prefieras en `~/.metagpt/config2.yaml`. La configuración de ejemplo del proyecto enumera entradas de `api_type` compatibles con OpenAI, Azure y de tipo Ollama, por lo que un modelo alojado localmente y accesible mediante una API compatible con OpenAI es una opción documentada, no solo los proveedores en la nube.' },
           { q: '¿Por qué MetaGPT necesita Node.js y pnpm si es un framework de Python?', a: 'El propio README del proyecto indica que Node.js y pnpm deben instalarse "antes del uso real", además del paquete de Python — esta reseña no encontró una explicación pública detallada de qué función concreta de MetaGPT depende de la cadena de herramientas de Node.js, así que trátalo como un requisito previo documentado y no como un paso opcional.' },
@@ -1325,7 +1325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'metagpt-vs-alternatives',
         title: 'MetaGPT frente a alternativas',
-        content: 'MetaGPT es uno de varios frameworks multiagente en el espacio de orquestación de agentes, cada uno construido en torno a una filosofía de coordinación diferente. Así se compara su enfoque basado en SOP de simulación de una empresa de software con las alternativas más cercanas — consulta el [Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo.',
+        content: 'MetaGPT es uno de varios frameworks multiagente en el espacio de orquestación de agentes, cada uno construido en torno a una filosofía de coordinación diferente. Así se compara su enfoque basado en SOP de simulación de una empresa de software con las alternativas más cercanas — consulta el [Directorio de software de LLM local](/es/directory) para el catálogo completo.',
         itemHeadings: true,
         columns: ['Framework', 'Modelo de coordinación', 'En qué se diferencia de MetaGPT'],
         rows: [
@@ -1334,7 +1334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Framework': '[LangGraph](/es/power-local-llm/langgraph-review)', 'Modelo de coordinación': 'Orquestación basada en grafos con nodos, aristas, ramificaciones y estado explícitos', 'En qué se diferencia de MetaGPT': 'LangGraph es un motor de orquestación de bajo nivel que se usa para construir cualquier flujo de trabajo de agentes, incluido uno similar a MetaGPT; MetaGPT, en cambio, ofrece un flujo de trabajo de empresa de software ya construido en lugar de un kit de herramientas para construir grafos.' },
           { 'Framework': '[AutoGPT](/es/power-local-llm/autogpt-local-review-2026)', 'Modelo de coordinación': 'Un único agente autónomo que persigue un objetivo abierto con un bucle de tareas', 'En qué se diferencia de MetaGPT': 'AutoGPT se centra en un agente que itera hacia un objetivo con una estructura de roles mínima; MetaGPT, en cambio, divide el trabajo entre varios roles especializados que siguen un proceso fijo, en lugar de que un solo agente itere por sí solo.' },
         ],
-        note: 'Esta no es una lista exhaustiva de frameworks multiagente — consulta el [Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de MetaGPT en el directorio.',
+        note: 'Esta no es una lista exhaustiva de frameworks multiagente — consulta el [Directorio de software de LLM local](/es/directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de MetaGPT en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1390,7 +1390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA locales e híbridas al que pertenece este artículo, incluida la entrada de MetaGPT en el directorio.',
+          '[Directorio de software de LLM local](/es/directory) — el catálogo completo de herramientas de IA locales e híbridas al que pertenece este artículo, incluida la entrada de MetaGPT en el directorio.',
           '[Frameworks multiagente comparados: MetaGPT, Agnai y RisuAI](/es/power-local-llm/metagpt-agnai-risuai-explained) — una comparación directa de MetaGPT junto a dos herramientas no relacionadas centradas en el chat.',
           '[Reseña de CrewAI](/es/power-local-llm/crewai-review) — la coincidencia filosófica más cercana, usando una abstracción de "crew" basada en roles para tareas de propósito general.',
           '[Reseña de AutoGen](/es/power-local-llm/autogen-review) — un framework multiagente libre y guiado por la conversación, con agentes de ejecución de código.',
@@ -1468,7 +1468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Segundo o próprio [docs/NEWS.md](https://github.com/FoundationAgents/MetaGPT/blob/main/docs/NEWS.md) do projeto, o artigo de pesquisa do MetaGPT foi aceito para apresentação oral (descrita ali como "top 1,2%") na ICLR 2024, ficando em #1 na categoria de agentes baseados em LLM — essa é uma afirmação do próprio projeto, não reverificada de forma independente pela PromptQuorum em relação ao programa oficial da ICLR',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento de assunto único à entrada do MetaGPT no [Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para saber como o MetaGPT se compara rapidamente a dezenas de outras ferramentas de IA locais e híbridas. Para uma comparação lado a lado do MetaGPT com dois aplicativos não relacionados, veja a [comparação de frameworks multiagente](/pt/power-local-llm/metagpt-agnai-risuai-explained) em separado.' },
+          { type: 'note', text: 'Esta análise é o complemento de assunto único à entrada do MetaGPT no [Diretório de software de LLM local](/pt/directory) — veja essa página para saber como o MetaGPT se compara rapidamente a dezenas de outras ferramentas de IA locais e híbridas. Para uma comparação lado a lado do MetaGPT com dois aplicativos não relacionados, veja a [comparação de frameworks multiagente](/pt/power-local-llm/metagpt-agnai-risuai-explained) em separado.' },
         ],
       },
       overview: {
@@ -1509,7 +1509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Inicialize a configuração: execute `metagpt --init-config` para criar `~/.metagpt/config2.yaml`, depois edite-o para definir o `api_type`, `model`, `base_url` e `api_key` do seu provedor de LLM.',
           'Execute: pela linha de comando, `metagpt "Create a 2048 game"` gera um projeto em um diretório local `./workspace`; a partir do Python, importe `from metagpt.software_company import generate_repo` e chame `generate_repo("Create a 2048 game")` para usá-lo como biblioteca.',
         ],
-        note: 'Este é um artigo complementar à entrada do MetaGPT no [Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o método de instalação e o tipo de interface do MetaGPT com outras ferramentas do diretório.',
+        note: 'Este é um artigo complementar à entrada do MetaGPT no [Diretório de software de LLM local](/pt/directory) — veja essa página para comparar rapidamente o método de instalação e o tipo de interface do MetaGPT com outras ferramentas do diretório.',
         faqs: [
           { q: 'Preciso de uma conta OpenAI para executar o MetaGPT?', a: 'O MetaGPT em si não hospeda nem revende acesso a modelos — você configura o provedor de LLM que quiser em `~/.metagpt/config2.yaml`. A configuração de exemplo do projeto lista entradas de `api_type` compatíveis com OpenAI, Azure e do tipo Ollama, então um modelo hospedado localmente e acessível via uma API compatível com OpenAI é uma opção documentada, não apenas provedores em nuvem.' },
           { q: 'Por que o MetaGPT precisa de Node.js e pnpm se é um framework Python?', a: 'O próprio README do projeto afirma que Node.js e pnpm devem ser instalados "antes do uso real", além do pacote Python — esta análise não encontrou uma explicação pública detalhada sobre qual recurso específico do MetaGPT depende da toolchain do Node.js, então trate isso como um pré-requisito documentado, não um passo opcional.' },
@@ -1557,7 +1557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'metagpt-vs-alternatives',
         title: 'MetaGPT vs. alternativas',
-        content: 'O MetaGPT é um dos vários frameworks multiagente no espaço de orquestração de agentes, cada um construído em torno de uma filosofia de coordenação diferente. Veja como sua abordagem baseada em SOP de simulação de uma empresa de software se compara às alternativas mais próximas — veja o [Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'O MetaGPT é um dos vários frameworks multiagente no espaço de orquestração de agentes, cada um construído em torno de uma filosofia de coordenação diferente. Veja como sua abordagem baseada em SOP de simulação de uma empresa de software se compara às alternativas mais próximas — veja o [Diretório de software de LLM local](/pt/directory) para o catálogo completo.',
         itemHeadings: true,
         columns: ['Framework', 'Modelo de coordenação', 'Diferença em relação ao MetaGPT'],
         rows: [
@@ -1566,7 +1566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Framework': '[LangGraph](/pt/power-local-llm/langgraph-review)', 'Modelo de coordenação': 'Orquestração baseada em grafo com nós, arestas, ramificações e estado explícitos', 'Diferença em relação ao MetaGPT': 'O LangGraph é um motor de orquestração de baixo nível usado para construir qualquer fluxo de trabalho de agentes, incluindo um semelhante ao MetaGPT; o MetaGPT, em vez disso, oferece um fluxo de trabalho de empresa de software pronto, em vez de um kit de construção de grafos.' },
           { 'Framework': '[AutoGPT](/pt/power-local-llm/autogpt-local-review-2026)', 'Modelo de coordenação': 'Um único agente autônomo perseguindo um objetivo aberto com um loop de tarefas', 'Diferença em relação ao MetaGPT': 'O AutoGPT se concentra em um agente que faz um loop em direção a um objetivo com estrutura de papéis mínima; o MetaGPT, em vez disso, divide o trabalho entre vários papéis especializados seguindo um processo fixo, em vez de um único agente iterar sozinho.' },
         ],
-        note: 'Esta não é uma lista exaustiva de frameworks multiagente — veja o [Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do MetaGPT no diretório.',
+        note: 'Esta não é uma lista exaustiva de frameworks multiagente — veja o [Diretório de software de LLM local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do MetaGPT no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1622,7 +1622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA locais e híbridas ao qual este artigo pertence, incluindo a entrada do MetaGPT no diretório.',
+          '[Diretório de software de LLM local](/pt/directory) — o catálogo completo de ferramentas de IA locais e híbridas ao qual este artigo pertence, incluindo a entrada do MetaGPT no diretório.',
           '[Frameworks multiagente comparados: MetaGPT, Agnai e RisuAI](/pt/power-local-llm/metagpt-agnai-risuai-explained) — uma comparação lado a lado do MetaGPT com duas ferramentas não relacionadas focadas em chat.',
           '[Análise do CrewAI](/pt/power-local-llm/crewai-review) — a correspondência filosófica mais próxima, usando uma abstração de "crew" baseada em papéis para tarefas de propósito geral.',
           '[Análise do AutoGen](/pt/power-local-llm/autogen-review) — um framework multiagente livre e guiado por conversa, com agentes de execução de código.',
@@ -1700,7 +1700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'وفق ملف [docs/NEWS.md](https://github.com/FoundationAgents/MetaGPT/blob/main/docs/NEWS.md) الخاص بالمشروع نفسه، قُبلت ورقة أبحاث MetaGPT لتقديم شفهي (وُصف هناك بأنه "أعلى 1.2%") في مؤتمر ICLR 2024، محتلةً المرتبة الأولى في فئة العملاء القائمين على نماذج اللغة الكبيرة — هذا ادعاء من المشروع نفسه، ولم يعِد PromptQuorum التحقق منه بشكل مستقل مقابل البرنامج الرسمي لمؤتمر ICLR',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل أحادي الموضوع لإدخال MetaGPT في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن MetaGPT بلمحة سريعة بعشرات أدوات الذكاء الاصطناعي المحلية والهجينة الأخرى. للاطلاع على مقارنة جنبًا إلى جنب بين MetaGPT وتطبيقين غير مرتبطين، راجع [مقارنة أطر العمل متعددة العملاء](/ar/power-local-llm/metagpt-agnai-risuai-explained) المنفصلة.' },
+          { type: 'note', text: 'هذه المراجعة هي المكمّل أحادي الموضوع لإدخال MetaGPT في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن MetaGPT بلمحة سريعة بعشرات أدوات الذكاء الاصطناعي المحلية والهجينة الأخرى. للاطلاع على مقارنة جنبًا إلى جنب بين MetaGPT وتطبيقين غير مرتبطين، راجع [مقارنة أطر العمل متعددة العملاء](/ar/power-local-llm/metagpt-agnai-risuai-explained) المنفصلة.' },
         ],
       },
       overview: {
@@ -1741,7 +1741,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'هيّئ الإعدادات: شغّل `metagpt --init-config` لإنشاء `~/.metagpt/config2.yaml`، ثم عدّله لضبط `api_type` و`model` و`base_url` و`api_key` الخاصة بمزوّد نموذج اللغة الكبيرة لديك.',
           'شغّله: من سطر الأوامر، يُنشئ `metagpt "Create a 2048 game"` مشروعًا في دليل محلي `./workspace`؛ من Python، استورد `from metagpt.software_company import generate_repo` واستدعِ `generate_repo("Create a 2048 game")` لاستخدامه كمكتبة بدلًا من ذلك.',
         ],
-        note: 'هذه مقالة مكمّلة لإدخال MetaGPT في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة بلمحة سريعة كيف تُقارَن طريقة تثبيت MetaGPT ونوع واجهته بأدوات أخرى في الدليل.',
+        note: 'هذه مقالة مكمّلة لإدخال MetaGPT في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة بلمحة سريعة كيف تُقارَن طريقة تثبيت MetaGPT ونوع واجهته بأدوات أخرى في الدليل.',
         faqs: [
           { q: 'هل أحتاج إلى حساب OpenAI لتشغيل MetaGPT؟', a: 'لا يستضيف MetaGPT نفسه ولا يعيد بيع الوصول إلى النماذج — تقوم بتكوين أي مزوّد لنموذج اللغة الكبيرة تريده في `~/.metagpt/config2.yaml`. يُدرج ملف التكوين النموذجي الخاص بالمشروع إدخالات `api_type` متوافقة مع OpenAI وAzure وأخرى شبيهة بـOllama، لذا فإن استخدام نموذج مستضاف محليًا يمكن الوصول إليه عبر واجهة برمجة تطبيقات متوافقة مع OpenAI خيار موثّق، وليس فقط مزوّدي السحابة.' },
           { q: 'لماذا يحتاج MetaGPT إلى Node.js وpnpm رغم أنه إطار عمل بلغة Python؟', a: 'ينص ملف README الخاص بالمشروع نفسه على أن Node.js وpnpm يجب تثبيتهما "قبل الاستخدام الفعلي"، بالإضافة إلى حزمة Python — لم تعثر هذه المراجعة على شرح عام مفصّل حول أي ميزة تحديدًا في MetaGPT تعتمد على سلسلة أدوات Node.js، لذا تعامل مع ذلك كشرط أساسي موثّق وليس خطوة اختيارية.' },
@@ -1789,7 +1789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'metagpt-vs-alternatives',
         title: 'MetaGPT مقابل البدائل',
-        content: 'MetaGPT واحد من عدة أطر عمل متعددة العملاء في مجال تنسيق العملاء، وكل منها مبني حول فلسفة تنسيق مختلفة. إليك كيف يقارَن نهجه القائم على إجراء التشغيل الموحّد الذي يحاكي شركة برمجيات بأقرب البدائل — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل.',
+        content: 'MetaGPT واحد من عدة أطر عمل متعددة العملاء في مجال تنسيق العملاء، وكل منها مبني حول فلسفة تنسيق مختلفة. إليك كيف يقارَن نهجه القائم على إجراء التشغيل الموحّد الذي يحاكي شركة برمجيات بأقرب البدائل — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) للحصول على الكتالوج الكامل.',
         itemHeadings: true,
         columns: ['إطار العمل', 'نموذج التنسيق', 'الاختلاف عن MetaGPT'],
         rows: [
@@ -1798,7 +1798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'إطار العمل': '[LangGraph](/ar/power-local-llm/langgraph-review)', 'نموذج التنسيق': 'تنسيق قائم على الرسم البياني بعُقد وحواف وتفرعات وحالة صريحة', 'الاختلاف عن MetaGPT': 'LangGraph محرك تنسيق منخفض المستوى تستخدمه لبناء أي سير عمل للعملاء، بما في ذلك سير عمل شبيه بـMetaGPT؛ بينما يقدّم MetaGPT سير عمل جاهزًا لشركة برمجيات بدلًا من مجموعة أدوات لبناء الرسوم البيانية.' },
           { 'إطار العمل': '[AutoGPT](/ar/power-local-llm/autogpt-local-review-2026)', 'نموذج التنسيق': 'عميل مستقل واحد يسعى نحو هدف مفتوح بحلقة مهام', 'الاختلاف عن MetaGPT': 'يتمحور AutoGPT حول عميل واحد يكرر نحو هدف ببنية أدوار محدودة؛ بينما يوزّع MetaGPT العمل على عدة أدوار متخصصة تتبع عملية ثابتة، بدلًا من عميل واحد يكرر بمفرده.' },
         ],
-        note: 'هذه ليست قائمة شاملة لأطر العمل متعددة العملاء — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدخال MetaGPT الخاص في الدليل.',
+        note: 'هذه ليست قائمة شاملة لأطر العمل متعددة العملاء — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) للحصول على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدخال MetaGPT الخاص في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1854,7 +1854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية والهجينة الذي تنتمي إليه هذه المقالة، بما في ذلك إدخال MetaGPT في الدليل.',
+          '[دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية والهجينة الذي تنتمي إليه هذه المقالة، بما في ذلك إدخال MetaGPT في الدليل.',
           '[مقارنة أطر العمل متعددة العملاء: MetaGPT وAgnai وRisuAI](/ar/power-local-llm/metagpt-agnai-risuai-explained) — مقارنة جنبًا إلى جنب بين MetaGPT وأداتين غير مرتبطتين تركّزان على الدردشة.',
           '[مراجعة CrewAI](/ar/power-local-llm/crewai-review) — أقرب تطابق فلسفي، يستخدم تجريد "طاقم" قائم على الأدوار لمهام عامة الغرض.',
           '[مراجعة AutoGen](/ar/power-local-llm/autogen-review) — إطار عمل حر موجّه بالمحادثة متعدد العملاء، مع عملاء لتنفيذ الكود.',
@@ -1932,7 +1932,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '프로젝트 자체의 [docs/NEWS.md](https://github.com/FoundationAgents/MetaGPT/blob/main/docs/NEWS.md)에 따르면, MetaGPT 연구 논문은 ICLR 2024에서 구두 발표(해당 문서에서는 "상위 1.2%"로 표현)로 채택되었으며 LLM 기반 에이전트 부문에서 1위를 차지했다 — 이는 프로젝트 자체의 주장이며, PromptQuorum이 ICLR 공식 프로그램과 대조해 독립적으로 재검증한 것은 아니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 MetaGPT 항목의 단일 주제 심층 리뷰입니다 — MetaGPT가 수십 개의 다른 로컬 및 하이브리드 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참조하세요. 무관한 두 앱과 나란히 놓고 MetaGPT를 살펴보려면 별도의 [멀티에이전트 프레임워크 비교](/ko/power-local-llm/metagpt-agnai-risuai-explained) 글을 참조하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 MetaGPT 항목의 단일 주제 심층 리뷰입니다 — MetaGPT가 수십 개의 다른 로컬 및 하이브리드 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참조하세요. 무관한 두 앱과 나란히 놓고 MetaGPT를 살펴보려면 별도의 [멀티에이전트 프레임워크 비교](/ko/power-local-llm/metagpt-agnai-risuai-explained) 글을 참조하세요.' },
         ],
       },
       overview: {
@@ -1973,7 +1973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '설정 초기화: `metagpt --init-config`를 실행해 `~/.metagpt/config2.yaml`을 생성한 뒤, 이를 편집해 LLM 제공업체의 `api_type`, `model`, `base_url`, `api_key`를 설정하세요.',
           '실행하기: 명령줄에서는 `metagpt "Create a 2048 game"`이 로컬 `./workspace` 디렉터리에 프로젝트를 생성합니다. Python에서는 `from metagpt.software_company import generate_repo`를 임포트하고 `generate_repo("Create a 2048 game")`를 호출해 라이브러리로 사용할 수 있습니다.',
         ],
-        note: '이는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 MetaGPT 항목을 보완하는 글입니다 — MetaGPT의 설치 방법과 인터페이스 유형이 디렉터리 내 다른 도구들과 한눈에 어떻게 비교되는지는 해당 페이지를 참조하세요.',
+        note: '이는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 MetaGPT 항목을 보완하는 글입니다 — MetaGPT의 설치 방법과 인터페이스 유형이 디렉터리 내 다른 도구들과 한눈에 어떻게 비교되는지는 해당 페이지를 참조하세요.',
         faqs: [
           { q: 'MetaGPT를 실행하려면 OpenAI 계정이 필요한가요?', a: 'MetaGPT 자체는 모델 접근을 호스팅하거나 재판매하지 않습니다 — `~/.metagpt/config2.yaml`에서 원하는 LLM 제공업체를 설정하면 됩니다. 프로젝트의 예시 설정에는 OpenAI 호환, Azure, Ollama 유형의 `api_type` 항목이 나열되어 있어, 클라우드 제공업체뿐 아니라 OpenAI 호환 API로 접근 가능한 로컬 호스팅 모델도 문서화된 옵션입니다.' },
           { q: 'MetaGPT는 Python 프레임워크인데 왜 Node.js와 pnpm이 필요한가요?', a: '프로젝트 자체 README에는 Python 패키지 외에도 Node.js와 pnpm을 "실제 사용 전"에 설치해야 한다고 명시되어 있습니다 — 이 리뷰는 MetaGPT의 구체적으로 어떤 기능이 Node.js 툴체인에 의존하는지에 대한 상세한 공개 설명을 찾지 못했으므로, 이를 선택적 단계가 아니라 문서화된 전제 조건으로 취급하세요.' },
@@ -2021,7 +2021,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'metagpt-vs-alternatives',
         title: 'MetaGPT와 대안 비교',
-        content: 'MetaGPT는 에이전트 오케스트레이션 영역에 있는 여러 멀티에이전트 프레임워크 중 하나이며, 각각 서로 다른 조정 철학을 중심으로 구축되어 있습니다. MetaGPT의 SOP 기반 소프트웨어 회사 시뮬레이션 접근 방식이 가장 가까운 대안들과 어떻게 비교되는지 아래에 정리했습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참조하세요.',
+        content: 'MetaGPT는 에이전트 오케스트레이션 영역에 있는 여러 멀티에이전트 프레임워크 중 하나이며, 각각 서로 다른 조정 철학을 중심으로 구축되어 있습니다. MetaGPT의 SOP 기반 소프트웨어 회사 시뮬레이션 접근 방식이 가장 가까운 대안들과 어떻게 비교되는지 아래에 정리했습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참조하세요.',
         itemHeadings: true,
         columns: ['프레임워크', '조정 모델', 'MetaGPT와의 차이'],
         rows: [
@@ -2030,7 +2030,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '프레임워크': '[LangGraph](/ko/power-local-llm/langgraph-review)', '조정 모델': '명시적인 노드, 엣지, 분기, 상태를 갖춘 그래프 기반 오케스트레이션', 'MetaGPT와의 차이': 'LangGraph는 MetaGPT와 유사한 것을 포함해 어떤 에이전트 워크플로우든 구축하는 데 사용하는 저수준 오케스트레이션 엔진입니다. 반면 MetaGPT는 그래프 구축 툴킷이 아니라 미리 만들어진 소프트웨어 회사 워크플로우를 제공합니다.' },
           { '프레임워크': '[AutoGPT](/ko/power-local-llm/autogpt-local-review-2026)', '조정 모델': '작업 루프로 개방형 목표를 추구하는 단일 자율 에이전트', 'MetaGPT와의 차이': 'AutoGPT는 최소한의 역할 구조로 목표를 향해 루프를 도는 단일 에이전트를 중심으로 합니다. 반면 MetaGPT는 단일 에이전트가 혼자 반복하는 대신, 고정된 프로세스를 따르는 여러 전문 역할에 작업을 분할합니다.' },
         ],
-        note: '이는 멀티에이전트 프레임워크의 완전한 목록이 아닙니다 — MetaGPT 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참조하세요.',
+        note: '이는 멀티에이전트 프레임워크의 완전한 목록이 아닙니다 — MetaGPT 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참조하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2086,7 +2086,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — MetaGPT의 디렉터리 항목을 포함해, 이 글이 속한 로컬 및 하이브리드 AI 도구 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — MetaGPT의 디렉터리 항목을 포함해, 이 글이 속한 로컬 및 하이브리드 AI 도구 전체 카탈로그.',
           '[멀티에이전트 프레임워크 비교: MetaGPT, Agnai, RisuAI](/ko/power-local-llm/metagpt-agnai-risuai-explained) — MetaGPT를 무관한 두 채팅 중심 도구와 나란히 놓고 비교한 글.',
           '[CrewAI 리뷰](/ko/power-local-llm/crewai-review) — 범용 작업을 위한 역할 기반 "크루" 추상화를 사용하는, 철학적으로 가장 가까운 대안.',
           '[AutoGen 리뷰](/ko/power-local-llm/autogen-review) — 코드 실행 에이전트를 갖춘, 자유 형식의 대화 기반 멀티에이전트 프레임워크.',

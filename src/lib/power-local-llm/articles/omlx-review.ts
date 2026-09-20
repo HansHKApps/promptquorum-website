@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Built by a single developer, jundot, first announced publicly on [an MLX GitHub discussion thread](https://github.com/ml-explore/mlx/discussions/3203) in March 2026; canonical repository is [github.com/jundot/omlx](https://github.com/jundot/omlx) — several same-named forks exist under other GitHub usernames and are not the original project',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to oMLX\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how oMLX compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to oMLX\'s entry in the [Local LLM Software Directory](/directory) — see that page for how oMLX compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -197,7 +197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Wait, or look elsewhere, if',
             list: [
-              'You are on a Windows or Linux machine, or an Intel Mac — oMLX has no build for any of these, because it depends on Apple\'s MLX framework, which is Apple Silicon-only; see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for cross-platform alternatives',
+              'You are on a Windows or Linux machine, or an Intel Mac — oMLX has no build for any of these, because it depends on Apple\'s MLX framework, which is Apple Silicon-only; see the [Local LLM Software Directory](/directory) for cross-platform alternatives',
               'You want an officially supported, funded product with a company and an SLA behind it — this review found no evidence of a company or funding behind oMLX; it is maintained by a single named developer, per the project\'s own GitHub repository',
               'You want the absolute simplest, most minimal way to run one MLX model — [mlx-lm](/power-local-llm/mlx-lm-explained) alone, without oMLX\'s server layer, may be a better fit',
               'You need a battle-tested, long-track-record project for a production deployment — oMLX was first announced in March 2026, so its public history is still short compared to more established inference servers',
@@ -208,14 +208,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'omlx-competitors',
         title: 'oMLX vs. Other Local Inference Tools',
-        content: 'oMLX sits in the Apple Silicon / MLX corner of the local inference landscape. Here is how it compares to other tools in that same segment — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, and the dedicated [oMLX vs. mlx-lm comparison](#omlx-vs-mlx-lm) above for the closest head-to-head.',
+        content: 'oMLX sits in the Apple Silicon / MLX corner of the local inference landscape. Here is how it compares to other tools in that same segment — see the [Local LLM Software Directory](/directory) for the full catalog, and the dedicated [oMLX vs. mlx-lm comparison](#omlx-vs-mlx-lm) above for the closest head-to-head.',
         items: [
           '**[mlx-lm](/power-local-llm/mlx-lm-explained)** — the underlying Python library and CLI that oMLX itself is built on top of; the right choice if you want the simplest possible way to run one MLX model without a full server layer. See the dedicated comparison section above.',
           '**[exo](/power-local-llm/exo-review)** — an open-source tool for clustering multiple Apple Silicon Macs (and other devices) together to run larger models than any single machine could hold; relevant if oMLX\'s experimental single-cluster distributed mode isn\'t enough for your setup. See the [exo review](/power-local-llm/exo-review).',
           '**[LM Studio](https://lmstudio.ai)** — a cross-platform (macOS, Windows, Linux) desktop app that also uses MLX as one of its inference engines on Apple Silicon, alongside llama.cpp; a better fit if you need the same tool to work on non-Mac hardware too. See the [LM Studio review](/power-local-llm/lm-studio-review).',
           '**[llamafile](/power-local-llm/llamafile-explained)** — a single-executable local inference approach built on llama.cpp rather than MLX, that runs the same file across macOS, Windows, and Linux with no install step; a useful contrast if cross-platform portability matters more to you than Apple Silicon-specific performance. See the [llamafile explained](/power-local-llm/llamafile-explained) article.',
         ],
-        note: 'This is not an exhaustive list of local inference servers — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including oMLX\'s own directory entry.',
+        note: 'This is not an exhaustive list of local inference servers — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including oMLX\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -273,7 +273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including oMLX\'s directory entry alongside other inference engines covered above.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including oMLX\'s directory entry alongside other inference engines covered above.',
           '[mlx-lm Explained](/power-local-llm/mlx-lm-explained) — a deeper look at the Python library and CLI that oMLX itself is built on top of.',
           '[exo Review](/power-local-llm/exo-review) — a tool for clustering multiple Apple Silicon Macs together to run larger models than one machine could hold.',
           '[LM Studio Review](/power-local-llm/lm-studio-review) — a cross-platform desktop app that also supports MLX on Apple Silicon, alongside llama.cpp for other platforms.',
@@ -354,7 +354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Entwickelt von einem einzelnen Entwickler, jundot, erstmals öffentlich angekündigt in [einem MLX-GitHub-Diskussionsthread](https://github.com/ml-explore/mlx/discussions/3203) im März 2026; das kanonische Repository ist [github.com/jundot/omlx](https://github.com/jundot/omlx) — mehrere gleichnamige Forks existieren unter anderen GitHub-Benutzernamen und sind nicht das Originalprojekt',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu oMLXs Eintrag im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie oMLX im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu oMLXs Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie oMLX im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -477,7 +477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Warten Sie ab oder schauen Sie sich anderweitig um, wenn',
             list: [
-              'Sie einen Windows- oder Linux-Rechner oder einen Intel-Mac verwenden — oMLX hat für keine dieser Plattformen ein Build, weil es von Apples MLX-Framework abhängt, das ausschließlich Apple Silicon unterstützt; siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für plattformübergreifende Alternativen',
+              'Sie einen Windows- oder Linux-Rechner oder einen Intel-Mac verwenden — oMLX hat für keine dieser Plattformen ein Build, weil es von Apples MLX-Framework abhängt, das ausschließlich Apple Silicon unterstützt; siehe das [lokale KI-Software-Verzeichnis](/de/directory) für plattformübergreifende Alternativen',
               'Sie ein offiziell unterstütztes, finanziertes Produkt mit einem Unternehmen und einer SLA dahinter wollen — diese Review fand keine Hinweise auf ein Unternehmen oder eine Finanzierung hinter oMLX; es wird laut eigenem GitHub-Repository von einem einzelnen namentlich genannten Entwickler gepflegt',
               'Sie den absolut einfachsten, minimalsten Weg wollen, ein MLX-Modell auszuführen — [mlx-lm](/de/power-local-llm/mlx-lm-explained) allein, ohne oMLXs Server-Schicht, könnte besser passen',
               'Sie ein bewährtes Projekt mit langer Erfolgsbilanz für eine Produktivbereitstellung benötigen — oMLX wurde erstmals im März 2026 angekündigt, seine öffentliche Historie ist also noch kurz im Vergleich zu etablierteren Inferenzservern',
@@ -488,14 +488,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'omlx-competitors',
         title: 'oMLX vs. andere lokale Inferenz-Tools',
-        content: 'oMLX sitzt in der Apple-Silicon-/MLX-Ecke der lokalen Inferenz-Landschaft. So schneidet es im Vergleich zu anderen Tools in diesem Segment ab — siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog und den eigenen [oMLX-vs.-mlx-lm-Vergleich](#omlx-vs-mlx-lm) oben für den direktesten Vergleich.',
+        content: 'oMLX sitzt in der Apple-Silicon-/MLX-Ecke der lokalen Inferenz-Landschaft. So schneidet es im Vergleich zu anderen Tools in diesem Segment ab — siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen Katalog und den eigenen [oMLX-vs.-mlx-lm-Vergleich](#omlx-vs-mlx-lm) oben für den direktesten Vergleich.',
         items: [
           '**[mlx-lm](/de/power-local-llm/mlx-lm-explained)** — die zugrunde liegende Python-Bibliothek und CLI, auf der oMLX selbst aufbaut; die richtige Wahl, wenn Sie den einfachsten möglichen Weg wollen, ein MLX-Modell ohne vollständige Server-Schicht auszuführen. Siehe den eigenen Vergleichsabschnitt oben.',
           '**[exo](/de/power-local-llm/exo-review)** — ein quelloffenes Tool zum Clustern mehrerer Apple-Silicon-Macs (und anderer Geräte), um größere Modelle auszuführen, als eine einzelne Maschine fassen könnte; relevant, falls oMLXs experimenteller Einzel-Cluster-Verteilmodus für Ihr Setup nicht ausreicht. Siehe die [exo Review](/de/power-local-llm/exo-review).',
           '**[LM Studio](https://lmstudio.ai)** — eine plattformübergreifende (macOS, Windows, Linux) Desktop-App, die auf Apple Silicon ebenfalls MLX als eine ihrer Inferenz-Engines neben llama.cpp nutzt; besser geeignet, wenn dasselbe Tool auch auf Nicht-Mac-Hardware laufen soll. Siehe die [LM Studio Review](/de/power-local-llm/lm-studio-review).',
           '**[llamafile](/de/power-local-llm/llamafile-explained)** — ein Ansatz für lokale Inferenz mit einer einzigen ausführbaren Datei, aufgebaut auf llama.cpp statt MLX, der dieselbe Datei unter macOS, Windows und Linux ohne Installationsschritt ausführt; ein nützlicher Kontrast, falls Ihnen plattformübergreifende Portabilität wichtiger ist als Apple-Silicon-spezifische Leistung. Siehe den Artikel [llamafile erklärt](/de/power-local-llm/llamafile-explained).',
         ],
-        note: 'Dies ist keine erschöpfende Liste lokaler Inferenzserver — siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich oMLXs eigenem Verzeichniseintrag.',
+        note: 'Dies ist keine erschöpfende Liste lokaler Inferenzserver — siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich oMLXs eigenem Verzeichniseintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -555,7 +555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Lokales KI-Software-Verzeichnis 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich oMLXs Verzeichniseintrag neben anderen oben behandelten Inferenz-Engines.',
+          '[Lokales KI-Software-Verzeichnis 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich oMLXs Verzeichniseintrag neben anderen oben behandelten Inferenz-Engines.',
           '[mlx-lm erklärt](/de/power-local-llm/mlx-lm-explained) — ein tieferer Blick auf die Python-Bibliothek und CLI, auf der oMLX selbst aufbaut.',
           '[exo Review](/de/power-local-llm/exo-review) — ein Tool zum Clustern mehrerer Apple-Silicon-Macs, um größere Modelle auszuführen, als eine einzelne Maschine fassen könnte.',
           '[LM Studio Review](/de/power-local-llm/lm-studio-review) — eine plattformübergreifende Desktop-App, die auf Apple Silicon ebenfalls MLX unterstützt, neben llama.cpp für andere Plattformen.',
@@ -636,7 +636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Développé par un développeur unique, jundot, annoncé publiquement pour la première fois sur [un fil de discussion GitHub de MLX](https://github.com/ml-explore/mlx/discussions/3203) en mars 2026 ; le dépôt canonique est [github.com/jundot/omlx](https://github.com/jundot/omlx) — plusieurs forks du même nom existent sous d\'autres identifiants GitHub et ne sont pas le projet original',
         ],
         callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de l\'entrée d\'oMLX dans le [répertoire de logiciels IA locale](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment oMLX se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cette review est le complément approfondi de l\'entrée d\'oMLX dans le [répertoire de logiciels IA locale](/fr/directory) — consultez cette page pour voir comment oMLX se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -759,7 +759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Attendez, ou cherchez ailleurs, si',
             list: [
-              'Vous êtes sur une machine Windows ou Linux, ou un Mac Intel — oMLX n\'a de build pour aucun de ces systèmes, car il dépend du framework MLX d\'Apple, qui est exclusif à l\'Apple Silicon ; consultez le [répertoire de logiciels IA locale](/fr/power-local-llm/local-llm-software-directory) pour des alternatives multiplateformes',
+              'Vous êtes sur une machine Windows ou Linux, ou un Mac Intel — oMLX n\'a de build pour aucun de ces systèmes, car il dépend du framework MLX d\'Apple, qui est exclusif à l\'Apple Silicon ; consultez le [répertoire de logiciels IA locale](/fr/directory) pour des alternatives multiplateformes',
               'Vous voulez un produit officiellement pris en charge et financé, avec une entreprise et un SLA derrière — cette review n\'a trouvé aucune preuve d\'entreprise ou de financement derrière oMLX ; il est maintenu par un seul développeur nommé, selon son propre dépôt GitHub',
               'Vous voulez le moyen le plus simple et minimal possible d\'exécuter un seul modèle MLX — [mlx-lm](/fr/power-local-llm/mlx-lm-explained) seul, sans la couche serveur d\'oMLX, peut mieux convenir',
               'Vous avez besoin d\'un projet éprouvé, avec un long historique, pour un déploiement en production — oMLX a été annoncé pour la première fois en mars 2026, son historique public est donc encore court comparé à des serveurs d\'inférence plus établis',
@@ -770,14 +770,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'omlx-competitors',
         title: 'oMLX vs. autres outils d\'inférence locale',
-        content: 'oMLX se situe dans le segment Apple Silicon / MLX du paysage de l\'inférence locale. Voici comment il se compare à d\'autres outils de ce même segment — consultez le [répertoire de logiciels IA locale](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, et le [comparatif dédié oMLX vs. mlx-lm](#omlx-vs-mlx-lm) ci-dessus pour la confrontation la plus directe.',
+        content: 'oMLX se situe dans le segment Apple Silicon / MLX du paysage de l\'inférence locale. Voici comment il se compare à d\'autres outils de ce même segment — consultez le [répertoire de logiciels IA locale](/fr/directory) pour le catalogue complet, et le [comparatif dédié oMLX vs. mlx-lm](#omlx-vs-mlx-lm) ci-dessus pour la confrontation la plus directe.',
         items: [
           '**[mlx-lm](/fr/power-local-llm/mlx-lm-explained)** — la bibliothèque Python et le CLI sous-jacents sur lesquels oMLX lui-même est construit ; le bon choix si vous voulez le moyen le plus simple possible d\'exécuter un modèle MLX sans couche serveur complète. Voir le comparatif dédié ci-dessus.',
           '**[exo](/fr/power-local-llm/exo-review)** — un outil open source pour mettre en cluster plusieurs Mac Apple Silicon (et d\'autres appareils) afin d\'exécuter des modèles plus grands qu\'une seule machine ne pourrait contenir ; pertinent si le mode expérimental de cluster unique distribué d\'oMLX ne suffit pas à votre configuration. Voir la [review exo](/fr/power-local-llm/exo-review).',
           '**[LM Studio](https://lmstudio.ai)** — une application de bureau multiplateforme (macOS, Windows, Linux) qui utilise aussi MLX comme l\'un de ses moteurs d\'inférence sur Apple Silicon, aux côtés de llama.cpp ; mieux adaptée si vous avez besoin que le même outil fonctionne aussi sur du matériel non-Mac. Voir la [review LM Studio](/fr/power-local-llm/lm-studio-review).',
           '**[llamafile](/fr/power-local-llm/llamafile-explained)** — une approche d\'inférence locale en exécutable unique, construite sur llama.cpp plutôt que MLX, qui exécute le même fichier sous macOS, Windows et Linux sans étape d\'installation ; un contraste utile si la portabilité multiplateforme compte plus pour vous que la performance spécifique à l\'Apple Silicon. Voir l\'article [llamafile expliqué](/fr/power-local-llm/llamafile-explained).',
         ],
-        note: 'Ceci n\'est pas une liste exhaustive des serveurs d\'inférence locale — consultez le [répertoire de logiciels IA locale](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée propre d\'oMLX dans le répertoire.',
+        note: 'Ceci n\'est pas une liste exhaustive des serveurs d\'inférence locale — consultez le [répertoire de logiciels IA locale](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée propre d\'oMLX dans le répertoire.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -835,7 +835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire de logiciels IA locale 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant l\'entrée d\'oMLX dans le répertoire aux côtés d\'autres moteurs d\'inférence couverts ci-dessus.',
+          '[Répertoire de logiciels IA locale 2026](/fr/directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article, incluant l\'entrée d\'oMLX dans le répertoire aux côtés d\'autres moteurs d\'inférence couverts ci-dessus.',
           '[mlx-lm expliqué](/fr/power-local-llm/mlx-lm-explained) — un regard plus approfondi sur la bibliothèque Python et le CLI sur lesquels oMLX lui-même est construit.',
           '[Review exo](/fr/power-local-llm/exo-review) — un outil pour mettre en cluster plusieurs Mac Apple Silicon afin d\'exécuter des modèles plus grands qu\'une seule machine ne pourrait contenir.',
           '[Review LM Studio](/fr/power-local-llm/lm-studio-review) — une application de bureau multiplateforme qui prend aussi en charge MLX sur Apple Silicon, aux côtés de llama.cpp pour les autres plateformes.',
@@ -916,7 +916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '単独の開発者jundotによって開発され、[MLXのGitHubディスカッションスレッド](https://github.com/ml-explore/mlx/discussions/3203)で2026年3月に初めて公に発表されました。正式なリポジトリは[github.com/jundot/omlx](https://github.com/jundot/omlx)で、他のGitHubユーザー名の下に同名のフォークが複数存在しますが、それらはオリジナルのプロジェクトではありません',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)内のoMLXのエントリーに付随する詳細版です。oMLXが他の数十種類のローカルAIツールと比べてどうかを一目で確認するには、そのページをご覧ください。' },
+          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)内のoMLXのエントリーに付随する詳細版です。oMLXが他の数十種類のローカルAIツールと比べてどうかを一目で確認するには、そのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1039,7 +1039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'こんな方は様子を見るか他を探すべきです',
             list: [
-              'Windows、Linuxマシン、またはIntel Macをお使いの方 — oMLXはこれらのいずれにもビルドがありません。AppleのMLXフレームワークに依存しており、それはApple Silicon専用だからです。クロスプラットフォームの代替が必要な場合は[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください',
+              'Windows、Linuxマシン、またはIntel Macをお使いの方 — oMLXはこれらのいずれにもビルドがありません。AppleのMLXフレームワークに依存しており、それはApple Silicon専用だからです。クロスプラットフォームの代替が必要な場合は[ローカルLLMソフトウェアディレクトリ](/ja/directory)をご覧ください',
               '企業とSLAが後ろ盾になっている、公式にサポートされた資金調達済みの製品が欲しい方 — このレビューでは、oMLXの背後に企業や資金調達がある証拠は見つかりませんでした。プロジェクト自身のGitHubリポジトリによれば、単一の実名開発者によってメンテナンスされています',
               '1つのMLXモデルを実行する絶対的にシンプルで最小限の方法が欲しい方 — oMLXのサーバー層を使わない[mlx-lm](/ja/power-local-llm/mlx-lm-explained)単体の方が適しているかもしれません',
               '本番デプロイに実績豊富で長い実績のあるプロジェクトが必要な方 — oMLXは2026年3月に初めて発表されたばかりで、より確立された推論サーバーと比べると公開履歴はまだ短いです',
@@ -1050,14 +1050,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'omlx-competitors',
         title: 'oMLX vs. 他のローカル推論ツール',
-        content: 'oMLXは、ローカル推論の分野の中でもApple Silicon／MLXの領域に位置しています。同じ領域の他のツールとの比較は以下の通りです — 全体のカタログは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を、最も直接的な比較は上記の[oMLX vs. mlx-lm比較](#omlx-vs-mlx-lm)をご覧ください。',
+        content: 'oMLXは、ローカル推論の分野の中でもApple Silicon／MLXの領域に位置しています。同じ領域の他のツールとの比較は以下の通りです — 全体のカタログは[ローカルLLMソフトウェアディレクトリ](/ja/directory)を、最も直接的な比較は上記の[oMLX vs. mlx-lm比較](#omlx-vs-mlx-lm)をご覧ください。',
         items: [
           '**[mlx-lm](/ja/power-local-llm/mlx-lm-explained)** — oMLX自体がその上に構築されている、基盤となるPythonライブラリとCLIです。完全なサーバー層なしで1つのMLXモデルを実行する最もシンプルな方法が欲しいなら適切な選択です。上記の比較セクションをご覧ください。',
           '**[exo](/ja/power-local-llm/exo-review)** — 複数のApple Silicon Mac（および他のデバイス）をクラスタ化して、単一のマシンでは収まらない大きなモデルを実行するためのオープンソースツールです。oMLXの実験的な単一クラスタ分散モードでは足りない場合に関連します。[exoレビュー](/ja/power-local-llm/exo-review)をご覧ください。',
           '**[LM Studio](https://lmstudio.ai)** — Apple Silicon上でllama.cppと並んでMLXも推論エンジンの1つとして使用する、クロスプラットフォーム（macOS、Windows、Linux）のデスクトップアプリです。同じツールをMac以外のハードウェアでも動かす必要がある場合により適しています。[LM Studioレビュー](/ja/power-local-llm/lm-studio-review)をご覧ください。',
           '**[llamafile](/ja/power-local-llm/llamafile-explained)** — MLXではなくllama.cpp上に構築された、単一実行ファイルによるローカル推論のアプローチで、macOS、Windows、Linuxで同じファイルをインストール不要で実行できます。Apple Silicon特有の性能よりクロスプラットフォームの携帯性が重要な場合に有用な対比になります。[llamafile解説](/ja/power-local-llm/llamafile-explained)の記事をご覧ください。',
         ],
-        note: 'これはローカル推論サーバーの網羅的なリストではありません — 定期的に更新される全カタログ（oMLX自身のディレクトリエントリーを含む）は[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。',
+        note: 'これはローカル推論サーバーの網羅的なリストではありません — 定期的に更新される全カタログ（oMLX自身のディレクトリエントリーを含む）は[ローカルLLMソフトウェアディレクトリ](/ja/directory)をご覧ください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1115,7 +1115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの全カタログ。上記で扱った他の推論エンジンと並ぶoMLXのディレクトリエントリーを含みます。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — この記事が属するローカルAIツールの全カタログ。上記で扱った他の推論エンジンと並ぶoMLXのディレクトリエントリーを含みます。',
           '[mlx-lm解説](/ja/power-local-llm/mlx-lm-explained) — oMLX自体がその上に構築されているPythonライブラリとCLIをより深く掘り下げた記事。',
           '[exoレビュー](/ja/power-local-llm/exo-review) — 複数のApple Silicon Macをクラスタ化して、単一のマシンでは収まらない大きなモデルを実行するためのツール。',
           '[LM Studioレビュー](/ja/power-local-llm/lm-studio-review) — 他のプラットフォーム向けのllama.cppと並んでApple SiliconでMLXにも対応する、クロスプラットフォームのデスクトップアプリ。',
@@ -1196,7 +1196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '由独立开发者jundot开发，于2026年3月在[一个MLX GitHub讨论帖](https://github.com/ml-explore/mlx/discussions/3203)中首次公开发布;正式仓库是[github.com/jundot/omlx](https://github.com/jundot/omlx)——其他GitHub用户名下存在多个同名分支，均非原始项目',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中oMLX条目的深度延伸内容——请查看该页面，快速了解oMLX与其他数十款本地AI工具的对比情况。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中oMLX条目的深度延伸内容——请查看该页面，快速了解oMLX与其他数十款本地AI工具的对比情况。' },
         ],
       },
       overview: {
@@ -1319,7 +1319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '在以下情况下应观望或另寻他选',
             list: [
-              '你使用的是Windows或Linux机器，或是Intel Mac——oMLX没有针对这些平台的构建版本，因为它依赖于仅面向Apple Silicon的Apple MLX框架;跨平台替代方案请参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)',
+              '你使用的是Windows或Linux机器，或是Intel Mac——oMLX没有针对这些平台的构建版本，因为它依赖于仅面向Apple Silicon的Apple MLX框架;跨平台替代方案请参见[本地LLM软件目录](/zh/directory)',
               '你想要一个有公司和SLA支撑的官方支持、有资金支持的产品——本评测未发现oMLX背后有公司或融资的证据;根据项目自己的GitHub仓库，它由一位具名的独立开发者维护',
               '你想要运行单个MLX模型的绝对最简单、最精简的方式——不带oMLX服务器层的[mlx-lm](/zh/power-local-llm/mlx-lm-explained)单独使用可能更合适',
               '你需要经过长期验证、有丰富历史记录的项目用于生产部署——oMLX于2026年3月才首次公开发布，与更成熟的推理服务器相比，其公开历史仍然较短',
@@ -1330,14 +1330,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'omlx-competitors',
         title: 'oMLX vs. 其他本地推理工具',
-        content: 'oMLX处于本地推理领域中Apple Silicon/MLX的这一角落。以下是它与同一细分领域其他工具的对比——完整目录请见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)，最直接的对比则见上文专门的[oMLX与mlx-lm比较](#omlx-vs-mlx-lm)。',
+        content: 'oMLX处于本地推理领域中Apple Silicon/MLX的这一角落。以下是它与同一细分领域其他工具的对比——完整目录请见[本地LLM软件目录](/zh/directory)，最直接的对比则见上文专门的[oMLX与mlx-lm比较](#omlx-vs-mlx-lm)。',
         items: [
           '**[mlx-lm](/zh/power-local-llm/mlx-lm-explained)** — oMLX自身构建于其之上的底层Python库和CLI;如果你想在不使用完整服务器层的情况下，以最简单的方式运行单个MLX模型，这是正确的选择。请参见上文专门的对比部分。',
           '**[exo](/zh/power-local-llm/exo-review)** — 一款开源工具，可将多台Apple Silicon Mac(及其他设备)组成集群，以运行单台机器无法容纳的更大模型;如果oMLX实验性的单集群分布式模式不足以满足你的配置需求，这会很相关。请参见[exo评测](/zh/power-local-llm/exo-review)。',
           '**[LM Studio](https://lmstudio.ai)** — 一款跨平台(macOS、Windows、Linux)桌面应用，在Apple Silicon上也将MLX作为其推理引擎之一，与llama.cpp并存;如果你需要同一个工具也能在非Mac硬件上运行，它更合适。请参见[LM Studio评测](/zh/power-local-llm/lm-studio-review)。',
           '**[llamafile](/zh/power-local-llm/llamafile-explained)** — 一种基于llama.cpp而非MLX的单文件可执行本地推理方案，可在macOS、Windows和Linux上运行同一个文件而无需安装步骤;如果跨平台可移植性对你来说比Apple Silicon专属性能更重要，这是一个有用的对照。请参见[llamafile详解](/zh/power-local-llm/llamafile-explained)一文。',
         ],
-        note: '这并非本地推理服务器的详尽清单——完整且定期更新的目录(包括oMLX自身的目录条目)请见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非本地推理服务器的详尽清单——完整且定期更新的目录(包括oMLX自身的目录条目)请见[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1395,7 +1395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包含oMLX的目录条目，以及上文涉及的其他推理引擎。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的本地AI工具完整目录，包含oMLX的目录条目，以及上文涉及的其他推理引擎。',
           '[mlx-lm详解](/zh/power-local-llm/mlx-lm-explained) — 深入介绍oMLX自身所构建的Python库和CLI。',
           '[exo评测](/zh/power-local-llm/exo-review) — 一款用于将多台Apple Silicon Mac组成集群，以运行单台机器无法容纳的更大模型的工具。',
           '[LM Studio评测](/zh/power-local-llm/lm-studio-review) — 一款跨平台桌面应用，在Apple Silicon上也支持MLX，并在其他平台上支持llama.cpp。',
@@ -1476,7 +1476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Creado por un único desarrollador, jundot, anunciado públicamente por primera vez en [un hilo de discusión de GitHub de MLX](https://github.com/ml-explore/mlx/discussions/3203) en marzo de 2026; el repositorio canónico es [github.com/jundot/omlx](https://github.com/jundot/omlx) — existen varios forks con el mismo nombre bajo otros nombres de usuario de GitHub y no son el proyecto original',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de oMLX en el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara oMLX de un vistazo con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de oMLX en el [directorio de software de LLM local](/es/directory) — consulta esa página para ver cómo se compara oMLX de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1599,7 +1599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Espera, o busca en otro lugar, si',
             list: [
-              'Estás en una máquina Windows o Linux, o en una Mac Intel — oMLX no tiene build para ninguna de estas, porque depende del framework MLX de Apple, exclusivo de Apple Silicon; consulta el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para alternativas multiplataforma',
+              'Estás en una máquina Windows o Linux, o en una Mac Intel — oMLX no tiene build para ninguna de estas, porque depende del framework MLX de Apple, exclusivo de Apple Silicon; consulta el [directorio de software de LLM local](/es/directory) para alternativas multiplataforma',
               'Quieres un producto financiado y con soporte oficial, con una empresa y un SLA detrás — esta review no encontró evidencia de una empresa o financiación detrás de oMLX; según su propio repositorio de GitHub, lo mantiene un único desarrollador nombrado',
               'Quieres la forma más simple y mínima posible de ejecutar un solo modelo MLX — [mlx-lm](/es/power-local-llm/mlx-lm-explained) solo, sin la capa de servidor de oMLX, podría ser mejor opción',
               'Necesitas un proyecto con un historial largo y probado para un despliegue en producción — oMLX se anunció por primera vez en marzo de 2026, así que su historial público todavía es corto comparado con servidores de inferencia más establecidos',
@@ -1610,14 +1610,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'omlx-competitors',
         title: 'oMLX vs. otras herramientas de inferencia local',
-        content: 'oMLX se sitúa en el rincón de Apple Silicon / MLX del panorama de inferencia local. Así es como se compara con otras herramientas en ese mismo segmento — consulta el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, y la [comparación dedicada oMLX vs. mlx-lm](#omlx-vs-mlx-lm) arriba para el enfrentamiento más directo.',
+        content: 'oMLX se sitúa en el rincón de Apple Silicon / MLX del panorama de inferencia local. Así es como se compara con otras herramientas en ese mismo segmento — consulta el [directorio de software de LLM local](/es/directory) para el catálogo completo, y la [comparación dedicada oMLX vs. mlx-lm](#omlx-vs-mlx-lm) arriba para el enfrentamiento más directo.',
         items: [
           '**[mlx-lm](/es/power-local-llm/mlx-lm-explained)** — la librería de Python y el CLI subyacentes sobre los que oMLX mismo está construido; la elección correcta si quieres la forma más simple posible de ejecutar un solo modelo MLX sin una capa de servidor completa. Consulta la sección de comparación dedicada arriba.',
           '**[exo](/es/power-local-llm/exo-review)** — una herramienta de código abierto para agrupar en clúster varias Mac con Apple Silicon (y otros dispositivos) y ejecutar modelos más grandes de los que una sola máquina podría alojar; relevante si el modo experimental de clúster único distribuido de oMLX no es suficiente para tu configuración. Consulta la [review de exo](/es/power-local-llm/exo-review).',
           '**[LM Studio](https://lmstudio.ai)** — una app de escritorio multiplataforma (macOS, Windows, Linux) que también usa MLX como uno de sus motores de inferencia en Apple Silicon, junto con llama.cpp; mejor opción si necesitas que la misma herramienta funcione también en hardware que no sea Mac. Consulta la [review de LM Studio](/es/power-local-llm/lm-studio-review).',
           '**[llamafile](/es/power-local-llm/llamafile-explained)** — un enfoque de inferencia local en un solo ejecutable, construido sobre llama.cpp en lugar de MLX, que ejecuta el mismo archivo en macOS, Windows y Linux sin paso de instalación; un contraste útil si la portabilidad multiplataforma te importa más que el rendimiento específico de Apple Silicon. Consulta el artículo [llamafile explicado](/es/power-local-llm/llamafile-explained).',
         ],
-        note: 'Esta no es una lista exhaustiva de servidores de inferencia local — consulta el [directorio de software de LLM local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluyendo la propia entrada de oMLX en el directorio.',
+        note: 'Esta no es una lista exhaustiva de servidores de inferencia local — consulta el [directorio de software de LLM local](/es/directory) para el catálogo completo y actualizado regularmente, incluyendo la propia entrada de oMLX en el directorio.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1675,7 +1675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de LLM local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la entrada de oMLX en el directorio junto a otros motores de inferencia cubiertos arriba.',
+          '[Directorio de software de LLM local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la entrada de oMLX en el directorio junto a otros motores de inferencia cubiertos arriba.',
           '[mlx-lm explicado](/es/power-local-llm/mlx-lm-explained) — una mirada más profunda a la librería de Python y el CLI sobre los que oMLX mismo está construido.',
           '[Review de exo](/es/power-local-llm/exo-review) — una herramienta para agrupar en clúster varias Mac con Apple Silicon y ejecutar modelos más grandes de los que una sola máquina podría alojar.',
           '[Review de LM Studio](/es/power-local-llm/lm-studio-review) — una app de escritorio multiplataforma que también admite MLX en Apple Silicon, junto con llama.cpp para otras plataformas.',
@@ -1756,7 +1756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Criado por um único desenvolvedor, jundot, anunciado publicamente pela primeira vez em [uma thread de discussão do GitHub do MLX](https://github.com/ml-explore/mlx/discussions/3203) em março de 2026; o repositório canônico é [github.com/jundot/omlx](https://github.com/jundot/omlx) — vários forks com o mesmo nome existem sob outros nomes de usuário no GitHub e não são o projeto original',
         ],
         callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do oMLX no [diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o oMLX com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do oMLX no [diretório de software de LLM local](/pt/directory) — veja essa página para comparar rapidamente o oMLX com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1879,7 +1879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Espere, ou procure outra opção, se',
             list: [
-              'Você está em uma máquina Windows ou Linux, ou em um Mac Intel — o oMLX não tem build para nenhum desses sistemas, porque depende do framework MLX da Apple, exclusivo de Apple Silicon; veja o [diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) para alternativas multiplataforma',
+              'Você está em uma máquina Windows ou Linux, ou em um Mac Intel — o oMLX não tem build para nenhum desses sistemas, porque depende do framework MLX da Apple, exclusivo de Apple Silicon; veja o [diretório de software de LLM local](/pt/directory) para alternativas multiplataforma',
               'Você quer um produto financiado e oficialmente suportado, com uma empresa e um SLA por trás — esta review não encontrou evidências de uma empresa ou financiamento por trás do oMLX; segundo seu próprio repositório do GitHub, ele é mantido por um único desenvolvedor identificado',
               'Você quer a forma mais simples e mínima possível de rodar um único modelo MLX — o [mlx-lm](/pt/power-local-llm/mlx-lm-explained) sozinho, sem a camada de servidor do oMLX, pode se encaixar melhor',
               'Você precisa de um projeto testado e com um longo histórico para uma implantação em produção — o oMLX foi anunciado pela primeira vez em março de 2026, então seu histórico público ainda é curto comparado a servidores de inferência mais estabelecidos',
@@ -1890,14 +1890,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'omlx-competitors',
         title: 'oMLX vs. outras ferramentas de inferência local',
-        content: 'O oMLX está no canto Apple Silicon/MLX do cenário de inferência local. Veja como ele se compara a outras ferramentas desse mesmo segmento — veja o [diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, e a [comparação dedicada oMLX vs. mlx-lm](#omlx-vs-mlx-lm) acima para o confronto mais direto.',
+        content: 'O oMLX está no canto Apple Silicon/MLX do cenário de inferência local. Veja como ele se compara a outras ferramentas desse mesmo segmento — veja o [diretório de software de LLM local](/pt/directory) para o catálogo completo, e a [comparação dedicada oMLX vs. mlx-lm](#omlx-vs-mlx-lm) acima para o confronto mais direto.',
         items: [
           '**[mlx-lm](/pt/power-local-llm/mlx-lm-explained)** — a biblioteca Python e a CLI subjacentes sobre as quais o próprio oMLX é construído; a escolha certa se você quer a forma mais simples possível de rodar um modelo MLX sem uma camada de servidor completa. Veja a seção de comparação dedicada acima.',
           '**[exo](/pt/power-local-llm/exo-review)** — uma ferramenta de código aberto para agrupar vários Macs com Apple Silicon (e outros dispositivos) em cluster para rodar modelos maiores do que uma única máquina conseguiria comportar; relevante se o modo experimental de cluster único distribuído do oMLX não for suficiente para a sua configuração. Veja a [review do exo](/pt/power-local-llm/exo-review).',
           '**[LM Studio](https://lmstudio.ai)** — um app de desktop multiplataforma (macOS, Windows, Linux) que também usa MLX como um de seus motores de inferência no Apple Silicon, junto com o llama.cpp; melhor opção se você precisa que a mesma ferramenta funcione também em hardware que não seja Mac. Veja a [review do LM Studio](/pt/power-local-llm/lm-studio-review).',
           '**[llamafile](/pt/power-local-llm/llamafile-explained)** — uma abordagem de inferência local em um único executável, construída sobre o llama.cpp em vez do MLX, que roda o mesmo arquivo em macOS, Windows e Linux sem etapa de instalação; um contraste útil se a portabilidade multiplataforma importa mais para você do que o desempenho específico de Apple Silicon. Veja o artigo [llamafile explicado](/pt/power-local-llm/llamafile-explained).',
         ],
-        note: 'Esta não é uma lista exaustiva de servidores de inferência local — veja o [diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do oMLX no diretório.',
+        note: 'Esta não é uma lista exaustiva de servidores de inferência local — veja o [diretório de software de LLM local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do oMLX no diretório.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1955,7 +1955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software de LLM local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do oMLX no diretório junto a outros motores de inferência abordados acima.',
+          '[Diretório de software de LLM local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do oMLX no diretório junto a outros motores de inferência abordados acima.',
           '[mlx-lm explicado](/pt/power-local-llm/mlx-lm-explained) — um olhar mais aprofundado sobre a biblioteca Python e a CLI sobre as quais o próprio oMLX é construído.',
           '[Review do exo](/pt/power-local-llm/exo-review) — uma ferramenta para agrupar vários Macs com Apple Silicon em cluster e rodar modelos maiores do que uma única máquina conseguiria comportar.',
           '[Review do LM Studio](/pt/power-local-llm/lm-studio-review) — um app de desktop multiplataforma que também é compatível com MLX no Apple Silicon, junto com llama.cpp para outras plataformas.',
@@ -2036,7 +2036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'طوّره مطوّر واحد يُدعى jundot، وأُعلن عنه علنًا لأول مرة في [سلسلة نقاش على GitHub الخاصة بـ MLX](https://github.com/ml-explore/mlx/discussions/3203) في مارس 2026؛ المستودع الرسمي هو [github.com/jundot/omlx](https://github.com/jundot/omlx) — وتوجد عدة نسخ متفرعة بنفس الاسم تحت أسماء مستخدمين أخرى على GitHub وهي ليست المشروع الأصلي',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الشرح المتعمق المرافق لمدخل oMLX في [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمقارنة سريعة بين oMLX وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي الشرح المتعمق المرافق لمدخل oMLX في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة بين oMLX وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2159,7 +2159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'انتظر، أو ابحث في مكان آخر، إذا',
             list: [
-              'كنت تستخدم جهاز Windows أو Linux، أو جهاز Mac بمعالج Intel — لا يوجد لدى oMLX إصدار لأي من هذه الأنظمة، لأنه يعتمد على إطار عمل MLX من Apple، وهو حصري لـ Apple Silicon؛ راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على بدائل متعددة المنصات',
+              'كنت تستخدم جهاز Windows أو Linux، أو جهاز Mac بمعالج Intel — لا يوجد لدى oMLX إصدار لأي من هذه الأنظمة، لأنه يعتمد على إطار عمل MLX من Apple، وهو حصري لـ Apple Silicon؛ راجع [دليل برمجيات LLM المحلية](/ar/directory) للاطلاع على بدائل متعددة المنصات',
               'كنت تريد منتجًا مدعومًا رسميًا وممولاً، مع شركة واتفاقية مستوى خدمة (SLA) خلفه — لم تجد هذه المراجعة أي دليل على وجود شركة أو تمويل خلف oMLX؛ وفقًا لمستودعه الخاص على GitHub، يقوم بصيانته مطوّر واحد مذكور بالاسم',
               'كنت تريد أبسط وأخف طريقة ممكنة لتشغيل نموذج MLX واحد — قد يكون [mlx-lm](/ar/power-local-llm/mlx-lm-explained) وحده، دون طبقة خادم oMLX، أكثر ملاءمة',
               'كنت بحاجة إلى مشروع مُختبَر جيدًا وله سجل حافل طويل من أجل نشره في بيئة الإنتاج — أُعلن عن oMLX لأول مرة في مارس 2026، لذا فإن سجله العلني لا يزال قصيرًا مقارنة بخوادم استدلال أكثر رسوخًا',
@@ -2170,14 +2170,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'omlx-competitors',
         title: 'oMLX مقابل أدوات الاستدلال المحلية الأخرى',
-        content: 'يقع oMLX في زاوية Apple Silicon/MLX من مشهد الاستدلال المحلي. إليك كيف يقارن بأدوات أخرى في هذا القطاع نفسه — راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل، والمقارنة المخصصة [oMLX مقابل mlx-lm](#omlx-vs-mlx-lm) أعلاه للمقارنة الأقرب مباشرة.',
+        content: 'يقع oMLX في زاوية Apple Silicon/MLX من مشهد الاستدلال المحلي. إليك كيف يقارن بأدوات أخرى في هذا القطاع نفسه — راجع [دليل برمجيات LLM المحلية](/ar/directory) للاطلاع على الكتالوج الكامل، والمقارنة المخصصة [oMLX مقابل mlx-lm](#omlx-vs-mlx-lm) أعلاه للمقارنة الأقرب مباشرة.',
         items: [
           '**[mlx-lm](/ar/power-local-llm/mlx-lm-explained)** — مكتبة Python وواجهة سطر الأوامر الأساسية التي بُني oMLX نفسه فوقها؛ الخيار الصحيح إذا كنت تريد أبسط طريقة ممكنة لتشغيل نموذج MLX دون طبقة خادم كاملة. راجع قسم المقارنة المخصص أعلاه.',
           '**[exo](/ar/power-local-llm/exo-review)** — أداة مفتوحة المصدر لتجميع عدة أجهزة Mac بمعالجات Apple Silicon (وأجهزة أخرى) في عنقود لتشغيل نماذج أكبر مما يمكن لجهاز واحد استيعابه؛ مفيدة إذا لم يكن وضع التوزيع التجريبي أحادي العنقود في oMLX كافيًا لإعدادك. راجع [مراجعة exo](/ar/power-local-llm/exo-review).',
           '**[LM Studio](https://lmstudio.ai)** — تطبيق سطح مكتب متعدد المنصات (macOS وWindows وLinux) يستخدم أيضًا MLX كأحد محركات الاستدلال الخاصة به على Apple Silicon، إلى جانب llama.cpp؛ خيار أفضل إذا كنت تحتاج إلى أن تعمل الأداة نفسها على أجهزة غير Mac أيضًا. راجع [مراجعة LM Studio](/ar/power-local-llm/lm-studio-review).',
           '**[llamafile](/ar/power-local-llm/llamafile-explained)** — نهج استدلال محلي بملف تنفيذي واحد، مبني على llama.cpp بدلاً من MLX، يشغّل الملف نفسه على macOS وWindows وLinux دون خطوة تثبيت؛ تباين مفيد إذا كانت قابلية النقل بين المنصات أهم بالنسبة لك من الأداء الخاص بـ Apple Silicon. راجع مقال [شرح llamafile](/ar/power-local-llm/llamafile-explained).',
         ],
-        note: 'هذه ليست قائمة شاملة بخوادم الاستدلال المحلية — راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك مدخل oMLX الخاص في الدليل.',
+        note: 'هذه ليست قائمة شاملة بخوادم الاستدلال المحلية — راجع [دليل برمجيات LLM المحلية](/ar/directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك مدخل oMLX الخاص في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2235,7 +2235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل oMLX في الدليل إلى جانب محركات استدلال أخرى تم تناولها أعلاه.',
+          '[دليل برمجيات LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل oMLX في الدليل إلى جانب محركات استدلال أخرى تم تناولها أعلاه.',
           '[شرح mlx-lm](/ar/power-local-llm/mlx-lm-explained) — نظرة أعمق على مكتبة Python وواجهة سطر الأوامر التي بُني oMLX نفسه فوقها.',
           '[مراجعة exo](/ar/power-local-llm/exo-review) — أداة لتجميع عدة أجهزة Mac بمعالجات Apple Silicon في عنقود لتشغيل نماذج أكبر مما يمكن لجهاز واحد استيعابه.',
           '[مراجعة LM Studio](/ar/power-local-llm/lm-studio-review) — تطبيق سطح مكتب متعدد المنصات يدعم أيضًا MLX على Apple Silicon، إلى جانب llama.cpp للمنصات الأخرى.',
@@ -2316,7 +2316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '단독 개발자 jundot이 개발했으며, 2026년 3월 [MLX GitHub 토론 스레드](https://github.com/ml-explore/mlx/discussions/3203)에서 처음으로 공개 발표되었습니다. 공식 저장소는 [github.com/jundot/omlx](https://github.com/jundot/omlx)이며, 다른 GitHub 사용자명 아래에 동일한 이름의 여러 포크가 존재하지만 이는 원본 프로젝트가 아닙니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 oMLX 항목의 심층 보완 자료입니다 — oMLX가 다른 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지 확인하려면 해당 페이지를 참고하십시오.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 oMLX 항목의 심층 보완 자료입니다 — oMLX가 다른 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지 확인하려면 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {
@@ -2439,7 +2439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: '다음의 경우 기다리거나 다른 곳을 찾아보십시오',
             list: [
-              'Windows나 Linux 머신, 또는 Intel Mac을 사용하고 있는 경우 — oMLX는 Apple Silicon 전용인 Apple의 MLX 프레임워크에 의존하기 때문에 이들 플랫폼용 빌드가 전혀 없습니다. 크로스 플랫폼 대안은 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오',
+              'Windows나 Linux 머신, 또는 Intel Mac을 사용하고 있는 경우 — oMLX는 Apple Silicon 전용인 Apple의 MLX 프레임워크에 의존하기 때문에 이들 플랫폼용 빌드가 전혀 없습니다. 크로스 플랫폼 대안은 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오',
               '회사와 SLA가 뒷받침하는 공식적으로 지원되고 자금이 확보된 제품을 원하는 경우 — 이 리뷰에서는 oMLX 뒤에 회사나 자금이 있다는 증거를 찾지 못했습니다. 자체 GitHub 저장소에 따르면 실명이 공개된 단독 개발자가 유지관리하고 있습니다',
               '단일 MLX 모델을 실행하는 절대적으로 가장 단순하고 최소한의 방법을 원하는 경우 — oMLX의 서버 레이어 없이 [mlx-lm](/ko/power-local-llm/mlx-lm-explained) 단독이 더 적합할 수 있습니다',
               '프로덕션 배포를 위해 오랜 실적을 지닌 검증된 프로젝트가 필요한 경우 — oMLX는 2026년 3월에 처음 발표되었으므로, 더 확고히 자리 잡은 추론 서버들에 비해 공개된 이력이 아직 짧습니다',
@@ -2450,14 +2450,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'omlx-competitors',
         title: 'oMLX vs. 다른 로컬 추론 도구',
-        content: 'oMLX는 로컬 추론 생태계 중에서도 Apple Silicon/MLX 영역에 속해 있습니다. 이 영역의 다른 도구들과의 비교는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를, 가장 직접적인 비교는 위의 전용 [oMLX vs. mlx-lm 비교](#omlx-vs-mlx-lm)를 참고하십시오.',
+        content: 'oMLX는 로컬 추론 생태계 중에서도 Apple Silicon/MLX 영역에 속해 있습니다. 이 영역의 다른 도구들과의 비교는 다음과 같습니다 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를, 가장 직접적인 비교는 위의 전용 [oMLX vs. mlx-lm 비교](#omlx-vs-mlx-lm)를 참고하십시오.',
         items: [
           '**[mlx-lm](/ko/power-local-llm/mlx-lm-explained)** — oMLX 자체가 그 위에 구축된 기반 Python 라이브러리 및 CLI입니다. 완전한 서버 레이어 없이 단일 MLX 모델을 실행하는 가장 단순한 방법을 원한다면 올바른 선택입니다. 위의 전용 비교 섹션을 참고하십시오.',
           '**[exo](/ko/power-local-llm/exo-review)** — 여러 Apple Silicon Mac(및 기타 기기)을 클러스터로 묶어 단일 기기로는 수용할 수 없는 더 큰 모델을 실행할 수 있게 해주는 오픈소스 도구입니다. oMLX의 실험적인 단일 클러스터 분산 모드가 사용자의 환경에 충분하지 않다면 관련이 있습니다. [exo 리뷰](/ko/power-local-llm/exo-review)를 참고하십시오.',
           '**[LM Studio](https://lmstudio.ai)** — Apple Silicon에서 llama.cpp와 함께 MLX도 추론 엔진 중 하나로 사용하는 크로스 플랫폼(macOS, Windows, Linux) 데스크톱 앱입니다. 동일한 도구가 Mac이 아닌 하드웨어에서도 작동해야 한다면 더 적합합니다. [LM Studio 리뷰](/ko/power-local-llm/lm-studio-review)를 참고하십시오.',
           '**[llamafile](/ko/power-local-llm/llamafile-explained)** — MLX가 아닌 llama.cpp를 기반으로 한 단일 실행 파일 방식의 로컬 추론 방법으로, macOS, Windows, Linux에서 설치 과정 없이 동일한 파일을 실행할 수 있습니다. Apple Silicon 전용 성능보다 크로스 플랫폼 이식성이 더 중요하다면 유용한 대조군입니다. [llamafile 설명](/ko/power-local-llm/llamafile-explained) 문서를 참고하십시오.',
         ],
-        note: '이는 로컬 추론 서버의 총망라한 목록이 아닙니다 — oMLX 자체의 디렉터리 항목을 포함하여 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하십시오.',
+        note: '이는 로컬 추론 서버의 총망라한 목록이 아닙니다 — oMLX 자체의 디렉터리 항목을 포함하여 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하십시오.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2515,7 +2515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그로, 위에서 다룬 다른 추론 엔진들과 함께 oMLX의 디렉터리 항목을 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 기사가 속한 로컬 AI 도구의 전체 카탈로그로, 위에서 다룬 다른 추론 엔진들과 함께 oMLX의 디렉터리 항목을 포함합니다.',
           '[mlx-lm 설명](/ko/power-local-llm/mlx-lm-explained) — oMLX 자체가 그 위에 구축된 Python 라이브러리와 CLI를 더 깊이 살펴봅니다.',
           '[exo 리뷰](/ko/power-local-llm/exo-review) — 여러 Apple Silicon Mac을 클러스터로 묶어 단일 기기로는 수용할 수 없는 더 큰 모델을 실행할 수 있게 해주는 도구입니다.',
           '[LM Studio 리뷰](/ko/power-local-llm/lm-studio-review) — Apple Silicon에서도 MLX를 지원하며, 다른 플랫폼에서는 llama.cpp를 지원하는 크로스 플랫폼 데스크톱 앱입니다.',

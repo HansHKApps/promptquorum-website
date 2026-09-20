@@ -230,7 +230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Apple MLX vs. NVIDIA CUDA for Local LLMs](/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — a direct comparison of MLX-based and CUDA-based local inference performance.',
           '[llama.cpp Explained](/power-local-llm/llama-cpp-explained) — the widest-hardware-support alternative, including its own Metal backend for Apple Silicon.',
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools, including other Apple Silicon-focused options.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools, including other Apple Silicon-focused options.',
         ],
       },
     },
@@ -463,7 +463,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Apple MLX vs. NVIDIA CUDA für lokale LLMs](/de/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — ein direkter Vergleich der Inferenz-Performance von MLX- und CUDA-basierten lokalen Setups.',
           '[llama.cpp erklärt](/de/power-local-llm/llama-cpp-explained) — die Alternative mit der breitesten Hardware-Unterstützung, inklusive eigenem Metal-Backend für Apple Silicon.',
-          '[Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, einschließlich weiterer Apple-Silicon-fokussierter Optionen.',
+          '[Verzeichnis lokaler LLM-Software](/de/directory) — der vollständige Katalog lokaler KI-Tools, einschließlich weiterer Apple-Silicon-fokussierter Optionen.',
         ],
       },
     },
@@ -696,7 +696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Apple MLX vs. NVIDIA CUDA pour les LLM locaux](/fr/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — une comparaison directe des performances d\'inférence locale basées sur MLX et sur CUDA.',
           '[llama.cpp expliqué](/fr/power-local-llm/llama-cpp-explained) — l\'alternative au support matériel le plus large, avec son propre backend Metal pour Apple Silicon.',
-          '[Répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale, y compris d\'autres options axées sur Apple Silicon.',
+          '[Répertoire de logiciels LLM locaux](/fr/directory) — le catalogue complet des outils d\'IA locale, y compris d\'autres options axées sur Apple Silicon.',
         ],
       },
     },
@@ -929,7 +929,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Apple MLX vs. NVIDIA CUDA para LLM locales](/es/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — una comparación directa del rendimiento de inferencia local basada en MLX y en CUDA.',
           '[llama.cpp explicado](/es/power-local-llm/llama-cpp-explained) — la alternativa con el soporte de hardware más amplio, incluido su propio backend Metal para Apple Silicon.',
-          '[Directorio de software de LLM locales](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local, incluidas otras opciones centradas en Apple Silicon.',
+          '[Directorio de software de LLM locales](/es/directory) — el catálogo completo de herramientas de IA local, incluidas otras opciones centradas en Apple Silicon.',
         ],
       },
     },
@@ -1162,7 +1162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[ローカルLLMにおけるApple MLX対NVIDIA CUDA](/ja/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — MLXベースとCUDAベースのローカル推論パフォーマンスの直接比較。',
           '[llama.cppとは](/ja/power-local-llm/llama-cpp-explained) — Apple Silicon向け独自のMetalバックエンドを含む、最も幅広いハードウェアサポートを持つ代替ツール。',
-          '[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — 他のApple Silicon特化ツールも含めた、ローカルAIツールの全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ](/ja/directory) — 他のApple Silicon特化ツールも含めた、ローカルAIツールの全カタログ。',
         ],
       },
     },
@@ -1395,7 +1395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[本地LLM场景下Apple MLX与NVIDIA CUDA对比](/zh/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — 直接对比基于MLX和基于CUDA的本地推理性能。',
           '[llama.cpp详解](/zh/power-local-llm/llama-cpp-explained) — 硬件支持最广泛的替代方案,包括其自身面向Apple Silicon的Metal后端。',
-          '[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本地AI工具的完整目录,包括其他专注于Apple Silicon的选项。',
+          '[本地LLM软件目录](/zh/directory) — 本地AI工具的完整目录,包括其他专注于Apple Silicon的选项。',
         ],
       },
     },
@@ -1628,7 +1628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Apple MLX vs. NVIDIA CUDA para LLMs Locais](/pt/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — uma comparação direta do desempenho de inferência local baseado em MLX e baseado em CUDA.',
           '[llama.cpp Explicado](/pt/power-local-llm/llama-cpp-explained) — a alternativa com o suporte a hardware mais amplo, incluindo seu próprio backend Metal para Apple Silicon.',
-          '[Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local, incluindo outras opções focadas em Apple Silicon.',
+          '[Diretório de Software de LLM Local](/pt/directory) — o catálogo completo de ferramentas de IA local, incluindo outras opções focadas em Apple Silicon.',
         ],
       },
     },
@@ -1861,7 +1861,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[مقارنة Apple MLX مقابل NVIDIA CUDA للنماذج اللغوية الكبيرة المحلية](/ar/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — مقارنة مباشرة بين أداء الاستدلال المحلي القائم على MLX وذلك القائم على CUDA.',
           '[شرح llama.cpp](/ar/power-local-llm/llama-cpp-explained) — البديل الأوسع دعمًا للأجهزة، بما في ذلك واجهته الخلفية Metal الخاصة به لشرائح Apple Silicon.',
-          '[دليل برمجيات النماذج اللغوية الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية، بما في ذلك خيارات أخرى تركز على Apple Silicon.',
+          '[دليل برمجيات النماذج اللغوية الكبيرة المحلية](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية، بما في ذلك خيارات أخرى تركز على Apple Silicon.',
         ],
       },
     },
@@ -2094,7 +2094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[로컬 LLM을 위한 Apple MLX와 NVIDIA CUDA 비교](/ko/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026) — MLX 기반과 CUDA 기반 로컬 추론 성능의 직접 비교.',
           '[llama.cpp 완벽 정리](/ko/power-local-llm/llama-cpp-explained) — Apple Silicon용 자체 Metal 백엔드를 포함해 가장 폭넓은 하드웨어를 지원하는 대안.',
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 다른 Apple Silicon 중심 옵션을 포함한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 다른 Apple Silicon 중심 옵션을 포함한 로컬 AI 도구 전체 카탈로그.',
         ],
       },
     },

@@ -241,7 +241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Open Interpreter Review 2026: Same Name, Rust Core, New License](/power-local-llm/open-interpreter-review) — a narrower-scope, terminal-based coding agent as an alternative to OpenClaw\'s full-machine reach.',
           '[AutoGPT Review 2026: Classic Agent vs. Hosted Platform](/power-local-llm/autogpt-local-review) — an earlier, unscoped autonomous-agent design from the same broad "give an LLM agency" category.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -486,7 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Open Interpreter im Test 2026: Gleicher Name, Rust-Kern, neue Lizenz](/de/power-local-llm/open-interpreter-review) — ein enger gefasster, terminalbasierter Coding-Agent als Alternative zu OpenClaws voller Rechnersteuerung.',
           '[AutoGPT im Test 2026: Klassischer Agent vs. gehostete Plattform](/de/power-local-llm/autogpt-local-review) — ein früheres, ungebundenes autonomes Agenten-Design aus derselben breit angelegten „LLM erhält Handlungsmacht"-Kategorie.',
-          '[Local-LLM-Software-Verzeichnis 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local-LLM-Software-Verzeichnis 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -731,7 +731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Open Interpreter en 2026 : même nom, cœur Rust, nouvelle licence](/fr/power-local-llm/open-interpreter-review) — un agent de codage en terminal plus restreint, comme alternative au contrôle total de machine d\'OpenClaw.',
           '[AutoGPT en 2026 : agent classique vs. plateforme hébergée](/fr/power-local-llm/autogpt-local-review) — une conception d\'agent autonome non restreint plus ancienne, de la même catégorie large « donner l\'initiative à un LLM ».',
-          '[Répertoire de logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article.',
+          '[Répertoire de logiciels LLM locaux 2026](/fr/directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article.',
         ],
       },
     },
@@ -976,7 +976,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Open Interpreterレビュー2026：同じ名前、Rustコア、新ライセンス](/ja/power-local-llm/open-interpreter-review) — OpenClawのフルマシン制御に対する代替として、より範囲の狭いターミナルベースのコーディングエージェント。',
           '[AutoGPTレビュー2026：クラシックエージェント対ホスト型プラットフォーム](/ja/power-local-llm/autogpt-local-review) — 同じ「LLMにマシンの権限を与える」という広いカテゴリーからの、より初期の無制約な自律エージェント設計。',
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの完全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — この記事が属するローカルAIツールの完全カタログ。',
         ],
       },
     },
@@ -1221,7 +1221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Open Interpreter评测2026：同一个名字，Rust内核，新许可证](/zh/power-local-llm/open-interpreter-review) — 作为OpenClaw完整设备控制的替代方案，一款范围更窄的终端编码代理。',
           '[AutoGPT评测2026：经典代理对比托管平台](/zh/power-local-llm/autogpt-local-review) — 来自同一「让LLM获得设备控制权」大类别中，一个更早期、无约束的自主代理设计。',
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的本地AI工具完整目录。',
         ],
       },
     },
@@ -1466,7 +1466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Open Interpreter en 2026: mismo nombre, núcleo Rust, nueva licencia](/es/power-local-llm/open-interpreter-review) — un agente de codificación en terminal más acotado, como alternativa al control total del equipo de OpenClaw.',
           '[AutoGPT en 2026: agente clásico frente a plataforma alojada](/es/power-local-llm/autogpt-local-review) — un diseño de agente autónomo sin acotar más antiguo, de la misma categoría amplia de "dar iniciativa a un LLM".',
-          '[Directorio de software LLM local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Directorio de software LLM local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1711,7 +1711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Open Interpreter em 2026: mesmo nome, núcleo Rust, nova licença](/pt/power-local-llm/open-interpreter-review) — um agente de codificação em terminal mais restrito, como alternativa ao controle total de máquina do OpenClaw.',
           '[AutoGPT em 2026: agente clássico vs. plataforma hospedada](/pt/power-local-llm/autogpt-local-review) — um design de agente autônomo irrestrito mais antigo, da mesma categoria ampla de "dar iniciativa a um LLM".',
-          '[Diretório de software de LLM local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Diretório de software de LLM local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -1956,7 +1956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[مراجعة Open Interpreter 2026: الاسم نفسه، نواة Rust، رخصة جديدة](/ar/power-local-llm/open-interpreter-review) — وكيل برمجة طرفية أضيق نطاقاً، كبديل للتحكم الكامل بالجهاز الذي يوفره OpenClaw.',
           '[مراجعة AutoGPT 2026: الوكيل الكلاسيكي مقابل المنصة المستضافة](/ar/power-local-llm/autogpt-local-review) — تصميم وكيل مستقل أقدم وغير مقيد، من نفس الفئة الواسعة «منح نموذج لغوي زمام المبادرة».',
-          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
+          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
         ],
       },
     },
@@ -2201,7 +2201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Open Interpreter 리뷰 2026: 같은 이름, Rust 코어, 새로운 라이선스](/ko/power-local-llm/open-interpreter-review) — OpenClaw의 완전한 기기 제어에 대한 대안으로, 더 좁은 범위의 터미널 기반 코딩 에이전트.',
           '[AutoGPT 리뷰 2026: 클래식 에이전트 대 호스팅 플랫폼](/ko/power-local-llm/autogpt-local-review) — 같은 광범위한 "LLM에 기기 제어권 부여" 범주에서 나온, 더 이전의 제약 없는 자율 에이전트 설계.',
-          '[로컬 LLM 소프트웨어 디렉토리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉토리 2026](/ko/directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },

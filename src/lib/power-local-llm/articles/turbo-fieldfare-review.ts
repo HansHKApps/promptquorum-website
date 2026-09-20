@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Over 6,750 GitHub stars and 430+ forks as of this review',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to TurboFieldfare\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how TurboFieldfare compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to TurboFieldfare\'s entry in the [Local LLM Software Directory](/directory) — see that page for how TurboFieldfare compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -210,7 +210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'LMDeploy', 'Best known for': 'Toolkit for compressing, deploying, and serving LLMs, with a focus on inference throughput', 'Link': '[LMDeploy review](/power-local-llm/lmdeploy-review)' },
         ],
         columns: ['Tool', 'Best known for', 'Link'],
-        note: 'This list reflects tools commonly compared to TurboFieldfare in the local-inference-engine space, not an independent PromptQuorum ranking — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including TurboFieldfare\'s own directory entry. Verify each tool\'s current platform and model support before choosing.',
+        note: 'This list reflects tools commonly compared to TurboFieldfare in the local-inference-engine space, not an independent PromptQuorum ranking — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including TurboFieldfare\'s own directory entry. Verify each tool\'s current platform and model support before choosing.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -267,7 +267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Ollama Review](/power-local-llm/ollama-review) — a general-purpose, cross-platform local model runner built on llama.cpp, for comparison against model-specific TurboFieldfare.',
           '[LMDeploy Review](/power-local-llm/lmdeploy-review) — a toolkit for compressing, deploying, and serving LLMs with a focus on inference throughput.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -342,7 +342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Über 6.750 GitHub-Stars und 430+ Forks zum Zeitpunkt dieses Tests',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test ist der ausführliche Begleitartikel zum Eintrag von TurboFieldfare im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) – dort finden Sie einen schnellen Vergleich von TurboFieldfare mit Dutzenden anderer lokaler KI-Tools.' },
+          { type: 'note', text: 'Dieser Test ist der ausführliche Begleitartikel zum Eintrag von TurboFieldfare im [Local LLM Software Directory](/de/directory) – dort finden Sie einen schnellen Vergleich von TurboFieldfare mit Dutzenden anderer lokaler KI-Tools.' },
         ],
       },
       overview: {
@@ -480,7 +480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'LMDeploy', 'Am bekanntesten für': 'Toolkit zum Komprimieren, Bereitstellen und Servieren von LLMs, mit Fokus auf Inferenz-Durchsatz', 'Link': '[LMDeploy-Test](/de/power-local-llm/lmdeploy-review)' },
         ],
         columns: ['Tool', 'Am bekanntesten für', 'Link'],
-        note: 'Diese Liste spiegelt Tools wider, die häufig mit TurboFieldfare verglichen werden, und ist kein unabhängiges Ranking von PromptQuorum – siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Directory-Eintrags von TurboFieldfare. Prüfen Sie die aktuelle Plattform- und Modellunterstützung jedes Tools, bevor Sie sich entscheiden.',
+        note: 'Diese Liste spiegelt Tools wider, die häufig mit TurboFieldfare verglichen werden, und ist kein unabhängiges Ranking von PromptQuorum – siehe das [Local LLM Software Directory](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Directory-Eintrags von TurboFieldfare. Prüfen Sie die aktuelle Plattform- und Modellunterstützung jedes Tools, bevor Sie sich entscheiden.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Ollama-Test](/de/power-local-llm/ollama-review) — ein universeller, plattformübergreifender lokaler Modell-Runner auf Basis von llama.cpp, zum Vergleich mit dem modellspezifischen TurboFieldfare.',
           '[LMDeploy-Test](/de/power-local-llm/lmdeploy-review) — ein Toolkit zum Komprimieren, Bereitstellen und Servieren von LLMs mit Fokus auf Inferenz-Durchsatz.',
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -612,7 +612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Plus de 6 750 étoiles GitHub et 430+ forks au moment de ce test',
         ],
         callouts: [
-          { type: 'note', text: 'Ce test est l\'article approfondi qui accompagne l\'entrée de TurboFieldfare dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer rapidement TurboFieldfare à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Ce test est l\'article approfondi qui accompagne l\'entrée de TurboFieldfare dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour comparer rapidement TurboFieldfare à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -750,7 +750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Outil': 'LMDeploy', 'Connu pour': 'Boîte à outils pour compresser, déployer et servir des LLM, axée sur le débit d\'inférence', 'Lien': '[Test de LMDeploy](/fr/power-local-llm/lmdeploy-review)' },
         ],
         columns: ['Outil', 'Connu pour', 'Lien'],
-        note: 'Cette liste reflète les outils couramment comparés à TurboFieldfare dans l\'espace des moteurs d\'inférence locale, et non un classement indépendant de PromptQuorum — voir le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de TurboFieldfare dans le répertoire. Vérifiez la prise en charge actuelle de plateforme et de modèles de chaque outil avant de choisir.',
+        note: 'Cette liste reflète les outils couramment comparés à TurboFieldfare dans l\'espace des moteurs d\'inférence locale, et non un classement indépendant de PromptQuorum — voir le [Local LLM Software Directory](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la propre fiche de TurboFieldfare dans le répertoire. Vérifiez la prise en charge actuelle de plateforme et de modèles de chaque outil avant de choisir.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -807,7 +807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Test d\'Ollama](/fr/power-local-llm/ollama-review) — un exécuteur de modèles locaux généraliste et multiplateforme construit sur llama.cpp, pour comparaison avec TurboFieldfare, spécifique à un modèle.',
           '[Test de LMDeploy](/fr/power-local-llm/lmdeploy-review) — une boîte à outils pour compresser, déployer et servir des LLM, axée sur le débit d\'inférence.',
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
         ],
       },
     },
@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Más de 6.750 estrellas en GitHub y 430+ forks al momento de esta reseña',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el artículo en profundidad que acompaña la entrada de TurboFieldfare en el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara TurboFieldfare, de un vistazo, con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el artículo en profundidad que acompaña la entrada de TurboFieldfare en el [Local LLM Software Directory](/es/directory) — consulta esa página para ver cómo se compara TurboFieldfare, de un vistazo, con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1020,7 +1020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': 'LMDeploy', 'Más conocido por': 'Kit de herramientas para comprimir, desplegar y servir LLM, centrado en el rendimiento de inferencia', 'Enlace': '[Reseña de LMDeploy](/es/power-local-llm/lmdeploy-review)' },
         ],
         columns: ['Herramienta', 'Más conocido por', 'Enlace'],
-        note: 'Esta lista refleja herramientas con las que se compara habitualmente a TurboFieldfare, no una clasificación independiente de PromptQuorum — consulta el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, que incluye la propia entrada de TurboFieldfare en el directorio. Verifica el soporte actual de plataforma y modelos de cada herramienta antes de elegir.',
+        note: 'Esta lista refleja herramientas con las que se compara habitualmente a TurboFieldfare, no una clasificación independiente de PromptQuorum — consulta el [Local LLM Software Directory](/es/directory) para el catálogo completo y actualizado regularmente, que incluye la propia entrada de TurboFieldfare en el directorio. Verifica el soporte actual de plataforma y modelos de cada herramienta antes de elegir.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1077,7 +1077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Reseña de Ollama](/es/power-local-llm/ollama-review) — un ejecutor de modelos locales de propósito general y multiplataforma construido sobre llama.cpp, para comparar con TurboFieldfare, específico de un modelo.',
           '[Reseña de LMDeploy](/es/power-local-llm/lmdeploy-review) — un kit de herramientas para comprimir, desplegar y servir LLM con enfoque en el rendimiento de inferencia.',
-          '[Local LLM Software Directory 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Local LLM Software Directory 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1152,7 +1152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'このレビュー時点でGitHubスター6,750超、フォーク430以上',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)にあるTurboFieldfareのエントリーの詳細版です — TurboFieldfareが他の数十のローカルAIツールと一目でどう比較されるかはそちらのページを参照してください。' },
+          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](/ja/directory)にあるTurboFieldfareのエントリーの詳細版です — TurboFieldfareが他の数十のローカルAIツールと一目でどう比較されるかはそちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1290,7 +1290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ツール': 'LMDeploy', '最も知られている点': 'LLMの圧縮・デプロイ・提供のためのツールキット、推論スループットに重点', 'リンク': '[LMDeployレビュー](/ja/power-local-llm/lmdeploy-review)' },
         ],
         columns: ['ツール', '最も知られている点', 'リンク'],
-        note: 'このリストは、ローカル推論エンジンの分野でTurboFieldfareと一般的に比較されるツールを反映したものであり、PromptQuorumによる独自のランキングではありません — TurboFieldfare自身のディレクトリエントリーを含む、定期的に更新される完全なカタログは[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)を参照してください。選ぶ前に、各ツールの現行のプラットフォームとモデルサポートを確認してください。',
+        note: 'このリストは、ローカル推論エンジンの分野でTurboFieldfareと一般的に比較されるツールを反映したものであり、PromptQuorumによる独自のランキングではありません — TurboFieldfare自身のディレクトリエントリーを含む、定期的に更新される完全なカタログは[Local LLM Software Directory](/ja/directory)を参照してください。選ぶ前に、各ツールの現行のプラットフォームとモデルサポートを確認してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1347,7 +1347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Ollamaレビュー](/ja/power-local-llm/ollama-review) — llama.cppをベースにした汎用でクロスプラットフォームなローカルモデルランナー。モデル特化型のTurboFieldfareとの比較用。',
           '[LMDeployレビュー](/ja/power-local-llm/lmdeploy-review) — 推論スループットに重点を置いた、LLMの圧縮・デプロイ・提供のためのツールキット。',
-          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — 本記事が属する、ローカルAIツールの完全なカタログ。',
+          '[Local LLM Software Directory 2026](/ja/directory) — 本記事が属する、ローカルAIツールの完全なカタログ。',
         ],
       },
     },
@@ -1422,7 +1422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至本评测,GitHub星标超过6,750,fork数超过430',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中TurboFieldfare条目的深度补充文章——该页面可让你快速比较TurboFieldfare与其他数十款本地AI工具。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中TurboFieldfare条目的深度补充文章——该页面可让你快速比较TurboFieldfare与其他数十款本地AI工具。' },
         ],
       },
       overview: {
@@ -1560,7 +1560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '工具': 'LMDeploy', '最著名之处': '专注于推理吞吐量的LLM压缩、部署和服务工具包', '链接': '[LMDeploy评测](/zh/power-local-llm/lmdeploy-review)' },
         ],
         columns: ['工具', '最著名之处', '链接'],
-        note: '此列表反映了在本地推理引擎领域中常与TurboFieldfare比较的工具,并非PromptQuorum的独立排名——完整且定期更新的目录(包括TurboFieldfare自身的目录条目)请参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。在做选择前,请核实每款工具当前的平台和模型支持情况。',
+        note: '此列表反映了在本地推理引擎领域中常与TurboFieldfare比较的工具,并非PromptQuorum的独立排名——完整且定期更新的目录(包括TurboFieldfare自身的目录条目)请参见[本地LLM软件目录](/zh/directory)。在做选择前,请核实每款工具当前的平台和模型支持情况。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1617,7 +1617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Ollama评测](/zh/power-local-llm/ollama-review) — 一款基于llama.cpp构建的通用跨平台本地模型运行器,可与模型专用的TurboFieldfare进行对比。',
           '[LMDeploy评测](/zh/power-local-llm/lmdeploy-review) — 一款专注于推理吞吐量的LLM压缩、部署和服务工具包。',
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地AI工具目录。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的完整本地AI工具目录。',
         ],
       },
     },
@@ -1692,7 +1692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mais de 6.750 estrelas no GitHub e mais de 430 forks até o momento deste review',
         ],
         callouts: [
-          { type: 'note', text: 'Este review é o artigo aprofundado que acompanha a entrada do TurboFieldfare no [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o TurboFieldfare com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Este review é o artigo aprofundado que acompanha a entrada do TurboFieldfare no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar rapidamente o TurboFieldfare com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1830,7 +1830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': 'LMDeploy', 'Mais conhecido por': 'Kit de ferramentas para comprimir, implantar e servir LLMs, com foco em throughput de inferência', 'Link': '[Review do LMDeploy](/pt/power-local-llm/lmdeploy-review)' },
         ],
         columns: ['Ferramenta', 'Mais conhecido por', 'Link'],
-        note: 'Esta lista reflete ferramentas comumente comparadas ao TurboFieldfare no espaço de motores de inferência local, e não um ranking independente da PromptQuorum — veja o [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do TurboFieldfare no diretório. Verifique o suporte atual de plataforma e modelos de cada ferramenta antes de escolher.',
+        note: 'Esta lista reflete ferramentas comumente comparadas ao TurboFieldfare no espaço de motores de inferência local, e não um ranking independente da PromptQuorum — veja o [Local LLM Software Directory](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada do TurboFieldfare no diretório. Verifique o suporte atual de plataforma e modelos de cada ferramenta antes de escolher.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1887,7 +1887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Review do Ollama](/pt/power-local-llm/ollama-review) — um executor de modelos locais genérico e multiplataforma construído sobre o llama.cpp, para comparação com o TurboFieldfare, específico de modelo.',
           '[Review do LMDeploy](/pt/power-local-llm/lmdeploy-review) — um kit de ferramentas para comprimir, implantar e servir LLMs com foco em throughput de inferência.',
-          '[Local LLM Software Directory 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Local LLM Software Directory 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -1962,7 +1962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'أكثر من 6,750 نجمة على GitHub وأكثر من 430 فرعاً (forks) وقت إعداد هذه المراجعة',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المقال المفصّل المرافق لإدخال TurboFieldfare في [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف تُقارَن TurboFieldfare بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المقال المفصّل المرافق لإدخال TurboFieldfare في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تُقارَن TurboFieldfare بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2100,7 +2100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': 'LMDeploy', 'الأشهر في': 'مجموعة أدوات لضغط ونشر وخدمة نماذج اللغة الكبيرة، مع تركيز على إنتاجية الاستدلال', 'الرابط': '[مراجعة LMDeploy](/ar/power-local-llm/lmdeploy-review)' },
         ],
         columns: ['الأداة', 'الأشهر في', 'الرابط'],
-        note: 'تعكس هذه القائمة الأدوات التي تُقارَن بها TurboFieldfare عادة في مجال محركات الاستدلال المحلي، وليست ترتيباً مستقلاً من PromptQuorum — راجع [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك إدخال TurboFieldfare الخاص بها في الدليل. تحقق من الدعم الحالي للمنصة والنماذج لكل أداة قبل الاختيار.',
+        note: 'تعكس هذه القائمة الأدوات التي تُقارَن بها TurboFieldfare عادة في مجال محركات الاستدلال المحلي، وليست ترتيباً مستقلاً من PromptQuorum — راجع [دليل برمجيات LLM المحلية](/ar/directory) للحصول على الكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك إدخال TurboFieldfare الخاص بها في الدليل. تحقق من الدعم الحالي للمنصة والنماذج لكل أداة قبل الاختيار.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2157,7 +2157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[مراجعة Ollama](/ar/power-local-llm/ollama-review) — مُشغِّل نماذج محلي عام ومتعدد المنصات مبني على llama.cpp، للمقارنة مع TurboFieldfare المخصصة لنموذج واحد.',
           '[مراجعة LMDeploy](/ar/power-local-llm/lmdeploy-review) — مجموعة أدوات لضغط ونشر وخدمة نماذج اللغة الكبيرة مع تركيز على إنتاجية الاستدلال.',
-          '[دليل برمجيات LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
+          '[دليل برمجيات LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
         ],
       },
     },
@@ -2232,7 +2232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이 리뷰 시점 기준 GitHub 스타 6,750개 이상, 포크 430개 이상',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 TurboFieldfare 항목을 상세히 다루는 심층 기사입니다 — TurboFieldfare가 다른 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 TurboFieldfare 항목을 상세히 다루는 심층 기사입니다 — TurboFieldfare가 다른 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2370,7 +2370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': 'LMDeploy', '가장 잘 알려진 점': '추론 처리량에 중점을 둔 LLM 압축, 배포, 서빙 툴킷', '링크': '[LMDeploy 리뷰](/ko/power-local-llm/lmdeploy-review)' },
         ],
         columns: ['도구', '가장 잘 알려진 점', '링크'],
-        note: '이 목록은 로컬 추론 엔진 분야에서 TurboFieldfare와 흔히 비교되는 도구를 반영한 것이며, PromptQuorum의 독립적인 순위가 아닙니다 — TurboFieldfare 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요. 선택하기 전에 각 도구의 현재 플랫폼 및 모델 지원 여부를 확인하세요.',
+        note: '이 목록은 로컬 추론 엔진 분야에서 TurboFieldfare와 흔히 비교되는 도구를 반영한 것이며, PromptQuorum의 독립적인 순위가 아닙니다 — TurboFieldfare 자체의 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요. 선택하기 전에 각 도구의 현재 플랫폼 및 모델 지원 여부를 확인하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2427,7 +2427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Ollama 리뷰](/ko/power-local-llm/ollama-review) — llama.cpp를 기반으로 구축된 범용 크로스 플랫폼 로컬 모델 러너로, 모델 전용인 TurboFieldfare와 비교하기 위한 자료.',
           '[LMDeploy 리뷰](/ko/power-local-llm/lmdeploy-review) — 추론 처리량에 중점을 둔 LLM 압축, 배포, 서빙 툴킷.',
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },

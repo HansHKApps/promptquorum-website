@@ -77,7 +77,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "n8n's own site cites Microsoft, Meta, NVIDIA, Dell, and Mercedes-Benz among organizations that have used n8n — a vendor marketing claim PromptQuorum has not independently verified beyond n8n's own publication of it",
         ],
         callouts: [
-          { type: 'note', text: "This review is the deep-dive companion to n8n's entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how n8n compares at a glance to dozens of other local AI tools." },
+          { type: 'note', text: "This review is the deep-dive companion to n8n's entry in the [Local LLM Software Directory](/directory) — see that page for how n8n compares at a glance to dozens of other local AI tools." },
         ],
       },
       overview: {
@@ -274,7 +274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this review belongs to, including where n8n fits among workflow and node-builder tools.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local AI tools this review belongs to, including where n8n fits among workflow and node-builder tools.',
           '[Flowise Review: Visual Workflow Builder](/power-local-llm/flowise-ai-visual-workflow-builder-review) — the closest visual-canvas alternative for teams comparing drag-and-drop LLM workflow builders.',
           '[Dify Review: Open-Source LLMOps Platform](/power-local-llm/dify-ai-workflow-builder-review) — a workflow builder bundled with RAG and agent features under a similarly restrictive source-available license.',
           '[LangChain Review: Features, Pricing, Alternatives](/power-local-llm/langchain-review) — a code-first alternative for teams that want to write orchestration logic instead of building it visually.',
@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "n8ns eigene Website nennt Microsoft, Meta, NVIDIA, Dell und Mercedes-Benz als Organisationen, die n8n genutzt haben — eine Marketingaussage des Herstellers, die PromptQuorum über n8ns eigene Veröffentlichung hinaus nicht unabhängig verifiziert hat",
         ],
         callouts: [
-          { type: 'note', text: "Dieser Test ist die vertiefende Ergänzung zum n8n-Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort sehen Sie auf einen Blick, wie n8n im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet." },
+          { type: 'note', text: "Dieser Test ist die vertiefende Ergänzung zum n8n-Eintrag im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie n8n im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet." },
         ],
       },
       overview: {
@@ -552,7 +552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Test gehört, einschließlich der Einordnung von n8n unter Workflow- und Node-Builder-Tools.',
+          '[Local LLM Software Directory](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Test gehört, einschließlich der Einordnung von n8n unter Workflow- und Node-Builder-Tools.',
           '[Flowise Test: Visueller Workflow-Builder](/de/power-local-llm/flowise-ai-visual-workflow-builder-review) — die engste visuelle Alternative für Teams, die Drag-and-Drop-LLM-Workflow-Builder vergleichen.',
           '[Dify Test: Open-Source-LLMOps-Plattform](/de/power-local-llm/dify-ai-workflow-builder-review) — ein Workflow-Builder mit RAG- und Agenten-Funktionen unter einer ähnlich einschränkenden quelloffenen Lizenz.',
           '[LangChain Test: Funktionen, Preise, Alternativen](/de/power-local-llm/langchain-review) — eine code-basierte Alternative für Teams, die Orchestrierungslogik selbst schreiben statt visuell aufbauen möchten.',
@@ -633,7 +633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Le site de n8n cite Microsoft, Meta, NVIDIA, Dell et Mercedes-Benz parmi les organisations ayant utilisé n8n — une affirmation marketing de l'éditeur que PromptQuorum n'a pas vérifiée indépendamment au-delà de sa publication par n8n lui-même",
         ],
         callouts: [
-          { type: 'note', text: "Cet avis est le complément détaillé de la fiche n8n dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir en un coup d'œil comment n8n se compare à des dizaines d'autres outils d'IA locaux." },
+          { type: 'note', text: "Cet avis est le complément détaillé de la fiche n8n dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir en un coup d'œil comment n8n se compare à des dizaines d'autres outils d'IA locaux." },
         ],
       },
       overview: {
@@ -830,7 +830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'À lire aussi',
         items: [
-          "[Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d'IA locale auquel appartient cet avis, y compris la place de n8n parmi les outils de workflow et de construction de nœuds.",
+          "[Local LLM Software Directory](/fr/directory) — le catalogue complet des outils d'IA locale auquel appartient cet avis, y compris la place de n8n parmi les outils de workflow et de construction de nœuds.",
           "[Avis Flowise : constructeur de workflow visuel](/fr/power-local-llm/flowise-ai-visual-workflow-builder-review) — l'alternative visuelle la plus proche pour les équipes comparant les constructeurs de workflow LLM en glisser-déposer.",
           "[Avis Dify : plateforme LLMOps open source](/fr/power-local-llm/dify-ai-workflow-builder-review) — un constructeur de workflow intégrant RAG et fonctionnalités d'agents sous une licence source disponible tout aussi restrictive.",
           "[Avis LangChain : fonctionnalités, tarifs, alternatives](/fr/power-local-llm/langchain-review) — une alternative en code pour les équipes qui préfèrent écrire la logique d'orchestration plutôt que la construire visuellement.",
@@ -911,7 +911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "El propio sitio de n8n cita a Microsoft, Meta, NVIDIA, Dell y Mercedes-Benz entre las organizaciones que han usado n8n —una afirmación de marketing del proveedor que PromptQuorum no ha verificado de forma independiente más allá de la propia publicación de n8n",
         ],
         callouts: [
-          { type: 'note', text: "Este análisis es el complemento en profundidad de la entrada de n8n en el [Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver de un vistazo cómo se compara n8n con docenas de otras herramientas de IA local." },
+          { type: 'note', text: "Este análisis es el complemento en profundidad de la entrada de n8n en el [Local LLM Software Directory](/es/directory) — consulta esa página para ver de un vistazo cómo se compara n8n con docenas de otras herramientas de IA local." },
         ],
       },
       overview: {
@@ -1108,7 +1108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Local LLM Software Directory](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este análisis, incluyendo dónde encaja n8n entre las herramientas de workflow y constructores de nodos.',
+          '[Local LLM Software Directory](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este análisis, incluyendo dónde encaja n8n entre las herramientas de workflow y constructores de nodos.',
           '[Análisis de Flowise: constructor de workflow visual](/es/power-local-llm/flowise-ai-visual-workflow-builder-review) — la alternativa visual más cercana para equipos que comparan constructores de workflow LLM de arrastrar y soltar.',
           '[Análisis de Dify: plataforma LLMOps de código abierto](/es/power-local-llm/dify-ai-workflow-builder-review) — un constructor de workflow que integra RAG y funciones de agentes bajo una licencia de código disponible igualmente restrictiva.',
           '[Análisis de LangChain: funciones, precios, alternativas](/es/power-local-llm/langchain-review) — una alternativa basada en código para equipos que prefieren escribir la lógica de orquestación en lugar de construirla visualmente.',
@@ -1189,7 +1189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "O próprio site do n8n cita Microsoft, Meta, NVIDIA, Dell e Mercedes-Benz entre as organizações que usaram o n8n — uma afirmação de marketing do fornecedor que a PromptQuorum não verificou de forma independente além da própria publicação do n8n",
         ],
         callouts: [
-          { type: 'note', text: "Esta análise é o complemento aprofundado da entrada do n8n no [Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar o n8n rapidamente com dezenas de outras ferramentas de IA local." },
+          { type: 'note', text: "Esta análise é o complemento aprofundado da entrada do n8n no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar o n8n rapidamente com dezenas de outras ferramentas de IA local." },
         ],
       },
       overview: {
@@ -1386,7 +1386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Local LLM Software Directory](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual esta análise pertence, incluindo onde o n8n se encaixa entre as ferramentas de workflow e construtores de nós.',
+          '[Local LLM Software Directory](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual esta análise pertence, incluindo onde o n8n se encaixa entre as ferramentas de workflow e construtores de nós.',
           '[Análise do Flowise: construtor de workflow visual](/pt/power-local-llm/flowise-ai-visual-workflow-builder-review) — a alternativa visual mais próxima para equipes que comparam construtores de workflow LLM de arrastar e soltar.',
           '[Análise do Dify: plataforma LLMOps open source](/pt/power-local-llm/dify-ai-workflow-builder-review) — um construtor de workflow que integra RAG e recursos de agentes sob uma licença de código disponível igualmente restritiva.',
           '[Análise do LangChain: recursos, preços, alternativas](/pt/power-local-llm/langchain-review) — uma alternativa baseada em código para equipes que preferem escrever a lógica de orquestração em vez de construí-la visualmente.',
@@ -1467,7 +1467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "n8n自身のサイトはMicrosoft、Meta、NVIDIA、Dell、メルセデス・ベンツをn8n利用実績のある組織として挙げているが、これはベンダー自身のマーケティング上の主張であり、PromptQuorumはn8n自身の公表以上に独立した検証を行っていない",
         ],
         callouts: [
-          { type: 'note', text: "このレビューは[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory)にあるn8nのエントリーを深掘りした補足記事である——n8nが他の数十のローカルAIツールと比べてどうかを一目で確認するにはそちらのページを参照してほしい。" },
+          { type: 'note', text: "このレビューは[Local LLM Software Directory](/ja/directory)にあるn8nのエントリーを深掘りした補足記事である——n8nが他の数十のローカルAIツールと比べてどうかを一目で確認するにはそちらのページを参照してほしい。" },
         ],
       },
       overview: {
@@ -1664,7 +1664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Local LLM Software Directory](/ja/power-local-llm/local-llm-software-directory) — このレビューが属するローカルAIツールの全カタログ。ワークフロー・ノードビルダー系ツールの中でn8nがどこに位置するかを含む。',
+          '[Local LLM Software Directory](/ja/directory) — このレビューが属するローカルAIツールの全カタログ。ワークフロー・ノードビルダー系ツールの中でn8nがどこに位置するかを含む。',
           '[Flowiseレビュー：ビジュアルワークフロービルダー](/ja/power-local-llm/flowise-ai-visual-workflow-builder-review) — ドラッグ＆ドロップ型のLLMワークフロービルダーを比較するチームにとって最も近いビジュアルな代替ツール。',
           '[Difyレビュー：オープンソースLLMOpsプラットフォーム](/ja/power-local-llm/dify-ai-workflow-builder-review) — 同じように制限的なソース公開ライセンスの下、RAGとエージェント機能を組み合わせたワークフロービルダー。',
           '[LangChainレビュー：機能、料金、代替ツール](/ja/power-local-llm/langchain-review) — オーケストレーションロジックをビジュアルに構築するのではなく自ら書きたいチーム向けのコードファーストな代替ツール。',
@@ -1745,7 +1745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "n8n官网自称Microsoft、Meta、NVIDIA、戴尔和梅赛德斯-奔驰等机构曾使用过n8n——这是厂商自身的营销说法，PromptQuorum除n8n自行发布的内容外，未进行独立核实",
         ],
         callouts: [
-          { type: 'note', text: "本文是[Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory)中n8n条目的深度补充——如需一目了然地了解n8n与其他数十种本地AI工具的对比，请参阅该页面。" },
+          { type: 'note', text: "本文是[Local LLM Software Directory](/zh/directory)中n8n条目的深度补充——如需一目了然地了解n8n与其他数十种本地AI工具的对比，请参阅该页面。" },
         ],
       },
       overview: {
@@ -1942,7 +1942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[Local LLM Software Directory](/zh/power-local-llm/local-llm-software-directory) — 本评测所属的本地AI工具完整目录，其中包括n8n在工作流与节点构建工具中的定位。',
+          '[Local LLM Software Directory](/zh/directory) — 本评测所属的本地AI工具完整目录，其中包括n8n在工作流与节点构建工具中的定位。',
           '[Flowise评测：可视化工作流构建器](/zh/power-local-llm/flowise-ai-visual-workflow-builder-review) — 面向比较拖放式LLM工作流构建器的团队，最接近的可视化替代方案。',
           '[Dify评测：开源LLMOps平台](/zh/power-local-llm/dify-ai-workflow-builder-review) — 一个在同样具有限制性的源代码公开许可证下，整合了RAG与代理功能的工作流构建器。',
           '[LangChain评测：功能、价格、替代方案](/zh/power-local-llm/langchain-review) — 面向希望直接编写编排逻辑而非可视化构建的团队的代码优先替代方案。',
@@ -2023,7 +2023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "يذكر موقع n8n نفسه أن مؤسسات مثل Microsoft وMeta وNVIDIA وDell ومرسيدس-بنز استخدمت n8n — وهذا ادعاء تسويقي من الشركة نفسها لم تتحقق منه PromptQuorum بشكل مستقل بخلاف ما نشرته n8n عن نفسها",
         ],
         callouts: [
-          { type: 'note', text: "هذه المراجعة هي المكمل التفصيلي لمدخل n8n في [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمقارنة سريعة بين n8n وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى." },
+          { type: 'note', text: "هذه المراجعة هي المكمل التفصيلي لمدخل n8n في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة بين n8n وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى." },
         ],
       },
       overview: {
@@ -2220,7 +2220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلية التي تنتمي إليها هذه المراجعة، بما في ذلك موقع n8n بين أدوات سير العمل وبناء العُقد.',
+          '[دليل برمجيات نماذج اللغة المحلية](/ar/directory) — الدليل الكامل لأدوات الذكاء الاصطناعي المحلية التي تنتمي إليها هذه المراجعة، بما في ذلك موقع n8n بين أدوات سير العمل وبناء العُقد.',
           '[مراجعة Flowise: أداة بناء سير عمل مرئية](/ar/power-local-llm/flowise-ai-visual-workflow-builder-review) — أقرب بديل مرئي للفرق التي تقارن أدوات بناء سير عمل نماذج اللغة بالسحب والإفلات.',
           '[مراجعة Dify: منصة LLMOps مفتوحة المصدر جزئيًا](/ar/power-local-llm/dify-ai-workflow-builder-review) — أداة بناء سير عمل تجمع RAG وميزات الوكلاء بموجب رخصة متاحة الكود مقيّدة بشكل مشابه.',
           '[مراجعة LangChain: الميزات والأسعار والبدائل](/ar/power-local-llm/langchain-review) — بديل قائم على الكود للفرق التي تفضل كتابة منطق التنسيق بدلًا من بنائه بصريًا.',
@@ -2301,7 +2301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "n8n 자체 사이트는 Microsoft, Meta, NVIDIA, Dell, 메르세데스-벤츠 등을 n8n을 사용한 조직으로 언급하고 있다——이는 공급업체 자체의 마케팅 주장이며, PromptQuorum은 n8n 자체 공개 내용 이상으로 독립적으로 검증하지 않았다",
         ],
         callouts: [
-          { type: 'note', text: "이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 n8n 항목의 심층 보완 자료다——n8n이 다른 수십 가지 로컬 AI 도구와 비교해 어떤 위치에 있는지 한눈에 보려면 해당 페이지를 참고하라." },
+          { type: 'note', text: "이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 n8n 항목의 심층 보완 자료다——n8n이 다른 수십 가지 로컬 AI 도구와 비교해 어떤 위치에 있는지 한눈에 보려면 해당 페이지를 참고하라." },
         ],
       },
       overview: {
@@ -2498,7 +2498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 이 리뷰가 속한 로컬 AI 도구의 전체 카탈로그로, 워크플로·노드 빌더 도구 중 n8n의 위치를 포함한다.',
+          '[로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 이 리뷰가 속한 로컬 AI 도구의 전체 카탈로그로, 워크플로·노드 빌더 도구 중 n8n의 위치를 포함한다.',
           '[Flowise 리뷰: 시각적 워크플로 빌더](/ko/power-local-llm/flowise-ai-visual-workflow-builder-review) — 드래그 앤 드롭 방식의 LLM 워크플로 빌더를 비교하는 팀에게 가장 가까운 시각적 대안.',
           '[Dify 리뷰: 오픈소스 LLMOps 플랫폼](/ko/power-local-llm/dify-ai-workflow-builder-review) — 유사하게 제한적인 소스 공개형 라이선스 하에 RAG와 에이전트 기능을 결합한 워크플로 빌더.',
           '[LangChain 리뷰: 기능, 가격, 대안](/ko/power-local-llm/langchain-review) — 오케스트레이션 로직을 시각적으로 구축하기보다 직접 작성하고 싶은 팀을 위한 코드 기반 대안.',

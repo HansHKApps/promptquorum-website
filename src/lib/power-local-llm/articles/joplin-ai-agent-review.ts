@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Optional semantic search over notes (RAG) requires Joplin 3.7+',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Joplin AI Agent\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how it compares at a glance to dozens of other local-AI-capable tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Joplin AI Agent\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local-AI-capable tools.' },
         ],
       },
       overview: {
@@ -180,7 +180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Copilot for Obsidian Review](/power-local-llm/copilot-for-obsidian-review)** — a same-category AI agent plugin, but for [Obsidian](https://obsidian.md) rather than Joplin. It shares the same core idea (an AI agent reading and editing your notes vault, with local-model support), useful for comparing how two different notes apps approach the same problem.',
           '**[Smart Connections Review](/power-local-llm/smart-connections-review)** — a different kind of tool for the same broader "AI inside your notes app" category: a local semantic-search and link-discovery plugin for Obsidian, not an agent that edits files.',
         ],
-        note: 'See the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for Joplin AI Agent\'s own directory entry alongside the full catalog of local AI tools. For background on the wider Joplin/Logseq local-AI ecosystem, see [Local LLM With Logseq and Joplin](/power-local-llm/local-llm-with-logseq-and-joplin) and [Obsidian and Logseq AI Plugins, Compared](/power-local-llm/obsidian-logseq-ai-plugins) — these are ecosystem overviews, not standalone reviews of this specific plugin. For the local-model backend Joplin AI Agent connects to, see PromptQuorum\'s [Ollama review](/power-local-llm/ollama-review).',
+        note: 'See the [Local LLM Software Directory](/directory) for Joplin AI Agent\'s own directory entry alongside the full catalog of local AI tools. For background on the wider Joplin/Logseq local-AI ecosystem, see [Local LLM With Logseq and Joplin](/power-local-llm/local-llm-with-logseq-and-joplin) and [Obsidian and Logseq AI Plugins, Compared](/power-local-llm/obsidian-logseq-ai-plugins) — these are ecosystem overviews, not standalone reviews of this specific plugin. For the local-model backend Joplin AI Agent connects to, see PromptQuorum\'s [Ollama review](/power-local-llm/ollama-review).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -234,7 +234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Joplin AI Agent\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Joplin AI Agent\'s directory entry.',
           '[Local LLM With Logseq and Joplin](/power-local-llm/local-llm-with-logseq-and-joplin) — background on the wider local-AI ecosystem around Joplin and Logseq.',
           '[Obsidian and Logseq AI Plugins, Compared](/power-local-llm/obsidian-logseq-ai-plugins) — a multi-plugin comparison for related notes-app AI tooling.',
           '[Ollama Review](/power-local-llm/ollama-review) — the local-model backend this plugin connects to by default.',
@@ -315,7 +315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Optionale semantische Suche über Notizen (RAG) erfordert Joplin 3.7+',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das Vertiefungsstück zum Eintrag von Joplin AI Agent im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort sehen Sie auf einen Blick, wie es sich mit Dutzenden anderer lokal-KI-fähiger Tools vergleicht.' },
+          { type: 'note', text: 'Diese Review ist das Vertiefungsstück zum Eintrag von Joplin AI Agent im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie es sich mit Dutzenden anderer lokal-KI-fähiger Tools vergleicht.' },
         ],
       },
       overview: {
@@ -421,7 +421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Copilot for Obsidian Review](/de/power-local-llm/copilot-for-obsidian-review)** — ein KI-Agenten-Plugin derselben Kategorie, jedoch für [Obsidian](https://obsidian.md) statt Joplin. Es teilt dieselbe Kernidee (ein KI-Agent, der Ihren Notiz-Vault liest und bearbeitet, mit Unterstützung lokaler Modelle) — nützlich, um zu vergleichen, wie zwei verschiedene Notiz-Apps dasselbe Problem angehen.',
           '**[Smart Connections Review](/de/power-local-llm/smart-connections-review)** — ein anderer Werkzeugtyp in derselben breiteren Kategorie „KI in Ihrer Notiz-App": ein Plugin für lokale semantische Suche und Link-Entdeckung für Obsidian, kein Agent, der Dateien bearbeitet.',
         ],
-        note: 'Siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den eigenen Verzeichniseintrag von Joplin AI Agent neben dem vollständigen Katalog lokaler KI-Tools. Hintergrund zum breiteren Joplin/Logseq-Ökosystem für lokale KI finden Sie unter [Local LLM With Logseq and Joplin](/de/power-local-llm/local-llm-with-logseq-and-joplin) und [Obsidian and Logseq AI Plugins, Compared](/de/power-local-llm/obsidian-logseq-ai-plugins) — dies sind Ökosystem-Übersichten, keine eigenständigen Reviews dieses spezifischen Plugins. Für das lokale Modell-Backend, mit dem sich Joplin AI Agent verbindet, siehe PromptQuorums [Ollama Review](/de/power-local-llm/ollama-review).',
+        note: 'Siehe das [Local LLM Software Directory](/de/directory) für den eigenen Verzeichniseintrag von Joplin AI Agent neben dem vollständigen Katalog lokaler KI-Tools. Hintergrund zum breiteren Joplin/Logseq-Ökosystem für lokale KI finden Sie unter [Local LLM With Logseq and Joplin](/de/power-local-llm/local-llm-with-logseq-and-joplin) und [Obsidian and Logseq AI Plugins, Compared](/de/power-local-llm/obsidian-logseq-ai-plugins) — dies sind Ökosystem-Übersichten, keine eigenständigen Reviews dieses spezifischen Plugins. Für das lokale Modell-Backend, mit dem sich Joplin AI Agent verbindet, siehe PromptQuorums [Ollama Review](/de/power-local-llm/ollama-review).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -475,7 +475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von Joplin AI Agent.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags von Joplin AI Agent.',
           '[Local LLM With Logseq and Joplin](/de/power-local-llm/local-llm-with-logseq-and-joplin) — Hintergrund zum breiteren lokalen KI-Ökosystem rund um Joplin und Logseq.',
           '[Obsidian and Logseq AI Plugins, Compared](/de/power-local-llm/obsidian-logseq-ai-plugins) — ein Vergleich mehrerer Plugins für verwandte KI-Tools in Notiz-Apps.',
           '[Ollama Review](/de/power-local-llm/ollama-review) — das lokale Modell-Backend, mit dem sich dieses Plugin standardmäßig verbindet.',
@@ -556,7 +556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La recherche sémantique optionnelle sur les notes (RAG) nécessite Joplin 3.7+',
         ],
         callouts: [
-          { type: 'note', text: 'Cette revue est le complément approfondi de la fiche de Joplin AI Agent dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir en un coup d\'œil comment il se compare à des dizaines d\'autres outils IA locaux.' },
+          { type: 'note', text: 'Cette revue est le complément approfondi de la fiche de Joplin AI Agent dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment il se compare à des dizaines d\'autres outils IA locaux.' },
         ],
       },
       overview: {
@@ -662,7 +662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Copilot for Obsidian Review](/fr/power-local-llm/copilot-for-obsidian-review)** — un plugin d\'agent IA de la même catégorie, mais pour [Obsidian](https://obsidian.md) plutôt que Joplin. Il partage la même idée centrale (un agent IA qui lit et modifie votre vault de notes, avec prise en charge de modèles locaux), utile pour comparer comment deux applications de notes différentes abordent le même problème.',
           '**[Review de Smart Connections](/fr/power-local-llm/smart-connections-review)** — un type d\'outil différent dans la même catégorie plus large « IA dans votre application de notes » : un plugin de recherche sémantique et de découverte de liens local pour Obsidian, pas un agent qui modifie des fichiers.',
         ],
-        note: 'Consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour la fiche propre de Joplin AI Agent aux côtés du catalogue complet d\'outils IA locaux. Pour le contexte plus large de l\'écosystème IA locale Joplin/Logseq, voir [Local LLM With Logseq and Joplin](/fr/power-local-llm/local-llm-with-logseq-and-joplin) et [Obsidian and Logseq AI Plugins, Compared](/fr/power-local-llm/obsidian-logseq-ai-plugins) — ce sont des aperçus d\'écosystème, pas des revues autonomes de ce plugin précis. Pour le backend de modèle local auquel Joplin AI Agent se connecte, voir la [revue Ollama](/fr/power-local-llm/ollama-review) de PromptQuorum.',
+        note: 'Consultez le [Local LLM Software Directory](/fr/directory) pour la fiche propre de Joplin AI Agent aux côtés du catalogue complet d\'outils IA locaux. Pour le contexte plus large de l\'écosystème IA locale Joplin/Logseq, voir [Local LLM With Logseq and Joplin](/fr/power-local-llm/local-llm-with-logseq-and-joplin) et [Obsidian and Logseq AI Plugins, Compared](/fr/power-local-llm/obsidian-logseq-ai-plugins) — ce sont des aperçus d\'écosystème, pas des revues autonomes de ce plugin précis. Pour le backend de modèle local auquel Joplin AI Agent se connecte, voir la [revue Ollama](/fr/power-local-llm/ollama-review) de PromptQuorum.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -716,7 +716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant la fiche de Joplin AI Agent.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet d\'outils IA locaux auquel appartient cet article, incluant la fiche de Joplin AI Agent.',
           '[Local LLM With Logseq and Joplin](/fr/power-local-llm/local-llm-with-logseq-and-joplin) — contexte sur l\'écosystème IA locale plus large autour de Joplin et Logseq.',
           '[Obsidian and Logseq AI Plugins, Compared](/fr/power-local-llm/obsidian-logseq-ai-plugins) — une comparaison multi-plugins pour des outils IA de notes apparentés.',
           '[Ollama Review](/fr/power-local-llm/ollama-review) — le backend de modèle local auquel ce plugin se connecte par défaut.',
@@ -797,7 +797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ノートに対するオプションのセマンティック検索（RAG）にはJoplin 3.7以上が必要',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるJoplin AI Agentの掲載内容を掘り下げた記事です — 他の数十のローカルAI対応ツールとの比較は同ページを参照してください。' },
+          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるJoplin AI Agentの掲載内容を掘り下げた記事です — 他の数十のローカルAI対応ツールとの比較は同ページを参照してください。' },
         ],
       },
       overview: {
@@ -903,7 +903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Copilot for Obsidian レビュー](/ja/power-local-llm/copilot-for-obsidian-review)** — 同じカテゴリのAIエージェントプラグインだが、対象はJoplinではなく[Obsidian](https://obsidian.md)。ノートボールトを読み取り編集するAIエージェント（ローカルモデル対応）という同じ核となる考え方を共有しており、二つの異なるノートアプリが同じ課題にどう取り組んでいるかを比較する際に参考になる。',
           '**[Smart Connectionsのレビュー](/ja/power-local-llm/smart-connections-review)** — 同じ「ノートアプリ内のAI」という広いカテゴリーの別種のツール：Obsidian向けのローカルセマンティック検索・リンク発見プラグインであり、ファイルを編集するエージェントではない。',
         ],
-        note: 'ローカルAIツールの全カタログとともに掲載されたJoplin AI Agent自身のディレクトリ項目については、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。より広いJoplin/LogseqローカルAIエコシステムの背景については、[Local LLM With Logseq and Joplin](/ja/power-local-llm/local-llm-with-logseq-and-joplin)や[Obsidian and Logseq AI Plugins, Compared](/ja/power-local-llm/obsidian-logseq-ai-plugins)を参照してください — これらはエコシステムの概観記事であり、このプラグイン単体のレビューではありません。Joplin AI Agentが接続するローカルモデルバックエンドについては、PromptQuorumの[Ollamaレビュー](/ja/power-local-llm/ollama-review)を参照してください。',
+        note: 'ローカルAIツールの全カタログとともに掲載されたJoplin AI Agent自身のディレクトリ項目については、[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。より広いJoplin/LogseqローカルAIエコシステムの背景については、[Local LLM With Logseq and Joplin](/ja/power-local-llm/local-llm-with-logseq-and-joplin)や[Obsidian and Logseq AI Plugins, Compared](/ja/power-local-llm/obsidian-logseq-ai-plugins)を参照してください — これらはエコシステムの概観記事であり、このプラグイン単体のレビューではありません。Joplin AI Agentが接続するローカルモデルバックエンドについては、PromptQuorumの[Ollamaレビュー](/ja/power-local-llm/ollama-review)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -957,7 +957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — Joplin AI Agentのディレクトリ項目を含む、本記事が属するローカルAIツールの全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — Joplin AI Agentのディレクトリ項目を含む、本記事が属するローカルAIツールの全カタログ。',
           '[Local LLM With Logseq and Joplin](/ja/power-local-llm/local-llm-with-logseq-and-joplin) — JoplinとLogseqを取り巻くより広いローカルAIエコシステムの背景解説。',
           '[Obsidian and Logseq AI Plugins, Compared](/ja/power-local-llm/obsidian-logseq-ai-plugins) — 関連するノートアプリ向けAIツールの複数プラグイン比較。',
           '[Ollamaレビュー](/ja/power-local-llm/ollama-review) — このプラグインがデフォルトで接続するローカルモデルバックエンド。',
@@ -1038,7 +1038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '对笔记的可选语义搜索（RAG）需要Joplin 3.7以上',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Joplin AI Agent条目的深度补充——该页面可让您一目了然地比较它与数十款其他支持本地AI的工具。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Joplin AI Agent条目的深度补充——该页面可让您一目了然地比较它与数十款其他支持本地AI的工具。' },
         ],
       },
       overview: {
@@ -1144,7 +1144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Copilot for Obsidian评测](/zh/power-local-llm/copilot-for-obsidian-review)** — 同类别的AI代理插件，但面向[Obsidian](https://obsidian.md)而非Joplin。它与Joplin AI Agent共享相同的核心理念（读取并编辑笔记库的AI代理，支持本地模型），有助于比较两款不同笔记应用如何解决相同的问题。',
           '**[Smart Connections评测](/zh/power-local-llm/smart-connections-review)** — 同属"笔记应用内AI"这一更广泛类别中的另一种工具：面向Obsidian的本地语义搜索与链接发现插件，而非编辑文件的代理。',
         ],
-        note: '有关Joplin AI Agent自身的目录条目及完整的本地AI工具目录，请参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。关于更广泛的Joplin/Logseq本地AI生态背景，请参见[Local LLM With Logseq and Joplin](/zh/power-local-llm/local-llm-with-logseq-and-joplin)和[Obsidian and Logseq AI Plugins, Compared](/zh/power-local-llm/obsidian-logseq-ai-plugins)——这些是生态概览文章，并非针对这款插件本身的独立评测。关于Joplin AI Agent所连接的本地模型后端，请参见PromptQuorum的[Ollama评测](/zh/power-local-llm/ollama-review)。',
+        note: '有关Joplin AI Agent自身的目录条目及完整的本地AI工具目录，请参见[本地LLM软件目录](/zh/directory)。关于更广泛的Joplin/Logseq本地AI生态背景，请参见[Local LLM With Logseq and Joplin](/zh/power-local-llm/local-llm-with-logseq-and-joplin)和[Obsidian and Logseq AI Plugins, Compared](/zh/power-local-llm/obsidian-logseq-ai-plugins)——这些是生态概览文章，并非针对这款插件本身的独立评测。关于Joplin AI Agent所连接的本地模型后端，请参见PromptQuorum的[Ollama评测](/zh/power-local-llm/ollama-review)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1198,7 +1198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '延伸阅读',
         items: [
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的完整本地AI工具目录，其中包含Joplin AI Agent的目录条目。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的完整本地AI工具目录，其中包含Joplin AI Agent的目录条目。',
           '[Local LLM With Logseq and Joplin](/zh/power-local-llm/local-llm-with-logseq-and-joplin) — 关于Joplin与Logseq周边更广泛本地AI生态的背景介绍。',
           '[Obsidian and Logseq AI Plugins, Compared](/zh/power-local-llm/obsidian-logseq-ai-plugins) — 一篇涵盖相关笔记应用AI工具的多插件对比文章。',
           '[Ollama评测](/zh/power-local-llm/ollama-review) — 该插件默认连接的本地模型后端。',
@@ -1279,7 +1279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La búsqueda semántica opcional sobre notas (RAG) requiere Joplin 3.7+',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de Joplin AI Agent en el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory): consulta esa página para ver de un vistazo cómo se compara con decenas de otras herramientas con capacidad de IA local.' },
+          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de Joplin AI Agent en el [Directorio de Software LLM Local](/es/directory): consulta esa página para ver de un vistazo cómo se compara con decenas de otras herramientas con capacidad de IA local.' },
         ],
       },
       overview: {
@@ -1385,7 +1385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Reseña de Copilot for Obsidian](/es/power-local-llm/copilot-for-obsidian-review)** — un plugin de agente de IA de la misma categoría, pero para [Obsidian](https://obsidian.md) en lugar de Joplin. Comparte la misma idea central (un agente de IA que lee y edita tu bóveda de notas, con soporte para modelos locales), útil para comparar cómo dos aplicaciones de notas distintas abordan el mismo problema.',
           '**[Review de Smart Connections](/es/power-local-llm/smart-connections-review)** — un tipo de herramienta distinto dentro de la misma categoría más amplia de "IA dentro de tu aplicación de notas": un plugin de búsqueda semántica y descubrimiento de enlaces local para Obsidian, no un agente que edita archivos.',
         ],
-        note: 'Consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para la entrada propia de Joplin AI Agent junto al catálogo completo de herramientas de IA local. Para contexto sobre el ecosistema más amplio de IA local en Joplin/Logseq, consulta [Local LLM With Logseq and Joplin](/es/power-local-llm/local-llm-with-logseq-and-joplin) y [Obsidian and Logseq AI Plugins, Compared](/es/power-local-llm/obsidian-logseq-ai-plugins): son artículos de visión general del ecosistema, no reseñas independientes de este plugin en concreto. Para el backend de modelo local al que se conecta Joplin AI Agent, consulta la [reseña de Ollama](/es/power-local-llm/ollama-review) de PromptQuorum.',
+        note: 'Consulta el [Directorio de Software LLM Local](/es/directory) para la entrada propia de Joplin AI Agent junto al catálogo completo de herramientas de IA local. Para contexto sobre el ecosistema más amplio de IA local en Joplin/Logseq, consulta [Local LLM With Logseq and Joplin](/es/power-local-llm/local-llm-with-logseq-and-joplin) y [Obsidian and Logseq AI Plugins, Compared](/es/power-local-llm/obsidian-logseq-ai-plugins): son artículos de visión general del ecosistema, no reseñas independientes de este plugin en concreto. Para el backend de modelo local al que se conecta Joplin AI Agent, consulta la [reseña de Ollama](/es/power-local-llm/ollama-review) de PromptQuorum.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1439,7 +1439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la entrada de directorio de Joplin AI Agent.',
+          '[Directorio de Software LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la entrada de directorio de Joplin AI Agent.',
           '[Local LLM With Logseq and Joplin](/es/power-local-llm/local-llm-with-logseq-and-joplin) — contexto sobre el ecosistema más amplio de IA local en torno a Joplin y Logseq.',
           '[Obsidian and Logseq AI Plugins, Compared](/es/power-local-llm/obsidian-logseq-ai-plugins) — una comparación de varios plugins de IA relacionados para aplicaciones de notas.',
           '[Reseña de Ollama](/es/power-local-llm/ollama-review) — el backend de modelo local al que se conecta este plugin por defecto.',
@@ -1520,7 +1520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A pesquisa semântica opcional sobre notas (RAG) requer Joplin 3.7+',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Joplin AI Agent no [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas com capacidade de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Joplin AI Agent no [Diretório de Software LLM Local](/pt/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas com capacidade de IA local.' },
         ],
       },
       overview: {
@@ -1626,7 +1626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Análise do Copilot for Obsidian](/pt/power-local-llm/copilot-for-obsidian-review)** — um plugin de agente de IA da mesma categoria, mas para o [Obsidian](https://obsidian.md) em vez do Joplin. Compartilha a mesma ideia central (um agente de IA que lê e edita seu cofre de notas, com suporte a modelos locais), útil para comparar como dois aplicativos de anotações diferentes abordam o mesmo problema.',
           '**[Análise do Smart Connections](/pt/power-local-llm/smart-connections-review)** — um tipo diferente de ferramenta na mesma categoria mais ampla de "IA dentro do seu aplicativo de notas": um plugin de busca semântica e descoberta de links local para o Obsidian, não um agente que edita arquivos.',
         ],
-        note: 'Veja o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) para a própria entrada do Joplin AI Agent junto ao catálogo completo de ferramentas de IA local. Para contexto sobre o ecossistema mais amplo de IA local do Joplin/Logseq, veja [Local LLM With Logseq and Joplin](/pt/power-local-llm/local-llm-with-logseq-and-joplin) e [Obsidian and Logseq AI Plugins, Compared](/pt/power-local-llm/obsidian-logseq-ai-plugins) — são artigos de visão geral do ecossistema, não análises independentes deste plugin específico. Para o backend de modelo local ao qual o Joplin AI Agent se conecta, veja a [análise do Ollama](/pt/power-local-llm/ollama-review) da PromptQuorum.',
+        note: 'Veja o [Diretório de Software LLM Local](/pt/directory) para a própria entrada do Joplin AI Agent junto ao catálogo completo de ferramentas de IA local. Para contexto sobre o ecossistema mais amplo de IA local do Joplin/Logseq, veja [Local LLM With Logseq and Joplin](/pt/power-local-llm/local-llm-with-logseq-and-joplin) e [Obsidian and Logseq AI Plugins, Compared](/pt/power-local-llm/obsidian-logseq-ai-plugins) — são artigos de visão geral do ecossistema, não análises independentes deste plugin específico. Para o backend de modelo local ao qual o Joplin AI Agent se conecta, veja a [análise do Ollama](/pt/power-local-llm/ollama-review) da PromptQuorum.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1680,7 +1680,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada de diretório do Joplin AI Agent.',
+          '[Diretório de Software LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada de diretório do Joplin AI Agent.',
           '[Local LLM With Logseq and Joplin](/pt/power-local-llm/local-llm-with-logseq-and-joplin) — contexto sobre o ecossistema mais amplo de IA local em torno do Joplin e do Logseq.',
           '[Obsidian and Logseq AI Plugins, Compared](/pt/power-local-llm/obsidian-logseq-ai-plugins) — uma comparação de vários plugins para ferramentas de IA relacionadas a aplicativos de anotações.',
           '[Análise do Ollama](/pt/power-local-llm/ollama-review) — o backend de modelo local ao qual este plugin se conecta por padrão.',
@@ -1761,7 +1761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يتطلب البحث الدلالي الاختياري في الملاحظات (RAG) إصدار Joplin 3.7 أو أحدث',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمّق لمدخل Joplin AI Agent في [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمقارنة سريعة مع عشرات الأدوات الأخرى القادرة على الذكاء الاصطناعي المحلي.' },
+          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمّق لمدخل Joplin AI Agent في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة مع عشرات الأدوات الأخرى القادرة على الذكاء الاصطناعي المحلي.' },
         ],
       },
       overview: {
@@ -1867,7 +1867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[مراجعة Copilot for Obsidian](/ar/power-local-llm/copilot-for-obsidian-review)** — إضافة وكيل ذكاء اصطناعي من نفس الفئة، لكن لتطبيق [Obsidian](https://obsidian.md) بدلًا من Joplin. تشترك في نفس الفكرة الأساسية (وكيل ذكاء اصطناعي يقرأ خزينة ملاحظاتك ويعدّلها، مع دعم النماذج المحلية)، وهي مفيدة لمقارنة كيفية تعامل تطبيقي ملاحظات مختلفين مع نفس المشكلة.',
           '**[مراجعة Smart Connections](/ar/power-local-llm/smart-connections-review)** — نوع مختلف من الأدوات ضمن نفس الفئة الأوسع "الذكاء الاصطناعي داخل تطبيق ملاحظاتك": إضافة بحث دلالي محلي واكتشاف روابط لـObsidian، وليست وكيلًا يعدّل الملفات.',
         ],
-        note: 'راجع [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على مدخل Joplin AI Agent الخاص، إلى جانب الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية. للاطلاع على خلفية أوسع حول منظومة الذكاء الاصطناعي المحلي المرتبطة بـJoplin/Logseq، راجع [Local LLM With Logseq and Joplin](/ar/power-local-llm/local-llm-with-logseq-and-joplin) و[Obsidian and Logseq AI Plugins, Compared](/ar/power-local-llm/obsidian-logseq-ai-plugins) — وهما مقالان يقدّمان نظرة عامة على المنظومة، وليسا مراجعتين مستقلتين لهذه الإضافة تحديدًا. أما بالنسبة لخلفية النموذج المحلي التي تتصل بها Joplin AI Agent، فراجع [مراجعة Ollama](/ar/power-local-llm/ollama-review) من PromptQuorum.',
+        note: 'راجع [دليل برمجيات نماذج اللغة المحلية](/ar/directory) للاطلاع على مدخل Joplin AI Agent الخاص، إلى جانب الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية. للاطلاع على خلفية أوسع حول منظومة الذكاء الاصطناعي المحلي المرتبطة بـJoplin/Logseq، راجع [Local LLM With Logseq and Joplin](/ar/power-local-llm/local-llm-with-logseq-and-joplin) و[Obsidian and Logseq AI Plugins, Compared](/ar/power-local-llm/obsidian-logseq-ai-plugins) — وهما مقالان يقدّمان نظرة عامة على المنظومة، وليسا مراجعتين مستقلتين لهذه الإضافة تحديدًا. أما بالنسبة لخلفية النموذج المحلي التي تتصل بها Joplin AI Agent، فراجع [مراجعة Ollama](/ar/power-local-llm/ollama-review) من PromptQuorum.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1921,7 +1921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل Joplin AI Agent في الدليل.',
+          '[دليل برمجيات نماذج اللغة المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل Joplin AI Agent في الدليل.',
           '[Local LLM With Logseq and Joplin](/ar/power-local-llm/local-llm-with-logseq-and-joplin) — خلفية عن منظومة الذكاء الاصطناعي المحلي الأوسع المحيطة بـJoplin وLogseq.',
           '[Obsidian and Logseq AI Plugins, Compared](/ar/power-local-llm/obsidian-logseq-ai-plugins) — مقارنة متعددة الإضافات لأدوات ذكاء اصطناعي ذات صلة بتطبيقات الملاحظات.',
           '[مراجعة Ollama](/ar/power-local-llm/ollama-review) — خلفية النموذج المحلي التي تتصل بها هذه الإضافة افتراضيًا.',
@@ -2002,7 +2002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '노트에 대한 선택적 시맨틱 검색(RAG)에는 Joplin 3.7 이상이 필요',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 Joplin AI Agent 항목을 심층적으로 다룬 보완 자료입니다 — 수십 개의 다른 로컬 AI 지원 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Joplin AI Agent 항목을 심층적으로 다룬 보완 자료입니다 — 수십 개의 다른 로컬 AI 지원 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2108,7 +2108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**[Copilot for Obsidian 리뷰](/ko/power-local-llm/copilot-for-obsidian-review)** — 동일한 카테고리의 AI 에이전트 플러그인이지만 Joplin이 아닌 [Obsidian](https://obsidian.md)을 대상으로 함. 노트 저장소를 읽고 편집하는 AI 에이전트(로컬 모델 지원)라는 동일한 핵심 개념을 공유하며, 서로 다른 두 노트 앱이 같은 문제를 어떻게 다루는지 비교하는 데 유용함.',
           '**[Smart Connections 리뷰](/ko/power-local-llm/smart-connections-review)** — "노트 앱 내 AI"라는 동일한 더 넓은 카테고리 내의 다른 종류의 도구: 파일을 편집하는 에이전트가 아니라 Obsidian용 로컬 의미 검색 및 링크 발견 플러그인.',
         ],
-        note: '로컬 AI 도구 전체 카탈로그와 함께 Joplin AI Agent 자체 디렉터리 항목을 보려면 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요. Joplin/Logseq 로컬 AI 생태계에 대한 더 넓은 배경 지식은 [Local LLM With Logseq and Joplin](/ko/power-local-llm/local-llm-with-logseq-and-joplin)과 [Obsidian and Logseq AI Plugins, Compared](/ko/power-local-llm/obsidian-logseq-ai-plugins)를 참고하세요 — 이들은 생태계 개관 기사이며 이 플러그인 자체에 대한 독립적인 리뷰는 아닙니다. Joplin AI Agent가 연결하는 로컬 모델 백엔드에 대해서는 PromptQuorum의 [Ollama 리뷰](/ko/power-local-llm/ollama-review)를 참고하세요.',
+        note: '로컬 AI 도구 전체 카탈로그와 함께 Joplin AI Agent 자체 디렉터리 항목을 보려면 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요. Joplin/Logseq 로컬 AI 생태계에 대한 더 넓은 배경 지식은 [Local LLM With Logseq and Joplin](/ko/power-local-llm/local-llm-with-logseq-and-joplin)과 [Obsidian and Logseq AI Plugins, Compared](/ko/power-local-llm/obsidian-logseq-ai-plugins)를 참고하세요 — 이들은 생태계 개관 기사이며 이 플러그인 자체에 대한 독립적인 리뷰는 아닙니다. Joplin AI Agent가 연결하는 로컬 모델 백엔드에 대해서는 PromptQuorum의 [Ollama 리뷰](/ko/power-local-llm/ollama-review)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2162,7 +2162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — Joplin AI Agent의 디렉터리 항목을 포함해 이 기사가 속한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — Joplin AI Agent의 디렉터리 항목을 포함해 이 기사가 속한 로컬 AI 도구 전체 카탈로그.',
           '[Local LLM With Logseq and Joplin](/ko/power-local-llm/local-llm-with-logseq-and-joplin) — Joplin과 Logseq를 둘러싼 더 넓은 로컬 AI 생태계에 대한 배경 지식.',
           '[Obsidian and Logseq AI Plugins, Compared](/ko/power-local-llm/obsidian-logseq-ai-plugins) — 관련 노트 앱 AI 도구를 비교한 다중 플러그인 비교 기사.',
           '[Ollama 리뷰](/ko/power-local-llm/ollama-review) — 이 플러그인이 기본적으로 연결하는 로컬 모델 백엔드.',

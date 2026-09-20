@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Extensible via the Model Context Protocol (MCP), the same open standard Anthropic contributed to the AAIF',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to goose\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how goose compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to goose\'s entry in the [Local LLM Software Directory](/directory) — see that page for how goose compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -84,7 +84,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Core function: an agent harness that combines an LLM you choose, a set of built-in and extensible tools, and Model Context Protocol (MCP) integrations to carry out multi-step coding and automation tasks',
           'Interfaces: a native desktop app (macOS, Linux, Windows), a terminal CLI, and a programmatic API — all built on the same underlying agent engine',
-          'Local-first design: goose itself runs on your own machine; the LLM it calls can also be local (via [Ollama](/power-local-llm/local-llm-software-directory)) or a cloud API of your choice',
+          'Local-first design: goose itself runs on your own machine; the LLM it calls can also be local (via [Ollama](/directory)) or a cloud API of your choice',
           'Developer: originally built by [Block](https://block.xyz), the company behind Square, Cash App, Afterpay, and Tidal; now governed by the [Agentic AI Foundation (AAIF)](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation) at the Linux Foundation',
           'Canonical repository: [github.com/aaif-goose/goose](https://github.com/aaif-goose/goose), Apache 2.0-licensed per the [GitHub API](https://api.github.com/repos/aaif-goose/goose)',
         ],
@@ -126,7 +126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Connect goose to a fully local model via Ollama',
-            content: 'With [Ollama](/power-local-llm/local-llm-software-directory) installed and a model pulled locally, configure goose to use Ollama as its provider in the desktop app\'s or CLI\'s provider settings. Goose then runs entirely against your local model, with no API key and no data leaving your machine — at the cost of whatever that local model\'s capability ceiling is compared to a frontier cloud model.',
+            content: 'With [Ollama](/directory) installed and a model pulled locally, configure goose to use Ollama as its provider in the desktop app\'s or CLI\'s provider settings. Goose then runs entirely against your local model, with no API key and no data leaving your machine — at the cost of whatever that local model\'s capability ceiling is compared to a frontier cloud model.',
           },
           {
             title: 'Add an MCP extension for a specific tool',
@@ -216,7 +216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Aider', 'Best known for': 'Terminal-native, git-centric AI pair programmer', 'Link': '[Aider review](/power-local-llm/aider-review)' },
           { 'Tool': 'Open Interpreter', 'Best known for': 'Lets an LLM run code locally to complete general (not just coding) tasks', 'Link': '[Open Interpreter review](/power-local-llm/open-interpreter-review)' },
         ],
-        note: 'This list reflects tools commonly compared to goose, not an independent PromptQuorum ranking — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog, including goose\'s own directory entry, and verify each tool\'s current pricing and feature set before choosing.',
+        note: 'This list reflects tools commonly compared to goose, not an independent PromptQuorum ranking — see the [Local LLM Software Directory](/directory) for the full catalog, including goose\'s own directory entry, and verify each tool\'s current pricing and feature set before choosing.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -277,7 +277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including goose\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including goose\'s directory entry.',
           '[OpenHands Review](/power-local-llm/openhands-review) — a Docker-sandboxed, venture-backed alternative agent platform.',
           '[Cline Review](/power-local-llm/cline-review) — an autonomous coding agent built as a VS Code and JetBrains extension.',
           '[Aider Review](/power-local-llm/aider-review) — a terminal-native, git-centric AI pair programmer.',
@@ -358,7 +358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Erweiterbar über das Model Context Protocol (MCP), denselben offenen Standard, den Anthropic ebenfalls in die AAIF eingebracht hat',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Gooses Eintrag im [lokalen KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — dort finden Sie einen schnellen Überblick, wie Goose im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Gooses Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie Goose im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -368,7 +368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Kernfunktion: ein Agenten-Framework, das ein LLM Ihrer Wahl, eine Reihe eingebauter und erweiterbarer Tools sowie Model-Context-Protocol-(MCP)-Integrationen kombiniert, um mehrstufige Coding- und Automatisierungsaufgaben auszuführen',
           'Schnittstellen: eine native Desktop-App (macOS, Linux, Windows), eine Terminal-CLI und eine programmatische API — alle basieren auf derselben zugrunde liegenden Agenten-Engine',
-          'Lokal-first-Design: Goose selbst läuft auf dem eigenen Rechner; das aufgerufene LLM kann ebenfalls lokal sein (über [Ollama](/de/power-local-llm/local-llm-software-directory)) oder eine Cloud-API Ihrer Wahl',
+          'Lokal-first-Design: Goose selbst läuft auf dem eigenen Rechner; das aufgerufene LLM kann ebenfalls lokal sein (über [Ollama](/de/directory)) oder eine Cloud-API Ihrer Wahl',
           'Entwickler: ursprünglich von [Block](https://block.xyz) entwickelt, dem Unternehmen hinter Square, Cash App, Afterpay und Tidal; jetzt verwaltet von der [Agentic AI Foundation (AAIF)](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation) bei der Linux Foundation',
           'Kanonisches Repository: [github.com/aaif-goose/goose](https://github.com/aaif-goose/goose), laut [GitHub API](https://api.github.com/repos/aaif-goose/goose) Apache-2.0-lizenziert',
         ],
@@ -410,7 +410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Goose mit einem vollständig lokalen Modell über Ollama verbinden',
-            content: 'Mit installiertem [Ollama](/de/power-local-llm/local-llm-software-directory) und einem lokal heruntergeladenen Modell konfigurieren Sie Goose in den Anbietereinstellungen der Desktop-App oder CLI so, dass es Ollama als Anbieter nutzt. Goose läuft dann vollständig gegen Ihr lokales Modell, ohne API-Schlüssel und ohne dass Daten Ihren Rechner verlassen — auf Kosten der Leistungsfähigkeit dieses lokalen Modells im Vergleich zu einem führenden Cloud-Modell.',
+            content: 'Mit installiertem [Ollama](/de/directory) und einem lokal heruntergeladenen Modell konfigurieren Sie Goose in den Anbietereinstellungen der Desktop-App oder CLI so, dass es Ollama als Anbieter nutzt. Goose läuft dann vollständig gegen Ihr lokales Modell, ohne API-Schlüssel und ohne dass Daten Ihren Rechner verlassen — auf Kosten der Leistungsfähigkeit dieses lokalen Modells im Vergleich zu einem führenden Cloud-Modell.',
           },
           {
             title: 'Eine MCP-Erweiterung für ein bestimmtes Tool hinzufügen',
@@ -500,7 +500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'Aider', 'Bekannt für': 'Terminal-natives, git-zentriertes KI-Pair-Programming-Tool', 'Link': '[Aider Review](/de/power-local-llm/aider-review)' },
           { 'Tool': 'Open Interpreter', 'Bekannt für': 'Lässt ein LLM Code lokal ausführen, um allgemeine (nicht nur Coding-) Aufgaben zu erledigen', 'Link': '[Open Interpreter Review](/de/power-local-llm/open-interpreter-review)' },
         ],
-        note: 'Diese Liste zeigt Tools, mit denen Goose häufig verglichen wird, keine unabhängige PromptQuorum-Rangliste — siehe das [lokale KI-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) für den vollständigen Katalog, einschließlich Gooses eigenem Verzeichniseintrag, und prüfen Sie Preise und Funktionsumfang jedes Tools vor einer Entscheidung.',
+        note: 'Diese Liste zeigt Tools, mit denen Goose häufig verglichen wird, keine unabhängige PromptQuorum-Rangliste — siehe das [lokale KI-Software-Verzeichnis](/de/directory) für den vollständigen Katalog, einschließlich Gooses eigenem Verzeichniseintrag, und prüfen Sie Preise und Funktionsumfang jedes Tools vor einer Entscheidung.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -561,7 +561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Lokales KI-Software-Verzeichnis 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Gooses Verzeichniseintrag.',
+          '[Lokales KI-Software-Verzeichnis 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Gooses Verzeichniseintrag.',
           '[OpenHands Review](/de/power-local-llm/openhands-review) — eine Docker-sandboxed, Venture-finanzierte alternative Agenten-Plattform.',
           '[Cline Review](/de/power-local-llm/cline-review) — ein autonomer Coding-Agent als VS-Code- und JetBrains-Erweiterung.',
           '[Aider Review](/de/power-local-llm/aider-review) — ein terminal-natives, git-zentriertes KI-Pair-Programming-Tool.',
@@ -642,7 +642,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Extensible via le Model Context Protocol (MCP), le même standard ouvert qu\'Anthropic a également contribué à l\'AAIF',
         ],
         callouts: [
-          { type: 'note', text: 'Cette revue est le complément approfondi de la fiche de goose dans l\'[annuaire des logiciels IA locaux](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment goose se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locaux.' },
+          { type: 'note', text: 'Cette revue est le complément approfondi de la fiche de goose dans l\'[annuaire des logiciels IA locaux](/fr/directory) — consultez cette page pour voir comment goose se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locaux.' },
         ],
       },
       overview: {
@@ -652,7 +652,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Fonction principale : un cadre agentique combinant un LLM de votre choix, un ensemble d\'outils intégrés et extensibles, et des intégrations Model Context Protocol (MCP) pour accomplir des tâches de code et d\'automatisation en plusieurs étapes',
           'Interfaces : une application de bureau native (macOS, Linux, Windows), une CLI de terminal, et une API programmatique — toutes construites sur le même moteur d\'agent sous-jacent',
-          'Conception local par défaut : goose lui-même s\'exécute sur votre propre machine ; le LLM qu\'il appelle peut aussi être local (via [Ollama](/fr/power-local-llm/local-llm-software-directory)) ou une API cloud de votre choix',
+          'Conception local par défaut : goose lui-même s\'exécute sur votre propre machine ; le LLM qu\'il appelle peut aussi être local (via [Ollama](/fr/directory)) ou une API cloud de votre choix',
           'Développeur : développé à l\'origine par [Block](https://block.xyz), l\'entreprise derrière Square, Cash App, Afterpay et Tidal ; désormais géré par l\'[Agentic AI Foundation (AAIF)](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation) de la Linux Foundation',
           'Dépôt canonique : [github.com/aaif-goose/goose](https://github.com/aaif-goose/goose), sous licence Apache 2.0 selon l\'[API GitHub](https://api.github.com/repos/aaif-goose/goose)',
         ],
@@ -694,7 +694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Connecter goose à un modèle entièrement local via Ollama',
-            content: 'Avec [Ollama](/fr/power-local-llm/local-llm-software-directory) installé et un modèle téléchargé localement, configurez goose pour utiliser Ollama comme fournisseur dans les paramètres de fournisseur de l\'application de bureau ou de la CLI. Goose s\'exécute alors entièrement contre votre modèle local, sans clé API et sans qu\'aucune donnée ne quitte votre machine — au prix du plafond de capacité de ce modèle local par rapport à un modèle cloud de pointe.',
+            content: 'Avec [Ollama](/fr/directory) installé et un modèle téléchargé localement, configurez goose pour utiliser Ollama comme fournisseur dans les paramètres de fournisseur de l\'application de bureau ou de la CLI. Goose s\'exécute alors entièrement contre votre modèle local, sans clé API et sans qu\'aucune donnée ne quitte votre machine — au prix du plafond de capacité de ce modèle local par rapport à un modèle cloud de pointe.',
           },
           {
             title: 'Ajouter une extension MCP pour un outil spécifique',
@@ -784,7 +784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Outil': 'Aider', 'Connu pour': 'Pair-programmeur IA terminal-natif et centré sur git', 'Lien': '[Revue Aider](/fr/power-local-llm/aider-review)' },
           { 'Outil': 'Open Interpreter', 'Connu pour': 'Laisse un LLM exécuter du code localement pour des tâches générales (pas seulement de code)', 'Lien': '[Revue Open Interpreter](/fr/power-local-llm/open-interpreter-review)' },
         ],
-        note: 'Cette liste reflète les outils couramment comparés à goose, pas un classement indépendant de PromptQuorum — voir l\'[annuaire des logiciels IA locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet, y compris la propre fiche de goose, et vérifiez la tarification et les fonctionnalités actuelles de chaque outil avant de choisir.',
+        note: 'Cette liste reflète les outils couramment comparés à goose, pas un classement indépendant de PromptQuorum — voir l\'[annuaire des logiciels IA locaux](/fr/directory) pour le catalogue complet, y compris la propre fiche de goose, et vérifiez la tarification et les fonctionnalités actuelles de chaque outil avant de choisir.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -845,7 +845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Annuaire des logiciels IA locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locaux auquel appartient cet article, y compris la fiche de goose.',
+          '[Annuaire des logiciels IA locaux 2026](/fr/directory) — le catalogue complet d\'outils d\'IA locaux auquel appartient cet article, y compris la fiche de goose.',
           '[Revue OpenHands](/fr/power-local-llm/openhands-review) — une plateforme d\'agent alternative isolée dans Docker et financée par capital-risque.',
           '[Revue Cline](/fr/power-local-llm/cline-review) — un agent de code autonome sous forme d\'extension VS Code et JetBrains.',
           '[Revue Aider](/fr/power-local-llm/aider-review) — un pair-programmeur IA terminal-natif et centré sur git.',
@@ -926,7 +926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ampliable mediante el Model Context Protocol (MCP), el mismo estándar abierto que Anthropic también aportó a la AAIF',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la ficha de goose en el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara goose de un vistazo con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la ficha de goose en el [directorio de software de IA local](/es/directory) — consulta esa página para ver cómo se compara goose de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -936,7 +936,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Función principal: un marco de agente que combina un LLM de tu elección, un conjunto de herramientas integradas y ampliables, e integraciones del Model Context Protocol (MCP) para realizar tareas de programación y automatización en varios pasos',
           'Interfaces: una app de escritorio nativa (macOS, Linux, Windows), una CLI de terminal, y una API programática — todas construidas sobre el mismo motor de agente subyacente',
-          'Diseño local por defecto: goose en sí se ejecuta en tu propia máquina; el LLM al que llama también puede ser local (vía [Ollama](/es/power-local-llm/local-llm-software-directory)) o una API en la nube de tu elección',
+          'Diseño local por defecto: goose en sí se ejecuta en tu propia máquina; el LLM al que llama también puede ser local (vía [Ollama](/es/directory)) o una API en la nube de tu elección',
           'Desarrollador: desarrollado originalmente por [Block](https://block.xyz), la empresa detrás de Square, Cash App, Afterpay y Tidal; ahora gobernado por la [Agentic AI Foundation (AAIF)](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation) de la Linux Foundation',
           'Repositorio canónico: [github.com/aaif-goose/goose](https://github.com/aaif-goose/goose), con licencia Apache 2.0 según la [API de GitHub](https://api.github.com/repos/aaif-goose/goose)',
         ],
@@ -978,7 +978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Conectar goose a un modelo totalmente local vía Ollama',
-            content: 'Con [Ollama](/es/power-local-llm/local-llm-software-directory) instalado y un modelo descargado localmente, configura goose para usar Ollama como proveedor en los ajustes de proveedor de la app de escritorio o la CLI. Goose entonces se ejecuta por completo contra tu modelo local, sin clave de API y sin que ningún dato salga de tu máquina — al coste del límite de capacidad de ese modelo local en comparación con un modelo en la nube de última generación.',
+            content: 'Con [Ollama](/es/directory) instalado y un modelo descargado localmente, configura goose para usar Ollama como proveedor en los ajustes de proveedor de la app de escritorio o la CLI. Goose entonces se ejecuta por completo contra tu modelo local, sin clave de API y sin que ningún dato salga de tu máquina — al coste del límite de capacidad de ese modelo local en comparación con un modelo en la nube de última generación.',
           },
           {
             title: 'Añadir una extensión MCP para una herramienta específica',
@@ -1068,7 +1068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': 'Aider', 'Conocida por': 'Programador de pareja IA terminal-nativo centrado en git', 'Enlace': '[Reseña de Aider](/es/power-local-llm/aider-review)' },
           { 'Herramienta': 'Open Interpreter', 'Conocida por': 'Permite que un LLM ejecute código localmente para tareas generales (no solo de programación)', 'Enlace': '[Reseña de Open Interpreter](/es/power-local-llm/open-interpreter-review)' },
         ],
-        note: 'Esta lista refleja herramientas comúnmente comparadas con goose, no una clasificación independiente de PromptQuorum — consulta el [directorio de software de IA local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo, incluyendo la propia ficha de goose, y verifica el precio y las funciones actuales de cada herramienta antes de elegir.',
+        note: 'Esta lista refleja herramientas comúnmente comparadas con goose, no una clasificación independiente de PromptQuorum — consulta el [directorio de software de IA local](/es/directory) para el catálogo completo, incluyendo la propia ficha de goose, y verifica el precio y las funciones actuales de cada herramienta antes de elegir.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1129,7 +1129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de IA local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de goose.',
+          '[Directorio de software de IA local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de goose.',
           '[Reseña de OpenHands](/es/power-local-llm/openhands-review) — una plataforma de agente alternativa aislada en Docker y financiada con capital de riesgo.',
           '[Reseña de Cline](/es/power-local-llm/cline-review) — un agente de programación autónomo construido como extensión de VS Code y JetBrains.',
           '[Reseña de Aider](/es/power-local-llm/aider-review) — un programador de pareja IA terminal-nativo centrado en git.',
@@ -1210,7 +1210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Extensível via Model Context Protocol (MCP), o mesmo padrão aberto que a Anthropic também contribuiu para a AAIF',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do goose no [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o goose com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do goose no [diretório de software de IA local](/pt/directory) — veja essa página para comparar rapidamente o goose com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1220,7 +1220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Função principal: um framework de agente que combina um LLM de sua escolha, um conjunto de ferramentas integradas e extensíveis, e integrações do Model Context Protocol (MCP) para realizar tarefas de programação e automação em várias etapas',
           'Interfaces: um app de desktop nativo (macOS, Linux, Windows), uma CLI de terminal, e uma API programática — todos construídos sobre o mesmo motor de agente subjacente',
-          'Design local por padrão: o goose em si roda na sua própria máquina; o LLM que ele chama também pode ser local (via [Ollama](/pt/power-local-llm/local-llm-software-directory)) ou uma API na nuvem de sua escolha',
+          'Design local por padrão: o goose em si roda na sua própria máquina; o LLM que ele chama também pode ser local (via [Ollama](/pt/directory)) ou uma API na nuvem de sua escolha',
           'Desenvolvedor: originalmente desenvolvido pela [Block](https://block.xyz), empresa por trás de Square, Cash App, Afterpay e Tidal; agora governado pela [Agentic AI Foundation (AAIF)](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation) da Linux Foundation',
           'Repositório canônico: [github.com/aaif-goose/goose](https://github.com/aaif-goose/goose), com licença Apache 2.0 segundo a [API do GitHub](https://api.github.com/repos/aaif-goose/goose)',
         ],
@@ -1262,7 +1262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Conectar o goose a um modelo totalmente local via Ollama',
-            content: 'Com o [Ollama](/pt/power-local-llm/local-llm-software-directory) instalado e um modelo baixado localmente, configure o goose para usar o Ollama como provedor nas configurações de provedor do app de desktop ou da CLI. O goose então roda inteiramente contra seu modelo local, sem chave de API e sem que nenhum dado saia da sua máquina — ao custo do teto de capacidade daquele modelo local em comparação a um modelo de nuvem de ponta.',
+            content: 'Com o [Ollama](/pt/directory) instalado e um modelo baixado localmente, configure o goose para usar o Ollama como provedor nas configurações de provedor do app de desktop ou da CLI. O goose então roda inteiramente contra seu modelo local, sem chave de API e sem que nenhum dado saia da sua máquina — ao custo do teto de capacidade daquele modelo local em comparação a um modelo de nuvem de ponta.',
           },
           {
             title: 'Adicionar uma extensão MCP para uma ferramenta específica',
@@ -1352,7 +1352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': 'Aider', 'Conhecida por': 'Par de programação IA nativo de terminal e centrado em git', 'Link': '[Análise do Aider](/pt/power-local-llm/aider-review)' },
           { 'Ferramenta': 'Open Interpreter', 'Conhecida por': 'Permite que um LLM execute código localmente para tarefas gerais (não só de programação)', 'Link': '[Análise do Open Interpreter](/pt/power-local-llm/open-interpreter-review)' },
         ],
-        note: 'Esta lista reflete ferramentas comumente comparadas ao goose, não um ranking independente da PromptQuorum — veja o [diretório de software de IA local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo, incluindo a própria entrada do goose, e verifique o preço e os recursos atuais de cada ferramenta antes de escolher.',
+        note: 'Esta lista reflete ferramentas comumente comparadas ao goose, não um ranking independente da PromptQuorum — veja o [diretório de software de IA local](/pt/directory) para o catálogo completo, incluindo a própria entrada do goose, e verifique o preço e os recursos atuais de cada ferramenta antes de escolher.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1413,7 +1413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software de IA local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do goose.',
+          '[Diretório de software de IA local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do goose.',
           '[Análise do OpenHands](/pt/power-local-llm/openhands-review) — uma plataforma de agente alternativa isolada em Docker e financiada por capital de risco.',
           '[Análise do Cline](/pt/power-local-llm/cline-review) — um agente de programação autônomo construído como extensão do VS Code e JetBrains.',
           '[Análise do Aider](/pt/power-local-llm/aider-review) — um par de programação IA nativo de terminal e centrado em git.',
@@ -1494,7 +1494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Model Context Protocol（MCP）で拡張可能。AnthropicがAAIFに提供したのと同じオープン標準',
         ],
         callouts: [
-          { type: 'note', text: '本レビューは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるgooseのエントリーの詳細版です。他の数十のローカルAIツールとgooseの比較についてはそちらをご覧ください。' },
+          { type: 'note', text: '本レビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるgooseのエントリーの詳細版です。他の数十のローカルAIツールとgooseの比較についてはそちらをご覧ください。' },
         ],
       },
       overview: {
@@ -1504,7 +1504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '中核機能：選択したLLM、組み込みおよび拡張可能なツール群、Model Context Protocol（MCP）統合を組み合わせ、複数ステップのコーディングや自動化タスクを実行するエージェントハーネス',
           'インターフェース：ネイティブデスクトップアプリ（macOS、Linux、Windows）、ターミナルCLI、プログラム用API — すべて同じエージェントエンジンの上に構築',
-          'ローカルファースト設計：goose自体は自分のマシン上で動作し、呼び出すLLMも[Ollama](/ja/power-local-llm/local-llm-software-directory)経由でローカルにするか、任意のクラウドAPIを選べる',
+          'ローカルファースト設計：goose自体は自分のマシン上で動作し、呼び出すLLMも[Ollama](/ja/directory)経由でローカルにするか、任意のクラウドAPIを選べる',
           '開発元：Square、Cash App、Afterpay、Tidalを手がける[Block](https://block.xyz)が元々開発。現在はLinux Foundationの[Agentic AI Foundation（AAIF）](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation)が管理',
           '正規リポジトリ：[github.com/aaif-goose/goose](https://github.com/aaif-goose/goose)。[GitHub API](https://api.github.com/repos/aaif-goose/goose)によればApache 2.0ライセンス',
         ],
@@ -1546,7 +1546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Ollama経由で完全ローカルなモデルにgooseを接続する',
-            content: '[Ollama](/ja/power-local-llm/local-llm-software-directory)をインストールしてモデルをローカルにダウンロードした状態で、デスクトップアプリまたはCLIのプロバイダー設定でgooseがOllamaを使うよう設定します。gooseはAPIキーなし、データがマシン外に出ることもなく、完全にローカルモデルに対して動作します — 代わりに、そのローカルモデルの能力の上限は最先端のクラウドモデルより低い可能性があります。',
+            content: '[Ollama](/ja/directory)をインストールしてモデルをローカルにダウンロードした状態で、デスクトップアプリまたはCLIのプロバイダー設定でgooseがOllamaを使うよう設定します。gooseはAPIキーなし、データがマシン外に出ることもなく、完全にローカルモデルに対して動作します — 代わりに、そのローカルモデルの能力の上限は最先端のクラウドモデルより低い可能性があります。',
           },
           {
             title: '特定のツール用にMCP拡張機能を追加する',
@@ -1636,7 +1636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ツール': 'Aider', '主な特徴': 'ターミナルネイティブでgit中心のAIペアプログラマー', 'リンク': '[Aiderレビュー](/ja/power-local-llm/aider-review)' },
           { 'ツール': 'Open Interpreter', '主な特徴': 'LLMがローカルでコードを実行し、コーディング以外も含む一般的なタスクを完了できる', 'リンク': '[Open Interpreterレビュー](/ja/power-local-llm/open-interpreter-review)' },
         ],
-        note: 'このリストはgooseとよく比較されるツールを示すもので、PromptQuorumによる独立したランキングではありません — 完全なカタログ（gooseのディレクトリエントリーを含む）は[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)をご覧ください。選択前に各ツールの現在の価格と機能を確認してください。',
+        note: 'このリストはgooseとよく比較されるツールを示すもので、PromptQuorumによる独立したランキングではありません — 完全なカタログ（gooseのディレクトリエントリーを含む）は[ローカルLLMソフトウェアディレクトリ](/ja/directory)をご覧ください。選択前に各ツールの現在の価格と機能を確認してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1697,7 +1697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの完全なカタログ。gooseのディレクトリエントリーを含む。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — この記事が属するローカルAIツールの完全なカタログ。gooseのディレクトリエントリーを含む。',
           '[OpenHandsレビュー](/ja/power-local-llm/openhands-review) — Dockerでサンドボックス化された、ベンチャー資金による代替エージェントプラットフォーム。',
           '[Clineレビュー](/ja/power-local-llm/cline-review) — VS CodeとJetBrainsの拡張機能として構築された自律型コーディングエージェント。',
           '[Aiderレビュー](/ja/power-local-llm/aider-review) — ターミナルネイティブでgit中心のAIペアプログラマー。',
@@ -1778,7 +1778,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '可通过 Model Context Protocol（MCP）扩展——这与 Anthropic 同样贡献给 AAIF 的开放标准相同',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中 goose 条目的深度补充——请查看该页面，了解 goose 与其他数十款本地AI工具的一览式对比。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中 goose 条目的深度补充——请查看该页面，了解 goose 与其他数十款本地AI工具的一览式对比。' },
         ],
       },
       overview: {
@@ -1788,7 +1788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '核心功能：一个代理框架，结合你选择的LLM、一组内置及可扩展的工具，以及 Model Context Protocol（MCP）集成，以执行多步骤的编码和自动化任务',
           '接口：原生桌面应用（macOS、Linux、Windows）、终端 CLI，以及可编程的 API——全部构建在同一底层代理引擎之上',
-          '本地优先设计：goose 本身运行在你自己的机器上；它调用的LLM也可以是本地的（通过[Ollama](/zh/power-local-llm/local-llm-software-directory)），或是你选择的云端API',
+          '本地优先设计：goose 本身运行在你自己的机器上；它调用的LLM也可以是本地的（通过[Ollama](/zh/directory)），或是你选择的云端API',
           '开发方：最初由[Block](https://block.xyz)开发，即 Square、Cash App、Afterpay 和 Tidal 背后的公司；现由 Linux Foundation 的[Agentic AI Foundation（AAIF）](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation)管理',
           '规范仓库：[github.com/aaif-goose/goose](https://github.com/aaif-goose/goose)，根据[GitHub API](https://api.github.com/repos/aaif-goose/goose)，采用 Apache 2.0 许可证',
         ],
@@ -1830,7 +1830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '通过 Ollama 将 goose 连接到完全本地的模型',
-            content: '安装好[Ollama](/zh/power-local-llm/local-llm-software-directory)并在本地拉取一个模型后，在桌面应用或 CLI 的提供商设置中配置 goose 使用 Ollama 作为提供商。goose 随后会完全针对你的本地模型运行，无需API密钥，也没有任何数据离开你的机器——代价是该本地模型的能力上限可能低于前沿云端模型。',
+            content: '安装好[Ollama](/zh/directory)并在本地拉取一个模型后，在桌面应用或 CLI 的提供商设置中配置 goose 使用 Ollama 作为提供商。goose 随后会完全针对你的本地模型运行，无需API密钥，也没有任何数据离开你的机器——代价是该本地模型的能力上限可能低于前沿云端模型。',
           },
           {
             title: '为特定工具添加 MCP 扩展',
@@ -1920,7 +1920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '工具': 'Aider', '以此著称': '终端原生、以 git 为中心的AI结对编程工具', '链接': '[Aider 评测](/zh/power-local-llm/aider-review)' },
           { '工具': 'Open Interpreter', '以此著称': '让LLM在本地运行代码，以完成通用（不限于编码）任务', '链接': '[Open Interpreter 评测](/zh/power-local-llm/open-interpreter-review)' },
         ],
-        note: '此列表反映了常与 goose 比较的工具，并非 PromptQuorum 的独立排名——完整目录（包括 goose 自身的目录条目）请见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)，选择前请核实各工具当前的价格和功能。',
+        note: '此列表反映了常与 goose 比较的工具，并非 PromptQuorum 的独立排名——完整目录（包括 goose 自身的目录条目）请见[本地LLM软件目录](/zh/directory)，选择前请核实各工具当前的价格和功能。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1981,7 +1981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[2026本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包括 goose 的目录条目。',
+          '[2026本地LLM软件目录](/zh/directory) — 本文所属的本地AI工具完整目录，包括 goose 的目录条目。',
           '[OpenHands 评测](/zh/power-local-llm/openhands-review) — 一个 Docker 沙箱化、获得风投支持的替代代理平台。',
           '[Cline 评测](/zh/power-local-llm/cline-review) — 一款作为 VS Code 和 JetBrains 扩展构建的自主编码代理。',
           '[Aider 评测](/zh/power-local-llm/aider-review) — 一款终端原生、以 git 为中心的AI结对编程工具。',
@@ -2062,7 +2062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'قابل للتوسيع عبر Model Context Protocol (MCP)، وهو نفس المعيار المفتوح الذي ساهمت به Anthropic أيضًا في AAIF',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمّق لمُدخل goose في [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارَن goose بلمحة سريعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمّق لمُدخل goose في [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن goose بلمحة سريعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2072,7 +2072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'الوظيفة الأساسية: إطار وكيل يجمع بين نموذج لغوي كبير من اختيارك، ومجموعة من الأدوات المدمجة والقابلة للتوسيع، وتكاملات Model Context Protocol (MCP) لإنجاز مهام برمجية وأتمتة متعددة الخطوات',
           'الواجهات: تطبيق سطح مكتب أصلي (macOS وLinux وWindows)، وواجهة سطر أوامر للطرفية، وواجهة برمجة تطبيقات برمجية — جميعها مبنية على نفس محرك الوكيل الأساسي',
-          'تصميم محلي أولاً: يعمل goose نفسه على جهازك الخاص؛ ويمكن للنموذج اللغوي الذي يستدعيه أن يكون محليًا أيضًا (عبر [Ollama](/ar/power-local-llm/local-llm-software-directory)) أو واجهة برمجة تطبيقات سحابية من اختيارك',
+          'تصميم محلي أولاً: يعمل goose نفسه على جهازك الخاص؛ ويمكن للنموذج اللغوي الذي يستدعيه أن يكون محليًا أيضًا (عبر [Ollama](/ar/directory)) أو واجهة برمجة تطبيقات سحابية من اختيارك',
           'المطوّر: طوّرته في الأصل [Block](https://block.xyz)، الشركة التي تقف وراء Square وCash App وAfterpay وTidal؛ وتديره الآن [مؤسسة Agentic AI Foundation (AAIF)](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation) التابعة لـLinux Foundation',
           'المستودع المرجعي: [github.com/aaif-goose/goose](https://github.com/aaif-goose/goose)، مرخّص بموجب Apache 2.0 وفق [واجهة برمجة تطبيقات GitHub](https://api.github.com/repos/aaif-goose/goose)',
         ],
@@ -2114,7 +2114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'ربط goose بنموذج محلي بالكامل عبر Ollama',
-            content: 'بعد تثبيت [Ollama](/ar/power-local-llm/local-llm-software-directory) وسحب نموذج محليًا، اضبط goose ليستخدم Ollama كمزوّد في إعدادات المزوّد في تطبيق سطح المكتب أو CLI. يعمل goose عندها بالكامل مقابل نموذجك المحلي، دون مفتاح API ودون أن تغادر أي بيانات جهازك — على حساب سقف قدرة ذلك النموذج المحلي مقارنةً بنموذج سحابي متطوّر.',
+            content: 'بعد تثبيت [Ollama](/ar/directory) وسحب نموذج محليًا، اضبط goose ليستخدم Ollama كمزوّد في إعدادات المزوّد في تطبيق سطح المكتب أو CLI. يعمل goose عندها بالكامل مقابل نموذجك المحلي، دون مفتاح API ودون أن تغادر أي بيانات جهازك — على حساب سقف قدرة ذلك النموذج المحلي مقارنةً بنموذج سحابي متطوّر.',
           },
           {
             title: 'إضافة امتداد MCP لأداة محدّدة',
@@ -2204,7 +2204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': 'Aider', 'تُعرف بـ': 'مبرمج مساعد بالذكاء الاصطناعي أصلي الطرفية ومتمحور حول git', 'الرابط': '[مراجعة Aider](/ar/power-local-llm/aider-review)' },
           { 'الأداة': 'Open Interpreter', 'تُعرف بـ': 'يتيح لنموذج لغوي كبير تشغيل شيفرة محليًا لإنجاز مهام عامة (ليست برمجية فقط)', 'الرابط': '[مراجعة Open Interpreter](/ar/power-local-llm/open-interpreter-review)' },
         ],
-        note: 'تعكس هذه القائمة الأدوات التي تُقارَن عادةً بـgoose، وليست تصنيفًا مستقلًا من PromptQuorum — راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل، بما في ذلك مُدخل goose نفسه، وتحقق من السعر والميزات الحالية لكل أداة قبل الاختيار.',
+        note: 'تعكس هذه القائمة الأدوات التي تُقارَن عادةً بـgoose، وليست تصنيفًا مستقلًا من PromptQuorum — راجع [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) للاطلاع على الكتالوج الكامل، بما في ذلك مُدخل goose نفسه، وتحقق من السعر والميزات الحالية لكل أداة قبل الاختيار.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2265,7 +2265,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مُدخل goose.',
+          '[دليل برمجيات النماذج اللغوية المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مُدخل goose.',
           '[مراجعة OpenHands](/ar/power-local-llm/openhands-review) — منصة وكيل بديلة معزولة داخل Docker ومدعومة برأس مال مغامر.',
           '[مراجعة Cline](/ar/power-local-llm/cline-review) — وكيل برمجة مستقل مبني كامتداد لـVS Code وJetBrains.',
           '[مراجعة Aider](/ar/power-local-llm/aider-review) — مبرمج مساعد بالذكاء الاصطناعي أصلي الطرفية ومتمحور حول git.',
@@ -2346,7 +2346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Anthropic이 AAIF에 함께 기여한 것과 동일한 개방형 표준인 Model Context Protocol(MCP)로 확장 가능',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 goose 항목의 심층 버전입니다 — goose가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 goose 항목의 심층 버전입니다 — goose가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2356,7 +2356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '핵심 기능: 선택한 LLM, 내장 및 확장 가능한 도구 세트, Model Context Protocol(MCP) 통합을 결합해 여러 단계의 코딩·자동화 작업을 수행하는 에이전트 프레임워크',
           '인터페이스: 네이티브 데스크톱 앱(macOS, Linux, Windows), 터미널 CLI, 프로그래밍 방식 API — 모두 동일한 기본 에이전트 엔진 위에 구축',
-          '로컬 우선 설계: goose 자체는 사용자 자신의 컴퓨터에서 실행되며, 호출하는 LLM 역시 [Ollama](/ko/power-local-llm/local-llm-software-directory)를 통해 로컬로 실행하거나 원하는 클라우드 API를 선택할 수 있음',
+          '로컬 우선 설계: goose 자체는 사용자 자신의 컴퓨터에서 실행되며, 호출하는 LLM 역시 [Ollama](/ko/directory)를 통해 로컬로 실행하거나 원하는 클라우드 API를 선택할 수 있음',
           '개발사: Square, Cash App, Afterpay, Tidal을 만든 [Block](https://block.xyz)이 원래 개발; 현재는 Linux Foundation [Agentic AI Foundation(AAIF)](https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation)이 관리',
           '정식 저장소: [github.com/aaif-goose/goose](https://github.com/aaif-goose/goose), [GitHub API](https://api.github.com/repos/aaif-goose/goose) 기준 Apache 2.0 라이선스',
         ],
@@ -2398,7 +2398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Ollama를 통해 goose를 완전한 로컬 모델에 연결하기',
-            content: '[Ollama](/ko/power-local-llm/local-llm-software-directory)를 설치하고 모델을 로컬에 내려받은 상태에서, 데스크톱 앱 또는 CLI의 제공업체 설정에서 goose가 Ollama를 제공업체로 사용하도록 구성합니다. 그러면 goose는 API 키 없이, 데이터가 컴퓨터 밖으로 나가지 않고, 전적으로 로컬 모델을 대상으로 실행됩니다 — 다만 그 로컬 모델의 성능 한계는 최상위 클라우드 모델보다 낮을 수 있습니다.',
+            content: '[Ollama](/ko/directory)를 설치하고 모델을 로컬에 내려받은 상태에서, 데스크톱 앱 또는 CLI의 제공업체 설정에서 goose가 Ollama를 제공업체로 사용하도록 구성합니다. 그러면 goose는 API 키 없이, 데이터가 컴퓨터 밖으로 나가지 않고, 전적으로 로컬 모델을 대상으로 실행됩니다 — 다만 그 로컬 모델의 성능 한계는 최상위 클라우드 모델보다 낮을 수 있습니다.',
           },
           {
             title: '특정 도구를 위한 MCP 확장 기능 추가하기',
@@ -2488,7 +2488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': 'Aider', '주요 특징': '터미널 네이티브이고 git 중심적인 AI 페어 프로그래머', '링크': '[Aider 리뷰](/ko/power-local-llm/aider-review)' },
           { '도구': 'Open Interpreter', '주요 특징': 'LLM이 로컬에서 코드를 실행해 코딩에 국한되지 않는 일반적인 작업을 수행하게 함', '링크': '[Open Interpreter 리뷰](/ko/power-local-llm/open-interpreter-review)' },
         ],
-        note: '이 목록은 goose와 흔히 비교되는 도구를 보여주는 것이며 PromptQuorum의 독립적인 순위가 아닙니다 — goose 자체의 디렉터리 항목을 포함한 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하고, 선택하기 전에 각 도구의 현재 가격과 기능을 확인하세요.',
+        note: '이 목록은 goose와 흔히 비교되는 도구를 보여주는 것이며 PromptQuorum의 독립적인 순위가 아닙니다 — goose 자체의 디렉터리 항목을 포함한 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하고, 선택하기 전에 각 도구의 현재 가격과 기능을 확인하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2549,7 +2549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, goose의 디렉터리 항목을 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 글이 속한 로컬 AI 도구 전체 카탈로그로, goose의 디렉터리 항목을 포함합니다.',
           '[OpenHands 리뷰](/ko/power-local-llm/openhands-review) — Docker로 샌드박스화된, 벤처 투자를 받은 대안 에이전트 플랫폼.',
           '[Cline 리뷰](/ko/power-local-llm/cline-review) — VS Code와 JetBrains 확장 기능으로 만들어진 자율 코딩 에이전트.',
           '[Aider 리뷰](/ko/power-local-llm/aider-review) — 터미널 네이티브이고 git 중심적인 AI 페어 프로그래머.',

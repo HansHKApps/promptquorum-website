@@ -245,7 +245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Competitors and Alternatives',
-        content: '**LoRAX is most often compared to other self-hosted inference and fine-tuning tools, since it sits at the intersection of the inference-serving and LoRA fine-tuning segments.** Companion to LoRAX\'s own entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+        content: '**LoRAX is most often compared to other self-hosted inference and fine-tuning tools, since it sits at the intersection of the inference-serving and LoRA fine-tuning segments.** Companion to LoRAX\'s own entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory).',
         rows: [
           { 'Tool': 'LMDeploy', 'Best known for': 'Open-source inference engine with quantization and serving toolkit', 'Link': '[LMDeploy review](/power-local-llm/lmdeploy-review)' },
           { 'Tool': 'NVIDIA Dynamo', 'Best known for': 'High-throughput inference-serving framework with API-server features', 'Link': '[NVIDIA Dynamo review](/power-local-llm/dynamo-review)' },
@@ -288,7 +288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LMDeploy Review](/power-local-llm/lmdeploy-review) — an open-source inference engine with quantization and serving tooling, for comparison against LoRAX\'s adapter-focused design.',
           '[Unsloth Review](/power-local-llm/unsloth-review) — a fast, memory-efficient LoRA/QLoRA fine-tuning library for producing the adapters LoRAX serves.',
           '[LLaMA-Factory Review](/power-local-llm/llama-factory-review) — a unified fine-tuning framework supporting LoRA and other PEFT methods.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to.',
         ],
       },
     },
@@ -536,7 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Wettbewerber und Alternativen',
-        content: '**LoRAX wird am häufigsten mit anderen selbst gehosteten Inferenz- und Fine-Tuning-Tools verglichen, da es an der Schnittstelle zwischen Inferenz-Serving und LoRA-Fine-Tuning liegt.** Ergänzend zu LoRAXs eigenem Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+        content: '**LoRAX wird am häufigsten mit anderen selbst gehosteten Inferenz- und Fine-Tuning-Tools verglichen, da es an der Schnittstelle zwischen Inferenz-Serving und LoRA-Fine-Tuning liegt.** Ergänzend zu LoRAXs eigenem Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/directory).',
         rows: [
           { 'Tool': 'LMDeploy', 'Best known for': 'Quelloffene Inferenz-Engine mit Quantisierungs- und Serving-Toolkit', 'Link': '[LMDeploy Review](/de/power-local-llm/lmdeploy-review)' },
           { 'Tool': 'NVIDIA Dynamo', 'Best known for': 'Inferenz-Serving-Framework mit hohem Durchsatz und API-Server-Funktionen', 'Link': '[NVIDIA Dynamo Review](/de/power-local-llm/dynamo-review)' },
@@ -579,7 +579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LMDeploy Review](/de/power-local-llm/lmdeploy-review) — eine quelloffene Inferenz-Engine mit Quantisierung und Serving-Tooling, zum Vergleich mit LoRAXs adapterfokussiertem Design.',
           '[Unsloth Review](/de/power-local-llm/unsloth-review) — eine schnelle, speichereffiziente LoRA-/QLoRA-Fine-Tuning-Bibliothek zum Erzeugen der von LoRAX bedienten Adapter.',
           '[LLaMA-Factory Review](/de/power-local-llm/llama-factory-review) — ein einheitliches Fine-Tuning-Framework mit Unterstützung für LoRA und andere PEFT-Methoden.',
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },
     },
@@ -827,7 +827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Concurrents et alternatives',
-        content: '**LoRAX est le plus souvent comparé à d\'autres outils d\'inférence et de fine-tuning auto-hébergés, car il se situe à l\'intersection des segments de service d\'inférence et de fine-tuning LoRA.** En complément de l\'entrée propre à LoRAX dans le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+        content: '**LoRAX est le plus souvent comparé à d\'autres outils d\'inférence et de fine-tuning auto-hébergés, car il se situe à l\'intersection des segments de service d\'inférence et de fine-tuning LoRA.** En complément de l\'entrée propre à LoRAX dans le [Local LLM Software Directory](https://www.promptquorum.com/directory).',
         rows: [
           { 'Tool': 'LMDeploy', 'Best known for': 'Moteur d\'inférence open source avec boîte à outils de quantification et de service', 'Link': '[Avis LMDeploy](/fr/power-local-llm/lmdeploy-review)' },
           { 'Tool': 'NVIDIA Dynamo', 'Best known for': 'Framework de service d\'inférence à haut débit avec fonctionnalités de serveur API', 'Link': '[Avis NVIDIA Dynamo](/fr/power-local-llm/dynamo-review)' },
@@ -870,7 +870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Avis LMDeploy](/fr/power-local-llm/lmdeploy-review) — un moteur d\'inférence open source avec outillage de quantification et de service, pour comparaison avec la conception axée adaptateurs de LoRAX.',
           '[Avis Unsloth](/fr/power-local-llm/unsloth-review) — une bibliothèque de fine-tuning LoRA/QLoRA rapide et économe en mémoire pour produire les adaptateurs servis par LoRAX.',
           '[Avis LLaMA-Factory](/fr/power-local-llm/llama-factory-review) — un framework de fine-tuning unifié prenant en charge LoRA et d\'autres méthodes PEFT.',
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet d\'outils d\'IA locale auquel appartient cet article.',
         ],
       },
     },
@@ -1091,7 +1091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '競合とその代替ツール',
-        content: '**LoRAXは、推論配信とLoRAファインチューニングという2つの領域の交差点に位置するため、他のセルフホスト型の推論・ファインチューニングツールと比較されることが最も多いです。** [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)内のLoRAX自身のエントリーと併せてご覧ください。',
+        content: '**LoRAXは、推論配信とLoRAファインチューニングという2つの領域の交差点に位置するため、他のセルフホスト型の推論・ファインチューニングツールと比較されることが最も多いです。** [Local LLM Software Directory](https://www.promptquorum.com/directory)内のLoRAX自身のエントリーと併せてご覧ください。',
         rows: [
           { 'Tool': 'LMDeploy', 'Best known for': '量子化と配信ツールキットを備えたオープンソースの推論エンジン', 'Link': '[LMDeployレビュー](/ja/power-local-llm/lmdeploy-review)' },
           { 'Tool': 'NVIDIA Dynamo', 'Best known for': 'APIサーバー機能を備えた高スループットの推論配信フレームワーク', 'Link': '[NVIDIA Dynamoレビュー](/ja/power-local-llm/dynamo-review)' },
@@ -1134,7 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LMDeployレビュー](/ja/power-local-llm/lmdeploy-review) — 量子化と配信ツールを備えたオープンソースの推論エンジン。LoRAXのアダプター重視の設計との比較に。',
           '[Unslothレビュー](/ja/power-local-llm/unsloth-review) — LoRAXが配信するアダプターを作成するための、高速でメモリ効率の良いLoRA/QLoRAファインチューニングライブラリ。',
           '[LLaMA-Factoryレビュー](/ja/power-local-llm/llama-factory-review) — LoRAや他のPEFT手法に対応する統合ファインチューニングフレームワーク。',
-          '[Local LLM Software Directory 2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、ローカルAIツールの完全なカタログ。',
+          '[Local LLM Software Directory 2026](/ja/directory) — この記事が属する、ローカルAIツールの完全なカタログ。',
         ],
       },
     },
@@ -1355,7 +1355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '竞品与替代方案',
-        content: '**由于LoRAX正好处在推理服务与LoRA微调这两个领域的交叉点上,它最常被拿来与其他自托管推理和微调工具比较。** 可与[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中LoRAX自己的条目搭配参考。',
+        content: '**由于LoRAX正好处在推理服务与LoRA微调这两个领域的交叉点上,它最常被拿来与其他自托管推理和微调工具比较。** 可与[本地LLM软件目录](https://www.promptquorum.com/directory)中LoRAX自己的条目搭配参考。',
         rows: [
           { 'Tool': 'LMDeploy', 'Best known for': '带量化和服务工具包的开源推理引擎', 'Link': '[LMDeploy评测](/zh/power-local-llm/lmdeploy-review)' },
           { 'Tool': 'NVIDIA Dynamo', 'Best known for': '带API服务器功能的高吞吐量推理服务框架', 'Link': '[NVIDIA Dynamo评测](/zh/power-local-llm/dynamo-review)' },
@@ -1398,7 +1398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LMDeploy评测](/zh/power-local-llm/lmdeploy-review) ——一款带量化和服务工具的开源推理引擎,可与LoRAX以适配器为核心的设计做对比。',
           '[Unsloth评测](/zh/power-local-llm/unsloth-review) ——一个快速、内存高效的LoRA/QLoRA微调库,用于生成LoRAX所服务的适配器。',
           '[LLaMA-Factory评测](/zh/power-local-llm/llama-factory-review) ——一个支持LoRA及其他PEFT方法的统一微调框架。',
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) ——本文所属的本地AI工具完整目录。',
+          '[本地LLM软件目录2026](/zh/directory) ——本文所属的本地AI工具完整目录。',
         ],
       },
     },
@@ -1619,7 +1619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Competidores y alternativas',
-        content: '**LoRAX se compara con mayor frecuencia con otras herramientas autoalojadas de inferencia y fine-tuning, ya que se sitúa en la intersección de los segmentos de servicio de inferencia y ajuste fino LoRA.** Complementa la propia entrada de LoRAX en el [Directorio de software LLM local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+        content: '**LoRAX se compara con mayor frecuencia con otras herramientas autoalojadas de inferencia y fine-tuning, ya que se sitúa en la intersección de los segmentos de servicio de inferencia y ajuste fino LoRA.** Complementa la propia entrada de LoRAX en el [Directorio de software LLM local](https://www.promptquorum.com/directory).',
         rows: [
           { 'Tool': 'LMDeploy', 'Best known for': 'Motor de inferencia de código abierto con kit de cuantización y servicio', 'Link': '[Análisis de LMDeploy](/es/power-local-llm/lmdeploy-review)' },
           { 'Tool': 'NVIDIA Dynamo', 'Best known for': 'Framework de servicio de inferencia de alto rendimiento con funciones de servidor API', 'Link': '[Análisis de NVIDIA Dynamo](/es/power-local-llm/dynamo-review)' },
@@ -1662,7 +1662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análisis de LMDeploy](/es/power-local-llm/lmdeploy-review) — un motor de inferencia de código abierto con herramientas de cuantización y servicio, para comparar con el diseño centrado en adaptadores de LoRAX.',
           '[Análisis de Unsloth](/es/power-local-llm/unsloth-review) — una biblioteca de fine-tuning LoRA/QLoRA rápida y eficiente en memoria para producir los adaptadores que sirve LoRAX.',
           '[Análisis de LLaMA-Factory](/es/power-local-llm/llama-factory-review) — un framework de fine-tuning unificado que admite LoRA y otros métodos PEFT.',
-          '[Directorio de software LLM local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
+          '[Directorio de software LLM local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo.',
         ],
       },
     },
@@ -1883,7 +1883,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'Concorrentes e alternativas',
-        content: '**O LoRAX é mais frequentemente comparado a outras ferramentas autogerenciadas de inferência e fine-tuning, pois fica na interseção entre os segmentos de serviço de inferência e ajuste fino LoRA.** Complementar à própria entrada do LoRAX no [Diretório de Software LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+        content: '**O LoRAX é mais frequentemente comparado a outras ferramentas autogerenciadas de inferência e fine-tuning, pois fica na interseção entre os segmentos de serviço de inferência e ajuste fino LoRA.** Complementar à própria entrada do LoRAX no [Diretório de Software LLM Local](https://www.promptquorum.com/directory).',
         rows: [
           { 'Tool': 'LMDeploy', 'Best known for': 'Motor de inferência de código aberto com kit de quantização e serviço', 'Link': '[Análise do LMDeploy](/pt/power-local-llm/lmdeploy-review)' },
           { 'Tool': 'NVIDIA Dynamo', 'Best known for': 'Framework de serviço de inferência de alto throughput com recursos de servidor de API', 'Link': '[Análise do NVIDIA Dynamo](/pt/power-local-llm/dynamo-review)' },
@@ -1926,7 +1926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do LMDeploy](/pt/power-local-llm/lmdeploy-review) — um motor de inferência de código aberto com ferramentas de quantização e serviço, para comparação com o design focado em adaptadores do LoRAX.',
           '[Análise do Unsloth](/pt/power-local-llm/unsloth-review) — uma biblioteca de fine-tuning LoRA/QLoRA rápida e eficiente em memória para produzir os adaptadores que o LoRAX serve.',
           '[Análise do LLaMA-Factory](/pt/power-local-llm/llama-factory-review) — um framework de fine-tuning unificado com suporte a LoRA e outros métodos PEFT.',
-          '[Diretório de Software LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
+          '[Diretório de Software LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence.',
         ],
       },
     },
@@ -2147,7 +2147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: 'المنافسون والبدائل',
-        content: '**تُقارَن LoRAX غالباً بأدوات استدلال وضبط دقيق أخرى قابلة للاستضافة الذاتية، نظراً لأنها تقع عند تقاطع مجالَي تقديم خدمة الاستدلال والضبط الدقيق بـ LoRA.** مكمِّلة لمدخل LoRAX الخاص في [دليل برمجيات LLM المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory).',
+        content: '**تُقارَن LoRAX غالباً بأدوات استدلال وضبط دقيق أخرى قابلة للاستضافة الذاتية، نظراً لأنها تقع عند تقاطع مجالَي تقديم خدمة الاستدلال والضبط الدقيق بـ LoRA.** مكمِّلة لمدخل LoRAX الخاص في [دليل برمجيات LLM المحلية](https://www.promptquorum.com/directory).',
         rows: [
           { 'Tool': 'LMDeploy', 'Best known for': 'محرك استدلال مفتوح المصدر مع مجموعة أدوات للتكميم وتقديم الخدمة', 'Link': '[مراجعة LMDeploy](/ar/power-local-llm/lmdeploy-review)' },
           { 'Tool': 'NVIDIA Dynamo', 'Best known for': 'إطار تقديم استدلال عالي الإنتاجية مع ميزات خادم API', 'Link': '[مراجعة NVIDIA Dynamo](/ar/power-local-llm/dynamo-review)' },
@@ -2190,7 +2190,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة LMDeploy](/ar/power-local-llm/lmdeploy-review) — محرك استدلال مفتوح المصدر مع أدوات تكميم وتقديم خدمة، للمقارنة مع تصميم LoRAX المرتكز على المحولات.',
           '[مراجعة Unsloth](/ar/power-local-llm/unsloth-review) — مكتبة ضبط دقيق LoRA/QLoRA سريعة وفعالة من حيث الذاكرة لإنتاج المحولات التي تقدم LoRAX خدمتها.',
           '[مراجعة LLaMA-Factory](/ar/power-local-llm/llama-factory-review) — إطار ضبط دقيق موحَّد يدعم LoRA وطرق PEFT الأخرى.',
-          '[دليل برمجيات LLM المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
+          '[دليل برمجيات LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال.',
         ],
       },
     },
@@ -2411,7 +2411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'competitors',
         title: '경쟁 제품 및 대안',
-        content: '**LoRAX는 추론 서비스와 LoRA 미세조정이라는 두 영역의 교차점에 위치하기 때문에, 다른 셀프호스팅 추론 및 미세조정 도구와 가장 자주 비교됩니다.** [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 LoRAX 자체 항목과 함께 참고하세요.',
+        content: '**LoRAX는 추론 서비스와 LoRA 미세조정이라는 두 영역의 교차점에 위치하기 때문에, 다른 셀프호스팅 추론 및 미세조정 도구와 가장 자주 비교됩니다.** [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 있는 LoRAX 자체 항목과 함께 참고하세요.',
         rows: [
           { 'Tool': 'LMDeploy', 'Best known for': '양자화 및 서비스 툴킷을 갖춘 오픈소스 추론 엔진', 'Link': '[LMDeploy 리뷰](/ko/power-local-llm/lmdeploy-review)' },
           { 'Tool': 'NVIDIA Dynamo', 'Best known for': 'API 서버 기능을 갖춘 고처리량 추론 서비스 프레임워크', 'Link': '[NVIDIA Dynamo 리뷰](/ko/power-local-llm/dynamo-review)' },
@@ -2454,7 +2454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LMDeploy 리뷰](/ko/power-local-llm/lmdeploy-review) — LoRAX의 어댑터 중심 설계와 비교할 수 있는, 양자화 및 서비스 도구를 갖춘 오픈소스 추론 엔진.',
           '[Unsloth 리뷰](/ko/power-local-llm/unsloth-review) — LoRAX가 서비스하는 어댑터를 만들기 위한, 빠르고 메모리 효율적인 LoRA/QLoRA 미세조정 라이브러리.',
           '[LLaMA-Factory 리뷰](/ko/power-local-llm/llama-factory-review) — LoRA 및 기타 PEFT 방식을 지원하는 통합 미세조정 프레임워크.',
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 문서가 속한, 로컬 AI 도구의 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 문서가 속한, 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },

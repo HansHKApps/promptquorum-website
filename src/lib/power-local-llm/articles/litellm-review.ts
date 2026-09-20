@@ -73,7 +73,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A separate commercial Enterprise tier exists at [litellm.ai/enterprise](https://litellm.ai/enterprise), covering SSO, prioritized feature requests, and dedicated support — the open-source SDK and proxy remain fully usable without it',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to LiteLLM\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how LiteLLM compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to LiteLLM\'s entry in the [Local LLM Software Directory](/directory) — see that page for how LiteLLM compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -195,14 +195,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'litellm-competitors',
         title: 'LiteLLM vs. Other Gateways and Frameworks',
-        content: 'As of this review, LiteLLM is the first router/gateway-category tool covered with its own dedicated review in PromptQuorum\'s [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — there is no second same-segment (router/gateway) FeatureAppPost to compare it against directly yet. The closest useful comparisons instead come from adjacent tools in the same "Run & Serve" part of the directory, plus one widely known hosted alternative outside the directory.',
+        content: 'As of this review, LiteLLM is the first router/gateway-category tool covered with its own dedicated review in PromptQuorum\'s [Local LLM Software Directory](/directory) — there is no second same-segment (router/gateway) FeatureAppPost to compare it against directly yet. The closest useful comparisons instead come from adjacent tools in the same "Run & Serve" part of the directory, plus one widely known hosted alternative outside the directory.',
         items: [
           '**[vLLM](/power-local-llm/vllm-explained)** — a self-hosted inference engine that actually serves model weights (GPU required); commonly paired with LiteLLM rather than competing with it, with LiteLLM as the routing layer in front of one or more vLLM deployments.',
           '**[LocalAI](/power-local-llm/localai-explained)** — a self-hosted, OpenAI-compatible API server for running open models locally; solves a different problem than LiteLLM (serving vs. routing) but exposes a similar OpenAI-format API, which is a common source of confusion between the two.',
           '**[LangChain](/power-local-llm/langchain-review)** — an application framework for building LLM-powered apps (chains, agents, memory); it can call LiteLLM (or any provider directly) as its model-access layer rather than replacing what LiteLLM does.',
           '**[OpenRouter](https://openrouter.ai)** (external, not in PromptQuorum\'s directory) — a hosted, managed routing service covering a similar multi-provider use case as LiteLLM\'s proxy, but as a third-party service you call rather than infrastructure you self-host; worth comparing directly if you want zero-ops routing instead of running your own proxy.',
         ],
-        note: 'This is not an exhaustive list — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including LiteLLM\'s own directory entry and any future same-segment router/gateway tools added to it.',
+        note: 'This is not an exhaustive list — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including LiteLLM\'s own directory entry and any future same-segment router/gateway tools added to it.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -259,7 +259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including LiteLLM\'s directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including LiteLLM\'s directory entry.',
           '[vLLM Explained](/power-local-llm/vllm-explained) — a dedicated look at the high-throughput inference engine commonly paired behind a LiteLLM gateway.',
           '[LocalAI Explained](/power-local-llm/localai-explained) — a self-hosted, OpenAI-compatible model server that solves a related but distinct problem from LiteLLM\'s routing layer.',
           '[LangChain Review](/power-local-llm/langchain-review) — an application framework that can use LiteLLM as its model-access layer.',
@@ -338,7 +338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Eine separate kostenpflichtige Enterprise-Stufe existiert unter [litellm.ai/enterprise](https://litellm.ai/enterprise) mit SSO, priorisierten Feature-Wünschen und dediziertem Support — SDK und Proxy bleiben ohne sie vollständig nutzbar',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu LiteLLMs Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — dort sehen Sie auf einen Blick, wie LiteLLM im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu LiteLLMs Eintrag im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie LiteLLM im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -460,14 +460,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'litellm-competitors',
         title: 'LiteLLM vs. andere Gateways und Frameworks',
-        content: 'Stand dieser Review ist LiteLLM das erste Router-/Gateway-Tool mit eigener ausführlicher Review in PromptQuorums [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — es gibt noch kein zweites Tool im selben Segment (Router/Gateway) für einen direkten Vergleich. Die nächstliegenden sinnvollen Vergleiche stammen stattdessen von benachbarten Tools im selben „Run & Serve"-Teil des Directorys, ergänzt um eine bekannte gehostete Alternative außerhalb des Directorys.',
+        content: 'Stand dieser Review ist LiteLLM das erste Router-/Gateway-Tool mit eigener ausführlicher Review in PromptQuorums [Local LLM Software Directory](/de/directory) — es gibt noch kein zweites Tool im selben Segment (Router/Gateway) für einen direkten Vergleich. Die nächstliegenden sinnvollen Vergleiche stammen stattdessen von benachbarten Tools im selben „Run & Serve"-Teil des Directorys, ergänzt um eine bekannte gehostete Alternative außerhalb des Directorys.',
         items: [
           '**[vLLM](/de/power-local-llm/vllm-explained)** — eine selbst gehostete Inferenz-Engine, die tatsächlich Modellgewichte ausführt (GPU erforderlich); wird meist zusammen mit LiteLLM eingesetzt statt als Konkurrenz, wobei LiteLLM als Routing-Schicht vor einem oder mehreren vLLM-Deployments steht.',
           '**[LocalAI](/de/power-local-llm/localai-explained)** — ein selbst gehosteter, OpenAI-kompatibler API-Server zum lokalen Betrieb offener Modelle; löst ein anderes Problem als LiteLLM (Ausführen vs. Routing), bietet aber eine ähnliche OpenAI-Format-API — eine häufige Verwechslungsquelle zwischen beiden.',
           '**[LangChain](/de/power-local-llm/langchain-review)** — ein Anwendungs-Framework zum Bauen LLM-gestützter Apps (Chains, Agenten, Memory); kann LiteLLM (oder jeden Anbieter direkt) als Modellzugriffsschicht nutzen, statt zu ersetzen, was LiteLLM tut.',
           '**[OpenRouter](https://openrouter.ai)** (extern, nicht im Directory von PromptQuorum) — ein gehosteter, verwalteter Routing-Dienst für einen ähnlichen Multi-Anbieter-Anwendungsfall wie LiteLLMs Proxy, jedoch als Drittanbieter-Dienst, den Sie aufrufen, statt Infrastruktur, die Sie selbst betreiben; ein direkter Vergleich lohnt sich, wenn Sie zero-ops-Routing statt eines eigenen Proxys wollen.',
         ],
-        note: 'Dies ist keine erschöpfende Liste — den vollständigen, regelmäßig aktualisierten Katalog inklusive LiteLLMs eigenem Directory-Eintrag und künftiger Router-/Gateway-Tools im selben Segment finden Sie im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine erschöpfende Liste — den vollständigen, regelmäßig aktualisierten Katalog inklusive LiteLLMs eigenem Directory-Eintrag und künftiger Router-/Gateway-Tools im selben Segment finden Sie im [Local LLM Software Directory](/de/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -524,7 +524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, inklusive LiteLLMs Directory-Eintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, inklusive LiteLLMs Directory-Eintrag.',
           '[vLLM erklärt](/de/power-local-llm/vllm-explained) — ein eigener Blick auf die Hochdurchsatz-Inferenz-Engine, die häufig hinter einem LiteLLM-Gateway eingesetzt wird.',
           '[LocalAI erklärt](/de/power-local-llm/localai-explained) — ein selbst gehosteter, OpenAI-kompatibler Modell-Server, der ein verwandtes, aber eigenständiges Problem zu LiteLLMs Routing-Schicht löst.',
           '[LangChain Review](/de/power-local-llm/langchain-review) — ein Anwendungs-Framework, das LiteLLM als Modellzugriffsschicht nutzen kann.',
@@ -603,7 +603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Une offre commerciale Enterprise distincte existe sur [litellm.ai/enterprise](https://litellm.ai/enterprise), couvrant SSO, demandes de fonctionnalités prioritaires et support dédié — le SDK et le proxy open source restent pleinement utilisables sans elle',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche LiteLLM dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour comparer LiteLLM en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche LiteLLM dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour comparer LiteLLM en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -725,14 +725,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'litellm-competitors',
         title: 'LiteLLM face aux autres passerelles et frameworks',
-        content: 'Au moment de cet avis, LiteLLM est le premier outil de la catégorie routeur/passerelle à disposer de sa propre revue approfondie dans le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) de PromptQuorum — il n\'existe pas encore de deuxième FeatureAppPost du même segment (routeur/passerelle) pour une comparaison directe. Les comparaisons utiles les plus proches viennent plutôt d\'outils voisins dans la même partie « Run & Serve » du répertoire, complétées par une alternative hébergée largement connue en dehors du répertoire.',
+        content: 'Au moment de cet avis, LiteLLM est le premier outil de la catégorie routeur/passerelle à disposer de sa propre revue approfondie dans le [Local LLM Software Directory](/fr/directory) de PromptQuorum — il n\'existe pas encore de deuxième FeatureAppPost du même segment (routeur/passerelle) pour une comparaison directe. Les comparaisons utiles les plus proches viennent plutôt d\'outils voisins dans la même partie « Run & Serve » du répertoire, complétées par une alternative hébergée largement connue en dehors du répertoire.',
         items: [
           '**[vLLM](/fr/power-local-llm/vllm-explained)** — un moteur d\'inférence auto-hébergé qui exécute réellement les poids du modèle (GPU requis) ; couramment associé à LiteLLM plutôt qu\'en concurrence avec lui, LiteLLM servant de couche de routage devant un ou plusieurs déploiements vLLM.',
           '**[LocalAI](/fr/power-local-llm/localai-explained)** — un serveur API auto-hébergé compatible OpenAI pour exécuter localement des modèles ouverts ; résout un problème différent de celui de LiteLLM (exécution vs. routage) mais expose une API de format OpenAI similaire, source fréquente de confusion entre les deux.',
           '**[LangChain](/fr/power-local-llm/langchain-review)** — un framework applicatif pour construire des applications basées sur des LLM (chaînes, agents, mémoire) ; il peut appeler LiteLLM (ou n\'importe quel fournisseur directement) comme couche d\'accès aux modèles plutôt que de remplacer ce que fait LiteLLM.',
           '**[OpenRouter](https://openrouter.ai)** (externe, absent du répertoire de PromptQuorum) — un service de routage hébergé et géré couvrant un cas d\'usage multi-fournisseurs similaire au proxy de LiteLLM, mais en tant que service tiers que vous appelez plutôt qu\'une infrastructure que vous auto-hébergez ; à comparer directement si vous voulez un routage sans exploitation plutôt que d\'exploiter votre propre proxy.',
         ],
-        note: 'Cette liste n\'est pas exhaustive — consultez le [Local LLM Software Directory](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la fiche de LiteLLM et tout futur outil routeur/passerelle du même segment qui y serait ajouté.',
+        note: 'Cette liste n\'est pas exhaustive — consultez le [Local LLM Software Directory](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant la fiche de LiteLLM et tout futur outil routeur/passerelle du même segment qui y serait ajouté.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -789,7 +789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Local LLM Software Directory 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche de LiteLLM.',
+          '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche de LiteLLM.',
           '[vLLM expliqué](/fr/power-local-llm/vllm-explained) — un regard dédié sur le moteur d\'inférence à haut débit couramment associé derrière une passerelle LiteLLM.',
           '[LocalAI expliqué](/fr/power-local-llm/localai-explained) — un serveur de modèles auto-hébergé compatible OpenAI qui résout un problème connexe mais distinct de la couche de routage de LiteLLM.',
           '[Avis LangChain](/fr/power-local-llm/langchain-review) — un framework applicatif qui peut utiliser LiteLLM comme couche d\'accès aux modèles.',
@@ -868,7 +868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Existe un nivel comercial Enterprise aparte en [litellm.ai/enterprise](https://litellm.ai/enterprise), que cubre SSO, solicitudes de funciones prioritarias y soporte dedicado — el SDK y el proxy de código abierto siguen siendo completamente utilizables sin él',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la ficha de LiteLLM en el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara LiteLLM de un vistazo con docenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la ficha de LiteLLM en el [Directorio de Software LLM Local](/es/directory) — consulta esa página para ver cómo se compara LiteLLM de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -990,14 +990,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'litellm-competitors',
         title: 'LiteLLM frente a otras puertas de enlace y frameworks',
-        content: 'Al momento de esta reseña, LiteLLM es la primera herramienta de la categoría enrutador/puerta de enlace con su propia reseña dedicada en el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) de PromptQuorum — todavía no existe una segunda herramienta del mismo segmento (enrutador/puerta de enlace) para una comparación directa. Las comparaciones útiles más cercanas provienen en cambio de herramientas afines en la misma sección "Run & Serve" del directorio, más una alternativa alojada ampliamente conocida fuera del directorio.',
+        content: 'Al momento de esta reseña, LiteLLM es la primera herramienta de la categoría enrutador/puerta de enlace con su propia reseña dedicada en el [Directorio de Software LLM Local](/es/directory) de PromptQuorum — todavía no existe una segunda herramienta del mismo segmento (enrutador/puerta de enlace) para una comparación directa. Las comparaciones útiles más cercanas provienen en cambio de herramientas afines en la misma sección "Run & Serve" del directorio, más una alternativa alojada ampliamente conocida fuera del directorio.',
         items: [
           '**[vLLM](/es/power-local-llm/vllm-explained)** — un motor de inferencia autoalojado que realmente sirve los pesos del modelo (requiere GPU); habitualmente combinado con LiteLLM en lugar de competir con él, con LiteLLM como capa de enrutamiento delante de uno o varios despliegues de vLLM.',
           '**[LocalAI](/es/power-local-llm/localai-explained)** — un servidor de API autoalojado y compatible con OpenAI para ejecutar modelos abiertos localmente; resuelve un problema distinto al de LiteLLM (servir vs. enrutar) pero expone una API de formato OpenAI similar, fuente habitual de confusión entre ambos.',
           '**[LangChain](/es/power-local-llm/langchain-review)** — un framework de aplicación para construir apps basadas en LLM (cadenas, agentes, memoria); puede llamar a LiteLLM (o directamente a cualquier proveedor) como su capa de acceso a modelos, en lugar de sustituir lo que hace LiteLLM.',
           '**[OpenRouter](https://openrouter.ai)** (externo, no está en el directorio de PromptQuorum) — un servicio de enrutamiento alojado y gestionado que cubre un caso de uso multiproveedor similar al proxy de LiteLLM, pero como servicio de terceros al que llamas en lugar de infraestructura que autoalojas; merece la pena comparar directamente si buscas enrutamiento sin operación propia en vez de gestionar tu propio proxy.',
         ],
-        note: 'Esta no es una lista exhaustiva — consulta el [Directorio de Software LLM Local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluyendo la propia ficha de LiteLLM y cualquier futura herramienta enrutador/puerta de enlace del mismo segmento que se añada.',
+        note: 'Esta no es una lista exhaustiva — consulta el [Directorio de Software LLM Local](/es/directory) para el catálogo completo y actualizado regularmente, incluyendo la propia ficha de LiteLLM y cualquier futura herramienta enrutador/puerta de enlace del mismo segmento que se añada.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1054,7 +1054,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de Software LLM Local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de LiteLLM.',
+          '[Directorio de Software LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo la ficha de LiteLLM.',
           '[vLLM explicado](/es/power-local-llm/vllm-explained) — una mirada dedicada al motor de inferencia de alto rendimiento comúnmente combinado detrás de una puerta de enlace LiteLLM.',
           '[LocalAI explicado](/es/power-local-llm/localai-explained) — un servidor de modelos autoalojado y compatible con OpenAI que resuelve un problema relacionado pero distinto de la capa de enrutamiento de LiteLLM.',
           '[Reseña de LangChain](/es/power-local-llm/langchain-review) — un framework de aplicación que puede usar LiteLLM como su capa de acceso a modelos.',
@@ -1133,7 +1133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Existe um nível comercial Enterprise separado em [litellm.ai/enterprise](https://litellm.ai/enterprise), cobrindo SSO, pedidos de funcionalidades prioritárias e suporte dedicado — o SDK e o proxy de código aberto continuam totalmente utilizáveis sem ele',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o aprofundamento complementar à ficha do LiteLLM no [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar o LiteLLM rapidamente com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o aprofundamento complementar à ficha do LiteLLM no [Diretório de Software LLM Local](/pt/directory) — veja essa página para comparar o LiteLLM rapidamente com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1255,14 +1255,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'litellm-competitors',
         title: 'LiteLLM vs. outros gateways e frameworks',
-        content: 'No momento desta análise, o LiteLLM é a primeira ferramenta da categoria roteador/gateway com uma análise dedicada própria no [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) da PromptQuorum — ainda não existe uma segunda ferramenta do mesmo segmento (roteador/gateway) para uma comparação direta. As comparações úteis mais próximas vêm, em vez disso, de ferramentas adjacentes na mesma seção "Run & Serve" do diretório, além de uma alternativa hospedada amplamente conhecida fora do diretório.',
+        content: 'No momento desta análise, o LiteLLM é a primeira ferramenta da categoria roteador/gateway com uma análise dedicada própria no [Diretório de Software LLM Local](/pt/directory) da PromptQuorum — ainda não existe uma segunda ferramenta do mesmo segmento (roteador/gateway) para uma comparação direta. As comparações úteis mais próximas vêm, em vez disso, de ferramentas adjacentes na mesma seção "Run & Serve" do diretório, além de uma alternativa hospedada amplamente conhecida fora do diretório.',
         items: [
           '**[vLLM](/pt/power-local-llm/vllm-explained)** — um motor de inferência auto-hospedado que realmente serve os pesos do modelo (exige GPU); comumente combinado com o LiteLLM em vez de competir com ele, com o LiteLLM como camada de roteamento na frente de uma ou mais implantações do vLLM.',
           '**[LocalAI](/pt/power-local-llm/localai-explained)** — um servidor de API auto-hospedado e compatível com OpenAI para executar modelos abertos localmente; resolve um problema diferente do LiteLLM (servir vs. rotear), mas expõe uma API de formato OpenAI semelhante, fonte comum de confusão entre os dois.',
           '**[LangChain](/pt/power-local-llm/langchain-review)** — um framework de aplicação para construir apps baseados em LLM (chains, agentes, memória); pode chamar o LiteLLM (ou diretamente qualquer provedor) como sua camada de acesso a modelos, em vez de substituir o que o LiteLLM faz.',
           '**[OpenRouter](https://openrouter.ai)** (externo, fora do diretório da PromptQuorum) — um serviço de roteamento hospedado e gerenciado cobrindo um caso de uso multiprovedor semelhante ao proxy do LiteLLM, mas como um serviço de terceiros que você chama em vez de infraestrutura que você mesmo hospeda; vale a pena comparar diretamente se você quer roteamento sem operação própria em vez de gerenciar seu próprio proxy.',
         ],
-        note: 'Esta não é uma lista exaustiva — veja o [Diretório de Software LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do LiteLLM e quaisquer futuras ferramentas roteador/gateway do mesmo segmento adicionadas a ele.',
+        note: 'Esta não é uma lista exaustiva — veja o [Diretório de Software LLM Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do LiteLLM e quaisquer futuras ferramentas roteador/gateway do mesmo segmento adicionadas a ele.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1319,7 +1319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do LiteLLM.',
+          '[Diretório de Software LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha do LiteLLM.',
           '[vLLM explicado](/pt/power-local-llm/vllm-explained) — um olhar dedicado ao motor de inferência de alto throughput comumente combinado atrás de um gateway LiteLLM.',
           '[LocalAI explicado](/pt/power-local-llm/localai-explained) — um servidor de modelos auto-hospedado e compatível com OpenAI que resolve um problema relacionado, mas distinto, da camada de roteamento do LiteLLM.',
           '[Análise do LangChain](/pt/power-local-llm/langchain-review) — um framework de aplicação que pode usar o LiteLLM como sua camada de acesso a modelos.',
@@ -1398,7 +1398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[litellm.ai/enterprise](https://litellm.ai/enterprise)には、SSO、優先機能リクエスト、専任サポートをカバーする別の有償Enterpriseティアが存在する — オープンソースのSDKとプロキシは、それなしでも完全に利用可能',
         ],
         callouts: [
-          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるLiteLLMのエントリーを深掘りする姉妹記事です — LiteLLMが他の数十のローカルAIツールと比べてどう位置づけられるかは、そちらのページで一覧できます。' },
+          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるLiteLLMのエントリーを深掘りする姉妹記事です — LiteLLMが他の数十のローカルAIツールと比べてどう位置づけられるかは、そちらのページで一覧できます。' },
         ],
       },
       overview: {
@@ -1520,14 +1520,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'litellm-competitors',
         title: 'LiteLLM vs. 他のゲートウェイとフレームワーク',
-        content: '本レビュー時点で、LiteLLMはPromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)において専用レビューを持つ最初のルーター/ゲートウェイカテゴリーのツールです — 直接比較できる同一セグメント（ルーター/ゲートウェイ）の2つ目のツールはまだありません。代わりに、ディレクトリ内の同じ「Run & Serve」区分にある近接ツール、そしてディレクトリ外のよく知られたホスト型代替サービスが、最も有用な比較対象になります。',
+        content: '本レビュー時点で、LiteLLMはPromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/directory)において専用レビューを持つ最初のルーター/ゲートウェイカテゴリーのツールです — 直接比較できる同一セグメント（ルーター/ゲートウェイ）の2つ目のツールはまだありません。代わりに、ディレクトリ内の同じ「Run & Serve」区分にある近接ツール、そしてディレクトリ外のよく知られたホスト型代替サービスが、最も有用な比較対象になります。',
         items: [
           '**[vLLM](/ja/power-local-llm/vllm-explained)** — 実際にモデルの重みを提供するセルフホスト型推論エンジン（GPU必須）。LiteLLMと競合するというより組み合わせて使われることが多く、LiteLLMが1つ以上のvLLMデプロイの手前でルーティング層として機能する。',
           '**[LocalAI](/ja/power-local-llm/localai-explained)** — オープンモデルをローカルで実行するための、セルフホスト型でOpenAI互換のAPIサーバー。LiteLLMとは異なる問題（提供 vs. ルーティング）を解決するが、似たOpenAI形式のAPIを公開しており、両者の混同の一般的な原因となっている。',
           '**[LangChain](/ja/power-local-llm/langchain-review)** — チェーン、エージェント、メモリなどLLM搭載アプリを構築するためのアプリケーションフレームワーク。LiteLLMが行うことを置き換えるのではなく、モデルアクセス層としてLiteLLM（または任意のプロバイダーを直接）を呼び出せる。',
           '**[OpenRouter](https://openrouter.ai)**（外部、PromptQuorumのディレクトリには非掲載） — LiteLLMのプロキシと似たマルチプロバイダーのユースケースをカバーするホスト型・マネージドのルーティングサービスだが、自分でホストするインフラではなく呼び出すサードパーティサービスである。自前のプロキシを運用する代わりにゼロ運用のルーティングを求めるなら直接比較する価値がある。',
         ],
-        note: 'これは網羅的なリストではありません — 完全かつ定期的に更新されるカタログ（LiteLLM自身のディレクトリエントリーや、今後追加される可能性のある同一セグメントのルーター/ゲートウェイツールを含む）については、[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これは網羅的なリストではありません — 完全かつ定期的に更新されるカタログ（LiteLLM自身のディレクトリエントリーや、今後追加される可能性のある同一セグメントのルーター/ゲートウェイツールを含む）については、[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1584,7 +1584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — この記事が属する、LiteLLMのディレクトリエントリーを含むローカルAIツールの完全カタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — この記事が属する、LiteLLMのディレクトリエントリーを含むローカルAIツールの完全カタログ。',
           '[vLLM解説](/ja/power-local-llm/vllm-explained) — LiteLLMゲートウェイの背後でよく組み合わされる高スループット推論エンジンを専門に扱う記事。',
           '[LocalAI解説](/ja/power-local-llm/localai-explained) — LiteLLMのルーティング層とは関連するが別の問題を解決する、セルフホスト型でOpenAI互換のモデルサーバー。',
           '[LangChainレビュー](/ja/power-local-llm/langchain-review) — LiteLLMをモデルアクセス層として利用できるアプリケーションフレームワーク。',
@@ -1663,7 +1663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[litellm.ai/enterprise](https://litellm.ai/enterprise)提供单独的商业Enterprise层级，涵盖SSO、优先功能请求和专属支持——开源SDK和代理无需它也能完全可用',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中LiteLLM条目的深度补充——该页面展示了LiteLLM与其他数十款本地AI工具的一览式对比。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中LiteLLM条目的深度补充——该页面展示了LiteLLM与其他数十款本地AI工具的一览式对比。' },
         ],
       },
       overview: {
@@ -1785,14 +1785,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'litellm-competitors',
         title: 'LiteLLM 对比其他网关与框架',
-        content: '截至本评测时，LiteLLM是PromptQuorum[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中第一款拥有专门评测的路由器/网关类工具——目前还没有第二款同一细分领域（路由器/网关）的工具可供直接对比。因此，最接近的有用比较来自目录中同属"运行与服务"部分的相邻工具，以及目录之外一个广为人知的托管替代方案。',
+        content: '截至本评测时，LiteLLM是PromptQuorum[本地LLM软件目录](/zh/directory)中第一款拥有专门评测的路由器/网关类工具——目前还没有第二款同一细分领域（路由器/网关）的工具可供直接对比。因此，最接近的有用比较来自目录中同属"运行与服务"部分的相邻工具，以及目录之外一个广为人知的托管替代方案。',
         items: [
           '**[vLLM](/zh/power-local-llm/vllm-explained)** — 一个真正提供模型权重服务的自托管推理引擎（需要GPU）；通常与LiteLLM搭配使用而非与之竞争，由LiteLLM作为路由层置于一个或多个vLLM部署之前。',
           '**[LocalAI](/zh/power-local-llm/localai-explained)** — 一个用于本地运行开放模型的自托管、OpenAI兼容API服务器；它解决的是与LiteLLM不同的问题（提供服务 vs. 路由），但暴露出类似的OpenAI格式API，这也是两者常被混淆的原因。',
           '**[LangChain](/zh/power-local-llm/langchain-review)** — 一个用于构建LLM驱动应用（链、智能体、记忆）的应用框架；它可以调用LiteLLM（或直接调用任何提供商）作为其模型访问层，而不是取代LiteLLM所做的事情。',
           '**[OpenRouter](https://openrouter.ai)**（外部工具，未收录于PromptQuorum目录） — 一个托管、受管理的路由服务，覆盖与LiteLLM代理类似的多提供商场景，但它是你调用的第三方服务，而非你自行托管的基础设施；如果你想要零运维路由而不是自己运行代理，值得直接对比。',
         ],
-        note: '此列表并非详尽无遗——完整且定期更新的目录，包括LiteLLM自身的目录条目以及未来可能加入的同一细分领域路由器/网关工具，请参见[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '此列表并非详尽无遗——完整且定期更新的目录，包括LiteLLM自身的目录条目以及未来可能加入的同一细分领域路由器/网关工具，请参见[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1849,7 +1849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地LLM软件目录2026](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包含LiteLLM的目录条目。',
+          '[本地LLM软件目录2026](/zh/directory) — 本文所属的本地AI工具完整目录，包含LiteLLM的目录条目。',
           '[vLLM详解](/zh/power-local-llm/vllm-explained) — 专门介绍常与LiteLLM网关搭配使用的高吞吐量推理引擎。',
           '[LocalAI详解](/zh/power-local-llm/localai-explained) — 一款自托管、OpenAI兼容的模型服务器，解决的是与LiteLLM路由层相关但不同的问题。',
           '[LangChain评测](/zh/power-local-llm/langchain-review) — 一个可以将LiteLLM用作其模型访问层的应用框架。',
@@ -1928,7 +1928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'توجد فئة تجارية منفصلة بعنوان Enterprise على [litellm.ai/enterprise](https://litellm.ai/enterprise)، تشمل تسجيل الدخول الموحّد (SSO) وطلبات الميزات ذات الأولوية والدعم المخصص — تبقى حزمة SDK والوكيل مفتوحا المصدر قابلين للاستخدام الكامل دونها',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المقال المكمّل المتعمّق لمدخل LiteLLM في [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف تقارن LiteLLM بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المقال المكمّل المتعمّق لمدخل LiteLLM في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تقارن LiteLLM بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2050,14 +2050,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'litellm-competitors',
         title: 'LiteLLM مقابل بوابات وأطر عمل أخرى',
-        content: 'حتى وقت هذه المراجعة، تُعد LiteLLM أول أداة في فئة الموجّهات/البوابات تحظى بمراجعة مخصصة خاصة بها ضمن [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) الخاص بـ PromptQuorum — ولا توجد بعد أداة ثانية في نفس الفئة (موجّه/بوابة) للمقارنة المباشرة. لذا تأتي أقرب المقارنات المفيدة من أدوات مجاورة ضمن قسم "التشغيل والتقديم" نفسه في الدليل، إلى جانب بديل مُستضاف معروف على نطاق واسع خارج الدليل.',
+        content: 'حتى وقت هذه المراجعة، تُعد LiteLLM أول أداة في فئة الموجّهات/البوابات تحظى بمراجعة مخصصة خاصة بها ضمن [دليل برمجيات نماذج اللغة المحلية](/ar/directory) الخاص بـ PromptQuorum — ولا توجد بعد أداة ثانية في نفس الفئة (موجّه/بوابة) للمقارنة المباشرة. لذا تأتي أقرب المقارنات المفيدة من أدوات مجاورة ضمن قسم "التشغيل والتقديم" نفسه في الدليل، إلى جانب بديل مُستضاف معروف على نطاق واسع خارج الدليل.',
         items: [
           '**[vLLM](/ar/power-local-llm/vllm-explained)** — محرك استدلال مستضاف ذاتيًا يُقدّم أوزان النموذج فعليًا (يتطلب وحدة معالجة رسومية)؛ غالبًا ما يُستخدم إلى جانب LiteLLM بدلاً من منافستها، حيث تقف LiteLLM كطبقة توجيه أمام واحد أو أكثر من عمليات نشر vLLM.',
           '**[LocalAI](/ar/power-local-llm/localai-explained)** — خادم واجهة برمجة مستضاف ذاتيًا ومتوافق مع OpenAI لتشغيل نماذج مفتوحة محليًا؛ يحل مشكلة مختلفة عن LiteLLM (التقديم مقابل التوجيه) لكنه يعرض واجهة برمجة بتنسيق OpenAI مشابهة، وهو مصدر شائع للخلط بين الأداتين.',
           '**[LangChain](/ar/power-local-llm/langchain-review)** — إطار عمل تطبيقات لبناء تطبيقات مدعومة بنماذج اللغة (سلاسل، عملاء ذكيون، ذاكرة)؛ يمكنه استدعاء LiteLLM (أو أي مزوّد مباشرةً) كطبقة وصوله إلى النماذج بدلاً من استبدال ما تقوم به LiteLLM.',
           '**[OpenRouter](https://openrouter.ai)** (خارجية، وغير مدرجة في دليل PromptQuorum) — خدمة توجيه مُستضافة ومُدارة تغطي حالة استخدام متعددة المزوّدين مشابهة لوكيل LiteLLM، لكنها خدمة طرف ثالث تستدعيها بدلاً من بنية تحتية تستضيفها بنفسك؛ تستحق المقارنة المباشرة إذا كنت تريد توجيهًا بلا تشغيل ذاتي بدلاً من تشغيل وكيلك الخاص.',
         ],
-        note: 'هذه ليست قائمة شاملة — راجع [دليل برمجيات نماذج اللغة المحلية](/ar/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك مدخل LiteLLM الخاص بها وأي أدوات موجّه/بوابة مستقبلية من نفس الفئة تُضاف إليه.',
+        note: 'هذه ليست قائمة شاملة — راجع [دليل برمجيات نماذج اللغة المحلية](/ar/directory) للاطلاع على الكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك مدخل LiteLLM الخاص بها وأي أدوات موجّه/بوابة مستقبلية من نفس الفئة تُضاف إليه.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2114,7 +2114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات نماذج اللغة المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل LiteLLM.',
+          '[دليل برمجيات نماذج اللغة المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل LiteLLM.',
           '[شرح vLLM](/ar/power-local-llm/vllm-explained) — نظرة مخصصة على محرك الاستدلال عالي الإنتاجية الذي يُستخدم غالبًا خلف بوابة LiteLLM.',
           '[شرح LocalAI](/ar/power-local-llm/localai-explained) — خادم نماذج مستضاف ذاتيًا ومتوافق مع OpenAI يحل مشكلة ذات صلة لكنها مختلفة عن طبقة توجيه LiteLLM.',
           '[مراجعة LangChain](/ar/power-local-llm/langchain-review) — إطار عمل تطبيقات يمكنه استخدام LiteLLM كطبقة وصوله إلى النماذج.',
@@ -2193,7 +2193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[litellm.ai/enterprise](https://litellm.ai/enterprise)에는 SSO, 우선 기능 요청, 전담 지원을 포함하는 별도의 상용 Enterprise 등급이 있음 — 오픈소스 SDK와 프록시는 그것 없이도 완전히 사용 가능',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 있는 LiteLLM 항목의 심층 보완 자료입니다 — LiteLLM이 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 그 페이지에서 확인할 수 있습니다.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 LiteLLM 항목의 심층 보완 자료입니다 — LiteLLM이 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 그 페이지에서 확인할 수 있습니다.' },
         ],
       },
       overview: {
@@ -2315,14 +2315,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'litellm-competitors',
         title: 'LiteLLM vs. 다른 게이트웨이 및 프레임워크',
-        content: '이 리뷰 작성 시점 기준, LiteLLM은 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에서 전용 리뷰를 갖춘 최초의 라우터/게이트웨이 카테고리 도구입니다 — 아직 직접 비교할 수 있는 동일 세그먼트(라우터/게이트웨이)의 두 번째 도구는 없습니다. 대신 가장 유용한 비교는 디렉터리 내 동일한 "실행 및 서빙" 영역의 인접 도구, 그리고 디렉터리 밖에서 널리 알려진 호스팅 대안 하나에서 나옵니다.',
+        content: '이 리뷰 작성 시점 기준, LiteLLM은 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에서 전용 리뷰를 갖춘 최초의 라우터/게이트웨이 카테고리 도구입니다 — 아직 직접 비교할 수 있는 동일 세그먼트(라우터/게이트웨이)의 두 번째 도구는 없습니다. 대신 가장 유용한 비교는 디렉터리 내 동일한 "실행 및 서빙" 영역의 인접 도구, 그리고 디렉터리 밖에서 널리 알려진 호스팅 대안 하나에서 나옵니다.',
         items: [
           '**[vLLM](/ko/power-local-llm/vllm-explained)** — 실제로 모델 가중치를 서빙하는 셀프호스팅 추론 엔진(GPU 필요). LiteLLM과 경쟁하기보다 함께 쓰이는 경우가 흔하며, LiteLLM이 하나 이상의 vLLM 배포 앞단에서 라우팅 계층 역할을 함.',
           '**[LocalAI](/ko/power-local-llm/localai-explained)** — 오픈 모델을 로컬에서 실행하기 위한 셀프호스팅, OpenAI 호환 API 서버. LiteLLM과는 다른 문제(서빙 vs. 라우팅)를 해결하지만 비슷한 OpenAI 형식 API를 제공해 둘 사이에 흔한 혼동을 일으킴.',
           '**[LangChain](/ko/power-local-llm/langchain-review)** — 체인, 에이전트, 메모리 등 LLM 기반 앱을 만들기 위한 애플리케이션 프레임워크. LiteLLM이 하는 일을 대체하는 대신, 모델 접근 계층으로 LiteLLM(또는 임의의 제공업체를 직접)을 호출할 수 있음.',
           '**[OpenRouter](https://openrouter.ai)**(외부, PromptQuorum 디렉터리에는 없음) — LiteLLM 프록시와 비슷한 다중 제공업체 사용 사례를 다루는 호스팅형 관리 라우팅 서비스이지만, 직접 호스팅하는 인프라가 아니라 호출하는 제3자 서비스임. 자체 프록시를 운영하는 대신 운영 부담 없는 라우팅을 원한다면 직접 비교해볼 가치가 있음.',
         ],
-        note: '이 목록은 전부는 아닙니다 — LiteLLM 자체의 디렉터리 항목과 앞으로 추가될 수 있는 동일 세그먼트의 라우터/게이트웨이 도구를 포함해, 완전하고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이 목록은 전부는 아닙니다 — LiteLLM 자체의 디렉터리 항목과 앞으로 추가될 수 있는 동일 세그먼트의 라우터/게이트웨이 도구를 포함해, 완전하고 정기적으로 업데이트되는 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2379,7 +2379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한, LiteLLM의 디렉터리 항목을 포함한 로컬 AI 도구 전체 카탈로그.',
+          '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — 이 글이 속한, LiteLLM의 디렉터리 항목을 포함한 로컬 AI 도구 전체 카탈로그.',
           '[vLLM 설명](/ko/power-local-llm/vllm-explained) — LiteLLM 게이트웨이 뒤에서 흔히 함께 쓰이는 고처리량 추론 엔진을 전문적으로 다루는 글.',
           '[LocalAI 설명](/ko/power-local-llm/localai-explained) — LiteLLM의 라우팅 계층과 관련은 있지만 다른 문제를 해결하는 셀프호스팅, OpenAI 호환 모델 서버.',
           '[LangChain 리뷰](/ko/power-local-llm/langchain-review) — LiteLLM을 모델 접근 계층으로 사용할 수 있는 애플리케이션 프레임워크.',

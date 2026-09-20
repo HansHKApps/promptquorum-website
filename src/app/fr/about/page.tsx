@@ -223,7 +223,7 @@ export default function FrAboutPage() {
                   <div className="text-text-primary font-semibold mb-1">Contenu LLMs locaux</div>
                   <div className="text-sm text-text-secondary">Guides pour faire tourner des LLMs sur votre propre matériel — installation, prérequis et comparatifs.</div>
                 </Link>
-                <Link href="/fr/power-local-llm/local-llm-software-directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
+                <Link href="/fr/directory" className="block bg-card border border-primary/20 rounded-xl p-4 hover:border-primary/40 transition-colors">
                   <div className="text-text-primary font-semibold mb-1">Annuaire de logiciels LLM locaux</div>
                   <div className="text-sm text-text-secondary">Un annuaire consultable d'applications et d'outils LLM locaux, comparés côte à côte.</div>
                 </Link>

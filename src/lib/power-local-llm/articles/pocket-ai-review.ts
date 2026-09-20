@@ -107,7 +107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Get Pocket AI',
         content: [
           '**Pocket AI - No Internet is available directly from the Apple App Store** — no sideloading, no TestFlight beta, and no building it from source required.',
-          'This review is a companion to PromptQuorum\'s [Local LLM Software Directory](/power-local-llm/local-llm-software-directory), which indexes local-AI tools across platforms; Pocket AI does not yet have its own entry there.',
+          'This review is a companion to PromptQuorum\'s [Local LLM Software Directory](/directory), which indexes local-AI tools across platforms; Pocket AI does not yet have its own entry there.',
         ],
         columns: ['Platform', 'Get It'],
         rows: [
@@ -382,7 +382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[PocketPal AI Review](/power-local-llm/pocketpal-ai-review) — the free, open-source alternative with manual GGUF import.',
           '[Best Local LLM Apps for iPhone in 2026](/power-local-llm/best-local-llm-apps-iphone-2026) — the full iPhone app roundup.',
           '[Locally AI Review](/power-local-llm/locally-ai-review) — a free Apple MLX-based alternative.',
-          '[The Complete Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — a broader directory of local-LLM tools across platforms.',
+          '[The Complete Local LLM Software Directory](/directory) — a broader directory of local-LLM tools across platforms.',
         ],
       },
     },
@@ -500,7 +500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Pocket AI holen',
         content: [
           '**Pocket AI - No Internet ist direkt im Apple App Store erhältlich** — kein Sideloading, keine TestFlight-Beta und kein Selbstbauen aus dem Quellcode nötig.',
-          'Dieser Test ist eine Ergänzung zu PromptQuorums [Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory), das lokale KI-Tools über Plattformen hinweg auflistet; Pocket AI hat dort noch keinen eigenen Eintrag.',
+          'Dieser Test ist eine Ergänzung zu PromptQuorums [Verzeichnis lokaler LLM-Software](/de/directory), das lokale KI-Tools über Plattformen hinweg auflistet; Pocket AI hat dort noch keinen eigenen Eintrag.',
         ],
         columns: ['Plattform', 'Holen'],
         rows: [
@@ -775,7 +775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[PocketPal-AI-Test](/de/power-local-llm/pocketpal-ai-review) — die kostenlose Open-Source-Alternative mit manuellem GGUF-Import.',
           '[Die besten lokalen LLM-Apps fürs iPhone](/de/power-local-llm/best-local-llm-apps-iphone-2026) — die vollständige iPhone-App-Übersicht.',
           '[Locally-AI-Test](/de/power-local-llm/locally-ai-review) — eine kostenlose Apple-MLX-basierte Alternative.',
-          '[Das vollständige lokale LLM-Software-Verzeichnis](/de/power-local-llm/local-llm-software-directory) — ein umfassenderes Verzeichnis lokaler LLM-Tools über Plattformen hinweg.',
+          '[Das vollständige lokale LLM-Software-Verzeichnis](/de/directory) — ein umfassenderes Verzeichnis lokaler LLM-Tools über Plattformen hinweg.',
         ],
       },
     },
@@ -893,7 +893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Obtenir Pocket AI',
         content: [
           '**Pocket AI - No Internet est disponible directement sur l\'App Store d\'Apple** — aucun sideloading, aucune bêta TestFlight, et aucune compilation depuis les sources requise.',
-          'Cet avis est un complément au [répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) de PromptQuorum, qui recense les outils d\'IA locale toutes plateformes confondues ; Pocket AI n\'y a pas encore sa propre fiche.',
+          'Cet avis est un complément au [répertoire des logiciels LLM locaux](/fr/directory) de PromptQuorum, qui recense les outils d\'IA locale toutes plateformes confondues ; Pocket AI n\'y a pas encore sa propre fiche.',
         ],
         columns: ['Plateforme', 'Obtenir'],
         rows: [
@@ -1168,7 +1168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Avis PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) — l\'alternative gratuite et open source avec import manuel de GGUF.',
           '[Meilleures applications LLM locales pour iPhone en 2026](/fr/power-local-llm/best-local-llm-apps-iphone-2026) — le panorama complet des applications iPhone.',
           '[Avis Locally AI](/fr/power-local-llm/locally-ai-review) — une alternative gratuite basée sur Apple MLX.',
-          '[Le répertoire complet des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — un répertoire plus large d\'outils LLM locaux multiplateformes.',
+          '[Le répertoire complet des logiciels LLM locaux](/fr/directory) — un répertoire plus large d\'outils LLM locaux multiplateformes.',
         ],
       },
     },
@@ -1286,7 +1286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Pocket AIを入手する',
         content: [
           '**Pocket AI - No InternetはApple App Storeから直接入手できます**——サイドロード、TestFlightベータ版、ソースからのビルドは一切不要です。',
-          '本レビューは、PromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を補完するものです。このディレクトリはプラットフォームを横断してローカルAIツールを掲載していますが、Pocket AIはまだ独自の掲載項目を持っていません。',
+          '本レビューは、PromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/directory)を補完するものです。このディレクトリはプラットフォームを横断してローカルAIツールを掲載していますが、Pocket AIはまだ独自の掲載項目を持っていません。',
         ],
         columns: ['プラットフォーム', '入手方法'],
         rows: [
@@ -1561,7 +1561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[PocketPal AIレビュー](/ja/power-local-llm/pocketpal-ai-review) — 手動でGGUFをインポートする無料のオープンソース代替アプリ。',
           '[2026年版 iPhone向けベストローカルLLMアプリ](/ja/power-local-llm/best-local-llm-apps-iphone-2026) — iPhoneアプリの完全な比較一覧。',
           '[Locally AIレビュー](/ja/power-local-llm/locally-ai-review) — Apple MLXベースの無料の代替アプリ。',
-          '[完全なローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — プラットフォームを横断するローカルLLMツールのより広範なディレクトリ。',
+          '[完全なローカルLLMソフトウェアディレクトリ](/ja/directory) — プラットフォームを横断するローカルLLMツールのより広範なディレクトリ。',
         ],
       },
     },
@@ -1679,7 +1679,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '获取Pocket AI',
         content: [
           '**Pocket AI - No Internet可直接从苹果App Store获取**——无需旁加载、TestFlight测试版,也无需自行从源代码编译。',
-          '本评测是PromptQuorum[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)的配套内容,该目录收录了跨平台的本地AI工具;Pocket AI目前尚未在其中拥有独立条目。',
+          '本评测是PromptQuorum[本地LLM软件目录](/zh/directory)的配套内容,该目录收录了跨平台的本地AI工具;Pocket AI目前尚未在其中拥有独立条目。',
         ],
         columns: ['平台', '获取方式'],
         rows: [
@@ -1954,7 +1954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[PocketPal AI评测](/zh/power-local-llm/pocketpal-ai-review) — 免费开源的替代方案,需要手动导入GGUF。',
           '[2026年iPhone最佳本地LLM应用](/zh/power-local-llm/best-local-llm-apps-iphone-2026) — 完整的iPhone应用汇总。',
           '[Locally AI评测](/zh/power-local-llm/locally-ai-review) — 基于Apple MLX的免费替代方案。',
-          '[完整的本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 跨平台本地LLM工具的更广泛目录。',
+          '[完整的本地LLM软件目录](/zh/directory) — 跨平台本地LLM工具的更广泛目录。',
         ],
       },
     },
@@ -2072,7 +2072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cómo conseguir Pocket AI',
         content: [
           '**Pocket AI - No Internet está disponible directamente en la App Store de Apple** — no requiere sideloading, ni beta de TestFlight, ni compilarla desde el código fuente.',
-          'Esta reseña complementa el [directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) de PromptQuorum, que indexa herramientas de IA local en todas las plataformas; Pocket AI aún no tiene su propia ficha allí.',
+          'Esta reseña complementa el [directorio de software LLM local](/es/directory) de PromptQuorum, que indexa herramientas de IA local en todas las plataformas; Pocket AI aún no tiene su propia ficha allí.',
         ],
         columns: ['Plataforma', 'Cómo conseguirla'],
         rows: [
@@ -2347,7 +2347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de PocketPal AI](/es/power-local-llm/pocketpal-ai-review) — la alternativa gratuita y de código abierto con importación manual de GGUF.',
           '[Las mejores apps de LLM local para iPhone en 2026](/es/power-local-llm/best-local-llm-apps-iphone-2026) — el resumen completo de apps para iPhone.',
           '[Reseña de Locally AI](/es/power-local-llm/locally-ai-review) — una alternativa gratuita basada en Apple MLX.',
-          '[El directorio completo de software LLM local](/es/power-local-llm/local-llm-software-directory) — un directorio más amplio de herramientas LLM locales en todas las plataformas.',
+          '[El directorio completo de software LLM local](/es/directory) — un directorio más amplio de herramientas LLM locales en todas las plataformas.',
         ],
       },
     },
@@ -2465,7 +2465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Como obter o Pocket AI',
         content: [
           '**O Pocket AI - No Internet está disponível diretamente na App Store da Apple** — sem sideloading, sem beta do TestFlight, e sem precisar compilar a partir do código-fonte.',
-          'Esta análise complementa o [diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) da PromptQuorum, que indexa ferramentas de IA local em várias plataformas; o Pocket AI ainda não tem sua própria entrada lá.',
+          'Esta análise complementa o [diretório de software de LLM local](/pt/directory) da PromptQuorum, que indexa ferramentas de IA local em várias plataformas; o Pocket AI ainda não tem sua própria entrada lá.',
         ],
         columns: ['Plataforma', 'Como obter'],
         rows: [
@@ -2740,7 +2740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) — a alternativa gratuita e de código aberto com importação manual de GGUF.',
           '[Os melhores aplicativos de LLM local para iPhone em 2026](/pt/power-local-llm/best-local-llm-apps-iphone-2026) — o panorama completo de aplicativos para iPhone.',
           '[Análise do Locally AI](/pt/power-local-llm/locally-ai-review) — uma alternativa gratuita baseada no Apple MLX.',
-          '[O diretório completo de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — um diretório mais amplo de ferramentas de LLM local em todas as plataformas.',
+          '[O diretório completo de software de LLM local](/pt/directory) — um diretório mais amplo de ferramentas de LLM local em todas as plataformas.',
         ],
       },
     },
@@ -2858,7 +2858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كيفية الحصول على Pocket AI',
         content: [
           '**يتوفر Pocket AI - No Internet مباشرة من متجر تطبيقات آبل** — دون تثبيت جانبي، ودون نسخة تجريبية عبر TestFlight، ودون الحاجة إلى بنائه من الشيفرة المصدرية.',
-          'تكمّل هذه المراجعة [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) من PromptQuorum، الذي يفهرس أدوات الذكاء الاصطناعي المحلية عبر المنصات؛ ولا يزال Pocket AI بدون إدراج خاص به هناك.',
+          'تكمّل هذه المراجعة [دليل برمجيات LLM المحلية](/ar/directory) من PromptQuorum، الذي يفهرس أدوات الذكاء الاصطناعي المحلية عبر المنصات؛ ولا يزال Pocket AI بدون إدراج خاص به هناك.',
         ],
         columns: ['المنصة', 'كيفية الحصول عليه'],
         rows: [
@@ -3133,7 +3133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) — البديل المجاني ومفتوح المصدر مع استيراد GGUF يدوي.',
           '[أفضل تطبيقات LLM المحلية لآيفون في 2026](/ar/power-local-llm/best-local-llm-apps-iphone-2026) — الاستعراض الكامل لتطبيقات آيفون.',
           '[مراجعة Locally AI](/ar/power-local-llm/locally-ai-review) — بديل مجاني قائم على Apple MLX.',
-          '[الدليل الكامل لبرمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — دليل أوسع لأدوات LLM المحلية عبر المنصات.',
+          '[الدليل الكامل لبرمجيات LLM المحلية](/ar/directory) — دليل أوسع لأدوات LLM المحلية عبر المنصات.',
         ],
       },
     },
@@ -3251,7 +3251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Pocket AI 받기',
         content: [
           '**Pocket AI - No Internet는 애플 앱스토어에서 직접 받을 수 있습니다** — 사이드로딩, TestFlight 베타, 소스에서 직접 빌드할 필요가 전혀 없습니다.',
-          '이 리뷰는 여러 플랫폼의 로컬 AI 도구를 정리한 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)와 짝을 이루는 콘텐츠입니다. Pocket AI는 아직 그곳에 자체 항목이 없습니다.',
+          '이 리뷰는 여러 플랫폼의 로컬 AI 도구를 정리한 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)와 짝을 이루는 콘텐츠입니다. Pocket AI는 아직 그곳에 자체 항목이 없습니다.',
         ],
         columns: ['플랫폼', '받는 방법'],
         rows: [
@@ -3526,7 +3526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[PocketPal AI 리뷰](/ko/power-local-llm/pocketpal-ai-review) — 수동 GGUF 가져오기가 필요한 무료 오픈소스 대안.',
           '[2026년 아이폰용 최고의 로컬 LLM 앱](/ko/power-local-llm/best-local-llm-apps-iphone-2026) — 전체 아이폰 앱 종합 정리.',
           '[Locally AI 리뷰](/ko/power-local-llm/locally-ai-review) — Apple MLX 기반의 무료 대안.',
-          '[완전한 로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 플랫폼 전반의 로컬 LLM 도구에 대한 더 광범위한 디렉터리.',
+          '[완전한 로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 플랫폼 전반의 로컬 LLM 도구에 대한 더 광범위한 디렉터리.',
         ],
       },
     },

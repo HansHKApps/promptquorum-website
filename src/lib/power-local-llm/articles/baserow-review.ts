@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Developed by Baserow B.V.; per Baserow\'s own marketing, over 150,000 users rely on the platform — this review could not independently verify that figure',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Baserow\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Baserow compares at a glance to dozens of other local AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Baserow\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Baserow compares at a glance to dozens of other local AI tools.' },
         ],
       },
       overview: {
@@ -221,7 +221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'n8n', 'Best known for': 'Self-hostable workflow automation platform with native Ollama node support', 'Link': '[n8n Review](/power-local-llm/n8n-review)' },
           { 'Tool': 'Self-Hosted AI Starter Kit', 'Best known for': 'One Docker Compose stack bundling n8n, Ollama, and Qdrant for local AI workflows', 'Link': '[Self-Hosted AI Starter Kit Review](/power-local-llm/self-hosted-ai-starter-kit-review)' },
         ],
-        note: 'This is not an exhaustive list of no-code or workflow tools with local-AI options — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Baserow\'s own directory entry.',
+        note: 'This is not an exhaustive list of no-code or workflow tools with local-AI options — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Baserow\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -280,7 +280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[n8n Review](/power-local-llm/n8n-review) — a self-hostable workflow automation platform with native local Ollama node support, for comparison against database-first Baserow.',
           '[Self-Hosted AI Starter Kit Review](/power-local-llm/self-hosted-ai-starter-kit-review) — a single Docker Compose stack bundling n8n, Ollama, and Qdrant for local AI workflows.',
-          '[Local LLM Software Directory 2026](/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including Baserow\'s own directory entry.',
+          '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Baserow\'s own directory entry.',
         ],
       },
     },
@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Entwickelt von Baserow B.V.; laut Baserows eigenem Marketing verlassen sich über 150.000 Nutzer auf die Plattform — diese Review konnte diese Zahl nicht unabhängig verifizieren',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist der Deep-Dive-Begleiter zu Baserows Eintrag im [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) — siehe diese Seite für einen Überblick, wie Baserow im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist der Deep-Dive-Begleiter zu Baserows Eintrag im [Local LLM Software Directory](/de/directory) — siehe diese Seite für einen Überblick, wie Baserow im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -504,7 +504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': 'n8n', 'Bekannt für': 'Selbst hostbare Workflow-Automatisierungsplattform mit nativer Ollama-Node-Unterstützung', 'Link': '[n8n Review](/de/power-local-llm/n8n-review)' },
           { 'Tool': 'Self-Hosted AI Starter Kit', 'Bekannt für': 'Ein Docker-Compose-Stack, der n8n, Ollama und Qdrant für lokale KI-Workflows bündelt', 'Link': '[Self-Hosted AI Starter Kit Review](/de/power-local-llm/self-hosted-ai-starter-kit-review)' },
         ],
-        note: 'Dies ist keine erschöpfende Liste von No-Code- oder Workflow-Tools mit lokalen KI-Optionen — siehe das [Local LLM Software Directory](/de/power-local-llm/local-llm-software-directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Baserows eigenem Verzeichniseintrag.',
+        note: 'Dies ist keine erschöpfende Liste von No-Code- oder Workflow-Tools mit lokalen KI-Optionen — siehe das [Local LLM Software Directory](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Baserows eigenem Verzeichniseintrag.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -565,7 +565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[n8n Review](/de/power-local-llm/n8n-review) — eine selbst hostbare Workflow-Automatisierungsplattform mit nativer lokaler Ollama-Node-Unterstützung, zum Vergleich mit dem datenbankzentrierten Baserow.',
           '[Self-Hosted AI Starter Kit Review](/de/power-local-llm/self-hosted-ai-starter-kit-review) — ein einzelner Docker-Compose-Stack, der n8n, Ollama und Qdrant für lokale KI-Workflows bündelt.',
-          '[Local LLM Software Directory 2026](/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Baserows eigenem Verzeichniseintrag.',
+          '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Baserows eigenem Verzeichniseintrag.',
         ],
       },
     },
@@ -640,7 +640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Développé par Baserow B.V. ; selon le marketing de Baserow lui-même, plus de 150 000 utilisateurs s\'appuient sur la plateforme — cet avis n\'a pas pu vérifier ce chiffre de manière indépendante',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de Baserow dans le [Répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment Baserow se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
+          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de Baserow dans le [Répertoire de logiciels LLM locaux](/fr/directory) — consultez cette page pour voir comment Baserow se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
         ],
       },
       overview: {
@@ -789,7 +789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Outil': 'n8n', 'Connu pour': 'Plateforme d\'automatisation de workflow auto-hébergeable avec support natif du nœud Ollama', 'Lien': '[Avis n8n](/fr/power-local-llm/n8n-review)' },
           { 'Outil': 'Self-Hosted AI Starter Kit', 'Connu pour': 'Une seule pile Docker Compose regroupant n8n, Ollama et Qdrant pour des workflows d\'IA locale', 'Lien': '[Avis Self-Hosted AI Starter Kit](/fr/power-local-llm/self-hosted-ai-starter-kit-review)' },
         ],
-        note: 'Ceci n\'est pas une liste exhaustive des outils no-code ou de workflow proposant des options d\'IA locale — consultez le [Répertoire de logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée propre de Baserow.',
+        note: 'Ceci n\'est pas une liste exhaustive des outils no-code ou de workflow proposant des options d\'IA locale — consultez le [Répertoire de logiciels LLM locaux](/fr/directory) pour le catalogue complet et régulièrement mis à jour, incluant l\'entrée propre de Baserow.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -848,7 +848,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Avis n8n](/fr/power-local-llm/n8n-review) — une plateforme d\'automatisation de workflow auto-hébergeable avec support natif du nœud Ollama local, pour comparaison avec Baserow, centré sur la base de données.',
           '[Avis Self-Hosted AI Starter Kit](/fr/power-local-llm/self-hosted-ai-starter-kit-review) — une seule pile Docker Compose regroupant n8n, Ollama et Qdrant pour des workflows d\'IA locale.',
-          '[Répertoire de logiciels LLM locaux 2026](/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant l\'entrée propre de Baserow.',
+          '[Répertoire de logiciels LLM locaux 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant l\'entrée propre de Baserow.',
         ],
       },
     },
@@ -923,7 +923,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Baserow B.V.が開発。Baserow自身のマーケティングによれば15万人以上のユーザーがプラットフォームを利用しているとされるが、このレビューではこの数字を独自に検証できなかった',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)にあるBaserowのエントリの詳細版です。他の数十のローカルAIツールとの比較についてはそちらのページを参照してください。' },
+          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるBaserowのエントリの詳細版です。他の数十のローカルAIツールとの比較についてはそちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1072,7 +1072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'ツール': 'n8n', '主な特徴': 'ネイティブのOllamaノード対応を備えたセルフホスト可能なワークフロー自動化プラットフォーム', 'リンク': '[n8nレビュー](/ja/power-local-llm/n8n-review)' },
           { 'ツール': 'Self-Hosted AI Starter Kit', '主な特徴': 'n8n、Ollama、Qdrantをまとめたローカルワークフロー用の単一Docker Composeスタック', 'リンク': '[Self-Hosted AI Starter Kitレビュー](/ja/power-local-llm/self-hosted-ai-starter-kit-review)' },
         ],
-        note: 'これはローカルAIオプションを持つノーコード・ワークフローツールの網羅的なリストではありません——Baserow自身のディレクトリエントリを含む、定期的に更新される完全なカタログについては[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これはローカルAIオプションを持つノーコード・ワークフローツールの網羅的なリストではありません——Baserow自身のディレクトリエントリを含む、定期的に更新される完全なカタログについては[ローカルLLMソフトウェアディレクトリ](/ja/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1131,7 +1131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[n8nレビュー](/ja/power-local-llm/n8n-review) — ネイティブのローカルOllamaノード対応を備えたセルフホスト可能なワークフロー自動化プラットフォーム。データベース中心のBaserowとの比較用。',
           '[Self-Hosted AI Starter Kitレビュー](/ja/power-local-llm/self-hosted-ai-starter-kit-review) — n8n、Ollama、Qdrantをまとめたローカルワークフロー用の単一Docker Composeスタック。',
-          '[ローカルLLMソフトウェアディレクトリ2026](/ja/power-local-llm/local-llm-software-directory) — Baserow自身のディレクトリエントリを含む、本稿が属するローカルAIツールの完全なカタログ。',
+          '[ローカルLLMソフトウェアディレクトリ2026](/ja/directory) — Baserow自身のディレクトリエントリを含む、本稿が属するローカルAIツールの完全なカタログ。',
         ],
       },
     },
@@ -1206,7 +1206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '由Baserow B.V.开发；根据Baserow自身的宣传，有超过15万用户依赖该平台——本评测无法独立核实这一数字',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)中Baserow条目的深度补充——如需了解Baserow与其他数十款本地AI工具的一览式对比，请参阅该页面。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Baserow条目的深度补充——如需了解Baserow与其他数十款本地AI工具的一览式对比，请参阅该页面。' },
         ],
       },
       overview: {
@@ -1355,7 +1355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '工具': 'n8n', '知名之处': '具备原生Ollama节点支持的可自托管工作流自动化平台', '链接': '[n8n评测](/zh/power-local-llm/n8n-review)' },
           { '工具': 'Self-Hosted AI Starter Kit', '知名之处': '将n8n、Ollama和Qdrant打包在一起的单一Docker Compose技术栈，用于本地AI工作流', '链接': '[Self-Hosted AI Starter Kit评测](/zh/power-local-llm/self-hosted-ai-starter-kit-review)' },
         ],
-        note: '这并非提供本地AI选项的无代码或工作流工具的详尽列表——如需查看完整且定期更新的目录（包括Baserow自身的目录条目），请参阅[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)。',
+        note: '这并非提供本地AI选项的无代码或工作流工具的详尽列表——如需查看完整且定期更新的目录（包括Baserow自身的目录条目），请参阅[本地LLM软件目录](/zh/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1414,7 +1414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[n8n评测](/zh/power-local-llm/n8n-review) — 一款具备原生本地Ollama节点支持的可自托管工作流自动化平台，可与以数据库为核心的Baserow对比。',
           '[Self-Hosted AI Starter Kit评测](/zh/power-local-llm/self-hosted-ai-starter-kit-review) — 一个将n8n、Ollama和Qdrant打包在一起的单一Docker Compose技术栈，用于本地AI工作流。',
-          '[2026本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录，包含Baserow自身的目录条目。',
+          '[2026本地LLM软件目录](/zh/directory) — 本文所属的本地AI工具完整目录，包含Baserow自身的目录条目。',
         ],
       },
     },
@@ -1489,7 +1489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desarrollado por Baserow B.V.; según el propio material de marketing de Baserow, más de 150.000 usuarios confían en la plataforma — este análisis no pudo verificar esa cifra de forma independiente',
         ],
         callouts: [
-          { type: 'note', text: 'Este análisis es el complemento en profundidad de la entrada de Baserow en el [Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara Baserow de un vistazo con decenas de otras herramientas de IA local.' },
+          { type: 'note', text: 'Este análisis es el complemento en profundidad de la entrada de Baserow en el [Directorio de software LLM local](/es/directory) — consulta esa página para ver cómo se compara Baserow de un vistazo con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1638,7 +1638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Herramienta': 'n8n', 'Conocida por': 'Plataforma de automatización de flujos de trabajo autoalojable con soporte nativo de nodo Ollama', 'Enlace': '[Análisis de n8n](/es/power-local-llm/n8n-review)' },
           { 'Herramienta': 'Self-Hosted AI Starter Kit', 'Conocida por': 'Un único stack de Docker Compose que agrupa n8n, Ollama y Qdrant para flujos de trabajo de IA local', 'Enlace': '[Análisis de Self-Hosted AI Starter Kit](/es/power-local-llm/self-hosted-ai-starter-kit-review)' },
         ],
-        note: 'Esta no es una lista exhaustiva de herramientas no-code o de flujo de trabajo con opciones de IA local — consulta el [Directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de directorio de Baserow.',
+        note: 'Esta no es una lista exhaustiva de herramientas no-code o de flujo de trabajo con opciones de IA local — consulta el [Directorio de software LLM local](/es/directory) para el catálogo completo y actualizado regularmente, incluida la propia entrada de directorio de Baserow.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1697,7 +1697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Análisis de n8n](/es/power-local-llm/n8n-review) — una plataforma de automatización de flujos de trabajo autoalojable con soporte nativo de nodo Ollama local, para comparar con Baserow, centrado en bases de datos.',
           '[Análisis de Self-Hosted AI Starter Kit](/es/power-local-llm/self-hosted-ai-starter-kit-review) — un único stack de Docker Compose que agrupa n8n, Ollama y Qdrant para flujos de trabajo de IA local.',
-          '[Directorio de software LLM local 2026](/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia entrada de directorio de Baserow.',
+          '[Directorio de software LLM local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la propia entrada de directorio de Baserow.',
         ],
       },
     },
@@ -1772,7 +1772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desenvolvido pela Baserow B.V.; segundo o próprio marketing do Baserow, mais de 150.000 usuários confiam na plataforma — esta análise não conseguiu verificar esse número de forma independente',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Baserow no [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o Baserow com dezenas de outras ferramentas de IA local.' },
+          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Baserow no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar rapidamente o Baserow com dezenas de outras ferramentas de IA local.' },
         ],
       },
       overview: {
@@ -1921,7 +1921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ferramenta': 'n8n', 'Mais conhecida por': 'Plataforma de automação de fluxo de trabalho auto-hospedável com suporte nativo ao nó Ollama', 'Link': '[Análise do n8n](/pt/power-local-llm/n8n-review)' },
           { 'Ferramenta': 'Self-Hosted AI Starter Kit', 'Mais conhecida por': 'Um único stack Docker Compose reunindo n8n, Ollama e Qdrant para fluxos de trabalho de IA local', 'Link': '[Análise do Self-Hosted AI Starter Kit](/pt/power-local-llm/self-hosted-ai-starter-kit-review)' },
         ],
-        note: 'Esta não é uma lista exaustiva de ferramentas no-code ou de fluxo de trabalho com opções de IA local — veja o [Diretório de Software de LLM Local](/pt/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada de diretório do Baserow.',
+        note: 'Esta não é uma lista exaustiva de ferramentas no-code ou de fluxo de trabalho com opções de IA local — veja o [Diretório de Software de LLM Local](/pt/directory) para o catálogo completo e atualizado regularmente, incluindo a própria entrada de diretório do Baserow.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1980,7 +1980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Análise do n8n](/pt/power-local-llm/n8n-review) — uma plataforma de automação de fluxo de trabalho auto-hospedável com suporte nativo ao nó Ollama local, para comparação com o Baserow, focado em banco de dados.',
           '[Análise do Self-Hosted AI Starter Kit](/pt/power-local-llm/self-hosted-ai-starter-kit-review) — um único stack Docker Compose reunindo n8n, Ollama e Qdrant para fluxos de trabalho de IA local.',
-          '[Diretório de Software de LLM Local 2026](/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada de diretório do Baserow.',
+          '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a própria entrada de diretório do Baserow.',
         ],
       },
     },
@@ -2055,7 +2055,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'طوّرتها شركة Baserow B.V.؛ وبحسب تسويق Baserow نفسها، يعتمد أكثر من 150,000 مستخدم على المنصة — لم تتمكن هذه المراجعة من التحقق من هذا الرقم بشكل مستقل',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمّق لإدخال Baserow في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف تقارن Baserow بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمّق لإدخال Baserow في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تقارن Baserow بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {
@@ -2204,7 +2204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'الأداة': 'n8n', 'معروفة بـ': 'منصة أتمتة تدفق عمل قابلة للاستضافة الذاتية مع دعم أصلي لعقدة Ollama', 'الرابط': '[مراجعة n8n](/ar/power-local-llm/n8n-review)' },
           { 'الأداة': 'Self-Hosted AI Starter Kit', 'معروفة بـ': 'حزمة Docker Compose واحدة تجمع n8n وOllama وQdrant لتدفقات عمل ذكاء اصطناعي محلية', 'الرابط': '[مراجعة Self-Hosted AI Starter Kit](/ar/power-local-llm/self-hosted-ai-starter-kit-review)' },
         ],
-        note: 'هذه ليست قائمة شاملة بأدوات تدفق العمل أو الأدوات بدون كود ذات خيارات ذكاء اصطناعي محلية — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/power-local-llm/local-llm-software-directory) للحصول على الكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك إدخال Baserow نفسه في الدليل.',
+        note: 'هذه ليست قائمة شاملة بأدوات تدفق العمل أو الأدوات بدون كود ذات خيارات ذكاء اصطناعي محلية — راجع [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) للحصول على الكتالوج الكامل والمُحدَّث بانتظام، بما في ذلك إدخال Baserow نفسه في الدليل.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2263,7 +2263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[مراجعة n8n](/ar/power-local-llm/n8n-review) — منصة أتمتة تدفق عمل قابلة للاستضافة الذاتية مع دعم أصلي لعقدة Ollama محلية، للمقارنة مع Baserow المحوره قاعدة البيانات.',
           '[مراجعة Self-Hosted AI Starter Kit](/ar/power-local-llm/self-hosted-ai-starter-kit-review) — حزمة Docker Compose واحدة تجمع n8n وOllama وQdrant لتدفقات عمل ذكاء اصطناعي محلية.',
-          '[دليل برمجيات نماذج اللغة الكبيرة المحلية 2026](/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال Baserow نفسه في الدليل.',
+          '[دليل برمجيات نماذج اللغة الكبيرة المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال Baserow نفسه في الدليل.',
         ],
       },
     },
@@ -2338,7 +2338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Baserow B.V.가 개발했으며, Baserow 자체 마케팅에 따르면 15만 명 이상의 사용자가 이 플랫폼을 이용하고 있다고 하지만, 이 리뷰는 해당 수치를 독립적으로 검증할 수 없었음',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)에 실린 Baserow 항목의 심층 버전입니다. Baserow가 수십 개의 다른 로컬 AI 도구와 어떻게 비교되는지 한눈에 보려면 해당 페이지를 참고하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 실린 Baserow 항목의 심층 버전입니다. Baserow가 수십 개의 다른 로컬 AI 도구와 어떻게 비교되는지 한눈에 보려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
@@ -2487,7 +2487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '도구': 'n8n', '주요 특징': '네이티브 Ollama 노드 지원을 갖춘 셀프 호스팅 가능 워크플로 자동화 플랫폼', '링크': '[n8n 리뷰](/ko/power-local-llm/n8n-review)' },
           { '도구': 'Self-Hosted AI Starter Kit', '주요 특징': 'n8n, Ollama, Qdrant를 하나로 묶은 로컬 AI 워크플로용 단일 Docker Compose 스택', '링크': '[Self-Hosted AI Starter Kit 리뷰](/ko/power-local-llm/self-hosted-ai-starter-kit-review)' },
         ],
-        note: '이는 로컬 AI 옵션을 갖춘 노코드 또는 워크플로 도구의 총망라 목록이 아닙니다——Baserow 자체 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)를 참고하세요.',
+        note: '이는 로컬 AI 옵션을 갖춘 노코드 또는 워크플로 도구의 총망라 목록이 아닙니다——Baserow 자체 디렉터리 항목을 포함해 정기적으로 업데이트되는 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)를 참고하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2546,7 +2546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[n8n 리뷰](/ko/power-local-llm/n8n-review) — 네이티브 로컬 Ollama 노드 지원을 갖춘 셀프 호스팅 가능 워크플로 자동화 플랫폼으로, 데이터베이스 중심인 Baserow와 비교하기에 좋습니다.',
           '[Self-Hosted AI Starter Kit 리뷰](/ko/power-local-llm/self-hosted-ai-starter-kit-review) — n8n, Ollama, Qdrant를 하나로 묶은 로컬 AI 워크플로용 단일 Docker Compose 스택.',
-          '[2026 로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — Baserow 자체 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
+          '[2026 로컬 LLM 소프트웨어 디렉터리](/ko/directory) — Baserow 자체 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그.',
         ],
       },
     },
