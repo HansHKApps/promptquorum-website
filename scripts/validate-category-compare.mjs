@@ -4,8 +4,8 @@
 //  2. every category comparison article named in CATEGORY_COMPARE_ARTICLE is registered
 //     (slugs.ts + articles-barrel.ts) and actually renders the generated table section;
 //  3. a comparison article that is publicly indexable (in published.ts) has all 9 locale blocks;
-//  4. every tool in a comparison segment has a review (reviewSlug) that is a registered slug, so
-//     the table's tool links never dead-end.
+//  4. every tool in a comparison segment that declares a reviewSlug has it resolve to a public URL
+//     (feature-review-index.json), so the table's tool links never dead-end.
 // Regex-based on purpose, like the other validators here: no TS toolchain needed at prebuild.
 
 import { readFileSync, readdirSync } from 'node:fs'
@@ -35,6 +35,7 @@ const appsDir = path.join(LIB, 'apps')
 const slugsTs = read(path.join(LIB, 'slugs.ts'))
 const barrelTs = read(path.join(LIB, 'articles-barrel.ts'))
 const registered = (slug) => new RegExp(`'${slug}':`).test(slugsTs)
+const reviewIndex = JSON.parse(read(path.join(ROOT, 'src/generated/feature-review-index.json')))
 
 for (const f of readdirSync(appsDir)) {
   if (!f.endsWith('.ts') || ['categories.ts', 'types.ts', 'compare-schema.ts'].includes(f)) continue
@@ -49,9 +50,11 @@ for (const f of readdirSync(appsDir)) {
     }
   }
   if (mine.length > 0) {
+    // Tools without a review are simply left out of the tables; a review that IS declared must resolve
+    // to a public URL through the build-time index (the slug in the record is the article file key).
     const rev = src.match(/reviewSlug: '([a-z0-9-]+)'/)?.[1]
-    if (!rev) fail(`${f}: in a comparison segment but has no reviewSlug`)
-    else if (!registered(rev)) fail(`${f}: reviewSlug "${rev}" is not a registered slug`)
+    const toolSlug = src.match(/slug: '([a-z0-9-]+)'/)?.[1]
+    if (rev && !(toolSlug && reviewIndex[toolSlug])) fail(`${f}: reviewSlug "${rev}" does not resolve in feature-review-index.json`)
   }
 }
 
