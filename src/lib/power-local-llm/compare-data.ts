@@ -164,7 +164,13 @@ function commonCell(t: ToolRecord, key: string, cs: CompareStrings): string {
     case 'price':
       return PRICE_KEY[t.price] ? cs[PRICE_KEY[t.price]] : cs.notStated
     case 'license':
-      return t.license && t.license !== 'TODO' ? normalizeLicenseLabel(t.license) : cs.notStated
+      if (!t.license || t.license === 'TODO') return cs.notStated
+      {
+        // Long multi-license strings (e.g. a dual license with gated features) would stretch the table: show the first
+        // clause and an ellipsis; the tool's review has the full terms.
+        const label = normalizeLicenseLabel(t.license)
+        return label.length > 40 ? `${label.split(',')[0].trim()} …` : label
+      }
     case 'platforms':
       return t.platforms && t.platforms.length > 0 ? t.platforms.map((p) => OS_LABEL[p] ?? p).join(', ') : cs.notStated
     case 'locality':
