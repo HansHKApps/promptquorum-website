@@ -35,5 +35,6 @@ export const app: ToolRecord = {
     ko: 'OpenAI 호환 API를 갖춘 Rust 기반 vLLM 방식 추론 및 서빙 플랫폼으로, CUDA와 Apple Metal 모두에서 동작.',
   },
   reviewSlug: 'candle-vllm-review', // dedicated PromptQuorum review — added 2026-09-19
+  pqReview: { date: '2026-09-20', version: 'v0.9.1', versionSourceUrl: 'https://github.com/EricLBuehler/candle-vllm/releases/tag/v0.9.1' },
   lastVerifiedDate: '2026-09-18',
 }

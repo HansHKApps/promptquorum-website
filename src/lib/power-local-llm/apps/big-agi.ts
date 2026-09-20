@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: '페르소나가 있는 고급 멀티 제공자 프런트엔드',
   },
   reviewSlug: 'big-agi-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'v2.1.0', versionSourceUrl: 'https://github.com/enricoros/big-AGI/releases/tag/v2.1.0' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -36,5 +36,6 @@ export const app: ToolRecord = {
     ar: 'أداة سطر أوامر لوكيل برمجي مُهيّأة خصيصًا لتحقيق نتائج قوية من نماذج لغوية محلية صغيرة على Ollama أو LM Studio',
     ko: 'Ollama나 LM Studio에서 작은 로컬 LLM으로도 좋은 결과를 내도록 특별히 튜닝된 코딩 에이전트 CLI',
   },
+  pqReview: { date: '2026-09-20', version: 'v1.20.0', versionSourceUrl: 'https://github.com/itayinbarr/little-coder/releases/tag/v1.20.0' },
   lastVerifiedDate: '2026-09-18',
 }

@@ -318,6 +318,7 @@ const DIR_UI = {
   detailHardware: { en: 'Hardware', de: 'Hardware', fr: 'Matériel', ja: 'ハードウェア', zh: '硬件', es: 'Hardware', pt: 'Hardware', ar: 'العتاد', ko: '하드웨어' },
   detailAdded: { en: 'Added', de: 'Hinzugefügt', fr: 'Ajouté', ja: '追加日', zh: '添加日期', es: 'Añadido', pt: 'Adicionado', ar: 'تاريخ الإضافة', ko: '추가일' },
   detailLastVerified: { en: 'Last verified', de: 'Zuletzt geprüft', fr: 'Dernière vérification', ja: '最終確認日', zh: '最后验证日期', es: 'Última verificación', pt: 'Última verificação', ar: 'آخر تحقق', ko: '마지막 확인일' },
+  detailVersion: { en: 'Version', de: 'Version', fr: 'Version', ja: 'バージョン', zh: '版本', es: 'Versión', pt: 'Versão', ar: 'الإصدار', ko: '버전' },
   cardLastUpdatedTemplate: {
     en: 'Updated {date}', de: 'Aktualisiert am {date}', fr: 'Mis à jour le {date}', ja: '{date} 更新',
     zh: '{date} 更新', es: 'Actualizado el {date}', pt: 'Atualizado em {date}', ar: 'حُدِّث في {date}', ko: '{date} 업데이트',

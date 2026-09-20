@@ -235,6 +235,8 @@ Check the `current_models_mentioned` and `current_benchmarks_used` frontmatter f
 
 Cross-reference this with the GSC data from Step 0: are any of the new/superseded items appearing in user queries? If users are already searching for Qwen 3.6 and the page still features Qwen 2.5, that's a priority fix.
 
+**For a FeatureAppPost or any page whose subject is an individual tool tracked in `src/lib/power-local-llm/apps/*.ts`:** check `npm run check-app-versions`'s output (`APP_VERSION_DRIFT_REPORT.md`, gitignored/generated — re-run it if stale) for that tool's slug. A `DRIFT` row means the tool's real current version has moved past `pqReview.version` — treat this exactly like a superseded model, and run this page through the full Type E checklist, not just a version-string bump. A `NEEDS_AGENT_CHECK` row means the tool has no public GitHub repo to auto-check — WebFetch its official site/changelog to confirm the current version before treating the page as up to date. See the `feature-app-post` skill's "Version accuracy" check for the field contract (`pqReview.version`/`.date`/`.versionSourceUrl`) and the real incident (a Cherry Studio maker flagging a review written against a superseded major version) that motivated it.
+
 ### Step 2.5: "Nothing to Update" Gate (two-pass rule + Freshness Expansion Block)
 
 **"Nothing to update" is never the end of a run.** `dateModified` may only move when readers see different information (Anti-Pattern #8) — so a no-change verdict must either be disproven by a deeper look, or converted into real new content that earns the fresh date. The site strategy requires visible freshness; a page stuck on a historic "Last updated" date is its own defect.

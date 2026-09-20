@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: '모델 탐색기가 있는 iOS용 로컬 LLM',
   },
   reviewSlug: 'llm-farm-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: '1.4.3', versionSourceUrl: 'https://github.com/guinmoon/LLMFarm/releases/tag/1.4.3' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

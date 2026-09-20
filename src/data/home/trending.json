@@ -1,0 +1,21 @@
+{
+  "_comment": "Dated batches from Hans's manual GSC 'Performance on Search' exports. Each batch is one export snapshot (GSC's own trailing-28-day window, not a calendar week). English (unprefixed) URLs only, top 10 by clicks. Append a new batch object to the front of `batches` for each new export — do not overwrite prior batches, per the site's dated-stacked-history rule.",
+  "batches": [
+    {
+      "batchDate": "2026-09-20",
+      "label": "Snapshot as of September 20, 2026",
+      "pages": [
+        { "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics", "title": "Uncensored Local LLMs for Creative Writing", "clicks": 3251, "impressions": 49623 },
+        { "url": "/power-local-llm/best-local-llm-apps-android-2026", "title": "Best Local LLM Apps for Android", "clicks": 770, "impressions": 41215 },
+        { "url": "/local-llms/best-cpu-only-llm", "title": "Best CPU-Only LLM", "clicks": 642, "impressions": 25767 },
+        { "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026", "title": "Apple MLX vs. NVIDIA CUDA for Local LLMs", "clicks": 573, "impressions": 29599 },
+        { "url": "/local-llms/fastest-local-llms-low-end-pcs", "title": "Fastest Local LLMs for Low-End PCs", "clicks": 558, "impressions": 33943 },
+        { "url": "/local-llms/apple-silicon-m5-local-llm", "title": "Apple Silicon M5 for Local LLMs", "clicks": 549, "impressions": 79087 },
+        { "url": "/local-llms/small-local-llm-models", "title": "Small Local LLM Models", "clicks": 508, "impressions": 25602 },
+        { "url": "/local-llms/best-amd-mini-pc-local-llm-2026", "title": "Best AMD Mini PC for Local LLMs", "clicks": 500, "impressions": 21308 },
+        { "url": "/local-llms/local-llm-hardware-guide-2026", "title": "Local LLM Hardware Guide", "clicks": 448, "impressions": 76985 },
+        { "url": "/local-llms/best-amd-gpus-local-llm", "title": "Best AMD GPUs for Local LLMs", "clicks": 348, "impressions": 28968 }
+      ]
+    }
+  ]
+}

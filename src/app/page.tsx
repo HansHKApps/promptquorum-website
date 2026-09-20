@@ -4,6 +4,7 @@ import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { LandingPageServer } from '@/components/LandingPageServer'
 import { ConfirmedToast } from '@/components/ConfirmedToast'
+import { HomeEn } from '@/components/home/HomeEn'
 
 export const dynamic = 'force-static'
 export const revalidate = 86400
@@ -41,6 +42,19 @@ export default async function Home({ searchParams }: PageProps) {
   const lang = (sp?.lang as string) || 'en'
   const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
+
+  // English gets the new dynamic homepage (11-block hub, no hero/Features/
+  // How-It-Works/FAQ — see src/components/home/HomeEn.tsx). The other 8
+  // locales render LandingPageServer completely unchanged; first-run scope
+  // for this rebuild is English only.
+  if (selectedLang === 'en') {
+    return (
+      <>
+        <ConfirmedToast />
+        <HomeEn />
+      </>
+    )
+  }
 
   return (
     <>

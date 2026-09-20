@@ -35,6 +35,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ships Plan Mode, a Deep Research mode, sub-agent "dispatch," background job handling, and per-phase model selection (a separate model for planning vs. implementation)',
           'Over 2,600 GitHub stars and 179 forks as of this review; the repository was created April 11, 2026',
           'Bring-your-own-hardware-or-API-key: local inference is free once you have the hardware; cloud model usage is billed by that provider',
+          'Latest tagged release: v1.20.0 — development has continued past the v1.14.0 changelog entries below, at a similarly fast pace',
         ],
         updatedDate: '2026-09',
       },

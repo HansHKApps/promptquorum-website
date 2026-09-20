@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: '최소한의 macOS/iOS 네이티브 Ollama 클라이언트',
   },
   reviewSlug: 'enchanted-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'v1.8.2', versionSourceUrl: 'https://github.com/gluonfield/enchanted/releases/tag/v1.8.2' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -36,5 +36,11 @@ export const app: ToolRecord = {
     ko: '어댑터당 비용 없이 단일 GPU에서 수천 개의 파인튜닝된 LoRA 어댑터를 서빙하는 셀프호스팅 추론 서버',
   },
   reviewSlug: 'lorax-review', // dedicated PromptQuorum review — added 2026-09-19
+  // NOT github.com/predibase/lorax's GitHub API "latest release" (that returns
+  // the stale, manually-pinned lorax-0.4.0 from Jan 2024) — GitHub lets a
+  // maintainer manually override which release is flagged "Latest" independent
+  // of chronological/semver order. Verified the real latest via the full
+  // /releases page: v0.12.1 (Nov 2026). See check-app-versions.mjs's docstring.
+  pqReview: { date: '2026-09-20', version: 'v0.12.1', versionSourceUrl: 'https://github.com/predibase/lorax/releases/tag/v0.12.1' },
   lastVerifiedDate: '2026-09-18',
 }

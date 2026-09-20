@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: '여러 모델 아키텍처를 갖춘 오픈소스 음성 합성',
   },
   reviewSlug: 'coqui-tts-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'v0.27.5', versionSourceUrl: 'https://github.com/idiap/coqui-ai-TTS/releases/tag/v0.27.5' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

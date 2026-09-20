@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: 'AI 소프트웨어 개발 에이전트 (이전 이름: OpenDevin)',
   },
   reviewSlug: 'openhands-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'v1.20.0', versionSourceUrl: 'https://github.com/OpenHands/OpenHands/releases/tag/v1.20.0' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

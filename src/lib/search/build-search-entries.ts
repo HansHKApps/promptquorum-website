@@ -80,6 +80,7 @@ export function buildAllSearchEntries(): SearchEntry[] {
         tags: a.aboutTopics ?? [],
         url: articleUrl('prompt-engineering', slug, lang),
         lang,
+        contentType: 'article',
       })
     }
   }
@@ -101,6 +102,7 @@ export function buildAllSearchEntries(): SearchEntry[] {
         tags: (article.targetKeywords ?? []) as string[],
         url: articleUrl('local-llms', slug, lang),
         lang,
+        contentType: 'article',
       })
     }
   }
@@ -122,6 +124,7 @@ export function buildAllSearchEntries(): SearchEntry[] {
         tags: (article.targetKeywords ?? []) as string[],
         url: articleUrl('power-local-llm', slug, lang),
         lang,
+        contentType: 'article',
       })
     }
   }
@@ -154,6 +157,7 @@ export function buildAllSearchEntries(): SearchEntry[] {
           tags: tool.uses ?? [],
           url: articleUrl('power-local-llm', DIRECTORY_ARTICLE_SLUG, lang),
           lang,
+          contentType: 'tool',
         })
       }
     }
@@ -176,6 +180,7 @@ export function buildAllSearchEntries(): SearchEntry[] {
         tags: (article.targetKeywords ?? []) as string[],
         url: articleUrl('prompt-bites', slug, lang),
         lang,
+        contentType: 'article',
       })
     }
   }
@@ -197,6 +202,7 @@ export function buildAllSearchEntries(): SearchEntry[] {
         tags: (article.targetKeywords ?? []) as string[],
         url: articleUrl('balcony-solar', slug, lang),
         lang,
+        contentType: 'article',
       })
     }
   }
@@ -218,6 +224,7 @@ export function buildAllSearchEntries(): SearchEntry[] {
         tags: (article.targetKeywords ?? []) as string[],
         url: articleUrl('smart-home', slug, lang),
         lang,
+        contentType: 'article',
       })
     }
   }
@@ -239,6 +246,7 @@ export function buildAllSearchEntries(): SearchEntry[] {
         tags: [],
         url: articleUrl('blog', slug, lang),
         lang,
+        contentType: 'article',
       })
     }
   }

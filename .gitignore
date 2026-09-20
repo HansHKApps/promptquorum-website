@@ -27,6 +27,10 @@ geo-audit-report.csv
 # Legal/reputational risk pre-scan output (generated; re-run npm run risk:scan)
 risk-scan-report.csv
 
+# App version drift check output (generated; re-run npm run check-app-versions)
+app-version-drift-report.json
+APP_VERSION_DRIFT_REPORT.md
+
 # Screenshot / image artifacts dropped in the tree (e.g. Playwright captures)
 *.png
 # ...except real content assets (Discover-compliant hero PNGs, brand images)

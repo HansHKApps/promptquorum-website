@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ar: 'بوابة واحدة متوافقة مع OpenAI لأكثر من 100 واجهة برمجة لمزوّدي نماذج اللغة، مع التوجيه وتتبع التكاليف',
     ko: '100개 이상의 LLM 제공업체 API를 위한 단일 OpenAI 호환 게이트웨이, 라우팅 및 비용 추적 포함',
   },
+  pqReview: { date: '2026-09-20', version: 'v1.101.0', versionSourceUrl: 'https://github.com/BerriAI/litellm/releases/tag/v1.101.0' },
   lastVerifiedDate: '2026-09-14',
 }

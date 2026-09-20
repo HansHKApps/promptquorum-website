@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: 'LLM용 오픈소스 Flutter 모바일 앱',
   },
   reviewSlug: 'maid-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'v3.0.0', versionSourceUrl: 'https://github.com/Mobile-Artificial-Intelligence/maid/releases/tag/v3.0.0' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

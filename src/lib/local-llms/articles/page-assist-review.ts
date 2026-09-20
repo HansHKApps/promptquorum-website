@@ -95,6 +95,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Also supports vision-model image input, PDF and document chat, and internet search integration',
           'Chrome Web Store listing shows 300,000+ users and a 4.8/5 rating (244 ratings) as of September 2026',
           'Funded through Ko-fi donations and GitHub Sponsors -- no account, subscription, or paid tier',
+          'Latest tagged release: v1.5.83',
         ],
         updatedDate: '2026-09',
       },

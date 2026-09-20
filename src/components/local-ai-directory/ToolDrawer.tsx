@@ -167,6 +167,7 @@ export function ToolDrawer({
       [t('detailPlatforms', lang), labelList('platforms', app.platforms, lang)],
       [t('detailWorksWith', lang), joinOrUnknown(app.worksWith)],
       [t('detailMcp', lang), app.mcpSupport ? t('mcpSupported', lang) : null],
+      [t('detailVersion', lang), app.pqReview?.version ? `${app.pqReview.version} (${formatDisplayDate(app.pqReview.date, lang)})` : null],
       [t('detailAdded', lang), app.addedDate ? formatDisplayDate(app.addedDate, lang) : null],
       [t('detailLastVerified', lang), app.lastVerifiedDate ? formatDisplayDate(app.lastVerifiedDate, lang) : null],
     ]
@@ -187,7 +188,7 @@ export function ToolDrawer({
       if (app.founder.limits) lines.push(`${t('limits', lang)} ${founderText(app.founder.limits, lang)}`)
     }
 
-    if (app.pqReview) {
+    if (app.pqReview?.text) {
       lines.push('', `${t('pqReviewHeading', lang)}:`, app.pqReview.text[lang] ?? app.pqReview.text.en ?? '')
     }
 
@@ -334,6 +335,20 @@ export function ToolDrawer({
                       )
                     }
                   />
+                  {app.pqReview?.version && (
+                    <DetailRow
+                      label={t('detailVersion', lang)}
+                      value={
+                        app.pqReview.versionSourceUrl ? (
+                          <a href={app.pqReview.versionSourceUrl} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-text-primary">
+                            {app.pqReview.version} ({formatDisplayDate(app.pqReview.date, lang)})
+                          </a>
+                        ) : (
+                          `${app.pqReview.version} (${formatDisplayDate(app.pqReview.date, lang)})`
+                        )
+                      }
+                    />
+                  )}
                   <DetailRow label={t('detailAdded', lang)} value={app.addedDate ? formatDisplayDate(app.addedDate, lang) : null} />
                   <DetailRow
                     label={t('detailLastVerified', lang)}
@@ -365,12 +380,14 @@ export function ToolDrawer({
               </section>
 
               {/* PromptQuorum review */}
-              {app.pqReview && (
+              {app.pqReview?.text && (
                 <section className="mb-5">
                   <h3 className="text-sm font-bold text-text-primary mb-2">{t('pqReviewHeading', lang)}</h3>
                   <div className="text-sm text-text-secondary space-y-1.5">
                     <p>{app.pqReview.text[lang] ?? app.pqReview.text.en ?? ''}</p>
-                    <p className="text-xs text-text-secondary/80">{t('testedOnTemplate', lang, { date: formatDisplayDate(app.pqReview.date, lang), hw: app.pqReview.hw })}</p>
+                    {app.pqReview.hw && (
+                      <p className="text-xs text-text-secondary/80">{t('testedOnTemplate', lang, { date: formatDisplayDate(app.pqReview.date, lang), hw: app.pqReview.hw })}</p>
+                    )}
                   </div>
                 </section>
               )}

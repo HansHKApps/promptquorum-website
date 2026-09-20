@@ -1,0 +1,13 @@
+{
+  "_comment": "TEMPORARY manually-seeded pool -- see src/lib/home/quick-tips.ts. Each entry is a real, verifiable claim pulled directly from the cited published article. Replace with an auto-extracted pool once an offline extraction script exists (not built in this pass -- this repo's scripts never call an LLM API directly, so real extraction is follow-up work).",
+  "tips": [
+    { "id": "tip-001", "text": "KoboldCpp bundles a full KoboldAI Lite web UI, single-file zero-install distribution, and built-in image generation and speech-to-text -- none of which come with bare llama.cpp.", "sourceTitle": "KoboldCpp Review", "sourceUrl": "/power-local-llm/koboldcpp-review" },
+    { "id": "tip-002", "text": "AUTOMATIC1111, the most-used Stable Diffusion web UI, first launched on August 22, 2022 and is licensed under AGPL-3.0.", "sourceTitle": "AUTOMATIC1111 Review", "sourceUrl": "/power-local-llm/automatic1111-review" },
+    { "id": "tip-003", "text": "ExLlamaV2's EXL2 quantization format mixes 2-bit to 8-bit precision per layer to hit a target average bitrate, instead of one fixed bit-width across the whole model.", "sourceTitle": "ExLlamaV2 Explained", "sourceUrl": "/power-local-llm/exllamav2-explained" },
+    { "id": "tip-004", "text": "llama.cpp defined the GGUF (.gguf) model file format now used across most of the local-LLM ecosystem.", "sourceTitle": "llama.cpp Explained", "sourceUrl": "/power-local-llm/llama-cpp-explained" },
+    { "id": "tip-005", "text": "LoRAX started as a fork of Hugging Face's text-generation-inference, then added dynamic multi-LoRA adapter loading on top of it.", "sourceTitle": "LoRAX Review", "sourceUrl": "/power-local-llm/lorax-review" },
+    { "id": "tip-006", "text": "AutoGPT is really two differently-licensed projects sharing one repo: the MIT-licensed classic CLI agent, and a separately-licensed hosted Platform product.", "sourceTitle": "AutoGPT (Classic, Local) Review", "sourceUrl": "/power-local-llm/autogpt-local-review" },
+    { "id": "tip-007", "text": "NVIDIA Dynamo ships many model- and platform-specific release tags at a fast cadence, rather than one single version number for the whole project.", "sourceTitle": "NVIDIA Dynamo Review", "sourceUrl": "/power-local-llm/dynamo-review" },
+    { "id": "tip-008", "text": "little-coder defaults to a locally served Qwen3.6-35B-A3B model running over llama.cpp, tuned specifically to get good results from smaller local models.", "sourceTitle": "little-coder Review", "sourceUrl": "/power-local-llm/little-coder-review" }
+  ]
+}

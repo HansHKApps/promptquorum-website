@@ -45,6 +45,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Supported RAG over documents, images, audio, and video; 50+ inference backends including Ollama, vLLM, llama.cpp, and Hugging Face TGI; vision and voice models; an OpenAI-compatible API',
           'H2O.ai\'s actively developed successor is h2oGPTe (Enterprise h2oGPT), which continued shipping releases through 2026',
           'The archived code remains usable and forkable — it simply will not receive further official updates or security patches',
+          'Last tagged release before archival: 0.2.1',
         ],
         updatedDate: '2026-09',
       },

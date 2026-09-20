@@ -37,6 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Paid Lite (~$7.99/month) and Plus (~$14.99/month) tiers add Copilot-hosted cloud models and research features, not local-model access itself',
           'GitHub repository (github.com/logancyang/obsidian-copilot) shows approximately 7,700 stars as of September 12, 2026',
           'Agent mode (multi-step research and file editing) is desktop-only; Quick Chat also works on Obsidian mobile',
+          'Latest tagged release: 4.0.9',
         ],
         updatedDate: '2026-09',
       },

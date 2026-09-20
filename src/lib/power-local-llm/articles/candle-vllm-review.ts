@@ -35,6 +35,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Runs the same codebase on NVIDIA CUDA (Linux), Apple Metal (macOS/Apple Silicon), and CPU fallback',
           'Supports SafeTensors, GGUF, GPTQ, AWQ, Marlin, MXFP4, and NVFP4 model formats across Qwen, Llama, Mistral, Phi, DeepSeek, GLM, Gemma, and other model families',
           'Roughly 728 GitHub stars as of this review',
+          'Latest tagged release: v0.9.1',
         ],
         updatedDate: '2026-09',
       },

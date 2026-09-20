@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: 'Chrome 및 Firefox용 브라우저 사이드바 AI',
   },
   reviewSlug: 'page-assist-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'v1.5.83', versionSourceUrl: 'https://github.com/n4ze3m/page-assist/releases/tag/v1.5.83' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

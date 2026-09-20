@@ -7,7 +7,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
     publishDate: '2026-09-05',
-    dateModified: '2026-09-05',
+    dateModified: '2026-09-20',
     educationalLevel: 'Intermediate',
     audience: 'Developers and power users evaluating OpenClaw as a personal AI agent gateway, and readers who remember its January 2026 renaming saga and want to know its current governance and security track record',
     primaryTerm: 'OpenClaw',
@@ -28,7 +28,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'What is OpenClaw and is it safe to use?',
-        answer: 'OpenClaw ([github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)) is an open-source, MIT-licensed AI agent gateway that connects a language model to messaging apps and lets it run shell commands, control a browser, and manage files on your machine. It is real and actively maintained — 388,916 stars, a release roughly every few days, current version v2026.9.1 — but it carries a documented security history: 647 published GitHub security advisories between January and June 2026, including 14 critical and 219 high-severity findings, plus a disclosed unauthenticated remote-code-execution chain triggered by a single WhatsApp message (patched in version 2026.6.6). Whether it is "safe" depends entirely on how carefully you configure it — the capabilities that make it useful (shell access, file access, browser control) are the same capabilities behind every advisory on that list.',
+        answer: 'OpenClaw ([github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)) is an open-source, MIT-licensed AI agent gateway that connects a language model to messaging apps and lets it run shell commands, control a browser, and manage files on your machine. It is real and actively maintained — 388,916 stars, a release roughly every few days, current version v2026.9.5 — but it carries a documented security history: 647 published GitHub security advisories between January and June 2026, including 14 critical and 219 high-severity findings, plus a disclosed unauthenticated remote-code-execution chain triggered by a single WhatsApp message (patched in version 2026.6.6). Whether it is "safe" depends entirely on how carefully you configure it — the capabilities that make it useful (shell access, file access, browser control) are the same capabilities behind every advisory on that list.',
         bullets: [
           'MIT license, 388,916 stars, 81,708 forks, actively maintained (last push within hours of this review)',
           'Originally named Clawdbot (Nov 2025), renamed to Moltbot then OpenClaw within 3 days in January 2026 after an Anthropic trademark dispute over "Clawd"',
@@ -67,10 +67,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Creator Peter Steinberger joined OpenAI in February 2026; project handed to the nonprofit OpenClaw Foundation, chaired by Dave Morin, sponsored by OpenAI',
           '647 published GitHub security advisories (Jan–Jun 2026): 14 critical, 219 high, 350 medium, 64 low',
           'A disclosed unauthenticated RCE chain (3 CVEs, CVSS up to 8.8) via a single WhatsApp message, patched in version 2026.6.6',
-          'MIT licensed, 388,916 stars, current release v2026.9.1',
+          'MIT licensed, 388,916 stars, current release v2026.9.5',
         ],
         callouts: [
-          { type: 'note', text: 'This review covers OpenClaw as of v2026.9.1 (September 2026). Given its release pace (multiple versions per week) and its unusually active security-advisory history, verify current status directly on the repository before deploying it, especially with real messaging accounts and file-system access.' },
+          { type: 'note', text: 'This review covers OpenClaw as of v2026.9.5 (September 2026). Given its release pace (multiple versions per week) and its unusually active security-advisory history, verify current status directly on the repository before deploying it, especially with real messaging accounts and file-system access.' },
         ],
       },
       overview: {
@@ -145,13 +145,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'is-openclaw-still-maintained',
         title: 'Is OpenClaw Still Maintained?',
         content: [
-          'Yes, actively. The repository was pushed to within hours of this review\'s research, and OpenClaw ships new versions roughly every few days — the five most recent tags at review time were v2026.9.1, v2026.8.2, v2026.8.1, and two beta releases, spanning less than two weeks.',
+          'Yes, actively. The repository was pushed to within hours of this review\'s research, and OpenClaw ships new versions roughly every few days — the five most recent tags at review time were v2026.9.5, v2026.9.4, v2026.9.3, v2026.9.2, and v2026.9.1, spanning just over two weeks.',
           'Governance changed hands in February 2026: creator Peter Steinberger joined OpenAI, and stewardship passed to the nonprofit OpenClaw Foundation (501(c)(3) status, chaired by Dave Morin, a first full-time team of ten across engineering and operations, sponsored by OpenAI). The project remains MIT licensed under that arrangement. As of this review, the foundation had not published detailed public governance documents, so exactly how technical and roadmap decisions are made day-to-day is not fully transparent from the outside.',
         ],
         itemHeadings: true,
         rows: [
           { 'Signal': 'Repository activity', 'What it shows': 'Pushed within hours of this review; releases roughly every few days' },
-          { 'Signal': 'Current release', 'What it shows': 'v2026.9.1' },
+          { 'Signal': 'Current release', 'What it shows': 'v2026.9.5' },
           { 'Signal': 'Star count', 'What it shows': '388,916 stars, 81,708 forks' },
           { 'Signal': 'Governance', 'What it shows': 'Nonprofit OpenClaw Foundation (501(c)(3)), chaired by Dave Morin, sponsored by OpenAI, since February 2026' },
         ],
@@ -252,7 +252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
     publishDate: '2026-09-05',
-    dateModified: '2026-09-05',
+    dateModified: '2026-09-20',
     educationalLevel: 'Intermediate',
     audience: 'Entwickler und Power-User, die OpenClaw als persönlichen KI-Agenten-Gateway bewerten, sowie Leser, die sich an die Umbenennungs-Odyssee vom Januar 2026 erinnern und die aktuelle Governance und Sicherheitsbilanz kennen wollen',
     primaryTerm: 'OpenClaw',
@@ -273,7 +273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Was ist OpenClaw und ist es sicher zu nutzen?',
-        answer: 'OpenClaw ([github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)) ist ein quelloffenes, MIT-lizenziertes KI-Agenten-Gateway, das ein Sprachmodell mit Messaging-Apps verbindet und ihm erlaubt, Shell-Befehle auszuführen, einen Browser zu steuern und Dateien auf Ihrem Rechner zu verwalten. Es ist real und wird aktiv gepflegt — 388.916 Sterne, ein Release etwa alle paar Tage, aktuelle Version v2026.9.1 — trägt aber eine dokumentierte Sicherheitshistorie: 647 veröffentlichte GitHub-Sicherheitshinweise zwischen Januar und Juni 2026, darunter 14 kritische und 219 schwerwiegende Befunde, sowie eine offengelegte, nicht authentifizierte Remote-Code-Execution-Kette, die durch eine einzige WhatsApp-Nachricht auslösbar war (behoben in Version 2026.6.6). Ob es „sicher" ist, hängt vollständig davon ab, wie sorgfältig Sie es konfigurieren — dieselben Fähigkeiten, die es nützlich machen (Shell-, Datei- und Browserzugriff), stehen hinter jedem einzelnen Eintrag dieser Liste.',
+        answer: 'OpenClaw ([github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)) ist ein quelloffenes, MIT-lizenziertes KI-Agenten-Gateway, das ein Sprachmodell mit Messaging-Apps verbindet und ihm erlaubt, Shell-Befehle auszuführen, einen Browser zu steuern und Dateien auf Ihrem Rechner zu verwalten. Es ist real und wird aktiv gepflegt — 388.916 Sterne, ein Release etwa alle paar Tage, aktuelle Version v2026.9.5 — trägt aber eine dokumentierte Sicherheitshistorie: 647 veröffentlichte GitHub-Sicherheitshinweise zwischen Januar und Juni 2026, darunter 14 kritische und 219 schwerwiegende Befunde, sowie eine offengelegte, nicht authentifizierte Remote-Code-Execution-Kette, die durch eine einzige WhatsApp-Nachricht auslösbar war (behoben in Version 2026.6.6). Ob es „sicher" ist, hängt vollständig davon ab, wie sorgfältig Sie es konfigurieren — dieselben Fähigkeiten, die es nützlich machen (Shell-, Datei- und Browserzugriff), stehen hinter jedem einzelnen Eintrag dieser Liste.',
         bullets: [
           'MIT-Lizenz, 388.916 Sterne, 81.708 Forks, aktiv gepflegt (letzter Push innerhalb weniger Stunden vor diesem Test)',
           'Ursprünglich Clawdbot genannt (Nov. 2025), im Januar 2026 innerhalb von 3 Tagen über Moltbot zu OpenClaw umbenannt — nach einem Markenrechtsstreit mit Anthropic um „Clawd"',
@@ -312,10 +312,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gründer Peter Steinberger wechselte im Februar 2026 zu OpenAI; das Projekt ging an die gemeinnützige OpenClaw Foundation, unter Vorsitz von Dave Morin, gesponsert von OpenAI',
           '647 veröffentlichte GitHub-Sicherheitshinweise (Jan.–Jun. 2026): 14 kritisch, 219 hoch, 350 mittel, 64 niedrig',
           'Eine offengelegte, nicht authentifizierte RCE-Kette (3 CVEs, CVSS bis 8,8) über eine einzige WhatsApp-Nachricht, behoben in Version 2026.6.6',
-          'MIT-lizenziert, 388.916 Sterne, aktuelles Release v2026.9.1',
+          'MIT-lizenziert, 388.916 Sterne, aktuelles Release v2026.9.5',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test bezieht sich auf OpenClaw Stand v2026.9.1 (September 2026). Angesichts des Release-Tempos (mehrere Versionen pro Woche) und der ungewöhnlich aktiven Sicherheitshinweis-Historie sollten Sie den aktuellen Status direkt im Repository prüfen, bevor Sie es mit echten Messaging-Konten und Dateisystemzugriff einsetzen.' },
+          { type: 'note', text: 'Dieser Test bezieht sich auf OpenClaw Stand v2026.9.5 (September 2026). Angesichts des Release-Tempos (mehrere Versionen pro Woche) und der ungewöhnlich aktiven Sicherheitshinweis-Historie sollten Sie den aktuellen Status direkt im Repository prüfen, bevor Sie es mit echten Messaging-Konten und Dateisystemzugriff einsetzen.' },
         ],
       },
       overview: {
@@ -390,13 +390,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'is-openclaw-still-maintained',
         title: 'Wird OpenClaw noch gepflegt?',
         content: [
-          'Ja, aktiv. Das Repository wurde innerhalb weniger Stunden vor der Recherche zu diesem Test aktualisiert, und OpenClaw veröffentlicht etwa alle paar Tage ein neues Release — die fünf jüngsten Tags zum Zeitpunkt des Tests waren v2026.9.1, v2026.8.2, v2026.8.1 sowie zwei Beta-Releases, verteilt über weniger als zwei Wochen.',
+          'Ja, aktiv. Das Repository wurde innerhalb weniger Stunden vor der Recherche zu diesem Test aktualisiert, und OpenClaw veröffentlicht etwa alle paar Tage ein neues Release — die fünf jüngsten Tags zum Zeitpunkt des Tests waren v2026.9.5, v2026.9.4, v2026.9.3, v2026.9.2 und v2026.9.1, verteilt über etwas mehr als zwei Wochen.',
           'Die Governance wechselte im Februar 2026: Gründer Peter Steinberger wechselte zu OpenAI, und die Betreuung ging an die gemeinnützige OpenClaw Foundation über (501(c)(3)-Status, unter Vorsitz von Dave Morin, ein erstes festangestelltes Team aus zehn Personen in Engineering und Betrieb, gesponsert von OpenAI). Das Projekt bleibt unter dieser Konstellation MIT-lizenziert. Zum Zeitpunkt dieses Tests hatte die Stiftung noch keine detaillierten öffentlichen Governance-Dokumente veröffentlicht, sodass von außen nicht vollständig transparent ist, wie technische Entscheidungen und die Roadmap im Alltag getroffen werden.',
         ],
         itemHeadings: true,
         rows: [
           { 'Signal': 'Repository-Aktivität', 'What it shows': 'Push innerhalb weniger Stunden vor diesem Test; Releases etwa alle paar Tage' },
-          { 'Signal': 'Aktuelles Release', 'What it shows': 'v2026.9.1' },
+          { 'Signal': 'Aktuelles Release', 'What it shows': 'v2026.9.5' },
           { 'Signal': 'Sterne-Anzahl', 'What it shows': '388.916 Sterne, 81.708 Forks' },
           { 'Signal': 'Governance', 'What it shows': 'Gemeinnützige OpenClaw Foundation (501(c)(3)), unter Vorsitz von Dave Morin, gesponsert von OpenAI, seit Februar 2026' },
         ],
@@ -497,7 +497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
     publishDate: '2026-09-05',
-    dateModified: '2026-09-05',
+    dateModified: '2026-09-20',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs et utilisateurs avancés évaluant OpenClaw comme passerelle d\'agent IA personnel, et lecteurs qui se souviennent de sa saga de renommage de janvier 2026 et veulent connaître sa gouvernance et son bilan de sécurité actuels',
     primaryTerm: 'OpenClaw',
@@ -518,7 +518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce qu\'OpenClaw et est-il sûr à utiliser ?',
-        answer: 'OpenClaw ([github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)) est une passerelle d\'agent IA open source sous licence MIT qui connecte un modèle de langage à des applications de messagerie et lui permet d\'exécuter des commandes shell, de contrôler un navigateur et de gérer des fichiers sur votre machine. Le projet est bien réel et activement maintenu — 388 916 étoiles, une version tous les quelques jours environ, version actuelle v2026.9.1 — mais il porte un historique de sécurité documenté : 647 avis de sécurité GitHub publiés entre janvier et juin 2026, dont 14 critiques et 219 de sévérité élevée, ainsi qu\'une chaîne d\'exécution de code à distance non authentifiée divulguée, déclenchable par un simple message WhatsApp (corrigée dans la version 2026.6.6). Sa « sécurité » dépend entièrement de la rigueur de votre configuration — les capacités qui le rendent utile (accès shell, fichiers, navigateur) sont les mêmes qui sont à l\'origine de chaque avis de cette liste.',
+        answer: 'OpenClaw ([github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)) est une passerelle d\'agent IA open source sous licence MIT qui connecte un modèle de langage à des applications de messagerie et lui permet d\'exécuter des commandes shell, de contrôler un navigateur et de gérer des fichiers sur votre machine. Le projet est bien réel et activement maintenu — 388 916 étoiles, une version tous les quelques jours environ, version actuelle v2026.9.5 — mais il porte un historique de sécurité documenté : 647 avis de sécurité GitHub publiés entre janvier et juin 2026, dont 14 critiques et 219 de sévérité élevée, ainsi qu\'une chaîne d\'exécution de code à distance non authentifiée divulguée, déclenchable par un simple message WhatsApp (corrigée dans la version 2026.6.6). Sa « sécurité » dépend entièrement de la rigueur de votre configuration — les capacités qui le rendent utile (accès shell, fichiers, navigateur) sont les mêmes qui sont à l\'origine de chaque avis de cette liste.',
         bullets: [
           'Licence MIT, 388 916 étoiles, 81 708 forks, activement maintenu (dernier push il y a quelques heures avant cet avis)',
           'Initialement nommé Clawdbot (nov. 2025), renommé Moltbot puis OpenClaw en 3 jours en janvier 2026 après un différend de marque avec Anthropic autour de « Clawd »',
@@ -557,10 +557,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le créateur Peter Steinberger a rejoint OpenAI en février 2026 ; le projet est passé à la fondation à but non lucratif OpenClaw Foundation, présidée par Dave Morin, sponsorisée par OpenAI',
           '647 avis de sécurité GitHub publiés (jan.–juin 2026) : 14 critiques, 219 élevés, 350 moyens, 64 faibles',
           'Une chaîne RCE non authentifiée divulguée (3 CVE, CVSS jusqu\'à 8,8) via un seul message WhatsApp, corrigée dans la version 2026.6.6',
-          'Sous licence MIT, 388 916 étoiles, version actuelle v2026.9.1',
+          'Sous licence MIT, 388 916 étoiles, version actuelle v2026.9.5',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis porte sur OpenClaw en version v2026.9.1 (septembre 2026). Étant donné son rythme de publication (plusieurs versions par semaine) et son historique d\'avis de sécurité inhabituellement actif, vérifiez le statut actuel directement sur le dépôt avant de le déployer, en particulier avec de vrais comptes de messagerie et un accès au système de fichiers.' },
+          { type: 'note', text: 'Cet avis porte sur OpenClaw en version v2026.9.5 (septembre 2026). Étant donné son rythme de publication (plusieurs versions par semaine) et son historique d\'avis de sécurité inhabituellement actif, vérifiez le statut actuel directement sur le dépôt avant de le déployer, en particulier avec de vrais comptes de messagerie et un accès au système de fichiers.' },
         ],
       },
       overview: {
@@ -635,13 +635,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'is-openclaw-still-maintained',
         title: 'OpenClaw est-il encore maintenu ?',
         content: [
-          'Oui, activement. Le dépôt a reçu un push quelques heures avant la recherche pour cet avis, et OpenClaw publie une nouvelle version environ tous les quelques jours — les cinq tags les plus récents au moment de l\'avis étaient v2026.9.1, v2026.8.2, v2026.8.1 et deux versions bêta, réparties sur moins de deux semaines.',
+          'Oui, activement. Le dépôt a reçu un push quelques heures avant la recherche pour cet avis, et OpenClaw publie une nouvelle version environ tous les quelques jours — les cinq tags les plus récents au moment de l\'avis étaient v2026.9.5, v2026.9.4, v2026.9.3, v2026.9.2 et v2026.9.1, répartis sur un peu plus de deux semaines.',
           'La gouvernance a changé de mains en février 2026 : le créateur Peter Steinberger a rejoint OpenAI, et la gestion du projet est passée à la fondation à but non lucratif OpenClaw Foundation (statut 501(c)(3), présidée par Dave Morin, une première équipe à temps plein de dix personnes en ingénierie et opérations, sponsorisée par OpenAI). Le projet reste sous licence MIT dans ce cadre. Au moment de cet avis, la fondation n\'avait pas publié de documents de gouvernance publics détaillés, donc la manière exacte dont les décisions techniques et de feuille de route sont prises au quotidien n\'est pas totalement transparente de l\'extérieur.',
         ],
         itemHeadings: true,
         rows: [
           { 'Signal': 'Activité du dépôt', 'What it shows': 'Push il y a quelques heures avant cet avis ; publications environ tous les quelques jours' },
-          { 'Signal': 'Version actuelle', 'What it shows': 'v2026.9.1' },
+          { 'Signal': 'Version actuelle', 'What it shows': 'v2026.9.5' },
           { 'Signal': 'Nombre d\'étoiles', 'What it shows': '388 916 étoiles, 81 708 forks' },
           { 'Signal': 'Gouvernance', 'What it shows': 'Fondation à but non lucratif OpenClaw Foundation (501(c)(3)), présidée par Dave Morin, sponsorisée par OpenAI, depuis février 2026' },
         ],
@@ -742,7 +742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
     publishDate: '2026-09-05',
-    dateModified: '2026-09-05',
+    dateModified: '2026-09-20',
     educationalLevel: 'Intermediate',
     audience: 'OpenClawを個人用AIエージェントゲートウェイとして評価する開発者やパワーユーザー、そして2026年1月の改名騒動を覚えていて現在のガバナンスとセキュリティ実績を知りたい読者',
     primaryTerm: 'OpenClaw',
@@ -763,7 +763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'OpenClawとは何ですか？安全に使えますか？',
-        answer: 'OpenClaw（[github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)）はオープンソースかつMITライセンスのAIエージェントゲートウェイで、言語モデルをメッセージングアプリに接続し、シェルコマンドの実行、ブラウザ操作、マシン上のファイル管理を行わせます。実在し活発に開発されています——388,916スター、数日おきのリリース、現行バージョンはv2026.9.1——ただし文書化されたセキュリティ実績があります：2026年1月から6月の間に647件のGitHubセキュリティ勧告が公開され、うち重大14件、高深刻度219件、さらに単一のWhatsAppメッセージで発動する未認証のリモートコード実行チェーンが開示されました（バージョン2026.6.6で修正済み）。「安全」かどうかは設定の慎重さに完全に依存します——役立つ理由となる機能（シェル・ファイル・ブラウザアクセス）は、そのリストにあるすべての勧告の背景にある機能と同じです。',
+        answer: 'OpenClaw（[github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)）はオープンソースかつMITライセンスのAIエージェントゲートウェイで、言語モデルをメッセージングアプリに接続し、シェルコマンドの実行、ブラウザ操作、マシン上のファイル管理を行わせます。実在し活発に開発されています——388,916スター、数日おきのリリース、現行バージョンはv2026.9.5——ただし文書化されたセキュリティ実績があります：2026年1月から6月の間に647件のGitHubセキュリティ勧告が公開され、うち重大14件、高深刻度219件、さらに単一のWhatsAppメッセージで発動する未認証のリモートコード実行チェーンが開示されました（バージョン2026.6.6で修正済み）。「安全」かどうかは設定の慎重さに完全に依存します——役立つ理由となる機能（シェル・ファイル・ブラウザアクセス）は、そのリストにあるすべての勧告の背景にある機能と同じです。',
         bullets: [
           'MITライセンス、388,916スター、81,708フォーク、活発に開発中（本レビュー数時間前にプッシュあり）',
           '当初はClawdbotという名称（2025年11月）、2026年1月にAnthropicとの「Clawd」を巡る商標紛争後、3日間でMoltbotを経てOpenClawに改名',
@@ -802,10 +802,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '創業者Peter Steinbergerは2026年2月にOpenAIへ移籍。プロジェクトはOpenAIがスポンサーとなる非営利団体OpenClaw Foundation（議長Dave Morin）へ移管',
           '647件のGitHubセキュリティ勧告公開（2026年1〜6月）：重大14件、高219件、中350件、低64件',
           '単一のWhatsAppメッセージで発動する未認証のRCEチェーン（CVE 3件、CVSS最大8.8）を開示、バージョン2026.6.6で修正',
-          'MITライセンス、388,916スター、現行リリースv2026.9.1',
+          'MITライセンス、388,916スター、現行リリースv2026.9.5',
         ],
         callouts: [
-          { type: 'note', text: '本レビューはv2026.9.1（2026年9月）時点のOpenClawを対象としています。リリース頻度（週に複数回）と異例に活発なセキュリティ勧告の実績を踏まえ、実際のメッセージングアカウントやファイルシステムアクセスを伴って導入する前に、リポジトリで最新状況を直接確認してください。' },
+          { type: 'note', text: '本レビューはv2026.9.5（2026年9月）時点のOpenClawを対象としています。リリース頻度（週に複数回）と異例に活発なセキュリティ勧告の実績を踏まえ、実際のメッセージングアカウントやファイルシステムアクセスを伴って導入する前に、リポジトリで最新状況を直接確認してください。' },
         ],
       },
       overview: {
@@ -880,13 +880,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'is-openclaw-still-maintained',
         title: 'OpenClawは今も開発が続いているか',
         content: [
-          'はい、活発に続いています。リポジトリは本レビューの調査から数時間以内にプッシュされており、OpenClawは数日おきに新しいバージョンをリリースしています——レビュー時点で最新の5つのタグはv2026.9.1、v2026.8.2、v2026.8.1と2つのベータ版で、2週間未満の期間に集中していました。',
+          'はい、活発に続いています。リポジトリは本レビューの調査から数時間以内にプッシュされており、OpenClawは数日おきに新しいバージョンをリリースしています——レビュー時点で最新の5つのタグはv2026.9.5、v2026.9.4、v2026.9.3、v2026.9.2、v2026.9.1で、2週間強の期間に集中していました。',
           'ガバナンスは2026年2月に交代しました：創業者Peter SteinbergerがOpenAIへ移籍し、運営は非営利団体OpenClaw Foundation（501(c)(3)ステータス、Dave Morinが議長、エンジニアリングと運営にまたがる最初の常勤チーム10名、OpenAIがスポンサー）に引き継がれました。この体制の下でもプロジェクトはMITライセンスのままです。本レビュー時点で、財団は詳細な公開ガバナンス文書を発表しておらず、技術面やロードマップの意思決定が日常的にどのように行われているかは、外部から見て完全には透明ではありません。',
         ],
         itemHeadings: true,
         rows: [
           { 'Signal': 'リポジトリの活動', 'What it shows': '本レビュー数時間前にプッシュ；数日おきにリリース' },
-          { 'Signal': '現行リリース', 'What it shows': 'v2026.9.1' },
+          { 'Signal': '現行リリース', 'What it shows': 'v2026.9.5' },
           { 'Signal': 'スター数', 'What it shows': '388,916スター、81,708フォーク' },
           { 'Signal': 'ガバナンス', 'What it shows': '非営利団体OpenClaw Foundation（501(c)(3)）、Dave Morin議長、OpenAIがスポンサー、2026年2月以降' },
         ],
@@ -987,7 +987,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
     publishDate: '2026-09-05',
-    dateModified: '2026-09-05',
+    dateModified: '2026-09-20',
     educationalLevel: 'Intermediate',
     audience: '正在评估OpenClaw作为个人AI代理网关的开发者和高级用户，以及记得2026年1月改名风波、想了解其当前治理和安全记录的读者',
     primaryTerm: 'OpenClaw',
@@ -1008,7 +1008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       zh: {
         question: 'OpenClaw是什么？使用安全吗？',
-        answer: 'OpenClaw（[github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)）是一款开源、MIT许可的AI代理网关，将语言模型连接到消息应用，并允许它在你的设备上执行Shell命令、控制浏览器、管理文件。它真实存在且积极维护——388,916颗星，每隔几天发布一个版本，当前版本v2026.9.1——但也带有一段有据可查的安全记录：2026年1月至6月间发布了647份GitHub安全公告，其中14份严重级、219份高危级，另外还披露了一条仅需一条WhatsApp消息即可触发的未认证远程代码执行链（已在2026.6.6版本修复）。它是否「安全」完全取决于你配置的谨慎程度——使其有用的能力（Shell、文件、浏览器访问）正是这份清单上每一条公告背后的能力。',
+        answer: 'OpenClaw（[github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)）是一款开源、MIT许可的AI代理网关，将语言模型连接到消息应用，并允许它在你的设备上执行Shell命令、控制浏览器、管理文件。它真实存在且积极维护——388,916颗星，每隔几天发布一个版本，当前版本v2026.9.5——但也带有一段有据可查的安全记录：2026年1月至6月间发布了647份GitHub安全公告，其中14份严重级、219份高危级，另外还披露了一条仅需一条WhatsApp消息即可触发的未认证远程代码执行链（已在2026.6.6版本修复）。它是否「安全」完全取决于你配置的谨慎程度——使其有用的能力（Shell、文件、浏览器访问）正是这份清单上每一条公告背后的能力。',
         bullets: [
           'MIT许可证，388,916颗星，81,708次分叉，积极维护中（本评测发布前数小时内仍有推送）',
           '最初名为Clawdbot（2025年11月），2026年1月因与Anthropic围绕「Clawd」的商标纠纷，在3天内经Moltbot改名为OpenClaw',
@@ -1047,10 +1047,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '创始人Peter Steinberger于2026年2月加入OpenAI；项目移交给非营利的OpenClaw基金会，主席为Dave Morin，由OpenAI赞助',
           '发布647份GitHub安全公告（2026年1—6月）：14严重、219高危、350中危、64低危',
           '披露一条未认证RCE攻击链（3个CVE，CVSS最高8.8），仅需一条WhatsApp消息即可触发，已在2026.6.6版本修复',
-          'MIT许可，388,916颗星，当前版本v2026.9.1',
+          'MIT许可，388,916颗星，当前版本v2026.9.5',
         ],
         callouts: [
-          { type: 'note', text: '本评测涵盖截至v2026.9.1（2026年9月）的OpenClaw。鉴于其发布节奏（每周多个版本）及异常活跃的安全公告历史，在用真实消息账号和文件系统访问权限部署之前，请直接在仓库上核实当前状态。' },
+          { type: 'note', text: '本评测涵盖截至v2026.9.5（2026年9月）的OpenClaw。鉴于其发布节奏（每周多个版本）及异常活跃的安全公告历史，在用真实消息账号和文件系统访问权限部署之前，请直接在仓库上核实当前状态。' },
         ],
       },
       overview: {
@@ -1125,13 +1125,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'is-openclaw-still-maintained',
         title: 'OpenClaw还在维护吗',
         content: [
-          '是的，而且非常活跃。在本评测调研前的数小时内，该仓库仍有推送记录，OpenClaw大约每隔几天就发布一个新版本——评测撰写时最近的五个标签是v2026.9.1、v2026.8.2、v2026.8.1以及两个测试版，分布在不到两周的时间内。',
+          '是的，而且非常活跃。在本评测调研前的数小时内，该仓库仍有推送记录，OpenClaw大约每隔几天就发布一个新版本——评测撰写时最近的五个标签是v2026.9.5、v2026.9.4、v2026.9.3、v2026.9.2、v2026.9.1，分布在两周多一点的时间内。',
           '治理结构在2026年2月发生变化：创始人Peter Steinberger加入OpenAI，项目运营移交给非营利的OpenClaw基金会（501(c)(3)地位，主席为Dave Morin，首批全职团队共十人横跨工程与运营，由OpenAI赞助）。在这一安排下项目仍保持MIT许可。截至本评测时，该基金会尚未公布详细的公开治理文件，因此外界并不能完全透明地了解技术和路线图决策在日常中是如何做出的。',
         ],
         itemHeadings: true,
         rows: [
           { 'Signal': '仓库活跃度', 'What it shows': '本评测前数小时内有推送；大约每隔几天发布一个版本' },
-          { 'Signal': '当前版本', 'What it shows': 'v2026.9.1' },
+          { 'Signal': '当前版本', 'What it shows': 'v2026.9.5' },
           { 'Signal': '星标数', 'What it shows': '388,916颗星，81,708次分叉' },
           { 'Signal': '治理结构', 'What it shows': '非营利OpenClaw基金会（501(c)(3)），主席Dave Morin，由OpenAI赞助，自2026年2月起' },
         ],
@@ -1232,7 +1232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
     publishDate: '2026-09-05',
-    dateModified: '2026-09-05',
+    dateModified: '2026-09-20',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores y usuarios avanzados que evalúan OpenClaw como pasarela de agente de IA personal, y lectores que recuerdan su saga de cambios de nombre de enero de 2026 y quieren conocer su gobernanza y su historial de seguridad actuales',
     primaryTerm: 'OpenClaw',
@@ -1253,7 +1253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Qué es OpenClaw y es seguro usarlo?',
-        answer: 'OpenClaw ([github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)) es una pasarela de agente de IA de código abierto con licencia MIT que conecta un modelo de lenguaje con aplicaciones de mensajería y le permite ejecutar comandos de shell, controlar un navegador y gestionar archivos en tu equipo. Es real y se mantiene activamente —388.916 estrellas, una versión aproximadamente cada pocos días, versión actual v2026.9.1— pero arrastra un historial de seguridad documentado: 647 avisos de seguridad de GitHub publicados entre enero y junio de 2026, incluidos 14 críticos y 219 de gravedad alta, además de una cadena de ejecución remota de código no autenticada divulgada, activable con un solo mensaje de WhatsApp (corregida en la versión 2026.6.6). Que sea "seguro" depende por completo de la cautela con que lo configures: las capacidades que lo hacen útil (acceso a shell, archivos y navegador) son las mismas que hay detrás de cada aviso de esa lista.',
+        answer: 'OpenClaw ([github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)) es una pasarela de agente de IA de código abierto con licencia MIT que conecta un modelo de lenguaje con aplicaciones de mensajería y le permite ejecutar comandos de shell, controlar un navegador y gestionar archivos en tu equipo. Es real y se mantiene activamente —388.916 estrellas, una versión aproximadamente cada pocos días, versión actual v2026.9.5— pero arrastra un historial de seguridad documentado: 647 avisos de seguridad de GitHub publicados entre enero y junio de 2026, incluidos 14 críticos y 219 de gravedad alta, además de una cadena de ejecución remota de código no autenticada divulgada, activable con un solo mensaje de WhatsApp (corregida en la versión 2026.6.6). Que sea "seguro" depende por completo de la cautela con que lo configures: las capacidades que lo hacen útil (acceso a shell, archivos y navegador) son las mismas que hay detrás de cada aviso de esa lista.',
         bullets: [
           'Licencia MIT, 388.916 estrellas, 81.708 forks, mantenido activamente (último push horas antes de esta reseña)',
           'Originalmente llamado Clawdbot (nov. 2025), renombrado a Moltbot y luego a OpenClaw en 3 días en enero de 2026 tras una disputa de marca con Anthropic por "Clawd"',
@@ -1292,10 +1292,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El creador Peter Steinberger se unió a OpenAI en febrero de 2026; el proyecto pasó a la fundación sin ánimo de lucro OpenClaw Foundation, presidida por Dave Morin, patrocinada por OpenAI',
           '647 avisos de seguridad de GitHub publicados (ene.–jun. 2026): 14 críticos, 219 altos, 350 medios, 64 bajos',
           'Una cadena RCE no autenticada divulgada (3 CVE, CVSS de hasta 8,8) mediante un solo mensaje de WhatsApp, corregida en la versión 2026.6.6',
-          'Con licencia MIT, 388.916 estrellas, versión actual v2026.9.1',
+          'Con licencia MIT, 388.916 estrellas, versión actual v2026.9.5',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña cubre OpenClaw en su versión v2026.9.1 (septiembre de 2026). Dado su ritmo de publicación (varias versiones por semana) y su historial de avisos de seguridad inusualmente activo, verifica el estado actual directamente en el repositorio antes de desplegarlo, especialmente con cuentas de mensajería reales y acceso al sistema de archivos.' },
+          { type: 'note', text: 'Esta reseña cubre OpenClaw en su versión v2026.9.5 (septiembre de 2026). Dado su ritmo de publicación (varias versiones por semana) y su historial de avisos de seguridad inusualmente activo, verifica el estado actual directamente en el repositorio antes de desplegarlo, especialmente con cuentas de mensajería reales y acceso al sistema de archivos.' },
         ],
       },
       overview: {
@@ -1370,13 +1370,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'is-openclaw-still-maintained',
         title: '¿Sigue manteniéndose OpenClaw?',
         content: [
-          'Sí, de forma activa. El repositorio recibió un push horas antes de la investigación para esta reseña, y OpenClaw publica una nueva versión aproximadamente cada pocos días —las cinco etiquetas más recientes en el momento de la reseña fueron v2026.9.1, v2026.8.2, v2026.8.1 y dos versiones beta, repartidas en menos de dos semanas.',
+          'Sí, de forma activa. El repositorio recibió un push horas antes de la investigación para esta reseña, y OpenClaw publica una nueva versión aproximadamente cada pocos días —las cinco etiquetas más recientes en el momento de la reseña fueron v2026.9.5, v2026.9.4, v2026.9.3, v2026.9.2 y v2026.9.1, repartidas en poco más de dos semanas.',
           'La gobernanza cambió de manos en febrero de 2026: el creador Peter Steinberger se unió a OpenAI, y la gestión pasó a la fundación sin ánimo de lucro OpenClaw Foundation (estatus 501(c)(3), presidida por Dave Morin, un primer equipo a tiempo completo de diez personas entre ingeniería y operaciones, patrocinada por OpenAI). El proyecto sigue con licencia MIT bajo ese acuerdo. En el momento de esta reseña, la fundación no había publicado documentos de gobernanza públicos detallados, por lo que desde fuera no resulta totalmente transparente cómo se toman día a día las decisiones técnicas y de hoja de ruta.',
         ],
         itemHeadings: true,
         rows: [
           { 'Signal': 'Actividad del repositorio', 'What it shows': 'Push horas antes de esta reseña; publicaciones aproximadamente cada pocos días' },
-          { 'Signal': 'Versión actual', 'What it shows': 'v2026.9.1' },
+          { 'Signal': 'Versión actual', 'What it shows': 'v2026.9.5' },
           { 'Signal': 'Número de estrellas', 'What it shows': '388.916 estrellas, 81.708 forks' },
           { 'Signal': 'Gobernanza', 'What it shows': 'Fundación sin ánimo de lucro OpenClaw Foundation (501(c)(3)), presidida por Dave Morin, patrocinada por OpenAI, desde febrero de 2026' },
         ],
@@ -1477,7 +1477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
     publishDate: '2026-09-05',
-    dateModified: '2026-09-05',
+    dateModified: '2026-09-20',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores e usuários avançados avaliando o OpenClaw como gateway de agente de IA pessoal, e leitores que se lembram da saga de renomeações de janeiro de 2026 e querem conhecer sua governança e histórico de segurança atuais',
     primaryTerm: 'OpenClaw',
@@ -1498,7 +1498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'O que é o OpenClaw e é seguro usá-lo?',
-        answer: 'O OpenClaw ([github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)) é um gateway de agente de IA open source, sob licença MIT, que conecta um modelo de linguagem a aplicativos de mensagens e permite que ele execute comandos de shell, controle um navegador e gerencie arquivos na sua máquina. É real e mantido ativamente — 388.916 estrelas, um lançamento a cada poucos dias em média, versão atual v2026.9.1 — mas carrega um histórico de segurança documentado: 647 avisos de segurança do GitHub publicados entre janeiro e junho de 2026, incluindo 14 críticos e 219 de gravidade alta, além de uma cadeia de execução remota de código não autenticada divulgada, acionável por uma única mensagem do WhatsApp (corrigida na versão 2026.6.6). Se ele é "seguro" depende inteiramente de quão cuidadosamente você o configura — as capacidades que o tornam útil (acesso a shell, arquivos e navegador) são as mesmas por trás de cada aviso dessa lista.',
+        answer: 'O OpenClaw ([github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)) é um gateway de agente de IA open source, sob licença MIT, que conecta um modelo de linguagem a aplicativos de mensagens e permite que ele execute comandos de shell, controle um navegador e gerencie arquivos na sua máquina. É real e mantido ativamente — 388.916 estrelas, um lançamento a cada poucos dias em média, versão atual v2026.9.5 — mas carrega um histórico de segurança documentado: 647 avisos de segurança do GitHub publicados entre janeiro e junho de 2026, incluindo 14 críticos e 219 de gravidade alta, além de uma cadeia de execução remota de código não autenticada divulgada, acionável por uma única mensagem do WhatsApp (corrigida na versão 2026.6.6). Se ele é "seguro" depende inteiramente de quão cuidadosamente você o configura — as capacidades que o tornam útil (acesso a shell, arquivos e navegador) são as mesmas por trás de cada aviso dessa lista.',
         bullets: [
           'Licença MIT, 388.916 estrelas, 81.708 forks, mantido ativamente (último push horas antes desta análise)',
           'Originalmente chamado de Clawdbot (nov. 2025), renomeado para Moltbot e depois OpenClaw em 3 dias em janeiro de 2026, após uma disputa de marca registrada com a Anthropic sobre "Clawd"',
@@ -1537,10 +1537,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O criador Peter Steinberger entrou para a OpenAI em fevereiro de 2026; o projeto passou para a fundação sem fins lucrativos OpenClaw Foundation, presidida por Dave Morin, patrocinada pela OpenAI',
           '647 avisos de segurança do GitHub publicados (jan.–jun. 2026): 14 críticos, 219 altos, 350 médios, 64 baixos',
           'Uma cadeia RCE não autenticada divulgada (3 CVEs, CVSS de até 8,8) via uma única mensagem do WhatsApp, corrigida na versão 2026.6.6',
-          'Licenciado sob MIT, 388.916 estrelas, versão atual v2026.9.1',
+          'Licenciado sob MIT, 388.916 estrelas, versão atual v2026.9.5',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise cobre o OpenClaw na versão v2026.9.1 (setembro de 2026). Dado seu ritmo de lançamentos (múltiplas versões por semana) e seu histórico de avisos de segurança incomumente ativo, verifique o status atual diretamente no repositório antes de implantá-lo, especialmente com contas de mensagens reais e acesso ao sistema de arquivos.' },
+          { type: 'note', text: 'Esta análise cobre o OpenClaw na versão v2026.9.5 (setembro de 2026). Dado seu ritmo de lançamentos (múltiplas versões por semana) e seu histórico de avisos de segurança incomumente ativo, verifique o status atual diretamente no repositório antes de implantá-lo, especialmente com contas de mensagens reais e acesso ao sistema de arquivos.' },
         ],
       },
       overview: {
@@ -1615,13 +1615,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'is-openclaw-still-maintained',
         title: 'O OpenClaw ainda é mantido?',
         content: [
-          'Sim, ativamente. O repositório recebeu um push horas antes da pesquisa para esta análise, e o OpenClaw lança uma nova versão a cada poucos dias, em média — as cinco tags mais recentes no momento da análise eram v2026.9.1, v2026.8.2, v2026.8.1 e duas versões beta, distribuídas em menos de duas semanas.',
+          'Sim, ativamente. O repositório recebeu um push horas antes da pesquisa para esta análise, e o OpenClaw lança uma nova versão a cada poucos dias, em média — as cinco tags mais recentes no momento da análise eram v2026.9.5, v2026.9.4, v2026.9.3, v2026.9.2 e v2026.9.1, distribuídas em pouco mais de duas semanas.',
           'A governança mudou de mãos em fevereiro de 2026: o criador Peter Steinberger entrou para a OpenAI, e a administração passou para a fundação sem fins lucrativos OpenClaw Foundation (status 501(c)(3), presidida por Dave Morin, uma primeira equipe em tempo integral de dez pessoas em engenharia e operações, patrocinada pela OpenAI). O projeto permanece sob licença MIT nesse arranjo. No momento desta análise, a fundação não havia publicado documentos de governança públicos detalhados, então a forma exata como decisões técnicas e de roadmap são tomadas no dia a dia não é totalmente transparente vista de fora.',
         ],
         itemHeadings: true,
         rows: [
           { 'Signal': 'Atividade do repositório', 'What it shows': 'Push horas antes desta análise; lançamentos a cada poucos dias em média' },
-          { 'Signal': 'Versão atual', 'What it shows': 'v2026.9.1' },
+          { 'Signal': 'Versão atual', 'What it shows': 'v2026.9.5' },
           { 'Signal': 'Número de estrelas', 'What it shows': '388.916 estrelas, 81.708 forks' },
           { 'Signal': 'Governança', 'What it shows': 'Fundação sem fins lucrativos OpenClaw Foundation (501(c)(3)), presidida por Dave Morin, patrocinada pela OpenAI, desde fevereiro de 2026' },
         ],
@@ -1722,7 +1722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
     publishDate: '2026-09-05',
-    dateModified: '2026-09-05',
+    dateModified: '2026-09-20',
     educationalLevel: 'Intermediate',
     audience: 'مطورون ومستخدمون متقدمون يقيّمون OpenClaw كبوابة وكيل ذكاء اصطناعي شخصي، وقراء يتذكرون ملحمة تغيير الاسم في يناير 2026 ويريدون معرفة حوكمته وسجله الأمني الحاليين',
     primaryTerm: 'OpenClaw',
@@ -1743,7 +1743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'ما هو OpenClaw وهل استخدامه آمن؟',
-        answer: 'OpenClaw ([github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)) بوابة وكيل ذكاء اصطناعي مفتوحة المصدر برخصة MIT تربط نموذجاً لغوياً بتطبيقات المراسلة وتتيح له تنفيذ أوامر الطرفية والتحكم في متصفح وإدارة الملفات على جهازك. المشروع حقيقي ويُصان بنشاط — 388,916 نجمة، وإصدار كل بضعة أيام تقريباً، والإصدار الحالي v2026.9.1 — لكنه يحمل سجلاً أمنياً موثقاً: 647 تنبيهاً أمنياً على GitHub نُشرت بين يناير ويونيو 2026، منها 14 حرجاً و219 عالي الخطورة، إضافة إلى سلسلة تنفيذ كود عن بُعد غير موثقة تم الكشف عنها، يمكن تفعيلها برسالة واتساب واحدة (تم إصلاحها في الإصدار 2026.6.6). مدى «أمانه» يعتمد كلياً على مدى حرصك في إعداده — فالقدرات التي تجعله مفيداً (الوصول إلى الطرفية والملفات والمتصفح) هي نفسها التي تقف وراء كل تنبيه في تلك القائمة.',
+        answer: 'OpenClaw ([github.com/openclaw/openclaw](https://github.com/openclaw/openclaw)) بوابة وكيل ذكاء اصطناعي مفتوحة المصدر برخصة MIT تربط نموذجاً لغوياً بتطبيقات المراسلة وتتيح له تنفيذ أوامر الطرفية والتحكم في متصفح وإدارة الملفات على جهازك. المشروع حقيقي ويُصان بنشاط — 388,916 نجمة، وإصدار كل بضعة أيام تقريباً، والإصدار الحالي v2026.9.5 — لكنه يحمل سجلاً أمنياً موثقاً: 647 تنبيهاً أمنياً على GitHub نُشرت بين يناير ويونيو 2026، منها 14 حرجاً و219 عالي الخطورة، إضافة إلى سلسلة تنفيذ كود عن بُعد غير موثقة تم الكشف عنها، يمكن تفعيلها برسالة واتساب واحدة (تم إصلاحها في الإصدار 2026.6.6). مدى «أمانه» يعتمد كلياً على مدى حرصك في إعداده — فالقدرات التي تجعله مفيداً (الوصول إلى الطرفية والملفات والمتصفح) هي نفسها التي تقف وراء كل تنبيه في تلك القائمة.',
         bullets: [
           'رخصة MIT، 388,916 نجمة، 81,708 تفريعة، يُصان بنشاط (آخر دفعة قبل ساعات من هذه المراجعة)',
           'كان اسمه في الأصل Clawdbot (نوفمبر 2025)، ثم أُعيد تسميته إلى Moltbot ثم OpenClaw خلال 3 أيام في يناير 2026 بعد نزاع على العلامة التجارية مع Anthropic حول اسم «Clawd»',
@@ -1782,10 +1782,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'انضم المؤسس بيتر شتاينبرغر إلى OpenAI في فبراير 2026؛ انتقل المشروع إلى مؤسسة OpenClaw غير الربحية، برئاسة ديف موران، وبرعاية OpenAI',
           '647 تنبيهاً أمنياً على GitHub منشوراً (يناير–يونيو 2026): 14 حرجاً، 219 عالياً، 350 متوسطاً، 64 منخفضاً',
           'سلسلة RCE غير موثقة تم الكشف عنها (3 ثغرات CVE، بدرجة CVSS تصل إلى 8.8) عبر رسالة واتساب واحدة، وتم إصلاحها في الإصدار 2026.6.6',
-          'برخصة MIT، 388,916 نجمة، الإصدار الحالي v2026.9.1',
+          'برخصة MIT، 388,916 نجمة، الإصدار الحالي v2026.9.5',
         ],
         callouts: [
-          { type: 'note', text: 'تغطي هذه المراجعة OpenClaw حتى الإصدار v2026.9.1 (سبتمبر 2026). ونظراً لوتيرة إصداراته (عدة إصدارات أسبوعياً) وسجل تنبيهاته الأمنية النشط بشكل غير معتاد، تحقق من الحالة الراهنة مباشرة على المستودع قبل نشره، خصوصاً مع حسابات مراسلة حقيقية ووصول إلى نظام الملفات.' },
+          { type: 'note', text: 'تغطي هذه المراجعة OpenClaw حتى الإصدار v2026.9.5 (سبتمبر 2026). ونظراً لوتيرة إصداراته (عدة إصدارات أسبوعياً) وسجل تنبيهاته الأمنية النشط بشكل غير معتاد، تحقق من الحالة الراهنة مباشرة على المستودع قبل نشره، خصوصاً مع حسابات مراسلة حقيقية ووصول إلى نظام الملفات.' },
         ],
       },
       overview: {
@@ -1860,13 +1860,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'is-openclaw-still-maintained',
         title: 'هل لا يزال OpenClaw مصاناً؟',
         content: [
-          'نعم، بنشاط. تلقّى المستودع دفعة قبل ساعات من إجراء البحث لهذه المراجعة، ويطلق OpenClaw إصداراً جديداً كل بضعة أيام تقريباً — كانت أحدث خمس علامات وقت المراجعة v2026.9.1 وv2026.8.2 وv2026.8.1 وإصدارين تجريبيين، موزعة على أقل من أسبوعين.',
+          'نعم، بنشاط. تلقّى المستودع دفعة قبل ساعات من إجراء البحث لهذه المراجعة، ويطلق OpenClaw إصداراً جديداً كل بضعة أيام تقريباً — كانت أحدث خمس علامات وقت المراجعة v2026.9.5 وv2026.9.4 وv2026.9.3 وv2026.9.2 وv2026.9.1، موزعة على أكثر قليلاً من أسبوعين.',
           'تغيّرت الحوكمة في فبراير 2026: انضم المؤسس بيتر شتاينبرغر إلى OpenAI، وانتقلت الإدارة إلى مؤسسة OpenClaw غير الربحية (بصفة 501(c)(3)، برئاسة ديف موران، مع فريق أول متفرغ من عشرة أشخاص عبر الهندسة والعمليات، وبرعاية OpenAI). ويبقى المشروع برخصة MIT في ظل هذا الترتيب. حتى وقت هذه المراجعة، لم تنشر المؤسسة وثائق حوكمة عامة مفصّلة، لذا فإن الطريقة الدقيقة التي تُتخذ بها القرارات التقنية وقرارات خارطة الطريق يومياً ليست شفافة تماماً من الخارج.',
         ],
         itemHeadings: true,
         rows: [
           { 'Signal': 'نشاط المستودع', 'What it shows': 'دفعة قبل ساعات من هذه المراجعة؛ إصدارات كل بضعة أيام تقريباً' },
-          { 'Signal': 'الإصدار الحالي', 'What it shows': 'v2026.9.1' },
+          { 'Signal': 'الإصدار الحالي', 'What it shows': 'v2026.9.5' },
           { 'Signal': 'عدد النجوم', 'What it shows': '388,916 نجمة، 81,708 تفريعة' },
           { 'Signal': 'الحوكمة', 'What it shows': 'مؤسسة OpenClaw غير الربحية (501(c)(3))، برئاسة ديف موران، وبرعاية OpenAI، منذ فبراير 2026' },
         ],
@@ -1967,7 +1967,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-05',
     publishDate: '2026-09-05',
-    dateModified: '2026-09-05',
+    dateModified: '2026-09-20',
     educationalLevel: 'Intermediate',
     audience: 'OpenClaw를 개인용 AI 에이전트 게이트웨이로 평가하는 개발자와 파워 유저, 그리고 2026년 1월의 개명 소동을 기억하며 현재의 거버넌스와 보안 실적을 알고 싶은 독자',
     primaryTerm: 'OpenClaw',
@@ -1988,7 +1988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ko: {
         question: 'OpenClaw란 무엇이며, 사용해도 안전한가요?',
-        answer: 'OpenClaw([github.com/openclaw/openclaw](https://github.com/openclaw/openclaw))는 오픈소스이자 MIT 라이선스의 AI 에이전트 게이트웨이로, 언어 모델을 메시징 앱에 연결하고 기기에서 셸 명령 실행, 브라우저 제어, 파일 관리를 수행하게 합니다. 실제로 존재하며 활발히 유지보수되고 있습니다 — 388,916개의 스타, 며칠에 한 번꼴 릴리스, 현재 버전 v2026.9.1 — 하지만 문서화된 보안 이력을 안고 있습니다: 2026년 1월부터 6월 사이 647건의 GitHub 보안 권고가 공개되었고, 그중 심각 등급 14건, 높음 등급 219건이 포함되며, WhatsApp 메시지 한 통으로 발동 가능한 인증되지 않은 원격 코드 실행 체인도 공개되었습니다(버전 2026.6.6에서 패치됨). "안전한지"는 전적으로 얼마나 신중하게 설정하느냐에 달려 있습니다 — 유용하게 만드는 바로 그 기능(셸, 파일, 브라우저 접근)이 그 목록의 모든 권고 뒤에 있는 기능과 동일합니다.',
+        answer: 'OpenClaw([github.com/openclaw/openclaw](https://github.com/openclaw/openclaw))는 오픈소스이자 MIT 라이선스의 AI 에이전트 게이트웨이로, 언어 모델을 메시징 앱에 연결하고 기기에서 셸 명령 실행, 브라우저 제어, 파일 관리를 수행하게 합니다. 실제로 존재하며 활발히 유지보수되고 있습니다 — 388,916개의 스타, 며칠에 한 번꼴 릴리스, 현재 버전 v2026.9.5 — 하지만 문서화된 보안 이력을 안고 있습니다: 2026년 1월부터 6월 사이 647건의 GitHub 보안 권고가 공개되었고, 그중 심각 등급 14건, 높음 등급 219건이 포함되며, WhatsApp 메시지 한 통으로 발동 가능한 인증되지 않은 원격 코드 실행 체인도 공개되었습니다(버전 2026.6.6에서 패치됨). "안전한지"는 전적으로 얼마나 신중하게 설정하느냐에 달려 있습니다 — 유용하게 만드는 바로 그 기능(셸, 파일, 브라우저 접근)이 그 목록의 모든 권고 뒤에 있는 기능과 동일합니다.',
         bullets: [
           'MIT 라이선스, 388,916개 스타, 81,708개 포크, 활발히 유지보수 중(본 리뷰 몇 시간 전에도 푸시 있음)',
           '원래 이름은 Clawdbot(2025년 11월), 2026년 1월 Anthropic과의 "Clawd" 관련 상표권 분쟁 후 사흘 만에 Moltbot을 거쳐 OpenClaw로 개명',
@@ -2027,10 +2027,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '창업자 Peter Steinberger는 2026년 2월 OpenAI에 합류; 프로젝트는 Dave Morin이 의장을 맡고 OpenAI가 후원하는 비영리 OpenClaw 재단으로 이관',
           '647건의 GitHub 보안 권고 공개(2026년 1~6월): 심각 14건, 높음 219건, 보통 350건, 낮음 64건',
           'WhatsApp 메시지 한 통으로 발동 가능한 인증되지 않은 RCE 체인 공개(CVE 3건, CVSS 최대 8.8), 버전 2026.6.6에서 패치',
-          'MIT 라이선스, 388,916개 스타, 현재 릴리스 v2026.9.1',
+          'MIT 라이선스, 388,916개 스타, 현재 릴리스 v2026.9.5',
         ],
         callouts: [
-          { type: 'note', text: '본 리뷰는 v2026.9.1(2026년 9월) 시점의 OpenClaw를 다룹니다. 릴리스 속도(주 여러 차례)와 이례적으로 활발한 보안 권고 이력을 감안해, 실제 메시징 계정과 파일 시스템 접근을 동반한 배포 전에 저장소에서 직접 현재 상태를 확인하세요.' },
+          { type: 'note', text: '본 리뷰는 v2026.9.5(2026년 9월) 시점의 OpenClaw를 다룹니다. 릴리스 속도(주 여러 차례)와 이례적으로 활발한 보안 권고 이력을 감안해, 실제 메시징 계정과 파일 시스템 접근을 동반한 배포 전에 저장소에서 직접 현재 상태를 확인하세요.' },
         ],
       },
       overview: {
@@ -2105,13 +2105,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'is-openclaw-still-maintained',
         title: 'OpenClaw는 여전히 유지보수되고 있나',
         content: [
-          '네, 활발히 이루어지고 있습니다. 저장소는 본 리뷰 조사 몇 시간 전에도 푸시가 있었으며, OpenClaw는 며칠에 한 번꼴로 새 버전을 출시합니다 — 리뷰 시점 가장 최근 다섯 개 태그는 v2026.9.1, v2026.8.2, v2026.8.1과 두 개의 베타 버전으로, 2주가 채 안 되는 기간에 걸쳐 있었습니다.',
+          '네, 활발히 이루어지고 있습니다. 저장소는 본 리뷰 조사 몇 시간 전에도 푸시가 있었으며, OpenClaw는 며칠에 한 번꼴로 새 버전을 출시합니다 — 리뷰 시점 가장 최근 다섯 개 태그는 v2026.9.5, v2026.9.4, v2026.9.3, v2026.9.2, v2026.9.1로, 2주를 조금 넘는 기간에 걸쳐 있었습니다.',
           '거버넌스는 2026년 2월에 바뀌었습니다: 창업자 Peter Steinberger가 OpenAI에 합류했고, 운영은 비영리 OpenClaw 재단(501(c)(3) 지위, Dave Morin 의장, 엔지니어링과 운영에 걸친 최초 상근 팀 10명, OpenAI 후원)으로 이관되었습니다. 이 체제 하에서도 프로젝트는 MIT 라이선스를 유지합니다. 본 리뷰 시점 기준, 재단은 상세한 공개 거버넌스 문서를 발표하지 않았기 때문에, 기술 및 로드맵 결정이 일상적으로 어떻게 이루어지는지는 외부에서 완전히 투명하게 알기 어렵습니다.',
         ],
         itemHeadings: true,
         rows: [
           { 'Signal': '저장소 활동', 'What it shows': '본 리뷰 몇 시간 전 푸시; 며칠에 한 번꼴로 릴리스' },
-          { 'Signal': '현재 릴리스', 'What it shows': 'v2026.9.1' },
+          { 'Signal': '현재 릴리스', 'What it shows': 'v2026.9.5' },
           { 'Signal': '스타 수', 'What it shows': '388,916개 스타, 81,708개 포크' },
           { 'Signal': '거버넌스', 'What it shows': '비영리 OpenClaw 재단(501(c)(3)), Dave Morin 의장, OpenAI 후원, 2026년 2월부터' },
         ],

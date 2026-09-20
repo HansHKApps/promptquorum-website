@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ko: '웹 UI 또는 CLI로 100개 이상의 오픈 LLM을 LoRA, QLoRA, 전체 학습으로 파인튜닝',
   },
   reviewSlug: 'llama-factory-review',
+  pqReview: { date: '2026-09-20', version: 'v0.9.5', versionSourceUrl: 'https://github.com/hiyouga/LlamaFactory/releases/tag/v0.9.5' },
   lastVerifiedDate: '2026-09-14',
 }

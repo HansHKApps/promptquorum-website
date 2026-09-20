@@ -50,6 +50,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'AG2 (ag2.ai): a separate, actively developed community fork started in late 2024 by AutoGen\'s original authors after leaving Microsoft',
           'License: MIT for code, CC BY 4.0 for documentation, on the Microsoft repository; AG2 uses Apache 2.0 from v0.3 onward',
           'Over 60,000 GitHub stars on microsoft/autogen',
+          'Latest tagged release on the Microsoft repository: python-v0.7.5 (September 2025) — a maintenance-mode patch release, not new feature work',
         ],
         updatedDate: '2026-09',
       },

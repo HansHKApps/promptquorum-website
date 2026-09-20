@@ -37,5 +37,6 @@ export const app: ToolRecord = {
     ko: 'Claude Desktop, Copilot, Codex 등 여러 AI 도구에 세션 간 장기 기억을 부여하는 셀프호스팅 영구 메모리 저장소',
   },
   reviewSlug: 'longmemory-review', // dedicated PromptQuorum review — added 2026-09-19
+  pqReview: { date: '2026-09-20', version: 'v1.2.3', versionSourceUrl: 'https://github.com/CaviraOSS/LongMemory/releases/tag/v1.2.3' },
   lastVerifiedDate: '2026-09-18',
 }

@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: '많은 엔터프라이즈 기능을 갖춘 데스크톱 및 서버',
   },
   reviewSlug: 'h2ogpt-review-2026', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: '0.2.1', versionSourceUrl: 'https://github.com/h2oai/h2ogpt/releases/tag/0.2.1' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

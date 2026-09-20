@@ -21,6 +21,7 @@ export const app: ToolRecord = {
   uses: ['serve', 'chat'],
   url: 'github.com/InternLM/lmdeploy',
   reviewSlug: 'lmdeploy-review', // dedicated PromptQuorum review — added 2026-09-19
+  pqReview: { date: '2026-09-20', version: 'v0.17.0', versionSourceUrl: 'https://github.com/InternLM/lmdeploy/releases/tag/v0.17.0' },
   tagline: {
     en: 'Self-hosted toolkit for compressing, quantizing, and serving LLMs with a high-throughput OpenAI-compatible inference engine',
     de: 'Selbst gehostetes Toolkit zum Komprimieren, Quantisieren und Bereitstellen von LLMs mit einer durchsatzstarken, OpenAI-kompatiblen Inferenz-Engine',

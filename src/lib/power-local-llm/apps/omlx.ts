@@ -37,5 +37,6 @@ export const app: ToolRecord = {
     ko: 'Apple Silicon용 MLX 기반 로컬 추론 서버로, 페이지 단위 SSD 캐싱을 지원하며 로컬 코딩 에이전트 구동을 위해 설계됨',
   },
   reviewSlug: 'omlx-review', // dedicated PromptQuorum review — added 2026-09-18
+  pqReview: { date: '2026-09-20', version: 'v0.6.4', versionSourceUrl: 'https://github.com/jundot/omlx/releases/tag/v0.6.4' },
   lastVerifiedDate: '2026-09-18',
 }

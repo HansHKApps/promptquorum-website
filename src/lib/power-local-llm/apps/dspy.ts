@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: '언어 모델을 활용한 선언적 자기개선 프로그램',
   },
   reviewSlug: 'dspy-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: '3.3.1', versionSourceUrl: 'https://github.com/stanfordnlp/dspy/releases/tag/3.3.1' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

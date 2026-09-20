@@ -33,5 +33,6 @@ export const app: ToolRecord = {
     ko: 'LangChain 기반의 로컬 지식베이스 RAG·에이전트 앱으로, ChatGLM·Qwen 같은 로컬 모델이나 클라우드 API와 함께 사용 가능',
   },
   reviewSlug: 'langchain-chatchat-review', // dedicated PromptQuorum review — added 2026-09-18
+  pqReview: { date: '2026-09-20', version: 'v0.3.1', versionSourceUrl: 'https://github.com/chatchat-space/Langchain-Chatchat/releases/tag/v0.3.1' },
   lastVerifiedDate: '2026-09-18',
 }

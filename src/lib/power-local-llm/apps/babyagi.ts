@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: '경량 자율 에이전트',
   },
   reviewSlug: 'babyagi-review-autonomous-agent', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'v0.1.0', versionSourceUrl: 'https://github.com/yoheinakajima/babyagi/releases/tag/v0.1.0' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

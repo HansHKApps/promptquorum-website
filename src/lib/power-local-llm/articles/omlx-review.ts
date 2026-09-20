@@ -36,6 +36,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Tiered key-value cache: hot blocks stay in RAM, cold blocks persist to SSD in safetensors format and survive server restarts',
           'GitHub repository ([github.com/jundot/omlx](https://github.com/jundot/omlx)) shows roughly 21,859 stars as of September 2026',
           'One-click integration setup in its admin dashboard for Claude Code, Cursor, OpenClaw, OpenCode, Codex, Hermes Agent, Copilot, and Pi',
+          'Latest tagged release: v0.6.4',
         ],
         updatedDate: '2026-09',
       },
