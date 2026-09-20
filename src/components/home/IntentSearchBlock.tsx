@@ -2,21 +2,23 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import type { Language } from '@/lib/blog/blogContent'
 import { useSearch } from '@/components/search/useSearch'
+import { t, type HomeUiKey } from './home-i18n'
 
 type Intent = 'compare' | 'learn' | 'find-app'
 
-const INTENTS: { key: Intent; label: string; example: string }[] = [
-  { key: 'find-app', label: 'Find an app', example: 'chat client with MCP support' },
-  { key: 'learn', label: 'Learn / understand', example: 'what is quantization' },
-  { key: 'compare', label: 'Compare tools', example: 'compare image tools' },
+const INTENTS: { key: Intent; labelKey: HomeUiKey; exampleKey: HomeUiKey }[] = [
+  { key: 'find-app', labelKey: 'intentFindApp', exampleKey: 'exampleFindApp' },
+  { key: 'learn', labelKey: 'intentLearn', exampleKey: 'exampleLearn' },
+  { key: 'compare', labelKey: 'intentCompare', exampleKey: 'exampleCompare' },
 ]
 
-export function IntentSearchBlock() {
+export function IntentSearchBlock({ lang = 'en' }: { lang?: Language }) {
   const [intent, setIntent] = useState<Intent>('find-app')
   const [query, setQuery] = useState('')
   const [hasSearched, setHasSearched] = useState(false)
-  const { search, loadIndex, isLoaded } = useSearch('en')
+  const { search, loadIndex, isLoaded } = useSearch(lang)
 
   const rawResults = hasSearched && isLoaded ? search(query) : []
 
@@ -39,10 +41,12 @@ export function IntentSearchBlock() {
     setHasSearched(true)
   }
 
+  const activeExample = t(INTENTS.find((i) => i.key === intent)!.exampleKey, lang)
+
   return (
     <div className="rounded-xl border border-border bg-card p-6 h-full">
-      <h2 className="text-xl font-bold text-text-primary mb-1">Find What You Need</h2>
-      <p className="text-sm text-text-secondary mb-4">Pick what you're after, then search.</p>
+      <h2 className="text-xl font-bold text-text-primary mb-1">{t('searchHeading', lang)}</h2>
+      <p className="text-sm text-text-secondary mb-4">{t('searchSubheading', lang)}</p>
 
       <div className="flex flex-wrap gap-2 mb-3">
         {INTENTS.map((i) => (
@@ -59,7 +63,7 @@ export function IntentSearchBlock() {
                 : 'border-border text-text-secondary hover:border-primary/50'
             }`}
           >
-            {i.label}
+            {t(i.labelKey, lang)}
           </button>
         ))}
       </div>
@@ -70,17 +74,17 @@ export function IntentSearchBlock() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => void loadIndex()}
-          placeholder={`e.g. "${INTENTS.find((i) => i.key === intent)?.example}"`}
+          placeholder={t('searchPlaceholderTemplate', lang, { example: activeExample })}
           className="min-w-0 flex-1 rounded-lg border border-border bg-surface px-3 py-2 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary/40"
         />
         <button type="submit" className="shrink-0 rounded-lg bg-primary px-4 py-2 text-sm font-bold text-primary-foreground">
-          Search
+          {t('searchButton', lang)}
         </button>
       </form>
 
       {hasSearched && (
         <ul className="mt-3 space-y-1.5">
-          {filtered.length === 0 && <li className="text-sm text-text-muted">No results — try a different search.</li>}
+          {filtered.length === 0 && <li className="text-sm text-text-muted">{t('noResults', lang)}</li>}
           {filtered.slice(0, 8).map((r) => (
             <li key={r.item.id}>
               <Link href={r.item.url} className="text-sm font-semibold text-text-primary hover:text-primary transition-colors">

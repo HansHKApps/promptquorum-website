@@ -4,7 +4,7 @@ import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { LandingPageServer } from '@/components/LandingPageServer'
 import { ConfirmedToast } from '@/components/ConfirmedToast'
-import { HomeEn } from '@/components/home/HomeEn'
+import { Home as HomeHub } from '@/components/home/Home'
 
 export const dynamic = 'force-static'
 export const revalidate = 86400
@@ -44,14 +44,16 @@ export default async function Home({ searchParams }: PageProps) {
   const selectedLang = validLangs.includes(lang) ? lang : 'en'
 
   // English gets the new dynamic homepage (11-block hub, no hero/Features/
-  // How-It-Works/FAQ — see src/components/home/HomeEn.tsx). The other 8
-  // locales render LandingPageServer completely unchanged; first-run scope
-  // for this rebuild is English only.
+  // How-It-Works/FAQ — see src/components/home/Home.tsx). The 8 other
+  // locales get the same hub, fully translated, via their own
+  // src/app/{lang}/page.tsx route files. This root file's `?lang=` branch
+  // below is legacy query-param routing (superseded by path-prefix
+  // locales) kept working as-is for the old LandingPageServer design.
   if (selectedLang === 'en') {
     return (
       <>
         <ConfirmedToast />
-        <HomeEn />
+        <HomeHub lang="en" />
       </>
     )
   }

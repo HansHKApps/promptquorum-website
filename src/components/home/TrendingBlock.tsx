@@ -1,17 +1,20 @@
+import type { Language } from '@/lib/blog/blogContent'
 import { getTrendingBatches } from '@/lib/home/trending'
 import { HomeCard } from './HomeCard'
 import { BatchedList } from './BatchedList'
+import { t } from './home-i18n'
 
-export function TrendingBlock() {
-  const batches = getTrendingBatches()
+export function TrendingBlock({ lang = 'en' }: { lang?: Language }) {
+  const batches = getTrendingBatches(lang)
 
   if (batches.length === 0) {
-    return <HomeCard size="md" title="Trending / Most-Read" emptyState emptyMessage="Trending pages coming soon." />
+    return <HomeCard size="md" title={t('trendingTitle', lang)} emptyState emptyMessage={t('trendingEmpty', lang)} />
   }
 
   return (
-    <HomeCard size="md" title="Trending / Most-Read">
+    <HomeCard size="md" title={t('trendingTitle', lang)}>
       <BatchedList
+        lang={lang}
         batches={batches.map((b) => ({
           batchDate: b.batchDate,
           label: b.label,
@@ -19,7 +22,7 @@ export function TrendingBlock() {
             key: p.url,
             title: p.title,
             url: p.url,
-            meta: `${p.clicks.toLocaleString()} clicks`,
+            meta: t('clicksLabel', lang, { n: p.clicks.toLocaleString() }),
           })),
         }))}
       />

@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import type { Language } from '@/lib/blog/blogContent'
+import { t } from './home-i18n'
 
 export interface ExpandableListItem {
   key: string
@@ -17,7 +19,15 @@ export interface ExpandableListItem {
  * by "Show more" — carries a visible date, per the site's date-visibility
  * rule; that's enforced here once rather than per block.
  */
-export function ExpandableList({ items, visibleCount = 10 }: { items: ExpandableListItem[]; visibleCount?: number }) {
+export function ExpandableList({
+  items,
+  visibleCount = 10,
+  lang = 'en',
+}: {
+  items: ExpandableListItem[]
+  visibleCount?: number
+  lang?: Language
+}) {
   const [expanded, setExpanded] = useState(false)
   const shown = expanded ? items : items.slice(0, visibleCount)
   const hasMore = items.length > visibleCount
@@ -52,7 +62,7 @@ export function ExpandableList({ items, visibleCount = 10 }: { items: Expandable
           onClick={() => setExpanded((v) => !v)}
           className="mt-3 text-xs font-bold text-primary hover:underline self-start"
         >
-          {expanded ? 'Show less' : `Show ${items.length - visibleCount} more`}
+          {expanded ? t('showLess', lang) : t('showMoreTemplate', lang, { n: items.length - visibleCount })}
         </button>
       )}
     </div>

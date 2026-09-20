@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import type { Language } from '@/lib/blog/blogContent'
+import { t } from './home-i18n'
 
 export interface BatchedListItem {
   key: string
@@ -22,7 +24,7 @@ export interface Batch {
  * "Show more," each one still labeled with its own date when revealed —
  * never one list silently overwritten on refresh.
  */
-export function BatchedList({ batches }: { batches: Batch[] }) {
+export function BatchedList({ batches, lang = 'en' }: { batches: Batch[]; lang?: Language }) {
   const [expanded, setExpanded] = useState(false)
   const [current, ...older] = batches
   if (!current) return null
@@ -42,7 +44,7 @@ export function BatchedList({ batches }: { batches: Batch[] }) {
           onClick={() => setExpanded((v) => !v)}
           className="mt-3 text-xs font-bold text-primary hover:underline self-start"
         >
-          {expanded ? 'Show less' : `Show ${older.length} earlier snapshot${older.length === 1 ? '' : 's'}`}
+          {expanded ? t('showLess', lang) : t('showEarlierSnapshotsTemplate', lang, { n: older.length })}
         </button>
       )}
     </div>

@@ -1,13 +1,133 @@
 {
-  "_comment": "TEMPORARY manually-seeded pool -- see src/lib/home/quick-tips.ts. Each entry is a real, verifiable claim pulled directly from the cited published article. Replace with an auto-extracted pool once an offline extraction script exists (not built in this pass -- this repo's scripts never call an LLM API directly, so real extraction is follow-up work).",
+  "_comment": "TEMPORARY manually-seeded pool -- see src/lib/home/quick-tips.ts. Each entry is a real, verifiable claim pulled directly from the cited published article. `text` is per-language (all 9 locales); `sourceUrl` is the English base path, locale-prefixed at read time by quick-tips.ts. Replace with an auto-extracted pool once an offline extraction script exists (not built in this pass -- this repo's scripts never call an LLM API directly, so real extraction is follow-up work).",
   "tips": [
-    { "id": "tip-001", "text": "KoboldCpp bundles a full KoboldAI Lite web UI, single-file zero-install distribution, and built-in image generation and speech-to-text -- none of which come with bare llama.cpp.", "sourceTitle": "KoboldCpp Review", "sourceUrl": "/power-local-llm/koboldcpp-review" },
-    { "id": "tip-002", "text": "AUTOMATIC1111, the most-used Stable Diffusion web UI, first launched on August 22, 2022 and is licensed under AGPL-3.0.", "sourceTitle": "AUTOMATIC1111 Review", "sourceUrl": "/power-local-llm/automatic1111-review" },
-    { "id": "tip-003", "text": "ExLlamaV2's EXL2 quantization format mixes 2-bit to 8-bit precision per layer to hit a target average bitrate, instead of one fixed bit-width across the whole model.", "sourceTitle": "ExLlamaV2 Explained", "sourceUrl": "/power-local-llm/exllamav2-explained" },
-    { "id": "tip-004", "text": "llama.cpp defined the GGUF (.gguf) model file format now used across most of the local-LLM ecosystem.", "sourceTitle": "llama.cpp Explained", "sourceUrl": "/power-local-llm/llama-cpp-explained" },
-    { "id": "tip-005", "text": "LoRAX started as a fork of Hugging Face's text-generation-inference, then added dynamic multi-LoRA adapter loading on top of it.", "sourceTitle": "LoRAX Review", "sourceUrl": "/power-local-llm/lorax-review" },
-    { "id": "tip-006", "text": "AutoGPT is really two differently-licensed projects sharing one repo: the MIT-licensed classic CLI agent, and a separately-licensed hosted Platform product.", "sourceTitle": "AutoGPT (Classic, Local) Review", "sourceUrl": "/power-local-llm/autogpt-local-review" },
-    { "id": "tip-007", "text": "NVIDIA Dynamo ships many model- and platform-specific release tags at a fast cadence, rather than one single version number for the whole project.", "sourceTitle": "NVIDIA Dynamo Review", "sourceUrl": "/power-local-llm/dynamo-review" },
-    { "id": "tip-008", "text": "little-coder defaults to a locally served Qwen3.6-35B-A3B model running over llama.cpp, tuned specifically to get good results from smaller local models.", "sourceTitle": "little-coder Review", "sourceUrl": "/power-local-llm/little-coder-review" }
+    {
+      "id": "tip-001",
+      "text": {
+        "en": "KoboldCpp bundles a full KoboldAI Lite web UI, single-file zero-install distribution, and built-in image generation and speech-to-text -- none of which come with bare llama.cpp.",
+        "de": "KoboldCpp bringt eine vollständige KoboldAI-Lite-Web-UI, eine Ein-Datei-Distribution ohne Installation sowie integrierte Bildgenerierung und Sprache-zu-Text mit -- nichts davon ist bei reinem llama.cpp enthalten.",
+        "fr": "KoboldCpp intègre une interface web KoboldAI Lite complète, une distribution mono-fichier sans installation, ainsi que la génération d'images et la reconnaissance vocale intégrées -- rien de tout cela n'est fourni avec llama.cpp seul.",
+        "ja": "KoboldCppにはKoboldAI Lite Web UI一式、インストール不要の単一ファイル配布形式、画像生成と音声認識が標準搭載されており、素のllama.cppにはこれらは含まれていない。",
+        "zh": "KoboldCpp 内置完整的 KoboldAI Lite 网页界面、单文件免安装分发方式,以及内置图像生成与语音转文字功能——这些都是纯 llama.cpp 所没有的。",
+        "es": "KoboldCpp incluye una interfaz web KoboldAI Lite completa, una distribución de un solo archivo sin instalación, y generación de imágenes y voz a texto integradas -- nada de esto viene con llama.cpp puro.",
+        "pt": "O KoboldCpp inclui uma interface web KoboldAI Lite completa, uma distribuição em arquivo único sem instalação, além de geração de imagens e conversão de voz em texto integradas -- nada disso vem com o llama.cpp puro.",
+        "ar": "يأتي KoboldCpp مزودًا بواجهة ويب كاملة من KoboldAI Lite، وتوزيعة بملف واحد بلا تثبيت، مع توليد صور وتحويل كلام إلى نص مدمجين -- وهي ميزات غير متوفرة في llama.cpp وحده.",
+        "ko": "KoboldCpp는 완전한 KoboldAI Lite 웹 UI, 설치가 필요 없는 단일 파일 배포판, 내장 이미지 생성 및 음성-텍스트 변환 기능을 함께 제공한다 -- 이 중 어느 것도 순수 llama.cpp에는 없다."
+      },
+      "sourceTitle": "KoboldCpp Review",
+      "sourceUrl": "/power-local-llm/koboldcpp-review"
+    },
+    {
+      "id": "tip-002",
+      "text": {
+        "en": "AUTOMATIC1111, the most-used Stable Diffusion web UI, first launched on August 22, 2022 and is licensed under AGPL-3.0.",
+        "de": "AUTOMATIC1111, die meistgenutzte Stable-Diffusion-Web-UI, wurde erstmals am 22. August 2022 veröffentlicht und steht unter der AGPL-3.0-Lizenz.",
+        "fr": "AUTOMATIC1111, l'interface web Stable Diffusion la plus utilisée, a été lancée le 22 août 2022 et est distribuée sous licence AGPL-3.0.",
+        "ja": "最も広く使われているStable Diffusion Web UIであるAUTOMATIC1111は、2022年8月22日に初めて公開され、AGPL-3.0ライセンスの下で提供されている。",
+        "zh": "AUTOMATIC1111 是使用最广泛的 Stable Diffusion 网页界面,于 2022 年 8 月 22 日首次发布,采用 AGPL-3.0 许可证。",
+        "es": "AUTOMATIC1111, la interfaz web de Stable Diffusion más utilizada, se lanzó por primera vez el 22 de agosto de 2022 y está licenciada bajo AGPL-3.0.",
+        "pt": "O AUTOMATIC1111, a interface web de Stable Diffusion mais utilizada, foi lançado pela primeira vez em 22 de agosto de 2022 e é licenciado sob AGPL-3.0.",
+        "ar": "أُطلقت AUTOMATIC1111، وهي واجهة الويب الأكثر استخدامًا لـ Stable Diffusion، لأول مرة في 22 أغسطس 2022، وهي مرخّصة بموجب رخصة AGPL-3.0.",
+        "ko": "가장 널리 사용되는 Stable Diffusion 웹 UI인 AUTOMATIC1111은 2022년 8월 22일에 처음 출시되었으며 AGPL-3.0 라이선스를 따른다."
+      },
+      "sourceTitle": "AUTOMATIC1111 Review",
+      "sourceUrl": "/power-local-llm/automatic1111-review"
+    },
+    {
+      "id": "tip-003",
+      "text": {
+        "en": "ExLlamaV2's EXL2 quantization format mixes 2-bit to 8-bit precision per layer to hit a target average bitrate, instead of one fixed bit-width across the whole model.",
+        "de": "Das EXL2-Quantisierungsformat von ExLlamaV2 mischt pro Layer 2-Bit- bis 8-Bit-Präzision, um eine gewünschte durchschnittliche Bitrate zu erreichen, statt eine feste Bitbreite für das gesamte Modell zu verwenden.",
+        "fr": "Le format de quantification EXL2 d'ExLlamaV2 combine une précision de 2 à 8 bits par couche pour atteindre un débit binaire moyen cible, au lieu d'une largeur de bits fixe pour l'ensemble du modèle.",
+        "ja": "ExLlamaV2のEXL2量子化フォーマットは、モデル全体で固定ビット幅を使う代わりに、層ごとに2ビットから8ビットの精度を混在させ、目標とする平均ビットレートを実現する。",
+        "zh": "ExLlamaV2 的 EXL2 量化格式按层混合 2 位到 8 位精度,以达到目标平均比特率,而不是对整个模型使用单一固定位宽。",
+        "es": "El formato de cuantización EXL2 de ExLlamaV2 combina precisión de 2 a 8 bits por capa para alcanzar una tasa de bits promedio objetivo, en lugar de usar un ancho de bits fijo para todo el modelo.",
+        "pt": "O formato de quantização EXL2 do ExLlamaV2 combina precisão de 2 a 8 bits por camada para atingir uma taxa de bits média alvo, em vez de usar uma largura de bits fixa em todo o modelo.",
+        "ar": "تمزج صيغة الضغط الكمي EXL2 الخاصة بـ ExLlamaV2 بين دقة 2 و8 بت لكل طبقة للوصول إلى معدل بت متوسط مستهدف، بدلاً من استخدام عرض بت ثابت واحد للنموذج بأكمله.",
+        "ko": "ExLlamaV2의 EXL2 양자화 포맷은 모델 전체에 고정된 비트 폭 하나를 쓰는 대신, 레이어별로 2비트에서 8비트까지 정밀도를 섞어 목표 평균 비트레이트를 맞춘다."
+      },
+      "sourceTitle": "ExLlamaV2 Explained",
+      "sourceUrl": "/power-local-llm/exllamav2-explained"
+    },
+    {
+      "id": "tip-004",
+      "text": {
+        "en": "llama.cpp defined the GGUF (.gguf) model file format now used across most of the local-LLM ecosystem.",
+        "de": "llama.cpp hat das Modelldateiformat GGUF (.gguf) definiert, das heute im Großteil des Local-LLM-Ökosystems verwendet wird.",
+        "fr": "llama.cpp a défini le format de fichier de modèle GGUF (.gguf), aujourd'hui utilisé dans la majeure partie de l'écosystème des LLM locaux.",
+        "ja": "llama.cppは、現在ローカルLLMエコシステムの大部分で使われているモデルファイル形式GGUF(.gguf)を定義した。",
+        "zh": "llama.cpp 定义了 GGUF(.gguf)模型文件格式,该格式如今已在本地 LLM 生态系统的大部分场景中使用。",
+        "es": "llama.cpp definió el formato de archivo de modelo GGUF (.gguf), que hoy se usa en la mayor parte del ecosistema de LLM locales.",
+        "pt": "O llama.cpp definiu o formato de arquivo de modelo GGUF (.gguf), hoje usado na maior parte do ecossistema de LLMs locais.",
+        "ar": "عرّف مشروع llama.cpp صيغة ملف النموذج GGUF (.gguf) المستخدمة الآن في معظم منظومة نماذج اللغة المحلية.",
+        "ko": "llama.cpp는 현재 로컬 LLM 생태계 대부분에서 사용되는 GGUF(.gguf) 모델 파일 형식을 정의했다."
+      },
+      "sourceTitle": "llama.cpp Explained",
+      "sourceUrl": "/power-local-llm/llama-cpp-explained"
+    },
+    {
+      "id": "tip-005",
+      "text": {
+        "en": "LoRAX started as a fork of Hugging Face's text-generation-inference, then added dynamic multi-LoRA adapter loading on top of it.",
+        "de": "LoRAX begann als Fork der text-generation-inference von Hugging Face und ergänzte diese anschließend um dynamisches Laden mehrerer LoRA-Adapter.",
+        "fr": "LoRAX a débuté comme un fork de text-generation-inference de Hugging Face, avant d'y ajouter le chargement dynamique de plusieurs adaptateurs LoRA.",
+        "ja": "LoRAXはHugging Faceのtext-generation-inferenceのフォークとして始まり、その上に動的なマルチLoRAアダプタ読み込み機能を追加した。",
+        "zh": "LoRAX 最初是 Hugging Face text-generation-inference 的一个分支,随后在其基础上增加了动态多 LoRA 适配器加载功能。",
+        "es": "LoRAX comenzó como un fork de text-generation-inference de Hugging Face, y luego añadió carga dinámica de múltiples adaptadores LoRA.",
+        "pt": "O LoRAX começou como um fork do text-generation-inference da Hugging Face, ao qual depois foi adicionado o carregamento dinâmico de múltiplos adaptadores LoRA.",
+        "ar": "بدأ مشروع LoRAX كنسخة متفرعة من text-generation-inference من Hugging Face، ثم أُضيف إليه لاحقًا تحميل ديناميكي لعدة محولات LoRA في آن واحد.",
+        "ko": "LoRAX는 Hugging Face의 text-generation-inference를 포크하여 시작되었으며, 이후 동적 다중 LoRA 어댑터 로딩 기능이 추가되었다."
+      },
+      "sourceTitle": "LoRAX Review",
+      "sourceUrl": "/power-local-llm/lorax-review"
+    },
+    {
+      "id": "tip-006",
+      "text": {
+        "en": "AutoGPT is really two differently-licensed projects sharing one repo: the MIT-licensed classic CLI agent, and a separately-licensed hosted Platform product.",
+        "de": "AutoGPT besteht eigentlich aus zwei unterschiedlich lizenzierten Projekten in einem Repository: dem MIT-lizenzierten klassischen CLI-Agenten und einem separat lizenzierten gehosteten Platform-Produkt.",
+        "fr": "AutoGPT est en réalité deux projets sous licences différentes partageant un même dépôt : l'agent CLI classique sous licence MIT, et un produit Platform hébergé sous une licence distincte.",
+        "ja": "AutoGPTは実際には1つのリポジトリを共有する、ライセンスの異なる2つのプロジェクトである。MITライセンスのクラシックCLIエージェントと、別ライセンスのホスト型Platform製品だ。",
+        "zh": "AutoGPT 实际上是共用一个代码仓库、但许可证不同的两个项目:采用 MIT 许可证的经典命令行代理,以及许可证单独规定的托管版 Platform 产品。",
+        "es": "AutoGPT en realidad son dos proyectos con licencias distintas que comparten un mismo repositorio: el agente clásico de línea de comandos con licencia MIT, y un producto Platform alojado con una licencia separada.",
+        "pt": "O AutoGPT é, na verdade, dois projetos com licenças diferentes compartilhando um único repositório: o agente clássico de linha de comando, sob licença MIT, e um produto Platform hospedado, com licença separada.",
+        "ar": "AutoGPT في الواقع مشروعان مختلفا الترخيص يتشاركان مستودعًا واحدًا: الوكيل الكلاسيكي عبر سطر الأوامر المرخّص بموجب MIT، ومنتج Platform المستضاف المرخّص بشكل منفصل.",
+        "ko": "AutoGPT는 사실 하나의 저장소를 공유하는, 라이선스가 서로 다른 두 프로젝트다: MIT 라이선스의 클래식 CLI 에이전트와, 별도 라이선스가 적용된 호스팅형 Platform 제품이다."
+      },
+      "sourceTitle": "AutoGPT (Classic, Local) Review",
+      "sourceUrl": "/power-local-llm/autogpt-local-review"
+    },
+    {
+      "id": "tip-007",
+      "text": {
+        "en": "NVIDIA Dynamo ships many model- and platform-specific release tags at a fast cadence, rather than one single version number for the whole project.",
+        "de": "NVIDIA Dynamo veröffentlicht in schneller Taktung viele modell- und plattformspezifische Release-Tags, statt eine einzige Versionsnummer für das gesamte Projekt zu führen.",
+        "fr": "NVIDIA Dynamo publie à un rythme soutenu de nombreuses versions spécifiques à des modèles et plateformes, plutôt qu'un numéro de version unique pour l'ensemble du projet.",
+        "ja": "NVIDIA Dynamoは、プロジェクト全体で単一のバージョン番号を持つのではなく、モデルやプラットフォームごとに固有のリリースタグを高い頻度で多数公開している。",
+        "zh": "NVIDIA Dynamo 以较快节奏发布大量针对特定模型和平台的版本标签,而不是为整个项目维护单一版本号。",
+        "es": "NVIDIA Dynamo publica a un ritmo rápido numerosas etiquetas de versión específicas por modelo y plataforma, en lugar de un único número de versión para todo el proyecto.",
+        "pt": "O NVIDIA Dynamo lança, em ritmo acelerado, diversas tags de versão específicas por modelo e plataforma, em vez de manter um único número de versão para todo o projeto.",
+        "ar": "يصدر NVIDIA Dynamo عددًا كبيرًا من علامات الإصدار الخاصة بنماذج ومنصات معينة بوتيرة سريعة، بدلاً من الاعتماد على رقم إصدار واحد للمشروع بأكمله.",
+        "ko": "NVIDIA Dynamo는 프로젝트 전체에 하나의 버전 번호를 쓰는 대신, 모델과 플랫폼별로 특화된 릴리스 태그를 빠른 주기로 다수 배포한다."
+      },
+      "sourceTitle": "NVIDIA Dynamo Review",
+      "sourceUrl": "/power-local-llm/dynamo-review"
+    },
+    {
+      "id": "tip-008",
+      "text": {
+        "en": "little-coder defaults to a locally served Qwen3.6-35B-A3B model running over llama.cpp, tuned specifically to get good results from smaller local models.",
+        "de": "little-coder nutzt standardmäßig ein lokal bereitgestelltes Qwen3.6-35B-A3B-Modell über llama.cpp, das gezielt darauf abgestimmt ist, mit kleineren lokalen Modellen gute Ergebnisse zu erzielen.",
+        "fr": "little-coder utilise par défaut un modèle Qwen3.6-35B-A3B servi localement via llama.cpp, spécifiquement optimisé pour obtenir de bons résultats avec des modèles locaux plus petits.",
+        "ja": "little-coderは既定でllama.cpp上で動作するローカル提供のQwen3.6-35B-A3Bモデルを使用し、より小型のローカルモデルから良好な結果を引き出せるよう specifically に調整されている。",
+        "zh": "little-coder 默认使用通过 llama.cpp 本地提供的 Qwen3.6-35B-A3B 模型,并针对从较小的本地模型中获得良好效果进行了专门调优。",
+        "es": "little-coder utiliza por defecto un modelo Qwen3.6-35B-A3B servido localmente a través de llama.cpp, ajustado específicamente para obtener buenos resultados con modelos locales más pequeños.",
+        "pt": "Por padrão, o little-coder usa um modelo Qwen3.6-35B-A3B servido localmente via llama.cpp, ajustado especificamente para obter bons resultados com modelos locais menores.",
+        "ar": "يعتمد little-coder افتراضيًا على نموذج Qwen3.6-35B-A3B يُشغَّل محليًا عبر llama.cpp، وهو مضبوط خصيصًا للحصول على نتائج جيدة من النماذج المحلية الأصغر حجمًا.",
+        "ko": "little-coder는 기본적으로 llama.cpp 위에서 로컬로 구동되는 Qwen3.6-35B-A3B 모델을 사용하며, 더 작은 로컬 모델에서도 좋은 결과를 내도록 특별히 튜닝되어 있다."
+      },
+      "sourceTitle": "little-coder Review",
+      "sourceUrl": "/power-local-llm/little-coder-review"
+    }
   ]
 }

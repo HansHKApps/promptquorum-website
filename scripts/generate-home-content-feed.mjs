@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 // Generates src/generated/home-content-feed.json — a small, flat list of
-// {title, excerpt, publishDate, dateModified, url, cluster} for every
-// published English article across the 6 live content clusters, used by
-// the homepage's Latest Posts / Recently Updated blocks
-// (src/lib/home/content-feed.ts).
+// {lang, title, excerpt, publishDate, dateModified, url, cluster} for every
+// published article, in every locale it's actually translated into, across
+// the 6 live content clusters. Used by the homepage's Latest Posts /
+// Recently Updated blocks (src/lib/home/content-feed.ts), one entry per
+// (article, locale) pair so each of the 9 homepages shows its own language's
+// titles/excerpts rather than falling back to English.
 //
 // Why generated, not a live import at request time: src/lib/home/content-feed.ts
 // originally imported the 6 clusters' full content barrels directly into the
@@ -18,10 +20,8 @@
 // runtime app only ever touches a small JSON file.
 //
 // Run manually (`node scripts/generate-home-content-feed.mjs`) after adding
-// or updating articles in any of the 6 clusters. Not yet wired into
-// prebuild — content-feed staleness only affects the homepage's Latest
-// Posts/Recently Updated blocks, not build correctness, so it's opt-in for
-// now (see follow-up note at the bottom of this file).
+// or updating articles in any of the 6 clusters. Also runs weekly via
+// .github/workflows/homepage-feed-refresh.yml.
 
 import fs from 'node:fs'
 import path from 'node:path'
@@ -31,6 +31,7 @@ import { createJiti } from 'jiti'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '..')
 const OUTPUT_PATH = path.join(ROOT, 'src/generated/home-content-feed.json')
+const LOCALES = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
 
 const jiti = createJiti(import.meta.url, { tsconfigPaths: true })
 
@@ -40,8 +41,8 @@ function invertMap(map) {
   return result
 }
 
-function articleUrl(hub, slug) {
-  return `/${hub}/${slug}`
+function articleUrl(hub, slug, lang) {
+  return lang === 'en' ? `/${hub}/${slug}` : `/${lang}/${hub}/${slug}`
 }
 
 // Malformed dates sort wrong silently instead of erroring (e.g. a stray
@@ -52,19 +53,33 @@ function articleUrl(hub, slug) {
 // corrupting Latest Posts' order again).
 const ISO_DATE_RE = /^\d{4}-\d{2}-\d{2}$/
 
-function toEntry(hub, slug, en) {
-  if (!en?.title || !en?.publishDate) return null
-  if (!ISO_DATE_RE.test(en.publishDate) || (en.dateModified && !ISO_DATE_RE.test(en.dateModified))) {
-    console.warn(`  [SKIP] ${hub}/${slug}: non-ISO date (publishDate='${en.publishDate}', dateModified='${en.dateModified}')`)
+function toEntry(hub, slug, lang, block) {
+  if (!block?.title || !block?.publishDate) return null
+  if (!ISO_DATE_RE.test(block.publishDate) || (block.dateModified && !ISO_DATE_RE.test(block.dateModified))) {
+    console.warn(`  [SKIP] ${hub}/${slug} (${lang}): non-ISO date (publishDate='${block.publishDate}', dateModified='${block.dateModified}')`)
     return null
   }
   return {
-    title: en.title,
-    excerpt: en.metaDescription ?? en.intro ?? '',
-    publishDate: en.publishDate,
-    dateModified: en.dateModified ?? en.publishDate,
-    url: articleUrl(hub, slug),
+    lang,
+    title: block.title,
+    excerpt: block.metaDescription ?? block.intro ?? '',
+    publishDate: block.publishDate,
+    dateModified: block.dateModified ?? block.publishDate,
+    url: articleUrl(hub, slug, lang),
     cluster: hub,
+  }
+}
+
+// Pushes one entry per locale the article is actually translated into
+// (checked via that locale's own block, not just the presence of a key —
+// many locale blocks are `undefined` for newer articles that haven't been
+// translated yet). English gate (title + sections + gate check) decides
+// whether the article counts as published at all; other locales only need
+// their own title + publishDate to be considered translated.
+function pushAllLocales(entries, hub, slug, langMap) {
+  for (const lang of LOCALES) {
+    const entry = toEntry(hub, slug, lang, langMap[lang])
+    if (entry) entries.push(entry)
   }
 }
 
@@ -97,8 +112,7 @@ async function main() {
     if (!slug) continue
     const en = langMap.en
     if (!en?.sections || Object.keys(en.sections).length === 0) continue
-    const entry = toEntry('prompt-engineering', slug, en)
-    if (entry) entries.push(entry)
+    pushAllLocales(entries, 'prompt-engineering', slug, langMap)
   }
 
   const llmKeyToSlug = invertMap(LLM_SLUG_TO_KEY)
@@ -107,51 +121,41 @@ async function main() {
     if (!slug || COMING_SOON_SLUGS.has(slug)) continue
     const en = langMap.en
     if (!en?.sections || Object.keys(en.sections).length === 0) continue
-    const entry = toEntry('local-llms', slug, en)
-    if (entry) entries.push(entry)
+    pushAllLocales(entries, 'local-llms', slug, langMap)
   }
 
   const powerKeyToSlug = invertMap(POWER_LLM_SLUG_TO_KEY)
   for (const [key, langMap] of Object.entries(powerLLMContent)) {
     const slug = powerKeyToSlug[key]
     if (!slug || !POWER_LLM_PUBLISHED_SLUGS.has(slug)) continue
-    const entry = toEntry('power-local-llm', slug, langMap.en)
-    if (entry) entries.push(entry)
+    pushAllLocales(entries, 'power-local-llm', slug, langMap)
   }
 
   const bitesKeyToSlug = invertMap(PROMPT_BITES_SLUG_TO_KEY)
   for (const [key, langMap] of Object.entries(promptBitesContent)) {
     const slug = bitesKeyToSlug[key]
     if (!slug || !PROMPT_BITES_PUBLISHED_SLUGS.has(slug)) continue
-    const entry = toEntry('prompt-bites', slug, langMap.en)
-    if (entry) entries.push(entry)
+    pushAllLocales(entries, 'prompt-bites', slug, langMap)
   }
 
   const balconyKeyToSlug = invertMap(BALCONY_SOLAR_SLUG_TO_KEY)
   for (const [key, langMap] of Object.entries(balconySolarContent)) {
     const slug = balconyKeyToSlug[key]
     if (!slug || !BALCONY_SOLAR_PUBLISHED_SLUGS.has(slug)) continue
-    const entry = toEntry('balcony-solar', slug, langMap.en)
-    if (entry) entries.push(entry)
+    pushAllLocales(entries, 'balcony-solar', slug, langMap)
   }
 
   const smartHomeKeyToSlug = invertMap(SMART_HOME_SLUG_TO_KEY)
   for (const [key, langMap] of Object.entries(smartHomeContent)) {
     const slug = smartHomeKeyToSlug[key]
     if (!slug || !SMART_HOME_PUBLISHED_SLUGS.has(slug)) continue
-    const entry = toEntry('smart-home', slug, langMap.en)
-    if (entry) entries.push(entry)
+    pushAllLocales(entries, 'smart-home', slug, langMap)
   }
 
   fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true })
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(entries, null, 2) + '\n')
-  console.log(`Wrote ${entries.length} entries to ${path.relative(ROOT, OUTPUT_PATH)}`)
+  const byLang = LOCALES.map((l) => `${l}:${entries.filter((e) => e.lang === l).length}`).join(' ')
+  console.log(`Wrote ${entries.length} entries to ${path.relative(ROOT, OUTPUT_PATH)} (${byLang})`)
 }
 
 main()
-
-// Follow-up (not done here): wire this into prebuild alongside
-// generate-content-metadata.mjs (or --check mode like it) once the
-// homepage's content freshness needs to be guaranteed at deploy time rather
-// than regenerated manually. Deferred because it's a bigger, separate CI
-// change and the homepage rebuild itself doesn't require it to function.

@@ -1,7 +1,20 @@
 'use client'
 
 import { useState } from 'react'
-import { CATEGORY_GROUPS, CATEGORY_GROUP_LABEL } from '@/lib/power-local-llm/apps/categories'
+import type { Language } from '@/lib/blog/blogContent'
+import { CATEGORY_GROUPS } from '@/lib/power-local-llm/apps/categories'
+import type { CategoryGroupKey } from '@/lib/power-local-llm/apps/categories'
+import { t, type HomeUiKey } from './home-i18n'
+
+const GROUP_LABEL_KEY: Record<CategoryGroupKey, HomeUiKey> = {
+  'run-serve': 'catRunServe',
+  'chat-assistants': 'catChatAssistants',
+  'code-development': 'catCodeDevelopment',
+  'knowledge-retrieval': 'catKnowledgeRetrieval',
+  'voice-audio': 'catVoiceAudio',
+  'images-video': 'catImagesVideo',
+  'train-operate': 'catTrainOperate',
+}
 
 /**
  * UI shell only — no comparison-article content exists yet (a separate
@@ -11,15 +24,13 @@ import { CATEGORY_GROUPS, CATEGORY_GROUP_LABEL } from '@/lib/power-local-llm/app
  * nothing to render from until that content ships, so it stays a
  * "launching soon" placeholder rather than faking sample rows.
  */
-export function ComparisonToolShell() {
-  const [category, setCategory] = useState<string | null>(null)
+export function ComparisonToolShell({ lang = 'en' }: { lang?: Language }) {
+  const [category, setCategory] = useState<CategoryGroupKey | null>(null)
 
   return (
     <div className="rounded-xl border border-border bg-card p-6 h-full">
-      <h2 className="text-xl font-bold text-text-primary mb-1">Compare Tools</h2>
-      <p className="text-sm text-text-secondary mb-4">
-        Comparison tool launching soon — we&apos;re building out category comparisons.
-      </p>
+      <h2 className="text-xl font-bold text-text-primary mb-1">{t('compareHeading', lang)}</h2>
+      <p className="text-sm text-text-secondary mb-4">{t('compareSubheading', lang)}</p>
 
       <div className="flex flex-wrap gap-2 mb-4">
         {CATEGORY_GROUPS.map((group) => (
@@ -33,7 +44,7 @@ export function ComparisonToolShell() {
                 : 'border-border text-text-secondary hover:border-primary/50'
             }`}
           >
-            {CATEGORY_GROUP_LABEL[group.key]}
+            {t(GROUP_LABEL_KEY[group.key], lang)}
           </button>
         ))}
       </div>
@@ -41,8 +52,8 @@ export function ComparisonToolShell() {
       <div className="rounded-lg border border-dashed border-border bg-surface/50 p-8 text-center">
         <p className="text-sm text-text-muted">
           {category
-            ? `Comparison tables for "${CATEGORY_GROUP_LABEL[category as keyof typeof CATEGORY_GROUP_LABEL]}" aren't published yet.`
-            : 'Pick a category above to preview its comparison table once it exists.'}
+            ? t('compareCategoryPickedTemplate', lang, { category: t(GROUP_LABEL_KEY[category], lang) })
+            : t('compareNoCategoryPicked', lang)}
         </p>
       </div>
     </div>

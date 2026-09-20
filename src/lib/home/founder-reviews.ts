@@ -1,5 +1,6 @@
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 import { founderText } from '@/lib/power-local-llm/founderText'
+import type { Language } from '@/lib/blog/blogContent'
 
 export interface FounderReviewEntry {
   slug: string
@@ -19,17 +20,20 @@ export interface FounderReviewEntry {
  * placeholder state covers the near-empty case, this loader just returns
  * whatever real entries exist.
  */
-export function getFounderReviews(limit = 10): FounderReviewEntry[] {
+export function getFounderReviews(lang: Language = 'en', limit = 10): FounderReviewEntry[] {
   return localAiApps
     .filter((tool) => tool.founder != null || tool.founderReviewedDate != null)
-    .map((tool) => ({
-      slug: tool.slug,
-      appName: tool.name,
-      founderWho: tool.founder?.who.en ?? '',
-      excerpt: tool.founder ? founderText(tool.founder.why, 'en') : '',
-      date: tool.founderReviewedDate ?? tool.founder?.providedDate ?? '',
-      url: tool.reviewSlug ? `/power-local-llm/${tool.reviewSlug}` : `/directory#${tool.slug}`,
-    }))
+    .map((tool) => {
+      const base = tool.reviewSlug ? `/power-local-llm/${tool.reviewSlug}` : `/directory#${tool.slug}`
+      return {
+        slug: tool.slug,
+        appName: tool.name,
+        founderWho: tool.founder?.who[lang] ?? tool.founder?.who.en ?? '',
+        excerpt: tool.founder ? founderText(tool.founder.why, lang) : '',
+        date: tool.founderReviewedDate ?? tool.founder?.providedDate ?? '',
+        url: lang === 'en' ? base : `/${lang}${base}`,
+      }
+    })
     .filter((entry) => entry.date !== '')
     .sort((a, b) => b.date.localeCompare(a.date))
     .slice(0, limit)

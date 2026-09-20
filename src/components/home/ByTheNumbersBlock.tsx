@@ -1,18 +1,20 @@
+import type { Language } from '@/lib/blog/blogContent'
 import { getHomeStats } from '@/lib/home/stats'
+import { t } from './home-i18n'
 
-export function ByTheNumbersBlock() {
-  const stats = getHomeStats()
+export function ByTheNumbersBlock({ lang = 'en' }: { lang?: Language }) {
+  const stats = getHomeStats(lang)
 
   const items = [
-    { label: 'Apps tracked', value: stats.totalApps.toLocaleString() },
-    { label: 'Languages', value: stats.locales.toString() },
-    { label: 'Founder-verified', value: stats.founderVerified.toString() },
-    { label: 'Articles published', value: stats.totalArticles.toLocaleString() },
+    { label: t('statAppsTracked', lang), value: stats.totalApps.toLocaleString() },
+    { label: t('statLanguages', lang), value: stats.locales.toString() },
+    { label: t('statFounderVerified', lang), value: stats.founderVerified.toString() },
+    { label: t('statArticlesPublished', lang), value: stats.totalArticles.toLocaleString() },
   ]
 
   return (
     <div className="rounded-xl border border-border bg-card p-4 h-full">
-      <h3 className="text-sm font-bold text-text-primary mb-3">By the Numbers</h3>
+      <h3 className="text-sm font-bold text-text-primary mb-3">{t('statsTitle', lang)}</h3>
       <dl className="grid grid-cols-2 gap-4">
         {items.map((item) => (
           <div key={item.label}>
