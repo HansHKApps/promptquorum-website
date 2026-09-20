@@ -24,6 +24,18 @@ const HOME_UI = {
     ar: 'PromptQuorum: دليل وأدلة نماذج اللغة المحلية',
     ko: 'PromptQuorum: 로컬 LLM 디렉터리 및 가이드',
   },
+  /** Short punchy tagline under the H1 — replaces a longer factual sentence; the H1 itself already carries the descriptive/SEO keywords. */
+  heroTagline: {
+    en: 'Your Local AI Command Center',
+    de: 'Ihre Kommandozentrale für lokale KI',
+    fr: "Votre centre de commande pour l'IA locale",
+    ja: 'あなたのローカルAIコマンドセンター',
+    zh: '你的本地 AI 指挥中心',
+    es: 'Tu centro de mando de IA local',
+    pt: 'Seu centro de comando de IA local',
+    ar: 'مركز قيادتك للذكاء الاصطناعي المحلي',
+    ko: '당신의 로컬 AI 커맨드 센터',
+  },
 
   // --- Intent-Guided Search ---
   searchHeading: {

@@ -1,6 +1,5 @@
 import type { Language } from '@/lib/blog/blogContent'
 import { getLangDir } from '@/lib/i18n/constants'
-import { translations } from '@/translations'
 import { getComparableGroups } from '@/lib/power-local-llm/compare-data'
 import { ComparisonToolShell } from './ComparisonToolShell'
 import { IntentSearchBlock } from './IntentSearchBlock'
@@ -28,14 +27,12 @@ import { t } from './home-i18n'
  * component owns the page's <h1> instead, since nothing else does anymore.
  */
 export function Home({ lang }: { lang: Language }) {
-  const subtitle = translations[lang as keyof typeof translations]?.homeMetaDescription ?? translations.en.homeMetaDescription
-
   return (
     <main dir={getLangDir(lang)}>
       <div className="border-b border-hero-edge bg-linear-to-r from-hero-from to-hero-to">
         <div className="container mx-auto px-4 py-5 max-w-7xl">
           <h1 className="text-2xl font-bold text-text-primary">{t('pageH1', lang)}</h1>
-          <p className="mt-1.5 text-sm text-text-secondary max-w-3xl">{subtitle}</p>
+          <p className="mt-1.5 text-base font-semibold text-primary">{t('heroTagline', lang)}</p>
         </div>
       </div>
       <div className="container mx-auto px-4 py-8 max-w-7xl">

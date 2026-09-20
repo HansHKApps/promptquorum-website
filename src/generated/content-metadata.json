@@ -9485,7 +9485,33 @@
       "publishDate": "2026-09-20",
       "hasSections": true,
       "langs": [
-        "en"
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "local-llm-images-video-compared": {
+      "dateModified": "2026-09-20",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-20",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
       ],
       "images": []
     },
