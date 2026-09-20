@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay',
     seoTitle: 'Local Chat Apps & AI Assistants Compared 2026',
     intro:
-      'Chat apps that run language models on your own hardware are not one product category: a desktop app, a phone app, a self-hosted web interface, a personal assistant and a roleplay tool solve different problems, and no single feature list compares them fairly. This guide compares 66 free and freemium tools, one kind at a time, using a comparison table generated from the same data as each tool\'s own PromptQuorum review, so the table and the reviews cannot disagree.',
+      'Chat apps that run language models on your own hardware are not one product category: a desktop app, a phone app, a self-hosted web interface, a personal assistant and a roleplay tool solve different problems, and no single feature list compares them fairly. This guide compares 66 free and paid tools, one kind at a time, using a comparison table generated from the same data as each tool\'s own PromptQuorum review, so the table and the reviews cannot disagree.',
     metaDescription:
       'Compare 66 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.',
     twitterDescription:
@@ -28,7 +28,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience:
       'Developers, self-hosters and privacy-conscious users choosing a local chat app or assistant for their computer, phone or server, who want the differences laid out per kind of tool, not one blended list.',
     readTime: '12 min read',
-    educationalLevel: 'Beginner',
+    educationalLevel: 'Intermediate',
     primaryTerm: 'local chat apps compared',
     targetKeywords: [
       'best local ai chat app',
@@ -228,8 +228,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       dateModified: '2026-09-20',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-      educationalLevel: 'Beginner',
-      proficiencyLevel: 'Beginner',
+      educationalLevel: 'Intermediate',
+      proficiencyLevel: 'Intermediate',
       audience: { '@type': 'Audience', audienceType: 'Users choosing local chat apps and assistants' },
       about: [
         { '@type': 'Thing', name: 'Local LLM chat apps' },
