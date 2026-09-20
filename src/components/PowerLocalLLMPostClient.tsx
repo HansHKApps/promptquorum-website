@@ -10,6 +10,7 @@
 //   - LanguageSwitcher omitted in this iteration; cluster ships noindex until launch.
 
 import { useState, useRef, useEffect, Fragment } from 'react'
+import { ClusterBanner } from '@/components/ClusterBanner'
 import Link from 'next/link'
 import Image from 'next/image'
 import type { Language } from '@/lib/blog/blogContent'
@@ -27,6 +28,8 @@ import { EdgeVideoBandwidthCalculator } from '@/components/EdgeVideoBandwidthCal
 import { ShadowAiExposureAssessment } from '@/components/ShadowAiExposureAssessment'
 import { AgentBlastRadiusCalculator } from '@/components/AgentBlastRadiusCalculator'
 import { IpRiskTriageMatrix } from '@/components/IpRiskTriageMatrix'
+import { CategoryCompareTable } from '@/components/CategoryCompareTable'
+import type { CategoryCompareData } from '@/lib/power-local-llm/compare-data'
 import { StateAiLawApplicabilityChecker } from '@/components/StateAiLawApplicabilityChecker'
 import { QuickAnswer } from '@/components/QuickAnswer'
 import { DataDisclaimer } from '@/components/DataDisclaimer'
@@ -66,6 +69,17 @@ interface Props {
    * drawer (ToolCard.tsx/ToolDrawer.tsx), self-expiring on the same schedule.
    */
   founderReviewed?: { appName: string; date: string }
+  /**
+   * Set only on a category comparison article (see CATEGORY_COMPARE_ARTICLE in
+   * apps/compare-schema.ts): the tool-record-derived comparison data rendered by any
+   * section whose `component` is 'CategoryCompareTable'.
+   */
+  compareData?: CategoryCompareData
+  /**
+   * Set only on a tool's dedicated review: the category guide it belongs to plus a few
+   * same-segment sibling reviews (page-helpers.tsx, via getCategoryLinksForReview).
+   */
+  categoryLinks?: { guideLabel: string; guideSlug: string | null; siblings: { name: string; reviewSlug: string }[] }
 }
 
 // Section header translations
@@ -651,7 +665,7 @@ function RelatedArticlesDisclosure({ toolName, lang }: { toolName: string; lang:
   )
 }
 
-function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLMSection; colors: { dot: string; badge: string }; id?: string; lang: Language; renderLinks: (text: string) => React.ReactNode }) {
+function SectionBlock({ section, colors, id, lang, renderLinks, compareData }: { section: LLMSection; colors: { dot: string; badge: string }; id?: string; lang: Language; renderLinks: (text: string) => React.ReactNode; compareData?: CategoryCompareData }) {
   const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null)
   const tableScrollRef = useRef<HTMLDivElement>(null)
   const [tableIsScrollable, setTableIsScrollable] = useState(false)
@@ -774,6 +788,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
       )}
 
       {/* Component rendering */}
+      {section.component === 'CategoryCompareTable' && compareData && <CategoryCompareTable data={compareData} lang={lang} />}
       {section.component === 'VramCalculator' && (
         <div className="my-8">
           <VramCalculator />
@@ -1204,7 +1219,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
   )
 }
 
-function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, directorySlot, founderReviewed }: Props) {
+function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, directorySlot, founderReviewed, compareData, categoryLinks }: Props) {
   if (!articleData) {
     return <div className="min-h-screen bg-surface pt-32 flex items-center justify-center"><p className="text-text-secondary">Article not found.</p></div>
   }
@@ -1247,6 +1262,8 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, dir
           {/* LanguageSwitcher omitted: cluster ships noindex; path-based switcher to be added before launch */}
         </div>
 
+        <ClusterBanner cluster="power-local-llm" />
+
         {/* Article header */}
         <div className="mb-10">
           <span className={`inline-block px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full mb-4 ${colors.badge}`}>
@@ -1284,6 +1301,42 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, dir
               {directoryT('founderReviewedBannerBodyTemplate', lang, { name: founderReviewed.appName })}
             </p>
           </div>
+        )}
+
+        {/* Two-way link to this tool's category comparison guide + sibling reviews (English pages only:
+            the block's copy is not translated yet). */}
+        {categoryLinks && lang === 'en' && (
+          <aside className="mb-6 rounded-xl border border-tone-action-edge bg-tone-action p-4 text-sm">
+            <p className="font-bold text-text-primary mb-1">Part of a category comparison</p>
+            <p className="text-text-secondary">
+              {categoryLinks.guideSlug ? (
+                <>
+                  Compared with the other tools in{' '}
+                  <Link href={`/power-local-llm/${categoryLinks.guideSlug}`} className="font-semibold text-primary hover:underline">
+                    {categoryLinks.guideLabel}
+                  </Link>
+                  .
+                </>
+              ) : (
+                <>Category: {categoryLinks.guideLabel}.</>
+              )}
+              {categoryLinks.siblings.length > 0 && (
+                <>
+                  {' '}
+                  Also reviewed:{' '}
+                  {categoryLinks.siblings.map((sib, i) => (
+                    <span key={sib.reviewSlug}>
+                      {i > 0 && ', '}
+                      <Link href={`/power-local-llm/${sib.reviewSlug}`} className="text-primary hover:underline">
+                        {sib.name}
+                      </Link>
+                    </span>
+                  ))}
+                  .
+                </>
+              )}
+            </p>
+          </aside>
         )}
 
         {/* Lead Answer Block — canonical definition for AI crawlers (Rule 31) */}
@@ -1489,7 +1542,7 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, dir
                 return null
               }
               return (
-                <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} renderLinks={renderLinks} />
+                <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} renderLinks={renderLinks} compareData={compareData} />
               )
             })
           })()}

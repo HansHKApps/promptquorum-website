@@ -36,5 +36,7 @@ export const app: ToolRecord = {
     ko: 'Willow 음성 비서 프로젝트를 위해 Whisper ASR, TTS, LLM 추론을 결합한 셀프호스팅 음성·언어 추론 서버.',
   },
   reviewSlug: 'willow-inference-server-review', // dedicated PromptQuorum review — added 2026-09-19
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { voiceCloning: true, streaming: true, realtime: true, apiServer: true },
   lastVerifiedDate: '2026-09-18',
 }

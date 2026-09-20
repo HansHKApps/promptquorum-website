@@ -4,6 +4,8 @@ import { useState } from 'react'
 import Link from 'next/link'
 import type { Language } from '@/lib/blog/blogContent'
 import { useSearch } from '@/components/search/useSearch'
+import { HomeIcon } from './HomeIcon'
+import { SURFACE_CLASS } from './homeSurface'
 import { t, type HomeUiKey } from './home-i18n'
 
 type Intent = 'compare' | 'learn' | 'find-app'
@@ -44,8 +46,11 @@ export function IntentSearchBlock({ lang = 'en' }: { lang?: Language }) {
   const activeExample = t(INTENTS.find((i) => i.key === intent)!.exampleKey, lang)
 
   return (
-    <div className="rounded-xl border border-border bg-card p-6 h-full">
-      <h2 className="text-xl font-bold text-text-primary mb-1">{t('searchHeading', lang)}</h2>
+    <div className={`rounded-xl border ${SURFACE_CLASS.action} p-6 h-full`}>
+      <h2 className="text-xl font-bold text-text-primary mb-1 flex items-center gap-2">
+        <HomeIcon name="search" size={20} />
+        {t('searchHeading', lang)}
+      </h2>
       <p className="text-sm text-text-secondary mb-4">{t('searchSubheading', lang)}</p>
 
       <div className="flex flex-wrap gap-2 mb-3">

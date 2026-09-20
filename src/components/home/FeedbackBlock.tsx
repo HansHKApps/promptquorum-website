@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import type { Language } from '@/lib/blog/blogContent'
+import { HomeIcon } from './HomeIcon'
+import { SURFACE_CLASS } from './homeSurface'
 import { t } from './home-i18n'
 
 export function FeedbackBlock({ lang = 'en' }: { lang?: Language }) {
@@ -27,8 +29,11 @@ export function FeedbackBlock({ lang = 'en' }: { lang?: Language }) {
   }
 
   return (
-    <div className="rounded-xl border border-border bg-card p-4 h-full flex flex-col">
-      <h3 className="text-sm font-bold text-text-primary mb-2">{t('feedbackQuestion', lang)}</h3>
+    <div className={`rounded-xl border ${SURFACE_CLASS.stat} p-4 h-full flex flex-col`}>
+      <h3 className="text-sm font-bold text-text-primary mb-2 flex items-center gap-2">
+        <HomeIcon name="feedback" />
+        {t('feedbackQuestion', lang)}
+      </h3>
       {status === 'sent' ? (
         <p className="text-sm text-primary">{t('feedbackThanks', lang)}</p>
       ) : (

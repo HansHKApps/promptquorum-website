@@ -9479,6 +9479,16 @@
       ],
       "images": []
     },
+    "local-llm-voice-audio-compared": {
+      "dateModified": "2026-09-20",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-20",
+      "hasSections": true,
+      "langs": [
+        "en"
+      ],
+      "images": []
+    },
     "coqui-tts-review": {
       "dateModified": "2026-09-05",
       "lastFactChecked": null,

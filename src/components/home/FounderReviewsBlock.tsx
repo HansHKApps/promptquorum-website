@@ -12,6 +12,7 @@ export function FounderReviewsBlock({ lang = 'en' }: { lang?: Language }) {
     return (
       <HomeCard
         size="md"
+        icon="review"
         title={t('founderReviewsTitle', lang)}
         emptyState
         emptyMessage={t('founderReviewsEmpty', lang)}
@@ -20,7 +21,7 @@ export function FounderReviewsBlock({ lang = 'en' }: { lang?: Language }) {
   }
 
   return (
-    <HomeCard size="md" title={t('founderReviewsTitle', lang)}>
+    <HomeCard size="md" icon="review" title={t('founderReviewsTitle', lang)}>
       <ExpandableList
         lang={lang}
         items={reviews.map((r) => ({

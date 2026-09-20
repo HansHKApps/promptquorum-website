@@ -11,11 +11,11 @@ export function LatestAppsBlock({ lang = 'en' }: { lang?: Language }) {
   const apps = getLatestApps(lang)
 
   if (apps.length === 0) {
-    return <HomeCard size="md" title={t('latestAppsTitle', lang)} emptyState emptyMessage={t('latestAppsEmpty', lang)} />
+    return <HomeCard size="md" icon="apps" title={t('latestAppsTitle', lang)} emptyState emptyMessage={t('latestAppsEmpty', lang)} />
   }
 
   return (
-    <HomeCard size="md" title={t('latestAppsTitle', lang)}>
+    <HomeCard size="md" icon="apps" title={t('latestAppsTitle', lang)}>
       <ExpandableList
         lang={lang}
         items={apps.map((a) => ({

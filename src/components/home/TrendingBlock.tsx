@@ -8,11 +8,11 @@ export function TrendingBlock({ lang = 'en' }: { lang?: Language }) {
   const batches = getTrendingBatches(lang)
 
   if (batches.length === 0) {
-    return <HomeCard size="md" title={t('trendingTitle', lang)} emptyState emptyMessage={t('trendingEmpty', lang)} />
+    return <HomeCard size="md" icon="trending" title={t('trendingTitle', lang)} emptyState emptyMessage={t('trendingEmpty', lang)} />
   }
 
   return (
-    <HomeCard size="md" title={t('trendingTitle', lang)}>
+    <HomeCard size="md" icon="trending" title={t('trendingTitle', lang)}>
       <BatchedList
         lang={lang}
         batches={batches.map((b) => ({

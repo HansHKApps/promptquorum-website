@@ -444,6 +444,12 @@ If page A says "Kimi K2.6 is best for coding" and page B says "Qwen2.5-Coder 32B
 
 Do this in both directions: after refreshing a review, grep hub/comparison pages that link to it; after refreshing a hub, spot-check the reviews it links to. This is a same-page-update fix, not a "flag for later" — same standard as Step 5.5 structural parity: found but not fixed is a shallow update (Anti-Pattern #1).
 
+**Category comparison articles (app directory).** A tool's review and its category comparison article (`CATEGORY_COMPARE_ARTICLE` in `src/lib/power-local-llm/apps/compare-schema.ts`) must never disagree, and are updated together:
+- **Structured facts** (price, license, platforms, hardware, version, and the `compare` attributes) live once, in the tool's record `src/lib/power-local-llm/apps/<slug>.ts`. The category article's table is generated from those records, so fix the fact in the record and both pages follow. Never hand-write a value into article prose that the record supplies.
+- **Refreshing a review** → check its category article's per-tool prose and the tool's `compare` block for the same change (a new license, a dropped platform, a changed price). **Refreshing a category article** → spot-check every tool it mentions against that tool's review.
+- Values in `compare` are verified against the project's official README/site, with the date in the comment above the block; re-verify them when the tool's version changes. A missing key means "not stated", never "no".
+- `npm run validate-category-compare` (part of `prebuild`) checks that every `compare` key is defined for the tool's segment, that comparison articles are registered and render the table, and that a published comparison article has all 9 locale blocks.
+
 **Why:** Cross-linked review clusters (smart-home mini-PC/hardware pages, power-local-llm app reviews, GPU/hardware guides) exist specifically because the site claims verified specs and prices — that claim breaks the moment two pages that link to each other disagree, and an outside reader (or a competitor) checking is exactly the kind of gap that damages trust in every other "verified" claim on the site.
 
 ---

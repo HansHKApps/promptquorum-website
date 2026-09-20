@@ -10,6 +10,7 @@
 //   - LanguageSwitcher omitted in this iteration; cluster ships noindex until launch.
 
 import { useState, useRef, useEffect, Fragment } from 'react'
+import { ClusterBanner } from '@/components/ClusterBanner'
 import Link from 'next/link'
 import Image from 'next/image'
 import type { Language } from '@/lib/blog/blogContent'
@@ -912,6 +913,8 @@ function SmartHomePostContent({ slug, lang, articleData, availableLangs }: Props
           </div>
           {/* LanguageSwitcher omitted: cluster ships noindex; path-based switcher to be added before launch */}
         </div>
+
+        <ClusterBanner cluster="smart-home" />
 
         {/* Article header */}
         <div className="mb-10">

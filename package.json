@@ -13,7 +13,7 @@
     "validate:registry": "node scripts/validate-registry-freshness.mjs",
     "validate-table-cells": "node scripts/validate-table-cell-length.mjs",
     "record-review": "node scripts/record-review.mjs",
-    "prebuild": "node scripts/write-build-info.mjs && npm run validate-translations && npm run validate-affiliate-disclosure && npm run verify:locales && npm run validate:models && node scripts/validate-internal-links.mjs && node scripts/validate-no-internal-note-leakage.mjs && node scripts/validate-sameas-links.mjs && node scripts/validate-image-schema.mjs && npm run generate:image-dimensions && node scripts/generate-content-metadata.mjs && node scripts/generate-tool-article-index.mjs && node scripts/generate-feature-review-index.mjs",
+    "prebuild": "node scripts/write-build-info.mjs && npm run validate-translations && npm run validate-affiliate-disclosure && npm run verify:locales && npm run validate:models && node scripts/validate-internal-links.mjs && node scripts/validate-no-internal-note-leakage.mjs && node scripts/validate-sameas-links.mjs && node scripts/validate-image-schema.mjs && npm run generate:image-dimensions && node scripts/generate-content-metadata.mjs && node scripts/generate-tool-article-index.mjs && node scripts/generate-feature-review-index.mjs && node scripts/validate-category-compare.mjs",
     "build": "node build-with-fix.js",
     "postbuild": "node scripts/test-cluster-noindex.mjs",
     "start": "next start",
@@ -38,6 +38,7 @@
     "validate-snippet-blocks": "node scripts/validate-snippet-blocks.mjs",
     "validate-local-ai-apps": "node scripts/validate-local-ai-apps.mjs",
     "validate-app-versions": "node scripts/validate-app-versions.mjs",
+    "validate-category-compare": "node scripts/validate-category-compare.mjs",
     "check-app-versions": "node scripts/check-app-versions.mjs"
   },
   "dependencies": {

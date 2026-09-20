@@ -10,12 +10,12 @@ export function RecentlyUpdatedBlock({ lang = 'en' }: { lang?: Language }) {
 
   if (updated.length === 0) {
     return (
-      <HomeCard size="md" title={t('recentlyUpdatedTitle', lang)} emptyState emptyMessage={t('recentlyUpdatedEmpty', lang)} />
+      <HomeCard size="md" icon="updated" title={t('recentlyUpdatedTitle', lang)} emptyState emptyMessage={t('recentlyUpdatedEmpty', lang)} />
     )
   }
 
   return (
-    <HomeCard size="md" title={t('recentlyUpdatedTitle', lang)}>
+    <HomeCard size="md" icon="updated" title={t('recentlyUpdatedTitle', lang)}>
       <ExpandableList
         lang={lang}
         items={updated.map((u) => ({

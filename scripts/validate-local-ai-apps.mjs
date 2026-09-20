@@ -33,7 +33,7 @@ function findAppFiles() {
   if (!fs.existsSync(APPS_DIR)) return [];
   return fs
     .readdirSync(APPS_DIR)
-    .filter(f => f.endsWith('.ts') && !f.endsWith('.d.ts') && f !== 'types.ts')
+    .filter(f => f.endsWith('.ts') && !f.endsWith('.d.ts') && !['types.ts', 'categories.ts', 'compare-schema.ts'].includes(f))
     .map(f => path.join(APPS_DIR, f))
     .sort();
 }

@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'CPU 및 GPU에 최적화된 로컬 음성 인식',
   },
   reviewSlug: 'whisper-cpp-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { realtime: true, cpuUsable: true, apiServer: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

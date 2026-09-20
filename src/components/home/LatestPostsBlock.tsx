@@ -9,11 +9,11 @@ export function LatestPostsBlock({ lang = 'en' }: { lang?: Language }) {
   const posts = getLatestPosts(lang)
 
   if (posts.length === 0) {
-    return <HomeCard size="md" title={t('latestPostsTitle', lang)} emptyState emptyMessage={t('latestPostsEmpty', lang)} />
+    return <HomeCard size="md" icon="posts" title={t('latestPostsTitle', lang)} emptyState emptyMessage={t('latestPostsEmpty', lang)} />
   }
 
   return (
-    <HomeCard size="md" title={t('latestPostsTitle', lang)}>
+    <HomeCard size="md" icon="posts" title={t('latestPostsTitle', lang)}>
       <ExpandableList
         lang={lang}
         items={posts.map((p) => ({

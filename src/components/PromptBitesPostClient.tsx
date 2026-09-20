@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { ClusterBanner } from '@/components/ClusterBanner'
 import Image from 'next/image'
 import Link from 'next/link'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
@@ -547,6 +548,8 @@ export function PromptBitesPostClient({ slug, lang, articleData, availableLangs,
             <LanguageSwitcher initialLang={lang} />
           </div>
         </div>
+
+        <ClusterBanner cluster="prompt-bites" />
 
         {/* Title */}
         <h1 className="prompt-bite-h1 text-3xl sm:text-4xl font-bold text-text-primary mb-3 leading-tight">

@@ -1,10 +1,15 @@
 import type { ReactNode } from 'react'
 import Link from 'next/link'
+import { HomeIcon, type HomeIconName } from './HomeIcon'
+import { SURFACE_CLASS, type HomeCardVariant } from './homeSurface'
 
 export type HomeCardSize = 'lg' | 'md' | 'sm'
 
 interface HomeCardProps {
   size: HomeCardSize
+  /** Card kind: action (interactive), list (content lists), stat (numbers/meta). Defaults to list. */
+  variant?: HomeCardVariant
+  icon?: HomeIconName
   href?: string
   eyebrow?: string
   title: string
@@ -34,17 +39,20 @@ const SIZE_PADDING_CLASS: Record<HomeCardSize, string> = {
  * across the three uneven visual tiers, and the "never omit a block" fallback
  * rule is enforced in one place (emptyState) rather than reimplemented per block.
  */
-export function HomeCard({ size, href, eyebrow, title, description, date, emptyState, emptyMessage, children }: HomeCardProps) {
+export function HomeCard({ size, variant = 'list', icon, href, eyebrow, title, description, date, emptyState, emptyMessage, children }: HomeCardProps) {
   const cardClass = emptyState
     ? 'rounded-xl border border-dashed border-border bg-surface/50 text-text-muted'
-    : 'rounded-xl border border-border bg-card hover:shadow-lg hover:-translate-y-0.5 transition'
+    : `rounded-xl border ${SURFACE_CLASS[variant]} hover:shadow-lg hover:-translate-y-0.5 transition`
 
   const content = (
     <div className={`${cardClass} ${SIZE_PADDING_CLASS[size]} h-full flex flex-col`}>
       {eyebrow && !emptyState && (
         <span className="text-[11px] font-bold uppercase tracking-widest text-primary mb-1.5">{eyebrow}</span>
       )}
-      <h3 className={`${SIZE_TITLE_CLASS[size]} ${emptyState ? 'text-text-muted' : 'text-text-primary'} mb-1.5`}>{title}</h3>
+      <h3 className={`${SIZE_TITLE_CLASS[size]} ${emptyState ? 'text-text-muted' : 'text-text-primary'} mb-1.5 flex items-center gap-2`}>
+        {icon && <HomeIcon name={icon} />}
+        {title}
+      </h3>
       {emptyState ? (
         <p className="text-sm text-text-muted italic">{emptyMessage ?? 'Data coming soon.'}</p>
       ) : (

@@ -21,6 +21,28 @@ module.exports = {
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
+				cat: {
+					'run-serve': { DEFAULT: 'hsl(var(--cat-run-serve))', tint: 'hsl(var(--cat-run-serve-tint))', edge: 'hsl(var(--cat-run-serve-edge))' },
+					'chat-assistants': { DEFAULT: 'hsl(var(--cat-chat-assistants))', tint: 'hsl(var(--cat-chat-assistants-tint))', edge: 'hsl(var(--cat-chat-assistants-edge))' },
+					'code-development': { DEFAULT: 'hsl(var(--cat-code-development))', tint: 'hsl(var(--cat-code-development-tint))', edge: 'hsl(var(--cat-code-development-edge))' },
+					'knowledge-retrieval': { DEFAULT: 'hsl(var(--cat-knowledge-retrieval))', tint: 'hsl(var(--cat-knowledge-retrieval-tint))', edge: 'hsl(var(--cat-knowledge-retrieval-edge))' },
+					'voice-audio': { DEFAULT: 'hsl(var(--cat-voice-audio))', tint: 'hsl(var(--cat-voice-audio-tint))', edge: 'hsl(var(--cat-voice-audio-edge))' },
+					'images-video': { DEFAULT: 'hsl(var(--cat-images-video))', tint: 'hsl(var(--cat-images-video-tint))', edge: 'hsl(var(--cat-images-video-edge))' },
+					'train-operate': { DEFAULT: 'hsl(var(--cat-train-operate))', tint: 'hsl(var(--cat-train-operate-tint))', edge: 'hsl(var(--cat-train-operate-edge))' },
+				},
+				hero: {
+					from: 'hsl(var(--hero-from))',
+					to: 'hsl(var(--hero-to))',
+					edge: 'hsl(var(--hero-edge))',
+				},
+				tone: {
+					action: 'hsl(var(--tone-action))',
+					'action-edge': 'hsl(var(--tone-action-edge))',
+					list: 'hsl(var(--tone-list))',
+					'list-edge': 'hsl(var(--tone-list-edge))',
+					stat: 'hsl(var(--tone-stat))',
+					'stat-edge': 'hsl(var(--tone-stat-edge))',
+				},
 				foreground: 'hsl(var(--foreground))',
 				// Primary - Deep Violet
 				primary: {

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect, Fragment } from 'react'
+import { ClusterBanner } from '@/components/ClusterBanner'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useLang } from '@/hooks/useLang'
@@ -1541,6 +1542,8 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData, availabl
           </div>
           <LanguageSwitcher />
         </div>
+
+        <ClusterBanner cluster="prompt-engineering" />
 
         {/* Article header */}
         <div className="mb-10">
