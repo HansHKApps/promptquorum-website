@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { CATEGORY_GROUPS, CATEGORY_GROUP_LABEL } from '@/lib/power-local-llm/apps/categories'
 import type { CategoryCompareData } from '@/lib/power-local-llm/compare-data'
-import { CompareTable } from '@/components/CompareTable'
+import { ExpandableCompareTable } from '@/components/ExpandableCompareTable'
 import { HomeIcon } from './HomeIcon'
 import { SURFACE_CLASS } from './homeSurface'
 
@@ -18,8 +18,6 @@ const CHIP_CLASS: Record<string, { idle: string; active: string }> = {
   'images-video': { idle: 'border-cat-images-video-edge bg-cat-images-video-tint', active: 'border-cat-images-video bg-cat-images-video' },
   'train-operate': { idle: 'border-cat-train-operate-edge bg-cat-train-operate-tint', active: 'border-cat-train-operate bg-cat-train-operate' },
 }
-
-const MAX_TOOLS = 3
 
 /**
  * Pick a category, pick up to three tools, compare them side by side. The data comes from the tool
@@ -42,7 +40,7 @@ export function ComparisonToolShell({ groups }: { groups: CategoryCompareData[] 
   }
 
   function toggleTool(slug: string) {
-    setSelected((cur) => (cur.includes(slug) ? cur.filter((s) => s !== slug) : cur.length < MAX_TOOLS ? [...cur, slug] : cur))
+    setSelected((cur) => (cur.includes(slug) ? cur.filter((s) => s !== slug) : [...cur, slug]))
   }
 
   const rows = segment ? segment.rows.filter((r) => selected.includes(r.slug)) : []
@@ -53,7 +51,7 @@ export function ComparisonToolShell({ groups }: { groups: CategoryCompareData[] 
         <HomeIcon name="compare" size={20} />
         Compare Tools
       </h2>
-      <p className="text-sm text-text-secondary mb-4">Pick a category, then choose up to {MAX_TOOLS} tools to compare side by side.</p>
+      <p className="text-sm text-text-secondary mb-4">Pick a category, then choose the tools to compare side by side.</p>
 
       <div className="flex flex-wrap gap-2 mb-4">
         {CATEGORY_GROUPS.map((group) => (
@@ -112,20 +110,19 @@ export function ComparisonToolShell({ groups }: { groups: CategoryCompareData[] 
 
           <fieldset className="mb-4">
             <legend className="mb-2 text-xs font-bold uppercase tracking-widest text-text-secondary">
-              Choose up to {MAX_TOOLS} ({selected.length} selected)
+              Choose tools ({selected.length} selected)
             </legend>
             <div className="flex flex-wrap gap-2">
               {segment.rows.map((r) => {
                 const on = selected.includes(r.slug)
-                const disabled = !on && selected.length >= MAX_TOOLS
                 return (
                   <label
                     key={r.slug}
                     className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs ${
                       on ? 'border-primary bg-white text-primary font-semibold' : 'border-border bg-white text-text-secondary'
-                    } ${disabled ? 'opacity-40' : 'cursor-pointer'}`}
+                    } cursor-pointer`}
                   >
-                    <input type="checkbox" className="sr-only" checked={on} disabled={disabled} onChange={() => toggleTool(r.slug)} />
+                    <input type="checkbox" className="sr-only" checked={on} onChange={() => toggleTool(r.slug)} />
                     {r.name}
                   </label>
                 )
@@ -134,7 +131,24 @@ export function ComparisonToolShell({ groups }: { groups: CategoryCompareData[] 
           </fieldset>
 
           {rows.length >= 2 ? (
-            <CompareTable columns={segment.columns} rows={rows} lang="en" />
+            <>
+              <ExpandableCompareTable columns={segment.columns} rows={rows} lang="en" title={`${data.label} — ${segment.label}`} />
+              <p className="mt-3 text-sm text-text-secondary">
+                Read the full reviews:{' '}
+                {rows.map((r, i) => (
+                  <span key={r.slug}>
+                    {i > 0 && ' · '}
+                    {r.reviewSlug ? (
+                      <Link href={`/power-local-llm/${r.reviewSlug}`} className="font-semibold text-primary hover:underline">
+                        {r.name}
+                      </Link>
+                    ) : (
+                      r.name
+                    )}
+                  </span>
+                ))}
+              </p>
+            </>
           ) : (
             <div className="rounded-lg border border-dashed border-border bg-surface/50 p-6 text-center">
               <p className="text-sm text-text-muted">Select at least two tools to see the comparison.</p>
