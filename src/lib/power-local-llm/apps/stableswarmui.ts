@@ -14,7 +14,7 @@ export const app: ToolRecord = {
   platforms: ['win', 'linux'],
   worksWith: null,
   engine: 'builtin',
-  license: 'Apache 2.0',
+  license: 'MIT', // github.com/mcmonkeyprojects/SwarmUI (the project moved from Stability-AI/StableSwarmUI) is MIT; matches the review — verified 2026-09-20
   price: 'free',
   hardware: { ramGb: 8, vramGb: 8, cpuOnly: false }, // github.com/Stability-AI/StableSwarmUI itself is archived (no release since 2024) and its README has no explicit hardware section; figures are from the actively-maintained fork of the same codebase, mcmonkeyprojects/SwarmUI docs: 8GB+ RAM (16GB recommended), NVIDIA GPU with 8GB+ VRAM (12GB+ recommended) for reasonable ComfyUI-backend performance. Treat as an approximation, not a citation of this exact repo's own docs. Verified 2026-09-13
   stars: 4900,
