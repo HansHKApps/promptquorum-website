@@ -35,6 +35,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Built by All Hands AI, backed by a $5 million seed round announced September 5, 2024',
           'Over 86,000 GitHub stars and 11,000+ forks as of this review',
           'Reported state-of-the-art results on SWE-bench Verified, announced April 17, 2025',
+          'Latest tagged release: v1.20.0',
         ],
         updatedDate: '2026-09',
       },

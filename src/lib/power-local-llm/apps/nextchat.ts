@@ -34,5 +34,6 @@ export const app: ToolRecord = {
     ko: '간단한 배포가 가능한 경량 웹 채팅',
   },
   reviewSlug: 'nextchat-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  pqReview: { date: '2026-09-20', version: 'v2.16.1', versionSourceUrl: 'https://github.com/ChatGPTNextWeb/NextChat/releases/tag/v2.16.1' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }
