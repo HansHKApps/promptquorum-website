@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '다국어 지원을 갖춘 짧은 오디오 샘플 기반 음성 복제',
   },
   reviewSlug: 'xtts-v2-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { languages: 17, voiceCloning: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -35,5 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'coqui-tts-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v0.27.5', versionSourceUrl: 'https://github.com/idiap/coqui-ai-TTS/releases/tag/v0.27.5' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { voiceCloning: true, streaming: true, apiServer: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

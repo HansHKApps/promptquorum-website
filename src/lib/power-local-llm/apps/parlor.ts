@@ -39,5 +39,7 @@ export const app: ToolRecord = {
     ko: '로컬 모델로 구동되는, 실시간 음성 및 영상 대화를 지원하는 완전 온디바이스 멀티모달 AI 어시스턴트.',
   },
   pqReview: { date: '2026-09-20', version: 'v2.0.0', versionSourceUrl: 'https://github.com/fikrikarim/parlor/releases/tag/v2.0.0' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { fullyLocal: true, bargeIn: true },
   lastVerifiedDate: '2026-09-18',
 }

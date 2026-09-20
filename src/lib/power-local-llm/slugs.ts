@@ -276,6 +276,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'dograh-review':                           'dograh-review',
   'exo-review':                              'exo-review',
   'piper-tts-review':                        'piper-tts-review',
+  'local-llm-voice-audio-compared':          'local-llm-voice-audio-compared',
   'coqui-tts-review':                        'coqui-tts-review',
   'xtts-v2-review':                          'xtts-v2-review',
   'bark-tts-review':                         'bark-tts-review',

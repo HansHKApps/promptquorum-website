@@ -11,11 +11,11 @@ export const app: ToolRecord = {
   categories: ['realtime-voice-agents', 'personal-assistants'],
   interfaces: ['desktop'],
   locality: 'hybrid',
-  platforms: ['mac', 'win'],
+  platforms: ['mac', 'win', 'linux'], // askvoxa.dev: Windows (WebView2), macOS (WKWebView), Linux (WebKitGTK 4.1) — verified 2026-09-20
   worksWith: null,
   engine: 'both',
   license: 'MIT',
-  price: 'freemium',
+  price: 'free', // askvoxa.dev: MIT, no paid tier or subscription (own API keys for realtime providers) — verified 2026-09-20
   hardware: { ramGb: null, vramGb: null, cpuOnly: null, variesByModel: true }, // per askvoxa.dev, checked 2026-09-13 — only build prerequisites (Rust, Node 18+) are documented, no runtime hardware/system-requirements section; depends entirely on the LLM/voice backend the user configures, no fixed floor of its own
   stars: null,
   addedDate: '2026-09-04',
@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '로컬 우선 데스크톱 음성 어시스턴트, 클라우드 음성 선택 가능',
   },
   reviewSlug: 'voxa-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { bargeIn: true, customLlm: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

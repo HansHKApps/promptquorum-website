@@ -37,5 +37,7 @@ export const app: ToolRecord = {
     ar: 'بيئة تشغيل صوتية ذكاء اصطناعي محلية أولًا للتفريغ الصوتي وفصل المتحدثين وتحويل النص إلى كلام واستنساخ الصوت، مع واجهة برمجية متوافقة مع OpenAI',
     ko: '전사, 화자 분리, 텍스트 음성 변환, 음성 복제를 로컬 우선으로 처리하는 음성 AI 런타임으로, OpenAI 호환 API를 제공',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { voiceCloning: true, realtime: true, speakerLabels: true, cpuUsable: true, apiServer: true },
   lastVerifiedDate: '2026-09-18',
 }

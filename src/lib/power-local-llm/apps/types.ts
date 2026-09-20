@@ -165,4 +165,28 @@ export interface ToolRecord {
   // 173 of 175 tools nobody has checked.
   mcpSupport?: boolean
   lastVerifiedDate: string | null // ISO 8601; separate from the article's own dateModified — null = not yet verified
+  // One-line "best for / limits" statement, written ONCE here and reused verbatim by both this
+  // tool's review article and its category comparison article, so the two can never disagree
+  // about who the tool is for. English only; unset until the tool has been reviewed.
+  verdict?: string
+  // Category-specific comparison attributes, keyed by the attribute keys defined in
+  // ./compare-schema.ts for this tool's primary category group. Feeds the category article's
+  // comparison table and the homepage comparison tool. Unset/missing key = "not yet researched",
+  // never "verified absent" (same convention as `hardware`/`mcpSupport`).
+  compare?: Record<string, CompareValue>
+  // Affiliate/referral link for this tool, only when a programme is actually enrolled.
+  // Leave unset for every tool without one. Rendering must go through ToolAffiliateLink-style
+  // markup (rel="sponsored nofollow" + disclosure marker), never a plain outbound link.
+  affiliate?: ToolRecordAffiliate
+}
+
+export type CompareValue = string | number | boolean | string[]
+
+export interface ToolRecordAffiliate {
+  /** Full tracked URL supplied by the programme. */
+  url: string
+  /** Programme/network name, for internal records and disclosure wording, e.g. "Impact". */
+  program: string
+  /** ISO 8601 date the programme enrolment was confirmed. */
+  enrolledDate: string
 }

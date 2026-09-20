@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'macOS 음성 어시스턴트, 완전 오프라인(Llama, Whisper, Kokoro)',
   },
   reviewSlug: 'jarvis-mac-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
+  compare: { fullyLocal: true, bargeIn: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }
