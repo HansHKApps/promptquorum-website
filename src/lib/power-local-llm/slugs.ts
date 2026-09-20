@@ -4,13 +4,9 @@
 
 export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // Category 0 — Overview & Reference
-  // 'local-llm-software-directory' removed 2026-09-20: the directory moved to
-  // /directory (src/app/directory/page.tsx, a self-contained page that does
-  // not read this map) — this slug now only exists as a next.config.ts 301
-  // redirect target, not a real [slug]/page.tsx route. Leaving it mapped here
-  // both generated a dead static page shadowed by the redirect and caused a
-  // false postbuild noindex-contract failure (scripts/test-cluster-noindex.mjs
-  // iterates every key in this file; a redirect has no robots meta tag to find).
+  // Served at /directory (src/app/directory/page.tsx reads this map via
+  // buildArticlePageElement) — do NOT remove; the old /power-local-llm/ URL is a 301.
+  'local-llm-software-directory':                'local-llm-software-directory-2026',
   // AI & open-source license taxonomy — evergreen reference — 2026-09-03
   'ai-tool-licenses-explained':                  'ai-tool-licenses-explained',
 

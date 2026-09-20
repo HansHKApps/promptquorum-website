@@ -196,7 +196,8 @@ async function main() {
   }
 
   for (const cluster of CLUSTERS) {
-    cluster.slugs = readSlugs(cluster.slugsFile)
+    // The directory slug is served at /directory; its old URL is a 301 redirect with no robots meta.
+    cluster.slugs = readSlugs(cluster.slugsFile).filter((s) => s !== 'local-llm-software-directory')
     cluster.publishedSlugs = readPublishedSlugs(cluster.publishedFile)
     if (cluster.invertPending) {
       const heldBack = cluster.publishedSlugs
