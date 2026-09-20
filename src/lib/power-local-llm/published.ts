@@ -313,6 +313,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'piper-tts-review',
   // Category comparison guide for voice-audio (all 9 locales) — generated table, see apps/compare-schema.ts
   'local-llm-voice-audio-compared',
+  // Category comparison guide for images-video (all 9 locales) — generated table, see apps/compare-schema.ts
+  'local-llm-images-video-compared',
   'coqui-tts-review',
   'xtts-v2-review',
   'bark-tts-review',

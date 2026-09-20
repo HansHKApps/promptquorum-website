@@ -43,6 +43,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "nanobot-review",
         "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
         "url": "/power-local-llm/nanobot-review",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/little-coder-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-deep-research-review",
-        "title": "Local Deep Research Review 2026: Self-Hosted, Cited AI Research Agent",
-        "url": "/power-local-llm/local-deep-research-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 283,
+    "totalCount": 284,
     "capped": true
   },
   "llama.cpp": {
@@ -1556,9 +1556,17 @@
         "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-09-12",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "BoltAI": {
@@ -1632,9 +1640,17 @@
         "url": "/power-local-llm/draw-things-review",
         "dateModified": "2026-09-07",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Ekorbia": {
@@ -4989,6 +5005,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "llama-factory-review",
         "title": "LLaMA-Factory Review 2026: Fine-Tune 100+ LLMs via Web UI",
         "url": "/power-local-llm/llama-factory-review",
@@ -5050,17 +5074,9 @@
         "url": "/local-llms/multimodal-local-llms",
         "dateModified": "2026-08-31",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
-        "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
-        "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
-        "dateModified": "2026-08-29",
-        "tier": "about"
       }
     ],
-    "totalCount": 21,
+    "totalCount": 22,
     "capped": true
   },
   "Ollama vision models": {
@@ -5071,6 +5087,14 @@
         "title": "Ollama Vision Models (2026): How to Actually Run Image Models Locally",
         "url": "/power-local-llm/ollama-vision-models-review",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -5098,7 +5122,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Idefics": {
@@ -5113,6 +5137,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "mlc-chat-review",
         "title": "MLC Chat Review (2026): The Mobile App Built on MLC LLM, Assessed Honestly",
         "url": "/power-local-llm/mlc-chat-review",
@@ -5120,7 +5152,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "MLC Chat": {
@@ -5873,6 +5905,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "stable-diffusion-forge-review",
         "title": "Stable Diffusion WebUI Forge Review 2026: Faster, Lower-VRAM AUTOMATIC1111 Fork",
         "url": "/power-local-llm/stable-diffusion-forge-review",
@@ -5934,17 +5974,9 @@
         "url": "/power-local-llm/invokeai-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "layla-review",
-        "title": "Layla Review (2026): On-Device AI Companion App for Android and iOS",
-        "url": "/power-local-llm/layla-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 29,
+    "totalCount": 30,
     "capped": true
   },
   "ComfyUI": {
@@ -5955,6 +5987,14 @@
         "title": "ComfyUI Review (2026): Free Node-Based UI for Stable Diffusion & Flux",
         "url": "/power-local-llm/comfyui-review",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -6020,17 +6060,9 @@
         "url": "/power-local-llm/stableswarmui-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "stable-diffusion-review",
-        "title": "Stable Diffusion Review (2026): Free Local Text-to-Image Models",
-        "url": "/power-local-llm/stable-diffusion-review",
-        "dateModified": "2026-09-05",
-        "tier": "about"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "AUTOMATIC1111": {
@@ -6041,6 +6073,14 @@
         "title": "AUTOMATIC1111 Review (2026): Stable Diffusion WebUI Explained",
         "url": "/power-local-llm/automatic1111-review",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -6106,18 +6146,24 @@
         "url": "/local-llms/text-generation-webui-review",
         "dateModified": "2026-09-05",
         "tier": "about"
-      },
+      }
+    ],
+    "totalCount": 14,
+    "capped": true
+  },
+  "Invoke AI": {
+    "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "stable-diffusion-review",
-        "title": "Stable Diffusion Review (2026): Free Local Text-to-Image Models",
-        "url": "/power-local-llm/stable-diffusion-review",
-        "dateModified": "2026-09-05",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       }
     ],
-    "totalCount": 13,
-    "capped": true
+    "totalCount": 1,
+    "capped": false
   },
   "Fooocus": {
     "articles": [
@@ -6127,6 +6173,14 @@
         "title": "Fooocus Review (2026): The Simplest Local Stable Diffusion UI",
         "url": "/power-local-llm/fooocus-review",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -6194,7 +6248,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "StableSwarmUI": {
@@ -6206,9 +6260,17 @@
         "url": "/power-local-llm/stableswarmui-review",
         "dateModified": "2026-09-06",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "ControlNet": {
@@ -6219,6 +6281,14 @@
         "title": "ControlNet Review (2026): Structural Control for Stable Diffusion",
         "url": "/power-local-llm/controlnet-review",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -6284,18 +6354,10 @@
         "url": "/local-llms/apple-silicon-vs-nvidia-gpu-local-llm",
         "dateModified": "2026-09-01",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-ai-image-generation-vs-cloud",
-        "title": "Local AI Images Are Free. Cloud AI Images Are Instant. Your GPU Decides.",
-        "url": "/power-local-llm/local-ai-image-generation-vs-cloud",
-        "dateModified": "2026-08-21",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "Real-ESRGAN": {
     "articles": [
@@ -6306,9 +6368,17 @@
         "url": "/power-local-llm/real-esrgan-ai-image-upscaler-review",
         "dateModified": "2026-09-02",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "AnimateDiff": {
@@ -6319,6 +6389,14 @@
         "title": "AnimateDiff Guide 2026: Animate Any Stable Diffusion Model",
         "url": "/power-local-llm/animatediff-video-generation-guide-2026",
         "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
         "tier": "about"
       },
       {
@@ -6338,7 +6416,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Smart Connections": {
@@ -7779,6 +7857,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "localai-apexcreator-review",
         "title": "LocalAI Review (2026): ApexCreator's Offline Android AI Chat App",
         "url": "/power-local-llm/localai-apexcreator-review",
@@ -7786,7 +7872,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "LocalAI: Offline AI Chat LLM": {
@@ -7812,9 +7898,17 @@
         "url": "/power-local-llm/diffusionbee-review",
         "dateModified": "2026-09-12",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "MacWhisper": {
@@ -8449,6 +8543,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
@@ -8456,7 +8558,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "IntentKit": {
@@ -9333,6 +9435,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-images-video-compared",
+        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
+        "url": "/power-local-llm/local-llm-images-video-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "automatic1111-review",
         "title": "AUTOMATIC1111 Review (2026): Stable Diffusion WebUI Explained",
         "url": "/power-local-llm/automatic1111-review",
@@ -9340,7 +9450,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Surf": {
