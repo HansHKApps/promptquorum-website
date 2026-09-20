@@ -2,21 +2,21 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { CompareTable } from './CompareTable'
-import type { CompareColumn, CompareRow } from '@/lib/power-local-llm/compare-data'
+import type { CompareColumn, CompareRow, CompareTableUi } from '@/lib/power-local-llm/compare-data'
 
 const SITE = 'https://www.promptquorum.com'
 
 /** Tab-separated text (header + one line per tool, with the full review URL) so it pastes as cells into Excel/Sheets. */
-function toTsv(columns: CompareColumn[], rows: CompareRow[], localePrefix: string): string {
+function toTsv(columns: CompareColumn[], rows: CompareRow[], localePrefix: string, ui: CompareTableUi): string {
   const clean = (v: string) => v.replace(/[\t\r\n]+/g, ' ')
-  const header = ['Tool', ...columns.map((c) => c.label), 'Review'].map(clean).join('\t')
+  const header = [ui.tool, ...columns.map((c) => c.label), ui.review].map(clean).join('\t')
   const lines = rows.map((r) =>
     [r.name, ...columns.map((c) => r.cells[c.key] ?? '—'), r.reviewSlug ? `${SITE}${localePrefix}/power-local-llm/${r.reviewSlug}` : '—'].map(clean).join('\t'),
   )
   return [header, ...lines].join('\n')
 }
 
-function CopyButton({ text }: { text: string }) {
+function CopyButton({ text, ui }: { text: string; ui: CompareTableUi }) {
   const [state, setState] = useState<'idle' | 'copied' | 'error'>('idle')
 
   async function copy() {
@@ -39,7 +39,7 @@ function CopyButton({ text }: { text: string }) {
         <rect x="9" y="9" width="11" height="11" rx="2" />
         <path d="M5 15V6a2 2 0 0 1 2-2h9" />
       </svg>
-      <span aria-live="polite">{state === 'copied' ? 'Copied ✓' : state === 'error' ? 'Copy failed' : 'Copy table'}</span>
+      <span aria-live="polite">{state === 'copied' ? `${ui.copied} ✓` : state === 'error' ? ui.copyFailed : ui.copyTable}</span>
     </button>
   )
 }
@@ -49,6 +49,7 @@ interface Props {
   rows: CompareRow[]
   lang: string
   localePrefix?: string
+  ui: CompareTableUi
   /** Heading shown at the top of the pop-out. */
   title: string
 }
@@ -58,9 +59,9 @@ interface Props {
  * so wide tables are readable when the inline card is narrow. Esc, the backdrop or the close button
  * dismisses it; page scroll is locked while it is open.
  */
-export function ExpandableCompareTable({ columns, rows, lang, localePrefix, title }: Props) {
+export function ExpandableCompareTable({ columns, rows, lang, localePrefix, ui, title }: Props) {
   const [open, setOpen] = useState(false)
-  const tsv = toTsv(columns, rows, localePrefix ?? '')
+  const tsv = toTsv(columns, rows, localePrefix ?? '', ui)
   const closeRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
@@ -79,7 +80,7 @@ export function ExpandableCompareTable({ columns, rows, lang, localePrefix, titl
   return (
     <div>
       <div className="mb-2 flex justify-end gap-2">
-        <CopyButton text={tsv} />
+        <CopyButton text={tsv} ui={ui} />
         <button
           type="button"
           onClick={() => setOpen(true)}
@@ -88,10 +89,10 @@ export function ExpandableCompareTable({ columns, rows, lang, localePrefix, titl
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
           </svg>
-          Expand table
+          {ui.expandTable}
         </button>
       </div>
-      <CompareTable columns={columns} rows={rows} lang={lang} localePrefix={localePrefix} />
+      <CompareTable columns={columns} rows={rows} lang={lang} localePrefix={localePrefix} ui={ui} />
 
       {open && (
         <div
@@ -108,19 +109,19 @@ export function ExpandableCompareTable({ columns, rows, lang, localePrefix, titl
             <div className="flex items-center justify-between gap-4 border-b border-border px-4 py-3">
               <h3 className="text-base font-bold text-text-primary">{title}</h3>
               <div className="flex items-center gap-2">
-                <CopyButton text={tsv} />
+                <CopyButton text={tsv} ui={ui} />
                 <button
                 ref={closeRef}
                 type="button"
                 onClick={() => setOpen(false)}
                 className="rounded-md border border-border px-3 py-1 text-xs font-semibold text-text-secondary hover:border-primary/50"
               >
-                Close ✕
+                {ui.close} ✕
                 </button>
               </div>
             </div>
             <div className="overflow-auto p-4">
-              <CompareTable columns={columns} rows={rows} lang={lang} localePrefix={localePrefix} />
+              <CompareTable columns={columns} rows={rows} lang={lang} localePrefix={localePrefix} ui={ui} />
             </div>
           </div>
         </div>

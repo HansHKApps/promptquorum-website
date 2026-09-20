@@ -36,7 +36,7 @@ export function Home({ lang }: { lang: Language }) {
         {/* Tier 1 — large, top of page */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           <IntentSearchBlock lang={lang} />
-          <ComparisonToolShell groups={getComparableGroups()} lang={lang} />
+          <ComparisonToolShell groups={getComparableGroups(lang)} lang={lang} />
         </section>
 
         {/* Tier 2 — medium */}
