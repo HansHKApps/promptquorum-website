@@ -44,6 +44,9 @@ jobs:
       - name: Validate no internal-note leakage
         run: node scripts/validate-no-internal-note-leakage.mjs
 
+      - name: Validate app versions (tile vs. article agreement)
+        run: npm run validate-app-versions
+
       - name: Check locale coverage
         run: node scripts/check-locale-coverage.mjs
 

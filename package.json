@@ -36,7 +36,9 @@
     "freshness": "node scripts/freshness.mjs",
     "deploy:now": "bash scripts/deploy-now.sh",
     "validate-snippet-blocks": "node scripts/validate-snippet-blocks.mjs",
-    "validate-local-ai-apps": "node scripts/validate-local-ai-apps.mjs"
+    "validate-local-ai-apps": "node scripts/validate-local-ai-apps.mjs",
+    "validate-app-versions": "node scripts/validate-app-versions.mjs",
+    "check-app-versions": "node scripts/check-app-versions.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.7.1",

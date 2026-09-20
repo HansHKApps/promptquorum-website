@@ -88,9 +88,16 @@ export interface ToolRecordFounder {
 export interface ToolRecordReview {
   date: string
   version: string
-  hw: string
-  text: Partial<Record<Language, string>>
-  scores: Record<string, number>
+  // Exact page a version was verified against — often a GitHub releases/tags
+  // page or the app's own changelog, not the marketing homepage in `url`.
+  versionSourceUrl?: string
+  // hw/text/scores reserve space for a future full-scorecard review feature
+  // (see StatusKey's 'verified'/'tested' tiers, unused today); a version-only
+  // entry only needs date+version, so these stay optional rather than forcing
+  // every populated pqReview to invent placeholder scores.
+  hw?: string
+  text?: Partial<Record<Language, string>>
+  scores?: Record<string, number>
 }
 
 export interface ToolRecordChangelogEntry {
