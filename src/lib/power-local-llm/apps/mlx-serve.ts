@@ -42,5 +42,6 @@ export const app: ToolRecord = {
   },
   mcpSupport: true, // README: bundled macOS app includes "agent mode, and tool calling" with MCP tool integration, verified 2026-09-18
   reviewSlug: 'mlx-serve-review', // dedicated PromptQuorum review — added 2026-09-19
+  pqReview: { date: '2026-09-20', version: 'v26.9.4', versionSourceUrl: 'https://github.com/ddalcu/mlx-serve/releases/tag/v26.9.4' },
   lastVerifiedDate: '2026-09-18',
 }
