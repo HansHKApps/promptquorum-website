@@ -5,6 +5,7 @@ import Link from 'next/link'
 import type { Language } from '@/lib/blog/blogContent'
 import { CATEGORY_GROUPS, CATEGORY_GROUP_LABEL } from '@/lib/power-local-llm/apps/categories'
 import type { CategoryCompareData } from '@/lib/power-local-llm/compare-data'
+import { groupLabel } from '@/lib/power-local-llm/compare-i18n'
 import { ExpandableCompareTable } from '@/components/ExpandableCompareTable'
 import { HomeIcon } from './HomeIcon'
 import { SURFACE_CLASS } from './homeSurface'
@@ -73,7 +74,7 @@ export function ComparisonToolShell({ groups, lang = 'en' }: { groups: CategoryC
                 : `${CHIP_CLASS[group.key].idle} text-text-secondary hover:shadow-sm`
             }`}
           >
-            {CATEGORY_GROUP_LABEL[group.key]}
+            {groupLabel(group.key, lang)}
           </button>
         ))}
       </div>
@@ -88,7 +89,7 @@ export function ComparisonToolShell({ groups, lang = 'en' }: { groups: CategoryC
         <div className="rounded-lg border border-dashed border-border bg-surface/50 p-8 text-center">
           <p className="text-sm text-text-muted">
             {t('compareCategoryPickedTemplate', lang, {
-              category: CATEGORY_GROUP_LABEL[category as keyof typeof CATEGORY_GROUP_LABEL],
+              category: groupLabel(category as keyof typeof CATEGORY_GROUP_LABEL, lang),
             })}
           </p>
         </div>
@@ -120,7 +121,7 @@ export function ComparisonToolShell({ groups, lang = 'en' }: { groups: CategoryC
 
           <fieldset className="mb-4">
             <legend className="mb-2 text-xs font-bold uppercase tracking-widest text-text-secondary">
-              Choose tools ({selected.length} selected)
+              {data.ui.chooseTools.replace('{n}', String(selected.length))}
             </legend>
             <div className="flex flex-wrap gap-2">
               {segment.rows.map((r) => {
@@ -147,10 +148,11 @@ export function ComparisonToolShell({ groups, lang = 'en' }: { groups: CategoryC
                 rows={rows}
                 lang={lang}
                 localePrefix={localePrefix}
+                ui={data.ui}
                 title={`${data.label} — ${segment.label}`}
               />
               <p className="mt-3 text-sm text-text-secondary">
-                Read the full reviews:{' '}
+                {data.ui.readFullReviews}{' '}
                 {rows.map((r, i) => (
                   <span key={r.slug}>
                     {i > 0 && ' · '}
@@ -167,14 +169,14 @@ export function ComparisonToolShell({ groups, lang = 'en' }: { groups: CategoryC
             </>
           ) : (
             <div className="rounded-lg border border-dashed border-border bg-surface/50 p-6 text-center">
-              <p className="text-sm text-text-muted">Select at least two tools to see the comparison.</p>
+              <p className="text-sm text-text-muted">{data.ui.selectAtLeastTwo}</p>
             </div>
           )}
 
           {data.articleSlug && (
             <p className="mt-3 text-sm">
               <Link href={`${localePrefix}/power-local-llm/${data.articleSlug}`} className="font-bold text-primary hover:underline">
-                Read the full {data.label} comparison →
+                {data.ui.readFullComparison.replace('{label}', data.label)} →
               </Link>
             </p>
           )}

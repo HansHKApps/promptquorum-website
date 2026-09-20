@@ -419,8 +419,8 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
   // Category comparison article: hand its tool-record-derived table data to the client. Tool review:
   // hand it the category guide + sibling links. Both are undefined for every other article.
   const compareGroup = (Object.keys(CATEGORY_COMPARE_ARTICLE) as CategoryGroupKey[]).find((g) => CATEGORY_COMPARE_ARTICLE[g] === slug)
-  const compareData = compareGroup ? buildCategoryCompareData(compareGroup) : undefined
-  const categoryLinks = getCategoryLinksForReview(slug) ?? undefined
+  const compareData = compareGroup ? buildCategoryCompareData(compareGroup, lang) : undefined
+  const categoryLinks = getCategoryLinksForReview(slug, lang) ?? undefined
 
   return (
     <>
