@@ -394,6 +394,7 @@ https://www.promptquorum.com/power-local-llm/local-ai-workstation-build-guide-20
 https://www.promptquorum.com/power-local-llm/local-coding-llm-without-internet
 https://www.promptquorum.com/power-local-llm/local-deep-research-review
 https://www.promptquorum.com/power-local-llm/local-llm-chat-assistants-compared
+https://www.promptquorum.com/power-local-llm/local-llm-code-development-compared
 https://www.promptquorum.com/power-local-llm/local-llm-code-review-ci-cd
 https://www.promptquorum.com/power-local-llm/local-llm-electricity-cost-balcony-solar
 https://www.promptquorum.com/power-local-llm/local-llm-email-and-calendar-automation
