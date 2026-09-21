@@ -1,5 +1,6 @@
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
+import { featureReviewUrl } from '@/components/local-ai-directory/reviewLinks'
 import type { Language } from '@/lib/blog/blogContent'
 
 export interface LatestAppEntry {
@@ -12,8 +13,9 @@ export interface LatestAppEntry {
 }
 
 function toolUrl(tool: ToolRecord, lang: Language): string {
-  const base = tool.reviewSlug ? `/power-local-llm/${tool.reviewSlug}` : `/directory#${tool.slug}`
-  return lang === 'en' ? base : `/${lang}${base}`
+  const review = featureReviewUrl(tool.slug, lang)
+  if (review) return review
+  return lang === 'en' ? `/directory#${tool.slug}` : `/${lang}/directory#${tool.slug}`
 }
 
 /**
