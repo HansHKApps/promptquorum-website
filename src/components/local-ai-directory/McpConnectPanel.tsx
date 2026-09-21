@@ -4,13 +4,41 @@
 // Data lives in src/lib/mcp/clients.ts.
 
 import { useState } from 'react'
-import { MCP_CLIENTS, type McpClientOnboarding } from '@/lib/mcp/clients'
+import { MCP_CLIENTS, MCP_SERVER_URL, type McpClientOnboarding } from '@/lib/mcp/clients'
 import { cn } from '@/lib/utils'
 
 const DIFFICULTY_LABEL = { easy: 'Easy setup', medium: 'Medium setup', hard: 'Hard setup' } as const
 
 function Badge({ children }: { children: React.ReactNode }) {
   return <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-text-primary">{children}</span>
+}
+
+function CopyButton({ text, label }: { text: string; label: string }) {
+  const [copied, setCopied] = useState(false)
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(text)
+    } catch {
+      const ta = document.createElement('textarea')
+      ta.value = text
+      document.body.appendChild(ta)
+      ta.select()
+      document.execCommand('copy')
+      document.body.removeChild(ta)
+    }
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+  return (
+    <button
+      type="button"
+      onClick={copy}
+      aria-label={`Copy ${label}`}
+      className="shrink-0 rounded border border-primary/30 bg-white px-2 py-1 text-xs font-medium text-text-primary hover:bg-primary/5"
+    >
+      {copied ? 'Copied ✓' : 'Copy'}
+    </button>
+  )
 }
 
 function Panel({ client }: { client: McpClientOnboarding }) {
@@ -28,13 +56,35 @@ function Panel({ client }: { client: McpClientOnboarding }) {
           ))}
         </ol>
         {client.configSnippet && (
-          <pre className="mt-2 overflow-x-auto rounded bg-slate-900 p-3 text-xs text-slate-100">{client.configSnippet}</pre>
+          <div className="mt-2 flex items-start gap-2">
+            <pre className="min-w-0 flex-1 overflow-x-auto rounded bg-slate-900 p-3 text-xs text-slate-100">{client.configSnippet}</pre>
+            <CopyButton text={client.configSnippet} label="config" />
+          </div>
+        )}
+        {!client.configSnippet && (
+          <div className="mt-2 flex items-center gap-2">
+            <code className="min-w-0 flex-1 overflow-x-auto rounded bg-slate-900 px-3 py-2 text-xs text-slate-100">{MCP_SERVER_URL}</code>
+            <CopyButton text={MCP_SERVER_URL} label="server URL" />
+          </div>
         )}
       </section>
       <section>
         <h3 className="font-semibold">How to start it</h3>
         <p className="mt-1 text-text-secondary">Paste this into your chat:</p>
-        <blockquote className="mt-1 rounded border-l-4 border-primary/40 bg-primary/5 px-3 py-2">{client.launchPrompt}</blockquote>
+        <div className="mt-1 flex items-start gap-2">
+          <blockquote className="min-w-0 flex-1 rounded border-l-4 border-primary/40 bg-primary/5 px-3 py-2">{client.launchPrompt}</blockquote>
+          <CopyButton text={client.launchPrompt} label="prompt" />
+        </div>
+        {client.openWithPrompt && (
+          <a
+            href={client.openWithPrompt(client.launchPrompt)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-block rounded border border-primary bg-primary px-3 py-1.5 text-xs font-medium text-white hover:opacity-90"
+          >
+            Open in {client.displayName} with this prompt ↗
+          </a>
+        )}
       </section>
       <p className="text-xs text-text-secondary">
         {client.lastVerified ? `Steps last tested ${client.lastVerified}.` : 'These steps follow the vendor’s documentation and have not been hand-tested yet.'}{' '}

@@ -18,6 +18,8 @@ export interface McpClientOnboarding {
   connectSteps: string[]
   configSnippet?: string
   launchPrompt: string
+  // Web clients only: builds a link that opens the client with the prompt pre-filled.
+  openWithPrompt?: (prompt: string) => string
   lastVerified: string | null
 }
 
@@ -38,6 +40,7 @@ export const MCP_CLIENTS: McpClientOnboarding[] = [
     ],
     launchPrompt:
       'Use the PromptQuorum connector to recommend a local AI app. Ask me what I want to do and about my device, OS and RAM/VRAM, then suggest 2–3 apps with download links and caveats.',
+    openWithPrompt: (prompt) => `https://claude.ai/new?q=${encodeURIComponent(prompt)}`,
     lastVerified: null,
   },
   {
