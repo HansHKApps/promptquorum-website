@@ -140,34 +140,15 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  // Resolve selected language: path prefix wins over ?lang= query param.
-  // The path-prefix takes priority because path-prefix-routed clusters render server-side
-  // off the URL, not the query string — the <html lang="..."> attribute must match.
-  const pathLocale = url.pathname.match(PATH_LOCALE_RE)?.[1]
-  const lang = url.searchParams.get('lang') || 'en'
-  const validLangs = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
-  const selectedLang = pathLocale ?? (validLangs.includes(lang) ? lang : 'en')
-
-  const cookieLang = request.cookies.get('pq_lang')?.value
-
-  // Add pathname + query string (without lang param) as header for hreflang links
-  const pathnameWithoutLang = url.pathname + (url.search ? url.search.replace(/\?lang=[^&]*&?|&lang=[^&]*/g, '').replace(/\?$/, '') : '')
-
-  // Forward locale to server components via request headers — the correct Next.js pattern.
-  // response.headers.set() only sets response headers (sent to browser); layout.tsx reads
-  // from await headers() which is REQUEST headers. Use NextResponse.next({ request }) instead.
-  const requestHeaders = new Headers(request.headers)
-  requestHeaders.set('x-selected-lang', selectedLang)
-  requestHeaders.set('x-pathname', pathnameWithoutLang)
-
-  const response = NextResponse.next({ request: { headers: requestHeaders } })
-
-  // Persist language choice in cookie so auto-detection only runs on first visit.
-  if (selectedLang !== 'en' || !cookieLang) {
-    response.cookies.set('pq_lang', selectedLang, { path: '/', maxAge: 60 * 60 * 24 * 365, sameSite: 'lax' })
-  }
-
-  return response
+  // COST FIX: everything that reaches here is an unprefixed (English) page with no
+  // ?lang override. Nothing server-side reads x-selected-lang / x-pathname / pq_lang
+  // (root layout deliberately avoids headers()), so the old terminal block only
+  // attached a Set-Cookie to every cookieless request — which marks the response
+  // uncacheable and turned /, /about, /directory, etc. into per-request function
+  // invocations. pq_lang is now written only where it carries information: on the
+  // Accept-Language redirect above and by LanguageSwitcher on an explicit switch.
+  // "No cookie" already means "English / no preference", so nothing is lost.
+  return NextResponse.next()
 }
 
 // Run middleware on page routes only. Exclude Next internals, the /lib analytics
