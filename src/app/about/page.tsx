@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import type { ReactNode } from 'react'
 import { translations } from '@/translations'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { AboutHeroClient } from '@/components/AboutHeroClient'
 import { AboutTrackedLink } from '@/components/AboutTrackedLink'
-import { TOTAL_TOOL_COUNT } from '@/lib/power-local-llm/apps-barrel'
 import { CATEGORY_GROUPS } from '@/lib/power-local-llm/apps/categories'
+import { getHomeStats } from '@/lib/home/stats'
 import { MCP_SERVER_URL } from '@/lib/mcp/clients'
 
 export const dynamic = 'force-static'
@@ -14,7 +15,8 @@ export const revalidate = 86400
 
 const SITE = 'https://www.promptquorum.com'
 
-// Counts come from the directory data so this page and the directory never drift apart.
+// Counts come from the same data the homepage and directory use, so the pages never drift apart.
+const STATS = getHomeStats('en')
 const GROUP_COUNT = CATEGORY_GROUPS.length
 const CATEGORY_COUNT = CATEGORY_GROUPS.reduce((sum, g) => sum + g.subs.length, 0)
 
@@ -33,7 +35,8 @@ const MCP_CONFIG = JSON.stringify({ mcpServers: { promptquorum: { url: MCP_SERVE
 const LANGUAGES = ['English', 'Deutsch', 'Français', '日本語', '中文', 'Español', 'Português', 'العربية', '한국어']
 
 const CARD = 'bg-card border border-primary/20 rounded-2xl p-6'
-const H2 = 'text-2xl sm:text-3xl font-bold text-text-primary mb-6'
+const H2 = 'text-2xl sm:text-3xl font-bold text-text-primary mb-3'
+const LEAD = 'text-lg text-text-secondary leading-relaxed mb-8'
 const BODY = 'text-text-secondary leading-relaxed'
 const LINK = 'text-primary hover:text-primary/80 font-medium'
 
@@ -60,85 +63,37 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const WAVES = [
   {
-    n: '1',
+    n: 'Wave 1',
     title: 'Models',
-    text: 'Open-weight models (Llama, Qwen, Mistral, Gemma, DeepSeek and hundreds more) went from research artifacts to downloads anyone could get. Hugging Face became the place where they live.',
+    solved: 'Made AI downloadable.',
+    text: 'Open-weight models (Llama, Qwen, Mistral, Gemma, DeepSeek and hundreds more) went from research artifacts to files anyone can download. Hugging Face is where they live.',
+    catch: 'A model file cannot answer a question by itself.',
+    highlight: false,
   },
   {
-    n: '2',
+    n: 'Wave 2',
     title: 'Runtimes',
-    text: 'Ollama, LM Studio and similar tools made those models runnable. Download a model, press a button, and you are talking to it on your own machine. That was a big step, but the usage it enabled is narrow. For most people it means a chat window: you type, the model answers.',
+    solved: 'Made models runnable.',
+    text: 'Ollama, LM Studio and llama.cpp turned a download into a running model on your own machine. Type a prompt, get an answer.',
+    catch: 'Usage stays narrow. For most people it is a chat window, and many stop there.',
+    highlight: false,
   },
   {
-    n: '3',
+    n: 'Wave 3',
     title: 'Applications',
-    text: 'Real apps that work directly with local LLMs, or through Ollama, LM Studio and other interfaces. They chat with your documents, code alongside you in your editor, run agents, turn speech into text and text into speech, generate images and video, and automate your smart home. The model becomes an engine inside a tool built for a job, not the product you talk to.',
+    solved: 'Makes local AI useful.',
+    text: 'Apps built on top: chat with your documents, code in your editor, run agents, transcribe and speak, generate images and video, automate your home. They work with the model directly or through Ollama, LM Studio and other interfaces.',
+    catch: 'There are hundreds of them, scattered across GitHub READMEs, Discord threads and changelogs, mostly in English and quickly outdated.',
+    highlight: true,
   },
 ]
 
 const BELIEFS = [
   ['Local models are open.', 'You can download the weights and run them on your own hardware. No one has to approve your prompt, and no one sits between you and the model.'],
   ['Cost stays in your control.', 'Once a model runs on your machine, there is no meter, no per-token bill and no price change you did not agree to. The hardware is the cost, and you decide how much to spend on it.'],
-  ['They can’t be taken away.', 'A cloud model can be changed, restricted, repriced or shut down overnight. A model you have downloaded keeps working the same way as long as you keep the file.'],
+  ['It can’t be taken away.', 'A cloud model can be changed, restricted, repriced or shut down overnight. A model you have downloaded keeps working the same way as long as you keep the file.'],
   ['Your data stays with you.', 'When both the app and the model run locally, your prompts and documents never leave your machine.'],
   ['Independence is the point.', 'Local AI is more than a cheaper alternative. It is a way to depend on no one else’s terms, servers or decisions.'],
-]
-
-const WHAT_IT_IS = [
-  {
-    title: 'The Local AI Directory: the map of the third wave',
-    body: (
-      <>
-        There are {TOTAL_TOOL_COUNT} local-AI apps and tools, organised into {GROUP_COUNT} groups and {CATEGORY_COUNT} categories.
-        The groups are Run &amp; Serve, Chat &amp; Assistants, Code &amp; Development, Knowledge &amp; Retrieval, Voice &amp; Audio,
-        Images &amp; Video, and Train &amp; Operate. Every entry uses the same format: what the tool does, which platforms it runs on,
-        its license, its price and its hardware needs, with a link to the official website. You can set an optional hardware profile,
-        and each app then shows whether it runs well, runs marginally or won&apos;t run on your machine.
-      </>
-    ),
-    href: '/directory',
-    cta: 'Open the directory',
-    via: 'what_directory',
-  },
-  {
-    title: 'The Knowledge Base: how to actually use it',
-    body: (
-      <>
-        Practical guides cover hardware (VRAM, Apple Silicon, GPUs and CPU-only setups), software, models, quantization, RAG, agents,
-        voice, prompt engineering and complete local-AI stacks. The articles are written for people who want a working setup, not a
-        theory lecture.
-      </>
-    ),
-    href: '/local-llms',
-    cta: 'Read the guides',
-    via: 'what_knowledge',
-  },
-  {
-    title: 'Open to machines: AI can read what we publish',
-    body: (
-      <>
-        PromptQuorum runs a public, read-only <strong>MCP server</strong> (Model Context Protocol). Claude, Cursor and any
-        MCP-capable assistant can search the directory, pull app details, read guides and explain licenses directly. No account and no
-        API key are needed. When your AI answers a question about local AI, it can draw on PromptQuorum instead of guessing.
-      </>
-    ),
-    href: '#use-promptquorum-from-your-ai',
-    cta: 'See how to connect',
-    via: 'what_mcp',
-  },
-  {
-    title: 'The PromptQuorum app: where it started',
-    body: (
-      <>
-        A multi-model tool sends one prompt to several AI models, including local ones through Ollama and LM Studio. It then compares
-        their answers so you can see where they agree and where they contradict each other. You bring your own keys and models, and
-        there is no telemetry.
-      </>
-    ),
-    href: '/pq-apps',
-    cta: 'About the app',
-    via: 'what_app',
-  },
 ]
 
 const GOALS = [
@@ -147,6 +102,15 @@ const GOALS = [
   'I want to chat with my own PDFs offline.',
   'I need a local coding assistant for VS Code.',
   'I want an offline voice assistant for my smart home.',
+]
+
+const FOR_YOU = [
+  'You installed Ollama or LM Studio, chatted for a while and wondered what else you can do with it.',
+  'You want AI that is private, works offline or does not need another subscription.',
+  'You are choosing local-AI software and want the same facts for every option in one place.',
+  'You build or maintain a local-AI tool and want an accurate entry for it.',
+  'You read in a language other than English and are tired of English-only setup guides.',
+  'You want your own AI assistant to answer local-AI questions from a maintained source.',
 ]
 
 const NEUTRAL = [
@@ -174,11 +138,94 @@ const SOCIAL = [
   ['GitHub', 'https://github.com/HansHKApps'],
 ]
 
+const ICON_PROPS = {
+  className: 'w-6 h-6',
+  viewBox: '0 0 24 24',
+  fill: 'none',
+  stroke: 'currentColor',
+  strokeWidth: 1.8,
+  strokeLinecap: 'round' as const,
+  strokeLinejoin: 'round' as const,
+  'aria-hidden': true,
+}
+
+function SearchIcon() {
+  return (
+    <svg {...ICON_PROPS}>
+      <circle cx="11" cy="11" r="6.5" />
+      <path d="M16 16l4.5 4.5" />
+    </svg>
+  )
+}
+function BookIcon() {
+  return (
+    <svg {...ICON_PROPS}>
+      <path d="M4 5.5A2.5 2.5 0 016.5 3H20v15H6.5A2.5 2.5 0 004 20.5v-15z" />
+      <path d="M4 20.5A2.5 2.5 0 016.5 18H20v3H6.5A2.5 2.5 0 014 20.5z" />
+    </svg>
+  )
+}
+function LayersIcon() {
+  return (
+    <svg {...ICON_PROPS}>
+      <path d="M12 3l9 5-9 5-9-5 9-5z" />
+      <path d="M3 13l9 5 9-5" />
+    </svg>
+  )
+}
+function PlugIcon() {
+  return (
+    <svg {...ICON_PROPS}>
+      <path d="M9 3v5M15 3v5" />
+      <path d="M6 8h12v3a6 6 0 01-12 0V8z" />
+      <path d="M12 17v4" />
+    </svg>
+  )
+}
+function ArrowIcon({ className }: { className: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </svg>
+  )
+}
 function CheckIcon() {
   return (
     <svg className="w-5 h-5 text-primary shrink-0 mt-0.5" viewBox="0 0 20 20" fill="none" aria-hidden="true">
       <path d="M4 10.5l4 4 8-9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
+  )
+}
+
+interface PartProps {
+  verb: string
+  icon: ReactNode
+  title: string
+  children: ReactNode
+  connects: string
+  href: string
+  cta: string
+  via: string
+}
+
+function Part({ verb, icon, title, children, connects, href, cta, via }: PartProps) {
+  return (
+    <div className={`${CARD} flex flex-col`}>
+      <div className="flex items-center gap-3 mb-3">
+        <div className="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">{icon}</div>
+        <div>
+          <div className="text-xs font-bold text-primary uppercase tracking-widest">{verb}</div>
+          <h3 className="text-lg font-bold text-text-primary leading-snug">{title}</h3>
+        </div>
+      </div>
+      <p className={`${BODY} mb-3`}>{children}</p>
+      <p className="text-sm text-text-secondary border-l-2 border-primary/30 pl-3 mb-4">
+        <strong className="text-text-primary">Works with the rest:</strong> {connects}
+      </p>
+      <AboutTrackedLink href={href} via={via} className={`${LINK} text-sm mt-auto`}>
+        {cta} →
+      </AboutTrackedLink>
+    </div>
   )
 }
 
@@ -237,49 +284,60 @@ export default function AboutPage() {
       />
 
       <div className="min-h-screen bg-surface pt-24 pb-20">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
-          <AboutHeroClient />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <AboutHeroClient appCount={STATS.totalApps} articleCount={STATS.totalArticles} />
 
-          {/* Three waves */}
-          <section className="mb-16">
-            <h2 className={H2}>Three waves of open AI</h2>
-            <ol className="space-y-4">
-              {WAVES.map((w) => (
-                <li key={w.n} className={`${CARD} flex gap-5`}>
-                  <div className="shrink-0 w-10 h-10 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center">
-                    {w.n}
+          {/* Three waves: the theory */}
+          <section id="three-waves" className="mb-20 scroll-mt-24">
+            <h2 className={H2}>From models to apps: three waves of open AI</h2>
+            <p className={LEAD}>Open-weight AI has moved in three waves. Each one solved a problem and exposed the next.</p>
+
+            <ol className="flex flex-col md:flex-row md:items-stretch gap-3 md:gap-2">
+              {WAVES.map((w, i) => (
+                <li key={w.n} className="flex flex-col md:flex-row md:flex-1 items-stretch gap-3 md:gap-2">
+                  <div
+                    className={`flex-1 rounded-2xl p-6 border ${
+                      w.highlight ? 'bg-primary/10 border-primary shadow-sm' : 'bg-card border-primary/20'
+                    }`}
+                  >
+                    <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">{w.n}</div>
+                    <h3 className="text-xl font-bold text-text-primary">{w.title}</h3>
+                    <p className="text-primary font-semibold mb-3">{w.solved}</p>
+                    <p className={`${BODY} mb-4 text-sm`}>{w.text}</p>
+                    <p className="text-sm text-text-secondary border-t border-primary/20 pt-3">
+                      <strong className="text-text-primary">The catch:</strong> {w.catch}
+                    </p>
+                    {w.highlight && (
+                      <p className="mt-4 inline-block rounded-full bg-primary text-white text-xs font-semibold px-3 py-1">
+                        This is where PromptQuorum works
+                      </p>
+                    )}
                   </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-text-primary mb-1">
-                      The {w.n === '1' ? 'first' : w.n === '2' ? 'second' : 'third'} wave: {w.title.toLowerCase()}
-                    </h3>
-                    <p className={BODY}>{w.text}</p>
-                  </div>
+                  {i < WAVES.length - 1 && (
+                    <div className="flex items-center justify-center text-primary/60 shrink-0" aria-hidden="true">
+                      <ArrowIcon className="w-6 h-6 rotate-90 md:rotate-0" />
+                    </div>
+                  )}
                 </li>
               ))}
             </ol>
-            <div className={`${BODY} mt-6 space-y-4`}>
-              <p>
-                The third wave is where most people get stuck. Which app fits your task? Does it work with the runtime you already have?
-                Can your hardware carry it? What does the license allow? That knowledge is scattered across GitHub READMEs, Discord
-                threads, Reddit posts and changelogs. Most of it is only in English, and much of it goes out of date within months.
-              </p>
-              <p className="text-text-primary font-medium">
-                PromptQuorum is the map of that third wave. It is one place, with one structure, kept up to date, and it does not sell
-                rankings.
-              </p>
-            </div>
+
+            <p className="text-text-primary font-medium mt-6">
+              Models are the engine. Runtimes start the engine. Applications are what people actually drive. PromptQuorum is the
+              map, the manual and the test drive for that third wave.
+            </p>
           </section>
 
-          {/* Beliefs */}
-          <section className="mb-16">
-            <h2 className={H2}>What we believe</h2>
-            <div className="border-l-4 border-primary pl-5 mb-6">
+          {/* Philosophy */}
+          <section id="why-local" className="mb-20 scroll-mt-24">
+            <h2 className={H2}>Why local: what we believe</h2>
+            <div className="border-l-4 border-primary pl-5 mb-8">
               <p className="text-xl font-semibold text-text-primary mb-2">The internet should be open. AI should be open too.</p>
               <p className={BODY}>
-                The web became useful because anyone could publish on it and anyone could read it, and no single company decided what you
-                were allowed to do. AI is at the same fork. It can be something you rent from a few providers, or something you own and run
-                yourself. PromptQuorum exists for the second path.
+                The web became useful because anyone could publish on it and anyone could read it, and no single company decided what
+                you were allowed to do. AI is at the same fork. It can be something you rent from a few providers, or something you own
+                and run yourself. <strong className="text-text-primary">We believe local AI is the better path</strong> for most uses that
+                matter over time: what it costs, who controls it, who sees your data and whether it is still there next year.
               </p>
             </div>
             <ul className="space-y-4">
@@ -293,36 +351,105 @@ export default function AboutPage() {
               ))}
             </ul>
             <p className="text-text-primary font-semibold mt-6">
-              Independence from control is the theme of everything on this site. It is why the directory is neutral, why every entry links
-              to the official source and why we publish in nine languages. Anyone should be able to find their own way into open AI
-              without asking permission.
+              Independence from control is the theme of everything on this site. It is why the directory is neutral, why every entry
+              links to the official source and why we publish in nine languages.
             </p>
             <p className={`${BODY} italic mt-4`}>
-              We don&apos;t believe cloud AI is bad. We believe you should have a real choice, and that choosing local should be as easy as
-              choosing cloud.
+              We don&apos;t believe cloud AI is bad. We believe you should have a real choice, and that choosing local should be as easy
+              as choosing cloud.
             </p>
           </section>
 
-          {/* What PromptQuorum is */}
-          <section className="mb-16">
-            <h2 className={H2}>What PromptQuorum is</h2>
-            <div className="space-y-4">
-              {WHAT_IT_IS.map((item, i) => (
-                <div key={item.title} className={CARD}>
-                  <h3 className="text-lg font-bold text-text-primary mb-2">
-                    {i + 1}. {item.title}
-                  </h3>
-                  <p className={`${BODY} mb-3`}>{item.body}</p>
-                  <AboutTrackedLink href={item.href} via={item.via} className={`${LINK} text-sm`}>
-                    {item.cta} →
-                  </AboutTrackedLink>
-                </div>
-              ))}
+          {/* Ecosystem */}
+          <section id="ecosystem" className="mb-20 scroll-mt-24">
+            <h2 className={H2}>One ecosystem, four parts that work together</h2>
+            <p className={LEAD}>
+              PromptQuorum is not just an app, and not just a directory. It is four parts built around the same goal, so you can go from
+              &ldquo;what should I run?&rdquo; to a working setup without leaving the site.
+            </p>
+
+            <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              <Part
+                verb="Find"
+                icon={<SearchIcon />}
+                title="The Local AI Directory"
+                connects="entries link to their PromptQuorum review and guides where they exist."
+                href="/directory"
+                cta="Open the directory"
+                via="part_directory"
+              >
+                {STATS.totalApps} local-AI apps in {GROUP_COUNT} groups and {CATEGORY_COUNT} categories. Every entry has the same fields:
+                what it does, platforms, license, price and hardware needs, plus a link to the official website. Set a hardware profile and
+                each app shows whether it runs well, runs marginally or won&apos;t run on your machine.
+              </Part>
+              <Part
+                verb="Learn"
+                icon={<BookIcon />}
+                title="The Knowledge Base"
+                connects="reviews and comparisons link back to the directory entries they cover."
+                href="/local-llms"
+                cta="Read the guides"
+                via="part_knowledge"
+              >
+                {STATS.totalArticles} articles: guides, reviews and comparisons on hardware (VRAM, Apple Silicon, GPUs, CPU-only),
+                software, models, quantization, RAG, agents, voice, prompt engineering and complete local-AI stacks. Written for people who
+                want a working setup, not a theory lecture.
+              </Part>
+              <Part
+                verb="Use"
+                icon={<LayersIcon />}
+                title="The PromptQuorum app"
+                connects="it connects to Ollama and LM Studio, both listed in the directory, so local models sit next to cloud ones."
+                href="/pq-apps"
+                cta="About the app"
+                via="part_app"
+              >
+                A free multi-model app, currently in beta. Send one prompt to several models, including local ones, and see where their
+                answers agree and where they contradict each other. Agreement is a useful signal, not proof. You bring your own keys and
+                models, and there is no telemetry. This is where PromptQuorum started.
+              </Part>
+              <Part
+                verb="Ask"
+                icon={<PlugIcon />}
+                title="The MCP server"
+                connects="it reads the same directory and guides as this website, so your assistant answers from the same source you do."
+                href="#use-promptquorum-from-your-ai"
+                cta="See how to connect"
+                via="part_mcp"
+              >
+                A public, read-only server for the Model Context Protocol. Claude, Cursor and any MCP-capable assistant can search the
+                directory, pull app details, read guides and explain licenses. No account and no API key. When your AI answers a question
+                about local AI, it can draw on PromptQuorum instead of guessing.
+              </Part>
+            </div>
+
+            <div className={CARD}>
+              <h3 className="text-lg font-bold text-text-primary mb-1">How it works in practice</h3>
+              <p className="text-sm text-text-secondary mb-4">
+                Say you have 16 GB of RAM and want to chat with your own PDFs offline.
+              </p>
+              <ol className="space-y-3">
+                {[
+                  ['Find', 'Set your hardware profile in the directory and pick the “Chat with docs” use case. Each app shows whether it runs well on your machine.'],
+                  ['Learn', 'Open the review of the app you like, and the guide for the runtime it needs, for example Ollama or LM Studio.'],
+                  ['Use', 'Run it with a local model. When you want to see how different models answer the same question, use the PromptQuorum app.'],
+                  ['Ask', 'Or skip the browsing. Connect the MCP server and ask your own AI assistant the same question.'],
+                ].map(([step, text], i) => (
+                  <li key={step} className="flex gap-3">
+                    <span className="shrink-0 w-7 h-7 rounded-full bg-primary/10 text-primary text-sm font-bold flex items-center justify-center">
+                      {i + 1}
+                    </span>
+                    <p className={BODY}>
+                      <strong className="text-text-primary">{step}.</strong> {text}
+                    </p>
+                  </li>
+                ))}
+              </ol>
             </div>
           </section>
 
-          {/* Goal-first */}
-          <section className="mb-16">
+          {/* Goal-first + audience */}
+          <section id="for-you" className="mb-20 scroll-mt-24">
             <h2 className={H2}>Start with a goal, not a product name</h2>
             <p className={`${BODY} mb-4`}>
               You should not need to know that &ldquo;llama.cpp&rdquo; or &ldquo;Open WebUI&rdquo; exist before you can find them. Start
@@ -341,10 +468,7 @@ export default function AboutPage() {
                 </li>
               ))}
             </ul>
-            <p className={`${BODY} mb-4`}>
-              PromptQuorum connects each of those questions to the software, hardware, model and step-by-step guide that answer it.
-            </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 mb-10">
               <AboutTrackedLink href="/directory" via="goal_browse" className={LINK}>
                 Browse by use case →
               </AboutTrackedLink>
@@ -352,10 +476,30 @@ export default function AboutPage() {
                 Set my hardware profile →
               </AboutTrackedLink>
             </div>
+
+            <div className="grid sm:grid-cols-5 gap-4">
+              <div className={`${CARD} sm:col-span-3`}>
+                <h3 className="text-lg font-bold text-text-primary mb-3">PromptQuorum is for you if&hellip;</h3>
+                <ul className="space-y-3">
+                  {FOR_YOU.map((f) => (
+                    <li key={f} className="flex gap-3">
+                      <CheckIcon />
+                      <p className={`${BODY} text-sm`}>{f}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className={`${CARD} sm:col-span-2`}>
+                <h3 className="text-lg font-bold text-text-primary mb-3">It is probably not for you if&hellip;</h3>
+                <p className={`${BODY} text-sm`}>
+                  You only need a hosted chatbot and don&apos;t care where it runs. Cloud AI is a fine tool. We just cover the other path.
+                </p>
+              </div>
+            </div>
           </section>
 
           {/* Neutral */}
-          <section className="mb-16">
+          <section className="mb-20">
             <h2 className={H2}>Neutral by design</h2>
             <p className={`${BODY} mb-4`}>A reference is only useful if you can trust it. These rules apply to every page:</p>
             <ul className="space-y-3">
@@ -371,7 +515,7 @@ export default function AboutPage() {
           </section>
 
           {/* Languages */}
-          <section className="mb-16">
+          <section className="mb-20">
             <h2 className={H2}>Nine languages from the start</h2>
             <p className={`${BODY} mb-4`}>
               Local AI is a global movement, but most of the information about it is in English. PromptQuorum publishes in nine languages:
@@ -389,7 +533,7 @@ export default function AboutPage() {
           </section>
 
           {/* MCP */}
-          <section id="use-promptquorum-from-your-ai" className="mb-16 scroll-mt-24">
+          <section id="use-promptquorum-from-your-ai" className="mb-20 scroll-mt-24">
             <h2 className={H2}>Use PromptQuorum from your AI</h2>
             <p className={`${BODY} mb-4`}>Connect PromptQuorum to your assistant once, and it can look things up for you.</p>
             <dl className="space-y-2 mb-4 text-sm">
@@ -424,38 +568,40 @@ export default function AboutPage() {
           </section>
 
           {/* Founder */}
-          <section className="mb-16">
+          <section className="mb-20">
             <h2 className={H2}>Who builds it</h2>
-            <div className={`${CARD} flex flex-col sm:flex-row gap-6 sm:gap-8`}>
+            <div className={`${CARD} mt-6 flex flex-col sm:flex-row gap-6 sm:gap-8`}>
               <Image
                 src="/images/hans-kuepper.jpg"
                 alt="Hans Küpper, founder of PromptQuorum"
                 width={267}
                 height={400}
                 className="w-36 sm:w-44 h-auto rounded-xl object-cover self-start shrink-0"
-                priority={false}
               />
               <div>
                 <h3 className="text-xl font-bold text-text-primary">Hans Küpper</h3>
                 <p className="text-sm text-primary font-medium mb-4">Founder, PromptQuorum</p>
                 <div className={`${BODY} space-y-4`}>
                   <p>
-                    PromptQuorum is built independently by Hans Küpper in Germany. He has 30+ years in consulting and general management,
-                    has lived and worked in more than 20 countries and has deep business experience in China.
+                    PromptQuorum started as a multi-model app. Hans built it because a single AI answer is hard to check. Ask several
+                    models the same question and you can at least see where they agree and where they don&apos;t.
                   </p>
                   <p>
-                    He started PromptQuorum after seeing people rely on a single AI answer for important work without any way to check it.
-                    That idea became the multi-model app. Building the app then exposed a bigger gap: people who want reliable, private AI
-                    don&apos;t have a trustworthy map of the local-AI world. PromptQuorum is being built to be that map.
+                    Building the app exposed a bigger gap: people who want reliable, private AI have no trustworthy map of the local-AI
+                    world. So the app grew into an ecosystem, with a directory, a knowledge base and an MCP server pointing at the same
+                    goal.
                   </p>
                   <p>Privacy and user control are non-negotiable design principles.</p>
+                  <p className="text-sm">
+                    Independent, based in Germany. 30+ years in consulting and general management, in more than 20 countries.
+                  </p>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Roadmap */}
-          <section className="mb-16">
+          <section className="mb-20">
             <h2 className={H2}>Where this is going</h2>
             <p className={`${BODY} mb-4`}>
               Where AI runs is changing: from cloud-only to a mix of cloud, local, hybrid and edge. PromptQuorum is being built for that
@@ -472,13 +618,13 @@ export default function AboutPage() {
               ))}
             </ul>
             <p className="text-text-primary font-semibold">
-              The goal: when anyone, human or AI, asks &ldquo;how do I use open-weight AI?&rdquo;, PromptQuorum is where the answer comes from.
+              The goal: when anyone, human or AI, asks &ldquo;how do I use open-weight AI?&rdquo;, PromptQuorum is a source they can rely on.
             </p>
           </section>
 
           {/* Get involved */}
-          <section className="mb-16">
-            <h2 className={H2}>Get involved</h2>
+          <section className="mb-4">
+            <h2 className={`${H2} mb-4`}>Get involved</h2>
             <ul className={`${BODY} space-y-3`}>
               <li>
                 <strong className="text-text-primary">Founders and makers:</strong> get your tool listed, correct your entry or add founder

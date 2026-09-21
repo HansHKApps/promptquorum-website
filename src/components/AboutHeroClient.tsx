@@ -8,7 +8,12 @@ const PRIMARY_BTN =
 const SECONDARY_BTN =
   'inline-flex items-center justify-center px-5 py-3 rounded-lg border border-primary/30 text-primary text-sm font-semibold hover:bg-primary/10 transition-colors'
 
-export function AboutHeroClient() {
+interface AboutHeroClientProps {
+  appCount: number
+  articleCount: number
+}
+
+export function AboutHeroClient({ appCount, articleCount }: AboutHeroClientProps) {
   return (
     <div className="py-16 border-b border-primary/20 mb-16">
       <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4">About PromptQuorum</p>
@@ -16,13 +21,12 @@ export function AboutHeroClient() {
         The usage layer for open-weight AI.
       </h1>
       <p className="text-xl text-text-primary font-medium leading-relaxed mb-4">
-        Hugging Face made open models available. Ollama and LM Studio made them runnable.
-        PromptQuorum makes them useful: the independent map of the apps built on top.
+        PromptQuorum is an independent ecosystem for running AI on your own terms: a directory of {appCount} local-AI apps,
+        a knowledge base of {articleCount} articles in nine languages, and a free app that puts many models side by side.
       </p>
       <p className="text-lg text-text-secondary leading-relaxed mb-8">
-        PromptQuorum is the independent, neutral reference for running AI on your own terms. It covers which apps
-        exist, what they do, what hardware they need, how to install them and how to combine them. The content is in
-        nine languages, and it&apos;s written for people and readable by machines.
+        Open models are easy to download. Knowing which app to use, whether your hardware can run it and how to set it up is
+        still hard. That gap is what PromptQuorum fills.
       </p>
 
       <div className="flex flex-wrap gap-3">
@@ -31,6 +35,9 @@ export function AboutHeroClient() {
         </AboutTrackedLink>
         <AboutTrackedLink href="/directory#hw-profile-widget" via="hero_hardware" className={SECONDARY_BTN}>
           What runs on my hardware?
+        </AboutTrackedLink>
+        <AboutTrackedLink href="#ecosystem" via="hero_ecosystem" className={SECONDARY_BTN}>
+          How the parts fit together
         </AboutTrackedLink>
         <AboutTrackedLink href="#use-promptquorum-from-your-ai" via="hero_mcp" className={SECONDARY_BTN}>
           Connect via MCP
