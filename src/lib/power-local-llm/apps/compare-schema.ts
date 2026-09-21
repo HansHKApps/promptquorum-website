@@ -331,7 +331,35 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
       ],
     },
   ],
-  'train-operate': [],
+  // Pilot 7 (last). Small group: datasets and model hubs have no reviewed tools. Tools that are mainly something else
+  // (LoRAX, Mission Control, Plano, Second Me) appear here for the fine-tuning / observability features they document.
+  'train-operate': [
+    {
+      key: 'fine-tuning',
+      label: 'Fine-tuning',
+      subs: ['fine-tuning-lora'],
+      attributes: [
+        { key: 'loraQlora', label: 'LoRA / QLoRA', kind: 'boolean' },
+        { key: 'webUi', label: 'Web UI', kind: 'boolean' },
+        { key: 'multiGpu', label: 'Multi-GPU training', kind: 'boolean' },
+        { key: 'lowVram', label: 'Low-VRAM mode', kind: 'boolean' },
+        { key: 'exportGguf', label: 'Export to GGUF / Ollama', kind: 'boolean' },
+      ],
+    },
+    {
+      key: 'observability',
+      label: 'Observability & evaluation',
+      subs: ['observability', 'evaluation-benchmarking'],
+      attributes: [
+        { key: 'tracing', label: 'LLM call tracing', kind: 'boolean' },
+        { key: 'evaluations', label: 'Evaluations / scoring', kind: 'boolean' },
+        { key: 'promptManagement', label: 'Prompt management', kind: 'boolean' },
+        { key: 'openTelemetry', label: 'OpenTelemetry support', kind: 'boolean' },
+        { key: 'dockerDeploy', label: 'Docker / self-hosting', kind: 'boolean' },
+        { key: 'localLlm', label: 'Works with local LLMs', kind: 'boolean' },
+      ],
+    },
+  ],
 }
 
 /**
@@ -345,5 +373,5 @@ export const CATEGORY_COMPARE_ARTICLE: Record<CategoryGroupKey, string | null> =
   'code-development': 'local-llm-code-development-compared',
   'knowledge-retrieval': 'local-llm-knowledge-retrieval-compared',
   'images-video': 'local-llm-images-video-compared',
-  'train-operate': null,
+  'train-operate': 'local-llm-train-operate-compared',
 }

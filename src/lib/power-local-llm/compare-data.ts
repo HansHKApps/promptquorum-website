@@ -147,6 +147,14 @@ const COLUMN_KEY: Record<string, CompareUiKey> = {
   codeExecution: 'colCodeExecution',
   webBrowsing: 'colWebBrowsing',
   sandbox: 'colSandbox',
+  loraQlora: 'colLoraQlora',
+  webUi: 'colWebUi',
+  multiGpu: 'colMultiGpu',
+  exportGguf: 'colExportGguf',
+  tracing: 'colTracing',
+  evaluations: 'colEvaluations',
+  promptManagement: 'colPromptManagement',
+  openTelemetry: 'colOpenTelemetry',
   semanticSearch: 'colSemanticSearch',
   chatNotes: 'colChatNotes',
   webSearch: 'colWebSearch',
@@ -175,6 +183,8 @@ const SEGMENT_KEY: Record<string, CompareUiKey> = {
   'agent-frameworks': 'segAgentFw',
   'autonomous-agents': 'segAutonomous',
   'workflow-builders': 'segWorkflow',
+  'fine-tuning': 'segFineTune',
+  observability: 'segObservability',
 }
 const PRICE_KEY: Record<string, CompareUiKey> = { free: 'priceFree', freemium: 'priceFreemium', paid: 'pricePaid' }
 const LOCALITY_KEY: Record<string, CompareUiKey> = { local: 'localityLocal', hybrid: 'localityHybrid', cloud: 'localityCloud' }

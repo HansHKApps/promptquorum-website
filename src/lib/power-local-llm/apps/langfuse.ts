@@ -32,5 +32,7 @@ export const app: ToolRecord = {
     ko: '프로덕션 AI 애플리케이션을 추적·평가·디버깅하는 오픈소스 LLM 옵저버빌리티 플랫폼',
   },
   reviewSlug: 'langfuse-review', // dedicated PromptQuorum review — added 2026-09-18
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, dockerDeploy: true, tracing: true, evaluations: true, promptManagement: true },
   lastVerifiedDate: '2026-09-18',
 }

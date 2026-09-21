@@ -35,5 +35,7 @@ export const app: ToolRecord = {
     ar: 'وكيل ذكاء اصطناعي مستضاف ذاتيًا مبني على Envoy مع مستوى بيانات للتطبيقات الوكيلة، يوفر توجيهًا ذكيًا للنماذج اللغوية وقابلية ملاحظة وضوابط حماية',
     ko: 'Envoy 기반 셀프호스팅 AI 프록시 및 데이터 플레인으로, 에이전트형 앱을 위한 스마트 LLM 라우팅, 옵저버빌리티, 가드레일을 제공',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { tracing: true, openTelemetry: true },
   lastVerifiedDate: '2026-09-18',
 }
