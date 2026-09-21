@@ -213,6 +213,60 @@
           }
         }
       }
+    },
+    {
+      "name": "list_categories",
+      "description": "List the valid category, use-case and OS values that search_apps accepts. Call this first when helping a user pick a local-AI app, so follow-up questions use real filter values.",
+      "status": "live",
+      "inputSchema": { "type": "object", "properties": {} }
+    },
+    {
+      "name": "search_apps",
+      "description": "Find apps in the Local LLM Software Directory matching what the user wants to do and their hardware. Answers only from curated directory data. Ask the user for their goal, OS and RAM/VRAM first, then return the top 2-3 results with download links, each app full-article link, and caveats, and always relay the disclaimer.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Free-text goal, e.g. \"image generation\" or \"chat with PDFs\"."
+          },
+          "category": {
+            "type": "string",
+            "description": "Category or group key from list_categories, e.g. \"image-generation\" or \"voice-audio\"."
+          },
+          "useCase": {
+            "type": "string",
+            "enum": ["chat", "code", "agent", "docs", "image", "audio", "phone", "build", "serve"]
+          },
+          "os": {
+            "type": "string",
+            "enum": ["mac", "win", "linux", "ios", "android", "web"],
+            "description": "User's operating system."
+          },
+          "ramGb": {
+            "type": "number",
+            "minimum": 0,
+            "description": "User's system RAM in GB; apps needing more are excluded."
+          },
+          "vramGb": {
+            "type": "number",
+            "minimum": 0,
+            "description": "User's GPU VRAM in GB (unified memory counts on Apple Silicon); apps needing more are excluded."
+          },
+          "price": {
+            "type": "string",
+            "enum": ["free", "freemium", "paid"]
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 15,
+            "default": 5,
+            "description": "Max results."
+          }
+        }
+      }
     }
   ],
 
@@ -221,6 +275,7 @@
     "Fetching full article content by cluster + slug for citation or summarization",
     "Looking up hardware requirements, license, platforms, and pricing for hundreds of local-AI tools via the Local LLM Software Directory",
     "Explaining open-source/source-available license terms (MIT, Apache 2.0, AGPL-3.0, etc.) in plain language",
+    "Recommending local-AI apps from the directory for a user's goal, operating system and RAM/VRAM, using valid filter values from list_categories",
     "Listing PromptQuorum's content sections to route a query to the right cluster"
   ],
 
