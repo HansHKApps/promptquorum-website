@@ -17,6 +17,8 @@ import {
   listClusters,
   getAppDetails,
   explainLicense,
+  searchApps,
+  listCategories,
   ArticleNotFoundError,
   AppNotFoundError,
 } from '@/lib/mcp/tools'
@@ -108,6 +110,37 @@ const handler = createMcpHandler(
             throw err
           }
         })
+    )
+
+    server.registerTool(
+      'list_categories',
+      {
+        title: 'List directory categories, use cases and operating systems',
+        description:
+          'List the valid category, use-case and OS values that search_apps accepts. Call this first when helping a user pick a local-AI app, so follow-up questions use real filter values.',
+        inputSchema: z.object({}),
+      },
+      async () => withUsageTracking('list_categories', () => jsonResult(listCategories()))
+    )
+
+    server.registerTool(
+      'search_apps',
+      {
+        title: 'Recommend local-AI apps from the directory',
+        description:
+          'Find apps in the Local LLM Software Directory matching what the user wants to do and their hardware. Answers only from curated directory data. Ask the user for their goal, OS and RAM/VRAM first, then return the top 2-3 results with download links and caveats, and always relay the disclaimer.',
+        inputSchema: z.object({
+          query: z.string().optional().describe('Free-text goal, e.g. "image generation" or "chat with PDFs"'),
+          category: z.string().optional().describe('Category or group key from list_categories, e.g. "image-generation" or "voice-audio"'),
+          useCase: z.enum(['chat', 'code', 'agent', 'docs', 'image', 'audio', 'phone', 'build', 'serve']).optional(),
+          os: z.enum(['mac', 'win', 'linux', 'ios', 'android', 'web']).optional().describe("User's operating system"),
+          ramGb: z.number().min(0).optional().describe("User's system RAM in GB; apps needing more are excluded"),
+          vramGb: z.number().min(0).optional().describe("User's GPU VRAM in GB (unified memory counts on Apple Silicon); apps needing more are excluded"),
+          price: z.enum(['free', 'freemium', 'paid']).optional(),
+          limit: z.number().int().min(1).max(15).optional().describe('Max results, default 5'),
+        }),
+      },
+      async (args) => withUsageTracking('search_apps', () => jsonResult(searchApps(args)))
     )
 
     server.registerTool(
