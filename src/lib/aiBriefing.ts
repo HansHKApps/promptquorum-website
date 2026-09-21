@@ -26,7 +26,7 @@ function toLines(root: Element): string[] {
     const tag = el.tagName
     if (/^H[1-6]$/.test(tag)) {
       const text = clean(el.textContent ?? '')
-      if (text) lines.push('', `${'#'.repeat(Math.min(Number(tag[1]) + 1, 6))} ${text}`)
+      if (text) lines.push('', `${'#'.repeat(Math.min(Number(tag[1]) + 2, 6))} ${text}`)
       return
     }
     if (tag === 'LI') {
