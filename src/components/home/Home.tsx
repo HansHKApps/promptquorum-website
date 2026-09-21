@@ -12,6 +12,7 @@ import { ByTheNumbersBlock } from './ByTheNumbersBlock'
 import { RecentMentionsBlock } from './RecentMentionsBlock'
 import { FeedbackBlock } from './FeedbackBlock'
 import { QuickTipBlock } from './QuickTipBlock'
+import { PqAppBannerBlock } from './PqAppBannerBlock'
 import { t } from './home-i18n'
 
 /**
@@ -41,6 +42,8 @@ export function Home({ lang }: { lang: Language }) {
           <IntentSearchBlock lang={lang} />
           <ComparisonToolShell groups={getComparableGroups(lang)} lang={lang} />
         </section>
+
+        <PqAppBannerBlock lang={lang} />
 
         {/* Tier 2 — medium */}
         <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mb-8">
