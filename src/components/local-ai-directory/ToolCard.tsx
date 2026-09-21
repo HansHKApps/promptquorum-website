@@ -301,6 +301,12 @@ export function ToolCard({
             </div>
           )}
 
+          {app.upstreamStatus && (
+            <span className="inline-flex w-fit items-center gap-1 rounded-full border border-gray-300 bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-700 mb-1.5">
+              {t(app.upstreamStatus.state === 'archived' ? 'archivedBadge' : 'unmaintainedBadge', lang)}
+            </span>
+          )}
+
           {review && (
             <span className="inline-flex w-fit items-center gap-1 rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary mb-1.5">
               {t('featureArticleBadge', lang)}

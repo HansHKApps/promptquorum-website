@@ -169,6 +169,11 @@ export interface ToolRecord {
   // tool's review article and its category comparison article, so the two can never disagree
   // about who the tool is for. English only; unset until the tool has been reviewed.
   verdict?: string
+  // Set when the project's upstream is no longer developed, so the directory can show a status badge
+  // next to an otherwise normal-looking entry. 'archived' = the GitHub repository is archived (read-only,
+  // verified via the GitHub API); 'unmaintained' = the project's own README says it is no longer maintained
+  // but GitHub does not flag it archived. `since` is the ISO date the status began, when a review states it.
+  upstreamStatus?: { state: 'archived' | 'unmaintained'; since?: string }
   // Category-specific comparison attributes, keyed by the attribute keys defined in
   // ./compare-schema.ts for this tool's primary category group. Feeds the category article's
   // comparison table and the homepage comparison tool. Unset/missing key = "not yet researched",

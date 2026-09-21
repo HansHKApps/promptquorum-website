@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR',
     seoTitle: 'Local Image, Video & Vision Tools Compared 2026',
     intro:
-      'Local image tools do two different jobs — generating images and video from a prompt, and understanding the images you give them — and no single feature list compares them fairly. This guide compares 16 free and freemium tools that run on your own hardware, one job at a time, using a comparison table generated from the same data as each tool\'s own PromptQuorum review, so the table and the reviews cannot disagree.',
+      'Local image tools do two different jobs — generating images and video from a prompt, and understanding the images you give them — and no single feature list compares them fairly. This guide compares 16 free and paid tools that run on your own hardware, one job at a time, using a comparison table generated from the same data as each tool\'s own PromptQuorum review, so the table and the reviews cannot disagree.',
     metaDescription:
       'Compare 16 local image tools side by side: image and video generation (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI and more) and vision and OCR models. Licenses, platforms, inpainting, extensions, API and more, from official documentation.',
     twitterDescription:
@@ -228,7 +228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Lokale Bild-, Video- und Vision-Tools im Vergleich (2026): Generierung, Vision und OCR',
     seoTitle: 'Lokale Bild-, Video- & Vision-Tools im Vergleich 2026',
     intro:
-      'Lokale Bild-Tools erfüllen zwei unterschiedliche Aufgaben — Bilder und Videos aus einem Prompt erzeugen und Bilder verstehen, die man ihnen gibt — und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht 16 kostenlose und Freemium-Tools, die auf der eigenen Hardware laufen, Aufgabe für Aufgabe. Grundlage ist eine Vergleichstabelle, die aus denselben Daten erzeugt wird wie der jeweilige PromptQuorum-Test des Tools, sodass sich Tabelle und Tests nicht widersprechen können.',
+      'Lokale Bild-Tools erfüllen zwei unterschiedliche Aufgaben — Bilder und Videos aus einem Prompt erzeugen und Bilder verstehen, die man ihnen gibt — und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht 16 kostenlose und kostenpflichtige Tools, die auf der eigenen Hardware laufen, Aufgabe für Aufgabe. Grundlage ist eine Vergleichstabelle, die aus denselben Daten erzeugt wird wie der jeweilige PromptQuorum-Test des Tools, sodass sich Tabelle und Tests nicht widersprechen können.',
     metaDescription:
       'Vergleich von 16 lokalen Bild-Tools: Bild- und Videogenerierung (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI u. a.) sowie Vision- und OCR-Modelle. Lizenzen, Plattformen, Inpainting, Erweiterungen, API laut offizieller Dokumentation.',
     twitterDescription:
@@ -436,7 +436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Outils locaux d\'image, de vidéo et de vision : comparatif (2026) — génération, vision et OCR',
     seoTitle: 'Outils locaux image, vidéo et vision : comparatif 2026',
     intro:
-      'Les outils d\'image locaux remplissent deux missions distinctes — générer des images et des vidéos à partir d\'un prompt, et comprendre les images qu\'on leur fournit — et aucune liste de fonctionnalités unique ne permet de les comparer équitablement. Ce guide compare 16 outils gratuits et freemium qui fonctionnent sur votre propre matériel, une mission à la fois, à l\'aide d\'un tableau comparatif généré à partir des mêmes données que l\'avis PromptQuorum de chaque outil : le tableau et les avis ne peuvent donc pas se contredire.',
+      'Les outils d\'image locaux remplissent deux missions distinctes — générer des images et des vidéos à partir d\'un prompt, et comprendre les images qu\'on leur fournit — et aucune liste de fonctionnalités unique ne permet de les comparer équitablement. Ce guide compare 16 outils gratuits et payants qui fonctionnent sur votre propre matériel, une mission à la fois, à l\'aide d\'un tableau comparatif généré à partir des mêmes données que l\'avis PromptQuorum de chaque outil : le tableau et les avis ne peuvent donc pas se contredire.',
     metaDescription:
       'Comparez 16 outils d\'image locaux : génération d\'images et de vidéos (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) et modèles de vision et OCR. Licences, plateformes, inpainting, extensions, API, d\'après la documentation officielle.',
     twitterDescription:
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Herramientas locales de imagen, vídeo y visión comparadas (2026): generación, visión y OCR',
     seoTitle: 'Herramientas locales de imagen y vídeo comparadas 2026',
     intro:
-      'Las herramientas locales de imagen hacen dos trabajos distintos — generar imágenes y vídeo a partir de un prompt, y entender las imágenes que les das — y ninguna lista de funciones única las compara con justicia. Esta guía compara 16 herramientas gratuitas y freemium que se ejecutan en tu propio hardware, un trabajo cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis propio de cada herramienta en PromptQuorum, de modo que la tabla y los análisis no pueden contradecirse.',
+      'Las herramientas locales de imagen hacen dos trabajos distintos — generar imágenes y vídeo a partir de un prompt, y entender las imágenes que les das — y ninguna lista de funciones única las compara con justicia. Esta guía compara 16 herramientas gratuitas y de pago que se ejecutan en tu propio hardware, un trabajo cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis propio de cada herramienta en PromptQuorum, de modo que la tabla y los análisis no pueden contradecirse.',
     metaDescription:
       'Compara 16 herramientas locales de imagen: generación de imagen y vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) y modelos de visión y OCR. Licencias, plataformas y API, según la documentación oficial.',
     twitterDescription:
@@ -852,7 +852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'ローカル画像・動画・ビジョンツール比較(2026):生成、ビジョン、OCR',
     seoTitle: 'ローカル画像・動画・ビジョンツール比較2026',
     intro:
-      'ローカルの画像ツールには2つの異なる役割があります。プロンプトから画像や動画を生成することと、与えた画像を理解することです。単一の機能一覧では、両者を公平に比較できません。このガイドでは、自分のハードウェア上で動作する無料・フリーミアムの16ツールを、役割ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成されているため、表とレビューが食い違うことはありません。',
+      'ローカルの画像ツールには2つの異なる役割があります。プロンプトから画像や動画を生成することと、与えた画像を理解することです。単一の機能一覧では、両者を公平に比較できません。このガイドでは、自分のハードウェア上で動作する無料・有料の16ツールを、役割ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成されているため、表とレビューが食い違うことはありません。',
     metaDescription:
       'ローカル画像ツール16種を比較:画像・動画生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAIなど)とビジョン・OCRモデル。ライセンス、対応OS、インペイント、拡張機能、APIなどを公式ドキュメントから整理。',
     twitterDescription:
@@ -1060,7 +1060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '本地图像、视频与视觉工具对比(2026):生成、视觉与OCR',
     seoTitle: '本地图像、视频与视觉工具对比2026',
     intro:
-      '本地图像工具承担两类不同的任务——根据提示词生成图像和视频,以及理解你提供的图像——任何单一的功能清单都无法公平地对比它们。本指南按任务逐一对比16款可在你自己设备上运行的免费和免费增值工具,所用的对比表与各工具的PromptQuorum评测出自同一份数据,因此表格与评测不会互相矛盾。',
+      '本地图像工具承担两类不同的任务——根据提示词生成图像和视频,以及理解你提供的图像——任何单一的功能清单都无法公平地对比它们。本指南按任务逐一对比16款可在你自己设备上运行的免费和付费工具,所用的对比表与各工具的PromptQuorum评测出自同一份数据,因此表格与评测不会互相矛盾。',
     metaDescription:
       '并排对比16款本地图像工具:图像与视频生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAI等)以及视觉与OCR模型。许可证、平台、局部重绘、扩展、API等,均来自官方文档。',
     twitterDescription:
@@ -1268,7 +1268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Ferramentas locais de imagem, vídeo e visão comparadas (2026): geração, visão e OCR',
     seoTitle: 'Ferramentas locais de imagem, vídeo e visão 2026',
     intro:
-      'As ferramentas locais de imagem fazem dois trabalhos diferentes — gerar imagens e vídeo a partir de um prompt e entender as imagens que você fornece — e nenhuma lista única de recursos compara os dois de forma justa. Este guia compara 16 ferramentas gratuitas e freemium que rodam no seu próprio hardware, um trabalho de cada vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise própria de cada ferramenta no PromptQuorum, de modo que a tabela e as análises não podem se contradizer.',
+      'As ferramentas locais de imagem fazem dois trabalhos diferentes — gerar imagens e vídeo a partir de um prompt e entender as imagens que você fornece — e nenhuma lista única de recursos compara os dois de forma justa. Este guia compara 16 ferramentas gratuitas e pagas que rodam no seu próprio hardware, um trabalho de cada vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise própria de cada ferramenta no PromptQuorum, de modo que a tabela e as análises não podem se contradizer.',
     metaDescription:
       'Compare 16 ferramentas locais de imagem: geração de imagem e vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI e outras) e modelos de visão e OCR. Licenças, plataformas, inpainting, extensões e API, segundo a documentação oficial.',
     twitterDescription:
@@ -1476,7 +1476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مقارنة أدوات الصور والفيديو والرؤية المحلية (2026): التوليد والرؤية وOCR',
     seoTitle: 'مقارنة أدوات الصور والفيديو والرؤية المحلية 2026',
     intro:
-      'تؤدي أدوات الصور المحلية مهمتين مختلفتين — توليد الصور والفيديو من وصف نصي، وفهم الصور التي تعطيها إياها — ولا تكفي قائمة ميزات واحدة لمقارنتها بإنصاف. يقارن هذا الدليل 16 أداة مجانية وفريميوم تعمل على عتادك الخاص، مهمة تلو الأخرى، عبر جدول مقارنة مولَّد من البيانات نفسها التي تعتمد عليها مراجعة PromptQuorum لكل أداة، بحيث لا يتعارض الجدول مع المراجعات.',
+      'تؤدي أدوات الصور المحلية مهمتين مختلفتين — توليد الصور والفيديو من وصف نصي، وفهم الصور التي تعطيها إياها — ولا تكفي قائمة ميزات واحدة لمقارنتها بإنصاف. يقارن هذا الدليل 16 أداة مجانية ومدفوعة تعمل على عتادك الخاص، مهمة تلو الأخرى، عبر جدول مقارنة مولَّد من البيانات نفسها التي تعتمد عليها مراجعة PromptQuorum لكل أداة، بحيث لا يتعارض الجدول مع المراجعات.',
     metaDescription:
       'قارن 16 أداة صور محلية جنبًا إلى جنب: توليد الصور والفيديو (AUTOMATIC1111 وComfyUI وFooocus وInvokeAI وغيرها) ونماذج الرؤية وOCR. التراخيص والمنصات والطلاء الداخلي والإضافات وواجهة API، من الوثائق الرسمية.',
     twitterDescription:
@@ -1684,7 +1684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '로컬 이미지·영상·비전 도구 비교(2026): 생성, 비전, OCR',
     seoTitle: '로컬 이미지·영상·비전 도구 비교 2026',
     intro:
-      '로컬 이미지 도구는 프롬프트로 이미지와 영상을 생성하는 일과 사용자가 넣은 이미지를 이해하는 일, 두 가지 서로 다른 작업을 하며, 하나의 기능 목록으로는 이들을 공정하게 비교할 수 없습니다. 이 가이드는 자신의 하드웨어에서 실행되는 무료 및 프리미엄(freemium) 도구 16개를 작업별로 나누어 비교합니다. 비교표는 각 도구의 PromptQuorum 리뷰와 같은 데이터에서 생성되므로 표와 리뷰가 서로 어긋날 수 없습니다.',
+      '로컬 이미지 도구는 프롬프트로 이미지와 영상을 생성하는 일과 사용자가 넣은 이미지를 이해하는 일, 두 가지 서로 다른 작업을 하며, 하나의 기능 목록으로는 이들을 공정하게 비교할 수 없습니다. 이 가이드는 자신의 하드웨어에서 실행되는 무료 및 유료 도구 16개를 작업별로 나누어 비교합니다. 비교표는 각 도구의 PromptQuorum 리뷰와 같은 데이터에서 생성되므로 표와 리뷰가 서로 어긋날 수 없습니다.',
     metaDescription:
       '로컬 이미지 도구 16개를 나란히 비교합니다: 이미지·영상 생성(AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI 등)과 비전·OCR 모델. 라이선스, 플랫폼, 인페인팅, 확장, API를 공식 문서 기준으로 정리했습니다.',
     twitterDescription:

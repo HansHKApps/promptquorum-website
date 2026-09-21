@@ -42,5 +42,7 @@ export const app: ToolRecord = {
   reviewSlug: 'continue-dev-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
   compare: { vscode: true, jetbrains: true },
+  // README: 'no longer actively maintained and is read-only for all users'; GitHub archived flag is false, checked 2026-09-21
+  upstreamStatus: { state: 'unmaintained' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

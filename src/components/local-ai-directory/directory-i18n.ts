@@ -273,6 +273,8 @@ const DIR_UI = {
   // distinct from the plain "Read review" text link and from the "N articles
   // mention this tool" count, both of which stay unchanged.
   featureArticleBadge: { en: 'Feature Article', de: 'Ausführlicher Test', fr: 'Article dédié', ja: '特集記事', zh: '专题评测', es: 'Artículo destacado', pt: 'Artigo destacado', ar: 'مقال متخصص', ko: '심층 리뷰' },
+  archivedBadge: { en: 'Archived', de: 'Archiviert', fr: 'Archivé', ja: 'アーカイブ済み', zh: '已归档', es: 'Archivado', pt: 'Arquivado', ar: 'مؤرشف', ko: '보관됨' },
+  unmaintainedBadge: { en: 'No longer maintained', de: 'Nicht mehr gepflegt', fr: 'Plus maintenu', ja: 'メンテナンス終了', zh: '已停止维护', es: 'Sin mantenimiento', pt: 'Sem manutenção', ar: 'لم يعد مُصانًا', ko: '유지보수 종료' },
   detailsButton: { en: 'Details', de: 'Details', fr: 'Détails', ja: '詳細', zh: '详情', es: 'Detalles', pt: 'Detalhes', ar: 'التفاصيل', ko: '상세 정보' },
   githubLink: { en: 'GitHub ↗', de: 'GitHub ↗', fr: 'GitHub ↗', ja: 'GitHub ↗', zh: 'GitHub ↗', es: 'GitHub ↗', pt: 'GitHub ↗', ar: 'GitHub ↗', ko: 'GitHub ↗' },
   getItLink: { en: 'Get it ↗', de: 'Herunterladen ↗', fr: 'Télécharger ↗', ja: '入手する ↗', zh: '立即获取 ↗', es: 'Obtenerlo ↗', pt: 'Obter ↗', ar: 'احصل عليه ↗', ko: '받기 ↗' },

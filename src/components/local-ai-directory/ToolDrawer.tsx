@@ -251,6 +251,12 @@ export function ToolDrawer({
                 {app.tagline[lang] ?? app.tagline.en ?? ''}
               </Dialog.Description>
 
+              {app.upstreamStatus && (
+                <span className="mb-4 inline-flex w-fit items-center gap-1 rounded-full border border-gray-300 bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-700">
+                  {t(app.upstreamStatus.state === 'archived' ? 'archivedBadge' : 'unmaintainedBadge', lang)}
+                </span>
+              )}
+
               {isFounderStarActive(app.founderReviewedDate) && (
                 <div className="flex items-start gap-2 rounded-xl border border-amber-200 bg-amber-50 p-3 mb-5">
                   <StarIcon className="h-4 w-4 mt-0.5 shrink-0 text-amber-500" />
