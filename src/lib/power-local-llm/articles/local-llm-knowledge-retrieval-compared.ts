@@ -13,6 +13,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
+    affiliateDisclosure: true,
     publishDate: '2026-09-20',
     dateModified: '2026-09-20',
     next_refresh_due: '2027-03-20',
@@ -258,6 +259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   de: {
     freshness_tier: 'semi_annual',
+    affiliateDisclosure: true,
     publishDate: '2026-09-20',
     dateModified: '2026-09-20',
     next_refresh_due: '2027-03-20',
@@ -503,6 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   fr: {
     freshness_tier: 'semi_annual',
+    affiliateDisclosure: true,
     publishDate: '2026-09-20',
     dateModified: '2026-09-20',
     next_refresh_due: '2027-03-20',
@@ -748,6 +751,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   es: {
     freshness_tier: 'semi_annual',
+    affiliateDisclosure: true,
     publishDate: '2026-09-20',
     dateModified: '2026-09-20',
     next_refresh_due: '2027-03-20',
@@ -993,6 +997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ja: {
     freshness_tier: 'semi_annual',
+    affiliateDisclosure: true,
     publishDate: '2026-09-20',
     dateModified: '2026-09-20',
     next_refresh_due: '2027-03-20',
@@ -1238,6 +1243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   zh: {
     freshness_tier: 'semi_annual',
+    affiliateDisclosure: true,
     publishDate: '2026-09-20',
     dateModified: '2026-09-20',
     next_refresh_due: '2027-03-20',
@@ -1483,6 +1489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   pt: {
     freshness_tier: 'semi_annual',
+    affiliateDisclosure: true,
     publishDate: '2026-09-20',
     dateModified: '2026-09-20',
     next_refresh_due: '2027-03-20',
@@ -1728,6 +1735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ar: {
     freshness_tier: 'semi_annual',
+    affiliateDisclosure: true,
     publishDate: '2026-09-20',
     dateModified: '2026-09-20',
     next_refresh_due: '2027-03-20',
@@ -1973,6 +1981,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
   ko: {
     freshness_tier: 'semi_annual',
+    affiliateDisclosure: true,
     publishDate: '2026-09-20',
     dateModified: '2026-09-20',
     next_refresh_due: '2027-03-20',

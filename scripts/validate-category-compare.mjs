@@ -4,7 +4,9 @@
 //  2. every category comparison article named in CATEGORY_COMPARE_ARTICLE is registered
 //     (slugs.ts + articles-barrel.ts) and actually renders the generated table section;
 //  3. a comparison article that is publicly indexable (in published.ts) has all 9 locale blocks;
-//  4. every tool in a comparison segment that declares a reviewSlug has it resolve to a public URL
+//  4. every comparison article sets `affiliateDisclosure: true` in all 9 locale blocks (the site's
+//     no-commission disclosure; the table itself renders the disclosed site buttons);
+//  5. every tool in a comparison segment that declares a reviewSlug has it resolve to a public URL
 //     (feature-review-index.json), so the table's tool links never dead-end.
 // Regex-based on purpose, like the other validators here: no TS toolchain needed at prebuild.
 
@@ -76,6 +78,8 @@ for (const m of mapBlock.matchAll(/'([a-z-]+)': '([a-z0-9-]+)',/g)) {
     continue
   }
   if (!art.includes("component: 'CategoryCompareTable'")) fail(`${slug}: no section renders component 'CategoryCompareTable'`)
+  const disclosed = (art.match(/^    affiliateDisclosure: true,$/gm) ?? []).length
+  if (disclosed !== LOCALES.length) fail(`${slug}: affiliateDisclosure: true is set in ${disclosed}/${LOCALES.length} locale blocks`)
   if (new RegExp(`'${slug}',`).test(published)) {
     for (const l of LOCALES) if (!new RegExp(`^  ${l}: \\{`, 'm').test(art)) fail(`${slug}: published but missing the "${l}" locale block`)
   }
