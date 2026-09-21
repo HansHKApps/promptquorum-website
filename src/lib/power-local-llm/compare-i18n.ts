@@ -4,7 +4,7 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 
-export const COMPARE_UI_KEYS = ["tool", "review", "readReview", "expandTable", "copyTable", "copied", "copyFailed", "close", "notStatedNote", "yes", "no", "notStated", "priceFree", "priceFreemium", "pricePaid", "localityLocal", "localityHybrid", "localityCloud", "hardwareCpu", "hardwareVaries", "hardwareVram", "hardwareRam", "colPrice", "colLicense", "colPlatforms", "colRuns", "colHardware", "colVersion", "colLanguages", "colVoiceCloning", "colStreaming", "colCpuUsable", "colApiServer", "colRealtime", "colSpeakerLabels", "colFullyLocal", "colBargeIn", "colCustomLlm", "colTelephony", "segTts", "segStt", "segAgents", "groupVoiceAudio", "blockTitle", "blockComparedIn", "blockCategory", "blockAlsoReviewed", "chooseTools", "readFullReviews", "selectAtLeastTwo", "readFullComparison", "colInpainting", "colVideoGeneration", "colNodeWorkflow", "colExtensions", "colLowVram", "colOcr", "colMultiImage", "segImageVideo", "segVision", "colOpenaiApi", "colNvidiaGpu", "colAppleSilicon", "colAmdGpu", "colCpuInference", "colDistributed", "colDesktopApp", "colModelLibrary", "colHeadless", "colLocalModels", "colFallback", "segEngines", "segRuntimes", "segGateways", "colVisualBuilder", "colLocalLlm", "colAgents", "colMultiVector", "colDockerDeploy", "colMultiFormat", "colCitations", "colEmbeddedMode", "colHybridSearch", "colMetadataFilter", "colClustered", "colManagedCloud", "colNoteApp", "colSemanticSearch", "colChatNotes", "colWebSearch", "colPrivateDocs", "segRag", "segDocChat", "segVector", "segNotes", "segSearch", "colBuiltInEngine", "colOllama", "colCustomEndpoint", "colMcp", "colFileChat", "colVoice", "colOffline", "colImportModels", "colModelDownloads", "colVisionInput", "colMultiUser", "colMemory", "colToolUse", "colCharacterCards", "colLorebooks", "colGroupChats", "colLocalBackends", "segDesktop", "segMobile", "segWebSelf", "segAssistants", "segRoleplay", "colVscode", "colJetbrains", "colAgentMode", "colAutocomplete", "colMultiAgent", "colToolCalling", "colCodeExecution", "colWebBrowsing", "colSandbox", "segCoding", "segAgentFw", "segAutonomous", "segWorkflow"] as const
+export const COMPARE_UI_KEYS = ["tool", "review", "readReview", "expandTable", "copyTable", "copied", "copyFailed", "close", "notStatedNote", "yes", "no", "notStated", "priceFree", "priceFreemium", "pricePaid", "localityLocal", "localityHybrid", "localityCloud", "hardwareCpu", "hardwareVaries", "hardwareVram", "hardwareRam", "colPrice", "colLicense", "colPlatforms", "colRuns", "colHardware", "colVersion", "colLanguages", "colVoiceCloning", "colStreaming", "colCpuUsable", "colApiServer", "colRealtime", "colSpeakerLabels", "colFullyLocal", "colBargeIn", "colCustomLlm", "colTelephony", "segTts", "segStt", "segAgents", "groupVoiceAudio", "blockTitle", "blockComparedIn", "blockCategory", "blockAlsoReviewed", "chooseTools", "readFullReviews", "selectAtLeastTwo", "readFullComparison", "colInpainting", "colVideoGeneration", "colNodeWorkflow", "colExtensions", "colLowVram", "colOcr", "colMultiImage", "segImageVideo", "segVision", "colOpenaiApi", "colNvidiaGpu", "colAppleSilicon", "colAmdGpu", "colCpuInference", "colDistributed", "colDesktopApp", "colModelLibrary", "colHeadless", "colLocalModels", "colFallback", "segEngines", "segRuntimes", "segGateways", "colVisualBuilder", "colLocalLlm", "colAgents", "colMultiVector", "colDockerDeploy", "colMultiFormat", "colCitations", "colEmbeddedMode", "colHybridSearch", "colMetadataFilter", "colClustered", "colManagedCloud", "colNoteApp", "colSemanticSearch", "colChatNotes", "colWebSearch", "colPrivateDocs", "segRag", "segDocChat", "segVector", "segNotes", "segSearch", "colBuiltInEngine", "colOllama", "colCustomEndpoint", "colMcp", "colFileChat", "colVoice", "colOffline", "colImportModels", "colModelDownloads", "colVisionInput", "colMultiUser", "colMemory", "colToolUse", "colCharacterCards", "colLorebooks", "colGroupChats", "colLocalBackends", "segDesktop", "segMobile", "segWebSelf", "segAssistants", "segRoleplay", "colVscode", "colJetbrains", "colAgentMode", "colAutocomplete", "colMultiAgent", "colToolCalling", "colCodeExecution", "colWebBrowsing", "colSandbox", "segCoding", "segAgentFw", "segAutonomous", "segWorkflow", "colLoraQlora", "colWebUi", "colMultiGpu", "colExportGguf", "colTracing", "colEvaluations", "colPromptManagement", "colOpenTelemetry", "segFineTune", "segObservability"] as const
 export type CompareUiKey = (typeof COMPARE_UI_KEYS)[number]
 export type CompareStrings = Record<CompareUiKey, string>
 
@@ -140,7 +140,17 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "segCoding": "Coding assistants & IDE plugins",
     "segAgentFw": "Agent frameworks & SDKs",
     "segAutonomous": "Autonomous agents",
-    "segWorkflow": "Workflow builders"
+    "segWorkflow": "Workflow builders",
+    "colLoraQlora": "LoRA / QLoRA",
+    "colWebUi": "Web UI",
+    "colMultiGpu": "Multi-GPU training",
+    "colExportGguf": "Export to GGUF / Ollama",
+    "colTracing": "LLM call tracing",
+    "colEvaluations": "Evaluations / scoring",
+    "colPromptManagement": "Prompt management",
+    "colOpenTelemetry": "OpenTelemetry support",
+    "segFineTune": "Fine-tuning",
+    "segObservability": "Observability & evaluation"
   },
   "de": {
     "tool": "Werkzeug",
@@ -273,7 +283,17 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "segCoding": "Coding-Assistenten & IDE-Plugins",
     "segAgentFw": "Agenten-Frameworks & SDKs",
     "segAutonomous": "Autonome Agenten",
-    "segWorkflow": "Workflow-Builder"
+    "segWorkflow": "Workflow-Builder",
+    "colLoraQlora": "LoRA / QLoRA",
+    "colWebUi": "Web-UI",
+    "colMultiGpu": "Multi-GPU-Training",
+    "colExportGguf": "Export nach GGUF / Ollama",
+    "colTracing": "LLM-Aufruf-Tracing",
+    "colEvaluations": "Evaluierungen / Bewertung",
+    "colPromptManagement": "Prompt-Verwaltung",
+    "colOpenTelemetry": "OpenTelemetry-Unterstützung",
+    "segFineTune": "Fine-Tuning",
+    "segObservability": "Observability & Evaluierung"
   },
   "fr": {
     "tool": "Outil",
@@ -406,7 +426,17 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "segCoding": "Assistants de code et plugins IDE",
     "segAgentFw": "Frameworks d'agents et SDK",
     "segAutonomous": "Agents autonomes",
-    "segWorkflow": "Constructeurs de workflows"
+    "segWorkflow": "Constructeurs de workflows",
+    "colLoraQlora": "LoRA / QLoRA",
+    "colWebUi": "Interface web",
+    "colMultiGpu": "Entraînement multi-GPU",
+    "colExportGguf": "Export vers GGUF / Ollama",
+    "colTracing": "Traçage des appels LLM",
+    "colEvaluations": "Évaluations / notation",
+    "colPromptManagement": "Gestion des prompts",
+    "colOpenTelemetry": "Prise en charge d'OpenTelemetry",
+    "segFineTune": "Fine-tuning",
+    "segObservability": "Observabilité et évaluation"
   },
   "es": {
     "tool": "Herramienta",
@@ -539,7 +569,17 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "segCoding": "Asistentes de programación y plugins de IDE",
     "segAgentFw": "Frameworks de agentes y SDK",
     "segAutonomous": "Agentes autónomos",
-    "segWorkflow": "Constructores de flujos de trabajo"
+    "segWorkflow": "Constructores de flujos de trabajo",
+    "colLoraQlora": "LoRA / QLoRA",
+    "colWebUi": "Interfaz web",
+    "colMultiGpu": "Entrenamiento multi-GPU",
+    "colExportGguf": "Exportar a GGUF / Ollama",
+    "colTracing": "Trazabilidad de llamadas LLM",
+    "colEvaluations": "Evaluaciones / puntuación",
+    "colPromptManagement": "Gestión de prompts",
+    "colOpenTelemetry": "Compatibilidad con OpenTelemetry",
+    "segFineTune": "Fine-tuning",
+    "segObservability": "Observabilidad y evaluación"
   },
   "ja": {
     "tool": "ツール",
@@ -672,7 +712,17 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "segCoding": "コーディングアシスタント・IDEプラグイン",
     "segAgentFw": "エージェントフレームワーク・SDK",
     "segAutonomous": "自律型エージェント",
-    "segWorkflow": "ワークフロービルダー"
+    "segWorkflow": "ワークフロービルダー",
+    "colLoraQlora": "LoRA / QLoRA",
+    "colWebUi": "Web UI",
+    "colMultiGpu": "マルチGPU学習",
+    "colExportGguf": "GGUF／Ollamaへのエクスポート",
+    "colTracing": "LLM呼び出しのトレーシング",
+    "colEvaluations": "評価／スコアリング",
+    "colPromptManagement": "プロンプト管理",
+    "colOpenTelemetry": "OpenTelemetryサポート",
+    "segFineTune": "ファインチューニング",
+    "segObservability": "オブザーバビリティ・評価"
   },
   "zh": {
     "tool": "工具",
@@ -805,7 +855,17 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "segCoding": "编程助手与 IDE 插件",
     "segAgentFw": "智能体框架与 SDK",
     "segAutonomous": "自主智能体",
-    "segWorkflow": "工作流构建器"
+    "segWorkflow": "工作流构建器",
+    "colLoraQlora": "LoRA / QLoRA",
+    "colWebUi": "Web UI",
+    "colMultiGpu": "多GPU训练",
+    "colExportGguf": "导出为 GGUF / Ollama",
+    "colTracing": "LLM 调用追踪",
+    "colEvaluations": "评估/评分",
+    "colPromptManagement": "提示词管理",
+    "colOpenTelemetry": "支持 OpenTelemetry",
+    "segFineTune": "微调",
+    "segObservability": "可观测性与评估"
   },
   "pt": {
     "tool": "Ferramenta",
@@ -938,7 +998,17 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "segCoding": "Assistentes de programação e plugins de IDE",
     "segAgentFw": "Frameworks de agentes e SDKs",
     "segAutonomous": "Agentes autônomos",
-    "segWorkflow": "Construtores de fluxo de trabalho"
+    "segWorkflow": "Construtores de fluxo de trabalho",
+    "colLoraQlora": "LoRA / QLoRA",
+    "colWebUi": "Interface web",
+    "colMultiGpu": "Treinamento multi-GPU",
+    "colExportGguf": "Exportar para GGUF / Ollama",
+    "colTracing": "Rastreamento de chamadas de LLM",
+    "colEvaluations": "Avaliações / pontuação",
+    "colPromptManagement": "Gerenciamento de prompts",
+    "colOpenTelemetry": "Suporte a OpenTelemetry",
+    "segFineTune": "Fine-tuning",
+    "segObservability": "Observabilidade e avaliação"
   },
   "ar": {
     "tool": "الأداة",
@@ -1071,7 +1141,17 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "segCoding": "مساعدو البرمجة وإضافات IDE",
     "segAgentFw": "أطر الوكلاء وSDK",
     "segAutonomous": "الوكلاء المستقلون",
-    "segWorkflow": "منشئو سير العمل"
+    "segWorkflow": "منشئو سير العمل",
+    "colLoraQlora": "LoRA / QLoRA",
+    "colWebUi": "واجهة ويب",
+    "colMultiGpu": "التدريب على وحدات GPU متعددة",
+    "colExportGguf": "التصدير إلى GGUF / Ollama",
+    "colTracing": "تتبّع استدعاءات LLM",
+    "colEvaluations": "التقييمات / التسجيل",
+    "colPromptManagement": "إدارة الموجّهات",
+    "colOpenTelemetry": "دعم OpenTelemetry",
+    "segFineTune": "الضبط الدقيق",
+    "segObservability": "قابلية المراقبة والتقييم"
   },
   "ko": {
     "tool": "도구",
@@ -1204,7 +1284,17 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "segCoding": "코딩 어시스턴트 및 IDE 플러그인",
     "segAgentFw": "에이전트 프레임워크 및 SDK",
     "segAutonomous": "자율 에이전트",
-    "segWorkflow": "워크플로 빌더"
+    "segWorkflow": "워크플로 빌더",
+    "colLoraQlora": "LoRA / QLoRA",
+    "colWebUi": "웹 UI",
+    "colMultiGpu": "멀티 GPU 학습",
+    "colExportGguf": "GGUF / Ollama로 내보내기",
+    "colTracing": "LLM 호출 트레이싱",
+    "colEvaluations": "평가 / 채점",
+    "colPromptManagement": "프롬프트 관리",
+    "colOpenTelemetry": "OpenTelemetry 지원",
+    "segFineTune": "파인튜닝",
+    "segObservability": "관측성 및 평가"
   }
 }
 

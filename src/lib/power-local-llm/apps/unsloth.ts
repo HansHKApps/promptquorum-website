@@ -29,5 +29,7 @@ export const app: ToolRecord = {
     ko: 'LLM·디퓨전·TTS·임베딩 모델을 위한 무료 오픈소스 파인튜닝 도구',
   },
   reviewSlug: 'unsloth-review',
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { lowVram: true, loraQlora: true, webUi: true, multiGpu: true, exportGguf: true },
   lastVerifiedDate: '2026-09-13',
 }

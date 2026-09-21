@@ -34,5 +34,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'llama-factory-review',
   pqReview: { date: '2026-09-20', version: 'v0.9.5', versionSourceUrl: 'https://github.com/hiyouga/LlamaFactory/releases/tag/v0.9.5' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { lowVram: true, loraQlora: true, webUi: true, multiGpu: true, exportGguf: true },
   lastVerifiedDate: '2026-09-14',
 }
