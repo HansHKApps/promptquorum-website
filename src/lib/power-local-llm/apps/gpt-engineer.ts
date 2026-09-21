@@ -37,5 +37,7 @@ export const app: ToolRecord = {
   pqReview: { date: '2026-09-20', version: 'v0.3.1', versionSourceUrl: 'https://github.com/AntonOsika/gpt-engineer/releases/tag/v0.3.1' },
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
   compare: { localLlm: true, codeExecution: true },
+  // GitHub API archived=true, checked 2026-09-21
+  upstreamStatus: { state: 'archived' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

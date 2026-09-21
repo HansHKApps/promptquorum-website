@@ -37,5 +37,7 @@ export const app: ToolRecord = {
   pqReview: { date: '2026-09-20', version: '0.2.1', versionSourceUrl: 'https://github.com/h2oai/h2ogpt/releases/tag/0.2.1' },
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { localLlm: true, dockerDeploy: true, apiServer: true, multiFormat: true },
+  // GitHub repo archived 2026-02-26 (per its review; GitHub API archived=true, checked 2026-09-21)
+  upstreamStatus: { state: 'archived', since: '2026-02-26' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

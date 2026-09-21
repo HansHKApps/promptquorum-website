@@ -36,5 +36,7 @@ export const app: ToolRecord = {
   reviewSlug: 'flowise-ai-visual-workflow-builder-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   compare: { visualBuilder: true, agents: true, multiVector: true, dockerDeploy: true, apiServer: true },
+  // GitHub repo archived 2026-08-10 (per its review; GitHub API archived=true, checked 2026-09-21)
+  upstreamStatus: { state: 'archived', since: '2026-08-10' },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }
