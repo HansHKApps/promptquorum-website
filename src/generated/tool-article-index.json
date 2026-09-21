@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 287,
+    "totalCount": 288,
     "capped": true
   },
   "llama.cpp": {
@@ -7675,6 +7675,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-train-operate-compared",
+        "title": "Local Model Training & Operations Tools Compared (2026): Fine-Tuning and Observability",
+        "url": "/power-local-llm/local-llm-train-operate-compared",
+        "dateModified": "2026-09-21",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "agentic-inbox-review",
         "title": "Agentic Inbox Review: A Self-Hosted Email Client With an AI Agent",
         "url": "/power-local-llm/agentic-inbox-review",
@@ -7690,7 +7698,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "goose": {
@@ -8849,6 +8857,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-train-operate-compared",
+        "title": "Local Model Training & Operations Tools Compared (2026): Fine-Tuning and Observability",
+        "url": "/power-local-llm/local-llm-train-operate-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "llama-factory-review",
         "title": "LLaMA-Factory Review 2026: Fine-Tune 100+ LLMs via Web UI",
         "url": "/power-local-llm/llama-factory-review",
@@ -8910,18 +8926,10 @@
         "url": "/local-llms/lm-studio-advanced-features",
         "dateModified": "2026-08-28",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "deepseek-r1-vs-distills-explained-2026",
-        "title": "DeepSeek-R1 vs Distills 2026: What You Actually Lose",
-        "url": "/power-local-llm/deepseek-r1-vs-distills-explained-2026",
-        "dateModified": "2026-07-13",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "LLaMA-Factory": {
     "articles": [
@@ -8934,6 +8942,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-train-operate-compared",
+        "title": "Local Model Training & Operations Tools Compared (2026): Fine-Tuning and Observability",
+        "url": "/power-local-llm/local-llm-train-operate-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "lm-studio-advanced-features",
         "title": "LM Studio Advanced Features in 2026: GPU Settings, LoRA, and Fine-Tuning",
@@ -8942,7 +8958,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "litellm": {
@@ -9665,6 +9681,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-train-operate-compared",
+        "title": "Local Model Training & Operations Tools Compared (2026): Fine-Tuning and Observability",
+        "url": "/power-local-llm/local-llm-train-operate-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "mission-control-review",
         "title": "Mission Control Review: A Self-Hosted Control Plane for AI Agents",
         "url": "/power-local-llm/mission-control-review",
@@ -9704,7 +9728,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "little-coder": {
@@ -9863,6 +9887,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-train-operate-compared",
+        "title": "Local Model Training & Operations Tools Compared (2026): Fine-Tuning and Observability",
+        "url": "/power-local-llm/local-llm-train-operate-compared",
+        "dateModified": "2026-09-21",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "mlx-serve-review",
         "title": "mlx-serve Review 2026: Native Zig Inference Server for Apple Silicon",
         "url": "/power-local-llm/mlx-serve-review",
@@ -9870,7 +9902,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Lucebox": {
@@ -10020,9 +10052,17 @@
         "url": "/power-local-llm/local-llm-code-development-compared",
         "dateModified": "2026-09-21",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-train-operate-compared",
+        "title": "Local Model Training & Operations Tools Compared (2026): Fine-Tuning and Observability",
+        "url": "/power-local-llm/local-llm-train-operate-compared",
+        "dateModified": "2026-09-21",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "mlx-serve": {
@@ -10254,6 +10294,14 @@
         "tier": "mentioned"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-train-operate-compared",
+        "title": "Local Model Training & Operations Tools Compared (2026): Fine-Tuning and Observability",
+        "url": "/power-local-llm/local-llm-train-operate-compared",
+        "dateModified": "2026-09-21",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "cherry-studio-ai-desktop-client-2026",
         "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
@@ -10308,17 +10356,9 @@
         "url": "/power-local-llm/openclaw-review",
         "dateModified": "2026-09-20",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "aiclient2api-review",
-        "title": "AIClient2API Review: One Local Proxy for Every AI Protocol",
-        "url": "/power-local-llm/aiclient2api-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 179,
+    "totalCount": 180,
     "capped": true
   },
   "Qdrant": {
