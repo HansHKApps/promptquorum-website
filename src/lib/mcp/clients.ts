@@ -1,3 +1,5 @@
+import { CATEGORY_GROUPS, CATEGORY_GROUP_LABEL, CATEGORY_SUB_LABEL } from '@/lib/power-local-llm/apps/categories'
+
 // Per-client onboarding data for the "Connect your AI" panel above the
 // directory. One entry per client — adding a client is a data entry, not a
 // code change. English only for v1.
@@ -79,14 +81,13 @@ export const MCP_CLIENTS: McpClientOnboarding[] = [
   },
 ]
 
-export const GOALS = [
-  { id: 'chat', label: 'Chat with a private AI assistant', useCase: 'chat' },
-  { id: 'code', label: 'Coding help', useCase: 'code' },
-  { id: 'docs', label: 'Chat with my documents / PDFs', useCase: 'docs' },
-  { id: 'image', label: 'Generate or edit pictures', useCase: 'image' },
-  { id: 'audio', label: 'Speech, voice or audio', useCase: 'audio' },
-  { id: 'agent', label: 'Build AI agents / automations', useCase: 'agent' },
-] as const
+// Goals are the directory's own 7 category groups plus their subcategories,
+// so the panel offers exactly what the directory and search_apps understand.
+export const GOAL_GROUPS = CATEGORY_GROUPS.map((g) => ({
+  id: g.key,
+  label: CATEGORY_GROUP_LABEL[g.key],
+  subs: g.subs.map((k) => ({ id: k, label: CATEGORY_SUB_LABEL[k].en })),
+}))
 
 export const OS_OPTIONS = [
   { id: 'mac', label: 'macOS' },
@@ -97,7 +98,8 @@ export const OS_OPTIONS = [
 export const RAM_OPTIONS = [8, 16, 24, 32, 64, 128] as const
 
 export interface SetupProfile {
-  goalId: (typeof GOALS)[number]['id']
+  groupId: string
+  subId: string // '' = any subcategory
   os: (typeof OS_OPTIONS)[number]['id']
   ramGb: number
 }
@@ -105,15 +107,18 @@ export interface SetupProfile {
 // One self-contained prompt: the AI must act immediately instead of
 // interviewing the user, because goal/OS/RAM are already collected here.
 export function buildLaunchPrompt(client: McpClientOnboarding, profile: SetupProfile): string {
-  const goal = GOALS.find((g) => g.id === profile.goalId)!
+  const group = GOAL_GROUPS.find((g) => g.id === profile.groupId)!
+  const sub = group.subs.find((x) => x.id === profile.subId)
+  const categoryKey = sub ? sub.id : group.id
+  const goalLabel = sub ? `${group.label} → ${sub.label}` : group.label
   const os = OS_OPTIONS.find((o) => o.id === profile.os)!
   return [
     `Recommend a local AI app for me using ${client.toolRef}. Do not ask me any questions first. Everything you need is below.`,
     '',
-    `- What I want to do: ${goal.label}`,
+    `- What I want to do: ${goalLabel}`,
     `- Operating system: ${os.label}`,
     `- Memory (RAM / unified memory): ${profile.ramGb} GB`,
     '',
-    `Now call search_apps with useCase "${goal.useCase}", os "${profile.os}", ramGb ${profile.ramGb} (call list_categories first only if you need valid values), then answer with the best 2-3 apps: name, one-line why it fits, download link, and any caveat (hardware fit, price, license). Only use results from the tool, not your own memory. End with the tool's disclaimer. If the PromptQuorum tools are not available in this chat, say so in one sentence and stop.`,
+    `Now call search_apps with category "${categoryKey}", os "${profile.os}", ramGb ${profile.ramGb} (call list_categories first only if you need valid values), then answer with the best 2-3 apps: name, one-line why it fits, download link, a "Read the full article" link (the app's article.url, plus relatedArticles if present), and any caveat (hardware fit, price, license). Only use results from the tool, not your own memory. End with the tool's disclaimer. If the PromptQuorum tools are not available in this chat, say so in one sentence and stop.`,
   ].join('\n')
 }

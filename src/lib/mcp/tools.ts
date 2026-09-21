@@ -14,6 +14,8 @@ import { SUPPORTED_LANGS, HUB_LABELS } from '@/components/search/search-utils'
 import { buildAllSearchEntries } from '@/lib/search/build-search-entries'
 import { matchLicenseFamilies } from '@/lib/power-local-llm/license-taxonomy'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+import featureReviewIndex from '@/generated/feature-review-index.json'
+import toolArticleIndex from '@/generated/tool-article-index.json'
 import { CATEGORY_GROUPS, CATEGORY_GROUP_LABEL, CATEGORY_SUB_LABEL, CATEGORY_SUB_GROUP } from '@/lib/power-local-llm/apps/categories'
 import type { CategorySubKey } from '@/lib/power-local-llm/apps/categories'
 import type { OSKey, ToolRecord, UseCaseKey } from '@/lib/power-local-llm/apps/types'
@@ -173,7 +175,7 @@ export class AppNotFoundError extends Error {}
 export function getAppDetails(args: { slug: string }) {
   const app = localAiApps.find((t) => t.slug === args.slug)
   if (!app) throw new AppNotFoundError(`No directory entry "${args.slug}". Use search_promptquorum to find the right slug.`)
-  return app
+  return { ...app, ...articlesForApp(app) }
 }
 
 export function explainLicense(args: { licenseString: string }) {
@@ -187,6 +189,8 @@ export function explainLicense(args: { licenseString: string }) {
 
 export const DIRECTORY_DISCLAIMER =
   'Directory data is editorial, may be outdated, and download links are not verified by PromptQuorum. Check the official source before installing.'
+
+export const ARTICLE_HINT = 'Link each app\'s "article" as "Read the full article" and mention relatedArticles (e.g. category comparison) when present.'
 
 const USE_CASES: UseCaseKey[] = ['chat', 'code', 'agent', 'docs', 'image', 'audio', 'phone', 'build', 'serve']
 const OS_KEYS: OSKey[] = ['mac', 'win', 'linux', 'ios', 'android', 'web']
@@ -204,6 +208,32 @@ export function listCategories() {
   }
 }
 
+const SITE = 'https://www.promptquorum.com'
+
+export interface ArticleLink {
+  title: string
+  url: string
+}
+
+interface IndexedArticle {
+  title: string
+  url: string
+  tier: string
+}
+
+// The app's own review if it has one, otherwise the best article about it; up
+// to two more (usually the category comparison) as related reading. Both
+// indexes are build-time generated, so links always point at live pages.
+export function articlesForApp(app: ToolRecord): { article: ArticleLink | null; relatedArticles: ArticleLink[] } {
+  const about = ((toolArticleIndex as Record<string, { articles: IndexedArticle[] }>)[app.name]?.articles ?? []).filter((a) => a.tier === 'about')
+  const own = (featureReviewIndex as Record<string, { url: string }>)[app.slug]
+  const ownMatch = own ? about.find((a) => a.url === own.url) : undefined
+  const primary = own ? { title: ownMatch?.title ?? `${app.name} review`, url: own.url } : about[0]
+  const toLink = (a: { title: string; url: string }): ArticleLink => ({ title: a.title, url: `${SITE}${a.url}` })
+  const related = about.filter((a) => a.url !== primary?.url).slice(0, 2).map(toLink)
+  return { article: primary ? toLink(primary) : null, relatedArticles: related }
+}
+
 export interface AppSummary {
   slug: string
   name: string
@@ -218,7 +248,8 @@ export interface AppSummary {
   downloadUrl: string | null
   storeLinks?: Record<string, string>
   directoryUrl: string
-  reviewUrl: string | null
+  article: ArticleLink | null
+  relatedArticles: ArticleLink[]
   mcpSupport?: boolean
   upstreamStatus?: string
 }
@@ -247,7 +278,7 @@ function summarize(app: ToolRecord, fit: AppSummary['hardwareFit']): AppSummary 
     downloadUrl: app.url ? `https://${app.url}` : null,
     ...(app.storeLinks ? { storeLinks: app.storeLinks as Record<string, string> } : {}),
     directoryUrl: `https://www.promptquorum.com/power-local-llm/local-llm-software-directory-2026`,
-    reviewUrl: app.reviewSlug ? `https://www.promptquorum.com/power-local-llm/${app.reviewSlug}` : null,
+    ...articlesForApp(app),
     ...(app.mcpSupport ? { mcpSupport: true } : {}),
     ...(app.upstreamStatus ? { upstreamStatus: app.upstreamStatus.state } : {}),
   }
@@ -302,5 +333,6 @@ export function searchApps(args: {
     totalMatches: scored.length,
     results: scored.slice(0, limit).map(({ a, fit }) => summarize(a, fit)),
     disclaimer: DIRECTORY_DISCLAIMER,
+    instructions: ARTICLE_HINT,
   }
 }
