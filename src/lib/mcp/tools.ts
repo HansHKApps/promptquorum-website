@@ -14,6 +14,9 @@ import { SUPPORTED_LANGS, HUB_LABELS } from '@/components/search/search-utils'
 import { buildAllSearchEntries } from '@/lib/search/build-search-entries'
 import { matchLicenseFamilies } from '@/lib/power-local-llm/license-taxonomy'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+import { CATEGORY_GROUPS, CATEGORY_GROUP_LABEL, CATEGORY_SUB_LABEL, CATEGORY_SUB_GROUP } from '@/lib/power-local-llm/apps/categories'
+import type { CategorySubKey } from '@/lib/power-local-llm/apps/categories'
+import type { OSKey, ToolRecord, UseCaseKey } from '@/lib/power-local-llm/apps/types'
 
 import { peContent } from '@/lib/prompt-engineering/articles-barrel'
 import { llmContent } from '@/lib/local-llms/articles-barrel'
@@ -175,4 +178,129 @@ export function getAppDetails(args: { slug: string }) {
 
 export function explainLicense(args: { licenseString: string }) {
   return matchLicenseFamilies(args.licenseString).map(({ key, name, summary }) => ({ key, name, summary }))
+}
+
+// --- Directory recommendation tools (search_apps / list_categories) ---------
+// Answer only from the directory's own ToolRecords — never the open internet —
+// so recommendations stay curated. Hardware/OS fields that are null mean "not
+// yet researched", so those apps are kept but flagged, never silently dropped.
+
+export const DIRECTORY_DISCLAIMER =
+  'Directory data is editorial, may be outdated, and download links are not verified by PromptQuorum. Check the official source before installing.'
+
+const USE_CASES: UseCaseKey[] = ['chat', 'code', 'agent', 'docs', 'image', 'audio', 'phone', 'build', 'serve']
+const OS_KEYS: OSKey[] = ['mac', 'win', 'linux', 'ios', 'android', 'web']
+
+export function listCategories() {
+  return {
+    groups: CATEGORY_GROUPS.map((g) => ({
+      key: g.key,
+      label: CATEGORY_GROUP_LABEL[g.key],
+      categories: g.subs.map((k) => ({ key: k, label: CATEGORY_SUB_LABEL[k].en })),
+    })),
+    useCases: USE_CASES,
+    operatingSystems: OS_KEYS,
+    hint: 'Ask the user what they want to do and their OS and RAM/VRAM, then call search_apps.',
+  }
+}
+
+export interface AppSummary {
+  slug: string
+  name: string
+  tagline: string
+  categories: string[]
+  useCases: UseCaseKey[] | null
+  platforms: OSKey[] | null
+  price: string
+  license: string
+  hardware: { ramGb: number | null; vramGb: number | null; cpuOnly: boolean | null; variesByModel?: boolean } | null
+  hardwareFit: 'fits' | 'too-demanding' | 'unknown'
+  downloadUrl: string | null
+  storeLinks?: Record<string, string>
+  directoryUrl: string
+  reviewUrl: string | null
+  mcpSupport?: boolean
+  upstreamStatus?: string
+}
+
+function hardwareFit(app: ToolRecord, ramGb?: number, vramGb?: number): AppSummary['hardwareFit'] {
+  if (ramGb === undefined && vramGb === undefined) return 'unknown'
+  const hw = app.hardware
+  if (!hw || (hw.ramGb === null && hw.vramGb === null && hw.cpuOnly === null)) return 'unknown'
+  if (ramGb !== undefined && hw.ramGb !== null && hw.ramGb > ramGb) return 'too-demanding'
+  if (vramGb !== undefined && hw.vramGb !== null && hw.vramGb > vramGb && !hw.cpuOnly) return 'too-demanding'
+  return 'fits'
+}
+
+function summarize(app: ToolRecord, fit: AppSummary['hardwareFit']): AppSummary {
+  return {
+    slug: app.slug,
+    name: app.name,
+    tagline: app.tagline.en ?? '',
+    categories: app.categories.map((c) => CATEGORY_SUB_LABEL[c]?.en ?? c),
+    useCases: app.uses,
+    platforms: app.platforms,
+    price: app.price,
+    license: app.license,
+    hardware: app.hardware,
+    hardwareFit: fit,
+    downloadUrl: app.url ? `https://${app.url}` : null,
+    ...(app.storeLinks ? { storeLinks: app.storeLinks as Record<string, string> } : {}),
+    directoryUrl: `https://www.promptquorum.com/power-local-llm/local-llm-software-directory-2026`,
+    reviewUrl: app.reviewSlug ? `https://www.promptquorum.com/power-local-llm/${app.reviewSlug}` : null,
+    ...(app.mcpSupport ? { mcpSupport: true } : {}),
+    ...(app.upstreamStatus ? { upstreamStatus: app.upstreamStatus.state } : {}),
+  }
+}
+
+let cachedAppFuse: Fuse<ToolRecord> | null = null
+function getAppFuse() {
+  if (!cachedAppFuse) {
+    cachedAppFuse = new Fuse(localAiApps, {
+      keys: [
+        { name: 'name', weight: 3 },
+        { name: 'tagline.en', weight: 2 },
+        { name: 'slug', weight: 1 },
+      ],
+      threshold: 0.35,
+      ignoreLocation: true,
+      minMatchCharLength: 2,
+    })
+  }
+  return cachedAppFuse
+}
+
+export function searchApps(args: {
+  query?: string
+  category?: string
+  useCase?: string
+  os?: string
+  ramGb?: number
+  vramGb?: number
+  price?: string
+  limit?: number
+}) {
+  const limit = Math.min(Math.max(args.limit ?? 5, 1), 15)
+  let pool: ToolRecord[] = args.query ? getAppFuse().search(args.query).map((r) => r.item) : [...localAiApps]
+  pool = pool.filter((a) => a.status !== 'planned' && a.upstreamStatus?.state !== 'archived')
+
+  if (args.category) {
+    const c = args.category
+    pool = pool.filter((a) => a.categories.some((k) => k === c || CATEGORY_SUB_GROUP[k as CategorySubKey] === c))
+  }
+  if (args.useCase) pool = pool.filter((a) => a.uses?.includes(args.useCase as UseCaseKey))
+  if (args.os) pool = pool.filter((a) => a.platforms === null || a.platforms.includes(args.os as OSKey))
+  if (args.price) pool = pool.filter((a) => a.price === args.price)
+
+  const scored = pool.map((a) => ({ a, fit: hardwareFit(a, args.ramGb, args.vramGb) })).filter((x) => x.fit !== 'too-demanding')
+  // Fuse order is preserved for query searches; otherwise rank reviewed and
+  // well-starred tools first so the top few are the safest recommendations.
+  if (!args.query) {
+    scored.sort((x, y) => Number(!!y.a.reviewSlug) - Number(!!x.a.reviewSlug) || (y.a.stars ?? 0) - (x.a.stars ?? 0))
+  }
+  return {
+    totalMatches: scored.length,
+    results: scored.slice(0, limit).map(({ a, fit }) => summarize(a, fit)),
+    disclaimer: DIRECTORY_DISCLAIMER,
+  }
 }

@@ -16,6 +16,7 @@
 import { useMemo, useState } from 'react'
 import type { Language } from '@/lib/blog/blogContent'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
+import { McpConnectPanel } from './McpConnectPanel'
 import { StatsBar } from './StatsBar'
 import { WantChips } from './WantChips'
 import { SubcategoryChips } from './SubcategoryChips'
@@ -186,6 +187,7 @@ export function DirectoryClient({ apps, lang }: Props) {
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+      {lang === 'en' && <McpConnectPanel />}
       <div className="space-y-4 mb-6">
         <StatsBar total={apps.length} visible={sorted.length} byLocality={localityCounts} lang={lang} />
         <WantChips counts={wantCounts} selected={want} onSelect={handleWant} lang={lang} />

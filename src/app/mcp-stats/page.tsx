@@ -23,6 +23,8 @@ const TOOL_LABELS: Record<McpToolName, string> = {
   list_clusters: 'list_clusters',
   get_app_details: 'get_app_details',
   explain_license: 'explain_license',
+  search_apps: 'search_apps',
+  list_categories: 'list_categories',
 }
 
 export default async function McpStatsPage() {
