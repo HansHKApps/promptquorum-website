@@ -1,5 +1,6 @@
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 import { founderText } from '@/lib/power-local-llm/founderText'
+import { featureReviewUrl } from '@/components/local-ai-directory/reviewLinks'
 import type { Language } from '@/lib/blog/blogContent'
 
 export interface FounderReviewEntry {
@@ -24,14 +25,15 @@ export function getFounderReviews(lang: Language = 'en', limit = 10): FounderRev
   return localAiApps
     .filter((tool) => tool.founder != null || tool.founderReviewedDate != null)
     .map((tool) => {
-      const base = tool.reviewSlug ? `/power-local-llm/${tool.reviewSlug}` : `/directory#${tool.slug}`
+      const url = featureReviewUrl(tool.slug, lang)
+        ?? (lang === 'en' ? `/directory#${tool.slug}` : `/${lang}/directory#${tool.slug}`)
       return {
         slug: tool.slug,
         appName: tool.name,
         founderWho: tool.founder?.who[lang] ?? tool.founder?.who.en ?? '',
         excerpt: tool.founder ? founderText(tool.founder.why, lang) : '',
         date: tool.founderReviewedDate ?? tool.founder?.providedDate ?? '',
-        url: lang === 'en' ? base : `/${lang}${base}`,
+        url,
       }
     })
     .filter((entry) => entry.date !== '')
