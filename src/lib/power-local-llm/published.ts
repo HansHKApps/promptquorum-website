@@ -321,6 +321,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'local-llm-knowledge-retrieval-compared',
   // Category comparison guide for chat-assistants (all 9 locales) — generated table, see apps/compare-schema.ts
   'local-llm-chat-assistants-compared',
+  // Category comparison guide for code-development (all 9 locales) — generated table, see apps/compare-schema.ts
+  'local-llm-code-development-compared',
   'coqui-tts-review',
   'xtts-v2-review',
   'bark-tts-review',

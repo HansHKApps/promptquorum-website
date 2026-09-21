@@ -36,6 +36,8 @@ export const app: ToolRecord = {
     ar: 'وكيل برمجة مفتوح المصدر يعتمد على الطرفية أولاً، يدعم أكثر من 75 مزود نماذج، بما في ذلك النماذج المحلية',
     ko: '75개 이상의 모델 제공업체(로컬 모델 포함)를 지원하는 터미널 우선 오픈소스 코딩 에이전트',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, agentMode: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
   reviewSlug: 'opencode-review', // dedicated PromptQuorum review — pinned to #1 in the article index
 }

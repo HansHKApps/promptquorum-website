@@ -35,5 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'agent-zero-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v2.12', versionSourceUrl: 'https://github.com/agent0ai/agent-zero/releases/tag/v2.12' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { memory: true, codeExecution: true, webBrowsing: true, sandbox: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

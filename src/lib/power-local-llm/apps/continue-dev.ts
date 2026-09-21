@@ -40,5 +40,7 @@ export const app: ToolRecord = {
     ko: '단종된 VS Code/JetBrains 어시스턴트 — 2026년 Cursor가 제작사를 인수',
   },
   reviewSlug: 'continue-dev-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { vscode: true, jetbrains: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '스스로 발전하는 개인 AI 에이전트, 지속적인 기억',
   },
   reviewSlug: 'hermes-agent-review-2026', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, memory: true, codeExecution: true, webBrowsing: true, sandbox: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

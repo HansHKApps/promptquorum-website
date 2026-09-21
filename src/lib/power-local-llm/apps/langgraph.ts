@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '상태를 갖춘 그래프 기반 에이전트 워크플로',
   },
   reviewSlug: 'langgraph-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { memory: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

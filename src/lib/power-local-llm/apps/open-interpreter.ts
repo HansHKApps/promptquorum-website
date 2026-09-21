@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '로컬 LLM이 컴퓨터를 제어하고 코드를 실행하도록 허용',
   },
   reviewSlug: 'open-interpreter-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { mcp: true, codeExecution: true, sandbox: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

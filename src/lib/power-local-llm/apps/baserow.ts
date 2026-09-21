@@ -37,5 +37,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'baserow-review', // dedicated PromptQuorum review — added 2026-09-19
   pqReview: { date: '2026-09-20', version: '2.3.4', versionSourceUrl: 'https://github.com/baserow/baserow/releases/tag/2.3.4' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { dockerDeploy: true, apiServer: true },
   lastVerifiedDate: '2026-09-18',
 }

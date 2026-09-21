@@ -38,5 +38,7 @@ export const app: ToolRecord = {
     ko: '데스크톱용 다중 AI 에이전트 워크스페이스 겸 오케스트레이터, Ollama와 클라우드 모델, 현재 Windows만 지원',
   },
   reviewSlug: 'rapr-ai-review', // dedicated PromptQuorum review
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, ollama: true, mcp: true, memory: true, multiAgent: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
 }

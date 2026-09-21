@@ -36,5 +36,7 @@ export const app: ToolRecord = {
     ar: 'وكلاء ذكاء اصطناعي محليون مسرَّعون بواسطة معالج NPU والرسومات المدمجة في AMD Ryzen AI',
     ko: 'AMD Ryzen AI NPU 및 iGPU 하드웨어로 가속되는 로컬 AI 에이전트',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, mcp: true, memory: true, toolCalling: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
 }

@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '셸 명령어 생성 및 채팅용 CLI 도구',
   },
   reviewSlug: 'shell-gpt-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { ollama: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

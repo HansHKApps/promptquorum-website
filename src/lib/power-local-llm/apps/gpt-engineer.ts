@@ -35,5 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'gpt-engineer-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v0.3.1', versionSourceUrl: 'https://github.com/AntonOsika/gpt-engineer/releases/tag/v0.3.1' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, codeExecution: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

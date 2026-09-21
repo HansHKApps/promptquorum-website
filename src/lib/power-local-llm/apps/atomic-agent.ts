@@ -32,6 +32,8 @@ export const app: ToolRecord = {
     ar: 'وكيل ذكاء اصطناعي محلي أولاً يتصفح ويحرر الملفات وينفذ أوامر الطرفية عبر llama.cpp',
     ko: 'llama.cpp를 통해 탐색하고 파일을 편집하며 셸 명령을 실행하는 로컬 우선 AI 에이전트',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, mcp: true, memory: true, toolCalling: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
   reviewSlug: 'atomic-agent-review',
 }

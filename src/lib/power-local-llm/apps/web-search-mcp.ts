@@ -40,5 +40,7 @@ export const app: ToolRecord = {
   },
   mcpSupport: true, // it is an MCP server by definition — README: "A TypeScript MCP (Model Context Protocol) server", verified 2026-09-18
   reviewSlug: 'web-search-mcp-review', // dedicated PromptQuorum review — added 2026-09-19
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, mcp: true },
   lastVerifiedDate: '2026-09-18',
 }

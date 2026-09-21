@@ -32,6 +32,8 @@ export const app: ToolRecord = {
     ar: 'وكيل ذكاء اصطناعي محلي أولاً للبرمجة والأتمتة وسير العمل — تديره مؤسسة Linux Foundation',
     ko: '코딩, 자동화, 워크플로를 위한 로컬 우선 AI 에이전트 — Linux Foundation이 관리',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { ollama: true, mcp: true, multiAgent: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
   reviewSlug: 'goose-review',
 }

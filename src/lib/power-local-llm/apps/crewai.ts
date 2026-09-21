@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '역할 기반 멀티에이전트 워크플로',
   },
   reviewSlug: 'crewai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, ollama: true, mcp: true, memory: true, multiAgent: true, toolCalling: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

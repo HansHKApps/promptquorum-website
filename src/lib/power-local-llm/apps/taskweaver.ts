@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '작업 계획을 위한 마이크로소프트의 코드 우선 에이전트',
   },
   reviewSlug: 'taskweaver-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, multiAgent: true, toolCalling: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

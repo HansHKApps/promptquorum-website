@@ -35,6 +35,6 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'dify-ai-workflow-builder-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { visualBuilder: true, agents: true, dockerDeploy: true, apiServer: true },
+  compare: { visualBuilder: true, localLlm: true, agents: true, dockerDeploy: true, apiServer: true, mcp: true, toolCalling: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

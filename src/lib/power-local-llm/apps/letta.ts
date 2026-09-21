@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '장기 기억을 갖춘 에이전트',
   },
   reviewSlug: 'letta-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { memory: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

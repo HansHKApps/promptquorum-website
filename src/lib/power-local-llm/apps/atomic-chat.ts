@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '데스크톱과 모바일용 오프라인 채팅 앱, 원클릭으로 로컬 에이전트 실행',
   },
   reviewSlug: 'atomic-chat-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, memory: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

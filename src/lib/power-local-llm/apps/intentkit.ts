@@ -34,5 +34,7 @@ export const app: ToolRecord = {
   mcpSupport: true, // repo's GitHub navigation lists an MCP Registry for integrating external tools — verified 2026-09-18
   reviewSlug: 'intentkit-review', // dedicated PromptQuorum review — added 2026-09-19
   pqReview: { date: '2026-09-20', version: 'v2.6.3', versionSourceUrl: 'https://github.com/crestalnetwork/intentkit/releases/tag/v2.6.3' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { multiAgent: true },
   lastVerifiedDate: '2026-09-18',
 }

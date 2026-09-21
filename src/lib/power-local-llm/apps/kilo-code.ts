@@ -36,6 +36,8 @@ export const app: ToolRecord = {
     ar: 'وكيل برمجة مفتوح المصدر ومستقل عن النموذج لـVS Code وJetBrains وسطر الأوامر، مع دعم النماذج المحلية',
     ko: 'VS Code, JetBrains, CLI용 모델 독립적 오픈소스 코딩 에이전트, 로컬 모델 지원',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, mcp: true, vscode: true, jetbrains: true, agentMode: true, autocomplete: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
   reviewSlug: 'kilo-code-review', // dedicated PromptQuorum review — pinned to #1 in the article index
 }

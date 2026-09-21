@@ -275,7 +275,62 @@ export const COMPARE_SEGMENTS: Record<CategoryGroupKey, CompareSegment[]> = {
       ],
     },
   ],
-  'code-development': [],
+  // Pilot 6. A tool in several sub-categories appears in each matching segment. Prompt tooling/evals (1 tool) is folded into agent frameworks & SDKs.
+  'code-development': [
+    {
+      key: 'coding-assistants',
+      label: 'Coding assistants & IDE plugins',
+      subs: ['code-assistants-ide-plugins'],
+      attributes: [
+        { key: 'localLlm', label: 'Works with local LLMs', kind: 'boolean' },
+        { key: 'ollama', label: 'Connects to Ollama', kind: 'boolean' },
+        { key: 'vscode', label: 'VS Code extension', kind: 'boolean' },
+        { key: 'jetbrains', label: 'JetBrains plugin', kind: 'boolean' },
+        { key: 'agentMode', label: 'Agent mode (multi-step edits)', kind: 'boolean' },
+        { key: 'autocomplete', label: 'Inline code completion', kind: 'boolean' },
+        { key: 'mcp', label: 'MCP support', kind: 'boolean' },
+      ],
+    },
+    {
+      key: 'agent-frameworks',
+      label: 'Agent frameworks & SDKs',
+      subs: ['agent-frameworks', 'sdks-libraries', 'prompt-tooling-evals'],
+      attributes: [
+        { key: 'localLlm', label: 'Works with local LLMs', kind: 'boolean' },
+        { key: 'ollama', label: 'Connects to Ollama', kind: 'boolean' },
+        { key: 'multiAgent', label: 'Multi-agent workflows', kind: 'boolean' },
+        { key: 'memory', label: 'Persistent memory', kind: 'boolean' },
+        { key: 'mcp', label: 'MCP support', kind: 'boolean' },
+        { key: 'toolCalling', label: 'Tool calling', kind: 'boolean' },
+      ],
+    },
+    {
+      key: 'autonomous-agents',
+      label: 'Autonomous agents',
+      subs: ['autonomous-agents'],
+      attributes: [
+        { key: 'localLlm', label: 'Works with local LLMs', kind: 'boolean' },
+        { key: 'ollama', label: 'Connects to Ollama', kind: 'boolean' },
+        { key: 'codeExecution', label: 'Runs code', kind: 'boolean' },
+        { key: 'webBrowsing', label: 'Browses the web', kind: 'boolean' },
+        { key: 'memory', label: 'Persistent memory', kind: 'boolean' },
+        { key: 'sandbox', label: 'Sandboxed execution', kind: 'boolean' },
+      ],
+    },
+    {
+      key: 'workflow-builders',
+      label: 'Workflow builders',
+      subs: ['workflow-node-builders'],
+      attributes: [
+        { key: 'visualBuilder', label: 'Visual / drag-and-drop builder', kind: 'boolean' },
+        { key: 'localLlm', label: 'Works with local LLMs', kind: 'boolean' },
+        { key: 'ollama', label: 'Connects to Ollama', kind: 'boolean' },
+        { key: 'dockerDeploy', label: 'Docker / self-hosting', kind: 'boolean' },
+        { key: 'apiServer', label: 'Local API server', kind: 'boolean' },
+        { key: 'mcp', label: 'MCP support', kind: 'boolean' },
+      ],
+    },
+  ],
   'train-operate': [],
 }
 
@@ -287,7 +342,7 @@ export const CATEGORY_COMPARE_ARTICLE: Record<CategoryGroupKey, string | null> =
   'voice-audio': 'local-llm-voice-audio-compared',
   'run-serve': 'local-llm-run-serve-compared',
   'chat-assistants': 'local-llm-chat-assistants-compared',
-  'code-development': null,
+  'code-development': 'local-llm-code-development-compared',
   'knowledge-retrieval': 'local-llm-knowledge-retrieval-compared',
   'images-video': 'local-llm-images-video-compared',
   'train-operate': null,

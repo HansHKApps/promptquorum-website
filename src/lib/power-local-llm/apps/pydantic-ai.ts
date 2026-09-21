@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'Pydantic 위에 구축된 타입 안전 에이전트 프레임워크',
   },
   reviewSlug: 'pydantic-ai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { ollama: true, mcp: true, multiAgent: true, toolCalling: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

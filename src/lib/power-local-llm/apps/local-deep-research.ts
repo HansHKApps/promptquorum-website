@@ -33,6 +33,6 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'local-deep-research-review', // dedicated PromptQuorum review — added 2026-09-19
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { localLlm: true, citations: true, webSearch: true, privateDocs: true },
+  compare: { localLlm: true, citations: true, webSearch: true, privateDocs: true, ollama: true },
   lastVerifiedDate: '2026-09-18',
 }

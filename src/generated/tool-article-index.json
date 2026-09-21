@@ -10,6 +10,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "cherry-studio-ai-desktop-client-2026",
         "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/nanobot-review",
         "dateModified": "2026-09-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "baserow-review",
-        "title": "Baserow Review 2026: A No-Code Database With a Local-AI Field",
-        "url": "/power-local-llm/baserow-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 286,
+    "totalCount": 287,
     "capped": true
   },
   "llama.cpp": {
@@ -947,6 +947,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-app-non-technical-users",
         "title": "Best Local AI App for Non-Technical Users (2026)",
         "url": "/power-local-llm/local-ai-app-non-technical-users",
@@ -970,7 +978,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Jan": {
@@ -1242,6 +1250,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "cherry-studio-ai-desktop-client-2026",
         "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
@@ -1304,17 +1320,9 @@
         "url": "/power-local-llm/phoneclaw-review",
         "dateModified": "2026-09-12",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "ekorbia-review",
-        "title": "Ekorbia Review 2026: Free Open-Source Local AI Desktop App",
-        "url": "/power-local-llm/ekorbia-review",
-        "dateModified": "2026-09-07",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 14,
+    "totalCount": 15,
     "capped": true
   },
   "Cherry Studio": {
@@ -1561,6 +1569,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "nanobot-review",
         "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
         "url": "/power-local-llm/nanobot-review",
@@ -1600,7 +1616,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "Locally Uncensored": {
@@ -1611,6 +1627,14 @@
         "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -1630,7 +1654,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "BoltAI": {
@@ -1778,9 +1802,17 @@
         "url": "/power-local-llm/open-felix-review",
         "dateModified": "2026-09-04",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Osaurus": {
@@ -2569,6 +2601,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "pearai-review",
         "title": "PearAI Review: The Free VS Code Fork With a Rocky Start",
         "url": "/power-local-llm/pearai-review",
@@ -2630,17 +2670,9 @@
         "url": "/power-local-llm/autonomous-local-agents-actually-work",
         "dateModified": "2026-08-29",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-ai-coding-tools-comparison-2026",
-        "title": "Best AI Coding Tools Compared 2026: Cursor vs Continue.dev",
-        "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
-        "dateModified": "2026-08-29",
-        "tier": "about"
       }
     ],
-    "totalCount": 40,
+    "totalCount": 41,
     "capped": true
   },
   "Cline": {
@@ -2651,6 +2683,14 @@
         "title": "Cline Review: The Open-Source Agent That Grew From Claude Dev",
         "url": "/power-local-llm/cline-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -2716,17 +2756,9 @@
         "url": "/local-llms/local-llm-openai-compatible-api",
         "dateModified": "2026-08-28",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-local-coding-models-2026",
-        "title": "Best Local Coding Models in 2026: Qwen3-Coder vs DeepSeek vs Codestral",
-        "url": "/power-local-llm/best-local-coding-models-2026",
-        "dateModified": "2026-08-27",
-        "tier": "about"
       }
     ],
-    "totalCount": 38,
+    "totalCount": 39,
     "capped": true
   },
   "PearAI": {
@@ -2759,6 +2791,14 @@
         "title": "Windsurf Review: From Codeium to a $2.4B Google Deal to Devin Desktop",
         "url": "/power-local-llm/windsurf-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -2826,7 +2866,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "Sourcegraph Cody": {
@@ -2875,6 +2915,14 @@
         "title": "Tabby Review: The Self-Hosted, Open-Source Copilot Alternative",
         "url": "/power-local-llm/tabby-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -2942,7 +2990,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "CodeGPT": {
@@ -2954,9 +3002,17 @@
         "url": "/power-local-llm/codegpt-review",
         "dateModified": "2026-09-05",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "OpenHands": {
@@ -3013,6 +3069,20 @@
     "totalCount": 6,
     "capped": false
   },
+  "Cursor (local mode)": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
   "Twinny": {
     "articles": [
       {
@@ -3022,9 +3092,17 @@
         "url": "/power-local-llm/twinny-review",
         "dateModified": "2026-09-05",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Bodega One Code": {
@@ -3035,6 +3113,14 @@
         "title": "Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE",
         "url": "/power-local-llm/bodega-one-code-review-2026",
         "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -3054,7 +3140,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Aider": {
@@ -3133,15 +3219,29 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "claude-code-local-review",
-        "title": "claude-code-local Review 2026: Run Claude Code on a Local Model",
-        "url": "/power-local-llm/claude-code-local-review",
-        "dateModified": "2026-09-19",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 31,
+    "totalCount": 32,
     "capped": true
+  },
+  "ShellGPT": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
   },
   "aichat": {
     "articles": [
@@ -3209,6 +3309,20 @@
       }
     ],
     "totalCount": 3,
+    "capped": false
+  },
+  "Blackbox AI (CLI)": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "PrivateGPT": {
@@ -3441,6 +3555,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-knowledge-retrieval-compared",
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -3502,17 +3624,9 @@
         "url": "/power-local-llm/langfuse-review",
         "dateModified": "2026-09-18",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "n8n-review",
-        "title": "n8n Review 2026: AI Workflow Automation With Local Ollama Support",
-        "url": "/power-local-llm/n8n-review",
-        "dateModified": "2026-09-12",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 11,
+    "totalCount": 12,
     "capped": true
   },
   "Flowise": {
@@ -3523,6 +3637,14 @@
         "title": "Flowise Review 2026: Visual LangChain Workflow Builder Is Shutting Down",
         "url": "/power-local-llm/flowise-ai-visual-workflow-builder-review",
         "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -3574,7 +3696,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "Langflow": {
@@ -3585,6 +3707,14 @@
         "title": "Langflow Review 2026: The IBM-Owned Alternative to Flowise",
         "url": "/power-local-llm/langflow-visual-ai-orchestration-review",
         "dateModified": "2026-09-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -3612,7 +3742,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "LlamaIndex": {
@@ -3993,6 +4123,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "nanobot-review",
         "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
         "url": "/power-local-llm/nanobot-review",
@@ -4054,17 +4192,9 @@
         "url": "/local-llms/best-ai-agent-framework-2026",
         "dateModified": "2026-08-28",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "cognee-review",
-        "title": "cognee Review: Open-Source Knowledge-Graph Memory for AI Agents",
-        "url": "/power-local-llm/cognee-review",
-        "dateModified": "2026-09-18",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 20,
+    "totalCount": 21,
     "capped": true
   },
   "AutoGen": {
@@ -4075,6 +4205,14 @@
         "title": "AutoGen Review 2026: Maintenance-Mode Status & AG2 Fork",
         "url": "/power-local-llm/autogen-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -4140,17 +4278,9 @@
         "url": "/power-local-llm/intentkit-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "agent-zero-review",
-        "title": "Agent Zero Review 2026: Features, Install, Alternatives",
-        "url": "/power-local-llm/agent-zero-review",
-        "dateModified": "2026-09-11",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "Semantic Kernel": {
@@ -4161,6 +4291,14 @@
         "title": "Semantic Kernel Review 2026: Features, Pricing, Alternatives",
         "url": "/power-local-llm/semantic-kernel-review",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -4212,7 +4350,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "LangGraph": {
@@ -4283,23 +4421,37 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "autogpt-local-review-2026",
         "title": "AutoGPT Review 2026: Classic Agent vs. Hosted Platform",
         "url": "/power-local-llm/autogpt-local-review-2026",
         "dateModified": "2026-09-20",
         "tier": "mentioned"
-      },
+      }
+    ],
+    "totalCount": 22,
+    "capped": true
+  },
+  "Letta (formerly MemGPT)": {
+    "articles": [
       {
         "cluster": "power-local-llm",
-        "slug": "cognee-review",
-        "title": "cognee Review: Open-Source Knowledge-Graph Memory for AI Agents",
-        "url": "/power-local-llm/cognee-review",
-        "dateModified": "2026-09-18",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 21,
-    "capped": true
+    "totalCount": 1,
+    "capped": false
   },
   "Pydantic AI": {
     "articles": [
@@ -4310,9 +4462,17 @@
         "url": "/power-local-llm/pydantic-ai-review",
         "dateModified": "2026-09-11",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "SuperAGI": {
@@ -4357,6 +4517,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "phoneclaw-review",
         "title": "PhoneClaw Review 2026: The On-Device iPhone AI Agent",
         "url": "/power-local-llm/phoneclaw-review",
@@ -4372,7 +4540,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Agent Zero": {
@@ -4383,6 +4551,14 @@
         "title": "Agent Zero Review 2026: Features, Install, Alternatives",
         "url": "/power-local-llm/agent-zero-review",
         "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -4410,7 +4586,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "GPT Engineer": {
@@ -4425,6 +4601,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "opencode-review",
         "title": "OpenCode Review: The Open-Source Terminal Coding Agent",
         "url": "/power-local-llm/opencode-review",
@@ -4432,7 +4616,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "CAMEL": {
@@ -4447,6 +4631,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "pydantic-ai-review",
         "title": "Pydantic AI Review 2026: Features, Structured Outputs, Alternatives",
         "url": "/power-local-llm/pydantic-ai-review",
@@ -4454,7 +4646,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "TaskWeaver": {
@@ -4466,9 +4658,17 @@
         "url": "/power-local-llm/taskweaver-review",
         "dateModified": "2026-09-11",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "DSPy": {
@@ -4545,6 +4745,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "dreamserver-review",
         "title": "DreamServer Review: One-Command Local AI Server Stack (2026)",
         "url": "/power-local-llm/dreamserver-review",
@@ -4566,18 +4774,10 @@
         "url": "/power-local-llm/nvidia-g-assist-review",
         "dateModified": "2026-09-12",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "jan-review",
-        "title": "Jan Review 2026: The Open-Source, Offline ChatGPT Alternative",
-        "url": "/power-local-llm/jan-review",
-        "dateModified": "2026-09-06",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "Hermes Agent": {
     "articles": [
@@ -4587,6 +4787,14 @@
         "title": "Hermes Agent Review 2026: Self-Hosted AI Agent",
         "url": "/power-local-llm/hermes-agent-review-2026",
         "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -4614,7 +4822,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Msty Go": {
@@ -4625,6 +4833,14 @@
         "title": "Msty Go Review 2026: Msty's Local-First AI Agent",
         "url": "/power-local-llm/msty-go-review-2026",
         "dateModified": "2026-09-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -4652,7 +4868,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Whisper.cpp": {
@@ -6327,6 +6543,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-images-video-compared",
         "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
         "url": "/power-local-llm/local-llm-images-video-compared",
@@ -6388,17 +6612,9 @@
         "url": "/power-local-llm/invokeai-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "stableswarmui-review",
-        "title": "SwarmUI Review (2026): The Multi-GPU Stable Diffusion Web UI",
-        "url": "/power-local-llm/stableswarmui-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 18,
+    "totalCount": 19,
     "capped": true
   },
   "AUTOMATIC1111": {
@@ -7254,9 +7470,17 @@
         "url": "/power-local-llm/autonomous-local-agents-actually-work",
         "dateModified": "2026-08-29",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Agnai": {
@@ -7481,6 +7705,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "agnai-review",
         "title": "Agnai Review (2026): Self-Hostable AI Roleplay Chat",
         "url": "/power-local-llm/agnai-review",
@@ -7528,7 +7760,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 7,
+    "totalCount": 8,
     "capped": false
   },
   "Zed": {
@@ -7543,6 +7775,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "atomic-chat-review",
         "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
@@ -7550,7 +7790,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Lemonade": {
@@ -7630,9 +7870,17 @@
         "url": "/power-local-llm/amd-gaia-review",
         "dateModified": "2026-09-12",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Atomic Agent": {
@@ -7647,6 +7895,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "atomic-chat-review",
         "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
@@ -7654,7 +7910,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "dograh": {
@@ -7691,6 +7947,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "atomic-chat-review",
         "title": "Atomic Chat Review 2026: Local AI, Agents, and API",
         "url": "/power-local-llm/atomic-chat-review",
@@ -7698,7 +7962,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "OpenCode": {
@@ -7709,6 +7973,14 @@
         "title": "OpenCode Review: The Open-Source Terminal Coding Agent",
         "url": "/power-local-llm/opencode-review",
         "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -7774,18 +8046,10 @@
         "url": "/power-local-llm/multica-review",
         "dateModified": "2026-09-14",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "github-copilot-cli-review",
-        "title": "GitHub Copilot CLI Review 2026: Cloud-Backed by Default, Local via BYOK",
-        "url": "/power-local-llm/github-copilot-cli-review",
-        "dateModified": "2026-09-12",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "MaxKB": {
     "articles": [
@@ -7903,6 +8167,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "blackbox-ai-cli-review",
         "title": "Blackbox AI CLI Review: A Multi-Agent Terminal Tool, Fact-Checked",
         "url": "/power-local-llm/blackbox-ai-cli-review",
@@ -7926,7 +8198,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Atomic Bot": {
@@ -8136,9 +8408,17 @@
         "url": "/power-local-llm/phoneclaw-review",
         "dateModified": "2026-09-12",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Ypipe": {
@@ -8171,6 +8451,14 @@
         "title": "n8n Review 2026: AI Workflow Automation With Local Ollama Support",
         "url": "/power-local-llm/n8n-review",
         "dateModified": "2026-09-12",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
         "tier": "about"
       },
       {
@@ -8238,7 +8526,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "Docker Model Runner": {
@@ -8522,9 +8810,17 @@
         "url": "/power-local-llm/rapr-ai-review",
         "dateModified": "2026-09-04",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Chatty-mini": {
@@ -8769,6 +9065,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -8784,7 +9088,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "Vane (formerly Perplexica)": {
@@ -8862,9 +9166,17 @@
         "url": "/power-local-llm/baserow-review",
         "dateModified": "2026-09-19",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Blinko": {
@@ -9083,6 +9395,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
@@ -9090,7 +9410,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "NVIDIA Dynamo": {
@@ -9192,9 +9512,17 @@
         "url": "/power-local-llm/intentkit-review",
         "dateModified": "2026-09-19",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Izwi": {
@@ -9388,9 +9716,17 @@
         "url": "/power-local-llm/little-coder-review",
         "dateModified": "2026-09-19",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "LMDeploy": {
@@ -9459,6 +9795,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-knowledge-retrieval-compared",
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -9474,7 +9818,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "LongMemory": {
@@ -9668,9 +10012,17 @@
         "url": "/power-local-llm/mission-control-review",
         "dateModified": "2026-09-19",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "mlx-serve": {
@@ -9894,6 +10246,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "mentioned"
+      },
+      {
         "cluster": "local-llms",
         "slug": "cherry-studio-ai-desktop-client-2026",
         "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
@@ -9956,17 +10316,9 @@
         "url": "/power-local-llm/aiclient2api-review",
         "dateModified": "2026-09-19",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "baserow-review",
-        "title": "Baserow Review 2026: A No-Code Database With a Local-AI Field",
-        "url": "/power-local-llm/baserow-review",
-        "dateModified": "2026-09-19",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 178,
+    "totalCount": 179,
     "capped": true
   },
   "Qdrant": {
@@ -10113,6 +10465,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-knowledge-retrieval-compared",
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -10136,7 +10496,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "Shimmy": {
@@ -10304,9 +10664,17 @@
         "url": "/power-local-llm/translate-books-with-llms-review",
         "dateModified": "2026-09-19",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "TurboFieldfare": {
@@ -10472,9 +10840,17 @@
         "url": "/power-local-llm/web-search-mcp-review",
         "dateModified": "2026-09-19",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-code-development-compared",
+        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
+        "url": "/power-local-llm/local-llm-code-development-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Willow Inference Server": {

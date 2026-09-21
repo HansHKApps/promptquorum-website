@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '자율 다단계 작업 에이전트, 로컬 또는 클라우드',
   },
   reviewSlug: 'msty-go-review-2026', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, memory: true, sandbox: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

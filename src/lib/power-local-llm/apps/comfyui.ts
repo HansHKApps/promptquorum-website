@@ -36,6 +36,6 @@ export const app: ToolRecord = {
   reviewSlug: 'comfyui-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v0.36.0', versionSourceUrl: 'https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.36.0' },
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { inpainting: true, videoGeneration: true, nodeWorkflow: true, extensions: true, apiServer: true },
+  compare: { visualBuilder: true, apiServer: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }
