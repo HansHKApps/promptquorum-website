@@ -38,6 +38,8 @@ export const app: ToolRecord = {
     ar: 'منصة أتمتة سير العمل بعقد ذكاء اصطناعي/نماذج لغوية أصلية، قابلة للاستضافة الذاتية مع دعم النماذج المحلية',
     ko: '네이티브 AI/LLM 노드를 갖춘 워크플로 자동화 플랫폼, 로컬 모델을 지원하는 자체 호스팅 가능',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { visualBuilder: true, localLlm: true, dockerDeploy: true, mcp: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
   reviewSlug: 'n8n-review',
 }

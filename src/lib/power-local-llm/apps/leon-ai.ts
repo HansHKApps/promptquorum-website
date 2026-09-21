@@ -35,5 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'leon-ai-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v1.0.0-beta.8', versionSourceUrl: 'https://github.com/leon-ai/leon/releases/tag/v1.0.0-beta.8' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, memory: true, webBrowsing: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

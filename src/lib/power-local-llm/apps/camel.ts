@@ -35,5 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'camel-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: '0.2.90', versionSourceUrl: 'https://github.com/camel-ai/camel/releases/tag/v0.2.90' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { memory: true, multiAgent: true, toolCalling: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

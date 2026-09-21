@@ -36,6 +36,8 @@ export const app: ToolRecord = {
     ar: 'تطبيق macOS يتيح لوكيل ذكاء اصطناعي التحكم في هاتفك وأتمتته',
     ko: 'AI 에이전트가 휴대폰을 제어하고 자동화할 수 있게 하는 macOS 앱',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, ollama: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
   reviewSlug: 'phoneclaw-review', // dedicated PromptQuorum review — added Batch 21, 2026-09-12
 }

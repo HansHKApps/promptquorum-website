@@ -4,7 +4,7 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 
-export const COMPARE_UI_KEYS = ["tool", "review", "readReview", "expandTable", "copyTable", "copied", "copyFailed", "close", "notStatedNote", "yes", "no", "notStated", "priceFree", "priceFreemium", "pricePaid", "localityLocal", "localityHybrid", "localityCloud", "hardwareCpu", "hardwareVaries", "hardwareVram", "hardwareRam", "colPrice", "colLicense", "colPlatforms", "colRuns", "colHardware", "colVersion", "colLanguages", "colVoiceCloning", "colStreaming", "colCpuUsable", "colApiServer", "colRealtime", "colSpeakerLabels", "colFullyLocal", "colBargeIn", "colCustomLlm", "colTelephony", "segTts", "segStt", "segAgents", "groupVoiceAudio", "blockTitle", "blockComparedIn", "blockCategory", "blockAlsoReviewed", "chooseTools", "readFullReviews", "selectAtLeastTwo", "readFullComparison", "colInpainting", "colVideoGeneration", "colNodeWorkflow", "colExtensions", "colLowVram", "colOcr", "colMultiImage", "segImageVideo", "segVision", "colOpenaiApi", "colNvidiaGpu", "colAppleSilicon", "colAmdGpu", "colCpuInference", "colDistributed", "colDesktopApp", "colModelLibrary", "colHeadless", "colLocalModels", "colFallback", "segEngines", "segRuntimes", "segGateways", "colVisualBuilder", "colLocalLlm", "colAgents", "colMultiVector", "colDockerDeploy", "colMultiFormat", "colCitations", "colEmbeddedMode", "colHybridSearch", "colMetadataFilter", "colClustered", "colManagedCloud", "colNoteApp", "colSemanticSearch", "colChatNotes", "colWebSearch", "colPrivateDocs", "segRag", "segDocChat", "segVector", "segNotes", "segSearch", "colBuiltInEngine", "colOllama", "colCustomEndpoint", "colMcp", "colFileChat", "colVoice", "colOffline", "colImportModels", "colModelDownloads", "colVisionInput", "colMultiUser", "colMemory", "colToolUse", "colCharacterCards", "colLorebooks", "colGroupChats", "colLocalBackends", "segDesktop", "segMobile", "segWebSelf", "segAssistants", "segRoleplay"] as const
+export const COMPARE_UI_KEYS = ["tool", "review", "readReview", "expandTable", "copyTable", "copied", "copyFailed", "close", "notStatedNote", "yes", "no", "notStated", "priceFree", "priceFreemium", "pricePaid", "localityLocal", "localityHybrid", "localityCloud", "hardwareCpu", "hardwareVaries", "hardwareVram", "hardwareRam", "colPrice", "colLicense", "colPlatforms", "colRuns", "colHardware", "colVersion", "colLanguages", "colVoiceCloning", "colStreaming", "colCpuUsable", "colApiServer", "colRealtime", "colSpeakerLabels", "colFullyLocal", "colBargeIn", "colCustomLlm", "colTelephony", "segTts", "segStt", "segAgents", "groupVoiceAudio", "blockTitle", "blockComparedIn", "blockCategory", "blockAlsoReviewed", "chooseTools", "readFullReviews", "selectAtLeastTwo", "readFullComparison", "colInpainting", "colVideoGeneration", "colNodeWorkflow", "colExtensions", "colLowVram", "colOcr", "colMultiImage", "segImageVideo", "segVision", "colOpenaiApi", "colNvidiaGpu", "colAppleSilicon", "colAmdGpu", "colCpuInference", "colDistributed", "colDesktopApp", "colModelLibrary", "colHeadless", "colLocalModels", "colFallback", "segEngines", "segRuntimes", "segGateways", "colVisualBuilder", "colLocalLlm", "colAgents", "colMultiVector", "colDockerDeploy", "colMultiFormat", "colCitations", "colEmbeddedMode", "colHybridSearch", "colMetadataFilter", "colClustered", "colManagedCloud", "colNoteApp", "colSemanticSearch", "colChatNotes", "colWebSearch", "colPrivateDocs", "segRag", "segDocChat", "segVector", "segNotes", "segSearch", "colBuiltInEngine", "colOllama", "colCustomEndpoint", "colMcp", "colFileChat", "colVoice", "colOffline", "colImportModels", "colModelDownloads", "colVisionInput", "colMultiUser", "colMemory", "colToolUse", "colCharacterCards", "colLorebooks", "colGroupChats", "colLocalBackends", "segDesktop", "segMobile", "segWebSelf", "segAssistants", "segRoleplay", "colVscode", "colJetbrains", "colAgentMode", "colAutocomplete", "colMultiAgent", "colToolCalling", "colCodeExecution", "colWebBrowsing", "colSandbox", "segCoding", "segAgentFw", "segAutonomous", "segWorkflow"] as const
 export type CompareUiKey = (typeof COMPARE_UI_KEYS)[number]
 export type CompareStrings = Record<CompareUiKey, string>
 
@@ -127,7 +127,20 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "segMobile": "Mobile chat apps",
     "segWebSelf": "Web & CLI chat clients",
     "segAssistants": "Personal assistants",
-    "segRoleplay": "Roleplay & companions"
+    "segRoleplay": "Roleplay & companions",
+    "colVscode": "VS Code extension",
+    "colJetbrains": "JetBrains plugin",
+    "colAgentMode": "Agent mode (multi-step edits)",
+    "colAutocomplete": "Inline code completion",
+    "colMultiAgent": "Multi-agent workflows",
+    "colToolCalling": "Tool calling",
+    "colCodeExecution": "Runs code",
+    "colWebBrowsing": "Browses the web",
+    "colSandbox": "Sandboxed execution",
+    "segCoding": "Coding assistants & IDE plugins",
+    "segAgentFw": "Agent frameworks & SDKs",
+    "segAutonomous": "Autonomous agents",
+    "segWorkflow": "Workflow builders"
   },
   "de": {
     "tool": "Werkzeug",
@@ -247,7 +260,20 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "segMobile": "Mobile Chat-Apps",
     "segWebSelf": "Web- & CLI-Chat-Clients",
     "segAssistants": "Persönliche Assistenten",
-    "segRoleplay": "Rollenspiel & Companions"
+    "segRoleplay": "Rollenspiel & Companions",
+    "colVscode": "VS-Code-Erweiterung",
+    "colJetbrains": "JetBrains-Plugin",
+    "colAgentMode": "Agentenmodus (mehrstufige Änderungen)",
+    "colAutocomplete": "Inline-Codevervollständigung",
+    "colMultiAgent": "Multi-Agenten-Workflows",
+    "colToolCalling": "Tool-Aufrufe",
+    "colCodeExecution": "Führt Code aus",
+    "colWebBrowsing": "Surft im Web",
+    "colSandbox": "Ausführung in der Sandbox",
+    "segCoding": "Coding-Assistenten & IDE-Plugins",
+    "segAgentFw": "Agenten-Frameworks & SDKs",
+    "segAutonomous": "Autonome Agenten",
+    "segWorkflow": "Workflow-Builder"
   },
   "fr": {
     "tool": "Outil",
@@ -367,7 +393,20 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "segMobile": "Applications de chat mobiles",
     "segWebSelf": "Clients de chat web et CLI",
     "segAssistants": "Assistants personnels",
-    "segRoleplay": "Jeu de rôle et compagnons"
+    "segRoleplay": "Jeu de rôle et compagnons",
+    "colVscode": "Extension VS Code",
+    "colJetbrains": "Plugin JetBrains",
+    "colAgentMode": "Mode agent (modifications en plusieurs étapes)",
+    "colAutocomplete": "Complétion de code en ligne",
+    "colMultiAgent": "Workflows multi-agents",
+    "colToolCalling": "Appel d'outils",
+    "colCodeExecution": "Exécute du code",
+    "colWebBrowsing": "Navigue sur le web",
+    "colSandbox": "Exécution en bac à sable",
+    "segCoding": "Assistants de code et plugins IDE",
+    "segAgentFw": "Frameworks d'agents et SDK",
+    "segAutonomous": "Agents autonomes",
+    "segWorkflow": "Constructeurs de workflows"
   },
   "es": {
     "tool": "Herramienta",
@@ -487,7 +526,20 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "segMobile": "Apps de chat móviles",
     "segWebSelf": "Clientes de chat web y CLI",
     "segAssistants": "Asistentes personales",
-    "segRoleplay": "Rol y compañeros"
+    "segRoleplay": "Rol y compañeros",
+    "colVscode": "Extensión de VS Code",
+    "colJetbrains": "Plugin de JetBrains",
+    "colAgentMode": "Modo agente (ediciones en varios pasos)",
+    "colAutocomplete": "Autocompletado de código en línea",
+    "colMultiAgent": "Flujos de trabajo multiagente",
+    "colToolCalling": "Llamada a herramientas",
+    "colCodeExecution": "Ejecuta código",
+    "colWebBrowsing": "Navega por la web",
+    "colSandbox": "Ejecución en sandbox",
+    "segCoding": "Asistentes de programación y plugins de IDE",
+    "segAgentFw": "Frameworks de agentes y SDK",
+    "segAutonomous": "Agentes autónomos",
+    "segWorkflow": "Constructores de flujos de trabajo"
   },
   "ja": {
     "tool": "ツール",
@@ -607,7 +659,20 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "segMobile": "モバイルチャットアプリ",
     "segWebSelf": "Web・CLIチャットクライアント",
     "segAssistants": "パーソナルアシスタント",
-    "segRoleplay": "ロールプレイ・コンパニオン"
+    "segRoleplay": "ロールプレイ・コンパニオン",
+    "colVscode": "VS Code拡張機能",
+    "colJetbrains": "JetBrainsプラグイン",
+    "colAgentMode": "エージェントモード(複数ステップの編集)",
+    "colAutocomplete": "インラインコード補完",
+    "colMultiAgent": "マルチエージェントワークフロー",
+    "colToolCalling": "ツール呼び出し",
+    "colCodeExecution": "コード実行",
+    "colWebBrowsing": "Web閲覧",
+    "colSandbox": "サンドボックス実行",
+    "segCoding": "コーディングアシスタント・IDEプラグイン",
+    "segAgentFw": "エージェントフレームワーク・SDK",
+    "segAutonomous": "自律型エージェント",
+    "segWorkflow": "ワークフロービルダー"
   },
   "zh": {
     "tool": "工具",
@@ -727,7 +792,20 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "segMobile": "移动端聊天应用",
     "segWebSelf": "Web 与 CLI 聊天客户端",
     "segAssistants": "个人助手",
-    "segRoleplay": "角色扮演与陪伴"
+    "segRoleplay": "角色扮演与陪伴",
+    "colVscode": "VS Code 扩展",
+    "colJetbrains": "JetBrains 插件",
+    "colAgentMode": "智能体模式(多步编辑)",
+    "colAutocomplete": "行内代码补全",
+    "colMultiAgent": "多智能体工作流",
+    "colToolCalling": "工具调用",
+    "colCodeExecution": "运行代码",
+    "colWebBrowsing": "浏览网页",
+    "colSandbox": "沙箱执行",
+    "segCoding": "编程助手与 IDE 插件",
+    "segAgentFw": "智能体框架与 SDK",
+    "segAutonomous": "自主智能体",
+    "segWorkflow": "工作流构建器"
   },
   "pt": {
     "tool": "Ferramenta",
@@ -847,7 +925,20 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "segMobile": "Apps de chat para celular",
     "segWebSelf": "Clientes de chat web e CLI",
     "segAssistants": "Assistentes pessoais",
-    "segRoleplay": "Roleplay e companheiros"
+    "segRoleplay": "Roleplay e companheiros",
+    "colVscode": "Extensão do VS Code",
+    "colJetbrains": "Plugin do JetBrains",
+    "colAgentMode": "Modo agente (edições em várias etapas)",
+    "colAutocomplete": "Autocompletar código em linha",
+    "colMultiAgent": "Fluxos de trabalho multiagente",
+    "colToolCalling": "Chamada de ferramentas",
+    "colCodeExecution": "Executa código",
+    "colWebBrowsing": "Navega na web",
+    "colSandbox": "Execução em sandbox",
+    "segCoding": "Assistentes de programação e plugins de IDE",
+    "segAgentFw": "Frameworks de agentes e SDKs",
+    "segAutonomous": "Agentes autônomos",
+    "segWorkflow": "Construtores de fluxo de trabalho"
   },
   "ar": {
     "tool": "الأداة",
@@ -967,7 +1058,20 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "segMobile": "تطبيقات محادثة للجوال",
     "segWebSelf": "عملاء محادثة عبر الويب وCLI",
     "segAssistants": "المساعدون الشخصيون",
-    "segRoleplay": "لعب الأدوار والرفقاء"
+    "segRoleplay": "لعب الأدوار والرفقاء",
+    "colVscode": "إضافة VS Code",
+    "colJetbrains": "إضافة JetBrains",
+    "colAgentMode": "وضع الوكيل (تعديلات متعددة الخطوات)",
+    "colAutocomplete": "إكمال الشيفرة المضمّن",
+    "colMultiAgent": "سير عمل متعدد الوكلاء",
+    "colToolCalling": "استدعاء الأدوات",
+    "colCodeExecution": "يشغّل الشيفرة",
+    "colWebBrowsing": "يتصفح الويب",
+    "colSandbox": "تنفيذ في بيئة معزولة",
+    "segCoding": "مساعدو البرمجة وإضافات IDE",
+    "segAgentFw": "أطر الوكلاء وSDK",
+    "segAutonomous": "الوكلاء المستقلون",
+    "segWorkflow": "منشئو سير العمل"
   },
   "ko": {
     "tool": "도구",
@@ -1087,7 +1191,20 @@ const STRINGS: Partial<Record<Language, CompareStrings>> = {
     "segMobile": "모바일 채팅 앱",
     "segWebSelf": "웹 및 CLI 채팅 클라이언트",
     "segAssistants": "개인 비서",
-    "segRoleplay": "롤플레이 및 컴패니언"
+    "segRoleplay": "롤플레이 및 컴패니언",
+    "colVscode": "VS Code 확장 프로그램",
+    "colJetbrains": "JetBrains 플러그인",
+    "colAgentMode": "에이전트 모드(다단계 편집)",
+    "colAutocomplete": "인라인 코드 자동 완성",
+    "colMultiAgent": "멀티 에이전트 워크플로",
+    "colToolCalling": "도구 호출",
+    "colCodeExecution": "코드 실행",
+    "colWebBrowsing": "웹 브라우징",
+    "colSandbox": "샌드박스 실행",
+    "segCoding": "코딩 어시스턴트 및 IDE 플러그인",
+    "segAgentFw": "에이전트 프레임워크 및 SDK",
+    "segAutonomous": "자율 에이전트",
+    "segWorkflow": "워크플로 빌더"
   }
 }
 

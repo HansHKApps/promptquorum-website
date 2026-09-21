@@ -34,7 +34,7 @@ export const app: ToolRecord = {
     ko: '채팅 / 코드 / 이미지 / 비디오 / LoRA, 설치 파일 하나로',
   },
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { mcp: true, fileChat: true },
+  compare: { localLlm: true, ollama: true, mcp: true, fileChat: true, memory: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
   reviewSlug: 'locally-uncensored-review', // dedicated PromptQuorum review
 }

@@ -39,5 +39,7 @@ export const app: ToolRecord = {
   mcpSupport: true, // README lists "MCP server" among its own interfaces (Web UI, CLI, MCP server, REST API, WebSocket, SSE) — verified 2026-09-18
   reviewSlug: 'mission-control-review', // dedicated PromptQuorum review — added 2026-09-19
   pqReview: { date: '2026-09-20', version: 'v2.3.0', versionSourceUrl: 'https://github.com/builderz-labs/mission-control/releases/tag/v2.3.0' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { mcp: true },
   lastVerifiedDate: '2026-09-18',
 }

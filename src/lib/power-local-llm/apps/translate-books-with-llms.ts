@@ -35,5 +35,7 @@ export const app: ToolRecord = {
     ar: 'يترجم الكتب والمستندات الكاملة (EPUB وTXT وSRT) باستخدام نموذج Ollama محلي أو نماذج سحابية، مع الحفاظ على التنسيق واستئناف الترجمة من حيث توقفت',
     ko: '로컬 Ollama 모델이나 클라우드 LLM으로 전체 책과 문서(EPUB, TXT, SRT)를 번역하며, 서식을 유지하고 중단된 지점부터 이어서 번역한다',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, ollama: true },
   lastVerifiedDate: '2026-09-18',
 }

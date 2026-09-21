@@ -35,5 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'openclaw-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v2026.9.5', versionSourceUrl: 'https://github.com/openclaw/openclaw/releases/tag/v2026.9.5' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true },
   lastVerifiedDate: '2026-09-20',
 }

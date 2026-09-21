@@ -37,5 +37,7 @@ export const app: ToolRecord = {
     ko: 'Ollama나 LM Studio에서 작은 로컬 LLM으로도 좋은 결과를 내도록 특별히 튜닝된 코딩 에이전트 CLI',
   },
   pqReview: { date: '2026-09-20', version: 'v1.20.0', versionSourceUrl: 'https://github.com/itayinbarr/little-coder/releases/tag/v1.20.0' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, ollama: true, agentMode: true, codeExecution: true, webBrowsing: true },
   lastVerifiedDate: '2026-09-18',
 }

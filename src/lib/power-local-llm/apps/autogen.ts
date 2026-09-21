@@ -35,5 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'autogen-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'python-v0.7.5', versionSourceUrl: 'https://github.com/microsoft/autogen/releases/tag/python-v0.7.5' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { mcp: true, multiAgent: true, toolCalling: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

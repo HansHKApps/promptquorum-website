@@ -35,6 +35,6 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'self-hosted-ai-starter-kit-review', // dedicated PromptQuorum review — added 2026-09-19
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { visualBuilder: true, localLlm: true, agents: true, dockerDeploy: true },
+  compare: { visualBuilder: true, localLlm: true, agents: true, dockerDeploy: true, ollama: true },
   lastVerifiedDate: '2026-09-18',
 }

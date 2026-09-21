@@ -37,5 +37,7 @@ export const app: ToolRecord = {
     ko: 'Ollama 및 LM Studio를 통해 네이티브 로컬 모델을 지원하는 고성능 코드 에디터',
   },
   reviewSlug: 'zed-review', // dedicated PromptQuorum review — 2026-09-12
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { mcp: true, agentMode: true, autocomplete: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
 }

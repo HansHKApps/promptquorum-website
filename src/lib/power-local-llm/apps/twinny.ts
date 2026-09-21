@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'VS Code용 무료 Copilot 대안',
   },
   reviewSlug: 'twinny-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, ollama: true, vscode: true, autocomplete: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

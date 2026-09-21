@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'C#/Python/Java용 Microsoft 엔터프라이즈 오케스트레이션 SDK',
   },
   reviewSlug: 'semantic-kernel-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, ollama: true, mcp: true, memory: true, multiAgent: true, toolCalling: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

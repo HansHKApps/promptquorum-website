@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'VS Code용 파일 편집 기능을 갖춘 자율 코딩 에이전트',
   },
   reviewSlug: 'cline-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, ollama: true, mcp: true, vscode: true, jetbrains: true, agentMode: true, multiAgent: true, toolCalling: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

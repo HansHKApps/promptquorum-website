@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: 'GitHub Copilot의 셀프호스팅 대안',
   },
   reviewSlug: 'tabby-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, vscode: true, jetbrains: true, autocomplete: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

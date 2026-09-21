@@ -35,5 +35,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'metagpt-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: 'v0.8.1', versionSourceUrl: 'https://github.com/FoundationAgents/MetaGPT/releases/tag/v0.8.1' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { multiAgent: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

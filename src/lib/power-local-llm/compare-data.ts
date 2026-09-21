@@ -136,6 +136,15 @@ const COLUMN_KEY: Record<string, CompareUiKey> = {
   lorebooks: 'colLorebooks',
   groupChats: 'colGroupChats',
   localBackends: 'colLocalBackends',
+  vscode: 'colVscode',
+  jetbrains: 'colJetbrains',
+  agentMode: 'colAgentMode',
+  autocomplete: 'colAutocomplete',
+  multiAgent: 'colMultiAgent',
+  toolCalling: 'colToolCalling',
+  codeExecution: 'colCodeExecution',
+  webBrowsing: 'colWebBrowsing',
+  sandbox: 'colSandbox',
   semanticSearch: 'colSemanticSearch',
   chatNotes: 'colChatNotes',
   webSearch: 'colWebSearch',
@@ -160,6 +169,10 @@ const SEGMENT_KEY: Record<string, CompareUiKey> = {
   'web-chat': 'segWebSelf',
   assistants: 'segAssistants',
   roleplay: 'segRoleplay',
+  'coding-assistants': 'segCoding',
+  'agent-frameworks': 'segAgentFw',
+  'autonomous-agents': 'segAutonomous',
+  'workflow-builders': 'segWorkflow',
 }
 const PRICE_KEY: Record<string, CompareUiKey> = { free: 'priceFree', freemium: 'priceFreemium', paid: 'pricePaid' }
 const LOCALITY_KEY: Record<string, CompareUiKey> = { local: 'localityLocal', hybrid: 'localityHybrid', cloud: 'localityCloud' }

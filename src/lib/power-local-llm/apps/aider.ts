@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '멀티파일 git 네이티브 diff를 갖춘 터미널 페어 프로그래머',
   },
   reviewSlug: 'aider-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

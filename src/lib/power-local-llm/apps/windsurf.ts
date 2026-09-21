@@ -34,5 +34,7 @@ export const app: ToolRecord = {
     ko: '로컬 모델 통합을 갖춘 AI 우선 IDE',
   },
   reviewSlug: 'windsurf-review', // dedicated PromptQuorum review — pinned to #1 in the article index
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { mcp: true, jetbrains: true, agentMode: true, autocomplete: true },
   lastVerifiedDate: null, // TODO: not derivable from source article
 }

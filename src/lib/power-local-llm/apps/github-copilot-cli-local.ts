@@ -38,6 +38,8 @@ export const app: ToolRecord = {
     ar: 'وكيل برمجة الطرفية من GitHub مع دعم BYOK ودعم كامل للنماذج المحلية/دون اتصال عبر Ollama وvLLM',
     ko: 'BYOK를 지원하고 Ollama 및 vLLM을 통해 완전한 로컬/오프라인 모델을 지원하는 GitHub의 터미널 코딩 에이전트',
   },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-21; a missing key = not stated there, never false.
+  compare: { localLlm: true, ollama: true },
   lastVerifiedDate: null, // TODO: not yet founder-verified
   reviewSlug: 'github-copilot-cli-review', // dedicated PromptQuorum review — added 2026-09-12
 }
