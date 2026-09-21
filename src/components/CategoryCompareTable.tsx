@@ -31,7 +31,7 @@ export function CategoryCompareTable({ data, lang }: { data: CategoryCompareData
           ))}
         </div>
       )}
-      <ExpandableCompareTable columns={seg.columns} rows={seg.rows} lang={lang} localePrefix={prefix} ui={data.ui} title={`${data.label} — ${seg.label}`} />
+      <ExpandableCompareTable columns={seg.columns} rows={seg.rows} lang={lang} localePrefix={prefix} ui={data.ui} title={`${data.label} — ${seg.label}`} siteLinkCategory={data.label} />
       <p className="mt-2 text-xs text-text-muted">{data.ui.notStatedNote}</p>
     </div>
   )

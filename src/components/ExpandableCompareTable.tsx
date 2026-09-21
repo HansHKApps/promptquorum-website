@@ -52,6 +52,8 @@ interface Props {
   ui: CompareTableUi
   /** Heading shown at the top of the pop-out. */
   title: string
+  /** Passed through to CompareTable: adds the disclosed site-button column. */
+  siteLinkCategory?: string
 }
 
 /**
@@ -59,7 +61,7 @@ interface Props {
  * so wide tables are readable when the inline card is narrow. Esc, the backdrop or the close button
  * dismisses it; page scroll is locked while it is open.
  */
-export function ExpandableCompareTable({ columns, rows, lang, localePrefix, ui, title }: Props) {
+export function ExpandableCompareTable({ columns, rows, lang, localePrefix, ui, title, siteLinkCategory }: Props) {
   const [open, setOpen] = useState(false)
   const tsv = toTsv(columns, rows, localePrefix ?? '', ui)
   const closeRef = useRef<HTMLButtonElement>(null)
@@ -92,7 +94,7 @@ export function ExpandableCompareTable({ columns, rows, lang, localePrefix, ui, 
           {ui.expandTable}
         </button>
       </div>
-      <CompareTable columns={columns} rows={rows} lang={lang} localePrefix={localePrefix} ui={ui} />
+      <CompareTable columns={columns} rows={rows} lang={lang} localePrefix={localePrefix} ui={ui} siteLinkCategory={siteLinkCategory} />
 
       {open && (
         <div
@@ -121,7 +123,7 @@ export function ExpandableCompareTable({ columns, rows, lang, localePrefix, ui, 
               </div>
             </div>
             <div className="overflow-auto p-4">
-              <CompareTable columns={columns} rows={rows} lang={lang} localePrefix={localePrefix} ui={ui} />
+              <CompareTable columns={columns} rows={rows} lang={lang} localePrefix={localePrefix} ui={ui} siteLinkCategory={siteLinkCategory} />
             </div>
           </div>
         </div>

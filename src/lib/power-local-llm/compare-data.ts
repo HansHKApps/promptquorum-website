@@ -25,6 +25,8 @@ export interface CompareRow {
   /** Slug of the tool's own review article, when it has one. */
   /** Unprefixed path to the tool's own review (e.g. /power-local-llm/piper-tts-review), or null. */
   reviewPath: string | null
+  /** Full https URL of the tool's own site, for the disclosed product-link button. */
+  siteUrl: string | null
   cells: Record<string, string>
 }
 
@@ -230,7 +232,7 @@ export function buildCategoryCompareData(group: CategoryGroupKey, lang: Language
         const cells: Record<string, string> = {}
         for (const c of COMMON_COLUMNS) cells[c.key] = commonCell(t, c.key, cs)
         for (const a of seg.attributes) cells[a.key] = valueCell(t.compare?.[a.key], cs)
-        return { slug: t.slug, name: t.name, url: t.url, reviewPath: reviewPath(t), cells }
+        return { slug: t.slug, name: t.name, url: t.url, reviewPath: reviewPath(t), siteUrl: t.url ? `https://${t.url}` : null, cells }
       })
     return { key: seg.key, label: SEGMENT_KEY[seg.key] ? cs[SEGMENT_KEY[seg.key]] : seg.label, columns, rows }
   })
