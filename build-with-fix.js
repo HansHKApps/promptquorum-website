@@ -16,7 +16,7 @@ function fixValidator() {
   return false
 }
 
-function runBuild() {
+function runBuild(extraArgs = []) {
   return new Promise((resolve, reject) => {
     // NODE_OPTIONS alone doesn't reach the forked worker process Next.js uses
     // for static page generation (jest-worker forks inherit process.execArgv,
@@ -28,7 +28,7 @@ function runBuild() {
     const nextBin = require.resolve('next/dist/bin/next')
     const child = spawn(
       process.execPath,
-      ['--max-old-space-size=6144', nextBin, 'build'],
+      ['--max-old-space-size=6144', nextBin, 'build', ...extraArgs],
       {
         stdio: 'inherit',
         env: { ...process.env, NODE_OPTIONS: '--max-old-space-size=6144' }
@@ -36,8 +36,9 @@ function runBuild() {
     )
 
     child.on('close', (code) => {
-      // Always continue regardless of exit code - we'll check for output directory
-      resolve()
+      // Callers decide what to do with the exit code; a full build is also
+      // confirmed by the presence of routes-manifest.json.
+      resolve(code)
     })
 
     child.on('error', reject)
@@ -45,6 +46,7 @@ function runBuild() {
 }
 
 async function pingSitemap() {
+  if (process.env.SKIP_SITEMAP_PING === '1') return
   const url = 'https://www.google.com/ping?sitemap=https://www.promptquorum.com/sitemap.xml'
   try {
     const res = await fetch(url)
@@ -128,6 +130,41 @@ async function main() {
 
   await generateSeoRegistry()
 
+  const outDir = path.join(__dirname, '.next')
+  // routes-manifest.json is written only when a build completes. NOTE: .next/ itself exists from
+  // Vercel's cache restore even before the build starts, so the directory alone gives a false
+  // positive after an OOM kill.
+  const buildCompleted = () => fs.existsSync(path.join(outDir, 'routes-manifest.json'))
+
+  // Split build (default): compile in one process, then generate (collect page data + prerender) in a
+  // fresh one. The 9-minute compile's memory is released before the memory-hungry generate step starts,
+  // and a generate step that gets OOM-killed is retried WITHOUT recompiling. BUILD_MODE_SPLIT=0 restores
+  // the old single-process build with whole-build retries.
+  if (process.env.BUILD_MODE_SPLIT !== '0') {
+    let compiled = false
+    for (let attempt = 1; attempt <= 2 && !compiled; attempt++) {
+      console.log(`\n[Compile ${attempt}/2] next build --experimental-build-mode=compile\n`)
+      compiled = (await runBuild(['--experimental-build-mode=compile'])) === 0
+    }
+    if (compiled) {
+      const maxGenerate = 5
+      for (let attempt = 1; attempt <= maxGenerate; attempt++) {
+        console.log(`\n[Generate ${attempt}/${maxGenerate}] next build --experimental-build-mode=generate\n`)
+        const code = await runBuild(['--experimental-build-mode=generate'])
+        fixValidator()
+        if (code === 0 && buildCompleted()) {
+          console.log('\n✓ Build completed successfully!')
+          await pingSitemap()
+          process.exit(0)
+        }
+        await new Promise((resolve) => setTimeout(resolve, 500))
+      }
+      console.log('\n✗ Build failed after maximum generate attempts')
+      process.exit(1)
+    }
+    console.log('\n⚠ Split compile failed twice; falling back to the single-process build')
+  }
+
   let maxAttempts = 5
   let attempt = 1
 
@@ -139,11 +176,7 @@ async function main() {
     // Apply fix AFTER build (Next.js regenerates validator during build)
     fixValidator()
 
-    // Check if build succeeded by looking for routes-manifest.json (written only on successful completion)
-    // NOTE: .next/ itself exists from Vercel's cache restore even before the build starts,
-    // so checking the directory alone gives a false positive after an OOM kill.
-    const outDir = path.join(__dirname, '.next')
-    if (fs.existsSync(path.join(outDir, 'routes-manifest.json'))) {
+    if (buildCompleted()) {
       console.log('\n✓ Build completed successfully!')
       await pingSitemap()
       process.exit(0)
