@@ -4,7 +4,7 @@
 // Data lives in src/lib/mcp/clients.ts.
 
 import { useEffect, useState } from 'react'
-import { MCP_CLIENTS, MCP_SERVER_URL, GOALS, OS_OPTIONS, RAM_OPTIONS, buildLaunchPrompt, type McpClientOnboarding, type SetupProfile } from '@/lib/mcp/clients'
+import { MCP_CLIENTS, MCP_SERVER_URL, GOAL_GROUPS, OS_OPTIONS, RAM_OPTIONS, buildLaunchPrompt, type McpClientOnboarding, type SetupProfile } from '@/lib/mcp/clients'
 import { cn } from '@/lib/utils'
 
 const DIFFICULTY_LABEL = { easy: 'Easy setup', medium: 'Medium setup', hard: 'Hard setup' } as const
@@ -51,7 +51,7 @@ function detectOs(): SetupProfile['os'] {
 const SELECT = 'w-full rounded border border-primary/20 bg-white px-2 py-1.5 text-sm text-text-primary'
 
 function Panel({ client }: { client: McpClientOnboarding }) {
-  const [profile, setProfile] = useState<SetupProfile>({ goalId: 'chat', os: 'mac', ramGb: 16 })
+  const [profile, setProfile] = useState<SetupProfile>({ groupId: 'chat-assistants', subId: '', os: 'mac', ramGb: 16 })
   useEffect(() => setProfile((p) => ({ ...p, os: detectOs() })), [])
   const launchPrompt = buildLaunchPrompt(client, profile)
   return (
@@ -82,12 +82,21 @@ function Panel({ client }: { client: McpClientOnboarding }) {
       </section>
       <section>
         <h3 className="font-semibold">Tell it what you need, then start</h3>
-        <div className="mt-2 grid gap-2 sm:grid-cols-3">
+        <div className="mt-2 grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
           <label className="text-xs text-text-secondary">
-            I want to
-            <select className={SELECT} value={profile.goalId} onChange={(e) => setProfile({ ...profile, goalId: e.target.value as SetupProfile['goalId'] })}>
-              {GOALS.map((g) => (
+            Category
+            <select className={SELECT} value={profile.groupId} onChange={(e) => setProfile({ ...profile, groupId: e.target.value, subId: '' })}>
+              {GOAL_GROUPS.map((g) => (
                 <option key={g.id} value={g.id}>{g.label}</option>
+              ))}
+            </select>
+          </label>
+          <label className="text-xs text-text-secondary">
+            Subcategory
+            <select className={SELECT} value={profile.subId} onChange={(e) => setProfile({ ...profile, subId: e.target.value })}>
+              <option value="">Any</option>
+              {GOAL_GROUPS.find((g) => g.id === profile.groupId)?.subs.map((x) => (
+                <option key={x.id} value={x.id}>{x.label}</option>
               ))}
             </select>
           </label>

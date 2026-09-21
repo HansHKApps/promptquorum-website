@@ -9515,6 +9515,96 @@
       ],
       "images": []
     },
+    "local-llm-run-serve-compared": {
+      "dateModified": "2026-09-20",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-20",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "local-llm-knowledge-retrieval-compared": {
+      "dateModified": "2026-09-20",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-20",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "local-llm-chat-assistants-compared": {
+      "dateModified": "2026-09-20",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-20",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "local-llm-code-development-compared": {
+      "dateModified": "2026-09-21",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-21",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "local-llm-train-operate-compared": {
+      "dateModified": "2026-09-21",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-21",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "coqui-tts-review": {
       "dateModified": "2026-09-05",
       "lastFactChecked": null,
