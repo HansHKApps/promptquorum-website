@@ -17,7 +17,8 @@ export interface McpClientOnboarding {
   description: string
   connectSteps: string[]
   configSnippet?: string
-  launchPrompt: string
+  // How this client refers to the server's tools inside the prompt.
+  toolRef: string
   // Web clients only: builds a link that opens the client with the prompt pre-filled.
   openWithPrompt?: (prompt: string) => string
   lastVerified: string | null
@@ -26,6 +27,7 @@ export interface McpClientOnboarding {
 export const MCP_CLIENTS: McpClientOnboarding[] = [
   {
     id: 'claude',
+    toolRef: 'the PromptQuorum connector',
     displayName: 'Claude',
     tier: 'paid',
     tierNote: 'Custom remote connectors need a paid Claude plan',
@@ -38,13 +40,12 @@ export const MCP_CLIENTS: McpClientOnboarding[] = [
       `Name it "PromptQuorum" and paste the server URL: ${MCP_SERVER_URL}`,
       'Save. No sign-in is needed. Enable the connector in your chat.',
     ],
-    launchPrompt:
-      'Use the PromptQuorum connector to recommend a local AI app. Ask me what I want to do and about my device, OS and RAM/VRAM, then suggest 2–3 apps with download links and caveats.',
     openWithPrompt: (prompt) => `https://claude.ai/new?q=${encodeURIComponent(prompt)}`,
     lastVerified: null,
   },
   {
     id: 'lm-studio',
+    toolRef: 'the promptquorum tools',
     displayName: 'LM Studio',
     tier: 'free',
     difficulty: 'medium',
@@ -57,12 +58,11 @@ export const MCP_CLIENTS: McpClientOnboarding[] = [
       'Load a model that supports tool use, and switch the promptquorum server on.',
     ],
     configSnippet: JSON.stringify({ mcpServers: { promptquorum: { url: MCP_SERVER_URL } } }, null, 2),
-    launchPrompt:
-      'Use the promptquorum tools to recommend a local AI app. Ask me what I want to do and about my device, OS and RAM/VRAM, then suggest 2–3 apps with download links and caveats.',
     lastVerified: null,
   },
   {
     id: 'ollama',
+    toolRef: 'the promptquorum tools',
     displayName: 'Ollama',
     tier: 'free',
     difficulty: 'medium',
@@ -75,8 +75,45 @@ export const MCP_CLIENTS: McpClientOnboarding[] = [
       'Start the bridge with your Ollama model selected.',
     ],
     configSnippet: JSON.stringify({ mcpServers: { promptquorum: { type: 'remote', url: MCP_SERVER_URL } } }, null, 2),
-    launchPrompt:
-      'Use the promptquorum tools to recommend a local AI app. Ask me what I want to do and about my device, OS and RAM/VRAM, then suggest 2–3 apps with download links and caveats.',
     lastVerified: null,
   },
 ]
+
+export const GOALS = [
+  { id: 'chat', label: 'Chat with a private AI assistant', useCase: 'chat' },
+  { id: 'code', label: 'Coding help', useCase: 'code' },
+  { id: 'docs', label: 'Chat with my documents / PDFs', useCase: 'docs' },
+  { id: 'image', label: 'Generate or edit pictures', useCase: 'image' },
+  { id: 'audio', label: 'Speech, voice or audio', useCase: 'audio' },
+  { id: 'agent', label: 'Build AI agents / automations', useCase: 'agent' },
+] as const
+
+export const OS_OPTIONS = [
+  { id: 'mac', label: 'macOS' },
+  { id: 'win', label: 'Windows' },
+  { id: 'linux', label: 'Linux' },
+] as const
+
+export const RAM_OPTIONS = [8, 16, 24, 32, 64, 128] as const
+
+export interface SetupProfile {
+  goalId: (typeof GOALS)[number]['id']
+  os: (typeof OS_OPTIONS)[number]['id']
+  ramGb: number
+}
+
+// One self-contained prompt: the AI must act immediately instead of
+// interviewing the user, because goal/OS/RAM are already collected here.
+export function buildLaunchPrompt(client: McpClientOnboarding, profile: SetupProfile): string {
+  const goal = GOALS.find((g) => g.id === profile.goalId)!
+  const os = OS_OPTIONS.find((o) => o.id === profile.os)!
+  return [
+    `Recommend a local AI app for me using ${client.toolRef}. Do not ask me any questions first. Everything you need is below.`,
+    '',
+    `- What I want to do: ${goal.label}`,
+    `- Operating system: ${os.label}`,
+    `- Memory (RAM / unified memory): ${profile.ramGb} GB`,
+    '',
+    `Now call search_apps with useCase "${goal.useCase}", os "${profile.os}", ramGb ${profile.ramGb} (call list_categories first only if you need valid values), then answer with the best 2-3 apps: name, one-line why it fits, download link, and any caveat (hardware fit, price, license). Only use results from the tool, not your own memory. End with the tool's disclaimer. If the PromptQuorum tools are not available in this chat, say so in one sentence and stop.`,
+  ].join('\n')
+}

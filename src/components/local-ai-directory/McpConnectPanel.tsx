@@ -3,8 +3,8 @@
 // "Connect your AI" entry point above the directory. English only for v1.
 // Data lives in src/lib/mcp/clients.ts.
 
-import { useState } from 'react'
-import { MCP_CLIENTS, MCP_SERVER_URL, type McpClientOnboarding } from '@/lib/mcp/clients'
+import { useEffect, useState } from 'react'
+import { MCP_CLIENTS, MCP_SERVER_URL, GOALS, OS_OPTIONS, RAM_OPTIONS, buildLaunchPrompt, type McpClientOnboarding, type SetupProfile } from '@/lib/mcp/clients'
 import { cn } from '@/lib/utils'
 
 const DIFFICULTY_LABEL = { easy: 'Easy setup', medium: 'Medium setup', hard: 'Hard setup' } as const
@@ -41,7 +41,19 @@ function CopyButton({ text, label }: { text: string; label: string }) {
   )
 }
 
+function detectOs(): SetupProfile['os'] {
+  const ua = typeof navigator === 'undefined' ? '' : navigator.userAgent
+  if (/Windows/i.test(ua)) return 'win'
+  if (/Linux/i.test(ua) && !/Android/i.test(ua)) return 'linux'
+  return 'mac'
+}
+
+const SELECT = 'w-full rounded border border-primary/20 bg-white px-2 py-1.5 text-sm text-text-primary'
+
 function Panel({ client }: { client: McpClientOnboarding }) {
+  const [profile, setProfile] = useState<SetupProfile>({ goalId: 'chat', os: 'mac', ramGb: 16 })
+  useEffect(() => setProfile((p) => ({ ...p, os: detectOs() })), [])
+  const launchPrompt = buildLaunchPrompt(client, profile)
   return (
     <div className="mt-3 rounded-lg border border-primary/15 bg-white p-4 text-sm text-text-primary space-y-4">
       <section>
@@ -69,15 +81,41 @@ function Panel({ client }: { client: McpClientOnboarding }) {
         )}
       </section>
       <section>
-        <h3 className="font-semibold">How to start it</h3>
-        <p className="mt-1 text-text-secondary">Paste this into your chat:</p>
+        <h3 className="font-semibold">Tell it what you need, then start</h3>
+        <div className="mt-2 grid gap-2 sm:grid-cols-3">
+          <label className="text-xs text-text-secondary">
+            I want to
+            <select className={SELECT} value={profile.goalId} onChange={(e) => setProfile({ ...profile, goalId: e.target.value as SetupProfile['goalId'] })}>
+              {GOALS.map((g) => (
+                <option key={g.id} value={g.id}>{g.label}</option>
+              ))}
+            </select>
+          </label>
+          <label className="text-xs text-text-secondary">
+            My system
+            <select className={SELECT} value={profile.os} onChange={(e) => setProfile({ ...profile, os: e.target.value as SetupProfile['os'] })}>
+              {OS_OPTIONS.map((o) => (
+                <option key={o.id} value={o.id}>{o.label}</option>
+              ))}
+            </select>
+          </label>
+          <label className="text-xs text-text-secondary">
+            Memory (RAM)
+            <select className={SELECT} value={profile.ramGb} onChange={(e) => setProfile({ ...profile, ramGb: Number(e.target.value) })}>
+              {RAM_OPTIONS.map((r) => (
+                <option key={r} value={r}>{r} GB</option>
+              ))}
+            </select>
+          </label>
+        </div>
+        <p className="mt-2 text-text-secondary">This ready-made prompt goes to your AI in one go:</p>
         <div className="mt-1 flex items-start gap-2">
-          <blockquote className="min-w-0 flex-1 rounded border-l-4 border-primary/40 bg-primary/5 px-3 py-2">{client.launchPrompt}</blockquote>
-          <CopyButton text={client.launchPrompt} label="prompt" />
+          <blockquote className="min-w-0 flex-1 whitespace-pre-line rounded border-l-4 border-primary/40 bg-primary/5 px-3 py-2 text-xs">{launchPrompt}</blockquote>
+          <CopyButton text={launchPrompt} label="prompt" />
         </div>
         {client.openWithPrompt && (
           <a
-            href={client.openWithPrompt(client.launchPrompt)}
+            href={client.openWithPrompt(launchPrompt)}
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 inline-block rounded border border-primary bg-primary px-3 py-1.5 text-xs font-medium text-white hover:opacity-90"
