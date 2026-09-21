@@ -75,6 +75,16 @@ function Panel({ client }: { client: McpClientOnboarding }) {
           <blockquote className="min-w-0 flex-1 rounded border-l-4 border-primary/40 bg-primary/5 px-3 py-2">{client.launchPrompt}</blockquote>
           <CopyButton text={client.launchPrompt} label="prompt" />
         </div>
+        {client.openWithPrompt && (
+          <a
+            href={client.openWithPrompt(client.launchPrompt)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 inline-block rounded border border-primary bg-primary px-3 py-1.5 text-xs font-medium text-white hover:opacity-90"
+          >
+            Open in {client.displayName} with this prompt ↗
+          </a>
+        )}
       </section>
       <p className="text-xs text-text-secondary">
         {client.lastVerified ? `Steps last tested ${client.lastVerified}.` : 'These steps follow the vendor’s documentation and have not been hand-tested yet.'}{' '}
