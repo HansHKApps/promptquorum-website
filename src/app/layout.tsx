@@ -48,6 +48,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { Providers } from '@/components/Providers'
 import { HeaderClient } from '@/components/HeaderClient'
 import { Footer } from '@/components/Footer'
+import { AiDiscussBar } from '@/components/AiDiscussBar'
 import { CookieBanner } from '@/components/CookieBanner'
 import { PageTracker } from '@/components/PageTracker'
 import { ClarityRouteTracker } from '@/components/ClarityRouteTracker'
@@ -266,6 +267,7 @@ export default function RootLayout({
           <ClarityRouteTracker />
           <OneSignalInit />
           <main id="main">{children}</main>
+          <AiDiscussBar />
           <Suspense><Footer /></Suspense>
           <CookieBanner />
           <PushPromptBanner />

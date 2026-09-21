@@ -3,8 +3,9 @@
 /**
  * AiDiscussBar
  * ------------
- * "Discuss with AI" row for top-level pages. Opt-in per page:
- *   <AiDiscussBar pageId="about" title={...} url={...} description={...} />
+ * "Discuss with AI" row for top-level pages, mounted once in layout.tsx above the
+ * footer and shown only on the paths matched by SHOW_RE. Title, canonical URL,
+ * description and the page's visible text are read from the DOM at click time.
  *
  * One mechanism for every platform: copy a short page-context prompt to the
  * clipboard and open the target site in a new tab. Native URL prefill is a
@@ -13,9 +14,13 @@
  */
 
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { useLang } from '@/hooks/useLang'
 
-const MAX_PROMPT_CHARS = 1500
+// Top-level pages only (EN + 8 locale prefixes): home, about, directory, pq-apps, hardware, software.
+const SHOW_RE = /^(?:\/(?:de|fr|ja|zh|es|pt|ar|ko))?(?:\/(?:about|directory|pq-apps|local-llms|power-local-llm))?\/?$/
+// Browsers/servers reject very long URLs; above this, ChatGPT falls back to copy + open.
+const MAX_PREFILL_URL_CHARS = 6000
 
 type Platform = {
   id: string
@@ -28,6 +33,14 @@ type Platform = {
 const PLATFORMS: Platform[] = [
   { id: 'chatgpt', name: 'ChatGPT', url: 'https://chatgpt.com/', prefill: (p) => `https://chatgpt.com/?q=${encodeURIComponent(p)}` },
   { id: 'claude', name: 'Claude', url: 'https://claude.ai/new' },
+  { id: 'gemini', name: 'Gemini', url: 'https://gemini.google.com/app' },
+  { id: 'perplexity', name: 'Perplexity', url: 'https://www.perplexity.ai/' },
+  { id: 'grok', name: 'Grok', url: 'https://grok.com/' },
+  { id: 'meta-ai', name: 'Meta AI', url: 'https://www.meta.ai/' },
+  { id: 'mistral', name: 'Le Chat', url: 'https://chat.mistral.ai/chat' },
+  { id: 'deepseek', name: 'DeepSeek', url: 'https://chat.deepseek.com/' },
+  { id: 'copilot', name: 'Copilot', url: 'https://copilot.microsoft.com/' },
+  { id: 'poe', name: 'Poe', url: 'https://poe.com/' },
 ]
 
 type Copy = {
@@ -124,37 +137,40 @@ const COPY: Record<string, Copy> = {
   },
 }
 
-type Props = {
-  pageId: string
-  title: string
-  url: string
-  description?: string
+function readPage() {
+  const title = document.title
+  const url = document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.href ?? window.location.href
+  const description = document.querySelector<HTMLMetaElement>('meta[name="description"]')?.content ?? ''
+  const content = (document.getElementById('main')?.innerText ?? '').replace(/\n{3,}/g, '\n\n').trim()
+  return { title, url, description, content }
 }
 
-function buildPrompt(c: Copy, { title, url, description }: Props): string {
-  const ask = c.ask
-  const head = c.preamble.replace('{title}', title).replace('{url}', url)
-  const budget = MAX_PROMPT_CHARS - ask.length - head.length - 1
-  const desc = (description ?? '').slice(0, Math.max(budget, 0))
-  return `${head.replace('{desc}', desc).trim()}\n\n${ask}`.slice(0, MAX_PROMPT_CHARS)
+function buildPrompt(c: Copy): string {
+  const { title, url, description, content } = readPage()
+  const head = c.preamble.replace('{title}', title).replace('{url}', url).replace('{desc}', description).trim()
+  return `${head}\n\n---\n${content}\n---\n\n${c.ask}`
 }
 
-export function AiDiscussBar(props: Props) {
+export function AiDiscussBar() {
   const lang = useLang()
+  const pathname = usePathname()
   const c = COPY[lang] ?? COPY.en
   const [toast, setToast] = useState<string | null>(null)
   const [manualText, setManualText] = useState<string | null>(null)
 
+  if (!pathname || !SHOW_RE.test(pathname)) return null
+
   const handleClick = async (p: Platform) => {
-    const prompt = buildPrompt(c, props)
-    window.umami?.track('ai_discuss_click', { platform: p.id, page: props.pageId })
+    const prompt = buildPrompt(c)
     setManualText(null)
-    // Open synchronously inside the gesture (before any await) so popup blockers allow it.
-    window.open(p.prefill ? p.prefill(prompt) : p.url, '_blank', 'noopener')
-    if (p.prefill) {
+    const prefillUrl = p.prefill?.(prompt)
+    if (prefillUrl && prefillUrl.length <= MAX_PREFILL_URL_CHARS) {
+      window.open(prefillUrl, '_blank', 'noopener')
       setToast(c.sent)
       return
     }
+    // Open synchronously inside the gesture (before any await) so popup blockers allow it.
+    window.open(p.url, '_blank', 'noopener')
     try {
       await navigator.clipboard.writeText(prompt)
       setToast(c.copied)
@@ -165,8 +181,8 @@ export function AiDiscussBar(props: Props) {
   }
 
   return (
-    <section className="mb-16" aria-labelledby={`ai-discuss-${props.pageId}`}>
-      <h2 id={`ai-discuss-${props.pageId}`} className="text-lg font-semibold text-text-primary mb-3">
+    <section className="mx-auto max-w-4xl px-4 py-10" aria-labelledby="ai-discuss-heading">
+      <h2 id="ai-discuss-heading" className="text-lg font-semibold text-text-primary mb-3">
         {c.heading}
       </h2>
       <div className="flex flex-wrap gap-2">
@@ -188,7 +204,7 @@ export function AiDiscussBar(props: Props) {
         <textarea
           readOnly
           value={manualText}
-          rows={4}
+          rows={6}
           onFocus={(e) => e.currentTarget.select()}
           className="mt-2 w-full bg-card border border-primary/20 rounded-lg p-3 text-sm text-text-secondary"
         />

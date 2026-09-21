@@ -4,7 +4,6 @@ import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import Link from 'next/link'
 import { AboutHeroClient } from '@/components/AboutHeroClient'
-import { AiDiscussBar } from '@/components/AiDiscussBar'
 
 export const dynamic = 'force-static'
 export const revalidate = 86400
@@ -265,13 +264,6 @@ export default function AboutPage() {
               hello@promptquorum.com
             </a>
           </section>
-
-          <AiDiscussBar
-            pageId="about"
-            title={translations.en.aboutMetaTitle}
-            url="https://www.promptquorum.com/about"
-            description={translations.en.aboutMetaDescription}
-          />
 
           {/* Nav */}
           <div className="flex flex-wrap gap-4 pt-8 border-t border-primary/20">
