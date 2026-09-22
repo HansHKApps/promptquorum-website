@@ -186,6 +186,7 @@ https://www.promptquorum.com/local-llms/ollama-vs-lm-studio
 https://www.promptquorum.com/local-llms/on-prem-air-gapped-local-llm
 https://www.promptquorum.com/local-llms/open-webui-review
 https://www.promptquorum.com/local-llms/open-webui-vs-sillytavern
+https://www.promptquorum.com/local-llms/open-weight-vs-open-source-ai-models
 https://www.promptquorum.com/local-llms/page-assist-review
 https://www.promptquorum.com/local-llms/private-local-ai-for-business
 https://www.promptquorum.com/local-llms/private-local-llm-sensitive-data
