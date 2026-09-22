@@ -79,7 +79,7 @@ export const zh: AboutCopy = {
   partLearnConnects: '评测和对比文章会链接回它们所涉及的目录条目。',
   partUseTitle: 'PromptQuorum 应用',
   partUseBody:
-    '一款免费的多模型应用，目前处于测试阶段。将同一条提示词发送给多个模型（包括本地模型），查看它们的回答在哪些地方一致、哪些地方相互矛盾。意见一致是一个有用的信号，但并非证明。你使用自己的密钥和模型，应用本身不做任何遥测。这也是 PromptQuorum 最初的起点。',
+    '一款免费的多模型应用，目前处于测试阶段。将同一条提示词发送给多个模型（包括本地模型），查看它们的回答在哪些地方一致、哪些地方相互矛盾。意见一致是一个有用的信号，但并非证明。你使用自己的密钥和模型。你发送的内容不会经过任何 PromptQuorum 服务器，应用本身也不会向我们回传任何数据。这也是 PromptQuorum 最初的起点。',
   partUseConnects: '它连接 Ollama 和 LM Studio（两者均已收录在目录中），让本地模型与云端模型并列呈现。',
   partAskTitle: 'MCP 服务器',
   partAskBody:

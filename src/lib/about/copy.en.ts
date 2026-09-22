@@ -82,7 +82,7 @@ export const en: AboutCopy = {
   partLearnConnects: 'reviews and comparisons link back to the directory entries they cover.',
   partUseTitle: 'The PromptQuorum app',
   partUseBody:
-    'A free multi-model app, currently in beta. Send one prompt to several models, including local ones, and see where their answers agree and where they contradict each other. Agreement is a useful signal, not proof. You bring your own keys and models, and there is no telemetry. This is where PromptQuorum started.',
+    'A free multi-model app, currently in beta. Send one prompt to several models, including local ones, and see where their answers agree and where they contradict each other. Agreement is a useful signal, not proof. You bring your own keys and models. Nothing you send goes through a PromptQuorum server, and the app makes no calls back to us. This is where PromptQuorum started.',
   partUseConnects: 'it connects to Ollama and LM Studio, both listed in the directory, so local models sit next to cloud ones.',
   partAskTitle: 'The MCP server',
   partAskBody:
