@@ -36,7 +36,10 @@ export const app: ToolRecord = {
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
   // videoGeneration/nodeWorkflow added 2026-09-22 per maker (David, LU Labs): runs Wan 2.2/LTX-2/HunyuanVideo/FramePack
   // through the same one-click ComfyUI setup as images, with no node graph exposed to the user.
-  compare: { localLlm: true, ollama: true, mcp: true, fileChat: true, memory: true, videoGeneration: true, nodeWorkflow: false },
+  // loraQlora/webUi added 2026-09-22 per maker: built-in image LoRA trainer with a GUI tab (Models > LoRAs,
+  // added in v3.0.1). multiGpu/lowVram/exportGguf left unset — not stated by the maker, and exportGguf in
+  // particular is an LLM-fine-tuning concept (GGUF/Ollama) that doesn't apply to this image LoRA trainer.
+  compare: { localLlm: true, ollama: true, mcp: true, fileChat: true, memory: true, videoGeneration: true, nodeWorkflow: false, loraQlora: true, webUi: true },
   lastVerifiedDate: '2026-09-22', // per maker (David, LU Labs) technical corrections email
   reviewSlug: 'locally-uncensored-review', // dedicated PromptQuorum review
   pqReview: {

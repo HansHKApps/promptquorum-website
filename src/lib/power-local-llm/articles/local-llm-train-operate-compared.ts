@@ -117,15 +117,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: 'Comparison Table',
-        content: 'Choose a kind of tool below, then read across a row. Click a tool name to open its full PromptQuorum review.',
+        content: 'Choose a kind of tool below, then read across a row. Click a tool name to open its full PromptQuorum review. Note: in the fine-tuning table, the "LoRA / QLoRA" column covers both language-model fine-tuning (LLaMA-Factory, Unsloth) and a separate image-model LoRA trainer (Locally Uncensored) — read the section below the table for that distinction before comparing rows.',
         component: 'CategoryCompareTable',
       },
       finetuneDifferences: {
         id: 'finetune-differences',
         title: 'Fine-Tuning Tools: What Differs',
         items: [
-          '**LoRA and QLoRA.** [LLaMA-Factory](/power-local-llm/llama-factory-review) and [Unsloth](/power-local-llm/unsloth-review) document LoRA or QLoRA fine-tuning.',
-          '**Web UI.** [LLaMA-Factory](/power-local-llm/llama-factory-review) and [Unsloth](/power-local-llm/unsloth-review) document a web UI for training.',
+          '**LoRA and QLoRA.** [LLaMA-Factory](/power-local-llm/llama-factory-review) and [Unsloth](/power-local-llm/unsloth-review) document LoRA or QLoRA fine-tuning for language models. [Locally Uncensored](/power-local-llm/locally-uncensored-review) documents a separate LoRA trainer, for image models rather than language models.',
+          '**Web UI.** [LLaMA-Factory](/power-local-llm/llama-factory-review), [Unsloth](/power-local-llm/unsloth-review) and [Locally Uncensored](/power-local-llm/locally-uncensored-review) document a web UI for training.',
           '**Multi-GPU training.** [LLaMA-Factory](/power-local-llm/llama-factory-review) and [Unsloth](/power-local-llm/unsloth-review) document multi-GPU training.',
           '**Low-VRAM training.** [LLaMA-Factory](/power-local-llm/llama-factory-review) and [Unsloth](/power-local-llm/unsloth-review) document a low-VRAM or memory-saving mode.',
           '**Export to GGUF or Ollama.** [LLaMA-Factory](/power-local-llm/llama-factory-review) and [Unsloth](/power-local-llm/unsloth-review) document exporting models to GGUF or Ollama.',
@@ -324,15 +324,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: 'Vergleichstabelle',
-        content: 'Wählen Sie unten eine Art von Tool und lesen Sie dann quer durch eine Zeile. Klicken Sie auf einen Toolnamen, um den vollständigen PromptQuorum-Test zu öffnen.',
+        content: 'Wählen Sie unten eine Art von Tool und lesen Sie dann quer durch eine Zeile. Klicken Sie auf einen Toolnamen, um den vollständigen PromptQuorum-Test zu öffnen. Hinweis: In der Fine-Tuning-Tabelle deckt die Spalte „LoRA / QLoRA" sowohl Fine-Tuning von Sprachmodellen (LLaMA-Factory, Unsloth) als auch einen separaten LoRA-Trainer für Bildmodelle (Locally Uncensored) ab — lesen Sie den Abschnitt unter der Tabelle für diese Unterscheidung, bevor Sie Zeilen vergleichen.',
         component: 'CategoryCompareTable',
       },
       finetuneDifferences: {
         id: 'finetune-differences',
         title: 'Fine-Tuning-Tools: Was sie unterscheidet',
         items: [
-          '**LoRA und QLoRA.** [LLaMA-Factory](/de/power-local-llm/llama-factory-review) und [Unsloth](/de/power-local-llm/unsloth-review) dokumentieren LoRA- oder QLoRA-Fine-Tuning.',
-          '**Web-Oberfläche.** [LLaMA-Factory](/de/power-local-llm/llama-factory-review) und [Unsloth](/de/power-local-llm/unsloth-review) dokumentieren eine Web-Oberfläche für das Training.',
+          '**LoRA und QLoRA.** [LLaMA-Factory](/de/power-local-llm/llama-factory-review) und [Unsloth](/de/power-local-llm/unsloth-review) dokumentieren LoRA- oder QLoRA-Fine-Tuning für Sprachmodelle. [Locally Uncensored](/de/power-local-llm/locally-uncensored-review) dokumentiert einen separaten LoRA-Trainer für Bildmodelle statt für Sprachmodelle.',
+          '**Web-Oberfläche.** [LLaMA-Factory](/de/power-local-llm/llama-factory-review), [Unsloth](/de/power-local-llm/unsloth-review) und [Locally Uncensored](/de/power-local-llm/locally-uncensored-review) dokumentieren eine Web-Oberfläche für das Training.',
           '**Multi-GPU-Training.** [LLaMA-Factory](/de/power-local-llm/llama-factory-review) und [Unsloth](/de/power-local-llm/unsloth-review) dokumentieren Multi-GPU-Training.',
           '**Training mit wenig VRAM.** [LLaMA-Factory](/de/power-local-llm/llama-factory-review) und [Unsloth](/de/power-local-llm/unsloth-review) dokumentieren einen Modus für wenig VRAM bzw. zum Speichersparen.',
           '**Export nach GGUF oder Ollama.** [LLaMA-Factory](/de/power-local-llm/llama-factory-review) und [Unsloth](/de/power-local-llm/unsloth-review) dokumentieren den Export von Modellen nach GGUF oder Ollama.',
@@ -531,15 +531,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: 'Tableau comparatif',
-        content: 'Choisissez un type d\'outil ci-dessous, puis lisez la ligne de gauche à droite. Cliquez sur le nom d\'un outil pour ouvrir son avis PromptQuorum complet.',
+        content: 'Choisissez un type d\'outil ci-dessous, puis lisez la ligne de gauche à droite. Cliquez sur le nom d\'un outil pour ouvrir son avis PromptQuorum complet. Remarque : dans le tableau de fine-tuning, la colonne « LoRA / QLoRA » couvre à la fois le fine-tuning de modèles de langage (LLaMA-Factory, Unsloth) et un entraîneur LoRA distinct pour les modèles d\'image (Locally Uncensored) — lisez la section sous le tableau pour cette distinction avant de comparer les lignes.',
         component: 'CategoryCompareTable',
       },
       finetuneDifferences: {
         id: 'finetune-differences',
         title: 'Outils de fine-tuning : ce qui les distingue',
         items: [
-          '**LoRA et QLoRA.** [LLaMA-Factory](/fr/power-local-llm/llama-factory-review) et [Unsloth](/fr/power-local-llm/unsloth-review) documentent le fine-tuning LoRA ou QLoRA.',
-          '**Interface web.** [LLaMA-Factory](/fr/power-local-llm/llama-factory-review) et [Unsloth](/fr/power-local-llm/unsloth-review) documentent une interface web pour l\'entraînement.',
+          '**LoRA et QLoRA.** [LLaMA-Factory](/fr/power-local-llm/llama-factory-review) et [Unsloth](/fr/power-local-llm/unsloth-review) documentent le fine-tuning LoRA ou QLoRA pour les modèles de langage. [Locally Uncensored](/fr/power-local-llm/locally-uncensored-review) documente un entraîneur LoRA distinct, pour les modèles d\'image plutôt que pour les modèles de langage.',
+          '**Interface web.** [LLaMA-Factory](/fr/power-local-llm/llama-factory-review), [Unsloth](/fr/power-local-llm/unsloth-review) et [Locally Uncensored](/fr/power-local-llm/locally-uncensored-review) documentent une interface web pour l\'entraînement.',
           '**Entraînement multi-GPU.** [LLaMA-Factory](/fr/power-local-llm/llama-factory-review) et [Unsloth](/fr/power-local-llm/unsloth-review) documentent l\'entraînement multi-GPU.',
           '**Entraînement à faible VRAM.** [LLaMA-Factory](/fr/power-local-llm/llama-factory-review) et [Unsloth](/fr/power-local-llm/unsloth-review) documentent un mode faible VRAM ou d\'économie de mémoire.',
           '**Export vers GGUF ou Ollama.** [LLaMA-Factory](/fr/power-local-llm/llama-factory-review) et [Unsloth](/fr/power-local-llm/unsloth-review) documentent l\'export de modèles vers GGUF ou Ollama.',
@@ -738,15 +738,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: 'Tabla comparativa',
-        content: 'Elige a continuación un tipo de herramienta y lee cada fila de izquierda a derecha. Haz clic en el nombre de una herramienta para abrir su análisis completo de PromptQuorum.',
+        content: 'Elige a continuación un tipo de herramienta y lee cada fila de izquierda a derecha. Haz clic en el nombre de una herramienta para abrir su análisis completo de PromptQuorum. Nota: en la tabla de fine-tuning, la columna "LoRA / QLoRA" abarca tanto el fine-tuning de modelos de lenguaje (LLaMA-Factory, Unsloth) como un entrenador de LoRA independiente para modelos de imagen (Locally Uncensored) — lee la sección debajo de la tabla para esa distinción antes de comparar filas.',
         component: 'CategoryCompareTable',
       },
       finetuneDifferences: {
         id: 'finetune-differences',
         title: 'Herramientas de fine-tuning: qué las diferencia',
         items: [
-          '**LoRA y QLoRA.** [LLaMA-Factory](/es/power-local-llm/llama-factory-review) y [Unsloth](/es/power-local-llm/unsloth-review) documentan el fine-tuning con LoRA o QLoRA.',
-          '**Interfaz web.** [LLaMA-Factory](/es/power-local-llm/llama-factory-review) y [Unsloth](/es/power-local-llm/unsloth-review) documentan una interfaz web para el entrenamiento.',
+          '**LoRA y QLoRA.** [LLaMA-Factory](/es/power-local-llm/llama-factory-review) y [Unsloth](/es/power-local-llm/unsloth-review) documentan el fine-tuning con LoRA o QLoRA para modelos de lenguaje. [Locally Uncensored](/es/power-local-llm/locally-uncensored-review) documenta un entrenador de LoRA independiente, para modelos de imagen en lugar de modelos de lenguaje.',
+          '**Interfaz web.** [LLaMA-Factory](/es/power-local-llm/llama-factory-review), [Unsloth](/es/power-local-llm/unsloth-review) y [Locally Uncensored](/es/power-local-llm/locally-uncensored-review) documentan una interfaz web para el entrenamiento.',
           '**Entrenamiento multi-GPU.** [LLaMA-Factory](/es/power-local-llm/llama-factory-review) y [Unsloth](/es/power-local-llm/unsloth-review) documentan el entrenamiento multi-GPU.',
           '**Entrenamiento con poca VRAM.** [LLaMA-Factory](/es/power-local-llm/llama-factory-review) y [Unsloth](/es/power-local-llm/unsloth-review) documentan un modo de poca VRAM o de ahorro de memoria.',
           '**Exportación a GGUF u Ollama.** [LLaMA-Factory](/es/power-local-llm/llama-factory-review) y [Unsloth](/es/power-local-llm/unsloth-review) documentan la exportación de modelos a GGUF u Ollama.',
@@ -945,15 +945,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: '比較表',
-        content: '下でツールの種類を選び、行に沿って読み比べてください。ツール名をクリックすると、PromptQuorumの詳しいレビューが開きます。',
+        content: '下でツールの種類を選び、行に沿って読み比べてください。ツール名をクリックすると、PromptQuorumの詳しいレビューが開きます。注記:ファインチューニングの表にある「LoRA / QLoRA」列は、言語モデルのファインチューニング(LLaMA-Factory、Unsloth)と、画像モデル向けの別のLoRAトレーナー(Locally Uncensored)の両方をカバーしています。行を比較する前に、表の下のセクションでこの違いをご確認ください。',
         component: 'CategoryCompareTable',
       },
       finetuneDifferences: {
         id: 'finetune-differences',
         title: 'ファインチューニングツール:違いのポイント',
         items: [
-          '**LoRAとQLoRA。** [LLaMA-Factory](/ja/power-local-llm/llama-factory-review)と[Unsloth](/ja/power-local-llm/unsloth-review)は、LoRAまたはQLoRAによるファインチューニングをドキュメントに記載しています。',
-          '**Web UI。** [LLaMA-Factory](/ja/power-local-llm/llama-factory-review)と[Unsloth](/ja/power-local-llm/unsloth-review)は、学習用のWeb UIをドキュメントに記載しています。',
+          '**LoRAとQLoRA。** [LLaMA-Factory](/ja/power-local-llm/llama-factory-review)と[Unsloth](/ja/power-local-llm/unsloth-review)は、言語モデル向けのLoRAまたはQLoRAによるファインチューニングをドキュメントに記載しています。[Locally Uncensored](/ja/power-local-llm/locally-uncensored-review)は別物で、画像モデル向けのLoRAトレーナーを記載しており、言語モデルのファインチューニングではありません。',
+          '**Web UI。** [LLaMA-Factory](/ja/power-local-llm/llama-factory-review)、[Unsloth](/ja/power-local-llm/unsloth-review)、[Locally Uncensored](/ja/power-local-llm/locally-uncensored-review)は、学習用のWeb UIをドキュメントに記載しています。',
           '**マルチGPU学習。** [LLaMA-Factory](/ja/power-local-llm/llama-factory-review)と[Unsloth](/ja/power-local-llm/unsloth-review)は、マルチGPU学習をドキュメントに記載しています。',
           '**低VRAM学習。** [LLaMA-Factory](/ja/power-local-llm/llama-factory-review)と[Unsloth](/ja/power-local-llm/unsloth-review)は、低VRAMまたはメモリ節約モードをドキュメントに記載しています。',
           '**GGUFまたはOllamaへのエクスポート。** [LLaMA-Factory](/ja/power-local-llm/llama-factory-review)と[Unsloth](/ja/power-local-llm/unsloth-review)は、モデルをGGUFまたはOllamaへエクスポートする方法をドキュメントに記載しています。',
@@ -1152,15 +1152,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: '对比表',
-        content: '请在下方选择一个工具类别,然后横向阅读每一行。点击工具名称即可打开其完整的PromptQuorum评测。',
+        content: '请在下方选择一个工具类别,然后横向阅读每一行。点击工具名称即可打开其完整的PromptQuorum评测。注意:在微调表格中,"LoRA / QLoRA"这一列既涵盖语言模型微调(LLaMA-Factory、Unsloth),也涵盖一个面向图像模型的独立LoRA训练器(Locally Uncensored)——在对比各行之前,请先阅读表格下方对这一区别的说明。',
         component: 'CategoryCompareTable',
       },
       finetuneDifferences: {
         id: 'finetune-differences',
         title: '微调工具:差异所在',
         items: [
-          '**LoRA与QLoRA。** [LLaMA-Factory](/zh/power-local-llm/llama-factory-review)和[Unsloth](/zh/power-local-llm/unsloth-review)在文档中说明支持LoRA或QLoRA微调。',
-          '**Web界面。** [LLaMA-Factory](/zh/power-local-llm/llama-factory-review)和[Unsloth](/zh/power-local-llm/unsloth-review)在文档中说明提供用于训练的Web界面。',
+          '**LoRA与QLoRA。** [LLaMA-Factory](/zh/power-local-llm/llama-factory-review)和[Unsloth](/zh/power-local-llm/unsloth-review)在文档中说明支持针对语言模型的LoRA或QLoRA微调。[Locally Uncensored](/zh/power-local-llm/locally-uncensored-review)在文档中说明的是一个独立的LoRA训练器,面向图像模型而非语言模型。',
+          '**Web界面。** [LLaMA-Factory](/zh/power-local-llm/llama-factory-review)、[Unsloth](/zh/power-local-llm/unsloth-review)和[Locally Uncensored](/zh/power-local-llm/locally-uncensored-review)在文档中说明提供用于训练的Web界面。',
           '**多GPU训练。** [LLaMA-Factory](/zh/power-local-llm/llama-factory-review)和[Unsloth](/zh/power-local-llm/unsloth-review)在文档中说明支持多GPU训练。',
           '**低显存训练。** [LLaMA-Factory](/zh/power-local-llm/llama-factory-review)和[Unsloth](/zh/power-local-llm/unsloth-review)在文档中说明提供低显存或节省内存的模式。',
           '**导出为GGUF或Ollama。** [LLaMA-Factory](/zh/power-local-llm/llama-factory-review)和[Unsloth](/zh/power-local-llm/unsloth-review)在文档中说明支持将模型导出为GGUF或Ollama。',
@@ -1359,15 +1359,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: 'Tabela comparativa',
-        content: 'Escolha abaixo um tipo de ferramenta e leia ao longo da linha. Clique no nome de uma ferramenta para abrir a análise completa da PromptQuorum.',
+        content: 'Escolha abaixo um tipo de ferramenta e leia ao longo da linha. Clique no nome de uma ferramenta para abrir a análise completa da PromptQuorum. Nota: na tabela de fine-tuning, a coluna "LoRA / QLoRA" abrange tanto o fine-tuning de modelos de linguagem (LLaMA-Factory, Unsloth) quanto um treinador de LoRA separado para modelos de imagem (Locally Uncensored) — leia a seção abaixo da tabela para essa distinção antes de comparar as linhas.',
         component: 'CategoryCompareTable',
       },
       finetuneDifferences: {
         id: 'finetune-differences',
         title: 'Ferramentas de fine-tuning: o que difere',
         items: [
-          '**LoRA e QLoRA.** [LLaMA-Factory](/pt/power-local-llm/llama-factory-review) e [Unsloth](/pt/power-local-llm/unsloth-review) documentam fine-tuning com LoRA ou QLoRA.',
-          '**Interface web.** [LLaMA-Factory](/pt/power-local-llm/llama-factory-review) e [Unsloth](/pt/power-local-llm/unsloth-review) documentam uma interface web para treinamento.',
+          '**LoRA e QLoRA.** [LLaMA-Factory](/pt/power-local-llm/llama-factory-review) e [Unsloth](/pt/power-local-llm/unsloth-review) documentam fine-tuning com LoRA ou QLoRA para modelos de linguagem. O [Locally Uncensored](/pt/power-local-llm/locally-uncensored-review) documenta um treinador de LoRA separado, para modelos de imagem em vez de modelos de linguagem.',
+          '**Interface web.** [LLaMA-Factory](/pt/power-local-llm/llama-factory-review), [Unsloth](/pt/power-local-llm/unsloth-review) e [Locally Uncensored](/pt/power-local-llm/locally-uncensored-review) documentam uma interface web para treinamento.',
           '**Treinamento multi-GPU.** [LLaMA-Factory](/pt/power-local-llm/llama-factory-review) e [Unsloth](/pt/power-local-llm/unsloth-review) documentam treinamento multi-GPU.',
           '**Treinamento com pouca VRAM.** [LLaMA-Factory](/pt/power-local-llm/llama-factory-review) e [Unsloth](/pt/power-local-llm/unsloth-review) documentam um modo de pouca VRAM ou de economia de memória.',
           '**Exportação para GGUF ou Ollama.** [LLaMA-Factory](/pt/power-local-llm/llama-factory-review) e [Unsloth](/pt/power-local-llm/unsloth-review) documentam a exportação de modelos para GGUF ou Ollama.',
@@ -1509,15 +1509,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU'],
     leadAnswerBlock:
-      '**تنقسم أدوات التدريب والتشغيل المحلية السبع في دليل PromptQuorum إلى نوعين ينبغي مقارنتهما كلٌّ على حدة: أدوات الضبط الدقيق (4) وأدوات المراقبة والتقييم (3).** ففي الضبط الدقيق يوثّق كلٌّ من [LLaMA-Factory](/ar/power-local-llm/llama-factory-review) و[Unsloth](/ar/power-local-llm/unsloth-review) التدريب بـ LoRA أو QLoRA؛ وفي المراقبة يوثّق كلٌّ من [Langfuse](/ar/power-local-llm/langfuse-review) و[Plano](/ar/power-local-llm/plano-review) تتبع استدعاءات LLM. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.',
+      `**تنقسم أدوات التدريب والتشغيل المحلية الـ${TO_TOTAL} في دليل PromptQuorum إلى نوعين ينبغي مقارنتهما كلٌّ على حدة: أدوات الضبط الدقيق (${TO_FINE_TUNING}) وأدوات المراقبة والتقييم (${TO_OBSERVABILITY_EVAL}).** ففي الضبط الدقيق يوثّق كلٌّ من [LLaMA-Factory](/ar/power-local-llm/llama-factory-review) و[Unsloth](/ar/power-local-llm/unsloth-review) التدريب بـ LoRA أو QLoRA؛ وفي المراقبة يوثّق كلٌّ من [Langfuse](/ar/power-local-llm/langfuse-review) و[Plano](/ar/power-local-llm/plano-review) تتبع استدعاءات LLM. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
     quickAnswerTop: {
       en: {
         question: 'ما أداة الضبط الدقيق أو المراقبة المحلية التي ينبغي أن أستخدمها؟',
         answer:
           'يعتمد ذلك على نوع الأداة، لذا قارن داخل نوع واحد في كل مرة. في الضبط الدقيق اختر بحسب دعم LoRA وQLoRA والتدريب بذاكرة VRAM منخفضة وواجهة الويب وصيغة التصدير؛ وفي المراقبة اختر بحسب التتبع والتقييمات وإدارة الموجّهات والاستضافة الذاتية. استخدم الجدول أدناه، وهو مولَّد من الوثائق الرسمية لكل أداة.',
         bullets: [
-          'الضبط الدقيق: 4 أدوات تُقارَن بحسب LoRA وQLoRA وواجهة الويب والتدريب على عدة وحدات GPU ووضع VRAM المنخفضة والتصدير إلى GGUF أو Ollama.',
-          'المراقبة والتقييم: 3 أدوات تُقارَن بحسب التتبع والتقييمات وإدارة الموجّهات وOpenTelemetry وDocker ونماذج LLM المحلية.',
+          `الضبط الدقيق: ${TO_FINE_TUNING} أدوات تُقارَن بحسب LoRA وQLoRA وواجهة الويب والتدريب على عدة وحدات GPU ووضع VRAM المنخفضة والتصدير إلى GGUF أو Ollama.`,
+          `المراقبة والتقييم: ${TO_OBSERVABILITY_EVAL} أدوات تُقارَن بحسب التتبع والتقييمات وإدارة الموجّهات وOpenTelemetry وDocker ونماذج LLM المحلية.`,
           'الشرطة (—) تعني أن وثائق المشروع لا تذكر الميزة، لا أن الميزة غير موجودة.',
         ],
       },
@@ -1540,7 +1540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'أدوات التدريب والتشغيل المحلية نوعان مختلفان من المنتجات — أدوات الضبط الدقيق وأدوات المراقبة والتقييم — ولذلك تُقارَن الأدوات السبع في دليل PromptQuorum داخل كل نوع، باستخدام جدول مولَّد من بيانات الأداة نفسها التي تعتمد عليها مراجعتها.',
+            text: `أدوات التدريب والتشغيل المحلية نوعان مختلفان من المنتجات — أدوات الضبط الدقيق وأدوات المراقبة والتقييم — ولذلك تُقارَن الأدوات الـ${TO_TOTAL} في دليل PromptQuorum داخل كل نوع، باستخدام جدول مولَّد من بيانات الأداة نفسها التي تعتمد عليها مراجعتها.`,
           },
           {
             type: 'plain-terms',
@@ -1566,15 +1566,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: 'جدول المقارنة',
-        content: 'اختر نوع الأداة أدناه، ثم اقرأ عبر الصف. انقر على اسم الأداة لفتح مراجعتها الكاملة في PromptQuorum.',
+        content: 'اختر نوع الأداة أدناه، ثم اقرأ عبر الصف. انقر على اسم الأداة لفتح مراجعتها الكاملة في PromptQuorum. ملاحظة: في جدول الضبط الدقيق، يشمل عمود "LoRA / QLoRA" كلًّا من الضبط الدقيق لنماذج اللغة (LLaMA-Factory وUnsloth) ومدرِّب LoRA منفصل لنماذج الصور (Locally Uncensored) — اقرأ القسم أسفل الجدول لمعرفة هذا الفرق قبل مقارنة الصفوف.',
         component: 'CategoryCompareTable',
       },
       finetuneDifferences: {
         id: 'finetune-differences',
         title: 'أدوات الضبط الدقيق: أين تختلف',
         items: [
-          '**LoRA وQLoRA.** يوثّق كلٌّ من [LLaMA-Factory](/ar/power-local-llm/llama-factory-review) و[Unsloth](/ar/power-local-llm/unsloth-review) الضبط الدقيق بـ LoRA أو QLoRA.',
-          '**واجهة الويب.** يوثّق كلٌّ من [LLaMA-Factory](/ar/power-local-llm/llama-factory-review) و[Unsloth](/ar/power-local-llm/unsloth-review) واجهة ويب للتدريب.',
+          '**LoRA وQLoRA.** يوثّق كلٌّ من [LLaMA-Factory](/ar/power-local-llm/llama-factory-review) و[Unsloth](/ar/power-local-llm/unsloth-review) الضبط الدقيق بـ LoRA أو QLoRA لنماذج اللغة. ويوثّق [Locally Uncensored](/ar/power-local-llm/locally-uncensored-review) مدرِّب LoRA منفصلاً لنماذج الصور، لا لنماذج اللغة.',
+          '**واجهة الويب.** يوثّق كلٌّ من [LLaMA-Factory](/ar/power-local-llm/llama-factory-review) و[Unsloth](/ar/power-local-llm/unsloth-review) و[Locally Uncensored](/ar/power-local-llm/locally-uncensored-review) واجهة ويب للتدريب.',
           '**التدريب على عدة وحدات GPU.** يوثّق كلٌّ من [LLaMA-Factory](/ar/power-local-llm/llama-factory-review) و[Unsloth](/ar/power-local-llm/unsloth-review) التدريب على عدة وحدات GPU.',
           '**التدريب بذاكرة VRAM منخفضة.** يوثّق كلٌّ من [LLaMA-Factory](/ar/power-local-llm/llama-factory-review) و[Unsloth](/ar/power-local-llm/unsloth-review) وضعًا منخفض استهلاك VRAM أو موفِّرًا للذاكرة.',
           '**التصدير إلى GGUF أو Ollama.** يوثّق كلٌّ من [LLaMA-Factory](/ar/power-local-llm/llama-factory-review) و[Unsloth](/ar/power-local-llm/unsloth-review) تصدير النماذج إلى GGUF أو Ollama.',
@@ -1773,15 +1773,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: '비교표',
-        content: '아래에서 도구 종류를 선택한 다음 행을 따라 읽어 보세요. 도구 이름을 클릭하면 PromptQuorum 리뷰 전문이 열립니다.',
+        content: '아래에서 도구 종류를 선택한 다음 행을 따라 읽어 보세요. 도구 이름을 클릭하면 PromptQuorum 리뷰 전문이 열립니다. 참고: 파인튜닝 표에서 "LoRA / QLoRA" 열은 언어 모델 파인튜닝(LLaMA-Factory, Unsloth)과 이미지 모델용 별도의 LoRA 트레이너(Locally Uncensored)를 모두 포함합니다. 행을 비교하기 전에 표 아래 섹션에서 이 차이를 확인하세요.',
         component: 'CategoryCompareTable',
       },
       finetuneDifferences: {
         id: 'finetune-differences',
         title: '파인튜닝 도구: 무엇이 다른가',
         items: [
-          '**LoRA와 QLoRA.** [LLaMA-Factory](/ko/power-local-llm/llama-factory-review)와 [Unsloth](/ko/power-local-llm/unsloth-review)는 LoRA 또는 QLoRA 파인튜닝을 문서에 명시하고 있습니다.',
-          '**웹 UI.** [LLaMA-Factory](/ko/power-local-llm/llama-factory-review)와 [Unsloth](/ko/power-local-llm/unsloth-review)는 학습용 웹 UI를 문서에 명시하고 있습니다.',
+          '**LoRA와 QLoRA.** [LLaMA-Factory](/ko/power-local-llm/llama-factory-review)와 [Unsloth](/ko/power-local-llm/unsloth-review)는 언어 모델용 LoRA 또는 QLoRA 파인튜닝을 문서에 명시하고 있습니다. [Locally Uncensored](/ko/power-local-llm/locally-uncensored-review)는 별개로 이미지 모델용 LoRA 트레이너를 문서에 명시하고 있으며, 언어 모델 파인튜닝은 아닙니다.',
+          '**웹 UI.** [LLaMA-Factory](/ko/power-local-llm/llama-factory-review), [Unsloth](/ko/power-local-llm/unsloth-review), [Locally Uncensored](/ko/power-local-llm/locally-uncensored-review)는 학습용 웹 UI를 문서에 명시하고 있습니다.',
           '**멀티 GPU 학습.** [LLaMA-Factory](/ko/power-local-llm/llama-factory-review)와 [Unsloth](/ko/power-local-llm/unsloth-review)는 멀티 GPU 학습을 문서에 명시하고 있습니다.',
           '**저VRAM 학습.** [LLaMA-Factory](/ko/power-local-llm/llama-factory-review)와 [Unsloth](/ko/power-local-llm/unsloth-review)는 저VRAM 또는 메모리 절약 모드를 문서에 명시하고 있습니다.',
           '**GGUF 또는 Ollama로 내보내기.** [LLaMA-Factory](/ko/power-local-llm/llama-factory-review)와 [Unsloth](/ko/power-local-llm/unsloth-review)는 모델을 GGUF 또는 Ollama로 내보내는 기능을 문서에 명시하고 있습니다.',

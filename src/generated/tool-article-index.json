@@ -1639,6 +1639,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-llm-train-operate-compared",
+        "title": "Local Model Training & Operations Tools Compared (2026): Fine-Tuning and Observability",
+        "url": "/power-local-llm/local-llm-train-operate-compared",
+        "dateModified": "2026-09-21",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -1654,7 +1662,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "BoltAI": {
