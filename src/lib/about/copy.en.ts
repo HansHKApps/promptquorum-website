@@ -4,9 +4,12 @@ export const en: AboutCopy = {
   kicker: 'About PromptQuorum',
   h1: 'The usage layer for open-weight and open-source AI.',
   heroLead:
-    'PromptQuorum is an independent ecosystem for running AI on your own terms: a directory of {{appCount}} local-AI apps, a knowledge base of {{articleCount}} articles in nine languages, and a free app that puts many models side by side.',
+    'PromptQuorum helps you run AI privately, on your own hardware, instead of renting it from a cloud provider: a directory of {{appCount}} local-AI apps, a knowledge base of {{articleCount}} articles in nine languages, and a free app that puts many models side by side.',
   heroSub:
     'Open-weight and open-source models are easy to download. Knowing which app to use, whether your hardware can run it and how to set it up is still hard. That gap is what PromptQuorum fills.',
+  heroOpenWeightNote:
+    '"Open-weight" means the trained model file itself — not just the surrounding code — is free to download and run anywhere, unlike closed models such as GPT or Gemini that only run on their maker\'s own servers.',
+  heroOpenWeightLinkLabel: 'Open weight vs. open source, explained',
   ctaDirectory: 'Explore the Directory',
   ctaHardware: 'What runs on my hardware?',
   ctaEcosystem: 'How the parts fit together',
@@ -73,18 +76,22 @@ export const en: AboutCopy = {
   useLabel: 'Use',
   askLabel: 'Ask',
   partFindTitle: 'The Local AI Directory',
+  partFindOneLiner: 'The searchable, structured map of local-AI software.',
   partFindBody:
-    '{{appCount}} local-AI apps in {{groupCount}} groups and {{categoryCount}} categories. Every entry has the same fields: what it does, platforms, license, price and hardware needs, plus a link to the official website. Set a hardware profile and each app shows whether it runs well, runs marginally or won’t run on your machine.',
+    'Unlike a generic "best AI apps" roundup built from free-text blurbs, every one of the {{appCount}} local-AI apps here — across {{groupCount}} groups and {{categoryCount}} categories — is described with the same structured fields: what it does, platforms, license, price and hardware needs, plus a link to the official website. That shared structure is what makes entries comparable and what powers the hardware match: set a profile once and each app shows whether it runs well, runs marginally or won’t run on your machine.',
   partFindConnects: 'entries link to their PromptQuorum review and guides where they exist.',
   partLearnTitle: 'The Knowledge Base',
+  partLearnOneLiner: 'The how-to library behind every recommendation.',
   partLearnBody:
     '{{articleCount}} articles: guides, reviews and comparisons on hardware (VRAM, Apple Silicon, GPUs, CPU-only), software, models, quantization, RAG, agents, voice, prompt engineering and complete local-AI stacks. Written for people who want a working setup, not a theory lecture.',
   partLearnConnects: 'reviews and comparisons link back to the directory entries they cover.',
   partUseTitle: 'The PromptQuorum app',
+  partUseOneLiner: 'Compare answers from several models side by side.',
   partUseBody:
     'A free multi-model app, currently in beta. Send one prompt to several models, including local ones, and see where their answers agree and where they contradict each other. Agreement is a useful signal, not proof. You bring your own keys and models. Nothing you send goes through a PromptQuorum server, and the app makes no calls back to us. This is where PromptQuorum started.',
   partUseConnects: 'it connects to Ollama and LM Studio, both listed in the directory, so local models sit next to cloud ones.',
   partAskTitle: 'The MCP server',
+  partAskOneLiner: 'Let your own AI assistant query PromptQuorum directly.',
   partAskBody:
     'A public, read-only server for the Model Context Protocol. Claude, Cursor and any MCP-capable assistant can search the directory, pull app details, read guides and explain licenses. No account and no API key. When your AI answers a question about local AI, it can draw on PromptQuorum instead of guessing.',
   partAskConnects: 'it reads the same directory and guides as this website, so your assistant answers from the same source you do.',
@@ -148,6 +155,8 @@ export const en: AboutCopy = {
     'PromptQuorum is the first AI app directory to publish a public, no-authentication MCP endpoint. Connect it once, and any MCP-compatible assistant — Claude, ChatGPT, Cursor and others — can query PromptQuorum’s app database, license data and articles directly inside your own conversation, no copy-pasting between tabs.',
   mcpBenefit:
     'That data becomes an input your assistant can reason over, not just read. It combines what PromptQuorum returns with its own knowledge, the other files in your conversation and its own web research, in the same reply. In practice, that lets you:',
+  mcpExample:
+    'For example: ask "which local AI apps run on 16 GB of RAM and can chat with PDFs?" and your assistant queries PromptQuorum\'s directory and knowledge base directly, then names specific apps with their license and hardware fit — instead of guessing from training data that may be out of date.',
   mcpBullets: [
     'Compare apps PromptQuorum has reviewed without leaving your chat, then ask follow-up questions about them',
     'Check a tool’s license against your use case, cited straight from PromptQuorum’s data',

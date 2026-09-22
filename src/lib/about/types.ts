@@ -28,6 +28,8 @@ export interface AboutCopy {
   h1: string
   heroLead: string // {{appCount}} {{articleCount}}
   heroSub: string
+  heroOpenWeightNote: string // one-sentence plain-language definition of "open weight"
+  heroOpenWeightLinkLabel: string // links to /local-llms/open-weight-vs-open-source-ai-models
   ctaDirectory: string
   ctaHardware: string
   ctaEcosystem: string
@@ -60,15 +62,19 @@ export interface AboutCopy {
   useLabel: string
   askLabel: string
   partFindTitle: string
+  partFindOneLiner: string
   partFindBody: string // {{appCount}} {{groupCount}} {{categoryCount}}
   partFindConnects: string
   partLearnTitle: string
+  partLearnOneLiner: string
   partLearnBody: string // {{articleCount}}
   partLearnConnects: string
   partUseTitle: string
+  partUseOneLiner: string
   partUseBody: string
   partUseConnects: string
   partAskTitle: string
+  partAskOneLiner: string
   partAskBody: string
   partAskConnects: string
   ctaOpenDirectory: string
@@ -106,6 +112,7 @@ export interface AboutCopy {
   mcpLead: string
   mcpFirstClaim: string
   mcpBenefit: string
+  mcpExample: string // one concrete worked example of an assistant querying PromptQuorum to recommend an app
   mcpBullets: [string, string, string, string]
   mcpEndpointLabel: string
   mcpEndpointNote: string

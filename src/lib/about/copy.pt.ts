@@ -4,9 +4,12 @@ export const pt: AboutCopy = {
   kicker: 'Sobre a PromptQuorum',
   h1: 'A camada de uso para IA de pesos abertos e código aberto.',
   heroLead:
-    'A PromptQuorum é um ecossistema independente para rodar IA nos seus próprios termos: um diretório com {{appCount}} aplicativos de IA local, uma base de conhecimento com {{articleCount}} artigos em nove idiomas e um aplicativo gratuito que coloca vários modelos lado a lado.',
+    'A PromptQuorum ajuda você a rodar IA em privado, no seu próprio hardware, em vez de alugá-la de um provedor de nuvem: um diretório com {{appCount}} aplicativos de IA local, uma base de conhecimento com {{articleCount}} artigos em nove idiomas e um aplicativo gratuito que coloca vários modelos lado a lado.',
   heroSub:
     'Modelos de pesos abertos e código aberto são fáceis de baixar. Saber qual aplicativo usar, se o seu hardware consegue rodá-lo e como configurá-lo ainda é difícil. É essa lacuna que a PromptQuorum preenche.',
+  heroOpenWeightNote:
+    '“Open-weight” (pesos abertos) significa que o próprio arquivo do modelo treinado — não só o código ao redor — é livre para baixar e rodar em qualquer lugar, diferente de modelos fechados como GPT ou Gemini, que só funcionam nos servidores do seu criador.',
+  heroOpenWeightLinkLabel: 'Pesos abertos vs. código aberto, explicado',
   ctaDirectory: 'Explorar o Diretório',
   ctaHardware: 'O que roda no meu hardware?',
   ctaEcosystem: 'Como as partes se encaixam',
@@ -70,18 +73,22 @@ export const pt: AboutCopy = {
   useLabel: 'Usar',
   askLabel: 'Perguntar',
   partFindTitle: 'O Diretório de IA Local',
+  partFindOneLiner: 'O mapa estruturado e pesquisável do software de IA local.',
   partFindBody:
-    '{{appCount}} aplicativos de IA local em {{groupCount}} grupos e {{categoryCount}} categorias. Cada entrada tem os mesmos campos: o que faz, plataformas, licença, preço e requisitos de hardware, além de um link para o site oficial. Defina um perfil de hardware e cada aplicativo mostra se roda bem, roda de forma limitada ou não vai rodar na sua máquina.',
+    'Diferente de uma lista genérica de “melhores apps de IA” escrita em texto livre, cada um dos {{appCount}} aplicativos de IA local deste diretório — divididos em {{groupCount}} grupos e {{categoryCount}} categorias — usa os mesmos campos estruturados: o que faz, plataformas, licença, preço e requisitos de hardware, além de um link para o site oficial. É essa estrutura comum que torna as entradas comparáveis e que alimenta o filtro de hardware: defina um perfil uma vez e cada aplicativo mostra se roda bem, roda de forma limitada ou não vai rodar na sua máquina.',
   partFindConnects: 'as entradas têm links para a análise da PromptQuorum e para os guias, quando existem.',
   partLearnTitle: 'A Base de Conhecimento',
+  partLearnOneLiner: 'A biblioteca de guias por trás de cada recomendação.',
   partLearnBody:
     '{{articleCount}} artigos: guias, análises e comparações sobre hardware (VRAM, Apple Silicon, GPUs, apenas CPU), software, modelos, quantização, RAG, agentes, voz, prompt engineering e stacks completas de IA local. Escritos para quem quer uma configuração funcionando, não uma aula de teoria.',
   partLearnConnects: 'as análises e comparações têm links de volta para as entradas do diretório que elas cobrem.',
   partUseTitle: 'O aplicativo PromptQuorum',
+  partUseOneLiner: 'Compare as respostas de vários modelos lado a lado.',
   partUseBody:
     'Um aplicativo multimodelo gratuito, atualmente em beta. Envie um prompt para vários modelos, incluindo modelos locais, e veja onde as respostas concordam e onde se contradizem. Concordância é um sinal útil, não uma prova. Você usa suas próprias chaves e modelos. Nada do que você envia passa por um servidor da PromptQuorum, e o aplicativo não envia nenhum dado de volta para nós. Foi assim que a PromptQuorum começou.',
   partUseConnects: 'ele se conecta ao Ollama e ao LM Studio, ambos listados no diretório, para que os modelos locais fiquem lado a lado com os modelos na nuvem.',
   partAskTitle: 'O servidor MCP',
+  partAskOneLiner: 'Deixe sua própria IA consultar a PromptQuorum diretamente.',
   partAskBody:
     'Um servidor público, somente leitura, para o Model Context Protocol. Claude, Cursor e qualquer assistente compatível com MCP podem pesquisar no diretório, buscar detalhes de aplicativos, ler guias e explicar licenças. Sem conta e sem chave de API. Quando a sua IA responde a uma pergunta sobre IA local, ela pode recorrer à PromptQuorum em vez de adivinhar.',
   partAskConnects: 'ele lê o mesmo diretório e os mesmos guias que este site, para que o seu assistente responda a partir da mesma fonte que você.',
@@ -141,6 +148,8 @@ export const pt: AboutCopy = {
     'A PromptQuorum é o primeiro diretório de apps de IA a publicar um endpoint MCP público, sem autenticação. Conecte-o uma vez e qualquer assistente compatível com MCP — Claude, ChatGPT, Cursor e outros — poderá consultar o banco de apps, os dados de licença e os artigos da PromptQuorum diretamente na sua própria conversa, sem copiar e colar entre abas.',
   mcpBenefit:
     'Esses dados se tornam algo sobre o qual o seu assistente pode raciocinar, não apenas ler. Ele combina o que a PromptQuorum retorna com seu próprio conhecimento, os outros arquivos da sua conversa e sua própria pesquisa na web, na mesma resposta. Na prática, isso permite que você:',
+  mcpExample:
+    'Por exemplo: pergunte “quais apps de IA local rodam com 16 GB de RAM e conseguem conversar com PDFs?”, e o seu assistente consulta diretamente o diretório e a base de conhecimento da PromptQuorum, e então indica apps específicos com licença e compatibilidade de hardware — em vez de chutar com base em dados de treinamento que podem estar desatualizados.',
   mcpBullets: [
     'Compare apps que a PromptQuorum já avaliou sem sair do seu chat, e depois faça perguntas de acompanhamento sobre eles',
     'Verifique a licença de uma ferramenta para o seu caso de uso, citada direto dos dados da PromptQuorum',

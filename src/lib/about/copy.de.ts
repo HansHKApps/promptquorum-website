@@ -4,9 +4,12 @@ export const de: AboutCopy = {
   kicker: 'Über PromptQuorum',
   h1: 'Die Nutzungsebene für Open-Weight- und Open-Source-KI.',
   heroLead:
-    'PromptQuorum ist ein unabhängiges Ökosystem, mit dem Sie KI zu Ihren eigenen Bedingungen nutzen: ein Verzeichnis mit {{appCount}} lokalen KI-Apps, eine Wissensdatenbank mit {{articleCount}} Artikeln in neun Sprachen und eine kostenlose App, die viele Modelle nebeneinander stellt.',
+    'PromptQuorum hilft Ihnen, KI privat auf Ihrer eigenen Hardware zu betreiben, statt sie von einem Cloud-Anbieter zu mieten: ein Verzeichnis mit {{appCount}} lokalen KI-Apps, eine Wissensdatenbank mit {{articleCount}} Artikeln in neun Sprachen und eine kostenlose App, die viele Modelle nebeneinander stellt.',
   heroSub:
     'Open-Weight- und Open-Source-Modelle lassen sich leicht herunterladen. Zu wissen, welche App die richtige ist, ob die eigene Hardware sie ausführen kann und wie man sie einrichtet, ist dagegen nach wie vor schwierig. Genau diese Lücke schließt PromptQuorum.',
+  heroOpenWeightNote:
+    '„Open Weight" bedeutet, dass die trainierte Modelldatei selbst – nicht nur der Code drumherum – frei heruntergeladen und überall ausgeführt werden kann, anders als geschlossene Modelle wie GPT oder Gemini, die nur auf den Servern ihres Anbieters laufen.',
+  heroOpenWeightLinkLabel: 'Open Weight vs. Open Source erklärt',
   ctaDirectory: 'Verzeichnis entdecken',
   ctaHardware: 'Was läuft auf meiner Hardware?',
   ctaEcosystem: 'Wie die Teile zusammenspielen',
@@ -70,18 +73,22 @@ export const de: AboutCopy = {
   useLabel: 'Nutzen',
   askLabel: 'Fragen',
   partFindTitle: 'Das Verzeichnis für lokale KI',
+  partFindOneLiner: 'Die durchsuchbare, strukturierte Landkarte lokaler KI-Software.',
   partFindBody:
-    '{{appCount}} lokale KI-Apps in {{groupCount}} Gruppen und {{categoryCount}} Kategorien. Jeder Eintrag hat dieselben Felder: was die App macht, Plattformen, Lizenz, Preis und Hardware-Anforderungen, plus einen Link zur offiziellen Website. Legen Sie ein Hardware-Profil fest, und jede App zeigt an, ob sie gut läuft, nur eingeschränkt läuft oder auf Ihrem Rechner gar nicht läuft.',
+    'Anders als eine allgemeine „Beste KI-Apps"-Liste aus Fließtext-Beschreibungen sind alle {{appCount}} lokalen KI-Apps hier – verteilt auf {{groupCount}} Gruppen und {{categoryCount}} Kategorien – mit denselben strukturierten Feldern beschrieben: was die App macht, Plattformen, Lizenz, Preis und Hardware-Anforderungen, plus einen Link zur offiziellen Website. Genau diese einheitliche Struktur macht Einträge vergleichbar und ermöglicht den Hardware-Abgleich: Legen Sie einmal ein Profil fest, und jede App zeigt an, ob sie gut läuft, nur eingeschränkt läuft oder auf Ihrem Rechner gar nicht läuft.',
   partFindConnects: 'Einträge verlinken, wo vorhanden, zur passenden PromptQuorum-Bewertung und zu Anleitungen.',
   partLearnTitle: 'Die Wissensdatenbank',
+  partLearnOneLiner: 'Die Anleitungs-Bibliothek hinter jeder Empfehlung.',
   partLearnBody:
     '{{articleCount}} Artikel: Anleitungen, Bewertungen und Vergleiche zu Hardware (VRAM, Apple Silicon, GPUs, reine CPU-Nutzung), Software, Modellen, Quantisierung, RAG, Agenten, Sprache, Prompt Engineering und kompletten lokalen KI-Stacks. Geschrieben für Menschen, die ein funktionierendes Setup wollen, keinen Theorie-Vortrag.',
   partLearnConnects: 'Bewertungen und Vergleiche verlinken zurück zu den Verzeichniseinträgen, die sie behandeln.',
   partUseTitle: 'Die PromptQuorum-App',
+  partUseOneLiner: 'Antworten mehrerer Modelle direkt nebeneinander vergleichen.',
   partUseBody:
     'Eine kostenlose Multi-Modell-App, aktuell in der Beta-Phase. Senden Sie einen Prompt an mehrere Modelle, auch lokale, und sehen Sie, wo die Antworten übereinstimmen und wo sie sich widersprechen. Übereinstimmung ist ein nützliches Signal, kein Beweis. Sie bringen Ihre eigenen Schlüssel und Modelle mit. Nichts, was Sie senden, läuft über einen PromptQuorum-Server, und die App sendet keine Daten an uns zurück. Hier hat PromptQuorum seinen Anfang genommen.',
   partUseConnects: 'sie verbindet sich mit Ollama und LM Studio, die beide im Verzeichnis gelistet sind, sodass lokale Modelle neben Cloud-Modellen stehen.',
   partAskTitle: 'Der MCP-Server',
+  partAskOneLiner: 'Lassen Sie Ihre eigene KI PromptQuorum direkt abfragen.',
   partAskBody:
     'Ein öffentlicher, schreibgeschützter Server für das Model Context Protocol. Claude, Cursor und jeder MCP-fähige Assistent können das Verzeichnis durchsuchen, App-Details abrufen, Anleitungen lesen und Lizenzen erklären. Kein Konto und kein API-Schlüssel nötig. Wenn Ihre KI eine Frage zu lokaler KI beantwortet, kann sie sich auf PromptQuorum stützen, statt zu raten.',
   partAskConnects: 'er liest dasselbe Verzeichnis und dieselben Anleitungen wie diese Website, sodass Ihr Assistent aus derselben Quelle antwortet wie Sie selbst.',
@@ -141,6 +148,8 @@ export const de: AboutCopy = {
     'PromptQuorum ist das erste KI-App-Verzeichnis, das einen öffentlichen MCP-Endpunkt ohne Authentifizierung veröffentlicht. Verbinden Sie ihn einmal, und jeder MCP-kompatible Assistent — Claude, ChatGPT, Cursor und andere — kann die App-Datenbank, Lizenzdaten und Artikel von PromptQuorum direkt in Ihrer eigenen Unterhaltung abfragen, ganz ohne Kopieren zwischen Tabs.',
   mcpBenefit:
     'Diese Daten werden zu einer Grundlage, über die Ihr Assistent nachdenken kann, nicht nur liest. Er verbindet das, was PromptQuorum liefert, mit seinem eigenen Wissen, den anderen Dateien in Ihrer Unterhaltung und seiner eigenen Websuche — in derselben Antwort. In der Praxis bedeutet das:',
+  mcpExample:
+    'Zum Beispiel: Fragen Sie „Welche lokalen KI-Apps laufen mit 16 GB RAM und können mit PDFs chatten?", und Ihr Assistent fragt direkt das Verzeichnis und die Wissensdatenbank von PromptQuorum ab und nennt dann konkrete Apps mit Lizenz und Hardware-Eignung — statt anhand von möglicherweise veralteten Trainingsdaten zu raten.',
   mcpBullets: [
     'Von PromptQuorum getestete Apps vergleichen, ohne den Chat zu verlassen, und direkt Rückfragen dazu stellen',
     'Die Lizenz eines Tools gegen Ihren Anwendungsfall prüfen, direkt aus den Daten von PromptQuorum zitiert',

@@ -4,9 +4,12 @@ export const fr: AboutCopy = {
   kicker: 'À propos de PromptQuorum',
   h1: 'La couche d’usage pour l’IA à poids ouverts et open source.',
   heroLead:
-    'PromptQuorum est un écosystème indépendant pour utiliser l’IA à vos propres conditions : un annuaire de {{appCount}} applications d’IA locale, une base de connaissances de {{articleCount}} articles en neuf langues, et une application gratuite qui met plusieurs modèles côte à côte.',
+    'PromptQuorum vous aide à faire tourner l’IA en privé, sur votre propre matériel, plutôt que de la louer à un fournisseur cloud : un annuaire de {{appCount}} applications d’IA locale, une base de connaissances de {{articleCount}} articles en neuf langues, et une application gratuite qui met plusieurs modèles côte à côte.',
   heroSub:
     'Les modèles à poids ouverts et open source sont faciles à télécharger. Savoir quelle application utiliser, si votre matériel peut la faire tourner et comment la configurer reste difficile. C’est cet écart que PromptQuorum comble.',
+  heroOpenWeightNote:
+    '« Poids ouverts » (open-weight) signifie que le fichier du modèle entraîné lui-même — pas seulement le code qui l’entoure — est libre à télécharger et à exécuter n’importe où, contrairement aux modèles fermés comme GPT ou Gemini, qui ne tournent que sur les serveurs de leur éditeur.',
+  heroOpenWeightLinkLabel: 'Poids ouverts vs open source, expliqué',
   ctaDirectory: 'Explorer l’annuaire',
   ctaHardware: 'Qu’est-ce qui fonctionne sur mon matériel ?',
   ctaEcosystem: 'Comment les éléments s’articulent',
@@ -70,18 +73,22 @@ export const fr: AboutCopy = {
   useLabel: 'Utiliser',
   askLabel: 'Demander',
   partFindTitle: 'L’annuaire de l’IA locale',
+  partFindOneLiner: 'La carte structurée et consultable des logiciels d’IA locale.',
   partFindBody:
-    '{{appCount}} applications d’IA locale réparties en {{groupCount}} groupes et {{categoryCount}} catégories. Chaque fiche comporte les mêmes champs : ce qu’elle fait, ses plateformes, sa licence, son prix et ses besoins matériels, ainsi qu’un lien vers le site officiel. Définissez un profil matériel et chaque application indique si elle fonctionne bien, fonctionne de façon limitée ou ne fonctionnera pas sur votre machine.',
+    'Contrairement à un classement générique « meilleures applis IA » rédigé en texte libre, les {{appCount}} applications d’IA locale de cet annuaire — réparties en {{groupCount}} groupes et {{categoryCount}} catégories — sont toutes décrites avec les mêmes champs structurés : ce qu’elle fait, ses plateformes, sa licence, son prix et ses besoins matériels, ainsi qu’un lien vers le site officiel. C’est cette structure commune qui rend les fiches comparables et qui alimente le filtre matériel : définissez un profil une fois, et chaque application indique si elle fonctionne bien, fonctionne de façon limitée ou ne fonctionnera pas sur votre machine.',
   partFindConnects: 'les fiches renvoient vers leur évaluation PromptQuorum et vers les guides existants.',
   partLearnTitle: 'La base de connaissances',
+  partLearnOneLiner: 'La bibliothèque de guides derrière chaque recommandation.',
   partLearnBody:
     '{{articleCount}} articles : guides, évaluations et comparatifs sur le matériel (VRAM, Apple Silicon, GPU, CPU seul), les logiciels, les modèles, la quantification, le RAG, les agents, la voix, le prompt engineering et les stacks locales complètes. Rédigés pour ceux qui veulent une installation opérationnelle, pas un cours théorique.',
   partLearnConnects: 'les évaluations et comparatifs renvoient vers les fiches de l’annuaire qu’ils couvrent.',
   partUseTitle: 'L’application PromptQuorum',
+  partUseOneLiner: 'Comparez les réponses de plusieurs modèles côte à côte.',
   partUseBody:
     'Une application multi-modèles gratuite, actuellement en bêta. Envoyez un même prompt à plusieurs modèles, y compris des modèles locaux, et observez où leurs réponses convergent et où elles se contredisent. La convergence est un signal utile, pas une preuve. Vous apportez vos propres clés et modèles. Rien de ce que vous envoyez ne transite par un serveur PromptQuorum, et l’application ne nous renvoie aucune donnée. C’est là que PromptQuorum a commencé.',
   partUseConnects: 'elle se connecte à Ollama et LM Studio, tous deux référencés dans l’annuaire, pour que les modèles locaux côtoient les modèles cloud.',
   partAskTitle: 'Le serveur MCP',
+  partAskOneLiner: 'Laissez votre propre IA interroger PromptQuorum directement.',
   partAskBody:
     'Un serveur public, en lecture seule, pour le Model Context Protocol. Claude, Cursor et tout assistant compatible MCP peuvent parcourir l’annuaire, récupérer les détails d’une application, lire les guides et expliquer les licences. Sans compte ni clé API. Quand votre IA répond à une question sur l’IA locale, elle peut s’appuyer sur PromptQuorum plutôt que d’improviser.',
   partAskConnects: 'il s’appuie sur le même annuaire et les mêmes guides que ce site, pour que votre assistant réponde à partir de la même source que vous.',
@@ -141,6 +148,8 @@ export const fr: AboutCopy = {
     'PromptQuorum est le premier annuaire d’applications IA à publier un point de terminaison MCP public, sans authentification. Connectez-le une seule fois : tout assistant compatible MCP — Claude, ChatGPT, Cursor et d’autres — peut alors interroger la base d’applications, les données de licence et les articles de PromptQuorum directement dans votre conversation, sans copier-coller entre onglets.',
   mcpBenefit:
     'Ces données deviennent une entrée que votre assistant peut exploiter, pas seulement lire. Il combine ce que renvoie PromptQuorum avec ses propres connaissances, les autres fichiers de votre conversation et ses recherches web, dans la même réponse. Concrètement, vous pouvez :',
+  mcpExample:
+    'Par exemple : demandez « quelles applis d’IA locale tournent avec 16 Go de RAM et peuvent discuter avec des PDF ? », et votre assistant interroge directement l’annuaire et la base de connaissances de PromptQuorum, puis cite des applications précises avec leur licence et leur compatibilité matérielle — au lieu de deviner à partir de données d’entraînement potentiellement dépassées.',
   mcpBullets: [
     'Comparer des applications évaluées par PromptQuorum sans quitter votre chat, puis poser des questions de suivi',
     'Vérifier la licence d’un outil selon votre usage, citée directement depuis les données de PromptQuorum',

@@ -4,9 +4,12 @@ export const zh: AboutCopy = {
   kicker: '关于 PromptQuorum',
   h1: '开放权重与开源 AI 的应用层。',
   heroLead:
-    'PromptQuorum 是一个独立生态系统，让你自主掌控 AI 的运行方式：一个收录 {{appCount}} 款本地 AI 应用的目录、一个涵盖九种语言、共 {{articleCount}} 篇文章的知识库，以及一款可以让多个模型并排比较的免费应用。',
+    'PromptQuorum 帮你在自己的硬件上私密地运行 AI，而不是向云服务商租用：一个收录 {{appCount}} 款本地 AI 应用的目录、一个涵盖九种语言、共 {{articleCount}} 篇文章的知识库，以及一款可以让多个模型并排比较的免费应用。',
   heroSub:
     '开放权重与开源模型很容易下载，但该用哪个应用、你的硬件能否运行、又该如何配置，仍然是难题。PromptQuorum 填补的正是这一空白。',
+  heroOpenWeightNote:
+    '"开放权重"（open-weight）是指训练好的模型文件本身——而不只是周边代码——可以自由下载并在任何地方运行，这与 GPT、Gemini 等只能在厂商自己服务器上运行的闭源模型不同。',
+  heroOpenWeightLinkLabel: '开放权重 vs 开源，一文说清',
   ctaDirectory: '浏览目录',
   ctaHardware: '我的硬件能运行什么？',
   ctaEcosystem: '各部分如何协同运作',
@@ -70,18 +73,22 @@ export const zh: AboutCopy = {
   useLabel: '使用',
   askLabel: '询问',
   partFindTitle: '本地 AI 目录',
+  partFindOneLiner: '可检索、结构化的本地 AI 软件地图。',
   partFindBody:
-    '{{appCount}} 款本地 AI 应用，分布在 {{groupCount}} 个分组、{{categoryCount}} 个类别中。每个条目都包含相同的字段：功能、支持平台、许可证、价格和硬件需求，并附有官方网站链接。设置硬件配置后，每款应用都会显示在你的电脑上能流畅运行、勉强运行，还是无法运行。',
+    '和用自由文本堆出来的"最佳 AI 应用"榜单不同，这里的 {{appCount}} 款本地 AI 应用——分布在 {{groupCount}} 个分组、{{categoryCount}} 个类别中——全部使用同一套结构化字段描述：功能、支持平台、许可证、价格和硬件需求，并附有官方网站链接。正是这种统一结构让条目之间可以互相比较，也支撑了硬件匹配功能：设置一次硬件配置，每款应用都会显示在你的电脑上能流畅运行、勉强运行，还是无法运行。',
   partFindConnects: '各条目会链接到对应的 PromptQuorum 评测和使用指南（如果已有的话）。',
   partLearnTitle: '知识库',
+  partLearnOneLiner: '每一条推荐背后的操作指南库。',
   partLearnBody:
     '{{articleCount}} 篇文章：涵盖硬件（VRAM、Apple Silicon、GPU、纯 CPU 方案）、软件、模型、量化、RAG、智能体、语音、提示词工程，以及完整本地 AI 技术栈的指南、评测与对比。面向想要一套真正能用的方案的人，而不是理论说教。',
   partLearnConnects: '评测和对比文章会链接回它们所涉及的目录条目。',
   partUseTitle: 'PromptQuorum 应用',
+  partUseOneLiner: '并排比较多个模型的回答。',
   partUseBody:
     '一款免费的多模型应用，目前处于测试阶段。将同一条提示词发送给多个模型（包括本地模型），查看它们的回答在哪些地方一致、哪些地方相互矛盾。意见一致是一个有用的信号，但并非证明。你使用自己的密钥和模型。你发送的内容不会经过任何 PromptQuorum 服务器，应用本身也不会向我们回传任何数据。这也是 PromptQuorum 最初的起点。',
   partUseConnects: '它连接 Ollama 和 LM Studio（两者均已收录在目录中），让本地模型与云端模型并列呈现。',
   partAskTitle: 'MCP 服务器',
+  partAskOneLiner: '让你自己的 AI 助手直接查询 PromptQuorum。',
   partAskBody:
     '面向 Model Context Protocol 的公开只读服务器。Claude、Cursor 以及任何支持 MCP 的助手都可以借此搜索目录、获取应用详情、阅读指南并解释许可证。无需账号，也无需 API 密钥。这样一来，当你的 AI 回答有关本地 AI 的问题时，就能引用 PromptQuorum 的内容，而不是凭空猜测。',
   partAskConnects: '它读取的目录和指南与本网站完全相同，因此你的助手所依据的信息来源与你自己看到的一致。',
@@ -141,6 +148,8 @@ export const zh: AboutCopy = {
     'PromptQuorum 是首个发布公开、无需身份验证 MCP 端点的 AI 应用目录。只需连接一次，任何兼容 MCP 的助手——Claude、ChatGPT、Cursor 等——都能直接在你的对话中查询 PromptQuorum 的应用数据库、许可证信息和文章内容，无需在多个标签页之间来回复制粘贴。',
   mcpBenefit:
     '这些数据不只是被读取，而是成为你的助手可以进行推理的输入。它会把 PromptQuorum 返回的内容，与自身知识、对话中的其他文件以及正在进行的网络搜索结合起来，在同一个回答里给出结果。具体来说，你可以：',
+  mcpExample:
+    '举个例子：问"哪些本地 AI 应用能在 16 GB 内存下运行，并且可以跟 PDF 对话？"，你的助手会直接查询 PromptQuorum 的目录和知识库，然后给出具体的应用名称，附带许可证和硬件适配情况——而不是凭可能已经过时的训练数据去猜测。',
   mcpBullets: [
     '无需离开对话，直接比较 PromptQuorum 评测过的应用，并继续追问细节',
     '对照你的使用场景核实工具的许可证，数据直接引用自 PromptQuorum',

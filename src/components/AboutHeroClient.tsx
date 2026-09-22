@@ -17,6 +17,9 @@ interface AboutHeroClientProps {
   h1: string
   heroLead: string // pre-filled with counts by the caller
   heroSub: string
+  heroOpenWeightNote: string
+  heroOpenWeightLinkLabel: string
+  heroOpenWeightHref: string
   ctaDirectory: string
   ctaHardware: string
   ctaEcosystem: string
@@ -27,13 +30,32 @@ interface AboutHeroClientProps {
 // the whole AboutCopy object — so unfilled {{token}} templates elsewhere in
 // the copy (e.g. other sections' body text) never leak into this Client
 // Component's serialized hydration payload.
-export function AboutHeroClient({ lang, kicker, h1, heroLead, heroSub, ctaDirectory, ctaHardware, ctaEcosystem, ctaMcp }: AboutHeroClientProps) {
+export function AboutHeroClient({
+  lang,
+  kicker,
+  h1,
+  heroLead,
+  heroSub,
+  heroOpenWeightNote,
+  heroOpenWeightLinkLabel,
+  heroOpenWeightHref,
+  ctaDirectory,
+  ctaHardware,
+  ctaEcosystem,
+  ctaMcp,
+}: AboutHeroClientProps) {
   return (
     <div className="py-16 border-b border-primary/20 mb-16">
       <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4">{kicker}</p>
       <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">{h1}</h1>
       <p className="text-xl text-text-primary font-medium leading-relaxed mb-4">{heroLead}</p>
-      <p className="text-lg text-text-secondary leading-relaxed mb-8">{heroSub}</p>
+      <p className="text-lg text-text-secondary leading-relaxed mb-4">{heroSub}</p>
+      <p className="text-base text-text-secondary leading-relaxed mb-8">
+        {heroOpenWeightNote}{' '}
+        <AboutTrackedLink href={heroOpenWeightHref} via="hero_open_weight_explainer" className="text-primary hover:text-primary/80 font-medium">
+          {heroOpenWeightLinkLabel}
+        </AboutTrackedLink>
+      </p>
 
       <div className="flex flex-wrap gap-3">
         <AboutTrackedLink href="/directory" via="hero_directory" className={PRIMARY_BTN}>

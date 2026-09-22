@@ -155,6 +155,7 @@ interface PartProps {
   verb: string
   icon: ReactNode
   title: string
+  oneLiner: string
   children: ReactNode
   connectsLabel: string
   connects: string
@@ -164,7 +165,7 @@ interface PartProps {
   via: string
 }
 
-function Part({ verb, icon, title, children, connectsLabel, connects, href, cta, arrow, via }: PartProps) {
+function Part({ verb, icon, title, oneLiner, children, connectsLabel, connects, href, cta, arrow, via }: PartProps) {
   return (
     <div className={`${CARD} flex flex-col`}>
       <div className="flex items-center gap-3 mb-3">
@@ -174,6 +175,7 @@ function Part({ verb, icon, title, children, connectsLabel, connects, href, cta,
           <h3 className="text-lg font-bold text-text-primary leading-snug">{title}</h3>
         </div>
       </div>
+      <p className="text-sm font-semibold text-text-primary mb-2">{oneLiner}</p>
       <p className={`${BODY} mb-3`}>{children}</p>
       <p className="text-sm text-text-secondary border-l-2 border-primary/30 pl-3 mb-4">
         <strong className="text-text-primary">{connectsLabel}</strong> {connects}
@@ -191,6 +193,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
   const description = translations[lang].aboutMetaDescription
   const path = lang === 'en' ? '/about' : `/${lang}/about`
   const url = `${SITE}${path}`
+  const openWeightHref = lang === 'en' ? '/local-llms/open-weight-vs-open-source-ai-models' : `/${lang}/local-llms/open-weight-vs-open-source-ai-models`
   const rtl = lang === 'ar'
   const arrow = rtl ? '←' : '→'
 
@@ -263,6 +266,9 @@ export function AboutPageContent({ lang }: { lang: Language }) {
             h1={copy.h1}
             heroLead={heroLead}
             heroSub={copy.heroSub}
+            heroOpenWeightNote={copy.heroOpenWeightNote}
+            heroOpenWeightLinkLabel={copy.heroOpenWeightLinkLabel}
+            heroOpenWeightHref={openWeightHref}
             ctaDirectory={copy.ctaDirectory}
             ctaHardware={copy.ctaHardware}
             ctaEcosystem={copy.ctaEcosystem}
@@ -362,6 +368,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
                 verb={copy.findLabel}
                 icon={<SearchIcon />}
                 title={copy.partFindTitle}
+                oneLiner={copy.partFindOneLiner}
                 connectsLabel={copy.connectsLabel}
                 connects={copy.partFindConnects}
                 href="/directory"
@@ -375,6 +382,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
                 verb={copy.learnLabel}
                 icon={<BookIcon />}
                 title={copy.partLearnTitle}
+                oneLiner={copy.partLearnOneLiner}
                 connectsLabel={copy.connectsLabel}
                 connects={copy.partLearnConnects}
                 href="/local-llms"
@@ -388,6 +396,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
                 verb={copy.useLabel}
                 icon={<LayersIcon />}
                 title={copy.partUseTitle}
+                oneLiner={copy.partUseOneLiner}
                 connectsLabel={copy.connectsLabel}
                 connects={copy.partUseConnects}
                 href="/pq-apps"
@@ -401,6 +410,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
                 verb={copy.askLabel}
                 icon={<PlugIcon />}
                 title={copy.partAskTitle}
+                oneLiner={copy.partAskOneLiner}
                 connectsLabel={copy.connectsLabel}
                 connects={copy.partAskConnects}
                 href="#use-promptquorum-from-your-ai"
@@ -517,6 +527,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
             <h2 className={H2}>{copy.mcpH2}</h2>
             <p className={`${BODY} mb-4`}>{copy.mcpFirstClaim}</p>
             <p className={`${BODY} mb-4`}>{copy.mcpBenefit}</p>
+            <p className={`${BODY} mb-4`}>{copy.mcpExample}</p>
             <ul className="list-disc pl-5 space-y-1 mb-4 text-sm text-text-secondary">
               {copy.mcpBullets.map((b) => (
                 <li key={b}>{b}</li>
