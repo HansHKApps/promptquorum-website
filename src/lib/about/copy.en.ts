@@ -143,6 +143,16 @@ export const en: AboutCopy = {
 
   mcpH2: 'Use PromptQuorum from your AI',
   mcpLead: 'Connect PromptQuorum to your assistant once, and it can look things up for you.',
+  mcpFirstClaim:
+    'PromptQuorum is the first AI app directory to publish a public, no-authentication MCP endpoint. Connect it once, and any MCP-compatible assistant — Claude, ChatGPT, Cursor and others — can query PromptQuorum’s app database, license data and articles directly inside your own conversation, no copy-pasting between tabs.',
+  mcpBenefit:
+    'That data becomes an input your assistant can reason over, not just read. It combines what PromptQuorum returns with its own knowledge, the other files in your conversation and its own web research, in the same reply. In practice, that lets you:',
+  mcpBullets: [
+    'Compare apps PromptQuorum has reviewed without leaving your chat, then ask follow-up questions about them',
+    'Check a tool’s license against your use case, cited straight from PromptQuorum’s data',
+    'Cross-reference PromptQuorum’s hardware requirements against your own specs or a document you’ve uploaded',
+    'Fold PromptQuorum’s directory data into broader research your assistant is already doing on the web',
+  ],
   mcpEndpointLabel: 'MCP endpoint:',
   mcpEndpointNote: '(public, read-only, no authentication)',
   mcpManifestLabel: 'Discovery manifest:',

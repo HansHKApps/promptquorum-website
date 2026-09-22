@@ -136,6 +136,16 @@ export const ko: AboutCopy = {
   languagesClosing: '즉, 상파울루, 서울, 리야드 어디에 있든 자신의 언어로 동일하게 체계적인 답을 찾을 수 있다는 뜻입니다.',
   mcpH2: '내 AI에서 PromptQuorum 사용하기',
   mcpLead: 'PromptQuorum을 내 어시스턴트에 한 번만 연결하면, 이후로는 어시스턴트가 대신 정보를 찾아 줍니다.',
+  mcpFirstClaim:
+    'PromptQuorum은 인증 없이 사용할 수 있는 공개 MCP 엔드포인트를 공개한 최초의 AI 앱 디렉터리입니다. 한 번만 연결하면 Claude, ChatGPT, Cursor 등 MCP를 지원하는 모든 어시스턴트가 PromptQuorum의 앱 데이터베이스, 라이선스 정보, 아티클을 대화 안에서 직접 조회할 수 있습니다. 탭을 오가며 복사해서 붙여 넣을 필요가 없습니다.',
+  mcpBenefit:
+    '이 데이터는 단순히 읽히는 것이 아니라, 어시스턴트가 추론에 활용할 수 있는 입력이 됩니다. PromptQuorum이 반환한 정보를 어시스턴트 자신의 지식, 대화 속 다른 파일, 그리고 자체 웹 검색 결과와 결합하여 하나의 답변으로 제공합니다. 실제로는 다음과 같은 일이 가능해집니다.',
+  mcpBullets: [
+    '채팅을 벗어나지 않고 PromptQuorum이 리뷰한 앱을 비교하고, 이어서 후속 질문을 할 수 있습니다',
+    'PromptQuorum의 데이터를 그대로 인용하면서, 내 용도에 맞게 도구의 라이선스를 확인할 수 있습니다',
+    'PromptQuorum의 하드웨어 요구 사항을 내 사양이나 업로드한 문서와 대조할 수 있습니다',
+    '어시스턴트가 이미 웹에서 진행 중인 리서치에 PromptQuorum의 디렉터리 데이터를 결합할 수 있습니다',
+  ],
   mcpEndpointLabel: 'MCP 엔드포인트:',
   mcpEndpointNote: '(공개, 읽기 전용, 인증 불필요)',
   mcpManifestLabel: '탐색 매니페스트:',

@@ -501,6 +501,13 @@ export function AboutPageContent({ lang }: { lang: Language }) {
           {/* MCP */}
           <section id="use-promptquorum-from-your-ai" className="mb-20 scroll-mt-24">
             <h2 className={H2}>{copy.mcpH2}</h2>
+            <p className={`${BODY} mb-4`}>{copy.mcpFirstClaim}</p>
+            <p className={`${BODY} mb-4`}>{copy.mcpBenefit}</p>
+            <ul className="list-disc pl-5 space-y-1 mb-4 text-sm text-text-secondary">
+              {copy.mcpBullets.map((b) => (
+                <li key={b}>{b}</li>
+              ))}
+            </ul>
             <p className={`${BODY} mb-4`}>{copy.mcpLead}</p>
             <dl className="space-y-2 mb-4 text-sm">
               <div>

@@ -103,6 +103,9 @@ export interface AboutCopy {
   // MCP
   mcpH2: string
   mcpLead: string
+  mcpFirstClaim: string
+  mcpBenefit: string
+  mcpBullets: [string, string, string, string]
   mcpEndpointLabel: string
   mcpEndpointNote: string
   mcpManifestLabel: string

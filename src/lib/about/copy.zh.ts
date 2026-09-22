@@ -136,6 +136,16 @@ export const zh: AboutCopy = {
   languagesClosing: '这意味着无论是在圣保罗、首尔还是利雅得，人们都能用自己的语言，找到同样结构清晰的答案。',
   mcpH2: '在你的 AI 中使用 PromptQuorum',
   mcpLead: '只需将 PromptQuorum 连接到你的助手一次，它就能替你查找信息。',
+  mcpFirstClaim:
+    'PromptQuorum 是首个发布公开、无需身份验证 MCP 端点的 AI 应用目录。只需连接一次，任何兼容 MCP 的助手——Claude、ChatGPT、Cursor 等——都能直接在你的对话中查询 PromptQuorum 的应用数据库、许可证信息和文章内容，无需在多个标签页之间来回复制粘贴。',
+  mcpBenefit:
+    '这些数据不只是被读取，而是成为你的助手可以进行推理的输入。它会把 PromptQuorum 返回的内容，与自身知识、对话中的其他文件以及正在进行的网络搜索结合起来，在同一个回答里给出结果。具体来说，你可以：',
+  mcpBullets: [
+    '无需离开对话，直接比较 PromptQuorum 评测过的应用，并继续追问细节',
+    '对照你的使用场景核实工具的许可证，数据直接引用自 PromptQuorum',
+    '将 PromptQuorum 的硬件要求，与你自己的配置或上传的文档进行比对',
+    '把 PromptQuorum 的目录数据，融入助手正在进行的更广泛的网络调研中',
+  ],
   mcpEndpointLabel: 'MCP 端点：',
   mcpEndpointNote: '（公开、只读、无需身份验证）',
   mcpManifestLabel: '发现清单：',

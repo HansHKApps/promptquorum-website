@@ -136,6 +136,16 @@ export const fr: AboutCopy = {
   languagesClosing: 'Cela signifie qu’à São Paulo, Séoul ou Riyad, chacun peut trouver la même réponse, bien structurée, dans sa propre langue.',
   mcpH2: 'Utiliser PromptQuorum depuis votre IA',
   mcpLead: 'Connectez PromptQuorum à votre assistant une seule fois, et il pourra faire des recherches pour vous.',
+  mcpFirstClaim:
+    'PromptQuorum est le premier annuaire d’applications IA à publier un point de terminaison MCP public, sans authentification. Connectez-le une seule fois : tout assistant compatible MCP — Claude, ChatGPT, Cursor et d’autres — peut alors interroger la base d’applications, les données de licence et les articles de PromptQuorum directement dans votre conversation, sans copier-coller entre onglets.',
+  mcpBenefit:
+    'Ces données deviennent une entrée que votre assistant peut exploiter, pas seulement lire. Il combine ce que renvoie PromptQuorum avec ses propres connaissances, les autres fichiers de votre conversation et ses recherches web, dans la même réponse. Concrètement, vous pouvez :',
+  mcpBullets: [
+    'Comparer des applications évaluées par PromptQuorum sans quitter votre chat, puis poser des questions de suivi',
+    'Vérifier la licence d’un outil selon votre usage, citée directement depuis les données de PromptQuorum',
+    'Confronter les prérequis matériels de PromptQuorum à votre propre configuration ou à un document que vous avez importé',
+    'Intégrer les données de l’annuaire PromptQuorum à une recherche web plus large que votre assistant mène déjà',
+  ],
   mcpEndpointLabel: 'Endpoint MCP :',
   mcpEndpointNote: '(public, lecture seule, sans authentification)',
   mcpManifestLabel: 'Manifeste de découverte :',
