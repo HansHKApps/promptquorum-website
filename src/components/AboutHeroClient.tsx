@@ -18,15 +18,15 @@ export function AboutHeroClient({ appCount, articleCount }: AboutHeroClientProps
     <div className="py-16 border-b border-primary/20 mb-16">
       <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4">About PromptQuorum</p>
       <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">
-        The usage layer for open-weight AI.
+        The usage layer for open-weight and open-source AI.
       </h1>
       <p className="text-xl text-text-primary font-medium leading-relaxed mb-4">
         PromptQuorum is an independent ecosystem for running AI on your own terms: a directory of {appCount} local-AI apps,
         a knowledge base of {articleCount} articles in nine languages, and a free app that puts many models side by side.
       </p>
       <p className="text-lg text-text-secondary leading-relaxed mb-8">
-        Open models are easy to download. Knowing which app to use, whether your hardware can run it and how to set it up is
-        still hard. That gap is what PromptQuorum fills.
+        Open-weight and open-source models are easy to download. Knowing which app to use, whether your hardware can run it
+        and how to set it up is still hard. That gap is what PromptQuorum fills.
       </p>
 
       <div className="flex flex-wrap gap-3">

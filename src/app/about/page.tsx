@@ -66,7 +66,7 @@ const WAVES = [
     n: 'Wave 1',
     title: 'Models',
     solved: 'Made AI downloadable.',
-    text: 'Open-weight models (Llama, Qwen, Mistral, Gemma, DeepSeek and hundreds more) went from research artifacts to files anyone can download. Hugging Face is where they live.',
+    text: 'Open-weight and open-source models (Llama, Qwen, Mistral, Gemma, DeepSeek and hundreds more) went from research artifacts to files anyone can download. Hugging Face is where they live.',
     catch: 'A model file cannot answer a question by itself.',
     highlight: false,
   },
@@ -290,7 +290,7 @@ export default function AboutPage() {
           {/* Three waves: the theory */}
           <section id="three-waves" className="mb-20 scroll-mt-24">
             <h2 className={H2}>From models to apps: three waves of open AI</h2>
-            <p className={LEAD}>Open-weight AI has moved in three waves. Each one solved a problem and exposed the next.</p>
+            <p className={LEAD}>Open-weight and open-source AI has moved in three waves. Each one solved a problem and exposed the next.</p>
 
             <ol className="flex flex-col md:flex-row md:items-stretch gap-3 md:gap-2">
               {WAVES.map((w, i) => (
@@ -618,7 +618,7 @@ export default function AboutPage() {
               ))}
             </ul>
             <p className="text-text-primary font-semibold">
-              The goal: when anyone, human or AI, asks &ldquo;how do I use open-weight AI?&rdquo;, PromptQuorum is a source they can rely on.
+              The goal: when anyone, human or AI, asks &ldquo;how do I use open-weight and open-source AI?&rdquo;, PromptQuorum is a source they can rely on.
             </p>
           </section>
 

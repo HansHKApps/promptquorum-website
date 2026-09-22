@@ -104,7 +104,7 @@ export const translations = {
     featuresQuorumMetaDescription: "Collect responses from multiple AI models, analyze consensus patterns, identify key differences, and synthesize insights across providers.",
     downloadMetaTitle: "Download PromptQuorum for Mac & Windows — Free 2026",
     downloadMetaDescription: "Download PromptQuorum for macOS and Windows. Dispatch prompts to 25+ AI models, run consensus analysis, and work offline with local LLMs. Free.",
-    aboutMetaTitle: "About PromptQuorum: The Usage Layer for Open-Weight AI",
+    aboutMetaTitle: "About PromptQuorum: The Usage Layer for Open-Weight & Open-Source AI",
     aboutMetaDescription: "An independent ecosystem for local AI: a directory of local-AI apps, guides in 9 languages and a free multi-model app. From models to runtimes to apps.",
     privacyMetaTitle: "Privacy Policy | PromptQuorum",
     privacyMetaDescription: "Privacy Policy for PromptQuorum. Learn how we collect, use, and protect your data, your GDPR rights, and how to contact us with data requests.",
