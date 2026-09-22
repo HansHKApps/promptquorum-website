@@ -13,12 +13,12 @@
 // section renderer for this one slug) is a deliberately separate follow-up
 // step — this file only builds the UI in isolation.
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import type { Language } from '@/lib/blog/blogContent'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { McpConnectPanel } from './McpConnectPanel'
 import { StatsBar } from './StatsBar'
-import { WantChips } from './WantChips'
+import { WantChips, WANT_ORDER } from './WantChips'
 import { SubcategoryChips } from './SubcategoryChips'
 import { FilterBar } from './FilterBar'
 import { ActiveFilterChips } from './ActiveFilterChips'
@@ -48,7 +48,22 @@ export function DirectoryClient({ apps, lang }: Props) {
   const MACHINE_LABEL = useMemo(() => getMachineLabels(lang), [lang])
   const DEVICE_CATEGORY_LABEL = useMemo(() => getDeviceCategoryLabels(lang), [lang])
   const [search, setSearch] = useState('')
-  const [want, setWant] = useState<string | null>(null)
+  // Deep-linkable from `?want=<UseCaseKey>` (e.g. /directory?want=docs), so
+  // pages like About can send a reader straight into a pre-filtered view
+  // instead of a bare /directory link. Same one-time hydration-divergence
+  // pattern as `machine`/`profile` below: server always sees null, client
+  // may diverge once on first render. Invalid/unknown values are ignored.
+  const [want, setWant] = useState<string | null>(() => {
+    if (typeof window === 'undefined') return null
+    const fromUrl = new URLSearchParams(window.location.search).get('want')
+    return fromUrl && (WANT_ORDER as readonly string[]).includes(fromUrl) ? fromUrl : null
+  })
+  // Scroll the pre-filtered result into view once, only when `want` arrived
+  // via the URL (not from a viewer's own chip click a moment later).
+  useEffect(() => {
+    if (want) document.getElementById('directory-toolbar')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
   const [filters, setFilters] = useState<FilterState>(emptyFilterState)
   const [view, setView] = useState<ViewMode>('cards')
   const [sortKey, setSortKey] = useState<SortKey>('category')
@@ -188,7 +203,7 @@ export function DirectoryClient({ apps, lang }: Props) {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
       {lang === 'en' && <McpConnectPanel />}
-      <div className="space-y-4 mb-6">
+      <div id="directory-toolbar" className="space-y-4 mb-6 scroll-mt-24">
         <StatsBar total={apps.length} visible={sorted.length} byLocality={localityCounts} lang={lang} />
         <WantChips counts={wantCounts} selected={want} onSelect={handleWant} lang={lang} />
         {want && (

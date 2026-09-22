@@ -8,7 +8,9 @@ import type { UseCaseKey } from '@/lib/power-local-llm/apps/types'
 import type { FilterOptionCount } from './types'
 import { getWantLabels, t } from './directory-i18n'
 
-const WANT_ORDER: UseCaseKey[] = ['chat', 'code', 'agent', 'docs', 'image', 'audio', 'phone', 'build', 'serve']
+// Exported so DirectoryClient can validate a `?want=` deep-link value against
+// the same set of keys this UI actually supports, without duplicating the list.
+export const WANT_ORDER: UseCaseKey[] = ['chat', 'code', 'agent', 'docs', 'image', 'audio', 'phone', 'build', 'serve']
 
 export function WantChips({
   counts,
