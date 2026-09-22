@@ -35,7 +35,7 @@ type Platform = {
 
 const PLATFORMS: Platform[] = [
   { id: 'chatgpt', name: 'ChatGPT', url: 'https://chatgpt.com/', prefill: (p) => `https://chatgpt.com/?q=${encodeURIComponent(p)}` },
-  { id: 'claude', name: 'Claude', url: 'https://claude.ai/new' },
+  { id: 'claude', name: 'Claude', url: 'https://claude.ai/new', prefill: (p) => `https://claude.ai/new?q=${encodeURIComponent(p)}` },
   { id: 'gemini', name: 'Gemini', url: 'https://gemini.google.com/app' },
   { id: 'perplexity', name: 'Perplexity', url: 'https://www.perplexity.ai/' },
   { id: 'grok', name: 'Grok', url: 'https://grok.com/' },
@@ -168,12 +168,18 @@ export function AiDiscussBar() {
       setToast(null)
       return
     }
-    // Open synchronously inside the gesture (before any await) so popup blockers allow it.
-    window.open(p.url, '_blank', 'noopener')
+    // Copy BEFORE opening the new tab. Opening first (the previous order) let
+    // focus move to the new tab before this awaited call resolved, and the
+    // Clipboard API silently fails when the document isn't focused — on
+    // mobile Chrome that made every non-prefill platform "copy" nothing.
+    // A single `await` here still runs inside the click gesture, so popup
+    // blockers still allow the `window.open` right after it.
     try {
       await navigator.clipboard.writeText(briefing)
+      window.open(p.url, '_blank', 'noopener')
       setToast(c.copied)
     } catch {
+      window.open(p.url, '_blank', 'noopener')
       setToast(c.manual)
       setManualText(briefing)
     }
