@@ -62,6 +62,7 @@ export function DirectoryClient({ apps, lang }: Props) {
   // via the URL (not from a viewer's own chip click a moment later).
   useEffect(() => {
     if (want) document.getElementById('directory-toolbar')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    else if (hwWidgetExpanded) document.getElementById('hw-profile-widget')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   const [filters, setFilters] = useState<FilterState>(emptyFilterState)
@@ -86,7 +87,18 @@ export function DirectoryClient({ apps, lang }: Props) {
     if (typeof window === 'undefined') return null
     return readStoredProfile()
   })
-  const [hwWidgetExpanded, setHwWidgetExpanded] = useState(false)
+  // Deep-linkable from `?hw=1` (e.g. /directory?hw=1#hw-profile-widget) — opens
+  // the "your setup" panel expanded on load instead of the collapsed summary
+  // link, so a reader sent here from a hardware-specific prompt (About
+  // page's "What runs on my hardware?" / "I have 16 GB of RAM" links) sees
+  // the real input fields immediately and is one "Save my setup" click from
+  // a badged view, not two. Same lazy-init pattern as `want` above. The
+  // TTDSG explicit-consent requirement is untouched by this — nothing is
+  // written to localStorage until that click; this only pre-opens the form.
+  const [hwWidgetExpanded, setHwWidgetExpanded] = useState(() => {
+    if (typeof window === 'undefined') return false
+    return new URLSearchParams(window.location.search).get('hw') === '1'
+  })
   const requestHardwareProfile = () => {
     setHwWidgetExpanded(true)
     document.getElementById('hw-profile-widget')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
