@@ -7216,6 +7216,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
     },
     ko: {
+      publishDate: '2026-04-01',
       freshness_tier: 'annual',
       theme: 'Policy & Compliance',
       heroImage: '/images/geopolitics-and-ai-overview-hero-ko.webp',

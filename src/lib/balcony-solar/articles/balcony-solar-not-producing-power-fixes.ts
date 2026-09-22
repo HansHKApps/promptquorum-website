@@ -294,6 +294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    publishDate: '2026-07-02',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/balcony-solar-not-producing-power-fixes-overview-hero-es.webp',
     title: '¿La energía solar de balcón no genera energía? Soluciones habituales',
@@ -437,6 +438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    publishDate: '2026-07-02',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/balcony-solar-not-producing-power-fixes-overview-hero-pt.webp',
     title: 'Energia solar de varanda não está gerando energia? Soluções comuns',
@@ -580,6 +582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    publishDate: '2026-07-02',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/balcony-solar-not-producing-power-fixes-overview-hero-ar.webp',
     title: 'الطاقة الشمسية للشرفة لا تولّد طاقة؟ الحلول الشائعة',
@@ -723,6 +726,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    publishDate: '2026-07-02',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/balcony-solar-not-producing-power-fixes-overview-hero-ja.webp',
     title: 'バルコニー太陽光発電が発電しない？よくある原因と対処法',
@@ -866,6 +870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    publishDate: '2026-07-02',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/balcony-solar-not-producing-power-fixes-overview-hero-zh.webp',
     title: '阳台光伏不发电？常见原因与解决方法',
@@ -1009,6 +1014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    publishDate: '2026-07-02',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/balcony-solar-not-producing-power-fixes-overview-hero-fr.webp',
     title: 'Le solaire de balcon ne produit plus d\'électricité ? Solutions courantes',
@@ -1152,6 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    publishDate: '2026-07-02',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/balcony-solar-not-producing-power-fixes-overview-hero-ko.webp',
     title: '베란다 태양광이 발전하지 않나요? 흔한 원인과 해결법',
