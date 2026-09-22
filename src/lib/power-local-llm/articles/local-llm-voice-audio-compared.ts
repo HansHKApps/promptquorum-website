@@ -8,6 +8,21 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+
+// Live counts from the directory — recomputed at build time so this article never drifts from
+// the actual tool count as the directory grows. Only tools with their own PromptQuorum review are
+// counted (matches the CategoryCompareTable's own "only reviewed tools" rule).
+const TOTAL_APP_COUNT = localAiApps.length
+const REVIEWED_VA_APPS = localAiApps.filter((a) => a.reviewSlug != null)
+const VA_TEXT_TO_SPEECH = REVIEWED_VA_APPS.filter((a) => a.categories.includes('text-to-speech')).length
+const VA_SPEECH_TO_TEXT = REVIEWED_VA_APPS.filter((a) => a.categories.includes('speech-to-text')).length
+const VA_REALTIME_VOICE_AGENTS = REVIEWED_VA_APPS.filter((a) => a.categories.includes('realtime-voice-agents')).length
+const VA_TOTAL = new Set(
+  REVIEWED_VA_APPS.filter(
+    (a) => a.categories.includes('text-to-speech') || a.categories.includes('speech-to-text') || a.categories.includes('realtime-voice-agents'),
+  ).map((a) => a.slug),
+).size
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
@@ -20,9 +35,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents',
     seoTitle: 'Local Voice & Speech Tools Compared 2026',
     intro:
-      'Local voice tools fall into three different jobs — turning text into speech, turning speech into text, and running a spoken conversation with an AI — and no single feature list compares them fairly. This guide compares 17 free and freemium tools that run on your own hardware, one job at a time, using a comparison table generated from the same data as each tool\'s own PromptQuorum review, so the table and the reviews cannot disagree.',
+      `Local voice tools fall into three different jobs — turning text into speech, turning speech into text, and running a spoken conversation with an AI — and no single feature list compares them fairly. This guide compares ${VA_TOTAL} free and freemium tools that run on your own hardware, one job at a time, using a comparison table generated from the same data as each tool's own PromptQuorum review, so the table and the reviews cannot disagree.`,
     metaDescription:
-      'Compare 17 local voice tools side by side: text-to-speech, speech-to-text and real-time voice agents. Licenses, platforms, CPU use, API servers, voice cloning and more, from official project documentation.',
+      `Compare ${VA_TOTAL} local voice tools side by side: text-to-speech, speech-to-text and real-time voice agents. Licenses, platforms, CPU use, API servers, voice cloning and more, from official project documentation.`,
     twitterDescription:
       'Local voice tools compared by job: text-to-speech, speech-to-text and voice agents — licenses, platforms, CPU use, API servers, voice cloning, from official docs.',
     audience:
@@ -41,7 +56,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper', 'XTTS-v2'],
     current_hardware_mentioned: ['CPU', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**The 17 local voice tools in the PromptQuorum directory split into three jobs that should be compared separately: text-to-speech (8 tools), speech-to-text (7) and real-time voice agents (4).** Within text-to-speech, voice cloning is stated in the official documentation of Coqui TTS, XTTS-v2, Izwi and Willow Inference Server; for speech-to-text, whisper.cpp and Willow Inference Server document real-time transcription; and Dograh, Jarvis, Parlor and Voxa are the voice agents. Use the comparison table below, and read each tool\'s own review before you install it.',
+      `**The ${VA_TOTAL} local voice tools in the PromptQuorum directory split into three jobs that should be compared separately: text-to-speech (${VA_TEXT_TO_SPEECH} tools), speech-to-text (${VA_SPEECH_TO_TEXT}) and real-time voice agents (${VA_REALTIME_VOICE_AGENTS}).** Within text-to-speech, voice cloning is stated in the official documentation of Coqui TTS, XTTS-v2, Izwi and Willow Inference Server; for speech-to-text, whisper.cpp and Willow Inference Server document real-time transcription; and Dograh, Jarvis, Parlor and Voxa are the voice agents. Use the comparison table below, and read each tool's own review before you install it.`,
     quickAnswerTop: {
       en: {
         question: 'Which local voice tool should I use?',
@@ -74,7 +89,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Local voice tools are three different jobs — text-to-speech, speech-to-text and real-time voice agents — so the 17 tools in the PromptQuorum directory are compared within each job, using a table generated from the same tool data as each tool\'s own review.',
+            text: `Local voice tools are three different jobs — text-to-speech, speech-to-text and real-time voice agents — so the ${VA_TOTAL} tools in the PromptQuorum directory are compared within each job, using a table generated from the same tool data as each tool's own review.`,
           },
           {
             type: 'plain-terms',
@@ -82,7 +97,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '17 tools, three jobs: text-to-speech (8), speech-to-text (7), real-time voice agents (4). Izwi and Willow Inference Server do both text-to-speech and speech-to-text, so they appear in both tables.',
+          `${VA_TOTAL} tools, three jobs: text-to-speech (${VA_TEXT_TO_SPEECH}), speech-to-text (${VA_SPEECH_TO_TEXT}), real-time voice agents (${VA_REALTIME_VOICE_AGENTS}). Izwi and Willow Inference Server do both text-to-speech and speech-to-text, so they appear in both tables.`,
           'The table is generated from each tool\'s record and checked against its official README or site; a dash means "not stated in the documentation", never "no".',
           'Licenses differ in ways that matter: for example Piper and OpenAI Edge TTS are GPL-3.0, Coqui TTS is MPL-2.0, XTTS-v2 uses the Coqui Public Model License, and Bark, StyleTTS 2, whisper.cpp and faster-whisper are MIT.',
           'Every tool name in the table links to its own PromptQuorum review, which is where installation steps and limits are covered.',
@@ -182,7 +197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local Software Directory](/directory) — browse all 200+ local AI apps and filter by category.',
+          `[Local Software Directory](/directory) — browse all ${TOTAL_APP_COUNT} local AI apps and filter by category.`,
           '[AI Tool Licenses Explained](/power-local-llm/ai-tool-licenses-explained) — how to read MIT, GPL, MPL and custom licenses.',
         ],
       },
@@ -192,7 +207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents',
       description:
-        'Compare 17 local voice tools side by side: text-to-speech, speech-to-text and real-time voice agents, from official project documentation.',
+        `Compare ${VA_TOTAL} local voice tools side by side: text-to-speech, speech-to-text and real-time voice agents, from official project documentation.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-voice-audio-compared',
       inLanguage: 'en',
       datePublished: '2026-09-20',
@@ -235,9 +250,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Lokale Sprach- und Audio-Werkzeuge im Vergleich (2026): Text-zu-Sprache, Sprache-zu-Text und Sprachagenten',
     seoTitle: 'Lokale Sprach-Werkzeuge im Vergleich 2026',
     intro:
-      'Lokale Sprach-Werkzeuge erledigen drei verschiedene Aufgaben — Text in Sprache umwandeln, Sprache in Text umwandeln und ein gesprochenes Gespräch mit einer KI führen —, und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht 17 kostenlose und Freemium-Werkzeuge, die auf Ihrer eigenen Hardware laufen, Aufgabe für Aufgabe. Die Vergleichstabelle wird aus denselben Daten erzeugt wie der jeweilige PromptQuorum-Test des Werkzeugs, sodass sich Tabelle und Tests nicht widersprechen können.',
+      `Lokale Sprach-Werkzeuge erledigen drei verschiedene Aufgaben — Text in Sprache umwandeln, Sprache in Text umwandeln und ein gesprochenes Gespräch mit einer KI führen —, und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht ${VA_TOTAL} kostenlose und Freemium-Werkzeuge, die auf Ihrer eigenen Hardware laufen, Aufgabe für Aufgabe. Die Vergleichstabelle wird aus denselben Daten erzeugt wie der jeweilige PromptQuorum-Test des Werkzeugs, sodass sich Tabelle und Tests nicht widersprechen können.`,
     metaDescription:
-      'Vergleich von 17 lokalen Sprach-Werkzeugen: Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten. Lizenzen, Plattformen, CPU-Nutzung, API-Server, Stimmklonen und mehr.',
+      `Vergleich von ${VA_TOTAL} lokalen Sprach-Werkzeugen: Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten. Lizenzen, Plattformen, CPU-Nutzung, API-Server, Stimmklonen und mehr.`,
     twitterDescription:
       'Lokale Sprach-Werkzeuge nach Aufgabe verglichen: Text-zu-Sprache, Sprache-zu-Text und Sprachagenten — Lizenzen, Plattformen, CPU-Nutzung, API-Server, Stimmklonen, aus offizieller Dokumentation.',
     audience:
@@ -256,7 +271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper', 'XTTS-v2'],
     current_hardware_mentioned: ['CPU', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**Die 17 lokalen Sprach-Werkzeuge im PromptQuorum-Verzeichnis teilen sich in drei Aufgaben, die getrennt verglichen werden sollten: Text-zu-Sprache (8 Werkzeuge), Sprache-zu-Text (7) und Echtzeit-Sprachagenten (4).** Bei Text-zu-Sprache wird Stimmklonen in der offiziellen Dokumentation von Coqui TTS, XTTS-v2, Izwi und Willow Inference Server genannt; bei Sprache-zu-Text dokumentieren whisper.cpp und Willow Inference Server Echtzeit-Transkription; Dograh, Jarvis, Parlor und Voxa sind die Sprachagenten. Nutzen Sie die Vergleichstabelle unten und lesen Sie den Test des jeweiligen Werkzeugs, bevor Sie es installieren.',
+      `**Die ${VA_TOTAL} lokalen Sprach-Werkzeuge im PromptQuorum-Verzeichnis teilen sich in drei Aufgaben, die getrennt verglichen werden sollten: Text-zu-Sprache (${VA_TEXT_TO_SPEECH} Werkzeuge), Sprache-zu-Text (${VA_SPEECH_TO_TEXT}) und Echtzeit-Sprachagenten (${VA_REALTIME_VOICE_AGENTS}).** Bei Text-zu-Sprache wird Stimmklonen in der offiziellen Dokumentation von Coqui TTS, XTTS-v2, Izwi und Willow Inference Server genannt; bei Sprache-zu-Text dokumentieren whisper.cpp und Willow Inference Server Echtzeit-Transkription; Dograh, Jarvis, Parlor und Voxa sind die Sprachagenten. Nutzen Sie die Vergleichstabelle unten und lesen Sie den Test des jeweiligen Werkzeugs, bevor Sie es installieren.`,
     quickAnswerTop: {
       en: {
         question: 'Welches lokale Sprach-Werkzeug sollte ich verwenden?',
@@ -289,7 +304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Lokale Sprach-Werkzeuge sind drei verschiedene Aufgaben — Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten —, daher werden die 17 Werkzeuge im PromptQuorum-Verzeichnis innerhalb jeder Aufgabe verglichen, mit einer Tabelle, die aus denselben Werkzeugdaten wie der jeweilige Test erzeugt wird.',
+            text: `Lokale Sprach-Werkzeuge sind drei verschiedene Aufgaben — Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten —, daher werden die ${VA_TOTAL} Werkzeuge im PromptQuorum-Verzeichnis innerhalb jeder Aufgabe verglichen, mit einer Tabelle, die aus denselben Werkzeugdaten wie der jeweilige Test erzeugt wird.`,
           },
           {
             type: 'plain-terms',
@@ -297,7 +312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '17 Werkzeuge, drei Aufgaben: Text-zu-Sprache (8), Sprache-zu-Text (7), Echtzeit-Sprachagenten (4). Izwi und Willow Inference Server leisten sowohl Text-zu-Sprache als auch Sprache-zu-Text und erscheinen daher in beiden Tabellen.',
+          `${VA_TOTAL} Werkzeuge, drei Aufgaben: Text-zu-Sprache (${VA_TEXT_TO_SPEECH}), Sprache-zu-Text (${VA_SPEECH_TO_TEXT}), Echtzeit-Sprachagenten (${VA_REALTIME_VOICE_AGENTS}). Izwi und Willow Inference Server leisten sowohl Text-zu-Sprache als auch Sprache-zu-Text und erscheinen daher in beiden Tabellen.`,
           'Die Tabelle wird aus dem Datensatz jedes Werkzeugs erzeugt und mit dessen offizieller README oder Website abgeglichen; ein Strich bedeutet „in der Dokumentation nicht angegeben“, niemals „nein“.',
           'Lizenzen unterscheiden sich auf relevante Weise: Piper und OpenAI Edge TTS stehen zum Beispiel unter GPL-3.0, Coqui TTS unter MPL-2.0, XTTS-v2 nutzt die Coqui Public Model License, und Bark, StyleTTS 2, whisper.cpp und faster-whisper stehen unter MIT.',
           'Jeder Werkzeugname in der Tabelle verlinkt auf den eigenen PromptQuorum-Test, in dem Installationsschritte und Grenzen behandelt werden.',
@@ -397,7 +412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Verzeichnis lokaler Software](/de/directory) — alle über 200 lokalen KI-Apps durchsuchen und nach Kategorie filtern.',
+          `[Verzeichnis lokaler Software](/de/directory) — alle ${TOTAL_APP_COUNT} lokalen KI-Apps durchsuchen und nach Kategorie filtern.`,
           '[KI-Werkzeug-Lizenzen erklärt](/de/power-local-llm/ai-tool-licenses-explained) — wie man MIT-, GPL-, MPL- und eigene Lizenzen liest.',
         ],
       },
@@ -407,7 +422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Lokale Sprach- und Audio-Werkzeuge im Vergleich (2026): Text-zu-Sprache, Sprache-zu-Text und Sprachagenten',
       description:
-        'Vergleich von 17 lokalen Sprach-Werkzeugen: Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten, aus offizieller Projektdokumentation.',
+        `Vergleich von ${VA_TOTAL} lokalen Sprach-Werkzeugen: Text-zu-Sprache, Sprache-zu-Text und Echtzeit-Sprachagenten, aus offizieller Projektdokumentation.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-voice-audio-compared',
       inLanguage: 'de',
       datePublished: '2026-09-20',
@@ -450,9 +465,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Outils vocaux locaux comparés (2026) : synthèse vocale, transcription et agents vocaux',
     seoTitle: 'Outils vocaux locaux comparés 2026',
     intro:
-      'Les outils vocaux locaux relèvent de trois tâches différentes — transformer du texte en parole, transformer la parole en texte, et mener une conversation orale avec une IA — et aucune liste de fonctionnalités unique ne permet de les comparer équitablement. Ce guide compare 17 outils gratuits et freemium qui fonctionnent sur votre propre matériel, une tâche à la fois, à l\'aide d\'un tableau comparatif généré à partir des mêmes données que l\'avis PromptQuorum de chaque outil : le tableau et les avis ne peuvent donc pas se contredire.',
+      `Les outils vocaux locaux relèvent de trois tâches différentes — transformer du texte en parole, transformer la parole en texte, et mener une conversation orale avec une IA — et aucune liste de fonctionnalités unique ne permet de les comparer équitablement. Ce guide compare ${VA_TOTAL} outils gratuits et freemium qui fonctionnent sur votre propre matériel, une tâche à la fois, à l'aide d'un tableau comparatif généré à partir des mêmes données que l'avis PromptQuorum de chaque outil : le tableau et les avis ne peuvent donc pas se contredire.`,
     metaDescription:
-      'Comparez 17 outils vocaux locaux : synthèse vocale, transcription et agents vocaux en temps réel. Licences, plateformes, usage CPU, serveurs API, clonage de voix, d\'après la documentation officielle.',
+      `Comparez ${VA_TOTAL} outils vocaux locaux : synthèse vocale, transcription et agents vocaux en temps réel. Licences, plateformes, usage CPU, serveurs API, clonage de voix, d'après la documentation officielle.`,
     twitterDescription:
       'Outils vocaux locaux comparés par tâche : synthèse vocale, transcription et agents vocaux — licences, plateformes, CPU, serveurs API, clonage de voix, d\'après les docs officielles.',
     audience:
@@ -471,7 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper', 'XTTS-v2'],
     current_hardware_mentioned: ['CPU', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**Les 17 outils vocaux locaux de l\'annuaire PromptQuorum se répartissent en trois tâches à comparer séparément : la synthèse vocale (8 outils), la transcription (7) et les agents vocaux en temps réel (4).** En synthèse vocale, le clonage de voix est indiqué dans la documentation officielle de Coqui TTS, XTTS-v2, Izwi et Willow Inference Server ; en transcription, whisper.cpp et Willow Inference Server documentent la transcription en temps réel ; et Dograh, Jarvis, Parlor et Voxa sont les agents vocaux. Utilisez le tableau comparatif ci-dessous, et lisez l\'avis de chaque outil avant de l\'installer.',
+      `**Les ${VA_TOTAL} outils vocaux locaux de l'annuaire PromptQuorum se répartissent en trois tâches à comparer séparément : la synthèse vocale (${VA_TEXT_TO_SPEECH} outils), la transcription (${VA_SPEECH_TO_TEXT}) et les agents vocaux en temps réel (${VA_REALTIME_VOICE_AGENTS}).** En synthèse vocale, le clonage de voix est indiqué dans la documentation officielle de Coqui TTS, XTTS-v2, Izwi et Willow Inference Server ; en transcription, whisper.cpp et Willow Inference Server documentent la transcription en temps réel ; et Dograh, Jarvis, Parlor et Voxa sont les agents vocaux. Utilisez le tableau comparatif ci-dessous, et lisez l'avis de chaque outil avant de l'installer.`,
     quickAnswerTop: {
       en: {
         question: 'Quel outil vocal local dois-je utiliser ?',
@@ -504,7 +519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Les outils vocaux locaux relèvent de trois tâches différentes — synthèse vocale, transcription et agents vocaux en temps réel — si bien que les 17 outils de l\'annuaire PromptQuorum sont comparés tâche par tâche, à l\'aide d\'un tableau généré à partir des mêmes données que l\'avis de chaque outil.',
+            text: `Les outils vocaux locaux relèvent de trois tâches différentes — synthèse vocale, transcription et agents vocaux en temps réel — si bien que les ${VA_TOTAL} outils de l'annuaire PromptQuorum sont comparés tâche par tâche, à l'aide d'un tableau généré à partir des mêmes données que l'avis de chaque outil.`,
           },
           {
             type: 'plain-terms',
@@ -512,7 +527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '17 outils, trois tâches : synthèse vocale (8), transcription (7), agents vocaux en temps réel (4). Izwi et Willow Inference Server font à la fois de la synthèse vocale et de la transcription, et apparaissent donc dans les deux tableaux.',
+          `${VA_TOTAL} outils, trois tâches : synthèse vocale (${VA_TEXT_TO_SPEECH}), transcription (${VA_SPEECH_TO_TEXT}), agents vocaux en temps réel (${VA_REALTIME_VOICE_AGENTS}). Izwi et Willow Inference Server font à la fois de la synthèse vocale et de la transcription, et apparaissent donc dans les deux tableaux.`,
           'Le tableau est généré à partir de la fiche de chaque outil et vérifié d\'après son README ou son site officiel ; un tiret signifie « non précisé dans la documentation », jamais « non ».',
           'Les licences diffèrent de façon significative : par exemple, Piper et OpenAI Edge TTS sont sous GPL-3.0, Coqui TTS sous MPL-2.0, XTTS-v2 utilise la Coqui Public Model License, et Bark, StyleTTS 2, whisper.cpp et faster-whisper sont sous MIT.',
           'Chaque nom d\'outil du tableau renvoie vers son propre avis PromptQuorum, où sont détaillés l\'installation et les limites.',
@@ -612,7 +627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'À lire aussi',
         items: [
-          '[Annuaire des logiciels locaux](/fr/directory) — parcourez toutes les plus de 200 applications d\'IA locale et filtrez par catégorie.',
+          `[Annuaire des logiciels locaux](/fr/directory) — parcourez toutes les ${TOTAL_APP_COUNT} applications d'IA locale et filtrez par catégorie.`,
           '[Licences des outils d\'IA expliquées](/fr/power-local-llm/ai-tool-licenses-explained) — comment lire les licences MIT, GPL, MPL et personnalisées.',
         ],
       },
@@ -622,7 +637,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Outils vocaux locaux comparés (2026) : synthèse vocale, transcription et agents vocaux',
       description:
-        'Comparez 17 outils vocaux locaux : synthèse vocale, transcription et agents vocaux en temps réel, d\'après la documentation officielle des projets.',
+        `Comparez ${VA_TOTAL} outils vocaux locaux : synthèse vocale, transcription et agents vocaux en temps réel, d'après la documentation officielle des projets.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-voice-audio-compared',
       inLanguage: 'fr',
       datePublished: '2026-09-20',
@@ -665,9 +680,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Herramientas locales de voz y habla comparadas (2026): texto a voz, voz a texto y agentes de voz',
     seoTitle: 'Herramientas locales de voz comparadas 2026',
     intro:
-      'Las herramientas de voz locales se dividen en tres tareas distintas —convertir texto en voz, convertir voz en texto y mantener una conversación hablada con una IA—, y ninguna lista única de funciones las compara con justicia. Esta guía compara 17 herramientas gratuitas y freemium que se ejecutan en tu propio hardware, una tarea cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis propio de cada herramienta en PromptQuorum, de modo que la tabla y los análisis no pueden contradecirse.',
+      `Las herramientas de voz locales se dividen en tres tareas distintas —convertir texto en voz, convertir voz en texto y mantener una conversación hablada con una IA—, y ninguna lista única de funciones las compara con justicia. Esta guía compara ${VA_TOTAL} herramientas gratuitas y freemium que se ejecutan en tu propio hardware, una tarea cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis propio de cada herramienta en PromptQuorum, de modo que la tabla y los análisis no pueden contradecirse.`,
     metaDescription:
-      'Compara 17 herramientas de voz locales: texto a voz, voz a texto y agentes de voz en tiempo real. Licencias, plataformas, uso de CPU, servidores API y clonación de voz, según la documentación oficial.',
+      `Compara ${VA_TOTAL} herramientas de voz locales: texto a voz, voz a texto y agentes de voz en tiempo real. Licencias, plataformas, uso de CPU, servidores API y clonación de voz, según la documentación oficial.`,
     twitterDescription:
       'Herramientas de voz locales comparadas por tarea: texto a voz, voz a texto y agentes de voz — licencias, plataformas, CPU, servidores API y clonación de voz, según la documentación oficial.',
     audience:
@@ -686,7 +701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper', 'XTTS-v2'],
     current_hardware_mentioned: ['CPU', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**Las 17 herramientas de voz locales del directorio de PromptQuorum se dividen en tres tareas que conviene comparar por separado: texto a voz (8 herramientas), voz a texto (7) y agentes de voz en tiempo real (4).** En texto a voz, la clonación de voz figura en la documentación oficial de Coqui TTS, XTTS-v2, Izwi y Willow Inference Server; en voz a texto, whisper.cpp y Willow Inference Server documentan la transcripción en tiempo real; y Dograh, Jarvis, Parlor y Voxa son los agentes de voz. Usa la tabla comparativa de abajo y lee el análisis propio de cada herramienta antes de instalarla.',
+      `**Las ${VA_TOTAL} herramientas de voz locales del directorio de PromptQuorum se dividen en tres tareas que conviene comparar por separado: texto a voz (${VA_TEXT_TO_SPEECH} herramientas), voz a texto (${VA_SPEECH_TO_TEXT}) y agentes de voz en tiempo real (${VA_REALTIME_VOICE_AGENTS}).** En texto a voz, la clonación de voz figura en la documentación oficial de Coqui TTS, XTTS-v2, Izwi y Willow Inference Server; en voz a texto, whisper.cpp y Willow Inference Server documentan la transcripción en tiempo real; y Dograh, Jarvis, Parlor y Voxa son los agentes de voz. Usa la tabla comparativa de abajo y lee el análisis propio de cada herramienta antes de instalarla.`,
     quickAnswerTop: {
       en: {
         question: '¿Qué herramienta de voz local debería usar?',
@@ -719,7 +734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Las herramientas de voz locales son tres tareas distintas —texto a voz, voz a texto y agentes de voz en tiempo real—, por lo que las 17 herramientas del directorio de PromptQuorum se comparan dentro de cada tarea, con una tabla generada a partir de los mismos datos que el análisis propio de cada herramienta.',
+            text: `Las herramientas de voz locales son tres tareas distintas —texto a voz, voz a texto y agentes de voz en tiempo real—, por lo que las ${VA_TOTAL} herramientas del directorio de PromptQuorum se comparan dentro de cada tarea, con una tabla generada a partir de los mismos datos que el análisis propio de cada herramienta.`,
           },
           {
             type: 'plain-terms',
@@ -727,7 +742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '17 herramientas, tres tareas: texto a voz (8), voz a texto (7), agentes de voz en tiempo real (4). Izwi y Willow Inference Server hacen tanto texto a voz como voz a texto, por lo que aparecen en ambas tablas.',
+          `${VA_TOTAL} herramientas, tres tareas: texto a voz (${VA_TEXT_TO_SPEECH}), voz a texto (${VA_SPEECH_TO_TEXT}), agentes de voz en tiempo real (${VA_REALTIME_VOICE_AGENTS}). Izwi y Willow Inference Server hacen tanto texto a voz como voz a texto, por lo que aparecen en ambas tablas.`,
           'La tabla se genera a partir del registro de cada herramienta y se contrasta con su README o sitio oficial; un guion significa «no indicado en la documentación», nunca «no».',
           'Las licencias difieren de formas que importan: por ejemplo, Piper y OpenAI Edge TTS son GPL-3.0, Coqui TTS es MPL-2.0, XTTS-v2 usa la Coqui Public Model License, y Bark, StyleTTS 2, whisper.cpp y faster-whisper son MIT.',
           'Cada nombre de herramienta de la tabla enlaza a su propio análisis de PromptQuorum, donde se explican los pasos de instalación y los límites.',
@@ -827,7 +842,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software local](/es/directory) — explora más de 200 apps de IA local y filtra por categoría.',
+          `[Directorio de software local](/es/directory) — explora ${TOTAL_APP_COUNT} apps de IA local y filtra por categoría.`,
           '[Licencias de herramientas de IA explicadas](/es/power-local-llm/ai-tool-licenses-explained) — cómo leer las licencias MIT, GPL, MPL y personalizadas.',
         ],
       },
@@ -837,7 +852,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Herramientas locales de voz y habla comparadas (2026): texto a voz, voz a texto y agentes de voz',
       description:
-        'Compara 17 herramientas de voz locales: texto a voz, voz a texto y agentes de voz en tiempo real, según la documentación oficial de los proyectos.',
+        `Compara ${VA_TOTAL} herramientas de voz locales: texto a voz, voz a texto y agentes de voz en tiempo real, según la documentación oficial de los proyectos.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-voice-audio-compared',
       inLanguage: 'es',
       datePublished: '2026-09-20',
@@ -880,9 +895,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'ローカル音声・スピーチツール比較(2026):音声合成・音声認識・ボイスエージェント',
     seoTitle: 'ローカル音声・スピーチツール比較2026',
     intro:
-      'ローカルの音声ツールには、テキストを音声にする、音声をテキストにする、AIと音声で会話する、という3つの異なる役割があり、単一の機能一覧では公平に比較できません。このガイドでは、自分のハードウェア上で動く無料・フリーミアムの17ツールを、役割ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成しているため、表とレビューの内容が食い違うことはありません。',
+      `ローカルの音声ツールには、テキストを音声にする、音声をテキストにする、AIと音声で会話する、という3つの異なる役割があり、単一の機能一覧では公平に比較できません。このガイドでは、自分のハードウェア上で動く無料・フリーミアムの${VA_TOTAL}ツールを、役割ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成しているため、表とレビューの内容が食い違うことはありません。`,
     metaDescription:
-      'ローカル音声ツール17種を並べて比較:音声合成、音声認識、リアルタイム・ボイスエージェント。ライセンス、対応プラットフォーム、CPU利用、APIサーバー、ボイスクローンなどを公式ドキュメントから整理。',
+      `ローカル音声ツール${VA_TOTAL}種を並べて比較:音声合成、音声認識、リアルタイム・ボイスエージェント。ライセンス、対応プラットフォーム、CPU利用、APIサーバー、ボイスクローンなどを公式ドキュメントから整理。`,
     twitterDescription:
       '役割別に比べるローカル音声ツール:音声合成・音声認識・ボイスエージェント。ライセンス、プラットフォーム、CPU利用、APIサーバー、ボイスクローンを公式ドキュメントから整理。',
     audience:
@@ -901,7 +916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper', 'XTTS-v2'],
     current_hardware_mentioned: ['CPU', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**PromptQuorumディレクトリにあるローカル音声ツール17種は、別々に比較すべき3つの役割に分かれます。音声合成(8ツール)、音声認識(7ツール)、リアルタイム・ボイスエージェント(4ツール)です。** 音声合成のうち、ボイスクローンを公式ドキュメントに記載しているのはCoqui TTS、XTTS-v2、Izwi、Willow Inference Serverです。音声認識では、whisper.cppとWillow Inference Serverがリアルタイム文字起こしを記載しています。ボイスエージェントはDograh、Jarvis、Parlor、Voxaです。下の比較表を使い、インストール前に各ツールのレビューを読んでください。',
+      `**PromptQuorumディレクトリにあるローカル音声ツール${VA_TOTAL}種は、別々に比較すべき3つの役割に分かれます。音声合成(${VA_TEXT_TO_SPEECH}ツール)、音声認識(${VA_SPEECH_TO_TEXT}ツール)、リアルタイム・ボイスエージェント(${VA_REALTIME_VOICE_AGENTS}ツール)です。** 音声合成のうち、ボイスクローンを公式ドキュメントに記載しているのはCoqui TTS、XTTS-v2、Izwi、Willow Inference Serverです。音声認識では、whisper.cppとWillow Inference Serverがリアルタイム文字起こしを記載しています。ボイスエージェントはDograh、Jarvis、Parlor、Voxaです。下の比較表を使い、インストール前に各ツールのレビューを読んでください。`,
     quickAnswerTop: {
       en: {
         question: 'どのローカル音声ツールを使えばよいか',
@@ -934,7 +949,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'ローカル音声ツールは、音声合成、音声認識、リアルタイム・ボイスエージェントという3つの異なる役割であるため、PromptQuorumディレクトリの17ツールを役割ごとに比較しており、比較表は各ツールのレビューと同じツールデータから生成しています。',
+            text: `ローカル音声ツールは、音声合成、音声認識、リアルタイム・ボイスエージェントという3つの異なる役割であるため、PromptQuorumディレクトリの${VA_TOTAL}ツールを役割ごとに比較しており、比較表は各ツールのレビューと同じツールデータから生成しています。`,
           },
           {
             type: 'plain-terms',
@@ -942,7 +957,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '17ツール、3つの役割:音声合成(8)、音声認識(7)、リアルタイム・ボイスエージェント(4)。IzwiとWillow Inference Serverは音声合成と音声認識の両方に対応するため、両方の表に登場します。',
+          `${VA_TOTAL}ツール、3つの役割:音声合成(${VA_TEXT_TO_SPEECH})、音声認識(${VA_SPEECH_TO_TEXT})、リアルタイム・ボイスエージェント(${VA_REALTIME_VOICE_AGENTS})。IzwiとWillow Inference Serverは音声合成と音声認識の両方に対応するため、両方の表に登場します。`,
           '表は各ツールのレコードから生成し、公式のREADMEまたはサイトと照合しています。ダッシュは「ドキュメントに記載なし」を意味し、「なし」を意味することはありません。',
           'ライセンスには重要な違いがあります。たとえばPiperとOpenAI Edge TTSはGPL-3.0、Coqui TTSはMPL-2.0、XTTS-v2はCoqui Public Model License、Bark、StyleTTS 2、whisper.cpp、faster-whisperはMITです。',
           '表内のツール名はすべて、そのツール自身のPromptQuorumレビューにリンクしています。インストール手順や制限事項はそこで扱っています。',
@@ -1042,7 +1057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルソフトウェアディレクトリ](/ja/directory) — 200以上のローカルAIアプリをすべて閲覧し、カテゴリで絞り込めます。',
+          `[ローカルソフトウェアディレクトリ](/ja/directory) — ${TOTAL_APP_COUNT}件のローカルAIアプリをすべて閲覧し、カテゴリで絞り込めます。`,
           '[AIツールのライセンスを解説](/ja/power-local-llm/ai-tool-licenses-explained) — MIT、GPL、MPL、カスタムライセンスの読み方。',
         ],
       },
@@ -1052,7 +1067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'ローカル音声・スピーチツール比較(2026):音声合成・音声認識・ボイスエージェント',
       description:
-        'ローカル音声ツール17種を並べて比較:音声合成、音声認識、リアルタイム・ボイスエージェントを、公式プロジェクトドキュメントから整理。',
+        `ローカル音声ツール${VA_TOTAL}種を並べて比較:音声合成、音声認識、リアルタイム・ボイスエージェントを、公式プロジェクトドキュメントから整理。`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-voice-audio-compared',
       inLanguage: 'ja',
       datePublished: '2026-09-20',
@@ -1095,9 +1110,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '本地语音工具对比(2026):语音合成、语音转文字与语音助手',
     seoTitle: '本地语音工具对比2026',
     intro:
-      '本地语音工具分属三类不同的任务——把文字变成语音、把语音变成文字,以及与AI进行口语对话——没有哪一份统一的功能清单能公平地比较它们。本指南按任务逐类对比17款可在你自己设备上运行的免费和免费增值工具,所用对比表与每款工具在PromptQuorum上的评测出自同一份数据生成,因此表格与评测不会互相矛盾。',
+      `本地语音工具分属三类不同的任务——把文字变成语音、把语音变成文字,以及与AI进行口语对话——没有哪一份统一的功能清单能公平地比较它们。本指南按任务逐类对比${VA_TOTAL}款可在你自己设备上运行的免费和免费增值工具,所用对比表与每款工具在PromptQuorum上的评测出自同一份数据生成,因此表格与评测不会互相矛盾。`,
     metaDescription:
-      '并排对比17款本地语音工具:语音合成、语音转文字和实时语音助手。涵盖许可证、平台、CPU运行、API服务器、声音克隆等,均来自官方项目文档。',
+      `并排对比${VA_TOTAL}款本地语音工具:语音合成、语音转文字和实时语音助手。涵盖许可证、平台、CPU运行、API服务器、声音克隆等,均来自官方项目文档。`,
     twitterDescription:
       '按任务对比本地语音工具:语音合成、语音转文字与语音助手——许可证、平台、CPU运行、API服务器、声音克隆,均来自官方文档。',
     audience:
@@ -1116,7 +1131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper', 'XTTS-v2'],
     current_hardware_mentioned: ['CPU', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**PromptQuorum目录中的17款本地语音工具分为三类任务,应分别对比:语音合成(8款)、语音转文字(7款)和实时语音助手(4款)。** 在语音合成中,Coqui TTS、XTTS-v2、Izwi和Willow Inference Server的官方文档提到了声音克隆;在语音转文字中,whisper.cpp和Willow Inference Server的文档提到了实时转录;Dograh、Jarvis、Parlor和Voxa则是语音助手。请使用下方的对比表,并在安装前阅读每款工具自己的评测。',
+      `**PromptQuorum目录中的${VA_TOTAL}款本地语音工具分为三类任务,应分别对比:语音合成(${VA_TEXT_TO_SPEECH}款)、语音转文字(${VA_SPEECH_TO_TEXT}款)和实时语音助手(${VA_REALTIME_VOICE_AGENTS}款)。** 在语音合成中,Coqui TTS、XTTS-v2、Izwi和Willow Inference Server的官方文档提到了声音克隆;在语音转文字中,whisper.cpp和Willow Inference Server的文档提到了实时转录;Dograh、Jarvis、Parlor和Voxa则是语音助手。请使用下方的对比表,并在安装前阅读每款工具自己的评测。`,
     quickAnswerTop: {
       en: {
         question: '我应该使用哪款本地语音工具?',
@@ -1149,7 +1164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '本地语音工具分属三类不同的任务——语音合成、语音转文字和实时语音助手——因此PromptQuorum目录中的17款工具按任务分别对比,所用表格与每款工具自己的评测出自同一份工具数据生成。',
+            text: `本地语音工具分属三类不同的任务——语音合成、语音转文字和实时语音助手——因此PromptQuorum目录中的${VA_TOTAL}款工具按任务分别对比,所用表格与每款工具自己的评测出自同一份工具数据生成。`,
           },
           {
             type: 'plain-terms',
@@ -1157,7 +1172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '17款工具,三类任务:语音合成(8款)、语音转文字(7款)、实时语音助手(4款)。Izwi和Willow Inference Server既做语音合成也做语音转文字,因此出现在两张表中。',
+          `${VA_TOTAL}款工具,三类任务:语音合成(${VA_TEXT_TO_SPEECH}款)、语音转文字(${VA_SPEECH_TO_TEXT}款)、实时语音助手(${VA_REALTIME_VOICE_AGENTS}款)。Izwi和Willow Inference Server既做语音合成也做语音转文字,因此出现在两张表中。`,
           '表格由每款工具的记录生成,并对照其官方README或网站核对;短横线表示“文档中未说明”,绝不表示“没有”。',
           '许可证的差异很重要:例如Piper和OpenAI Edge TTS采用GPL-3.0,Coqui TTS采用MPL-2.0,XTTS-v2采用Coqui Public Model License,而Bark、StyleTTS 2、whisper.cpp和faster-whisper采用MIT。',
           '表中每个工具名称都链接到它自己的PromptQuorum评测,安装步骤和局限都在评测中介绍。',
@@ -1257,7 +1272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地软件目录](/zh/directory)——浏览全部200多款本地AI应用,并按类别筛选。',
+          `[本地软件目录](/zh/directory)——浏览全部${TOTAL_APP_COUNT}款本地AI应用,并按类别筛选。`,
           '[AI工具许可证详解](/zh/power-local-llm/ai-tool-licenses-explained)——如何理解MIT、GPL、MPL和自定义许可证。',
         ],
       },
@@ -1267,7 +1282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '本地语音工具对比(2026):语音合成、语音转文字与语音助手',
       description:
-        '并排对比17款本地语音工具:语音合成、语音转文字和实时语音助手,均来自官方项目文档。',
+        `并排对比${VA_TOTAL}款本地语音工具:语音合成、语音转文字和实时语音助手,均来自官方项目文档。`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-voice-audio-compared',
       inLanguage: 'zh',
       datePublished: '2026-09-20',
@@ -1310,9 +1325,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Ferramentas locais de voz e fala comparadas (2026): síntese de voz, transcrição e agentes de voz',
     seoTitle: 'Ferramentas locais de voz e fala comparadas 2026',
     intro:
-      'As ferramentas locais de voz cumprem três funções diferentes — transformar texto em fala, transformar fala em texto e conduzir uma conversa falada com uma IA — e nenhuma lista única de recursos compara as três de forma justa. Este guia compara 17 ferramentas gratuitas e freemium que rodam no seu próprio hardware, uma função por vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise de cada ferramenta no PromptQuorum, de modo que a tabela e as análises não podem se contradizer.',
+      `As ferramentas locais de voz cumprem três funções diferentes — transformar texto em fala, transformar fala em texto e conduzir uma conversa falada com uma IA — e nenhuma lista única de recursos compara as três de forma justa. Este guia compara ${VA_TOTAL} ferramentas gratuitas e freemium que rodam no seu próprio hardware, uma função por vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise de cada ferramenta no PromptQuorum, de modo que a tabela e as análises não podem se contradizer.`,
     metaDescription:
-      'Compare 17 ferramentas locais de voz lado a lado: síntese de voz, transcrição e agentes de voz em tempo real. Licenças, plataformas, uso de CPU, servidores de API, clonagem de voz e mais, segundo a documentação oficial.',
+      `Compare ${VA_TOTAL} ferramentas locais de voz lado a lado: síntese de voz, transcrição e agentes de voz em tempo real. Licenças, plataformas, uso de CPU, servidores de API, clonagem de voz e mais, segundo a documentação oficial.`,
     twitterDescription:
       'Ferramentas locais de voz comparadas por função: síntese de voz, transcrição e agentes de voz — licenças, plataformas, uso de CPU, servidores de API e clonagem de voz, segundo a documentação oficial.',
     audience:
@@ -1331,7 +1346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper', 'XTTS-v2'],
     current_hardware_mentioned: ['CPU', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**As 17 ferramentas locais de voz do diretório PromptQuorum se dividem em três funções que devem ser comparadas separadamente: síntese de voz (8 ferramentas), transcrição de fala (7) e agentes de voz em tempo real (4).** Na síntese de voz, a clonagem de voz consta na documentação oficial do Coqui TTS, do XTTS-v2, do Izwi e do Willow Inference Server; na transcrição, o whisper.cpp e o Willow Inference Server documentam transcrição em tempo real; e Dograh, Jarvis, Parlor e Voxa são os agentes de voz. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.',
+      `**As ${VA_TOTAL} ferramentas locais de voz do diretório PromptQuorum se dividem em três funções que devem ser comparadas separadamente: síntese de voz (${VA_TEXT_TO_SPEECH} ferramentas), transcrição de fala (${VA_SPEECH_TO_TEXT}) e agentes de voz em tempo real (${VA_REALTIME_VOICE_AGENTS}).** Na síntese de voz, a clonagem de voz consta na documentação oficial do Coqui TTS, do XTTS-v2, do Izwi e do Willow Inference Server; na transcrição, o whisper.cpp e o Willow Inference Server documentam transcrição em tempo real; e Dograh, Jarvis, Parlor e Voxa são os agentes de voz. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
     quickAnswerTop: {
       en: {
         question: 'Qual ferramenta local de voz devo usar?',
@@ -1364,7 +1379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'As ferramentas locais de voz cumprem três funções diferentes — síntese de voz, transcrição de fala e agentes de voz em tempo real — por isso as 17 ferramentas do diretório PromptQuorum são comparadas dentro de cada função, usando uma tabela gerada a partir dos mesmos dados de ferramenta da análise de cada uma.',
+            text: `As ferramentas locais de voz cumprem três funções diferentes — síntese de voz, transcrição de fala e agentes de voz em tempo real — por isso as ${VA_TOTAL} ferramentas do diretório PromptQuorum são comparadas dentro de cada função, usando uma tabela gerada a partir dos mesmos dados de ferramenta da análise de cada uma.`,
           },
           {
             type: 'plain-terms',
@@ -1372,7 +1387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '17 ferramentas, três funções: síntese de voz (8), transcrição de fala (7), agentes de voz em tempo real (4). O Izwi e o Willow Inference Server fazem tanto síntese de voz quanto transcrição, por isso aparecem nas duas tabelas.',
+          `${VA_TOTAL} ferramentas, três funções: síntese de voz (${VA_TEXT_TO_SPEECH}), transcrição de fala (${VA_SPEECH_TO_TEXT}), agentes de voz em tempo real (${VA_REALTIME_VOICE_AGENTS}). O Izwi e o Willow Inference Server fazem tanto síntese de voz quanto transcrição, por isso aparecem nas duas tabelas.`,
           'A tabela é gerada a partir do registro de cada ferramenta e conferida com o README ou o site oficial; um traço significa "não informado na documentação", nunca "não".',
           'As licenças diferem de maneiras que importam: por exemplo, Piper e OpenAI Edge TTS são GPL-3.0, o Coqui TTS é MPL-2.0, o XTTS-v2 usa a Coqui Public Model License, e Bark, StyleTTS 2, whisper.cpp e faster-whisper são MIT.',
           'Cada nome de ferramenta na tabela leva à sua própria análise no PromptQuorum, onde estão os passos de instalação e os limites.',
@@ -1472,7 +1487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software local](/pt/directory) — navegue por mais de 200 apps de IA local e filtre por categoria.',
+          `[Diretório de software local](/pt/directory) — navegue por ${TOTAL_APP_COUNT} apps de IA local e filtre por categoria.`,
           '[Licenças de ferramentas de IA explicadas](/pt/power-local-llm/ai-tool-licenses-explained) — como ler licenças MIT, GPL, MPL e personalizadas.',
         ],
       },
@@ -1482,7 +1497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Ferramentas locais de voz e fala comparadas (2026): síntese de voz, transcrição e agentes de voz',
       description:
-        'Compare 17 ferramentas locais de voz lado a lado: síntese de voz, transcrição de fala e agentes de voz em tempo real, segundo a documentação oficial dos projetos.',
+        `Compare ${VA_TOTAL} ferramentas locais de voz lado a lado: síntese de voz, transcrição de fala e agentes de voz em tempo real, segundo a documentação oficial dos projetos.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-voice-audio-compared',
       inLanguage: 'pt-BR',
       datePublished: '2026-09-20',
@@ -1525,9 +1540,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مقارنة أدوات الصوت والكلام المحلية (2026): تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون',
     seoTitle: 'مقارنة أدوات الصوت والكلام المحلية 2026',
     intro:
-      'تنقسم أدوات الصوت المحلية إلى ثلاث مهام مختلفة — تحويل النص إلى كلام، وتحويل الكلام إلى نص، وإجراء محادثة منطوقة مع الذكاء الاصطناعي — ولا توجد قائمة ميزات واحدة تقارن بينها بإنصاف. يقارن هذا الدليل 17 أداة مجانية وفريميوم تعمل على جهازك الخاص، مهمةً تلو الأخرى، باستخدام جدول مقارنة مولَّد من البيانات نفسها التي تعتمد عليها مراجعة PromptQuorum لكل أداة، بحيث لا يتعارض الجدول مع المراجعات.',
+      `تنقسم أدوات الصوت المحلية إلى ثلاث مهام مختلفة — تحويل النص إلى كلام، وتحويل الكلام إلى نص، وإجراء محادثة منطوقة مع الذكاء الاصطناعي — ولا توجد قائمة ميزات واحدة تقارن بينها بإنصاف. يقارن هذا الدليل ${VA_TOTAL} أداة مجانية وفريميوم تعمل على جهازك الخاص، مهمةً تلو الأخرى، باستخدام جدول مقارنة مولَّد من البيانات نفسها التي تعتمد عليها مراجعة PromptQuorum لكل أداة، بحيث لا يتعارض الجدول مع المراجعات.`,
     metaDescription:
-      'قارن 17 أداة صوت محلية جنبًا إلى جنب: تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون. التراخيص والمنصات واستخدام CPU وخوادم API واستنساخ الصوت وغيرها، من وثائق المشاريع الرسمية.',
+      `قارن ${VA_TOTAL} أداة صوت محلية جنبًا إلى جنب: تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون. التراخيص والمنصات واستخدام CPU وخوادم API واستنساخ الصوت وغيرها، من وثائق المشاريع الرسمية.`,
     twitterDescription:
       'مقارنة أدوات الصوت المحلية حسب المهمة: تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون — التراخيص والمنصات واستخدام CPU وخوادم API واستنساخ الصوت، من الوثائق الرسمية.',
     audience:
@@ -1546,7 +1561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper', 'XTTS-v2'],
     current_hardware_mentioned: ['CPU', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**تنقسم أدوات الصوت المحلية السبع عشرة في دليل PromptQuorum إلى ثلاث مهام ينبغي مقارنتها كلٌّ على حدة: تحويل النص إلى كلام (8 أدوات)، وتحويل الكلام إلى نص (7)، والوكلاء الصوتيون الفوريون (4).** ففي تحويل النص إلى كلام، يُذكر استنساخ الصوت في الوثائق الرسمية لـ Coqui TTS وXTTS-v2 وIzwi وWillow Inference Server؛ وفي تحويل الكلام إلى نص، توثّق whisper.cpp وWillow Inference Server النسخ الفوري؛ أما Dograh وJarvis وParlor وVoxa فهي الوكلاء الصوتيون. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.',
+      `**تنقسم أدوات الصوت المحلية الـ${VA_TOTAL} في دليل PromptQuorum إلى ثلاث مهام ينبغي مقارنتها كلٌّ على حدة: تحويل النص إلى كلام (${VA_TEXT_TO_SPEECH} أدوات)، وتحويل الكلام إلى نص (${VA_SPEECH_TO_TEXT})، والوكلاء الصوتيون الفوريون (${VA_REALTIME_VOICE_AGENTS}).** ففي تحويل النص إلى كلام، يُذكر استنساخ الصوت في الوثائق الرسمية لـ Coqui TTS وXTTS-v2 وIzwi وWillow Inference Server؛ وفي تحويل الكلام إلى نص، توثّق whisper.cpp وWillow Inference Server النسخ الفوري؛ أما Dograh وJarvis وParlor وVoxa فهي الوكلاء الصوتيون. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
     quickAnswerTop: {
       en: {
         question: 'ما أداة الصوت المحلية التي ينبغي أن أستخدمها؟',
@@ -1579,7 +1594,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'أدوات الصوت المحلية ثلاث مهام مختلفة — تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون — لذا تُقارَن الأدوات السبع عشرة في دليل PromptQuorum داخل كل مهمة، بجدول مولَّد من بيانات الأدوات نفسها التي تعتمد عليها مراجعة كل أداة.',
+            text: `أدوات الصوت المحلية ثلاث مهام مختلفة — تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون — لذا تُقارَن الأدوات الـ${VA_TOTAL} في دليل PromptQuorum داخل كل مهمة، بجدول مولَّد من بيانات الأدوات نفسها التي تعتمد عليها مراجعة كل أداة.`,
           },
           {
             type: 'plain-terms',
@@ -1587,7 +1602,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '17 أداة وثلاث مهام: تحويل النص إلى كلام (8)، وتحويل الكلام إلى نص (7)، والوكلاء الصوتيون الفوريون (4). تجمع Izwi وWillow Inference Server بين تحويل النص إلى كلام وتحويل الكلام إلى نص، لذلك تظهران في الجدولين.',
+          `${VA_TOTAL} أداة وثلاث مهام: تحويل النص إلى كلام (${VA_TEXT_TO_SPEECH})، وتحويل الكلام إلى نص (${VA_SPEECH_TO_TEXT})، والوكلاء الصوتيون الفوريون (${VA_REALTIME_VOICE_AGENTS}). تجمع Izwi وWillow Inference Server بين تحويل النص إلى كلام وتحويل الكلام إلى نص، لذلك تظهران في الجدولين.`,
           'يُولَّد الجدول من سجل كل أداة ويُدقَّق مقابل ملف README الرسمي أو الموقع الرسمي لها؛ والشرطة تعني «غير مذكور في الوثائق»، ولا تعني «لا» أبدًا.',
           'تختلف التراخيص بطرق مهمة: فمثلًا Piper وOpenAI Edge TTS بترخيص GPL-3.0، وCoqui TTS بترخيص MPL-2.0، وXTTS-v2 يستخدم رخصة Coqui Public Model License، وBark وStyleTTS 2 وwhisper.cpp وfaster-whisper بترخيص MIT.',
           'يرتبط اسم كل أداة في الجدول بمراجعتها الخاصة في PromptQuorum، حيث تُغطى خطوات التثبيت والحدود.',
@@ -1687,7 +1702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل البرمجيات المحلية](/ar/directory) — تصفّح أكثر من 200 تطبيق ذكاء اصطناعي محلي وصفّها حسب الفئة.',
+          `[دليل البرمجيات المحلية](/ar/directory) — تصفّح ${TOTAL_APP_COUNT} تطبيق ذكاء اصطناعي محلي وصفّها حسب الفئة.`,
           '[شرح تراخيص أدوات الذكاء الاصطناعي](/ar/power-local-llm/ai-tool-licenses-explained) — كيف تقرأ تراخيص MIT وGPL وMPL والتراخيص المخصصة.',
         ],
       },
@@ -1697,7 +1712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'مقارنة أدوات الصوت والكلام المحلية (2026): تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون',
       description:
-        'قارن 17 أداة صوت محلية جنبًا إلى جنب: تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون، من وثائق المشاريع الرسمية.',
+        `قارن ${VA_TOTAL} أداة صوت محلية جنبًا إلى جنب: تحويل النص إلى كلام، وتحويل الكلام إلى نص، والوكلاء الصوتيون الفوريون، من وثائق المشاريع الرسمية.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-voice-audio-compared',
       inLanguage: 'ar',
       datePublished: '2026-09-20',
@@ -1740,9 +1755,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '로컬 음성·음성 인식 도구 비교(2026): 음성 합성, 음성 인식, 음성 에이전트',
     seoTitle: '로컬 음성 도구 비교 2026: TTS·STT·에이전트',
     intro:
-      '로컬 음성 도구는 텍스트를 음성으로 바꾸기, 음성을 텍스트로 바꾸기, AI와 음성으로 대화하기라는 세 가지 서로 다른 작업으로 나뉘며, 하나의 기능 목록으로는 이들을 공정하게 비교할 수 없습니다. 이 가이드는 자신의 하드웨어에서 실행되는 무료 및 프리미엄 도구 17개를 작업별로 하나씩 비교합니다. 비교표는 각 도구의 PromptQuorum 리뷰와 같은 데이터로 생성되므로, 표와 리뷰의 내용이 서로 어긋날 수 없습니다.',
+      `로컬 음성 도구는 텍스트를 음성으로 바꾸기, 음성을 텍스트로 바꾸기, AI와 음성으로 대화하기라는 세 가지 서로 다른 작업으로 나뉘며, 하나의 기능 목록으로는 이들을 공정하게 비교할 수 없습니다. 이 가이드는 자신의 하드웨어에서 실행되는 무료 및 프리미엄 도구 ${VA_TOTAL}개를 작업별로 하나씩 비교합니다. 비교표는 각 도구의 PromptQuorum 리뷰와 같은 데이터로 생성되므로, 표와 리뷰의 내용이 서로 어긋날 수 없습니다.`,
     metaDescription:
-      '로컬 음성 도구 17개를 나란히 비교합니다: 음성 합성, 음성 인식, 실시간 음성 에이전트. 라이선스, 플랫폼, CPU 사용, API 서버, 음성 복제 등을 공식 문서 기준으로 정리했습니다.',
+      `로컬 음성 도구 ${VA_TOTAL}개를 나란히 비교합니다: 음성 합성, 음성 인식, 실시간 음성 에이전트. 라이선스, 플랫폼, CPU 사용, API 서버, 음성 복제 등을 공식 문서 기준으로 정리했습니다.`,
     twitterDescription:
       '작업별로 비교한 로컬 음성 도구: 음성 합성, 음성 인식, 음성 에이전트 — 라이선스, 플랫폼, CPU 사용, API 서버, 음성 복제를 공식 문서 기준으로 정리했습니다.',
     audience:
@@ -1761,7 +1776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Whisper', 'XTTS-v2'],
     current_hardware_mentioned: ['CPU', 'NVIDIA GPU'],
     leadAnswerBlock:
-      '**PromptQuorum 디렉터리의 로컬 음성 도구 17개는 따로 비교해야 하는 세 가지 작업으로 나뉩니다: 음성 합성(8개), 음성 인식(7개), 실시간 음성 에이전트(4개).** 음성 합성 중에서는 Coqui TTS, XTTS-v2, Izwi, Willow Inference Server의 공식 문서가 음성 복제를 명시하고 있으며, 음성 인식에서는 whisper.cpp와 Willow Inference Server가 실시간 받아쓰기를 문서화하고 있습니다. Dograh, Jarvis, Parlor, Voxa는 음성 에이전트입니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.',
+      `**PromptQuorum 디렉터리의 로컬 음성 도구 ${VA_TOTAL}개는 따로 비교해야 하는 세 가지 작업으로 나뉩니다: 음성 합성(${VA_TEXT_TO_SPEECH}개), 음성 인식(${VA_SPEECH_TO_TEXT}개), 실시간 음성 에이전트(${VA_REALTIME_VOICE_AGENTS}개).** 음성 합성 중에서는 Coqui TTS, XTTS-v2, Izwi, Willow Inference Server의 공식 문서가 음성 복제를 명시하고 있으며, 음성 인식에서는 whisper.cpp와 Willow Inference Server가 실시간 받아쓰기를 문서화하고 있습니다. Dograh, Jarvis, Parlor, Voxa는 음성 에이전트입니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.`,
     quickAnswerTop: {
       en: {
         question: '어떤 로컬 음성 도구를 써야 합니까?',
@@ -1794,7 +1809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '로컬 음성 도구는 음성 합성, 음성 인식, 실시간 음성 에이전트라는 세 가지 서로 다른 작업이므로, PromptQuorum 디렉터리의 도구 17개를 작업별로 비교하며, 각 도구의 리뷰와 같은 도구 데이터로 생성한 표를 사용합니다.',
+            text: `로컬 음성 도구는 음성 합성, 음성 인식, 실시간 음성 에이전트라는 세 가지 서로 다른 작업이므로, PromptQuorum 디렉터리의 도구 ${VA_TOTAL}개를 작업별로 비교하며, 각 도구의 리뷰와 같은 도구 데이터로 생성한 표를 사용합니다.`,
           },
           {
             type: 'plain-terms',
@@ -1802,7 +1817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '도구 17개, 작업 3가지: 음성 합성(8), 음성 인식(7), 실시간 음성 에이전트(4). Izwi와 Willow Inference Server는 음성 합성과 음성 인식을 모두 하므로 두 표에 모두 나타납니다.',
+          `도구 ${VA_TOTAL}개, 작업 3가지: 음성 합성(${VA_TEXT_TO_SPEECH}), 음성 인식(${VA_SPEECH_TO_TEXT}), 실시간 음성 에이전트(${VA_REALTIME_VOICE_AGENTS}). Izwi와 Willow Inference Server는 음성 합성과 음성 인식을 모두 하므로 두 표에 모두 나타납니다.`,
           '표는 각 도구의 레코드로 생성되며 공식 README 또는 사이트와 대조해 확인합니다. 대시는 "문서에 명시되지 않음"을 뜻하며, "아니오"를 뜻하지 않습니다.',
           '라이선스는 중요한 방식으로 서로 다릅니다. 예를 들어 Piper와 OpenAI Edge TTS는 GPL-3.0, Coqui TTS는 MPL-2.0, XTTS-v2는 Coqui Public Model License를 사용하고, Bark, StyleTTS 2, whisper.cpp, faster-whisper는 MIT입니다.',
           '표의 모든 도구 이름은 해당 도구의 PromptQuorum 리뷰로 연결되며, 설치 단계와 한계는 그곳에서 다룹니다.',
@@ -1902,7 +1917,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 글',
         items: [
-          '[로컬 소프트웨어 디렉터리](/ko/directory) — 200개 이상의 로컬 AI 앱을 둘러보고 카테고리별로 필터링하십시오.',
+          `[로컬 소프트웨어 디렉터리](/ko/directory) — ${TOTAL_APP_COUNT}개의 로컬 AI 앱을 둘러보고 카테고리별로 필터링하십시오.`,
           '[AI 도구 라이선스 설명](/ko/power-local-llm/ai-tool-licenses-explained) — MIT, GPL, MPL 및 맞춤 라이선스를 읽는 방법.',
         ],
       },
@@ -1912,7 +1927,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '로컬 음성·음성 인식 도구 비교(2026): 음성 합성, 음성 인식, 음성 에이전트',
       description:
-        '로컬 음성 도구 17개를 나란히 비교합니다: 음성 합성, 음성 인식, 실시간 음성 에이전트를 공식 프로젝트 문서 기준으로 정리했습니다.',
+        `로컬 음성 도구 ${VA_TOTAL}개를 나란히 비교합니다: 음성 합성, 음성 인식, 실시간 음성 에이전트를 공식 프로젝트 문서 기준으로 정리했습니다.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-voice-audio-compared',
       inLanguage: 'ko',
       datePublished: '2026-09-20',

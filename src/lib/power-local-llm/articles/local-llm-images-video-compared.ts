@@ -8,6 +8,24 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+
+// Live counts from the directory — recomputed at build time so this article never drifts from
+// the actual tool count as the directory grows. Only tools with their own PromptQuorum review are
+// counted (matches the CategoryCompareTable's own "only reviewed tools" rule).
+const TOTAL_APP_COUNT = localAiApps.length
+const REVIEWED_IV_APPS = localAiApps.filter((a) => a.reviewSlug != null)
+const IV_GENERATION = new Set(
+  REVIEWED_IV_APPS.filter((a) => a.categories.includes('image-generation') || a.categories.includes('video-generation')).map(
+    (a) => a.slug,
+  ),
+).size
+const IV_VISION_OCR = REVIEWED_IV_APPS.filter((a) => a.categories.includes('vision-ocr')).length
+const IV_TOTAL = new Set(
+  REVIEWED_IV_APPS.filter(
+    (a) => a.categories.includes('image-generation') || a.categories.includes('video-generation') || a.categories.includes('vision-ocr'),
+  ).map((a) => a.slug),
+).size
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
@@ -20,9 +38,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR',
     seoTitle: 'Local Image, Video & Vision Tools Compared 2026',
     intro:
-      'Local image tools do two different jobs — generating images and video from a prompt, and understanding the images you give them — and no single feature list compares them fairly. This guide compares 16 free and paid tools that run on your own hardware, one job at a time, using a comparison table generated from the same data as each tool\'s own PromptQuorum review, so the table and the reviews cannot disagree.',
+      `Local image tools do two different jobs — generating images and video from a prompt, and understanding the images you give them — and no single feature list compares them fairly. This guide compares ${IV_TOTAL} free and paid tools that run on your own hardware, one job at a time, using a comparison table generated from the same data as each tool's own PromptQuorum review, so the table and the reviews cannot disagree.`,
     metaDescription:
-      'Compare 16 local image tools side by side: image and video generation (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI and more) and vision and OCR models. Licenses, platforms, inpainting, extensions, API and more, from official documentation.',
+      `Compare ${IV_TOTAL} local image tools side by side: image and video generation (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI and more) and vision and OCR models. Licenses, platforms, inpainting, extensions, API and more, from official documentation.`,
     twitterDescription:
       'Local image, video and vision tools compared by job — licenses, platforms, inpainting, extensions, node workflows, local API, OCR — from official documentation.',
     audience:
@@ -41,7 +59,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion', 'LLaVA', 'Idefics'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      '**The 16 local image tools in the PromptQuorum directory split into two jobs that should be compared separately: image and video generation (13 tools) and vision and OCR (3).** Within generation, ComfyUI, InvokeAI and StableSwarmUI document node-based workflows; AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, StableSwarmUI and ToolNeuron document extension systems; and AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge and ToolNeuron document a local API. For vision, LLaVA documents reading text in images and Idefics documents multiple images per prompt. Use the comparison table below, and read each tool\'s own review before you install it.',
+      `**The ${IV_TOTAL} local image tools in the PromptQuorum directory split into two jobs that should be compared separately: image and video generation (${IV_GENERATION} tools) and vision and OCR (${IV_VISION_OCR}).** Within generation, ComfyUI, InvokeAI and StableSwarmUI document node-based workflows; AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, StableSwarmUI and ToolNeuron document extension systems; and AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge and ToolNeuron document a local API. For vision, LLaVA documents reading text in images and Idefics documents multiple images per prompt. Use the comparison table below, and read each tool's own review before you install it.`,
     quickAnswerTop: {
       en: {
         question: 'Which local image tool should I use?',
@@ -72,7 +90,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Local image tools are two different jobs — generating images and video, and understanding images — so the 16 tools in the PromptQuorum directory are compared within each job, using a table generated from the same tool data as each tool\'s own review.',
+            text: `Local image tools are two different jobs — generating images and video, and understanding images — so the ${IV_TOTAL} tools in the PromptQuorum directory are compared within each job, using a table generated from the same tool data as each tool's own review.`,
           },
           {
             type: 'plain-terms',
@@ -80,7 +98,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '16 tools, two jobs: image and video generation (13) and vision and OCR (3).',
+          `${IV_TOTAL} tools, two jobs: image and video generation (${IV_GENERATION}) and vision and OCR (${IV_VISION_OCR}).`,
           'The table is generated from each tool\'s record and checked against its official README or site; a dash means "not stated in the documentation", never "no".',
           'Licenses differ in ways that matter: for example AUTOMATIC1111, DiffusionBee, Stable Diffusion WebUI Forge and Locally Uncensored are AGPL-3.0, ComfyUI and Fooocus are GPL-3.0, AnimateDiff, ControlNet and InvokeAI are Apache-2.0, StableSwarmUI and ToolNeuron are MIT, and Stable Diffusion uses an OpenRAIL license.',
           'Every tool name in the table links to its own PromptQuorum review, which is where installation steps and limits are covered.',
@@ -174,7 +192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local Software Directory](/directory) — browse all 200+ local AI apps and filter by category.',
+          `[Local Software Directory](/directory) — browse all ${TOTAL_APP_COUNT} local AI apps and filter by category.`,
           '[Local Voice & Speech Tools Compared](/power-local-llm/local-llm-voice-audio-compared) — the same comparison for text-to-speech, speech-to-text and voice agents.',
           '[AI Tool Licenses Explained](/power-local-llm/ai-tool-licenses-explained) — how to read MIT, GPL, AGPL, Apache and OpenRAIL licenses.',
         ],
@@ -185,7 +203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR',
       description:
-        'Compare 16 local image tools side by side: image and video generation, and vision and OCR models, from official project documentation.',
+        `Compare ${IV_TOTAL} local image tools side by side: image and video generation, and vision and OCR models, from official project documentation.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-images-video-compared',
       inLanguage: 'en',
       datePublished: '2026-09-20',
@@ -228,9 +246,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Lokale Bild-, Video- und Vision-Tools im Vergleich (2026): Generierung, Vision und OCR',
     seoTitle: 'Lokale Bild-, Video- & Vision-Tools im Vergleich 2026',
     intro:
-      'Lokale Bild-Tools erfüllen zwei unterschiedliche Aufgaben — Bilder und Videos aus einem Prompt erzeugen und Bilder verstehen, die man ihnen gibt — und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht 16 kostenlose und kostenpflichtige Tools, die auf der eigenen Hardware laufen, Aufgabe für Aufgabe. Grundlage ist eine Vergleichstabelle, die aus denselben Daten erzeugt wird wie der jeweilige PromptQuorum-Test des Tools, sodass sich Tabelle und Tests nicht widersprechen können.',
+      `Lokale Bild-Tools erfüllen zwei unterschiedliche Aufgaben — Bilder und Videos aus einem Prompt erzeugen und Bilder verstehen, die man ihnen gibt — und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht ${IV_TOTAL} kostenlose und kostenpflichtige Tools, die auf der eigenen Hardware laufen, Aufgabe für Aufgabe. Grundlage ist eine Vergleichstabelle, die aus denselben Daten erzeugt wird wie der jeweilige PromptQuorum-Test des Tools, sodass sich Tabelle und Tests nicht widersprechen können.`,
     metaDescription:
-      'Vergleich von 16 lokalen Bild-Tools: Bild- und Videogenerierung (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI u. a.) sowie Vision- und OCR-Modelle. Lizenzen, Plattformen, Inpainting, Erweiterungen, API laut offizieller Dokumentation.',
+      `Vergleich von ${IV_TOTAL} lokalen Bild-Tools: Bild- und Videogenerierung (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI u. a.) sowie Vision- und OCR-Modelle. Lizenzen, Plattformen, Inpainting, Erweiterungen, API laut offizieller Dokumentation.`,
     twitterDescription:
       'Lokale Bild-, Video- und Vision-Tools nach Aufgabe verglichen — Lizenzen, Plattformen, Inpainting, Erweiterungen, Node-Workflows, lokale API, OCR — laut offizieller Dokumentation.',
     audience:
@@ -249,7 +267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion', 'LLaVA', 'Idefics'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      '**Die 16 lokalen Bild-Tools im PromptQuorum-Verzeichnis teilen sich in zwei Aufgaben, die getrennt verglichen werden sollten: Bild- und Videogenerierung (13 Tools) sowie Vision und OCR (3).** Innerhalb der Generierung dokumentieren ComfyUI, InvokeAI und StableSwarmUI knotenbasierte Workflows; AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, StableSwarmUI und ToolNeuron dokumentieren Erweiterungssysteme; und AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge und ToolNeuron dokumentieren eine lokale API. Bei Vision dokumentiert LLaVA das Lesen von Text in Bildern und Idefics mehrere Bilder pro Prompt. Nutzen Sie die Vergleichstabelle unten und lesen Sie vor der Installation den jeweiligen Test des Tools.',
+      `**Die ${IV_TOTAL} lokalen Bild-Tools im PromptQuorum-Verzeichnis teilen sich in zwei Aufgaben, die getrennt verglichen werden sollten: Bild- und Videogenerierung (${IV_GENERATION} Tools) sowie Vision und OCR (${IV_VISION_OCR}).** Innerhalb der Generierung dokumentieren ComfyUI, InvokeAI und StableSwarmUI knotenbasierte Workflows; AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, StableSwarmUI und ToolNeuron dokumentieren Erweiterungssysteme; und AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge und ToolNeuron dokumentieren eine lokale API. Bei Vision dokumentiert LLaVA das Lesen von Text in Bildern und Idefics mehrere Bilder pro Prompt. Nutzen Sie die Vergleichstabelle unten und lesen Sie vor der Installation den jeweiligen Test des Tools.`,
     quickAnswerTop: {
       en: {
         question: 'Welches lokale Bild-Tool sollte ich verwenden?',
@@ -280,7 +298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Lokale Bild-Tools sind zwei verschiedene Aufgaben — Bilder und Videos erzeugen sowie Bilder verstehen — daher werden die 16 Tools im PromptQuorum-Verzeichnis innerhalb jeder Aufgabe verglichen, anhand einer Tabelle, die aus denselben Tooldaten erzeugt wird wie der jeweilige Test des Tools.',
+            text: `Lokale Bild-Tools sind zwei verschiedene Aufgaben — Bilder und Videos erzeugen sowie Bilder verstehen — daher werden die ${IV_TOTAL} Tools im PromptQuorum-Verzeichnis innerhalb jeder Aufgabe verglichen, anhand einer Tabelle, die aus denselben Tooldaten erzeugt wird wie der jeweilige Test des Tools.`,
           },
           {
             type: 'plain-terms',
@@ -288,7 +306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '16 Tools, zwei Aufgaben: Bild- und Videogenerierung (13) sowie Vision und OCR (3).',
+          `${IV_TOTAL} Tools, zwei Aufgaben: Bild- und Videogenerierung (${IV_GENERATION}) sowie Vision und OCR (${IV_VISION_OCR}).`,
           'Die Tabelle wird aus dem Datensatz jedes Tools erzeugt und mit dessen offizieller README oder Website abgeglichen; ein Strich bedeutet „in der Dokumentation nicht angegeben“, nie „nein“.',
           'Lizenzen unterscheiden sich in relevanter Weise: Zum Beispiel stehen AUTOMATIC1111, DiffusionBee, Stable Diffusion WebUI Forge und Locally Uncensored unter AGPL-3.0, ComfyUI und Fooocus unter GPL-3.0, AnimateDiff, ControlNet und InvokeAI unter Apache-2.0, StableSwarmUI und ToolNeuron unter MIT, und Stable Diffusion verwendet eine OpenRAIL-Lizenz.',
           'Jeder Toolname in der Tabelle verlinkt auf den eigenen PromptQuorum-Test, in dem Installationsschritte und Grenzen behandelt werden.',
@@ -382,7 +400,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Verzeichnis lokaler Software](/de/directory) — alle über 200 lokalen KI-Apps durchsuchen und nach Kategorie filtern.',
+          `[Verzeichnis lokaler Software](/de/directory) — alle ${TOTAL_APP_COUNT} lokalen KI-Apps durchsuchen und nach Kategorie filtern.`,
           '[Lokale Sprach- und Audio-Tools im Vergleich](/de/power-local-llm/local-llm-voice-audio-compared) — derselbe Vergleich für Text-to-Speech, Speech-to-Text und Sprachagenten.',
           '[KI-Tool-Lizenzen erklärt](/de/power-local-llm/ai-tool-licenses-explained) — wie man MIT-, GPL-, AGPL-, Apache- und OpenRAIL-Lizenzen liest.',
         ],
@@ -393,7 +411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Lokale Bild-, Video- und Vision-Tools im Vergleich (2026): Generierung, Vision und OCR',
       description:
-        'Vergleich von 16 lokalen Bild-Tools: Bild- und Videogenerierung sowie Vision- und OCR-Modelle, laut offizieller Projektdokumentation.',
+        `Vergleich von ${IV_TOTAL} lokalen Bild-Tools: Bild- und Videogenerierung sowie Vision- und OCR-Modelle, laut offizieller Projektdokumentation.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-images-video-compared',
       inLanguage: 'de',
       datePublished: '2026-09-20',
@@ -436,9 +454,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Outils locaux d\'image, de vidéo et de vision : comparatif (2026) — génération, vision et OCR',
     seoTitle: 'Outils locaux image, vidéo et vision : comparatif 2026',
     intro:
-      'Les outils d\'image locaux remplissent deux missions distinctes — générer des images et des vidéos à partir d\'un prompt, et comprendre les images qu\'on leur fournit — et aucune liste de fonctionnalités unique ne permet de les comparer équitablement. Ce guide compare 16 outils gratuits et payants qui fonctionnent sur votre propre matériel, une mission à la fois, à l\'aide d\'un tableau comparatif généré à partir des mêmes données que l\'avis PromptQuorum de chaque outil : le tableau et les avis ne peuvent donc pas se contredire.',
+      `Les outils d'image locaux remplissent deux missions distinctes — générer des images et des vidéos à partir d'un prompt, et comprendre les images qu'on leur fournit — et aucune liste de fonctionnalités unique ne permet de les comparer équitablement. Ce guide compare ${IV_TOTAL} outils gratuits et payants qui fonctionnent sur votre propre matériel, une mission à la fois, à l'aide d'un tableau comparatif généré à partir des mêmes données que l'avis PromptQuorum de chaque outil : le tableau et les avis ne peuvent donc pas se contredire.`,
     metaDescription:
-      'Comparez 16 outils d\'image locaux : génération d\'images et de vidéos (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) et modèles de vision et OCR. Licences, plateformes, inpainting, extensions, API, d\'après la documentation officielle.',
+      `Comparez ${IV_TOTAL} outils d'image locaux : génération d'images et de vidéos (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) et modèles de vision et OCR. Licences, plateformes, inpainting, extensions, API, d'après la documentation officielle.`,
     twitterDescription:
       'Outils locaux d\'image, de vidéo et de vision comparés par mission — licences, plateformes, inpainting, extensions, workflows par nœuds, API locale, OCR — d\'après la documentation officielle.',
     audience:
@@ -457,7 +475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion', 'LLaVA', 'Idefics'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      '**Les 16 outils d\'image locaux du répertoire PromptQuorum se répartissent en deux missions qu\'il faut comparer séparément : la génération d\'images et de vidéos (13 outils) et la vision et l\'OCR (3).** Côté génération, ComfyUI, InvokeAI et StableSwarmUI documentent des workflows par nœuds ; AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, StableSwarmUI et ToolNeuron documentent un système d\'extensions ; et AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge et ToolNeuron documentent une API locale. Côté vision, LLaVA documente la lecture de texte dans les images et Idefics documente plusieurs images par prompt. Utilisez le tableau comparatif ci-dessous, et lisez l\'avis de chaque outil avant de l\'installer.',
+      `**Les ${IV_TOTAL} outils d'image locaux du répertoire PromptQuorum se répartissent en deux missions qu'il faut comparer séparément : la génération d'images et de vidéos (${IV_GENERATION} outils) et la vision et l'OCR (${IV_VISION_OCR}).** Côté génération, ComfyUI, InvokeAI et StableSwarmUI documentent des workflows par nœuds ; AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, StableSwarmUI et ToolNeuron documentent un système d'extensions ; et AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge et ToolNeuron documentent une API locale. Côté vision, LLaVA documente la lecture de texte dans les images et Idefics documente plusieurs images par prompt. Utilisez le tableau comparatif ci-dessous, et lisez l'avis de chaque outil avant de l'installer.`,
     quickAnswerTop: {
       en: {
         question: 'Quel outil d\'image local choisir ?',
@@ -488,7 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Les outils d\'image locaux recouvrent deux missions différentes — générer des images et des vidéos, et comprendre des images — si bien que les 16 outils du répertoire PromptQuorum sont comparés au sein de chaque mission, à l\'aide d\'un tableau généré à partir des mêmes données que l\'avis de chaque outil.',
+            text: `Les outils d'image locaux recouvrent deux missions différentes — générer des images et des vidéos, et comprendre des images — si bien que les ${IV_TOTAL} outils du répertoire PromptQuorum sont comparés au sein de chaque mission, à l'aide d'un tableau généré à partir des mêmes données que l'avis de chaque outil.`,
           },
           {
             type: 'plain-terms',
@@ -496,7 +514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '16 outils, deux missions : génération d\'images et de vidéos (13) et vision et OCR (3).',
+          `${IV_TOTAL} outils, deux missions : génération d'images et de vidéos (${IV_GENERATION}) et vision et OCR (${IV_VISION_OCR}).`,
           'Le tableau est généré à partir de la fiche de chaque outil et vérifié par rapport à son README ou à son site officiel ; un tiret signifie « non précisé dans la documentation », jamais « non ».',
           'Les licences diffèrent d\'une façon qui compte : par exemple AUTOMATIC1111, DiffusionBee, Stable Diffusion WebUI Forge et Locally Uncensored sont sous AGPL-3.0, ComfyUI et Fooocus sous GPL-3.0, AnimateDiff, ControlNet et InvokeAI sous Apache-2.0, StableSwarmUI et ToolNeuron sous MIT, et Stable Diffusion utilise une licence OpenRAIL.',
           'Chaque nom d\'outil du tableau renvoie vers son propre avis PromptQuorum, où figurent les étapes d\'installation et les limites.',
@@ -590,7 +608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire de logiciels locaux](/fr/directory) — parcourez plus de 200 applications d\'IA locales et filtrez par catégorie.',
+          `[Répertoire de logiciels locaux](/fr/directory) — parcourez ${TOTAL_APP_COUNT} applications d'IA locales et filtrez par catégorie.`,
           '[Outils locaux de voix et de parole : comparatif](/fr/power-local-llm/local-llm-voice-audio-compared) — la même comparaison pour la synthèse vocale, la reconnaissance vocale et les agents vocaux.',
           '[Les licences des outils d\'IA expliquées](/fr/power-local-llm/ai-tool-licenses-explained) — comment lire les licences MIT, GPL, AGPL, Apache et OpenRAIL.',
         ],
@@ -601,7 +619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Outils locaux d\'image, de vidéo et de vision : comparatif (2026) — génération, vision et OCR',
       description:
-        'Comparez 16 outils d\'image locaux : génération d\'images et de vidéos, et modèles de vision et OCR, d\'après la documentation officielle des projets.',
+        `Comparez ${IV_TOTAL} outils d'image locaux : génération d'images et de vidéos, et modèles de vision et OCR, d'après la documentation officielle des projets.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-images-video-compared',
       inLanguage: 'fr',
       datePublished: '2026-09-20',
@@ -644,9 +662,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Herramientas locales de imagen, vídeo y visión comparadas (2026): generación, visión y OCR',
     seoTitle: 'Herramientas locales de imagen y vídeo comparadas 2026',
     intro:
-      'Las herramientas locales de imagen hacen dos trabajos distintos — generar imágenes y vídeo a partir de un prompt, y entender las imágenes que les das — y ninguna lista de funciones única las compara con justicia. Esta guía compara 16 herramientas gratuitas y de pago que se ejecutan en tu propio hardware, un trabajo cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis propio de cada herramienta en PromptQuorum, de modo que la tabla y los análisis no pueden contradecirse.',
+      `Las herramientas locales de imagen hacen dos trabajos distintos — generar imágenes y vídeo a partir de un prompt, y entender las imágenes que les das — y ninguna lista de funciones única las compara con justicia. Esta guía compara ${IV_TOTAL} herramientas gratuitas y de pago que se ejecutan en tu propio hardware, un trabajo cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis propio de cada herramienta en PromptQuorum, de modo que la tabla y los análisis no pueden contradecirse.`,
     metaDescription:
-      'Compara 16 herramientas locales de imagen: generación de imagen y vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) y modelos de visión y OCR. Licencias, plataformas y API, según la documentación oficial.',
+      `Compara ${IV_TOTAL} herramientas locales de imagen: generación de imagen y vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI…) y modelos de visión y OCR. Licencias, plataformas y API, según la documentación oficial.`,
     twitterDescription:
       'Herramientas locales de imagen, vídeo y visión comparadas por trabajo — licencias, plataformas, inpainting, extensiones, flujos por nodos, API local, OCR — según la documentación oficial.',
     audience:
@@ -665,7 +683,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion', 'LLaVA', 'Idefics'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      '**Las 16 herramientas locales de imagen del directorio de PromptQuorum se dividen en dos trabajos que conviene comparar por separado: generación de imagen y vídeo (13 herramientas) y visión y OCR (3).** Dentro de la generación, ComfyUI, InvokeAI y StableSwarmUI documentan flujos de trabajo basados en nodos; AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, StableSwarmUI y ToolNeuron documentan sistemas de extensiones; y AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge y ToolNeuron documentan una API local. En visión, LLaVA documenta la lectura de texto en imágenes e Idefics documenta varias imágenes por prompt. Usa la tabla comparativa de abajo y lee el análisis de cada herramienta antes de instalarla.',
+      `**Las ${IV_TOTAL} herramientas locales de imagen del directorio de PromptQuorum se dividen en dos trabajos que conviene comparar por separado: generación de imagen y vídeo (${IV_GENERATION} herramientas) y visión y OCR (${IV_VISION_OCR}).** Dentro de la generación, ComfyUI, InvokeAI y StableSwarmUI documentan flujos de trabajo basados en nodos; AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, StableSwarmUI y ToolNeuron documentan sistemas de extensiones; y AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge y ToolNeuron documentan una API local. En visión, LLaVA documenta la lectura de texto en imágenes e Idefics documenta varias imágenes por prompt. Usa la tabla comparativa de abajo y lee el análisis de cada herramienta antes de instalarla.`,
     quickAnswerTop: {
       en: {
         question: '¿Qué herramienta local de imagen debería usar?',
@@ -696,7 +714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Las herramientas locales de imagen son dos trabajos distintos — generar imágenes y vídeo, y entender imágenes — por lo que las 16 herramientas del directorio de PromptQuorum se comparan dentro de cada trabajo, con una tabla generada a partir de los mismos datos que el análisis propio de cada herramienta.',
+            text: `Las herramientas locales de imagen son dos trabajos distintos — generar imágenes y vídeo, y entender imágenes — por lo que las ${IV_TOTAL} herramientas del directorio de PromptQuorum se comparan dentro de cada trabajo, con una tabla generada a partir de los mismos datos que el análisis propio de cada herramienta.`,
           },
           {
             type: 'plain-terms',
@@ -704,7 +722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '16 herramientas, dos trabajos: generación de imagen y vídeo (13) y visión y OCR (3).',
+          `${IV_TOTAL} herramientas, dos trabajos: generación de imagen y vídeo (${IV_GENERATION}) y visión y OCR (${IV_VISION_OCR}).`,
           'La tabla se genera a partir del registro de cada herramienta y se contrasta con su README o sitio oficial; un guion significa "no indicado en la documentación", nunca "no".',
           'Las licencias difieren de formas que importan: por ejemplo, AUTOMATIC1111, DiffusionBee, Stable Diffusion WebUI Forge y Locally Uncensored son AGPL-3.0, ComfyUI y Fooocus son GPL-3.0, AnimateDiff, ControlNet e InvokeAI son Apache-2.0, StableSwarmUI y ToolNeuron son MIT, y Stable Diffusion usa una licencia OpenRAIL.',
           'Cada nombre de herramienta de la tabla enlaza a su propio análisis en PromptQuorum, donde se explican los pasos de instalación y los límites.',
@@ -798,7 +816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software local](/es/directory) — explora todas las más de 200 apps de IA local y filtra por categoría.',
+          `[Directorio de software local](/es/directory) — explora todas las ${TOTAL_APP_COUNT} apps de IA local y filtra por categoría.`,
           '[Herramientas locales de voz y habla comparadas](/es/power-local-llm/local-llm-voice-audio-compared) — la misma comparación para síntesis de voz, reconocimiento de voz y agentes de voz.',
           '[Licencias de herramientas de IA explicadas](/es/power-local-llm/ai-tool-licenses-explained) — cómo leer las licencias MIT, GPL, AGPL, Apache y OpenRAIL.',
         ],
@@ -809,7 +827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Herramientas locales de imagen, vídeo y visión comparadas (2026): generación, visión y OCR',
       description:
-        'Compara 16 herramientas locales de imagen: generación de imagen y vídeo, y modelos de visión y OCR, según la documentación oficial de los proyectos.',
+        `Compara ${IV_TOTAL} herramientas locales de imagen: generación de imagen y vídeo, y modelos de visión y OCR, según la documentación oficial de los proyectos.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-images-video-compared',
       inLanguage: 'es',
       datePublished: '2026-09-20',
@@ -852,9 +870,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'ローカル画像・動画・ビジョンツール比較(2026):生成、ビジョン、OCR',
     seoTitle: 'ローカル画像・動画・ビジョンツール比較2026',
     intro:
-      'ローカルの画像ツールには2つの異なる役割があります。プロンプトから画像や動画を生成することと、与えた画像を理解することです。単一の機能一覧では、両者を公平に比較できません。このガイドでは、自分のハードウェア上で動作する無料・有料の16ツールを、役割ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成されているため、表とレビューが食い違うことはありません。',
+      `ローカルの画像ツールには2つの異なる役割があります。プロンプトから画像や動画を生成することと、与えた画像を理解することです。単一の機能一覧では、両者を公平に比較できません。このガイドでは、自分のハードウェア上で動作する無料・有料の${IV_TOTAL}ツールを、役割ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成されているため、表とレビューが食い違うことはありません。`,
     metaDescription:
-      'ローカル画像ツール16種を比較:画像・動画生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAIなど)とビジョン・OCRモデル。ライセンス、対応OS、インペイント、拡張機能、APIなどを公式ドキュメントから整理。',
+      `ローカル画像ツール${IV_TOTAL}種を比較:画像・動画生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAIなど)とビジョン・OCRモデル。ライセンス、対応OS、インペイント、拡張機能、APIなどを公式ドキュメントから整理。`,
     twitterDescription:
       'ローカルの画像・動画・ビジョンツールを役割別に比較。ライセンス、対応OS、インペイント、拡張機能、ノードワークフロー、ローカルAPI、OCRを公式ドキュメントから整理。',
     audience:
@@ -873,7 +891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion', 'LLaVA', 'Idefics'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      '**PromptQuorumディレクトリにある16のローカル画像ツールは、別々に比較すべき2つの役割に分かれます。画像・動画生成(13ツール)と、ビジョン・OCR(3ツール)です。** 生成系では、ComfyUI、InvokeAI、StableSwarmUIがノードベースのワークフローを、AUTOMATIC1111、ComfyUI、Stable Diffusion WebUI Forge、StableSwarmUI、ToolNeuronが拡張機能の仕組みを、AUTOMATIC1111、ComfyUI、Stable Diffusion WebUI Forge、ToolNeuronがローカルAPIをそれぞれドキュメントに記載しています。ビジョン系では、LLaVAが画像内のテキスト読み取りを、Ideficsが1回のプロンプトで複数画像を扱えることを記載しています。下の比較表を使い、インストール前に各ツールのレビューを読んでください。',
+      `**PromptQuorumディレクトリにある${IV_TOTAL}のローカル画像ツールは、別々に比較すべき2つの役割に分かれます。画像・動画生成(${IV_GENERATION}ツール)と、ビジョン・OCR(${IV_VISION_OCR}ツール)です。** 生成系では、ComfyUI、InvokeAI、StableSwarmUIがノードベースのワークフローを、AUTOMATIC1111、ComfyUI、Stable Diffusion WebUI Forge、StableSwarmUI、ToolNeuronが拡張機能の仕組みを、AUTOMATIC1111、ComfyUI、Stable Diffusion WebUI Forge、ToolNeuronがローカルAPIをそれぞれドキュメントに記載しています。ビジョン系では、LLaVAが画像内のテキスト読み取りを、Ideficsが1回のプロンプトで複数画像を扱えることを記載しています。下の比較表を使い、インストール前に各ツールのレビューを読んでください。`,
     quickAnswerTop: {
       en: {
         question: 'どのローカル画像ツールを使えばよいか',
@@ -904,7 +922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'ローカル画像ツールは、画像・動画の生成と画像の理解という2つの異なる役割に分かれるため、PromptQuorumディレクトリの16ツールは役割ごとに比較しており、その表は各ツールのレビューと同じツールデータから生成されています。',
+            text: `ローカル画像ツールは、画像・動画の生成と画像の理解という2つの異なる役割に分かれるため、PromptQuorumディレクトリの${IV_TOTAL}ツールは役割ごとに比較しており、その表は各ツールのレビューと同じツールデータから生成されています。`,
           },
           {
             type: 'plain-terms',
@@ -912,7 +930,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '16ツール、2つの役割:画像・動画生成(13)とビジョン・OCR(3)。',
+          `${IV_TOTAL}ツール、2つの役割:画像・動画生成(${IV_GENERATION})とビジョン・OCR(${IV_VISION_OCR})。`,
           '表は各ツールのレコードから生成され、公式のREADMEまたはサイトと照合済みです。ダッシュは「ドキュメントに記載なし」を意味し、「なし」を意味しません。',
           'ライセンスには重要な違いがあります。たとえば、AUTOMATIC1111、DiffusionBee、Stable Diffusion WebUI Forge、Locally UncensoredはAGPL-3.0、ComfyUIとFooocusはGPL-3.0、AnimateDiff、ControlNet、InvokeAIはApache-2.0、StableSwarmUIとToolNeuronはMIT、Stable DiffusionはOpenRAILライセンスです。',
           '表のツール名はいずれも、そのツール自身のPromptQuorumレビューにリンクしており、インストール手順と制限事項はそちらで扱っています。',
@@ -1006,7 +1024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルソフトウェアディレクトリ](/ja/directory) — 200以上のローカルAIアプリを閲覧し、カテゴリで絞り込めます。',
+          `[ローカルソフトウェアディレクトリ](/ja/directory) — ${TOTAL_APP_COUNT}件のローカルAIアプリを閲覧し、カテゴリで絞り込めます。`,
           '[ローカル音声・スピーチツール比較](/ja/power-local-llm/local-llm-voice-audio-compared) — 音声合成、音声認識、音声エージェントについての同様の比較。',
           '[AIツールのライセンスを解説](/ja/power-local-llm/ai-tool-licenses-explained) — MIT、GPL、AGPL、Apache、OpenRAILライセンスの読み方。',
         ],
@@ -1017,7 +1035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'ローカル画像・動画・ビジョンツール比較(2026):生成、ビジョン、OCR',
       description:
-        'ローカル画像ツール16種を比較:画像・動画生成とビジョン・OCRモデルを、プロジェクトの公式ドキュメントから整理。',
+        `ローカル画像ツール${IV_TOTAL}種を比較:画像・動画生成とビジョン・OCRモデルを、プロジェクトの公式ドキュメントから整理。`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-images-video-compared',
       inLanguage: 'ja',
       datePublished: '2026-09-20',
@@ -1060,9 +1078,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '本地图像、视频与视觉工具对比(2026):生成、视觉与OCR',
     seoTitle: '本地图像、视频与视觉工具对比2026',
     intro:
-      '本地图像工具承担两类不同的任务——根据提示词生成图像和视频,以及理解你提供的图像——任何单一的功能清单都无法公平地对比它们。本指南按任务逐一对比16款可在你自己设备上运行的免费和付费工具,所用的对比表与各工具的PromptQuorum评测出自同一份数据,因此表格与评测不会互相矛盾。',
+      `本地图像工具承担两类不同的任务——根据提示词生成图像和视频,以及理解你提供的图像——任何单一的功能清单都无法公平地对比它们。本指南按任务逐一对比${IV_TOTAL}款可在你自己设备上运行的免费和付费工具,所用的对比表与各工具的PromptQuorum评测出自同一份数据,因此表格与评测不会互相矛盾。`,
     metaDescription:
-      '并排对比16款本地图像工具:图像与视频生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAI等)以及视觉与OCR模型。许可证、平台、局部重绘、扩展、API等,均来自官方文档。',
+      `并排对比${IV_TOTAL}款本地图像工具:图像与视频生成(AUTOMATIC1111、ComfyUI、Fooocus、InvokeAI等)以及视觉与OCR模型。许可证、平台、局部重绘、扩展、API等,均来自官方文档。`,
     twitterDescription:
       '按任务对比本地图像、视频与视觉工具——许可证、平台、局部重绘、扩展、节点工作流、本地API、OCR——均来自官方文档。',
     audience:
@@ -1081,7 +1099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion', 'LLaVA', 'Idefics'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      '**PromptQuorum目录中的16款本地图像工具分为两类应分别对比的任务:图像与视频生成(13款)以及视觉与OCR(3款)。** 在生成类中,ComfyUI、InvokeAI和StableSwarmUI在文档中说明了基于节点的工作流;AUTOMATIC1111、ComfyUI、Stable Diffusion WebUI Forge、StableSwarmUI和ToolNeuron在文档中说明了扩展系统;AUTOMATIC1111、ComfyUI、Stable Diffusion WebUI Forge和ToolNeuron在文档中说明了本地API。在视觉类中,LLaVA在文档中说明了读取图像中的文字,Idefics在文档中说明了单次提示可处理多张图像。请使用下方的对比表,并在安装前阅读各工具自己的评测。',
+      `**PromptQuorum目录中的${IV_TOTAL}款本地图像工具分为两类应分别对比的任务:图像与视频生成(${IV_GENERATION}款)以及视觉与OCR(${IV_VISION_OCR}款)。** 在生成类中,ComfyUI、InvokeAI和StableSwarmUI在文档中说明了基于节点的工作流;AUTOMATIC1111、ComfyUI、Stable Diffusion WebUI Forge、StableSwarmUI和ToolNeuron在文档中说明了扩展系统;AUTOMATIC1111、ComfyUI、Stable Diffusion WebUI Forge和ToolNeuron在文档中说明了本地API。在视觉类中,LLaVA在文档中说明了读取图像中的文字,Idefics在文档中说明了单次提示可处理多张图像。请使用下方的对比表,并在安装前阅读各工具自己的评测。`,
     quickAnswerTop: {
       en: {
         question: '我应该使用哪款本地图像工具?',
@@ -1112,7 +1130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '本地图像工具承担两类不同的任务——生成图像和视频,以及理解图像——因此PromptQuorum目录中的16款工具在各自任务内进行对比,所用表格与各工具自己的评测出自同一份工具数据。',
+            text: `本地图像工具承担两类不同的任务——生成图像和视频,以及理解图像——因此PromptQuorum目录中的${IV_TOTAL}款工具在各自任务内进行对比,所用表格与各工具自己的评测出自同一份工具数据。`,
           },
           {
             type: 'plain-terms',
@@ -1120,7 +1138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '16款工具,两类任务:图像与视频生成(13款)以及视觉与OCR(3款)。',
+          `${IV_TOTAL}款工具,两类任务:图像与视频生成(${IV_GENERATION}款)以及视觉与OCR(${IV_VISION_OCR}款)。`,
           '表格根据每款工具的记录生成,并对照其官方README或网站核对;短横线表示“文档中未说明”,绝不表示“没有”。',
           '许可证的差异很重要,例如AUTOMATIC1111、DiffusionBee、Stable Diffusion WebUI Forge和Locally Uncensored为AGPL-3.0,ComfyUI和Fooocus为GPL-3.0,AnimateDiff、ControlNet和InvokeAI为Apache-2.0,StableSwarmUI和ToolNeuron为MIT,而Stable Diffusion使用OpenRAIL许可证。',
           '表格中的每个工具名称都链接到其自己的PromptQuorum评测,安装步骤和局限都在评测中介绍。',
@@ -1214,7 +1232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地软件目录](/zh/directory)——浏览全部200多款本地AI应用并按类别筛选。',
+          `[本地软件目录](/zh/directory)——浏览全部${TOTAL_APP_COUNT}款本地AI应用并按类别筛选。`,
           '[本地语音与语音工具对比](/zh/power-local-llm/local-llm-voice-audio-compared)——对文本转语音、语音转文本和语音代理进行的同类对比。',
           '[AI工具许可证详解](/zh/power-local-llm/ai-tool-licenses-explained)——如何理解MIT、GPL、AGPL、Apache和OpenRAIL许可证。',
         ],
@@ -1225,7 +1243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '本地图像、视频与视觉工具对比(2026):生成、视觉与OCR',
       description:
-        '并排对比16款本地图像工具:图像与视频生成,以及视觉与OCR模型,均来自项目官方文档。',
+        `并排对比${IV_TOTAL}款本地图像工具:图像与视频生成,以及视觉与OCR模型,均来自项目官方文档。`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-images-video-compared',
       inLanguage: 'zh',
       datePublished: '2026-09-20',
@@ -1268,9 +1286,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Ferramentas locais de imagem, vídeo e visão comparadas (2026): geração, visão e OCR',
     seoTitle: 'Ferramentas locais de imagem, vídeo e visão 2026',
     intro:
-      'As ferramentas locais de imagem fazem dois trabalhos diferentes — gerar imagens e vídeo a partir de um prompt e entender as imagens que você fornece — e nenhuma lista única de recursos compara os dois de forma justa. Este guia compara 16 ferramentas gratuitas e pagas que rodam no seu próprio hardware, um trabalho de cada vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise própria de cada ferramenta no PromptQuorum, de modo que a tabela e as análises não podem se contradizer.',
+      `As ferramentas locais de imagem fazem dois trabalhos diferentes — gerar imagens e vídeo a partir de um prompt e entender as imagens que você fornece — e nenhuma lista única de recursos compara os dois de forma justa. Este guia compara ${IV_TOTAL} ferramentas gratuitas e pagas que rodam no seu próprio hardware, um trabalho de cada vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise própria de cada ferramenta no PromptQuorum, de modo que a tabela e as análises não podem se contradizer.`,
     metaDescription:
-      'Compare 16 ferramentas locais de imagem: geração de imagem e vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI e outras) e modelos de visão e OCR. Licenças, plataformas, inpainting, extensões e API, segundo a documentação oficial.',
+      `Compare ${IV_TOTAL} ferramentas locais de imagem: geração de imagem e vídeo (AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI e outras) e modelos de visão e OCR. Licenças, plataformas, inpainting, extensões e API, segundo a documentação oficial.`,
     twitterDescription:
       'Ferramentas locais de imagem, vídeo e visão comparadas por tarefa — licenças, plataformas, inpainting, extensões, fluxos em nós, API local, OCR — segundo a documentação oficial.',
     audience:
@@ -1289,7 +1307,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion', 'LLaVA', 'Idefics'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      '**As 16 ferramentas locais de imagem do diretório do PromptQuorum se dividem em dois trabalhos que devem ser comparados separadamente: geração de imagem e vídeo (13 ferramentas) e visão e OCR (3).** Na geração, ComfyUI, InvokeAI e StableSwarmUI documentam fluxos de trabalho baseados em nós; AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, StableSwarmUI e ToolNeuron documentam sistemas de extensões; e AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge e ToolNeuron documentam uma API local. Na visão, o LLaVA documenta a leitura de texto em imagens e o Idefics documenta várias imagens por prompt. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.',
+      `**As ${IV_TOTAL} ferramentas locais de imagem do diretório do PromptQuorum se dividem em dois trabalhos que devem ser comparados separadamente: geração de imagem e vídeo (${IV_GENERATION} ferramentas) e visão e OCR (${IV_VISION_OCR}).** Na geração, ComfyUI, InvokeAI e StableSwarmUI documentam fluxos de trabalho baseados em nós; AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, StableSwarmUI e ToolNeuron documentam sistemas de extensões; e AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge e ToolNeuron documentam uma API local. Na visão, o LLaVA documenta a leitura de texto em imagens e o Idefics documenta várias imagens por prompt. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
     quickAnswerTop: {
       en: {
         question: 'Qual ferramenta local de imagem devo usar?',
@@ -1320,7 +1338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'As ferramentas locais de imagem são dois trabalhos diferentes — gerar imagens e vídeo e entender imagens — por isso as 16 ferramentas do diretório do PromptQuorum são comparadas dentro de cada trabalho, com uma tabela gerada a partir dos mesmos dados de ferramenta da análise própria de cada uma.',
+            text: `As ferramentas locais de imagem são dois trabalhos diferentes — gerar imagens e vídeo e entender imagens — por isso as ${IV_TOTAL} ferramentas do diretório do PromptQuorum são comparadas dentro de cada trabalho, com uma tabela gerada a partir dos mesmos dados de ferramenta da análise própria de cada uma.`,
           },
           {
             type: 'plain-terms',
@@ -1328,7 +1346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '16 ferramentas, dois trabalhos: geração de imagem e vídeo (13) e visão e OCR (3).',
+          `${IV_TOTAL} ferramentas, dois trabalhos: geração de imagem e vídeo (${IV_GENERATION}) e visão e OCR (${IV_VISION_OCR}).`,
           'A tabela é gerada a partir do registro de cada ferramenta e conferida com o README ou o site oficial; um traço significa "não informado na documentação", nunca "não".',
           'As licenças diferem de maneiras que importam: por exemplo, AUTOMATIC1111, DiffusionBee, Stable Diffusion WebUI Forge e Locally Uncensored são AGPL-3.0, ComfyUI e Fooocus são GPL-3.0, AnimateDiff, ControlNet e InvokeAI são Apache-2.0, StableSwarmUI e ToolNeuron são MIT, e o Stable Diffusion usa uma licença OpenRAIL.',
           'Cada nome de ferramenta na tabela leva à sua própria análise no PromptQuorum, onde estão os passos de instalação e os limites.',
@@ -1422,7 +1440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software local](/pt/directory) — navegue por todos os mais de 200 apps de IA local e filtre por categoria.',
+          `[Diretório de software local](/pt/directory) — navegue por todos os ${TOTAL_APP_COUNT} apps de IA local e filtre por categoria.`,
           '[Ferramentas locais de voz e fala comparadas](/pt/power-local-llm/local-llm-voice-audio-compared) — a mesma comparação para síntese de voz, transcrição de fala e agentes de voz.',
           '[Licenças de ferramentas de IA explicadas](/pt/power-local-llm/ai-tool-licenses-explained) — como ler as licenças MIT, GPL, AGPL, Apache e OpenRAIL.',
         ],
@@ -1433,7 +1451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Ferramentas locais de imagem, vídeo e visão comparadas (2026): geração, visão e OCR',
       description:
-        'Compare 16 ferramentas locais de imagem: geração de imagem e vídeo e modelos de visão e OCR, segundo a documentação oficial dos projetos.',
+        `Compare ${IV_TOTAL} ferramentas locais de imagem: geração de imagem e vídeo e modelos de visão e OCR, segundo a documentação oficial dos projetos.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-images-video-compared',
       inLanguage: 'pt-BR',
       datePublished: '2026-09-20',
@@ -1476,9 +1494,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مقارنة أدوات الصور والفيديو والرؤية المحلية (2026): التوليد والرؤية وOCR',
     seoTitle: 'مقارنة أدوات الصور والفيديو والرؤية المحلية 2026',
     intro:
-      'تؤدي أدوات الصور المحلية مهمتين مختلفتين — توليد الصور والفيديو من وصف نصي، وفهم الصور التي تعطيها إياها — ولا تكفي قائمة ميزات واحدة لمقارنتها بإنصاف. يقارن هذا الدليل 16 أداة مجانية ومدفوعة تعمل على عتادك الخاص، مهمة تلو الأخرى، عبر جدول مقارنة مولَّد من البيانات نفسها التي تعتمد عليها مراجعة PromptQuorum لكل أداة، بحيث لا يتعارض الجدول مع المراجعات.',
+      `تؤدي أدوات الصور المحلية مهمتين مختلفتين — توليد الصور والفيديو من وصف نصي، وفهم الصور التي تعطيها إياها — ولا تكفي قائمة ميزات واحدة لمقارنتها بإنصاف. يقارن هذا الدليل ${IV_TOTAL} أداة مجانية ومدفوعة تعمل على عتادك الخاص، مهمة تلو الأخرى، عبر جدول مقارنة مولَّد من البيانات نفسها التي تعتمد عليها مراجعة PromptQuorum لكل أداة، بحيث لا يتعارض الجدول مع المراجعات.`,
     metaDescription:
-      'قارن 16 أداة صور محلية جنبًا إلى جنب: توليد الصور والفيديو (AUTOMATIC1111 وComfyUI وFooocus وInvokeAI وغيرها) ونماذج الرؤية وOCR. التراخيص والمنصات والطلاء الداخلي والإضافات وواجهة API، من الوثائق الرسمية.',
+      `قارن ${IV_TOTAL} أداة صور محلية جنبًا إلى جنب: توليد الصور والفيديو (AUTOMATIC1111 وComfyUI وFooocus وInvokeAI وغيرها) ونماذج الرؤية وOCR. التراخيص والمنصات والطلاء الداخلي والإضافات وواجهة API، من الوثائق الرسمية.`,
     twitterDescription:
       'مقارنة أدوات الصور والفيديو والرؤية المحلية حسب المهمة — التراخيص والمنصات والطلاء الداخلي والإضافات وسير العمل بالعُقد وواجهة API المحلية وOCR — من الوثائق الرسمية.',
     audience:
@@ -1497,7 +1515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion', 'LLaVA', 'Idefics'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      '**تنقسم أدوات الصور المحلية الـ16 في دليل PromptQuorum إلى مهمتين ينبغي مقارنتهما على حدة: توليد الصور والفيديو (13 أداة) والرؤية وOCR (3 أدوات).** ضمن التوليد، توثّق ComfyUI وInvokeAI وStableSwarmUI سير عمل قائمًا على العُقد؛ وتوثّق AUTOMATIC1111 وComfyUI وStable Diffusion WebUI Forge وStableSwarmUI وToolNeuron أنظمة إضافات؛ وتوثّق AUTOMATIC1111 وComfyUI وStable Diffusion WebUI Forge وToolNeuron واجهة API محلية. أما في الرؤية، فيوثّق LLaVA قراءة النص داخل الصور، ويوثّق Idefics قبول عدة صور في الوصف النصي الواحد. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.',
+      `**تنقسم أدوات الصور المحلية الـ${IV_TOTAL} في دليل PromptQuorum إلى مهمتين ينبغي مقارنتهما على حدة: توليد الصور والفيديو (${IV_GENERATION} أداة) والرؤية وOCR (${IV_VISION_OCR} أدوات).** ضمن التوليد، توثّق ComfyUI وInvokeAI وStableSwarmUI سير عمل قائمًا على العُقد؛ وتوثّق AUTOMATIC1111 وComfyUI وStable Diffusion WebUI Forge وStableSwarmUI وToolNeuron أنظمة إضافات؛ وتوثّق AUTOMATIC1111 وComfyUI وStable Diffusion WebUI Forge وToolNeuron واجهة API محلية. أما في الرؤية، فيوثّق LLaVA قراءة النص داخل الصور، ويوثّق Idefics قبول عدة صور في الوصف النصي الواحد. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
     quickAnswerTop: {
       en: {
         question: 'أي أداة صور محلية ينبغي أن أستخدم؟',
@@ -1528,7 +1546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'أدوات الصور المحلية مهمتان مختلفتان — توليد الصور والفيديو، وفهم الصور — ولذلك تُقارَن الأدوات الـ16 في دليل PromptQuorum ضمن كل مهمة على حدة، عبر جدول مولَّد من بيانات الأداة نفسها التي تعتمد عليها مراجعتها.',
+            text: `أدوات الصور المحلية مهمتان مختلفتان — توليد الصور والفيديو، وفهم الصور — ولذلك تُقارَن الأدوات الـ${IV_TOTAL} في دليل PromptQuorum ضمن كل مهمة على حدة، عبر جدول مولَّد من بيانات الأداة نفسها التي تعتمد عليها مراجعتها.`,
           },
           {
             type: 'plain-terms',
@@ -1536,7 +1554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '16 أداة ومهمتان: توليد الصور والفيديو (13) والرؤية وOCR (3).',
+          `${IV_TOTAL} أداة ومهمتان: توليد الصور والفيديو (${IV_GENERATION}) والرؤية وOCR (${IV_VISION_OCR}).`,
           'يُولَّد الجدول من سجل كل أداة ويُراجَع مقابل ملف README الرسمي أو موقعها؛ والشرطة تعني «غير مذكور في الوثائق»، وليست «لا» أبدًا.',
           'تختلف التراخيص بطرق مهمة: فمثلًا AUTOMATIC1111 وDiffusionBee وStable Diffusion WebUI Forge وLocally Uncensored بترخيص AGPL-3.0، وComfyUI وFooocus بترخيص GPL-3.0، وAnimateDiff وControlNet وInvokeAI بترخيص Apache-2.0، وStableSwarmUI وToolNeuron بترخيص MIT، ويستخدم Stable Diffusion ترخيص OpenRAIL.',
           'يرتبط اسم كل أداة في الجدول بمراجعتها الخاصة في PromptQuorum، حيث تُغطى خطوات التثبيت والحدود.',
@@ -1630,7 +1648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل البرمجيات المحلية](/ar/directory) — تصفّح أكثر من 200 تطبيق ذكاء اصطناعي محلي وصفِّها حسب الفئة.',
+          `[دليل البرمجيات المحلية](/ar/directory) — تصفّح ${TOTAL_APP_COUNT} تطبيق ذكاء اصطناعي محلي وصفِّها حسب الفئة.`,
           '[مقارنة أدوات الصوت والكلام المحلية](/ar/power-local-llm/local-llm-voice-audio-compared) — المقارنة نفسها لتحويل النص إلى كلام وتحويل الكلام إلى نص والوكلاء الصوتيين.',
           '[شرح تراخيص أدوات الذكاء الاصطناعي](/ar/power-local-llm/ai-tool-licenses-explained) — كيف تقرأ تراخيص MIT وGPL وAGPL وApache وOpenRAIL.',
         ],
@@ -1641,7 +1659,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'مقارنة أدوات الصور والفيديو والرؤية المحلية (2026): التوليد والرؤية وOCR',
       description:
-        'قارن 16 أداة صور محلية جنبًا إلى جنب: توليد الصور والفيديو، ونماذج الرؤية وOCR، من الوثائق الرسمية للمشاريع.',
+        `قارن ${IV_TOTAL} أداة صور محلية جنبًا إلى جنب: توليد الصور والفيديو، ونماذج الرؤية وOCR، من الوثائق الرسمية للمشاريع.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-images-video-compared',
       inLanguage: 'ar',
       datePublished: '2026-09-20',
@@ -1684,9 +1702,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '로컬 이미지·영상·비전 도구 비교(2026): 생성, 비전, OCR',
     seoTitle: '로컬 이미지·영상·비전 도구 비교 2026',
     intro:
-      '로컬 이미지 도구는 프롬프트로 이미지와 영상을 생성하는 일과 사용자가 넣은 이미지를 이해하는 일, 두 가지 서로 다른 작업을 하며, 하나의 기능 목록으로는 이들을 공정하게 비교할 수 없습니다. 이 가이드는 자신의 하드웨어에서 실행되는 무료 및 유료 도구 16개를 작업별로 나누어 비교합니다. 비교표는 각 도구의 PromptQuorum 리뷰와 같은 데이터에서 생성되므로 표와 리뷰가 서로 어긋날 수 없습니다.',
+      `로컬 이미지 도구는 프롬프트로 이미지와 영상을 생성하는 일과 사용자가 넣은 이미지를 이해하는 일, 두 가지 서로 다른 작업을 하며, 하나의 기능 목록으로는 이들을 공정하게 비교할 수 없습니다. 이 가이드는 자신의 하드웨어에서 실행되는 무료 및 유료 도구 ${IV_TOTAL}개를 작업별로 나누어 비교합니다. 비교표는 각 도구의 PromptQuorum 리뷰와 같은 데이터에서 생성되므로 표와 리뷰가 서로 어긋날 수 없습니다.`,
     metaDescription:
-      '로컬 이미지 도구 16개를 나란히 비교합니다: 이미지·영상 생성(AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI 등)과 비전·OCR 모델. 라이선스, 플랫폼, 인페인팅, 확장, API를 공식 문서 기준으로 정리했습니다.',
+      `로컬 이미지 도구 ${IV_TOTAL}개를 나란히 비교합니다: 이미지·영상 생성(AUTOMATIC1111, ComfyUI, Fooocus, InvokeAI 등)과 비전·OCR 모델. 라이선스, 플랫폼, 인페인팅, 확장, API를 공식 문서 기준으로 정리했습니다.`,
     twitterDescription:
       '로컬 이미지·영상·비전 도구를 작업별로 비교: 라이선스, 플랫폼, 인페인팅, 확장, 노드 워크플로, 로컬 API, OCR을 공식 문서 기준으로 정리했습니다.',
     audience:
@@ -1705,7 +1723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Stable Diffusion', 'LLaVA', 'Idefics'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      '**PromptQuorum 디렉터리의 로컬 이미지 도구 16개는 따로 비교해야 하는 두 가지 작업, 즉 이미지·영상 생성(13개)과 비전·OCR(3개)로 나뉩니다.** 생성 도구 중 ComfyUI, InvokeAI, StableSwarmUI는 노드 기반 워크플로를 문서화하고 있고, AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, StableSwarmUI, ToolNeuron은 확장 시스템을, AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, ToolNeuron은 로컬 API를 문서화하고 있습니다. 비전 도구 중 LLaVA는 이미지 속 텍스트 읽기를, Idefics는 프롬프트 하나에 여러 이미지 입력을 문서화하고 있습니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.',
+      `**PromptQuorum 디렉터리의 로컬 이미지 도구 ${IV_TOTAL}개는 따로 비교해야 하는 두 가지 작업, 즉 이미지·영상 생성(${IV_GENERATION}개)과 비전·OCR(${IV_VISION_OCR}개)로 나뉩니다.** 생성 도구 중 ComfyUI, InvokeAI, StableSwarmUI는 노드 기반 워크플로를 문서화하고 있고, AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, StableSwarmUI, ToolNeuron은 확장 시스템을, AUTOMATIC1111, ComfyUI, Stable Diffusion WebUI Forge, ToolNeuron은 로컬 API를 문서화하고 있습니다. 비전 도구 중 LLaVA는 이미지 속 텍스트 읽기를, Idefics는 프롬프트 하나에 여러 이미지 입력을 문서화하고 있습니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.`,
     quickAnswerTop: {
       en: {
         question: '어떤 로컬 이미지 도구를 써야 합니까?',
@@ -1736,7 +1754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '로컬 이미지 도구는 이미지·영상을 생성하는 일과 이미지를 이해하는 일이라는 서로 다른 두 작업이므로, PromptQuorum 디렉터리의 도구 16개는 각 도구의 리뷰와 같은 도구 데이터에서 생성한 표를 사용해 작업별로 비교합니다.',
+            text: `로컬 이미지 도구는 이미지·영상을 생성하는 일과 이미지를 이해하는 일이라는 서로 다른 두 작업이므로, PromptQuorum 디렉터리의 도구 ${IV_TOTAL}개는 각 도구의 리뷰와 같은 도구 데이터에서 생성한 표를 사용해 작업별로 비교합니다.`,
           },
           {
             type: 'plain-terms',
@@ -1744,7 +1762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '도구 16개, 작업 두 가지: 이미지·영상 생성(13개)과 비전·OCR(3개).',
+          `도구 ${IV_TOTAL}개, 작업 두 가지: 이미지·영상 생성(${IV_GENERATION}개)과 비전·OCR(${IV_VISION_OCR}개).`,
           '표는 각 도구의 레코드에서 생성되며 공식 README나 사이트와 대조해 확인합니다. 대시는 "문서에 명시되지 않음"을 뜻하며, "아니오"를 뜻하지 않습니다.',
           '라이선스는 중요한 방식으로 서로 다릅니다. 예를 들어 AUTOMATIC1111, DiffusionBee, Stable Diffusion WebUI Forge, Locally Uncensored는 AGPL-3.0, ComfyUI와 Fooocus는 GPL-3.0, AnimateDiff, ControlNet, InvokeAI는 Apache-2.0, StableSwarmUI와 ToolNeuron은 MIT이며, Stable Diffusion은 OpenRAIL 라이선스를 사용합니다.',
           '표의 모든 도구 이름은 해당 도구의 PromptQuorum 리뷰로 연결되며, 설치 단계와 한계는 그 리뷰에서 다룹니다.',
@@ -1838,7 +1856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 글',
         items: [
-          '[로컬 소프트웨어 디렉터리](/ko/directory) — 200개 이상의 로컬 AI 앱을 둘러보고 카테고리별로 필터링합니다.',
+          `[로컬 소프트웨어 디렉터리](/ko/directory) — ${TOTAL_APP_COUNT}개의 로컬 AI 앱을 둘러보고 카테고리별로 필터링합니다.`,
           '[로컬 음성·오디오 도구 비교](/ko/power-local-llm/local-llm-voice-audio-compared) — 음성 합성, 음성 인식, 음성 에이전트에 대한 같은 비교.',
           '[AI 도구 라이선스 해설](/ko/power-local-llm/ai-tool-licenses-explained) — MIT, GPL, AGPL, Apache, OpenRAIL 라이선스를 읽는 방법.',
         ],
@@ -1849,7 +1867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '로컬 이미지·영상·비전 도구 비교(2026): 생성, 비전, OCR',
       description:
-        '로컬 이미지 도구 16개를 나란히 비교합니다: 이미지·영상 생성과 비전·OCR 모델을 프로젝트 공식 문서 기준으로 정리했습니다.',
+        `로컬 이미지 도구 ${IV_TOTAL}개를 나란히 비교합니다: 이미지·영상 생성과 비전·OCR 모델을 프로젝트 공식 문서 기준으로 정리했습니다.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-images-video-compared',
       inLanguage: 'ko',
       datePublished: '2026-09-20',

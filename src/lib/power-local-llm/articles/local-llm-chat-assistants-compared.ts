@@ -9,6 +9,29 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+
+// Live counts from the directory — recomputed at build time so this article never drifts from
+// the actual tool count as the directory grows. Only tools with their own PromptQuorum review are
+// counted (matches the CategoryCompareTable's own "only reviewed tools" rule). The desktop/mobile/
+// web-and-CLI split is general-chat-clients crossed with the tool's interface(s), not a separate
+// category — mirrors how the leadAnswerBlock/FAQ text describes the breakdown.
+const TOTAL_APP_COUNT = localAiApps.length
+const REVIEWED_CA_APPS = localAiApps.filter((a) => a.reviewSlug != null)
+const REVIEWED_GENERAL_CHAT_CLIENTS = REVIEWED_CA_APPS.filter((a) => a.categories.includes('general-chat-clients'))
+const CA_DESKTOP = REVIEWED_GENERAL_CHAT_CLIENTS.filter((a) => a.interfaces.includes('desktop')).length
+const CA_MOBILE = REVIEWED_GENERAL_CHAT_CLIENTS.filter((a) => a.interfaces.includes('mobile')).length
+const CA_WEB_CLI = REVIEWED_GENERAL_CHAT_CLIENTS.filter((a) => a.interfaces.includes('web') || a.interfaces.includes('cli')).length
+const CA_PERSONAL_ASSISTANTS = REVIEWED_CA_APPS.filter((a) => a.categories.includes('personal-assistants')).length
+const CA_ROLEPLAY = REVIEWED_CA_APPS.filter((a) => a.categories.includes('roleplay-companions')).length
+const CA_TOTAL = new Set(
+  REVIEWED_CA_APPS.filter(
+    (a) =>
+      a.categories.includes('general-chat-clients') ||
+      a.categories.includes('personal-assistants') ||
+      a.categories.includes('roleplay-companions'),
+  ).map((a) => a.slug),
+).size
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
@@ -21,9 +44,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay',
     seoTitle: 'Local Chat Apps & AI Assistants Compared 2026',
     intro:
-      'Chat apps that run language models on your own hardware are not one product category: a desktop app, a phone app, a self-hosted web interface, a personal assistant and a roleplay tool solve different problems, and no single feature list compares them fairly. This guide compares 66 free and paid tools, one kind at a time, using a comparison table generated from the same data as each tool\'s own PromptQuorum review, so the table and the reviews cannot disagree.',
+      `Chat apps that run language models on your own hardware are not one product category: a desktop app, a phone app, a self-hosted web interface, a personal assistant and a roleplay tool solve different problems, and no single feature list compares them fairly. This guide compares ${CA_TOTAL} free and paid tools, one kind at a time, using a comparison table generated from the same data as each tool's own PromptQuorum review, so the table and the reviews cannot disagree.`,
     metaDescription:
-      'Compare 66 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.',
+      `Compare ${CA_TOTAL} local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.`,
     twitterDescription:
       'Local chat apps and assistants compared by kind — desktop, mobile, self-hosted web, personal assistants, roleplay — with MCP, Ollama, offline use and more, from official documentation.',
     audience:
@@ -42,7 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**The 66 local chat apps and assistants in the PromptQuorum directory split into five kinds that should be compared separately: desktop chat apps (17), mobile chat apps (26), web and CLI chat clients (13), personal assistants (13) and roleplay and companion apps (4).** Among desktop apps, 7 document MCP support and 9 document Ollama; among phone apps, 15 document fully offline use; among web clients, 8 document Docker deployment. Use the comparison table below, and read each tool\'s own review before you install it.',
+      `**The ${CA_TOTAL} local chat apps and assistants in the PromptQuorum directory split into five kinds that should be compared separately: desktop chat apps (${CA_DESKTOP}), mobile chat apps (${CA_MOBILE}), web and CLI chat clients (${CA_WEB_CLI}), personal assistants (${CA_PERSONAL_ASSISTANTS}) and roleplay and companion apps (${CA_ROLEPLAY}).** Among desktop apps, 7 document MCP support and 9 document Ollama; among phone apps, 15 document fully offline use; among web clients, 8 document Docker deployment. Use the comparison table below, and read each tool's own review before you install it.`,
     quickAnswerTop: {
       en: {
         question: 'Which local chat app should I use?',
@@ -78,7 +101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Local chat apps are five different kinds of product — desktop apps, phone apps, self-hosted web interfaces, personal assistants and roleplay tools — so the 66 tools in the PromptQuorum directory are compared within each kind, using a table generated from the same tool data as each tool\'s own review.',
+            text: `Local chat apps are five different kinds of product — desktop apps, phone apps, self-hosted web interfaces, personal assistants and roleplay tools — so the ${CA_TOTAL} tools in the PromptQuorum directory are compared within each kind, using a table generated from the same tool data as each tool's own review.`,
           },
           {
             type: 'plain-terms',
@@ -86,7 +109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '66 tools, five kinds: desktop chat apps (17), mobile chat apps (26), web and CLI chat clients (13), personal assistants (13) and roleplay and companion apps (4). A tool available on several devices, such as Enchanted, appears in each kind it belongs to.',
+          `${CA_TOTAL} tools, five kinds: desktop chat apps (${CA_DESKTOP}), mobile chat apps (${CA_MOBILE}), web and CLI chat clients (${CA_WEB_CLI}), personal assistants (${CA_PERSONAL_ASSISTANTS}) and roleplay and companion apps (${CA_ROLEPLAY}). A tool available on several devices, such as Enchanted, appears in each kind it belongs to.`,
           'The table is generated from each tool\'s record and checked against its official README or site; a dash means "not stated in the documentation", never "no". Phone apps are documented mostly by store listings, so their cells are the sparsest.',
           'Every tool name in the table links to its own PromptQuorum review, which is where installation steps and limits are covered.',
         ],
@@ -211,7 +234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local Software Directory](/directory) — browse all 200+ local AI apps and filter by category.',
+          `[Local Software Directory](/directory) — browse all ${TOTAL_APP_COUNT} local AI apps and filter by category.`,
           '[Local Inference Engines, Runtimes & Gateways Compared](/power-local-llm/local-llm-run-serve-compared) — the tools that run the models behind these apps.',
           '[Local Knowledge & Retrieval Tools Compared](/power-local-llm/local-llm-knowledge-retrieval-compared) — document chat, RAG and notes integrations.',
         ],
@@ -222,7 +245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay',
       description:
-        'Compare 66 local chat apps and AI assistants side by side: desktop, mobile, self-hosted web, personal assistants and roleplay, from official documentation.',
+        `Compare ${CA_TOTAL} local chat apps and AI assistants side by side: desktop, mobile, self-hosted web, personal assistants and roleplay, from official documentation.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-chat-assistants-compared',
       inLanguage: 'en',
       datePublished: '2026-09-20',
@@ -265,7 +288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Lokale Chat-Apps und Assistenten im Vergleich (2026): Desktop, Mobil, Self-Hosted, Assistenten und Rollenspiel',
     seoTitle: 'Lokale Chat-Apps und KI-Assistenten im Vergleich 2026',
     intro:
-      'Chat-Apps, die Sprachmodelle auf der eigenen Hardware ausführen, sind keine einheitliche Produktkategorie: Eine Desktop-App, eine Smartphone-App, eine selbst gehostete Weboberfläche, ein persönlicher Assistent und ein Rollenspiel-Tool lösen unterschiedliche Probleme, und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht 66 kostenlose und kostenpflichtige Tools, jeweils innerhalb einer Art, anhand einer Vergleichstabelle, die aus denselben Daten erzeugt wird wie der jeweilige PromptQuorum-Test des Tools – Tabelle und Tests können sich also nicht widersprechen.',
+      `Chat-Apps, die Sprachmodelle auf der eigenen Hardware ausführen, sind keine einheitliche Produktkategorie: Eine Desktop-App, eine Smartphone-App, eine selbst gehostete Weboberfläche, ein persönlicher Assistent und ein Rollenspiel-Tool lösen unterschiedliche Probleme, und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht ${CA_TOTAL} kostenlose und kostenpflichtige Tools, jeweils innerhalb einer Art, anhand einer Vergleichstabelle, die aus denselben Daten erzeugt wird wie der jeweilige PromptQuorum-Test des Tools – Tabelle und Tests können sich also nicht widersprechen.`,
     metaDescription:
       'Lokale Chat-Apps und KI-Assistenten im Vergleich: Desktop-Apps (LM Studio, Jan, GPT4All), Smartphone-Apps, selbst gehostete Web-UIs (Open WebUI, LibreChat), Assistenten und Rollenspiel-Tools. Lizenzen, MCP, Ollama, Offline-Nutzung laut offizieller Doku.',
     twitterDescription:
@@ -286,7 +309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Die 66 lokalen Chat-Apps und Assistenten im PromptQuorum-Verzeichnis lassen sich in fünf Arten einteilen, die getrennt verglichen werden sollten: Desktop-Chat-Apps (17), mobile Chat-Apps (26), Web- und CLI-Chat-Clients (13), persönliche Assistenten (13) sowie Rollenspiel- und Companion-Apps (4).** Bei den Desktop-Apps dokumentieren 7 MCP-Unterstützung und 9 Ollama; bei den Smartphone-Apps dokumentieren 15 die vollständige Offline-Nutzung; bei den Web-Clients dokumentieren 8 den Docker-Betrieb. Nutzen Sie die Vergleichstabelle unten und lesen Sie den Test des jeweiligen Tools, bevor Sie es installieren.',
+      `**Die ${CA_TOTAL} lokalen Chat-Apps und Assistenten im PromptQuorum-Verzeichnis lassen sich in fünf Arten einteilen, die getrennt verglichen werden sollten: Desktop-Chat-Apps (${CA_DESKTOP}), mobile Chat-Apps (${CA_MOBILE}), Web- und CLI-Chat-Clients (${CA_WEB_CLI}), persönliche Assistenten (${CA_PERSONAL_ASSISTANTS}) sowie Rollenspiel- und Companion-Apps (${CA_ROLEPLAY}).** Bei den Desktop-Apps dokumentieren 7 MCP-Unterstützung und 9 Ollama; bei den Smartphone-Apps dokumentieren 15 die vollständige Offline-Nutzung; bei den Web-Clients dokumentieren 8 den Docker-Betrieb. Nutzen Sie die Vergleichstabelle unten und lesen Sie den Test des jeweiligen Tools, bevor Sie es installieren.`,
     quickAnswerTop: {
       en: {
         question: 'Welche lokale Chat-App sollte ich verwenden?',
@@ -322,7 +345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Lokale Chat-Apps sind fünf verschiedene Arten von Produkten – Desktop-Apps, Smartphone-Apps, selbst gehostete Weboberflächen, persönliche Assistenten und Rollenspiel-Tools –, weshalb die 66 Tools im PromptQuorum-Verzeichnis jeweils innerhalb ihrer Art verglichen werden, anhand einer Tabelle, die aus denselben Tool-Daten erzeugt wird wie der Test des jeweiligen Tools.',
+            text: `Lokale Chat-Apps sind fünf verschiedene Arten von Produkten – Desktop-Apps, Smartphone-Apps, selbst gehostete Weboberflächen, persönliche Assistenten und Rollenspiel-Tools –, weshalb die ${CA_TOTAL} Tools im PromptQuorum-Verzeichnis jeweils innerhalb ihrer Art verglichen werden, anhand einer Tabelle, die aus denselben Tool-Daten erzeugt wird wie der Test des jeweiligen Tools.`,
           },
           {
             type: 'plain-terms',
@@ -330,7 +353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '66 Tools, fünf Arten: Desktop-Chat-Apps (17), mobile Chat-Apps (26), Web- und CLI-Chat-Clients (13), persönliche Assistenten (13) sowie Rollenspiel- und Companion-Apps (4). Ein Tool, das auf mehreren Geräten verfügbar ist, etwa Enchanted, erscheint in jeder Art, zu der es gehört.',
+          `${CA_TOTAL} Tools, fünf Arten: Desktop-Chat-Apps (${CA_DESKTOP}), mobile Chat-Apps (${CA_MOBILE}), Web- und CLI-Chat-Clients (${CA_WEB_CLI}), persönliche Assistenten (${CA_PERSONAL_ASSISTANTS}) sowie Rollenspiel- und Companion-Apps (${CA_ROLEPLAY}). Ein Tool, das auf mehreren Geräten verfügbar ist, etwa Enchanted, erscheint in jeder Art, zu der es gehört.`,
           'Die Tabelle wird aus dem Datensatz jedes Tools erzeugt und mit dessen offizieller README oder Website abgeglichen; ein Strich bedeutet „in der Dokumentation nicht angegeben“, niemals „nein“. Smartphone-Apps sind meist nur durch Store-Einträge dokumentiert, daher sind ihre Zellen am dünnsten besetzt.',
           'Jeder Tool-Name in der Tabelle verlinkt auf den eigenen PromptQuorum-Test, in dem Installationsschritte und Grenzen behandelt werden.',
         ],
@@ -455,7 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Verzeichnis für lokale Software](/de/directory) – alle über 200 lokalen KI-Apps durchsuchen und nach Kategorie filtern.',
+          `[Verzeichnis für lokale Software](/de/directory) – alle ${TOTAL_APP_COUNT} lokalen KI-Apps durchsuchen und nach Kategorie filtern.`,
           '[Lokale Inferenz-Engines, Runtimes und Gateways im Vergleich](/de/power-local-llm/local-llm-run-serve-compared) – die Tools, die die Modelle hinter diesen Apps ausführen.',
           '[Lokale Wissens- und Retrieval-Tools im Vergleich](/de/power-local-llm/local-llm-knowledge-retrieval-compared) – Dokumenten-Chat, RAG und Notiz-Integrationen.',
         ],
@@ -509,9 +532,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Applications de chat IA locales et assistants : comparatif (2026) — bureau, mobile, auto-hébergé, assistants et jeu de rôle',
     seoTitle: 'Chat IA local et assistants : comparatif 2026',
     intro:
-      'Les applications de chat qui exécutent des modèles de langage sur votre propre matériel ne forment pas une seule catégorie de produits : une application de bureau, une application pour téléphone, une interface web auto-hébergée, un assistant personnel et un outil de jeu de rôle répondent à des besoins différents, et aucune liste de fonctionnalités unique ne permet de les comparer équitablement. Ce guide compare 66 outils gratuits et payants, un type à la fois, à l\'aide d\'un tableau comparatif généré à partir des mêmes données que l\'avis PromptQuorum de chaque outil, de sorte que le tableau et les avis ne puissent pas se contredire.',
+      `Les applications de chat qui exécutent des modèles de langage sur votre propre matériel ne forment pas une seule catégorie de produits : une application de bureau, une application pour téléphone, une interface web auto-hébergée, un assistant personnel et un outil de jeu de rôle répondent à des besoins différents, et aucune liste de fonctionnalités unique ne permet de les comparer équitablement. Ce guide compare ${CA_TOTAL} outils gratuits et payants, un type à la fois, à l'aide d'un tableau comparatif généré à partir des mêmes données que l'avis PromptQuorum de chaque outil, de sorte que le tableau et les avis ne puissent pas se contredire.`,
     metaDescription:
-      'Comparez 66 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d\'après les docs officielles.',
+      `Comparez ${CA_TOTAL} applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.`,
     twitterDescription:
       'Applications de chat IA locales et assistants comparés par type — bureau, mobile, web auto-hébergé, assistants personnels, jeu de rôle — avec MCP, Ollama, usage hors ligne et plus, d\'après la documentation officielle.',
     audience:
@@ -530,7 +553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Les 66 applications de chat locales et assistants du répertoire PromptQuorum se répartissent en cinq types qu\'il faut comparer séparément : applications de chat de bureau (17), applications de chat mobiles (26), clients de chat web et en ligne de commande (13), assistants personnels (13) et applications de jeu de rôle et de compagnie (4).** Parmi les applications de bureau, 7 documentent la prise en charge de MCP et 9 celle d\'Ollama ; parmi les applications pour téléphone, 15 documentent un fonctionnement entièrement hors ligne ; parmi les clients web, 8 documentent un déploiement Docker. Utilisez le tableau comparatif ci-dessous et lisez l\'avis de chaque outil avant de l\'installer.',
+      `**Les ${CA_TOTAL} applications de chat locales et assistants du répertoire PromptQuorum se répartissent en cinq types qu'il faut comparer séparément : applications de chat de bureau (${CA_DESKTOP}), applications de chat mobiles (${CA_MOBILE}), clients de chat web et en ligne de commande (${CA_WEB_CLI}), assistants personnels (${CA_PERSONAL_ASSISTANTS}) et applications de jeu de rôle et de compagnie (${CA_ROLEPLAY}).** Parmi les applications de bureau, 7 documentent la prise en charge de MCP et 9 celle d'Ollama ; parmi les applications pour téléphone, 15 documentent un fonctionnement entièrement hors ligne ; parmi les clients web, 8 documentent un déploiement Docker. Utilisez le tableau comparatif ci-dessous et lisez l'avis de chaque outil avant de l'installer.`,
     quickAnswerTop: {
       en: {
         question: 'Quelle application de chat locale dois-je utiliser ?',
@@ -566,7 +589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Les applications de chat locales sont cinq types de produits différents — applications de bureau, applications pour téléphone, interfaces web auto-hébergées, assistants personnels et outils de jeu de rôle — si bien que les 66 outils du répertoire PromptQuorum sont comparés au sein de chaque type, à l\'aide d\'un tableau généré à partir des mêmes données que l\'avis de chaque outil.',
+            text: `Les applications de chat locales sont cinq types de produits différents — applications de bureau, applications pour téléphone, interfaces web auto-hébergées, assistants personnels et outils de jeu de rôle — si bien que les ${CA_TOTAL} outils du répertoire PromptQuorum sont comparés au sein de chaque type, à l'aide d'un tableau généré à partir des mêmes données que l'avis de chaque outil.`,
           },
           {
             type: 'plain-terms',
@@ -574,7 +597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '66 outils, cinq types : applications de chat de bureau (17), applications de chat mobiles (26), clients de chat web et en ligne de commande (13), assistants personnels (13) et applications de jeu de rôle et de compagnie (4). Un outil disponible sur plusieurs appareils, comme Enchanted, apparaît dans chaque type auquel il appartient.',
+          `${CA_TOTAL} outils, cinq types : applications de chat de bureau (${CA_DESKTOP}), applications de chat mobiles (${CA_MOBILE}), clients de chat web et en ligne de commande (${CA_WEB_CLI}), assistants personnels (${CA_PERSONAL_ASSISTANTS}) et applications de jeu de rôle et de compagnie (${CA_ROLEPLAY}). Un outil disponible sur plusieurs appareils, comme Enchanted, apparaît dans chaque type auquel il appartient.`,
           'Le tableau est généré à partir de la fiche de chaque outil et vérifié d\'après son README ou son site officiel ; un tiret signifie « non mentionné dans la documentation », jamais « non ». Les applications pour téléphone sont surtout documentées par leurs pages de boutique, leurs cellules sont donc les plus clairsemées.',
           'Chaque nom d\'outil du tableau renvoie vers son propre avis PromptQuorum, où sont traités l\'installation et les limites.',
         ],
@@ -699,7 +722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire de logiciels locaux](/fr/directory) — parcourez plus de 200 applications d\'IA locales et filtrez par catégorie.',
+          `[Répertoire de logiciels locaux](/fr/directory) — parcourez ${TOTAL_APP_COUNT} applications d'IA locales et filtrez par catégorie.`,
           '[Moteurs d\'inférence, runtimes et passerelles locaux : comparatif](/fr/power-local-llm/local-llm-run-serve-compared) — les outils qui exécutent les modèles derrière ces applications.',
           '[Outils locaux de connaissance et de recherche : comparatif](/fr/power-local-llm/local-llm-knowledge-retrieval-compared) — chat avec des documents, RAG et intégrations de notes.',
         ],
@@ -710,7 +733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Applications de chat IA locales et assistants : comparatif (2026) — bureau, mobile, auto-hébergé, assistants et jeu de rôle',
       description:
-        'Comparez 66 applications de chat IA locales et assistants côte à côte : bureau, mobile, web auto-hébergé, assistants personnels et jeu de rôle, d\'après la documentation officielle.',
+        `Comparez ${CA_TOTAL} applications de chat IA locales et assistants côte à côte : bureau, mobile, web auto-hébergé, assistants personnels et jeu de rôle, d'après la documentation officielle.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-chat-assistants-compared',
       inLanguage: 'fr',
       datePublished: '2026-09-20',
@@ -753,9 +776,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Apps de chat y asistentes locales, comparados (2026): escritorio, móvil, autoalojados, asistentes y rol',
     seoTitle: 'Apps de chat y asistentes de IA locales 2026',
     intro:
-      'Las apps de chat que ejecutan modelos de lenguaje en tu propio hardware no son una única categoría de producto: una app de escritorio, una app de móvil, una interfaz web autoalojada, un asistente personal y una herramienta de rol resuelven problemas distintos, y ninguna lista de funciones única permite compararlas con justicia. Esta guía compara 66 herramientas gratuitas y de pago, un tipo cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis propio de cada herramienta en PromptQuorum, de modo que la tabla y los análisis no pueden contradecirse.',
+      `Las apps de chat que ejecutan modelos de lenguaje en tu propio hardware no son una única categoría de producto: una app de escritorio, una app de móvil, una interfaz web autoalojada, un asistente personal y una herramienta de rol resuelven problemas distintos, y ninguna lista de funciones única permite compararlas con justicia. Esta guía compara ${CA_TOTAL} herramientas gratuitas y de pago, un tipo cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis propio de cada herramienta en PromptQuorum, de modo que la tabla y los análisis no pueden contradecirse.`,
     metaDescription:
-      'Compara 66 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.',
+      `Compara ${CA_TOTAL} apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.`,
     twitterDescription:
       'Apps de chat y asistentes locales comparados por tipo — escritorio, móvil, web autoalojada, asistentes personales, rol — con MCP, Ollama, uso offline y más, según la documentación oficial.',
     audience:
@@ -774,7 +797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Las 66 apps de chat y asistentes locales del directorio de PromptQuorum se dividen en cinco tipos que conviene comparar por separado: apps de chat de escritorio (17), apps de chat para móvil (26), clientes de chat web y de línea de comandos (13), asistentes personales (13) y apps de rol y compañía (4).** Entre las apps de escritorio, 7 documentan compatibilidad con MCP y 9 documentan Ollama; entre las apps de móvil, 15 documentan el uso totalmente offline; entre los clientes web, 8 documentan el despliegue con Docker. Usa la tabla comparativa de abajo y lee el análisis propio de cada herramienta antes de instalarla.',
+      `**Las ${CA_TOTAL} apps de chat y asistentes locales del directorio de PromptQuorum se dividen en cinco tipos que conviene comparar por separado: apps de chat de escritorio (${CA_DESKTOP}), apps de chat para móvil (${CA_MOBILE}), clientes de chat web y de línea de comandos (${CA_WEB_CLI}), asistentes personales (${CA_PERSONAL_ASSISTANTS}) y apps de rol y compañía (${CA_ROLEPLAY}).** Entre las apps de escritorio, 7 documentan compatibilidad con MCP y 9 documentan Ollama; entre las apps de móvil, 15 documentan el uso totalmente offline; entre los clientes web, 8 documentan el despliegue con Docker. Usa la tabla comparativa de abajo y lee el análisis propio de cada herramienta antes de instalarla.`,
     quickAnswerTop: {
       en: {
         question: '¿Qué app de chat local debería usar?',
@@ -810,7 +833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Las apps de chat locales son cinco tipos distintos de producto — apps de escritorio, apps de móvil, interfaces web autoalojadas, asistentes personales y herramientas de rol — por eso las 66 herramientas del directorio de PromptQuorum se comparan dentro de cada tipo, con una tabla generada a partir de los mismos datos que el análisis propio de cada herramienta.',
+            text: `Las apps de chat locales son cinco tipos distintos de producto — apps de escritorio, apps de móvil, interfaces web autoalojadas, asistentes personales y herramientas de rol — por eso las ${CA_TOTAL} herramientas del directorio de PromptQuorum se comparan dentro de cada tipo, con una tabla generada a partir de los mismos datos que el análisis propio de cada herramienta.`,
           },
           {
             type: 'plain-terms',
@@ -818,7 +841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '66 herramientas, cinco tipos: apps de chat de escritorio (17), apps de chat para móvil (26), clientes de chat web y de línea de comandos (13), asistentes personales (13) y apps de rol y compañía (4). Una herramienta disponible en varios dispositivos, como Enchanted, aparece en cada tipo al que pertenece.',
+          `${CA_TOTAL} herramientas, cinco tipos: apps de chat de escritorio (${CA_DESKTOP}), apps de chat para móvil (${CA_MOBILE}), clientes de chat web y de línea de comandos (${CA_WEB_CLI}), asistentes personales (${CA_PERSONAL_ASSISTANTS}) y apps de rol y compañía (${CA_ROLEPLAY}). Una herramienta disponible en varios dispositivos, como Enchanted, aparece en cada tipo al que pertenece.`,
           'La tabla se genera a partir del registro de cada herramienta y se contrasta con su README o sitio oficial; un guion significa "no indicado en la documentación", nunca "no". Las apps de móvil están documentadas sobre todo por sus fichas de la tienda, así que sus celdas son las más escasas.',
           'Cada nombre de herramienta de la tabla enlaza con su propio análisis en PromptQuorum, donde se cubren los pasos de instalación y los límites.',
         ],
@@ -943,7 +966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software local](/es/directory) — explora las más de 200 apps de IA local y filtra por categoría.',
+          `[Directorio de software local](/es/directory) — explora las ${TOTAL_APP_COUNT} apps de IA local y filtra por categoría.`,
           '[Motores de inferencia, runtimes y gateways locales, comparados](/es/power-local-llm/local-llm-run-serve-compared) — las herramientas que ejecutan los modelos detrás de estas apps.',
           '[Herramientas locales de conocimiento y recuperación, comparadas](/es/power-local-llm/local-llm-knowledge-retrieval-compared) — chat con documentos, RAG e integraciones de notas.',
         ],
@@ -954,7 +977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Apps de chat y asistentes locales, comparados (2026): escritorio, móvil, autoalojados, asistentes y rol',
       description:
-        'Compara 66 apps de chat y asistentes de IA locales: escritorio, móvil, web autoalojada, asistentes personales y rol, según la documentación oficial.',
+        `Compara ${CA_TOTAL} apps de chat y asistentes de IA locales: escritorio, móvil, web autoalojada, asistentes personales y rol, según la documentación oficial.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-chat-assistants-compared',
       inLanguage: 'es',
       datePublished: '2026-09-20',
@@ -997,9 +1020,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'ローカルチャットアプリとAIアシスタント比較(2026):デスクトップ、モバイル、セルフホスト、アシスタント、ロールプレイ',
     seoTitle: 'ローカルチャットアプリ&AIアシスタント比較2026',
     intro:
-      '自分のハードウェア上で言語モデルを動かすチャットアプリは、ひとつの製品カテゴリではありません。デスクトップアプリ、スマートフォンアプリ、セルフホスト型のWebインターフェース、パーソナルアシスタント、ロールプレイツールはそれぞれ別の課題を解決するため、単一の機能一覧では公平に比較できません。このガイドでは、無料・有料の66ツールを種類ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成しているため、表とレビューの内容が食い違うことはありません。',
+      `自分のハードウェア上で言語モデルを動かすチャットアプリは、ひとつの製品カテゴリではありません。デスクトップアプリ、スマートフォンアプリ、セルフホスト型のWebインターフェース、パーソナルアシスタント、ロールプレイツールはそれぞれ別の課題を解決するため、単一の機能一覧では公平に比較できません。このガイドでは、無料・有料の${CA_TOTAL}ツールを種類ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成しているため、表とレビューの内容が食い違うことはありません。`,
     metaDescription:
-      'ローカルチャットアプリとAIアシスタント66種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。',
+      `ローカルチャットアプリとAIアシスタント${CA_TOTAL}種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。`,
     twitterDescription:
       'ローカルチャットアプリとアシスタントを種類別に比較 — デスクトップ、モバイル、セルフホストWeb、パーソナルアシスタント、ロールプレイ。MCP、Ollama、オフライン対応などを公式ドキュメントに基づいて整理。',
     audience:
@@ -1018,7 +1041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**PromptQuorumディレクトリにあるローカルチャットアプリとアシスタント66種は、別々に比較すべき5種類に分かれます:デスクトップチャットアプリ(17)、モバイルチャットアプリ(26)、WebおよびCLIチャットクライアント(13)、パーソナルアシスタント(13)、ロールプレイ・コンパニオンアプリ(4)です。** デスクトップアプリのうち7つがMCP対応、9つがOllama対応を公式ドキュメントに記載しています。スマートフォンアプリでは15が完全オフライン動作、Webクライアントでは8がDockerでのデプロイを記載しています。下の比較表を使い、インストール前に各ツールのレビューも読んでください。',
+      `**PromptQuorumディレクトリにあるローカルチャットアプリとアシスタント${CA_TOTAL}種は、別々に比較すべき5種類に分かれます:デスクトップチャットアプリ(${CA_DESKTOP})、モバイルチャットアプリ(${CA_MOBILE})、WebおよびCLIチャットクライアント(${CA_WEB_CLI})、パーソナルアシスタント(${CA_PERSONAL_ASSISTANTS})、ロールプレイ・コンパニオンアプリ(${CA_ROLEPLAY})です。** デスクトップアプリのうち7つがMCP対応、9つがOllama対応を公式ドキュメントに記載しています。スマートフォンアプリでは15が完全オフライン動作、Webクライアントでは8がDockerでのデプロイを記載しています。下の比較表を使い、インストール前に各ツールのレビューも読んでください。`,
     quickAnswerTop: {
       en: {
         question: 'どのローカルチャットアプリを使えばよいか',
@@ -1054,7 +1077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'ローカルチャットアプリはデスクトップアプリ、スマホアプリ、セルフホスト型Webインターフェース、パーソナルアシスタント、ロールプレイツールという5つの異なる種類の製品であるため、PromptQuorumディレクトリの66ツールは、各ツールのレビューと同じデータから生成した表を使って、種類ごとに比較します。',
+            text: `ローカルチャットアプリはデスクトップアプリ、スマホアプリ、セルフホスト型Webインターフェース、パーソナルアシスタント、ロールプレイツールという5つの異なる種類の製品であるため、PromptQuorumディレクトリの${CA_TOTAL}ツールは、各ツールのレビューと同じデータから生成した表を使って、種類ごとに比較します。`,
           },
           {
             type: 'plain-terms',
@@ -1062,7 +1085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '66ツール、5種類:デスクトップチャットアプリ(17)、モバイルチャットアプリ(26)、WebおよびCLIチャットクライアント(13)、パーソナルアシスタント(13)、ロールプレイ・コンパニオンアプリ(4)。Enchantedのように複数のデバイスで使えるツールは、該当する種類のそれぞれに登場します。',
+          `${CA_TOTAL}ツール、5種類:デスクトップチャットアプリ(${CA_DESKTOP})、モバイルチャットアプリ(${CA_MOBILE})、WebおよびCLIチャットクライアント(${CA_WEB_CLI})、パーソナルアシスタント(${CA_PERSONAL_ASSISTANTS})、ロールプレイ・コンパニオンアプリ(${CA_ROLEPLAY})。Enchantedのように複数のデバイスで使えるツールは、該当する種類のそれぞれに登場します。`,
           '表は各ツールのレコードから生成し、公式のREADMEまたはサイトと照合しています。ダッシュは「ドキュメントに記載なし」を意味し、「非対応」を意味することはありません。スマホアプリは主にストアの掲載情報しかドキュメントがないため、セルの空白が最も多くなります。',
           '表内のツール名はそれぞれ、インストール手順や制限事項を扱う専用のPromptQuorumレビューにリンクしています。',
         ],
@@ -1187,7 +1210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルソフトウェアディレクトリ](/ja/directory) — 200以上のローカルAIアプリをすべて閲覧し、カテゴリで絞り込めます。',
+          `[ローカルソフトウェアディレクトリ](/ja/directory) — ${TOTAL_APP_COUNT}件のローカルAIアプリをすべて閲覧し、カテゴリで絞り込めます。`,
           '[ローカル推論エンジン、ランタイム、ゲートウェイ比較](/ja/power-local-llm/local-llm-run-serve-compared) — これらのアプリの裏でモデルを動かすツール。',
           '[ローカルのナレッジ・検索ツール比較](/ja/power-local-llm/local-llm-knowledge-retrieval-compared) — ドキュメントチャット、RAG、ノート連携。',
         ],
@@ -1198,7 +1221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'ローカルチャットアプリとAIアシスタント比較(2026):デスクトップ、モバイル、セルフホスト、アシスタント、ロールプレイ',
       description:
-        'ローカルチャットアプリとAIアシスタント66種を並べて比較:デスクトップ、モバイル、セルフホストWeb、パーソナルアシスタント、ロールプレイ。公式ドキュメントに基づきます。',
+        `ローカルチャットアプリとAIアシスタント${CA_TOTAL}種を並べて比較:デスクトップ、モバイル、セルフホストWeb、パーソナルアシスタント、ロールプレイ。公式ドキュメントに基づきます。`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-chat-assistants-compared',
       inLanguage: 'ja',
       datePublished: '2026-09-20',
@@ -1241,9 +1264,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '本地聊天应用与助手对比(2026):桌面、手机、自托管、助手与角色扮演',
     seoTitle: '本地聊天应用与AI助手对比2026',
     intro:
-      '在你自己的硬件上运行语言模型的聊天应用并不是单一的产品类别:桌面应用、手机应用、自托管的网页界面、个人助手和角色扮演工具解决的是不同的问题,没有哪一份功能清单能公平地对它们做统一比较。本指南按类型逐一比较66款免费和付费工具,所用对比表与各工具自己的PromptQuorum评测出自同一份数据生成,因此表格与评测不会相互矛盾。',
+      `在你自己的硬件上运行语言模型的聊天应用并不是单一的产品类别:桌面应用、手机应用、自托管的网页界面、个人助手和角色扮演工具解决的是不同的问题,没有哪一份功能清单能公平地对它们做统一比较。本指南按类型逐一比较${CA_TOTAL}款免费和付费工具,所用对比表与各工具自己的PromptQuorum评测出自同一份数据生成,因此表格与评测不会相互矛盾。`,
     metaDescription:
-      '并排对比66款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。',
+      `并排对比${CA_TOTAL}款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。`,
     twitterDescription:
       '按类型对比本地聊天应用与助手:桌面、手机、自托管网页、个人助手、角色扮演,涵盖MCP、Ollama、离线使用等,均取自官方文档。',
     audience:
@@ -1262,7 +1285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**PromptQuorum目录中的66款本地聊天应用与助手分为五种类型,应分别比较:桌面聊天应用(17款)、手机聊天应用(26款)、网页与CLI聊天客户端(13款)、个人助手(13款)以及角色扮演与陪伴应用(4款)。** 在桌面应用中,7款在文档中说明支持MCP,9款在文档中说明支持Ollama;在手机应用中,15款在文档中说明可完全离线使用;在网页客户端中,8款在文档中说明支持Docker部署。请使用下方的对比表,并在安装前阅读各工具自己的评测。',
+      `**PromptQuorum目录中的${CA_TOTAL}款本地聊天应用与助手分为五种类型,应分别比较:桌面聊天应用(${CA_DESKTOP}款)、手机聊天应用(${CA_MOBILE}款)、网页与CLI聊天客户端(${CA_WEB_CLI}款)、个人助手(${CA_PERSONAL_ASSISTANTS}款)以及角色扮演与陪伴应用(${CA_ROLEPLAY}款)。** 在桌面应用中,7款在文档中说明支持MCP,9款在文档中说明支持Ollama;在手机应用中,15款在文档中说明可完全离线使用;在网页客户端中,8款在文档中说明支持Docker部署。请使用下方的对比表,并在安装前阅读各工具自己的评测。`,
     quickAnswerTop: {
       en: {
         question: '我应该使用哪款本地聊天应用?',
@@ -1298,7 +1321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '本地聊天应用其实是五种不同类型的产品——桌面应用、手机应用、自托管网页界面、个人助手和角色扮演工具——因此PromptQuorum目录中的66款工具按类型分别比较,所用表格与各工具自己的评测出自同一份工具数据生成。',
+            text: `本地聊天应用其实是五种不同类型的产品——桌面应用、手机应用、自托管网页界面、个人助手和角色扮演工具——因此PromptQuorum目录中的${CA_TOTAL}款工具按类型分别比较,所用表格与各工具自己的评测出自同一份工具数据生成。`,
           },
           {
             type: 'plain-terms',
@@ -1306,7 +1329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '66款工具,五种类型:桌面聊天应用(17款)、手机聊天应用(26款)、网页与CLI聊天客户端(13款)、个人助手(13款)以及角色扮演与陪伴应用(4款)。同时提供多种设备版本的工具(如Enchanted)会出现在它所属的每一种类型中。',
+          `${CA_TOTAL}款工具,五种类型:桌面聊天应用(${CA_DESKTOP}款)、手机聊天应用(${CA_MOBILE}款)、网页与CLI聊天客户端(${CA_WEB_CLI}款)、个人助手(${CA_PERSONAL_ASSISTANTS}款)以及角色扮演与陪伴应用(${CA_ROLEPLAY}款)。同时提供多种设备版本的工具(如Enchanted)会出现在它所属的每一种类型中。`,
           '该表由每款工具的记录生成,并对照其官方README或网站核对;破折号表示“文档中未说明”,绝不表示“没有”。手机应用主要依靠应用商店页面来说明,因此它们的单元格最为稀疏。',
           '表中的每个工具名称都链接到它自己的PromptQuorum评测,安装步骤和局限都在那里介绍。',
         ],
@@ -1431,7 +1454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地软件目录](/zh/directory)——浏览全部200多款本地AI应用,并按类别筛选。',
+          `[本地软件目录](/zh/directory)——浏览全部${TOTAL_APP_COUNT}款本地AI应用,并按类别筛选。`,
           '[本地推理引擎、运行时与网关对比](/zh/power-local-llm/local-llm-run-serve-compared)——运行这些应用背后模型的工具。',
           '[本地知识与检索工具对比](/zh/power-local-llm/local-llm-knowledge-retrieval-compared)——文档对话、RAG和笔记集成。',
         ],
@@ -1442,7 +1465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '本地聊天应用与助手对比(2026):桌面、手机、自托管、助手与角色扮演',
       description:
-        '并排对比66款本地聊天应用与AI助手:桌面、手机、自托管网页、个人助手和角色扮演,均取自官方文档。',
+        `并排对比${CA_TOTAL}款本地聊天应用与AI助手:桌面、手机、自托管网页、个人助手和角色扮演,均取自官方文档。`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-chat-assistants-compared',
       inLanguage: 'zh',
       datePublished: '2026-09-20',
@@ -1485,9 +1508,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Apps de chat locais e assistentes comparados (2026): desktop, celular, self-hosted, assistentes e roleplay',
     seoTitle: 'Apps de chat locais e assistentes de IA 2026',
     intro:
-      'Apps de chat que executam modelos de linguagem no seu próprio hardware não formam uma única categoria de produto: um app de desktop, um app de celular, uma interface web self-hosted, um assistente pessoal e uma ferramenta de roleplay resolvem problemas diferentes, e nenhuma lista de recursos isolada os compara de forma justa. Este guia compara 66 ferramentas gratuitas e pagas, um tipo por vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise própria de cada ferramenta na PromptQuorum, de modo que a tabela e as análises não se contradizem.',
+      `Apps de chat que executam modelos de linguagem no seu próprio hardware não formam uma única categoria de produto: um app de desktop, um app de celular, uma interface web self-hosted, um assistente pessoal e uma ferramenta de roleplay resolvem problemas diferentes, e nenhuma lista de recursos isolada os compara de forma justa. Este guia compara ${CA_TOTAL} ferramentas gratuitas e pagas, um tipo por vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise própria de cada ferramenta na PromptQuorum, de modo que a tabela e as análises não se contradizem.`,
     metaDescription:
-      'Compare 66 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.',
+      `Compare ${CA_TOTAL} apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.`,
     twitterDescription:
       'Apps de chat locais e assistentes comparados por tipo — desktop, celular, web self-hosted, assistentes pessoais, roleplay — com MCP, Ollama, uso offline e mais, segundo a documentação oficial.',
     audience:
@@ -1506,7 +1529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Os 66 apps de chat locais e assistentes do diretório da PromptQuorum se dividem em cinco tipos que devem ser comparados separadamente: apps de chat para desktop (17), apps de chat para celular (26), clientes de chat web e CLI (13), assistentes pessoais (13) e apps de roleplay e companhia (4).** Entre os apps de desktop, 7 documentam suporte a MCP e 9 documentam Ollama; entre os apps de celular, 15 documentam uso totalmente offline; entre os clientes web, 8 documentam implantação com Docker. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.',
+      `**Os ${CA_TOTAL} apps de chat locais e assistentes do diretório da PromptQuorum se dividem em cinco tipos que devem ser comparados separadamente: apps de chat para desktop (${CA_DESKTOP}), apps de chat para celular (${CA_MOBILE}), clientes de chat web e CLI (${CA_WEB_CLI}), assistentes pessoais (${CA_PERSONAL_ASSISTANTS}) e apps de roleplay e companhia (${CA_ROLEPLAY}).** Entre os apps de desktop, 7 documentam suporte a MCP e 9 documentam Ollama; entre os apps de celular, 15 documentam uso totalmente offline; entre os clientes web, 8 documentam implantação com Docker. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
     quickAnswerTop: {
       en: {
         question: 'Qual app de chat local devo usar?',
@@ -1542,7 +1565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Apps de chat locais são cinco tipos diferentes de produto — apps de desktop, apps de celular, interfaces web self-hosted, assistentes pessoais e ferramentas de roleplay — por isso as 66 ferramentas do diretório da PromptQuorum são comparadas dentro de cada tipo, com uma tabela gerada a partir dos mesmos dados de ferramenta da análise própria de cada uma.',
+            text: `Apps de chat locais são cinco tipos diferentes de produto — apps de desktop, apps de celular, interfaces web self-hosted, assistentes pessoais e ferramentas de roleplay — por isso as ${CA_TOTAL} ferramentas do diretório da PromptQuorum são comparadas dentro de cada tipo, com uma tabela gerada a partir dos mesmos dados de ferramenta da análise própria de cada uma.`,
           },
           {
             type: 'plain-terms',
@@ -1550,7 +1573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '66 ferramentas, cinco tipos: apps de chat para desktop (17), apps de chat para celular (26), clientes de chat web e CLI (13), assistentes pessoais (13) e apps de roleplay e companhia (4). Uma ferramenta disponível em vários dispositivos, como o Enchanted, aparece em cada tipo a que pertence.',
+          `${CA_TOTAL} ferramentas, cinco tipos: apps de chat para desktop (${CA_DESKTOP}), apps de chat para celular (${CA_MOBILE}), clientes de chat web e CLI (${CA_WEB_CLI}), assistentes pessoais (${CA_PERSONAL_ASSISTANTS}) e apps de roleplay e companhia (${CA_ROLEPLAY}). Uma ferramenta disponível em vários dispositivos, como o Enchanted, aparece em cada tipo a que pertence.`,
           'A tabela é gerada a partir do registro de cada ferramenta e conferida com o README ou o site oficial; um traço significa "não informado na documentação", nunca "não". Os apps de celular são documentados principalmente por páginas de loja, então suas células são as mais esparsas.',
           'Cada nome de ferramenta na tabela leva à sua própria análise na PromptQuorum, onde estão as etapas de instalação e os limites.',
         ],
@@ -1675,7 +1698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software local](/pt/directory) — navegue por mais de 200 apps de IA local e filtre por categoria.',
+          `[Diretório de software local](/pt/directory) — navegue por ${TOTAL_APP_COUNT} apps de IA local e filtre por categoria.`,
           '[Motores de inferência, runtimes e gateways locais comparados](/pt/power-local-llm/local-llm-run-serve-compared) — as ferramentas que executam os modelos por trás desses apps.',
           '[Ferramentas locais de conhecimento e recuperação comparadas](/pt/power-local-llm/local-llm-knowledge-retrieval-compared) — chat com documentos, RAG e integrações de notas.',
         ],
@@ -1686,7 +1709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Apps de chat locais e assistentes comparados (2026): desktop, celular, self-hosted, assistentes e roleplay',
       description:
-        'Compare 66 apps de chat locais e assistentes de IA lado a lado: desktop, celular, web self-hosted, assistentes pessoais e roleplay, segundo a documentação oficial.',
+        `Compare ${CA_TOTAL} apps de chat locais e assistentes de IA lado a lado: desktop, celular, web self-hosted, assistentes pessoais e roleplay, segundo a documentação oficial.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-chat-assistants-compared',
       inLanguage: 'pt-BR',
       datePublished: '2026-09-20',
@@ -1729,9 +1752,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مقارنة تطبيقات الدردشة والمساعدات المحلية (2026): سطح المكتب والجوال والاستضافة الذاتية والمساعدات ولعب الأدوار',
     seoTitle: 'مقارنة تطبيقات الدردشة والمساعدات المحلية 2026',
     intro:
-      'تطبيقات الدردشة التي تشغّل نماذج اللغة على عتادك الخاص ليست فئة منتجات واحدة: فتطبيق سطح المكتب وتطبيق الهاتف وواجهة الويب المستضافة ذاتيًا والمساعد الشخصي وأداة لعب الأدوار تحلّ مشكلات مختلفة، ولا توجد قائمة ميزات واحدة تقارن بينها بإنصاف. يقارن هذا الدليل 66 أداة مجانية ومدفوعة، نوعًا بعد نوع، عبر جدول مقارنة مُولَّد من البيانات نفسها التي تستند إليها مراجعة PromptQuorum لكل أداة، بحيث لا يتعارض الجدول مع المراجعات.',
+      `تطبيقات الدردشة التي تشغّل نماذج اللغة على عتادك الخاص ليست فئة منتجات واحدة: فتطبيق سطح المكتب وتطبيق الهاتف وواجهة الويب المستضافة ذاتيًا والمساعد الشخصي وأداة لعب الأدوار تحلّ مشكلات مختلفة، ولا توجد قائمة ميزات واحدة تقارن بينها بإنصاف. يقارن هذا الدليل ${CA_TOTAL} أداة مجانية ومدفوعة، نوعًا بعد نوع، عبر جدول مقارنة مُولَّد من البيانات نفسها التي تستند إليها مراجعة PromptQuorum لكل أداة، بحيث لا يتعارض الجدول مع المراجعات.`,
     metaDescription:
-      'قارن 66 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.',
+      `قارن ${CA_TOTAL} تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.`,
     twitterDescription:
       'مقارنة تطبيقات الدردشة والمساعدات المحلية حسب النوع — سطح المكتب والجوال والويب المستضاف ذاتيًا والمساعدات الشخصية ولعب الأدوار — مع MCP وOllama والعمل دون اتصال وغيرها، من الوثائق الرسمية.',
     audience:
@@ -1750,7 +1773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**تنقسم تطبيقات الدردشة والمساعدات المحلية الـ66 في دليل PromptQuorum إلى خمسة أنواع ينبغي مقارنتها كل على حدة: تطبيقات دردشة سطح المكتب (17)، وتطبيقات دردشة الجوال (26)، وعملاء الدردشة عبر الويب وسطر الأوامر (13)، والمساعدات الشخصية (13)، وتطبيقات لعب الأدوار والرفقة (4).** من بين تطبيقات سطح المكتب، يوثّق 7 منها دعم MCP ويوثّق 9 دعم Ollama؛ ومن بين تطبيقات الهاتف، يوثّق 15 العمل دون اتصال بالكامل؛ ومن بين عملاء الويب، يوثّق 8 النشر عبر Docker. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.',
+      `**تنقسم تطبيقات الدردشة والمساعدات المحلية الـ${CA_TOTAL} في دليل PromptQuorum إلى خمسة أنواع ينبغي مقارنتها كل على حدة: تطبيقات دردشة سطح المكتب (${CA_DESKTOP})، وتطبيقات دردشة الجوال (${CA_MOBILE})، وعملاء الدردشة عبر الويب وسطر الأوامر (${CA_WEB_CLI})، والمساعدات الشخصية (${CA_PERSONAL_ASSISTANTS})، وتطبيقات لعب الأدوار والرفقة (${CA_ROLEPLAY}).** من بين تطبيقات سطح المكتب، يوثّق 7 منها دعم MCP ويوثّق 9 دعم Ollama؛ ومن بين تطبيقات الهاتف، يوثّق 15 العمل دون اتصال بالكامل؛ ومن بين عملاء الويب، يوثّق 8 النشر عبر Docker. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
     quickAnswerTop: {
       en: {
         question: 'أي تطبيق دردشة محلي ينبغي أن أستخدم؟',
@@ -1786,7 +1809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'تطبيقات الدردشة المحلية خمسة أنواع مختلفة من المنتجات — تطبيقات سطح المكتب وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا والمساعدات الشخصية وأدوات لعب الأدوار — ولذلك تُقارَن الأدوات الـ66 في دليل PromptQuorum داخل كل نوع، عبر جدول مُولَّد من بيانات الأداة نفسها التي تستند إليها مراجعتها.',
+            text: `تطبيقات الدردشة المحلية خمسة أنواع مختلفة من المنتجات — تطبيقات سطح المكتب وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا والمساعدات الشخصية وأدوات لعب الأدوار — ولذلك تُقارَن الأدوات الـ${CA_TOTAL} في دليل PromptQuorum داخل كل نوع، عبر جدول مُولَّد من بيانات الأداة نفسها التي تستند إليها مراجعتها.`,
           },
           {
             type: 'plain-terms',
@@ -1794,7 +1817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '66 أداة في خمسة أنواع: تطبيقات دردشة سطح المكتب (17)، وتطبيقات دردشة الجوال (26)، وعملاء الدردشة عبر الويب وسطر الأوامر (13)، والمساعدات الشخصية (13)، وتطبيقات لعب الأدوار والرفقة (4). والأداة المتاحة على أجهزة عدة، مثل Enchanted، تظهر في كل نوع تنتمي إليه.',
+          `${CA_TOTAL} أداة في خمسة أنواع: تطبيقات دردشة سطح المكتب (${CA_DESKTOP})، وتطبيقات دردشة الجوال (${CA_MOBILE})، وعملاء الدردشة عبر الويب وسطر الأوامر (${CA_WEB_CLI})، والمساعدات الشخصية (${CA_PERSONAL_ASSISTANTS})، وتطبيقات لعب الأدوار والرفقة (${CA_ROLEPLAY}). والأداة المتاحة على أجهزة عدة، مثل Enchanted، تظهر في كل نوع تنتمي إليه.`,
           'يُولَّد الجدول من سجل كل أداة ويُراجَع مقابل ملف README أو الموقع الرسمي لها؛ والشرطة تعني «غير مذكور في الوثائق»، ولا تعني «لا» أبدًا. وتوثَّق تطبيقات الهاتف في الغالب عبر صفحاتها في المتاجر، لذا فخلاياها هي الأقل امتلاءً.',
           'يرتبط اسم كل أداة في الجدول بمراجعتها الخاصة في PromptQuorum، وهناك تجد خطوات التثبيت والحدود.',
         ],
@@ -1919,7 +1942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل البرمجيات المحلية](/ar/directory) — تصفّح أكثر من 200 تطبيق ذكاء اصطناعي محلي وصفّها حسب الفئة.',
+          `[دليل البرمجيات المحلية](/ar/directory) — تصفّح ${TOTAL_APP_COUNT} تطبيق ذكاء اصطناعي محلي وصفّها حسب الفئة.`,
           '[مقارنة محركات الاستدلال المحلية وبيئات التشغيل والبوابات](/ar/power-local-llm/local-llm-run-serve-compared) — الأدوات التي تشغّل النماذج خلف هذه التطبيقات.',
           '[مقارنة أدوات المعرفة والاسترجاع المحلية](/ar/power-local-llm/local-llm-knowledge-retrieval-compared) — الدردشة مع المستندات وRAG وتكاملات الملاحظات.',
         ],
@@ -1930,7 +1953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'مقارنة تطبيقات الدردشة والمساعدات المحلية (2026): سطح المكتب والجوال والاستضافة الذاتية والمساعدات ولعب الأدوار',
       description:
-        'قارن 66 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي جنبًا إلى جنب: سطح المكتب والجوال والويب المستضاف ذاتيًا والمساعدات الشخصية ولعب الأدوار، من الوثائق الرسمية.',
+        `قارن ${CA_TOTAL} تطبيق دردشة محليًا ومساعد ذكاء اصطناعي جنبًا إلى جنب: سطح المكتب والجوال والويب المستضاف ذاتيًا والمساعدات الشخصية ولعب الأدوار، من الوثائق الرسمية.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-chat-assistants-compared',
       inLanguage: 'ar',
       datePublished: '2026-09-20',
@@ -1973,9 +1996,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '로컬 채팅 앱·AI 어시스턴트 비교(2026): 데스크톱, 모바일, 셀프 호스팅, 어시스턴트, 롤플레이',
     seoTitle: '로컬 채팅 앱·AI 어시스턴트 비교 2026',
     intro:
-      '자신의 하드웨어에서 언어 모델을 실행하는 채팅 앱은 하나의 제품 범주가 아닙니다. 데스크톱 앱, 휴대폰 앱, 셀프 호스팅 웹 인터페이스, 개인 어시스턴트, 롤플레이 도구는 각기 다른 문제를 해결하므로, 하나의 기능 목록만으로는 이들을 공정하게 비교할 수 없습니다. 이 가이드는 무료 및 유료 도구 66개를 종류별로 하나씩 비교하며, 각 도구의 PromptQuorum 리뷰와 동일한 데이터로 생성한 비교표를 사용하므로 표와 리뷰의 내용이 서로 어긋날 수 없습니다.',
+      `자신의 하드웨어에서 언어 모델을 실행하는 채팅 앱은 하나의 제품 범주가 아닙니다. 데스크톱 앱, 휴대폰 앱, 셀프 호스팅 웹 인터페이스, 개인 어시스턴트, 롤플레이 도구는 각기 다른 문제를 해결하므로, 하나의 기능 목록만으로는 이들을 공정하게 비교할 수 없습니다. 이 가이드는 무료 및 유료 도구 ${CA_TOTAL}개를 종류별로 하나씩 비교하며, 각 도구의 PromptQuorum 리뷰와 동일한 데이터로 생성한 비교표를 사용하므로 표와 리뷰의 내용이 서로 어긋날 수 없습니다.`,
     metaDescription:
-      '로컬 채팅 앱과 AI 어시스턴트 66개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.',
+      `로컬 채팅 앱과 AI 어시스턴트 ${CA_TOTAL}개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.`,
     twitterDescription:
       '로컬 채팅 앱과 어시스턴트를 종류별(데스크톱, 모바일, 셀프 호스팅 웹, 개인 어시스턴트, 롤플레이)로 비교하고, MCP, Ollama, 오프라인 사용 등을 공식 문서 기준으로 정리했습니다.',
     audience:
@@ -1994,7 +2017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**PromptQuorum 디렉터리의 로컬 채팅 앱과 어시스턴트 66개는 따로 비교해야 하는 다섯 종류로 나뉩니다. 데스크톱 채팅 앱(17개), 모바일 채팅 앱(26개), 웹 및 CLI 채팅 클라이언트(13개), 개인 어시스턴트(13개), 롤플레이 및 컴패니언 앱(4개)입니다.** 데스크톱 앱 중 7개가 MCP 지원을, 9개가 Ollama를 문서화하고 있고, 휴대폰 앱 중 15개가 완전 오프라인 사용을, 웹 클라이언트 중 8개가 Docker 배포를 문서화하고 있습니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.',
+      `**PromptQuorum 디렉터리의 로컬 채팅 앱과 어시스턴트 ${CA_TOTAL}개는 따로 비교해야 하는 다섯 종류로 나뉩니다. 데스크톱 채팅 앱(${CA_DESKTOP}개), 모바일 채팅 앱(${CA_MOBILE}개), 웹 및 CLI 채팅 클라이언트(${CA_WEB_CLI}개), 개인 어시스턴트(${CA_PERSONAL_ASSISTANTS}개), 롤플레이 및 컴패니언 앱(${CA_ROLEPLAY}개)입니다.** 데스크톱 앱 중 7개가 MCP 지원을, 9개가 Ollama를 문서화하고 있고, 휴대폰 앱 중 15개가 완전 오프라인 사용을, 웹 클라이언트 중 8개가 Docker 배포를 문서화하고 있습니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.`,
     quickAnswerTop: {
       en: {
         question: '어떤 로컬 채팅 앱을 사용해야 합니까?',
@@ -2030,7 +2053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '로컬 채팅 앱은 데스크톱 앱, 휴대폰 앱, 셀프 호스팅 웹 인터페이스, 개인 어시스턴트, 롤플레이 도구라는 다섯 가지 서로 다른 종류의 제품이므로, PromptQuorum 디렉터리의 도구 66개를 종류별로 나누어 각 도구의 리뷰와 동일한 도구 데이터로 생성한 표로 비교합니다.',
+            text: `로컬 채팅 앱은 데스크톱 앱, 휴대폰 앱, 셀프 호스팅 웹 인터페이스, 개인 어시스턴트, 롤플레이 도구라는 다섯 가지 서로 다른 종류의 제품이므로, PromptQuorum 디렉터리의 도구 ${CA_TOTAL}개를 종류별로 나누어 각 도구의 리뷰와 동일한 도구 데이터로 생성한 표로 비교합니다.`,
           },
           {
             type: 'plain-terms',
@@ -2038,7 +2061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '도구 66개, 다섯 종류: 데스크톱 채팅 앱(17개), 모바일 채팅 앱(26개), 웹 및 CLI 채팅 클라이언트(13개), 개인 어시스턴트(13개), 롤플레이 및 컴패니언 앱(4개). Enchanted처럼 여러 기기에서 쓸 수 있는 도구는 해당하는 각 종류에 나타납니다.',
+          `도구 ${CA_TOTAL}개, 다섯 종류: 데스크톱 채팅 앱(${CA_DESKTOP}개), 모바일 채팅 앱(${CA_MOBILE}개), 웹 및 CLI 채팅 클라이언트(${CA_WEB_CLI}개), 개인 어시스턴트(${CA_PERSONAL_ASSISTANTS}개), 롤플레이 및 컴패니언 앱(${CA_ROLEPLAY}개). Enchanted처럼 여러 기기에서 쓸 수 있는 도구는 해당하는 각 종류에 나타납니다.`,
           '표는 각 도구의 레코드로 생성하고 공식 README나 사이트로 확인했으며, 대시는 "문서에 명시되어 있지 않음"을 뜻하고 "아니오"를 뜻하지 않습니다. 휴대폰 앱은 대부분 스토어 설명으로만 문서화되어 있어 해당 칸이 가장 듬성듬성합니다.',
           '표의 모든 도구 이름은 해당 도구의 PromptQuorum 리뷰로 연결되며, 설치 방법과 한계는 그 리뷰에서 다룹니다.',
         ],
@@ -2163,7 +2186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 글',
         items: [
-          '[로컬 소프트웨어 디렉터리](/ko/directory) — 200개 이상의 로컬 AI 앱을 둘러보고 카테고리별로 필터링하십시오.',
+          `[로컬 소프트웨어 디렉터리](/ko/directory) — ${TOTAL_APP_COUNT}개의 로컬 AI 앱을 둘러보고 카테고리별로 필터링하십시오.`,
           '[로컬 추론 엔진, 런타임, 게이트웨이 비교](/ko/power-local-llm/local-llm-run-serve-compared) — 이 앱들 뒤에서 모델을 실행하는 도구.',
           '[로컬 지식 및 검색 도구 비교](/ko/power-local-llm/local-llm-knowledge-retrieval-compared) — 문서 채팅, RAG, 노트 연동.',
         ],
@@ -2174,7 +2197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '로컬 채팅 앱·AI 어시스턴트 비교(2026): 데스크톱, 모바일, 셀프 호스팅, 어시스턴트, 롤플레이',
       description:
-        '로컬 채팅 앱과 AI 어시스턴트 66개를 나란히 비교합니다: 데스크톱, 모바일, 셀프 호스팅 웹, 개인 어시스턴트, 롤플레이를 공식 문서 기준으로 정리했습니다.',
+        `로컬 채팅 앱과 AI 어시스턴트 ${CA_TOTAL}개를 나란히 비교합니다: 데스크톱, 모바일, 셀프 호스팅 웹, 개인 어시스턴트, 롤플레이를 공식 문서 기준으로 정리했습니다.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-chat-assistants-compared',
       inLanguage: 'ko',
       datePublished: '2026-09-20',

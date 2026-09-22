@@ -9,6 +9,21 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+
+// Live counts from the directory — recomputed at build time so this article never drifts from
+// the actual tool count as the directory grows. Only tools with their own PromptQuorum review are
+// counted (matches the CategoryCompareTable's own "only reviewed tools" rule).
+const TOTAL_APP_COUNT = localAiApps.length
+const REVIEWED_RUN_SERVE_APPS = localAiApps.filter((a) => a.reviewSlug != null)
+const RUN_SERVE_INFERENCE_ENGINES = REVIEWED_RUN_SERVE_APPS.filter((a) => a.categories.includes('inference-engines')).length
+const RUN_SERVE_RUNTIMES_MANAGERS = REVIEWED_RUN_SERVE_APPS.filter((a) => a.categories.includes('runtimes-managers')).length
+const RUN_SERVE_ROUTERS_GATEWAYS = REVIEWED_RUN_SERVE_APPS.filter((a) => a.categories.includes('routers-gateways')).length
+const RUN_SERVE_TOTAL = new Set(
+  REVIEWED_RUN_SERVE_APPS.filter((a) =>
+    a.categories.some((c) => c === 'inference-engines' || c === 'runtimes-managers' || c === 'routers-gateways'),
+  ).map((a) => a.slug),
+).size
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
@@ -21,9 +36,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models',
     seoTitle: 'Local Inference Engines & Runtimes Compared 2026',
     intro:
-      'Running a model on your own hardware involves three different kinds of tool — inference engines that execute the model, runtimes and managers that download and run models for you, and routers and gateways that sit in front of them — and no single feature list compares them fairly. This guide compares 46 free and freemium tools, one kind at a time, using a comparison table generated from the same data as each tool\'s own PromptQuorum review, so the table and the reviews cannot disagree.',
+      `Running a model on your own hardware involves three different kinds of tool — inference engines that execute the model, runtimes and managers that download and run models for you, and routers and gateways that sit in front of them — and no single feature list compares them fairly. This guide compares ${RUN_SERVE_TOTAL} free and freemium tools, one kind at a time, using a comparison table generated from the same data as each tool's own PromptQuorum review, so the table and the reviews cannot disagree.`,
     metaDescription:
-      'Compare 46 tools for running models locally: inference engines (llama.cpp, vLLM, SGLang, MLX and more), runtimes and managers (Ollama, LM Studio, Jan) and gateways. Licenses, GPU support, OpenAI-compatible APIs, from official documentation.',
+      `Compare ${RUN_SERVE_TOTAL} tools for running models locally: inference engines (llama.cpp, vLLM, SGLang, MLX and more), runtimes and managers (Ollama, LM Studio, Jan) and gateways. Licenses, GPU support, OpenAI-compatible APIs, from official documentation.`,
     twitterDescription:
       'Local inference engines, runtimes and gateways compared by kind — licenses, NVIDIA/Apple/AMD/CPU support, OpenAI-compatible APIs, multi-GPU — from official documentation.',
     audience:
@@ -42,7 +57,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      '**The 46 local run-and-serve tools in the PromptQuorum directory split into three kinds that should be compared separately: inference engines (30 tools), runtimes and managers (13) and routers and gateways (4).** Within engines, 15 document NVIDIA GPU support, 17 document Apple Silicon support and 21 document an OpenAI-compatible API; among runtimes, 6 document an OpenAI-compatible API. Use the comparison table below, and read each tool\'s own review before you install it.',
+      `**The ${RUN_SERVE_TOTAL} local run-and-serve tools in the PromptQuorum directory split into three kinds that should be compared separately: inference engines (${RUN_SERVE_INFERENCE_ENGINES} tools), runtimes and managers (${RUN_SERVE_RUNTIMES_MANAGERS}) and routers and gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Within engines, 15 document NVIDIA GPU support, 17 document Apple Silicon support and 21 document an OpenAI-compatible API; among runtimes, 6 document an OpenAI-compatible API. Use the comparison table below, and read each tool's own review before you install it.`,
     quickAnswerTop: {
       en: {
         question: 'Which local inference tool should I use?',
@@ -75,7 +90,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Running models locally involves three kinds of tool — inference engines, runtimes and managers, and routers and gateways — so the 46 tools in the PromptQuorum directory are compared within each kind, using a table generated from the same tool data as each tool\'s own review.',
+            text: `Running models locally involves three kinds of tool — inference engines, runtimes and managers, and routers and gateways — so the ${RUN_SERVE_TOTAL} tools in the PromptQuorum directory are compared within each kind, using a table generated from the same tool data as each tool's own review.`,
           },
           {
             type: 'plain-terms',
@@ -83,7 +98,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '46 tools, three kinds: inference engines (30), runtimes and managers (13), routers and gateways (4). Ollama appears in two groups because it is both an engine and a runtime.',
+          `${RUN_SERVE_TOTAL} tools, three kinds: inference engines (${RUN_SERVE_INFERENCE_ENGINES}), runtimes and managers (${RUN_SERVE_RUNTIMES_MANAGERS}), routers and gateways (${RUN_SERVE_ROUTERS_GATEWAYS}). Ollama appears in two groups because it is both an engine and a runtime.`,
           'The table is generated from each tool\'s record and checked against its official README or site; a dash means "not stated in the documentation", never "no". For some well-known tools the documentation quoted here is silent on a given feature, so their cells show a dash.',
           'Every tool name in the table links to its own PromptQuorum review, which is where installation steps and limits are covered.',
         ],
@@ -186,7 +201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local Software Directory](/directory) — browse all 200+ local AI apps and filter by category.',
+          `[Local Software Directory](/directory) — browse all ${TOTAL_APP_COUNT} local AI apps and filter by category.`,
           '[Local Voice & Speech Tools Compared](/power-local-llm/local-llm-voice-audio-compared) — the same comparison for text-to-speech, speech-to-text and voice agents.',
           '[Local Image, Video & Vision Tools Compared](/power-local-llm/local-llm-images-video-compared) — the same comparison for image generation and vision models.',
         ],
@@ -197,7 +212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models',
       description:
-        'Compare 46 tools for running models locally: inference engines, runtimes and managers, and gateways, from official project documentation.',
+        `Compare ${RUN_SERVE_TOTAL} tools for running models locally: inference engines, runtimes and managers, and gateways, from official project documentation.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-run-serve-compared',
       inLanguage: 'en',
       datePublished: '2026-09-20',
@@ -240,9 +255,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Lokale Inferenz-Engines, Runtimes & Gateways im Vergleich (2026): Modelle ausführen und bereitstellen',
     seoTitle: 'Lokale Inferenz-Engines & Runtimes im Vergleich 2026',
     intro:
-      'Ein Modell auf eigener Hardware zu betreiben, umfasst drei verschiedene Arten von Werkzeugen — Inferenz-Engines, die das Modell ausführen, Runtimes und Manager, die Modelle für Sie herunterladen und starten, sowie Router und Gateways, die davor geschaltet werden — und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht 46 kostenlose und Freemium-Werkzeuge, jeweils innerhalb einer Werkzeugart, anhand einer Vergleichstabelle, die aus denselben Daten erzeugt wird wie der jeweilige PromptQuorum-Test des Werkzeugs, sodass sich Tabelle und Tests nicht widersprechen können.',
+      `Ein Modell auf eigener Hardware zu betreiben, umfasst drei verschiedene Arten von Werkzeugen — Inferenz-Engines, die das Modell ausführen, Runtimes und Manager, die Modelle für Sie herunterladen und starten, sowie Router und Gateways, die davor geschaltet werden — und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht ${RUN_SERVE_TOTAL} kostenlose und Freemium-Werkzeuge, jeweils innerhalb einer Werkzeugart, anhand einer Vergleichstabelle, die aus denselben Daten erzeugt wird wie der jeweilige PromptQuorum-Test des Werkzeugs, sodass sich Tabelle und Tests nicht widersprechen können.`,
     metaDescription:
-      'Vergleich von 46 Werkzeugen für den lokalen Modellbetrieb: Inferenz-Engines (llama.cpp, vLLM, SGLang, MLX u. a.), Runtimes und Manager (Ollama, LM Studio, Jan) sowie Gateways. Lizenzen, GPU-Unterstützung, OpenAI-kompatible APIs laut offizieller Dokumentation.',
+      `Vergleich von ${RUN_SERVE_TOTAL} Werkzeugen für den lokalen Modellbetrieb: Inferenz-Engines (llama.cpp, vLLM, SGLang, MLX u. a.), Runtimes und Manager (Ollama, LM Studio, Jan) sowie Gateways. Lizenzen, GPU-Unterstützung, OpenAI-kompatible APIs laut offizieller Dokumentation.`,
     twitterDescription:
       'Lokale Inferenz-Engines, Runtimes und Gateways nach Art verglichen — Lizenzen, NVIDIA-/Apple-/AMD-/CPU-Unterstützung, OpenAI-kompatible APIs, Multi-GPU — laut offizieller Dokumentation.',
     audience:
@@ -261,7 +276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      '**Die 46 lokalen Run-and-Serve-Werkzeuge im PromptQuorum-Verzeichnis lassen sich in drei Arten einteilen, die getrennt verglichen werden sollten: Inferenz-Engines (30 Werkzeuge), Runtimes und Manager (13) sowie Router und Gateways (4).** Bei den Engines dokumentieren 15 die Unterstützung von NVIDIA-GPUs, 17 die Unterstützung von Apple Silicon und 21 eine OpenAI-kompatible API; bei den Runtimes dokumentieren 6 eine OpenAI-kompatible API. Nutzen Sie die Vergleichstabelle unten und lesen Sie den jeweiligen Test eines Werkzeugs, bevor Sie es installieren.',
+      `**Die ${RUN_SERVE_TOTAL} lokalen Run-and-Serve-Werkzeuge im PromptQuorum-Verzeichnis lassen sich in drei Arten einteilen, die getrennt verglichen werden sollten: Inferenz-Engines (${RUN_SERVE_INFERENCE_ENGINES} Werkzeuge), Runtimes und Manager (${RUN_SERVE_RUNTIMES_MANAGERS}) sowie Router und Gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Bei den Engines dokumentieren 15 die Unterstützung von NVIDIA-GPUs, 17 die Unterstützung von Apple Silicon und 21 eine OpenAI-kompatible API; bei den Runtimes dokumentieren 6 eine OpenAI-kompatible API. Nutzen Sie die Vergleichstabelle unten und lesen Sie den jeweiligen Test eines Werkzeugs, bevor Sie es installieren.`,
     quickAnswerTop: {
       en: {
         question: 'Welches lokale Inferenz-Werkzeug sollte ich verwenden?',
@@ -294,7 +309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Der lokale Modellbetrieb umfasst drei Arten von Werkzeugen — Inferenz-Engines, Runtimes und Manager sowie Router und Gateways —, daher werden die 46 Werkzeuge im PromptQuorum-Verzeichnis jeweils innerhalb ihrer Art verglichen, anhand einer Tabelle, die aus denselben Werkzeugdaten erzeugt wird wie der jeweilige Test des Werkzeugs.',
+            text: `Der lokale Modellbetrieb umfasst drei Arten von Werkzeugen — Inferenz-Engines, Runtimes und Manager sowie Router und Gateways —, daher werden die ${RUN_SERVE_TOTAL} Werkzeuge im PromptQuorum-Verzeichnis jeweils innerhalb ihrer Art verglichen, anhand einer Tabelle, die aus denselben Werkzeugdaten erzeugt wird wie der jeweilige Test des Werkzeugs.`,
           },
           {
             type: 'plain-terms',
@@ -302,7 +317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '46 Werkzeuge, drei Arten: Inferenz-Engines (30), Runtimes und Manager (13), Router und Gateways (4). Ollama erscheint in zwei Gruppen, weil es sowohl Engine als auch Runtime ist.',
+          `${RUN_SERVE_TOTAL} Werkzeuge, drei Arten: Inferenz-Engines (${RUN_SERVE_INFERENCE_ENGINES}), Runtimes und Manager (${RUN_SERVE_RUNTIMES_MANAGERS}), Router und Gateways (${RUN_SERVE_ROUTERS_GATEWAYS}). Ollama erscheint in zwei Gruppen, weil es sowohl Engine als auch Runtime ist.`,
           'Die Tabelle wird aus dem Datensatz jedes Werkzeugs erzeugt und anhand seiner offiziellen README oder Website geprüft; ein Strich bedeutet „in der Dokumentation nicht angegeben“, niemals „nein“. Bei einigen bekannten Werkzeugen schweigt die hier zitierte Dokumentation zu einer bestimmten Funktion, weshalb ihre Zellen einen Strich zeigen.',
           'Jeder Werkzeugname in der Tabelle verlinkt auf den eigenen PromptQuorum-Test, in dem Installationsschritte und Grenzen behandelt werden.',
         ],
@@ -405,7 +420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Verzeichnis lokaler Software](/de/directory) — alle über 200 lokalen KI-Apps durchsuchen und nach Kategorie filtern.',
+          `[Verzeichnis lokaler Software](/de/directory) — alle ${TOTAL_APP_COUNT} lokalen KI-Apps durchsuchen und nach Kategorie filtern.`,
           '[Lokale Sprach- und Audio-Werkzeuge im Vergleich](/de/power-local-llm/local-llm-voice-audio-compared) — derselbe Vergleich für Text-zu-Sprache, Sprache-zu-Text und Sprachagenten.',
           '[Lokale Bild-, Video- und Vision-Werkzeuge im Vergleich](/de/power-local-llm/local-llm-images-video-compared) — derselbe Vergleich für Bildgenerierung und Vision-Modelle.',
         ],
@@ -416,7 +431,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Lokale Inferenz-Engines, Runtimes & Gateways im Vergleich (2026): Modelle ausführen und bereitstellen',
       description:
-        'Vergleich von 46 Werkzeugen für den lokalen Modellbetrieb: Inferenz-Engines, Runtimes und Manager sowie Gateways, laut offizieller Projektdokumentation.',
+        `Vergleich von ${RUN_SERVE_TOTAL} Werkzeugen für den lokalen Modellbetrieb: Inferenz-Engines, Runtimes und Manager sowie Gateways, laut offizieller Projektdokumentation.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-run-serve-compared',
       inLanguage: 'de',
       datePublished: '2026-09-20',
@@ -459,9 +474,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Moteurs d\'inférence, runtimes et passerelles locaux : comparatif (2026) pour exécuter et servir des modèles',
     seoTitle: 'Moteurs d\'inférence et runtimes locaux : comparatif 2026',
     intro:
-      'Exécuter un modèle sur votre propre matériel fait intervenir trois types d\'outils différents — des moteurs d\'inférence qui exécutent le modèle, des runtimes et gestionnaires qui téléchargent et lancent les modèles à votre place, et des routeurs et passerelles placés devant eux — et aucune liste de fonctionnalités unique ne les compare équitablement. Ce guide compare 46 outils gratuits et freemium, un type à la fois, à l\'aide d\'un tableau comparatif généré à partir des mêmes données que l\'avis PromptQuorum de chaque outil : le tableau et les avis ne peuvent donc pas se contredire.',
+      `Exécuter un modèle sur votre propre matériel fait intervenir trois types d'outils différents — des moteurs d'inférence qui exécutent le modèle, des runtimes et gestionnaires qui téléchargent et lancent les modèles à votre place, et des routeurs et passerelles placés devant eux — et aucune liste de fonctionnalités unique ne les compare équitablement. Ce guide compare ${RUN_SERVE_TOTAL} outils gratuits et freemium, un type à la fois, à l'aide d'un tableau comparatif généré à partir des mêmes données que l'avis PromptQuorum de chaque outil : le tableau et les avis ne peuvent donc pas se contredire.`,
     metaDescription:
-      'Comparatif de 46 outils pour exécuter des modèles en local : moteurs d\'inférence, runtimes (Ollama, LM Studio, Jan) et passerelles. Licences, GPU, API compatibles OpenAI.',
+      `Comparatif de ${RUN_SERVE_TOTAL} outils pour exécuter des modèles en local : moteurs d'inférence, runtimes (Ollama, LM Studio, Jan) et passerelles. Licences, GPU, API compatibles OpenAI.`,
     twitterDescription:
       'Moteurs d\'inférence, runtimes et passerelles locaux comparés par type — licences, prise en charge NVIDIA/Apple/AMD/CPU, API compatibles OpenAI, multi-GPU — d\'après la documentation officielle.',
     audience:
@@ -480,7 +495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      '**Les 46 outils locaux d\'exécution et de service du répertoire PromptQuorum se répartissent en trois types, à comparer séparément : les moteurs d\'inférence (30 outils), les runtimes et gestionnaires (13) et les routeurs et passerelles (4).** Parmi les moteurs, 15 documentent la prise en charge des GPU NVIDIA, 17 celle d\'Apple Silicon et 21 une API compatible OpenAI ; parmi les runtimes, 6 documentent une API compatible OpenAI. Servez-vous du tableau comparatif ci-dessous et lisez l\'avis de chaque outil avant de l\'installer.',
+      `**Les ${RUN_SERVE_TOTAL} outils locaux d'exécution et de service du répertoire PromptQuorum se répartissent en trois types, à comparer séparément : les moteurs d'inférence (${RUN_SERVE_INFERENCE_ENGINES} outils), les runtimes et gestionnaires (${RUN_SERVE_RUNTIMES_MANAGERS}) et les routeurs et passerelles (${RUN_SERVE_ROUTERS_GATEWAYS}).** Parmi les moteurs, 15 documentent la prise en charge des GPU NVIDIA, 17 celle d'Apple Silicon et 21 une API compatible OpenAI ; parmi les runtimes, 6 documentent une API compatible OpenAI. Servez-vous du tableau comparatif ci-dessous et lisez l'avis de chaque outil avant de l'installer.`,
     quickAnswerTop: {
       en: {
         question: 'Quel outil d\'inférence local dois-je utiliser ?',
@@ -513,7 +528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Exécuter des modèles en local fait intervenir trois types d\'outils — moteurs d\'inférence, runtimes et gestionnaires, routeurs et passerelles — de sorte que les 46 outils du répertoire PromptQuorum sont comparés au sein de chaque type, à l\'aide d\'un tableau généré à partir des mêmes données que l\'avis de chaque outil.',
+            text: `Exécuter des modèles en local fait intervenir trois types d'outils — moteurs d'inférence, runtimes et gestionnaires, routeurs et passerelles — de sorte que les ${RUN_SERVE_TOTAL} outils du répertoire PromptQuorum sont comparés au sein de chaque type, à l'aide d'un tableau généré à partir des mêmes données que l'avis de chaque outil.`,
           },
           {
             type: 'plain-terms',
@@ -521,7 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '46 outils, trois types : moteurs d\'inférence (30), runtimes et gestionnaires (13), routeurs et passerelles (4). Ollama apparaît dans deux groupes, car il est à la fois un moteur et un runtime.',
+          `${RUN_SERVE_TOTAL} outils, trois types : moteurs d'inférence (${RUN_SERVE_INFERENCE_ENGINES}), runtimes et gestionnaires (${RUN_SERVE_RUNTIMES_MANAGERS}), routeurs et passerelles (${RUN_SERVE_ROUTERS_GATEWAYS}). Ollama apparaît dans deux groupes, car il est à la fois un moteur et un runtime.`,
           'Le tableau est généré à partir de la fiche de chaque outil et vérifié par rapport à son README ou à son site officiel ; un tiret signifie « non indiqué dans la documentation », jamais « non ». Pour certains outils très connus, la documentation citée ici est muette sur une fonctionnalité donnée, et leurs cellules affichent donc un tiret.',
           'Chaque nom d\'outil du tableau renvoie vers son propre avis PromptQuorum, où sont traités les étapes d\'installation et les limites.',
         ],
@@ -624,7 +639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures associées',
         items: [
-          '[Répertoire de logiciels locaux](/fr/directory) — parcourez plus de 200 applications d\'IA locales et filtrez par catégorie.',
+          `[Répertoire de logiciels locaux](/fr/directory) — parcourez ${TOTAL_APP_COUNT} applications d'IA locales et filtrez par catégorie.`,
           '[Outils vocaux et audio locaux : comparatif](/fr/power-local-llm/local-llm-voice-audio-compared) — la même comparaison pour la synthèse vocale, la reconnaissance vocale et les agents vocaux.',
           '[Outils locaux d\'image, de vidéo et de vision : comparatif](/fr/power-local-llm/local-llm-images-video-compared) — la même comparaison pour la génération d\'images et les modèles de vision.',
         ],
@@ -635,7 +650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Moteurs d\'inférence, runtimes et passerelles locaux : comparatif (2026) pour exécuter et servir des modèles',
       description:
-        'Comparez 46 outils pour exécuter des modèles en local : moteurs d\'inférence, runtimes et gestionnaires, et passerelles, d\'après la documentation officielle des projets.',
+        `Comparez ${RUN_SERVE_TOTAL} outils pour exécuter des modèles en local : moteurs d'inférence, runtimes et gestionnaires, et passerelles, d'après la documentation officielle des projets.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-run-serve-compared',
       inLanguage: 'fr',
       datePublished: '2026-09-20',
@@ -678,9 +693,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Motores de inferencia, runtimes y gateways locales: comparativa (2026) para ejecutar y servir modelos',
     seoTitle: 'Motores y runtimes de inferencia locales 2026',
     intro:
-      'Ejecutar un modelo en tu propio hardware implica tres tipos de herramienta distintos — motores de inferencia que ejecutan el modelo, runtimes y gestores que descargan y ejecutan modelos por ti, y routers y gateways que se colocan por delante de ellos — y ninguna lista de funciones única los compara de forma justa. Esta guía compara 46 herramientas gratuitas y freemium, un tipo cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis propio de cada herramienta en PromptQuorum, de modo que la tabla y los análisis no pueden contradecirse.',
+      `Ejecutar un modelo en tu propio hardware implica tres tipos de herramienta distintos — motores de inferencia que ejecutan el modelo, runtimes y gestores que descargan y ejecutan modelos por ti, y routers y gateways que se colocan por delante de ellos — y ninguna lista de funciones única los compara de forma justa. Esta guía compara ${RUN_SERVE_TOTAL} herramientas gratuitas y freemium, un tipo cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis propio de cada herramienta en PromptQuorum, de modo que la tabla y los análisis no pueden contradecirse.`,
     metaDescription:
-      'Compara 46 herramientas para ejecutar modelos en local: motores de inferencia (llama.cpp, vLLM, SGLang, MLX y más), runtimes y gestores (Ollama, LM Studio, Jan) y gateways. Licencias, GPU y API compatibles con OpenAI, según la documentación oficial.',
+      `Compara ${RUN_SERVE_TOTAL} herramientas para ejecutar modelos en local: motores de inferencia (llama.cpp, vLLM, SGLang, MLX y más), runtimes y gestores (Ollama, LM Studio, Jan) y gateways. Licencias, GPU y API compatibles con OpenAI, según la documentación oficial.`,
     twitterDescription:
       'Motores de inferencia, runtimes y gateways locales comparados por tipo: licencias, soporte NVIDIA/Apple/AMD/CPU, API compatibles con OpenAI y multi-GPU, según la documentación oficial.',
     audience:
@@ -699,7 +714,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      '**Las 46 herramientas locales de ejecución y servicio del directorio de PromptQuorum se dividen en tres tipos que conviene comparar por separado: motores de inferencia (30 herramientas), runtimes y gestores (13) y routers y gateways (4).** Entre los motores, 15 documentan soporte para GPU NVIDIA, 17 documentan soporte para Apple Silicon y 21 documentan una API compatible con OpenAI; entre los runtimes, 6 documentan una API compatible con OpenAI. Usa la tabla comparativa de más abajo y lee el análisis de cada herramienta antes de instalarla.',
+      `**Las ${RUN_SERVE_TOTAL} herramientas locales de ejecución y servicio del directorio de PromptQuorum se dividen en tres tipos que conviene comparar por separado: motores de inferencia (${RUN_SERVE_INFERENCE_ENGINES} herramientas), runtimes y gestores (${RUN_SERVE_RUNTIMES_MANAGERS}) y routers y gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Entre los motores, 15 documentan soporte para GPU NVIDIA, 17 documentan soporte para Apple Silicon y 21 documentan una API compatible con OpenAI; entre los runtimes, 6 documentan una API compatible con OpenAI. Usa la tabla comparativa de más abajo y lee el análisis de cada herramienta antes de instalarla.`,
     quickAnswerTop: {
       en: {
         question: '¿Qué herramienta de inferencia local debería usar?',
@@ -732,7 +747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Ejecutar modelos en local implica tres tipos de herramienta — motores de inferencia, runtimes y gestores, y routers y gateways — por lo que las 46 herramientas del directorio de PromptQuorum se comparan dentro de cada tipo, con una tabla generada a partir de los mismos datos que el análisis propio de cada herramienta.',
+            text: `Ejecutar modelos en local implica tres tipos de herramienta — motores de inferencia, runtimes y gestores, y routers y gateways — por lo que las ${RUN_SERVE_TOTAL} herramientas del directorio de PromptQuorum se comparan dentro de cada tipo, con una tabla generada a partir de los mismos datos que el análisis propio de cada herramienta.`,
           },
           {
             type: 'plain-terms',
@@ -740,7 +755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '46 herramientas, tres tipos: motores de inferencia (30), runtimes y gestores (13), routers y gateways (4). Ollama aparece en dos grupos porque es a la vez un motor y un runtime.',
+          `${RUN_SERVE_TOTAL} herramientas, tres tipos: motores de inferencia (${RUN_SERVE_INFERENCE_ENGINES}), runtimes y gestores (${RUN_SERVE_RUNTIMES_MANAGERS}), routers y gateways (${RUN_SERVE_ROUTERS_GATEWAYS}). Ollama aparece en dos grupos porque es a la vez un motor y un runtime.`,
           'La tabla se genera a partir del registro de cada herramienta y se contrasta con su README o sitio oficial; un guion significa "no indicado en la documentación", nunca "no". En algunas herramientas conocidas, la documentación citada aquí no dice nada sobre una función concreta, por lo que sus celdas muestran un guion.',
           'Cada nombre de herramienta de la tabla enlaza con su propio análisis en PromptQuorum, donde se explican los pasos de instalación y los límites.',
         ],
@@ -843,7 +858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software local](/es/directory) — explora todas las más de 200 apps de IA local y filtra por categoría.',
+          `[Directorio de software local](/es/directory) — explora todas las ${TOTAL_APP_COUNT} apps de IA local y filtra por categoría.`,
           '[Herramientas locales de voz y audio: comparativa](/es/power-local-llm/local-llm-voice-audio-compared) — la misma comparación para síntesis de voz, reconocimiento de voz y agentes de voz.',
           '[Herramientas locales de imagen, vídeo y visión: comparativa](/es/power-local-llm/local-llm-images-video-compared) — la misma comparación para generación de imágenes y modelos de visión.',
         ],
@@ -854,7 +869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Motores de inferencia, runtimes y gateways locales: comparativa (2026) para ejecutar y servir modelos',
       description:
-        'Compara 46 herramientas para ejecutar modelos en local: motores de inferencia, runtimes y gestores, y gateways, según la documentación oficial de cada proyecto.',
+        `Compara ${RUN_SERVE_TOTAL} herramientas para ejecutar modelos en local: motores de inferencia, runtimes y gestores, y gateways, según la documentación oficial de cada proyecto.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-run-serve-compared',
       inLanguage: 'es',
       datePublished: '2026-09-20',
@@ -897,9 +912,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'ローカル推論エンジン・ランタイム・ゲートウェイ比較(2026):モデルの実行とサーブ',
     seoTitle: 'ローカル推論エンジン・ランタイム比較2026',
     intro:
-      '自分のハードウェアでモデルを動かすには、3種類の異なるツールが関わります。モデルを実行する推論エンジン、モデルのダウンロードと実行を代行するランタイムやマネージャー、そしてそれらの前段に置かれるルーターやゲートウェイです。これらを公平に比べられる単一の機能一覧はありません。本ガイドでは、無料およびフリーミアムの46ツールを種類ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成されるため、表とレビューの内容が食い違うことはありません。',
+      `自分のハードウェアでモデルを動かすには、3種類の異なるツールが関わります。モデルを実行する推論エンジン、モデルのダウンロードと実行を代行するランタイムやマネージャー、そしてそれらの前段に置かれるルーターやゲートウェイです。これらを公平に比べられる単一の機能一覧はありません。本ガイドでは、無料およびフリーミアムの${RUN_SERVE_TOTAL}ツールを種類ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成されるため、表とレビューの内容が食い違うことはありません。`,
     metaDescription:
-      'ローカルでモデルを動かす46ツールを比較:推論エンジン(llama.cpp、vLLM、SGLang、MLXなど)、ランタイム・マネージャー(Ollama、LM Studio、Jan)、ゲートウェイ。ライセンス、GPU対応、OpenAI互換APIを公式ドキュメントに基づいて整理。',
+      `ローカルでモデルを動かす${RUN_SERVE_TOTAL}ツールを比較:推論エンジン(llama.cpp、vLLM、SGLang、MLXなど)、ランタイム・マネージャー(Ollama、LM Studio、Jan)、ゲートウェイ。ライセンス、GPU対応、OpenAI互換APIを公式ドキュメントに基づいて整理。`,
     twitterDescription:
       'ローカル推論エンジン、ランタイム、ゲートウェイを種類別に比較 — ライセンス、NVIDIA/Apple/AMD/CPU対応、OpenAI互換API、マルチGPUを公式ドキュメントから整理。',
     audience:
@@ -918,7 +933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      '**PromptQuorumディレクトリにあるローカル実行・サーブ系の46ツールは、別々に比較すべき3種類に分かれます。推論エンジン(30ツール)、ランタイム・マネージャー(13ツール)、ルーター・ゲートウェイ(4ツール)です。** エンジンのうち、15ツールがNVIDIA GPU対応を、17ツールがApple Silicon対応を、21ツールがOpenAI互換APIを文書化しています。ランタイムでは6ツールがOpenAI互換APIを文書化しています。下の比較表を使い、インストールする前に各ツールのレビューも読んでください。',
+      `**PromptQuorumディレクトリにあるローカル実行・サーブ系の${RUN_SERVE_TOTAL}ツールは、別々に比較すべき3種類に分かれます。推論エンジン(${RUN_SERVE_INFERENCE_ENGINES}ツール)、ランタイム・マネージャー(${RUN_SERVE_RUNTIMES_MANAGERS}ツール)、ルーター・ゲートウェイ(${RUN_SERVE_ROUTERS_GATEWAYS}ツール)です。** エンジンのうち、15ツールがNVIDIA GPU対応を、17ツールがApple Silicon対応を、21ツールがOpenAI互換APIを文書化しています。ランタイムでは6ツールがOpenAI互換APIを文書化しています。下の比較表を使い、インストールする前に各ツールのレビューも読んでください。`,
     quickAnswerTop: {
       en: {
         question: 'どのローカル推論ツールを使えばよいですか?',
@@ -951,7 +966,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'モデルをローカルで動かすには、推論エンジン、ランタイム・マネージャー、ルーター・ゲートウェイの3種類のツールが関わるため、PromptQuorumディレクトリの46ツールは種類ごとに比較しています。比較表は、各ツールのレビューと同じツールデータから生成されています。',
+            text: `モデルをローカルで動かすには、推論エンジン、ランタイム・マネージャー、ルーター・ゲートウェイの3種類のツールが関わるため、PromptQuorumディレクトリの${RUN_SERVE_TOTAL}ツールは種類ごとに比較しています。比較表は、各ツールのレビューと同じツールデータから生成されています。`,
           },
           {
             type: 'plain-terms',
@@ -959,7 +974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '46ツール、3種類:推論エンジン(30)、ランタイム・マネージャー(13)、ルーター・ゲートウェイ(4)。Ollamaはエンジンでもありランタイムでもあるため、2つのグループに登場します。',
+          `${RUN_SERVE_TOTAL}ツール、3種類:推論エンジン(${RUN_SERVE_INFERENCE_ENGINES})、ランタイム・マネージャー(${RUN_SERVE_RUNTIMES_MANAGERS})、ルーター・ゲートウェイ(${RUN_SERVE_ROUTERS_GATEWAYS})。Ollamaはエンジンでもありランタイムでもあるため、2つのグループに登場します。`,
           '表は各ツールのレコードから生成され、公式のREADMEまたはサイトと照合しています。ダッシュは「ドキュメントに記載なし」の意味であり、「非対応」ではありません。よく知られた一部のツールでは、ここで参照したドキュメントが特定の機能に触れていないため、該当セルはダッシュになっています。',
           '表の各ツール名は、そのツール専用のPromptQuorumレビューにリンクしています。インストール手順や制約はそちらで扱っています。',
         ],
@@ -1062,7 +1077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルソフトウェアディレクトリ](/ja/directory) — 200以上のローカルAIアプリを一覧し、カテゴリで絞り込めます。',
+          `[ローカルソフトウェアディレクトリ](/ja/directory) — ${TOTAL_APP_COUNT}件のローカルAIアプリを一覧し、カテゴリで絞り込めます。`,
           '[ローカル音声・スピーチツール比較](/ja/power-local-llm/local-llm-voice-audio-compared) — 音声合成、音声認識、音声エージェントについての同様の比較です。',
           '[ローカル画像・動画・ビジョンツール比較](/ja/power-local-llm/local-llm-images-video-compared) — 画像生成とビジョンモデルについての同様の比較です。',
         ],
@@ -1073,7 +1088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'ローカル推論エンジン・ランタイム・ゲートウェイ比較(2026):モデルの実行とサーブ',
       description:
-        'ローカルでモデルを動かす46ツールを比較:推論エンジン、ランタイム・マネージャー、ゲートウェイを、公式プロジェクトドキュメントに基づいて整理。',
+        `ローカルでモデルを動かす${RUN_SERVE_TOTAL}ツールを比較:推論エンジン、ランタイム・マネージャー、ゲートウェイを、公式プロジェクトドキュメントに基づいて整理。`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-run-serve-compared',
       inLanguage: 'ja',
       datePublished: '2026-09-20',
@@ -1116,9 +1131,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '本地推理引擎、运行时与网关对比(2026):运行和部署模型',
     seoTitle: '本地推理引擎与运行时对比2026',
     intro:
-      '在自己的硬件上运行模型涉及三类不同的工具——执行模型的推理引擎、帮你下载并运行模型的运行时与管理器,以及位于它们前面的路由器与网关——没有任何单一的功能清单能公平地比较它们。本指南逐类比较46款免费和免费增值(freemium)工具,对比表由与各工具PromptQuorum评测相同的数据生成,因此表格与评测不会互相矛盾。',
+      `在自己的硬件上运行模型涉及三类不同的工具——执行模型的推理引擎、帮你下载并运行模型的运行时与管理器,以及位于它们前面的路由器与网关——没有任何单一的功能清单能公平地比较它们。本指南逐类比较${RUN_SERVE_TOTAL}款免费和免费增值(freemium)工具,对比表由与各工具PromptQuorum评测相同的数据生成,因此表格与评测不会互相矛盾。`,
     metaDescription:
-      '对比46款本地运行模型的工具:推理引擎(llama.cpp、vLLM、SGLang、MLX等)、运行时与管理器(Ollama、LM Studio、Jan)以及网关。许可证、GPU支持、OpenAI兼容API,均来自官方文档。',
+      `对比${RUN_SERVE_TOTAL}款本地运行模型的工具:推理引擎(llama.cpp、vLLM、SGLang、MLX等)、运行时与管理器(Ollama、LM Studio、Jan)以及网关。许可证、GPU支持、OpenAI兼容API,均来自官方文档。`,
     twitterDescription:
       '按类别对比本地推理引擎、运行时与网关——许可证、NVIDIA/Apple/AMD/CPU支持、OpenAI兼容API、多GPU——均来自官方文档。',
     audience:
@@ -1137,7 +1152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      '**PromptQuorum目录中的46款本地运行与部署工具分为三类,应分别比较:推理引擎(30款)、运行时与管理器(13款)以及路由器与网关(4款)。** 在引擎中,15款在文档中说明支持NVIDIA GPU,17款说明支持Apple Silicon,21款说明提供OpenAI兼容API;在运行时中,6款说明提供OpenAI兼容API。请使用下方的对比表,并在安装前阅读各工具自己的评测。',
+      `**PromptQuorum目录中的${RUN_SERVE_TOTAL}款本地运行与部署工具分为三类,应分别比较:推理引擎(${RUN_SERVE_INFERENCE_ENGINES}款)、运行时与管理器(${RUN_SERVE_RUNTIMES_MANAGERS}款)以及路由器与网关(${RUN_SERVE_ROUTERS_GATEWAYS}款)。** 在引擎中,15款在文档中说明支持NVIDIA GPU,17款说明支持Apple Silicon,21款说明提供OpenAI兼容API;在运行时中,6款说明提供OpenAI兼容API。请使用下方的对比表,并在安装前阅读各工具自己的评测。`,
     quickAnswerTop: {
       en: {
         question: '我应该使用哪款本地推理工具?',
@@ -1170,7 +1185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '在本地运行模型涉及三类工具——推理引擎、运行时与管理器、路由器与网关——因此PromptQuorum目录中的46款工具按类别分别比较,对比表由与各工具自己的评测相同的工具数据生成。',
+            text: `在本地运行模型涉及三类工具——推理引擎、运行时与管理器、路由器与网关——因此PromptQuorum目录中的${RUN_SERVE_TOTAL}款工具按类别分别比较,对比表由与各工具自己的评测相同的工具数据生成。`,
           },
           {
             type: 'plain-terms',
@@ -1178,7 +1193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '46款工具,三个类别:推理引擎(30款)、运行时与管理器(13款)、路由器与网关(4款)。Ollama同时出现在两个分组中,因为它既是引擎也是运行时。',
+          `${RUN_SERVE_TOTAL}款工具,三个类别:推理引擎(${RUN_SERVE_INFERENCE_ENGINES}款)、运行时与管理器(${RUN_SERVE_RUNTIMES_MANAGERS}款)、路由器与网关(${RUN_SERVE_ROUTERS_GATEWAYS}款)。Ollama同时出现在两个分组中,因为它既是引擎也是运行时。`,
           '对比表由各工具的记录生成,并对照其官方README或网站核实;短横线表示“文档中未说明”,绝不表示“没有”。对于一些知名工具,此处引用的文档对某项功能没有提及,因此它们的单元格显示为短横线。',
           '表中的每个工具名称都链接到它自己的PromptQuorum评测,安装步骤和局限都在评测中介绍。',
         ],
@@ -1281,7 +1296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地软件目录](/zh/directory)——浏览全部200多款本地AI应用,并按类别筛选。',
+          `[本地软件目录](/zh/directory)——浏览全部${TOTAL_APP_COUNT}款本地AI应用,并按类别筛选。`,
           '[本地语音工具对比](/zh/power-local-llm/local-llm-voice-audio-compared)——针对文本转语音、语音转文本和语音代理的同类对比。',
           '[本地图像、视频与视觉工具对比](/zh/power-local-llm/local-llm-images-video-compared)——针对图像生成和视觉模型的同类对比。',
         ],
@@ -1292,7 +1307,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '本地推理引擎、运行时与网关对比(2026):运行和部署模型',
       description:
-        '对比46款本地运行模型的工具:推理引擎、运行时与管理器以及网关,均来自项目官方文档。',
+        `对比${RUN_SERVE_TOTAL}款本地运行模型的工具:推理引擎、运行时与管理器以及网关,均来自项目官方文档。`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-run-serve-compared',
       inLanguage: 'zh',
       datePublished: '2026-09-20',
@@ -1335,9 +1350,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Mecanismos de inferência, runtimes e gateways locais comparados (2026): executar e servir modelos',
     seoTitle: 'Motores e runtimes de IA local comparados 2026',
     intro:
-      'Executar um modelo no seu próprio hardware envolve três tipos diferentes de ferramenta — mecanismos de inferência que executam o modelo, runtimes e gerenciadores que baixam e executam modelos para você, e roteadores e gateways que ficam na frente deles — e nenhuma lista de recursos isolada os compara de forma justa. Este guia compara 46 ferramentas gratuitas e freemium, um tipo por vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise própria de cada ferramenta no PromptQuorum, de modo que a tabela e as análises não possam se contradizer.',
+      `Executar um modelo no seu próprio hardware envolve três tipos diferentes de ferramenta — mecanismos de inferência que executam o modelo, runtimes e gerenciadores que baixam e executam modelos para você, e roteadores e gateways que ficam na frente deles — e nenhuma lista de recursos isolada os compara de forma justa. Este guia compara ${RUN_SERVE_TOTAL} ferramentas gratuitas e freemium, um tipo por vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise própria de cada ferramenta no PromptQuorum, de modo que a tabela e as análises não possam se contradizer.`,
     metaDescription:
-      'Compare 46 ferramentas para executar modelos localmente: mecanismos de inferência (llama.cpp, vLLM, SGLang, MLX e outros), runtimes e gerenciadores (Ollama, LM Studio, Jan) e gateways. Licenças, suporte a GPU, APIs compatíveis com OpenAI, segundo a documentação oficial.',
+      `Compare ${RUN_SERVE_TOTAL} ferramentas para executar modelos localmente: mecanismos de inferência (llama.cpp, vLLM, SGLang, MLX e outros), runtimes e gerenciadores (Ollama, LM Studio, Jan) e gateways. Licenças, suporte a GPU, APIs compatíveis com OpenAI, segundo a documentação oficial.`,
     twitterDescription:
       'Mecanismos de inferência, runtimes e gateways locais comparados por tipo — licenças, suporte a NVIDIA/Apple/AMD/CPU, APIs compatíveis com OpenAI, multi-GPU — segundo a documentação oficial.',
     audience:
@@ -1356,7 +1371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      '**As 46 ferramentas locais de execução e serviço do diretório PromptQuorum se dividem em três tipos que devem ser comparados separadamente: mecanismos de inferência (30 ferramentas), runtimes e gerenciadores (13) e roteadores e gateways (4).** Entre os mecanismos, 15 documentam suporte a GPU NVIDIA, 17 documentam suporte a Apple Silicon e 21 documentam uma API compatível com OpenAI; entre os runtimes, 6 documentam uma API compatível com OpenAI. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.',
+      `**As ${RUN_SERVE_TOTAL} ferramentas locais de execução e serviço do diretório PromptQuorum se dividem em três tipos que devem ser comparados separadamente: mecanismos de inferência (${RUN_SERVE_INFERENCE_ENGINES} ferramentas), runtimes e gerenciadores (${RUN_SERVE_RUNTIMES_MANAGERS}) e roteadores e gateways (${RUN_SERVE_ROUTERS_GATEWAYS}).** Entre os mecanismos, 15 documentam suporte a GPU NVIDIA, 17 documentam suporte a Apple Silicon e 21 documentam uma API compatível com OpenAI; entre os runtimes, 6 documentam uma API compatível com OpenAI. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
     quickAnswerTop: {
       en: {
         question: 'Qual ferramenta de inferência local devo usar?',
@@ -1389,7 +1404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Executar modelos localmente envolve três tipos de ferramenta — mecanismos de inferência, runtimes e gerenciadores, e roteadores e gateways — por isso as 46 ferramentas do diretório PromptQuorum são comparadas dentro de cada tipo, usando uma tabela gerada a partir dos mesmos dados de ferramenta da análise própria de cada uma.',
+            text: `Executar modelos localmente envolve três tipos de ferramenta — mecanismos de inferência, runtimes e gerenciadores, e roteadores e gateways — por isso as ${RUN_SERVE_TOTAL} ferramentas do diretório PromptQuorum são comparadas dentro de cada tipo, usando uma tabela gerada a partir dos mesmos dados de ferramenta da análise própria de cada uma.`,
           },
           {
             type: 'plain-terms',
@@ -1397,7 +1412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '46 ferramentas, três tipos: mecanismos de inferência (30), runtimes e gerenciadores (13), roteadores e gateways (4). O Ollama aparece em dois grupos porque é ao mesmo tempo um mecanismo e um runtime.',
+          `${RUN_SERVE_TOTAL} ferramentas, três tipos: mecanismos de inferência (${RUN_SERVE_INFERENCE_ENGINES}), runtimes e gerenciadores (${RUN_SERVE_RUNTIMES_MANAGERS}), roteadores e gateways (${RUN_SERVE_ROUTERS_GATEWAYS}). O Ollama aparece em dois grupos porque é ao mesmo tempo um mecanismo e um runtime.`,
           'A tabela é gerada a partir do registro de cada ferramenta e conferida com o README ou o site oficial; um traço significa "não informado na documentação", nunca "não". Para algumas ferramentas conhecidas, a documentação citada aqui não menciona determinado recurso, então suas células mostram um traço.',
           'Cada nome de ferramenta na tabela leva à sua própria análise no PromptQuorum, onde estão as etapas de instalação e os limites.',
         ],
@@ -1500,7 +1515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software local](/pt/directory) — navegue por mais de 200 apps de IA local e filtre por categoria.',
+          `[Diretório de software local](/pt/directory) — navegue por ${TOTAL_APP_COUNT} apps de IA local e filtre por categoria.`,
           '[Ferramentas locais de voz e fala comparadas](/pt/power-local-llm/local-llm-voice-audio-compared) — a mesma comparação para texto para fala, fala para texto e agentes de voz.',
           '[Ferramentas locais de imagem, vídeo e visão comparadas](/pt/power-local-llm/local-llm-images-video-compared) — a mesma comparação para geração de imagens e modelos de visão.',
         ],
@@ -1511,7 +1526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Mecanismos de inferência, runtimes e gateways locais comparados (2026): executar e servir modelos',
       description:
-        'Compare 46 ferramentas para executar modelos localmente: mecanismos de inferência, runtimes e gerenciadores, e gateways, segundo a documentação oficial dos projetos.',
+        `Compare ${RUN_SERVE_TOTAL} ferramentas para executar modelos localmente: mecanismos de inferência, runtimes e gerenciadores, e gateways, segundo a documentação oficial dos projetos.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-run-serve-compared',
       inLanguage: 'pt-BR',
       datePublished: '2026-09-20',
@@ -1554,9 +1569,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مقارنة محركات الاستدلال وبيئات التشغيل والبوابات المحلية (2026): تشغيل النماذج وتقديمها',
     seoTitle: 'مقارنة محركات الاستدلال وبيئات التشغيل المحلية 2026',
     intro:
-      'يتطلب تشغيل نموذج على جهازك ثلاثة أنواع مختلفة من الأدوات — محركات استدلال تنفّذ النموذج، وبيئات تشغيل ومديرون ينزّلون النماذج ويشغّلونها نيابةً عنك، ومسيّرات وبوابات تقف أمامها — ولا توجد قائمة ميزات واحدة تقارنها بإنصاف. يقارن هذا الدليل 46 أداة مجانية ومجانية جزئيًا (freemium)، نوعًا بعد نوع، بجدول مقارنة مُنشأ من البيانات نفسها التي تقوم عليها مراجعة PromptQuorum لكل أداة، بحيث لا يتعارض الجدول مع المراجعات.',
+      `يتطلب تشغيل نموذج على جهازك ثلاثة أنواع مختلفة من الأدوات — محركات استدلال تنفّذ النموذج، وبيئات تشغيل ومديرون ينزّلون النماذج ويشغّلونها نيابةً عنك، ومسيّرات وبوابات تقف أمامها — ولا توجد قائمة ميزات واحدة تقارنها بإنصاف. يقارن هذا الدليل ${RUN_SERVE_TOTAL} أداة مجانية ومجانية جزئيًا (freemium)، نوعًا بعد نوع، بجدول مقارنة مُنشأ من البيانات نفسها التي تقوم عليها مراجعة PromptQuorum لكل أداة، بحيث لا يتعارض الجدول مع المراجعات.`,
     metaDescription:
-      'قارن 46 أداة لتشغيل النماذج محليًا: محركات استدلال مثل llama.cpp وvLLM، وبيئات تشغيل مثل Ollama وLM Studio، وبوابات. الرخص ودعم GPU وواجهات OpenAI من التوثيق الرسمي.',
+      `قارن ${RUN_SERVE_TOTAL} أداة لتشغيل النماذج محليًا: محركات استدلال مثل llama.cpp وvLLM، وبيئات تشغيل مثل Ollama وLM Studio، وبوابات. الرخص ودعم GPU وواجهات OpenAI من التوثيق الرسمي.`,
     twitterDescription:
       'مقارنة محركات الاستدلال وبيئات التشغيل والبوابات المحلية حسب النوع — الرخص ودعم NVIDIA وApple وAMD وCPU وواجهات OpenAI وتعدد وحدات GPU — من التوثيق الرسمي.',
     audience:
@@ -1575,7 +1590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      '**تنقسم أدوات التشغيل والتقديم المحلية الـ46 في دليل PromptQuorum إلى ثلاثة أنواع ينبغي مقارنتها كلًّا على حدة: محركات استدلال (30 أداة)، وبيئات تشغيل ومديرون (13)، ومسيّرات وبوابات (4).** ضمن المحركات، توثّق 15 أداة دعم NVIDIA GPU، وتوثّق 17 دعم Apple Silicon، وتوثّق 21 واجهة برمجة متوافقة مع OpenAI؛ وضمن بيئات التشغيل، توثّق 6 أدوات واجهة برمجة متوافقة مع OpenAI. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.',
+      `**تنقسم أدوات التشغيل والتقديم المحلية الـ${RUN_SERVE_TOTAL} في دليل PromptQuorum إلى ثلاثة أنواع ينبغي مقارنتها كلًّا على حدة: محركات استدلال (${RUN_SERVE_INFERENCE_ENGINES} أداة)، وبيئات تشغيل ومديرون (${RUN_SERVE_RUNTIMES_MANAGERS})، ومسيّرات وبوابات (${RUN_SERVE_ROUTERS_GATEWAYS}).** ضمن المحركات، توثّق 15 أداة دعم NVIDIA GPU، وتوثّق 17 دعم Apple Silicon، وتوثّق 21 واجهة برمجة متوافقة مع OpenAI؛ وضمن بيئات التشغيل، توثّق 6 أدوات واجهة برمجة متوافقة مع OpenAI. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
     quickAnswerTop: {
       en: {
         question: 'أي أداة استدلال محلية ينبغي أن أستخدم؟',
@@ -1608,7 +1623,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'يتطلب تشغيل النماذج محليًا ثلاثة أنواع من الأدوات — محركات استدلال، وبيئات تشغيل ومديرون، ومسيّرات وبوابات — لذلك تُقارَن الأدوات الـ46 في دليل PromptQuorum ضمن كل نوع، بجدول مُنشأ من بيانات الأدوات نفسها التي تقوم عليها مراجعة كل أداة.',
+            text: `يتطلب تشغيل النماذج محليًا ثلاثة أنواع من الأدوات — محركات استدلال، وبيئات تشغيل ومديرون، ومسيّرات وبوابات — لذلك تُقارَن الأدوات الـ${RUN_SERVE_TOTAL} في دليل PromptQuorum ضمن كل نوع، بجدول مُنشأ من بيانات الأدوات نفسها التي تقوم عليها مراجعة كل أداة.`,
           },
           {
             type: 'plain-terms',
@@ -1616,7 +1631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '46 أداة في ثلاثة أنواع: محركات استدلال (30)، وبيئات تشغيل ومديرون (13)، ومسيّرات وبوابات (4). يظهر Ollama في مجموعتين لأنه محرك وبيئة تشغيل معًا.',
+          `${RUN_SERVE_TOTAL} أداة في ثلاثة أنواع: محركات استدلال (${RUN_SERVE_INFERENCE_ENGINES})، وبيئات تشغيل ومديرون (${RUN_SERVE_RUNTIMES_MANAGERS})، ومسيّرات وبوابات (${RUN_SERVE_ROUTERS_GATEWAYS}). يظهر Ollama في مجموعتين لأنه محرك وبيئة تشغيل معًا.`,
           'يُنشأ الجدول من سجل كل أداة ويُدقَّق مقابل ملف README الرسمي أو موقعها؛ والشرطة تعني «غير مذكور في التوثيق» وليس «لا» أبدًا. وبالنسبة إلى بعض الأدوات المعروفة، يسكت التوثيق المقتبس هنا عن ميزة معينة، فتظهر خلاياها بشرطة.',
           'يرتبط اسم كل أداة في الجدول بمراجعتها الخاصة في PromptQuorum، حيث تُغطّى خطوات التثبيت والحدود.',
         ],
@@ -1719,7 +1734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل البرامج المحلية](/ar/directory) — تصفّح أكثر من 200 تطبيق ذكاء اصطناعي محلي وصفّها حسب الفئة.',
+          `[دليل البرامج المحلية](/ar/directory) — تصفّح ${TOTAL_APP_COUNT} تطبيق ذكاء اصطناعي محلي وصفّها حسب الفئة.`,
           '[مقارنة أدوات الصوت والكلام المحلية](/ar/power-local-llm/local-llm-voice-audio-compared) — المقارنة نفسها لتحويل النص إلى كلام والكلام إلى نص والوكلاء الصوتيين.',
           '[مقارنة أدوات الصور والفيديو والرؤية المحلية](/ar/power-local-llm/local-llm-images-video-compared) — المقارنة نفسها لتوليد الصور ونماذج الرؤية.',
         ],
@@ -1730,7 +1745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'مقارنة محركات الاستدلال وبيئات التشغيل والبوابات المحلية (2026): تشغيل النماذج وتقديمها',
       description:
-        'قارن 46 أداة لتشغيل النماذج محليًا: محركات استدلال وبيئات تشغيل ومديرون وبوابات، من التوثيق الرسمي للمشاريع.',
+        `قارن ${RUN_SERVE_TOTAL} أداة لتشغيل النماذج محليًا: محركات استدلال وبيئات تشغيل ومديرون وبوابات، من التوثيق الرسمي للمشاريع.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-run-serve-compared',
       inLanguage: 'ar',
       datePublished: '2026-09-20',
@@ -1773,9 +1788,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '로컬 추론 엔진·런타임·게이트웨이 비교(2026): 모델 실행과 서빙',
     seoTitle: '로컬 추론 엔진·런타임 비교 2026',
     intro:
-      '자신의 하드웨어에서 모델을 실행하려면 세 종류의 도구가 필요합니다. 모델을 실제로 구동하는 추론 엔진, 모델을 대신 내려받아 실행해 주는 런타임과 매니저, 그리고 그 앞단에 놓이는 라우터와 게이트웨이입니다. 하나의 기능 목록으로는 이들을 공정하게 비교할 수 없습니다. 이 가이드는 무료 및 프리미엄(freemium) 도구 46개를 종류별로 나누어 비교하며, 비교표는 각 도구의 PromptQuorum 리뷰와 동일한 데이터로 생성되므로 표와 리뷰가 서로 어긋날 수 없습니다.',
+      `자신의 하드웨어에서 모델을 실행하려면 세 종류의 도구가 필요합니다. 모델을 실제로 구동하는 추론 엔진, 모델을 대신 내려받아 실행해 주는 런타임과 매니저, 그리고 그 앞단에 놓이는 라우터와 게이트웨이입니다. 하나의 기능 목록으로는 이들을 공정하게 비교할 수 없습니다. 이 가이드는 무료 및 프리미엄(freemium) 도구 ${RUN_SERVE_TOTAL}개를 종류별로 나누어 비교하며, 비교표는 각 도구의 PromptQuorum 리뷰와 동일한 데이터로 생성되므로 표와 리뷰가 서로 어긋날 수 없습니다.`,
     metaDescription:
-      '로컬 모델 실행 도구 46개 비교: 추론 엔진(llama.cpp, vLLM, SGLang, MLX 등), 런타임·매니저(Ollama, LM Studio, Jan), 게이트웨이. 라이선스, GPU 지원, OpenAI 호환 API를 공식 문서 기준으로 정리했습니다.',
+      `로컬 모델 실행 도구 ${RUN_SERVE_TOTAL}개 비교: 추론 엔진(llama.cpp, vLLM, SGLang, MLX 등), 런타임·매니저(Ollama, LM Studio, Jan), 게이트웨이. 라이선스, GPU 지원, OpenAI 호환 API를 공식 문서 기준으로 정리했습니다.`,
     twitterDescription:
       '로컬 추론 엔진, 런타임, 게이트웨이를 종류별로 비교: 라이선스, NVIDIA/Apple/AMD/CPU 지원, OpenAI 호환 API, 멀티 GPU를 공식 문서 기준으로 정리했습니다.',
     audience:
@@ -1794,7 +1809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU', 'Apple Silicon', 'AMD GPU', 'CPU'],
     leadAnswerBlock:
-      '**PromptQuorum 디렉터리에 있는 로컬 실행·서빙 도구 46개는 서로 따로 비교해야 하는 세 종류로 나뉩니다. 추론 엔진(30개), 런타임과 매니저(13개), 라우터와 게이트웨이(4개)입니다.** 엔진 중 15개는 NVIDIA GPU 지원을, 17개는 Apple Silicon 지원을, 21개는 OpenAI 호환 API를 문서화하고 있으며, 런타임 중 6개는 OpenAI 호환 API를 문서화하고 있습니다. 아래 비교표를 활용하되, 설치하기 전에 각 도구의 리뷰를 읽어 보세요.',
+      `**PromptQuorum 디렉터리에 있는 로컬 실행·서빙 도구 ${RUN_SERVE_TOTAL}개는 서로 따로 비교해야 하는 세 종류로 나뉩니다. 추론 엔진(${RUN_SERVE_INFERENCE_ENGINES}개), 런타임과 매니저(${RUN_SERVE_RUNTIMES_MANAGERS}개), 라우터와 게이트웨이(${RUN_SERVE_ROUTERS_GATEWAYS}개)입니다.** 엔진 중 15개는 NVIDIA GPU 지원을, 17개는 Apple Silicon 지원을, 21개는 OpenAI 호환 API를 문서화하고 있으며, 런타임 중 6개는 OpenAI 호환 API를 문서화하고 있습니다. 아래 비교표를 활용하되, 설치하기 전에 각 도구의 리뷰를 읽어 보세요.`,
     quickAnswerTop: {
       en: {
         question: '어떤 로컬 추론 도구를 써야 하나요?',
@@ -1827,7 +1842,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '모델을 로컬에서 실행하려면 추론 엔진, 런타임과 매니저, 라우터와 게이트웨이라는 세 종류의 도구가 필요하므로, PromptQuorum 디렉터리의 도구 46개를 종류별로 나누어 비교하며, 비교표는 각 도구의 리뷰와 동일한 도구 데이터로 생성됩니다.',
+            text: `모델을 로컬에서 실행하려면 추론 엔진, 런타임과 매니저, 라우터와 게이트웨이라는 세 종류의 도구가 필요하므로, PromptQuorum 디렉터리의 도구 ${RUN_SERVE_TOTAL}개를 종류별로 나누어 비교하며, 비교표는 각 도구의 리뷰와 동일한 도구 데이터로 생성됩니다.`,
           },
           {
             type: 'plain-terms',
@@ -1835,7 +1850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '도구 46개, 세 종류: 추론 엔진(30개), 런타임과 매니저(13개), 라우터와 게이트웨이(4개). Ollama는 엔진이자 런타임이므로 두 그룹에 모두 나타납니다.',
+          `도구 ${RUN_SERVE_TOTAL}개, 세 종류: 추론 엔진(${RUN_SERVE_INFERENCE_ENGINES}개), 런타임과 매니저(${RUN_SERVE_RUNTIMES_MANAGERS}개), 라우터와 게이트웨이(${RUN_SERVE_ROUTERS_GATEWAYS}개). Ollama는 엔진이자 런타임이므로 두 그룹에 모두 나타납니다.`,
           '표는 각 도구의 레코드로 생성되고 공식 README 또는 사이트와 대조해 확인했습니다. 대시는 "문서에 명시되지 않음"을 뜻하며 "아니오"를 뜻하지 않습니다. 잘 알려진 일부 도구는 여기서 인용한 문서에 특정 기능에 대한 언급이 없어 해당 셀이 대시로 표시됩니다.',
           '표의 모든 도구 이름은 해당 도구의 PromptQuorum 리뷰로 연결되며, 설치 단계와 한계는 그 리뷰에서 다룹니다.',
         ],
@@ -1938,7 +1953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 글',
         items: [
-          '[로컬 소프트웨어 디렉터리](/ko/directory) — 200개 이상의 로컬 AI 앱을 둘러보고 카테고리별로 필터링하세요.',
+          `[로컬 소프트웨어 디렉터리](/ko/directory) — ${TOTAL_APP_COUNT}개의 로컬 AI 앱을 둘러보고 카테고리별로 필터링하세요.`,
           '[로컬 음성·스피치 도구 비교](/ko/power-local-llm/local-llm-voice-audio-compared) — 음성 합성, 음성 인식, 음성 에이전트에 대한 같은 방식의 비교.',
           '[로컬 이미지·비디오·비전 도구 비교](/ko/power-local-llm/local-llm-images-video-compared) — 이미지 생성과 비전 모델에 대한 같은 방식의 비교.',
         ],
@@ -1949,7 +1964,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '로컬 추론 엔진·런타임·게이트웨이 비교(2026): 모델 실행과 서빙',
       description:
-        '로컬 모델 실행 도구 46개 비교: 추론 엔진, 런타임과 매니저, 게이트웨이를 프로젝트 공식 문서 기준으로 정리했습니다.',
+        `로컬 모델 실행 도구 ${RUN_SERVE_TOTAL}개 비교: 추론 엔진, 런타임과 매니저, 게이트웨이를 프로젝트 공식 문서 기준으로 정리했습니다.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-run-serve-compared',
       inLanguage: 'ko',
       datePublished: '2026-09-20',

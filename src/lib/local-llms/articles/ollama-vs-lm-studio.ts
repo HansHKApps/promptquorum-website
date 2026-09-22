@@ -5,6 +5,11 @@
 import type { Language } from "@/lib/blog/blogContent";
 
 import type { LLMArticle } from "@/lib/local-llms/types";
+import { localAiApps } from "@/lib/power-local-llm/apps-barrel";
+
+// Live count from the directory — recomputed at build time so this CTA never drifts from the
+// actual tool count as the directory grows.
+const TOTAL_APP_COUNT = localAiApps.length;
 
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
@@ -289,7 +294,7 @@ schema: {
             'Both Ollama and LM Studio can also serve as prompt development environments. For a broader comparison that includes Cursor, VS Code + Continue, and cloud playgrounds, see [best prompt engineering IDEs and editors](https://www.promptquorum.com/prompt-engineering/best-prompt-engineering-ides).',
             'Both tools run the same models — the difference in output quality comes from how you prompt them. For 80 techniques covering prompting fundamentals, frameworks, and evaluation, see the [prompt engineering guide](https://www.promptquorum.com/prompt-engineering).',
             'Once Ollama or LM Studio is serving the model, the next decision is which coding harness drives it. See [Continue.dev vs Cline vs Aider](/power-local-llm/continue-dev-vs-cline-vs-aider-local) for the three open-source picks and how they differ in workflow.',
-            'Ollama and LM Studio are just two entries in a much larger ecosystem. See the [Local LLM Software Directory](/directory) for 164 tools across runtimes, desktop apps, RAG, coding, and agents — each with a description, licence, and link.',
+            `Ollama and LM Studio are just two entries in a much larger ecosystem. See the [Local LLM Software Directory](/directory) for ${TOTAL_APP_COUNT} tools across runtimes, desktop apps, RAG, coding, and agents — each with a description, licence, and link.`,
           ],
           codeBlock: 'from openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama",  # dummy key, unused locally\n)\n\nresponse = client.chat.completions.create(\n  model="llama4:scout",  # or "llama3.2:3b" for lightweight\n  messages=[\n    {"role": "user", "content": "What is 2+2?"}\n  ]\n)\nprint(response.choices[0].message.content)',
           codeLanguage: 'python',

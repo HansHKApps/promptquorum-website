@@ -9,6 +9,24 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+
+// Live counts from the directory — recomputed at build time so this article never drifts from
+// the actual tool count as the directory grows. Only tools with their own PromptQuorum review are
+// counted (matches the CategoryCompareTable's own "only reviewed tools" rule).
+const TOTAL_APP_COUNT = localAiApps.length
+const REVIEWED_TO_APPS = localAiApps.filter((a) => a.reviewSlug != null)
+const TO_FINE_TUNING = REVIEWED_TO_APPS.filter((a) => a.categories.includes('fine-tuning-lora')).length
+const TO_OBSERVABILITY_EVAL = new Set(
+  REVIEWED_TO_APPS.filter((a) => a.categories.includes('observability') || a.categories.includes('evaluation-benchmarking')).map(
+    (a) => a.slug,
+  ),
+).size
+const TO_TOTAL = new Set(
+  REVIEWED_TO_APPS.filter(
+    (a) => a.categories.includes('fine-tuning-lora') || a.categories.includes('observability') || a.categories.includes('evaluation-benchmarking'),
+  ).map((a) => a.slug),
+).size
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
@@ -21,9 +39,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Local Model Training & Operations Tools Compared (2026): Fine-Tuning and Observability',
     seoTitle: 'Local Fine-Tuning & LLM Observability Tools 2026',
     intro:
-      'Tools for training and operating local language models are two different kinds of product — fine-tuning tools that adapt a model, and observability and evaluation tools that show how it behaves in use — and no single feature list compares them fairly. This guide compares 7 free and freemium tools, one kind at a time, using a comparison table generated from the same data as each tool\'s own PromptQuorum review, so the table and the reviews cannot disagree.',
+      `Tools for training and operating local language models are two different kinds of product — fine-tuning tools that adapt a model, and observability and evaluation tools that show how it behaves in use — and no single feature list compares them fairly. This guide compares ${TO_TOTAL} free and freemium tools, one kind at a time, using a comparison table generated from the same data as each tool's own PromptQuorum review, so the table and the reviews cannot disagree.`,
     metaDescription:
-      'Compare 7 local model training and operations tools side by side: fine-tuning (LLaMA-Factory, Unsloth) and LLM observability and evaluation (Langfuse, Plano). LoRA and QLoRA, low-VRAM training, GGUF export, tracing, from official docs.',
+      `Compare ${TO_TOTAL} local model training and operations tools side by side: fine-tuning (LLaMA-Factory, Unsloth) and LLM observability and evaluation (Langfuse, Plano). LoRA and QLoRA, low-VRAM training, GGUF export, tracing, from official docs.`,
     twitterDescription:
       'Local fine-tuning and LLM observability tools compared by kind — LoRA and QLoRA, low-VRAM training, GGUF export, tracing, evaluations — from official documentation.',
     audience:
@@ -42,7 +60,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU'],
     leadAnswerBlock:
-      '**The 7 local training and operations tools in the PromptQuorum directory split into two kinds that should be compared separately: fine-tuning tools (4) and observability and evaluation tools (3).** Among fine-tuning tools, [LLaMA-Factory](/power-local-llm/llama-factory-review) and [Unsloth](/power-local-llm/unsloth-review) document LoRA or QLoRA training; among observability tools, [Langfuse](/power-local-llm/langfuse-review) and [Plano](/power-local-llm/plano-review) document tracing of LLM calls. Use the comparison table below, and read each tool\'s own review before you install it.',
+      `**The ${TO_TOTAL} local training and operations tools in the PromptQuorum directory split into two kinds that should be compared separately: fine-tuning tools (${TO_FINE_TUNING}) and observability and evaluation tools (${TO_OBSERVABILITY_EVAL}).** Among fine-tuning tools, [LLaMA-Factory](/power-local-llm/llama-factory-review) and [Unsloth](/power-local-llm/unsloth-review) document LoRA or QLoRA training; among observability tools, [Langfuse](/power-local-llm/langfuse-review) and [Plano](/power-local-llm/plano-review) document tracing of LLM calls. Use the comparison table below, and read each tool's own review before you install it.`,
     quickAnswerTop: {
       en: {
         question: 'Which local fine-tuning or observability tool should I use?',
@@ -73,7 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Local training and operations tools are two different kinds of product — fine-tuning tools and observability and evaluation tools — so the 7 tools in the PromptQuorum directory are compared within each kind, using a table generated from the same tool data as each tool\'s own review.',
+            text: `Local training and operations tools are two different kinds of product — fine-tuning tools and observability and evaluation tools — so the ${TO_TOTAL} tools in the PromptQuorum directory are compared within each kind, using a table generated from the same tool data as each tool's own review.`,
           },
           {
             type: 'plain-terms',
@@ -81,7 +99,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '7 tools, two kinds: fine-tuning (4) and observability and evaluation (3). A tool that does more than one job appears in each kind it belongs to.',
+          `${TO_TOTAL} tools, two kinds: fine-tuning (${TO_FINE_TUNING}) and observability and evaluation (${TO_OBSERVABILITY_EVAL}). A tool that does more than one job appears in each kind it belongs to.`,
           'The table is generated from each tool\'s record and checked against its official README or site; a dash means "not stated in the documentation", never "no".',
           'This is a small group: the directory has no reviewed tools yet for the datasets and model-hub subcategories, so they are not compared here.',
           'Every tool name in the table links to its own PromptQuorum review, which is where installation steps and limits are covered.',
@@ -174,7 +192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local Software Directory](/directory) — browse all 200+ local AI apps and filter by category.',
+          `[Local Software Directory](/directory) — browse all ${TOTAL_APP_COUNT} local AI apps and filter by category.`,
           '[Local Inference Engines, Runtimes & Gateways Compared](/power-local-llm/local-llm-run-serve-compared) — the tools that run the models you train.',
           '[Local Coding Assistants, Agents & Workflow Tools Compared](/power-local-llm/local-llm-code-development-compared) — agent frameworks and workflow builders.',
         ],
@@ -185,7 +203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Local Model Training & Operations Tools Compared (2026): Fine-Tuning and Observability',
       description:
-        'Compare 7 local model training and operations tools side by side: fine-tuning and LLM observability and evaluation, from official documentation.',
+        `Compare ${TO_TOTAL} local model training and operations tools side by side: fine-tuning and LLM observability and evaluation, from official documentation.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-train-operate-compared',
       inLanguage: 'en',
       datePublished: '2026-09-21',
@@ -228,9 +246,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Lokale Tools für Modelltraining und Betrieb im Vergleich (2026): Fine-Tuning und Observability',
     seoTitle: 'Lokales Fine-Tuning & LLM-Observability 2026',
     intro:
-      'Tools für das Training und den Betrieb lokaler Sprachmodelle sind zwei verschiedene Produktarten — Fine-Tuning-Tools, die ein Modell anpassen, sowie Observability- und Evaluierungs-Tools, die zeigen, wie es sich im Einsatz verhält — und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht 7 kostenlose und Freemium-Tools, jeweils innerhalb einer Art, anhand einer Vergleichstabelle, die aus denselben Daten erzeugt wird wie der jeweilige PromptQuorum-Test des Tools, sodass Tabelle und Tests einander nicht widersprechen können.',
+      `Tools für das Training und den Betrieb lokaler Sprachmodelle sind zwei verschiedene Produktarten — Fine-Tuning-Tools, die ein Modell anpassen, sowie Observability- und Evaluierungs-Tools, die zeigen, wie es sich im Einsatz verhält — und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht ${TO_TOTAL} kostenlose und Freemium-Tools, jeweils innerhalb einer Art, anhand einer Vergleichstabelle, die aus denselben Daten erzeugt wird wie der jeweilige PromptQuorum-Test des Tools, sodass Tabelle und Tests einander nicht widersprechen können.`,
     metaDescription:
-      'Vergleich von 7 lokalen Tools für Training und Betrieb: Fine-Tuning (LLaMA-Factory, Unsloth) sowie LLM-Observability und Evaluierung (Langfuse, Plano). LoRA und QLoRA, GGUF-Export, Tracing, laut offizieller Dokumentation.',
+      `Vergleich von ${TO_TOTAL} lokalen Tools für Training und Betrieb: Fine-Tuning (LLaMA-Factory, Unsloth) sowie LLM-Observability und Evaluierung (Langfuse, Plano). LoRA und QLoRA, GGUF-Export, Tracing, laut offizieller Dokumentation.`,
     twitterDescription:
       'Lokale Fine-Tuning- und LLM-Observability-Tools nach Art verglichen — LoRA und QLoRA, Training mit wenig VRAM, GGUF-Export, Tracing, Evaluierungen — laut offizieller Dokumentation.',
     audience:
@@ -249,7 +267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU'],
     leadAnswerBlock:
-      '**Die 7 lokalen Tools für Training und Betrieb im PromptQuorum-Verzeichnis lassen sich in zwei Arten teilen, die getrennt verglichen werden sollten: Fine-Tuning-Tools (4) sowie Observability- und Evaluierungs-Tools (3).** Unter den Fine-Tuning-Tools dokumentieren [LLaMA-Factory](/de/power-local-llm/llama-factory-review) und [Unsloth](/de/power-local-llm/unsloth-review) LoRA- oder QLoRA-Training; unter den Observability-Tools dokumentieren [Langfuse](/de/power-local-llm/langfuse-review) und [Plano](/de/power-local-llm/plano-review) das Tracing von LLM-Aufrufen. Nutzen Sie die Vergleichstabelle unten und lesen Sie den jeweiligen Test des Tools, bevor Sie es installieren.',
+      `**Die ${TO_TOTAL} lokalen Tools für Training und Betrieb im PromptQuorum-Verzeichnis lassen sich in zwei Arten teilen, die getrennt verglichen werden sollten: Fine-Tuning-Tools (${TO_FINE_TUNING}) sowie Observability- und Evaluierungs-Tools (${TO_OBSERVABILITY_EVAL}).** Unter den Fine-Tuning-Tools dokumentieren [LLaMA-Factory](/de/power-local-llm/llama-factory-review) und [Unsloth](/de/power-local-llm/unsloth-review) LoRA- oder QLoRA-Training; unter den Observability-Tools dokumentieren [Langfuse](/de/power-local-llm/langfuse-review) und [Plano](/de/power-local-llm/plano-review) das Tracing von LLM-Aufrufen. Nutzen Sie die Vergleichstabelle unten und lesen Sie den jeweiligen Test des Tools, bevor Sie es installieren.`,
     quickAnswerTop: {
       en: {
         question: 'Welches lokale Fine-Tuning- oder Observability-Tool sollte ich verwenden?',
@@ -280,7 +298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Lokale Tools für Training und Betrieb sind zwei verschiedene Produktarten — Fine-Tuning-Tools sowie Observability- und Evaluierungs-Tools —, daher werden die 7 Tools im PromptQuorum-Verzeichnis innerhalb der jeweiligen Art verglichen, anhand einer Tabelle, die aus denselben Tooldaten erzeugt wird wie der jeweilige Test des Tools.',
+            text: `Lokale Tools für Training und Betrieb sind zwei verschiedene Produktarten — Fine-Tuning-Tools sowie Observability- und Evaluierungs-Tools —, daher werden die ${TO_TOTAL} Tools im PromptQuorum-Verzeichnis innerhalb der jeweiligen Art verglichen, anhand einer Tabelle, die aus denselben Tooldaten erzeugt wird wie der jeweilige Test des Tools.`,
           },
           {
             type: 'plain-terms',
@@ -288,7 +306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '7 Tools, zwei Arten: Fine-Tuning (4) sowie Observability und Evaluierung (3). Ein Tool, das mehr als eine Aufgabe erfüllt, erscheint in jeder Art, zu der es gehört.',
+          `${TO_TOTAL} Tools, zwei Arten: Fine-Tuning (${TO_FINE_TUNING}) sowie Observability und Evaluierung (${TO_OBSERVABILITY_EVAL}). Ein Tool, das mehr als eine Aufgabe erfüllt, erscheint in jeder Art, zu der es gehört.`,
           'Die Tabelle wird aus dem Datensatz jedes Tools erzeugt und mit dessen offizieller README oder Website abgeglichen; ein Strich bedeutet „in der Dokumentation nicht angegeben“, niemals „nein“.',
           'Das ist eine kleine Gruppe: Für die Unterkategorien Datensätze und Modell-Hubs gibt es im Verzeichnis noch keine getesteten Tools, daher werden sie hier nicht verglichen.',
           'Jeder Toolname in der Tabelle verlinkt auf den eigenen PromptQuorum-Test, in dem Installationsschritte und Grenzen behandelt werden.',
@@ -381,7 +399,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Verzeichnis lokaler Software](/de/directory) — alle über 200 lokalen KI-Apps durchsuchen und nach Kategorie filtern.',
+          `[Verzeichnis lokaler Software](/de/directory) — alle ${TOTAL_APP_COUNT} lokalen KI-Apps durchsuchen und nach Kategorie filtern.`,
           '[Lokale Inferenz-Engines, Runtimes und Gateways im Vergleich](/de/power-local-llm/local-llm-run-serve-compared) — die Tools, die die von Ihnen trainierten Modelle ausführen.',
           '[Lokale Coding-Assistenten, Agenten und Workflow-Tools im Vergleich](/de/power-local-llm/local-llm-code-development-compared) — Agenten-Frameworks und Workflow-Builder.',
         ],
@@ -392,7 +410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Lokale Tools für Modelltraining und Betrieb im Vergleich (2026): Fine-Tuning und Observability',
       description:
-        'Vergleich von 7 lokalen Tools für Modelltraining und Betrieb: Fine-Tuning sowie LLM-Observability und Evaluierung, laut offizieller Dokumentation.',
+        `Vergleich von ${TO_TOTAL} lokalen Tools für Modelltraining und Betrieb: Fine-Tuning sowie LLM-Observability und Evaluierung, laut offizieller Dokumentation.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-train-operate-compared',
       inLanguage: 'de',
       datePublished: '2026-09-21',
@@ -435,9 +453,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Comparatif des outils locaux d\'entraînement et d\'exploitation de modèles (2026) : fine-tuning et observabilité',
     seoTitle: 'Outils locaux de fine-tuning et d\'observabilité LLM 2026',
     intro:
-      'Les outils d\'entraînement et d\'exploitation de modèles de langage locaux sont deux types de produits différents — des outils de fine-tuning qui adaptent un modèle, et des outils d\'observabilité et d\'évaluation qui montrent son comportement à l\'usage — et aucune liste de fonctionnalités unique ne permet de les comparer équitablement. Ce guide compare 7 outils gratuits et freemium, un type à la fois, à l\'aide d\'un tableau comparatif généré à partir des mêmes données que l\'avis PromptQuorum de chaque outil, de sorte que le tableau et les avis ne peuvent pas se contredire.',
+      `Les outils d'entraînement et d'exploitation de modèles de langage locaux sont deux types de produits différents — des outils de fine-tuning qui adaptent un modèle, et des outils d'observabilité et d'évaluation qui montrent son comportement à l'usage — et aucune liste de fonctionnalités unique ne permet de les comparer équitablement. Ce guide compare ${TO_TOTAL} outils gratuits et freemium, un type à la fois, à l'aide d'un tableau comparatif généré à partir des mêmes données que l'avis PromptQuorum de chaque outil, de sorte que le tableau et les avis ne peuvent pas se contredire.`,
     metaDescription:
-      'Comparez 7 outils locaux d\'entraînement et d\'exploitation de modèles : fine-tuning (LLaMA-Factory, Unsloth) et observabilité LLM (Langfuse, Plano). LoRA et QLoRA, VRAM réduite, export GGUF, tracing.',
+      `Comparez ${TO_TOTAL} outils locaux d'entraînement et d'exploitation de modèles : fine-tuning (LLaMA-Factory, Unsloth) et observabilité LLM (Langfuse, Plano). LoRA et QLoRA, VRAM réduite, export GGUF, tracing.`,
     twitterDescription:
       'Outils locaux de fine-tuning et d\'observabilité LLM comparés par type — LoRA et QLoRA, entraînement à faible VRAM, export GGUF, tracing, évaluations — d\'après la documentation officielle.',
     audience:
@@ -456,7 +474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU'],
     leadAnswerBlock:
-      '**Les 7 outils locaux d\'entraînement et d\'exploitation du répertoire PromptQuorum se répartissent en deux types qu\'il faut comparer séparément : les outils de fine-tuning (4) et les outils d\'observabilité et d\'évaluation (3).** Parmi les outils de fine-tuning, [LLaMA-Factory](/fr/power-local-llm/llama-factory-review) et [Unsloth](/fr/power-local-llm/unsloth-review) documentent un entraînement LoRA ou QLoRA ; parmi les outils d\'observabilité, [Langfuse](/fr/power-local-llm/langfuse-review) et [Plano](/fr/power-local-llm/plano-review) documentent le tracing des appels LLM. Utilisez le tableau comparatif ci-dessous et lisez l\'avis de chaque outil avant de l\'installer.',
+      `**Les ${TO_TOTAL} outils locaux d'entraînement et d'exploitation du répertoire PromptQuorum se répartissent en deux types qu'il faut comparer séparément : les outils de fine-tuning (${TO_FINE_TUNING}) et les outils d'observabilité et d'évaluation (${TO_OBSERVABILITY_EVAL}).** Parmi les outils de fine-tuning, [LLaMA-Factory](/fr/power-local-llm/llama-factory-review) et [Unsloth](/fr/power-local-llm/unsloth-review) documentent un entraînement LoRA ou QLoRA ; parmi les outils d'observabilité, [Langfuse](/fr/power-local-llm/langfuse-review) et [Plano](/fr/power-local-llm/plano-review) documentent le tracing des appels LLM. Utilisez le tableau comparatif ci-dessous et lisez l'avis de chaque outil avant de l'installer.`,
     quickAnswerTop: {
       en: {
         question: 'Quel outil local de fine-tuning ou d\'observabilité choisir ?',
@@ -487,7 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Les outils locaux d\'entraînement et d\'exploitation sont deux types de produits différents — les outils de fine-tuning et les outils d\'observabilité et d\'évaluation — c\'est pourquoi les 7 outils du répertoire PromptQuorum sont comparés au sein de chaque type, à l\'aide d\'un tableau généré à partir des mêmes données que l\'avis de chaque outil.',
+            text: `Les outils locaux d'entraînement et d'exploitation sont deux types de produits différents — les outils de fine-tuning et les outils d'observabilité et d'évaluation — c'est pourquoi les ${TO_TOTAL} outils du répertoire PromptQuorum sont comparés au sein de chaque type, à l'aide d'un tableau généré à partir des mêmes données que l'avis de chaque outil.`,
           },
           {
             type: 'plain-terms',
@@ -495,7 +513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '7 outils, deux types : fine-tuning (4) et observabilité et évaluation (3). Un outil qui remplit plusieurs rôles apparaît dans chaque type auquel il appartient.',
+          `${TO_TOTAL} outils, deux types : fine-tuning (${TO_FINE_TUNING}) et observabilité et évaluation (${TO_OBSERVABILITY_EVAL}). Un outil qui remplit plusieurs rôles apparaît dans chaque type auquel il appartient.`,
           'Le tableau est généré à partir de la fiche de chaque outil et vérifié d\'après son README ou son site officiel ; un tiret signifie « non indiqué dans la documentation », jamais « non ».',
           'Ce groupe est restreint : le répertoire ne compte pas encore d\'outils évalués pour les sous-catégories des jeux de données et des hubs de modèles, ils ne sont donc pas comparés ici.',
           'Chaque nom d\'outil du tableau renvoie vers son propre avis PromptQuorum, où sont traités l\'installation et les limites.',
@@ -588,7 +606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire des logiciels locaux](/fr/directory) — parcourez plus de 200 applications d\'IA locale et filtrez par catégorie.',
+          `[Répertoire des logiciels locaux](/fr/directory) — parcourez ${TOTAL_APP_COUNT} applications d'IA locale et filtrez par catégorie.`,
           '[Comparatif des moteurs d\'inférence, runtimes et passerelles locaux](/fr/power-local-llm/local-llm-run-serve-compared) — les outils qui exécutent les modèles que vous entraînez.',
           '[Comparatif des assistants de code, agents et outils de workflow locaux](/fr/power-local-llm/local-llm-code-development-compared) — frameworks d\'agents et constructeurs de workflows.',
         ],
@@ -599,7 +617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Comparatif des outils locaux d\'entraînement et d\'exploitation de modèles (2026) : fine-tuning et observabilité',
       description:
-        'Comparez 7 outils locaux d\'entraînement et d\'exploitation de modèles : fine-tuning et observabilité et évaluation LLM, d\'après la documentation officielle.',
+        `Comparez ${TO_TOTAL} outils locaux d'entraînement et d'exploitation de modèles : fine-tuning et observabilité et évaluation LLM, d'après la documentation officielle.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-train-operate-compared',
       inLanguage: 'fr',
       datePublished: '2026-09-21',
@@ -642,9 +660,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Herramientas locales de entrenamiento y operación de modelos: comparativa (2026) — fine-tuning y observabilidad',
     seoTitle: 'Fine-tuning local y observabilidad de LLM 2026',
     intro:
-      'Las herramientas para entrenar y operar modelos de lenguaje locales son dos tipos de producto distintos — herramientas de fine-tuning que adaptan un modelo, y herramientas de observabilidad y evaluación que muestran cómo se comporta en uso — y ninguna lista de características única las compara de forma justa. Esta guía compara 7 herramientas gratuitas y freemium, un tipo cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis propio de PromptQuorum de cada herramienta, de modo que la tabla y los análisis no pueden contradecirse.',
+      `Las herramientas para entrenar y operar modelos de lenguaje locales son dos tipos de producto distintos — herramientas de fine-tuning que adaptan un modelo, y herramientas de observabilidad y evaluación que muestran cómo se comporta en uso — y ninguna lista de características única las compara de forma justa. Esta guía compara ${TO_TOTAL} herramientas gratuitas y freemium, un tipo cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis propio de PromptQuorum de cada herramienta, de modo que la tabla y los análisis no pueden contradecirse.`,
     metaDescription:
-      'Compara 7 herramientas locales de entrenamiento y operación de modelos: fine-tuning (LLaMA-Factory, Unsloth) y observabilidad y evaluación de LLM (Langfuse, Plano). LoRA y QLoRA, poca VRAM, exportación GGUF, trazado, según la documentación oficial.',
+      `Compara ${TO_TOTAL} herramientas locales de entrenamiento y operación de modelos: fine-tuning (LLaMA-Factory, Unsloth) y observabilidad y evaluación de LLM (Langfuse, Plano). LoRA y QLoRA, poca VRAM, exportación GGUF, trazado, según la documentación oficial.`,
     twitterDescription:
       'Herramientas locales de fine-tuning y observabilidad de LLM comparadas por tipo — LoRA y QLoRA, entrenamiento con poca VRAM, exportación GGUF, trazado, evaluaciones — según la documentación oficial.',
     audience:
@@ -663,7 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU'],
     leadAnswerBlock:
-      '**Las 7 herramientas locales de entrenamiento y operación del directorio de PromptQuorum se dividen en dos tipos que conviene comparar por separado: herramientas de fine-tuning (4) y herramientas de observabilidad y evaluación (3).** Entre las de fine-tuning, [LLaMA-Factory](/es/power-local-llm/llama-factory-review) y [Unsloth](/es/power-local-llm/unsloth-review) documentan el entrenamiento con LoRA o QLoRA; entre las de observabilidad, [Langfuse](/es/power-local-llm/langfuse-review) y [Plano](/es/power-local-llm/plano-review) documentan el trazado de las llamadas a LLM. Usa la tabla comparativa de abajo y lee el análisis propio de cada herramienta antes de instalarla.',
+      `**Las ${TO_TOTAL} herramientas locales de entrenamiento y operación del directorio de PromptQuorum se dividen en dos tipos que conviene comparar por separado: herramientas de fine-tuning (${TO_FINE_TUNING}) y herramientas de observabilidad y evaluación (${TO_OBSERVABILITY_EVAL}).** Entre las de fine-tuning, [LLaMA-Factory](/es/power-local-llm/llama-factory-review) y [Unsloth](/es/power-local-llm/unsloth-review) documentan el entrenamiento con LoRA o QLoRA; entre las de observabilidad, [Langfuse](/es/power-local-llm/langfuse-review) y [Plano](/es/power-local-llm/plano-review) documentan el trazado de las llamadas a LLM. Usa la tabla comparativa de abajo y lee el análisis propio de cada herramienta antes de instalarla.`,
     quickAnswerTop: {
       en: {
         question: '¿Qué herramienta local de fine-tuning u observabilidad debería usar?',
@@ -694,7 +712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Las herramientas locales de entrenamiento y operación son dos tipos de producto distintos — herramientas de fine-tuning y herramientas de observabilidad y evaluación — por lo que las 7 herramientas del directorio de PromptQuorum se comparan dentro de cada tipo, con una tabla generada a partir de los mismos datos que el análisis propio de cada herramienta.',
+            text: `Las herramientas locales de entrenamiento y operación son dos tipos de producto distintos — herramientas de fine-tuning y herramientas de observabilidad y evaluación — por lo que las ${TO_TOTAL} herramientas del directorio de PromptQuorum se comparan dentro de cada tipo, con una tabla generada a partir de los mismos datos que el análisis propio de cada herramienta.`,
           },
           {
             type: 'plain-terms',
@@ -702,7 +720,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '7 herramientas, dos tipos: fine-tuning (4) y observabilidad y evaluación (3). Una herramienta que hace más de una tarea aparece en cada tipo al que pertenece.',
+          `${TO_TOTAL} herramientas, dos tipos: fine-tuning (${TO_FINE_TUNING}) y observabilidad y evaluación (${TO_OBSERVABILITY_EVAL}). Una herramienta que hace más de una tarea aparece en cada tipo al que pertenece.`,
           'La tabla se genera a partir del registro de cada herramienta y se contrasta con su README o sitio oficial; un guion significa "no indicado en la documentación", nunca "no".',
           'Es un grupo pequeño: el directorio aún no tiene herramientas analizadas para las subcategorías de conjuntos de datos y hubs de modelos, por lo que aquí no se comparan.',
           'Cada nombre de herramienta de la tabla enlaza a su propio análisis de PromptQuorum, donde se explican los pasos de instalación y los límites.',
@@ -795,7 +813,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software local](/es/directory) — explora más de 200 apps de IA local y filtra por categoría.',
+          `[Directorio de software local](/es/directory) — explora ${TOTAL_APP_COUNT} apps de IA local y filtra por categoría.`,
           '[Motores de inferencia, runtimes y gateways locales: comparativa](/es/power-local-llm/local-llm-run-serve-compared) — las herramientas que ejecutan los modelos que entrenas.',
           '[Asistentes de programación, agentes y herramientas de flujo de trabajo locales: comparativa](/es/power-local-llm/local-llm-code-development-compared) — frameworks de agentes y constructores de flujos de trabajo.',
         ],
@@ -806,7 +824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Herramientas locales de entrenamiento y operación de modelos: comparativa (2026) — fine-tuning y observabilidad',
       description:
-        'Compara 7 herramientas locales de entrenamiento y operación de modelos: fine-tuning y observabilidad y evaluación de LLM, según la documentación oficial.',
+        `Compara ${TO_TOTAL} herramientas locales de entrenamiento y operación de modelos: fine-tuning y observabilidad y evaluación de LLM, según la documentación oficial.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-train-operate-compared',
       inLanguage: 'es',
       datePublished: '2026-09-21',
@@ -849,9 +867,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'ローカルモデルの学習・運用ツール比較(2026):ファインチューニングとオブザーバビリティ',
     seoTitle: 'ローカルFT・LLMオブザーバビリティ比較2026',
     intro:
-      'ローカル言語モデルの学習・運用ツールには、モデルを調整するファインチューニングツールと、利用時の挙動を可視化するオブザーバビリティ・評価ツールという2種類の異なる製品があり、単一の機能一覧では公平に比較できません。本ガイドでは、無料・フリーミアムの7つのツールを種類ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成しているため、表とレビューの内容が食い違うことはありません。',
+      `ローカル言語モデルの学習・運用ツールには、モデルを調整するファインチューニングツールと、利用時の挙動を可視化するオブザーバビリティ・評価ツールという2種類の異なる製品があり、単一の機能一覧では公平に比較できません。本ガイドでは、無料・フリーミアムの${TO_TOTAL}つのツールを種類ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成しているため、表とレビューの内容が食い違うことはありません。`,
     metaDescription:
-      'ローカルモデルの学習・運用ツール7つを比較:ファインチューニング(LLaMA-Factory、Unsloth)とLLMオブザーバビリティ・評価(Langfuse、Plano)。LoRA・QLoRA、低VRAM学習、GGUFエクスポート、トレーシングを公式ドキュメントに基づき解説。',
+      `ローカルモデルの学習・運用ツール${TO_TOTAL}つを比較:ファインチューニング(LLaMA-Factory、Unsloth)とLLMオブザーバビリティ・評価(Langfuse、Plano)。LoRA・QLoRA、低VRAM学習、GGUFエクスポート、トレーシングを公式ドキュメントに基づき解説。`,
     twitterDescription:
       'ローカルのファインチューニングとLLMオブザーバビリティのツールを種類別に比較 — LoRA・QLoRA、低VRAM学習、GGUFエクスポート、トレーシング、評価を公式ドキュメントに基づき整理。',
     audience:
@@ -870,7 +888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU'],
     leadAnswerBlock:
-      '**PromptQuorumディレクトリにある7つのローカル学習・運用ツールは、別々に比較すべき2種類に分かれます。ファインチューニングツール(4つ)と、オブザーバビリティ・評価ツール(3つ)です。** ファインチューニングツールでは[LLaMA-Factory](/ja/power-local-llm/llama-factory-review)と[Unsloth](/ja/power-local-llm/unsloth-review)がLoRAまたはQLoRAによる学習を、オブザーバビリティツールでは[Langfuse](/ja/power-local-llm/langfuse-review)と[Plano](/ja/power-local-llm/plano-review)がLLM呼び出しのトレーシングを、それぞれドキュメントに記載しています。下の比較表を使い、インストールの前に各ツールのレビューをお読みください。',
+      `**PromptQuorumディレクトリにある${TO_TOTAL}つのローカル学習・運用ツールは、別々に比較すべき2種類に分かれます。ファインチューニングツール(${TO_FINE_TUNING}つ)と、オブザーバビリティ・評価ツール(${TO_OBSERVABILITY_EVAL}つ)です。** ファインチューニングツールでは[LLaMA-Factory](/ja/power-local-llm/llama-factory-review)と[Unsloth](/ja/power-local-llm/unsloth-review)がLoRAまたはQLoRAによる学習を、オブザーバビリティツールでは[Langfuse](/ja/power-local-llm/langfuse-review)と[Plano](/ja/power-local-llm/plano-review)がLLM呼び出しのトレーシングを、それぞれドキュメントに記載しています。下の比較表を使い、インストールの前に各ツールのレビューをお読みください。`,
     quickAnswerTop: {
       en: {
         question: 'ローカルのファインチューニングやオブザーバビリティには、どのツールを使えばよいですか?',
@@ -901,7 +919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'ローカルの学習・運用ツールはファインチューニングツールとオブザーバビリティ・評価ツールという2種類の異なる製品であるため、PromptQuorumディレクトリの7つのツールは種類ごとに比較しており、表は各ツールのレビューと同じツールデータから生成しています。',
+            text: `ローカルの学習・運用ツールはファインチューニングツールとオブザーバビリティ・評価ツールという2種類の異なる製品であるため、PromptQuorumディレクトリの${TO_TOTAL}つのツールは種類ごとに比較しており、表は各ツールのレビューと同じツールデータから生成しています。`,
           },
           {
             type: 'plain-terms',
@@ -909,7 +927,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '7つのツール、2つの種類:ファインチューニング(4つ)とオブザーバビリティ・評価(3つ)。複数の役割を持つツールは、該当する種類ごとに掲載されます。',
+          `${TO_TOTAL}つのツール、2つの種類:ファインチューニング(${TO_FINE_TUNING}つ)とオブザーバビリティ・評価(${TO_OBSERVABILITY_EVAL}つ)。複数の役割を持つツールは、該当する種類ごとに掲載されます。`,
           '表は各ツールのレコードから生成し、公式のREADMEまたはサイトと照合しています。ダッシュは「ドキュメントに記載なし」の意味であり、「なし」ではありません。',
           '小規模なグループです。ディレクトリには、データセットとモデルハブのサブカテゴリについてレビュー済みのツールがまだないため、ここでは比較していません。',
           '表中のツール名はいずれもそのツールのPromptQuorumレビューにリンクしており、インストール手順や制限事項はそちらで扱っています。',
@@ -1002,7 +1020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルソフトウェアディレクトリ](/ja/directory) — 200以上のローカルAIアプリをカテゴリ別に絞り込めます。',
+          `[ローカルソフトウェアディレクトリ](/ja/directory) — ${TOTAL_APP_COUNT}件のローカルAIアプリをカテゴリ別に絞り込めます。`,
           '[ローカル推論エンジン・ランタイム・ゲートウェイ比較](/ja/power-local-llm/local-llm-run-serve-compared) — 学習させたモデルを実行するツールです。',
           '[ローカルのコーディングアシスタント・エージェント・ワークフローツール比較](/ja/power-local-llm/local-llm-code-development-compared) — エージェントフレームワークとワークフロービルダーです。',
         ],
@@ -1013,7 +1031,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'ローカルモデルの学習・運用ツール比較(2026):ファインチューニングとオブザーバビリティ',
       description:
-        'ローカルモデルの学習・運用ツール7つを比較:ファインチューニングとLLMオブザーバビリティ・評価を、公式ドキュメントに基づいて解説。',
+        `ローカルモデルの学習・運用ツール${TO_TOTAL}つを比較:ファインチューニングとLLMオブザーバビリティ・評価を、公式ドキュメントに基づいて解説。`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-train-operate-compared',
       inLanguage: 'ja',
       datePublished: '2026-09-21',
@@ -1056,9 +1074,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '本地模型训练与运维工具对比(2026):微调与可观测性',
     seoTitle: '本地微调与LLM可观测性工具对比2026',
     intro:
-      '用于训练和运维本地语言模型的工具属于两类不同的产品——用于调整模型的微调工具,以及展示模型在实际使用中表现的可观测性与评估工具——没有哪一份统一的功能清单能公平地比较它们。本指南对比7款免费和免费增值工具,按类别逐一比较,所用对比表与各工具自己的PromptQuorum评测生成自同一份数据,因此表格与评测不会互相矛盾。',
+      `用于训练和运维本地语言模型的工具属于两类不同的产品——用于调整模型的微调工具,以及展示模型在实际使用中表现的可观测性与评估工具——没有哪一份统一的功能清单能公平地比较它们。本指南对比${TO_TOTAL}款免费和免费增值工具,按类别逐一比较,所用对比表与各工具自己的PromptQuorum评测生成自同一份数据,因此表格与评测不会互相矛盾。`,
     metaDescription:
-      '并排对比7款本地模型训练与运维工具:微调(LLaMA-Factory、Unsloth)以及LLM可观测性与评估(Langfuse、Plano)。LoRA与QLoRA、低显存训练、GGUF导出、追踪,均来自官方文档。',
+      `并排对比${TO_TOTAL}款本地模型训练与运维工具:微调(LLaMA-Factory、Unsloth)以及LLM可观测性与评估(Langfuse、Plano)。LoRA与QLoRA、低显存训练、GGUF导出、追踪,均来自官方文档。`,
     twitterDescription:
       '按类别对比本地微调与LLM可观测性工具——LoRA与QLoRA、低显存训练、GGUF导出、追踪、评估——依据官方文档。',
     audience:
@@ -1077,7 +1095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU'],
     leadAnswerBlock:
-      '**PromptQuorum目录中的7款本地训练与运维工具分为两类,应分别比较:微调工具(4款)以及可观测性与评估工具(3款)。** 在微调工具中,[LLaMA-Factory](/zh/power-local-llm/llama-factory-review)和[Unsloth](/zh/power-local-llm/unsloth-review)在文档中说明支持LoRA或QLoRA训练;在可观测性工具中,[Langfuse](/zh/power-local-llm/langfuse-review)和[Plano](/zh/power-local-llm/plano-review)在文档中说明支持对LLM调用进行追踪。请使用下方的对比表,并在安装前阅读各工具自己的评测。',
+      `**PromptQuorum目录中的${TO_TOTAL}款本地训练与运维工具分为两类,应分别比较:微调工具(${TO_FINE_TUNING}款)以及可观测性与评估工具(${TO_OBSERVABILITY_EVAL}款)。** 在微调工具中,[LLaMA-Factory](/zh/power-local-llm/llama-factory-review)和[Unsloth](/zh/power-local-llm/unsloth-review)在文档中说明支持LoRA或QLoRA训练;在可观测性工具中,[Langfuse](/zh/power-local-llm/langfuse-review)和[Plano](/zh/power-local-llm/plano-review)在文档中说明支持对LLM调用进行追踪。请使用下方的对比表,并在安装前阅读各工具自己的评测。`,
     quickAnswerTop: {
       en: {
         question: '我应该使用哪款本地微调或可观测性工具?',
@@ -1108,7 +1126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '本地训练与运维工具属于两类不同的产品——微调工具以及可观测性与评估工具——因此PromptQuorum目录中的7款工具在各自类别内进行比较,所用表格与各工具自己的评测生成自同一份工具数据。',
+            text: `本地训练与运维工具属于两类不同的产品——微调工具以及可观测性与评估工具——因此PromptQuorum目录中的${TO_TOTAL}款工具在各自类别内进行比较,所用表格与各工具自己的评测生成自同一份工具数据。`,
           },
           {
             type: 'plain-terms',
@@ -1116,7 +1134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '7款工具,两个类别:微调(4款)以及可观测性与评估(3款)。身兼多职的工具会出现在它所属的每个类别中。',
+          `${TO_TOTAL}款工具,两个类别:微调(${TO_FINE_TUNING}款)以及可观测性与评估(${TO_OBSERVABILITY_EVAL}款)。身兼多职的工具会出现在它所属的每个类别中。`,
           '表格生成自各工具的记录,并对照其官方README或网站核对;短横线表示"文档中未说明",绝不表示"没有"。',
           '这是一个很小的群组:目录中尚无已评测的数据集和模型中心子类别工具,因此这里不对它们进行比较。',
           '表格中的每个工具名称都链接到其自己的PromptQuorum评测,安装步骤和局限都在评测中介绍。',
@@ -1209,7 +1227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地软件目录](/zh/directory)——浏览全部200多款本地AI应用,并按类别筛选。',
+          `[本地软件目录](/zh/directory)——浏览全部${TOTAL_APP_COUNT}款本地AI应用,并按类别筛选。`,
           '[本地推理引擎、运行时与网关对比](/zh/power-local-llm/local-llm-run-serve-compared)——运行你所训练模型的工具。',
           '[本地编程助手、智能体与工作流工具对比](/zh/power-local-llm/local-llm-code-development-compared)——智能体框架与工作流构建器。',
         ],
@@ -1220,7 +1238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '本地模型训练与运维工具对比(2026):微调与可观测性',
       description:
-        '并排对比7款本地模型训练与运维工具:微调以及LLM可观测性与评估,均来自官方文档。',
+        `并排对比${TO_TOTAL}款本地模型训练与运维工具:微调以及LLM可观测性与评估,均来自官方文档。`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-train-operate-compared',
       inLanguage: 'zh',
       datePublished: '2026-09-21',
@@ -1263,9 +1281,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Ferramentas locais de treinamento e operação de modelos comparadas (2026): fine-tuning e observabilidade',
     seoTitle: 'Fine-tuning local e observabilidade de LLMs 2026',
     intro:
-      'Ferramentas para treinar e operar modelos de linguagem locais são dois tipos diferentes de produto — ferramentas de fine-tuning, que adaptam um modelo, e ferramentas de observabilidade e avaliação, que mostram como ele se comporta em uso — e nenhuma lista única de recursos as compara de forma justa. Este guia compara 7 ferramentas gratuitas e freemium, um tipo de cada vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise da PromptQuorum de cada ferramenta, de modo que a tabela e as análises não podem se contradizer.',
+      `Ferramentas para treinar e operar modelos de linguagem locais são dois tipos diferentes de produto — ferramentas de fine-tuning, que adaptam um modelo, e ferramentas de observabilidade e avaliação, que mostram como ele se comporta em uso — e nenhuma lista única de recursos as compara de forma justa. Este guia compara ${TO_TOTAL} ferramentas gratuitas e freemium, um tipo de cada vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise da PromptQuorum de cada ferramenta, de modo que a tabela e as análises não podem se contradizer.`,
     metaDescription:
-      'Compare 7 ferramentas locais de treinamento e operação de modelos: fine-tuning (LLaMA-Factory, Unsloth) e observabilidade e avaliação de LLMs (Langfuse, Plano). LoRA e QLoRA, GGUF, tracing, segundo a documentação oficial.',
+      `Compare ${TO_TOTAL} ferramentas locais de treinamento e operação de modelos: fine-tuning (LLaMA-Factory, Unsloth) e observabilidade e avaliação de LLMs (Langfuse, Plano). LoRA e QLoRA, GGUF, tracing, segundo a documentação oficial.`,
     twitterDescription:
       'Ferramentas locais de fine-tuning e observabilidade de LLMs comparadas por tipo — LoRA e QLoRA, treinamento com pouca VRAM, exportação GGUF, tracing, avaliações — segundo a documentação oficial.',
     audience:
@@ -1284,7 +1302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU'],
     leadAnswerBlock:
-      '**As 7 ferramentas locais de treinamento e operação do diretório da PromptQuorum se dividem em dois tipos que devem ser comparados separadamente: ferramentas de fine-tuning (4) e ferramentas de observabilidade e avaliação (3).** Entre as ferramentas de fine-tuning, [LLaMA-Factory](/pt/power-local-llm/llama-factory-review) e [Unsloth](/pt/power-local-llm/unsloth-review) documentam treinamento com LoRA ou QLoRA; entre as de observabilidade, [Langfuse](/pt/power-local-llm/langfuse-review) e [Plano](/pt/power-local-llm/plano-review) documentam o tracing de chamadas a LLMs. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.',
+      `**As ${TO_TOTAL} ferramentas locais de treinamento e operação do diretório da PromptQuorum se dividem em dois tipos que devem ser comparados separadamente: ferramentas de fine-tuning (${TO_FINE_TUNING}) e ferramentas de observabilidade e avaliação (${TO_OBSERVABILITY_EVAL}).** Entre as ferramentas de fine-tuning, [LLaMA-Factory](/pt/power-local-llm/llama-factory-review) e [Unsloth](/pt/power-local-llm/unsloth-review) documentam treinamento com LoRA ou QLoRA; entre as de observabilidade, [Langfuse](/pt/power-local-llm/langfuse-review) e [Plano](/pt/power-local-llm/plano-review) documentam o tracing de chamadas a LLMs. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
     quickAnswerTop: {
       en: {
         question: 'Qual ferramenta local de fine-tuning ou observabilidade devo usar?',
@@ -1315,7 +1333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Ferramentas locais de treinamento e operação são dois tipos diferentes de produto — ferramentas de fine-tuning e ferramentas de observabilidade e avaliação — por isso as 7 ferramentas do diretório da PromptQuorum são comparadas dentro de cada tipo, usando uma tabela gerada a partir dos mesmos dados de cada análise de ferramenta.',
+            text: `Ferramentas locais de treinamento e operação são dois tipos diferentes de produto — ferramentas de fine-tuning e ferramentas de observabilidade e avaliação — por isso as ${TO_TOTAL} ferramentas do diretório da PromptQuorum são comparadas dentro de cada tipo, usando uma tabela gerada a partir dos mesmos dados de cada análise de ferramenta.`,
           },
           {
             type: 'plain-terms',
@@ -1323,7 +1341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '7 ferramentas, dois tipos: fine-tuning (4) e observabilidade e avaliação (3). Uma ferramenta que faz mais de uma função aparece em cada tipo a que pertence.',
+          `${TO_TOTAL} ferramentas, dois tipos: fine-tuning (${TO_FINE_TUNING}) e observabilidade e avaliação (${TO_OBSERVABILITY_EVAL}). Uma ferramenta que faz mais de uma função aparece em cada tipo a que pertence.`,
           'A tabela é gerada a partir do registro de cada ferramenta e conferida com o README ou site oficial; um traço significa "não informado na documentação", nunca "não".',
           'É um grupo pequeno: o diretório ainda não tem ferramentas analisadas para as subcategorias de conjuntos de dados e hubs de modelos, por isso elas não são comparadas aqui.',
           'Cada nome de ferramenta na tabela leva à sua própria análise da PromptQuorum, onde estão as etapas de instalação e os limites.',
@@ -1416,7 +1434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software local](/pt/directory) — navegue por mais de 200 apps de IA local e filtre por categoria.',
+          `[Diretório de software local](/pt/directory) — navegue por ${TOTAL_APP_COUNT} apps de IA local e filtre por categoria.`,
           '[Mecanismos de inferência, runtimes e gateways locais comparados](/pt/power-local-llm/local-llm-run-serve-compared) — as ferramentas que executam os modelos que você treina.',
           '[Assistentes de código, agentes e ferramentas de fluxo de trabalho locais comparados](/pt/power-local-llm/local-llm-code-development-compared) — frameworks de agentes e construtores de fluxos de trabalho.',
         ],
@@ -1427,7 +1445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Ferramentas locais de treinamento e operação de modelos comparadas (2026): fine-tuning e observabilidade',
       description:
-        'Compare 7 ferramentas locais de treinamento e operação de modelos lado a lado: fine-tuning e observabilidade e avaliação de LLMs, segundo a documentação oficial.',
+        `Compare ${TO_TOTAL} ferramentas locais de treinamento e operação de modelos lado a lado: fine-tuning e observabilidade e avaliação de LLMs, segundo a documentação oficial.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-train-operate-compared',
       inLanguage: 'pt-BR',
       datePublished: '2026-09-21',
@@ -1470,9 +1488,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مقارنة أدوات تدريب النماذج المحلية وتشغيلها (2026): الضبط الدقيق والمراقبة',
     seoTitle: 'أدوات الضبط الدقيق ومراقبة LLM المحلية 2026',
     intro:
-      'أدوات تدريب النماذج اللغوية المحلية وتشغيلها نوعان مختلفان من المنتجات — أدوات ضبط دقيق تكيّف النموذج، وأدوات مراقبة وتقييم تُظهر سلوكه أثناء الاستخدام — ولا تصلح قائمة ميزات واحدة لمقارنتهما بإنصاف. يقارن هذا الدليل 7 أدوات مجانية أو بنموذج freemium، كل نوع على حدة، باستخدام جدول مقارنة مولَّد من البيانات نفسها التي تعتمد عليها مراجعة PromptQuorum الخاصة بكل أداة، فلا يمكن أن يتعارض الجدول مع المراجعات.',
+      `أدوات تدريب النماذج اللغوية المحلية وتشغيلها نوعان مختلفان من المنتجات — أدوات ضبط دقيق تكيّف النموذج، وأدوات مراقبة وتقييم تُظهر سلوكه أثناء الاستخدام — ولا تصلح قائمة ميزات واحدة لمقارنتهما بإنصاف. يقارن هذا الدليل ${TO_TOTAL} أدوات مجانية أو بنموذج freemium، كل نوع على حدة، باستخدام جدول مقارنة مولَّد من البيانات نفسها التي تعتمد عليها مراجعة PromptQuorum الخاصة بكل أداة، فلا يمكن أن يتعارض الجدول مع المراجعات.`,
     metaDescription:
-      'قارن 7 أدوات لتدريب النماذج المحلية وتشغيلها: الضبط الدقيق (LLaMA-Factory وUnsloth) ومراقبة LLM وتقييمها (Langfuse وPlano). LoRA وQLoRA وتدريب بذاكرة VRAM منخفضة وتصدير GGUF والتتبع، من الوثائق الرسمية.',
+      `قارن ${TO_TOTAL} أدوات لتدريب النماذج المحلية وتشغيلها: الضبط الدقيق (LLaMA-Factory وUnsloth) ومراقبة LLM وتقييمها (Langfuse وPlano). LoRA وQLoRA وتدريب بذاكرة VRAM منخفضة وتصدير GGUF والتتبع، من الوثائق الرسمية.`,
     twitterDescription:
       'مقارنة أدوات الضبط الدقيق المحلي ومراقبة LLM حسب النوع — LoRA وQLoRA وتدريب بذاكرة VRAM منخفضة وتصدير GGUF والتتبع والتقييمات — من الوثائق الرسمية.',
     audience:
@@ -1530,7 +1548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '7 أدوات في نوعين: الضبط الدقيق (4) والمراقبة والتقييم (3). والأداة التي تؤدي أكثر من مهمة تظهر في كل نوع تنتمي إليه.',
+          `${TO_TOTAL} أدوات في نوعين: الضبط الدقيق (${TO_FINE_TUNING}) والمراقبة والتقييم (${TO_OBSERVABILITY_EVAL}). والأداة التي تؤدي أكثر من مهمة تظهر في كل نوع تنتمي إليه.`,
           'الجدول مولَّد من سجل كل أداة ومدقَّق مقابل ملف README الرسمي أو الموقع الرسمي؛ والشرطة تعني «غير مذكور في الوثائق»، ولا تعني «لا» أبدًا.',
           'هذه مجموعة صغيرة: لا يضم الدليل حتى الآن أدوات مراجَعة في الفئتين الفرعيتين لمجموعات البيانات ومراكز النماذج، لذا لا تُقارَن هنا.',
           'كل اسم أداة في الجدول يرتبط بمراجعة PromptQuorum الخاصة بها، وفيها خطوات التثبيت والحدود.',
@@ -1623,7 +1641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل البرامج المحلية](/ar/directory) — تصفّح أكثر من 200 تطبيق ذكاء اصطناعي محلي وصفِّها حسب الفئة.',
+          `[دليل البرامج المحلية](/ar/directory) — تصفّح ${TOTAL_APP_COUNT} تطبيق ذكاء اصطناعي محلي وصفِّها حسب الفئة.`,
           '[مقارنة محركات الاستدلال وبيئات التشغيل والبوابات المحلية](/ar/power-local-llm/local-llm-run-serve-compared) — الأدوات التي تشغّل النماذج التي تدرّبها.',
           '[مقارنة مساعدات البرمجة والوكلاء وأدوات سير العمل المحلية](/ar/power-local-llm/local-llm-code-development-compared) — أطر الوكلاء ومنشئو سير العمل.',
         ],
@@ -1634,7 +1652,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'مقارنة أدوات تدريب النماذج المحلية وتشغيلها (2026): الضبط الدقيق والمراقبة',
       description:
-        'قارن 7 أدوات لتدريب النماذج المحلية وتشغيلها جنبًا إلى جنب: الضبط الدقيق ومراقبة LLM وتقييمها، من الوثائق الرسمية.',
+        `قارن ${TO_TOTAL} أدوات لتدريب النماذج المحلية وتشغيلها جنبًا إلى جنب: الضبط الدقيق ومراقبة LLM وتقييمها، من الوثائق الرسمية.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-train-operate-compared',
       inLanguage: 'ar',
       datePublished: '2026-09-21',
@@ -1677,9 +1695,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '로컬 모델 학습·운영 도구 비교(2026): 파인튜닝과 관측성',
     seoTitle: '로컬 파인튜닝·LLM 관측성 도구 비교 2026',
     intro:
-      '로컬 언어 모델을 학습하고 운영하는 도구는 서로 다른 두 종류의 제품입니다. 모델을 조정하는 파인튜닝 도구와, 모델이 실제 사용 중 어떻게 동작하는지 보여 주는 관측성·평가 도구이며, 하나의 기능 목록으로는 이 둘을 공정하게 비교할 수 없습니다. 이 가이드는 무료 및 프리미엄 도구 7개를 종류별로 나누어 비교하며, 비교표는 각 도구의 PromptQuorum 리뷰와 같은 데이터에서 생성되므로 표와 리뷰의 내용이 서로 어긋날 수 없습니다.',
+      `로컬 언어 모델을 학습하고 운영하는 도구는 서로 다른 두 종류의 제품입니다. 모델을 조정하는 파인튜닝 도구와, 모델이 실제 사용 중 어떻게 동작하는지 보여 주는 관측성·평가 도구이며, 하나의 기능 목록으로는 이 둘을 공정하게 비교할 수 없습니다. 이 가이드는 무료 및 프리미엄 도구 ${TO_TOTAL}개를 종류별로 나누어 비교하며, 비교표는 각 도구의 PromptQuorum 리뷰와 같은 데이터에서 생성되므로 표와 리뷰의 내용이 서로 어긋날 수 없습니다.`,
     metaDescription:
-      '로컬 모델 학습·운영 도구 7개를 비교합니다: 파인튜닝(LLaMA-Factory, Unsloth)과 LLM 관측성·평가(Langfuse, Plano). LoRA와 QLoRA, 저VRAM 학습, GGUF 내보내기, 트레이싱을 공식 문서 기준으로 정리했습니다.',
+      `로컬 모델 학습·운영 도구 ${TO_TOTAL}개를 비교합니다: 파인튜닝(LLaMA-Factory, Unsloth)과 LLM 관측성·평가(Langfuse, Plano). LoRA와 QLoRA, 저VRAM 학습, GGUF 내보내기, 트레이싱을 공식 문서 기준으로 정리했습니다.`,
     twitterDescription:
       '로컬 파인튜닝과 LLM 관측성 도구를 종류별로 비교합니다. LoRA와 QLoRA, 저VRAM 학습, GGUF 내보내기, 트레이싱, 평가를 공식 문서 기준으로 정리했습니다.',
     audience:
@@ -1698,7 +1716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['NVIDIA GPU'],
     leadAnswerBlock:
-      '**PromptQuorum 디렉터리의 로컬 학습·운영 도구 7개는 따로 비교해야 하는 두 종류로 나뉩니다. 파인튜닝 도구(4개)와 관측성·평가 도구(3개)입니다.** 파인튜닝 도구 중 [LLaMA-Factory](/ko/power-local-llm/llama-factory-review)와 [Unsloth](/ko/power-local-llm/unsloth-review)는 LoRA 또는 QLoRA 학습을 문서에 명시하고 있으며, 관측성 도구 중 [Langfuse](/ko/power-local-llm/langfuse-review)와 [Plano](/ko/power-local-llm/plano-review)는 LLM 호출 트레이싱을 문서에 명시하고 있습니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보세요.',
+      `**PromptQuorum 디렉터리의 로컬 학습·운영 도구 ${TO_TOTAL}개는 따로 비교해야 하는 두 종류로 나뉩니다. 파인튜닝 도구(${TO_FINE_TUNING}개)와 관측성·평가 도구(${TO_OBSERVABILITY_EVAL}개)입니다.** 파인튜닝 도구 중 [LLaMA-Factory](/ko/power-local-llm/llama-factory-review)와 [Unsloth](/ko/power-local-llm/unsloth-review)는 LoRA 또는 QLoRA 학습을 문서에 명시하고 있으며, 관측성 도구 중 [Langfuse](/ko/power-local-llm/langfuse-review)와 [Plano](/ko/power-local-llm/plano-review)는 LLM 호출 트레이싱을 문서에 명시하고 있습니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보세요.`,
     quickAnswerTop: {
       en: {
         question: '어떤 로컬 파인튜닝 또는 관측성 도구를 사용해야 하나요?',
@@ -1729,7 +1747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '로컬 학습·운영 도구는 파인튜닝 도구와 관측성·평가 도구라는 서로 다른 두 종류의 제품이므로, PromptQuorum 디렉터리의 도구 7개를 각 종류 안에서 비교하며, 비교표는 각 도구의 리뷰와 같은 도구 데이터에서 생성됩니다.',
+            text: `로컬 학습·운영 도구는 파인튜닝 도구와 관측성·평가 도구라는 서로 다른 두 종류의 제품이므로, PromptQuorum 디렉터리의 도구 ${TO_TOTAL}개를 각 종류 안에서 비교하며, 비교표는 각 도구의 리뷰와 같은 도구 데이터에서 생성됩니다.`,
           },
           {
             type: 'plain-terms',
@@ -1737,7 +1755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '도구 7개, 두 종류: 파인튜닝(4개)과 관측성·평가(3개). 두 가지 이상의 역할을 하는 도구는 해당하는 각 종류에 모두 나타납니다.',
+          `도구 ${TO_TOTAL}개, 두 종류: 파인튜닝(${TO_FINE_TUNING}개)과 관측성·평가(${TO_OBSERVABILITY_EVAL}개). 두 가지 이상의 역할을 하는 도구는 해당하는 각 종류에 모두 나타납니다.`,
           '표는 각 도구의 레코드에서 생성되고 공식 README 또는 사이트와 대조해 확인했습니다. 대시는 "문서에 명시되지 않음"을 뜻하며 "아니오"를 뜻하지 않습니다.',
           '규모가 작은 그룹입니다. 디렉터리에는 데이터셋과 모델 허브 하위 분류에 리뷰가 완료된 도구가 아직 없어 여기서는 비교하지 않습니다.',
           '표의 모든 도구 이름은 해당 도구의 PromptQuorum 리뷰로 연결되며, 설치 단계와 한계는 그곳에서 다룹니다.',
@@ -1830,7 +1848,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 글',
         items: [
-          '[로컬 소프트웨어 디렉터리](/ko/directory) — 200개 이상의 로컬 AI 앱을 살펴보고 분류별로 필터링하세요.',
+          `[로컬 소프트웨어 디렉터리](/ko/directory) — ${TOTAL_APP_COUNT}개의 로컬 AI 앱을 살펴보고 분류별로 필터링하세요.`,
           '[로컬 추론 엔진·런타임·게이트웨이 비교](/ko/power-local-llm/local-llm-run-serve-compared) — 여러분이 학습한 모델을 실행하는 도구입니다.',
           '[로컬 코딩 어시스턴트·에이전트·워크플로 도구 비교](/ko/power-local-llm/local-llm-code-development-compared) — 에이전트 프레임워크와 워크플로 빌더입니다.',
         ],
@@ -1841,7 +1859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '로컬 모델 학습·운영 도구 비교(2026): 파인튜닝과 관측성',
       description:
-        '로컬 모델 학습·운영 도구를 공식 문서 기준으로 비교합니다: 파인튜닝과 LLM 관측성·평가 도구 7개.',
+        `로컬 모델 학습·운영 도구를 공식 문서 기준으로 비교합니다: 파인튜닝과 LLM 관측성·평가 도구 ${TO_TOTAL}개.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-train-operate-compared',
       inLanguage: 'ko',
       datePublished: '2026-09-21',

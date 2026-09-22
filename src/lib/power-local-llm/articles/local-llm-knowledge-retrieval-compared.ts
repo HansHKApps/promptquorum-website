@@ -9,6 +9,22 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+
+// Live counts from the directory — recomputed at build time so this article never drifts from
+// the actual tool count as the directory grows. Only tools with their own PromptQuorum review are
+// counted (matches the CategoryCompareTable's own "only reviewed tools" rule).
+const TOTAL_APP_COUNT = localAiApps.length
+const REVIEWED_KR_APPS = localAiApps.filter((a) => a.reviewSlug != null)
+const KR_RAG_FRAMEWORKS = REVIEWED_KR_APPS.filter((a) => a.categories.includes('rag-frameworks')).length
+const KR_DOCUMENT_PDF_CHAT = REVIEWED_KR_APPS.filter((a) => a.categories.includes('document-pdf-chat')).length
+const KR_NOTES_INTEGRATIONS = REVIEWED_KR_APPS.filter((a) => a.categories.includes('notes-integrations')).length
+const KR_LOCAL_SEARCH = REVIEWED_KR_APPS.filter((a) => a.categories.includes('local-search')).length
+const KR_VECTOR_DATABASES = REVIEWED_KR_APPS.filter((a) => a.categories.includes('vector-databases')).length
+const KR_CATEGORIES = ['rag-frameworks', 'document-pdf-chat', 'notes-integrations', 'local-search', 'vector-databases']
+const KR_TOTAL = new Set(
+  REVIEWED_KR_APPS.filter((a) => a.categories.some((c) => KR_CATEGORIES.includes(c))).map((a) => a.slug),
+).size
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
@@ -21,9 +37,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search',
     seoTitle: 'Local RAG, Document Chat & Vector DBs Compared 2026',
     intro:
-      'Tools that let a local model work with your own documents fall into five different kinds — RAG frameworks and pipelines, document and PDF chat apps, vector databases, notes-app integrations, and local search and research tools — and no single feature list compares them fairly. This guide compares 40 free and freemium tools, one kind at a time, using a comparison table generated from the same data as each tool\'s own PromptQuorum review, so the table and the reviews cannot disagree.',
+      `Tools that let a local model work with your own documents fall into five different kinds — RAG frameworks and pipelines, document and PDF chat apps, vector databases, notes-app integrations, and local search and research tools — and no single feature list compares them fairly. This guide compares ${KR_TOTAL} free and freemium tools, one kind at a time, using a comparison table generated from the same data as each tool's own PromptQuorum review, so the table and the reviews cannot disagree.`,
     metaDescription:
-      'Compare 40 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.',
+      `Compare ${KR_TOTAL} local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.`,
     twitterDescription:
       'Local RAG frameworks, document chat apps, vector databases, notes plugins and search tools compared by kind — local LLM support, Docker, API, hybrid search — from official documentation.',
     audience:
@@ -42,7 +58,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**The 40 local knowledge and retrieval tools in the PromptQuorum directory split into five kinds that should be compared separately: RAG frameworks and pipelines (13 tools), document and PDF chat apps (12), notes-app integrations (10), local search and research tools (7) and vector databases (4).** Among the vector databases, 3 of 4 document hybrid search and 4 of 4 document metadata filtering; among RAG frameworks, 4 document a visual builder and 9 document local-LLM support. Use the comparison table below, and read each tool\'s own review before you install it.',
+      `**The ${KR_TOTAL} local knowledge and retrieval tools in the PromptQuorum directory split into five kinds that should be compared separately: RAG frameworks and pipelines (${KR_RAG_FRAMEWORKS} tools), document and PDF chat apps (${KR_DOCUMENT_PDF_CHAT}), notes-app integrations (${KR_NOTES_INTEGRATIONS}), local search and research tools (${KR_LOCAL_SEARCH}) and vector databases (${KR_VECTOR_DATABASES}).** Among the vector databases, 3 of 4 document hybrid search and 4 of 4 document metadata filtering; among RAG frameworks, 4 document a visual builder and 9 document local-LLM support. Use the comparison table below, and read each tool's own review before you install it.`,
     quickAnswerTop: {
       en: {
         question: 'Which local RAG or document-chat tool should I use?',
@@ -79,7 +95,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Tools that let a local model work with your own documents are five different kinds — RAG frameworks, document chat apps, vector databases, notes integrations and local search — so the 40 tools in the PromptQuorum directory are compared within each kind, using a table generated from the same tool data as each tool\'s own review.',
+            text: `Tools that let a local model work with your own documents are five different kinds — RAG frameworks, document chat apps, vector databases, notes integrations and local search — so the ${KR_TOTAL} tools in the PromptQuorum directory are compared within each kind, using a table generated from the same tool data as each tool's own review.`,
           },
           {
             type: 'plain-terms',
@@ -87,7 +103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '40 tools, five kinds: RAG frameworks and pipelines (13), document and PDF chat apps (12), notes-app integrations (10), local search and research tools (7) and vector databases (4). Several tools, such as Onyx, Karakeep and Surf, belong to more than one kind and appear in each.',
+          `${KR_TOTAL} tools, five kinds: RAG frameworks and pipelines (${KR_RAG_FRAMEWORKS}), document and PDF chat apps (${KR_DOCUMENT_PDF_CHAT}), notes-app integrations (${KR_NOTES_INTEGRATIONS}), local search and research tools (${KR_LOCAL_SEARCH}) and vector databases (${KR_VECTOR_DATABASES}). Several tools, such as Onyx, Karakeep and Surf, belong to more than one kind and appear in each.`,
           'The table is generated from each tool\'s record and checked against its official README or site; a dash means "not stated in the documentation", never "no".',
           'GitHub marks the Flowise and h2oGPT repositories as archived (read-only) at the time of writing; check their reviews for the current status before you build on them.',
           'Every tool name in the table links to its own PromptQuorum review, which is where installation steps and limits are covered.',
@@ -213,7 +229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local Software Directory](/directory) — browse all 200+ local AI apps and filter by category.',
+          `[Local Software Directory](/directory) — browse all ${TOTAL_APP_COUNT} local AI apps and filter by category.`,
           '[Local Inference Engines, Runtimes & Gateways Compared](/power-local-llm/local-llm-run-serve-compared) — the same comparison for the tools that run the models.',
           '[Local Image, Video & Vision Tools Compared](/power-local-llm/local-llm-images-video-compared) — the same comparison for image generation and vision models.',
         ],
@@ -224,7 +240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search',
       description:
-        'Compare 40 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases, notes integrations and search, from official documentation.',
+        `Compare ${KR_TOTAL} local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases, notes integrations and search, from official documentation.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'en',
       datePublished: '2026-09-20',
@@ -267,9 +283,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Lokale Wissens- und Retrieval-Tools im Vergleich (2026): RAG, Dokumenten-Chat, Vektordatenbanken, Notizen und Suche',
     seoTitle: 'Lokale RAG-, Dokumenten-Chat- & Vektor-DB-Tools 2026',
     intro:
-      'Tools, mit denen ein lokales Modell mit den eigenen Dokumenten arbeitet, lassen sich in fünf verschiedene Arten einteilen — RAG-Frameworks und -Pipelines, Dokumenten- und PDF-Chat-Apps, Vektordatenbanken, Notiz-App-Integrationen sowie lokale Such- und Recherche-Tools — und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht 40 kostenlose und Freemium-Tools, jeweils innerhalb einer Art, anhand einer Vergleichstabelle, die aus denselben Daten erzeugt wird wie der jeweilige PromptQuorum-Test des Tools — Tabelle und Tests können sich also nicht widersprechen.',
+      `Tools, mit denen ein lokales Modell mit den eigenen Dokumenten arbeitet, lassen sich in fünf verschiedene Arten einteilen — RAG-Frameworks und -Pipelines, Dokumenten- und PDF-Chat-Apps, Vektordatenbanken, Notiz-App-Integrationen sowie lokale Such- und Recherche-Tools — und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht ${KR_TOTAL} kostenlose und Freemium-Tools, jeweils innerhalb einer Art, anhand einer Vergleichstabelle, die aus denselben Daten erzeugt wird wie der jeweilige PromptQuorum-Test des Tools — Tabelle und Tests können sich also nicht widersprechen.`,
     metaDescription:
-      '40 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.',
+      `${KR_TOTAL} lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.`,
     twitterDescription:
       'Lokale RAG-Frameworks, Dokumenten-Chat-Apps, Vektordatenbanken, Notiz-Plugins und Suchtools nach Art verglichen — lokale LLMs, Docker, API, Hybridsuche — aus der offiziellen Dokumentation.',
     audience:
@@ -288,7 +304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Die 40 lokalen Wissens- und Retrieval-Tools im PromptQuorum-Verzeichnis lassen sich in fünf Arten einteilen, die getrennt verglichen werden sollten: RAG-Frameworks und -Pipelines (13 Tools), Dokumenten- und PDF-Chat-Apps (12), Notiz-App-Integrationen (10), lokale Such- und Recherche-Tools (7) und Vektordatenbanken (4).** Unter den Vektordatenbanken dokumentieren 3 von 4 die Hybridsuche und 4 von 4 die Metadatenfilterung; unter den RAG-Frameworks dokumentieren 4 einen visuellen Builder und 9 die Unterstützung lokaler LLMs. Nutzen Sie die Vergleichstabelle unten und lesen Sie den jeweiligen Test eines Tools, bevor Sie es installieren.',
+      `**Die ${KR_TOTAL} lokalen Wissens- und Retrieval-Tools im PromptQuorum-Verzeichnis lassen sich in fünf Arten einteilen, die getrennt verglichen werden sollten: RAG-Frameworks und -Pipelines (${KR_RAG_FRAMEWORKS} Tools), Dokumenten- und PDF-Chat-Apps (${KR_DOCUMENT_PDF_CHAT}), Notiz-App-Integrationen (${KR_NOTES_INTEGRATIONS}), lokale Such- und Recherche-Tools (${KR_LOCAL_SEARCH}) und Vektordatenbanken (${KR_VECTOR_DATABASES}).** Unter den Vektordatenbanken dokumentieren 3 von 4 die Hybridsuche und 4 von 4 die Metadatenfilterung; unter den RAG-Frameworks dokumentieren 4 einen visuellen Builder und 9 die Unterstützung lokaler LLMs. Nutzen Sie die Vergleichstabelle unten und lesen Sie den jeweiligen Test eines Tools, bevor Sie es installieren.`,
     quickAnswerTop: {
       en: {
         question: 'Welches lokale RAG- oder Dokumenten-Chat-Tool sollte ich verwenden?',
@@ -325,7 +341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Tools, mit denen ein lokales Modell mit den eigenen Dokumenten arbeitet, sind fünf verschiedene Arten — RAG-Frameworks, Dokumenten-Chat-Apps, Vektordatenbanken, Notiz-Integrationen und lokale Suche —, weshalb die 40 Tools im PromptQuorum-Verzeichnis jeweils innerhalb ihrer Art verglichen werden, anhand einer Tabelle, die aus denselben Tooldaten erzeugt wird wie der jeweilige Test des Tools.',
+            text: `Tools, mit denen ein lokales Modell mit den eigenen Dokumenten arbeitet, sind fünf verschiedene Arten — RAG-Frameworks, Dokumenten-Chat-Apps, Vektordatenbanken, Notiz-Integrationen und lokale Suche —, weshalb die ${KR_TOTAL} Tools im PromptQuorum-Verzeichnis jeweils innerhalb ihrer Art verglichen werden, anhand einer Tabelle, die aus denselben Tooldaten erzeugt wird wie der jeweilige Test des Tools.`,
           },
           {
             type: 'plain-terms',
@@ -333,7 +349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '40 Tools, fünf Arten: RAG-Frameworks und -Pipelines (13), Dokumenten- und PDF-Chat-Apps (12), Notiz-App-Integrationen (10), lokale Such- und Recherche-Tools (7) und Vektordatenbanken (4). Mehrere Tools, etwa Onyx, Karakeep und Surf, gehören zu mehr als einer Art und erscheinen in jeder davon.',
+          `${KR_TOTAL} Tools, fünf Arten: RAG-Frameworks und -Pipelines (${KR_RAG_FRAMEWORKS}), Dokumenten- und PDF-Chat-Apps (${KR_DOCUMENT_PDF_CHAT}), Notiz-App-Integrationen (${KR_NOTES_INTEGRATIONS}), lokale Such- und Recherche-Tools (${KR_LOCAL_SEARCH}) und Vektordatenbanken (${KR_VECTOR_DATABASES}). Mehrere Tools, etwa Onyx, Karakeep und Surf, gehören zu mehr als einer Art und erscheinen in jeder davon.`,
           'Die Tabelle wird aus dem Datensatz jedes Tools erzeugt und mit dessen offizieller README oder Website abgeglichen; ein Strich bedeutet „in der Dokumentation nicht genannt“, niemals „nein“.',
           'GitHub markiert die Repositories von Flowise und h2oGPT zum Zeitpunkt des Schreibens als archiviert (nur lesbar); prüfen Sie den jeweiligen Test auf den aktuellen Stand, bevor Sie darauf aufbauen.',
           'Jeder Toolname in der Tabelle verlinkt auf den eigenen PromptQuorum-Test, in dem Installationsschritte und Grenzen behandelt werden.',
@@ -459,7 +475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Verzeichnis lokaler Software](/de/directory) — alle über 200 lokalen KI-Apps durchsuchen und nach Kategorie filtern.',
+          `[Verzeichnis lokaler Software](/de/directory) — alle ${TOTAL_APP_COUNT} lokalen KI-Apps durchsuchen und nach Kategorie filtern.`,
           '[Lokale Inferenz-Engines, Runtimes & Gateways im Vergleich](/de/power-local-llm/local-llm-run-serve-compared) — derselbe Vergleich für die Tools, die die Modelle ausführen.',
           '[Lokale Bild-, Video- & Vision-Tools im Vergleich](/de/power-local-llm/local-llm-images-video-compared) — derselbe Vergleich für Bildgenerierung und Vision-Modelle.',
         ],
@@ -470,7 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Lokale Wissens- und Retrieval-Tools im Vergleich (2026): RAG, Dokumenten-Chat, Vektordatenbanken, Notizen und Suche',
       description:
-        '40 lokale Wissens- und Retrieval-Tools im direkten Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Integrationen und Suche, aus der offiziellen Dokumentation.',
+        `${KR_TOTAL} lokale Wissens- und Retrieval-Tools im direkten Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Integrationen und Suche, aus der offiziellen Dokumentation.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'de',
       datePublished: '2026-09-20',
@@ -513,9 +529,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Outils locaux de connaissance et de recherche comparés (2026) : RAG, chat avec documents, bases vectorielles, notes et recherche',
     seoTitle: 'RAG local, chat de documents et bases vectorielles 2026',
     intro:
-      'Les outils qui permettent à un modèle local de travailler avec vos propres documents se répartissent en cinq types différents — frameworks et pipelines RAG, applications de chat avec documents et PDF, bases de données vectorielles, intégrations aux applications de notes, et outils de recherche locale — et aucune liste de fonctionnalités unique ne permet de les comparer équitablement. Ce guide compare 40 outils gratuits et freemium, un type à la fois, à l\'aide d\'un tableau comparatif généré à partir des mêmes données que l\'avis PromptQuorum de chaque outil, de sorte que le tableau et les avis ne peuvent pas se contredire.',
+      `Les outils qui permettent à un modèle local de travailler avec vos propres documents se répartissent en cinq types différents — frameworks et pipelines RAG, applications de chat avec documents et PDF, bases de données vectorielles, intégrations aux applications de notes, et outils de recherche locale — et aucune liste de fonctionnalités unique ne permet de les comparer équitablement. Ce guide compare ${KR_TOTAL} outils gratuits et freemium, un type à la fois, à l'aide d'un tableau comparatif généré à partir des mêmes données que l'avis PromptQuorum de chaque outil, de sorte que le tableau et les avis ne peuvent pas se contredire.`,
     metaDescription:
-      'Comparez 40 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d\'après la documentation officielle.',
+      `Comparez ${KR_TOTAL} outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.`,
     twitterDescription:
       'Frameworks RAG locaux, applications de chat de documents, bases vectorielles, plugins de notes et outils de recherche comparés par type — LLM locaux, Docker, API, recherche hybride — d\'après la documentation officielle.',
     audience:
@@ -534,7 +550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Les 40 outils locaux de connaissance et de recherche de l\'annuaire PromptQuorum se répartissent en cinq types qu\'il faut comparer séparément : frameworks et pipelines RAG (13 outils), applications de chat avec documents et PDF (12), intégrations aux applications de notes (10), outils de recherche locale (7) et bases de données vectorielles (4).** Parmi les bases vectorielles, 3 sur 4 documentent la recherche hybride et 4 sur 4 documentent le filtrage par métadonnées ; parmi les frameworks RAG, 4 documentent un constructeur visuel et 9 documentent la prise en charge des LLM locaux. Utilisez le tableau comparatif ci-dessous et lisez l\'avis de chaque outil avant de l\'installer.',
+      `**Les ${KR_TOTAL} outils locaux de connaissance et de recherche de l'annuaire PromptQuorum se répartissent en cinq types qu'il faut comparer séparément : frameworks et pipelines RAG (${KR_RAG_FRAMEWORKS} outils), applications de chat avec documents et PDF (${KR_DOCUMENT_PDF_CHAT}), intégrations aux applications de notes (${KR_NOTES_INTEGRATIONS}), outils de recherche locale (${KR_LOCAL_SEARCH}) et bases de données vectorielles (${KR_VECTOR_DATABASES}).** Parmi les bases vectorielles, 3 sur 4 documentent la recherche hybride et 4 sur 4 documentent le filtrage par métadonnées ; parmi les frameworks RAG, 4 documentent un constructeur visuel et 9 documentent la prise en charge des LLM locaux. Utilisez le tableau comparatif ci-dessous et lisez l'avis de chaque outil avant de l'installer.`,
     quickAnswerTop: {
       en: {
         question: 'Quel outil de RAG local ou de chat avec documents dois-je utiliser ?',
@@ -571,7 +587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Les outils qui permettent à un modèle local de travailler avec vos propres documents sont de cinq types différents — frameworks RAG, applications de chat avec documents, bases vectorielles, intégrations de notes et recherche locale — c\'est pourquoi les 40 outils de l\'annuaire PromptQuorum sont comparés au sein de chaque type, à l\'aide d\'un tableau généré à partir des mêmes données que l\'avis de chaque outil.',
+            text: `Les outils qui permettent à un modèle local de travailler avec vos propres documents sont de cinq types différents — frameworks RAG, applications de chat avec documents, bases vectorielles, intégrations de notes et recherche locale — c'est pourquoi les ${KR_TOTAL} outils de l'annuaire PromptQuorum sont comparés au sein de chaque type, à l'aide d'un tableau généré à partir des mêmes données que l'avis de chaque outil.`,
           },
           {
             type: 'plain-terms',
@@ -579,7 +595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '40 outils, cinq types : frameworks et pipelines RAG (13), applications de chat avec documents et PDF (12), intégrations aux applications de notes (10), outils de recherche locale (7) et bases de données vectorielles (4). Plusieurs outils, comme Onyx, Karakeep et Surf, relèvent de plusieurs types et apparaissent dans chacun.',
+          `${KR_TOTAL} outils, cinq types : frameworks et pipelines RAG (${KR_RAG_FRAMEWORKS}), applications de chat avec documents et PDF (${KR_DOCUMENT_PDF_CHAT}), intégrations aux applications de notes (${KR_NOTES_INTEGRATIONS}), outils de recherche locale (${KR_LOCAL_SEARCH}) et bases de données vectorielles (${KR_VECTOR_DATABASES}). Plusieurs outils, comme Onyx, Karakeep et Surf, relèvent de plusieurs types et apparaissent dans chacun.`,
           'Le tableau est généré à partir de la fiche de chaque outil et vérifié d\'après son README ou son site officiel ; un tiret signifie « non mentionné dans la documentation », jamais « non ».',
           'GitHub indique que les dépôts Flowise et h2oGPT sont archivés (en lecture seule) au moment de la rédaction ; consultez leurs avis pour connaître leur état actuel avant de vous appuyer dessus.',
           'Chaque nom d\'outil du tableau renvoie vers son propre avis PromptQuorum, où sont traités les étapes d\'installation et les limites.',
@@ -705,7 +721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'À lire aussi',
         items: [
-          '[Annuaire des logiciels locaux](/fr/directory) — parcourez plus de 200 applications d\'IA locale et filtrez par catégorie.',
+          `[Annuaire des logiciels locaux](/fr/directory) — parcourez ${TOTAL_APP_COUNT} applications d'IA locale et filtrez par catégorie.`,
           '[Moteurs d\'inférence, runtimes et passerelles locaux comparés](/fr/power-local-llm/local-llm-run-serve-compared) — la même comparaison pour les outils qui exécutent les modèles.',
           '[Outils locaux d\'image, de vidéo et de vision comparés](/fr/power-local-llm/local-llm-images-video-compared) — la même comparaison pour la génération d\'images et les modèles de vision.',
         ],
@@ -716,7 +732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Outils locaux de connaissance et de recherche comparés (2026) : RAG, chat avec documents, bases vectorielles, notes et recherche',
       description:
-        'Comparez 40 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles, intégrations de notes et recherche, d\'après la documentation officielle.',
+        `Comparez ${KR_TOTAL} outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles, intégrations de notes et recherche, d'après la documentation officielle.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'fr',
       datePublished: '2026-09-20',
@@ -759,9 +775,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Herramientas locales de conocimiento y recuperación comparadas (2026): RAG, chat con documentos, bases de datos vectoriales, notas y búsqueda',
     seoTitle: 'RAG local, chat con documentos y BD vectoriales 2026',
     intro:
-      'Las herramientas que permiten a un modelo local trabajar con tus propios documentos son de cinco tipos distintos — frameworks y pipelines RAG, apps de chat con documentos y PDF, bases de datos vectoriales, integraciones con apps de notas y herramientas locales de búsqueda e investigación — y ninguna lista de funciones única las compara de forma justa. Esta guía compara 40 herramientas gratuitas y freemium, un tipo cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis propio de cada herramienta en PromptQuorum, de modo que la tabla y los análisis no pueden contradecirse.',
+      `Las herramientas que permiten a un modelo local trabajar con tus propios documentos son de cinco tipos distintos — frameworks y pipelines RAG, apps de chat con documentos y PDF, bases de datos vectoriales, integraciones con apps de notas y herramientas locales de búsqueda e investigación — y ninguna lista de funciones única las compara de forma justa. Esta guía compara ${KR_TOTAL} herramientas gratuitas y freemium, un tipo cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis propio de cada herramienta en PromptQuorum, de modo que la tabla y los análisis no pueden contradecirse.`,
     metaDescription:
-      'Compara 40 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.',
+      `Compara ${KR_TOTAL} herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.`,
     twitterDescription:
       'Frameworks RAG locales, apps de chat con documentos, bases de datos vectoriales, plugins de notas y herramientas de búsqueda comparados por tipo — LLM locales, Docker, API, búsqueda híbrida — según la documentación oficial.',
     audience:
@@ -780,7 +796,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Las 40 herramientas locales de conocimiento y recuperación del directorio de PromptQuorum se dividen en cinco tipos que conviene comparar por separado: frameworks y pipelines RAG (13 herramientas), apps de chat con documentos y PDF (12), integraciones con apps de notas (10), herramientas locales de búsqueda e investigación (7) y bases de datos vectoriales (4).** Entre las bases de datos vectoriales, 3 de 4 documentan búsqueda híbrida y 4 de 4 documentan filtrado por metadatos; entre los frameworks RAG, 4 documentan un constructor visual y 9 documentan compatibilidad con LLM locales. Usa la tabla comparativa de abajo y lee el análisis de cada herramienta antes de instalarla.',
+      `**Las ${KR_TOTAL} herramientas locales de conocimiento y recuperación del directorio de PromptQuorum se dividen en cinco tipos que conviene comparar por separado: frameworks y pipelines RAG (${KR_RAG_FRAMEWORKS} herramientas), apps de chat con documentos y PDF (${KR_DOCUMENT_PDF_CHAT}), integraciones con apps de notas (${KR_NOTES_INTEGRATIONS}), herramientas locales de búsqueda e investigación (${KR_LOCAL_SEARCH}) y bases de datos vectoriales (${KR_VECTOR_DATABASES}).** Entre las bases de datos vectoriales, 3 de 4 documentan búsqueda híbrida y 4 de 4 documentan filtrado por metadatos; entre los frameworks RAG, 4 documentan un constructor visual y 9 documentan compatibilidad con LLM locales. Usa la tabla comparativa de abajo y lee el análisis de cada herramienta antes de instalarla.`,
     quickAnswerTop: {
       en: {
         question: '¿Qué herramienta local de RAG o de chat con documentos debería usar?',
@@ -817,7 +833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Las herramientas que permiten a un modelo local trabajar con tus propios documentos son de cinco tipos distintos — frameworks RAG, apps de chat con documentos, bases de datos vectoriales, integraciones con notas y búsqueda local — por eso las 40 herramientas del directorio de PromptQuorum se comparan dentro de cada tipo, con una tabla generada a partir de los mismos datos que el análisis propio de cada herramienta.',
+            text: `Las herramientas que permiten a un modelo local trabajar con tus propios documentos son de cinco tipos distintos — frameworks RAG, apps de chat con documentos, bases de datos vectoriales, integraciones con notas y búsqueda local — por eso las ${KR_TOTAL} herramientas del directorio de PromptQuorum se comparan dentro de cada tipo, con una tabla generada a partir de los mismos datos que el análisis propio de cada herramienta.`,
           },
           {
             type: 'plain-terms',
@@ -825,7 +841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '40 herramientas, cinco tipos: frameworks y pipelines RAG (13), apps de chat con documentos y PDF (12), integraciones con apps de notas (10), herramientas locales de búsqueda e investigación (7) y bases de datos vectoriales (4). Varias herramientas, como Onyx, Karakeep y Surf, pertenecen a más de un tipo y aparecen en cada uno.',
+          `${KR_TOTAL} herramientas, cinco tipos: frameworks y pipelines RAG (${KR_RAG_FRAMEWORKS}), apps de chat con documentos y PDF (${KR_DOCUMENT_PDF_CHAT}), integraciones con apps de notas (${KR_NOTES_INTEGRATIONS}), herramientas locales de búsqueda e investigación (${KR_LOCAL_SEARCH}) y bases de datos vectoriales (${KR_VECTOR_DATABASES}). Varias herramientas, como Onyx, Karakeep y Surf, pertenecen a más de un tipo y aparecen en cada uno.`,
           'La tabla se genera a partir del registro de cada herramienta y se contrasta con su README o sitio oficial; un guion significa "no indicado en la documentación", nunca "no".',
           'GitHub marca los repositorios de Flowise y h2oGPT como archivados (solo lectura) en el momento de redactar esta guía; consulta sus análisis para conocer el estado actual antes de construir sobre ellos.',
           'Cada nombre de herramienta de la tabla enlaza con su propio análisis en PromptQuorum, donde se explican la instalación y los límites.',
@@ -951,7 +967,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software local](/es/directory) — explora más de 200 apps de IA local y filtra por categoría.',
+          `[Directorio de software local](/es/directory) — explora ${TOTAL_APP_COUNT} apps de IA local y filtra por categoría.`,
           '[Motores de inferencia, runtimes y pasarelas locales comparados](/es/power-local-llm/local-llm-run-serve-compared) — la misma comparación para las herramientas que ejecutan los modelos.',
           '[Herramientas locales de imagen, vídeo y visión comparadas](/es/power-local-llm/local-llm-images-video-compared) — la misma comparación para la generación de imágenes y los modelos de visión.',
         ],
@@ -962,7 +978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Herramientas locales de conocimiento y recuperación comparadas (2026): RAG, chat con documentos, bases de datos vectoriales, notas y búsqueda',
       description:
-        'Compara 40 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales, integraciones con notas y búsqueda, según la documentación oficial.',
+        `Compara ${KR_TOTAL} herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales, integraciones con notas y búsqueda, según la documentación oficial.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'es',
       datePublished: '2026-09-20',
@@ -1005,9 +1021,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'ローカル知識・検索ツール比較(2026):RAG、ドキュメントチャット、ベクトルデータベース、ノート、検索',
     seoTitle: 'ローカルRAG・ドキュメントチャット・ベクトルDB比較2026',
     intro:
-      'ローカルモデルに自分のドキュメントを扱わせるツールは、RAGフレームワーク・パイプライン、ドキュメント/PDFチャットアプリ、ベクトルデータベース、ノートアプリ連携、ローカル検索・リサーチツールという5つの異なる種類に分かれ、単一の機能一覧ではどれも公平に比較できません。このガイドでは、無料・フリーミアムの40ツールを種類ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成されるため、表とレビューの内容が食い違うことはありません。',
+      `ローカルモデルに自分のドキュメントを扱わせるツールは、RAGフレームワーク・パイプライン、ドキュメント/PDFチャットアプリ、ベクトルデータベース、ノートアプリ連携、ローカル検索・リサーチツールという5つの異なる種類に分かれ、単一の機能一覧ではどれも公平に比較できません。このガイドでは、無料・フリーミアムの${KR_TOTAL}ツールを種類ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成されるため、表とレビューの内容が食い違うことはありません。`,
     metaDescription:
-      'ローカルの知識・検索ツール40種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。',
+      `ローカルの知識・検索ツール${KR_TOTAL}種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。`,
     twitterDescription:
       'ローカルRAGフレームワーク、ドキュメントチャット、ベクトルDB、ノートプラグイン、検索ツールを種類別に比較。ローカルLLM対応、Docker、API、ハイブリッド検索を公式ドキュメントから整理。',
     audience:
@@ -1026,7 +1042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**PromptQuorumディレクトリにある40のローカル知識・検索ツールは、別々に比較すべき5つの種類に分かれます。RAGフレームワーク・パイプライン(13ツール)、ドキュメント/PDFチャットアプリ(12)、ノートアプリ連携(10)、ローカル検索・リサーチツール(7)、ベクトルデータベース(4)です。** ベクトルデータベースでは4つのうち3つがハイブリッド検索を、4つすべてがメタデータフィルタリングをドキュメントに記載しています。RAGフレームワークでは4つがビジュアルビルダーを、9つがローカルLLM対応をドキュメントに記載しています。下の比較表を使い、インストールする前に各ツール自身のレビューを読んでください。',
+      `**PromptQuorumディレクトリにある${KR_TOTAL}のローカル知識・検索ツールは、別々に比較すべき5つの種類に分かれます。RAGフレームワーク・パイプライン(${KR_RAG_FRAMEWORKS}ツール)、ドキュメント/PDFチャットアプリ(${KR_DOCUMENT_PDF_CHAT})、ノートアプリ連携(${KR_NOTES_INTEGRATIONS})、ローカル検索・リサーチツール(${KR_LOCAL_SEARCH})、ベクトルデータベース(${KR_VECTOR_DATABASES})です。** ベクトルデータベースでは4つのうち3つがハイブリッド検索を、4つすべてがメタデータフィルタリングをドキュメントに記載しています。RAGフレームワークでは4つがビジュアルビルダーを、9つがローカルLLM対応をドキュメントに記載しています。下の比較表を使い、インストールする前に各ツール自身のレビューを読んでください。`,
     quickAnswerTop: {
       en: {
         question: 'どのローカルRAGまたはドキュメントチャットツールを使うべきか',
@@ -1063,7 +1079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'ローカルモデルに自分のドキュメントを扱わせるツールは、RAGフレームワーク、ドキュメントチャットアプリ、ベクトルデータベース、ノート連携、ローカル検索という5つの異なる種類があるため、PromptQuorumディレクトリの40ツールは、各ツール自身のレビューと同じツールデータから生成した表を使って、種類ごとに比較している。',
+            text: `ローカルモデルに自分のドキュメントを扱わせるツールは、RAGフレームワーク、ドキュメントチャットアプリ、ベクトルデータベース、ノート連携、ローカル検索という5つの異なる種類があるため、PromptQuorumディレクトリの${KR_TOTAL}ツールは、各ツール自身のレビューと同じツールデータから生成した表を使って、種類ごとに比較している。`,
           },
           {
             type: 'plain-terms',
@@ -1071,7 +1087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '40ツール、5つの種類:RAGフレームワーク・パイプライン(13)、ドキュメント/PDFチャットアプリ(12)、ノートアプリ連携(10)、ローカル検索・リサーチツール(7)、ベクトルデータベース(4)。Onyx、Karakeep、Surfのように複数の種類にまたがるツールもあり、該当する種類のそれぞれに掲載されています。',
+          `${KR_TOTAL}ツール、5つの種類:RAGフレームワーク・パイプライン(${KR_RAG_FRAMEWORKS})、ドキュメント/PDFチャットアプリ(${KR_DOCUMENT_PDF_CHAT})、ノートアプリ連携(${KR_NOTES_INTEGRATIONS})、ローカル検索・リサーチツール(${KR_LOCAL_SEARCH})、ベクトルデータベース(${KR_VECTOR_DATABASES})。Onyx、Karakeep、Surfのように複数の種類にまたがるツールもあり、該当する種類のそれぞれに掲載されています。`,
           '表は各ツールのレコードから生成され、公式のREADMEやサイトと照合されています。ダッシュは「ドキュメントに記載なし」を意味し、「非対応」を意味することはありません。',
           '執筆時点で、GitHubはFlowiseとh2oGPTのリポジトリをアーカイブ済み(読み取り専用)としています。これらをベースに構築する前に、レビューで最新の状況を確認してください。',
           '表内のツール名はすべて、そのツール自身のPromptQuorumレビューにリンクしています。インストール手順と制限事項はそちらで扱っています。',
@@ -1197,7 +1213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルソフトウェアディレクトリ](/ja/directory) — 200以上のローカルAIアプリを一覧し、カテゴリで絞り込めます。',
+          `[ローカルソフトウェアディレクトリ](/ja/directory) — ${TOTAL_APP_COUNT}件のローカルAIアプリを一覧し、カテゴリで絞り込めます。`,
           '[ローカル推論エンジン・ランタイム・ゲートウェイ比較](/ja/power-local-llm/local-llm-run-serve-compared) — モデルを動かすツールについての同様の比較。',
           '[ローカル画像・動画・ビジョンツール比較](/ja/power-local-llm/local-llm-images-video-compared) — 画像生成とビジョンモデルについての同様の比較。',
         ],
@@ -1208,7 +1224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'ローカル知識・検索ツール比較(2026):RAG、ドキュメントチャット、ベクトルデータベース、ノート、検索',
       description:
-        'ローカルの知識・検索ツール40種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルデータベース、ノート連携、検索を公式ドキュメントから整理。',
+        `ローカルの知識・検索ツール${KR_TOTAL}種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルデータベース、ノート連携、検索を公式ドキュメントから整理。`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'ja',
       datePublished: '2026-09-20',
@@ -1251,9 +1267,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '本地知识与检索工具对比(2026):RAG、文档对话、向量数据库、笔记与搜索',
     seoTitle: '本地RAG、文档对话与向量数据库对比2026',
     intro:
-      '让本地模型处理你自己文档的工具分为五种不同类型——RAG框架与流水线、文档与PDF对话应用、向量数据库、笔记应用集成,以及本地搜索与研究工具——没有任何单一的功能清单能公平地比较它们。本指南逐类对比40款免费及免费增值工具,所用对比表与每款工具各自的PromptQuorum评测生成自同一份数据,因此表格与评测不会相互矛盾。',
+      `让本地模型处理你自己文档的工具分为五种不同类型——RAG框架与流水线、文档与PDF对话应用、向量数据库、笔记应用集成,以及本地搜索与研究工具——没有任何单一的功能清单能公平地比较它们。本指南逐类对比${KR_TOTAL}款免费及免费增值工具,所用对比表与每款工具各自的PromptQuorum评测生成自同一份数据,因此表格与评测不会相互矛盾。`,
     metaDescription:
-      '并排对比40款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。',
+      `并排对比${KR_TOTAL}款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。`,
     twitterDescription:
       '按类型对比本地RAG框架、文档对话应用、向量数据库、笔记插件与搜索工具——本地LLM支持、Docker、API、混合搜索——均取自官方文档。',
     audience:
@@ -1272,7 +1288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**PromptQuorum目录中的40款本地知识与检索工具分为五类,应当分别比较:RAG框架与流水线(13款)、文档与PDF对话应用(12款)、笔记应用集成(10款)、本地搜索与研究工具(7款)以及向量数据库(4款)。** 在向量数据库中,4款里有3款记载了混合搜索,4款全部记载了元数据过滤;在RAG框架中,4款记载了可视化构建器,9款记载了本地LLM支持。请使用下方的对比表,并在安装前阅读每款工具各自的评测。',
+      `**PromptQuorum目录中的${KR_TOTAL}款本地知识与检索工具分为五类,应当分别比较:RAG框架与流水线(${KR_RAG_FRAMEWORKS}款)、文档与PDF对话应用(${KR_DOCUMENT_PDF_CHAT}款)、笔记应用集成(${KR_NOTES_INTEGRATIONS}款)、本地搜索与研究工具(${KR_LOCAL_SEARCH}款)以及向量数据库(${KR_VECTOR_DATABASES}款)。** 在向量数据库中,4款里有3款记载了混合搜索,4款全部记载了元数据过滤;在RAG框架中,4款记载了可视化构建器,9款记载了本地LLM支持。请使用下方的对比表,并在安装前阅读每款工具各自的评测。`,
     quickAnswerTop: {
       en: {
         question: '我应该使用哪款本地RAG或文档对话工具?',
@@ -1309,7 +1325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '让本地模型处理你自己文档的工具有五种不同类型——RAG框架、文档对话应用、向量数据库、笔记集成和本地搜索——因此PromptQuorum目录中的40款工具按类型分别比较,所用表格与每款工具各自的评测生成自同一份工具数据。',
+            text: `让本地模型处理你自己文档的工具有五种不同类型——RAG框架、文档对话应用、向量数据库、笔记集成和本地搜索——因此PromptQuorum目录中的${KR_TOTAL}款工具按类型分别比较,所用表格与每款工具各自的评测生成自同一份工具数据。`,
           },
           {
             type: 'plain-terms',
@@ -1317,7 +1333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '40款工具,五种类型:RAG框架与流水线(13款)、文档与PDF对话应用(12款)、笔记应用集成(10款)、本地搜索与研究工具(7款)以及向量数据库(4款)。Onyx、Karakeep和Surf等若干工具属于不止一种类型,并在每种类型中都会出现。',
+          `${KR_TOTAL}款工具,五种类型:RAG框架与流水线(${KR_RAG_FRAMEWORKS}款)、文档与PDF对话应用(${KR_DOCUMENT_PDF_CHAT}款)、笔记应用集成(${KR_NOTES_INTEGRATIONS}款)、本地搜索与研究工具(${KR_LOCAL_SEARCH}款)以及向量数据库(${KR_VECTOR_DATABASES}款)。Onyx、Karakeep和Surf等若干工具属于不止一种类型,并在每种类型中都会出现。`,
           '表格生成自每款工具的记录,并对照其官方README或网站核对;破折号表示“文档中未说明”,绝不表示“没有”。',
           '在撰写本文时,GitHub将Flowise和h2oGPT仓库标记为已归档(只读);在基于它们进行构建之前,请查看它们的评测了解当前状态。',
           '表格中的每个工具名称都链接到其自己的PromptQuorum评测,安装步骤与局限均在评测中介绍。',
@@ -1443,7 +1459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地软件目录](/zh/directory)——浏览全部200多款本地AI应用,并按类别筛选。',
+          `[本地软件目录](/zh/directory)——浏览全部${TOTAL_APP_COUNT}款本地AI应用,并按类别筛选。`,
           '[本地推理引擎、运行时与网关对比](/zh/power-local-llm/local-llm-run-serve-compared)——针对运行模型的工具所做的同类对比。',
           '[本地图像、视频与视觉工具对比](/zh/power-local-llm/local-llm-images-video-compared)——针对图像生成与视觉模型所做的同类对比。',
         ],
@@ -1454,7 +1470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '本地知识与检索工具对比(2026):RAG、文档对话、向量数据库、笔记与搜索',
       description:
-        '并排对比40款本地知识与检索工具:RAG框架、文档对话、向量数据库、笔记集成与搜索,均取自官方文档。',
+        `并排对比${KR_TOTAL}款本地知识与检索工具:RAG框架、文档对话、向量数据库、笔记集成与搜索,均取自官方文档。`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'zh',
       datePublished: '2026-09-20',
@@ -1497,9 +1513,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Ferramentas locais de conhecimento e recuperação comparadas (2026): RAG, chat com documentos, bancos de dados vetoriais, notas e busca',
     seoTitle: 'RAG local, chat com documentos e bancos vetoriais 2026',
     intro:
-      'As ferramentas que permitem a um modelo local trabalhar com os seus próprios documentos se dividem em cinco tipos diferentes — frameworks e pipelines de RAG, apps de chat com documentos e PDFs, bancos de dados vetoriais, integrações com apps de notas e ferramentas locais de busca e pesquisa — e nenhuma lista única de recursos compara todas de forma justa. Este guia compara 40 ferramentas gratuitas e freemium, um tipo de cada vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise própria de cada ferramenta no PromptQuorum, de modo que a tabela e as análises não podem se contradizer.',
+      `As ferramentas que permitem a um modelo local trabalhar com os seus próprios documentos se dividem em cinco tipos diferentes — frameworks e pipelines de RAG, apps de chat com documentos e PDFs, bancos de dados vetoriais, integrações com apps de notas e ferramentas locais de busca e pesquisa — e nenhuma lista única de recursos compara todas de forma justa. Este guia compara ${KR_TOTAL} ferramentas gratuitas e freemium, um tipo de cada vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise própria de cada ferramenta no PromptQuorum, de modo que a tabela e as análises não podem se contradizer.`,
     metaDescription:
-      'Compare 40 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.',
+      `Compare ${KR_TOTAL} ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.`,
     twitterDescription:
       'Frameworks RAG locais, apps de chat com documentos, bancos vetoriais, plugins de notas e ferramentas de busca comparados por tipo — suporte a LLMs locais, Docker, API, busca híbrida — segundo a documentação oficial.',
     audience:
@@ -1518,7 +1534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**As 40 ferramentas locais de conhecimento e recuperação do diretório PromptQuorum se dividem em cinco tipos que devem ser comparados separadamente: frameworks e pipelines de RAG (13 ferramentas), apps de chat com documentos e PDFs (12), integrações com apps de notas (10), ferramentas locais de busca e pesquisa (7) e bancos de dados vetoriais (4).** Entre os bancos vetoriais, 3 de 4 documentam busca híbrida e 4 de 4 documentam filtragem por metadados; entre os frameworks RAG, 4 documentam um construtor visual e 9 documentam suporte a LLMs locais. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.',
+      `**As ${KR_TOTAL} ferramentas locais de conhecimento e recuperação do diretório PromptQuorum se dividem em cinco tipos que devem ser comparados separadamente: frameworks e pipelines de RAG (${KR_RAG_FRAMEWORKS} ferramentas), apps de chat com documentos e PDFs (${KR_DOCUMENT_PDF_CHAT}), integrações com apps de notas (${KR_NOTES_INTEGRATIONS}), ferramentas locais de busca e pesquisa (${KR_LOCAL_SEARCH}) e bancos de dados vetoriais (${KR_VECTOR_DATABASES}).** Entre os bancos vetoriais, 3 de 4 documentam busca híbrida e 4 de 4 documentam filtragem por metadados; entre os frameworks RAG, 4 documentam um construtor visual e 9 documentam suporte a LLMs locais. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
     quickAnswerTop: {
       en: {
         question: 'Qual ferramenta local de RAG ou chat com documentos devo usar?',
@@ -1555,7 +1571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'As ferramentas que permitem a um modelo local trabalhar com os seus próprios documentos são de cinco tipos — frameworks RAG, apps de chat com documentos, bancos de dados vetoriais, integrações com notas e busca local — por isso as 40 ferramentas do diretório PromptQuorum são comparadas dentro de cada tipo, com uma tabela gerada a partir dos mesmos dados de ferramenta da análise própria de cada uma.',
+            text: `As ferramentas que permitem a um modelo local trabalhar com os seus próprios documentos são de cinco tipos — frameworks RAG, apps de chat com documentos, bancos de dados vetoriais, integrações com notas e busca local — por isso as ${KR_TOTAL} ferramentas do diretório PromptQuorum são comparadas dentro de cada tipo, com uma tabela gerada a partir dos mesmos dados de ferramenta da análise própria de cada uma.`,
           },
           {
             type: 'plain-terms',
@@ -1563,7 +1579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '40 ferramentas, cinco tipos: frameworks e pipelines de RAG (13), apps de chat com documentos e PDFs (12), integrações com apps de notas (10), ferramentas locais de busca e pesquisa (7) e bancos de dados vetoriais (4). Várias ferramentas, como Onyx, Karakeep e Surf, pertencem a mais de um tipo e aparecem em cada um deles.',
+          `${KR_TOTAL} ferramentas, cinco tipos: frameworks e pipelines de RAG (${KR_RAG_FRAMEWORKS}), apps de chat com documentos e PDFs (${KR_DOCUMENT_PDF_CHAT}), integrações com apps de notas (${KR_NOTES_INTEGRATIONS}), ferramentas locais de busca e pesquisa (${KR_LOCAL_SEARCH}) e bancos de dados vetoriais (${KR_VECTOR_DATABASES}). Várias ferramentas, como Onyx, Karakeep e Surf, pertencem a mais de um tipo e aparecem em cada um deles.`,
           'A tabela é gerada a partir do registro de cada ferramenta e conferida com o README ou o site oficial; um traço significa "não informado na documentação", nunca "não".',
           'O GitHub marca os repositórios do Flowise e do h2oGPT como arquivados (somente leitura) no momento da redação; consulte as análises deles para saber o estado atual antes de construir sobre eles.',
           'O nome de cada ferramenta na tabela leva à sua própria análise no PromptQuorum, onde são tratados os passos de instalação e os limites.',
@@ -1689,7 +1705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software local](/pt/directory) — navegue por todos os mais de 200 apps de IA local e filtre por categoria.',
+          `[Diretório de software local](/pt/directory) — navegue por todos os ${TOTAL_APP_COUNT} apps de IA local e filtre por categoria.`,
           '[Motores de inferência, runtimes e gateways locais comparados](/pt/power-local-llm/local-llm-run-serve-compared) — a mesma comparação para as ferramentas que executam os modelos.',
           '[Ferramentas locais de imagem, vídeo e visão comparadas](/pt/power-local-llm/local-llm-images-video-compared) — a mesma comparação para geração de imagens e modelos de visão.',
         ],
@@ -1700,7 +1716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Ferramentas locais de conhecimento e recuperação comparadas (2026): RAG, chat com documentos, bancos de dados vetoriais, notas e busca',
       description:
-        'Compare 40 ferramentas locais de conhecimento e recuperação lado a lado: frameworks RAG, chat com documentos, bancos de dados vetoriais, integrações com notas e busca, segundo a documentação oficial.',
+        `Compare ${KR_TOTAL} ferramentas locais de conhecimento e recuperação lado a lado: frameworks RAG, chat com documentos, bancos de dados vetoriais, integrações com notas e busca, segundo a documentação oficial.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'pt-BR',
       datePublished: '2026-09-20',
@@ -1743,9 +1759,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مقارنة أدوات المعرفة والاسترجاع المحلية (2026): RAG ومحادثة المستندات وقواعد البيانات المتجهية والملاحظات والبحث',
     seoTitle: 'مقارنة أدوات RAG ومحادثة المستندات المحلية 2026',
     intro:
-      'تنقسم الأدوات التي تتيح لنموذج محلي العمل مع مستنداتك الخاصة إلى خمسة أنواع مختلفة — أطر RAG وخطوط المعالجة، وتطبيقات محادثة المستندات وملفات PDF، وقواعد البيانات المتجهية، وتكاملات تطبيقات الملاحظات، وأدوات البحث المحلي والاستقصاء — ولا توجد قائمة ميزات واحدة تقارن بينها بإنصاف. يقارن هذا الدليل 40 أداة مجانية أو بنموذج freemium، نوعًا بعد نوع، باستخدام جدول مقارنة مُولَّد من البيانات نفسها التي تعتمد عليها مراجعة PromptQuorum لكل أداة، ولذلك لا يمكن أن يتعارض الجدول مع المراجعات.',
+      `تنقسم الأدوات التي تتيح لنموذج محلي العمل مع مستنداتك الخاصة إلى خمسة أنواع مختلفة — أطر RAG وخطوط المعالجة، وتطبيقات محادثة المستندات وملفات PDF، وقواعد البيانات المتجهية، وتكاملات تطبيقات الملاحظات، وأدوات البحث المحلي والاستقصاء — ولا توجد قائمة ميزات واحدة تقارن بينها بإنصاف. يقارن هذا الدليل ${KR_TOTAL} أداة مجانية أو بنموذج freemium، نوعًا بعد نوع، باستخدام جدول مقارنة مُولَّد من البيانات نفسها التي تعتمد عليها مراجعة PromptQuorum لكل أداة، ولذلك لا يمكن أن يتعارض الجدول مع المراجعات.`,
     metaDescription:
-      'قارن 40 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.',
+      `قارن ${KR_TOTAL} أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.`,
     twitterDescription:
       'أطر RAG وتطبيقات محادثة المستندات وقواعد البيانات المتجهية وإضافات الملاحظات وأدوات البحث المحلية، مقارنة حسب النوع — دعم النماذج المحلية وDocker وAPI والبحث الهجين — من الوثائق الرسمية.',
     audience:
@@ -1809,7 +1825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '40 أداة في خمسة أنواع: أطر RAG وخطوط المعالجة (13)، وتطبيقات محادثة المستندات وملفات PDF (12)، وتكاملات تطبيقات الملاحظات (10)، وأدوات البحث المحلي والاستقصاء (7)، وقواعد البيانات المتجهية (4). وتنتمي أدوات عدة، مثل Onyx وKarakeep وSurf، إلى أكثر من نوع وتظهر في كل نوع منها.',
+          `${KR_TOTAL} أداة في خمسة أنواع: أطر RAG وخطوط المعالجة (${KR_RAG_FRAMEWORKS})، وتطبيقات محادثة المستندات وملفات PDF (${KR_DOCUMENT_PDF_CHAT})، وتكاملات تطبيقات الملاحظات (${KR_NOTES_INTEGRATIONS})، وأدوات البحث المحلي والاستقصاء (${KR_LOCAL_SEARCH})، وقواعد البيانات المتجهية (${KR_VECTOR_DATABASES}). وتنتمي أدوات عدة، مثل Onyx وKarakeep وSurf، إلى أكثر من نوع وتظهر في كل نوع منها.`,
           'الجدول مُولَّد من سجل كل أداة ومراجَع مقابل ملف README أو الموقع الرسمي لها؛ والشرطة تعني «غير مذكور في الوثائق»، وليست «لا» أبدًا.',
           'يُعلِّم GitHub مستودعَي Flowise وh2oGPT بأنهما مؤرشفان (للقراءة فقط) وقت كتابة هذا الدليل؛ راجع مراجعتيهما لمعرفة الوضع الحالي قبل البناء عليهما.',
           'يرتبط اسم كل أداة في الجدول بمراجعة PromptQuorum الخاصة بها، وهناك تجد خطوات التثبيت والحدود.',
@@ -1935,7 +1951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل البرمجيات المحلية](/ar/directory) — تصفح أكثر من 200 تطبيق ذكاء اصطناعي محلي وصفِّها حسب الفئة.',
+          `[دليل البرمجيات المحلية](/ar/directory) — تصفح ${TOTAL_APP_COUNT} تطبيق ذكاء اصطناعي محلي وصفِّها حسب الفئة.`,
           '[مقارنة محركات الاستدلال المحلية وبيئات التشغيل والبوابات](/ar/power-local-llm/local-llm-run-serve-compared) — المقارنة نفسها للأدوات التي تشغّل النماذج.',
           '[مقارنة أدوات الصور والفيديو والرؤية المحلية](/ar/power-local-llm/local-llm-images-video-compared) — المقارنة نفسها لتوليد الصور ونماذج الرؤية.',
         ],
@@ -1946,7 +1962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'مقارنة أدوات المعرفة والاسترجاع المحلية (2026): RAG ومحادثة المستندات وقواعد البيانات المتجهية والملاحظات والبحث',
       description:
-        'قارن 40 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية وتكاملات الملاحظات والبحث، من الوثائق الرسمية.',
+        `قارن ${KR_TOTAL} أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية وتكاملات الملاحظات والبحث، من الوثائق الرسمية.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'ar',
       datePublished: '2026-09-20',
@@ -1989,9 +2005,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '로컬 지식·검색 도구 비교(2026): RAG, 문서 채팅, 벡터 데이터베이스, 노트, 검색',
     seoTitle: '로컬 RAG·문서 채팅·벡터 DB 비교 2026',
     intro:
-      '로컬 모델이 내 문서를 다루게 해 주는 도구는 RAG 프레임워크와 파이프라인, 문서·PDF 채팅 앱, 벡터 데이터베이스, 노트 앱 통합, 로컬 검색·리서치 도구의 다섯 가지 종류로 나뉘며, 하나의 기능 목록으로는 이들을 공정하게 비교할 수 없습니다. 이 가이드는 무료 및 프리미엄 도구 40개를 종류별로 하나씩 비교하며, 비교표는 각 도구의 PromptQuorum 리뷰와 같은 데이터로 생성되므로 표와 리뷰가 서로 어긋날 수 없습니다.',
+      `로컬 모델이 내 문서를 다루게 해 주는 도구는 RAG 프레임워크와 파이프라인, 문서·PDF 채팅 앱, 벡터 데이터베이스, 노트 앱 통합, 로컬 검색·리서치 도구의 다섯 가지 종류로 나뉘며, 하나의 기능 목록으로는 이들을 공정하게 비교할 수 없습니다. 이 가이드는 무료 및 프리미엄 도구 ${KR_TOTAL}개를 종류별로 하나씩 비교하며, 비교표는 각 도구의 PromptQuorum 리뷰와 같은 데이터로 생성되므로 표와 리뷰가 서로 어긋날 수 없습니다.`,
     metaDescription:
-      '로컬 지식·검색 도구 40개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.',
+      `로컬 지식·검색 도구 ${KR_TOTAL}개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.`,
     twitterDescription:
       '로컬 RAG 프레임워크, 문서 채팅 앱, 벡터 데이터베이스, 노트 플러그인, 검색 도구를 종류별로 비교했습니다. 로컬 LLM 지원, Docker, API, 하이브리드 검색을 공식 문서 기준으로 정리했습니다.',
     audience:
@@ -2010,7 +2026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**PromptQuorum 디렉터리의 로컬 지식·검색 도구 40개는 따로 비교해야 하는 다섯 종류로 나뉩니다: RAG 프레임워크와 파이프라인(13개), 문서·PDF 채팅 앱(12개), 노트 앱 통합(10개), 로컬 검색·리서치 도구(7개), 벡터 데이터베이스(4개).** 벡터 데이터베이스 4개 중 3개가 하이브리드 검색을, 4개 모두가 메타데이터 필터링을 문서에 명시하고 있으며, RAG 프레임워크 중에서는 4개가 시각적 빌더를, 9개가 로컬 LLM 지원을 문서에 명시하고 있습니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.',
+      `**PromptQuorum 디렉터리의 로컬 지식·검색 도구 ${KR_TOTAL}개는 따로 비교해야 하는 다섯 종류로 나뉩니다: RAG 프레임워크와 파이프라인(${KR_RAG_FRAMEWORKS}개), 문서·PDF 채팅 앱(${KR_DOCUMENT_PDF_CHAT}개), 노트 앱 통합(${KR_NOTES_INTEGRATIONS}개), 로컬 검색·리서치 도구(${KR_LOCAL_SEARCH}개), 벡터 데이터베이스(${KR_VECTOR_DATABASES}개).** 벡터 데이터베이스 4개 중 3개가 하이브리드 검색을, 4개 모두가 메타데이터 필터링을 문서에 명시하고 있으며, RAG 프레임워크 중에서는 4개가 시각적 빌더를, 9개가 로컬 LLM 지원을 문서에 명시하고 있습니다. 아래 비교표를 활용하고, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.`,
     quickAnswerTop: {
       en: {
         question: '어떤 로컬 RAG 또는 문서 채팅 도구를 써야 합니까?',
@@ -2047,7 +2063,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '로컬 모델이 내 문서를 다루게 해 주는 도구는 RAG 프레임워크, 문서 채팅 앱, 벡터 데이터베이스, 노트 통합, 로컬 검색의 다섯 가지 종류이므로, PromptQuorum 디렉터리의 40개 도구를 종류별로 비교하며, 비교표는 각 도구의 리뷰와 같은 도구 데이터로 생성됩니다.',
+            text: `로컬 모델이 내 문서를 다루게 해 주는 도구는 RAG 프레임워크, 문서 채팅 앱, 벡터 데이터베이스, 노트 통합, 로컬 검색의 다섯 가지 종류이므로, PromptQuorum 디렉터리의 ${KR_TOTAL}개 도구를 종류별로 비교하며, 비교표는 각 도구의 리뷰와 같은 도구 데이터로 생성됩니다.`,
           },
           {
             type: 'plain-terms',
@@ -2055,7 +2071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '도구 40개, 다섯 종류: RAG 프레임워크와 파이프라인(13개), 문서·PDF 채팅 앱(12개), 노트 앱 통합(10개), 로컬 검색·리서치 도구(7개), 벡터 데이터베이스(4개). Onyx, Karakeep, Surf처럼 여러 종류에 속하는 도구는 각 종류에 모두 나타납니다.',
+          `도구 ${KR_TOTAL}개, 다섯 종류: RAG 프레임워크와 파이프라인(${KR_RAG_FRAMEWORKS}개), 문서·PDF 채팅 앱(${KR_DOCUMENT_PDF_CHAT}개), 노트 앱 통합(${KR_NOTES_INTEGRATIONS}개), 로컬 검색·리서치 도구(${KR_LOCAL_SEARCH}개), 벡터 데이터베이스(${KR_VECTOR_DATABASES}개). Onyx, Karakeep, Surf처럼 여러 종류에 속하는 도구는 각 종류에 모두 나타납니다.`,
           '표는 각 도구의 레코드로 생성되며 공식 README 또는 사이트와 대조해 확인했습니다. 대시는 문서에 명시되어 있지 않다는 뜻이며 절대 "아니오"를 뜻하지 않습니다.',
           'GitHub는 작성 시점에 Flowise와 h2oGPT 저장소를 아카이브(읽기 전용)로 표시하고 있습니다. 이들을 기반으로 무언가를 만들기 전에 현재 상태는 각 리뷰에서 확인하십시오.',
           '표의 모든 도구 이름은 해당 도구의 PromptQuorum 리뷰로 연결되며, 설치 방법과 한계는 그곳에서 다룹니다.',
@@ -2181,7 +2197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 글',
         items: [
-          '[로컬 소프트웨어 디렉터리](/ko/directory) — 200개 이상의 로컬 AI 앱을 둘러보고 카테고리별로 필터링할 수 있습니다.',
+          `[로컬 소프트웨어 디렉터리](/ko/directory) — ${TOTAL_APP_COUNT}개의 로컬 AI 앱을 둘러보고 카테고리별로 필터링할 수 있습니다.`,
           '[로컬 추론 엔진, 런타임, 게이트웨이 비교](/ko/power-local-llm/local-llm-run-serve-compared) — 모델을 실행하는 도구에 대한 같은 방식의 비교입니다.',
           '[로컬 이미지, 영상, 비전 도구 비교](/ko/power-local-llm/local-llm-images-video-compared) — 이미지 생성과 비전 모델에 대한 같은 방식의 비교입니다.',
         ],
@@ -2192,7 +2208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '로컬 지식·검색 도구 비교(2026): RAG, 문서 채팅, 벡터 데이터베이스, 노트, 검색',
       description:
-        '로컬 지식·검색 도구 40개 비교: RAG 프레임워크, 문서 채팅, 벡터 데이터베이스, 노트 통합, 검색을 공식 문서 기준으로 정리했습니다.',
+        `로컬 지식·검색 도구 ${KR_TOTAL}개 비교: RAG 프레임워크, 문서 채팅, 벡터 데이터베이스, 노트 통합, 검색을 공식 문서 기준으로 정리했습니다.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-knowledge-retrieval-compared',
       inLanguage: 'ko',
       datePublished: '2026-09-20',

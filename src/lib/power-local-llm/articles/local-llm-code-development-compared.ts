@@ -9,6 +9,21 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+
+// Live counts from the directory — recomputed at build time so this article never drifts from
+// the actual tool count as the directory grows. Only tools with their own PromptQuorum review are
+// counted (matches the CategoryCompareTable's own "only reviewed tools" rule).
+const TOTAL_APP_COUNT = localAiApps.length
+const REVIEWED_CD_APPS = localAiApps.filter((a) => a.reviewSlug != null)
+const CD_CODE_ASSISTANTS = REVIEWED_CD_APPS.filter((a) => a.categories.includes('code-assistants-ide-plugins')).length
+const CD_AGENT_FRAMEWORKS = REVIEWED_CD_APPS.filter((a) => a.categories.includes('agent-frameworks')).length
+const CD_AUTONOMOUS_AGENTS = REVIEWED_CD_APPS.filter((a) => a.categories.includes('autonomous-agents')).length
+const CD_WORKFLOW_BUILDERS = REVIEWED_CD_APPS.filter((a) => a.categories.includes('workflow-node-builders')).length
+const CD_CATEGORIES = ['code-assistants-ide-plugins', 'agent-frameworks', 'autonomous-agents', 'workflow-node-builders']
+const CD_TOTAL = new Set(
+  REVIEWED_CD_APPS.filter((a) => a.categories.some((c) => CD_CATEGORIES.includes(c))).map((a) => a.slug),
+).size
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
@@ -21,9 +36,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents',
     seoTitle: 'Local Coding Assistants & AI Agents Compared 2026',
     intro:
-      'Tools that use local language models for coding and automation are four different kinds of product — coding assistants and IDE plugins, agent frameworks and SDKs, autonomous agents, and visual workflow builders — and no single feature list compares them fairly. This guide compares 64 free and paid tools, one kind at a time, using a comparison table generated from the same data as each tool\'s own PromptQuorum review, so the table and the reviews cannot disagree.',
+      `Tools that use local language models for coding and automation are four different kinds of product — coding assistants and IDE plugins, agent frameworks and SDKs, autonomous agents, and visual workflow builders — and no single feature list compares them fairly. This guide compares ${CD_TOTAL} free and paid tools, one kind at a time, using a comparison table generated from the same data as each tool's own PromptQuorum review, so the table and the reviews cannot disagree.`,
     metaDescription:
-      'Compare 64 local coding and agent tools side by side: coding assistants (Cline, Continue, Aider, Tabby), agent frameworks (CrewAI, LangGraph, AutoGen), autonomous agents and workflow builders (n8n, Dify). Local LLMs, MCP, VS Code, from official docs.',
+      `Compare ${CD_TOTAL} local coding and agent tools side by side: coding assistants (Cline, Continue, Aider, Tabby), agent frameworks (CrewAI, LangGraph, AutoGen), autonomous agents and workflow builders (n8n, Dify). Local LLMs, MCP, VS Code, from official docs.`,
     twitterDescription:
       'Local coding assistants, agent frameworks, autonomous agents and workflow builders compared by kind — local LLMs, Ollama, MCP, VS Code, agent mode — from official documentation.',
     audience:
@@ -42,7 +57,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**The 64 local coding and agent tools in the PromptQuorum directory split into four kinds that should be compared separately: coding assistants and IDE plugins (20 tools), agent frameworks and SDKs (29), autonomous agents (17) and workflow builders (7).** Among coding assistants, 6 document a VS Code extension and 10 an agent mode; among agent frameworks, 14 document MCP support; among workflow builders, 6 of 7 document a visual editor. Use the comparison table below, and read each tool\'s own review before you install it.',
+      `**The ${CD_TOTAL} local coding and agent tools in the PromptQuorum directory split into four kinds that should be compared separately: coding assistants and IDE plugins (${CD_CODE_ASSISTANTS} tools), agent frameworks and SDKs (${CD_AGENT_FRAMEWORKS}), autonomous agents (${CD_AUTONOMOUS_AGENTS}) and workflow builders (${CD_WORKFLOW_BUILDERS}).** Among coding assistants, 6 document a VS Code extension and 10 an agent mode; among agent frameworks, 14 document MCP support; among workflow builders, 6 of 7 document a visual editor. Use the comparison table below, and read each tool's own review before you install it.`,
     quickAnswerTop: {
       en: {
         question: 'Which local coding or agent tool should I use?',
@@ -77,7 +92,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Local coding and agent tools are four different kinds of product — coding assistants, agent frameworks, autonomous agents and workflow builders — so the 64 tools in the PromptQuorum directory are compared within each kind, using a table generated from the same tool data as each tool\'s own review.',
+            text: `Local coding and agent tools are four different kinds of product — coding assistants, agent frameworks, autonomous agents and workflow builders — so the ${CD_TOTAL} tools in the PromptQuorum directory are compared within each kind, using a table generated from the same tool data as each tool's own review.`,
           },
           {
             type: 'plain-terms',
@@ -85,7 +100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '64 tools, four kinds: coding assistants and IDE plugins (20), agent frameworks and SDKs (29), autonomous agents (17) and workflow builders (7). A tool that does more than one job, such as Cline or Dify, appears in each kind it belongs to.',
+          `${CD_TOTAL} tools, four kinds: coding assistants and IDE plugins (${CD_CODE_ASSISTANTS}), agent frameworks and SDKs (${CD_AGENT_FRAMEWORKS}), autonomous agents (${CD_AUTONOMOUS_AGENTS}) and workflow builders (${CD_WORKFLOW_BUILDERS}). A tool that does more than one job, such as Cline or Dify, appears in each kind it belongs to.`,
           'The table is generated from each tool\'s record and checked against its official README or site; a dash means "not stated in the documentation", never "no".',
           'GitHub marks the Flowise, TaskWeaver and GPT-Engineer repositories as archived (read-only) at the time of writing, and Continue\'s own README says its repository is read-only; check their reviews before you build on them.',
           'Every tool name in the table links to its own PromptQuorum review, which is where installation steps and limits are covered.',
@@ -205,7 +220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local Software Directory](/directory) — browse all 200+ local AI apps and filter by category.',
+          `[Local Software Directory](/directory) — browse all ${TOTAL_APP_COUNT} local AI apps and filter by category.`,
           '[Local Inference Engines, Runtimes & Gateways Compared](/power-local-llm/local-llm-run-serve-compared) — the tools that run the models behind these assistants.',
           '[Local Chat Apps & Assistants Compared](/power-local-llm/local-llm-chat-assistants-compared) — chat apps, personal assistants and roleplay tools.',
         ],
@@ -216,7 +231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents',
       description:
-        'Compare 64 local coding and agent tools side by side: coding assistants, agent frameworks, autonomous agents and workflow builders, from official documentation.',
+        `Compare ${CD_TOTAL} local coding and agent tools side by side: coding assistants, agent frameworks, autonomous agents and workflow builders, from official documentation.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-code-development-compared',
       inLanguage: 'en',
       datePublished: '2026-09-21',
@@ -259,9 +274,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Lokale Coding-Assistenten, Agenten und Workflow-Tools im Vergleich (2026): IDE-Plugins, Agent-Frameworks und autonome Agenten',
     seoTitle: 'Lokale Coding-Assistenten und KI-Agenten 2026',
     intro:
-      'Werkzeuge, die lokale Sprachmodelle für Programmierung und Automatisierung nutzen, sind vier unterschiedliche Produktarten — Coding-Assistenten und IDE-Plugins, Agent-Frameworks und SDKs, autonome Agenten sowie visuelle Workflow-Builder —, und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht 64 kostenlose und kostenpflichtige Tools, jeweils eine Art nach der anderen, anhand einer Vergleichstabelle, die aus denselben Daten wie die jeweilige PromptQuorum-Rezension des Tools erzeugt wird, sodass sich Tabelle und Rezensionen nicht widersprechen können.',
+      `Werkzeuge, die lokale Sprachmodelle für Programmierung und Automatisierung nutzen, sind vier unterschiedliche Produktarten — Coding-Assistenten und IDE-Plugins, Agent-Frameworks und SDKs, autonome Agenten sowie visuelle Workflow-Builder —, und keine einzelne Funktionsliste vergleicht sie fair. Dieser Leitfaden vergleicht ${CD_TOTAL} kostenlose und kostenpflichtige Tools, jeweils eine Art nach der anderen, anhand einer Vergleichstabelle, die aus denselben Daten wie die jeweilige PromptQuorum-Rezension des Tools erzeugt wird, sodass sich Tabelle und Rezensionen nicht widersprechen können.`,
     metaDescription:
-      'Vergleich von 64 lokalen Coding- und Agenten-Tools: Coding-Assistenten (Cline, Continue, Aider, Tabby), Agent-Frameworks (CrewAI, LangGraph, AutoGen), autonome Agenten und Workflow-Builder (n8n, Dify). Lokale LLMs, MCP, VS Code laut offizieller Doku.',
+      `Vergleich von ${CD_TOTAL} lokalen Coding- und Agenten-Tools: Coding-Assistenten (Cline, Continue, Aider, Tabby), Agent-Frameworks (CrewAI, LangGraph, AutoGen), autonome Agenten und Workflow-Builder (n8n, Dify). Lokale LLMs, MCP, VS Code laut offizieller Doku.`,
     twitterDescription:
       'Lokale Coding-Assistenten, Agent-Frameworks, autonome Agenten und Workflow-Builder nach Art verglichen — lokale LLMs, Ollama, MCP, VS Code, Agentenmodus — laut offizieller Dokumentation.',
     audience:
@@ -280,7 +295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Die 64 lokalen Coding- und Agenten-Tools im PromptQuorum-Verzeichnis lassen sich in vier Arten einteilen, die getrennt verglichen werden sollten: Coding-Assistenten und IDE-Plugins (20 Tools), Agent-Frameworks und SDKs (29), autonome Agenten (17) und Workflow-Builder (7).** Unter den Coding-Assistenten dokumentieren 6 eine VS-Code-Erweiterung und 10 einen Agentenmodus; unter den Agent-Frameworks dokumentieren 14 MCP-Unterstützung; unter den Workflow-Buildern dokumentieren 6 von 7 einen visuellen Editor. Nutzen Sie die Vergleichstabelle unten und lesen Sie die Rezension des jeweiligen Tools, bevor Sie es installieren.',
+      `**Die ${CD_TOTAL} lokalen Coding- und Agenten-Tools im PromptQuorum-Verzeichnis lassen sich in vier Arten einteilen, die getrennt verglichen werden sollten: Coding-Assistenten und IDE-Plugins (${CD_CODE_ASSISTANTS} Tools), Agent-Frameworks und SDKs (${CD_AGENT_FRAMEWORKS}), autonome Agenten (${CD_AUTONOMOUS_AGENTS}) und Workflow-Builder (${CD_WORKFLOW_BUILDERS}).** Unter den Coding-Assistenten dokumentieren 6 eine VS-Code-Erweiterung und 10 einen Agentenmodus; unter den Agent-Frameworks dokumentieren 14 MCP-Unterstützung; unter den Workflow-Buildern dokumentieren 6 von 7 einen visuellen Editor. Nutzen Sie die Vergleichstabelle unten und lesen Sie die Rezension des jeweiligen Tools, bevor Sie es installieren.`,
     quickAnswerTop: {
       en: {
         question: 'Welches lokale Coding- oder Agenten-Tool sollte ich verwenden?',
@@ -315,7 +330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Lokale Coding- und Agenten-Tools sind vier unterschiedliche Produktarten — Coding-Assistenten, Agent-Frameworks, autonome Agenten und Workflow-Builder —, daher werden die 64 Tools im PromptQuorum-Verzeichnis innerhalb jeder Art verglichen, anhand einer Tabelle, die aus denselben Tooldaten wie die jeweilige Rezension erzeugt wird.',
+            text: `Lokale Coding- und Agenten-Tools sind vier unterschiedliche Produktarten — Coding-Assistenten, Agent-Frameworks, autonome Agenten und Workflow-Builder —, daher werden die ${CD_TOTAL} Tools im PromptQuorum-Verzeichnis innerhalb jeder Art verglichen, anhand einer Tabelle, die aus denselben Tooldaten wie die jeweilige Rezension erzeugt wird.`,
           },
           {
             type: 'plain-terms',
@@ -323,7 +338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '64 Tools, vier Arten: Coding-Assistenten und IDE-Plugins (20), Agent-Frameworks und SDKs (29), autonome Agenten (17) und Workflow-Builder (7). Ein Tool, das mehr als eine Aufgabe erfüllt, etwa Cline oder Dify, erscheint in jeder Art, zu der es gehört.',
+          `${CD_TOTAL} Tools, vier Arten: Coding-Assistenten und IDE-Plugins (${CD_CODE_ASSISTANTS}), Agent-Frameworks und SDKs (${CD_AGENT_FRAMEWORKS}), autonome Agenten (${CD_AUTONOMOUS_AGENTS}) und Workflow-Builder (${CD_WORKFLOW_BUILDERS}). Ein Tool, das mehr als eine Aufgabe erfüllt, etwa Cline oder Dify, erscheint in jeder Art, zu der es gehört.`,
           'Die Tabelle wird aus dem Datensatz jedes Tools erzeugt und mit dessen offizieller README oder Website abgeglichen; ein Strich bedeutet „in der Dokumentation nicht angegeben“, niemals „nein“.',
           'GitHub markiert die Repositories von Flowise, TaskWeaver und GPT-Engineer zum Zeitpunkt der Erstellung als archiviert (nur lesbar), und die README von Continue selbst besagt, dass das Repository nur lesbar ist; prüfen Sie deren Rezensionen, bevor Sie darauf aufbauen.',
           'Jeder Toolname in der Tabelle verlinkt auf die eigene PromptQuorum-Rezension, in der Installationsschritte und Einschränkungen behandelt werden.',
@@ -443,7 +458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Lokales Software-Verzeichnis](/de/directory) — alle über 200 lokalen KI-Apps durchsuchen und nach Kategorie filtern.',
+          `[Lokales Software-Verzeichnis](/de/directory) — alle ${TOTAL_APP_COUNT} lokalen KI-Apps durchsuchen und nach Kategorie filtern.`,
           '[Lokale Inferenz-Engines, Runtimes und Gateways im Vergleich](/de/power-local-llm/local-llm-run-serve-compared) — die Tools, die die Modelle hinter diesen Assistenten ausführen.',
           '[Lokale Chat-Apps und Assistenten im Vergleich](/de/power-local-llm/local-llm-chat-assistants-compared) — Chat-Apps, persönliche Assistenten und Rollenspiel-Tools.',
         ],
@@ -454,7 +469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Lokale Coding-Assistenten, Agenten und Workflow-Tools im Vergleich (2026): IDE-Plugins, Agent-Frameworks und autonome Agenten',
       description:
-        'Vergleich von 64 lokalen Coding- und Agenten-Tools: Coding-Assistenten, Agent-Frameworks, autonome Agenten und Workflow-Builder, laut offizieller Dokumentation.',
+        `Vergleich von ${CD_TOTAL} lokalen Coding- und Agenten-Tools: Coding-Assistenten, Agent-Frameworks, autonome Agenten und Workflow-Builder, laut offizieller Dokumentation.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-code-development-compared',
       inLanguage: 'de',
       datePublished: '2026-09-21',
@@ -497,9 +512,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Assistants de code, agents et outils de workflow locaux : comparatif (2026) — plugins IDE, frameworks d\'agents et agents autonomes',
     seoTitle: 'Assistants de code et agents IA locaux : comparatif 2026',
     intro:
-      'Les outils qui utilisent des modèles de langage locaux pour le code et l\'automatisation sont quatre types de produits différents — assistants de code et plugins IDE, frameworks et SDK d\'agents, agents autonomes et constructeurs de workflows visuels — et aucune liste de fonctionnalités unique ne permet de les comparer équitablement. Ce guide compare 64 outils gratuits et payants, un type à la fois, à l\'aide d\'un tableau comparatif généré à partir des mêmes données que l\'avis PromptQuorum de chaque outil : le tableau et les avis ne peuvent donc pas se contredire.',
+      `Les outils qui utilisent des modèles de langage locaux pour le code et l'automatisation sont quatre types de produits différents — assistants de code et plugins IDE, frameworks et SDK d'agents, agents autonomes et constructeurs de workflows visuels — et aucune liste de fonctionnalités unique ne permet de les comparer équitablement. Ce guide compare ${CD_TOTAL} outils gratuits et payants, un type à la fois, à l'aide d'un tableau comparatif généré à partir des mêmes données que l'avis PromptQuorum de chaque outil : le tableau et les avis ne peuvent donc pas se contredire.`,
     metaDescription:
-      'Comparez 64 outils locaux de code et d\'agents : assistants (Cline, Continue, Aider, Tabby), frameworks d\'agents (CrewAI, LangGraph, AutoGen), agents autonomes et constructeurs de workflows (n8n, Dify). LLM locaux, MCP, VS Code, d\'après les docs officielles.',
+      `Comparez ${CD_TOTAL} outils locaux de code et d'agents : assistants (Cline, Continue, Aider, Tabby), frameworks d'agents (CrewAI, LangGraph, AutoGen), agents autonomes et constructeurs de workflows (n8n, Dify). LLM locaux, MCP, VS Code, d'après les docs officielles.`,
     twitterDescription:
       'Assistants de code, frameworks d\'agents, agents autonomes et constructeurs de workflows locaux comparés par type — LLM locaux, Ollama, MCP, VS Code, mode agent — d\'après la documentation officielle.',
     audience:
@@ -518,7 +533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Les 64 outils locaux de code et d\'agents du répertoire PromptQuorum se répartissent en quatre types à comparer séparément : assistants de code et plugins IDE (20 outils), frameworks et SDK d\'agents (29), agents autonomes (17) et constructeurs de workflows (7).** Parmi les assistants de code, 6 documentent une extension VS Code et 10 un mode agent ; parmi les frameworks d\'agents, 14 documentent la prise en charge de MCP ; parmi les constructeurs de workflows, 6 sur 7 documentent un éditeur visuel. Utilisez le tableau comparatif ci-dessous et lisez l\'avis de chaque outil avant de l\'installer.',
+      `**Les ${CD_TOTAL} outils locaux de code et d'agents du répertoire PromptQuorum se répartissent en quatre types à comparer séparément : assistants de code et plugins IDE (${CD_CODE_ASSISTANTS} outils), frameworks et SDK d'agents (${CD_AGENT_FRAMEWORKS}), agents autonomes (${CD_AUTONOMOUS_AGENTS}) et constructeurs de workflows (${CD_WORKFLOW_BUILDERS}).** Parmi les assistants de code, 6 documentent une extension VS Code et 10 un mode agent ; parmi les frameworks d'agents, 14 documentent la prise en charge de MCP ; parmi les constructeurs de workflows, 6 sur 7 documentent un éditeur visuel. Utilisez le tableau comparatif ci-dessous et lisez l'avis de chaque outil avant de l'installer.`,
     quickAnswerTop: {
       en: {
         question: 'Quel outil local de code ou d\'agents choisir ?',
@@ -553,7 +568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Les outils locaux de code et d\'agents sont quatre types de produits différents — assistants de code, frameworks d\'agents, agents autonomes et constructeurs de workflows — les 64 outils du répertoire PromptQuorum sont donc comparés type par type, à l\'aide d\'un tableau généré à partir des mêmes données que l\'avis de chaque outil.',
+            text: `Les outils locaux de code et d'agents sont quatre types de produits différents — assistants de code, frameworks d'agents, agents autonomes et constructeurs de workflows — les ${CD_TOTAL} outils du répertoire PromptQuorum sont donc comparés type par type, à l'aide d'un tableau généré à partir des mêmes données que l'avis de chaque outil.`,
           },
           {
             type: 'plain-terms',
@@ -561,7 +576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '64 outils, quatre types : assistants de code et plugins IDE (20), frameworks et SDK d\'agents (29), agents autonomes (17) et constructeurs de workflows (7). Un outil qui remplit plusieurs rôles, comme Cline ou Dify, apparaît dans chaque type auquel il appartient.',
+          `${CD_TOTAL} outils, quatre types : assistants de code et plugins IDE (${CD_CODE_ASSISTANTS}), frameworks et SDK d'agents (${CD_AGENT_FRAMEWORKS}), agents autonomes (${CD_AUTONOMOUS_AGENTS}) et constructeurs de workflows (${CD_WORKFLOW_BUILDERS}). Un outil qui remplit plusieurs rôles, comme Cline ou Dify, apparaît dans chaque type auquel il appartient.`,
           'Le tableau est généré à partir de la fiche de chaque outil et vérifié par rapport à son README ou son site officiel ; un tiret signifie « non mentionné dans la documentation », jamais « non ».',
           'GitHub indique que les dépôts Flowise, TaskWeaver et GPT-Engineer sont archivés (en lecture seule) au moment de la rédaction, et le README de Continue précise que son dépôt est en lecture seule ; consultez leurs avis avant de construire dessus.',
           'Chaque nom d\'outil du tableau renvoie vers son propre avis PromptQuorum, où figurent les étapes d\'installation et les limites.',
@@ -681,7 +696,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire des logiciels locaux](/fr/directory) — parcourez plus de 200 applications d\'IA locale et filtrez par catégorie.',
+          `[Répertoire des logiciels locaux](/fr/directory) — parcourez ${TOTAL_APP_COUNT} applications d'IA locale et filtrez par catégorie.`,
           '[Moteurs d\'inférence, runtimes et passerelles locaux : comparatif](/fr/power-local-llm/local-llm-run-serve-compared) — les outils qui font tourner les modèles derrière ces assistants.',
           '[Applications de chat et assistants locaux : comparatif](/fr/power-local-llm/local-llm-chat-assistants-compared) — applications de chat, assistants personnels et outils de jeu de rôle.',
         ],
@@ -692,7 +707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Assistants de code, agents et outils de workflow locaux : comparatif (2026) — plugins IDE, frameworks d\'agents et agents autonomes',
       description:
-        'Comparez 64 outils locaux de code et d\'agents côte à côte : assistants de code, frameworks d\'agents, agents autonomes et constructeurs de workflows, d\'après la documentation officielle.',
+        `Comparez ${CD_TOTAL} outils locaux de code et d'agents côte à côte : assistants de code, frameworks d'agents, agents autonomes et constructeurs de workflows, d'après la documentation officielle.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-code-development-compared',
       inLanguage: 'fr',
       datePublished: '2026-09-21',
@@ -735,9 +750,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Comparativa (2026) de asistentes de código, agentes y herramientas de flujo de trabajo locales: plugins de IDE, frameworks de agentes y agentes autónomos',
     seoTitle: 'Asistentes de código y agentes IA locales: comparativa 2026',
     intro:
-      'Las herramientas que usan modelos de lenguaje locales para programar y automatizar son cuatro tipos de producto distintos (asistentes de código y plugins de IDE, frameworks y SDK de agentes, agentes autónomos y constructores visuales de flujos), y ninguna lista de funciones única los compara con justicia. Esta guía compara 64 herramientas gratuitas y de pago, un tipo cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis de PromptQuorum de cada herramienta, de modo que la tabla y los análisis no pueden contradecirse.',
+      `Las herramientas que usan modelos de lenguaje locales para programar y automatizar son cuatro tipos de producto distintos (asistentes de código y plugins de IDE, frameworks y SDK de agentes, agentes autónomos y constructores visuales de flujos), y ninguna lista de funciones única los compara con justicia. Esta guía compara ${CD_TOTAL} herramientas gratuitas y de pago, un tipo cada vez, con una tabla comparativa generada a partir de los mismos datos que el análisis de PromptQuorum de cada herramienta, de modo que la tabla y los análisis no pueden contradecirse.`,
     metaDescription:
-      'Compara 64 herramientas locales de código y agentes: asistentes, frameworks, agentes autónomos y constructores de flujos (n8n, Dify), según la documentación oficial.',
+      `Compara ${CD_TOTAL} herramientas locales de código y agentes: asistentes, frameworks, agentes autónomos y constructores de flujos (n8n, Dify), según la documentación oficial.`,
     twitterDescription:
       'Asistentes de código, frameworks de agentes, agentes autónomos y constructores de flujos locales, comparados por tipo (LLM locales, Ollama, MCP, VS Code, modo agente) a partir de la documentación oficial.',
     audience:
@@ -756,7 +771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**Las 64 herramientas locales de código y agentes del directorio de PromptQuorum se dividen en cuatro tipos que conviene comparar por separado: asistentes de código y plugins de IDE (20 herramientas), frameworks y SDK de agentes (29), agentes autónomos (17) y constructores de flujos (7).** Entre los asistentes de código, 6 documentan una extensión para VS Code y 10 un modo agente; entre los frameworks de agentes, 14 documentan compatibilidad con MCP; entre los constructores de flujos, 6 de 7 documentan un editor visual. Usa la tabla comparativa de abajo y lee el análisis de cada herramienta antes de instalarla.',
+      `**Las ${CD_TOTAL} herramientas locales de código y agentes del directorio de PromptQuorum se dividen en cuatro tipos que conviene comparar por separado: asistentes de código y plugins de IDE (${CD_CODE_ASSISTANTS} herramientas), frameworks y SDK de agentes (${CD_AGENT_FRAMEWORKS}), agentes autónomos (${CD_AUTONOMOUS_AGENTS}) y constructores de flujos (${CD_WORKFLOW_BUILDERS}).** Entre los asistentes de código, 6 documentan una extensión para VS Code y 10 un modo agente; entre los frameworks de agentes, 14 documentan compatibilidad con MCP; entre los constructores de flujos, 6 de 7 documentan un editor visual. Usa la tabla comparativa de abajo y lee el análisis de cada herramienta antes de instalarla.`,
     quickAnswerTop: {
       en: {
         question: '¿Qué herramienta local de código o de agentes debería usar?',
@@ -791,7 +806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Las herramientas locales de código y agentes son cuatro tipos de producto distintos (asistentes de código, frameworks de agentes, agentes autónomos y constructores de flujos), por lo que las 64 herramientas del directorio de PromptQuorum se comparan dentro de cada tipo, con una tabla generada a partir de los mismos datos que el análisis de cada herramienta.',
+            text: `Las herramientas locales de código y agentes son cuatro tipos de producto distintos (asistentes de código, frameworks de agentes, agentes autónomos y constructores de flujos), por lo que las ${CD_TOTAL} herramientas del directorio de PromptQuorum se comparan dentro de cada tipo, con una tabla generada a partir de los mismos datos que el análisis de cada herramienta.`,
           },
           {
             type: 'plain-terms',
@@ -799,7 +814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '64 herramientas, cuatro tipos: asistentes de código y plugins de IDE (20), frameworks y SDK de agentes (29), agentes autónomos (17) y constructores de flujos (7). Una herramienta que cumple más de una función, como Cline o Dify, aparece en cada tipo al que pertenece.',
+          `${CD_TOTAL} herramientas, cuatro tipos: asistentes de código y plugins de IDE (${CD_CODE_ASSISTANTS}), frameworks y SDK de agentes (${CD_AGENT_FRAMEWORKS}), agentes autónomos (${CD_AUTONOMOUS_AGENTS}) y constructores de flujos (${CD_WORKFLOW_BUILDERS}). Una herramienta que cumple más de una función, como Cline o Dify, aparece en cada tipo al que pertenece.`,
           'La tabla se genera a partir del registro de cada herramienta y se contrasta con su README o sitio oficial; un guion significa "no indicado en la documentación", nunca "no".',
           'GitHub marca los repositorios de Flowise, TaskWeaver y GPT-Engineer como archivados (de solo lectura) en el momento de redactar esto, y el propio README de Continue dice que su repositorio es de solo lectura; consulta sus análisis antes de basar un proyecto en ellos.',
           'Cada nombre de herramienta de la tabla enlaza con su propio análisis de PromptQuorum, donde se explican los pasos de instalación y los límites.',
@@ -919,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software local](/es/directory): explora las más de 200 apps de IA local y filtra por categoría.',
+          `[Directorio de software local](/es/directory): explora las ${TOTAL_APP_COUNT} apps de IA local y filtra por categoría.`,
           '[Motores de inferencia, runtimes y gateways locales: comparativa](/es/power-local-llm/local-llm-run-serve-compared): las herramientas que ejecutan los modelos detrás de estos asistentes.',
           '[Apps de chat y asistentes locales: comparativa](/es/power-local-llm/local-llm-chat-assistants-compared): apps de chat, asistentes personales y herramientas de rol.',
         ],
@@ -930,7 +945,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Comparativa (2026) de asistentes de código, agentes y herramientas de flujo de trabajo locales: plugins de IDE, frameworks de agentes y agentes autónomos',
       description:
-        'Compara 64 herramientas locales de código y agentes: asistentes de código, frameworks de agentes, agentes autónomos y constructores de flujos, según la documentación oficial.',
+        `Compara ${CD_TOTAL} herramientas locales de código y agentes: asistentes de código, frameworks de agentes, agentes autónomos y constructores de flujos, según la documentación oficial.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-code-development-compared',
       inLanguage: 'es',
       datePublished: '2026-09-21',
@@ -973,9 +988,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'ローカルのコーディングアシスタント・エージェント・ワークフローツール比較(2026):IDEプラグイン、エージェントフレームワーク、自律型エージェント',
     seoTitle: 'ローカルAIコーディングアシスタント比較2026',
     intro:
-      'ローカル言語モデルをコーディングや自動化に使うツールは、コーディングアシスタント/IDEプラグイン、エージェントフレームワーク/SDK、自律型エージェント、ビジュアルワークフロービルダーという4種類の異なる製品に分かれ、単一の機能一覧では公平に比較できません。本ガイドでは、無料・有料あわせて64のツールを種類ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成されるため、表とレビューの内容が食い違うことはありません。',
+      `ローカル言語モデルをコーディングや自動化に使うツールは、コーディングアシスタント/IDEプラグイン、エージェントフレームワーク/SDK、自律型エージェント、ビジュアルワークフロービルダーという4種類の異なる製品に分かれ、単一の機能一覧では公平に比較できません。本ガイドでは、無料・有料あわせて${CD_TOTAL}のツールを種類ごとに比較します。比較表は各ツールのPromptQuorumレビューと同じデータから生成されるため、表とレビューの内容が食い違うことはありません。`,
     metaDescription:
-      'ローカルのコーディング/エージェントツール64件を比較:コーディングアシスタント(Cline、Continue、Aider、Tabby)、エージェントフレームワーク(CrewAI、LangGraph、AutoGen)、自律型エージェント、ワークフロービルダー(n8n、Dify)。公式ドキュメントに基づく。',
+      `ローカルのコーディング/エージェントツール${CD_TOTAL}件を比較:コーディングアシスタント(Cline、Continue、Aider、Tabby)、エージェントフレームワーク(CrewAI、LangGraph、AutoGen)、自律型エージェント、ワークフロービルダー(n8n、Dify)。公式ドキュメントに基づく。`,
     twitterDescription:
       'ローカルのコーディングアシスタント、エージェントフレームワーク、自律型エージェント、ワークフロービルダーを種類別に比較。ローカルLLM、Ollama、MCP、VS Code、エージェントモードを公式ドキュメントに基づいて整理。',
     audience:
@@ -994,7 +1009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**PromptQuorumディレクトリにある64のローカルコーディング/エージェントツールは、別々に比較すべき4種類に分かれます。コーディングアシスタントとIDEプラグイン(20件)、エージェントフレームワークとSDK(29件)、自律型エージェント(17件)、ワークフロービルダー(7件)です。** コーディングアシスタントのうち6件がVS Code拡張機能を、10件がエージェントモードを記載しています。エージェントフレームワークのうち14件がMCPサポートを記載し、ワークフロービルダーは7件中6件がビジュアルエディタを記載しています。以下の比較表を使い、インストールする前に各ツールのレビューをお読みください。',
+      `**PromptQuorumディレクトリにある${CD_TOTAL}のローカルコーディング/エージェントツールは、別々に比較すべき4種類に分かれます。コーディングアシスタントとIDEプラグイン(${CD_CODE_ASSISTANTS}件)、エージェントフレームワークとSDK(${CD_AGENT_FRAMEWORKS}件)、自律型エージェント(${CD_AUTONOMOUS_AGENTS}件)、ワークフロービルダー(${CD_WORKFLOW_BUILDERS}件)です。** コーディングアシスタントのうち6件がVS Code拡張機能を、10件がエージェントモードを記載しています。エージェントフレームワークのうち14件がMCPサポートを記載し、ワークフロービルダーは7件中6件がビジュアルエディタを記載しています。以下の比較表を使い、インストールする前に各ツールのレビューをお読みください。`,
     quickAnswerTop: {
       en: {
         question: 'ローカルのコーディング/エージェントツールはどれを使うべきか',
@@ -1029,7 +1044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'ローカルのコーディング/エージェントツールは、コーディングアシスタント、エージェントフレームワーク、自律型エージェント、ワークフロービルダーという4種類の異なる製品であるため、PromptQuorumディレクトリの64ツールは、各ツールのレビューと同じデータから生成した表を使って、種類ごとに比較しています。',
+            text: `ローカルのコーディング/エージェントツールは、コーディングアシスタント、エージェントフレームワーク、自律型エージェント、ワークフロービルダーという4種類の異なる製品であるため、PromptQuorumディレクトリの${CD_TOTAL}ツールは、各ツールのレビューと同じデータから生成した表を使って、種類ごとに比較しています。`,
           },
           {
             type: 'plain-terms',
@@ -1037,7 +1052,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '64ツール、4種類:コーディングアシスタントとIDEプラグイン(20件)、エージェントフレームワークとSDK(29件)、自律型エージェント(17件)、ワークフロービルダー(7件)。ClineやDifyのように複数の役割を持つツールは、該当する種類ごとに掲載しています。',
+          `${CD_TOTAL}ツール、4種類:コーディングアシスタントとIDEプラグイン(${CD_CODE_ASSISTANTS}件)、エージェントフレームワークとSDK(${CD_AGENT_FRAMEWORKS}件)、自律型エージェント(${CD_AUTONOMOUS_AGENTS}件)、ワークフロービルダー(${CD_WORKFLOW_BUILDERS}件)。ClineやDifyのように複数の役割を持つツールは、該当する種類ごとに掲載しています。`,
           '表は各ツールのレコードから生成し、公式のREADMEまたはサイトと照合しています。ダッシュは「ドキュメントに記載なし」の意味で、「なし」という意味ではありません。',
           '執筆時点で、GitHubはFlowise、TaskWeaver、GPT-Engineerのリポジトリをアーカイブ(読み取り専用)としており、ContinueのREADMEにも、リポジトリが読み取り専用であると記載されています。これらを基盤に構築する前に、各レビューを確認してください。',
           '表の各ツール名は、そのツール専用のPromptQuorumレビューにリンクしており、インストール手順と制限事項はそちらで扱っています。',
@@ -1157,7 +1172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルソフトウェアディレクトリ](/ja/directory) — 200以上のローカルAIアプリをカテゴリで絞り込んで閲覧できます。',
+          `[ローカルソフトウェアディレクトリ](/ja/directory) — ${TOTAL_APP_COUNT}件のローカルAIアプリをカテゴリで絞り込んで閲覧できます。`,
           '[ローカル推論エンジン・ランタイム・ゲートウェイ比較](/ja/power-local-llm/local-llm-run-serve-compared) — これらのアシスタントの背後でモデルを動かすツール。',
           '[ローカルチャットアプリ・アシスタント比較](/ja/power-local-llm/local-llm-chat-assistants-compared) — チャットアプリ、パーソナルアシスタント、ロールプレイツール。',
         ],
@@ -1168,7 +1183,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'ローカルのコーディングアシスタント・エージェント・ワークフローツール比較(2026):IDEプラグイン、エージェントフレームワーク、自律型エージェント',
       description:
-        'ローカルのコーディング/エージェントツール64件を比較:コーディングアシスタント、エージェントフレームワーク、自律型エージェント、ワークフロービルダーを公式ドキュメントに基づいて整理。',
+        `ローカルのコーディング/エージェントツール${CD_TOTAL}件を比較:コーディングアシスタント、エージェントフレームワーク、自律型エージェント、ワークフロービルダーを公式ドキュメントに基づいて整理。`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-code-development-compared',
       inLanguage: 'ja',
       datePublished: '2026-09-21',
@@ -1211,9 +1226,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '本地编程助手、智能体与工作流工具对比(2026):IDE插件、智能体框架与自主智能体',
     seoTitle: '本地编程助手与AI智能体对比2026',
     intro:
-      '使用本地语言模型进行编程和自动化的工具,实际上是四种不同类型的产品——编程助手与IDE插件、智能体框架与SDK、自主智能体,以及可视化工作流构建器——没有任何单一的功能清单能公平地比较它们。本指南按类型逐一对比64款免费和付费工具,对比表与各工具自己的PromptQuorum评测使用同一份数据生成,因此表格与评测不会互相矛盾。',
+      `使用本地语言模型进行编程和自动化的工具,实际上是四种不同类型的产品——编程助手与IDE插件、智能体框架与SDK、自主智能体,以及可视化工作流构建器——没有任何单一的功能清单能公平地比较它们。本指南按类型逐一对比${CD_TOTAL}款免费和付费工具,对比表与各工具自己的PromptQuorum评测使用同一份数据生成,因此表格与评测不会互相矛盾。`,
     metaDescription:
-      '并排对比64款本地编程与智能体工具:编程助手(Cline、Continue、Aider、Tabby)、智能体框架(CrewAI、LangGraph、AutoGen)、自主智能体与工作流构建器(n8n、Dify)。本地LLM、MCP、VS Code,数据来自官方文档。',
+      `并排对比${CD_TOTAL}款本地编程与智能体工具:编程助手(Cline、Continue、Aider、Tabby)、智能体框架(CrewAI、LangGraph、AutoGen)、自主智能体与工作流构建器(n8n、Dify)。本地LLM、MCP、VS Code,数据来自官方文档。`,
     twitterDescription:
       '按类型对比本地编程助手、智能体框架、自主智能体和工作流构建器——本地LLM、Ollama、MCP、VS Code、智能体模式——数据来自官方文档。',
     audience:
@@ -1232,7 +1247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**PromptQuorum目录中的64款本地编程与智能体工具分为四种应分开比较的类型:编程助手与IDE插件(20款)、智能体框架与SDK(29款)、自主智能体(17款)和工作流构建器(7款)。** 在编程助手中,6款在文档中说明提供VS Code扩展,10款提供智能体模式;在智能体框架中,14款在文档中说明支持MCP;在工作流构建器中,7款里有6款在文档中说明提供可视化编辑器。请使用下方的对比表,并在安装前阅读各工具自己的评测。',
+      `**PromptQuorum目录中的${CD_TOTAL}款本地编程与智能体工具分为四种应分开比较的类型:编程助手与IDE插件(${CD_CODE_ASSISTANTS}款)、智能体框架与SDK(${CD_AGENT_FRAMEWORKS}款)、自主智能体(${CD_AUTONOMOUS_AGENTS}款)和工作流构建器(${CD_WORKFLOW_BUILDERS}款)。** 在编程助手中,6款在文档中说明提供VS Code扩展,10款提供智能体模式;在智能体框架中,14款在文档中说明支持MCP;在工作流构建器中,7款里有6款在文档中说明提供可视化编辑器。请使用下方的对比表,并在安装前阅读各工具自己的评测。`,
     quickAnswerTop: {
       en: {
         question: '我应该使用哪款本地编程或智能体工具?',
@@ -1267,7 +1282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '本地编程与智能体工具是四种不同类型的产品——编程助手、智能体框架、自主智能体和工作流构建器——因此PromptQuorum目录中的64款工具按类型分别比较,所用表格与各工具自己的评测由同一份工具数据生成。',
+            text: `本地编程与智能体工具是四种不同类型的产品——编程助手、智能体框架、自主智能体和工作流构建器——因此PromptQuorum目录中的${CD_TOTAL}款工具按类型分别比较,所用表格与各工具自己的评测由同一份工具数据生成。`,
           },
           {
             type: 'plain-terms',
@@ -1275,7 +1290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '64款工具,四种类型:编程助手与IDE插件(20款)、智能体框架与SDK(29款)、自主智能体(17款)和工作流构建器(7款)。身兼数职的工具(如Cline或Dify)会出现在它所属的每一种类型中。',
+          `${CD_TOTAL}款工具,四种类型:编程助手与IDE插件(${CD_CODE_ASSISTANTS}款)、智能体框架与SDK(${CD_AGENT_FRAMEWORKS}款)、自主智能体(${CD_AUTONOMOUS_AGENTS}款)和工作流构建器(${CD_WORKFLOW_BUILDERS}款)。身兼数职的工具(如Cline或Dify)会出现在它所属的每一种类型中。`,
           '表格由各工具的记录生成,并对照其官方README或网站核实;破折号表示"文档中未说明",绝不表示"没有"。',
           '在撰写本文时,GitHub将Flowise、TaskWeaver和GPT-Engineer的仓库标记为已归档(只读),Continue自己的README也说明其仓库是只读的;在基于它们进行构建之前,请先查看各自的评测。',
           '表格中的每个工具名称都链接到其自己的PromptQuorum评测,安装步骤和局限都在评测中介绍。',
@@ -1395,7 +1410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地软件目录](/zh/directory)——浏览全部200多款本地AI应用,并按类别筛选。',
+          `[本地软件目录](/zh/directory)——浏览全部${TOTAL_APP_COUNT}款本地AI应用,并按类别筛选。`,
           '[本地推理引擎、运行时与网关对比](/zh/power-local-llm/local-llm-run-serve-compared)——运行这些助手背后模型的工具。',
           '[本地聊天应用与助手对比](/zh/power-local-llm/local-llm-chat-assistants-compared)——聊天应用、个人助手和角色扮演工具。',
         ],
@@ -1406,7 +1421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '本地编程助手、智能体与工作流工具对比(2026):IDE插件、智能体框架与自主智能体',
       description:
-        '并排对比64款本地编程与智能体工具:编程助手、智能体框架、自主智能体和工作流构建器,数据来自官方文档。',
+        `并排对比${CD_TOTAL}款本地编程与智能体工具:编程助手、智能体框架、自主智能体和工作流构建器,数据来自官方文档。`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-code-development-compared',
       inLanguage: 'zh',
       datePublished: '2026-09-21',
@@ -1449,9 +1464,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Assistentes de código, agentes e ferramentas de fluxo de trabalho locais comparados (2026): plugins de IDE, frameworks de agentes e agentes autônomos',
     seoTitle: 'Assistentes de código e agentes de IA locais 2026',
     intro:
-      'As ferramentas que usam modelos de linguagem locais para programar e automatizar são quatro tipos diferentes de produto — assistentes de código e plugins de IDE, frameworks e SDKs de agentes, agentes autônomos e construtores visuais de fluxo de trabalho — e nenhuma lista única de recursos os compara de forma justa. Este guia compara 64 ferramentas gratuitas e pagas, um tipo por vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise de cada ferramenta na PromptQuorum, de modo que a tabela e as análises não podem se contradizer.',
+      `As ferramentas que usam modelos de linguagem locais para programar e automatizar são quatro tipos diferentes de produto — assistentes de código e plugins de IDE, frameworks e SDKs de agentes, agentes autônomos e construtores visuais de fluxo de trabalho — e nenhuma lista única de recursos os compara de forma justa. Este guia compara ${CD_TOTAL} ferramentas gratuitas e pagas, um tipo por vez, usando uma tabela comparativa gerada a partir dos mesmos dados da análise de cada ferramenta na PromptQuorum, de modo que a tabela e as análises não podem se contradizer.`,
     metaDescription:
-      'Compare 64 ferramentas locais de código e agentes: assistentes de código (Cline, Continue, Aider, Tabby), frameworks de agentes (CrewAI, LangGraph, AutoGen), agentes autônomos e construtores de fluxo (n8n, Dify). LLMs locais, MCP, VS Code.',
+      `Compare ${CD_TOTAL} ferramentas locais de código e agentes: assistentes de código (Cline, Continue, Aider, Tabby), frameworks de agentes (CrewAI, LangGraph, AutoGen), agentes autônomos e construtores de fluxo (n8n, Dify). LLMs locais, MCP, VS Code.`,
     twitterDescription:
       'Assistentes de código, frameworks de agentes, agentes autônomos e construtores de fluxo de trabalho locais comparados por tipo — LLMs locais, Ollama, MCP, VS Code, modo agente — a partir da documentação oficial.',
     audience:
@@ -1470,7 +1485,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**As 64 ferramentas locais de código e agentes do diretório da PromptQuorum se dividem em quatro tipos que devem ser comparados separadamente: assistentes de código e plugins de IDE (20 ferramentas), frameworks e SDKs de agentes (29), agentes autônomos (17) e construtores de fluxo de trabalho (7).** Entre os assistentes de código, 6 documentam uma extensão para o VS Code e 10 um modo agente; entre os frameworks de agentes, 14 documentam suporte a MCP; entre os construtores de fluxo de trabalho, 6 de 7 documentam um editor visual. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.',
+      `**As ${CD_TOTAL} ferramentas locais de código e agentes do diretório da PromptQuorum se dividem em quatro tipos que devem ser comparados separadamente: assistentes de código e plugins de IDE (${CD_CODE_ASSISTANTS} ferramentas), frameworks e SDKs de agentes (${CD_AGENT_FRAMEWORKS}), agentes autônomos (${CD_AUTONOMOUS_AGENTS}) e construtores de fluxo de trabalho (${CD_WORKFLOW_BUILDERS}).** Entre os assistentes de código, 6 documentam uma extensão para o VS Code e 10 um modo agente; entre os frameworks de agentes, 14 documentam suporte a MCP; entre os construtores de fluxo de trabalho, 6 de 7 documentam um editor visual. Use a tabela comparativa abaixo e leia a análise de cada ferramenta antes de instalá-la.`,
     quickAnswerTop: {
       en: {
         question: 'Qual ferramenta local de código ou de agentes devo usar?',
@@ -1505,7 +1520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'As ferramentas locais de código e agentes são quatro tipos diferentes de produto — assistentes de código, frameworks de agentes, agentes autônomos e construtores de fluxo de trabalho — por isso as 64 ferramentas do diretório da PromptQuorum são comparadas dentro de cada tipo, com uma tabela gerada a partir dos mesmos dados da análise de cada ferramenta.',
+            text: `As ferramentas locais de código e agentes são quatro tipos diferentes de produto — assistentes de código, frameworks de agentes, agentes autônomos e construtores de fluxo de trabalho — por isso as ${CD_TOTAL} ferramentas do diretório da PromptQuorum são comparadas dentro de cada tipo, com uma tabela gerada a partir dos mesmos dados da análise de cada ferramenta.`,
           },
           {
             type: 'plain-terms',
@@ -1513,7 +1528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '64 ferramentas, quatro tipos: assistentes de código e plugins de IDE (20), frameworks e SDKs de agentes (29), agentes autônomos (17) e construtores de fluxo de trabalho (7). Uma ferramenta que faz mais de uma função, como o Cline ou o Dify, aparece em cada tipo a que pertence.',
+          `${CD_TOTAL} ferramentas, quatro tipos: assistentes de código e plugins de IDE (${CD_CODE_ASSISTANTS}), frameworks e SDKs de agentes (${CD_AGENT_FRAMEWORKS}), agentes autônomos (${CD_AUTONOMOUS_AGENTS}) e construtores de fluxo de trabalho (${CD_WORKFLOW_BUILDERS}). Uma ferramenta que faz mais de uma função, como o Cline ou o Dify, aparece em cada tipo a que pertence.`,
           'A tabela é gerada a partir do registro de cada ferramenta e conferida com o README ou o site oficial; um traço significa "não informado na documentação", nunca "não".',
           'O GitHub marca os repositórios Flowise, TaskWeaver e GPT-Engineer como arquivados (somente leitura) no momento da redação, e o próprio README do Continue diz que seu repositório é somente leitura; consulte as análises deles antes de construir sobre essas ferramentas.',
           'Cada nome de ferramenta na tabela leva à sua própria análise na PromptQuorum, onde estão as etapas de instalação e os limites.',
@@ -1633,7 +1648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de software local](/pt/directory) — navegue por mais de 200 apps de IA local e filtre por categoria.',
+          `[Diretório de software local](/pt/directory) — navegue por ${TOTAL_APP_COUNT} apps de IA local e filtre por categoria.`,
           '[Motores de inferência, runtimes e gateways locais comparados](/pt/power-local-llm/local-llm-run-serve-compared) — as ferramentas que executam os modelos por trás desses assistentes.',
           '[Apps de chat e assistentes locais comparados](/pt/power-local-llm/local-llm-chat-assistants-compared) — apps de chat, assistentes pessoais e ferramentas de roleplay.',
         ],
@@ -1644,7 +1659,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'Assistentes de código, agentes e ferramentas de fluxo de trabalho locais comparados (2026): plugins de IDE, frameworks de agentes e agentes autônomos',
       description:
-        'Compare 64 ferramentas locais de código e agentes lado a lado: assistentes de código, frameworks de agentes, agentes autônomos e construtores de fluxo de trabalho, a partir da documentação oficial.',
+        `Compare ${CD_TOTAL} ferramentas locais de código e agentes lado a lado: assistentes de código, frameworks de agentes, agentes autônomos e construtores de fluxo de trabalho, a partir da documentação oficial.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-code-development-compared',
       inLanguage: 'pt-BR',
       datePublished: '2026-09-21',
@@ -1687,9 +1702,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'مقارنة مساعدات البرمجة المحلية والوكلاء وأدوات سير العمل (2026): إضافات IDE وأطر الوكلاء والوكلاء المستقلة',
     seoTitle: 'مقارنة مساعدات البرمجة والوكلاء المحليين 2026',
     intro:
-      'الأدوات التي تستخدم نماذج لغوية محلية للبرمجة والأتمتة هي أربعة أنواع مختلفة من المنتجات — مساعدات البرمجة وإضافات IDE، وأطر الوكلاء ومجموعات SDK، والوكلاء المستقلة، وأدوات بناء سير العمل المرئية — ولا توجد قائمة ميزات واحدة تقارن بينها بإنصاف. يقارن هذا الدليل 64 أداة مجانية ومدفوعة، نوعًا بعد نوع، بجدول مقارنة مُولَّد من البيانات نفسها التي تستند إليها مراجعة PromptQuorum لكل أداة، فلا يمكن أن يتعارض الجدول مع المراجعات.',
+      `الأدوات التي تستخدم نماذج لغوية محلية للبرمجة والأتمتة هي أربعة أنواع مختلفة من المنتجات — مساعدات البرمجة وإضافات IDE، وأطر الوكلاء ومجموعات SDK، والوكلاء المستقلة، وأدوات بناء سير العمل المرئية — ولا توجد قائمة ميزات واحدة تقارن بينها بإنصاف. يقارن هذا الدليل ${CD_TOTAL} أداة مجانية ومدفوعة، نوعًا بعد نوع، بجدول مقارنة مُولَّد من البيانات نفسها التي تستند إليها مراجعة PromptQuorum لكل أداة، فلا يمكن أن يتعارض الجدول مع المراجعات.`,
     metaDescription:
-      'قارن 64 أداة برمجة ووكلاء محلية جنبًا إلى جنب: مساعدات البرمجة (Cline وContinue وAider وTabby)، وأطر الوكلاء (CrewAI وLangGraph وAutoGen)، والوكلاء المستقلة وأدوات سير العمل (n8n وDify). نماذج محلية وMCP وVS Code، من الوثائق الرسمية.',
+      `قارن ${CD_TOTAL} أداة برمجة ووكلاء محلية جنبًا إلى جنب: مساعدات البرمجة (Cline وContinue وAider وTabby)، وأطر الوكلاء (CrewAI وLangGraph وAutoGen)، والوكلاء المستقلة وأدوات سير العمل (n8n وDify). نماذج محلية وMCP وVS Code، من الوثائق الرسمية.`,
     twitterDescription:
       'مقارنة مساعدات البرمجة المحلية وأطر الوكلاء والوكلاء المستقلة وأدوات بناء سير العمل حسب النوع — النماذج المحلية وOllama وMCP وVS Code ووضع الوكيل — من الوثائق الرسمية.',
     audience:
@@ -1708,7 +1723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**تنقسم أدوات البرمجة والوكلاء المحلية الـ64 في دليل PromptQuorum إلى أربعة أنواع ينبغي مقارنتها كلًّا على حدة: مساعدات البرمجة وإضافات IDE (20 أداة)، وأطر الوكلاء ومجموعات SDK (29)، والوكلاء المستقلة (17)، وأدوات بناء سير العمل (7).** من بين مساعدات البرمجة، توثّق 6 إضافة لـ VS Code و10 وضع وكيل؛ ومن بين أطر الوكلاء، توثّق 14 دعم MCP؛ ومن بين أدوات سير العمل، توثّق 6 من 7 محررًا مرئيًا. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.',
+      `**تنقسم أدوات البرمجة والوكلاء المحلية الـ${CD_TOTAL} في دليل PromptQuorum إلى أربعة أنواع ينبغي مقارنتها كلًّا على حدة: مساعدات البرمجة وإضافات IDE (${CD_CODE_ASSISTANTS} أداة)، وأطر الوكلاء ومجموعات SDK (${CD_AGENT_FRAMEWORKS})، والوكلاء المستقلة (${CD_AUTONOMOUS_AGENTS})، وأدوات بناء سير العمل (${CD_WORKFLOW_BUILDERS}).** من بين مساعدات البرمجة، توثّق 6 إضافة لـ VS Code و10 وضع وكيل؛ ومن بين أطر الوكلاء، توثّق 14 دعم MCP؛ ومن بين أدوات سير العمل، توثّق 6 من 7 محررًا مرئيًا. استخدم جدول المقارنة أدناه، واقرأ مراجعة كل أداة قبل تثبيتها.`,
     quickAnswerTop: {
       en: {
         question: 'أي أداة برمجة أو وكلاء محلية ينبغي أن أستخدم؟',
@@ -1743,7 +1758,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'أدوات البرمجة والوكلاء المحلية هي أربعة أنواع مختلفة من المنتجات — مساعدات البرمجة، وأطر الوكلاء، والوكلاء المستقلة، وأدوات بناء سير العمل — لذا تُقارَن الأدوات الـ64 في دليل PromptQuorum داخل كل نوع، بجدول مُولَّد من بيانات الأدوات نفسها التي تستند إليها مراجعة كل أداة.',
+            text: `أدوات البرمجة والوكلاء المحلية هي أربعة أنواع مختلفة من المنتجات — مساعدات البرمجة، وأطر الوكلاء، والوكلاء المستقلة، وأدوات بناء سير العمل — لذا تُقارَن الأدوات الـ${CD_TOTAL} في دليل PromptQuorum داخل كل نوع، بجدول مُولَّد من بيانات الأدوات نفسها التي تستند إليها مراجعة كل أداة.`,
           },
           {
             type: 'plain-terms',
@@ -1751,7 +1766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '64 أداة في أربعة أنواع: مساعدات البرمجة وإضافات IDE (20)، وأطر الوكلاء ومجموعات SDK (29)، والوكلاء المستقلة (17)، وأدوات بناء سير العمل (7). الأداة التي تؤدي أكثر من مهمة، مثل Cline أو Dify، تظهر في كل نوع تنتمي إليه.',
+          `${CD_TOTAL} أداة في أربعة أنواع: مساعدات البرمجة وإضافات IDE (${CD_CODE_ASSISTANTS})، وأطر الوكلاء ومجموعات SDK (${CD_AGENT_FRAMEWORKS})، والوكلاء المستقلة (${CD_AUTONOMOUS_AGENTS})، وأدوات بناء سير العمل (${CD_WORKFLOW_BUILDERS}). الأداة التي تؤدي أكثر من مهمة، مثل Cline أو Dify، تظهر في كل نوع تنتمي إليه.`,
           'يُولَّد الجدول من سجل كل أداة ويُدقَّق مقابل ملف README الرسمي أو موقعها؛ والشرطة تعني «غير مذكور في الوثائق» ولا تعني «لا» أبدًا.',
           'يُظهر GitHub مستودعات Flowise وTaskWeaver وGPT-Engineer على أنها مؤرشفة (للقراءة فقط) وقت كتابة هذا الدليل، ويذكر README الخاص بـ Continue أن مستودعه للقراءة فقط؛ راجع مراجعاتها قبل أن تبني عليها.',
           'كل اسم أداة في الجدول يرتبط بمراجعته الخاصة في PromptQuorum، وفيها خطوات التثبيت والحدود.',
@@ -1871,7 +1886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل البرمجيات المحلية](/ar/directory) — تصفّح أكثر من 200 تطبيق ذكاء اصطناعي محلي وصفِّها حسب الفئة.',
+          `[دليل البرمجيات المحلية](/ar/directory) — تصفّح ${TOTAL_APP_COUNT} تطبيق ذكاء اصطناعي محلي وصفِّها حسب الفئة.`,
           '[مقارنة محركات الاستدلال المحلية وبيئات التشغيل والبوابات](/ar/power-local-llm/local-llm-run-serve-compared) — الأدوات التي تشغّل النماذج خلف هذه المساعدات.',
           '[مقارنة تطبيقات الدردشة والمساعدات المحلية](/ar/power-local-llm/local-llm-chat-assistants-compared) — تطبيقات الدردشة والمساعدات الشخصية وأدوات لعب الأدوار.',
         ],
@@ -1882,7 +1897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: 'مقارنة مساعدات البرمجة المحلية والوكلاء وأدوات سير العمل (2026): إضافات IDE وأطر الوكلاء والوكلاء المستقلة',
       description:
-        'قارن 64 أداة برمجة ووكلاء محلية جنبًا إلى جنب: مساعدات البرمجة وأطر الوكلاء والوكلاء المستقلة وأدوات بناء سير العمل، من الوثائق الرسمية.',
+        `قارن ${CD_TOTAL} أداة برمجة ووكلاء محلية جنبًا إلى جنب: مساعدات البرمجة وأطر الوكلاء والوكلاء المستقلة وأدوات بناء سير العمل، من الوثائق الرسمية.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-code-development-compared',
       inLanguage: 'ar',
       datePublished: '2026-09-21',
@@ -1925,9 +1940,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '로컬 코딩 어시스턴트·에이전트·워크플로 도구 비교(2026): IDE 플러그인, 에이전트 프레임워크, 자율 에이전트',
     seoTitle: '로컬 코딩 어시스턴트·AI 에이전트 비교 2026',
     intro:
-      '로컬 언어 모델로 코딩과 자동화를 하는 도구는 코딩 어시스턴트와 IDE 플러그인, 에이전트 프레임워크와 SDK, 자율 에이전트, 시각적 워크플로 빌더라는 네 가지 서로 다른 종류의 제품이며, 하나의 기능 목록으로는 이들을 공정하게 비교할 수 없습니다. 이 가이드는 무료 및 유료 도구 64개를 종류별로 나누어 비교하며, 비교표는 각 도구의 PromptQuorum 리뷰와 같은 데이터에서 생성되므로 표와 리뷰가 서로 어긋날 수 없습니다.',
+      `로컬 언어 모델로 코딩과 자동화를 하는 도구는 코딩 어시스턴트와 IDE 플러그인, 에이전트 프레임워크와 SDK, 자율 에이전트, 시각적 워크플로 빌더라는 네 가지 서로 다른 종류의 제품이며, 하나의 기능 목록으로는 이들을 공정하게 비교할 수 없습니다. 이 가이드는 무료 및 유료 도구 ${CD_TOTAL}개를 종류별로 나누어 비교하며, 비교표는 각 도구의 PromptQuorum 리뷰와 같은 데이터에서 생성되므로 표와 리뷰가 서로 어긋날 수 없습니다.`,
     metaDescription:
-      '로컬 코딩·에이전트 도구 64개를 나란히 비교: 코딩 어시스턴트(Cline, Continue, Aider, Tabby), 에이전트 프레임워크(CrewAI, LangGraph, AutoGen), 자율 에이전트, 워크플로 빌더(n8n, Dify). 로컬 LLM, MCP, VS Code, 공식 문서 기준.',
+      `로컬 코딩·에이전트 도구 ${CD_TOTAL}개를 나란히 비교: 코딩 어시스턴트(Cline, Continue, Aider, Tabby), 에이전트 프레임워크(CrewAI, LangGraph, AutoGen), 자율 에이전트, 워크플로 빌더(n8n, Dify). 로컬 LLM, MCP, VS Code, 공식 문서 기준.`,
     twitterDescription:
       '로컬 코딩 어시스턴트, 에이전트 프레임워크, 자율 에이전트, 워크플로 빌더를 종류별로 비교 — 로컬 LLM, Ollama, MCP, VS Code, 에이전트 모드 — 공식 문서 기준.',
     audience:
@@ -1946,7 +1961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     leadAnswerBlock:
-      '**PromptQuorum 디렉터리의 로컬 코딩·에이전트 도구 64개는 따로 비교해야 하는 네 종류로 나뉩니다: 코딩 어시스턴트와 IDE 플러그인(20개), 에이전트 프레임워크와 SDK(29개), 자율 에이전트(17개), 워크플로 빌더(7개).** 코딩 어시스턴트 중 6개는 VS Code 확장을, 10개는 에이전트 모드를 문서화하고 있습니다. 에이전트 프레임워크 중 14개는 MCP 지원을 문서화하고 있으며, 워크플로 빌더 7개 중 6개는 시각적 편집기를 문서화하고 있습니다. 아래 비교표를 활용하되, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.',
+      `**PromptQuorum 디렉터리의 로컬 코딩·에이전트 도구 ${CD_TOTAL}개는 따로 비교해야 하는 네 종류로 나뉩니다: 코딩 어시스턴트와 IDE 플러그인(${CD_CODE_ASSISTANTS}개), 에이전트 프레임워크와 SDK(${CD_AGENT_FRAMEWORKS}개), 자율 에이전트(${CD_AUTONOMOUS_AGENTS}개), 워크플로 빌더(${CD_WORKFLOW_BUILDERS}개).** 코딩 어시스턴트 중 6개는 VS Code 확장을, 10개는 에이전트 모드를 문서화하고 있습니다. 에이전트 프레임워크 중 14개는 MCP 지원을 문서화하고 있으며, 워크플로 빌더 7개 중 6개는 시각적 편집기를 문서화하고 있습니다. 아래 비교표를 활용하되, 설치하기 전에 각 도구의 리뷰를 읽어 보십시오.`,
     quickAnswerTop: {
       en: {
         question: '어떤 로컬 코딩 또는 에이전트 도구를 써야 합니까?',
@@ -1981,7 +1996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '로컬 코딩·에이전트 도구는 코딩 어시스턴트, 에이전트 프레임워크, 자율 에이전트, 워크플로 빌더라는 네 가지 서로 다른 종류의 제품이므로, PromptQuorum 디렉터리의 도구 64개는 각 도구 리뷰와 같은 도구 데이터에서 생성된 표를 사용해 종류별로 나누어 비교합니다.',
+            text: `로컬 코딩·에이전트 도구는 코딩 어시스턴트, 에이전트 프레임워크, 자율 에이전트, 워크플로 빌더라는 네 가지 서로 다른 종류의 제품이므로, PromptQuorum 디렉터리의 도구 ${CD_TOTAL}개는 각 도구 리뷰와 같은 도구 데이터에서 생성된 표를 사용해 종류별로 나누어 비교합니다.`,
           },
           {
             type: 'plain-terms',
@@ -1989,7 +2004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '도구 64개, 네 가지 종류: 코딩 어시스턴트와 IDE 플러그인(20개), 에이전트 프레임워크와 SDK(29개), 자율 에이전트(17개), 워크플로 빌더(7개). Cline이나 Dify처럼 두 가지 이상의 역할을 하는 도구는 해당하는 모든 종류에 나타납니다.',
+          `도구 ${CD_TOTAL}개, 네 가지 종류: 코딩 어시스턴트와 IDE 플러그인(${CD_CODE_ASSISTANTS}개), 에이전트 프레임워크와 SDK(${CD_AGENT_FRAMEWORKS}개), 자율 에이전트(${CD_AUTONOMOUS_AGENTS}개), 워크플로 빌더(${CD_WORKFLOW_BUILDERS}개). Cline이나 Dify처럼 두 가지 이상의 역할을 하는 도구는 해당하는 모든 종류에 나타납니다.`,
           '표는 각 도구의 레코드에서 생성되며 공식 README 또는 사이트와 대조해 확인합니다. 대시는 "문서에 명시되지 않음"을 뜻하며, "아니오"를 뜻하지 않습니다.',
           '본 문서 작성 시점에 GitHub는 Flowise, TaskWeaver, GPT-Engineer 저장소를 아카이브(읽기 전용)로 표시하고 있으며, Continue의 README는 자체 저장소가 읽기 전용이라고 밝히고 있습니다. 이들을 기반으로 무언가를 만들기 전에 각 리뷰를 확인하십시오.',
           '표의 모든 도구 이름은 해당 도구의 PromptQuorum 리뷰로 연결되며, 설치 단계와 한계는 그 리뷰에서 다룹니다.',
@@ -2109,7 +2124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 글',
         items: [
-          '[로컬 소프트웨어 디렉터리](/ko/directory) — 200개 이상의 로컬 AI 앱을 둘러보고 카테고리별로 필터링하십시오.',
+          `[로컬 소프트웨어 디렉터리](/ko/directory) — ${TOTAL_APP_COUNT}개의 로컬 AI 앱을 둘러보고 카테고리별로 필터링하십시오.`,
           '[로컬 추론 엔진, 런타임, 게이트웨이 비교](/ko/power-local-llm/local-llm-run-serve-compared) — 이 어시스턴트들 뒤에서 모델을 실행하는 도구들.',
           '[로컬 채팅 앱과 어시스턴트 비교](/ko/power-local-llm/local-llm-chat-assistants-compared) — 채팅 앱, 개인 어시스턴트, 롤플레이 도구.',
         ],
@@ -2120,7 +2135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'TechArticle',
       headline: '로컬 코딩 어시스턴트·에이전트·워크플로 도구 비교(2026): IDE 플러그인, 에이전트 프레임워크, 자율 에이전트',
       description:
-        '로컬 코딩·에이전트 도구 64개를 나란히 비교: 코딩 어시스턴트, 에이전트 프레임워크, 자율 에이전트, 워크플로 빌더, 공식 문서 기준.',
+        `로컬 코딩·에이전트 도구 ${CD_TOTAL}개를 나란히 비교: 코딩 어시스턴트, 에이전트 프레임워크, 자율 에이전트, 워크플로 빌더, 공식 문서 기준.`,
       url: 'https://promptquorum.com/power-local-llm/local-llm-code-development-compared',
       inLanguage: 'ko',
       datePublished: '2026-09-21',
