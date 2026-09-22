@@ -143,26 +143,51 @@ function Panel({ client }: { client: McpClientOnboarding }) {
 
 export function McpConnectPanel() {
   const [openId, setOpenId] = useState<string | null>(null)
+  const [arrivedViaLink, setArrivedViaLink] = useState(false)
   const open = MCP_CLIENTS.find((c) => c.id === openId)
 
+  useEffect(() => {
+    if (window.location.hash !== '#mcp-connect-heading') return
+    setArrivedViaLink(true)
+    const timer = setTimeout(() => setArrivedViaLink(false), 5000)
+    return () => clearTimeout(timer)
+  }, [])
+
+  const highlighted = arrivedViaLink && !openId
+
   return (
-    <section aria-labelledby="mcp-connect-heading" className="mb-6 rounded-xl border border-primary/15 bg-primary/5 p-4">
+    <section
+      aria-labelledby="mcp-connect-heading"
+      className={cn(
+        'mb-6 scroll-mt-24 rounded-xl border border-primary/15 bg-primary/5 p-4 transition-shadow',
+        highlighted && 'animate-pulse ring-4 ring-primary ring-offset-2'
+      )}
+    >
       <h2 id="mcp-connect-heading" className="text-base font-semibold text-text-primary">
         Ask your own AI to pick the app
       </h2>
       <p className="mt-1 text-sm text-text-secondary">
         Connect your AI client to this directory. It asks what you need and what hardware you have, then recommends apps, all inside your own chat.
       </p>
+      {highlighted && (
+        <p className="mt-2 text-sm font-semibold text-primary">
+          👇 Start here — click the AI assistant you use below.
+        </p>
+      )}
       <div className="mt-3 flex flex-wrap gap-2">
         {MCP_CLIENTS.map((c) => (
           <button
             key={c.id}
             type="button"
             aria-expanded={openId === c.id}
-            onClick={() => setOpenId(openId === c.id ? null : c.id)}
+            onClick={() => {
+              setArrivedViaLink(false)
+              setOpenId(openId === c.id ? null : c.id)
+            }}
             className={cn(
               'flex flex-col items-start gap-1 rounded-lg border px-3 py-2 text-left text-sm font-medium',
-              openId === c.id ? 'border-primary bg-primary text-white' : 'border-primary/20 bg-white text-text-primary hover:bg-primary/5'
+              openId === c.id ? 'border-primary bg-primary text-white' : 'border-primary/20 bg-white text-text-primary hover:bg-primary/5',
+              highlighted && 'ring-2 ring-primary/60'
             )}
           >
             <span>{c.displayName}</span>
