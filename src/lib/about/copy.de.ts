@@ -134,6 +134,7 @@ export const de: AboutCopy = {
   languagesH2: 'Von Anfang an in neun Sprachen',
   languagesLead: 'Lokale KI ist eine globale Bewegung, aber die meisten Informationen darüber gibt es nur auf Englisch. PromptQuorum veröffentlicht in neun Sprachen:',
   languagesClosing: 'Das bedeutet: Jemand in São Paulo, Seoul oder Riad findet dieselbe gut strukturierte Antwort in seiner eigenen Sprache.',
+  languagesPhilosophy: 'Das ist keine nachträgliche Übersetzung. Das meiste Wissen über lokale KI entsteht zuerst auf Englisch und erreicht andere Sprachen, wenn überhaupt, erst später – und schließt damit genau die Menschen aus, die am meisten von lokal laufenden Modellen profitieren könnten. Wir sind überzeugt: KI sollte eine Technologie für die ganze Welt sein, nicht eine englischsprachige Technologie, an die sich die Welt anpasst. Deshalb erscheint jeder Artikel von Anfang an in der Sprache seiner Leserinnen und Leser.',
   mcpH2: 'PromptQuorum aus Ihrer KI heraus nutzen',
   mcpLead: 'Verbinden Sie PromptQuorum einmal mit Ihrem Assistenten, und er kann für Sie nachschlagen.',
   mcpFirstClaim:

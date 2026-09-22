@@ -134,6 +134,7 @@ export const pt: AboutCopy = {
   languagesH2: 'Nove idiomas desde o início',
   languagesLead: 'A IA local é um movimento global, mas a maior parte da informação sobre ela está em inglês. A PromptQuorum publica em nove idiomas:',
   languagesClosing: 'Isso significa que alguém em São Paulo, Seul ou Riade pode encontrar a mesma resposta bem estruturada no seu próprio idioma.',
+  languagesPhilosophy: 'Isso não é uma tradução de última hora. A maior parte do conhecimento sobre IA local é escrita primeiro em inglês e só depois, se tanto, chega a outros idiomas — o que exclui justamente quem mais poderia se beneficiar de rodar modelos no próprio hardware. Acreditamos que a IA deve ser uma tecnologia para o mundo, não uma tecnologia em inglês à qual o mundo precisa se adaptar, por isso cada artigo já nasce no idioma do leitor.',
   mcpH2: 'Use a PromptQuorum a partir da sua IA',
   mcpLead: 'Conecte a PromptQuorum ao seu assistente uma vez, e ele poderá pesquisar informações para você.',
   mcpFirstClaim:

@@ -99,6 +99,7 @@ export interface AboutCopy {
   languagesH2: string
   languagesLead: string
   languagesClosing: string
+  languagesPhilosophy: string
 
   // MCP
   mcpH2: string
