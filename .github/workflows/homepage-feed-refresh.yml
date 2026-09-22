@@ -1,14 +1,21 @@
 name: Homepage Content Feed Refresh
 
-# Weekly refresh for the homepage's Latest Posts / Recently Updated blocks
-# (src/components/home/LatestPostsBlock.tsx, RecentlyUpdatedBlock.tsx), which
-# read from a generated JSON snapshot (src/generated/home-content-feed.json,
+# Safety-net refresh for the homepage's Latest Posts / Recently Updated blocks
+# and the "Articles Published" stat (src/components/home/LatestPostsBlock.tsx,
+# RecentlyUpdatedBlock.tsx, ByTheNumbersBlock.tsx), which read from a
+# generated JSON snapshot (src/generated/home-content-feed.json,
 # scripts/generate-home-content-feed.mjs) rather than a live import — see that
-# script's own header comment for why. That snapshot only updates when
-# regenerated + committed; a normal content PR that adds/updates an article
-# doesn't automatically refresh it, so this catches that drift even if
-# forgotten. Only pushes (and only then triggers a real Vercel deploy) when
-# there's an actual diff — a no-op week costs nothing beyond CI minutes.
+# script's own header comment for why.
+#
+# `npm run build`'s prebuild chain (package.json) now regenerates this file
+# fresh on every production build, so every push to main that triggers a
+# Vercel deploy already ships an up-to-date snapshot — that's the primary fix
+# (added 2026-09-22, after the count sat stale at 779 for two days). This
+# weekly job is a secondary safety net only: it keeps the *committed* JSON in
+# the repo in sync too (so a local `git pull` + dev server also shows current
+# numbers), and catches drift on the rare chance a deploy is skipped. Only
+# pushes when there's an actual diff — a no-op week costs nothing beyond CI
+# minutes.
 #
 # By design this does NOT cover the homepage's other data-dependent blocks:
 # Trending (needs a manual GSC export from Hans) and Recent Mentions (needs a
