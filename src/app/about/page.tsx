@@ -96,12 +96,15 @@ const BELIEFS = [
   ['Independence is the point.', 'Local AI is more than a cheaper alternative. It is a way to depend on no one else’s terms, servers or decisions.'],
 ]
 
+// Each href goes straight to a pre-filtered directory view where one exists
+// (?want=<UseCaseKey>, read by DirectoryClient), instead of a bare /directory
+// link — the RAM question isn't a use case, so it goes to the hardware widget.
 const GOALS = [
-  'I want a private ChatGPT alternative on my laptop.',
-  'I have 16 GB of RAM. What can I realistically run?',
-  'I want to chat with my own PDFs offline.',
-  'I need a local coding assistant for VS Code.',
-  'I want an offline voice assistant for my smart home.',
+  { text: 'I want a private ChatGPT alternative on my laptop.', href: '/directory?want=chat', via: 'goal_chat' },
+  { text: 'I have 16 GB of RAM. What can I realistically run?', href: '/directory#hw-profile-widget', via: 'goal_ram' },
+  { text: 'I want to chat with my own PDFs offline.', href: '/directory?want=docs', via: 'goal_docs' },
+  { text: 'I need a local coding assistant for VS Code.', href: '/directory?want=code', via: 'goal_code' },
+  { text: 'I want an offline voice assistant for my smart home.', href: '/directory?want=audio', via: 'goal_audio' },
 ]
 
 const FOR_YOU = [
@@ -182,6 +185,32 @@ function PlugIcon() {
     </svg>
   )
 }
+function DownloadBoxIcon() {
+  return (
+    <svg {...ICON_PROPS}>
+      <path d="M12 3v10m0 0l-4-4m4 4l4-4" />
+      <path d="M4 15v3.5A2.5 2.5 0 006.5 21h11a2.5 2.5 0 002.5-2.5V15" />
+    </svg>
+  )
+}
+function EngineIcon() {
+  return (
+    <svg {...ICON_PROPS}>
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M10 8.5l6 3.5-6 3.5v-7z" fill="currentColor" stroke="none" />
+    </svg>
+  )
+}
+function AppsGridIcon() {
+  return (
+    <svg {...ICON_PROPS}>
+      <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" />
+      <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" />
+      <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" />
+      <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" />
+    </svg>
+  )
+}
 function ArrowIcon({ className }: { className: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -194,6 +223,39 @@ function CheckIcon() {
     <svg className="w-5 h-5 text-primary shrink-0 mt-0.5" viewBox="0 0 20 20" fill="none" aria-hidden="true">
       <path d="M4 10.5l4 4 8-9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
+  )
+}
+
+// At-a-glance version of the three-waves theory: three icon nodes, one arrow
+// each. Purely a visual summary of the cards rendered right below it, so it
+// is decorative (aria-hidden) rather than a second, shallower copy of the
+// same content for assistive tech to read through twice.
+const WAVE_NODES = [
+  { icon: DownloadBoxIcon, wave: 'Wave 1', product: 'Hugging Face' },
+  { icon: EngineIcon, wave: 'Wave 2', product: 'Ollama & LM Studio' },
+  { icon: AppsGridIcon, wave: 'Wave 3', product: 'Apps' },
+]
+
+function WavesDiagram() {
+  return (
+    <ol aria-hidden="true" className="flex flex-col md:flex-row md:items-center justify-center gap-2 mb-10">
+      {WAVE_NODES.map((node, i) => (
+        <li key={node.wave} className="flex flex-col md:flex-row md:items-center gap-2">
+          <div className="flex flex-col items-center text-center gap-1.5 w-40 mx-auto md:mx-0">
+            <div className="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+              <node.icon />
+            </div>
+            <div className="text-[11px] font-bold text-primary uppercase tracking-widest">{node.wave}</div>
+            <div className="text-sm font-semibold text-text-primary leading-tight">{node.product}</div>
+          </div>
+          {i < WAVE_NODES.length - 1 && (
+            <div className="flex items-center justify-center text-primary/40 shrink-0">
+              <ArrowIcon className="w-5 h-5 rotate-90 md:rotate-0" />
+            </div>
+          )}
+        </li>
+      ))}
+    </ol>
   )
 }
 
@@ -291,6 +353,8 @@ export default function AboutPage() {
           <section id="three-waves" className="mb-20 scroll-mt-24">
             <h2 className={H2}>From models to apps: three waves of open AI</h2>
             <p className={LEAD}>Open-weight and open-source AI has moved in three waves. Each one solved a problem and exposed the next.</p>
+
+            <WavesDiagram />
 
             <ol className="flex flex-col md:flex-row md:items-stretch gap-3 md:gap-2">
               {WAVES.map((w, i) => (
@@ -457,13 +521,13 @@ export default function AboutPage() {
             </p>
             <ul className="space-y-2 mb-4">
               {GOALS.map((g) => (
-                <li key={g}>
+                <li key={g.text}>
                   <AboutTrackedLink
-                    href="/directory"
-                    via="goal_usecase"
+                    href={g.href}
+                    via={g.via}
                     className="block bg-card border border-primary/20 rounded-xl px-4 py-3 text-text-primary italic hover:border-primary/40 transition-colors"
                   >
-                    &ldquo;{g}&rdquo;
+                    &ldquo;{g.text}&rdquo;
                   </AboutTrackedLink>
                 </li>
               ))}
