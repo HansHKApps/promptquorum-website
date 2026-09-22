@@ -449,6 +449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
+    publishDate: '2026-07-16',
     theme: "Buyer's Guides",
     heroImage: '/images/best-local-security-cameras-2027-overview-hero-de.webp',
     affiliateDisclosure: true,
@@ -881,6 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    publishDate: '2026-07-16',
     theme: "Buyer's Guides",
     heroImage: '/images/best-local-security-cameras-2027-overview-hero-fr.webp',
     affiliateDisclosure: true,
@@ -1313,6 +1315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    publishDate: '2026-07-16',
     theme: "Buyer's Guides",
     heroImage: '/images/best-local-security-cameras-2027-overview-hero-ja.webp',
     affiliateDisclosure: true,
@@ -1745,6 +1748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    publishDate: '2026-07-16',
     theme: "Buyer's Guides",
     heroImage: '/images/best-local-security-cameras-2027-overview-hero-zh.webp',
     affiliateDisclosure: true,
@@ -2177,6 +2181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    publishDate: '2026-07-16',
     theme: "Buyer's Guides",
     heroImage: '/images/best-local-security-cameras-2027-overview-hero-es.webp',
     affiliateDisclosure: true,
@@ -2609,6 +2614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    publishDate: '2026-07-16',
     theme: "Buyer's Guides",
     heroImage: '/images/best-local-security-cameras-2027-overview-hero-pt.webp',
     affiliateDisclosure: true,
@@ -3041,6 +3047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    publishDate: '2026-07-16',
     theme: "Buyer's Guides",
     heroImage: '/images/best-local-security-cameras-2027-overview-hero-ar.webp',
     affiliateDisclosure: true,
@@ -3473,6 +3480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    publishDate: '2026-07-16',
     theme: "Buyer's Guides",
     heroImage: '/images/best-local-security-cameras-2027-overview-hero-ko.webp',
     affiliateDisclosure: true,

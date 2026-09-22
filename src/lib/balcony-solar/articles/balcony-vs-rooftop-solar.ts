@@ -144,6 +144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    publishDate: '2026-07-02',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/balcony-vs-rooftop-solar-overview-hero-es.webp',
     title: 'Energía solar de balcón vs. solar en el tejado: ¿cuál elegir?',
@@ -281,6 +282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    publishDate: '2026-07-02',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/balcony-vs-rooftop-solar-overview-hero-pt.webp',
     title: 'Energia solar de varanda vs. energia solar no telhado: qual escolher?',
@@ -418,6 +420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    publishDate: '2026-07-02',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/balcony-vs-rooftop-solar-overview-hero-ar.webp',
     title: 'الطاقة الشمسية للشرفة مقابل الطاقة الشمسية للسطح: أيهما تختار؟',

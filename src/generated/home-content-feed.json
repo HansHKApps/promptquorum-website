@@ -2178,6 +2178,15 @@
     "cluster": "prompt-engineering"
   },
   {
+    "lang": "ko",
+    "title": "AI 지정학 해설: EU AI법 vs 미국 vs 중국 (2026 분석)",
+    "excerpt": "EU AI법, 미국 수출 통제, 중국 CAC: 상호 양립 불가능한 세 가지 프레임워크. 2026년 AI 조달, 데이터 거주, 모델 가용성에 미치는 영향.",
+    "publishDate": "2026-04-01",
+    "dateModified": "2026-04-01",
+    "url": "/ko/prompt-engineering/geopolitics-and-ai",
+    "cluster": "prompt-engineering"
+  },
+  {
     "lang": "en",
     "title": "Which Prompt Framework Should You Use?",
     "excerpt": "Compare prompt frameworks: Chain-of-Thought, ReAct, Tree-of-Thought. Learn pros/cons for each use case and pick the best for your LLM application.",
@@ -33131,7 +33140,7 @@
   {
     "lang": "en",
     "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
-    "excerpt": "Compare 40 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.",
+    "excerpt": "Compare 41 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33140,7 +33149,7 @@
   {
     "lang": "de",
     "title": "Lokale Wissens- und Retrieval-Tools im Vergleich (2026): RAG, Dokumenten-Chat, Vektordatenbanken, Notizen und Suche",
-    "excerpt": "40 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.",
+    "excerpt": "41 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/de/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33149,7 +33158,7 @@
   {
     "lang": "fr",
     "title": "Outils locaux de connaissance et de recherche comparés (2026) : RAG, chat avec documents, bases vectorielles, notes et recherche",
-    "excerpt": "Comparez 40 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.",
+    "excerpt": "Comparez 41 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33158,7 +33167,7 @@
   {
     "lang": "ja",
     "title": "ローカル知識・検索ツール比較(2026):RAG、ドキュメントチャット、ベクトルデータベース、ノート、検索",
-    "excerpt": "ローカルの知識・検索ツール40種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。",
+    "excerpt": "ローカルの知識・検索ツール41種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33167,7 +33176,7 @@
   {
     "lang": "zh",
     "title": "本地知识与检索工具对比(2026):RAG、文档对话、向量数据库、笔记与搜索",
-    "excerpt": "并排对比40款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。",
+    "excerpt": "并排对比41款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33176,7 +33185,7 @@
   {
     "lang": "es",
     "title": "Herramientas locales de conocimiento y recuperación comparadas (2026): RAG, chat con documentos, bases de datos vectoriales, notas y búsqueda",
-    "excerpt": "Compara 40 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.",
+    "excerpt": "Compara 41 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33185,7 +33194,7 @@
   {
     "lang": "pt",
     "title": "Ferramentas locais de conhecimento e recuperação comparadas (2026): RAG, chat com documentos, bancos de dados vetoriais, notas e busca",
-    "excerpt": "Compare 40 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.",
+    "excerpt": "Compare 41 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33194,7 +33203,7 @@
   {
     "lang": "ar",
     "title": "مقارنة أدوات المعرفة والاسترجاع المحلية (2026): RAG ومحادثة المستندات وقواعد البيانات المتجهية والملاحظات والبحث",
-    "excerpt": "قارن 40 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.",
+    "excerpt": "قارن 41 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33203,7 +33212,7 @@
   {
     "lang": "ko",
     "title": "로컬 지식·검색 도구 비교(2026): RAG, 문서 채팅, 벡터 데이터베이스, 노트, 검색",
-    "excerpt": "로컬 지식·검색 도구 40개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 지식·검색 도구 41개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33293,7 +33302,7 @@
   {
     "lang": "en",
     "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-    "excerpt": "Compare 64 local coding and agent tools side by side: coding assistants (Cline, Continue, Aider, Tabby), agent frameworks (CrewAI, LangGraph, AutoGen), autonomous agents and workflow builders (n8n, Dify). Local LLMs, MCP, VS Code, from official docs.",
+    "excerpt": "Compare 62 local coding and agent tools side by side: coding assistants (Cline, Continue, Aider, Tabby), agent frameworks (CrewAI, LangGraph, AutoGen), autonomous agents and workflow builders (n8n, Dify). Local LLMs, MCP, VS Code, from official docs.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/power-local-llm/local-llm-code-development-compared",
@@ -33302,7 +33311,7 @@
   {
     "lang": "de",
     "title": "Lokale Coding-Assistenten, Agenten und Workflow-Tools im Vergleich (2026): IDE-Plugins, Agent-Frameworks und autonome Agenten",
-    "excerpt": "Vergleich von 64 lokalen Coding- und Agenten-Tools: Coding-Assistenten (Cline, Continue, Aider, Tabby), Agent-Frameworks (CrewAI, LangGraph, AutoGen), autonome Agenten und Workflow-Builder (n8n, Dify). Lokale LLMs, MCP, VS Code laut offizieller Doku.",
+    "excerpt": "Vergleich von 62 lokalen Coding- und Agenten-Tools: Coding-Assistenten (Cline, Continue, Aider, Tabby), Agent-Frameworks (CrewAI, LangGraph, AutoGen), autonome Agenten und Workflow-Builder (n8n, Dify). Lokale LLMs, MCP, VS Code laut offizieller Doku.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/de/power-local-llm/local-llm-code-development-compared",
@@ -33311,7 +33320,7 @@
   {
     "lang": "fr",
     "title": "Assistants de code, agents et outils de workflow locaux : comparatif (2026) — plugins IDE, frameworks d'agents et agents autonomes",
-    "excerpt": "Comparez 64 outils locaux de code et d'agents : assistants (Cline, Continue, Aider, Tabby), frameworks d'agents (CrewAI, LangGraph, AutoGen), agents autonomes et constructeurs de workflows (n8n, Dify). LLM locaux, MCP, VS Code, d'après les docs officielles.",
+    "excerpt": "Comparez 62 outils locaux de code et d'agents : assistants (Cline, Continue, Aider, Tabby), frameworks d'agents (CrewAI, LangGraph, AutoGen), agents autonomes et constructeurs de workflows (n8n, Dify). LLM locaux, MCP, VS Code, d'après les docs officielles.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/fr/power-local-llm/local-llm-code-development-compared",
@@ -33320,7 +33329,7 @@
   {
     "lang": "ja",
     "title": "ローカルのコーディングアシスタント・エージェント・ワークフローツール比較(2026):IDEプラグイン、エージェントフレームワーク、自律型エージェント",
-    "excerpt": "ローカルのコーディング/エージェントツール64件を比較:コーディングアシスタント(Cline、Continue、Aider、Tabby)、エージェントフレームワーク(CrewAI、LangGraph、AutoGen)、自律型エージェント、ワークフロービルダー(n8n、Dify)。公式ドキュメントに基づく。",
+    "excerpt": "ローカルのコーディング/エージェントツール62件を比較:コーディングアシスタント(Cline、Continue、Aider、Tabby)、エージェントフレームワーク(CrewAI、LangGraph、AutoGen)、自律型エージェント、ワークフロービルダー(n8n、Dify)。公式ドキュメントに基づく。",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/ja/power-local-llm/local-llm-code-development-compared",
@@ -33329,7 +33338,7 @@
   {
     "lang": "zh",
     "title": "本地编程助手、智能体与工作流工具对比(2026):IDE插件、智能体框架与自主智能体",
-    "excerpt": "并排对比64款本地编程与智能体工具:编程助手(Cline、Continue、Aider、Tabby)、智能体框架(CrewAI、LangGraph、AutoGen)、自主智能体与工作流构建器(n8n、Dify)。本地LLM、MCP、VS Code,数据来自官方文档。",
+    "excerpt": "并排对比62款本地编程与智能体工具:编程助手(Cline、Continue、Aider、Tabby)、智能体框架(CrewAI、LangGraph、AutoGen)、自主智能体与工作流构建器(n8n、Dify)。本地LLM、MCP、VS Code,数据来自官方文档。",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/zh/power-local-llm/local-llm-code-development-compared",
@@ -33338,7 +33347,7 @@
   {
     "lang": "es",
     "title": "Comparativa (2026) de asistentes de código, agentes y herramientas de flujo de trabajo locales: plugins de IDE, frameworks de agentes y agentes autónomos",
-    "excerpt": "Compara 64 herramientas locales de código y agentes: asistentes, frameworks, agentes autónomos y constructores de flujos (n8n, Dify), según la documentación oficial.",
+    "excerpt": "Compara 62 herramientas locales de código y agentes: asistentes, frameworks, agentes autónomos y constructores de flujos (n8n, Dify), según la documentación oficial.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/es/power-local-llm/local-llm-code-development-compared",
@@ -33347,7 +33356,7 @@
   {
     "lang": "pt",
     "title": "Assistentes de código, agentes e ferramentas de fluxo de trabalho locais comparados (2026): plugins de IDE, frameworks de agentes e agentes autônomos",
-    "excerpt": "Compare 64 ferramentas locais de código e agentes: assistentes de código (Cline, Continue, Aider, Tabby), frameworks de agentes (CrewAI, LangGraph, AutoGen), agentes autônomos e construtores de fluxo (n8n, Dify). LLMs locais, MCP, VS Code.",
+    "excerpt": "Compare 62 ferramentas locais de código e agentes: assistentes de código (Cline, Continue, Aider, Tabby), frameworks de agentes (CrewAI, LangGraph, AutoGen), agentes autônomos e construtores de fluxo (n8n, Dify). LLMs locais, MCP, VS Code.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/pt/power-local-llm/local-llm-code-development-compared",
@@ -33356,7 +33365,7 @@
   {
     "lang": "ar",
     "title": "مقارنة مساعدات البرمجة المحلية والوكلاء وأدوات سير العمل (2026): إضافات IDE وأطر الوكلاء والوكلاء المستقلة",
-    "excerpt": "قارن 64 أداة برمجة ووكلاء محلية جنبًا إلى جنب: مساعدات البرمجة (Cline وContinue وAider وTabby)، وأطر الوكلاء (CrewAI وLangGraph وAutoGen)، والوكلاء المستقلة وأدوات سير العمل (n8n وDify). نماذج محلية وMCP وVS Code، من الوثائق الرسمية.",
+    "excerpt": "قارن 62 أداة برمجة ووكلاء محلية جنبًا إلى جنب: مساعدات البرمجة (Cline وContinue وAider وTabby)، وأطر الوكلاء (CrewAI وLangGraph وAutoGen)، والوكلاء المستقلة وأدوات سير العمل (n8n وDify). نماذج محلية وMCP وVS Code، من الوثائق الرسمية.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/ar/power-local-llm/local-llm-code-development-compared",
@@ -33365,7 +33374,7 @@
   {
     "lang": "ko",
     "title": "로컬 코딩 어시스턴트·에이전트·워크플로 도구 비교(2026): IDE 플러그인, 에이전트 프레임워크, 자율 에이전트",
-    "excerpt": "로컬 코딩·에이전트 도구 64개를 나란히 비교: 코딩 어시스턴트(Cline, Continue, Aider, Tabby), 에이전트 프레임워크(CrewAI, LangGraph, AutoGen), 자율 에이전트, 워크플로 빌더(n8n, Dify). 로컬 LLM, MCP, VS Code, 공식 문서 기준.",
+    "excerpt": "로컬 코딩·에이전트 도구 62개를 나란히 비교: 코딩 어시스턴트(Cline, Continue, Aider, Tabby), 에이전트 프레임워크(CrewAI, LangGraph, AutoGen), 자율 에이전트, 워크플로 빌더(n8n, Dify). 로컬 LLM, MCP, VS Code, 공식 문서 기준.",
     "publishDate": "2026-09-21",
     "dateModified": "2026-09-21",
     "url": "/ko/power-local-llm/local-llm-code-development-compared",
@@ -55602,6 +55611,33 @@
     "cluster": "balcony-solar"
   },
   {
+    "lang": "es",
+    "title": "Energía solar de balcón vs. solar en el tejado: ¿cuál elegir?",
+    "excerpt": "Comparamos la energía solar de balcón y la solar en el tejado según instalación, propiedad, escala y a quién le conviene cada opción — un marco de decisión, no una comparación de fichas técnicas.",
+    "publishDate": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "url": "/es/balcony-solar/balcony-vs-rooftop-solar",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "pt",
+    "title": "Energia solar de varanda vs. energia solar no telhado: qual escolher?",
+    "excerpt": "Energia solar de varanda vs. solar no telhado comparadas em instalação, propriedade, escala e para quem cada opção realmente serve — um framework de decisão, não uma comparação de ficha técnica.",
+    "publishDate": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "url": "/pt/balcony-solar/balcony-vs-rooftop-solar",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "ar",
+    "title": "الطاقة الشمسية للشرفة مقابل الطاقة الشمسية للسطح: أيهما تختار؟",
+    "excerpt": "مقارنة بين الطاقة الشمسية للشرفة والطاقة الشمسية للسطح من حيث التركيب والملكية والحجم ومن يناسبه كل خيار — إطار قرار وليس مقارنة مواصفات فقط.",
+    "publishDate": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "url": "/ar/balcony-solar/balcony-vs-rooftop-solar",
+    "cluster": "balcony-solar"
+  },
+  {
     "lang": "ko",
     "title": "발코니 태양광 vs. 지붕 태양광: 무엇을 선택해야 할까요?",
     "excerpt": "설치, 소유권, 규모, 그리고 각 옵션이 실제로 누구에게 적합한지를 기준으로 발코니 태양광과 지붕 태양광을 비교 — 사양 대결이 아니라 의사결정 프레임워크.",
@@ -55626,6 +55662,69 @@
     "publishDate": "2026-07-02",
     "dateModified": "2026-07-02",
     "url": "/de/balcony-solar/how-to-install-balcony-solar",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "fr",
+    "title": "Comment installer un panneau solaire de balcon : guide de sécurité étape par étape",
+    "excerpt": "Comment installer un panneau solaire de balcon étape par étape, avec les avertissements de sécurité électrique et les précautions à prendre présentés avant de commencer, pas comme un ajout de dernière minute.",
+    "publishDate": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "url": "/fr/balcony-solar/how-to-install-balcony-solar",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "ja",
+    "title": "バルコニーソーラーの設置方法:安全第一のステップバイステップガイド",
+    "excerpt": "バルコニーソーラーの設置手順をステップバイステップで解説。電気安全に関する注意点と「やってはいけないこと」は後付けではなく、始める前に説明します。",
+    "publishDate": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "url": "/ja/balcony-solar/how-to-install-balcony-solar",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "zh",
+    "title": "如何安装阳台光伏:安全优先的分步指南",
+    "excerpt": "如何分步安装阳台光伏系统,电气安全警告和禁止事项在开始前就已说明,而不是事后补充。",
+    "publishDate": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "url": "/zh/balcony-solar/how-to-install-balcony-solar",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "es",
+    "title": "Cómo instalar energía solar de balcón: guía de seguridad paso a paso",
+    "excerpt": "Cómo instalar energía solar de balcón paso a paso, con las advertencias de seguridad eléctrica y las indicaciones de qué NO hacer explicadas antes de empezar, no como una nota al final.",
+    "publishDate": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "url": "/es/balcony-solar/how-to-install-balcony-solar",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "pt",
+    "title": "Como instalar energia solar de varanda: guia de segurança passo a passo",
+    "excerpt": "Como instalar energia solar de varanda passo a passo, com os avisos de segurança elétrica e as orientações do que NÃO fazer apresentados antes de você começar, não como nota de rodapé.",
+    "publishDate": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "url": "/pt/balcony-solar/how-to-install-balcony-solar",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "ar",
+    "title": "كيفية تركيب الطاقة الشمسية للشرفة: دليل خطوة بخطوة يركز على السلامة",
+    "excerpt": "كيفية تركيب الطاقة الشمسية للشرفة خطوة بخطوة، مع تحذيرات السلامة الكهربائية وإرشادات ما يجب عدم فعله موضوعة قبل البدء، وليست فكرة لاحقة.",
+    "publishDate": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "url": "/ar/balcony-solar/how-to-install-balcony-solar",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "ko",
+    "title": "발코니 태양광 설치 방법: 안전 우선 단계별 가이드",
+    "excerpt": "발코니 태양광을 단계별로 설치하는 방법. 전기 안전 경고와 하지 말아야 할 사항을 나중에 덧붙이지 않고 시작하기 전에 안내합니다.",
+    "publishDate": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "url": "/ko/balcony-solar/how-to-install-balcony-solar",
     "cluster": "balcony-solar"
   },
   {
@@ -56616,6 +56715,69 @@
     "publishDate": "2026-07-02",
     "dateModified": "2026-07-02",
     "url": "/de/balcony-solar/balcony-solar-not-producing-power-fixes",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "fr",
+    "title": "Le solaire de balcon ne produit plus d'électricité ? Solutions courantes",
+    "excerpt": "Le solaire de balcon ne produit plus d'électricité ? Un guide de diagnostic étape par étape couvrant les causes les plus courantes, dans l'ordre où vous devriez réellement les vérifier.",
+    "publishDate": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "url": "/fr/balcony-solar/balcony-solar-not-producing-power-fixes",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "ja",
+    "title": "バルコニー太陽光発電が発電しない？よくある原因と対処法",
+    "excerpt": "バルコニー太陽光発電が発電しない場合のステップバイステップ診断ガイド。実際に確認すべき順番で、よくある原因を解説します。",
+    "publishDate": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "url": "/ja/balcony-solar/balcony-solar-not-producing-power-fixes",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "zh",
+    "title": "阳台光伏不发电？常见原因与解决方法",
+    "excerpt": "阳台光伏不发电？这份分步诊断指南按照你实际应该检查的顺序，列出了最常见的原因。",
+    "publishDate": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "url": "/zh/balcony-solar/balcony-solar-not-producing-power-fixes",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "es",
+    "title": "¿La energía solar de balcón no genera energía? Soluciones habituales",
+    "excerpt": "¿Tu energía solar de balcón no genera energía? Guía de diagnóstico paso a paso con las causas más comunes, en el orden en que realmente debes revisarlas.",
+    "publishDate": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "url": "/es/balcony-solar/balcony-solar-not-producing-power-fixes",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "pt",
+    "title": "Energia solar de varanda não está gerando energia? Soluções comuns",
+    "excerpt": "Energia solar de varanda não está gerando energia? Um guia de diagnóstico passo a passo com as causas mais comuns, na ordem em que você deve realmente verificá-las.",
+    "publishDate": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "url": "/pt/balcony-solar/balcony-solar-not-producing-power-fixes",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "ar",
+    "title": "الطاقة الشمسية للشرفة لا تولّد طاقة؟ الحلول الشائعة",
+    "excerpt": "الطاقة الشمسية للشرفة لا تولّد طاقة؟ دليل تشخيصي خطوة بخطوة يغطي الأسباب الأكثر شيوعًا، بالترتيب الذي يجب عليك التحقق منه فعليًا.",
+    "publishDate": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "url": "/ar/balcony-solar/balcony-solar-not-producing-power-fixes",
+    "cluster": "balcony-solar"
+  },
+  {
+    "lang": "ko",
+    "title": "베란다 태양광이 발전하지 않나요? 흔한 원인과 해결법",
+    "excerpt": "베란다 태양광이 발전하지 않나요? 실제로 확인해야 할 순서대로 가장 흔한 원인을 다루는 단계별 진단 가이드입니다.",
+    "publishDate": "2026-07-02",
+    "dateModified": "2026-07-02",
+    "url": "/ko/balcony-solar/balcony-solar-not-producing-power-fixes",
     "cluster": "balcony-solar"
   },
   {
@@ -63024,6 +63186,78 @@
     "publishDate": "2026-07-16",
     "dateModified": "2026-08-25",
     "url": "/smart-home/best-local-security-cameras-2027",
+    "cluster": "smart-home"
+  },
+  {
+    "lang": "de",
+    "title": "Beste lokale Sicherheitskameras für Home Assistant & Frigate (2026)",
+    "excerpt": "Beste lokale Sicherheitskameras 2026 für Home Assistant und Frigate: Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro im Vergleich bei RTSP/ONVIF, lokalem Speicher und Abo-Pflicht.",
+    "publishDate": "2026-07-16",
+    "dateModified": "2026-07-16",
+    "url": "/de/smart-home/best-local-security-cameras-2027",
+    "cluster": "smart-home"
+  },
+  {
+    "lang": "fr",
+    "title": "Meilleures caméras de sécurité locales pour Home Assistant & Frigate (2026)",
+    "excerpt": "Meilleures caméras de sécurité locales 2026 pour Home Assistant et Frigate : Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro comparés sur RTSP/ONVIF, stockage local et abonnement.",
+    "publishDate": "2026-07-16",
+    "dateModified": "2026-07-16",
+    "url": "/fr/smart-home/best-local-security-cameras-2027",
+    "cluster": "smart-home"
+  },
+  {
+    "lang": "ja",
+    "title": "Home Assistant & Frigate向け ベストなローカル防犯カメラ(2026年)",
+    "excerpt": "Home AssistantとFrigate向けベストなローカル防犯カメラ2026:Reolink、Amcrest、UniFi Protect、Eufy、Aqara G5 ProをRTSP/ONVIF、ローカルストレージ、サブスクリプションで比較。",
+    "publishDate": "2026-07-16",
+    "dateModified": "2026-07-16",
+    "url": "/ja/smart-home/best-local-security-cameras-2027",
+    "cluster": "smart-home"
+  },
+  {
+    "lang": "zh",
+    "title": "2026年适合 Home Assistant 与 Frigate 的最佳本地安防摄像头",
+    "excerpt": "2026年适合 Home Assistant 与 Frigate 的最佳本地安防摄像头:Reolink、Amcrest、UniFi Protect、Eufy、Aqara G5 Pro 在 RTSP/ONVIF、本地存储与订阅要求上的对比。",
+    "publishDate": "2026-07-16",
+    "dateModified": "2026-07-16",
+    "url": "/zh/smart-home/best-local-security-cameras-2027",
+    "cluster": "smart-home"
+  },
+  {
+    "lang": "es",
+    "title": "Mejores cámaras de seguridad locales para Home Assistant y Frigate (2026)",
+    "excerpt": "Mejores cámaras de seguridad locales 2026 para Home Assistant y Frigate: Reolink, Amcrest, UniFi Protect, Eufy y Aqara G5 Pro comparadas en RTSP/ONVIF, almacenamiento local y suscripción.",
+    "publishDate": "2026-07-16",
+    "dateModified": "2026-07-16",
+    "url": "/es/smart-home/best-local-security-cameras-2027",
+    "cluster": "smart-home"
+  },
+  {
+    "lang": "pt",
+    "title": "Melhores câmeras de segurança locais para Home Assistant e Frigate (2026)",
+    "excerpt": "Melhores câmeras de segurança locais 2026 para Home Assistant e Frigate: Reolink, Amcrest, UniFi Protect, Eufy e Aqara G5 Pro comparadas em RTSP/ONVIF, armazenamento local e assinatura.",
+    "publishDate": "2026-07-16",
+    "dateModified": "2026-07-16",
+    "url": "/pt/smart-home/best-local-security-cameras-2027",
+    "cluster": "smart-home"
+  },
+  {
+    "lang": "ar",
+    "title": "أفضل كاميرات الأمان المحلية لـ Home Assistant وFrigate (2026)",
+    "excerpt": "أفضل كاميرات الأمان المحلية 2026 لـ Home Assistant وFrigate: مقارنة Reolink وAmcrest وUniFi Protect وEufy وAqara G5 Pro من حيث RTSP/ONVIF والتخزين المحلي ومتطلبات الاشتراك.",
+    "publishDate": "2026-07-16",
+    "dateModified": "2026-07-16",
+    "url": "/ar/smart-home/best-local-security-cameras-2027",
+    "cluster": "smart-home"
+  },
+  {
+    "lang": "ko",
+    "title": "Home Assistant 및 Frigate를 위한 최고의 로컬 보안 카메라(2026년)",
+    "excerpt": "Home Assistant와 Frigate를 위한 2026년 최고의 로컬 보안 카메라: Reolink, Amcrest, UniFi Protect, Eufy, Aqara G5 Pro를 RTSP/ONVIF, 로컬 저장소, 구독 요건으로 비교.",
+    "publishDate": "2026-07-16",
+    "dateModified": "2026-07-16",
+    "url": "/ko/smart-home/best-local-security-cameras-2027",
     "cluster": "smart-home"
   },
   {

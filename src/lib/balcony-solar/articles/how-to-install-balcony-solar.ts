@@ -165,6 +165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
+    publishDate: '2026-07-02',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/how-to-install-balcony-solar-overview-hero-es.webp',
     title: 'Cómo instalar energía solar de balcón: guía de seguridad paso a paso',
@@ -323,6 +324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
+    publishDate: '2026-07-02',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/how-to-install-balcony-solar-overview-hero-pt.webp',
     title: 'Como instalar energia solar de varanda: guia de segurança passo a passo',
@@ -481,6 +483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
+    publishDate: '2026-07-02',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/how-to-install-balcony-solar-overview-hero-ar.webp',
     title: 'كيفية تركيب الطاقة الشمسية للشرفة: دليل خطوة بخطوة يركز على السلامة',
@@ -799,6 +802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
+    publishDate: '2026-07-02',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/how-to-install-balcony-solar-overview-hero-ja.webp',
     title: 'バルコニーソーラーの設置方法:安全第一のステップバイステップガイド',
@@ -957,6 +961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
+    publishDate: '2026-07-02',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/how-to-install-balcony-solar-overview-hero-zh.webp',
     title: '如何安装阳台光伏:安全优先的分步指南',
@@ -1115,6 +1120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
+    publishDate: '2026-07-02',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/how-to-install-balcony-solar-overview-hero-fr.webp',
     title: 'Comment installer un panneau solaire de balcon : guide de sécurité étape par étape',
@@ -1273,6 +1279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
+    publishDate: '2026-07-02',
     theme: 'Balcony Solar Foundations',
     heroImage: '/images/how-to-install-balcony-solar-overview-hero-ko.webp',
     title: '발코니 태양광 설치 방법: 안전 우선 단계별 가이드',
