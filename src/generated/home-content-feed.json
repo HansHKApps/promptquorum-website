@@ -22770,6 +22770,78 @@
     "cluster": "power-local-llm"
   },
   {
+    "lang": "de",
+    "title": "RTX 3090 für lokale LLMs 2026: Kaufen oder mieten?",
+    "excerpt": "Eine gebrauchte RTX 3090 kostet 2026 850–1.050 $, Mieten kostet 0,12–0,22 $/Stunde. Hier die Kauf-oder-Miete-Break-even-Rechnung für 24 GB VRAM bei lokalen LLMs.",
+    "publishDate": "2026-09-01",
+    "dateModified": "2026-09-03",
+    "url": "/de/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "RTX 3090 pour LLM local en 2026 : acheter ou louer ?",
+    "excerpt": "Une RTX 3090 d'occasion coûte 850–1 050 $ en 2026 ; la location revient à 0,12–0,22 $/heure. Voici le calcul du seuil de rentabilité achat vs location pour 24 Go de VRAM en LLM local.",
+    "publishDate": "2026-09-01",
+    "dateModified": "2026-09-03",
+    "url": "/fr/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "ローカルLLM向けRTX 3090（2026年）：購入かレンタルか",
+    "excerpt": "中古のRTX 3090は2026年に850〜1,050ドル。レンタルなら1時間0.12〜0.22ドル。ローカルLLM向け24GB VRAMの購入とレンタルの損益分岐点を計算します。",
+    "publishDate": "2026-09-01",
+    "dateModified": "2026-09-03",
+    "url": "/ja/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "2026年本地LLM用RTX 3090：买还是租？",
+    "excerpt": "2026年二手RTX 3090售价850–1,050美元；租用价格为每小时0.12–0.22美元。这是本地LLM所需24GB VRAM的买卖平衡点计算。",
+    "publishDate": "2026-09-01",
+    "dateModified": "2026-09-03",
+    "url": "/zh/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "RTX 3090 para LLM local en 2026: ¿comprar o alquilar?",
+    "excerpt": "Una RTX 3090 usada cuesta 850–1.050 $ en 2026; alquilarla cuesta 0,12–0,22 $/hora. Aquí el cálculo de punto de equilibrio comprar vs alquilar para 24 GB de VRAM en LLM local.",
+    "publishDate": "2026-09-01",
+    "dateModified": "2026-09-03",
+    "url": "/es/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "RTX 3090 para LLM local em 2026: comprar ou alugar?",
+    "excerpt": "Uma RTX 3090 usada custa US$ 850–1.050 em 2026; alugar custa US$ 0,12–0,22/hora. Veja o cálculo de ponto de equilíbrio entre comprar e alugar 24 GB de VRAM para LLM local.",
+    "publishDate": "2026-09-01",
+    "dateModified": "2026-09-03",
+    "url": "/pt/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "بطاقة RTX 3090 لتشغيل نماذج LLM محليًا في 2026: هل تشتري أم تستأجر؟",
+    "excerpt": "تكلف بطاقة RTX 3090 المستعملة 850–1,050 $ في 2026؛ استئجارها يكلف 0.12–0.22 $ في الساعة. إليك حساب نقطة التعادل بين الشراء والاستئجار لـ 24 GB من VRAM لنماذج LLM المحلية.",
+    "publishDate": "2026-09-01",
+    "dateModified": "2026-09-03",
+    "url": "/ar/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "2026년 로컬 LLM용 RTX 3090: 구매해야 할까, 대여해야 할까",
+    "excerpt": "2026년 중고 RTX 3090 가격은 850–1,050달러이며, 대여는 시간당 0.12–0.22달러입니다. 로컬 LLM용 24GB VRAM의 구매 대 대여 손익분기점을 계산합니다.",
+    "publishDate": "2026-09-01",
+    "dateModified": "2026-09-03",
+    "url": "/ko/power-local-llm/rtx-3090-local-llm-buy-or-rent",
+    "cluster": "power-local-llm"
+  },
+  {
     "lang": "en",
     "title": "Run a Local LLM on Your Tablet: iPad Pro M5, Galaxy Tab S10, OnePlus Pad 2 (2026)",
     "excerpt": "How to run a local LLM on an iPad or Android tablet in 2026. iPad Pro M5 and iPad Air M4 on-device inference, Termux + Ollama on Android, and remote connection to a home Mac or PC explained.",

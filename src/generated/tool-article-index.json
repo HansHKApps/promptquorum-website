@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 288,
+    "totalCount": 289,
     "capped": true
   },
   "llama.cpp": {
@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 151,
+    "totalCount": 152,
     "capped": true
   },
   "vLLM": {
@@ -10358,7 +10358,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 180,
+    "totalCount": 181,
     "capped": true
   },
   "Qdrant": {

@@ -803,6 +803,24 @@
         }
       ]
     },
+    "open-weight-vs-open-source-ai-models": {
+      "dateModified": "2026-09-22",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-22",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "local-llms-vs-cloud-apis": {
       "dateModified": "2026-08-28",
       "lastFactChecked": null,
@@ -6973,7 +6991,15 @@
       "publishDate": "2026-09-01",
       "hasSections": true,
       "langs": [
-        "en"
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
       ],
       "images": []
     },
@@ -13434,6 +13460,7 @@
         "fr",
         "ja",
         "zh",
+        "es",
         "pt",
         "ar",
         "ko"
