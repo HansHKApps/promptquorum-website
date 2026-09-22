@@ -803,6 +803,24 @@
         }
       ]
     },
+    "open-weight-vs-open-source-ai-models": {
+      "dateModified": "2026-09-22",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-22",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "local-llms-vs-cloud-apis": {
       "dateModified": "2026-08-28",
       "lastFactChecked": null,
@@ -8886,7 +8904,7 @@
       "images": []
     },
     "locally-uncensored-review": {
-      "dateModified": "2026-09-12",
+      "dateModified": "2026-09-22",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,

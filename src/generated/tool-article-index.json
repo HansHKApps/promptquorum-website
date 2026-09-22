@@ -11,6 +11,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
+        "dateModified": "2026-09-22",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/local-llm-run-serve-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
-        "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-09-20",
-        "tier": "about"
       }
     ],
-    "totalCount": 288,
+    "totalCount": 289,
     "capped": true
   },
   "llama.cpp": {
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
+        "dateModified": "2026-09-22",
         "tier": "about"
       },
       {
@@ -158,17 +166,9 @@
         "url": "/power-local-llm/rapid-mlx-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "shimmy-review",
-        "title": "Shimmy Review 2026: A 5MB Rust Alternative to Ollama",
-        "url": "/power-local-llm/shimmy-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 151,
+    "totalCount": 152,
     "capped": true
   },
   "vLLM": {
@@ -179,6 +179,14 @@
         "title": "vLLM Explained: High-Throughput LLM Serving with PagedAttention (2026)",
         "url": "/power-local-llm/vllm-explained",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
+        "dateModified": "2026-09-22",
         "tier": "about"
       },
       {
@@ -244,14 +252,6 @@
         "url": "/power-local-llm/openllm-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "translate-books-with-llms-review",
-        "title": "TranslateBooksWithLLMs Review: Translate Full Books With a Local or Cloud LLM",
-        "url": "/power-local-llm/translate-books-with-llms-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
     "totalCount": 92,
@@ -265,6 +265,14 @@
         "title": "LocalAI Explained: The Self-Hosted OpenAI API Alternative (2026)",
         "url": "/power-local-llm/localai-explained",
         "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
+        "dateModified": "2026-09-22",
         "tier": "about"
       },
       {
@@ -296,14 +304,6 @@
         "slug": "localai-apexcreator-review",
         "title": "LocalAI Review (2026): ApexCreator's Offline Android AI Chat App",
         "url": "/power-local-llm/localai-apexcreator-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-09-12",
         "tier": "about"
       },
@@ -543,6 +543,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
+        "dateModified": "2026-09-22",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "aiclient2api-review",
         "title": "AIClient2API Review: One Local Proxy for Every AI Protocol",
         "url": "/power-local-llm/aiclient2api-review",
@@ -563,14 +571,6 @@
         "title": "OpenLLM Review 2026: BentoML's Self-Hostable LLM API Server",
         "url": "/power-local-llm/openllm-review",
         "dateModified": "2026-09-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-09-12",
         "tier": "mentioned"
       }
     ],
@@ -635,6 +635,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
+        "dateModified": "2026-09-22",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -654,14 +662,6 @@
         "slug": "agnai-review",
         "title": "Agnai Review (2026): Self-Hostable AI Roleplay Chat",
         "url": "/power-local-llm/agnai-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-09-12",
         "tier": "about"
       },
@@ -860,6 +860,14 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
+        "dateModified": "2026-09-22",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "cherry-studio-ai-desktop-client-2026",
         "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
@@ -921,14 +929,6 @@
         "title": "web-search-mcp Review: Web Search Tool Access for Local LLMs",
         "url": "/power-local-llm/web-search-mcp-review",
         "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "amd-gaia-review",
-        "title": "AMD GAIA Review 2026: NPU-Accelerated Local AI Agents",
-        "url": "/power-local-llm/amd-gaia-review",
-        "dateModified": "2026-09-12",
         "tier": "about"
       }
     ],
@@ -993,6 +993,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
+        "dateModified": "2026-09-22",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -1020,14 +1028,6 @@
         "slug": "lm-studio-review",
         "title": "LM Studio Review 2026: The GUI-First Local AI Desktop App",
         "url": "/power-local-llm/lm-studio-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-09-12",
         "tier": "about"
       },
@@ -1079,6 +1079,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
+        "dateModified": "2026-09-22",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -1090,14 +1098,6 @@
         "slug": "lm-studio-review",
         "title": "LM Studio Review 2026: The GUI-First Local AI Desktop App",
         "url": "/power-local-llm/lm-studio-review",
-        "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
         "dateModified": "2026-09-12",
         "tier": "about"
       },
@@ -1626,7 +1626,7 @@
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-09-12",
+        "dateModified": "2026-09-22",
         "tier": "about"
       },
       {
@@ -1743,7 +1743,7 @@
         "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
         "url": "/power-local-llm/local-llm-images-video-compared",
         "dateModified": "2026-09-20",
-        "tier": "mentioned"
+        "tier": "about"
       }
     ],
     "totalCount": 2,
@@ -6543,6 +6543,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "locally-uncensored-review",
+        "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
+        "url": "/power-local-llm/locally-uncensored-review",
+        "dateModified": "2026-09-22",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
@@ -6563,14 +6571,6 @@
         "title": "DreamServer Review: One-Command Local AI Server Stack (2026)",
         "url": "/power-local-llm/dreamserver-review",
         "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "locally-uncensored-review",
-        "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
-        "url": "/power-local-llm/locally-uncensored-review",
-        "dateModified": "2026-09-12",
         "tier": "about"
       },
       {
