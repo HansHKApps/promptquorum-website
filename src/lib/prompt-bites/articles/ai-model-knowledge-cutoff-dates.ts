@@ -288,6 +288,78 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
     },
   },
+  es: {
+    freshness_tier: 'monthly',
+    next_refresh_due: '2026-09-29',
+    theme: 'Knowledge & Research',
+    heroImage: '/images/ai-model-knowledge-cutoff-dates-overview-hero-es.webp',
+    title: 'Fechas de Corte de Conocimiento de los Modelos de IA 2026: Hoja de Referencia Completa',
+    seoTitle: 'Fechas de Corte de Conocimiento IA 2026 | PromptQuorum',
+    metaDescription: 'Fechas de corte de conocimiento verificadas para Claude, ChatGPT, Gemini, Grok, Llama, Qwen, Gemma y Phi. Descubre qué modelos usan búsqueda web en vivo y cuáles quedaron congelados en el tiempo.',
+    publishDate: '2026-06-12',
+    dateModified: '2026-08-29',
+    quickAnswerTop: {
+      es: {
+        question: '¿Cuáles son las fechas de corte de conocimiento actuales de los modelos de IA?',
+        answer: 'Cortes verificados: GPT-5.6 febrero de 2026 (ChatGPT busca en Bing por defecto; GPT-4o heredado octubre de 2023; sucede a GPT-5.5); Claude Opus 5 mayo de 2026 (corte confiable); Grok 4.6 febrero de 2026 (busca en X por defecto en la app de consumidor; sucede a Grok 4.3); Gemini 3.1 Pro enero de 2025 (Google Search nativo). Los LLM locales (Llama, Qwen, Gemma, Phi) no tienen capa de búsqueda — su corte es un límite absoluto.',
+        bullets: [
+          'GPT-5.6 (ChatGPT): corte feb 2026 — parcialmente compensado por la búsqueda de Bing',
+          'Claude (Opus 5): corte mayo 2026 (confiable) — la búsqueda web requiere activación explícita',
+          'Grok 4.6: corte feb 2026 — busca en X por defecto en la app de consumidor',
+          'LLM locales: sin capa de búsqueda — el corte es un límite de conocimiento fijo',
+        ],
+        updatedDate: CUTOFF_DATA_LAST_VERIFIED,
+      },
+    },
+    sections: {
+      tldr: {
+        id: 'key-takeaways',
+        isTldr: true,
+        items: [
+          'Un corte de conocimiento es una fecha fija — el modelo no tiene ningún dato de entrenamiento después de esa fecha',
+          'Los modelos en la nube (ChatGPT, Gemini, Grok) compensan esto parcialmente con búsqueda web integrada',
+          'Los LLM locales (Llama, Qwen, Gemma, Phi, Mistral) NO tienen capa de búsqueda — su corte es un límite de conocimiento absoluto',
+          'Varios modelos importantes — incluyendo Mistral Large, Llama 4 y Qwen3 — no han revelado fechas de corte exactas',
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Preguntas frecuentes sobre las fechas de corte de conocimiento de la IA',
+        faqs: [
+          {
+            q: '¿Qué es una fecha de corte de conocimiento en la IA?',
+            a: 'Una fecha de corte de conocimiento es la fecha después de la cual un modelo de IA no tiene datos de entrenamiento. Los eventos, lanzamientos de productos, artículos de investigación o cualquier información publicada después del corte son invisibles para el modelo. El modelo no puede saber que existen, a menos que pueda buscar en la web en vivo o reciba la información en el prompt.',
+          },
+          {
+            q: '¿Cuál es la diferencia entre un corte de conocimiento y la búsqueda en vivo?',
+            a: 'Un corte de conocimiento es una propiedad de los datos de entrenamiento del modelo — una fecha fija y congelada. La búsqueda en vivo es una capacidad añadida sobre el modelo que le permite recuperar páginas web actuales en el momento de la consulta. ChatGPT (Bing), Gemini (Google) y Grok (X) tienen búsqueda en vivo por defecto. Claude requiere activación explícita de la herramienta. Los LLM locales no tienen búsqueda en vivo por defecto — hay que construir un pipeline RAG para añadirla.',
+          },
+          {
+            q: '¿Los LLM locales actualizan alguna vez su conocimiento?',
+            a: 'No. El conocimiento de un LLM local queda congelado en su corte de entrenamiento y permanece así indefinidamente. Para dar a un LLM local acceso a información más reciente, hay que: (1) reentrenar o afinar (fine-tuning) el modelo con datos más recientes (costoso), o (2) construir un pipeline RAG (generación aumentada por recuperación) que obtenga documentos relevantes en el momento de la consulta y los inyecte en el prompt.',
+          },
+          {
+            q: '¿Qué modelos de IA pueden ver las noticias y los eventos actuales?',
+            a: 'ChatGPT (usa Bing por defecto en los planes de pago), Gemini 3.1 Pro (usa Google por defecto) y Grok 4.6 (busca en X/Twitter por defecto en la app de consumidor) pueden acceder a información actual. Perplexity es nativo de búsqueda web y recupera resultados en vivo para cada consulta. Claude solo puede buscar en la web cuando los desarrolladores activan explícitamente la herramienta de búsqueda web. DeepSeek, Mistral Large y todos los LLM locales (Llama, Qwen, Gemma, Phi) no tienen acceso de búsqueda por defecto.',
+          },
+          {
+            q: '¿La fecha de corte de ChatGPT es lo mismo que lo que sabe ahora mismo?',
+            a: 'No. ChatGPT (el producto) tiene tanto una fecha de corte de entrenamiento como una capacidad de búsqueda en vivo en Bing. Para consultas factuales recientes, busca en Bing y complementa su respuesta con resultados actuales — así que lo que "sabe" en el momento de la consulta puede ser mucho más reciente que el corte de entrenamiento. El corte de entrenamiento sigue siendo importante para: la comprensión matizada de los eventos (no solo los hechos), el conocimiento contextual integrado en su razonamiento, y cualquier información no indexada por Bing.',
+          },
+        ],
+      },
+      relatedBites: {
+        id: 'related-articles',
+        title: 'Guías relacionadas',
+        items: [
+          '[Mejor LLM ahora mismo](/es/prompt-bites/best-llm-right-now) — compara los mejores modelos actuales por la vigencia de su corte de conocimiento',
+          '[¿Se puede ejecutar Qwen3 en Ollama?](/es/prompt-bites/can-you-run-qwen3-on-ollama) — despliegue local de Qwen3 y contexto del corte de conocimiento',
+          '[Última versión de Ollama](/es/prompt-bites/ollama-latest-version) — sigue qué versiones de modelos están disponibles localmente',
+          '[Actualizaciones de modelos LLM locales 2026](/es/local-llms/local-llm-model-updates-2026) — todos los lanzamientos importantes de peso abierto y cómo cambian el panorama del corte de conocimiento',
+        ],
+      },
+    },
+  },
   fr: {
     freshness_tier: 'monthly',
     next_refresh_due: '2026-09-29',
