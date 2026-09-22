@@ -4,6 +4,7 @@ import type { Language } from '@/lib/blog/blogContent'
 import { translations } from '@/translations'
 import { AboutHeroClient } from '@/components/AboutHeroClient'
 import { AboutTrackedLink } from '@/components/AboutTrackedLink'
+import { AboutLanguagePill } from '@/components/AboutLanguagePill'
 import { CATEGORY_GROUPS } from '@/lib/power-local-llm/apps/categories'
 import { getHomeStats } from '@/lib/home/stats'
 import { MCP_SERVER_URL } from '@/lib/mcp/clients'
@@ -28,7 +29,17 @@ const MCP_CONFIG = JSON.stringify({ mcpServers: { promptquorum: { url: MCP_SERVE
 
 // Native autonyms — identical on every locale page by design (the German page
 // still lists "English", the Japanese page still lists "Deutsch", etc.).
-const LANGUAGE_NAMES = ['English', 'Deutsch', 'Français', '日本語', '中文', 'Español', 'Português', 'العربية', '한국어']
+const LANGUAGE_PILLS: { code: Language; label: string }[] = [
+  { code: 'en', label: 'English' },
+  { code: 'de', label: 'Deutsch' },
+  { code: 'fr', label: 'Français' },
+  { code: 'ja', label: '日本語' },
+  { code: 'zh', label: '中文' },
+  { code: 'es', label: 'Español' },
+  { code: 'pt', label: 'Português' },
+  { code: 'ar', label: 'العربية' },
+  { code: 'ko', label: '한국어' },
+]
 
 const SOCIAL = [
   ['X', 'https://x.com/HansKuepperAPPs'],
@@ -489,13 +500,16 @@ export function AboutPageContent({ lang }: { lang: Language }) {
             <h2 className={H2}>{copy.languagesH2}</h2>
             <p className={`${BODY} mb-4`}>{copy.languagesLead}</p>
             <ul className="flex flex-wrap gap-2 mb-4">
-              {LANGUAGE_NAMES.map((l) => (
-                <li key={l} className="px-3 py-1.5 rounded-full bg-primary/10 text-text-primary text-sm font-medium">
-                  {l}
+              {LANGUAGE_PILLS.map(({ code, label }) => (
+                <li key={code}>
+                  <AboutLanguagePill href={code === 'en' ? '/about' : `/${code}/about`} lang={code}>
+                    {label}
+                  </AboutLanguagePill>
                 </li>
               ))}
             </ul>
-            <p className={BODY}>{copy.languagesClosing}</p>
+            <p className={`${BODY} mb-4`}>{copy.languagesClosing}</p>
+            <p className={BODY}>{copy.languagesPhilosophy}</p>
           </section>
 
           {/* MCP */}

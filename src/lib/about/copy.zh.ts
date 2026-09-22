@@ -134,6 +134,7 @@ export const zh: AboutCopy = {
   languagesH2: '从一开始就支持九种语言',
   languagesLead: '本地 AI 是一场全球性的浪潮，但与之相关的大多数信息都只有英文版本。PromptQuorum 用九种语言发布内容：',
   languagesClosing: '这意味着无论是在圣保罗、首尔还是利雅得，人们都能用自己的语言，找到同样结构清晰的答案。',
+  languagesPhilosophy: '这不是事后补上的翻译。大多数关于本地 AI 的知识都是先用英文写成，其他语言即便有，也往往是后来才补上的——这恰恰把最能从在自己硬件上运行模型中受益的人排除在外。我们认为，AI 应该是属于全世界的技术，而不是一项让全世界去适应的英语技术，因此每一篇文章从一开始就以读者自己的语言发布。',
   mcpH2: '在你的 AI 中使用 PromptQuorum',
   mcpLead: '只需将 PromptQuorum 连接到你的助手一次，它就能替你查找信息。',
   mcpFirstClaim:

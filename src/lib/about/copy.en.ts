@@ -140,6 +140,7 @@ export const en: AboutCopy = {
   languagesH2: 'Nine languages from the start',
   languagesLead: 'Local AI is a global movement, but most of the information about it is in English. PromptQuorum publishes in nine languages:',
   languagesClosing: 'That means someone in São Paulo, Seoul or Riyadh can find the same well-structured answer in their own language.',
+  languagesPhilosophy: 'This is not an afterthought translation. Most local AI knowledge is written in English first and everywhere else second, if at all — which quietly locks out the people who could benefit most from running models on their own hardware. We think AI should be a technology for the world, not an English-language technology the world adapts to, so every article ships in the reader’s own language from the start.',
 
   mcpH2: 'Use PromptQuorum from your AI',
   mcpLead: 'Connect PromptQuorum to your assistant once, and it can look things up for you.',
