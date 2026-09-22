@@ -13,28 +13,29 @@ type Dict = Record<Language, string>
 
 const HOME_UI = {
   // --- Page ---
+  /** Aligned 2026-09-22 with the About page's "usage layer" positioning (src/lib/about/copy.*.ts h1) per site-owner direction: lead with the broader promise, keep directory/guides identity in the tagline below rather than the H1. */
   pageH1: {
-    en: 'PromptQuorum: Local LLM Directory & Guides',
-    de: 'PromptQuorum: Local-LLM-Verzeichnis & Guides',
-    fr: 'PromptQuorum : annuaire et guides des LLM locaux',
-    ja: 'PromptQuorum：ローカルLLMディレクトリ＆ガイド',
-    zh: 'PromptQuorum：本地 LLM 目录与指南',
-    es: 'PromptQuorum: directorio y guías de LLM locales',
-    pt: 'PromptQuorum: diretório e guias de LLM locais',
-    ar: 'PromptQuorum: دليل وأدلة نماذج اللغة المحلية',
-    ko: 'PromptQuorum: 로컬 LLM 디렉터리 및 가이드',
+    en: 'PromptQuorum: The Usage Layer for Open-Weight AI',
+    de: 'PromptQuorum: Die Nutzungsebene für Open-Weight-KI',
+    fr: "PromptQuorum : la couche d'usage pour l'IA à poids ouverts",
+    ja: 'PromptQuorum：オープンウェイトAIの活用レイヤー',
+    zh: 'PromptQuorum：开放权重 AI 的应用层',
+    es: 'PromptQuorum: la capa de uso para la IA de pesos abiertos',
+    pt: 'PromptQuorum: a camada de uso para IA de pesos abertos',
+    ar: 'PromptQuorum: طبقة الاستخدام للذكاء الاصطناعي مفتوح الأوزان',
+    ko: 'PromptQuorum: 오픈 웨이트 AI를 위한 사용 계층',
   },
-  /** Short punchy tagline under the H1 — replaces a longer factual sentence; the H1 itself already carries the descriptive/SEO keywords. */
+  /** Short punchy tagline under the H1 — carries the directory/guides/comparison identity that used to lead the H1 itself. */
   heroTagline: {
-    en: 'Your Local AI Command Center',
-    de: 'Ihre Kommandozentrale für lokale KI',
-    fr: "Votre centre de commande pour l'IA locale",
-    ja: 'あなたのローカルAIコマンドセンター',
-    zh: '你的本地 AI 指挥中心',
-    es: 'Tu centro de mando de IA local',
-    pt: 'Seu centro de comando de IA local',
-    ar: 'مركز قيادتك للذكاء الاصطناعي المحلي',
-    ko: '당신의 로컬 AI 커맨드 센터',
+    en: 'Directory, Guides & Comparison Tools for Local LLMs',
+    de: 'Verzeichnis, Guides & Vergleichstools für lokale LLMs',
+    fr: 'Annuaire, guides et outils de comparaison pour LLM locaux',
+    ja: 'ローカルLLMのディレクトリ・ガイド・比較ツール',
+    zh: '本地 LLM 目录、指南与比较工具',
+    es: 'Directorio, guías y herramientas de comparación de LLM locales',
+    pt: 'Diretório, guias e ferramentas de comparação de LLM locais',
+    ar: 'دليل وأدلة وأدوات مقارنة لنماذج اللغة المحلية',
+    ko: '로컬 LLM 디렉터리, 가이드 및 비교 도구',
   },
 
   // --- Intent-Guided Search ---
