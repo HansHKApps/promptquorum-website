@@ -79,7 +79,7 @@ export const pt: AboutCopy = {
   partLearnConnects: 'as análises e comparações têm links de volta para as entradas do diretório que elas cobrem.',
   partUseTitle: 'O aplicativo PromptQuorum',
   partUseBody:
-    'Um aplicativo multimodelo gratuito, atualmente em beta. Envie um prompt para vários modelos, incluindo modelos locais, e veja onde as respostas concordam e onde se contradizem. Concordância é um sinal útil, não uma prova. Você usa suas próprias chaves e modelos, e não há telemetria. Foi assim que a PromptQuorum começou.',
+    'Um aplicativo multimodelo gratuito, atualmente em beta. Envie um prompt para vários modelos, incluindo modelos locais, e veja onde as respostas concordam e onde se contradizem. Concordância é um sinal útil, não uma prova. Você usa suas próprias chaves e modelos. Nada do que você envia passa por um servidor da PromptQuorum, e o aplicativo não envia nenhum dado de volta para nós. Foi assim que a PromptQuorum começou.',
   partUseConnects: 'ele se conecta ao Ollama e ao LM Studio, ambos listados no diretório, para que os modelos locais fiquem lado a lado com os modelos na nuvem.',
   partAskTitle: 'O servidor MCP',
   partAskBody:
