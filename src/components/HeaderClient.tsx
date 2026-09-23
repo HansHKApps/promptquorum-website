@@ -193,12 +193,12 @@ function HeaderInner() {
         {t('skipToMain', lang)}
       </a>
       <div className="px-4 sm:px-6 h-16 flex items-center justify-between">
-        <Link href={navHref('/', lang)} className="flex flex-col justify-center flex-shrink-0">
+        <Link href={navHref('/', lang)} className="flex flex-col justify-center min-w-0 flex-shrink sm:flex-shrink-0">
           <span className="flex items-center gap-2">
             <Logo size={36} className="w-9 h-9 flex-shrink-0" />
             <span className="font-semibold text-gray-900 whitespace-nowrap">PromptQuorum</span>
           </span>
-          <span className="hidden sm:block pl-11 text-[10px] font-medium tracking-wide text-gray-400 whitespace-nowrap">
+          <span className="block pl-11 text-[10px] font-medium tracking-wide text-gray-400 truncate max-w-[240px] sm:max-w-none sm:whitespace-nowrap">
             {t('taglineMain', lang)} <span className="text-purple-400">{t('taglineAccent', lang)}</span>
           </span>
         </Link>
