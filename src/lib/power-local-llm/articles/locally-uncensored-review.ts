@@ -108,7 +108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-links',
         title: 'Get Locally Uncensored: Downloads for Windows and Linux',
-        content: '**Locally Uncensored is available on Windows and Linux**, distributed as direct installer downloads from the project\'s [GitHub Releases page](https://github.com/PurpleDoubleD/locally-uncensored/releases). There is no macOS build as of this review; the project\'s own materials describe macOS support as on the roadmap, not currently shipped. Always confirm the current release and file names on the [Releases page](https://github.com/PurpleDoubleD/locally-uncensored/releases) directly, since installer names change between versions.',
+        content: '**Locally Uncensored is available on Windows and Linux**, distributed as direct installer downloads from the project\'s [GitHub Releases page](https://github.com/PurpleDoubleD/locally-uncensored/releases). The same installers are also offered directly from the [Download button on the project homepage](https://locallyuncensored.com), which links out to the current GitHub release rather than hosting separate files. There is no macOS build as of this review; the project\'s own materials describe macOS support as on the roadmap, not currently shipped. Always confirm the current release and file names on the [Releases page](https://github.com/PurpleDoubleD/locally-uncensored/releases) directly, since installer names change between versions.',
         columns: ['Platform', 'Download'],
         rows: [
           { 'Platform': 'Windows 10/11', 'Download': '[.exe installer](https://github.com/PurpleDoubleD/locally-uncensored/releases/latest)' },
@@ -209,12 +209,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'You want to reach a model running on your desktop PC from a phone or tablet without running the model on the mobile device itself',
               'You are comfortable running Windows or Linux — there is no macOS build as of this review',
               'You want the application source to be open and self-auditable, consistent with its AGPL-3.0 license',
+              'Your machine clears a practical floor for the tasks you want: roughly 16 GB RAM for chat and coding through Ollama, plus a GPU with 6–8 GB or more VRAM for image generation, video generation, and LoRA training through the bundled ComfyUI setup — the app itself sets no fixed minimum beyond that, since usability depends entirely on the model and backend you choose',
             ],
           },
           {
             title: 'Wait, or look elsewhere, if',
             list: [
               'You need a macOS build today — this review found none published, only a stated roadmap intention',
+              'Your machine falls well below that floor — under roughly 8 GB RAM with no dedicated GPU — since the app will install, but the image, video, and LoRA-training models it hosts will run poorly or not at all',
               'You need vendor support with an SLA rather than a single independent maintainer and a GitHub issue tracker',
               'The AGPL-3.0 license\'s copyleft terms do not fit a requirement your organization has for software you plan to modify and distribute — read the [LICENSE file](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE) directly before deciding',
               'You specifically want a single vendor-published model rather than a front end you point at backends and models of your own choosing',
@@ -405,7 +407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-links',
         title: 'Locally Uncensored herunterladen für Windows und Linux',
-        content: '**Locally Uncensored ist für Windows und Linux verfügbar**, verteilt als direkte Installer-Downloads über die [GitHub-Releases-Seite](https://github.com/PurpleDoubleD/locally-uncensored/releases) des Projekts. Es gibt zum Zeitpunkt dieser Review keinen macOS-Build; die eigenen Projektmaterialien beschreiben macOS-Unterstützung als für die Zukunft geplant, nicht als derzeit ausgeliefert. Prüfen Sie das aktuelle Release und die Dateinamen stets direkt auf der [Releases-Seite](https://github.com/PurpleDoubleD/locally-uncensored/releases), da sich Installer-Namen zwischen Versionen ändern.',
+        content: '**Locally Uncensored ist für Windows und Linux verfügbar**, verteilt als direkte Installer-Downloads über die [GitHub-Releases-Seite](https://github.com/PurpleDoubleD/locally-uncensored/releases) des Projekts. Dieselben Installer sind auch direkt über den [Download-Button auf der Projekt-Homepage](https://locallyuncensored.com) verfügbar, der auf das aktuelle GitHub-Release verweist statt eigene Dateien zu hosten. Es gibt zum Zeitpunkt dieser Review keinen macOS-Build; die eigenen Projektmaterialien beschreiben macOS-Unterstützung als für die Zukunft geplant, nicht als derzeit ausgeliefert. Prüfen Sie das aktuelle Release und die Dateinamen stets direkt auf der [Releases-Seite](https://github.com/PurpleDoubleD/locally-uncensored/releases), da sich Installer-Namen zwischen Versionen ändern.',
         columns: ['Plattform', 'Download'],
         rows: [
           { 'Plattform': 'Windows 10/11', 'Download': '[.exe-Installer](https://github.com/PurpleDoubleD/locally-uncensored/releases/latest)' },
@@ -506,12 +508,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Sie ein auf Ihrem Desktop-PC laufendes Modell von einem Smartphone oder Tablet aus erreichen möchten, ohne das Modell auf dem mobilen Gerät selbst auszuführen',
               'Sie mit Windows oder Linux arbeiten — es gibt zum Zeitpunkt dieser Review keinen macOS-Build',
               'Sie einen quelloffenen, selbst überprüfbaren Anwendungscode wünschen, passend zur AGPL-3.0-Lizenz',
+              'Ihr Rechner eine praktische Mindestausstattung erreicht: etwa 16 GB RAM für Chat und Coding über Ollama, plus eine GPU mit 6–8 GB oder mehr VRAM für Bildgenerierung, Videogenerierung und LoRA-Training über das mitgelieferte ComfyUI-Setup — die App selbst legt darüber hinaus keine feste Mindestanforderung fest, da die Nutzbarkeit vollständig vom gewählten Modell und Backend abhängt',
             ],
           },
           {
             title: 'Warten Sie oder sehen Sie sich anderswo um, wenn',
             list: [
               'Sie heute einen macOS-Build benötigen — diese Review fand keinen veröffentlichten, nur eine angekündigte Roadmap-Absicht',
+              'Ihr Rechner deutlich unter dieser Mindestausstattung liegt — unter etwa 8 GB RAM ohne dedizierte GPU —, da die App zwar installiert, die für Bild-, Video- und LoRA-Training gehosteten Modelle aber schlecht oder gar nicht laufen',
               'Sie Hersteller-Support mit SLA statt eines einzelnen unabhängigen Maintainers und eines GitHub-Issue-Trackers benötigen',
               'Die Copyleft-Bedingungen der AGPL-3.0-Lizenz nicht zu einer Anforderung Ihrer Organisation passen, falls Sie die Software modifizieren und weitergeben möchten — lesen Sie die [LICENSE-Datei](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE) direkt, bevor Sie entscheiden',
               'Sie gezielt ein einzelnes, vom Hersteller veröffentlichtes Modell möchten, statt einer Oberfläche, die Sie auf Backends und Modelle Ihrer eigenen Wahl richten',
@@ -702,7 +706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-links',
         title: 'Télécharger Locally Uncensored pour Windows et Linux',
-        content: '**Locally Uncensored est disponible pour Windows et Linux**, distribuée en téléchargement direct depuis la [page Releases GitHub](https://github.com/PurpleDoubleD/locally-uncensored/releases) du projet. Il n\'existe aucune version macOS au moment de cet avis ; les propres documents du projet décrivent le support macOS comme prévu, non actuellement disponible. Vérifiez toujours la version actuelle et les noms de fichiers directement sur la [page Releases](https://github.com/PurpleDoubleD/locally-uncensored/releases), car les noms d\'installeurs changent d\'une version à l\'autre.',
+        content: '**Locally Uncensored est disponible pour Windows et Linux**, distribuée en téléchargement direct depuis la [page Releases GitHub](https://github.com/PurpleDoubleD/locally-uncensored/releases) du projet. Les mêmes installeurs sont aussi proposés directement via le [bouton de téléchargement de la page d\'accueil du projet](https://locallyuncensored.com), qui renvoie vers la version GitHub actuelle plutôt que d\'héberger des fichiers séparés. Il n\'existe aucune version macOS au moment de cet avis ; les propres documents du projet décrivent le support macOS comme prévu, non actuellement disponible. Vérifiez toujours la version actuelle et les noms de fichiers directement sur la [page Releases](https://github.com/PurpleDoubleD/locally-uncensored/releases), car les noms d\'installeurs changent d\'une version à l\'autre.',
         columns: ['Plateforme', 'Téléchargement'],
         rows: [
           { 'Plateforme': 'Windows 10/11', 'Téléchargement': '[installeur .exe](https://github.com/PurpleDoubleD/locally-uncensored/releases/latest)' },
@@ -803,12 +807,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Vous souhaitez accéder à un modèle exécuté sur votre PC de bureau depuis un téléphone ou une tablette sans exécuter le modèle sur l\'appareil mobile lui-même',
               'Vous êtes à l\'aise avec Windows ou Linux — il n\'existe aucune version macOS au moment de cet avis',
               'Vous voulez que le code source de l\'application soit ouvert et auditable, conformément à sa licence AGPL-3.0',
+              'Votre machine atteint un seuil pratique pour les tâches visées : environ 16 Go de RAM pour le chat et le codage via Ollama, plus un GPU avec 6 à 8 Go de VRAM ou plus pour la génération d\'images, de vidéos et l\'entraînement de LoRA via l\'installation ComfyUI intégrée — l\'application elle-même n\'impose aucun minimum fixe au-delà de cela, l\'utilisabilité dépendant entièrement du modèle et du moteur choisis',
             ],
           },
           {
             title: 'Attendez, ou cherchez ailleurs, si',
             list: [
               'Vous avez besoin d\'une version macOS dès aujourd\'hui — cet avis n\'en a trouvé aucune publiée, seulement une intention de feuille de route',
+              'Votre machine est nettement en dessous de ce seuil — moins d\'environ 8 Go de RAM sans GPU dédié — car l\'application s\'installera, mais les modèles d\'image, de vidéo et de LoRA qu\'elle héberge fonctionneront mal, voire pas du tout',
               'Vous avez besoin d\'un support éditeur avec un SLA plutôt que d\'un mainteneur indépendant unique et d\'un suivi d\'issues GitHub',
               'Les conditions copyleft de la licence AGPL-3.0 ne correspondent pas à une exigence de votre organisation si vous prévoyez de modifier et de redistribuer le logiciel — lisez directement le [fichier LICENSE](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE) avant de décider',
               'Vous voulez spécifiquement un modèle unique publié par un éditeur, plutôt qu\'une interface que vous dirigez vers les moteurs et modèles de votre choix',
@@ -999,7 +1005,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-links',
         title: 'Descargar Locally Uncensored para Windows y Linux',
-        content: '**Locally Uncensored está disponible para Windows y Linux**, distribuida como descargas directas de instalador desde la [página de Releases de GitHub](https://github.com/PurpleDoubleD/locally-uncensored/releases) del proyecto. No existe versión para macOS al momento de esta reseña; los propios materiales del proyecto describen el soporte de macOS como previsto, no disponible actualmente. Comprueba siempre la versión actual y los nombres de archivo directamente en la [página de Releases](https://github.com/PurpleDoubleD/locally-uncensored/releases), ya que los nombres de los instaladores cambian entre versiones.',
+        content: '**Locally Uncensored está disponible para Windows y Linux**, distribuida como descargas directas de instalador desde la [página de Releases de GitHub](https://github.com/PurpleDoubleD/locally-uncensored/releases) del proyecto. Los mismos instaladores también se ofrecen directamente desde el [botón de descarga de la página principal del proyecto](https://locallyuncensored.com), que enlaza a la versión actual de GitHub en lugar de alojar archivos propios. No existe versión para macOS al momento de esta reseña; los propios materiales del proyecto describen el soporte de macOS como previsto, no disponible actualmente. Comprueba siempre la versión actual y los nombres de archivo directamente en la [página de Releases](https://github.com/PurpleDoubleD/locally-uncensored/releases), ya que los nombres de los instaladores cambian entre versiones.',
         columns: ['Plataforma', 'Descarga'],
         rows: [
           { 'Plataforma': 'Windows 10/11', 'Descarga': '[instalador .exe](https://github.com/PurpleDoubleD/locally-uncensored/releases/latest)' },
@@ -1100,12 +1106,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Quieres acceder a un modelo que corre en tu PC de escritorio desde un teléfono o tablet sin ejecutar el modelo en el propio dispositivo móvil',
               'Te sientes cómodo con Windows o Linux — no hay versión para macOS al momento de esta reseña',
               'Quieres que el código fuente de la aplicación sea abierto y auditable, en línea con su licencia AGPL-3.0',
+              'Tu equipo alcanza un umbral práctico para las tareas que quieres hacer: unos 16 GB de RAM para chat y código vía Ollama, más una GPU con 6–8 GB de VRAM o más para generación de imágenes, video y entrenamiento de LoRA vía la instalación de ComfyUI incluida — la app en sí no impone un mínimo fijo más allá de eso, ya que la usabilidad depende por completo del modelo y el backend elegidos',
             ],
           },
           {
             title: 'Espera, o busca alternativas, si',
             list: [
               'Necesitas una versión para macOS hoy mismo — esta reseña no encontró ninguna publicada, solo una intención declarada en la hoja de ruta',
+              'Tu equipo está muy por debajo de ese umbral — menos de unos 8 GB de RAM sin GPU dedicada —, ya que la app se instalará, pero los modelos de imagen, video y LoRA que aloja funcionarán mal o no funcionarán en absoluto',
               'Necesitas soporte de proveedor con un SLA en lugar de un único mantenedor independiente y un sistema de incidencias de GitHub',
               'Las condiciones copyleft de la licencia AGPL-3.0 no encajan con un requisito de tu organización, si planeas modificar y redistribuir el software — lee directamente el [archivo LICENSE](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE) antes de decidir',
               'Quieres específicamente un único modelo publicado por un proveedor, en lugar de una interfaz que apuntas hacia los backends y modelos de tu elección',
@@ -1296,7 +1304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-links',
         title: 'Baixar o Locally Uncensored para Windows e Linux',
-        content: '**O Locally Uncensored está disponível para Windows e Linux**, distribuído como downloads diretos de instalador na [página de Releases do GitHub](https://github.com/PurpleDoubleD/locally-uncensored/releases) do projeto. Não há versão para macOS até esta análise; os próprios materiais do projeto descrevem o suporte a macOS como planejado, não disponível no momento. Sempre confira a versão atual e os nomes de arquivo diretamente na [página de Releases](https://github.com/PurpleDoubleD/locally-uncensored/releases), já que os nomes dos instaladores mudam entre versões.',
+        content: '**O Locally Uncensored está disponível para Windows e Linux**, distribuído como downloads diretos de instalador na [página de Releases do GitHub](https://github.com/PurpleDoubleD/locally-uncensored/releases) do projeto. Os mesmos instaladores também estão disponíveis diretamente pelo [botão de download na página inicial do projeto](https://locallyuncensored.com), que direciona para a versão atual do GitHub em vez de hospedar arquivos próprios. Não há versão para macOS até esta análise; os próprios materiais do projeto descrevem o suporte a macOS como planejado, não disponível no momento. Sempre confira a versão atual e os nomes de arquivo diretamente na [página de Releases](https://github.com/PurpleDoubleD/locally-uncensored/releases), já que os nomes dos instaladores mudam entre versões.',
         columns: ['Plataforma', 'Download'],
         rows: [
           { 'Plataforma': 'Windows 10/11', 'Download': '[instalador .exe](https://github.com/PurpleDoubleD/locally-uncensored/releases/latest)' },
@@ -1397,12 +1405,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Você quer acessar um modelo que roda no seu PC de mesa a partir de um celular ou tablet sem executar o modelo no próprio dispositivo móvel',
               'Você está confortável com Windows ou Linux — não há versão para macOS até esta análise',
               'Você quer que o código-fonte do aplicativo seja aberto e auditável, alinhado à licença AGPL-3.0',
+              'Sua máquina atinge um patamar prático para as tarefas desejadas: cerca de 16 GB de RAM para chat e código via Ollama, além de uma GPU com 6–8 GB de VRAM ou mais para geração de imagens, vídeo e treinamento de LoRA via a instalação do ComfyUI incluída — o app em si não impõe um mínimo fixo além disso, já que a usabilidade depende inteiramente do modelo e do backend escolhidos',
             ],
           },
           {
             title: 'Espere, ou procure alternativas, se',
             list: [
               'Você precisa de uma versão para macOS hoje — esta análise não encontrou nenhuma publicada, apenas uma intenção declarada no roteiro do projeto',
+              'Sua máquina fica bem abaixo desse patamar — menos de cerca de 8 GB de RAM sem GPU dedicada —, pois o app instala normalmente, mas os modelos de imagem, vídeo e LoRA que ele hospeda funcionarão mal ou não funcionarão',
               'Você precisa de suporte de fornecedor com SLA em vez de um único mantenedor independente e um sistema de issues do GitHub',
               'As condições copyleft da licença AGPL-3.0 não atendem a um requisito da sua organização, caso você pretenda modificar e redistribuir o software — leia diretamente o [arquivo LICENSE](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE) antes de decidir',
               'Você quer especificamente um único modelo publicado por um fornecedor, em vez de uma interface que você aponta para backends e modelos de sua escolha',
@@ -1593,7 +1603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-links',
         title: 'Locally UncensoredをWindows・Linux向けにダウンロード',
-        content: '**Locally UncensoredはWindowsとLinuxで利用可能**で、プロジェクトの[GitHub Releasesページ](https://github.com/PurpleDoubleD/locally-uncensored/releases)から直接インストーラーをダウンロードできます。本レビュー時点でmacOS版はありません。プロジェクトの資料ではmacOS対応は計画中とされ、現時点では未提供です。インストーラー名はバージョンごとに変わるため、常に[Releasesページ](https://github.com/PurpleDoubleD/locally-uncensored/releases)で最新版とファイル名を直接確認してください。',
+        content: '**Locally UncensoredはWindowsとLinuxで利用可能**で、プロジェクトの[GitHub Releasesページ](https://github.com/PurpleDoubleD/locally-uncensored/releases)から直接インストーラーをダウンロードできます。同じインストーラーは、[プロジェクトのホームページにあるダウンロードボタン](https://locallyuncensored.com)からも直接入手でき、独自にファイルをホストするのではなく現行のGitHubリリースへリンクしています。本レビュー時点でmacOS版はありません。プロジェクトの資料ではmacOS対応は計画中とされ、現時点では未提供です。インストーラー名はバージョンごとに変わるため、常に[Releasesページ](https://github.com/PurpleDoubleD/locally-uncensored/releases)で最新版とファイル名を直接確認してください。',
         columns: ['プラットフォーム', 'ダウンロード'],
         rows: [
           { 'プラットフォーム': 'Windows 10/11', 'ダウンロード': '[.exeインストーラー](https://github.com/PurpleDoubleD/locally-uncensored/releases/latest)' },
@@ -1694,12 +1704,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'モバイル端末自体でモデルを動かすことなく、デスクトップPC上で動くモデルにスマホやタブレットからアクセスしたい',
               'WindowsまたはLinuxでの利用に抵抗がない — 本レビュー時点でmacOS版は存在しない',
               'AGPL-3.0ライセンスに沿った、オープンで自己監査可能なアプリケーションのソースコードを求めている',
+              '目的のタスクに見合った実用的なスペックを満たしている — Ollama経由のチャットやコーディングなら目安として16GB RAM、付属のComfyUIセットアップを使う画像生成・動画生成・LoRAトレーニングなら6〜8GB以上のVRAMを持つGPUが目安。アプリ自体に固定の最低要件はなく、実際の使い勝手は選んだモデルとバックエンドに完全に依存する',
             ],
           },
           {
             title: 'こんな場合は導入を待つか、他の選択肢を検討する',
             list: [
               '今すぐmacOS版が必要な場合 — 本レビューでは公開版は見つからず、ロードマップ上の意向のみが確認できた',
+              'マシンがこの目安を大きく下回る場合 — 専用GPUなしでRAMが8GB未満程度 — アプリ自体はインストールできても、画像・動画・LoRAトレーニング用のモデルはまともに動かないか、まったく動かない',
               '単独の個人メンテナーとGitHubのissueトラッカーではなく、SLA付きのベンダーサポートが必要な場合',
               'ソフトウェアを改変・再配布する予定があり、AGPL-3.0ライセンスのコピーレフト条項が組織の要件に合わない場合 — 判断する前に[LICENSEファイル](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE)を直接確認してください',
               '自分で選んだバックエンドやモデルに向けるフロントエンドではなく、特定のベンダーが公開する単一モデルを明確に求めている場合',
@@ -1890,7 +1902,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-links',
         title: '下载Locally Uncensored：Windows与Linux版本',
-        content: '**Locally Uncensored支持Windows和Linux**,可通过项目的[GitHub Releases页面](https://github.com/PurpleDoubleD/locally-uncensored/releases)直接下载安装包。截至本评测尚无macOS版本;项目方自己的资料将macOS支持描述为计划中的功能,目前尚未提供。由于安装包名称会随版本变化,请始终直接在[Releases页面](https://github.com/PurpleDoubleD/locally-uncensored/releases)确认当前版本和文件名。',
+        content: '**Locally Uncensored支持Windows和Linux**,可通过项目的[GitHub Releases页面](https://github.com/PurpleDoubleD/locally-uncensored/releases)直接下载安装包。同样的安装包也可以直接从[项目主页的下载按钮](https://locallyuncensored.com)获取,该按钮链接到当前的GitHub发行版,而非另行托管文件。截至本评测尚无macOS版本;项目方自己的资料将macOS支持描述为计划中的功能,目前尚未提供。由于安装包名称会随版本变化,请始终直接在[Releases页面](https://github.com/PurpleDoubleD/locally-uncensored/releases)确认当前版本和文件名。',
         columns: ['平台', '下载'],
         rows: [
           { '平台': 'Windows 10/11', '下载': '[.exe安装程序](https://github.com/PurpleDoubleD/locally-uncensored/releases/latest)' },
@@ -1991,12 +2003,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               '你希望从手机或平板访问运行在桌面PC上的模型,而不在移动设备本身上运行该模型',
               '你能接受使用Windows或Linux——截至本评测尚无macOS版本',
               '你希望应用的源代码开放且可自行审计,这与其AGPL-3.0许可证相符',
+              '你的设备达到对应任务的实用配置门槛:通过Ollama进行聊天和编程大约需要16GB内存;通过内置ComfyUI进行图像生成、视频生成和LoRA训练则需要6-8GB以上显存的GPU——应用本身没有固定的最低配置要求,实际可用性完全取决于你选择的模型和后端',
             ],
           },
           {
             title: '以下情况建议观望或考虑其他方案',
             list: [
               '你现在就需要macOS版本——本评测未找到已发布版本,只发现路线图中的计划意向',
+              '你的设备远低于上述配置门槛——例如内存不足约8GB且没有独立显卡——此时应用虽能安装,但其托管的图像、视频和LoRA训练模型将运行不佳甚至无法运行',
               '你需要有服务等级协议（SLA）的厂商支持,而非单一独立维护者和GitHub issue跟踪系统',
               '如果你计划修改并再分发该软件,而AGPL-3.0许可证的著佐权（copyleft）条款不符合你所在组织的要求——请在决定前直接阅读[LICENSE文件](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE)',
               '你明确需要单一厂商发布的模型,而非一个可指向你自选后端和模型的前端界面',
@@ -2187,7 +2201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-links',
         title: 'تنزيل Locally Uncensored لأنظمة Windows وLinux',
-        content: '**يتوفر Locally Uncensored لأنظمة Windows وLinux**، ويُوزَّع كتنزيلات مباشرة للمُثبِّت من [صفحة الإصدارات على GitHub](https://github.com/PurpleDoubleD/locally-uncensored/releases) الخاصة بالمشروع. لا يوجد إصدار لنظام macOS حتى وقت هذه المراجعة؛ وتصف مواد المشروع نفسها دعم macOS بأنه مخطَّط له، وغير متاح حاليًا. تأكد دائمًا من الإصدار الحالي وأسماء الملفات مباشرةً على [صفحة الإصدارات](https://github.com/PurpleDoubleD/locally-uncensored/releases)، لأن أسماء المُثبِّتات تتغيّر بين الإصدارات.',
+        content: '**يتوفر Locally Uncensored لأنظمة Windows وLinux**، ويُوزَّع كتنزيلات مباشرة للمُثبِّت من [صفحة الإصدارات على GitHub](https://github.com/PurpleDoubleD/locally-uncensored/releases) الخاصة بالمشروع. تتوفر المُثبِّتات نفسها أيضًا مباشرةً عبر [زر التنزيل في الصفحة الرئيسية للمشروع](https://locallyuncensored.com)، والذي يُحيل إلى إصدار GitHub الحالي بدلًا من استضافة ملفات خاصة به. لا يوجد إصدار لنظام macOS حتى وقت هذه المراجعة؛ وتصف مواد المشروع نفسها دعم macOS بأنه مخطَّط له، وغير متاح حاليًا. تأكد دائمًا من الإصدار الحالي وأسماء الملفات مباشرةً على [صفحة الإصدارات](https://github.com/PurpleDoubleD/locally-uncensored/releases)، لأن أسماء المُثبِّتات تتغيّر بين الإصدارات.',
         columns: ['المنصة', 'التنزيل'],
         rows: [
           { 'المنصة': 'Windows 10/11', 'التنزيل': '[مُثبِّت .exe](https://github.com/PurpleDoubleD/locally-uncensored/releases/latest)' },
@@ -2288,12 +2302,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'تريد الوصول إلى نموذج يعمل على جهاز الكمبيوتر المكتبي من هاتف أو جهاز لوحي دون تشغيل النموذج على الجهاز المحمول نفسه',
               'ترتاح لاستخدام Windows أو Linux — لا يوجد إصدار لنظام macOS حتى وقت هذه المراجعة',
               'تريد أن يكون الكود المصدري للتطبيق مفتوحًا وقابلًا للتدقيق ذاتيًا، بما يتوافق مع ترخيص AGPL-3.0',
+              'كان جهازك يستوفي حدًا عمليًا للمهام التي تريدها: نحو 16 جيجابايت من الذاكرة العشوائية (RAM) للدردشة والبرمجة عبر Ollama، بالإضافة إلى بطاقة رسومات (GPU) بذاكرة فيديو (VRAM) لا تقل عن 6–8 جيجابايت لتوليد الصور والفيديو وتدريب LoRA عبر إعداد ComfyUI المدمج — لا يفرض التطبيق نفسه أي حد أدنى ثابت غير ذلك، إذ تعتمد قابلية الاستخدام الفعلية كليًا على النموذج والمحرك اللذين تختارهما',
             ],
           },
           {
             title: 'انتظر، أو ابحث عن بديل، إذا',
             list: [
               'كنت بحاجة إلى إصدار macOS اليوم — لم تجد هذه المراجعة أي إصدار منشور، بل مجرد نية واردة في خارطة الطريق',
+              'كان جهازك أقل بكثير من هذا الحد — أقل من نحو 8 جيجابايت من الذاكرة العشوائية بدون بطاقة رسومات مخصّصة — إذ سيُثبَّت التطبيق، لكن نماذج الصور والفيديو وتدريب LoRA التي يستضيفها ستعمل بشكل ضعيف أو لن تعمل إطلاقًا',
               'كنت بحاجة إلى دعم من مزوّد باتفاقية مستوى خدمة (SLA) بدلًا من قائم صيانة مستقل واحد ونظام تتبّع مشكلات على GitHub',
               'لم تكن شروط الحقوق المتروكة (copyleft) في ترخيص AGPL-3.0 تناسب متطلبات مؤسستك، في حال كنت تخطّط لتعديل البرنامج وإعادة توزيعه — اقرأ [ملف LICENSE](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE) مباشرةً قبل اتخاذ القرار',
               'كنت تريد تحديدًا نموذجًا واحدًا ينشره مزوّد بعينه، بدلًا من واجهة أمامية توجّهها نحو محركات ونماذج من اختيارك',
@@ -2484,7 +2500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-links',
         title: 'Windows·Linux용 Locally Uncensored 다운로드',
-        content: '**Locally Uncensored는 Windows와 Linux에서 이용 가능**하며, 프로젝트의 [GitHub Releases 페이지](https://github.com/PurpleDoubleD/locally-uncensored/releases)에서 설치 파일을 직접 다운로드할 수 있습니다. 이 리뷰 시점에는 macOS 버전이 없으며, 프로젝트 자체 자료는 macOS 지원을 계획 중인 것으로 설명하고 있고 현재는 제공되지 않습니다. 설치 파일 이름은 버전마다 달라지므로, 항상 [Releases 페이지](https://github.com/PurpleDoubleD/locally-uncensored/releases)에서 현재 버전과 파일명을 직접 확인하세요.',
+        content: '**Locally Uncensored는 Windows와 Linux에서 이용 가능**하며, 프로젝트의 [GitHub Releases 페이지](https://github.com/PurpleDoubleD/locally-uncensored/releases)에서 설치 파일을 직접 다운로드할 수 있습니다. 동일한 설치 파일은 [프로젝트 홈페이지의 다운로드 버튼](https://locallyuncensored.com)에서도 바로 받을 수 있으며, 이 버튼은 자체 파일을 호스팅하는 대신 현재 GitHub 릴리스로 연결됩니다. 이 리뷰 시점에는 macOS 버전이 없으며, 프로젝트 자체 자료는 macOS 지원을 계획 중인 것으로 설명하고 있고 현재는 제공되지 않습니다. 설치 파일 이름은 버전마다 달라지므로, 항상 [Releases 페이지](https://github.com/PurpleDoubleD/locally-uncensored/releases)에서 현재 버전과 파일명을 직접 확인하세요.',
         columns: ['플랫폼', '다운로드'],
         rows: [
           { '플랫폼': 'Windows 10/11', '다운로드': '[.exe 설치 파일](https://github.com/PurpleDoubleD/locally-uncensored/releases/latest)' },
@@ -2585,12 +2601,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               '모바일 기기 자체에서 모델을 실행하지 않으면서 데스크톱 PC에서 실행 중인 모델에 스마트폰이나 태블릿으로 접근하고 싶은 경우',
               'Windows나 Linux 사용에 거부감이 없는 경우 — 이 리뷰 시점에는 macOS 버전이 없음',
               'AGPL-3.0 라이선스에 부합하게, 애플리케이션 소스 코드가 공개되어 스스로 감사할 수 있기를 원하는 경우',
+              '원하는 작업에 필요한 실질적인 사양을 갖춘 경우 — Ollama를 통한 채팅과 코딩에는 대략 16GB RAM, 번들 ComfyUI 설정을 통한 이미지 생성·비디오 생성·LoRA 학습에는 6~8GB 이상의 VRAM을 갖춘 GPU가 기준이며, 앱 자체는 그 이상의 고정된 최소 사양을 요구하지 않고 실제 사용성은 전적으로 선택한 모델과 백엔드에 달려 있음',
             ],
           },
           {
             title: '다음의 경우 기다리거나 다른 대안을 찾으세요',
             list: [
               '지금 당장 macOS 버전이 필요한 경우 — 이 리뷰에서는 공개된 버전을 찾지 못했고, 로드맵상의 의향만 확인됨',
+              '기기가 이 기준을 크게 밑도는 경우 — 전용 GPU 없이 RAM이 대략 8GB 미만인 경우 — 앱 자체는 설치되지만 이미지·비디오·LoRA 학습용으로 호스팅되는 모델은 제대로 작동하지 않거나 전혀 작동하지 않음',
               '단일 독립 관리자와 GitHub 이슈 트래커가 아니라 SLA를 갖춘 벤더 지원이 필요한 경우',
               '소프트웨어를 수정하고 재배포할 계획이 있는데 AGPL-3.0 라이선스의 코피레프트 조건이 조직의 요구 사항에 맞지 않는 경우 — 결정하기 전에 [LICENSE 파일](https://github.com/PurpleDoubleD/locally-uncensored/blob/main/LICENSE)을 직접 읽어보세요',
               '자신이 선택한 백엔드와 모델을 향하게 하는 프런트엔드가 아니라, 특정 벤더가 배포한 단일 모델을 명확히 원하는 경우',

@@ -923,6 +923,84 @@ function SectionBlock({ section, colors, id, lang, renderLinks, compareData }: {
         </ol>
       )}
 
+      {/* Subsections — grouped title + content/list/steps/providers/details/table within one section */}
+      {section.subsections && (
+        <div className="space-y-6 my-4">
+          {section.subsections.map((sub, i) => (
+            <div key={i}>
+              {sub.title && (
+                <h3 className="text-lg font-bold text-text-primary mb-2">
+                  {renderInlineLinks(sub.title, lang)}
+                </h3>
+              )}
+              {(sub.content || sub.text) && (
+                <p className="text-text-secondary leading-relaxed">
+                  {renderInlineLinks(sub.content ?? sub.text ?? '', lang)}
+                </p>
+              )}
+              {sub.list && (
+                <ul className="space-y-1.5 mt-2">
+                  {sub.list.map((item, j) => (
+                    <li key={j} className="flex gap-3 text-text-secondary">
+                      <span className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${colors.dot}`} />
+                      <span className="leading-relaxed">{renderInlineLinks(item, lang)}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {sub.steps && (
+                <ol className="list-decimal ml-5 space-y-1.5 mt-2 text-text-secondary">
+                  {sub.steps.map((step, j) => (
+                    <li key={j} className="leading-relaxed">{renderInlineLinks(step, lang)}</li>
+                  ))}
+                </ol>
+              )}
+              {sub.providers && (
+                <ul className="flex flex-wrap gap-2 mt-2">
+                  {sub.providers.map((p, j) => (
+                    <li key={j} className="text-xs font-semibold px-2.5 py-1 rounded-full bg-primary/10 text-primary">
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {sub.details && (
+                <dl className="text-sm text-text-secondary space-y-1.5 mt-2">
+                  {Object.entries(sub.details).map(([k, v]) => (
+                    <div key={k} className="flex flex-col sm:flex-row sm:gap-2">
+                      <dt className="font-semibold text-text-primary shrink-0 sm:w-32">{k}:</dt>
+                      <dd>{renderInlineLinks(v, lang)}</dd>
+                    </div>
+                  ))}
+                </dl>
+              )}
+              {sub.columns && sub.rows && (
+                <div className="overflow-x-auto mt-2">
+                  <table className="w-full border-collapse text-sm">
+                    <thead>
+                      <tr className="border-b-2 border-primary/20">
+                        {sub.columns.map((col) => (
+                          <th key={col} className="text-left p-2 font-bold text-text-primary bg-primary/5">{renderInlineLinks(col, lang)}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {sub.rows.map((row, ri) => (
+                        <tr key={ri} className="border-b border-primary/10">
+                          {sub.columns!.map((col) => (
+                            <td key={col} className="p-2 text-text-secondary">{renderInlineLinks(row[col] ?? '—', lang)}</td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+
       {/* Item-heading list — each row gets its own H3 (e.g. per-tool directory entries) */}
       {section.itemHeadings && section.rows && section.columns && (
         <div className="my-6 space-y-4">
