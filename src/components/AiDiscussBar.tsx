@@ -31,19 +31,34 @@ type Platform = {
   url: string
   /** Build a native prefilled URL; omit when no confirmed browser prefill exists. */
   prefill?: (prompt: string) => string
+  /**
+   * Target ceiling (characters) for the clipboard-copy briefing, tuned to
+   * that platform's actual paste/input limit — not its model context
+   * window, which is usually far larger than what the chat box's UI will
+   * actually accept in one paste. Sources vary and these limits change
+   * over time, so treat each as a conservative, safe-side estimate rather
+   * than a documented spec: Perplexity's home "Ask anything" box rejects
+   * pastes past roughly 2,000 characters; ChatGPT's and Copilot's consumer
+   * chat boxes have historically capped around 4,000; Grok, Meta AI and
+   * Poe sit in the 6,000-8,000 range; Claude, Gemini, Le Chat and DeepSeek
+   * comfortably take low tens of thousands. Omit the field only for
+   * platforms confirmed to accept the generous default (buildBriefing's
+   * DEFAULT_MAX_CHARS).
+   */
+  maxChars?: number
 }
 
 const PLATFORMS: Platform[] = [
-  { id: 'chatgpt', name: 'ChatGPT', url: 'https://chatgpt.com/', prefill: (p) => `https://chatgpt.com/?q=${encodeURIComponent(p)}` },
-  { id: 'claude', name: 'Claude', url: 'https://claude.ai/new', prefill: (p) => `https://claude.ai/new?q=${encodeURIComponent(p)}` },
-  { id: 'gemini', name: 'Gemini', url: 'https://gemini.google.com/app' },
-  { id: 'perplexity', name: 'Perplexity', url: 'https://www.perplexity.ai/' },
-  { id: 'grok', name: 'Grok', url: 'https://grok.com/' },
-  { id: 'meta-ai', name: 'Meta AI', url: 'https://www.meta.ai/' },
-  { id: 'mistral', name: 'Le Chat', url: 'https://chat.mistral.ai/chat' },
-  { id: 'deepseek', name: 'DeepSeek', url: 'https://chat.deepseek.com/' },
-  { id: 'copilot', name: 'Copilot', url: 'https://copilot.microsoft.com/' },
-  { id: 'poe', name: 'Poe', url: 'https://poe.com/' },
+  { id: 'chatgpt', name: 'ChatGPT', url: 'https://chatgpt.com/', prefill: (p) => `https://chatgpt.com/?q=${encodeURIComponent(p)}`, maxChars: 4000 },
+  { id: 'claude', name: 'Claude', url: 'https://claude.ai/new', prefill: (p) => `https://claude.ai/new?q=${encodeURIComponent(p)}`, maxChars: 20000 },
+  { id: 'gemini', name: 'Gemini', url: 'https://gemini.google.com/app', maxChars: 20000 },
+  { id: 'perplexity', name: 'Perplexity', url: 'https://www.perplexity.ai/', maxChars: 2000 },
+  { id: 'grok', name: 'Grok', url: 'https://grok.com/', maxChars: 6000 },
+  { id: 'meta-ai', name: 'Meta AI', url: 'https://www.meta.ai/', maxChars: 6000 },
+  { id: 'mistral', name: 'Le Chat', url: 'https://chat.mistral.ai/chat', maxChars: 12000 },
+  { id: 'deepseek', name: 'DeepSeek', url: 'https://chat.deepseek.com/', maxChars: 12000 },
+  { id: 'copilot', name: 'Copilot', url: 'https://copilot.microsoft.com/', maxChars: 4000 },
+  { id: 'poe', name: 'Poe', url: 'https://poe.com/', maxChars: 8000 },
 ]
 
 type Copy = {
@@ -160,7 +175,7 @@ export function AiDiscussBar() {
   if (!pathname || !SHOW_RE.test(pathname)) return null
 
   const handleClick = async (p: Platform) => {
-    const briefing = buildBriefing(c.task, lang)
+    const briefing = buildBriefing(c.task, lang, p.maxChars)
     setManualText(null)
     const prefillUrl = p.prefill?.(briefing)
     if (prefillUrl && prefillUrl.length <= MAX_PREFILL_URL_CHARS) {
