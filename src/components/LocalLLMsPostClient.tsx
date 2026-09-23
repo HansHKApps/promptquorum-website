@@ -407,8 +407,52 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
         </blockquote>
       )}
 
+      {/* "From the Maker" — a founder/maintainer-supplied quote, given a distinct
+          testimonial-card treatment (accent border, quote mark, visible attribution)
+          instead of blending into plain body paragraphs like every other section.
+          Previously this content and its `note` attribution rendered as generic text
+          with no visual signal that it was first-person maker content, not PromptQuorum
+          editorial. Detected by section id so it applies to every article that has
+          this section, not just one. Mirrors the same fix in PowerLocalLLMPostClient.tsx. */}
+      {section.id === 'from-the-maker' && section.content && (() => {
+        const paragraphs = Array.isArray(section.content) ? section.content : [section.content]
+        const [introPara, ...quoteParas] = paragraphs
+        return (
+          <div className="my-6 rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 to-transparent p-5 sm:p-6">
+            {introPara && (
+              <p className="text-sm text-text-secondary leading-relaxed mb-4">
+                {renderLinks(introPara)}
+              </p>
+            )}
+            {quoteParas.length > 0 && (
+              <div className="relative pl-6 sm:pl-8">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 32 32"
+                  className="absolute left-0 top-0 w-5 h-5 sm:w-6 sm:h-6 text-primary/40 fill-current"
+                >
+                  <path d="M10 8C5.5 8 2 11.6 2 16.2c0 4 2.9 6.8 6.4 6.8 2.9 0 5-2.1 5-4.8 0-2.5-1.8-4.4-4.2-4.4-.4 0-.8.1-1.1.2.3-2.6 2.6-4.7 5.4-5V6C13.5 6 10 6.4 10 8Zm16 0c-4.5 0-8 3.6-8 8.2 0 4 2.9 6.8 6.4 6.8 2.9 0 5-2.1 5-4.8 0-2.5-1.8-4.4-4.2-4.4-.4 0-.8.1-1.1.2.3-2.6 2.6-4.7 5.4-5V6C29.5 6 26 6.4 26 8Z" />
+                </svg>
+                <div className="space-y-4">
+                  {quoteParas.map((para, i) => (
+                    <p key={i} className="text-text-primary leading-relaxed italic">
+                      {renderLinks(para)}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            )}
+            {section.note && (
+              <p className="mt-5 pl-6 sm:pl-8 text-sm font-bold text-primary not-italic">
+                {renderLinks(section.note)}
+              </p>
+            )}
+          </div>
+        )
+      })()}
+
       {/* Regular content paragraphs or markdown tables */}
-      {section.content && !section.isTldr && (
+      {section.content && !section.isTldr && section.id !== 'from-the-maker' && (
         <div className="space-y-4">
           {(() => {
             const contentArray = Array.isArray(section.content) ? section.content : [section.content]
