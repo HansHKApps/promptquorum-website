@@ -32,20 +32,20 @@
   <!-- Text content (right side) -->
   <text x="520" y="252" font-family="system-ui, -apple-system, sans-serif" font-size="64" font-weight="700" fill="#1C1B1F">PromptQuorum</text>
 
-  <text x="520" y="332" font-family="system-ui, -apple-system, sans-serif" font-size="30" fill="#49454F">AI Prompt Optimizer &amp;</text>
-  <text x="520" y="372" font-family="system-ui, -apple-system, sans-serif" font-size="30" fill="#49454F">Multi-AI Comparator</text>
+  <text x="520" y="332" font-family="system-ui, -apple-system, sans-serif" font-size="30" fill="#49454F">Directory, Guides &amp;</text>
+  <text x="520" y="372" font-family="system-ui, -apple-system, sans-serif" font-size="30" fill="#49454F">Comparison Tools for Local LLMs</text>
 
-  <text x="520" y="442" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#6750A4">From Rough Ideas to Precision Prompts</text>
+  <text x="520" y="442" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#6750A4">Discovery Engine for Open-Weight &amp; Open-Source AI</text>
 
   <!-- Feature pills -->
-  <rect x="520" y="482" width="160" height="36" rx="18" fill="#6750A4" opacity="0.1"/>
-  <text x="600" y="506" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle">8+ Frameworks</text>
+  <rect x="520" y="482" width="150" height="36" rx="18" fill="#6750A4" opacity="0.1"/>
+  <text x="595" y="506" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle">224+ Apps</text>
 
-  <rect x="695" y="482" width="120" height="36" rx="18" fill="#6750A4" opacity="0.1"/>
-  <text x="755" y="506" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle">25+ AIs</text>
+  <rect x="685" y="482" width="160" height="36" rx="18" fill="#6750A4" opacity="0.1"/>
+  <text x="765" y="506" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle">9 Languages</text>
 
-  <rect x="830" y="482" width="180" height="36" rx="18" fill="#6750A4" opacity="0.1"/>
-  <text x="920" y="506" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle">100% Private</text>
+  <rect x="860" y="482" width="190" height="36" rx="18" fill="#6750A4" opacity="0.1"/>
+  <text x="955" y="506" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#6750A4" text-anchor="middle">788+ Articles</text>
 
   <!-- Bottom bar -->
   <rect x="0" y="635" width="1200" height="40" fill="#6750A4"/>
