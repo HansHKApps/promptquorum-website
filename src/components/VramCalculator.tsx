@@ -18,6 +18,8 @@ type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko';
 
 const VRAM_TRANSLATIONS: Partial<Record<Language, {
   popularModels: string;
+  allModels: string;
+  selectModelPlaceholder: string;
   modelSize: string;
   quantization: string;
   context: string;
@@ -44,6 +46,8 @@ const VRAM_TRANSLATIONS: Partial<Record<Language, {
 }>> = {
   en: {
     popularModels: 'Popular Models',
+    allModels: 'All Models',
+    selectModelPlaceholder: 'Select a model to auto-fill its config…',
     modelSize: 'Model Size',
     quantization: 'Quantization',
     context: 'Context',
@@ -81,6 +85,8 @@ const VRAM_TRANSLATIONS: Partial<Record<Language, {
   },
   de: {
     popularModels: 'Beliebte Modelle',
+    allModels: 'Alle Modelle',
+    selectModelPlaceholder: 'Modell wählen, um die Konfiguration automatisch zu übernehmen …',
     modelSize: 'Modellgröße',
     quantization: 'Quantisierung',
     context: 'Kontext',
@@ -118,6 +124,8 @@ const VRAM_TRANSLATIONS: Partial<Record<Language, {
   },
   fr: {
     popularModels: 'Modèles populaires',
+    allModels: 'Tous les modèles',
+    selectModelPlaceholder: 'Sélectionnez un modèle pour préremplir sa configuration…',
     modelSize: 'Taille du modèle',
     quantization: 'Quantisation',
     context: 'Contexte',
@@ -155,6 +163,8 @@ const VRAM_TRANSLATIONS: Partial<Record<Language, {
   },
   ja: {
     popularModels: '人気モデル',
+    allModels: 'すべてのモデル',
+    selectModelPlaceholder: 'モデルを選択すると設定が自動入力されます…',
     modelSize: 'モデルサイズ',
     quantization: '量子化',
     context: 'コンテキスト',
@@ -192,6 +202,8 @@ const VRAM_TRANSLATIONS: Partial<Record<Language, {
   },
   zh: {
     popularModels: '热门模型',
+    allModels: '全部模型',
+    selectModelPlaceholder: '选择模型以自动填充其配置…',
     modelSize: '模型大小',
     quantization: '量化',
     context: '上下文',
@@ -229,6 +241,8 @@ const VRAM_TRANSLATIONS: Partial<Record<Language, {
   },
   ko: {
     popularModels: '인기 모델',
+    allModels: '전체 모델',
+    selectModelPlaceholder: '모델을 선택하면 설정이 자동으로 채워집니다…',
     modelSize: '모델 크기(Model Size)',
     quantization: '양자화(Quantization)',
     context: '컨텍스트(Context)',
@@ -266,6 +280,8 @@ const VRAM_TRANSLATIONS: Partial<Record<Language, {
   },
   pt: {
     popularModels: 'Modelos populares',
+    allModels: 'Todos os modelos',
+    selectModelPlaceholder: 'Selecione um modelo para preencher a configuração automaticamente…',
     modelSize: 'Tamanho do modelo',
     quantization: 'Quantização',
     context: 'Contexto',
@@ -311,57 +327,96 @@ interface Preset {
   batchSize: string;
 }
 
+// Quick-pick shortcuts shown as buttons — current top local-LLM picks (see
+// src/lib/local-llms/articles/top-open-source-models-ollama.ts for the
+// canonical current-models list this mirrors).
 const PRESETS: Preset[] = [
   {
-    name: 'Llama 3.1 8B',
-    modelSize: '8B',
-    quantization: 'Q5',
+    name: 'Qwen3.8-27B',
+    modelSize: '27B',
+    quantization: 'Q4',
     contextLength: '8K',
     batchSize: '1'
   },
   {
-    name: 'Mistral 7B',
-    modelSize: '7B',
+    name: 'gpt-oss:20b',
+    modelSize: '20B',
     quantization: 'Q4',
-    contextLength: '16K',
+    contextLength: '8K',
     batchSize: '1'
   },
   {
-    name: 'Llama 2 13B',
-    modelSize: '13B',
-    quantization: 'Q5',
-    contextLength: '4K',
+    name: 'Llama 4 Scout',
+    modelSize: '109B',
+    quantization: 'Q4',
+    contextLength: '8K',
     batchSize: '1'
   },
   {
-    name: 'Llama 2 70B',
-    modelSize: '70B',
+    name: 'DeepSeek-R1 32B',
+    modelSize: '32B',
     quantization: 'Q4',
     contextLength: '4K',
     batchSize: '1'
   }
 ];
 
+// Full model list for the "All Models" dropdown — includes the quick-pick
+// presets above plus a wider size/family spread, from 1B to 405B.
+const ALL_MODELS: Preset[] = [
+  { name: 'Llama 3.2 1B', modelSize: '1B', quantization: 'Q8', contextLength: '4K', batchSize: '1' },
+  { name: 'Phi-4 Mini', modelSize: '4B', quantization: 'Q4', contextLength: '8K', batchSize: '1' },
+  { name: 'Llama 3.2 3B', modelSize: '3B', quantization: 'Q4', contextLength: '8K', batchSize: '1' },
+  { name: 'Mistral 7B', modelSize: '7B', quantization: 'Q4', contextLength: '16K', batchSize: '1' },
+  { name: 'Llama 3.1 8B', modelSize: '8B', quantization: 'Q5', contextLength: '8K', batchSize: '1' },
+  { name: 'Dolphin 3.0 8B', modelSize: '8B', quantization: 'Q4', contextLength: '8K', batchSize: '1' },
+  { name: 'Llama 2 13B', modelSize: '13B', quantization: 'Q5', contextLength: '4K', batchSize: '1' },
+  { name: 'gpt-oss:20b', modelSize: '20B', quantization: 'Q4', contextLength: '8K', batchSize: '1' },
+  { name: 'Mistral Small 22B', modelSize: '22B', quantization: 'Q4', contextLength: '16K', batchSize: '1' },
+  { name: 'Devstral Small 24B', modelSize: '24B', quantization: 'Q4', contextLength: '32K', batchSize: '1' },
+  { name: 'Gemma 4 27B', modelSize: '27B', quantization: 'Q4', contextLength: '8K', batchSize: '1' },
+  { name: 'Qwen3.8-27B', modelSize: '27B', quantization: 'Q4', contextLength: '8K', batchSize: '1' },
+  { name: 'Qwen3 30B', modelSize: '30B', quantization: 'Q4', contextLength: '32K', batchSize: '1' },
+  { name: 'Qwen3 Coder 30B', modelSize: '30B', quantization: 'Q4', contextLength: '32K', batchSize: '1' },
+  { name: 'DeepSeek-R1 32B', modelSize: '32B', quantization: 'Q4', contextLength: '4K', batchSize: '1' },
+  { name: 'Llama 2 70B', modelSize: '70B', quantization: 'Q4', contextLength: '4K', batchSize: '1' },
+  { name: 'Llama 4 Scout', modelSize: '109B', quantization: 'Q4', contextLength: '8K', batchSize: '1' },
+  { name: 'gpt-oss:120b', modelSize: '120B', quantization: 'Q4', contextLength: '8K', batchSize: '1' },
+  { name: 'Llama 3.1 405B', modelSize: '405B', quantization: 'Q4', contextLength: '4K', batchSize: '1' },
+];
+
+// Current-generation GPU lineup — mirrors src/lib/power-local-llm/articles/
+// best-gpu-buying-guide-local-llm-2026.ts (NVIDIA) and best-mac-for-local-ai-2026.ts
+// (Apple Silicon), both last refreshed against the August 2026 hardware cycle.
 const GPUS: GPU[] = [
-  { name: 'RTX 3060', vram: 12, price: 400 },
-  { name: 'RTX 4070', vram: 12, price: 600 },
-  { name: 'RTX 4070 Ti', vram: 12, price: 700 },
-  { name: 'RTX 4080', vram: 16, price: 1200 },
-  { name: 'RTX 4090', vram: 24, price: 1800 },
-  { name: 'Mac mini M5 (16 GB)', vram: 16, price: 0 },
-  { name: 'Mac mini M4 (16 GB)', vram: 16, price: 0 },
-  { name: 'MacBook Pro (24 GB)', vram: 24, price: 0 },
-  { name: 'M3 Max (36 GB)', vram: 36, price: 0 },
+  { name: 'RTX 3060', vram: 12, price: 200 },
+  { name: 'RTX 4060 Ti', vram: 16, price: 424 },
+  { name: 'RTX 4070 Ti Super', vram: 16, price: 1179 },
+  { name: 'RTX 4080 Super', vram: 16, price: 1150 },
+  { name: 'RTX 4090', vram: 24, price: 2500 },
+  { name: 'RTX 5090', vram: 32, price: 3949 },
+  { name: 'Mac Mini M6 (32 GB)', vram: 32, price: 899 },
+  { name: 'Mac Mini M5 Pro (64 GB)', vram: 64, price: 1699 },
+  { name: 'Mac Studio M5 Max (128 GB)', vram: 128, price: 2499 },
+  { name: 'Mac Studio M5 Ultra (96 GB+)', vram: 96, price: 5499 },
 ];
 
 const MODEL_SIZES: { [key: string]: number } = {
   '1B': 1,
   '3B': 3,
+  '4B': 4,
   '7B': 7,
   '8B': 8,
   '13B': 13,
+  '20B': 20,
+  '22B': 22,
+  '24B': 24,
+  '27B': 27,
+  '30B': 30,
   '32B': 32,
   '70B': 70,
+  '109B': 109,
+  '120B': 120,
   '405B': 405,
 };
 
@@ -499,6 +554,11 @@ export function VramCalculator() {
     setBatchSize(preset.batchSize);
   };
 
+  const handleModelSelect = (name: string) => {
+    const model = ALL_MODELS.find((m) => m.name === name);
+    if (model) applyPreset(model);
+  };
+
   return (
     <div className="space-y-6 bg-gradient-to-br from-slate-50 to-slate-100 p-6 rounded-lg border border-slate-200">
       {/* Preset Buttons */}
@@ -515,6 +575,24 @@ export function VramCalculator() {
             </button>
           ))}
         </div>
+      </div>
+
+      {/* All Models Dropdown */}
+      <div className="space-y-2">
+        <label htmlFor="vram-calc-all-models" className="text-xs font-semibold text-slate-600 uppercase">{t.allModels}</label>
+        <select
+          id="vram-calc-all-models"
+          defaultValue=""
+          onChange={(e) => {
+            if (e.target.value) handleModelSelect(e.target.value);
+          }}
+          className="w-full px-3 py-2 border border-slate-300 rounded-md bg-white text-slate-900 text-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+        >
+          <option value="" disabled>{t.selectModelPlaceholder}</option>
+          {ALL_MODELS.map((model) => (
+            <option key={model.name} value={model.name}>{model.name} ({model.modelSize})</option>
+          ))}
+        </select>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
