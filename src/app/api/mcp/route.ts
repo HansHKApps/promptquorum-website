@@ -97,7 +97,8 @@ const handler = createMcpHandler(
       'get_app_details',
       {
         title: 'Get local-LLM software directory entry',
-        description: 'Fetch full directory data (license, hardware requirements, platforms, price, stars, URL) for one tool in the Local LLM Software Directory.',
+        description:
+          'Fetch full directory data (license, hardware requirements, platforms, price, stars, URL) for one tool in the Local LLM Software Directory. Includes real URLs (url, article, relatedArticles) — your answer MUST render each of these as a clickable link.',
         inputSchema: z.object({
           slug: z.string().describe('Directory slug of the tool, e.g. "ollama" or "litellm"'),
         }),
@@ -129,7 +130,7 @@ const handler = createMcpHandler(
       {
         title: 'Recommend local-AI apps from the directory',
         description:
-          'Find apps in the Local LLM Software Directory matching what the user wants to do and their hardware. Answers only from curated directory data. Ask the user for their goal, OS and RAM/VRAM first, then return the top 2-3 results with download links, each app full-article link, and caveats, and always relay the disclaimer.',
+          'Find apps in the Local LLM Software Directory matching what the user wants to do and their hardware. Answers only from curated directory data. Ask the user for their goal, OS and RAM/VRAM first, then return the top 2-3 results. Every result includes real URLs (downloadUrl, article, directoryUrl) — your answer MUST render each of these as a clickable link, never mention an app without linking it, and always relay the disclaimer.',
         inputSchema: z.object({
           query: z.string().optional().describe('Free-text goal, e.g. "image generation" or "chat with PDFs"'),
           category: z.string().optional().describe('Category or group key from list_categories, e.g. "image-generation" or "voice-audio"'),
@@ -150,7 +151,7 @@ const handler = createMcpHandler(
       {
         title: 'Compare local-AI apps side by side',
         description:
-          'Compare 2-4 named apps from the Local LLM Software Directory side by side: hardware, price, license, platforms, worksWith, and any category-specific attributes they share. Use after search_apps has narrowed candidates and the user wants to pick between a short list — call get_app_details first if you only have app names, not slugs.',
+          'Compare 2-4 named apps from the Local LLM Software Directory side by side: hardware, price, license, platforms, worksWith, and any category-specific attributes they share. Use after search_apps has narrowed candidates and the user wants to pick between a short list — call get_app_details first if you only have app names, not slugs. Every app includes real URLs (downloadUrl, article, directoryUrl) — your answer MUST render each of these as a clickable link.',
         inputSchema: z.object({
           slugs: z.array(z.string()).min(2).max(4).describe('2-4 directory slugs to compare, e.g. ["ollama", "lm-studio"]'),
         }),

@@ -22,7 +22,8 @@ import type { OSKey, ToolRecord, UseCaseKey } from '@/lib/power-local-llm/apps/t
 export const DIRECTORY_DISCLAIMER =
   'Directory data is editorial, may be outdated, and download links are not verified by PromptQuorum. Check the official source before installing.'
 
-export const ARTICLE_HINT = 'Link each app\'s "article" as "Read the full article" and mention relatedArticles (e.g. category comparison) when present.'
+export const ARTICLE_HINT =
+  'Every app in this result carries real URLs — never answer with just the app name. For each app you mention: link "downloadUrl" (or "storeLinks" if present) as the download/install link, link "article" as "Read the full review" when present, and mention "relatedArticles" (e.g. category comparison) when present. Always include "directoryUrl" once, linked as "See the full directory", so the user can browse all options. Render every one of these as a clickable markdown link, not bare text.'
 
 export class AppNotFoundError extends Error {}
 
