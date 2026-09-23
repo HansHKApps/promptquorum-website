@@ -170,10 +170,15 @@ function HeaderInner() {
       >
         {t('skipToMain', lang)}
       </a>
-      <div className="px-4 sm:px-6 h-16 flex items-center justify-between">
-        <Link href={navHref('/', lang)} className="flex items-center gap-2 flex-shrink-0">
-          <Logo size={36} className="w-9 h-9 flex-shrink-0" />
-          <span className="font-semibold text-gray-900 whitespace-nowrap">PromptQuorum</span>
+      <div className="px-4 sm:px-6 h-[72px] flex items-center justify-between">
+        <Link href={navHref('/', lang)} className="flex flex-col justify-center flex-shrink-0">
+          <span className="flex items-center gap-2">
+            <Logo size={36} className="w-9 h-9 flex-shrink-0" />
+            <span className="font-semibold text-gray-900 whitespace-nowrap">PromptQuorum</span>
+          </span>
+          <span className="hidden sm:block pl-11 text-[10px] font-medium tracking-wide text-gray-400 whitespace-nowrap">
+            Built for humans. <span className="text-purple-400">Structured for AI.</span>
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
