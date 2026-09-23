@@ -18,7 +18,7 @@ import featureReviewIndex from '@/generated/feature-review-index.json'
 import toolArticleIndex from '@/generated/tool-article-index.json'
 import { CATEGORY_GROUPS, CATEGORY_GROUP_LABEL, CATEGORY_SUB_LABEL, CATEGORY_SUB_GROUP } from '@/lib/power-local-llm/apps/categories'
 import type { CategorySubKey } from '@/lib/power-local-llm/apps/categories'
-import type { OSKey, ToolRecord, UseCaseKey } from '@/lib/power-local-llm/apps/types'
+import type { CompareValue, OSKey, ToolRecord, UseCaseKey } from '@/lib/power-local-llm/apps/types'
 
 import { peContent } from '@/lib/prompt-engineering/articles-barrel'
 import { llmContent } from '@/lib/local-llms/articles-barrel'
@@ -309,6 +309,7 @@ export function searchApps(args: {
   ramGb?: number
   vramGb?: number
   price?: string
+  worksWith?: string
   limit?: number
 }) {
   const limit = Math.min(Math.max(args.limit ?? 5, 1), 15)
@@ -322,6 +323,12 @@ export function searchApps(args: {
   if (args.useCase) pool = pool.filter((a) => a.uses?.includes(args.useCase as UseCaseKey))
   if (args.os) pool = pool.filter((a) => a.platforms === null || a.platforms.includes(args.os as OSKey))
   if (args.price) pool = pool.filter((a) => a.price === args.price)
+  // worksWith is free-text data (e.g. "Ollama", "LM Studio", "llama.cpp"), not a closed
+  // enum — match case-insensitively/substring so callers don't need the exact casing.
+  if (args.worksWith) {
+    const needle = args.worksWith.toLowerCase()
+    pool = pool.filter((a) => a.worksWith?.some((w) => w.toLowerCase().includes(needle)))
+  }
 
   const scored = pool.map((a) => ({ a, fit: hardwareFit(a, args.ramGb, args.vramGb) })).filter((x) => x.fit !== 'too-demanding')
   // Fuse order is preserved for query searches; otherwise rank reviewed and
@@ -332,6 +339,50 @@ export function searchApps(args: {
   return {
     totalMatches: scored.length,
     results: scored.slice(0, limit).map(({ a, fit }) => summarize(a, fit)),
+    disclaimer: DIRECTORY_DISCLAIMER,
+    instructions: ARTICLE_HINT,
+  }
+}
+
+// --- compare_apps ------------------------------------------------------
+// Side-by-side comparison of 2-4 named directory entries. Reuses the same
+// AppSummary shape as search_apps (hardware/price/license/worksWith/articles)
+// rather than inventing a second data shape, plus each pair's shared `compare`
+// attribute keys (./compare-schema.ts) when both tools were reviewed in the
+// same category segment — never fabricated for tools that weren't.
+
+export interface CompareAppsResult {
+  apps: AppSummary[]
+  sharedCompareAttributes: Record<string, Record<string, CompareValue>> | null
+  disclaimer: string
+  instructions: string
+}
+
+export function compareApps(args: { slugs: string[] }): CompareAppsResult {
+  const slugs = [...new Set(args.slugs)]
+  if (slugs.length < 2) throw new AppNotFoundError('Provide at least 2 distinct slugs to compare.')
+  if (slugs.length > 4) throw new AppNotFoundError('Compare at most 4 apps at once — call again for more.')
+
+  const apps = slugs.map((slug) => {
+    const app = localAiApps.find((t) => t.slug === slug)
+    if (!app) throw new AppNotFoundError(`No directory entry "${slug}". Use search_apps or search_promptquorum to find the right slug.`)
+    return app
+  })
+
+  // Attribute keys every compared app has a `compare` value for — only
+  // meaningful when they share a category segment (./compare-schema.ts), but
+  // checking segment membership per-pair is unnecessary: an attribute key is
+  // only ever populated for tools actually reviewed within that segment, so
+  // an intersection across unrelated tools is naturally empty.
+  const keySets = apps.map((a) => new Set(Object.keys(a.compare ?? {})))
+  const sharedKeys = keySets.length ? [...keySets[0]].filter((k) => keySets.every((s) => s.has(k))) : []
+  const sharedCompareAttributes = sharedKeys.length
+    ? Object.fromEntries(apps.map((a) => [a.slug, Object.fromEntries(sharedKeys.map((k) => [k, a.compare![k]]))]))
+    : null
+
+  return {
+    apps: apps.map((a) => summarize(a, 'unknown')),
+    sharedCompareAttributes,
     disclaimer: DIRECTORY_DISCLAIMER,
     instructions: ARTICLE_HINT,
   }

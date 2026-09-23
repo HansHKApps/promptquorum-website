@@ -258,12 +258,34 @@
             "type": "string",
             "enum": ["free", "freemium", "paid"]
           },
+          "worksWith": {
+            "type": "string",
+            "description": "Filter by an integration/backend the app works with, e.g. \"Ollama\", \"LM Studio\", \"llama.cpp\", \"MCP\". Matches case-insensitively/substring."
+          },
           "limit": {
             "type": "integer",
             "minimum": 1,
             "maximum": 15,
             "default": 5,
             "description": "Max results."
+          }
+        }
+      }
+    },
+    {
+      "name": "compare_apps",
+      "description": "Compare 2-4 named apps from the Local LLM Software Directory side by side: hardware, price, license, platforms, worksWith, and any category-specific attributes they share. Use after search_apps has narrowed candidates and the user wants to pick between a short list — call get_app_details first if you only have app names, not slugs.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": ["slugs"],
+        "properties": {
+          "slugs": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 2,
+            "maxItems": 4,
+            "description": "2-4 directory slugs to compare, e.g. [\"ollama\", \"lm-studio\"]."
           }
         }
       }
@@ -276,6 +298,7 @@
     "Looking up hardware requirements, license, platforms, and pricing for hundreds of local-AI tools via the Local LLM Software Directory",
     "Explaining open-source/source-available license terms (MIT, Apache 2.0, AGPL-3.0, etc.) in plain language",
     "Recommending local-AI apps from the directory for a user's goal, operating system and RAM/VRAM, using valid filter values from list_categories",
+    "Comparing a short list of local-AI apps side by side on hardware, price, license and shared category attributes",
     "Listing PromptQuorum's content sections to route a query to the right cluster"
   ],
 
