@@ -9,6 +9,7 @@ import { t } from './home-i18n'
 export async function ByTheNumbersBlock({ lang = 'en' }: { lang?: Language }) {
   const stats = getHomeStats(lang)
   const mcpUsage = await getMcpUsageSnapshotCached()
+  const mcpStatsHref = lang === 'en' ? '/mcp-stats' : `/${lang}/mcp-stats`
 
   const items: { label: string; value: string; icon: HomeIconName; href?: string; hint?: string }[] = [
     { label: t('statAppsTracked', lang), value: stats.totalApps.toLocaleString(), icon: 'apps' },
@@ -19,7 +20,7 @@ export async function ByTheNumbersBlock({ lang = 'en' }: { lang?: Language }) {
       label: t('statMcpCalls', lang),
       value: mcpUsage.total.toLocaleString(),
       icon: 'mcp',
-      href: '/mcp-stats',
+      href: mcpStatsHref,
       hint: t('statMcpCallsHint', lang),
     },
   ]
