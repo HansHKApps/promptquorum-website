@@ -25,6 +25,7 @@ const TOOL_LABELS: Record<McpToolName, string> = {
   explain_license: 'explain_license',
   search_apps: 'search_apps',
   list_categories: 'list_categories',
+  compare_apps: 'compare_apps',
 }
 
 export default async function McpStatsPage() {

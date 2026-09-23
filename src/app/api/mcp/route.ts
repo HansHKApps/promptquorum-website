@@ -19,6 +19,7 @@ import {
   explainLicense,
   searchApps,
   listCategories,
+  compareApps,
   ArticleNotFoundError,
   AppNotFoundError,
 } from '@/lib/mcp/tools'
@@ -137,10 +138,32 @@ const handler = createMcpHandler(
           ramGb: z.number().min(0).optional().describe("User's system RAM in GB; apps needing more are excluded"),
           vramGb: z.number().min(0).optional().describe("User's GPU VRAM in GB (unified memory counts on Apple Silicon); apps needing more are excluded"),
           price: z.enum(['free', 'freemium', 'paid']).optional(),
+          worksWith: z.string().optional().describe('Filter by an integration/backend the app works with, e.g. "Ollama", "LM Studio", "llama.cpp", "MCP". Matches case-insensitively/substring.'),
           limit: z.number().int().min(1).max(15).optional().describe('Max results, default 5'),
         }),
       },
       async (args) => withUsageTracking('search_apps', () => jsonResult(searchApps(args)))
+    )
+
+    server.registerTool(
+      'compare_apps',
+      {
+        title: 'Compare local-AI apps side by side',
+        description:
+          'Compare 2-4 named apps from the Local LLM Software Directory side by side: hardware, price, license, platforms, worksWith, and any category-specific attributes they share. Use after search_apps has narrowed candidates and the user wants to pick between a short list — call get_app_details first if you only have app names, not slugs.',
+        inputSchema: z.object({
+          slugs: z.array(z.string()).min(2).max(4).describe('2-4 directory slugs to compare, e.g. ["ollama", "lm-studio"]'),
+        }),
+      },
+      async (args) =>
+        withUsageTracking('compare_apps', () => {
+          try {
+            return jsonResult(compareApps(args))
+          } catch (err) {
+            if (err instanceof AppNotFoundError) return errorResult(err.message)
+            throw err
+          }
+        })
     )
 
     server.registerTool(

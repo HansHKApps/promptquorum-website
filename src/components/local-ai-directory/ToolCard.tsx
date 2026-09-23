@@ -16,6 +16,7 @@ import { computeCompatibilityVerdict, computeVariesByModelFitGb } from './hardwa
 import { StarIcon, CpuIcon, PlugIcon, TagIcon, ChevronRightIcon } from './icons'
 import { LastUpdatedBadge } from './LastUpdatedBadge'
 import { isFounderStarActive } from './founderStar'
+import { isStaleListing } from './staleness'
 import { founderText, founderParagraphs } from '@/lib/power-local-llm/founderText'
 import type { HardwareProfile, MachineType } from './types'
 import toolArticleIndex from '@/generated/tool-article-index.json'
@@ -304,6 +305,15 @@ export function ToolCard({
           {app.upstreamStatus && (
             <span className="inline-flex w-fit items-center gap-1 rounded-full border border-gray-300 bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-700 mb-1.5">
               {t(app.upstreamStatus.state === 'archived' ? 'archivedBadge' : 'unmaintainedBadge', lang)}
+            </span>
+          )}
+
+          {!app.upstreamStatus && isStaleListing(lastUpdatedIso) && (
+            <span
+              className="inline-flex w-fit items-center gap-1 rounded-full border border-amber-300 bg-amber-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-amber-800 mb-1.5"
+              title={t('staleListingTooltip', lang)}
+            >
+              {t('staleListingBadge', lang)}
             </span>
           )}
 

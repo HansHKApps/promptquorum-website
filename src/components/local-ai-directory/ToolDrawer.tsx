@@ -18,6 +18,7 @@ import { CloseIcon, StarIcon, CopyIcon, CheckIcon } from './icons'
 import { getValueLabels } from './FilterBar'
 import { CATEGORY_SUB_LABEL, INTERFACE_LABEL } from '@/lib/power-local-llm/apps/categories'
 import { isFounderStarActive } from './founderStar'
+import { isStaleListing } from './staleness'
 import { founderText, founderParagraphs } from '@/lib/power-local-llm/founderText'
 import { DataDisclaimer } from '@/components/DataDisclaimer'
 import type { HardwareProfile, MachineType } from './types'
@@ -254,6 +255,15 @@ export function ToolDrawer({
               {app.upstreamStatus && (
                 <span className="mb-4 inline-flex w-fit items-center gap-1 rounded-full border border-gray-300 bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-700">
                   {t(app.upstreamStatus.state === 'archived' ? 'archivedBadge' : 'unmaintainedBadge', lang)}
+                </span>
+              )}
+
+              {!app.upstreamStatus && isStaleListing(app.lastVerifiedDate ?? app.addedDate) && (
+                <span
+                  className="mb-4 inline-flex w-fit items-center gap-1 rounded-full border border-amber-300 bg-amber-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-amber-800"
+                  title={t('staleListingTooltip', lang)}
+                >
+                  {t('staleListingBadge', lang)}
                 </span>
               )}
 

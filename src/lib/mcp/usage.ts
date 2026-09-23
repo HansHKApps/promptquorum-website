@@ -5,7 +5,7 @@
 
 import { redis } from '@/lib/redis'
 
-const MCP_TOOL_NAMES = ['search_promptquorum', 'get_article', 'list_clusters', 'get_app_details', 'explain_license', 'search_apps', 'list_categories'] as const
+const MCP_TOOL_NAMES = ['search_promptquorum', 'get_article', 'list_clusters', 'get_app_details', 'explain_license', 'search_apps', 'list_categories', 'compare_apps'] as const
 export type McpToolName = (typeof MCP_TOOL_NAMES)[number]
 
 function todayUtc(): string {
