@@ -25,7 +25,9 @@ export function GET(request: Request) {
     vramGb: parseNumber(searchParams.get('vramGb')),
     category: searchParams.get('category') || undefined,
     useCase: searchParams.get('useCase') || undefined,
-    limit: parseNumber(searchParams.get('limit')) ?? 8,
+    // This route is a full-page UI, not an LLM context budget — default well above
+    // the MCP search_apps tool's 8/15 (see app-search.ts's searchApps() comment).
+    limit: parseNumber(searchParams.get('limit')) ?? 24,
   })
 
   return NextResponse.json(result, {
