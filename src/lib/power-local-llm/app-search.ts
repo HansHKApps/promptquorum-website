@@ -130,7 +130,11 @@ export function searchApps(args: {
   worksWith?: string
   limit?: number
 }) {
-  const limit = Math.min(Math.max(args.limit ?? 5, 1), 15)
+  // 15 is the MCP search_apps tool's own contractual ceiling (enforced again by its
+  // zod schema, src/app/api/mcp/route.ts) to keep LLM tool-result payloads small. The
+  // "What Can I Run?" web widget shares this function but is a full-page UI, not an
+  // LLM context budget, so it needs a much higher ceiling — see its route.ts caller.
+  const limit = Math.min(Math.max(args.limit ?? 5, 1), 60)
   let pool: ToolRecord[] = args.query ? getAppFuse().search(args.query).map((r) => r.item) : [...localAiApps]
   pool = pool.filter((a) => a.status !== 'planned' && a.upstreamStatus?.state !== 'archived')
 

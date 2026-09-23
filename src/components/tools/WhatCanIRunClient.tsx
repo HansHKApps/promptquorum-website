@@ -39,6 +39,7 @@ export function WhatCanIRunClient({ lang }: { lang: Language }) {
   const [ramGb, setRamGb] = useState('')
   const [vramGb, setVramGb] = useState('')
   const [results, setResults] = useState<AppResult[] | null>(null)
+  const [totalMatches, setTotalMatches] = useState(0)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -55,6 +56,7 @@ export function WhatCanIRunClient({ lang }: { lang: Language }) {
       if (!res.ok) throw new Error('search failed')
       const data = await res.json()
       setResults(data.results)
+      setTotalMatches(typeof data.totalMatches === 'number' ? data.totalMatches : data.results.length)
     } catch {
       setError('error')
     } finally {
@@ -117,7 +119,11 @@ export function WhatCanIRunClient({ lang }: { lang: Language }) {
       {results && (
         <div className="mt-8">
           <h2 className="text-lg font-semibold text-text-primary mb-4">
-            {hasFilters ? t('resultsHeadingKnown', lang, { n: results.length }) : t('resultsHeadingUnfiltered', lang)}
+            {hasFilters
+              ? totalMatches > results.length
+                ? t('resultsHeadingTruncated', lang, { shown: results.length, total: totalMatches })
+                : t('resultsHeadingKnown', lang, { n: totalMatches })
+              : t('resultsHeadingUnfiltered', lang)}
           </h2>
           {results.length === 0 ? (
             <p className="text-sm text-text-secondary">{t('resultsEmpty', lang)}</p>

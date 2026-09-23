@@ -148,6 +148,11 @@ const TOOLS_UI = {
     ja: 'ハードウェアに合うアプリ {n} 件', zh: '{n} 款适合你硬件的应用', es: '{n} apps que encajan con tu hardware',
     pt: '{n} apps compatíveis com seu hardware', ar: '{n} تطبيقًا مناسبًا لجهازك', ko: '하드웨어에 맞는 앱 {n}개',
   },
+  resultsHeadingTruncated: {
+    en: 'Showing {shown} of {total} apps that fit your hardware', de: '{shown} von {total} passenden Apps für Ihre Hardware werden angezeigt', fr: 'Affichage de {shown} applications sur {total} compatibles avec votre matériel',
+    ja: 'ハードウェアに合うアプリ {total} 件中 {shown} 件を表示', zh: '显示 {total} 款适合你硬件的应用中的 {shown} 款', es: 'Mostrando {shown} de {total} apps que encajan con tu hardware',
+    pt: 'Mostrando {shown} de {total} apps compatíveis com seu hardware', ar: 'يتم عرض {shown} من {total} تطبيقًا مناسبًا لجهازك', ko: '하드웨어에 맞는 앱 {total}개 중 {shown}개 표시',
+  },
   resultsHeadingUnfiltered: {
     en: 'Top apps in the directory', de: 'Top-Apps im Verzeichnis', fr: 'Meilleures applications du répertoire',
     ja: 'ディレクトリの人気アプリ', zh: '目录中的热门应用', es: 'Las mejores apps del directorio',
