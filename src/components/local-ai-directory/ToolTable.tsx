@@ -14,7 +14,7 @@ import { computeCompatibilityVerdict, computeVariesByModelFitGb } from './hardwa
 import { StarIcon } from './icons'
 import type { HardwareProfile, MachineType, SortDir, SortKey } from './types'
 import { t } from './directory-i18n'
-import { isStaleListing } from './staleness'
+import { getListingFreshness } from './staleness'
 
 // Platform values (macOS/Windows/Linux/iOS/Android/Web) are OS product
 // names — kept identical across locales, matching ToolCard.tsx's own map.
@@ -113,6 +113,7 @@ export function ToolTable({
           {apps.map((app) => {
             const price = app.price !== 'TODO' ? app.price : null
             const lastUpdatedDate = app.lastVerifiedDate ?? app.addedDate
+            const listingFreshness = app.upstreamStatus ? 'fresh' : getListingFreshness(lastUpdatedDate)
             return (
               <tr
                 key={app.slug}
@@ -144,8 +145,16 @@ export function ToolTable({
                     : <span className="text-text-secondary/50">—</span>}
                 </td>
                 <td
-                  className={`p-2 sm:p-3 whitespace-nowrap ${!app.upstreamStatus && isStaleListing(lastUpdatedDate) ? 'text-amber-700' : 'text-text-secondary'}`}
-                  title={!app.upstreamStatus && isStaleListing(lastUpdatedDate) ? t('staleListingTooltip', lang) : undefined}
+                  className={`p-2 sm:p-3 whitespace-nowrap ${
+                    listingFreshness === 'old' ? 'text-amber-700' : listingFreshness === 'warn' ? 'text-yellow-700' : 'text-text-secondary'
+                  }`}
+                  title={
+                    listingFreshness === 'old'
+                      ? t('staleListingTooltipOld', lang)
+                      : listingFreshness === 'warn'
+                        ? t('staleListingTooltipWarn', lang)
+                        : undefined
+                  }
                 >
                   {lastUpdatedDate ? formatDisplayDate(lastUpdatedDate, lang) : <span className="text-text-secondary/50">—</span>}
                 </td>

@@ -16,7 +16,7 @@ import { computeCompatibilityVerdict, computeVariesByModelFitGb } from './hardwa
 import { StarIcon, CpuIcon, PlugIcon, TagIcon, ChevronRightIcon } from './icons'
 import { LastUpdatedBadge } from './LastUpdatedBadge'
 import { isFounderStarActive } from './founderStar'
-import { isStaleListing } from './staleness'
+import { getListingFreshness } from './staleness'
 import { founderText, founderParagraphs } from '@/lib/power-local-llm/founderText'
 import type { HardwareProfile, MachineType } from './types'
 import toolArticleIndex from '@/generated/tool-article-index.json'
@@ -110,6 +110,7 @@ export function ToolCard({
   const guideHref = guide ? `${lang === 'en' ? '' : `/${lang}`}/power-local-llm/${guide.slug}` : null
   const lastUpdatedIso = app.lastVerifiedDate ?? app.addedDate
   const lastUpdatedLabel = lastUpdatedIso ? formatDisplayDate(lastUpdatedIso, lang) : null
+  const listingFreshness = app.upstreamStatus ? 'fresh' : getListingFreshness(lastUpdatedIso)
   const primaryCategory = app.categories[0]
   const accent = GROUP_ACCENT[CATEGORY_SUB_GROUP[primaryCategory]]
   const categoryLabel = CATEGORY_SUB_LABEL[primaryCategory][lang]
@@ -308,12 +309,14 @@ export function ToolCard({
             </span>
           )}
 
-          {!app.upstreamStatus && isStaleListing(lastUpdatedIso) && (
+          {listingFreshness !== 'fresh' && (
             <span
-              className="inline-flex w-fit items-center gap-1 rounded-full border border-amber-300 bg-amber-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-amber-800 mb-1.5"
-              title={t('staleListingTooltip', lang)}
+              className={`inline-flex w-fit items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide mb-1.5 ${
+                listingFreshness === 'old' ? 'border-amber-300 bg-amber-50 text-amber-800' : 'border-yellow-200 bg-yellow-50 text-yellow-700'
+              }`}
+              title={t(listingFreshness === 'old' ? 'staleListingTooltipOld' : 'staleListingTooltipWarn', lang)}
             >
-              {t('staleListingBadge', lang)}
+              {t(listingFreshness === 'old' ? 'staleListingBadgeOld' : 'staleListingBadgeWarn', lang)}
             </span>
           )}
 

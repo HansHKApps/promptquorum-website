@@ -18,7 +18,7 @@ import { CloseIcon, StarIcon, CopyIcon, CheckIcon } from './icons'
 import { getValueLabels } from './FilterBar'
 import { CATEGORY_SUB_LABEL, INTERFACE_LABEL } from '@/lib/power-local-llm/apps/categories'
 import { isFounderStarActive } from './founderStar'
-import { isStaleListing } from './staleness'
+import { getListingFreshness } from './staleness'
 import { founderText, founderParagraphs } from '@/lib/power-local-llm/founderText'
 import { DataDisclaimer } from '@/components/DataDisclaimer'
 import type { HardwareProfile, MachineType } from './types'
@@ -258,14 +258,20 @@ export function ToolDrawer({
                 </span>
               )}
 
-              {!app.upstreamStatus && isStaleListing(app.lastVerifiedDate ?? app.addedDate) && (
-                <span
-                  className="mb-4 inline-flex w-fit items-center gap-1 rounded-full border border-amber-300 bg-amber-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-amber-800"
-                  title={t('staleListingTooltip', lang)}
-                >
-                  {t('staleListingBadge', lang)}
-                </span>
-              )}
+              {(() => {
+                const freshness = app.upstreamStatus ? 'fresh' : getListingFreshness(app.lastVerifiedDate ?? app.addedDate)
+                if (freshness === 'fresh') return null
+                return (
+                  <span
+                    className={`mb-4 inline-flex w-fit items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide ${
+                      freshness === 'old' ? 'border-amber-300 bg-amber-50 text-amber-800' : 'border-yellow-200 bg-yellow-50 text-yellow-700'
+                    }`}
+                    title={t(freshness === 'old' ? 'staleListingTooltipOld' : 'staleListingTooltipWarn', lang)}
+                  >
+                    {t(freshness === 'old' ? 'staleListingBadgeOld' : 'staleListingBadgeWarn', lang)}
+                  </span>
+                )
+              })()}
 
               {isFounderStarActive(app.founderReviewedDate) && (
                 <div className="flex items-start gap-2 rounded-xl border border-amber-200 bg-amber-50 p-3 mb-5">
