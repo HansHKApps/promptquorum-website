@@ -3,6 +3,7 @@ import type { AboutCopy } from './types'
 export const en: AboutCopy = {
   kicker: 'About PromptQuorum',
   h1: 'The discovery engine for open-weight and open-source AI.',
+  h1PlainExplainer: '(in plain terms: running an AI model for free on your own computer)',
   heroLead:
     'PromptQuorum helps you run AI privately, on your own hardware, instead of renting it from a cloud provider: a directory of {{appCount}} local-AI apps, a knowledge base of {{articleCount}} articles in nine languages, and a free app that puts many models side by side.',
   heroSub:

@@ -34,6 +34,7 @@ export function Home({ lang }: { lang: Language }) {
         <div className="container mx-auto px-4 py-6 max-w-7xl">
           <h1 className="text-2xl font-bold text-text-primary">{t('pageH1', lang)}</h1>
           <p className="mt-1.5 text-base font-semibold text-primary">{t('heroTagline', lang)}</p>
+          <p className="mt-1 text-xs text-text-secondary">{t('heroPlainExplainer', lang)}</p>
         </div>
       </div>
       <div className="container mx-auto px-4 py-8 max-w-7xl">

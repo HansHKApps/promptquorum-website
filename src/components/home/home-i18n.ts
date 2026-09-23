@@ -13,17 +13,17 @@ type Dict = Record<Language, string>
 
 const HOME_UI = {
   // --- Page ---
-  /** Aligned 2026-09-23 with the site's "Discovery Engine" positioning (replaces the 2026-09-22 "Usage Layer" wording, same idea site-wide — see src/lib/about/copy.*.ts h1 and translations.ts aboutMetaTitle) per site-owner direction: DE/FR/ES/PT keep a natural "your/Ihre/votre/tu/seu" framing, JA/ZH/KO/AR use the punchier definite-article framing that's idiomatic for headlines in those languages (matches how the prior H1 was phrased in each). */
+  /** Aligned 2026-09-23 with the site's "Discovery Engine" positioning (replaces the 2026-09-22 "Usage Layer" wording, same idea site-wide — see src/lib/about/copy.*.ts h1 and translations.ts aboutMetaTitle) per site-owner direction: DE/FR/ES/PT keep a natural "your/Ihre/votre/tu/seu" framing, JA/ZH/KO/AR use the punchier definite-article framing that's idiomatic for headlines in those languages (matches how the prior H1 was phrased in each). Updated 2026-09-23 to add "open-source" alongside "open-weight" so the H1 matches the About page's h1 wording site-wide. */
   pageH1: {
-    en: 'PromptQuorum: Your Discovery Engine for Open-Weight AI',
-    de: 'PromptQuorum: Ihre Entdeckungsmaschine für Open-Weight-KI',
-    fr: 'PromptQuorum : votre moteur de découverte pour l\'IA à poids ouverts',
-    ja: 'PromptQuorum：オープンウェイトAIの発見エンジン',
-    zh: 'PromptQuorum：您的开放权重 AI 发现引擎',
-    es: 'PromptQuorum: tu motor de descubrimiento para la IA de pesos abiertos',
-    pt: 'PromptQuorum: seu motor de descoberta para IA de pesos abertos',
-    ar: 'PromptQuorum: محرك الاكتشاف للذكاء الاصطناعي مفتوح الأوزان',
-    ko: 'PromptQuorum: 오픈 웨이트 AI를 위한 발견 엔진',
+    en: 'PromptQuorum: Your Discovery Engine for Open-Weight & Open-Source AI',
+    de: 'PromptQuorum: Ihre Entdeckungsmaschine für Open-Weight- und Open-Source-KI',
+    fr: 'PromptQuorum : votre moteur de découverte pour l\'IA à poids ouverts et open source',
+    ja: 'PromptQuorum：オープンウェイト＆オープンソースAIの発見エンジン',
+    zh: 'PromptQuorum：您的开放权重与开源 AI 发现引擎',
+    es: 'PromptQuorum: tu motor de descubrimiento para la IA de pesos abiertos y de código abierto',
+    pt: 'PromptQuorum: seu motor de descoberta para IA de pesos abertos e código aberto',
+    ar: 'PromptQuorum: محرك الاكتشاف للذكاء الاصطناعي مفتوح الأوزان ومفتوح المصدر',
+    ko: 'PromptQuorum: 오픈 웨이트 및 오픈소스 AI를 위한 발견 엔진',
   },
   /** Short punchy tagline under the H1 — carries the directory/guides/comparison identity that used to lead the H1 itself. */
   heroTagline: {
@@ -36,6 +36,18 @@ const HOME_UI = {
     pt: 'Diretório, guias e ferramentas de comparação de LLM locais',
     ar: 'دليل وأدلة وأدوات مقارنة لنماذج اللغة المحلية',
     ko: '로컬 LLM 디렉터리, 가이드 및 비교 도구',
+  },
+  /** Small-print aside under the tagline for non-technical readers, added 2026-09-23 alongside the About page's h1PlainExplainer (same idea, worded to fit the homepage's shorter hero). */
+  heroPlainExplainer: {
+    en: '(in plain terms: running an AI model for free on your own computer)',
+    de: '(einfach gesagt: ein KI-Modell kostenlos auf dem eigenen Computer ausführen)',
+    fr: '(en clair : faire tourner un modèle d\'IA gratuitement sur son propre ordinateur)',
+    ja: '（簡単に言うと：AIモデルを自分のパソコンで無料で動かすこと）',
+    zh: '（通俗地说：在自己的电脑上免费运行一个 AI 模型）',
+    es: '(en términos simples: ejecutar un modelo de IA gratis en tu propio ordenador)',
+    pt: '(em termos simples: rodar um modelo de IA de graça no seu próprio computador)',
+    ar: '(بعبارة بسيطة: تشغيل نموذج ذكاء اصطناعي مجانًا على جهاز الكمبيوتر الخاص بك)',
+    ko: '(쉽게 말하면: 자신의 컴퓨터에서 AI 모델을 무료로 실행하는 것)',
   },
 
   // --- Intent-Guided Search ---

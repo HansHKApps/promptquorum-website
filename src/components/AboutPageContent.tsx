@@ -264,6 +264,7 @@ export function AboutPageContent({ lang }: { lang: Language }) {
             lang={lang}
             kicker={copy.kicker}
             h1={copy.h1}
+            h1PlainExplainer={copy.h1PlainExplainer}
             heroLead={heroLead}
             heroSub={copy.heroSub}
             heroOpenWeightNote={copy.heroOpenWeightNote}

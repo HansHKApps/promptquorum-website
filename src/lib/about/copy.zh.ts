@@ -3,6 +3,7 @@ import type { AboutCopy } from './types'
 export const zh: AboutCopy = {
   kicker: '关于 PromptQuorum',
   h1: '开放权重与开源 AI 的发现引擎。',
+  h1PlainExplainer: '（通俗地说：在自己的电脑上免费运行一个 AI 模型）',
   heroLead:
     'PromptQuorum 帮你在自己的硬件上私密地运行 AI，而不是向云服务商租用：一个收录 {{appCount}} 款本地 AI 应用的目录、一个涵盖九种语言、共 {{articleCount}} 篇文章的知识库，以及一款可以让多个模型并排比较的免费应用。',
   heroSub:

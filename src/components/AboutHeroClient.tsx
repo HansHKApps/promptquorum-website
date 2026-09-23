@@ -15,6 +15,7 @@ interface AboutHeroClientProps {
   lang: Language
   kicker: string
   h1: string
+  h1PlainExplainer: string
   heroLead: string // pre-filled with counts by the caller
   heroSub: string
   heroOpenWeightNote: string
@@ -34,6 +35,7 @@ export function AboutHeroClient({
   lang,
   kicker,
   h1,
+  h1PlainExplainer,
   heroLead,
   heroSub,
   heroOpenWeightNote,
@@ -47,7 +49,8 @@ export function AboutHeroClient({
   return (
     <div className="py-16 border-b border-primary/20 mb-16">
       <p className="text-xs font-bold text-primary uppercase tracking-widest mb-4">{kicker}</p>
-      <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-6">{h1}</h1>
+      <h1 className="text-4xl sm:text-5xl font-bold text-text-primary mb-2">{h1}</h1>
+      <p className="text-sm text-text-secondary mb-6">{h1PlainExplainer}</p>
       <p className="text-xl text-text-primary font-medium leading-relaxed mb-4">{heroLead}</p>
       <p className="text-lg text-text-secondary leading-relaxed mb-4">{heroSub}</p>
       <p className="text-base text-text-secondary leading-relaxed mb-8">

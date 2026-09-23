@@ -26,6 +26,7 @@ export interface AboutCopy {
   // Hero
   kicker: string
   h1: string
+  h1PlainExplainer: string // small-print aside under the h1 for non-technical readers, e.g. "in plain terms: running AI for free on your own computer"
   heroLead: string // {{appCount}} {{articleCount}}
   heroSub: string
   heroOpenWeightNote: string // one-sentence plain-language definition of "open weight"
