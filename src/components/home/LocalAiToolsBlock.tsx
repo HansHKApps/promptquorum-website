@@ -7,18 +7,19 @@ function localizedPath(lang: Language, path: string): string {
 }
 
 /**
- * Compact 3-card CTA row linking to the site's three hardware-matching
- * tools: the existing VRAM Calculator article/tool page, and the two new
- * "What Can I Run?" / "Can I Run This?" standalone pages. Per the brief,
- * this block is a set of CTAs, not the tools themselves embedded — the
- * homepage instance stays compact and links out to the full page.
+ * Compact CTA row linking to the site's hardware-matching tools — the
+ * existing VRAM Calculator article/tool page, the "What Can I Run?" /
+ * "Can I Run This?" standalone pages, and the MCP connect/stats page (lets
+ * an AI assistant query the same directory directly). Per the brief, this
+ * block is a set of CTAs, not the tools themselves embedded — the homepage
+ * instance stays compact and links out to the full page.
  */
 export function LocalAiToolsBlock({ lang }: { lang: Language }) {
   return (
     <section className="mb-8">
       <h2 className="text-lg font-bold text-text-primary mb-1">{tTools('toolsSectionHeading', lang)}</h2>
       <p className="text-sm text-text-secondary mb-4">{tTools('toolsSectionSub', lang)}</p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         <HomeCard
           size="md"
           variant="action"
@@ -48,6 +49,16 @@ export function LocalAiToolsBlock({ lang }: { lang: Language }) {
           description={tTools('canIRunThisCardDesc', lang)}
         >
           <p className="text-sm text-primary font-medium mt-3">{tTools('canIRunThisCardCta', lang)} →</p>
+        </HomeCard>
+        <HomeCard
+          size="md"
+          variant="action"
+          icon="mcp"
+          href={localizedPath(lang, '/mcp-stats')}
+          title={tTools('mcpCardTitle', lang)}
+          description={tTools('mcpCardDesc', lang)}
+        >
+          <p className="text-sm text-primary font-medium mt-3">{tTools('mcpCardCta', lang)} →</p>
         </HomeCard>
       </div>
     </section>

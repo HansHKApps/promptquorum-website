@@ -17,15 +17,15 @@ const TOOLS_UI = {
     pt: 'Ferramentas de IA local', ar: 'أدوات الذكاء الاصطناعي المحلي', ko: '로컬 AI 도구',
   },
   toolsSectionSub: {
-    en: 'Three ways to match your hardware to the right software.',
-    de: 'Drei Wege, Ihre Hardware mit der passenden Software abzugleichen.',
-    fr: 'Trois façons de faire correspondre votre matériel au bon logiciel.',
-    ja: 'お使いのハードウェアに合ったソフトウェアを見つける3つの方法。',
-    zh: '三种方式，帮你把硬件和合适的软件匹配起来。',
-    es: 'Tres formas de hacer coincidir tu hardware con el software adecuado.',
-    pt: 'Três formas de combinar seu hardware com o software certo.',
-    ar: 'ثلاث طرق لمطابقة جهازك مع البرنامج المناسب.',
-    ko: '하드웨어에 맞는 소프트웨어를 찾는 세 가지 방법입니다.',
+    en: 'Four ways to match your hardware to the right software.',
+    de: 'Vier Wege, Ihre Hardware mit der passenden Software abzugleichen.',
+    fr: 'Quatre façons de faire correspondre votre matériel au bon logiciel.',
+    ja: 'お使いのハードウェアに合ったソフトウェアを見つける4つの方法。',
+    zh: '四种方式，帮你把硬件和合适的软件匹配起来。',
+    es: 'Cuatro formas de hacer coincidir tu hardware con el software adecuado.',
+    pt: 'Quatro formas de combinar seu hardware com o software certo.',
+    ar: 'أربع طرق لمطابقة جهازك مع البرنامج المناسب.',
+    ko: '하드웨어에 맞는 소프트웨어를 찾는 네 가지 방법입니다.',
   },
 
   // --- Card: VRAM Calculator (links to the existing article/tool page) ---
@@ -95,6 +95,29 @@ const TOOLS_UI = {
     en: 'Check an app', de: 'App prüfen', fr: 'Vérifier une application',
     ja: 'アプリを確認', zh: '检查应用', es: 'Comprobar una app',
     pt: 'Verificar um app', ar: 'تحقق من تطبيق', ko: '앱 확인하기',
+  },
+
+  // --- Card: Connect via MCP ---
+  mcpCardTitle: {
+    en: 'Connect via MCP', de: 'Über MCP verbinden', fr: 'Se connecter via MCP',
+    ja: 'MCPで接続', zh: '通过 MCP 连接', es: 'Conectar vía MCP',
+    pt: 'Conectar via MCP', ar: 'اتصل عبر MCP', ko: 'MCP로 연결',
+  },
+  mcpCardDesc: {
+    en: 'Let Claude, ChatGPT, or any MCP client query this directory directly. Setup, tools, and live usage stats.',
+    de: 'Lassen Sie Claude, ChatGPT oder einen beliebigen MCP-Client dieses Verzeichnis direkt abfragen. Einrichtung, Werkzeuge und Live-Nutzungsstatistiken.',
+    fr: 'Laissez Claude, ChatGPT ou tout client MCP interroger directement ce répertoire. Configuration, outils et statistiques d\'utilisation en direct.',
+    ja: 'Claude、ChatGPT、その他のMCPクライアントからこのディレクトリに直接アクセスできます。セットアップ、ツール、利用統計をご覧いただけます。',
+    zh: '让 Claude、ChatGPT 或任何 MCP 客户端直接查询此目录。包含设置说明、工具列表和实时使用统计。',
+    es: 'Deja que Claude, ChatGPT o cualquier cliente MCP consulten este directorio directamente. Configuración, herramientas y estadísticas de uso en vivo.',
+    pt: 'Deixe o Claude, o ChatGPT ou qualquer cliente MCP consultar este diretório diretamente. Configuração, ferramentas e estatísticas de uso em tempo real.',
+    ar: 'اسمح لـ Claude أو ChatGPT أو أي عميل MCP بالاستعلام عن هذا الدليل مباشرة. الإعداد، الأدوات، وإحصاءات الاستخدام الحيّة.',
+    ko: 'Claude, ChatGPT 또는 모든 MCP 클라이언트가 이 디렉터리를 직접 조회하도록 하세요. 설정 방법, 도구 목록, 실시간 사용 통계를 확인할 수 있습니다.',
+  },
+  mcpCardCta: {
+    en: 'Set up MCP', de: 'MCP einrichten', fr: 'Configurer MCP',
+    ja: 'MCPを設定', zh: '设置 MCP', es: 'Configurar MCP',
+    pt: 'Configurar MCP', ar: 'إعداد MCP', ko: 'MCP 설정하기',
   },
 
   // --- Shared form labels ---
