@@ -297,6 +297,20 @@ const HOME_UI = {
     zh: '已发布文章数', es: 'Artículos publicados', pt: 'Artigos publicados', ar: 'المقالات المنشورة',
     ko: '게시된 글',
   },
+  /** Links to /mcp-stats (see that page for the full per-tool breakdown). Label doubles as the pitch that PromptQuorum is queryable by AI assistants, not just browsers. */
+  statMcpCalls: {
+    en: 'AI assistant calls (MCP)', de: 'KI-Assistenten-Abrufe (MCP)', fr: 'Appels d\'assistants IA (MCP)',
+    ja: 'AIアシスタント呼び出し（MCP）', zh: 'AI 助手调用次数（MCP）', es: 'Llamadas de asistentes IA (MCP)',
+    pt: 'Chamadas de assistentes de IA (MCP)', ar: 'استدعاءات مساعدي الذكاء الاصطناعي (MCP)',
+    ko: 'AI 어시스턴트 호출 (MCP)',
+  },
+  statMcpCallsHint: {
+    en: 'See how AI assistants use this site →', de: 'So nutzen KI-Assistenten diese Seite →',
+    fr: 'Comment les assistants IA utilisent ce site →', ja: 'AIアシスタントの利用状況を見る →',
+    zh: '查看 AI 助手如何使用本站 →', es: 'Cómo usan los asistentes de IA este sitio →',
+    pt: 'Como assistentes de IA usam este site →', ar: 'كيف تستخدم مساعدات الذكاء الاصطناعي هذا الموقع ←',
+    ko: 'AI 어시스턴트가 이 사이트를 사용하는 방법 보기 →',
+  },
 
   // --- Recent Mentions ---
   mentionsTitle: {

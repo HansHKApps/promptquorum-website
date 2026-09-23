@@ -1,4 +1,4 @@
-// English (unprefixed) entry point for /mcp-stats. See the 8 sibling
+// Locale entry point for /mcp-stats — path-prefixed at /de/mcp-stats.
 // src/app/{lang}/mcp-stats/page.tsx files for the other locales — all share
 // McpStatsContent.tsx for rendering and mcp-stats-i18n.ts for copy. Linked
 // from the homepage's "By the Numbers" block (all 9 locales) as the pitch
@@ -12,7 +12,7 @@ import { McpStatsContent } from '@/components/tools/McpStatsContent'
 import { t as tMcp } from '@/components/tools/mcp-stats-i18n'
 import { t as tTools } from '@/components/tools/tools-i18n'
 
-const LANG = 'en' as const
+const LANG = 'de' as const
 const PATH = '/mcp-stats'
 const LOCALIZED_PATH = (LANG as string) === 'en' ? PATH : `/${LANG}${PATH}`
 

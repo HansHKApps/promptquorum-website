@@ -169,13 +169,25 @@ export function CanIRunThisClient({ lang, appIndex }: { lang: Language; appIndex
           {verdict.tagline && <p className="text-sm text-text-secondary mb-3">{verdict.tagline}</p>}
 
           {verdict.hardware?.variesByModel ? (
-            <p className="text-sm text-text-primary">{t('variesByModelNote', lang)}</p>
+            <div className="flex items-start gap-3 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 dark:border-amber-900 dark:bg-amber-950/40">
+              <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-500 text-xs font-bold text-white">?</span>
+              <p className="text-sm font-medium text-amber-800 dark:text-amber-300">{t('variesByModelNote', lang)}</p>
+            </div>
           ) : verdict.hardwareFit === 'fits' ? (
-            <p className="text-sm font-medium text-emerald-600">{t('verdictFits', lang)}</p>
+            <div className="flex items-start gap-3 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 dark:border-emerald-900 dark:bg-emerald-950/40">
+              <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-xs font-bold text-white">✓</span>
+              <p className="text-sm font-medium text-emerald-800 dark:text-emerald-300">{t('verdictFits', lang)}</p>
+            </div>
           ) : verdict.hardwareFit === 'too-demanding' ? (
-            <p className="text-sm font-medium text-rose-600">{t('verdictTooDemanding', lang)}</p>
+            <div className="flex items-start gap-3 rounded-lg border border-rose-200 bg-rose-50 px-4 py-3 dark:border-rose-900 dark:bg-rose-950/40">
+              <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-600 text-xs font-bold text-white">✕</span>
+              <p className="text-sm font-medium text-rose-800 dark:text-rose-300">{t('verdictTooDemanding', lang)}</p>
+            </div>
           ) : (
-            <p className="text-sm text-text-secondary">{t('verdictUnknown', lang)}</p>
+            <div className="flex items-start gap-3 rounded-lg border border-border bg-surface-highlight px-4 py-3">
+              <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-text-secondary text-xs font-bold text-white">?</span>
+              <p className="text-sm text-text-secondary">{t('verdictUnknown', lang)}</p>
+            </div>
           )}
 
           <div className="mt-4 flex flex-wrap gap-4 text-sm">
