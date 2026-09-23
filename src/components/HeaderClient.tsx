@@ -121,6 +121,28 @@ const NAV_LABELS: Record<string, Record<string, string>> = {
     ko: '본문으로 건너뛰기',
     ar: 'تخطى إلى المحتوى الرئيسي',
   },
+  taglineMain: {
+    en: 'Built for humans.',
+    de: 'Für Menschen gemacht.',
+    fr: 'Conçu pour les humains.',
+    ja: '人のために設計。',
+    zh: '为人类设计。',
+    es: 'Diseñado para humanos.',
+    pt: 'Feito para humanos.',
+    ko: '인간을 위해 설계.',
+    ar: 'مصمم للبشر.',
+  },
+  taglineAccent: {
+    en: 'Structured for AI.',
+    de: 'Strukturiert für KI.',
+    fr: "Structuré pour l'IA.",
+    ja: 'AI向けに構造化。',
+    zh: '为AI结构化。',
+    es: 'Estructurado para la IA.',
+    pt: 'Estruturado para IA.',
+    ko: 'AI를 위해 구조화.',
+    ar: 'منظم للذكاء الاصطناعي.',
+  },
 }
 
 function t(key: string, lang: string) {
@@ -177,7 +199,7 @@ function HeaderInner() {
             <span className="font-semibold text-gray-900 whitespace-nowrap">PromptQuorum</span>
           </span>
           <span className="hidden sm:block pl-11 text-[10px] font-medium tracking-wide text-gray-400 whitespace-nowrap">
-            Built for humans. <span className="text-purple-400">Structured for AI.</span>
+            {t('taglineMain', lang)} <span className="text-purple-400">{t('taglineAccent', lang)}</span>
           </span>
         </Link>
 
