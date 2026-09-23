@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS, getLangDir } from '@/lib/i18n/constants'
-import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+import { localAiApps, TOTAL_TOOL_COUNT } from '@/lib/power-local-llm/apps-barrel'
 import { CanIRunThisClient, type AppPickerEntry } from '@/components/tools/CanIRunThisClient'
 import { t } from '@/components/tools/tools-i18n'
 
@@ -14,7 +14,7 @@ export const revalidate = 86400
 
 export async function generateMetadata(): Promise<Metadata> {
   const title = t('canIRunThisPageTitle', LANG)
-  const description = t('canIRunThisPageLead', LANG, { appCount: localAiApps.length })
+  const description = t('canIRunThisPageLead', LANG, { appCount: TOTAL_TOOL_COUNT })
   return {
     title: `${title} | PromptQuorum`,
     description,
@@ -26,13 +26,13 @@ export async function generateMetadata(): Promise<Metadata> {
 
 function buildAppIndex(): AppPickerEntry[] {
   return localAiApps
-    .filter((a) => a.status !== 'planned' && a.upstreamStatus?.state !== 'archived')
+    .filter((a) => a.status !== 'planned')
     .map((a) => ({ slug: a.slug, name: a.name, tagline: a.tagline.en ?? '' }))
 }
 
 export default function CanIRunThisPage() {
   const appIndex = buildAppIndex()
-  const appCount = appIndex.length
+  const appCount = TOTAL_TOOL_COUNT
 
   return (
     <>

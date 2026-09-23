@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS, getLangDir } from '@/lib/i18n/constants'
-import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+import { TOTAL_TOOL_COUNT } from '@/lib/power-local-llm/apps-barrel'
 import { WhatCanIRunClient } from '@/components/tools/WhatCanIRunClient'
 import { t } from '@/components/tools/tools-i18n'
 
@@ -14,7 +14,7 @@ export const revalidate = 86400
 
 export async function generateMetadata(): Promise<Metadata> {
   const title = t('whatCanIRunPageTitle', LANG)
-  const description = t('whatCanIRunPageLead', LANG, { appCount: localAiApps.length })
+  const description = t('whatCanIRunPageLead', LANG, { appCount: TOTAL_TOOL_COUNT })
   return {
     title: `${title} | PromptQuorum`,
     description,
@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function WhatCanIRunPage() {
-  const appCount = localAiApps.length
+  const appCount = TOTAL_TOOL_COUNT
 
   return (
     <>
