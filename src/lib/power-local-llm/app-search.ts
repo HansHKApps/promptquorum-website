@@ -149,10 +149,21 @@ export function searchApps(args: {
   }
 
   const scored = pool.map((a) => ({ a, fit: hardwareFit(a, args.ramGb, args.vramGb) })).filter((x) => x.fit !== 'too-demanding')
-  // Fuse order is preserved for query searches; otherwise rank reviewed and
-  // well-starred tools first so the top few are the safest recommendations.
+  // Fuse order is preserved for query searches. Otherwise: when hardware was
+  // given, put confirmed 'fits' ahead of 'unknown' (unresearched hardware)
+  // first — without this, an app whose hardware.ramGb/vramGb are simply null
+  // ranks no differently than one actually verified to fit, so unresearched
+  // apps (which are most of the directory) crowd out verified ones at the
+  // top. Then rank reviewed and well-starred tools first so the top few are
+  // the safest recommendations.
   if (!args.query) {
-    scored.sort((x, y) => Number(!!y.a.reviewSlug) - Number(!!x.a.reviewSlug) || (y.a.stars ?? 0) - (x.a.stars ?? 0))
+    const hardwareGiven = args.ramGb !== undefined || args.vramGb !== undefined
+    scored.sort(
+      (x, y) =>
+        (hardwareGiven ? Number(y.fit === 'fits') - Number(x.fit === 'fits') : 0) ||
+        Number(!!y.a.reviewSlug) - Number(!!x.a.reviewSlug) ||
+        (y.a.stars ?? 0) - (x.a.stars ?? 0),
+    )
   }
   return {
     totalMatches: scored.length,
