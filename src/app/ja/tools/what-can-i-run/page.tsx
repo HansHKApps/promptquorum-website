@@ -1,0 +1,67 @@
+import type { Metadata } from 'next'
+import { generateAlternates } from '@/lib/hreflang'
+import { PATH_PREFIX_LANGS, getLangDir } from '@/lib/i18n/constants'
+import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+import { WhatCanIRunClient } from '@/components/tools/WhatCanIRunClient'
+import { t } from '@/components/tools/tools-i18n'
+
+const LANG = 'ja' as const
+const PATH = '/tools/what-can-i-run'
+const LOCALIZED_PATH = (LANG as string) === 'en' ? PATH : `/${LANG}${PATH}`
+
+export const dynamic = 'force-static'
+export const revalidate = 86400
+
+export async function generateMetadata(): Promise<Metadata> {
+  const title = t('whatCanIRunPageTitle', LANG)
+  const description = t('whatCanIRunPageLead', LANG, { appCount: localAiApps.length })
+  return {
+    title: `${title} | PromptQuorum`,
+    description,
+    alternates: generateAlternates(PATH, LANG, true, undefined, [...PATH_PREFIX_LANGS]),
+    openGraph: { title, description, images: [{ url: '/og-image.png', alt: 'PromptQuorum' }], type: 'website', siteName: 'PromptQuorum' },
+    twitter: { card: 'summary_large_image', title, description },
+  }
+}
+
+export default function WhatCanIRunPage() {
+  const appCount = localAiApps.length
+
+  return (
+    <>
+      <main dir={getLangDir(LANG)} className="min-h-screen bg-surface pt-24 pb-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <h1 className="text-3xl sm:text-4xl font-bold text-text-primary mb-3">{t('whatCanIRunPageTitle', LANG)}</h1>
+          <p className="text-lg text-text-secondary mb-8">{t('whatCanIRunPageLead', LANG, { appCount })}</p>
+          <WhatCanIRunClient lang={LANG} />
+        </div>
+      </main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@graph': [
+              {
+                '@type': 'WebPage',
+                '@id': `https://www.promptquorum.com${LOCALIZED_PATH}`,
+                url: `https://www.promptquorum.com${LOCALIZED_PATH}`,
+                name: t('whatCanIRunPageTitle', LANG),
+                description: t('whatCanIRunPageLead', LANG, { appCount }),
+                inLanguage: 'ja',
+                isPartOf: { '@type': 'WebSite', url: 'https://www.promptquorum.com' },
+              },
+              {
+                '@type': 'BreadcrumbList',
+                itemListElement: [
+                  { '@type': 'ListItem', position: 1, name: t('breadcrumbHome', LANG), item: 'https://www.promptquorum.com' },
+                  { '@type': 'ListItem', position: 2, name: t('whatCanIRunPageTitle', LANG), item: `https://www.promptquorum.com${LOCALIZED_PATH}` },
+                ],
+              },
+            ],
+          }),
+        }}
+      />
+    </>
+  )
+}
