@@ -170,7 +170,7 @@ function HeaderInner() {
       >
         {t('skipToMain', lang)}
       </a>
-      <div className="px-4 sm:px-6 h-[72px] flex items-center justify-between">
+      <div className="px-4 sm:px-6 h-16 flex items-center justify-between">
         <Link href={navHref('/', lang)} className="flex flex-col justify-center flex-shrink-0">
           <span className="flex items-center gap-2">
             <Logo size={36} className="w-9 h-9 flex-shrink-0" />
