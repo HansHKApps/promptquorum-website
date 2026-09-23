@@ -2,7 +2,7 @@ import type { AboutCopy } from './types'
 
 export const de: AboutCopy = {
   kicker: 'Über PromptQuorum',
-  h1: 'Die Nutzungsebene für Open-Weight- und Open-Source-KI.',
+  h1: 'Die Entdeckungsmaschine für Open-Weight- und Open-Source-KI.',
   heroLead:
     'PromptQuorum hilft Ihnen, KI privat auf Ihrer eigenen Hardware zu betreiben, statt sie von einem Cloud-Anbieter zu mieten: ein Verzeichnis mit {{appCount}} lokalen KI-Apps, eine Wissensdatenbank mit {{articleCount}} Artikeln in neun Sprachen und eine kostenlose App, die viele Modelle nebeneinander stellt.',
   heroSub:

@@ -2,7 +2,7 @@ import type { AboutCopy } from './types'
 
 export const ko: AboutCopy = {
   kicker: 'PromptQuorum 소개',
-  h1: '오픈 웨이트 및 오픈소스 AI를 위한 사용 계층.',
+  h1: '오픈 웨이트 및 오픈소스 AI를 위한 발견 엔진.',
   heroLead:
     'PromptQuorum은 AI를 클라우드에서 빌려 쓰는 대신, 사용자 자신의 하드웨어에서 비공개로 실행할 수 있도록 돕습니다. {{appCount}}개의 로컬 AI 앱을 담은 디렉터리, 9개 언어로 제공되는 {{articleCount}}개 아티클의 지식 베이스, 그리고 여러 모델을 나란히 비교할 수 있는 무료 앱으로 구성되어 있습니다.',
   heroSub:
