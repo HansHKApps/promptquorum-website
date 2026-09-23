@@ -13,17 +13,17 @@ type Dict = Record<Language, string>
 
 const HOME_UI = {
   // --- Page ---
-  /** Aligned 2026-09-22 with the About page's "usage layer" positioning (src/lib/about/copy.*.ts h1) per site-owner direction: lead with the broader promise, keep directory/guides identity in the tagline below rather than the H1. */
+  /** Aligned 2026-09-23 with the site's "Discovery Engine" positioning (replaces the 2026-09-22 "Usage Layer" wording, same idea site-wide — see src/lib/about/copy.*.ts h1 and translations.ts aboutMetaTitle) per site-owner direction: DE/FR/ES/PT keep a natural "your/Ihre/votre/tu/seu" framing, JA/ZH/KO/AR use the punchier definite-article framing that's idiomatic for headlines in those languages (matches how the prior H1 was phrased in each). */
   pageH1: {
-    en: 'PromptQuorum: The Usage Layer for Open-Weight AI',
-    de: 'PromptQuorum: Die Nutzungsebene für Open-Weight-KI',
-    fr: "PromptQuorum : la couche d'usage pour l'IA à poids ouverts",
-    ja: 'PromptQuorum：オープンウェイトAIの活用レイヤー',
-    zh: 'PromptQuorum：开放权重 AI 的应用层',
-    es: 'PromptQuorum: la capa de uso para la IA de pesos abiertos',
-    pt: 'PromptQuorum: a camada de uso para IA de pesos abertos',
-    ar: 'PromptQuorum: طبقة الاستخدام للذكاء الاصطناعي مفتوح الأوزان',
-    ko: 'PromptQuorum: 오픈 웨이트 AI를 위한 사용 계층',
+    en: 'PromptQuorum: Your Discovery Engine for Open-Weight AI',
+    de: 'PromptQuorum: Ihre Entdeckungsmaschine für Open-Weight-KI',
+    fr: 'PromptQuorum : votre moteur de découverte pour l\'IA à poids ouverts',
+    ja: 'PromptQuorum：オープンウェイトAIの発見エンジン',
+    zh: 'PromptQuorum：您的开放权重 AI 发现引擎',
+    es: 'PromptQuorum: tu motor de descubrimiento para la IA de pesos abiertos',
+    pt: 'PromptQuorum: seu motor de descoberta para IA de pesos abertos',
+    ar: 'PromptQuorum: محرك الاكتشاف للذكاء الاصطناعي مفتوح الأوزان',
+    ko: 'PromptQuorum: 오픈 웨이트 AI를 위한 발견 엔진',
   },
   /** Short punchy tagline under the H1 — carries the directory/guides/comparison identity that used to lead the H1 itself. */
   heroTagline: {
