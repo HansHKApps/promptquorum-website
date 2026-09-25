@@ -674,7 +674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Multi-Tool-Stacks sind die Norm.** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion ist ein Single-Machine-Setup, das Chat, RAG, Coding und Bildgenerierung ohne Kompromisse abdeckt. Die Tabelle „Praktische Einsatz-Stacks" unten nennt die Rezepte, die in 2026 tatsächlich funktionieren.',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-de.svg',
-        imageCaption: 'Die 10 Schichten eines lokalen LLM-Stacks: ' + TOTAL_TOOL_COUNT + ' aktiv gepflegte Projekte von Laufzeiten (Ollama, llama.cpp, vLLM) über Desktop-Apps (LM Studio, Jan, GPT4All), Web-UIs, IDE-Editoren, Terminal-Tools, RAG-Systeme, Agenten-Frameworks, Sprache/Audio, Mobile-Clients, spezialisierte Produktivitäts-Tools und Bildgenerierung (Stable Diffusion, ComfyUI).',
+        imageCaption: 'Die ' + TOTAL_CATEGORY_GROUP_COUNT + ' Kategorien eines lokalen LLM-Stacks: ' + TOTAL_TOOL_COUNT + ' aktiv gepflegte Projekte in Ausführen & Bereitstellen (Ollama, llama.cpp, vLLM), Chat & Assistenten (LM Studio, Jan, GPT4All), Code & Entwicklung (Cline, LangChain, CrewAI), Wissen & Abruf (AnythingLLM, PrivateGPT), Sprache & Audio (Whisper.cpp, Piper), Bilder & Video (Stable Diffusion, ComfyUI) und Training & Betrieb.',
       },
       runtimes: {
         id: 'runtimes',
@@ -1256,7 +1256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Les stacks multi-outils sont la norme.** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion couvre le chat, le RAG, le codage et la génération d\'images sur une seule machine, sans compromis. Le tableau « Stacks courants en production » ci-dessous liste les recettes qui fonctionnent réellement en 2026.',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-fr.svg',
-        imageCaption: 'Les 10 couches d\'une pile LLM locale : ' + TOTAL_TOOL_COUNT + ' projets actifs couvrant les runtimes (Ollama, llama.cpp, vLLM), applications bureau (LM Studio, Jan, GPT4All), interfaces web, éditeurs IDE, outils terminal, systèmes RAG, frameworks d\'agents, voix/audio, clients mobiles, outils spécialisés et génération d\'images (Stable Diffusion, ComfyUI).',
+        imageCaption: 'Les ' + TOTAL_CATEGORY_GROUP_COUNT + ' catégories d\'une pile LLM locale : ' + TOTAL_TOOL_COUNT + ' projets actifs couvrant Exécution & Hébergement (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Développement (Cline, LangChain, CrewAI), Connaissances & Recherche (AnythingLLM, PrivateGPT), Voix & Audio (Whisper.cpp, Piper), Images & Vidéo (Stable Diffusion, ComfyUI) et Entraînement & Exploitation.',
       },
       runtimes: {
         id: 'runtimes',
@@ -1829,7 +1829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**マルチツールスタックが標準的。** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusionは1台のマシンでチャット・RAG・コーディング・画像生成を妥協なくカバーします。下の「実用的なスタック構成」テーブルに実際に機能する組み合わせを掲載しています。',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-ja.svg',
-        imageCaption: 'ローカルLLMスタックの10層：ランタイム（Ollama、llama.cpp、vLLM）、デスクトップアプリ（LM Studio、Jan、GPT4All）、Web UI、IDEエディタ、ターミナルツール、RAGシステム、エージェントFW、音声・オーディオ、モバイル、専門ツール、画像生成（Stable Diffusion、ComfyUI）にわたる' + TOTAL_TOOL_COUNT + 'プロジェクトの全体マップ。',
+        imageCaption: 'ローカルLLMスタックの' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリ：実行＆配信（Ollama、llama.cpp、vLLM）、チャット＆アシスタント（LM Studio、Jan、GPT4All）、コード＆開発（Cline、LangChain、CrewAI）、ナレッジ＆検索（AnythingLLM、PrivateGPT）、音声＆オーディオ（Whisper.cpp、Piper）、画像＆動画（Stable Diffusion、ComfyUI）、トレーニング＆運用にわたる' + TOTAL_TOOL_COUNT + 'プロジェクトの全体マップ。',
       },
       runtimes: {
         id: 'runtimes',
@@ -2404,7 +2404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**多工具组合技术栈是常态。**Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion在单台机器上即可同时覆盖聊天、RAG、编程和图像生成需求，互不冲突。下方"常见实用技术栈"表格列出了2026年经验证、实际可用的配方。',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-zh.svg',
-        imageCaption: '本地LLM技术栈的10个层次：' + TOTAL_TOOL_COUNT + '个活跃项目，涵盖运行时（Ollama、llama.cpp、vLLM）、桌面应用（LM Studio、Jan、GPT4All）、Web界面、IDE编辑器、终端工具、RAG系统、智能体框架、语音与音频、移动端、专用工具及图像生成（Stable Diffusion、ComfyUI）的完整生态地图。',
+        imageCaption: '本地LLM技术栈的' + TOTAL_CATEGORY_GROUP_COUNT + '大类别：' + TOTAL_TOOL_COUNT + '个活跃项目，涵盖运行与部署（Ollama、llama.cpp、vLLM）、聊天与助手（LM Studio、Jan、GPT4All）、代码与开发（Cline、LangChain、CrewAI）、知识与检索（AnythingLLM、PrivateGPT）、语音与音频（Whisper.cpp、Piper）、图像与视频（Stable Diffusion、ComfyUI）以及训练与运维的完整生态地图。',
       },
       runtimes: {
         id: 'runtimes',
@@ -2979,7 +2979,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Los stacks multiherramienta son la norma.** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion es una configuración de una sola máquina que cubre chat, RAG, código y generación de imágenes sin compromiso. La tabla "Stacks comunes en producción" a continuación nombra las recetas que realmente funcionan en 2026.',
         ],
         image: '/images/local-llm-software-directory-2026-layer-map-es.svg',
-        imageCaption: 'Las 10 capas de un stack LLM local: ' + TOTAL_TOOL_COUNT + ' proyectos en mantenimiento activo que abarcan runtimes (Ollama, llama.cpp, vLLM), apps de escritorio (LM Studio, Jan, GPT4All), interfaces web, editores IDE, herramientas de terminal, sistemas RAG, frameworks de agentes, voz y audio, clientes móviles, herramientas de productividad especializadas y generación de imágenes (Stable Diffusion, ComfyUI).',
+        imageCaption: 'Las ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorías de un stack LLM local: ' + TOTAL_TOOL_COUNT + ' proyectos en mantenimiento activo que abarcan Ejecución y despliegue (Ollama, llama.cpp, vLLM), Chat y asistentes (LM Studio, Jan, GPT4All), Código y desarrollo (Cline, LangChain, CrewAI), Conocimiento y recuperación (AnythingLLM, PrivateGPT), Voz y audio (Whisper.cpp, Piper), Imágenes y vídeo (Stable Diffusion, ComfyUI) y Entrenamiento y operación.',
       },
       runtimes: {
         id: 'runtimes',
@@ -3567,8 +3567,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A licença importa para uso comercial.** MIT e Apache 2.0 dominam o ecossistema. AGPL aparece em algumas interfaces (text-generation-webui, KoboldCpp, Jan, SillyTavern) — perfeito para uso pessoal, mais deliberado para implantações comerciais.',
           '**Os stacks de múltiplas ferramentas são a norma.** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion é uma configuração de uma única máquina que cobre chat, RAG, código e geração de imagens sem compromisso.',
         ],
-        image: '/images/local-llm-software-directory-2026-layer-map-es.svg',
-        imageCaption: 'As 10 camadas de um stack LLM local: ' + TOTAL_TOOL_COUNT + ' projetos em manutenção ativa abrangendo runtimes (Ollama, llama.cpp, vLLM), apps de desktop (LM Studio, Jan, GPT4All), interfaces web, editores IDE, ferramentas de terminal, sistemas RAG, frameworks de agentes, voz e áudio, clientes móveis, ferramentas de produtividade especializadas e geração de imagens (Stable Diffusion, ComfyUI).',
+        image: '/images/local-llm-software-directory-2026-layer-map-pt.svg',
+        imageCaption: 'As ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias de um stack LLM local: ' + TOTAL_TOOL_COUNT + ' projetos em manutenção ativa abrangendo Execução e Implantação (Ollama, llama.cpp, vLLM), Chat e Assistentes (LM Studio, Jan, GPT4All), Código e Desenvolvimento (Cline, LangChain, CrewAI), Conhecimento e Busca (AnythingLLM, PrivateGPT), Voz e Áudio (Whisper.cpp, Piper), Imagens e Vídeo (Stable Diffusion, ComfyUI) e Treinamento e Operação.',
       },
       runtimes: {
         id: 'runtimes',
@@ -4155,8 +4155,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الترخيص مهم للاستخدام التجاري.** MIT وApache 2.0 يسيطران على المنظومة. AGPL يظهر في بعض الواجهات (text-generation-webui وKoboldCpp وJan وSillyTavern) — مثالي للاستخدام الشخصي، يتطلب تأملاً أكثر للنشر التجاري.',
           '**الـstacks متعددة الأدوات هي القاعدة.** Ollama + Open WebUI + AnythingLLM + Continue.dev + Stable Diffusion هو إعداد جهاز واحد يغطي الدردشة وRAG والكود وتوليد الصور بدون تنازلات.',
         ],
-        image: '/images/local-llm-software-directory-2026-layer-map-es.svg',
-        imageCaption: 'الطبقات العشر لـstack النماذج اللغوية المحلية: ' + TOTAL_TOOL_COUNT + ' مشروعاً نشطاً تغطي الـruntimes (Ollama وllama.cpp وvLLM) وتطبيقات سطح المكتب (LM Studio وJan وGPT4All) وواجهات الويب ومحررات IDE وأدوات الطرفية وأنظمة RAG وأطر العملاء والصوت والوسائط الصوتية والعملاء المحمولة وأدوات الإنتاجية المتخصصة وتوليد الصور (Stable Diffusion وComfyUI).',
+        image: '/images/local-llm-software-directory-2026-layer-map-ar.svg',
+        imageCaption: 'فئات stack النماذج اللغوية المحلية السبع: ' + TOTAL_TOOL_COUNT + ' مشروعاً نشطاً تغطي التشغيل والنشر (Ollama وllama.cpp وvLLM) والدردشة والمساعدون (LM Studio وJan وGPT4All) والكود والتطوير (Cline وLangChain وCrewAI) والمعرفة والاسترجاع (AnythingLLM وPrivateGPT) والصوت والصوتيات (Whisper.cpp وPiper) والصور والفيديو (Stable Diffusion وComfyUI) والتدريب والتشغيل.',
       },
       runtimes: {
         id: 'runtimes',
@@ -4747,8 +4747,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'one-sentence', text: '2026년 로컬 LLM 생태계는 런타임, 데스크톱 앱, 웹 UI, IDE 통합, 터미널 도구, RAG 시스템, 에이전트 프레임워크, 음성/오디오/비전, 모바일 클라이언트, 전문 도구, 이미지 생성의 10개 레이어에 걸쳐 160개 이상의 활성 프로젝트를 보유하고 있습니다.' },
           { type: 'plain-terms', text: '로컬 LLM 소프트웨어는 인터넷 없이 개인 컴퓨터에서 AI를 실행하는 도구입니다. Ollama 같은 런타임이 모델을 로드하고, LM Studio 같은 앱이 채팅 화면을 제공하며, AnythingLLM 같은 도구는 사용자 문서를 참조할 수 있게 합니다.' },
         ],
-        image: '/images/local-llm-software-directory-2026-layer-map-es.svg',
-        imageCaption: '로컬 LLM 스택의 10개 레이어: 런타임(Ollama, llama.cpp, vLLM), 데스크톱 앱(LM Studio, Jan, GPT4All), 웹 UI, IDE 편집기, 터미널 도구, RAG 시스템, 에이전트 프레임워크, 음성/오디오, 모바일 클라이언트, 전문 생산성 도구, 이미지 생성(Stable Diffusion, ComfyUI)에 걸쳐 160개 이상의 활성 프로젝트.',
+        image: '/images/local-llm-software-directory-2026-layer-map-ko.svg',
+        imageCaption: '로컬 LLM 스택의 ' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리: 실행 및 배포(Ollama, llama.cpp, vLLM), 채팅 및 어시스턴트(LM Studio, Jan, GPT4All), 코드 및 개발(Cline, LangChain, CrewAI), 지식 및 검색(AnythingLLM, PrivateGPT), 음성 및 오디오(Whisper.cpp, Piper), 이미지 및 비디오(Stable Diffusion, ComfyUI), 학습 및 운영에 걸친 ' + TOTAL_TOOL_COUNT + '개의 활성 프로젝트.',
       },
       runtimes: {
         id: 'runtimes',

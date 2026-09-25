@@ -1,0 +1,51 @@
+<svg viewBox="0 0 1000 460" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+  <defs>
+    <style>
+      .tier { fill: #f5f5f5; stroke: #333; stroke-width: 2; }
+      .tier-title { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #333; }
+      .tier-desc { font-family: Arial, sans-serif; font-size: 12px; fill: #666; }
+      .tier-new { fill: #e8f5e9; stroke: #4caf50; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text x="500" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#333" direction="rtl">7 فئات لبرمجيات LLM المحلية (227 أداة)</text>
+
+  <!-- Category 1: Run & Serve -->
+  <rect x="50" y="60" width="900" height="40" class="tier"/>
+  <text x="940" y="85" class="tier-title" text-anchor="end" direction="rtl">1. التشغيل والنشر (41 أداة)</text>
+  <text x="450" y="85" class="tier-desc" text-anchor="end">Ollama, llama.cpp, vLLM, LocalAI, TensorRT-LLM...</text>
+
+  <!-- Category 2: Chat & Assistants -->
+  <rect x="50" y="110" width="900" height="40" class="tier"/>
+  <text x="940" y="135" class="tier-title" text-anchor="end" direction="rtl">2. الدردشة والمساعدون (56 أداة)</text>
+  <text x="450" y="135" class="tier-desc" text-anchor="end">LM Studio, Jan, GPT4All, Open WebUI, LibreChat, SillyTavern...</text>
+
+  <!-- Category 3: Code & Development -->
+  <rect x="50" y="160" width="900" height="40" class="tier"/>
+  <text x="940" y="185" class="tier-title" text-anchor="end" direction="rtl">3. الكود والتطوير (59 أداة)</text>
+  <text x="450" y="185" class="tier-desc" text-anchor="end">Continue.dev, Cline, Aider, LangChain, CrewAI, SuperAGI...</text>
+
+  <!-- Category 4: Knowledge & Retrieval -->
+  <rect x="50" y="210" width="900" height="40" class="tier"/>
+  <text x="940" y="235" class="tier-title" text-anchor="end" direction="rtl">4. المعرفة والاسترجاع (34 أداة)</text>
+  <text x="450" y="235" class="tier-desc" text-anchor="end">AnythingLLM, PrivateGPT, LlamaIndex, Haystack, Quivr...</text>
+
+  <!-- Category 5: Voice & Audio -->
+  <rect x="50" y="260" width="900" height="40" class="tier"/>
+  <text x="940" y="285" class="tier-title" text-anchor="end" direction="rtl">5. الصوت والصوتيات (16 أداة)</text>
+  <text x="450" y="285" class="tier-desc" text-anchor="end">Whisper.cpp, faster-whisper, Piper, Coqui TTS, XTTS v2...</text>
+
+  <!-- Category 6: Images & Video -->
+  <rect x="50" y="310" width="900" height="40" class="tier"/>
+  <text x="940" y="335" class="tier-title" text-anchor="end" direction="rtl">6. الصور والفيديو (17 أداة)</text>
+  <text x="450" y="335" class="tier-desc" text-anchor="end">Stable Diffusion, ComfyUI, AUTOMATIC1111, Invoke AI...</text>
+
+  <!-- Category 7: Train & Operate (emerging) -->
+  <rect x="50" y="360" width="900" height="40" class="tier-new"/>
+  <text x="940" y="385" class="tier-title" fill="#2e7d32" text-anchor="end" direction="rtl">7. التدريب والتشغيل (4 أدوات) ★ ناشئة</text>
+  <text x="450" y="385" class="tier-desc" text-anchor="end" direction="rtl">ضبط دقيق، مجموعات بيانات، تقييم، قابلية ملاحظة — تغطية في مرحلة مبكرة</text>
+
+  <text x="500" y="425" font-family="Arial, sans-serif" font-size="12" fill="#888" text-anchor="middle" direction="rtl">تنتمي أدوات كثيرة إلى أكثر من فئة واحدة — يعكس الرقم الفئة الأساسية لكل أداة.</text>
+<text x="992" y="455" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end" direction="rtl">أرقام الدليل حتى 2026-09-25 — يتم تحديثها مع إضافة أدوات جديدة.</text>
+<text x="8" y="455" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="start">promptquorum.com</text></svg>

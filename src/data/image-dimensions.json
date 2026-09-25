@@ -29549,10 +29549,15 @@
     "width": 800,
     "height": 350
   },
+  "/images/local-llm-software-directory-2026-layer-map-ar.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 460
+  },
   "/images/local-llm-software-directory-2026-layer-map-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 1000,
-    "height": 600
+    "height": 460
   },
   "/images/local-llm-software-directory-2026-layer-map-en.svg": {
     "encodingFormat": "image/svg+xml",
@@ -29562,22 +29567,32 @@
   "/images/local-llm-software-directory-2026-layer-map-es.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 1000,
-    "height": 600
+    "height": 460
   },
   "/images/local-llm-software-directory-2026-layer-map-fr.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 1000,
-    "height": 600
+    "height": 460
   },
   "/images/local-llm-software-directory-2026-layer-map-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 1000,
-    "height": 600
+    "height": 460
+  },
+  "/images/local-llm-software-directory-2026-layer-map-ko.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 460
+  },
+  "/images/local-llm-software-directory-2026-layer-map-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 1000,
+    "height": 460
   },
   "/images/local-llm-software-directory-2026-layer-map-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 1000,
-    "height": 600
+    "height": 460
   },
   "/images/local-llm-software-directory-2026-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
