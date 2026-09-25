@@ -34,7 +34,7 @@ export function GET(request: Request) {
     const app = getAppDetails({ slug })
     const fit = hardwareFit(app, ramGb, vramGb)
     return NextResponse.json(
-      { result: summarize(app, fit), disclaimer: DIRECTORY_DISCLAIMER },
+      { result: summarize(app, fit, { ramGb, vramGb }), disclaimer: DIRECTORY_DISCLAIMER },
       { headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' } },
     )
   } catch (err) {

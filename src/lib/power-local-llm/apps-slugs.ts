@@ -124,7 +124,6 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'controlnet':                              'controlnet',
   'real-esrgan':                             'real-esrgan',
   'animatediff':                             'animatediff',
-  'dall-e-3-local-ollama-vision':             'dall-e-3-local-ollama-vision',
   'smart-connections':                       'smart-connections',
   'copilot-for-obsidian':                    'copilot-for-obsidian',
   'text-generator':                          'text-generator',
