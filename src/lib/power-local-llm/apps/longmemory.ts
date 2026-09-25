@@ -38,7 +38,9 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'longmemory-review', // dedicated PromptQuorum review — added 2026-09-19
   pqReview: { date: '2026-09-20', version: 'v1.2.3', versionSourceUrl: 'https://github.com/CaviraOSS/LongMemory/releases/tag/v1.2.3' },
-  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { agents: true, dockerDeploy: true, apiServer: true },
-  lastVerifiedDate: '2026-09-18',
+  // Comparison attributes: each value verified against the project's official README on 2026-09-25; a missing key = not stated there, never false.
+  // visualBuilder false — README's only UIs are a Next.js dashboard and a VS Code extension, neither is a drag-and-drop builder.
+  // multiVector false — README describes SQLite-backed local-first storage plus a proprietary "Hydrograph" substrate, no pluggable vector-store backends documented.
+  compare: { visualBuilder: false, localLlm: true, agents: true, multiVector: false, dockerDeploy: true, apiServer: true },
+  lastVerifiedDate: '2026-09-25',
 }

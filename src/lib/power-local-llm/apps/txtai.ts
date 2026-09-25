@@ -34,7 +34,9 @@ export const app: ToolRecord = {
     ko: '단일 라이브러리에 통합된 벡터 데이터베이스 + LLM',
   },
   reviewSlug: 'txtai-embedded-vector-database-review', // dedicated PromptQuorum review — pinned to #1 in the article index
-  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { localLlm: true, agents: true, dockerDeploy: true, apiServer: true },
-  lastVerifiedDate: null, // TODO: not derivable from source article
+  // Comparison attributes: each value verified against the project's official README/docs on 2026-09-25; a missing key = not stated there, never false.
+  // visualBuilder false — README and docs describe only programmatic APIs/embeddings database concepts, no visual builder UI.
+  // multiVector confirmed via 11 supported ANN/vector index backends (faiss, hnsw, annoy, ggml, milvus, numpy, torch, turbovec, zvec, pgvector, sqlite-vec) plus custom backends: https://neuml.github.io/txtai/embeddings/configuration/ann/
+  compare: { visualBuilder: false, localLlm: true, agents: true, multiVector: true, dockerDeploy: true, apiServer: true },
+  lastVerifiedDate: '2026-09-25',
 }

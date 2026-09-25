@@ -32,8 +32,11 @@ export const app: ToolRecord = {
     ar: 'منصة RAG ووكلاء مؤسسية ذاتية الاستضافة تتصل بنماذج DeepSeek وQwen المحلية',
     ko: '로컬 DeepSeek 및 Qwen 모델에 연결되는 자체 호스팅 엔터프라이즈 RAG 및 에이전트 플랫폼',
   },
-  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { localLlm: true, agents: true, dockerDeploy: true },
-  lastVerifiedDate: null, // TODO: not yet founder-verified
+  pqReview: { date: '2026-09-25', version: 'v2.10.6-lts', versionSourceUrl: 'https://github.com/1Panel-dev/MaxKB/releases/tag/v2.10.6-lts' },
+  // Comparison attributes: each value verified against the project's official README/docs on 2026-09-25; a missing key = not stated there, never false.
+  // multiVector false — only PostgreSQL + pgvector is documented as MaxKB's vector storage; no other vector DB backend is offered.
+  // apiServer confirmed via the OpenAI-compatible per-application API key docs: https://docs.maxkb.pro/dev_manual/APIKey_chat/
+  compare: { visualBuilder: true, localLlm: true, agents: true, multiVector: false, dockerDeploy: true, apiServer: true },
+  lastVerifiedDate: '2026-09-25',
   reviewSlug: 'maxkb-review', // dedicated PromptQuorum review — pinned to #1 in the article index
 }

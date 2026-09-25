@@ -34,7 +34,9 @@ export const app: ToolRecord = {
     ko: 'RAG 및 에이전트 지원을 갖춘 AI 워크플로 빌더',
   },
   reviewSlug: 'dify-ai-workflow-builder-review', // dedicated PromptQuorum review — pinned to #1 in the article index
-  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { visualBuilder: true, localLlm: true, agents: true, dockerDeploy: true, apiServer: true, mcp: true, toolCalling: true },
-  lastVerifiedDate: null, // TODO: not derivable from source article
+  pqReview: { date: '2026-09-25', version: 'v1.17.1', versionSourceUrl: 'https://github.com/langgenius/dify/releases/tag/1.17.1' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-25; a missing key = not stated there, never false.
+  // multiVector confirmed via docker/docker-compose.yaml + docker/.env.example: separate service profiles for weaviate (default), qdrant, pgvector, pgvecto-rs, chroma, oceanbase, couchbase, and others.
+  compare: { visualBuilder: true, localLlm: true, agents: true, multiVector: true, dockerDeploy: true, apiServer: true, mcp: true, toolCalling: true },
+  lastVerifiedDate: '2026-09-25',
 }

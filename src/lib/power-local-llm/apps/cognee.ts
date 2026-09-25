@@ -32,7 +32,11 @@ export const app: ToolRecord = {
     ko: '지식 그래프를 통해 에이전트에게 영구적이고 셀프호스팅 가능한 장기 기억을 제공하는 오픈소스 AI 메모리 엔진',
   },
   reviewSlug: 'cognee-review', // dedicated PromptQuorum review — added 2026-09-18
-  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { localLlm: true, dockerDeploy: true, apiServer: true },
+  pqReview: { date: '2026-09-25', version: 'v1.6.1', versionSourceUrl: 'https://github.com/topoteretes/cognee/releases/tag/v1.6.1' },
+  // Comparison attributes: each value verified against the project's official README/docs on 2026-09-25; a missing key = not stated there, never false.
+  // visualBuilder false — the only UI is `cognee-cli -ui`, a graph/data viewer for an existing install, not a workflow builder.
+  // agents confirmed via first-party MCP server + Claude Code/Cursor/Cline and LangGraph integrations.
+  // multiVector confirmed via built-in (LanceDB, PGVector, Turso/libSQL, Neptune Analytics, ChromaDB) + community adapters (Qdrant, Redis, FalkorDB, Pinecone, Turbopuffer, Milvus, Weaviate): https://docs.cognee.ai/setup-configuration/vector-stores
+  compare: { visualBuilder: false, localLlm: true, agents: true, multiVector: true, dockerDeploy: true, apiServer: true },
   lastVerifiedDate: '2026-09-18',
 }

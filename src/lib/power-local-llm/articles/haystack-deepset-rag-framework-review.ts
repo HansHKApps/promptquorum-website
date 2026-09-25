@@ -29,11 +29,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'What is Haystack and who makes it?',
-        answer: 'Haystack is an open-source Python framework, licensed Apache 2.0, built by deepset (a Germany-based company) for building search, question-answering, and retrieval-augmented generation (RAG) pipelines. The current release is Haystack 3.1, published August 24, 2026. It is installed via pip install haystack-ai and the source is on github.com/deepset-ai/haystack, at 26,400+ GitHub stars.',
+        answer: 'Haystack is an open-source Python framework, licensed Apache 2.0, built by deepset (a Germany-based company) for building search, question-answering, and retrieval-augmented generation (RAG) pipelines. The current release is Haystack 3.2.0, published September 24, 2026. It is installed via pip install haystack-ai and the source is on github.com/deepset-ai/haystack, at 26,400+ GitHub stars.',
         bullets: [
           'License: Apache 2.0 — free to use, modify, and self-host',
           'Maker: deepset GmbH, founded in Germany',
-          'Current version: Haystack 3.1 (released 2026-08-24)',
+          'Current version: Haystack 3.2.0 (released 2026-09-24)',
           'Install: pip install haystack-ai',
           'Core abstractions: Component (a single processing step) and Pipeline (a connected graph of components)',
           'Origin: started in 2019 as an extractive question-answering framework, before "RAG" existed as a term',
@@ -59,7 +59,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'TL;DR — Haystack in 2026',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Haystack is deepset\'s open-source (Apache 2.0) Python framework for building production search and RAG pipelines out of explicit, typed Component and Pipeline abstractions, currently at version 3.1.' },
+          { type: 'one-sentence', text: 'Haystack is deepset\'s open-source (Apache 2.0) Python framework for building production search and RAG pipelines out of explicit, typed Component and Pipeline abstractions, currently at version 3.2.0.' },
           { type: 'plain-terms', text: 'Instead of chaining function calls like most LLM libraries, Haystack makes you wire named components — a retriever, a prompt builder, a generator — into a Pipeline object with explicit .connect() calls, so the data flow is visible and testable rather than hidden inside a chain.' },
         ],
         items: [
@@ -67,6 +67,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Built by deepset, a Germany-based company, starting in 2019 as an extractive question-answering and search framework — before retrieval-augmented generation was a common term',
           'Two building blocks: Component (one processing step: retriever, embedder, generator, converter) and Pipeline (a connected graph of components with explicit .add_component() and .connect() calls)',
           'Document Store is a swappable backend abstraction — Haystack ships an in-memory store for testing and integrates with Elasticsearch, Weaviate, Pinecone, and other vector databases',
+          '[Hayhooks](https://github.com/deepset-ai/hayhooks), deepset\'s own tool, deploys a Haystack pipeline as a local REST API and MCP tool server, running on Uvicorn (default `http://localhost:1416`)',
           'Model-provider agnostic: integrates with OpenAI, Anthropic, Mistral, Cohere, Hugging Face, Google, Azure OpenAI, and AWS Bedrock',
           'deepset also sells Haystack Enterprise Platform and Haystack Enterprise Starter — commercial layers with a visual pipeline builder and managed deployment on top of the same open-source core',
         ],
@@ -80,7 +81,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Haystack is an open-source Python framework (Apache 2.0, github.com/deepset-ai/haystack) for building search, question-answering, and retrieval-augmented generation (RAG) applications. It is maintained by deepset, a company based in Germany, and installed with pip install haystack-ai.',
         items: [
           'Started in 2019 as an extractive question-answering framework — finding the exact answer span inside a document — before generative LLMs made RAG the dominant pattern',
-          'Rewritten around Haystack 2.0 into the current Component/Pipeline architecture, now at version 3.1 (released 2026-08-24)',
+          'Rewritten around Haystack 2.0 into the current Component/Pipeline architecture, now at version 3.2.0 (released 2026-09-24)',
           'Ships components for document conversion (PDF, HTML, DOCX), text splitting, embedding, retrieval (keyword-based BM25 and vector/semantic), generation, and evaluation',
           'Document Store abstraction decouples pipeline logic from the storage backend — swap the in-memory store for Elasticsearch, Weaviate, or Pinecone without rewriting the pipeline',
           'Ships an in-memory document store out of the box for local development and testing, with no external database required to get started',
@@ -222,7 +223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'What is Haystack?', a: 'Haystack is an open-source Python framework by deepset, a Germany-based company, for building search, question-answering, and RAG pipelines. It is licensed Apache 2.0 and installed with pip install haystack-ai.' },
           { q: 'Who makes Haystack?', a: 'deepset, a company based in Germany. deepset started Haystack in 2019 as an extractive question-answering framework, before retrieval-augmented generation was a common term.' },
           { q: 'What license is Haystack released under?', a: 'Apache License 2.0. The source code is on github.com/deepset-ai/haystack and can be freely used, modified, and self-hosted.' },
-          { q: 'What is the current version of Haystack?', a: 'Haystack 3.1, released August 24, 2026. The framework was substantially rewritten around Haystack 2.0 into its current Component/Pipeline architecture.' },
+          { q: 'What is the current version of Haystack?', a: 'Haystack 3.2.0, released September 24, 2026. The framework was substantially rewritten around Haystack 2.0 into its current Component/Pipeline architecture.' },
           { q: 'What is the difference between a Component and a Pipeline in Haystack?', a: 'A Component is one processing step — a retriever, embedder, prompt builder, or generator. A Pipeline is a graph of components connected with explicit .add_component() and .connect() calls; running the pipeline executes the graph in dependency order.' },
           { q: 'How is Haystack different from LlamaIndex?', a: 'Haystack organizes pipelines around explicit, typed Components wired into a Pipeline graph. LlamaIndex organizes around building an Index over your data and querying it through a Retriever and QueryEngine. LlamaIndex is typically faster to start indexing data with; Haystack\'s explicit graph gives more visibility and control for production pipelines.' },
           { q: 'How is Haystack different from LangChain?', a: 'Both are code-first Python frameworks with no visual builder in their open-source core. LangChain centers on chains and, via LangGraph, a state graph for agents. Haystack centers on a Pipeline of typed Components, with retrieval and search treated as first-class, measurable concerns rather than one link in a general-purpose chain.' },
@@ -278,11 +279,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Was ist Haystack und wer entwickelt es?',
-        answer: 'Haystack ist ein Open-Source-Python-Framework unter Apache-2.0-Lizenz von deepset, einem in Deutschland ansässigen Unternehmen, für Such-, Frage-Antwort- und Retrieval-Augmented-Generation-Pipelines (RAG). Die aktuelle Version ist Haystack 3.1, veröffentlicht am 24. August 2026. Installation per pip install haystack-ai, Quellcode auf github.com/deepset-ai/haystack mit über 26.400 GitHub-Stars.',
+        answer: 'Haystack ist ein Open-Source-Python-Framework unter Apache-2.0-Lizenz von deepset, einem in Deutschland ansässigen Unternehmen, für Such-, Frage-Antwort- und Retrieval-Augmented-Generation-Pipelines (RAG). Die aktuelle Version ist Haystack 3.2.0, veröffentlicht am 24. September 2026. Installation per pip install haystack-ai, Quellcode auf github.com/deepset-ai/haystack mit über 26.400 GitHub-Stars.',
         bullets: [
           'Lizenz: Apache 2.0 — frei nutzbar, veränderbar und selbst hostbar',
           'Hersteller: deepset GmbH, gegründet in Deutschland',
-          'Aktuelle Version: Haystack 3.1 (veröffentlicht am 24.08.2026)',
+          'Aktuelle Version: Haystack 3.2.0 (veröffentlicht am 24.09.2026)',
           'Installation: pip install haystack-ai',
           'Kernabstraktionen: Component (ein Verarbeitungsschritt) und Pipeline (ein verbundener Graph aus Components)',
           'Ursprung: 2019 als Framework für extraktive Frage-Antwort-Systeme gestartet, bevor "RAG" als Begriff existierte',
@@ -308,7 +309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Zusammenfassung — Haystack im Jahr 2026',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Haystack ist deepsets quelloffenes (Apache 2.0) Python-Framework für produktive Such- und RAG-Pipelines aus expliziten, typisierten Component- und Pipeline-Abstraktionen, aktuell in Version 3.1.' },
+          { type: 'one-sentence', text: 'Haystack ist deepsets quelloffenes (Apache 2.0) Python-Framework für produktive Such- und RAG-Pipelines aus expliziten, typisierten Component- und Pipeline-Abstraktionen, aktuell in Version 3.2.0.' },
           { type: 'plain-terms', text: 'Statt Funktionsaufrufe wie die meisten LLM-Bibliotheken zu verketten, verlangt Haystack, benannte Components — einen Retriever, einen Prompt-Builder, einen Generator — mit expliziten .connect()-Aufrufen zu einer Pipeline zu verbinden, sodass der Datenfluss sichtbar und testbar ist statt in einer Kette versteckt.' },
         ],
         items: [
@@ -316,6 +317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Entwickelt von deepset, einem in Deutschland ansässigen Unternehmen, seit 2019 zunächst als Framework für extraktive Frage-Antwort-Systeme und Suche — bevor Retrieval-Augmented Generation ein gängiger Begriff war',
           'Zwei Bausteine: Component (ein Verarbeitungsschritt: Retriever, Embedder, Generator, Konverter) und Pipeline (ein verbundener Graph aus Components mit expliziten .add_component()- und .connect()-Aufrufen)',
           'Document Store ist eine austauschbare Backend-Abstraktion — Haystack liefert einen In-Memory-Store für Tests und integriert Elasticsearch, Weaviate, Pinecone und weitere Vektordatenbanken',
+          '[Hayhooks](https://github.com/deepset-ai/hayhooks), ein eigenes Tool von deepset, stellt eine Haystack-Pipeline als lokalen REST-API- und MCP-Tool-Server bereit, läuft auf Uvicorn (Standard `http://localhost:1416`)',
           'Anbieterunabhängig bei Modellen: Integration mit OpenAI, Anthropic, Mistral, Cohere, Hugging Face, Google, Azure OpenAI und AWS Bedrock',
           'deepset verkauft zusätzlich Haystack Enterprise Platform und Haystack Enterprise Starter — kommerzielle Schichten mit visuellem Pipeline-Builder und verwaltetem Deployment auf demselben Open-Source-Kern',
         ],
@@ -329,7 +331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Haystack ist ein Open-Source-Python-Framework (Apache 2.0, github.com/deepset-ai/haystack) zum Bau von Such-, Frage-Antwort- und Retrieval-Augmented-Generation-Anwendungen (RAG). Es wird von deepset gepflegt, einem in Deutschland ansässigen Unternehmen, und per pip install haystack-ai installiert.',
         items: [
           'Gestartet 2019 als Framework für extraktive Frage-Antwort-Systeme — die exakte Antwort-Textstelle in einem Dokument finden — bevor generative LLMs RAG zum dominanten Muster machten',
-          'Rund um Haystack 2.0 grundlegend auf die aktuelle Component-/Pipeline-Architektur umgeschrieben, aktuell Version 3.1 (veröffentlicht am 24.08.2026)',
+          'Rund um Haystack 2.0 grundlegend auf die aktuelle Component-/Pipeline-Architektur umgeschrieben, aktuell Version 3.2.0 (veröffentlicht am 24.09.2026)',
           'Liefert Components für Dokumentenkonvertierung (PDF, HTML, DOCX), Textsplitting, Embedding, Retrieval (schlüsselwortbasiert BM25 und vektor-/semantisch) sowie Generierung und Evaluation',
           'Die Document-Store-Abstraktion trennt Pipeline-Logik vom Speicher-Backend — den In-Memory-Store gegen Elasticsearch, Weaviate oder Pinecone tauschen, ohne die Pipeline neu zu schreiben',
           'Liefert einen In-Memory-Dokumentenspeicher direkt mit für lokale Entwicklung und Tests, ohne externe Datenbank zum Einstieg',
@@ -471,7 +473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Was ist Haystack?', a: 'Haystack ist ein Open-Source-Python-Framework von deepset, einem in Deutschland ansässigen Unternehmen, für Such-, Frage-Antwort- und RAG-Pipelines. Es steht unter Apache-2.0-Lizenz und wird per pip install haystack-ai installiert.' },
           { q: 'Wer entwickelt Haystack?', a: 'deepset, ein Unternehmen mit Sitz in Deutschland. deepset startete Haystack 2019 als Framework für extraktive Frage-Antwort-Systeme, bevor Retrieval-Augmented Generation ein gängiger Begriff war.' },
           { q: 'Unter welcher Lizenz steht Haystack?', a: 'Apache License 2.0. Der Quellcode liegt auf github.com/deepset-ai/haystack und kann frei genutzt, verändert und selbst gehostet werden.' },
-          { q: 'Was ist die aktuelle Version von Haystack?', a: 'Haystack 3.1, veröffentlicht am 24. August 2026. Das Framework wurde rund um Haystack 2.0 grundlegend auf die aktuelle Component-/Pipeline-Architektur umgeschrieben.' },
+          { q: 'Was ist die aktuelle Version von Haystack?', a: 'Haystack 3.2.0, veröffentlicht am 24. September 2026. Das Framework wurde rund um Haystack 2.0 grundlegend auf die aktuelle Component-/Pipeline-Architektur umgeschrieben.' },
           { q: 'Was ist der Unterschied zwischen einer Component und einer Pipeline in Haystack?', a: 'Eine Component ist ein einzelner Verarbeitungsschritt — ein Retriever, Embedder, Prompt-Builder oder Generator. Eine Pipeline ist ein Graph aus Components, verbunden über explizite .add_component()- und .connect()-Aufrufe; das Ausführen der Pipeline durchläuft den Graphen in Abhängigkeitsreihenfolge.' },
           { q: 'Wie unterscheidet sich Haystack von LlamaIndex?', a: 'Haystack organisiert Pipelines um explizite, typisierte Components, verdrahtet in einen Pipeline-Graphen. LlamaIndex organisiert um den Bau eines Index über den eigenen Daten und die Abfrage über einen Retriever und QueryEngine. LlamaIndex ist meist schneller zum Indexieren von Daten geeignet; Haystacks expliziter Graph bietet mehr Sichtbarkeit und Kontrolle für Produktivpipelines.' },
           { q: 'Wie unterscheidet sich Haystack von LangChain?', a: 'Beide sind code-first-Python-Frameworks ohne visuellen Builder im Open-Source-Kern. LangChain dreht sich um Chains und, über LangGraph, um einen State-Graph für Agenten. Haystack dreht sich um eine Pipeline aus typisierten Components, wobei Retrieval und Suche als erstklassige, messbare Anliegen behandelt werden, statt als ein Glied in einer allgemeinen Chain.' },
@@ -529,11 +531,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Qu\'est-ce que Haystack et qui le développe ?',
-        answer: 'Haystack est un framework Python open source, sous licence Apache 2.0, développé par deepset, une entreprise basée en Allemagne, pour construire des pipelines de recherche, de question-réponse et de génération augmentée par récupération (RAG). La version actuelle est Haystack 3.1, publiée le 24 août 2026. Installation via pip install haystack-ai, code source sur github.com/deepset-ai/haystack, avec plus de 26 400 étoiles GitHub.',
+        answer: 'Haystack est un framework Python open source, sous licence Apache 2.0, développé par deepset, une entreprise basée en Allemagne, pour construire des pipelines de recherche, de question-réponse et de génération augmentée par récupération (RAG). La version actuelle est Haystack 3.2.0, publiée le 24 septembre 2026. Installation via pip install haystack-ai, code source sur github.com/deepset-ai/haystack, avec plus de 26 400 étoiles GitHub.',
         bullets: [
           'Licence : Apache 2.0 — utilisation, modification et auto-hébergement libres',
           'Éditeur : deepset GmbH, fondée en Allemagne',
-          'Version actuelle : Haystack 3.1 (publiée le 24/08/2026)',
+          'Version actuelle : Haystack 3.2.0 (publiée le 24/09/2026)',
           'Installation : pip install haystack-ai',
           'Abstractions clés : Component (une étape de traitement) et Pipeline (un graphe connecté de components)',
           'Origine : lancé en 2019 comme framework de question-réponse extractive, avant que "RAG" n\'existe comme terme',
@@ -559,7 +561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'En bref — Haystack en 2026',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Haystack est le framework Python open source (Apache 2.0) de deepset pour construire des pipelines de recherche et de RAG en production à partir d\'abstractions Component et Pipeline explicites et typées, actuellement en version 3.1.' },
+          { type: 'one-sentence', text: 'Haystack est le framework Python open source (Apache 2.0) de deepset pour construire des pipelines de recherche et de RAG en production à partir d\'abstractions Component et Pipeline explicites et typées, actuellement en version 3.2.0.' },
           { type: 'plain-terms', text: 'Au lieu d\'enchaîner des appels de fonctions comme la plupart des bibliothèques LLM, Haystack demande de câbler des components nommés — un retriever, un constructeur de prompt, un générateur — dans un objet Pipeline via des appels .connect() explicites, rendant le flux de données visible et testable plutôt que caché dans une chaîne.' },
         ],
         items: [
@@ -567,6 +569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Développé par deepset, entreprise basée en Allemagne, depuis 2019, d\'abord comme framework de question-réponse extractive et de recherche — avant que la génération augmentée par récupération ne soit un terme courant',
           'Deux briques : Component (une étape de traitement : retriever, embedder, générateur, convertisseur) et Pipeline (un graphe connecté de components avec des appels .add_component() et .connect() explicites)',
           'Le Document Store est une abstraction de backend interchangeable — Haystack fournit un store en mémoire pour les tests et s\'intègre à Elasticsearch, Weaviate, Pinecone et d\'autres bases vectorielles',
+          '[Hayhooks](https://github.com/deepset-ai/hayhooks), l\'outil propre de deepset, déploie une pipeline Haystack en tant que serveur API REST et MCP local, fonctionnant sur Uvicorn (par défaut `http://localhost:1416`)',
           'Agnostique côté fournisseur de modèles : intégration avec OpenAI, Anthropic, Mistral, Cohere, Hugging Face, Google, Azure OpenAI et AWS Bedrock',
           'deepset vend aussi Haystack Enterprise Platform et Haystack Enterprise Starter — des couches commerciales avec constructeur de pipeline visuel et déploiement géré, au-dessus du même socle open source',
         ],
@@ -580,7 +583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Haystack est un framework Python open source (Apache 2.0, github.com/deepset-ai/haystack) pour construire des applications de recherche, de question-réponse et de génération augmentée par récupération (RAG). Il est maintenu par deepset, une entreprise basée en Allemagne, et s\'installe via pip install haystack-ai.',
         items: [
           'Lancé en 2019 comme framework de question-réponse extractive — trouver le passage exact de la réponse dans un document — avant que les LLM génératifs ne fassent du RAG le modèle dominant',
-          'Réécrit en profondeur autour de Haystack 2.0 vers l\'architecture Component/Pipeline actuelle, désormais en version 3.1 (publiée le 24/08/2026)',
+          'Réécrit en profondeur autour de Haystack 2.0 vers l\'architecture Component/Pipeline actuelle, désormais en version 3.2.0 (publiée le 24/09/2026)',
           'Fournit des components pour la conversion de documents (PDF, HTML, DOCX), le découpage de texte, l\'embedding, le retrieval (par mots-clés BM25 et vectoriel/sémantique), la génération et l\'évaluation',
           'L\'abstraction Document Store découple la logique du pipeline du backend de stockage — remplacer le store en mémoire par Elasticsearch, Weaviate ou Pinecone sans réécrire le pipeline',
           'Fournit un document store en mémoire prêt à l\'emploi pour le développement local et les tests, sans base de données externe pour démarrer',
@@ -722,7 +725,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Qu\'est-ce que Haystack ?', a: 'Haystack est un framework Python open source de deepset, une entreprise basée en Allemagne, pour construire des pipelines de recherche, de question-réponse et de RAG. Il est sous licence Apache 2.0 et s\'installe via pip install haystack-ai.' },
           { q: 'Qui développe Haystack ?', a: 'deepset, une entreprise basée en Allemagne. deepset a lancé Haystack en 2019 comme framework de question-réponse extractive, avant que la génération augmentée par récupération ne soit un terme courant.' },
           { q: 'Sous quelle licence Haystack est-il publié ?', a: 'Apache License 2.0. Le code source se trouve sur github.com/deepset-ai/haystack et peut être librement utilisé, modifié et auto-hébergé.' },
-          { q: 'Quelle est la version actuelle de Haystack ?', a: 'Haystack 3.1, publiée le 24 août 2026. Le framework a été profondément réécrit autour de Haystack 2.0 vers son architecture Component/Pipeline actuelle.' },
+          { q: 'Quelle est la version actuelle de Haystack ?', a: 'Haystack 3.2.0, publiée le 24 septembre 2026. Le framework a été profondément réécrit autour de Haystack 2.0 vers son architecture Component/Pipeline actuelle.' },
           { q: 'Quelle est la différence entre une Component et un Pipeline dans Haystack ?', a: 'Une Component est une seule étape de traitement — un retriever, un embedder, un constructeur de prompt ou un générateur. Un Pipeline est un graphe de components connectées via des appels explicites .add_component() et .connect() ; exécuter le pipeline parcourt le graphe dans l\'ordre des dépendances.' },
           { q: 'En quoi Haystack diffère-t-il de LlamaIndex ?', a: 'Haystack organise les pipelines autour de Components explicites et typées, câblées dans un graphe Pipeline. LlamaIndex organise autour de la construction d\'un Index sur vos données, interrogé via un Retriever et un QueryEngine. LlamaIndex est généralement plus rapide pour commencer à indexer des données ; le graphe explicite de Haystack offre plus de visibilité et de contrôle pour les pipelines en production.' },
           { q: 'En quoi Haystack diffère-t-il de LangChain ?', a: 'Les deux sont des frameworks Python code-first sans constructeur visuel dans leur socle open source. LangChain se concentre sur les chains et, via LangGraph, sur un state graph pour les agents. Haystack se concentre sur un Pipeline de Components typées, où le retrieval et la recherche sont traités comme des enjeux de premier ordre et mesurables plutôt que comme un maillon d\'une chaîne généraliste.' },
@@ -778,11 +781,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Qué es Haystack y quién lo desarrolla?',
-        answer: 'Haystack es un framework Python de código abierto, bajo licencia Apache 2.0, desarrollado por deepset, una empresa con sede en Alemania, para construir pipelines de búsqueda, preguntas y respuestas, y generación aumentada por recuperación (RAG). La versión actual es Haystack 3.1, publicada el 24 de agosto de 2026. Se instala con pip install haystack-ai, el código fuente está en github.com/deepset-ai/haystack, con más de 26.400 estrellas en GitHub.',
+        answer: 'Haystack es un framework Python de código abierto, bajo licencia Apache 2.0, desarrollado por deepset, una empresa con sede en Alemania, para construir pipelines de búsqueda, preguntas y respuestas, y generación aumentada por recuperación (RAG). La versión actual es Haystack 3.2.0, publicada el 24 de septiembre de 2026. Se instala con pip install haystack-ai, el código fuente está en github.com/deepset-ai/haystack, con más de 26.400 estrellas en GitHub.',
         bullets: [
           'Licencia: Apache 2.0 — uso, modificación y auto-alojamiento libres',
           'Fabricante: deepset GmbH, fundada en Alemania',
-          'Versión actual: Haystack 3.1 (publicada el 24/08/2026)',
+          'Versión actual: Haystack 3.2.0 (publicada el 24/09/2026)',
           'Instalación: pip install haystack-ai',
           'Abstracciones clave: Component (un paso de procesamiento) y Pipeline (un grafo conectado de components)',
           'Origen: iniciado en 2019 como framework de respuesta a preguntas extractiva, antes de que "RAG" existiera como término',
@@ -808,7 +811,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Resumen — Haystack en 2026',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Haystack es el framework Python open source (Apache 2.0) de deepset para construir pipelines de búsqueda y RAG en producción a partir de abstracciones Component y Pipeline explícitas y tipadas, actualmente en la versión 3.1.' },
+          { type: 'one-sentence', text: 'Haystack es el framework Python open source (Apache 2.0) de deepset para construir pipelines de búsqueda y RAG en producción a partir de abstracciones Component y Pipeline explícitas y tipadas, actualmente en la versión 3.2.0.' },
           { type: 'plain-terms', text: 'En lugar de encadenar llamadas a funciones como la mayoría de bibliotecas LLM, Haystack exige conectar components con nombre — un retriever, un constructor de prompts, un generador — en un objeto Pipeline con llamadas .connect() explícitas, de forma que el flujo de datos sea visible y comprobable en vez de estar oculto dentro de una cadena.' },
         ],
         items: [
@@ -816,6 +819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desarrollado por deepset, empresa con sede en Alemania, desde 2019, primero como framework de respuesta a preguntas extractiva y búsqueda — antes de que la generación aumentada por recuperación fuera un término habitual',
           'Dos bloques: Component (un paso de procesamiento: retriever, embedder, generador, conversor) y Pipeline (un grafo conectado de components con llamadas .add_component() y .connect() explícitas)',
           'Document Store es una abstracción de backend intercambiable — Haystack incluye un store en memoria para pruebas y se integra con Elasticsearch, Weaviate, Pinecone y otras bases de datos vectoriales',
+          '[Hayhooks](https://github.com/deepset-ai/hayhooks), la propia herramienta de deepset, despliega un pipeline de Haystack como servidor API REST y MCP local, ejecutándose sobre Uvicorn (por defecto `http://localhost:1416`)',
           'Independiente del proveedor de modelos: se integra con OpenAI, Anthropic, Mistral, Cohere, Hugging Face, Google, Azure OpenAI y AWS Bedrock',
           'deepset también vende Haystack Enterprise Platform y Haystack Enterprise Starter — capas comerciales con constructor visual de pipelines y despliegue gestionado sobre el mismo núcleo open source',
         ],
@@ -829,7 +833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Haystack es un framework Python de código abierto (Apache 2.0, github.com/deepset-ai/haystack) para construir aplicaciones de búsqueda, preguntas y respuestas, y generación aumentada por recuperación (RAG). Lo mantiene deepset, una empresa con sede en Alemania, y se instala con pip install haystack-ai.',
         items: [
           'Iniciado en 2019 como framework de respuesta a preguntas extractiva — encontrar el fragmento exacto de la respuesta dentro de un documento — antes de que los LLM generativos convirtieran el RAG en el patrón dominante',
-          'Reescrito a fondo en torno a Haystack 2.0 hacia la arquitectura Component/Pipeline actual, ahora en la versión 3.1 (publicada el 24/08/2026)',
+          'Reescrito a fondo en torno a Haystack 2.0 hacia la arquitectura Component/Pipeline actual, ahora en la versión 3.2.0 (publicada el 24/09/2026)',
           'Incluye components para conversión de documentos (PDF, HTML, DOCX), división de texto, embedding, retrieval (por palabras clave BM25 y vectorial/semántico), generación y evaluación',
           'La abstracción Document Store separa la lógica del pipeline del backend de almacenamiento — cambiar el store en memoria por Elasticsearch, Weaviate o Pinecone sin reescribir el pipeline',
           'Incluye un document store en memoria listo para usar en desarrollo local y pruebas, sin necesidad de una base de datos externa para empezar',
@@ -971,7 +975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Qué es Haystack?', a: 'Haystack es un framework Python de código abierto de deepset, una empresa con sede en Alemania, para pipelines de búsqueda, preguntas y respuestas, y RAG. Tiene licencia Apache 2.0 y se instala con pip install haystack-ai.' },
           { q: '¿Quién desarrolla Haystack?', a: 'deepset, una empresa con sede en Alemania. deepset inició Haystack en 2019 como framework de respuesta a preguntas extractiva, antes de que la generación aumentada por recuperación fuera un término habitual.' },
           { q: '¿Bajo qué licencia se publica Haystack?', a: 'Apache License 2.0. El código fuente está en github.com/deepset-ai/haystack y puede usarse, modificarse y auto-alojarse libremente.' },
-          { q: '¿Cuál es la versión actual de Haystack?', a: 'Haystack 3.1, publicada el 24 de agosto de 2026. El framework se reescribió a fondo en torno a Haystack 2.0 hacia su arquitectura Component/Pipeline actual.' },
+          { q: '¿Cuál es la versión actual de Haystack?', a: 'Haystack 3.2.0, publicada el 24 de septiembre de 2026. El framework se reescribió a fondo en torno a Haystack 2.0 hacia su arquitectura Component/Pipeline actual.' },
           { q: '¿Cuál es la diferencia entre una Component y un Pipeline en Haystack?', a: 'Una Component es un único paso de procesamiento — un retriever, un embedder, un constructor de prompts o un generador. Un Pipeline es un grafo de components conectadas mediante llamadas explícitas .add_component() y .connect(); ejecutar el pipeline recorre el grafo en orden de dependencias.' },
           { q: '¿En qué se diferencia Haystack de LlamaIndex?', a: 'Haystack organiza los pipelines en torno a Components explícitas y tipadas, conectadas en un grafo Pipeline. LlamaIndex organiza en torno a construir un Index sobre sus datos y consultarlo mediante un Retriever y un QueryEngine. LlamaIndex suele ser más rápido para empezar a indexar datos; el grafo explícito de Haystack ofrece más visibilidad y control para pipelines en producción.' },
           { q: '¿En qué se diferencia Haystack de LangChain?', a: 'Ambos son frameworks Python code-first sin constructor visual en su núcleo open source. LangChain gira en torno a chains y, mediante LangGraph, a un state graph para agentes. Haystack gira en torno a un Pipeline de Components tipadas, donde el retrieval y la búsqueda se tratan como aspectos de primera clase y medibles, no como un eslabón de una cadena generalista.' },
@@ -1027,11 +1031,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'O que é o Haystack e quem o desenvolve?',
-        answer: 'Haystack é um framework Python de código aberto, sob licença Apache 2.0, desenvolvido pela deepset, empresa sediada na Alemanha, para construir pipelines de busca, perguntas e respostas, e geração aumentada por recuperação (RAG). A versão atual é o Haystack 3.1, publicada em 24 de agosto de 2026. Instalação via pip install haystack-ai, código-fonte em github.com/deepset-ai/haystack, com mais de 26.400 estrelas no GitHub.',
+        answer: 'Haystack é um framework Python de código aberto, sob licença Apache 2.0, desenvolvido pela deepset, empresa sediada na Alemanha, para construir pipelines de busca, perguntas e respostas, e geração aumentada por recuperação (RAG). A versão atual é o Haystack 3.2.0, publicada em 24 de setembro de 2026. Instalação via pip install haystack-ai, código-fonte em github.com/deepset-ai/haystack, com mais de 26.400 estrelas no GitHub.',
         bullets: [
           'Licença: Apache 2.0 — uso, modificação e auto-hospedagem livres',
           'Fabricante: deepset GmbH, fundada na Alemanha',
-          'Versão atual: Haystack 3.1 (publicada em 24/08/2026)',
+          'Versão atual: Haystack 3.2.0 (publicada em 24/09/2026)',
           'Instalação: pip install haystack-ai',
           'Abstrações principais: Component (uma etapa de processamento) e Pipeline (um grafo conectado de components)',
           'Origem: iniciado em 2019 como framework de resposta extrativa a perguntas, antes de "RAG" existir como termo',
@@ -1057,7 +1061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Resumo — Haystack em 2026',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Haystack é o framework Python de código aberto (Apache 2.0) da deepset para construir pipelines de busca e RAG em produção a partir de abstrações explícitas e tipadas de Component e Pipeline, atualmente na versão 3.1.' },
+          { type: 'one-sentence', text: 'Haystack é o framework Python de código aberto (Apache 2.0) da deepset para construir pipelines de busca e RAG em produção a partir de abstrações explícitas e tipadas de Component e Pipeline, atualmente na versão 3.2.0.' },
           { type: 'plain-terms', text: 'Em vez de encadear chamadas de função como a maioria das bibliotecas de LLM, o Haystack exige conectar components nomeadas — um retriever, um construtor de prompt, um gerador — em um objeto Pipeline com chamadas .connect() explícitas, deixando o fluxo de dados visível e testável em vez de escondido dentro de uma cadeia.' },
         ],
         items: [
@@ -1065,6 +1069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desenvolvido pela deepset, empresa sediada na Alemanha, desde 2019, inicialmente como framework de resposta extrativa a perguntas e busca — antes de a geração aumentada por recuperação virar um termo comum',
           'Dois blocos: Component (uma etapa de processamento: retriever, embedder, gerador, conversor) e Pipeline (um grafo conectado de components com chamadas .add_component() e .connect() explícitas)',
           'Document Store é uma abstração de backend intercambiável — o Haystack traz um store em memória para testes e se integra com Elasticsearch, Weaviate, Pinecone e outros bancos vetoriais',
+          'O [Hayhooks](https://github.com/deepset-ai/hayhooks), ferramenta própria da deepset, implanta um pipeline do Haystack como servidor de API REST e MCP local, rodando sobre Uvicorn (padrão `http://localhost:1416`)',
           'Independente de provedor de modelo: integra-se com OpenAI, Anthropic, Mistral, Cohere, Hugging Face, Google, Azure OpenAI e AWS Bedrock',
           'A deepset também vende Haystack Enterprise Platform e Haystack Enterprise Starter — camadas comerciais com construtor visual de pipeline e implantação gerenciada sobre o mesmo núcleo open source',
         ],
@@ -1078,7 +1083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Haystack é um framework Python de código aberto (Apache 2.0, github.com/deepset-ai/haystack) para construir aplicações de busca, perguntas e respostas, e geração aumentada por recuperação (RAG). É mantido pela deepset, empresa sediada na Alemanha, e instalado via pip install haystack-ai.',
         items: [
           'Iniciado em 2019 como framework de resposta extrativa a perguntas — encontrar o trecho exato da resposta dentro de um documento — antes de os LLMs generativos tornarem o RAG o padrão dominante',
-          'Reescrito profundamente em torno do Haystack 2.0 rumo à arquitetura Component/Pipeline atual, agora na versão 3.1 (publicada em 24/08/2026)',
+          'Reescrito profundamente em torno do Haystack 2.0 rumo à arquitetura Component/Pipeline atual, agora na versão 3.2.0 (publicada em 24/09/2026)',
           'Traz components para conversão de documentos (PDF, HTML, DOCX), divisão de texto, embedding, retrieval (por palavra-chave BM25 e vetorial/semântico), geração e avaliação',
           'A abstração Document Store desacopla a lógica do pipeline do backend de armazenamento — trocar o store em memória por Elasticsearch, Weaviate ou Pinecone sem reescrever o pipeline',
           'Traz um document store em memória pronto para uso em desenvolvimento local e testes, sem exigir banco de dados externo para começar',
@@ -1220,7 +1225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'O que é o Haystack?', a: 'Haystack é um framework Python de código aberto da deepset, empresa sediada na Alemanha, para pipelines de busca, perguntas e respostas, e RAG. Tem licença Apache 2.0 e é instalado via pip install haystack-ai.' },
           { q: 'Quem desenvolve o Haystack?', a: 'A deepset, empresa sediada na Alemanha. A deepset iniciou o Haystack em 2019 como framework de resposta extrativa a perguntas, antes de a geração aumentada por recuperação virar um termo comum.' },
           { q: 'Sob qual licença o Haystack é publicado?', a: 'Apache License 2.0. O código-fonte está em github.com/deepset-ai/haystack e pode ser usado, modificado e auto-hospedado livremente.' },
-          { q: 'Qual é a versão atual do Haystack?', a: 'Haystack 3.1, publicada em 24 de agosto de 2026. O framework foi profundamente reescrito em torno do Haystack 2.0 rumo à arquitetura Component/Pipeline atual.' },
+          { q: 'Qual é a versão atual do Haystack?', a: 'Haystack 3.2.0, publicada em 24 de setembro de 2026. O framework foi profundamente reescrito em torno do Haystack 2.0 rumo à arquitetura Component/Pipeline atual.' },
           { q: 'Qual é a diferença entre uma Component e um Pipeline no Haystack?', a: 'Uma Component é uma única etapa de processamento — um retriever, um embedder, um construtor de prompt ou um gerador. Um Pipeline é um grafo de components conectadas por chamadas explícitas .add_component() e .connect(); executar o pipeline percorre o grafo na ordem de dependências.' },
           { q: 'Qual é a diferença entre Haystack e LlamaIndex?', a: 'O Haystack organiza pipelines em torno de Components explícitas e tipadas, conectadas em um grafo Pipeline. O LlamaIndex organiza em torno de construir um Index sobre seus dados e consultá-lo por um Retriever e um QueryEngine. O LlamaIndex costuma ser mais rápido para começar a indexar dados; o grafo explícito do Haystack oferece mais visibilidade e controle para pipelines em produção.' },
           { q: 'Qual é a diferença entre Haystack e LangChain?', a: 'Ambos são frameworks Python code-first sem construtor visual em seu núcleo open source. O LangChain gira em torno de chains e, via LangGraph, de um state graph para agentes. O Haystack gira em torno de um Pipeline de Components tipadas, tratando retrieval e busca como preocupações de primeira classe e mensuráveis, não como um elo de uma cadeia generalista.' },
@@ -1276,11 +1281,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'Haystackとは何か、誰が開発しているか?',
-        answer: 'Haystackはドイツに拠点を置くdeepsetが開発する、Apache 2.0ライセンスのオープンソースPythonフレームワークで、検索・質問応答・検索拡張生成(RAG)のパイプラインを構築する。現行バージョンはHaystack 3.1で、2026年8月24日にリリースされた。pip install haystack-aiでインストールでき、ソースコードはgithub.com/deepset-ai/haystackにあり、GitHubスター数は26,400以上。',
+        answer: 'Haystackはドイツに拠点を置くdeepsetが開発する、Apache 2.0ライセンスのオープンソースPythonフレームワークで、検索・質問応答・検索拡張生成(RAG)のパイプラインを構築する。現行バージョンはHaystack 3.2.0で、2026年9月24日にリリースされた。pip install haystack-aiでインストールでき、ソースコードはgithub.com/deepset-ai/haystackにあり、GitHubスター数は26,400以上。',
         bullets: [
           'ライセンス:Apache 2.0——無料で利用・改変・セルフホスト可能',
           '開発元:deepset GmbH、ドイツで設立',
-          '現行バージョン:Haystack 3.1(2026年8月24日リリース)',
+          '現行バージョン:Haystack 3.2.0(2026年9月24日リリース)',
           'インストール:pip install haystack-ai',
           '中核の抽象化:Component(1つの処理ステップ)とPipeline(接続されたComponentのグラフ)',
           '起源:2019年に抽出型質問応答フレームワークとしてスタート、「RAG」という言葉が存在する前のこと',
@@ -1306,7 +1311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'TL;DR — 2026年のHaystack',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Haystackはdeepset製のオープンソース(Apache 2.0)Pythonフレームワークで、型付きの明示的なComponentとPipelineの抽象化から本番環境の検索・RAGパイプラインを構築する。現行バージョンは3.1。' },
+          { type: 'one-sentence', text: 'Haystackはdeepset製のオープンソース(Apache 2.0)Pythonフレームワークで、型付きの明示的なComponentとPipelineの抽象化から本番環境の検索・RAGパイプラインを構築する。現行バージョンは3.2.0。' },
           { type: 'plain-terms', text: '多くのLLMライブラリのように関数呼び出しを連鎖させる代わりに、Haystackは名前付きのComponent——retriever、prompt builder、generator——を.connect()呼び出しで明示的にPipelineオブジェクトへ配線させる。データフローがチェーンの中に隠れず、見える形でテストできる。' },
         ],
         items: [
@@ -1314,6 +1319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ドイツに拠点を置くdeepsetが2019年から開発、当初は抽出型質問応答・検索フレームワークだった——検索拡張生成が一般的な用語になる前のこと',
           '2つの構成要素:Component(1つの処理ステップ:retriever、embedder、generator、converter)とPipeline(.add_component()と.connect()呼び出しで明示的に接続されたComponentのグラフ)',
           'Document Storeは差し替え可能なバックエンド抽象化——Haystackはテスト用のインメモリストアとElasticsearch・Weaviate・Pineconeなどのベクトルデータベース連携を用意',
+          'deepset自身のツール[Hayhooks](https://github.com/deepset-ai/hayhooks)を使うと、HaystackパイプラインをローカルのREST APIおよびMCPツールサーバーとしてデプロイでき、Uvicorn上で動作する(デフォルト`http://localhost:1416`)',
           'モデルプロバイダーに依存しない:OpenAI、Anthropic、Mistral、Cohere、Hugging Face、Google、Azure OpenAI、AWS Bedrockと連携',
           'deepsetはHaystack Enterprise PlatformとHaystack Enterprise Starterという商用製品も販売——同じオープンソースの中核の上に、ビジュアルパイプラインビルダーとマネージドデプロイを重ねたもの',
         ],
@@ -1327,7 +1333,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Haystackは検索・質問応答・検索拡張生成(RAG)アプリケーションを構築するためのオープンソースPythonフレームワーク(Apache 2.0、github.com/deepset-ai/haystack)。ドイツに拠点を置くdeepsetが保守しており、pip install haystack-aiでインストールする。',
         items: [
           '2019年に抽出型質問応答フレームワークとしてスタート——文書内から正確な回答箇所を見つける仕組み——生成AIがRAGを主流パターンにする前のこと',
-          'Haystack 2.0前後で現行のComponent/Pipelineアーキテクチャへ大幅に書き換えられ、現在はバージョン3.1(2026年8月24日リリース)',
+          'Haystack 2.0前後で現行のComponent/Pipelineアーキテクチャへ大幅に書き換えられ、現在はバージョン3.2.0(2026年9月24日リリース)',
           '文書変換(PDF、HTML、DOCX)、テキスト分割、embedding、retrieval(キーワードベースのBM25とベクトル/セマンティック)、生成、評価のためのComponentを提供',
           'Document Store抽象化がパイプラインロジックとストレージバックエンドを分離——パイプラインを書き換えずにインメモリストアをElasticsearch、Weaviate、Pineconeに差し替え可能',
           'ローカル開発・テスト向けにインメモリのdocument storeを標準搭載しており、外部データベースなしで始められる',
@@ -1469,7 +1475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Haystackとは何か?', a: 'Haystackはドイツに拠点を置くdeepsetによるオープンソースPythonフレームワークで、検索・質問応答・RAGのパイプラインを構築する。ライセンスはApache 2.0で、pip install haystack-aiでインストールする。' },
           { q: '誰がHaystackを開発しているか?', a: 'ドイツに拠点を置くdeepset。deepsetは2019年、検索拡張生成が一般的な用語になる前に、抽出型質問応答フレームワークとしてHaystackを開始した。' },
           { q: 'Haystackはどのライセンスで公開されているか?', a: 'Apache License 2.0。ソースコードはgithub.com/deepset-ai/haystackにあり、自由に利用・改変・セルフホストできる。' },
-          { q: 'Haystackの現行バージョンは?', a: 'Haystack 3.1、2026年8月24日リリース。Haystack 2.0前後で現行のComponent/Pipelineアーキテクチャへ大幅に書き換えられた。' },
+          { q: 'Haystackの現行バージョンは?', a: 'Haystack 3.2.0、2026年9月24日リリース。Haystack 2.0前後で現行のComponent/Pipelineアーキテクチャへ大幅に書き換えられた。' },
           { q: 'HaystackにおけるComponentとPipelineの違いは?', a: 'Componentは1つの処理ステップ——retriever、embedder、prompt builder、generatorなど。Pipelineは.add_component()と.connect()の明示的な呼び出しで接続されたComponentのグラフであり、pipelineの実行は依存関係の順序でグラフをたどる。' },
           { q: 'HaystackはLlamaIndexと何が違うか?', a: 'Haystackは明示的で型付きのComponentをPipelineグラフに配線することを中心にパイプラインを組む。LlamaIndexはデータ上にIndexを構築し、RetrieverとQueryEngineを通じて問い合わせることを中心にする。データのインデックス化を始めるのはLlamaIndexの方が概して速く、Haystackの明示的なグラフは本番パイプラインでより高い可視性と制御力を提供する。' },
           { q: 'HaystackはLangChainと何が違うか?', a: 'どちらもコードファーストのPythonフレームワークで、オープンソースの中核にビジュアルビルダーは無い。LangChainはchainを中心に、LangGraphを介してエージェント向けのstate graphを中心にする。Haystackは型付きComponentのPipelineを中心にし、retrievalと検索を汎用チェーンの一部としてではなく、一級市民の測定可能な関心事として扱う。' },
@@ -1525,11 +1531,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       zh: {
         question: 'Haystack是什么,由谁开发?',
-        answer: 'Haystack是一个开源Python框架,采用Apache 2.0许可证,由总部位于德国的deepset开发,用于构建搜索、问答和检索增强生成(RAG)管道。当前版本为Haystack 3.1,于2026年8月24日发布。通过pip install haystack-ai安装,源代码位于github.com/deepset-ai/haystack,GitHub星标超过26,400。',
+        answer: 'Haystack是一个开源Python框架,采用Apache 2.0许可证,由总部位于德国的deepset开发,用于构建搜索、问答和检索增强生成(RAG)管道。当前版本为Haystack 3.2.0,于2026年9月24日发布。通过pip install haystack-ai安装,源代码位于github.com/deepset-ai/haystack,GitHub星标超过26,400。',
         bullets: [
           '许可证:Apache 2.0——可自由使用、修改和自托管',
           '开发方:deepset GmbH,在德国成立',
-          '当前版本:Haystack 3.1(2026年8月24日发布)',
+          '当前版本:Haystack 3.2.0(2026年9月24日发布)',
           '安装:pip install haystack-ai',
           '核心抽象:Component(单个处理步骤)与Pipeline(相互连接的Component图)',
           '起源:2019年作为抽取式问答框架起步,那时"RAG"这个词还不存在',
@@ -1555,7 +1561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'TL;DR——2026年的Haystack',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Haystack是deepset开发的开源(Apache 2.0)Python框架,通过显式、带类型的Component与Pipeline抽象搭建生产级搜索与RAG管道,当前版本为3.1。' },
+          { type: 'one-sentence', text: 'Haystack是deepset开发的开源(Apache 2.0)Python框架,通过显式、带类型的Component与Pipeline抽象搭建生产级搜索与RAG管道,当前版本为3.2.0。' },
           { type: 'plain-terms', text: '大多数LLM库靠链式调用函数,Haystack则要求把命名Component——retriever、prompt builder、generator——通过显式的.connect()调用接入Pipeline对象,数据流因此清晰可见、可测试,而不是藏在一条链里。' },
         ],
         items: [
@@ -1563,6 +1569,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '由总部位于德国的deepset自2019年起开发,最初是抽取式问答与搜索框架——早于检索增强生成成为常用术语',
           '两个构件:Component(单个处理步骤:retriever、embedder、generator、converter)与Pipeline(通过显式.add_component()和.connect()调用连接的Component图)',
           'Document Store是可替换的后端抽象——Haystack自带用于测试的内存存储,并集成Elasticsearch、Weaviate、Pinecone等向量数据库',
+          'deepset自家工具[Hayhooks](https://github.com/deepset-ai/hayhooks)可将Haystack管道部署为本地REST API和MCP工具服务器,运行在Uvicorn上(默认`http://localhost:1416`)',
           '不绑定模型提供商:可与OpenAI、Anthropic、Mistral、Cohere、Hugging Face、Google、Azure OpenAI、AWS Bedrock集成',
           'deepset还销售Haystack Enterprise Platform和Haystack Enterprise Starter——在同一开源核心之上叠加可视化管道构建器和托管部署的商业层',
         ],
@@ -1576,7 +1583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Haystack是一个开源Python框架(Apache 2.0,github.com/deepset-ai/haystack),用于构建搜索、问答和检索增强生成(RAG)应用。由总部位于德国的deepset维护,通过pip install haystack-ai安装。',
         items: [
           '2019年以抽取式问答框架起步——在文档中定位精确的答案片段——早于生成式LLM让RAG成为主流模式',
-          '围绕Haystack 2.0大幅重写为当前的Component/Pipeline架构,目前版本为3.1(2026年8月24日发布)',
+          '围绕Haystack 2.0大幅重写为当前的Component/Pipeline架构,目前版本为3.2.0(2026年9月24日发布)',
           '提供文档转换(PDF、HTML、DOCX)、文本切分、embedding、retrieval(基于关键词的BM25与向量/语义)、生成与评估等Component',
           'Document Store抽象将管道逻辑与存储后端解耦——无需重写管道即可将内存存储替换为Elasticsearch、Weaviate或Pinecone',
           '开箱自带内存文档存储,用于本地开发和测试,无需外部数据库即可上手',
@@ -1718,7 +1725,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Haystack是什么?', a: 'Haystack是总部位于德国的deepset开发的开源Python框架,用于搜索、问答和RAG管道。许可证为Apache 2.0,通过pip install haystack-ai安装。' },
           { q: '谁开发了Haystack?', a: '总部位于德国的deepset。deepset于2019年启动Haystack,当时是抽取式问答框架,早于检索增强生成成为常用术语。' },
           { q: 'Haystack采用什么许可证发布?', a: 'Apache License 2.0。源代码位于github.com/deepset-ai/haystack,可自由使用、修改和自托管。' },
-          { q: 'Haystack目前的版本是多少?', a: 'Haystack 3.1,于2026年8月24日发布。该框架围绕Haystack 2.0进行了大幅重写,形成了当前的Component/Pipeline架构。' },
+          { q: 'Haystack目前的版本是多少?', a: 'Haystack 3.2.0,于2026年9月24日发布。该框架围绕Haystack 2.0进行了大幅重写,形成了当前的Component/Pipeline架构。' },
           { q: 'Haystack中Component和Pipeline有什么区别?', a: 'Component是单个处理步骤——retriever、embedder、prompt builder或generator。Pipeline是通过显式.add_component()和.connect()调用连接起来的Component图;运行pipeline会按依赖顺序遍历整个图。' },
           { q: 'Haystack与LlamaIndex有何不同?', a: 'Haystack围绕接入Pipeline图的显式、带类型Component组织管道。LlamaIndex围绕在你的数据上构建Index、再通过Retriever和QueryEngine查询来组织。开始索引数据通常LlamaIndex更快;Haystack的显式图为生产管道提供了更高的可见性和控制力。' },
           { q: 'Haystack与LangChain有何不同?', a: '两者都是code-first的Python框架,开源核心中都没有可视化构建器。LangChain围绕chain组织,并通过LangGraph提供面向agent的state graph。Haystack围绕由带类型Component组成的Pipeline组织,将retrieval和搜索当作一等、可衡量的关切,而不是通用chain中的一环。' },
@@ -1774,11 +1781,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'ما هو Haystack ومن يطوّره؟',
-        answer: 'Haystack إطار عمل Python مفتوح المصدر، مرخّص بموجب Apache 2.0، طوّرته deepset، شركة مقرها ألمانيا، لبناء أنظمة البحث والإجابة على الأسئلة والتوليد المعزَّز بالاسترجاع (RAG). الإصدار الحالي هو Haystack 3.1، الصادر في 24 أغسطس 2026. يُثبَّت عبر pip install haystack-ai، والشيفرة المصدرية على github.com/deepset-ai/haystack، بأكثر من 26,400 نجمة على GitHub.',
+        answer: 'Haystack إطار عمل Python مفتوح المصدر، مرخّص بموجب Apache 2.0، طوّرته deepset، شركة مقرها ألمانيا، لبناء أنظمة البحث والإجابة على الأسئلة والتوليد المعزَّز بالاسترجاع (RAG). الإصدار الحالي هو Haystack 3.2.0، الصادر في 24 سبتمبر 2026. يُثبَّت عبر pip install haystack-ai، والشيفرة المصدرية على github.com/deepset-ai/haystack، بأكثر من 26,400 نجمة على GitHub.',
         bullets: [
           'الترخيص: Apache 2.0 — استخدام وتعديل واستضافة ذاتية مجانية',
           'الجهة المطوِّرة: deepset GmbH، تأسست في ألمانيا',
-          'الإصدار الحالي: Haystack 3.1 (صدر في 2026-08-24)',
+          'الإصدار الحالي: Haystack 3.2.0 (صدر في 2026-09-24)',
           'التثبيت: pip install haystack-ai',
           'التجريدات الأساسية: Component (خطوة معالجة واحدة) و Pipeline (رسم بياني متصل من Components)',
           'الأصل: بدأ عام 2019 كإطار عمل للإجابة الاستخراجية على الأسئلة، قبل وجود مصطلح "RAG"',
@@ -1804,7 +1811,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الملخص — Haystack في 2026',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Haystack إطار عمل Python مفتوح المصدر (Apache 2.0) من deepset لبناء أنظمة بحث و RAG إنتاجية من تجريدات Component و Pipeline صريحة ومحددة النوع، وهو حاليًا في الإصدار 3.1.' },
+          { type: 'one-sentence', text: 'Haystack إطار عمل Python مفتوح المصدر (Apache 2.0) من deepset لبناء أنظمة بحث و RAG إنتاجية من تجريدات Component و Pipeline صريحة ومحددة النوع، وهو حاليًا في الإصدار 3.2.0.' },
           { type: 'plain-terms', text: 'بدلًا من ربط استدعاءات الدوال تسلسليًا كما تفعل معظم مكتبات النماذج اللغوية، يفرض Haystack توصيل Components مسمّاة — retriever وprompt builder وgenerator — داخل كائن Pipeline عبر استدعاءات .connect() صريحة، فيصبح تدفق البيانات مرئيًا وقابلًا للاختبار بدلًا من أن يكون مخفيًا داخل سلسلة.' },
         ],
         items: [
@@ -1812,6 +1819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'طوّرته deepset، شركة مقرها ألمانيا، منذ عام 2019، بدايةً كإطار عمل للإجابة الاستخراجية على الأسئلة والبحث — قبل أن يصبح التوليد المعزَّز بالاسترجاع مصطلحًا شائعًا',
           'مكوّنان أساسيان: Component (خطوة معالجة واحدة: retriever، embedder، generator، converter) و Pipeline (رسم بياني متصل من Components عبر استدعاءات .add_component() و.connect() صريحة)',
           'Document Store هو تجريد خلفي قابل للاستبدال — يوفر Haystack مخزنًا في الذاكرة للاختبار ويتكامل مع Elasticsearch وWeaviate وPinecone وقواعد بيانات متجهية أخرى',
+          'تتيح أداة [Hayhooks](https://github.com/deepset-ai/hayhooks) الخاصة بـ deepset نشر خط أنابيب Haystack كخادم API من نوع REST وأداة MCP محليًا، يعمل على Uvicorn (الافتراضي `http://localhost:1416`)',
           'مستقل عن مزوّد النموذج: يتكامل مع OpenAI وAnthropic وMistral وCohere وHugging Face وGoogle وAzure OpenAI وAWS Bedrock',
           'تبيع deepset أيضًا Haystack Enterprise Platform وHaystack Enterprise Starter — طبقات تجارية توفر أداة بناء pipeline مرئية ونشرًا مُدارًا فوق النواة مفتوحة المصدر نفسها',
         ],
@@ -1825,7 +1833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Haystack إطار عمل Python مفتوح المصدر (Apache 2.0، github.com/deepset-ai/haystack) لبناء تطبيقات البحث والإجابة على الأسئلة والتوليد المعزَّز بالاسترجاع (RAG). تتولى صيانته deepset، شركة مقرها ألمانيا، ويُثبَّت عبر pip install haystack-ai.',
         items: [
           'بدأ عام 2019 كإطار عمل للإجابة الاستخراجية على الأسئلة — إيجاد المقطع الدقيق للإجابة داخل مستند — قبل أن تجعل النماذج التوليدية RAG النمط السائد',
-          'أُعيدت كتابته بشكل جوهري حول Haystack 2.0 نحو بنية Component/Pipeline الحالية، وهو حاليًا في الإصدار 3.1 (صدر في 2026-08-24)',
+          'أُعيدت كتابته بشكل جوهري حول Haystack 2.0 نحو بنية Component/Pipeline الحالية، وهو حاليًا في الإصدار 3.2.0 (صدر في 2026-09-24)',
           'يوفر Components لتحويل المستندات (PDF وHTML وDOCX) وتقسيم النصوص والـembedding والـretrieval (بالكلمات المفتاحية BM25 وبالمتجهات/الدلالي) والتوليد والتقييم',
           'تجريد Document Store يفصل منطق الـpipeline عن خلفية التخزين — استبدل المخزن في الذاكرة بـElasticsearch أو Weaviate أو Pinecone دون إعادة كتابة الـpipeline',
           'يوفر مخزن مستندات في الذاكرة جاهزًا للتطوير المحلي والاختبار، دون الحاجة إلى قاعدة بيانات خارجية للبدء',
@@ -1967,7 +1975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ما هو Haystack؟', a: 'Haystack إطار عمل Python مفتوح المصدر من deepset، شركة مقرها ألمانيا، لبناء خطوط البحث والإجابة على الأسئلة وRAG. مرخّص بموجب Apache 2.0، ويُثبَّت عبر pip install haystack-ai.' },
           { q: 'من يطوّر Haystack؟', a: 'deepset، شركة مقرها ألمانيا. أطلقت deepset Haystack عام 2019 كإطار عمل للإجابة الاستخراجية على الأسئلة، قبل أن يصبح التوليد المعزَّز بالاسترجاع مصطلحًا شائعًا.' },
           { q: 'بأي ترخيص يُنشَر Haystack؟', a: 'Apache License 2.0. الشيفرة المصدرية على github.com/deepset-ai/haystack ويمكن استخدامها وتعديلها واستضافتها ذاتيًا بحرية.' },
-          { q: 'ما هو الإصدار الحالي من Haystack؟', a: 'Haystack 3.1، صدر في 24 أغسطس 2026. أُعيدت كتابة إطار العمل بشكل جوهري حول Haystack 2.0 نحو بنية Component/Pipeline الحالية.' },
+          { q: 'ما هو الإصدار الحالي من Haystack؟', a: 'Haystack 3.2.0، صدر في 24 سبتمبر 2026. أُعيدت كتابة إطار العمل بشكل جوهري حول Haystack 2.0 نحو بنية Component/Pipeline الحالية.' },
           { q: 'ما الفرق بين Component وPipeline في Haystack؟', a: 'الـComponent خطوة معالجة واحدة — retriever أو embedder أو prompt builder أو generator. الـPipeline رسم بياني من Components متصلة عبر استدعاءات .add_component() و.connect() صريحة؛ يمر تشغيل الـpipeline عبر الرسم البياني حسب ترتيب الاعتماديات.' },
           { q: 'كيف يختلف Haystack عن LlamaIndex؟', a: 'ينظّم Haystack الـpipelines حول Components صريحة ومحددة النوع، موصولة داخل رسم Pipeline. ينظّم LlamaIndex حول بناء Index فوق بياناتك، والاستعلام عنه عبر Retriever وQueryEngine. عادةً ما يكون LlamaIndex أسرع للبدء في فهرسة البيانات؛ يوفر رسم Haystack الصريح رؤية وتحكمًا أكبر للـpipelines الإنتاجية.' },
           { q: 'كيف يختلف Haystack عن LangChain؟', a: 'كلاهما إطارا عمل Python يعتمدان الشيفرة أولًا، دون أداة بناء مرئية في النواة مفتوحة المصدر. يتمحور LangChain حول chains، وعبر LangGraph حول state graph للوكلاء. يتمحور Haystack حول Pipeline من Components محددة النوع، ويعامل الـretrieval والبحث كاهتمامات من الدرجة الأولى وقابلة للقياس، لا كحلقة في سلسلة عامة.' },
@@ -2023,11 +2031,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ko: {
         question: 'Haystack이란 무엇이고 누가 만드는가?',
-        answer: 'Haystack은 독일에 본사를 둔 deepset이 만든 Apache 2.0 라이선스의 오픈소스 Python 프레임워크로, 검색·질의응답·검색 증강 생성(RAG) 파이프라인을 구축하는 데 쓰인다. 현재 버전은 Haystack 3.1로, 2026년 8월 24일 출시되었다. pip install haystack-ai로 설치하며, 소스코드는 github.com/deepset-ai/haystack에 있고 GitHub 스타는 26,400개 이상이다.',
+        answer: 'Haystack은 독일에 본사를 둔 deepset이 만든 Apache 2.0 라이선스의 오픈소스 Python 프레임워크로, 검색·질의응답·검색 증강 생성(RAG) 파이프라인을 구축하는 데 쓰인다. 현재 버전은 Haystack 3.2.0로, 2026년 9월 24일 출시되었다. pip install haystack-ai로 설치하며, 소스코드는 github.com/deepset-ai/haystack에 있고 GitHub 스타는 26,400개 이상이다.',
         bullets: [
           '라이선스: Apache 2.0 — 자유로운 사용·수정·셀프호스팅 가능',
           '개발사: deepset GmbH, 독일에서 설립',
-          '현재 버전: Haystack 3.1(2026-08-24 출시)',
+          '현재 버전: Haystack 3.2.0(2026-09-24 출시)',
           '설치: pip install haystack-ai',
           '핵심 추상화: Component(단일 처리 단계)와 Pipeline(연결된 Component 그래프)',
           '기원: 2019년 추출형 질의응답 프레임워크로 시작, "RAG"라는 용어가 존재하기 전',
@@ -2053,7 +2061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '요약 — 2026년의 Haystack',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Haystack은 deepset이 만든 오픈소스(Apache 2.0) Python 프레임워크로, 명시적이고 타입이 지정된 Component·Pipeline 추상화로 프로덕션 검색·RAG 파이프라인을 구축하며, 현재 버전은 3.1이다.' },
+          { type: 'one-sentence', text: 'Haystack은 deepset이 만든 오픈소스(Apache 2.0) Python 프레임워크로, 명시적이고 타입이 지정된 Component·Pipeline 추상화로 프로덕션 검색·RAG 파이프라인을 구축하며, 현재 버전은 3.2.0이다.' },
           { type: 'plain-terms', text: '대부분의 LLM 라이브러리처럼 함수 호출을 연쇄시키는 대신, Haystack은 retriever·prompt builder·generator 같은 이름 붙은 Component를 .connect() 호출로 명시적으로 Pipeline 객체에 연결하도록 요구한다. 그 결과 데이터 흐름이 체인 속에 숨지 않고 눈에 보이며 테스트 가능해진다.' },
         ],
         items: [
@@ -2061,6 +2069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '독일에 본사를 둔 deepset이 2019년부터 개발, 처음에는 추출형 질의응답·검색 프레임워크였음 — 검색 증강 생성이 일반적인 용어가 되기 전',
           '두 가지 구성 요소: Component(단일 처리 단계: retriever, embedder, generator, converter)와 Pipeline(.add_component()와 .connect() 호출로 명시적으로 연결된 Component 그래프)',
           'Document Store는 교체 가능한 백엔드 추상화 — Haystack은 테스트용 인메모리 스토어를 제공하며 Elasticsearch, Weaviate, Pinecone 등 벡터 데이터베이스와 통합됨',
+          'deepset 자체 도구인 [Hayhooks](https://github.com/deepset-ai/hayhooks)를 사용하면 Haystack 파이프라인을 로컬 REST API 및 MCP 도구 서버로 배포할 수 있으며, Uvicorn에서 실행됨(기본값 `http://localhost:1416`)',
           '모델 제공업체에 종속되지 않음: OpenAI, Anthropic, Mistral, Cohere, Hugging Face, Google, Azure OpenAI, AWS Bedrock과 통합',
           'deepset은 Haystack Enterprise Platform과 Haystack Enterprise Starter라는 상용 제품도 판매 — 동일한 오픈소스 코어 위에 시각적 파이프라인 빌더와 매니지드 배포를 더한 유료 계층',
         ],
@@ -2074,7 +2083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Haystack은 검색·질의응답·검색 증강 생성(RAG) 애플리케이션을 구축하는 오픈소스 Python 프레임워크(Apache 2.0, github.com/deepset-ai/haystack)다. 독일에 본사를 둔 deepset이 유지 관리하며 pip install haystack-ai로 설치한다.',
         items: [
           '2019년 추출형 질의응답 프레임워크로 시작 — 문서 안에서 정확한 답변 구간을 찾는 방식 — 생성형 LLM이 RAG를 주류 패턴으로 만들기 전',
-          'Haystack 2.0을 전후로 현재의 Component/Pipeline 아키텍처로 대폭 재작성되었고, 현재는 버전 3.1(2026-08-24 출시)',
+          'Haystack 2.0을 전후로 현재의 Component/Pipeline 아키텍처로 대폭 재작성되었고, 현재는 버전 3.2.0(2026-09-24 출시)',
           '문서 변환(PDF, HTML, DOCX), 텍스트 분할, embedding, retrieval(키워드 기반 BM25 및 벡터/의미 기반), 생성, 평가를 위한 Component 제공',
           'Document Store 추상화가 파이프라인 로직을 저장소 백엔드에서 분리 — 파이프라인을 다시 작성하지 않고 인메모리 스토어를 Elasticsearch, Weaviate, Pinecone로 교체 가능',
           '로컬 개발과 테스트를 위한 인메모리 문서 저장소를 기본 제공하며, 시작에 외부 데이터베이스가 필요 없음',
@@ -2216,7 +2225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Haystack이란 무엇인가?', a: 'Haystack은 독일에 본사를 둔 deepset이 만든 오픈소스 Python 프레임워크로, 검색·질의응답·RAG 파이프라인을 구축하는 데 쓰인다. Apache 2.0 라이선스이며 pip install haystack-ai로 설치한다.' },
           { q: 'Haystack은 누가 만드는가?', a: '독일에 본사를 둔 deepset이다. deepset은 검색 증강 생성이 일반적인 용어가 되기 전인 2019년, 추출형 질의응답 프레임워크로 Haystack을 시작했다.' },
           { q: 'Haystack은 어떤 라이선스로 배포되는가?', a: 'Apache License 2.0이다. 소스코드는 github.com/deepset-ai/haystack에 있으며 자유롭게 사용·수정·셀프호스팅할 수 있다.' },
-          { q: 'Haystack의 현재 버전은 무엇인가?', a: 'Haystack 3.1로, 2026년 8월 24일 출시되었다. 이 프레임워크는 Haystack 2.0을 전후로 현재의 Component/Pipeline 아키텍처로 대폭 재작성되었다.' },
+          { q: 'Haystack의 현재 버전은 무엇인가?', a: 'Haystack 3.2.0로, 2026년 9월 24일 출시되었다. 이 프레임워크는 Haystack 2.0을 전후로 현재의 Component/Pipeline 아키텍처로 대폭 재작성되었다.' },
           { q: 'Haystack에서 Component와 Pipeline의 차이는 무엇인가?', a: 'Component는 하나의 처리 단계다 — retriever, embedder, prompt builder, 또는 generator. Pipeline은 .add_component()와 .connect()의 명시적 호출로 연결된 Component의 그래프이며, 파이프라인 실행은 의존성 순서로 이 그래프를 순회한다.' },
           { q: 'Haystack은 LlamaIndex와 어떻게 다른가?', a: 'Haystack은 Pipeline 그래프에 연결된 명시적이고 타입이 지정된 Component를 중심으로 파이프라인을 구성한다. LlamaIndex는 데이터 위에 Index를 구축하고 Retriever와 QueryEngine을 통해 조회하는 것을 중심으로 구성한다. 데이터 인덱싱을 시작하는 데는 대체로 LlamaIndex가 더 빠르며, Haystack의 명시적 그래프는 프로덕션 파이프라인에 더 높은 가시성과 제어력을 제공한다.' },
           { q: 'Haystack은 LangChain과 어떻게 다른가?', a: '둘 다 코드 우선 Python 프레임워크로, 오픈소스 코어에는 시각적 빌더가 없다. LangChain은 chain을 중심으로, LangGraph를 통해 에이전트를 위한 state graph를 중심으로 구성된다. Haystack은 타입이 지정된 Component의 Pipeline을 중심으로 구성되며, retrieval과 검색을 범용 체인의 한 고리가 아니라 1급이면서 측정 가능한 관심사로 다룬다.' },

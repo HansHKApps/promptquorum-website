@@ -34,9 +34,11 @@ export const app: ToolRecord = {
     ko: '시각적 LangChain 워크플로 빌더',
   },
   reviewSlug: 'flowise-ai-visual-workflow-builder-review', // dedicated PromptQuorum review — pinned to #1 in the article index
-  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { visualBuilder: true, agents: true, multiVector: true, dockerDeploy: true, apiServer: true },
+  pqReview: { date: '2026-09-25', version: 'v3.1.4', versionSourceUrl: 'https://github.com/FlowiseAI/Flowise/releases/tag/flowise%403.1.4' },
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-25; a missing key = not stated there, never false.
+  // localLlm confirmed via the dedicated Ollama integration page: https://docs.flowiseai.com/integrations/langchain/llms/ollama
+  compare: { visualBuilder: true, localLlm: true, agents: true, multiVector: true, dockerDeploy: true, apiServer: true },
   // GitHub repo archived 2026-08-10 (per its review; GitHub API archived=true, checked 2026-09-21)
   upstreamStatus: { state: 'archived', since: '2026-08-10' },
-  lastVerifiedDate: null, // TODO: not derivable from source article
+  lastVerifiedDate: '2026-09-25',
 }
