@@ -103,7 +103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Task', 'Cloud Agents', 'Local Agents'],
           rows: [
             { 'Task': 'Multi-step reasoning', 'Cloud Agents': 'Excellent (GPT-5.6, Claude)', 'Local Agents': 'Good (13B+, DeepSeek-R1)' },
-            { 'Task': 'Code generation', 'Cloud Agents': 'Excellent', 'Local Agents': 'Good (Qwen3-Coder 32B)' },
+            { 'Task': 'Code generation', 'Cloud Agents': 'Excellent', 'Local Agents': 'Good (Qwen2.5-Coder 32B)' },
             { 'Task': 'Web search/browsing', 'Cloud Agents': 'Native (built-in)', 'Local Agents': 'DIY via [LangGraph](/local-llms/local-ai-agents-langgraph-ollama)' },
             { 'Task': 'Document processing', 'Cloud Agents': 'Excellent', 'Local Agents': 'Good (via local RAG)' },
             { 'Task': 'Tool usage', 'Cloud Agents': 'Native function calling', 'Local Agents': 'Works via Ollama tool API' },
@@ -367,7 +367,7 @@ schema: {
           columns: ['Tarea', 'Agentes Cloud', 'Agentes locales'],
           rows: [
             { 'Tarea': 'Razonamiento multietapa', 'Agentes Cloud': 'Excelente (GPT-5.6, Claude)', 'Agentes locales': 'Bueno (13B+, DeepSeek-R1)' },
-            { 'Tarea': 'Generación de código', 'Agentes Cloud': 'Excelente', 'Agentes locales': 'Bueno (Qwen3-Coder 32B)' },
+            { 'Tarea': 'Generación de código', 'Agentes Cloud': 'Excelente', 'Agentes locales': 'Bueno (Qwen2.5-Coder 32B)' },
             { 'Tarea': 'Búsqueda web/navegación', 'Agentes Cloud': 'Nativo (integrado)', 'Agentes locales': 'DIY via [LangGraph](/es/local-llms/local-ai-agents-langgraph-ollama)' },
             { 'Tarea': 'Procesamiento de documentos', 'Agentes Cloud': 'Excelente', 'Agentes locales': 'Bueno (via RAG local)' },
             { 'Tarea': 'Uso de herramientas', 'Agentes Cloud': 'Function calling nativo', 'Agentes locales': 'Funciona via Ollama tool API' },
@@ -639,7 +639,7 @@ schema: {
           columns: ['Tarea', 'Agentes Cloud', 'Agentes locales'],
           rows: [
             { 'Tarea': 'استدلال متعدد المراحل', 'Agentes Cloud': 'ممتاز (GPT-5.6، Claude)', 'Agentes locales': 'جيد (13B+، DeepSeek-R1)' },
-            { 'Tarea': 'توليد الشيفرة', 'Agentes Cloud': 'ممتاز', 'Agentes locales': 'جيد (Qwen3-Coder 32B)' },
+            { 'Tarea': 'توليد الشيفرة', 'Agentes Cloud': 'ممتاز', 'Agentes locales': 'جيد (Qwen2.5-Coder 32B)' },
             { 'Tarea': 'بحث/تصفّح ويب', 'Agentes Cloud': 'أصلي (مدمج)', 'Agentes locales': 'يدوي عبر [LangGraph](/ar/local-llms/local-ai-agents-langgraph-ollama)' },
             { 'Tarea': 'معالجة المستندات', 'Agentes Cloud': 'ممتاز', 'Agentes locales': 'جيد (عبر RAG محلي)' },
             { 'Tarea': 'استخدام الأدوات', 'Agentes Cloud': 'function calling أصلي', 'Agentes locales': 'يعمل عبر Ollama tool API' },
@@ -909,7 +909,7 @@ schema: {
           columns: ['Tarefa', 'Agentes na Nuvem', 'Agentes locais'],
           rows: [
             { 'Tarefa': 'Raciocínio multi-etapa', 'Agentes na Nuvem': 'Excelente (GPT-5.6, Claude)', 'Agentes locais': 'Bom (13B+, DeepSeek-R1)' },
-            { 'Tarefa': 'Geração de código', 'Agentes na Nuvem': 'Excelente', 'Agentes locais': 'Bom (Qwen3-Coder 32B)' },
+            { 'Tarefa': 'Geração de código', 'Agentes na Nuvem': 'Excelente', 'Agentes locais': 'Bom (Qwen2.5-Coder 32B)' },
             { 'Tarefa': 'Busca web/navegação', 'Agentes na Nuvem': 'Nativo (integrado)', 'Agentes locais': 'DIY via LangGraph/Ollama' },
             { 'Tarefa': 'Processamento de documentos', 'Agentes na Nuvem': 'Excelente', 'Agentes locais': 'Bom (via RAG local)' },
             { 'Tarefa': 'Uso de ferramentas', 'Agentes na Nuvem': 'Function calling nativo', 'Agentes locais': 'Funciona via Ollama tool API' },
@@ -1142,7 +1142,7 @@ schema: {
           columns: ['Aufgabe', 'Cloud-Agenten', 'Local-Agenten'],
           rows: [
             { 'Aufgabe': 'Multi-Step-Reasoning', 'Cloud-Agenten': 'Hervorragend (GPT-5.6, Claude)', 'Local-Agenten': 'Gut (13B+, DeepSeek-R1)' },
-            { 'Aufgabe': 'Code-Generierung', 'Cloud-Agenten': 'Hervorragend', 'Local-Agenten': 'Gut (Qwen3-Coder 32B)' },
+            { 'Aufgabe': 'Code-Generierung', 'Cloud-Agenten': 'Hervorragend', 'Local-Agenten': 'Gut (Qwen2.5-Coder 32B)' },
             { 'Aufgabe': 'Websuche/Browsing', 'Cloud-Agenten': 'Nativ (eingebaut)', 'Local-Agenten': 'Selbstgebaut via [LangGraph](/de/local-llms/local-ai-agents-langgraph-ollama)' },
             { 'Aufgabe': 'Dokumentenverarbeitung', 'Cloud-Agenten': 'Hervorragend', 'Local-Agenten': 'Gut (via lokales RAG)' },
             { 'Aufgabe': 'Tool-Nutzung', 'Cloud-Agenten': 'Nativ Function Calling', 'Local-Agenten': 'Funktioniert via Ollama Tool API' },
@@ -1458,7 +1458,7 @@ schema: {
           columns: ['Tâche', 'Agents Cloud', 'Agents locaux'],
           rows: [
             { 'Tâche': 'Raisonnement multi-étapes', 'Agents Cloud': 'Excellent (GPT-5.6, Claude)', 'Agents locaux': 'Bon (13B+, DeepSeek-R1)' },
-            { 'Tâche': 'Génération de code', 'Agents Cloud': 'Excellent', 'Agents locaux': 'Bon (Qwen3-Coder 32B)' },
+            { 'Tâche': 'Génération de code', 'Agents Cloud': 'Excellent', 'Agents locaux': 'Bon (Qwen2.5-Coder 32B)' },
             { 'Tâche': 'Recherche/navigation web', 'Agents Cloud': 'Natif (intégré)', 'Agents locaux': 'Personnalisé via [LangGraph](/fr/local-llms/local-ai-agents-langgraph-ollama)' },
             { 'Tâche': 'Traitement de documents', 'Agents Cloud': 'Excellent', 'Agents locaux': 'Bon (via RAG local)' },
             { 'Tâche': 'Utilisation d\'outils', 'Agents Cloud': 'Appel de fonction natif', 'Agents locaux': 'Fonctionne via API d\'outils Ollama' },
@@ -1773,7 +1773,7 @@ schema: {
           columns: ['タスク', 'Cloudエージェント', 'Localエージェント'],
           rows: [
             { 'タスク': 'マルチステップreasoning', 'Cloudエージェント': '優秀(GPT-5.6, Claude)', 'Localエージェント': '良好(13B+, DeepSeek-R1)' },
-            { 'タスク': 'コード生成', 'Cloudエージェント': '優秀', 'Localエージェント': '良好(Qwen3-Coder 32B)' },
+            { 'タスク': 'コード生成', 'Cloudエージェント': '優秀', 'Localエージェント': '良好(Qwen2.5-Coder 32B)' },
             { 'タスク': 'ウェブ検索/ブラウジング', 'Cloudエージェント': 'ネイティブ(内蔵)', 'Localエージェント': 'カスタム構築via [LangGraph](/ja/local-llms/local-ai-agents-langgraph-ollama)' },
             { 'タスク': 'ドキュメント処理', 'Cloudエージェント': '優秀', 'Localエージェント': '良好(ローカルRAG経由)' },
             { 'タスク': 'ツール利用', 'Cloudエージェント': 'ネイティブ関数呼び出し', 'Localエージェント': 'Ollama Tool API経由で機能' },
@@ -2048,7 +2048,7 @@ schema: {
           columns: ['任务', '云端代理', '本地代理'],
           rows: [
             { '任务': '多步推理', '云端代理': '优秀(GPT-5.6、Claude)', '本地代理': '良好(13B+、DeepSeek-R1)' },
-            { '任务': '代码生成', '云端代理': '优秀', '本地代理': '良好(Qwen3-Coder 32B)' },
+            { '任务': '代码生成', '云端代理': '优秀', '本地代理': '良好(Qwen2.5-Coder 32B)' },
             { '任务': '网络搜索/浏览', '云端代理': '原生(内置)', '本地代理': 'DIY via [LangGraph](/zh/local-llms/local-ai-agents-langgraph-ollama)' },
             { '任务': '文档处理', '云端代理': '优秀', '本地代理': '良好(通过本地RAG)' },
             { '任务': '工具使用', '云端代理': '原生函数调用', '本地代理': '通过Ollama工具API工作' },
@@ -2323,7 +2323,7 @@ schema: {
           columns: ['작업', '클라우드 에이전트', '로컬 에이전트'],
           rows: [
             { '작업': '다단계 추론', '클라우드 에이전트': '우수 (GPT-5.6, Claude)', '로컬 에이전트': '양호 (13B+, DeepSeek-R1)' },
-            { '작업': '코드 생성', '클라우드 에이전트': '우수', '로컬 에이전트': '양호 (Qwen3-Coder 32B)' },
+            { '작업': '코드 생성', '클라우드 에이전트': '우수', '로컬 에이전트': '양호 (Qwen2.5-Coder 32B)' },
             { '작업': '웹 검색/브라우징', '클라우드 에이전트': '기본 제공 (내장)', '로컬 에이전트': '[LangGraph](/ko/local-llms/local-ai-agents-langgraph-ollama)를 통한 직접 구현' },
             { '작업': '문서 처리', '클라우드 에이전트': '우수', '로컬 에이전트': '양호 (로컬 RAG를 통해)' },
             { '작업': '도구 사용', '클라우드 에이전트': '기본 함수 호출', '로컬 에이전트': 'Ollama tool API를 통해 지원됨' },

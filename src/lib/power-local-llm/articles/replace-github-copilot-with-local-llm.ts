@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Replace Copilot with Continue.dev + Qwen3-Coder. Setup, cost math (24-month break-even), and honest quality comparison.',
     gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
     gammaDescription: 'The slide deck below covers: the Continue.dev + Ollama + Qwen3-Coder stack ($0/month vs $20/month Copilot), 24-month cost math showing 8–14 month breakeven on existing hardware, quality test results (90–95% of Copilot on TypeScript and Python), and a 6-step setup walkthrough. Download the PDF as a local Copilot replacement reference card.',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen3-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3', 'Codestral 22B'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
     audience: 'Software developers evaluating whether to drop a Copilot subscription in favor of a local coding assistant.',
     readTime: '13 min read',
@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev — free open-source VS Code/JetBrains extension; the best Copilot replacement frontend in 2026',
           'Qwen3-Coder 30B Q4_K_M — strongest open-source coding model in August 2026; needs ~18 GB VRAM',
-          'Qwen3-Coder 7B — lightweight option for 8 GB VRAM (RTX 3060 / RTX 3070); 80-85% of 30B quality',
+          'Qwen2.5-Coder 7B — lightweight option for 8 GB VRAM (RTX 3060 / RTX 3070); 80-85% of 30B quality',
           'Cost math — $20/month Copilot × 24 months = $480; local hardware breaks even in 8-14 months',
           'Privacy bonus — your proprietary code never leaves your machine, useful for client work and NDA-protected projects',
         ],
@@ -123,7 +123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Continue.dev** (free, open-source) — the VS Code/JetBrains extension. Ships autocomplete, chat, and agent mode. The Copilot-equivalent frontend.',
           '**Ollama** — the local model runtime. One-line install. Manages model downloads, quantization, GPU offload, and exposes an OpenAI-compatible API.',
           '**Qwen3-Coder 30B Q4_K_M** — the model. Strongest open-source coding model in August 2026 on HumanEval+, MBPP+, and real refactor tasks. Needs ~18 GB VRAM.',
-          '**Qwen3-Coder 7B** — fallback for 8-12 GB VRAM cards. Reaches 80-85% of 30B quality. Recommended for RTX 3060 12 GB and M3 Pro 16 GB Macs.',
+          '**Qwen2.5-Coder 7B** — fallback for 8-12 GB VRAM cards. Reaches 80-85% of 30B quality. Recommended for RTX 3060 12 GB and M3 Pro 16 GB Macs.',
         ],
         callouts: [
           {
@@ -223,10 +223,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: 'What Hardware Do You Need?',
         rows: [
-          { 'Hardware': 'RTX 3060 12 GB', 'Recommended model': 'Qwen3-Coder 7B Q4', 'Tokens/sec': '60-75', 'Suitable for': 'Most everyday work' },
-          { 'Hardware': 'RTX 4070 12 GB', 'Recommended model': 'Qwen3-Coder 7B Q5_K_M', 'Tokens/sec': '85-100', 'Suitable for': 'All everyday work' },
+          { 'Hardware': 'RTX 3060 12 GB', 'Recommended model': 'Qwen2.5-Coder 7B Q4', 'Tokens/sec': '60-75', 'Suitable for': 'Most everyday work' },
+          { 'Hardware': 'RTX 4070 12 GB', 'Recommended model': 'Qwen2.5-Coder 7B Q5_K_M', 'Tokens/sec': '85-100', 'Suitable for': 'All everyday work' },
           { 'Hardware': 'RTX 4090 / 5090 24 GB', 'Recommended model': 'Qwen3-Coder 30B Q4_K_M', 'Tokens/sec': '70-90', 'Suitable for': 'Power users, large refactors' },
-          { 'Hardware': 'Apple M3 Pro (18 GB)', 'Recommended model': 'Qwen3-Coder 7B', 'Tokens/sec': '40-55', 'Suitable for': 'Daily driver Mac' },
+          { 'Hardware': 'Apple M3 Pro (18 GB)', 'Recommended model': 'Qwen2.5-Coder 7B', 'Tokens/sec': '40-55', 'Suitable for': 'Daily driver Mac' },
           { 'Hardware': 'Apple M3 Max / M5 (32 GB+)', 'Recommended model': 'Qwen3-Coder 30B', 'Tokens/sec': '35-50', 'Suitable for': 'Mac power users' },
         ],
         columns: ['Hardware', 'Recommended model', 'Tokens/sec', 'Suitable for'],
@@ -235,7 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Common Mistakes',
         items: [
-          '**Mistake 1: Running the 30B model on 8 GB VRAM.** The model loads but thrashes between GPU and system RAM. Autocomplete takes 2-5 seconds instead of 280 ms — unusable. Fix: use Qwen3-Coder 7B on 8-12 GB VRAM cards. The 30B model needs 18+ GB. Check actual usage with `ollama ps`.',
+          '**Mistake 1: Running the 30B model on 8 GB VRAM.** The model loads but thrashes between GPU and system RAM. Autocomplete takes 2-5 seconds instead of 280 ms — unusable. Fix: use Qwen2.5-Coder 7B on 8-12 GB VRAM cards. The 30B model needs 18+ GB. Check actual usage with `ollama ps`.',
           '**Mistake 2: Comparing local quality only on rare libraries and declaring it worse.** Local models underperform on niche SDKs with sparse public docs. This is expected and well-documented; testing only on rare libraries gives a misleading picture. Fix: test on the languages and patterns you write 80% of the time. That is the quality that matters.',
           '**Mistake 3: Forgetting to enable agent mode.** Continue.dev ships with agent mode off by default. Without it you are missing multi-file edits — the feature that makes the setup competitive with Copilot\'s newer plans. Fix: Continue.dev settings → enable agent mode → grant file-edit and terminal permissions with confirmation.',
           '**Mistake 4: Never updating the model.** A new generation lands roughly every six months. Staying on the old version means leaving quality on the table. Fix: check for new releases quarterly. `ollama pull qwen3-coder:30b` overwrites the old version; keep the previous tag for one week as a rollback.',
@@ -259,7 +259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Will Continue.dev work with models other than Qwen3-Coder?',
-            a: 'Yes. Continue.dev supports any OpenAI-compatible endpoint, plus first-class integrations with Ollama, vLLM, and llama.cpp. You can swap in DeepSeek Coder V3, Codestral, or Granite Code without changing the extension.',
+            a: 'Yes. Continue.dev supports any OpenAI-compatible endpoint, plus first-class integrations with Ollama, vLLM, and llama.cpp. You can swap in DeepSeek-V3, Codestral, or Granite Code without changing the extension.',
           },
           {
             q: 'How much VRAM do I need for Qwen3-Coder 30B?',
@@ -267,7 +267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'What if I only have 8 GB VRAM?',
-            a: 'Use Qwen3-Coder 7B at Q4_K_M (~5 GB VRAM) or Q5_K_M (~5.5 GB). Quality is 80-85% of the 30B model — still very usable for everyday work.',
+            a: 'Use Qwen2.5-Coder 7B at Q4_K_M (~5 GB VRAM) or Q5_K_M (~5.5 GB). Quality is 80-85% of the 30B model — still very usable for everyday work.',
           },
           {
             q: 'Does Continue.dev support agent mode like newer Copilot plans?',
@@ -330,7 +330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Copilot durch Continue.dev + Qwen3-Coder ersetzen. Anleitung, Kostenvergleich (24-Monats-Amortisation), ehrliche Qualitätsbewertung.',
     gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
     gammaDescription: 'Die Präsentation unten behandelt: den Continue.dev + Ollama + Qwen3-Coder-Stack (0 €/Monat vs. 20 €/Monat Copilot), 24-Monats-Kostenrechnung mit 8–14 Monaten Amortisationszeit auf vorhandener Hardware, Qualitätstestergebnisse (90–95 % von Copilot auf TypeScript und Python) und eine 6-Schritte-Anleitung. Herunterladen als PDF-Referenzkarte für lokale Copilot-Alternativen.',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen3-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3', 'Codestral 22B'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
     audience: 'Softwareentwickler, die evaluieren, ob sie ein Copilot-Abonnement durch einen lokalen Code-Assistenten ersetzen sollten.',
     readTime: '13 Min. Lesezeit',
@@ -350,7 +350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev – kostenlose Open-Source-Erweiterung für VS Code/JetBrains; bestes Copilot-Äquivalent Frontend in 2026',
           'Qwen3-Coder 30B Q4_K_M – stärkstes Open-Source-Code-Modell August 2026; benötigt ca. 18 GB VRAM',
-          'Qwen3-Coder 7B – leichte Alternative für 8 GB VRAM (RTX 3060 / RTX 3070); 80–85 % der 30B-Qualität',
+          'Qwen2.5-Coder 7B – leichte Alternative für 8 GB VRAM (RTX 3060 / RTX 3070); 80–85 % der 30B-Qualität',
           'Kostenrechnung – 20 €/Monat Copilot × 24 Monate = 480 €; lokale Hardware amortisiert sich in 8–14 Monaten',
           'Datenschutz-Bonus – Ihr proprietärer Code verlässt nie Ihren Rechner; wichtig für NDA-Projekte und Kundenprojekte',
         ],
@@ -432,7 +432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Continue.dev** (kostenlos, Open-Source) – die VS-Code/JetBrains-Erweiterung. Bietet Autovervollständigung, Chat und Agent-Modus. Das Copilot-gleichwertige Frontend.',
           '**Ollama** – die lokale Modell-Laufzeit. Einzeilige Installation. Verwaltet Modell-Downloads, Quantisierung, GPU-Auslagerung und stellt eine OpenAI-kompatible API bereit.',
           '**Qwen3-Coder 30B Q4_K_M** – das Modell. Stärkstes Open-Source-Code-Modell August 2026 auf HumanEval+, MBPP+ und echten Refaktor-Aufgaben. Benötigt ca. 18 GB VRAM.',
-          '**Qwen3-Coder 7B** – Fallback für 8–12 GB VRAM-Karten. Erreicht 80–85 % der 30B-Qualität. Empfohlen für RTX 3060 12 GB und M3 Pro 16 GB Macs.',
+          '**Qwen2.5-Coder 7B** – Fallback für 8–12 GB VRAM-Karten. Erreicht 80–85 % der 30B-Qualität. Empfohlen für RTX 3060 12 GB und M3 Pro 16 GB Macs.',
         ],
         callouts: [
           {
@@ -532,10 +532,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: 'Welche Hardware benötigen Sie?',
         rows: [
-          { 'Hardware': 'RTX 3060 12 GB', 'Empfohlenes Modell': 'Qwen3-Coder 7B Q4', 'Tokens/Sek.': '60–75', 'Geeignet für': 'Meiste alltägliche Arbeit' },
-          { 'Hardware': 'RTX 4070 12 GB', 'Empfohlenes Modell': 'Qwen3-Coder 7B Q5_K_M', 'Tokens/Sek.': '85–100', 'Geeignet für': 'Alle alltägliche Arbeit' },
+          { 'Hardware': 'RTX 3060 12 GB', 'Empfohlenes Modell': 'Qwen2.5-Coder 7B Q4', 'Tokens/Sek.': '60–75', 'Geeignet für': 'Meiste alltägliche Arbeit' },
+          { 'Hardware': 'RTX 4070 12 GB', 'Empfohlenes Modell': 'Qwen2.5-Coder 7B Q5_K_M', 'Tokens/Sek.': '85–100', 'Geeignet für': 'Alle alltägliche Arbeit' },
           { 'Hardware': 'RTX 4090 / 5090 24 GB', 'Empfohlenes Modell': 'Qwen3-Coder 30B Q4_K_M', 'Tokens/Sek.': '70–90', 'Geeignet für': 'Power User, große Refaktoren' },
-          { 'Hardware': 'Apple M3 Pro (18 GB)', 'Empfohlenes Modell': 'Qwen3-Coder 7B', 'Tokens/Sek.': '40–55', 'Geeignet für': 'Täglicher Mac-Einsatz' },
+          { 'Hardware': 'Apple M3 Pro (18 GB)', 'Empfohlenes Modell': 'Qwen2.5-Coder 7B', 'Tokens/Sek.': '40–55', 'Geeignet für': 'Täglicher Mac-Einsatz' },
           { 'Hardware': 'Apple M3 Max / M5 (32 GB+)', 'Empfohlenes Modell': 'Qwen3-Coder 30B', 'Tokens/Sek.': '35–50', 'Geeignet für': 'Mac Power User' },
         ],
         columns: ['Hardware', 'Empfohlenes Modell', 'Tokens/Sek.', 'Geeignet für'],
@@ -544,7 +544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Häufige Fehler',
         items: [
-          '**Fehler 1: 30B-Modell auf 8 GB VRAM ausführen.** Das Modell lädt, thrashing aber zwischen GPU und System-RAM. Autovervollständigung dauert 2–5 Sekunden statt 280 ms – unbrauchbar. Behebung: Nutzen Sie Qwen3-Coder 7B auf 8–12 GB VRAM-Karten. Das 30B-Modell benötigt 18+ GB. Überprüfen Sie tatsächliche Nutzung mit `ollama ps`.',
+          '**Fehler 1: 30B-Modell auf 8 GB VRAM ausführen.** Das Modell lädt, thrashing aber zwischen GPU und System-RAM. Autovervollständigung dauert 2–5 Sekunden statt 280 ms – unbrauchbar. Behebung: Nutzen Sie Qwen2.5-Coder 7B auf 8–12 GB VRAM-Karten. Das 30B-Modell benötigt 18+ GB. Überprüfen Sie tatsächliche Nutzung mit `ollama ps`.',
           '**Fehler 2: Lokale Qualität nur auf Nischenbibliotheken vergleichen und als schlechter erklären.** Lokale Modelle unterleisten auf Nischen-SDKs mit spärlicher öffentlicher Dokumentation. Dies ist erwartet und gut dokumentiert; nur auf Nischenbibliotheken zu testen ergibt ein irreführendes Bild. Behebung: Testen Sie auf den Sprachen und Mustern, die Sie 80 % der Zeit schreiben. Das ist die Qualität, die zählt.',
           '**Fehler 3: Agent-Modus nicht aktivieren.** Continue.dev ist standardmäßig mit deaktiviertem Agent-Modus ausgeliefert. Ohne ihn verpassen Sie Multi-Datei-Bearbeitungen – die Funktion, die das Setup konkurrenzfähig mit neueren Copilot-Plänen macht. Behebung: Continue.dev-Einstellungen → Agent-Modus aktivieren → Datei-Bearbeitungs- und Terminal-Berechtigungen mit Bestätigung erteilen.',
           '**Fehler 4: Modell nie aktualisieren.** Ein neue Generation erscheint etwa alle sechs Monate. Bei der alten Version zu bleiben bedeutet, auf Qualität zu verzichten. Behebung: Überprüfen Sie vierteljährlich auf neue Versionen. `ollama pull qwen3-coder:30b` überschreibt die alte Version; behalten Sie das vorherige Tag eine Woche als Rollback.',
@@ -568,7 +568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Funktioniert Continue.dev mit anderen Modellen außer Qwen3-Coder?',
-            a: 'Ja. Continue.dev unterstützt jeden OpenAI-kompatiblen Endpunkt sowie erstklassige Integrationen mit Ollama, vLLM und llama.cpp. Sie können DeepSeek Coder V3, Codestral oder Granite Code ohne Änderung der Erweiterung austauschen.',
+            a: 'Ja. Continue.dev unterstützt jeden OpenAI-kompatiblen Endpunkt sowie erstklassige Integrationen mit Ollama, vLLM und llama.cpp. Sie können DeepSeek-V3, Codestral oder Granite Code ohne Änderung der Erweiterung austauschen.',
           },
           {
             q: 'Wie viel VRAM benötige ich für Qwen3-Coder 30B?',
@@ -576,7 +576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Was, wenn ich nur 8 GB VRAM habe?',
-            a: 'Verwenden Sie Qwen3-Coder 7B bei Q4_K_M (ca. 5 GB VRAM) oder Q5_K_M (ca. 5,5 GB). Die Qualität erreicht 80–85 % des 30B-Modells – immer noch sehr brauchbar für alltägliche Arbeit.',
+            a: 'Verwenden Sie Qwen2.5-Coder 7B bei Q4_K_M (ca. 5 GB VRAM) oder Q5_K_M (ca. 5,5 GB). Die Qualität erreicht 80–85 % des 30B-Modells – immer noch sehr brauchbar für alltägliche Arbeit.',
           },
           {
             q: 'Unterstützt Continue.dev Agent-Modus wie neuere Copilot-Pläne?',
@@ -646,7 +646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Remplacez Copilot par Continue.dev + Qwen3-Coder. Installation, calcul des coûts (amortissement 24 mois), et évaluation qualité honnête.',
     gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
     gammaDescription: 'La présentation ci-dessous couvre : la pile Continue.dev + Ollama + Qwen3-Coder (0 €/mois vs 20 €/mois Copilot), le calcul des coûts sur 24 mois avec amortissement en 8–14 mois sur matériel existant, les résultats du test qualité (90–95 % de Copilot sur TypeScript et Python) et un guide en 6 étapes. Téléchargez le PDF comme carte de référence pour remplacer Copilot localement.',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen3-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3', 'Codestral 22B'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
     audience: 'Développeurs logiciels qui évaluent s\'ils doivent abandonner un abonnement Copilot pour un assistant de code local.',
     readTime: '13 min de lecture',
@@ -666,7 +666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev – extension VS Code/JetBrains gratuite et open-source ; le meilleur équivalent Copilot frontend en 2026',
           'Qwen3-Coder 30B Q4_K_M – modèle de codage open-source le plus puissant août 2026 ; nécessite env. 18 Go VRAM',
-          'Qwen3-Coder 7B – option légère pour 8 Go VRAM (RTX 3060 / RTX 3070) ; 80–85 % de la qualité 30B',
+          'Qwen2.5-Coder 7B – option légère pour 8 Go VRAM (RTX 3060 / RTX 3070) ; 80–85 % de la qualité 30B',
           'Calcul des coûts – Copilot 20 €/mois × 24 mois = 480 € ; le matériel local s\'amortit en 8–14 mois',
           'Bonus confidentialité – votre code propriétaire ne quitte jamais votre machine, essentiel pour les contrats clients et les projets sous NDA',
         ],
@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Continue.dev** (gratuit, open-source) – l\'extension VS Code/JetBrains. Offre l\'autocomplétion, le chat et le mode agent. Le frontend équivalent à Copilot.',
           '**Ollama** – le runtime du modèle local. Installation d\'une ligne. Gère les téléchargements de modèles, la quantification, l\'export GPU et expose une API compatible OpenAI.',
           '**Qwen3-Coder 30B Q4_K_M** – le modèle. Modèle de codage open-source le plus puissant en août 2026 sur HumanEval+, MBPP+ et tâches de refacto réelles. Nécessite env. 18 Go VRAM.',
-          '**Qwen3-Coder 7B** – secours pour cartes 8–12 Go VRAM. Atteint 80–85 % de la qualité 30B. Recommandé pour RTX 3060 12 Go et M3 Pro 16 Go Macs.',
+          '**Qwen2.5-Coder 7B** – secours pour cartes 8–12 Go VRAM. Atteint 80–85 % de la qualité 30B. Recommandé pour RTX 3060 12 Go et M3 Pro 16 Go Macs.',
         ],
         callouts: [
           {
@@ -848,10 +848,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: 'Quel matériel avez-vous besoin ?',
         rows: [
-          { 'Matériel': 'RTX 3060 12 Go', 'Modèle recommandé': 'Qwen3-Coder 7B Q4', 'Tokens/sec': '60–75', 'Convient pour': 'La plupart du travail quotidien' },
-          { 'Matériel': 'RTX 4070 12 Go', 'Modèle recommandé': 'Qwen3-Coder 7B Q5_K_M', 'Tokens/sec': '85–100', 'Convient pour': 'Tout le travail quotidien' },
+          { 'Matériel': 'RTX 3060 12 Go', 'Modèle recommandé': 'Qwen2.5-Coder 7B Q4', 'Tokens/sec': '60–75', 'Convient pour': 'La plupart du travail quotidien' },
+          { 'Matériel': 'RTX 4070 12 Go', 'Modèle recommandé': 'Qwen2.5-Coder 7B Q5_K_M', 'Tokens/sec': '85–100', 'Convient pour': 'Tout le travail quotidien' },
           { 'Matériel': 'RTX 4090 / 5090 24 Go', 'Modèle recommandé': 'Qwen3-Coder 30B Q4_K_M', 'Tokens/sec': '70–90', 'Convient pour': 'Power users, grands refacteurs' },
-          { 'Matériel': 'Apple M3 Pro (18 Go)', 'Modèle recommandé': 'Qwen3-Coder 7B', 'Tokens/sec': '40–55', 'Convient pour': 'Mac au quotidien' },
+          { 'Matériel': 'Apple M3 Pro (18 Go)', 'Modèle recommandé': 'Qwen2.5-Coder 7B', 'Tokens/sec': '40–55', 'Convient pour': 'Mac au quotidien' },
           { 'Matériel': 'Apple M3 Max / M5 (32 Go+)', 'Modèle recommandé': 'Qwen3-Coder 30B', 'Tokens/sec': '35–50', 'Convient pour': 'Mac power users' },
         ],
         columns: ['Matériel', 'Modèle recommandé', 'Tokens/sec', 'Convient pour'],
@@ -860,7 +860,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Erreurs courantes',
         items: [
-          '**Erreur 1 : Exécuter le modèle 30B sur 8 Go VRAM.** Le modèle se charge mais se ralentit entre GPU et RAM système. L\'autocomplétion prend 2–5 secondes au lieu de 280 ms – inutilisable. Correction : utilisez Qwen3-Coder 7B sur des cartes 8–12 Go VRAM. Le modèle 30B a besoin de 18+ Go. Vérifiez l\'utilisation réelle avec `ollama ps`.',
+          '**Erreur 1 : Exécuter le modèle 30B sur 8 Go VRAM.** Le modèle se charge mais se ralentit entre GPU et RAM système. L\'autocomplétion prend 2–5 secondes au lieu de 280 ms – inutilisable. Correction : utilisez Qwen2.5-Coder 7B sur des cartes 8–12 Go VRAM. Le modèle 30B a besoin de 18+ Go. Vérifiez l\'utilisation réelle avec `ollama ps`.',
           '**Erreur 2 : Comparer la qualité locale seulement sur des bibliothèques rares et déclarer que c\'est pire.** Les modèles locaux sous-performent sur les SDKs de niche avec peu de documentation publique. C\'est attendu et bien documenté ; tester seulement sur les bibliothèques rares donne une image trompeuse. Correction : testez sur les langages et motifs que vous écrivez 80 % du temps. C\'est la qualité qui compte.',
           '**Erreur 3 : Oublier d\'activer le mode agent.** Continue.dev est livré avec le mode agent désactivé par défaut. Sans cela, vous manquez les éditions multi-fichiers – la fonctionnalité qui rend cette configuration compétitive avec les plans Copilot plus récents. Correction : paramètres Continue.dev → activer le mode agent → accorder les permissions d\'édition de fichiers et de terminal avec confirmation.',
           '**Erreur 4 : Ne jamais mettre à jour le modèle.** Une nouvelle génération arrive environ tous les six mois. Rester sur l\'ancienne version signifie laisser de la qualité sur la table. Correction : vérifiez les nouvelles versions tous les trimestres. `ollama pull qwen3-coder:30b` remplace l\'ancienne version ; gardez le tag précédent une semaine comme rollback.',
@@ -884,7 +884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Continue.dev fonctionne-t-il avec d\'autres modèles que Qwen3-Coder ?',
-            a: 'Oui. Continue.dev supporte n\'importe quel point d\'extrémité compatible OpenAI, plus les intégrations de première classe avec Ollama, vLLM et llama.cpp. Vous pouvez échanger DeepSeek Coder V3, Codestral ou Granite Code sans changer l\'extension.',
+            a: 'Oui. Continue.dev supporte n\'importe quel point d\'extrémité compatible OpenAI, plus les intégrations de première classe avec Ollama, vLLM et llama.cpp. Vous pouvez échanger DeepSeek-V3, Codestral ou Granite Code sans changer l\'extension.',
           },
           {
             q: 'Combien de VRAM ai-je besoin pour Qwen3-Coder 30B ?',
@@ -892,7 +892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Et si je n\'ai que 8 Go VRAM ?',
-            a: 'Utilisez Qwen3-Coder 7B à Q4_K_M (env. 5 Go VRAM) ou Q5_K_M (env. 5,5 Go). La qualité atteint 80–85 % du modèle 30B – toujours très utilisable pour le travail quotidien.',
+            a: 'Utilisez Qwen2.5-Coder 7B à Q4_K_M (env. 5 Go VRAM) ou Q5_K_M (env. 5,5 Go). La qualité atteint 80–85 % du modèle 30B – toujours très utilisable pour le travail quotidien.',
           },
           {
             q: 'Continue.dev supporte-t-il le mode agent comme les plans Copilot plus récents ?',
@@ -954,7 +954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Continue.dev + Qwen3-Coder で Copilot を置き換える。セットアップ、コスト比較（24 か月回収）、正直な品質評価。',
     gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
     gammaDescription: '下のスライドデッキは、Continue.dev + Ollama + Qwen3-Coder スタック（月額 0 円 vs 20 ドル Copilot）、24 ヶ月コスト計算（既存ハードウェアで 8～14 ヶ月で回収）、品質テスト結果（TypeScript と Python で Copilot の 90～95%）、6 ステップのセットアップガイドを扱っています。PDF をローカル Copilot 代替のリファレンスカードとしてダウンロードしてください。',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen3-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3', 'Codestral 22B'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
     audience: 'Copilot サブスクリプションをローカルコードアシスタントに置き換えるかどうかを評価しているソフトウェア開発者。',
     readTime: '13 分で読める',
@@ -974,7 +974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev – 無料のオープンソース VS Code/JetBrains 拡張機能；2026 年最高の Copilot 同等品フロントエンド',
           'Qwen3-Coder 30B Q4_K_M – 2026 年 5 月最強のオープンソースコードモデル；約 18GB VRAM が必要',
-          'Qwen3-Coder 7B – 8GB VRAM（RTX 3060 / RTX 3070）の軽量オプション；30B の品質の 80～85%',
+          'Qwen2.5-Coder 7B – 8GB VRAM（RTX 3060 / RTX 3070）の軽量オプション；30B の品質の 80～85%',
           'コスト計算 – Copilot 20 ドル/月 × 24 ヶ月 = 480 ドル；ローカルハードウェアは 8～14 ヶ月で回収',
           'プライバシーボーナス – 独自コードはあなたのマシンから出ません。クライアント作業と NDA 保護プロジェクトに必須',
         ],
@@ -1056,7 +1056,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Continue.dev**（無料、オープンソース）– VS Code/JetBrains 拡張機能。オートコンプリート、チャット、エージェントモードを提供します。Copilot 同等のフロントエンド。',
           '**Ollama** – ローカルモデルランタイム。1 行インストール。モデルダウンロード、量子化、GPU オフロード、OpenAI 互換 API を管理します。',
           '**Qwen3-Coder 30B Q4_K_M** – モデル。2026 年 5 月の HumanEval+、MBPP+、実際のリファクタタスクで最強のオープンソースコードモデル。約 18GB VRAM が必要です。',
-          '**Qwen3-Coder 7B** – 8～12GB VRAM カード用フォールバック。30B の品質の 80～85% に達します。RTX 3060 12GB と M3 Pro 16GB Mac に推奨。',
+          '**Qwen2.5-Coder 7B** – 8～12GB VRAM カード用フォールバック。30B の品質の 80～85% に達します。RTX 3060 12GB と M3 Pro 16GB Mac に推奨。',
         ],
         callouts: [
           {
@@ -1156,10 +1156,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: 'どのハードウェアが必要ですか？',
         rows: [
-          { 'ハードウェア': 'RTX 3060 12GB', '推奨モデル': 'Qwen3-Coder 7B Q4', 'トークン/秒': '60～75', '適しています': 'ほとんどの日常作業' },
-          { 'ハードウェア': 'RTX 4070 12GB', '推奨モデル': 'Qwen3-Coder 7B Q5_K_M', 'トークン/秒': '85～100', '適しています': 'すべての日常作業' },
+          { 'ハードウェア': 'RTX 3060 12GB', '推奨モデル': 'Qwen2.5-Coder 7B Q4', 'トークン/秒': '60～75', '適しています': 'ほとんどの日常作業' },
+          { 'ハードウェア': 'RTX 4070 12GB', '推奨モデル': 'Qwen2.5-Coder 7B Q5_K_M', 'トークン/秒': '85～100', '適しています': 'すべての日常作業' },
           { 'ハードウェア': 'RTX 4090 / 5090 24GB', '推奨モデル': 'Qwen3-Coder 30B Q4_K_M', 'トークン/秒': '70～90', '適しています': 'パワーユーザー、大規模リファクタ' },
-          { 'ハードウェア': 'Apple M3 Pro（18GB）', '推奨モデル': 'Qwen3-Coder 7B', 'トークン/秒': '40～55', '適しています': '毎日の Mac 使用' },
+          { 'ハードウェア': 'Apple M3 Pro（18GB）', '推奨モデル': 'Qwen2.5-Coder 7B', 'トークン/秒': '40～55', '適しています': '毎日の Mac 使用' },
           { 'ハードウェア': 'Apple M3 Max / M5（32GB+）', '推奨モデル': 'Qwen3-Coder 30B', 'トークン/秒': '35～50', '適しています': 'Mac パワーユーザー' },
         ],
         columns: ['ハードウェア', '推奨モデル', 'トークン/秒', '適しています'],
@@ -1168,7 +1168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'よくある誤り',
         items: [
-          '**誤り 1：8GB VRAM で 30B モデルを実行。** モデルはロードしますが、GPU とシステム RAM 間でスラッシング。オートコンプリートには 280ms ではなく 2～5 秒 – 使用不可。修正：8～12GB VRAM カード上で Qwen3-Coder 7B を使用。30B モデルには 18+ GB が必要です。`ollama ps` で実際の使用法を確認。',
+          '**誤り 1：8GB VRAM で 30B モデルを実行。** モデルはロードしますが、GPU とシステム RAM 間でスラッシング。オートコンプリートには 280ms ではなく 2～5 秒 – 使用不可。修正：8～12GB VRAM カード上で Qwen2.5-Coder 7B を使用。30B モデルには 18+ GB が必要です。`ollama ps` で実際の使用法を確認。',
           '**誤り 2：ニッチなライブラリでのみローカル品質を比較し、悪いと宣言。** ローカルモデルは公開ドキュメントが少ないニッチ SDK で過度にパフォーマンス低下。これは予想され、よく文書化；ニッチなライブラリでのみテストは誤解を招く。修正：時間の 80% を書く言語とパターンでテスト。これが重要な品質。',
           '**誤り 3：エージェントモードを有効にするのを忘れる。** Continue.dev は既定でエージェントモード無効。これなしではマルチファイル編集を逃します – 新しい Copilot プランと競争力のある設定。修正：Continue.dev 設定 → エージェントモード有効化 → ファイル編集とターミナル権限を確認で付与。',
           '**誤り 4：モデルを更新しない。** 新しい世代は約 6 ヶ月ごと。古いバージョンで止まると品質を手にいれません。修正：3 ヶ月ごとに新リリースを確認。`ollama pull qwen3-coder:30b` は古いバージョンを上書き；ロールバック用に前のタグを 1 週間保持。',
@@ -1192,7 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Continue.dev は Qwen3-Coder 以外のモデルで動作しますか？',
-            a: 'はい。Continue.dev は任意の OpenAI 互換エンドポイント、および Ollama、vLLM、llama.cpp との最初のクラス統合をサポートします。拡張機能を変更せずに DeepSeek Coder V3、Codestral、または Granite Code をスワップできます。',
+            a: 'はい。Continue.dev は任意の OpenAI 互換エンドポイント、および Ollama、vLLM、llama.cpp との最初のクラス統合をサポートします。拡張機能を変更せずに DeepSeek-V3、Codestral、または Granite Code をスワップできます。',
           },
           {
             q: 'Qwen3-Coder 30B に必要な VRAM はいくらですか？',
@@ -1200,7 +1200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '8GB VRAM しかない場合はどうしますか？',
-            a: 'Q4_K_M（約 5GB VRAM）または Q5_K_M（約 5.5GB）で Qwen3-Coder 7B を使用。品質は 30B モデルの 80～85% に達します – 日常作業にはまだ非常に使える。',
+            a: 'Q4_K_M（約 5GB VRAM）または Q5_K_M（約 5.5GB）で Qwen2.5-Coder 7B を使用。品質は 30B モデルの 80～85% に達します – 日常作業にはまだ非常に使える。',
           },
           {
             q: 'Continue.dev は新しい Copilot プランのようなエージェントモードをサポートしていますか？',
@@ -1262,7 +1262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: '用 Continue.dev + Qwen3-Coder 替代 Copilot。设置、成本对比（24 个月回本）和质量评估。',
     gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
     gammaDescription: '下方幻灯片涵盖：Continue.dev + Ollama + Qwen3-Coder 方案（0 美元/月 vs 20 美元/月 Copilot）、24 个月成本计算（已有硬件 8-14 个月回本）、质量测试结果（TypeScript 和 Python 达 Copilot 的 90-95%）以及 6 步设置指南。下载 PDF 作为本地 Copilot 替代参考卡。',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen3-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3', 'Codestral 22B'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
     audience: '评估是否放弃 Copilot 订阅以换用本地代码助手的软件开发者。',
     readTime: '阅读约 13 分钟',
@@ -1282,7 +1282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev — 免费开源 VS Code/JetBrains 扩展；2026 年最佳 Copilot 替代品前端',
           'Qwen3-Coder 30B Q4_K_M — 2026 年 5 月最强开源代码模型；需要约 18GB VRAM',
-          'Qwen3-Coder 7B — 8GB VRAM（RTX 3060/3070）的轻量级选项；性能达 30B 的 80-85%',
+          'Qwen2.5-Coder 7B — 8GB VRAM（RTX 3060/3070）的轻量级选项；性能达 30B 的 80-85%',
           '成本对比 — Copilot 20 美元/月 × 24 个月 = 480 美元；本地方案 8-14 个月回本',
           '隐私优势 — 专有代码永不离开本机，对客户工作和受 NDA 保护的项目至关重要',
         ],
@@ -1364,7 +1364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Continue.dev**（免费、开源）— VS Code/JetBrains 扩展。提供自动完成、聊天和代理模式。Copilot 等效前端。',
           '**Ollama** — 本地模型运行时。一行安装。管理模型下载、量化、GPU 卸载，暴露 OpenAI 兼容 API。',
           '**Qwen3-Coder 30B Q4_K_M** — 模型。2026 年 5 月 HumanEval+、MBPP+ 和真实重构任务上最强开源代码模型。需约 18GB VRAM。',
-          '**Qwen3-Coder 7B** — 8-12GB VRAM 卡的后备方案。达到 30B 的 80-85% 质量。推荐用于 RTX 3060 12GB 和 M3 Pro 16GB Mac。',
+          '**Qwen2.5-Coder 7B** — 8-12GB VRAM 卡的后备方案。达到 30B 的 80-85% 质量。推荐用于 RTX 3060 12GB 和 M3 Pro 16GB Mac。',
         ],
         callouts: [
           {
@@ -1464,10 +1464,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: '你需要什么硬件？',
         rows: [
-          { '硬件': 'RTX 3060 12GB', '推荐模型': 'Qwen3-Coder 7B Q4', '令牌/秒': '60-75', '适合': '大多数日常工作' },
-          { '硬件': 'RTX 4070 12GB', '推荐模型': 'Qwen3-Coder 7B Q5_K_M', '令牌/秒': '85-100', '适合': '所有日常工作' },
+          { '硬件': 'RTX 3060 12GB', '推荐模型': 'Qwen2.5-Coder 7B Q4', '令牌/秒': '60-75', '适合': '大多数日常工作' },
+          { '硬件': 'RTX 4070 12GB', '推荐模型': 'Qwen2.5-Coder 7B Q5_K_M', '令牌/秒': '85-100', '适合': '所有日常工作' },
           { '硬件': 'RTX 4090 / 5090 24GB', '推荐模型': 'Qwen3-Coder 30B Q4_K_M', '令牌/秒': '70-90', '适合': '高级用户、大型重构' },
-          { '硬件': 'Apple M3 Pro（18GB）', '推荐模型': 'Qwen3-Coder 7B', '令牌/秒': '40-55', '适合': '日常 Mac 驱动' },
+          { '硬件': 'Apple M3 Pro（18GB）', '推荐模型': 'Qwen2.5-Coder 7B', '令牌/秒': '40-55', '适合': '日常 Mac 驱动' },
           { '硬件': 'Apple M3 Max / M5（32GB+）', '推荐模型': 'Qwen3-Coder 30B', '令牌/秒': '35-50', '适合': 'Mac 高级用户' },
         ],
         columns: ['硬件', '推荐模型', '令牌/秒', '适合'],
@@ -1476,7 +1476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: '常见错误',
         items: [
-          '**错误 1：在 8GB VRAM 上运行 30B 模型。** 模型加载但在 GPU 和系统 RAM 间抖动。自动完成需要 2-5 秒而非 280ms — 无法使用。修复：在 8-12GB VRAM 卡上使用 Qwen3-Coder 7B。30B 模型需 18+ GB。用 `ollama ps` 检查实际使用。',
+          '**错误 1：在 8GB VRAM 上运行 30B 模型。** 模型加载但在 GPU 和系统 RAM 间抖动。自动完成需要 2-5 秒而非 280ms — 无法使用。修复：在 8-12GB VRAM 卡上使用 Qwen2.5-Coder 7B。30B 模型需 18+ GB。用 `ollama ps` 检查实际使用。',
           '**错误 2：仅在稀有库上对比本地质量并宣称其更差。** 本地模型在公开文档稀疏的小众 SDK 上表现不佳。这是预期的且有充分文档；仅在稀有库上测试给出误导性图景。修复：在你 80% 时间编写的语言和模式上测试。那是重要的质量。',
           '**错误 3：忘记启用代理模式。** Continue.dev 默认代理模式关闭。不启用你就缺少多文件编辑 — 让此方案与新 Copilot 计划竞争的功能。修复：Continue.dev 设置 → 启用代理模式 → 用确认授予文件编辑和终端权限。',
           '**错误 4：从不更新模型。** 新代数大约每六个月发布。停留在旧版本意味着留下质量不用。修复：每季度检查新发布。`ollama pull qwen3-coder:30b` 覆盖旧版本；保留前一版本标签一周作为回滚。',
@@ -1500,7 +1500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Continue.dev 会与除 Qwen3-Coder 外的其他模型工作吗？',
-            a: '会。Continue.dev 支持任何 OpenAI 兼容端点，加上 Ollama、vLLM 和 llama.cpp 的一级集成。你可以换入 DeepSeek Coder V3、Codestral 或 Granite Code 而无需改变扩展。',
+            a: '会。Continue.dev 支持任何 OpenAI 兼容端点，加上 Ollama、vLLM 和 llama.cpp 的一级集成。你可以换入 DeepSeek-V3、Codestral 或 Granite Code 而无需改变扩展。',
           },
           {
             q: 'Qwen3-Coder 30B 需要多少 VRAM？',
@@ -1508,7 +1508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '如果我只有 8GB VRAM 呢？',
-            a: '使用 Qwen3-Coder 7B 在 Q4_K_M（约 5GB VRAM）或 Q5_K_M（约 5.5GB）。质量达 30B 的 80-85% — 日常工作仍非常可用。',
+            a: '使用 Qwen2.5-Coder 7B 在 Q4_K_M（约 5GB VRAM）或 Q5_K_M（约 5.5GB）。质量达 30B 的 80-85% — 日常工作仍非常可用。',
           },
           {
             q: 'Continue.dev 支持像新 Copilot 计划一样的代理模式吗？',
@@ -1570,7 +1570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Reemplaza Copilot con Continue.dev + Qwen3-Coder. Configuración, cálculo de costos (equilibrio en 24 meses) y comparativa honesta de calidad.',
     gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
     gammaDescription: 'La presentación de abajo cubre: el stack Continue.dev + Ollama + Qwen3-Coder ($0/mes vs $20/mes Copilot), cálculo de costos a 24 meses con equilibrio en 8–14 meses en hardware existente, resultados de pruebas de calidad (90–95% de Copilot en TypeScript y Python) y una guía de configuración en 6 pasos. Descarga el PDF como tarjeta de referencia para reemplazar Copilot localmente.',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen3-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3', 'Codestral 22B'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
     audience: 'Desarrolladores de software que evalúan si abandonar su suscripción de Copilot a favor de un asistente de código local.',
     readTime: '13 min de lectura',
@@ -1590,7 +1590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev — extensión gratuita y de código abierto para VS Code/JetBrains; el mejor frontend equivalente a Copilot en 2026',
           'Qwen3-Coder 30B Q4_K_M — modelo de código open-source más potente en agosto de 2026; requiere ~18 GB de VRAM',
-          'Qwen3-Coder 7B — opción ligera para 8 GB de VRAM (RTX 3060 / RTX 3070); 80–85% de la calidad del modelo 30B',
+          'Qwen2.5-Coder 7B — opción ligera para 8 GB de VRAM (RTX 3060 / RTX 3070); 80–85% de la calidad del modelo 30B',
           'Cálculo de costos — Copilot $20/mes × 24 meses = $480; el hardware local se amortiza en 8–14 meses',
           'Ventaja de privacidad — tu código propietario nunca sale de tu máquina, ideal para trabajo con clientes y proyectos protegidos por NDA',
         ],
@@ -1672,7 +1672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Continue.dev** (gratuito, código abierto) — la extensión para VS Code/JetBrains. Incluye autocompletado, chat y modo agente. El frontend equivalente a Copilot.',
           '**Ollama** — el runtime de modelos local. Instalación en una línea. Gestiona descargas de modelos, cuantización, descarga a GPU y expone una API compatible con OpenAI.',
           '**Qwen3-Coder 30B Q4_K_M** — el modelo. El modelo de código open-source más potente en agosto de 2026 en HumanEval+, MBPP+ y tareas de refactorización reales. Requiere ~18 GB de VRAM.',
-          '**Qwen3-Coder 7B** — alternativa para tarjetas de 8–12 GB de VRAM. Alcanza el 80–85% de la calidad del 30B. Recomendado para RTX 3060 12 GB y Macs M3 Pro 16 GB.',
+          '**Qwen2.5-Coder 7B** — alternativa para tarjetas de 8–12 GB de VRAM. Alcanza el 80–85% de la calidad del 30B. Recomendado para RTX 3060 12 GB y Macs M3 Pro 16 GB.',
         ],
         callouts: [
           {
@@ -1772,10 +1772,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: '¿Qué hardware necesitas?',
         rows: [
-          { 'Hardware': 'RTX 3060 12 GB', 'Modelo recomendado': 'Qwen3-Coder 7B Q4', 'Tokens/seg': '60–75', 'Apto para': 'La mayoría del trabajo cotidiano' },
-          { 'Hardware': 'RTX 4070 12 GB', 'Modelo recomendado': 'Qwen3-Coder 7B Q5_K_M', 'Tokens/seg': '85–100', 'Apto para': 'Todo el trabajo cotidiano' },
+          { 'Hardware': 'RTX 3060 12 GB', 'Modelo recomendado': 'Qwen2.5-Coder 7B Q4', 'Tokens/seg': '60–75', 'Apto para': 'La mayoría del trabajo cotidiano' },
+          { 'Hardware': 'RTX 4070 12 GB', 'Modelo recomendado': 'Qwen2.5-Coder 7B Q5_K_M', 'Tokens/seg': '85–100', 'Apto para': 'Todo el trabajo cotidiano' },
           { 'Hardware': 'RTX 4090 / 5090 24 GB', 'Modelo recomendado': 'Qwen3-Coder 30B Q4_K_M', 'Tokens/seg': '70–90', 'Apto para': 'Usuarios avanzados, refactorizaciones grandes' },
-          { 'Hardware': 'Apple M3 Pro (18 GB)', 'Modelo recomendado': 'Qwen3-Coder 7B', 'Tokens/seg': '40–55', 'Apto para': 'Mac de uso diario' },
+          { 'Hardware': 'Apple M3 Pro (18 GB)', 'Modelo recomendado': 'Qwen2.5-Coder 7B', 'Tokens/seg': '40–55', 'Apto para': 'Mac de uso diario' },
           { 'Hardware': 'Apple M3 Max / M5 (32 GB+)', 'Modelo recomendado': 'Qwen3-Coder 30B', 'Tokens/seg': '35–50', 'Apto para': 'Usuarios avanzados de Mac' },
         ],
         columns: ['Hardware', 'Modelo recomendado', 'Tokens/seg', 'Apto para'],
@@ -1784,7 +1784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Errores comunes',
         items: [
-          '**Error 1: Ejecutar el modelo 30B en 8 GB de VRAM.** El modelo carga pero hace thrashing entre la GPU y la RAM del sistema. El autocompletado tarda 2–5 segundos en lugar de 280 ms — inutilizable. Solución: usa Qwen3-Coder 7B en tarjetas de 8–12 GB de VRAM. El modelo 30B necesita 18+ GB. Comprueba el uso real con `ollama ps`.',
+          '**Error 1: Ejecutar el modelo 30B en 8 GB de VRAM.** El modelo carga pero hace thrashing entre la GPU y la RAM del sistema. El autocompletado tarda 2–5 segundos en lugar de 280 ms — inutilizable. Solución: usa Qwen2.5-Coder 7B en tarjetas de 8–12 GB de VRAM. El modelo 30B necesita 18+ GB. Comprueba el uso real con `ollama ps`.',
           '**Error 2: Comparar la calidad local solo en librerías poco comunes y declararla inferior.** Los modelos locales rinden menos en SDKs de nicho con escasa documentación pública. Esto es esperado y está bien documentado; probar solo en librerías poco comunes da una imagen engañosa. Solución: prueba en los lenguajes y patrones que escribes el 80% del tiempo. Esa es la calidad que importa.',
           '**Error 3: Olvidar activar el modo agente.** Continue.dev viene con el modo agente desactivado por defecto. Sin él te pierdes las ediciones multifichero — la funcionalidad que hace que esta configuración sea competitiva con los planes más nuevos de Copilot. Solución: configuración de Continue.dev → activa el modo agente → otorga permisos de edición de archivos y terminal con confirmación.',
           '**Error 4: No actualizar nunca el modelo.** Una nueva generación llega aproximadamente cada seis meses. Quedarse en la versión antigua significa dejar calidad sobre la mesa. Solución: comprueba nuevas versiones cada trimestre. `ollama pull qwen3-coder:30b` sobreescribe la versión antigua; conserva la etiqueta anterior una semana como rollback.',
@@ -1808,7 +1808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Continue.dev funciona con otros modelos además de Qwen3-Coder?',
-            a: 'Sí. Continue.dev soporta cualquier endpoint compatible con OpenAI, además de integraciones de primera clase con Ollama, vLLM y llama.cpp. Puedes cambiar a DeepSeek Coder V3, Codestral o Granite Code sin cambiar la extensión.',
+            a: 'Sí. Continue.dev soporta cualquier endpoint compatible con OpenAI, además de integraciones de primera clase con Ollama, vLLM y llama.cpp. Puedes cambiar a DeepSeek-V3, Codestral o Granite Code sin cambiar la extensión.',
           },
           {
             q: '¿Cuánta VRAM necesito para Qwen3-Coder 30B?',
@@ -1816,7 +1816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué pasa si solo tengo 8 GB de VRAM?',
-            a: 'Usa Qwen3-Coder 7B con Q4_K_M (~5 GB de VRAM) o Q5_K_M (~5.5 GB). La calidad alcanza el 80–85% del modelo 30B — sigue siendo muy útil para el trabajo cotidiano.',
+            a: 'Usa Qwen2.5-Coder 7B con Q4_K_M (~5 GB de VRAM) o Q5_K_M (~5.5 GB). La calidad alcanza el 80–85% del modelo 30B — sigue siendo muy útil para el trabajo cotidiano.',
           },
           {
             q: '¿Continue.dev soporta el modo agente como los planes más nuevos de Copilot?',
@@ -1891,7 +1891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Substitua o Copilot por Continue.dev + Qwen3-Coder. Configuração, cálculo de custos (equilíbrio em 24 meses) e comparativo honesto de qualidade.',
     gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
     gammaDescription: 'A apresentação abaixo cobre: o stack Continue.dev + Ollama + Qwen3-Coder ($0/mês vs $20/mês do Copilot), cálculo de custos de 24 meses mostrando equilíbrio em 8–14 meses em hardware existente, resultados de testes de qualidade (90–95% do Copilot em TypeScript e Python) e um guia de configuração em 6 passos. Baixe o PDF como cartão de referência para substituir o Copilot localmente.',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen3-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3', 'Codestral 22B'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
     audience: 'Desenvolvedores de software avaliando se devem abandonar a assinatura do Copilot em favor de um assistente de código local.',
     readTime: '13 min de leitura',
@@ -1911,7 +1911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev — extensão gratuita e open source para VS Code/JetBrains; o melhor frontend equivalente ao Copilot em 2026',
           'Qwen3-Coder 30B Q4_K_M — modelo de código open source mais potente em agosto de 2026; precisa de ~18 GB de VRAM',
-          'Qwen3-Coder 7B — opção leve para 8 GB de VRAM (RTX 3060 / RTX 3070); 80–85% da qualidade do modelo 30B',
+          'Qwen2.5-Coder 7B — opção leve para 8 GB de VRAM (RTX 3060 / RTX 3070); 80–85% da qualidade do modelo 30B',
           'Cálculo de custos — Copilot $20/mês × 24 meses = $480; o hardware local se paga em 8–14 meses',
           'Vantagem de privacidade — seu código proprietário nunca sai da sua máquina, ideal para trabalho com clientes e projetos protegidos por NDA',
         ],
@@ -1993,7 +1993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Continue.dev** (gratuito, open source) — a extensão para VS Code/JetBrains. Inclui autocompletar, chat e modo agente. O frontend equivalente ao Copilot.',
           '**Ollama** — o runtime de modelos local. Instalação em uma linha. Gerencia downloads de modelos, quantização, descarregamento para a GPU e expõe uma API compatível com OpenAI.',
           '**Qwen3-Coder 30B Q4_K_M** — o modelo. O modelo de código open source mais potente em agosto de 2026 no HumanEval+, MBPP+ e tarefas reais de refatoração. Precisa de ~18 GB de VRAM.',
-          '**Qwen3-Coder 7B** — alternativa para placas de 8–12 GB de VRAM. Alcança 80–85% da qualidade do 30B. Recomendado para RTX 3060 12 GB e Macs M3 Pro 16 GB.',
+          '**Qwen2.5-Coder 7B** — alternativa para placas de 8–12 GB de VRAM. Alcança 80–85% da qualidade do 30B. Recomendado para RTX 3060 12 GB e Macs M3 Pro 16 GB.',
         ],
         callouts: [
           {
@@ -2093,10 +2093,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: 'Qual hardware você precisa?',
         rows: [
-          { 'Hardware': 'RTX 3060 12 GB', 'Recommended model': 'Qwen3-Coder 7B Q4', 'Tokens/sec': '60–75', 'Suitable for': 'A maior parte do trabalho cotidiano' },
-          { 'Hardware': 'RTX 4070 12 GB', 'Recommended model': 'Qwen3-Coder 7B Q5_K_M', 'Tokens/sec': '85–100', 'Suitable for': 'Todo o trabalho cotidiano' },
+          { 'Hardware': 'RTX 3060 12 GB', 'Recommended model': 'Qwen2.5-Coder 7B Q4', 'Tokens/sec': '60–75', 'Suitable for': 'A maior parte do trabalho cotidiano' },
+          { 'Hardware': 'RTX 4070 12 GB', 'Recommended model': 'Qwen2.5-Coder 7B Q5_K_M', 'Tokens/sec': '85–100', 'Suitable for': 'Todo o trabalho cotidiano' },
           { 'Hardware': 'RTX 4090 / 5090 24 GB', 'Recommended model': 'Qwen3-Coder 30B Q4_K_M', 'Tokens/sec': '70–90', 'Suitable for': 'Usuários avançados, refatorações grandes' },
-          { 'Hardware': 'Apple M3 Pro (18 GB)', 'Recommended model': 'Qwen3-Coder 7B', 'Tokens/sec': '40–55', 'Suitable for': 'Mac de uso diário' },
+          { 'Hardware': 'Apple M3 Pro (18 GB)', 'Recommended model': 'Qwen2.5-Coder 7B', 'Tokens/sec': '40–55', 'Suitable for': 'Mac de uso diário' },
           { 'Hardware': 'Apple M3 Max / M5 (32 GB+)', 'Recommended model': 'Qwen3-Coder 30B', 'Tokens/sec': '35–50', 'Suitable for': 'Usuários avançados de Mac' },
         ],
         columns: ['Hardware', 'Recommended model', 'Tokens/sec', 'Suitable for'],
@@ -2105,7 +2105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: 'Erros comuns',
         items: [
-          '**Erro 1: Executar o modelo 30B em 8 GB de VRAM.** O modelo carrega, mas faz thrashing entre a GPU e a RAM do sistema. O autocompletar leva 2–5 segundos em vez de 280 ms — inutilizável. Solução: use o Qwen3-Coder 7B em placas de 8–12 GB de VRAM. O modelo 30B precisa de 18+ GB. Verifique o uso real com `ollama ps`.',
+          '**Erro 1: Executar o modelo 30B em 8 GB de VRAM.** O modelo carrega, mas faz thrashing entre a GPU e a RAM do sistema. O autocompletar leva 2–5 segundos em vez de 280 ms — inutilizável. Solução: use o Qwen2.5-Coder 7B em placas de 8–12 GB de VRAM. O modelo 30B precisa de 18+ GB. Verifique o uso real com `ollama ps`.',
           '**Erro 2: Comparar a qualidade local apenas em bibliotecas raras e declará-la inferior.** Os modelos locais rendem menos em SDKs de nicho com pouca documentação pública. Isso é esperado e bem documentado; testar apenas em bibliotecas raras dá uma imagem enganosa. Solução: teste nas linguagens e padrões que você escreve 80% do tempo. Essa é a qualidade que importa.',
           '**Erro 3: Esquecer de ativar o modo agente.** O Continue.dev vem com o modo agente desativado por padrão. Sem ele você perde as edições multiarquivo — o recurso que torna essa configuração competitiva com os planos mais novos do Copilot. Solução: configurações do Continue.dev → ative o modo agente → conceda permissões de edição de arquivo e terminal com confirmação.',
           '**Erro 4: Nunca atualizar o modelo.** Uma nova geração chega aproximadamente a cada seis meses. Ficar na versão antiga significa deixar qualidade sobre a mesa. Solução: verifique novas versões a cada trimestre. `ollama pull qwen3-coder:30b` sobrescreve a versão antiga; mantenha a tag anterior por uma semana como rollback.',
@@ -2129,7 +2129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'O Continue.dev funciona com outros modelos além do Qwen3-Coder?',
-            a: 'Sim. O Continue.dev suporta qualquer endpoint compatível com OpenAI, além de integrações de primeira classe com Ollama, vLLM e llama.cpp. Você pode trocar para DeepSeek Coder V3, Codestral ou Granite Code sem mudar a extensão.',
+            a: 'Sim. O Continue.dev suporta qualquer endpoint compatível com OpenAI, além de integrações de primeira classe com Ollama, vLLM e llama.cpp. Você pode trocar para DeepSeek-V3, Codestral ou Granite Code sem mudar a extensão.',
           },
           {
             q: 'De quanta VRAM eu preciso para o Qwen3-Coder 30B?',
@@ -2137,7 +2137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'E se eu tiver apenas 8 GB de VRAM?',
-            a: 'Use o Qwen3-Coder 7B com Q4_K_M (~5 GB de VRAM) ou Q5_K_M (~5,5 GB). A qualidade fica em 80–85% do modelo 30B — ainda muito útil para o trabalho cotidiano.',
+            a: 'Use o Qwen2.5-Coder 7B com Q4_K_M (~5 GB de VRAM) ou Q5_K_M (~5,5 GB). A qualidade fica em 80–85% do modelo 30B — ainda muito útil para o trabalho cotidiano.',
           },
           {
             q: 'O Continue.dev suporta o modo agente como os planos mais novos do Copilot?',
@@ -2217,7 +2217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
     gammaDescription:
       'تغطي العرض التقديمي أدناه: حزمة Continue.dev + Ollama + Qwen3-Coder ($0/شهر مقابل $20/شهر لـ Copilot)، وحساب التكاليف على 24 شهرًا مع التعادل في 8–14 شهرًا بالجهاز الحالي، ونتائج اختبار الجودة (90–95% من Copilot في TypeScript وPython)، ودليل الإعداد في 6 خطوات. حمّل PDF كبطاقة مرجعية لاستبدال Copilot محليًا.',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen3-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3', 'Codestral 22B'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
     audience:
       'مطورو البرمجيات الذين يقيّمون التخلي عن اشتراك Copilot لصالح مساعد كود محلي.',
@@ -2240,7 +2240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev — إضافة مجانية مفتوحة المصدر لـ VS Code/JetBrains؛ أفضل واجهة مكافئة لـ Copilot في 2026',
           'Qwen3-Coder 30B Q4_K_M — أقوى نموذج كود مفتوح المصدر في أغسطس 2026؛ يتطلب ~18 جيجابايت VRAM',
-          'Qwen3-Coder 7B — الخيار الخفيف لـ 8 جيجابايت VRAM (RTX 3060 / RTX 3070)؛ 80–85% من جودة النموذج 30B',
+          'Qwen2.5-Coder 7B — الخيار الخفيف لـ 8 جيجابايت VRAM (RTX 3060 / RTX 3070)؛ 80–85% من جودة النموذج 30B',
           'حساب التكاليف — Copilot $20/شهر × 24 شهرًا = $480؛ الجهاز المحلي يتعادل في 8–14 شهرًا',
           'ميزة الخصوصية — كودك المتملَّك لا يغادر جهازك أبدًا، مثالي للعمل بموجب اتفاقيات السرية',
         ],
@@ -2318,7 +2318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Continue.dev:** إضافة مجانية مفتوحة المصدر لـ VS Code وJetBrains. تُضيف لوحة دردشة، وإكمالًا تلقائيًا مضمّنًا، ووضع وكيل يقرأ الملفات ويُحررها. الرابط: [continue.dev](https://continue.dev)',
           '**Ollama:** خادم استدلال محلي يُشغّل النماذج ويعرض API متوافقة مع OpenAI. أسهل طريقة لتشغيل نماذج محلية على جهاز Mac أو Linux أو Windows.',
           '**Qwen3-Coder 30B Q4_K_M:** النموذج الرئيسي الموصى به. ~18 جيجابايت VRAM. تثبيت: `ollama pull qwen3-coder:30b`',
-          '**Qwen3-Coder 7B Q4_K_M:** للأجهزة بـ 8 جيجابايت VRAM. تثبيت: `ollama pull qwen3-coder:7b`',
+          '**Qwen2.5-Coder 7B Q4_K_M:** للأجهزة بـ 8 جيجابايت VRAM. تثبيت: `ollama pull qwen3-coder:7b`',
         ],
         callouts: [
           {
@@ -2379,7 +2379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     }
   ],
   "tabAutocompleteModel": {
-    "title": "Qwen3-Coder 7B (إكمال تلقائي)",
+    "title": "Qwen2.5-Coder 7B (إكمال تلقائي)",
     "provider": "ollama",
     "model": "qwen3-coder:7b"
   }
@@ -2427,11 +2427,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'توصيات الأجهزة',
         columns: ['الجهاز', 'النموذج', 'الأداء', 'التكلفة (USD)'],
         rows: [
-          { 'الجهاز': 'RTX 3060 12 جيجابايت', 'النموذج': 'Qwen3-Coder 7B', 'الأداء': '~28 رمز/ثانية', 'التكلفة (USD)': '$150–250 مستعمل' },
-          { 'الجهاز': 'RTX 4070 12 جيجابايت', 'النموذج': 'Qwen3-Coder 7B', 'الأداء': '~35 رمز/ثانية', 'التكلفة (USD)': '$400–450 جديد' },
-          { 'الجهاز': 'RTX 4060 Ti 16 جيجابايت', 'النموذج': 'Qwen3-Coder 7B', 'الأداء': '~30 رمز/ثانية', 'التكلفة (USD)': '~$424 جديد' },
+          { 'الجهاز': 'RTX 3060 12 جيجابايت', 'النموذج': 'Qwen2.5-Coder 7B', 'الأداء': '~28 رمز/ثانية', 'التكلفة (USD)': '$150–250 مستعمل' },
+          { 'الجهاز': 'RTX 4070 12 جيجابايت', 'النموذج': 'Qwen2.5-Coder 7B', 'الأداء': '~35 رمز/ثانية', 'التكلفة (USD)': '$400–450 جديد' },
+          { 'الجهاز': 'RTX 4060 Ti 16 جيجابايت', 'النموذج': 'Qwen2.5-Coder 7B', 'الأداء': '~30 رمز/ثانية', 'التكلفة (USD)': '~$424 جديد' },
           { 'الجهاز': 'RTX 4090 24 جيجابايت', 'النموذج': 'Qwen3-Coder 30B', 'الأداء': '~22 رمز/ثانية', 'التكلفة (USD)': '~$1,900 جديد' },
-          { 'الجهاز': 'Apple M3 Pro (18 جيجابايت)', 'النموذج': 'Qwen3-Coder 7B', 'الأداء': '~25 رمز/ثانية', 'التكلفة (USD)': 'جزء من سعر الجهاز' },
+          { 'الجهاز': 'Apple M3 Pro (18 جيجابايت)', 'النموذج': 'Qwen2.5-Coder 7B', 'الأداء': '~25 رمز/ثانية', 'التكلفة (USD)': 'جزء من سعر الجهاز' },
           { 'الجهاز': 'Apple M5 Pro (48 جيجابايت)', 'النموذج': 'Qwen3-Coder 30B', 'الأداء': '~30 رمز/ثانية', 'التكلفة (USD)': 'جزء من سعر الجهاز' },
         ],
       },
@@ -2440,7 +2440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأخطاء الشائعة',
         items: [
           '**استخدام نموذج المحادثة بدلًا من نموذج الكود.** Qwen3-Coder منضبط خصيصًا للكود. استخدام Qwen3 8B العادي (بدون -Coder) يُنتج نتائج أدنى جودة في التكميم واقتراحات الكود.',
-          '**تفعيل الإكمال التلقائي المضمّن على نموذج بطيء.** الإكمال التلقائي المضمّن يتطلب استجابة أسرع من ~200 مللي ثانية ليكون مريحًا. على RTX 3060، استخدم Qwen3-Coder 7B للإكمال التلقائي والنموذج 30B للدردشة.',
+          '**تفعيل الإكمال التلقائي المضمّن على نموذج بطيء.** الإكمال التلقائي المضمّن يتطلب استجابة أسرع من ~200 مللي ثانية ليكون مريحًا. على RTX 3060، استخدم Qwen2.5-Coder 7B للإكمال التلقائي والنموذج 30B للدردشة.',
           '**توقع 100% من جودة Copilot في كل مهمة.** الفجوة الأكبر في المكتبات غير الشائعة. إذا كانت بيئتك تعتمد بشكل كبير على مكتبات نيش، قيّم محليًا على كودك الفعلي قبل الإلغاء.',
           '**نسيان تحديث النموذج.** `ollama pull qwen3-coder:30b` ينزّل أحدث إصدار. تحقق من نشرات الإصدار عند ظهور نسخة رئيسية جديدة من Qwen-Coder.',
         ],
@@ -2461,7 +2461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل Continue.dev يعمل مع نماذج أخرى غير Qwen3-Coder؟',
-            a: 'نعم. Continue.dev يدعم أي نقطة نهاية متوافقة مع OpenAI، إضافةً إلى تكاملات مباشرة مع Ollama وvLLM وllama.cpp. يمكنك التبديل إلى DeepSeek Coder V3 أو Codestral أو Granite Code بدون تغيير الإضافة.',
+            a: 'نعم. Continue.dev يدعم أي نقطة نهاية متوافقة مع OpenAI، إضافةً إلى تكاملات مباشرة مع Ollama وvLLM وllama.cpp. يمكنك التبديل إلى DeepSeek-V3 أو Codestral أو Granite Code بدون تغيير الإضافة.',
           },
           {
             q: 'كم أحتاج من VRAM لـ Qwen3-Coder 30B؟',
@@ -2469,7 +2469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ماذا أفعل إذا كان عندي 8 جيجابايت فقط من VRAM؟',
-            a: 'استخدم Qwen3-Coder 7B مع Q4_K_M (~5 جيجابايت VRAM) أو Q5_K_M (~5.5 جيجابايت). الجودة 80–85% من النموذج 30B — لا تزال مفيدة جدًا للعمل اليومي.',
+            a: 'استخدم Qwen2.5-Coder 7B مع Q4_K_M (~5 جيجابايت VRAM) أو Q5_K_M (~5.5 جيجابايت). الجودة 80–85% من النموذج 30B — لا تزال مفيدة جدًا للعمل اليومي.',
           },
           {
             q: 'هل Continue.dev يدعم وضع الوكيل مثل أحدث خطط Copilot؟',
@@ -2544,7 +2544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Copilot을 Continue.dev + Qwen3-Coder로 대체하세요. 설정, 비용 계산(24개월 손익분기점)과 솔직한 품질 비교.',
     gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
     gammaDescription: '아래 프레젠테이션은 다음 내용을 다룹니다: Continue.dev + Ollama + Qwen3-Coder 스택($0/월 vs Copilot $20/월), 기존 하드웨어 기준 8–14개월 손익분기점을 보여주는 24개월 비용 계산, 품질 테스트 결과(TypeScript·Python에서 Copilot 대비 90–95%), 6단계 설정 가이드. PDF를 다운로드하여 로컬 Copilot 대체 참고 카드로 활용하십시오.',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen3-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3', 'Codestral 22B'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
     audience: 'Copilot 구독을 로컬 코드 어시스턴트로 전환할지 검토 중인 소프트웨어 개발자.',
     readTime: '13분 분량',
@@ -2564,7 +2564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev — VS Code/JetBrains용 무료 오픈소스 확장; 2026년 최고의 Copilot 대등 프런트엔드',
           'Qwen3-Coder 30B Q4_K_M — 2026년 8월 기준 가장 강력한 오픈소스 코딩 모델; ~18 GB VRAM 필요',
-          'Qwen3-Coder 7B — 8 GB VRAM용 경량 옵션(RTX 3060 / RTX 3070); 30B 모델 품질의 80–85%',
+          'Qwen2.5-Coder 7B — 8 GB VRAM용 경량 옵션(RTX 3060 / RTX 3070); 30B 모델 품질의 80–85%',
           '비용 계산 — Copilot $20/월 × 24개월 = $480; 로컬 하드웨어는 8–14개월에 손익분기점 도달',
           '개인정보 보호 이점 — 독점 코드가 절대 PC를 벗어나지 않아 NDA 업무 및 기밀 프로젝트에 이상적',
         ],
@@ -2646,7 +2646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Continue.dev**(무료, 오픈소스) — VS Code/JetBrains용 확장. 자동완성·채팅·에이전트 모드 포함. Copilot 대등 프런트엔드.',
           '**Ollama** — 로컬 모델 런타임. 한 줄 설치. 모델 다운로드·양자화·GPU 오프로드를 관리하고 OpenAI 호환 API를 제공합니다.',
           '**Qwen3-Coder 30B Q4_K_M** — 모델. HumanEval+, MBPP+, 실제 리팩터링 작업에서 2026년 8월 기준 가장 강력한 오픈소스 코딩 모델. ~18 GB VRAM 필요.',
-          '**Qwen3-Coder 7B** — 8–12 GB VRAM 그래픽카드용 대안. 30B 모델 품질의 80–85% 달성. RTX 3060 12 GB 및 Mac M3 Pro 16 GB에 권장.',
+          '**Qwen2.5-Coder 7B** — 8–12 GB VRAM 그래픽카드용 대안. 30B 모델 품질의 80–85% 달성. RTX 3060 12 GB 및 Mac M3 Pro 16 GB에 권장.',
         ],
         callouts: [
           {
@@ -2746,10 +2746,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hardware',
         title: '어떤 하드웨어가 필요한가요?',
         rows: [
-          { '하드웨어': 'RTX 3060 12 GB', '권장 모델': 'Qwen3-Coder 7B Q4', '토큰/초': '60–75', '적합한 용도': '대부분의 일상 작업' },
-          { '하드웨어': 'RTX 4070 12 GB', '권장 모델': 'Qwen3-Coder 7B Q5_K_M', '토큰/초': '85–100', '적합한 용도': '모든 일상 작업' },
+          { '하드웨어': 'RTX 3060 12 GB', '권장 모델': 'Qwen2.5-Coder 7B Q4', '토큰/초': '60–75', '적합한 용도': '대부분의 일상 작업' },
+          { '하드웨어': 'RTX 4070 12 GB', '권장 모델': 'Qwen2.5-Coder 7B Q5_K_M', '토큰/초': '85–100', '적합한 용도': '모든 일상 작업' },
           { '하드웨어': 'RTX 4090 / 5090 24 GB', '권장 모델': 'Qwen3-Coder 30B Q4_K_M', '토큰/초': '70–90', '적합한 용도': '고급 사용자, 대규모 리팩터링' },
-          { '하드웨어': 'Apple M3 Pro(18 GB)', '권장 모델': 'Qwen3-Coder 7B', '토큰/초': '40–55', '적합한 용도': '일상 Mac 사용' },
+          { '하드웨어': 'Apple M3 Pro(18 GB)', '권장 모델': 'Qwen2.5-Coder 7B', '토큰/초': '40–55', '적합한 용도': '일상 Mac 사용' },
           { '하드웨어': 'Apple M3 Max / M5(32 GB+)', '권장 모델': 'Qwen3-Coder 30B', '토큰/초': '35–50', '적합한 용도': '고급 Mac 사용자' },
         ],
         columns: ['하드웨어', '권장 모델', '토큰/초', '적합한 용도'],
@@ -2758,7 +2758,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'common-mistakes',
         title: '흔한 실수',
         items: [
-          '**실수 1: 8 GB VRAM에서 30B 모델 실행.** 모델은 로드되지만 GPU와 시스템 RAM 사이에서 스래싱이 발생합니다. 자동완성이 280 ms 대신 2–5초가 걸려 사용 불가 상태가 됩니다. 해결책: 8–12 GB VRAM 카드에서는 Qwen3-Coder 7B를 사용하십시오. 30B 모델은 18+ GB가 필요합니다. `ollama ps`로 실제 사용량을 확인하십시오.',
+          '**실수 1: 8 GB VRAM에서 30B 모델 실행.** 모델은 로드되지만 GPU와 시스템 RAM 사이에서 스래싱이 발생합니다. 자동완성이 280 ms 대신 2–5초가 걸려 사용 불가 상태가 됩니다. 해결책: 8–12 GB VRAM 카드에서는 Qwen2.5-Coder 7B를 사용하십시오. 30B 모델은 18+ GB가 필요합니다. `ollama ps`로 실제 사용량을 확인하십시오.',
           '**실수 2: 희귀 라이브러리에서만 로컬 품질을 비교하고 열등하다고 결론짓기.** 로컬 모델은 공개 문서가 적은 틈새 SDK에서 성능이 낮습니다. 이는 예상된 결과이며 잘 문서화되어 있습니다. 희귀 라이브러리에서만 테스트하면 왜곡된 인식을 갖게 됩니다. 해결책: 작업 시간의 80%를 차지하는 언어와 패턴에서 테스트하십시오. 그것이 실제로 중요한 품질입니다.',
           '**실수 3: 에이전트 모드 활성화를 잊기.** Continue.dev는 기본적으로 에이전트 모드가 비활성화되어 있습니다. 활성화하지 않으면 다중 파일 편집 기능을 놓칩니다 — 이것이 최신 Copilot 플랜과 경쟁력 있게 만드는 기능입니다. 해결책: Continue.dev 설정 → 에이전트 모드 활성화 → 확인을 거친 파일 편집 및 터미널 권한 부여.',
           '**실수 4: 모델을 절대 업데이트하지 않기.** 새로운 세대가 약 6개월마다 출시됩니다. 구버전에 머물면 품질 향상을 놓칩니다. 해결책: 분기별로 새 버전을 확인하십시오. `ollama pull qwen3-coder:30b`는 구버전을 덮어씁니다; 롤백을 위해 이전 태그를 일주일간 보관하십시오.',
@@ -2782,7 +2782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Continue.dev는 Qwen3-Coder 외 다른 모델도 지원하나요?',
-            a: '네. Continue.dev는 모든 OpenAI 호환 엔드포인트를 지원하며, Ollama, vLLM, llama.cpp와의 일급 통합도 제공합니다. 확장 프로그램을 변경하지 않고 DeepSeek Coder V3, Codestral, Granite Code로 전환할 수 있습니다.',
+            a: '네. Continue.dev는 모든 OpenAI 호환 엔드포인트를 지원하며, Ollama, vLLM, llama.cpp와의 일급 통합도 제공합니다. 확장 프로그램을 변경하지 않고 DeepSeek-V3, Codestral, Granite Code로 전환할 수 있습니다.',
           },
           {
             q: 'Qwen3-Coder 30B에는 VRAM이 얼마나 필요한가요?',
@@ -2790,7 +2790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'VRAM이 8 GB뿐이라면 어떻게 하나요?',
-            a: 'Q4_K_M(~5 GB VRAM) 또는 Q5_K_M(~5.5 GB)로 Qwen3-Coder 7B를 사용하십시오. 품질이 30B 모델의 80–85% 수준이며 일상 작업에서 여전히 매우 유용합니다.',
+            a: 'Q4_K_M(~5 GB VRAM) 또는 Q5_K_M(~5.5 GB)로 Qwen2.5-Coder 7B를 사용하십시오. 품질이 30B 모델의 80–85% 수준이며 일상 작업에서 여전히 매우 유용합니다.',
           },
           {
             q: 'Continue.dev는 최신 Copilot 플랜처럼 에이전트 모드를 지원하나요?',

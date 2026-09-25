@@ -33,7 +33,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Small v0.3',
       'Qwen3 8B',
       'Llama 3.1 8B',
-      'Llama 3.3 13B',
+      'Gemma 3 12B',
     ],
     current_hardware_mentioned: [
       'Apple MacBook Pro (Apple Silicon)',
@@ -534,7 +534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Small v0.3',
       'Qwen3 8B',
       'Llama 3.1 8B',
-      'Llama 3.3 13B',
+      'Gemma 3 12B',
     ],
     current_hardware_mentioned: [
       'Apple MacBook Pro (Apple Silicon)',
@@ -1033,7 +1033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Small v0.3',
       'Qwen3 8B',
       'Llama 3.1 8B',
-      'Llama 3.3 13B',
+      'Gemma 3 12B',
     ],
     current_hardware_mentioned: [
       'Apple MacBook Pro (Apple Silicon)',
@@ -1524,7 +1524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Small v0.3',
       'Qwen3 8B',
       'Llama 3.1 8B',
-      'Llama 3.3 13B',
+      'Gemma 3 12B',
     ],
     current_hardware_mentioned: [
       'Apple MacBook Pro (Apple Silicon)',
@@ -2015,7 +2015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Small v0.3',
       'Qwen3 8B',
       'Llama 3.1 8B',
-      'Llama 3.3 13B',
+      'Gemma 3 12B',
     ],
     current_hardware_mentioned: [
       'Apple MacBook Pro (Apple Silicon)',
@@ -2506,7 +2506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Small v0.3',
       'Qwen3 8B',
       'Llama 3.1 8B',
-      'Llama 3.3 13B',
+      'Gemma 3 12B',
     ],
     current_hardware_mentioned: [
       'Apple MacBook Pro (Apple Silicon)',
@@ -3011,7 +3011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Small v0.3',
       'Qwen3 8B',
       'Llama 3.1 8B',
-      'Llama 3.3 13B',
+      'Gemma 3 12B',
     ],
     current_hardware_mentioned: [
       'Apple MacBook Pro (Apple Silicon)',
@@ -3515,7 +3515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Small v0.3',
       'Qwen3 8B',
       'Llama 3.1 8B',
-      'Llama 3.3 13B',
+      'Gemma 3 12B',
     ],
     current_hardware_mentioned: [
       'Apple MacBook Pro (Apple Silicon)',
@@ -4019,7 +4019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Small v0.3',
       'Qwen3 8B',
       'Llama 3.1 8B',
-      'Llama 3.3 13B',
+      'Gemma 3 12B',
     ],
     current_hardware_mentioned: [
       'Apple MacBook Pro (Apple Silicon)',

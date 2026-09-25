@@ -70,7 +70,7 @@ schema: {
             'name': 'Should I use Llama 3.1 8B or upgrade to a 13B model?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'For coding and reasoning, upgrading to Qwen3 14B (or Qwen3-Coder 14B) provides a 10–15% accuracy improvement and requires 16GB VRAM. For chat and creative writing, Llama 3.1 8B or Mistral Small at 8GB is sufficient — the quality gap is negligible for conversational tasks.',
+              'text': 'For coding and reasoning, upgrading to Qwen3 14B (or Qwen2.5-Coder 14B) provides a 10–15% accuracy improvement and requires 16GB VRAM. For chat and creative writing, Llama 3.1 8B or Mistral Small at 8GB is sufficient — the quality gap is negligible for conversational tasks.',
             },
           },
           {
@@ -86,7 +86,7 @@ schema: {
             'name': 'Is there a 7B model better than Llama 3.1 8B, Mistral, and Qwen3?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'These three are the frontier for the 7B class. Each leads in a different category: Llama 3.1 8B for reasoning (82% MATH), Mistral for instruction-following (92%), Qwen3 for multilingual (27 languages). Specialized variants like Qwen3-Coder 7B outperform general models on coding benchmarks.',
+              'text': 'These three are the frontier for the 7B class. Each leads in a different category: Llama 3.1 8B for reasoning (82% MATH), Mistral for instruction-following (92%), Qwen3 for multilingual (27 languages). Specialized variants like Qwen2.5-Coder 7B outperform general models on coding benchmarks.',
             },
           },
           {
@@ -229,7 +229,7 @@ schema: {
             '**Llama 3.1 8B (Meta):** Good for Western European languages. Weaker on CJK (Chinese/Japanese/Korean) compared to Qwen3.',
             '**Mistral Small:** Primarily English. Acceptable French/German/Spanish, but avoid for Asian or Arabic language tasks.',
             '**English-only (avoid for multilingual):** Phi 2.7B, Stablelm 3B.',
-            '**Code-specific variant:** Qwen3-Coder 7B outperforms general 7B on code completion. See [best local LLMs for coding](/local-llms/best-local-llms-for-coding).',
+            '**Code-specific variant:** Qwen2.5-Coder 7B outperforms general 7B on code completion. See [best local LLMs for coding](/local-llms/best-local-llms-for-coding).',
             '**Domain fine-tunes:** Medical? Use BioLlama. Legal? Use Legalbench-tuned variants.',
           ],
         },
@@ -268,9 +268,9 @@ schema: {
           faqs: [
             { q: 'Which 7B should I choose?', a: 'Use Llama 3.1 8B for coding, math, and analytical tasks — it scores 82% on MATH and 73% on HumanEval. Use Mistral Small for creative writing, chat, and instruction-following — it scores 92% on instruction benchmarks. Use Qwen3 8B if you need multilingual support across Chinese, Japanese, German, or Arabic.' },
             { q: 'Can I run two 7B models on 16GB VRAM?', a: 'Yes. Ollama supports loading multiple models sequentially. With 16GB VRAM, you can run two 7B models at Q4 quantization, as each requires ~4.5GB. Each model runs at ~15 tok/sec independently — they do not run in parallel.' },
-            { q: 'Should I use Llama 3.1 8B or upgrade to a 13B model?', a: 'For coding and reasoning, upgrading to Qwen3 14B (or Qwen3-Coder 14B) provides a 10–15% accuracy improvement and requires 16GB VRAM. For chat and creative writing, Llama 3.1 8B or Mistral Small at 8GB is sufficient — the quality gap is negligible for conversational tasks.' },
+            { q: 'Should I use Llama 3.1 8B or upgrade to a 13B model?', a: 'For coding and reasoning, upgrading to Qwen3 14B (or Qwen2.5-Coder 14B) provides a 10–15% accuracy improvement and requires 16GB VRAM. For chat and creative writing, Llama 3.1 8B or Mistral Small at 8GB is sufficient — the quality gap is negligible for conversational tasks.' },
             { q: 'Which 7B has the longest context window?', a: 'Llama 3.1 8B, Mistral Small, and Qwen3 8B all support 8K-token context windows in standard Q4 builds. For longer contexts (32K+), you need larger models — Qwen3 72B supports 128K tokens but requires 40GB+ VRAM.' },
-            { q: 'Is there a 7B model better than Llama 3.1 8B, Mistral, and Qwen3?', a: 'These three are the frontier for the 7B class. Each leads in a different category: Llama 3.1 8B for reasoning (82% MATH), Mistral for instruction-following (92%), Qwen3 for multilingual (27 languages). Specialized variants like Qwen3-Coder 7B outperform general models on coding benchmarks.' },
+            { q: 'Is there a 7B model better than Llama 3.1 8B, Mistral, and Qwen3?', a: 'These three are the frontier for the 7B class. Each leads in a different category: Llama 3.1 8B for reasoning (82% MATH), Mistral for instruction-following (92%), Qwen3 for multilingual (27 languages). Specialized variants like Qwen2.5-Coder 7B outperform general models on coding benchmarks.' },
             { q: 'Which 7B model should I choose for my use case?', a: 'Use Llama 3.1 8B for coding, math, and analytical tasks — it scores 82% on MATH and 73% on HumanEval. Use Mistral Small for creative writing, chat, and instruction-following — it scores 92% on instruction benchmarks. Use Qwen3 8B if you need multilingual support across Chinese, Japanese, German, or Arabic.' },
           ],
         },
@@ -361,7 +361,7 @@ schema: {
             'name': '¿Debería usar Llama 3.1 8B o actualizar a un modelo 13B?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Para programación y razonamiento, actualizar a Qwen3 14B (o Qwen3-Coder 14B) mejora la precisión un 10–15% y requiere 16 GB de VRAM. Para chat y escritura creativa, Llama 3.1 8B o Mistral Small con 8 GB es suficiente — la diferencia de calidad es insignificante para tareas conversacionales.',
+              'text': 'Para programación y razonamiento, actualizar a Qwen3 14B (o Qwen2.5-Coder 14B) mejora la precisión un 10–15% y requiere 16 GB de VRAM. Para chat y escritura creativa, Llama 3.1 8B o Mistral Small con 8 GB es suficiente — la diferencia de calidad es insignificante para tareas conversacionales.',
             },
           },
           {
@@ -377,7 +377,7 @@ schema: {
             'name': '¿Existe algún modelo 7B mejor que Llama 3.1 8B, Mistral y Qwen3?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'A partir de abril de 2026, estos tres son la frontera de la clase 7B. Cada uno lidera en una categoría diferente: Llama 3.1 8B en razonamiento (82% MATH), Mistral en seguimiento de instrucciones (92%), Qwen3 en multilingüe (27 idiomas). Variantes especializadas como Qwen3-Coder 7B superan a los modelos generales en benchmarks de código.',
+              'text': 'A partir de abril de 2026, estos tres son la frontera de la clase 7B. Cada uno lidera en una categoría diferente: Llama 3.1 8B en razonamiento (82% MATH), Mistral en seguimiento de instrucciones (92%), Qwen3 en multilingüe (27 idiomas). Variantes especializadas como Qwen2.5-Coder 7B superan a los modelos generales en benchmarks de código.',
             },
           },
         ],
@@ -512,7 +512,7 @@ schema: {
             '**Llama 3.1 8B (Meta):** Bueno para lenguas de Europa occidental. Más débil en CJK (chino/japonés/coreano) comparado con Qwen3.',
             '**Mistral Small:** Principalmente inglés. Francés/alemán/español aceptables, pero evítalo para tareas en lenguas asiáticas o árabe.',
             '**Solo inglés (evitar para multilingüe):** Phi 2.7B, Stablelm 3B.',
-            '**Variante específica de código:** Qwen3-Coder 7B supera a los modelos generales 7B en completado de código. Ver [mejores LLMs locales para programación](/es/local-llms/best-local-llms-for-coding).',
+            '**Variante específica de código:** Qwen2.5-Coder 7B supera a los modelos generales 7B en completado de código. Ver [mejores LLMs locales para programación](/es/local-llms/best-local-llms-for-coding).',
             '**Fine-tunes de dominio:** ¿Medicina? Usa BioLlama. ¿Legal? Usa variantes ajustadas con Legalbench.',
           ],
         },
@@ -551,9 +551,9 @@ schema: {
           faqs: [
             { q: '¿Qué modelo 7B debería elegir?', a: 'Usa Llama 3.1 8B para programación, matemáticas y tareas analíticas — obtiene 82% en MATH y 73% en HumanEval. Usa Mistral Small para escritura creativa, chat y seguimiento de instrucciones — obtiene 92% en benchmarks de instrucciones. Usa Qwen3 8B si necesitas soporte multilingüe en chino, japonés, alemán o árabe.' },
             { q: '¿Puedo ejecutar dos modelos 7B con 16 GB de VRAM?', a: 'Sí. Ollama admite la carga secuencial de varios modelos. Con 16 GB de VRAM puedes ejecutar dos modelos 7B con cuantización Q4, ya que cada uno requiere ~4,5 GB. Cada modelo corre a ~15 tok/seg de forma independiente — no se ejecutan en paralelo.' },
-            { q: '¿Debería usar Llama 3.1 8B o actualizar a un modelo 13B?', a: 'Para programación y razonamiento, actualizar a Qwen3 14B (o Qwen3-Coder 14B) mejora la precisión un 10–15% y requiere 16 GB de VRAM. Para chat y escritura creativa, Llama 3.1 8B o Mistral Small con 8 GB es suficiente — la diferencia de calidad es insignificante para tareas conversacionales.' },
+            { q: '¿Debería usar Llama 3.1 8B o actualizar a un modelo 13B?', a: 'Para programación y razonamiento, actualizar a Qwen3 14B (o Qwen2.5-Coder 14B) mejora la precisión un 10–15% y requiere 16 GB de VRAM. Para chat y escritura creativa, Llama 3.1 8B o Mistral Small con 8 GB es suficiente — la diferencia de calidad es insignificante para tareas conversacionales.' },
             { q: '¿Qué modelo 7B tiene la ventana de contexto más larga?', a: 'A partir de abril de 2026, Llama 3.1 8B, Mistral Small y Qwen3 8B admiten ventanas de contexto de 8K tokens en versiones Q4 estándar. Para contextos más largos (32K+) se necesitan modelos más grandes — Qwen3 72B admite 128K tokens pero requiere 40 GB+ de VRAM.' },
-            { q: '¿Existe algún modelo 7B mejor que Llama 3.1 8B, Mistral y Qwen3?', a: 'A partir de abril de 2026, estos tres son la frontera de la clase 7B. Cada uno lidera en una categoría diferente: Llama 3.1 8B en razonamiento (82% MATH), Mistral en seguimiento de instrucciones (92%), Qwen3 en multilingüe (27 idiomas). Variantes especializadas como Qwen3-Coder 7B superan a los modelos generales en benchmarks de código.' },
+            { q: '¿Existe algún modelo 7B mejor que Llama 3.1 8B, Mistral y Qwen3?', a: 'A partir de abril de 2026, estos tres son la frontera de la clase 7B. Cada uno lidera en una categoría diferente: Llama 3.1 8B en razonamiento (82% MATH), Mistral en seguimiento de instrucciones (92%), Qwen3 en multilingüe (27 idiomas). Variantes especializadas como Qwen2.5-Coder 7B superan a los modelos generales en benchmarks de código.' },
           ],
         },
         'relatedReading': {
@@ -645,7 +645,7 @@ schema: {
             'name': 'هل ينبغي أن أستخدم Llama 3.1 8B أم أرتقي إلى نموذج 13B؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'للبرمجة والاستدلال، الارتقاء إلى Qwen3 14B (أو Qwen3-Coder 14B) يحسّن الدقة بنسبة 10–15% ويتطلب 16 GB من VRAM. أما للدردشة والكتابة الإبداعية، فإن Llama 3.1 8B أو Mistral Small بـ 8 GB كافٍ — الفارق في الجودة لا يُذكر للمهام الحوارية.',
+              'text': 'للبرمجة والاستدلال، الارتقاء إلى Qwen3 14B (أو Qwen2.5-Coder 14B) يحسّن الدقة بنسبة 10–15% ويتطلب 16 GB من VRAM. أما للدردشة والكتابة الإبداعية، فإن Llama 3.1 8B أو Mistral Small بـ 8 GB كافٍ — الفارق في الجودة لا يُذكر للمهام الحوارية.',
             },
           },
           {
@@ -661,7 +661,7 @@ schema: {
             'name': 'هل يوجد نموذج 7B أفضل من Llama 3.1 8B وMistral وQwen3؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'اعتبارًا من أبريل 2026، هذه الثلاثة هي حدود فئة 7B. يتصدّر كل منها فئة مختلفة: Llama 3.1 8B في الاستدلال (82% MATH)، وMistral في اتباع التعليمات (92%)، وQwen3 في تعدد اللغات (27 لغة). تتفوق المتغيرات المتخصصة مثل Qwen3-Coder 7B على النماذج العامة في اختبارات الكود.',
+              'text': 'اعتبارًا من أبريل 2026، هذه الثلاثة هي حدود فئة 7B. يتصدّر كل منها فئة مختلفة: Llama 3.1 8B في الاستدلال (82% MATH)، وMistral في اتباع التعليمات (92%)، وQwen3 في تعدد اللغات (27 لغة). تتفوق المتغيرات المتخصصة مثل Qwen2.5-Coder 7B على النماذج العامة في اختبارات الكود.',
             },
           },
         ],
@@ -797,7 +797,7 @@ schema: {
             '**Llama 3.1 8B (Meta):** جيد للغات أوروبا الغربية. أضعف في CJK (الصينية/اليابانية/الكورية) مقارنةً بـ Qwen3.',
             '**Mistral Small:** الإنجليزية أساسًا. الفرنسية/الألمانية/الإسبانية مقبولة، لكن تجنّبه لمهام اللغات الآسيوية أو العربية.',
             '**الإنجليزية فقط (تجنّبه لتعدد اللغات):** Phi 2.7B، Stablelm 3B.',
-            '**متغير خاص بالكود:** Qwen3-Coder 7B يتفوق على نماذج 7B العامة في إكمال الكود. انظر [أفضل نماذج LLM المحلية للبرمجة](/ar/local-llms/best-local-llms-for-coding).',
+            '**متغير خاص بالكود:** Qwen2.5-Coder 7B يتفوق على نماذج 7B العامة في إكمال الكود. انظر [أفضل نماذج LLM المحلية للبرمجة](/ar/local-llms/best-local-llms-for-coding).',
             '**ضبط دقيق للمجال:** طب؟ استخدم BioLlama. قانون؟ استخدم متغيرات مضبوطة بـ Legalbench.',
           ],
         },
@@ -836,9 +836,9 @@ schema: {
           faqs: [
             { q: 'أي نموذج 7B ينبغي أن أختار؟', a: 'استخدم Llama 3.1 8B للبرمجة والرياضيات والمهام التحليلية — يحقق 82% في MATH و73% في HumanEval. استخدم Mistral Small للكتابة الإبداعية والدردشة واتباع التعليمات — يحقق 92% في اختبارات التعليمات. استخدم Qwen3 8B إن احتجت دعمًا متعدد اللغات بالصينية أو اليابانية أو الألمانية أو العربية.' },
             { q: 'هل يمكنني تشغيل نموذجي 7B بـ 16 GB من VRAM؟', a: 'نعم. يدعم Ollama التحميل المتتابع لعدة نماذج. بـ 16 GB من VRAM يمكنك تشغيل نموذجي 7B بتكميم Q4، إذ يتطلب كل منهما نحو 4.5 GB. يعمل كل نموذج بسرعة نحو 15 tok/ثانية بشكل مستقل — لا يعملان بالتوازي.' },
-            { q: 'هل ينبغي أن أستخدم Llama 3.1 8B أم أرتقي إلى نموذج 13B؟', a: 'للبرمجة والاستدلال، الارتقاء إلى Qwen3 14B (أو Qwen3-Coder 14B) يحسّن الدقة بنسبة 10–15% ويتطلب 16 GB من VRAM. أما للدردشة والكتابة الإبداعية، فإن Llama 3.1 8B أو Mistral Small بـ 8 GB كافٍ — الفارق في الجودة لا يُذكر للمهام الحوارية.' },
+            { q: 'هل ينبغي أن أستخدم Llama 3.1 8B أم أرتقي إلى نموذج 13B؟', a: 'للبرمجة والاستدلال، الارتقاء إلى Qwen3 14B (أو Qwen2.5-Coder 14B) يحسّن الدقة بنسبة 10–15% ويتطلب 16 GB من VRAM. أما للدردشة والكتابة الإبداعية، فإن Llama 3.1 8B أو Mistral Small بـ 8 GB كافٍ — الفارق في الجودة لا يُذكر للمهام الحوارية.' },
             { q: 'أي نموذج 7B يملك أطول نافذة سياق؟', a: 'اعتبارًا من أبريل 2026، يدعم Llama 3.1 8B وMistral Small وQwen3 8B نوافذ سياق بـ 8K token في إصدارات Q4 القياسية. للسياقات الأطول (32K فأكثر) تلزم نماذج أكبر — يدعم Qwen3 72B سياق 128K token لكنه يتطلب 40 GB فأكثر من VRAM.' },
-            { q: 'هل يوجد نموذج 7B أفضل من Llama 3.1 8B وMistral وQwen3؟', a: 'اعتبارًا من أبريل 2026، هذه الثلاثة هي حدود فئة 7B. يتصدّر كل منها فئة مختلفة: Llama 3.1 8B في الاستدلال (82% MATH)، وMistral في اتباع التعليمات (92%)، وQwen3 في تعدد اللغات (27 لغة). تتفوق المتغيرات المتخصصة مثل Qwen3-Coder 7B على النماذج العامة في اختبارات الكود.' },
+            { q: 'هل يوجد نموذج 7B أفضل من Llama 3.1 8B وMistral وQwen3؟', a: 'اعتبارًا من أبريل 2026، هذه الثلاثة هي حدود فئة 7B. يتصدّر كل منها فئة مختلفة: Llama 3.1 8B في الاستدلال (82% MATH)، وMistral في اتباع التعليمات (92%)، وQwen3 في تعدد اللغات (27 لغة). تتفوق المتغيرات المتخصصة مثل Qwen2.5-Coder 7B على النماذج العامة في اختبارات الكود.' },
           ],
         },
         'relatedReading': {
@@ -1013,7 +1013,7 @@ schema: {
             '**Qwen3 8B (Alibaba):** 27 idiomas incluindo chinês (mandarim/cantonês), japonês, coreano, árabe e russo. O português brasileiro também é suportado.',
             '**Llama 3.1 8B (Meta):** Bom para línguas da Europa ocidental e português. Mais fraco em CJK (chinês/japonês/coreano) comparado ao Qwen3.',
             '**Mistral Small:** Principalmente inglês. Francês/alemão/espanhol aceitáveis, mas evite para tarefas em línguas asiáticas ou árabe.',
-            '**Variante específica de código:** Qwen3-Coder 7B supera os modelos gerais 7B em completação de código.',
+            '**Variante específica de código:** Qwen2.5-Coder 7B supera os modelos gerais 7B em completação de código.',
           ],
         },
         budget: {
@@ -1436,7 +1436,7 @@ schema: {
             'name': 'Faut-il rester sur Llama 3.1 8B ou passer à un 13B ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Pour le code et le raisonnement, passer à Qwen3 14B (ou Qwen3-Coder 14B) apporte 10–15 % de précision et nécessite 16 Go de VRAM. Pour le chat et la rédaction créative, Llama 3.1 8B ou Mistral Small avec 8 Go suffit — l\'écart est négligeable pour les tâches conversationnelles.',
+              'text': 'Pour le code et le raisonnement, passer à Qwen3 14B (ou Qwen2.5-Coder 14B) apporte 10–15 % de précision et nécessite 16 Go de VRAM. Pour le chat et la rédaction créative, Llama 3.1 8B ou Mistral Small avec 8 Go suffit — l\'écart est négligeable pour les tâches conversationnelles.',
             },
           },
           {
@@ -1452,7 +1452,7 @@ schema: {
             'name': 'Existe-t-il un modèle 7B meilleur que Llama 3.1 8B, Mistral et Qwen3 ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'En avril 2026, ces trois représentent la frontière de la classe 7B. Chacun mène dans une catégorie : Llama 3.1 8B en raisonnement (82 % MATH), Mistral en suivi d\'instructions (92 %), Qwen3 en multilingue (27 langues). Des variantes comme Qwen3-Coder 7B surpassent les modèles généraux sur le code.',
+              'text': 'En avril 2026, ces trois représentent la frontière de la classe 7B. Chacun mène dans une catégorie : Llama 3.1 8B en raisonnement (82 % MATH), Mistral en suivi d\'instructions (92 %), Qwen3 en multilingue (27 langues). Des variantes comme Qwen2.5-Coder 7B surpassent les modèles généraux sur le code.',
             },
           },
           {
@@ -1595,7 +1595,7 @@ schema: {
             '**Llama 3.1 8B (Meta) :** Bon pour les langues d\'Europe occidentale. Plus faible sur les langues CJK (chinois/japonais/coréen) comparé à Qwen3.',
             '**Mistral Small :** Principalement en anglais. Français/allemand/espagnol acceptables, mais à éviter pour les tâches en langues asiatiques ou arabes.',
             '**Anglais uniquement (à éviter pour le multilingue) :** Phi 2.7B, Stablelm 3B.',
-            '**Variante spécialisée code :** Qwen3-Coder 7B surpasse les modèles généraux 7B sur la complétion de code. Voir [meilleurs LLM locaux pour le code](/fr/local-llms/best-local-llms-for-coding).',
+            '**Variante spécialisée code :** Qwen2.5-Coder 7B surpasse les modèles généraux 7B sur la complétion de code. Voir [meilleurs LLM locaux pour le code](/fr/local-llms/best-local-llms-for-coding).',
             '**Fine-tunes de domaine :** Médecine ? Utilisez BioLlama. Droit ? Utilisez des variantes ajustées sur Legalbench.',
           ],
         },
@@ -1634,9 +1634,9 @@ schema: {
           faqs: [
             { q: 'Quel modèle 7B dois-je choisir ?', a: 'Utilisez Llama 3.1 8B pour le code, les mathématiques et les tâches analytiques — il obtient 82 % au benchmark MATH et 73 % à HumanEval. Utilisez Mistral Small pour la rédaction créative, le chat et le suivi d\'instructions — il obtient 92 % aux benchmarks d\'instructions. Utilisez Qwen3 8B pour le support multilingue en chinois, japonais, allemand ou arabe.' },
             { q: 'Puis-je exécuter deux modèles 7B sur 16 Go de VRAM ?', a: 'Oui. Ollama prend en charge le chargement séquentiel de plusieurs modèles. Avec 16 Go de VRAM, vous pouvez exécuter deux modèles 7B en quantification Q4, chacun nécessitant ~4.5 Go. Chaque modèle tourne à ~15 tokens/sec indépendamment — ils ne fonctionnent pas en parallèle.' },
-            { q: 'Faut-il rester sur Llama 3.1 8B ou passer à un 13B ?', a: 'Pour le code et le raisonnement, passer à Qwen3 14B (ou Qwen3-Coder 14B) apporte 10–15 % de précision et nécessite 16 Go de VRAM. Pour le chat et la rédaction créative, Llama 3.1 8B ou Mistral Small avec 8 Go suffit — l\'écart est négligeable pour les tâches conversationnelles.' },
+            { q: 'Faut-il rester sur Llama 3.1 8B ou passer à un 13B ?', a: 'Pour le code et le raisonnement, passer à Qwen3 14B (ou Qwen2.5-Coder 14B) apporte 10–15 % de précision et nécessite 16 Go de VRAM. Pour le chat et la rédaction créative, Llama 3.1 8B ou Mistral Small avec 8 Go suffit — l\'écart est négligeable pour les tâches conversationnelles.' },
             { q: 'Quel modèle 7B a la plus longue fenêtre de contexte ?', a: 'En avril 2026, Llama 3.1 8B, Mistral Small et Qwen3 8B supportent tous 8K tokens dans les builds Q4 standard. Pour des contextes plus longs (32K+), il faut des modèles plus grands — Qwen3 72B supporte 128K tokens mais nécessite 40 Go+ de VRAM.' },
-            { q: 'Existe-t-il un modèle 7B meilleur que Llama 3.1 8B, Mistral et Qwen3 ?', a: 'En avril 2026, ces trois représentent la frontière de la classe 7B. Chacun mène dans une catégorie : Llama 3.1 8B en raisonnement (82 % MATH), Mistral en suivi d\'instructions (92 %), Qwen3 en multilingue (27 langues). Des variantes comme Qwen3-Coder 7B surpassent les modèles généraux sur le code.' },
+            { q: 'Existe-t-il un modèle 7B meilleur que Llama 3.1 8B, Mistral et Qwen3 ?', a: 'En avril 2026, ces trois représentent la frontière de la classe 7B. Chacun mène dans une catégorie : Llama 3.1 8B en raisonnement (82 % MATH), Mistral en suivi d\'instructions (92 %), Qwen3 en multilingue (27 langues). Des variantes comme Qwen2.5-Coder 7B surpassent les modèles généraux sur le code.' },
             { q: 'Quel modèle 7B choisir selon mon cas d\'usage ?', a: 'Utilisez Llama 3.1 8B pour le code, les mathématiques et les tâches analytiques — il obtient 82 % au benchmark MATH et 73 % à HumanEval. Utilisez Mistral Small pour la rédaction créative, le chat et le suivi d\'instructions — il obtient 92 % aux benchmarks d\'instructions. Utilisez Qwen3 8B si vous avez besoin d\'un support multilingue en chinois, japonais, allemand ou arabe.' },
           ],
         },
@@ -1726,7 +1726,7 @@ schema: {
             'name': 'Llama 3.1 8Bを使うべきか、13Bにアップグレードすべきか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'コーディングと推論には、Qwen3 14B（またはQwen3-Coder 14B）へのアップグレードで10〜15%の精度向上が見込め、16GB VRAMが必要です。チャットや創作には8GBのLlama 3.1 8BまたはMistral Smallで十分です。会話タスクでの品質差はわずかです。',
+              'text': 'コーディングと推論には、Qwen3 14B（またはQwen2.5-Coder 14B）へのアップグレードで10〜15%の精度向上が見込め、16GB VRAMが必要です。チャットや創作には8GBのLlama 3.1 8BまたはMistral Smallで十分です。会話タスクでの品質差はわずかです。',
             },
           },
           {
@@ -1742,7 +1742,7 @@ schema: {
             'name': 'Llama 3.1 8B、Mistral、Qwen3より優れた7Bモデルはありますか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '2026年4月時点、この3つが7Bクラスのフロンティアです。各モデルが異なるカテゴリでリードしています：Llama 3.3が推論（82% MATH）、Mistralが指示追従（92%）、Qwen3が多言語対応（27言語）。Qwen3-Coder 7Bなどの特化バリアントはコーディングベンチマークで汎用モデルを上回ります。',
+              'text': '2026年4月時点、この3つが7Bクラスのフロンティアです。各モデルが異なるカテゴリでリードしています：Llama 3.3が推論（82% MATH）、Mistralが指示追従（92%）、Qwen3が多言語対応（27言語）。Qwen2.5-Coder 7Bなどの特化バリアントはコーディングベンチマークで汎用モデルを上回ります。',
             },
           },
           {
@@ -1885,7 +1885,7 @@ schema: {
             '**Llama 3.1 8B（Meta）：** 西ヨーロッパ言語が良好。Qwen3と比較してCJK（中国語/日本語/韓国語）は弱い。',
             '**Mistral Small：** 主に英語。フランス語/ドイツ語/スペイン語は許容範囲、アジア語やアラビア語タスクには不向き。',
             '**多言語不適（英語のみ）：** Phi 2.7B、Stablelm 3B。',
-            '**コード特化バリアント：** Qwen3-Coder 7Bはコード補完で汎用7Bを上回ります。[コーディング向けローカルLLM](/ja/local-llms/best-local-llms-for-coding)をご参照ください。',
+            '**コード特化バリアント：** Qwen2.5-Coder 7Bはコード補完で汎用7Bを上回ります。[コーディング向けローカルLLM](/ja/local-llms/best-local-llms-for-coding)をご参照ください。',
             '**ドメインファインチューン：** 医療ならBioLlama。法律ならLegalbenchチューニングバリアントを使用。',
           ],
         },
@@ -1924,9 +1924,9 @@ schema: {
           faqs: [
             { q: 'どの7Bモデルを選ぶべきですか？', a: 'コーディング・数学・分析タスクにはLlama 3.1 8Bを使用してください（MATH 82%、HumanEval 73%）。創作・チャット・指示追従にはMistral Smallを使用してください（指示追従ベンチマーク92%）。中国語・日本語・アラビア語などの多言語サポートが必要な場合はQwen3 8Bを選択してください。' },
             { q: '16GB VRAMで2つの7Bモデルを同時実行できますか？', a: 'はい。OllamaはQ4量子化の7Bモデルを2つ順次ロードできます（各約4.5GB必要）。16GB VRAMで両方を実行可能です。各モデルは独立して約15トークン/秒で動作します。並列実行はサポートされていません。' },
-            { q: 'Llama 3.1 8Bを使うべきか、13Bにアップグレードすべきか？', a: 'コーディングと推論には、Qwen3 14B（またはQwen3-Coder 14B）へのアップグレードで10〜15%の精度向上が見込め、16GB VRAMが必要です。チャットや創作には8GBのLlama 3.1 8BまたはMistral Smallで十分です。会話タスクでの品質差はわずかです。' },
+            { q: 'Llama 3.1 8Bを使うべきか、13Bにアップグレードすべきか？', a: 'コーディングと推論には、Qwen3 14B（またはQwen2.5-Coder 14B）へのアップグレードで10〜15%の精度向上が見込め、16GB VRAMが必要です。チャットや創作には8GBのLlama 3.1 8BまたはMistral Smallで十分です。会話タスクでの品質差はわずかです。' },
             { q: 'コンテキストウィンドウが最長の7Bモデルは？', a: '2026年4月時点、Llama 3.1 8B、Mistral Small、Qwen3 8BはすべてQ4標準ビルドで8Kトークンのコンテキストウィンドウをサポートしています。より長いコンテキスト（32K+）には大型モデルが必要です。Qwen3 72Bは128Kトークンをサポートしますが40GB以上のVRAMが必要です。' },
-            { q: 'Llama 3.1 8B、Mistral、Qwen3より優れた7Bモデルはありますか？', a: '2026年4月時点、この3つが7Bクラスのフロンティアです。各モデルが異なるカテゴリでリードしています：Llama 3.3が推論（82% MATH）、Mistralが指示追従（92%）、Qwen3が多言語対応（27言語）。Qwen3-Coder 7Bなどの特化バリアントはコーディングベンチマークで汎用モデルを上回ります。' },
+            { q: 'Llama 3.1 8B、Mistral、Qwen3より優れた7Bモデルはありますか？', a: '2026年4月時点、この3つが7Bクラスのフロンティアです。各モデルが異なるカテゴリでリードしています：Llama 3.3が推論（82% MATH）、Mistralが指示追従（92%）、Qwen3が多言語対応（27言語）。Qwen2.5-Coder 7Bなどの特化バリアントはコーディングベンチマークで汎用モデルを上回ります。' },
             { q: 'ユースケース別に最適な7Bモデルは？', a: 'コーディング・数学・分析タスクにはLlama 3.1 8Bを使用してください（MATH 82%、HumanEval 73%）。創作・チャット・指示追従にはMistral Smallを使用してください（指示追従ベンチマーク92%）。中国語・日本語・アラビア語など多言語サポートが必要な場合はQwen3 8Bを選択してください。' },
           ],
         },
@@ -2016,7 +2016,7 @@ schema: {
             'name': '应该使用Llama 3.1 8B还是升级到13B模型？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '对于编程和推理任务，升级到Qwen3 14B（或Qwen3-Coder 14B）可提升10–15%的精度，需要16GB显存。对于对话和创意写作，8GB的Llama 3.1 8B或Mistral Small已足够，会话任务的质量差距可忽略不计。',
+              'text': '对于编程和推理任务，升级到Qwen3 14B（或Qwen2.5-Coder 14B）可提升10–15%的精度，需要16GB显存。对于对话和创意写作，8GB的Llama 3.1 8B或Mistral Small已足够，会话任务的质量差距可忽略不计。',
             },
           },
           {
@@ -2032,7 +2032,7 @@ schema: {
             'name': '有比Llama 3.1 8B、Mistral和Qwen3更好的7B模型吗？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '截至2026年4月，这三款模型代表7B级别的前沿水平，各自在不同类别领先：Llama 3.3推理最强（82% MATH），Mistral指令遵循最强（92%），Qwen3多语言最强（27种语言）。Qwen3-Coder 7B等专用变体在编程基准测试中超越通用模型。',
+              'text': '截至2026年4月，这三款模型代表7B级别的前沿水平，各自在不同类别领先：Llama 3.3推理最强（82% MATH），Mistral指令遵循最强（92%），Qwen3多语言最强（27种语言）。Qwen2.5-Coder 7B等专用变体在编程基准测试中超越通用模型。',
             },
           },
         ],
@@ -2167,7 +2167,7 @@ schema: {
             '**Llama 3.1 8B（Meta）：** 西欧语言表现良好。与Qwen3相比，中日韩（CJK）语言较弱。',
             '**Mistral Small：** 主要面向英文。法语/德语/西班牙语尚可，亚洲语言或阿拉伯语任务不推荐使用。',
             '**不适合多语言（仅英文）：** Phi 2.7B、Stablelm 3B。',
-            '**代码专用变体：** Qwen3-Coder 7B在代码补全方面优于通用7B模型。参见[本地LLM编程最佳实践](/zh/local-llms/best-local-llms-for-coding)。',
+            '**代码专用变体：** Qwen2.5-Coder 7B在代码补全方面优于通用7B模型。参见[本地LLM编程最佳实践](/zh/local-llms/best-local-llms-for-coding)。',
             '**垂直领域微调：** 医疗领域用BioLlama，法律领域用Legalbench微调变体。',
           ],
         },
@@ -2206,9 +2206,9 @@ schema: {
           faqs: [
             { q: '应该选择哪款7B模型？', a: '编程、数学和分析任务请使用Llama 3.1 8B（MATH 82%，HumanEval 73%）。创意写作、对话和指令遵循请使用Mistral Small（指令遵循基准92%）。如需中文、日文、阿拉伯文等多语言支持，请选择Qwen3 8B（支持27种语言）。' },
             { q: '16GB显存可以同时运行两个7B模型吗？', a: '可以。Ollama支持多模型顺序加载。16GB显存可以运行两个Q4量化的7B模型（每个约需4.5GB）。每个模型独立以约15 tokens/秒运行，不支持并行推理。' },
-            { q: '应该使用Llama 3.1 8B还是升级到13B模型？', a: '对于编程和推理任务，升级到Qwen3 14B（或Qwen3-Coder 14B）可提升10–15%的精度，需要16GB显存。对于对话和创意写作，8GB的Llama 3.1 8B或Mistral Small已足够，会话任务的质量差距可忽略不计。' },
+            { q: '应该使用Llama 3.1 8B还是升级到13B模型？', a: '对于编程和推理任务，升级到Qwen3 14B（或Qwen2.5-Coder 14B）可提升10–15%的精度，需要16GB显存。对于对话和创意写作，8GB的Llama 3.1 8B或Mistral Small已足够，会话任务的质量差距可忽略不计。' },
             { q: '哪款7B模型的上下文窗口最长？', a: '截至2026年4月，Llama 3.1 8B、Mistral Small和Qwen3 8B在标准Q4版本中均支持8K token上下文窗口。更长的上下文（32K+）需要更大的模型——Qwen3 72B支持128K token，但需要40GB以上显存。' },
-            { q: '有比Llama 3.1 8B、Mistral和Qwen3更好的7B模型吗？', a: '截至2026年4月，这三款模型代表7B级别的前沿水平，各自在不同类别领先：Llama 3.3推理最强（82% MATH），Mistral指令遵循最强（92%），Qwen3多语言最强（27种语言）。Qwen3-Coder 7B等专用变体在编程基准测试中超越通用模型。' },
+            { q: '有比Llama 3.1 8B、Mistral和Qwen3更好的7B模型吗？', a: '截至2026年4月，这三款模型代表7B级别的前沿水平，各自在不同类别领先：Llama 3.3推理最强（82% MATH），Mistral指令遵循最强（92%），Qwen3多语言最强（27种语言）。Qwen2.5-Coder 7B等专用变体在编程基准测试中超越通用模型。' },
           ],
         },
         'relatedReading': {
@@ -2308,7 +2308,7 @@ schema: {
             'name': 'Llama 3.1 8B를 사용해야 합니까, 아니면 13B 모델로 업그레이드해야 합니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '코딩 및 추론의 경우 Qwen3 14B(또는 Qwen3-Coder 14B)로 업그레이드하면 정확도가 10–15% 향상되며 16GB VRAM이 필요합니다. 채팅 및 창작 글쓰기의 경우 8GB의 Llama 3.1 8B 또는 Mistral Small로 충분합니다. 대화형 작업에서의 품질 차이는 미미합니다.',
+              'text': '코딩 및 추론의 경우 Qwen3 14B(또는 Qwen2.5-Coder 14B)로 업그레이드하면 정확도가 10–15% 향상되며 16GB VRAM이 필요합니다. 채팅 및 창작 글쓰기의 경우 8GB의 Llama 3.1 8B 또는 Mistral Small로 충분합니다. 대화형 작업에서의 품질 차이는 미미합니다.',
             },
           },
           {
@@ -2324,7 +2324,7 @@ schema: {
             'name': 'Llama 3.1 8B, Mistral, Qwen3보다 우수한 7B 모델이 있습니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '2026년 4월 기준, 이 세 모델이 7B 클래스의 최전선입니다. 각 모델은 서로 다른 카테고리에서 선두를 달리고 있습니다: Llama 3.3은 추론(MATH 82%), Mistral은 지시 수행(92%), Qwen3는 다국어 지원(27개 언어). Qwen3-Coder 7B 등 전문화된 변형 모델은 코딩 벤치마크에서 일반 모델을 능가합니다.',
+              'text': '2026년 4월 기준, 이 세 모델이 7B 클래스의 최전선입니다. 각 모델은 서로 다른 카테고리에서 선두를 달리고 있습니다: Llama 3.3은 추론(MATH 82%), Mistral은 지시 수행(92%), Qwen3는 다국어 지원(27개 언어). Qwen2.5-Coder 7B 등 전문화된 변형 모델은 코딩 벤치마크에서 일반 모델을 능가합니다.',
             },
           },
         ],
@@ -2456,7 +2456,7 @@ schema: {
           '**Llama 3.1 8B (Meta):** 서유럽 언어에 적합합니다. Qwen3에 비해 CJK(중국어/일본어/한국어)는 상대적으로 약합니다.',
           '**Mistral Small:** 주로 영어. 프랑스어/독일어/스페인어는 수용 가능하지만, 아시아어 또는 아랍어 작업에는 권장하지 않습니다.',
           '**영어 전용(다국어 용도에 부적합):** Phi 2.7B, Stablelm 3B.',
-          '**코드 전용 변형:** Qwen3-Coder 7B는 코드 완성에서 일반 7B 모델을 능가합니다. [코딩을 위한 최고의 로컬 LLM](/ko/local-llms/best-local-llms-for-coding)을 참고하십시오.',
+          '**코드 전용 변형:** Qwen2.5-Coder 7B는 코드 완성에서 일반 7B 모델을 능가합니다. [코딩을 위한 최고의 로컬 LLM](/ko/local-llms/best-local-llms-for-coding)을 참고하십시오.',
           '**도메인 파인튜닝:** 의료 분야라면 BioLlama를 사용하십시오. 법률 분야라면 Legalbench 기반 파인튜닝 변형을 사용하십시오.',
         ],
       },
@@ -2496,9 +2496,9 @@ schema: {
             { q: '어떤 7B 모델을 선택해야 합니까?', a: '코딩, 수학, 분석 작업에는 Llama 3.1 8B를 사용하십시오(MATH 82%, HumanEval 73%). 창작 글쓰기, 채팅, 지시 수행에는 Mistral Small을 사용하십시오(지시 수행 벤치마크 92%). 중국어, 일본어, 독일어, 아랍어에 걸쳐 다국어 지원이 필요한 경우에는 Qwen3 8B를 선택하십시오.' },
             { q: 'Llama 3.1 8B는 이전 버전보다 우수합니까?', a: '예. Llama 3.1 8B는 이전 버전 대비 추론 및 코드 벤치마크에서 약 15% 높은 점수를 기록합니다. Llama 3.3은 128K 어휘 토크나이저, 8K 컨텍스트 윈도우, 개선된 학습 데이터를 사용합니다. 이전 버전은 신규 프로젝트에서 더 이상 사용하지 마십시오.' },
             { q: '16GB VRAM으로 7B 모델 두 개를 실행할 수 있습니까?', a: '예. Ollama는 여러 모델의 순차적 로드를 지원합니다. 16GB VRAM에서는 각 약 4.5GB가 필요하므로 Q4 양자화 7B 모델 두 개를 실행할 수 있습니다. 각 모델은 독립적으로 초당 약 15 토큰으로 동작하며 병렬 실행은 지원하지 않습니다.' },
-            { q: 'Llama 3.1 8B를 사용해야 합니까, 아니면 13B 모델로 업그레이드해야 합니까?', a: '코딩 및 추론의 경우 Qwen3 14B(또는 Qwen3-Coder 14B)로 업그레이드하면 정확도가 10–15% 향상되며 16GB VRAM이 필요합니다. 채팅 및 창작 글쓰기의 경우 8GB의 Llama 3.1 8B 또는 Mistral Small로 충분합니다. 대화형 작업에서의 품질 차이는 미미합니다.' },
+            { q: 'Llama 3.1 8B를 사용해야 합니까, 아니면 13B 모델로 업그레이드해야 합니까?', a: '코딩 및 추론의 경우 Qwen3 14B(또는 Qwen2.5-Coder 14B)로 업그레이드하면 정확도가 10–15% 향상되며 16GB VRAM이 필요합니다. 채팅 및 창작 글쓰기의 경우 8GB의 Llama 3.1 8B 또는 Mistral Small로 충분합니다. 대화형 작업에서의 품질 차이는 미미합니다.' },
             { q: '컨텍스트 윈도우가 가장 긴 7B 모델은 무엇입니까?', a: '2026년 4월 기준, Llama 3.1 8B, Mistral Small, Qwen3 8B 모두 표준 Q4 빌드에서 8K 토큰 컨텍스트 윈도우를 지원합니다. 더 긴 컨텍스트(32K+)에는 대형 모델이 필요합니다. Qwen3 72B는 128K 토큰을 지원하지만 40GB 이상의 VRAM이 필요합니다.' },
-            { q: 'Llama 3.1 8B, Mistral, Qwen3보다 우수한 7B 모델이 있습니까?', a: '2026년 4월 기준, 이 세 모델이 7B 클래스의 최전선입니다. 각 모델은 서로 다른 카테고리에서 선두를 달리고 있습니다: Llama 3.3은 추론(MATH 82%), Mistral은 지시 수행(92%), Qwen3는 다국어 지원(27개 언어). Qwen3-Coder 7B 등 전문화된 변형 모델은 코딩 벤치마크에서 일반 모델을 능가합니다.' },
+            { q: 'Llama 3.1 8B, Mistral, Qwen3보다 우수한 7B 모델이 있습니까?', a: '2026년 4월 기준, 이 세 모델이 7B 클래스의 최전선입니다. 각 모델은 서로 다른 카테고리에서 선두를 달리고 있습니다: Llama 3.3은 추론(MATH 82%), Mistral은 지시 수행(92%), Qwen3는 다국어 지원(27개 언어). Qwen2.5-Coder 7B 등 전문화된 변형 모델은 코딩 벤치마크에서 일반 모델을 능가합니다.' },
           ],
       },
       relatedReading: {

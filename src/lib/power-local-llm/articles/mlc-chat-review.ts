@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'on-device llm app',
       'mlc chat vs ollama',
     ],
-    current_models_mentioned: ['Llama 3', 'MLC LLM', 'Ollama', 'LM Studio', 'PocketPal AI'],
+    current_models_mentioned: ['Llama 3'],
     current_hardware_mentioned: ['iOS', 'Android', 'NVIDIA GPU', 'AMD GPU', 'Apple Silicon'],
     leadAnswerBlock:
       '**MLC Chat is a free, cross-platform chat app for running large language models directly on your own device**, built by the MLC AI team on top of their [MLC LLM](https://github.com/mlc-ai/mlc-llm) compiler and runtime, released under the Apache-2.0 license. It is available on the [iOS App Store](https://apps.apple.com/us/app/mlc-chat/id6448482937) and as a directly downloadable [Android APK](https://github.com/mlc-ai/binary-mlc-llm-libs/releases/download/Android/mlc-chat.apk) from MLC\'s own GitHub releases; desktop use is available through MLC LLM\'s Python, REST, and CLI interfaces rather than a separate packaged desktop app. Its distinguishing feature is GPU-accelerated on-device inference achieved through machine-learning compilation — compiling a model ahead of time for a specific hardware target (Metal on Apple GPUs, OpenCL on Android GPUs, Vulkan/CUDA/ROCm on desktop) — rather than relying on a single generic runtime. As of this review, MLC Chat does not officially support vision-language (image-input) models. For the deeper technical explanation of how the underlying compiler works, see PromptQuorum\'s [MLC LLM Explained](/power-local-llm/mlc-llm-explained).',
@@ -345,7 +345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'llm app auf dem gerät',
       'mlc chat vs ollama',
     ],
-    current_models_mentioned: ['Llama 3', 'MLC LLM', 'Ollama', 'LM Studio', 'PocketPal AI'],
+    current_models_mentioned: ['Llama 3'],
     current_hardware_mentioned: ['iOS', 'Android', 'NVIDIA GPU', 'AMD GPU', 'Apple Silicon'],
     leadAnswerBlock:
       '**MLC Chat ist eine kostenlose, plattformübergreifende Chat-App zum Ausführen großer Sprachmodelle direkt auf dem eigenen Gerät**, entwickelt vom MLC-AI-Team auf Basis des eigenen [MLC LLM](https://github.com/mlc-ai/mlc-llm)-Compilers und der Laufzeitumgebung, veröffentlicht unter der Apache-2.0-Lizenz. Sie ist im [iOS App Store](https://apps.apple.com/us/app/mlc-chat/id6448482937) verfügbar und als direkt herunterladbare [Android-APK](https://github.com/mlc-ai/binary-mlc-llm-libs/releases/download/Android/mlc-chat.apk) über MLCs eigene GitHub-Releases; die Desktop-Nutzung erfolgt über MLC LLMs Python-, REST- und CLI-Schnittstellen statt über eine separat verpackte Desktop-App. Ihr Alleinstellungsmerkmal ist GPU-beschleunigte Inferenz auf dem Gerät, erreicht durch Machine-Learning-Kompilierung — ein Modell wird im Voraus für ein bestimmtes Hardware-Ziel kompiliert (Metal auf Apple-GPUs, OpenCL auf Android-GPUs, Vulkan/CUDA/ROCm auf dem Desktop) — statt sich auf eine einzige generische Laufzeitumgebung zu verlassen. Zum Zeitpunkt dieses Tests unterstützt MLC Chat offiziell keine Vision-Language-Modelle (Bildeingabe). Für die tiefere technische Erklärung, wie der zugrunde liegende Compiler funktioniert, siehe PromptQuorums [MLC LLM erklärt](/de/power-local-llm/mlc-llm-explained).',
@@ -650,7 +650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'application llm sur l\'appareil',
       'mlc chat vs ollama',
     ],
-    current_models_mentioned: ['Llama 3', 'MLC LLM', 'Ollama', 'LM Studio', 'PocketPal AI'],
+    current_models_mentioned: ['Llama 3'],
     current_hardware_mentioned: ['iOS', 'Android', 'NVIDIA GPU', 'AMD GPU', 'Apple Silicon'],
     leadAnswerBlock:
       '**MLC Chat est une application de chat gratuite et multiplateforme pour exécuter de grands modèles de langage directement sur votre propre appareil**, construite par l\'équipe MLC AI au-dessus de son compilateur et environnement d\'exécution [MLC LLM](https://github.com/mlc-ai/mlc-llm), publiée sous licence Apache-2.0. Elle est disponible sur l\'[App Store iOS](https://apps.apple.com/us/app/mlc-chat/id6448482937) et sous forme d\'[APK Android](https://github.com/mlc-ai/binary-mlc-llm-libs/releases/download/Android/mlc-chat.apk) directement téléchargeable depuis les propres publications GitHub de MLC ; l\'usage sur desktop se fait via les interfaces Python, REST et CLI de MLC LLM plutôt que via une application desktop packagée séparément. Sa caractéristique distinctive est l\'inférence accélérée par GPU sur l\'appareil, obtenue par compilation d\'apprentissage automatique — compiler un modèle à l\'avance pour une cible matérielle spécifique (Metal sur les GPU Apple, OpenCL sur les GPU Android, Vulkan/CUDA/ROCm sur desktop) — plutôt que de s\'appuyer sur un environnement d\'exécution générique unique. Au moment de cet avis, MLC Chat ne prend pas officiellement en charge les modèles vision-langage (entrée d\'image). Pour l\'explication technique plus approfondie du fonctionnement du compilateur sous-jacent, voir [MLC LLM expliqué](/fr/power-local-llm/mlc-llm-explained) de PromptQuorum.',
@@ -955,7 +955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app llm en el dispositivo',
       'mlc chat vs ollama',
     ],
-    current_models_mentioned: ['Llama 3', 'MLC LLM', 'Ollama', 'LM Studio', 'PocketPal AI'],
+    current_models_mentioned: ['Llama 3'],
     current_hardware_mentioned: ['iOS', 'Android', 'NVIDIA GPU', 'AMD GPU', 'Apple Silicon'],
     leadAnswerBlock:
       '**MLC Chat es una app de chat gratuita y multiplataforma para ejecutar modelos de lenguaje grandes directamente en tu propio dispositivo**, construida por el equipo de MLC AI sobre su compilador y runtime [MLC LLM](https://github.com/mlc-ai/mlc-llm), publicada bajo la licencia Apache-2.0. Está disponible en la [App Store de iOS](https://apps.apple.com/us/app/mlc-chat/id6448482937) y como [APK de Android](https://github.com/mlc-ai/binary-mlc-llm-libs/releases/download/Android/mlc-chat.apk) descargable directamente desde los propios lanzamientos de GitHub de MLC; el uso en escritorio se realiza mediante las interfaces Python, REST y CLI de MLC LLM en lugar de una app de escritorio empaquetada por separado. Su característica distintiva es la inferencia acelerada por GPU en el dispositivo, lograda mediante compilación de aprendizaje automático — compilar un modelo por adelantado para un objetivo de hardware específico (Metal en GPU de Apple, OpenCL en GPU de Android, Vulkan/CUDA/ROCm en escritorio) — en lugar de depender de un único runtime genérico. Al momento de este análisis, MLC Chat no admite oficialmente modelos de visión-lenguaje (entrada de imagen). Para la explicación técnica más profunda de cómo funciona el compilador subyacente, consulta [MLC LLM explicado](/es/power-local-llm/mlc-llm-explained) de PromptQuorum.',
@@ -1260,7 +1260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'オンデバイス llm アプリ',
       'mlc chat vs ollama',
     ],
-    current_models_mentioned: ['Llama 3', 'MLC LLM', 'Ollama', 'LM Studio', 'PocketPal AI'],
+    current_models_mentioned: ['Llama 3'],
     current_hardware_mentioned: ['iOS', 'Android', 'NVIDIA GPU', 'AMD GPU', 'Apple Silicon'],
     leadAnswerBlock:
       '**MLC Chatは、自分のデバイス上で直接大規模言語モデルを実行するための、無料でクロスプラットフォームなチャットアプリだ**。MLC AIチームが自社の[MLC LLM](https://github.com/mlc-ai/mlc-llm)コンパイラとランタイムの上に構築し、Apache-2.0ライセンスの下で公開している。[iOS App Store](https://apps.apple.com/us/app/mlc-chat/id6448482937)で利用可能なほか、MLC自身のGitHubリリースから直接ダウンロードできる[Android APK](https://github.com/mlc-ai/binary-mlc-llm-libs/releases/download/Android/mlc-chat.apk)としても提供されている。デスクトップでの利用は、独立したパッケージ化されたデスクトップアプリではなく、MLC LLMのPython、REST、CLIインターフェースを通じて行う。その際立った特徴は、機械学習コンパイルによって実現されるGPUアクセラレーテッドなオンデバイス推論だ——単一の汎用ランタイムに頼るのではなく、特定のハードウェアターゲット(AppleのGPU向けMetal、AndroidのGPU向けOpenCL、デスクトップ向けVulkan/CUDA/ROCm)向けにモデルを事前にコンパイルする。本レビュー時点で、MLC Chatはビジョン言語モデル(画像入力)を公式にはサポートしていない。基盤となるコンパイラの仕組みについてのより深い技術的説明は、PromptQuorumの[MLC LLM解説](/ja/power-local-llm/mlc-llm-explained)を参照してほしい。',
@@ -1565,7 +1565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app llm no dispositivo',
       'mlc chat vs ollama',
     ],
-    current_models_mentioned: ['Llama 3', 'MLC LLM', 'Ollama', 'LM Studio', 'PocketPal AI'],
+    current_models_mentioned: ['Llama 3'],
     current_hardware_mentioned: ['iOS', 'Android', 'NVIDIA GPU', 'AMD GPU', 'Apple Silicon'],
     leadAnswerBlock:
       '**O MLC Chat é um app de chat gratuito e multiplataforma para rodar modelos de linguagem grandes diretamente no seu próprio dispositivo**, construído pela equipe MLC AI sobre seu compilador e runtime [MLC LLM](https://github.com/mlc-ai/mlc-llm), lançado sob a licença Apache-2.0. Está disponível na [App Store da Apple](https://apps.apple.com/us/app/mlc-chat/id6448482937) e como um [APK do Android](https://github.com/mlc-ai/binary-mlc-llm-libs/releases/download/Android/mlc-chat.apk) diretamente baixável a partir dos próprios lançamentos no GitHub da MLC; o uso em desktop é feito por meio das interfaces Python, REST e CLI do MLC LLM, em vez de um app de desktop empacotado separadamente. Sua característica distintiva é a inferência acelerada por GPU no dispositivo, alcançada por meio de compilação de aprendizado de máquina — compilar um modelo antecipadamente para um alvo de hardware específico (Metal em GPUs da Apple, OpenCL em GPUs Android, Vulkan/CUDA/ROCm em desktop) — em vez de depender de um único runtime genérico. No momento desta análise, o MLC Chat não oferece suporte oficial a modelos de visão-linguagem (entrada de imagem). Para a explicação técnica mais profunda de como o compilador subjacente funciona, veja [MLC LLM Explicado](/pt/power-local-llm/mlc-llm-explained) do PromptQuorum.',
@@ -1870,7 +1870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تطبيق llm على الجهاز',
       'mlc chat مقابل ollama',
     ],
-    current_models_mentioned: ['Llama 3', 'MLC LLM', 'Ollama', 'LM Studio', 'PocketPal AI'],
+    current_models_mentioned: ['Llama 3'],
     current_hardware_mentioned: ['iOS', 'Android', 'NVIDIA GPU', 'AMD GPU', 'Apple Silicon'],
     leadAnswerBlock:
       '**MLC Chat تطبيق دردشة مجاني ومتعدد المنصات لتشغيل نماذج اللغة الكبيرة مباشرة على جهازك الخاص**، طوّره فريق MLC AI فوق مُصرّف ومحرك تشغيل [MLC LLM](https://github.com/mlc-ai/mlc-llm) الخاص بهم، ونُشر بموجب رخصة Apache-2.0. يتوفر على [متجر تطبيقات iOS](https://apps.apple.com/us/app/mlc-chat/id6448482937) وكملف [APK لأندرويد](https://github.com/mlc-ai/binary-mlc-llm-libs/releases/download/Android/mlc-chat.apk) قابل للتنزيل مباشرة من إصدارات GitHub الخاصة بـ MLC نفسها؛ ويتم استخدامه على سطح المكتب عبر واجهات Python وREST وسطر الأوامر الخاصة بـ MLC LLM بدلًا من تطبيق سطح مكتب مُعبّأ بشكل منفصل. تكمن ميزته المميزة في الاستدلال المُسرَّع بواسطة GPU على الجهاز، الذي يتحقق عبر تصريف تعلم الآلة — تصريف نموذج مسبقًا لهدف عتاد محدد (Metal على وحدات معالجة رسوميات Apple، وOpenCL على وحدات معالجة رسوميات أندرويد، وVulkan/CUDA/ROCm على سطح المكتب) — بدلًا من الاعتماد على محرك تشغيل عام واحد. حتى وقت هذه المراجعة، لا يدعم MLC Chat رسميًا نماذج الرؤية-اللغة (إدخال الصور). للاطلاع على الشرح التقني الأعمق لكيفية عمل المُصرّف الأساسي، راجع [شرح MLC LLM](/ar/power-local-llm/mlc-llm-explained) من PromptQuorum.',
@@ -2175,7 +2175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '端侧llm应用',
       'mlc chat vs ollama',
     ],
-    current_models_mentioned: ['Llama 3', 'MLC LLM', 'Ollama', 'LM Studio', 'PocketPal AI'],
+    current_models_mentioned: ['Llama 3'],
     current_hardware_mentioned: ['iOS', 'Android', 'NVIDIA GPU', 'AMD GPU', 'Apple Silicon'],
     leadAnswerBlock:
       '**MLC Chat是一款免费、跨平台的聊天应用,可以直接在你自己的设备上运行大语言模型**,由MLC AI团队基于自家的[MLC LLM](https://github.com/mlc-ai/mlc-llm)编译器与运行时构建,以Apache-2.0许可证发布。它可在[iOS App Store](https://apps.apple.com/us/app/mlc-chat/id6448482937)获取,也可作为[Android APK](https://github.com/mlc-ai/binary-mlc-llm-libs/releases/download/Android/mlc-chat.apk)直接从MLC自己的GitHub发布页下载;桌面端的使用则通过MLC LLM的Python、REST和CLI接口进行,而非一个独立打包的桌面应用。它的独特之处在于通过机器学习编译实现的GPU加速端侧推理——针对特定硬件目标(Apple GPU上的Metal、Android GPU上的OpenCL、桌面端的Vulkan/CUDA/ROCm)预先编译模型,而不是依赖单一的通用运行时。截至本次评测,MLC Chat官方并不支持视觉语言(图像输入)模型。若想了解底层编译器工作原理的更深入技术解释,请参阅PromptQuorum的[MLC LLM详解](/zh/power-local-llm/mlc-llm-explained)。',
@@ -2480,7 +2480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '온디바이스 llm 앱',
       'mlc chat vs ollama',
     ],
-    current_models_mentioned: ['Llama 3', 'MLC LLM', 'Ollama', 'LM Studio', 'PocketPal AI'],
+    current_models_mentioned: ['Llama 3'],
     current_hardware_mentioned: ['iOS', 'Android', 'NVIDIA GPU', 'AMD GPU', 'Apple Silicon'],
     leadAnswerBlock:
       '**MLC Chat은 자신의 기기에서 직접 대규모 언어 모델을 실행할 수 있는 무료 크로스플랫폼 채팅 앱이다.** MLC AI 팀이 자체 [MLC LLM](https://github.com/mlc-ai/mlc-llm) 컴파일러 및 런타임 위에 만들었으며, Apache-2.0 라이선스로 공개되어 있다. [iOS App Store](https://apps.apple.com/us/app/mlc-chat/id6448482937)에서 이용 가능하며, MLC 자체 GitHub 릴리스에서 직접 다운로드할 수 있는 [Android APK](https://github.com/mlc-ai/binary-mlc-llm-libs/releases/download/Android/mlc-chat.apk)로도 제공된다; 데스크톱 사용은 별도로 패키징된 데스크톱 앱이 아니라 MLC LLM의 Python, REST, CLI 인터페이스를 통해 이루어진다. 이 앱의 특징적인 점은 머신러닝 컴파일을 통해 구현되는 GPU 가속 온디바이스 추론이다 — 단일 범용 런타임에 의존하는 대신, 특정 하드웨어 타깃(Apple GPU의 Metal, Android GPU의 OpenCL, 데스크톱의 Vulkan/CUDA/ROCm)에 맞춰 모델을 미리 컴파일한다. 본 리뷰 작성 시점 기준, MLC Chat은 비전-언어(이미지 입력) 모델을 공식적으로 지원하지 않는다. 기반 컴파일러가 어떻게 작동하는지에 대한 더 깊은 기술적 설명은 PromptQuorum의 [MLC LLM 설명](/ko/power-local-llm/mlc-llm-explained)을 참고하라.',

@@ -227,7 +227,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Approach': 'Claude extended thinking (Opus 5, Sonnet 5)', 'Best For': 'Complex analysis, maximum accuracy', 'Cost': 'Separate thinking token budget (input rate)', 'Transparency': 'Inspector trace via API', 'Models': 'Claude Opus 5, Claude Sonnet 5' },
             { 'Approach': 'OpenAI o3', 'Best For': 'Hardest problems (math, coding, competition)', 'Cost': 'Reasoning token budget (higher tier)', 'Transparency': 'Hidden reasoning, visible output', 'Models': 'OpenAI o3' },
             { 'Approach': 'Gemini Deep Think', 'Best For': 'Google Cloud integration, Gemini ecosystem', 'Cost': 'Thinking tokens separate from output', 'Transparency': 'thinking_level parameter (LOW, MEDIUM, HIGH)', 'Models': 'Gemini 3.1 Pro' },
-            { 'Approach': 'DeepSeek R1', 'Best For': 'Open-weights option, on-device reasoning', 'Cost': 'Visible reasoning streamed as output text', 'Transparency': 'Full: inline CoT in output', 'Models': 'DeepSeek R1' },
+            { 'Approach': 'DeepSeek-R1', 'Best For': 'Open-weights option, on-device reasoning', 'Cost': 'Visible reasoning streamed as output text', 'Transparency': 'Full: inline CoT in output', 'Models': 'DeepSeek-R1' },
           ],
           callouts: [
             {
@@ -263,7 +263,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { 'Model': 'GPT-5.6 Luna', 'Prompt-Level CoT': 'Recommended', 'Built-In Reasoning': 'None', 'Best Use Case': 'Budget-conscious deployment', 'Cost (approx.)': 'Very low' },
             { 'Model': 'Gemini 3.1 Pro', 'Prompt-Level CoT': 'Works', 'Built-In Reasoning': 'Deep Think (thinking_level param)', 'Best Use Case': 'Google Cloud integration', 'Cost (approx.)': 'Medium-high' },
             { 'Model': 'Gemini Flash', 'Prompt-Level CoT': 'Recommended', 'Built-In Reasoning': 'None', 'Best Use Case': 'Fast responses', 'Cost (approx.)': 'Low' },
-            { 'Model': 'DeepSeek R1', 'Prompt-Level CoT': 'Not needed', 'Built-In Reasoning': 'Inline reasoning in output', 'Best Use Case': 'Open-weights, on-device', 'Cost (approx.)': 'Free (open source)' },
+            { 'Model': 'DeepSeek-R1', 'Prompt-Level CoT': 'Not needed', 'Built-In Reasoning': 'Inline reasoning in output', 'Best Use Case': 'Open-weights, on-device', 'Cost (approx.)': 'Free (open source)' },
             { 'Model': 'Llama 4', 'Prompt-Level CoT': 'Recommended', 'Built-In Reasoning': 'None', 'Best Use Case': 'Local deployment, privacy', 'Cost (approx.)': 'Self-hosted (compute-dependent)' },
           ],
         },
@@ -309,7 +309,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Can I audit the reasoning of built-in reasoning models?',
-              a: 'Yes, but it depends on the model. Claude extended thinking reasoning traces are inspectable via API. OpenAI o3 reasoning is hidden by default (for competitive advantage). Gemini Deep Think reasoning is also hidden. For full auditability, use prompt-level CoT or DeepSeek R1.'
+              a: 'Yes, but it depends on the model. Claude extended thinking reasoning traces are inspectable via API. OpenAI o3 reasoning is hidden by default (for competitive advantage). Gemini Deep Think reasoning is also hidden. For full auditability, use prompt-level CoT or DeepSeek-R1.'
             },
             {
               q: 'Is chain-of-thought prompting suitable for real-time applications?',
@@ -386,7 +386,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Can I audit the reasoning of built-in reasoning models?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes, but it depends on the model. Claude extended thinking reasoning traces are inspectable via API. OpenAI o3 reasoning is hidden by default (for competitive advantage). Gemini Deep Think reasoning is also hidden. For full auditability, use prompt-level CoT or DeepSeek R1.'
+              text: 'Yes, but it depends on the model. Claude extended thinking reasoning traces are inspectable via API. OpenAI o3 reasoning is hidden by default (for competitive advantage). Gemini Deep Think reasoning is also hidden. For full auditability, use prompt-level CoT or DeepSeek-R1.'
             }
           },
           {
@@ -646,7 +646,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { 'Ansatz': 'Claude Extended Thinking (Opus 5, Sonnet 5)', 'Am besten für': 'Komplexe Analysen, maximale Genauigkeit', 'Kosten': 'Separates Thinking-Token-Budget (Input-Satz)', 'Transparenz': 'Inspector-Trace via API', 'Modelle': 'Claude Opus 5, Claude Sonnet 5' },
         { 'Ansatz': 'OpenAI o3', 'Am besten für': 'Schwierigste Probleme (Mathe, Coding, Wettbewerbe)', 'Kosten': 'Thinking-Token-Budget (höherer Tier)', 'Transparenz': 'Verstecktes Denken, sichtbare Ausgabe', 'Modelle': 'OpenAI o3' },
         { 'Ansatz': 'Gemini Deep Think', 'Am besten für': 'Google Cloud Integration, Gemini-Ökosystem', 'Kosten': 'Thinking-Token separat von Ausgabe', 'Transparenz': 'thinking_level Parameter (LOW, MEDIUM, HIGH)', 'Modelle': 'Gemini 3.1 Pro' },
-        { 'Ansatz': 'DeepSeek R1', 'Am besten für': 'Open-Weights-Option, On-Device Reasoning', 'Kosten': 'Sichtbares Denken in Ausgabetext gestreamt', 'Transparenz': 'Vollständig: inline CoT in Ausgabe', 'Modelle': 'DeepSeek R1' },
+        { 'Ansatz': 'DeepSeek-R1', 'Am besten für': 'Open-Weights-Option, On-Device Reasoning', 'Kosten': 'Sichtbares Denken in Ausgabetext gestreamt', 'Transparenz': 'Vollständig: inline CoT in Ausgabe', 'Modelle': 'DeepSeek-R1' },
       ],
       callouts: [
         {
@@ -682,7 +682,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { 'Modell': 'GPT-5.6 Luna', 'Prompt-Level CoT': 'Empfohlen', 'Integriertes Thinking': 'Keine', 'Bester Anwendungsfall': 'Budgetbewusste Bereitstellung', 'Kosten (ca.)': 'Sehr niedrig' },
         { 'Modell': 'Gemini 3.1 Pro', 'Prompt-Level CoT': 'Funktioniert', 'Integriertes Thinking': 'Deep Think (thinking_level Param)', 'Bester Anwendungsfall': 'Google Cloud Integration', 'Kosten (ca.)': 'Mittel-Hoch' },
         { 'Modell': 'Gemini Flash', 'Prompt-Level CoT': 'Empfohlen', 'Integriertes Thinking': 'Keine', 'Bester Anwendungsfall': 'Schnelle Antworten', 'Kosten (ca.)': 'Niedrig' },
-        { 'Modell': 'DeepSeek R1', 'Prompt-Level CoT': 'Nicht nötig', 'Integriertes Thinking': 'Inline Reasoning in Ausgabe', 'Bester Anwendungsfall': 'Open-Weights, On-Device', 'Kosten (ca.)': 'Kostenlos (Open Source)' },
+        { 'Modell': 'DeepSeek-R1', 'Prompt-Level CoT': 'Nicht nötig', 'Integriertes Thinking': 'Inline Reasoning in Ausgabe', 'Bester Anwendungsfall': 'Open-Weights, On-Device', 'Kosten (ca.)': 'Kostenlos (Open Source)' },
         { 'Modell': 'Llama 4', 'Prompt-Level CoT': 'Empfohlen', 'Integriertes Thinking': 'Keine', 'Bester Anwendungsfall': 'Lokale Bereitstellung, Datenschutz', 'Kosten (ca.)': 'Self-Hosted (Compute-abhängig)' },
       ],
     },
@@ -1077,7 +1077,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { 'Enfoque': 'Claude extended thinking (Opus 5, Sonnet 5)', 'Mejor para': 'Análisis complejo, máxima precisión', 'Costo': 'Presupuesto de tokens de pensamiento separado (tarifa de entrada)', 'Transparencia': 'Traza de inspector vía API', 'Modelos': 'Claude Opus 5, Claude Sonnet 5' },
         { 'Enfoque': 'OpenAI o3', 'Mejor para': 'Problemas más difíciles (matemáticas, código, competición)', 'Costo': 'Presupuesto de tokens de razonamiento (nivel más alto)', 'Transparencia': 'Razonamiento oculto, salida visible', 'Modelos': 'OpenAI o3' },
         { 'Enfoque': 'Gemini Deep Think', 'Mejor para': 'Integración con Google Cloud, ecosistema Gemini', 'Costo': 'Tokens de pensamiento separados de la salida', 'Transparencia': 'Parámetro thinking_level (LOW, MEDIUM, HIGH)', 'Modelos': 'Gemini 3.1 Pro' },
-        { 'Enfoque': 'DeepSeek R1', 'Mejor para': 'Opción open-weights, razonamiento en dispositivo', 'Costo': 'Razonamiento visible transmitido como texto de salida', 'Transparencia': 'Total: CoT en línea en la salida', 'Modelos': 'DeepSeek R1' },
+        { 'Enfoque': 'DeepSeek-R1', 'Mejor para': 'Opción open-weights, razonamiento en dispositivo', 'Costo': 'Razonamiento visible transmitido como texto de salida', 'Transparencia': 'Total: CoT en línea en la salida', 'Modelos': 'DeepSeek-R1' },
       ],
       callouts: [
         {
@@ -1113,7 +1113,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { 'Modelo': 'GPT-5.6 Luna', 'CoT a nivel de prompt': 'Recomendado', 'Razonamiento integrado': 'Ninguno', 'Mejor caso de uso': 'Despliegue económico', 'Costo (aprox.)': 'Muy bajo' },
         { 'Modelo': 'Gemini 3.1 Pro', 'CoT a nivel de prompt': 'Funciona', 'Razonamiento integrado': 'Deep Think (parámetro thinking_level)', 'Mejor caso de uso': 'Integración con Google Cloud', 'Costo (aprox.)': 'Medio-alto' },
         { 'Modelo': 'Gemini Flash', 'CoT a nivel de prompt': 'Recomendado', 'Razonamiento integrado': 'Ninguno', 'Mejor caso de uso': 'Respuestas rápidas', 'Costo (aprox.)': 'Bajo' },
-        { 'Modelo': 'DeepSeek R1', 'CoT a nivel de prompt': 'No necesario', 'Razonamiento integrado': 'Razonamiento en línea en la salida', 'Mejor caso de uso': 'Open-weights, en dispositivo', 'Costo (aprox.)': 'Gratis (código abierto)' },
+        { 'Modelo': 'DeepSeek-R1', 'CoT a nivel de prompt': 'No necesario', 'Razonamiento integrado': 'Razonamiento en línea en la salida', 'Mejor caso de uso': 'Open-weights, en dispositivo', 'Costo (aprox.)': 'Gratis (código abierto)' },
         { 'Modelo': 'Llama 4', 'CoT a nivel de prompt': 'Recomendado', 'Razonamiento integrado': 'Ninguno', 'Mejor caso de uso': 'Despliegue local, privacidad', 'Costo (aprox.)': 'Self-hosted (depende del cómputo)' },
       ],
     },
@@ -1159,7 +1159,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: '¿Puedo auditar el razonamiento de los modelos de razonamiento integrados?',
-          a: 'Sí, pero depende del modelo. Las trazas de razonamiento de Claude extended thinking son inspeccionables vía API. El razonamiento de OpenAI o3 está oculto por defecto (por ventaja competitiva). El razonamiento de Gemini Deep Think también está oculto. Para auditabilidad completa, usa CoT a nivel de prompt o DeepSeek R1.'
+          a: 'Sí, pero depende del modelo. Las trazas de razonamiento de Claude extended thinking son inspeccionables vía API. El razonamiento de OpenAI o3 está oculto por defecto (por ventaja competitiva). El razonamiento de Gemini Deep Think también está oculto. Para auditabilidad completa, usa CoT a nivel de prompt o DeepSeek-R1.'
         },
         {
           q: '¿Es el chain-of-thought prompting adecuado para aplicaciones en tiempo real?',
@@ -1236,7 +1236,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: '¿Puedo auditar el razonamiento de los modelos de razonamiento integrados?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Depende del modelo. Las trazas de Claude extended thinking son inspeccionables vía API. El razonamiento de OpenAI o3 y Gemini Deep Think está oculto por defecto. Para auditabilidad completa, usa CoT a nivel de prompt o DeepSeek R1.'
+          text: 'Depende del modelo. Las trazas de Claude extended thinking son inspeccionables vía API. El razonamiento de OpenAI o3 y Gemini Deep Think está oculto por defecto. Para auditabilidad completa, usa CoT a nivel de prompt o DeepSeek-R1.'
         }
       },
       {
@@ -1508,7 +1508,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { 'النهج': 'التفكير الممتد لـ Claude (Opus 5 وSonnet 5)', 'الأفضل لـ': 'التحليل المعقَّد وأقصى دقة', 'التكلفة': 'ميزانية رموز تفكير منفصلة (تعريفة المدخلات)', 'الشفافية': 'أثر المفتش عبر API', 'النماذج': 'Claude Opus 5 وClaude Sonnet 5' },
         { 'النهج': 'OpenAI o3', 'الأفضل لـ': 'المشكلات الأصعب (رياضيات وكود ومسابقات)', 'التكلفة': 'ميزانية رموز الاستدلال (المستوى الأعلى)', 'الشفافية': 'الاستدلال مخفي والمخرجات مرئية', 'النماذج': 'OpenAI o3' },
         { 'النهج': 'Gemini Deep Think', 'الأفضل لـ': 'التكامل مع Google Cloud ونظام Gemini البيئي', 'التكلفة': 'رموز التفكير منفصلة عن المخرجات', 'الشفافية': 'معامل thinking_level (LOW وMEDIUM وHIGH)', 'النماذج': 'Gemini 3.1 Pro' },
-        { 'النهج': 'DeepSeek R1', 'الأفضل لـ': 'خيار الأوزان المفتوحة والاستدلال على الجهاز', 'التكلفة': 'الاستدلال المرئي يُبثّ كنص مخرجات', 'الشفافية': 'كاملة: CoT مضمَّن في المخرجات', 'النماذج': 'DeepSeek R1' },
+        { 'النهج': 'DeepSeek-R1', 'الأفضل لـ': 'خيار الأوزان المفتوحة والاستدلال على الجهاز', 'التكلفة': 'الاستدلال المرئي يُبثّ كنص مخرجات', 'الشفافية': 'كاملة: CoT مضمَّن في المخرجات', 'النماذج': 'DeepSeek-R1' },
       ],
       callouts: [
         {
@@ -1544,7 +1544,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { 'النموذج': 'GPT-5.6 Luna', 'CoT على مستوى التعليمات': 'مُوصى به', 'الاستدلال المُدمَج': 'لا يوجد', 'أفضل حالة استخدام': 'نشر اقتصادي', 'التكلفة (تقريبًا)': 'منخفض جدًا' },
         { 'النموذج': 'Gemini 3.1 Pro', 'CoT على مستوى التعليمات': 'يعمل', 'الاستدلال المُدمَج': 'Deep Think (معامل thinking_level)', 'أفضل حالة استخدام': 'التكامل مع Google Cloud', 'التكلفة (تقريبًا)': 'متوسط-مرتفع' },
         { 'النموذج': 'Gemini Flash', 'CoT على مستوى التعليمات': 'مُوصى به', 'الاستدلال المُدمَج': 'لا يوجد', 'أفضل حالة استخدام': 'استجابات سريعة', 'التكلفة (تقريبًا)': 'منخفض' },
-        { 'النموذج': 'DeepSeek R1', 'CoT على مستوى التعليمات': 'غير ضروري', 'الاستدلال المُدمَج': 'الاستدلال المضمَّن في المخرجات', 'أفضل حالة استخدام': 'أوزان مفتوحة وعلى الجهاز', 'التكلفة (تقريبًا)': 'مجاني (مفتوح المصدر)' },
+        { 'النموذج': 'DeepSeek-R1', 'CoT على مستوى التعليمات': 'غير ضروري', 'الاستدلال المُدمَج': 'الاستدلال المضمَّن في المخرجات', 'أفضل حالة استخدام': 'أوزان مفتوحة وعلى الجهاز', 'التكلفة (تقريبًا)': 'مجاني (مفتوح المصدر)' },
         { 'النموذج': 'Llama 4', 'CoT على مستوى التعليمات': 'مُوصى به', 'الاستدلال المُدمَج': 'لا يوجد', 'أفضل حالة استخدام': 'نشر محلي وخصوصية', 'التكلفة (تقريبًا)': 'استضافة ذاتية (يعتمد على الحوسبة)' },
       ],
     },
@@ -1590,7 +1590,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'هل يمكنني تدقيق استدلال نماذج الاستدلال المُدمَجة؟',
-          a: 'نعم، لكن يعتمد على النموذج. آثار التفكير الممتد لـ Claude قابلة للفحص عبر API. استدلال OpenAI o3 مخفي افتراضيًا (لأسباب تنافسية). استدلال Gemini Deep Think مخفي أيضًا. للتدقيق الكامل، استخدم CoT على مستوى التعليمات أو DeepSeek R1.'
+          a: 'نعم، لكن يعتمد على النموذج. آثار التفكير الممتد لـ Claude قابلة للفحص عبر API. استدلال OpenAI o3 مخفي افتراضيًا (لأسباب تنافسية). استدلال Gemini Deep Think مخفي أيضًا. للتدقيق الكامل، استخدم CoT على مستوى التعليمات أو DeepSeek-R1.'
         },
         {
           q: 'هل توجيه سلسلة الأفكار مناسب لتطبيقات الوقت الفعلي؟',
@@ -1668,7 +1668,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'هل يمكنني تدقيق استدلال نماذج الاستدلال المُدمَجة؟',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'يعتمد على النموذج. آثار التفكير الممتد لـ Claude قابلة للفحص عبر API. استدلال OpenAI o3 وGemini Deep Think مخفي افتراضيًا. للتدقيق الكامل، استخدم CoT على مستوى التعليمات أو DeepSeek R1.'
+          text: 'يعتمد على النموذج. آثار التفكير الممتد لـ Claude قابلة للفحص عبر API. استدلال OpenAI o3 وGemini Deep Think مخفي افتراضيًا. للتدقيق الكامل، استخدم CoT على مستوى التعليمات أو DeepSeek-R1.'
         }
       },
       {
@@ -1936,7 +1936,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { 'Abordagem': 'Claude extended thinking (Opus 5, Sonnet 5)', 'Melhor para': 'Análise complexa, máxima precisão', 'Custo': 'Orçamento de tokens de pensamento separado (taxa de entrada)', 'Transparência': 'Rastro de inspetor via API', 'Modelos': 'Claude Opus 5, Claude Sonnet 5' },
         { 'Abordagem': 'OpenAI o3', 'Melhor para': 'Problemas mais difíceis (matemática, código, competição)', 'Custo': 'Orçamento de tokens de raciocínio (nível mais alto)', 'Transparência': 'Raciocínio oculto, saída visível', 'Modelos': 'OpenAI o3' },
         { 'Abordagem': 'Gemini Deep Think', 'Melhor para': 'Integração com Google Cloud, ecossistema Gemini', 'Custo': 'Tokens de pensamento separados da saída', 'Transparência': 'Parâmetro thinking_level (LOW, MEDIUM, HIGH)', 'Modelos': 'Gemini 3.1 Pro' },
-        { 'Abordagem': 'DeepSeek R1', 'Melhor para': 'Opção open-weights, raciocínio no dispositivo', 'Custo': 'Raciocínio visível transmitido como texto de saída', 'Transparência': 'Total: CoT inline na saída', 'Modelos': 'DeepSeek R1' },
+        { 'Abordagem': 'DeepSeek-R1', 'Melhor para': 'Opção open-weights, raciocínio no dispositivo', 'Custo': 'Raciocínio visível transmitido como texto de saída', 'Transparência': 'Total: CoT inline na saída', 'Modelos': 'DeepSeek-R1' },
       ],
       callouts: [
         {
@@ -1972,7 +1972,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { 'Modelo': 'GPT-5.6 Luna', 'CoT no nível do prompt': 'Recomendado', 'Raciocínio integrado': 'Nenhum', 'Melhor caso de uso': 'Implantação econômica', 'Custo (aprox.)': 'Muito baixo' },
         { 'Modelo': 'Gemini 3.1 Pro', 'CoT no nível do prompt': 'Funciona', 'Raciocínio integrado': 'Deep Think (parâmetro thinking_level)', 'Melhor caso de uso': 'Integração com Google Cloud', 'Custo (aprox.)': 'Médio-alto' },
         { 'Modelo': 'Gemini Flash', 'CoT no nível do prompt': 'Recomendado', 'Raciocínio integrado': 'Nenhum', 'Melhor caso de uso': 'Respostas rápidas', 'Custo (aprox.)': 'Baixo' },
-        { 'Modelo': 'DeepSeek R1', 'CoT no nível do prompt': 'Não necessário', 'Raciocínio integrado': 'Raciocínio inline na saída', 'Melhor caso de uso': 'Open-weights, no dispositivo', 'Custo (aprox.)': 'Grátis (código aberto)' },
+        { 'Modelo': 'DeepSeek-R1', 'CoT no nível do prompt': 'Não necessário', 'Raciocínio integrado': 'Raciocínio inline na saída', 'Melhor caso de uso': 'Open-weights, no dispositivo', 'Custo (aprox.)': 'Grátis (código aberto)' },
         { 'Modelo': 'Llama 4', 'CoT no nível do prompt': 'Recomendado', 'Raciocínio integrado': 'Nenhum', 'Melhor caso de uso': 'Implantação local, privacidade', 'Custo (aprox.)': 'Self-hosted (depende do cómputo)' },
       ],
     },
@@ -2018,7 +2018,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'Posso auditar o raciocínio dos modelos de raciocínio integrados?',
-          a: 'Sim, mas depende do modelo. Os rastros de raciocínio do Claude extended thinking são inspecionáveis via API. O raciocínio do OpenAI o3 está oculto por padrão. Para auditabilidade completa, use CoT no nível do prompt ou DeepSeek R1.'
+          a: 'Sim, mas depende do modelo. Os rastros de raciocínio do Claude extended thinking são inspecionáveis via API. O raciocínio do OpenAI o3 está oculto por padrão. Para auditabilidade completa, use CoT no nível do prompt ou DeepSeek-R1.'
         },
         {
           q: 'O chain-of-thought prompting é adequado para aplicações em tempo real?',
@@ -2095,7 +2095,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Posso auditar o raciocínio dos modelos de raciocínio integrados?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Depende do modelo. Os rastros do Claude extended thinking são inspecionáveis via API. O raciocínio do OpenAI o3 e Gemini Deep Think está oculto por padrão. Para auditabilidade completa, use CoT no nível do prompt ou DeepSeek R1.'
+          text: 'Depende do modelo. Os rastros do Claude extended thinking são inspecionáveis via API. O raciocínio do OpenAI o3 e Gemini Deep Think está oculto por padrão. Para auditabilidade completa, use CoT no nível do prompt ou DeepSeek-R1.'
         }
       },
       {
@@ -2361,7 +2361,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { 'Approche': 'Claude Extended Thinking (Opus 5, Sonnet 5)', 'Meilleure pour': 'Analyses complexes, précision maximale', 'Coûts': 'Budget séparé de tokens de raisonnement (taux d\'entrée)', 'Transparence': 'Trace inspectable via API', 'Modèles': 'Claude Opus 5, Claude Sonnet 5' },
         { 'Approche': 'OpenAI o3', 'Meilleure pour': 'Problèmes les plus difficiles (maths, codage, compétitions)', 'Coûts': 'Budget de tokens de raisonnement (tier supérieur)', 'Transparence': 'Raisonnement caché, sortie visible', 'Modèles': 'OpenAI o3' },
         { 'Approche': 'Gemini Deep Think', 'Meilleure pour': 'Intégration Google Cloud, écosystème Gemini', 'Coûts': 'Tokens de réflexion séparés de la sortie', 'Transparence': 'Paramètre thinking_level (LOW, MEDIUM, HIGH)', 'Modèles': 'Gemini 3.1 Pro' },
-        { 'Approche': 'DeepSeek R1', 'Meilleure pour': 'Option open-weights, raisonnement on-device', 'Coûts': 'Raisonnement visible en flux dans le texte de sortie', 'Transparence': 'Complet: CoT inline dans la sortie', 'Modèles': 'DeepSeek R1' },
+        { 'Approche': 'DeepSeek-R1', 'Meilleure pour': 'Option open-weights, raisonnement on-device', 'Coûts': 'Raisonnement visible en flux dans le texte de sortie', 'Transparence': 'Complet: CoT inline dans la sortie', 'Modèles': 'DeepSeek-R1' },
       ],
       callouts: [
         {
@@ -2396,7 +2396,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { 'Modèle': 'GPT-5.6 Luna', 'CoT au niveau du prompt': 'Recommandé', 'Raisonnement intégré': 'Aucun', 'Meilleur cas d\'usage': 'Déploiement sensible aux budgets', 'Coût (approx.)': 'Très bas' },
         { 'Modèle': 'Gemini 3.1 Pro', 'CoT au niveau du prompt': 'Fonctionne', 'Raisonnement intégré': 'Deep Think (param thinking_level)', 'Meilleur cas d\'usage': 'Intégration Google Cloud', 'Coût (approx.)': 'Moyen-Haut' },
         { 'Modèle': 'Gemini Flash', 'CoT au niveau du prompt': 'Recommandé', 'Raisonnement intégré': 'Aucun', 'Meilleur cas d\'usage': 'Réponses rapides', 'Coût (approx.)': 'Bas' },
-        { 'Modèle': 'DeepSeek R1', 'CoT au niveau du prompt': 'Non nécessaire', 'Raisonnement intégré': 'Raisonnement inline dans la sortie', 'Meilleur cas d\'usage': 'Open-weights, on-device', 'Coût (approx.)': 'Gratuit (open source)' },
+        { 'Modèle': 'DeepSeek-R1', 'CoT au niveau du prompt': 'Non nécessaire', 'Raisonnement intégré': 'Raisonnement inline dans la sortie', 'Meilleur cas d\'usage': 'Open-weights, on-device', 'Coût (approx.)': 'Gratuit (open source)' },
         { 'Modèle': 'Llama 4', 'CoT au niveau du prompt': 'Recommandé', 'Raisonnement intégré': 'Aucun', 'Meilleur cas d\'usage': 'Déploiement local, confidentialité', 'Coût (approx.)': 'Auto-hébergé (dépend du calcul)' },
       ],
     },
@@ -2441,7 +2441,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'Puis-je auditer le raisonnement des modèles avec raisonnement intégré ?',
-          a: 'Oui, mais cela dépend du modèle. Les traces de raisonnement Claude Extended Thinking sont inspectables via API. Le raisonnement d\'OpenAI o3 est masqué par défaut (pour l\'avantage concurrentiel). Le raisonnement Gemini Deep Think est également masqué. Pour une auditabilité complète, utilisez le CoT au niveau du prompt ou DeepSeek R1.'
+          a: 'Oui, mais cela dépend du modèle. Les traces de raisonnement Claude Extended Thinking sont inspectables via API. Le raisonnement d\'OpenAI o3 est masqué par défaut (pour l\'avantage concurrentiel). Le raisonnement Gemini Deep Think est également masqué. Pour une auditabilité complète, utilisez le CoT au niveau du prompt ou DeepSeek-R1.'
         },
         {
           q: 'Le Chain-of-Thought Prompting convient-il aux applications en temps réel ?',
@@ -2518,7 +2518,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Puis-je auditer le raisonnement des modèles avec raisonnement intégré ?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Oui, mais cela dépend du modèle. Les traces de raisonnement Claude Extended Thinking sont inspectables via API. Le raisonnement d\'OpenAI o3 est masqué par défaut (pour l\'avantage concurrentiel). Le raisonnement Gemini Deep Think est également masqué. Pour une auditabilité complète, utilisez le CoT au niveau du prompt ou DeepSeek R1.'
+          text: 'Oui, mais cela dépend du modèle. Les traces de raisonnement Claude Extended Thinking sont inspectables via API. Le raisonnement d\'OpenAI o3 est masqué par défaut (pour l\'avantage concurrentiel). Le raisonnement Gemini Deep Think est également masqué. Pour une auditabilité complète, utilisez le CoT au niveau du prompt ou DeepSeek-R1.'
         }
       },
       {
@@ -2781,7 +2781,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { 'アプローチ': 'Claude Extended Thinking (Opus 5、Sonnet 5)', '最適な用途': '複雑な分析、最大精度', 'コスト': '独立した思考トークン予算(入力レート)', '透明性': 'APIを介して検査可能なトレース', 'モデル': 'Claude Opus 5、Claude Sonnet 5' },
         { 'アプローチ': 'OpenAI o3', '最適な用途': '最難関問題(数学、コーディング、競技)', 'コスト': '思考トークン予算(より高いティア)', '透明性': '隠れた推論、目に見える出力', 'モデル': 'OpenAI o3' },
         { 'アプローチ': 'Gemini Deep Think', '最適な用途': 'Google Cloud統合、Geminiエコシステム', 'コスト': '出力とは別の思考トークン', '透明性': 'thinking_levelパラメータ(LOW、MEDIUM、HIGH)', 'モデル': 'Gemini 3.1 Pro' },
-        { 'アプローチ': 'DeepSeek R1', '最適な用途': 'オープンウェイトオプション、オンデバイス推論', 'コスト': '出力テキストにストリーミングされる目に見える推論', '透明性': '完全: 出力内のインラインCoT', 'モデル': 'DeepSeek R1' },
+        { 'アプローチ': 'DeepSeek-R1', '最適な用途': 'オープンウェイトオプション、オンデバイス推論', 'コスト': '出力テキストにストリーミングされる目に見える推論', '透明性': '完全: 出力内のインラインCoT', 'モデル': 'DeepSeek-R1' },
       ],
       callouts: [
         {
@@ -2816,7 +2816,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { 'モデル': 'GPT-5.6 Luna', 'プロンプトレベルCoT': '推奨', '組み込み推論': 'なし', 'ベストユースケース': '予算意識の高いデプロイメント', 'コスト(約)': '非常に低い' },
         { 'モデル': 'Gemini 3.1 Pro', 'プロンプトレベルCoT': '機能する', '組み込み推論': 'Deep Think (thinking_levelパラム)', 'ベストユースケース': 'Google Cloud統合', 'コスト(約)': '中程度~高い' },
         { 'モデル': 'Gemini Flash', 'プロンプトレベルCoT': '推奨', '組み込み推論': 'なし', 'ベストユースケース': '高速応答', 'コスト(約)': '低い' },
-        { 'モデル': 'DeepSeek R1', 'プロンプトレベルCoT': '不要', '組み込み推論': '出力の内容推論', 'ベストユースケース': 'オープンウェイト、オンデバイス', 'コスト(約)': '無料(オープンソース)' },
+        { 'モデル': 'DeepSeek-R1', 'プロンプトレベルCoT': '不要', '組み込み推論': '出力の内容推論', 'ベストユースケース': 'オープンウェイト、オンデバイス', 'コスト(約)': '無料(オープンソース)' },
         { 'モデル': 'Llama 4', 'プロンプトレベルCoT': '推奨', '組み込み推論': 'なし', 'ベストユースケース': 'ローカルデプロイメント、プライバシー', 'コスト(約)': 'セルフホスト(コンピュート依存)' },
       ],
     },
@@ -3198,7 +3198,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '方法': 'Claude Extended Thinking (Opus 5、Sonnet 5)', '最适用于': '复杂分析、最高精度', '成本': '独立思维token预算(输入费率)', '透明度': '通过API可检查的trace', '模型': 'Claude Opus 5、Claude Sonnet 5' },
         { '方法': 'OpenAI o3', '最适用于': '最难问题(数学、编码、竞赛)', '成本': '思维token预算(更高层级)', '透明度': '隐藏推理、可见输出', '模型': 'OpenAI o3' },
         { '方法': 'Gemini Deep Think', '最适用于': 'Google Cloud集成、Gemini生态', '成本': '思维token与输出分开', '透明度': 'thinking_level参数(LOW、MEDIUM、HIGH)', '模型': 'Gemini 3.1 Pro' },
-        { '方法': 'DeepSeek R1', '最适用于': '开源权重选项、设备上推理', '成本': '输出文本中流式传输的可见推理', '透明度': '完全: 输出中的内联CoT', '模型': 'DeepSeek R1' },
+        { '方法': 'DeepSeek-R1', '最适用于': '开源权重选项、设备上推理', '成本': '输出文本中流式传输的可见推理', '透明度': '完全: 输出中的内联CoT', '模型': 'DeepSeek-R1' },
       ],
       callouts: [
         {
@@ -3233,7 +3233,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '模型': 'GPT-5.6 Luna', '提示词级CoT': '推荐', '内置推理': '无', '最佳用途': '预算意识部署', '成本(约)': '非常低' },
         { '模型': 'Gemini 3.1 Pro', '提示词级CoT': '有效', '内置推理': 'Deep Think(thinking_level参数)', '最佳用途': 'Google Cloud集成', '成本(约)': '中-高' },
         { '模型': 'Gemini Flash', '提示词级CoT': '推荐', '内置推理': '无', '最佳用途': '快速响应', '成本(约)': '低' },
-        { '模型': 'DeepSeek R1', '提示词级CoT': '不需要', '内置推理': '输出内的内联推理', '最佳用途': '开源、设备上', '成本(约)': '免费(开源)' },
+        { '模型': 'DeepSeek-R1', '提示词级CoT': '不需要', '内置推理': '输出内的内联推理', '最佳用途': '开源、设备上', '成本(约)': '免费(开源)' },
         { '模型': 'Llama 4', '提示词级CoT': '推荐', '内置推理': '无', '最佳用途': '本地部署、隐私', '成本(约)': '自托管(计算依赖)' },
       ],
     },
@@ -3279,7 +3279,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: '我可以审计内置推理模型的推理吗?',
-          a: '可以，但取决于模型。Claude Extended Thinking推理trace通过API可检查。OpenAI o3推理默认隐藏(竞争优势)。Gemini Deep Think推理也隐藏。要获得完全可审计性，使用提示词级CoT或DeepSeek R1。'
+          a: '可以，但取决于模型。Claude Extended Thinking推理trace通过API可检查。OpenAI o3推理默认隐藏(竞争优势)。Gemini Deep Think推理也隐藏。要获得完全可审计性，使用提示词级CoT或DeepSeek-R1。'
         },
         {
           q: '链式思维提示词适合实时应用吗?',
@@ -3356,7 +3356,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: '我可以审计内置推理模型的推理吗?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '可以，但取决于模型。Claude Extended Thinking推理trace通过API可检查。OpenAI o3推理默认隐藏(竞争优势)。Gemini Deep Think推理也隐藏。要获得完全可审计性，使用提示词级CoT或DeepSeek R1。'
+          text: '可以，但取决于模型。Claude Extended Thinking推理trace通过API可检查。OpenAI o3推理默认隐藏(竞争优势)。Gemini Deep Think推理也隐藏。要获得完全可审计性，使用提示词级CoT或DeepSeek-R1。'
         }
       },
       {
@@ -3628,7 +3628,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '방식': 'Claude extended thinking (Opus 5, Sonnet 5)', '최적 사용 사례': '복잡한 분석, 최고 정확도', '비용': '별도 사고 토큰 예산 (입력 요금)', '투명성': 'API를 통한 검사기 추적', '모델': 'Claude Opus 5, Claude Sonnet 5' },
         { '방식': 'OpenAI o3', '최적 사용 사례': '가장 어려운 문제 (수학, 코드, 경쟁)', '비용': '추론 토큰 예산 (최고 수준)', '투명성': '추론 숨김, 출력만 보임', '모델': 'OpenAI o3' },
         { '방식': 'Gemini Deep Think', '최적 사용 사례': 'Google Cloud 통합, Gemini 생태계', '비용': '출력과 별도의 사고 토큰', '투명성': 'thinking_level 파라미터 (LOW, MEDIUM, HIGH)', '모델': 'Gemini 3.1 Pro' },
-        { '방식': 'DeepSeek R1', '최적 사용 사례': '오픈 가중치 옵션, 온디바이스 추론', '비용': '출력 텍스트로 추론 스트리밍', '투명성': '완전: 출력에 CoT 인라인', '모델': 'DeepSeek R1' },
+        { '방식': 'DeepSeek-R1', '최적 사용 사례': '오픈 가중치 옵션, 온디바이스 추론', '비용': '출력 텍스트로 추론 스트리밍', '투명성': '완전: 출력에 CoT 인라인', '모델': 'DeepSeek-R1' },
       ],
       callouts: [
         {
@@ -3664,7 +3664,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { '모델': 'GPT-5.6 Luna', '프롬프트 수준 CoT': '권장', '내장 추론': '없음', '최적 사용 사례': '경제적 배포', '비용 (약)': '매우 낮음' },
         { '모델': 'Gemini 3.1 Pro', '프롬프트 수준 CoT': '작동', '내장 추론': 'Deep Think (thinking_level 파라미터)', '최적 사용 사례': 'Google Cloud 통합', '비용 (약)': '중간-높음' },
         { '모델': 'Gemini Flash', '프롬프트 수준 CoT': '권장', '내장 추론': '없음', '최적 사용 사례': '빠른 응답', '비용 (약)': '낮음' },
-        { '모델': 'DeepSeek R1', '프롬프트 수준 CoT': '불필요', '내장 추론': '출력에 인라인 추론', '최적 사용 사례': '오픈 가중치, 온디바이스', '비용 (약)': '무료 (오픈소스)' },
+        { '모델': 'DeepSeek-R1', '프롬프트 수준 CoT': '불필요', '내장 추론': '출력에 인라인 추론', '최적 사용 사례': '오픈 가중치, 온디바이스', '비용 (약)': '무료 (오픈소스)' },
         { '모델': 'Llama 4', '프롬프트 수준 CoT': '권장', '내장 추론': '없음', '최적 사용 사례': '로컬 배포, 개인정보 보호', '비용 (약)': '셀프호스팅 (컴퓨팅에 따라 다름)' },
       ],
     },

@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**When you type `ollama run deepseek-r1:14b`, you are not running a smaller version of DeepSeek-R1 — you are running Qwen2.5 14B taught to imitate R1\'s reasoning.** The name "DeepSeek-R1-Distill-Qwen-14B" is precise but easy to misread: the "DeepSeek-R1" part describes where the reasoning came from, and the "Qwen-14B" part is the actual model running on your GPU.',
           'This matters because expectations follow the name. People assume a distill is "R1, but smaller and a bit worse." It is closer to "a capable open model that learned to think like R1." That framing predicts the behavior you will actually see: excellent reasoning structure, occasional gaps in raw knowledge or hardest-case reliability.',
-          'For the hardware reality behind why the full model is off-limits at home, see [DeepSeek V3 Local Hardware Requirements](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 is the chat-model sibling with the same 671B-class footprint.',
+          'For the hardware reality behind why the full model is off-limits at home, see [DeepSeek-V3 Local Hardware Requirements](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 is the chat-model sibling with the same 671B-class footprint.',
           '**Update:** DeepSeek has since released DeepSeek-V4 (Flash and Pro) as its newer flagship generation, also available as open weights. The R1 distills covered here are not being discontinued and remain fully valid to run locally — if you want the newest architecture, V4 is worth evaluating alongside them.',
         ],
         snippetBlocks: [
@@ -200,7 +200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Best Local Reasoning Model 2026: DeepSeek-R1 Ranked](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — the six distills ranked by hardware tier with benchmarks',
           '[Best DeepSeek Distill for Your GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — match your card to a distill plus the Ollama command',
           '[DeepSeek-R1 Distill VRAM Cheatsheet](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — every distill by quant with VRAM and min-GPU',
-          '[DeepSeek V3 Local Hardware Requirements](/prompt-bites/deepseek-v3-local-hardware-requirements) — why the 671B V3 chat model is also off-limits at home',
+          '[DeepSeek-V3 Local Hardware Requirements](/prompt-bites/deepseek-v3-local-hardware-requirements) — why the 671B V3 chat model is also off-limits at home',
           '[Does Local DeepSeek Solve the China Data Problem?](/local-llms/deepseek-local-china-data-privacy-2026) — the privacy angle on self-hosting open weights',
         ],
       },
@@ -284,7 +284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Wenn Sie `ollama run deepseek-r1:14b` eingeben, führen Sie keine kleinere Version von DeepSeek-R1 aus — Sie führen ein Qwen2.5 14B aus, das gelernt hat, das Reasoning von R1 nachzuahmen.** Der Name „DeepSeek-R1-Distill-Qwen-14B" ist präzise, aber leicht falsch zu lesen: Der Teil „DeepSeek-R1" beschreibt, woher das Reasoning stammt, und der Teil „Qwen-14B" ist das tatsächliche Modell, das auf Ihrer GPU läuft.',
           'Das ist wichtig, weil die Erwartungen dem Namen folgen. Man nimmt an, ein Distill sei „R1, nur kleiner und etwas schlechter". Es ist näher an „einem fähigen offenen Modell, das gelernt hat, wie R1 zu denken". Diese Sichtweise sagt das Verhalten voraus, das Sie tatsächlich sehen werden: ausgezeichnete Reasoning-Struktur, gelegentliche Lücken beim rohen Wissen oder bei der Zuverlässigkeit in den schwierigsten Fällen.',
-          'Zur Hardware-Realität dahinter, warum das vollständige Modell zu Hause tabu ist, siehe [DeepSeek V3 Lokale Hardware-Anforderungen](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 ist das Chat-Modell-Geschwister mit demselben 671B-Klassen-Fußabdruck.',
+          'Zur Hardware-Realität dahinter, warum das vollständige Modell zu Hause tabu ist, siehe [DeepSeek-V3 Lokale Hardware-Anforderungen](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 ist das Chat-Modell-Geschwister mit demselben 671B-Klassen-Fußabdruck.',
           '**Update:** DeepSeek hat inzwischen DeepSeek-V4 (Flash und Pro) als neuere Flaggschiff-Generation veröffentlicht, ebenfalls als offene Gewichte verfügbar. Die hier behandelten R1-Distillate werden nicht eingestellt und bleiben weiterhin uneingeschränkt lokal nutzbar — wer die neueste Architektur möchte, sollte V4 zusätzlich in Betracht ziehen.',
         ],
         snippetBlocks: [
@@ -412,7 +412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Bestes lokales Reasoning-Modell 2026: DeepSeek-R1 im Ranking](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — die sechs Distills nach Hardware-Stufe mit Benchmarks',
           '[Bestes DeepSeek-Distill für Ihre GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — passen Sie Ihre Karte zu einem Distill plus dem Ollama-Befehl',
           '[DeepSeek-R1-Distill VRAM-Spickzettel](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — jedes Distill nach Quant mit VRAM und Mindest-GPU',
-          '[DeepSeek V3 Lokale Hardware-Anforderungen](/prompt-bites/deepseek-v3-local-hardware-requirements) — warum auch das 671B-V3-Chat-Modell zu Hause tabu ist',
+          '[DeepSeek-V3 Lokale Hardware-Anforderungen](/prompt-bites/deepseek-v3-local-hardware-requirements) — warum auch das 671B-V3-Chat-Modell zu Hause tabu ist',
           '[Löst lokales DeepSeek das China-Datenproblem?](/local-llms/deepseek-local-china-data-privacy-2026) — der Datenschutz-Blickwinkel beim Self-Hosting offener Gewichte',
         ],
       },
@@ -496,7 +496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Quand vous tapez `ollama run deepseek-r1:14b`, vous n\'exécutez pas une version plus petite de DeepSeek-R1 — vous exécutez Qwen2.5 14B entraîné à imiter le raisonnement de R1.** Le nom « DeepSeek-R1-Distill-Qwen-14B » est précis mais facile à mal lire : la partie « DeepSeek-R1 » décrit d\'où vient le raisonnement, et la partie « Qwen-14B » est le modèle réel qui tourne sur votre GPU.',
           'Cela compte, car les attentes suivent le nom. On suppose qu\'un distill est « R1, mais plus petit et un peu moins bon ». Il est plus proche d\'« un modèle ouvert compétent qui a appris à penser comme R1 ». Ce cadrage prédit le comportement que vous observerez réellement : une excellente structure de raisonnement, des lacunes ponctuelles en savoir brut ou en fiabilité dans les cas les plus difficiles.',
-          'Pour la réalité matérielle expliquant pourquoi le modèle complet est inaccessible chez soi, voir [Configuration matérielle locale de DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 est le frère modèle de chat avec la même empreinte de classe 671B.',
+          'Pour la réalité matérielle expliquant pourquoi le modèle complet est inaccessible chez soi, voir [Configuration matérielle locale de DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 est le frère modèle de chat avec la même empreinte de classe 671B.',
           '**Mise à jour :** DeepSeek a depuis publié DeepSeek-V4 (Flash et Pro) comme nouvelle génération phare, également disponible en poids ouverts. Les distillations R1 présentées ici ne sont pas abandonnées et restent pleinement utilisables en local — si vous voulez l\'architecture la plus récente, V4 mérite d\'être évalué en complément.',
         ],
         snippetBlocks: [
@@ -624,7 +624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Meilleur modèle de raisonnement local 2026 : classement DeepSeek-R1](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — les six distills classés par palier matériel avec benchmarks',
           '[Meilleur distill DeepSeek pour votre GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — associez votre carte à un distill plus la commande Ollama',
           '[Aide-mémoire VRAM des distills DeepSeek-R1](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — chaque distill par quant avec VRAM et GPU minimal',
-          '[Configuration matérielle locale de DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — pourquoi le modèle de chat V3 671B est aussi inaccessible chez soi',
+          '[Configuration matérielle locale de DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — pourquoi le modèle de chat V3 671B est aussi inaccessible chez soi',
           '[DeepSeek local résout-il le problème des données chinoises ?](/local-llms/deepseek-local-china-data-privacy-2026) — l\'angle confidentialité de l\'auto-hébergement de poids ouverts',
         ],
       },
@@ -656,7 +656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'ローカルのDeepSeek-R1蒸留版で十分か、それとも完全なホスト版R1モデルが必要かを判断する開発者',
     primaryTerm: 'DeepSeek-R1 distillation',
     current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Llama 3', 'Qwen3 8B'],
-    targetKeywords: ['DeepSeek R1 蒸留版 比較', 'DeepSeek 蒸留 解説', '完全版R1 蒸留版', '蒸留で失うもの', 'DeepSeek R1 671B'],
+    targetKeywords: ['DeepSeek-R1 蒸留版 比較', 'DeepSeek 蒸留 解説', '完全版R1 蒸留版', '蒸留で失うもの', 'DeepSeek-R1 671B'],
     ctaText: 'ローカルの蒸留版が完全なR1からどれだけ離れているか気になりますか？PromptQuorumを使えば、同じ推論プロンプトを蒸留版とホスト版のフロンティアモデルに1回でまとめて送信できます。ギャップは推測するより並べて見るほうが分かりやすいです。',
     leadAnswerBlock: '**蒸留はDeepSeek-R1の推論の振る舞い（思考の連鎖、自己検証、再考）を小型のQwen2.5またはLlama 3ベースにコピーしますが、完全な671Bモデルの生の能力と知識の広さはコピーできません。** R1の考え方は保持されますが、R1が知っていることの一部と、最難問を解く信頼性の一部が失われます。多くのローカルな数学・論理タスクではギャップは小さく、フロンティア級の難易度や広範な知識を要する作業では現実的な差になります。',
     quickAnswerTop: {
@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**`ollama run deepseek-r1:14b`と入力したとき、あなたが動かしているのはDeepSeek-R1の小型版ではなく、R1の推論を模倣するように教えられたQwen2.5 14Bです。** 名称「DeepSeek-R1-Distill-Qwen-14B」は正確ですが誤読しやすく、「DeepSeek-R1」の部分は推論の出所を表し、「Qwen-14B」の部分こそが実際にGPU上で動くモデルです。',
           'これが重要なのは、期待が名称に従うからです。多くの人は蒸留版を「R1の小型かつ少し劣る版」と考えます。実際には「R1のように考えることを学んだ、有能なオープンモデル」に近いものです。この捉え方は、実際に目にする振る舞いを予測します。優れた推論構造と、生の知識や最難ケースの信頼性における時折のギャップです。',
-          '完全版モデルが自宅では使えない背景にあるハードウェアの現実については、[DeepSeek V3 ローカルハードウェア要件](/prompt-bites/deepseek-v3-local-hardware-requirements)を参照してください。V3は同じ671Bクラスのフットプリントを持つチャットモデルの兄弟です。',
+          '完全版モデルが自宅では使えない背景にあるハードウェアの現実については、[DeepSeek-V3 ローカルハードウェア要件](/prompt-bites/deepseek-v3-local-hardware-requirements)を参照してください。V3は同じ671Bクラスのフットプリントを持つチャットモデルの兄弟です。',
           '**更新:** DeepSeekはその後、新しいフラッグシップ世代としてDeepSeek-V4(FlashおよびPro)をリリースしました。オープンウェイトとしても提供されています。本記事で扱うR1の蒸留モデルは廃止されるものではなく、引き続きローカルで問題なく利用できます。最新のアーキテクチャを求める場合は、V4もあわせて検討する価値があります。',
         ],
         snippetBlocks: [
@@ -836,7 +836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[最良のローカル推論モデル2026：DeepSeek-R1ランキング](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 6つの蒸留版をハードウェア階層別にベンチマーク付きでランク付け',
           '[あなたのGPUに最適なDeepSeek蒸留版](/prompt-bites/best-deepseek-distill-for-your-gpu) — お使いのカードを蒸留版に合わせ、Ollamaコマンドも紹介',
           '[DeepSeek-R1蒸留版VRAMチートシート](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — 各蒸留版を量子化別にVRAMと最小GPUで一覧',
-          '[DeepSeek V3 ローカルハードウェア要件](/prompt-bites/deepseek-v3-local-hardware-requirements) — 671BのV3チャットモデルも自宅では使えない理由',
+          '[DeepSeek-V3 ローカルハードウェア要件](/prompt-bites/deepseek-v3-local-hardware-requirements) — 671BのV3チャットモデルも自宅では使えない理由',
           '[ローカルのDeepSeekは中国データ問題を解決するか？](/local-llms/deepseek-local-china-data-privacy-2026) — オープンウェイトをセルフホストするプライバシーの観点',
         ],
       },
@@ -920,7 +920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**当你输入 `ollama run deepseek-r1:14b` 时，你运行的并不是 DeepSeek-R1 的较小版本，而是被教会模仿 R1 推理的 Qwen2.5 14B。** 名称 “DeepSeek-R1-Distill-Qwen-14B” 很精确但容易误读：“DeepSeek-R1” 部分描述推理来自哪里，而 “Qwen-14B” 部分才是真正运行在你 GPU 上的模型。',
           '这一点很重要，因为预期会跟着名称走。人们以为蒸馏版是 “R1，只是更小、稍差”。它更接近 “一个学会像 R1 一样思考的有能力的开源模型”。这种理解能预测你实际会看到的行为：出色的推理结构，偶尔在原始知识或最难情形可靠性上的缺口。',
-          '关于完整模型为何在家无法使用的硬件现实，参见 [DeepSeek V3 本地硬件要求](/prompt-bites/deepseek-v3-local-hardware-requirements)——V3 是同属 671B 级别占用的对话模型兄弟。',
+          '关于完整模型为何在家无法使用的硬件现实，参见 [DeepSeek-V3 本地硬件要求](/prompt-bites/deepseek-v3-local-hardware-requirements)——V3 是同属 671B 级别占用的对话模型兄弟。',
           '**更新:** DeepSeek 此后发布了新一代旗舰模型 DeepSeek-V4(Flash 和 Pro),同样提供开源权重。本文介绍的 R1 蒸馏模型并未停用,依然可以完整地在本地运行——如果你想使用最新架构,可以将 V4 一并纳入考虑。',
         ],
         snippetBlocks: [
@@ -1048,7 +1048,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[2026 最佳本地推理模型：DeepSeek-R1 排名](/local-llms/best-local-reasoning-model-deepseek-r1-2026)——六个蒸馏版按硬件档次排名并附基准',
           '[适合你 GPU 的最佳 DeepSeek 蒸馏版](/prompt-bites/best-deepseek-distill-for-your-gpu)——把你的显卡匹配到一个蒸馏版并附 Ollama 命令',
           '[DeepSeek-R1 蒸馏版显存速查表](/prompt-bites/deepseek-r1-distill-vram-cheatsheet)——每个蒸馏版按量化列出显存与最低 GPU',
-          '[DeepSeek V3 本地硬件要求](/prompt-bites/deepseek-v3-local-hardware-requirements)——为什么 671B 的 V3 对话模型在家同样无法运行',
+          '[DeepSeek-V3 本地硬件要求](/prompt-bites/deepseek-v3-local-hardware-requirements)——为什么 671B 的 V3 对话模型在家同样无法运行',
           '[本地 DeepSeek 能解决中国数据问题吗？](/local-llms/deepseek-local-china-data-privacy-2026)——自托管开源权重的隐私视角',
         ],
       },
@@ -1132,7 +1132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Cuando escribes `ollama run deepseek-r1:14b`, no estás ejecutando una versión más pequeña de DeepSeek-R1: estás ejecutando Qwen2.5 14B enseñado a imitar el razonamiento de R1.** El nombre "DeepSeek-R1-Distill-Qwen-14B" es preciso pero fácil de malinterpretar: la parte "DeepSeek-R1" describe de dónde viene el razonamiento, y la parte "Qwen-14B" es el modelo real que corre en tu GPU.',
           'Esto importa porque las expectativas siguen al nombre. La gente supone que un distill es "R1, pero más pequeño y un poco peor". Está más cerca de "un modelo abierto capaz que aprendió a pensar como R1". Ese enfoque predice el comportamiento que verás realmente: excelente estructura de razonamiento, huecos ocasionales en conocimiento bruto o en fiabilidad de los casos más difíciles.',
-          'Para la realidad de hardware detrás de por qué el modelo completo está fuera de alcance en casa, consulta [Requisitos de hardware local de DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements): V3 es el modelo de chat hermano con la misma huella de clase 671B.',
+          'Para la realidad de hardware detrás de por qué el modelo completo está fuera de alcance en casa, consulta [Requisitos de hardware local de DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements): V3 es el modelo de chat hermano con la misma huella de clase 671B.',
           '**Actualización:** DeepSeek ha lanzado desde entonces DeepSeek-V4 (Flash y Pro) como su nueva generación insignia, también disponible en pesos abiertos. Las destilaciones de R1 tratadas aquí no se están descontinuando y siguen siendo totalmente válidas para ejecutar en local — si quieres la arquitectura más reciente, vale la pena evaluar V4 también.',
         ],
         snippetBlocks: [
@@ -1260,7 +1260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Mejor modelo de razonamiento local 2026: DeepSeek-R1 clasificado](/local-llms/best-local-reasoning-model-deepseek-r1-2026): los seis distills clasificados por nivel de hardware con benchmarks',
           '[Mejor distill de DeepSeek para tu GPU](/prompt-bites/best-deepseek-distill-for-your-gpu): empareja tu tarjeta con un distill más el comando de Ollama',
           '[Chuleta de VRAM de los distills de DeepSeek-R1](/prompt-bites/deepseek-r1-distill-vram-cheatsheet): cada distill por cuantización con VRAM y GPU mínima',
-          '[Requisitos de hardware local de DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements): por qué el modelo de chat V3 671B también está fuera de alcance en casa',
+          '[Requisitos de hardware local de DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements): por qué el modelo de chat V3 671B también está fuera de alcance en casa',
           '[¿Resuelve el DeepSeek local el problema de los datos de China?](/local-llms/deepseek-local-china-data-privacy-2026): el ángulo de privacidad de autoalojar pesos abiertos',
         ],
       },
@@ -1344,7 +1344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Quando você digita `ollama run deepseek-r1:14b`, você não está rodando uma versão menor do DeepSeek-R1 — está rodando o Qwen2.5 14B ensinado a imitar o raciocínio do R1.** O nome "DeepSeek-R1-Distill-Qwen-14B" é preciso, mas fácil de ler errado: a parte "DeepSeek-R1" descreve de onde veio o raciocínio, e a parte "Qwen-14B" é o modelo de fato rodando na sua GPU.',
           'Isso importa porque as expectativas seguem o nome. As pessoas presumem que um distill é "o R1, só que menor e um pouco pior". Ele está mais perto de "um modelo aberto capaz que aprendeu a pensar como o R1". Esse enquadramento prevê o comportamento que você realmente verá: excelente estrutura de raciocínio, lacunas pontuais em conhecimento bruto ou na confiabilidade dos casos mais difíceis.',
-          'Para a realidade de hardware por trás do motivo de o modelo completo ser inviável em casa, veja [Requisitos de hardware local do DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — o V3 é o modelo de chat irmão com a mesma pegada de classe 671B.',
+          'Para a realidade de hardware por trás do motivo de o modelo completo ser inviável em casa, veja [Requisitos de hardware local do DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — o V3 é o modelo de chat irmão com a mesma pegada de classe 671B.',
           '**Atualização:** Desde então, a DeepSeek lançou o DeepSeek-V4 (Flash e Pro) como sua nova geração principal, também disponível em pesos abertos. As destilações do R1 abordadas aqui não estão sendo descontinuadas e continuam totalmente válidas para rodar localmente — se você quiser a arquitetura mais recente, vale a pena avaliar o V4 também.',
         ],
         snippetBlocks: [
@@ -1472,7 +1472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Melhor modelo de raciocínio local 2026: DeepSeek-R1 no ranking](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — os seis distills classificados por nível de hardware com benchmarks',
           '[Melhor distill do DeepSeek para a sua GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — combine a sua placa de vídeo com um distill mais o comando do Ollama',
           '[Tabela rápida de VRAM dos distills do DeepSeek-R1](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — cada distill por quantização com VRAM e GPU mínima',
-          '[Requisitos de hardware local do DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — por que o modelo de chat V3 671B também é inviável em casa',
+          '[Requisitos de hardware local do DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — por que o modelo de chat V3 671B também é inviável em casa',
           '[O DeepSeek local resolve o problema dos dados da China?](/local-llms/deepseek-local-china-data-privacy-2026) — o ângulo de privacidade de hospedar pesos abertos por conta própria',
         ],
       },
@@ -1504,7 +1504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'المطورون الذين يقررون ما إذا كانت نسخة DeepSeek-R1 المقطّرة المحلية كافية مقابل نموذج R1 الكامل المستضاف',
     primaryTerm: 'DeepSeek-R1 distillation',
     current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Llama 3', 'Qwen3 8B'],
-    targetKeywords: ['DeepSeek R1 مقابل المقطّرة', 'شرح تقطير DeepSeek', 'R1 الكامل مقابل المقطّر', 'ماذا يخسر التقطير', 'DeepSeek R1 671B'],
+    targetKeywords: ['DeepSeek-R1 مقابل المقطّرة', 'شرح تقطير DeepSeek', 'R1 الكامل مقابل المقطّر', 'ماذا يخسر التقطير', 'DeepSeek-R1 671B'],
     ctaText: 'تتساءل كم تبعد النسخة المقطّرة المحلية عن R1 الكامل؟ أرسل نفس مطالبة التفكير إلى نسختك المقطّرة وإلى النماذج الرائدة المستضافة في إرسال واحد عبر PromptQuorum — رؤية الفجوة جنبًا إلى جنب أسهل من تخمينها.',
     leadAnswerBlock: '**ينسخ التقطير سلوك التفكير لـ DeepSeek-R1 — سلسلة التفكير والتحقق الذاتي والتأمل — إلى قاعدة صغيرة Qwen2.5 أو Llama 3، لكنه لا يستطيع نسخ القدرة الخام والاتساع للنموذج الكامل بحجم 671B.** أنت تحتفظ بطريقة تفكير R1؛ وتخسر جزءًا مما يعرفه ومن مدى موثوقيته في حل أصعب المسائل. بالنسبة لمعظم مهام الرياضيات والمنطق المحلية تكون الفجوة صغيرة؛ أما في العمل عند حدود الصعوبة القصوى أو الذي يتطلب معرفة واسعة فالفجوة حقيقية.',
     quickAnswerTop: {
@@ -1556,7 +1556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**عندما تكتب `ollama run deepseek-r1:14b`، فأنت لا تشغّل نسخة أصغر من DeepSeek-R1 — بل تشغّل Qwen2.5 14B الذي تعلّم محاكاة تفكير R1.** الاسم "DeepSeek-R1-Distill-Qwen-14B" دقيق لكنه سهل القراءة الخاطئة: الجزء "DeepSeek-R1" يصف من أين جاء التفكير، والجزء "Qwen-14B" هو النموذج الفعلي الذي يعمل على GPU لديك.',
           'هذا مهم لأن التوقعات تتبع الاسم. يفترض الناس أن النسخة المقطّرة هي "R1 لكن أصغر وأسوأ قليلًا". وهي أقرب إلى "نموذج مفتوح قادر تعلّم أن يفكر مثل R1". هذا التأطير يتنبأ بالسلوك الذي ستراه فعليًا: بنية تفكير ممتازة، مع ثغرات أحيانًا في المعرفة الخام أو في الموثوقية في أصعب الحالات.',
-          'لمعرفة واقع العتاد وراء عدم إمكانية تشغيل النموذج الكامل في المنزل، راجع [متطلبات العتاد المحلي لـ DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 هو الشقيق نموذج المحادثة بالبصمة نفسها من فئة 671B.',
+          'لمعرفة واقع العتاد وراء عدم إمكانية تشغيل النموذج الكامل في المنزل، راجع [متطلبات العتاد المحلي لـ DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 هو الشقيق نموذج المحادثة بالبصمة نفسها من فئة 671B.',
           '**تحديث:** أصدرت DeepSeek منذ ذلك الحين DeepSeek-V4 (Flash وPro) كجيلها الرئيسي الأحدث، وهو متاح أيضًا كأوزان مفتوحة. نسخ R1 المقطّرة المتناولة هنا لم يتم إيقافها ولا تزال صالحة تمامًا للتشغيل محليًا — إذا كنت تريد أحدث بنية، يستحق V4 التقييم أيضًا.',
         ],
         snippetBlocks: [
@@ -1684,7 +1684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[أفضل نموذج تفكير محلي 2026: تصنيف DeepSeek-R1](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — النسخ المقطّرة الست مصنّفة حسب فئة العتاد مع معايير',
           '[أفضل نسخة DeepSeek مقطّرة لـ GPU لديك](/prompt-bites/best-deepseek-distill-for-your-gpu) — طابق بطاقتك مع نسخة مقطّرة مع أمر Ollama',
           '[ورقة VRAM المرجعية للنسخ المقطّرة من DeepSeek-R1](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — كل نسخة مقطّرة حسب التكميم مع VRAM وأدنى GPU',
-          '[متطلبات العتاد المحلي لـ DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — لماذا نموذج المحادثة V3 671B أيضًا غير متاح في المنزل',
+          '[متطلبات العتاد المحلي لـ DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — لماذا نموذج المحادثة V3 671B أيضًا غير متاح في المنزل',
           '[هل يحل DeepSeek المحلي مشكلة بيانات الصين؟](/local-llms/deepseek-local-china-data-privacy-2026) — زاوية الخصوصية في الاستضافة الذاتية للأوزان المفتوحة',
         ],
       },
@@ -1716,7 +1716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: '로컬 DeepSeek-R1 디스틸로 충분한지, 아니면 완전한 호스팅 R1 모델이 필요한지 결정하는 개발자',
     primaryTerm: 'DeepSeek-R1 distillation',
     current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek-R1-Distill-Qwen-7B', 'DeepSeek-R1-Distill-Qwen-32B', 'DeepSeek-R1-Distill-Llama-70B', 'DeepSeek-R1-0528-Qwen3-8B', 'Qwen2.5', 'Llama 3', 'Qwen3 8B'],
-    targetKeywords: ['DeepSeek R1 디스틸 비교', 'DeepSeek 증류 설명', '완전 R1 대 디스틸', '증류가 잃는 것', 'DeepSeek R1 671B'],
+    targetKeywords: ['DeepSeek-R1 디스틸 비교', 'DeepSeek 증류 설명', '완전 R1 대 디스틸', '증류가 잃는 것', 'DeepSeek-R1 671B'],
     ctaText: '로컬 디스틸이 완전한 R1에서 얼마나 떨어져 있는지 궁금하신가요? PromptQuorum으로 같은 추론 프롬프트를 디스틸과 호스팅 프런티어 모델에 한 번에 보내 보십시오. 격차는 추측하기보다 나란히 보는 편이 더 분명합니다.',
     leadAnswerBlock: '**증류는 DeepSeek-R1의 추론 행동(사고의 연쇄, 자기 검증, 반성)을 작은 Qwen2.5 또는 Llama 3 베이스에 복사하지만, 완전한 671B 모델의 원시 역량과 폭은 복사할 수 없습니다.** R1이 사고하는 방식은 유지하지만, R1이 아는 것의 일부와 가장 어려운 문제를 얼마나 안정적으로 푸는지의 일부를 잃습니다. 대부분의 로컬 수학·논리 작업에서는 격차가 작고, 프런티어 난이도나 폭넓은 지식이 필요한 작업에서는 격차가 실재합니다.',
     quickAnswerTop: {
@@ -1768,7 +1768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**`ollama run deepseek-r1:14b`을 입력할 때, 여러분은 DeepSeek-R1의 더 작은 버전을 실행하는 것이 아니라 R1의 추론을 모방하도록 학습된 Qwen2.5 14B를 실행하는 것입니다.** "DeepSeek-R1-Distill-Qwen-14B"라는 이름은 정확하지만 오해하기 쉽습니다. "DeepSeek-R1" 부분은 추론이 어디에서 왔는지를 설명하고, "Qwen-14B" 부분이 실제로 여러분의 GPU에서 실행되는 모델입니다.',
           '이것이 중요한 이유는 기대가 이름을 따라가기 때문입니다. 사람들은 디스틸을 "R1인데 더 작고 조금 못한 것"이라고 가정합니다. 실제로는 "R1처럼 사고하는 법을 배운 유능한 오픈 모델"에 가깝습니다. 이 관점은 여러분이 실제로 보게 될 행동을 예측합니다. 뛰어난 추론 구조와, 원시 지식이나 가장 어려운 경우의 안정성에서의 간헐적 공백입니다.',
-          '완전한 모델이 집에서 사용할 수 없는 이유의 하드웨어 현실에 대해서는 [DeepSeek V3 로컬 하드웨어 요구 사항](/ko/prompt-bites/deepseek-v3-local-hardware-requirements)을 참고하십시오. V3는 동일한 671B급 용량을 가진 챗 모델 형제입니다.',
+          '완전한 모델이 집에서 사용할 수 없는 이유의 하드웨어 현실에 대해서는 [DeepSeek-V3 로컬 하드웨어 요구 사항](/ko/prompt-bites/deepseek-v3-local-hardware-requirements)을 참고하십시오. V3는 동일한 671B급 용량을 가진 챗 모델 형제입니다.',
           '**업데이트:** DeepSeek는 이후 새로운 플래그십 세대인 DeepSeek-V4(Flash 및 Pro)를 출시했으며, 이 역시 오픈 웨이트로 제공됩니다. 여기서 다루는 R1 증류 모델은 단종되지 않았으며 로컬에서 계속 문제없이 실행할 수 있습니다 — 최신 아키텍처를 원한다면 V4도 함께 검토할 가치가 있습니다.',
         ],
         snippetBlocks: [
@@ -1896,7 +1896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[최고의 로컬 추론 모델 2026: DeepSeek-R1 순위](/ko/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 여섯 디스틸을 하드웨어 등급별로 벤치마크와 함께 순위 매김',
           '[당신의 GPU에 맞는 최고의 DeepSeek 디스틸](/ko/prompt-bites/best-deepseek-distill-for-your-gpu) — 당신의 카드를 디스틸에 맞추고 Ollama 명령도 안내',
           '[DeepSeek-R1 디스틸 VRAM 치트시트](/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — 각 디스틸을 양자화별 VRAM과 최소 GPU로 정리',
-          '[DeepSeek V3 로컬 하드웨어 요구 사항](/ko/prompt-bites/deepseek-v3-local-hardware-requirements) — 671B V3 챗 모델도 집에서 쓸 수 없는 이유',
+          '[DeepSeek-V3 로컬 하드웨어 요구 사항](/ko/prompt-bites/deepseek-v3-local-hardware-requirements) — 671B V3 챗 모델도 집에서 쓸 수 없는 이유',
           '[로컬 DeepSeek가 중국 데이터 문제를 해결하는가?](/ko/local-llms/deepseek-local-china-data-privacy-2026) — 오픈 웨이트를 자체 호스팅하는 프라이버시 관점',
         ],
       },

@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
-    current_models_mentioned: ['DeepSeek R1', 'DeepSeek V3', 'DeepSeek Coder V2'],
+    current_models_mentioned: ['DeepSeek-R1', 'DeepSeek-V3', 'DeepSeek Coder V2'],
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'DPOs, CISOs, and developers in GDPR-regulated organisations evaluating DeepSeek',
@@ -26,15 +26,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'DeepSeek API: servers in China, subject to PIPL data disclosure law — highest risk',
           'No EU adequacy decision for China: SCCs + TIA required, but TIA outcome may be unfavourable',
-          'DeepSeek R1/V3 local weights (Apache 2.0): much lower risk if deployed locally without API calls',
+          'DeepSeek-R1/V3 local weights (Apache 2.0): much lower risk if deployed locally without API calls',
         ],
         updatedDate: '2026-05',
       },
-      de: { question: 'Ist DeepSeek DSGVO-konform?', answer: 'Die DeepSeek-API stellt das höchste DSGVO-Risiko unter allen großen LLMs dar, weil Server dem chinesischen Datenzugriffsrecht (PIPL) unterliegen, keine EU-Angemessenheitsentscheidung für China besteht und die Nutzungsbedingungen ausdrücklich das Recht vorbehält, Daten mit chinesischen Behörden zu teilen. Lokale DeepSeek-Open-Weight-Modelle haben ein anderes, geringeres Risikoprofil.', bullets: ['DeepSeek-API: Server in China, PIPL-Datenweitergabepflicht — höchstes Risiko', 'Keine EU-Angemessenheitsentscheidung für China: SCC + TFA erforderlich, TFA-Ergebnis aber möglicherweise ungünstig', 'DeepSeek R1/V3 lokale Gewichte (Apache 2.0): wesentlich geringeres Risiko bei lokaler Bereitstellung ohne API-Aufrufe'], updatedDate: '2026-05' },
-      fr: { question: 'DeepSeek est-il sûr au regard du RGPD ?', answer: 'L\'API DeepSeek présente le risque RGPD le plus élevé parmi les LLMs majeurs car les serveurs sont soumis à la loi chinoise d\'accès aux données (PIPL), aucune décision d\'adéquation UE n\'existe pour la Chine, et les Conditions d\'utilisation se réservent explicitement le droit de partager des données avec les autorités chinoises. Les modèles DeepSeek open-weight en local ont un profil de risque différent et plus faible.', bullets: ['API DeepSeek : serveurs en Chine, loi PIPL de divulgation — risque le plus élevé', 'Pas de décision d\'adéquation UE pour la Chine : CCT + EIT requis, mais résultat de l\'EIT potentiellement défavorable', 'Poids locaux DeepSeek R1/V3 (Apache 2.0) : risque beaucoup plus faible si déployés localement sans appels API'], updatedDate: '2026-05' },
-      ja: { question: 'DeepSeekはGDPR的に安全ですか？', answer: 'DeepSeek APIは主要LLMの中でGDPRリスクが最も高い。理由はサーバーが中国の個人情報アクセス法（PIPL）に従属し、中国にEU十分性認定がなく、利用規約が中国当局とのデータ共有権を明示的に留保しているためです。DeepSeekのローカルオープンウェイトモデルはリスクプロファイルが異なり、より低いリスクです。', bullets: ['DeepSeek API：中国サーバー、PILPデータ開示義務あり——最高リスク', '中国のEU十分性認定なし：SCC + TIA必要、ただしTIA結果は不利になる可能性', 'DeepSeek R1/V3ローカル重み（Apache 2.0）：APIコールなしでローカル展開すれば大幅リスク低減'], updatedDate: '2026-05' },
-      zh: { question: 'DeepSeek在GDPR方面安全吗？', answer: 'DeepSeek API在主要LLM中具有最高的GDPR风险，因为服务器受中国数据访问法（PIPL）管辖，中国没有欧盟充分性认定，且服务条款明确保留了与中国当局共享数据的权利。DeepSeek本地开源权重模型具有不同且更低的风险状况。', bullets: ['DeepSeek API：服务器在中国，受PIPL数据披露法约束——风险最高', '中国无欧盟充分性认定：需要SCCs + TIA，但TIA结果可能不利', 'DeepSeek R1/V3本地权重（Apache 2.0）：本地部署无API调用风险大幅降低'], updatedDate: '2026-05' },
-      es: { question: '¿Es seguro usar DeepSeek bajo el RGPD?', answer: 'La API de DeepSeek presenta el mayor riesgo para el RGPD entre los principales LLMs, porque los servidores están sujetos a la ley china de acceso a datos (PIPL), no existe una decisión de adecuación de la UE para China, y los Términos de Servicio se reservan explícitamente el derecho a compartir datos con las autoridades chinas. Los modelos de código abierto de DeepSeek ejecutados localmente tienen un perfil de riesgo diferente y más bajo.', bullets: ['API de DeepSeek: servidores en China, sujetos a la ley PIPL de divulgación — riesgo máximo', 'Sin decisión de adecuación de la UE para China: CCT + EIT requeridas, pero el resultado de la EIT puede ser desfavorable', 'Pesos locales de DeepSeek R1/V3 (Apache 2.0): riesgo mucho menor si se despliegan localmente sin llamadas a la API'], updatedDate: '2026-05' },
+      de: { question: 'Ist DeepSeek DSGVO-konform?', answer: 'Die DeepSeek-API stellt das höchste DSGVO-Risiko unter allen großen LLMs dar, weil Server dem chinesischen Datenzugriffsrecht (PIPL) unterliegen, keine EU-Angemessenheitsentscheidung für China besteht und die Nutzungsbedingungen ausdrücklich das Recht vorbehält, Daten mit chinesischen Behörden zu teilen. Lokale DeepSeek-Open-Weight-Modelle haben ein anderes, geringeres Risikoprofil.', bullets: ['DeepSeek-API: Server in China, PIPL-Datenweitergabepflicht — höchstes Risiko', 'Keine EU-Angemessenheitsentscheidung für China: SCC + TFA erforderlich, TFA-Ergebnis aber möglicherweise ungünstig', 'DeepSeek-R1/V3 lokale Gewichte (Apache 2.0): wesentlich geringeres Risiko bei lokaler Bereitstellung ohne API-Aufrufe'], updatedDate: '2026-05' },
+      fr: { question: 'DeepSeek est-il sûr au regard du RGPD ?', answer: 'L\'API DeepSeek présente le risque RGPD le plus élevé parmi les LLMs majeurs car les serveurs sont soumis à la loi chinoise d\'accès aux données (PIPL), aucune décision d\'adéquation UE n\'existe pour la Chine, et les Conditions d\'utilisation se réservent explicitement le droit de partager des données avec les autorités chinoises. Les modèles DeepSeek open-weight en local ont un profil de risque différent et plus faible.', bullets: ['API DeepSeek : serveurs en Chine, loi PIPL de divulgation — risque le plus élevé', 'Pas de décision d\'adéquation UE pour la Chine : CCT + EIT requis, mais résultat de l\'EIT potentiellement défavorable', 'Poids locaux DeepSeek-R1/V3 (Apache 2.0) : risque beaucoup plus faible si déployés localement sans appels API'], updatedDate: '2026-05' },
+      ja: { question: 'DeepSeekはGDPR的に安全ですか？', answer: 'DeepSeek APIは主要LLMの中でGDPRリスクが最も高い。理由はサーバーが中国の個人情報アクセス法（PIPL）に従属し、中国にEU十分性認定がなく、利用規約が中国当局とのデータ共有権を明示的に留保しているためです。DeepSeekのローカルオープンウェイトモデルはリスクプロファイルが異なり、より低いリスクです。', bullets: ['DeepSeek API：中国サーバー、PILPデータ開示義務あり——最高リスク', '中国のEU十分性認定なし：SCC + TIA必要、ただしTIA結果は不利になる可能性', 'DeepSeek-R1/V3ローカル重み（Apache 2.0）：APIコールなしでローカル展開すれば大幅リスク低減'], updatedDate: '2026-05' },
+      zh: { question: 'DeepSeek在GDPR方面安全吗？', answer: 'DeepSeek API在主要LLM中具有最高的GDPR风险，因为服务器受中国数据访问法（PIPL）管辖，中国没有欧盟充分性认定，且服务条款明确保留了与中国当局共享数据的权利。DeepSeek本地开源权重模型具有不同且更低的风险状况。', bullets: ['DeepSeek API：服务器在中国，受PIPL数据披露法约束——风险最高', '中国无欧盟充分性认定：需要SCCs + TIA，但TIA结果可能不利', 'DeepSeek-R1/V3本地权重（Apache 2.0）：本地部署无API调用风险大幅降低'], updatedDate: '2026-05' },
+      es: { question: '¿Es seguro usar DeepSeek bajo el RGPD?', answer: 'La API de DeepSeek presenta el mayor riesgo para el RGPD entre los principales LLMs, porque los servidores están sujetos a la ley china de acceso a datos (PIPL), no existe una decisión de adecuación de la UE para China, y los Términos de Servicio se reservan explícitamente el derecho a compartir datos con las autoridades chinas. Los modelos de código abierto de DeepSeek ejecutados localmente tienen un perfil de riesgo diferente y más bajo.', bullets: ['API de DeepSeek: servidores en China, sujetos a la ley PIPL de divulgación — riesgo máximo', 'Sin decisión de adecuación de la UE para China: CCT + EIT requeridas, pero el resultado de la EIT puede ser desfavorable', 'Pesos locales de DeepSeek-R1/V3 (Apache 2.0): riesgo mucho menor si se despliegan localmente sin llamadas a la API'], updatedDate: '2026-05' },
     },
     sections: {
       tldr: {
@@ -63,7 +63,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'DeepSeek Local Weights — A Completely Different Risk Profile',
         content: [
           '<strong>The open-weight DeepSeek models (R1, V3, Coder V2) are a separate product from the API. They are released under Apache 2.0 and can be downloaded and run locally with no connection to DeepSeek servers.</strong> Running local weights eliminates the GDPR Article 44 transfer problem entirely — the same way local Qwen or local Llama does.',
-          'Local DeepSeek R1 7B or 8B runs comfortably via Ollama on a 6–8 GB VRAM GPU. The performance is excellent: R1 is one of the strongest reasoning models available at the 7B tier. For coding tasks, DeepSeek Coder V2 is available in smaller variants.',
+          'Local DeepSeek-R1 7B or 8B runs comfortably via Ollama on a 6–8 GB VRAM GPU. The performance is excellent: R1 is one of the strongest reasoning models available at the 7B tier. For coding tasks, DeepSeek Coder V2 is available in smaller variants.',
           'The one remaining question for local DeepSeek: model training. DeepSeek has not published full details of what data was used to train these models. For high-assurance environments (healthcare, legal, government), this uncertainty may be relevant even for local deployment. Qwen 3 (Alibaba/Tongyi) and Llama 4 (Meta) provide more transparency about training data provenance.',
         ],
         columns: ['Deployment', 'GDPR Risk', 'Reason', 'Recommended Action'],
@@ -83,8 +83,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Technically yes — you can sign SCCs with DeepSeek\'s data controller entity. However, you must also complete a Transfer Impact Assessment evaluating whether Chinese law undermines those SCCs in practice. Given China\'s PIPL obligations on data disclosure, a TIA for sensitive personal data is likely to conclude that SCCs are not sufficient. For non-personal data (code, public text), the risk is lower.',
           },
           {
-            q: 'Is DeepSeek R1 the same as the DeepSeek API?',
-            a: 'No. DeepSeek R1 refers to the open-weight model released on Hugging Face under Apache 2.0. The DeepSeek API ([api.deepseek.com](https://api.deepseek.com)) is a separate cloud service with servers in China. The GDPR risk applies to the API, not to the weights. Running R1 locally via Ollama (<code>ollama run deepseek-r1:7b</code>) has no transfer risk.',
+            q: 'Is DeepSeek-R1 the same as the DeepSeek API?',
+            a: 'No. DeepSeek-R1 refers to the open-weight model released on Hugging Face under Apache 2.0. The DeepSeek API ([api.deepseek.com](https://api.deepseek.com)) is a separate cloud service with servers in China. The GDPR risk applies to the API, not to the weights. Running R1 locally via Ollama (<code>ollama run deepseek-r1:7b</code>) has no transfer risk.',
           },
           {
             q: 'What is the PIPL and why does it matter for GDPR?',
@@ -92,7 +92,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Which LLM is safest for GDPR-regulated data?',
-            a: 'For maximum GDPR safety: any local open-weight model (Qwen 3, Llama 4, DeepSeek R1 local) running offline with no external API calls. Among these, Qwen 3 and Llama 4 have more transparent training data provenance. See the <a href="/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">full GDPR LLM risk comparison</a> for a structured decision tool.',
+            a: 'For maximum GDPR safety: any local open-weight model (Qwen 3, Llama 4, DeepSeek-R1 local) running offline with no external API calls. Among these, Qwen 3 and Llama 4 have more transparent training data provenance. See the <a href="/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">full GDPR LLM risk comparison</a> for a structured decision tool.',
           },
         ],
       },
@@ -115,7 +115,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'DeepSeek-API: Server in China, PIPL-Datenweitergabepflicht — höchstes Risiko',
           'Keine EU-Angemessenheitsentscheidung: SCC + TFA erforderlich, Ergebnis für sensible Daten wahrscheinlich ungünstig',
-          'Lokale DeepSeek R1/V3 Gewichte (Apache 2.0): wesentlich geringeres Risiko ohne API-Aufrufe',
+          'Lokale DeepSeek-R1/V3 Gewichte (Apache 2.0): wesentlich geringeres Risiko ohne API-Aufrufe',
         ],
         updatedDate: '2026-05',
       },
@@ -147,7 +147,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Lokale DeepSeek-Gewichte — ein völlig anderes Risikoprofil',
         content: [
           '<strong>Die Open-Weight-DeepSeek-Modelle (R1, V3, Coder V2) sind ein separates Produkt von der API. Sie sind unter Apache 2.0 verfügbar und können ohne Verbindung zu DeepSeek-Servern lokal ausgeführt werden.</strong> Die Ausführung lokaler Gewichte beseitigt das DSGVO-Artikel-44-Transferproblem vollständig.',
-          'Lokales DeepSeek R1 7B oder 8B läuft komfortabel über Ollama auf einer 6–8 GB VRAM GPU. R1 ist eines der stärksten Reasoning-Modelle auf dem 7B-Tier. Für Coding-Aufgaben ist DeepSeek Coder V2 in kleineren Varianten verfügbar.',
+          'Lokales DeepSeek-R1 7B oder 8B läuft komfortabel über Ollama auf einer 6–8 GB VRAM GPU. R1 ist eines der stärksten Reasoning-Modelle auf dem 7B-Tier. Für Coding-Aufgaben ist DeepSeek Coder V2 in kleineren Varianten verfügbar.',
           'Die verbleibende Frage für lokales DeepSeek: Model-Training. DeepSeek hat keine vollständigen Details zu den Trainingsdaten veröffentlicht. Für hochsichere Umgebungen (Gesundheitswesen, Recht, Behörden) kann diese Unklarheit relevant sein. Qwen 3 und Llama 4 bieten mehr Transparenz bei der Herkunft der Trainingsdaten.',
         ],
         columns: ['Bereitstellung', 'DSGVO-Risiko', 'Begründung', 'Empfohlene Maßnahme'],
@@ -172,7 +172,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Welches LLM ist für DSGVO-regulierte Daten am sichersten?',
-            a: 'Für maximale DSGVO-Sicherheit: jedes lokale Open-Weight-Modell (Qwen 3, Llama 4, DeepSeek R1 lokal), das offline ohne externe API-Aufrufe läuft. Qwen 3 und Llama 4 haben transparentere Trainingsdatenherkunft. Den vollständigen Vergleich finden Sie im <a href="/de/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">vollständigen DSGVO-LLM-Risikoausblick</a>.',
+            a: 'Für maximale DSGVO-Sicherheit: jedes lokale Open-Weight-Modell (Qwen 3, Llama 4, DeepSeek-R1 lokal), das offline ohne externe API-Aufrufe läuft. Qwen 3 und Llama 4 haben transparentere Trainingsdatenherkunft. Den vollständigen Vergleich finden Sie im <a href="/de/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">vollständigen DSGVO-LLM-Risikoausblick</a>.',
           },
         ],
       },
@@ -195,7 +195,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'API DeepSeek : serveurs en Chine, loi PIPL de divulgation — risque le plus élevé',
           'Pas de décision d\'adéquation UE pour la Chine : CCT + EIT requis, résultat potentiellement défavorable',
-          'Poids DeepSeek R1/V3 en local (Apache 2.0) : risque bien plus faible sans appels API',
+          'Poids DeepSeek-R1/V3 en local (Apache 2.0) : risque bien plus faible sans appels API',
         ],
         updatedDate: '2026-05',
       },
@@ -227,7 +227,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Poids locaux DeepSeek — un profil de risque totalement différent',
         content: [
           '<strong>Les modèles DeepSeek open-weight (R1, V3, Coder V2) sont un produit distinct de l\'API. Publiés sous Apache 2.0, ils peuvent être téléchargés et exécutés localement sans connexion aux serveurs DeepSeek.</strong> L\'exécution locale élimine entièrement le problème de transfert de l\'Article 44 du RGPD.',
-          'DeepSeek R1 7B ou 8B en local tourne confortablement via Ollama sur un GPU 6–8 Go de VRAM. R1 est l\'un des meilleurs modèles de raisonnement disponibles au tier 7B. Pour les tâches de code, DeepSeek Coder V2 est disponible en variantes plus compactes.',
+          'DeepSeek-R1 7B ou 8B en local tourne confortablement via Ollama sur un GPU 6–8 Go de VRAM. R1 est l\'un des meilleurs modèles de raisonnement disponibles au tier 7B. Pour les tâches de code, DeepSeek Coder V2 est disponible en variantes plus compactes.',
           'Question résiduelle pour DeepSeek local : la formation du modèle. DeepSeek n\'a pas publié les détails complets des données d\'entraînement. Pour les environnements à haute assurance (santé, juridique, gouvernement), cette incertitude peut être pertinente. Qwen 3 et Llama 4 offrent plus de transparence sur la provenance des données d\'entraînement.',
         ],
         columns: ['Déploiement', 'Risque RGPD', 'Raison', 'Action recommandée'],
@@ -252,7 +252,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quel LLM est le plus sûr pour les données réglementées RGPD ?',
-            a: 'Pour une sécurité RGPD maximale : tout modèle open-weight local (Qwen 3, Llama 4, DeepSeek R1 local) fonctionnant hors ligne sans appels API externes. Qwen 3 et Llama 4 ont une provenance de données d\'entraînement plus transparente. Consultez la <a href="/fr/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">comparaison complète des risques RGPD des LLMs</a>.',
+            a: 'Pour une sécurité RGPD maximale : tout modèle open-weight local (Qwen 3, Llama 4, DeepSeek-R1 local) fonctionnant hors ligne sans appels API externes. Qwen 3 et Llama 4 ont une provenance de données d\'entraînement plus transparente. Consultez la <a href="/fr/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">comparaison complète des risques RGPD des LLMs</a>.',
           },
         ],
       },
@@ -275,7 +275,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'DeepSeek API：中国サーバー、PIPL開示義務あり——最高リスク',
           '中国のEU十分性認定なし：SCC + TIA必要、感度データへの結果は不利になる可能性',
-          'DeepSeek R1/V3ローカル重み（Apache 2.0）：APIなしでローカル展開すればリスク大幅低減',
+          'DeepSeek-R1/V3ローカル重み（Apache 2.0）：APIなしでローカル展開すればリスク大幅低減',
         ],
         updatedDate: '2026-05',
       },
@@ -307,7 +307,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'ローカルDeepSeek重み——まったく異なるリスクプロファイル',
         content: [
           '<strong>DeepSeekオープンウェイトモデル（R1、V3、Coder V2）はAPIとは別製品です。Apache 2.0でリリースされており、DeepSeekサーバーへの接続なしにローカル実行できます。</strong>ローカル重みの実行はGDPR第44条の転送問題を完全に排除します——ローカルQwenやLlamaと同様です。',
-          'ローカルDeepSeek R1 7BまたはBは6〜8 GB VRAM GPUでOllama経由で快適に動作します。R1は7Bティアで最高の推論モデルの一つです。コーディングタスクにはDeepSeek Coder V2の小型バリアントが利用可能です。',
+          'ローカルDeepSeek-R1 7BまたはBは6〜8 GB VRAM GPUでOllama経由で快適に動作します。R1は7Bティアで最高の推論モデルの一つです。コーディングタスクにはDeepSeek Coder V2の小型バリアントが利用可能です。',
           'ローカルDeepSeekの残る問題：モデル訓練。DeepSeekは訓練データの詳細を完全には公開していません。医療・法務・政府などの高保証環境では、この不確実性はローカル展開でも関連性を持つ場合があります。Qwen 3とLlama 4は訓練データの出所についてより透明です。',
         ],
         columns: ['展開方法', 'GDPRリスク', '理由', '推奨アクション'],
@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'DeepSeek API：服务器在中国，受PIPL数据披露法约束——风险最高',
           '中国无欧盟充分性认定：需要SCCs + TIA，敏感数据结果可能不利',
-          'DeepSeek R1/V3本地权重（Apache 2.0）：无API调用本地部署风险大幅降低',
+          'DeepSeek-R1/V3本地权重（Apache 2.0）：无API调用本地部署风险大幅降低',
         ],
         updatedDate: '2026-05',
       },
@@ -387,7 +387,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '本地DeepSeek权重——完全不同的风险状况',
         content: [
           '<strong>DeepSeek开源权重模型（R1、V3、Coder V2）与API是完全不同的产品。它们以Apache 2.0发布，可以在不连接DeepSeek服务器的情况下本地下载和运行。</strong>本地运行权重完全消除了GDPR第44条的传输问题——与本地Qwen或Llama相同。',
-          '本地DeepSeek R1 7B或8B通过Ollama在6-8 GB VRAM GPU上运行流畅。R1是7B层级最强的推理模型之一。对于编程任务，DeepSeek Coder V2有更小的变体可用。',
+          '本地DeepSeek-R1 7B或8B通过Ollama在6-8 GB VRAM GPU上运行流畅。R1是7B层级最强的推理模型之一。对于编程任务，DeepSeek Coder V2有更小的变体可用。',
           '本地DeepSeek的剩余问题：模型训练。DeepSeek没有公布训练数据的完整细节。对于高保证环境（医疗、法律、政府），即使是本地部署，这种不确定性也可能相关。Qwen 3和Llama 4在训练数据来源方面更透明。',
         ],
         columns: ['部署方式', 'GDPR风险', '原因', '推荐操作'],
@@ -435,7 +435,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'API do DeepSeek: servidores na China, sujeitos à lei PIPL de divulgação — risco máximo',
           'Sem decisão de adequação da UE para a China: CCT + AIT requeridas, mas o resultado da AIT pode ser desfavorável',
-          'Pesos locais do DeepSeek R1/V3 (Apache 2.0): risco muito menor se implantados localmente sem chamadas à API',
+          'Pesos locais do DeepSeek-R1/V3 (Apache 2.0): risco muito menor se implantados localmente sem chamadas à API',
         ],
         updatedDate: '2026-05',
       },
@@ -467,7 +467,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Pesos locais do DeepSeek — um perfil de risco completamente diferente',
         content: [
           '<strong>Os modelos de código aberto do DeepSeek (R1, V3, Coder V2) são um produto distinto da API. São lançados sob Apache 2.0 e podem ser baixados e executados localmente sem nenhuma conexão com os servidores do DeepSeek.</strong> A execução de pesos locais elimina completamente o problema de transferência do Artigo 44 do RGPD — da mesma forma que o Qwen ou Llama local.',
-          'O DeepSeek R1 7B ou 8B local funciona confortavelmente via Ollama em uma GPU com 6–8 GB de VRAM. O desempenho é excelente: o R1 é um dos modelos de raciocínio mais fortes disponíveis no nível 7B. Para tarefas de codificação, o DeepSeek Coder V2 está disponível em variantes menores.',
+          'O DeepSeek-R1 7B ou 8B local funciona confortavelmente via Ollama em uma GPU com 6–8 GB de VRAM. O desempenho é excelente: o R1 é um dos modelos de raciocínio mais fortes disponíveis no nível 7B. Para tarefas de codificação, o DeepSeek Coder V2 está disponível em variantes menores.',
           'A questão restante para o DeepSeek local: treinamento do modelo. O DeepSeek não publicou detalhes completos sobre quais dados foram usados para treinar esses modelos. Para ambientes de alta garantia (saúde, jurídico, governo), essa incerteza pode ser relevante mesmo para implantação local. Qwen 3 (Alibaba/Tongyi) e Llama 4 (Meta) fornecem mais transparência sobre a procedência dos dados de treinamento.',
         ],
         columns: ['Implantação', 'Risco RGPD', 'Motivo', 'Ação recomendada'],
@@ -487,8 +487,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Tecnicamente sim: você pode assinar CCT com a entidade controladora de dados do DeepSeek. No entanto, também deve concluir uma Avaliação de Impacto de Transferência avaliando se a lei chinesa prejudica essas CCT na prática. Dadas as obrigações de divulgação da PIPL, uma AIT para dados pessoais sensíveis provavelmente concluirá que as CCT não são suficientes. Para dados não pessoais (código, texto público), o risco é menor.',
           },
           {
-            q: 'DeepSeek R1 é a mesma coisa que a API do DeepSeek?',
-            a: 'Não. DeepSeek R1 se refere ao modelo de código aberto lançado no Hugging Face sob Apache 2.0. A API do DeepSeek ([api.deepseek.com](https://api.deepseek.com)) é um serviço em nuvem separado com servidores na China. O risco para o RGPD aplica-se à API, não aos pesos. Executar R1 localmente via Ollama (<code>ollama run deepseek-r1:7b</code>) não implica nenhum risco de transferência.',
+            q: 'DeepSeek-R1 é a mesma coisa que a API do DeepSeek?',
+            a: 'Não. DeepSeek-R1 se refere ao modelo de código aberto lançado no Hugging Face sob Apache 2.0. A API do DeepSeek ([api.deepseek.com](https://api.deepseek.com)) é um serviço em nuvem separado com servidores na China. O risco para o RGPD aplica-se à API, não aos pesos. Executar R1 localmente via Ollama (<code>ollama run deepseek-r1:7b</code>) não implica nenhum risco de transferência.',
           },
           {
             q: 'O que é a PIPL e por que importa para o RGPD?',
@@ -496,7 +496,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Qual LLM é o mais seguro para dados regulados pelo RGPD?',
-            a: 'Para máxima segurança sob o RGPD: qualquer modelo de código aberto local (Qwen 3, Llama 4, DeepSeek R1 local) rodando offline sem chamadas a APIs externas. Entre eles, Qwen 3 e Llama 4 têm proveniência de dados de treinamento mais transparente. Consulte a <a href="/pt/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">comparação completa de riscos RGPD entre LLMs</a> para uma ferramenta de decisão estruturada.',
+            a: 'Para máxima segurança sob o RGPD: qualquer modelo de código aberto local (Qwen 3, Llama 4, DeepSeek-R1 local) rodando offline sem chamadas a APIs externas. Entre eles, Qwen 3 e Llama 4 têm proveniência de dados de treinamento mais transparente. Consulte a <a href="/pt/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">comparação completa de riscos RGPD entre LLMs</a> para uma ferramenta de decisão estruturada.',
           },
         ],
       },
@@ -519,7 +519,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'API de DeepSeek: servidores en China, sujetos a la ley PIPL de divulgación — riesgo máximo',
           'Sin decisión de adecuación de la UE para China: CCT + EIT requeridas, pero el resultado de la EIT puede ser desfavorable',
-          'Pesos locales de DeepSeek R1/V3 (Apache 2.0): riesgo mucho menor si se despliegan localmente sin llamadas a la API',
+          'Pesos locales de DeepSeek-R1/V3 (Apache 2.0): riesgo mucho menor si se despliegan localmente sin llamadas a la API',
         ],
         updatedDate: '2026-05',
       },
@@ -551,7 +551,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Pesos locales de DeepSeek — un perfil de riesgo completamente diferente',
         content: [
           '<strong>Los modelos de código abierto de DeepSeek (R1, V3, Coder V2) son un producto distinto a la API. Se publican bajo Apache 2.0 y pueden descargarse y ejecutarse localmente sin ninguna conexión a los servidores de DeepSeek.</strong> Ejecutar los pesos localmente elimina por completo el problema de transferencia del Artículo 44 del RGPD, de la misma forma que Qwen o Llama local.',
-          'DeepSeek R1 7B u 8B local funciona cómodamente via Ollama en una GPU con 6–8 GB de VRAM. El rendimiento es excelente: R1 es uno de los modelos de razonamiento más potentes disponibles en el nivel de 7B. Para tareas de código, DeepSeek Coder V2 está disponible en variantes más pequeñas.',
+          'DeepSeek-R1 7B u 8B local funciona cómodamente via Ollama en una GPU con 6–8 GB de VRAM. El rendimiento es excelente: R1 es uno de los modelos de razonamiento más potentes disponibles en el nivel de 7B. Para tareas de código, DeepSeek Coder V2 está disponible en variantes más pequeñas.',
           'La pregunta restante para DeepSeek local: el entrenamiento del modelo. DeepSeek no ha publicado detalles completos sobre los datos usados para entrenar estos modelos. Para entornos de alta garantía (sanidad, legal, administración pública), esta incertidumbre puede ser relevante incluso en el despliegue local. Qwen 3 (Alibaba/Tongyi) y Llama 4 (Meta) ofrecen más transparencia sobre la procedencia de los datos de entrenamiento.',
         ],
         columns: ['Despliegue', 'Riesgo RGPD', 'Motivo', 'Acción recomendada'],
@@ -571,8 +571,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Técnicamente sí: puedes firmar CCT con la entidad responsable del tratamiento de DeepSeek. Sin embargo, también debes completar una Evaluación de Impacto de Transferencia que evalúe si la ley china socava esas CCT en la práctica. Dadas las obligaciones de divulgación de la PIPL, una EIT para datos personales sensibles probablemente concluirá que las CCT no son suficientes. Para datos no personales (código, texto público), el riesgo es menor.',
           },
           {
-            q: '¿DeepSeek R1 es lo mismo que la API de DeepSeek?',
-            a: 'No. DeepSeek R1 se refiere al modelo de código abierto publicado en Hugging Face bajo Apache 2.0. La API de DeepSeek ([api.deepseek.com](https://api.deepseek.com)) es un servicio en la nube separado con servidores en China. El riesgo para el RGPD aplica a la API, no a los pesos. Ejecutar R1 localmente via Ollama (<code>ollama run deepseek-r1:7b</code>) no implica ningún riesgo de transferencia.',
+            q: '¿DeepSeek-R1 es lo mismo que la API de DeepSeek?',
+            a: 'No. DeepSeek-R1 se refiere al modelo de código abierto publicado en Hugging Face bajo Apache 2.0. La API de DeepSeek ([api.deepseek.com](https://api.deepseek.com)) es un servicio en la nube separado con servidores en China. El riesgo para el RGPD aplica a la API, no a los pesos. Ejecutar R1 localmente via Ollama (<code>ollama run deepseek-r1:7b</code>) no implica ningún riesgo de transferencia.',
           },
           {
             q: '¿Qué es la PIPL y por qué importa para el RGPD?',
@@ -580,7 +580,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Qué LLM es el más seguro para datos regulados por el RGPD?',
-            a: 'Para la máxima seguridad bajo el RGPD: cualquier modelo de código abierto local (Qwen 3, Llama 4, DeepSeek R1 local) ejecutado offline sin llamadas a APIs externas. Entre ellos, Qwen 3 y Llama 4 tienen una procedencia de datos de entrenamiento más transparente. Consulta la <a href="/es/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">comparación completa de riesgos RGPD entre LLMs</a> para una herramienta de decisión estructurada.',
+            a: 'Para la máxima seguridad bajo el RGPD: cualquier modelo de código abierto local (Qwen 3, Llama 4, DeepSeek-R1 local) ejecutado offline sin llamadas a APIs externas. Entre ellos, Qwen 3 y Llama 4 tienen una procedencia de datos de entrenamiento más transparente. Consulta la <a href="/es/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">comparación completa de riesgos RGPD entre LLMs</a> para una herramienta de decisión estructurada.',
           },
         ],
       },
@@ -603,7 +603,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'واجهة DeepSeek البرمجية: خوادم في الصين، قانون PIPL لإلزامية الكشف — أعلى خطورة',
           'لا قرار كفاية أوروبي للصين: يلزم SCCs + TIA، لكن نتيجة TIA قد تكون غير مواتية',
-          'أوزان DeepSeek R1/V3 المحلية (Apache 2.0): خطورة أقل بكثير عند النشر محلياً دون استدعاء API',
+          'أوزان DeepSeek-R1/V3 المحلية (Apache 2.0): خطورة أقل بكثير عند النشر محلياً دون استدعاء API',
         ],
         updatedDate: '2026-05',
       },
@@ -635,7 +635,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'أوزان DeepSeek المحلية — ملف مخاطر مختلف تماماً',
         content: [
           '<strong>نماذج DeepSeek مفتوحة الأوزان (R1، V3، Coder V2) منتج مستقل عن الواجهة البرمجية. تُطرح بموجب Apache 2.0 ويمكن تنزيلها وتشغيلها محلياً دون أي اتصال بخوادم DeepSeek.</strong> تشغيل الأوزان محلياً يُزيل مشكلة النقل وفق المادة 44 من GDPR كلياً، تماماً كما يفعل Qwen أو Llama المحليان.',
-          'DeepSeek R1 7B أو 8B المحلي يعمل بسلاسة عبر Ollama على GPU بسعة 6–8 GB VRAM. الأداء ممتاز: R1 أحد أقوى نماذج الاستدلال المتاحة في فئة 7B. لمهام البرمجة، DeepSeek Coder V2 متاح بأحجام أصغر.',
+          'DeepSeek-R1 7B أو 8B المحلي يعمل بسلاسة عبر Ollama على GPU بسعة 6–8 GB VRAM. الأداء ممتاز: R1 أحد أقوى نماذج الاستدلال المتاحة في فئة 7B. لمهام البرمجة، DeepSeek Coder V2 متاح بأحجام أصغر.',
           'السؤال المتبقي لـ DeepSeek المحلي: بيانات التدريب. لم يُنشر DeepSeek تفاصيل كاملة حول البيانات المستخدمة في تدريب هذه النماذج. في البيئات عالية الضمان (الرعاية الصحية، القانون، الحكومة)، هذا الغموض قد يكون ذا صلة حتى في النشر المحلي. Qwen 3 وLlama 4 يوفران مزيداً من الشفافية حول مصدر بيانات التدريب.',
         ],
         columns: ['النشر', 'مخاطر GDPR', 'السبب', 'الإجراء الموصى به'],
@@ -655,8 +655,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'تقنياً نعم — يمكنك توقيع SCCs مع الكيان المتحكم في بيانات DeepSeek. غير أنه يجب أيضاً إجراء تقييم أثر النقل لتقييم ما إذا كان القانون الصيني يُقوّض تلك البنود في الممارسة. نظراً لالتزامات الكشف وفق PIPL، سيستنتج TIA للبيانات الشخصية الحساسة على الأرجح أن SCCs غير كافية. للبيانات غير الشخصية (كود، نص عام)، الخطر أقل.',
           },
           {
-            q: 'هل DeepSeek R1 هو نفسه واجهة DeepSeek البرمجية؟',
-            a: 'لا. DeepSeek R1 يشير إلى النموذج مفتوح الأوزان المُطرح على Hugging Face بموجب Apache 2.0. واجهة DeepSeek البرمجية ([api.deepseek.com](https://api.deepseek.com)) خدمة سحابية منفصلة بخوادم في الصين. خطر GDPR ينطبق على الواجهة البرمجية لا على الأوزان. تشغيل R1 محلياً عبر Ollama (<code>ollama run deepseek-r1:7b</code>) لا ينطوي على أي خطر نقل.',
+            q: 'هل DeepSeek-R1 هو نفسه واجهة DeepSeek البرمجية؟',
+            a: 'لا. DeepSeek-R1 يشير إلى النموذج مفتوح الأوزان المُطرح على Hugging Face بموجب Apache 2.0. واجهة DeepSeek البرمجية ([api.deepseek.com](https://api.deepseek.com)) خدمة سحابية منفصلة بخوادم في الصين. خطر GDPR ينطبق على الواجهة البرمجية لا على الأوزان. تشغيل R1 محلياً عبر Ollama (<code>ollama run deepseek-r1:7b</code>) لا ينطوي على أي خطر نقل.',
           },
           {
             q: 'ما هو PIPL ولماذا يهم في GDPR؟',
@@ -664,7 +664,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'أي نموذج لغوي هو الأأمن للبيانات الخاضعة لـ GDPR؟',
-            a: 'لأقصى قدر من الأمان وفق GDPR: أي نموذج مفتوح الأوزان محلي (Qwen 3، Llama 4، DeepSeek R1 محلي) يعمل دون اتصال بدون استدعاءات API خارجية. من بينها، Qwen 3 وLlama 4 لهما مصدر أكثر شفافية لبيانات التدريب. راجع <a href="/ar/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">مقارنة مخاطر GDPR الكاملة بين النماذج اللغوية</a> للحصول على أداة قرار منظمة.',
+            a: 'لأقصى قدر من الأمان وفق GDPR: أي نموذج مفتوح الأوزان محلي (Qwen 3، Llama 4، DeepSeek-R1 محلي) يعمل دون اتصال بدون استدعاءات API خارجية. من بينها، Qwen 3 وLlama 4 لهما مصدر أكثر شفافية لبيانات التدريب. راجع <a href="/ar/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">مقارنة مخاطر GDPR الكاملة بين النماذج اللغوية</a> للحصول على أداة قرار منظمة.',
           },
         ],
       },
@@ -695,7 +695,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         bullets: [
           'DeepSeek API: 중국 서버, PIPL 데이터 공개 의무 — 최고 위험',
           '중국에 대한 EU 적정성 결정 없음: SCCs + TIA 필요, TIA 결과가 불리할 수 있음',
-          'DeepSeek R1/V3 로컬 가중치(Apache 2.0): API 호출 없이 로컬 배포 시 위험 대폭 낮아짐',
+          'DeepSeek-R1/V3 로컬 가중치(Apache 2.0): API 호출 없이 로컬 배포 시 위험 대폭 낮아짐',
         ],
         updatedDate: '2026-05',
       },
@@ -765,7 +765,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'DeepSeek 로컬 가중치 — 완전히 다른 위험 프로필',
         content: [
           '<strong>DeepSeek 오픈 소스 모델(R1, V3, Coder V2)은 API와 별개의 제품입니다. Apache 2.0 라이선스로 배포되며 DeepSeek 서버에 연결하지 않고 로컬에서 다운로드하여 실행할 수 있습니다.</strong> 로컬에서 가중치를 실행하면 GDPR 제44조의 이전 문제가 완전히 제거되며, 이는 Qwen 또는 Llama 로컬과 동일합니다.',
-          'DeepSeek R1 7B 또는 8B 로컬 버전은 6–8 GB VRAM GPU에서 Ollama를 통해 원활하게 작동합니다. 성능이 뛰어납니다: R1은 7B 수준에서 사용 가능한 가장 강력한 추론 모델 중 하나입니다. 코딩 작업의 경우 DeepSeek Coder V2의 더 작은 변형이 제공됩니다.',
+          'DeepSeek-R1 7B 또는 8B 로컬 버전은 6–8 GB VRAM GPU에서 Ollama를 통해 원활하게 작동합니다. 성능이 뛰어납니다: R1은 7B 수준에서 사용 가능한 가장 강력한 추론 모델 중 하나입니다. 코딩 작업의 경우 DeepSeek Coder V2의 더 작은 변형이 제공됩니다.',
           'DeepSeek 로컬에 대해 남아 있는 질문: 모델 학습 데이터입니다. DeepSeek는 이 모델 학습에 사용된 데이터에 대한 전체 세부 정보를 공개하지 않았습니다. 고보증 환경(의료, 법률, 공공 부문)에서는 로컬 배포에서도 이 불확실성이 관련될 수 있습니다. Qwen 3(Alibaba/Tongyi)와 Llama 4(Meta)는 학습 데이터 출처에 대해 더 많은 투명성을 제공합니다.',
         ],
         columns: ['배포 방식', 'GDPR 위험', '이유', '권장 조치'],
@@ -794,7 +794,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'GDPR 규제 데이터에 가장 안전한 LLM은 무엇입니까?',
-            a: 'GDPR 하에서 최대 안전성을 위해서는: 외부 API 호출 없이 오프라인으로 실행되는 오픈 소스 로컬 모델(Qwen 3, Llama 4, DeepSeek R1 로컬) 중 하나를 선택하십시오. 이 중 Qwen 3와 Llama 4는 학습 데이터 출처가 더 투명합니다. 구조화된 의사결정 도구로는 <a href="/ko/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">LLM 간 GDPR 위험 완전 비교</a>를 참조하십시오.',
+            a: 'GDPR 하에서 최대 안전성을 위해서는: 외부 API 호출 없이 오프라인으로 실행되는 오픈 소스 로컬 모델(Qwen 3, Llama 4, DeepSeek-R1 로컬) 중 하나를 선택하십시오. 이 중 Qwen 3와 Llama 4는 학습 데이터 출처가 더 투명합니다. 구조화된 의사결정 도구로는 <a href="/ko/local-llms/gdpr-llm-risk-comparison-2026" class="text-primary hover:underline">LLM 간 GDPR 위험 완전 비교</a>를 참조하십시오.',
           },
         ],
       },

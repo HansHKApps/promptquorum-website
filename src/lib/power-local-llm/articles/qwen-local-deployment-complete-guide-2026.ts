@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 32B',
       'Qwen 3.6 27B',
       'Qwen2.5-72B',
-      'Qwen3-Coder 32B',
+      'Qwen2.5-Coder 32B',
     ],
     current_hardware_mentioned: [
       'NVIDIA RTX 3060 12 GB',
@@ -147,7 +147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '5': 'Yes — single GPU',
           },
           {
-            '0': 'Qwen3-Coder 32B',
+            '0': 'Qwen2.5-Coder 32B',
             '1': '19.8 GB',
             '2': 'RTX 4090 24 GB (EOL, used)',
             '3': '10–13 tok/s',
@@ -1198,7 +1198,7 @@ docker run --gpus all \\
       'Qwen3 32B',
       'Qwen 3.6 27B',
       'Qwen2.5-72B',
-      'Qwen3-Coder 32B',
+      'Qwen2.5-Coder 32B',
     ],
     current_hardware_mentioned: [
       'NVIDIA RTX 3060 12 GB',
@@ -1295,7 +1295,7 @@ docker run --gpus all \\
             '5': 'Sí — GPU única',
           },
           {
-            '0': 'Qwen3-Coder 32B',
+            '0': 'Qwen2.5-Coder 32B',
             '1': '19,8 GB',
             '2': 'RTX 4090 24 GB',
             '3': '10–13 tok/s',
@@ -1744,7 +1744,7 @@ docker run --gpus all \\
       'Qwen3 32B',
       'Qwen 3.6 27B',
       'Qwen2.5-72B',
-      'Qwen3-Coder 32B',
+      'Qwen2.5-Coder 32B',
     ],
     current_hardware_mentioned: [
       'NVIDIA RTX 3060 12 GB',
@@ -1841,7 +1841,7 @@ docker run --gpus all \\
             '5': 'Sim — GPU única',
           },
           {
-            '0': 'Qwen3-Coder 32B',
+            '0': 'Qwen2.5-Coder 32B',
             '1': '19,8 GB',
             '2': 'RTX 4090 24 GB',
             '3': '10–13 tok/s',
@@ -2291,7 +2291,7 @@ docker run --gpus all \\
       'Qwen3 32B',
       'Qwen 3.6 27B',
       'Qwen2.5-72B',
-      'Qwen3-Coder 32B',
+      'Qwen2.5-Coder 32B',
     ],
     current_hardware_mentioned: [
       'NVIDIA RTX 3060 12 GB',
@@ -2689,7 +2689,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
       'Qwen3 32B',
       'Qwen 3.6 27B',
       'Qwen2.5-72B',
-      'Qwen3-Coder 32B',
+      'Qwen2.5-Coder 32B',
     ],
     current_hardware_mentioned: [
       'NVIDIA RTX 3060 12 GB',
@@ -2786,7 +2786,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
             '5': '가능 — 단일 GPU',
           },
           {
-            '0': 'Qwen3-Coder 32B',
+            '0': 'Qwen2.5-Coder 32B',
             '1': '19.8 GB',
             '2': 'RTX 4090 24 GB',
             '3': '10–13 tok/s',

@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-07-14',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
-    current_models_mentioned: ['Qwen3', 'DeepSeek V3', 'GLM'],
+    current_models_mentioned: ['Qwen3', 'DeepSeek-V3', 'GLM'],
     current_hardware_mentioned: [],
     educationalLevel: 'Advanced',
     audience: 'Developers deploying local LLMs for mainland-China-facing products or teams',
@@ -79,7 +79,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Is DeepSeek harder to run locally than Qwen?',
-            a: 'Hardware requirements depend on the specific model size you choose from each family — see the dedicated DeepSeek V3 local hardware requirements guide for details. Both families offer a range of sizes suited to different hardware budgets.',
+            a: 'Hardware requirements depend on the specific model size you choose from each family — see the dedicated DeepSeek-V3 local hardware requirements guide for details. Both families offer a range of sizes suited to different hardware budgets.',
           },
           {
             q: 'Are there China-compliant models available in smaller sizes for modest hardware?',
@@ -92,7 +92,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Related Reading',
         items: [
           '[Best Qwen Model for Coding?](/prompt-bites/best-qwen-model-for-coding) — sizing a Qwen model to your task',
-          '[DeepSeek V3 Local Hardware Requirements?](/prompt-bites/deepseek-v3-local-hardware-requirements) — hardware sizing for DeepSeek',
+          '[DeepSeek-V3 Local Hardware Requirements?](/prompt-bites/deepseek-v3-local-hardware-requirements) — hardware sizing for DeepSeek',
           '[Chinese vs English Prompting: Which Is Better?](/prompt-bites/chinese-prompting-vs-english-prompting) — related multilingual considerations',
           '[Run DeepSeek Fully Offline in China (Self-Hosted Setup)](/power-local-llm/deepseek-offline-china-self-hosted-2026) — the complete self-hosted deployment guide',
         ],
@@ -109,7 +109,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-07-14',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
-    current_models_mentioned: ['Qwen3', 'DeepSeek V3', 'GLM'],
+    current_models_mentioned: ['Qwen3', 'DeepSeek-V3', 'GLM'],
     current_hardware_mentioned: [],
     educationalLevel: 'Advanced',
     audience: 'المطورون الذين ينشرون نماذج LLM محلية لمنتجات أو فرق موجَّهة للصين القارية',
@@ -176,7 +176,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'هل DeepSeek أصعب في التشغيل محليًا من Qwen؟',
-            a: 'تعتمد متطلبات العتاد على حجم النموذج المحدد الذي تختاره من كل عائلة — راجع دليل متطلبات عتاد DeepSeek V3 المحلي المخصص للتفاصيل. تطرح كلتا العائلتين نطاقًا من الأحجام المناسبة لميزانيات عتاد مختلفة.',
+            a: 'تعتمد متطلبات العتاد على حجم النموذج المحدد الذي تختاره من كل عائلة — راجع دليل متطلبات عتاد DeepSeek-V3 المحلي المخصص للتفاصيل. تطرح كلتا العائلتين نطاقًا من الأحجام المناسبة لميزانيات عتاد مختلفة.',
           },
           {
             q: 'هل هناك نماذج متوافقة مع الصين متوفرة بأحجام أصغر لعتاد متواضع؟',
@@ -189,7 +189,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[أفضل نموذج Qwen للأكواد؟](/prompt-bites/best-qwen-model-for-coding) — تحديد حجم نموذج Qwen لمهمتك',
-          '[متطلبات عتاد DeepSeek V3 المحلي؟](/prompt-bites/deepseek-v3-local-hardware-requirements) — تحديد حجم العتاد لـ DeepSeek',
+          '[متطلبات عتاد DeepSeek-V3 المحلي؟](/prompt-bites/deepseek-v3-local-hardware-requirements) — تحديد حجم العتاد لـ DeepSeek',
           '[التلقين بالصينية مقابل الإنجليزية: أيهما أفضل؟](/prompt-bites/chinese-prompting-vs-english-prompting) — اعتبارات ذات صلة متعددة اللغات',
           '[تشغيل DeepSeek بشكل كامل دون اتصال في الصين (إعداد ذاتي الاستضافة)](/power-local-llm/deepseek-offline-china-self-hosted-2026) — الدليل الكامل للنشر ذاتي الاستضافة',
         ],
@@ -206,7 +206,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-07-14',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
-    current_models_mentioned: ['Qwen3', 'DeepSeek V3', 'GLM'],
+    current_models_mentioned: ['Qwen3', 'DeepSeek-V3', 'GLM'],
     current_hardware_mentioned: [],
     educationalLevel: 'Advanced',
     audience: 'Entwickler, die lokale LLMs für China-gerichtete Produkte oder Teams einsetzen',
@@ -303,7 +303,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-07-14',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
-    current_models_mentioned: ['Qwen3', 'DeepSeek V3', 'GLM'],
+    current_models_mentioned: ['Qwen3', 'DeepSeek-V3', 'GLM'],
     current_hardware_mentioned: [],
     educationalLevel: 'Advanced',
     audience: 'Desarrolladores que despliegan LLM locales para productos o equipos orientados a China continental',
@@ -370,7 +370,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Es DeepSeek más difícil de ejecutar localmente que Qwen?',
-            a: 'Los requisitos de hardware dependen del tamaño de modelo específico que elijas de cada familia — consulta la guía dedicada de requisitos de hardware local de DeepSeek V3 para más detalles. Ambas familias ofrecen una gama de tamaños adecuados para distintos presupuestos de hardware.',
+            a: 'Los requisitos de hardware dependen del tamaño de modelo específico que elijas de cada familia — consulta la guía dedicada de requisitos de hardware local de DeepSeek-V3 para más detalles. Ambas familias ofrecen una gama de tamaños adecuados para distintos presupuestos de hardware.',
           },
           {
             q: '¿Hay modelos compatibles con China disponibles en tamaños más pequeños para hardware modesto?',
@@ -383,7 +383,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Lecturas Relacionadas',
         items: [
           '[¿Mejor Modelo Qwen para Programar?](/prompt-bites/best-qwen-model-for-coding) — dimensionando un modelo Qwen a tu tarea',
-          '[¿Requisitos de Hardware Local para DeepSeek V3?](/prompt-bites/deepseek-v3-local-hardware-requirements) — dimensionamiento de hardware para DeepSeek',
+          '[¿Requisitos de Hardware Local para DeepSeek-V3?](/prompt-bites/deepseek-v3-local-hardware-requirements) — dimensionamiento de hardware para DeepSeek',
           '[Prompting en Chino vs Inglés: ¿Cuál Es Mejor?](/prompt-bites/chinese-prompting-vs-english-prompting) — consideraciones multilingües relacionadas',
           '[Ejecutar DeepSeek totalmente offline en China (configuración autoalojada)](/power-local-llm/deepseek-offline-china-self-hosted-2026) — la guía completa de implementación autoalojada',
         ],
@@ -400,7 +400,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-07-14',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
-    current_models_mentioned: ['Qwen3', 'DeepSeek V3', 'GLM'],
+    current_models_mentioned: ['Qwen3', 'DeepSeek-V3', 'GLM'],
     current_hardware_mentioned: [],
     educationalLevel: 'Advanced',
     audience: 'Développeurs déployant des LLM locaux pour des produits ou équipes destinés à la Chine continentale',
@@ -467,7 +467,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'DeepSeek est-il plus difficile à exécuter en local que Qwen ?',
-            a: 'Les exigences matérielles dépendent de la taille de modèle spécifique choisie dans chaque famille — consultez le guide dédié aux exigences matérielles locales de DeepSeek V3 pour plus de détails. Les deux familles proposent une gamme de tailles adaptées à différents budgets matériels.',
+            a: 'Les exigences matérielles dépendent de la taille de modèle spécifique choisie dans chaque famille — consultez le guide dédié aux exigences matérielles locales de DeepSeek-V3 pour plus de détails. Les deux familles proposent une gamme de tailles adaptées à différents budgets matériels.',
           },
           {
             q: 'Existe-t-il des modèles conformes à la Chine disponibles en tailles plus modestes pour du matériel limité ?',
@@ -480,7 +480,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           '[Meilleur modèle Qwen pour le codage ?](/prompt-bites/best-qwen-model-for-coding) — dimensionner un modèle Qwen selon votre tâche',
-          '[Exigences matérielles locales pour DeepSeek V3 ?](/prompt-bites/deepseek-v3-local-hardware-requirements) — dimensionnement matériel pour DeepSeek',
+          '[Exigences matérielles locales pour DeepSeek-V3 ?](/prompt-bites/deepseek-v3-local-hardware-requirements) — dimensionnement matériel pour DeepSeek',
           '[Prompting en chinois vs en anglais : lequel est le meilleur ?](/prompt-bites/chinese-prompting-vs-english-prompting) — considérations multilingues connexes',
           '[Faire tourner DeepSeek entièrement hors ligne en Chine (auto-hébergement)](/power-local-llm/deepseek-offline-china-self-hosted-2026) — le guide complet de déploiement auto-hébergé',
         ],
@@ -497,7 +497,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-07-14',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
-    current_models_mentioned: ['Qwen3', 'DeepSeek V3', 'GLM'],
+    current_models_mentioned: ['Qwen3', 'DeepSeek-V3', 'GLM'],
     current_hardware_mentioned: [],
     educationalLevel: 'Advanced',
     audience: '中国本土向け製品やチームのためにローカルLLMをデプロイする開発者',
@@ -594,7 +594,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-07-14',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
-    current_models_mentioned: ['Qwen3', 'DeepSeek V3', 'GLM'],
+    current_models_mentioned: ['Qwen3', 'DeepSeek-V3', 'GLM'],
     current_hardware_mentioned: [],
     educationalLevel: 'Advanced',
     audience: '중국 본토 대상 제품이나 팀을 위해 로컬 LLM을 배포하는 개발자',
@@ -661,7 +661,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'DeepSeek은 Qwen보다 로컬 실행이 더 어렵습니까?',
-            a: '하드웨어 요구사항은 각 계열에서 선택한 구체적인 모델 크기에 따라 다릅니다 — 자세한 내용은 전용 DeepSeek V3 로컬 하드웨어 요구사항 가이드를 참고하십시오. 두 계열 모두 서로 다른 하드웨어 예산에 맞는 다양한 크기를 제공합니다.',
+            a: '하드웨어 요구사항은 각 계열에서 선택한 구체적인 모델 크기에 따라 다릅니다 — 자세한 내용은 전용 DeepSeek-V3 로컬 하드웨어 요구사항 가이드를 참고하십시오. 두 계열 모두 서로 다른 하드웨어 예산에 맞는 다양한 크기를 제공합니다.',
           },
           {
             q: '적당한 하드웨어를 위한 더 작은 크기의 중국 규정 준수 모델이 있습니까?',
@@ -674,7 +674,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[코딩을 위한 최적의 Qwen 모델은?](/ko/prompt-bites/best-qwen-model-for-coding) — 작업에 맞춰 Qwen 모델 크기 조정하기',
-          '[DeepSeek V3 로컬 하드웨어 요구사항은?](/ko/prompt-bites/deepseek-v3-local-hardware-requirements) — DeepSeek을 위한 하드웨어 산정',
+          '[DeepSeek-V3 로컬 하드웨어 요구사항은?](/ko/prompt-bites/deepseek-v3-local-hardware-requirements) — DeepSeek을 위한 하드웨어 산정',
           '[중국어 대 영어 프롬프팅: 어느 것이 더 나은가?](/ko/prompt-bites/chinese-prompting-vs-english-prompting) — 관련 다국어 고려사항',
           '[중국에서 DeepSeek을 완전히 오프라인으로 실행하기(자체 호스팅 설정)](/ko/power-local-llm/deepseek-offline-china-self-hosted-2026) — 완전한 자체 호스팅 배포 가이드',
         ],
@@ -691,7 +691,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-07-14',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
-    current_models_mentioned: ['Qwen3', 'DeepSeek V3', 'GLM'],
+    current_models_mentioned: ['Qwen3', 'DeepSeek-V3', 'GLM'],
     current_hardware_mentioned: [],
     educationalLevel: 'Advanced',
     audience: 'Desenvolvedores implantando LLMs locais para produtos ou equipes voltados à China continental',
@@ -758,7 +758,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'O DeepSeek é mais difícil de rodar localmente que o Qwen?',
-            a: 'Os requisitos de hardware dependem do tamanho específico do modelo que você escolhe de cada família — veja o guia dedicado de requisitos de hardware local do DeepSeek V3 para detalhes. Ambas as famílias oferecem uma gama de tamanhos adequados a diferentes orçamentos de hardware.',
+            a: 'Os requisitos de hardware dependem do tamanho específico do modelo que você escolhe de cada família — veja o guia dedicado de requisitos de hardware local do DeepSeek-V3 para detalhes. Ambas as famílias oferecem uma gama de tamanhos adequados a diferentes orçamentos de hardware.',
           },
           {
             q: 'Existem modelos compatíveis com a China disponíveis em tamanhos menores para hardware modesto?',
@@ -771,7 +771,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Leitura Relacionada',
         items: [
           '[Melhor Modelo Qwen para Código?](/prompt-bites/best-qwen-model-for-coding) — dimensionando um modelo Qwen para sua tarefa',
-          '[Requisitos de Hardware Local do DeepSeek V3?](/prompt-bites/deepseek-v3-local-hardware-requirements) — dimensionamento de hardware para o DeepSeek',
+          '[Requisitos de Hardware Local do DeepSeek-V3?](/prompt-bites/deepseek-v3-local-hardware-requirements) — dimensionamento de hardware para o DeepSeek',
           '[Prompting em Chinês vs Prompting em Inglês: Qual É Melhor?](/prompt-bites/chinese-prompting-vs-english-prompting) — considerações multilíngues relacionadas',
           '[Execute o DeepSeek totalmente offline na China (configuração autoexecutada)](/power-local-llm/deepseek-offline-china-self-hosted-2026) — o guia completo de implantação autoexecutada',
         ],
@@ -788,7 +788,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-07-14',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-01-14',
-    current_models_mentioned: ['Qwen3', 'DeepSeek V3', 'GLM'],
+    current_models_mentioned: ['Qwen3', 'DeepSeek-V3', 'GLM'],
     current_hardware_mentioned: [],
     educationalLevel: 'Advanced',
     audience: '为面向中国大陆的产品或团队部署本地 LLM 的开发者',
@@ -855,7 +855,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'DeepSeek 在本地运行比 Qwen 更难吗？',
-            a: '硬件要求取决于你从每个系列中选择的具体模型规模——详见专门的 DeepSeek V3 本地硬件要求指南。两个系列都提供适合不同硬件预算的多种规模。',
+            a: '硬件要求取决于你从每个系列中选择的具体模型规模——详见专门的 DeepSeek-V3 本地硬件要求指南。两个系列都提供适合不同硬件预算的多种规模。',
           },
           {
             q: '有适合普通硬件、规模更小的中国合规模型吗？',
@@ -868,7 +868,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '相关阅读',
         items: [
           '[编码的最佳 Qwen 模型？](/prompt-bites/best-qwen-model-for-coding) — 根据任务匹配 Qwen 模型规模',
-          '[DeepSeek V3 本地硬件要求？](/prompt-bites/deepseek-v3-local-hardware-requirements) — DeepSeek 的硬件规划',
+          '[DeepSeek-V3 本地硬件要求？](/prompt-bites/deepseek-v3-local-hardware-requirements) — DeepSeek 的硬件规划',
           '[中文对比英文提示：哪个更好？](/prompt-bites/chinese-prompting-vs-english-prompting) — 相关多语言考量',
           '[在中国完全离线运行DeepSeek（自托管设置）](/power-local-llm/deepseek-offline-china-self-hosted-2026) — 完整的自托管部署指南',
         ],

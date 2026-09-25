@@ -113,7 +113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'SwiftLM\'s feature set centers on serving MLX models as fast and as memory-efficiently as possible on Apple Silicon, with several features aimed specifically at running models too large to fit comfortably in unified memory. Here is what each part does, per SwiftLM\'s own [GitHub README](https://github.com/SharpAI/SwiftLM).',
         items: [
           '**OpenAI-compatible serving** — exposes `/v1/chat/completions`, `/v1/models`, and `/health` endpoints, so existing OpenAI-client SDKs and tools can point at SwiftLM as a drop-in local backend',
-          '**Broad model-family support** — the README lists native support for over 30 model families, including Gemma 4/3, Qwen 3.5/3/2.5, Llama 3.x, Mistral/Mixtral, Phi 4/3, DeepSeek V3, GLM 4, Falcon H1, and several smaller research families',
+          '**Broad model-family support** — the README lists native support for over 30 model families, including Gemma 4/3, Qwen 3.5/3/2.5, Llama 3.x, Mistral/Mixtral, Phi 4/3, DeepSeek-V3, GLM 4, Falcon H1, and several smaller research families',
           '**Vision-language models (VLM)** — run with the `--vision` flag, supporting real-time base64 image parsing for models such as Qwen2-VL, Qwen2.5-VL, and PaliGemma',
           '**Audio-language models (ALM)** — run with the `--audio` flag for select Gemma-4 "Omni" variants, decoding OpenAI-spec `input_audio` payloads via AVFoundation WAV extraction',
           '**TurboQuant KV-cache compression** — a custom, non-linear (Lloyd-Max codebook) 3-bit-class quantization scheme for the attention KV cache, which SharpAI\'s own benchmarks report as roughly 3.5x smaller than FP16 with near-zero accuracy loss, enabled with `--turbo-kv`',
@@ -396,7 +396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: 'Der Funktionsumfang von SwiftLM zielt darauf ab, MLX-Modelle auf Apple Silicon so schnell und speichereffizient wie möglich bereitzustellen, mit mehreren Funktionen speziell für Modelle, die zu groß für bequemen Platz im Unified Memory sind. Hier ist, was jeder Teil laut SwiftLMs eigenem [GitHub-README](https://github.com/SharpAI/SwiftLM) tut.',
           items: [
             '**OpenAI-kompatible Bereitstellung** — stellt die Endpunkte `/v1/chat/completions`, `/v1/models` und `/health` bereit, sodass bestehende OpenAI-Client-SDKs und -Tools SwiftLM als Drop-in-lokales Backend nutzen können',
-            '**Breite Modellfamilien-Unterstützung** — laut README werden nativ über 30 Modellfamilien unterstützt, darunter Gemma 4/3, Qwen 3.5/3/2.5, Llama 3.x, Mistral/Mixtral, Phi 4/3, DeepSeek V3, GLM 4, Falcon H1 sowie mehrere kleinere Forschungsfamilien',
+            '**Breite Modellfamilien-Unterstützung** — laut README werden nativ über 30 Modellfamilien unterstützt, darunter Gemma 4/3, Qwen 3.5/3/2.5, Llama 3.x, Mistral/Mixtral, Phi 4/3, DeepSeek-V3, GLM 4, Falcon H1 sowie mehrere kleinere Forschungsfamilien',
             '**Vision-Language-Modelle (VLM)** — laufen mit dem Flag `--vision` und unterstützen Echtzeit-Base64-Bildparsing für Modelle wie Qwen2-VL, Qwen2.5-VL und PaliGemma',
             '**Audio-Language-Modelle (ALM)** — laufen mit dem Flag `--audio` für ausgewählte Gemma-4-"Omni"-Varianten und dekodieren OpenAI-Spec-`input_audio`-Payloads über AVFoundation-WAV-Extraktion',
             '**TurboQuant-KV-Cache-Kompression** — ein eigenes, nichtlineares (Lloyd-Max-Codebook) 3-Bit-Klassen-Quantisierungsschema für den Attention-KV-Cache, das laut SharpAIs eigenen Benchmarks rund 3,5-mal kleiner ist als FP16 bei nahezu keinem Genauigkeitsverlust, aktivierbar mit `--turbo-kv`',
@@ -679,7 +679,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: 'L\'ensemble de fonctionnalités de SwiftLM est centré sur le service de modèles MLX aussi rapidement et efficacement en mémoire que possible sur Apple Silicon, avec plusieurs fonctionnalités visant spécifiquement à exécuter des modèles trop volumineux pour tenir confortablement dans la mémoire unifiée. Voici ce que fait chaque partie, selon le propre [README GitHub](https://github.com/SharpAI/SwiftLM) de SwiftLM.',
           items: [
             '**Service compatible OpenAI** — expose les points de terminaison `/v1/chat/completions`, `/v1/models` et `/health`, de sorte que les SDK et outils clients OpenAI existants peuvent pointer vers SwiftLM comme backend local de substitution',
-            '**Large prise en charge des familles de modèles** — le README répertorie une prise en charge native de plus de 30 familles de modèles, dont Gemma 4/3, Qwen 3.5/3/2.5, Llama 3.x, Mistral/Mixtral, Phi 4/3, DeepSeek V3, GLM 4, Falcon H1, et plusieurs familles de recherche plus petites',
+            '**Large prise en charge des familles de modèles** — le README répertorie une prise en charge native de plus de 30 familles de modèles, dont Gemma 4/3, Qwen 3.5/3/2.5, Llama 3.x, Mistral/Mixtral, Phi 4/3, DeepSeek-V3, GLM 4, Falcon H1, et plusieurs familles de recherche plus petites',
             '**Modèles vision-langage (VLM)** — exécutés avec le drapeau `--vision`, prenant en charge l\'analyse d\'images en base64 en temps réel pour des modèles tels que Qwen2-VL, Qwen2.5-VL et PaliGemma',
             '**Modèles audio-langage (ALM)** — exécutés avec le drapeau `--audio` pour certaines variantes « Omni » de Gemma-4, décodant les charges utiles `input_audio` au format OpenAI via l\'extraction WAV d\'AVFoundation',
             '**Compression du cache KV TurboQuant** — un schéma de quantification personnalisé, non linéaire (codebook Lloyd-Max), de classe 3 bits, pour le cache KV d\'attention, que les propres benchmarks de SharpAI annoncent environ 3,5 fois plus compact que le FP16 avec une perte de précision quasi nulle, activé avec `--turbo-kv`',
@@ -962,7 +962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'El conjunto de funciones de SwiftLM se centra en servir modelos MLX de la forma más rápida y eficiente en memoria posible en Apple Silicon, con varias funciones orientadas específicamente a ejecutar modelos demasiado grandes para caber cómodamente en la memoria unificada. Esto es lo que hace cada parte, según el propio [README de GitHub](https://github.com/SharpAI/SwiftLM) de SwiftLM.',
         items: [
           '**Servicio compatible con OpenAI** — expone los endpoints `/v1/chat/completions`, `/v1/models` y `/health`, de modo que los SDKs y herramientas cliente de OpenAI existentes pueden apuntar a SwiftLM como backend local intercambiable',
-          '**Amplia compatibilidad con familias de modelos** — el README enumera compatibilidad nativa con más de 30 familias de modelos, incluyendo Gemma 4/3, Qwen 3.5/3/2.5, Llama 3.x, Mistral/Mixtral, Phi 4/3, DeepSeek V3, GLM 4, Falcon H1 y varias familias de investigación más pequeñas',
+          '**Amplia compatibilidad con familias de modelos** — el README enumera compatibilidad nativa con más de 30 familias de modelos, incluyendo Gemma 4/3, Qwen 3.5/3/2.5, Llama 3.x, Mistral/Mixtral, Phi 4/3, DeepSeek-V3, GLM 4, Falcon H1 y varias familias de investigación más pequeñas',
           '**Modelos de visión y lenguaje (VLM)** — se ejecutan con el flag `--vision`, con análisis en tiempo real de imágenes en base64 para modelos como Qwen2-VL, Qwen2.5-VL y PaliGemma',
           '**Modelos de audio y lenguaje (ALM)** — se ejecutan con el flag `--audio` para algunas variantes "Omni" de Gemma-4, decodificando payloads `input_audio` con la especificación de OpenAI mediante extracción WAV con AVFoundation',
           '**Compresión de caché KV con TurboQuant** — un esquema propio de cuantización no lineal (codebook Lloyd-Max) de clase 3-bit para la caché KV de atención, que los propios benchmarks de SharpAI reportan como aproximadamente 3,5 veces más pequeño que FP16 con una pérdida de precisión casi nula, activado con `--turbo-kv`',
@@ -1245,7 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: 'O conjunto de recursos do SwiftLM se concentra em servir modelos MLX da forma mais rápida e eficiente em memória possível no Apple Silicon, com vários recursos voltados especificamente para executar modelos grandes demais para caber confortavelmente na memória unificada. Veja o que cada parte faz, segundo o próprio [README no GitHub](https://github.com/SharpAI/SwiftLM) do SwiftLM.',
           items: [
             '**Serviço compatível com a OpenAI** — expõe os endpoints `/v1/chat/completions`, `/v1/models` e `/health`, permitindo que SDKs e ferramentas cliente já existentes para a OpenAI apontem para o SwiftLM como um backend local plug-and-play',
-            '**Amplo suporte a famílias de modelos** — o README lista suporte nativo a mais de 30 famílias de modelos, incluindo Gemma 4/3, Qwen 3.5/3/2.5, Llama 3.x, Mistral/Mixtral, Phi 4/3, DeepSeek V3, GLM 4, Falcon H1 e diversas famílias de pesquisa menores',
+            '**Amplo suporte a famílias de modelos** — o README lista suporte nativo a mais de 30 famílias de modelos, incluindo Gemma 4/3, Qwen 3.5/3/2.5, Llama 3.x, Mistral/Mixtral, Phi 4/3, DeepSeek-V3, GLM 4, Falcon H1 e diversas famílias de pesquisa menores',
             '**Modelos de visão e linguagem (VLM)** — executados com a flag `--vision`, suportando parsing de imagens em base64 em tempo real para modelos como Qwen2-VL, Qwen2.5-VL e PaliGemma',
             '**Modelos de áudio e linguagem (ALM)** — executados com a flag `--audio` para variantes selecionadas "Omni" do Gemma-4, decodificando payloads `input_audio` no padrão OpenAI via extração de WAV com AVFoundation',
             '**Compressão de cache KV TurboQuant** — um esquema personalizado e não linear (codebook Lloyd-Max) de quantização em classe de 3 bits para o cache KV de atenção, que os próprios benchmarks da SharpAI relatam como cerca de 3,5x menor que FP16, com perda de precisão quase nula, habilitado com `--turbo-kv`',
@@ -1528,7 +1528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'SwiftLMの機能セットは、Apple Silicon上でMLXモデルをできる限り高速かつメモリ効率よく提供することに主眼を置いており、統合メモリに快適に収まらないほど大きなモデルの実行を狙った機能がいくつか用意されている。以下は、SwiftLM自身の[GitHub README](https://github.com/SharpAI/SwiftLM)に基づく各機能の説明である。',
         items: [
           '**OpenAI互換の提供** — `/v1/chat/completions`、`/v1/models`、`/health`エンドポイントを公開しており、既存のOpenAIクライアントSDKやツールをそのままSwiftLMに向けて、ローカルバックエンドとして差し替え利用できる',
-          '**幅広いモデルファミリーへの対応** — READMEによれば、Gemma 4/3、Qwen 3.5/3/2.5、Llama 3.x、Mistral/Mixtral、Phi 4/3、DeepSeek V3、GLM 4、Falcon H1、その他いくつかの小規模な研究系ファミリーを含む30以上のモデルファミリーをネイティブサポート',
+          '**幅広いモデルファミリーへの対応** — READMEによれば、Gemma 4/3、Qwen 3.5/3/2.5、Llama 3.x、Mistral/Mixtral、Phi 4/3、DeepSeek-V3、GLM 4、Falcon H1、その他いくつかの小規模な研究系ファミリーを含む30以上のモデルファミリーをネイティブサポート',
           '**ビジョン言語モデル（VLM）** — `--vision`フラグで実行し、Qwen2-VL、Qwen2.5-VL、PaliGemmaなどのモデルに対応したリアルタイムのbase64画像解析をサポート',
           '**オーディオ言語モデル（ALM）** — 一部のGemma-4「Omni」系列に対して`--audio`フラグで実行し、AVFoundationのWAV抽出を通じてOpenAI仕様の`input_audio`ペイロードをデコードする',
           '**TurboQuant KVキャッシュ圧縮** — アテンションのKVキャッシュ向けの独自の非線形（Lloyd-Maxコードブック）3ビット級量子化方式。SharpAI自身のベンチマークによればFP16と比べておよそ3.5倍小さく精度低下がほぼゼロで、`--turbo-kv`で有効化する',
@@ -1811,7 +1811,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'SwiftLM 的功能集专注于在 Apple Silicon 上尽可能快速、节省内存地提供 MLX 模型服务，其中若干功能专门针对无法轻松容纳于统一内存中的超大模型。以下是根据 SwiftLM 官方 [GitHub README](https://github.com/SharpAI/SwiftLM) 对各部分功能的说明。',
         items: [
           '**兼容 OpenAI 的服务** — 暴露 `/v1/chat/completions`、`/v1/models` 和 `/health` 端点，使现有的 OpenAI 客户端 SDK 和工具可以将 SwiftLM 作为即插即用的本地后端',
-          '**广泛的模型系列支持** — README 中列出对超过 30 个模型系列的原生支持，包括 Gemma 4/3、Qwen 3.5/3/2.5、Llama 3.x、Mistral/Mixtral、Phi 4/3、DeepSeek V3、GLM 4、Falcon H1 及若干较小的研究系模型系列',
+          '**广泛的模型系列支持** — README 中列出对超过 30 个模型系列的原生支持，包括 Gemma 4/3、Qwen 3.5/3/2.5、Llama 3.x、Mistral/Mixtral、Phi 4/3、DeepSeek-V3、GLM 4、Falcon H1 及若干较小的研究系模型系列',
           '**视觉语言模型（VLM）** — 通过 `--vision` 标志运行，支持对 Qwen2-VL、Qwen2.5-VL 和 PaliGemma 等模型进行实时 base64 图像解析',
           '**音频语言模型（ALM）** — 针对部分 Gemma-4「Omni」变体，通过 `--audio` 标志运行，借助 AVFoundation 的 WAV 提取来解码符合 OpenAI 规范的 `input_audio` 负载',
           '**TurboQuant KV 缓存压缩** — 一种针对注意力 KV 缓存的自研非线性（Lloyd-Max 码本）3 比特级量化方案，SharpAI 自身的基准测试称其体积比 FP16 小约 3.5 倍，且精度损失接近于零，通过 `--turbo-kv` 启用',
@@ -2094,7 +2094,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'تتمحور مجموعة ميزات SwiftLM حول تقديم نماذج MLX بأسرع وأكفأ طريقة ممكنة من حيث الذاكرة على أجهزة Apple Silicon، مع عدة ميزات موجّهة تحديدًا لتشغيل نماذج أكبر من أن تتسع بشكل مريح في الذاكرة الموحّدة. إليك ما يفعله كل جزء، بحسب [ملف README](https://github.com/SharpAI/SwiftLM) الخاص بـ SwiftLM على GitHub.',
         items: [
           '**تقديم متوافق مع OpenAI** — يوفّر نقاط النهاية `/v1/chat/completions` و`/v1/models` و`/health`، بحيث يمكن لحزم تطوير برامج (SDKs) وأدوات OpenAI الحالية أن تشير إلى SwiftLM كبديل محلي جاهز للاستخدام',
-          '**دعم واسع لعائلات النماذج** — يذكر ملف README دعمًا أصليًا لأكثر من 30 عائلة نماذج، من ضمنها Gemma 4/3 وQwen 3.5/3/2.5 وLlama 3.x وMistral/Mixtral وPhi 4/3 وDeepSeek V3 وGLM 4 وFalcon H1، إلى جانب عدة عائلات بحثية أصغر',
+          '**دعم واسع لعائلات النماذج** — يذكر ملف README دعمًا أصليًا لأكثر من 30 عائلة نماذج، من ضمنها Gemma 4/3 وQwen 3.5/3/2.5 وLlama 3.x وMistral/Mixtral وPhi 4/3 وDeepSeek-V3 وGLM 4 وFalcon H1، إلى جانب عدة عائلات بحثية أصغر',
           '**نماذج الرؤية اللغوية (VLM)** — تعمل عبر العلامة `--vision`، وتدعم تحليل صور base64 في الوقت الفعلي لنماذج مثل Qwen2-VL وQwen2.5-VL وPaliGemma',
           '**نماذج الصوت اللغوية (ALM)** — تعمل عبر العلامة `--audio` لبعض إصدارات "Omni" من Gemma-4، عبر فك ترميز حمولات `input_audio` المتوافقة مع مواصفات OpenAI باستخدام استخراج WAV عبر AVFoundation',
           '**ضغط ذاكرة KV المؤقتة عبر TurboQuant** — مخطط تكميم غير خطي مخصص (بكتاب رموز Lloyd-Max) بدرجة 3 بتات لذاكرة KV الخاصة بالانتباه، تفيد اختبارات SharpAI الخاصة بأنه أصغر بنحو 3.5 مرة من FP16 مع خسارة دقة شبه معدومة، ويُفعَّل بالعلامة `--turbo-kv`',
@@ -2377,7 +2377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'SwiftLM의 기능 집합은 Apple Silicon에서 MLX 모델을 가능한 한 빠르고 메모리 효율적으로 제공하는 데 중점을 두고 있으며, 통합 메모리에 편안하게 들어가지 않을 만큼 큰 모델을 실행하기 위한 여러 기능을 포함합니다. 다음은 SwiftLM 자체의 [GitHub README](https://github.com/SharpAI/SwiftLM)에 따른 각 기능의 설명입니다.',
         items: [
           '**OpenAI 호환 서빙** — `/v1/chat/completions`, `/v1/models`, `/health` 엔드포인트를 노출하여 기존 OpenAI 클라이언트 SDK와 도구가 SwiftLM을 드롭인 방식의 로컬 백엔드로 사용할 수 있습니다',
-          '**광범위한 모델 패밀리 지원** — README에 따르면 Gemma 4/3, Qwen 3.5/3/2.5, Llama 3.x, Mistral/Mixtral, Phi 4/3, DeepSeek V3, GLM 4, Falcon H1 및 여러 소규모 연구용 모델 패밀리를 포함해 30개 이상의 모델 패밀리를 네이티브로 지원합니다',
+          '**광범위한 모델 패밀리 지원** — README에 따르면 Gemma 4/3, Qwen 3.5/3/2.5, Llama 3.x, Mistral/Mixtral, Phi 4/3, DeepSeek-V3, GLM 4, Falcon H1 및 여러 소규모 연구용 모델 패밀리를 포함해 30개 이상의 모델 패밀리를 네이티브로 지원합니다',
           '**비전 언어 모델(VLM)** — `--vision` 플래그로 실행되며, Qwen2-VL, Qwen2.5-VL, PaliGemma 등의 모델에 대한 실시간 base64 이미지 파싱을 지원합니다',
           '**오디오 언어 모델(ALM)** — 일부 Gemma-4 "Omni" 변형에 대해 `--audio` 플래그로 실행되며, AVFoundation의 WAV 추출을 통해 OpenAI 사양의 `input_audio` 페이로드를 디코딩합니다',
           '**TurboQuant KV 캐시 압축** — 어텐션 KV 캐시를 위한 자체 비선형(Lloyd-Max 코드북) 3비트급 양자화 방식으로, SharpAI 자체 벤치마크에 따르면 FP16 대비 약 3.5배 작으면서 정확도 손실이 거의 없으며, `--turbo-kv`로 활성화됩니다',

@@ -94,7 +94,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Model': 'Llama 3 8B Q4_K_M', 'VRAM Q4': '~5 GB', 'Tested Speed': '~14 tok/s (Vulkan)' },
           { 'Model': 'Mistral Small Q5_K_M', 'VRAM Q4': '~6 GB', 'Tested Speed': '~13 tok/s (Vulkan)' },
           { 'Model': 'Phi-4 14B Q4', 'VRAM Q4': '~9 GB', 'Tested Speed': '~10 tok/s (Vulkan)' },
-          { 'Model': 'Qwen 3 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'Tested Speed': '~9 tok/s (Vulkan)' },
+          { 'Model': 'Qwen3 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'Tested Speed': '~9 tok/s (Vulkan)' },
         ],
       },
       body2: {
@@ -181,7 +181,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Modell': 'Llama 3 8B Q4_K_M', 'VRAM Q4': '~5 GB', 'Getestete Geschwindigkeit': '~14 tok/s (Vulkan)' },
           { 'Modell': 'Mistral Small Q5_K_M', 'VRAM Q4': '~6 GB', 'Getestete Geschwindigkeit': '~13 tok/s (Vulkan)' },
           { 'Modell': 'Phi-4 14B Q4', 'VRAM Q4': '~9 GB', 'Getestete Geschwindigkeit': '~10 tok/s (Vulkan)' },
-          { 'Modell': 'Qwen 3 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'Getestete Geschwindigkeit': '~9 tok/s (Vulkan)' },
+          { 'Modell': 'Qwen3 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'Getestete Geschwindigkeit': '~9 tok/s (Vulkan)' },
         ],
       },
       body2: {
@@ -268,7 +268,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Modèle': 'Llama 3 8B Q4_K_M', 'VRAM Q4': '~5 Go', 'Vitesse testée': '~14 tok/s (Vulkan)' },
           { 'Modèle': 'Mistral Small Q5_K_M', 'VRAM Q4': '~6 Go', 'Vitesse testée': '~13 tok/s (Vulkan)' },
           { 'Modèle': 'Phi-4 14B Q4', 'VRAM Q4': '~9 Go', 'Vitesse testée': '~10 tok/s (Vulkan)' },
-          { 'Modèle': 'Qwen 3 14B Q4_K_M', 'VRAM Q4': '~9 Go', 'Vitesse testée': '~9 tok/s (Vulkan)' },
+          { 'Modèle': 'Qwen3 14B Q4_K_M', 'VRAM Q4': '~9 Go', 'Vitesse testée': '~9 tok/s (Vulkan)' },
         ],
       },
       body2: {
@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'モデル': 'Llama 3 8B Q4_K_M', 'VRAM Q4': '~5 GB', 'テスト速度': '~14 tok/s (Vulkan)' },
           { 'モデル': 'Mistral Small Q5_K_M', 'VRAM Q4': '~6 GB', 'テスト速度': '~13 tok/s (Vulkan)' },
           { 'モデル': 'Phi-4 14B Q4', 'VRAM Q4': '~9 GB', 'テスト速度': '~10 tok/s (Vulkan)' },
-          { 'モデル': 'Qwen 3 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'テスト速度': '~9 tok/s (Vulkan)' },
+          { 'モデル': 'Qwen3 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'テスト速度': '~9 tok/s (Vulkan)' },
         ],
       },
       body2: {
@@ -442,7 +442,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { '模型': 'Llama 3 8B Q4_K_M', 'VRAM Q4': '~5 GB', '测试速度': '~14 tok/s (Vulkan)' },
           { '模型': 'Mistral Small Q5_K_M', 'VRAM Q4': '~6 GB', '测试速度': '~13 tok/s (Vulkan)' },
           { '模型': 'Phi-4 14B Q4', 'VRAM Q4': '~9 GB', '测试速度': '~10 tok/s (Vulkan)' },
-          { '模型': 'Qwen 3 14B Q4_K_M', 'VRAM Q4': '~9 GB', '测试速度': '~9 tok/s (Vulkan)' },
+          { '模型': 'Qwen3 14B Q4_K_M', 'VRAM Q4': '~9 GB', '测试速度': '~9 tok/s (Vulkan)' },
         ],
       },
       body2: {
@@ -529,7 +529,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Modelo': 'Llama 3 8B Q4_K_M', 'VRAM Q4': '~5 GB', 'Velocidade testada': '~14 tok/s (Vulkan)' },
           { 'Modelo': 'Mistral Small Q5_K_M', 'VRAM Q4': '~6 GB', 'Velocidade testada': '~13 tok/s (Vulkan)' },
           { 'Modelo': 'Phi-4 14B Q4', 'VRAM Q4': '~9 GB', 'Velocidade testada': '~10 tok/s (Vulkan)' },
-          { 'Modelo': 'Qwen 3 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'Velocidade testada': '~9 tok/s (Vulkan)' },
+          { 'Modelo': 'Qwen3 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'Velocidade testada': '~9 tok/s (Vulkan)' },
         ],
       },
       body2: {
@@ -616,7 +616,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Modelo': 'Llama 3 8B Q4_K_M', 'VRAM Q4': '~5 GB', 'Velocidad medida': '~14 tok/s (Vulkan)' },
           { 'Modelo': 'Mistral Small Q5_K_M', 'VRAM Q4': '~6 GB', 'Velocidad medida': '~13 tok/s (Vulkan)' },
           { 'Modelo': 'Phi-4 14B Q4', 'VRAM Q4': '~9 GB', 'Velocidad medida': '~10 tok/s (Vulkan)' },
-          { 'Modelo': 'Qwen 3 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'Velocidad medida': '~9 tok/s (Vulkan)' },
+          { 'Modelo': 'Qwen3 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'Velocidad medida': '~9 tok/s (Vulkan)' },
         ],
       },
       body2: {
@@ -703,7 +703,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'النموذج': 'Llama 3 8B Q4_K_M', 'VRAM Q4': '~5 GB', 'السرعة المقاسة': '~14 tok/s (Vulkan)' },
           { 'النموذج': 'Mistral Small Q5_K_M', 'VRAM Q4': '~6 GB', 'السرعة المقاسة': '~13 tok/s (Vulkan)' },
           { 'النموذج': 'Phi-4 14B Q4', 'VRAM Q4': '~9 GB', 'السرعة المقاسة': '~10 tok/s (Vulkan)' },
-          { 'النموذج': 'Qwen 3 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'السرعة المقاسة': '~9 tok/s (Vulkan)' },
+          { 'النموذج': 'Qwen3 14B Q4_K_M', 'VRAM Q4': '~9 GB', 'السرعة المقاسة': '~9 tok/s (Vulkan)' },
         ],
       },
       body2: {
@@ -813,7 +813,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { '모델': 'Llama 3 8B Q4_K_M', 'VRAM Q4': '~5 GB', '측정 속도': '~14 tok/s (Vulkan)' },
           { '모델': 'Mistral Small Q5_K_M', 'VRAM Q4': '~6 GB', '측정 속도': '~13 tok/s (Vulkan)' },
           { '모델': 'Phi-4 14B Q4', 'VRAM Q4': '~9 GB', '측정 속도': '~10 tok/s (Vulkan)' },
-          { '모델': 'Qwen 3 14B Q4_K_M', 'VRAM Q4': '~9 GB', '측정 속도': '~9 tok/s (Vulkan)' },
+          { '모델': 'Qwen3 14B Q4_K_M', 'VRAM Q4': '~9 GB', '측정 속도': '~9 tok/s (Vulkan)' },
         ],
       },
       body2: {

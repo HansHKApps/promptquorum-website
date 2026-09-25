@@ -397,7 +397,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
       headers: ['Model', 'Size', 'VRAM (Q4_K_M)', 'HumanEval+', 'Python', 'TypeScript', 'Rust', 'Go', 'Best for'],
       rows: [
         ['Qwen3-Coder 30B', '', '', '', '', '', '', '', ''],
-        ['Qwen3-Coder 7B', '', '', '', '', '', '', '', ''],
+        ['Qwen2.5-Coder 7B', '', '', '', '', '', '', '', ''],
         ['DeepSeek Coder V3', '', '', '', '', '', '', '', ''],
         ['Codestral 22B', '', '', '', '', '', '', '', ''],
         ['Kimi K2.7 Code', '', '', '', '', '', '', '', ''],
