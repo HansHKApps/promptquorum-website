@@ -235,6 +235,8 @@ import { article as a_docker_model_runner_review } from './articles/docker-model
 import { article as a_runanywhere_review } from './articles/runanywhere-review'
 import { article as a_draw_things_review } from './articles/draw-things-review'
 import { article as a_ekorbia_review } from './articles/ekorbia-review'
+// HilbertRaum review — maker outreach — 2026-09-25
+import { article as a_hilbertraum_review } from './articles/hilbertraum-review'
 import { article as a_amd_gaia_review } from './articles/amd-gaia-review'
 import { article as a_foundry_local_review } from './articles/foundry-local-review'
 import { article as a_ollama_review } from './articles/ollama-review'
@@ -487,6 +489,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'runanywhere-review':                                a_runanywhere_review,
   'draw-things-review':                                a_draw_things_review,
   'ekorbia-review':                                    a_ekorbia_review,
+  'hilbertraum-review':                                a_hilbertraum_review,
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size':                a_shadow_ai_controls_by_company_size,
   'agentic-ai-security-identity-access':               a_agentic_ai_security_identity_access,

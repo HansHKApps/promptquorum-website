@@ -37,6 +37,7 @@ import { app as app_boltai } from './apps/boltai'
 import { app as app_draw_things } from './apps/draw-things'
 import { app as app_ekorbia } from './apps/ekorbia'
 import { app as app_hanoki } from './apps/hanoki'
+import { app as app_hilbertraum } from './apps/hilbertraum'
 import { app as app_open_felix } from './apps/open-felix'
 import { app as app_osaurus } from './apps/osaurus'
 import { app as app_bobe } from './apps/bobe'
@@ -265,6 +266,7 @@ export const localAiApps: ToolRecord[] = [
   app_draw_things,
   app_ekorbia,
   app_hanoki,
+  app_hilbertraum,
   app_open_felix,
   app_osaurus,
   app_bobe,
