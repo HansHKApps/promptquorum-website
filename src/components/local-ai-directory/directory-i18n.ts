@@ -367,6 +367,7 @@ const DIR_UI = {
   },
   bestFor: { en: 'Best for:', de: 'Am besten für:', fr: 'Idéal pour :', ja: '最適な用途:', zh: '最适合：', es: 'Ideal para:', pt: 'Ideal para:', ar: 'الأنسب لـ:', ko: '적합한 용도:' },
   limits: { en: 'Limits:', de: 'Grenzen:', fr: 'Limites :', ja: '制限:', zh: '局限性：', es: 'Limitaciones:', pt: 'Limitações:', ar: 'القيود:', ko: '한계:' },
+  founderConnect: { en: 'Connect:', de: 'Kontakt:', fr: 'Contact :', ja: '連絡先:', zh: '联系方式：', es: 'Contacto:', pt: 'Contato:', ar: 'تواصل:', ko: '연락처:' },
   claimEntryTemplate: {
     en: 'Claim this entry — if you build or maintain {appName}, email hello@promptquorum.com to add a founder statement.',
     de: 'Diesen Eintrag beanspruchen — wenn du {appName} entwickelst oder betreust, schreib an hello@promptquorum.com, um ein Gründer-Statement hinzuzufügen.',

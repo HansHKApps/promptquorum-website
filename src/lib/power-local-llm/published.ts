@@ -45,6 +45,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Continue.dev, Cline, PearAI reviews — 2026-09-05
   'continue-dev-review',
   'cline-review',
+  // Atlarix review — founder-submission entry, 2026-09-25
+  'atlarix-review',
   'pearai-review',
   'windsurf-review',
   'sourcegraph-cody-review',
