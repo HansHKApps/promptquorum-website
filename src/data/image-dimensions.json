@@ -10882,32 +10882,32 @@
   "/images/best-mini-pcs-local-llm-mac-mini-perf-de.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 350
+    "height": 260
   },
   "/images/best-mini-pcs-local-llm-mac-mini-perf-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 350
+    "height": 260
   },
   "/images/best-mini-pcs-local-llm-mac-mini-perf-es.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 350
+    "height": 260
   },
   "/images/best-mini-pcs-local-llm-mac-mini-perf-fr.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 350
+    "height": 260
   },
   "/images/best-mini-pcs-local-llm-mac-mini-perf-ja.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 350
+    "height": 260
   },
   "/images/best-mini-pcs-local-llm-mac-mini-perf-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
-    "height": 350
+    "height": 260
   },
   "/images/best-mini-pcs-local-llm-platform-value-de.svg": {
     "encodingFormat": "image/svg+xml",
@@ -21465,6 +21465,51 @@
     "height": 675
   },
   "/images/hermes-agent-review-2026-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/hilbertraum-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/hilbertraum-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/hilbertraum-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/hilbertraum-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/hilbertraum-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/hilbertraum-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/hilbertraum-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/hilbertraum-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/hilbertraum-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675

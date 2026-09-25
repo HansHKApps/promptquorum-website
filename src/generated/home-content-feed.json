@@ -25195,7 +25195,7 @@
     "title": "WeChat + Local LLM Integration: Developer Guide 2026",
     "excerpt": "Connect WeChat to a local LLM in 2026. Three patterns: WeChatFerry, HTTP webhook, mini PC Ollama server. Qwen3 8B for Chinese. No cloud API.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/power-local-llm/wechat-local-llm-integration-2026",
     "cluster": "power-local-llm"
   },
@@ -25204,7 +25204,7 @@
     "title": "WeChat + Lokales LLM: Entwicklerleitfaden 2026",
     "excerpt": "WeChat mit lokalem LLM verbinden 2026: WeChatFerry (Windows), HTTP-Webhook-Brücke, Mini-PC-Ollama-Server. Qwen3 8B für Chinesisch. Keine Cloud-API.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/de/power-local-llm/wechat-local-llm-integration-2026",
     "cluster": "power-local-llm"
   },
@@ -25213,7 +25213,7 @@
     "title": "WeChat + LLM local : Guide développeur 2026",
     "excerpt": "Connecter WeChat à un LLM local en 2026 : WeChatFerry (Windows), pont HTTP webhook, serveur mini PC Ollama. Qwen3 8B pour le chinois. Sans API cloud.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/fr/power-local-llm/wechat-local-llm-integration-2026",
     "cluster": "power-local-llm"
   },
@@ -25222,7 +25222,7 @@
     "title": "WeChat + ローカルLLM統合：開発者ガイド 2026",
     "excerpt": "2026年版WeChat統合ガイド：WeChatFerry（Windows）、HTTPウェブフック、ミニPCサーバーの3パターンを詳解。中国語チャットはQwen3 8B推奨。クラウドAPI不要で会話データを完全ローカル保持。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/ja/power-local-llm/wechat-local-llm-integration-2026",
     "cluster": "power-local-llm"
   },
@@ -25231,7 +25231,7 @@
     "title": "微信 + 本地LLM集成：开发者指南 2026",
     "excerpt": "2026年微信接入本地大模型三种路线：WeChatFerry钩子自动回复、HTTP Webhook桥接、迷你主机Ollama服务器。中文对话推荐Qwen3 8B Q4_K_M，符合《数据安全法》，数据不离开本地设备。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/zh/power-local-llm/wechat-local-llm-integration-2026",
     "cluster": "power-local-llm"
   },
@@ -25240,7 +25240,7 @@
     "title": "WeChat + LLM local: Guía para desarrolladores 2026",
     "excerpt": "Conecta WeChat a un LLM local en 2026. Tres patrones: WeChatFerry, HTTP webhook, servidor Ollama en mini PC. Qwen3 8B para chino. Sin API en la nube.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/es/power-local-llm/wechat-local-llm-integration-2026",
     "cluster": "power-local-llm"
   },
@@ -25249,7 +25249,7 @@
     "title": "WeChat + LLM local: Guia para desenvolvedores 2026",
     "excerpt": "Conecte o WeChat a um LLM local em 2026. Três padrões: WeChatFerry, HTTP webhook, servidor Ollama em mini PC. Qwen3 8B para chinês. Sem API de nuvem.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/pt/power-local-llm/wechat-local-llm-integration-2026",
     "cluster": "power-local-llm"
   },
@@ -25258,7 +25258,7 @@
     "title": "⁨WeChat⁩ + نموذج لغة محلي: دليل المطور ⁨2026⁩",
     "excerpt": "3 أنماط لربط WeChat بنموذج LLM محلي: WeChatFerry على Windows، جسر HTTP webhook، وخادم Ollama على mini PC. Qwen3 8B موصى به للمحادثات بالصينية.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/ar/power-local-llm/wechat-local-llm-integration-2026",
     "cluster": "power-local-llm"
   },
@@ -25267,7 +25267,7 @@
     "title": "WeChat + 로컬 LLM: 개발자 가이드 2026",
     "excerpt": "2026년 WeChat을 로컬 LLM에 연결하기. 세 가지 패턴: WeChatFerry, HTTP webhook, 미니 PC Ollama 서버. 중국어에는 Qwen3 8B. 클라우드 API 없음.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/ko/power-local-llm/wechat-local-llm-integration-2026",
     "cluster": "power-local-llm"
   },
