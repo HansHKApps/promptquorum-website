@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Atlarix',
     title: 'Atlarix Review: A Free, Local-First AI Coding Agent',
     seoTitle: 'Atlarix Review 2026: Free Local AI Coding Agent',
-    intro: 'Atlarix ([atlarix.dev](https://www.atlarix.dev)) is a free desktop AI coding agent for macOS, Windows, and Linux, built by Amariah Abishai, founder of Norah Labs. It plans, edits, and runs a project\'s own tests through a real terminal, searches the codebase with plain ripgrep instead of an index, and never changes a file until the user approves the diff — and it runs 100% locally when connected to Ollama or LM Studio. This review covers what it does, its local-vs-hybrid data flow, its pricing, and who it fits.',
+    intro: 'Atlarix ([atlarix.dev](https://www.atlarix.dev)) is a free desktop AI coding agent from Norah Labs. This review covers what it does, its local-vs-hybrid data flow, its pricing, and who it fits.',
     metaDescription: 'Atlarix is a free desktop AI coding agent that runs 100% locally via Ollama or LM Studio. See its pricing, OpenAI data-sharing disclosure, and who it fits.',
     readTime: '10 min read',
     targetKeywords: [
@@ -28,19 +28,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'What is Atlarix and is it free?',
-        answer: 'Atlarix is a free desktop AI coding agent for macOS, Windows, and Linux that plans, edits, and runs a project\'s own tests through a real terminal. Every feature, including local models via Ollama or LM Studio and bring-your-own API keys, is available on the free tier; a $19/month Pro tier adds Atlarix Reviewer and included managed-inference credits.',
+        answer: 'Yes — every feature, including local models via Ollama or LM Studio and bring-your-own API keys, is available on Atlarix\'s free tier. A $19/month Pro tier adds Atlarix Reviewer plus included managed-inference credits.',
         bullets: [
           'Free desktop app for macOS, Windows, and Linux — no feature is gated behind a paid tier',
-          'Runs 100% locally when connected to Ollama or LM Studio: no index, no embeddings, nothing leaves the machine, per the founder',
-          'Never writes a file change without the user approving the diff first',
-          'Chrome extension and Atlarix Reviewer (a GitHub App) run on Atlarix\'s own managed cloud models, not a local one',
-          'Atlarix Auto (free, no API key) runs on OpenAI\'s data-sharing program; Atlarix Pro is $19/month',
+          'Local models via Ollama or LM Studio and bring-your-own API keys are both on the free tier',
+          'Atlarix Auto (free, no API key) runs on OpenAI\'s data-sharing program; Atlarix Pro is $19/month — see Platform, Pricing, and Licensing below',
         ],
         updatedDate: '2026-09',
       },
     },
     toc: [
-      { label: 'TL;DR', anchor: 'tldr' },
+      { label: 'Key Takeaways', anchor: 'tldr' },
       { label: 'What Is Atlarix?', anchor: 'what-is-atlarix' },
       { label: 'What Does Atlarix Actually Do?', anchor: 'what-atlarix-does' },
       { label: 'Local vs. Hybrid: The Data-Flow Breakdown', anchor: 'data-flow' },
@@ -59,34 +57,32 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'TL;DR — Atlarix in 2026',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Atlarix is a free desktop AI coding agent for macOS, Windows, and Linux, built by Amariah Abishai at Norah Labs, that plans, edits, and runs a project\'s own tests through a real terminal, searches the repo with plain ripgrep instead of an index, and never changes a file until the user approves the diff.' },
-          { type: 'plain-terms', text: 'Atlarix is a free app you install on your computer that lets an AI agent write and test code for you, but only after you approve every change. Connect it to a local model through Ollama or LM Studio and nothing about your code leaves your machine; its Chrome extension and its GitHub pull-request reviewer, by contrast, run on Atlarix\'s own cloud models, not your local one.' },
+          { type: 'one-sentence', text: 'Atlarix is a free desktop AI coding agent for macOS, Windows, and Linux, built by Amariah Abishai at Norah Labs, that plans, edits, and tests code through a real terminal and only writes an edit once the user has approved it.' },
+          { type: 'plain-terms', text: 'Atlarix is a free app you install on your computer that lets an AI agent write and test code for you, but only after you approve every change. Pair it with a local model through Ollama or LM Studio and nothing about your code leaves your machine — its Chrome extension and GitHub pull-request reviewer, by contrast, run on Atlarix\'s own cloud models.' },
         ],
         items: [
-          'Atlarix ([atlarix.dev](https://www.atlarix.dev)) is a free desktop AI coding agent for macOS, Windows, and Linux — every feature, including local models and bring-your-own API keys, is available on the free tier',
-          'Built by Amariah Abishai, founder of Norah Labs',
-          'Core loop: plans a change, edits files, runs the project\'s own tests in a real terminal, and searches the codebase with plain ripgrep — no index or embeddings are built',
-          'Never writes to disk without approval: every file change is shown as a diff the user must approve first',
-          'Runs 100% locally when paired with Ollama or LM Studio: no index, no embeddings, nothing leaves the machine, per the founder',
-          'A Chrome extension and a GitHub App called Atlarix Reviewer extend the same agent to the browser and to pull requests — both run on Atlarix\'s own managed cloud models, not a local one',
-          'Atlarix Auto, the free no-API-key managed-model option, runs on OpenAI\'s data-sharing program: free-tier requests can be used to train OpenAI\'s models, disclosed before a user\'s first free-tier turn',
-          'Atlarix Pro is $19/month and adds Atlarix Reviewer plus included managed-inference credits; paid Auto usage under Pro is not used for training, per the founder',
+          'Atlarix ([atlarix.dev](https://www.atlarix.dev)) is free — every feature, including local models and bring-your-own API keys, is on the free tier',
+          'Core loop: plans a change, edits files, and runs the project\'s own tests in a real terminal; searches the codebase with plain ripgrep rather than building an index',
+          'Every file edit is shown as a diff and only written to disk once the user approves it',
+          'Fully local only when paired with Ollama or LM Studio — see Local vs. Hybrid below for what stays cloud-based',
+          'A Chrome extension and a GitHub App called Atlarix Reviewer extend the same agent to the browser and to pull requests, both on Atlarix\'s managed cloud models',
+          'Atlarix Auto (free, no API key) runs on OpenAI\'s data-sharing program — see Platform, Pricing, and Licensing below',
+          'Atlarix Pro is $19/month and adds Atlarix Reviewer plus included managed-inference credits',
         ],
         callouts: [
-          { type: 'note', text: 'This review is based on a founder outreach email exchange with Amariah Abishai, corroborated by Atlarix\'s own site, plus PromptQuorum\'s own research into secondary sources. PromptQuorum has not independently tested Atlarix\'s agent, benchmarked its accuracy, or verified a current version number — no version is stated anywhere in this review for that reason. See Atlarix\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) alongside other coding agents like it.' },
+          { type: 'note', text: 'This review is based on a founder outreach email exchange with Amariah Abishai, corroborated by Atlarix\'s own site, plus PromptQuorum\'s own research into secondary sources. PromptQuorum has not independently tested Atlarix\'s agent or benchmarked its accuracy. See Atlarix\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) alongside other coding agents like it.' },
         ],
       },
       overview: {
         id: 'what-is-atlarix',
         title: 'What Is Atlarix?',
-        content: '**Atlarix is a free desktop application for macOS, Windows, and Linux that runs an AI coding agent directly against a local codebase, plus a Chrome extension and a GitHub-integrated PR reviewer that extend the same agent into the browser and into pull requests.** It was built by Amariah Abishai, founder of Norah Labs, and every feature — including connecting a local model through Ollama or LM Studio and bringing your own API keys — is available without a paid tier.',
+        content: '**Atlarix is a free desktop application that runs an AI coding agent directly against a local codebase, plus a Chrome extension and a GitHub-integrated PR reviewer that extend the same agent into the browser and into pull requests.** Every feature — including connecting a local model through Ollama or LM Studio and bringing your own API keys — is available without a paid tier.',
         items: [
           'Product type: a downloadable desktop app, not a browser-only tool or an IDE plugin — plus a separate Chrome extension and a separate GitHub App',
           'Maker: Amariah Abishai, founder of Norah Labs',
           'Official site: [atlarix.dev](https://www.atlarix.dev)',
-          'Cost: the free tier includes every feature, local models, and bring-your-own API keys at no cost; a $19/month Pro tier adds Atlarix Reviewer and included managed-inference credits',
-          'License: not stated anywhere PromptQuorum could verify at the time of this review — do not assume Atlarix is open source',
-          'Version: no specific version number could be independently verified for this review, so none is stated here — check [atlarix.dev](https://www.atlarix.dev) directly for the current release',
+          'Cost: free tier includes every feature at no cost; Pro is $19/month — see Platform, Pricing, and Licensing below',
+          'License and version: neither could be independently verified for this review — see What Atlarix Is Not Good For below',
         ],
         note: 'This is a founder-submission-sourced entry: Atlarix reached out to PromptQuorum directly, and this review is written from that correspondence plus PromptQuorum\'s own corroborating research, not from hands-on testing of the app.',
       },
@@ -99,8 +95,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Real test execution: it runs the project\'s own existing tests through an actual terminal, not a simulated or sandboxed test runner',
           'Repo search without an index: it searches the codebase with plain ripgrep on demand, rather than pre-building an index or embeddings — a design choice the founder cites as central to the local-first guarantee',
           'Approval-gated writes: no file change reaches disk until the user reviews and approves the diff',
-          'Chrome extension: the same agent runs inside the user\'s own signed-in browser session and can reproduce a bug and read the page\'s console output while fixing the underlying code — this component runs on Atlarix\'s managed cloud models, not a local one',
-          'Atlarix Reviewer: a GitHub App that posts pull-request review comments (file, line, problem, suggested fix) without writing to or running the user\'s code — also runs on Atlarix\'s managed cloud models',
+          'Chrome extension: the same agent runs inside the user\'s own signed-in browser session and can reproduce a bug and read the page\'s console output while fixing the underlying code — see Local vs. Hybrid below for where this component\'s inference runs',
+          'Atlarix Reviewer: a GitHub App that posts pull-request review comments (file, line, problem, suggested fix) without writing to or running the user\'s code',
         ],
         note: 'Atlarix\'s own blog and other public posts describe additional internal mechanisms — including a feature the maker calls "Round-Trip Engineering" and a SQLite-based visual blueprint of a codebase — plus specific context-compression figures. PromptQuorum has not independently verified these secondary-source details and does not repeat the specific numbers here; treat them as maker-stated claims, not PromptQuorum-measured results.',
       },
@@ -129,7 +125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspect': 'Free tier', 'What Atlarix states': 'Every feature is available for free, including local models via Ollama/LM Studio and bring-your-own API keys — no feature is gated behind a paid plan.' },
           { 'Aspect': 'Atlarix Auto', 'What Atlarix states': 'A free, no-API-key managed-model option. It runs on OpenAI\'s data-sharing program, so free-tier requests can be used to train OpenAI\'s models; Atlarix discloses this before a user\'s first free-tier turn.' },
           { 'Aspect': 'Atlarix Pro', 'What Atlarix states': '$19/month. Adds Atlarix Reviewer plus included managed-inference credits. Paid Auto usage under Pro is not used for training, per the founder.' },
-          { 'Aspect': 'Licensing', 'What Atlarix states': 'Not stated anywhere PromptQuorum could verify for this review — do not assume Atlarix is open source.' },
+          { 'Aspect': 'Licensing', 'What Atlarix states': 'Not verified — see What Atlarix Is Not Good For below.' },
         ],
         callouts: [
           { type: 'note', text: 'The OpenAI data-sharing point is a real privacy trade-off, not a footnote: if you use Atlarix Auto\'s free managed-model option instead of a local model or your own API key, your requests can be used to train OpenAI\'s models. Atlarix says it discloses this before your first free-tier turn. If that trade-off is unacceptable, use the desktop app with a local model via Ollama or LM Studio, or bring your own API key from a provider whose terms you have already reviewed.' },
@@ -167,16 +163,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Want a free AI coding agent that can run entirely locally against Ollama or LM Studio, with no paid tier required for that setup',
               'Want an agent that shows every file edit as a diff before it touches disk, rather than writing changes automatically',
               'Want the agent to run your project\'s real tests in a terminal, not just propose code',
-              'Are comfortable using a Chrome extension and a GitHub PR-review app that run on managed cloud models, separate from your local desktop setup',
+              'Are comfortable with a browser extension and PR reviewer that run on managed cloud models rather than locally',
               'Want a repo-search approach that skips building a vector index or embeddings',
             ],
           },
           {
             title: 'Look elsewhere if you',
             list: [
-              'Need a verified open-source license before adopting a tool — Atlarix\'s licensing terms were not stated anywhere PromptQuorum could confirm',
-              'Want every component of the product, including the browser extension and PR reviewer, to run on a local model — those two currently run only on Atlarix\'s managed cloud models',
-              'Are not comfortable with a free tier that can route requests through OpenAI\'s data-sharing program — use a local model or your own API key instead if that matters to you',
+              'Need a verified open-source license before adopting a tool — see What Atlarix Is Not Good For below',
+              'Want every component, including the browser extension and PR reviewer, to run on a local model — see Local vs. Hybrid above',
+              'Are not comfortable with a free tier that can route requests through OpenAI\'s data-sharing program — see Platform, Pricing, and Licensing above',
               'Need a long public track record before adopting a coding agent — this review found no independently verifiable adoption numbers for Atlarix',
             ],
           },
@@ -188,7 +184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Atlarix is not a good fit if you need a confirmed open-source license, or if you want its browser extension and PR reviewer to run locally rather than on managed cloud models.**',
         items: [
           'Not confirmed open source — no license was stated anywhere PromptQuorum could verify for this review',
-          'Not fully local end-to-end — only the desktop agent paired with Ollama or LM Studio is local; the Chrome extension and Atlarix Reviewer always run on Atlarix\'s managed models',
+          'Not fully local end-to-end — the Chrome extension and Atlarix Reviewer run only on Atlarix\'s managed models; see Local vs. Hybrid above for the full breakdown',
           'Not free of a data-sharing trade-off on its no-API-key free path — Atlarix Auto runs on OpenAI\'s data-sharing program, so those specific requests can train OpenAI\'s models',
           'Not independently benchmarked by PromptQuorum — this review did not measure Atlarix\'s coding accuracy, speed, or resource use against other agents',
           'Not a tool with a version number PromptQuorum could verify at time of writing — check atlarix.dev directly for the current release before assuming feature parity with anything described here',
@@ -201,11 +197,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Mistake 1: Assuming the whole product is local because the desktop agent can be',
-            content: 'Only the desktop agent connected to Ollama or LM Studio is local. The Chrome extension and Atlarix Reviewer are separate components that run on Atlarix\'s own managed cloud models by design — not a bug or a fallback.',
+            content: 'Only the desktop agent connected to Ollama or LM Studio is local, and that is by design, not a bug or a fallback — see Local vs. Hybrid above for the full per-component breakdown.',
           },
           {
             title: 'Mistake 2: Assuming Atlarix Auto never shares data',
-            content: 'Atlarix Auto, the free no-API-key option, runs on OpenAI\'s data-sharing program: free-tier requests can be used to train OpenAI\'s models. Atlarix discloses this before a user\'s first free-tier turn, but it is easy to miss if that notice is skipped.',
+            content: 'Atlarix Auto, the free no-API-key option, runs on OpenAI\'s data-sharing program — see Platform, Pricing, and Licensing above for what that means and how to avoid it.',
           },
           {
             title: 'Mistake 3: Assuming Continue.dev\'s GitHub repository is archived',
@@ -213,7 +209,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Mistake 4: Citing a specific version number for Atlarix',
-            content: 'No confirmed version number was found for Atlarix at the time of this review, so none is stated here. Check atlarix.dev directly for the current release before citing a version.',
+            content: 'No confirmed version number was found for Atlarix — see What Atlarix Is Not Good For above, and check atlarix.dev directly for the current release before citing one.',
           },
         ],
       },
@@ -234,14 +230,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'What is Atlarix?', a: 'Atlarix ([atlarix.dev](https://www.atlarix.dev)) is a free desktop AI coding agent for macOS, Windows, and Linux, built by Amariah Abishai, founder of Norah Labs, plus a Chrome extension and a GitHub App called Atlarix Reviewer.' },
-          { q: 'Is Atlarix free?', a: 'Yes. The free tier includes every feature, including local models via Ollama or LM Studio and bring-your-own API keys, at no cost. A $19/month Pro tier adds Atlarix Reviewer plus included managed-inference credits.' },
-          { q: 'Is Atlarix fully local and private?', a: 'Only the desktop agent is fully local, and only when connected to a local model through Ollama or LM Studio — per the founder, no index or embeddings are built and nothing leaves the machine in that configuration. The Chrome extension and Atlarix Reviewer always run on Atlarix\'s own managed cloud models.' },
-          { q: 'Does Atlarix Auto share my data with OpenAI?', a: 'Atlarix Auto, the free no-API-key managed-model option, runs on OpenAI\'s data-sharing program, so free-tier requests can be used to train OpenAI\'s models. Atlarix says it discloses this before a user\'s first free-tier turn.' },
+          { q: 'What is Atlarix?', a: 'Atlarix ([atlarix.dev](https://www.atlarix.dev)) is a free desktop AI coding agent for macOS, Windows, and Linux, built by Amariah Abishai, founder of Norah Labs.' },
+          { q: 'Is Atlarix free?', a: 'Yes. Every feature, including local models via Ollama or LM Studio and bring-your-own API keys, is on the free tier. A $19/month Pro tier adds Atlarix Reviewer plus included managed-inference credits.' },
+          { q: 'Is Atlarix fully local and private?', a: 'Only the desktop agent is fully local, and only when paired with Ollama or LM Studio. The Chrome extension and Atlarix Reviewer always run on Atlarix\'s managed cloud models — see Local vs. Hybrid above for the full breakdown.' },
+          { q: 'Does Atlarix Auto share my data with OpenAI?', a: 'Yes. Atlarix Auto, the free no-API-key option, runs on OpenAI\'s data-sharing program, so free-tier requests can be used to train OpenAI\'s models — see Platform, Pricing, and Licensing above.' },
           { q: 'What does Atlarix Pro cost and add?', a: 'Atlarix Pro is $19/month. It adds Atlarix Reviewer plus included managed-inference credits, and per the founder, paid Auto usage under Pro is not used for training.' },
-          { q: 'Does Atlarix change files automatically?', a: 'No. Every file edit is shown to the user as a diff, and per the founder, Atlarix never changes a file on disk until that diff is approved.' },
-          { q: 'What is Atlarix Reviewer?', a: 'Atlarix Reviewer is a GitHub App that posts pull-request review comments — file, line, problem, and suggested fix — without writing to or running the user\'s code. It runs on Atlarix\'s managed cloud models.' },
-          { q: 'What does the Atlarix Chrome extension do?', a: 'It runs the same agent inside the user\'s own signed-in browser session, and can reproduce a bug and read the page\'s console output while fixing the underlying code. It runs on Atlarix\'s managed cloud models, not a local one.' },
+          { q: 'What is Atlarix Reviewer?', a: 'Atlarix Reviewer is a GitHub App that posts pull-request review comments — file, line, problem, and suggested fix — without writing to or running the user\'s code.' },
+          { q: 'What does the Atlarix Chrome extension do?', a: 'It runs the same agent inside the user\'s own signed-in browser session, and can reproduce a bug and read the page\'s console output while fixing the underlying code.' },
           { q: 'Who built Atlarix?', a: 'Amariah Abishai, founder of Norah Labs, built Atlarix.' },
           { q: 'Has PromptQuorum independently tested Atlarix?', a: 'No. This review is a founder-submission-sourced entry, based on a founder outreach email exchange plus PromptQuorum\'s own corroborating research, not on hands-on testing or benchmarking of Atlarix.' },
         ],
@@ -336,7 +331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Atlarix Pro kostet 19 $/Monat und fügt Atlarix Reviewer sowie enthaltene Managed-Inference-Guthaben hinzu; kostenpflichtige Auto-Nutzung unter Pro wird laut Gründer nicht zum Training verwendet',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review basiert auf einem E-Mail-Austausch mit Gründer Amariah Abishai im Rahmen einer Kontaktaufnahme durch den Hersteller, bestätigt durch Atlarix\' eigene Website sowie eigene Recherche von PromptQuorum zu Sekundärquellen. PromptQuorum hat Atlarix\' Agenten nicht eigenständig getestet, seine Genauigkeit nicht benchmarkt und keine aktuelle Versionsnummer verifiziert — deshalb wird in dieser Review keine Version genannt. Siehe Atlarix\' Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) neben anderen vergleichbaren Coding-Agenten.' },
+          { type: 'note', text: 'Diese Review basiert auf einem E-Mail-Austausch mit Gründer Amariah Abishai im Rahmen einer Kontaktaufnahme durch den Hersteller, bestätigt durch Atlarix\' eigene Website sowie eigene Recherche von PromptQuorum zu Sekundärquellen. PromptQuorum hat Atlarix\' Agenten nicht eigenständig getestet und seine Genauigkeit nicht benchmarkt. Siehe Atlarix\' Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) neben anderen vergleichbaren Coding-Agenten.' },
         ],
       },
       overview: {
@@ -348,8 +343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Hersteller: Amariah Abishai, Gründer von Norah Labs',
           'Offizielle Website: [atlarix.dev](https://www.atlarix.dev)',
           'Kosten: die kostenlose Stufe enthält jede Funktion, lokale Modelle und eigene API-Schlüssel ohne Kosten; eine Pro-Stufe für 19 $/Monat fügt Atlarix Reviewer und enthaltene Managed-Inference-Guthaben hinzu',
-          'Lizenz: nirgendwo angegeben, was PromptQuorum zum Zeitpunkt dieser Review verifizieren konnte — gehen Sie nicht davon aus, dass Atlarix quelloffen ist',
-          'Version: für diese Review konnte keine konkrete Versionsnummer unabhängig verifiziert werden, deshalb wird hier keine genannt — prüfen Sie [atlarix.dev](https://www.atlarix.dev) direkt für die aktuelle Version',
+          'Lizenz und Version: keine von beiden konnte für diese Review unabhängig verifiziert werden — siehe Wofür Atlarix nicht gut geeignet ist unten',
         ],
         note: 'Dies ist ein durch Hersteller-Kontaktaufnahme entstandener Eintrag: Atlarix hat sich direkt an PromptQuorum gewandt, und diese Review basiert auf diesem Austausch plus eigener bestätigender Recherche von PromptQuorum, nicht auf einem praktischen Test der App.',
       },
@@ -438,8 +432,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Sehen Sie sich anderweitig um, wenn Sie',
             list: [
               'vor der Nutzung eines Tools eine verifizierte Open-Source-Lizenz benötigen — Atlarix\' Lizenzbedingungen waren nirgendwo angegeben, was PromptQuorum bestätigen konnte',
-              'möchten, dass jede Komponente des Produkts, einschließlich der Browser-Erweiterung und des PR-Reviewers, auf einem lokalen Modell läuft — diese beiden laufen derzeit nur auf Atlarix\' verwalteten Cloud-Modellen',
-              'nicht damit einverstanden sind, dass eine kostenlose Stufe Anfragen über OpenAIs Datenweitergabeprogramm leiten kann — nutzen Sie stattdessen ein lokales Modell oder einen eigenen API-Schlüssel, falls Ihnen das wichtig ist',
+              'möchten, dass jede Komponente, einschließlich Browser-Erweiterung und PR-Reviewer, auf einem lokalen Modell läuft — siehe Lokal vs. hybrid oben',
+              'nicht damit einverstanden sind, dass eine kostenlose Stufe Anfragen über OpenAIs Datenweitergabeprogramm leiten kann — siehe Plattform, Preise und Lizenzierung oben',
               'eine lange öffentliche Erfolgsbilanz vor der Nutzung eines Coding-Agenten benötigen — diese Review fand keine unabhängig verifizierbaren Adoptionszahlen für Atlarix',
             ],
           },
@@ -451,7 +445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Atlarix ist keine gute Wahl, wenn Sie eine bestätigte Open-Source-Lizenz benötigen oder möchten, dass die Browser-Erweiterung und der PR-Reviewer lokal statt auf verwalteten Cloud-Modellen laufen.**',
         items: [
           'Nicht bestätigt quelloffen — nirgendwo wurde eine Lizenz angegeben, die PromptQuorum für diese Review verifizieren konnte',
-          'Nicht durchgängig lokal — nur der Desktop-Agent in Kombination mit Ollama oder LM Studio ist lokal; die Chrome-Erweiterung und Atlarix Reviewer laufen immer auf Atlarix\' verwalteten Modellen',
+          'Nicht durchgängig lokal — nur der Desktop-Agent in Kombination mit Ollama oder LM Studio ist lokal; die Chrome-Erweiterung und Atlarix Reviewer laufen immer auf Atlarix\' verwalteten Modellen; siehe Lokal vs. hybrid oben für die vollständige Aufschlüsselung',
           'Nicht frei von einem Datenweitergabe-Kompromiss auf dem kostenlosen Pfad ohne API-Schlüssel — Atlarix Auto läuft über OpenAIs Datenweitergabeprogramm, sodass diese spezifischen Anfragen OpenAIs Modelle trainieren können',
           'Nicht eigenständig von PromptQuorum benchmarkt — diese Review hat Atlarix\' Coding-Genauigkeit, Geschwindigkeit oder Ressourcennutzung nicht gegen andere Agenten gemessen',
           'Kein Tool mit einer Versionsnummer, die PromptQuorum zum Zeitpunkt der Erstellung verifizieren konnte — prüfen Sie atlarix.dev direkt für die aktuelle Version, bevor Sie Feature-Parität mit dem hier Beschriebenen annehmen',
@@ -464,11 +458,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Fehler 1: Annehmen, das gesamte Produkt sei lokal, weil der Desktop-Agent es sein kann',
-            content: 'Nur der mit Ollama oder LM Studio verbundene Desktop-Agent ist lokal. Die Chrome-Erweiterung und Atlarix Reviewer sind separate Komponenten, die per Design auf Atlarix\' eigenen verwalteten Cloud-Modellen laufen — kein Bug und kein Fallback.',
+            content: 'Nur der mit Ollama oder LM Studio verbundene Desktop-Agent ist lokal, und das ist Design, kein Bug und kein Fallback — siehe Lokal vs. hybrid oben für die vollständige Aufschlüsselung nach Komponente.',
           },
           {
             title: 'Fehler 2: Annehmen, Atlarix Auto teile nie Daten',
-            content: 'Atlarix Auto, die kostenlose Option ohne API-Schlüssel, läuft über OpenAIs Datenweitergabeprogramm: Anfragen der kostenlosen Stufe können zum Training von OpenAIs Modellen genutzt werden. Atlarix legt dies vor der ersten kostenlosen Anfrage offen, aber es ist leicht zu übersehen, wenn dieser Hinweis übersprungen wird.',
+            content: 'Atlarix Auto, die kostenlose Option ohne API-Schlüssel, läuft über OpenAIs Datenweitergabeprogramm — siehe Plattform, Preise und Lizenzierung oben für Details und wie Sie das vermeiden.',
           },
           {
             title: 'Fehler 3: Annehmen, Continue.devs GitHub-Repository sei archiviert',
@@ -502,7 +496,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Ist Atlarix vollständig lokal und privat?', a: 'Nur der Desktop-Agent ist vollständig lokal, und nur bei Verbindung mit einem lokalen Modell über Ollama oder LM Studio — laut Gründer werden in dieser Konfiguration kein Index und keine Embeddings aufgebaut, und nichts verlässt den Rechner. Die Chrome-Erweiterung und Atlarix Reviewer laufen immer auf Atlarix\' eigenen verwalteten Cloud-Modellen.' },
           { q: 'Teilt Atlarix Auto meine Daten mit OpenAI?', a: 'Atlarix Auto, die kostenlose Managed-Model-Option ohne API-Schlüssel, läuft über OpenAIs Datenweitergabeprogramm, sodass Anfragen der kostenlosen Stufe zum Training von OpenAIs Modellen genutzt werden können. Atlarix gibt an, dies vor der ersten kostenlosen Anfrage offenzulegen.' },
           { q: 'Was kostet Atlarix Pro und was bietet es zusätzlich?', a: 'Atlarix Pro kostet 19 $/Monat. Es fügt Atlarix Reviewer sowie enthaltene Managed-Inference-Guthaben hinzu, und laut Gründer wird kostenpflichtige Auto-Nutzung unter Pro nicht zum Training verwendet.' },
-          { q: 'Ändert Atlarix Dateien automatisch?', a: 'Nein. Jede Dateiänderung wird dem Nutzer als Diff angezeigt, und laut Gründer ändert Atlarix nie eine Datei auf der Festplatte, bevor dieser Diff genehmigt ist.' },
           { q: 'Was ist Atlarix Reviewer?', a: 'Atlarix Reviewer ist eine GitHub-App, die Pull-Request-Review-Kommentare — Datei, Zeile, Problem und Korrekturvorschlag — postet, ohne den Code des Nutzers zu schreiben oder auszuführen. Sie läuft auf Atlarix\' verwalteten Cloud-Modellen.' },
           { q: 'Was macht die Atlarix-Chrome-Erweiterung?', a: 'Sie führt denselben Agenten innerhalb der eigenen eingeloggten Browser-Sitzung des Nutzers aus und kann einen Bug reproduzieren und die Konsolenausgabe der Seite lesen, während sie den zugrunde liegenden Code korrigiert. Sie läuft auf Atlarix\' verwalteten Cloud-Modellen, nicht lokal.' },
           { q: 'Wer hat Atlarix entwickelt?', a: 'Amariah Abishai, Gründer von Norah Labs, hat Atlarix entwickelt.' },
@@ -599,7 +592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Atlarix Pro coûte 19 $/mois et ajoute Atlarix Reviewer ainsi que des crédits d\'inférence gérée inclus ; l\'usage payant d\'Auto sous Pro n\'est pas utilisé pour l\'entraînement, selon le fondateur',
         ],
         callouts: [
-          { type: 'note', text: 'Cette revue repose sur un échange d\'e-mails initié par le fondateur Amariah Abishai dans le cadre d\'une démarche de contact, corroboré par le site officiel d\'Atlarix et par les propres recherches de PromptQuorum sur des sources secondaires. PromptQuorum n\'a pas testé l\'agent d\'Atlarix de manière indépendante, ni évalué sa précision, ni vérifié un numéro de version actuel — c\'est pourquoi aucune version n\'est mentionnée dans cette revue. Voir la fiche d\'Atlarix dans l\'[annuaire des logiciels LLM locaux](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), aux côtés d\'autres agents de codage comparables.' },
+          { type: 'note', text: 'Cette revue repose sur un échange d\'e-mails initié par le fondateur Amariah Abishai dans le cadre d\'une démarche de contact, corroboré par le site officiel d\'Atlarix et par les propres recherches de PromptQuorum sur des sources secondaires. PromptQuorum n\'a pas testé l\'agent d\'Atlarix de manière indépendante, ni évalué sa précision. Voir la fiche d\'Atlarix dans l\'[annuaire des logiciels LLM locaux](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), aux côtés d\'autres agents de codage comparables.' },
         ],
       },
       overview: {
@@ -611,8 +604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Créateur : Amariah Abishai, fondateur de Norah Labs',
           'Site officiel : [atlarix.dev](https://www.atlarix.dev)',
           'Coût : l\'offre gratuite inclut toutes les fonctionnalités, les modèles locaux et vos propres clés API sans frais ; une offre Pro à 19 $/mois ajoute Atlarix Reviewer et des crédits d\'inférence gérée inclus',
-          'Licence : non indiquée nulle part que PromptQuorum a pu vérifier au moment de cette revue — ne présumez pas qu\'Atlarix est open source',
-          'Version : aucun numéro de version précis n\'a pu être vérifié de manière indépendante pour cette revue, donc aucun n\'est mentionné ici — consultez [atlarix.dev](https://www.atlarix.dev) directement pour la version actuelle',
+          'Licence et version : aucune des deux n\'a pu être vérifiée de manière indépendante pour cette revue — voir Pour quoi Atlarix n\'est pas adapté ci-dessous',
         ],
         note: 'Il s\'agit d\'une fiche issue d\'une démarche de contact du créateur : Atlarix a contacté directement PromptQuorum, et cette revue est rédigée à partir de cet échange et des propres recherches de vérification de PromptQuorum, pas d\'un test pratique de l\'application.',
       },
@@ -701,8 +693,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Cherchez ailleurs si vous',
             list: [
               'avez besoin d\'une licence open source vérifiée avant d\'adopter un outil — les conditions de licence d\'Atlarix n\'étaient indiquées nulle part que PromptQuorum a pu confirmer',
-              'voulez que chaque composant du produit, y compris l\'extension navigateur et le revieweur de PR, fonctionne sur un modèle local — ces deux composants ne fonctionnent actuellement que sur les modèles cloud gérés par Atlarix',
-              'n\'êtes pas à l\'aise avec une offre gratuite qui peut acheminer des requêtes via le programme de partage de données d\'OpenAI — utilisez plutôt un modèle local ou votre propre clé API si cela compte pour vous',
+              'voulez que chaque composant, y compris l\'extension navigateur et le revieweur de PR, fonctionne sur un modèle local — voir Local vs hybride ci-dessus',
+              'n\'êtes pas à l\'aise avec une offre gratuite qui peut acheminer des requêtes via le programme de partage de données d\'OpenAI — voir Plateforme, tarifs et licence ci-dessus',
               'avez besoin d\'un long historique public avant d\'adopter un agent de codage — cette revue n\'a trouvé aucun chiffre d\'adoption vérifiable de manière indépendante pour Atlarix',
             ],
           },
@@ -714,7 +706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Atlarix n\'est pas un bon choix si vous avez besoin d\'une licence open source confirmée, ou si vous voulez que son extension navigateur et son revieweur de PR fonctionnent en local plutôt que sur des modèles cloud gérés.**',
         items: [
           'Non confirmé open source — aucune licence n\'était indiquée nulle part que PromptQuorum a pu vérifier pour cette revue',
-          'Non entièrement local de bout en bout — seul l\'agent de bureau associé à Ollama ou LM Studio est local ; l\'extension Chrome et Atlarix Reviewer fonctionnent toujours sur les modèles gérés par Atlarix',
+          'Non entièrement local de bout en bout — seul l\'agent de bureau associé à Ollama ou LM Studio est local ; l\'extension Chrome et Atlarix Reviewer fonctionnent toujours sur les modèles gérés par Atlarix ; voir Local vs hybride ci-dessus pour le détail complet',
           'Non exempt de compromis de partage de données sur son parcours gratuit sans clé API — Atlarix Auto fonctionne via le programme de partage de données d\'OpenAI, donc ces requêtes spécifiques peuvent entraîner les modèles d\'OpenAI',
           'Non testé de manière indépendante par PromptQuorum — cette revue n\'a pas mesuré la précision de codage, la vitesse ou l\'usage des ressources d\'Atlarix par rapport à d\'autres agents',
           'Pas un outil dont PromptQuorum a pu vérifier le numéro de version au moment de la rédaction — consultez atlarix.dev directement pour la version actuelle avant de présumer une parité de fonctionnalités avec ce qui est décrit ici',
@@ -727,11 +719,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Erreur 1 : présumer que tout le produit est local parce que l\'agent de bureau peut l\'être',
-            content: 'Seul l\'agent de bureau connecté à Ollama ou LM Studio est local. L\'extension Chrome et Atlarix Reviewer sont des composants distincts qui fonctionnent par conception sur les propres modèles cloud gérés d\'Atlarix — pas un bug ni une solution de repli.',
+            content: 'Seul l\'agent de bureau connecté à Ollama ou LM Studio est local, et c\'est un choix de conception, pas un bug ni une solution de repli — voir Local vs hybride ci-dessus pour le détail complet par composant.',
           },
           {
             title: 'Erreur 2 : présumer qu\'Atlarix Auto ne partage jamais de données',
-            content: 'Atlarix Auto, l\'option gratuite sans clé API, fonctionne via le programme de partage de données d\'OpenAI : les requêtes de l\'offre gratuite peuvent être utilisées pour entraîner les modèles d\'OpenAI. Atlarix indique cela avant la première requête gratuite de l\'utilisateur, mais c\'est facile à manquer si cet avis est ignoré.',
+            content: 'Atlarix Auto, l\'option gratuite sans clé API, fonctionne via le programme de partage de données d\'OpenAI — voir Plateforme, tarifs et licence ci-dessus pour le détail et comment l\'éviter.',
           },
           {
             title: 'Erreur 3 : présumer que le dépôt GitHub de Continue.dev est archivé',
@@ -765,7 +757,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Atlarix est-il entièrement local et privé ?', a: 'Seul l\'agent de bureau est entièrement local, et seulement lorsqu\'il est connecté à un modèle local via Ollama ou LM Studio — selon le fondateur, aucun index ni embedding n\'est construit et rien ne quitte la machine dans cette configuration. L\'extension Chrome et Atlarix Reviewer fonctionnent toujours sur les propres modèles cloud gérés d\'Atlarix.' },
           { q: 'Atlarix Auto partage-t-il mes données avec OpenAI ?', a: 'Atlarix Auto, l\'option de modèle géré gratuite sans clé API, fonctionne via le programme de partage de données d\'OpenAI, donc les requêtes de l\'offre gratuite peuvent être utilisées pour entraîner les modèles d\'OpenAI. Atlarix indique divulguer cela avant la première requête gratuite de l\'utilisateur.' },
           { q: 'Combien coûte Atlarix Pro et qu\'ajoute-t-il ?', a: 'Atlarix Pro coûte 19 $/mois. Il ajoute Atlarix Reviewer ainsi que des crédits d\'inférence gérée inclus, et selon le fondateur, l\'usage payant d\'Auto sous Pro n\'est pas utilisé pour l\'entraînement.' },
-          { q: 'Atlarix modifie-t-il les fichiers automatiquement ?', a: 'Non. Chaque modification de fichier est présentée à l\'utilisateur sous forme de diff, et selon le fondateur, Atlarix ne modifie jamais un fichier sur le disque avant que ce diff soit approuvé.' },
           { q: 'Qu\'est-ce qu\'Atlarix Reviewer ?', a: 'Atlarix Reviewer est une application GitHub qui publie des commentaires de revue de pull requests — fichier, ligne, problème et correction suggérée — sans écrire ni exécuter le code de l\'utilisateur. Elle fonctionne sur les modèles cloud gérés par Atlarix.' },
           { q: 'Que fait l\'extension Chrome d\'Atlarix ?', a: 'Elle exécute le même agent dans la propre session de navigation connectée de l\'utilisateur, et peut reproduire un bug et lire la sortie console de la page tout en corrigeant le code sous-jacent. Elle fonctionne sur les modèles cloud gérés par Atlarix, pas en local.' },
           { q: 'Qui a créé Atlarix ?', a: 'Amariah Abishai, fondateur de Norah Labs, a créé Atlarix.' },
@@ -862,7 +853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Atlarix Proは月額19ドルで、Atlarix Reviewerとマネージド推論クレジットが追加されます。開発者によれば、Pro下の有料Auto利用は学習に使われません',
         ],
         callouts: [
-          { type: 'note', text: 'このレビューは、開発者Amariah Abishai氏からの働きかけによるメールでのやり取りと、Atlarix自身の公式サイト、そしてPromptQuorum独自の二次情報源の調査に基づいています。PromptQuorumはAtlarixのエージェントを独自にテストしておらず、精度をベンチマークしておらず、現行のバージョン番号も確認できていません — そのため本レビューではバージョンを記載していません。同様のコーディングエージェントと並んだAtlarixの登録内容は、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)をご覧ください。' },
+          { type: 'note', text: 'このレビューは、開発者Amariah Abishai氏からの働きかけによるメールでのやり取りと、Atlarix自身の公式サイト、そしてPromptQuorum独自の二次情報源の調査に基づいています。PromptQuorumはAtlarixのエージェントを独自にテストしておらず、精度をベンチマークしていません。同様のコーディングエージェントと並んだAtlarixの登録内容は、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)をご覧ください。' },
         ],
       },
       overview: {
@@ -874,8 +865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '開発者:Norah Labsの創業者Amariah Abishai氏',
           '公式サイト:[atlarix.dev](https://www.atlarix.dev)',
           '費用:無料プランには全機能、ローカルモデル、自分のAPIキーが無料で含まれる;月額19ドルのProプランではAtlarix Reviewerとマネージド推論クレジットが追加される',
-          'ライセンス:本レビュー作成時点でPromptQuorumが確認できる形での記載はなし — オープンソースであると想定しないこと',
-          'バージョン:本レビューでは特定のバージョン番号を独自に確認できなかったため、ここには記載しません — 現行バージョンは[atlarix.dev](https://www.atlarix.dev)で直接確認してください',
+          'ライセンスとバージョン:どちらも本レビューでは独自に確認できませんでした — 詳しくは下記の「Atlarixが向いていないケース」をご覧ください',
         ],
         note: 'これは開発者からの働きかけに基づく登録です。Atlarix側からPromptQuorumに直接連絡があり、本レビューはそのやり取りとPromptQuorum独自の裏付け調査に基づいて書かれており、アプリの実地テストによるものではありません。',
       },
@@ -964,8 +954,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'こんな方は他の選択肢も検討を',
             list: [
               'ツール導入前に検証済みのオープンソースライセンスが必要な方 — Atlarixのライセンス条件は、PromptQuorumが確認できる形ではどこにも記載されていませんでした',
-              'ブラウザ拡張機能やPRレビュアーを含む製品のすべてのコンポーネントをローカルモデルで動作させたい方 — この2つは現時点でAtlarixのマネージドクラウドモデル上でのみ動作します',
-              '無料プランがOpenAIのデータ共有プログラム経由でリクエストを処理する可能性があることに抵抗がある方 — それが重要な場合はローカルモデルか自分のAPIキーを使ってください',
+              'ブラウザ拡張機能やPRレビュアーを含む製品のすべてのコンポーネントをローカルモデルで動作させたい方 — 詳しくは上記の「ローカルとハイブリッド」をご覧ください',
+              '無料プランがOpenAIのデータ共有プログラム経由でリクエストを処理する可能性があることに抵抗がある方 — 詳しくは上記の「プラットフォーム、価格、ライセンス」をご覧ください',
               'コーディングエージェントを導入する前に長い公開実績が必要な方 — 本レビューではAtlarixについて独立して検証可能な採用実績数は見つかりませんでした',
             ],
           },
@@ -977,7 +967,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**確認済みのオープンソースライセンスが必要な場合や、ブラウザ拡張機能とPRレビュアーをマネージドクラウドモデルではなくローカルで動作させたい場合、Atlarixは良い選択ではありません。**',
         items: [
           'オープンソースであることは確認されていない — 本レビューでPromptQuorumが確認できる形でのライセンス記載はどこにもなかった',
-          'エンドツーエンドで完全にローカルではない — ローカルなのはOllamaやLM Studioと組み合わせたデスクトップエージェントのみで、Chrome拡張機能とAtlarix Reviewerは常にAtlarixのマネージドモデル上で動作する',
+          'エンドツーエンドで完全にローカルではない — ローカルなのはOllamaやLM Studioと組み合わせたデスクトップエージェントのみで、Chrome拡張機能とAtlarix Reviewerは常にAtlarixのマネージドモデル上で動作する;詳しくは上記の「ローカルとハイブリッド:データフローの内訳」をご覧ください',
           'APIキー不要の無料経路にデータ共有のトレードオフがないわけではない — Atlarix AutoはOpenAIのデータ共有プログラム上で動作するため、その特定のリクエストはOpenAIのモデルの学習に使われうる',
           'PromptQuorumによる独立したベンチマークは実施されていない — 本レビューはAtlarixのコーディング精度、速度、リソース使用量を他のエージェントと比較測定していない',
           '執筆時点でPromptQuorumが確認できるバージョン番号を持つツールではない — ここに記載された内容とのフィーチャーパリティを想定する前に、atlarix.devで現行バージョンを直接確認すること',
@@ -990,11 +980,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: '誤解1:デスクトップエージェントがローカルであることから、製品全体がローカルだと思い込む',
-            content: 'ローカルなのはOllamaやLM Studioに接続されたデスクトップエージェントのみです。Chrome拡張機能とAtlarix Reviewerは、設計上Atlarix自身のマネージドクラウドモデル上で動作する別のコンポーネントであり、バグでもフォールバックでもありません。',
+            content: 'ローカルなのはOllamaやLM Studioに接続されたデスクトップエージェントのみです — 詳しくは上記の「ローカルとハイブリッド:データフローの内訳」をご覧ください。',
           },
           {
             title: '誤解2:Atlarix Autoは決してデータを共有しないと思い込む',
-            content: 'APIキー不要の無料オプションであるAtlarix AutoはOpenAIのデータ共有プログラム上で動作しており、無料プランのリクエストはOpenAIのモデルの学習に使われる可能性があります。Atlarixはユーザーの最初の無料リクエストの前にこれを開示していますが、その通知を見落とすと気づきにくい点です。',
+            content: 'APIキー不要の無料オプションであるAtlarix AutoはOpenAIのデータ共有プログラム上で動作しており、その通知を見落とすと気づきにくい点です — 詳しくは上記の「プラットフォーム、価格、ライセンス」をご覧ください。',
           },
           {
             title: '誤解3:Continue.devのGitHubリポジトリがアーカイブされていると思い込む',
@@ -1028,7 +1018,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Atlarixは完全にローカルでプライベートですか?', a: '完全にローカルなのはデスクトップエージェントのみで、それもOllamaやLM Studio経由のローカルモデルに接続している場合に限られます。開発者によれば、その構成ではインデックスや埋め込みは構築されず、データはマシンから出ません。Chrome拡張機能とAtlarix Reviewerは常にAtlarix自身のマネージドクラウドモデル上で動作します。' },
           { q: 'Atlarix Autoは私のデータをOpenAIと共有しますか?', a: 'APIキー不要の無料マネージドモデルオプションであるAtlarix AutoはOpenAIのデータ共有プログラム上で動作しており、無料プランのリクエストはOpenAIのモデルの学習に使われる可能性があります。Atlarixは、ユーザーの最初の無料リクエストの前にこれを開示すると述べています。' },
           { q: 'Atlarix Proの料金と追加機能は?', a: 'Atlarix Proは月額19ドルです。Atlarix Reviewerとマネージド推論クレジットが追加され、開発者によれば、Pro下の有料Auto利用は学習に使われません。' },
-          { q: 'Atlarixはファイルを自動的に変更しますか?', a: 'いいえ。すべてのファイル編集はユーザーにdiffとして表示され、開発者によれば、そのdiffが承認されるまでAtlarixはディスク上のファイルを変更しません。' },
           { q: 'Atlarix Reviewerとは何ですか?', a: 'Atlarix Reviewerは、ユーザーのコードを書いたり実行したりすることなく、プルリクエストのレビューコメント(ファイル、行、問題点、修正提案)を投稿するGitHub Appです。Atlarixのマネージドクラウドモデル上で動作します。' },
           { q: 'AtlarixのChrome拡張機能は何をしますか?', a: 'ユーザー自身のサインイン済みブラウザセッション内で同じエージェントを動作させ、バグを再現してページのコンソール出力を読みながら根本原因のコードを修正できます。ローカルモデルではなく、Atlarixのマネージドクラウドモデル上で動作します。' },
           { q: 'Atlarixを開発したのは誰ですか?', a: 'Norah Labsの創業者Amariah Abishai氏がAtlarixを開発しました。' },
@@ -1125,7 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Atlarix Pro每月19美元,新增Atlarix Reviewer以及包含的托管推理额度;据创始人介绍,Pro版下的付费Auto使用不会被用于训练',
         ],
         callouts: [
-          { type: 'note', text: '本文基于创始人Amariah Abishai主动联系PromptQuorum后的邮件往来,并结合Atlarix官方网站以及PromptQuorum自行对二手信息源的调查撰写。PromptQuorum并未独立测试Atlarix的代理,也未对其准确性进行基准测试,也未核实当前具体版本号——因此本文未提及任何版本号。可在[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中查看Atlarix的条目及其他同类编程代理。' },
+          { type: 'note', text: '本文基于创始人Amariah Abishai主动联系PromptQuorum后的邮件往来,并结合Atlarix官方网站以及PromptQuorum自行对二手信息源的调查撰写。PromptQuorum并未独立测试Atlarix的代理,也未对其准确性进行基准测试。可在[本地LLM软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中查看Atlarix的条目及其他同类编程代理。' },
         ],
       },
       overview: {
@@ -1137,8 +1126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '创始人:Norah Labs创始人Amariah Abishai',
           '官方网站:[atlarix.dev](https://www.atlarix.dev)',
           '费用:免费版包含所有功能、本地模型以及自带API密钥,完全免费;每月19美元的Pro版新增Atlarix Reviewer以及包含的托管推理额度',
-          '许可:截至本文撰写时,PromptQuorum未能在任何地方核实其许可信息——不要假设Atlarix是开源的',
-          '版本:本文未能独立核实Atlarix的具体版本号,因此此处不予注明——请直接前往[atlarix.dev](https://www.atlarix.dev)查看当前版本',
+          '许可与版本:两者均未能在本文撰写时得到独立核实——详见下文"Atlarix不适合哪些场景"',
         ],
         note: '这是一篇由创始人主动提交信息促成的条目:Atlarix方面直接联系了PromptQuorum,本文基于这次沟通以及PromptQuorum自行进行的佐证性调查撰写,而非对该应用的实际上手测试。',
       },
@@ -1227,8 +1215,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: '如果你符合以下情况,可以考虑其他方案',
             list: [
               '在采用一款工具前需要确认已验证的开源许可——PromptQuorum未能在任何地方核实Atlarix的许可条款',
-              '希望产品的每个组件,包括浏览器扩展和PR审查功能,都运行在本地模型上——这两个组件目前只运行在Atlarix的托管云模型上',
-              '不接受免费版可能通过OpenAI的数据共享计划处理请求——如果这对你很重要,请改用本地模型或自己的API密钥',
+              '希望产品的每个组件都运行在本地模型上——详见上文"本地与混合:数据流详解"',
+              '不接受免费版可能通过OpenAI的数据共享计划处理请求——详见上文"平台、定价与许可"',
               '在采用一款编程代理前需要较长的公开使用历史——本文未能找到关于Atlarix的、可独立核实的采用数据',
             ],
           },
@@ -1240,7 +1228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**如果你需要已确认的开源许可,或者希望浏览器扩展和PR审查功能在本地而非托管云模型上运行,Atlarix并不是合适的选择。**',
         items: [
           '开源身份未获确认——PromptQuorum在撰写本文时未能在任何地方核实其许可信息',
-          '并非端到端完全本地——只有搭配Ollama或LM Studio的桌面代理是本地的;Chrome扩展和Atlarix Reviewer始终运行在Atlarix的托管模型上',
+          '并非端到端完全本地——只有搭配Ollama或LM Studio的桌面代理是本地的;Chrome扩展和Atlarix Reviewer始终运行在Atlarix的托管模型上;完整细分见上文"本地与混合:数据流详解"',
           '无需API密钥的免费路径并非没有数据共享方面的权衡——Atlarix Auto运行在OpenAI的数据共享计划上,因此这部分特定请求可能用于训练OpenAI的模型',
           '未经PromptQuorum独立基准测试——本文并未将Atlarix的编程准确度、速度或资源占用与其他代理进行实测对比',
           '截至撰写时,PromptQuorum未能核实该工具的版本号——在假设与本文描述的功能一致之前,请直接前往atlarix.dev查看当前版本',
@@ -1253,11 +1241,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: '误区一:因为桌面代理可以本地运行,就认为整个产品都是本地的',
-            content: '只有连接Ollama或LM Studio的桌面代理是本地运行的。Chrome扩展和Atlarix Reviewer是独立的组件,在设计上就运行在Atlarix自有的托管云模型上——这不是缺陷,也不是降级方案。',
+            content: '只有连接Ollama或LM Studio的桌面代理是本地运行的;Chrome扩展和Atlarix Reviewer在设计上就运行在托管云模型上——这不是缺陷,也不是降级方案,详见上文"本地与混合:数据流详解"。',
           },
           {
             title: '误区二:认为Atlarix Auto从不共享数据',
-            content: '无需API密钥的免费选项Atlarix Auto运行在OpenAI的数据共享计划上:免费版请求可能被用于训练OpenAI的模型。Atlarix会在用户首次使用免费版之前披露这一点,但如果跳过该提示,很容易忽略这一点。',
+            content: 'Atlarix Auto的OpenAI数据共享机制容易被忽略,尤其是跳过首次使用提示的情况下——完整说明见上文"平台、定价与许可"。',
           },
           {
             title: '误区三:认为Continue.dev的GitHub仓库已被归档',
@@ -1291,7 +1279,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Atlarix是否完全本地且私密?', a: '只有桌面代理是完全本地的,且仅在其连接Ollama或LM Studio的本地模型时才成立——据创始人介绍,在该配置下不构建索引或嵌入,数据也不会离开设备。Chrome扩展和Atlarix Reviewer始终运行在Atlarix自有的托管云模型上。' },
           { q: 'Atlarix Auto会将我的数据共享给OpenAI吗?', a: '无需API密钥的免费托管模型选项Atlarix Auto运行在OpenAI的数据共享计划上,因此免费版请求可能被用于训练OpenAI的模型。Atlarix表示会在用户首次使用免费版之前披露这一点。' },
           { q: 'Atlarix Pro的价格是多少,新增了什么?', a: 'Atlarix Pro每月19美元。它新增Atlarix Reviewer以及包含的托管推理额度,据创始人介绍,Pro版下的付费Auto使用不会被用于训练。' },
-          { q: 'Atlarix会自动修改文件吗?', a: '不会。每一处文件编辑都会以差异形式展示给用户,据创始人介绍,在该差异被批准之前,Atlarix不会修改磁盘上的任何文件。' },
           { q: 'Atlarix Reviewer是什么?', a: 'Atlarix Reviewer是一个GitHub App,会发布拉取请求审查评论——文件、行号、问题及建议修复方案——但不会写入或运行用户的代码。它运行在Atlarix的托管云模型上。' },
           { q: 'Atlarix的Chrome扩展能做什么?', a: '它会在用户自己已登录的浏览器会话中运行同一个代理,可以复现问题并读取页面控制台输出,同时修复底层代码。它运行在Atlarix的托管云模型上,而非本地模型。' },
           { q: 'Atlarix是谁开发的?', a: 'Atlarix由Norah Labs创始人Amariah Abishai开发。' },
@@ -1388,7 +1375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Atlarix Pro cuesta 19 $/mes y añade Atlarix Reviewer además de créditos de inferencia gestionada incluidos; según el fundador, el uso de pago de Auto bajo Pro no se usa para entrenamiento',
         ],
         callouts: [
-          { type: 'note', text: 'Esta reseña se basa en un intercambio de correos iniciado por el fundador Amariah Abishai como parte de una gestión de contacto, corroborado por el propio sitio de Atlarix y por la investigación de PromptQuorum sobre fuentes secundarias. PromptQuorum no ha probado el agente de Atlarix de forma independiente, ni evaluado su precisión, ni verificado un número de versión actual — por eso esta reseña no menciona ninguna versión. Consulta la ficha de Atlarix en el [Directorio de software LLM local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) junto a otros agentes de codificación similares.' },
+          { type: 'note', text: 'Esta reseña se basa en un intercambio de correos iniciado por el fundador Amariah Abishai como parte de una gestión de contacto, corroborado por el propio sitio de Atlarix y por la investigación de PromptQuorum sobre fuentes secundarias. PromptQuorum no ha probado el agente de Atlarix de forma independiente, ni evaluado su precisión. Consulta la ficha de Atlarix en el [Directorio de software LLM local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) junto a otros agentes de codificación similares.' },
         ],
       },
       overview: {
@@ -1400,8 +1387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Creador: Amariah Abishai, fundador de Norah Labs',
           'Sitio oficial: [atlarix.dev](https://www.atlarix.dev)',
           'Costo: el plan gratuito incluye todas las funciones, modelos locales y tus propias claves API sin costo; un plan Pro de 19 $/mes añade Atlarix Reviewer y créditos de inferencia gestionada incluidos',
-          'Licencia: no se indica en ningún lugar que PromptQuorum haya podido verificar al momento de esta reseña — no asumas que Atlarix es de código abierto',
-          'Versión: no se pudo verificar de forma independiente un número de versión concreto para esta reseña, por lo que no se menciona aquí — consulta [atlarix.dev](https://www.atlarix.dev) directamente para la versión actual',
+          'Licencia y versión: ninguna de las dos se pudo verificar de forma independiente para esta reseña — consulta Para qué no es buena opción Atlarix más abajo',
         ],
         note: 'Esta es una ficha basada en una gestión de contacto del creador: Atlarix se puso en contacto directamente con PromptQuorum, y esta reseña está escrita a partir de esa correspondencia y de la investigación de verificación propia de PromptQuorum, no de una prueba práctica de la app.',
       },
@@ -1490,8 +1476,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Busca otra opción si',
             list: [
               'necesitas una licencia de código abierto verificada antes de adoptar una herramienta — los términos de licencia de Atlarix no se indicaban en ningún lugar que PromptQuorum pudiera confirmar',
-              'quieres que cada componente del producto, incluida la extensión de navegador y el revisor de PR, funcione sobre un modelo local — esos dos componentes actualmente solo funcionan sobre los modelos en la nube gestionados por Atlarix',
-              'no te sientes cómodo con un plan gratuito que puede enrutar solicitudes a través del programa de intercambio de datos de OpenAI — usa un modelo local o tu propia clave API si eso te importa',
+              'quieres que cada componente del producto, incluida la extensión de navegador y el revisor de PR, funcione sobre un modelo local — consulta Local vs. híbrido arriba',
+              'no te sientes cómodo con un plan gratuito que puede enrutar solicitudes a través del programa de intercambio de datos de OpenAI — consulta Plataforma, precios y licencia arriba',
               'necesitas un largo historial público antes de adoptar un agente de codificación — esta reseña no encontró cifras de adopción de Atlarix verificables de forma independiente',
             ],
           },
@@ -1503,7 +1489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Atlarix no es una buena opción si necesitas una licencia de código abierto confirmada, o si quieres que su extensión de navegador y su revisor de PR funcionen en local en lugar de sobre modelos en la nube gestionados.**',
         items: [
           'No confirmado como código abierto — no se indicó ninguna licencia en ningún lugar que PromptQuorum pudiera verificar para esta reseña',
-          'No totalmente local de extremo a extremo — solo el agente de escritorio combinado con Ollama o LM Studio es local; la extensión de Chrome y Atlarix Reviewer siempre funcionan sobre los modelos gestionados de Atlarix',
+          'No totalmente local de extremo a extremo — solo el agente de escritorio combinado con Ollama o LM Studio es local; la extensión de Chrome y Atlarix Reviewer siempre funcionan sobre los modelos gestionados de Atlarix; consulta Local vs. híbrido arriba para el desglose completo',
           'No exento de una concesión de intercambio de datos en su ruta gratuita sin clave API — Atlarix Auto funciona sobre el programa de intercambio de datos de OpenAI, por lo que esas solicitudes específicas pueden entrenar los modelos de OpenAI',
           'No evaluado de forma independiente por PromptQuorum — esta reseña no midió la precisión de codificación, la velocidad ni el uso de recursos de Atlarix frente a otros agentes',
           'No es una herramienta con un número de versión que PromptQuorum haya podido verificar al momento de escribir esto — consulta atlarix.dev directamente para la versión actual antes de asumir paridad de funciones con lo descrito aquí',
@@ -1516,11 +1502,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Error 1: asumir que todo el producto es local porque el agente de escritorio puede serlo',
-            content: 'Solo el agente de escritorio conectado a Ollama o LM Studio es local. La extensión de Chrome y Atlarix Reviewer son componentes separados que funcionan por diseño sobre los propios modelos en la nube gestionados de Atlarix — no es un error ni una alternativa de respaldo.',
+            content: 'Solo el agente de escritorio conectado a Ollama o LM Studio es local, por diseño y no como alternativa de respaldo — consulta Local vs. híbrido: el flujo de datos en detalle arriba para el desglose completo.',
           },
           {
             title: 'Error 2: asumir que Atlarix Auto nunca comparte datos',
-            content: 'Atlarix Auto, la opción gratuita sin clave API, funciona sobre el programa de intercambio de datos de OpenAI: las solicitudes del plan gratuito pueden usarse para entrenar los modelos de OpenAI. Atlarix divulga esto antes del primer turno gratuito del usuario, pero es fácil pasarlo por alto si se omite ese aviso.',
+            content: 'Atlarix Auto funciona sobre el programa de intercambio de datos de OpenAI, y es fácil pasarlo por alto si se omite ese aviso — consulta Plataforma, precios y licencia arriba para el desglose completo.',
           },
           {
             title: 'Error 3: asumir que el repositorio de GitHub de Continue.dev está archivado',
@@ -1554,7 +1540,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Es Atlarix totalmente local y privado?', a: 'Solo el agente de escritorio es totalmente local, y solo cuando está conectado a un modelo local vía Ollama o LM Studio — según el fundador, en esa configuración no se construye índice ni embeddings y nada sale de la máquina. La extensión de Chrome y Atlarix Reviewer siempre funcionan sobre los propios modelos en la nube gestionados de Atlarix.' },
           { q: '¿Atlarix Auto comparte mis datos con OpenAI?', a: 'Atlarix Auto, la opción de modelo gestionado gratuita sin clave API, funciona sobre el programa de intercambio de datos de OpenAI, por lo que las solicitudes del plan gratuito pueden usarse para entrenar los modelos de OpenAI. Atlarix dice que divulga esto antes del primer turno gratuito del usuario.' },
           { q: '¿Cuánto cuesta Atlarix Pro y qué añade?', a: 'Atlarix Pro cuesta 19 $/mes. Añade Atlarix Reviewer además de créditos de inferencia gestionada incluidos, y según el fundador, el uso de pago de Auto bajo Pro no se usa para entrenamiento.' },
-          { q: '¿Atlarix modifica archivos automáticamente?', a: 'No. Cada edición de archivo se muestra al usuario como un diff, y según el fundador, Atlarix nunca modifica un archivo en el disco antes de que ese diff sea aprobado.' },
           { q: '¿Qué es Atlarix Reviewer?', a: 'Atlarix Reviewer es una app de GitHub que publica comentarios de revisión de pull requests — archivo, línea, problema y corrección sugerida — sin escribir ni ejecutar el código del usuario. Funciona sobre los modelos en la nube gestionados por Atlarix.' },
           { q: '¿Qué hace la extensión de Chrome de Atlarix?', a: 'Ejecuta el mismo agente dentro de la propia sesión de navegador con sesión iniciada del usuario, y puede reproducir un bug y leer la salida de la consola de la página mientras corrige el código subyacente. Funciona sobre los modelos en la nube gestionados por Atlarix, no en local.' },
           { q: '¿Quién creó Atlarix?', a: 'Amariah Abishai, fundador de Norah Labs, creó Atlarix.' },
@@ -1651,7 +1636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O Atlarix Pro custa US$ 19/mês e adiciona o Atlarix Reviewer além de créditos de inferência gerenciada inclusos; segundo o fundador, o uso pago do Auto no plano Pro não é usado para treinamento',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise se baseia em uma troca de e-mails iniciada pelo fundador Amariah Abishai como parte de uma abordagem de contato, corroborada pelo próprio site da Atlarix e pela pesquisa da PromptQuorum sobre fontes secundárias. A PromptQuorum não testou o agente da Atlarix de forma independente, não avaliou sua precisão nem verificou um número de versão atual — por isso nenhuma versão é mencionada nesta análise. Veja a ficha da Atlarix no [Diretório de Software LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), ao lado de outros agentes de codificação semelhantes.' },
+          { type: 'note', text: 'Esta análise se baseia em uma troca de e-mails iniciada pelo fundador Amariah Abishai como parte de uma abordagem de contato, corroborada pelo próprio site da Atlarix e pela pesquisa da PromptQuorum sobre fontes secundárias. A PromptQuorum não testou o agente da Atlarix de forma independente nem avaliou sua precisão. Veja a ficha da Atlarix no [Diretório de Software LLM Local](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), ao lado de outros agentes de codificação semelhantes.' },
         ],
       },
       overview: {
@@ -1663,8 +1648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Criador: Amariah Abishai, fundador da Norah Labs',
           'Site oficial: [atlarix.dev](https://www.atlarix.dev)',
           'Custo: o plano gratuito inclui todos os recursos, modelos locais e suas próprias chaves de API sem custo; um plano Pro de US$ 19/mês adiciona o Atlarix Reviewer e créditos de inferência gerenciada inclusos',
-          'Licença: não informada em nenhum lugar que a PromptQuorum tenha conseguido verificar no momento desta análise — não presuma que o Atlarix é open source',
-          'Versão: nenhum número de versão específico pôde ser verificado de forma independente para esta análise, por isso nenhum é informado aqui — consulte [atlarix.dev](https://www.atlarix.dev) diretamente para a versão atual',
+          'Licença e versão: nenhuma das duas pôde ser verificada de forma independente para esta análise — veja Para que o Atlarix não é indicado abaixo',
         ],
         note: 'Esta é uma ficha originada de uma abordagem de contato do criador: a Atlarix entrou em contato diretamente com a PromptQuorum, e esta análise foi escrita a partir dessa correspondência e da pesquisa de verificação própria da PromptQuorum, não de um teste prático do app.',
       },
@@ -1753,8 +1737,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Procure outra opção se você',
             list: [
               'precisa de uma licença open source verificada antes de adotar uma ferramenta — os termos de licenciamento da Atlarix não estavam informados em nenhum lugar que a PromptQuorum conseguisse confirmar',
-              'quer que todos os componentes do produto, incluindo a extensão de navegador e o revisor de PR, rodem sobre um modelo local — esses dois atualmente só rodam sobre os modelos em nuvem gerenciados pela Atlarix',
-              'não está confortável com um plano gratuito que pode encaminhar solicitações pelo programa de compartilhamento de dados da OpenAI — use um modelo local ou sua própria chave de API se isso for importante para você',
+              'quer que todos os componentes do produto rodem sobre um modelo local — veja Local vs. híbrido acima',
+              'não está confortável com o compartilhamento de dados do plano gratuito — veja Plataforma, preços e licenciamento acima',
               'precisa de um longo histórico público antes de adotar um agente de codificação — esta análise não encontrou números de adoção da Atlarix verificáveis de forma independente',
             ],
           },
@@ -1766,7 +1750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Atlarix não é uma boa escolha se você precisa de uma licença open source confirmada, ou se quer que sua extensão de navegador e seu revisor de PR rodem localmente em vez de sobre modelos em nuvem gerenciados.**',
         items: [
           'Não confirmado como open source — nenhuma licença foi informada em nenhum lugar que a PromptQuorum tenha conseguido verificar para esta análise',
-          'Não totalmente local de ponta a ponta — apenas o agente de desktop combinado com Ollama ou LM Studio é local; a extensão para Chrome e o Atlarix Reviewer sempre rodam sobre os modelos gerenciados da Atlarix',
+          'Não totalmente local de ponta a ponta — apenas o agente de desktop combinado com Ollama ou LM Studio é local; a extensão para Chrome e o Atlarix Reviewer sempre rodam sobre os modelos gerenciados da Atlarix; veja Local vs. híbrido acima para o detalhamento completo',
           'Não isento de uma troca de compartilhamento de dados no caminho gratuito sem chave de API — o Atlarix Auto roda sobre o programa de compartilhamento de dados da OpenAI, então essas solicitações específicas podem treinar os modelos da OpenAI',
           'Não avaliado de forma independente pela PromptQuorum — esta análise não mediu a precisão de codificação, velocidade ou uso de recursos do Atlarix em comparação com outros agentes',
           'Não é uma ferramenta com um número de versão que a PromptQuorum tenha conseguido verificar no momento da escrita — consulte atlarix.dev diretamente para a versão atual antes de presumir paridade de recursos com o que é descrito aqui',
@@ -1779,11 +1763,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Erro 1: presumir que todo o produto é local porque o agente de desktop pode ser',
-            content: 'Apenas o agente de desktop conectado ao Ollama ou LM Studio é local. A extensão para Chrome e o Atlarix Reviewer são componentes separados que rodam por design sobre os próprios modelos em nuvem gerenciados da Atlarix — não é um bug nem uma solução alternativa.',
+            content: 'Não é bem assim — veja Local vs. híbrido acima para o detalhamento completo por componente.',
           },
           {
             title: 'Erro 2: presumir que o Atlarix Auto nunca compartilha dados',
-            content: 'O Atlarix Auto, a opção gratuita sem chave de API, roda sobre o programa de compartilhamento de dados da OpenAI: solicitações do plano gratuito podem ser usadas para treinar os modelos da OpenAI. A Atlarix informa isso antes da primeira interação gratuita do usuário, mas é fácil não perceber caso esse aviso seja ignorado.',
+            content: 'Não é bem assim — veja Plataforma, preços e licenciamento acima para o detalhamento completo do programa de compartilhamento de dados da OpenAI.',
           },
           {
             title: 'Erro 3: presumir que o repositório do GitHub do Continue.dev está arquivado',
@@ -1817,7 +1801,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'O Atlarix é totalmente local e privado?', a: 'Apenas o agente de desktop é totalmente local, e somente quando conectado a um modelo local via Ollama ou LM Studio — segundo o fundador, nessa configuração nenhum índice ou embeddings é construído e nada sai da máquina. A extensão para Chrome e o Atlarix Reviewer sempre rodam sobre os próprios modelos em nuvem gerenciados da Atlarix.' },
           { q: 'O Atlarix Auto compartilha meus dados com a OpenAI?', a: 'O Atlarix Auto, a opção de modelo gerenciado gratuita e sem chave de API, roda sobre o programa de compartilhamento de dados da OpenAI, então solicitações do plano gratuito podem ser usadas para treinar os modelos da OpenAI. A Atlarix afirma informar isso antes da primeira interação gratuita do usuário.' },
           { q: 'Quanto custa o Atlarix Pro e o que ele adiciona?', a: 'O Atlarix Pro custa US$ 19/mês. Ele adiciona o Atlarix Reviewer além de créditos de inferência gerenciada inclusos, e segundo o fundador, o uso pago do Auto no plano Pro não é usado para treinamento.' },
-          { q: 'O Atlarix altera arquivos automaticamente?', a: 'Não. Cada edição de arquivo é mostrada ao usuário como um diff, e segundo o fundador, o Atlarix nunca altera um arquivo no disco antes que esse diff seja aprovado.' },
           { q: 'O que é o Atlarix Reviewer?', a: 'O Atlarix Reviewer é um app do GitHub que publica comentários de revisão de pull requests — arquivo, linha, problema e correção sugerida — sem escrever ou executar o código do usuário. Ele roda sobre os modelos em nuvem gerenciados pela Atlarix.' },
           { q: 'O que a extensão para Chrome do Atlarix faz?', a: 'Ela executa o mesmo agente dentro da própria sessão de navegador conectada do usuário e pode reproduzir um bug e ler a saída do console da página enquanto corrige o código subjacente. Ela roda sobre os modelos em nuvem gerenciados pela Atlarix, não localmente.' },
           { q: 'Quem criou o Atlarix?', a: 'Amariah Abishai, fundador da Norah Labs, criou o Atlarix.' },
@@ -1914,7 +1897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يبلغ سعر Atlarix Pro 19 دولارًا شهريًا ويضيف Atlarix Reviewer بالإضافة إلى رصيد استدلال مُدار مُضمّن؛ ووفق المؤسس، لا يُستخدم استخدام Auto المدفوع ضمن Pro للتدريب',
         ],
         callouts: [
-          { type: 'note', text: 'تستند هذه المراجعة إلى تبادل رسائل بريد إلكتروني بدأه المؤسس أماريا أبيشاي في إطار تواصل من صاحب الأداة، وتؤكدها معلومات موقع Atlarix نفسه وبحث PromptQuorum الخاص في مصادر ثانوية. لم تختبر PromptQuorum وكيل Atlarix بشكل مستقل، ولم تقيّم دقته، ولم تتحقق من رقم إصدار حالي — ولهذا لا تذكر هذه المراجعة أي إصدار. راجع قيد Atlarix في [دليل برمجيات LLM المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) إلى جانب وكلاء برمجة مشابهين آخرين.' },
+          { type: 'note', text: 'تستند هذه المراجعة إلى تبادل رسائل بريد إلكتروني بدأه المؤسس أماريا أبيشاي في إطار تواصل من صاحب الأداة، وتؤكدها معلومات موقع Atlarix نفسه وبحث PromptQuorum الخاص في مصادر ثانوية. لم تختبر PromptQuorum وكيل Atlarix بشكل مستقل، ولم تقيّم دقته. راجع قيد Atlarix في [دليل برمجيات LLM المحلية](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) إلى جانب وكلاء برمجة مشابهين آخرين.' },
         ],
       },
       overview: {
@@ -1926,8 +1909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'المطوّر: أماريا أبيشاي، مؤسس Norah Labs',
           'الموقع الرسمي: [atlarix.dev](https://www.atlarix.dev)',
           'التكلفة: تشمل الخطة المجانية جميع الميزات والنماذج المحلية ومفاتيح API الخاصة بك دون تكلفة؛ تضيف خطة Pro بسعر 19 دولارًا شهريًا Atlarix Reviewer ورصيد استدلال مُدار مُضمّن',
-          'الترخيص: غير مذكور في أي مكان تمكّنت PromptQuorum من التحقق منه حتى وقت كتابة هذه المراجعة — لا تفترض أن Atlarix مفتوح المصدر',
-          'الإصدار: لم يتسنَّ التحقق من رقم إصدار محدد بشكل مستقل لهذه المراجعة، لذلك لا يُذكر أي إصدار هنا — راجع [atlarix.dev](https://www.atlarix.dev) مباشرةً للإصدار الحالي',
+          'الترخيص والإصدار: لم يتسنَّ لـ PromptQuorum التحقق من أي منهما بشكل مستقل لهذه المراجعة — راجع ما لا يناسب Atlarix أدناه',
         ],
         note: 'هذا قيد نشأ عن تواصل من صاحب الأداة: تواصل فريق Atlarix مباشرةً مع PromptQuorum، وكُتبت هذه المراجعة استنادًا إلى تلك المراسلات وبحث التحقق الخاص بـ PromptQuorum، وليس عن اختبار عملي للتطبيق.',
       },
@@ -2016,8 +1998,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'ابحث عن بديل إذا كنت',
             list: [
               'تحتاج إلى ترخيص مفتوح المصدر موثَّق قبل اعتماد أداة ما — لم تُذكر شروط ترخيص Atlarix في أي مكان تمكّنت PromptQuorum من تأكيده',
-              'تريد أن يعمل كل مكوّن في المنتج، بما في ذلك امتداد المتصفح وأداة مراجعة طلبات السحب، على نموذج محلي — يعمل هذان المكوّنان حاليًا فقط على نماذج Atlarix السحابية المُدارة',
-              'لا ترتاح لخطة مجانية قد توجّه الطلبات عبر برنامج مشاركة بيانات OpenAI — استخدم نموذجًا محليًا أو مفتاح API خاصًا بك بدلًا من ذلك إذا كان هذا الأمر يهمك',
+              'تريد أن يعمل كل مكوّن في المنتج على نموذج محلي — راجع محلي مقابل هجين أعلاه',
+              'لا ترتاح لمقايضة مشاركة البيانات في الخطة المجانية — راجع المنصة والتسعير والترخيص أعلاه',
               'تحتاج إلى سجل عام طويل قبل اعتماد وكيل برمجة — لم تجد هذه المراجعة أرقام اعتماد لـ Atlarix يمكن التحقق منها بشكل مستقل',
             ],
           },
@@ -2029,7 +2011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**ليس Atlarix خيارًا جيدًا إذا كنت بحاجة إلى ترخيص مفتوح المصدر مؤكَّد، أو إذا أردت أن يعمل امتداد المتصفح وأداة مراجعة طلبات السحب محليًا بدلًا من نماذج سحابية مُدارة.**',
         items: [
           'غير مؤكَّد كونه مفتوح المصدر — لم يُذكر أي ترخيص في أي مكان تمكّنت PromptQuorum من التحقق منه لهذه المراجعة',
-          'ليس محليًا بالكامل من طرف إلى طرف — وكيل سطح المكتب المقترن بـ Ollama أو LM Studio هو وحده المحلي؛ يعمل امتداد Chrome وAtlarix Reviewer دائمًا على نماذج Atlarix المُدارة',
+          'ليس محليًا بالكامل من طرف إلى طرف — وكيل سطح المكتب المقترن بـ Ollama أو LM Studio هو وحده المحلي؛ يعمل امتداد Chrome وAtlarix Reviewer دائمًا على نماذج Atlarix المُدارة؛ راجع محلي مقابل هجين أعلاه للتفصيل الكامل',
           'لا يخلو من مقايضة مشاركة بيانات في مساره المجاني دون مفتاح API — يعمل Atlarix Auto عبر برنامج مشاركة بيانات OpenAI، لذا قد تُستخدم تلك الطلبات المحددة لتدريب نماذج OpenAI',
           'لم تُقيّمه PromptQuorum بشكل مستقل — لم تقس هذه المراجعة دقة برمجة Atlarix أو سرعته أو استخدامه للموارد مقارنةً بوكلاء آخرين',
           'ليست أداة تمكّنت PromptQuorum من التحقق من رقم إصدارها وقت الكتابة — راجع atlarix.dev مباشرةً للإصدار الحالي قبل افتراض تكافؤ الميزات مع ما هو موصوف هنا',
@@ -2042,11 +2024,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'الخطأ 1: افتراض أن المنتج بأكمله محلي لأن وكيل سطح المكتب يمكن أن يكون كذلك',
-            content: 'وكيل سطح المكتب المتصل بـ Ollama أو LM Studio هو وحده المحلي. امتداد Chrome وAtlarix Reviewer مكوّنان منفصلان يعملان بحسب التصميم على نماذج Atlarix السحابية المُدارة الخاصة — وليس خللًا أو حلًا احتياطيًا.',
+            content: 'وكيل سطح المكتب المتصل بـ Ollama أو LM Studio هو وحده المحلي؛ وليس خللًا أو حلًا احتياطيًا. راجع محلي مقابل هجين: تفصيل تدفق البيانات أعلاه للتفصيل الكامل.',
           },
           {
             title: 'الخطأ 2: افتراض أن Atlarix Auto لا يشارك البيانات أبدًا',
-            content: 'يعمل Atlarix Auto، الخيار المجاني دون مفتاح API، عبر برنامج مشاركة بيانات OpenAI: يمكن استخدام طلبات الخطة المجانية لتدريب نماذج OpenAI. تفصح Atlarix عن ذلك قبل أول استخدام مجاني للمستخدم، لكن يسهل تفويت ذلك إذا تم تجاوز هذا الإشعار.',
+            content: 'يعمل Atlarix Auto عبر برنامج مشاركة بيانات OpenAI، ويسهل تفويت ذلك إذا تم تجاوز الإشعار. راجع المنصة والتسعير والترخيص أعلاه للتفصيل الكامل.',
           },
           {
             title: 'الخطأ 3: افتراض أن مستودع GitHub الخاص بـ Continue.dev مؤرشف',
@@ -2080,7 +2062,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل Atlarix محلي وخاص بالكامل؟', a: 'وكيل سطح المكتب وحده محلي بالكامل، وذلك فقط عند اتصاله بنموذج محلي عبر Ollama أو LM Studio — وفق المؤسس، لا يُبنى فهرس أو تمثيلات مضمّنة في هذا الإعداد ولا تغادر أي بيانات الجهاز. يعمل امتداد Chrome وAtlarix Reviewer دائمًا على نماذج Atlarix السحابية المُدارة الخاصة.' },
           { q: 'هل يشارك Atlarix Auto بياناتي مع OpenAI؟', a: 'يعمل Atlarix Auto، خيار النموذج المُدار المجاني دون مفتاح API، عبر برنامج مشاركة بيانات OpenAI، لذا يمكن استخدام طلبات الخطة المجانية لتدريب نماذج OpenAI. تقول Atlarix إنها تفصح عن ذلك قبل أول استخدام مجاني للمستخدم.' },
           { q: 'كم تكلفة Atlarix Pro وماذا يضيف؟', a: 'يبلغ سعر Atlarix Pro 19 دولارًا شهريًا. يضيف Atlarix Reviewer بالإضافة إلى رصيد استدلال مُدار مُضمّن، ووفق المؤسس، لا يُستخدم استخدام Auto المدفوع ضمن Pro للتدريب.' },
-          { q: 'هل يغيّر Atlarix الملفات تلقائيًا؟', a: 'لا. يُعرض كل تعديل في ملف على المستخدم كفروقات (diff)، ووفق المؤسس، لا يغيّر Atlarix أي ملف على القرص أبدًا قبل الموافقة على تلك الفروقات.' },
           { q: 'ما هو Atlarix Reviewer؟', a: 'Atlarix Reviewer تطبيق GitHub ينشر تعليقات مراجعة طلبات السحب — الملف والسطر والمشكلة والإصلاح المقترح — دون كتابة شيفرة المستخدم أو تشغيلها. يعمل على نماذج Atlarix السحابية المُدارة.' },
           { q: 'ماذا يفعل امتداد Atlarix لمتصفح Chrome؟', a: 'يشغّل الوكيل نفسه داخل جلسة المتصفح المسجَّلة دخولها الخاصة بالمستخدم، ويمكنه إعادة إنتاج خلل ما وقراءة مخرجات وحدة تحكم الصفحة أثناء إصلاح الشيفرة الأساسية. يعمل على نماذج Atlarix السحابية المُدارة، وليس محليًا.' },
           { q: 'من طوّر Atlarix؟', a: 'طوّر أماريا أبيشاي، مؤسس Norah Labs، تطبيق Atlarix.' },
@@ -2177,7 +2158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Atlarix Pro는 월 19달러이며 Atlarix Reviewer와 포함된 관리형 추론 크레딧을 추가합니다. 창립자에 따르면 Pro의 유료 Auto 사용은 학습에 사용되지 않습니다',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 창립자 아마리아 아비샤이가 제안한 이메일 연락 내용과 Atlarix 자체 웹사이트, 그리고 PromptQuorum이 직접 조사한 2차 자료를 바탕으로 작성되었습니다. PromptQuorum은 Atlarix의 에이전트를 독자적으로 테스트하지 않았고, 정확도를 벤치마크하지 않았으며, 현재 버전 번호도 확인하지 못했습니다 — 그래서 이 리뷰에는 버전이 명시되어 있지 않습니다. 유사한 코딩 에이전트들과 함께 있는 Atlarix의 등록 정보는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에서 확인할 수 있습니다.' },
+          { type: 'note', text: '이 리뷰는 창립자 아마리아 아비샤이가 제안한 이메일 연락 내용과 Atlarix 자체 웹사이트, 그리고 PromptQuorum이 직접 조사한 2차 자료를 바탕으로 작성되었습니다. PromptQuorum은 Atlarix의 에이전트를 독자적으로 테스트하지 않았고 정확도를 벤치마크하지 않았습니다. 유사한 코딩 에이전트들과 함께 있는 Atlarix의 등록 정보는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에서 확인할 수 있습니다.' },
         ],
       },
       overview: {
@@ -2189,8 +2170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '개발자: Norah Labs 창립자 아마리아 아비샤이',
           '공식 사이트: [atlarix.dev](https://www.atlarix.dev)',
           '비용: 무료 플랜에 모든 기능, 로컬 모델, 자체 API 키가 비용 없이 포함됨; 월 19달러의 Pro 플랜은 Atlarix Reviewer와 포함된 관리형 추론 크레딧을 추가함',
-          '라이선스: 본 리뷰 작성 시점에 PromptQuorum이 확인할 수 있는 곳에 명시되어 있지 않음 — 오픈소스라고 가정하지 말 것',
-          '버전: 본 리뷰를 위해 특정 버전 번호를 독자적으로 확인할 수 없었으므로 여기에는 명시하지 않음 — 현재 버전은 [atlarix.dev](https://www.atlarix.dev)에서 직접 확인할 것',
+          '라이선스와 버전: 본 리뷰를 위해 어느 쪽도 독자적으로 확인할 수 없었음 — 아래 Atlarix가 적합하지 않은 경우 참고',
         ],
         note: '이는 개발자가 먼저 연락해 온 제보에 기반한 등록 정보입니다. Atlarix 측이 PromptQuorum에 직접 연락했으며, 이 리뷰는 그 교신 내용과 PromptQuorum 자체의 검증 조사에 기반해 작성되었을 뿐, 앱의 실사용 테스트에 기반한 것은 아닙니다.',
       },
@@ -2279,8 +2259,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: '다음에 해당한다면 다른 대안을 찾아보세요',
             list: [
               '도구를 도입하기 전에 검증된 오픈소스 라이선스가 필요함 — Atlarix의 라이선스 조건은 PromptQuorum이 확인할 수 있는 어디에도 명시되어 있지 않았음',
-              '브라우저 확장 프로그램과 PR 리뷰 기능을 포함해 제품의 모든 구성 요소가 로컬 모델에서 실행되기를 원함 — 이 두 구성 요소는 현재 Atlarix의 관리형 클라우드 모델에서만 실행됨',
-              '무료 플랜이 OpenAI의 데이터 공유 프로그램을 통해 요청을 처리할 수 있다는 점이 불편함 — 이것이 중요하다면 로컬 모델이나 자체 API 키를 대신 사용할 것',
+              '브라우저 확장 프로그램과 PR 리뷰 기능을 포함해 제품의 모든 구성 요소가 로컬 모델에서 실행되기를 원함 — 위의 로컬 대 하이브리드 참고',
+              '무료 플랜이 OpenAI의 데이터 공유 프로그램을 통해 요청을 처리할 수 있다는 점이 불편함 — 위의 플랫폼, 가격, 라이선스 참고',
               '코딩 에이전트를 도입하기 전에 오랜 공개 실적이 필요함 — 이 리뷰는 Atlarix에 대해 독자적으로 검증 가능한 채택 수치를 찾지 못했음',
             ],
           },
@@ -2292,7 +2272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**확인된 오픈소스 라이선스가 필요하거나, 브라우저 확장 프로그램과 PR 리뷰 기능이 관리형 클라우드 모델이 아닌 로컬에서 실행되기를 원한다면 Atlarix는 좋은 선택이 아닙니다.**',
         items: [
           '오픈소스임이 확인되지 않음 — 본 리뷰를 위해 PromptQuorum이 확인할 수 있는 곳에 라이선스가 명시되어 있지 않았음',
-          '엔드투엔드로 완전히 로컬이지는 않음 — Ollama나 LM Studio와 결합된 데스크톱 에이전트만 로컬이며, Chrome 확장 프로그램과 Atlarix Reviewer는 항상 Atlarix의 관리형 모델에서 실행됨',
+          '엔드투엔드로 완전히 로컬이지는 않음 — Ollama나 LM Studio와 결합된 데스크톱 에이전트만 로컬이며, Chrome 확장 프로그램과 Atlarix Reviewer는 항상 Atlarix의 관리형 모델에서 실행됨; 전체 내용은 위의 로컬 대 하이브리드: 데이터 흐름 상세 참고',
           'API 키가 필요 없는 무료 경로에도 데이터 공유 트레이드오프가 없는 것은 아님 — Atlarix Auto는 OpenAI의 데이터 공유 프로그램에서 실행되므로 해당 특정 요청은 OpenAI 모델 학습에 사용될 수 있음',
           'PromptQuorum이 독자적으로 벤치마크하지 않음 — 이 리뷰는 Atlarix의 코딩 정확도, 속도, 리소스 사용량을 다른 에이전트와 비교 측정하지 않았음',
           '작성 시점에 PromptQuorum이 버전 번호를 확인할 수 있었던 도구가 아님 — 여기서 설명한 내용과 기능이 동등할 것이라고 가정하기 전에 atlarix.dev에서 현재 버전을 직접 확인할 것',
@@ -2305,11 +2285,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: '오해 1: 데스크톱 에이전트가 로컬일 수 있다는 이유로 제품 전체가 로컬이라고 가정하는 것',
-            content: 'Ollama나 LM Studio에 연결된 데스크톱 에이전트만 로컬입니다. Chrome 확장 프로그램과 Atlarix Reviewer는 설계상 Atlarix 자체의 관리형 클라우드 모델에서 실행되는 별도의 구성 요소이며, 버그도 대체 수단도 아닙니다.',
+            content: 'Ollama나 LM Studio에 연결된 데스크톱 에이전트만 로컬입니다 — 자세한 내용은 위의 로컬 대 하이브리드: 데이터 흐름 상세 섹션을 참고하세요.',
           },
           {
             title: '오해 2: Atlarix Auto가 절대 데이터를 공유하지 않는다고 가정하는 것',
-            content: 'API 키가 필요 없는 무료 옵션인 Atlarix Auto는 OpenAI의 데이터 공유 프로그램에서 실행되며, 무료 플랜 요청은 OpenAI 모델 학습에 사용될 수 있습니다. Atlarix는 사용자의 첫 무료 사용 전에 이를 고지하지만, 그 안내를 놓치면 이 사실을 알아차리기 쉽지 않습니다.',
+            content: 'API 키가 필요 없는 무료 옵션인 Atlarix Auto는 OpenAI의 데이터 공유 프로그램에서 실행됩니다 — 자세한 내용은 위의 플랫폼, 가격, 라이선스 섹션을 참고하세요.',
           },
           {
             title: '오해 3: Continue.dev의 GitHub 저장소가 아카이브되었다고 가정하는 것',
@@ -2343,7 +2323,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Atlarix는 완전히 로컬이고 프라이빗한가요?', a: '완전히 로컬인 것은 데스크톱 에이전트뿐이며, 그것도 Ollama나 LM Studio를 통해 로컬 모델에 연결되어 있을 때만 해당됩니다 — 창립자에 따르면 그 구성에서는 인덱스나 임베딩이 구축되지 않고 데이터가 기기 밖으로 나가지 않습니다. Chrome 확장 프로그램과 Atlarix Reviewer는 항상 Atlarix 자체의 관리형 클라우드 모델에서 실행됩니다.' },
           { q: 'Atlarix Auto는 제 데이터를 OpenAI와 공유하나요?', a: 'API 키가 필요 없는 무료 관리형 모델 옵션인 Atlarix Auto는 OpenAI의 데이터 공유 프로그램에서 실행되므로, 무료 플랜 요청이 OpenAI 모델 학습에 사용될 수 있습니다. Atlarix는 사용자의 첫 무료 사용 전에 이를 고지한다고 밝히고 있습니다.' },
           { q: 'Atlarix Pro의 가격과 추가 기능은 무엇인가요?', a: 'Atlarix Pro는 월 19달러입니다. Atlarix Reviewer와 포함된 관리형 추론 크레딧을 추가하며, 창립자에 따르면 Pro의 유료 Auto 사용은 학습에 사용되지 않습니다.' },
-          { q: 'Atlarix가 파일을 자동으로 변경하나요?', a: '아니요. 모든 파일 편집은 사용자에게 diff로 표시되며, 창립자에 따르면 그 diff가 승인되기 전까지 Atlarix는 디스크의 파일을 절대 변경하지 않습니다.' },
           { q: 'Atlarix Reviewer란 무엇인가요?', a: 'Atlarix Reviewer는 사용자의 코드를 작성하거나 실행하지 않고 풀 리퀘스트 리뷰 댓글(파일, 줄, 문제, 제안된 수정 사항)을 게시하는 GitHub 앱입니다. Atlarix의 관리형 클라우드 모델에서 실행됩니다.' },
           { q: 'Atlarix의 Chrome 확장 프로그램은 무엇을 하나요?', a: '사용자 자신의 로그인된 브라우저 세션 내에서 동일한 에이전트를 실행하며, 버그를 재현하고 페이지의 콘솔 출력을 읽으면서 근본 코드를 수정할 수 있습니다. 로컬이 아닌 Atlarix의 관리형 클라우드 모델에서 실행됩니다.' },
           { q: 'Atlarix는 누가 개발했나요?', a: 'Norah Labs 창립자 아마리아 아비샤이가 Atlarix를 개발했습니다.' },

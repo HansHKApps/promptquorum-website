@@ -1625,20 +1625,31 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, dir
             filter in the hub above replaces it (audit item #8), and its
             anchors pointed at tool-listing sections that no longer render
             as their own headings once DirectoryClient took over. */}
-        {!isDirectoryPage && (article as any).toc && (
-          <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-5" aria-label="Table of contents">
-            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{(SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!).tableOfContents}</p>
-            <ol className="space-y-1">
-              {((article as any).toc as { label: string; anchor: string }[]).map((item) => (
-                <li key={item.anchor}>
-                  <a href={`#${item.anchor.replace(/^#/, '')}`} className="text-sm text-primary hover:text-primary/80 transition-colors">
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ol>
-          </nav>
-        )}
+        {!isDirectoryPage && (article as any).toc && (() => {
+          // The isTldr section's *heading* is never the article's authored title —
+          // it's hardcoded to SECTION_HEADER_LABELS[lang].keyTakeaways below (so
+          // "TL;DR"/"Summary"/etc. never actually renders). A hand-authored TOC
+          // label for that entry drifts from that hardcoded heading (confirmed
+          // 2026-09-25 on 7 of 8 non-EN atlarix-review locales). Override it here
+          // instead of relying on every article to hand-type the matching string.
+          const tldrEntry = Object.entries(article.sections).find(([, s]) => (s as any).isTldr)
+          const tldrId = tldrEntry ? slugifySectionId(tldrEntry[1] as any, tldrEntry[0]) : undefined
+          const labels = SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!
+          return (
+            <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-5" aria-label="Table of contents">
+              <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{labels.tableOfContents}</p>
+              <ol className="space-y-1">
+                {((article as any).toc as { label: string; anchor: string }[]).map((item) => (
+                  <li key={item.anchor}>
+                    <a href={`#${item.anchor.replace(/^#/, '')}`} className="text-sm text-primary hover:text-primary/80 transition-colors">
+                      {tldrId && item.anchor.replace(/^#/, '') === tldrId ? labels.keyTakeaways : item.label}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          )
+        })()}
 
         {/* Sections */}
         <article className="key-takeaways-container">

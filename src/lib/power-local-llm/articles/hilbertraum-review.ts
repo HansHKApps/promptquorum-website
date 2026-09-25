@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'What is HilbertRaum and how much does it cost?',
         answer: 'HilbertRaum is a free, open-source desktop app that runs AI chat and document Q&A offline on your own computer, with no cloud dependency and no installer required. It has no paid tier — hilbertraum.ai has no pricing page, and its GitHub license (GPL-3.0-or-later) applies to the whole application.',
         bullets: [
-          'Free and open-source under GPL-3.0-or-later, no account required',
+          'Free and open-source, no account required — see HilbertRaum Pricing and License below for the exact license',
           'Runs on Windows, macOS (Apple Silicon), and Linux',
           'Portable: the app, models, and encrypted workspace can all live on a USB drive or external disk, with no traditional installation',
           'Chats with local models and answers questions about your own PDFs, Word files, and text documents with citations',
@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'Instead of installing software and sending your questions to a company\'s servers, HilbertRaum lets you copy one app onto a USB drive, plug it into a computer, and start chatting or asking questions about your own PDFs — nothing leaves the machine, and nothing has to be "installed" in the usual sense.' },
         ],
         items: [
-          'HilbertRaum is free and open-source; the [official GitHub LICENSE](https://github.com/HilbertraumAI/HilbertRaum/blob/master/LICENSE) is GPL-3.0-or-later, and hilbertraum.ai has no pricing page',
+          'Free and open-source, no paid tier and no account required — see HilbertRaum Pricing and License below for the exact license',
           'Runs local models through bundled [llama.cpp](https://github.com/ggml-org/llama.cpp) and [whisper.cpp](https://github.com/ggml-org/whisper.cpp) engines — no separate backend to install first',
           'Portable by design: the app, models, and an AES-256-GCM-encrypted workspace can live on a USB drive or external disk and move between machines',
           'Answers questions about your own PDFs, Word files, and text documents with citations, using hybrid search and reranking',
@@ -177,7 +177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             title: 'Wait, or look elsewhere, if',
             list: [
-              'You want a chat client with a large, established user base and plugin ecosystem — HilbertRaum\'s GitHub repository shows roughly 80 stars as of this review, a fraction of more established tools like Jan or GPT4All',
+              'You want a chat client with a large, established user base and plugin ecosystem — see What Is HilbertRaum above for the current star count against more established tools like Jan or GPT4All',
               'You need built-in cloud model connections (for example, your own OpenAI or Anthropic API key) in the same app — this review found no documentation of that feature; HilbertRaum\'s offline guard is explicitly designed to block cloud fallback',
               'You need an Intel Mac build — the current release only ships an Apple Silicon (arm64) macOS build',
               'You need a dedicated mobile app — HilbertRaum is a desktop application for Windows, macOS, and Linux only',
@@ -213,7 +213,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Mistake 3: Expecting a large existing community or long track record',
-            content: 'HilbertRaum\'s GitHub repository shows roughly 80 stars and 5 forks as of this review\'s publish date — a young project compared to more established tools in this category, such as Jan or GPT4All. That does not mean the software does not work, but it does mean less third-party documentation, fewer community troubleshooting threads, and a shorter track record to evaluate.',
+            content: 'HilbertRaum is a young project compared to more established tools in this category, such as Jan or GPT4All — see What Is HilbertRaum above for the current star and fork count. That does not mean the software does not work, but it does mean less third-party documentation, fewer community troubleshooting threads, and a shorter track record to evaluate.',
           },
           {
             title: 'Mistake 4: Assuming HilbertRaum can connect to cloud models like Jan does',
@@ -227,8 +227,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'What is HilbertRaum?', a: 'HilbertRaum ([hilbertraum.ai](https://hilbertraum.ai), source at [github.com/HilbertraumAI/HilbertRaum](https://github.com/HilbertraumAI/HilbertRaum)) is a free, open-source, portable desktop app that runs AI chat and document question-answering entirely offline on your own computer.' },
           { q: 'Is HilbertRaum free?', a: 'Yes. hilbertraum.ai has no pricing page, and the [GitHub LICENSE file](https://github.com/HilbertraumAI/HilbertRaum/blob/master/LICENSE) (GPL-3.0-or-later) applies to the whole application with no paid tier found by this review.' },
-          { q: 'What license does HilbertRaum use?', a: 'GPL-3.0-or-later, per the [official LICENSE file](https://github.com/HilbertraumAI/HilbertRaum/blob/master/LICENSE). This is a copyleft license, distinct from permissive licenses like MIT or Apache 2.0 — read the full text if your organization has specific requirements around redistributing GPL-licensed software.' },
-          { q: 'Does HilbertRaum really run from a USB drive with no installation?', a: 'Yes, per the official README. Running the project\'s `prepare-drive` setup script against a USB drive or external disk places the app, a model, and an AES-256-GCM-encrypted workspace on that drive, which can then be moved between supported machines without a separate install step on each one.' },
+          { q: 'What license does HilbertRaum use?', a: 'GPL-3.0-or-later, a copyleft license distinct from permissive licenses like MIT or Apache 2.0 — see HilbertRaum Pricing and License above for what that means for the bundled components and downloaded models.' },
+          { q: 'Does HilbertRaum really run from a USB drive with no installation?', a: 'Yes, per the official README — see Key Features above for exactly what the portable setup script places on the drive.' },
           { q: 'Can HilbertRaum answer questions about my own documents?', a: 'Yes. HilbertRaum can import PDFs, Word files, and plain text, then answer questions about them using hybrid search and reranking, with citations back to the specific source passages.' },
           { q: 'Does HilbertRaum need a GPU?', a: 'No. A GPU is optional. HilbertRaum\'s README documents CPU-only operation as fully supported, with a stated minimum of 8 GB RAM; a GPU speeds up inference but is not required.' },
           { q: 'What platforms does HilbertRaum support?', a: 'Windows, macOS (Apple Silicon only — no Intel Mac build was found in the current release assets), and Linux, per the [official GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases) page.' },

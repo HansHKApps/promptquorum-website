@@ -2721,6 +2721,8 @@ If you answered YES to all 6, your article is GEO-compliant. If NO to any, fix b
 | Clickable URLs in body text | Rule 44 | Rule 6a (internal linking) |
 | Markdown must render, not display raw | Rule 45 | Rule 43 (`quickAnswerTop`), Rule 1 (bold opener) |
 | App/tool comparison tables must link out | Rule 46 | Rule 44 (clickable URLs), Rule 6a (internal linking) |
+| Year/date banned from slugs | Rule 47 | Freshness tier matrix (annual tier) |
+| Self-contained sections vs. claim-budget repetition | Rule 48 | Rule 38 (AI citation blocks), §7 "Avoid forward references" |
 
 ---
 
@@ -2945,6 +2947,26 @@ rows: [
 **Rule:** Choose a slug on the evergreen subject alone (`ai-model-releases`, `best-gpus-local-llm`, `top-open-source-llms`), independent of `freshness_tier`. This applies to every cluster (`local-llms`, `power-local-llm`, `prompt-engineering`, `blog`) and to the `annual` tier specifically.
 
 **Resolved 2026-09-04:** This rule previously conflicted with the `annual` tier's Decision Matrix entry, which said "Year in Slug? ✅ YES (required)" — and nothing enforced Rule 47 itself. The conflict recurred as a real bug the same day (`locally-ai-review-2026`, a `semi_annual` page that got a year in the slug anyway). Both are now fixed: the matrix below reflects "no year in slug, any tier," and `scripts/validate-freshness-tier.mjs` hard-fails the build on any new article slug (published on/after 2026-09-05) containing a year or month — see CLAUDE.md "No Year or Month in Slugs / URLs." Pre-existing dated slugs are grandfathered (build warning only) pending a dedicated 301 cleanup project.
+
+---
+
+### Rule 48: Self-Contained Sections vs. Claim-Budget Repetition (Mandatory)
+
+**Rule 38 and §7 ("Avoid forward references... each section should be self-contained") require every major section to stand alone for AI extraction. Taken literally, that pushes writers toward restating the same fact in every section that touches it — which is exactly the repetition problem found in `atlarix-review.ts` before its 2026-09-25 rewrite (the same OpenAI data-sharing disclosure, the same local/hybrid breakdown, and the same "license and version unverified" caveat were each fully restated 3-6+ times across the top summary, multiple body sections, and the FAQ).** This rule resolves the conflict: it does not relax Rule 38 or the self-contained-section requirement, it specifies how to satisfy both at once.
+
+**The reconciliation — claim ownership, not claim duplication:**
+- Every fact still has exactly one **owning section** that states it in full, extractable, self-contained form (satisfying Rule 38).
+- Every other section that touches the same fact stays self-contained by adding a **short pointer clause** back to the owning section (e.g. "— see Local vs. Hybrid above") rather than a full restatement. The pointer clause itself is enough context for a human reader scanning the page top-to-bottom; it is not meant to satisfy Rule 38's AI-extractability requirement on its own — that job stays with the owning section.
+- **Exception — the two always-visible top blocks:** the lead answer (`leadAnswerBlock`/first `<p>`) and the Key Takeaways/TL;DR block (the `isTldr` section) may state a fact in full, without a pointer clause, even if that duplicates the owning section below. These two blocks are the only ones a reader (or an AI crawler doing a shallow extraction pass) may see without reading the rest of the page, so they get a carve-out from claim ownership — see Rule 31 (lead answer block) and Rule 38 (citation blocks). This is the one exception; the top summary as a whole is still capped at 3 blocks total for power-local-llm articles (see the FeatureAppPost skill's claim-budget rules below).
+- Full detail on claim budgets, section ownership, the FAQ-duplication rule, and the thin-source rule lives in `~/.claude/skills/feature-app-post/SKILL.md` under "Repetition / Claim-Budget Rules" — this rule points there rather than duplicating that list, since the skill is the maintained source for the mechanics and the lint tool (`scripts/check-repetition.mjs`) that enforces them.
+- Applies to every cluster that uses the `sections: { key: { ... } }` shape (`power-local-llm`, `smart-home`, `balcony-solar`, `local-llms`, `prompt-engineering`), not just FeatureAppPost reviews — the underlying tension between Rule 38's self-containment and claim-budget discipline is the same regardless of cluster.
+
+#### Compliance Checklist
+
+- `[ ]` Every fact appearing in more than one section has exactly one owning section that states it in full
+- `[ ]` Every non-owning section references the fact with a pointer clause, not a full restatement
+- `[ ]` The lead answer block and the Key Takeaways/TL;DR section are the only places a fact may appear in full twice
+- `[ ]` FAQ answers that duplicate a body claim without adding new information are dropped, not kept for FAQ-count padding
 
 ---
 

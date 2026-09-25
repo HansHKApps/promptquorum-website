@@ -76,9 +76,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Free tier: basic text-to-image generation and reference-image edits, per the Mac App Store listing',
-          'Radiant Canvas PRO: $4.99/month, $29.99/year, or $59.99 lifetime — adds custom LoRA/LoKr adapter support and other advanced features',
-          'Requires Apple silicon (M1 or later) and macOS 26.2 or later — Intel Macs are not supported',
-          'Seven model families, 13 download options: Ming-Image-0.1-Design, Krea 2, Z-Image, FLUX.2 Klein, ERNIE-Image, Microsoft Lens Turbo, Qwen Image Edit 2511',
+          'Radiant Canvas PRO adds custom LoRA/LoKr adapter support and other advanced features — see Radiant Canvas Pricing below for the three plan prices',
+          'Requires Apple silicon (M1 or later) and macOS 26.2 or later — Intel Macs are not supported, see Platform Support and Hardware Requirements below',
+          'Seven model families, 13 download options — see the FAQ below for the full model list',
           'Model comparison tool: run the same prompt and seed across multiple models side by side',
           'Node-based Studio for building and reusing visual generation/editing workflows',
           'Runs entirely on-device — no cloud processing, per the developer\'s own description',
@@ -183,11 +183,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Mistake 1: Assuming it runs on an Intel Mac',
-            content: "Radiant Canvas requires Apple silicon (M1 or later); Intel Macs are not supported, per the Mac App Store listing. [DiffusionBee](/power-local-llm/diffusionbee-review) is the one of these three that still supports Intel Macs.",
+            content: "Radiant Canvas is Apple-silicon-only — see Platform Support and Hardware Requirements above for the exact requirement. [DiffusionBee](/power-local-llm/diffusionbee-review) is the one of these three that still supports Intel Macs.",
           },
           {
             title: 'Mistake 2: Assuming the free tier includes every feature',
-            content: "The free tier covers basic generation and reference edits only. Custom LoRA/LoKr adapter support and other advanced features require Radiant Canvas PRO ($4.99/month, $29.99/year, or $59.99 lifetime), per the App Store listing.",
+            content: "The free tier covers basic generation and reference edits only. Custom LoRA/LoKr adapter support and other advanced features require Radiant Canvas PRO — see Radiant Canvas Pricing above for the three plan prices.",
           },
           {
             title: 'Mistake 3: Assuming all bundled models share one license',
@@ -199,8 +199,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'Is Radiant Canvas free?', a: "Radiant Canvas has a free tier for basic text-to-image generation and reference-image edits, per the Mac App Store listing. Radiant Canvas PRO — required for custom LoRA/LoKr adapters and other advanced features — costs $4.99/month, $29.99/year, or $59.99 as a one-time lifetime purchase." },
-          { q: 'Does Radiant Canvas work on Intel Macs or Windows?', a: "No. Radiant Canvas requires an Apple silicon Mac (M1 or later) running macOS 26.2 or later. It has no Intel Mac, Windows, or Linux build." },
+          { q: 'Is Radiant Canvas free?', a: "The base app is free for basic text-to-image generation and reference-image edits; Radiant Canvas PRO is a paid add-on for custom LoRA/LoKr adapters and other advanced features — see Radiant Canvas Pricing above for the three plan prices." },
+          { q: 'Does Radiant Canvas work on Intel Macs or Windows?', a: "No — it has no Intel Mac, Windows, or Linux build; see Platform Support and Hardware Requirements above for the exact minimum Mac and macOS version." },
           { q: 'Does Radiant Canvas process images in the cloud?', a: "No. The developer states that prompts, reference images, and results stay on the Mac, with no cloud processing — generation and editing run on-device once a model is downloaded." },
           { q: 'What AI models does Radiant Canvas support?', a: "Seven model families across 13 download options: Ming-Image-0.1-Design, Krea 2 (INT4 ConvRot and Q8 variants), Z-Image (8-bit and BF16), FLUX.2 Klein (4-bit and 8-bit), ERNIE-Image (4-bit and 8-bit), Microsoft Lens Turbo, and Qwen Image Edit 2511 (4-bit and 8-bit), per radiantbeargames.com." },
           { q: 'How much storage do Radiant Canvas models need?', a: "Individual model downloads range from 4.7 GB to 31.8 GB depending on the option, per radiantbeargames.com. Models cannot be moved to external drives." },

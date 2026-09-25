@@ -1082,20 +1082,28 @@ function SmartHomePostContent({ slug, lang, articleData, availableLangs }: Props
         )}
 
         {/* Table of Contents */}
-        {(article as any).toc && (
+        {(article as any).toc && (() => {
+          // Keep TOC label for the isTldr entry in sync with its hardcoded
+          // rendered heading (SECTION_HEADER_LABELS[lang].keyTakeaways) instead
+          // of trusting a hand-authored string that can drift per locale.
+          const tldrEntry = Object.entries(article.sections).find(([, s]) => (s as any).isTldr)
+          const tldrId = tldrEntry ? slugifySectionId(tldrEntry[1] as any, tldrEntry[0]) : undefined
+          const labels = SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!
+          return (
           <nav className="mb-8 bg-primary/5 border border-primary/20 rounded-lg p-5" aria-label="Table of contents">
-            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{(SECTION_HEADER_LABELS[lang] ?? SECTION_HEADER_LABELS["en"]!).tableOfContents}</p>
+            <p className="text-xs font-bold text-primary uppercase tracking-widest mb-3">{labels.tableOfContents}</p>
             <ol className="space-y-1">
               {((article as any).toc as { label: string; anchor: string }[]).map((item) => (
                 <li key={item.anchor}>
                   <a href={`#${item.anchor.replace(/^#/, '')}`} className="text-sm text-primary hover:text-primary/80 transition-colors">
-                    {item.label}
+                    {tldrId && item.anchor.replace(/^#/, '') === tldrId ? labels.keyTakeaways : item.label}
                   </a>
                 </li>
               ))}
             </ol>
           </nav>
-        )}
+          )
+        })()}
 
         {/* Sections */}
         <article className="key-takeaways-container">
