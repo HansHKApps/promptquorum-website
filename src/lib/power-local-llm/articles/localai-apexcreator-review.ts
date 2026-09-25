@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'localai vs toolneuron',
       'free local ai app android',
     ],
-    current_models_mentioned: ['GGUF models', 'SmolVLM', 'LLaVA', 'Qwen-VL'],
+    current_models_mentioned: ['SmolVLM', 'LLaVA', 'Qwen-VL'],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**LocalAI: Offline AI Chat LLM is a free Android app by developer ApexCreator that runs GGUF language models on-device via llama.cpp, with an optional paid premium tier.** Per its Google Play listing, it adds document chat over PDF, Word, Excel, and CSV files using on-device vector retrieval (sqlite-vec), support for vision-capable models, and structured JSON/grammar-constrained output. The app is closed-source, and this review found no public code repository for it — every technical claim here is sourced from the public Play Store listing, not an independent audit. Readers who want an open-source alternative with a public repository should read the [ToolNeuron review](/power-local-llm/toolneuron-review) instead.',
@@ -367,7 +367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'localai vs toolneuron',
       'free local ai app android',
     ],
-    current_models_mentioned: ['GGUF models', 'SmolVLM', 'LLaVA', 'Qwen-VL'],
+    current_models_mentioned: ['SmolVLM', 'LLaVA', 'Qwen-VL'],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**LocalAI: Offline AI Chat LLM ist eine kostenlose Android-App des Entwicklers ApexCreator, die GGUF-Sprachmodelle über llama.cpp auf dem Gerät ausführt, mit einer optionalen kostenpflichtigen Premium-Stufe.** Laut eigenem Google-Play-Eintrag fügt sie Dokumenten-Chat über PDF-, Word-, Excel- und CSV-Dateien mittels On-Device-Vektorabruf (sqlite-vec), Unterstützung für vision-fähige Modelle und strukturierte JSON-/Grammatik-eingeschränkte Ausgabe hinzu. Die App ist quellcodegeschlossen, und für diesen Test wurde kein öffentliches Code-Repository dafür gefunden — jede technische Aussage hier stammt aus dem öffentlichen Play-Store-Eintrag, nicht aus einer unabhängigen Prüfung. Leser, die eine quelloffene Alternative mit einem öffentlichen Repository möchten, sollten stattdessen den [ToolNeuron-Test](/de/power-local-llm/toolneuron-review) lesen.',
@@ -707,7 +707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'localai vs toolneuron',
       'free local ai app android',
     ],
-    current_models_mentioned: ['GGUF models', 'SmolVLM', 'LLaVA', 'Qwen-VL'],
+    current_models_mentioned: ['SmolVLM', 'LLaVA', 'Qwen-VL'],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**LocalAI: Offline AI Chat LLM est une application Android gratuite du développeur ApexCreator, qui exécute des modèles de langage GGUF sur l\'appareil via llama.cpp, avec un niveau premium payant optionnel.** Selon sa fiche Google Play, elle ajoute un chat documentaire sur des fichiers PDF, Word, Excel et CSV via une recherche vectorielle sur l\'appareil (sqlite-vec), la prise en charge de modèles capables de vision, et une sortie structurée JSON/contrainte par grammaire. L\'application est à code fermé, et ce test n\'a trouvé aucun dépôt de code public pour elle — chaque affirmation technique ici provient de la fiche publique du Play Store, pas d\'un audit indépendant. Les lecteurs qui souhaitent une alternative open source avec un dépôt public devraient plutôt lire le [test de ToolNeuron](/fr/power-local-llm/toolneuron-review).',
@@ -1047,7 +1047,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'localai vs toolneuron',
       'free local ai app android',
     ],
-    current_models_mentioned: ['GGUF models', 'SmolVLM', 'LLaVA', 'Qwen-VL'],
+    current_models_mentioned: ['SmolVLM', 'LLaVA', 'Qwen-VL'],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**LocalAI: Offline AI Chat LLM es una app gratuita para Android del desarrollador ApexCreator que ejecuta modelos de lenguaje GGUF en el propio dispositivo mediante llama.cpp, con un nivel premium de pago opcional.** Según su propia ficha en Google Play, añade chat con documentos en PDF, Word, Excel y CSV mediante recuperación vectorial en el dispositivo (sqlite-vec), compatibilidad con modelos con capacidades de visión y salida estructurada JSON/restringida por gramática. La app es de código cerrado, y para esta reseña no se encontró ningún repositorio de código público — cada afirmación técnica aquí procede de la ficha pública en Play Store, no de una auditoría independiente. Los lectores que quieran una alternativa de código abierto con un repositorio público deberían leer en su lugar la [reseña de ToolNeuron](/es/power-local-llm/toolneuron-review).',
@@ -1387,7 +1387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'localai vs toolneuron',
       'free local ai app android',
     ],
-    current_models_mentioned: ['GGUF models', 'SmolVLM', 'LLaVA', 'Qwen-VL'],
+    current_models_mentioned: ['SmolVLM', 'LLaVA', 'Qwen-VL'],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**LocalAI: Offline AI Chat LLM é um app Android gratuito da desenvolvedora ApexCreator que executa modelos de linguagem GGUF no próprio dispositivo via llama.cpp, com um nível premium pago opcional.** Segundo sua página na Google Play, o app adiciona chat com documentos em arquivos PDF, Word, Excel e CSV usando recuperação vetorial no dispositivo (sqlite-vec), suporte a modelos com capacidade de visão e saída estruturada em JSON/restrita por gramática. O app é de código fechado, e esta análise não encontrou nenhum repositório de código público para ele — cada afirmação técnica aqui tem como fonte a página pública da Play Store, não uma auditoria independente. Leitores que queiram uma alternativa de código aberto com repositório público devem ler a [análise do ToolNeuron](/pt/power-local-llm/toolneuron-review) em vez disso.',
@@ -1727,7 +1727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'localai vs toolneuron',
       'free local ai app android',
     ],
-    current_models_mentioned: ['GGUF models', 'SmolVLM', 'LLaVA', 'Qwen-VL'],
+    current_models_mentioned: ['SmolVLM', 'LLaVA', 'Qwen-VL'],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**LocalAI: Offline AI Chat LLMは、開発者ApexCreatorによる無料のAndroidアプリで、llama.cppを介してGGUF言語モデルをデバイス上で実行し、有料プレミアム層もオプションで用意されている。** Google Playの掲載情報によると、デバイス上のベクトル検索(sqlite-vec)を使ったPDF・Word・Excel・CSVファイルへのドキュメントチャット、ビジョン対応モデルのサポート、構造化されたJSON/文法制約付き出力が追加されているとされる。このアプリはクローズドソースであり、本レビューでは公開されているコードリポジトリは見つからなかった――ここに記載する技術的な主張はすべてPlayストアの公開掲載情報から得たものであり、独自の調査によるものではない。公開リポジトリを持つオープンソースの代替を求める読者は、代わりに[ToolNeuronレビュー](/ja/power-local-llm/toolneuron-review)を読むべきだろう。',
@@ -2067,7 +2067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'localai vs toolneuron',
       'free local ai app android',
     ],
-    current_models_mentioned: ['GGUF models', 'SmolVLM', 'LLaVA', 'Qwen-VL'],
+    current_models_mentioned: ['SmolVLM', 'LLaVA', 'Qwen-VL'],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**LocalAI: Offline AI Chat LLM是开发者ApexCreator推出的一款免费Android应用,通过llama.cpp在设备本地运行GGUF语言模型,并提供可选的付费高级套餐。**根据其Google Play商店页面介绍,该应用还加入了针对PDF、Word、Excel和CSV文件的文档聊天功能(使用设备本地向量检索,sqlite-vec)、对支持视觉的模型的支持,以及结构化JSON/语法约束输出。这款应用是闭源的,本次评测未能找到其公开的代码仓库——文中所有技术性说法均来自公开的Play商店页面介绍,而非独立审查。希望使用拥有公开代码仓库的开源替代方案的读者,应改读[ToolNeuron评测](/zh/power-local-llm/toolneuron-review)。',
@@ -2407,7 +2407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'localai vs toolneuron',
       'free local ai app android',
     ],
-    current_models_mentioned: ['GGUF models', 'SmolVLM', 'LLaVA', 'Qwen-VL'],
+    current_models_mentioned: ['SmolVLM', 'LLaVA', 'Qwen-VL'],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**LocalAI: Offline AI Chat LLM هو تطبيق أندرويد مجاني من المطوّر ApexCreator يشغّل نماذج لغوية بصيغة GGUF على الجهاز عبر llama.cpp، مع فئة مدفوعة اختيارية premium.** وحسب صفحته على Google Play، يضيف دردشة على المستندات عبر ملفات PDF وWord وExcel وCSV باستخدام استرجاع متجهي على الجهاز (sqlite-vec)، ودعم نماذج ذات قدرة على الرؤية، وإخراج بنية JSON/قواعد مقيدة. التطبيق مغلق المصدر، ولم تعثر هذه المراجعة على مستودع كود عام له — كل ادعاء تقني هنا مصدره صفحة Google Play العامة، لا تدقيق مستقل. من يريد بديلاً مفتوح المصدر بمستودع عام، عليه قراءة [مراجعة ToolNeuron](/ar/power-local-llm/toolneuron-review) بدلاً من ذلك.',
@@ -2747,7 +2747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'localai vs toolneuron',
       'free local ai app android',
     ],
-    current_models_mentioned: ['GGUF models', 'SmolVLM', 'LLaVA', 'Qwen-VL'],
+    current_models_mentioned: ['SmolVLM', 'LLaVA', 'Qwen-VL'],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**LocalAI: Offline AI Chat LLM은 개발자 ApexCreator가 만든 무료 안드로이드 앱으로, llama.cpp를 통해 GGUF 언어 모델을 기기 내에서 실행하며 유료 프리미엄 등급을 선택할 수 있습니다.** 자체 Google Play 등록 정보에 따르면 기기 내 벡터 검색(sqlite-vec)을 이용한 PDF, Word, Excel, CSV 파일 문서 채팅, 비전 지원 모델, 구조화된 JSON/문법 제한 출력을 제공합니다. 이 앱은 클로즈드 소스이며, 이 리뷰에서는 공개 코드 저장소를 찾지 못했습니다 — 여기 실린 모든 기술적 주장은 독립적인 감사가 아니라 공개된 Play 스토어 등록 정보에서 가져온 것입니다. 공개 저장소가 있는 오픈소스 대안을 원하는 독자는 대신 [ToolNeuron 리뷰](/ko/power-local-llm/toolneuron-review)를 읽어보시기 바랍니다.',

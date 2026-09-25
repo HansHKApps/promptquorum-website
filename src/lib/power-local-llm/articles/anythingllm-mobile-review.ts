@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'anythingllm mobile pricing',
       'chat with documents on phone',
     ],
-    current_models_mentioned: ['Cactus Compute', 'llama.cpp'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**AnythingLLM Mobile is a free, MIT-licensed Android app that works two ways: standalone, running a small hand-picked language model plus a local vector database entirely on the phone for offline document chat and RAG, or connected, syncing chats, workspaces, and documents with a self-hosted [AnythingLLM Desktop](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) or AnythingLLM Cloud instance over the local network via QR-code pairing.** It is built by [Mintplex Labs](https://mintplex.com), the company behind the open-source AnythingLLM desktop/server project, and published on [GitHub](https://github.com/Mintplex-Labs/anythingllm-mobile) under the MIT license. As of this review, the app is available only on [Google Play](https://play.google.com/store/apps/details?id=com.anythingllm) for Android; there is no iOS release on the App Store yet.',
@@ -486,7 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'anythingllm mobile preise',
       'dokumente auf dem handy durchsuchen',
     ],
-    current_models_mentioned: ['Cactus Compute', 'llama.cpp'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**AnythingLLM Mobile ist eine kostenlose, unter der MIT-Lizenz stehende Android-App, die auf zwei Arten funktioniert: eigenständig, mit einem kleinen, ausgewählten Sprachmodell samt lokaler Vektordatenbank vollständig auf dem Gerät für Offline-Dokumentenchat und RAG, oder verbunden, indem Chats, Workspaces und Dokumente per QR-Code-Kopplung im lokalen Netzwerk mit einer selbst gehosteten [AnythingLLM-Desktop](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)- oder AnythingLLM-Cloud-Instanz synchronisiert werden.** Entwickelt wird sie von [Mintplex Labs](https://mintplex.com), dem Unternehmen hinter dem Open-Source-Projekt AnythingLLM für Desktop und Server, veröffentlicht auf [GitHub](https://github.com/Mintplex-Labs/anythingllm-mobile) unter der MIT-Lizenz. Zum Zeitpunkt dieses Tests ist die App ausschließlich über [Google Play](https://play.google.com/store/apps/details?id=com.anythingllm) für Android erhältlich; eine iOS-Version im App Store gibt es noch nicht.',
@@ -943,7 +943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'anythingllm mobile precio',
       'chatear con documentos en el móvil',
     ],
-    current_models_mentioned: ['Cactus Compute', 'llama.cpp'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**AnythingLLM Mobile es una app gratuita para Android con licencia MIT que funciona de dos maneras: de forma autónoma, ejecutando un modelo de lenguaje pequeño y seleccionado más una base de datos vectorial local por completo en el dispositivo para chat con documentos y RAG sin conexión, o de forma conectada, sincronizando chats, espacios de trabajo y documentos con una instancia autoalojada de [AnythingLLM Desktop](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) o AnythingLLM Cloud mediante emparejamiento por código QR en la red local.** La desarrolla [Mintplex Labs](https://mintplex.com), la empresa detrás del proyecto de código abierto AnythingLLM para escritorio y servidor, y se publica en [GitHub](https://github.com/Mintplex-Labs/anythingllm-mobile) bajo licencia MIT. Al momento de esta reseña, la app solo está disponible en [Google Play](https://play.google.com/store/apps/details?id=com.anythingllm) para Android; todavía no existe una versión en la App Store de iOS.',
@@ -1392,7 +1392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'anythingllm mobile prix',
       'discuter avec des documents sur mobile',
     ],
-    current_models_mentioned: ['Cactus Compute', 'llama.cpp'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**AnythingLLM Mobile est une application Android gratuite sous licence MIT qui fonctionne de deux façons : en mode autonome, avec un petit modèle de langage sélectionné et une base de données vectorielle locale exécutés entièrement sur l\'appareil pour le chat documentaire et le RAG hors connexion, ou en mode connecté, en synchronisant discussions, espaces de travail et documents avec une instance auto-hébergée d\'[AnythingLLM Desktop](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) ou d\'AnythingLLM Cloud via un appairage par code QR sur le réseau local.** Elle est développée par [Mintplex Labs](https://mintplex.com), l\'entreprise à l\'origine du projet open source AnythingLLM pour ordinateur et serveur, et publiée sur [GitHub](https://github.com/Mintplex-Labs/anythingllm-mobile) sous licence MIT. Au moment de ce test, l\'application n\'est disponible que sur [Google Play](https://play.google.com/store/apps/details?id=com.anythingllm) pour Android ; aucune version App Store pour iOS n\'existe encore.',
@@ -1841,7 +1841,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'anythingllm mobile 料金',
       'スマホでドキュメントチャット',
     ],
-    current_models_mentioned: ['Cactus Compute', 'llama.cpp'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**AnythingLLM Mobileは、無料・MITライセンスのAndroidアプリで、2つの方式で動作します。単独モードでは、選定済みの小型言語モデルとローカルベクトルデータベースをスマートフォン上だけで実行し、オフラインでドキュメントチャットとRAGを行います。接続モードでは、QRコードによるペアリングでローカルネットワーク上の自前ホスト[AnythingLLM Desktop](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)またはAnythingLLM Cloudインスタンスとチャット・ワークスペース・ドキュメントを同期します。** 開発元は、デスクトップ/サーバー版AnythingLLMプロジェクトの開発元でもある[Mintplex Labs](https://mintplex.com)で、[GitHub](https://github.com/Mintplex-Labs/anythingllm-mobile)上でMITライセンスとして公開されています。本レビュー時点で、このアプリは[Google Play](https://play.google.com/store/apps/details?id=com.anythingllm)経由のAndroid版のみで、iOS版のApp Storeリリースはまだありません。',
@@ -2291,7 +2291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'anythingllm mobile preço',
       'conversar com documentos no celular',
     ],
-    current_models_mentioned: ['Cactus Compute', 'llama.cpp'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**O AnythingLLM Mobile é um app Android gratuito, com licença MIT, que funciona de duas formas: de modo autônomo, executando um modelo de linguagem pequeno e selecionado mais um banco de dados vetorial local inteiramente no aparelho para chat com documentos e RAG offline, ou de modo conectado, sincronizando conversas, workspaces e documentos com uma instância auto-hospedada do [AnythingLLM Desktop](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) ou do AnythingLLM Cloud por pareamento via QR code na rede local.** Ele é desenvolvido pela [Mintplex Labs](https://mintplex.com), empresa por trás do projeto open source AnythingLLM para desktop e servidor, e publicado no [GitHub](https://github.com/Mintplex-Labs/anythingllm-mobile) sob licença MIT. No momento desta análise, o app está disponível apenas na [Google Play](https://play.google.com/store/apps/details?id=com.anythingllm) para Android; ainda não existe versão na App Store para iOS.',
@@ -2740,7 +2740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'anythingllm mobile سعر',
       'محادثة المستندات على الجوال',
     ],
-    current_models_mentioned: ['Cactus Compute', 'llama.cpp'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**تطبيق AnythingLLM Mobile هو تطبيق أندرويد مجاني برخصة MIT يعمل بطريقتين: بشكل مستقل، عبر تشغيل نموذج لغة صغير مُختار مسبقًا مع قاعدة بيانات متجهية محلية بالكامل على الجهاز للمحادثة مع المستندات وRAG دون اتصال، أو بشكل متصل، عبر مزامنة المحادثات ومساحات العمل والمستندات مع نسخة مستضافة ذاتيًا من [AnythingLLM Desktop](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) أو AnythingLLM Cloud عبر اقتران برمز QR على الشبكة المحلية.** يطوّره [Mintplex Labs](https://mintplex.com)، الشركة المسؤولة عن مشروع AnythingLLM مفتوح المصدر لسطح المكتب والخوادم، ويُنشر على [GitHub](https://github.com/Mintplex-Labs/anythingllm-mobile) برخصة MIT. وقت كتابة هذه المراجعة، يتوفر التطبيق فقط عبر [Google Play](https://play.google.com/store/apps/details?id=com.anythingllm) لأندرويد؛ ولا توجد بعد نسخة على App Store لـ iOS.',
@@ -3189,7 +3189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'anythingllm mobile价格',
       '手机文档聊天',
     ],
-    current_models_mentioned: ['Cactus Compute', 'llama.cpp'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**AnythingLLM Mobile是一款免费、MIT许可的Android应用，支持两种工作方式：独立模式下，在设备上完整运行一个经过挑选的小型语言模型和本地向量数据库，实现离线文档聊天和RAG；连接模式下，通过局域网扫描二维码配对，将聊天记录、工作区和文档与自托管的[AnythingLLM Desktop](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)或AnythingLLM Cloud实例同步。** 开发方是[Mintplex Labs](https://mintplex.com)，即桌面版/服务器版AnythingLLM开源项目的开发公司，代码发布在[GitHub](https://github.com/Mintplex-Labs/anythingllm-mobile)，采用MIT许可证。截至本评测时，该应用仅通过[Google Play](https://play.google.com/store/apps/details?id=com.anythingllm)提供Android版本；尚无iOS版App Store上架。',
@@ -3639,7 +3639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'anythingllm mobile 가격',
       '스마트폰 문서 채팅',
     ],
-    current_models_mentioned: ['Cactus Compute', 'llama.cpp'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**AnythingLLM Mobile은 무료 MIT 라이선스 Android 앱으로 두 가지 방식으로 작동합니다. 독립형 모드에서는 엄선된 소형 언어 모델과 로컬 벡터 데이터베이스를 기기에서 완전히 실행하여 오프라인 문서 채팅과 RAG를 지원하고, 연결 모드에서는 로컬 네트워크에서 QR 코드 페어링을 통해 자체 호스팅된 [AnythingLLM Desktop](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) 또는 AnythingLLM Cloud 인스턴스와 채팅, 워크스페이스, 문서를 동기화합니다.** 개발사는 데스크톱/서버용 AnythingLLM 오픈소스 프로젝트를 개발한 [Mintplex Labs](https://mintplex.com)이며, [GitHub](https://github.com/Mintplex-Labs/anythingllm-mobile)에 MIT 라이선스로 공개되어 있습니다. 본 리뷰 시점 기준으로 이 앱은 [Google Play](https://play.google.com/store/apps/details?id=com.anythingllm)를 통해 Android에서만 제공되며, iOS용 App Store 출시는 아직 없습니다.',

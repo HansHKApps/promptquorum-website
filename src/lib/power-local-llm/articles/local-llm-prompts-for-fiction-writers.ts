@@ -26,7 +26,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 32B',
       'Mistral Large',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -551,7 +551,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           { 'Task': 'Dialogue / character voice', 'Recommended Model': 'Command A+ or Hermes 3', 'Why': 'Naturalistic speech register; differentiates character voices reliably across extended exchanges' },
           { 'Task': 'Worldbuilding', 'Recommended Model': 'Qwen3 32B', 'Why': 'Strong at structured detail generation; maintains the concentric-ring expansion pattern reliably' },
           { 'Task': 'Revision / editing', 'Recommended Model': 'Llama 3.3 70B', 'Why': 'Best at following specific structural rewrite instructions across a full paragraph' },
-          { 'Task': 'Dark / uncensored fiction', 'Recommended Model': 'Hermes 3 Llama 3.3', 'Why': 'Fine-tuned for fewer content refusals; no cloud terms-of-service constraints when run locally' },
+          { 'Task': 'Dark / uncensored fiction', 'Recommended Model': 'Hermes 3 Llama 3.1', 'Why': 'Fine-tuned for fewer content refusals; no cloud terms-of-service constraints when run locally' },
         ],
         callouts: [
           {
@@ -604,7 +604,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'What is the best local LLM for writing dark or mature fiction?',
-            a: 'Hermes 3 Llama 3.3, Dolphin 3.0 Mistral, or any model fine-tuned to reduce content refusals. When running locally, there are no cloud terms-of-service restrictions — the model\'s base fine-tune determines what it will and won\'t generate. See [Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing-2026) for a full breakdown of uncensored model options and ethical framing.',
+            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, or any model fine-tuned to reduce content refusals. When running locally, there are no cloud terms-of-service restrictions — the model\'s base fine-tune determines what it will and won\'t generate. See [Best Local LLMs for Creative Writing 2026](/power-local-llm/best-local-llm-creative-writing-2026) for a full breakdown of uncensored model options and ethical framing.',
           },
           {
             q: 'Can I use these templates in SillyTavern or Agnai?',
@@ -654,7 +654,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'Qwen3 32B',
       'Mistral Large',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -1178,7 +1178,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           { 'Aufgabe': 'Dialog / Charakterstimme', 'Empfohlenes Modell': 'Command A+ oder Hermes 3', 'Warum': 'Naturalistisches Sprachregister; differenziert Charakterstimmen zuverlässig über längere Exchanges' },
           { 'Aufgabe': 'Weltenbau', 'Empfohlenes Modell': 'Qwen3 32B', 'Warum': 'Stark bei strukturierter Detailgenerierung; hält das konzentrische Ring-Erweiterungsmuster zuverlässig' },
           { 'Aufgabe': 'Überarbeitung / Lektorat', 'Empfohlenes Modell': 'Llama 3.3 70B', 'Warum': 'Bestes Anweisungsfolgen für spezifische strukturelle Umschreib-Anweisungen über einen vollständigen Absatz' },
-          { 'Aufgabe': 'Dunkle / Uncensored Belletristik', 'Empfohlenes Modell': 'Hermes 3 Llama 3.3', 'Warum': 'Fine-tuned für weniger Inhaltsablehnungen; keine Cloud-Nutzungsbedingungen bei lokalem Betrieb' },
+          { 'Aufgabe': 'Dunkle / Uncensored Belletristik', 'Empfohlenes Modell': 'Hermes 3 Llama 3.1', 'Warum': 'Fine-tuned für weniger Inhaltsablehnungen; keine Cloud-Nutzungsbedingungen bei lokalem Betrieb' },
         ],
         callouts: [
           {
@@ -1231,7 +1231,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Was ist das beste lokale LLM für das Schreiben von dunkler oder reifer Belletristik?',
-            a: 'Hermes 3 Llama 3.3, Dolphin 3.0 Mistral oder jedes Modell, das für weniger Inhaltsablehnungen feinabgestimmt ist. Bei lokalem Betrieb gibt es keine Cloud-Nutzungsbedingungen — das Basis-Fine-tune des Modells bestimmt, was es schreiben will und was nicht. Siehe [Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing-2026) für eine vollständige Übersicht über Uncensored-Modell-Optionen.',
+            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral oder jedes Modell, das für weniger Inhaltsablehnungen feinabgestimmt ist. Bei lokalem Betrieb gibt es keine Cloud-Nutzungsbedingungen — das Basis-Fine-tune des Modells bestimmt, was es schreiben will und was nicht. Siehe [Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing-2026) für eine vollständige Übersicht über Uncensored-Modell-Optionen.',
           },
           {
             q: 'Kann ich diese Vorlagen in SillyTavern oder Agnai verwenden?',
@@ -1289,7 +1289,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'Qwen3 32B',
       'Mistral Large',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 Go',
@@ -1814,7 +1814,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           { 'Tâche': 'Dialogue / voix des personnages', 'Modèle recommandé': 'Command A+ ou Hermes 3', 'Pourquoi': 'Registre de parole naturaliste ; différenciation fiable des voix sur les échanges longs' },
           { 'Tâche': 'Construction de monde', 'Modèle recommandé': 'Qwen3 32B', 'Pourquoi': 'Bon pour la génération de détails structurés ; maintient fiablement le schéma d\'expansion en anneaux concentriques' },
           { 'Tâche': 'Révision / correction', 'Modèle recommandé': 'Llama 3.3 70B', 'Pourquoi': 'Meilleur pour suivre des instructions de réécriture structurelles spécifiques sur un paragraphe entier' },
-          { 'Tâche': 'Fiction sombre / non censurée', 'Modèle recommandé': 'Hermes 3 Llama 3.3', 'Pourquoi': 'Fine-tuné pour moins de refus de contenu ; aucune restriction des conditions d\'utilisation cloud lors de l\'exécution locale' },
+          { 'Tâche': 'Fiction sombre / non censurée', 'Modèle recommandé': 'Hermes 3 Llama 3.1', 'Pourquoi': 'Fine-tuné pour moins de refus de contenu ; aucune restriction des conditions d\'utilisation cloud lors de l\'exécution locale' },
         ],
         callouts: [
           {
@@ -1867,7 +1867,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Quel est le meilleur LLM local pour écrire de la fiction sombre ou mature ?',
-            a: 'Hermes 3 Llama 3.3, Dolphin 3.0 Mistral, ou tout modèle fine-tuné pour réduire les refus de contenu. Lors de l\'exécution en local, il n\'y a pas de restrictions des conditions d\'utilisation cloud — le fine-tune de base du modèle détermine ce qu\'il produira ou ne produira pas. Voir [Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing-2026) pour une analyse complète des options de modèles non censurés et du cadrage éthique.',
+            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, ou tout modèle fine-tuné pour réduire les refus de contenu. Lors de l\'exécution en local, il n\'y a pas de restrictions des conditions d\'utilisation cloud — le fine-tune de base du modèle détermine ce qu\'il produira ou ne produira pas. Voir [Meilleurs LLM locaux pour l\'écriture créative 2026](/fr/power-local-llm/best-local-llm-creative-writing-2026) pour une analyse complète des options de modèles non censurés et du cadrage éthique.',
           },
           {
             q: 'Puis-je utiliser ces modèles dans SillyTavern ou Agnai ?',
@@ -1925,7 +1925,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'Qwen3 32B',
       'Mistral Large',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -2450,7 +2450,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           { 'タスク': 'ダイアログ／キャラクターの声', 'おすすめモデル': 'Command A+ またはHermes 3', '理由': 'ナチュラルな話し言葉レジスター；長い交換にわたる信頼できるキャラクターの声の分化' },
           { 'タスク': '世界構築', 'おすすめモデル': 'Qwen3 32B', '理由': '構造化詳細生成に優秀；同心円状拡張パターンを確実に維持' },
           { 'タスク': '修正／編集', 'おすすめモデル': 'Llama 3.3 70B', '理由': '完全な段落にわたる特定の構造的書き直し命令への追従に最高' },
-          { 'タスク': 'ダーク／無検閲フィクション', 'おすすめモデル': 'Hermes 3 Llama 3.3', '理由': 'コンテンツ拒否が少ないようにファインチューニングされている；ローカル実行時のクラウド利用規約制限なし' },
+          { 'タスク': 'ダーク／無検閲フィクション', 'おすすめモデル': 'Hermes 3 Llama 3.1', '理由': 'コンテンツ拒否が少ないようにファインチューニングされている；ローカル実行時のクラウド利用規約制限なし' },
         ],
         callouts: [
           {
@@ -2503,7 +2503,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'ダークまたは成熟したフィクションを書くための最良のローカルLLMは何ですか？',
-            a: 'Hermes 3 Llama 3.3・Dolphin 3.0 Mistral、またはコンテンツ拒否を減らすためにファインチューニングされたモデル。ローカルで実行する場合、クラウドの利用規約制限はありません——モデルのベースファインチューンが何を生成するかを決定します。無検閲モデルオプションと倫理的フレームの完全な内訳については[クリエイティブライティングのためのベストローカルLLMs 2026](/ja/power-local-llm/best-local-llm-creative-writing-2026)をご覧ください。',
+            a: 'Hermes 3 Llama 3.1・Dolphin 3.0 Mistral、またはコンテンツ拒否を減らすためにファインチューニングされたモデル。ローカルで実行する場合、クラウドの利用規約制限はありません——モデルのベースファインチューンが何を生成するかを決定します。無検閲モデルオプションと倫理的フレームの完全な内訳については[クリエイティブライティングのためのベストローカルLLMs 2026](/ja/power-local-llm/best-local-llm-creative-writing-2026)をご覧ください。',
           },
           {
             q: 'これらのテンプレートはSillyTavernやAgnaiで使用できますか？',
@@ -2573,7 +2573,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'Qwen3 32B',
       'Mistral Large',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -3098,7 +3098,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           { '任务': '对话/角色声音', '推荐模型': 'Command A+或Hermes 3', '原因': '自然的口语语域；在长篇交流中可靠地区分角色声音' },
           { '任务': '世界构建', '推荐模型': 'Qwen3 32B', '原因': '擅长结构化细节生成；可靠地保持同心圆扩展模式' },
           { '任务': '修改/编辑', '推荐模型': 'Llama 3.3 70B', '原因': '最擅长在整个段落中遵循特定的结构重写指令' },
-          { '任务': '黑暗/无审查小说', '推荐模型': 'Hermes 3 Llama 3.3', '原因': '针对更少内容拒绝进行微调；本地运行时无云端服务条款限制' },
+          { '任务': '黑暗/无审查小说', '推荐模型': 'Hermes 3 Llama 3.1', '原因': '针对更少内容拒绝进行微调；本地运行时无云端服务条款限制' },
         ],
         callouts: [
           {
@@ -3151,7 +3151,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: '写黑暗或成熟小说最好的本地LLM是什么？',
-            a: 'Hermes 3 Llama 3.3、Dolphin 3.0 Mistral，或任何针对减少内容拒绝进行微调的模型。在本地运行时，没有云端服务条款限制——模型的基础微调决定了它会和不会生成什么。关于无审查模型选项和伦理框架的完整细分，请参阅[2026年创意写作最佳本地LLMs](/zh/power-local-llm/best-local-llm-creative-writing-2026)。',
+            a: 'Hermes 3 Llama 3.1、Dolphin 3.0 Mistral，或任何针对减少内容拒绝进行微调的模型。在本地运行时，没有云端服务条款限制——模型的基础微调决定了它会和不会生成什么。关于无审查模型选项和伦理框架的完整细分，请参阅[2026年创意写作最佳本地LLMs](/zh/power-local-llm/best-local-llm-creative-writing-2026)。',
           },
           {
             q: '我可以在SillyTavern或Agnai中使用这些模板吗？',
@@ -3209,7 +3209,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'Qwen3 32B',
       'Mistral Large',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -3734,7 +3734,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           { 'Tarea': 'Diálogo / voz de personaje', 'Modelo recomendado': 'Command A+ o Hermes 3', 'Por qué': 'Registro de habla naturalista; diferencia las voces de los personajes de forma confiable en intercambios extensos' },
           { 'Tarea': 'Construcción de mundos', 'Modelo recomendado': 'Qwen3 32B', 'Por qué': 'Fuerte en la generación de detalles estructurados; mantiene el patrón de expansión de anillos concéntricos de forma confiable' },
           { 'Tarea': 'Revisión / edición', 'Modelo recomendado': 'Llama 3.3 70B', 'Por qué': 'Mejor en seguir instrucciones de reescritura estructural específicas a lo largo de un párrafo completo' },
-          { 'Tarea': 'Ficción oscura / sin censura', 'Modelo recomendado': 'Hermes 3 Llama 3.3', 'Por qué': 'Ajustado para menos rechazos de contenido; sin restricciones de términos de servicio en la nube al ejecutarse localmente' },
+          { 'Tarea': 'Ficción oscura / sin censura', 'Modelo recomendado': 'Hermes 3 Llama 3.1', 'Por qué': 'Ajustado para menos rechazos de contenido; sin restricciones de términos de servicio en la nube al ejecutarse localmente' },
         ],
         callouts: [
           {
@@ -3787,7 +3787,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: '¿Cuál es el mejor LLM local para escribir ficción oscura o madura?',
-            a: 'Hermes 3 Llama 3.3, Dolphin 3.0 Mistral, o cualquier modelo ajustado para reducir los rechazos de contenido. Cuando se ejecuta localmente, no hay restricciones de términos de servicio en la nube — el ajuste fino base del modelo determina lo que generará y lo que no. Ver [Mejores LLM locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing-2026) para un desglose completo de las opciones de modelos sin censura y el marco ético.',
+            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, o cualquier modelo ajustado para reducir los rechazos de contenido. Cuando se ejecuta localmente, no hay restricciones de términos de servicio en la nube — el ajuste fino base del modelo determina lo que generará y lo que no. Ver [Mejores LLM locales para escritura creativa 2026](/es/power-local-llm/best-local-llm-creative-writing-2026) para un desglose completo de las opciones de modelos sin censura y el marco ético.',
           },
           {
             q: '¿Puedo usar estas plantillas en SillyTavern o Agnai?',
@@ -3851,7 +3851,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'Qwen3 32B',
       'Mistral Large',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -4376,7 +4376,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           { 'Tarefa': 'Diálogo / voz de personagem', 'Modelo recomendado': 'Command A+ ou Hermes 3', 'Por quê': 'Registro de fala naturalista; diferencia as vozes dos personagens de forma confiável em trocas extensas' },
           { 'Tarefa': 'Construção de mundos', 'Modelo recomendado': 'Qwen3 32B', 'Por quê': 'Forte na geração de detalhes estruturados; mantém o padrão de expansão de anéis concêntricos de forma confiável' },
           { 'Tarefa': 'Revisão / edição', 'Modelo recomendado': 'Llama 3.3 70B', 'Por quê': 'Melhor em seguir instruções de reescrita estrutural específicas ao longo de um parágrafo completo' },
-          { 'Tarefa': 'Ficção sombria / sem censura', 'Modelo recomendado': 'Hermes 3 Llama 3.3', 'Por quê': 'Ajustado para menos recusas de conteúdo; sem restrições de termos de serviço na nuvem ao rodar localmente' },
+          { 'Tarefa': 'Ficção sombria / sem censura', 'Modelo recomendado': 'Hermes 3 Llama 3.1', 'Por quê': 'Ajustado para menos recusas de conteúdo; sem restrições de termos de serviço na nuvem ao rodar localmente' },
         ],
         callouts: [
           {
@@ -4429,7 +4429,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'Qual é o melhor LLM local para escrever ficção sombria ou madura?',
-            a: 'Hermes 3 Llama 3.3, Dolphin 3.0 Mistral, ou qualquer modelo ajustado para reduzir as recusas de conteúdo. Quando rodado localmente, não há restrições de termos de serviço na nuvem — o fine-tuning base do modelo determina o que ele gerará e o que não gerará. Veja [Melhores LLMs locais para escrita criativa 2026](/pt/power-local-llm/best-local-llm-creative-writing-2026) para um detalhamento completo das opções de modelos sem censura e o enquadramento ético.',
+            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, ou qualquer modelo ajustado para reduzir as recusas de conteúdo. Quando rodado localmente, não há restrições de termos de serviço na nuvem — o fine-tuning base do modelo determina o que ele gerará e o que não gerará. Veja [Melhores LLMs locais para escrita criativa 2026](/pt/power-local-llm/best-local-llm-creative-writing-2026) para um detalhamento completo das opções de modelos sem censura e o enquadramento ético.',
           },
           {
             q: 'Posso usar esses modelos no SillyTavern ou no Agnai?',
@@ -4492,7 +4492,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'Qwen3 32B',
       'Mistral Large',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -5017,7 +5017,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           { 'المهمة': 'الحوار / صوت الشخصية', 'النموذج الموصى به': 'Command A+ أو Hermes 3', 'السبب': 'سجل محكي طبيعي؛ يُميز أصوات الشخصيات بشكل موثوق في التبادلات الموسَّعة' },
           { 'المهمة': 'بناء العوالم', 'النموذج الموصى به': 'Qwen3 32B', 'السبب': 'قوي في توليد التفاصيل المُهيكلة؛ يحافظ على نمط توسع الحلقات المتحدة المركز بشكل موثوق' },
           { 'المهمة': 'المراجعة / التحرير', 'النموذج الموصى به': 'Llama 3.3 70B', 'السبب': 'الأفضل في اتباع تعليمات إعادة الكتابة الهيكلية المحددة عبر فقرة كاملة' },
-          { 'المهمة': 'الخيال الداكن / غير المقيَّد', 'النموذج الموصى به': 'Hermes 3 Llama 3.3', 'السبب': 'مضبوط لرفض أقل للمحتوى؛ بدون قيود شروط خدمة سحابية عند التشغيل محلياً' },
+          { 'المهمة': 'الخيال الداكن / غير المقيَّد', 'النموذج الموصى به': 'Hermes 3 Llama 3.1', 'السبب': 'مضبوط لرفض أقل للمحتوى؛ بدون قيود شروط خدمة سحابية عند التشغيل محلياً' },
         ],
         callouts: [
           {
@@ -5070,7 +5070,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: 'ما أفضل نموذج لغوي محلي لكتابة الخيال الداكن أو الناضج؟',
-            a: 'Hermes 3 Llama 3.3 وDolphin 3.0 Mistral، أو أي نموذج مضبوط لتقليل رفض المحتوى. عند التشغيل محلياً، لا توجد قيود شروط خدمة سحابية — الضبط الدقيق الأساسي للنموذج يحدد ما سيولّده وما لن يولّده. انظر [أفضل النماذج اللغوية المحلية للكتابة الإبداعية 2026](/ar/power-local-llm/best-local-llm-creative-writing-2026) للاطلاع على تفصيل كامل لخيارات النماذج غير المقيَّدة والإطار الأخلاقي.',
+            a: 'Hermes 3 Llama 3.1 وDolphin 3.0 Mistral، أو أي نموذج مضبوط لتقليل رفض المحتوى. عند التشغيل محلياً، لا توجد قيود شروط خدمة سحابية — الضبط الدقيق الأساسي للنموذج يحدد ما سيولّده وما لن يولّده. انظر [أفضل النماذج اللغوية المحلية للكتابة الإبداعية 2026](/ar/power-local-llm/best-local-llm-creative-writing-2026) للاطلاع على تفصيل كامل لخيارات النماذج غير المقيَّدة والإطار الأخلاقي.',
           },
           {
             q: 'هل يمكنني استخدام هذه القوالب في SillyTavern أو Agnai؟',
@@ -5133,7 +5133,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       'Qwen3 32B',
       'Mistral Large',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -5658,7 +5658,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           { '작업': '대화 / 인물 목소리', '추천 모델': 'Command A+ 또는 Hermes 3', '이유': '자연스러운 구어체 레지스터; 광범위한 교환에서 인물 목소리를 안정적으로 구별' },
           { '작업': '세계관 구축', '추천 모델': 'Qwen3 32B', '이유': '구조화된 세부 사항 생성에 강함; 동심원 고리 확장 패턴을 안정적으로 유지' },
           { '작업': '퇴고 / 편집', '추천 모델': 'Llama 3.3 70B', '이유': '전체 단락에 걸쳐 특정 구조적 재작성 지시를 따르는 데 최선' },
-          { '작업': '다크 / 무검열 소설', '추천 모델': 'Hermes 3 Llama 3.3', '이유': '콘텐츠 거부를 줄이도록 조정됨; 로컬에서 실행 시 클라우드 서비스 약관 제한 없음' },
+          { '작업': '다크 / 무검열 소설', '추천 모델': 'Hermes 3 Llama 3.1', '이유': '콘텐츠 거부를 줄이도록 조정됨; 로컬에서 실행 시 클라우드 서비스 약관 제한 없음' },
         ],
         callouts: [
           {
@@ -5711,7 +5711,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           },
           {
             q: '다크 또는 성인 소설을 쓰기에 가장 좋은 로컬 LLM은 무엇입니까?',
-            a: 'Hermes 3 Llama 3.3, Dolphin 3.0 Mistral, 또는 콘텐츠 거부를 줄이도록 조정된 모든 모델. 로컬에서 실행할 때 클라우드 서비스 약관 제한이 없습니다 — 모델의 기본 파인튜닝이 무엇을 생성할지와 생성하지 않을지를 결정합니다. 무검열 모델 옵션 및 윤리적 프레임워크에 대한 전체 내용은 [소설 쓰기를 위한 최고의 로컬 LLM 2026](/ko/power-local-llm/best-local-llm-creative-writing-2026)을 참조하십시오.',
+            a: 'Hermes 3 Llama 3.1, Dolphin 3.0 Mistral, 또는 콘텐츠 거부를 줄이도록 조정된 모든 모델. 로컬에서 실행할 때 클라우드 서비스 약관 제한이 없습니다 — 모델의 기본 파인튜닝이 무엇을 생성할지와 생성하지 않을지를 결정합니다. 무검열 모델 옵션 및 윤리적 프레임워크에 대한 전체 내용은 [소설 쓰기를 위한 최고의 로컬 LLM 2026](/ko/power-local-llm/best-local-llm-creative-writing-2026)을 참조하십시오.',
           },
           {
             q: 'SillyTavern이나 Agnai에서 이 템플릿을 사용할 수 있습니까?',

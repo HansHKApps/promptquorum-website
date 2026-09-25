@@ -27,7 +27,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Large',
       'Command A+',
       'Yi-1.5 34B',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Llama',
     ],
     current_hardware_mentioned: [
@@ -415,7 +415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Large',
       'Command A+',
       'Yi-1.5 34B',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Llama',
     ],
     current_hardware_mentioned: [
@@ -810,7 +810,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Large',
       'Command A+',
       'Yi-1.5 34B',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Llama',
     ],
     current_hardware_mentioned: [
@@ -1205,7 +1205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Large',
       'Command A+',
       'Yi-1.5 34B',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Llama',
     ],
     current_hardware_mentioned: [
@@ -1600,7 +1600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Large',
       'Command A+',
       'Yi-1.5 34B',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Llama',
     ],
     current_hardware_mentioned: [
@@ -1995,7 +1995,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Large',
       'Command A+',
       'Yi-1.5 34B',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Llama',
     ],
     current_hardware_mentioned: [
@@ -2395,7 +2395,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Large',
       'Command A+',
       'Yi-1.5 34B',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Llama',
     ],
     current_hardware_mentioned: [
@@ -2795,7 +2795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Large',
       'Command A+',
       'Yi-1.5 34B',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Llama',
     ],
     current_hardware_mentioned: [
@@ -3195,7 +3195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mistral Large',
       'Command A+',
       'Yi-1.5 34B',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Llama',
     ],
     current_hardware_mentioned: [

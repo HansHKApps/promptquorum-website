@@ -38,7 +38,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'toolneuron vs layla',
       'free local ai app android',
     ],
-    current_models_mentioned: ['Llama', 'Mistral', 'Gemma', 'GGUF models'],
+    current_models_mentioned: ['Llama', 'Mistral', 'Gemma'],
     current_hardware_mentioned: ['Android 12'],
     leadAnswerBlock:
       '**ToolNeuron is a free, open-source (MIT) Android app that runs GGUF language models entirely on-device via llama.cpp, with document RAG, voice input/output, and an OpenAI-compatible local HTTP server — no cloud component, no telemetry, per the project\'s own README.** Built by developer [Siddhesh Sonar](https://github.com/Siddhesh2377), the app wraps its local storage in Android Keystore-backed AES-256-GCM encryption and Argon2id authentication, and requires Android 12 (API 31) or newer. Readers who want a comparison point should also read the [Layla review](/power-local-llm/layla-review) or [RikkaHub review](/power-local-llm/rikkahub-review).',
@@ -385,7 +385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'toolneuron vs layla',
       'free local ai app android',
     ],
-    current_models_mentioned: ['Llama', 'Mistral', 'Gemma', 'GGUF models'],
+    current_models_mentioned: ['Llama', 'Mistral', 'Gemma'],
     current_hardware_mentioned: ['Android 12'],
     leadAnswerBlock:
       '**ToolNeuron ist eine kostenlose, quelloffene (MIT) Android-App, die GGUF-Sprachmodelle vollständig auf dem Gerät über llama.cpp ausführt, mit Dokumenten-RAG, Sprachein-/ausgabe und einem OpenAI-kompatiblen lokalen HTTP-Server — ohne Cloud-Komponente, ohne Telemetrie, laut eigenem README des Projekts.** Entwickelt von [Siddhesh Sonar](https://github.com/Siddhesh2377), verpackt die App ihren lokalen Speicher in eine über den Android Keystore abgesicherte AES-256-GCM-Verschlüsselung mit Argon2id-Authentifizierung und benötigt Android 12 (API 31) oder neuer. Leser, die einen Vergleichspunkt suchen, sollten auch den [Layla-Test](/de/power-local-llm/layla-review) oder den [RikkaHub-Test](/de/power-local-llm/rikkahub-review) lesen.',
@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'toolneuron vs layla',
       'free local ai app android',
     ],
-    current_models_mentioned: ['Llama', 'Mistral', 'Gemma', 'GGUF models'],
+    current_models_mentioned: ['Llama', 'Mistral', 'Gemma'],
     current_hardware_mentioned: ['Android 12'],
     leadAnswerBlock:
       '**ToolNeuron est une application Android gratuite et open source (MIT) qui exécute des modèles de langage GGUF entièrement sur l\'appareil via llama.cpp, avec RAG documentaire, entrée/sortie vocale et un serveur HTTP local compatible OpenAI — sans composante cloud, sans télémétrie, selon le README du projet.** Développée par [Siddhesh Sonar](https://github.com/Siddhesh2377), l\'application protège son stockage local par un chiffrement AES-256-GCM adossé à l\'Android Keystore et une authentification Argon2id, et nécessite Android 12 (API 31) ou une version plus récente. Pour comparer, les lecteurs peuvent aussi lire l\'[avis Layla](/fr/power-local-llm/layla-review) ou l\'[avis RikkaHub](/fr/power-local-llm/rikkahub-review).',
@@ -1105,7 +1105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'toolneuron vs layla',
       'free local ai app android',
     ],
-    current_models_mentioned: ['Llama', 'Mistral', 'Gemma', 'GGUF models'],
+    current_models_mentioned: ['Llama', 'Mistral', 'Gemma'],
     current_hardware_mentioned: ['Android 12'],
     leadAnswerBlock:
       '**ToolNeuron es una app Android gratuita y de código abierto (MIT) que ejecuta modelos de lenguaje GGUF por completo en el dispositivo mediante llama.cpp, con RAG documental, entrada/salida de voz y un servidor HTTP local compatible con OpenAI — sin componente en la nube, sin telemetría, según el propio README del proyecto.** Creada por [Siddhesh Sonar](https://github.com/Siddhesh2377), la app protege su almacenamiento local con cifrado AES-256-GCM respaldado por Android Keystore y autenticación Argon2id, y requiere Android 12 (API 31) o posterior. Los lectores que busquen un punto de comparación también pueden leer la [reseña de Layla](/es/power-local-llm/layla-review) o la [reseña de RikkaHub](/es/power-local-llm/rikkahub-review).',
@@ -1465,7 +1465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'toolneuron vs layla',
       'free local ai app android',
     ],
-    current_models_mentioned: ['Llama', 'Mistral', 'Gemma', 'GGUF models'],
+    current_models_mentioned: ['Llama', 'Mistral', 'Gemma'],
     current_hardware_mentioned: ['Android 12'],
     leadAnswerBlock:
       '**O ToolNeuron é um app Android gratuito e de código aberto (MIT) que executa modelos de linguagem GGUF totalmente no dispositivo via llama.cpp, com RAG de documentos, entrada/saída de voz e um servidor HTTP local compatível com OpenAI — sem componente na nuvem, sem telemetria, segundo o próprio README do projeto.** Criado por [Siddhesh Sonar](https://github.com/Siddhesh2377), o app protege seu armazenamento local com criptografia AES-256-GCM apoiada no Android Keystore e autenticação Argon2id, e exige Android 12 (API 31) ou mais recente. Leitores que buscam um ponto de comparação também podem ler a [análise do Layla](/pt/power-local-llm/layla-review) ou a [análise do RikkaHub](/pt/power-local-llm/rikkahub-review).',
@@ -1825,7 +1825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'toolneuron vs layla',
       'free local ai app android',
     ],
-    current_models_mentioned: ['Llama', 'Mistral', 'Gemma', 'GGUF models'],
+    current_models_mentioned: ['Llama', 'Mistral', 'Gemma'],
     current_hardware_mentioned: ['Android 12'],
     leadAnswerBlock:
       '**ToolNeuronは、[llama.cpp](https://github.com/ggml-org/llama.cpp)経由でGGUF言語モデルを完全に端末上で実行する無料・オープンソース(MIT)のAndroidアプリで、ドキュメントRAG、音声入出力、OpenAI互換のローカルHTTPサーバーを備えています——プロジェクト自身のREADMEによれば、クラウドコンポーネントもテレメトリもありません。** 開発者[Siddhesh Sonar](https://github.com/Siddhesh2377)によって作られ、Android Keystoreに裏打ちされたAES-256-GCM暗号化とArgon2id認証でローカルストレージを保護しており、Android 12(API 31)以降が必要です。比較のため、読者は[Laylaレビュー](/ja/power-local-llm/layla-review)や[RikkaHubレビュー](/ja/power-local-llm/rikkahub-review)も参照してください。',
@@ -2185,7 +2185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'toolneuron vs layla',
       'free local ai app android',
     ],
-    current_models_mentioned: ['Llama', 'Mistral', 'Gemma', 'GGUF models'],
+    current_models_mentioned: ['Llama', 'Mistral', 'Gemma'],
     current_hardware_mentioned: ['Android 12'],
     leadAnswerBlock:
       '**ToolNeuron是一款免费开源(MIT)的Android应用,通过[llama.cpp](https://github.com/ggml-org/llama.cpp)在设备端完整运行GGUF语言模型,并配备文档RAG、语音输入输出和兼容OpenAI的本地HTTP服务器——根据该项目自身的README,没有云端组件,没有遥测。** 由开发者[Siddhesh Sonar](https://github.com/Siddhesh2377)打造,该应用使用基于Android Keystore的AES-256-GCM加密和Argon2id身份验证来保护本地存储,并要求Android 12(API 31)或更高版本。希望寻找比较对象的读者也可以阅读[Layla评测](/zh/power-local-llm/layla-review)或[RikkaHub评测](/zh/power-local-llm/rikkahub-review)。',
@@ -2545,7 +2545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'toolneuron vs layla',
       'free local ai app android',
     ],
-    current_models_mentioned: ['Llama', 'Mistral', 'Gemma', 'GGUF models'],
+    current_models_mentioned: ['Llama', 'Mistral', 'Gemma'],
     current_hardware_mentioned: ['Android 12'],
     leadAnswerBlock:
       '**ToolNeuron تطبيق أندرويد مجاني ومفتوح المصدر (MIT) يشغّل نماذج لغوية بصيغة GGUF بالكامل على الجهاز عبر [llama.cpp](https://github.com/ggml-org/llama.cpp)، مع استرجاع معزز بالبيانات للمستندات، وإدخال/إخراج صوتي، وخادم HTTP محلي متوافق مع OpenAI — دون أي مكوّن سحابي، ودون قياس عن بُعد، وفق ملف README الخاص بالمشروع.** طوّره المطوّر [Siddhesh Sonar](https://github.com/Siddhesh2377)، ويحمي التطبيق تخزينه المحلي بتشفير AES-256-GCM مدعوم بـ Android Keystore ومصادقة Argon2id، ويتطلب أندرويد 12 (واجهة برمجة التطبيقات 31) أو أحدث. يمكن للقراء الباحثين عن نقطة مقارنة الاطلاع أيضًا على [مراجعة Layla](/ar/power-local-llm/layla-review) أو [مراجعة RikkaHub](/ar/power-local-llm/rikkahub-review).',
@@ -2905,7 +2905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'toolneuron vs layla',
       'free local ai app android',
     ],
-    current_models_mentioned: ['Llama', 'Mistral', 'Gemma', 'GGUF models'],
+    current_models_mentioned: ['Llama', 'Mistral', 'Gemma'],
     current_hardware_mentioned: ['Android 12'],
     leadAnswerBlock:
       '**ToolNeuron은 [llama.cpp](https://github.com/ggml-org/llama.cpp)를 통해 GGUF 언어 모델을 완전히 기기 내에서 실행하는 무료 오픈소스(MIT) 안드로이드 앱으로, 문서 RAG, 음성 입출력, OpenAI 호환 로컬 HTTP 서버를 제공합니다——프로젝트 자체 README에 따르면 클라우드 구성 요소도, 텔레메트리도 없습니다.** 개발자 [Siddhesh Sonar](https://github.com/Siddhesh2377)가 만들었으며, Android Keystore 기반 AES-256-GCM 암호화와 Argon2id 인증으로 로컬 저장소를 보호하고, 안드로이드 12(API 31) 이상이 필요합니다. 비교 대상을 찾는 독자는 [Layla 리뷰](/ko/power-local-llm/layla-review)나 [RikkaHub 리뷰](/ko/power-local-llm/rikkahub-review)도 참고하세요.',

@@ -35,6 +35,12 @@
       "action": "baseline-burndown",
       "summary": "local-llms cluster burn-down (skill Step 5, cluster-by-cluster): matcher fixes (colon normalization, bare-family-mention recognition) resolved 474 violations site-wide with zero content risk. Found and fixed 2 real fabrications (Llama 3.3 13B - doesn't exist, Meta only shipped 70B; Qwen 3 mislabeling a Qwen2.5-72B model, recurring across 3 files/247 occurrences). Registered 27 verified real models/families. Fixed Mistral/Mixtral naming error and generic-phrase metadata cleanup. local-llms: 0 UNKNOWN_MODEL remaining, ~36 legitimate STALE_MODEL left as acceptable debt. Site-wide baseline 2682->2391. power-local-llm (~102 unknowns), prompt-bites (~26), prompt-engineering (~8) still pending for future cycles.",
       "branch": "session/model-registry-burndown"
+    },
+    {
+      "date": "2026-09-25",
+      "action": "baseline-burndown",
+      "summary": "Full site-wide burn-down (prompt-engineering, prompt-bites, power-local-llm - completes the cycle started with local-llms). All 4 clusters now 0 UNKNOWN_MODEL. Found and fixed 5 more real fabrications beyond the two from the local-llms pass: Gemini 3.5 Pro (unreleased as of 2026-09-25, swapped for real current Gemini 3.1 Pro), Qwen 3 72B with wrong Apache 2.0 license claim in geopolitics-and-ai.ts (real model is Qwen2.5-72B under the custom Qwen License), a SITE-WIDE Qwen3-Coder dense-size fabrication (7B/14B/32B don't exist - only 30B-A3B/480B-A35B MoE do - 2542 occurrences across 35 files fixed to Qwen2.5-Coder), DeepSeek Coder V3 (doesn't exist, renamed to real DeepSeek-V3, 463 occurrences across 6 files), DeepSeek Coder 14B (doesn't exist in any DeepSeek generation, renamed to real DeepSeek-Coder-V2-Lite), a second Llama 3.3 13B fabrication in power-local-llm, and Hermes 3 Llama 3.3 (Nous Research never released Hermes 3 on a 3.3 base, only 3.1 - 142 occurrences across 5 files). Also cleared several tool-name-not-model-name entries (MLC LLM/Ollama/LM Studio/Cactus Compute/llama.cpp/GGUF-generic-phrases) from current_models_mentioned arrays. Registered ~99 more real verified models/tools across all 3 clusters. Site-wide baseline: 2042 -> 1365, all remaining debt is legitimate STALE_MODEL (real superseded models in historical/comparison context), 0 UNKNOWN_MODEL anywhere on the site.",
+      "branch": "session/model-registry-burndown-2"
     }
   ]
 }

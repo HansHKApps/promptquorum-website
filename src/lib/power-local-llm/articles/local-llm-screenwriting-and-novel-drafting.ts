@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 32B',
       'Mistral Large',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -103,7 +103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Scene generation target:** 200–600 words per generation call; longer scenes via multiple sequential prompts.',
           '**Screenwriting format:** combine Ollama with Fountain-format output instructions for screenplay-format text.',
           '**Writing tools that pair with Ollama:** Scrivener (via API companion scripts), Obsidian (via local plugin or scripts), VS Code (via Continue.dev or direct API calls), plain terminal.',
-          '**Uncensored option:** Hermes 3 Llama 3.3 for mature fiction; same workflow, same session document technique.',
+          '**Uncensored option:** Hermes 3 Llama 3.1 for mature fiction; same workflow, same session document technique.',
         ],
       },
       contextWindow: {
@@ -281,7 +281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Task': 'Beat sheet / outline generation', 'Recommended Model': 'Qwen3 32B', 'Why': 'Strong structural generation; follows numbered-list and constraint-heavy outline prompts reliably' },
           { 'Task': 'Dialogue passes', 'Recommended Model': 'Command A+', 'Why': 'Best naturalistic speech register and character voice differentiation across extended exchanges' },
           { 'Task': 'Revision (structural)', 'Recommended Model': 'Llama 3.3 70B', 'Why': 'Best at following specific named structural constraints in rewrite instructions' },
-          { 'Task': 'Mature / dark fiction', 'Recommended Model': 'Hermes 3 Llama 3.3 70B', 'Why': 'Same base as Llama 3.3 70B; uncensored fine-tune; identical context adherence for long-form work' },
+          { 'Task': 'Mature / dark fiction', 'Recommended Model': 'Hermes 3 Llama 3.1 70B', 'Why': 'Same base as Llama 3.1 70B; uncensored fine-tune; identical context adherence for long-form work' },
         ],
       },
       commonMistakes: {
@@ -391,7 +391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 32B',
       'Mistral Large',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -469,7 +469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Objetivo de generación de escenas:** 200–600 palabras por llamada de generación; escenas más largas mediante múltiples prompts secuenciales.',
           '**Formato de guion:** combina Ollama con instrucciones de salida en formato Fountain para texto con formato de guion.',
           '**Herramientas de escritura que funcionan con Ollama:** Scrivener (mediante scripts API), Obsidian (mediante plugin local o scripts), VS Code (mediante Continue.dev o llamadas API directas), terminal pura.',
-          '**Opción sin censura:** Hermes 3 Llama 3.3 para ficción madura; mismo flujo de trabajo, misma técnica de documento de sesión.',
+          '**Opción sin censura:** Hermes 3 Llama 3.1 para ficción madura; mismo flujo de trabajo, misma técnica de documento de sesión.',
         ],
       },
       contextWindow: {
@@ -647,7 +647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tarea': 'Generación de beat sheet / esquema', 'Modelo recomendado': 'Qwen3 32B', 'Por qué': 'Generación estructural fuerte; sigue de forma confiable prompts de esquema con listas numeradas y restricciones estrictas' },
           { 'Tarea': 'Pasadas de diálogo', 'Modelo recomendado': 'Command A+', 'Por qué': 'Mejor registro de habla naturalista y diferenciación de voz de personaje en intercambios extendidos' },
           { 'Tarea': 'Revisión (estructural)', 'Modelo recomendado': 'Llama 3.3 70B', 'Por qué': 'Mejor en seguir restricciones estructurales específicas nombradas en instrucciones de reescritura' },
-          { 'Tarea': 'Ficción madura / oscura', 'Modelo recomendado': 'Hermes 3 Llama 3.3 70B', 'Por qué': 'Misma base que Llama 3.3 70B; fine-tune sin censura; adherencia al contexto idéntica para trabajos de formato largo' },
+          { 'Tarea': 'Ficción madura / oscura', 'Modelo recomendado': 'Hermes 3 Llama 3.1 70B', 'Por qué': 'Misma base que Llama 3.3 70B; fine-tune sin censura; adherencia al contexto idéntica para trabajos de formato largo' },
         ],
       },
       commonMistakes: {
@@ -771,7 +771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 32B',
       'Mistral Large',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -849,7 +849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Szenengenerierungsziel:** 200–600 Wörter pro Generierungsaufruf; längere Szenen über mehrere sequenzielle Prompts.',
           '**Drehbuchformat:** Ollama mit Fountain-Format-Ausgabeanweisungen kombinieren für Skript-formatierten Text.',
           '**Schreibtools, die mit Ollama funktionieren:** Scrivener (über API-Begleitskripte), Obsidian (über lokales Plugin oder Skripte), VS Code (über Continue.dev oder direkte API-Aufrufe), reines Terminal.',
-          '**Uncensored-Option:** Hermes 3 Llama 3.3 für reife Fiktion; gleicher Workflow, gleiche Session-Dokument-Technik.',
+          '**Uncensored-Option:** Hermes 3 Llama 3.1 für reife Fiktion; gleicher Workflow, gleiche Session-Dokument-Technik.',
         ],
       },
       contextWindow: {
@@ -1027,7 +1027,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aufgabe': 'Beat Sheet / Outline-Generierung', 'Empfohlenes Modell': 'Qwen3 32B', 'Warum': 'Starke strukturelle Generierung; folgt constraint-schweren Outline-Prompts zuverlässig' },
           { 'Aufgabe': 'Dialogdurchläufe', 'Empfohlenes Modell': 'Command A+', 'Warum': 'Bestes naturalistisches Sprachregister und Charakterstimmdifferenzierung über ausgedehnte Austausche' },
           { 'Aufgabe': 'Überarbeitung (strukturell)', 'Empfohlenes Modell': 'Llama 3.3 70B', 'Warum': 'Am besten darin, spezifische strukturelle Einschränkungen in Umschreibanweisungen zu befolgen' },
-          { 'Aufgabe': 'Reife / dunkle Fiktion', 'Empfohlenes Modell': 'Hermes 3 Llama 3.3 70B', 'Warum': 'Gleiche Basis wie Llama 3.3 70B; uncensored Fine-Tune; identische Kontextadhärenz für Langformarbeiten' },
+          { 'Aufgabe': 'Reife / dunkle Fiktion', 'Empfohlenes Modell': 'Hermes 3 Llama 3.1 70B', 'Warum': 'Gleiche Basis wie Llama 3.3 70B; uncensored Fine-Tune; identische Kontextadhärenz für Langformarbeiten' },
         ],
       },
       commonMistakes: {
@@ -1141,7 +1141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 32B',
       'Mistral Large',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -1219,7 +1219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Cible de génération de scène :** 200–600 mots par appel de génération ; scènes plus longues via plusieurs prompts séquentiels.',
           '**Format scénario :** combiner Ollama avec des instructions de sortie au format Fountain pour du texte formaté screenplay.',
           '**Outils d\'écriture compatibles Ollama :** Scrivener (via scripts API compagnons), Obsidian (via plugin local ou scripts), VS Code (via Continue.dev ou appels API directs), terminal brut.',
-          '**Option non censurée :** Hermes 3 Llama 3.3 pour la fiction adulte ; même workflow, même technique du document de session.',
+          '**Option non censurée :** Hermes 3 Llama 3.1 pour la fiction adulte ; même workflow, même technique du document de session.',
         ],
       },
       contextWindow: {
@@ -1397,7 +1397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tâche': 'Génération de beat sheet / outline', 'Modèle recommandé': 'Qwen3 32B', 'Pourquoi': 'Forte génération structurelle ; suit fiablement les prompts d\'outline à contraintes multiples' },
           { 'Tâche': 'Passes de dialogue', 'Modèle recommandé': 'Command A+', 'Pourquoi': 'Meilleur registre de parole naturel et différenciation des voix de personnages sur des échanges longs' },
           { 'Tâche': 'Révision (structurelle)', 'Modèle recommandé': 'Llama 3.3 70B', 'Pourquoi': 'Meilleur pour suivre des contraintes structurelles nommées dans les instructions de réécriture' },
-          { 'Tâche': 'Fiction adulte / sombre', 'Modèle recommandé': 'Hermes 3 Llama 3.3 70B', 'Pourquoi': 'Même base que Llama 3.3 70B ; fine-tune non censuré ; adhérence au contexte identique pour le long format' },
+          { 'Tâche': 'Fiction adulte / sombre', 'Modèle recommandé': 'Hermes 3 Llama 3.1 70B', 'Pourquoi': 'Même base que Llama 3.3 70B ; fine-tune non censuré ; adhérence au contexte identique pour le long format' },
         ],
       },
       commonMistakes: {
@@ -1511,7 +1511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 32B',
       'Mistral Large',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -1589,7 +1589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**シーン生成の目標：** 1生成呼び出しあたり200〜600語；複数の連続プロンプトで長いシーンを生成。',
           '**脚本フォーマット：** Fountain形式の出力命令とOllamaを組み合わせてスクリプトフォーマットのテキストを生成。',
           '**Ollamaと連携するライティングツール：** Scrivener（APIスクリプト経由）、Obsidian（プラグインまたはスクリプト経由）、VS Code（Continue.dev経由）、ターミナル。',
-          '**アンセンサードオプション：** 成熟したフィクション向けHermes 3 Llama 3.3；同じワークフロー、同じセッションドキュメント技術。',
+          '**アンセンサードオプション：** 成熟したフィクション向けHermes 3 Llama 3.1；同じワークフロー、同じセッションドキュメント技術。',
         ],
       },
       contextWindow: {
@@ -1767,7 +1767,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'タスク': 'ビートシート/アウトライン生成', 'おすすめモデル': 'Qwen3 32B', '理由': '強い構造的生成；番号付きリストと制約の多いアウトラインプロンプトに確実に従う' },
           { 'タスク': 'ダイアログパス', 'おすすめモデル': 'Command A+', '理由': '長い交換にわたる最良の自然な話し言葉レジスターとキャラクター声の差別化' },
           { 'タスク': 'リビジョン（構造的）', 'おすすめモデル': 'Llama 3.3 70B', '理由': '書き直し命令で具体的な名前付き構造的制約に従うのが最良' },
-          { 'タスク': '成熟した/暗いフィクション', 'おすすめモデル': 'Hermes 3 Llama 3.3 70B', '理由': 'Llama 3.3 70Bと同じベース；アンセンサードファインチューン；長編作業での同一のコンテキスト遵守性' },
+          { 'タスク': '成熟した/暗いフィクション', 'おすすめモデル': 'Hermes 3 Llama 3.1 70B', '理由': 'Llama 3.3 70Bと同じベース；アンセンサードファインチューン；長編作業での同一のコンテキスト遵守性' },
         ],
       },
       commonMistakes: {
@@ -1798,7 +1798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '小説執筆に最もおすすめのローカルLLMモデルは？',
-            a: '用途によって最適なモデルは異なります。長編小説の執筆（メインの生成タスク）にはLlama 3.3 70Bが最良の選択です——マルチセッションにわたるコンテキスト遵守性と命令追随が最も一貫しています。ビートシートやアウトラインの生成にはQwen3 32Bが構造的な制約に確実に従います。ダイアログパスにはCommand A+が自然な話し言葉レジスターとキャラクターごとの声の差別化に優れます。脚本のFountain形式出力にはMistral Largeが一貫したフォーマット遵守を示します。成熟した/暗いフィクションには、Llama 3.3 70Bと同じベースでアンセンサードファインチューンのHermes 3 Llama 3.3 70Bが、同一のワークフローとコンテキスト遵守性のまま使えます。迷ったらLlama 3.3 70Bから始め、特定のタスク（アウトラインやダイアログ）で物足りなさを感じたら該当タスク用のモデルに切り替えるのが実用的です。',
+            a: '用途によって最適なモデルは異なります。長編小説の執筆（メインの生成タスク）にはLlama 3.3 70Bが最良の選択です——マルチセッションにわたるコンテキスト遵守性と命令追随が最も一貫しています。ビートシートやアウトラインの生成にはQwen3 32Bが構造的な制約に確実に従います。ダイアログパスにはCommand A+が自然な話し言葉レジスターとキャラクターごとの声の差別化に優れます。脚本のFountain形式出力にはMistral Largeが一貫したフォーマット遵守を示します。成熟した/暗いフィクションには、Llama 3.3 70Bと同じベースでアンセンサードファインチューンのHermes 3 Llama 3.1 70Bが、同一のワークフローとコンテキスト遵守性のまま使えます。迷ったらLlama 3.3 70Bから始め、特定のタスク（アウトラインやダイアログ）で物足りなさを感じたら該当タスク用のモデルに切り替えるのが実用的です。',
           },
           {
             q: 'ローカルLLMは完全な小説を書けますか？',
@@ -1885,7 +1885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 32B',
       'Mistral Large',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -1963,7 +1963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**场景生成目标：** 每次生成调用200-600字；通过多个连续提示词生成较长场景。',
           '**剧本格式：** 将Ollama与Fountain格式输出指令结合，生成剧本格式文本。',
           '**与Ollama配合的写作工具：** Scrivener（通过API配套脚本）、Obsidian（通过本地插件或脚本）、VS Code（通过Continue.dev或直接API调用）、纯终端。',
-          '**无审查选项：** 成熟小说用Hermes 3 Llama 3.3；相同工作流，相同会话文档技术。',
+          '**无审查选项：** 成熟小说用Hermes 3 Llama 3.1；相同工作流，相同会话文档技术。',
         ],
       },
       contextWindow: {
@@ -2141,7 +2141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '任务': '节拍表/大纲生成', '推荐模型': 'Qwen3 32B', '原因': '强大的结构生成；可靠地遵循编号列表和约束密集的大纲提示词' },
           { '任务': '对话轮次', '推荐模型': 'Command A+', '原因': '跨长交换的最佳自然语言风格和角色声音差异化' },
           { '任务': '修改（结构性）', '推荐模型': 'Llama 3.3 70B', '原因': '最擅长在改写指令中遵循具体命名的结构约束' },
-          { '任务': '成熟/黑暗小说', '推荐模型': 'Hermes 3 Llama 3.3 70B', '原因': '与Llama 3.3 70B相同基础；无审查微调；长篇写作中相同的上下文遵循性' },
+          { '任务': '成熟/黑暗小说', '推荐模型': 'Hermes 3 Llama 3.1 70B', '原因': '与Llama 3.3 70B相同基础；无审查微调；长篇写作中相同的上下文遵循性' },
         ],
       },
       commonMistakes: {
@@ -2259,7 +2259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 32B',
       'Mistral Large',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -2337,7 +2337,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Meta de geração de cenas:** 200–600 palavras por chamada de geração; cenas mais longas por meio de múltiplos prompts sequenciais.',
           '**Formato de roteiro:** combine o Ollama com instruções de saída no formato Fountain para texto com formato de roteiro.',
           '**Ferramentas de escrita que funcionam com o Ollama:** Scrivener (por meio de scripts de API), Obsidian (por meio de plugin local ou scripts), VS Code (por meio do Continue.dev ou chamadas de API diretas), terminal puro.',
-          '**Opção sem censura:** Hermes 3 Llama 3.3 para ficção madura; mesmo fluxo de trabalho, mesma técnica de documento de sessão.',
+          '**Opção sem censura:** Hermes 3 Llama 3.1 para ficção madura; mesmo fluxo de trabalho, mesma técnica de documento de sessão.',
         ],
       },
       contextWindow: {
@@ -2515,7 +2515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tarefa': 'Geração de beat sheet / esboço', 'Modelo recomendado': 'Qwen3 32B', 'Por quê': 'Geração estrutural forte; segue de forma confiável prompts de esboço com listas numeradas e restrições rígidas' },
           { 'Tarefa': 'Passagens de diálogo', 'Modelo recomendado': 'Command A+', 'Por quê': 'Melhor registro de fala naturalista e diferenciação de voz de personagem em trocas estendidas' },
           { 'Tarefa': 'Revisão (estrutural)', 'Modelo recomendado': 'Llama 3.3 70B', 'Por quê': 'Melhor em seguir restrições estruturais específicas nomeadas em instruções de reescrita' },
-          { 'Tarefa': 'Ficção madura / sombria', 'Modelo recomendado': 'Hermes 3 Llama 3.3 70B', 'Por quê': 'Mesma base que o Llama 3.3 70B; fine-tune sem censura; aderência ao contexto idêntica para trabalhos de formato longo' },
+          { 'Tarefa': 'Ficção madura / sombria', 'Modelo recomendado': 'Hermes 3 Llama 3.1 70B', 'Por quê': 'Mesma base que o Llama 3.3 70B; fine-tune sem censura; aderência ao contexto idêntica para trabalhos de formato longo' },
         ],
       },
       commonMistakes: {
@@ -2638,7 +2638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 32B',
       'Mistral Large',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -2716,7 +2716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**هدف توليد المشاهد:** 200–600 كلمة لكل استدعاء توليد؛ مشاهد أطول عبر أوامر تسلسلية متعددة.',
           '**تنسيق السيناريو:** اجمع Ollama مع تعليمات إخراج بتنسيق Fountain لنص منسق كسيناريو.',
           '**أدوات الكتابة التي تعمل مع Ollama:** Scrivener (عبر سكريبتات API مرافقة)، Obsidian (عبر إضافة محلية أو سكريبتات)، VS Code (عبر Continue.dev أو استدعاءات API مباشرة)، الطرفية الخالصة.',
-          '**الخيار غير المقيد:** Hermes 3 Llama 3.3 للخيال الناضج؛ نفس سير العمل، نفس تقنية وثيقة الجلسة.',
+          '**الخيار غير المقيد:** Hermes 3 Llama 3.1 للخيال الناضج؛ نفس سير العمل، نفس تقنية وثيقة الجلسة.',
         ],
       },
       contextWindow: {
@@ -2894,7 +2894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'المهمة': 'توليد البيت شيت / المخطط', 'النموذج الموصى به': 'Qwen3 32B', 'السبب': 'توليد هيكلي قوي؛ يتبع بشكل موثوق أوامر المخطط بقوائم مرقمة وقيود صارمة' },
           { 'المهمة': 'جولات الحوار', 'النموذج الموصى به': 'Command A+', 'السبب': 'أفضل سجل محكي طبيعي وتمييز صوت الشخصية في التبادلات الممتدة' },
           { 'المهمة': 'المراجعة (هيكلية)', 'النموذج الموصى به': 'Llama 3.3 70B', 'السبب': 'الأفضل في اتباع قيود هيكلية محددة مُسمَّاة في تعليمات إعادة الكتابة' },
-          { 'المهمة': 'خيال ناضج / داكن', 'النموذج الموصى به': 'Hermes 3 Llama 3.3 70B', 'السبب': 'نفس أساس Llama 3.3 70B؛ ضبط دقيق غير مقيد؛ التزام متطابق بالسياق للأعمال الطويلة' },
+          { 'المهمة': 'خيال ناضج / داكن', 'النموذج الموصى به': 'Hermes 3 Llama 3.1 70B', 'السبب': 'نفس أساس Llama 3.3 70B؛ ضبط دقيق غير مقيد؛ التزام متطابق بالسياق للأعمال الطويلة' },
         ],
       },
       commonMistakes: {
@@ -3017,7 +3017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 32B',
       'Mistral Large',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
     ],
     current_hardware_mentioned: [
       'Apple M5 MacBook Pro 16 GB',
@@ -3095,7 +3095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**장면 생성 목표:** 생성 호출당 200–600 단어; 더 긴 장면은 여러 순차 프롬프트를 통해 생성합니다.',
           '**시나리오 형식:** Fountain 형식 출력 지시와 함께 Ollama를 사용하면 스크립트 형식의 텍스트를 생성합니다.',
           '**Ollama와 함께 작동하는 집필 도구:** Scrivener (API 스크립트를 통해), Obsidian (로컬 플러그인 또는 스크립트를 통해), VS Code (Continue.dev 또는 직접 API 호출을 통해), 순수 터미널.',
-          '**무검열 옵션:** 성숙한 소설을 위한 Hermes 3 Llama 3.3; 동일한 워크플로, 동일한 세션 문서 기법.',
+          '**무검열 옵션:** 성숙한 소설을 위한 Hermes 3 Llama 3.1; 동일한 워크플로, 동일한 세션 문서 기법.',
         ],
       },
       contextWindow: {
@@ -3273,7 +3273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '작업': 'Beat sheet / 개요 생성', '추천 모델': 'Qwen3 32B', '이유': '강한 구조적 생성; 번호 매긴 목록과 엄격한 제약 조건이 있는 개요 프롬프트를 신뢰할 수 있게 따름' },
           { '작업': '대화 검토', '추천 모델': 'Command A+', '이유': '긴 교환에서 최고의 자연스러운 말하기 방식과 인물 목소리 차별화' },
           { '작업': '수정 (구조적)', '추천 모델': 'Llama 3.3 70B', '이유': '다시 쓰기 지시에 명명된 특정 구조적 제약을 따르는 데 최고' },
-          { '작업': '성숙한 / 어두운 소설', '추천 모델': 'Hermes 3 Llama 3.3 70B', '이유': 'Llama 3.3 70B와 동일한 기반; 무검열 fine-tune; 장문 작업에서 동일한 컨텍스트 준수' },
+          { '작업': '성숙한 / 어두운 소설', '추천 모델': 'Hermes 3 Llama 3.1 70B', '이유': 'Llama 3.3 70B와 동일한 기반; 무검열 fine-tune; 장문 작업에서 동일한 컨텍스트 준수' },
         ],
       },
       commonMistakes: {

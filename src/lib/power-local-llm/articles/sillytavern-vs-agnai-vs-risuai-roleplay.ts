@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Mistral Large',
     ],
     current_hardware_mentioned: [
@@ -440,7 +440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Mistral Large',
     ],
     current_hardware_mentioned: [
@@ -853,7 +853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Mistral Large',
     ],
     current_hardware_mentioned: [
@@ -1281,7 +1281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Mistral Large',
     ],
     current_hardware_mentioned: [
@@ -1708,7 +1708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Mistral Large',
     ],
     current_hardware_mentioned: [
@@ -2131,7 +2131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Mistral Large',
     ],
     current_hardware_mentioned: [
@@ -2536,7 +2536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Mistral Large',
     ],
     current_hardware_mentioned: [
@@ -2912,7 +2912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**日本語キャラクターカードの入手先：** Civitai（英語だが日本語カード多数）、Pixiv（ファンメイドキャラクター）、VCIコミュニティ（VRChat日本ユーザー）。SillyTavernのTavern v2形式は日本語テキストを完全サポート。',
-          '**NovelAIからSillyTavernへの移行：** NovelAIユーザーがローカルに移行する際、SillyTavernが最も自然な選択肢。NovelAIのシステムプロンプト形式（Instruct Mode）はSillyTavernで互換テンプレートが利用可能。Hermes 3 Llama 3.3がNovelAIの文体に最も近いローカルモデル。',
+          '**NovelAIからSillyTavernへの移行：** NovelAIユーザーがローカルに移行する際、SillyTavernが最も自然な選択肢。NovelAIのシステムプロンプト形式（Instruct Mode）はSillyTavernで互換テンプレートが利用可能。Hermes 3 Llama 3.1がNovelAIの文体に最も近いローカルモデル。',
           '**ビジュアルノベル×SillyTavern：** Fateシリーズ、Steins;Gate等のVNキャラクターをSillyTavernでロールプレイする日本語コミュニティが活発。二次創作としての利用はグレーゾーンだが、日本のガイドライン（同人誌文化）の文脈では一般的に容認されている。',
           '**RisuAI日本語サポート：** RisuAI は繁体・簡体中文に加え、日本語UIにも対応（有志翻訳）。モバイル優先のロールプレイにはRisuAIのiOS/Androidアプリが有用。SillyTavernはモバイルでの操作性が低いため、スマートフォンユーザーにはRisuAIが現実的。',
           '**日本のプライバシー文脈：** 個人情報保護法の観点から、AIへの個人情報送信を懸念するユーザーが増えています。ローカルLLM＋SillyTavernの構成は「完全オフライン、サーバー送信なし」を証明できるため、プライバシー意識の高いユーザーに訴求力があります。',
@@ -2955,7 +2955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Mistral Large',
     ],
     current_hardware_mentioned: [
@@ -3375,7 +3375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 70B',
       'Qwen3 32B',
       'Command A+',
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Mistral Large',
     ],
     current_hardware_mentioned: [
@@ -3527,7 +3527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'حالة الاستخدام': 'أفضل شاملًا للـ roleplay', 'النموذج الموصى به': 'Llama 3.3 70B Q4_K_M', 'VRAM المطلوبة': '~42 جيجابايت' },
           { 'حالة الاستخدام': 'جودة الحوار وتعدد الأصوات', 'النموذج الموصى به': 'Command A+', 'VRAM المطلوبة': 'مرتفعة' },
           { 'حالة الاستخدام': 'افتراضي لأجهزة 24 جيجابايت VRAM', 'النموذج الموصى به': 'Qwen3 32B Q4_K_M', 'VRAM المطلوبة': '~20 جيجابايت' },
-          { 'حالة الاستخدام': 'محتوى بالغ (للكتّاب)', 'النموذج الموصى به': 'Hermes 3 Llama 3.3 70B', 'VRAM المطلوبة': '~42 جيجابايت' },
+          { 'حالة الاستخدام': 'محتوى بالغ (للكتّاب)', 'النموذج الموصى به': 'Hermes 3 Llama 3.1 70B', 'VRAM المطلوبة': '~42 جيجابايت' },
         ],
       },
       privacy: {

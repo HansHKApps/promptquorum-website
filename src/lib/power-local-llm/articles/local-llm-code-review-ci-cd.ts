@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Qwen3-Coder 30B',
       'Qwen2.5-Coder 7B',
-      'DeepSeek Coder V3',
+      'DeepSeek-V3',
     ],
     current_hardware_mentioned: [
       'NVIDIA RTX 4090 24 GB',
@@ -474,7 +474,7 @@ jobs:
     current_models_mentioned: [
       'Qwen3-Coder 30B',
       'Qwen2.5-Coder 7B',
-      'DeepSeek Coder V3',
+      'DeepSeek-V3',
     ],
     current_hardware_mentioned: [
       'NVIDIA RTX 4090 24 GB',
@@ -925,7 +925,7 @@ jobs:
     intro: 'La révision de code LLM local auto-hébergée place un modèle Qwen3-Coder derrière votre pipeline CI/CD pour que chaque demande de tirage soit examinée sans que la base de code ne quitte votre réseau. L\'architecture est simple — un serveur GPU dédié exécutant Ollama, une action GitHub personnalisée appelant son API HTTP, et un prompt de révision ajusté sur le taux de faux positifs — et l\'économie bascule en faveur de l\'auto-hébergement quelque part entre 15 et 25 sièges GitHub payants. Ce guide couvre l\'architecture, un flux de travail GitHub Actions fonctionnant, le dimensionnement du matériel par taille d\'équipe, le modèle de sécurité et les pièges opérationnels qui frappent les équipes au deuxième mois.',
     metaDescription: 'Révision de code LLM local auto-hébergée en GitHub Actions : architecture, YAML de flux de travail fonctionnant, dimensionnement du matériel par taille d\'équipe, modèle de sécurité et parité des coûts par rapport à GitHub Advanced Security.',
     twitterDescription: 'Révision de code auto-hébergée sur un serveur GPU dans votre réseau. GitHub Actions appelle Ollama, Qwen3-Coder examine les RP, aucune base de code ne quitte votre périmètre. Configuration, dimensionnement et parité des coûts à l\'intérieur.',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek Coder V3'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 4090 24 GB', 'NVIDIA RTX 5090 32 GB', 'NVIDIA L40S 48 GB', 'NVIDIA A6000 Ada 48 GB', 'NVIDIA H100 80 GB'],
     audience: 'Responsables d\'équipes d\'ingénierie, ingénieurs plateforme et praticiens DevOps qui exécutent GitHub Actions ou GitLab CI et souhaitent ajouter une révision de code pilotée par LLM sans envoyer le code source à une API tierce. Suppose une familiarité avec Docker, Linux et les exécuteurs auto-hébergés.',
     readTime: '15 min de lecture',
@@ -1047,7 +1047,7 @@ jobs:
     current_models_mentioned: [
       'Qwen3-Coder 30B',
       'Qwen2.5-Coder 7B',
-      'DeepSeek Coder V3',
+      'DeepSeek-V3',
     ],
     current_hardware_mentioned: [
       'NVIDIA RTX 4090 24 GB',
@@ -1139,7 +1139,7 @@ jobs:
           '**推論遅延：** 典型的なPRdiff（50～500行）は24 GBカードで10～30秒。H100クラスのカードは5～10秒でこれを削減します。レビュー時間をCIジョブの他の部分と比較してください——テストスイートとビルドが通常支配します。',
           '**同時実行：** 1つのRTX 4090はGPUスケジューリング（タイムシェアリング）でおおよそ1～3同時レビューを処理できます。複数の同時PRレビューは待機時間を増加させ、最初の月は偽陽性も増加させます。',
           '**ネットワークアーキテクチャ：** ランナーはプライベートVPC内でOllamaサーバーに到達するか、Tailscale / WireGuardなどのプライベートトンネルを経由する必要があります。インターネット公開のまま放置しないでください。',
-          '**モデル選択：** Qwen3-Coder 30Bはコード生成中間の5月2026年デフォルトです。DeepSeek Coder V3と同等です。7Bはより速いですが、レビュー品質が低下し、開発者はシステムを信じるのにやめます。',
+          '**モデル選択：** Qwen3-Coder 30Bはコード生成中間の5月2026年デフォルトです。DeepSeek-V3と同等です。7Bはより速いですが、レビュー品質が低下し、開発者はシステムを信じるのにやめます。',
           '**ストレージ：** Ollama はモデルウェイトを `~/.ollama/models` に格納します。Qwen3-Coder 30B @ q4_K_Mは約14GBです。複数のモデルの場合は追加ストレージを計画します。',
           '**キャッシング重要性：** ファイルハッシュ + diffハッシュベースのキャッシュなしでは、再び変わらないファイルを再レビューして、推論予算の約80%を浪費します。小さなキャッシュレイヤー（Redis、SQLite、またはメモリ内）は推論負荷を劇的に削減します。',
           '**監査可能性：** Ollamaはリクエストボディをログに記録します。このログはPRdiffを含むため、ログローテーション（週単位）と暗号化を適用します。監査可能性はセキュリティ値提案の大きな部分です。',
@@ -1203,7 +1203,7 @@ jobs:
           '**2026年8月の本番環境推奨セットアップはOllama + Qwen3-Coder 30Bです。** これは柔軟性、オープンソース許可、推論速度、そしてチームサイズ別の経済学のバランスが最も良いです。',
         items: [
           '**Ollama：** サーバー推論フレームワーク。モデルローディング、量子化、バッチ処理を管理します。セットアップが簡単で、ドキュメント化が良く、GPUメモリ効率が適切です。[github.com/ollama/ollama](https://github.com/ollama/ollama)',
-          '**Qwen3-Coder 30B：** Alibaba Qwen チームのコーディング専門モデル。Apache 2.0（許可付き）。文脈長256K。一般的なコード品質、エラー検出、およびセキュリティについては、DeepSeek Coder V3に比べて比肩します。HuggingFaceで入手可能。',
+          '**Qwen3-Coder 30B：** Alibaba Qwen チームのコーディング専門モデル。Apache 2.0（許可付き）。文脈長256K。一般的なコード品質、エラー検出、およびセキュリティについては、DeepSeek-V3に比べて比肩します。HuggingFaceで入手可能。',
           '**カスタムGitHub Action（JavaScript）：** PR diffをフェッチし、Ollama HTTPエンドポイントにPOST、JSON応答を解析し、インラインコメントをポストします。100～200行。ユーザーとの依存関係なし。',
           '**セルフホスト型GitHub ActionsランナーまたはプライベートCI実行者：** ランナーまたはOllamaサーバーへの到達可能性（同じVPC、Tailscale、またはproxy）が必要です。クラウドランナーは機能しません。',
           '**セキュリティ層（オプション）：** プロキシリバース（nginx、Envoy）前のOllamaで、mTLS認証、または共有シークレット。デフォルトではOllamaはlocalhostにバインドされます。',
@@ -1540,7 +1540,7 @@ jobs:
       'GitHub Actions中的自托管本地LLM代码审查：架构、可用的工作流YAML、按团队规模的硬件规划、安全模型，以及与GitHub Advanced Security的经济转折点。',
     twitterDescription:
       '网络内GPU服务器上的自托管代码审查。GitHub Actions调用Ollama，Qwen3-Coder审查PR，代码永不离开您的边界。设置、规划和成本分析。',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek Coder V3'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3'],
     current_hardware_mentioned: ['NVIDIA RTX 4090 24 GB', 'NVIDIA RTX 5090 32 GB', 'NVIDIA L40S 48 GB', 'NVIDIA A6000 Ada 48 GB', 'NVIDIA H100 80 GB'],
     audience: '运行GitHub Actions或GitLab CI，希望添加LLM驱动的代码审查而无需将源代码发送到第三方API的工程团队负责人、平台工程师和DevOps从业者。假设熟悉Docker、Linux和自托管运行器。',
     readTime: '阅读约15分钟',
@@ -1563,9 +1563,9 @@ jobs:
           },
         ],
       },
-      quickFacts: { id: 'quick-facts', title: '重要事实', items: ['**GPU内存需求：** Qwen3-Coder 30B在q4_K_M量子化下最多需要22GB VRAM。24GB（RTX 4090）很紧但可行。如果想要余量，至少使用32GB（RTX 5090）。', '**推论延迟：** 典型PR diff（50-500行）在24 GB卡上为10-30秒。H100级卡将其减少到5-10秒。将审查时间与CI工作的其他部分比较——测试套件和构建通常占主导。', '**并发性：** 单个RTX 4090可通过GPU调度（时间共享）处理约1-3个并发审查。多个并发PR审查增加等待时间，第一个月也增加假阳性。', '**网络架构：** 运行器必须通过专用VPC到达Ollama服务器，或通过Tailscale / WireGuard等私有隧道。不要暴露在互联网上。', '**模型选择：** Qwen3-Coder 30B是2026年8月的代码生成默认值。与DeepSeek Coder V3相当。7B更快但审查质量降低，开发者很快失去信心。', '**存储：** Ollama将模型权重存储在`~/.ollama/models`中。Qwen3-Coder 30B @ q4_K_M约14GB。对于多个模型，计划额外存储。', '**缓存重要性：** 没有基于文件hash + diff hash的缓存，重新审查未更改的文件浪费约80%的推论预算。小缓存层（Redis、SQLite或内存中）大幅减少推论负载。', '**可审计性：** Ollama记录请求体到日志。此日志包含PR diff，所以应用日志轮转（周为单位）和加密。可审计性是安全价值主张的大部分。'] },
+      quickFacts: { id: 'quick-facts', title: '重要事实', items: ['**GPU内存需求：** Qwen3-Coder 30B在q4_K_M量子化下最多需要22GB VRAM。24GB（RTX 4090）很紧但可行。如果想要余量，至少使用32GB（RTX 5090）。', '**推论延迟：** 典型PR diff（50-500行）在24 GB卡上为10-30秒。H100级卡将其减少到5-10秒。将审查时间与CI工作的其他部分比较——测试套件和构建通常占主导。', '**并发性：** 单个RTX 4090可通过GPU调度（时间共享）处理约1-3个并发审查。多个并发PR审查增加等待时间，第一个月也增加假阳性。', '**网络架构：** 运行器必须通过专用VPC到达Ollama服务器，或通过Tailscale / WireGuard等私有隧道。不要暴露在互联网上。', '**模型选择：** Qwen3-Coder 30B是2026年8月的代码生成默认值。与DeepSeek-V3相当。7B更快但审查质量降低，开发者很快失去信心。', '**存储：** Ollama将模型权重存储在`~/.ollama/models`中。Qwen3-Coder 30B @ q4_K_M约14GB。对于多个模型，计划额外存储。', '**缓存重要性：** 没有基于文件hash + diff hash的缓存，重新审查未更改的文件浪费约80%的推论预算。小缓存层（Redis、SQLite或内存中）大幅减少推论负载。', '**可审计性：** Ollama记录请求体到日志。此日志包含PR diff，所以应用日志轮转（周为单位）和加密。可审计性是安全价值主张的大部分。'] },
       architectureComparison: { id: 'architecture-comparison', title: '架构比较', content: '**有三种架构模式：自托管（Ollama/vLLM）、云API（OpenAI/Anthropic）或混合。每种都有权衡。**', columns: ['架构', '设置复杂度', '成本扩展', '数据隐私', '定制', '推荐用途'], rows: [{ '架构': '自托管（Ollama）', '设置复杂度': '中等', '成本扩展': '15-25开发者时为零', '数据隐私': '网络内代码', '定制': '完全控制', '推荐用途': '大团队，敏感代码，金融/医疗' }, { '架构': '云API（OpenAI）', '设置复杂度': '低', '成本扩展': '与开发者数量线性', '数据隐私': '复制到第三方系统', '定制': '仅提示', '推荐用途': '少于5人团队，公开项目，实验' }, { '架构': '混合', '设置复杂度': '高', '成本扩展': '基于自托管vs API', '数据隐私': '政策可选', '定制': '高', '推荐用途': '大团队，分阶段推出' }], items: ['**自托管（推荐）：** 初始设置（GPU购买、系统管理、安全设置）为中等复杂度。但成本固定，在15-25+开发者时变为主导。代码永不离开网络。完整的提示控制、模型选择和审计。大型团队（25+）的标准。', '**云API：** 通过OpenAI、Anthropic或其他API服务。设置简单——API密钥和自定义GitHub Action。成本按请求单位（令牌/美元）扩展。5人以下团队便宜。大型团队从$2,000/月+开始扩展非常快。代码对第三方系统可见。', '**混合：** 小团队（<25人）从云API开始，随着增长切换到自托管。但支付架构迭代复杂性——版本化提示、管理模型质量差异、计划故障转移。'], callouts: [{ type: 'note', text: '本文关注自托管（Ollama +本地模型）。云API是更好的选择——从设置和成本角度——对于少于5人的团队且代码敏感性低的情况。' }] },
-      recommendedStack: { id: 'recommended-stack', title: '推荐堆栈', content: '**2026年8月生产推荐设置是Ollama + Qwen3-Coder 30B。** 它在灵活性、开源许可、推论速度和按团队规模的经济学上取得最好平衡。', items: ['**Ollama：** 服务器推论框架。管理模型加载、量子化、批处理。设置简单、文档好、GPU内存效率好。https://github.com/ollama/ollama', '**Qwen3-Coder 30B：** Alibaba Qwen团队的编码专用模型。Apache 2.0（许可）。256K上下文长度。在一般代码质量、错误检测和安全性上与DeepSeek Coder V3相当。在HuggingFace上可得。', '**自定义GitHub Action（JavaScript）：** 获取PR diff，POST到Ollama HTTP端点，解析JSON响应，发布内联评论。100-200行。无用户依赖。', '**自托管GitHub Actions运行器或私有CI执行器：** 需要运行器或Ollama服务器可达性（同VPC、Tailscale或代理）。云运行器不起作用。', '**安全层（可选）：** Ollama前的反向代理（nginx、Envoy），具有mTLS认证或共享密钥。默认Ollama绑定到localhost。', '**日志管理：** Ollama记录请求体（包含PR diff）。应用syslog、文件轮转或systemd journalctl策略来轮转日志。'], callouts: [{ type: 'tip', text: '设置后，第一个月花时间在提示设计部分（见下文）。模型质量是固定的。假阳性率由提示决定。' }] },
+      recommendedStack: { id: 'recommended-stack', title: '推荐堆栈', content: '**2026年8月生产推荐设置是Ollama + Qwen3-Coder 30B。** 它在灵活性、开源许可、推论速度和按团队规模的经济学上取得最好平衡。', items: ['**Ollama：** 服务器推论框架。管理模型加载、量子化、批处理。设置简单、文档好、GPU内存效率好。https://github.com/ollama/ollama', '**Qwen3-Coder 30B：** Alibaba Qwen团队的编码专用模型。Apache 2.0（许可）。256K上下文长度。在一般代码质量、错误检测和安全性上与DeepSeek-V3相当。在HuggingFace上可得。', '**自定义GitHub Action（JavaScript）：** 获取PR diff，POST到Ollama HTTP端点，解析JSON响应，发布内联评论。100-200行。无用户依赖。', '**自托管GitHub Actions运行器或私有CI执行器：** 需要运行器或Ollama服务器可达性（同VPC、Tailscale或代理）。云运行器不起作用。', '**安全层（可选）：** Ollama前的反向代理（nginx、Envoy），具有mTLS认证或共享密钥。默认Ollama绑定到localhost。', '**日志管理：** Ollama记录请求体（包含PR diff）。应用syslog、文件轮转或systemd journalctl策略来轮转日志。'], callouts: [{ type: 'tip', text: '设置后，第一个月花时间在提示设计部分（见下文）。模型质量是固定的。假阳性率由提示决定。' }] },
       workflow: { id: 'workflow', title: 'GitHub Actions工作流', content: '**下面是生产可用的工作流。** 将文件放在`.github/workflows/local-llm-review.yml`，设置OLLAMA_HOST秘密，确保在自托管或VPC内的运行器上运行。', codeBlock: `name: Local LLM Code Review\n\non:\n  pull_request:\n    types: [opened, synchronize]\n\njobs:\n  review:\n    runs-on: [self-hosted, linux]\n    steps:\n      - uses: actions/checkout@v4\n        with:\n          fetch-depth: 0\n\n      - name: Get PR diff\n        id: diff\n        run: |\n          git diff origin/\${{ github.base_ref }}...HEAD > /tmp/pr.diff\n          wc -l /tmp/pr.diff\n\n      - name: Call local LLM review\n        id: review\n        env:\n          OLLAMA_HOST: \${{ secrets.OLLAMA_HOST }}   # ex. http://gpu-server.internal:11434\n        run: |\n          DIFF=$(jq -Rs . < /tmp/pr.diff)\n          curl -sS "$OLLAMA_HOST/api/chat" \\\\\n            -H 'Content-Type: application/json' \\\\\n            -d "{\n              \\"model\\": \\"qwen3-coder:30b\\",\n              \\"stream\\": false,\n              \\"format\\": \\"json\\",\n              \\"messages\\": [\n                {\\"role\\": \\"system\\", \\"content\\": \\"You are a senior code reviewer. Return JSON: {verdict: 'approve'|'comment'|'block', summary: string, comments: [{path, line, severity, message}]}\\"},\n                {\\"role\\": \\"user\\", \\"content\\": $DIFF}\n              ]\n            }" > /tmp/review.json\n          echo "verdict=$(jq -r '.message.content | fromjson | .verdict' < /tmp/review.json)" >> "$GITHUB_OUTPUT"\n\n      - name: Post review comment\n        uses: actions/github-script@v7\n        with:\n          script: |\n            const fs = require('fs');\n            const review = JSON.parse(JSON.parse(fs.readFileSync('/tmp/review.json')).message.content);\n            const body = \\\`### Local LLM Review: \\\\\`\${review.verdict}\\\\\`\\n\\n\${review.summary}\\\`;\n            await github.rest.issues.createComment({\n              owner: context.repo.owner,\n              repo: context.repo.repo,\n              issue_number: context.issue.number,\n              body\n            });\n\n      - name: Block on critical verdict\n        if: steps.review.outputs.verdict == 'block'\n        run: exit 1\n`, codeLanguage: 'yaml', items: ['运行器需要网络访问OLLAMA_HOST——自托管必须在同VPC内或通过Tailscale / WireGuard。', '系统提示强制结构化JSON响应。没有`format: "json"`和严格的schema，action花费30%的代码解析自由形式输出。', '`fetch-depth: 0`对于计算相对于基础分支的真实diff是必需的——浅检查生成畸形diff。', '对于超过约50K行代码更改的repo，在发送前截断或分割diff。256K上下文对Qwen3-Coder 30B很宽松，但实际工作上下文更接近64K-128K（见[2026年最佳本地编码模型](/zh/power-local-llm/best-local-coding-models-2026)）。', '对于提示深度工程——系统vs用户提示、示例、结构化结果——见[系统提示vs用户提示：有什么区别](/zh/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)。'], callouts: [{ type: 'note', text: '这个工作流故意最小。生产部署添加：基于文件hash + diff hash的缓存以跳过未更改文件的重新审查、严重程度阈值（仅在`severity >= "high"`时阻止）、内联评论发布（而非单个摘要评论）、按语言的提示变体、审查人反馈获取以随时间改进提示。' }] },
       hardwareSizing: { id: 'hardware-sizing', title: '按团队规模的硬件规划', content: '**单个RTX 4090（24 GB）舒适处理15-25开发者。** 单GPU的瓶颈不是每次审查的吞吐量，而是PR追踪时段的竞争（周一早上、冲刺结束）。下面的规划规则假设Qwen3-Coder 30B使用q4_K_M量子化和典型的50-500行PR diff。', columns: ['团队规模', 'GPU', 'VRAM', '并发审查', '约略价格'], rows: [{ '团队规模': '~5开发者', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12-16 GB', '并发审查': '1（仅Qwen2.5-Coder 7B）', '约略价格': '约$600-800' }, { '团队规模': '15-25开发者', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24-32 GB', '并发审查': '1-3（Qwen3-Coder 30B）', '约略价格': '约$2,000-2,500' }, { '团队规模': '25-50开发者', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', '并发审查': '3-6', '约略价格': '约$7,000-8,000' }, { '团队规模': '50-100开发者', 'GPU': '2×RTX 4090或1×H100', 'VRAM': '48 GB / 80 GB', '并发审查': '6-10', '约略价格': '约$5,000（2×4090）或$25,000+（H100）' }, { '团队规模': '100+开发者', 'GPU': '多GPU H100或H200', 'VRAM': '160 GB+', '并发审查': 'vLLM为10+', '约略价格': '约$50,000+' }], callouts: [{ type: 'tip', text: '跨越50开发者阈值时，从Ollama切换到vLLM。Ollama优先易用性；vLLM优先共享GPU的吞吐量。相同的Qwen3-Coder 30B在两者上运行——仅推论服务器改变。' }] },
       gpuSharing: { id: 'gpu-sharing', title: '构建间的GPU共享及其他负载', content: '**代码审查专用GPU是最简单的架构但不是唯一的。** 已为ML推论或训练运行GPU基础设施的团队可以共享——代价是审查延迟大幅增加。', items: ['**仅代码审查专用GPU：** 最简单的模型。延迟可预测。容量计划简单。故障模式隔离。对未运行GPU基础设施团队的推荐。', '**与ML推论共享GPU：** 可行如果推论负载有稳定的封装（例如，小集成服务适应4-6GB）。审查模型占用剩余VRAM。此模式下计划竞争少见。', '**与ML训练共享GPU：** 强烈不推荐。训练作业将VRAM使用激增到限制，使审查模型饥饿，导致30-120秒审查延迟侵蚀开发者对系统的信心。', '**vLLM与分页注意力：** 为高并发LLM服务而生。同个RTX 4090在Ollama下处理1-3并发审查，在vLLM下处理4-8个，代价是更复杂的配置。25+开发者时值得。', '**H100上多租户：** 在100+开发者规模，将H100分割为MIG片或使用租户配额运行vLLM。这是平台工程领地；不要即兴。'] },
@@ -1599,7 +1599,7 @@ jobs:
     current_models_mentioned: [
       'Qwen3-Coder 30B',
       'Qwen2.5-Coder 7B',
-      'DeepSeek Coder V3',
+      'DeepSeek-V3',
     ],
     current_hardware_mentioned: [
       'NVIDIA RTX 4090 24 GB',
@@ -2062,7 +2062,7 @@ jobs:
     current_models_mentioned: [
       'Qwen3-Coder 30B',
       'Qwen2.5-Coder 7B',
-      'DeepSeek Coder V3',
+      'DeepSeek-V3',
     ],
     current_hardware_mentioned: [
       'NVIDIA RTX 4090 24 GB',
@@ -2524,7 +2524,7 @@ jobs:
     current_models_mentioned: [
       'Qwen3-Coder 30B',
       'Qwen2.5-Coder 7B',
-      'DeepSeek Coder V3',
+      'DeepSeek-V3',
     ],
     current_hardware_mentioned: [
       'NVIDIA RTX 4090 24 GB',
@@ -2986,7 +2986,7 @@ jobs:
     current_models_mentioned: [
       'Qwen3-Coder 30B',
       'Qwen2.5-Coder 7B',
-      'DeepSeek Coder V3',
+      'DeepSeek-V3',
     ],
     current_hardware_mentioned: [
       'NVIDIA RTX 4090 24 GB',

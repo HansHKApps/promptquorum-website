@@ -38,7 +38,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numen technologies private llm',
       'best local llm app for iphone',
     ],
-    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek-R1 Distill'],
+    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek-R1 Distill'],
     current_hardware_mentioned: ['iPhone 15 Pro', 'iPhone 12', 'Apple Silicon Mac 48 GB unified memory', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Private LLM is a $4.99 one-time-purchase app for iPhone, iPad, and Mac that runs 140+ open-source AI models entirely on-device, with no account and no subscription.** Made by [Numen Technologies Limited](https://privatellm.app/en), it uses OmniQuant and GPTQ quantization, which the developer says preserves more output quality per bit than the round-to-nearest quantization used in some competing apps. One purchase unlocks the full model library on all three Apple platforms and, via Family Sharing, up to six people. Readers who want a free alternative, or who use Android/Windows/Linux, should compare it with [PocketPal AI](/power-local-llm/pocketpal-ai-review), which is free and open source.',
@@ -161,7 +161,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models-and-quantization',
         title: 'Supported Models and OmniQuant Quantization',
         content: [
-          '**Private LLM\'s library includes more than 140 open-source models, spanning general-purpose, coding, and language-specific fine-tunes.** Named families in the developer\'s own documentation include Llama 3, 3.1, 3.2, and 3.3; Qwen 2.5 and Qwen3-based models; Gemma 2 and Gemma 3; Phi-4; Mixtral; and DeepSeek-R1 Distill-based models, alongside region-specific options such as SauerkrautLM (German), DictaLM (Hebrew), RakutenAI (Japanese), and Yi (Chinese).',
+          '**Private LLM\'s library includes more than 140 open-source models, spanning general-purpose, coding, and language-specific fine-tunes.** Named families in the developer\'s own documentation include Llama 3, 3.1, 3.2, and 3.3; Qwen2.5 and Qwen3-based models; Gemma 2 and Gemma 3; Phi-4; Mixtral; and DeepSeek-R1 Distill-based models, alongside region-specific options such as SauerkrautLM (German), DictaLM (Hebrew), RakutenAI (Japanese), and Yi (Chinese).',
           'The app quantizes these models using **OmniQuant**, paired with **GPTQ** for some models — both are optimization-based quantization methods rather than the simpler round-to-nearest (RTN) approach some competing local-AI apps use. According to the developer\'s own comparison pages, optimization-based quantization tunes the quantization range against calibration data, which can preserve more of the original model\'s output quality at a given bit-width than RTN. This is the developer\'s own technical claim, sourced from their documentation — it has not been independently benchmarked by PromptQuorum against Private LLM\'s specific quantized model files.',
           'Hardware guidance from the developer: most iPhones run **Llama 3.2 3B** or **Qwen3 4B** comfortably; **iPhone 15 Pro** and newer can run **Llama 3.1 8B**; and a Mac with **48 GB of unified memory** can run **Llama 3.3 70B**. These are the developer\'s own recommendations, not independently benchmarked figures — actual performance depends on quantization level, context length, and background app load.',
         ],
@@ -478,7 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numen technologies private llm',
       'best local llm app for iphone',
     ],
-    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek-R1 Distill'],
+    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek-R1 Distill'],
     current_hardware_mentioned: ['iPhone 15 Pro', 'iPhone 12', 'Apple Silicon Mac mit 48 GB Unified Memory', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Private LLM ist eine App mit 4,99-$-Einmalkauf für iPhone, iPad und Mac, die mehr als 140 Open-Source-KI-Modelle vollständig auf dem Gerät ausführt — ohne Konto und ohne Abonnement.** Entwickelt von [Numen Technologies Limited](https://privatellm.app/en), nutzt sie OmniQuant- und GPTQ-Quantisierung, die laut Entwickler pro Bit mehr Ausgabequalität erhält als die Round-to-Nearest-Quantisierung mancher konkurrierender Apps. Ein Kauf schaltet die vollständige Modellbibliothek auf allen drei Apple-Plattformen frei und über Familienfreigabe für bis zu sechs Personen. Leser, die eine kostenlose Alternative suchen oder Android/Windows/Linux nutzen, sollten sie mit [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) vergleichen, das kostenlos und quelloffen ist.',
@@ -614,7 +614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models-and-quantization',
         title: 'Unterstützte Modelle und OmniQuant-Quantisierung',
         content: [
-          '**Die Bibliothek von Private LLM umfasst mehr als 140 Open-Source-Modelle für allgemeine Zwecke, Programmierung und sprachspezifische Feinabstimmungen.** Zu den in der eigenen Dokumentation des Entwicklers genannten Modellfamilien gehören Llama 3, 3.1, 3.2 und 3.3; auf Qwen 2.5 und Qwen3 basierende Modelle; Gemma 2 und Gemma 3; Phi-4; Mixtral; sowie auf DeepSeek-R1 Distill basierende Modelle, dazu regionsspezifische Optionen wie SauerkrautLM (Deutsch), DictaLM (Hebräisch), RakutenAI (Japanisch) und Yi (Chinesisch).',
+          '**Die Bibliothek von Private LLM umfasst mehr als 140 Open-Source-Modelle für allgemeine Zwecke, Programmierung und sprachspezifische Feinabstimmungen.** Zu den in der eigenen Dokumentation des Entwicklers genannten Modellfamilien gehören Llama 3, 3.1, 3.2 und 3.3; auf Qwen2.5 und Qwen3 basierende Modelle; Gemma 2 und Gemma 3; Phi-4; Mixtral; sowie auf DeepSeek-R1 Distill basierende Modelle, dazu regionsspezifische Optionen wie SauerkrautLM (Deutsch), DictaLM (Hebräisch), RakutenAI (Japanisch) und Yi (Chinesisch).',
           'Die App quantisiert diese Modelle mit **OmniQuant**, bei manchen Modellen kombiniert mit **GPTQ** — beides optimierungsbasierte Quantisierungsverfahren statt des einfacheren Round-to-Nearest-Ansatzes (RTN), den manche konkurrierenden lokalen KI-Apps nutzen. Laut den eigenen Vergleichsseiten des Entwicklers passt optimierungsbasierte Quantisierung den Quantisierungsbereich anhand von Kalibrierungsdaten an, was bei gegebener Bitbreite mehr von der ursprünglichen Ausgabequalität des Modells erhalten kann als RTN. Dies ist die eigene technische Behauptung des Entwicklers, gestützt auf dessen eigene Dokumentation — sie wurde nicht unabhängig von PromptQuorum an den konkreten quantisierten Modelldateien von Private LLM benchmarkt.',
           'Hardware-Empfehlung des Entwicklers: Die meisten iPhones führen **Llama 3.2 3B** oder **Qwen3 4B** problemlos aus; **iPhone 15 Pro** und neuer können **Llama 3.1 8B** ausführen; und ein Mac mit **48 GB Unified Memory** kann **Llama 3.3 70B** ausführen. Dies sind die eigenen Empfehlungen des Entwicklers, keine unabhängig benchmarkten Werte — die tatsächliche Leistung hängt von Quantisierungsstufe, Kontextlänge und Hintergrundlast ab.',
         ],
@@ -931,7 +931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numen technologies private llm',
       'best local llm app for iphone',
     ],
-    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek-R1 Distill'],
+    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek-R1 Distill'],
     current_hardware_mentioned: ['iPhone 15 Pro', 'iPhone 12', 'Mac con Apple Silicon y 48 GB de memoria unificada', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Private LLM es una app de compra única de 4,99 $ para iPhone, iPad y Mac que ejecuta más de 140 modelos de IA de código abierto completamente en el dispositivo, sin cuenta y sin suscripción.** Creada por [Numen Technologies Limited](https://privatellm.app/en), usa cuantización OmniQuant y GPTQ, que según el desarrollador conserva más calidad de salida por bit que la cuantización round-to-nearest de algunas apps de la competencia. Una sola compra desbloquea toda la biblioteca de modelos en las tres plataformas de Apple y, mediante Compartir en familia, para hasta seis personas. Quienes busquen una alternativa gratuita, o usen Android/Windows/Linux, deberían compararla con [PocketPal AI](/es/power-local-llm/pocketpal-ai-review), que es gratuita y de código abierto.',
@@ -1067,7 +1067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models-and-quantization',
         title: 'Modelos compatibles y cuantización OmniQuant',
         content: [
-          '**La biblioteca de Private LLM incluye más de 140 modelos de código abierto, entre modelos de propósito general, de programación y ajustes específicos por idioma.** Las familias que menciona la propia documentación del desarrollador incluyen Llama 3, 3.1, 3.2 y 3.3; modelos basados en Qwen 2.5 y Qwen3; Gemma 2 y Gemma 3; Phi-4; Mixtral; y modelos basados en DeepSeek-R1 Distill, junto con opciones específicas por idioma/región como SauerkrautLM (alemán), DictaLM (hebreo), RakutenAI (japonés) y Yi (chino).',
+          '**La biblioteca de Private LLM incluye más de 140 modelos de código abierto, entre modelos de propósito general, de programación y ajustes específicos por idioma.** Las familias que menciona la propia documentación del desarrollador incluyen Llama 3, 3.1, 3.2 y 3.3; modelos basados en Qwen2.5 y Qwen3; Gemma 2 y Gemma 3; Phi-4; Mixtral; y modelos basados en DeepSeek-R1 Distill, junto con opciones específicas por idioma/región como SauerkrautLM (alemán), DictaLM (hebreo), RakutenAI (japonés) y Yi (chino).',
           'La app cuantiza estos modelos usando **OmniQuant**, combinado con **GPTQ** para algunos modelos — ambos son métodos de cuantización basados en optimización, en lugar del enfoque más simple round-to-nearest (RTN) que usan algunas apps de IA local de la competencia. Según las propias páginas comparativas del desarrollador, la cuantización basada en optimización ajusta el rango de cuantización con datos de calibración, lo que puede conservar más calidad de salida del modelo original a un mismo ancho de bits que RTN. Esta es una afirmación técnica del propio desarrollador, respaldada por su propia documentación — no ha sido verificada de forma independiente por PromptQuorum en los archivos de modelo cuantizados específicos de Private LLM.',
           'Recomendación de hardware del desarrollador: la mayoría de los iPhone ejecutan **Llama 3.2 3B** o **Qwen3 4B** sin problemas; el **iPhone 15 Pro** y posteriores pueden manejar **Llama 3.1 8B**; y un Mac con **48 GB de memoria unificada** puede ejecutar **Llama 3.3 70B**. Son recomendaciones propias del desarrollador, no cifras verificadas de forma independiente — el rendimiento real depende del nivel de cuantización, la longitud de contexto y la carga de apps en segundo plano.',
         ],
@@ -1384,7 +1384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numen technologies private llm',
       'best local llm app for iphone',
     ],
-    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek-R1 Distill'],
+    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek-R1 Distill'],
     current_hardware_mentioned: ['iPhone 15 Pro', 'iPhone 12', 'Mac Apple Silicon avec 48 Go de mémoire unifiée', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Private LLM est une application à achat unique de 4,99 $ pour iPhone, iPad et Mac qui exécute plus de 140 modèles d\'IA open source entièrement sur l\'appareil, sans compte et sans abonnement.** Développée par [Numen Technologies Limited](https://privatellm.app/en), elle utilise la quantification OmniQuant et GPTQ, dont l\'éditeur affirme qu\'elle préserve davantage de qualité de sortie par bit que la quantification round-to-nearest de certaines applications concurrentes. Un seul achat débloque l\'intégralité de la bibliothèque de modèles sur les trois plateformes Apple et, via le Partage familial, pour jusqu\'à six personnes. Les lecteurs qui souhaitent une alternative gratuite, ou qui utilisent Android/Windows/Linux, devraient la comparer à [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review), gratuite et open source.',
@@ -1520,7 +1520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models-and-quantization',
         title: 'Modèles pris en charge et quantification OmniQuant',
         content: [
-          '**La bibliothèque de Private LLM compte plus de 140 modèles open source, couvrant des usages généralistes, du code et des réglages spécifiques par langue.** Les familles citées dans la documentation de l\'éditeur incluent Llama 3, 3.1, 3.2 et 3.3 ; des modèles basés sur Qwen 2.5 et Qwen3 ; Gemma 2 et Gemma 3 ; Phi-4 ; Mixtral ; et des modèles basés sur DeepSeek-R1 Distill, ainsi que des options spécifiques à certaines régions comme SauerkrautLM (allemand), DictaLM (hébreu), RakutenAI (japonais) et Yi (chinois).',
+          '**La bibliothèque de Private LLM compte plus de 140 modèles open source, couvrant des usages généralistes, du code et des réglages spécifiques par langue.** Les familles citées dans la documentation de l\'éditeur incluent Llama 3, 3.1, 3.2 et 3.3 ; des modèles basés sur Qwen2.5 et Qwen3 ; Gemma 2 et Gemma 3 ; Phi-4 ; Mixtral ; et des modèles basés sur DeepSeek-R1 Distill, ainsi que des options spécifiques à certaines régions comme SauerkrautLM (allemand), DictaLM (hébreu), RakutenAI (japonais) et Yi (chinois).',
           'L\'application quantifie ces modèles avec **OmniQuant**, associé à **GPTQ** pour certains modèles — deux méthodes de quantification basées sur l\'optimisation plutôt que l\'approche plus simple round-to-nearest (RTN) utilisée par certaines applications d\'IA locale concurrentes. Selon les propres pages comparatives de l\'éditeur, la quantification basée sur l\'optimisation ajuste la plage de quantification à partir de données de calibration, ce qui peut préserver davantage la qualité de sortie du modèle d\'origine à une largeur de bits donnée que le RTN. Il s\'agit d\'une affirmation technique propre à l\'éditeur, appuyée par sa propre documentation — elle n\'a pas été évaluée de manière indépendante par PromptQuorum sur les fichiers de modèles quantifiés spécifiques de Private LLM.',
           'Recommandations matérielles de l\'éditeur : la plupart des iPhone exécutent confortablement **Llama 3.2 3B** ou **Qwen3 4B** ; l\'**iPhone 15 Pro** et les modèles plus récents peuvent gérer **Llama 3.1 8B** ; et un Mac avec **48 Go de mémoire unifiée** peut exécuter **Llama 3.3 70B**. Ce sont les recommandations propres de l\'éditeur, pas des chiffres évalués de manière indépendante — la performance réelle dépend du niveau de quantification, de la longueur de contexte et de la charge des applications en arrière-plan.',
         ],
@@ -1837,7 +1837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numen technologies private llm',
       'best local llm app for iphone',
     ],
-    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek-R1 Distill'],
+    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek-R1 Distill'],
     current_hardware_mentioned: ['iPhone 15 Pro', 'iPhone 12', '48GBユニファイドメモリ搭載Apple Silicon Mac', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Private LLMはiPhone・iPad・Mac向けの4.99ドル買い切りアプリで、140以上のオープンソースAIモデルを完全にオンデバイスで実行します——アカウント登録もサブスクリプションも不要です。** [Numen Technologies Limited](https://privatellm.app/en)が開発し、OmniQuantとGPTQによる量子化を採用しています。開発者によれば、これは一部の競合アプリが使うround-to-nearest量子化よりもビットあたりの出力品質を維持できるとのことです。一度の購入でApple製3プラットフォームすべてのモデルライブラリがアンロックされ、ファミリー共有で最大6人まで利用できます。無料の代替を求める読者、またはAndroid/Windows/Linuxを使う読者は、無料でオープンソースの[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)と比較すべきです。',
@@ -1973,7 +1973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models-and-quantization',
         title: '対応モデルとOmniQuant量子化',
         content: [
-          '**Private LLMのライブラリには、汎用モデル、コーディングモデル、言語特化型ファインチューンを含む140以上のオープンソースモデルが含まれる。** 開発者自身のドキュメントに記載されているモデルファミリーには、Llama 3・3.1・3.2・3.3、Qwen 2.5およびQwen3ベースのモデル、Gemma 2・Gemma 3、Phi-4、Mixtral、DeepSeek-R1 Distillベースのモデルがあり、さらにSauerkrautLM（ドイツ語）、DictaLM（ヘブライ語）、RakutenAI（日本語）、Yi（中国語）といった地域特化型のモデルも含まれる。',
+          '**Private LLMのライブラリには、汎用モデル、コーディングモデル、言語特化型ファインチューンを含む140以上のオープンソースモデルが含まれる。** 開発者自身のドキュメントに記載されているモデルファミリーには、Llama 3・3.1・3.2・3.3、Qwen2.5およびQwen3ベースのモデル、Gemma 2・Gemma 3、Phi-4、Mixtral、DeepSeek-R1 Distillベースのモデルがあり、さらにSauerkrautLM（ドイツ語）、DictaLM（ヘブライ語）、RakutenAI（日本語）、Yi（中国語）といった地域特化型のモデルも含まれる。',
           'アプリはこれらのモデルを**OmniQuant**（一部モデルでは**GPTQ**を併用）で量子化している——両方とも、一部の競合ローカルAIアプリが使うより単純なround-to-nearest（RTN）方式ではなく、最適化ベースの量子化手法である。開発者自身の比較ページによれば、最適化ベースの量子化はキャリブレーションデータに対して量子化範囲を調整するため、同じビット幅でもRTNより元のモデルの出力品質を多く保てるという。これは開発者自身の技術的主張であり、開発者自身のドキュメントに基づくものである——PromptQuorumがPrivate LLMの具体的な量子化済みモデルファイルについて独自にベンチマークを行ったものではない。',
           '開発者によるハードウェアのガイダンス：ほとんどのiPhoneは**Llama 3.2 3B**または**Qwen3 4B**を問題なく実行でき、**iPhone 15 Pro**以降は**Llama 3.1 8B**を扱え、**48GBのユニファイドメモリ**を搭載したMacは**Llama 3.3 70B**を実行できる。これらは開発者自身の推奨事項であり、独自にベンチマークされた数値ではない——実際の性能は量子化レベル、コンテキスト長、バックグラウンドのアプリ負荷に依存する。',
         ],
@@ -2290,7 +2290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numen technologies private llm',
       'best local llm app for iphone',
     ],
-    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek-R1 Distill'],
+    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek-R1 Distill'],
     current_hardware_mentioned: ['iPhone 15 Pro', 'iPhone 12', 'Mac com Apple Silicon e 48 GB de memória unificada', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**O Private LLM é um app de compra única de US$ 4,99 para iPhone, iPad e Mac que executa mais de 140 modelos de IA de código aberto inteiramente no dispositivo, sem conta e sem assinatura.** Feito pela [Numen Technologies Limited](https://privatellm.app/en), ele usa quantização OmniQuant e GPTQ, que segundo o desenvolvedor preserva mais qualidade de saída por bit do que a quantização round-to-nearest de alguns apps concorrentes. Uma única compra desbloqueia toda a biblioteca de modelos nas três plataformas da Apple e, via Compartilhamento familiar, para até seis pessoas. Quem busca uma alternativa gratuita, ou usa Android/Windows/Linux, deve comparar com o [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review), que é gratuito e de código aberto.',
@@ -2426,7 +2426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models-and-quantization',
         title: 'Modelos suportados e quantização OmniQuant',
         content: [
-          '**A biblioteca do Private LLM inclui mais de 140 modelos de código aberto, abrangendo uso geral, programação e ajustes específicos por idioma.** As famílias citadas na própria documentação do desenvolvedor incluem Llama 3, 3.1, 3.2 e 3.3; modelos baseados em Qwen 2.5 e Qwen3; Gemma 2 e Gemma 3; Phi-4; Mixtral; e modelos baseados no DeepSeek-R1 Distill, além de opções específicas por região como SauerkrautLM (alemão), DictaLM (hebraico), RakutenAI (japonês) e Yi (chinês).',
+          '**A biblioteca do Private LLM inclui mais de 140 modelos de código aberto, abrangendo uso geral, programação e ajustes específicos por idioma.** As famílias citadas na própria documentação do desenvolvedor incluem Llama 3, 3.1, 3.2 e 3.3; modelos baseados em Qwen2.5 e Qwen3; Gemma 2 e Gemma 3; Phi-4; Mixtral; e modelos baseados no DeepSeek-R1 Distill, além de opções específicas por região como SauerkrautLM (alemão), DictaLM (hebraico), RakutenAI (japonês) e Yi (chinês).',
           'O app quantiza esses modelos usando **OmniQuant**, combinado com **GPTQ** para alguns modelos — ambos são métodos de quantização baseados em otimização, em vez da abordagem mais simples round-to-nearest (RTN) usada por alguns apps de IA local concorrentes. Segundo as próprias páginas comparativas do desenvolvedor, a quantização baseada em otimização ajusta o intervalo de quantização com base em dados de calibração, o que pode preservar mais qualidade de saída do modelo original em uma mesma largura de bits do que o RTN. Essa é uma afirmação técnica do próprio desenvolvedor, sustentada por sua própria documentação — não foi verificada de forma independente pela PromptQuorum nos arquivos de modelo quantizados específicos do Private LLM.',
           'Orientação de hardware do desenvolvedor: a maioria dos iPhones executa **Llama 3.2 3B** ou **Qwen3 4B** sem problemas; o **iPhone 15 Pro** e modelos mais novos conseguem rodar **Llama 3.1 8B**; e um Mac com **48 GB de memória unificada** pode rodar **Llama 3.3 70B**. Essas são recomendações do próprio desenvolvedor, não números verificados de forma independente — o desempenho real depende do nível de quantização, do comprimento de contexto e da carga de apps em segundo plano.',
         ],
@@ -2743,7 +2743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numen technologies private llm',
       'best local llm app for iphone',
     ],
-    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek-R1 Distill'],
+    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek-R1 Distill'],
     current_hardware_mentioned: ['iPhone 15 Pro', 'iPhone 12', 'جهاز Mac بمعالج Apple Silicon و48 جيجابايت من الذاكرة الموحدة', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Private LLM تطبيق بشراء لمرة واحدة بسعر 4.99 دولار لأجهزة iPhone وiPad وMac يشغّل أكثر من 140 نموذج ذكاء اصطناعي مفتوح المصدر بالكامل على الجهاز، دون حساب ودون اشتراك.** من تطوير [Numen Technologies Limited](https://privatellm.app/en)، يستخدم تكميم OmniQuant وGPTQ، الذي يقول المطوّر إنه يحافظ على جودة إخراج أعلى لكل بت مقارنة بتكميم round-to-nearest في بعض التطبيقات المنافسة. عملية شراء واحدة تفتح مكتبة النماذج الكاملة على منصات Apple الثلاث، وعبر المشاركة العائلية لحتى ستة أشخاص. من يبحث عن بديل مجاني، أو يستخدم Android/Windows/Linux، عليه المقارنة مع [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) المجاني ومفتوح المصدر.',
@@ -2879,7 +2879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models-and-quantization',
         title: 'النماذج المدعومة وتكميم OmniQuant',
         content: [
-          '**تضم مكتبة Private LLM أكثر من 140 نموذجًا مفتوح المصدر، تشمل نماذج للأغراض العامة والبرمجة وضبطًا دقيقًا خاصًا بلغات معينة.** تشمل عائلات النماذج المذكورة في وثائق المطوّر نفسه Llama 3 و3.1 و3.2 و3.3؛ ونماذج مبنية على Qwen 2.5 وQwen3؛ وGemma 2 وGemma 3؛ وPhi-4؛ وMixtral؛ ونماذج مبنية على DeepSeek-R1 Distill، إلى جانب خيارات خاصة بمناطق معينة مثل SauerkrautLM (الألمانية) وDictaLM (العبرية) وRakutenAI (اليابانية) وYi (الصينية).',
+          '**تضم مكتبة Private LLM أكثر من 140 نموذجًا مفتوح المصدر، تشمل نماذج للأغراض العامة والبرمجة وضبطًا دقيقًا خاصًا بلغات معينة.** تشمل عائلات النماذج المذكورة في وثائق المطوّر نفسه Llama 3 و3.1 و3.2 و3.3؛ ونماذج مبنية على Qwen2.5 وQwen3؛ وGemma 2 وGemma 3؛ وPhi-4؛ وMixtral؛ ونماذج مبنية على DeepSeek-R1 Distill، إلى جانب خيارات خاصة بمناطق معينة مثل SauerkrautLM (الألمانية) وDictaLM (العبرية) وRakutenAI (اليابانية) وYi (الصينية).',
           'يقوم التطبيق بتكميم هذه النماذج باستخدام **OmniQuant**، مقترنًا بـ **GPTQ** في بعض النماذج — وكلاهما أسلوبا تكميم قائمان على التحسين بدلًا من نهج round-to-nearest (RTN) الأبسط الذي تستخدمه بعض تطبيقات الذكاء الاصطناعي المحلي المنافسة. وفقًا لصفحات المقارنة الخاصة بالمطوّر نفسه، يضبط التكميم القائم على التحسين نطاق التكميم استنادًا إلى بيانات المعايرة، ما قد يحافظ على جودة إخراج أكبر من النموذج الأصلي عند عرض بت معين مقارنة بـ RTN. هذا ادعاء تقني خاص بالمطوّر نفسه، مدعوم بوثائقه الخاصة — ولم تُقيَّم بشكل مستقل من قِبل PromptQuorum على ملفات نماذج Private LLM المكممة تحديدًا.',
           'إرشادات المطوّر بشأن الأجهزة: معظم أجهزة iPhone تشغّل **Llama 3.2 3B** أو **Qwen3 4B** دون مشاكل؛ ويمكن لـ **iPhone 15 Pro** والإصدارات الأحدث التعامل مع **Llama 3.1 8B**؛ ويمكن لجهاز Mac بذاكرة موحدة سعتها **48 جيجابايت** تشغيل **Llama 3.3 70B**. هذه توصيات خاصة بالمطوّر نفسه، وليست أرقامًا مُقيَّمة بشكل مستقل — يعتمد الأداء الفعلي على مستوى التكميم وطول السياق وحمل التطبيقات في الخلفية.',
         ],
@@ -3196,7 +3196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numen technologies private llm',
       'best local llm app for iphone',
     ],
-    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek-R1 Distill'],
+    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek-R1 Distill'],
     current_hardware_mentioned: ['iPhone 15 Pro', 'iPhone 12', '配备48GB统一内存的Apple Silicon Mac', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Private LLM是一款面向iPhone、iPad和Mac的4.99美元一次性付费应用，可完全在设备端运行140多个开源AI模型——无需账号，无需订阅。** 由[Numen Technologies Limited](https://privatellm.app/en)开发，采用OmniQuant和GPTQ量化技术，开发者称这比一些竞品应用使用的round-to-nearest量化在每比特上能保留更高的输出质量。一次购买即可解锁三个Apple平台上的完整模型库，通过家人共享最多可供六人使用。希望获得免费替代品或使用Android/Windows/Linux的读者，应与免费开源的[PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)进行比较。',
@@ -3332,7 +3332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models-and-quantization',
         title: '支持的模型与OmniQuant量化',
         content: [
-          '**Private LLM的模型库包含140多个开源模型，涵盖通用、编程和语言特定微调模型。** 开发者自己文档中列出的模型系列包括Llama 3、3.1、3.2和3.3；基于Qwen 2.5和Qwen3的模型；Gemma 2和Gemma 3；Phi-4；Mixtral；以及基于DeepSeek-R1 Distill的模型，还包括SauerkrautLM（德语）、DictaLM（希伯来语）、RakutenAI（日语）和Yi（中文）等区域特定选项。',
+          '**Private LLM的模型库包含140多个开源模型，涵盖通用、编程和语言特定微调模型。** 开发者自己文档中列出的模型系列包括Llama 3、3.1、3.2和3.3；基于Qwen2.5和Qwen3的模型；Gemma 2和Gemma 3；Phi-4；Mixtral；以及基于DeepSeek-R1 Distill的模型，还包括SauerkrautLM（德语）、DictaLM（希伯来语）、RakutenAI（日语）和Yi（中文）等区域特定选项。',
           '该应用使用**OmniQuant**（部分模型搭配**GPTQ**）对这些模型进行量化——两者都是基于优化的量化方法，而非一些竞品本地AI应用使用的更简单的round-to-nearest（RTN）方式。根据开发者自己的对比页面，基于优化的量化方法会根据校准数据调整量化范围，这在相同比特宽度下比RTN能保留更多原始模型的输出质量。这是开发者自身的技术主张，基于其自身文档——PromptQuorum并未针对Private LLM的具体量化模型文件进行独立基准测试。',
           '开发者提供的硬件建议：大多数iPhone可以流畅运行**Llama 3.2 3B**或**Qwen3 4B**；**iPhone 15 Pro**及更新机型可以运行**Llama 3.1 8B**；配备**48GB统一内存**的Mac可以运行**Llama 3.3 70B**。这些是开发者自己的建议，而非独立基准测试的数据——实际性能取决于量化级别、上下文长度和后台应用负载。',
         ],
@@ -3649,7 +3649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'numen technologies private llm',
       'best local llm app for iphone',
     ],
-    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen 2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek-R1 Distill'],
+    current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Llama 3.2 3B', 'Qwen2.5', 'Qwen3 4B', 'Gemma 2', 'Phi-4', 'Mixtral', 'DeepSeek-R1 Distill'],
     current_hardware_mentioned: ['iPhone 15 Pro', 'iPhone 12', '48GB 통합 메모리를 탑재한 Apple Silicon Mac', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Private LLM은 iPhone, iPad, Mac용 4.99달러 일회성 구매 앱으로, 140개 이상의 오픈소스 AI 모델을 계정이나 구독 없이 완전히 기기 내에서 실행합니다.** [Numen Technologies Limited](https://privatellm.app/en)가 개발했으며, OmniQuant와 GPTQ 양자화를 사용합니다. 개발사에 따르면 이는 일부 경쟁 앱이 사용하는 round-to-nearest 양자화보다 비트당 출력 품질을 더 잘 보존한다고 합니다. 한 번 구매하면 Apple 세 플랫폼 전체에서 전체 모델 라이브러리가 잠금 해제되며, 가족 공유를 통해 최대 6명까지 사용할 수 있습니다. 무료 대안을 원하거나 Android/Windows/Linux를 사용하는 독자는 무료 오픈소스인 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)와 비교해 보아야 합니다.',
@@ -3785,7 +3785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'models-and-quantization',
         title: '지원 모델과 OmniQuant 양자화',
         content: [
-          '**Private LLM의 라이브러리에는 범용, 코딩, 언어별 파인튜닝 모델을 포함해 140개가 넘는 오픈소스 모델이 있습니다.** 개발사 자체 문서에 언급된 모델 계열로는 Llama 3, 3.1, 3.2, 3.3; Qwen 2.5 및 Qwen3 기반 모델; Gemma 2 및 Gemma 3; Phi-4; Mixtral; DeepSeek-R1 Distill 기반 모델이 있으며, SauerkrautLM(독일어), DictaLM(히브리어), RakutenAI(일본어), Yi(중국어)와 같은 지역별 옵션도 포함됩니다.',
+          '**Private LLM의 라이브러리에는 범용, 코딩, 언어별 파인튜닝 모델을 포함해 140개가 넘는 오픈소스 모델이 있습니다.** 개발사 자체 문서에 언급된 모델 계열로는 Llama 3, 3.1, 3.2, 3.3; Qwen2.5 및 Qwen3 기반 모델; Gemma 2 및 Gemma 3; Phi-4; Mixtral; DeepSeek-R1 Distill 기반 모델이 있으며, SauerkrautLM(독일어), DictaLM(히브리어), RakutenAI(일본어), Yi(중국어)와 같은 지역별 옵션도 포함됩니다.',
           '이 앱은 이러한 모델을 **OmniQuant**(일부 모델은 **GPTQ** 병행)로 양자화합니다 — 둘 다 일부 경쟁 로컬 AI 앱이 사용하는 더 단순한 round-to-nearest(RTN) 방식이 아니라 최적화 기반 양자화 방식입니다. 개발사 자체 비교 페이지에 따르면, 최적화 기반 양자화는 보정 데이터에 맞춰 양자화 범위를 조정하므로 동일한 비트 폭에서 RTN보다 원본 모델의 출력 품질을 더 많이 보존할 수 있다고 합니다. 이는 개발사 자체의 기술적 주장이며, 개발사 자체 문서에 근거합니다 — PromptQuorum이 Private LLM의 구체적인 양자화 모델 파일에 대해 독립적으로 벤치마크한 것은 아닙니다.',
           '개발사의 하드웨어 안내: 대부분의 iPhone은 **Llama 3.2 3B** 또는 **Qwen3 4B**를 무리 없이 실행할 수 있고, **iPhone 15 Pro** 이상은 **Llama 3.1 8B**를 처리할 수 있으며, **48GB 통합 메모리**를 갖춘 Mac은 **Llama 3.3 70B**를 실행할 수 있습니다. 이는 개발사 자체 권장 사항이며 독립적으로 벤치마크된 수치가 아닙니다 — 실제 성능은 양자화 수준, 컨텍스트 길이, 백그라운드 앱 부하에 따라 달라집니다.',
         ],

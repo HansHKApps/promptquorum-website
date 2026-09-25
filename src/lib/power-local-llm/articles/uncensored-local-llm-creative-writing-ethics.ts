@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Best uncensored local LLMs for erotica writing: Hermes 3 vs Dolphin 3.0, Ollama setup, and what ethical responsibilities still apply to creative writers.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Mistral',
       'Llama 3.3 70B',
       'Qwen3 32B',
@@ -57,14 +57,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'uncensored ai writing ethics',
     ],
     leadAnswerBlock:
-      '**Uncensored local LLMs are appropriate for fiction writers who need to generate morally complex characters, dark themes, violence, mature romantic content, or unreliable narrator voices that cloud models refuse to produce. They are appropriate only when the output is used for creative fiction with an adult audience — not as a tool to produce real-world harmful content, non-consensual depictions of real people, or content involving minors in sexual contexts. The models that fit most fiction-writing use cases in 2026 are Hermes 3 Llama 3.3 (fewer refusals, strong instruction following) and Dolphin 3.0 Mistral (broader uncensored range, smaller footprint). Both run fully locally through Ollama or LM Studio with no data leaving your machine. The ethical responsibilities that apply when using these models are not zero — writers working with uncensored models still have obligations around distribution, minors, and real people that no local setup removes.**',
+      '**Uncensored local LLMs are appropriate for fiction writers who need to generate morally complex characters, dark themes, violence, mature romantic content, or unreliable narrator voices that cloud models refuse to produce. They are appropriate only when the output is used for creative fiction with an adult audience — not as a tool to produce real-world harmful content, non-consensual depictions of real people, or content involving minors in sexual contexts. The models that fit most fiction-writing use cases in 2026 are Hermes 3 Llama 3.1 (fewer refusals, strong instruction following) and Dolphin 3.0 Mistral (broader uncensored range, smaller footprint). Both run fully locally through Ollama or LM Studio with no data leaving your machine. The ethical responsibilities that apply when using these models are not zero — writers working with uncensored models still have obligations around distribution, minors, and real people that no local setup removes.**',
     quickAnswerTop: {
       en: {
         question: 'Which uncensored local LLMs should fiction writers use in 2026?',
         answer:
-          'Hermes 3 Llama 3.3 is the best all-round uncensored model for fiction in 2026 — strong instruction following, good character voice differentiation, fewer arbitrary refusals without the aggressive output that some fully uncensored fine-tunes produce. Dolphin 3.0 Mistral is the lighter alternative on 16–24 GB systems. For writers who need occasional dark content rather than persistent uncensored output, standard instruction-tuned models (Llama 3.3 70B, [Qwen3](https://ollama.com/library/qwen3) 32B) with well-structured prompts generate most mature literary content without requiring an uncensored fine-tune. The ethical baseline that applies regardless of model: no content involving minors in sexual contexts, no non-consensual depictions of identifiable real people, and careful consideration before distributing output publicly.',
+          'Hermes 3 Llama 3.1 is the best all-round uncensored model for fiction in 2026 — strong instruction following, good character voice differentiation, fewer arbitrary refusals without the aggressive output that some fully uncensored fine-tunes produce. Dolphin 3.0 Mistral is the lighter alternative on 16–24 GB systems. For writers who need occasional dark content rather than persistent uncensored output, standard instruction-tuned models (Llama 3.3 70B, [Qwen3](https://ollama.com/library/qwen3) 32B) with well-structured prompts generate most mature literary content without requiring an uncensored fine-tune. The ethical baseline that applies regardless of model: no content involving minors in sexual contexts, no non-consensual depictions of identifiable real people, and careful consideration before distributing output publicly.',
         bullets: [
-          'Hermes 3 Llama 3.3 — best all-round uncensored fiction model; strong instruction following, fewer arbitrary refusals.',
+          'Hermes 3 Llama 3.1 — best all-round uncensored fiction model; strong instruction following, fewer arbitrary refusals.',
           'Dolphin 3.0 Mistral — lighter option for 16–24 GB systems; broader uncensored range than Hermes 3.',
           'Standard Llama 3.3 70B and Qwen3 32B generate most mature literary content with structured prompts — no uncensored fine-tune required for many use cases.',
           'All uncensored models run fully locally through Ollama or LM Studio — no data leaves your machine.',
@@ -92,7 +92,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Related Reading', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
-    gammaDescription: 'The slide deck below covers: what "uncensored" fine-tuning actually means (RLHF removal vs. zero constraints); a 5-model comparison table (Hermes 3 Llama 3.3 to Dolphin 3.0 Mistral Small with VRAM, refusal rate, instruction quality); appropriate vs. inappropriate use cases; Ollama setup commands; ethical responsibilities that remain regardless of local setup; and 5 common mistakes. Download the PDF as an uncensored local LLM creative writing reference card.',
+    gammaDescription: 'The slide deck below covers: what "uncensored" fine-tuning actually means (RLHF removal vs. zero constraints); a 5-model comparison table (Hermes 3 Llama 3.1 to Dolphin 3.0 Mistral Small with VRAM, refusal rate, instruction quality); appropriate vs. inappropriate use cases; Ollama setup commands; ethical responsibilities that remain regardless of local setup; and 5 common mistakes. Download the PDF as an uncensored local LLM creative writing reference card.',
     affiliateLinks: [
       {
         productName: 'Ollama',
@@ -120,7 +120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**"Uncensored" means the model has reduced RLHF safety fine-tuning — not that it has no constraints at all.** Uncensored fine-tunes still follow the instruction format, maintain character consistency, and can be directed with prompts. They are not "anything goes" systems.',
-          '**Hermes 3 Llama 3.3 is the best all-round pick for fiction writers in 2026.** Fewer arbitrary refusals, strong instruction following, good character voice differentiation. The right choice for writers who want the capability without the aggressive output some fully uncensored models produce.',
+          '**Hermes 3 Llama 3.1 is the best all-round pick for fiction writers in 2026.** Fewer arbitrary refusals, strong instruction following, good character voice differentiation. The right choice for writers who want the capability without the aggressive output some fully uncensored models produce.',
           '**Standard instruction-tuned models handle most mature literary content with good prompts.** Violence, moral complexity, dark psychology, and mature themes in literary prose rarely require an uncensored fine-tune. What they refuse is explicit sexual content and detailed descriptions of real-world harm. Know which category your work falls in before switching models.',
           '**Running locally means no data leaves your machine.** No cloud terms-of-service applies. No content is logged, analysed, or used for training. This is the main structural reason writers use local uncensored models — privacy plus no usage restrictions on fiction.',
           '**Ethical responsibilities do not disappear because there is no ToS enforcement.** Writers distributing fiction produced with uncensored models carry the same legal responsibilities as any other author: minors, real people, incitement, and jurisdiction-specific obscenity laws all apply regardless of the generation method.',
@@ -132,7 +132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Quick Facts',
         items: [
-          '**Uncensored models tested:** Hermes 3 Llama 3.3 (primary), Dolphin 3.0 Mistral (secondary).',
+          '**Uncensored models tested:** Hermes 3 Llama 3.1 (primary), Dolphin 3.0 Mistral (secondary).',
           '**Backends:** Ollama (primary), LM Studio (alternative for GUI setup).',
           '**Hardware:** Hermes 3 70B at Q4 requires ~42 GB; Dolphin 3.0 7B runs on 8 GB; Dolphin 3.0 24B runs on ~16 GB.',
           '**Frontends:** SillyTavern, Agnai, RisuAI all pair with uncensored Ollama models via OpenAI-compatible endpoint.',
@@ -427,7 +427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Uncensored lokale LLMs für Belletristik-Autoren — welche Modelle, Ollama-Einrichtung und die echten Ethik-Fragen: Wann sie geeignet sind und welche Verantwortung Autoren trotzdem tragen.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Mistral',
       'Llama 3.3 70B',
       'Qwen3 32B',
@@ -452,14 +452,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'uncensored ki schreiben ethik',
     ],
     leadAnswerBlock:
-      '**Uncensored lokale LLMs sind für Belletristik-Autoren geeignet, die moralisch komplexe Charaktere, dunkle Themen, Gewalt, reife romantische Inhalte oder Stimmen unzuverlässiger Erzähler generieren müssen, die Cloud-Modelle ablehnen. Sie sind nur dann geeignet, wenn die Ausgabe für kreative Belletristik mit erwachsenem Publikum verwendet wird — nicht als Werkzeug zur Produktion realer schädlicher Inhalte, nicht-konsensueller Darstellungen realer Personen oder Inhalte, die Minderjährige in sexuellen Kontexten involvieren. Die Modelle, die den meisten Belletristik-Anwendungsfällen im Jahr 2026 entsprechen, sind Hermes 3 Llama 3.3 (weniger Ablehnungen, starkes Anweisungsfolgen) und Dolphin 3.0 Mistral (breiteres Uncensored-Spektrum, kleinerer Speicherbedarf). Beide laufen vollständig lokal über Ollama oder LM Studio, ohne dass Daten dein Gerät verlassen. Die ethischen Verantwortlichkeiten bei der Nutzung dieser Modelle sind nicht null — Autoren, die mit Uncensored-Modellen arbeiten, haben weiterhin Pflichten bezüglich Verbreitung, Minderjährigen und realen Personen, die kein lokales Setup beseitigt.**',
+      '**Uncensored lokale LLMs sind für Belletristik-Autoren geeignet, die moralisch komplexe Charaktere, dunkle Themen, Gewalt, reife romantische Inhalte oder Stimmen unzuverlässiger Erzähler generieren müssen, die Cloud-Modelle ablehnen. Sie sind nur dann geeignet, wenn die Ausgabe für kreative Belletristik mit erwachsenem Publikum verwendet wird — nicht als Werkzeug zur Produktion realer schädlicher Inhalte, nicht-konsensueller Darstellungen realer Personen oder Inhalte, die Minderjährige in sexuellen Kontexten involvieren. Die Modelle, die den meisten Belletristik-Anwendungsfällen im Jahr 2026 entsprechen, sind Hermes 3 Llama 3.1 (weniger Ablehnungen, starkes Anweisungsfolgen) und Dolphin 3.0 Mistral (breiteres Uncensored-Spektrum, kleinerer Speicherbedarf). Beide laufen vollständig lokal über Ollama oder LM Studio, ohne dass Daten dein Gerät verlassen. Die ethischen Verantwortlichkeiten bei der Nutzung dieser Modelle sind nicht null — Autoren, die mit Uncensored-Modellen arbeiten, haben weiterhin Pflichten bezüglich Verbreitung, Minderjährigen und realen Personen, die kein lokales Setup beseitigt.**',
     quickAnswerTop: {
       de: {
         question: 'Welche Uncensored lokalen LLMs sollten Belletristik-Autoren 2026 verwenden?',
         answer:
-          'Hermes 3 Llama 3.3 ist das beste Allround-Uncensored-Modell für Belletristik in 2026 — starkes Anweisungsfolgen, gute Charakterstimmen-Differenzierung, weniger willkürliche Ablehnungen ohne die aggressive Ausgabe, die manche vollständig Uncensored-Fine-Tunes produzieren. Dolphin 3.0 Mistral ist die leichtere Alternative für 16–24-GB-Systeme. Für Autoren, die gelegentlich dunkle Inhalte statt persistenter Uncensored-Ausgabe benötigen, generieren Standard-Instruction-Tuned-Modelle (Llama 3.3 70B, [Qwen3](https://ollama.com/library/qwen3) 32B) mit gut strukturierten Prompts die meisten reifen literarischen Inhalte ohne Uncensored-Fine-Tune. Die ethische Grundlinie, die unabhängig vom Modell gilt: keine Inhalte, die Minderjährige in sexuellen Kontexten involvieren, keine nicht-konsensuellen Darstellungen identifizierbarer realer Personen, und sorgfältige Überlegung vor der öffentlichen Verbreitung.',
+          'Hermes 3 Llama 3.1 ist das beste Allround-Uncensored-Modell für Belletristik in 2026 — starkes Anweisungsfolgen, gute Charakterstimmen-Differenzierung, weniger willkürliche Ablehnungen ohne die aggressive Ausgabe, die manche vollständig Uncensored-Fine-Tunes produzieren. Dolphin 3.0 Mistral ist die leichtere Alternative für 16–24-GB-Systeme. Für Autoren, die gelegentlich dunkle Inhalte statt persistenter Uncensored-Ausgabe benötigen, generieren Standard-Instruction-Tuned-Modelle (Llama 3.3 70B, [Qwen3](https://ollama.com/library/qwen3) 32B) mit gut strukturierten Prompts die meisten reifen literarischen Inhalte ohne Uncensored-Fine-Tune. Die ethische Grundlinie, die unabhängig vom Modell gilt: keine Inhalte, die Minderjährige in sexuellen Kontexten involvieren, keine nicht-konsensuellen Darstellungen identifizierbarer realer Personen, und sorgfältige Überlegung vor der öffentlichen Verbreitung.',
         bullets: [
-          'Hermes 3 Llama 3.3 — bestes Allround-Uncensored-Belletristik-Modell; starkes Anweisungsfolgen, weniger willkürliche Ablehnungen.',
+          'Hermes 3 Llama 3.1 — bestes Allround-Uncensored-Belletristik-Modell; starkes Anweisungsfolgen, weniger willkürliche Ablehnungen.',
           'Dolphin 3.0 Mistral — leichtere Option für 16–24-GB-Systeme; breiteres Uncensored-Spektrum als Hermes 3.',
           'Standard Llama 3.3 70B und Qwen3 32B generieren die meisten reifen literarischen Inhalte mit strukturierten Prompts — für viele Anwendungsfälle ist kein Uncensored-Fine-Tune erforderlich.',
           'Alle Uncensored-Modelle laufen vollständig lokal über Ollama oder LM Studio — keine Daten verlassen dein Gerät.',
@@ -487,7 +487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Weiterführende Literatur', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
-    gammaDescription: 'Die Präsentation zeigt: was „Uncensored"-Fine-Tuning wirklich bedeutet (RLHF-Entfernung vs. null Einschränkungen); eine 5-Modell-Vergleichstabelle (Hermes 3 Llama 3.3 bis Dolphin 3.0 Mistral Small mit VRAM, Ablehnungsrate, Anweisungsqualität); geeignete und ungeeignete Anwendungsfälle; Ollama-Einrichtungsbefehle; bleibende ethische Verantwortlichkeiten; und 5 häufige Fehler. Als PDF-Referenzkarte für Uncensored-LLM-Kreativschreiben herunterladen.',
+    gammaDescription: 'Die Präsentation zeigt: was „Uncensored"-Fine-Tuning wirklich bedeutet (RLHF-Entfernung vs. null Einschränkungen); eine 5-Modell-Vergleichstabelle (Hermes 3 Llama 3.1 bis Dolphin 3.0 Mistral Small mit VRAM, Ablehnungsrate, Anweisungsqualität); geeignete und ungeeignete Anwendungsfälle; Ollama-Einrichtungsbefehle; bleibende ethische Verantwortlichkeiten; und 5 häufige Fehler. Als PDF-Referenzkarte für Uncensored-LLM-Kreativschreiben herunterladen.',
     affiliateLinks: [
       {
         productName: 'Ollama',
@@ -515,7 +515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**„Uncensored" bedeutet, das Modell hat reduziertes RLHF-Sicherheits-Fine-Tuning — nicht dass es gar keine Einschränkungen hat.** Uncensored-Fine-Tunes folgen weiterhin dem Anweisungsformat, halten die Charakterkonsistenz aufrecht und können mit Prompts gesteuert werden. Es sind keine „Alles erlaubt"-Systeme.',
-          '**Hermes 3 Llama 3.3 ist die beste Allroundwahl für Belletristik-Autoren in 2026.** Weniger willkürliche Ablehnungen, starkes Anweisungsfolgen, gute Charakterstimmen-Differenzierung. Die richtige Wahl für Autoren, die die Fähigkeit ohne die aggressive Ausgabe einiger vollständig Uncensored-Modelle wollen.',
+          '**Hermes 3 Llama 3.1 ist die beste Allroundwahl für Belletristik-Autoren in 2026.** Weniger willkürliche Ablehnungen, starkes Anweisungsfolgen, gute Charakterstimmen-Differenzierung. Die richtige Wahl für Autoren, die die Fähigkeit ohne die aggressive Ausgabe einiger vollständig Uncensored-Modelle wollen.',
           '**Standard-Instruction-Tuned-Modelle verarbeiten die meisten reifen literarischen Inhalte mit guten Prompts.** Gewalt, moralische Komplexität, dunkle Psychologie und reife Themen in literarischer Prosa erfordern selten ein Uncensored-Fine-Tune. Was sie ablehnen, sind explizite sexuelle Inhalte und detaillierte Beschreibungen realer Schäden. Wisse, welche Kategorie dein Werk fällt, bevor du das Modell wechselst.',
           '**Lokal laufen bedeutet keine Daten verlassen dein Gerät.** Keine Cloud-AGB gelten. Keine Inhalte werden protokolliert, analysiert oder für Training verwendet. Das ist der Hauptstrukturgrund, warum Autoren lokale Uncensored-Modelle verwenden — Datenschutz plus keine Nutzungsbeschränkungen bei Belletristik.',
           '**Ethische Verantwortlichkeiten verschwinden nicht, weil es keine ToS-Durchsetzung gibt.** Autoren, die mit Uncensored-Modellen produzierte Belletristik verbreiten, tragen dieselben rechtlichen Verantwortlichkeiten wie jeder andere Autor: Minderjährige, reale Personen, Aufstachelung und jurisdiktionsspezifische Gesetze gelten unabhängig von der Generierungsmethode.',
@@ -527,7 +527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Schnelle Fakten',
         items: [
-          '**Getestete Uncensored-Modelle:** Hermes 3 Llama 3.3 (primär), Dolphin 3.0 Mistral (sekundär).',
+          '**Getestete Uncensored-Modelle:** Hermes 3 Llama 3.1 (primär), Dolphin 3.0 Mistral (sekundär).',
           '**Backends:** Ollama (primär), LM Studio (Alternative für GUI-Einrichtung).',
           '**Hardware:** Hermes 3 70B bei Q4 benötigt ~42 GB; Dolphin 3.0 7B läuft auf 8 GB; Dolphin 3.0 24B läuft auf ~16 GB.',
           '**Frontends:** SillyTavern, Agnai, RisuAI können alle mit Uncensored-Ollama-Modellen über einen OpenAI-kompatiblen Endpoint kombiniert werden.',
@@ -825,7 +825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LLM locaux non censurés pour les auteurs de fiction — quels modèles, configuration Ollama et l\'éthique réelle : quand ils sont appropriés et quelles responsabilités subsistent.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Mistral',
       'Llama 3.3 70B',
       'Qwen3 32B',
@@ -850,14 +850,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'éthique ia écriture non censurée',
     ],
     leadAnswerBlock:
-      '**Les LLM locaux non censurés sont appropriés pour les auteurs de fiction qui doivent générer des personnages moralement complexes, des thèmes sombres, de la violence, du contenu romantique mature ou des voix narratives non fiables que les modèles cloud refusent de produire. Ils ne sont appropriés que si la production est destinée à de la fiction créative pour un public adulte — pas comme outil pour produire du contenu nuisible dans la réalité, des représentations non consenties de personnes réelles, ou du contenu impliquant des mineurs dans des contextes sexuels. Les modèles adaptés à la plupart des cas d\'usage de fiction en 2026 sont Hermes 3 Llama 3.3 (moins de refus, bonne qualité d\'instruction) et Dolphin 3.0 Mistral (plage non censurée plus large, empreinte mémoire réduite). Les deux fonctionnent entièrement en local via Ollama ou LM Studio, sans que les données quittent la machine. Les responsabilités éthiques qui s\'appliquent ne sont pas nulles — les auteurs utilisant des modèles non censurés conservent des obligations concernant la distribution, les mineurs et les personnes réelles qu\'aucune configuration locale ne supprime.**',
+      '**Les LLM locaux non censurés sont appropriés pour les auteurs de fiction qui doivent générer des personnages moralement complexes, des thèmes sombres, de la violence, du contenu romantique mature ou des voix narratives non fiables que les modèles cloud refusent de produire. Ils ne sont appropriés que si la production est destinée à de la fiction créative pour un public adulte — pas comme outil pour produire du contenu nuisible dans la réalité, des représentations non consenties de personnes réelles, ou du contenu impliquant des mineurs dans des contextes sexuels. Les modèles adaptés à la plupart des cas d\'usage de fiction en 2026 sont Hermes 3 Llama 3.1 (moins de refus, bonne qualité d\'instruction) et Dolphin 3.0 Mistral (plage non censurée plus large, empreinte mémoire réduite). Les deux fonctionnent entièrement en local via Ollama ou LM Studio, sans que les données quittent la machine. Les responsabilités éthiques qui s\'appliquent ne sont pas nulles — les auteurs utilisant des modèles non censurés conservent des obligations concernant la distribution, les mineurs et les personnes réelles qu\'aucune configuration locale ne supprime.**',
     quickAnswerTop: {
       fr: {
         question: 'Quels LLM locaux non censurés les auteurs de fiction doivent-ils utiliser en 2026 ?',
         answer:
-          'Hermes 3 Llama 3.3 est le meilleur modèle non censuré polyvalent pour la fiction en 2026 — excellente qualité d\'instruction, bonne différenciation des voix de personnages, moins de refus arbitraires sans la tendance agressive que produisent certains modèles entièrement non censurés. Dolphin 3.0 Mistral est l\'alternative légère pour les systèmes 16–24 Go. Pour les auteurs qui ont besoin de contenu sombre occasionnel plutôt que d\'une sortie non censurée persistante, les modèles instruction-tuned standard (Llama 3.3 70B, [Qwen3](https://ollama.com/library/qwen3) 32B) avec des prompts bien structurés génèrent la plupart des contenus littéraires matures sans nécessiter de fine-tune non censuré. La ligne éthique de base qui s\'applique indépendamment du modèle : aucun contenu impliquant des mineurs dans des contextes sexuels, aucune représentation non consentie de personnes réelles identifiables, et une réflexion approfondie avant de distribuer publiquement.',
+          'Hermes 3 Llama 3.1 est le meilleur modèle non censuré polyvalent pour la fiction en 2026 — excellente qualité d\'instruction, bonne différenciation des voix de personnages, moins de refus arbitraires sans la tendance agressive que produisent certains modèles entièrement non censurés. Dolphin 3.0 Mistral est l\'alternative légère pour les systèmes 16–24 Go. Pour les auteurs qui ont besoin de contenu sombre occasionnel plutôt que d\'une sortie non censurée persistante, les modèles instruction-tuned standard (Llama 3.3 70B, [Qwen3](https://ollama.com/library/qwen3) 32B) avec des prompts bien structurés génèrent la plupart des contenus littéraires matures sans nécessiter de fine-tune non censuré. La ligne éthique de base qui s\'applique indépendamment du modèle : aucun contenu impliquant des mineurs dans des contextes sexuels, aucune représentation non consentie de personnes réelles identifiables, et une réflexion approfondie avant de distribuer publiquement.',
         bullets: [
-          'Hermes 3 Llama 3.3 — meilleur modèle non censuré polyvalent pour la fiction ; excellente qualité d\'instruction, moins de refus arbitraires.',
+          'Hermes 3 Llama 3.1 — meilleur modèle non censuré polyvalent pour la fiction ; excellente qualité d\'instruction, moins de refus arbitraires.',
           'Dolphin 3.0 Mistral — option légère pour les systèmes 16–24 Go ; plage non censurée plus large qu\'Hermes 3.',
           'Les modèles standard Llama 3.3 70B et Qwen3 32B génèrent la plupart des contenus littéraires matures avec des prompts structurés — aucun fine-tune non censuré requis pour de nombreux cas d\'usage.',
           'Tous les modèles non censurés fonctionnent entièrement en local via Ollama ou LM Studio — les données ne quittent pas la machine.',
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
-    gammaDescription: 'La présentation ci-dessous couvre : ce que signifie réellement le fine-tuning « non censuré » (suppression du RLHF vs. zéro contrainte) ; un tableau de comparaison de 5 modèles (Hermes 3 Llama 3.3 à Dolphin 3.0 Mistral Small avec VRAM, taux de refus, qualité d\'instruction) ; cas d\'usage appropriés et inappropriés ; commandes de configuration Ollama ; responsabilités éthiques qui subsistent ; et 5 erreurs courantes. Téléchargez le PDF comme carte de référence pour l\'écriture créative avec LLM non censuré.',
+    gammaDescription: 'La présentation ci-dessous couvre : ce que signifie réellement le fine-tuning « non censuré » (suppression du RLHF vs. zéro contrainte) ; un tableau de comparaison de 5 modèles (Hermes 3 Llama 3.1 à Dolphin 3.0 Mistral Small avec VRAM, taux de refus, qualité d\'instruction) ; cas d\'usage appropriés et inappropriés ; commandes de configuration Ollama ; responsabilités éthiques qui subsistent ; et 5 erreurs courantes. Téléchargez le PDF comme carte de référence pour l\'écriture créative avec LLM non censuré.',
     affiliateLinks: [
       {
         productName: 'Ollama',
@@ -913,7 +913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**« Non censuré » signifie que le modèle a un entraînement de sécurité RLHF réduit — pas qu\'il n\'a aucune contrainte.** Les fine-tunes non censurés respectent toujours le format d\'instruction, maintiennent la cohérence des personnages et peuvent être guidés par des prompts. Ce ne sont pas des systèmes « tout est permis ».',
-          '**Hermes 3 Llama 3.3 est le meilleur choix polyvalent pour les auteurs de fiction en 2026.** Moins de refus arbitraires, excellente qualité d\'instruction, bonne différenciation des voix de personnages. Le bon choix pour les auteurs qui veulent la capacité sans la dérive agressive que produisent certains modèles entièrement non censurés.',
+          '**Hermes 3 Llama 3.1 est le meilleur choix polyvalent pour les auteurs de fiction en 2026.** Moins de refus arbitraires, excellente qualité d\'instruction, bonne différenciation des voix de personnages. Le bon choix pour les auteurs qui veulent la capacité sans la dérive agressive que produisent certains modèles entièrement non censurés.',
           '**Les modèles instruction-tuned standard gèrent la plupart des contenus littéraires matures avec de bons prompts.** La violence, la complexité morale, la psychologie sombre et les thèmes matures dans la prose littéraire nécessitent rarement un fine-tune non censuré. Ce qu\'ils refusent, c\'est le contenu sexuel explicite et les descriptions détaillées de préjudices réels. Identifie dans quelle catégorie se situe ton travail avant de changer de modèle.',
           '**Fonctionner localement signifie qu\'aucune donnée ne quitte ta machine.** Aucune condition d\'utilisation cloud ne s\'applique. Aucun contenu n\'est journalisé, analysé ou utilisé pour l\'entraînement. C\'est la principale raison structurelle pour laquelle les auteurs utilisent des modèles locaux non censurés — confidentialité et absence de restrictions d\'utilisation sur la fiction.',
           '**Les responsabilités éthiques ne disparaissent pas parce qu\'il n\'y a pas d\'application des CGU.** Les auteurs qui distribuent de la fiction produite avec des modèles non censurés portent les mêmes responsabilités légales que tout autre auteur : les lois sur les mineurs, les personnes réelles, l\'incitation et l\'obscénité selon les juridictions s\'appliquent quelle que soit la méthode de génération.',
@@ -925,7 +925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Faits rapides',
         items: [
-          '**Modèles non censurés testés :** Hermes 3 Llama 3.3 (principal), Dolphin 3.0 Mistral (secondaire).',
+          '**Modèles non censurés testés :** Hermes 3 Llama 3.1 (principal), Dolphin 3.0 Mistral (secondaire).',
           '**Backends :** Ollama (principal), LM Studio (alternative pour configuration GUI).',
           '**Matériel :** Hermes 3 70B en Q4 nécessite ~42 Go ; Dolphin 3.0 7B fonctionne sur 8 Go ; Dolphin 3.0 24B fonctionne sur ~16 Go.',
           '**Interfaces :** SillyTavern, Agnai, RisuAI s\'associent tous avec les modèles Ollama non censurés via l\'endpoint compatible OpenAI.',
@@ -1231,7 +1231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '小説家のための無検閲ローカルLLM―推奨モデル、Ollama設定、本当の倫理問題：適切な場面と創作者に残る責任を解説。',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Mistral',
       'Llama 3.3 70B',
       'Qwen3 32B',
@@ -1256,14 +1256,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '無検閲AI 創作倫理',
     ],
     leadAnswerBlock:
-      '**無検閲ローカルLLMは、クラウドモデルが拒否する道徳的に複雑なキャラクター・ダークなテーマ・暴力・成人向けのロマンティックコンテンツ・信頼できない語り手の声を生成する必要があるフィクション作家に適しています。成人向けの読者向け創作フィクションのみに出力を使用する場合に限り適切であり、現実の有害コンテンツ、実在人物の非合意的な描写、未成年者を性的文脈で含むコンテンツを生成するツールとしては不適切です。2026年のフィクション執筆ユースケースに最も適合するモデルは、Hermes 3 Llama 3.3（拒否率が低く、指示追従性が強い）とDolphin 3.0 Mistral（より広い無検閲範囲、小さなフットプリント）です。両モデルともOllamaまたはLM Studioを通じて完全にローカルで動作し、データは機外に出ません。これらのモデルを使用する際の倫理的責任はゼロではありません――無検閲モデルで作業する作家は、ローカル設定がなくならない配布、未成年者、実在人物に関する義務を依然として負っています。**',
+      '**無検閲ローカルLLMは、クラウドモデルが拒否する道徳的に複雑なキャラクター・ダークなテーマ・暴力・成人向けのロマンティックコンテンツ・信頼できない語り手の声を生成する必要があるフィクション作家に適しています。成人向けの読者向け創作フィクションのみに出力を使用する場合に限り適切であり、現実の有害コンテンツ、実在人物の非合意的な描写、未成年者を性的文脈で含むコンテンツを生成するツールとしては不適切です。2026年のフィクション執筆ユースケースに最も適合するモデルは、Hermes 3 Llama 3.1（拒否率が低く、指示追従性が強い）とDolphin 3.0 Mistral（より広い無検閲範囲、小さなフットプリント）です。両モデルともOllamaまたはLM Studioを通じて完全にローカルで動作し、データは機外に出ません。これらのモデルを使用する際の倫理的責任はゼロではありません――無検閲モデルで作業する作家は、ローカル設定がなくならない配布、未成年者、実在人物に関する義務を依然として負っています。**',
     quickAnswerTop: {
       ja: {
         question: '2026年にフィクション作家が使うべき無検閲ローカルLLMは？',
         answer:
-          'Hermes 3 Llama 3.3は2026年のフィクション向け最良のオールラウンド無検閲モデルです――強力な指示追従性、良好なキャラクターボイス分化、一部の完全無検閲ファインチューンが生成するような攻撃的な出力を伴わない少ない任意拒否。Dolphin 3.0 Mistralは16〜24 GBシステム向けの軽量な代替です。永続的な無検閲出力ではなく、時折ダークなコンテンツが必要な作家向けには、標準命令チューニングモデル（Llama 3.3 70B、[Qwen3](https://ollama.com/library/qwen3) 32B）が適切に構造化されたプロンプトで無検閲ファインチューンなしに大半の成人向け文学コンテンツを生成します。モデルに関わらず適用される倫理的基準：性的文脈での未成年者を含むコンテンツなし、識別可能な実在人物の非合意的描写なし、公開配布前の慎重な検討。',
+          'Hermes 3 Llama 3.1は2026年のフィクション向け最良のオールラウンド無検閲モデルです――強力な指示追従性、良好なキャラクターボイス分化、一部の完全無検閲ファインチューンが生成するような攻撃的な出力を伴わない少ない任意拒否。Dolphin 3.0 Mistralは16〜24 GBシステム向けの軽量な代替です。永続的な無検閲出力ではなく、時折ダークなコンテンツが必要な作家向けには、標準命令チューニングモデル（Llama 3.3 70B、[Qwen3](https://ollama.com/library/qwen3) 32B）が適切に構造化されたプロンプトで無検閲ファインチューンなしに大半の成人向け文学コンテンツを生成します。モデルに関わらず適用される倫理的基準：性的文脈での未成年者を含むコンテンツなし、識別可能な実在人物の非合意的描写なし、公開配布前の慎重な検討。',
         bullets: [
-          'Hermes 3 Llama 3.3 ― フィクション向け最良オールラウンド無検閲モデル。強力な指示追従性、任意拒否が少ない。',
+          'Hermes 3 Llama 3.1 ― フィクション向け最良オールラウンド無検閲モデル。強力な指示追従性、任意拒否が少ない。',
           'Dolphin 3.0 Mistral ― 16〜24 GBシステム向け軽量選択肢。Hermes 3より広い無検閲範囲。',
           'Standard Llama 3.3 70BとQwen3 32Bは構造化プロンプトで大半の成人向け文学コンテンツを生成 ― 多くのユースケースで無検閲ファインチューン不要。',
           'すべての無検閲モデルはOllamaまたはLM Studio経由で完全ローカル動作 ― データは機外に出ない。',
@@ -1292,7 +1292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '関連読み物', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
-    gammaDescription: '以下のスライドデッキでは：「無検閲」ファインチューニングが実際に意味すること（RLHF除去対ゼロ制約）；5モデル比較表（Hermes 3 Llama 3.3からDolphin 3.0 Mistral SmallまでのVRAM、拒否率、指示品質）；適切・不適切なユースケース；Ollamaセットアップコマンド；ローカルセットアップに関わらず残る倫理的責任；5つのよくある間違いを掲載。PDFを無検閲ローカルLLM創作活動リファレンスカードとしてダウンロードしてください。',
+    gammaDescription: '以下のスライドデッキでは：「無検閲」ファインチューニングが実際に意味すること（RLHF除去対ゼロ制約）；5モデル比較表（Hermes 3 Llama 3.1からDolphin 3.0 Mistral SmallまでのVRAM、拒否率、指示品質）；適切・不適切なユースケース；Ollamaセットアップコマンド；ローカルセットアップに関わらず残る倫理的責任；5つのよくある間違いを掲載。PDFを無検閲ローカルLLM創作活動リファレンスカードとしてダウンロードしてください。',
     affiliateLinks: [
       {
         productName: 'Ollama',
@@ -1320,7 +1320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**「無検閲」とは、モデルがRLHFの安全ファインチューニングを削減していることを意味し、制約が一切ないわけではありません。** 無検閲ファインチューンは引き続き指示形式に従い、キャラクターの一貫性を維持し、プロンプトで誘導できます。「何でも許可」のシステムではありません。',
-          '**2026年のフィクション作家向け最良選択はHermes 3 Llama 3.3です。** 任意拒否が少なく、強力な指示追従性、良好なキャラクターボイス分化。一部の完全無検閲モデルが生成するような攻撃的な出力を望まない作家に適しています。',
+          '**2026年のフィクション作家向け最良選択はHermes 3 Llama 3.1です。** 任意拒否が少なく、強力な指示追従性、良好なキャラクターボイス分化。一部の完全無検閲モデルが生成するような攻撃的な出力を望まない作家に適しています。',
           '**標準命令チューニングモデルも優れたプロンプトで大半の成人向け文学コンテンツを処理できます。** 暴力、道徳的複雑性、ダークな心理、文学散文における成人向けテーマは、無検閲ファインチューンをほとんど必要としません。拒否するのは明示的な性的コンテンツと現実的な有害の詳細な描写です。モデルを切り替える前に、あなたの作品がどのカテゴリに属するかを把握してください。',
           '**ローカルで実行することで、データは機外に出ません。** クラウドのToSは適用されません。コンテンツはログ記録、分析、トレーニングに使用されません。これが作家がローカル無検閲モデルを使用する主な構造的理由です――プライバシーとフィクションにおける使用制限なし。',
           '**ToS執行がないからといって倫理的責任が消えるわけではありません。** 無検閲モデルで作成したフィクションを配布する作家は、他の著者と同じ法的責任を負います：未成年者、実在人物、扇動、管轄区域固有の猥褻法はすべて、生成方法に関わらず適用されます。',
@@ -1332,7 +1332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'クイックファクト',
         items: [
-          '**テストした無検閲モデル：** Hermes 3 Llama 3.3（主）、Dolphin 3.0 Mistral（副）。',
+          '**テストした無検閲モデル：** Hermes 3 Llama 3.1（主）、Dolphin 3.0 Mistral（副）。',
           '**バックエンド：** Ollama（主）、LM Studio（GUIセットアップの代替）。',
           '**ハードウェア：** Hermes 3 70B（Q4）は約42 GB必要。Dolphin 3.0 7Bは8 GBで動作、Dolphin 3.0 24Bは約16 GBで動作。',
           '**フロントエンド：** SillyTavern、Agnai、RisuAIはすべてOpenAI互換エンドポイント経由で無検閲Ollamaモデルと接続可能。',
@@ -1451,10 +1451,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'japanese',
         title: '日本語で書く場合のモデル選び',
         content:
-          '**日本語の小説を書く場合、本記事の推奨順位は変わります――無検閲ファインチューンはいずれも英語中心のベースモデル上に構築されており、日本語の生成品質はベースモデルの多言語対応力にそのまま依存するためです。** 低VRAM環境向けの第一候補であるDolphin 3.0のMistral系は、日本語の訓練データが最小限で日本語タスクには推奨できません。日本語を主言語にするなら、収まる範囲で最大のLlama系ベース（Hermes 3 Llama 3.3 70B）を選ぶか、英語で生成してから日本語に書き直す二段階の手順を取るのが現実的です。日本語ネイティブのモデル選びそのものは[日本語ローカルLLMの比較](/ja/prompt-bites/best-japanese-language-models-local)で扱っています。',
+          '**日本語の小説を書く場合、本記事の推奨順位は変わります――無検閲ファインチューンはいずれも英語中心のベースモデル上に構築されており、日本語の生成品質はベースモデルの多言語対応力にそのまま依存するためです。** 低VRAM環境向けの第一候補であるDolphin 3.0のMistral系は、日本語の訓練データが最小限で日本語タスクには推奨できません。日本語を主言語にするなら、収まる範囲で最大のLlama系ベース（Hermes 3 Llama 3.1 70B）を選ぶか、英語で生成してから日本語に書き直す二段階の手順を取るのが現実的です。日本語ネイティブのモデル選びそのものは[日本語ローカルLLMの比較](/ja/prompt-bites/best-japanese-language-models-local)で扱っています。',
         items: [
           '**Mistral系は日本語に不向き：** Mistral Smallは日本語の訓練データが最小限で、日本語タスクには推奨されません。Dolphin 3.0 Mistral 24BとMistral Smallは低VRAM環境の無検閲用途としては有力ですが、その利点は日本語では相殺されます。',
-          '**Llama系は使えるが日本語特化モデルには及ばない：** Llama 3.1 8Bクラスは日本語ベンチマークで日本語特化モデルより30〜40%低い水準です。Hermes 3 Llama 3.3 70Bはベースが大きい分だけ安定しますが、無検閲ファインチューン自体が主に英語データで行われるため、ベースが持つ日本語力はさらに薄まります。',
+          '**Llama系は使えるが日本語特化モデルには及ばない：** Llama 3.1 8Bクラスは日本語ベンチマークで日本語特化モデルより30〜40%低い水準です。Hermes 3 Llama 3.1 70Bはベースが大きい分だけ安定しますが、無検閲ファインチューン自体が主に英語データで行われるため、ベースが持つ日本語力はさらに薄まります。',
           '**日本語は速度も落ちる：** 漢字・ひらがな・カタカナがそれぞれトークンを消費するため、英語比で有効トークン/秒が約20〜30%低下します。英語で20 tok/sのモデルは日本語では約14〜16 tok/s相当になります。',
           '**量子化の下限が上がる：** 日本語では量子化の影響が英語より大きく、Q4_K_Mが推奨最低ラインです。Q3_K_Mは日本語テキストで約5〜10%の品質低下を示し、長い文章やフォーマルな文体で顕著になります。日本語用途でQ2は使用しないでください。',
           '**日本語ネイティブの無検閲ファインチューンは実質的に存在しない：** ELYZAやRinnaのような日本語特化モデルには、検証された無検閲版がありません。日本語の分量が多い原稿では、無検閲モデルで英語の下書きを作り、日本語側は自分で書き直す二段階の手順が最も安定します。',
@@ -1685,7 +1685,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '小说作家的无审查本地LLM——推荐模型、Ollama配置和真实伦理：何时适用，创作者还负有哪些责任。',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Mistral',
       'Llama 3.3 70B',
       'Qwen3 32B',
@@ -1710,14 +1710,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '无审查ai写作伦理',
     ],
     leadAnswerBlock:
-      '**无审查本地LLM适合需要生成道德复杂角色、黑暗主题、暴力、成人浪漫内容或云端模型拒绝生成的不可靠叙述者声音的小说作家。仅当输出用于面向成年读者的创意小说时方为适用——不应作为生成现实有害内容、非合意描绘真实人物或涉及未成年人性内容的工具。2026年最适合小说写作场景的模型是Hermes 3 Llama 3.3（拒绝率低、指令遵循性强）和Dolphin 3.0 Mistral（更广泛的无审查范围、更小的内存占用）。两款模型均可通过Ollama或LM Studio完全本地运行，数据不离开本机。使用这些模型的伦理责任并非为零——使用无审查模型的创作者在分发、未成年人和真实人物方面仍有义务，任何本地配置都无法消除。**',
+      '**无审查本地LLM适合需要生成道德复杂角色、黑暗主题、暴力、成人浪漫内容或云端模型拒绝生成的不可靠叙述者声音的小说作家。仅当输出用于面向成年读者的创意小说时方为适用——不应作为生成现实有害内容、非合意描绘真实人物或涉及未成年人性内容的工具。2026年最适合小说写作场景的模型是Hermes 3 Llama 3.1（拒绝率低、指令遵循性强）和Dolphin 3.0 Mistral（更广泛的无审查范围、更小的内存占用）。两款模型均可通过Ollama或LM Studio完全本地运行，数据不离开本机。使用这些模型的伦理责任并非为零——使用无审查模型的创作者在分发、未成年人和真实人物方面仍有义务，任何本地配置都无法消除。**',
     quickAnswerTop: {
       zh: {
         question: '2026年小说作家应使用哪些无审查本地LLM？',
         answer:
-          'Hermes 3 Llama 3.3是2026年小说创作的最佳全能无审查模型——强大的指令遵循性、良好的角色声音分化、较少的任意拒绝，且不会出现某些完全无审查微调模型产生的激进输出。Dolphin 3.0 Mistral是16至24 GB系统的轻量级替代选项。对于只需偶尔使用黑暗内容而非持续无审查输出的作家，标准指令调优模型（Llama 3.3 70B、[Qwen3](https://ollama.com/library/qwen3) 32B）配合结构良好的提示词可以在无需无审查微调的情况下生成大多数成人向文学内容。无论使用何种模型，伦理底线始终适用：不得生成涉及未成年人的性内容，不得非合意描绘可识别的真实人物，公开分发前需谨慎考虑。',
+          'Hermes 3 Llama 3.1是2026年小说创作的最佳全能无审查模型——强大的指令遵循性、良好的角色声音分化、较少的任意拒绝，且不会出现某些完全无审查微调模型产生的激进输出。Dolphin 3.0 Mistral是16至24 GB系统的轻量级替代选项。对于只需偶尔使用黑暗内容而非持续无审查输出的作家，标准指令调优模型（Llama 3.3 70B、[Qwen3](https://ollama.com/library/qwen3) 32B）配合结构良好的提示词可以在无需无审查微调的情况下生成大多数成人向文学内容。无论使用何种模型，伦理底线始终适用：不得生成涉及未成年人的性内容，不得非合意描绘可识别的真实人物，公开分发前需谨慎考虑。',
         bullets: [
-          'Hermes 3 Llama 3.3 ― 小说创作最佳全能无审查模型，指令遵循性强，任意拒绝少。',
+          'Hermes 3 Llama 3.1 ― 小说创作最佳全能无审查模型，指令遵循性强，任意拒绝少。',
           'Dolphin 3.0 Mistral ― 16至24 GB系统的轻量选项，无审查范围比Hermes 3更广。',
           'Standard Llama 3.3 70B和Qwen3 32B配合结构化提示词可生成大多数成人向文学内容——许多场景无需无审查微调。',
           '所有无审查模型均可通过Ollama或LM Studio完全本地运行——数据不离开本机。',
@@ -1745,7 +1745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '延伸阅读', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
-    gammaDescription: '以下幻灯片包含：「无审查」微调的真实含义（RLHF移除对比零约束）；5模型对比表（Hermes 3 Llama 3.3至Dolphin 3.0 Mistral Small，含VRAM、拒绝率、指令质量）；适用与不适用场景；Ollama配置命令；无论本地配置如何仍需承担的伦理责任；以及5个常见错误。将PDF作为无审查本地LLM创意写作参考卡下载。',
+    gammaDescription: '以下幻灯片包含：「无审查」微调的真实含义（RLHF移除对比零约束）；5模型对比表（Hermes 3 Llama 3.1至Dolphin 3.0 Mistral Small，含VRAM、拒绝率、指令质量）；适用与不适用场景；Ollama配置命令；无论本地配置如何仍需承担的伦理责任；以及5个常见错误。将PDF作为无审查本地LLM创意写作参考卡下载。',
     affiliateLinks: [
       {
         productName: 'Ollama',
@@ -1773,7 +1773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**「无审查」意味着模型减少了RLHF安全微调——而非完全没有约束。** 无审查微调模型仍然遵循指令格式、维持角色一致性，并可通过提示词引导。它们并非「什么都可以」的系统。',
-          '**Hermes 3 Llama 3.3是2026年小说作家的最佳全能选择。** 任意拒绝更少、指令遵循性强、角色声音分化良好。适合既需要该能力又不希望出现某些完全无审查模型产生的激进输出的作家。',
+          '**Hermes 3 Llama 3.1是2026年小说作家的最佳全能选择。** 任意拒绝更少、指令遵循性强、角色声音分化良好。适合既需要该能力又不希望出现某些完全无审查模型产生的激进输出的作家。',
           '**标准指令调优模型配合优质提示词可处理大多数成人向文学内容。** 暴力、道德复杂性、黑暗心理和文学散文中的成人主题很少需要无审查微调。它们可靠拒绝的是明确的性内容和现实伤害的详细描述。切换模型前先明确您的作品属于哪个类别。',
           '**本地运行意味着数据不离开本机。** 云端服务条款不适用。内容不会被记录、分析或用于训练。这是作家使用本地无审查模型的主要结构性原因——隐私保护加上创作不受使用限制。',
           '**伦理责任不会因没有ToS执行而消失。** 使用无审查模型发布小说的创作者与任何其他作者承担相同的法律责任：无论生成方式如何，未成年人、真实人物、煽动性内容以及各司法管辖区的特定法律均适用。',
@@ -1785,7 +1785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: '快速事实',
         items: [
-          '**测试的无审查模型：** Hermes 3 Llama 3.3（主要）、Dolphin 3.0 Mistral（次要）。',
+          '**测试的无审查模型：** Hermes 3 Llama 3.1（主要）、Dolphin 3.0 Mistral（次要）。',
           '**后端：** Ollama（主要）、LM Studio（GUI配置替代选项）。',
           '**硬件：** Hermes 3 70B（Q4量化）约需42 GB；Dolphin 3.0 7B运行需8 GB；Dolphin 3.0 24B约需16 GB。',
           '**前端：** SillyTavern、Agnai、RisuAI均可通过OpenAI兼容端点连接无审查Ollama模型。',
@@ -2085,7 +2085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LLMs locales sin censura para escritores de ficción: qué modelos, configuración en Ollama y la ética real — cuándo son apropiados y qué responsabilidades siguen teniendo los escritores.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Mistral',
       'Llama 3.3 70B',
       'Qwen3 32B',
@@ -2110,14 +2110,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'etica ia escritura sin censura',
     ],
     leadAnswerBlock:
-      '**Los LLMs locales sin censura son apropiados para escritores de ficción que necesitan generar personajes moralmente complejos, temas oscuros, violencia, contenido romántico adulto o voces de narradores poco fiables que los modelos en la nube se niegan a producir. Son apropiados únicamente cuando el resultado se usa para ficción creativa con una audiencia adulta — no como herramienta para producir contenido dañino en el mundo real, representaciones no consentidas de personas reales o contenido que involucre a menores en contextos sexuales. Los modelos que se ajustan a la mayoría de los casos de uso de escritura de ficción en 2026 son Hermes 3 Llama 3.3 (menos rechazos, fuerte seguimiento de instrucciones) y Dolphin 3.0 Mistral (rango sin censura más amplio, menor huella de memoria). Ambos se ejecutan completamente en local a través de Ollama o LM Studio sin que los datos abandonen tu máquina. Las responsabilidades éticas que aplican al usar estos modelos no son cero — los escritores que trabajan con modelos sin censura siguen teniendo obligaciones respecto a la distribución, los menores y las personas reales que ninguna configuración local elimina.**',
+      '**Los LLMs locales sin censura son apropiados para escritores de ficción que necesitan generar personajes moralmente complejos, temas oscuros, violencia, contenido romántico adulto o voces de narradores poco fiables que los modelos en la nube se niegan a producir. Son apropiados únicamente cuando el resultado se usa para ficción creativa con una audiencia adulta — no como herramienta para producir contenido dañino en el mundo real, representaciones no consentidas de personas reales o contenido que involucre a menores en contextos sexuales. Los modelos que se ajustan a la mayoría de los casos de uso de escritura de ficción en 2026 son Hermes 3 Llama 3.1 (menos rechazos, fuerte seguimiento de instrucciones) y Dolphin 3.0 Mistral (rango sin censura más amplio, menor huella de memoria). Ambos se ejecutan completamente en local a través de Ollama o LM Studio sin que los datos abandonen tu máquina. Las responsabilidades éticas que aplican al usar estos modelos no son cero — los escritores que trabajan con modelos sin censura siguen teniendo obligaciones respecto a la distribución, los menores y las personas reales que ninguna configuración local elimina.**',
     quickAnswerTop: {
       es: {
         question: '¿Qué LLMs locales sin censura deben usar los escritores de ficción en 2026?',
         answer:
-          'Hermes 3 Llama 3.3 es el mejor modelo sin censura de propósito general para ficción en 2026 — fuerte seguimiento de instrucciones, buena diferenciación de voz de personajes, menos rechazos arbitrarios sin la tendencia agresiva que producen algunos fine-tunes completamente sin censura. Dolphin 3.0 Mistral es la alternativa más ligera para sistemas de 16–24 GB. Para escritores que necesitan contenido oscuro ocasional en lugar de salida sin censura persistente, los modelos estándar con ajuste de instrucciones (Llama 3.3 70B, [Qwen3](https://ollama.com/library/qwen3) 32B) con prompts bien estructurados generan la mayoría del contenido literario adulto sin requerir un fine-tune sin censura. La línea ética de base que aplica independientemente del modelo: sin contenido que involucre a menores en contextos sexuales, sin representaciones no consentidas de personas reales identificables, y consideración cuidadosa antes de distribuir públicamente.',
+          'Hermes 3 Llama 3.1 es el mejor modelo sin censura de propósito general para ficción en 2026 — fuerte seguimiento de instrucciones, buena diferenciación de voz de personajes, menos rechazos arbitrarios sin la tendencia agresiva que producen algunos fine-tunes completamente sin censura. Dolphin 3.0 Mistral es la alternativa más ligera para sistemas de 16–24 GB. Para escritores que necesitan contenido oscuro ocasional en lugar de salida sin censura persistente, los modelos estándar con ajuste de instrucciones (Llama 3.3 70B, [Qwen3](https://ollama.com/library/qwen3) 32B) con prompts bien estructurados generan la mayoría del contenido literario adulto sin requerir un fine-tune sin censura. La línea ética de base que aplica independientemente del modelo: sin contenido que involucre a menores en contextos sexuales, sin representaciones no consentidas de personas reales identificables, y consideración cuidadosa antes de distribuir públicamente.',
         bullets: [
-          'Hermes 3 Llama 3.3 — mejor modelo sin censura de propósito general para ficción; fuerte seguimiento de instrucciones, menos rechazos arbitrarios.',
+          'Hermes 3 Llama 3.1 — mejor modelo sin censura de propósito general para ficción; fuerte seguimiento de instrucciones, menos rechazos arbitrarios.',
           'Dolphin 3.0 Mistral — opción más ligera para sistemas de 16–24 GB; rango sin censura más amplio que Hermes 3.',
           'Los modelos estándar Llama 3.3 70B y Qwen3 32B generan la mayoría del contenido literario adulto con prompts estructurados — no se requiere fine-tune sin censura para muchos casos de uso.',
           'Todos los modelos sin censura se ejecutan completamente en local a través de Ollama o LM Studio — ningún dato abandona tu máquina.',
@@ -2145,7 +2145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
-    gammaDescription: 'La presentación a continuación cubre: qué significa realmente el fine-tuning "sin censura" (eliminación de RLHF frente a cero restricciones); una tabla comparativa de 5 modelos (de Hermes 3 Llama 3.3 a Dolphin 3.0 Mistral Small con VRAM, tasa de rechazo y calidad de instrucciones); casos de uso apropiados e inapropiados; comandos de configuración de Ollama; responsabilidades éticas que permanecen independientemente de la configuración local; y 5 errores comunes. Descarga el PDF como tarjeta de referencia para escritura creativa con LLM sin censura.',
+    gammaDescription: 'La presentación a continuación cubre: qué significa realmente el fine-tuning "sin censura" (eliminación de RLHF frente a cero restricciones); una tabla comparativa de 5 modelos (de Hermes 3 Llama 3.1 a Dolphin 3.0 Mistral Small con VRAM, tasa de rechazo y calidad de instrucciones); casos de uso apropiados e inapropiados; comandos de configuración de Ollama; responsabilidades éticas que permanecen independientemente de la configuración local; y 5 errores comunes. Descarga el PDF como tarjeta de referencia para escritura creativa con LLM sin censura.',
     affiliateLinks: [
       {
         productName: 'Ollama',
@@ -2173,7 +2173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**"Sin censura" significa que el modelo tiene un fine-tuning de seguridad RLHF reducido, no que no tenga ninguna restricción.** Los fine-tunes sin censura siguen el formato de instrucciones, mantienen la consistencia de los personajes y pueden dirigirse con prompts. No son sistemas de "todo permitido".',
-          '**Hermes 3 Llama 3.3 es la mejor opción de propósito general para escritores de ficción en 2026.** Menos rechazos arbitrarios, fuerte seguimiento de instrucciones, buena diferenciación de voz de personajes. La opción correcta para escritores que quieren la capacidad sin la salida agresiva que producen algunos modelos completamente sin censura.',
+          '**Hermes 3 Llama 3.1 es la mejor opción de propósito general para escritores de ficción en 2026.** Menos rechazos arbitrarios, fuerte seguimiento de instrucciones, buena diferenciación de voz de personajes. La opción correcta para escritores que quieren la capacidad sin la salida agresiva que producen algunos modelos completamente sin censura.',
           '**Los modelos estándar con ajuste de instrucciones gestionan la mayoría del contenido literario adulto con buenos prompts.** La violencia, la complejidad moral, la psicología oscura y los temas adultos en prosa literaria raramente requieren un fine-tune sin censura. Lo que rechazan es el contenido sexual explícito y las descripciones detalladas de daño real. Identifica en qué categoría cae tu obra antes de cambiar de modelo.',
           '**Ejecutar en local significa que ningún dato abandona tu máquina.** No aplica ningún término de servicio de la nube. Ningún contenido se registra, analiza ni usa para entrenamiento. Esta es la razón estructural principal por la que los escritores usan modelos locales sin censura — privacidad y sin restricciones de uso en ficción.',
           '**Las responsabilidades éticas no desaparecen porque no haya aplicación de los ToS.** Los escritores que distribuyen ficción producida con modelos sin censura llevan las mismas responsabilidades legales que cualquier otro autor: las leyes sobre menores, personas reales, incitación y obscenidad específica de la jurisdicción aplican independientemente del método de generación.',
@@ -2185,7 +2185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Datos rápidos',
         items: [
-          '**Modelos sin censura probados:** Hermes 3 Llama 3.3 (principal), Dolphin 3.0 Mistral (secundario).',
+          '**Modelos sin censura probados:** Hermes 3 Llama 3.1 (principal), Dolphin 3.0 Mistral (secundario).',
           '**Backends:** Ollama (principal), LM Studio (alternativa para configuración con GUI).',
           '**Hardware:** Hermes 3 70B en Q4 requiere ~42 GB; Dolphin 3.0 7B funciona con 8 GB; Dolphin 3.0 24B funciona con ~16 GB.',
           '**Frontends:** SillyTavern, Agnai, RisuAI se conectan todos con los modelos de Ollama sin censura mediante el endpoint compatible con OpenAI.',
@@ -2495,7 +2495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '픽션 작가를 위한 무검열 로컬 LLM — 어떤 모델, Ollama 설정, 실제 윤리: 언제 적합하며 작가가 여전히 갖는 책임.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Mistral',
       'Llama 3.3 70B',
       'Qwen3 32B',
@@ -2520,14 +2520,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '무검열 AI 글쓰기 윤리',
     ],
     leadAnswerBlock:
-      '**무검열 로컬 LLM은 클라우드 서비스가 생성을 거부하는 도덕적으로 복잡한 캐릭터, 어두운 테마, 폭력, 성인 로맨틱 콘텐츠, 신뢰할 수 없는 내레이터 목소리를 생성해야 하는 픽션 작가에게 적합합니다. 결과물이 성인 독자를 위한 창의적 픽션에 사용될 때만 적합합니다 — 실제 세계에서 해로운 콘텐츠 생성, 실제 인물의 비동의적 묘사, 성적 맥락에서 미성년자가 포함된 콘텐츠 도구로 사용하는 것은 적합하지 않습니다. 2026년 대부분의 픽션 글쓰기 사용 사례에 적합한 모델은 Hermes 3 Llama 3.3(적은 거부, 강력한 지시 따르기)과 Dolphin 3.0 Mistral(더 넓은 무검열 범위, 더 작은 메모리 사용량)입니다. 두 모델 모두 Ollama 또는 LM Studio를 통해 완전히 로컬로 실행되며 데이터가 기기를 떠나지 않습니다. 이 모델들을 사용할 때 윤리적 책임은 제로가 아닙니다 — 무검열 모델로 작업하는 작가는 어떤 로컬 설정도 제거할 수 없는 배포, 미성년자, 실제 인물에 대한 의무를 여전히 갖습니다.**',
+      '**무검열 로컬 LLM은 클라우드 서비스가 생성을 거부하는 도덕적으로 복잡한 캐릭터, 어두운 테마, 폭력, 성인 로맨틱 콘텐츠, 신뢰할 수 없는 내레이터 목소리를 생성해야 하는 픽션 작가에게 적합합니다. 결과물이 성인 독자를 위한 창의적 픽션에 사용될 때만 적합합니다 — 실제 세계에서 해로운 콘텐츠 생성, 실제 인물의 비동의적 묘사, 성적 맥락에서 미성년자가 포함된 콘텐츠 도구로 사용하는 것은 적합하지 않습니다. 2026년 대부분의 픽션 글쓰기 사용 사례에 적합한 모델은 Hermes 3 Llama 3.1(적은 거부, 강력한 지시 따르기)과 Dolphin 3.0 Mistral(더 넓은 무검열 범위, 더 작은 메모리 사용량)입니다. 두 모델 모두 Ollama 또는 LM Studio를 통해 완전히 로컬로 실행되며 데이터가 기기를 떠나지 않습니다. 이 모델들을 사용할 때 윤리적 책임은 제로가 아닙니다 — 무검열 모델로 작업하는 작가는 어떤 로컬 설정도 제거할 수 없는 배포, 미성년자, 실제 인물에 대한 의무를 여전히 갖습니다.**',
     quickAnswerTop: {
       ko: {
         question: '2026년 픽션 작가는 어떤 무검열 로컬 LLM을 사용해야 합니까?',
         answer:
-          'Hermes 3 Llama 3.3은 2026년 픽션용 최고의 범용 무검열 모델입니다 — 강력한 지시 따르기, 좋은 캐릭터 목소리 차별화, 일부 완전 무검열 파인튜닝이 생성하는 공격적 성향 없이 적은 임의적 거부. Dolphin 3.0 Mistral은 16–24GB 시스템을 위한 더 가벼운 대안입니다. 지속적인 무검열 출력 대신 가끔 어두운 콘텐츠가 필요한 작가의 경우, 잘 구조화된 프롬프트가 있는 표준 인스트럭트 모델(Llama 3.3 70B, Qwen3 32B)이 무검열 파인튜닝 없이도 대부분의 성인 문학 콘텐츠를 생성합니다. 모델에 관계없이 적용되는 기본 윤리 한계: 성적 맥락에서 미성년자가 포함된 콘텐츠 없음, 식별 가능한 실제 인물의 비동의적 성적 묘사 없음, 배포 전 신중한 고려.',
+          'Hermes 3 Llama 3.1은 2026년 픽션용 최고의 범용 무검열 모델입니다 — 강력한 지시 따르기, 좋은 캐릭터 목소리 차별화, 일부 완전 무검열 파인튜닝이 생성하는 공격적 성향 없이 적은 임의적 거부. Dolphin 3.0 Mistral은 16–24GB 시스템을 위한 더 가벼운 대안입니다. 지속적인 무검열 출력 대신 가끔 어두운 콘텐츠가 필요한 작가의 경우, 잘 구조화된 프롬프트가 있는 표준 인스트럭트 모델(Llama 3.3 70B, Qwen3 32B)이 무검열 파인튜닝 없이도 대부분의 성인 문학 콘텐츠를 생성합니다. 모델에 관계없이 적용되는 기본 윤리 한계: 성적 맥락에서 미성년자가 포함된 콘텐츠 없음, 식별 가능한 실제 인물의 비동의적 성적 묘사 없음, 배포 전 신중한 고려.',
         bullets: [
-          'Hermes 3 Llama 3.3 — 픽션용 최고의 범용 무검열 모델; 강력한 지시 따르기, 적은 임의적 거부.',
+          'Hermes 3 Llama 3.1 — 픽션용 최고의 범용 무검열 모델; 강력한 지시 따르기, 적은 임의적 거부.',
           'Dolphin 3.0 Mistral — 16–24GB 시스템을 위한 더 가벼운 옵션; Hermes 3보다 더 넓은 무검열 범위.',
           '표준 Llama 3.3 70B와 Qwen3 32B는 구조화된 프롬프트로 대부분의 성인 문학 콘텐츠 생성 — 많은 사용 사례에서 무검열 파인튜닝 불필요.',
           '모든 무검열 모델은 Ollama 또는 LM Studio를 통해 완전히 로컬로 실행됩니다 — 데이터가 기기를 떠나지 않음.',
@@ -2555,7 +2555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '관련 읽을거리', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
-    gammaDescription: '아래 프레젠테이션은 다음을 다룹니다: "무검열" 파인튜닝이 실제로 의미하는 것(RLHF 제거 대 제로 제한); 5개 모델 비교표(Hermes 3 Llama 3.3부터 Dolphin 3.0 Mistral Small까지 VRAM, 거부율, 지시 품질); 적합한 사용 사례와 부적합한 사용 사례; Ollama 설정 명령어; 로컬 설정과 무관하게 적용되는 윤리적 책임; 5가지 흔한 실수. PDF를 무검열 LLM 창의적 글쓰기 참조 카드로 다운로드하십시오.',
+    gammaDescription: '아래 프레젠테이션은 다음을 다룹니다: "무검열" 파인튜닝이 실제로 의미하는 것(RLHF 제거 대 제로 제한); 5개 모델 비교표(Hermes 3 Llama 3.1부터 Dolphin 3.0 Mistral Small까지 VRAM, 거부율, 지시 품질); 적합한 사용 사례와 부적합한 사용 사례; Ollama 설정 명령어; 로컬 설정과 무관하게 적용되는 윤리적 책임; 5가지 흔한 실수. PDF를 무검열 LLM 창의적 글쓰기 참조 카드로 다운로드하십시오.',
     affiliateLinks: [
       {
         productName: 'Ollama',
@@ -2583,7 +2583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**"무검열"은 모델이 RLHF 안전 파인튜닝이 감소했다는 것을 의미하며, 제한이 전혀 없다는 것이 아닙니다.** 무검열 파인튜닝은 여전히 지시 형식을 따르고, 캐릭터 일관성을 유지하며, 프롬프트로 안내할 수 있습니다. "모든 것이 허용되는" 시스템이 아닙니다.',
-          '**Hermes 3 Llama 3.3은 2026년 픽션 작가에게 최고의 범용 선택입니다.** 적은 임의적 거부, 강력한 지시 따르기, 좋은 캐릭터 목소리 차별화. 일부 완전 무검열 모델이 생성하는 공격적 출력 없이 기능을 원하는 작가를 위한 올바른 선택.',
+          '**Hermes 3 Llama 3.1은 2026년 픽션 작가에게 최고의 범용 선택입니다.** 적은 임의적 거부, 강력한 지시 따르기, 좋은 캐릭터 목소리 차별화. 일부 완전 무검열 모델이 생성하는 공격적 출력 없이 기능을 원하는 작가를 위한 올바른 선택.',
           '**표준 인스트럭트 모델은 좋은 프롬프트로 대부분의 성인 문학 콘텐츠를 처리합니다.** 폭력, 도덕적 복잡성, 어두운 심리, 문학적 산문의 성인 테마는 무검열 파인튜닝을 거의 필요로 하지 않습니다. 거부하는 것은 노골적인 성적 콘텐츠와 실제 해의 상세한 묘사입니다. 모델을 전환하기 전에 자신의 작업이 어떤 범주에 속하는지 파악하십시오.',
           '**로컬 실행은 데이터가 기기를 떠나지 않음을 의미합니다.** 클라우드 서비스 약관이 적용되지 않습니다. 콘텐츠가 기록되거나 분석되거나 훈련에 사용되지 않습니다. 이것이 작가들이 무검열 로컬 모델을 사용하는 주요 구조적 이유입니다 — 프라이버시와 픽션에서 사용 제한 없음.',
           '**윤리적 책임은 서비스 약관 적용이 없어도 사라지지 않습니다.** 무검열 모델로 생성된 픽션을 배포하는 작가는 다른 작가와 동일한 법적 책임을 집니다: 미성년자, 실제 인물, 선동, 관할권별 음란물 법률은 생성 방법에 관계없이 적용됩니다.',
@@ -2595,7 +2595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: '빠른 사실',
         items: [
-          '**테스트된 무검열 모델:** Hermes 3 Llama 3.3(주), Dolphin 3.0 Mistral(보조).',
+          '**테스트된 무검열 모델:** Hermes 3 Llama 3.1(주), Dolphin 3.0 Mistral(보조).',
           '**백엔드:** Ollama(주), LM Studio(GUI 설정을 위한 대안).',
           '**하드웨어:** Q4의 Hermes 3 70B는 ~42GB 필요; Dolphin 3.0 7B는 8GB로 작동; Dolphin 3.0 24B는 ~16GB로 작동.',
           '**프론트엔드:** SillyTavern, Agnai, RisuAI 모두 OpenAI 호환 엔드포인트를 통해 Ollama 무검열 모델에 연결됩니다.',
@@ -2692,7 +2692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**모든 무검열 모델이 동등하지 않습니다 — RLHF 제거 정도와 기본 모델 품질이 픽션 글쓰기 사용 사례에서 중요합니다.**',
         columns: ['모델', '기반', 'VRAM (Q4)', '거부율', '지시 품질', '극단적 표류', '최적'],
         rows: [
-          { '모델': 'Hermes 3 Llama 3.3 70B', '기반': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', '거부율': '선택적', '지시 품질': '★★★★★', '극단적 표류': '낮음', '최적': '진지한 픽션을 위한 기본 옵션 — 최고의 지시 따르기 + 무검열 기능' },
+          { '모델': 'Hermes 3 Llama 3.1 70B', '기반': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 GB', '거부율': '선택적', '지시 품질': '★★★★★', '극단적 표류': '낮음', '최적': '진지한 픽션을 위한 기본 옵션 — 최고의 지시 따르기 + 무검열 기능' },
           { '모델': 'Dolphin 3.0 Mistral 24B', '기반': 'Mistral 24B', 'VRAM (Q4)': '~16 GB', '거부율': '광범위', '지시 품질': '★★★★☆', '극단적 표류': '낮음-보통', '최적': '16–24GB 시스템; 더 넓은 범위의 성인 콘텐츠' },
           { '모델': 'Dolphin 3.0 Mistral Small', '기반': 'Mistral Small', 'VRAM (Q4)': '~8 GB', '거부율': '광범위', '지시 품질': '★★★☆☆', '극단적 표류': '보통', '최적': '낮은 VRAM 시스템; 단편 초안, 프롬프트 테스트' },
           { '모델': 'Hermes 3 Llama 3.2 8B', '기반': 'Llama 3.2 8B', 'VRAM (Q4)': '~5 GB', '거부율': '선택적', '지시 품질': '★★★☆☆', '극단적 표류': '낮음', '최적': '제한된 자원; 대화와 더 짧은 장면' },
@@ -2905,7 +2905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'LLMs locais sem censura para escritores de ficção — quais modelos, configuração no Ollama e a ética real: quando são apropriados e quais responsabilidades os escritores ainda têm.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Mistral',
       'Llama 3.3 70B',
       'Qwen3 32B',
@@ -2930,14 +2930,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'etica ia escrita sem censura',
     ],
     leadAnswerBlock:
-      '**LLMs locais sem censura são apropriados para escritores de ficção que precisam gerar personagens moralmente complexos, temas sombrios, violência, conteúdo romântico adulto ou vozes de narradores não confiáveis que os modelos em nuvem se recusam a produzir. São apropriados apenas quando o resultado é usado para ficção criativa com público adulto — não como ferramenta para produzir conteúdo nocivo no mundo real, representações não consentidas de pessoas reais ou conteúdo envolvendo menores em contextos sexuais. Os modelos que se ajustam à maioria dos casos de uso de escrita de ficção em 2026 são o Hermes 3 Llama 3.3 (menos recusas, forte aderência a instruções) e o Dolphin 3.0 Mistral (alcance sem censura mais amplo, menor pegada de memória). Ambos rodam totalmente em local pelo Ollama ou LM Studio sem que nenhum dado saia da sua máquina. As responsabilidades éticas que se aplicam ao usar esses modelos não são nulas — escritores que trabalham com modelos sem censura ainda têm obrigações relativas a distribuição, menores e pessoas reais que nenhuma configuração local elimina.**',
+      '**LLMs locais sem censura são apropriados para escritores de ficção que precisam gerar personagens moralmente complexos, temas sombrios, violência, conteúdo romântico adulto ou vozes de narradores não confiáveis que os modelos em nuvem se recusam a produzir. São apropriados apenas quando o resultado é usado para ficção criativa com público adulto — não como ferramenta para produzir conteúdo nocivo no mundo real, representações não consentidas de pessoas reais ou conteúdo envolvendo menores em contextos sexuais. Os modelos que se ajustam à maioria dos casos de uso de escrita de ficção em 2026 são o Hermes 3 Llama 3.1 (menos recusas, forte aderência a instruções) e o Dolphin 3.0 Mistral (alcance sem censura mais amplo, menor pegada de memória). Ambos rodam totalmente em local pelo Ollama ou LM Studio sem que nenhum dado saia da sua máquina. As responsabilidades éticas que se aplicam ao usar esses modelos não são nulas — escritores que trabalham com modelos sem censura ainda têm obrigações relativas a distribuição, menores e pessoas reais que nenhuma configuração local elimina.**',
     quickAnswerTop: {
       pt: {
         question: 'Quais LLMs locais sem censura os escritores de ficção devem usar em 2026?',
         answer:
-          'O Hermes 3 Llama 3.3 é o melhor modelo sem censura de propósito geral para ficção em 2026 — forte aderência a instruções, boa diferenciação de voz de personagens, menos recusas arbitrárias sem a saída agressiva que alguns fine-tunes totalmente sem censura produzem. O Dolphin 3.0 Mistral é a alternativa mais leve em sistemas de 16–24 GB. Para escritores que precisam de conteúdo sombrio ocasional em vez de saída sem censura persistente, modelos padrão com ajuste de instruções (Llama 3.3 70B, [Qwen3](https://ollama.com/library/qwen3) 32B) com prompts bem estruturados geram a maior parte do conteúdo literário adulto sem exigir um fine-tune sem censura. A linha ética de base que se aplica independentemente do modelo: nenhum conteúdo envolvendo menores em contextos sexuais, nenhuma representação não consentida de pessoas reais identificáveis, e consideração cuidadosa antes de distribuir o resultado publicamente.',
+          'O Hermes 3 Llama 3.1 é o melhor modelo sem censura de propósito geral para ficção em 2026 — forte aderência a instruções, boa diferenciação de voz de personagens, menos recusas arbitrárias sem a saída agressiva que alguns fine-tunes totalmente sem censura produzem. O Dolphin 3.0 Mistral é a alternativa mais leve em sistemas de 16–24 GB. Para escritores que precisam de conteúdo sombrio ocasional em vez de saída sem censura persistente, modelos padrão com ajuste de instruções (Llama 3.3 70B, [Qwen3](https://ollama.com/library/qwen3) 32B) com prompts bem estruturados geram a maior parte do conteúdo literário adulto sem exigir um fine-tune sem censura. A linha ética de base que se aplica independentemente do modelo: nenhum conteúdo envolvendo menores em contextos sexuais, nenhuma representação não consentida de pessoas reais identificáveis, e consideração cuidadosa antes de distribuir o resultado publicamente.',
         bullets: [
-          'Hermes 3 Llama 3.3 — melhor modelo sem censura de propósito geral para ficção; forte aderência a instruções, menos recusas arbitrárias.',
+          'Hermes 3 Llama 3.1 — melhor modelo sem censura de propósito geral para ficção; forte aderência a instruções, menos recusas arbitrárias.',
           'Dolphin 3.0 Mistral — opção mais leve para sistemas de 16–24 GB; alcance sem censura mais amplo que o Hermes 3.',
           'Os modelos padrão Llama 3.3 70B e Qwen3 32B geram a maior parte do conteúdo literário adulto com prompts estruturados — nenhum fine-tune sem censura é exigido para muitos casos de uso.',
           'Todos os modelos sem censura rodam totalmente em local pelo Ollama ou LM Studio — nenhum dado sai da sua máquina.',
@@ -2965,7 +2965,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Leituras relacionadas', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
-    gammaDescription: 'A apresentação a seguir cobre: o que o fine-tuning "sem censura" realmente significa (remoção de RLHF versus zero restrições); uma tabela comparativa de 5 modelos (do Hermes 3 Llama 3.3 ao Dolphin 3.0 Mistral Small com VRAM, taxa de recusa e qualidade de instruções); casos de uso apropriados versus inapropriados; comandos de configuração do Ollama; responsabilidades éticas que permanecem independentemente da configuração local; e 5 erros comuns. Baixe o PDF como cartão de referência para escrita criativa com LLM sem censura.',
+    gammaDescription: 'A apresentação a seguir cobre: o que o fine-tuning "sem censura" realmente significa (remoção de RLHF versus zero restrições); uma tabela comparativa de 5 modelos (do Hermes 3 Llama 3.1 ao Dolphin 3.0 Mistral Small com VRAM, taxa de recusa e qualidade de instruções); casos de uso apropriados versus inapropriados; comandos de configuração do Ollama; responsabilidades éticas que permanecem independentemente da configuração local; e 5 erros comuns. Baixe o PDF como cartão de referência para escrita criativa com LLM sem censura.',
     affiliateLinks: [
       {
         productName: 'Ollama',
@@ -2993,7 +2993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**"Sem censura" significa que o modelo tem um fine-tuning de segurança RLHF reduzido — não que não tenha nenhuma restrição.** Fine-tunes sem censura ainda seguem o formato de instruções, mantêm a consistência dos personagens e podem ser dirigidos com prompts. Não são sistemas de "vale tudo".',
-          '**O Hermes 3 Llama 3.3 é a melhor opção de propósito geral para escritores de ficção em 2026.** Menos recusas arbitrárias, forte aderência a instruções, boa diferenciação de voz de personagens. A escolha certa para escritores que querem a capacidade sem a saída agressiva que alguns modelos totalmente sem censura produzem.',
+          '**O Hermes 3 Llama 3.1 é a melhor opção de propósito geral para escritores de ficção em 2026.** Menos recusas arbitrárias, forte aderência a instruções, boa diferenciação de voz de personagens. A escolha certa para escritores que querem a capacidade sem a saída agressiva que alguns modelos totalmente sem censura produzem.',
           '**Modelos padrão com ajuste de instruções lidam com a maior parte do conteúdo literário adulto com bons prompts.** Violência, complexidade moral, psicologia sombria e temas adultos em prosa literária raramente exigem um fine-tune sem censura. O que eles recusam é conteúdo sexual explícito e descrições detalhadas de dano no mundo real. Saiba em qual categoria sua obra se enquadra antes de trocar de modelo.',
           '**Rodar em local significa que nenhum dado sai da sua máquina.** Nenhum termo de serviço de nuvem se aplica. Nenhum conteúdo é registrado, analisado ou usado para treinamento. Essa é a principal razão estrutural pela qual escritores usam modelos locais sem censura — privacidade somada à ausência de restrições de uso na ficção.',
           '**As responsabilidades éticas não desaparecem porque não há aplicação de ToS.** Escritores que distribuem ficção produzida com modelos sem censura carregam as mesmas responsabilidades legais que qualquer outro autor: leis sobre menores, pessoas reais, incitação e obscenidade específicas da jurisdição se aplicam independentemente do método de geração.',
@@ -3005,7 +3005,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'Fatos rápidos',
         items: [
-          '**Modelos sem censura testados:** Hermes 3 Llama 3.3 (principal), Dolphin 3.0 Mistral (secundário).',
+          '**Modelos sem censura testados:** Hermes 3 Llama 3.1 (principal), Dolphin 3.0 Mistral (secundário).',
           '**Backends:** Ollama (principal), LM Studio (alternativa para configuração com GUI).',
           '**Hardware:** Hermes 3 70B em Q4 requer ~42 GB; Dolphin 3.0 7B roda em 8 GB; Dolphin 3.0 24B roda em ~16 GB.',
           '**Frontends:** SillyTavern, Agnai, RisuAI conectam-se todos aos modelos sem censura do Ollama via endpoint compatível com OpenAI.',
@@ -3316,7 +3316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'نماذج LLM المحلية بدون قيود لكتّاب الخيال: أي النماذج، إعداد Ollama والأخلاقيات الحقيقية — متى تكون مناسبة وما المسؤوليات التي تبقى على الكتّاب.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Hermes 3 Llama 3.3',
+      'Hermes 3 Llama 3.1',
       'Dolphin 3.0 Mistral',
       'Llama 3.3 70B',
       'Qwen3 32B',
@@ -3341,14 +3341,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'أخلاقيات ai كتابة بدون قيود',
     ],
     leadAnswerBlock:
-      '**نماذج LLM المحلية بدون قيود مناسبة لكتّاب الخيال الذين يحتاجون توليد شخصيات أخلاقيًا معقدة وموضوعات مظلمة وعنفًا ومحتوى رومانسيًا بالغًا وأصوات رواة غير موثوقة ترفض إنتاجها النماذج السحابية. هي مناسبة فقط حين يُستخدم الناتج في خيال إبداعي لجمهور بالغ — لا كأداة لإنتاج محتوى ضارٍّ واقعيًا أو تمثيلات غير موافق عليها لأشخاص حقيقيين أو محتوى يُشرك قاصرين في سياقات جنسية. النموذجان الأنسب لمعظم حالات كتابة الخيال في 2026 هما Hermes 3 Llama 3.3 (رفض أقل، اتباع تعليمات أقوى) و Dolphin 3.0 Mistral (نطاق أوسع بدون قيود، بصمة ذاكرة أصغر). كلاهما يعمل محليًا بالكامل عبر Ollama أو LM Studio دون أن تغادر البيانات جهازك. المسؤوليات الأخلاقية لاستخدام هذه النماذج ليست صفرًا — الكتّاب الذين يستخدمون نماذج بدون قيود لا يزالون ملزمين بشأن التوزيع والقاصرين والأشخاص الحقيقيين بما لا تلغيه أي إعدادات محلية.**',
+      '**نماذج LLM المحلية بدون قيود مناسبة لكتّاب الخيال الذين يحتاجون توليد شخصيات أخلاقيًا معقدة وموضوعات مظلمة وعنفًا ومحتوى رومانسيًا بالغًا وأصوات رواة غير موثوقة ترفض إنتاجها النماذج السحابية. هي مناسبة فقط حين يُستخدم الناتج في خيال إبداعي لجمهور بالغ — لا كأداة لإنتاج محتوى ضارٍّ واقعيًا أو تمثيلات غير موافق عليها لأشخاص حقيقيين أو محتوى يُشرك قاصرين في سياقات جنسية. النموذجان الأنسب لمعظم حالات كتابة الخيال في 2026 هما Hermes 3 Llama 3.1 (رفض أقل، اتباع تعليمات أقوى) و Dolphin 3.0 Mistral (نطاق أوسع بدون قيود، بصمة ذاكرة أصغر). كلاهما يعمل محليًا بالكامل عبر Ollama أو LM Studio دون أن تغادر البيانات جهازك. المسؤوليات الأخلاقية لاستخدام هذه النماذج ليست صفرًا — الكتّاب الذين يستخدمون نماذج بدون قيود لا يزالون ملزمين بشأن التوزيع والقاصرين والأشخاص الحقيقيين بما لا تلغيه أي إعدادات محلية.**',
     quickAnswerTop: {
       ar: {
         question: 'أي نماذج LLM المحلية بدون قيود يجب أن يستخدمها كتّاب الخيال في 2026؟',
         answer:
-          'Hermes 3 Llama 3.3 هو أفضل نموذج بدون قيود متعدد الأغراض للخيال في 2026 — اتباع تعليمات قوي، تمييز جيد لأصوات الشخصيات، رفض عشوائي أقل دون النزعة العدوانية التي تنتجها بعض النسخ المعدَّلة الكاملة. Dolphin 3.0 Mistral هو البديل الأخف لأجهزة 16-24 جيجابايت. للكتّاب الذين يحتاجون محتوى مظلمًا أحيانًا بدلًا من ناتج مستمر بدون قيود، النماذج القياسية ذات الضبط بالتعليمات (Llama 3.3 70B، Qwen3 32B) مع موجّهات منظمة جيدًا تولّد معظم المحتوى الأدبي البالغ دون الحاجة إلى نسخة معدَّلة. الخط الأخلاقي الأساسي المطبّق بصرف النظر عن النموذج: لا محتوى يُشرك قاصرين في سياقات جنسية، لا تمثيلات جنسية غير موافق عليها لأشخاص حقيقيين محددين.',
+          'Hermes 3 Llama 3.1 هو أفضل نموذج بدون قيود متعدد الأغراض للخيال في 2026 — اتباع تعليمات قوي، تمييز جيد لأصوات الشخصيات، رفض عشوائي أقل دون النزعة العدوانية التي تنتجها بعض النسخ المعدَّلة الكاملة. Dolphin 3.0 Mistral هو البديل الأخف لأجهزة 16-24 جيجابايت. للكتّاب الذين يحتاجون محتوى مظلمًا أحيانًا بدلًا من ناتج مستمر بدون قيود، النماذج القياسية ذات الضبط بالتعليمات (Llama 3.3 70B، Qwen3 32B) مع موجّهات منظمة جيدًا تولّد معظم المحتوى الأدبي البالغ دون الحاجة إلى نسخة معدَّلة. الخط الأخلاقي الأساسي المطبّق بصرف النظر عن النموذج: لا محتوى يُشرك قاصرين في سياقات جنسية، لا تمثيلات جنسية غير موافق عليها لأشخاص حقيقيين محددين.',
         bullets: [
-          'Hermes 3 Llama 3.3 — أفضل نموذج بدون قيود متعدد الأغراض للخيال؛ اتباع تعليمات قوي، رفض عشوائي أقل.',
+          'Hermes 3 Llama 3.1 — أفضل نموذج بدون قيود متعدد الأغراض للخيال؛ اتباع تعليمات قوي، رفض عشوائي أقل.',
           'Dolphin 3.0 Mistral — خيار أخف لأجهزة 16-24 جيجابايت؛ نطاق بدون قيود أوسع من Hermes 3.',
           'النماذج القياسية Llama 3.3 70B و Qwen3 32B تولّد معظم المحتوى الأدبي البالغ بموجّهات منظمة — لا نسخة معدَّلة مطلوبة لكثير من حالات الاستخدام.',
           'جميع النماذج بدون قيود تعمل محليًا بالكامل عبر Ollama أو LM Studio — لا بيانات تغادر جهازك.',
@@ -3376,7 +3376,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'قراءة ذات صلة', anchor: '#related-reading' },
     ],
     gammaEmbedUrl: '/presentations/uncensored-local-llm-creative-writing-ethics-static.html',
-    gammaDescription: 'العرض التقديمي أدناه يغطي: ما الذي يعنيه الضبط الدقيق "بدون قيود" حقًا (إزالة RLHF مقابل لا قيود)؛ جدول مقارنة 5 نماذج (من Hermes 3 Llama 3.3 إلى Dolphin 3.0 Mistral Small مع VRAM ومعدل الرفض وجودة التعليمات)؛ حالات الاستخدام المناسبة وغير المناسبة؛ أوامر إعداد Ollama؛ المسؤوليات الأخلاقية التي تبقى بصرف النظر عن الإعداد المحلي؛ و5 أخطاء شائعة. نزّل الـ PDF كبطاقة مرجعية للكتابة الإبداعية بنماذج LLM بدون قيود.',
+    gammaDescription: 'العرض التقديمي أدناه يغطي: ما الذي يعنيه الضبط الدقيق "بدون قيود" حقًا (إزالة RLHF مقابل لا قيود)؛ جدول مقارنة 5 نماذج (من Hermes 3 Llama 3.1 إلى Dolphin 3.0 Mistral Small مع VRAM ومعدل الرفض وجودة التعليمات)؛ حالات الاستخدام المناسبة وغير المناسبة؛ أوامر إعداد Ollama؛ المسؤوليات الأخلاقية التي تبقى بصرف النظر عن الإعداد المحلي؛ و5 أخطاء شائعة. نزّل الـ PDF كبطاقة مرجعية للكتابة الإبداعية بنماذج LLM بدون قيود.',
     affiliateLinks: [
       {
         productName: 'Ollama',
@@ -3404,7 +3404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**"بدون قيود" تعني أن النموذج خضع لضبط دقيق أقل في أمان RLHF، لا أنه لا توجد قيود.** النسخ المعدَّلة بدون قيود لا تزال تتبع تنسيق التعليمات وتحافظ على اتساق الشخصيات ويمكن توجيهها بالموجّهات. هي ليست أنظمة "كل شيء مسموح".',
-          '**Hermes 3 Llama 3.3 هو أفضل خيار متعدد الأغراض لكتّاب الخيال في 2026.** رفض عشوائي أقل، اتباع تعليمات قوي، تمييز جيد لأصوات الشخصيات. الخيار الصحيح للكتّاب الذين يريدون القدرة دون الناتج العدواني الذي تنتجه بعض النماذج المعدَّلة الكاملة.',
+          '**Hermes 3 Llama 3.1 هو أفضل خيار متعدد الأغراض لكتّاب الخيال في 2026.** رفض عشوائي أقل، اتباع تعليمات قوي، تمييز جيد لأصوات الشخصيات. الخيار الصحيح للكتّاب الذين يريدون القدرة دون الناتج العدواني الذي تنتجه بعض النماذج المعدَّلة الكاملة.',
           '**النماذج القياسية ذات الضبط بالتعليمات تتعامل مع معظم المحتوى الأدبي البالغ بموجّهات جيدة.** العنف والتعقيد الأخلاقي وعلم النفس المظلم والموضوعات البالغة في النثر الأدبي نادرًا ما تتطلب نسخة معدَّلة. ما ترفضه بشكل موثوق هو المحتوى الجنسي الصريح ومجموعة أضيق من السيناريوهات المتطرفة. حدد في أي فئة يقع عملك قبل التبديل.',
           '**التشغيل محليًا يعني أن لا بيانات تغادر جهازك.** لا تسري أي شروط خدمة سحابية. لا محتوى يُسجَّل أو يُحلَّل أو يُستخدم للتدريب. هذا هو السبب الهيكلي الرئيسي لاستخدام الكتّاب نماذج محلية بدون قيود — الخصوصية وعدم قيود الاستخدام في الخيال.',
           '**المسؤوليات الأخلاقية لا تختفي لأنه لا يوجد تطبيق لشروط الخدمة.** الكتّاب الذين يوزعون خيالًا منتجًا بنماذج بدون قيود يحملون نفس المسؤوليات القانونية كأي مؤلف آخر: قوانين القاصرين والأشخاص الحقيقيين والتحريض والفحش الخاص بالولاية القضائية تسري بصرف النظر عن طريقة التوليد.',
@@ -3416,7 +3416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'quick-facts',
         title: 'حقائق سريعة',
         items: [
-          '**النماذج بدون قيود المختبرة:** Hermes 3 Llama 3.3 (رئيسي)، Dolphin 3.0 Mistral (ثانوي).',
+          '**النماذج بدون قيود المختبرة:** Hermes 3 Llama 3.1 (رئيسي)، Dolphin 3.0 Mistral (ثانوي).',
           '**الخلفيات:** Ollama (رئيسي)، LM Studio (بديل للإعداد بواجهة رسومية).',
           '**الأجهزة:** Hermes 3 70B على Q4 يحتاج ~42 جيجابايت؛ Dolphin 3.0 7B يعمل على 8 جيجابايت؛ Dolphin 3.0 24B يعمل على ~16 جيجابايت.',
           '**الواجهات:** SillyTavern وAgnai وRisuAI تتصل جميعها بنماذج Ollama بدون قيود عبر نقطة النهاية المتوافقة مع OpenAI.',
@@ -3513,7 +3513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**ليست جميع النماذج بدون قيود متساوية — درجة إزالة RLHF وجودة النموذج الأساسي تهمان لحالات استخدام كتابة الخيال.**',
         columns: ['النموذج', 'الأساس', 'VRAM (Q4)', 'معدل الرفض', 'جودة التعليمات', 'الانجراف للتطرف', 'الأفضل لـ'],
         rows: [
-          { 'النموذج': 'Hermes 3 Llama 3.3 70B', 'الأساس': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 جيجابايت', 'معدل الرفض': 'انتقائي', 'جودة التعليمات': '★★★★★', 'الانجراف للتطرف': 'منخفض', 'الأفضل لـ': 'الخيار الافتراضي للخيال الجدي — أفضل اتباع تعليمات + قدرة بدون قيود' },
+          { 'النموذج': 'Hermes 3 Llama 3.1 70B', 'الأساس': 'Llama 3.3 70B', 'VRAM (Q4)': '~42 جيجابايت', 'معدل الرفض': 'انتقائي', 'جودة التعليمات': '★★★★★', 'الانجراف للتطرف': 'منخفض', 'الأفضل لـ': 'الخيار الافتراضي للخيال الجدي — أفضل اتباع تعليمات + قدرة بدون قيود' },
           { 'النموذج': 'Dolphin 3.0 Mistral 24B', 'الأساس': 'Mistral 24B', 'VRAM (Q4)': '~16 جيجابايت', 'معدل الرفض': 'واسع', 'جودة التعليمات': '★★★★☆', 'الانجراف للتطرف': 'منخفض-متوسط', 'الأفضل لـ': 'أجهزة 16-24 جيجابايت؛ محتوى بالغ بنطاق أوسع' },
           { 'النموذج': 'Dolphin 3.0 Mistral Small', 'الأساس': 'Mistral Small', 'VRAM (Q4)': '~8 جيجابايت', 'معدل الرفض': 'واسع', 'جودة التعليمات': '★★★☆☆', 'الانجراف للتطرف': 'متوسط', 'الأفضل لـ': 'أجهزة بـ VRAM محدودة؛ مسودات قصيرة واختبار موجّهات' },
           { 'النموذج': 'Hermes 3 Llama 3.2 8B', 'الأساس': 'Llama 3.2 8B', 'VRAM (Q4)': '~5 جيجابايت', 'معدل الرفض': 'انتقائي', 'جودة التعليمات': '★★★☆☆', 'الانجراف للتطرف': 'منخفض', 'الأفضل لـ': 'موارد محدودة؛ حوارات ومشاهد أقصر' },

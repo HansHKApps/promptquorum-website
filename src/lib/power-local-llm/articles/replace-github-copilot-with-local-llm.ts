@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Replace Copilot with Continue.dev + Qwen3-Coder. Setup, cost math (24-month break-even), and honest quality comparison.',
     gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
     gammaDescription: 'The slide deck below covers: the Continue.dev + Ollama + Qwen3-Coder stack ($0/month vs $20/month Copilot), 24-month cost math showing 8–14 month breakeven on existing hardware, quality test results (90–95% of Copilot on TypeScript and Python), and a 6-step setup walkthrough. Download the PDF as a local Copilot replacement reference card.',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3', 'Codestral 22B'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
     audience: 'Software developers evaluating whether to drop a Copilot subscription in favor of a local coding assistant.',
     readTime: '13 min read',
@@ -259,7 +259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Will Continue.dev work with models other than Qwen3-Coder?',
-            a: 'Yes. Continue.dev supports any OpenAI-compatible endpoint, plus first-class integrations with Ollama, vLLM, and llama.cpp. You can swap in DeepSeek Coder V3, Codestral, or Granite Code without changing the extension.',
+            a: 'Yes. Continue.dev supports any OpenAI-compatible endpoint, plus first-class integrations with Ollama, vLLM, and llama.cpp. You can swap in DeepSeek-V3, Codestral, or Granite Code without changing the extension.',
           },
           {
             q: 'How much VRAM do I need for Qwen3-Coder 30B?',
@@ -330,7 +330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Copilot durch Continue.dev + Qwen3-Coder ersetzen. Anleitung, Kostenvergleich (24-Monats-Amortisation), ehrliche Qualitätsbewertung.',
     gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
     gammaDescription: 'Die Präsentation unten behandelt: den Continue.dev + Ollama + Qwen3-Coder-Stack (0 €/Monat vs. 20 €/Monat Copilot), 24-Monats-Kostenrechnung mit 8–14 Monaten Amortisationszeit auf vorhandener Hardware, Qualitätstestergebnisse (90–95 % von Copilot auf TypeScript und Python) und eine 6-Schritte-Anleitung. Herunterladen als PDF-Referenzkarte für lokale Copilot-Alternativen.',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3', 'Codestral 22B'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
     audience: 'Softwareentwickler, die evaluieren, ob sie ein Copilot-Abonnement durch einen lokalen Code-Assistenten ersetzen sollten.',
     readTime: '13 Min. Lesezeit',
@@ -568,7 +568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Funktioniert Continue.dev mit anderen Modellen außer Qwen3-Coder?',
-            a: 'Ja. Continue.dev unterstützt jeden OpenAI-kompatiblen Endpunkt sowie erstklassige Integrationen mit Ollama, vLLM und llama.cpp. Sie können DeepSeek Coder V3, Codestral oder Granite Code ohne Änderung der Erweiterung austauschen.',
+            a: 'Ja. Continue.dev unterstützt jeden OpenAI-kompatiblen Endpunkt sowie erstklassige Integrationen mit Ollama, vLLM und llama.cpp. Sie können DeepSeek-V3, Codestral oder Granite Code ohne Änderung der Erweiterung austauschen.',
           },
           {
             q: 'Wie viel VRAM benötige ich für Qwen3-Coder 30B?',
@@ -646,7 +646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Remplacez Copilot par Continue.dev + Qwen3-Coder. Installation, calcul des coûts (amortissement 24 mois), et évaluation qualité honnête.',
     gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
     gammaDescription: 'La présentation ci-dessous couvre : la pile Continue.dev + Ollama + Qwen3-Coder (0 €/mois vs 20 €/mois Copilot), le calcul des coûts sur 24 mois avec amortissement en 8–14 mois sur matériel existant, les résultats du test qualité (90–95 % de Copilot sur TypeScript et Python) et un guide en 6 étapes. Téléchargez le PDF comme carte de référence pour remplacer Copilot localement.',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3', 'Codestral 22B'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
     audience: 'Développeurs logiciels qui évaluent s\'ils doivent abandonner un abonnement Copilot pour un assistant de code local.',
     readTime: '13 min de lecture',
@@ -884,7 +884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Continue.dev fonctionne-t-il avec d\'autres modèles que Qwen3-Coder ?',
-            a: 'Oui. Continue.dev supporte n\'importe quel point d\'extrémité compatible OpenAI, plus les intégrations de première classe avec Ollama, vLLM et llama.cpp. Vous pouvez échanger DeepSeek Coder V3, Codestral ou Granite Code sans changer l\'extension.',
+            a: 'Oui. Continue.dev supporte n\'importe quel point d\'extrémité compatible OpenAI, plus les intégrations de première classe avec Ollama, vLLM et llama.cpp. Vous pouvez échanger DeepSeek-V3, Codestral ou Granite Code sans changer l\'extension.',
           },
           {
             q: 'Combien de VRAM ai-je besoin pour Qwen3-Coder 30B ?',
@@ -954,7 +954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Continue.dev + Qwen3-Coder で Copilot を置き換える。セットアップ、コスト比較（24 か月回収）、正直な品質評価。',
     gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
     gammaDescription: '下のスライドデッキは、Continue.dev + Ollama + Qwen3-Coder スタック（月額 0 円 vs 20 ドル Copilot）、24 ヶ月コスト計算（既存ハードウェアで 8～14 ヶ月で回収）、品質テスト結果（TypeScript と Python で Copilot の 90～95%）、6 ステップのセットアップガイドを扱っています。PDF をローカル Copilot 代替のリファレンスカードとしてダウンロードしてください。',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3', 'Codestral 22B'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
     audience: 'Copilot サブスクリプションをローカルコードアシスタントに置き換えるかどうかを評価しているソフトウェア開発者。',
     readTime: '13 分で読める',
@@ -1192,7 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Continue.dev は Qwen3-Coder 以外のモデルで動作しますか？',
-            a: 'はい。Continue.dev は任意の OpenAI 互換エンドポイント、および Ollama、vLLM、llama.cpp との最初のクラス統合をサポートします。拡張機能を変更せずに DeepSeek Coder V3、Codestral、または Granite Code をスワップできます。',
+            a: 'はい。Continue.dev は任意の OpenAI 互換エンドポイント、および Ollama、vLLM、llama.cpp との最初のクラス統合をサポートします。拡張機能を変更せずに DeepSeek-V3、Codestral、または Granite Code をスワップできます。',
           },
           {
             q: 'Qwen3-Coder 30B に必要な VRAM はいくらですか？',
@@ -1262,7 +1262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: '用 Continue.dev + Qwen3-Coder 替代 Copilot。设置、成本对比（24 个月回本）和质量评估。',
     gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
     gammaDescription: '下方幻灯片涵盖：Continue.dev + Ollama + Qwen3-Coder 方案（0 美元/月 vs 20 美元/月 Copilot）、24 个月成本计算（已有硬件 8-14 个月回本）、质量测试结果（TypeScript 和 Python 达 Copilot 的 90-95%）以及 6 步设置指南。下载 PDF 作为本地 Copilot 替代参考卡。',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3', 'Codestral 22B'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
     audience: '评估是否放弃 Copilot 订阅以换用本地代码助手的软件开发者。',
     readTime: '阅读约 13 分钟',
@@ -1500,7 +1500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Continue.dev 会与除 Qwen3-Coder 外的其他模型工作吗？',
-            a: '会。Continue.dev 支持任何 OpenAI 兼容端点，加上 Ollama、vLLM 和 llama.cpp 的一级集成。你可以换入 DeepSeek Coder V3、Codestral 或 Granite Code 而无需改变扩展。',
+            a: '会。Continue.dev 支持任何 OpenAI 兼容端点，加上 Ollama、vLLM 和 llama.cpp 的一级集成。你可以换入 DeepSeek-V3、Codestral 或 Granite Code 而无需改变扩展。',
           },
           {
             q: 'Qwen3-Coder 30B 需要多少 VRAM？',
@@ -1570,7 +1570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Reemplaza Copilot con Continue.dev + Qwen3-Coder. Configuración, cálculo de costos (equilibrio en 24 meses) y comparativa honesta de calidad.',
     gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
     gammaDescription: 'La presentación de abajo cubre: el stack Continue.dev + Ollama + Qwen3-Coder ($0/mes vs $20/mes Copilot), cálculo de costos a 24 meses con equilibrio en 8–14 meses en hardware existente, resultados de pruebas de calidad (90–95% de Copilot en TypeScript y Python) y una guía de configuración en 6 pasos. Descarga el PDF como tarjeta de referencia para reemplazar Copilot localmente.',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3', 'Codestral 22B'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
     audience: 'Desarrolladores de software que evalúan si abandonar su suscripción de Copilot a favor de un asistente de código local.',
     readTime: '13 min de lectura',
@@ -1808,7 +1808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Continue.dev funciona con otros modelos además de Qwen3-Coder?',
-            a: 'Sí. Continue.dev soporta cualquier endpoint compatible con OpenAI, además de integraciones de primera clase con Ollama, vLLM y llama.cpp. Puedes cambiar a DeepSeek Coder V3, Codestral o Granite Code sin cambiar la extensión.',
+            a: 'Sí. Continue.dev soporta cualquier endpoint compatible con OpenAI, además de integraciones de primera clase con Ollama, vLLM y llama.cpp. Puedes cambiar a DeepSeek-V3, Codestral o Granite Code sin cambiar la extensión.',
           },
           {
             q: '¿Cuánta VRAM necesito para Qwen3-Coder 30B?',
@@ -1891,7 +1891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Substitua o Copilot por Continue.dev + Qwen3-Coder. Configuração, cálculo de custos (equilíbrio em 24 meses) e comparativo honesto de qualidade.',
     gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
     gammaDescription: 'A apresentação abaixo cobre: o stack Continue.dev + Ollama + Qwen3-Coder ($0/mês vs $20/mês do Copilot), cálculo de custos de 24 meses mostrando equilíbrio em 8–14 meses em hardware existente, resultados de testes de qualidade (90–95% do Copilot em TypeScript e Python) e um guia de configuração em 6 passos. Baixe o PDF como cartão de referência para substituir o Copilot localmente.',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3', 'Codestral 22B'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
     audience: 'Desenvolvedores de software avaliando se devem abandonar a assinatura do Copilot em favor de um assistente de código local.',
     readTime: '13 min de leitura',
@@ -2129,7 +2129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'O Continue.dev funciona com outros modelos além do Qwen3-Coder?',
-            a: 'Sim. O Continue.dev suporta qualquer endpoint compatível com OpenAI, além de integrações de primeira classe com Ollama, vLLM e llama.cpp. Você pode trocar para DeepSeek Coder V3, Codestral ou Granite Code sem mudar a extensão.',
+            a: 'Sim. O Continue.dev suporta qualquer endpoint compatível com OpenAI, além de integrações de primeira classe com Ollama, vLLM e llama.cpp. Você pode trocar para DeepSeek-V3, Codestral ou Granite Code sem mudar a extensão.',
           },
           {
             q: 'De quanta VRAM eu preciso para o Qwen3-Coder 30B?',
@@ -2217,7 +2217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
     gammaDescription:
       'تغطي العرض التقديمي أدناه: حزمة Continue.dev + Ollama + Qwen3-Coder ($0/شهر مقابل $20/شهر لـ Copilot)، وحساب التكاليف على 24 شهرًا مع التعادل في 8–14 شهرًا بالجهاز الحالي، ونتائج اختبار الجودة (90–95% من Copilot في TypeScript وPython)، ودليل الإعداد في 6 خطوات. حمّل PDF كبطاقة مرجعية لاستبدال Copilot محليًا.',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3', 'Codestral 22B'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
     audience:
       'مطورو البرمجيات الذين يقيّمون التخلي عن اشتراك Copilot لصالح مساعد كود محلي.',
@@ -2461,7 +2461,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل Continue.dev يعمل مع نماذج أخرى غير Qwen3-Coder؟',
-            a: 'نعم. Continue.dev يدعم أي نقطة نهاية متوافقة مع OpenAI، إضافةً إلى تكاملات مباشرة مع Ollama وvLLM وllama.cpp. يمكنك التبديل إلى DeepSeek Coder V3 أو Codestral أو Granite Code بدون تغيير الإضافة.',
+            a: 'نعم. Continue.dev يدعم أي نقطة نهاية متوافقة مع OpenAI، إضافةً إلى تكاملات مباشرة مع Ollama وvLLM وllama.cpp. يمكنك التبديل إلى DeepSeek-V3 أو Codestral أو Granite Code بدون تغيير الإضافة.',
           },
           {
             q: 'كم أحتاج من VRAM لـ Qwen3-Coder 30B؟',
@@ -2544,7 +2544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription: 'Copilot을 Continue.dev + Qwen3-Coder로 대체하세요. 설정, 비용 계산(24개월 손익분기점)과 솔직한 품질 비교.',
     gammaEmbedUrl: '/presentations/replace-github-copilot-with-local-llm-static.html',
     gammaDescription: '아래 프레젠테이션은 다음 내용을 다룹니다: Continue.dev + Ollama + Qwen3-Coder 스택($0/월 vs Copilot $20/월), 기존 하드웨어 기준 8–14개월 손익분기점을 보여주는 24개월 비용 계산, 품질 테스트 결과(TypeScript·Python에서 Copilot 대비 90–95%), 6단계 설정 가이드. PDF를 다운로드하여 로컬 Copilot 대체 참고 카드로 활용하십시오.',
-    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek Coder V3', 'Codestral 22B'],
+    current_models_mentioned: ['Qwen3-Coder 30B', 'Qwen2.5-Coder 7B', 'DeepSeek-V3', 'Codestral 22B'],
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4070', 'Apple M3 Pro', 'Apple M5'],
     audience: 'Copilot 구독을 로컬 코드 어시스턴트로 전환할지 검토 중인 소프트웨어 개발자.',
     readTime: '13분 분량',
@@ -2782,7 +2782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Continue.dev는 Qwen3-Coder 외 다른 모델도 지원하나요?',
-            a: '네. Continue.dev는 모든 OpenAI 호환 엔드포인트를 지원하며, Ollama, vLLM, llama.cpp와의 일급 통합도 제공합니다. 확장 프로그램을 변경하지 않고 DeepSeek Coder V3, Codestral, Granite Code로 전환할 수 있습니다.',
+            a: '네. Continue.dev는 모든 OpenAI 호환 엔드포인트를 지원하며, Ollama, vLLM, llama.cpp와의 일급 통합도 제공합니다. 확장 프로그램을 변경하지 않고 DeepSeek-V3, Codestral, Granite Code로 전환할 수 있습니다.',
           },
           {
             q: 'Qwen3-Coder 30B에는 VRAM이 얼마나 필요한가요?',

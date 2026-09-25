@@ -335,7 +335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How much storage does Loci use?',
-            a: 'The app itself is small (~100 MB). Model files depend on which you choose: compact models (Phi-4 Mini, Gemma 4 1B, SmolLM) are 1–3 GB; larger models (Llama 3.2 3B, Gemma 4 4B, Qwen 3) are 2–5 GB. If you have multiple models downloaded, total usage can reach 10+ GB. Plan accordingly on devices with limited storage.',
+            a: 'The app itself is small (~100 MB). Model files depend on which you choose: compact models (Phi-4 Mini, Gemma 4 1B, SmolLM) are 1–3 GB; larger models (Llama 3.2 3B, Gemma 4 4B, Qwen3) are 2–5 GB. If you have multiple models downloaded, total usage can reach 10+ GB. Plan accordingly on devices with limited storage.',
           },
         ],
       },
@@ -640,7 +640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'من لا يجب أن يستخدم Loci',
         items: [
-          '**مستخدم يتوقع استدلال أمامي أو ترميز.** تتصدر مكتبة نموذج Loci المنسقة نماذج مثل Llama 3.2 3B و Gemma 4 4B و Qwen 3 1.7B — جميعها صلبة ولكن ليست في فئة GPT-4o أو Claude 3 Opus للاستدلال المعقد. يؤكد الاختبار في العالم الحقيقي أن النماذج الصغيرة تكافح مع المواضيع الدقيقة.',
+          '**مستخدم يتوقع استدلال أمامي أو ترميز.** تتصدر مكتبة نموذج Loci المنسقة نماذج مثل Llama 3.2 3B و Gemma 4 4B و Qwen3 1.7B — جميعها صلبة ولكن ليست في فئة GPT-4o أو Claude 3 Opus للاستدلال المعقد. يؤكد الاختبار في العالم الحقيقي أن النماذج الصغيرة تكافح مع المواضيع الدقيقة.',
           '**مستخدم يحتاج إلى معرفة ويب مباشرة محلية.** لدى Loci بحث ويب اختياري عبر DuckDuckGo ولكنه يتطلب الإنترنت. النماذج المحلية ليس لديها مفهوم "اليوم" أو الأحداث الجارية.',
           '**مطور يريد تحكم شامل في النموذج/الاستدلال.** إذا كنت تريد معايرة التقادير المختلفة ومقارنة سرعات التوكن الثانية أو ضبط معاملات العينات فإن Private LLM أو PocketPal AI توفران عمقاً أكثر.',
           '**مستخدم يبني مساعد صوت محلي كامل.** لدى Loci ميزة "أسلوب الصوت" لكن التنفيذ (ما إذا كان الاستدلال المحلي أو واجهات برمجية نظام Apple) ليس موثقاً بشكل علني. للحصول على كومة صوت محلية المصدر كاملة اطلع على [بناء مساعد صوت محلي على هاتفك](/ar/power-local-llm/voice-assistant-local-mobile-offline) للحصول على خط أنابيب Whisper + LLM + TTS الموصى به.',
@@ -681,7 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كم التخزين الذي يستخدمه Loci؟',
-            a: 'التطبيق نفسه صغير (~100 MB). ملفات النموذج تعتمد على اختيارك: النماذج المدمجة (Phi-4 Mini و Gemma 4 1B و SmolLM) هي 1–3 GB؛ النماذج الأكبر (Llama 3.2 3B و Gemma 4 4B و Qwen 3) هي 2–5 GB. إذا كان لديك نماذج متعددة منزلة فيمكن أن يصل الاستخدام الكلي إلى 10+ GB. خطط وفقاً لذلك على الأجهزة ذات التخزين المحدود.',
+            a: 'التطبيق نفسه صغير (~100 MB). ملفات النموذج تعتمد على اختيارك: النماذج المدمجة (Phi-4 Mini و Gemma 4 1B و SmolLM) هي 1–3 GB؛ النماذج الأكبر (Llama 3.2 3B و Gemma 4 4B و Qwen3) هي 2–5 GB. إذا كان لديك نماذج متعددة منزلة فيمكن أن يصل الاستخدام الكلي إلى 10+ GB. خطط وفقاً لذلك على الأجهزة ذات التخزين المحدود.',
           },
         ],
       },
@@ -973,7 +973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Für wen ist Loci nicht geeignet',
         items: [
-          '**Nutzer, der hochmodernes Reasoning oder Coding erwartet.** Locis kuratierte Modellbibliothek endet bei Modellen wie Llama 3,2 3B, Gemma 4 4B, Qwen 3 1,7B — alle solide, aber nicht in der Klasse von GPT-4o oder Claude 3 Opus für komplexes Reasoning. Tests in der Praxis bestätigen, dass kleine Modelle mit differenzierten Themen kämpfen.',
+          '**Nutzer, der hochmodernes Reasoning oder Coding erwartet.** Locis kuratierte Modellbibliothek endet bei Modellen wie Llama 3,2 3B, Gemma 4 4B, Qwen3 1,7B — alle solide, aber nicht in der Klasse von GPT-4o oder Claude 3 Opus für komplexes Reasoning. Tests in der Praxis bestätigen, dass kleine Modelle mit differenzierten Themen kämpfen.',
           '**Nutzer, der Live-Web-Wissen offline benötigt.** Loci hat optionale DuckDuckGo Web-Suche, aber sie erfordert Internet. Die lokalen Modelle haben kein Konzept vom „Heute" oder aktuellen Events.',
           '**Entwickler, der umfangreiche Modell/Inferenz-Kontrolle wünscht.** Wenn Sie verschiedene Quantisierungen benchmarken, Token/Sekunde-Geschwindigkeiten vergleichen oder Sampling-Parameter tunen müssen, bieten Private LLM oder PocketPal AI mehr Tiefe.',
           '**Nutzer, der einen vollständigen Offline-Sprachassistenten baut.** Loci hat eine „Sprachmodus"-Funktion, aber die Implementierung (ob lokale ASR/TTS oder Apple-System-APIs) ist nicht öffentlich dokumentiert. Für einen vollständig dokumentierten, Offline-Sprachstack, siehe [Bauen Sie einen lokalen Sprachassistenten auf Ihrem Telefon](/de/power-local-llm/voice-assistant-local-mobile-offline) für die empfohlene Whisper + LLM + TTS Pipeline.',
@@ -1014,7 +1014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie viel Speicher verwendet Loci?',
-            a: 'Die App selbst ist klein (~100 MB). Modell-Dateien hängen davon ab, welche Sie wählen: kompakte Modelle (Phi-4 Mini, Gemma 4 1B, SmolLM) sind 1–3 GB; größere Modelle (Llama 3,2 3B, Gemma 4 4B, Qwen 3) sind 2–5 GB. Wenn Sie mehrere Modelle heruntergeladen haben, kann die Gesamtnutzung 10+ GB erreichen. Planen Sie entsprechend auf Geräten mit begrenztem Speicher.',
+            a: 'Die App selbst ist klein (~100 MB). Modell-Dateien hängen davon ab, welche Sie wählen: kompakte Modelle (Phi-4 Mini, Gemma 4 1B, SmolLM) sind 1–3 GB; größere Modelle (Llama 3,2 3B, Gemma 4 4B, Qwen3) sind 2–5 GB. Wenn Sie mehrere Modelle heruntergeladen haben, kann die Gesamtnutzung 10+ GB erreichen. Planen Sie entsprechend auf Geräten mit begrenztem Speicher.',
           },
           {
             q: 'Muss ich bei der Verwendung von Loci die DSGVO beachten?',
@@ -1314,7 +1314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Quién no debería usar Loci',
         items: [
-          '**Usuario esperando razonamiento de frontera o codificación.** La biblioteca de modelos curada de Loci llega como máximo a modelos como Llama 3.2 3B, Gemma 4 4B, Qwen 3 1.7B — todos sólidos, pero no en la clase de GPT-4o o Claude 3 Opus para razonamiento complejo. Las pruebas en el mundo real confirman que modelos pequeños luchan con temas matizados.',
+          '**Usuario esperando razonamiento de frontera o codificación.** La biblioteca de modelos curada de Loci llega como máximo a modelos como Llama 3.2 3B, Gemma 4 4B, Qwen3 1.7B — todos sólidos, pero no en la clase de GPT-4o o Claude 3 Opus para razonamiento complejo. Las pruebas en el mundo real confirman que modelos pequeños luchan con temas matizados.',
           '**Usuario que necesita conocimiento web en vivo sin conexión.** Loci tiene búsqueda web de DuckDuckGo opcional, pero requiere internet. Los modelos locales no tienen concepto de "hoy" o eventos actuales.',
           '**Desarrollador que quiere control integral de modelo/inferencia.** Si necesitas hacer benchmark de cuantizaciones diferentes, comparar velocidades de token/segundo o ajustar parámetros de muestreo, Private LLM o PocketPal AI ofrecen más profundidad.',
           '**Usuario construyendo un asistente de voz completo sin conexión.** Loci tiene una característica de "modo de voz", pero la implementación (si es ASR/TTS local o APIs del sistema Apple) no está documentada públicamente. Para una pila de voz completa sin conexión y documentada, ve a [Construye un asistente de voz local en tu teléfono](/es/power-local-llm/voice-assistant-local-mobile-offline) para la tubería Whisper + LLM + TTS recomendada.',
@@ -1355,7 +1355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuánto almacenamiento usa Loci?',
-            a: 'La aplicación misma es pequeña (~100 MB). Los archivos del modelo dependen de cuál elijas: modelos compactos (Phi-4 Mini, Gemma 4 1B, SmolLM) son 1–3 GB; modelos más grandes (Llama 3.2 3B, Gemma 4 4B, Qwen 3) son 2–5 GB. Si tienes múltiples modelos descargados, el uso total puede llegar a 10+ GB. Planifica según dispositivos con almacenamiento limitado.',
+            a: 'La aplicación misma es pequeña (~100 MB). Los archivos del modelo dependen de cuál elijas: modelos compactos (Phi-4 Mini, Gemma 4 1B, SmolLM) son 1–3 GB; modelos más grandes (Llama 3.2 3B, Gemma 4 4B, Qwen3) son 2–5 GB. Si tienes múltiples modelos descargados, el uso total puede llegar a 10+ GB. Planifica según dispositivos con almacenamiento limitado.',
           },
         ],
       },
@@ -1647,7 +1647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'who-should-not-use',
       title: 'Pour qui Loci n\'est pas adapté',
       items: [
-        '**Utilisateur s\'attendant à raisonnement frontière ou codage.** La bibliothèque de modèles organisés de Loci culmine à Llama 3.2 3B, Gemma 4 4B, Qwen 3 1.7B — tous solides, mais pas dans la classe GPT-4o ou Claude 3 Opus pour raisonnement complexe. Les tests réels confirment les petits modèles peinent sur sujets nuancés.',
+        '**Utilisateur s\'attendant à raisonnement frontière ou codage.** La bibliothèque de modèles organisés de Loci culmine à Llama 3.2 3B, Gemma 4 4B, Qwen3 1.7B — tous solides, mais pas dans la classe GPT-4o ou Claude 3 Opus pour raisonnement complexe. Les tests réels confirment les petits modèles peinent sur sujets nuancés.',
         '**Utilisateur nécessitant connaissances web en direct hors ligne.** Loci a une recherche web DuckDuckGo optionnelle, mais elle exige Internet. Les modèles locaux n\'ont aucun concept « d\'aujourd\'hui » ou d\'événements actuels.',
         '**Développeur voulant contrôle complet de modèle/inférence.** Si vous avez besoin de comparer différentes quantifications, comparer vitesses token/seconde ou ajuster paramètres d\'échantillonnage, Private LLM ou PocketPal AI offrent plus de profondeur.',
         '**Utilisateur construisant assistant vocal hors ligne complet.** Loci a une fonctionnalité « mode voix », mais l\'implémentation (ASR/TTS local ou APIs système Apple) n\'est pas documentée publiquement. Pour une pile vocale complète et vérifiée hors ligne, consultez [Construire un assistant vocal local sur votre téléphone](/fr/power-local-llm/voice-assistant-local-mobile-offline) pour le pipeline Whisper + LLM + TTS recommandé.',
@@ -1688,7 +1688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           q: 'Combien d\'espace Loci utilise-t-il ?',
-          a: 'L\'application elle-même est petite (~100 MB). Les fichiers modèles dépendent de celui que vous choisissez : les modèles compacts (Phi-4 Mini, Gemma 4 1B, SmolLM) font 1–3 GB ; les plus grands modèles (Llama 3.2 3B, Gemma 4 4B, Qwen 3) font 2–5 GB. Si vous avez plusieurs modèles téléchargés, l\'utilisation totale peut atteindre 10+ GB. Prévoyez en fonction sur appareils avec stockage limité.',
+          a: 'L\'application elle-même est petite (~100 MB). Les fichiers modèles dépendent de celui que vous choisissez : les modèles compacts (Phi-4 Mini, Gemma 4 1B, SmolLM) font 1–3 GB ; les plus grands modèles (Llama 3.2 3B, Gemma 4 4B, Qwen3) font 2–5 GB. Si vous avez plusieurs modèles téléchargés, l\'utilisation totale peut atteindre 10+ GB. Prévoyez en fonction sur appareils avec stockage limité.',
         },
       ],
     },
@@ -1980,7 +1980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Loci を使うべきではないユーザー',
         items: [
-          '**最先端の推論やコーディングを期待するユーザー。** Loci のキュレートモデルライブラリは Llama 3.2 3B、Gemma 4 4B、Qwen 3 1.7B などのモデルが上限 — すべて堅牢ですが、GPT-4o や Claude 3 Opus のクラスではありません。実世界テストは小規模モデルがニュアンスのあるトピックで苦戦することを確認。',
+          '**最先端の推論やコーディングを期待するユーザー。** Loci のキュレートモデルライブラリは Llama 3.2 3B、Gemma 4 4B、Qwen3 1.7B などのモデルが上限 — すべて堅牢ですが、GPT-4o や Claude 3 Opus のクラスではありません。実世界テストは小規模モデルがニュアンスのあるトピックで苦戦することを確認。',
           '**ライブウェブ知識をオフラインで必要とするユーザー。** Loci には DuckDuckGo ウェブ検索オプションがありますが、インターネットが必要。ローカルモデルは「今日」や現在のイベントについて概念がありません。',
           '**包括的なモデル/推論制御を望む開発者。** 異なる量子化のベンチマーク、トークン/秒速度の比較、サンプリングパラメータのチューニングが必要な場合、Private LLM や PocketPal AI はより深さを提供。',
           '**完全なオフラインボイスアシスタントを構築するユーザー。** Loci には「音声モード」機能がありますが、実装（ローカル ASR/TTS か Apple システム API か）は公開されていません。ソース化済みの完全オフラインボイススタックについては、[スマートフォンでのローカルボイスアシスタント構築](/ja/power-local-llm/voice-assistant-local-mobile-offline) を参照。',
@@ -2021,7 +2021,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Loci はどの程度のストレージを使用しますか?',
-            a: 'アプリ自体は小さい（~100 MB）。モデルファイルは選択するものに依存: コンパクトモデル（Phi-4 Mini、Gemma 4 1B、SmolLM）は 1–3 GB。より大きなモデル（Llama 3.2 3B、Gemma 4 4B、Qwen 3）は 2–5 GB。複数のモデルをダウンロードすると、合計使用量は 10+ GB に達する可能性があります。ストレージが制限されたデバイスで適切に計画してください。',
+            a: 'アプリ自体は小さい（~100 MB）。モデルファイルは選択するものに依存: コンパクトモデル（Phi-4 Mini、Gemma 4 1B、SmolLM）は 1–3 GB。より大きなモデル（Llama 3.2 3B、Gemma 4 4B、Qwen3）は 2–5 GB。複数のモデルをダウンロードすると、合計使用量は 10+ GB に達する可能性があります。ストレージが制限されたデバイスで適切に計画してください。',
           },
         ],
       },
@@ -2313,7 +2313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Loci를 사용하지 말아야 할 사람',
         items: [
-          '**최첨단 추론 또는 코딩을 기대하는 사용자.** Loci의 큐레이션된 모델 라이브러리는 Llama 3.2 3B, Gemma 4 4B, Qwen 3 1.7B과 같은 모델에서 최고조입니다. 모두 탄탄하지만 복잡한 추론을 위해 GPT-4o 또는 Claude 3 Opus의 클래스가 아닙니다. 실제 테스팅은 소형 모델이 미묘한 주제에서 어려움을 겪음을 확인합니다.',
+          '**최첨단 추론 또는 코딩을 기대하는 사용자.** Loci의 큐레이션된 모델 라이브러리는 Llama 3.2 3B, Gemma 4 4B, Qwen3 1.7B과 같은 모델에서 최고조입니다. 모두 탄탄하지만 복잡한 추론을 위해 GPT-4o 또는 Claude 3 Opus의 클래스가 아닙니다. 실제 테스팅은 소형 모델이 미묘한 주제에서 어려움을 겪음을 확인합니다.',
           '**라이브 웹 지식이 필요한 사용자.** Loci는 선택적 DuckDuckGo 웹 검색을 가지고 있지만 인터넷이 필요합니다. 로컬 모델은 "오늘" 또는 현재 이벤트의 개념이 없습니다.',
           '**포괄적인 모델/추론 제어를 원하는 개발자.** 다양한 양자화를 벤치마크하고, 토큰/초 속도를 비교하거나, 샘플링 매개변수를 조정하려면 Private LLM 또는 PocketPal AI가 더 깊이를 제공합니다.',
           '**완전한 오프라인 음성 보조를 구축하는 사용자.** Loci는 "음성 모드" 기능을 가지고 있지만 구현(로컬 ASR/TTS 또는 Apple 시스템 API인지)은 공개적으로 문서화되지 않았습니다. 소싱되고 완전히 오프라인인 음성 스택의 경우 [전화에서 로컬 음성 보조 구축](/ko/power-local-llm/voice-assistant-local-mobile-offline)을 참조하세요 권장되는 Whisper + LLM + TTS 파이프라인의 경우.',
@@ -2354,7 +2354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Loci는 얼마나 많은 스토리지를 사용하나요?',
-            a: '앱 자체는 작습니다(약 100 MB). 모델 파일은 선택에 따라 다릅니다: 컴팩트 모델(Phi-4 Mini, Gemma 4 1B, SmolLM)은 1–3 GB; 더 큰 모델(Llama 3.2 3B, Gemma 4 4B, Qwen 3)은 2–5 GB입니다. 여러 모델을 다운로드한 경우 총 사용량은 10GB 이상에 도달할 수 있습니다. 스토리지가 제한된 디바이스에서는 계획하세요.',
+            a: '앱 자체는 작습니다(약 100 MB). 모델 파일은 선택에 따라 다릅니다: 컴팩트 모델(Phi-4 Mini, Gemma 4 1B, SmolLM)은 1–3 GB; 더 큰 모델(Llama 3.2 3B, Gemma 4 4B, Qwen3)은 2–5 GB입니다. 여러 모델을 다운로드한 경우 총 사용량은 10GB 이상에 도달할 수 있습니다. 스토리지가 제한된 디바이스에서는 계획하세요.',
           },
         ],
       },
@@ -2646,7 +2646,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       id: 'who-should-not-use',
       title: 'Quem Não Deveria Usar Loci',
       items: [
-        '**Usuário esperando raciocínio de ponta ou codificação.** A biblioteca de modelos curada de Loci tops em modelos como Llama 3.2 3B, Gemma 4 4B, Qwen 3 1.7B — todos sólidos, mas não na classe de GPT-4o ou Claude 3 Opus para raciocínio complexo. Testes do mundo real confirmam que modelos pequenos lutam com tópicos nuançados.',
+        '**Usuário esperando raciocínio de ponta ou codificação.** A biblioteca de modelos curada de Loci tops em modelos como Llama 3.2 3B, Gemma 4 4B, Qwen3 1.7B — todos sólidos, mas não na classe de GPT-4o ou Claude 3 Opus para raciocínio complexo. Testes do mundo real confirmam que modelos pequenos lutam com tópicos nuançados.',
         '**Usuário precisando de conhecimento web ao vivo offline.** Loci tem pesquisa web DuckDuckGo opcional, mas requer internet. Os modelos locais não têm conceito de "hoje" ou eventos atuais.',
         '**Desenvolvedor querendo controle abrangente de modelo/inferência.** Se você precisa avaliar diferentes quantizações, comparar velocidades token/segundo ou ajustar parâmetros de amostragem, Private LLM ou PocketPal AI oferecem mais profundidade.',
         '**Usuário construindo um assistente de voz offline completo.** Loci tem um recurso "modo de voz", mas a implementação (se ASR/TTS local ou APIs do sistema Apple) não é documentada publicamente. Para uma pilha de voz offline totalmente originada, veja [Construir um Assistente de Voz Local em Seu Telefone](/pt/power-local-llm/voice-assistant-local-mobile-offline) para o pipeline Whisper + LLM + TTS recomendado.',
@@ -2687,7 +2687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           q: 'Quanto armazenamento Loci usa?',
-          a: 'O app em si é pequeno (~100 MB). Arquivos de modelo dependem de qual você escolher: modelos compactos (Phi-4 Mini, Gemma 4 1B, SmolLM) são 1–3 GB; modelos maiores (Llama 3.2 3B, Gemma 4 4B, Qwen 3) são 2–5 GB. Se você tiver vários modelos baixados, o uso total pode chegar a 10+ GB. Planeje adequadamente em dispositivos com armazenamento limitado.',
+          a: 'O app em si é pequeno (~100 MB). Arquivos de modelo dependem de qual você escolher: modelos compactos (Phi-4 Mini, Gemma 4 1B, SmolLM) são 1–3 GB; modelos maiores (Llama 3.2 3B, Gemma 4 4B, Qwen3) são 2–5 GB. Se você tiver vários modelos baixados, o uso total pode chegar a 10+ GB. Planeje adequadamente em dispositivos com armazenamento limitado.',
         },
       ],
     },
@@ -2979,7 +2979,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: '谁不应该使用 Loci',
         items: [
-          '**期望前沿推理或编码的用户。** Loci 的精选模型库上限是 Llama 3.2 3B、Gemma 4 4B、Qwen 3 1.7B 等模型——所有这些都很出色，但不在 GPT-4o 或 Claude 3 Opus 的复杂推理等级中。现实测试证实小型模型在微妙主题上表现不佳。',
+          '**期望前沿推理或编码的用户。** Loci 的精选模型库上限是 Llama 3.2 3B、Gemma 4 4B、Qwen3 1.7B 等模型——所有这些都很出色，但不在 GPT-4o 或 Claude 3 Opus 的复杂推理等级中。现实测试证实小型模型在微妙主题上表现不佳。',
           '**需要实时网络知识离线的用户。** Loci 有可选的 DuckDuckGo 网络搜索，但它需要互联网。本地模型对"今天"或当前事件没有概念。',
           '**想要综合模型/推理控制的开发者。** 如果你需要对比不同量化、比较令牌/秒速度或调整采样参数，Private LLM 或 PocketPal AI 提供更多深度。',
           '**构建完整离线语音助手的用户。** Loci 有一个"语音模式"功能，但实现（是本地 ASR/TTS 还是 Apple 系统 API）没有公开记录。对于有源的完全离线语音堆栈，请参阅[在你的手机上构建本地语音助手](/zh/power-local-llm/voice-assistant-local-mobile-offline)了解推荐的 Whisper + LLM + TTS 管道。',
@@ -3020,7 +3020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Loci 使用多少存储空间？',
-            a: '应用本身很小（~100 MB）。模型文件取决于你选择哪个：紧凑模型（Phi-4 Mini、Gemma 4 1B、SmolLM）为 1–3 GB；较大的模型（Llama 3.2 3B、Gemma 4 4B、Qwen 3）为 2–5 GB。如果你下载了多个模型，总使用量可以达到 10+ GB。在存储有限的设备上相应规划。',
+            a: '应用本身很小（~100 MB）。模型文件取决于你选择哪个：紧凑模型（Phi-4 Mini、Gemma 4 1B、SmolLM）为 1–3 GB；较大的模型（Llama 3.2 3B、Gemma 4 4B、Qwen3）为 2–5 GB。如果你下载了多个模型，总使用量可以达到 10+ GB。在存储有限的设备上相应规划。',
           },
         ],
       },

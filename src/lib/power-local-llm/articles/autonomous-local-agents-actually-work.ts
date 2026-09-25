@@ -27,7 +27,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 4 27B',
       'GLM-4.7 32B',
       'Llama 3.3 70B',
-      'DeepSeek Coder V3',
+      'DeepSeek-V3',
     ],
     current_hardware_mentioned: [
       'Apple M5 Max 64 GB',
@@ -210,13 +210,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Where it shines:** multi-file refactors (rename a service across 12 files in one task), exploratory bug debugging ("find why this test is flaky" — Cline reads adjacent test files, traces dependencies, proposes a hypothesis, edits, runs the test), and scoped research that produces a markdown deliverable inside the project.',
           '**Where it stumbles:** non-coding tasks that require external HTTP (no native browser). Email-draft triage works only if you wire in an MCP server or shell tools — and at that point you are configuring three things to do what a smaller, scoped tool would do directly.',
           '**Supervision cost:** ~5–12 approvals per task. Most are read tools (cheap, fast accept). The expensive ones are write_to_file and execute_command — set those to require manual approval and you will catch the rare bad call before it lands.',
-          '**Token cost:** high. Full file contents stream into the conversation as the agent reads them. A 12-file refactor on Qwen3-Coder 30B at 32K context burns through the window fast — switch to a 128K-context model (DeepSeek Coder V3, Llama 3.3 70B) for non-trivial work. (DeepSeek has since released DeepSeek-V4 — Flash/Pro — as a newer open-weight generation; R1/V3 remain valid to run locally.)',
+          '**Token cost:** high. Full file contents stream into the conversation as the agent reads them. A 12-file refactor on Qwen3-Coder 30B at 32K context burns through the window fast — switch to a 128K-context model (DeepSeek-V3, Llama 3.3 70B) for non-trivial work. (DeepSeek has since released DeepSeek-V4 — Flash/Pro — as a newer open-weight generation; R1/V3 remain valid to run locally.)',
           'For deeper Cline configuration including auto-approve allow-lists, see [Continue.dev vs Cline vs Aider: Best Local Coding Agent in 2026](/power-local-llm/continue-dev-vs-cline-vs-aider-local).',
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Run Cline against Qwen3-Coder 30B (Q4_K_M, ~17 GB VRAM) for coding tasks. For tasks that touch more than 6 files in one session, switch to DeepSeek Coder V3 or another 128K-context model — the 32K window on Qwen3-Coder will fill before the agent finishes.',
+            text: 'Run Cline against Qwen3-Coder 30B (Q4_K_M, ~17 GB VRAM) for coding tasks. For tasks that touch more than 6 files in one session, switch to DeepSeek-V3 or another 128K-context model — the 32K window on Qwen3-Coder will fill before the agent finishes.',
           },
         ],
       },
@@ -367,7 +367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Most people should install Cline + Ollama and stop.** The decision tree below covers the cases where another stack is the right pick.',
         columns: ['Your situation', 'Pick'],
         rows: [
-          { 'Your situation': 'I want a local agent for coding tasks (refactor, debug, multi-file edits) inside VS Code', 'Pick': 'Cline + Ollama with Qwen3-Coder 30B (or DeepSeek Coder V3 for 128K context)' },
+          { 'Your situation': 'I want a local agent for coding tasks (refactor, debug, multi-file edits) inside VS Code', 'Pick': 'Cline + Ollama with Qwen3-Coder 30B (or DeepSeek-V3 for 128K context)' },
           { 'Your situation': 'I already use Continue.dev for autocomplete and want a lighter agent for small tasks', 'Pick': 'Continue.dev Agent mode in the same install' },
           { 'Your situation': 'I want an agent that can drive a browser, query a database, and read files', 'Pick': 'Cline + Ollama with MCP servers wired in (filesystem, sqlite, puppeteer)' },
           { 'Your situation': 'I want a local "code interpreter" REPL — write code, run code, iterate', 'Pick': 'OpenInterpreter, but do not leave it unattended' },
@@ -398,7 +398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Mistake 1: optimising for autonomy.** "How long can it run unattended" is the wrong metric. "How few approvals to land the task" is the right one. Picking a stack on autonomy benchmarks gets you AutoGPT; picking on supervision-cost gets you Cline.',
           '**Mistake 2: small models for tool-call work.** Anything below 7B (e.g. Gemma 3 2B) — and most 7B–13B general-purpose models without tool-call fine-tuning — emits malformed tool calls. Use Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, or Llama 3.3 70B and stop fighting the harness.',
-          '**Mistake 3: 32K context for multi-file work.** Cline streams full file contents into the conversation; an 8-file task can blow through 32K tokens before reasoning. Use a 128K-context model (DeepSeek Coder V3, Llama 3.3 70B) for non-trivial multi-file tasks.',
+          '**Mistake 3: 32K context for multi-file work.** Cline streams full file contents into the conversation; an 8-file task can blow through 32K tokens before reasoning. Use a 128K-context model (DeepSeek-V3, Llama 3.3 70B) for non-trivial multi-file tasks.',
           '**Mistake 4: auto-approve everything.** The "approve all" toggle is the on-ramp to "the agent deleted my files". Auto-approve read tools only; require manual approval for writes and shell.',
           '**Mistake 5: production database writes from an agent.** Run a read-only role by default. A separate writable role lives only for the duration of tasks that explicitly need it. The cost of one bad write is unbounded.',
           '**Mistake 6: building a custom LangGraph orchestrator before trying Cline.** 90% of "I need a custom agent" use cases are scoped enough that Cline + a few MCP servers is the right answer. Build custom only when the workflow shape is genuinely incompatible with existing harnesses.',
@@ -426,7 +426,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Cline says "hit repeated tool call failures, try guiding it with a new prompt" — what does this mean?',
-            a: 'Cline\'s own safeguard against the circular-tool-call pattern this article measures: the agent called a tool, got a result it couldn\'t use, and repeated the same (or an equivalent) call enough times that Cline stopped and asked for human input instead of looping silently. It is not a bug — it is the approval gate working as designed. Fix it by giving Cline a narrower next instruction (name the exact file or function instead of repeating the original broad task), or by checking whether the underlying local model has enough context window left (a 32K-context model streaming full files can run out of room mid-task — switch to a 128K-context model like DeepSeek Coder V3 for multi-file work). If it recurs on the same file repeatedly, the model may be hallucinating a path or symbol that does not exist — open the file yourself to confirm it is real before re-prompting.',
+            a: 'Cline\'s own safeguard against the circular-tool-call pattern this article measures: the agent called a tool, got a result it couldn\'t use, and repeated the same (or an equivalent) call enough times that Cline stopped and asked for human input instead of looping silently. It is not a bug — it is the approval gate working as designed. Fix it by giving Cline a narrower next instruction (name the exact file or function instead of repeating the original broad task), or by checking whether the underlying local model has enough context window left (a 32K-context model streaming full files can run out of room mid-task — switch to a 128K-context model like DeepSeek-V3 for multi-file work). If it recurs on the same file repeatedly, the model may be hallucinating a path or symbol that does not exist — open the file yourself to confirm it is real before re-prompting.',
           },
           {
             q: 'Are autonomous AI agents actually useful in 2026?',
@@ -438,7 +438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which agent stack is most reliable for real work in 2026?',
-            a: 'Cline + Ollama is the default pick for coding-shaped tasks (refactors, debugging, multi-file work). Pair it with Qwen3-Coder 30B for everyday work or DeepSeek Coder V3 / Llama 3.3 70B when you need 128K context. Continue.dev Agent mode is the lighter alternative for single-file or two-file tasks. Both are scoped, well-maintained, and run inside the editor with explicit approval gates.',
+            a: 'Cline + Ollama is the default pick for coding-shaped tasks (refactors, debugging, multi-file work). Pair it with Qwen3-Coder 30B for everyday work or DeepSeek-V3 / Llama 3.3 70B when you need 128K context. Continue.dev Agent mode is the lighter alternative for single-file or two-file tasks. Both are scoped, well-maintained, and run inside the editor with explicit approval gates.',
           },
           {
             q: 'How much supervision do agents really need in 2026?',
@@ -511,7 +511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 4 27B',
       'GLM-4.7 32B',
       'Llama 3.3 70B',
-      'DeepSeek Coder V3',
+      'DeepSeek-V3',
     ],
     current_hardware_mentioned: [
       'Apple M5 Max 64 GB',
@@ -694,13 +694,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Donde destaca:** refactorizaciones de múltiples archivos (renombrar un servicio en 12 archivos en una sola tarea), depuración exploratoria de bugs ("encuentra por qué este test es inestable": Cline lee archivos de test adyacentes, rastrea dependencias, propone una hipótesis, edita, ejecuta el test) e investigación acotada que produce un entregable en markdown dentro del proyecto.',
           '**Donde tropieza:** tareas que no son de codificación y que requieren HTTP externo (sin navegador nativo). El triaje de borradores de correo solo funciona si conectas un servidor MCP o herramientas de shell, y en ese punto estás configurando tres cosas para hacer lo que haría directamente una herramienta más pequeña y acotada.',
           '**Coste de supervisión:** ~5–12 aprobaciones por tarea. La mayoría son herramientas de lectura (baratas, aceptación rápida). Las costosas son write_to_file y execute_command: configúralas para requerir aprobación manual y capturarás la rara llamada errónea antes de que aterrice.',
-          '**Coste de tokens:** alto. Los contenidos completos de los archivos se transmiten a la conversación mientras el agente los lee. Una refactorización de 12 archivos con Qwen3-Coder 30B en contexto de 32K agota la ventana rápido: cambia a un modelo con contexto de 128K (DeepSeek Coder V3, Llama 3.3 70B) para trabajo no trivial. (DeepSeek ha lanzado desde entonces DeepSeek-V4 —Flash/Pro— como nueva generación de pesos abiertos; R1/V3 siguen siendo válidos para ejecutar en local.)',
+          '**Coste de tokens:** alto. Los contenidos completos de los archivos se transmiten a la conversación mientras el agente los lee. Una refactorización de 12 archivos con Qwen3-Coder 30B en contexto de 32K agota la ventana rápido: cambia a un modelo con contexto de 128K (DeepSeek-V3, Llama 3.3 70B) para trabajo no trivial. (DeepSeek ha lanzado desde entonces DeepSeek-V4 —Flash/Pro— como nueva generación de pesos abiertos; R1/V3 siguen siendo válidos para ejecutar en local.)',
           'Para una configuración más detallada de Cline, incluidas las listas de aprobación automática, consulta [Continue.dev vs Cline vs Aider: mejor agente de codificación local en 2026](/es/power-local-llm/continue-dev-vs-cline-vs-aider-local).',
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Ejecuta Cline con Qwen3-Coder 30B (Q4_K_M, ~17 GB VRAM) para tareas de codificación. Para tareas que tocan más de 6 archivos en una sesión, cambia a DeepSeek Coder V3 u otro modelo con contexto de 128K: la ventana de 32K de Qwen3-Coder se llenará antes de que el agente termine.',
+            text: 'Ejecuta Cline con Qwen3-Coder 30B (Q4_K_M, ~17 GB VRAM) para tareas de codificación. Para tareas que tocan más de 6 archivos en una sesión, cambia a DeepSeek-V3 u otro modelo con contexto de 128K: la ventana de 32K de Qwen3-Coder se llenará antes de que el agente termine.',
           },
         ],
       },
@@ -851,7 +851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La mayoría de las personas debería instalar Cline + Ollama y no continuar.** El árbol de decisión a continuación cubre los casos donde otro stack es la elección correcta.',
         columns: ['Tu situación', 'Elige'],
         rows: [
-          { 'Tu situación': 'Quiero un agente local para tareas de codificación (refactorización, depuración, ediciones de múltiples archivos) en VS Code', 'Elige': 'Cline + Ollama con Qwen3-Coder 30B (o DeepSeek Coder V3 para contexto de 128K)' },
+          { 'Tu situación': 'Quiero un agente local para tareas de codificación (refactorización, depuración, ediciones de múltiples archivos) en VS Code', 'Elige': 'Cline + Ollama con Qwen3-Coder 30B (o DeepSeek-V3 para contexto de 128K)' },
           { 'Tu situación': 'Ya uso Continue.dev para autocompletado y quiero un agente más ligero para tareas pequeñas', 'Elige': 'Continue.dev en modo Agent en la misma instalación' },
           { 'Tu situación': 'Quiero un agente que pueda controlar un navegador, consultar una base de datos y leer archivos', 'Elige': 'Cline + Ollama con servidores MCP conectados (sistema de archivos, sqlite, puppeteer)' },
           { 'Tu situación': 'Quiero un REPL local de "code interpreter": escribir código, ejecutar código, iterar', 'Elige': 'OpenInterpreter, pero no lo dejes desatendido' },
@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Error 1: optimizar para la autonomía.** "¿Cuánto tiempo puede ejecutarse sin supervisión?" es la métrica incorrecta. "¿Cuántas aprobaciones para completar la tarea?" es la correcta. Elegir un stack según benchmarks de autonomía te da AutoGPT; elegir según el coste de supervisión te da Cline.',
           '**Error 2: modelos pequeños para trabajo de tool-calling.** Cualquier cosa por debajo de 7B (p. ej. Gemma 3 2B) —y la mayoría de los modelos de propósito general de 7B–13B sin fine-tuning de tool-calling— emite llamadas a herramientas malformadas. Usa Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B o Llama 3.3 70B y deja de pelear con el harness.',
-          '**Error 3: contexto de 32K para trabajo de múltiples archivos.** Cline transmite el contenido completo de los archivos a la conversación; una tarea de 8 archivos puede agotar los 32K tokens antes de razonar. Usa un modelo con contexto de 128K (DeepSeek Coder V3, Llama 3.3 70B) para tareas de múltiples archivos no triviales.',
+          '**Error 3: contexto de 32K para trabajo de múltiples archivos.** Cline transmite el contenido completo de los archivos a la conversación; una tarea de 8 archivos puede agotar los 32K tokens antes de razonar. Usa un modelo con contexto de 128K (DeepSeek-V3, Llama 3.3 70B) para tareas de múltiples archivos no triviales.',
           '**Error 4: aprobar todo automáticamente.** El interruptor de "aprobar todo" es la rampa de entrada a "el agente borró mis archivos". Aprueba automáticamente solo las herramientas de lectura; exige aprobación manual para escrituras y shell.',
           '**Error 5: escrituras en bases de datos de producción desde un agente.** Ejecuta un rol de solo lectura por defecto. Un rol de escritura separado existe solo durante la duración de las tareas que lo requieran explícitamente. El coste de una escritura errónea es ilimitado.',
           '**Error 6: construir un orquestador LangGraph personalizado antes de probar Cline.** El 90% de los casos de uso de "necesito un agente personalizado" están suficientemente acotados como para que Cline + unos pocos servidores MCP sea la respuesta correcta. Construye algo personalizado solo cuando la forma del flujo de trabajo sea genuinamente incompatible con los harnesses existentes.',
@@ -910,7 +910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Qué significa cuando Cline dice "hit repeated tool call failures, try guiding it with a new prompt"?',
-            a: 'Es la propia salvaguarda de Cline contra el patrón de llamadas a herramientas en bucle que mide este artículo: el agente llamó a una herramienta, obtuvo un resultado que no pudo usar, y repitió la misma llamada (o una equivalente) las veces suficientes como para que Cline se detuviera y pidiera intervención humana en vez de seguir en bucle en silencio. No es un error — es el approval gate funcionando como está diseñado. Solucionalo dando a Cline una instrucción más acotada (nombra el archivo o la función exacta en vez de repetir la tarea original amplia), o revisando si al modelo local le queda suficiente contexto (un modelo de 32K puede quedarse sin espacio a mitad de tarea si transmite archivos completos — cambia a un modelo de 128K como DeepSeek Coder V3 para trabajo multi-archivo). Si se repite siempre en el mismo archivo, el modelo puede estar alucinando una ruta o símbolo que no existe — abre el archivo tú mismo para confirmarlo antes de volver a pedir.',
+            a: 'Es la propia salvaguarda de Cline contra el patrón de llamadas a herramientas en bucle que mide este artículo: el agente llamó a una herramienta, obtuvo un resultado que no pudo usar, y repitió la misma llamada (o una equivalente) las veces suficientes como para que Cline se detuviera y pidiera intervención humana en vez de seguir en bucle en silencio. No es un error — es el approval gate funcionando como está diseñado. Solucionalo dando a Cline una instrucción más acotada (nombra el archivo o la función exacta en vez de repetir la tarea original amplia), o revisando si al modelo local le queda suficiente contexto (un modelo de 32K puede quedarse sin espacio a mitad de tarea si transmite archivos completos — cambia a un modelo de 128K como DeepSeek-V3 para trabajo multi-archivo). Si se repite siempre en el mismo archivo, el modelo puede estar alucinando una ruta o símbolo que no existe — abre el archivo tú mismo para confirmarlo antes de volver a pedir.',
           },
           {
             q: '¿Son realmente útiles los agentes de IA autónomos en 2026?',
@@ -922,7 +922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué stack de agentes es el más fiable para trabajo real en 2026?',
-            a: 'Cline + Ollama es la elección por defecto para tareas de tipo codificación (refactorizaciones, depuración, trabajo de múltiples archivos). Combínalo con Qwen3-Coder 30B para trabajo cotidiano o DeepSeek Coder V3 / Llama 3.3 70B cuando necesites contexto de 128K. Continue.dev en modo Agent es la alternativa más ligera para tareas de uno o dos archivos. Ambos están acotados, bien mantenidos y se ejecutan dentro del editor con puertas de aprobación explícitas.',
+            a: 'Cline + Ollama es la elección por defecto para tareas de tipo codificación (refactorizaciones, depuración, trabajo de múltiples archivos). Combínalo con Qwen3-Coder 30B para trabajo cotidiano o DeepSeek-V3 / Llama 3.3 70B cuando necesites contexto de 128K. Continue.dev en modo Agent es la alternativa más ligera para tareas de uno o dos archivos. Ambos están acotados, bien mantenidos y se ejecutan dentro del editor con puertas de aprobación explícitas.',
           },
           {
             q: '¿Cuánta supervisión necesitan realmente los agentes en 2026?',
@@ -1007,7 +1007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 4 27B',
       'GLM-4.7 32B',
       'Llama 3.3 70B',
-      'DeepSeek Coder V3',
+      'DeepSeek-V3',
     ],
     current_hardware_mentioned: [
       'Apple M5 Max 64 GB',
@@ -1190,13 +1190,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Où ça brille :** refontes multi-fichiers (renommer un service sur 12 fichiers en une tâche), débogage exploratoire de bugs (« découvrir pourquoi ce test est instable » — Cline lit les fichiers de test adjacents, retrace les dépendances, propose une hypothèse, édite, exécute le test), et recherche limitée qui produit un livrable markdown à l\'intérieur du projet.',
           '**Où ça trébuche :** tâches non-codage qui nécessitent HTTP externe (pas de navigateur natif). Le triage de brouillons d\'e-mails fonctionne seulement si vous connectez un serveur MCP ou des outils shell — et à ce moment-là vous configurez trois choses pour faire ce qu\'un outil plus petit et limité ferait directement.',
           '**Coût de supervision :** ~5–12 approbations par tâche. La plupart sont des outils de lecture (bon marché, acceptation rapide). Les coûteux sont write_to_file et execute_command — réglez-les pour exiger une approbation manuelle et vous attraperez l\'appel rare mauvais avant qu\'il se produise.',
-          '**Coût des tokens :** élevé. Les contenus de fichier complets entrent dans la conversation alors que l\'agent les lit. Une refonte de 12 fichiers sur Qwen3-Coder 30B à 32K context épuise la fenêtre rapidement — basculez vers un modèle 128K-context (DeepSeek Coder V3, Llama 3.3 70B) pour le travail non-trivial. (DeepSeek a depuis publié DeepSeek-V4 — Flash/Pro — comme nouvelle génération à poids ouverts ; R1/V3 restent utilisables en local.)',
+          '**Coût des tokens :** élevé. Les contenus de fichier complets entrent dans la conversation alors que l\'agent les lit. Une refonte de 12 fichiers sur Qwen3-Coder 30B à 32K context épuise la fenêtre rapidement — basculez vers un modèle 128K-context (DeepSeek-V3, Llama 3.3 70B) pour le travail non-trivial. (DeepSeek a depuis publié DeepSeek-V4 — Flash/Pro — comme nouvelle génération à poids ouverts ; R1/V3 restent utilisables en local.)',
           'Pour la configuration Cline plus approfondie, y compris les listes d\'approbation automatique, voir [Continue.dev vs Cline vs Aider : Meilleur agent de codage local en 2026](/fr/power-local-llm/continue-dev-vs-cline-vs-aider-local).',
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Exécutez Cline contre Qwen3-Coder 30B (Q4_K_M, ~17 GB VRAM) pour les tâches de codage. Pour les tâches qui touchent plus de 6 fichiers en une session, basculez vers DeepSeek Coder V3 ou un autre modèle 128K-context — la fenêtre 32K sur Qwen3-Coder sera pleine avant que l\'agent ne termine.',
+            text: 'Exécutez Cline contre Qwen3-Coder 30B (Q4_K_M, ~17 GB VRAM) pour les tâches de codage. Pour les tâches qui touchent plus de 6 fichiers en une session, basculez vers DeepSeek-V3 ou un autre modèle 128K-context — la fenêtre 32K sur Qwen3-Coder sera pleine avant que l\'agent ne termine.',
           },
         ],
       },
@@ -1347,7 +1347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La plupart des gens devraient installer Cline + Ollama et arrêter.** L\'arbre de décision ci-dessous couvre les cas où un autre stack est le bon choix.',
         columns: ['Votre situation', 'Choisir'],
         rows: [
-          { 'Votre situation': 'Je veux un agent local pour les tâches de codage (refonte, débogage, éditions multi-fichiers) dans VS Code', 'Choisir': 'Cline + Ollama avec Qwen3-Coder 30B (ou DeepSeek Coder V3 pour context 128K)' },
+          { 'Votre situation': 'Je veux un agent local pour les tâches de codage (refonte, débogage, éditions multi-fichiers) dans VS Code', 'Choisir': 'Cline + Ollama avec Qwen3-Coder 30B (ou DeepSeek-V3 pour context 128K)' },
           { 'Votre situation': 'J\'utilise déjà Continue.dev pour l\'autocomplétion et je veux un agent plus léger pour les petites tâches', 'Choisir': 'Continue.dev Agent mode dans la même installation' },
           { 'Votre situation': 'Je veux un agent qui peut piloter un navigateur, interroger une base de données, et lire les fichiers', 'Choisir': 'Cline + Ollama avec les serveurs MCP connectés (système de fichiers, sqlite, puppeteer)' },
           { 'Votre situation': 'Je veux un REPL local « code interpreter » — écrire du code, exécuter du code, itérer', 'Choisir': 'OpenInterpreter, mais ne le laissez pas sans surveillance' },
@@ -1378,7 +1378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Erreur 1 : optimiser pour l\'autonomie.** « Combien de temps peut-il s\'exécuter sans surveillance » est la mauvaise métrique. « Combien d\'approbations pour atterrir la tâche » est la bonne. Choisir un stack sur les benchmarks d\'autonomie vous obtient AutoGPT ; choisir sur le coût de supervision vous obtient Cline.',
           '**Erreur 2 : petits modèles pour le travail des appels d\'outils.** N\'importe quoi sous 7B (p. ex. Gemma 3 2B) — et la plupart des modèles de 7B–13B de but général sans fine-tuning des appels d\'outils — émet des appels d\'outils malformés. Utilisez Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, ou Llama 3.3 70B et arrêtez de combattre le harness.',
-          '**Erreur 3 : context 32K pour le travail multi-fichiers.** Cline diffuse les contenus de fichier complets dans la conversation ; une tâche de 8 fichiers peut faire exploser les tokens 32K avant le raisonnement. Utilisez un modèle 128K-context (DeepSeek Coder V3, Llama 3.3 70B) pour les tâches non-triviales multi-fichiers.',
+          '**Erreur 3 : context 32K pour le travail multi-fichiers.** Cline diffuse les contenus de fichier complets dans la conversation ; une tâche de 8 fichiers peut faire exploser les tokens 32K avant le raisonnement. Utilisez un modèle 128K-context (DeepSeek-V3, Llama 3.3 70B) pour les tâches non-triviales multi-fichiers.',
           '**Erreur 4 : auto-approuver tout.** Le toggle « approuver tout » est la rampe d\'accès à « l\'agent a supprimé mes fichiers ». Auto-approuvez seulement les outils de lecture ; exigez une approbation manuelle pour les écritures et le shell.',
           '**Erreur 5 : écritures de base de données de production d\'un agent.** Exécutez un rôle de lecture seule par défaut. Un rôle inscriptible séparé existe seulement pour la durée des tâches qui l\'exigent explicitement. Le coût d\'une mauvaise écriture est non borné.',
           '**Erreur 6 : construire un orchestrateur LangGraph personnalisé avant d\'essayer Cline.** 90% des cas d\'usage « j\'ai besoin d\'un agent personnalisé » sont suffisamment limités que Cline + quelques serveurs MCP est la bonne réponse. Construisez personnalisé seulement quand la forme du flux de travail est réellement incompatible avec les harnesses existants.',
@@ -1406,7 +1406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Que signifie le message de Cline « hit repeated tool call failures, try guiding it with a new prompt » ?',
-            a: 'C\'est le garde-fou propre à Cline contre le schéma d\'appels d\'outils en boucle mesuré dans cet article : l\'agent a appelé un outil, obtenu un résultat inutilisable, et répété le même appel (ou un équivalent) suffisamment de fois pour que Cline s\'arrête et demande une intervention humaine plutôt que de boucler silencieusement. Ce n\'est pas un bug — c\'est le mécanisme d\'approbation qui fonctionne comme prévu. Corrigez-le en donnant à Cline une instruction plus précise (nommez le fichier ou la fonction exacte plutôt que de répéter la tâche initiale trop large), ou vérifiez si le modèle local dispose d\'assez de contexte restant (un modèle à contexte 32K peut manquer d\'espace en cours de tâche s\'il diffuse des fichiers entiers — passez à un modèle à 128K comme DeepSeek Coder V3 pour le travail multi-fichiers). Si cela se reproduit toujours sur le même fichier, le modèle hallucine peut-être un chemin ou un symbole qui n\'existe pas — ouvrez le fichier vous-même pour vérifier avant de relancer.',
+            a: 'C\'est le garde-fou propre à Cline contre le schéma d\'appels d\'outils en boucle mesuré dans cet article : l\'agent a appelé un outil, obtenu un résultat inutilisable, et répété le même appel (ou un équivalent) suffisamment de fois pour que Cline s\'arrête et demande une intervention humaine plutôt que de boucler silencieusement. Ce n\'est pas un bug — c\'est le mécanisme d\'approbation qui fonctionne comme prévu. Corrigez-le en donnant à Cline une instruction plus précise (nommez le fichier ou la fonction exacte plutôt que de répéter la tâche initiale trop large), ou vérifiez si le modèle local dispose d\'assez de contexte restant (un modèle à contexte 32K peut manquer d\'espace en cours de tâche s\'il diffuse des fichiers entiers — passez à un modèle à 128K comme DeepSeek-V3 pour le travail multi-fichiers). Si cela se reproduit toujours sur le même fichier, le modèle hallucine peut-être un chemin ou un symbole qui n\'existe pas — ouvrez le fichier vous-même pour vérifier avant de relancer.',
           },
           {
             q: 'Les agents IA autonomes sont-ils vraiment utiles en 2026 ?',
@@ -1418,7 +1418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quel stack d\'agents est le plus fiable pour le travail réel en 2026 ?',
-            a: 'Cline + Ollama est le choix par défaut pour les tâches de type codage (refontes, débogage, travail multi-fichiers). Associez-le à Qwen3-Coder 30B pour le travail quotidien ou DeepSeek Coder V3 / Llama 3.3 70B quand vous avez besoin de context 128K. Continue.dev Agent mode est l\'alternative plus légère pour les tâches à un ou deux fichiers. Les deux sont limités, bien maintenus, et exécutent à l\'intérieur de l\'éditeur avec des portes d\'approbation explicites.',
+            a: 'Cline + Ollama est le choix par défaut pour les tâches de type codage (refontes, débogage, travail multi-fichiers). Associez-le à Qwen3-Coder 30B pour le travail quotidien ou DeepSeek-V3 / Llama 3.3 70B quand vous avez besoin de context 128K. Continue.dev Agent mode est l\'alternative plus légère pour les tâches à un ou deux fichiers. Les deux sont limités, bien maintenus, et exécutent à l\'intérieur de l\'éditeur avec des portes d\'approbation explicites.',
           },
           {
             q: 'Combien de supervision les agents ont-ils vraiment besoin en 2026 ?',
@@ -1490,7 +1490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 4 27B',
       'GLM-4.7 32B',
       'Llama 3.3 70B',
-      'DeepSeek Coder V3',
+      'DeepSeek-V3',
     ],
     current_hardware_mentioned: [
       'Apple M5 Max 64 GB',
@@ -1794,7 +1794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
         {
           q: 'Cline が「hit repeated tool call failures, try guiding it with a new prompt」と表示するのはどういう意味ですか？',
-          a: 'これは、本記事で計測している「循環的なツール呼び出し」パターンに対する Cline 自身の安全機構です。エージェントがツールを呼び出し、使えない結果を得て、同じ（または同等の）呼び出しを一定回数繰り返したため、Cline が黙ってループし続ける代わりに停止し、人間の入力を求めた状態です。バグではなく、承認ゲートが設計どおりに機能している証拠です。対処法は、Cline に対してより狭い範囲の次の指示を与えること（元の広いタスクを繰り返すのではなく、対象のファイルや関数名を具体的に指定する）、またはローカルモデルのコンテキストウィンドウが残っているか確認することです（32K コンテキストのモデルはファイル全体をストリーミングするとタスク途中で容量不足になることがあります — マルチファイル作業には DeepSeek Coder V3 のような 128K コンテキストのモデルに切り替えてください）。同じファイルで繰り返し発生する場合、モデルが存在しないパスやシンボルを幻覚している可能性があるため、再プロンプトする前に自分でファイルを開いて確認してください。',
+          a: 'これは、本記事で計測している「循環的なツール呼び出し」パターンに対する Cline 自身の安全機構です。エージェントがツールを呼び出し、使えない結果を得て、同じ（または同等の）呼び出しを一定回数繰り返したため、Cline が黙ってループし続ける代わりに停止し、人間の入力を求めた状態です。バグではなく、承認ゲートが設計どおりに機能している証拠です。対処法は、Cline に対してより狭い範囲の次の指示を与えること（元の広いタスクを繰り返すのではなく、対象のファイルや関数名を具体的に指定する）、またはローカルモデルのコンテキストウィンドウが残っているか確認することです（32K コンテキストのモデルはファイル全体をストリーミングするとタスク途中で容量不足になることがあります — マルチファイル作業には DeepSeek-V3 のような 128K コンテキストのモデルに切り替えてください）。同じファイルで繰り返し発生する場合、モデルが存在しないパスやシンボルを幻覚している可能性があるため、再プロンプトする前に自分でファイルを開いて確認してください。',
         },
         {
           q: 'ローカル AI エージェントと「クラウド API」ベースのエージェント（OpenAI Assistants API など）の主な違いは何ですか？',
@@ -1931,7 +1931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 4 27B',
       'GLM-4.7 32B',
       'Llama 3.3 70B',
-      'DeepSeek Coder V3',
+      'DeepSeek-V3',
     ],
     current_hardware_mentioned: [
       'Apple M5 Max 64 GB',
@@ -2114,13 +2114,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Wo es glänzt:** Multi-Datei-Umstrukturierungen (umbenennen ein Service über 12 Dateien in einer Aufgabe), explorative Bug-Debugging („finde, warum dieser Test flaky ist" — Cline liest angrenzende Test-Dateien, verfolgt Abhängigkeiten, schlägt eine Hypothese vor, bearbeitet, führt den Test durch), und scoped Research, das ein Markdown-Deliverable in dem Projekt produziert.',
           '**Wo es stolpert:** nicht-Code-Aufgaben, die externe HTTP erfordern (kein natives Browser). E-Mail-Draft-Triage funktioniert nur, wenn du einen MCP-Server oder Shell-Tools verdrahtest — und an diesem Punkt konfigurierst du drei Dinge, um das zu tun, was ein kleineres, scoped-Tool direkt tun würde.',
           '**Überwachungskosten:** ~5–12 Approvals pro Aufgabe. Die meisten sind Lese-Tools (billig, schnelles Akzeptieren). Die teuren sind write_to_file und execute_command — stelle diese auf manuelles Approval-Erfordernis und du wirst den seltenen schlechten Call vor dem Landen fangen.',
-          '**Token-Kosten:** hoch. Vollständige Datei-Inhalte streamen in das Gespräch, während der Agent sie liest. Eine 12-Datei-Umstrukturierung auf Qwen3-Coder 30B bei 32K context brennt das Fenster schnell durch — wechsle zu einem 128K-Context-Modell (DeepSeek Coder V3, Llama 3.3 70B) für nicht-triviale Arbeit. (DeepSeek hat inzwischen DeepSeek-V4 — Flash/Pro — als neuere offene Generation veröffentlicht; R1/V3 bleiben weiterhin lokal nutzbar.)',
+          '**Token-Kosten:** hoch. Vollständige Datei-Inhalte streamen in das Gespräch, während der Agent sie liest. Eine 12-Datei-Umstrukturierung auf Qwen3-Coder 30B bei 32K context brennt das Fenster schnell durch — wechsle zu einem 128K-Context-Modell (DeepSeek-V3, Llama 3.3 70B) für nicht-triviale Arbeit. (DeepSeek hat inzwischen DeepSeek-V4 — Flash/Pro — als neuere offene Generation veröffentlicht; R1/V3 bleiben weiterhin lokal nutzbar.)',
           'Für tiefere Cline-Konfiguration einschließlich auto-approve Allow-Lists, siehe [Continue.dev vs Cline vs Aider: Bester lokaler Coding-Agent in 2026](/de/power-local-llm/continue-dev-vs-cline-vs-aider-local).',
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Führe Cline gegen Qwen3-Coder 30B (Q4_K_M, ~17 GB VRAM) für Code-Aufgaben durch. Für Aufgaben, die mehr als 6 Dateien in einer Sitzung berühren, wechsle zu DeepSeek Coder V3 oder einem anderen 128K-Context-Modell — das 32K-Fenster auf Qwen3-Coder wird gefüllt, bevor der Agent fertig ist.',
+            text: 'Führe Cline gegen Qwen3-Coder 30B (Q4_K_M, ~17 GB VRAM) für Code-Aufgaben durch. Für Aufgaben, die mehr als 6 Dateien in einer Sitzung berühren, wechsle zu DeepSeek-V3 oder einem anderen 128K-Context-Modell — das 32K-Fenster auf Qwen3-Coder wird gefüllt, bevor der Agent fertig ist.',
           },
         ],
       },
@@ -2271,7 +2271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Die meisten Menschen sollten Cline + Ollama installieren und anhalten.** Der Entscheidungs-Baum unten deckt die Fälle ab, wo ein anderer Stack die richtige Wahl ist.',
         columns: ['Your situation', 'Pick'],
         rows: [
-          { 'Your situation': 'I want a local agent for coding tasks (refactor, debug, multi-file edits) inside VS Code', 'Pick': 'Cline + Ollama with Qwen3-Coder 30B (or DeepSeek Coder V3 for 128K context)' },
+          { 'Your situation': 'I want a local agent for coding tasks (refactor, debug, multi-file edits) inside VS Code', 'Pick': 'Cline + Ollama with Qwen3-Coder 30B (or DeepSeek-V3 for 128K context)' },
           { 'Your situation': 'I already use Continue.dev for autocomplete and want a lighter agent for small tasks', 'Pick': 'Continue.dev Agent mode in the same install' },
           { 'Your situation': 'I want an agent that can drive a browser, query a database, and read files', 'Pick': 'Cline + Ollama with MCP servers wired in (filesystem, sqlite, puppeteer)' },
           { 'Your situation': 'I want a local "code interpreter" REPL — write code, run code, iterate', 'Pick': 'OpenInterpreter, but do not leave it unattended' },
@@ -2302,7 +2302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Fehler 1: Optimierung für Autonomie.** „Wie lange kann es unbeaufsichtigt laufen" ist die falsche Metrik. „Wie wenig Approvals zum Landen der Aufgabe" ist die richtige. Ein Stack auf Autonomie-Benchmarks wählen bekommt dir AutoGPT; wählen auf Überwachungs-Kosten bekommt dir Cline.',
           '**Fehler 2: Kleine Modelle für Tool-Call-Arbeit.** Alles unter 7B (z. B. Gemma 3 2B) — und die meisten 7B–13B General-Purpose-Modelle ohne Tool-Call Fine-Tuning — strahlten malformed Tool Calls. Verwende Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, oder Llama 3.3 70B und höre auf, mit dem Harness zu kämpfen.',
-          '**Fehler 3: 32K Context für Multi-Datei-Arbeit.** Cline streamt volle Datei-Inhalte in das Gespräch; eine 8-Datei-Aufgabe kann 32K Tokens durchbrennen, bevor Überlegung. Verwende einen 128K-Context-Modell (DeepSeek Coder V3, Llama 3.3 70B) für nicht-triviale Multi-Datei-Aufgaben.',
+          '**Fehler 3: 32K Context für Multi-Datei-Arbeit.** Cline streamt volle Datei-Inhalte in das Gespräch; eine 8-Datei-Aufgabe kann 32K Tokens durchbrennen, bevor Überlegung. Verwende einen 128K-Context-Modell (DeepSeek-V3, Llama 3.3 70B) für nicht-triviale Multi-Datei-Aufgaben.',
           '**Fehler 4: Auto-approve alles.** Der „alle genehmigen"-Toggle ist die Einfahrt zu „der Agent löschte meine Dateien". Auto-approve nur Lese-Tools; erfordere manuelle Genehmigung für Schreib- und Shell-Tools.',
           '**Fehler 5: Production-Datenbank-Schreiben von einem Agent.** Laufe eine Read-Only-Rolle standardmäßig. Eine separate schreibbare Rolle lebt nur für die Dauer von Aufgaben, die sie explizit benötigen. Die Kosten eines schlechten Schreibens sind unbegrenzt.',
           '**Fehler 6: Building einer Custom LangGraph Orchestrator, bevor Cline versucht.** 90% von „Ich brauche einen Custom Agent"-Usecases sind scoped genug, dass Cline + ein paar MCP-Server die richtige Antwort ist. Baue Custom nur, wenn die Workflow-Form wirklich inkompatibel mit bestehenden Harnesses ist.',
@@ -2330,7 +2330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Was bedeutet die Cline-Meldung "hit repeated tool call failures, try guiding it with a new prompt"?',
-            a: 'Das ist Clines eigene Schutzmaßnahme gegen das zirkuläre Tool-Call-Muster, das dieser Artikel misst: Der Agent hat ein Tool aufgerufen, ein unbrauchbares Ergebnis erhalten und denselben (oder einen gleichwertigen) Aufruf so oft wiederholt, dass Cline anhält und um menschliche Eingabe bittet, statt still weiterzuloopen. Das ist kein Bug — das ist das Approval-Gate, das wie vorgesehen funktioniert. Beheben Sie es, indem Sie Cline eine engere nächste Anweisung geben (nennen Sie die genaue Datei oder Funktion, statt die ursprüngliche breite Aufgabe zu wiederholen), oder prüfen Sie, ob dem lokalen Modell noch genug Kontextfenster bleibt (ein Modell mit 32K-Kontext kann bei vollständigem Datei-Streaming mitten in der Aufgabe der Platz ausgehen — wechseln Sie für Multi-Datei-Arbeit zu einem 128K-Kontext-Modell wie DeepSeek Coder V3). Tritt es wiederholt bei derselben Datei auf, halluziniert das Modell möglicherweise einen nicht existierenden Pfad oder ein Symbol — öffnen Sie die Datei selbst, um dies vor einem erneuten Prompt zu bestätigen.',
+            a: 'Das ist Clines eigene Schutzmaßnahme gegen das zirkuläre Tool-Call-Muster, das dieser Artikel misst: Der Agent hat ein Tool aufgerufen, ein unbrauchbares Ergebnis erhalten und denselben (oder einen gleichwertigen) Aufruf so oft wiederholt, dass Cline anhält und um menschliche Eingabe bittet, statt still weiterzuloopen. Das ist kein Bug — das ist das Approval-Gate, das wie vorgesehen funktioniert. Beheben Sie es, indem Sie Cline eine engere nächste Anweisung geben (nennen Sie die genaue Datei oder Funktion, statt die ursprüngliche breite Aufgabe zu wiederholen), oder prüfen Sie, ob dem lokalen Modell noch genug Kontextfenster bleibt (ein Modell mit 32K-Kontext kann bei vollständigem Datei-Streaming mitten in der Aufgabe der Platz ausgehen — wechseln Sie für Multi-Datei-Arbeit zu einem 128K-Kontext-Modell wie DeepSeek-V3). Tritt es wiederholt bei derselben Datei auf, halluziniert das Modell möglicherweise einen nicht existierenden Pfad oder ein Symbol — öffnen Sie die Datei selbst, um dies vor einem erneuten Prompt zu bestätigen.',
           },
           {
             q: 'Sind autonome KI-Agenten 2026 wirklich nützlich?',
@@ -2342,7 +2342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Welcher Agent-Stack ist am zuverlässigsten für echte Arbeit in 2026?',
-            a: 'Cline + Ollama ist die Standardwahl für Code-formige Aufgaben (Refactors, Debugging, Multi-Datei-Arbeit). Koppeln mit Qwen3-Coder 30B für alltägliche Arbeit oder DeepSeek Coder V3/Llama 3.3 70B, wenn du 128K Context benötigst. Continue.dev Agent mode ist die leichtere Alternative für Single-Datei oder Zwei-Datei-Aufgaben. Beide sind scoped, gut gewartet, und laufen im Editor mit expliziten Approval Gates.',
+            a: 'Cline + Ollama ist die Standardwahl für Code-formige Aufgaben (Refactors, Debugging, Multi-Datei-Arbeit). Koppeln mit Qwen3-Coder 30B für alltägliche Arbeit oder DeepSeek-V3/Llama 3.3 70B, wenn du 128K Context benötigst. Continue.dev Agent mode ist die leichtere Alternative für Single-Datei oder Zwei-Datei-Aufgaben. Beide sind scoped, gut gewartet, und laufen im Editor mit expliziten Approval Gates.',
           },
           {
             q: 'Wie viel Überwachung benötigen Agenten wirklich 2026?',
@@ -2414,7 +2414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 4 27B',
       'GLM-4.7 32B',
       'Llama 3.3 70B',
-      'DeepSeek Coder V3',
+      'DeepSeek-V3',
     ],
     current_hardware_mentioned: [
       'Apple M5 Max 64 GB',
@@ -2715,7 +2715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Cline提示"hit repeated tool call failures, try guiding it with a new prompt"是什么意思？',
-            a: '这是Cline自身针对本文测量的"循环工具调用"模式的保护机制：代理调用了一个工具，得到无法使用的结果，并重复相同（或等效）调用足够多次，导致Cline停止并请求人工输入，而不是静默循环。这不是bug——而是审批机制按设计运行。解决方法：给Cline一个更精确的下一步指令（明确指定文件或函数名，而不是重复原来宽泛的任务），或检查本地模型剩余的上下文窗口是否足够（32K上下文模型在流式传输完整文件时可能中途耗尽空间——多文件任务请切换到128K上下文模型，如DeepSeek Coder V3）。如果在同一文件上反复出现，模型可能在幻觉一个不存在的路径或符号——重新提示前请自己打开文件确认。',
+            a: '这是Cline自身针对本文测量的"循环工具调用"模式的保护机制：代理调用了一个工具，得到无法使用的结果，并重复相同（或等效）调用足够多次，导致Cline停止并请求人工输入，而不是静默循环。这不是bug——而是审批机制按设计运行。解决方法：给Cline一个更精确的下一步指令（明确指定文件或函数名，而不是重复原来宽泛的任务），或检查本地模型剩余的上下文窗口是否足够（32K上下文模型在流式传输完整文件时可能中途耗尽空间——多文件任务请切换到128K上下文模型，如DeepSeek-V3）。如果在同一文件上反复出现，模型可能在幻觉一个不存在的路径或符号——重新提示前请自己打开文件确认。',
           },
           {
             q: '本地AI代理和"云API"代理（如OpenAI Assistants API）的主要区别是什么？',
@@ -2865,7 +2865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 4 27B',
       'GLM-4.7 32B',
       'Llama 3.3 70B',
-      'DeepSeek Coder V3',
+      'DeepSeek-V3',
     ],
     current_hardware_mentioned: [
       'Apple M5 Max 64 GB',
@@ -3048,13 +3048,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Onde ele brilha:** refatorações multiarquivo (renomear um serviço em 12 arquivos em uma tarefa), depuração exploratória de bugs ("descubra por que este teste está instável" — o Cline lê arquivos de teste adjacentes, rastreia dependências, propõe uma hipótese, edita, roda o teste) e pesquisa delimitada que produz um entregável em markdown dentro do projeto.',
           '**Onde ele tropeça:** tarefas não relacionadas a código que exigem HTTP externo (sem navegador nativo). A triagem de rascunho de e-mail só funciona se você conectar um servidor MCP ou ferramentas de shell — e nesse ponto você está configurando três coisas para fazer o que uma ferramenta menor e delimitada faria diretamente.',
           '**Custo de supervisão:** ~5–12 aprovações por tarefa. A maioria são ferramentas de leitura (baratas, aceitação rápida). As caras são write_to_file e execute_command — configure essas para exigir aprovação manual e você vai pegar a rara chamada ruim antes que ela aconteça.',
-          '**Custo de tokens:** alto. O conteúdo completo dos arquivos é transmitido para a conversa à medida que o agente os lê. Uma refatoração de 12 arquivos no Qwen3-Coder 30B a 32K de contexto consome a janela rápido — mude para um modelo com contexto de 128K (DeepSeek Coder V3, Llama 3.3 70B) para trabalho não trivial. (Desde então, a DeepSeek lançou o DeepSeek-V4 — Flash/Pro — como nova geração de pesos abertos; R1/V3 continuam válidos para uso local.)',
+          '**Custo de tokens:** alto. O conteúdo completo dos arquivos é transmitido para a conversa à medida que o agente os lê. Uma refatoração de 12 arquivos no Qwen3-Coder 30B a 32K de contexto consome a janela rápido — mude para um modelo com contexto de 128K (DeepSeek-V3, Llama 3.3 70B) para trabalho não trivial. (Desde então, a DeepSeek lançou o DeepSeek-V4 — Flash/Pro — como nova geração de pesos abertos; R1/V3 continuam válidos para uso local.)',
           'Para uma configuração mais profunda do Cline, incluindo allow-lists de aprovação automática, veja [Continue.dev vs Cline vs Aider: melhor agente de codificação local em 2026](/pt/power-local-llm/continue-dev-vs-cline-vs-aider-local).',
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Rode o Cline com Qwen3-Coder 30B (Q4_K_M, ~17 GB de VRAM) para tarefas de codificação. Para tarefas que tocam mais de 6 arquivos em uma sessão, mude para o DeepSeek Coder V3 ou outro modelo com contexto de 128K — a janela de 32K do Qwen3-Coder vai encher antes de o agente terminar.',
+            text: 'Rode o Cline com Qwen3-Coder 30B (Q4_K_M, ~17 GB de VRAM) para tarefas de codificação. Para tarefas que tocam mais de 6 arquivos em uma sessão, mude para o DeepSeek-V3 ou outro modelo com contexto de 128K — a janela de 32K do Qwen3-Coder vai encher antes de o agente terminar.',
           },
         ],
       },
@@ -3205,7 +3205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A maioria das pessoas deve instalar o Cline + Ollama e parar.** A árvore de decisão abaixo cobre os casos em que outro stack é a escolha certa.',
         columns: ['Sua situação', 'Escolha'],
         rows: [
-          { 'Sua situação': 'Quero um agente local para tarefas de codificação (refatoração, depuração, edições multiarquivo) dentro do VS Code', 'Escolha': 'Cline + Ollama com Qwen3-Coder 30B (ou DeepSeek Coder V3 para contexto de 128K)' },
+          { 'Sua situação': 'Quero um agente local para tarefas de codificação (refatoração, depuração, edições multiarquivo) dentro do VS Code', 'Escolha': 'Cline + Ollama com Qwen3-Coder 30B (ou DeepSeek-V3 para contexto de 128K)' },
           { 'Sua situação': 'Já uso o Continue.dev para autocompletar e quero um agente mais leve para tarefas pequenas', 'Escolha': 'Modo Agent do Continue.dev na mesma instalação' },
           { 'Sua situação': 'Quero um agente que consiga controlar um navegador, consultar um banco de dados e ler arquivos', 'Escolha': 'Cline + Ollama com servidores MCP conectados (sistema de arquivos, sqlite, puppeteer)' },
           { 'Sua situação': 'Quero um REPL local de "code interpreter" — escrever código, rodar código, iterar', 'Escolha': 'OpenInterpreter, mas não o deixe sem supervisão' },
@@ -3236,7 +3236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Erro 1: otimizar para a autonomia.** "Por quanto tempo ele consegue rodar sem supervisão" é a métrica errada. "Com quão poucas aprovações conclui a tarefa" é a certa. Escolher um stack por benchmarks de autonomia te dá o AutoGPT; escolher por custo de supervisão te dá o Cline.',
           '**Erro 2: modelos pequenos para trabalho de tool-calling.** Qualquer coisa abaixo de 7B (ex.: Gemma 3 2B) — e a maioria dos modelos de propósito geral de 7B–13B sem fine-tuning de tool-calling — emite chamadas de ferramentas malformadas. Use Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B ou Llama 3.3 70B e pare de brigar com o harness.',
-          '**Erro 3: contexto de 32K para trabalho multiarquivo.** O Cline transmite o conteúdo completo dos arquivos para a conversa; uma tarefa de 8 arquivos pode estourar 32K tokens antes do raciocínio. Use um modelo com contexto de 128K (DeepSeek Coder V3, Llama 3.3 70B) para tarefas multiarquivo não triviais.',
+          '**Erro 3: contexto de 32K para trabalho multiarquivo.** O Cline transmite o conteúdo completo dos arquivos para a conversa; uma tarefa de 8 arquivos pode estourar 32K tokens antes do raciocínio. Use um modelo com contexto de 128K (DeepSeek-V3, Llama 3.3 70B) para tarefas multiarquivo não triviais.',
           '**Erro 4: aprovar tudo automaticamente.** O botão "aprovar tudo" é a rampa de entrada para "o agente apagou meus arquivos". Aprove automaticamente apenas as ferramentas de leitura; exija aprovação manual para escritas e shell.',
           '**Erro 5: escritas em banco de dados de produção a partir de um agente.** Rode um papel somente leitura por padrão. Um papel gravável separado vive apenas pela duração das tarefas que explicitamente precisam dele. O custo de uma escrita ruim é ilimitado.',
           '**Erro 6: construir um orquestrador LangGraph personalizado antes de experimentar o Cline.** 90% dos casos de uso de "preciso de um agente personalizado" são delimitados o suficiente para que o Cline + alguns servidores MCP seja a resposta certa. Construa algo personalizado apenas quando o formato do fluxo de trabalho for genuinamente incompatível com os harnesses existentes.',
@@ -3264,7 +3264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'O que significa quando o Cline diz "hit repeated tool call failures, try guiding it with a new prompt"?',
-            a: 'É a proteção própria do Cline contra o padrão de chamadas de ferramenta em loop que este artigo mede: o agente chamou uma ferramenta, recebeu um resultado que não conseguiu usar, e repetiu a mesma chamada (ou uma equivalente) vezes suficientes para o Cline parar e pedir intervenção humana em vez de continuar em loop silenciosamente. Não é um bug — é o approval gate funcionando como projetado. Resolva dando ao Cline uma instrução mais específica (nomeie o arquivo ou a função exata em vez de repetir a tarefa original ampla), ou verifique se o modelo local ainda tem contexto suficiente (um modelo de 32K de contexto pode ficar sem espaço no meio da tarefa ao transmitir arquivos inteiros — mude para um modelo de 128K, como o DeepSeek Coder V3, para trabalho com múltiplos arquivos). Se isso se repetir sempre no mesmo arquivo, o modelo pode estar alucinando um caminho ou símbolo que não existe — abra o arquivo você mesmo para confirmar antes de pedir novamente.',
+            a: 'É a proteção própria do Cline contra o padrão de chamadas de ferramenta em loop que este artigo mede: o agente chamou uma ferramenta, recebeu um resultado que não conseguiu usar, e repetiu a mesma chamada (ou uma equivalente) vezes suficientes para o Cline parar e pedir intervenção humana em vez de continuar em loop silenciosamente. Não é um bug — é o approval gate funcionando como projetado. Resolva dando ao Cline uma instrução mais específica (nomeie o arquivo ou a função exata em vez de repetir a tarefa original ampla), ou verifique se o modelo local ainda tem contexto suficiente (um modelo de 32K de contexto pode ficar sem espaço no meio da tarefa ao transmitir arquivos inteiros — mude para um modelo de 128K, como o DeepSeek-V3, para trabalho com múltiplos arquivos). Se isso se repetir sempre no mesmo arquivo, o modelo pode estar alucinando um caminho ou símbolo que não existe — abra o arquivo você mesmo para confirmar antes de pedir novamente.',
           },
           {
             q: 'Os agentes de IA autônomos são realmente úteis em 2026?',
@@ -3276,7 +3276,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual stack de agentes é o mais confiável para trabalho real em 2026?',
-            a: 'Cline + Ollama é a escolha padrão para tarefas no formato de codificação (refatorações, depuração, trabalho multiarquivo). Combine-o com Qwen3-Coder 30B para trabalho do dia a dia ou DeepSeek Coder V3 / Llama 3.3 70B quando você precisar de contexto de 128K. O modo Agent do Continue.dev é a alternativa mais leve para tarefas de um ou dois arquivos. Ambos são delimitados, bem mantidos e rodam dentro do editor com portas de aprovação explícitas.',
+            a: 'Cline + Ollama é a escolha padrão para tarefas no formato de codificação (refatorações, depuração, trabalho multiarquivo). Combine-o com Qwen3-Coder 30B para trabalho do dia a dia ou DeepSeek-V3 / Llama 3.3 70B quando você precisar de contexto de 128K. O modo Agent do Continue.dev é a alternativa mais leve para tarefas de um ou dois arquivos. Ambos são delimitados, bem mantidos e rodam dentro do editor com portas de aprovação explícitas.',
           },
           {
             q: 'Quanta supervisão os agentes realmente precisam em 2026?',
@@ -3361,7 +3361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 4 27B',
       'GLM-4.7 32B',
       'Llama 3.3 70B',
-      'DeepSeek Coder V3',
+      'DeepSeek-V3',
     ],
     current_hardware_mentioned: [
       'Apple M5 Max 64 GB',
@@ -3544,13 +3544,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**أين يتألق:** إعادة الهيكلة متعددة الملفات (إعادة تسمية خدمة في 12 ملفاً في مهمة واحدة)، وتصحيح الأخطاء الاستكشافي ("اعرف لماذا هذا الاختبار غير مستقر" — يقرأ Cline الملفات المجاورة ويتتبع التبعيات ويقترح فرضية ويُعدّل ويُشغّل الاختبار)، والبحث المحدود الذي ينتج تسليمة markdown داخل المشروع.',
           '**أين يتعثر:** المهام غير البرمجية التي تتطلب HTTP خارجي (لا متصفح أصلي). فرز مسودات البريد يعمل فقط إن وصّلت خادم MCP أو أدوات صدفة، وعندها أنت تُعدّ ثلاثة أشياء لتفعل ما تفعله مباشرةً أداة أصغر وأكثر تحديداً.',
           '**تكلفة الإشراف:** ~5–12 موافقة لكل مهمة. معظمها أدوات قراءة (رخيصة، قبول سريع). الغالية هي write_to_file وexecute_command — اضبطها لتستلزم موافقة يدوية وستلتقط الاستدعاء الخاطئ النادر قبل حدوثه.',
-          '**تكلفة الرموز:** مرتفعة. يُنقل محتوى الملفات كاملاً إلى المحادثة كلما قرأها الوكيل. إعادة هيكلة 12 ملفاً بـQwen3-Coder 30B بسياق 32K تستنزف النافذة سريعاً — انتقل لنموذج بسياق 128K (DeepSeek Coder V3 أو Llama 3.3 70B) للعمل غير البسيط. (أصدرت DeepSeek منذ ذلك الحين DeepSeek-V4 — Flash/Pro — كجيل جديد بأوزان مفتوحة؛ يظل R1/V3 صالحًا للتشغيل محليًا.)',
+          '**تكلفة الرموز:** مرتفعة. يُنقل محتوى الملفات كاملاً إلى المحادثة كلما قرأها الوكيل. إعادة هيكلة 12 ملفاً بـQwen3-Coder 30B بسياق 32K تستنزف النافذة سريعاً — انتقل لنموذج بسياق 128K (DeepSeek-V3 أو Llama 3.3 70B) للعمل غير البسيط. (أصدرت DeepSeek منذ ذلك الحين DeepSeek-V4 — Flash/Pro — كجيل جديد بأوزان مفتوحة؛ يظل R1/V3 صالحًا للتشغيل محليًا.)',
           'للإعداد المعمّق لـCline بما في ذلك قوائم الموافقة التلقائية، راجع [Continue.dev مقابل Cline مقابل Aider: أفضل وكيل برمجة محلي في 2026](/ar/power-local-llm/continue-dev-vs-cline-vs-aider-local).',
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'شغّل Cline مع Qwen3-Coder 30B (Q4_K_M، ~17 GB VRAM) لمهام البرمجة. للمهام التي تمس أكثر من 6 ملفات في جلسة، انتقل لـDeepSeek Coder V3 أو نموذج آخر بسياق 128K — نافذة 32K لـQwen3-Coder ستمتلئ قبل أن ينتهي الوكيل.',
+            text: 'شغّل Cline مع Qwen3-Coder 30B (Q4_K_M، ~17 GB VRAM) لمهام البرمجة. للمهام التي تمس أكثر من 6 ملفات في جلسة، انتقل لـDeepSeek-V3 أو نموذج آخر بسياق 128K — نافذة 32K لـQwen3-Coder ستمتلئ قبل أن ينتهي الوكيل.',
           },
         ],
       },
@@ -3701,7 +3701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**معظم الناس ينبغي أن يثبّتوا Cline + Ollama ويتوقفوا.** شجرة القرار أدناه تغطي الحالات التي يكون فيها إطار آخر هو الاختيار الصحيح.',
         columns: ['وضعك', 'الاختيار'],
         rows: [
-          { 'وضعك': 'أريد وكيلاً محلياً لمهام البرمجة (إعادة هيكلة، تصحيح أخطاء، تعديلات متعددة الملفات) في VS Code', 'الاختيار': 'Cline + Ollama مع Qwen3-Coder 30B (أو DeepSeek Coder V3 لسياق 128K)' },
+          { 'وضعك': 'أريد وكيلاً محلياً لمهام البرمجة (إعادة هيكلة، تصحيح أخطاء، تعديلات متعددة الملفات) في VS Code', 'الاختيار': 'Cline + Ollama مع Qwen3-Coder 30B (أو DeepSeek-V3 لسياق 128K)' },
           { 'وضعك': 'أستخدم Continue.dev للإكمال التلقائي وأريد وكيلاً أخف للمهام الصغيرة', 'الاختيار': 'وضع Agent في Continue.dev في نفس التثبيت' },
           { 'وضعك': 'أريد وكيلاً يستطيع التحكم في متصفح والاستعلام من قاعدة بيانات وقراءة ملفات', 'الاختيار': 'Cline + Ollama مع خوادم MCP متصلة (نظام ملفات، sqlite، puppeteer)' },
           { 'وضعك': 'أريد REPL محلياً لـ"مترجم الكود" — كتابة كود وتشغيله والتكرار', 'الاختيار': 'OpenInterpreter، لكن لا تتركه دون إشراف' },
@@ -3732,7 +3732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**الخطأ الأول: تحسين الاستقلالية.** "كم يعمل دون إشراف؟" هو المقياس الخاطئ. "بكم موافقة يُكمل المهمة؟" هو الصحيح. اختيار إطار بناءً على معايير الاستقلالية يُعطيك AutoGPT؛ الاختيار بناءً على تكلفة الإشراف يُعطيك Cline.',
           '**الخطأ الثاني: نماذج صغيرة لعمل استدعاء الأدوات.** أي شيء دون 7B (مثل Gemma 3 2B) — ومعظم نماذج الأغراض العامة من 7B–13B بلا ضبط دقيق لاستدعاء الأدوات — تُصدر استدعاءات مشوّهة. استخدم Qwen3-Coder 30B أو GLM-4.7 32B أو Gemma 4 27B أو Llama 3.3 70B وأوقف نزالك مع الإطار.',
-          '**الخطأ الثالث: سياق 32K للعمل متعدد الملفات.** Cline ينقل محتوى الملفات كاملاً للمحادثة؛ مهمة 8 ملفات قد تتجاوز 32K رمز قبل التفكير. استخدم نموذجاً بسياق 128K (DeepSeek Coder V3 أو Llama 3.3 70B) للمهام متعددة الملفات غير البسيطة.',
+          '**الخطأ الثالث: سياق 32K للعمل متعدد الملفات.** Cline ينقل محتوى الملفات كاملاً للمحادثة؛ مهمة 8 ملفات قد تتجاوز 32K رمز قبل التفكير. استخدم نموذجاً بسياق 128K (DeepSeek-V3 أو Llama 3.3 70B) للمهام متعددة الملفات غير البسيطة.',
           '**الخطأ الرابع: الموافقة التلقائية على كل شيء.** زر "الموافقة على الكل" هو المنحدر الذي يقود إلى "الوكيل حذف ملفاتي". وافق تلقائياً على أدوات القراءة فحسب؛ استلزم موافقة يدوية للكتابة والصدفة.',
           '**الخطأ الخامس: الكتابة في قواعد بيانات الإنتاج من وكيل.** شغّل دوراً للقراءة فقط افتراضياً. دور كتابة منفصل موجود فقط لمدة المهام التي تستلزمه صراحةً. تكلفة كتابة خاطئة غير محدودة.',
           '**الخطأ السادس: بناء منسّق LangGraph مخصّص قبل تجربة Cline.** 90% من حالات استخدام "أحتاج وكيلاً مخصّصاً" محدودة بما يكفي لأن Cline + بضعة خوادم MCP هو الجواب الصحيح. ابنِ شيئاً مخصّصاً فقط حين يكون شكل سير العمل غير متوافق حقاً مع الأطر الموجودة.',
@@ -3760,7 +3760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'ماذا تعني رسالة Cline: "hit repeated tool call failures, try guiding it with a new prompt"؟',
-            a: 'هذه آلية حماية خاصة بـ Cline ضد نمط استدعاءات الأدوات الدائرية الذي يقيسه هذا المقال: استدعى الوكيل أداةً، وحصل على نتيجة لم يستطع استخدامها، وكرر نفس الاستدعاء (أو ما يعادله) عدداً كافياً من المرات حتى توقف Cline وطلب تدخلاً بشرياً بدلاً من الاستمرار في الحلقة بصمت. هذا ليس خطأً برمجياً — بل بوابة الموافقة تعمل كما هو مصمم لها. أصلح المشكلة بإعطاء Cline تعليمة أضيق للخطوة التالية (حدد اسم الملف أو الدالة بالضبط بدلاً من تكرار المهمة الأصلية الواسعة)، أو تحقق مما إذا كان النموذج المحلي لديه نافذة سياق كافية متبقية (نموذج بسياق 32K قد ينفد مساحته في منتصف المهمة عند بث ملفات كاملة — انتقل إلى نموذج بسياق 128K مثل DeepSeek Coder V3 للعمل متعدد الملفات). إذا تكرر الأمر دائماً على نفس الملف، فقد يكون النموذج يهلوس مساراً أو رمزاً غير موجود — افتح الملف بنفسك للتأكد قبل إعادة المطالبة.',
+            a: 'هذه آلية حماية خاصة بـ Cline ضد نمط استدعاءات الأدوات الدائرية الذي يقيسه هذا المقال: استدعى الوكيل أداةً، وحصل على نتيجة لم يستطع استخدامها، وكرر نفس الاستدعاء (أو ما يعادله) عدداً كافياً من المرات حتى توقف Cline وطلب تدخلاً بشرياً بدلاً من الاستمرار في الحلقة بصمت. هذا ليس خطأً برمجياً — بل بوابة الموافقة تعمل كما هو مصمم لها. أصلح المشكلة بإعطاء Cline تعليمة أضيق للخطوة التالية (حدد اسم الملف أو الدالة بالضبط بدلاً من تكرار المهمة الأصلية الواسعة)، أو تحقق مما إذا كان النموذج المحلي لديه نافذة سياق كافية متبقية (نموذج بسياق 32K قد ينفد مساحته في منتصف المهمة عند بث ملفات كاملة — انتقل إلى نموذج بسياق 128K مثل DeepSeek-V3 للعمل متعدد الملفات). إذا تكرر الأمر دائماً على نفس الملف، فقد يكون النموذج يهلوس مساراً أو رمزاً غير موجود — افتح الملف بنفسك للتأكد قبل إعادة المطالبة.',
           },
           {
             q: 'هل وكلاء الذكاء الاصطناعي المستقلون مفيدون فعلاً في 2026؟',
@@ -3772,7 +3772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'أي إطار وكيل هو الأكثر موثوقية للعمل الحقيقي في 2026؟',
-            a: 'Cline + Ollama هو الاختيار الافتراضي لمهام ذات طابع برمجي (إعادة هيكلة، وتصحيح أخطاء، وعمل متعدد الملفات). اجمعه مع Qwen3-Coder 30B للعمل اليومي أو DeepSeek Coder V3/Llama 3.3 70B حين تحتاج سياق 128K. وضع Agent في Continue.dev هو البديل الأخف للمهام ذات الملف أو الملفين. كلاهما محدود النطاق وجيد الصيانة ويعمل داخل المحرر ببوابات موافقة صريحة.',
+            a: 'Cline + Ollama هو الاختيار الافتراضي لمهام ذات طابع برمجي (إعادة هيكلة، وتصحيح أخطاء، وعمل متعدد الملفات). اجمعه مع Qwen3-Coder 30B للعمل اليومي أو DeepSeek-V3/Llama 3.3 70B حين تحتاج سياق 128K. وضع Agent في Continue.dev هو البديل الأخف للمهام ذات الملف أو الملفين. كلاهما محدود النطاق وجيد الصيانة ويعمل داخل المحرر ببوابات موافقة صريحة.',
           },
           {
             q: 'كم قدر الإشراف الذي تحتاجه الوكلاء فعلاً في 2026؟',
@@ -3857,7 +3857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Gemma 4 27B',
       'GLM-4.7 32B',
       'Llama 3.3 70B',
-      'DeepSeek Coder V3',
+      'DeepSeek-V3',
     ],
     current_hardware_mentioned: [
       'Apple M5 Max 64 GB',
@@ -4040,13 +4040,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**뛰어난 곳:** 다중 파일 리팩터링(단일 작업에서 12개 파일의 서비스 이름 변경), 탐색적 버그 디버깅("이 테스트가 불안정한 이유 찾기": Cline이 인접한 테스트 파일을 읽고, 의존성을 추적하고, 가설을 제안하고, 편집하고, 테스트를 실행함), 프로젝트 내에서 markdown 결과물을 생성하는 범위 제한적 리서치.',
           '**어려움을 겪는 곳:** 외부 HTTP가 필요한 비코딩 작업(네이티브 브라우저 없음). 이메일 초안 트리아지는 MCP 서버나 셸 도구를 연결해야만 작동하며, 그 시점에는 더 작고 범위가 제한된 도구가 직접 할 수 있는 일을 위해 세 가지를 설정하고 있는 것입니다.',
           '**감독 비용:** 작업당 약 5–12번 승인. 대부분은 읽기 도구(저렴하고 빠른 수락)입니다. 비용이 드는 것은 write_to_file과 execute_command입니다. 수동 승인이 필요하도록 설정하면 드문 잘못된 호출이 실행되기 전에 잡을 수 있습니다.',
-          '**토큰 비용:** 높음. 에이전트가 파일을 읽는 동안 전체 파일 내용이 대화로 스트리밍됩니다. 32K context의 Qwen3-Coder 30B로 12개 파일 리팩터링은 윈도우를 빠르게 소진합니다. 사소하지 않은 작업에는 128K context 모델(DeepSeek Coder V3, Llama 3.3 70B)로 전환하십시오. (DeepSeek는 이후 오픈 웨이트 신세대 모델인 DeepSeek-V4—Flash/Pro—를 출시했습니다. R1/V3는 계속 로컬에서 사용할 수 있습니다.)',
+          '**토큰 비용:** 높음. 에이전트가 파일을 읽는 동안 전체 파일 내용이 대화로 스트리밍됩니다. 32K context의 Qwen3-Coder 30B로 12개 파일 리팩터링은 윈도우를 빠르게 소진합니다. 사소하지 않은 작업에는 128K context 모델(DeepSeek-V3, Llama 3.3 70B)로 전환하십시오. (DeepSeek는 이후 오픈 웨이트 신세대 모델인 DeepSeek-V4—Flash/Pro—를 출시했습니다. R1/V3는 계속 로컬에서 사용할 수 있습니다.)',
           '자동 승인 목록을 포함한 더 자세한 Cline 설정은 [Continue.dev vs Cline vs Aider: 2026년 최고의 로컬 코딩 에이전트](/ko/power-local-llm/continue-dev-vs-cline-vs-aider-local)를 참조하십시오.',
         ],
         callouts: [
           {
             type: 'tip',
-            text: '코딩 작업에는 Qwen3-Coder 30B (Q4_K_M, ~17 GB VRAM)로 Cline을 실행하십시오. 한 세션에서 6개 이상의 파일을 건드리는 작업에는 DeepSeek Coder V3 또는 다른 128K context 모델로 전환하십시오. Qwen3-Coder의 32K 윈도우는 에이전트가 완료하기 전에 가득 찹니다.',
+            text: '코딩 작업에는 Qwen3-Coder 30B (Q4_K_M, ~17 GB VRAM)로 Cline을 실행하십시오. 한 세션에서 6개 이상의 파일을 건드리는 작업에는 DeepSeek-V3 또는 다른 128K context 모델로 전환하십시오. Qwen3-Coder의 32K 윈도우는 에이전트가 완료하기 전에 가득 찹니다.',
           },
         ],
       },
@@ -4197,7 +4197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**대부분의 사람들은 Cline + Ollama를 설치하고 더 이상 읽지 말아야 합니다.** 아래 결정 트리는 다른 스택이 올바른 선택인 경우를 다룹니다.',
         columns: ['상황', '선택'],
         rows: [
-          { '상황': 'VS Code에서 코딩 유형 작업(리팩터링, 디버깅, 다중 파일 편집)을 위한 로컬 에이전트가 필요함', '선택': 'Qwen3-Coder 30B(또는 128K context에 DeepSeek Coder V3)와 함께 Cline + Ollama' },
+          { '상황': 'VS Code에서 코딩 유형 작업(리팩터링, 디버깅, 다중 파일 편집)을 위한 로컬 에이전트가 필요함', '선택': 'Qwen3-Coder 30B(또는 128K context에 DeepSeek-V3)와 함께 Cline + Ollama' },
           { '상황': '자동 완성에 이미 Continue.dev를 사용하고 있고 소규모 작업을 위한 더 가벼운 에이전트를 원함', '선택': '동일한 설치에서 Continue.dev Agent 모드' },
           { '상황': '브라우저를 제어하고, 데이터베이스를 쿼리하고, 파일을 읽을 수 있는 에이전트가 필요함', '선택': 'MCP 서버(파일 시스템, sqlite, puppeteer)가 연결된 Cline + Ollama' },
           { '상황': '"코드 인터프리터" 로컬 REPL이 필요함: 코드 작성, 코드 실행, 반복', '선택': 'OpenInterpreter, 단 감독 없이 방치하지 않기' },
@@ -4228,7 +4228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**실수 1: 자율성 최적화.** "감독 없이 얼마나 오래 실행할 수 있나?"는 잘못된 지표입니다. "작업을 완수하기 위한 승인 횟수?"가 올바릅니다. 자율성 벤치마크로 스택을 선택하면 AutoGPT가 됩니다. 감독 비용으로 선택하면 Cline이 됩니다.',
           '**실수 2: tool-calling 작업에 소형 모델 사용.** 7B 이하(예: Gemma 3 2B) 및 tool-calling fine-tuning 없는 대부분의 7B–13B 범용 모델은 잘못 형성된 tool 호출을 실행합니다. Qwen3-Coder 30B, GLM-4.7 32B, Gemma 4 27B, Llama 3.3 70B를 사용하고 하네스와 싸우는 것을 멈추십시오.',
-          '**실수 3: 다중 파일 작업에 32K context 사용.** Cline이 전체 파일 내용을 대화로 스트리밍합니다. 8개 파일 작업이 추론 전에 32K 토큰을 소진할 수 있습니다. 사소하지 않은 다중 파일 작업에는 128K context 모델(DeepSeek Coder V3, Llama 3.3 70B)을 사용하십시오.',
+          '**실수 3: 다중 파일 작업에 32K context 사용.** Cline이 전체 파일 내용을 대화로 스트리밍합니다. 8개 파일 작업이 추론 전에 32K 토큰을 소진할 수 있습니다. 사소하지 않은 다중 파일 작업에는 128K context 모델(DeepSeek-V3, Llama 3.3 70B)을 사용하십시오.',
           '**실수 4: 모든 것을 자동으로 승인.** "모두 승인" 스위치는 "에이전트가 내 파일을 삭제했다"로 이어지는 진입로입니다. 읽기 도구만 자동 승인하고, 쓰기와 셸에는 수동 승인을 요구하십시오.',
           '**실수 5: 에이전트에서 프로덕션 데이터베이스 쓰기.** 기본적으로 읽기 전용 역할을 실행하십시오. 별도의 쓰기 역할은 명시적으로 필요한 작업 기간 동안만 존재합니다. 잘못된 쓰기의 비용은 무제한입니다.',
           '**실수 6: Cline을 먼저 시도하기 전에 맞춤형 LangGraph 오케스트레이터 구축.** "맞춤형 에이전트가 필요하다"는 사용 사례의 90%는 Cline + 몇 가지 MCP 서버가 올바른 답변일 만큼 충분히 범위가 제한됩니다. 워크플로 형태가 기존 하네스와 진정으로 호환되지 않을 때만 맞춤형을 구축하십시오.',
@@ -4256,7 +4256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Cline이 "hit repeated tool call failures, try guiding it with a new prompt"라고 표시하면 무슨 뜻입니까?',
-            a: '이 문서가 측정하는 순환 도구 호출 패턴에 대한 Cline 자체의 안전장치입니다. 에이전트가 도구를 호출했지만 사용할 수 없는 결과를 받았고, 동일한(또는 동등한) 호출을 충분히 여러 번 반복하여 Cline이 조용히 계속 반복하는 대신 멈추고 사람의 입력을 요청한 상태입니다. 버그가 아니라 승인 게이트가 설계대로 작동하는 것입니다. 해결하려면 Cline에게 더 좁은 범위의 다음 지시를 내리십시오(원래의 광범위한 작업을 반복하는 대신 정확한 파일이나 함수 이름을 지정하십시오). 또는 로컬 모델에 남은 컨텍스트 윈도우가 충분한지 확인하십시오(32K 컨텍스트 모델은 전체 파일을 스트리밍할 때 작업 도중 공간이 부족해질 수 있습니다 — 다중 파일 작업에는 DeepSeek Coder V3와 같은 128K 컨텍스트 모델로 전환하십시오). 동일한 파일에서 반복적으로 발생하면 모델이 존재하지 않는 경로나 심볼을 환각하고 있을 수 있습니다 — 다시 프롬프트하기 전에 직접 파일을 열어 확인하십시오.',
+            a: '이 문서가 측정하는 순환 도구 호출 패턴에 대한 Cline 자체의 안전장치입니다. 에이전트가 도구를 호출했지만 사용할 수 없는 결과를 받았고, 동일한(또는 동등한) 호출을 충분히 여러 번 반복하여 Cline이 조용히 계속 반복하는 대신 멈추고 사람의 입력을 요청한 상태입니다. 버그가 아니라 승인 게이트가 설계대로 작동하는 것입니다. 해결하려면 Cline에게 더 좁은 범위의 다음 지시를 내리십시오(원래의 광범위한 작업을 반복하는 대신 정확한 파일이나 함수 이름을 지정하십시오). 또는 로컬 모델에 남은 컨텍스트 윈도우가 충분한지 확인하십시오(32K 컨텍스트 모델은 전체 파일을 스트리밍할 때 작업 도중 공간이 부족해질 수 있습니다 — 다중 파일 작업에는 DeepSeek-V3와 같은 128K 컨텍스트 모델로 전환하십시오). 동일한 파일에서 반복적으로 발생하면 모델이 존재하지 않는 경로나 심볼을 환각하고 있을 수 있습니다 — 다시 프롬프트하기 전에 직접 파일을 열어 확인하십시오.',
           },
           {
             q: '2026년에 자율 AI 에이전트가 실제로 유용합니까?',
@@ -4268,7 +4268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '2026년 실제 작업을 위해 가장 신뢰할 수 있는 에이전트 스택은 무엇입니까?',
-            a: 'Cline + Ollama는 코딩 유형 작업(리팩터링, 디버깅, 다중 파일 작업)의 기본 선택입니다. 일상 작업에는 Qwen3-Coder 30B, 128K context가 필요할 때는 DeepSeek Coder V3 / Llama 3.3 70B와 결합하십시오. Continue.dev Agent 모드는 1–2개 파일 작업을 위한 더 가벼운 대안입니다. 두 스택 모두 범위가 제한되고, 잘 유지 관리되며, 명시적인 승인 게이트와 함께 에디터 내에서 실행됩니다.',
+            a: 'Cline + Ollama는 코딩 유형 작업(리팩터링, 디버깅, 다중 파일 작업)의 기본 선택입니다. 일상 작업에는 Qwen3-Coder 30B, 128K context가 필요할 때는 DeepSeek-V3 / Llama 3.3 70B와 결합하십시오. Continue.dev Agent 모드는 1–2개 파일 작업을 위한 더 가벼운 대안입니다. 두 스택 모두 범위가 제한되고, 잘 유지 관리되며, 명시적인 승인 게이트와 함께 에디터 내에서 실행됩니다.',
           },
           {
             q: '2026년 에이전트에는 실제로 얼마나 많은 감독이 필요합니까?',
