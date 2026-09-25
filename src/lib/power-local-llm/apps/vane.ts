@@ -33,7 +33,9 @@ export const app: ToolRecord = {
     ar: 'محرك إجابات ذكاء اصطناعي مستضاف ذاتيًا يجمع بين البحث المحلي ونماذج اللغة المحلية أو السحابية لتقديم إجابات موثقة بمصادرها',
     ko: '로컬 검색과 로컬 또는 클라우드 LLM을 결합해 출처가 명시된 답변을 제공하는 셀프호스팅 AI 답변 엔진',
   },
-  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { localLlm: true, dockerDeploy: true, apiServer: true, citations: true, webSearch: true },
-  lastVerifiedDate: '2026-09-14',
+  // Comparison attributes: each value verified against the project's official README/architecture docs on 2026-09-25; a missing key = not stated there, never false.
+  // visualBuilder false — no visual/drag-and-drop builder is described anywhere in the README or architecture docs.
+  // agents true — the architecture docs describe a built-in "Agents and Orchestration" layer (query classification, parallel research/widgets, cited final answer) plus an iterative Deep Research pipeline: github.com/ItzCrazyKns/Vane/blob/master/docs/architecture/README.md
+  compare: { visualBuilder: false, localLlm: true, agents: true, dockerDeploy: true, apiServer: true, citations: true, webSearch: true },
+  lastVerifiedDate: '2026-09-25',
 }

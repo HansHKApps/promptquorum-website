@@ -134,6 +134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'RAG: a Vector Store RAG template splits ingestion and query into two flows — one loads and chunks a file, embeds it, and indexes it; the other embeds a user query and retrieves the closest matches',
           'Vector stores: dedicated components for Astra DB (DataStax/IBM\'s own product) plus other common vector databases, so RAG pipelines are not locked to one backend',
+          'Local LLMs: a dedicated [Ollama bundle](https://docs.langflow.org/bundles-ollama) ships both a chat-model component and an embeddings component, so a flow can run entirely against a locally-hosted model instead of a cloud API',
           'Agents: any component on the canvas can be exposed as a tool an agent calls, and Langflow supports multi-agent orchestration with conversation memory across turns',
           'Deployment: a finished flow becomes a callable API, an exportable JSON file, or an MCP server other AI clients can connect to',
         ],
@@ -386,6 +387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'RAG: Eine Vector-Store-RAG-Vorlage teilt Ingestion und Abfrage in zwei Abläufe auf — einer lädt eine Datei, zerlegt sie in Chunks, erzeugt Embeddings und indexiert sie; der andere embeddet eine Nutzeranfrage und ruft die nächstliegenden Treffer ab',
           'Vektordatenbanken: eigene Komponenten für Astra DB (DataStax/IBMs eigenes Produkt) sowie weitere gängige Vektordatenbanken, sodass RAG-Pipelines nicht an ein Backend gebunden sind',
+          'Lokale LLMs: ein eigenes [Ollama-Bundle](https://docs.langflow.org/bundles-ollama) enthält sowohl eine Chat-Modell-Komponente als auch eine Embedding-Komponente, sodass ein Ablauf vollständig gegen ein lokal gehostetes Modell statt einer Cloud-API laufen kann',
           'Agenten: Jede Komponente auf der Oberfläche kann als Tool freigegeben werden, das ein Agent aufruft; Langflow unterstützt Multi-Agenten-Orchestrierung mit Konversationsspeicher über mehrere Runden',
           'Bereitstellung: Ein fertiger Ablauf wird zu einer aufrufbaren API, einer exportierbaren JSON-Datei oder einem MCP-Server, mit dem sich andere KI-Clients verbinden können',
         ],
@@ -638,6 +640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'RAG : un modèle Vector Store RAG sépare l\'ingestion et la requête en deux flux — l\'un charge et découpe un fichier, l\'embedde et l\'indexe ; l\'autre embedde une requête utilisateur et récupère les correspondances les plus proches',
           'Bases vectorielles : composants dédiés pour Astra DB (le produit maison de DataStax/IBM) ainsi que pour d\'autres bases vectorielles courantes, pour ne pas verrouiller les pipelines RAG sur un seul backend',
+          'LLM locaux : un [bundle Ollama](https://docs.langflow.org/bundles-ollama) dédié fournit à la fois un composant de modèle de chat et un composant d\'embeddings, permettant à un flux de fonctionner entièrement avec un modèle hébergé localement plutôt qu\'une API cloud',
           'Agents : tout composant de l\'interface peut être exposé comme outil qu\'un agent appelle, avec orchestration multi-agents et mémoire de conversation conservée entre les échanges',
           'Déploiement : un flux terminé devient une API appelable, un fichier JSON exportable, ou un serveur MCP auquel d\'autres clients IA peuvent se connecter',
         ],
@@ -888,6 +891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'RAG：Vector Store RAGテンプレートは取り込みとクエリを2つのフローに分割する。一方はファイルを読み込みチャンク分割・埋め込み・インデックス化を行い、もう一方はユーザークエリを埋め込み最も近い一致を取得する',
           'ベクトルデータベース：DataStax/IBM自社製品のAstra DB専用コンポーネントに加え、他の一般的なベクトルデータベースにも対応し、RAGパイプラインが単一のバックエンドに縛られない',
+          'ローカルLLM：専用の[Ollamaバンドル](https://docs.langflow.org/bundles-ollama)がチャットモデルコンポーネントと埋め込みコンポーネントの両方を提供し、フロー全体をクラウドAPIではなくローカルホストのモデルに対して実行できる',
           'エージェント：キャンバス上のどのコンポーネントもエージェントが呼び出せるツールとして公開でき、マルチエージェントオーケストレーションと複数ターンにわたる会話メモリに対応',
           'デプロイ：完成したフローは呼び出し可能なAPI、エクスポート可能なJSONファイル、または他のAIクライアントが接続できるMCPサーバーになる',
         ],
@@ -1138,6 +1142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'RAG：Vector Store RAG模板将数据摄取和查询拆分为两条流程——一条负责加载并分块文件、生成嵌入并建立索引；另一条负责将用户查询嵌入并检索最相近的匹配结果',
           '向量数据库：为Astra DB（DataStax/IBM自家产品）提供专用组件，同时也支持其他常见向量数据库，使RAG流水线不会被锁定在单一后端',
+          '本地LLM：专用的[Ollama组件包](https://docs.langflow.org/bundles-ollama)同时提供聊天模型组件和嵌入组件，使流程可以完全对接本地托管的模型，而非云端API',
           '智能体：画布上的任何组件都可以作为工具暴露给智能体调用，Langflow支持多智能体编排，并在多轮对话中保留会话记忆',
           '部署：完成的流程可变为可调用的API、可导出的JSON文件，或供其他AI客户端连接的MCP服务器',
         ],
@@ -1388,6 +1393,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'RAG: una plantilla Vector Store RAG divide la ingesta y la consulta en dos flujos — uno carga y fragmenta un archivo, lo convierte en embeddings y lo indexa; el otro convierte en embedding la consulta del usuario y recupera las coincidencias más cercanas',
           'Bases de datos vectoriales: componentes dedicados para Astra DB (producto propio de DataStax/IBM) además de otras bases de datos vectoriales comunes, para que los pipelines RAG no queden atados a un solo backend',
+          'LLM locales: un [paquete de Ollama](https://docs.langflow.org/bundles-ollama) dedicado incluye tanto un componente de modelo de chat como uno de embeddings, para que un flujo pueda ejecutarse por completo contra un modelo alojado localmente en lugar de una API en la nube',
           'Agentes: cualquier componente del lienzo puede exponerse como herramienta que un agente llama, y Langflow admite orquestación multiagente con memoria de conversación persistente entre turnos',
           'Despliegue: un flujo terminado se convierte en una API invocable, un archivo JSON exportable, o un servidor MCP al que pueden conectarse otros clientes de IA',
         ],
@@ -1638,6 +1644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'RAG: um template Vector Store RAG divide ingestão e consulta em dois fluxos — um carrega e fragmenta um arquivo, gera embeddings e o indexa; o outro gera embedding de uma consulta do usuário e recupera as correspondências mais próximas',
           'Bancos de dados vetoriais: componentes dedicados para o Astra DB (produto próprio da DataStax/IBM) além de outros bancos de dados vetoriais comuns, para que os pipelines RAG não fiquem presos a um único backend',
+          'LLMs locais: um [pacote Ollama](https://docs.langflow.org/bundles-ollama) dedicado traz tanto um componente de modelo de chat quanto um componente de embeddings, permitindo que um fluxo rode inteiramente contra um modelo hospedado localmente em vez de uma API na nuvem',
           'Agentes: qualquer componente no canvas pode ser exposto como ferramenta chamada por um agente, e o Langflow suporta orquestração multiagente com memória de conversa mantida entre turnos',
           'Implantação: um fluxo pronto vira uma API chamável, um arquivo JSON exportável, ou um servidor MCP ao qual outros clientes de IA podem se conectar',
         ],
@@ -1888,6 +1895,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'RAG: يقسّم قالب Vector Store RAG الاستيعاب والاستعلام إلى تدفقين — أحدهما يحمّل ملفًا ويقسّمه إلى أجزاء وينشئ تضمينات ويفهرسه؛ والآخر ينشئ تضمينًا لاستعلام المستخدم ويسترجع أقرب النتائج',
           'قواعد البيانات المتجهية: مكونات مخصصة لـ Astra DB (المنتج الخاص بـ DataStax/IBM) إلى جانب قواعد بيانات متجهية شائعة أخرى، بحيث لا تُقيَّد خطوط RAG بمزود واحد',
+          'نماذج اللغة المحلية: توفر [حزمة Ollama](https://docs.langflow.org/bundles-ollama) المخصصة مكون نموذج محادثة ومكون تضمينات معًا، ما يتيح تشغيل التدفق بالكامل مقابل نموذج مستضاف محليًا بدلًا من واجهة برمجة سحابية',
           'الوكلاء: يمكن كشف أي مكون على اللوحة كأداة يستدعيها وكيل، وتدعم Langflow تنسيق متعدد الوكلاء مع ذاكرة محادثة تُحفظ عبر الجولات',
           'النشر: يتحول التدفق المكتمل إلى API قابل للاستدعاء، أو ملف JSON قابل للتصدير، أو خادم MCP يمكن لعملاء ذكاء اصطناعي آخرين الاتصال به',
         ],
@@ -2138,6 +2146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'RAG: Vector Store RAG 템플릿은 수집과 쿼리를 두 개의 플로우로 분리한다. 하나는 파일을 로드해 청크로 나누고 임베딩해 인덱싱하며, 다른 하나는 사용자 쿼리를 임베딩해 가장 근접한 결과를 검색한다',
           '벡터 데이터베이스: DataStax/IBM 자체 제품인 Astra DB 전용 컴포넌트와 함께 다른 일반적인 벡터 데이터베이스도 지원하여 RAG 파이프라인이 특정 백엔드에 종속되지 않는다',
+          '로컬 LLM: 전용 [Ollama 번들](https://docs.langflow.org/bundles-ollama)이 채팅 모델 컴포넌트와 임베딩 컴포넌트를 함께 제공하여, 플로우 전체를 클라우드 API 대신 로컬 호스팅 모델에 대해 실행할 수 있다',
           '에이전트: 캔버스의 어떤 컴포넌트든 에이전트가 호출할 도구로 노출할 수 있으며, Langflow는 여러 턴에 걸쳐 유지되는 대화 메모리와 함께 멀티 에이전트 오케스트레이션을 지원한다',
           '배포: 완성된 플로우는 호출 가능한 API, 내보낼 수 있는 JSON 파일, 또는 다른 AI 클라이언트가 연결할 수 있는 MCP 서버가 된다',
         ],

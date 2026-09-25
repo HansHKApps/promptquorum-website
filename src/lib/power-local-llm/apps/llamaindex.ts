@@ -34,7 +34,9 @@ export const app: ToolRecord = {
     ko: 'RAG 프레임워크 / Python 라이브러리 — 맞춤형 개발의 기반',
   },
   reviewSlug: 'llamaindex-rag-framework-review', // dedicated PromptQuorum review — pinned to #1 in the article index
-  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { localLlm: true, agents: true, multiVector: true },
-  lastVerifiedDate: null, // TODO: not derivable from source article
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-25; a missing key = not stated there, never false.
+  // visualBuilder is false for the OSS framework — the drag-and-drop "Agent Builder" belongs to LlamaCloud, a separate hosted product, not llama_index itself.
+  // dockerDeploy/apiServer confirmed via the Full-Stack Web Application guide (apps "packaged into a Docker container", served via a Flask/FastAPI backend): https://developers.llamaindex.ai/python/framework/understanding/putting_it_all_together/apps/
+  compare: { visualBuilder: false, localLlm: true, agents: true, multiVector: true, dockerDeploy: true, apiServer: true },
+  lastVerifiedDate: '2026-09-25',
 }

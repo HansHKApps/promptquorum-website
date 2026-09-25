@@ -38,8 +38,11 @@ export const app: ToolRecord = {
     ar: 'مساعد بحث وRAG مؤسسي ذاتي الاستضافة يتصل بأي مزود نماذج، بما في ذلك النماذج المحلية',
     ko: '로컬을 포함한 모든 모델 제공업체에 연결되는 자체 호스팅 엔터프라이즈 검색 및 RAG 어시스턴트',
   },
-  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { localLlm: true, agents: true, dockerDeploy: true, apiServer: true, webSearch: true, privateDocs: true },
-  lastVerifiedDate: null, // TODO: not yet founder-verified
+  pqReview: { date: '2026-09-25', version: 'v4.8.1', versionSourceUrl: 'https://github.com/onyx-dot-app/onyx/releases' },
+  // Comparison attributes: each value verified against the project's official README/docs on 2026-09-25; a missing key = not stated there, never false.
+  // visualBuilder false — Onyx's own docs state it is explicitly "not a no-code agent builder"; agents/Actions are configured via instructions + OpenAPI specs, not drag-and-drop.
+  // multiVector false — Vespa is a fixed, required part of the architecture; a GitHub issue requesting alternative vector DB support was closed "not planned" (github.com/onyx-dot-app/onyx/issues/1165).
+  compare: { visualBuilder: false, localLlm: true, agents: true, multiVector: false, dockerDeploy: true, apiServer: true, webSearch: true, privateDocs: true },
+  lastVerifiedDate: '2026-09-25',
   reviewSlug: 'onyx-review', // dedicated PromptQuorum review — pinned to #1 in the article index
 }

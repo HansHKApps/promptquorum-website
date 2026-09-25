@@ -67,6 +67,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Combines a self-hosted [SearxNG](https://docs.searxng.org) meta-search backend with local models via [Ollama](https://ollama.com), or cloud providers — OpenAI, Anthropic Claude, Google Gemini, and Groq',
           'Recommended install: one Docker command bundling Vane and SearxNG together; a slim image connects to an existing SearxNG instance instead',
           'Ships three search modes (Speed, Balanced, Quality), source picking (web, discussions, academic papers), widgets, image/video search, file uploads, domain-restricted search, and a developer API — per Vane\'s own [README](https://github.com/ItzCrazyKns/Vane)',
+          'Built-in agent orchestration already ships — query classification, parallel research and widget execution, and an iterative "Reason-Search-Scrape-Extract" Deep Research pipeline — per Vane\'s [architecture docs](https://github.com/ItzCrazyKns/Vane/blob/master/docs/architecture/README.md); user-defined custom agents remain a separate, not-yet-shipped README item (see note below)',
+          'No visual, drag-and-drop workflow builder — Vane is a search/answering app configured through settings, not a builder',
           'Free with no paid tier; roughly 36,700 GitHub stars and over 4,000 forks as of this review',
         ],
         callouts: [
@@ -294,6 +296,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kombiniert ein selbst gehostetes [SearxNG](https://docs.searxng.org)-Meta-Suchbackend mit lokalen Modellen über [Ollama](https://ollama.com) oder Cloud-Anbietern — OpenAI, Anthropic Claude, Google Gemini und Groq',
           'Empfohlene Installation: ein Docker-Befehl, der Vane und SearxNG zusammen bündelt; ein schlankes Image verbindet sich stattdessen mit einer bestehenden SearxNG-Instanz',
           'Bietet drei Suchmodi (Speed, Balanced, Quality), Quellenauswahl (Web, Diskussionen, wissenschaftliche Arbeiten), Widgets, Bild-/Videosuche, Datei-Uploads, domänenbeschränkte Suche und eine Entwickler-API — laut Vanes eigenem [README](https://github.com/ItzCrazyKns/Vane)',
+          'Eine eingebaute Agenten-Orchestrierung ist bereits vorhanden — Query-Klassifizierung, parallele Recherche- und Widget-Ausführung sowie eine iterative "Reason-Search-Scrape-Extract"-Deep-Research-Pipeline — laut Vanes [Architektur-Dokumentation](https://github.com/ItzCrazyKns/Vane/blob/master/docs/architecture/README.md); benutzerdefinierte, individuelle Agenten sind ein separater, noch nicht ausgelieferter README-Punkt (siehe Hinweis unten)',
+          'Kein visueller Drag-and-drop-Workflow-Builder — Vane ist eine über Einstellungen konfigurierte Such-/Antwort-App, kein Builder',
           'Kostenlos ohne kostenpflichtige Stufe; rund 36.700 GitHub-Sterne und über 4.000 Forks zum Zeitpunkt dieser Review',
         ],
         callouts: [
@@ -521,6 +525,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Associe un backend de méta-recherche [SearxNG](https://docs.searxng.org) auto-hébergé à des modèles locaux via [Ollama](https://ollama.com), ou à des fournisseurs cloud — OpenAI, Anthropic Claude, Google Gemini et Groq',
           'Installation recommandée : une commande Docker regroupant Vane et SearxNG ; une image allégée se connecte plutôt à une instance SearxNG existante',
           'Propose trois modes de recherche (Speed, Balanced, Quality), le choix de sources (web, discussions, articles académiques), des widgets, la recherche d\'images/vidéos, l\'upload de fichiers, la recherche restreinte à un domaine et une API développeur — selon le [README](https://github.com/ItzCrazyKns/Vane) de Vane',
+          'Une orchestration d\'agents intégrée existe déjà — classification des requêtes, exécution parallèle de recherches et de widgets, et un pipeline de recherche approfondie itératif « Reason-Search-Scrape-Extract » — selon la [documentation d\'architecture](https://github.com/ItzCrazyKns/Vane/blob/master/docs/architecture/README.md) de Vane ; les agents personnalisés définis par l\'utilisateur restent un point distinct du README pas encore livré (voir la note ci-dessous)',
+          'Aucun constructeur visuel de workflow par glisser-déposer — Vane est une application de recherche/réponse configurée via des paramètres, pas un constructeur',
           'Gratuit sans offre payante ; environ 36 700 étoiles GitHub et plus de 4 000 forks au moment de cet avis',
         ],
         callouts: [
@@ -748,6 +754,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'セルフホスト型の[SearxNG](https://docs.searxng.org)メタ検索バックエンドを、[Ollama](https://ollama.com)経由のローカルモデルやクラウドプロバイダー(OpenAI、Anthropic Claude、Google Gemini、Groq)と組み合わせる',
           '推奨インストール:VaneとSearxNGを一体化した単一のDockerコマンド。スリム版イメージは既存のSearxNGインスタンスに接続',
           'Vane自身の[README](https://github.com/ItzCrazyKns/Vane)によれば、3つの検索モード(Speed、Balanced、Quality)、ソース選択(ウェブ、ディスカッション、学術論文)、ウィジェット、画像/動画検索、ファイルアップロード、ドメイン限定検索、開発者向けAPIを提供',
+          '組み込みのエージェント・オーケストレーションはすでに実装済み——クエリ分類、並列でのリサーチとウィジェット実行、反復型の「Reason-Search-Scrape-Extract」ディープリサーチパイプライン——Vaneの[アーキテクチャドキュメント](https://github.com/ItzCrazyKns/Vane/blob/master/docs/architecture/README.md)より。ユーザー定義のカスタムエージェントは、README上まだ未実装の別項目として残っている(下記の注を参照)',
+          'ビジュアルなドラッグ&ドロップ式ワークフロービルダーはない——Vaneは設定で構成する検索・回答アプリであり、ビルダーではない',
           '無料で有料プランなし。本レビュー時点で約36,700個のGitHubスターと4,000を超えるフォーク',
         ],
         callouts: [
@@ -975,6 +983,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '将自托管的[SearxNG](https://docs.searxng.org)元搜索后端与通过[Ollama](https://ollama.com)运行的本地模型,或云端服务商(OpenAI、Anthropic Claude、Google Gemini、Groq)结合起来',
           '推荐安装方式:一条Docker命令将Vane与SearxNG打包在一起;精简镜像则连接到现有的SearxNG实例',
           '根据Vane自身[README](https://github.com/ItzCrazyKns/Vane),提供三种搜索模式(Speed、Balanced、Quality)、来源选择(网络、讨论区、学术论文)、小组件、图片/视频搜索、文件上传、限定域名搜索以及开发者API',
+          '内置智能体编排已经上线——查询分类、并行的研究与小组件执行,以及迭代式的"Reason-Search-Scrape-Extract"深度研究管线——参见Vane的[架构文档](https://github.com/ItzCrazyKns/Vane/blob/master/docs/architecture/README.md);用户自定义智能体仍是README中尚未上线的独立事项(见下方说明)',
+          '没有可视化拖放式工作流构建器——Vane是通过设置项配置的搜索/问答应用,而非构建工具',
           '免费且无付费套餐;截至本评测,GitHub星标数约36,700个,fork数超过4,000个',
         ],
         callouts: [
@@ -1202,6 +1212,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Combina un backend de metabúsqueda [SearxNG](https://docs.searxng.org) autoalojado con modelos locales mediante [Ollama](https://ollama.com), o con proveedores en la nube — OpenAI, Anthropic Claude, Google Gemini y Groq',
           'Instalación recomendada: un comando de Docker que empaqueta Vane y SearxNG juntos; una imagen reducida se conecta en cambio a una instancia de SearxNG ya existente',
           'Según el propio [README](https://github.com/ItzCrazyKns/Vane) de Vane, incluye tres modos de búsqueda (Speed, Balanced, Quality), selección de fuentes (web, foros de discusión, artículos académicos), widgets, búsqueda de imágenes y video, carga de archivos, búsqueda restringida a un dominio y una API para desarrolladores',
+          'Ya incluye orquestación de agentes integrada — clasificación de consultas, ejecución paralela de investigación y widgets, y un pipeline iterativo de investigación profunda "Reason-Search-Scrape-Extract" — según la [documentación de arquitectura](https://github.com/ItzCrazyKns/Vane/blob/master/docs/architecture/README.md) de Vane; los agentes personalizados definidos por el usuario siguen siendo un punto aparte del README aún no disponible (ver nota abajo)',
+          'Sin constructor visual de flujos de trabajo por arrastrar y soltar — Vane es una aplicación de búsqueda/respuesta configurada mediante ajustes, no un constructor',
           'Gratuito sin plan de pago; aproximadamente 36.700 estrellas en GitHub y más de 4.000 forks al momento de esta reseña',
         ],
         callouts: [
@@ -1429,6 +1441,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Combina um backend de metabusca [SearxNG](https://docs.searxng.org) autohospedado com modelos locais via [Ollama](https://ollama.com), ou provedores em nuvem — OpenAI, Anthropic Claude, Google Gemini e Groq',
           'Instalação recomendada: um comando Docker que empacota o Vane e o SearxNG juntos; uma imagem reduzida se conecta a uma instância existente do SearxNG',
           'Segundo o próprio [README](https://github.com/ItzCrazyKns/Vane) do Vane, oferece três modos de busca (Speed, Balanced, Quality), seleção de fontes (web, discussões, artigos acadêmicos), widgets, busca de imagens/vídeos, upload de arquivos, busca restrita por domínio e uma API para desenvolvedores',
+          'Já possui orquestração de agentes integrada — classificação de consultas, execução paralela de pesquisa e widgets, e um pipeline iterativo de pesquisa profunda "Reason-Search-Scrape-Extract" — segundo a [documentação de arquitetura](https://github.com/ItzCrazyKns/Vane/blob/master/docs/architecture/README.md) do Vane; agentes personalizados definidos pelo usuário permanecem um item separado do README ainda não lançado (ver nota abaixo)',
+          'Sem construtor visual de workflow por arrastar e soltar — o Vane é um app de busca/resposta configurado por ajustes, não um construtor',
           'Gratuito, sem plano pago; aproximadamente 36.700 estrelas no GitHub e mais de 4.000 forks no momento desta análise',
         ],
         callouts: [
@@ -1656,6 +1670,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يجمع بين خلفية بحث تلوي [SearxNG](https://docs.searxng.org) مستضافة ذاتيًا ونماذج محلية عبر [Ollama](https://ollama.com)، أو مزودي خدمات سحابية — OpenAI وAnthropic Claude وGoogle Gemini وGroq',
           'التثبيت الموصى به: أمر Docker واحد يجمع Vane وSearxNG معًا؛ تتصل النسخة المبسّطة بدلًا من ذلك بمثيل SearxNG موجود مسبقًا',
           'وفقًا لملف [README](https://github.com/ItzCrazyKns/Vane) الخاص بـ Vane، يوفر ثلاثة أوضاع بحث (Speed وBalanced وQuality)، واختيار مصادر (الويب، النقاشات، الأوراق الأكاديمية)، وأدوات (widgets)، وبحث بالصور/الفيديو، ورفع الملفات، وبحثًا مقيدًا بنطاق معين، وواجهة برمجية (API) للمطورين',
+          'يتوفر بالفعل تنسيق عملاء (agents) مدمج — تصنيف الاستعلامات، وتنفيذ متوازٍ للبحث والأدوات، وخط أنابيب بحث معمّق تكراري بنمط "Reason-Search-Scrape-Extract" — وفق [توثيق البنية المعمارية](https://github.com/ItzCrazyKns/Vane/blob/master/docs/architecture/README.md) الخاص بـ Vane؛ أما العملاء المخصّصون الذين يحددهم المستخدم فيبقون بندًا منفصلًا لم يُطلق بعد في README (انظر الملاحظة أدناه)',
+          'لا توجد أداة بناء مرئية بالسحب والإفلات لسير العمل — Vane تطبيق بحث/إجابة يُهيَّأ عبر الإعدادات، وليس أداة بناء',
           'مجاني دون باقة مدفوعة؛ نحو 36,700 نجمة على GitHub وأكثر من 4,000 نسخة متفرعة حتى وقت كتابة هذه المراجعة',
         ],
         callouts: [
@@ -1883,6 +1899,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '셀프호스팅 [SearxNG](https://docs.searxng.org) 메타 검색 백엔드를 [Ollama](https://ollama.com)를 통한 로컬 모델이나 클라우드 제공업체(OpenAI, Anthropic Claude, Google Gemini, Groq)와 결합',
           '권장 설치 방법: Vane과 SearxNG를 함께 묶은 단일 Docker 명령; 슬림 이미지는 대신 기존 SearxNG 인스턴스에 연결',
           'Vane 자체의 [README](https://github.com/ItzCrazyKns/Vane)에 따르면 세 가지 검색 모드(Speed, Balanced, Quality), 소스 선택(웹, 토론, 학술 논문), 위젯, 이미지/동영상 검색, 파일 업로드, 도메인 제한 검색, 개발자 API를 제공',
+          '내장 에이전트 오케스트레이션이 이미 탑재됨 — 쿼리 분류, 병렬 리서치·위젯 실행, 반복형 "Reason-Search-Scrape-Extract" 딥 리서치 파이프라인 — Vane의 [아키텍처 문서](https://github.com/ItzCrazyKns/Vane/blob/master/docs/architecture/README.md) 기준; 사용자 정의 커스텀 에이전트는 README상 아직 출시되지 않은 별도 항목으로 남아 있음(아래 참고 사항 참조)',
+          '시각적인 드래그 앤 드롭 워크플로 빌더는 없음 — Vane은 설정으로 구성하는 검색·답변 앱이며 빌더가 아님',
           '유료 플랜 없이 무료; 이 리뷰 작성 시점 기준 약 36,700개의 GitHub 스타와 4,000개 이상의 포크',
         ],
         callouts: [

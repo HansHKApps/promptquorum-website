@@ -34,7 +34,10 @@ export const app: ToolRecord = {
     ko: 'n8n, Ollama, Qdrant, PostgreSQL을 하나로 묶은 n8n 제공의 바로 실행 가능한 로컬 AI 스택 docker-compose 템플릿',
   },
   reviewSlug: 'self-hosted-ai-starter-kit-review', // dedicated PromptQuorum review — added 2026-09-19
-  // Comparison attributes: each value verified against the project's official README/site on 2026-09-20; a missing key = not stated there, never false.
-  compare: { visualBuilder: true, localLlm: true, agents: true, dockerDeploy: true, ollama: true },
-  lastVerifiedDate: '2026-09-18',
+  // No GitHub Releases are published for this repo (checked 2026-09-25) — pqReview intentionally omitted rather than inventing a version.
+  // Comparison attributes: each value verified against the project's official README/site on 2026-09-25; a missing key = not stated there, never false.
+  // multiVector false — the kit bundles Qdrant as its one fixed vector store; no alternative is documented as swappable within the template itself.
+  // apiServer confirmed via n8n's own REST API, exposed on every self-hosted n8n instance the kit bundles: https://docs.n8n.io/connect/n8n-api/
+  compare: { visualBuilder: true, localLlm: true, agents: true, multiVector: false, dockerDeploy: true, apiServer: true, ollama: true },
+  lastVerifiedDate: '2026-09-25',
 }

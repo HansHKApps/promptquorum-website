@@ -107,6 +107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'The starter kit\'s value is in what the bundled services do together, not in new functionality of its own. Here is what each part actually does, per the [official GitHub README](https://github.com/n8n-io/self-hosted-ai-starter-kit).',
         items: [
           '**Local workflow automation** — build and run automations in n8n\'s visual editor, using any of its 400+ integrations alongside dedicated AI/LangChain nodes for building agents',
+          '**Local API server** — every bundled n8n instance exposes n8n\'s own [REST API](https://docs.n8n.io/connect/n8n-api/), so workflows can be triggered or managed programmatically from other local services, not only from the n8n UI',
           '**Local LLM inference** — Ollama runs open-weight models (Llama, Qwen, Gemma, and others) locally, available to n8n workflows as a model provider with no external API key needed',
           '**Local vector storage for RAG** — Qdrant stores and retrieves embeddings so n8n workflows can build retrieval-augmented generation pipelines entirely on local infrastructure',
           '**Persistent workflow and credential storage** — PostgreSQL backs n8n\'s own database, so workflows, credentials, and execution history persist across container restarts',
@@ -387,6 +388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Der Wert des Starter Kits liegt im Zusammenspiel der gebündelten Dienste, nicht in eigener neuer Funktionalität. Hier ist, was jeder Teil laut dem [offiziellen GitHub-README](https://github.com/n8n-io/self-hosted-ai-starter-kit) tatsächlich leistet.',
         items: [
           '**Lokale Workflow-Automatisierung** — Automatisierungen im visuellen Editor von n8n bauen und ausführen, mit allen über 400 Integrationen sowie eigenen AI-/LangChain-Nodes zum Bau von Agenten',
+          '**Lokaler API-Server** — jede gebündelte n8n-Instanz stellt n8ns eigene [REST-API](https://docs.n8n.io/connect/n8n-api/) bereit, sodass Workflows von anderen lokalen Diensten aus programmatisch ausgelöst oder verwaltet werden können, nicht nur über die n8n-Oberfläche',
           '**Lokale LLM-Inferenz** — Ollama führt offene Modelle (Llama, Qwen, Gemma und andere) lokal aus, verfügbar für n8n-Workflows als Modell-Provider ohne externen API-Key',
           '**Lokale Vektorspeicherung für RAG** — Qdrant speichert und ruft Embeddings ab, sodass n8n-Workflows Retrieval-Augmented-Generation-Pipelines komplett auf lokaler Infrastruktur bauen können',
           '**Persistente Speicherung von Workflows und Zugangsdaten** — PostgreSQL ist die Datenbank hinter n8n selbst, sodass Workflows, Zugangsdaten und Ausführungsverlauf Container-Neustarts überdauern',
@@ -667,6 +669,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'La valeur du starter kit réside dans ce que les services inclus font ensemble, pas dans une nouvelle fonctionnalité propre. Voici ce que chaque composant fait réellement, selon le [README GitHub officiel](https://github.com/n8n-io/self-hosted-ai-starter-kit).',
         items: [
           '**Automatisation de workflows en local** — créer et exécuter des automatisations dans l\'éditeur visuel de n8n, en utilisant l\'une de ses plus de 400 intégrations ainsi que des nœuds IA/LangChain dédiés à la création d\'agents',
+          '**Serveur API local** — chaque instance n8n incluse expose la propre [API REST](https://docs.n8n.io/connect/n8n-api/) de n8n, permettant de déclencher ou gérer des workflows par programmation depuis d\'autres services locaux, pas seulement depuis l\'interface de n8n',
           '**Inférence LLM locale** — Ollama exécute des modèles ouverts (Llama, Qwen, Gemma et d\'autres) en local, disponibles pour les workflows n8n comme fournisseur de modèle sans clé API externe',
           '**Stockage vectoriel local pour le RAG** — Qdrant stocke et récupère des embeddings afin que les workflows n8n puissent construire des pipelines de génération augmentée par récupération entièrement sur infrastructure locale',
           '**Stockage persistant des workflows et identifiants** — PostgreSQL alimente la propre base de données de n8n, de sorte que workflows, identifiants et historique d\'exécution persistent au redémarrage des conteneurs',
@@ -947,6 +950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'El valor del starter kit está en lo que los servicios incluidos hacen juntos, no en funcionalidad nueva propia. Esto es lo que hace realmente cada parte, según el [README oficial de GitHub](https://github.com/n8n-io/self-hosted-ai-starter-kit).',
         items: [
           '**Automatización de workflows en local** — crea y ejecuta automatizaciones en el editor visual de n8n, usando cualquiera de sus más de 400 integraciones junto con nodos de IA/LangChain dedicados para construir agentes',
+          '**Servidor API local** — cada instancia de n8n incluida expone la propia [API REST](https://docs.n8n.io/connect/n8n-api/) de n8n, permitiendo activar o gestionar workflows de forma programática desde otros servicios locales, no solo desde la interfaz de n8n',
           '**Inferencia de LLM local** — Ollama ejecuta modelos abiertos (Llama, Qwen, Gemma y otros) en local, disponibles para los workflows de n8n como proveedor de modelo sin necesidad de API key externa',
           '**Almacenamiento vectorial local para RAG** — Qdrant almacena y recupera embeddings para que los workflows de n8n puedan construir pipelines de generación aumentada por recuperación totalmente en infraestructura local',
           '**Almacenamiento persistente de workflows y credenciales** — PostgreSQL respalda la propia base de datos de n8n, de modo que workflows, credenciales e historial de ejecución persisten tras reiniciar los contenedores',
@@ -1227,6 +1231,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'O valor do starter kit está no que os serviços incluídos fazem juntos, não em funcionalidade nova própria. Veja o que cada parte realmente faz, segundo o [README oficial no GitHub](https://github.com/n8n-io/self-hosted-ai-starter-kit).',
         items: [
           '**Automação de workflows local** — crie e execute automações no editor visual do n8n, usando qualquer uma das mais de 400 integrações junto com nós de IA/LangChain dedicados para construir agentes',
+          '**Servidor de API local** — cada instância n8n incluída expõe a própria [API REST](https://docs.n8n.io/connect/n8n-api/) do n8n, permitindo acionar ou gerenciar workflows de forma programática a partir de outros serviços locais, não apenas pela interface do n8n',
           '**Inferência de LLM local** — o Ollama executa modelos abertos (Llama, Qwen, Gemma e outros) localmente, disponíveis para os workflows do n8n como provedor de modelo sem necessidade de API key externa',
           '**Armazenamento vetorial local para RAG** — o Qdrant armazena e recupera embeddings para que os workflows do n8n possam construir pipelines de geração aumentada por recuperação totalmente em infraestrutura local',
           '**Armazenamento persistente de workflows e credenciais** — o PostgreSQL sustenta o próprio banco de dados do n8n, de modo que workflows, credenciais e histórico de execução persistem após reinícios dos containers',
@@ -1507,6 +1512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'スターターキットの価値は、独自の新機能ではなく、バンドルされたサービスが一緒になって何をするかにあります。[公式GitHubのREADME](https://github.com/n8n-io/self-hosted-ai-starter-kit)に基づき、各パーツが実際に行うことを見ていきます。',
         items: [
           '**ローカルワークフロー自動化** — n8nのビジュアルエディタで、400以上の連携とエージェント構築用の専用AI／LangChainノードを使って自動化を構築・実行できる',
+          '**ローカルAPIサーバー** — 同梱される各n8nインスタンスはn8n自身の[REST API](https://docs.n8n.io/connect/n8n-api/)を公開しており、n8nのUIを使わずに他のローカルサービスからワークフローをプログラムで実行・管理できる',
           '**ローカルLLM推論** — Ollamaがオープンウェイトモデル（Llama、Qwen、Gemmaなど）をローカルで実行し、外部APIキー不要でn8nワークフローのモデルプロバイダーとして利用できる',
           '**RAG向けのローカルベクトルストレージ** — Qdrantが埋め込みを保存・検索することで、n8nワークフローはローカルインフラのみで検索拡張生成パイプラインを構築できる',
           '**永続的なワークフローと認証情報のストレージ** — PostgreSQLがn8n自身のデータベースを支え、ワークフロー、認証情報、実行履歴がコンテナ再起動をまたいで保持される',
@@ -1787,6 +1793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'starter kit的价值在于打包的各项服务组合在一起能做什么，而不是它自身的新功能。以下是根据[官方GitHub README](https://github.com/n8n-io/self-hosted-ai-starter-kit)，各部分实际能做的事。',
         items: [
           '**本地工作流自动化**——在n8n的可视化编辑器中构建并运行自动化，使用其400多个集成以及用于构建智能体的专用AI／LangChain节点',
+          '**本地API服务器**——每个内置的n8n实例都暴露n8n自身的[REST API](https://docs.n8n.io/connect/n8n-api/)，可以从其他本地服务以编程方式触发或管理工作流，而不仅限于n8n界面',
           '**本地LLM推理**——Ollama在本地运行开放权重模型（Llama、Qwen、Gemma等），作为模型提供方供n8n工作流使用，无需任何外部API密钥',
           '**RAG本地向量存储**——Qdrant存储和检索嵌入向量，让n8n工作流可以完全在本地基础设施上构建检索增强生成流水线',
           '**持久化工作流与凭据存储**——PostgreSQL支撑n8n自身的数据库，使工作流、凭据和执行历史在容器重启后依然保留',
@@ -2067,6 +2074,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'تكمن قيمة الحزمة فيما تفعله الخدمات المُجمَّعة معًا، لا في وظيفة جديدة خاصة بها. فيما يلي ما يفعله كل جزء فعليًا، وفق [ملف README الرسمي على GitHub](https://github.com/n8n-io/self-hosted-ai-starter-kit).',
         items: [
           '**أتمتة سير عمل محلية** — ابنِ وشغّل أتمتة في محرر n8n المرئي، باستخدام أي من تكاملاته الـ400+ إلى جانب عُقد ذكاء اصطناعي/LangChain مخصصة لبناء الوكلاء',
+          '**خادم API محلي** — كل نسخة n8n مُجمَّعة تُتيح [واجهة REST API](https://docs.n8n.io/connect/n8n-api/) الخاصة بـn8n نفسها، ما يتيح تشغيل أو إدارة سير العمل برمجيًا من خدمات محلية أخرى، وليس فقط من واجهة n8n',
           '**استدلال نماذج لغوية محلية** — يشغّل Ollama نماذج مفتوحة الأوزان (Llama وQwen وGemma وغيرها) محليًا، متاحة لسير عمل n8n كمزوّد نماذج دون الحاجة لأي مفتاح API خارجي',
           '**تخزين متجهي محلي لـRAG** — يخزّن Qdrant ويسترجع المتجهات بحيث يمكن لسير عمل n8n بناء خطوط توليد معزَّز بالاسترجاع بالكامل على بنية تحتية محلية',
           '**تخزين دائم لسير العمل وبيانات الاعتماد** — يدعم PostgreSQL قاعدة بيانات n8n نفسها، بحيث تظل سير العمل وبيانات الاعتماد وسجل التنفيذ محفوظة عبر إعادة تشغيل الحاويات',
@@ -2346,6 +2354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Starter Kit로 무엇을 할 수 있는가?',
         content: '스타터 키트의 가치는 자체적인 새로운 기능이 아니라 번들된 서비스들이 함께 수행하는 작업에 있습니다. [공식 GitHub README](https://github.com/n8n-io/self-hosted-ai-starter-kit)에 따라 각 부분이 실제로 하는 일을 살펴보겠습니다.',
         items: [
+          '**로컬 API 서버** — 번들된 각 n8n 인스턴스는 n8n 자체의 [REST API](https://docs.n8n.io/connect/n8n-api/)를 제공하므로, n8n UI뿐 아니라 다른 로컬 서비스에서도 워크플로를 프로그래밍 방식으로 트리거하거나 관리할 수 있음',
           '**로컬 워크플로 자동화** — n8n의 비주얼 에디터에서 400개 이상의 통합과 에이전트 구축용 전용 AI/LangChain 노드를 활용해 자동화를 구축하고 실행',
           '**로컬 LLM 추론** — Ollama가 오픈 웨이트 모델(Llama, Qwen, Gemma 등)을 로컬에서 실행하며, 외부 API 키 없이 n8n 워크플로에 모델 제공자로 제공됨',
           '**RAG를 위한 로컬 벡터 저장소** — Qdrant가 임베딩을 저장하고 검색하여, n8n 워크플로가 로컬 인프라만으로 검색 증강 생성 파이프라인을 구축할 수 있게 함',
