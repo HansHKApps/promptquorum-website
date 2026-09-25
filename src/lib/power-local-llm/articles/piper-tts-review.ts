@@ -14,8 +14,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/piper-tts-review-hero-en.webp',
-    title: 'Piper TTS Review (2026): Fast, Local Neural Text-to-Speech',
-    seoTitle: 'Piper TTS Review 2026: Fast Local Neural TTS',
+    title: 'Piper TTS Review: Fast, Local Neural Text-to-Speech',
+    seoTitle: 'Piper TTS Review: Fast Local Neural TTS',
     intro:
       'Piper is a free, local neural text-to-speech engine that turns text into spoken audio entirely on your own device, originally created within the [Rhasspy](https://github.com/rhasspy) open-source voice-assistant project by Michael Hansen. In 2025, active development moved to a new repository, [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl), maintained by the [Open Home Foundation](https://www.openhomefoundation.org/) — the nonprofit behind Home Assistant — and the original [rhasspy/piper](https://github.com/rhasspy/piper) repository was archived (made read-only) on October 6, 2025. This review covers that history, real install and usage commands, its current license (which changed from MIT to GPL-3.0-or-later), and where Piper is not the right tool — including a link to PromptQuorum\'s licensing deep dive and its comparison against ElevenLabs.',
     metaDescription:
@@ -381,8 +381,8 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/piper-tts-review-hero-de.webp',
-    title: 'Piper TTS im Test (2026): Schnelle, lokale neuronale Sprachsynthese',
-    seoTitle: 'Piper TTS im Test 2026: Schnelle lokale TTS',
+    title: 'Piper TTS im Test: Schnelle, lokale neuronale Sprachsynthese',
+    seoTitle: 'Piper TTS im Test: Schnelle lokale TTS',
     intro:
       'Piper ist eine kostenlose, lokale neuronale Text-zu-Sprache-Engine, die Text vollständig auf dem eigenen Gerät in gesprochenes Audio umwandelt. Ursprünglich wurde Piper innerhalb des Open-Source-Sprachassistenten-Projekts [Rhasspy](https://github.com/rhasspy) von Michael Hansen entwickelt. 2025 zog die aktive Entwicklung in ein neues Repository um: [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl), gepflegt von der [Open Home Foundation](https://www.openhomefoundation.org/) — der gemeinnützigen Organisation hinter Home Assistant. Das ursprüngliche Repository [rhasspy/piper](https://github.com/rhasspy/piper) wurde am 6. Oktober 2025 archiviert (nur noch lesbar). Dieser Test behandelt diese Geschichte, echte Installations- und Nutzungsbefehle, die aktuelle Lizenz (die von MIT auf GPL-3.0-or-later wechselte) und die Grenzen von Piper — inklusive Verweis auf PromptQuorums Lizenz-Deep-Dive und den Vergleich mit ElevenLabs.',
     metaDescription:
@@ -748,8 +748,8 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/piper-tts-review-hero-fr.webp',
-    title: 'Piper TTS : avis (2026) — synthèse vocale neuronale locale et rapide',
-    seoTitle: 'Piper TTS : avis 2026 — TTS locale rapide',
+    title: 'Piper TTS: avis — synthèse vocale neuronale locale et rapide',
+    seoTitle: 'Piper TTS: avis — TTS locale rapide',
     intro:
       'Piper est un moteur de synthèse vocale neuronale local et gratuit, qui transforme du texte en audio parlé entièrement sur votre propre appareil, créé à l\'origine au sein du projet open source d\'assistant vocal [Rhasspy](https://github.com/rhasspy) par Michael Hansen. En 2025, le développement actif a migré vers un nouveau dépôt, [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl), maintenu par l\'[Open Home Foundation](https://www.openhomefoundation.org/) — l\'organisation à but non lucratif derrière Home Assistant — et le dépôt d\'origine [rhasspy/piper](https://github.com/rhasspy/piper) a été archivé (passé en lecture seule) le 6 octobre 2025. Cet avis couvre cette histoire, de vraies commandes d\'installation et d\'utilisation, sa licence actuelle (passée de MIT à GPL-3.0-or-later) et les cas où Piper n\'est pas le bon outil — avec un lien vers le comparatif de licences de PromptQuorum et sa comparaison face à ElevenLabs.',
     metaDescription:
@@ -1115,8 +1115,8 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/piper-tts-review-hero-es.webp',
-    title: 'Piper TTS: análisis (2026) — síntesis de voz neuronal local y rápida',
-    seoTitle: 'Piper TTS: análisis 2026 — TTS local rápido',
+    title: 'Piper TTS: análisis — síntesis de voz neuronal local y rápida',
+    seoTitle: 'Piper TTS: análisis — TTS local rápido',
     intro:
       'Piper es un motor de síntesis de voz neuronal local y gratuito que convierte texto en audio hablado íntegramente en tu propio dispositivo, creado originalmente dentro del proyecto de asistente de voz de código abierto [Rhasspy](https://github.com/rhasspy) por Michael Hansen. En 2025, el desarrollo activo se trasladó a un nuevo repositorio, [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl), mantenido por la [Open Home Foundation](https://www.openhomefoundation.org/) — la organización sin fines de lucro detrás de Home Assistant — y el repositorio original [rhasspy/piper](https://github.com/rhasspy/piper) se archivó (quedó de solo lectura) el 6 de octubre de 2025. Este análisis cubre esa historia, comandos reales de instalación y uso, su licencia actual (que cambió de MIT a GPL-3.0-or-later) y dónde Piper no es la herramienta adecuada — con un enlace a la guía de licencias de PromptQuorum y su comparativa frente a ElevenLabs.',
     metaDescription:
@@ -1482,8 +1482,8 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/piper-tts-review-hero-ja.webp',
-    title: 'Piper TTSレビュー(2026):高速なローカル・ニューラル音声合成',
-    seoTitle: 'Piper TTSレビュー2026:高速ローカルTTS',
+    title: 'Piper TTSレビュー:高速なローカル・ニューラル音声合成',
+    seoTitle: 'Piper TTSレビュー:高速ローカルTTS',
     intro:
       'Piperは、テキストを自分のデバイス上だけで音声に変換する、無料のローカル・ニューラル音声合成エンジンです。もともとはオープンソースの音声アシスタントプロジェクト[Rhasspy](https://github.com/rhasspy)の中で、Michael Hansen氏によって開発されました。2025年、開発の中心は新しいリポジトリ[OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl)に移り、Home Assistantを支える非営利団体[Open Home Foundation](https://www.openhomefoundation.org/)が保守を担うようになりました。元のリポジトリ[rhasspy/piper](https://github.com/rhasspy/piper)は2025年10月6日にアーカイブ(読み取り専用化)されています。本レビューでは、この歴史、実際のインストール・使用コマンド、現在のライセンス(MITからGPL-3.0-or-laterへの変更)、そしてPiperが向いていない用途を解説し、PromptQuorumのライセンス比較記事とElevenLabsとの比較記事へのリンクも掲載します。',
     metaDescription:
@@ -1850,8 +1850,8 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/piper-tts-review-hero-pt.webp',
-    title: 'Piper TTS: análise (2026) — síntese de voz neural local e rápida',
-    seoTitle: 'Piper TTS: análise 2026 — TTS local rápido',
+    title: 'Piper TTS: análise — síntese de voz neural local e rápida',
+    seoTitle: 'Piper TTS: análise — TTS local rápido',
     intro:
       'O Piper é um mecanismo de síntese de voz neural local e gratuito que converte texto em áudio falado inteiramente no seu próprio dispositivo, criado originalmente dentro do projeto de assistente de voz de código aberto [Rhasspy](https://github.com/rhasspy) por Michael Hansen. Em 2025, o desenvolvimento ativo migrou para um novo repositório, [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl), mantido pela [Open Home Foundation](https://www.openhomefoundation.org/) — a organização sem fins lucrativos por trás do Home Assistant — e o repositório original [rhasspy/piper](https://github.com/rhasspy/piper) foi arquivado (tornado somente leitura) em 6 de outubro de 2025. Esta análise cobre essa história, comandos reais de instalação e uso, sua licença atual (que mudou de MIT para GPL-3.0-or-later) e onde o Piper não é a ferramenta certa — com um link para o guia de licenças da PromptQuorum e sua comparação com o ElevenLabs.',
     metaDescription:
@@ -2217,8 +2217,8 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/piper-tts-review-hero-ar.webp',
-    title: 'مراجعة Piper TTS (2026): تحويل نص إلى كلام عصبي محلي وسريع',
-    seoTitle: 'مراجعة Piper TTS 2026: TTS محلي سريع',
+    title: 'مراجعة Piper TTS: تحويل نص إلى كلام عصبي محلي وسريع',
+    seoTitle: 'مراجعة Piper TTS: TTS محلي سريع',
     intro:
       'Piper هو محرك تحويل نص إلى كلام عصبي محلي ومجاني، يحوّل النص إلى صوت منطوق بالكامل على جهازك الخاص، وقد طُوِّر في الأصل ضمن مشروع المساعد الصوتي مفتوح المصدر [Rhasspy](https://github.com/rhasspy) بواسطة Michael Hansen. في عام 2025، انتقل التطوير النشط إلى مستودع جديد هو [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl)، الذي تصونه [Open Home Foundation](https://www.openhomefoundation.org/) — المؤسسة غير الربحية وراء Home Assistant — وتمت أرشفة المستودع الأصلي [rhasspy/piper](https://github.com/rhasspy/piper) (وتحويله للقراءة فقط) في 6 أكتوبر 2025. تتناول هذه المراجعة هذا التاريخ، وأوامر تثبيت واستخدام حقيقية، ورخصته الحالية (التي تغيّرت من MIT إلى GPL-3.0-or-later)، والحالات التي لا يناسبها Piper — مع رابط إلى دليل رخص PromptQuorum ومقارنته مع ElevenLabs.',
     metaDescription:
@@ -2584,8 +2584,8 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/piper-tts-review-hero-zh.webp',
-    title: 'Piper TTS评测(2026):快速的本地神经网络语音合成',
-    seoTitle: 'Piper TTS评测2026:快速本地TTS',
+    title: 'Piper TTS评测:快速的本地神经网络语音合成',
+    seoTitle: 'Piper TTS评测:快速本地TTS',
     intro:
       'Piper是一款免费的本地神经网络语音合成引擎,完全在你自己的设备上将文本转换为语音,最初由Michael Hansen在开源语音助手项目[Rhasspy](https://github.com/rhasspy)中创建。2025年,活跃开发转移到了新仓库[OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl),由Home Assistant背后的非营利组织[Open Home Foundation](https://www.openhomefoundation.org/)维护,原始仓库[rhasspy/piper](https://github.com/rhasspy/piper)已于2025年10月6日被归档(设为只读)。本评测涵盖这段历史、真实的安装与使用命令、当前许可证(已从MIT变更为GPL-3.0-or-later),以及Piper不适合的场景——并附上PromptQuorum许可证深度对比指南以及与ElevenLabs的对比链接。',
     metaDescription:
@@ -2952,8 +2952,8 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/piper-tts-review-hero-ko.webp',
-    title: 'Piper TTS 리뷰(2026): 빠르고 로컬한 신경망 음성 합성',
-    seoTitle: 'Piper TTS 리뷰 2026: 빠른 로컬 TTS',
+    title: 'Piper TTS 리뷰: 빠르고 로컬한 신경망 음성 합성',
+    seoTitle: 'Piper TTS 리뷰: 빠른 로컬 TTS',
     intro:
       'Piper는 텍스트를 오직 자신의 기기에서만 음성으로 변환하는 무료 로컬 신경망 음성 합성 엔진으로, 원래 오픈소스 음성 비서 프로젝트인 [Rhasspy](https://github.com/rhasspy) 안에서 Michael Hansen이 만들었습니다. 2025년, 실제 개발은 새로운 저장소 [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl)로 옮겨갔으며, 이는 Home Assistant를 이끄는 비영리 단체 [Open Home Foundation](https://www.openhomefoundation.org/)이 관리합니다. 원래 저장소인 [rhasspy/piper](https://github.com/rhasspy/piper)는 2025년 10월 6일에 아카이브(읽기 전용) 처리되었습니다. 이 리뷰에서는 이러한 역사, 실제 설치 및 사용 명령어, 현재 라이선스(MIT에서 GPL-3.0-or-later로 변경됨), 그리고 Piper가 적합하지 않은 경우를 다루며, PromptQuorum의 라이선스 비교 가이드와 ElevenLabs와의 비교 링크도 함께 제공합니다.',
     metaDescription:

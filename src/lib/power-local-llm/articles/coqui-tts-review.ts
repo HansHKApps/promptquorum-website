@@ -14,8 +14,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/coqui-tts-review-hero-en.webp',
-    title: 'Coqui TTS Review (2026): The Community-Maintained Voice-Cloning Toolkit',
-    seoTitle: 'Coqui TTS Review 2026: Community-Maintained TTS Toolkit',
+    title: 'Coqui TTS Review: The Community-Maintained Voice-Cloning Toolkit',
+    seoTitle: 'Coqui TTS Review: Community-Maintained TTS Toolkit',
     intro:
       'Coqui TTS is an open-source, local text-to-speech and voice-cloning toolkit descended from Mozilla\'s TTS project, originally built by the startup Coqui AI, which shut down its paid services in December 2023. The original repository, [coqui-ai/TTS](https://github.com/coqui-ai/TTS), has had no new commits since August 2024 and is not actively maintained, though it remains publicly available under its MPL-2.0 license. Development continues on a community fork, [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS), maintained by the [Idiap Research Institute](https://www.idiap.ch/) and published to PyPI as the `coqui-tts` package. This review covers that history, the toolkit\'s relationship to the [XTTS v2](https://huggingface.co/coqui/XTTS-v2) voice-cloning model, real install and usage commands, its MPL-2.0 license, and where the maintenance transition matters for anyone considering it in 2026.',
     metaDescription:
@@ -386,8 +386,8 @@ print(tts.languages)`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/coqui-tts-review-hero-de.webp',
-    title: 'Coqui TTS im Test (2026): Das von der Community gepflegte Voice-Cloning-Toolkit',
-    seoTitle: 'Coqui TTS im Test 2026: Community-TTS-Toolkit',
+    title: 'Coqui TTS im Test: Das von der Community gepflegte Voice-Cloning-Toolkit',
+    seoTitle: 'Coqui TTS im Test: Community-TTS-Toolkit',
     intro:
       'Coqui TTS ist ein Open-Source-Toolkit für lokale Sprachsynthese und Voice-Cloning, das von Mozillas TTS-Projekt abstammt und ursprünglich vom Start-up Coqui AI entwickelt wurde, das seine kostenpflichtigen Dienste im Dezember 2023 einstellte. Das ursprüngliche Repository, [coqui-ai/TTS](https://github.com/coqui-ai/TTS), hat seit August 2024 keine neuen Commits mehr erhalten und wird nicht mehr aktiv gepflegt, bleibt aber unter seiner MPL-2.0-Lizenz öffentlich verfügbar. Die Weiterentwicklung erfolgt in einem Community-Fork, [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS), gepflegt vom [Idiap Research Institute](https://www.idiap.ch/) und als `coqui-tts`-Paket auf PyPI veröffentlicht. Dieser Test behandelt diese Geschichte, das Verhältnis des Toolkits zum Voice-Cloning-Modell [XTTS v2](https://huggingface.co/coqui/XTTS-v2), echte Installations- und Nutzungsbefehle, die MPL-2.0-Lizenz und die Punkte, an denen der Pflege-Übergang 2026 wirklich relevant ist.',
     metaDescription:
@@ -758,8 +758,8 @@ print(tts.languages)`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/coqui-tts-review-hero-fr.webp',
-    title: 'Coqui TTS : avis (2026) — le kit de clonage vocal maintenu par la communauté',
-    seoTitle: 'Coqui TTS : avis 2026 — kit TTS communautaire',
+    title: 'Coqui TTS: avis — le kit de clonage vocal maintenu par la communauté',
+    seoTitle: 'Coqui TTS: avis — kit TTS communautaire',
     intro:
       'Coqui TTS est un kit open source de synthèse vocale et de clonage de voix en local, descendant du projet TTS de Mozilla, créé à l\'origine par la start-up Coqui AI, qui a fermé ses services payants en décembre 2023. Le dépôt d\'origine, [coqui-ai/TTS](https://github.com/coqui-ai/TTS), n\'a reçu aucun nouveau commit depuis août 2024 et n\'est plus activement maintenu, bien qu\'il reste disponible sous sa licence MPL-2.0. Le développement se poursuit sur un fork communautaire, [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS), maintenu par l\'[Institut de recherche Idiap](https://www.idiap.ch/) et publié sur PyPI sous le nom de package `coqui-tts`. Cet avis couvre cette histoire, la relation du kit avec le modèle de clonage vocal [XTTS v2](https://huggingface.co/coqui/XTTS-v2), des commandes d\'installation et d\'utilisation réelles, sa licence MPL-2.0, et les points où cette transition de maintenance compte vraiment en 2026.',
     metaDescription:
@@ -1130,8 +1130,8 @@ print(tts.languages)`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/coqui-tts-review-hero-es.webp',
-    title: 'Coqui TTS: análisis (2026) — el kit de clonación de voz mantenido por la comunidad',
-    seoTitle: 'Coqui TTS: análisis 2026 — kit TTS comunitario',
+    title: 'Coqui TTS: análisis — el kit de clonación de voz mantenido por la comunidad',
+    seoTitle: 'Coqui TTS: análisis — kit TTS comunitario',
     intro:
       'Coqui TTS es un kit de código abierto para síntesis de voz y clonación de voz local, descendiente del proyecto TTS de Mozilla, creado originalmente por la startup Coqui AI, que cerró sus servicios de pago en diciembre de 2023. El repositorio original, [coqui-ai/TTS](https://github.com/coqui-ai/TTS), no ha recibido nuevos commits desde agosto de 2024 y ya no se mantiene activamente, aunque sigue disponible públicamente bajo su licencia MPL-2.0. El desarrollo continúa en un fork comunitario, [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS), mantenido por el [Instituto de Investigación Idiap](https://www.idiap.ch/) y publicado en PyPI como el paquete `coqui-tts`. Este análisis cubre esa historia, la relación del kit con el modelo de clonación de voz [XTTS v2](https://huggingface.co/coqui/XTTS-v2), comandos reales de instalación y uso, su licencia MPL-2.0, y dónde importa realmente esta transición de mantenimiento en 2026.',
     metaDescription:
@@ -1502,8 +1502,8 @@ print(tts.languages)`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/coqui-tts-review-hero-ja.webp',
-    title: 'Coqui TTSレビュー(2026):コミュニティが保守する音声クローニング・ツールキット',
-    seoTitle: 'Coqui TTSレビュー2026:コミュニティ保守TTS',
+    title: 'Coqui TTSレビュー:コミュニティが保守する音声クローニング・ツールキット',
+    seoTitle: 'Coqui TTSレビュー:コミュニティ保守TTS',
     intro:
       'Coqui TTSは、MozillaのTTSプロジェクトから派生したオープンソースのローカル音声合成・音声クローニング・ツールキットです。もともとはスタートアップ企業Coqui AIが開発しましたが、同社は2023年12月に有料サービスを終了しました。元のリポジトリ[coqui-ai/TTS](https://github.com/coqui-ai/TTS)は2024年8月以降新しいコミットがなく、積極的には保守されていません(MPL-2.0ライセンスの下では引き続き公開されています)。開発は現在、コミュニティフォークの[idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)で継続されており、[Idiap研究所](https://www.idiap.ch/)が保守し、PyPIには`coqui-tts`パッケージとして公開されています。このレビューでは、この歴史、音声クローニングモデル[XTTS v2](https://huggingface.co/coqui/XTTS-v2)との関係、実際のインストール・使用コマンド、MPL-2.0ライセンス、そして2026年にこの保守移行が実際に重要になる点を扱います。',
     metaDescription:
@@ -1875,8 +1875,8 @@ print(tts.languages)`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/coqui-tts-review-hero-pt.webp',
-    title: 'Coqui TTS: análise (2026) — o kit de clonagem de voz mantido pela comunidade',
-    seoTitle: 'Coqui TTS: análise 2026 — kit TTS comunitário',
+    title: 'Coqui TTS: análise — o kit de clonagem de voz mantido pela comunidade',
+    seoTitle: 'Coqui TTS: análise — kit TTS comunitário',
     intro:
       'Coqui TTS é um kit de código aberto para síntese de voz e clonagem de voz local, descendente do projeto TTS da Mozilla, criado originalmente pela startup Coqui AI, que encerrou seus serviços pagos em dezembro de 2023. O repositório original, [coqui-ai/TTS](https://github.com/coqui-ai/TTS), não recebe novos commits desde agosto de 2024 e não é mais mantido ativamente, embora continue disponível publicamente sob sua licença MPL-2.0. O desenvolvimento continua em um fork da comunidade, [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS), mantido pelo [Instituto de Pesquisa Idiap](https://www.idiap.ch/) e publicado no PyPI como o pacote `coqui-tts`. Esta análise cobre essa história, a relação do kit com o modelo de clonagem de voz [XTTS v2](https://huggingface.co/coqui/XTTS-v2), comandos reais de instalação e uso, sua licença MPL-2.0, e onde essa transição de manutenção realmente importa em 2026.',
     metaDescription:
@@ -2247,8 +2247,8 @@ print(tts.languages)`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/coqui-tts-review-hero-ar.webp',
-    title: 'مراجعة Coqui TTS (2026): مجموعة أدوات استنساخ الصوت التي تصونها المجتمع',
-    seoTitle: 'مراجعة Coqui TTS 2026: أدوات TTS مجتمعية',
+    title: 'مراجعة Coqui TTS: مجموعة أدوات استنساخ الصوت التي تصونها المجتمع',
+    seoTitle: 'مراجعة Coqui TTS: أدوات TTS مجتمعية',
     intro:
       'Coqui TTS هي مجموعة أدوات مفتوحة المصدر لتحويل النص إلى كلام واستنساخ الصوت محليًا، منحدرة من مشروع Mozilla TTS، طوّرتها في الأصل شركة Coqui AI الناشئة التي أغلقت خدماتها المدفوعة في ديسمبر 2023. المستودع الأصلي، [coqui-ai/TTS](https://github.com/coqui-ai/TTS)، لم يتلقَّ أي التزامات (commits) جديدة منذ أغسطس 2024 ولم يعد يُصان بنشاط، رغم أنه لا يزال متاحًا للجمهور بموجب ترخيص MPL-2.0. يستمر التطوير في نسخة مجتمعية متفرعة (fork)، [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)، يصونها [معهد Idiap للأبحاث](https://www.idiap.ch/) وتُنشر على PyPI باسم حزمة `coqui-tts`. تتناول هذه المراجعة هذا التاريخ، وعلاقة مجموعة الأدوات بنموذج استنساخ الصوت [XTTS v2](https://huggingface.co/coqui/XTTS-v2)، وأوامر تثبيت واستخدام حقيقية، وترخيص MPL-2.0، والنقاط التي يهم فيها هذا الانتقال في الصيانة فعليًا في عام 2026.',
     metaDescription:
@@ -2619,8 +2619,8 @@ print(tts.languages)`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/coqui-tts-review-hero-zh.webp',
-    title: 'Coqui TTS评测(2026):由社区维护的声音克隆工具包',
-    seoTitle: 'Coqui TTS评测2026:社区维护的TTS工具包',
+    title: 'Coqui TTS评测:由社区维护的声音克隆工具包',
+    seoTitle: 'Coqui TTS评测:社区维护的TTS工具包',
     intro:
       'Coqui TTS是一个开源的本地文本转语音与声音克隆工具包,起源于Mozilla的TTS项目,最初由初创公司Coqui AI打造,该公司已于2023年12月关闭其付费服务。原始仓库[coqui-ai/TTS](https://github.com/coqui-ai/TTS)自2024年8月起没有新提交,已不再积极维护,但仍以MPL-2.0许可证公开可用。开发工作在社区分支[idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)中继续进行,由[Idiap研究所](https://www.idiap.ch/)维护,并以`coqui-tts`包名发布在PyPI上。本评测涵盖这段历史、该工具包与声音克隆模型[XTTS v2](https://huggingface.co/coqui/XTTS-v2)的关系、真实的安装与使用命令、其MPL-2.0许可证,以及这次维护权转移在2026年真正重要的地方。',
     metaDescription:
@@ -2992,8 +2992,8 @@ print(tts.languages)`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/coqui-tts-review-hero-ko.webp',
-    title: 'Coqui TTS 리뷰(2026): 커뮤니티가 관리하는 음성 복제 툴킷',
-    seoTitle: 'Coqui TTS 리뷰 2026: 커뮤니티 관리 TTS 툴킷',
+    title: 'Coqui TTS 리뷰: 커뮤니티가 관리하는 음성 복제 툴킷',
+    seoTitle: 'Coqui TTS 리뷰: 커뮤니티 관리 TTS 툴킷',
     intro:
       'Coqui TTS는 Mozilla의 TTS 프로젝트에서 파생된 오픈소스 로컬 음성 합성 및 음성 복제 툴킷으로, 원래 스타트업 Coqui AI가 개발했으며 이 회사는 2023년 12월에 유료 서비스를 종료했습니다. 원본 저장소인 [coqui-ai/TTS](https://github.com/coqui-ai/TTS)는 2024년 8월 이후 새로운 커밋이 없어 더 이상 적극적으로 관리되지 않지만, MPL-2.0 라이선스 하에 계속 공개되어 있습니다. 개발은 커뮤니티 포크인 [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)에서 계속되고 있으며, [Idiap 연구소](https://www.idiap.ch/)가 관리하고 PyPI에 `coqui-tts` 패키지로 배포되고 있습니다. 이 리뷰에서는 이러한 역사, 음성 복제 모델 [XTTS v2](https://huggingface.co/coqui/XTTS-v2)와의 관계, 실제 설치 및 사용 명령어, MPL-2.0 라이선스, 그리고 2026년에 이 관리 전환이 실제로 중요한 지점을 다룹니다.',
     metaDescription:

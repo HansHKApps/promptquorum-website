@@ -14,8 +14,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chapper-review-hero-en.webp',
-    title: 'Chapper Review (2026): AI & LM Studio Client for iPhone, iPad, and Mac',
-    seoTitle: 'Chapper Review 2026: LM Studio Client for iPhone & Mac',
+    title: 'Chapper Review: AI & LM Studio Client for iPhone, iPad, and Mac',
+    seoTitle: 'Chapper Review: LM Studio Client for iPhone & Mac',
     intro:
       'Chapper, made by [Prevolut Ltd](https://prevolut.uk/products/chapper/), is a native iPhone, iPad, and Mac app for chatting with local and self-hosted AI models. It is free to download with a 20-conversation limit, and unlocks fully with a one-time [Chapper Pro purchase of $9.99](https://apps.apple.com/us/app/chapper-ai-lm-studio-client/id6760984679) — with true on-device inference (running a model directly on the device instead of connecting to a server) sold as a separate $4.99 in-app purchase, per the current App Store listing. Chapper\'s primary design is as a polished client for [LM Studio](https://lmstudio.ai/), [Ollama](https://ollama.com/), llama.cpp server, and any OpenAI-compatible API endpoint — point it at a server running on your Mac or PC and chat from your phone — with on-device MLX and Apple Foundation Models support layered on top. This review checks that split pricing model, the app\'s small early review base (3.3 out of 5 from 8 ratings on the App Store as of this review), and how it compares to fully on-device, no-server-required apps like [PocketPal AI](/power-local-llm/pocketpal-ai-review) and [Private LLM](/power-local-llm/private-llm-review).',
     metaDescription:
@@ -462,8 +462,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chapper-review-hero-de.webp',
-    title: 'Chapper im Test (2026): KI- und LM-Studio-Client für iPhone, iPad und Mac',
-    seoTitle: 'Chapper Test 2026: LM-Studio-Client für iPhone & Mac',
+    title: 'Chapper im Test: KI- und LM-Studio-Client für iPhone, iPad und Mac',
+    seoTitle: 'Chapper Test: LM-Studio-Client für iPhone & Mac',
     intro:
       'Chapper, entwickelt von [Prevolut Ltd](https://prevolut.uk/products/chapper/), ist eine native App für iPhone, iPad und Mac zum Chatten mit lokalen und selbst gehosteten KI-Modellen. Der Download ist kostenlos mit einem Limit von 20 Unterhaltungen und wird durch den einmaligen Kauf von [Chapper Pro für 9,99 $](https://apps.apple.com/us/app/chapper-ai-lm-studio-client/id6760984679) vollständig freigeschaltet — echte On-Device-Inferenz (ein Modell direkt auf dem Gerät statt auf einem Server auszuführen) wird laut aktuellem App-Store-Eintrag als separater In-App-Kauf für 4,99 $ verkauft. App-Store-Preise können je nach Region variieren; prüfen Sie vor dem Kauf den aktuellen Preis im deutschen App Store. Chappers Kernkonzept ist ein ausgereifter Client für [LM Studio](https://lmstudio.ai/), [Ollama](https://ollama.com/), llama.cpp-Server und jeden OpenAI-kompatiblen API-Endpunkt — Sie richten ihn auf einen Server auf Ihrem Mac oder PC und chatten dann vom Smartphone aus —, ergänzt um On-Device-Unterstützung über MLX und Apple Foundation Models. Dieser Test prüft dieses gestaffelte Preismodell, die noch kleine Bewertungsbasis der App (3,3 von 5 bei 8 Bewertungen im App Store, Stand dieses Tests) und den Vergleich mit vollständig On-Device-Apps ohne Server wie [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) und [Private LLM](/de/power-local-llm/private-llm-review).',
     metaDescription:
@@ -910,8 +910,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chapper-review-hero-es.webp',
-    title: 'Chapper: Análisis (2026): Cliente de IA y LM Studio para iPhone, iPad y Mac',
-    seoTitle: 'Chapper 2026: Cliente de LM Studio para iPhone y Mac',
+    title: 'Chapper: Análisis: Cliente de IA y LM Studio para iPhone, iPad y Mac',
+    seoTitle: 'Chapper: Cliente de LM Studio para iPhone y Mac',
     intro:
       'Chapper, desarrollada por [Prevolut Ltd](https://prevolut.uk/products/chapper/), es una app nativa para iPhone, iPad y Mac para chatear con modelos de IA locales y autoalojados. Es gratuita para descargar con un límite de 20 conversaciones, y se desbloquea por completo con la compra única de [Chapper Pro por 9,99 $](https://apps.apple.com/us/app/chapper-ai-lm-studio-client/id6760984679) — la inferencia real en el dispositivo (ejecutar un modelo directamente en el dispositivo en lugar de conectarse a un servidor) se vende como una compra dentro de la app aparte por 4,99 $, según el listado actual de la App Store. Los precios de la App Store pueden variar según la región; confirme el precio actual en la App Store de su país antes de comprar. El diseño principal de Chapper es el de un cliente pulido para [LM Studio](https://lmstudio.ai/), [Ollama](https://ollama.com/), servidor llama.cpp y cualquier endpoint compatible con OpenAI — la apunta a un servidor en su Mac o PC y chatea desde el teléfono —, con soporte adicional en el dispositivo mediante MLX y Apple Foundation Models. Este análisis examina ese modelo de precios escalonado, la todavía pequeña base de reseñas de la app (3,3 de 5 con 8 valoraciones en la App Store al momento de este análisis) y su comparación con apps totalmente en el dispositivo, sin servidor, como [PocketPal AI](/es/power-local-llm/pocketpal-ai-review) y [Private LLM](/es/power-local-llm/private-llm-review).',
     metaDescription:
@@ -1358,8 +1358,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chapper-review-hero-fr.webp',
-    title: 'Avis Chapper (2026) : client IA et LM Studio pour iPhone, iPad et Mac',
-    seoTitle: 'Avis Chapper 2026 : client LM Studio pour iPhone et Mac',
+    title: 'Avis Chapper: client IA et LM Studio pour iPhone, iPad et Mac',
+    seoTitle: 'Avis Chapper: client LM Studio pour iPhone et Mac',
     intro:
       'Chapper, développée par [Prevolut Ltd](https://prevolut.uk/products/chapper/), est une application native pour iPhone, iPad et Mac permettant de discuter avec des modèles d\'IA locaux et auto-hébergés. Le téléchargement est gratuit avec une limite de 20 conversations, et l\'achat unique de [Chapper Pro à 9,99 $](https://apps.apple.com/us/app/chapper-ai-lm-studio-client/id6760984679) débloque l\'ensemble des fonctionnalités — l\'inférence réellement locale sur l\'appareil (exécuter un modèle directement sur l\'appareil plutôt que de se connecter à un serveur) est vendue en achat intégré séparé à 4,99 $, selon la fiche actuelle de l\'App Store. Les prix de l\'App Store peuvent varier selon la région ; vérifiez le prix en vigueur sur l\'App Store française avant d\'acheter. La conception première de Chapper est celle d\'un client soigné pour [LM Studio](https://lmstudio.ai/), [Ollama](https://ollama.com/), un serveur llama.cpp et tout point de terminaison compatible OpenAI — vous le connectez à un serveur sur votre Mac ou PC et discutez depuis votre téléphone —, avec en complément une prise en charge locale via MLX et Apple Foundation Models. Cet avis examine ce modèle de tarification à paliers, la base d\'avis encore réduite de l\'application (3,3 sur 5 pour 8 notes sur l\'App Store au moment de la rédaction) et sa comparaison avec des applications entièrement locales, sans serveur, comme [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) et [Private LLM](/fr/power-local-llm/private-llm-review).',
     metaDescription:
@@ -1806,8 +1806,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chapper-review-hero-ja.webp',
-    title: 'Chapperレビュー(2026年):iPhone・iPad・Mac向けAI & LM Studioクライアント',
-    seoTitle: 'Chapperレビュー2026:iPhone・Mac向けLM Studioクライアント',
+    title: 'Chapperレビュー:iPhone・iPad・Mac向けAI & LM Studioクライアント',
+    seoTitle: 'Chapperレビュー:iPhone・Mac向けLM Studioクライアント',
     intro:
       '[Prevolut Ltd](https://prevolut.uk/products/chapper/)が開発するChapperは、ローカルおよびセルフホストのAIモデルとチャットするためのiPhone・iPad・Mac向けネイティブアプリです。ダウンロードは無料で会話数20件までの制限があり、[Chapper Proの買い切り9.99ドル](https://apps.apple.com/us/app/chapper-ai-lm-studio-client/id6760984679)を購入すると完全にアンロックされます。現在のApp Store掲載情報によると、真のオンデバイス推論(サーバーに接続せずデバイス上で直接モデルを実行すること)は別売りのアプリ内課金4.99ドルとして販売されています。App Storeの価格は地域により異なる場合があるため、購入前に日本のApp Storeで現在の価格をご確認ください。Chapperの主な設計思想は、[LM Studio](https://lmstudio.ai/)、[Ollama](https://ollama.com/)、llama.cppサーバー、およびOpenAI互換エンドポイント向けの洗練されたクライアントというもので、MacやPC上のサーバーを指定してスマートフォンからチャットする形が中心です。それに加えてMLXとApple Foundation Modelsによるオンデバイスサポートが搭載されています。本レビューでは、この段階的な価格モデル、まだ少ないレビュー件数(執筆時点でApp Store評価3.3/5、8件)、そして[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)や[Private LLM](/ja/power-local-llm/private-llm-review)のような完全オンデバイスでサーバー不要のアプリとの比較を検証します。',
     metaDescription:
@@ -2254,8 +2254,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chapper-review-hero-pt.webp',
-    title: 'Chapper: Análise (2026): Cliente de IA e LM Studio para iPhone, iPad e Mac',
-    seoTitle: 'Chapper 2026: Cliente LM Studio para iPhone e Mac',
+    title: 'Chapper: Análise: Cliente de IA e LM Studio para iPhone, iPad e Mac',
+    seoTitle: 'Chapper: Cliente LM Studio para iPhone e Mac',
     intro:
       'O Chapper, desenvolvido pela [Prevolut Ltd](https://prevolut.uk/products/chapper/), é um aplicativo nativo para iPhone, iPad e Mac para conversar com modelos de IA locais e auto-hospedados. O download é gratuito com limite de 20 conversas, e é totalmente desbloqueado com a compra única do [Chapper Pro por US$ 9,99](https://apps.apple.com/us/app/chapper-ai-lm-studio-client/id6760984679) — a inferência realmente no dispositivo (executar um modelo diretamente no aparelho em vez de conectar a um servidor) é vendida como compra separada dentro do app por US$ 4,99, segundo a listagem atual da App Store. Os preços da App Store podem variar por região; confirme o preço atual na App Store brasileira antes de comprar. O design principal do Chapper é o de um cliente refinado para [LM Studio](https://lmstudio.ai/), [Ollama](https://ollama.com/), servidor llama.cpp e qualquer endpoint compatível com OpenAI — você aponta para um servidor no seu Mac ou PC e conversa pelo celular —, com suporte adicional no dispositivo via MLX e Apple Foundation Models. Esta análise examina esse modelo de preços em camadas, a ainda pequena base de avaliações do app (3,3 de 5 com 8 avaliações na App Store no momento desta análise) e sua comparação com apps totalmente locais, sem servidor, como [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) e [Private LLM](/pt/power-local-llm/private-llm-review).',
     metaDescription:
@@ -2702,8 +2702,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chapper-review-hero-ar.webp',
-    title: 'مراجعة Chapper (2026): عميل الذكاء الاصطناعي وLM Studio لأجهزة آيفون وآيباد وماك',
-    seoTitle: 'مراجعة Chapper 2026: عميل LM Studio لآيفون وماك',
+    title: 'مراجعة Chapper: عميل الذكاء الاصطناعي وLM Studio لأجهزة آيفون وآيباد وماك',
+    seoTitle: 'مراجعة Chapper: عميل LM Studio لآيفون وماك',
     intro:
       'تطبيق Chapper، من تطوير [Prevolut Ltd](https://prevolut.uk/products/chapper/)، هو تطبيق أصلي لأجهزة آيفون وآيباد وماك للمحادثة مع نماذج ذكاء اصطناعي محلية ومستضافة ذاتيًا. التنزيل مجاني مع حد أقصى 20 محادثة، ويُفتح بالكامل عبر شراء [Chapper Pro لمرة واحدة مقابل 9.99 دولارًا](https://apps.apple.com/us/app/chapper-ai-lm-studio-client/id6760984679) — أما الاستدلال الحقيقي على الجهاز (تشغيل النموذج مباشرة على الجهاز بدلاً من الاتصال بخادم) فيُباع كعملية شراء منفصلة داخل التطبيق مقابل 4.99 دولارًا، وفق قائمة App Store الحالية. قد تختلف أسعار App Store حسب المنطقة؛ تحقق من السعر الحالي في متجرك المحلي قبل الشراء. التصميم الأساسي لتطبيق Chapper هو عميل متقن لخدمات [LM Studio](https://lmstudio.ai/) و[Ollama](https://ollama.com/) وخادم llama.cpp وأي نقطة نهاية متوافقة مع OpenAI — إذ توجهه نحو خادم على جهاز Mac أو الكمبيوتر الخاص بك وتتحدث من هاتفك — مع دعم إضافي على الجهاز عبر MLX ونماذج Apple Foundation Models. تفحص هذه المراجعة نموذج التسعير المتدرج هذا، وقاعدة التقييمات الصغيرة حتى الآن للتطبيق (3.3 من 5 بناءً على 8 تقييمات على App Store وقت إعداد هذه المراجعة)، ومقارنته بتطبيقات تعمل بالكامل على الجهاز دون خادم مثل [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) و[Private LLM](/ar/power-local-llm/private-llm-review).',
     metaDescription:
@@ -3150,8 +3150,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chapper-review-hero-zh.webp',
-    title: 'Chapper评测(2026):适用于iPhone、iPad和Mac的AI与LM Studio客户端',
-    seoTitle: 'Chapper评测2026:iPhone和Mac的LM Studio客户端',
+    title: 'Chapper评测:适用于iPhone、iPad和Mac的AI与LM Studio客户端',
+    seoTitle: 'Chapper评测:iPhone和Mac的LM Studio客户端',
     intro:
       'Chapper由[Prevolut Ltd](https://prevolut.uk/products/chapper/)开发,是一款用于iPhone、iPad和Mac的原生应用,可与本地及自托管AI模型对话。下载免费,限制20次对话;一次性购买[Chapper Pro(9.99美元)](https://apps.apple.com/us/app/chapper-ai-lm-studio-client/id6760984679)即可完全解锁。根据当前App Store信息,真正的设备端推理(直接在设备上运行模型而非连接服务器)是一项单独的应用内购买项目,售价4.99美元。App Store价格可能因地区而异,购买前请在本地App Store确认当前价格。Chapper的核心设计首先是[LM Studio](https://lmstudio.ai/)、[Ollama](https://ollama.com/)、llama.cpp服务器以及任何OpenAI兼容端点的精致客户端——您将其指向Mac或PC上运行的服务器,然后在手机上进行对话——并在此基础上通过MLX和Apple Foundation Models叠加设备端支持。本评测将审视这一分层定价模式、该应用目前尚少的评价基数(截至撰写本评测时,App Store评分为3.3分(满分5分),共8条评价),以及它与[PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)和[Private LLM](/zh/power-local-llm/private-llm-review)等完全设备端、无需服务器的应用的比较。',
     metaDescription:
@@ -3598,8 +3598,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chapper-review-hero-ko.webp',
-    title: 'Chapper 리뷰(2026년): iPhone·iPad·Mac용 AI & LM Studio 클라이언트',
-    seoTitle: 'Chapper 리뷰 2026: iPhone·Mac용 LM Studio 클라이언트',
+    title: 'Chapper 리뷰: iPhone·iPad·Mac용 AI & LM Studio 클라이언트',
+    seoTitle: 'Chapper 리뷰: iPhone·Mac용 LM Studio 클라이언트',
     intro:
       '[Prevolut Ltd](https://prevolut.uk/products/chapper/)가 개발한 Chapper는 로컬 및 자체 호스팅 AI 모델과 대화할 수 있는 iPhone·iPad·Mac용 네이티브 앱입니다. 다운로드는 무료이며 대화 20회 제한이 있고, [Chapper Pro를 9.99달러에 일회 결제](https://apps.apple.com/us/app/chapper-ai-lm-studio-client/id6760984679)하면 완전히 잠금 해제됩니다. 현재 App Store 정보에 따르면 진정한 온디바이스 추론(서버에 연결하지 않고 기기에서 직접 모델을 실행하는 것)은 별도의 앱 내 구입 항목으로 4.99달러에 판매됩니다. App Store 가격은 지역에 따라 다를 수 있으므로 구매 전 해당 지역 App Store에서 현재 가격을 확인하세요. Chapper의 핵심 설계는 무엇보다도 [LM Studio](https://lmstudio.ai/), [Ollama](https://ollama.com/), llama.cpp 서버, 그리고 모든 OpenAI 호환 엔드포인트를 위한 정교한 클라이언트라는 점입니다 — Mac이나 PC에서 실행 중인 서버를 지정하고 휴대폰에서 대화하는 방식이 중심이며, 여기에 MLX와 Apple Foundation Models를 통한 온디바이스 지원이 추가되어 있습니다. 이 리뷰에서는 이러한 단계별 가격 모델, 아직 적은 리뷰 수(작성 시점 기준 App Store 평점 3.3/5, 8건), 그리고 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)나 [Private LLM](/ko/power-local-llm/private-llm-review)처럼 서버가 필요 없는 완전 온디바이스 앱과의 비교를 살펴봅니다.',
     metaDescription:

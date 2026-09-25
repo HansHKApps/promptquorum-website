@@ -13,8 +13,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/arbiter-local-ai-chat-review-hero-en.webp',
-    title: 'Arbiter Local AI Chat Review (2026): Private Offline AI for iPhone',
-    seoTitle: 'Arbiter AI Review 2026: Private Offline iPhone Chat',
+    title: 'Arbiter Local AI Chat Review: Private Offline AI for iPhone',
+    seoTitle: 'Arbiter AI Review: Private Offline iPhone Chat',
     intro:
       'Arbiter, developed by Jordan Stone, is a privacy-first AI assistant for iPhone built around a single premise, per the developer: your conversations never leave your device. You can download and run lightweight open-source models (Gemma, Llama, DeepSeek, Qwen, Mistral) directly on your iPhone, or connect to more powerful models running on your own PC or Mac through tools like LM Studio, Ollama, or the separate "Arbiter for Mac" companion. There are no accounts, no servers, and no data collection — the app is designed so conversations, and any documents you upload for summarization, stay on the device you are using. The practical question for anyone comparing on-device chat apps is whether Arbiter delivers enough capability on iPhone-class hardware to be a genuine daily driver, or whether it is best used as the private front end to bigger models running elsewhere.',
     metaDescription:
@@ -379,8 +379,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/arbiter-local-ai-chat-review-hero-de.webp',
-    title: 'Arbiter Local AI Chat im Test (2026): Private KI offline auf dem iPhone',
-    seoTitle: 'Arbiter AI im Test 2026: Private Offline-KI fürs iPhone',
+    title: 'Arbiter Local AI Chat im Test: Private KI offline auf dem iPhone',
+    seoTitle: 'Arbiter AI im Test: Private Offline-KI fürs iPhone',
     intro:
       'Arbiter, entwickelt von Jordan Stone, ist ein auf Privatsphäre ausgerichteter KI-Assistent fürs iPhone, der nach Angaben des Entwicklers auf einem einzigen Grundsatz beruht: Ihre Unterhaltungen verlassen niemals Ihr Gerät. Sie können leichtgewichtige Open-Source-Modelle (Gemma, Llama, DeepSeek, Qwen, Mistral) direkt auf Ihr iPhone herunterladen und dort ausführen, oder sich mit leistungsstärkeren Modellen verbinden, die auf Ihrem eigenen PC oder Mac laufen – über Tools wie LM Studio, Ollama oder die separate Begleit-App „Arbiter for Mac". Es gibt keine Konten, keine Server und keine Datenerfassung – die App ist so konzipiert, dass Unterhaltungen sowie hochgeladene Dokumente zur Zusammenfassung auf dem jeweils genutzten Gerät verbleiben. Die praktische Frage für alle, die On-Device-Chat-Apps vergleichen, lautet, ob Arbiter auf iPhone-Hardware genug Leistungsfähigkeit bietet, um ein echter täglicher Begleiter zu sein, oder ob es sich am besten als private Bedienoberfläche für größere Modelle eignet, die anderswo laufen.',
     metaDescription:
@@ -753,8 +753,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/arbiter-local-ai-chat-review-hero-fr.webp',
-    title: 'Avis Arbiter Local AI Chat (2026) : IA hors ligne privée pour iPhone',
-    seoTitle: 'Avis Arbiter AI 2026 : chat IA privé sur iPhone',
+    title: 'Avis Arbiter Local AI Chat: IA hors ligne privée pour iPhone',
+    seoTitle: 'Avis Arbiter AI: chat IA privé sur iPhone',
     intro:
       'Développée par Jordan Stone, Arbiter est un assistant IA pour iPhone conçu autour d\'un principe simple, selon l\'éditeur : vos conversations ne quittent jamais votre appareil. Vous pouvez télécharger et exécuter des modèles open source légers (Gemma, Llama, DeepSeek, Qwen, Mistral) directement sur votre iPhone, ou vous connecter à des modèles plus puissants exécutés sur votre propre PC ou Mac via des outils comme LM Studio, Ollama, ou l\'application compagnon distincte « Arbiter for Mac ». Il n\'y a ni compte, ni serveur, ni collecte de données : l\'application est conçue pour que vos conversations, ainsi que tout document que vous téléversez pour un résumé, restent sur l\'appareil que vous utilisez. La question pratique pour qui compare les applications de chat sur l\'appareil est de savoir si Arbiter offre assez de capacités sur du matériel de type iPhone pour devenir un véritable outil quotidien, ou s\'il est surtout utile comme interface privée vers des modèles plus puissants exécutés ailleurs.',
     metaDescription:
@@ -1119,8 +1119,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/arbiter-local-ai-chat-review-hero-es.webp',
-    title: 'Reseña de Arbiter Local AI Chat (2026): IA privada sin conexión para iPhone',
-    seoTitle: 'Reseña Arbiter IA 2026: Chat Privado Offline iPhone',
+    title: 'Reseña de Arbiter Local AI Chat: IA privada sin conexión para iPhone',
+    seoTitle: 'Reseña Arbiter IA: Chat Privado Offline iPhone',
     intro:
       'Arbiter, desarrollada por Jordan Stone, es un asistente de IA centrado en la privacidad para iPhone construido sobre una premisa simple, según el desarrollador: tus conversaciones nunca salen de tu dispositivo. Puedes descargar y ejecutar modelos ligeros de código abierto (Gemma, Llama, DeepSeek, Qwen, Mistral) directamente en tu iPhone, o conectarte a modelos más potentes que corren en tu propia PC o Mac mediante herramientas como LM Studio, Ollama, o la app complementaria independiente "Arbiter for Mac". No hay cuentas, no hay servidores y no hay recolección de datos: la app está diseñada para que las conversaciones, y cualquier documento que subas para resumir, permanezcan en el dispositivo que estés usando. La pregunta práctica para quien compara apps de chat en el dispositivo es si Arbiter ofrece suficiente capacidad en hardware de nivel iPhone para ser una herramienta diaria genuina, o si conviene usarla como front-end privado para modelos más grandes que corren en otro lugar.',
     metaDescription:
@@ -1485,8 +1485,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/arbiter-local-ai-chat-review-hero-pt.webp',
-    title: 'Análise do Arbiter Local AI Chat (2026): IA Offline Privada para iPhone',
-    seoTitle: 'Arbiter AI: Análise 2026 do Chat Offline Privado no iPhone',
+    title: 'Análise do Arbiter Local AI Chat: IA Offline Privada para iPhone',
+    seoTitle: 'Arbiter AI: Análise do Chat Offline Privado no iPhone',
     intro:
       'O Arbiter, desenvolvido por Jordan Stone, é um assistente de IA voltado para privacidade no iPhone, construído em torno de uma única premissa, segundo o desenvolvedor: suas conversas nunca saem do seu dispositivo. Você pode baixar e rodar modelos leves de código aberto (Gemma, Llama, DeepSeek, Qwen, Mistral) diretamente no seu iPhone, ou se conectar a modelos mais potentes rodando no seu próprio PC ou Mac por meio de ferramentas como LM Studio, Ollama, ou o aplicativo complementar separado "Arbiter for Mac". Não há contas, não há servidores e não há coleta de dados — o app foi projetado para que as conversas, e qualquer documento enviado para resumo, permaneçam no dispositivo que você está usando. A pergunta prática para quem está comparando apps de chat no dispositivo é se o Arbiter entrega recursos suficientes em hardware de iPhone para ser um app do dia a dia de verdade, ou se ele é melhor usado como a interface privada para modelos maiores rodando em outro lugar.',
     metaDescription:
@@ -1851,8 +1851,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/arbiter-local-ai-chat-review-hero-ja.webp',
-    title: 'Arbiter Local AI Chatレビュー(2026年):iPhone向けプライベートオフラインAI',
-    seoTitle: 'Arbiterレビュー2026:iPhone向けプライベートオフラインAIチャット',
+    title: 'Arbiter Local AI Chatレビュー:iPhone向けプライベートオフラインAI',
+    seoTitle: 'Arbiterレビュー:iPhone向けプライベートオフラインAIチャット',
     intro:
       'Arbiterは、Jordan Stone氏が開発したiPhone向けのプライバシー重視AIアシスタントです。開発者によれば、基本方針はシンプルです。会話データは端末の外に出ません。軽量なオープンソースモデル(Gemma、Llama、DeepSeek、Qwen、Mistral)をダウンロードしてiPhone上で直接実行できます。あるいは、LM StudioやOllama、または別アプリの「Arbiter for Mac」を通じて、自分のPCやMac上で動くより強力なモデルに接続することも可能です。アカウント登録は不要で、サーバーも使用せず、データ収集も行われません。会話内容や要約用にアップロードしたドキュメントは、使用している端末上にとどまるよう設計されています。オンデバイスチャットアプリを比較する際の実用的な論点は、Arbiterがスマートフォンのハードウェアだけで日常使いに十分な性能を発揮できるか、それとも他の場所で動く大規模モデルへのプライベートな入口として使うのが最適か、という点です。',
     metaDescription:
@@ -2216,8 +2216,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/arbiter-local-ai-chat-review-hero-zh.webp',
-    title: 'Arbiter Local AI Chat 评测（2026）：iPhone 隐私离线 AI 应用',
-    seoTitle: 'Arbiter AI 评测 2026：iPhone 隐私离线聊天应用',
+    title: 'Arbiter Local AI Chat 评测：iPhone 隐私离线 AI 应用',
+    seoTitle: 'Arbiter AI 评测：iPhone 隐私离线聊天应用',
     intro:
       'Arbiter 由 Jordan Stone 开发，是一款专注隐私的 iPhone AI 助手，核心理念很简单：根据开发者的说法，你的对话内容不会离开你的设备。你可以在 iPhone 上下载并运行轻量级开源模型（Gemma、Llama、DeepSeek、Qwen、Mistral），也可以通过 LM Studio、Ollama 或独立的"Arbiter for Mac"配套应用，连接运行在你自己电脑或 Mac 上的更强大模型。应用没有账号系统，不依赖服务器，也不收集数据——设计上，你的对话以及上传用于摘要的文档都保留在你正在使用的设备上。对于正在比较设备端聊天应用的人来说，实际要问的问题是：Arbiter 在 iPhone 级别的硬件上能力是否足够作为日常主力应用，还是更适合作为连接更大模型的隐私前端。',
     metaDescription:
@@ -2581,8 +2581,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/arbiter-local-ai-chat-review-hero-ar.webp',
-    title: 'مراجعة Arbiter Local AI Chat (2026): ذكاء اصطناعي خاص وغير متصل بالإنترنت لآيفون',
-    seoTitle: 'مراجعة Arbiter 2026: دردشة AI خاصة وغير متصلة لآيفون',
+    title: 'مراجعة Arbiter Local AI Chat: ذكاء اصطناعي خاص وغير متصل بالإنترنت لآيفون',
+    seoTitle: 'مراجعة Arbiter: دردشة AI خاصة وغير متصلة لآيفون',
     intro:
       'تطبيق Arbiter، الذي طوّره Jordan Stone، هو مساعد ذكاء اصطناعي يضع الخصوصية أولاً لآيفون، ويقوم على فكرة واحدة بحسب المطوّر: محادثاتك لا تغادر جهازك أبداً. يمكنك تنزيل وتشغيل نماذج مفتوحة المصدر خفيفة الوزن (Gemma وLlama وDeepSeek وQwen وMistral) مباشرة على آيفون، أو الاتصال بنماذج أقوى تعمل على جهاز الكمبيوتر أو Mac الخاص بك عبر أدوات مثل LM Studio أو Ollama أو تطبيق "Arbiter for Mac" المرافق المنفصل. لا توجد حسابات، ولا خوادم، ولا جمع بيانات — التطبيق مصمم بحيث تبقى المحادثات، وأي مستندات ترفعها للتلخيص، على الجهاز الذي تستخدمه. السؤال العملي لأي شخص يقارن تطبيقات الدردشة على الجهاز هو ما إذا كان Arbiter يقدّم قدرات كافية على أجهزة بمستوى آيفون ليكون خياراً يومياً حقيقياً، أم أن أفضل استخدام له هو كواجهة خاصة لنماذج أكبر تعمل في مكان آخر.',
     metaDescription:
@@ -2946,8 +2946,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/arbiter-local-ai-chat-review-hero-ko.webp',
-    title: 'Arbiter Local AI Chat 리뷰 (2026): 아이폰용 프라이빗 오프라인 AI',
-    seoTitle: 'Arbiter AI 리뷰 2026: 프라이빗 오프라인 아이폰 채팅',
+    title: 'Arbiter Local AI Chat 리뷰: 아이폰용 프라이빗 오프라인 AI',
+    seoTitle: 'Arbiter AI 리뷰: 프라이빗 오프라인 아이폰 채팅',
     intro:
       'Jordan Stone이 개발한 Arbiter는 하나의 원칙을 중심으로 만들어진 프라이버시 우선 아이폰 AI 어시스턴트입니다. 개발자에 따르면, 대화 내용이 기기 밖으로 나가지 않는다는 것입니다. 경량 오픈소스 모델(Gemma, Llama, DeepSeek, Qwen, Mistral)을 아이폰에 직접 다운로드하여 실행하거나, LM Studio, Ollama, 또는 별도의 "Arbiter for Mac" 컴패니언 앱을 통해 본인 소유의 PC나 Mac에서 실행되는 더 강력한 모델에 연결할 수 있습니다. 계정도, 서버도, 데이터 수집도 없습니다 — 이 앱은 대화 내용과 요약을 위해 업로드한 문서가 사용 중인 기기에만 남도록 설계되었습니다. 온디바이스 채팅 앱을 비교하는 사용자에게 실질적인 질문은, Arbiter가 아이폰급 하드웨어에서 진정한 일상용 도구로 쓸 만한 성능을 제공하는지, 아니면 다른 곳에서 실행되는 더 큰 모델을 위한 프라이빗 프런트엔드로 쓰는 것이 최선인지입니다.',
     metaDescription:

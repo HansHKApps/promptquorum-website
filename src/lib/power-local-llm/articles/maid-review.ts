@@ -13,8 +13,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/maid-review-hero-en.webp',
-    title: 'Maid Review (2026): Open-Source Local LLM Chat App for Android',
-    seoTitle: 'Maid Review 2026: Open-Source Android LLM App',
+    title: 'Maid Review: Open-Source Local LLM Chat App for Android',
+    seoTitle: 'Maid Review: Open-Source Android LLM App',
     intro:
       'Maid is a free, open-source (MIT-licensed) chat app that runs GGUF language models locally via [llama.cpp](https://github.com/ggml-org/llama.cpp), or connects to remote providers like Anthropic, OpenAI, Ollama, Mistral, DeepSeek, Novita, and OrcaRouter using your own API key. The project started in 2023 as a cross-platform Flutter app built by Australian developer Dane Madsen, but the codebase was rewritten in React Native for version 3.0.0 (March 2026), and today it ships as an Android-only app — the desktop and iOS builds that existed in the older Flutter releases are gone from the current version. This review covers what Maid does today, what changed in the rewrite, its real platform and hardware requirements, its pricing (free, no paid tier), and who should — and should not — use it instead of a commercial alternative.',
     metaDescription:
@@ -431,8 +431,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/maid-review-hero-de.webp',
-    title: 'Maid im Test (2026): Open-Source-LLM-Chat-App für Android',
-    seoTitle: 'Maid Test 2026: Open-Source Android LLM App',
+    title: 'Maid im Test: Open-Source-LLM-Chat-App für Android',
+    seoTitle: 'Maid Test: Open-Source Android LLM App',
     intro:
       'Maid ist eine kostenlose, quelloffene (MIT-lizenzierte) Chat-App, die GGUF-Sprachmodelle lokal über [llama.cpp](https://github.com/ggml-org/llama.cpp) ausführt oder sich mit einem eigenen API-Schlüssel mit externen Anbietern wie Anthropic, OpenAI, Ollama, Mistral, DeepSeek, Novita und OrcaRouter verbindet. Das Projekt startete 2023 als plattformübergreifende Flutter-App des australischen Entwicklers Dane Madsen, wurde jedoch für Version 3.0.0 (März 2026) in React Native neu geschrieben und läuft heute nur noch auf Android — die Desktop- und iOS-Builds der älteren Flutter-Versionen gibt es in der aktuellen Version nicht mehr. Dieser Test beschreibt, was Maid heute leistet, was sich durch den Umbau geändert hat, welche Plattform- und Hardware-Anforderungen wirklich gelten, wie das Preismodell aussieht (kostenlos, keine kostenpflichtige Stufe) und für wen sich die App eignet — und für wen nicht.',
     metaDescription:
@@ -849,8 +849,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/maid-review-hero-es.webp',
-    title: 'Reseña de Maid (2026): App de Chat con LLM Local de Código Abierto para Android',
-    seoTitle: 'Reseña de Maid 2026: App Android LLM de Código Abierto',
+    title: 'Reseña de Maid: App de Chat con LLM Local de Código Abierto para Android',
+    seoTitle: 'Reseña de Maid: App Android LLM de Código Abierto',
     intro:
       'Maid es una app de chat gratuita y de código abierto (licencia MIT) que ejecuta modelos de lenguaje en formato GGUF de forma local mediante [llama.cpp](https://github.com/ggml-org/llama.cpp), o se conecta a proveedores remotos como Anthropic, OpenAI, Ollama, Mistral, DeepSeek, Novita y OrcaRouter usando tu propia clave de API. El proyecto comenzó en 2023 como una app multiplataforma en Flutter creada por el desarrollador australiano Dane Madsen, pero el código se reescribió en React Native para la versión 3.0.0 (marzo de 2026), y hoy se distribuye solo para Android — los builds de escritorio e iOS que existían en las versiones antiguas de Flutter ya no forman parte de la versión actual. Esta reseña cubre qué hace Maid hoy, qué cambió con la reescritura, sus requisitos reales de plataforma y hardware, su precio (gratis, sin nivel de pago) y para quién es o no una buena opción frente a una alternativa comercial.',
     metaDescription:
@@ -1267,8 +1267,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/maid-review-hero-fr.webp',
-    title: 'Maid : test (2026) — application de chat LLM local open source pour Android',
-    seoTitle: 'Maid : test 2026 — application Android LLM open source',
+    title: 'Maid: test — application de chat LLM local open source pour Android',
+    seoTitle: 'Maid: test — application Android LLM open source',
     intro:
       'Maid est une application de chat gratuite et open source (licence MIT) qui exécute des modèles de langage au format GGUF localement via [llama.cpp](https://github.com/ggml-org/llama.cpp), ou se connecte à des fournisseurs distants comme Anthropic, OpenAI, Ollama, Mistral, DeepSeek, Novita et OrcaRouter avec votre propre clé API. Le projet a démarré en 2023 comme une application Flutter multiplateforme créée par le développeur australien Dane Madsen, mais le code a été réécrit en React Native pour la version 3.0.0 (mars 2026), et l\'application ne cible plus aujourd\'hui qu\'Android — les versions de bureau et iOS qui existaient dans les anciennes versions Flutter ont disparu de la version actuelle. Ce test décrit ce que fait Maid aujourd\'hui, ce qui a changé lors de cette réécriture, ses exigences réelles de plateforme et de matériel, son tarif (gratuit, aucun palier payant) et pour qui elle convient — ou non — par rapport à une alternative commerciale.',
     metaDescription:
@@ -1685,8 +1685,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/maid-review-hero-ja.webp',
-    title: 'Maidレビュー(2026):Android向けオープンソースのローカルLLMチャットアプリ',
-    seoTitle: 'Maidレビュー2026:オープンソースAndroid LLMアプリ',
+    title: 'Maidレビュー:Android向けオープンソースのローカルLLMチャットアプリ',
+    seoTitle: 'Maidレビュー:オープンソースAndroid LLMアプリ',
     intro:
       'Maidは、[llama.cpp](https://github.com/ggml-org/llama.cpp)経由でGGUF形式の言語モデルをローカルで実行するか、自分のAPIキーを使ってAnthropic、OpenAI、Ollama、Mistral、DeepSeek、Novita、OrcaRouterなどのリモートプロバイダーに接続できる、無料でオープンソース(MITライセンス)のチャットアプリです。プロジェクトは2023年、オーストラリア人開発者Dane MadsenによるクロスプラットフォームのFlutterアプリとして始まりましたが、バージョン3.0.0(2026年3月)でReact Nativeに全面的に書き直され、現在はAndroid専用アプリとして配布されています——旧Flutter版にあったデスクトップ版・iOS版は現行バージョンには存在しません。このレビューでは、Maidが現在何をできるのか、書き直しで何が変わったのか、実際のプラットフォーム・ハードウェア要件、料金(無料、有料プランなし)、そして商用の代替アプリと比べて誰に向いているか——向いていないか——を扱います。',
     metaDescription:
@@ -2104,8 +2104,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/maid-review-hero-pt.webp',
-    title: 'Análise do Maid (2026): App de Chat com LLM Local de Código Aberto para Android',
-    seoTitle: 'Análise do Maid 2026: App Android LLM de Código Aberto',
+    title: 'Análise do Maid: App de Chat com LLM Local de Código Aberto para Android',
+    seoTitle: 'Análise do Maid: App Android LLM de Código Aberto',
     intro:
       'O Maid é um app de chat gratuito e de código aberto (licença MIT) que executa modelos de linguagem no formato GGUF localmente via [llama.cpp](https://github.com/ggml-org/llama.cpp), ou se conecta a provedores remotos como Anthropic, OpenAI, Ollama, Mistral, DeepSeek, Novita e OrcaRouter usando sua própria chave de API. O projeto começou em 2023 como um app multiplataforma em Flutter criado pelo desenvolvedor australiano Dane Madsen, mas o código foi reescrito em React Native para a versão 3.0.0 (março de 2026), e hoje é distribuído apenas para Android — os builds de desktop e iOS que existiam nas versões antigas em Flutter não fazem mais parte da versão atual. Esta análise cobre o que o Maid faz hoje, o que mudou com a reescrita, seus requisitos reais de plataforma e hardware, seu preço (gratuito, sem plano pago) e para quem ele é — ou não é — indicado em comparação com uma alternativa comercial.',
     metaDescription:
@@ -2522,8 +2522,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/maid-review-hero-ar.webp',
-    title: 'مراجعة Maid (2026): تطبيق دردشة مفتوح المصدر لنماذج اللغة المحلية على Android',
-    seoTitle: 'مراجعة Maid 2026: تطبيق Android مفتوح المصدر لنماذج اللغة',
+    title: 'مراجعة Maid: تطبيق دردشة مفتوح المصدر لنماذج اللغة المحلية على Android',
+    seoTitle: 'مراجعة Maid: تطبيق Android مفتوح المصدر لنماذج اللغة',
     intro:
       'Maid هو تطبيق دردشة مجاني ومفتوح المصدر (برخصة MIT) يشغّل نماذج لغوية بصيغة GGUF محليًا عبر [llama.cpp](https://github.com/ggml-org/llama.cpp)، أو يتصل بمزودين عن بُعد مثل Anthropic وOpenAI وOllama وMistral وDeepSeek وNovita وOrcaRouter باستخدام مفتاح API الخاص بك. بدأ المشروع عام 2023 كتطبيق متعدد المنصات مبني بـFlutter من تطوير المطور الأسترالي Dane Madsen، لكن الكود أُعيدت كتابته بـReact Native في الإصدار 3.0.0 (مارس 2026)، ويُوزَّع اليوم لنظام Android فقط — إصدارات سطح المكتب وiOS التي كانت موجودة في إصدارات Flutter القديمة لم تعد جزءًا من الإصدار الحالي. تتناول هذه المراجعة ما يقدمه Maid اليوم، وما تغيّر مع إعادة الكتابة، ومتطلباته الفعلية من المنصات والأجهزة، وسعره (مجاني بلا خطة مدفوعة)، ولمن يناسب — ولمن لا يناسب — مقارنة ببديل تجاري.',
     metaDescription:
@@ -2940,8 +2940,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/maid-review-hero-zh.webp',
-    title: 'Maid 评测(2026):Android 开源本地 LLM 聊天应用',
-    seoTitle: 'Maid 评测 2026:开源 Android LLM 应用',
+    title: 'Maid 评测:Android 开源本地 LLM 聊天应用',
+    seoTitle: 'Maid 评测:开源 Android LLM 应用',
     intro:
       'Maid 是一款免费开源(MIT 许可证)的聊天应用,可通过 [llama.cpp](https://github.com/ggml-org/llama.cpp) 在本地运行 GGUF 格式的语言模型,也可以使用你自己的 API 密钥连接 Anthropic、OpenAI、Ollama、Mistral、DeepSeek、Novita 和 OrcaRouter 等远程提供商。该项目由澳大利亚开发者 Dane Madsen 于 2023 年以跨平台 Flutter 应用的形式启动,但在 3.0.0 版(2026 年 3 月)中代码被重写为 React Native,如今只面向 Android 分发——旧版 Flutter 中存在的桌面版和 iOS 版已不再是当前版本的一部分。本评测将说明 Maid 目前能做什么、重写后发生了哪些变化、其真实的平台与硬件要求、定价情况(免费,无付费档位),以及相较商业替代品,它适合谁——不适合谁。',
     metaDescription:
@@ -3359,8 +3359,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/maid-review-hero-ko.webp',
-    title: 'Maid 리뷰(2026): Android용 오픈소스 로컬 LLM 채팅 앱',
-    seoTitle: 'Maid 리뷰 2026: 오픈소스 Android LLM 앱',
+    title: 'Maid 리뷰: Android용 오픈소스 로컬 LLM 채팅 앱',
+    seoTitle: 'Maid 리뷰: 오픈소스 Android LLM 앱',
     intro:
       'Maid는 [llama.cpp](https://github.com/ggml-org/llama.cpp)를 통해 GGUF 형식의 언어 모델을 로컬에서 실행하거나, 자신의 API 키를 사용해 Anthropic, OpenAI, Ollama, Mistral, DeepSeek, Novita, OrcaRouter 같은 원격 제공업체에 연결할 수 있는 무료 오픈소스(MIT 라이선스) 채팅 앱입니다. 이 프로젝트는 2023년 호주 개발자 Dane Madsen이 크로스플랫폼 Flutter 앱으로 시작했지만, 3.0.0 버전(2026년 3월)에서 코드가 React Native로 전면 재작성되었으며, 현재는 Android 전용으로만 배포됩니다——예전 Flutter 버전에 있던 데스크톱 및 iOS 빌드는 현재 버전에 더 이상 존재하지 않습니다. 이 리뷰에서는 Maid가 현재 무엇을 할 수 있는지, 재작성 과정에서 무엇이 바뀌었는지, 실제 플랫폼 및 하드웨어 요구 사항, 가격(무료, 유료 플랜 없음), 그리고 상용 대안과 비교했을 때 누구에게 적합하고 적합하지 않은지를 다룹니다.',
     metaDescription:

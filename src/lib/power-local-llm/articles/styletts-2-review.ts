@@ -15,8 +15,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/styletts-2-review-hero-en.webp',
-    title: 'StyleTTS 2 Review (2026): Columbia\'s MIT-Licensed Research Model for Natural Speech',
-    seoTitle: 'StyleTTS 2 Review 2026: MIT-Licensed Speech Synthesis',
+    title: 'StyleTTS 2 Review: Columbia\'s MIT-Licensed Research Model for Natural Speech',
+    seoTitle: 'StyleTTS 2 Review: MIT-Licensed Speech Synthesis',
     intro:
       'StyleTTS 2 is an open-source text-to-speech model released by researchers at Columbia University, distributed on [GitHub](https://github.com/yl4579/StyleTTS2), that generates natural-sounding speech using style diffusion and adversarial training with large speech language models. Its code is licensed under **MIT**, but its README adds a separate, non-license disclosure condition for the pre-trained model weights, and the public repository has had no commits since March 7, 2024. This review covers what StyleTTS 2 actually does, real installation and inference commands, the licensing nuance between the MIT code and the conditional model weights, and its dormant-but-not-archived maintenance status — the honest picture for anyone evaluating it in 2026.',
     metaDescription:
@@ -376,8 +376,8 @@ custom_tts = tts.StyleTTS2(
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/styletts-2-review-hero-de.webp',
-    title: 'StyleTTS 2 im Test (2026): Columbias MIT-lizenziertes Forschungsmodell für natürliche Sprache',
-    seoTitle: 'StyleTTS 2 im Test 2026: MIT-lizenzierte Sprachsynthese',
+    title: 'StyleTTS 2 im Test: Columbias MIT-lizenziertes Forschungsmodell für natürliche Sprache',
+    seoTitle: 'StyleTTS 2 im Test: MIT-lizenzierte Sprachsynthese',
     intro:
       'StyleTTS 2 ist ein quelloffenes Text-zu-Sprache-Modell von Forschern der Columbia University, veröffentlicht auf [GitHub](https://github.com/yl4579/StyleTTS2), das natürlich klingende Sprache mittels Style-Diffusion und adversarialem Training mit großen Sprachmodellen für Audio erzeugt. Der Code steht unter der **MIT-Lizenz**, doch das README fügt eine separate, nicht-lizenzrechtliche Offenlegungsbedingung für die vortrainierten Modellgewichte hinzu, und das öffentliche Repository zeigt seit dem 7. März 2024 keine Commits mehr. Dieser Test behandelt, was StyleTTS 2 tatsächlich tut, echte Installations- und Inferenzbefehle, die Lizenz-Nuance zwischen dem MIT-Code und den bedingten Modellgewichten sowie seinen ruhenden, aber nicht archivierten Pflegestatus — das ehrliche Bild für jeden, der es 2026 evaluiert.',
     metaDescription:
@@ -737,8 +737,8 @@ custom_tts = tts.StyleTTS2(
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/styletts-2-review-hero-fr.webp',
-    title: 'StyleTTS 2 : avis (2026) — le modèle de recherche sous licence MIT de Columbia pour une voix naturelle',
-    seoTitle: 'StyleTTS 2 avis 2026 : synthèse vocale sous licence MIT',
+    title: 'StyleTTS 2: avis — le modèle de recherche sous licence MIT de Columbia pour une voix naturelle',
+    seoTitle: 'StyleTTS 2 avis: synthèse vocale sous licence MIT',
     intro:
       'StyleTTS 2 est un modèle de synthèse vocale open source publié par des chercheurs de l\'université Columbia sur [GitHub](https://github.com/yl4579/StyleTTS2), qui génère une voix au rendu naturel grâce à la diffusion de style et à un entraînement adversarial avec de grands modèles de langage vocal. Son code est sous **licence MIT**, mais son README ajoute une condition de divulgation distincte, hors licence, pour les poids du modèle pré-entraîné, et le dépôt public n\'a reçu aucun commit depuis le 7 mars 2024. Cet avis couvre ce que fait réellement StyleTTS 2, des commandes d\'installation et d\'inférence réelles, la nuance de licence entre le code MIT et les poids conditionnels, ainsi que son statut de maintenance dormant mais non archivé — le tableau honnête pour quiconque l\'évalue en 2026.',
     metaDescription:
@@ -1098,8 +1098,8 @@ custom_tts = tts.StyleTTS2(
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/styletts-2-review-hero-es.webp',
-    title: 'StyleTTS 2 reseña (2026): el modelo de investigación de Columbia con licencia MIT para voz natural',
-    seoTitle: 'StyleTTS 2 reseña 2026: síntesis de voz con licencia MIT',
+    title: 'StyleTTS 2 reseña: el modelo de investigación de Columbia con licencia MIT para voz natural',
+    seoTitle: 'StyleTTS 2 reseña: síntesis de voz con licencia MIT',
     intro:
       'StyleTTS 2 es un modelo de texto a voz de código abierto publicado por investigadores de la Universidad de Columbia en [GitHub](https://github.com/yl4579/StyleTTS2), que genera voz de sonido natural mediante difusión de estilo y entrenamiento adversarial con grandes modelos de lenguaje de voz. Su código está bajo **licencia MIT**, pero su README añade una condición de divulgación aparte, fuera de la licencia, para los pesos del modelo preentrenado, y el repositorio público no tiene commits desde el 7 de marzo de 2024. Esta reseña cubre qué hace realmente StyleTTS 2, comandos reales de instalación e inferencia, el matiz de licencia entre el código MIT y los pesos condicionales, y su estado de mantenimiento inactivo pero no archivado — el panorama honesto para quien lo evalúe en 2026.',
     metaDescription:
@@ -1459,8 +1459,8 @@ custom_tts = tts.StyleTTS2(
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/styletts-2-review-hero-ja.webp',
-    title: 'StyleTTS 2レビュー(2026):コロンビア大学のMITライセンス研究モデルで自然な音声を生成',
-    seoTitle: 'StyleTTS 2レビュー2026:MITライセンスの音声合成モデル',
+    title: 'StyleTTS 2レビュー:コロンビア大学のMITライセンス研究モデルで自然な音声を生成',
+    seoTitle: 'StyleTTS 2レビュー:MITライセンスの音声合成モデル',
     intro:
       'StyleTTS 2は、コロンビア大学の研究者が[GitHub](https://github.com/yl4579/StyleTTS2)で公開しているオープンソースのテキスト読み上げ(TTS)モデルです。スタイル拡散(style diffusion)と、大規模音声言語モデルを用いた敵対的学習により、自然な音声を生成します。コードは**MITライセンス**ですが、READMEには事前学習済みモデルの重みに対する別個の、ライセンス外の開示条件が追加されており、公開リポジトリは2024年3月7日以降コミットがありません。このレビューでは、StyleTTS 2が実際に何をするか、実際のインストール・推論コマンド、MITコードと条件付きの重みの間のライセンスの微妙な違い、そして休眠中だがアーカイブされてはいないというメンテナンス状況について、2026年に評価する人向けに正直にお伝えします。',
     metaDescription:
@@ -1821,8 +1821,8 @@ custom_tts = tts.StyleTTS2(
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/styletts-2-review-hero-pt.webp',
-    title: 'StyleTTS 2 análise (2026): o modelo de pesquisa da Columbia com licença MIT para voz natural',
-    seoTitle: 'StyleTTS 2 análise 2026: síntese de voz com licença MIT',
+    title: 'StyleTTS 2 análise: o modelo de pesquisa da Columbia com licença MIT para voz natural',
+    seoTitle: 'StyleTTS 2 análise: síntese de voz com licença MIT',
     intro:
       'O StyleTTS 2 é um modelo de texto para voz de código aberto lançado por pesquisadores da Universidade Columbia, distribuído no [GitHub](https://github.com/yl4579/StyleTTS2), que gera fala com som natural usando difusão de estilo e treinamento adversarial com grandes modelos de linguagem de voz. Seu código está sob **licença MIT**, mas seu README adiciona uma condição de divulgação separada, fora da licença, para os pesos do modelo pré-treinado, e o repositório público não tem commits desde 7 de março de 2024. Esta análise cobre o que o StyleTTS 2 realmente faz, comandos reais de instalação e inferência, a nuance de licenciamento entre o código MIT e os pesos condicionais, e seu status de manutenção adormecido mas não arquivado — o panorama honesto para quem o avalia em 2026.',
     metaDescription:
@@ -2182,8 +2182,8 @@ custom_tts = tts.StyleTTS2(
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/styletts-2-review-hero-ar.webp',
-    title: 'مراجعة StyleTTS 2 (2026): نموذج بحثي من جامعة كولومبيا برخصة MIT لصوت طبيعي',
-    seoTitle: 'مراجعة StyleTTS 2‏ 2026: تركيب صوت برخصة MIT',
+    title: 'مراجعة StyleTTS 2: نموذج بحثي من جامعة كولومبيا برخصة MIT لصوت طبيعي',
+    seoTitle: 'مراجعة StyleTTS 2‏: تركيب صوت برخصة MIT',
     intro:
       'StyleTTS 2 هو نموذج مفتوح المصدر لتحويل النص إلى كلام، أصدره باحثون في جامعة كولومبيا ونشروه على [GitHub](https://github.com/yl4579/StyleTTS2)، يُولّد كلامًا يبدو طبيعيًا باستخدام انتشار الأسلوب (style diffusion) والتدريب التنافسي (adversarial training) مع نماذج لغوية صوتية كبيرة. الكود مرخّص بموجب **رخصة MIT**، لكن ملف README يضيف شرط إفصاح منفصلًا خارج نطاق الرخصة نفسها يخص أوزان النموذج المُدرَّب مسبقًا، والمستودع العام لم يشهد أي التزام (commit) منذ 7 مارس 2024. تتناول هذه المراجعة ما يفعله StyleTTS 2 فعليًا، وأوامر تثبيت واستدلال حقيقية، والفارق الدقيق في الترخيص بين كود MIT والأوزان المشروطة، وحالة صيانته الخاملة لكن غير المؤرشفة — الصورة الصادقة لمن يقيّمه في 2026.',
     metaDescription:
@@ -2543,8 +2543,8 @@ custom_tts = tts.StyleTTS2(
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/styletts-2-review-hero-zh.webp',
-    title: 'StyleTTS 2评测(2026):哥伦比亚大学MIT许可的自然语音研究模型',
-    seoTitle: 'StyleTTS 2评测2026:MIT许可的语音合成模型',
+    title: 'StyleTTS 2评测:哥伦比亚大学MIT许可的自然语音研究模型',
+    seoTitle: 'StyleTTS 2评测:MIT许可的语音合成模型',
     intro:
       'StyleTTS 2是哥伦比亚大学研究人员发布的开源文本转语音模型,托管在[GitHub](https://github.com/yl4579/StyleTTS2)上,通过风格扩散(style diffusion)和使用大型语音语言模型的对抗训练生成听起来自然的语音。其代码采用**MIT许可证**,但README中为预训练模型权重添加了一项独立的、许可证之外的披露条件,而公开仓库自2024年3月7日起没有任何提交记录。本评测将介绍StyleTTS 2的实际功能、真实的安装和推理命令、MIT代码与附条件权重之间的许可差异,以及其休眠但未归档的维护状态——为2026年评估该项目的读者提供真实全貌。',
     metaDescription:
@@ -2905,8 +2905,8 @@ custom_tts = tts.StyleTTS2(
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/styletts-2-review-hero-ko.webp',
-    title: 'StyleTTS 2 리뷰(2026): 자연스러운 음성을 위한 컬럼비아 대학교의 MIT 라이선스 연구 모델',
-    seoTitle: 'StyleTTS 2 리뷰 2026: MIT 라이선스 음성 합성 모델',
+    title: 'StyleTTS 2 리뷰: 자연스러운 음성을 위한 컬럼비아 대학교의 MIT 라이선스 연구 모델',
+    seoTitle: 'StyleTTS 2 리뷰: MIT 라이선스 음성 합성 모델',
     intro:
       'StyleTTS 2는 컬럼비아 대학교 연구진이 [GitHub](https://github.com/yl4579/StyleTTS2)에 공개한 오픈소스 텍스트 음성 변환(TTS) 모델로, 스타일 확산(style diffusion)과 대형 음성 언어 모델을 활용한 적대적 학습을 통해 자연스러운 음성을 생성합니다. 코드는 **MIT 라이선스**를 따르지만, README에는 사전 학습된 모델 가중치에 대해 라이선스와는 별개의 공개 조건이 추가되어 있으며, 공개 저장소는 2026년 기준 2024년 3월 7일 이후 커밋이 없습니다. 이 리뷰에서는 StyleTTS 2가 실제로 무엇을 하는지, 실제 설치 및 추론 명령어, MIT 코드와 조건부 가중치 사이의 라이선스 미묘한 차이, 그리고 휴면 상태이지만 아카이브되지는 않은 유지보수 상태를 다룹니다 — 2026년 이 모델을 평가하는 이들을 위한 솔직한 그림입니다.',
     metaDescription:

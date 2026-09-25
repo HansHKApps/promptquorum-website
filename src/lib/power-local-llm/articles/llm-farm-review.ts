@@ -14,8 +14,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llm-farm-review-hero-en.webp',
-    title: 'LLM Farm Review (2026): Open-Source GGUF App, Off the App Store',
-    seoTitle: 'LLM Farm Review 2026: Open-Source iOS GGUF Runtime',
+    title: 'LLM Farm Review: Open-Source GGUF App, Off the App Store',
+    seoTitle: 'LLM Farm Review: Open-Source iOS GGUF Runtime',
     intro:
       'LLM Farm is a free, MIT-licensed, open-source app for iOS and macOS that runs GGUF language models directly on the device via a Swift wrapper around [ggml](https://github.com/ggerganov/ggml) and llama.cpp. It was created by developer Artem Savkin (GitHub handle [guinmoon](https://github.com/guinmoon)) and first launched on the App Store in December 2023. As of this review, LLM Farm is not installable from the App Store or TestFlight — Apple removed the listing in August 2025, and the project\'s own [GitHub README](https://github.com/guinmoon/LLMFarm) still describes the app as "temporarily unavailable" in both channels. This review covers what the app does, its LoRA fine-tuning and merging tools (a feature most mobile local-AI apps do not have), how to build it from source today, and — importantly — why it is not a fit for anyone who is not comfortable compiling an iOS app themselves.',
     metaDescription:
@@ -483,8 +483,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llm-farm-review-hero-de.webp',
-    title: 'LLM Farm im Test (2026): Open-Source-GGUF-App, nicht mehr im App Store',
-    seoTitle: 'LLM Farm Test 2026: Open-Source iOS GGUF Runtime',
+    title: 'LLM Farm im Test: Open-Source-GGUF-App, nicht mehr im App Store',
+    seoTitle: 'LLM Farm Test: Open-Source iOS GGUF Runtime',
     intro:
       'LLM Farm ist eine kostenlose, unter der MIT-Lizenz quelloffene App für iOS und macOS, die GGUF-Sprachmodelle direkt auf dem Gerät ausführt — über einen Swift-Wrapper rund um [ggml](https://github.com/ggerganov/ggml) und llama.cpp. Entwickelt wurde sie von Artem Savkin (GitHub-Nutzername [guinmoon](https://github.com/guinmoon)), der die App im Dezember 2023 erstmals im App Store veröffentlichte. Zum Zeitpunkt dieses Tests lässt sich LLM Farm weder aus dem App Store noch über TestFlight installieren — Apple entfernte den Eintrag im August 2025, und das [GitHub-README](https://github.com/guinmoon/LLMFarm) des Projekts beschreibt die App weiterhin als „vorübergehend nicht verfügbar" in beiden Kanälen. Dieser Test beschreibt, was die App leistet, ihre LoRA-Finetuning- und Merge-Werkzeuge (eine Funktion, die den meisten mobilen Local-AI-Apps fehlt), wie man sie heute aus dem Quellcode baut — und vor allem, warum sie für alle ungeeignet ist, die keine eigene iOS-App kompilieren möchten.',
     metaDescription:
@@ -952,8 +952,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llm-farm-review-hero-fr.webp',
-    title: 'LLM Farm, avis (2026) : app GGUF open source, retirée de l\'App Store',
-    seoTitle: 'LLM Farm avis 2026 : runtime GGUF iOS open source',
+    title: 'LLM Farm, avis: app GGUF open source, retirée de l\'App Store',
+    seoTitle: 'LLM Farm avis: runtime GGUF iOS open source',
     intro:
       'LLM Farm est une application gratuite, open source sous licence MIT, pour iOS et macOS, qui exécute des modèles de langage GGUF directement sur l\'appareil via une surcouche Swift autour de [ggml](https://github.com/ggerganov/ggml) et de llama.cpp. Elle a été créée par le développeur Artem Savkin (pseudonyme GitHub [guinmoon](https://github.com/guinmoon)), qui l\'a publiée pour la première fois sur l\'App Store en décembre 2023. Au moment de cet avis, LLM Farm n\'est installable ni depuis l\'App Store ni depuis TestFlight — Apple a retiré la fiche en août 2025, et le [README GitHub](https://github.com/guinmoon/LLMFarm) du projet la décrit toujours comme « temporairement indisponible » sur ces deux canaux. Cet avis détaille ce que fait l\'application, ses outils de fine-tuning et de fusion LoRA sur l\'appareil (une fonctionnalité que la plupart des apps mobiles n\'ont pas), comment la compiler soi-même aujourd\'hui, et surtout pourquoi elle ne convient à personne qui ne soit pas à l\'aise pour compiler une app iOS.',
     metaDescription:
@@ -1421,8 +1421,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llm-farm-review-hero-es.webp',
-    title: 'LLM Farm, análisis (2026): app GGUF de código abierto, fuera de la App Store',
-    seoTitle: 'LLM Farm análisis 2026: runtime GGUF de código abierto para iOS',
+    title: 'LLM Farm, análisis: app GGUF de código abierto, fuera de la App Store',
+    seoTitle: 'LLM Farm análisis: runtime GGUF de código abierto para iOS',
     intro:
       'LLM Farm es una app gratuita y de código abierto (licencia MIT) para iOS y macOS que ejecuta modelos de lenguaje GGUF directamente en el dispositivo mediante una capa en Swift construida sobre [ggml](https://github.com/ggerganov/ggml) y llama.cpp. Fue creada por el desarrollador Artem Savkin (usuario de GitHub [guinmoon](https://github.com/guinmoon)), quien la publicó por primera vez en la App Store en diciembre de 2023. Al momento de este análisis, LLM Farm no se puede instalar desde la App Store ni desde TestFlight: Apple retiró la ficha en agosto de 2025, y el [README de GitHub](https://github.com/guinmoon/LLMFarm) del proyecto sigue describiendo la app como "temporalmente no disponible" en ambos canales. Este análisis cubre lo que hace la app, sus herramientas de ajuste fino (fine-tuning) y fusión de LoRA en el dispositivo (una función que la mayoría de las apps móviles de IA local no tiene), cómo compilarla hoy desde el código fuente y, sobre todo, por qué no es adecuada para nadie que no se sienta cómodo compilando una app de iOS.',
     metaDescription:
@@ -1890,8 +1890,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llm-farm-review-hero-ja.webp',
-    title: 'LLM Farmレビュー(2026年):オープンソースのGGUFアプリ、App Storeからは入手不可',
-    seoTitle: 'LLM Farmレビュー2026:オープンソースのiOS向けGGUFランタイム',
+    title: 'LLM Farmレビュー:オープンソースのGGUFアプリ、App Storeからは入手不可',
+    seoTitle: 'LLM Farmレビュー:オープンソースのiOS向けGGUFランタイム',
     intro:
       'LLM Farmは、無料でMITライセンスのオープンソースアプリで、iOSとmacOS上でGGUF形式の言語モデルを端末上で直接実行します。内部では[ggml](https://github.com/ggerganov/ggml)とllama.cppをSwiftでラップした独自エンジンを使用しています。開発者はArtem Savkin氏(GitHubアカウント名[guinmoon](https://github.com/guinmoon))で、2023年12月に初めてApp Storeで公開されました。本レビュー時点では、LLM FarmはApp StoreからもTestFlightからもインストールできません。Appleは2025年8月にApp Storeの掲載を削除し、プロジェクトの[GitHubのREADME](https://github.com/guinmoon/LLMFarm)は今も両チャネルを「一時的に利用できません」と記載しています。本レビューでは、アプリの機能、端末上でのLoRAファインチューニングとマージ機能(ほとんどのモバイルローカルAIアプリにはない機能)、現在ソースコードからビルドする方法、そして何より、自分でiOSアプリをビルドすることに抵抗がある人には向かない理由を解説します。',
     metaDescription:
@@ -2359,8 +2359,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llm-farm-review-hero-pt.webp',
-    title: 'LLM Farm, análise (2026): app GGUF de código aberto, fora da App Store',
-    seoTitle: 'LLM Farm análise 2026: runtime GGUF de código aberto para iOS',
+    title: 'LLM Farm, análise: app GGUF de código aberto, fora da App Store',
+    seoTitle: 'LLM Farm análise: runtime GGUF de código aberto para iOS',
     intro:
       'LLM Farm é um app gratuito e de código aberto (licença MIT) para iOS e macOS que executa modelos de linguagem GGUF diretamente no dispositivo, usando uma camada em Swift construída sobre o [ggml](https://github.com/ggerganov/ggml) e o llama.cpp. Foi criado pelo desenvolvedor Artem Savkin (usuário do GitHub [guinmoon](https://github.com/guinmoon)), que o publicou pela primeira vez na App Store em dezembro de 2023. No momento desta análise, o LLM Farm não pode ser instalado pela App Store nem pelo TestFlight: a Apple removeu a ficha em agosto de 2025, e o [README no GitHub](https://github.com/guinmoon/LLMFarm) do projeto ainda descreve o app como "temporariamente indisponível" nos dois canais. Esta análise cobre o que o app faz, suas ferramentas de ajuste fino (fine-tuning) e fusão de LoRA no próprio dispositivo (um recurso que a maioria dos apps móveis de IA local não tem), como compilá-lo hoje a partir do código-fonte e, principalmente, por que ele não serve para quem não se sente confortável em compilar um app de iOS.',
     metaDescription:
@@ -2828,8 +2828,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llm-farm-review-hero-zh.webp',
-    title: 'LLM Farm 评测(2026):开源 GGUF 应用,已从 App Store 下架',
-    seoTitle: 'LLM Farm 评测 2026:开源 iOS GGUF 运行时',
+    title: 'LLM Farm 评测:开源 GGUF 应用,已从 App Store 下架',
+    seoTitle: 'LLM Farm 评测:开源 iOS GGUF 运行时',
     intro:
       'LLM Farm 是一款面向 iOS 和 macOS 的免费开源(MIT 许可证)应用,通过基于 [ggml](https://github.com/ggerganov/ggml) 和 llama.cpp 的 Swift 封装层,在设备本地直接运行 GGUF 格式的语言模型。开发者是 Artem Savkin(GitHub 用户名 [guinmoon](https://github.com/guinmoon)),他于 2023 年 12 月首次将其发布到 App Store。截至本评测时,LLM Farm 既无法从 App Store 安装,也无法通过 TestFlight 安装——苹果于 2025 年 8 月下架了该应用,项目的 [GitHub README](https://github.com/guinmoon/LLMFarm) 仍将 App Store 和 TestFlight 两个渠道都标注为"暂时不可用"。本评测将介绍这款应用的功能、它在设备端进行 LoRA 微调与合并的工具(大多数移动端本地 AI 应用都不具备这一功能)、如何在今天从源代码构建它,以及最重要的一点——为什么它不适合任何不愿意自行编译 iOS 应用的人。',
     metaDescription:
@@ -3297,8 +3297,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llm-farm-review-hero-ko.webp',
-    title: 'LLM Farm 리뷰(2026): 오픈소스 GGUF 앱, 앱스토어에서는 내려감',
-    seoTitle: 'LLM Farm 리뷰 2026: 오픈소스 iOS GGUF 런타임',
+    title: 'LLM Farm 리뷰: 오픈소스 GGUF 앱, 앱스토어에서는 내려감',
+    seoTitle: 'LLM Farm 리뷰: 오픈소스 iOS GGUF 런타임',
     intro:
       'LLM Farm은 [ggml](https://github.com/ggerganov/ggml)과 llama.cpp를 감싼 Swift 래퍼를 통해 GGUF 형식의 언어 모델을 기기에서 직접 실행하는, iOS와 macOS용 무료 오픈소스(MIT 라이선스) 앱입니다. 개발자 Artem Savkin(GitHub 아이디 [guinmoon](https://github.com/guinmoon))이 만들었으며, 2023년 12월 앱스토어에 처음 출시되었습니다. 이 리뷰 시점 기준으로 LLM Farm은 앱스토어나 TestFlight에서 설치할 수 없습니다. 애플은 2025년 8월에 앱스토어 등록을 삭제했고, 프로젝트의 [GitHub README](https://github.com/guinmoon/LLMFarm)는 여전히 두 배포 채널 모두 "일시적으로 이용할 수 없음"이라고 설명하고 있습니다. 이 리뷰에서는 이 앱이 무엇을 하는지, 대부분의 모바일 로컬 AI 앱에는 없는 기기 내 LoRA 파인튜닝 및 병합 도구, 오늘날 소스 코드에서 직접 빌드하는 방법, 그리고 무엇보다 직접 iOS 앱을 컴파일하는 것이 부담스러운 사람에게는 적합하지 않은 이유를 다룹니다.',
     metaDescription:
@@ -3766,8 +3766,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llm-farm-review-hero-ar.webp',
-    title: 'مراجعة LLM Farm (2026): تطبيق GGUF مفتوح المصدر، غير متوفر حاليًا على App Store',
-    seoTitle: 'مراجعة LLM Farm 2026: بيئة تشغيل GGUF مفتوحة المصدر لنظام iOS',
+    title: 'مراجعة LLM Farm: تطبيق GGUF مفتوح المصدر، غير متوفر حاليًا على App Store',
+    seoTitle: 'مراجعة LLM Farm: بيئة تشغيل GGUF مفتوحة المصدر لنظام iOS',
     intro:
       'LLM Farm تطبيق مجاني ومفتوح المصدر (برخصة MIT) لنظامي iOS وmacOS، يشغّل نماذج لغوية بصيغة GGUF مباشرة على الجهاز عبر طبقة مكتوبة بلغة Swift تلتف حول [ggml](https://github.com/ggerganov/ggml) وllama.cpp. طوّره المطور Artem Savkin (اسم المستخدم على GitHub هو [guinmoon](https://github.com/guinmoon))، الذي نشره لأول مرة على App Store في ديسمبر 2023. في وقت كتابة هذه المراجعة، لا يمكن تثبيت LLM Farm من App Store ولا من TestFlight — فقد أزالت Apple الإدراج في أغسطس 2025، وما زال [ملف README على GitHub](https://github.com/guinmoon/LLMFarm) الخاص بالمشروع يصف التطبيق بأنه "غير متوفر مؤقتًا" في كلتا القناتين. تغطي هذه المراجعة ما يقدمه التطبيق، وأدواته للضبط الدقيق (LoRA fine-tuning) ودمج المحولات على الجهاز نفسه (وهي ميزة لا تتوفر في معظم تطبيقات الذكاء الاصطناعي المحلية للجوال)، وكيفية بنائه اليوم من الشيفرة المصدرية، والأهم من ذلك، لماذا لا يناسب أي شخص لا يشعر بالارتياح تجاه بناء تطبيق iOS بنفسه.',
     metaDescription:

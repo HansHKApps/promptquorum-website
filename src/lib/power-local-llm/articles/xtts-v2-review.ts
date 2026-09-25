@@ -14,8 +14,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/xtts-v2-review-hero-en.webp',
-    title: 'XTTS v2 Review (2026): Multilingual Voice Cloning from 6 Seconds of Audio',
-    seoTitle: 'XTTS v2 Review 2026: Multilingual Voice Cloning',
+    title: 'XTTS v2 Review: Multilingual Voice Cloning from 6 Seconds of Audio',
+    seoTitle: 'XTTS v2 Review: Multilingual Voice Cloning',
     intro:
       'XTTS v2 is a multilingual voice-cloning model released by Coqui, distributed on [Hugging Face](https://huggingface.co/coqui/XTTS-v2), that clones a voice from as little as 6 seconds of reference audio and speaks it back across 17 languages. It runs through the [Coqui TTS toolkit](/power-local-llm/coqui-tts-review) — the actively maintained fork is [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) — or can be used standalone via the model weights. This review covers what XTTS v2 actually does, real usage commands, its license (the Coqui Public Model License, CPML, which is non-commercial), and where it is and is not the right tool, since Coqui AI, the company that originally released it, shut down its paid services in December 2023.',
     metaDescription:
@@ -329,8 +329,8 @@ for chunk in tts.tts_stream(
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/xtts-v2-review-hero-de.webp',
-    title: 'XTTS v2 im Test (2026): Mehrsprachiges Voice-Cloning aus 6 Sekunden Audio',
-    seoTitle: 'XTTS v2 im Test 2026: Mehrsprachiges Voice-Cloning',
+    title: 'XTTS v2 im Test: Mehrsprachiges Voice-Cloning aus 6 Sekunden Audio',
+    seoTitle: 'XTTS v2 im Test: Mehrsprachiges Voice-Cloning',
     intro:
       'XTTS v2 ist ein mehrsprachiges Voice-Cloning-Modell von Coqui, veröffentlicht auf [Hugging Face](https://huggingface.co/coqui/XTTS-v2), das eine Stimme aus nur 6 Sekunden Referenzaudio klont und sie in 17 Sprachen sprechen lässt. Es läuft über das [Coqui-TTS-Toolkit](/de/power-local-llm/coqui-tts-review) — der aktiv gepflegte Fork ist [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) — oder kann eigenständig über die Modellgewichte verwendet werden. Dieser Test behandelt, was XTTS v2 tatsächlich tut, echte Nutzungsbefehle, seine Lizenz (die Coqui Public Model License, CPML, die nicht-kommerziell ist) und wo es das richtige Werkzeug ist und wo nicht — denn Coqui AI, das Unternehmen, das es ursprünglich veröffentlichte, stellte seine kostenpflichtigen Dienste im Dezember 2023 ein.',
     metaDescription:
@@ -644,8 +644,8 @@ for chunk in tts.tts_stream(
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/xtts-v2-review-hero-fr.webp',
-    title: 'XTTS v2 : avis (2026) — clonage vocal multilingue à partir de 6 secondes d\'audio',
-    seoTitle: 'XTTS v2 : avis 2026 — clonage vocal multilingue',
+    title: 'XTTS v2: avis — clonage vocal multilingue à partir de 6 secondes d\'audio',
+    seoTitle: 'XTTS v2: avis — clonage vocal multilingue',
     intro:
       'XTTS v2 est un modèle de clonage vocal multilingue publié par Coqui, distribué sur [Hugging Face](https://huggingface.co/coqui/XTTS-v2), qui clone une voix à partir d\'à peine 6 secondes d\'audio de référence et la fait parler dans 17 langues. Il s\'exécute via le [kit Coqui TTS](/fr/power-local-llm/coqui-tts-review) — le fork activement maintenu est [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) — ou peut être utilisé de manière autonome via les poids du modèle. Cet avis couvre ce que fait réellement XTTS v2, des commandes d\'utilisation réelles, sa licence (la Coqui Public Model License, CPML, non commerciale) et où il est ou non le bon outil, car Coqui AI, l\'entreprise qui l\'a publié à l\'origine, a fermé ses services payants en décembre 2023.',
     metaDescription:
@@ -959,8 +959,8 @@ for chunk in tts.tts_stream(
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/xtts-v2-review-hero-es.webp',
-    title: 'XTTS v2: análisis (2026) — clonación de voz multilingüe desde 6 segundos de audio',
-    seoTitle: 'XTTS v2: análisis 2026 — clonación de voz multilingüe',
+    title: 'XTTS v2: análisis — clonación de voz multilingüe desde 6 segundos de audio',
+    seoTitle: 'XTTS v2: análisis — clonación de voz multilingüe',
     intro:
       'XTTS v2 es un modelo de clonación de voz multilingüe publicado por Coqui, distribuido en [Hugging Face](https://huggingface.co/coqui/XTTS-v2), que clona una voz a partir de apenas 6 segundos de audio de referencia y la hace hablar en 17 idiomas. Se ejecuta a través del [kit de herramientas Coqui TTS](/es/power-local-llm/coqui-tts-review) — el fork mantenido activamente es [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) — o puede usarse de forma independiente mediante los pesos del modelo. Este análisis cubre qué hace realmente XTTS v2, comandos de uso reales, su licencia (la Coqui Public Model License, CPML, no comercial) y cuándo es o no la herramienta adecuada, ya que Coqui AI, la empresa que lo publicó originalmente, cerró sus servicios de pago en diciembre de 2023.',
     metaDescription:
@@ -1274,8 +1274,8 @@ for chunk in tts.tts_stream(
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/xtts-v2-review-hero-ja.webp',
-    title: 'XTTS v2レビュー(2026):わずか6秒の音声から多言語ボイスクローニング',
-    seoTitle: 'XTTS v2レビュー2026:多言語ボイスクローニング',
+    title: 'XTTS v2レビュー:わずか6秒の音声から多言語ボイスクローニング',
+    seoTitle: 'XTTS v2レビュー:多言語ボイスクローニング',
     intro:
       'XTTS v2はCoquiが公開した多言語ボイスクローニングモデルで、[Hugging Face](https://huggingface.co/coqui/XTTS-v2)で配布されており、わずか6秒の参照音声から声をクローンし、17言語で話させることができます。実行には[Coqui TTSツールキット](/ja/power-local-llm/coqui-tts-review)を使う方法が中心で、活発にメンテナンスされているフォークは[idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)です。モデルの重みを直接使って単独で利用することもできます。このレビューでは、XTTS v2が実際に何をするか、実際の使用コマンド、そのライセンス(非商用のCoqui Public Model License、CPML)、そしてどこで使うべきか・使うべきでないかを扱います。なぜなら、これを当初公開した企業Coqui AIは2023年12月に有料サービスを終了しているからです。',
     metaDescription:
@@ -1589,8 +1589,8 @@ for chunk in tts.tts_stream(
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/xtts-v2-review-hero-pt.webp',
-    title: 'XTTS v2: análise (2026) — clonagem de voz multilíngue a partir de 6 segundos de áudio',
-    seoTitle: 'XTTS v2: análise 2026 — clonagem de voz multilíngue',
+    title: 'XTTS v2: análise — clonagem de voz multilíngue a partir de 6 segundos de áudio',
+    seoTitle: 'XTTS v2: análise — clonagem de voz multilíngue',
     intro:
       'O XTTS v2 é um modelo de clonagem de voz multilíngue lançado pela Coqui, distribuído no [Hugging Face](https://huggingface.co/coqui/XTTS-v2), que clona uma voz a partir de apenas 6 segundos de áudio de referência e a faz falar em 17 idiomas. Ele roda através do [kit de ferramentas Coqui TTS](/pt/power-local-llm/coqui-tts-review) — o fork mantido ativamente é o [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) — ou pode ser usado de forma independente pelos pesos do modelo. Esta análise cobre o que o XTTS v2 realmente faz, comandos de uso reais, sua licença (a Coqui Public Model License, CPML, não comercial) e onde ele é ou não a ferramenta certa, já que a Coqui AI, a empresa que o lançou originalmente, encerrou seus serviços pagos em dezembro de 2023.',
     metaDescription:
@@ -1904,8 +1904,8 @@ for chunk in tts.tts_stream(
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/xtts-v2-review-hero-ar.webp',
-    title: 'مراجعة XTTS v2 (2026): استنساخ صوتي متعدد اللغات من 6 ثوانٍ من الصوت',
-    seoTitle: 'مراجعة XTTS v2 2026: استنساخ صوتي متعدد اللغات',
+    title: 'مراجعة XTTS v2: استنساخ صوتي متعدد اللغات من 6 ثوانٍ من الصوت',
+    seoTitle: 'مراجعة XTTS v2: استنساخ صوتي متعدد اللغات',
     intro:
       'XTTS v2 هو نموذج استنساخ صوتي متعدد اللغات أصدرته Coqui، ومتوفر على [Hugging Face](https://huggingface.co/coqui/XTTS-v2)، يستنسخ صوتًا من 6 ثوانٍ فقط من صوت مرجعي ويجعله يتحدث بـ17 لغة. يعمل عبر [أدوات Coqui TTS](/ar/power-local-llm/coqui-tts-review) — والنسخة المُصانة بنشاط هي [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) — أو يمكن استخدامه بشكل مستقل عبر أوزان النموذج مباشرة. تتناول هذه المراجعة ما يفعله XTTS v2 فعليًا، وأوامر استخدام حقيقية، ورخصته (رخصة Coqui Public Model License، أو CPML، وهي رخصة غير تجارية)، ومتى يكون الأداة المناسبة ومتى لا يكون كذلك، إذ إن شركة Coqui AI التي أصدرته في الأصل أوقفت خدماتها المدفوعة في ديسمبر 2023.',
     metaDescription:
@@ -2219,8 +2219,8 @@ for chunk in tts.tts_stream(
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/xtts-v2-review-hero-zh.webp',
-    title: 'XTTS v2 评测(2026):仅需6秒音频即可实现多语言声音克隆',
-    seoTitle: 'XTTS v2 评测 2026:多语言声音克隆',
+    title: 'XTTS v2 评测:仅需6秒音频即可实现多语言声音克隆',
+    seoTitle: 'XTTS v2 评测:多语言声音克隆',
     intro:
       'XTTS v2 是 Coqui 发布的多语言声音克隆模型,发布于 [Hugging Face](https://huggingface.co/coqui/XTTS-v2),仅需 6 秒参考音频即可克隆一个声音,并让其用 17 种语言说话。它通过 [Coqui TTS 工具包](/zh/power-local-llm/coqui-tts-review) 运行——目前积极维护的分支是 [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)——也可以直接使用模型权重独立运行。本评测介绍 XTTS v2 实际能做什么、真实的使用命令、其许可证(非商业性质的 Coqui Public Model License,CPML),以及它适合与不适合的场景,因为最初发布它的公司 Coqui AI 已于 2023 年 12 月关闭了其付费服务。',
     metaDescription:
@@ -2534,8 +2534,8 @@ for chunk in tts.tts_stream(
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/xtts-v2-review-hero-ko.webp',
-    title: 'XTTS v2 리뷰(2026): 단 6초의 오디오로 만드는 다국어 음성 클로닝',
-    seoTitle: 'XTTS v2 리뷰 2026: 다국어 음성 클로닝',
+    title: 'XTTS v2 리뷰: 단 6초의 오디오로 만드는 다국어 음성 클로닝',
+    seoTitle: 'XTTS v2 리뷰: 다국어 음성 클로닝',
     intro:
       'XTTS v2는 Coqui가 공개한 다국어 음성 클로닝 모델로, [Hugging Face](https://huggingface.co/coqui/XTTS-v2)에 배포되어 있으며, 단 6초의 참조 오디오만으로 목소리를 복제해 17개 언어로 말하게 할 수 있습니다. 이 모델은 [Coqui TTS 툴킷](/ko/power-local-llm/coqui-tts-review)을 통해 실행되며, 현재 활발히 유지 관리되는 포크는 [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS)입니다. 모델 가중치를 직접 사용해 독립적으로 실행할 수도 있습니다. 이 리뷰에서는 XTTS v2가 실제로 무엇을 하는지, 실제 사용 명령어, 라이선스(비상업용인 Coqui Public Model License, CPML), 그리고 이 모델이 적합한 경우와 그렇지 않은 경우를 다룹니다. 이 모델을 처음 공개한 회사 Coqui AI가 2023년 12월에 유료 서비스를 종료했기 때문입니다.',
     metaDescription:

@@ -16,8 +16,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Developers evaluating a local-first AI coding IDE that lets them choose their own LLM provider instead of being locked to one vendor',
     primaryTerm: 'Bodega One Code',
-    title: 'Bodega One Code Review (2026): A Local-First BYOLLM Coding IDE',
-    seoTitle: 'Bodega One Code Review 2026: BYOLLM Coding IDE',
+    title: 'Bodega One Code Review: A Local-First BYOLLM Coding IDE',
+    seoTitle: 'Bodega One Code Review: BYOLLM Coding IDE',
     intro:
       'Bodega One Code is a coding IDE that bundles a code editor, an AI chat panel, and an autonomous coding agent into one application that runs on your own machine. The distinguishing idea is "Bring Your Own LLM" (BYOLLM): instead of shipping with one fixed model provider, Bodega One Code lets you point it at Ollama, LM Studio, llama.cpp, or a cloud API like OpenAI or Anthropic, and — according to the product — switch between them without restarting. This review covers what the IDE includes, how the provider system and the agent work according to Bodega One Code\'s own product pages, what the current pricing and licensing terms are, and how it compares to other local-capable coding tools like Continue.dev, Cline, and Aider.',
     metaDescription:
@@ -363,8 +363,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die eine lokal-first KI-Coding-IDE evaluieren, bei der sie selbst den LLM-Anbieter wählen können, statt an einen Anbieter gebunden zu sein',
     primaryTerm: 'Bodega One Code',
-    title: 'Bodega One Code im Test (2026): Eine lokal-first BYOLLM-Coding-IDE',
-    seoTitle: 'Bodega One Code Test 2026: BYOLLM-Coding-IDE',
+    title: 'Bodega One Code im Test: Eine lokal-first BYOLLM-Coding-IDE',
+    seoTitle: 'Bodega One Code Test: BYOLLM-Coding-IDE',
     intro:
       'Bodega One Code ist eine Coding-IDE, die einen Code-Editor, ein KI-Chat-Fenster und einen autonomen Coding-Agenten in einer Anwendung bündelt, die auf dem eigenen Rechner läuft. Das zentrale Konzept ist „Bring Your Own LLM" (BYOLLM): Statt fest an einen Modellanbieter gebunden zu sein, lässt sich Bodega One Code auf Ollama, LM Studio, llama.cpp oder eine Cloud-API wie OpenAI oder Anthropic ausrichten — laut Hersteller lässt sich dabei zwischen Anbietern wechseln, ohne die Anwendung neu zu starten. Dieser Test beschreibt, was die IDE laut den eigenen Produktseiten von Bodega One Code enthält, wie das Anbieter- und Agentensystem funktioniert, welche Preis- und Lizenzbedingungen aktuell gelten und wie das Tool im Vergleich zu anderen lokal-fähigen Coding-Tools wie Continue.dev, Cline und Aider abschneidet.',
     metaDescription:
@@ -724,8 +724,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Développeurs évaluant un IDE de codage local-first qui leur laisse choisir leur propre fournisseur de LLM plutôt que d\'être liés à un seul fournisseur',
     primaryTerm: 'Bodega One Code',
-    title: 'Bodega One Code (2026) : un IDE de codage local-first BYOLLM',
-    seoTitle: 'Bodega One Code 2026 : IDE de codage BYOLLM',
+    title: 'Bodega One Code: un IDE de codage local-first BYOLLM',
+    seoTitle: 'Bodega One Code: IDE de codage BYOLLM',
     intro:
       'Bodega One Code est un IDE de codage qui réunit un éditeur de code, un panneau de chat IA et un agent de codage autonome dans une seule application qui s\'exécute sur votre propre machine. L\'idée centrale est le « Bring Your Own LLM » (BYOLLM, apportez votre propre LLM) : au lieu d\'être livré avec un fournisseur de modèle fixe, Bodega One Code peut être connecté à Ollama, LM Studio, llama.cpp, ou à une API cloud comme OpenAI ou Anthropic — et, selon l\'éditeur, permet de changer de fournisseur sans redémarrer l\'application. Cette évaluation détaille ce que contient l\'IDE d\'après les propres pages produit de Bodega One Code, le fonctionnement du système de fournisseurs et de l\'agent, les conditions de prix et de licence actuelles, et comment l\'outil se compare à d\'autres outils de codage compatibles local comme Continue.dev, Cline et Aider.',
     metaDescription:
@@ -1085,8 +1085,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores que evalúan un IDE de codificación local-first que les permite elegir su propio proveedor de LLM en lugar de depender de un único proveedor',
     primaryTerm: 'Bodega One Code',
-    title: 'Bodega One Code (2026): un IDE de codificación local-first BYOLLM',
-    seoTitle: 'Bodega One Code 2026: IDE de codificación BYOLLM',
+    title: 'Bodega One Code: un IDE de codificación local-first BYOLLM',
+    seoTitle: 'Bodega One Code: IDE de codificación BYOLLM',
     intro:
       'Bodega One Code es un IDE de codificación que combina un editor de código, un panel de chat con IA y un agente de codificación autónomo en una sola aplicación que se ejecuta en tu propia máquina. La idea central es "Bring Your Own LLM" (BYOLLM): en lugar de venir atado a un único proveedor de modelo, Bodega One Code puede conectarse a Ollama, LM Studio, llama.cpp o a una API en la nube como OpenAI o Anthropic, y, según el fabricante, permite cambiar de proveedor sin reiniciar la aplicación. Esta reseña cubre qué incluye el IDE según las propias páginas de producto de Bodega One Code, cómo funcionan el sistema de proveedores y el agente, cuáles son los términos de precio y licencia actuales, y cómo se compara con otras herramientas de codificación con capacidad local como Continue.dev, Cline y Aider.',
     metaDescription:
@@ -1446,8 +1446,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores avaliando uma IDE de codificação local-first que permite escolher o próprio provedor de LLM em vez de ficar preso a um único fornecedor',
     primaryTerm: 'Bodega One Code',
-    title: 'Bodega One Code (2026): uma IDE de codificação local-first BYOLLM',
-    seoTitle: 'Bodega One Code 2026: IDE de codificação BYOLLM',
+    title: 'Bodega One Code: uma IDE de codificação local-first BYOLLM',
+    seoTitle: 'Bodega One Code: IDE de codificação BYOLLM',
     intro:
       'Bodega One Code é uma IDE de codificação que reúne um editor de código, um painel de chat com IA e um agente de codificação autônomo em um único aplicativo executado na sua própria máquina. A ideia central é "Bring Your Own LLM" (BYOLLM): em vez de vir vinculada a um único provedor de modelo, a Bodega One Code pode ser conectada ao Ollama, LM Studio, llama.cpp ou a uma API na nuvem como OpenAI ou Anthropic, e, segundo o fabricante, permite trocar de provedor sem reiniciar o aplicativo. Esta análise cobre o que a IDE inclui segundo as próprias páginas de produto da Bodega One Code, como funcionam o sistema de provedores e o agente, quais são os termos atuais de preço e licenciamento, e como ela se compara a outras ferramentas de codificação com capacidade local, como Continue.dev, Cline e Aider.',
     metaDescription:
@@ -1807,8 +1807,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'LLMプロバイダーを自分で選べるローカルファーストのAIコーディングIDEを検討している開発者',
     primaryTerm: 'Bodega One Code',
-    title: 'Bodega One Codeレビュー（2026年）：BYOLLM対応のローカルファーストIDE',
-    seoTitle: 'Bodega One Codeレビュー2026：BYOLLM IDE',
+    title: 'Bodega One Codeレビュー：BYOLLM対応のローカルファーストIDE',
+    seoTitle: 'Bodega One Codeレビュー：BYOLLM IDE',
     intro:
       'Bodega One Codeは、コードエディタ、AIチャット、自律型コーディングエージェントを1つのアプリにまとめ、自分のマシン上で動作させるコーディングIDEです。中心となる考え方は「Bring Your Own LLM」（BYOLLM）：1つのモデルプロバイダーに固定されるのではなく、Ollama、LM Studio、llama.cpp、あるいはOpenAIやAnthropicなどのクラウドAPIに接続でき、Bodega One Codeによれば、アプリを再起動せずにプロバイダーを切り替えられるとされています。本レビューでは、Bodega One Code自身の製品ページに基づきIDEに何が含まれるか、プロバイダーとエージェントの仕組み、現在の価格とライセンス条件、そしてContinue.dev、Cline、Aiderといった他のローカル対応コーディングツールとの比較を扱います。',
     metaDescription:
@@ -2168,8 +2168,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     audience: '正在评估本地优先AI编程IDE、希望自行选择LLM提供商而非被单一厂商锁定的开发者',
     primaryTerm: 'Bodega One Code',
-    title: 'Bodega One Code评测（2026）：本地优先的BYOLLM编程IDE',
-    seoTitle: 'Bodega One Code评测2026：BYOLLM编程IDE',
+    title: 'Bodega One Code评测：本地优先的BYOLLM编程IDE',
+    seoTitle: 'Bodega One Code评测：BYOLLM编程IDE',
     intro:
       'Bodega One Code是一款编程IDE，将代码编辑器、AI聊天面板和自主编程代理整合到一个在你自己电脑上运行的应用中。其核心理念是"自带LLM"（BYOLLM）：Bodega One Code不绑定单一模型提供商，而是可以连接Ollama、LM Studio、llama.cpp，或OpenAI、Anthropic等云端API，据厂商介绍，无需重启应用即可切换提供商。本评测基于Bodega One Code官方产品页面，介绍该IDE包含哪些内容、提供商与代理系统如何运作、当前的价格与许可条款，以及它与Continue.dev、Cline、Aider等其他支持本地部署的编程工具相比如何。',
     metaDescription:
@@ -2529,8 +2529,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'المطورون الذين يقيّمون بيئة تطوير متكاملة محلية أولاً تتيح لهم اختيار مزود LLM الخاص بهم بدلاً من الارتباط بمزود واحد',
     primaryTerm: 'Bodega One Code',
-    title: 'مراجعة Bodega One Code (2026): بيئة تطوير محلية أولاً بنظام BYOLLM',
-    seoTitle: 'مراجعة Bodega One Code 2026: بيئة تطوير BYOLLM',
+    title: 'مراجعة Bodega One Code: بيئة تطوير محلية أولاً بنظام BYOLLM',
+    seoTitle: 'مراجعة Bodega One Code: بيئة تطوير BYOLLM',
     intro:
       'Bodega One Code هي بيئة تطوير برمجي (IDE) تجمع بين محرر أكواد، ولوحة محادثة بالذكاء الاصطناعي، ووكيل برمجة مستقل، في تطبيق واحد يعمل على جهازك الخاص. الفكرة المركزية هي "أحضر نموذج اللغة الخاص بك" (BYOLLM): بدلاً من الارتباط بمزود نموذج واحد ثابت، يمكن توجيه Bodega One Code نحو Ollama أو LM Studio أو llama.cpp أو واجهة برمجة تطبيقات سحابية مثل OpenAI أو Anthropic، ووفقًا للشركة المصنّعة، يمكن التبديل بين المزودين دون إعادة تشغيل التطبيق. تتناول هذه المراجعة ما تتضمنه بيئة التطوير وفقًا لصفحات المنتج الخاصة بـBodega One Code نفسها، وكيفية عمل نظام المزودين والوكيل، وشروط التسعير والترخيص الحالية، وكيف تقارن بأدوات برمجة أخرى قادرة على العمل محليًا مثل Continue.dev وCline وAider.',
     metaDescription:
@@ -2890,8 +2890,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     audience: '단일 공급업체에 종속되지 않고 직접 LLM 제공업체를 선택할 수 있는 로컬 우선 AI 코딩 IDE를 검토 중인 개발자',
     primaryTerm: 'Bodega One Code',
-    title: 'Bodega One Code 리뷰(2026): 로컬 우선 BYOLLM 코딩 IDE',
-    seoTitle: 'Bodega One Code 리뷰 2026: BYOLLM 코딩 IDE',
+    title: 'Bodega One Code 리뷰: 로컬 우선 BYOLLM 코딩 IDE',
+    seoTitle: 'Bodega One Code 리뷰: BYOLLM 코딩 IDE',
     intro:
       'Bodega One Code는 코드 편집기, AI 채팅 패널, 자율 코딩 에이전트를 하나의 애플리케이션으로 묶어 자신의 컴퓨터에서 실행하는 코딩 IDE입니다. 핵심 개념은 "직접 LLM 가져오기"(BYOLLM)입니다. 하나의 모델 제공업체에 고정되는 대신, Bodega One Code는 Ollama, LM Studio, llama.cpp 또는 OpenAI나 Anthropic 같은 클라우드 API를 가리키도록 설정할 수 있으며, 제조사에 따르면 앱을 재시작하지 않고도 제공업체를 전환할 수 있습니다. 이 리뷰는 Bodega One Code 자체 제품 페이지를 근거로 IDE에 포함된 내용, 제공업체 및 에이전트 시스템의 작동 방식, 현재 가격 및 라이선스 조건, 그리고 Continue.dev, Cline, Aider 같은 다른 로컬 지원 코딩 도구와의 비교를 다룹니다.',
     metaDescription:

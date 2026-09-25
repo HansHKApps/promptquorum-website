@@ -14,8 +14,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-en.webp',
-    title: 'Layla Review (2026): On-Device AI Companion App for Android and iOS',
-    seoTitle: 'Layla Review 2026: Local AI Companion App, Pricing & Privacy',
+    title: 'Layla Review: On-Device AI Companion App for Android and iOS',
+    seoTitle: 'Layla Review: Local AI Companion App, Pricing & Privacy',
     intro:
       'Layla, made by [Layla Network Pty Ltd](https://www.layla-network.ai) — an Australia-registered company also linked on GitHub to developer [l3utterfly](https://github.com/l3utterfly), who publishes the "Layla" family of fine-tuned open-weight models — is a paid app for Android and iOS built around running a personal AI companion locally on your phone, with persona, roleplay, and character features that go beyond plain chat. It costs [$19.99 as a one-time app purchase](https://apps.apple.com/us/app/layla/id6456886656) on both the App Store and Google Play, on top of which the App Store listing shows three named in-app purchase tiers. Layla\'s core chat is designed to run entirely on-device using GGUF models via llama.cpp, but the app also ships an optional, separately consented cloud mode called Layla Cloud that is not on by default — this review covers exactly what runs locally, what does not, what it actually costs, and who it fits, based on the developer\'s own privacy policy, app store listings, and public documentation rather than independent hands-on testing.',
     metaDescription:
@@ -546,8 +546,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-de.webp',
-    title: 'Layla im Test (2026): KI-Begleiter-App für Android und iOS auf dem Gerät',
-    seoTitle: 'Layla Test 2026: Lokale KI-Begleiter-App, Preise & Datenschutz',
+    title: 'Layla im Test: KI-Begleiter-App für Android und iOS auf dem Gerät',
+    seoTitle: 'Layla Test: Lokale KI-Begleiter-App, Preise & Datenschutz',
     intro:
       'Layla, entwickelt von [Layla Network Pty Ltd](https://www.layla-network.ai) — einem in Australien registrierten Unternehmen, das auf GitHub auch mit dem Entwickler [l3utterfly](https://github.com/l3utterfly) verknüpft ist, der die "Layla"-Familie feinabgestimmter Open-Weight-Modelle veröffentlicht —, ist eine kostenpflichtige App für Android und iOS, die auf einem lokal auf dem Smartphone laufenden persönlichen KI-Begleiter aufbaut, mit Persona-, Rollenspiel- und Charakterfunktionen, die über einen einfachen Chat hinausgehen. Sie kostet [19,99 $ als einmaligen App-Kauf](https://apps.apple.com/us/app/layla/id6456886656) sowohl im App Store als auch bei Google Play; zusätzlich zeigt der App-Store-Eintrag drei benannte In-App-Kauf-Stufen. Laylas Kern-Chat ist so ausgelegt, dass er vollständig auf dem Gerät über GGUF-Modelle mit llama.cpp läuft, doch die App bietet zusätzlich einen optionalen, separat zustimmungspflichtigen Cloud-Modus namens Layla Cloud, der nicht standardmäßig aktiv ist — dieser Test zeigt genau, was tatsächlich lokal läuft, was nicht, was die App wirklich kostet und für wen sie geeignet ist, basierend auf der eigenen Datenschutzrichtlinie des Entwicklers, den App-Store-Einträgen und öffentlicher Dokumentation statt auf eigenständigen praktischen Tests.',
     metaDescription:
@@ -1045,8 +1045,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-es.webp',
-    title: 'Layla: Análisis (2026): App de Compañero de IA en el Dispositivo para Android e iOS',
-    seoTitle: 'Layla Análisis 2026: App de IA Local, Precios y Privacidad',
+    title: 'Layla: Análisis: App de Compañero de IA en el Dispositivo para Android e iOS',
+    seoTitle: 'Layla Análisis: App de IA Local, Precios y Privacidad',
     intro:
       'Layla, creada por [Layla Network Pty Ltd](https://www.layla-network.ai) —una empresa registrada en Australia también vinculada en GitHub al desarrollador [l3utterfly](https://github.com/l3utterfly), quien publica la familia de modelos de peso abierto ajustados "Layla"—, es una app de pago para Android e iOS centrada en ejecutar un compañero de IA personal de forma local en el teléfono, con funciones de persona, rol y personaje que van más allá del chat simple. Cuesta [$19.99 como compra única](https://apps.apple.com/us/app/layla/id6456886656) tanto en la App Store como en Google Play, y además la ficha de la App Store muestra tres niveles de compra dentro de la app. El chat principal de Layla está diseñado para ejecutarse completamente en el dispositivo mediante modelos GGUF con llama.cpp, pero la app también incluye un modo en la nube opcional y con consentimiento aparte llamado Layla Cloud, que no está activo por defecto. Este análisis explica exactamente qué se ejecuta localmente, qué no, cuánto cuesta realmente y para quién es adecuada, basado en la política de privacidad del propio desarrollador, las fichas de las tiendas de apps y documentación pública, no en pruebas prácticas independientes.',
     metaDescription:
@@ -1544,8 +1544,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-fr.webp',
-    title: 'Layla : Avis (2026) — Application de Compagnon IA Local pour Android et iOS',
-    seoTitle: 'Layla Avis 2026 : App IA Locale, Prix et Confidentialité',
+    title: 'Layla: Avis — Application de Compagnon IA Local pour Android et iOS',
+    seoTitle: 'Layla Avis: App IA Locale, Prix et Confidentialité',
     intro:
       'Layla, développée par [Layla Network Pty Ltd](https://www.layla-network.ai) — une société enregistrée en Australie également liée sur GitHub au développeur [l3utterfly](https://github.com/l3utterfly), qui publie la famille de modèles à poids ouverts affinés "Layla" —, est une application payante pour Android et iOS conçue autour d\'un compagnon IA personnel fonctionnant localement sur le téléphone, avec des fonctionnalités de persona, de jeu de rôle et de personnage qui vont au-delà du simple chat. Elle coûte [19,99 $ en achat unique](https://apps.apple.com/us/app/layla/id6456886656) sur l\'App Store comme sur Google Play, et la fiche de l\'App Store affiche en plus trois paliers d\'achat intégré nommés. Le chat principal de Layla est conçu pour fonctionner entièrement sur l\'appareil via des modèles GGUF avec llama.cpp, mais l\'application propose également un mode cloud optionnel et activé séparément, appelé Layla Cloud, qui n\'est pas actif par défaut — cet avis détaille précisément ce qui fonctionne réellement en local, ce qui n\'y fonctionne pas, ce que cela coûte réellement et à qui l\'application convient, sur la base de la politique de confidentialité du développeur, des fiches des boutiques d\'applications et de la documentation publique, et non de tests pratiques indépendants.',
     metaDescription:
@@ -2043,8 +2043,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-ja.webp',
-    title: 'Layla レビュー(2026):Android・iOS向けオンデバイスAIコンパニオンアプリ',
-    seoTitle: 'Layla レビュー2026:ローカルAIコンパニオンアプリの料金とプライバシー',
+    title: 'Layla レビュー:Android・iOS向けオンデバイスAIコンパニオンアプリ',
+    seoTitle: 'Layla レビュー:ローカルAIコンパニオンアプリの料金とプライバシー',
     intro:
       '[Layla Network Pty Ltd](https://www.layla-network.ai)（オーストラリアで登記された企業で、GitHub上では"Layla"ブランドのファインチューニング済みオープンウェイトモデルを公開する開発者[l3utterfly](https://github.com/l3utterfly)とも関連付けられています)が手がけるLaylaは、スマートフォン上でローカルに動作するパーソナルAIコンパニオンを軸に、単なるチャットにとどまらないペルソナ・ロールプレイ・キャラクター機能を備えたAndroidとiOS向けの有料アプリです。App StoreとGoogle Playの両方で[19.99ドルの買い切り](https://apps.apple.com/us/app/layla/id6456886656)で、App Storeの掲載情報にはさらに名前付きのアプリ内課金プランが3種類表示されています。Laylaのコアチャットはllama.cppを使ってGGUFモデルを完全に端末上で動かすよう設計されていますが、アプリには「Layla Cloud」というデフォルトでは有効ではない、別途同意が必要なオプションのクラウドモードも用意されています。本レビューは、実際にローカルで動く部分・動かない部分、実際の料金、そしてどのような読者に向いているかを、独自のハンズオンテストではなく、開発者自身のプライバシーポリシー、アプリストアの掲載情報、公開ドキュメントに基づいて解説します。',
     metaDescription:
@@ -2542,8 +2542,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-pt.webp',
-    title: 'Layla: Análise (2026) — App de Companheiro de IA no Dispositivo para Android e iOS',
-    seoTitle: 'Layla Análise 2026: App de IA Local, Preço e Privacidade',
+    title: 'Layla: Análise — App de Companheiro de IA no Dispositivo para Android e iOS',
+    seoTitle: 'Layla Análise: App de IA Local, Preço e Privacidade',
     intro:
       'A Layla, criada pela [Layla Network Pty Ltd](https://www.layla-network.ai) — uma empresa registrada na Austrália também vinculada no GitHub ao desenvolvedor [l3utterfly](https://github.com/l3utterfly), que publica a família de modelos de peso aberto ajustados "Layla" —, é um app pago para Android e iOS voltado para executar um companheiro de IA pessoal localmente no celular, com recursos de persona, roleplay e personagens que vão além do chat simples. Custa [$19,99 em compra única](https://apps.apple.com/us/app/layla/id6456886656) tanto na App Store quanto no Google Play, e a ficha da App Store ainda mostra três níveis de compra dentro do app com nomes próprios. O chat principal da Layla é projetado para rodar inteiramente no dispositivo usando modelos GGUF via llama.cpp, mas o app também traz um modo de nuvem opcional e ativado separadamente, chamado Layla Cloud, que não vem ativado por padrão — esta análise mostra exatamente o que roda localmente, o que não roda, quanto custa de fato e para quem o app é indicado, com base na própria política de privacidade do desenvolvedor, nas fichas das lojas de apps e em documentação pública, e não em testes práticos independentes.',
     metaDescription:
@@ -3041,8 +3041,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-ar.webp',
-    title: 'مراجعة Layla (2026): تطبيق رفيق ذكاء اصطناعي على الجهاز لأندرويد و iOS',
-    seoTitle: 'مراجعة Layla 2026: تطبيق ذكاء اصطناعي محلي، السعر والخصوصية',
+    title: 'مراجعة Layla: تطبيق رفيق ذكاء اصطناعي على الجهاز لأندرويد و iOS',
+    seoTitle: 'مراجعة Layla: تطبيق ذكاء اصطناعي محلي، السعر والخصوصية',
     intro:
       'تطبيق Layla، من تطوير [Layla Network Pty Ltd](https://www.layla-network.ai) — شركة مسجّلة في أستراليا ومرتبطة أيضاً على GitHub بالمطوّر [l3utterfly](https://github.com/l3utterfly) الذي ينشر عائلة نماذج "Layla" ذات الأوزان المفتوحة المضبوطة —، هو تطبيق مدفوع لأندرويد و iOS مبني حول تشغيل رفيق ذكاء اصطناعي شخصي محلياً على الهاتف، مع ميزات شخصية (persona) ولعب أدوار وشخصيات تتجاوز الدردشة البسيطة. سعره [19.99 دولاراً كشراء لمرة واحدة](https://apps.apple.com/us/app/layla/id6456886656) على متجر App Store ومتجر Google Play، وتُظهر صفحة App Store أيضاً ثلاث فئات شراء داخل التطبيق باسم محدد. صُمّمت الدردشة الأساسية في Layla لتعمل بالكامل على الجهاز باستخدام نماذج GGUF عبر llama.cpp، لكن التطبيق يتضمن أيضاً وضعاً سحابياً اختيارياً يُفعَّل بشكل منفصل يُسمى Layla Cloud وغير مفعّل افتراضياً — تشرح هذه المراجعة بدقة ما يعمل فعلياً محلياً وما لا يعمل، والتكلفة الحقيقية، ومن يناسبه التطبيق، استناداً إلى سياسة خصوصية المطوّر نفسه وصفحات متاجر التطبيقات والوثائق العامة، وليس إلى اختبارات عملية مستقلة.',
     metaDescription:
@@ -3540,8 +3540,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-zh.webp',
-    title: 'Layla 评测(2026):面向 Android 和 iOS 的本地 AI 伴侣应用',
-    seoTitle: 'Layla 评测2026:本地 AI 伴侣应用价格与隐私解析',
+    title: 'Layla 评测:面向 Android 和 iOS 的本地 AI 伴侣应用',
+    seoTitle: 'Layla 评测:本地 AI 伴侣应用价格与隐私解析',
     intro:
       'Layla 由 [Layla Network Pty Ltd](https://www.layla-network.ai) 开发——这是一家在澳大利亚注册的公司,在 GitHub 上也与开发者 [l3utterfly](https://github.com/l3utterfly) 有关联,后者发布了"Layla"系列经过微调的开放权重模型——是一款面向 Android 和 iOS 的付费应用,核心是在手机上本地运行个人 AI 伴侣,具备超越普通聊天的人设、角色扮演和角色功能。该应用在 App Store 和 Google Play 上均为[一次性付费 19.99 美元](https://apps.apple.com/us/app/layla/id6456886656),App Store 页面还显示了三档具名的应用内购买选项。Layla 的核心聊天功能设计为完全通过 llama.cpp 在设备本地运行 GGUF 模型,但该应用还提供一个默认未启用、需单独同意开启的可选云端模式,名为 Layla Cloud。本评测基于开发商自身的隐私政策、应用商店页面信息和公开文档,而非独立的实测,详细说明了究竟哪些部分真正在本地运行、哪些没有、实际费用如何,以及这款应用适合哪些用户。',
     metaDescription:
@@ -4039,8 +4039,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-ko.webp',
-    title: 'Layla 리뷰(2026): Android·iOS용 온디바이스 AI 컴패니언 앱',
-    seoTitle: 'Layla 리뷰 2026: 로컬 AI 컴패니언 앱 가격 및 개인정보',
+    title: 'Layla 리뷰: Android·iOS용 온디바이스 AI 컴패니언 앱',
+    seoTitle: 'Layla 리뷰: 로컬 AI 컴패니언 앱 가격 및 개인정보',
     intro:
       'Layla는 [Layla Network Pty Ltd](https://www.layla-network.ai)가 개발했습니다. 이 회사는 호주에 등록되어 있으며, GitHub에서는 "Layla" 브랜드의 파인튜닝된 오픈 웨이트 모델을 공개하는 개발자 [l3utterfly](https://github.com/l3utterfly)와도 연관되어 있습니다. Layla는 스마트폰에서 로컬로 실행되는 개인 AI 컴패니언을 중심으로 설계된 Android·iOS용 유료 앱으로, 단순한 채팅을 넘어선 페르소나·롤플레이·캐릭터 기능을 갖추고 있습니다. App Store와 Google Play 모두에서 [19.99달러 일회성 구매](https://apps.apple.com/us/app/layla/id6456886656)로 제공되며, App Store 페이지에는 이름이 붙은 앱 내 구매 등급 3종도 표시되어 있습니다. Layla의 핵심 채팅 기능은 llama.cpp를 통해 GGUF 모델을 기기에서 완전히 실행하도록 설계되어 있지만, 기본적으로 활성화되어 있지 않고 별도 동의가 필요한 선택적 클라우드 모드인 Layla Cloud도 함께 제공됩니다. 이 리뷰는 자체적인 실사용 테스트가 아니라 개발사 자체의 개인정보 처리방침, 앱스토어 게재 정보, 공개 문서를 근거로 실제로 무엇이 로컬에서 작동하고 무엇이 그렇지 않은지, 실제 비용은 얼마인지, 어떤 독자에게 적합한지를 정확히 다룹니다.',
     metaDescription:

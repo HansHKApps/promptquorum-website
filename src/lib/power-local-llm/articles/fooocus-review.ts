@@ -18,8 +18,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/fooocus-review-hero-en.webp',
-    title: 'Fooocus Review (2026): The Simplest Local Stable Diffusion UI',
-    seoTitle: 'Fooocus Review 2026: Easiest Local Stable Diffusion UI',
+    title: 'Fooocus Review: The Simplest Local Stable Diffusion UI',
+    seoTitle: 'Fooocus Review: Easiest Local Stable Diffusion UI',
     intro:
       'Fooocus is a free, open-source, offline image-generation interface for Stable Diffusion XL, created by Lvmin Zhang (GitHub handle lllyasviel, also known for [ControlNet](https://github.com/lllyasviel/ControlNet)). It deliberately hides almost every technical control — samplers, CFG scale, resolution grids — behind presets and an automatic prompt-expansion engine, so a reader can go from a blank text box to a finished image in roughly three clicks. This review covers what Fooocus actually does under the hood, its GPL-3.0 license, real hardware requirements, and — most importantly — its honest current maintenance status, since the original repository has publicly stated it is now in bug-fix-only mode.',
     metaDescription:
@@ -349,8 +349,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/fooocus-review-hero-de.webp',
-    title: 'Fooocus Test (2026): Die einfachste lokale Stable-Diffusion-Oberfläche',
-    seoTitle: 'Fooocus Test 2026: Einfachste lokale Stable-Diffusion-UI',
+    title: 'Fooocus Test: Die einfachste lokale Stable-Diffusion-Oberfläche',
+    seoTitle: 'Fooocus Test: Einfachste lokale Stable-Diffusion-UI',
     intro:
       'Fooocus ist eine kostenlose, quelloffene Bildgenerierungs-Oberfläche für Stable Diffusion XL, die vollständig offline läuft. Entwickelt wurde sie von Lvmin Zhang (GitHub-Name lllyasviel), der auch für [ControlNet](https://github.com/lllyasviel/ControlNet) bekannt ist. Fooocus blendet fast alle technischen Einstellungen aus — Sampler, CFG-Skala, Auflösungsraster — und ersetzt sie durch Voreinstellungen sowie eine automatische Prompt-Erweiterung, sodass man in rund drei Klicks vom leeren Textfeld zum fertigen Bild kommt. Dieser Test zeigt, was Fooocus technisch tatsächlich macht, seine GPL-3.0-Lizenz, die realen Hardware-Anforderungen und – besonders wichtig – den ehrlichen aktuellen Wartungsstatus, denn das Original-Repository hat öffentlich erklärt, sich nun im reinen Bugfix-Modus zu befinden.',
     metaDescription:
@@ -680,8 +680,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/fooocus-review-hero-es.webp',
-    title: 'Fooocus: Análisis (2026) de la interfaz local de Stable Diffusion más sencilla',
-    seoTitle: 'Fooocus: Análisis 2026 de la UI local de Stable Diffusion más fácil',
+    title: 'Fooocus: Análisis de la interfaz local de Stable Diffusion más sencilla',
+    seoTitle: 'Fooocus: Análisis de la UI local de Stable Diffusion más fácil',
     intro:
       'Fooocus es una interfaz de generación de imágenes gratuita, de código abierto y totalmente offline para Stable Diffusion XL, creada por Lvmin Zhang (usuario de GitHub lllyasviel, también conocido por [ControlNet](https://github.com/lllyasviel/ControlNet)). Oculta deliberadamente casi todos los controles técnicos — samplers, escala CFG, cuadrículas de resolución — detrás de ajustes preestablecidos y un motor automático de expansión de prompts, de modo que se puede pasar de un cuadro de texto vacío a una imagen terminada en apenas tres clics. Este análisis cubre lo que Fooocus hace realmente por dentro, su licencia GPL-3.0, los requisitos reales de hardware y, sobre todo, su estado de mantenimiento actual, ya que el repositorio original ha declarado públicamente que ahora está en modo de solo corrección de errores.',
     metaDescription:
@@ -1011,8 +1011,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/fooocus-review-hero-fr.webp',
-    title: 'Fooocus : test (2026) de l\'interface Stable Diffusion locale la plus simple',
-    seoTitle: 'Fooocus : test 2026 de l\'UI Stable Diffusion locale la plus facile',
+    title: 'Fooocus: test de l\'interface Stable Diffusion locale la plus simple',
+    seoTitle: 'Fooocus: test de l\'UI Stable Diffusion locale la plus facile',
     intro:
       'Fooocus est une interface de génération d\'images gratuite, open source et entièrement hors ligne pour Stable Diffusion XL, créée par Lvmin Zhang (identifiant GitHub lllyasviel, également connu pour [ControlNet](https://github.com/lllyasviel/ControlNet)). Elle masque délibérément presque tous les réglages techniques — samplers, échelle CFG, grilles de résolution — derrière des préréglages et un moteur automatique d\'expansion de prompt, permettant de passer d\'un champ de texte vide à une image finie en environ trois clics. Ce test présente ce que Fooocus fait réellement en coulisses, sa licence GPL-3.0, les besoins matériels réels et, surtout, son état de maintenance actuel honnête, le dépôt d\'origine ayant publiquement déclaré être désormais en mode correctifs uniquement.',
     metaDescription:
@@ -1342,8 +1342,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/fooocus-review-hero-ja.webp',
-    title: 'Fooocusレビュー(2026):最もシンプルなローカルStable Diffusion UI',
-    seoTitle: 'Fooocusレビュー2026:最も簡単なローカルStable Diffusion UI',
+    title: 'Fooocusレビュー:最もシンプルなローカルStable Diffusion UI',
+    seoTitle: 'Fooocusレビュー:最も簡単なローカルStable Diffusion UI',
     intro:
       'Fooocusは、Stable Diffusion XL向けの無料・オープンソース・完全オフラインの画像生成インターフェースです。開発者はLvmin Zhang氏(GitHubアカウント名lllyasviel、[ControlNet](https://github.com/lllyasviel/ControlNet)の開発者としても知られています)。Fooocusはサンプラー、CFGスケール、解像度グリッドといった技術的な設定のほぼすべてを意図的に隠し、プリセットと自動プロンプト拡張エンジンに置き換えることで、空のテキストボックスから約3クリックで画像が完成する体験を実現しています。このレビューでは、Fooocusが実際に内部で何をしているか、GPL-3.0ライセンス、実際のハードウェア要件、そして最も重要な現在のメンテナンス状況について正直に解説します。オリジナルのリポジトリは公式に、現在はバグ修正のみのモードに入ったと表明しています。',
     metaDescription:
@@ -1673,8 +1673,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/fooocus-review-hero-pt.webp',
-    title: 'Fooocus: Análise (2026) da interface local de Stable Diffusion mais simples',
-    seoTitle: 'Fooocus: Análise 2026 da UI local de Stable Diffusion mais fácil',
+    title: 'Fooocus: Análise da interface local de Stable Diffusion mais simples',
+    seoTitle: 'Fooocus: Análise da UI local de Stable Diffusion mais fácil',
     intro:
       'Fooocus é uma interface de geração de imagens gratuita, de código aberto e totalmente offline para Stable Diffusion XL, criada por Lvmin Zhang (usuário do GitHub lllyasviel, também conhecido pelo [ControlNet](https://github.com/lllyasviel/ControlNet)). Ela oculta deliberadamente quase todos os controles técnicos — samplers, escala CFG, grades de resolução — atrás de predefinições e um mecanismo automático de expansão de prompt, permitindo ir de uma caixa de texto vazia a uma imagem finalizada em cerca de três cliques. Esta análise mostra o que o Fooocus realmente faz por baixo dos panos, sua licença GPL-3.0, os requisitos reais de hardware e, o mais importante, seu status de manutenção atual de forma honesta, já que o repositório original declarou publicamente estar agora em modo de apenas correções de bugs.',
     metaDescription:
@@ -2004,8 +2004,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/fooocus-review-hero-ar.webp',
-    title: 'مراجعة Fooocus (2026): أبسط واجهة محلية لـ Stable Diffusion',
-    seoTitle: 'مراجعة Fooocus 2026: أسهل واجهة محلية لـ Stable Diffusion',
+    title: 'مراجعة Fooocus: أبسط واجهة محلية لـ Stable Diffusion',
+    seoTitle: 'مراجعة Fooocus: أسهل واجهة محلية لـ Stable Diffusion',
     intro:
       'Fooocus هي واجهة مجانية ومفتوحة المصدر لتوليد الصور تعمل بالكامل دون اتصال بالإنترنت، مخصصة لـ Stable Diffusion XL، طوّرها Lvmin Zhang (اسمه على GitHub هو lllyasviel، والمعروف أيضًا بمشروع [ControlNet](https://github.com/lllyasviel/ControlNet)). تُخفي Fooocus عمدًا معظم الإعدادات التقنية — كالـ samplers ومقياس CFG وشبكات الدقة — خلف إعدادات مسبقة ومحرك تلقائي لتوسيع الطلبات النصية (prompt)، بحيث يمكن الانتقال من حقل نص فارغ إلى صورة جاهزة في نحو ثلاث نقرات. تستعرض هذه المراجعة ما تفعله Fooocus فعليًا خلف الكواليس، ورخصة GPL-3.0 الخاصة بها، ومتطلبات الأجهزة الحقيقية، والأهم من ذلك، حالة الصيانة الحالية بصراحة، إذ أعلن المستودع الأصلي علنًا أنه أصبح الآن في وضع إصلاح الأخطاء فقط.',
     metaDescription:
@@ -2335,8 +2335,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/fooocus-review-hero-zh.webp',
-    title: 'Fooocus评测(2026):最简单的本地Stable Diffusion界面',
-    seoTitle: 'Fooocus评测2026:最易用的本地Stable Diffusion UI',
+    title: 'Fooocus评测:最简单的本地Stable Diffusion界面',
+    seoTitle: 'Fooocus评测:最易用的本地Stable Diffusion UI',
     intro:
       'Fooocus是一款免费、开源、完全离线运行的Stable Diffusion XL图像生成界面,由Lvmin Zhang(GitHub用户名lllyasviel,同时也是[ControlNet](https://github.com/lllyasviel/ControlNet)的开发者)创建。它刻意隐藏了几乎所有技术参数——采样器、CFG比例、分辨率网格——转而用预设和自动提示词扩展引擎取代,让用户能在约三次点击内从空白文本框生成一张完整图像。本评测介绍Fooocus实际的工作原理、GPL-3.0许可证、真实硬件需求,以及最重要的一点——诚实说明其当前的维护状态,因为原始仓库已公开声明现已进入仅修复漏洞的阶段。',
     metaDescription:
@@ -2666,8 +2666,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/fooocus-review-hero-ko.webp',
-    title: 'Fooocus 리뷰(2026): 가장 간단한 로컬 Stable Diffusion UI',
-    seoTitle: 'Fooocus 리뷰 2026: 가장 쉬운 로컬 Stable Diffusion UI',
+    title: 'Fooocus 리뷰: 가장 간단한 로컬 Stable Diffusion UI',
+    seoTitle: 'Fooocus 리뷰: 가장 쉬운 로컬 Stable Diffusion UI',
     intro:
       'Fooocus는 Stable Diffusion XL을 위한 무료 오픈소스 오프라인 이미지 생성 인터페이스로, Lvmin Zhang(GitHub 아이디 lllyasviel, [ControlNet](https://github.com/lllyasviel/ControlNet) 개발자로도 잘 알려져 있음)이 만들었습니다. 샘플러, CFG 스케일, 해상도 그리드 같은 기술적 설정 대부분을 의도적으로 숨기고, 프리셋과 자동 프롬프트 확장 엔진으로 대체하여 빈 텍스트 상자에서 완성된 이미지까지 약 세 번의 클릭만으로 도달할 수 있게 설계되었습니다. 이 리뷰에서는 Fooocus가 실제로 내부에서 어떻게 작동하는지, GPL-3.0 라이선스, 실제 하드웨어 요구 사항, 그리고 가장 중요한 현재 유지 관리 상태를 정직하게 다룹니다. 원본 저장소는 현재 버그 수정만 진행하는 상태에 들어갔다고 공식적으로 밝혔습니다.',
     metaDescription:

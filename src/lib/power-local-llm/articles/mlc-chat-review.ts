@@ -17,8 +17,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/mlc-chat-review-hero-en.webp',
-    title: 'MLC Chat Review (2026): The Mobile App Built on MLC LLM, Assessed Honestly',
-    seoTitle: 'MLC Chat Review 2026: iOS, Android & Cross-Platform Setup',
+    title: 'MLC Chat Review: The Mobile App Built on MLC LLM, Assessed Honestly',
+    seoTitle: 'MLC Chat Review: iOS, Android & Cross-Platform Setup',
     intro:
       'MLC Chat is the consumer-facing chat app built on top of the [MLC LLM](https://github.com/mlc-ai/mlc-llm) compiler and runtime — the project PromptQuorum covers in depth in [MLC LLM Explained](/power-local-llm/mlc-llm-explained). This review focuses specifically on the app experience: real download channels, actual setup steps, which models it ships with, and honest limitations, rather than re-explaining the underlying compilation technology. If you want the deeper technical picture of how MLC LLM compiles models for GPU-accelerated inference across platforms, read [MLC LLM Explained](/power-local-llm/mlc-llm-explained) first; this article assumes that context and stays focused on the app itself.',
     metaDescription:
@@ -322,8 +322,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/mlc-chat-review-hero-de.webp',
-    title: 'MLC-Chat-Test (2026): Die mobile App auf Basis von MLC LLM, ehrlich bewertet',
-    seoTitle: 'MLC-Chat-Test 2026: iOS, Android & plattformübergreifendes Setup',
+    title: 'MLC-Chat-Test: Die mobile App auf Basis von MLC LLM, ehrlich bewertet',
+    seoTitle: 'MLC-Chat-Test: iOS, Android & plattformübergreifendes Setup',
     intro:
       'MLC Chat ist die für Endnutzer gedachte Chat-App, die auf dem [MLC LLM](https://github.com/mlc-ai/mlc-llm)-Compiler und der zugehörigen Laufzeitumgebung aufbaut — dem Projekt, das PromptQuorum ausführlich in [MLC LLM erklärt](/de/power-local-llm/mlc-llm-explained) behandelt. Dieser Test konzentriert sich speziell auf das App-Erlebnis: echte Download-Kanäle, tatsächliche Einrichtungsschritte, mit welchen Modellen sie ausgeliefert wird, und ehrliche Einschränkungen, statt die zugrunde liegende Kompilierungstechnologie erneut zu erklären. Wer das tiefere technische Bild davon möchte, wie MLC LLM Modelle für GPU-beschleunigte Inferenz plattformübergreifend kompiliert, sollte zuerst [MLC LLM erklärt](/de/power-local-llm/mlc-llm-explained) lesen; dieser Artikel setzt diesen Kontext voraus und konzentriert sich auf die App selbst.',
     metaDescription:
@@ -627,8 +627,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/mlc-chat-review-hero-fr.webp',
-    title: 'Avis sur MLC Chat (2026) : l\'application mobile construite sur MLC LLM, évaluée honnêtement',
-    seoTitle: 'Avis MLC Chat 2026 : iOS, Android & configuration multiplateforme',
+    title: 'Avis sur MLC Chat: l\'application mobile construite sur MLC LLM, évaluée honnêtement',
+    seoTitle: 'Avis MLC Chat: iOS, Android & configuration multiplateforme',
     intro:
       'MLC Chat est l\'application de chat grand public construite au-dessus du compilateur et de l\'environnement d\'exécution [MLC LLM](https://github.com/mlc-ai/mlc-llm) — le projet que PromptQuorum couvre en profondeur dans [MLC LLM expliqué](/fr/power-local-llm/mlc-llm-explained). Cet avis se concentre spécifiquement sur l\'expérience de l\'application : les canaux de téléchargement réels, les étapes de configuration effectives, les modèles fournis, et des limites honnêtes, plutôt que de réexpliquer la technologie de compilation sous-jacente. Pour la vision technique plus approfondie de la façon dont MLC LLM compile les modèles pour une inférence accélérée par GPU sur plusieurs plateformes, lisez d\'abord [MLC LLM expliqué](/fr/power-local-llm/mlc-llm-explained) ; cet article suppose ce contexte acquis et reste concentré sur l\'application elle-même.',
     metaDescription:
@@ -932,8 +932,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/mlc-chat-review-hero-es.webp',
-    title: 'Análisis de MLC Chat (2026): la app móvil construida sobre MLC LLM, evaluada con honestidad',
-    seoTitle: 'Análisis de MLC Chat 2026: iOS, Android y configuración multiplataforma',
+    title: 'Análisis de MLC Chat: la app móvil construida sobre MLC LLM, evaluada con honestidad',
+    seoTitle: 'Análisis de MLC Chat: iOS, Android y configuración multiplataforma',
     intro:
       'MLC Chat es la aplicación de chat orientada al consumidor construida sobre el compilador y runtime [MLC LLM](https://github.com/mlc-ai/mlc-llm) — el proyecto que PromptQuorum cubre en profundidad en [MLC LLM explicado](/es/power-local-llm/mlc-llm-explained). Este análisis se centra específicamente en la experiencia de la app: canales de descarga reales, pasos de configuración reales, con qué modelos viene, y limitaciones honestas, en lugar de volver a explicar la tecnología de compilación subyacente. Si quieres la explicación técnica más profunda de cómo MLC LLM compila modelos para inferencia acelerada por GPU en distintas plataformas, lee primero [MLC LLM explicado](/es/power-local-llm/mlc-llm-explained); este artículo asume ese contexto y se centra en la app en sí.',
     metaDescription:
@@ -1237,8 +1237,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/mlc-chat-review-hero-ja.webp',
-    title: 'MLC Chat レビュー(2026):MLC LLM上に構築されたモバイルアプリを正直に評価する',
-    seoTitle: 'MLC Chat レビュー2026:iOS、Android & クロスプラットフォームセットアップ',
+    title: 'MLC Chat レビュー:MLC LLM上に構築されたモバイルアプリを正直に評価する',
+    seoTitle: 'MLC Chat レビュー:iOS、Android & クロスプラットフォームセットアップ',
     intro:
       'MLC Chatは、[MLC LLM](https://github.com/mlc-ai/mlc-llm)コンパイラとランタイムの上に構築された、一般ユーザー向けのチャットアプリだ——このプロジェクト自体はPromptQuorumの[MLC LLM解説](/ja/power-local-llm/mlc-llm-explained)で詳しく扱っている。本レビューは、基盤となるコンパイル技術を再度説明するのではなく、アプリ体験そのものに焦点を当てる:実際のダウンロード経路、実際のセットアップ手順、同梱されているモデル、そして正直な限界について扱う。MLC LLMがプラットフォーム横断でGPUアクセラレーテッド推論のためにモデルをどうコンパイルするかという、より深い技術的な全体像を知りたい場合は、先に[MLC LLM解説](/ja/power-local-llm/mlc-llm-explained)を読んでほしい。本記事はその文脈を前提とし、アプリ自体に焦点を絞る。',
     metaDescription:
@@ -1542,8 +1542,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/mlc-chat-review-hero-pt.webp',
-    title: 'Análise do MLC Chat (2026): o app móvel construído sobre o MLC LLM, avaliado com honestidade',
-    seoTitle: 'Análise do MLC Chat 2026: iOS, Android e configuração multiplataforma',
+    title: 'Análise do MLC Chat: o app móvel construído sobre o MLC LLM, avaliado com honestidade',
+    seoTitle: 'Análise do MLC Chat: iOS, Android e configuração multiplataforma',
     intro:
       'O MLC Chat é o app de chat voltado ao consumidor, construído sobre o compilador e runtime [MLC LLM](https://github.com/mlc-ai/mlc-llm) — o projeto que o PromptQuorum cobre em profundidade em [MLC LLM Explicado](/pt/power-local-llm/mlc-llm-explained). Esta análise foca especificamente na experiência do app: canais reais de download, passos reais de configuração, quais modelos ele traz, e limitações honestas, em vez de reexplicar a tecnologia de compilação subjacente. Se você quer o panorama técnico mais profundo de como o MLC LLM compila modelos para inferência acelerada por GPU em várias plataformas, leia primeiro [MLC LLM Explicado](/pt/power-local-llm/mlc-llm-explained); este artigo assume esse contexto e mantém o foco no próprio app.',
     metaDescription:
@@ -1847,8 +1847,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/mlc-chat-review-hero-ar.webp',
-    title: 'مراجعة MLC Chat (2026): تطبيق الجوال المبني على MLC LLM، بتقييم صريح',
-    seoTitle: 'مراجعة MLC Chat 2026: iOS وAndroid وإعداد متعدد المنصات',
+    title: 'مراجعة MLC Chat: تطبيق الجوال المبني على MLC LLM، بتقييم صريح',
+    seoTitle: 'مراجعة MLC Chat: iOS وAndroid وإعداد متعدد المنصات',
     intro:
       'MLC Chat هو تطبيق الدردشة الموجّه للمستهلكين والمبني فوق مُصرّف ومحرك تشغيل [MLC LLM](https://github.com/mlc-ai/mlc-llm) — المشروع الذي يتناوله PromptQuorum بعمق في [شرح MLC LLM](/ar/power-local-llm/mlc-llm-explained). تركز هذه المراجعة تحديدًا على تجربة التطبيق: قنوات التنزيل الحقيقية، خطوات الإعداد الفعلية، النماذج المرفقة معه، والقيود الصريحة، بدلًا من إعادة شرح تقنية التصريف الأساسية. إذا أردت الصورة التقنية الأعمق لكيفية تصريف MLC LLM للنماذج من أجل استدلال مُسرَّع بواسطة GPU عبر المنصات، اقرأ أولًا [شرح MLC LLM](/ar/power-local-llm/mlc-llm-explained)؛ يفترض هذا المقال ذلك السياق ويظل مركّزًا على التطبيق نفسه.',
     metaDescription:
@@ -2152,8 +2152,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/mlc-chat-review-hero-zh.webp',
-    title: 'MLC Chat评测(2026):基于MLC LLM构建的手机应用,诚实评估',
-    seoTitle: 'MLC Chat评测2026:iOS、Android与跨平台配置',
+    title: 'MLC Chat评测:基于MLC LLM构建的手机应用,诚实评估',
+    seoTitle: 'MLC Chat评测:iOS、Android与跨平台配置',
     intro:
       'MLC Chat是构建在[MLC LLM](https://github.com/mlc-ai/mlc-llm)编译器与运行时之上的面向消费者的聊天应用——这个项目本身,PromptQuorum已在[MLC LLM详解](/zh/power-local-llm/mlc-llm-explained)中做了深入介绍。本评测专门聚焦于应用体验本身:真实的下载渠道、实际的配置步骤、随附的模型,以及诚实的局限性,而不是重新讲解底层的编译技术。如果你想了解MLC LLM如何跨平台为GPU加速推理编译模型的更深入技术图景,请先阅读[MLC LLM详解](/zh/power-local-llm/mlc-llm-explained);本文默认你已掌握该背景,并专注于应用本身。',
     metaDescription:
@@ -2457,8 +2457,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/mlc-chat-review-hero-ko.webp',
-    title: 'MLC Chat 리뷰(2026): MLC LLM 위에 구축된 모바일 앱, 솔직하게 평가하다',
-    seoTitle: 'MLC Chat 리뷰 2026: iOS, Android & 크로스플랫폼 설정',
+    title: 'MLC Chat 리뷰: MLC LLM 위에 구축된 모바일 앱, 솔직하게 평가하다',
+    seoTitle: 'MLC Chat 리뷰: iOS, Android & 크로스플랫폼 설정',
     intro:
       'MLC Chat은 [MLC LLM](https://github.com/mlc-ai/mlc-llm) 컴파일러 및 런타임 위에 구축된 소비자용 채팅 앱이다 — 이 프로젝트 자체는 PromptQuorum이 [MLC LLM 설명](/ko/power-local-llm/mlc-llm-explained)에서 깊이 다루고 있다. 이 리뷰는 기반이 되는 컴파일 기술을 다시 설명하는 대신, 앱 경험 자체에 특히 초점을 맞춘다: 실제 다운로드 경로, 실제 설정 단계, 함께 제공되는 모델, 솔직한 한계. MLC LLM이 여러 플랫폼에서 GPU 가속 추론을 위해 모델을 어떻게 컴파일하는지에 대한 더 깊은 기술적 그림을 원한다면, 먼저 [MLC LLM 설명](/ko/power-local-llm/mlc-llm-explained)을 읽어보라; 이 글은 그 맥락을 전제로 하고 앱 자체에 초점을 맞춘다.',
     metaDescription:

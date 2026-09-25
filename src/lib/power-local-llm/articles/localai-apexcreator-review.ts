@@ -16,8 +16,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/localai-apexcreator-review-hero-en.webp',
-    title: 'LocalAI Review (2026): ApexCreator\'s Offline Android AI Chat App',
-    seoTitle: 'LocalAI (ApexCreator) Review 2026: Offline Android AI Chat',
+    title: 'LocalAI Review: ApexCreator\'s Offline Android AI Chat App',
+    seoTitle: 'LocalAI (ApexCreator) Review: Offline Android AI Chat',
     intro:
       '[LocalAI: Offline AI Chat LLM](https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp), by developer [ApexCreator](mailto:info@apexcreators.co.in), is a free Android app that runs GGUF language models on-device via llama.cpp, with an optional paid premium tier. Per its Google Play listing, it adds document chat over PDF, Word, Excel, and CSV files using on-device vector retrieval, support for vision-capable models, structured JSON/grammar-constrained output, and real-time performance telemetry. Unlike [ToolNeuron](/power-local-llm/toolneuron-review), this app is closed-source, with no public code repository found for this review — every claim below is sourced from its public Play Store listing, not independent testing or a developer interview.',
     metaDescription:
@@ -343,8 +343,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/localai-apexcreator-review-hero-de.webp',
-    title: 'LocalAI im Test (2026): ApexCreators Offline-KI-Chat-App für Android',
-    seoTitle: 'LocalAI (ApexCreator) im Test 2026: Offline-KI-Chat für Android',
+    title: 'LocalAI im Test: ApexCreators Offline-KI-Chat-App für Android',
+    seoTitle: 'LocalAI (ApexCreator) im Test: Offline-KI-Chat für Android',
     intro:
       '[LocalAI: Offline AI Chat LLM](https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp), vom Entwickler [ApexCreator](mailto:info@apexcreators.co.in), ist eine kostenlose Android-App, die GGUF-Sprachmodelle über llama.cpp auf dem Gerät ausführt, mit einer optionalen kostenpflichtigen Premium-Stufe. Laut eigenem Google-Play-Eintrag fügt sie Dokumenten-Chat über PDF-, Word-, Excel- und CSV-Dateien mittels On-Device-Vektorabruf, Unterstützung für vision-fähige Modelle, strukturierte JSON-/Grammatik-eingeschränkte Ausgabe und Echtzeit-Leistungstelemetrie hinzu. Anders als [ToolNeuron](/de/power-local-llm/toolneuron-review) ist diese App quellcodegeschlossen — für diesen Test wurde kein öffentliches Code-Repository gefunden. Jede Aussage unten stammt aus dem öffentlichen Play-Store-Eintrag, nicht aus einem unabhängigen Test oder einem Entwickler-Interview.',
     metaDescription:
@@ -683,8 +683,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/localai-apexcreator-review-hero-fr.webp',
-    title: 'LocalAI en test (2026) : l\'application de chat IA hors ligne d\'ApexCreator pour Android',
-    seoTitle: 'LocalAI (ApexCreator) en test 2026 : chat IA hors ligne pour Android',
+    title: 'LocalAI en test: l\'application de chat IA hors ligne d\'ApexCreator pour Android',
+    seoTitle: 'LocalAI (ApexCreator) en test: chat IA hors ligne pour Android',
     intro:
       '[LocalAI: Offline AI Chat LLM](https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp), du développeur [ApexCreator](mailto:info@apexcreators.co.in), est une application Android gratuite qui exécute des modèles de langage GGUF directement sur l\'appareil via llama.cpp, avec un niveau premium payant optionnel. Selon sa fiche Google Play, elle ajoute un chat documentaire sur des fichiers PDF, Word, Excel et CSV via une recherche vectorielle sur l\'appareil, la prise en charge de modèles capables de vision, une sortie structurée JSON/contrainte par grammaire, et une télémétrie de performance en temps réel. Contrairement à [ToolNeuron](/fr/power-local-llm/toolneuron-review), cette application est à code fermé — aucun dépôt de code public n\'a été trouvé pour ce test. Chaque affirmation ci-dessous provient de la fiche publique du Play Store, pas d\'un test indépendant ni d\'un entretien avec le développeur.',
     metaDescription:
@@ -1023,8 +1023,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/localai-apexcreator-review-hero-es.webp',
-    title: 'LocalAI a prueba (2026): la app de chat de IA sin conexión de ApexCreator para Android',
-    seoTitle: 'LocalAI (ApexCreator) a prueba 2026: chat de IA sin conexión en Android',
+    title: 'LocalAI a prueba: la app de chat de IA sin conexión de ApexCreator para Android',
+    seoTitle: 'LocalAI (ApexCreator) a prueba: chat de IA sin conexión en Android',
     intro:
       '[LocalAI: Offline AI Chat LLM](https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp), del desarrollador [ApexCreator](mailto:info@apexcreators.co.in), es una app gratuita para Android que ejecuta modelos de lenguaje GGUF en el propio dispositivo mediante llama.cpp, con un nivel premium de pago opcional. Según su propia ficha en Google Play, añade chat con documentos en PDF, Word, Excel y CSV mediante recuperación vectorial en el dispositivo, compatibilidad con modelos con capacidades de visión, salida estructurada JSON/restringida por gramática y telemetría de rendimiento en tiempo real. A diferencia de [ToolNeuron](/es/power-local-llm/toolneuron-review), esta app es de código cerrado — para esta reseña no se encontró ningún repositorio de código público. Cada afirmación de abajo procede de su ficha pública en Play Store, no de pruebas independientes ni de una entrevista con el desarrollador.',
     metaDescription:
@@ -1363,8 +1363,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/localai-apexcreator-review-hero-pt.webp',
-    title: 'LocalAI em Análise (2026): App de Chat com IA Offline da ApexCreator para Android',
-    seoTitle: 'LocalAI (ApexCreator) em Análise 2026: Chat com IA Offline no Android',
+    title: 'LocalAI em Análise: App de Chat com IA Offline da ApexCreator para Android',
+    seoTitle: 'LocalAI (ApexCreator) em Análise: Chat com IA Offline no Android',
     intro:
       '[LocalAI: Offline AI Chat LLM](https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp), da desenvolvedora [ApexCreator](mailto:info@apexcreators.co.in), é um aplicativo Android gratuito que executa modelos de linguagem GGUF no próprio dispositivo via llama.cpp, com um nível premium pago opcional. Segundo sua página na Google Play, o app adiciona chat com documentos em arquivos PDF, Word, Excel e CSV usando recuperação vetorial no dispositivo, suporte a modelos com capacidade de visão, saída estruturada em JSON/restrita por gramática e telemetria de desempenho em tempo real. Diferente do [ToolNeuron](/pt/power-local-llm/toolneuron-review), este app é de código fechado — nenhum repositório de código público foi encontrado para esta análise. Cada afirmação abaixo tem como fonte a página pública da Play Store, não testes independentes nem uma entrevista com a desenvolvedora.',
     metaDescription:
@@ -1703,8 +1703,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/localai-apexcreator-review-hero-ja.webp',
-    title: 'LocalAIレビュー(2026年):ApexCreatorのオフラインAndroid AIチャットアプリ',
-    seoTitle: 'LocalAI(ApexCreator)レビュー2026:オフラインAndroid AIチャット',
+    title: 'LocalAIレビュー:ApexCreatorのオフラインAndroid AIチャットアプリ',
+    seoTitle: 'LocalAI(ApexCreator)レビュー:オフラインAndroid AIチャット',
     intro:
       '開発者[ApexCreator](mailto:info@apexcreators.co.in)による[LocalAI: Offline AI Chat LLM](https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp)は、llama.cppを介してGGUF言語モデルをデバイス上で実行する無料のAndroidアプリで、有料プレミアム層はオプションで用意されている。Google Playの掲載情報によると、デバイス上のベクトル検索を使ったPDF・Word・Excel・CSVファイルへのドキュメントチャット、ビジョン対応モデルのサポート、構造化されたJSON/文法制約付き出力、リアルタイムのパフォーマンステレメトリーが追加されているとされる。[ToolNeuron](/ja/power-local-llm/toolneuron-review)とは異なり、このアプリはクローズドソースであり、本レビューでは公開されているコードリポジトリは見つからなかった――以下の内容はすべてPlayストアの公開掲載情報から得たものであり、独自テストや開発者インタビューによるものではない。',
     metaDescription:
@@ -2043,8 +2043,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/localai-apexcreator-review-hero-zh.webp',
-    title: 'LocalAI评测(2026):ApexCreator的Android离线AI聊天应用',
-    seoTitle: 'LocalAI(ApexCreator)评测2026:Android离线AI聊天',
+    title: 'LocalAI评测:ApexCreator的Android离线AI聊天应用',
+    seoTitle: 'LocalAI(ApexCreator)评测:Android离线AI聊天',
     intro:
       '[LocalAI: Offline AI Chat LLM](https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp)由开发者[ApexCreator](mailto:info@apexcreators.co.in)开发,是一款免费的Android应用,通过llama.cpp在设备本地运行GGUF语言模型,并提供可选的付费高级套餐。根据其Google Play商店页面介绍,该应用还加入了针对PDF、Word、Excel和CSV文件的文档聊天功能(使用设备本地向量检索)、对支持视觉的模型的支持、结构化JSON/语法约束输出,以及实时性能遥测。与[ToolNeuron](/zh/power-local-llm/toolneuron-review)不同,这款应用是闭源的——本次评测未能找到其公开的代码仓库,以下所有说法均来自其公开的Play商店页面介绍,而非独立测试或开发者采访。',
     metaDescription:
@@ -2383,8 +2383,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/localai-apexcreator-review-hero-ar.webp',
-    title: 'مراجعة LocalAI (2026): تطبيق ApexCreator للدردشة مع الذكاء الاصطناعي دون اتصال على أندرويد',
-    seoTitle: 'مراجعة LocalAI (ApexCreator) 2026: دردشة ذكاء اصطناعي دون اتصال على أندرويد',
+    title: 'مراجعة LocalAI: تطبيق ApexCreator للدردشة مع الذكاء الاصطناعي دون اتصال على أندرويد',
+    seoTitle: 'مراجعة LocalAI (ApexCreator): دردشة ذكاء اصطناعي دون اتصال على أندرويد',
     intro:
       '[LocalAI: Offline AI Chat LLM](https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp)، من المطوّر [ApexCreator](mailto:info@apexcreators.co.in)، هو تطبيق مجاني لأندرويد يشغّل نماذج لغوية بصيغة GGUF على الجهاز نفسه عبر llama.cpp، مع فئة مدفوعة اختيارية premium. وحسب صفحته على Google Play، يضيف التطبيق دردشة على المستندات عبر ملفات PDF وWord وExcel وCSV باستخدام استرجاع متجهي على الجهاز، ودعم نماذج ذات قدرة على الرؤية، وإخراج بنية JSON/قواعد مقيدة (grammar)، وقياسات أداء لحظية. وعلى خلاف [ToolNeuron](/ar/power-local-llm/toolneuron-review)، هذا التطبيق مغلق المصدر، ولم يُعثر على مستودع كود عام له لأغراض هذه المراجعة — كل ادعاء أدناه مصدره صفحة Google Play العامة، لا اختبار مستقل أو مقابلة مع المطوّر.',
     metaDescription:
@@ -2723,8 +2723,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/localai-apexcreator-review-hero-ko.webp',
-    title: 'LocalAI 리뷰(2026):ApexCreator의 오프라인 안드로이드 AI 채팅 앱',
-    seoTitle: 'LocalAI(ApexCreator) 리뷰 2026:오프라인 안드로이드 AI 채팅',
+    title: 'LocalAI 리뷰:ApexCreator의 오프라인 안드로이드 AI 채팅 앱',
+    seoTitle: 'LocalAI(ApexCreator) 리뷰:오프라인 안드로이드 AI 채팅',
     intro:
       '개발자 [ApexCreator](mailto:info@apexcreators.co.in)가 만든 [LocalAI: Offline AI Chat LLM](https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp)은 llama.cpp를 통해 GGUF 언어 모델을 기기 내에서 실행하는 무료 안드로이드 앱으로, 유료 프리미엄 등급을 선택할 수 있습니다. 자체 Google Play 등록 정보에 따르면 PDF, Word, Excel, CSV 파일에 대한 기기 내 벡터 검색 기반 문서 채팅, 비전 지원 모델, 구조화된 JSON/문법 제한 출력, 실시간 성능 텔레메트리를 제공합니다. [ToolNeuron](/ko/power-local-llm/toolneuron-review)과 달리 이 앱은 클로즈드 소스이며, 이 리뷰에서는 공개 코드 저장소를 찾지 못했습니다 — 아래의 모든 주장은 독립적인 테스트나 개발자 인터뷰가 아니라 공개된 Play 스토어 등록 정보에서 가져온 것입니다.',
     metaDescription:

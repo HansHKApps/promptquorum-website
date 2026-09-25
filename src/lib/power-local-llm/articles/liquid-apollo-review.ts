@@ -18,8 +18,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/liquid-apollo-review-hero-en.webp',
-    title: 'Liquid Apollo Review (2026): On-Device LFM2 Chat, Plus Optional Cloud',
-    seoTitle: 'Liquid Apollo Review 2026: Local + Cloud AI Chat App',
+    title: 'Liquid Apollo Review: On-Device LFM2 Chat, Plus Optional Cloud',
+    seoTitle: 'Liquid Apollo Review: Local + Cloud AI Chat App',
     intro:
       'Liquid Apollo, made by [Liquid AI, Inc.](https://www.liquid.ai/), is a free chat app for iPhone, iPad, Mac, Apple Vision, and Android built around Liquid AI\'s own on-device inference technology, called [LEAP](https://leap.liquid.ai/). It is not a local-only app: alongside on-device chat with Liquid AI\'s small LFM2 models, it also offers an OpenRouter connection (using your own API key) to hosted models such as Meta Llama 3 and OpenAI\'s GPT-4, and a custom-backend mode that connects to a self-hosted LLM Studio or Ollama server on your own computer. Rated 4.5 out of 5 stars from 634 ratings on the [App Store listing](https://apps.apple.com/us/app/liquid-apollo/id6448019325) at version 2.2.4, it is a genuine hybrid client — the practical question for a reader is not whether it runs a model on-device (it does), but which of its three modes you actually plan to use, since only one of the three keeps every conversation off the network.',
     metaDescription:
@@ -411,8 +411,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/liquid-apollo-review-hero-de.webp',
-    title: 'Liquid Apollo Review (2026): On-Device-LFM2-Chat, plus optionale Cloud',
-    seoTitle: 'Liquid Apollo Review 2026: Lokal- und Cloud-KI-App',
+    title: 'Liquid Apollo Review: On-Device-LFM2-Chat, plus optionale Cloud',
+    seoTitle: 'Liquid Apollo Review: Lokal- und Cloud-KI-App',
     intro:
       'Liquid Apollo, entwickelt von [Liquid AI, Inc.](https://www.liquid.ai/), ist eine kostenlose Chat-App für iPhone, iPad, Mac, Apple Vision und Android, die auf Liquid AIs eigener On-Device-Inferenztechnologie namens [LEAP](https://leap.liquid.ai/) aufbaut. Es handelt sich nicht um eine rein lokale App: Neben dem On-Device-Chat mit Liquid AIs kleinen LFM2-Modellen bietet sie auch eine OpenRouter-Verbindung (mit eigenem API-Schlüssel) zu gehosteten Modellen wie Meta Llama 3 und OpenAIs GPT-4 sowie einen Custom-Backend-Modus, der sich mit einem selbst gehosteten LM-Studio- oder Ollama-Server verbindet. Mit 4,5 von 5 Sternen bei 634 Bewertungen im [App-Store-Eintrag](https://apps.apple.com/us/app/liquid-apollo/id6448019325) in Version 2.2.4 ist Liquid Apollo eine echte Hybrid-App — die praktische Frage für Leser ist nicht, ob ein Modell auf dem Gerät läuft (das tut es), sondern welchen der drei Modi man tatsächlich nutzen will, denn nur einer davon hält Unterhaltungen vollständig vom Netzwerk fern.',
     metaDescription:
@@ -804,8 +804,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/liquid-apollo-review-hero-fr.webp',
-    title: 'Liquid Apollo Review (2026) : Chat LFM2 local, plus cloud en option',
-    seoTitle: 'Liquid Apollo Review 2026 : app IA locale et cloud',
+    title: 'Liquid Apollo Review: Chat LFM2 local, plus cloud en option',
+    seoTitle: 'Liquid Apollo Review: app IA locale et cloud',
     intro:
       'Liquid Apollo, développée par [Liquid AI, Inc.](https://www.liquid.ai/), est une application de chat gratuite pour iPhone, iPad, Mac, Apple Vision et Android, construite autour de la technologie d\'inférence sur l\'appareil propre à Liquid AI, appelée [LEAP](https://leap.liquid.ai/). Ce n\'est pas une application uniquement locale : en plus du chat sur l\'appareil avec les petits modèles LFM2 de Liquid AI, elle propose aussi une connexion OpenRouter (avec votre propre clé API) vers des modèles hébergés comme Meta Llama 3 et GPT-4 d\'OpenAI, ainsi qu\'un mode backend personnalisé qui se connecte à un serveur LM Studio ou Ollama auto-hébergé. Notée 4,5 sur 5 avec 634 avis sur la [fiche App Store](https://apps.apple.com/us/app/liquid-apollo/id6448019325) en version 2.2.4, c\'est une véritable application hybride — la vraie question n\'est pas de savoir si elle exécute un modèle sur l\'appareil (c\'est le cas), mais lequel des trois modes vous comptez réellement utiliser, car un seul des trois garde toutes les conversations hors réseau.',
     metaDescription:
@@ -1197,8 +1197,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/liquid-apollo-review-hero-es.webp',
-    title: 'Liquid Apollo Review (2026): Chat LFM2 local, más nube opcional',
-    seoTitle: 'Liquid Apollo Review 2026: app IA local y en la nube',
+    title: 'Liquid Apollo Review: Chat LFM2 local, más nube opcional',
+    seoTitle: 'Liquid Apollo Review: app IA local y en la nube',
     intro:
       'Liquid Apollo, creada por [Liquid AI, Inc.](https://www.liquid.ai/), es una app de chat gratuita para iPhone, iPad, Mac, Apple Vision y Android construida en torno a la tecnología de inferencia en el dispositivo propia de Liquid AI, llamada [LEAP](https://leap.liquid.ai/). No es una app exclusivamente local: además del chat en el dispositivo con los pequeños modelos LFM2 de Liquid AI, también ofrece una conexión OpenRouter (con tu propia clave API) a modelos alojados como Meta Llama 3 y GPT-4 de OpenAI, y un modo de backend personalizado que se conecta a un servidor LM Studio u Ollama autoalojado. Con 4,5 de 5 estrellas y 634 valoraciones en la [ficha de App Store](https://apps.apple.com/us/app/liquid-apollo/id6448019325) en la versión 2.2.4, es una app verdaderamente híbrida — la pregunta práctica no es si ejecuta un modelo en el dispositivo (lo hace), sino cuál de los tres modos piensas usar realmente, porque solo uno de ellos mantiene toda conversación fuera de la red.',
     metaDescription:
@@ -1590,8 +1590,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/liquid-apollo-review-hero-pt.webp',
-    title: 'Liquid Apollo Review (2026): Chat LFM2 local, mais nuvem opcional',
-    seoTitle: 'Liquid Apollo Review 2026: app de IA local e na nuvem',
+    title: 'Liquid Apollo Review: Chat LFM2 local, mais nuvem opcional',
+    seoTitle: 'Liquid Apollo Review: app de IA local e na nuvem',
     intro:
       'O Liquid Apollo, criado pela [Liquid AI, Inc.](https://www.liquid.ai/), é um app de chat gratuito para iPhone, iPad, Mac, Apple Vision e Android construído em torno da tecnologia de inferência no dispositivo própria da Liquid AI, chamada [LEAP](https://leap.liquid.ai/). Não é um app exclusivamente local: além do chat no dispositivo com os pequenos modelos LFM2 da Liquid AI, ele também oferece uma conexão OpenRouter (com sua própria chave de API) a modelos hospedados como Meta Llama 3 e GPT-4 da OpenAI, além de um modo de backend personalizado que se conecta a um servidor LM Studio ou Ollama auto-hospedado. Com 4,5 de 5 estrelas em 634 avaliações na [ficha da App Store](https://apps.apple.com/us/app/liquid-apollo/id6448019325) na versão 2.2.4, é um app genuinamente híbrido — a questão prática não é se ele roda um modelo no dispositivo (ele roda), mas qual dos três modos você realmente pretende usar, já que apenas um deles mantém toda conversa fora da rede.',
     metaDescription:
@@ -1983,8 +1983,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/liquid-apollo-review-hero-ja.webp',
-    title: 'Liquid Apollo レビュー（2026年）：オンデバイスLFM2チャット、プラスオプションのクラウド',
-    seoTitle: 'Liquid Apollo レビュー2026：ローカル+クラウドAIチャット',
+    title: 'Liquid Apollo レビュー：オンデバイスLFM2チャット、プラスオプションのクラウド',
+    seoTitle: 'Liquid Apollo レビュー：ローカル+クラウドAIチャット',
     intro:
       '[Liquid AI, Inc.](https://www.liquid.ai/) が開発した Liquid Apollo は、iPhone、iPad、Mac、Apple Vision、Android向けの無料チャットアプリで、Liquid AI独自のオンデバイス推論技術「[LEAP](https://leap.liquid.ai/)」を中核に構築されています。ローカル専用アプリではありません。Liquid AIの小型LFM2モデルによるオンデバイスチャットに加え、独自のAPIキーでMeta Llama 3やOpenAIのGPT-4といったホスト型モデルに接続するOpenRouter連携、そして自前でホストするLM StudioやOllamaサーバーに接続するカスタムバックエンドモードも提供します。バージョン2.2.4の[App Storeの掲載ページ](https://apps.apple.com/us/app/liquid-apollo/id6448019325)で634件の評価により星5つ中4.5と評価されており、真のハイブリッドアプリです。実際に重要な問いは、モデルがデバイス上で動くかどうか（動きます）ではなく、3つのモードのうちどれを実際に使うつもりかです。会話をネットワークから完全に切り離すのはそのうちの1つだけだからです。',
     metaDescription:
@@ -2376,8 +2376,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/liquid-apollo-review-hero-zh.webp',
-    title: 'Liquid Apollo 评测（2026）：本地LFM2聊天，附带可选云端',
-    seoTitle: 'Liquid Apollo 评测2026：本地+云端AI聊天应用',
+    title: 'Liquid Apollo 评测：本地LFM2聊天，附带可选云端',
+    seoTitle: 'Liquid Apollo 评测：本地+云端AI聊天应用',
     intro:
       'Liquid Apollo 由 [Liquid AI, Inc.](https://www.liquid.ai/) 开发，是一款面向 iPhone、iPad、Mac、Apple Vision 和 Android 的免费聊天应用，围绕 Liquid AI 自有的设备端推理技术 [LEAP](https://leap.liquid.ai/) 构建。它不是一款纯本地应用：除了使用 Liquid AI 小型 LFM2 模型进行设备端聊天外，它还提供 OpenRouter 连接（使用你自己的 API 密钥）来访问 Meta Llama 3 和 OpenAI GPT-4 等托管模型，以及一个连接自托管 LM Studio 或 Ollama 服务器的自定义后端模式。在版本 2.2.4 的 [App Store 页面](https://apps.apple.com/us/app/liquid-apollo/id6448019325)上，它以634条评分获得5星中的4.5星，是一款真正的混合应用——实际的问题不在于它是否能在设备上运行模型（确实可以），而在于你实际打算使用三种模式中的哪一种，因为只有其中一种能让对话完全脱离网络。',
     metaDescription:
@@ -2769,8 +2769,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/liquid-apollo-review-hero-ar.webp',
-    title: 'مراجعة Liquid Apollo (2026): محادثة LFM2 محلية، بالإضافة إلى سحابة اختيارية',
-    seoTitle: 'مراجعة Liquid Apollo 2026: تطبيق ذكاء اصطناعي محلي وسحابي',
+    title: 'مراجعة Liquid Apollo: محادثة LFM2 محلية، بالإضافة إلى سحابة اختيارية',
+    seoTitle: 'مراجعة Liquid Apollo: تطبيق ذكاء اصطناعي محلي وسحابي',
     intro:
       'تطبيق Liquid Apollo، الذي طورته [Liquid AI, Inc.](https://www.liquid.ai/)، هو تطبيق محادثة مجاني لأجهزة iPhone وiPad وMac وApple Vision وAndroid، مبني حول تقنية الاستدلال على الجهاز الخاصة بـLiquid AI والمسماة [LEAP](https://leap.liquid.ai/). إنه ليس تطبيقاً محلياً بحتاً: فبالإضافة إلى المحادثة على الجهاز مع نماذج LFM2 الصغيرة من Liquid AI، يوفر أيضاً اتصال OpenRouter (باستخدام مفتاح API الخاص بك) للوصول إلى نماذج مستضافة مثل Meta Llama 3 وGPT-4 من OpenAI، ووضع خادم مخصص يتصل بخادم LM Studio أو Ollama مستضاف ذاتياً. وبتقييم 4.5 من 5 نجوم من 634 تقييماً في [صفحة App Store](https://apps.apple.com/us/app/liquid-apollo/id6448019325) عند الإصدار 2.2.4، فهو تطبيق هجين حقيقي — السؤال العملي ليس هل يشغّل نموذجاً على الجهاز (فهو يفعل ذلك)، بل أي من الأوضاع الثلاثة تنوي استخدامه فعلياً، لأن وضعاً واحداً فقط منها يبقي كل محادثة بعيدة عن الشبكة.',
     metaDescription:
@@ -3162,8 +3162,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/liquid-apollo-review-hero-ko.webp',
-    title: 'Liquid Apollo 리뷰 (2026): 온디바이스 LFM2 채팅, 선택적 클라우드도 지원',
-    seoTitle: 'Liquid Apollo 리뷰 2026: 로컬+클라우드 AI 채팅 앱',
+    title: 'Liquid Apollo 리뷰: 온디바이스 LFM2 채팅, 선택적 클라우드도 지원',
+    seoTitle: 'Liquid Apollo 리뷰: 로컬+클라우드 AI 채팅 앱',
     intro:
       '[Liquid AI, Inc.](https://www.liquid.ai/)가 만든 Liquid Apollo는 iPhone, iPad, Mac, Apple Vision, Android용 무료 채팅 앱으로, Liquid AI 자체의 온디바이스 추론 기술인 [LEAP](https://leap.liquid.ai/)를 중심으로 만들어졌습니다. 이 앱은 로컬 전용 앱이 아닙니다. Liquid AI의 소형 LFM2 모델을 이용한 온디바이스 채팅 외에도, 자신의 API 키를 이용해 Meta Llama 3나 OpenAI의 GPT-4 같은 호스팅 모델에 접속하는 OpenRouter 연결과, 직접 호스팅하는 LM Studio 또는 Ollama 서버에 연결하는 커스텀 백엔드 모드도 제공합니다. 버전 2.2.4의 [App Store 페이지](https://apps.apple.com/us/app/liquid-apollo/id6448019325)에서 634개의 평가로 5점 만점에 4.5점을 받은 이 앱은 진정한 하이브리드 앱입니다 — 실질적인 질문은 모델이 기기에서 실행되는지 여부(실행됩니다)가 아니라, 세 가지 모드 중 실제로 어떤 것을 사용할 계획인지입니다. 셋 중 오직 하나만이 대화를 완전히 네트워크에서 분리하기 때문입니다.',
     metaDescription:

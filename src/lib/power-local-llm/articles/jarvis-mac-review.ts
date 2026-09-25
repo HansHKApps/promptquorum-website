@@ -14,8 +14,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/jarvis-mac-review-hero-en.webp',
-    title: 'Jarvis (Mac) Review 2026: Offline Voice AI for macOS',
-    seoTitle: 'Jarvis for Mac Review 2026: Offline Voice AI App',
+    title: 'Jarvis (Mac) Review: Offline Voice AI for macOS',
+    seoTitle: 'Jarvis for Mac Review: Offline Voice AI App',
     intro:
       'Jarvis (Mac) — not to be confused with the fictional Marvel AI, Amazon Alexa, Apple Intelligence, or any other product also named "Jarvis" — is a macOS app built by an independent developer on the Lovable app-builder platform (hosted at [jarvis-mac.lovable.app](https://jarvis-mac.lovable.app/)). It runs a full voice-assistant pipeline on-device: Whisper for speech recognition, a local Llama 3.2 3B language model for reasoning, and Kokoro for text-to-speech, all processed via Apple\'s Metal GPU. The developer\'s stated positioning is "Fully offline. Fully yours" — once installed, voice commands are handled without sending audio or text to a server, and without requiring an API key.',
     metaDescription:
@@ -277,8 +277,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/jarvis-mac-review-hero-de.webp',
-    title: 'Jarvis (Mac) Review 2026: Offline-Sprach-KI für macOS',
-    seoTitle: 'Jarvis für Mac Review 2026: Offline-Sprach-KI',
+    title: 'Jarvis (Mac) Review: Offline-Sprach-KI für macOS',
+    seoTitle: 'Jarvis für Mac Review: Offline-Sprach-KI',
     intro:
       'Jarvis (Mac) — nicht zu verwechseln mit der fiktiven Marvel-KI, Amazon Alexa, Apple Intelligence oder anderen Produkten, die ebenfalls „Jarvis" heißen — ist eine macOS-App eines unabhängigen Entwicklers auf der App-Builder-Plattform Lovable (gehostet unter [jarvis-mac.lovable.app](https://jarvis-mac.lovable.app/)). Sie führt eine vollständige Sprachassistenten-Pipeline lokal auf dem Gerät aus: Whisper für die Spracherkennung, ein lokales Llama-3.2-3B-Sprachmodell für das Reasoning und Kokoro für die Sprachausgabe — alles verarbeitet über Apples Metal-GPU. Die Positionierung des Entwicklers lautet „Fully offline. Fully yours" — nach der Installation werden Sprachbefehle verarbeitet, ohne Audio oder Text an einen Server zu senden, und ohne dass ein API-Key erforderlich ist.',
     metaDescription:
@@ -548,8 +548,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/jarvis-mac-review-hero-es.webp',
-    title: 'Jarvis (Mac) Review 2026: IA de voz offline para macOS',
-    seoTitle: 'Jarvis para Mac Review 2026: IA de voz offline',
+    title: 'Jarvis (Mac) Review: IA de voz offline para macOS',
+    seoTitle: 'Jarvis para Mac Review: IA de voz offline',
     intro:
       'Jarvis (Mac) — que no debe confundirse con la IA ficticia de Marvel, Amazon Alexa, Apple Intelligence ni ningún otro producto llamado también "Jarvis" — es una app de macOS creada por un desarrollador independiente en la plataforma Lovable (alojada en [jarvis-mac.lovable.app](https://jarvis-mac.lovable.app/)). Ejecuta un pipeline completo de asistente de voz en el dispositivo: Whisper para el reconocimiento de voz, un modelo de lenguaje local Llama 3.2 3B para el razonamiento, y Kokoro para la conversión de texto a voz, todo procesado a través de la GPU Metal de Apple. El lema del desarrollador es "Fully offline. Fully yours" — una vez instalada, los comandos de voz se procesan sin enviar audio ni texto a un servidor, y sin necesidad de una clave de API.',
     metaDescription:
@@ -811,8 +811,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/jarvis-mac-review-hero-fr.webp',
-    title: 'Jarvis (Mac) : avis 2026 sur l\'IA vocale hors ligne pour macOS',
-    seoTitle: 'Jarvis pour Mac : avis 2026 sur l\'IA vocale offline',
+    title: 'Jarvis (Mac): avis sur l\'IA vocale hors ligne pour macOS',
+    seoTitle: 'Jarvis pour Mac: avis sur l\'IA vocale offline',
     intro:
       'Jarvis (Mac) — à ne pas confondre avec l\'IA fictive de Marvel, Amazon Alexa, Apple Intelligence ou tout autre produit également nommé « Jarvis » — est une application macOS conçue par un développeur indépendant sur la plateforme Lovable (hébergée sur [jarvis-mac.lovable.app](https://jarvis-mac.lovable.app/)). Elle exécute un pipeline complet d\'assistant vocal en local : Whisper pour la reconnaissance vocale, un modèle de langage local Llama 3.2 3B pour le raisonnement, et Kokoro pour la synthèse vocale, le tout traité via le GPU Metal d\'Apple. Le positionnement affiché par le développeur est « Fully offline. Fully yours » — une fois installée, l\'app traite les commandes vocales sans envoyer d\'audio ni de texte vers un serveur, et sans nécessiter de clé API.',
     metaDescription:
@@ -1074,8 +1074,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/jarvis-mac-review-hero-ja.webp',
-    title: 'Jarvis（Mac）レビュー 2026：macOS向けオフライン音声AI',
-    seoTitle: 'Jarvis for Mac レビュー2026：オフライン音声AI',
+    title: 'Jarvis（Mac）レビュー：macOS向けオフライン音声AI',
+    seoTitle: 'Jarvis for Mac レビュー：オフライン音声AI',
     intro:
       'Jarvis（Mac）— MarvelのフィクションAIやAmazon Alexa、Apple Intelligence、その他「Jarvis」を名乗る製品とは無関係です — は、独立系開発者がLovableというアプリビルダー基盤（jarvis-mac.lovable.appでホスト）上に構築したmacOSアプリです。音声認識にWhisper、推論にローカルのLlama 3.2 3B言語モデル、音声合成にKokoroを使い、これらすべてをApple Metal GPU経由でデバイス上で処理する、フルの音声アシスタント・パイプラインを実行します。開発者が掲げるポジショニングは「Fully offline. Fully yours」— インストール後は、音声やテキストをサーバーへ送信せず、APIキーも不要な状態で音声コマンドを処理します。',
     metaDescription:
@@ -1337,8 +1337,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/jarvis-mac-review-hero-zh.webp',
-    title: 'Jarvis（Mac）评测 2026：macOS离线语音AI',
-    seoTitle: 'Jarvis for Mac 评测2026：离线语音AI应用',
+    title: 'Jarvis（Mac）评测：macOS离线语音AI',
+    seoTitle: 'Jarvis for Mac 评测：离线语音AI应用',
     intro:
       'Jarvis（Mac）——请勿与漫威虚构AI、Amazon Alexa、Apple Intelligence或其他同名为"Jarvis"的产品混淆——是一款由独立开发者基于Lovable应用构建平台开发的macOS应用（托管于jarvis-mac.lovable.app）。它在设备本地运行完整的语音助手管线：Whisper负责语音识别，本地Llama 3.2 3B语言模型负责推理，Kokoro负责文本转语音，全部通过Apple Metal GPU处理。开发者的宣传定位是"Fully offline. Fully yours"——安装后，语音指令的处理无需将音频或文本发送到服务器，也无需API密钥。',
     metaDescription:
@@ -1600,8 +1600,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/jarvis-mac-review-hero-pt.webp',
-    title: 'Jarvis (Mac) Review 2026: IA de voz offline para macOS',
-    seoTitle: 'Jarvis para Mac Review 2026: IA de voz offline',
+    title: 'Jarvis (Mac) Review: IA de voz offline para macOS',
+    seoTitle: 'Jarvis para Mac Review: IA de voz offline',
     intro:
       'O Jarvis (Mac) — que não deve ser confundido com a IA fictícia da Marvel, a Amazon Alexa, a Apple Intelligence ou qualquer outro produto também chamado "Jarvis" — é um app de macOS criado por um desenvolvedor independente na plataforma de criação de apps Lovable (hospedado em [jarvis-mac.lovable.app](https://jarvis-mac.lovable.app/)). Ele executa um pipeline completo de assistente de voz no dispositivo: Whisper para reconhecimento de fala, um modelo de linguagem local Llama 3.2 3B para raciocínio, e Kokoro para conversão de texto em fala, tudo processado via GPU Metal da Apple. O posicionamento declarado pelo desenvolvedor é "Fully offline. Fully yours" — depois de instalado, os comandos de voz são processados sem enviar áudio ou texto a um servidor, e sem exigir uma chave de API.',
     metaDescription:
@@ -1863,8 +1863,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/jarvis-mac-review-hero-ar.webp',
-    title: 'مراجعة Jarvis (Mac) 2026: مساعد صوتي يعمل بدون إنترنت لنظام macOS',
-    seoTitle: 'مراجعة Jarvis for Mac 2026: ذكاء صوتي أوفلاين',
+    title: 'مراجعة Jarvis (Mac): مساعد صوتي يعمل بدون إنترنت لنظام macOS',
+    seoTitle: 'مراجعة Jarvis for Mac: ذكاء صوتي أوفلاين',
     intro:
       'تطبيق Jarvis (Mac) — ولا ينبغي الخلط بينه وبين الذكاء الاصطناعي الخيالي من Marvel، أو Amazon Alexa، أو Apple Intelligence، أو أي منتج آخر يحمل اسم "Jarvis" — هو تطبيق macOS طوّره مطوّر مستقل باستخدام منصة بناء التطبيقات Lovable (مستضاف على [jarvis-mac.lovable.app](https://jarvis-mac.lovable.app/)). يشغّل خط معالجة كامل للمساعد الصوتي على الجهاز نفسه: Whisper للتعرف على الكلام، ونموذج لغوي محلي Llama 3.2 3B للاستدلال، وKokoro لتحويل النص إلى كلام، وتتم معالجة كل ذلك عبر معالج Metal الرسومي من Apple. الموقع التسويقي المعلن من المطوّر هو "Fully offline. Fully yours" — فبعد التثبيت، تُعالَج الأوامر الصوتية دون إرسال الصوت أو النص إلى خادم، ودون الحاجة إلى مفتاح API.',
     metaDescription:
@@ -2126,8 +2126,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/jarvis-mac-review-hero-ko.webp',
-    title: 'Jarvis (Mac) 리뷰 2026: macOS용 오프라인 음성 AI',
-    seoTitle: 'Jarvis for Mac 리뷰 2026: 오프라인 음성 AI',
+    title: 'Jarvis (Mac) 리뷰: macOS용 오프라인 음성 AI',
+    seoTitle: 'Jarvis for Mac 리뷰: 오프라인 음성 AI',
     intro:
       'Jarvis (Mac)는 — Marvel의 가상 AI, Amazon Alexa, Apple Intelligence, 또는 "Jarvis"라는 이름을 사용하는 다른 제품들과 혼동해서는 안 됩니다 — 독립 개발자가 Lovable 앱 빌더 플랫폼(jarvis-mac.lovable.app에서 호스팅)에서 만든 macOS 앱입니다. 음성 인식에는 Whisper, 추론에는 로컬 Llama 3.2 3B 언어 모델, 음성 합성에는 Kokoro를 사용하는 완전한 음성 어시스턴트 파이프라인을 기기에서 직접 실행하며, 이 모든 처리는 Apple Metal GPU를 통해 이루어집니다. 개발자가 밝힌 포지셔닝은 "Fully offline. Fully yours"입니다 — 설치 후에는 오디오나 텍스트를 서버로 전송하지 않고, API 키도 필요 없이 음성 명령을 처리합니다.',
     metaDescription:
