@@ -6,14 +6,14 @@
   </metadata>
 
   <!-- Title -->
-  <text x="500" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#1a1a1a">AMD Ryzen AI Max+ vs Apple Mac Studio M4 Max</text>
+  <text x="500" y="30" font-size="24" font-weight="bold" text-anchor="middle" fill="#1a1a1a">AMD Ryzen AI Max+ vs Apple Mac Studio M5 Max</text>
 
   <!-- Column headers -->
   <rect x="50" y="50" width="400" height="40" fill="#f0f0f0" rx="3"/>
   <text x="250" y="77" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">AMD Ryzen AI Max+ 395</text>
 
   <rect x="500" y="50" width="400" height="40" fill="#f0f0f0" rx="3"/>
-  <text x="700" y="77" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">Apple Mac Studio M4 Max</text>
+  <text x="700" y="77" font-size="14" font-weight="bold" text-anchor="middle" fill="#333">Apple Mac Studio M5 Max</text>
 
   <!-- Unified Memory -->
   <rect x="50" y="110" width="400" height="70" fill="#fff8e1" stroke="#FF9800" stroke-width="1" rx="3"/>
@@ -23,7 +23,7 @@
 
   <rect x="500" y="110" width="400" height="70" fill="#fff8e1" stroke="#FF9800" stroke-width="1" rx="3"/>
   <text x="520" y="130" font-size="12" font-weight="bold" fill="#333">Mémoire Unifiée</text>
-  <text x="520" y="150" font-size="11" fill="#666">36–192GB LPDDR5X</text>
+  <text x="520" y="150" font-size="11" fill="#666">Jusqu'à 128Go LPDDR5X</text>
   <text x="520" y="165" font-size="11" fill="#666">Même architecture</text>
 
   <!-- GPU -->
@@ -34,7 +34,7 @@
 
   <rect x="500" y="200" width="400" height="70" fill="#e3f2fd" stroke="#2196F3" stroke-width="1" rx="3"/>
   <text x="520" y="220" font-size="12" font-weight="bold" fill="#333">GPU (iGPU)</text>
-  <text x="520" y="240" font-size="11" fill="#666">M4 Max GPU (10–12 cores)</text>
+  <text x="520" y="240" font-size="11" fill="#666">GPU M5 Max (jusqu’à 40 cœurs)</text>
   <text x="520" y="255" font-size="11" fill="#666">Comparable RTX 4070</text>
 
   <!-- NPU -->
@@ -45,7 +45,7 @@
 
   <rect x="500" y="290" width="400" height="70" fill="#f3e5f5" stroke="#9C27B0" stroke-width="1" rx="3"/>
   <text x="520" y="310" font-size="12" font-weight="bold" fill="#333">Neural Engine</text>
-  <text x="520" y="330" font-size="11" fill="#666">38 TOPS calcul ML</text>
+  <text x="520" y="330" font-size="11" fill="#666">Spécifications pas encore publiées</text>
   <text x="520" y="345" font-size="11" fill="#666">Intégré, non dédié</text>
 
   <!-- Price -->
@@ -56,7 +56,7 @@
 
   <rect x="500" y="380" width="400" height="70" fill="#ffccbc" stroke="#FF5722" stroke-width="1" rx="3"/>
   <text x="520" y="400" font-size="12" font-weight="bold" fill="#333">Prix</text>
-  <text x="520" y="420" font-size="11" fill="#666">€2.700–5.400 EUR</text>
+  <text x="520" y="420" font-size="11" fill="#666">à partir de 2 999 €</text>
   <text x="520" y="435" font-size="11" fill="#666">Premium flagship</text>
 
   <!-- OS & Software -->
@@ -78,9 +78,9 @@
 
   <rect x="500" y="560" width="400" height="70" fill="#fce4ec" stroke="#E91E63" stroke-width="1" rx="3"/>
   <text x="520" y="580" font-size="12" font-weight="bold" fill="#333">Consommation</text>
-  <text x="520" y="600" font-size="11" fill="#666">150–200W (système)</text>
+  <text x="520" y="600" font-size="11" fill="#666">Pas encore mesuré indépendamment</text>
   <text x="520" y="615" font-size="11" fill="#666">Refroidissement actif requis</text>
 
   <!-- Footer -->
-  <text x="970" y="645" font-size="10" fill="#999" text-anchor="end">PromptQuorum • Mai 2026</text>
+  <text x="970" y="645" font-size="10" fill="#999" text-anchor="end">PromptQuorum • septembre 2026</text>
 <text x="992" y="645" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
