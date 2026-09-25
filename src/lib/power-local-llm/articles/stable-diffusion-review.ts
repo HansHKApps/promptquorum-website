@@ -17,8 +17,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Image & Video Generation',
     heroImage: '/images/stable-diffusion-review-hero-en.webp',
-    title: 'Stable Diffusion Review (2026): Free Local Text-to-Image Models',
-    seoTitle: 'Stable Diffusion Review 2026: Local Image Model & License Guide',
+    title: 'Stable Diffusion Review: Free Local Text-to-Image Models',
+    seoTitle: 'Stable Diffusion Review: Local Image Model & License Guide',
     intro:
       'Stable Diffusion is a family of open-weights text-to-image models — SD 1.5, SD 2.1, SDXL, SD 3, and SD 3.5 — originally released by [Stability AI](https://stability.ai), the CompVis group at LMU Munich, and Runway ML in August 2022. It is not a downloadable app: Stable Diffusion is the model itself, distributed as weights and code, so generating an image locally still requires a separate front-end interface such as AUTOMATIC1111, ComfyUI, InvokeAI, or Fooocus to load the model and run inference on your own GPU. This review covers what Stable Diffusion actually is, its real license terms (which differ by version), hardware requirements, where to download the weights, and how it compares with newer local and cloud alternatives.',
     metaDescription:
@@ -327,8 +327,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Image & Video Generation',
     heroImage: '/images/stable-diffusion-review-hero-de.webp',
-    title: 'Stable Diffusion Test (2026): Kostenlose lokale Text-zu-Bild-Modelle',
-    seoTitle: 'Stable Diffusion Test 2026: Lokales Bildmodell & Lizenz-Guide',
+    title: 'Stable Diffusion Test: Kostenlose lokale Text-zu-Bild-Modelle',
+    seoTitle: 'Stable Diffusion Test: Lokales Bildmodell & Lizenz-Guide',
     intro:
       'Stable Diffusion ist eine Familie offener Text-zu-Bild-Modelle — SD 1.5, SD 2.1, SDXL, SD 3 und SD 3.5 —, die ursprünglich im August 2022 von [Stability AI](https://stability.ai), der CompVis-Gruppe der LMU München und Runway ML veröffentlicht wurde. Es handelt sich nicht um eine fertige App: Stable Diffusion ist das Modell selbst, verteilt als Gewichte (Weights) und Code. Um lokal ein Bild zu erzeugen, ist zusätzlich eine eigenständige Oberfläche wie AUTOMATIC1111, ComfyUI, InvokeAI oder Fooocus nötig, die das Modell lädt und die Inferenz auf der eigenen GPU ausführt. Dieser Test erklärt, was Stable Diffusion tatsächlich ist, die realen Lizenzbedingungen (die sich je nach Version unterscheiden), die Hardware-Anforderungen, wo Sie die Gewichte herunterladen, und wie es sich mit neueren lokalen und Cloud-Alternativen vergleicht.',
     metaDescription:
@@ -637,8 +637,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Image & Video Generation',
     heroImage: '/images/stable-diffusion-review-hero-es.webp',
-    title: 'Stable Diffusion 2026: Modelos Locales de Texto a Imagen Gratis',
-    seoTitle: 'Stable Diffusion 2026: Reseña, Licencia y Requisitos VRAM',
+    title: 'Stable Diffusion: Modelos Locales de Texto a Imagen Gratis',
+    seoTitle: 'Stable Diffusion: Reseña, Licencia y Requisitos VRAM',
     intro:
       'Stable Diffusion es una familia de modelos abiertos de texto a imagen — SD 1.5, SD 2.1, SDXL, SD 3 y SD 3.5 — lanzada originalmente en agosto de 2022 por [Stability AI](https://stability.ai), el grupo CompVis de la LMU de Múnich y Runway ML. No es una aplicación lista para usar: Stable Diffusion es el modelo en sí, distribuido como pesos (weights) y código, así que para generar una imagen localmente necesitas además una interfaz independiente como AUTOMATIC1111, ComfyUI, InvokeAI o Fooocus que cargue el modelo y ejecute la inferencia en tu propia GPU. Esta reseña cubre qué es realmente Stable Diffusion, sus términos de licencia reales (que difieren según la versión), los requisitos de hardware, dónde descargar los pesos y cómo se compara con alternativas locales y en la nube más recientes.',
     metaDescription:
@@ -947,8 +947,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Image & Video Generation',
     heroImage: '/images/stable-diffusion-review-hero-fr.webp',
-    title: 'Stable Diffusion 2026 : Modèles Locaux de Texte à Image Gratuits',
-    seoTitle: 'Stable Diffusion 2026 : Avis, Licence et VRAM Requise',
+    title: 'Stable Diffusion: Modèles Locaux de Texte à Image Gratuits',
+    seoTitle: 'Stable Diffusion: Avis, Licence et VRAM Requise',
     intro:
       'Stable Diffusion est une famille de modèles ouverts de texte à image — SD 1.5, SD 2.1, SDXL, SD 3 et SD 3.5 — publiée à l\'origine en août 2022 par [Stability AI](https://stability.ai), le groupe CompVis de la LMU de Munich et Runway ML. Ce n\'est pas une application prête à l\'emploi : Stable Diffusion est le modèle lui-même, distribué sous forme de poids (weights) et de code. Pour générer une image en local, vous avez donc besoin d\'une interface distincte comme AUTOMATIC1111, ComfyUI, InvokeAI ou Fooocus, qui charge le modèle et exécute l\'inférence sur votre propre GPU. Cet avis explique ce qu\'est réellement Stable Diffusion, ses véritables conditions de licence (qui diffèrent selon la version), la configuration matérielle requise, où télécharger les poids, et comment il se compare aux alternatives locales et cloud plus récentes.',
     metaDescription:
@@ -1257,8 +1257,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Image & Video Generation',
     heroImage: '/images/stable-diffusion-review-hero-ja.webp',
-    title: 'Stable Diffusionレビュー(2026):無料のローカル画像生成モデル',
-    seoTitle: 'Stable Diffusion 2026:ローカル画像モデルとライセンスガイド',
+    title: 'Stable Diffusionレビュー:無料のローカル画像生成モデル',
+    seoTitle: 'Stable Diffusion:ローカル画像モデルとライセンスガイド',
     intro:
       'Stable Diffusionは、SD 1.5、SD 2.1、SDXL、SD 3、SD 3.5などからなるオープンウェイトのテキストto画像モデルファミリーです。2022年8月に[Stability AI](https://stability.ai)、ミュンヘン大学(LMU)のCompVisグループ、Runway MLが共同で最初のバージョンを公開しました。これはアプリではありません。Stable Diffusionはモデルそのものであり、重み(weights)とコードとして配布されます。ローカルで画像を生成するには、モデルを読み込んでGPU上で推論を実行する別のUI(AUTOMATIC1111、ComfyUI、InvokeAI、Fooocusなど)が必要です。このレビューでは、Stable Diffusionの実態、バージョンごとに異なる実際のライセンス条件、必要なハードウェア、重みの入手先、そしてFLUXなど新しいローカル・クラウド代替との比較を解説します。',
     metaDescription:
@@ -1567,8 +1567,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Image & Video Generation',
     heroImage: '/images/stable-diffusion-review-hero-pt.webp',
-    title: 'Stable Diffusion (2026): Modelos Locais Gratuitos de Texto para Imagem',
-    seoTitle: 'Stable Diffusion 2026: Análise, Licença e VRAM Necessária',
+    title: 'Stable Diffusion: Modelos Locais Gratuitos de Texto para Imagem',
+    seoTitle: 'Stable Diffusion: Análise, Licença e VRAM Necessária',
     intro:
       'Stable Diffusion é uma família de modelos abertos de texto para imagem — SD 1.5, SD 2.1, SDXL, SD 3 e SD 3.5 — lançada originalmente em agosto de 2022 pela [Stability AI](https://stability.ai), o grupo CompVis da LMU de Munique e a Runway ML. Não é um aplicativo pronto para uso: Stable Diffusion é o próprio modelo, distribuído como pesos (weights) e código, então gerar uma imagem localmente ainda exige uma interface separada, como AUTOMATIC1111, ComfyUI, InvokeAI ou Fooocus, para carregar o modelo e executar a inferência na sua própria GPU. Esta análise explica o que é realmente o Stable Diffusion, seus termos de licença reais (que diferem por versão), os requisitos de hardware, onde baixar os pesos e como ele se compara a alternativas locais e em nuvem mais recentes.',
     metaDescription:
@@ -1877,8 +1877,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Image & Video Generation',
     heroImage: '/images/stable-diffusion-review-hero-ar.webp',
-    title: 'مراجعة Stable Diffusion (2026): نماذج نص-إلى-صورة محلية مجانية',
-    seoTitle: 'مراجعة Stable Diffusion 2026: النموذج المحلي ودليل الترخيص',
+    title: 'مراجعة Stable Diffusion: نماذج نص-إلى-صورة محلية مجانية',
+    seoTitle: 'مراجعة Stable Diffusion: النموذج المحلي ودليل الترخيص',
     intro:
       'Stable Diffusion هي عائلة من نماذج تحويل النص إلى صورة مفتوحة الأوزان — SD 1.5 وSD 2.1 وSDXL وSD 3 وSD 3.5 — أصدرتها في الأصل شركة [Stability AI](https://stability.ai) بالتعاون مع مجموعة CompVis في جامعة ميونخ (LMU) وشركة Runway ML في أغسطس 2022. إنها ليست تطبيقًا جاهزًا: Stable Diffusion هو النموذج نفسه، يُوزَّع كأوزان (weights) وكود، لذا فإن توليد صورة محليًا لا يزال يتطلب واجهة منفصلة مثل AUTOMATIC1111 أو ComfyUI أو InvokeAI أو Fooocus لتحميل النموذج وتشغيل الاستدلال على وحدة معالجة الرسومات (GPU) الخاصة بك. تتناول هذه المراجعة ماهية Stable Diffusion فعليًا، وشروط ترخيصه الحقيقية (التي تختلف حسب الإصدار)، ومتطلبات العتاد، وأين تُحمَّل الأوزان، وكيف يقارَن بالبدائل المحلية والسحابية الأحدث.',
     metaDescription:
@@ -2187,8 +2187,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Image & Video Generation',
     heroImage: '/images/stable-diffusion-review-hero-zh.webp',
-    title: 'Stable Diffusion评测(2026):免费本地文生图模型',
-    seoTitle: 'Stable Diffusion 2026:本地图像模型与许可证指南',
+    title: 'Stable Diffusion评测:免费本地文生图模型',
+    seoTitle: 'Stable Diffusion:本地图像模型与许可证指南',
     intro:
       'Stable Diffusion是一系列开放权重的文本生成图像模型——包括SD 1.5、SD 2.1、SDXL、SD 3和SD 3.5——最初由[Stability AI](https://stability.ai)、慕尼黑大学(LMU)的CompVis研究组和Runway ML于2022年8月联合发布。它不是一个现成的应用程序:Stable Diffusion是模型本身,以权重(weights)和代码的形式分发,因此要在本地生成图像,仍需要一个单独的界面——如AUTOMATIC1111、ComfyUI、InvokeAI或Fooocus——来加载模型并在你自己的GPU上运行推理。本文将介绍Stable Diffusion到底是什么、按版本不同的真实许可条款、硬件要求、权重下载地址,以及它与更新的本地和云端替代方案的比较。',
     metaDescription:
@@ -2497,8 +2497,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Image & Video Generation',
     heroImage: '/images/stable-diffusion-review-hero-ko.webp',
-    title: 'Stable Diffusion 리뷰(2026): 무료 로컬 텍스트-이미지 모델',
-    seoTitle: 'Stable Diffusion 2026: 로컬 이미지 모델 및 라이선스 가이드',
+    title: 'Stable Diffusion 리뷰: 무료 로컬 텍스트-이미지 모델',
+    seoTitle: 'Stable Diffusion: 로컬 이미지 모델 및 라이선스 가이드',
     intro:
       'Stable Diffusion은 SD 1.5, SD 2.1, SDXL, SD 3, SD 3.5로 구성된 오픈 웨이트 텍스트-이미지 모델 패밀리입니다. 2022년 8월 [Stability AI](https://stability.ai)와 뮌헨대학교(LMU) CompVis 그룹, Runway ML이 공동으로 최초 버전을 공개했습니다. 이는 완성된 앱이 아닙니다. Stable Diffusion은 모델 자체이며 가중치(weights)와 코드 형태로 배포되므로, 로컬에서 이미지를 생성하려면 모델을 불러와 자신의 GPU에서 추론을 실행하는 별도의 UI—AUTOMATIC1111, ComfyUI, InvokeAI, Fooocus 등—가 필요합니다. 이 리뷰는 Stable Diffusion이 실제로 무엇인지, 버전별로 다른 실제 라이선스 조건, 필요한 하드웨어 사양, 가중치 다운로드 위치, 그리고 더 최신의 로컬·클라우드 대안과의 비교를 다룹니다.',
     metaDescription:

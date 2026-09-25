@@ -13,8 +13,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chatty-mini-review-hero-en.webp',
-    title: 'Chatty-mini Review (2026): Private, Local-First GGUF Chat on Android',
-    seoTitle: 'Chatty-mini Review 2026: Local GGUF Chat on Android',
+    title: 'Chatty-mini Review: Private, Local-First GGUF Chat on Android',
+    seoTitle: 'Chatty-mini Review: Local GGUF Chat on Android',
     intro:
       'Chatty-mini, developed by Fractal Media Infrastructure and listed on Google Play as "Chatty-mini: Your Personal, Private AI Workspace," is a portrait-first Android app built to run GGUF models directly on the device. The [Google Play listing](https://play.google.com/store/apps/details?id=io.instance001.chatmini) describes it as "private, local-first AI chat" for offline creative writing, note-taking, and a private chat space, without naming a cloud fallback. This review covers what the public listing actually documents — the app is a small, independently developed project, and much of what a fuller review would normally verify (specific supported model families, storage footprint, pricing, and user-reported reliability) is not published anywhere beyond the store page itself.',
     metaDescription:
@@ -325,8 +325,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chatty-mini-review-hero-de.webp',
-    title: 'Chatty-mini im Test (2026): Privater, lokaler GGUF-Chat für Android',
-    seoTitle: 'Chatty-mini Test 2026: Lokaler GGUF-Chat für Android',
+    title: 'Chatty-mini im Test: Privater, lokaler GGUF-Chat für Android',
+    seoTitle: 'Chatty-mini Test: Lokaler GGUF-Chat für Android',
     intro:
       'Chatty-mini, entwickelt von Fractal Media Infrastructure, ist bei Google Play als „Chatty-mini: Your Personal, Private AI Workspace" gelistet — eine im Hochformat ausgelegte Android-App, die GGUF-Modelle direkt auf dem Gerät ausführt. Der [Google-Play-Eintrag](https://play.google.com/store/apps/details?id=io.instance001.chatmini) beschreibt sie als „private, lokale KI-Chat-App" für Offline-Kreativschreiben, Notizen und einen privaten Chat-Bereich, ohne einen Cloud-Fallback zu nennen. Dieser Test beschränkt sich auf das, was der öffentliche Play-Store-Eintrag tatsächlich dokumentiert — Chatty-mini ist ein kleines, unabhängig entwickeltes Projekt, und vieles, was ein vollständiger Test normalerweise prüfen würde (konkrete unterstützte Modellfamilien, Speicherbedarf, Preise und Nutzerfeedback zur Zuverlässigkeit), ist nirgends veröffentlicht außer auf der Store-Seite selbst.',
     metaDescription:
@@ -633,8 +633,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chatty-mini-review-hero-fr.webp',
-    title: 'Chatty-mini : test (2026) — chat GGUF privé et local sur Android',
-    seoTitle: 'Chatty-mini : test 2026 du chat GGUF local sur Android',
+    title: 'Chatty-mini: test — chat GGUF privé et local sur Android',
+    seoTitle: 'Chatty-mini: test du chat GGUF local sur Android',
     intro:
       'Chatty-mini, développée par Fractal Media Infrastructure, est référencée sur Google Play sous le nom « Chatty-mini: Your Personal, Private AI Workspace » — une application Android pensée pour le mode portrait, conçue pour exécuter des modèles GGUF directement sur l\'appareil. La [fiche Google Play](https://play.google.com/store/apps/details?id=io.instance001.chatmini) la décrit comme un « chat IA privé et local » pour l\'écriture créative hors ligne, la prise de notes et un espace de discussion privé, sans mentionner de repli vers le cloud. Ce test se limite à ce que la fiche publique documente réellement — Chatty-mini est un petit projet développé de façon indépendante, et une grande partie de ce qu\'un test complet vérifierait normalement (familles de modèles précisément prises en charge, encombrement de stockage, prix, retours d\'utilisateurs sur la fiabilité) n\'est publiée nulle part ailleurs que sur cette page du store.',
     metaDescription:
@@ -945,8 +945,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chatty-mini-review-hero-ja.webp',
-    title: 'Chatty-mini レビュー(2026年):Android向けプライベート・ローカルGGUFチャット',
-    seoTitle: 'Chatty-mini レビュー2026:AndroidのローカルGGUFチャット',
+    title: 'Chatty-mini レビュー:Android向けプライベート・ローカルGGUFチャット',
+    seoTitle: 'Chatty-mini レビュー:AndroidのローカルGGUFチャット',
     intro:
       'Chatty-miniは、Fractal Media Infrastructureが開発し、Google Playに「Chatty-mini: Your Personal, Private AI Workspace」として掲載されているAndroidアプリです。縦向き表示を前提に設計されており、GGUFモデルを端末上で直接実行します。[Google Playの掲載情報](https://play.google.com/store/apps/details?id=io.instance001.chatmini)では「private, local-first AI chat」と説明されており、オフラインでの創作活動、メモ作成、プライベートなチャット空間向けとされていますが、クラウドへのフォールバックについては言及がありません。このレビューは、公開されている掲載情報が実際に示している内容にのみ基づいています。Chatty-miniは小規模で独立開発されたプロジェクトであり、通常のレビューであれば確認するはずの項目(具体的な対応モデルファミリー、ストレージ使用量、価格、信頼性に関するユーザーの声など)は、ストアページ以外どこにも公開されていません。',
     metaDescription:
@@ -1257,8 +1257,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chatty-mini-review-hero-zh.webp',
-    title: 'Chatty-mini 评测(2026):Android 上的私密本地 GGUF 聊天应用',
-    seoTitle: 'Chatty-mini 评测 2026:Android 本地 GGUF 聊天应用',
+    title: 'Chatty-mini 评测:Android 上的私密本地 GGUF 聊天应用',
+    seoTitle: 'Chatty-mini 评测:Android 本地 GGUF 聊天应用',
     intro:
       'Chatty-mini 由 Fractal Media Infrastructure 开发,在 Google Play 上以「Chatty-mini: Your Personal, Private AI Workspace」上架,是一款以竖屏为主、专为在设备上直接运行 GGUF 模型而设计的 Android 应用。[Google Play 页面](https://play.google.com/store/apps/details?id=io.instance001.chatmini)将其描述为「私密、本地优先的 AI 聊天」,面向离线创意写作、笔记记录和私密聊天空间,但没有提及云端回退方案。本评测仅基于该公开页面实际记录的信息 —— Chatty-mini 是一个规模较小、独立开发的项目,而一份完整评测通常会核实的很多内容(具体支持的模型系列、存储占用、价格、用户对可靠性的反馈)在商店页面之外并无任何公开渠道可查。',
     metaDescription:
@@ -1569,8 +1569,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chatty-mini-review-hero-es.webp',
-    title: 'Chatty-mini: reseña (2026) — chat GGUF privado y local en Android',
-    seoTitle: 'Chatty-mini: reseña 2026 del chat GGUF local en Android',
+    title: 'Chatty-mini: reseña — chat GGUF privado y local en Android',
+    seoTitle: 'Chatty-mini: reseña del chat GGUF local en Android',
     intro:
       'Chatty-mini, desarrollada por Fractal Media Infrastructure, aparece en Google Play como "Chatty-mini: Your Personal, Private AI Workspace" — una app de Android pensada para modo vertical que ejecuta modelos GGUF directamente en el dispositivo. La [ficha de Google Play](https://play.google.com/store/apps/details?id=io.instance001.chatmini) la describe como "chat de IA privado y local" para escritura creativa sin conexión, notas y un espacio de chat privado, sin mencionar ningún respaldo en la nube. Esta reseña se limita a lo que la ficha pública realmente documenta — Chatty-mini es un proyecto pequeño y desarrollado de forma independiente, y buena parte de lo que una reseña completa normalmente verificaría (familias de modelos concretas compatibles, espacio de almacenamiento, precio y comentarios de usuarios sobre su fiabilidad) no está publicado en ningún otro lugar más allá de esa página de la tienda.',
     metaDescription:
@@ -1881,8 +1881,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chatty-mini-review-hero-pt.webp',
-    title: 'Chatty-mini: análise (2026) — chat GGUF privado e local no Android',
-    seoTitle: 'Chatty-mini: análise 2026 do chat GGUF local no Android',
+    title: 'Chatty-mini: análise — chat GGUF privado e local no Android',
+    seoTitle: 'Chatty-mini: análise do chat GGUF local no Android',
     intro:
       'O Chatty-mini, desenvolvido pela Fractal Media Infrastructure, está listado na Google Play como "Chatty-mini: Your Personal, Private AI Workspace" — um app Android voltado para o modo retrato, criado para executar modelos GGUF diretamente no aparelho. A [ficha da Google Play](https://play.google.com/store/apps/details?id=io.instance001.chatmini) o descreve como um "chat de IA privado e local" para escrita criativa offline, anotações e um espaço de chat privado, sem mencionar nenhum fallback na nuvem. Esta análise se limita ao que a ficha pública realmente documenta — o Chatty-mini é um projeto pequeno, desenvolvido de forma independente, e boa parte do que uma análise completa normalmente verificaria (famílias de modelos específicas suportadas, espaço de armazenamento ocupado, preço e feedback de usuários sobre confiabilidade) não está publicada em nenhum outro lugar além dessa própria página da loja.',
     metaDescription:
@@ -2193,8 +2193,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chatty-mini-review-hero-ar.webp',
-    title: 'مراجعة Chatty-mini (2026): محادثة GGUF خاصة ومحلية على Android',
-    seoTitle: 'مراجعة Chatty-mini 2026: محادثة GGUF محلية على Android',
+    title: 'مراجعة Chatty-mini: محادثة GGUF خاصة ومحلية على Android',
+    seoTitle: 'مراجعة Chatty-mini: محادثة GGUF محلية على Android',
     intro:
       'تطبيق Chatty-mini، الذي طورته شركة Fractal Media Infrastructure، مُدرَج على Google Play باسم "Chatty-mini: Your Personal, Private AI Workspace" — وهو تطبيق Android مصمم أساسًا للعرض العمودي، ومُعَد لتشغيل نماذج GGUF مباشرة على الجهاز. تصف [صفحة Google Play](https://play.google.com/store/apps/details?id=io.instance001.chatmini) التطبيق بأنه "محادثة ذكاء اصطناعي خاصة ومحلية أولًا" للكتابة الإبداعية دون اتصال بالإنترنت، وتدوين الملاحظات، ومساحة محادثة خاصة، دون ذكر أي خيار احتياطي يعتمد على السحابة. تقتصر هذه المراجعة على ما توثقه الصفحة العامة فعليًا — فتطبيق Chatty-mini مشروع صغير طُوِّر بشكل مستقل، والكثير مما تتحقق منه مراجعة كاملة عادةً (عائلات النماذج المدعومة تحديدًا، حجم التخزين، السعر، وآراء المستخدمين حول الموثوقية) غير منشور في أي مكان آخر سوى صفحة المتجر نفسها.',
     metaDescription:
@@ -2505,8 +2505,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chatty-mini-review-hero-ko.webp',
-    title: 'Chatty-mini 리뷰(2026): Android용 프라이빗 로컬 GGUF 채팅',
-    seoTitle: 'Chatty-mini 리뷰 2026: Android 로컬 GGUF 채팅 앱',
+    title: 'Chatty-mini 리뷰: Android용 프라이빗 로컬 GGUF 채팅',
+    seoTitle: 'Chatty-mini 리뷰: Android 로컬 GGUF 채팅 앱',
     intro:
       'Fractal Media Infrastructure가 개발한 Chatty-mini는 Google Play에 "Chatty-mini: Your Personal, Private AI Workspace"라는 이름으로 등록된 앱으로, 세로 화면 중심으로 설계되어 GGUF 모델을 기기에서 직접 실행합니다. [Google Play 등록 정보](https://play.google.com/store/apps/details?id=io.instance001.chatmini)는 이 앱을 오프라인 창작 글쓰기, 메모 작성, 프라이빗 채팅 공간을 위한 "프라이빗하고 로컬 우선인 AI 채팅"으로 설명하며, 클라우드 폴백에 대한 언급은 없습니다. 본 리뷰는 공개된 등록 정보가 실제로 문서화한 내용만을 다룹니다 — Chatty-mini는 소규모의 독립 개발 프로젝트이며, 일반적인 리뷰라면 확인했을 많은 항목(구체적으로 지원되는 모델 계열, 저장 공간 사용량, 가격, 신뢰성에 대한 사용자 피드백 등)이 스토어 페이지 외에는 어디에도 공개되어 있지 않습니다.',
     metaDescription:

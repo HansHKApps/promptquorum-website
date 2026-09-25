@@ -13,8 +13,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/aori-ai-personal-agent-review-hero-en.webp',
-    title: 'Aori AI Review (2026): Local-First Personal Agent for Desktop and Mobile',
-    seoTitle: 'Aori AI Review 2026: Local-First Personal Agent',
+    title: 'Aori AI Review: Local-First Personal Agent for Desktop and Mobile',
+    seoTitle: 'Aori AI Review: Local-First Personal Agent',
     intro:
       'Aori is a personal AI agent app that runs on your desktop and phone, with persistent memory, switchable personas, and scheduled routines. It stores your API keys and conversations locally rather than on an Aori-run server, but it is not a fully offline app by default — most of its intelligence comes from whichever cloud LLM provider you connect. This review covers what Aori actually does, which platforms support fully local inference via Ollama, and where the local-first claim ends and the cloud dependency begins.',
     metaDescription:
@@ -279,8 +279,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/aori-ai-personal-agent-review-hero-ar.webp',
-    title: 'مراجعة Aori AI (2026): وكيل ذكاء اصطناعي شخصي محلي أولاً لسطح المكتب والهاتف المحمول',
-    seoTitle: 'مراجعة Aori AI 2026: وكيل شخصي محلي أولاً',
+    title: 'مراجعة Aori AI: وكيل ذكاء اصطناعي شخصي محلي أولاً لسطح المكتب والهاتف المحمول',
+    seoTitle: 'مراجعة Aori AI: وكيل شخصي محلي أولاً',
     intro:
       'Aori هو تطبيق وكيل ذكاء اصطناعي شخصي يعمل على سطح المكتب والهاتف لديك، مع ذاكرة دائمة، وشخصيات (personas) قابلة للتبديل، وروتينات مجدولة. يخزّن مفاتيح API الخاصة بك ومحادثاتك محلياً بدلاً من خادم تديره Aori، لكنه ليس تطبيقاً يعمل بدون إنترنت بشكل افتراضي — معظم ذكائه يأتي من مزود LLM السحابي الذي تربطه به. تغطي هذه المراجعة ما يفعله Aori فعلياً، وأي المنصات تدعم الاستدلال المحلي الكامل عبر Ollama، وأين ينتهي ادعاء "المحلي أولاً" وأين يبدأ الاعتماد على السحابة.',
     metaDescription:
@@ -545,8 +545,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/aori-ai-personal-agent-review-hero-de.webp',
-    title: 'Aori AI Test (2026): Local-First Persönlicher KI-Agent für Desktop und Mobilgeräte',
-    seoTitle: 'Aori AI Test 2026: Local-First Persönlicher KI-Agent',
+    title: 'Aori AI Test: Local-First Persönlicher KI-Agent für Desktop und Mobilgeräte',
+    seoTitle: 'Aori AI Test: Local-First Persönlicher KI-Agent',
     intro:
       'Aori ist eine App für einen persönlichen KI-Agenten, die auf Ihrem Desktop und Smartphone läuft, mit dauerhaftem Gedächtnis, umschaltbaren Personas und geplanten Routinen. Sie speichert Ihre API-Schlüssel und Unterhaltungen lokal statt auf einem von Aori betriebenen Server, ist aber standardmäßig keine vollständig offline-fähige App — der Großteil ihrer Intelligenz stammt von dem Cloud-LLM-Anbieter, den Sie anbinden. Dieser Test zeigt, was Aori tatsächlich leistet, welche Plattformen vollständig lokale Inferenz über Ollama unterstützen und wo der Local-First-Anspruch endet und die Cloud-Abhängigkeit beginnt.',
     metaDescription:
@@ -811,8 +811,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/aori-ai-personal-agent-review-hero-es.webp',
-    title: 'Reseña de Aori AI (2026): Agente Personal Local-First para Escritorio y Móvil',
-    seoTitle: 'Reseña de Aori AI 2026: Agente Personal Local-First',
+    title: 'Reseña de Aori AI: Agente Personal Local-First para Escritorio y Móvil',
+    seoTitle: 'Reseña de Aori AI: Agente Personal Local-First',
     intro:
       'Aori es una app de agente de IA personal que funciona en tu escritorio y tu teléfono, con memoria persistente, personas intercambiables y rutinas programadas. Guarda tus claves de API y conversaciones localmente en lugar de en un servidor operado por Aori, pero no es una app totalmente offline por defecto — la mayor parte de su inteligencia proviene del proveedor de LLM en la nube que conectes. Esta reseña cubre lo que Aori realmente hace, qué plataformas admiten inferencia totalmente local vía Ollama, y dónde termina la promesa "local-first" y dónde empieza la dependencia de la nube.',
     metaDescription:
@@ -1077,8 +1077,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/aori-ai-personal-agent-review-hero-fr.webp',
-    title: 'Avis Aori AI (2026) : agent personnel local-first pour ordinateur et mobile',
-    seoTitle: 'Avis Aori AI 2026 : agent personnel local-first',
+    title: 'Avis Aori AI: agent personnel local-first pour ordinateur et mobile',
+    seoTitle: 'Avis Aori AI: agent personnel local-first',
     intro:
       'Aori est une application d\'agent IA personnel qui fonctionne sur votre ordinateur et votre téléphone, avec mémoire persistante, personas interchangeables et routines planifiées. Elle stocke vos clés API et vos conversations localement plutôt que sur un serveur exploité par Aori, mais ce n\'est pas une application entièrement hors ligne par défaut — l\'essentiel de son intelligence provient du fournisseur de LLM cloud que vous connectez. Cet avis détaille ce qu\'Aori fait réellement, quelles plateformes prennent en charge l\'inférence entièrement locale via Ollama, et où s\'arrête la promesse « local-first » pour laisser place à la dépendance au cloud.',
     metaDescription:
@@ -1343,8 +1343,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/aori-ai-personal-agent-review-hero-ja.webp',
-    title: 'Aori AIレビュー(2026年):デスクトップとモバイル対応のローカルファースト個人向けAIエージェント',
-    seoTitle: 'Aori AIレビュー2026:ローカルファーストAIエージェント',
+    title: 'Aori AIレビュー:デスクトップとモバイル対応のローカルファースト個人向けAIエージェント',
+    seoTitle: 'Aori AIレビュー:ローカルファーストAIエージェント',
     intro:
       'Aoriはデスクトップとスマートフォンで動作する個人向けAIエージェントアプリで、永続的な記憶、切り替え可能なペルソナ、スケジュール実行されるルーティンを備えています。APIキーと会話はAoriが運営するサーバーではなく端末にローカル保存されますが、デフォルトで完全オフラインのアプリではありません — 知能の大部分は接続したクラウドLLMプロバイダーに由来します。このレビューではAoriが実際に何をするか、どのプラットフォームがOllama経由の完全ローカル推論に対応しているか、そして「ローカルファースト」という主張がどこで終わりクラウド依存がどこから始まるかを検証します。',
     metaDescription:
@@ -1609,8 +1609,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/aori-ai-personal-agent-review-hero-ko.webp',
-    title: 'Aori AI 리뷰(2026): 데스크톱과 모바일을 위한 로컬 퍼스트 개인 AI 에이전트',
-    seoTitle: 'Aori AI 리뷰 2026: 로컬 퍼스트 개인 AI 에이전트',
+    title: 'Aori AI 리뷰: 데스크톱과 모바일을 위한 로컬 퍼스트 개인 AI 에이전트',
+    seoTitle: 'Aori AI 리뷰: 로컬 퍼스트 개인 AI 에이전트',
     intro:
       'Aori는 데스크톱과 휴대폰에서 실행되는 개인 AI 에이전트 앱으로, 지속적인 기억, 전환 가능한 페르소나, 예약된 루틴을 제공합니다. API 키와 대화는 Aori가 운영하는 서버가 아닌 기기에 로컬로 저장되지만, 기본적으로 완전한 오프라인 앱은 아닙니다 — 지능의 대부분은 연결한 클라우드 LLM 제공업체에서 나옵니다. 이 리뷰는 Aori가 실제로 무엇을 하는지, 어떤 플랫폼이 Ollama를 통한 완전한 로컬 추론을 지원하는지, 그리고 "로컬 퍼스트"라는 주장이 어디에서 끝나고 클라우드 의존이 어디에서 시작되는지를 다룹니다.',
     metaDescription:
@@ -1875,8 +1875,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/aori-ai-personal-agent-review-hero-pt.webp',
-    title: 'Avaliação do Aori AI (2026): Agente Pessoal Local-First para Desktop e Mobile',
-    seoTitle: 'Avaliação do Aori AI 2026: Agente Pessoal Local-First',
+    title: 'Avaliação do Aori AI: Agente Pessoal Local-First para Desktop e Mobile',
+    seoTitle: 'Avaliação do Aori AI: Agente Pessoal Local-First',
     intro:
       'Aori é um aplicativo de agente de IA pessoal que roda no seu computador e no seu celular, com memória persistente, personas alternáveis e rotinas agendadas. Ele guarda suas chaves de API e conversas localmente, em vez de em um servidor operado pelo Aori, mas não é um aplicativo totalmente offline por padrão — a maior parte da sua inteligência vem do provedor de LLM em nuvem que você conectar. Esta avaliação mostra o que o Aori realmente faz, quais plataformas suportam inferência totalmente local via Ollama, e onde termina a promessa "local-first" e começa a dependência da nuvem.',
     metaDescription:
@@ -2141,8 +2141,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/aori-ai-personal-agent-review-hero-zh.webp',
-    title: 'Aori AI 评测(2026):面向桌面和移动端的本地优先个人代理',
-    seoTitle: 'Aori AI 评测 2026:本地优先个人 AI 代理',
+    title: 'Aori AI 评测:面向桌面和移动端的本地优先个人代理',
+    seoTitle: 'Aori AI 评测:本地优先个人 AI 代理',
     intro:
       'Aori 是一款个人 AI 代理应用,可在你的电脑和手机上运行,具备持久记忆、可切换的人设(persona)以及可安排的例行任务。它将你的 API 密钥和对话保存在本地设备上,而不是 Aori 运营的服务器上,但默认情况下它并非完全离线的应用 —— 它的大部分智能来自你连接的云端 LLM 提供商。本评测介绍 Aori 实际能做什么、哪些平台支持通过 Ollama 实现完全本地推理,以及"本地优先"的说法在哪里结束、云端依赖从哪里开始。',
     metaDescription:

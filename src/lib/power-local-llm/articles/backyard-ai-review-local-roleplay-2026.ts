@@ -14,8 +14,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/backyard-ai-review-local-roleplay-2026-hero-en.webp',
-    title: 'Backyard AI Review (2026): Local AI Character Chat and Roleplay',
-    seoTitle: 'Backyard AI Review 2026: Local Roleplay & Character Chat',
+    title: 'Backyard AI Review: Local AI Character Chat and Roleplay',
+    seoTitle: 'Backyard AI Review: Local Roleplay & Character Chat',
     intro:
       'Backyard AI ([backyard.ai](https://backyard.ai)), formerly named Faraday.dev, is a free, closed-source desktop app for Windows and Mac built specifically for AI character chat and roleplay. It runs open-source models — Llama, Mistral, Gemma, and community-tuned roleplay fine-tunes such as Fimbulvetr 10.7B — entirely on your own hardware, with no account and no credit card required for local use. Its Character Hub gives you thousands of user-created personas to chat with out of the box, and an optional paid Backyard Cloud tier adds hosted inference for readers without a capable local GPU. The practical question is not whether local roleplay is possible — SillyTavern and RisuAI already prove that — it is whether Backyard AI\'s point-and-click simplicity is worth its closed-source model and curated character library compared with the more open, more configurable frontends covered elsewhere on this site.',
     metaDescription:
@@ -375,8 +375,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/backyard-ai-review-local-roleplay-2026-hero-de.webp',
-    title: 'Backyard AI im Test (2026): Lokaler KI-Charakter-Chat und Rollenspiel',
-    seoTitle: 'Backyard AI Test 2026: Lokales Rollenspiel & Charakter-Chat',
+    title: 'Backyard AI im Test: Lokaler KI-Charakter-Chat und Rollenspiel',
+    seoTitle: 'Backyard AI Test: Lokales Rollenspiel & Charakter-Chat',
     intro:
       'Backyard AI ([backyard.ai](https://backyard.ai)), früher Faraday.dev genannt, ist eine kostenlose, closed-source Desktop-App für Windows und Mac, die speziell für KI-Charakter-Chat und Rollenspiel entwickelt wurde. Sie führt Open-Source-Modelle — Llama, Mistral, Gemma und community-getunte Rollenspiel-Fine-Tunes wie Fimbulvetr 10.7B — vollständig auf Ihrer eigenen Hardware aus, ohne Konto und ohne Kreditkarte für die lokale Nutzung. Der Character Hub liefert von Anfang an tausende von Community-erstellten Personas zum sofortigen Chatten, und eine optionale kostenpflichtige Backyard-Cloud-Stufe bietet gehostete Inferenz für Leser ohne leistungsfähige lokale GPU. Die praktische Frage ist nicht, ob lokales Rollenspiel möglich ist — SillyTavern und RisuAI beweisen das bereits —, sondern ob die Klick-und-fertig-Einfachheit von Backyard AI angesichts des closed-source Modells und der kuratierten Charakter-Bibliothek den offeneren, konfigurierbareren Frontends dieser Seite vorzuziehen ist.',
     metaDescription:
@@ -749,8 +749,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/backyard-ai-review-local-roleplay-2026-hero-es.webp',
-    title: 'Análisis de Backyard AI (2026): Chat de Personajes IA y Roleplay Local',
-    seoTitle: 'Backyard AI 2026: Roleplay Local y Chat de Personajes',
+    title: 'Análisis de Backyard AI: Chat de Personajes IA y Roleplay Local',
+    seoTitle: 'Backyard AI: Roleplay Local y Chat de Personajes',
     intro:
       'Backyard AI ([backyard.ai](https://backyard.ai)), antes llamada Faraday.dev, es una app de escritorio gratuita y de código cerrado para Windows y Mac, creada específicamente para el chat de personajes IA y el roleplay. Ejecuta modelos de código abierto — Llama, Mistral, Gemma y ajustes finos de roleplay de la comunidad como Fimbulvetr 10.7B — completamente en tu propio equipo, sin cuenta ni tarjeta de crédito para el uso local. Su Character Hub ofrece de entrada miles de personas creadas por usuarios para chatear, y una capa opcional de pago, Backyard Cloud, añade inferencia alojada para quienes no tienen una GPU local potente. La pregunta práctica no es si el roleplay local es posible — SillyTavern y RisuAI ya lo demuestran —, sino si la sencillez de "instalar y listo" de Backyard AI compensa su modelo de código cerrado y su biblioteca de personajes curada frente a los frontends más abiertos y configurables que cubrimos en este sitio.',
     metaDescription:
@@ -1123,8 +1123,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/backyard-ai-review-local-roleplay-2026-hero-fr.webp',
-    title: 'Avis sur Backyard AI (2026) : chat de personnages IA et roleplay local',
-    seoTitle: 'Backyard AI 2026 : roleplay local et chat de personnages',
+    title: 'Avis sur Backyard AI: chat de personnages IA et roleplay local',
+    seoTitle: 'Backyard AI: roleplay local et chat de personnages',
     intro:
       'Backyard AI ([backyard.ai](https://backyard.ai)), anciennement Faraday.dev, est une application de bureau gratuite et à code fermé pour Windows et Mac, conçue spécifiquement pour le chat de personnages IA et le roleplay. Elle exécute des modèles open source — Llama, Mistral, Gemma et des fine-tunes de roleplay communautaires comme Fimbulvetr 10.7B — entièrement sur votre propre machine, sans compte ni carte bancaire pour l\'usage local. Son Character Hub propose d\'emblée des milliers de personas créés par la communauté, et une offre payante optionnelle, Backyard Cloud, ajoute une inférence hébergée pour les lecteurs sans GPU local puissant. La question pratique n\'est pas de savoir si le roleplay local est possible — SillyTavern et RisuAI le prouvent déjà — mais si la simplicité "installer et jouer" de Backyard AI compense son modèle à code fermé et sa bibliothèque de personnages sélectionnée face aux frontends plus ouverts et configurables traités sur ce site.',
     metaDescription:
@@ -1497,8 +1497,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/backyard-ai-review-local-roleplay-2026-hero-ja.webp',
-    title: 'Backyard AIレビュー(2026):ローカルAIキャラクターチャットとロールプレイ',
-    seoTitle: 'Backyard AI 2026レビュー:ローカルロールプレイとキャラクターチャット',
+    title: 'Backyard AIレビュー:ローカルAIキャラクターチャットとロールプレイ',
+    seoTitle: 'Backyard AI レビュー:ローカルロールプレイとキャラクターチャット',
     intro:
       'Backyard AI(backyard.ai、旧Faraday.dev)は、AIキャラクターチャットとロールプレイのために作られた、WindowsとMac向けの無料・クローズドソースのデスクトップアプリです。Llama、Mistral、Gemma、そしてFimbulvetr 10.7Bのようなコミュニティ製ロールプレイ用ファインチューンモデルを、アカウントもクレジットカードも不要でご自身のハードウェア上で完全に実行できます。Character Hub(キャラクターハブ)には数千のユーザー作成ペルソナが最初から用意されており、有料オプションのBackyard Cloudでは強力なローカルGPUを持たない読者向けにホスト型推論を提供します。実際の論点はローカルロールプレイが可能かどうかではありません — SillyTavernやRisuAIがすでに実証済みです。論点は、Backyard AIのクリックだけで使える手軽さが、クローズドソースモデルと厳選されたキャラクターライブラリという代償に見合うか、このサイトで扱うよりオープンで設定自由度の高いフロントエンドと比べてどうか、という点です。',
     metaDescription:
@@ -1871,8 +1871,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/backyard-ai-review-local-roleplay-2026-hero-zh.webp',
-    title: 'Backyard AI评测(2026):本地AI角色聊天与角色扮演',
-    seoTitle: 'Backyard AI 2026评测:本地角色扮演与角色聊天',
+    title: 'Backyard AI评测:本地AI角色聊天与角色扮演',
+    seoTitle: 'Backyard AI 评测:本地角色扮演与角色聊天',
     intro:
       'Backyard AI(backyard.ai,前身为Faraday.dev)是一款免费、闭源的Windows和Mac桌面应用,专为AI角色聊天和角色扮演打造。它可以在你自己的硬件上完全本地运行开源模型——Llama、Mistral、Gemma,以及Fimbulvetr 10.7B这类社区调优的角色扮演模型——本地使用无需账号、无需信用卡。其Character Hub开箱即用地提供数千个用户创建的角色供你聊天,而可选的付费Backyard Cloud则为没有强力本地GPU的用户提供托管推理。真正的问题不在于本地角色扮演是否可行——SillyTavern和RisuAI早已证明这一点——而在于Backyard AI这种即装即用的简便性,相对于其闭源模型和精选角色库,是否值得,尤其是与本站介绍的更开放、更可配置的前端相比。',
     metaDescription:
@@ -2245,8 +2245,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/backyard-ai-review-local-roleplay-2026-hero-pt.webp',
-    title: 'Análise do Backyard AI (2026): Chat de Personagens IA e Roleplay Local',
-    seoTitle: 'Backyard AI 2026: Roleplay Local e Chat de Personagens',
+    title: 'Análise do Backyard AI: Chat de Personagens IA e Roleplay Local',
+    seoTitle: 'Backyard AI: Roleplay Local e Chat de Personagens',
     intro:
       'O Backyard AI ([backyard.ai](https://backyard.ai)), antes chamado Faraday.dev, é um aplicativo de desktop gratuito e de código fechado para Windows e Mac, criado especificamente para chat de personagens IA e roleplay. Ele executa modelos de código aberto — Llama, Mistral, Gemma e ajustes finos de roleplay da comunidade, como o Fimbulvetr 10.7B — totalmente no seu próprio hardware, sem necessidade de conta ou cartão de crédito para uso local. O Character Hub oferece de cara milhares de personas criadas por usuários para você conversar, e um nível pago opcional, o Backyard Cloud, adiciona inferência hospedada para quem não tem uma GPU local potente. A questão prática não é se o roleplay local é possível — o SillyTavern e o RisuAI já provam isso — mas sim se a simplicidade "instalou e já era" do Backyard AI compensa seu modelo de código fechado e sua biblioteca de personagens curada, em comparação com os frontends mais abertos e configuráveis cobertos neste site.',
     metaDescription:
@@ -2619,8 +2619,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/backyard-ai-review-local-roleplay-2026-hero-ar.webp',
-    title: 'مراجعة Backyard AI (2026): محادثة الشخصيات بالذكاء الاصطناعي ولعب الأدوار محلياً',
-    seoTitle: 'مراجعة Backyard AI 2026: لعب الأدوار المحلي ومحادثة الشخصيات',
+    title: 'مراجعة Backyard AI: محادثة الشخصيات بالذكاء الاصطناعي ولعب الأدوار محلياً',
+    seoTitle: 'مراجعة Backyard AI: لعب الأدوار المحلي ومحادثة الشخصيات',
     intro:
       'Backyard AI ([backyard.ai](https://backyard.ai))، الذي كان يُعرف سابقاً باسم Faraday.dev، هو تطبيق سطح مكتب مجاني ومغلق المصدر لأنظمة Windows و Mac، صُمم خصيصاً لمحادثة الشخصيات بالذكاء الاصطناعي ولعب الأدوار. يشغّل نماذج مفتوحة المصدر — Llama و Mistral و Gemma، وإصدارات مضبوطة من المجتمع لِلعب الأدوار مثل Fimbulvetr 10.7B — بالكامل على جهازك الخاص، دون حساب أو بطاقة ائتمان للاستخدام المحلي. يوفّر Character Hub الخاص به منذ البداية آلاف الشخصيات التي أنشأها المستخدمون للمحادثة، بينما تضيف طبقة Backyard Cloud المدفوعة الاختيارية استدلالاً مستضافاً للقراء الذين لا يملكون بطاقة رسومات محلية قوية. السؤال العملي ليس ما إذا كان لعب الأدوار المحلي ممكناً — فقد أثبت SillyTavern و RisuAI ذلك بالفعل — بل ما إذا كانت بساطة Backyard AI في "التثبيت والاستخدام مباشرة" تستحق نموذجه المغلق المصدر ومكتبة شخصياته المنسّقة، مقارنة بالواجهات الأكثر انفتاحاً وقابلية للتخصيص التي يغطيها هذا الموقع.',
     metaDescription:
@@ -2993,8 +2993,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/backyard-ai-review-local-roleplay-2026-hero-ko.webp',
-    title: 'Backyard AI 리뷰(2026): 로컬 AI 캐릭터 채팅과 롤플레이',
-    seoTitle: 'Backyard AI 2026 리뷰: 로컬 롤플레이와 캐릭터 채팅',
+    title: 'Backyard AI 리뷰: 로컬 AI 캐릭터 채팅과 롤플레이',
+    seoTitle: 'Backyard AI 리뷰: 로컬 롤플레이와 캐릭터 채팅',
     intro:
       'Backyard AI(backyard.ai, 이전 명칭 Faraday.dev)는 AI 캐릭터 채팅과 롤플레이를 위해 특별히 제작된 Windows 및 Mac용 무료 폐쇄형 소스 데스크톱 앱입니다. Llama, Mistral, Gemma, 그리고 Fimbulvetr 10.7B와 같은 커뮤니티 제작 롤플레이 파인튜닝 모델을 계정이나 신용카드 없이 사용자의 하드웨어에서 완전히 로컬로 실행합니다. Character Hub는 처음부터 수천 개의 사용자 제작 페르소나를 제공하며, 강력한 로컬 GPU가 없는 독자를 위한 유료 옵션인 Backyard Cloud는 호스팅 추론을 추가로 제공합니다. 실질적인 질문은 로컬 롤플레이가 가능한지가 아닙니다 — SillyTavern과 RisuAI가 이미 이를 입증했습니다. 문제는 Backyard AI의 설치만 하면 되는 단순함이, 본 사이트에서 다루는 더 개방적이고 설정 자유도가 높은 프런트엔드와 비교했을 때 폐쇄형 소스 모델과 선별된 캐릭터 라이브러리라는 대가를 치를 가치가 있는지입니다.',
     metaDescription:

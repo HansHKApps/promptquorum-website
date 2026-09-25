@@ -14,8 +14,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/bark-tts-review-hero-en.webp',
-    title: 'Bark TTS Review (2026): Suno\'s MIT-Licensed Model for Laughter, Sighs, and Speech',
-    seoTitle: 'Bark TTS Review 2026: MIT-Licensed Generative Audio',
+    title: 'Bark TTS Review: Suno\'s MIT-Licensed Model for Laughter, Sighs, and Speech',
+    seoTitle: 'Bark TTS Review: MIT-Licensed Generative Audio',
     intro:
       'Bark is an open-source, generative text-to-audio model released by Suno on [GitHub](https://github.com/suno-ai/bark), capable of producing realistic multilingual speech and, unusually for a text-to-speech model, non-speech sounds like laughter, sighs, and simple music, all from text prompts alone. It is licensed under the **MIT License** — Suno made it fully commercial-use-eligible on May 1, 2023. This review covers what Bark actually does, real usage commands, its honest limitations (no custom voice cloning, non-deterministic output, a roughly 13-14 second generation limit), and its maintenance status: the public GitHub repository shows no commits since April 5, 2024, and Suno, the company, has since become primarily known for its AI music-generation product rather than for Bark.',
     metaDescription:
@@ -317,8 +317,8 @@ os.environ["SUNO_USE_SMALL_MODELS"] = "True"`,
     next_refresh_due: '2027-03-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/bark-tts-review-hero-de.webp',
-    title: 'Bark TTS im Test (2026): Sunos MIT-lizenziertes Modell für Lachen, Seufzen und Sprache',
-    seoTitle: 'Bark TTS im Test 2026: MIT-lizenzierte generative Audio-KI',
+    title: 'Bark TTS im Test: Sunos MIT-lizenziertes Modell für Lachen, Seufzen und Sprache',
+    seoTitle: 'Bark TTS im Test: MIT-lizenzierte generative Audio-KI',
     intro:
       'Bark ist ein quelloffenes, generatives Text-zu-Audio-Modell von Suno, veröffentlicht auf [GitHub](https://github.com/suno-ai/bark), das realistische mehrsprachige Sprache erzeugt und, ungewöhnlich für ein Text-zu-Sprache-Modell, auch nicht-sprachliche Laute wie Lachen, Seufzen und einfache Musik — allein aus Textvorgaben. Es steht unter der **MIT-Lizenz** — Suno machte es am 1. Mai 2023 vollständig für die kommerzielle Nutzung verfügbar. Dieser Test behandelt, was Bark tatsächlich tut, echte Nutzungsbefehle, seine ehrlichen Grenzen (kein individuelles Voice-Cloning, nicht-deterministische Ausgabe, eine Generierungsgrenze von etwa 13-14 Sekunden) und seinen Pflegestatus: Das öffentliche GitHub-Repository zeigt seit dem 5. April 2024 keine Commits mehr, und Suno, das Unternehmen, ist inzwischen vor allem für sein KI-Musikgenerierungsprodukt bekannt, nicht für Bark.',
     metaDescription:
@@ -620,8 +620,8 @@ os.environ["SUNO_USE_SMALL_MODELS"] = "True"`,
     next_refresh_due: '2027-03-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/bark-tts-review-hero-fr.webp',
-    title: 'Bark TTS : avis (2026) — le modèle sous licence MIT de Suno pour le rire, les soupirs et la parole',
-    seoTitle: 'Bark TTS : avis 2026 — audio génératif sous licence MIT',
+    title: 'Bark TTS: avis — le modèle sous licence MIT de Suno pour le rire, les soupirs et la parole',
+    seoTitle: 'Bark TTS: avis — audio génératif sous licence MIT',
     intro:
       'Bark est un modèle génératif texte-vers-audio open source publié par Suno sur [GitHub](https://github.com/suno-ai/bark), capable de produire une parole multilingue réaliste et, fait rare pour un modèle de synthèse vocale, des sons non verbaux comme le rire, les soupirs et de la musique simple, le tout à partir de simples invites textuelles. Il est distribué sous **licence MIT** — Suno l\'a rendu pleinement utilisable commercialement le 1er mai 2023. Cet avis couvre ce que fait réellement Bark, des commandes d\'utilisation réelles, ses limites honnêtes (pas de clonage vocal personnalisé, sortie non déterministe, une limite de génération d\'environ 13 à 14 secondes) et son statut de maintenance : le dépôt GitHub public ne montre aucun commit depuis le 5 avril 2024, et Suno, l\'entreprise, est depuis surtout connue pour son produit de génération musicale par IA plutôt que pour Bark.',
     metaDescription:
@@ -923,8 +923,8 @@ os.environ["SUNO_USE_SMALL_MODELS"] = "True"`,
     next_refresh_due: '2027-03-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/bark-tts-review-hero-es.webp',
-    title: 'Bark TTS: análisis (2026) — el modelo con licencia MIT de Suno para risas, suspiros y habla',
-    seoTitle: 'Bark TTS: análisis 2026 — audio generativo con licencia MIT',
+    title: 'Bark TTS: análisis — el modelo con licencia MIT de Suno para risas, suspiros y habla',
+    seoTitle: 'Bark TTS: análisis — audio generativo con licencia MIT',
     intro:
       'Bark es un modelo generativo de texto a audio de código abierto publicado por Suno en [GitHub](https://github.com/suno-ai/bark), capaz de producir habla multilingüe realista y, algo inusual para un modelo de texto a voz, sonidos no verbales como risas, suspiros y música simple, todo a partir de indicaciones de texto. Está licenciado bajo la **Licencia MIT** — Suno lo hizo apto para uso comercial completo el 1 de mayo de 2023. Este análisis cubre qué hace realmente Bark, comandos de uso reales, sus limitaciones honestas (sin clonación de voz personalizada, salida no determinista, un límite de generación de aproximadamente 13-14 segundos) y su estado de mantenimiento: el repositorio público de GitHub no muestra commits desde el 5 de abril de 2024, y Suno, la empresa, se ha vuelto conocida principalmente por su producto de generación musical con IA en lugar de por Bark.',
     metaDescription:
@@ -1226,8 +1226,8 @@ os.environ["SUNO_USE_SMALL_MODELS"] = "True"`,
     next_refresh_due: '2027-03-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/bark-tts-review-hero-ja.webp',
-    title: 'Barkレビュー(2026):笑い声・ため息・音声を生成するSunoのMITライセンスモデル',
-    seoTitle: 'Barkレビュー2026:MITライセンスの生成音声モデル',
+    title: 'Barkレビュー:笑い声・ため息・音声を生成するSunoのMITライセンスモデル',
+    seoTitle: 'Barkレビュー:MITライセンスの生成音声モデル',
     intro:
       'BarkはSunoが[GitHub](https://github.com/suno-ai/bark)で公開したオープンソースの生成テキスト音声モデルで、リアルな多言語音声を生成できるだけでなく、テキスト読み上げモデルとしては珍しく、笑い声、ため息、簡単な音楽といった非音声サウンドをテキストプロンプトだけから生成できます。ライセンスは**MITライセンス**で、Sunoは2026年ではなく2023年5月1日に完全な商用利用を可能にしました。このレビューでは、Barkが実際に何をするか、実際の使用コマンド、正直な限界(カスタムボイスクローニング非対応、非決定的な出力、約13〜14秒の生成時間制限)、そしてそのメンテナンス状況を扱います。公開されているGitHubリポジトリは2024年4月5日以降コミットがなく、この企業Sunoは現在、Barkよりもむしろ音楽生成AI製品で広く知られるようになっています。',
     metaDescription:
@@ -1529,8 +1529,8 @@ os.environ["SUNO_USE_SMALL_MODELS"] = "True"`,
     next_refresh_due: '2027-03-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/bark-tts-review-hero-pt.webp',
-    title: 'Bark TTS: análise (2026) — o modelo com licença MIT da Suno para risadas, suspiros e fala',
-    seoTitle: 'Bark TTS: análise 2026 — áudio generativo com licença MIT',
+    title: 'Bark TTS: análise — o modelo com licença MIT da Suno para risadas, suspiros e fala',
+    seoTitle: 'Bark TTS: análise — áudio generativo com licença MIT',
     intro:
       'Bark é um modelo generativo de texto para áudio de código aberto lançado pela Suno no [GitHub](https://github.com/suno-ai/bark), capaz de produzir fala multilíngue realista e, algo incomum para um modelo de texto para fala, sons não verbais como risadas, suspiros e música simples, tudo a partir de prompts de texto. Está licenciado sob a **Licença MIT** — a Suno o tornou totalmente apto para uso comercial em 1º de maio de 2023. Esta análise cobre o que o Bark realmente faz, comandos de uso reais, suas limitações honestas (sem clonagem de voz personalizada, saída não determinística, um limite de geração de aproximadamente 13-14 segundos) e seu status de manutenção: o repositório público do GitHub não mostra commits desde 5 de abril de 2024, e a Suno, a empresa, passou a ser conhecida principalmente por seu produto de geração musical por IA em vez de pelo Bark.',
     metaDescription:
@@ -1832,8 +1832,8 @@ os.environ["SUNO_USE_SMALL_MODELS"] = "True"`,
     next_refresh_due: '2027-03-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/bark-tts-review-hero-ar.webp',
-    title: 'مراجعة Bark (2026): نموذج Suno المرخّص بموجب MIT للضحك والتنهد والكلام',
-    seoTitle: 'مراجعة Bark 2026: صوت توليدي مرخّص بموجب MIT',
+    title: 'مراجعة Bark: نموذج Suno المرخّص بموجب MIT للضحك والتنهد والكلام',
+    seoTitle: 'مراجعة Bark: صوت توليدي مرخّص بموجب MIT',
     intro:
       'Bark هو نموذج توليدي مفتوح المصدر لتحويل النص إلى صوت أصدرته Suno على [GitHub](https://github.com/suno-ai/bark)، قادر على إنتاج كلام واقعي متعدد اللغات، وبشكل غير معتاد لنموذج تحويل نص إلى كلام، أصوات غير كلامية مثل الضحك والتنهد والموسيقى البسيطة، كل ذلك من مطالبات نصية فقط. وهو مرخّص بموجب **رخصة MIT** — جعلته Suno متاحًا بالكامل للاستخدام التجاري في 1 مايو 2023. تتناول هذه المراجعة ما يفعله Bark فعليًا، وأوامر استخدام حقيقية، وحدوده الصادقة (لا يدعم استنساخ صوت مخصص، مخرجات غير حتمية، حد توليد يبلغ نحو 13-14 ثانية)، وحالة صيانته: لا يُظهر مستودع GitHub العام أي التزامات (commits) منذ 5 أبريل 2024، وأصبحت شركة Suno معروفة بشكل أساسي بمنتجها لتوليد الموسيقى بالذكاء الاصطناعي بدلاً من Bark.',
     metaDescription:
@@ -2135,8 +2135,8 @@ os.environ["SUNO_USE_SMALL_MODELS"] = "True"`,
     next_refresh_due: '2027-03-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/bark-tts-review-hero-zh.webp',
-    title: 'Bark 评测(2026):Suno 旗下支持笑声、叹息与语音的 MIT 许可模型',
-    seoTitle: 'Bark 评测 2026:MIT 许可的生成式音频模型',
+    title: 'Bark 评测:Suno 旗下支持笑声、叹息与语音的 MIT 许可模型',
+    seoTitle: 'Bark 评测:MIT 许可的生成式音频模型',
     intro:
       'Bark 是 Suno 发布在 [GitHub](https://github.com/suno-ai/bark) 上的开源生成式文本转音频模型,能够生成逼真的多语言语音,并且——这对文本转语音模型来说并不常见——仅凭文本提示就能生成笑声、叹息和简单音乐等非语音声音。它采用 **MIT 许可证**——Suno 已于 2023 年 5 月 1 日使其完全可用于商业用途。本评测介绍 Bark 实际能做什么、真实的使用命令、其真实的局限性(不支持自定义声音克隆、输出不确定、单次生成时长约 13-14 秒的限制),以及其维护状态:公开的 GitHub 仓库自 2024 年 4 月 5 日以来没有任何提交,而 Suno 公司如今主要以其 AI 音乐生成产品闻名,而非 Bark。',
     metaDescription:
@@ -2438,8 +2438,8 @@ os.environ["SUNO_USE_SMALL_MODELS"] = "True"`,
     next_refresh_due: '2027-03-06',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/bark-tts-review-hero-ko.webp',
-    title: 'Bark 리뷰(2026): 웃음, 한숨, 음성을 만드는 Suno의 MIT 라이선스 모델',
-    seoTitle: 'Bark 리뷰 2026: MIT 라이선스 생성형 오디오',
+    title: 'Bark 리뷰: 웃음, 한숨, 음성을 만드는 Suno의 MIT 라이선스 모델',
+    seoTitle: 'Bark 리뷰: MIT 라이선스 생성형 오디오',
     intro:
       'Bark는 Suno가 [GitHub](https://github.com/suno-ai/bark)에 공개한 오픈소스 생성형 텍스트-오디오 모델로, 사실적인 다국어 음성을 생성할 뿐만 아니라, 텍스트 음성 변환 모델로는 이례적으로 웃음, 한숨, 간단한 음악 같은 비언어적 소리까지 텍스트 프롬프트만으로 만들어낼 수 있습니다. 이 모델은 **MIT 라이선스** 하에 있으며, Suno는 2026년이 아닌 2023년 5월 1일에 완전한 상업적 사용을 허용했습니다. 이 리뷰에서는 Bark가 실제로 무엇을 하는지, 실제 사용 명령어, 솔직한 한계(맞춤형 음성 클로닝 미지원, 비결정적 출력, 약 13~14초의 생성 시간 제한), 그리고 유지 관리 상태를 다룹니다. 공개된 GitHub 저장소는 2024년 4월 5일 이후 커밋이 없으며, 회사인 Suno는 이제 Bark보다는 AI 음악 생성 제품으로 더 널리 알려져 있습니다.',
     metaDescription:

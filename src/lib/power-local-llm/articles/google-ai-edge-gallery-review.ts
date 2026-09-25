@@ -13,8 +13,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-en.webp',
-    title: 'Google AI Edge Gallery Review (2026): Gemma 4 On-Device Chat for iPhone',
-    seoTitle: 'Google AI Edge Gallery Review 2026: iOS Gemma App',
+    title: 'Google AI Edge Gallery Review: Gemma 4 On-Device Chat for iPhone',
+    seoTitle: 'Google AI Edge Gallery Review: iOS Gemma App',
     intro:
       'Google AI Edge Gallery is a free app from [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) that runs open-source AI models entirely on an iPhone, iPad, or Mac, using Google\'s [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) on-device inference runtime. This review covers the iOS App Store listing specifically (App Store ID 6749645337, version 1.0.10, 4.0 stars from 160+ ratings as of this review) — a companion to [Google AI Edge Gallery\'s entry in the Local LLM Software Directory](/directory). The app is the consumer front end for a broader open-source project, [google-ai-edge/gallery on GitHub](https://github.com/google-ai-edge/gallery), which also ships on Android and as a direct APK download — this review does not evaluate the Android build. On iOS it runs Google\'s Gemma model family, including the current Gemma 4 generation, fully offline once a model is downloaded, and lets users import additional models from [Hugging Face](https://huggingface.co/) in LiteRT format. The practical question for a reader comparing on-device iPhone apps is how a free, Google-maintained, officially "experimental Beta" app compares with paid, more polished alternatives like [Private LLM](/power-local-llm/private-llm-review) or free ones like [PocketPal AI](/power-local-llm/pocketpal-ai-review).',
     metaDescription:
@@ -404,8 +404,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-de.webp',
-    title: 'Google AI Edge Gallery im Test (2026): Gemma 4 On-Device-Chat fürs iPhone',
-    seoTitle: 'Google AI Edge Gallery Test 2026: iOS-Gemma-App',
+    title: 'Google AI Edge Gallery im Test: Gemma 4 On-Device-Chat fürs iPhone',
+    seoTitle: 'Google AI Edge Gallery Test: iOS-Gemma-App',
     intro:
       'Google AI Edge Gallery ist eine kostenlose App von [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337), die Open-Source-KI-Modelle vollständig auf dem iPhone, iPad oder Mac ausführt — mithilfe von Googles [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)-Laufzeitumgebung für On-Device-Inferenz. Dieser Test behandelt speziell den iOS-App-Store-Eintrag (App-Store-ID 6749645337, Version 1.0.10, 4,0 von 5 Sternen bei über 160 Bewertungen zum Zeitpunkt dieses Tests) — als Begleitartikel zu [Google AI Edge Gallerys Eintrag im lokalen KI-Software-Verzeichnis](/de/directory). Die App ist die Nutzerfront eines größeren Open-Source-Projekts, [google-ai-edge/gallery auf GitHub](https://github.com/google-ai-edge/gallery), das auch für Android und als direkter APK-Download erhältlich ist — diese Bewertung prüft die Android-Version nicht. Auf iOS führt sie Googles Gemma-Modellfamilie aus, einschließlich der aktuellen Gemma-4-Generation, vollständig offline nach dem Herunterladen eines Modells, und erlaubt den Import zusätzlicher Modelle von [Hugging Face](https://huggingface.co/) im LiteRT-Format. Die praktische Frage für Leser, die On-Device-iPhone-Apps vergleichen, ist, wie eine kostenlose, von Google gepflegte, offiziell als „experimentelle Beta" bezeichnete App gegenüber kostenpflichtigen, ausgereifteren Alternativen wie [Private LLM](/de/power-local-llm/private-llm-review) oder kostenlosen wie [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) abschneidet.',
     metaDescription:
@@ -795,8 +795,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-fr.webp',
-    title: 'Google AI Edge Gallery : test (2026) — chat Gemma 4 sur l\'appareil pour iPhone',
-    seoTitle: 'Google AI Edge Gallery 2026 : app Gemma iOS',
+    title: 'Google AI Edge Gallery: test — chat Gemma 4 sur l\'appareil pour iPhone',
+    seoTitle: 'Google AI Edge Gallery: app Gemma iOS',
     intro:
       'Google AI Edge Gallery est une application gratuite de [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) qui exécute des modèles d\'IA open source entièrement sur iPhone, iPad ou Mac, grâce au moteur d\'inférence sur l\'appareil [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) de Google. Ce test porte spécifiquement sur la fiche App Store iOS (ID App Store 6749645337, version 1.0.10, 4,0 étoiles sur plus de 160 avis au moment de ce test) — un article complémentaire à [la fiche de Google AI Edge Gallery dans le répertoire de logiciels IA locaux](/fr/directory). L\'application est la façade grand public d\'un projet open source plus large, [google-ai-edge/gallery sur GitHub](https://github.com/google-ai-edge/gallery), également disponible sur Android et en APK direct — ce test n\'évalue pas la version Android. Sur iOS, elle exécute la famille de modèles Gemma de Google, y compris la génération actuelle Gemma 4, entièrement hors ligne une fois un modèle téléchargé, et permet d\'importer d\'autres modèles depuis [Hugging Face](https://huggingface.co/) au format LiteRT. La question pratique pour un lecteur comparant les apps IA sur iPhone est de savoir comment une application gratuite, maintenue par Google, officiellement qualifiée de « bêta expérimentale », se compare à des alternatives payantes plus abouties comme [Private LLM](/fr/power-local-llm/private-llm-review) ou gratuites comme [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review).',
     metaDescription:
@@ -1186,8 +1186,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-es.webp',
-    title: 'Google AI Edge Gallery: reseña (2026) — chat Gemma 4 en el dispositivo para iPhone',
-    seoTitle: 'Google AI Edge Gallery 2026: app Gemma para iOS',
+    title: 'Google AI Edge Gallery: reseña — chat Gemma 4 en el dispositivo para iPhone',
+    seoTitle: 'Google AI Edge Gallery: app Gemma para iOS',
     intro:
       'Google AI Edge Gallery es una aplicación gratuita de [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) que ejecuta modelos de IA de código abierto completamente en un iPhone, iPad o Mac, usando el motor de inferencia en el dispositivo de Google, [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM). Esta reseña cubre específicamente la ficha de la App Store de iOS (ID de App Store 6749645337, versión 1.0.10, 4,0 estrellas con más de 160 valoraciones al momento de esta reseña) — un artículo complementario a [la ficha de Google AI Edge Gallery en el directorio de software de IA local](/es/directory). La app es la cara al usuario de un proyecto de código abierto más amplio, [google-ai-edge/gallery en GitHub](https://github.com/google-ai-edge/gallery), que también se distribuye en Android y como APK directo — esta reseña no evalúa la versión de Android. En iOS ejecuta la familia de modelos Gemma de Google, incluida la generación actual Gemma 4, completamente sin conexión una vez descargado un modelo, y permite importar modelos adicionales desde [Hugging Face](https://huggingface.co/) en formato LiteRT. La pregunta práctica para un lector que compara apps de IA en el dispositivo para iPhone es cómo se compara una app gratuita, mantenida por Google, oficialmente etiquetada como "beta experimental", frente a alternativas de pago más pulidas como [Private LLM](/es/power-local-llm/private-llm-review) o gratuitas como [PocketPal AI](/es/power-local-llm/pocketpal-ai-review).',
     metaDescription:
@@ -1577,8 +1577,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-pt.webp',
-    title: 'Google AI Edge Gallery: análise (2026) — chat Gemma 4 no dispositivo para iPhone',
-    seoTitle: 'Google AI Edge Gallery 2026: app Gemma para iOS',
+    title: 'Google AI Edge Gallery: análise — chat Gemma 4 no dispositivo para iPhone',
+    seoTitle: 'Google AI Edge Gallery: app Gemma para iOS',
     intro:
       'Google AI Edge Gallery é um aplicativo gratuito da [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) que executa modelos de IA de código aberto inteiramente em um iPhone, iPad ou Mac, usando o mecanismo de inferência no dispositivo da Google, [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM). Esta análise cobre especificamente a ficha da App Store para iOS (ID da App Store 6749645337, versão 1.0.10, 4,0 estrelas com mais de 160 avaliações no momento desta análise) — um artigo complementar à [ficha do Google AI Edge Gallery no diretório de software de IA local](/pt/directory). O app é a interface para o usuário de um projeto de código aberto mais amplo, [google-ai-edge/gallery no GitHub](https://github.com/google-ai-edge/gallery), também distribuído no Android e como APK direto — esta análise não avalia a versão Android. No iOS, ele executa a família de modelos Gemma da Google, incluindo a geração atual Gemma 4, totalmente offline após o download de um modelo, e permite importar modelos adicionais do [Hugging Face](https://huggingface.co/) no formato LiteRT. A questão prática para um leitor comparando apps de IA no dispositivo para iPhone é como um app gratuito, mantido pela Google, oficialmente rotulado como "beta experimental", se compara a alternativas pagas mais polidas como [Private LLM](/pt/power-local-llm/private-llm-review) ou gratuitas como [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review).',
     metaDescription:
@@ -1968,8 +1968,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-ja.webp',
-    title: 'Google AI Edge Gallery レビュー（2026年）：iPhone向けGemma 4オンデバイスチャット',
-    seoTitle: 'Google AI Edge Gallery レビュー2026：iOS版Gemmaアプリ',
+    title: 'Google AI Edge Gallery レビュー：iPhone向けGemma 4オンデバイスチャット',
+    seoTitle: 'Google AI Edge Gallery レビュー：iOS版Gemmaアプリ',
     intro:
       'Google AI Edge Gallery は、[Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) が提供する無料アプリで、Googleのオンデバイス推論ランタイム [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM) を使い、オープンソースAIモデルをiPhone・iPad・Macで完全に実行します。本レビューはiOS版App Store掲載（App Store ID 6749645337、バージョン1.0.10、レビュー時点で4.0つ星・160件超の評価）を対象としています——[ローカルLLMソフトウェアディレクトリ内のGoogle AI Edge Gallery掲載](/ja/directory)の関連記事です。このアプリは、より大きなオープンソースプロジェクト [GitHub上のgoogle-ai-edge/gallery](https://github.com/google-ai-edge/gallery) のユーザー向け窓口であり、同プロジェクトはAndroid版や直接APKダウンロードも提供していますが、本レビューではAndroid版は評価対象外です。iOS版では、現行のGemma 4世代を含むGoogleのGemmaモデルファミリーを、モデルダウンロード後は完全オフラインで実行し、[Hugging Face](https://huggingface.co/) からLiteRT形式で追加モデルをインポートすることもできます。iPhone向けオンデバイスアプリを比較する読者にとって実務的な問いは、Googleが公式に「実験的ベータ版」と位置づける無料アプリが、[Private LLM](/ja/power-local-llm/private-llm-review) のようなより洗練された有料アプリや、[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review) のような無料アプリとどう比較されるかです。',
     metaDescription:
@@ -2359,8 +2359,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-zh.webp',
-    title: 'Google AI Edge Gallery 评测（2026）：iPhone 上的 Gemma 4 设备端聊天',
-    seoTitle: 'Google AI Edge Gallery 2026 评测：iOS版Gemma应用',
+    title: 'Google AI Edge Gallery 评测：iPhone 上的 Gemma 4 设备端聊天',
+    seoTitle: 'Google AI Edge Gallery 评测：iOS版Gemma应用',
     intro:
       'Google AI Edge Gallery 是 [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) 推出的一款免费应用，使用谷歌的设备端推理运行时 [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)，完全在 iPhone、iPad 或 Mac 上运行开源 AI 模型。本评测专门针对 iOS App Store 的应用列表（App Store ID 6749645337，版本 1.0.10，撰写本评测时评分为 4.0 星，超过 160 条评价）——是[本地 LLM 软件目录中 Google AI Edge Gallery 条目](/zh/directory)的配套文章。该应用是一个更大的开源项目——[GitHub 上的 google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)——面向用户的前端，该项目也提供 Android 版本和直接 APK 下载，本评测不评估 Android 版本。在 iOS 上，它运行谷歌的 Gemma 模型系列，包括当前的 Gemma 4 代际，模型下载完成后完全离线运行，并允许从 [Hugging Face](https://huggingface.co/) 以 LiteRT 格式导入其他模型。对于比较设备端 iPhone 应用的读者来说，实际问题在于：一款免费、由谷歌维护、官方标注为"实验性测试版"的应用，与 [Private LLM](/zh/power-local-llm/private-llm-review) 这类更成熟的付费应用，或 [PocketPal AI](/zh/power-local-llm/pocketpal-ai-review) 这类免费应用相比如何。',
     metaDescription:
@@ -2750,8 +2750,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-ar.webp',
-    title: 'مراجعة Google AI Edge Gallery (2026): دردشة Gemma 4 على الجهاز لـiPhone',
-    seoTitle: 'مراجعة Google AI Edge Gallery 2026: تطبيق Gemma لـiOS',
+    title: 'مراجعة Google AI Edge Gallery: دردشة Gemma 4 على الجهاز لـiPhone',
+    seoTitle: 'مراجعة Google AI Edge Gallery: تطبيق Gemma لـiOS',
     intro:
       'Google AI Edge Gallery تطبيق مجاني من [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) يُشغِّل نماذج ذكاء اصطناعي مفتوحة المصدر بالكامل على iPhone أو iPad أو Mac، باستخدام بيئة تشغيل الاستدلال على الجهاز من جوجل، [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM). تتناول هذه المراجعة تحديداً صفحة App Store لـiOS (معرّف App Store 6749645337، الإصدار 1.0.10، تقييم 4.0 من 5 نجوم من أكثر من 160 تقييماً وقت كتابة هذه المراجعة) — وهي مقالة مرافقة [لإدراج Google AI Edge Gallery في دليل برامج الذكاء الاصطناعي المحلية](/ar/directory). التطبيق هو الواجهة الاستهلاكية لمشروع مفتوح المصدر أكبر، [google-ai-edge/gallery على GitHub](https://github.com/google-ai-edge/gallery)، والذي يُوزَّع أيضاً على Android وكملف APK مباشر — لا تُقيِّم هذه المراجعة نسخة Android. على iOS، يُشغِّل التطبيق عائلة نماذج Gemma من جوجل، بما في ذلك جيل Gemma 4 الحالي، بلا اتصال تماماً بعد تنزيل النموذج، ويتيح استيراد نماذج إضافية من [Hugging Face](https://huggingface.co/) بصيغة LiteRT. السؤال العملي للقارئ الذي يقارن تطبيقات الذكاء الاصطناعي على الجهاز لـiPhone هو كيف يقارَن تطبيق مجاني، تصونه جوجل، ومُصنَّف رسمياً بأنه "نسخة تجريبية اختبارية"، ببدائل مدفوعة أكثر نضجاً مثل [Private LLM](/ar/power-local-llm/private-llm-review) أو مجانية مثل [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review).',
     metaDescription:
@@ -3141,8 +3141,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-ko.webp',
-    title: 'Google AI Edge Gallery 리뷰 (2026): iPhone용 Gemma 4 온디바이스 채팅',
-    seoTitle: 'Google AI Edge Gallery 2026 리뷰: iOS Gemma 앱',
+    title: 'Google AI Edge Gallery 리뷰: iPhone용 Gemma 4 온디바이스 채팅',
+    seoTitle: 'Google AI Edge Gallery 리뷰: iOS Gemma 앱',
     intro:
       'Google AI Edge Gallery는 [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)가 제공하는 무료 앱으로, 구글의 온디바이스 추론 런타임인 [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)을 사용해 iPhone, iPad, Mac에서 오픈소스 AI 모델을 완전히 온디바이스로 실행합니다. 이 리뷰는 iOS 앱스토어 등재 정보(앱스토어 ID 6749645337, 버전 1.0.10, 이 리뷰 작성 시점 기준 160개 이상의 평가로 별점 4.0)를 구체적으로 다루며, [로컬 LLM 소프트웨어 디렉터리 내 Google AI Edge Gallery 항목](/ko/directory)의 관련 기사입니다. 이 앱은 더 큰 오픈소스 프로젝트인 [GitHub의 google-ai-edge/gallery](https://github.com/google-ai-edge/gallery)의 사용자용 전면부이며, 이 프로젝트는 Android와 직접 APK 다운로드로도 배포됩니다 — 이 리뷰는 Android 버전을 평가하지 않습니다. iOS에서는 현재 세대인 Gemma 4를 포함한 구글의 Gemma 모델 계열을 모델 다운로드 후 완전히 오프라인으로 실행하며, [Hugging Face](https://huggingface.co/)에서 LiteRT 형식으로 추가 모델을 가져올 수도 있습니다. iPhone용 온디바이스 앱을 비교하는 독자에게 실질적인 질문은, 구글이 유지관리하며 공식적으로 "실험적 베타"라고 표시한 무료 앱이 [Private LLM](/ko/power-local-llm/private-llm-review)과 같이 더 완성도 높은 유료 대안이나 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)와 같은 무료 대안과 비교해 어떤지입니다.',
     metaDescription:

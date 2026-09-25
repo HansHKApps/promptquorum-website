@@ -14,8 +14,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-11',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocket-ai-review-hero-en.webp',
-    title: 'Pocket AI Review (2026): Offline On-Device AI Chat for iPhone',
-    seoTitle: 'Pocket AI Review 2026: Offline AI Chat for iPhone',
+    title: 'Pocket AI Review: Offline On-Device AI Chat for iPhone',
+    seoTitle: 'Pocket AI Review: Offline AI Chat for iPhone',
     intro:
       'Unlike many local-model iPhone apps that ship only as a sideload, a TestFlight beta, or a build-it-yourself GitHub project, Pocket AI is distributed directly through the [Apple App Store](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702). This review covers what the app does, what it costs, and what hardware it needs.',
     metaDescription:
@@ -394,8 +394,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-11',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocket-ai-review-hero-de.webp',
-    title: 'Pocket AI im Test (2026): Offline-KI-Chat auf dem Gerät für iPhone',
-    seoTitle: 'Pocket AI Test 2026: Offline-KI-Chat fürs iPhone',
+    title: 'Pocket AI im Test: Offline-KI-Chat auf dem Gerät für iPhone',
+    seoTitle: 'Pocket AI Test: Offline-KI-Chat fürs iPhone',
     intro:
       'Anders als viele lokale KI-Apps fürs iPhone, die nur als Sideload, TestFlight-Beta oder selbst gebautes GitHub-Projekt erscheinen, wird Pocket AI direkt über den [Apple App Store](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) vertrieben. Dieser Test behandelt, was die App leistet, was sie kostet und welche Hardware sie benötigt.',
     metaDescription:
@@ -787,8 +787,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-11',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocket-ai-review-hero-fr.webp',
-    title: 'Avis Pocket AI (2026) : chat IA hors ligne sur l\'appareil pour iPhone',
-    seoTitle: 'Avis Pocket AI 2026 : chat IA hors ligne sur iPhone',
+    title: 'Avis Pocket AI: chat IA hors ligne sur l\'appareil pour iPhone',
+    seoTitle: 'Avis Pocket AI: chat IA hors ligne sur iPhone',
     intro:
       'Contrairement à de nombreuses applications d\'IA locale pour iPhone qui ne sont proposées qu\'en sideload, en bêta TestFlight ou en projet GitHub à compiler soi-même, Pocket AI est distribuée directement via l\'[App Store d\'Apple](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702). Cet avis couvre ce que fait l\'application, son coût et la configuration matérielle qu\'elle nécessite.',
     metaDescription:
@@ -1180,8 +1180,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-11',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocket-ai-review-hero-ja.webp',
-    title: 'Pocket AIレビュー(2026年):iPhone向けオフラインオンデバイスAIチャット',
-    seoTitle: 'Pocket AIレビュー2026:iPhoneのオフラインAIチャット',
+    title: 'Pocket AIレビュー:iPhone向けオフラインオンデバイスAIチャット',
+    seoTitle: 'Pocket AIレビュー:iPhoneのオフラインAIチャット',
     intro:
       '多くのiPhone向けローカルAIアプリがサイドロードやTestFlightベータ版、自分でビルドするGitHubプロジェクトとしてしか提供されないのに対し、Pocket AIは[Apple App Store](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702)を通じて直接配布されています。本レビューでは、アプリの機能、料金、必要なハードウェアについて扱います。',
     metaDescription:
@@ -1573,8 +1573,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-11',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocket-ai-review-hero-zh.webp',
-    title: 'Pocket AI评测(2026):适用于iPhone的离线设备端AI聊天应用',
-    seoTitle: 'Pocket AI评测2026:iPhone离线AI聊天应用',
+    title: 'Pocket AI评测:适用于iPhone的离线设备端AI聊天应用',
+    seoTitle: 'Pocket AI评测:iPhone离线AI聊天应用',
     intro:
       '与许多仅以旁加载、TestFlight测试版或自行编译GitHub项目形式提供的iPhone本地AI应用不同,Pocket AI直接通过[苹果App Store](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702)分发。本评测将介绍该应用的功能、价格以及硬件要求。',
     metaDescription:
@@ -1966,8 +1966,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-11',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocket-ai-review-hero-es.webp',
-    title: 'Reseña de Pocket AI (2026): chat de IA offline en el dispositivo para iPhone',
-    seoTitle: 'Reseña Pocket AI 2026: chat de IA offline en iPhone',
+    title: 'Reseña de Pocket AI: chat de IA offline en el dispositivo para iPhone',
+    seoTitle: 'Reseña Pocket AI: chat de IA offline en iPhone',
     intro:
       'A diferencia de muchas apps de IA local para iPhone que solo se distribuyen como sideload, beta de TestFlight o proyecto de GitHub para compilar uno mismo, Pocket AI se distribuye directamente a través de la [App Store de Apple](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702). Esta reseña cubre qué hace la app, cuánto cuesta y qué hardware necesita.',
     metaDescription:
@@ -2359,8 +2359,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-11',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocket-ai-review-hero-pt.webp',
-    title: 'Análise do Pocket AI (2026): chat de IA offline no dispositivo para iPhone',
-    seoTitle: 'Análise Pocket AI 2026: chat de IA offline no iPhone',
+    title: 'Análise do Pocket AI: chat de IA offline no dispositivo para iPhone',
+    seoTitle: 'Análise Pocket AI: chat de IA offline no iPhone',
     intro:
       'Diferente de muitos aplicativos de IA local para iPhone que só são distribuídos como sideload, beta do TestFlight ou projeto do GitHub para compilar você mesmo, o Pocket AI é distribuído diretamente pela [App Store da Apple](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702). Esta análise aborda o que o aplicativo faz, quanto custa e qual hardware exige.',
     metaDescription:
@@ -2752,8 +2752,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-11',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocket-ai-review-hero-ar.webp',
-    title: 'مراجعة Pocket AI (2026): محادثة ذكاء اصطناعي على الجهاز دون إنترنت لآيفون',
-    seoTitle: 'مراجعة Pocket AI 2026: دردشة ذكاء اصطناعي بدون إنترنت للآيفون',
+    title: 'مراجعة Pocket AI: محادثة ذكاء اصطناعي على الجهاز دون إنترنت لآيفون',
+    seoTitle: 'مراجعة Pocket AI: دردشة ذكاء اصطناعي بدون إنترنت للآيفون',
     intro:
       'وعلى عكس العديد من تطبيقات الذكاء الاصطناعي المحلية لآيفون التي لا تُوزَّع إلا كتثبيت جانبي أو نسخة تجريبية عبر TestFlight أو مشروع GitHub يبنيه المستخدم بنفسه، يُوزَّع Pocket AI مباشرة عبر [متجر تطبيقات آبل](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702). تتناول هذه المراجعة ما يفعله التطبيق، وتكلفته، والأجهزة المطلوبة.',
     metaDescription:
@@ -3145,8 +3145,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-11',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocket-ai-review-hero-ko.webp',
-    title: 'Pocket AI 리뷰(2026년): 아이폰용 오프라인 온디바이스 AI 채팅',
-    seoTitle: 'Pocket AI 리뷰 2026: 아이폰 오프라인 AI 채팅',
+    title: 'Pocket AI 리뷰: 아이폰용 오프라인 온디바이스 AI 채팅',
+    seoTitle: 'Pocket AI 리뷰: 아이폰 오프라인 AI 채팅',
     intro:
       '사이드로드, TestFlight 베타, 또는 직접 빌드해야 하는 GitHub 프로젝트로만 제공되는 다른 많은 아이폰용 로컬 AI 앱과 달리, Pocket AI는 [애플 앱스토어](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702)를 통해 직접 배포됩니다. 이 리뷰에서는 앱이 무엇을 하는지, 비용은 얼마인지, 어떤 하드웨어가 필요한지 다룹니다.',
     metaDescription:

@@ -14,8 +14,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/anythingllm-mobile-review-hero-en.webp',
-    title: 'AnythingLLM Mobile Review (2026): On-Device Chat + RAG',
-    seoTitle: 'AnythingLLM Mobile Review 2026: On-Device or Client?',
+    title: 'AnythingLLM Mobile Review: On-Device Chat + RAG',
+    seoTitle: 'AnythingLLM Mobile Review: On-Device or Client?',
     intro:
       'AnythingLLM Mobile is a free, MIT-licensed Android app from [Mintplex Labs](https://mintplex.com) that runs a small language model and a local vector database directly on the phone for offline document chat, and can optionally pair with a self-hosted [AnythingLLM Desktop](/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) or AnythingLLM Cloud instance over the local network for the full desktop feature set. This review covers exactly how the standalone on-device mode differs from the connected mode, real platform availability (Android is live; iOS is not yet released), pricing for the mobile app versus the separately priced AnythingLLM Cloud service, and who should — and should not — install it.',
     metaDescription:
@@ -463,8 +463,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/anythingllm-mobile-review-hero-de.webp',
-    title: 'AnythingLLM Mobile im Test (2026): Chat + RAG auf dem Gerät',
-    seoTitle: 'AnythingLLM Mobile Test 2026: On-Device oder Client?',
+    title: 'AnythingLLM Mobile im Test: Chat + RAG auf dem Gerät',
+    seoTitle: 'AnythingLLM Mobile Test: On-Device oder Client?',
     intro:
       'AnythingLLM Mobile ist eine kostenlose, unter der MIT-Lizenz veröffentlichte Android-App von [Mintplex Labs](https://mintplex.com), die ein kleines Sprachmodell und eine lokale Vektordatenbank direkt auf dem Smartphone ausführt, um Dokumente offline durchsuchbar zu machen. Optional lässt sich die App per Kopplung mit einer selbst gehosteten [AnythingLLM-Desktop](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)- oder AnythingLLM-Cloud-Instanz im lokalen Netzwerk verbinden, um den vollen Funktionsumfang der Desktop-Version zu nutzen. Dieser Test erklärt genau, wie sich der eigenständige On-Device-Modus vom verbundenen Modus unterscheidet, welche Plattformen wirklich unterstützt werden (Android ist verfügbar, iOS noch nicht), was die App im Vergleich zum separat bepreisten AnythingLLM-Cloud-Dienst kostet, und für wen sie sich eignet — und für wen nicht.',
     metaDescription:
@@ -920,8 +920,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/anythingllm-mobile-review-hero-es.webp',
-    title: 'AnythingLLM Mobile: Reseña (2026) — Chat + RAG en el dispositivo',
-    seoTitle: 'AnythingLLM Mobile 2026: ¿on-device o cliente?',
+    title: 'AnythingLLM Mobile: Reseña — Chat + RAG en el dispositivo',
+    seoTitle: 'AnythingLLM Mobile: ¿on-device o cliente?',
     intro:
       'AnythingLLM Mobile es una app gratuita para Android, con licencia MIT, de [Mintplex Labs](https://mintplex.com), que ejecuta un modelo de lenguaje pequeño y una base de datos vectorial local directamente en el teléfono para chatear con documentos sin conexión. También puede emparejarse con una instancia autoalojada de [AnythingLLM Desktop](/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) o AnythingLLM Cloud en la red local para acceder a todas las funciones de la versión de escritorio. Esta reseña explica con precisión en qué se diferencia el modo autónomo en el dispositivo del modo conectado, la disponibilidad real por plataforma (Android está disponible; iOS todavía no), el precio de la app frente al servicio AnythingLLM Cloud, y para quién es y no es adecuada.',
     metaDescription:
@@ -1369,8 +1369,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/anythingllm-mobile-review-hero-fr.webp',
-    title: 'AnythingLLM Mobile : test (2026) — chat + RAG sur l\'appareil',
-    seoTitle: 'AnythingLLM Mobile 2026 : local ou client ?',
+    title: 'AnythingLLM Mobile: test — chat + RAG sur l\'appareil',
+    seoTitle: 'AnythingLLM Mobile: local ou client?',
     intro:
       'AnythingLLM Mobile est une application Android gratuite, sous licence MIT, développée par [Mintplex Labs](https://mintplex.com), qui exécute un petit modèle de langage et une base de données vectorielle locale directement sur le téléphone pour discuter avec des documents hors connexion. Elle peut aussi se coupler avec une instance auto-hébergée d\'[AnythingLLM Desktop](/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) ou d\'AnythingLLM Cloud sur le réseau local pour profiter de toutes les fonctionnalités de la version de bureau. Ce test explique précisément en quoi le mode autonome sur l\'appareil diffère du mode connecté, la disponibilité réelle par plateforme (Android est disponible, iOS pas encore), le prix de l\'application face au service AnythingLLM Cloud facturé séparément, et à qui elle convient — ou non.',
     metaDescription:
@@ -1818,8 +1818,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/anythingllm-mobile-review-hero-ja.webp',
-    title: 'AnythingLLM Mobileレビュー（2026）：オンデバイスチャット+RAG',
-    seoTitle: 'AnythingLLM Mobile 2026：オンデバイスかクライアントか',
+    title: 'AnythingLLM Mobileレビュー：オンデバイスチャット+RAG',
+    seoTitle: 'AnythingLLM Mobile：オンデバイスかクライアントか',
     intro:
       'AnythingLLM Mobileは、[Mintplex Labs](https://mintplex.com)が開発した無料・MITライセンスのAndroidアプリです。小型の言語モデルとローカルベクトルデータベースをスマートフォン上で直接実行し、オフラインでドキュメントチャットができます。さらに、自前でホストする[AnythingLLM Desktop](/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)やAnythingLLM Cloudのインスタンスとローカルネットワーク経由でペアリングし、デスクトップ版のフル機能を使うこともできます。本レビューでは、オンデバイス単独モードと接続モードの正確な違い、実際のプラットフォーム対応状況（Androidは利用可能、iOSはまだ未対応）、モバイルアプリの料金と別料金のAnythingLLM Cloudサービスとの違い、そして導入すべき人・避けるべき人を解説します。',
     metaDescription:
@@ -2268,8 +2268,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/anythingllm-mobile-review-hero-pt.webp',
-    title: 'AnythingLLM Mobile: Análise (2026) — Chat + RAG no aparelho',
-    seoTitle: 'AnythingLLM Mobile 2026: on-device ou cliente?',
+    title: 'AnythingLLM Mobile: Análise — Chat + RAG no aparelho',
+    seoTitle: 'AnythingLLM Mobile: on-device ou cliente?',
     intro:
       'O AnythingLLM Mobile é um aplicativo Android gratuito, com licença MIT, da [Mintplex Labs](https://mintplex.com), que executa um modelo de linguagem pequeno e um banco de dados vetorial local diretamente no celular para conversar com documentos offline. Ele também pode se parear com uma instância auto-hospedada do [AnythingLLM Desktop](/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) ou do AnythingLLM Cloud pela rede local para usar todos os recursos da versão de desktop. Esta análise explica exatamente em que o modo autônomo no aparelho difere do modo conectado, a disponibilidade real por plataforma (Android está disponível; iOS ainda não), o preço do app em comparação ao serviço AnythingLLM Cloud, cobrado separadamente, e para quem ele é — e não é — indicado.',
     metaDescription:
@@ -2717,8 +2717,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/anythingllm-mobile-review-hero-ar.webp',
-    title: 'مراجعة AnythingLLM Mobile (2026): محادثة + RAG على الجهاز',
-    seoTitle: 'AnythingLLM Mobile 2026: تشغيل محلي أم عميل؟',
+    title: 'مراجعة AnythingLLM Mobile: محادثة + RAG على الجهاز',
+    seoTitle: 'AnythingLLM Mobile: تشغيل محلي أم عميل؟',
     intro:
       'تطبيق AnythingLLM Mobile هو تطبيق أندرويد مجاني برخصة MIT من [Mintplex Labs](https://mintplex.com)، يشغّل نموذج لغة صغيرًا وقاعدة بيانات متجهية محلية مباشرة على الهاتف للمحادثة مع المستندات دون اتصال بالإنترنت. كما يمكنه الاقتران بنسخة مستضافة ذاتيًا من [AnythingLLM Desktop](/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) أو AnythingLLM Cloud عبر الشبكة المحلية للحصول على كامل ميزات نسخة سطح المكتب. توضح هذه المراجعة بدقة الفرق بين الوضع المستقل على الجهاز والوضع المتصل، وتوفر المنصات الفعلي (أندرويد متاح، iOS ليس بعد)، وسعر التطبيق مقارنة بخدمة AnythingLLM Cloud المنفصلة السعر، ولمن يناسب — ولمن لا يناسب.',
     metaDescription:
@@ -3166,8 +3166,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/anythingllm-mobile-review-hero-zh.webp',
-    title: 'AnythingLLM Mobile评测（2026）：设备端聊天+RAG',
-    seoTitle: 'AnythingLLM Mobile 2026：本地运行还是客户端？',
+    title: 'AnythingLLM Mobile评测：设备端聊天+RAG',
+    seoTitle: 'AnythingLLM Mobile：本地运行还是客户端？',
     intro:
       'AnythingLLM Mobile是[Mintplex Labs](https://mintplex.com)开发的免费、MIT许可的Android应用，可直接在手机上运行小型语言模型和本地向量数据库，实现离线文档聊天。它还可以通过局域网与自托管的[AnythingLLM Desktop](/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)或AnythingLLM Cloud实例配对，使用桌面版的完整功能。本评测将准确说明设备端独立模式与连接模式的区别、各平台的真实可用性（Android已上线，iOS尚未支持）、该应用与单独计价的AnythingLLM Cloud服务之间的价格差异，以及它适合谁、不适合谁。',
     metaDescription:
@@ -3616,8 +3616,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/anythingllm-mobile-review-hero-ko.webp',
-    title: 'AnythingLLM Mobile 리뷰(2026): 온디바이스 채팅 + RAG',
-    seoTitle: 'AnythingLLM Mobile 2026: 온디바이스인가 클라이언트인가',
+    title: 'AnythingLLM Mobile 리뷰: 온디바이스 채팅 + RAG',
+    seoTitle: 'AnythingLLM Mobile: 온디바이스인가 클라이언트인가',
     intro:
       'AnythingLLM Mobile은 [Mintplex Labs](https://mintplex.com)가 개발한 무료 MIT 라이선스 Android 앱으로, 소형 언어 모델과 로컬 벡터 데이터베이스를 스마트폰에서 직접 실행하여 오프라인으로 문서와 대화할 수 있습니다. 또한 로컬 네트워크를 통해 자체 호스팅된 [AnythingLLM Desktop](/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) 또는 AnythingLLM Cloud 인스턴스와 페어링하여 데스크톱 버전의 모든 기능을 사용할 수도 있습니다. 이 리뷰에서는 독립형 온디바이스 모드와 연결 모드가 정확히 어떻게 다른지, 실제 플랫폼 지원 현황(Android는 제공, iOS는 아직 미제공), 모바일 앱 가격과 별도로 과금되는 AnythingLLM Cloud 서비스의 차이, 그리고 어떤 사람에게 적합하고 적합하지 않은지를 설명합니다.',
     metaDescription:

@@ -14,8 +14,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/toolneuron-review-hero-en.webp',
-    title: 'ToolNeuron Review (2026): Open-Source Encrypted Android AI App',
-    seoTitle: 'ToolNeuron Review 2026: Encrypted Android AI Chat App',
+    title: 'ToolNeuron Review: Open-Source Encrypted Android AI App',
+    seoTitle: 'ToolNeuron Review: Encrypted Android AI Chat App',
     intro:
       '[ToolNeuron](https://play.google.com/store/apps/details?id=com.dark.tool_neuron), built by developer [Siddhesh Sonar](https://github.com/Siddhesh2377) and published as open source under the [MIT license](https://github.com/Siddhesh2377/ToolNeuron/blob/re-write/LICENSE), is a free Android app that runs GGUF language models on-device via llama.cpp, with document RAG, voice input/output, an OpenAI-compatible local HTTP server, and a plugin system layered on top. Per the project\'s own README, the app makes "no Google Play services, no telemetry, no cloud" its core design goal, backing that with Android Keystore-based AES-256-GCM encryption and Argon2id authentication for stored data. This review covers what the app does, what it requires, and where it fits next to other on-device Android chat apps like Layla and RikkaHub, based on the project\'s public GitHub repository and Play Store listing rather than independent hands-on testing.',
     metaDescription:
@@ -361,8 +361,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/toolneuron-review-hero-de.webp',
-    title: 'ToolNeuron im Test (2026): Open-Source-Android-App für verschlüsselte On-Device-KI',
-    seoTitle: 'ToolNeuron Test 2026: Verschlüsselte Android-KI-Chat-App',
+    title: 'ToolNeuron im Test: Open-Source-Android-App für verschlüsselte On-Device-KI',
+    seoTitle: 'ToolNeuron Test: Verschlüsselte Android-KI-Chat-App',
     intro:
       '[ToolNeuron](https://play.google.com/store/apps/details?id=com.dark.tool_neuron), entwickelt von [Siddhesh Sonar](https://github.com/Siddhesh2377) und als Open Source unter der [MIT-Lizenz](https://github.com/Siddhesh2377/ToolNeuron/blob/re-write/LICENSE) veröffentlicht, ist eine kostenlose Android-App, die GGUF-Sprachmodelle über llama.cpp auf dem Gerät ausführt, mit Dokumenten-RAG, Sprachein-/ausgabe, einem OpenAI-kompatiblen lokalen HTTP-Server und einem darauf aufbauenden Plugin-System. Laut eigenem README der App ist "kein Google-Play-Dienst, keine Telemetrie, keine Cloud" das zentrale Designziel, unterlegt mit AES-256-GCM-Verschlüsselung über den Android Keystore und Argon2id-Authentifizierung für gespeicherte Daten. Dieser Test behandelt, was die App leistet, was sie benötigt, und wie sie im Vergleich zu anderen On-Device-Android-Chat-Apps wie Layla und RikkaHub steht — basierend auf dem öffentlichen GitHub-Repository und dem Play-Store-Eintrag des Projekts, nicht auf einem unabhängigen Praxistest.',
     metaDescription:
@@ -721,8 +721,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/toolneuron-review-hero-fr.webp',
-    title: 'Avis ToolNeuron (2026) : application Android open source pour IA chiffrée sur l\'appareil',
-    seoTitle: 'Avis ToolNeuron 2026 : appli Android IA chiffrée sur l\'appareil',
+    title: 'Avis ToolNeuron: application Android open source pour IA chiffrée sur l\'appareil',
+    seoTitle: 'Avis ToolNeuron: appli Android IA chiffrée sur l\'appareil',
     intro:
       '[ToolNeuron](https://play.google.com/store/apps/details?id=com.dark.tool_neuron), développée par [Siddhesh Sonar](https://github.com/Siddhesh2377) et publiée en open source sous [licence MIT](https://github.com/Siddhesh2377/ToolNeuron/blob/re-write/LICENSE), est une application Android gratuite qui exécute des modèles de langage au format GGUF directement sur l\'appareil via llama.cpp, avec RAG documentaire, entrée/sortie vocale, un serveur HTTP local compatible OpenAI, et un système de plugins en complément. Selon le README du projet, l\'objectif de conception central est "aucun service Google Play, aucune télémétrie, aucun cloud", appuyé par un chiffrement AES-256-GCM basé sur l\'Android Keystore et une authentification Argon2id pour les données stockées. Cet avis couvre ce que fait l\'application, ce qu\'elle nécessite, et sa place face à d\'autres applications de chat Android sur l\'appareil comme Layla et RikkaHub, sur la base du dépôt GitHub public du projet et de sa fiche Play Store plutôt que d\'un test pratique indépendant.',
     metaDescription:
@@ -1081,8 +1081,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/toolneuron-review-hero-es.webp',
-    title: 'Reseña de ToolNeuron (2026): app Android de código abierto para IA cifrada en el dispositivo',
-    seoTitle: 'ToolNeuron 2026: app Android de chat IA cifrado local',
+    title: 'Reseña de ToolNeuron: app Android de código abierto para IA cifrada en el dispositivo',
+    seoTitle: 'ToolNeuron: app Android de chat IA cifrado local',
     intro:
       '[ToolNeuron](https://play.google.com/store/apps/details?id=com.dark.tool_neuron), desarrollada por [Siddhesh Sonar](https://github.com/Siddhesh2377) y publicada como código abierto bajo la [licencia MIT](https://github.com/Siddhesh2377/ToolNeuron/blob/re-write/LICENSE), es una app gratuita para Android que ejecuta modelos de lenguaje en formato GGUF en el dispositivo mediante llama.cpp, con RAG documental, entrada/salida de voz, un servidor HTTP local compatible con OpenAI y un sistema de plugins añadido. Según el propio README del proyecto, el objetivo de diseño central es "sin servicios de Google Play, sin telemetría, sin nube", respaldado con cifrado AES-256-GCM basado en Android Keystore y autenticación Argon2id para los datos almacenados. Esta reseña cubre qué hace la app, qué requiere y cómo se sitúa frente a otras apps de chat Android en el dispositivo como Layla y RikkaHub, basándose en el repositorio público de GitHub del proyecto y su ficha en Play Store, no en pruebas prácticas independientes.',
     metaDescription:
@@ -1441,8 +1441,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/toolneuron-review-hero-pt.webp',
-    title: 'Análise do ToolNeuron (2026): app Android de código aberto para IA criptografada no dispositivo',
-    seoTitle: 'ToolNeuron 2026: app Android de chat de IA criptografado local',
+    title: 'Análise do ToolNeuron: app Android de código aberto para IA criptografada no dispositivo',
+    seoTitle: 'ToolNeuron: app Android de chat de IA criptografado local',
     intro:
       'O [ToolNeuron](https://play.google.com/store/apps/details?id=com.dark.tool_neuron), desenvolvido por [Siddhesh Sonar](https://github.com/Siddhesh2377) e publicado como código aberto sob a [licença MIT](https://github.com/Siddhesh2377/ToolNeuron/blob/re-write/LICENSE), é um app Android gratuito que executa modelos de linguagem no formato GGUF no próprio dispositivo via llama.cpp, com RAG de documentos, entrada/saída de voz, um servidor HTTP local compatível com OpenAI e um sistema de plugins. Segundo o próprio README do projeto, o objetivo central de design é "nenhum serviço do Google Play, nenhuma telemetria, nenhuma nuvem", reforçado com criptografia AES-256-GCM baseada no Android Keystore e autenticação Argon2id para os dados armazenados. Esta análise aborda o que o app faz, o que ele exige e como se posiciona diante de outros apps de chat Android no dispositivo, como Layla e RikkaHub, com base no repositório público do GitHub do projeto e na ficha da Play Store, não em testes práticos independentes.',
     metaDescription:
@@ -1801,8 +1801,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/toolneuron-review-hero-ja.webp',
-    title: 'ToolNeuronレビュー(2026年):暗号化オンデバイスAI向けオープンソースAndroidアプリ',
-    seoTitle: 'ToolNeuronレビュー2026:暗号化Android AIチャットアプリ',
+    title: 'ToolNeuronレビュー:暗号化オンデバイスAI向けオープンソースAndroidアプリ',
+    seoTitle: 'ToolNeuronレビュー:暗号化Android AIチャットアプリ',
     intro:
       '開発者[Siddhesh Sonar](https://github.com/Siddhesh2377)が開発し、[MITライセンス](https://github.com/Siddhesh2377/ToolNeuron/blob/re-write/LICENSE)のもとでオープンソースとして公開されている[ToolNeuron](https://play.google.com/store/apps/details?id=com.dark.tool_neuron)は、llama.cpp経由でGGUFモデルを端末上で実行する無料のAndroidアプリで、ドキュメントRAG、音声入出力、OpenAI互換のローカルHTTPサーバー、その上に構築されたプラグインシステムを備えています。プロジェクト自身のREADMEによれば、「Google Playサービス不要、テレメトリなし、クラウドなし」がアプリの中核的な設計目標であり、保存データにはAndroid Keystoreベースのアーキテクチャ上でAES-256-GCM暗号化とArgon2id認証が用いられています。本レビューでは、アプリが何を行い、何を必要とし、Layla・RikkaHubなど他のAndroidオンデバイスチャットアプリと比べてどう位置づけられるかを、独自の実機テストではなく、プロジェクトの公開GitHubリポジトリとPlayストアの掲載情報に基づいて扱います。',
     metaDescription:
@@ -2161,8 +2161,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/toolneuron-review-hero-zh.webp',
-    title: 'ToolNeuron评测(2026):用于端侧加密AI的开源Android应用',
-    seoTitle: 'ToolNeuron评测2026:加密Android AI聊天应用',
+    title: 'ToolNeuron评测:用于端侧加密AI的开源Android应用',
+    seoTitle: 'ToolNeuron评测:加密Android AI聊天应用',
     intro:
       '[ToolNeuron](https://play.google.com/store/apps/details?id=com.dark.tool_neuron)由开发者[Siddhesh Sonar](https://github.com/Siddhesh2377)开发,并以[MIT许可证](https://github.com/Siddhesh2377/ToolNeuron/blob/re-write/LICENSE)开源发布,是一款免费的Android应用,通过llama.cpp在设备端运行GGUF语言模型,并配备文档RAG、语音输入输出、兼容OpenAI的本地HTTP服务器,以及构建在其上的插件系统。根据该项目自身的README,"无需Google Play服务、无遥测、无云端"是应用的核心设计目标,并通过基于Android Keystore的AES-256-GCM加密和Argon2id身份验证来保护存储数据。本评测基于该项目公开的GitHub代码库和Play商店页面,而非独立的实机测试,探讨这款应用能做什么、需要什么,以及它与Layla、RikkaHub等其他Android端侧聊天应用相比处于什么位置。',
     metaDescription:
@@ -2521,8 +2521,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/toolneuron-review-hero-ar.webp',
-    title: 'مراجعة ToolNeuron (2026): تطبيق أندرويد مفتوح المصدر للذكاء الاصطناعي المشفّر على الجهاز',
-    seoTitle: 'مراجعة ToolNeuron 2026: تطبيق أندرويد مشفّر للدردشة بالذكاء الاصطناعي',
+    title: 'مراجعة ToolNeuron: تطبيق أندرويد مفتوح المصدر للذكاء الاصطناعي المشفّر على الجهاز',
+    seoTitle: 'مراجعة ToolNeuron: تطبيق أندرويد مشفّر للدردشة بالذكاء الاصطناعي',
     intro:
       '[ToolNeuron](https://play.google.com/store/apps/details?id=com.dark.tool_neuron)، من تطوير [Siddhesh Sonar](https://github.com/Siddhesh2377) ومنشور كمصدر مفتوح بموجب [رخصة MIT](https://github.com/Siddhesh2377/ToolNeuron/blob/re-write/LICENSE)، هو تطبيق أندرويد مجاني يشغّل نماذج لغوية بصيغة GGUF على الجهاز عبر llama.cpp، مع استرجاع معزز بالبيانات (RAG) للمستندات، وإدخال/إخراج صوتي، وخادم HTTP محلي متوافق مع OpenAI، ونظام إضافات مبني فوق ذلك. ووفق ملف README الخاص بالمشروع، فإن الهدف التصميمي الأساسي هو "لا خدمات Google Play، لا قياس عن بُعد، لا سحابة"، مدعومًا بتشفير AES-256-GCM قائم على Android Keystore ومصادقة Argon2id للبيانات المخزّنة. تتناول هذه المراجعة ما يقوم به التطبيق، ومتطلباته، وموقعه مقارنة بتطبيقات دردشة أندرويد الأخرى على الجهاز مثل Layla وRikkaHub، استنادًا إلى مستودع GitHub العام للمشروع وصفحته في متجر Play، وليس إلى اختبار عملي مستقل.',
     metaDescription:
@@ -2881,8 +2881,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/toolneuron-review-hero-ko.webp',
-    title: 'ToolNeuron 리뷰(2026):암호화된 온디바이스 AI를 위한 오픈소스 안드로이드 앱',
-    seoTitle: 'ToolNeuron 리뷰 2026:암호화된 안드로이드 AI 채팅 앱',
+    title: 'ToolNeuron 리뷰:암호화된 온디바이스 AI를 위한 오픈소스 안드로이드 앱',
+    seoTitle: 'ToolNeuron 리뷰:암호화된 안드로이드 AI 채팅 앱',
     intro:
       '개발자 [Siddhesh Sonar](https://github.com/Siddhesh2377)가 개발하고 [MIT 라이선스](https://github.com/Siddhesh2377/ToolNeuron/blob/re-write/LICENSE)로 오픈소스 공개된 [ToolNeuron](https://play.google.com/store/apps/details?id=com.dark.tool_neuron)은 llama.cpp를 통해 GGUF 언어 모델을 기기 내에서 실행하는 무료 안드로이드 앱으로, 문서 RAG, 음성 입출력, OpenAI 호환 로컬 HTTP 서버, 그리고 그 위에 구축된 플러그인 시스템을 제공합니다. 프로젝트 자체 README에 따르면 "구글 플레이 서비스 없음, 텔레메트리 없음, 클라우드 없음"이 핵심 설계 목표이며, 저장 데이터에는 Android Keystore 기반 AES-256-GCM 암호화와 Argon2id 인증이 뒷받침됩니다. 이 리뷰는 독립적인 실사용 테스트가 아니라 프로젝트의 공개 GitHub 저장소와 플레이 스토어 등록 정보를 바탕으로, 이 앱이 무엇을 하는지, 무엇이 필요한지, 그리고 Layla나 RikkaHub 같은 다른 안드로이드 온디바이스 채팅 앱과 비교해 어떤 위치에 있는지 다룹니다.',
     metaDescription:
