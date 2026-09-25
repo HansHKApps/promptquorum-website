@@ -219,6 +219,11 @@
     "urlSlug": "cline-review",
     "url": "/power-local-llm/cline-review"
   },
+  "atlarix": {
+    "cluster": "power-local-llm",
+    "urlSlug": "atlarix-review",
+    "url": "/power-local-llm/atlarix-review"
+  },
   "pearai": {
     "cluster": "power-local-llm",
     "urlSlug": "pearai-review",
