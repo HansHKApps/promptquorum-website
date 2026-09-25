@@ -74,8 +74,15 @@ export interface ToolRecordHardware {
 export type FounderText = string | Partial<Record<Language, string>>
 export type FounderParagraphs = string[] | Partial<Record<Language, string[]>>
 
+// Public professional profile links the founder/maintainer has themselves published
+// (e.g. in an outreach email signature or their own GitHub bio) — never guessed or
+// constructed from a name. Verify each URL actually resolves to that person before
+// setting it. Keys are the platform; values are full URLs.
+export type FounderSocialKey = 'linkedin' | 'github' | 'x' | 'instagram' | 'website'
+
 export interface ToolRecordFounder {
   who: Partial<Record<Language, string>>
+  socials?: Partial<Record<FounderSocialKey, string>>
   // why/best/limits/fullQuote accept a plain string (English only) or a
   // per-language map; read them through founderText()/founderParagraphs() in
   // ../founderText so a missing locale falls back to English.

@@ -272,6 +272,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // Continue.dev, Cline, PearAI reviews — 2026-09-05
   'continue-dev-review':                     'continue-dev-review',
   'cline-review':                            'cline-review',
+  // Atlarix review — founder-submission entry, 2026-09-25
+  'atlarix-review':                          'atlarix-review',
   'pearai-review':                           'pearai-review',
   'whisper-cpp-review':                      'whisper-cpp-review',
   'faster-whisper-review':                   'faster-whisper-review',
