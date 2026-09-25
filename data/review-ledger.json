@@ -29,6 +29,12 @@
       "action": "refresh",
       "summary": "Weekly cycle triggered by CI failure (1574 new violations): retrieved+registered 18 TTS/STT models via official sources (Piper, Piper voices, Coqui TTS/XTTS v2, StyleTTS 2, Bark, Kokoro, Chatterbox, F5-TTS, Tortoise TTS, VITS, Tacotron2, espeak-ng, Whisper, distil-large-v3, Parakeet); fixed 2 fabricated/mistranslated current_models_mentioned entries (Noema 1.5 2B - no such model exists; rikkahub-review.ts generic translated GPT/Gemini/Claude phrases); cut new violations 1574->1071; wrote fresh .model-names-baseline.json (3156 total) to unblock CI, remaining backlog is pre-existing LLM/vision/embedding model debt for a future burn-down cycle",
       "branch": "session/model-registry-weekly-refresh"
+    },
+    {
+      "date": "2026-09-25",
+      "action": "baseline-burndown",
+      "summary": "local-llms cluster burn-down (skill Step 5, cluster-by-cluster): matcher fixes (colon normalization, bare-family-mention recognition) resolved 474 violations site-wide with zero content risk. Found and fixed 2 real fabrications (Llama 3.3 13B - doesn't exist, Meta only shipped 70B; Qwen 3 mislabeling a Qwen2.5-72B model, recurring across 3 files/247 occurrences). Registered 27 verified real models/families. Fixed Mistral/Mixtral naming error and generic-phrase metadata cleanup. local-llms: 0 UNKNOWN_MODEL remaining, ~36 legitimate STALE_MODEL left as acceptable debt. Site-wide baseline 2682->2391. power-local-llm (~102 unknowns), prompt-bites (~26), prompt-engineering (~8) still pending for future cycles.",
+      "branch": "session/model-registry-burndown"
     }
   ]
 }
