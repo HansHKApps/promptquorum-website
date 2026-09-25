@@ -520,7 +520,7 @@
       "images": [
         {
           "url": "/images/best-local-llms-for-coding-benchmark-comparison-hero-en.webp",
-          "title": "Benchmark scores by model (July 2026): Qwen3-Coder 32B leads at 87% HumanEval, DeepSeek V4 Flash scores 78/100 on independent real-world tests, Qwen 3.6 27B hits 77.2% SWE-bench, Laguna XS 2.1 scores 70.9% SWE-bench Verified as the newest agentic challenger, Qwen3 8B reaches ~76% HumanEval, and Kimi K2.6 scores 58.6 on the harder SWE-Bench Pro."
+          "title": "Benchmark scores by model (July 2026): Qwen2.5-Coder 32B leads at 87% HumanEval, DeepSeek V4 Flash scores 78/100 on independent real-world tests, Qwen 3.6 27B hits 77.2% SWE-bench, Laguna XS 2.1 scores 70.9% SWE-bench Verified as the newest agentic challenger, Qwen3 8B reaches ~76% HumanEval, and Kimi K2.6 scores 58.6 on the harder SWE-Bench Pro."
         },
         {
           "url": "/images/best-local-llms-for-coding-hardware-selection-hero-en.webp",
@@ -1306,7 +1306,7 @@
         },
         {
           "url": "/images/local-llms-with-vscode-cursor-best-coding-models-table-en.svg",
-          "title": "Comparison table of five local coding models -- Qwen3-Coder 7B, Code Llama 7B/13B, Mistral Small, and DeepSeek-Coder 6.7B -- showing HumanEval scores, VRAM requirements, and speed for use in VS Code and Cursor."
+          "title": "Comparison table of five local coding models -- Qwen2.5-Coder 7B, Code Llama 7B/13B, Mistral Small, and DeepSeek-Coder 6.7B -- showing HumanEval scores, VRAM requirements, and speed for use in VS Code and Cursor."
         }
       ]
     },
@@ -3096,7 +3096,7 @@
       "images": [
         {
           "url": "/images/how-much-unified-memory-for-local-llm-tier-fit-chart-hero-en.webp",
-          "title": "Unified memory tiers 16GB, 36GB, 64GB, and 128GB against five model sizes: Phi-4 3.8B fits every tier, Llama 3.1 8B is tight at 16GB, Llama 3.3 13B needs 36GB minimum, Qwen3 34B needs 64GB, and Llama 3.3 70B needs 128GB."
+          "title": "Unified memory tiers 16GB, 36GB, 64GB, and 128GB against five model sizes: Phi-4 3.8B fits every tier, Llama 3.1 8B is tight at 16GB, Gemma 3 12B needs 36GB minimum, Qwen3 34B needs 64GB, and Llama 3.3 70B needs 128GB."
         },
         {
           "url": "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-hero-en.webp",
@@ -3505,7 +3505,7 @@
         },
         {
           "url": "/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-en.webp",
-          "title": "Qwen Inference Speed by Provider -- Qwen3 72B on A100 80GB"
+          "title": "Qwen Inference Speed by Provider -- Qwen2.5-72B on A100 80GB"
         }
       ]
     },
@@ -6187,7 +6187,7 @@
       "images": [
         {
           "url": "/images/best-local-coding-models-2026-model-comparison-hero-en.webp",
-          "title": "Seven local coding models ranked by VRAM, context window, licence, and best-fit use case at Q4_K_M in May 2026. Qwen3-Coder 30B is the default 24 GB pick; DeepSeek Coder V3 leads on long-context; StarCoder 2 15B leads on niche-language coverage."
+          "title": "Seven local coding models ranked by VRAM, context window, licence, and best-fit use case at Q4_K_M in May 2026. Qwen3-Coder 30B is the default 24 GB pick; DeepSeek-V3 leads on long-context; StarCoder 2 15B leads on niche-language coverage."
         },
         {
           "url": "/images/best-local-coding-models-2026-which-pick-en.svg",
@@ -6413,7 +6413,7 @@
         },
         {
           "url": "/images/coding-agent-edit-model-en.svg",
-          "title": "Edit model reliability by harness: on 7B models, Continue.dev is most forgiving, Aider rejects mismatched blocks, Cline stalls on malformed XML; on 30B+ coding models (Qwen3-Coder, DeepSeek Coder V3), all three are reliable."
+          "title": "Edit model reliability by harness: on 7B models, Continue.dev is most forgiving, Aider rejects mismatched blocks, Cline stalls on malformed XML; on 30B+ coding models (Qwen3-Coder, DeepSeek-V3), all three are reliable."
         },
         {
           "url": "/images/coding-agent-context-strategy-en.svg",
@@ -6610,7 +6610,7 @@
         },
         {
           "url": "/images/local-coding-llm-model-choice-en.svg",
-          "title": "Local coding models for offline work: Qwen3-Coder 30B Q4_K_M (~18 GB, 24 GB RAM) is the recommended default; Qwen3-Coder 7B (~5 GB, 8 GB RAM) is the lightweight fallback at 80–85% quality; DeepSeek Coder V3 (~25 GB) for 128K-context workflows; Codestral 22B for fastest autocomplete."
+          "title": "Local coding models for offline work: Qwen3-Coder 30B Q4_K_M (~18 GB, 24 GB RAM) is the recommended default; Qwen2.5-Coder 7B (~5 GB, 8 GB RAM) is the lightweight fallback at 80–85% quality; DeepSeek-V3 (~25 GB) for 128K-context workflows; Codestral 22B for fastest autocomplete."
         },
         {
           "url": "/images/local-coding-llm-what-breaks-en.svg",
@@ -6655,7 +6655,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 7 categories of a local LLM stack: 225 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and Train & Operate."
+          "title": "The 7 categories of a local LLM stack: 226 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and Train & Operate."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -6915,7 +6915,7 @@
         },
         {
           "url": "/images/mobile-llm-models-phi4-gemma-smollm-comparison-table-hero-en.webp",
-          "title": "Six mobile LLM models benchmarked at Q4_K_M on iPhone 17 Pro: Phi-4 Mini (3.8B, ~13–18 tok/sec) is the smartest; SmolLM 2 (1.7B, ~26–32 tok/sec) is the fastest; Qwen 3 (1.7B) is the best multilingual; Gemma 3 1B (~35–45 tok/sec) works on 4 GB phones."
+          "title": "Six mobile LLM models benchmarked at Q4_K_M on iPhone 17 Pro: Phi-4 Mini (3.8B, ~13–18 tok/sec) is the smartest; SmolLM 2 (1.7B, ~26–32 tok/sec) is the fastest; Qwen3 (1.7B) is the best multilingual; Gemma 3 1B (~35–45 tok/sec) works on 4 GB phones."
         },
         {
           "url": "/images/mobile-llm-models-phi4-gemma-smollm-speed-chart-hero-en.webp",
@@ -6927,7 +6927,7 @@
         },
         {
           "url": "/images/mobile-llm-models-per-tier-verdict-en.svg",
-          "title": "Mobile LLM recommendations by phone tier: flagship phones (8–12 GB RAM) → Phi-4 Mini 3.8B; older flagship (8 GB) → Llama 3.2 3B; mid-range (6–8 GB) → SmolLM 2 1.7B; budget (4–6 GB) → Qwen 3 1.7B; very old (4 GB) → Gemma 3 1B."
+          "title": "Mobile LLM recommendations by phone tier: flagship phones (8–12 GB RAM) → Phi-4 Mini 3.8B; older flagship (8 GB) → Llama 3.2 3B; mid-range (6–8 GB) → SmolLM 2 1.7B; budget (4–6 GB) → Qwen3 1.7B; very old (4 GB) → Gemma 3 1B."
         }
       ]
     },
@@ -7575,11 +7575,11 @@
       "images": [
         {
           "url": "/images/deepseek-vs-qwen-coding-local-2026-model-comparison-hero-en.webp",
-          "title": "Qwen3-Coder 32B vs DeepSeek-R1-Distill-Qwen-32B on identical RTX 4090 24 GB hardware: Qwen scores 88.4% HumanEval at 10-14 tok/s and wins Rust/C++, DeepSeek-R1-Distill scores 72.6% at 8-12 tok/s and wins algorithmic reasoning."
+          "title": "Qwen2.5-Coder 32B vs DeepSeek-R1-Distill-Qwen-32B on identical RTX 4090 24 GB hardware: Qwen scores 88.4% HumanEval at 10-14 tok/s and wins Rust/C++, DeepSeek-R1-Distill scores 72.6% at 8-12 tok/s and wins algorithmic reasoning."
         },
         {
           "url": "/images/deepseek-vs-qwen-coding-local-2026-decision-tree-hero-en.webp",
-          "title": "Decision tree for DeepSeek vs Qwen coding: code must stay local and language is Rust/C++ leads to Qwen3-Coder 32B, budget local leads to Qwen3-Coder 14B, algorithmic tasks leads to DeepSeek-R1 API, Python/JS with cloud allowed leads to DeepSeek-V3 API."
+          "title": "Decision tree for DeepSeek vs Qwen coding: code must stay local and language is Rust/C++ leads to Qwen2.5-Coder 32B, budget local leads to Qwen2.5-Coder 14B, algorithmic tasks leads to DeepSeek-R1 API, Python/JS with cloud allowed leads to DeepSeek-V3 API."
         }
       ]
     },
@@ -7723,7 +7723,7 @@
         },
         {
           "url": "/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-en.svg",
-          "title": "Use-case guide for DeepSeek vs Qwen: math tutoring and reasoning chains favor DeepSeek-R1-Distill-Qwen, while code generation (Qwen3-Coder 32B, 91.5% HumanEval) and Chinese-language chat favor Qwen3."
+          "title": "Use-case guide for DeepSeek vs Qwen: math tutoring and reasoning chains favor DeepSeek-R1-Distill-Qwen, while code generation (Qwen2.5-Coder 32B, 91.5% HumanEval) and Chinese-language chat favor Qwen3."
         }
       ]
     },
@@ -8987,6 +8987,24 @@
       "dateModified": "2026-09-07",
       "lastFactChecked": null,
       "publishDate": "2026-09-07",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "hilbertraum-review": {
+      "dateModified": "2026-09-25",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-25",
       "hasSections": true,
       "langs": [
         "en",

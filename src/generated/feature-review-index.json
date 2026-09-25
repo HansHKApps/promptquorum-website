@@ -134,6 +134,11 @@
     "urlSlug": "hanoki-review",
     "url": "/power-local-llm/hanoki-review"
   },
+  "hilbertraum": {
+    "cluster": "power-local-llm",
+    "urlSlug": "hilbertraum-review",
+    "url": "/power-local-llm/hilbertraum-review"
+  },
   "open-felix": {
     "cluster": "power-local-llm",
     "urlSlug": "open-felix-review",

@@ -12062,7 +12062,7 @@
   {
     "lang": "ko",
     "title": "코딩 워크플로를 위한 로컬 LLM: 코드 생성, 리뷰, 테스트",
-    "excerpt": "Qwen3-Coder 32B: 92.7% HumanEval, 24 GB VRAM에서 실행. Qwen3-Coder 7B: 5 GB에서 72%. Ollama + VS Code로 코드 생성, 리뷰, 테스트 작성. 전체 벤치마크 표 포함.",
+    "excerpt": "Qwen2.5-Coder 32B: 92.7% HumanEval, 24 GB VRAM에서 실행. Qwen2.5-Coder 7B: 5 GB에서 72%. Ollama + VS Code로 코드 생성, 리뷰, 테스트 작성. 전체 벤치마크 표 포함.",
     "publishDate": "2026-04-04",
     "dateModified": "2026-08-31",
     "url": "/ko/local-llms/local-llms-for-coding-workflows",
@@ -14015,7 +14015,7 @@
   {
     "lang": "en",
     "title": "Best Local LLMs for Code Review in 2026: Ranked by Bug Detection, Speed, and VRAM",
-    "excerpt": "Qwen3-Coder 32B catches 88% of code review bugs. Llama 3.3 70B best for security. DeepSeek-R1 14B for algorithms. Comparison by code type -- 2026.",
+    "excerpt": "Qwen2.5-Coder 32B catches 88% of code review bugs. Llama 3.3 70B best for security. DeepSeek-R1 14B for algorithms. Comparison by code type -- 2026.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-08-28",
     "url": "/local-llms/best-local-llms-code-review",
@@ -14024,7 +14024,7 @@
   {
     "lang": "de",
     "title": "Beste lokale LLMs für Code Review in 2026: Rangiert nach Fehlerdetection, Geschwindigkeit und VRAM",
-    "excerpt": "Qwen3-Coder 32B erkennt 88% der Code-Review-Fehler. Llama 3.3 70B beste für Sicherheit. DeepSeek-R1 14B für Algorithmen. Vergleich nach Code-Typ -- 2026.",
+    "excerpt": "Qwen2.5-Coder 32B erkennt 88% der Code-Review-Fehler. Llama 3.3 70B beste für Sicherheit. DeepSeek-R1 14B für Algorithmen. Vergleich nach Code-Typ -- 2026.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-04-05",
     "url": "/de/local-llms/best-local-llms-code-review",
@@ -14033,7 +14033,7 @@
   {
     "lang": "fr",
     "title": "Meilleurs LLMs locaux pour Code Review en 2026 : Classés par détection de bugs, vitesse et VRAM",
-    "excerpt": "Qwen3-Coder 32B détecte 88% des bugs de code review. Llama 3.3 70B meilleur pour sécurité. DeepSeek-R1 14B pour algorithmes. Comparaison par type -- 2026.",
+    "excerpt": "Qwen2.5-Coder 32B détecte 88% des bugs de code review. Llama 3.3 70B meilleur pour sécurité. DeepSeek-R1 14B pour algorithmes. Comparaison par type -- 2026.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-04-05",
     "url": "/fr/local-llms/best-local-llms-code-review",
@@ -14042,7 +14042,7 @@
   {
     "lang": "ja",
     "title": "2026年ローカルコードレビュー向けベストLLM：バグ検出精度で分類、速度とVRAM比較",
-    "excerpt": "Qwen3-Coder 32B はコードレビューバグの88%を検出します。Llama 3.3 70B がセキュリティに最適。DeepSeek-R1 14B はアルゴリズムに。2026年のコードタイプ別比較。",
+    "excerpt": "Qwen2.5-Coder 32B はコードレビューバグの88%を検出します。Llama 3.3 70B がセキュリティに最適。DeepSeek-R1 14B はアルゴリズムに。2026年のコードタイプ別比較。",
     "publishDate": "2026-04-05",
     "dateModified": "2026-04-05",
     "url": "/ja/local-llms/best-local-llms-code-review",
@@ -14051,7 +14051,7 @@
   {
     "lang": "zh",
     "title": "2026年本地代码审查最佳LLM：按缺陷检测精度分类、速度与VRAM对比",
-    "excerpt": "Qwen3-Coder 32B 检测代码审查缺陷率88%。Llama 3.3 70B 安全性最优。DeepSeek-R1 14B 算法分析最强。2026年代码类型对比分析。",
+    "excerpt": "Qwen2.5-Coder 32B 检测代码审查缺陷率88%。Llama 3.3 70B 安全性最优。DeepSeek-R1 14B 算法分析最强。2026年代码类型对比分析。",
     "publishDate": "2026-04-05",
     "dateModified": "2026-04-05",
     "url": "/zh/local-llms/best-local-llms-code-review",
@@ -14060,7 +14060,7 @@
   {
     "lang": "es",
     "title": "Mejores LLMs locales para Code Review en 2026: Clasificados por detección de errores, velocidad y VRAM",
-    "excerpt": "Qwen3-Coder 32B detecta el 88% de errores en code review. Llama 3.3 70B ideal para seguridad. DeepSeek-R1 14B para algoritmos. Comparación por tipo de código — 2026.",
+    "excerpt": "Qwen2.5-Coder 32B detecta el 88% de errores en code review. Llama 3.3 70B ideal para seguridad. DeepSeek-R1 14B para algoritmos. Comparación por tipo de código — 2026.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-04-05",
     "url": "/es/local-llms/best-local-llms-code-review",
@@ -14069,7 +14069,7 @@
   {
     "lang": "pt",
     "title": "Melhores LLMs locais para Code Review em 2026: classificados por detecção de bugs, velocidade e VRAM",
-    "excerpt": "O Qwen3-Coder 32B detecta 88% dos bugs em code review. Llama 3.3 70B ideal para segurança. DeepSeek-R1 14B para algoritmos. Comparação por tipo de código — 2026.",
+    "excerpt": "O Qwen2.5-Coder 32B detecta 88% dos bugs em code review. Llama 3.3 70B ideal para segurança. DeepSeek-R1 14B para algoritmos. Comparação por tipo de código — 2026.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-04-05",
     "url": "/pt/local-llms/best-local-llms-code-review",
@@ -14078,7 +14078,7 @@
   {
     "lang": "ar",
     "title": "أفضل نماذج ⁨LLM⁩ المحلية لمراجعة الكود في ⁨2026⁩: مصنّفة حسب كشف الأخطاء والسرعة و⁨VRAM⁩",
-    "excerpt": "⁨Qwen3-Coder 32B⁩ يكشف ⁨88%⁩ من أخطاء الكود. ⁨Llama 3.3 70B⁩ الأمثل لتحليل الأمن. ⁨DeepSeek-R1 14B⁩ للخوارزميات. نماذج ⁨7B⁩ تكشف ⁨45%⁩ فقط — غير كافٍ.",
+    "excerpt": "⁨Qwen2.5-Coder 32B⁩ يكشف ⁨88%⁩ من أخطاء الكود. ⁨Llama 3.3 70B⁩ الأمثل لتحليل الأمن. ⁨DeepSeek-R1 14B⁩ للخوارزميات. نماذج ⁨7B⁩ تكشف ⁨45%⁩ فقط — غير كافٍ.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-04-05",
     "url": "/ar/local-llms/best-local-llms-code-review",
@@ -14087,7 +14087,7 @@
   {
     "lang": "ko",
     "title": "2026년 코드 리뷰에 최적화된 로컬 LLM 추천: 버그 탐지율, 속도, VRAM 기준 순위",
-    "excerpt": "Qwen3-Coder 32B는 코드 리뷰 버그의 88%를 탐지합니다. 보안에는 Llama 3.3 70B, 알고리즘에는 DeepSeek-R1 14B가 최적입니다. 코드 유형별 비교 — 2026년.",
+    "excerpt": "Qwen2.5-Coder 32B는 코드 리뷰 버그의 88%를 탐지합니다. 보안에는 Llama 3.3 70B, 알고리즘에는 DeepSeek-R1 14B가 최적입니다. 코드 유형별 비교 — 2026년.",
     "publishDate": "2026-04-05",
     "dateModified": "2026-04-05",
     "url": "/ko/local-llms/best-local-llms-code-review",
@@ -16526,7 +16526,7 @@
   {
     "lang": "en",
     "title": "How to Set Up Qwen Locally for GDPR-Compliant Workflows",
-    "excerpt": "Step-by-step guide to running Qwen 3 14B locally for GDPR compliance: Ollama install, network isolation, disk encryption, and Article 30 audit trail.",
+    "excerpt": "Step-by-step guide to running Qwen3 14B locally for GDPR compliance: Ollama install, network isolation, disk encryption, and Article 30 audit trail.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-08-29",
     "url": "/local-llms/qwen-local-gdpr-setup-guide-2026",
@@ -16544,7 +16544,7 @@
   {
     "lang": "fr",
     "title": "Configurer Qwen localement pour des workflows conformes au RGPD",
-    "excerpt": "Guide étape par étape pour faire tourner Qwen 3 14B localement en conformité RGPD : installation Ollama, isolation réseau, chiffrement disque, journal Article 30.",
+    "excerpt": "Guide étape par étape pour faire tourner Qwen3 14B localement en conformité RGPD : installation Ollama, isolation réseau, chiffrement disque, journal Article 30.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-08-29",
     "url": "/fr/local-llms/qwen-local-gdpr-setup-guide-2026",
@@ -16553,7 +16553,7 @@
   {
     "lang": "ja",
     "title": "GDPRに準拠したワークフローのためのQwenローカルセットアップ方法",
-    "excerpt": "Qwen 3 14BをGDPR準拠でローカル実行するステップバイステップガイド：Ollamaインストール、ネットワーク分離、ディスク暗号化、第30条監査証跡。",
+    "excerpt": "Qwen3 14BをGDPR準拠でローカル実行するステップバイステップガイド：Ollamaインストール、ネットワーク分離、ディスク暗号化、第30条監査証跡。",
     "publishDate": "2026-05-22",
     "dateModified": "2026-08-29",
     "url": "/ja/local-llms/qwen-local-gdpr-setup-guide-2026",
@@ -16562,7 +16562,7 @@
   {
     "lang": "zh",
     "title": "为GDPR合规工作流本地配置Qwen",
-    "excerpt": "本地GDPR合规运行Qwen 3 14B的步骤指南：Ollama安装、网络隔离、磁盘加密、第30条审计追踪。",
+    "excerpt": "本地GDPR合规运行Qwen3 14B的步骤指南：Ollama安装、网络隔离、磁盘加密、第30条审计追踪。",
     "publishDate": "2026-05-22",
     "dateModified": "2026-08-29",
     "url": "/zh/local-llms/qwen-local-gdpr-setup-guide-2026",
@@ -16571,7 +16571,7 @@
   {
     "lang": "es",
     "title": "Cómo configurar Qwen localmente para flujos de trabajo conformes con el RGPD",
-    "excerpt": "Guía paso a paso para ejecutar Qwen 3 14B en local con RGPD: Ollama, aislamiento de red, cifrado de disco y registro de auditoría del Artículo 30.",
+    "excerpt": "Guía paso a paso para ejecutar Qwen3 14B en local con RGPD: Ollama, aislamiento de red, cifrado de disco y registro de auditoría del Artículo 30.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-08-29",
     "url": "/es/local-llms/qwen-local-gdpr-setup-guide-2026",
@@ -16580,7 +16580,7 @@
   {
     "lang": "pt",
     "title": "Como configurar o Qwen localmente para fluxos de trabalho em conformidade com o GDPR",
-    "excerpt": "Guia passo a passo para rodar o Qwen 3 14B localmente com GDPR/LGPD: Ollama, isolamento de rede, criptografia de disco e registro de auditoria do Artigo 30.",
+    "excerpt": "Guia passo a passo para rodar o Qwen3 14B localmente com GDPR/LGPD: Ollama, isolamento de rede, criptografia de disco e registro de auditoria do Artigo 30.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-08-29",
     "url": "/pt/local-llms/qwen-local-gdpr-setup-guide-2026",
@@ -16589,7 +16589,7 @@
   {
     "lang": "ar",
     "title": "كيفية إعداد ⁨Qwen⁩ محليًا لسير عمل متوافق مع ⁨GDPR⁩",
-    "excerpt": "⁨Qwen 3 14B⁩ يعمل بـ ⁨12 GB VRAM⁩ عبر ⁨Ollama⁩ مع صفر نقل للبيانات. خطوات عزل الشبكة وتشفير القرص وسجل المادة ⁨30⁩ لامتثال ⁨GDPR⁩ الكامل.",
+    "excerpt": "⁨Qwen3 14B⁩ يعمل بـ ⁨12 GB VRAM⁩ عبر ⁨Ollama⁩ مع صفر نقل للبيانات. خطوات عزل الشبكة وتشفير القرص وسجل المادة ⁨30⁩ لامتثال ⁨GDPR⁩ الكامل.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-08-29",
     "url": "/ar/local-llms/qwen-local-gdpr-setup-guide-2026",
@@ -16598,7 +16598,7 @@
   {
     "lang": "ko",
     "title": "GDPR 준수 워크플로를 위한 Qwen 로컬 설치 가이드",
-    "excerpt": "Ollama 설치, 네트워크 격리, 디스크 암호화, Article 30 감사 추적을 포함한 GDPR 준수 Qwen 3 14B 로컬 실행 단계별 가이드.",
+    "excerpt": "Ollama 설치, 네트워크 격리, 디스크 암호화, Article 30 감사 추적을 포함한 GDPR 준수 Qwen3 14B 로컬 실행 단계별 가이드.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-08-29",
     "url": "/ko/local-llms/qwen-local-gdpr-setup-guide-2026",
@@ -16769,7 +16769,7 @@
   {
     "lang": "en",
     "title": "Xinference: Run Llama 3, Qwen, ChatGLM & Mistral Locally 2026",
-    "excerpt": "Xinference supports Llama 3, Qwen 3, ChatGLM4, and Mistral out of the box. pip install, xi launch, done — OpenAI-compatible API at localhost:9997.",
+    "excerpt": "Xinference supports Llama 3, Qwen2.5, ChatGLM4, and Mistral out of the box. pip install, xi launch, done — OpenAI-compatible API at localhost:9997.",
     "publishDate": "2026-05-23",
     "dateModified": "2026-08-28",
     "url": "/local-llms/xinference-llama-qwen-chatglm-mistral",
@@ -16778,7 +16778,7 @@
   {
     "lang": "de",
     "title": "Xinference: Llama 3, Qwen, ChatGLM & Mistral lokal ausführen 2026",
-    "excerpt": "Xinference unterstützt Llama 3, Qwen 3, ChatGLM4 und Mistral nativ. Einrichten mit pip, Modell per xi launch starten — OpenAI-API auf localhost:9997.",
+    "excerpt": "Xinference unterstützt Llama 3, Qwen2.5, ChatGLM4 und Mistral nativ. Einrichten mit pip, Modell per xi launch starten — OpenAI-API auf localhost:9997.",
     "publishDate": "2026-05-23",
     "dateModified": "2026-08-28",
     "url": "/de/local-llms/xinference-llama-qwen-chatglm-mistral",
@@ -16787,7 +16787,7 @@
   {
     "lang": "fr",
     "title": "Xinference : exécuter Llama 3, Qwen, ChatGLM & Mistral localement 2026",
-    "excerpt": "Xinference supporte Llama 3, Qwen 3, ChatGLM4 et Mistral nativement. pip install, xi launch — API compatible OpenAI disponible sur localhost:9997.",
+    "excerpt": "Xinference supporte Llama 3, Qwen2.5, ChatGLM4 et Mistral nativement. pip install, xi launch — API compatible OpenAI disponible sur localhost:9997.",
     "publishDate": "2026-05-23",
     "dateModified": "2026-08-28",
     "url": "/fr/local-llms/xinference-llama-qwen-chatglm-mistral",
@@ -16796,7 +16796,7 @@
   {
     "lang": "ja",
     "title": "Xinference：Llama 3・Qwen・ChatGLM・Mistralをローカルで実行する2026年版ガイド",
-    "excerpt": "XinferenceはLlama 3、Qwen 3、ChatGLM4、Mistralをネイティブサポート。pip installで導入、xinference-localで起動、xi launchで任意のモデルをlocalhost:9997のOpenAI互換APIで利用できます。",
+    "excerpt": "XinferenceはLlama 3、Qwen2.5、ChatGLM4、Mistralをネイティブサポート。pip installで導入、xinference-localで起動、xi launchで任意のモデルをlocalhost:9997のOpenAI互換APIで利用できます。",
     "publishDate": "2026-05-23",
     "dateModified": "2026-08-28",
     "url": "/ja/local-llms/xinference-llama-qwen-chatglm-mistral",
@@ -16805,7 +16805,7 @@
   {
     "lang": "zh",
     "title": "Xinference：本地运行Llama 3、Qwen、ChatGLM与Mistral — 2026年完整指南",
-    "excerpt": "Xinference是原生支持Llama 3、Qwen 3、ChatGLM4和Mistral的开源本地推理框架。单条pip install命令安装，xinference-local启动服务器，xi launch加载模型，通过localhost:9997的OpenAI兼容API提供服务，无需额外配置。",
+    "excerpt": "Xinference是原生支持Llama 3、Qwen2.5、ChatGLM4和Mistral的开源本地推理框架。单条pip install命令安装，xinference-local启动服务器，xi launch加载模型，通过localhost:9997的OpenAI兼容API提供服务，无需额外配置。",
     "publishDate": "2026-05-23",
     "dateModified": "2026-08-28",
     "url": "/zh/local-llms/xinference-llama-qwen-chatglm-mistral",
@@ -16814,7 +16814,7 @@
   {
     "lang": "es",
     "title": "Xinference: ejecutar Llama 3, Qwen, ChatGLM y Mistral localmente 2026",
-    "excerpt": "Servidor LLM local con 200+ modelos: Llama 3, Qwen 3, ChatGLM4 y Mistral. pip install + xi launch — API OpenAI-compatible en localhost:9997 en minutos.",
+    "excerpt": "Servidor LLM local con 200+ modelos: Llama 3, Qwen2.5, ChatGLM4 y Mistral. pip install + xi launch — API OpenAI-compatible en localhost:9997 en minutos.",
     "publishDate": "2026-05-23",
     "dateModified": "2026-08-28",
     "url": "/es/local-llms/xinference-llama-qwen-chatglm-mistral",
@@ -16823,7 +16823,7 @@
   {
     "lang": "pt",
     "title": "Xinference: executar Llama 3, Qwen, ChatGLM e Mistral localmente 2026",
-    "excerpt": "Xinference suporta Llama 3, Qwen 3, ChatGLM4 e Mistral nativamente. pip install, xi launch — API compatível com OpenAI disponível em localhost:9997.",
+    "excerpt": "Xinference suporta Llama 3, Qwen2.5, ChatGLM4 e Mistral nativamente. pip install, xi launch — API compatível com OpenAI disponível em localhost:9997.",
     "publishDate": "2026-05-23",
     "dateModified": "2026-05-23",
     "url": "/pt/local-llms/xinference-llama-qwen-chatglm-mistral",
@@ -16832,7 +16832,7 @@
   {
     "lang": "ar",
     "title": "⁨Xinference⁩: تشغيل ⁨Llama 3⁩ و⁨Qwen⁩ و⁨ChatGLM⁩ و⁨Mistral⁩ محليًا ⁨2026⁩",
-    "excerpt": "يدعم ⁨Xinference 200⁩+ نموذج منها ⁨Llama 3⁩ و⁨Qwen 3⁩ و⁨ChatGLM4⁩ و⁨Mistral⁩ — ⁨pip install⁩ ثم ⁨xinference launch⁩، و⁨API⁩ متوافقة مع ⁨OpenAI⁩ على ⁨localhost⁩:⁨9997⁩.",
+    "excerpt": "يدعم ⁨Xinference 200⁩+ نموذج منها ⁨Llama 3⁩ و⁨Qwen2.5⁩ و⁨ChatGLM4⁩ و⁨Mistral⁩ — ⁨pip install⁩ ثم ⁨xinference launch⁩، و⁨API⁩ متوافقة مع ⁨OpenAI⁩ على ⁨localhost⁩:⁨9997⁩.",
     "publishDate": "2026-05-23",
     "dateModified": "2026-08-31",
     "url": "/ar/local-llms/xinference-llama-qwen-chatglm-mistral",
@@ -16841,7 +16841,7 @@
   {
     "lang": "ko",
     "title": "Xinference: Llama 3, Qwen, ChatGLM & Mistral 로컬 실행 가이드 2026",
-    "excerpt": "Xinference는 Llama 3, Qwen 3, ChatGLM4, Mistral을 기본 지원합니다. pip install 후 xi launch 한 번으로 localhost:9997에서 OpenAI 호환 API를 사용할 수 있습니다.",
+    "excerpt": "Xinference는 Llama 3, Qwen2.5, ChatGLM4, Mistral을 기본 지원합니다. pip install 후 xi launch 한 번으로 localhost:9997에서 OpenAI 호환 API를 사용할 수 있습니다.",
     "publishDate": "2026-05-23",
     "dateModified": "2026-08-28",
     "url": "/ko/local-llms/xinference-llama-qwen-chatglm-mistral",
@@ -18227,7 +18227,7 @@
   {
     "lang": "en",
     "title": "Local AI Code Review vs. CodeRabbit: Is DIY Worth It?",
-    "excerpt": "CodeRabbit costs $24/dev/month and works in 5 minutes. A self-hosted Qwen3-Coder 32B + PR-Agent setup is free but catches fewer bugs. Here is the honest trade-off.",
+    "excerpt": "CodeRabbit costs $24/dev/month and works in 5 minutes. A self-hosted Qwen2.5-Coder 32B + PR-Agent setup is free but catches fewer bugs. Here is the honest trade-off.",
     "publishDate": "2026-09-01",
     "dateModified": "2026-09-01",
     "url": "/local-llms/local-ai-code-review-vs-coderabbit",
@@ -18236,7 +18236,7 @@
   {
     "lang": "de",
     "title": "Lokale KI-Code-Review vs. CodeRabbit: Lohnt sich Selbstbau?",
-    "excerpt": "CodeRabbit kostet 24 $/Entwickler/Monat und läuft in 5 Minuten. Ein selbst gehostetes Setup mit Qwen3-Coder 32B + PR-Agent ist kostenlos, findet aber weniger Bugs. Hier der ehrliche Kompromiss.",
+    "excerpt": "CodeRabbit kostet 24 $/Entwickler/Monat und läuft in 5 Minuten. Ein selbst gehostetes Setup mit Qwen2.5-Coder 32B + PR-Agent ist kostenlos, findet aber weniger Bugs. Hier der ehrliche Kompromiss.",
     "publishDate": "2026-09-01",
     "dateModified": "2026-09-01",
     "url": "/de/local-llms/local-ai-code-review-vs-coderabbit",
@@ -18245,7 +18245,7 @@
   {
     "lang": "fr",
     "title": "Revue de code IA locale vs CodeRabbit : le DIY en vaut-il la peine ?",
-    "excerpt": "CodeRabbit coûte 24 $/dev/mois et fonctionne en 5 minutes. Un montage auto-hébergé avec Qwen3-Coder 32B + PR-Agent est gratuit mais détecte moins de bugs. Voici l'arbitrage honnête.",
+    "excerpt": "CodeRabbit coûte 24 $/dev/mois et fonctionne en 5 minutes. Un montage auto-hébergé avec Qwen2.5-Coder 32B + PR-Agent est gratuit mais détecte moins de bugs. Voici l'arbitrage honnête.",
     "publishDate": "2026-09-01",
     "dateModified": "2026-09-01",
     "url": "/fr/local-llms/local-ai-code-review-vs-coderabbit",
@@ -18254,7 +18254,7 @@
   {
     "lang": "ja",
     "title": "ローカルAIコードレビュー vs CodeRabbit：自作は割に合うか？",
-    "excerpt": "CodeRabbitは月24ドル/開発者、5分で使い始められます。自社運用のQwen3-Coder 32B + PR-Agentは無料ですが検出できるバグは少なめです。正直なトレードオフを解説します。",
+    "excerpt": "CodeRabbitは月24ドル/開発者、5分で使い始められます。自社運用のQwen2.5-Coder 32B + PR-Agentは無料ですが検出できるバグは少なめです。正直なトレードオフを解説します。",
     "publishDate": "2026-09-01",
     "dateModified": "2026-09-01",
     "url": "/ja/local-llms/local-ai-code-review-vs-coderabbit",
@@ -18263,7 +18263,7 @@
   {
     "lang": "zh",
     "title": "本地 AI 代码审查 vs CodeRabbit：自己动手值得吗？",
-    "excerpt": "CodeRabbit 每位开发者每月 24 美元，5 分钟即可用。自托管 Qwen3-Coder 32B + PR-Agent 方案免费，但能发现的 bug 更少。这是一份诚实的权衡分析。",
+    "excerpt": "CodeRabbit 每位开发者每月 24 美元，5 分钟即可用。自托管 Qwen2.5-Coder 32B + PR-Agent 方案免费，但能发现的 bug 更少。这是一份诚实的权衡分析。",
     "publishDate": "2026-09-01",
     "dateModified": "2026-09-01",
     "url": "/zh/local-llms/local-ai-code-review-vs-coderabbit",
@@ -18272,7 +18272,7 @@
   {
     "lang": "es",
     "title": "Revisión de código con IA local vs. CodeRabbit: ¿vale la pena hacerlo tú mismo?",
-    "excerpt": "CodeRabbit cuesta 24 $/dev/mes y funciona en 5 minutos. Un montaje autoalojado con Qwen3-Coder 32B + PR-Agent es gratis pero detecta menos errores. Aquí está el compromiso real.",
+    "excerpt": "CodeRabbit cuesta 24 $/dev/mes y funciona en 5 minutos. Un montaje autoalojado con Qwen2.5-Coder 32B + PR-Agent es gratis pero detecta menos errores. Aquí está el compromiso real.",
     "publishDate": "2026-09-01",
     "dateModified": "2026-09-01",
     "url": "/es/local-llms/local-ai-code-review-vs-coderabbit",
@@ -18281,7 +18281,7 @@
   {
     "lang": "pt",
     "title": "Revisão de código com IA local vs. CodeRabbit: vale a pena fazer você mesmo?",
-    "excerpt": "O CodeRabbit custa $24/dev/mês e funciona em 5 minutos. Um setup self-hosted com Qwen3-Coder 32B + PR-Agent é gratuito mas detecta menos bugs. Aqui está a troca real.",
+    "excerpt": "O CodeRabbit custa $24/dev/mês e funciona em 5 minutos. Um setup self-hosted com Qwen2.5-Coder 32B + PR-Agent é gratuito mas detecta menos bugs. Aqui está a troca real.",
     "publishDate": "2026-09-01",
     "dateModified": "2026-09-01",
     "url": "/pt/local-llms/local-ai-code-review-vs-coderabbit",
@@ -18290,7 +18290,7 @@
   {
     "lang": "ar",
     "title": "مراجعة الكود بالذكاء الاصطناعي المحلي مقابل CodeRabbit: هل يستحق القيام بها بنفسك؟",
-    "excerpt": "يكلف CodeRabbit 24 دولارًا لكل مطور شهريًا ويعمل خلال 5 دقائق. الإعداد الذاتي الاستضافة باستخدام Qwen3-Coder 32B + PR-Agent مجاني لكنه يكتشف أخطاء أقل. إليك المقايضة الحقيقية.",
+    "excerpt": "يكلف CodeRabbit 24 دولارًا لكل مطور شهريًا ويعمل خلال 5 دقائق. الإعداد الذاتي الاستضافة باستخدام Qwen2.5-Coder 32B + PR-Agent مجاني لكنه يكتشف أخطاء أقل. إليك المقايضة الحقيقية.",
     "publishDate": "2026-09-01",
     "dateModified": "2026-09-01",
     "url": "/ar/local-llms/local-ai-code-review-vs-coderabbit",
@@ -18299,7 +18299,7 @@
   {
     "lang": "ko",
     "title": "로컬 AI 코드 리뷰 대 CodeRabbit: 직접 구축할 가치가 있을까?",
-    "excerpt": "CodeRabbit은 개발자당 월 $24이며 5분이면 작동합니다. Qwen3-Coder 32B + PR-Agent로 만드는 셀프 호스팅 구성은 무료지만 버그를 더 적게 잡아냅니다. 실제 트레이드오프를 정리했습니다.",
+    "excerpt": "CodeRabbit은 개발자당 월 $24이며 5분이면 작동합니다. Qwen2.5-Coder 32B + PR-Agent로 만드는 셀프 호스팅 구성은 무료지만 버그를 더 적게 잡아냅니다. 실제 트레이드오프를 정리했습니다.",
     "publishDate": "2026-09-01",
     "dateModified": "2026-09-01",
     "url": "/ko/local-llms/local-ai-code-review-vs-coderabbit",
@@ -20090,7 +20090,7 @@
   {
     "lang": "en",
     "title": "Best AI Coding Tools Compared 2026: Cursor vs Continue.dev",
-    "excerpt": "Continue.dev vs Cursor for local models: Continue.dev (free, native Ollama) wins local-first; Cursor (~$20/mo) for polish. Best Ollama model: Qwen3 Coder 14B.",
+    "excerpt": "Continue.dev vs Cursor for local models: Continue.dev (free, native Ollama) wins local-first; Cursor (~$20/mo) for polish. Best Ollama model: Qwen2.5-Coder 14B.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-08-29",
     "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
@@ -20099,7 +20099,7 @@
   {
     "lang": "de",
     "title": "Beste KI-Coding-Tools im Vergleich 2026: Cursor vs. Continue.dev",
-    "excerpt": "Continue.dev vs. Cursor für lokale Modelle: Continue.dev (kostenlos, natives Ollama) gewinnt local-first; Cursor (~20 $/Mo) für Politur. Bestes Ollama-Modell: Qwen3 Coder 14B.",
+    "excerpt": "Continue.dev vs. Cursor für lokale Modelle: Continue.dev (kostenlos, natives Ollama) gewinnt local-first; Cursor (~20 $/Mo) für Politur. Bestes Ollama-Modell: Qwen2.5-Coder 14B.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-08-29",
     "url": "/de/power-local-llm/best-ai-coding-tools-comparison-2026",
@@ -20108,7 +20108,7 @@
   {
     "lang": "fr",
     "title": "Meilleurs outils de codage IA comparés 2026 : Cursor vs Continue.dev",
-    "excerpt": "Continue.dev vs Cursor pour modèles locaux : Continue.dev (gratuit, Ollama natif) gagne en local-first ; Cursor (~20 $/mois) pour la finition. Meilleur modèle Ollama : Qwen3 Coder 14B.",
+    "excerpt": "Continue.dev vs Cursor pour modèles locaux : Continue.dev (gratuit, Ollama natif) gagne en local-first ; Cursor (~20 $/mois) pour la finition. Meilleur modèle Ollama : Qwen2.5-Coder 14B.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-08-29",
     "url": "/fr/power-local-llm/best-ai-coding-tools-comparison-2026",
@@ -20117,7 +20117,7 @@
   {
     "lang": "ja",
     "title": "2026年 ベストAIコーディングツール比較: Cursor 対 Continue.dev",
-    "excerpt": "ローカルモデル向けContinue.dev vs Cursor：Continue.dev（無料・Ollamaネイティブ）がローカルファーストで有利、Cursor（月約20ドル）は完成度重視。最適なOllamaモデルはQwen3 Coder 14B。",
+    "excerpt": "ローカルモデル向けContinue.dev vs Cursor：Continue.dev（無料・Ollamaネイティブ）がローカルファーストで有利、Cursor（月約20ドル）は完成度重視。最適なOllamaモデルはQwen2.5-Coder 14B。",
     "publishDate": "2026-05-22",
     "dateModified": "2026-08-29",
     "url": "/ja/power-local-llm/best-ai-coding-tools-comparison-2026",
@@ -20126,7 +20126,7 @@
   {
     "lang": "zh",
     "title": "2026 年最佳 AI 编程工具对比：Cursor vs Continue.dev",
-    "excerpt": "面向本地模型的 Continue.dev vs Cursor：Continue.dev（免费、原生 Ollama）在本地优先场景胜出；Cursor（约 20 美元/月）胜在完善度。最佳 Ollama 模型：Qwen3 Coder 14B。",
+    "excerpt": "面向本地模型的 Continue.dev vs Cursor：Continue.dev（免费、原生 Ollama）在本地优先场景胜出；Cursor（约 20 美元/月）胜在完善度。最佳 Ollama 模型：Qwen2.5-Coder 14B。",
     "publishDate": "2026-05-22",
     "dateModified": "2026-08-29",
     "url": "/zh/power-local-llm/best-ai-coding-tools-comparison-2026",
@@ -20135,7 +20135,7 @@
   {
     "lang": "es",
     "title": "Mejores herramientas de programación con IA 2026: Cursor vs Continue.dev",
-    "excerpt": "Continue.dev vs Cursor para modelos locales: Continue.dev (gratis, Ollama nativo) gana en local-first; Cursor (~$20/mes) por su acabado. Mejor modelo Ollama: Qwen3 Coder 14B.",
+    "excerpt": "Continue.dev vs Cursor para modelos locales: Continue.dev (gratis, Ollama nativo) gana en local-first; Cursor (~$20/mes) por su acabado. Mejor modelo Ollama: Qwen2.5-Coder 14B.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-08-29",
     "url": "/es/power-local-llm/best-ai-coding-tools-comparison-2026",
@@ -20144,7 +20144,7 @@
   {
     "lang": "pt",
     "title": "Melhores ferramentas de programação com IA 2026: Cursor vs Continue.dev",
-    "excerpt": "Continue.dev vs Cursor para modelos locais: Continue.dev (grátis, Ollama nativo) vence no local-first; Cursor (~$20/mês) pelo acabamento. Melhor modelo Ollama: Qwen3 Coder 14B.",
+    "excerpt": "Continue.dev vs Cursor para modelos locais: Continue.dev (grátis, Ollama nativo) vence no local-first; Cursor (~$20/mês) pelo acabamento. Melhor modelo Ollama: Qwen2.5-Coder 14B.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-08-29",
     "url": "/pt/power-local-llm/best-ai-coding-tools-comparison-2026",
@@ -20153,7 +20153,7 @@
   {
     "lang": "ar",
     "title": "أفضل أدوات البرمجة بالذكاء الاصطناعي ⁨2026⁩: ⁨Cursor⁩ مقابل ⁨Continue.dev⁩",
-    "excerpt": "Continue.dev مقابل Cursor للنماذج المحلية: يتفوّق Continue.dev (مجاني، Ollama أصلي) في النهج المحلي أولاً؛ وCursor (~20$ شهريًا) للإتقان. أفضل نموذج Ollama: Qwen3 Coder 14B.",
+    "excerpt": "Continue.dev مقابل Cursor للنماذج المحلية: يتفوّق Continue.dev (مجاني، Ollama أصلي) في النهج المحلي أولاً؛ وCursor (~20$ شهريًا) للإتقان. أفضل نموذج Ollama: Qwen2.5-Coder 14B.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-08-29",
     "url": "/ar/power-local-llm/best-ai-coding-tools-comparison-2026",
@@ -20162,7 +20162,7 @@
   {
     "lang": "ko",
     "title": "2026년 최고의 AI 코딩 도구 비교: Cursor vs Continue.dev",
-    "excerpt": "로컬 모델용 Continue.dev vs Cursor: Continue.dev(무료, 네이티브 Ollama)가 로컬 우선에서 우세, Cursor(월 약 $20)는 완성도. 최적 Ollama 모델: Qwen3 Coder 14B.",
+    "excerpt": "로컬 모델용 Continue.dev vs Cursor: Continue.dev(무료, 네이티브 Ollama)가 로컬 우선에서 우세, Cursor(월 약 $20)는 완성도. 최적 Ollama 모델: Qwen2.5-Coder 14B.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-08-29",
     "url": "/ko/power-local-llm/best-ai-coding-tools-comparison-2026",
@@ -21709,8 +21709,8 @@
   },
   {
     "lang": "en",
-    "title": "The Complete Local LLM Software Directory: 225 Tools to Run AI on Your Own Hardware (2026)",
-    "excerpt": "225 local LLM tools compared across 7 categories, filterable by your hardware. Licenses, links, and real stacks included — find your setup in minutes.",
+    "title": "The Complete Local LLM Software Directory: 226 Tools to Run AI on Your Own Hardware (2026)",
+    "excerpt": "226 local LLM tools compared across 7 categories, filterable by your hardware. Licenses, links, and real stacks included — find your setup in minutes.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-09-13",
     "url": "/power-local-llm/local-llm-software-directory",
@@ -21718,8 +21718,8 @@
   },
   {
     "lang": "de",
-    "title": "Das vollständige lokale LLM Software-Verzeichnis: 225 Tools für KI auf eigener Hardware (2026)",
-    "excerpt": "225 lokale LLM-Tools über 7 Kategorien, filterbar nach Ihrer Hardware. Lizenzen, Links und reale Setups — finden Sie Ihr Setup in Minuten.",
+    "title": "Das vollständige lokale LLM Software-Verzeichnis: 226 Tools für KI auf eigener Hardware (2026)",
+    "excerpt": "226 lokale LLM-Tools über 7 Kategorien, filterbar nach Ihrer Hardware. Lizenzen, Links und reale Setups — finden Sie Ihr Setup in Minuten.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-09-13",
     "url": "/de/power-local-llm/local-llm-software-directory",
@@ -21727,8 +21727,8 @@
   },
   {
     "lang": "fr",
-    "title": "Le répertoire complet des logiciels LLM locaux : 225 outils pour faire tourner l'IA sur votre propre matériel (2026)",
-    "excerpt": "225 outils LLM locaux sur 7 catégories, filtrables selon votre matériel. Licences, liens et stacks réels — trouvez votre config en quelques minutes.",
+    "title": "Le répertoire complet des logiciels LLM locaux : 226 outils pour faire tourner l'IA sur votre propre matériel (2026)",
+    "excerpt": "226 outils LLM locaux sur 7 catégories, filtrables selon votre matériel. Licences, liens et stacks réels — trouvez votre config en quelques minutes.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-09-13",
     "url": "/fr/power-local-llm/local-llm-software-directory",
@@ -21736,8 +21736,8 @@
   },
   {
     "lang": "ja",
-    "title": "ローカルLLMソフトウェア完全ディレクトリ：自分のハードウェアでAIを動かす225のツール（2026年版）",
-    "excerpt": "225のローカルLLMツールを7カテゴリで比較。ハードウェアで絞り込み可能、ライセンス・リンク・実際の構成例つき — 数分で自分のセットアップが見つかります。",
+    "title": "ローカルLLMソフトウェア完全ディレクトリ：自分のハードウェアでAIを動かす226のツール（2026年版）",
+    "excerpt": "226のローカルLLMツールを7カテゴリで比較。ハードウェアで絞り込み可能、ライセンス・リンク・実際の構成例つき — 数分で自分のセットアップが見つかります。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-09-13",
     "url": "/ja/power-local-llm/local-llm-software-directory",
@@ -21745,8 +21745,8 @@
   },
   {
     "lang": "zh",
-    "title": "本地LLM软件完整目录：225款工具，在自有硬件上运行AI（2026）",
-    "excerpt": "225款本地LLM工具，按7大类对比，可按你的硬件筛选。附许可证、链接与真实技术栈——几分钟内找到适合你的方案。",
+    "title": "本地LLM软件完整目录：226款工具，在自有硬件上运行AI（2026）",
+    "excerpt": "226款本地LLM工具，按7大类对比，可按你的硬件筛选。附许可证、链接与真实技术栈——几分钟内找到适合你的方案。",
     "publishDate": "2026-05-07",
     "dateModified": "2026-09-13",
     "url": "/zh/power-local-llm/local-llm-software-directory",
@@ -21754,8 +21754,8 @@
   },
   {
     "lang": "es",
-    "title": "El directorio completo de software LLM local: 225 herramientas para ejecutar IA en tu propio hardware (2026)",
-    "excerpt": "225 herramientas LLM local en 7 categorías, filtrables por tu hardware. Licencias, enlaces y stacks reales — encuentra tu configuración en minutos.",
+    "title": "El directorio completo de software LLM local: 226 herramientas para ejecutar IA en tu propio hardware (2026)",
+    "excerpt": "226 herramientas LLM local en 7 categorías, filtrables por tu hardware. Licencias, enlaces y stacks reales — encuentra tu configuración en minutos.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-09-13",
     "url": "/es/power-local-llm/local-llm-software-directory",
@@ -21763,8 +21763,8 @@
   },
   {
     "lang": "pt",
-    "title": "O diretório completo de software LLM local: 225 ferramentas para executar IA no seu próprio hardware (2026)",
-    "excerpt": "225 ferramentas LLM local comparadas em 7 categorias, filtráveis pelo seu hardware. Licenças, links e stacks reais — encontre sua configuração em minutos.",
+    "title": "O diretório completo de software LLM local: 226 ferramentas para executar IA no seu próprio hardware (2026)",
+    "excerpt": "226 ferramentas LLM local comparadas em 7 categorias, filtráveis pelo seu hardware. Licenças, links e stacks reais — encontre sua configuração em minutos.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-09-13",
     "url": "/pt/power-local-llm/local-llm-software-directory",
@@ -21772,8 +21772,8 @@
   },
   {
     "lang": "ar",
-    "title": "الدليل الشامل لبرامج النماذج اللغوية المحلية: 225 أداة لتشغيل الذكاء الاصطناعي على أجهزتك (2026)",
-    "excerpt": "225 أداة للنماذج اللغوية المحلية عبر 7 فئات، قابلة للتصفية حسب جهازك. تراخيص وروابط وتجهيزات فعلية — اعثر على إعدادك خلال دقائق.",
+    "title": "الدليل الشامل لبرامج النماذج اللغوية المحلية: 226 أداة لتشغيل الذكاء الاصطناعي على أجهزتك (2026)",
+    "excerpt": "226 أداة للنماذج اللغوية المحلية عبر 7 فئات، قابلة للتصفية حسب جهازك. تراخيص وروابط وتجهيزات فعلية — اعثر على إعدادك خلال دقائق.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-09-13",
     "url": "/ar/power-local-llm/local-llm-software-directory",
@@ -21781,8 +21781,8 @@
   },
   {
     "lang": "ko",
-    "title": "로컬 LLM 소프트웨어 완전 디렉토리: 직접 소유한 하드웨어에서 AI를 실행하는 225 도구 (2026)",
-    "excerpt": "225개 로컬 LLM 도구를 7개 카테고리로 비교. 내 하드웨어 기준으로 필터링 가능, 라이선스·링크·실제 구성 예시 포함 — 몇 분이면 내게 맞는 세팅을 찾을 수 있습니다.",
+    "title": "로컬 LLM 소프트웨어 완전 디렉토리: 직접 소유한 하드웨어에서 AI를 실행하는 226 도구 (2026)",
+    "excerpt": "226개 로컬 LLM 도구를 7개 카테고리로 비교. 내 하드웨어 기준으로 필터링 가능, 라이선스·링크·실제 구성 예시 포함 — 몇 분이면 내게 맞는 세팅을 찾을 수 있습니다.",
     "publishDate": "2026-05-07",
     "dateModified": "2026-09-13",
     "url": "/ko/power-local-llm/local-llm-software-directory",
@@ -22520,7 +22520,7 @@
   {
     "lang": "en",
     "title": "Best Mobile LLM Models in 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
-    "excerpt": "Six small LLMs run CPU-only on phones in 2026: Phi-4 Mini (3.8B), Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B compared on speed, RAM, quality.",
+    "excerpt": "Six small LLMs run CPU-only on phones in 2026: Phi-4 Mini (3.8B), Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen3 1.7B, Llama 3.2 3B compared on speed, RAM, quality.",
     "publishDate": "2026-05-08",
     "dateModified": "2026-07-14",
     "url": "/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
@@ -22529,7 +22529,7 @@
   {
     "lang": "de",
     "title": "Beste mobile KI-Modelle 2026: Phi-4 Mini vs. Gemma 3 vs. SmolLM",
-    "excerpt": "Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B und Llama 3.2 3B: Smartphone-Benchmark 2026. Geschwindigkeit, RAM und Qualität im Vergleich.",
+    "excerpt": "Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen3 1.7B und Llama 3.2 3B: Smartphone-Benchmark 2026. Geschwindigkeit, RAM und Qualität im Vergleich.",
     "publishDate": "2026-05-08",
     "dateModified": "2026-07-14",
     "url": "/de/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
@@ -22538,7 +22538,7 @@
   {
     "lang": "fr",
     "title": "Meilleurs modèles LLM mobiles 2026 : Phi-4 Mini vs Gemma 3 vs SmolLM",
-    "excerpt": "Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B et Llama 3.2 3B comparés sur smartphone en 2026 : vitesse, RAM et qualité en un seul tableau.",
+    "excerpt": "Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen3 1.7B et Llama 3.2 3B comparés sur smartphone en 2026 : vitesse, RAM et qualité en un seul tableau.",
     "publishDate": "2026-05-08",
     "dateModified": "2026-07-14",
     "url": "/fr/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
@@ -22547,7 +22547,7 @@
   {
     "lang": "ja",
     "title": "2026年モバイルLLMモデル比較：Phi-4 Mini vs Gemma 3 vs SmolLM",
-    "excerpt": "2026年スマートフォン向けの6つの小型LLMベンチマーク。Phi-4 Mini、Gemma 3 4B/1B、SmolLM 2 1.7B、Qwen 3 1.7B、Llama 3.2 3Bをspeed・RAM・品質で比較。",
+    "excerpt": "2026年スマートフォン向けの6つの小型LLMベンチマーク。Phi-4 Mini、Gemma 3 4B/1B、SmolLM 2 1.7B、Qwen3 1.7B、Llama 3.2 3Bをspeed・RAM・品質で比較。",
     "publishDate": "2026-05-08",
     "dateModified": "2026-07-14",
     "url": "/ja/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
@@ -22556,7 +22556,7 @@
   {
     "lang": "zh",
     "title": "2026年最佳移动端LLM模型：Phi-4 Mini vs Gemma 3 vs SmolLM对比",
-    "excerpt": "2026年六款手机端小型LLM基准测试：Phi-4 Mini、Gemma 3 4B/1B、SmolLM 2 1.7B、Qwen 3 1.7B、Llama 3.2 3B速度、RAM与质量全面对比。",
+    "excerpt": "2026年六款手机端小型LLM基准测试：Phi-4 Mini、Gemma 3 4B/1B、SmolLM 2 1.7B、Qwen3 1.7B、Llama 3.2 3B速度、RAM与质量全面对比。",
     "publishDate": "2026-05-08",
     "dateModified": "2026-07-14",
     "url": "/zh/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
@@ -22565,7 +22565,7 @@
   {
     "lang": "es",
     "title": "Mejores modelos LLM para móviles en 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
-    "excerpt": "Seis LLMs pequeños evaluados en teléfonos en 2026. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B comparados en velocidad, RAM y calidad.",
+    "excerpt": "Seis LLMs pequeños evaluados en teléfonos en 2026. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen3 1.7B, Llama 3.2 3B comparados en velocidad, RAM y calidad.",
     "publishDate": "2026-05-08",
     "dateModified": "2026-07-14",
     "url": "/es/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
@@ -22574,7 +22574,7 @@
   {
     "lang": "pt",
     "title": "Melhores modelos LLM para celular em 2026: Phi-4 Mini vs Gemma 3 vs SmolLM",
-    "excerpt": "Seis LLMs pequenos avaliados em celulares em 2026. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B comparados em velocidade, RAM e qualidade.",
+    "excerpt": "Seis LLMs pequenos avaliados em celulares em 2026. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen3 1.7B, Llama 3.2 3B comparados em velocidade, RAM e qualidade.",
     "publishDate": "2026-05-08",
     "dateModified": "2026-07-14",
     "url": "/pt/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
@@ -22592,7 +22592,7 @@
   {
     "lang": "ko",
     "title": "2026년 모바일 LLM 최고 모델: Phi-4 Mini vs Gemma 3 vs SmolLM 비교",
-    "excerpt": "2026년 스마트폰에서 테스트한 소형 LLM 6종 비교. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen 3 1.7B, Llama 3.2 3B의 속도·RAM·품질을 비교합니다.",
+    "excerpt": "2026년 스마트폰에서 테스트한 소형 LLM 6종 비교. Phi-4 Mini, Gemma 3 4B/1B, SmolLM 2 1.7B, Qwen3 1.7B, Llama 3.2 3B의 속도·RAM·품질을 비교합니다.",
     "publishDate": "2026-05-08",
     "dateModified": "2026-07-14",
     "url": "/ko/power-local-llm/mobile-llm-models-phi4-gemma-smollm",
@@ -30700,6 +30700,87 @@
   },
   {
     "lang": "en",
+    "title": "HilbertRaum Review 2026: A Portable, Offline AI Workspace for Chat and Your Own Documents",
+    "excerpt": "HilbertRaum is a free, open-source, portable AI workspace for offline chat and document Q&A that runs from a USB drive with no installation. Verified version, license, and platforms for 2026.",
+    "publishDate": "2026-09-25",
+    "dateModified": "2026-09-25",
+    "url": "/power-local-llm/hilbertraum-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "HilbertRaum Review 2026: Ein portabler, offline laufender KI-Arbeitsbereich für Chat und eigene Dokumente",
+    "excerpt": "HilbertRaum ist ein kostenloser, quelloffener, portabler KI-Arbeitsbereich für Offline-Chat und Dokumenten-Fragen, der ohne Installation von einem USB-Stick läuft. Geprüfte Version, Lizenz und Plattformen für 2026.",
+    "publishDate": "2026-09-25",
+    "dateModified": "2026-09-25",
+    "url": "/de/power-local-llm/hilbertraum-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "HilbertRaum Review 2026 : un espace de travail IA portable et hors ligne pour le chat et vos documents",
+    "excerpt": "HilbertRaum est un espace de travail IA gratuit, open source et portable pour le chat hors ligne et les questions sur vos documents, exécutable depuis une clé USB sans installation. Version, licence et plateformes vérifiées pour 2026.",
+    "publishDate": "2026-09-25",
+    "dateModified": "2026-09-25",
+    "url": "/fr/power-local-llm/hilbertraum-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "HilbertRaumレビュー2026:チャットと自分の文書のためのポータブルなオフラインAIワークスペース",
+    "excerpt": "HilbertRaumは、オフラインのチャットと文書に関する質問応答のための、無料・オープンソース・ポータブルなAIワークスペースです。インストール不要でUSBドライブから動作します。2026年版の検証済みバージョン、ライセンス、対応プラットフォームを掲載。",
+    "publishDate": "2026-09-25",
+    "dateModified": "2026-09-25",
+    "url": "/ja/power-local-llm/hilbertraum-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "HilbertRaum评测2026:面向聊天与文档问答的可移动离线AI工作空间",
+    "excerpt": "HilbertRaum是一款免费、开源、可移动的AI工作空间,用于离线聊天和文档问答,无需安装即可从U盘运行。本文提供2026年验证过的版本、许可证和平台信息。",
+    "publishDate": "2026-09-25",
+    "dateModified": "2026-09-25",
+    "url": "/zh/power-local-llm/hilbertraum-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "HilbertRaum Review 2026: un espacio de trabajo de IA portátil y offline para chatear y consultar tus documentos",
+    "excerpt": "HilbertRaum es un espacio de trabajo de IA gratuito, de código abierto y portátil para chat offline y preguntas sobre documentos, que corre desde una memoria USB sin instalación. Versión, licencia y plataformas verificadas para 2026.",
+    "publishDate": "2026-09-25",
+    "dateModified": "2026-09-25",
+    "url": "/es/power-local-llm/hilbertraum-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "HilbertRaum Review 2026: um espaço de trabalho de IA portátil e offline para chat e seus próprios documentos",
+    "excerpt": "O HilbertRaum é um espaço de trabalho de IA gratuito, de código aberto e portátil para chat offline e perguntas sobre documentos, que roda de um pendrive USB sem instalação. Versão, licença e plataformas verificadas para 2026.",
+    "publishDate": "2026-09-25",
+    "dateModified": "2026-09-25",
+    "url": "/pt/power-local-llm/hilbertraum-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة HilbertRaum 2026: مساحة عمل ذكاء اصطناعي محمولة تعمل دون اتصال للدردشة ومستنداتك",
+    "excerpt": "HilbertRaum هو مساحة عمل ذكاء اصطناعي مجانية ومفتوحة المصدر ومحمولة للدردشة دون اتصال وطرح الأسئلة حول المستندات، تعمل من محرك أقراص USB دون تثبيت. الإصدار والترخيص والمنصات موثّقة لعام 2026.",
+    "publishDate": "2026-09-25",
+    "dateModified": "2026-09-25",
+    "url": "/ar/power-local-llm/hilbertraum-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "HilbertRaum 리뷰 2026: 채팅과 내 문서를 위한 휴대용 오프라인 AI 작업 공간",
+    "excerpt": "HilbertRaum은 오프라인 채팅과 문서 질의응답을 위한 무료 오픈소스 휴대용 AI 작업 공간으로, 설치 없이 USB 드라이브에서 실행됩니다. 2026년 기준 검증된 버전, 라이선스, 지원 플랫폼을 담았습니다.",
+    "publishDate": "2026-09-25",
+    "dateModified": "2026-09-25",
+    "url": "/ko/power-local-llm/hilbertraum-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
     "title": "Shadow AI: Which Controls Actually Fit Your Company Size",
     "excerpt": "Shadow AI controls that actually match your company size: exposure self-assessment, detection tooling, sanctioned deployment, and an AUP checklist — plus jurisdiction notes for US, EU, China, Japan, Korea, and the Gulf.",
     "publishDate": "2026-09-02",
@@ -33212,7 +33293,7 @@
   {
     "lang": "en",
     "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
-    "excerpt": "Compare 41 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.",
+    "excerpt": "Compare 42 local knowledge and retrieval tools side by side: RAG frameworks, document chat, vector databases (Chroma, Milvus, Qdrant, Weaviate), notes plugins and search. Licenses, local LLM support, Docker, API, from official docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33221,7 +33302,7 @@
   {
     "lang": "de",
     "title": "Lokale Wissens- und Retrieval-Tools im Vergleich (2026): RAG, Dokumenten-Chat, Vektordatenbanken, Notizen und Suche",
-    "excerpt": "41 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.",
+    "excerpt": "42 lokale Retrieval-Tools im Vergleich: RAG-Frameworks, Dokumenten-Chat, Vektordatenbanken, Notiz-Plugins und Suche. Lizenzen, lokale LLMs, Docker, API — aus offiziellen Docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/de/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33230,7 +33311,7 @@
   {
     "lang": "fr",
     "title": "Outils locaux de connaissance et de recherche comparés (2026) : RAG, chat avec documents, bases vectorielles, notes et recherche",
-    "excerpt": "Comparez 41 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.",
+    "excerpt": "Comparez 42 outils locaux de connaissance et de recherche : frameworks RAG, chat de documents, bases vectorielles (Chroma, Milvus, Qdrant, Weaviate), plugins de notes et recherche. Licences, LLM locaux, Docker, API, d'après la documentation officielle.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33239,7 +33320,7 @@
   {
     "lang": "ja",
     "title": "ローカル知識・検索ツール比較(2026):RAG、ドキュメントチャット、ベクトルデータベース、ノート、検索",
-    "excerpt": "ローカルの知識・検索ツール41種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。",
+    "excerpt": "ローカルの知識・検索ツール42種を比較:RAGフレームワーク、ドキュメントチャット、ベクトルDB(Chroma、Milvus、Qdrant、Weaviate)、ノートプラグイン、検索。ライセンス、ローカルLLM対応、Docker、APIを公式ドキュメントから整理。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33248,7 +33329,7 @@
   {
     "lang": "zh",
     "title": "本地知识与检索工具对比(2026):RAG、文档对话、向量数据库、笔记与搜索",
-    "excerpt": "并排对比41款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。",
+    "excerpt": "并排对比42款本地知识与检索工具:RAG框架、文档对话、向量数据库(Chroma、Milvus、Qdrant、Weaviate)、笔记插件与搜索。许可证、本地LLM支持、Docker、API,均取自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33257,7 +33338,7 @@
   {
     "lang": "es",
     "title": "Herramientas locales de conocimiento y recuperación comparadas (2026): RAG, chat con documentos, bases de datos vectoriales, notas y búsqueda",
-    "excerpt": "Compara 41 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.",
+    "excerpt": "Compara 42 herramientas locales de conocimiento y recuperación: frameworks RAG, chat con documentos, bases de datos vectoriales (Chroma, Milvus, Qdrant, Weaviate), plugins de notas y búsqueda. Licencias, LLM locales, Docker y API, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33266,7 +33347,7 @@
   {
     "lang": "pt",
     "title": "Ferramentas locais de conhecimento e recuperação comparadas (2026): RAG, chat com documentos, bancos de dados vetoriais, notas e busca",
-    "excerpt": "Compare 41 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.",
+    "excerpt": "Compare 42 ferramentas locais de conhecimento e recuperação: frameworks RAG, chat com documentos, bancos vetoriais (Chroma, Milvus, Qdrant, Weaviate), plugins de notas e busca. Licenças, LLMs locais, Docker e API, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33275,7 +33356,7 @@
   {
     "lang": "ar",
     "title": "مقارنة أدوات المعرفة والاسترجاع المحلية (2026): RAG ومحادثة المستندات وقواعد البيانات المتجهية والملاحظات والبحث",
-    "excerpt": "قارن 41 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.",
+    "excerpt": "قارن 42 أداة معرفة واسترجاع محلية: أطر RAG ومحادثة المستندات وقواعد البيانات المتجهية (Chroma وMilvus وQdrant وWeaviate) وإضافات الملاحظات والبحث. التراخيص ودعم النماذج المحلية وDocker وAPI من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33284,7 +33365,7 @@
   {
     "lang": "ko",
     "title": "로컬 지식·검색 도구 비교(2026): RAG, 문서 채팅, 벡터 데이터베이스, 노트, 검색",
-    "excerpt": "로컬 지식·검색 도구 41개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 지식·검색 도구 42개 비교: RAG 프레임워크, 문서 채팅, 벡터 DB(Chroma, Milvus, Qdrant, Weaviate), 노트 플러그인, 검색. 라이선스, 로컬 LLM, Docker, API를 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -33293,7 +33374,7 @@
   {
     "lang": "en",
     "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-    "excerpt": "Compare 66 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.",
+    "excerpt": "Compare 67 local chat apps and AI assistants side by side: desktop apps (LM Studio, Jan, GPT4All), phone apps, self-hosted web UIs (Open WebUI, LibreChat), assistants and roleplay tools. Licenses, MCP, Ollama, offline use, from official docs.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -33311,7 +33392,7 @@
   {
     "lang": "fr",
     "title": "Applications de chat IA locales et assistants : comparatif (2026) — bureau, mobile, auto-hébergé, assistants et jeu de rôle",
-    "excerpt": "Comparez 66 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.",
+    "excerpt": "Comparez 67 applications de chat IA locales et assistants : applications de bureau (LM Studio, Jan, GPT4All), mobiles, interfaces web auto-hébergées (Open WebUI, LibreChat), assistants et jeu de rôle. Licences, MCP, Ollama, hors ligne, d'après les docs officielles.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-chat-assistants-compared",
@@ -33320,7 +33401,7 @@
   {
     "lang": "ja",
     "title": "ローカルチャットアプリとAIアシスタント比較(2026):デスクトップ、モバイル、セルフホスト、アシスタント、ロールプレイ",
-    "excerpt": "ローカルチャットアプリとAIアシスタント66種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。",
+    "excerpt": "ローカルチャットアプリとAIアシスタント67種を並べて比較:デスクトップ(LM Studio、Jan、GPT4All)、スマホ、セルフホストWeb UI(Open WebUI、LibreChat)、アシスタント、ロールプレイ。公式ドキュメントに基づくライセンス、MCP、Ollama、オフライン対応。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-chat-assistants-compared",
@@ -33329,7 +33410,7 @@
   {
     "lang": "zh",
     "title": "本地聊天应用与助手对比(2026):桌面、手机、自托管、助手与角色扮演",
-    "excerpt": "并排对比66款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。",
+    "excerpt": "并排对比67款本地聊天应用与AI助手:桌面应用(LM Studio、Jan、GPT4All)、手机应用、自托管网页界面(Open WebUI、LibreChat)、助手与角色扮演工具。许可证、MCP、Ollama、离线使用,均取自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-chat-assistants-compared",
@@ -33338,7 +33419,7 @@
   {
     "lang": "es",
     "title": "Apps de chat y asistentes locales, comparados (2026): escritorio, móvil, autoalojados, asistentes y rol",
-    "excerpt": "Compara 66 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.",
+    "excerpt": "Compara 67 apps de chat y asistentes de IA locales: escritorio (LM Studio, Jan, GPT4All), móvil, interfaces web autoalojadas (Open WebUI, LibreChat), asistentes y rol. Licencias, MCP, Ollama y uso offline, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-chat-assistants-compared",
@@ -33347,7 +33428,7 @@
   {
     "lang": "pt",
     "title": "Apps de chat locais e assistentes comparados (2026): desktop, celular, self-hosted, assistentes e roleplay",
-    "excerpt": "Compare 66 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.",
+    "excerpt": "Compare 67 apps de chat locais e assistentes de IA lado a lado: apps de desktop (LM Studio, Jan, GPT4All), apps de celular, interfaces web self-hosted (Open WebUI, LibreChat), assistentes e roleplay. Licenças, MCP, Ollama e uso offline, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-chat-assistants-compared",
@@ -33356,7 +33437,7 @@
   {
     "lang": "ar",
     "title": "مقارنة تطبيقات الدردشة والمساعدات المحلية (2026): سطح المكتب والجوال والاستضافة الذاتية والمساعدات ولعب الأدوار",
-    "excerpt": "قارن 66 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.",
+    "excerpt": "قارن 67 تطبيق دردشة محليًا ومساعد ذكاء اصطناعي: تطبيقات سطح المكتب (LM Studio وJan وGPT4All) وتطبيقات الهاتف وواجهات الويب المستضافة ذاتيًا (Open WebUI وLibreChat) والمساعدات وأدوات لعب الأدوار. التراخيص وMCP وOllama والعمل دون اتصال، من الوثائق الرسمية.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-chat-assistants-compared",
@@ -33365,7 +33446,7 @@
   {
     "lang": "ko",
     "title": "로컬 채팅 앱·AI 어시스턴트 비교(2026): 데스크톱, 모바일, 셀프 호스팅, 어시스턴트, 롤플레이",
-    "excerpt": "로컬 채팅 앱과 AI 어시스턴트 66개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 채팅 앱과 AI 어시스턴트 67개를 비교합니다: 데스크톱 앱(LM Studio, Jan, GPT4All), 휴대폰 앱, 셀프 호스팅 웹 UI(Open WebUI, LibreChat), 어시스턴트, 롤플레이 도구. 라이선스, MCP, Ollama, 오프라인 사용을 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-chat-assistants-compared",
@@ -46316,7 +46397,7 @@
   {
     "lang": "ar",
     "title": "⁨Qwen Coder⁩ مقابل ⁨DeepSeek Coder⁩: أيهما أفضل؟",
-    "excerpt": "⁨Qwen 3 Coder 14B⁩ يتفوق في ⁨HumanEval⁩ بـ ⁨5⁩ نقاط على ⁨DeepSeek Coder V2⁩. كلاهما يعمل على ⁨RTX 3060⁩ بـ ~⁨10 GB VRAM. Python⁩ و ⁨TypeScript⁩: ⁨Qwen⁩ يفوز.",
+    "excerpt": "⁨Qwen2.5-Coder 14B⁩ يتفوق في ⁨HumanEval⁩ بـ ⁨5⁩ نقاط على ⁨DeepSeek Coder V2⁩. كلاهما يعمل على ⁨RTX 3060⁩ بـ ~⁨10 GB VRAM. Python⁩ و ⁨TypeScript⁩: ⁨Qwen⁩ يفوز.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-20",
     "url": "/ar/prompt-bites/qwen-coder-vs-deepseek-coder",
@@ -46325,7 +46406,7 @@
   {
     "lang": "ko",
     "title": "Qwen Coder 대 DeepSeek Coder: 어느 것이 더 낫습니까?",
-    "excerpt": "Qwen 3 Coder 14B는 Python 및 TypeScript에서 HumanEval을 약 5점 차로 앞섭니다. 두 모델 모두 RTX 3060에서 ~10 GB VRAM으로 실행됩니다. PromptQuorum의 빠른 답변.",
+    "excerpt": "Qwen2.5-Coder 14B는 Python 및 TypeScript에서 HumanEval을 약 5점 차로 앞섭니다. 두 모델 모두 RTX 3060에서 ~10 GB VRAM으로 실행됩니다. PromptQuorum의 빠른 답변.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-12",
     "url": "/ko/prompt-bites/qwen-coder-vs-deepseek-coder",
@@ -46658,7 +46739,7 @@
   {
     "lang": "en",
     "title": "Qwen 14B vs Llama 3 8B: Which Runs Better Locally?",
-    "excerpt": "Llama 3 8B: 6 GB VRAM, ~25 tok/s. Qwen 3 14B: 10 GB, higher benchmarks, 74.8% MMLU. Quick answer from PromptQuorum.",
+    "excerpt": "Llama 3 8B: 6 GB VRAM, ~25 tok/s. Qwen3 14B: 10 GB, higher benchmarks, 74.8% MMLU. Quick answer from PromptQuorum.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-20",
     "url": "/prompt-bites/qwen-14b-vs-llama-8b",
@@ -46667,7 +46748,7 @@
   {
     "lang": "de",
     "title": "Qwen 14B vs. Llama 3 8B: Welches läuft lokal besser?",
-    "excerpt": "Llama 3 8B: 6 GB VRAM, ~25 tok/s. Qwen 3 14B: 10 GB, 74,8% MMLU. Bei 12 GB VRAM: Qwen gewinnt. Schnelle Antwort von PromptQuorum.",
+    "excerpt": "Llama 3 8B: 6 GB VRAM, ~25 tok/s. Qwen3 14B: 10 GB, 74,8% MMLU. Bei 12 GB VRAM: Qwen gewinnt. Schnelle Antwort von PromptQuorum.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-02",
     "url": "/de/prompt-bites/qwen-14b-vs-llama-8b",
@@ -46676,7 +46757,7 @@
   {
     "lang": "fr",
     "title": "Qwen 14B vs Llama 3 8B : lequel tourne mieux en local ?",
-    "excerpt": "Llama 3 8B : 6 Go VRAM, ~25 tok/s. Qwen 3 14B : 10 Go, 74,8% MMLU. À 12 Go : Qwen gagne en qualité. Réponse rapide de PromptQuorum.",
+    "excerpt": "Llama 3 8B : 6 Go VRAM, ~25 tok/s. Qwen3 14B : 10 Go, 74,8% MMLU. À 12 Go : Qwen gagne en qualité. Réponse rapide de PromptQuorum.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-02",
     "url": "/fr/prompt-bites/qwen-14b-vs-llama-8b",
@@ -46685,7 +46766,7 @@
   {
     "lang": "ja",
     "title": "Qwen 14B対Llama 3 8B：ローカルでどちらが優れているか？",
-    "excerpt": "Llama 3 8B：6 GB VRAM、~25 tok/s。Qwen 3 14B：10 GB、MMLU 74.8%。12 GB VRAM なら Qwen が品質で優位。PromptQuorum による簡潔な回答。",
+    "excerpt": "Llama 3 8B：6 GB VRAM、~25 tok/s。Qwen3 14B：10 GB、MMLU 74.8%。12 GB VRAM なら Qwen が品質で優位。PromptQuorum による簡潔な回答。",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-02",
     "url": "/ja/prompt-bites/qwen-14b-vs-llama-8b",
@@ -46694,7 +46775,7 @@
   {
     "lang": "zh",
     "title": "Qwen 14B 对比 Llama 3 8B：哪款本地运行更好？",
-    "excerpt": "Llama 3 8B：6 GB VRAM、约 25 tok/s。Qwen 3 14B：10 GB、MMLU 74.8%。12 GB VRAM 时 Qwen 质量更优。PromptQuorum 快速解答。",
+    "excerpt": "Llama 3 8B：6 GB VRAM、约 25 tok/s。Qwen3 14B：10 GB、MMLU 74.8%。12 GB VRAM 时 Qwen 质量更优。PromptQuorum 快速解答。",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-02",
     "url": "/zh/prompt-bites/qwen-14b-vs-llama-8b",
@@ -46703,7 +46784,7 @@
   {
     "lang": "es",
     "title": "Qwen 14B vs Llama 3 8B: ¿cuál funciona mejor en local?",
-    "excerpt": "Llama 3 8B: 6 GB VRAM, ~25 tok/s. Qwen 3 14B: 10 GB, MMLU 74.8%. Con 12 GB de VRAM, Qwen 14B gana en calidad. Respuesta rápida de PromptQuorum.",
+    "excerpt": "Llama 3 8B: 6 GB VRAM, ~25 tok/s. Qwen3 14B: 10 GB, MMLU 74.8%. Con 12 GB de VRAM, Qwen 14B gana en calidad. Respuesta rápida de PromptQuorum.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-02",
     "url": "/es/prompt-bites/qwen-14b-vs-llama-8b",
@@ -46712,7 +46793,7 @@
   {
     "lang": "pt",
     "title": "Qwen 14B vs Llama 3 8B: qual funciona melhor localmente?",
-    "excerpt": "Llama 3 8B: 6 GB VRAM, ~25 tok/s. Qwen 3 14B: 10 GB, MMLU 74,8%. Com 12 GB de VRAM, Qwen 14B vence em qualidade. Resposta rápida do PromptQuorum.",
+    "excerpt": "Llama 3 8B: 6 GB VRAM, ~25 tok/s. Qwen3 14B: 10 GB, MMLU 74,8%. Com 12 GB de VRAM, Qwen 14B vence em qualidade. Resposta rápida do PromptQuorum.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-02",
     "url": "/pt/prompt-bites/qwen-14b-vs-llama-8b",
@@ -46721,7 +46802,7 @@
   {
     "lang": "ar",
     "title": "⁨Qwen 14B⁩ مقابل ⁨Llama 3 8B⁩: أيهما يعمل بشكل أفضل محليًا؟",
-    "excerpt": "⁨Llama 3 8B⁩: ⁨6 GB VRAM⁩ و~⁨25 tok/s⁩ على ⁨RTX 3060. Qwen 3 14B⁩: ⁨10 GB VRAM⁩، ⁨MMLU 74.8%⁩ مقابل ⁨66.6%⁩. عند ⁨12 GB VRAM⁩ يفوز ⁨Qwen 14B⁩ في الجودة.",
+    "excerpt": "⁨Llama 3 8B⁩: ⁨6 GB VRAM⁩ و~⁨25 tok/s⁩ على ⁨RTX 3060. Qwen3 14B⁩: ⁨10 GB VRAM⁩، ⁨MMLU 74.8%⁩ مقابل ⁨66.6%⁩. عند ⁨12 GB VRAM⁩ يفوز ⁨Qwen 14B⁩ في الجودة.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-20",
     "url": "/ar/prompt-bites/qwen-14b-vs-llama-8b",
@@ -46730,7 +46811,7 @@
   {
     "lang": "ko",
     "title": "Qwen 14B vs Llama 3 8B: 로컬에서 어느 쪽이 더 잘 실행됩니까?",
-    "excerpt": "Llama 3 8B: 6 GB VRAM, ~25 tok/s. Qwen 3 14B: 10 GB, MMLU 74.8% 대 66.6%. 12 GB VRAM 환경에서는 Qwen 14B가 품질 면에서 우위입니다.",
+    "excerpt": "Llama 3 8B: 6 GB VRAM, ~25 tok/s. Qwen3 14B: 10 GB, MMLU 74.8% 대 66.6%. 12 GB VRAM 환경에서는 Qwen 14B가 품질 면에서 우위입니다.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-12",
     "url": "/ko/prompt-bites/qwen-14b-vs-llama-8b",
@@ -46739,7 +46820,7 @@
   {
     "lang": "en",
     "title": "Best 14B Model for Coding?",
-    "excerpt": "Qwen 3 Coder 14B: 78% HumanEval, 10 GB VRAM. DeepSeek Coder 14B: 75%. StarCoder2 15B: 73% at 10 GB. Quick answer from PromptQuorum.",
+    "excerpt": "Qwen2.5-Coder 14B: 78% HumanEval, 10 GB VRAM. DeepSeek-Coder-V2-Lite: 75%. StarCoder2 15B: 73% at 10 GB. Quick answer from PromptQuorum.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/prompt-bites/best-14b-models-coding",
@@ -46748,7 +46829,7 @@
   {
     "lang": "de",
     "title": "Bestes 14B-Modell für Coding?",
-    "excerpt": "Qwen 3 Coder 14B: 78% HumanEval, 10 GB VRAM. DeepSeek Coder 14B: 75%. StarCoder2 15B: 73%. Schnelle Antwort von PromptQuorum.",
+    "excerpt": "Qwen2.5-Coder 14B: 78% HumanEval, 10 GB VRAM. DeepSeek-Coder-V2-Lite: 75%. StarCoder2 15B: 73%. Schnelle Antwort von PromptQuorum.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-02",
     "url": "/de/prompt-bites/best-14b-models-coding",
@@ -46757,7 +46838,7 @@
   {
     "lang": "fr",
     "title": "Meilleur modèle 14B pour le coding ?",
-    "excerpt": "Qwen 3 Coder 14B : 78% HumanEval, 10 Go VRAM. DeepSeek Coder 14B : 75%. StarCoder2 15B : 73%. Réponse rapide de PromptQuorum.",
+    "excerpt": "Qwen2.5-Coder 14B : 78% HumanEval, 10 Go VRAM. DeepSeek-Coder-V2-Lite : 75%. StarCoder2 15B : 73%. Réponse rapide de PromptQuorum.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-02",
     "url": "/fr/prompt-bites/best-14b-models-coding",
@@ -46766,7 +46847,7 @@
   {
     "lang": "ja",
     "title": "コーディングに最適な14Bモデルは？",
-    "excerpt": "Qwen 3 Coder 14B：78% HumanEval、10 GB VRAM。DeepSeek Coder 14B：75%。StarCoder2 15B：73%。PromptQuorum による簡潔な回答。",
+    "excerpt": "Qwen2.5-Coder 14B：78% HumanEval、10 GB VRAM。DeepSeek-Coder-V2-Lite：75%。StarCoder2 15B：73%。PromptQuorum による簡潔な回答。",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-02",
     "url": "/ja/prompt-bites/best-14b-models-coding",
@@ -46775,7 +46856,7 @@
   {
     "lang": "zh",
     "title": "编程最佳14B模型是哪款？",
-    "excerpt": "Qwen3-Coder 14B以78% HumanEval得分领先，12 GB显存运行Q4_K_M量化版。DeepSeek Coder 14B以75%紧随，Python与SQL补全特别出色。StarCoder2 15B评分73%，响应速度最快。三款均支持Ollama本地部署，无需订阅费用。",
+    "excerpt": "Qwen2.5-Coder 14B以78% HumanEval得分领先，12 GB显存运行Q4_K_M量化版。DeepSeek-Coder-V2-Lite以75%紧随，Python与SQL补全特别出色。StarCoder2 15B评分73%，响应速度最快。三款均支持Ollama本地部署，无需订阅费用。",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-02",
     "url": "/zh/prompt-bites/best-14b-models-coding",
@@ -46784,7 +46865,7 @@
   {
     "lang": "es",
     "title": "¿El mejor modelo 14B para coding?",
-    "excerpt": "Qwen 3 Coder 14B: 78% HumanEval, 10 GB VRAM. DeepSeek Coder 14B: 75%. StarCoder2 15B: 73% en 10 GB. Respuesta rápida de PromptQuorum.",
+    "excerpt": "Qwen2.5-Coder 14B: 78% HumanEval, 10 GB VRAM. DeepSeek-Coder-V2-Lite: 75%. StarCoder2 15B: 73% en 10 GB. Respuesta rápida de PromptQuorum.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-02",
     "url": "/es/prompt-bites/best-14b-models-coding",
@@ -46793,7 +46874,7 @@
   {
     "lang": "pt",
     "title": "¿El mejor modelo 14B para coding?",
-    "excerpt": "Qwen 3 Coder 14B: 78% HumanEval, 10 GB VRAM. DeepSeek Coder 14B: 75%. StarCoder2 15B: 73% com 10 GB. Resposta rápida do PromptQuorum.",
+    "excerpt": "Qwen2.5-Coder 14B: 78% HumanEval, 10 GB VRAM. DeepSeek-Coder-V2-Lite: 75%. StarCoder2 15B: 73% com 10 GB. Resposta rápida do PromptQuorum.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-02",
     "url": "/pt/prompt-bites/best-14b-models-coding",
@@ -46802,7 +46883,7 @@
   {
     "lang": "ar",
     "title": "أفضل نموذج ⁨14B⁩ للبرمجة؟",
-    "excerpt": "⁨Qwen 3 Coder 14B⁩ يسجل ⁨78%⁩ على ⁨HumanEval⁩ بـ ⁨10 GB VRAM⁩ عند ⁨Q4⁩_⁨K⁩_⁨M. DeepSeek Coder 14B⁩ يصل إلى ⁨75%. StarCoder2 15B⁩ يحقق ⁨73%⁩ بنفس ⁨VRAM⁩.",
+    "excerpt": "⁨Qwen2.5-Coder 14B⁩ يسجل ⁨78%⁩ على ⁨HumanEval⁩ بـ ⁨10 GB VRAM⁩ عند ⁨Q4⁩_⁨K⁩_⁨M. DeepSeek-Coder-V2-Lite⁩ يصل إلى ⁨75%. StarCoder2 15B⁩ يحقق ⁨73%⁩ بنفس ⁨VRAM⁩.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-20",
     "url": "/ar/prompt-bites/best-14b-models-coding",
@@ -46811,7 +46892,7 @@
   {
     "lang": "ko",
     "title": "코딩에 최적인 14B 모델은 무엇입니까?",
-    "excerpt": "Qwen 3 Coder 14B: HumanEval 78%, VRAM 10 GB. DeepSeek Coder 14B: 75%. StarCoder2 15B: 73%. PromptQuorum의 빠른 답변.",
+    "excerpt": "Qwen2.5-Coder 14B: HumanEval 78%, VRAM 10 GB. DeepSeek-Coder-V2-Lite: 75%. StarCoder2 15B: 73%. PromptQuorum의 빠른 답변.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-12",
     "url": "/ko/prompt-bites/best-14b-models-coding",
@@ -46901,7 +46982,7 @@
   {
     "lang": "en",
     "title": "Best MoE Models for Local Coding?",
-    "excerpt": "Mixtral 8x22B: 26 GB VRAM, 46.7B params. DeepSeek V2: 16 GB VRAM, top coding scores. MoE activates only active parameters. Quick answer from PromptQuorum.",
+    "excerpt": "Mixtral 8x22B: 26 GB VRAM, 46.7B params. DeepSeek-V2: 16 GB VRAM, top coding scores. MoE activates only active parameters. Quick answer from PromptQuorum.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/prompt-bites/best-moe-models-local-coding",
@@ -46910,7 +46991,7 @@
   {
     "lang": "de",
     "title": "Beste MoE-Modelle für lokales Coding?",
-    "excerpt": "Mixtral 8x22B：26 GB VRAM, 46,7B params. DeepSeek V2：16 GB VRAM, bestes Coding. MoE aktiviert nur aktive Parameter. Schnelle Antwort von PromptQuorum.",
+    "excerpt": "Mixtral 8x22B：26 GB VRAM, 46,7B params. DeepSeek-V2：16 GB VRAM, bestes Coding. MoE aktiviert nur aktive Parameter. Schnelle Antwort von PromptQuorum.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/de/prompt-bites/best-moe-models-local-coding",
@@ -46919,7 +47000,7 @@
   {
     "lang": "fr",
     "title": "Meilleurs modèles MoE pour le codage local ?",
-    "excerpt": "Mixtral 8x22B：26 Go VRAM, 46,7B params. DeepSeek V2：16 Go VRAM, coding top. MoE active uniquement paramètres actifs. Réponse rapide de PromptQuorum.",
+    "excerpt": "Mixtral 8x22B：26 Go VRAM, 46,7B params. DeepSeek-V2：16 Go VRAM, coding top. MoE active uniquement paramètres actifs. Réponse rapide de PromptQuorum.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/fr/prompt-bites/best-moe-models-local-coding",
@@ -46928,7 +47009,7 @@
   {
     "lang": "ja",
     "title": "ローカルコーディングに最適な MoE モデルは？",
-    "excerpt": "Mixtral 8x22B：26 GB VRAM、46.7B params。DeepSeek V2：16 GB VRAM、coding 最高。MoE はアクティブなパラメータのみ使用。PromptQuorum による簡潔な回答。",
+    "excerpt": "Mixtral 8x22B：26 GB VRAM、46.7B params。DeepSeek-V2：16 GB VRAM、coding 最高。MoE はアクティブなパラメータのみ使用。PromptQuorum による簡潔な回答。",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/ja/prompt-bites/best-moe-models-local-coding",
@@ -46937,7 +47018,7 @@
   {
     "lang": "zh",
     "title": "本地编程最佳 MoE 模型是什么？",
-    "excerpt": "Mixtral 8x22B：26 GB VRAM、46.7B 参数。DeepSeek V2：16 GB VRAM、编程最佳。MoE 仅激活活跃参数。PromptQuorum 快速解答。",
+    "excerpt": "Mixtral 8x22B：26 GB VRAM、46.7B 参数。DeepSeek-V2：16 GB VRAM、编程最佳。MoE 仅激活活跃参数。PromptQuorum 快速解答。",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/zh/prompt-bites/best-moe-models-local-coding",
@@ -46946,7 +47027,7 @@
   {
     "lang": "es",
     "title": "¿Los mejores modelos MoE para coding local?",
-    "excerpt": "Mixtral 8x22B: 26 GB VRAM, 46,7B parámetros. DeepSeek V2: 16 GB VRAM, top en coding. MoE solo activa los parámetros necesarios. Respuesta rápida.",
+    "excerpt": "Mixtral 8x22B: 26 GB VRAM, 46,7B parámetros. DeepSeek-V2: 16 GB VRAM, top en coding. MoE solo activa los parámetros necesarios. Respuesta rápida.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/es/prompt-bites/best-moe-models-local-coding",
@@ -46955,7 +47036,7 @@
   {
     "lang": "pt",
     "title": "Melhores modelos MoE para programação local?",
-    "excerpt": "Mixtral 8x22B: 26 GB de VRAM, 46,7B parâmetros. DeepSeek V2: 16 GB de VRAM, top em programação. MoE ativa apenas parâmetros ativos. Resposta rápida.",
+    "excerpt": "Mixtral 8x22B: 26 GB de VRAM, 46,7B parâmetros. DeepSeek-V2: 16 GB de VRAM, top em programação. MoE ativa apenas parâmetros ativos. Resposta rápida.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/pt/prompt-bites/best-moe-models-local-coding",
@@ -46964,7 +47045,7 @@
   {
     "lang": "ar",
     "title": "أفضل نماذج ⁨MoE⁩ للبرمجة المحلية؟",
-    "excerpt": "⁨Mixtral 8x22B⁩ يحتاج ⁨26 GB VRAM⁩ لـ⁨46.7B⁩ معامل. ⁨DeepSeek V2⁩ يعمل بـ⁨16 GB VRAM⁩ ويتصدر معايير البرمجة. ⁨MoE⁩ تنشّط المعاملات النشطة فقط.",
+    "excerpt": "⁨Mixtral 8x22B⁩ يحتاج ⁨26 GB VRAM⁩ لـ⁨46.7B⁩ معامل. ⁨DeepSeek-V2⁩ يعمل بـ⁨16 GB VRAM⁩ ويتصدر معايير البرمجة. ⁨MoE⁩ تنشّط المعاملات النشطة فقط.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/ar/prompt-bites/best-moe-models-local-coding",
@@ -46973,7 +47054,7 @@
   {
     "lang": "ko",
     "title": "로컬 코딩을 위한 최적 MoE 모델은?",
-    "excerpt": "Mixtral 8x22B: 26 GB VRAM, 46.7B 파라미터. DeepSeek V2: 16 GB VRAM, 코딩 벤치마크 최고 성능. MoE는 활성 파라미터만 사용합니다. PromptQuorum의 빠른 답변.",
+    "excerpt": "Mixtral 8x22B: 26 GB VRAM, 46.7B 파라미터. DeepSeek-V2: 16 GB VRAM, 코딩 벤치마크 최고 성능. MoE는 활성 파라미터만 사용합니다. PromptQuorum의 빠른 답변.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/ko/prompt-bites/best-moe-models-local-coding",
@@ -46982,7 +47063,7 @@
   {
     "lang": "en",
     "title": "Best Local LLM for Coding with 12 GB VRAM?",
-    "excerpt": "Qwen 3 Coder 14B Q4_K_M: top coding model for 12 GB VRAM at ~10 GB, highest HumanEval. DeepSeek 14B Q4 alternative. Both fit RTX 3060/3080 Ti 12 GB.",
+    "excerpt": "Qwen2.5-Coder 14B Q4_K_M: top coding model for 12 GB VRAM at ~10 GB, highest HumanEval. DeepSeek 14B Q4 alternative. Both fit RTX 3060/3080 Ti 12 GB.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/prompt-bites/best-local-llm-coding-12gb-vram",
@@ -46991,7 +47072,7 @@
   {
     "lang": "de",
     "title": "Bestes lokales LLM für Coding mit 12 GB VRAM?",
-    "excerpt": "Qwen 3 Coder 14B Q4_K_M: bestes Coding-Modell für 12 GB bei ~10 GB, höchster HumanEval-Score. DeepSeek 14B Q4 Alternative. Beide auf RTX 3060/3080 Ti.",
+    "excerpt": "Qwen2.5-Coder 14B Q4_K_M: bestes Coding-Modell für 12 GB bei ~10 GB, höchster HumanEval-Score. DeepSeek 14B Q4 Alternative. Beide auf RTX 3060/3080 Ti.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/de/prompt-bites/best-local-llm-coding-12gb-vram",
@@ -47000,7 +47081,7 @@
   {
     "lang": "fr",
     "title": "Meilleur LLM local pour le coding avec 12 Go de VRAM ?",
-    "excerpt": "Qwen 3 Coder 14B Q4_K_M: meilleur LLM coding pour 12 Go (~10 Go), meilleur HumanEval. DeepSeek 14B Q4 alternative. RTX 3060/3080 Ti 12 Go.",
+    "excerpt": "Qwen2.5-Coder 14B Q4_K_M: meilleur LLM coding pour 12 Go (~10 Go), meilleur HumanEval. DeepSeek 14B Q4 alternative. RTX 3060/3080 Ti 12 Go.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/fr/prompt-bites/best-local-llm-coding-12gb-vram",
@@ -47009,7 +47090,7 @@
   {
     "lang": "ja",
     "title": "12 GB VRAMでコーディングに最適なローカルLLMは？",
-    "excerpt": "Qwen 3 Coder 14B Q4_K_M：12 GB VRAM最高のコーディングLLM、約10 GB使用、HumanEval最高スコア。DeepSeek 14B Q4代替。RTX 3060/3080 Ti対応。",
+    "excerpt": "Qwen2.5-Coder 14B Q4_K_M：12 GB VRAM最高のコーディングLLM、約10 GB使用、HumanEval最高スコア。DeepSeek 14B Q4代替。RTX 3060/3080 Ti対応。",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/ja/prompt-bites/best-local-llm-coding-12gb-vram",
@@ -47018,7 +47099,7 @@
   {
     "lang": "zh",
     "title": "12 GB VRAM 编程最佳本地 LLM 是哪款？",
-    "excerpt": "Qwen 3 Coder 14B Q4_K_M：12 GB VRAM最优编程LLM，约10 GB占用，HumanEval最高分。DeepSeek 14B Q4备选。RTX 3060/3080 Ti 12 GB适配。",
+    "excerpt": "Qwen2.5-Coder 14B Q4_K_M：12 GB VRAM最优编程LLM，约10 GB占用，HumanEval最高分。DeepSeek 14B Q4备选。RTX 3060/3080 Ti 12 GB适配。",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/zh/prompt-bites/best-local-llm-coding-12gb-vram",
@@ -47027,7 +47108,7 @@
   {
     "lang": "es",
     "title": "¿Mejor LLM local para programar con 12 GB de VRAM?",
-    "excerpt": "Qwen 3 Coder 14B Q4_K_M: mejor LLM de programación para 12 GB con ~10 GB y mayor HumanEval. DeepSeek 14B Q4 como alternativa. Para RTX 3060/3080 Ti.",
+    "excerpt": "Qwen2.5-Coder 14B Q4_K_M: mejor LLM de programación para 12 GB con ~10 GB y mayor HumanEval. DeepSeek 14B Q4 como alternativa. Para RTX 3060/3080 Ti.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/es/prompt-bites/best-local-llm-coding-12gb-vram",
@@ -47036,7 +47117,7 @@
   {
     "lang": "pt",
     "title": "Melhor LLM local para programação com 12 GB de VRAM?",
-    "excerpt": "Qwen 3 Coder 14B Q4_K_M: melhor LLM de programação para 12 GB com ~10 GB e maior HumanEval. DeepSeek 14B Q4 como alternativa. Para RTX 3060/3080 Ti.",
+    "excerpt": "Qwen2.5-Coder 14B Q4_K_M: melhor LLM de programação para 12 GB com ~10 GB e maior HumanEval. DeepSeek 14B Q4 como alternativa. Para RTX 3060/3080 Ti.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/pt/prompt-bites/best-local-llm-coding-12gb-vram",
@@ -47045,7 +47126,7 @@
   {
     "lang": "ar",
     "title": "ما أفضل نموذج لغوي كبير محلي للبرمجة بـ⁨12⁩ جيجابايت ⁨VRAM⁩؟",
-    "excerpt": "⁨Qwen 3 Coder 14B Q4⁩_⁨K⁩_⁨M⁩ أفضل نموذج برمجة لـ⁨12 GB VRAM⁩ بـ~⁨10 GB⁩، أعلى ⁨HumanEval. DeepSeek 14B Q4⁩ بديل قوي. كلاهما على ⁨RTX 3060⁩ و⁨RTX 3080 Ti⁩.",
+    "excerpt": "⁨Qwen2.5-Coder 14B Q4⁩_⁨K⁩_⁨M⁩ أفضل نموذج برمجة لـ⁨12 GB VRAM⁩ بـ~⁨10 GB⁩، أعلى ⁨HumanEval. DeepSeek 14B Q4⁩ بديل قوي. كلاهما على ⁨RTX 3060⁩ و⁨RTX 3080 Ti⁩.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/ar/prompt-bites/best-local-llm-coding-12gb-vram",
@@ -47054,7 +47135,7 @@
   {
     "lang": "ko",
     "title": "12 GB VRAM으로 코딩에 최적인 로컬 LLM은?",
-    "excerpt": "Qwen 3 Coder 14B Q4_K_M: 12 GB VRAM 코딩 최고 모델, ~10 GB 사용, HumanEval 최고점. DeepSeek 14B Q4 대안. RTX 3060/3080 Ti 모두 지원.",
+    "excerpt": "Qwen2.5-Coder 14B Q4_K_M: 12 GB VRAM 코딩 최고 모델, ~10 GB 사용, HumanEval 최고점. DeepSeek 14B Q4 대안. RTX 3060/3080 Ti 모두 지원.",
     "publishDate": "2026-05-18",
     "dateModified": "2026-06-21",
     "url": "/ko/prompt-bites/best-local-llm-coding-12gb-vram",
@@ -47774,7 +47855,7 @@
   {
     "lang": "ar",
     "title": "هل يمكن لنموذج ⁨LLM⁩ المحلي المساعدة في الامتثال للائحة ⁨GDPR⁩؟",
-    "excerpt": "نعم — النموذج المحلي يُلغي نقل بيانات المادة ⁨44⁩ من ⁨GDPR. Qwen 3 14B Q4⁩_⁨K⁩_⁨M⁩ عبر ⁨Ollama⁩ يحتاج ⁨12 GB VRAM⁩ ويعالج نصوص ⁨HR⁩ والوثائق القانونية محليًا.",
+    "excerpt": "نعم — النموذج المحلي يُلغي نقل بيانات المادة ⁨44⁩ من ⁨GDPR. Qwen3 14B Q4⁩_⁨K⁩_⁨M⁩ عبر ⁨Ollama⁩ يحتاج ⁨12 GB VRAM⁩ ويعالج نصوص ⁨HR⁩ والوثائق القانونية محليًا.",
     "publishDate": "2026-05-22",
     "dateModified": "2026-09-02",
     "url": "/ar/prompt-bites/can-local-llm-help-gdpr",
@@ -48925,8 +49006,8 @@
   },
   {
     "lang": "en",
-    "title": "Mistral Small 24B vs Qwen 3 14B vs Llama 3.1 8B: Which to Run Locally?",
-    "excerpt": "Llama 3.1 8B: 4.9 GB VRAM. Qwen 3 14B: 9.3 GB, MMLU 74.8%. Mistral Small 24B: 14.4 GB, MMLU 81%. Pick by VRAM tier. Quick answer from PromptQuorum.",
+    "title": "Mistral Small 24B vs Qwen3 14B vs Llama 3.1 8B: Which to Run Locally?",
+    "excerpt": "Llama 3.1 8B: 4.9 GB VRAM. Qwen3 14B: 9.3 GB, MMLU 74.8%. Mistral Small 24B: 14.4 GB, MMLU 81%. Pick by VRAM tier. Quick answer from PromptQuorum.",
     "publishDate": "2026-05-23",
     "dateModified": "2026-06-20",
     "url": "/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b",
@@ -48934,8 +49015,8 @@
   },
   {
     "lang": "de",
-    "title": "Mistral Small 24B vs. Qwen 3 14B vs. Llama 3.1 8B: Welches lokal ausführen?",
-    "excerpt": "Llama 3.1 8B: 4,9 GB VRAM. Qwen 3 14B: 9,3 GB, MMLU 74,8 %. Mistral Small 24B: 14,4 GB, MMLU 81 %. Auswahl nach VRAM-Tier. Schnelle Antwort von PromptQuorum.",
+    "title": "Mistral Small 24B vs. Qwen3 14B vs. Llama 3.1 8B: Welches lokal ausführen?",
+    "excerpt": "Llama 3.1 8B: 4,9 GB VRAM. Qwen3 14B: 9,3 GB, MMLU 74,8 %. Mistral Small 24B: 14,4 GB, MMLU 81 %. Auswahl nach VRAM-Tier. Schnelle Antwort von PromptQuorum.",
     "publishDate": "2026-05-23",
     "dateModified": "2026-06-02",
     "url": "/de/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b",
@@ -48943,8 +49024,8 @@
   },
   {
     "lang": "fr",
-    "title": "Mistral Small 24B vs Qwen 3 14B vs Llama 3.1 8B : lequel lancer en local ?",
-    "excerpt": "Llama 3.1 8B : 4,9 Go VRAM. Qwen 3 14B : 9,3 Go, MMLU 74,8 %. Mistral Small 24B : 14,4 Go, MMLU 81 %. Choisissez selon le tier VRAM. Réponse rapide de PromptQuorum.",
+    "title": "Mistral Small 24B vs Qwen3 14B vs Llama 3.1 8B : lequel lancer en local ?",
+    "excerpt": "Llama 3.1 8B : 4,9 Go VRAM. Qwen3 14B : 9,3 Go, MMLU 74,8 %. Mistral Small 24B : 14,4 Go, MMLU 81 %. Choisissez selon le tier VRAM. Réponse rapide de PromptQuorum.",
     "publishDate": "2026-05-23",
     "dateModified": "2026-06-02",
     "url": "/fr/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b",
@@ -48952,8 +49033,8 @@
   },
   {
     "lang": "ja",
-    "title": "Mistral Small 24B・Qwen 3 14B・Llama 3.1 8B：ローカルでどれを動かすべきか？",
-    "excerpt": "Llama 3.1 8B：4.9 GB VRAM。Qwen 3 14B：9.3 GB、MMLU 74.8%。Mistral Small 24B：14.4 GB、MMLU 81%。VRAMティアで選択。PromptQuorumによる簡潔な回答。",
+    "title": "Mistral Small 24B・Qwen3 14B・Llama 3.1 8B：ローカルでどれを動かすべきか？",
+    "excerpt": "Llama 3.1 8B：4.9 GB VRAM。Qwen3 14B：9.3 GB、MMLU 74.8%。Mistral Small 24B：14.4 GB、MMLU 81%。VRAMティアで選択。PromptQuorumによる簡潔な回答。",
     "publishDate": "2026-05-23",
     "dateModified": "2026-06-02",
     "url": "/ja/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b",
@@ -48961,8 +49042,8 @@
   },
   {
     "lang": "zh",
-    "title": "Mistral Small 24B 对比 Qwen 3 14B 对比 Llama 3.1 8B：本地运行选哪个？",
-    "excerpt": "Llama 3.1 8B：4.9 GB 显存。Qwen 3 14B：9.3 GB、MMLU 74.8%。Mistral Small 24B：14.4 GB、MMLU 81%。按显存层级选择。PromptQuorum 快速解答。",
+    "title": "Mistral Small 24B 对比 Qwen3 14B 对比 Llama 3.1 8B：本地运行选哪个？",
+    "excerpt": "Llama 3.1 8B：4.9 GB 显存。Qwen3 14B：9.3 GB、MMLU 74.8%。Mistral Small 24B：14.4 GB、MMLU 81%。按显存层级选择。PromptQuorum 快速解答。",
     "publishDate": "2026-05-23",
     "dateModified": "2026-06-02",
     "url": "/zh/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b",
@@ -48970,8 +49051,8 @@
   },
   {
     "lang": "es",
-    "title": "Mistral Small 24B vs Qwen 3 14B vs Llama 3.1 8B: ¿cuál ejecutar en local?",
-    "excerpt": "Llama 3.1 8B: 4,9 GB VRAM. Qwen 3 14B: 9,3 GB, MMLU 74,8%. Mistral Small 24B: 14,4 GB, MMLU 81%. Elige según tu nivel de VRAM. Respuesta rápida.",
+    "title": "Mistral Small 24B vs Qwen3 14B vs Llama 3.1 8B: ¿cuál ejecutar en local?",
+    "excerpt": "Llama 3.1 8B: 4,9 GB VRAM. Qwen3 14B: 9,3 GB, MMLU 74,8%. Mistral Small 24B: 14,4 GB, MMLU 81%. Elige según tu nivel de VRAM. Respuesta rápida.",
     "publishDate": "2026-05-23",
     "dateModified": "2026-06-02",
     "url": "/es/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b",
@@ -48979,8 +49060,8 @@
   },
   {
     "lang": "pt",
-    "title": "Mistral Small 24B vs Qwen 3 14B vs Llama 3.1 8B: qual rodar localmente?",
-    "excerpt": "Llama 3.1 8B: 4,9 GB de VRAM. Qwen 3 14B: 9,3 GB, MMLU 74,8%. Mistral Small 24B: 14,4 GB, MMLU 81%. Escolha pelo nível de VRAM. Resposta rápida.",
+    "title": "Mistral Small 24B vs Qwen3 14B vs Llama 3.1 8B: qual rodar localmente?",
+    "excerpt": "Llama 3.1 8B: 4,9 GB de VRAM. Qwen3 14B: 9,3 GB, MMLU 74,8%. Mistral Small 24B: 14,4 GB, MMLU 81%. Escolha pelo nível de VRAM. Resposta rápida.",
     "publishDate": "2026-05-23",
     "dateModified": "2026-06-02",
     "url": "/pt/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b",
@@ -48988,8 +49069,8 @@
   },
   {
     "lang": "ar",
-    "title": "⁨Mistral Small 24B⁩ مقابل ⁨Qwen 3 14B⁩ مقابل ⁨Llama 3.1 8B⁩: أيهما تشغّل محلياً؟",
-    "excerpt": "⁨Llama 3.1 8B⁩: ⁨4.9 GB VRAM⁩ و⁨66.6% MMLU. Qwen 3 14B⁩: ⁨9.3 GB⁩ و⁨74.8% MMLU. Mistral Small 24B⁩: ⁨14.4 GB⁩ و⁨81% MMLU⁩. اختر النموذج بحسب حجم ⁨VRAM⁩ المتاح.",
+    "title": "⁨Mistral Small 24B⁩ مقابل ⁨Qwen3 14B⁩ مقابل ⁨Llama 3.1 8B⁩: أيهما تشغّل محلياً؟",
+    "excerpt": "⁨Llama 3.1 8B⁩: ⁨4.9 GB VRAM⁩ و⁨66.6% MMLU. Qwen3 14B⁩: ⁨9.3 GB⁩ و⁨74.8% MMLU. Mistral Small 24B⁩: ⁨14.4 GB⁩ و⁨81% MMLU⁩. اختر النموذج بحسب حجم ⁨VRAM⁩ المتاح.",
     "publishDate": "2026-05-23",
     "dateModified": "2026-06-20",
     "url": "/ar/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b",
@@ -48997,8 +49078,8 @@
   },
   {
     "lang": "ko",
-    "title": "Mistral Small 24B vs Qwen 3 14B vs Llama 3.1 8B: 로컬에서 무엇을 실행할까?",
-    "excerpt": "Llama 3.1 8B: 4.9 GB VRAM, MMLU 66.6%. Qwen 3 14B: 9.3 GB, MMLU 74.8%. Mistral Small 24B: 14.4 GB, MMLU 81%. VRAM 용량에 따라 최적 모델을 선택하십시오.",
+    "title": "Mistral Small 24B vs Qwen3 14B vs Llama 3.1 8B: 로컬에서 무엇을 실행할까?",
+    "excerpt": "Llama 3.1 8B: 4.9 GB VRAM, MMLU 66.6%. Qwen3 14B: 9.3 GB, MMLU 74.8%. Mistral Small 24B: 14.4 GB, MMLU 81%. VRAM 용량에 따라 최적 모델을 선택하십시오.",
     "publishDate": "2026-05-23",
     "dateModified": "2026-06-12",
     "url": "/ko/prompt-bites/mistral-small-24b-vs-qwen-14b-vs-llama-8b",
@@ -49088,7 +49169,7 @@
   {
     "lang": "en",
     "title": "Best Qwen Model for Coding?",
-    "excerpt": "Qwen3-Coder 32B leads at 24 GB VRAM with 91.5% HumanEval. At 8 GB, 7B hits 79.7%. 14B is the sweet spot at 12 GB. Size guide for every tier.",
+    "excerpt": "Qwen2.5-Coder 32B leads at 24 GB VRAM with 91.5% HumanEval. At 8 GB, 7B hits 79.7%. 14B is the sweet spot at 12 GB. Size guide for every tier.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-06-20",
     "url": "/prompt-bites/best-qwen-model-for-coding",
@@ -49097,7 +49178,7 @@
   {
     "lang": "de",
     "title": "Bestes Qwen-Modell für Coding?",
-    "excerpt": "Qwen3-Coder 32B führt mit 24 GB VRAM (91,5 % HumanEval). Bei 8 GB: 7B mit 79,7 %. 14B ist der Sweet Spot bei 12 GB. Größenleitfaden für jede Tier.",
+    "excerpt": "Qwen2.5-Coder 32B führt mit 24 GB VRAM (91,5 % HumanEval). Bei 8 GB: 7B mit 79,7 %. 14B ist der Sweet Spot bei 12 GB. Größenleitfaden für jede Tier.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-06-20",
     "url": "/de/prompt-bites/best-qwen-model-for-coding",
@@ -49106,7 +49187,7 @@
   {
     "lang": "fr",
     "title": "Meilleur modèle Qwen pour le codage ?",
-    "excerpt": "Qwen3-Coder 32B en tête à 24 Go VRAM (91,5 % HumanEval). À 8 Go : 7B atteint 79,7 %. Le 14B est le sweet spot à 12 Go. Guide par niveau de VRAM.",
+    "excerpt": "Qwen2.5-Coder 32B en tête à 24 Go VRAM (91,5 % HumanEval). À 8 Go : 7B atteint 79,7 %. Le 14B est le sweet spot à 12 Go. Guide par niveau de VRAM.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-06-20",
     "url": "/fr/prompt-bites/best-qwen-model-for-coding",
@@ -49115,7 +49196,7 @@
   {
     "lang": "ja",
     "title": "コーディング向け最適Qwenモデルは？",
-    "excerpt": "Qwen3-Coder 32Bが24 GB VRAMで最高（HumanEval 91.5%）。8 GBなら7B（79.7%）。12 GBのスイートスポットは14B。VRAMティア別サイズガイド。",
+    "excerpt": "Qwen2.5-Coder 32Bが24 GB VRAMで最高（HumanEval 91.5%）。8 GBなら7B（79.7%）。12 GBのスイートスポットは14B。VRAMティア別サイズガイド。",
     "publishDate": "2026-05-26",
     "dateModified": "2026-06-20",
     "url": "/ja/prompt-bites/best-qwen-model-for-coding",
@@ -49124,7 +49205,7 @@
   {
     "lang": "zh",
     "title": "编程最佳Qwen模型是哪个？",
-    "excerpt": "Qwen3-Coder 32B在24 GB显存下以91.5% HumanEval得分领先；14B是12 GB显存速度与精度最均衡的选择；7B在8 GB显存下得79.7%，适合低显存设备。三款均支持Ollama本地运行，按显存预算精准匹配，无需订阅费用。",
+    "excerpt": "Qwen2.5-Coder 32B在24 GB显存下以91.5% HumanEval得分领先；14B是12 GB显存速度与精度最均衡的选择；7B在8 GB显存下得79.7%，适合低显存设备。三款均支持Ollama本地运行，按显存预算精准匹配，无需订阅费用。",
     "publishDate": "2026-05-26",
     "dateModified": "2026-06-20",
     "url": "/zh/prompt-bites/best-qwen-model-for-coding",
@@ -49133,7 +49214,7 @@
   {
     "lang": "es",
     "title": "¿Cuál es el mejor modelo Qwen para programar?",
-    "excerpt": "Qwen3-Coder 32B lidera con 24 GB de VRAM (HumanEval 91,5%). Con 8 GB el 7B logra 79,7%. El 14B es el punto óptimo a 12 GB. Guía de tamaños por hardware.",
+    "excerpt": "Qwen2.5-Coder 32B lidera con 24 GB de VRAM (HumanEval 91,5%). Con 8 GB el 7B logra 79,7%. El 14B es el punto óptimo a 12 GB. Guía de tamaños por hardware.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-06-20",
     "url": "/es/prompt-bites/best-qwen-model-for-coding",
@@ -49142,7 +49223,7 @@
   {
     "lang": "pt",
     "title": "Qual é o melhor modelo Qwen para programar?",
-    "excerpt": "Qwen3-Coder 32B lidera com 24 GB de VRAM (HumanEval 91,5%). Com 8 GB o 7B alcança 79,7%. O 14B é o ponto ideal para a maioria dos desenvolvedores em 12 GB. Guia por hardware.",
+    "excerpt": "Qwen2.5-Coder 32B lidera com 24 GB de VRAM (HumanEval 91,5%). Com 8 GB o 7B alcança 79,7%. O 14B é o ponto ideal para a maioria dos desenvolvedores em 12 GB. Guia por hardware.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-06-20",
     "url": "/pt/prompt-bites/best-qwen-model-for-coding",
@@ -49151,7 +49232,7 @@
   {
     "lang": "ar",
     "title": "ما هو أفضل نموذج ⁨Qwen⁩ للبرمجة؟",
-    "excerpt": "⁨Qwen3-Coder 32B⁩ يحقق ⁨91.5% HumanEval⁩ بـ⁨24 GB VRAM. 14B⁩ النقطة المثلى بـ⁨9.5 GB⁩ (⁨88.0%⁩). ⁨7B⁩ يعمل بـ⁨5.5 GB⁩ على ⁨RTX 3060⁩ بـ⁨8⁩–⁨15⁩ رمز/ثانية.",
+    "excerpt": "⁨Qwen2.5-Coder 32B⁩ يحقق ⁨91.5% HumanEval⁩ بـ⁨24 GB VRAM. 14B⁩ النقطة المثلى بـ⁨9.5 GB⁩ (⁨88.0%⁩). ⁨7B⁩ يعمل بـ⁨5.5 GB⁩ على ⁨RTX 3060⁩ بـ⁨8⁩–⁨15⁩ رمز/ثانية.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-06-20",
     "url": "/ar/prompt-bites/best-qwen-model-for-coding",
@@ -49160,7 +49241,7 @@
   {
     "lang": "ko",
     "title": "코딩에 가장 적합한 Qwen 모델은 무엇입니까?",
-    "excerpt": "Qwen3-Coder 32B는 24 GB VRAM에서 HumanEval 91.5%로 최고 성능입니다. 8 GB에서는 7B가 79.7%를 달성합니다. 14B는 12 GB에서 최적의 균형을 제공합니다.",
+    "excerpt": "Qwen2.5-Coder 32B는 24 GB VRAM에서 HumanEval 91.5%로 최고 성능입니다. 8 GB에서는 7B가 79.7%를 달성합니다. 14B는 12 GB에서 최적의 균형을 제공합니다.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-06-20",
     "url": "/ko/prompt-bites/best-qwen-model-for-coding",
@@ -49168,8 +49249,8 @@
   },
   {
     "lang": "en",
-    "title": "DeepSeek V3 Local Hardware Requirements?",
-    "excerpt": "DeepSeek V3 is 671B MoE — impractical on consumer hardware. Q4_K_M needs ~400 GB RAM. Practical alternatives at every VRAM tier with exact numbers.",
+    "title": "DeepSeek-V3 Local Hardware Requirements?",
+    "excerpt": "DeepSeek-V3 is 671B MoE — impractical on consumer hardware. Q4_K_M needs ~400 GB RAM. Practical alternatives at every VRAM tier with exact numbers.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-06-20",
     "url": "/prompt-bites/deepseek-v3-local-hardware-requirements",
@@ -49177,8 +49258,8 @@
   },
   {
     "lang": "de",
-    "title": "DeepSeek V3 lokale Hardware-Anforderungen?",
-    "excerpt": "DeepSeek V3 ist ein 671B-MoE-Modell — nicht machbar auf Consumer-Hardware. Q4_K_M benötigt ~400 GB RAM. Praktische Alternativen mit genauen Zahlen.",
+    "title": "DeepSeek-V3 lokale Hardware-Anforderungen?",
+    "excerpt": "DeepSeek-V3 ist ein 671B-MoE-Modell — nicht machbar auf Consumer-Hardware. Q4_K_M benötigt ~400 GB RAM. Praktische Alternativen mit genauen Zahlen.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-06-20",
     "url": "/de/prompt-bites/deepseek-v3-local-hardware-requirements",
@@ -49186,8 +49267,8 @@
   },
   {
     "lang": "fr",
-    "title": "Prérequis matériels pour DeepSeek V3 en local ?",
-    "excerpt": "DeepSeek V3 est un modèle MoE de 671B — impraticable sur matériel grand public. Q4_K_M nécessite ~400 Go RAM. Alternatives pratiques à chaque niveau.",
+    "title": "Prérequis matériels pour DeepSeek-V3 en local ?",
+    "excerpt": "DeepSeek-V3 est un modèle MoE de 671B — impraticable sur matériel grand public. Q4_K_M nécessite ~400 Go RAM. Alternatives pratiques à chaque niveau.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-06-20",
     "url": "/fr/prompt-bites/deepseek-v3-local-hardware-requirements",
@@ -49213,8 +49294,8 @@
   },
   {
     "lang": "es",
-    "title": "¿Cuáles son los requisitos de hardware para ejecutar DeepSeek V3 en local?",
-    "excerpt": "DeepSeek V3 es un MoE de 671B, inviable en hardware de consumo: Q4_K_M necesita ~400 GB de RAM. Alternativas prácticas con cifras exactas por nivel de VRAM.",
+    "title": "¿Cuáles son los requisitos de hardware para ejecutar DeepSeek-V3 en local?",
+    "excerpt": "DeepSeek-V3 es un MoE de 671B, inviable en hardware de consumo: Q4_K_M necesita ~400 GB de RAM. Alternativas prácticas con cifras exactas por nivel de VRAM.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-06-20",
     "url": "/es/prompt-bites/deepseek-v3-local-hardware-requirements",
@@ -49222,8 +49303,8 @@
   },
   {
     "lang": "pt",
-    "title": "Quais são os requisitos de hardware para rodar o DeepSeek V3 localmente?",
-    "excerpt": "DeepSeek V3 é um MoE de 671B, inviável em hardware de consumo: Q4_K_M precisa de ~400 GB de RAM. Alternativas práticas com números exatos por nível de VRAM.",
+    "title": "Quais são os requisitos de hardware para rodar o DeepSeek-V3 localmente?",
+    "excerpt": "DeepSeek-V3 é um MoE de 671B, inviável em hardware de consumo: Q4_K_M precisa de ~400 GB de RAM. Alternativas práticas com números exatos por nível de VRAM.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-06-20",
     "url": "/pt/prompt-bites/deepseek-v3-local-hardware-requirements",
@@ -49231,8 +49312,8 @@
   },
   {
     "lang": "ar",
-    "title": "ما هي متطلبات الأجهزة لتشغيل ⁨DeepSeek V3⁩ محلياً؟",
-    "excerpt": "⁨DeepSeek V3⁩ (⁨671B MoE⁩) يستلزم حوالي ⁨400 GB RAM⁩ بتكميم ⁨Q4⁩_⁨K⁩_⁨M⁩ — مستحيل على أجهزة المستهلكين. بدائل عملية بأرقام ⁨VRAM⁩ دقيقة لكل مستوى.",
+    "title": "ما هي متطلبات الأجهزة لتشغيل ⁨DeepSeek-V3⁩ محلياً؟",
+    "excerpt": "⁨DeepSeek-V3⁩ (⁨671B MoE⁩) يستلزم حوالي ⁨400 GB RAM⁩ بتكميم ⁨Q4⁩_⁨K⁩_⁨M⁩ — مستحيل على أجهزة المستهلكين. بدائل عملية بأرقام ⁨VRAM⁩ دقيقة لكل مستوى.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-06-20",
     "url": "/ar/prompt-bites/deepseek-v3-local-hardware-requirements",
@@ -49241,7 +49322,7 @@
   {
     "lang": "ko",
     "title": "DeepSeek V3를 로컬에서 실행하려면 어떤 하드웨어가 필요합니까?",
-    "excerpt": "DeepSeek V3 (671B MoE)는 Q4_K_M 양자화 기준 약 400 GB RAM이 필요합니다. 소비자용 하드웨어에서는 실행 불가합니다. VRAM 수준별 증류 모델 대안을 정확한 수치로 안내합니다.",
+    "excerpt": "DeepSeek-V3 (671B MoE)는 Q4_K_M 양자화 기준 약 400 GB RAM이 필요합니다. 소비자용 하드웨어에서는 실행 불가합니다. VRAM 수준별 증류 모델 대안을 정확한 수치로 안내합니다.",
     "publishDate": "2026-05-26",
     "dateModified": "2026-06-20",
     "url": "/ko/prompt-bites/deepseek-v3-local-hardware-requirements",

@@ -82,7 +82,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 289,
+    "totalCount": 290,
     "capped": true
   },
   "llama.cpp": {
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "hilbertraum-review",
+        "title": "HilbertRaum Review 2026: A Portable, Offline AI Workspace for Chat and Your Own Documents",
+        "url": "/power-local-llm/hilbertraum-review",
+        "dateModified": "2026-09-25",
         "tier": "about"
       },
       {
@@ -158,17 +166,9 @@
         "url": "/power-local-llm/parlor-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "rapid-mlx-review",
-        "title": "Rapid-MLX Review: Native MLX Inference Server for Apple Silicon",
-        "url": "/power-local-llm/rapid-mlx-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 152,
+    "totalCount": 153,
     "capped": true
   },
   "vLLM": {
@@ -1064,7 +1064,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 40,
+    "totalCount": 41,
     "capped": true
   },
   "GPT4All": {
@@ -1075,6 +1075,14 @@
         "title": "GPT4All Review 2026: Free Offline AI Chat App by Nomic AI",
         "url": "/power-local-llm/gpt4all-review",
         "dateModified": "2026-09-07",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "hilbertraum-review",
+        "title": "HilbertRaum Review 2026: A Portable, Offline AI Workspace for Chat and Your Own Documents",
+        "url": "/power-local-llm/hilbertraum-review",
+        "dateModified": "2026-09-25",
         "tier": "about"
       },
       {
@@ -1140,17 +1148,9 @@
         "url": "/power-local-llm/bodega-one-code-review-2026",
         "dateModified": "2026-09-03",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "easiest-local-ai-app-windows-mac-linux",
-        "title": "Easiest Local AI App for Windows, Mac, and Linux (2026)",
-        "url": "/power-local-llm/easiest-local-ai-app-windows-mac-linux",
-        "dateModified": "2026-09-01",
-        "tier": "about"
       }
     ],
-    "totalCount": 25,
+    "totalCount": 26,
     "capped": true
   },
   "AnythingLLM": {
@@ -1236,7 +1236,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 32,
+    "totalCount": 33,
     "capped": true
   },
   "Msty": {
@@ -1660,9 +1660,17 @@
         "url": "/power-local-llm/local-llm-images-video-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "hilbertraum-review",
+        "title": "HilbertRaum Review 2026: A Portable, Offline AI Workspace for Chat and Your Own Documents",
+        "url": "/power-local-llm/hilbertraum-review",
+        "dateModified": "2026-09-25",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
     "capped": false
   },
   "BoltAI": {
@@ -1787,6 +1795,28 @@
         "title": "Hanoki Review: Branching AI Chat App for Mac (2026)",
         "url": "/power-local-llm/hanoki-review",
         "dateModified": "2026-09-04",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-llm-chat-assistants-compared",
+        "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
+        "url": "/power-local-llm/local-llm-chat-assistants-compared",
+        "dateModified": "2026-09-20",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 2,
+    "capped": false
+  },
+  "HilbertRaum": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "hilbertraum-review",
+        "title": "HilbertRaum Review 2026: A Portable, Offline AI Workspace for Chat and Your Own Documents",
+        "url": "/power-local-llm/hilbertraum-review",
+        "dateModified": "2026-09-25",
         "tier": "about"
       },
       {
@@ -3227,14 +3257,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "local-llm-code-development-compared",
-        "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
-        "url": "/power-local-llm/local-llm-code-development-compared",
-        "dateModified": "2026-09-21",
+        "slug": "hilbertraum-review",
+        "title": "HilbertRaum Review 2026: A Portable, Offline AI Workspace for Chat and Your Own Documents",
+        "url": "/power-local-llm/hilbertraum-review",
+        "dateModified": "2026-09-25",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 32,
+    "totalCount": 33,
     "capped": true
   },
   "ShellGPT": {
@@ -4891,6 +4921,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "hilbertraum-review",
+        "title": "HilbertRaum Review 2026: A Portable, Offline AI Workspace for Chat and Your Own Documents",
+        "url": "/power-local-llm/hilbertraum-review",
+        "dateModified": "2026-09-25",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
@@ -4952,17 +4990,9 @@
         "url": "/power-local-llm/faster-whisper-review",
         "dateModified": "2026-09-05",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "voice-assistant-local-mobile-offline",
-        "title": "Build a Local Voice Assistant on Your Phone: Whisper + Local LLM (No Cloud) — 2026",
-        "url": "/power-local-llm/voice-assistant-local-mobile-offline",
-        "dateModified": "2026-08-29",
-        "tier": "about"
       }
     ],
-    "totalCount": 22,
+    "totalCount": 23,
     "capped": true
   },
   "faster-whisper": {
@@ -10295,6 +10325,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "hilbertraum-review",
+        "title": "HilbertRaum Review 2026: A Portable, Offline AI Workspace for Chat and Your Own Documents",
+        "url": "/power-local-llm/hilbertraum-review",
+        "dateModified": "2026-09-25",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "radiant-canvas",
         "title": "Radiant Canvas Review (2026): Local AI Image Generation for Mac",
         "url": "/power-local-llm/radiant-canvas",
@@ -10356,17 +10394,9 @@
         "url": "/power-local-llm/local-llm-voice-audio-compared",
         "dateModified": "2026-09-20",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "nanobot-review",
-        "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
-        "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-09-20",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 182,
+    "totalCount": 183,
     "capped": true
   },
   "Qdrant": {
