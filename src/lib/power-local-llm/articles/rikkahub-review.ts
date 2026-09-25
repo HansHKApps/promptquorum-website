@@ -43,7 +43,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'android ai chat client multiple providers',
       'connect ollama to android app',
     ],
-    current_models_mentioned: ['OpenAI GPT models', 'Google Gemini', 'Anthropic Claude'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**RikkaHub does not run AI models on your phone — it is a free, open-source (AGPL-3.0) Android client that connects to cloud AI providers using your own API keys, and can optionally connect to a self-hosted Ollama or LM Studio server over your own network.** Built primarily by developer re-ovo and hosted on [GitHub](https://github.com/rikkahub/rikkahub) (over 7,400 stars at review time), it supports any OpenAI, Google, or Anthropic-compatible API endpoint through a single custom API/URL/model configuration screen. The app is entirely free to download and use; the only ongoing cost is whatever the AI provider you connect it to charges for API usage.',
@@ -507,7 +507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'android ki chat app mehrere anbieter',
       'ollama mit android app verbinden',
     ],
-    current_models_mentioned: ['OpenAI GPT-Modelle', 'Google Gemini', 'Anthropic Claude'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**RikkaHub führt keine KI-Modelle auf Ihrem Smartphone aus — es ist ein kostenloser, quelloffener (AGPL-3.0) Android-Client, der sich mit Cloud-KI-Anbietern über Ihre eigenen API-Schlüssel verbindet und optional auch mit einem selbst gehosteten Ollama- oder LM-Studio-Server im eigenen Netzwerk kommunizieren kann.** Entwickelt hauptsächlich vom Entwickler re-ovo und gehostet auf [GitHub](https://github.com/rikkahub/rikkahub) (über 7.400 Sterne zum Testzeitpunkt), unterstützt es jeden OpenAI-, Google- oder Anthropic-kompatiblen API-Endpunkt über einen einzigen Konfigurationsbildschirm für benutzerdefinierte API/URL/Modell-Einstellungen. Die App selbst ist komplett kostenlos; die einzigen laufenden Kosten entstehen durch den KI-Anbieter, mit dem Sie sie verbinden.',
@@ -971,7 +971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app android chat ia varios proveedores',
       'conectar ollama a app android',
     ],
-    current_models_mentioned: ['modelos GPT de OpenAI', 'Google Gemini', 'Anthropic Claude'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**RikkaHub no ejecuta modelos de IA en tu teléfono — es un cliente Android gratuito y de código abierto (AGPL-3.0) que se conecta a proveedores de IA en la nube usando tus propias claves API, y que opcionalmente puede conectarse a un servidor Ollama o LM Studio autoalojado en tu propia red.** Desarrollado principalmente por re-ovo y alojado en [GitHub](https://github.com/rikkahub/rikkahub) (más de 7.400 estrellas al momento de esta reseña), admite cualquier endpoint compatible con las API de OpenAI, Google o Anthropic mediante una única pantalla de configuración de API/URL/modelo personalizada. La app es completamente gratuita; el único costo continuo es lo que cobre el proveedor de IA al que la conectes.',
@@ -1435,7 +1435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app android chat ia plusieurs fournisseurs',
       'connecter ollama a une app android',
     ],
-    current_models_mentioned: ['modèles GPT d\'OpenAI', 'Google Gemini', 'Anthropic Claude'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**RikkaHub n\'exécute aucun modèle d\'IA sur votre téléphone — c\'est un client Android gratuit et open source (AGPL-3.0) qui se connecte à des fournisseurs d\'IA cloud via vos propres clés API, et qui peut en option se connecter à un serveur Ollama ou LM Studio auto-hébergé sur votre propre réseau.** Développé principalement par re-ovo et hébergé sur [GitHub](https://github.com/rikkahub/rikkahub) (plus de 7 400 étoiles au moment du test), il prend en charge tout endpoint compatible avec les API OpenAI, Google ou Anthropic via un seul écran de configuration API/URL/modèle personnalisé. L\'application est entièrement gratuite ; le seul coût récurrent est celui facturé par le fournisseur d\'IA auquel vous la connectez.',
@@ -1899,7 +1899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'android ai チャット 複数プロバイダー',
       'ollama を android アプリに接続',
     ],
-    current_models_mentioned: ['OpenAI GPTモデル', 'Google Gemini', 'Anthropic Claude'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**RikkaHubはスマートフォン上でAIモデルを実行しません — 自分のAPIキーを使ってクラウドAIプロバイダーに接続する無料オープンソース(AGPL-3.0)のAndroidクライアントであり、オプションで自宅ネットワーク上のセルフホストOllamaやLM Studioサーバーにも接続できます。**主にデベロッパーre-ovoによって開発され、[GitHub](https://github.com/rikkahub/rikkahub)でホストされています(レビュー時点で7,400以上のスター)。単一のカスタムAPI/URL/モデル設定画面から、OpenAI・Google・Anthropic互換のあらゆるAPIエンドポイントに対応します。アプリ自体は完全無料で、継続的にかかる費用は接続先のAIプロバイダーが請求する分だけです。',
@@ -2364,7 +2364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app android chat ia vários provedores',
       'conectar ollama a app android',
     ],
-    current_models_mentioned: ['modelos GPT da OpenAI', 'Google Gemini', 'Anthropic Claude'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**O RikkaHub não executa modelos de IA no seu celular — é um cliente Android gratuito e de código aberto (AGPL-3.0) que se conecta a provedores de IA na nuvem usando suas próprias chaves de API, e que opcionalmente pode se conectar a um servidor Ollama ou LM Studio auto-hospedado na sua própria rede.** Desenvolvido principalmente por re-ovo e hospedado no [GitHub](https://github.com/rikkahub/rikkahub) (mais de 7.400 estrelas no momento desta análise), ele suporta qualquer endpoint compatível com as APIs da OpenAI, Google ou Anthropic por meio de uma única tela de configuração personalizada de API/URL/modelo. O app é totalmente gratuito; o único custo contínuo é o que o provedor de IA ao qual você o conecta cobrar.',
@@ -2828,7 +2828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تطبيق أندرويد محادثة ذكاء اصطناعي عدة مزودين',
       'ربط ollama بتطبيق أندرويد',
     ],
-    current_models_mentioned: ['نماذج GPT من OpenAI', 'Google Gemini', 'Anthropic Claude'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**لا يشغّل RikkaHub نماذج الذكاء الاصطناعي على هاتفك — فهو عميل أندرويد مجاني ومفتوح المصدر (AGPL-3.0) يتصل بمزودي الذكاء الاصطناعي السحابي باستخدام مفاتيح API الخاصة بك، ويمكنه اختيارياً الاتصال بخادم Ollama أو LM Studio مستضاف ذاتياً على شبكتك الخاصة.** طوّره بشكل أساسي re-ovo وهو مستضاف على [GitHub](https://github.com/rikkahub/rikkahub) (أكثر من 7,400 نجمة وقت هذه المراجعة)، ويدعم أي نقطة نهاية متوافقة مع واجهات OpenAI أو Google أو Anthropic عبر شاشة إعداد واحدة مخصصة لـ API/URL/النموذج. التطبيق مجاني بالكامل؛ والتكلفة المستمرة الوحيدة هي ما يفرضه مزود الذكاء الاصطناعي الذي تتصل به.',
@@ -3292,7 +3292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'android ai 聊天 多个提供商',
       '将ollama连接到android应用',
     ],
-    current_models_mentioned: ['OpenAI GPT系列模型', 'Google Gemini', 'Anthropic Claude'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**RikkaHub并不在你的手机上运行AI模型——它是一款免费开源(AGPL-3.0)的Android客户端,使用你自己的API密钥连接云端AI提供商,也可以选择连接你自己网络上自托管的Ollama或LM Studio服务器。**项目主要由re-ovo开发,托管在[GitHub](https://github.com/rikkahub/rikkahub)上(评测时已有超过7,400颗星标),通过一个自定义API/URL/模型配置界面,支持任何兼容OpenAI、Google或Anthropic接口的端点。应用本身完全免费;唯一的持续成本是你所连接的AI提供商收取的费用。',
@@ -3757,7 +3757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'android ai 채팅 여러 프로바이더',
       'ollama를 android 앱에 연결',
     ],
-    current_models_mentioned: ['OpenAI GPT 모델', 'Google Gemini', 'Anthropic Claude'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**RikkaHub는 스마트폰에서 AI 모델을 실행하지 않습니다 — 자신의 API 키로 클라우드 AI 프로바이더에 연결하는 무료 오픈소스(AGPL-3.0) Android 클라이언트이며, 선택적으로 자체 네트워크에 셀프 호스팅한 Ollama나 LM Studio 서버에도 연결할 수 있습니다.** 주로 개발자 re-ovo가 개발했으며 [GitHub](https://github.com/rikkahub/rikkahub)에서 호스팅됩니다(리뷰 시점 기준 7,400개 이상의 스타). 하나의 커스텀 API/URL/모델 설정 화면을 통해 OpenAI, Google, Anthropic 호환 엔드포인트를 모두 지원합니다. 앱 자체는 완전히 무료이며, 지속적으로 발생하는 비용은 연결한 AI 프로바이더가 청구하는 비용뿐입니다.',
