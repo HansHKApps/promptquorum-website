@@ -19766,81 +19766,81 @@
   {
     "lang": "en",
     "title": "What Running a Local LLM Costs in Electricity — and Can Balcony Solar Offset It? (2026)",
-    "excerpt": "Local LLM electricity cost calculated: RTX 4090/3090/4070 and Mac Mini M4 power draw, US ($0.184/kWh) and Germany (~€0.32/kWh) monthly cost, and whether an 800W balcony solar system can offset it.",
+    "excerpt": "Local LLM electricity cost calculated: RTX 4090/3090/4070 and Mac mini M6 power draw, US ($0.184/kWh) and Germany (~€0.32/kWh) monthly cost, and whether an 800W balcony solar system can offset it.",
     "publishDate": "2026-09-01",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/power-local-llm/local-llm-electricity-cost-balcony-solar",
     "cluster": "power-local-llm"
   },
   {
     "lang": "de",
     "title": "Was ein lokales LLM an Strom kostet — und ob ein Balkonkraftwerk das ausgleichen kann (2026)",
-    "excerpt": "Stromkosten für lokale LLMs berechnet: RTX 4090/3090/4070 und Mac Mini M4 Verbrauch, US- (0,184 $/kWh) und deutsche (~0,32 €/kWh) Monatskosten, und ob ein 800-W-Balkonkraftwerk das ausgleichen kann.",
+    "excerpt": "Stromkosten für lokale LLMs berechnet: RTX 4090/3090/4070 und Mac mini M6 Verbrauch, US- (0,184 $/kWh) und deutsche (~0,32 €/kWh) Monatskosten, und ob ein 800-W-Balkonkraftwerk das ausgleichen kann.",
     "publishDate": "2026-09-01",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/de/power-local-llm/local-llm-electricity-cost-balcony-solar",
     "cluster": "power-local-llm"
   },
   {
     "lang": "fr",
     "title": "Ce que coûte un LLM local en électricité — et si le solaire de balcon peut compenser (2026)",
-    "excerpt": "Coût électrique d'un LLM local calculé : consommation RTX 4090/3090/4070 et Mac Mini M4, coût mensuel aux États-Unis (0,184 $/kWh) et en Allemagne (~0,32 €/kWh), et si un solaire de balcon 800 W peut compenser.",
+    "excerpt": "Coût électrique d'un LLM local calculé : consommation RTX 4090/3090/4070 et Mac mini M6, coût mensuel aux États-Unis (0,184 $/kWh) et en Allemagne (~0,32 €/kWh), et si un solaire de balcon 800 W peut compenser.",
     "publishDate": "2026-09-01",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/fr/power-local-llm/local-llm-electricity-cost-balcony-solar",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ja",
     "title": "ローカルLLMの電気代はいくらか — ベランダ太陽光で相殺できるか（2026年）",
-    "excerpt": "ローカルLLMの電気代を計算: RTX 4090/3090/4070とMac Mini M4の消費電力、米国（$0.184/kWh）とドイツ（約€0.32/kWh）の月額コスト、800Wベランダ太陽光で相殺できるか。",
+    "excerpt": "ローカルLLMの電気代を計算: RTX 4090/3090/4070とMac mini M6の消費電力、米国（$0.184/kWh）とドイツ（約€0.32/kWh）の月額コスト、800Wベランダ太陽光で相殺できるか。",
     "publishDate": "2026-09-01",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/ja/power-local-llm/local-llm-electricity-cost-balcony-solar",
     "cluster": "power-local-llm"
   },
   {
     "lang": "zh",
     "title": "运行本地LLM的电费是多少——阳台光伏能否抵消（2026版）",
-    "excerpt": "本地LLM电费计算:RTX 4090/3090/4070和Mac Mini M4的功耗、美国($0.184/kWh)和德国(约€0.32/kWh)的月度电费,以及800W阳台光伏系统能否抵消这笔费用。",
+    "excerpt": "本地LLM电费计算:RTX 4090/3090/4070和Mac mini M6的功耗、美国($0.184/kWh)和德国(约€0.32/kWh)的月度电费,以及800W阳台光伏系统能否抵消这笔费用。",
     "publishDate": "2026-09-01",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/zh/power-local-llm/local-llm-electricity-cost-balcony-solar",
     "cluster": "power-local-llm"
   },
   {
     "lang": "es",
     "title": "Cuánto cuesta en electricidad un LLM local — y si el solar de balcón puede compensarlo (2026)",
-    "excerpt": "Coste eléctrico de un LLM local calculado: consumo de RTX 4090/3090/4070 y Mac Mini M4, coste mensual en EE. UU. (0,184 $/kWh) y Alemania (~0,32 €/kWh), y si un solar de balcón de 800 W puede compensarlo.",
+    "excerpt": "Coste eléctrico de un LLM local calculado: consumo de RTX 4090/3090/4070 y Mac mini M6, coste mensual en EE. UU. (0,184 $/kWh) y Alemania (~0,32 €/kWh), y si un solar de balcón de 800 W puede compensarlo.",
     "publishDate": "2026-09-01",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/es/power-local-llm/local-llm-electricity-cost-balcony-solar",
     "cluster": "power-local-llm"
   },
   {
     "lang": "pt",
     "title": "Quanto custa em energia rodar um LLM local — e a energia solar de varanda consegue compensar (2026)",
-    "excerpt": "Custo de energia de um LLM local calculado: consumo de RTX 4090/3090/4070 e Mac Mini M4, custo mensal nos EUA ($0,184/kWh) e na Alemanha (~€0,32/kWh), e se um solar de varanda de 800 W consegue compensar.",
+    "excerpt": "Custo de energia de um LLM local calculado: consumo de RTX 4090/3090/4070 e Mac mini M6, custo mensal nos EUA ($0,184/kWh) e na Alemanha (~€0,32/kWh), e se um solar de varanda de 800 W consegue compensar.",
     "publishDate": "2026-09-01",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/pt/power-local-llm/local-llm-electricity-cost-balcony-solar",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ar",
     "title": "كم تكلف الكهرباء لتشغيل LLM محلي — وهل تستطيع الطاقة الشمسية للشرفة تعويض ذلك (2026)",
-    "excerpt": "تكلفة كهرباء LLM المحلي محسوبة: استهلاك RTX 4090/3090/4070 وMac Mini M4، والتكلفة الشهرية في الولايات المتحدة ($0.184/kWh) وألمانيا (~0.32 يورو/kWh)، وهل يستطيع نظام شمسي للشرفة بقدرة 800 واط تعويض ذلك.",
+    "excerpt": "تكلفة كهرباء LLM المحلي محسوبة: استهلاك RTX 4090/3090/4070 وMac mini M6، والتكلفة الشهرية في الولايات المتحدة ($0.184/kWh) وألمانيا (~0.32 يورو/kWh)، وهل يستطيع نظام شمسي للشرفة بقدرة 800 واط تعويض ذلك.",
     "publishDate": "2026-09-01",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/ar/power-local-llm/local-llm-electricity-cost-balcony-solar",
     "cluster": "power-local-llm"
   },
   {
     "lang": "ko",
     "title": "로컬 LLM의 전기 요금은 얼마이며, 발코니 태양광으로 상쇄할 수 있을까 (2026)",
-    "excerpt": "로컬 LLM 전기 요금 계산: RTX 4090/3090/4070과 Mac Mini M4의 전력 소비, 미국($0.184/kWh)과 독일(약 €0.32/kWh)의 월 비용, 800W 발코니 태양광 시스템으로 상쇄할 수 있는지 여부.",
+    "excerpt": "로컬 LLM 전기 요금 계산: RTX 4090/3090/4070과 Mac mini M6의 전력 소비, 미국($0.184/kWh)과 독일(약 €0.32/kWh)의 월 비용, 800W 발코니 태양광 시스템으로 상쇄할 수 있는지 여부.",
     "publishDate": "2026-09-01",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/ko/power-local-llm/local-llm-electricity-cost-balcony-solar",
     "cluster": "power-local-llm"
   },
@@ -24223,7 +24223,7 @@
     "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
     "excerpt": "M5 Ultra vs RTX 5090: M5 Ultra hits ~45 tok/s on Llama 3.3 70B (96GB, $5,499); RTX 5090's 32GB can't load 70B. M5 Max benchmarks, cost, power. 2026.",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-09-25",
     "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -24232,7 +24232,7 @@
     "title": "Apple MLX vs NVIDIA CUDA für lokale LLMs: Welches System wählen in 2026?",
     "excerpt": "M5 Ultra vs RTX 5090: M5 Ultra erreicht ~45 Tok/s bei Llama 3.3 70B (96GB, 5.499 $); RTX 5090 (32GB) kann 70B nicht laden. Plus M5 Max, Kosten, Stromverbrauch 2026.",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-09-25",
     "url": "/de/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -24241,7 +24241,7 @@
     "title": "Apple MLX vs NVIDIA CUDA pour LLMs locaux : Quel système choisir en 2026 ?",
     "excerpt": "M5 Ultra vs RTX 5090 : le M5 Ultra atteint ~45 tok/s sur Llama 3.3 70B (96Go, 5 499 $) ; les 32Go du RTX 5090 ne peuvent pas charger 70B. Plus M5 Max, coût, conso 2026.",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-09-25",
     "url": "/fr/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -24250,7 +24250,7 @@
     "title": "Apple MLX vs NVIDIA CUDA ローカルLLM比較：2026年どちらを選ぶべきか？",
     "excerpt": "M5 Ultra vs RTX 5090：M5 UltraはLlama 3.3 70Bで約45 tok/s（96GB、5,499ドル）。RTX 5090の32GBでは70Bを読み込めない。M5 Max・コスト・消費電力も比較 2026年。",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-09-25",
     "url": "/ja/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -24259,7 +24259,7 @@
     "title": "Apple MLX vs NVIDIA CUDA 本地LLM对比：2026年该选哪个系统？",
     "excerpt": "M5 Ultra vs RTX 5090：M5 Ultra在Llama 3.3 70B上约45 tok/s（96GB，5,499美元）；RTX 5090的32GB无法加载70B模型。另含M5 Max、成本与功耗对比2026。",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-09-25",
     "url": "/zh/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -24268,7 +24268,7 @@
     "title": "Apple MLX vs NVIDIA CUDA para LLMs locales: ¿Qué sistema elegir en 2026?",
     "excerpt": "M5 Ultra vs RTX 5090: el M5 Ultra alcanza ~45 tok/s en Llama 3.3 70B (96GB, $5,499); los 32GB del RTX 5090 no pueden cargar 70B. Además M5 Max, costo y consumo 2026.",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-09-25",
     "url": "/es/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -24277,7 +24277,7 @@
     "title": "Apple MLX vs NVIDIA CUDA para LLMs locais: qual sistema escolher em 2026?",
     "excerpt": "M5 Ultra vs RTX 5090: o M5 Ultra atinge ~45 tok/s no Llama 3.3 70B (96GB, US$ 5.499); os 32GB da RTX 5090 não carregam 70B. Mais M5 Max, custo e consumo 2026.",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-09-25",
     "url": "/pt/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -24286,7 +24286,7 @@
     "title": "⁨Apple MLX⁩ مقابل ⁨NVIDIA CUDA⁩ لنماذج اللغة الكبيرة المحلية: أيهما تختار في ⁨2026⁩؟",
     "excerpt": "⁨M5 Ultra⁩ مقابل ⁨RTX 5090⁩: يصل ⁨M5 Ultra⁩ إلى ⁨~45 tok/s⁩ على ⁨Llama 3.3 70B⁩ (⁨96GB⁩، ⁨5,499$⁩)؛ ذاكرة ⁨RTX 5090⁩ البالغة ⁨32GB⁩ لا تحمّل ⁨70B⁩. بالإضافة إلى ⁨M5 Max⁩ والتكلفة والطاقة ⁨2026⁩.",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-09-25",
     "url": "/ar/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -24295,7 +24295,7 @@
     "title": "Apple MLX vs NVIDIA CUDA 로컬 LLM: 2026년에 어떤 시스템을 선택해야 합니까?",
     "excerpt": "M5 Ultra vs RTX 5090: M5 Ultra는 Llama 3.3 70B에서 약 45 tok/s (96GB, $5,499); RTX 5090의 32GB로는 70B를 로드할 수 없음. M5 Max·비용·전력 비교도 포함 2026.",
     "publishDate": "2026-05-24",
-    "dateModified": "2026-08-29",
+    "dateModified": "2026-09-25",
     "url": "/ko/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
     "cluster": "power-local-llm"
   },
@@ -25195,7 +25195,7 @@
     "title": "WeChat + Local LLM Integration: Developer Guide 2026",
     "excerpt": "Connect WeChat to a local LLM in 2026. Three patterns: WeChatFerry, HTTP webhook, mini PC Ollama server. Qwen3 8B for Chinese. No cloud API.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/power-local-llm/wechat-local-llm-integration-2026",
     "cluster": "power-local-llm"
   },
@@ -25204,7 +25204,7 @@
     "title": "WeChat + Lokales LLM: Entwicklerleitfaden 2026",
     "excerpt": "WeChat mit lokalem LLM verbinden 2026: WeChatFerry (Windows), HTTP-Webhook-Brücke, Mini-PC-Ollama-Server. Qwen3 8B für Chinesisch. Keine Cloud-API.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/de/power-local-llm/wechat-local-llm-integration-2026",
     "cluster": "power-local-llm"
   },
@@ -25213,7 +25213,7 @@
     "title": "WeChat + LLM local : Guide développeur 2026",
     "excerpt": "Connecter WeChat à un LLM local en 2026 : WeChatFerry (Windows), pont HTTP webhook, serveur mini PC Ollama. Qwen3 8B pour le chinois. Sans API cloud.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/fr/power-local-llm/wechat-local-llm-integration-2026",
     "cluster": "power-local-llm"
   },
@@ -25222,7 +25222,7 @@
     "title": "WeChat + ローカルLLM統合：開発者ガイド 2026",
     "excerpt": "2026年版WeChat統合ガイド：WeChatFerry（Windows）、HTTPウェブフック、ミニPCサーバーの3パターンを詳解。中国語チャットはQwen3 8B推奨。クラウドAPI不要で会話データを完全ローカル保持。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/ja/power-local-llm/wechat-local-llm-integration-2026",
     "cluster": "power-local-llm"
   },
@@ -25231,7 +25231,7 @@
     "title": "微信 + 本地LLM集成：开发者指南 2026",
     "excerpt": "2026年微信接入本地大模型三种路线：WeChatFerry钩子自动回复、HTTP Webhook桥接、迷你主机Ollama服务器。中文对话推荐Qwen3 8B Q4_K_M，符合《数据安全法》，数据不离开本地设备。",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/zh/power-local-llm/wechat-local-llm-integration-2026",
     "cluster": "power-local-llm"
   },
@@ -25240,7 +25240,7 @@
     "title": "WeChat + LLM local: Guía para desarrolladores 2026",
     "excerpt": "Conecta WeChat a un LLM local en 2026. Tres patrones: WeChatFerry, HTTP webhook, servidor Ollama en mini PC. Qwen3 8B para chino. Sin API en la nube.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/es/power-local-llm/wechat-local-llm-integration-2026",
     "cluster": "power-local-llm"
   },
@@ -25249,7 +25249,7 @@
     "title": "WeChat + LLM local: Guia para desenvolvedores 2026",
     "excerpt": "Conecte o WeChat a um LLM local em 2026. Três padrões: WeChatFerry, HTTP webhook, servidor Ollama em mini PC. Qwen3 8B para chinês. Sem API de nuvem.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/pt/power-local-llm/wechat-local-llm-integration-2026",
     "cluster": "power-local-llm"
   },
@@ -25258,7 +25258,7 @@
     "title": "⁨WeChat⁩ + نموذج لغة محلي: دليل المطور ⁨2026⁩",
     "excerpt": "3 أنماط لربط WeChat بنموذج LLM محلي: WeChatFerry على Windows، جسر HTTP webhook، وخادم Ollama على mini PC. Qwen3 8B موصى به للمحادثات بالصينية.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/ar/power-local-llm/wechat-local-llm-integration-2026",
     "cluster": "power-local-llm"
   },
@@ -25267,7 +25267,7 @@
     "title": "WeChat + 로컬 LLM: 개발자 가이드 2026",
     "excerpt": "2026년 WeChat을 로컬 LLM에 연결하기. 세 가지 패턴: WeChatFerry, HTTP webhook, 미니 PC Ollama 서버. 중국어에는 Qwen3 8B. 클라우드 API 없음.",
     "publishDate": "2026-05-26",
-    "dateModified": "2026-09-01",
+    "dateModified": "2026-09-25",
     "url": "/ko/power-local-llm/wechat-local-llm-integration-2026",
     "cluster": "power-local-llm"
   },
@@ -32971,7 +32971,7 @@
     "title": "exo Review: Distributed AI Inference Across Multiple Devices",
     "excerpt": "exo is a free, open-source (Apache-2.0) framework that pools multiple Apple Silicon Macs, or Linux CPUs, into one AI inference cluster via automatic device discovery and MLX-based model sharding.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-09-25",
     "url": "/power-local-llm/exo-review",
     "cluster": "power-local-llm"
   },
@@ -32980,7 +32980,7 @@
     "title": "exo Review: Verteilte KI-Inferenz über mehrere Geräte",
     "excerpt": "exo ist ein kostenloses, quelloffenes (Apache-2.0) Framework, das mehrere Apple-Silicon-Macs oder Linux-CPUs per automatischer Geräteerkennung und MLX-basiertem Model-Sharding zu einem KI-Cluster bündelt.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-09-25",
     "url": "/de/power-local-llm/exo-review",
     "cluster": "power-local-llm"
   },
@@ -32989,7 +32989,7 @@
     "title": "exo Review : inférence IA distribuée sur plusieurs appareils",
     "excerpt": "exo est un framework gratuit et open source (Apache-2.0) qui regroupe plusieurs Mac Apple Silicon ou CPU Linux en un cluster d'inférence IA via découverte automatique des appareils et sharding basé sur MLX.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-09-25",
     "url": "/fr/power-local-llm/exo-review",
     "cluster": "power-local-llm"
   },
@@ -32998,7 +32998,7 @@
     "title": "exoレビュー:複数デバイスにまたがる分散AI推論",
     "excerpt": "exoは無料のオープンソース(Apache-2.0)フレームワークで、自動デバイス検出とMLXベースのモデルシャーディングにより、複数のApple SiliconのMacやLinux CPUを1つのAIクラスターに束ねます。",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-09-25",
     "url": "/ja/power-local-llm/exo-review",
     "cluster": "power-local-llm"
   },
@@ -33007,7 +33007,7 @@
     "title": "exo评测:跨多设备的分布式AI推理",
     "excerpt": "exo是一个免费开源(Apache-2.0)框架,通过自动设备发现和基于MLX的模型分片,将多台Apple Silicon Mac或Linux CPU汇集为一个AI推理集群。",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-09-25",
     "url": "/zh/power-local-llm/exo-review",
     "cluster": "power-local-llm"
   },
@@ -33016,7 +33016,7 @@
     "title": "exo Review: inferencia de IA distribuida en múltiples dispositivos",
     "excerpt": "exo es un framework gratuito y de código abierto (Apache-2.0) que agrupa varios Mac Apple Silicon o CPU Linux en un clúster de IA mediante descubrimiento automático de dispositivos y sharding basado en MLX.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-09-25",
     "url": "/es/power-local-llm/exo-review",
     "cluster": "power-local-llm"
   },
@@ -33025,7 +33025,7 @@
     "title": "exo Review: inferência de IA distribuída em vários dispositivos",
     "excerpt": "exo é um framework gratuito e de código aberto (Apache-2.0) que reúne vários Mac Apple Silicon ou CPUs Linux em um cluster de IA via descoberta automática de dispositivos e sharding baseado em MLX.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-09-25",
     "url": "/pt/power-local-llm/exo-review",
     "cluster": "power-local-llm"
   },
@@ -33034,7 +33034,7 @@
     "title": "مراجعة exo: استدلال ذكاء اصطناعي موزّع عبر عدة أجهزة",
     "excerpt": "exo إطار عمل مجاني ومفتوح المصدر (Apache-2.0) يجمّع عدة أجهزة Mac بمعالج Apple Silicon أو معالجات لينكس في عنقود ذكاء اصطناعي واحد عبر الاكتشاف التلقائي للأجهزة وتقسيم النماذج القائم على MLX.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-09-25",
     "url": "/ar/power-local-llm/exo-review",
     "cluster": "power-local-llm"
   },
@@ -33043,7 +33043,7 @@
     "title": "exo 리뷰: 여러 기기에 걸친 분산 AI 추론",
     "excerpt": "exo는 자동 기기 검색과 MLX 기반 모델 샤딩을 통해 여러 대의 Apple Silicon Mac이나 Linux CPU를 하나의 AI 클러스터로 묶는 무료 오픈소스(Apache-2.0) 프레임워크입니다.",
     "publishDate": "2026-09-12",
-    "dateModified": "2026-09-12",
+    "dateModified": "2026-09-25",
     "url": "/ko/power-local-llm/exo-review",
     "cluster": "power-local-llm"
   },
@@ -51520,7 +51520,7 @@
     "title": "Apple M4 Max vs M4 Pro: Which Is Better for Local LLMs?",
     "excerpt": "M4 Max beats M4 Pro for local LLMs: more memory bandwidth (546 vs 273 GB/s), higher unified memory ceiling (128GB vs 48GB) — faster tokens/sec.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-09-25",
     "url": "/prompt-bites/m4-max-vs-m4-pro-local-llm",
     "cluster": "prompt-bites"
   },
@@ -51529,7 +51529,7 @@
     "title": "Apple M4 Max vs. M4 Pro: Was ist besser für lokale LLMs?",
     "excerpt": "M4 Max schlägt M4 Pro bei lokalen LLMs: mehr Speicherbandbreite (546 vs. 273 GB/s), höhere Unified-Memory-Grenze (128GB vs. 48GB) — schnellere Tokens/Sek.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-09-25",
     "url": "/de/prompt-bites/m4-max-vs-m4-pro-local-llm",
     "cluster": "prompt-bites"
   },
@@ -51538,7 +51538,7 @@
     "title": "Apple M4 Max vs M4 Pro : lequel est le meilleur pour les LLM locaux ?",
     "excerpt": "Le M4 Max surpasse le M4 Pro pour les LLM locaux en bande passante (546 Go/s vs 273 Go/s) et plafond mémoire (128 Go vs 48 Go) — plus rapide partout.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-09-25",
     "url": "/fr/prompt-bites/m4-max-vs-m4-pro-local-llm",
     "cluster": "prompt-bites"
   },
@@ -51547,7 +51547,7 @@
     "title": "Apple M4 Max vs M4 Pro: ローカルLLMに良いのはどちら?",
     "excerpt": "M4 Maxはメモリ帯域幅(最大546GB/s対273GB/s)と統合メモリ上限(最大128GB対48GB)でM4 Proを上回ります — あらゆるモデルサイズでトークン毎秒が高速。",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-09-25",
     "url": "/ja/prompt-bites/m4-max-vs-m4-pro-local-llm",
     "cluster": "prompt-bites"
   },
@@ -51556,7 +51556,7 @@
     "title": "Apple M4 Max 对比 M4 Pro：哪个更适合本地 LLM？",
     "excerpt": "M4 Max 在本地 LLM 上胜过 M4 Pro，得益于显存带宽（最高 546 GB/s 对比 273 GB/s）和统一内存上限（最高 128GB 对比 48GB）——在各种模型规模下每秒 token 数都更快。",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-09-25",
     "url": "/zh/prompt-bites/m4-max-vs-m4-pro-local-llm",
     "cluster": "prompt-bites"
   },
@@ -51565,7 +51565,7 @@
     "title": "Apple M4 Max vs M4 Pro: ¿Cuál es Mejor para LLMs Locales?",
     "excerpt": "El M4 Max supera al M4 Pro en LLMs locales: más ancho de banda (546 vs 273 GB/s), mayor techo de memoria unificada (128GB vs 48GB) — más tokens/seg.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-09-25",
     "url": "/es/prompt-bites/m4-max-vs-m4-pro-local-llm",
     "cluster": "prompt-bites"
   },
@@ -51574,7 +51574,7 @@
     "title": "Apple M4 Max vs M4 Pro: Qual É Melhor para LLMs Locais?",
     "excerpt": "O M4 Max supera o M4 Pro para LLMs locais: mais banda (546 vs 273 GB/s), maior teto de memória unificada (128GB vs 48GB) — tokens/s mais rápidos.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-09-25",
     "url": "/pt/prompt-bites/m4-max-vs-m4-pro-local-llm",
     "cluster": "prompt-bites"
   },
@@ -51583,7 +51583,7 @@
     "title": "Apple M4 Max مقابل M4 Pro: أيهما أفضل لتشغيل LLM محليًا؟",
     "excerpt": "يتفوق M4 Max على M4 Pro لتشغيل LLM محليًا في عرض نطاق الذاكرة (حتى 546 GB/s مقابل 273 GB/s) وسقف الذاكرة الموحدة (حتى 128GB مقابل 48GB) — أداء أسرع في كل حجم نموذج.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-09-25",
     "url": "/ar/prompt-bites/m4-max-vs-m4-pro-local-llm",
     "cluster": "prompt-bites"
   },
@@ -51592,7 +51592,7 @@
     "title": "Apple M4 Max 대 M4 Pro: 로컬 LLM에 어느 것이 더 나은가?",
     "excerpt": "M4 Max는 메모리 대역폭(546GB/s 대 273GB/s)과 통합 메모리 한계(128GB 대 48GB)에서 M4 Pro를 능가, 모든 모델 크기에서 토큰 속도가 더 빠릅니다.",
     "publishDate": "2026-07-14",
-    "dateModified": "2026-08-26",
+    "dateModified": "2026-09-25",
     "url": "/ko/prompt-bites/m4-max-vs-m4-pro-local-llm",
     "cluster": "prompt-bites"
   },

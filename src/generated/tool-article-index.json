@@ -11,9 +11,33 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
+        "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
+        "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
+        "dateModified": "2026-09-25",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "atlarix-review",
         "title": "Atlarix Review: A Free, Local-First AI Coding Agent",
         "url": "/power-local-llm/atlarix-review",
+        "dateModified": "2026-09-25",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "exo-review",
+        "title": "exo Review: Distributed AI Inference Across Multiple Devices",
+        "url": "/power-local-llm/exo-review",
+        "dateModified": "2026-09-25",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "wechat-local-llm-integration-2026",
+        "title": "WeChat + Local LLM Integration: Developer Guide 2026",
+        "url": "/power-local-llm/wechat-local-llm-integration-2026",
         "dateModified": "2026-09-25",
         "tier": "about"
       },
@@ -56,30 +80,6 @@
         "url": "/power-local-llm/koboldcpp-review",
         "dateModified": "2026-09-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llama-cpp-explained",
-        "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
-        "url": "/power-local-llm/llama-cpp-explained",
-        "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-chat-assistants-compared",
-        "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-        "url": "/power-local-llm/local-llm-chat-assistants-compared",
-        "dateModified": "2026-09-20",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-images-video-compared",
-        "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
-        "url": "/power-local-llm/local-llm-images-video-compared",
-        "dateModified": "2026-09-20",
-        "tier": "about"
       }
     ],
     "totalCount": 291,
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "exo-review",
+        "title": "exo Review: Distributed AI Inference Across Multiple Devices",
+        "url": "/power-local-llm/exo-review",
+        "dateModified": "2026-09-25",
         "tier": "about"
       },
       {
@@ -156,14 +164,6 @@
         "slug": "mlxcel-review",
         "title": "mlxcel Review: Rust-Native MLX Inference Runtime",
         "url": "/power-local-llm/mlxcel-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "parlor-review",
-        "title": "Parlor Review: On-Device Real-Time Voice and Vision AI",
-        "url": "/power-local-llm/parlor-review",
         "dateModified": "2026-09-19",
         "tier": "about"
       }
@@ -403,6 +403,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
+        "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
+        "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
+        "dateModified": "2026-09-25",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
@@ -415,14 +423,6 @@
         "title": "LMDeploy Review: High-Throughput LLM Serving and Quantization",
         "url": "/power-local-llm/lmdeploy-review",
         "dateModified": "2026-09-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "vla-models-robots-local-inference",
-        "title": "Running LLMs and VLA Models On-Robot 2026: What Fits, What Doesn't",
-        "url": "/power-local-llm/vla-models-robots-local-inference",
-        "dateModified": "2026-09-02",
         "tier": "mentioned"
       }
     ],
@@ -823,6 +823,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
+        "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
+        "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
+        "dateModified": "2026-09-25",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "claude-code-local-review",
         "title": "claude-code-local Review 2026: Run Claude Code on a Local Model",
         "url": "/power-local-llm/claude-code-local-review",
@@ -835,14 +843,6 @@
         "title": "SwiftLM Review: Native Swift MLX Inference Server for Apple Silicon",
         "url": "/power-local-llm/swiftlm-review",
         "dateModified": "2026-09-19",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "mlx-vs-ollama-vs-llama-cpp-mac",
-        "title": "MLX vs Ollama vs llama.cpp on Mac 2026: Which Framework for Apple Silicon LLMs?",
-        "url": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
-        "dateModified": "2026-08-29",
         "tier": "mentioned"
       }
     ],
@@ -8336,7 +8336,7 @@
         "slug": "exo-review",
         "title": "exo Review: Distributed AI Inference Across Multiple Devices",
         "url": "/power-local-llm/exo-review",
-        "dateModified": "2026-09-12",
+        "dateModified": "2026-09-25",
         "tier": "about"
       },
       {
@@ -8398,7 +8398,7 @@
         "slug": "exo-review",
         "title": "exo Review: Distributed AI Inference Across Multiple Devices",
         "url": "/power-local-llm/exo-review",
-        "dateModified": "2026-09-12",
+        "dateModified": "2026-09-25",
         "tier": "mentioned"
       }
     ],
@@ -10355,6 +10355,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "exo-review",
+        "title": "exo Review: Distributed AI Inference Across Multiple Devices",
+        "url": "/power-local-llm/exo-review",
+        "dateModified": "2026-09-25",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "hilbertraum-review",
         "title": "HilbertRaum Review 2026: A Portable, Offline AI Workspace for Chat and Your Own Documents",
         "url": "/power-local-llm/hilbertraum-review",
@@ -10406,14 +10414,6 @@
         "slug": "local-llm-knowledge-retrieval-compared",
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
-        "dateModified": "2026-09-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
         "dateModified": "2026-09-20",
         "tier": "mentioned"
       }

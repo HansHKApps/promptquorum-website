@@ -14,8 +14,8 @@
   <text x="48" y="200" font-size="12" fill="#1C1B1F">✓ MLX-, Metal- und Core-ML-Integration</text>
   <text x="48" y="224" font-size="12" fill="#1C1B1F">✓ Geringere Stromkosten über 3 Jahre</text>
   <line x1="48" y1="240" x2="348" y2="240" stroke="#F7F2FA" stroke-width="1"/>
-  <text x="48" y="264" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#6750A4">$3,499</text>
-  <text x="48" y="284" font-size="11" fill="#49454F">70B Q4/Q5 — konkurriert mit PC-Builds ab 4.500 $</text>
+  <text x="48" y="264" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#6750A4">$4,499</text>
+  <text x="48" y="284" font-size="11" fill="#49454F">70B Q4/Q5 — konkurriert mit PC-Builds ab 6.000 $</text>
 
   <!-- Right: PC Workstation RTX 5090 -->
   <rect x="432" y="52" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#7D5260" stroke-width="2"/>

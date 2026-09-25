@@ -5,7 +5,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-25',
     next_refresh_due: '2027-03-01',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-en.webp',
@@ -187,14 +187,14 @@ while True:
         content: [
           'A dedicated always-on mini PC keeps your WeChat bot live without tying up a laptop or workstation.',
           '**Minisforum UM890 Pro (Recommended):** AMD Ryzen 9 8945HS, 32–64 GB DDR5, AMD Radeon 780M iGPU. Runs Qwen3 8B at ~8 tok/s via ROCm on Linux. Power draw: ~35 W idle, ~65 W under inference. Price: ~$350–$450.',
-          '**Mac Mini M4:** Apple Silicon M4, 16–32 GB unified memory, ~18 tok/s on 7B models via MLX. Power draw: ~20 W idle. Quietest option. Price: ~$599.',
+          '**Mac Mini M6:** Apple Silicon M6, 16–32 GB unified memory, not yet independently benchmarked. Power draw: under 5W idle. Quietest option. Price: from $899.',
           '**Setup tip:** Enable auto-start — add `ollama serve` and your WeChatFerry bridge script to systemd (Linux) or Windows Task Scheduler. The bot then recovers automatically after power cycles.',
         ],
         comparisonTable: {
           columns: ['Device', 'RAM', 'Speed (7B)', 'Power', 'Price (USD)'],
           rows: [
             { 'Device': 'Minisforum UM890 Pro', 'RAM': '32–64 GB', 'Speed (7B)': '~8 tok/s', 'Power': '35–65 W', 'Price (USD)': '$350–$450' },
-            { 'Device': 'Mac Mini M4',          'RAM': '16–32 GB', 'Speed (7B)': '~18 tok/s','Power': '20–40 W', 'Price (USD)': '$599+' },
+            { 'Device': 'Mac Mini M6',          'RAM': '16–32 GB', 'Speed (7B)': 'Not yet benchmarked','Power': 'Under 5W idle', 'Price (USD)': '$899+' },
             { 'Device': 'Beelink SER8',         'RAM': '32 GB',    'Speed (7B)': '~8 tok/s', 'Power': '30–55 W', 'Price (USD)': '$280–$330' },
           ],
         },
@@ -267,7 +267,7 @@ while True:
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-09-01',
+      dateModified: '2026-09-25',
       about: [
         { '@type': 'Thing', name: 'WeChat API Integration' },
         { '@type': 'Thing', name: 'Local LLM Deployment' },
@@ -349,7 +349,7 @@ while True:
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-25',
     next_refresh_due: '2027-03-01',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-de.webp',
@@ -473,14 +473,14 @@ while True:
         content: [
           'Ein dedizierter Always-on-Mini-PC hält den WeChat-Bot rund um die Uhr aktiv, ohne einen Laptop oder eine Workstation zu belegen.',
           '**Minisforum UM890 Pro (Empfohlen):** AMD Ryzen 9 8945HS, 32–64 GB DDR5. Qwen3 8B mit ~8 tok/s unter ROCm auf Linux. Stromverbrauch: ~35 W idle. Preis: ca. 320–420 €.',
-          '**Mac Mini M4:** Apple Silicon M4, 16–32 GB unified memory, ~18 tok/s via MLX. Stromverbrauch: ~20 W idle. Leiseste Option. Preis: ab 599 €.',
+          '**Mac Mini M6:** Apple Silicon M6, 16–32 GB unified memory, noch nicht unabhängig getestet. Stromverbrauch: unter 5 W im Leerlauf. Leiseste Option. Preis: ab 1.049 €.',
           '**Auto-Start:** `ollama serve` und WeChatFerry-Bridge-Skript in systemd (Linux) oder Windows Task-Planer einbinden.',
         ],
         comparisonTable: {
           columns: ['Gerät', 'RAM', 'Geschwindigkeit (7B)', 'Verbrauch', 'Preis'],
           rows: [
             { 'Gerät': 'Minisforum UM890 Pro', 'RAM': '32–64 GB', 'Geschwindigkeit (7B)': '~8 tok/s',  'Verbrauch': '35–65 W', 'Preis': '320–420 €' },
-            { 'Gerät': 'Mac Mini M4',          'RAM': '16–32 GB', 'Geschwindigkeit (7B)': '~18 tok/s', 'Verbrauch': '20–40 W', 'Preis': 'ab 599 €' },
+            { 'Gerät': 'Mac Mini M6',          'RAM': '16–32 GB', 'Geschwindigkeit (7B)': 'Noch nicht getestet', 'Verbrauch': 'Unter 5 W Leerlauf', 'Preis': 'ab 1.049 €' },
             { 'Gerät': 'Beelink SER8',         'RAM': '32 GB',    'Geschwindigkeit (7B)': '~8 tok/s',  'Verbrauch': '30–55 W', 'Preis': '260–310 €' },
           ],
         },
@@ -552,7 +552,7 @@ while True:
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-09-01',
+      dateModified: '2026-09-25',
       about: [{ '@type': 'Thing', name: 'WeChat LLM Integration' }],
       mentions: [{ '@type': 'SoftwareApplication', name: 'WeChatFerry' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -625,7 +625,7 @@ while True:
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-25',
     next_refresh_due: '2027-03-01',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-fr.webp',
@@ -740,14 +740,14 @@ while True:
         content: [
           'Un mini PC dédié et toujours allumé maintient votre bot WeChat en ligne sans mobiliser un laptop ou une station de travail.',
           '**Minisforum UM890 Pro (Recommandé) :** AMD Ryzen 9 8945HS, 32–64 Go DDR5. ~8 tok/s sur Qwen3 8B. Consommation : ~35 W en veille. Prix : environ 320–420 €.',
-          '**Mac Mini M4 :** Apple Silicon M4, 16–32 Go RAM unifiée, ~18 tok/s. Consommation : ~20 W. Prix : à partir de 599 €.',
+          '**Mac Mini M6 :** Apple Silicon M6, 16–32 Go RAM unifiée, pas encore testé indépendamment. Consommation : moins de 5 W au repos. Prix : à partir de 1 049 €.',
           '**Astuce :** activez le démarrage automatique — ajoutez `ollama serve` et le script de pont WeChatFerry à systemd (Linux) ou au Planificateur de tâches Windows. Le bot redémarre ainsi seul après une coupure de courant.',
         ],
         comparisonTable: {
           columns: ['Appareil', 'RAM', 'Vitesse (7B)', 'Consommation', 'Prix'],
           rows: [
             { 'Appareil': 'Minisforum UM890 Pro', 'RAM': '32–64 Go', 'Vitesse (7B)': '~8 tok/s',  'Consommation': '35–65 W', 'Prix': '320–420 €' },
-            { 'Appareil': 'Mac Mini M4',          'RAM': '16–32 Go', 'Vitesse (7B)': '~18 tok/s', 'Consommation': '20–40 W', 'Prix': 'à partir de 599 €' },
+            { 'Appareil': 'Mac Mini M6',          'RAM': '16–32 Go', 'Vitesse (7B)': 'Pas encore testé', 'Consommation': 'Moins de 5 W au repos', 'Prix': 'à partir de 1 049 €' },
             { 'Appareil': 'Beelink SER8',         'RAM': '32 Go',    'Vitesse (7B)': '~8 tok/s',  'Consommation': '30–55 W', 'Prix': '260–310 €' },
           ],
         },
@@ -818,7 +818,7 @@ while True:
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-09-01',
+      dateModified: '2026-09-25',
       about: [{ '@type': 'Thing', name: 'Intégration WeChat LLM' }],
       mentions: [{ '@type': 'SoftwareApplication', name: 'WeChatFerry' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -891,7 +891,7 @@ while True:
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-25',
     next_refresh_due: '2027-03-01',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-ja.webp',
@@ -1009,14 +1009,14 @@ while True:
         content: [
           '常時稼働の専用ミニPCがあれば、ノートPCやワークステーションを占有せずにWeChatボットを稼働し続けられます。',
           '**Minisforum UM890 Pro（推奨）：** AMD Ryzen 9 8945HS、32–64 GB DDR5。Qwen3 8Bで~8 tok/s。消費電力：~35 W。価格：約4.5〜6万円。',
-          '**Mac Mini M4：** Apple Silicon M4、16–32 GBユニファイドメモリ、~18 tok/s（MLX経由）。消費電力：~20 W。価格：約9万円〜。',
+          '**Mac Mini M6：** Apple Silicon M6、16–32 GBユニファイドメモリ、本本未ベンチマーク。消費電力：アイドル時 5W未満。価格：¥149,800〜。',
           '**自動起動：** systemd（Linux）またはWindowsタスクスケジューラーで`ollama serve`とWeChatFerryブリッジを自動起動。',
         ],
         comparisonTable: {
           columns: ['デバイス', 'RAM', '速度 (7B)', '消費電力', '価格'],
           rows: [
             { 'デバイス': 'Minisforum UM890 Pro', 'RAM': '32–64 GB', '速度 (7B)': '~8 tok/s',  '消費電力': '35–65 W', '価格': '4.5〜6万円' },
-            { 'デバイス': 'Mac Mini M4',          'RAM': '16–32 GB', '速度 (7B)': '~18 tok/s', '消費電力': '20–40 W', '価格': '約9万円〜' },
+            { 'デバイス': 'Mac Mini M6',          'RAM': '16–32 GB', '速度 (7B)': '未検証', '消費電力': 'アイドル時 5W未満', '価格': '¥149,800〜' },
             { 'デバイス': 'Beelink SER8',         'RAM': '32 GB',    '速度 (7B)': '~8 tok/s',  '消費電力': '30–55 W', '価格': '約4.2〜5万円' },
           ],
         },
@@ -1087,7 +1087,7 @@ while True:
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-09-01',
+      dateModified: '2026-09-25',
       about: [{ '@type': 'Thing', name: 'WeChat LLM統合' }],
       mentions: [{ '@type': 'SoftwareApplication', name: 'WeChatFerry' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
@@ -1160,7 +1160,7 @@ while True:
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-25',
     next_refresh_due: '2027-03-01',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-zh.webp',
@@ -1279,14 +1279,14 @@ while True:
         title: '迷你主机作为微信LLM常驻服务器',
         content: [
           '**铭凡UM890 Pro（推荐）：** AMD Ryzen 9 8945HS，32–64 GB DDR5。Linux ROCm下Qwen3 8B约8 tok/s。功耗：~35 W待机。价格：约2500–3200元。',
-          '**Mac Mini M4：** Apple Silicon M4，16–32 GB统一内存，MLX下~18 tok/s。功耗：~20 W待机。价格：约4399元起。',
+          '**Mac Mini M6：** Apple Silicon M6，16–32 GB统一内存，尚未独立测试。功耗：待机低于5W。价格：$899起。',
           '**自动启动：** 将`ollama serve`和WeChatFerry桥接脚本添加到systemd（Linux）或Windows任务计划程序，断电后自动恢复。',
         ],
         comparisonTable: {
           columns: ['设备', '内存', '速度(7B)', '功耗', '参考价格'],
           rows: [
             { '设备': '铭凡UM890 Pro', '内存': '32–64 GB', '速度(7B)': '~8 tok/s',  '功耗': '35–65 W', '参考价格': '2500–3200元' },
-            { '设备': 'Mac Mini M4',   '内存': '16–32 GB', '速度(7B)': '~18 tok/s', '功耗': '20–40 W', '参考价格': '约4399元起' },
+            { '设备': 'Mac Mini M6',   '内存': '16–32 GB', '速度(7B)': '尚未测试', '功耗': '待机低于5W', '参考价格': '$899起' },
             { '设备': '零刻SER8',      '内存': '32 GB',    '速度(7B)': '~8 tok/s',  '功耗': '30–55 W', '参考价格': '1800–2200元' },
           ],
         },
@@ -1359,7 +1359,7 @@ while True:
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-09-01',
+      dateModified: '2026-09-25',
       about: [
         { '@type': 'Thing', name: '微信LLM集成' },
         { '@type': 'Thing', name: '数据安全法合规' },
@@ -1440,7 +1440,7 @@ while True:
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-25',
     next_refresh_due: '2027-03-01',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-es.webp',
@@ -1584,14 +1584,14 @@ while True:
         content: [
           'Un mini PC dedicado y siempre activo mantiene tu bot de WeChat funcionando sin ocupar un portátil o estación de trabajo. Los precios están en USD; en tu país pueden variar según impuestos locales.',
           '**Minisforum UM890 Pro (Recomendado):** AMD Ryzen 9 8945HS, 32–64 GB DDR5, iGPU AMD Radeon 780M. Ejecuta Qwen3 8B a ~8 tok/s mediante ROCm en Linux. Consumo: ~35 W en reposo, ~65 W bajo inferencia. Precio: ~$350–$450.',
-          '**Mac Mini M4:** Apple Silicon M4, 16–32 GB de memoria unificada, ~18 tok/s en modelos 7B mediante MLX. Consumo: ~20 W en reposo. La opción más silenciosa. Precio: ~$599.',
+          '**Mac Mini M6:** Apple Silicon M6, 16–32 GB de memoria unificada, aún sin medir de forma independiente. Consumo: menos de 5 W en reposo. La opción más silenciosa. Precio: desde $899.',
           '**Consejo de configuración:** Activa el inicio automático — añade `ollama serve` y tu script de puente WeChatFerry a systemd (Linux) o al Programador de tareas de Windows. El bot se recuperará automáticamente tras cada corte de luz.',
         ],
         comparisonTable: {
           columns: ['Dispositivo', 'RAM', 'Velocidad (7B)', 'Consumo', 'Precio (USD)'],
           rows: [
             { 'Dispositivo': 'Minisforum UM890 Pro', 'RAM': '32–64 GB', 'Velocidad (7B)': '~8 tok/s', 'Consumo': '35–65 W', 'Precio (USD)': '$350–$450' },
-            { 'Dispositivo': 'Mac Mini M4',          'RAM': '16–32 GB', 'Velocidad (7B)': '~18 tok/s','Consumo': '20–40 W', 'Precio (USD)': '$599+' },
+            { 'Dispositivo': 'Mac Mini M6',          'RAM': '16–32 GB', 'Velocidad (7B)': 'Aún sin medir','Consumo': 'Menos de 5 W en reposo', 'Precio (USD)': '$899+' },
             { 'Dispositivo': 'Beelink SER8',         'RAM': '32 GB',    'Velocidad (7B)': '~8 tok/s', 'Consumo': '30–55 W', 'Precio (USD)': '$280–$330' },
           ],
         },
@@ -1664,7 +1664,7 @@ while True:
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-09-01',
+      dateModified: '2026-09-25',
       about: [
         { '@type': 'Thing', name: 'Integración WeChat API' },
         { '@type': 'Thing', name: 'Despliegue de LLM local' },
@@ -1745,7 +1745,7 @@ while True:
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-25',
     next_refresh_due: '2027-03-01',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-ko.webp',
@@ -1875,14 +1875,14 @@ while True:
         content: [
           '전용 항상 켜져 있는 미니 PC는 노트북이나 워크스테이션을 차지하지 않고 WeChat 봇을 계속 실행하게 합니다.',
           '**Minisforum UM890 Pro(권장):** AMD Ryzen 9 8945HS, 32–64 GB DDR5, AMD Radeon 780M iGPU. Linux에서 ROCm을 통해 Qwen3 8B를 ~8 tok/s로 실행합니다. 소비 전력: 유휴 시 ~35 W, 추론 시 ~65 W. 가격: ~$350–$450.',
-          '**Mac Mini M4:** Apple Silicon M4, 16–32 GB 통합 메모리, MLX를 통해 7B 모델에서 ~18 tok/s. 소비 전력: 유휴 시 ~20 W. 가장 조용한 옵션. 가격: ~$599.',
+          '**Mac Mini M6:** Apple Silicon M6, 16–32 GB 통합 메모리, 아직 독립적으로 벤치마크되지 않음. 소비 전력: 대기 시 5W 미만. 가장 조용한 옵션. 가격: $899부터.',
           '**설정 팁:** 자동 시작 활성화 — `ollama serve`와 WeChatFerry 브리지 스크립트를 systemd(Linux) 또는 Windows 작업 스케줄러에 추가하십시오. 봇은 모든 정전 후 자동으로 복구됩니다.',
         ],
         comparisonTable: {
           columns: ['기기', 'RAM', '속도 (7B)', '소비 전력', '가격 (USD)'],
           rows: [
             { '기기': 'Minisforum UM890 Pro', 'RAM': '32–64 GB', '속도 (7B)': '~8 tok/s', '소비 전력': '35–65 W', '가격 (USD)': '$350–$450' },
-            { '기기': 'Mac Mini M4',          'RAM': '16–32 GB', '속도 (7B)': '~18 tok/s','소비 전력': '20–40 W', '가격 (USD)': '$599+' },
+            { '기기': 'Mac Mini M6',          'RAM': '16–32 GB', '속도 (7B)': '아직 벤치마크 없음','소비 전력': '대기 시 5W 미만', '가격 (USD)': '$899+' },
             { '기기': 'Beelink SER8',         'RAM': '32 GB',    '속도 (7B)': '~8 tok/s', '소비 전력': '30–55 W', '가격 (USD)': '$280–$330' },
           ],
         },
@@ -1955,7 +1955,7 @@ while True:
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-09-01',
+      dateModified: '2026-09-25',
       about: [
         { '@type': 'Thing', name: 'WeChat API 통합' },
         { '@type': 'Thing', name: '로컬 LLM 배포' },
@@ -2036,7 +2036,7 @@ while True:
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-25',
     next_refresh_due: '2027-03-01',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-pt.webp',
@@ -2166,14 +2166,14 @@ while True:
         content: [
           'Um mini PC dedicado e sempre ativo mantém seu bot do WeChat funcionando sem ocupar um laptop ou estação de trabalho. Os preços estão em USD; no Brasil podem variar bastante devido a impostos de importação.',
           '**Minisforum UM890 Pro (Recomendado):** AMD Ryzen 9 8945HS, 32–64 GB DDR5, iGPU AMD Radeon 780M. Roda o Qwen3 8B a ~8 tok/s via ROCm no Linux. Consumo: ~35 W em repouso, ~65 W sob inferência. Preço: ~$350–$450.',
-          '**Mac Mini M4:** Apple Silicon M4, 16–32 GB de memória unificada, ~18 tok/s em modelos 7B via MLX. Consumo: ~20 W em repouso. A opção mais silenciosa. Preço: ~$599.',
+          '**Mac Mini M6:** Apple Silicon M6, 16–32 GB de memória unificada, ainda não testado de forma independente. Consumo: menos de 5 W em repouso. A opção mais silenciosa. Preço: a partir de $899.',
           '**Dica de configuração:** Ative o início automático — adicione `ollama serve` e seu script de ponte WeChatFerry ao systemd (Linux) ou ao Agendador de Tarefas do Windows. O bot então se recupera automaticamente após cada queda de energia.',
         ],
         comparisonTable: {
           columns: ['Dispositivo', 'RAM', 'Velocidade (7B)', 'Consumo', 'Preço (USD)'],
           rows: [
             { 'Dispositivo': 'Minisforum UM890 Pro', 'RAM': '32–64 GB', 'Velocidade (7B)': '~8 tok/s', 'Consumo': '35–65 W', 'Preço (USD)': '$350–$450' },
-            { 'Dispositivo': 'Mac Mini M4',          'RAM': '16–32 GB', 'Velocidade (7B)': '~18 tok/s','Consumo': '20–40 W', 'Preço (USD)': '$599+' },
+            { 'Dispositivo': 'Mac Mini M6',          'RAM': '16–32 GB', 'Velocidade (7B)': 'Ainda não testado','Consumo': 'Menos de 5 W em repouso', 'Preço (USD)': '$899+' },
             { 'Dispositivo': 'Beelink SER8',         'RAM': '32 GB',    'Velocidade (7B)': '~8 tok/s', 'Consumo': '30–55 W', 'Preço (USD)': '$280–$330' },
           ],
         },
@@ -2246,7 +2246,7 @@ while True:
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-09-01',
+      dateModified: '2026-09-25',
       about: [
         { '@type': 'Thing', name: 'Integração WeChat API' },
         { '@type': 'Thing', name: 'Implantação de LLM local' },
@@ -2328,7 +2328,7 @@ while True:
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-09-01',
+    dateModified: '2026-09-25',
     next_refresh_due: '2027-03-01',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/wechat-local-llm-integration-2026-overview-hero-ar.webp',
@@ -2458,14 +2458,14 @@ while True:
         content: [
           'يُبقي mini PC مخصص ودائم التشغيل بوت WeChat يعمل دون احتلال جهاز محمول أو محطة عمل.',
           '**Minisforum UM890 Pro (موصى به):** AMD Ryzen 9 8945HS، 32–64 GB DDR5، AMD Radeon 780M iGPU. يشغّل Qwen3 8B بـ ~8 رمز/ثانية عبر ROCm على Linux. الاستهلاك: ~35 واط في وضع الخمول، ~65 واط أثناء الاستدلال. السعر: ~350–450 دولار.',
-          '**Mac Mini M4:** Apple Silicon M4، 16–32 GB ذاكرة موحدة، ~18 رمز/ثانية للنماذج 7B عبر MLX. الاستهلاك: ~20 واط في وضع الخمول. الخيار الأهدأ صوتًا. السعر: ~599 دولار.',
+          '**Mac Mini M6:** Apple Silicon M6، 16–32 GB ذاكرة موحدة، لم يُقس بشكل مستقل بعد. الاستهلاك: أقل من 5 واط في وضع الخمول. الخيار الأهدأ صوتًا. السعر: من 899 دولار.',
           '**نصيحة للإعداد:** فعّل التشغيل التلقائي — أضف `ollama serve` وسكريبت جسر WeChatFerry إلى systemd (Linux) أو مجدول المهام في Windows. سيتعافى البوت تلقائيًا بعد كل انقطاع في الكهرباء.',
         ],
         comparisonTable: {
           columns: ['الجهاز', 'RAM', 'السرعة (7B)', 'الاستهلاك', 'السعر (USD)'],
           rows: [
             { 'الجهاز': 'Minisforum UM890 Pro', 'RAM': '32–64 GB', 'السرعة (7B)': '~8 رمز/ثانية', 'الاستهلاك': '35–65 واط', 'السعر (USD)': '$350–$450' },
-            { 'الجهاز': 'Mac Mini M4',          'RAM': '16–32 GB', 'السرعة (7B)': '~18 رمز/ثانية', 'الاستهلاك': '20–40 واط', 'السعر (USD)': '$599+' },
+            { 'الجهاز': 'Mac Mini M6',          'RAM': '16–32 GB', 'السرعة (7B)': 'لم يُقس بعد', 'الاستهلاك': 'أقل من 5 واط في وضع الخمول', 'السعر (USD)': '$899+' },
             { 'الجهاز': 'Beelink SER8',         'RAM': '32 GB',    'السرعة (7B)': '~8 رمز/ثانية', 'الاستهلاك': '30–55 واط', 'السعر (USD)': '$280–$330' },
           ],
         },
@@ -2538,7 +2538,7 @@ while True:
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
-      dateModified: '2026-09-01',
+      dateModified: '2026-09-25',
       about: [
         { '@type': 'Thing', name: 'تكامل WeChat API' },
         { '@type': 'Thing', name: 'نشر نموذج لغة محلي' },

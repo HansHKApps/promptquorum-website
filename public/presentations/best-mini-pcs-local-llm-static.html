@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Best Mini PCs for Local LLM 2026 | PromptQuorum</title>
-    <meta name="description" content="Interactive presentation on mini PC hardware for local LLM inference. Learn Mac mini M4 Pro, Framework Desktop, GPU compatibility, and cooling strategies." />
+    <meta name="description" content="Interactive presentation on mini PC hardware for local LLM inference. Learn Mac mini M5 Pro, Framework Desktop, GPU compatibility, and cooling strategies." />
     <meta property="og:title" content="Best Mini PCs for Local LLM 2026 — PromptQuorum" />
-    <meta property="og:description" content="Choose the right mini PC for Llama 3.3 70B: Mac mini M4 Pro vs Framework Desktop vs custom ITX builds." />
+    <meta property="og:description" content="Choose the right mini PC for Llama 3.3 70B: Mac mini M5 Pro vs Framework Desktop vs custom ITX builds." />
     <meta property="og:type" content="website" />
     <link rel="canonical" href="https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm" />
 
@@ -292,7 +292,7 @@
           {
             type: 'title',
             h1: 'Best Mini PCs for Local LLM 2026',
-            subtitle: 'Run Llama 3.3 70B on Mac mini M4 Pro, Framework Desktop, or Custom ITX builds',
+            subtitle: 'Run Llama 3.3 70B on Mac mini M5 Pro, Framework Desktop, or Custom ITX builds',
             link: 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm'
           },
           {
@@ -307,23 +307,21 @@
           },
           {
             type: 'table',
-            h2: 'Mac Mini M4 Pro Performance',
+            h2: 'Mac Mini M6 / M5 Pro Performance',
             columns: ['Configuration', '7B Q4 tok/s', '70B Q4 tok/s', 'Price'],
             rows: [
-              { 'Configuration': 'M4 (16 GB)', '7B Q4 tok/s': '40–50', '70B Q4 tok/s': 'Cannot fit', 'Price': '$599' },
-              { 'Configuration': 'M4 Pro (24 GB)', '7B Q4 tok/s': '50–65', '70B Q4 tok/s': 'Cannot fit', 'Price': '$1,399' },
-              { 'Configuration': 'M4 Pro (48 GB)', '7B Q4 tok/s': '55–70', '70B Q4 tok/s': '7–10', 'Price': '$1,999' },
-              { 'Configuration': 'M4 Pro (64 GB)', '7B Q4 tok/s': '60–80', '70B Q4 tok/s': '10–15', 'Price': '$2,299' }
+              { 'Configuration': 'M6 (16-32 GB)', '7B Q4 tok/s': 'Not yet benchmarked', '70B Q4 tok/s': 'Cannot fit', 'Price': '$899' },
+              { 'Configuration': 'M5 Pro (24-64 GB)', '7B Q4 tok/s': 'Not yet benchmarked', '70B Q4 tok/s': 'Not yet benchmarked', 'Price': '$1,699' }
             ]
           },
           {
             type: 'list',
-            h2: 'Mac Mini M4 Pro: Pros & Cons',
+            h2: 'Mac Mini M6 / M5 Pro: Pros & Cons',
             items: [
-              '<strong>✓ Pros:</strong> Silent, 30W power, Metal GPU acceleration out-of-box',
-              '<strong>✓ Pros:</strong> 5.1×5.1×1.5 inches (smallest 70B option)',
-              '<strong>✗ Cons:</strong> RAM not upgradeable (choose 64 GB upfront)',
-              '<strong>✗ Cons:</strong> 10–15 tok/s slower than RTX 4090 (60–80 tok/s)'
+              '<strong>✓ Pros:</strong> Silent, low power, Metal GPU acceleration out-of-box',
+              '<strong>✓ Pros:</strong> Smallest 70B-capable option (M5 Pro, 64 GB config)',
+              '<strong>✗ Cons:</strong> RAM not upgradeable (choose 64 GB upfront for M5 Pro)',
+              '<strong>✗ Cons:</strong> No independent 70B tok/s benchmarks yet — shipped Sept 22, 2026'
             ]
           },
           {
@@ -350,12 +348,12 @@
           },
           {
             type: 'list',
-            h2: 'Framework Desktop vs Mac Mini M4 Pro',
+            h2: 'Framework Desktop vs Mac Mini M5 Pro',
             items: [
-              '<strong>Speed:</strong> Framework 20–25 tok/s vs Mac mini 10–15 tok/s (1.5–2× faster)',
-              '<strong>Memory:</strong> Framework 128 GB vs Mac mini 64 GB (2× capacity)',
+              '<strong>Speed:</strong> Framework 20–25 tok/s on 70B; no independent M5 Pro benchmark yet',
+              '<strong>Memory:</strong> Framework 128 GB vs Mac mini M5 Pro 64 GB (2× capacity)',
               '<strong>Upgradeable:</strong> Framework yes, Mac mini no',
-              '<strong>Price:</strong> Framework $1,999 vs Mac mini $2,299 (Framework better value)',
+              '<strong>Price:</strong> Framework $1,999 vs Mac mini M5 Pro $1,699 (Mac mini cheaper)',
               '<strong>Setup:</strong> Framework needs ROCm, Mac mini works out-of-box'
             ]
           },
@@ -395,7 +393,7 @@
             type: 'list',
             h2: 'Limitations: What Won\'t Work',
             items: [
-              '<strong>70B models require:</strong> Minimum 64 GB (Mac mini M4 Pro 64GB) or 128 GB (Framework)',
+              '<strong>70B models require:</strong> Minimum 64 GB (Mac mini M5 Pro, 64 GB config) or 128 GB (Framework)',
               '<strong>RTX 4090 maxes out:</strong> 70B Q4 at 60–80 tok/s (no further speedup)',
               '<strong>Mac mini RAM not upgradeable:</strong> Choose 64 GB at purchase; no upgrade path',
               '<strong>Custom ITX complexity:</strong> Requires case modding, cable management, thermal paste'
@@ -406,7 +404,7 @@
             h2: 'FAQ: Common Questions',
             items: [
               '<strong>Q: Can I run 70B on RTX 4090?</strong> Yes, but 60–80 tok/s (slower than Framework Desktop)',
-              '<strong>Q: Mac mini M4 Pro vs Framework?</strong> Mac silent+compact (10–15 tok/s), Framework faster (20–25 tok/s)',
+              '<strong>Q: Mac mini M5 Pro vs Framework?</strong> Mac mini silent+compact, cheaper ($1,699 vs $1,999); Framework has more memory (128GB vs 64GB) and a published 70B benchmark (20–25 tok/s) — Mac mini M5 Pro has none yet',
               '<strong>Q: Best mini PC 2026?</strong> ASUS PN51 + RTX 5060 Ti for value (~$900); Framework for speed',
               '<strong>Q: What quantization to use?</strong> Q4_K_M: best balance of speed, quality, VRAM (13B on 16GB, 70B on 64GB)'
             ]
@@ -415,7 +413,7 @@
             type: 'list',
             h2: 'Common Mistakes to Avoid',
             items: [
-              '<strong>1.</strong> Buying 48 GB Mac mini instead of 64 GB (70B won\'t fit)',
+              '<strong>1.</strong> Buying the base M6 Mac mini (32 GB max) expecting to run 70B (needs the M5 Pro, 64 GB)',
               '<strong>2.</strong> Choosing RTX 4070 without measuring case depth (220mm limit)',
               '<strong>3.</strong> Assuming offloading solves VRAM (slower than native GPU)',
               '<strong>4.</strong> Not undervolting (free 5–10°C with no downside)',
@@ -451,7 +449,7 @@
           {
             type: 'title',
             h1: 'Beste Mini-PCs für lokale LLM 2026',
-            subtitle: 'Führen Sie Llama 3.3 70B auf Mac mini M4 Pro, Framework Desktop oder Custom ITX aus',
+            subtitle: 'Führen Sie Llama 3.3 70B auf Mac mini M5 Pro, Framework Desktop oder Custom ITX aus',
             link: 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm?lang=de'
           },
           {
@@ -466,23 +464,21 @@
           },
           {
             type: 'table',
-            h2: 'Mac Mini M4 Pro Leistung',
+            h2: 'Mac Mini M6 / M5 Pro Leistung',
             columns: ['Konfiguration', '7B Q4 tok/s', '70B Q4 tok/s', 'Preis'],
             rows: [
-              { 'Konfiguration': 'M4 (16 GB)', '7B Q4 tok/s': '40–50', '70B Q4 tok/s': 'Nicht möglich', 'Preis': '599 $' },
-              { 'Konfiguration': 'M4 Pro (24 GB)', '7B Q4 tok/s': '50–65', '70B Q4 tok/s': 'Nicht möglich', 'Preis': '1.399 $' },
-              { 'Konfiguration': 'M4 Pro (48 GB)', '7B Q4 tok/s': '55–70', '70B Q4 tok/s': '7–10', 'Preis': '1.999 $' },
-              { 'Konfiguration': 'M4 Pro (64 GB)', '7B Q4 tok/s': '60–80', '70B Q4 tok/s': '10–15', 'Preis': '2.299 $' }
+              { 'Konfiguration': 'M6 (16-32 GB)', '7B Q4 tok/s': 'Noch nicht getestet', '70B Q4 tok/s': 'Nicht möglich', 'Preis': '899 $' },
+              { 'Konfiguration': 'M5 Pro (24-64 GB)', '7B Q4 tok/s': 'Noch nicht getestet', '70B Q4 tok/s': 'Noch nicht getestet', 'Preis': '1.699 $' }
             ]
           },
           {
             type: 'list',
-            h2: 'Mac Mini M4 Pro: Vor- und Nachteile',
+            h2: 'Mac Mini M6 / M5 Pro: Vor- und Nachteile',
             items: [
-              '<strong>✓ Vorteile:</strong> Leise, 30W Stromverbrauch, Metal GPU-Beschleunigung ab Werk',
-              '<strong>✓ Vorteile:</strong> 5,1×5,1×1,5 Zoll (kompakteste 70B-Option)',
-              '<strong>✗ Nachteile:</strong> RAM nicht aufrüstbar (wählen Sie beim Kauf 64 GB)',
-              '<strong>✗ Nachteile:</strong> 10–15 tok/s langsamer als RTX 4090 (60–80 tok/s)'
+              '<strong>✓ Vorteile:</strong> Leise, geringer Stromverbrauch, Metal GPU-Beschleunigung ab Werk',
+              '<strong>✓ Vorteile:</strong> Kompakteste 70B-fähige Option (M5 Pro, 64-GB-Konfiguration)',
+              '<strong>✗ Nachteile:</strong> RAM nicht aufrüstbar (wählen Sie beim Kauf 64 GB für M5 Pro)',
+              '<strong>✗ Nachteile:</strong> Noch keine unabhängigen 70B-tok/s-Benchmarks — Verkaufsstart 22. September 2026'
             ]
           },
           {
@@ -509,12 +505,12 @@
           },
           {
             type: 'list',
-            h2: 'Framework Desktop vs Mac Mini M4 Pro',
+            h2: 'Framework Desktop vs Mac Mini M5 Pro',
             items: [
-              '<strong>Geschwindigkeit:</strong> Framework 20–25 tok/s vs Mac mini 10–15 tok/s (1,5–2× schneller)',
-              '<strong>Speicher:</strong> Framework 128 GB vs Mac mini 64 GB (2× Kapazität)',
+              '<strong>Geschwindigkeit:</strong> Framework 20–25 tok/s bei 70B; für M5 Pro noch kein unabhängiger Benchmark',
+              '<strong>Speicher:</strong> Framework 128 GB vs Mac mini M5 Pro 64 GB (2× Kapazität)',
               '<strong>Aufrüstbar:</strong> Framework ja, Mac mini nein',
-              '<strong>Preis:</strong> Framework 1.999 $ vs Mac mini 2.299 $ (Framework besser)',
+              '<strong>Preis:</strong> Framework 1.999 $ vs Mac mini M5 Pro 1.699 $ (Mac mini günstiger)',
               '<strong>Setup:</strong> Framework braucht ROCm, Mac mini funktioniert sofort'
             ]
           },
@@ -554,7 +550,7 @@
             type: 'list',
             h2: 'Einschränkungen: Was funktioniert nicht',
             items: [
-              '<strong>70B-Modelle erfordern:</strong> Minimum 64 GB (Mac mini M4 Pro 64GB) oder 128 GB (Framework)',
+              '<strong>70B-Modelle erfordern:</strong> Minimum 64 GB (Mac mini M5 Pro, 64-GB-Konfiguration) oder 128 GB (Framework)',
               '<strong>RTX 4090 Obergrenze:</strong> 70B Q4 bei 60–80 tok/s (keine weitere Beschleunigung)',
               '<strong>Mac mini RAM nicht aufrüstbar:</strong> Wählen Sie beim Kauf 64 GB; kein Upgrade möglich',
               '<strong>Custom ITX Komplexität:</strong> Erfordert Gehäuseanpassung, Kabelmanagement, Wärmeleitpaste'
@@ -565,7 +561,7 @@
             h2: 'FAQ: Häufig gestellte Fragen',
             items: [
               '<strong>F: Kann ich 70B auf RTX 4090 ausführen?</strong> Ja, aber 60–80 tok/s (langsamer als Framework)',
-              '<strong>F: Mac mini M4 Pro vs Framework?</strong> Mac leise+kompakt (10–15 tok/s), Framework schneller (20–25 tok/s)',
+              '<strong>F: Mac mini M5 Pro vs Framework?</strong> Mac mini leise, kompakt, günstiger (1.699 $ vs 1.999 $); Framework hat mehr Speicher (128 GB vs 64 GB) und einen veröffentlichten 70B-Benchmark (20–25 tok/s) — für den Mac mini M5 Pro gibt es noch keinen',
               '<strong>F: Bester Mini-PC 2026?</strong> ASUS PN51 + RTX 5060 Ti für Preis (~900 $); Framework für Speed',
               '<strong>F: Welche Quantisierung verwenden?</strong> Q4_K_M: beste Balance Geschwindigkeit, Qualität, VRAM'
             ]
@@ -574,7 +570,7 @@
             type: 'list',
             h2: 'Häufige Fehler vermeiden',
             items: [
-              '<strong>1.</strong> Kauf 48 GB Mac mini statt 64 GB (70B passt nicht)',
+              '<strong>1.</strong> Kauf des Basis-M6-Mac-mini (max. 32 GB) in der Erwartung, 70B ausführen zu können (dafür ist der M5 Pro mit 64 GB nötig)',
               '<strong>2.</strong> Wahl RTX 4070 ohne Gehäusetiefe messen (220mm Limit)',
               '<strong>3.</strong> Annahme Offloading löst VRAM (langsamer als nativ GPU)',
               '<strong>4.</strong> Nicht undervolten (kostenlos 5–10°C ohne Nachteil)',
@@ -610,7 +606,7 @@
           {
             type: 'title',
             h1: 'Meilleurs mini PC pour LLM locaux 2026',
-            subtitle: 'Exécutez Llama 3.3 70B sur Mac mini M4 Pro, Framework Desktop ou constructions ITX personnalisées',
+            subtitle: 'Exécutez Llama 3.3 70B sur Mac mini M5 Pro, Framework Desktop ou constructions ITX personnalisées',
             link: 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm?lang=fr'
           },
           {
@@ -625,23 +621,21 @@
           },
           {
             type: 'table',
-            h2: 'Performance Mac Mini M4 Pro',
+            h2: 'Performance Mac Mini M6 / M5 Pro',
             columns: ['Configuration', '7B Q4 tok/s', '70B Q4 tok/s', 'Prix'],
             rows: [
-              { 'Configuration': 'M4 (16 Go)', '7B Q4 tok/s': '40–50', '70B Q4 tok/s': 'Impossible', 'Prix': '599 $' },
-              { 'Configuration': 'M4 Pro (24 Go)', '7B Q4 tok/s': '50–65', '70B Q4 tok/s': 'Impossible', 'Prix': '1 399 $' },
-              { 'Configuration': 'M4 Pro (48 Go)', '7B Q4 tok/s': '55–70', '70B Q4 tok/s': '7–10', 'Prix': '1 999 $' },
-              { 'Configuration': 'M4 Pro (64 Go)', '7B Q4 tok/s': '60–80', '70B Q4 tok/s': '10–15', 'Prix': '2 299 $' }
+              { 'Configuration': 'M6 (16-32 Go)', '7B Q4 tok/s': 'Pas encore testé', '70B Q4 tok/s': 'Impossible', 'Prix': '899 $' },
+              { 'Configuration': 'M5 Pro (24-64 Go)', '7B Q4 tok/s': 'Pas encore testé', '70B Q4 tok/s': 'Pas encore testé', 'Prix': '1 699 $' }
             ]
           },
           {
             type: 'list',
-            h2: 'Mac Mini M4 Pro : Avantages et inconvénients',
+            h2: 'Mac Mini M6 / M5 Pro : Avantages et inconvénients',
             items: [
-              '<strong>✓ Avantages :</strong> Silencieux, consommation 30W, accélération GPU Metal out-of-box',
-              '<strong>✓ Avantages :</strong> 5,1×5,1×1,5 pouces (plus petite option 70B)',
-              '<strong>✗ Inconvénients :</strong> RAM non extensible (choisissez 64 Go à l\'achat)',
-              '<strong>✗ Inconvénients :</strong> 10–15 tok/s plus lent que RTX 4090 (60–80 tok/s)'
+              '<strong>✓ Avantages :</strong> Silencieux, faible consommation, accélération GPU Metal out-of-box',
+              '<strong>✓ Avantages :</strong> Option 70B la plus compacte (M5 Pro, config 64 Go)',
+              '<strong>✗ Inconvénients :</strong> RAM non extensible (choisissez 64 Go à l\'achat pour le M5 Pro)',
+              '<strong>✗ Inconvénients :</strong> Pas encore de benchmark 70B indépendant — sorti le 22 septembre 2026'
             ]
           },
           {
@@ -668,12 +662,12 @@
           },
           {
             type: 'list',
-            h2: 'Framework Desktop vs Mac Mini M4 Pro',
+            h2: 'Framework Desktop vs Mac Mini M5 Pro',
             items: [
-              '<strong>Vitesse :</strong> Framework 20–25 tok/s vs Mac mini 10–15 tok/s (1,5–2× plus rapide)',
-              '<strong>Mémoire :</strong> Framework 128 Go vs Mac mini 64 Go (2× capacité)',
+              '<strong>Vitesse :</strong> Framework 20–25 tok/s sur 70B ; pas encore de benchmark indépendant pour le M5 Pro',
+              '<strong>Mémoire :</strong> Framework 128 Go vs Mac mini M5 Pro 64 Go (2× capacité)',
               '<strong>Extensible :</strong> Framework oui, Mac mini non',
-              '<strong>Prix :</strong> Framework 1 999 $ vs Mac mini 2 299 $ (Framework meilleur)',
+              '<strong>Prix :</strong> Framework 1 999 $ vs Mac mini M5 Pro 1 699 $ (Mac mini moins cher)',
               '<strong>Configuration :</strong> Framework nécessite ROCm, Mac mini fonctionne immédiatement'
             ]
           },
@@ -713,7 +707,7 @@
             type: 'list',
             h2: 'Limitations : Ce qui ne fonctionne pas',
             items: [
-              '<strong>Les modèles 70B nécessitent :</strong> Minimum 64 Go (Mac mini M4 Pro 64Go) ou 128 Go (Framework)',
+              '<strong>Les modèles 70B nécessitent :</strong> Minimum 64 Go (Mac mini M5 Pro, config 64 Go) ou 128 Go (Framework)',
               '<strong>RTX 4090 plafond :</strong> 70B Q4 à 60–80 tok/s (pas d\'accélération supplémentaire)',
               '<strong>RAM Mac mini non extensible :</strong> Choisissez 64 Go à l\'achat ; pas de chemin de mise à niveau',
               '<strong>Complexité Custom ITX :</strong> Nécessite modification boîtier, gestion câbles, pâte thermique'
@@ -724,7 +718,7 @@
             h2: 'FAQ : Questions fréquemment posées',
             items: [
               '<strong>Q: Puis-je exécuter 70B sur RTX 4090?</strong> Oui, mais 60–80 tok/s (plus lent que Framework)',
-              '<strong>Q: Mac mini M4 Pro vs Framework?</strong> Mac silencieux+compact (10–15 tok/s), Framework rapide (20–25 tok/s)',
+              '<strong>Q: Mac mini M5 Pro vs Framework?</strong> Mac mini silencieux, compact, moins cher (1 699 $ vs 1 999 $) ; Framework a plus de mémoire (128 Go vs 64 Go) et un benchmark 70B publié (20–25 tok/s) — le Mac mini M5 Pro n\'en a pas encore',
               '<strong>Q: Meilleur mini PC 2026?</strong> ASUS PN51 + RTX 5060 Ti pour rapport (~900 $); Framework pour vitesse',
               '<strong>Q: Quel quantification utiliser?</strong> Q4_K_M: meilleur équilibre vitesse, qualité, VRAM'
             ]
@@ -733,7 +727,7 @@
             type: 'list',
             h2: 'Erreurs courantes à éviter',
             items: [
-              '<strong>1.</strong> Acheter 48 Go Mac mini au lieu de 64 Go (70B ne tient pas)',
+              '<strong>1.</strong> Acheter le Mac mini M6 de base (32 Go max) en pensant pouvoir exécuter 70B (il faut le M5 Pro, 64 Go)',
               '<strong>2.</strong> Choisir RTX 4070 sans mesurer profondeur boîtier (limite 220mm)',
               '<strong>3.</strong> Supposer déchargement résout VRAM (plus lent que GPU natif)',
               '<strong>4.</strong> Ne pas faire de sous-voltage (5–10°C gratuit sans inconvénient)',
@@ -769,7 +763,7 @@
           {
             type: 'title',
             h1: 'ローカルLLM向けミニPC 2026',
-            subtitle: 'Mac mini M4 Pro、Framework Desktop、またはカスタムITXビルドでLlama 3.3 70Bを実行',
+            subtitle: 'Mac mini M5 Pro、Framework Desktop、またはカスタムITXビルドでLlama 3.3 70Bを実行',
             link: 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm?lang=ja'
           },
           {
@@ -784,23 +778,21 @@
           },
           {
             type: 'table',
-            h2: 'Mac Mini M4 Pro性能',
+            h2: 'Mac Mini M6 / M5 Pro性能',
             columns: ['構成', '7B Q4 tok/s', '70B Q4 tok/s', '価格'],
             rows: [
-              { '構成': 'M4 (16 GB)', '7B Q4 tok/s': '40–50', '70B Q4 tok/s': '不可', '価格': '$599' },
-              { '構成': 'M4 Pro (24 GB)', '7B Q4 tok/s': '50–65', '70B Q4 tok/s': '不可', '価格': '$1,399' },
-              { '構成': 'M4 Pro (48 GB)', '7B Q4 tok/s': '55–70', '70B Q4 tok/s': '7–10', '価格': '$1,999' },
-              { '構成': 'M4 Pro (64 GB)', '7B Q4 tok/s': '60–80', '70B Q4 tok/s': '10–15', '価格': '$2,299' }
+              { '構成': 'M6（16-32 GB）', '7B Q4 tok/s': '未検証', '70B Q4 tok/s': '不可', '価格': '$899' },
+              { '構成': 'M5 Pro（24-64 GB）', '7B Q4 tok/s': '未検証', '70B Q4 tok/s': '未検証', '価格': '$1,699' }
             ]
           },
           {
             type: 'list',
-            h2: 'Mac Mini M4 Pro：長所と短所',
+            h2: 'Mac Mini M6 / M5 Pro：長所と短所',
             items: [
-              '<strong>✓ 長所：</strong> 静音、30W消費電力、Metal GPU加速がすぐに使える',
-              '<strong>✓ 長所：</strong> 5.1×5.1×1.5インチ（最小の70Bオプション）',
-              '<strong>✗ 短所：</strong> RAM非アップグレード（購入時に64 GB選択）',
-              '<strong>✗ 短所：</strong> 10–15 tok/sはRTX 4090（60–80 tok/s）より遅い'
+              '<strong>✓ 長所：</strong> 静音、低消費電力、Metal GPU加速がすぐに使える',
+              '<strong>✓ 長所：</strong> 最もコンパクトな70B対応オプション（M5 Pro、64GB構成）',
+              '<strong>✗ 短所：</strong> RAM非アップグレード（M5 Proは購入時に64 GB選択）',
+              '<strong>✗ 短所：</strong> 独立した70B tok/sベンチマークはまだなし — 2026年9月22日発売'
             ]
           },
           {
@@ -827,7 +819,7 @@
           },
           {
             type: 'list',
-            h2: 'Framework Desktop vs Mac Mini M4 Pro',
+            h2: 'Framework Desktop vs Mac Mini M5 Pro',
             items: [
               '<strong>速度：</strong> Framework 20–25 tok/s vs Mac mini 10–15 tok/s（1.5–2倍高速）',
               '<strong>メモリ：</strong> Framework 128 GB vs Mac mini 64 GB（2倍容量）',
@@ -872,7 +864,7 @@
             type: 'list',
             h2: '制限事項：動作不可のこと',
             items: [
-              '<strong>70Bモデル必須：</strong> 最小64 GB（Mac mini M4 Pro 64GB）またはFramework 128 GB',
+              '<strong>70Bモデル必須：</strong> 最小64 GB（Mac mini M5 Pro、64GB構成）またはFramework 128 GB',
               '<strong>RTX 4090限界：</strong> 70B Q4で60–80 tok/s（これ以上加速不可）',
               '<strong>Mac mini RAMアップグレード不可：</strong> 購入時に64 GB選択；後からアップグレード不可',
               '<strong>Custom ITX複雑：</strong> ケース加工、ケーブル管理、グリス必要'
@@ -883,7 +875,7 @@
             h2: 'FAQ：よくある質問',
             items: [
               '<strong>Q: RTX 4090で70B実行できる？</strong> はい、60–80 tok/s（Framework より遅い）',
-              '<strong>Q: Mac mini M4 Pro vs Framework？</strong> Mac静音+コンパクト（10–15 tok/s）、Framework高速（20–25 tok/s）',
+              '<strong>Q: Mac mini M5 Pro vs Framework？</strong> Mac miniは静音・コンパクトで安価（$1,699 vs $1,999）、Frameworkはメモリが多く（128GB vs 64GB）70Bベンチマークも公表済み（20–25 tok/s）— Mac mini M5 Proはまだ未検証',
               '<strong>Q: 最高ミニPC 2026？</strong> ASUS PN51 + RTX 5060 Tiがコスパ最高（~$900）；Frameworkが速度最高',
               '<strong>Q: どの量子化を使う？</strong> Q4_K_M：速度・品質・VRAMのベストバランス'
             ]
@@ -928,7 +920,7 @@
           {
             type: 'title',
             h1: '2026年本地LLM迷你PC推荐',
-            subtitle: '在Mac mini M4 Pro、Framework Desktop或自定义ITX上运行Llama 3.3 70B',
+            subtitle: '在Mac mini M5 Pro、Framework Desktop或自定义ITX上运行Llama 3.3 70B',
             link: 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm?lang=zh'
           },
           {
@@ -943,23 +935,21 @@
           },
           {
             type: 'table',
-            h2: 'Mac Mini M4 Pro性能',
+            h2: 'Mac Mini M6 / M5 Pro性能',
             columns: ['配置', '7B Q4 tok/s', '70B Q4 tok/s', '价格'],
             rows: [
-              { '配置': 'M4 (16 GB)', '7B Q4 tok/s': '40–50', '70B Q4 tok/s': '无法装载', '价格': '$599' },
-              { '配置': 'M4 Pro (24 GB)', '7B Q4 tok/s': '50–65', '70B Q4 tok/s': '无法装载', '价格': '$1,399' },
-              { '配置': 'M4 Pro (48 GB)', '7B Q4 tok/s': '55–70', '70B Q4 tok/s': '7–10', '价格': '$1,999' },
-              { '配置': 'M4 Pro (64 GB)', '7B Q4 tok/s': '60–80', '70B Q4 tok/s': '10–15', '价格': '$2,299' }
+              { '配置': 'M6（16-32 GB）', '7B Q4 tok/s': '尚未测试', '70B Q4 tok/s': '无法装载', '价格': '$899' },
+              { '配置': 'M5 Pro（24-64 GB）', '7B Q4 tok/s': '尚未测试', '70B Q4 tok/s': '尚未测试', '价格': '$1,699' }
             ]
           },
           {
             type: 'list',
-            h2: 'Mac Mini M4 Pro：优缺点',
+            h2: 'Mac Mini M6 / M5 Pro：优缺点',
             items: [
-              '<strong>✓ 优点：</strong> 静音、30W功耗、开箱即用Metal GPU加速',
-              '<strong>✓ 优点：</strong> 5.1×5.1×1.5英寸（最小的70B选项）',
-              '<strong>✗ 缺点：</strong> 内存不可升级（购买时选择64 GB）',
-              '<strong>✗ 缺点：</strong> 10–15 tok/s比RTX 4090（60–80 tok/s）更慢'
+              '<strong>✓ 优点：</strong> 静音、低功耗、开箱即用Metal GPU加速',
+              '<strong>✓ 优点：</strong> 最紧凑的70B可用选项（M5 Pro，64GB配置）',
+              '<strong>✗ 缺点：</strong> 内存不可升级（M5 Pro购买时需选择64 GB）',
+              '<strong>✗ 缺点：</strong> 尚无独立70B tok/s基准测试——2026年9月22日发售'
             ]
           },
           {
@@ -986,7 +976,7 @@
           },
           {
             type: 'list',
-            h2: 'Framework Desktop vs Mac Mini M4 Pro',
+            h2: 'Framework Desktop vs Mac Mini M5 Pro',
             items: [
               '<strong>速度：</strong> Framework 20–25 tok/s vs Mac mini 10–15 tok/s（快1.5–2倍）',
               '<strong>内存：</strong> Framework 128 GB vs Mac mini 64 GB（容量2倍）',
@@ -1031,7 +1021,7 @@
             type: 'list',
             h2: '限制：不支持的内容',
             items: [
-              '<strong>70B模型需要：</strong> 最少64 GB（Mac mini M4 Pro 64GB）或128 GB（Framework）',
+              '<strong>70B模型需要：</strong> 最少64 GB（Mac mini M5 Pro，64GB配置）或128 GB（Framework）',
               '<strong>RTX 4090上限：</strong> 70B Q4在60–80 tok/s（无法进一步加速）',
               '<strong>Mac mini内存不可升级：</strong> 购买时选择64 GB；无升级路径',
               '<strong>Custom ITX复杂性：</strong> 需要机箱改造、线材管理、导热膏'
@@ -1042,7 +1032,7 @@
             h2: 'FAQ：常见问题',
             items: [
               '<strong>Q: 能在RTX 4090上运行70B吗?</strong> 可以，但60–80 tok/s（比Framework慢）',
-              '<strong>Q: Mac mini M4 Pro vs Framework?</strong> Mac静音+紧凑（10–15 tok/s），Framework高速（20–25 tok/s）',
+              '<strong>Q: Mac mini M5 Pro vs Framework?</strong> Mac mini静音、紧凑、更便宜（$1,699 vs $1,999）；Framework内存更大（128GB vs 64GB）且已公布70B基准测试（20–25 tok/s）——Mac mini M5 Pro尚无此数据',
               '<strong>Q: 2026年最佳迷你PC?</strong> ASUS PN51 + RTX 5060 Ti性价比最高（~$900）；Framework速度最快',
               '<strong>Q: 使用哪种量化?</strong> Q4_K_M：速度、质量、VRAM的最佳平衡'
             ]

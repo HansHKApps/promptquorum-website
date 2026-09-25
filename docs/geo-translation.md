@@ -592,7 +592,7 @@ de: {
 
 ## Currency Localization (MANDATORY)
 
-**Why this exists:** USD prices in hardware/software articles (Mac mini, Framework Desktop, RTX 5060 Ti, etc.) are meaningless to DE/FR/JA readers. EU/JP retail prices are NOT simple rate conversions of USD — Apple, AMD, NVIDIA each price independently per region including local VAT and import costs. Example: Mac mini M4 Pro 64 GB is $2,299 in the US, but 2.499 € on Apple DE and ¥358,800 on Apple JP. A "rate-converted" 2.138 € would be wrong.
+**Why this exists:** USD prices in hardware/software articles (Mac mini, Framework Desktop, RTX 5060 Ti, etc.) are meaningless to DE/FR/JA readers. EU/JP retail prices are NOT simple rate conversions of USD — Apple, AMD, NVIDIA each price independently per region including local VAT and import costs. Example: Mac mini M6 (base config) is $899 in the US, but 1.049 € on Apple DE and ¥149,800 on Apple JP. A "rate-converted" ~790 € would be wrong.
 
 ### Rule (applies to every hardware/software article)
 
