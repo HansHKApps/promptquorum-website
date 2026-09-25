@@ -10295,6 +10295,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "radiant-canvas",
+        "title": "Radiant Canvas Review (2026): Local AI Image Generation for Mac",
+        "url": "/power-local-llm/radiant-canvas",
+        "dateModified": "2026-09-25",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
@@ -10356,17 +10364,9 @@
         "url": "/power-local-llm/nanobot-review",
         "dateModified": "2026-09-20",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "openclaw-review",
-        "title": "OpenClaw Review 2026: Renamed Twice, Now Run by a Nonprofit",
-        "url": "/power-local-llm/openclaw-review",
-        "dateModified": "2026-09-20",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 181,
+    "totalCount": 182,
     "capped": true
   },
   "Qdrant": {
@@ -10921,6 +10921,20 @@
       }
     ],
     "totalCount": 2,
+    "capped": false
+  },
+  "Radiant Canvas": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "radiant-canvas",
+        "title": "Radiant Canvas Review (2026): Local AI Image Generation for Mac",
+        "url": "/power-local-llm/radiant-canvas",
+        "dateModified": "2026-09-25",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   }
 }

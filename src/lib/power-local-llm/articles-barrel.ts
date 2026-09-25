@@ -331,6 +331,7 @@ import { article as a_willow_inference_server_review } from './articles/willow-i
 import { article as a_web_search_mcp_review } from './articles/web-search-mcp-review'
 import { article as a_candle_vllm_review } from './articles/candle-vllm-review'
 import { article as a_swiftlm_review } from './articles/swiftlm-review'
+import { article as a_radiant_canvas } from './articles/radiant-canvas'
 
 export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   'hermes-agent-review-2026':               a_hermes_agent_review_2026,
@@ -702,4 +703,5 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'web-search-mcp-review':                               a_web_search_mcp_review,
   'candle-vllm-review':                                  a_candle_vllm_review,
   'swiftlm-review':                                      a_swiftlm_review,
+  'radiant-canvas':                                      a_radiant_canvas,
 }

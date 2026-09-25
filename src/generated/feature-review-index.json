@@ -1113,5 +1113,10 @@
     "cluster": "power-local-llm",
     "urlSlug": "willow-inference-server-review",
     "url": "/power-local-llm/willow-inference-server-review"
+  },
+  "radiant-canvas": {
+    "cluster": "power-local-llm",
+    "urlSlug": "radiant-canvas",
+    "url": "/power-local-llm/radiant-canvas"
   }
 }

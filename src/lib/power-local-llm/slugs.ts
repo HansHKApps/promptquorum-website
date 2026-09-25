@@ -494,4 +494,5 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'web-search-mcp-review':                    'web-search-mcp-review',
   'candle-vllm-review':                       'candle-vllm-review',
   'swiftlm-review':                           'swiftlm-review',
+  'radiant-canvas':                           'radiant-canvas',
 }

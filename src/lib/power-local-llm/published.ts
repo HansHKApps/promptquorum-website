@@ -536,6 +536,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'web-search-mcp-review',
   'candle-vllm-review',
   'swiftlm-review',
+  'radiant-canvas',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
