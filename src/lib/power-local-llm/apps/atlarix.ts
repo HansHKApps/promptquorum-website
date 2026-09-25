@@ -3,10 +3,15 @@
 // PromptQuorum directly by email in 2026-09. Facts below come from that
 // correspondence, corroborated by atlarix.dev, plus PromptQuorum's own
 // research into secondary sources (the maker's own blog/public posts,
-// which are NOT independently verified by PromptQuorum). No license or
-// version number could be independently verified — both left as TODO/unset
-// per this repo's convention (a sentinel means "not yet researched," never
-// "verified empty").
+// which are NOT independently verified by PromptQuorum).
+//
+// 2026-09-25 founder-review update: Amariah replied by email with corrections
+// to the initial review — license (proprietary/EULA, not unverified), the
+// current version (v14.52.1) and its sources, the Chrome extension's actual
+// data-flow split (BYOK when paired with the desktop app vs. managed models
+// standalone), the sandboxed-but-real terminal test execution, and that
+// paid-Auto training exclusion covers pay-as-you-go credit, not just Pro.
+// founderReviewedDate below reflects this fact-check pass.
 
 import type { ToolRecord } from './types'
 
@@ -19,7 +24,9 @@ export const app: ToolRecord = {
   platforms: ['mac', 'win', 'linux'],
   worksWith: ['Ollama', 'LM Studio'],
   engine: 'external',
-  license: 'TODO',
+  // Proprietary, free to use under an end-user license agreement (EULA) linked from the
+  // releases repo — confirmed by the founder 2026-09-25, not open source.
+  license: 'Proprietary (free, EULA)',
   price: 'freemium',
   // Hardware floor depends entirely on which local model the user loads via
   // Ollama or LM Studio, not a fixed attribute of Atlarix itself — same
@@ -30,6 +37,12 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['code', 'agent'],
   url: 'atlarix.dev',
+  // Only the installer/releases channel fits the existing StoreLinkKey set — the
+  // Chrome Web Store and Microsoft Store listings (see article CTA table) have no
+  // matching key ('web' would mislabel as "Website" in the UI), so they stay prose-only.
+  storeLinks: {
+    github: 'https://github.com/AmariahAK/atlarix-releases/releases',
+  },
   tagline: {
     en: 'Free AI coding agent — 100% local via Ollama or LM Studio, hybrid for its Chrome extension',
     de: 'Kostenloser KI-Coding-Agent — 100% lokal über Ollama oder LM Studio, hybrid für die Chrome-Erweiterung',
@@ -42,6 +55,15 @@ export const app: ToolRecord = {
     ko: '무료 AI 코딩 에이전트 — Ollama 또는 LM Studio로 100% 로컬, Chrome 확장 프로그램은 하이브리드',
   },
   reviewSlug: 'atlarix-review',
+  pqReview: {
+    date: '2026-09-25',
+    version: '14.52.1',
+    versionSourceUrl: 'https://github.com/AmariahAK/atlarix-releases/releases',
+  },
+  // Amariah (founder) replied by email 2026-09-25 with corrections to PromptQuorum's
+  // initial review — see the header comment above for the fact list. Badge is
+  // self-expiring (FOUNDER_STAR_VALID_DAYS) — no separate cleanup needed later.
+  founderReviewedDate: '2026-09-25',
   // Verified against the founder's own words ("100% local with a local model,
   // hybrid when using managed models") and the product's stated feature set,
   // 2026-09-25. autocomplete/mcp left unset — not stated anywhere checked.
