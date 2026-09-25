@@ -36,8 +36,8 @@
   <text x="714" y="170" font-size="13" font-weight="700" fill="#34A853" text-anchor="end" font-family="system-ui, sans-serif">~288 GB/sec</text>
   <line x1="454" y1="180" x2="754" y2="180" stroke="#F7F2FA" stroke-width="1"/>
 
-  <text x="464" y="205" font-size="13" fill="#49454F" font-family="system-ui, sans-serif">Mac mini M4 Pro</text>
-  <text x="714" y="205" font-size="13" font-weight="700" fill="#34A853" text-anchor="end" font-family="system-ui, sans-serif">~273 GB/sec</text>
+  <text x="464" y="205" font-size="13" fill="#49454F" font-family="system-ui, sans-serif">Mac mini M5 Pro</text>
+  <text x="714" y="205" font-size="13" font-weight="700" fill="#34A853" text-anchor="end" font-family="system-ui, sans-serif">307 GB/sec</text>
   <line x1="454" y1="215" x2="754" y2="215" stroke="#F7F2FA" stroke-width="1"/>
 
   <text x="602" y="255" font-size="12" fill="#79747E" text-anchor="middle" font-family="system-ui, sans-serif">結果：80–150トークン/秒</text>
