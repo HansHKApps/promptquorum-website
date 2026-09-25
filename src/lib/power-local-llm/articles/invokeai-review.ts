@@ -40,8 +40,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/invokeai-review-hero-en.webp',
-    title: 'InvokeAI Review (2026): Professional-Grade Stable Diffusion Studio',
-    seoTitle: 'InvokeAI Review 2026: Unified Canvas, Layers & Pricing Guide',
+    title: 'InvokeAI Review: Professional-Grade Stable Diffusion Studio',
+    seoTitle: 'InvokeAI Review: Unified Canvas, Layers & Pricing Guide',
     intro:
       'InvokeAI is a free, open-source, self-hosted interface for running Stable Diffusion and FLUX image models on your own GPU, built around a unified canvas with layer-based, non-destructive editing rather than a node graph or a simple tab layout. It is maintained by an open-source community under an Apache-2.0 license after the company that originally built it, Invoke, was acquired by Adobe in October 2025 and its commercial hosted service shut down. This review covers what InvokeAI actually is, its real license and cost (there is no current paid tier), hardware requirements, supported models, and how it compares with ComfyUI, AUTOMATIC1111, Fooocus, and SwarmUI.',
     metaDescription:
@@ -367,8 +367,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/invokeai-review-hero-de.webp',
-    title: 'InvokeAI Test (2026): Professionelles Stable-Diffusion-Studio',
-    seoTitle: 'InvokeAI Test 2026: Unified Canvas, Ebenen & Preis-Guide',
+    title: 'InvokeAI Test: Professionelles Stable-Diffusion-Studio',
+    seoTitle: 'InvokeAI Test: Unified Canvas, Ebenen & Preis-Guide',
     intro:
       'InvokeAI ist eine kostenlose, quelloffene, selbst gehostete Oberfläche zum Ausführen von Stable-Diffusion- und FLUX-Bildmodellen auf der eigenen GPU, aufgebaut um eine "Unified Canvas" mit ebenenbasierter, nicht-destruktiver Bearbeitung statt eines Node-Graphen oder eines einfachen Tab-Layouts. Es wird von einer Open-Source-Community unter der Apache-2.0-Lizenz gepflegt, nachdem das Unternehmen, das InvokeAI ursprünglich aufgebaut hat, Invoke, im Oktober 2025 von Adobe übernommen wurde und dessen kommerzieller gehosteter Dienst eingestellt wurde. Dieser Test erklärt, was InvokeAI tatsächlich ist, die reale Lizenz und die Kosten (es gibt derzeit keine kostenpflichtige Stufe), die Hardware-Anforderungen, die unterstützten Modelle und den Vergleich mit ComfyUI, AUTOMATIC1111, Fooocus und SwarmUI.',
     metaDescription:
@@ -693,8 +693,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/invokeai-review-hero-es.webp',
-    title: 'Análisis de InvokeAI (2026): Estudio Profesional de Stable Diffusion',
-    seoTitle: 'InvokeAI 2026: Lienzo Unificado, Capas y Guía de Precios',
+    title: 'Análisis de InvokeAI: Estudio Profesional de Stable Diffusion',
+    seoTitle: 'InvokeAI: Lienzo Unificado, Capas y Guía de Precios',
     intro:
       'InvokeAI es una interfaz gratuita, de código abierto y autoalojada para ejecutar modelos de Stable Diffusion y FLUX en tu propia GPU, construida alrededor de un lienzo unificado con edición no destructiva basada en capas, en lugar de un grafo de nodos o una interfaz simple de pestañas. Lo mantiene una comunidad de código abierto bajo licencia Apache-2.0, después de que la empresa que originalmente lo creó, Invoke, fuera adquirida por Adobe en octubre de 2025 y su servicio comercial alojado dejara de operar. Este análisis cubre qué es realmente InvokeAI, su licencia y coste reales (actualmente no existe ningún plan de pago), los requisitos de hardware, los modelos compatibles y cómo se compara con ComfyUI, AUTOMATIC1111, Fooocus y SwarmUI.',
     metaDescription:
@@ -1019,8 +1019,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/invokeai-review-hero-fr.webp',
-    title: 'Test d\'InvokeAI (2026) : Studio Stable Diffusion Professionnel',
-    seoTitle: 'InvokeAI 2026 : Canevas Unifié, Calques et Guide des Prix',
+    title: 'Test d\'InvokeAI: Studio Stable Diffusion Professionnel',
+    seoTitle: 'InvokeAI: Canevas Unifié, Calques et Guide des Prix',
     intro:
       'InvokeAI est une interface gratuite, open source et auto-hébergée pour exécuter les modèles Stable Diffusion et FLUX sur votre propre GPU, conçue autour d\'un canevas unifié avec édition non destructive basée sur des calques, plutôt qu\'un graphe de nœuds ou une simple interface à onglets. Il est maintenu par une communauté open source sous licence Apache-2.0, après que l\'entreprise l\'ayant initialement créé, Invoke, a été rachetée par Adobe en octobre 2025 et que son service commercial hébergé a cessé ses activités. Ce test explique ce qu\'est réellement InvokeAI, sa licence et son coût réels (il n\'existe actuellement aucune offre payante), ses exigences matérielles, les modèles pris en charge, et comment il se compare à ComfyUI, AUTOMATIC1111, Fooocus et SwarmUI.',
     metaDescription:
@@ -1345,8 +1345,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/invokeai-review-hero-ja.webp',
-    title: 'InvokeAIレビュー(2026):プロ向けStable Diffusionスタジオ',
-    seoTitle: 'InvokeAIレビュー2026:統合キャンバス・レイヤー・料金ガイド',
+    title: 'InvokeAIレビュー:プロ向けStable Diffusionスタジオ',
+    seoTitle: 'InvokeAIレビュー:統合キャンバス・レイヤー・料金ガイド',
     intro:
       'InvokeAIは、自分のGPU上でStable DiffusionとFLUXの画像モデルを実行するための無料・オープンソース・セルフホスト型インターフェースで、ノードグラフやシンプルなタブレイアウトではなく、レイヤーベースの非破壊編集を可能にする「統合キャンバス(Unified Canvas)」を中心に設計されています。もともとInvokeAIを開発した企業Invokeが2025年10月にAdobeに買収され、その商用ホスティングサービスが終了した後は、Apache-2.0ライセンスのもとでオープンソースコミュニティによって維持されています。本レビューでは、InvokeAIが実際に何であるか、実際のライセンスと費用(現時点で有料プランは存在しません)、ハードウェア要件、対応モデル、そしてComfyUI・AUTOMATIC1111・Fooocus・SwarmUIとの比較を取り上げます。',
     metaDescription:
@@ -1671,8 +1671,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/invokeai-review-hero-pt.webp',
-    title: 'Análise do InvokeAI (2026): Estúdio Profissional de Stable Diffusion',
-    seoTitle: 'InvokeAI 2026: Tela Unificada, Camadas e Guia de Preços',
+    title: 'Análise do InvokeAI: Estúdio Profissional de Stable Diffusion',
+    seoTitle: 'InvokeAI: Tela Unificada, Camadas e Guia de Preços',
     intro:
       'O InvokeAI é uma interface gratuita, de código aberto e autohospedada para rodar modelos Stable Diffusion e FLUX na sua própria GPU, construída em torno de uma tela unificada com edição não destrutiva baseada em camadas, em vez de um grafo de nós ou uma interface simples de abas. É mantido por uma comunidade de código aberto sob a licença Apache-2.0, depois que a empresa que originalmente o criou, a Invoke, foi adquirida pela Adobe em outubro de 2025 e seu serviço comercial hospedado foi encerrado. Esta análise cobre o que o InvokeAI realmente é, sua licença e custo reais (atualmente não há nenhum plano pago), os requisitos de hardware, os modelos compatíveis e como ele se compara ao ComfyUI, AUTOMATIC1111, Fooocus e SwarmUI.',
     metaDescription:
@@ -1997,8 +1997,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/invokeai-review-hero-ar.webp',
-    title: 'مراجعة InvokeAI (2026): استوديو احترافي لـ Stable Diffusion',
-    seoTitle: 'InvokeAI 2026: اللوحة الموحدة والطبقات ودليل الأسعار',
+    title: 'مراجعة InvokeAI: استوديو احترافي لـ Stable Diffusion',
+    seoTitle: 'InvokeAI: اللوحة الموحدة والطبقات ودليل الأسعار',
     intro:
       'InvokeAI هي واجهة مجانية ومفتوحة المصدر وذاتية الاستضافة لتشغيل نماذج Stable Diffusion وFLUX على وحدة معالجة الرسومات الخاصة بك، مبنية حول "لوحة موحدة" (Unified Canvas) تعتمد على تحرير غير مدمّر قائم على الطبقات، بدلاً من رسم بياني للعقد أو واجهة تبويبات بسيطة. يتم صيانتها من قبل مجتمع مفتوح المصدر بموجب ترخيص Apache-2.0، بعد أن استحوذت Adobe على الشركة التي أنشأتها في الأصل، Invoke، في أكتوبر 2025 وتوقفت خدمتها التجارية المستضافة. تغطي هذه المراجعة ما هي InvokeAI فعلياً، وترخيصها وتكلفتها الحقيقية (لا توجد حالياً أي خطة مدفوعة)، ومتطلبات الأجهزة، والنماذج المدعومة، وكيف تقارَن بـ ComfyUI وAUTOMATIC1111 وFooocus وSwarmUI.',
     metaDescription:
@@ -2323,8 +2323,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/invokeai-review-hero-zh.webp',
-    title: 'InvokeAI评测(2026):专业级Stable Diffusion工作室',
-    seoTitle: 'InvokeAI 2026评测:统一画布、图层与定价指南',
+    title: 'InvokeAI评测:专业级Stable Diffusion工作室',
+    seoTitle: 'InvokeAI 评测:统一画布、图层与定价指南',
     intro:
       'InvokeAI是一款免费、开源、可自托管的界面,用于在自己的GPU上运行Stable Diffusion和FLUX图像模型。它围绕"统一画布"(Unified Canvas)构建,支持基于图层的非破坏性编辑,而不是节点图或简单的选项卡式布局。在最初创建它的公司Invoke于2025年10月被Adobe收购、其商业托管服务终止后,该项目由开源社区在Apache-2.0许可证下维护。本评测涵盖InvokeAI的真实定位、真实的许可与费用(目前没有任何付费方案)、硬件要求、支持的模型,以及与ComfyUI、AUTOMATIC1111、Fooocus和SwarmUI的比较。',
     metaDescription:
@@ -2649,8 +2649,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/invokeai-review-hero-ko.webp',
-    title: 'InvokeAI 리뷰(2026): 전문가급 Stable Diffusion 스튜디오',
-    seoTitle: 'InvokeAI 2026: 통합 캔버스, 레이어, 가격 가이드',
+    title: 'InvokeAI 리뷰: 전문가급 Stable Diffusion 스튜디오',
+    seoTitle: 'InvokeAI: 통합 캔버스, 레이어, 가격 가이드',
     intro:
       'InvokeAI는 자신의 GPU에서 Stable Diffusion과 FLUX 이미지 모델을 실행하기 위한 무료 오픈소스 셀프 호스팅 인터페이스로, 노드 그래프나 단순한 탭 레이아웃 대신 레이어 기반의 비파괴 편집을 지원하는 "통합 캔버스(Unified Canvas)"를 중심으로 설계되었습니다. 원래 InvokeAI를 만든 회사인 Invoke가 2025년 10월 Adobe에 인수되고 상용 호스팅 서비스가 종료된 이후에는 Apache-2.0 라이선스 하에 오픈소스 커뮤니티가 유지 관리하고 있습니다. 이 리뷰에서는 InvokeAI가 실제로 무엇인지, 실제 라이선스와 비용(현재 유료 요금제는 존재하지 않음), 하드웨어 요구사항, 지원 모델, 그리고 ComfyUI, AUTOMATIC1111, Fooocus, SwarmUI와의 비교를 다룹니다.',
     metaDescription:

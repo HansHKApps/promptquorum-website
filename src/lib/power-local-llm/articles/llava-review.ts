@@ -14,8 +14,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/llava-review-hero-en.webp',
-    title: 'LLaVA Review (2026): The Research Model That Started Local Vision AI',
-    seoTitle: 'LLaVA Review 2026: The Original Local Vision-Language Model',
+    title: 'LLaVA Review: The Research Model That Started Local Vision AI',
+    seoTitle: 'LLaVA Review: The Original Local Vision-Language Model',
     intro:
       'LLaVA (Large Language and Vision Assistant) is the open-source vision-language model that established how most local multimodal AI is built today: a vision encoder feeding into a text-generating LLM. Created by researchers at the University of Wisconsin-Madison, Microsoft Research, and Columbia University, and distributed on [GitHub](https://github.com/haotian-liu/LLaVA) and via the [Ollama library](https://ollama.com/library/llava), it can now be run in a single command (`ollama run llava`). This review covers what LLaVA actually is, real installation and usage commands, its two-layer license (Apache-2.0 code plus base-model-dependent weight licenses), and where it now sits against newer local vision models — the honest picture for 2026.',
     metaDescription:
@@ -376,8 +376,8 @@ print(response["message"]["content"])`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/llava-review-hero-de.webp',
-    title: 'LLaVA im Test (2026): Das Forschungsmodell, das lokale Vision-KI begründete',
-    seoTitle: 'LLaVA im Test 2026: Das erste lokale Vision-Language-Modell',
+    title: 'LLaVA im Test: Das Forschungsmodell, das lokale Vision-KI begründete',
+    seoTitle: 'LLaVA im Test: Das erste lokale Vision-Language-Modell',
     intro:
       'LLaVA (Large Language and Vision Assistant) ist das quelloffene Vision-Language-Modell, das die heute übliche Architektur für lokale multimodale KI begründet hat: ein Vision-Encoder, der in ein textgenerierendes LLM einspeist. Entwickelt von Forschern der University of Wisconsin-Madison, Microsoft Research und Columbia University, verbreitet auf [GitHub](https://github.com/haotian-liu/LLaVA) und über die [Ollama-Bibliothek](https://ollama.com/library/llava), lässt es sich heute mit einem einzigen Befehl starten (`ollama run llava`). Dieser Test behandelt, was LLaVA tatsächlich ist, echte Installations- und Nutzungsbefehle, seine zweischichtige Lizenz (Apache-2.0-Code plus basismodellabhängige Gewichtslizenzen) und wo es 2026 im Vergleich zu neueren lokalen Vision-Modellen steht.',
     metaDescription:
@@ -738,8 +738,8 @@ print(response["message"]["content"])`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/llava-review-hero-fr.webp',
-    title: 'LLaVA : avis (2026) — le modèle de recherche à l\'origine de l\'IA visuelle locale',
-    seoTitle: 'LLaVA : avis 2026 — le premier modèle vision-langage local',
+    title: 'LLaVA: avis — le modèle de recherche à l\'origine de l\'IA visuelle locale',
+    seoTitle: 'LLaVA: avis — le premier modèle vision-langage local',
     intro:
       'LLaVA (Large Language and Vision Assistant) est le modèle vision-langage open source qui a établi la manière dont la plupart des IA multimodales locales sont construites aujourd\'hui : un encodeur visuel alimentant un LLM générateur de texte. Créé par des chercheurs de l\'université du Wisconsin-Madison, de Microsoft Research et de l\'université Columbia, distribué sur [GitHub](https://github.com/haotian-liu/LLaVA) et via la [bibliothèque Ollama](https://ollama.com/library/llava), il peut désormais être exécuté en une seule commande (`ollama run llava`). Cet avis couvre ce qu\'est réellement LLaVA, de vraies commandes d\'installation et d\'utilisation, sa licence à deux niveaux (code Apache-2.0 plus licences de poids dépendantes du modèle de base), et sa place actuelle face aux modèles de vision locaux plus récents — le tableau honnête pour 2026.',
     metaDescription:
@@ -1100,8 +1100,8 @@ print(response["message"]["content"])`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/llava-review-hero-es.webp',
-    title: 'LLaVA: análisis (2026) — el modelo de investigación que inició la IA visual local',
-    seoTitle: 'LLaVA: análisis 2026 — el primer modelo visión-lenguaje local',
+    title: 'LLaVA: análisis — el modelo de investigación que inició la IA visual local',
+    seoTitle: 'LLaVA: análisis — el primer modelo visión-lenguaje local',
     intro:
       'LLaVA (Large Language and Vision Assistant) es el modelo visión-lenguaje de código abierto que estableció cómo se construye hoy la mayoría de la IA multimodal local: un codificador visual que alimenta a un LLM generador de texto. Creado por investigadores de la Universidad de Wisconsin-Madison, Microsoft Research y la Universidad de Columbia, y distribuido en [GitHub](https://github.com/haotian-liu/LLaVA) y a través de la [biblioteca de Ollama](https://ollama.com/library/llava), ahora se puede ejecutar con un solo comando (`ollama run llava`). Este análisis cubre qué es realmente LLaVA, comandos reales de instalación y uso, su licencia de dos niveles (código Apache-2.0 más licencias de pesos dependientes del modelo base), y dónde se sitúa hoy frente a modelos de visión locales más recientes — el panorama honesto para 2026.',
     metaDescription:
@@ -1462,8 +1462,8 @@ print(response["message"]["content"])`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/llava-review-hero-ja.webp',
-    title: 'LLaVAレビュー(2026):ローカルビジョンAIの原点となった研究モデル',
-    seoTitle: 'LLaVAレビュー2026:最初のローカルビジョン言語モデル',
+    title: 'LLaVAレビュー:ローカルビジョンAIの原点となった研究モデル',
+    seoTitle: 'LLaVAレビュー:最初のローカルビジョン言語モデル',
     intro:
       'LLaVA(Large Language and Vision Assistant)は、今日ほとんどのローカルマルチモーダルAIが採用する構築方法——ビジョンエンコーダーをテキスト生成LLMに接続する方式——を確立したオープンソースのビジョン言語モデルです。ウィスコンシン大学マディソン校、Microsoft Research、コロンビア大学の研究者によって開発され、[GitHub](https://github.com/haotian-liu/LLaVA)と[Ollamaライブラリ](https://ollama.com/library/llava)経由で配布されており、現在は一つのコマンド(`ollama run llava`)で実行できます。このレビューでは、LLaVAが実際に何であるか、実際のインストールと使用コマンド、その二層構造のライセンス(Apache-2.0のコードとベースモデル依存の重みライセンス)、そして2026年時点で新しいローカルビジョンモデルと比較してどこに位置するかを、正直に解説します。',
     metaDescription:
@@ -1824,8 +1824,8 @@ print(response["message"]["content"])`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/llava-review-hero-pt.webp',
-    title: 'LLaVA: análise (2026) — o modelo de pesquisa que iniciou a IA visual local',
-    seoTitle: 'LLaVA: análise 2026 — o primeiro modelo visão-linguagem local',
+    title: 'LLaVA: análise — o modelo de pesquisa que iniciou a IA visual local',
+    seoTitle: 'LLaVA: análise — o primeiro modelo visão-linguagem local',
     intro:
       'LLaVA (Large Language and Vision Assistant) é o modelo visão-linguagem de código aberto que estabeleceu como a maioria da IA multimodal local é construída hoje: um codificador visual alimentando um LLM gerador de texto. Criado por pesquisadores da Universidade de Wisconsin-Madison, Microsoft Research e Universidade Columbia, e distribuído no [GitHub](https://github.com/haotian-liu/LLaVA) e via [biblioteca do Ollama](https://ollama.com/library/llava), agora pode ser executado com um único comando (`ollama run llava`). Esta análise cobre o que o LLaVA realmente é, comandos reais de instalação e uso, sua licença de duas camadas (código Apache-2.0 mais licenças de pesos dependentes do modelo base), e onde ele se posiciona hoje frente a modelos de visão locais mais recentes — o panorama honesto para 2026.',
     metaDescription:
@@ -2186,8 +2186,8 @@ print(response["message"]["content"])`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/llava-review-hero-ar.webp',
-    title: 'مراجعة LLaVA (2026): النموذج البحثي الذي أطلق الذكاء الاصطناعي البصري المحلي',
-    seoTitle: 'مراجعة LLaVA 2026: أول نموذج رؤية-لغة محلي',
+    title: 'مراجعة LLaVA: النموذج البحثي الذي أطلق الذكاء الاصطناعي البصري المحلي',
+    seoTitle: 'مراجعة LLaVA: أول نموذج رؤية-لغة محلي',
     intro:
       'LLaVA (Large Language and Vision Assistant) هو نموذج الرؤية-اللغة مفتوح المصدر الذي أرسى الطريقة التي يُبنى بها معظم الذكاء الاصطناعي المتعدد الوسائط محليًا اليوم: مشفِّر بصري يغذي نموذجًا لغويًا كبيرًا مولِّدًا للنص. طوّره باحثون من جامعة ويسكونسن-ماديسون ومايكروسوفت ريسيرش وجامعة كولومبيا، ويُوزَّع على [GitHub](https://github.com/haotian-liu/LLaVA) وعبر [مكتبة Ollama](https://ollama.com/library/llava)، ويمكن الآن تشغيله بأمر واحد (`ollama run llava`). تتناول هذه المراجعة ما هو LLaVA فعليًا، وأوامر تثبيت واستخدام حقيقية، ورخصته ذات الطبقتين (كود بموجب Apache-2.0 بالإضافة إلى رخص أوزان تعتمد على النموذج الأساسي)، وموقعه اليوم مقارنة بنماذج الرؤية المحلية الأحدث — الصورة الصادقة لعام 2026.',
     metaDescription:
@@ -2548,8 +2548,8 @@ print(response["message"]["content"])`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/llava-review-hero-zh.webp',
-    title: 'LLaVA评测(2026):开启本地视觉AI的研究模型',
-    seoTitle: 'LLaVA评测2026:第一个本地视觉语言模型',
+    title: 'LLaVA评测:开启本地视觉AI的研究模型',
+    seoTitle: 'LLaVA评测:第一个本地视觉语言模型',
     intro:
       'LLaVA(Large Language and Vision Assistant)是开源视觉语言模型,确立了当今大多数本地多模态AI的构建方式:视觉编码器输入到生成文本的LLM中。由威斯康星大学麦迪逊分校、微软研究院和哥伦比亚大学的研究人员创建,发布于[GitHub](https://github.com/haotian-liu/LLaVA)并通过[Ollama库](https://ollama.com/library/llava)分发,现在只需一条命令即可运行(`ollama run llava`)。本评测介绍LLaVA的实际功能、真实的安装和使用命令、其双层许可证(Apache-2.0代码加基础模型相关的权重许可证),以及它在2026年相较于更新的本地视觉模型所处的位置——真实全貌。',
     metaDescription:
@@ -2910,8 +2910,8 @@ print(response["message"]["content"])`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/llava-review-hero-ko.webp',
-    title: 'LLaVA 리뷰(2026): 로컬 비전 AI의 시작을 연 연구 모델',
-    seoTitle: 'LLaVA 리뷰 2026: 최초의 로컬 비전-언어 모델',
+    title: 'LLaVA 리뷰: 로컬 비전 AI의 시작을 연 연구 모델',
+    seoTitle: 'LLaVA 리뷰: 최초의 로컬 비전-언어 모델',
     intro:
       'LLaVA(Large Language and Vision Assistant)는 오늘날 대부분의 로컬 멀티모달 AI가 구축되는 방식——비전 인코더가 텍스트 생성 LLM에 입력되는 방식——을 확립한 오픈소스 비전-언어 모델입니다. 위스콘신-매디슨 대학교, Microsoft Research, 컬럼비아 대학교의 연구진이 개발했으며, [GitHub](https://github.com/haotian-liu/LLaVA)와 [Ollama 라이브러리](https://ollama.com/library/llava)를 통해 배포되며, 이제는 명령어 하나(`ollama run llava`)로 실행할 수 있습니다. 이 리뷰에서는 LLaVA가 실제로 무엇인지, 실제 설치 및 사용 명령어, 이중 계층 라이선스(Apache-2.0 코드와 기본 모델에 따라 달라지는 가중치 라이선스), 그리고 2026년 기준 더 새로운 로컬 비전 모델과 비교했을 때 어디에 위치하는지를 솔직하게 다룹니다.',
     metaDescription:

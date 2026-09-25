@@ -14,8 +14,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/rapr-ai-review-hero-en.webp',
-    title: 'RAPR AI Review (2026): Local Desktop Command Center for Ollama, Claude and Gemini',
-    seoTitle: 'RAPR AI Review 2026: Desktop AI Agent Command Center',
+    title: 'RAPR AI Review: Local Desktop Command Center for Ollama, Claude and Gemini',
+    seoTitle: 'RAPR AI Review: Desktop AI Agent Command Center',
     intro:
       'RAPR AI, built by RAPR AI and available at [raprai.com](https://raprai.com/), markets itself as a "local desktop command center for every AI you use." It does not replace Ollama, Claude, Gemini, Codex, or Cursor — it sits in front of them, giving you one Windows desktop interface to dispatch tasks, automate the desktop, remember context, and route work to whichever AI backend fits a given job. The practical question this review answers is narrower than the marketing line suggests: RAPR AI is only local and offline when you configure it to use Ollama on your own machine; every other backend it supports is a cloud API call routed through RAPR AI\'s interface, exactly like using that service directly.',
     metaDescription:
@@ -242,8 +242,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/rapr-ai-review-hero-ar.webp',
-    title: 'مراجعة ⁨RAPR AI⁩ (⁨2026⁩): مركز تحكم سطح مكتب محلي لـ ⁨Ollama⁩ و⁨Claude⁩ و⁨Gemini⁩',
-    seoTitle: 'مراجعة ⁨RAPR AI 2026⁩: مركز تحكم لوكلاء الذكاء الاصطناعي',
+    title: 'مراجعة ⁨RAPR AI⁩: مركز تحكم سطح مكتب محلي لـ ⁨Ollama⁩ و⁨Claude⁩ و⁨Gemini⁩',
+    seoTitle: 'مراجعة ⁨RAPR AI⁩: مركز تحكم لوكلاء الذكاء الاصطناعي',
     intro:
       'تُقدّم ⁨RAPR AI⁩، من تطوير شركة ⁨RAPR AI⁩ والمتاحة على ⁨[raprai.com](https://raprai.com/)⁩، نفسها كـ"مركز تحكم سطح مكتب محلي لكل ذكاء اصطناعي تستخدمه". لا تستبدل هذه الأداة ⁨Ollama⁩ أو ⁨Claude⁩ أو ⁨Gemini⁩ أو ⁨Codex⁩ أو ⁨Cursor⁩ — بل تعمل كواجهة أمامها، فتمنحك واجهة واحدة على ⁨Windows⁩ لتوزيع المهام وأتمتة سطح المكتب وحفظ السياق وتوجيه العمل إلى النموذج الأنسب. السؤال العملي الذي تجيب عنه هذه المراجعة أضيق مما توحي به العبارة التسويقية: ⁨RAPR AI⁩ محلية وتعمل دون اتصال فقط عند ضبطها على استخدام ⁨Ollama⁩ على جهازك؛ وكل نموذج آخر تدعمه هو استدعاء لواجهة سحابية يُمرَّر عبر واجهة ⁨RAPR AI⁩، تمامًا كاستخدام تلك الخدمة مباشرة.',
     metaDescription:
@@ -470,8 +470,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/rapr-ai-review-hero-de.webp',
-    title: 'RAPR AI im Test (2026): Lokale Desktop-Kommandozentrale für Ollama, Claude und Gemini',
-    seoTitle: 'RAPR AI Test 2026: Kommandozentrale für KI-Agenten',
+    title: 'RAPR AI im Test: Lokale Desktop-Kommandozentrale für Ollama, Claude und Gemini',
+    seoTitle: 'RAPR AI Test: Kommandozentrale für KI-Agenten',
     intro:
       'RAPR AI, entwickelt von RAPR AI und verfügbar unter [raprai.com](https://raprai.com/), positioniert sich als "lokale Desktop-Kommandozentrale für jede KI, die Sie nutzen". Die App ersetzt nicht Ollama, Claude, Gemini, Codex oder Cursor — sie legt sich vor diese Werkzeuge und bietet eine einzige Windows-Oberfläche, um Aufgaben zu verteilen, den Desktop zu automatisieren, Kontext zu behalten und Arbeit an das jeweils passende KI-Backend weiterzuleiten. Die praktische Frage, die dieser Test beantwortet, ist enger gefasst als die Marketing-Aussage: RAPR AI ist nur dann lokal und offline, wenn Sie sie auf Ollama auf Ihrem eigenen Rechner konfigurieren; jedes andere unterstützte Backend ist ein Cloud-API-Aufruf, der über die RAPR-AI-Oberfläche geleitet wird — genau wie bei direkter Nutzung des jeweiligen Dienstes.',
     metaDescription:
@@ -698,8 +698,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/rapr-ai-review-hero-es.webp',
-    title: 'Reseña de RAPR AI (2026): Centro de Control de Escritorio Local para Ollama, Claude y Gemini',
-    seoTitle: 'Reseña RAPR AI 2026: Centro de Control de Agentes IA',
+    title: 'Reseña de RAPR AI: Centro de Control de Escritorio Local para Ollama, Claude y Gemini',
+    seoTitle: 'Reseña RAPR AI: Centro de Control de Agentes IA',
     intro:
       'RAPR AI, desarrollada por RAPR AI y disponible en [raprai.com](https://raprai.com/), se presenta como un "centro de control de escritorio local para cada IA que usas". No reemplaza a Ollama, Claude, Gemini, Codex ni Cursor: se coloca delante de ellos, ofreciendo una única interfaz en Windows para repartir tareas, automatizar el escritorio, mantener el contexto y enrutar el trabajo hacia el backend de IA más adecuado para cada tarea. La pregunta práctica que responde esta reseña es más estrecha de lo que sugiere el mensaje comercial: RAPR AI solo es local y funciona sin conexión cuando la configuras para usar Ollama en tu propio equipo; cualquier otro backend que admite es una llamada a una API en la nube enrutada a través de la interfaz de RAPR AI, exactamente igual que usar ese servicio directamente.',
     metaDescription:
@@ -926,8 +926,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/rapr-ai-review-hero-fr.webp',
-    title: 'RAPR AI : notre avis (2026) — centre de contrôle local pour Ollama, Claude et Gemini',
-    seoTitle: 'RAPR AI : avis 2026 sur ce centre de contrôle IA',
+    title: 'RAPR AI: notre avis — centre de contrôle local pour Ollama, Claude et Gemini',
+    seoTitle: 'RAPR AI: avis sur ce centre de contrôle IA',
     intro:
       'RAPR AI, développée par RAPR AI et disponible sur [raprai.com](https://raprai.com/), se présente comme un "centre de contrôle de bureau local pour chaque IA que vous utilisez". Elle ne remplace ni Ollama, ni Claude, ni Gemini, ni Codex, ni Cursor : elle se place devant ces outils et offre une interface Windows unique pour répartir les tâches, automatiser le bureau, conserver le contexte et orienter le travail vers le backend d\'IA le plus adapté. La question pratique à laquelle répond cet avis est plus restreinte que le discours commercial ne le laisse penser : RAPR AI n\'est locale et hors ligne que lorsque vous la configurez pour utiliser Ollama sur votre propre machine ; tout autre backend qu\'elle prend en charge correspond à un appel API cloud relayé par l\'interface de RAPR AI, exactement comme si vous utilisiez ce service directement.',
     metaDescription:
@@ -1154,8 +1154,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/rapr-ai-review-hero-ja.webp',
-    title: 'RAPR AIレビュー（2026）：Ollama・Claude・Geminiをまとめるローカルデスクトップ司令塔',
-    seoTitle: 'RAPR AIレビュー2026：AIエージェント司令塔アプリ',
+    title: 'RAPR AIレビュー：Ollama・Claude・Geminiをまとめるローカルデスクトップ司令塔',
+    seoTitle: 'RAPR AIレビュー：AIエージェント司令塔アプリ',
     intro:
       'RAPR AI社が開発しraprai.comで公開されているRAPR AIは、「使っているすべてのAIのためのローカルデスクトップ司令塔」を掲げるアプリです。OllamaやClaude、Gemini、Codex、Cursorを置き換えるものではなく、それらの手前に立ち、タスクの振り分け、デスクトップ自動化、コンテキストの記憶、タスクごとに最適なAIバックエンドへのルーティングを、Windows上の一つの画面から行えるようにします。本レビューが答える実務的な問いは、宣伝文句が示唆するより限定的です。RAPR AIがローカルかつオフラインになるのは、自分のマシン上のOllamaを使う設定にした場合のみで、それ以外のバックエンドはすべて、RAPR AIの画面を経由してクラウドAPIを呼び出しているにすぎません。これは各サービスを直接使う場合と同じです。',
     metaDescription:
@@ -1382,8 +1382,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/rapr-ai-review-hero-pt.webp',
-    title: 'RAPR AI: Análise (2026) — Central de Comando Local para Ollama, Claude e Gemini',
-    seoTitle: 'RAPR AI: Análise 2026 da Central de Agentes de IA',
+    title: 'RAPR AI: Análise — Central de Comando Local para Ollama, Claude e Gemini',
+    seoTitle: 'RAPR AI: Análise da Central de Agentes de IA',
     intro:
       'A RAPR AI, desenvolvida pela RAPR AI e disponível em [raprai.com](https://raprai.com/), se apresenta como uma "central de comando de desktop local para cada IA que você usa". Ela não substitui o Ollama, o Claude, o Gemini, o Codex ou o Cursor — ela se posiciona à frente dessas ferramentas, oferecendo uma única interface no Windows para distribuir tarefas, automatizar o desktop, manter contexto e direcionar o trabalho para o backend de IA mais adequado a cada tarefa. A pergunta prática que esta análise responde é mais restrita do que sugere o discurso de marketing: a RAPR AI só é local e funciona offline quando você a configura para usar o Ollama na sua própria máquina; qualquer outro backend que ela suporta é uma chamada de API na nuvem roteada pela interface da RAPR AI, exatamente como usar aquele serviço diretamente.',
     metaDescription:
@@ -1610,8 +1610,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/rapr-ai-review-hero-zh.webp',
-    title: 'RAPR AI 评测（2026）：整合 Ollama、Claude 与 Gemini 的本地桌面指挥中心',
-    seoTitle: 'RAPR AI 评测 2026：AI 智能体指挥中心',
+    title: 'RAPR AI 评测：整合 Ollama、Claude 与 Gemini 的本地桌面指挥中心',
+    seoTitle: 'RAPR AI 评测：AI 智能体指挥中心',
     intro:
       'RAPR AI 由 RAPR AI 公司开发，可在 [raprai.com](https://raprai.com/) 获取，其定位是"面向你所使用的每一个 AI 的本地桌面指挥中心"。它并不替代 Ollama、Claude、Gemini、Codex 或 Cursor，而是位于它们之前，在 Windows 上提供统一界面来分派任务、自动化桌面操作、保留上下文，并将工作路由到最适合的 AI 后端。本文回答的实际问题比宣传语暗示的要窄:RAPR AI 只有在你将其配置为使用你自己机器上的 Ollama 时才是本地且离线的;它支持的其他后端都只是通过 RAPR AI 界面转发的云端 API 调用,与直接使用那些服务完全相同。',
     metaDescription:
@@ -1838,8 +1838,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/rapr-ai-review-hero-ko.webp',
-    title: 'RAPR AI 리뷰(2026): Ollama·Claude·Gemini를 위한 로컬 데스크톱 커맨드 센터',
-    seoTitle: 'RAPR AI 리뷰 2026: AI 에이전트 커맨드 센터',
+    title: 'RAPR AI 리뷰: Ollama·Claude·Gemini를 위한 로컬 데스크톱 커맨드 센터',
+    seoTitle: 'RAPR AI 리뷰: AI 에이전트 커맨드 센터',
     intro:
       'RAPR AI는 RAPR AI사가 개발하고 raprai.com에서 제공하는 앱으로, "사용하는 모든 AI를 위한 로컬 데스크톱 커맨드 센터"를 표방합니다. 이 앱은 Ollama, Claude, Gemini, Codex, Cursor를 대체하지 않으며, 이러한 도구들 앞단에 위치해 Windows에서 하나의 인터페이스로 작업을 분배하고, 데스크톱을 자동화하고, 컨텍스트를 기억하며, 작업에 가장 적합한 AI 백엔드로 라우팅할 수 있도록 합니다. 이 리뷰가 다루는 실질적인 질문은 마케팅 문구가 암시하는 것보다 훨씬 좁습니다. RAPR AI는 자신의 기기에서 실행되는 Ollama를 사용하도록 설정한 경우에만 로컬이자 오프라인이며, 이를 제외한 다른 모든 백엔드는 RAPR AI 인터페이스를 거쳐 전달되는 클라우드 API 호출일 뿐입니다 — 해당 서비스를 직접 사용하는 것과 정확히 동일합니다.',
     metaDescription:

@@ -17,8 +17,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-en.webp',
-    title: 'SwarmUI Review (2026): The Multi-GPU Stable Diffusion Web UI',
-    seoTitle: 'SwarmUI Review 2026: Multi-GPU ComfyUI-Based Image UI',
+    title: 'SwarmUI Review: The Multi-GPU Stable Diffusion Web UI',
+    seoTitle: 'SwarmUI Review: Multi-GPU ComfyUI-Based Image UI',
     intro:
       'SwarmUI — formerly named StableSwarmUI — is a free, open-source, modular web interface for local Stable Diffusion, FLUX, and other image and video generation models, built to drive multiple GPUs and multiple users from one shared install. It uses [ComfyUI](https://github.com/comfy-org/ComfyUI) as its underlying inference engine: instead of building a competing image-generation backend from scratch, SwarmUI wraps ComfyUI in a form-based Generate tab for everyday use while still exposing the raw ComfyUI node graph for readers who want full manual control. This review covers what SwarmUI actually is today (including the honest history of its rename and its now-fully-independent relationship to Stability AI), its multi-GPU and multi-user architecture, model support, installation, licensing, and how it compares with single-user tools like AUTOMATIC1111 and Fooocus.',
     metaDescription:
@@ -333,8 +333,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-de.webp',
-    title: 'SwarmUI Test (2026): Die Multi-GPU-Weboberfläche für Stable Diffusion',
-    seoTitle: 'SwarmUI Test 2026: Multi-GPU-UI auf ComfyUI-Basis',
+    title: 'SwarmUI Test: Die Multi-GPU-Weboberfläche für Stable Diffusion',
+    seoTitle: 'SwarmUI Test: Multi-GPU-UI auf ComfyUI-Basis',
     intro:
       'SwarmUI — früher StableSwarmUI genannt — ist eine kostenlose, quelloffene, modulare Weboberfläche für lokales Stable Diffusion, FLUX und andere Bild- und Videogenerierungsmodelle, die speziell dafür gebaut wurde, mehrere GPUs und mehrere Nutzer aus einer gemeinsamen Installation heraus anzusteuern. Es nutzt [ComfyUI](https://github.com/comfy-org/ComfyUI) als zugrunde liegende Inferenz-Engine: Statt ein konkurrierendes Bildgenerierungs-Backend von Grund auf neu zu bauen, umhüllt SwarmUI ComfyUI mit einem formularbasierten „Generate"-Tab für den Alltagsgebrauch und legt dabei den rohen ComfyUI-Node-Graph für Leser frei, die volle manuelle Kontrolle wollen. Dieser Test erklärt, was SwarmUI heute tatsächlich ist (inklusive der ehrlichen Geschichte seiner Umbenennung und seines inzwischen vollständig unabhängigen Verhältnisses zu Stability AI), seine Multi-GPU- und Multi-User-Architektur, die Modellunterstützung, die Installation, die Lizenz und den Vergleich mit Single-User-Tools wie AUTOMATIC1111 und Fooocus.',
     metaDescription:
@@ -649,8 +649,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-es.webp',
-    title: 'Reseña de SwarmUI (2026): la interfaz web multi-GPU para Stable Diffusion',
-    seoTitle: 'SwarmUI 2026: interfaz multi-GPU basada en ComfyUI',
+    title: 'Reseña de SwarmUI: la interfaz web multi-GPU para Stable Diffusion',
+    seoTitle: 'SwarmUI: interfaz multi-GPU basada en ComfyUI',
     intro:
       'SwarmUI — antes llamada StableSwarmUI — es una interfaz web gratuita, de código abierto y modular para Stable Diffusion, FLUX y otros modelos locales de generación de imágenes y video, diseñada para operar varias GPU y varios usuarios desde una única instalación compartida. Usa [ComfyUI](https://github.com/comfy-org/ComfyUI) como motor de inferencia subyacente: en lugar de construir un backend de generación de imágenes desde cero, SwarmUI envuelve ComfyUI en una pestaña "Generate" basada en formularios para el uso diario, mientras sigue exponiendo el grafo de nodos de ComfyUI para quienes quieran control manual completo. Esta reseña cubre qué es SwarmUI hoy (incluida la historia honesta de su cambio de nombre y su relación ahora totalmente independiente con Stability AI), su arquitectura multi-GPU y multiusuario, el soporte de modelos, la instalación, la licencia y cómo se compara con herramientas de un solo usuario como AUTOMATIC1111 y Fooocus.',
     metaDescription:
@@ -965,8 +965,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-fr.webp',
-    title: 'Avis SwarmUI (2026) : l\'interface web multi-GPU pour Stable Diffusion',
-    seoTitle: 'SwarmUI 2026 : interface multi-GPU basée sur ComfyUI',
+    title: 'Avis SwarmUI: l\'interface web multi-GPU pour Stable Diffusion',
+    seoTitle: 'SwarmUI: interface multi-GPU basée sur ComfyUI',
     intro:
       'SwarmUI — anciennement StableSwarmUI — est une interface web gratuite, open source et modulaire pour Stable Diffusion, FLUX et d\'autres modèles locaux de génération d\'images et de vidéos, conçue pour piloter plusieurs GPU et plusieurs utilisateurs depuis une seule installation partagée. Elle utilise [ComfyUI](https://github.com/comfy-org/ComfyUI) comme moteur d\'inférence sous-jacent : au lieu de construire un backend de génération d\'images concurrent à partir de zéro, SwarmUI enveloppe ComfyUI dans un onglet « Generate » basé sur des formulaires pour un usage quotidien, tout en exposant le graphe de nœuds brut de ComfyUI pour les lecteurs souhaitant un contrôle manuel complet. Cet avis couvre ce qu\'est réellement SwarmUI aujourd\'hui (y compris l\'histoire honnête de son changement de nom et sa relation désormais totalement indépendante avec Stability AI), son architecture multi-GPU et multi-utilisateurs, la prise en charge des modèles, l\'installation, la licence, et sa comparaison avec des outils mono-utilisateur comme AUTOMATIC1111 et Fooocus.',
     metaDescription:
@@ -1281,8 +1281,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-ja.webp',
-    title: 'SwarmUIレビュー(2026):マルチGPU対応のStable Diffusion用Web UI',
-    seoTitle: 'SwarmUIレビュー2026:ComfyUIベースのマルチGPU UI',
+    title: 'SwarmUIレビュー:マルチGPU対応のStable Diffusion用Web UI',
+    seoTitle: 'SwarmUIレビュー:ComfyUIベースのマルチGPU UI',
     intro:
       'SwarmUI(旧名StableSwarmUI)は、ローカルのStable Diffusion、FLUX、その他の画像・動画生成モデル向けの無料・オープンソース・モジュール型Web UIで、複数のGPUと複数のユーザーを1つの共有インストールから運用するために作られています。バックエンドの推論エンジンとして[ComfyUI](https://github.com/comfy-org/ComfyUI)を使用します。独自の画像生成バックエンドをゼロから構築する代わりに、SwarmUIは日常利用向けのフォーム形式の「Generate」タブでComfyUIをラップしつつ、完全な手動制御を望む読者にはComfyUIの生のノードグラフも公開しています。本レビューでは、SwarmUIが現在実際に何であるか(名称変更の経緯とStability AIとの現在の完全独立の関係についての正確な情報を含む)、マルチGPU・マルチユーザーアーキテクチャ、対応モデル、インストール方法、ライセンス、そしてAUTOMATIC1111やFooocusのようなシングルユーザー向けツールとの比較を取り上げます。',
     metaDescription:
@@ -1597,8 +1597,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-pt.webp',
-    title: 'Análise do SwarmUI (2026): a interface web multi-GPU para Stable Diffusion',
-    seoTitle: 'SwarmUI 2026: interface multi-GPU baseada em ComfyUI',
+    title: 'Análise do SwarmUI: a interface web multi-GPU para Stable Diffusion',
+    seoTitle: 'SwarmUI: interface multi-GPU baseada em ComfyUI',
     intro:
       'O SwarmUI — antes chamado StableSwarmUI — é uma interface web gratuita, de código aberto e modular para Stable Diffusion, FLUX e outros modelos locais de geração de imagem e vídeo, construída especificamente para operar várias GPUs e vários usuários a partir de uma única instalação compartilhada. Ele usa o [ComfyUI](https://github.com/comfy-org/ComfyUI) como mecanismo de inferência subjacente: em vez de construir um backend de geração de imagens concorrente do zero, o SwarmUI envolve o ComfyUI em uma aba "Generate" baseada em formulário para uso no dia a dia, enquanto ainda expõe o grafo de nós bruto do ComfyUI para quem quiser controle manual completo. Esta análise cobre o que o SwarmUI realmente é hoje (incluindo a história honesta de sua mudança de nome e sua relação agora totalmente independente com a Stability AI), sua arquitetura multi-GPU e multiusuário, suporte a modelos, instalação, licença e como ele se compara a ferramentas de usuário único como AUTOMATIC1111 e Fooocus.',
     metaDescription:
@@ -1913,8 +1913,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-ar.webp',
-    title: 'مراجعة SwarmUI (2026): واجهة الويب متعددة GPU لـ Stable Diffusion',
-    seoTitle: 'مراجعة SwarmUI 2026: واجهة متعددة GPU قائمة على ComfyUI',
+    title: 'مراجعة SwarmUI: واجهة الويب متعددة GPU لـ Stable Diffusion',
+    seoTitle: 'مراجعة SwarmUI: واجهة متعددة GPU قائمة على ComfyUI',
     intro:
       'SwarmUI — الذي كان يُعرف سابقًا باسم StableSwarmUI — هو واجهة ويب مجانية ومفتوحة المصدر ومعيارية لـ Stable Diffusion وFLUX ونماذج توليد الصور والفيديو المحلية الأخرى، مُصممة لتشغيل عدة وحدات GPU وعدة مستخدمين من تثبيت واحد مشترك. يستخدم [ComfyUI](https://github.com/comfy-org/ComfyUI) كمحرك استدلال أساسي: فبدلاً من بناء واجهة خلفية منافسة لتوليد الصور من الصفر، يُغلّف SwarmUI ComfyUI بتبويب "Generate" قائم على النماذج للاستخدام اليومي، مع الاستمرار في إتاحة رسم العقد الخام الخاص بـ ComfyUI للقراء الراغبين في تحكم يدوي كامل. تتناول هذه المراجعة ما هو SwarmUI فعليًا اليوم (بما في ذلك القصة الصادقة لتغيير اسمه وعلاقته المستقلة تمامًا الآن مع Stability AI)، وبنيته متعددة GPU ومتعددة المستخدمين، ودعم النماذج، والتثبيت، والترخيص، ومقارنته بأدوات المستخدم الواحد مثل AUTOMATIC1111 وFooocus.',
     metaDescription:
@@ -2229,8 +2229,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-zh.webp',
-    title: 'SwarmUI评测(2026):支持多GPU的Stable Diffusion网页界面',
-    seoTitle: 'SwarmUI评测2026:基于ComfyUI的多GPU界面',
+    title: 'SwarmUI评测:支持多GPU的Stable Diffusion网页界面',
+    seoTitle: 'SwarmUI评测:基于ComfyUI的多GPU界面',
     intro:
       'SwarmUI(前身为StableSwarmUI)是一款免费、开源、模块化的网页界面,用于本地Stable Diffusion、FLUX及其他图像和视频生成模型,专为从单一共享安装中驱动多个GPU和多个用户而设计。它使用[ComfyUI](https://github.com/comfy-org/ComfyUI)作为底层推理引擎:SwarmUI不是从零构建一个与之竞争的图像生成后端,而是用面向日常使用的表单式"Generate"标签页包裹ComfyUI,同时仍向希望完全手动控制的读者开放ComfyUI原始的节点图。本评测涵盖SwarmUI如今究竟是什么(包括其改名历程的真实经过,以及它与Stability AI如今已完全独立的关系)、其多GPU与多用户架构、模型支持、安装方法、许可证,以及与AUTOMATIC1111、Fooocus等单用户工具的比较。',
     metaDescription:
@@ -2545,8 +2545,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-ko.webp',
-    title: 'SwarmUI 리뷰(2026): 멀티 GPU를 지원하는 Stable Diffusion 웹 UI',
-    seoTitle: 'SwarmUI 리뷰 2026: ComfyUI 기반 멀티 GPU UI',
+    title: 'SwarmUI 리뷰: 멀티 GPU를 지원하는 Stable Diffusion 웹 UI',
+    seoTitle: 'SwarmUI 리뷰: ComfyUI 기반 멀티 GPU UI',
     intro:
       'SwarmUI(이전 명칭 StableSwarmUI)는 로컬 Stable Diffusion, FLUX 및 기타 이미지·영상 생성 모델을 위한 무료 오픈소스 모듈형 웹 UI로, 하나의 공유 설치 환경에서 여러 GPU와 여러 사용자를 운영할 수 있도록 설계되었습니다. 기본 추론 엔진으로 [ComfyUI](https://github.com/comfy-org/ComfyUI)를 사용합니다. 경쟁 관계의 이미지 생성 백엔드를 처음부터 새로 구축하는 대신, SwarmUI는 일상적인 사용을 위한 폼 기반 "Generate" 탭으로 ComfyUI를 감싸면서도, 완전한 수동 제어를 원하는 독자에게는 ComfyUI의 원시 노드 그래프도 그대로 노출합니다. 이 리뷰에서는 SwarmUI가 오늘날 실제로 무엇인지(개명 과정의 정직한 역사와 Stability AI와의 현재 완전히 독립된 관계를 포함), 멀티 GPU 및 멀티 유저 아키텍처, 모델 지원, 설치 방법, 라이선스, 그리고 AUTOMATIC1111이나 Fooocus 같은 단일 사용자용 도구와의 비교를 다룹니다.',
     metaDescription:

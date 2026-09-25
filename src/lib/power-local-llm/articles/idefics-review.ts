@@ -14,8 +14,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/idefics-review-hero-en.webp',
-    title: 'Idefics Review (2026): HuggingFace\'s Open Vision-Language Models, Honestly Assessed',
-    seoTitle: 'Idefics Review 2026: Idefics vs Idefics2 vs Idefics3',
+    title: 'Idefics Review: HuggingFace\'s Open Vision-Language Models, Honestly Assessed',
+    seoTitle: 'Idefics Review: Idefics vs Idefics2 vs Idefics3',
     intro:
       'Idefics is a family of open vision-language models built by the HuggingFace M4 team, explicitly designed as an open reproduction of DeepMind\'s Flamingo. The family has three generations — the original Idefics, Idefics2, and Idefics3 — and they are not interchangeable: they use different base language models, different licenses in practice, and very different hardware requirements. This review covers the real history, which version to actually use today, honest VRAM numbers, and where Idefics is not a good fit, especially for resource-constrained local setups. For a comparable open vision-language model with a larger existing user base, see PromptQuorum\'s [LLaVA review](/power-local-llm/llava-review); for running vision models specifically through Ollama (Idefics is not currently packaged for it), see the [Ollama vision models guide](/power-local-llm/ollama-vision-models-review).',
     metaDescription:
@@ -367,8 +367,8 @@ print(generated_text[0])`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/idefics-review-hero-de.webp',
-    title: 'Idefics-Test (2026): HuggingFace\'s offene Vision-Language-Modelle, ehrlich bewertet',
-    seoTitle: 'Idefics-Test 2026: Idefics vs Idefics2 vs Idefics3',
+    title: 'Idefics-Test: HuggingFace\'s offene Vision-Language-Modelle, ehrlich bewertet',
+    seoTitle: 'Idefics-Test: Idefics vs Idefics2 vs Idefics3',
     intro:
       'Idefics ist eine Familie offener Vision-Language-Modelle des HuggingFace-M4-Teams, die ausdrücklich als offene Nachbildung von DeepMinds Flamingo konzipiert wurde. Die Familie umfasst drei Generationen — das ursprüngliche Idefics, Idefics2 und Idefics3 — und diese sind nicht austauschbar: Sie nutzen unterschiedliche Basis-Sprachmodelle, in der Praxis unterschiedliche Lizenzen und sehr unterschiedliche Hardwareanforderungen. Dieser Test behandelt die tatsächliche Geschichte, welche Version heute wirklich zu verwenden ist, ehrliche VRAM-Zahlen und wo Idefics nicht passt, insbesondere für ressourcenbeschränkte lokale Setups. Für ein vergleichbares offenes Vision-Language-Modell mit größerer bestehender Nutzerbasis siehe PromptQuorums [LLaVA-Test](/de/power-local-llm/llava-review); für das Ausführen von Vision-Modellen speziell über Ollama (Idefics ist derzeit nicht dafür verpackt) siehe den [Ollama-Vision-Modelle-Leitfaden](/de/power-local-llm/ollama-vision-models-review).',
     metaDescription:
@@ -720,8 +720,8 @@ print(generated_text[0])`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/idefics-review-hero-fr.webp',
-    title: 'Avis sur Idefics (2026) : les modèles vision-langage ouverts de HuggingFace, évalués honnêtement',
-    seoTitle: 'Avis Idefics 2026 : Idefics vs Idefics2 vs Idefics3',
+    title: 'Avis sur Idefics: les modèles vision-langage ouverts de HuggingFace, évalués honnêtement',
+    seoTitle: 'Avis Idefics: Idefics vs Idefics2 vs Idefics3',
     intro:
       'Idefics est une famille de modèles vision-langage ouverts créée par l\'équipe M4 de HuggingFace, explicitement conçue comme une reproduction ouverte de Flamingo de DeepMind. La famille compte trois générations — l\'Idefics original, Idefics2 et Idefics3 — et elles ne sont pas interchangeables : elles utilisent des modèles de langage de base différents, des licences différentes en pratique, et des exigences matérielles très différentes. Cet avis couvre l\'histoire réelle, la version à utiliser réellement aujourd\'hui, des chiffres de VRAM honnêtes, et les cas où Idefics ne convient pas, notamment pour les configurations locales à ressources limitées. Pour un modèle vision-langage ouvert comparable avec une base d\'utilisateurs plus large, voir l\'[avis LLaVA](/fr/power-local-llm/llava-review) de PromptQuorum ; pour exécuter des modèles de vision spécifiquement via Ollama (Idefics n\'y est pas actuellement packagé), voir le [guide des modèles de vision Ollama](/fr/power-local-llm/ollama-vision-models-review).',
     metaDescription:
@@ -1073,8 +1073,8 @@ print(generated_text[0])`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/idefics-review-hero-es.webp',
-    title: 'Análisis de Idefics (2026): los modelos de visión-lenguaje abiertos de HuggingFace, evaluados con honestidad',
-    seoTitle: 'Análisis de Idefics 2026: Idefics vs Idefics2 vs Idefics3',
+    title: 'Análisis de Idefics: los modelos de visión-lenguaje abiertos de HuggingFace, evaluados con honestidad',
+    seoTitle: 'Análisis de Idefics: Idefics vs Idefics2 vs Idefics3',
     intro:
       'Idefics es una familia de modelos de visión-lenguaje abiertos creada por el equipo M4 de HuggingFace, diseñada explícitamente como una reproducción abierta de Flamingo de DeepMind. La familia tiene tres generaciones — el Idefics original, Idefics2 e Idefics3 — y no son intercambiables: usan modelos de lenguaje base distintos, licencias distintas en la práctica y requisitos de hardware muy diferentes. Este análisis cubre la historia real, qué versión usar realmente hoy, cifras honestas de VRAM y dónde Idefics no encaja bien, especialmente en configuraciones locales con recursos limitados. Para un modelo de visión-lenguaje abierto comparable con una base de usuarios más amplia, consulta el [análisis de LLaVA](/es/power-local-llm/llava-review) de PromptQuorum; para ejecutar modelos de visión específicamente mediante Ollama (Idefics no está empaquetado en él actualmente), consulta la [guía de modelos de visión de Ollama](/es/power-local-llm/ollama-vision-models-review).',
     metaDescription:
@@ -1426,8 +1426,8 @@ print(generated_text[0])`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/idefics-review-hero-ja.webp',
-    title: 'Idefics レビュー(2026):HuggingFaceのオープンなビジョン言語モデルを正直に評価する',
-    seoTitle: 'Idefics レビュー2026:Idefics vs Idefics2 vs Idefics3',
+    title: 'Idefics レビュー:HuggingFaceのオープンなビジョン言語モデルを正直に評価する',
+    seoTitle: 'Idefics レビュー:Idefics vs Idefics2 vs Idefics3',
     intro:
       'IdeficsはHuggingFaceのM4チームが開発したオープンなビジョン言語モデルのファミリーであり、DeepMindのFlamingoのオープンな再現として明確に設計されている。このファミリーには3世代——オリジナルのIdefics、Idefics2、Idefics3——があり、互換性はない。それぞれ異なるベース言語モデルを使い、実務上のライセンスも異なり、ハードウェア要件も大きく異なる。本レビューでは実際の歴史、今日実際に使うべきバージョン、正直なVRAM数値、そして特にリソースの限られたローカル環境においてIdeficsが向いていない点を扱う。既存ユーザー基盤の大きい比較可能なオープンビジョン言語モデルについてはPromptQuorumの[LLaVAレビュー](/ja/power-local-llm/llava-review)を、Ollama経由でビジョンモデルを動かす方法(Idefics は現時点でOllama用にパッケージ化されていない)については[Ollamaビジョンモデルガイド](/ja/power-local-llm/ollama-vision-models-review)を参照してほしい。',
     metaDescription:
@@ -1779,8 +1779,8 @@ print(generated_text[0])`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/idefics-review-hero-pt.webp',
-    title: 'Análise do Idefics (2026): os modelos de visão-linguagem abertos da HuggingFace, avaliados com honestidade',
-    seoTitle: 'Análise do Idefics 2026: Idefics vs Idefics2 vs Idefics3',
+    title: 'Análise do Idefics: os modelos de visão-linguagem abertos da HuggingFace, avaliados com honestidade',
+    seoTitle: 'Análise do Idefics: Idefics vs Idefics2 vs Idefics3',
     intro:
       'O Idefics é uma família de modelos de visão-linguagem abertos criada pela equipe M4 da HuggingFace, projetada explicitamente como uma reprodução aberta do Flamingo, da DeepMind. A família tem três gerações — o Idefics original, o Idefics2 e o Idefics3 — e elas não são intercambiáveis: usam modelos de linguagem base diferentes, licenças diferentes na prática e requisitos de hardware muito diferentes. Esta análise cobre a história real, qual versão realmente usar hoje, números honestos de VRAM e onde o Idefics não é uma boa opção, especialmente para configurações locais com recursos limitados. Para um modelo de visão-linguagem aberto comparável com uma base de usuários maior, veja a [análise do LLaVA](/pt/power-local-llm/llava-review) do PromptQuorum; para rodar modelos de visão especificamente pelo Ollama (o Idefics não está atualmente empacotado para ele), veja o [guia de modelos de visão do Ollama](/pt/power-local-llm/ollama-vision-models-review).',
     metaDescription:
@@ -2132,8 +2132,8 @@ print(generated_text[0])`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/idefics-review-hero-ar.webp',
-    title: 'مراجعة Idefics (2026): نماذج الرؤية-اللغة المفتوحة من HuggingFace، بتقييم صريح',
-    seoTitle: 'مراجعة Idefics 2026: Idefics مقابل Idefics2 مقابل Idefics3',
+    title: 'مراجعة Idefics: نماذج الرؤية-اللغة المفتوحة من HuggingFace، بتقييم صريح',
+    seoTitle: 'مراجعة Idefics: Idefics مقابل Idefics2 مقابل Idefics3',
     intro:
       'Idefics هي عائلة من نماذج الرؤية-اللغة المفتوحة طورها فريق M4 التابع لـ HuggingFace، وصُممت صراحة بوصفها نسخة مفتوحة من Flamingo الخاص بـ DeepMind. تضم العائلة ثلاثة أجيال — Idefics الأصلي، وIdefics2، وIdefics3 — وهي غير قابلة للتبديل: تستخدم نماذج لغوية أساسية مختلفة، ورخصًا مختلفة من الناحية العملية، ومتطلبات عتاد مختلفة جدًا. تتناول هذه المراجعة التاريخ الفعلي، والإصدار الذي يجب استخدامه فعليًا اليوم، وأرقام VRAM الصادقة، والحالات التي لا يناسبها Idefics، خصوصًا في الإعدادات المحلية محدودة الموارد. للاطلاع على نموذج رؤية-لغة مفتوح مماثل بقاعدة مستخدمين أكبر، راجع [مراجعة LLaVA](/ar/power-local-llm/llava-review) من PromptQuorum؛ ولتشغيل نماذج الرؤية تحديدًا عبر Ollama (لم يُعبّأ Idefics له حاليًا)، راجع [دليل نماذج رؤية Ollama](/ar/power-local-llm/ollama-vision-models-review).',
     metaDescription:
@@ -2485,8 +2485,8 @@ print(generated_text[0])`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/idefics-review-hero-zh.webp',
-    title: 'Idefics评测(2026):HuggingFace开源视觉语言模型,诚实评估',
-    seoTitle: 'Idefics评测2026:Idefics vs Idefics2 vs Idefics3',
+    title: 'Idefics评测:HuggingFace开源视觉语言模型,诚实评估',
+    seoTitle: 'Idefics评测:Idefics vs Idefics2 vs Idefics3',
     intro:
       'Idefics是HuggingFace M4团队打造的一系列开源视觉语言模型,明确定位为对DeepMind Flamingo的开放复现。该系列包含三代——原始Idefics、Idefics2和Idefics3——它们并不能互相替代:使用不同的基座语言模型,实际许可证也不同,硬件需求差异也很大。本评测涵盖真实历史、今天究竟该用哪个版本、诚实的VRAM数据,以及Idefics不适合的场景,尤其是资源有限的本地环境。若想深入了解一个用户基础更广的类似开源视觉语言模型,请参阅PromptQuorum的[LLaVA评测](/zh/power-local-llm/llava-review);若想专门通过Ollama运行视觉模型(Idefics目前并未为其打包),请参阅[Ollama视觉模型指南](/zh/power-local-llm/ollama-vision-models-review)。',
     metaDescription:
@@ -2838,8 +2838,8 @@ print(generated_text[0])`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/idefics-review-hero-ko.webp',
-    title: 'Idefics 리뷰(2026): HuggingFace의 오픈 비전-언어 모델, 솔직하게 평가하다',
-    seoTitle: 'Idefics 리뷰 2026: Idefics vs Idefics2 vs Idefics3',
+    title: 'Idefics 리뷰: HuggingFace의 오픈 비전-언어 모델, 솔직하게 평가하다',
+    seoTitle: 'Idefics 리뷰: Idefics vs Idefics2 vs Idefics3',
     intro:
       'Idefics는 HuggingFace M4 팀이 만든 오픈 비전-언어 모델 계열로, DeepMind의 Flamingo를 오픈소스로 재현한 것임을 명확히 표방한다. 이 계열에는 세 세대 — 원조 Idefics, Idefics2, Idefics3 — 가 있으며 서로 호환되지 않는다: 서로 다른 베이스 언어 모델을 사용하고, 실질적으로 다른 라이선스를 가지며, 하드웨어 요구 사항도 크게 다르다. 이 리뷰는 실제 역사, 오늘날 실제로 사용해야 할 버전, 솔직한 VRAM 수치, 그리고 특히 리소스가 제한된 로컬 환경에서 Idefics가 적합하지 않은 부분을 다룬다. 사용자 기반이 더 넓은 비슷한 오픈 비전-언어 모델을 알고 싶다면 PromptQuorum의 [LLaVA 리뷰](/ko/power-local-llm/llava-review)를, 특히 Ollama를 통해 비전 모델을 실행하는 방법(Idefics는 현재 여기에 패키징되어 있지 않음)은 [Ollama 비전 모델 가이드](/ko/power-local-llm/ollama-vision-models-review)를 참고하라.',
     metaDescription:

@@ -13,8 +13,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/locally-ai-review-hero-en.webp',
-    title: 'Locally AI Review (2026): Private Offline LLMs on iPhone, iPad and Mac',
-    seoTitle: 'Locally AI Review 2026: Offline LLMs on Apple Devices',
+    title: 'Locally AI Review: Private Offline LLMs on iPhone, iPad and Mac',
+    seoTitle: 'Locally AI Review: Offline LLMs on Apple Devices',
     intro:
       'Locally AI, from developer [Locally AI](https://www.locallyai.app/), is an app for running open-source language models — including Llama, Gemma, Qwen, and DeepSeek — directly on iPhone, iPad, and Mac, optimized for Apple Silicon. Once a model has been downloaded, it runs fully on-device: no internet connection is required to chat, and the developer\'s privacy-first positioning means conversations are not sent to a cloud service for inference. The practical question for anyone considering it is not whether on-device inference on Apple hardware is possible — Apple Silicon has enough neural and GPU throughput to make it work — but whether Locally AI gives you a workable app experience around that inference without needing to hand-pick GGUF files, tune quantization settings, or calculate VRAM headroom yourself.',
     metaDescription:
@@ -314,8 +314,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/locally-ai-review-hero-de.webp',
-    title: 'Locally AI Review (2026): Private Offline-LLMs auf iPhone, iPad und Mac',
-    seoTitle: 'Locally AI Review 2026: Offline-LLMs auf Apple-Geräten',
+    title: 'Locally AI Review: Private Offline-LLMs auf iPhone, iPad und Mac',
+    seoTitle: 'Locally AI Review: Offline-LLMs auf Apple-Geräten',
     intro:
       'Locally AI vom Entwickler [Locally AI](https://www.locallyai.app/) ist eine App, mit der Open-Source-Sprachmodelle — darunter Llama, Gemma, Qwen und DeepSeek — direkt auf iPhone, iPad und Mac laufen, optimiert für Apple Silicon. Sobald ein Modell heruntergeladen wurde, läuft es vollständig auf dem Gerät: Für den Chat ist keine Internetverbindung nötig, und die Privacy-first-Ausrichtung des Entwicklers bedeutet, dass Unterhaltungen nicht zur Inferenz an einen Cloud-Dienst gesendet werden. Die praktische Frage für alle, die die App in Betracht ziehen, lautet nicht, ob On-Device-Inferenz auf Apple-Hardware möglich ist — Apple Silicon bietet genug Neural- und GPU-Leistung dafür —, sondern ob Locally AI drumherum eine funktionierende App-Erfahrung bietet, ohne dass man selbst GGUF-Dateien auswählen, Quantisierungen einstellen oder VRAM-Bedarf berechnen muss.',
     metaDescription:
@@ -615,8 +615,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/locally-ai-review-hero-fr.webp',
-    title: 'Locally AI Review (2026) : LLM privés hors ligne sur iPhone, iPad et Mac',
-    seoTitle: 'Locally AI Review 2026 : LLM hors ligne sur appareils Apple',
+    title: 'Locally AI Review: LLM privés hors ligne sur iPhone, iPad et Mac',
+    seoTitle: 'Locally AI Review: LLM hors ligne sur appareils Apple',
     intro:
       'Locally AI, développée par [Locally AI](https://www.locallyai.app/), est une application permettant d\'exécuter des modèles de langage open source — dont Llama, Gemma, Qwen et DeepSeek — directement sur iPhone, iPad et Mac, optimisée pour Apple Silicon. Une fois un modèle téléchargé, il fonctionne entièrement sur l\'appareil : aucune connexion internet n\'est nécessaire pour discuter, et le positionnement privacy-first de l\'éditeur signifie que les conversations ne sont pas envoyées à un service cloud pour l\'inférence. La vraie question pour qui envisage cette app n\'est pas de savoir si l\'inférence sur l\'appareil est possible sur du matériel Apple — la puce Apple Silicon a largement la puissance neuronale et GPU nécessaire — mais si Locally AI offre une expérience d\'application fonctionnelle autour de cette inférence, sans avoir à choisir soi-même des fichiers GGUF, régler la quantification ou calculer la VRAM nécessaire.',
     metaDescription:
@@ -916,8 +916,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/locally-ai-review-hero-es.webp',
-    title: 'Locally AI Review (2026): LLM privados sin conexión en iPhone, iPad y Mac',
-    seoTitle: 'Locally AI Review 2026: LLM sin conexión en dispositivos Apple',
+    title: 'Locally AI Review: LLM privados sin conexión en iPhone, iPad y Mac',
+    seoTitle: 'Locally AI Review: LLM sin conexión en dispositivos Apple',
     intro:
       'Locally AI, del desarrollador [Locally AI](https://www.locallyai.app/), es una app para ejecutar modelos de lenguaje de código abierto —entre ellos Llama, Gemma, Qwen y DeepSeek— directamente en iPhone, iPad y Mac, optimizada para Apple Silicon. Una vez descargado un modelo, funciona completamente en el dispositivo: no hace falta conexión a internet para chatear, y el enfoque privacy-first del desarrollador implica que las conversaciones no se envían a un servicio en la nube para la inferencia. La pregunta práctica para quien la considere no es si la inferencia en el dispositivo es posible en hardware Apple —Apple Silicon tiene de sobra potencia neuronal y de GPU para lograrlo—, sino si Locally AI ofrece una experiencia de app funcional en torno a esa inferencia sin necesidad de elegir manualmente archivos GGUF, ajustar la cuantización o calcular la VRAM necesaria.',
     metaDescription:
@@ -1217,8 +1217,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/locally-ai-review-hero-pt.webp',
-    title: 'Locally AI Review (2026): LLMs privados offline no iPhone, iPad e Mac',
-    seoTitle: 'Locally AI Review 2026: LLMs offline em dispositivos Apple',
+    title: 'Locally AI Review: LLMs privados offline no iPhone, iPad e Mac',
+    seoTitle: 'Locally AI Review: LLMs offline em dispositivos Apple',
     intro:
       'Locally AI, da desenvolvedora [Locally AI](https://www.locallyai.app/), é um app para rodar modelos de linguagem de código aberto — incluindo Llama, Gemma, Qwen e DeepSeek — diretamente no iPhone, iPad e Mac, otimizado para Apple Silicon. Depois de baixar um modelo, ele funciona totalmente no dispositivo: não é preciso conexão com a internet para conversar, e o posicionamento privacy-first da desenvolvedora significa que as conversas não são enviadas a um serviço em nuvem para inferência. A pergunta prática para quem está avaliando o app não é se a inferência no dispositivo é possível em hardware Apple — o Apple Silicon tem poder neural e de GPU de sobra para isso —, mas sim se o Locally AI oferece uma experiência de app funcional em torno dessa inferência, sem exigir que você escolha manualmente arquivos GGUF, ajuste a quantização ou calcule a VRAM necessária.',
     metaDescription:
@@ -1518,8 +1518,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/locally-ai-review-hero-ja.webp',
-    title: 'Locally AIレビュー(2026):iPhone・iPad・Macで動くプライベートなオフラインLLM',
-    seoTitle: 'Locally AIレビュー2026:AppleデバイスのオフラインLLM',
+    title: 'Locally AIレビュー:iPhone・iPad・Macで動くプライベートなオフラインLLM',
+    seoTitle: 'Locally AIレビュー:AppleデバイスのオフラインLLM',
     intro:
       '開発元[Locally AI](https://www.locallyai.app/)が提供するLocally AIは、Llama、Gemma、Qwen、DeepSeekなどのオープンソース言語モデルをiPhone、iPad、Macで直接実行できるアプリで、Apple Siliconに最適化されています。モデルをダウンロードすれば、あとは完全にデバイス上で動作します。チャットにインターネット接続は不要で、開発元のプライバシー重視の設計により、会話が推論のためにクラウドサービスへ送信されることはありません。検討する上で実際に重要なのは、Appleのハードウェアでデバイス上推論が可能かどうかではなく——Apple SiliconにはそのためのNeural EngineとGPU性能が十分にあります——GGUFファイルを自分で選んだり、量子化を調整したり、必要なVRAMを計算したりせずに、Locally AIがその推論の周りに実用的なアプリ体験を提供しているかどうかです。',
     metaDescription:
@@ -1819,8 +1819,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/locally-ai-review-hero-zh.webp',
-    title: 'Locally AI评测(2026):在iPhone、iPad和Mac上运行私密离线LLM',
-    seoTitle: 'Locally AI评测2026:Apple设备上的离线LLM',
+    title: 'Locally AI评测:在iPhone、iPad和Mac上运行私密离线LLM',
+    seoTitle: 'Locally AI评测:Apple设备上的离线LLM',
     intro:
       '由开发者[Locally AI](https://www.locallyai.app/)打造的Locally AI,是一款可以在iPhone、iPad和Mac上直接运行开源语言模型(包括Llama、Gemma、Qwen和DeepSeek)的应用,针对Apple Silicon进行了优化。模型下载完成后,应用完全在设备本地运行:聊天不需要联网,而且开发者的隐私优先定位意味着对话不会被发送到云端服务进行推理。对于考虑使用它的人来说,真正的问题不是Apple硬件上的设备端推理是否可行——Apple Silicon的神经网络和GPU算力完全足够——而是Locally AI能否围绕这种推理提供一个可用的应用体验,让你不必自己挑选GGUF文件、调整量化设置或计算所需显存。',
     metaDescription:
@@ -2120,8 +2120,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/locally-ai-review-hero-ar.webp',
-    title: 'مراجعة Locally AI (2026): نماذج لغوية خاصة تعمل دون اتصال على iPhone وiPad وMac',
-    seoTitle: 'مراجعة Locally AI 2026: نماذج لغوية دون اتصال على أجهزة Apple',
+    title: 'مراجعة Locally AI: نماذج لغوية خاصة تعمل دون اتصال على iPhone وiPad وMac',
+    seoTitle: 'مراجعة Locally AI: نماذج لغوية دون اتصال على أجهزة Apple',
     intro:
       'تطبيق Locally AI من المطوّر [Locally AI](https://www.locallyai.app/) هو تطبيق يُشغّل نماذج لغوية مفتوحة المصدر — منها Llama وGemma وQwen وDeepSeek — مباشرةً على iPhone وiPad وMac، وهو محسَّن لشريحة Apple Silicon. بعد تنزيل نموذج، يعمل التطبيق بالكامل على الجهاز: لا حاجة لاتصال بالإنترنت للمحادثة، وتوجّه المطوّر نحو الخصوصية أولاً يعني أن المحادثات لا تُرسَل إلى خدمة سحابية لإجراء الاستدلال. السؤال العملي لمن يفكّر في استخدامه ليس ما إذا كان الاستدلال على الجهاز ممكنًا على أجهزة Apple — فشريحة Apple Silicon تملك قدرة عصبية ورسومية كافية لذلك — بل ما إذا كان Locally AI يوفّر تجربة تطبيق عملية حول هذا الاستدلال دون الحاجة لاختيار ملفات GGUF يدويًا، أو ضبط إعدادات الضغط الكمي (quantization)، أو حساب متطلبات الذاكرة اللازمة بنفسك.',
     metaDescription:
@@ -2421,8 +2421,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/locally-ai-review-hero-ko.webp',
-    title: 'Locally AI 리뷰(2026): iPhone·iPad·Mac에서 쓰는 프라이빗 오프라인 LLM',
-    seoTitle: 'Locally AI 리뷰 2026: Apple 기기용 오프라인 LLM',
+    title: 'Locally AI 리뷰: iPhone·iPad·Mac에서 쓰는 프라이빗 오프라인 LLM',
+    seoTitle: 'Locally AI 리뷰: Apple 기기용 오프라인 LLM',
     intro:
       '개발사 [Locally AI](https://www.locallyai.app/)가 만든 Locally AI는 Llama, Gemma, Qwen, DeepSeek 등 오픈소스 언어 모델을 iPhone, iPad, Mac에서 직접 실행하는 앱으로, Apple Silicon에 최적화되어 있습니다. 모델을 다운로드하면 완전히 기기 내에서 작동합니다. 채팅에 인터넷 연결이 필요 없으며, 개발사의 프라이버시 우선 방침에 따라 대화가 추론을 위해 클라우드 서비스로 전송되지 않습니다. 이 앱을 고려하는 사람에게 실질적인 질문은 Apple 하드웨어에서 온디바이스 추론이 가능한지가 아닙니다 — Apple Silicon은 이를 위한 신경망 및 GPU 성능을 충분히 갖추고 있습니다 — 오히려 GGUF 파일을 직접 고르거나 양자화를 조정하거나 필요한 VRAM을 계산하지 않고도 Locally AI가 그 추론 주변에 실용적인 앱 경험을 제공하는지입니다.',
     metaDescription:

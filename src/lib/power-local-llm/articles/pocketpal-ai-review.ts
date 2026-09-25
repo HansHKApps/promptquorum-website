@@ -15,8 +15,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocketpal-ai-review-hero-en.webp',
-    title: 'PocketPal AI Review (2026): Free, Open-Source On-Device Chat',
-    seoTitle: 'PocketPal AI Review 2026: Open-Source Local Chat App',
+    title: 'PocketPal AI Review: Free, Open-Source On-Device Chat',
+    seoTitle: 'PocketPal AI Review: Open-Source Local Chat App',
     intro:
       'PocketPal AI is a free, MIT-licensed, open-source app for iPhone, iPad, and Android that runs GGUF language models directly on the device, with no server round-trip and no account required to chat. It was built by Asghar Ghorbani, a developer who started it as a personal project before open-sourcing the code on [GitHub](https://github.com/a-ghorbani/pocketpal-ai). This review covers what the app does today, which models it ships with, its real hardware requirements, its actual pricing (the base app is free; an optional community marketplace called PalsHub sells premium presets), and who should — and should not — use it instead of a commercial alternative.',
     metaDescription:
@@ -449,8 +449,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocketpal-ai-review-hero-de.webp',
-    title: 'PocketPal AI im Test (2026): Kostenloser, quelloffener Chat auf dem Gerät',
-    seoTitle: 'PocketPal AI Test 2026: Open-Source lokaler Chat',
+    title: 'PocketPal AI im Test: Kostenloser, quelloffener Chat auf dem Gerät',
+    seoTitle: 'PocketPal AI Test: Open-Source lokaler Chat',
     intro:
       'PocketPal AI ist eine kostenlose, unter der MIT-Lizenz quelloffene App für iPhone, iPad und Android, die GGUF-Sprachmodelle direkt auf dem Gerät ausführt — ohne Serverumweg und ohne Konto für den Chat. Entwickelt hat sie Asghar Ghorbani, der die App zunächst als privates Projekt startete, bevor er den Code auf [GitHub](https://github.com/a-ghorbani/pocketpal-ai) veröffentlichte. Dieser Test beschreibt, was die App heute leistet, welche Modelle sie mitbringt, welche Hardware wirklich nötig ist, wie das Preismodell tatsächlich aussieht (die Basis-App ist kostenlos; ein optionaler Community-Marktplatz namens PalsHub verkauft Premium-Presets) und für wen sie sich eignet — und für wen nicht.',
     metaDescription:
@@ -883,8 +883,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocketpal-ai-review-hero-fr.webp',
-    title: 'PocketPal AI : test (2026) — chat local gratuit et open source',
-    seoTitle: 'PocketPal AI : test 2026 du chat local open source',
+    title: 'PocketPal AI: test — chat local gratuit et open source',
+    seoTitle: 'PocketPal AI: test du chat local open source',
     intro:
       'PocketPal AI est une application gratuite, open source sous licence MIT, pour iPhone, iPad et Android, qui exécute des modèles de langage GGUF directement sur l\'appareil, sans aller-retour serveur ni compte requis pour discuter. Elle a été créée par Asghar Ghorbani, un développeur qui l\'a d\'abord conçue comme projet personnel avant d\'en publier le code sur [GitHub](https://github.com/a-ghorbani/pocketpal-ai). Ce test couvre ce que l\'application fait aujourd\'hui, les modèles qu\'elle embarque, ses besoins matériels réels, son prix réel (l\'application de base est gratuite ; une place de marché communautaire optionnelle, PalsHub, vend des préréglages premium) et pour qui elle convient — ou non.',
     metaDescription:
@@ -1317,8 +1317,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocketpal-ai-review-hero-es.webp',
-    title: 'PocketPal AI: reseña (2026) — chat local gratis y de código abierto',
-    seoTitle: 'PocketPal AI 2026: reseña del chat local open source',
+    title: 'PocketPal AI: reseña — chat local gratis y de código abierto',
+    seoTitle: 'PocketPal AI: reseña del chat local open source',
     intro:
       'PocketPal AI es una aplicación gratuita y de código abierto bajo licencia MIT para iPhone, iPad y Android que ejecuta modelos de lenguaje GGUF directamente en el dispositivo, sin ida y vuelta a un servidor ni cuenta necesaria para chatear. La creó Asghar Ghorbani, un desarrollador que empezó el proyecto como algo personal antes de publicar el código en [GitHub](https://github.com/a-ghorbani/pocketpal-ai). Esta reseña cubre qué hace la app hoy, qué modelos incluye, los requisitos reales de hardware, su precio real (la app base es gratis; un mercado comunitario opcional llamado PalsHub vende ajustes preestablecidos premium) y para quién es —y para quién no.',
     metaDescription:
@@ -1751,8 +1751,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocketpal-ai-review-hero-ja.webp',
-    title: 'PocketPal AIレビュー（2026）：無料・オープンソースのオンデバイスAIチャット',
-    seoTitle: 'PocketPal AI 2026レビュー：無料OSSローカルチャット',
+    title: 'PocketPal AIレビュー：無料・オープンソースのオンデバイスAIチャット',
+    seoTitle: 'PocketPal AI レビュー：無料OSSローカルチャット',
     intro:
       'PocketPal AIは、iPhone・iPad・Android向けの無料・MITライセンスのオープンソースアプリで、GGUF形式の言語モデルを端末上で直接実行します。サーバーとの通信もチャット時のアカウント登録も不要です。開発者はAsghar Ghorbani氏で、個人プロジェクトとして始めた後、コードを[GitHub](https://github.com/a-ghorbani/pocketpal-ai)で公開しました。本レビューでは、現在のアプリの機能、同梱モデル、実際に必要なハードウェア、実際の料金体系（本体は無料。PalsHubというコミュニティマーケットプレイスがプレミアムプリセットを有料販売）、そして誰に向いていて誰に向いていないかを解説します。',
     metaDescription:
@@ -2186,8 +2186,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocketpal-ai-review-hero-pt.webp',
-    title: 'PocketPal AI: análise (2026) — chat local grátis e de código aberto',
-    seoTitle: 'PocketPal AI 2026: análise do chat local open source',
+    title: 'PocketPal AI: análise — chat local grátis e de código aberto',
+    seoTitle: 'PocketPal AI: análise do chat local open source',
     intro:
       'O PocketPal AI é um aplicativo gratuito e de código aberto sob licença MIT para iPhone, iPad e Android que executa modelos de linguagem GGUF diretamente no dispositivo, sem ida e volta a um servidor nem conta necessária para conversar. Foi criado por Asghar Ghorbani, um desenvolvedor que começou o projeto como algo pessoal antes de publicar o código no [GitHub](https://github.com/a-ghorbani/pocketpal-ai). Esta análise aborda o que o app faz hoje, quais modelos ele traz, os requisitos reais de hardware, seu preço real (o app base é gratuito; um marketplace comunitário opcional chamado PalsHub vende predefinições premium) e para quem ele serve — e para quem não serve.',
     metaDescription:
@@ -2620,8 +2620,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocketpal-ai-review-hero-ar.webp',
-    title: 'مراجعة PocketPal AI (2026): محادثة مجانية ومفتوحة المصدر على الجهاز',
-    seoTitle: 'مراجعة PocketPal AI 2026: محادثة محلية مفتوحة المصدر',
+    title: 'مراجعة PocketPal AI: محادثة مجانية ومفتوحة المصدر على الجهاز',
+    seoTitle: 'مراجعة PocketPal AI: محادثة محلية مفتوحة المصدر',
     intro:
       'PocketPal AI تطبيق مجاني ومفتوح المصدر بترخيص MIT لأجهزة iPhone وiPad وAndroid، يشغّل نماذج لغوية بصيغة GGUF مباشرة على الجهاز، دون أي اتصال بخادم أو حساب مطلوب للمحادثة. طوّره Asghar Ghorbani، وهو مطوّر بدأ المشروع كمشروع شخصي قبل أن ينشر الكود على [GitHub](https://github.com/a-ghorbani/pocketpal-ai). تتناول هذه المراجعة ما يقدّمه التطبيق اليوم، والنماذج المرفقة معه، ومتطلبات الأجهزة الفعلية، وسعره الحقيقي (التطبيق الأساسي مجاني؛ ويبيع سوق مجتمعي اختياري باسم PalsHub إعدادات مسبقة مدفوعة)، ولمن يناسب — ولمن لا يناسب.',
     metaDescription:
@@ -3054,8 +3054,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocketpal-ai-review-hero-zh.webp',
-    title: 'PocketPal AI 测评（2026）：免费开源的本地设备端聊天应用',
-    seoTitle: 'PocketPal AI 2026测评：免费开源本地聊天应用',
+    title: 'PocketPal AI 测评：免费开源的本地设备端聊天应用',
+    seoTitle: 'PocketPal AI 测评：免费开源本地聊天应用',
     intro:
       'PocketPal AI 是一款面向 iPhone、iPad 和 Android 的免费、MIT 许可证开源应用，可直接在设备上运行 GGUF 格式的语言模型，聊天时无需服务器往返，也无需账号。开发者 Asghar Ghorbani 最初将其作为个人项目启动，随后将代码发布在 [GitHub](https://github.com/a-ghorbani/pocketpal-ai) 上开源。本测评介绍该应用目前的功能、内置的模型、真实的硬件需求、真实的价格（基础应用免费；一个名为 PalsHub 的可选社区市场出售高级预设），以及它适合谁——不适合谁。',
     metaDescription:
@@ -3489,8 +3489,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocketpal-ai-review-hero-ko.webp',
-    title: 'PocketPal AI 리뷰(2026): 무료 오픈소스 온디바이스 채팅 앱',
-    seoTitle: 'PocketPal AI 2026 리뷰: 무료 오픈소스 로컬 채팅',
+    title: 'PocketPal AI 리뷰: 무료 오픈소스 온디바이스 채팅 앱',
+    seoTitle: 'PocketPal AI 리뷰: 무료 오픈소스 로컬 채팅',
     intro:
       'PocketPal AI는 iPhone, iPad, Android용 무료 MIT 라이선스 오픈소스 앱으로, GGUF 언어 모델을 서버 왕복이나 채팅용 계정 없이 기기에서 직접 실행합니다. 개발자는 Asghar Ghorbani이며, 개인 프로젝트로 시작한 뒤 [GitHub](https://github.com/a-ghorbani/pocketpal-ai)에 코드를 공개했습니다. 이 리뷰에서는 현재 앱이 제공하는 기능, 기본 탑재 모델, 실제 하드웨어 요구사항, 실제 가격 정책(기본 앱은 무료이며, PalsHub라는 선택적 커뮤니티 마켓플레이스가 프리미엄 프리셋을 판매합니다), 그리고 누구에게 적합하고 누구에게는 적합하지 않은지를 다룹니다.',
     metaDescription:

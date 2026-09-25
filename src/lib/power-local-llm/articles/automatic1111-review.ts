@@ -17,8 +17,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/automatic1111-review-hero-en.webp',
-    title: 'AUTOMATIC1111 Review (2026): Stable Diffusion WebUI Explained',
-    seoTitle: 'AUTOMATIC1111 Review 2026: Stable Diffusion WebUI Guide',
+    title: 'AUTOMATIC1111 Review: Stable Diffusion WebUI Explained',
+    seoTitle: 'AUTOMATIC1111 Review: Stable Diffusion WebUI Guide',
     intro:
       'AUTOMATIC1111 — formally "Stable Diffusion web UI" — is a free, open-source, tab-based web interface for running Stable Diffusion models on your own GPU. Released on GitHub on August 22, 2022, one month after Stable Diffusion\'s public launch, it became the first widely adopted graphical front-end for local image generation and is still described by third-party reviewers as one of the most-used and most-documented options in the category, thanks to a huge extension ecosystem (ControlNet, LoRA training, and thousands of community scripts). This review covers what AUTOMATIC1111 actually is, how it differs from Stable Diffusion the model and from newer UIs like ComfyUI, Forge, and InvokeAI, its real maintenance status heading into 2026, license terms, hardware needs, and honest guidance on who should — and should not — use it today.',
     metaDescription:
@@ -337,8 +337,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/automatic1111-review-hero-de.webp',
-    title: 'AUTOMATIC1111 Test (2026): Stable Diffusion WebUI erklärt',
-    seoTitle: 'AUTOMATIC1111 Test 2026: Stable Diffusion WebUI Guide',
+    title: 'AUTOMATIC1111 Test: Stable Diffusion WebUI erklärt',
+    seoTitle: 'AUTOMATIC1111 Test: Stable Diffusion WebUI Guide',
     intro:
       'AUTOMATIC1111 — offiziell "Stable Diffusion web UI" — ist eine kostenlose Open-Source-Weboberfläche mit Tab-Struktur zum lokalen Ausführen von Stable-Diffusion-Modellen auf der eigenen GPU. Am 22. August 2022 auf GitHub veröffentlicht, einen Monat nach dem öffentlichen Start von Stable Diffusion, wurde es zur ersten weit verbreiteten grafischen Oberfläche für lokale Bildgenerierung und gilt bei Drittanbieter-Reviews weiterhin als eine der meistgenutzten und am besten dokumentierten Optionen der Kategorie — dank eines riesigen Extension-Ökosystems (ControlNet, LoRA-Training und tausende Community-Skripte). Dieser Test erklärt, was AUTOMATIC1111 tatsächlich ist, wie es sich vom Modell Stable Diffusion und von neueren Oberflächen wie ComfyUI, Forge und InvokeAI unterscheidet, den realen Wartungsstatus mit Blick auf 2026, die Lizenzbedingungen, den Hardware-Bedarf und eine ehrliche Einschätzung, für wen es sich heute eignet — und für wen nicht.',
     metaDescription:
@@ -657,8 +657,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/automatic1111-review-hero-es.webp',
-    title: 'Reseña de AUTOMATIC1111 (2026): Stable Diffusion WebUI explicado',
-    seoTitle: 'AUTOMATIC1111 Reseña 2026: Guía de Stable Diffusion WebUI',
+    title: 'Reseña de AUTOMATIC1111: Stable Diffusion WebUI explicado',
+    seoTitle: 'AUTOMATIC1111 Reseña: Guía de Stable Diffusion WebUI',
     intro:
       'AUTOMATIC1111 — formalmente "Stable Diffusion web UI" — es una interfaz web gratuita, de código abierto y organizada en pestañas para ejecutar modelos Stable Diffusion en tu propia GPU. Publicado en GitHub el 22 de agosto de 2022, un mes después del lanzamiento público de Stable Diffusion, se convirtió en la primera interfaz gráfica ampliamente adoptada para generación local de imágenes y sigue siendo descrito por reseñas de terceros como una de las opciones más usadas y mejor documentadas de la categoría, gracias a un enorme ecosistema de extensiones (ControlNet, entrenamiento de LoRA y miles de scripts de la comunidad). Esta reseña explica qué es realmente AUTOMATIC1111, en qué se diferencia del modelo Stable Diffusion y de interfaces más nuevas como ComfyUI, Forge e InvokeAI, su estado real de mantenimiento de cara a 2026, los términos de licencia, los requisitos de hardware y una guía honesta sobre quién debería —y quién no debería— usarlo hoy.',
     metaDescription:
@@ -977,8 +977,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/automatic1111-review-hero-fr.webp',
-    title: 'Avis AUTOMATIC1111 (2026) : Stable Diffusion WebUI expliqué',
-    seoTitle: 'AUTOMATIC1111 Avis 2026 : Guide Stable Diffusion WebUI',
+    title: 'Avis AUTOMATIC1111: Stable Diffusion WebUI expliqué',
+    seoTitle: 'AUTOMATIC1111 Avis: Guide Stable Diffusion WebUI',
     intro:
       'AUTOMATIC1111 — officiellement "Stable Diffusion web UI" — est une interface web gratuite, open source et organisée en onglets pour exécuter des modèles Stable Diffusion sur votre propre GPU. Publiée sur GitHub le 22 août 2022, un mois après le lancement public de Stable Diffusion, elle est devenue la première interface graphique largement adoptée pour la génération d\'images en local et reste décrite par des avis tiers comme l\'une des options les plus utilisées et les mieux documentées de la catégorie, grâce à un immense écosystème d\'extensions (ControlNet, entraînement de LoRA et des milliers de scripts communautaires). Cet avis explique ce qu\'est réellement AUTOMATIC1111, en quoi il diffère du modèle Stable Diffusion et des interfaces plus récentes comme ComfyUI, Forge et InvokeAI, son véritable état de maintenance à l\'approche de 2026, ses conditions de licence, ses besoins matériels, et un avis honnête sur qui devrait — et ne devrait pas — l\'utiliser aujourd\'hui.',
     metaDescription:
@@ -1297,8 +1297,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/automatic1111-review-hero-ja.webp',
-    title: 'AUTOMATIC1111レビュー（2026年）: Stable Diffusion WebUIを解説',
-    seoTitle: 'AUTOMATIC1111レビュー2026: Stable Diffusion WebUIガイド',
+    title: 'AUTOMATIC1111レビュー: Stable Diffusion WebUIを解説',
+    seoTitle: 'AUTOMATIC1111レビュー: Stable Diffusion WebUIガイド',
     intro:
       'AUTOMATIC1111（正式名称「Stable Diffusion web UI」）は、自分のGPU上でStable Diffusionモデルを実行するための、無料・オープンソースでタブ形式のWebインターフェースです。Stable Diffusionの一般公開から1か月後の2022年8月22日にGitHubで公開され、ローカル画像生成向けとして広く採用された最初のグラフィカルなフロントエンドとなり、巨大な拡張機能エコシステム（ControlNet、LoRAトレーニング、数千のコミュニティスクリプト）のおかげで、第三者レビューでも今なおこのカテゴリで最も使われ、最もドキュメント化されたオプションの一つとされています。本レビューでは、AUTOMATIC1111が実際に何であるか、モデルであるStable Diffusion自体や、ComfyUI、Forge、InvokeAIといった新しいUIとの違い、2026年に向けた実際のメンテナンス状況、ライセンス条件、ハードウェア要件、そして今日誰が使うべきで誰が使うべきでないかについての正直な指針を扱います。',
     metaDescription:
@@ -1617,8 +1617,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/automatic1111-review-hero-pt.webp',
-    title: 'Análise do AUTOMATIC1111 (2026): Stable Diffusion WebUI explicado',
-    seoTitle: 'AUTOMATIC1111 Análise 2026: Guia do Stable Diffusion WebUI',
+    title: 'Análise do AUTOMATIC1111: Stable Diffusion WebUI explicado',
+    seoTitle: 'AUTOMATIC1111 Análise: Guia do Stable Diffusion WebUI',
     intro:
       'O AUTOMATIC1111 — formalmente "Stable Diffusion web UI" — é uma interface web gratuita, de código aberto e organizada em abas para rodar modelos Stable Diffusion na sua própria GPU. Lançado no GitHub em 22 de agosto de 2022, um mês após o lançamento público do Stable Diffusion, tornou-se a primeira interface gráfica amplamente adotada para geração local de imagens e ainda é descrito por análises de terceiros como uma das opções mais usadas e mais bem documentadas da categoria, graças a um enorme ecossistema de extensões (ControlNet, treinamento de LoRA e milhares de scripts da comunidade). Esta análise explica o que o AUTOMATIC1111 realmente é, em que difere do modelo Stable Diffusion e de interfaces mais novas como ComfyUI, Forge e InvokeAI, seu real estado de manutenção de cara para 2026, os termos de licença, os requisitos de hardware, e uma orientação honesta sobre quem deve — e quem não deve — usá-lo hoje.',
     metaDescription:
@@ -1937,8 +1937,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/automatic1111-review-hero-ar.webp',
-    title: 'مراجعة AUTOMATIC1111 (2026): شرح Stable Diffusion WebUI',
-    seoTitle: 'مراجعة AUTOMATIC1111 2026: دليل Stable Diffusion WebUI',
+    title: 'مراجعة AUTOMATIC1111: شرح Stable Diffusion WebUI',
+    seoTitle: 'مراجعة AUTOMATIC1111: دليل Stable Diffusion WebUI',
     intro:
       'AUTOMATIC1111 — واسمه الرسمي "Stable Diffusion web UI" — هو واجهة ويب مجانية ومفتوحة المصدر ومنظّمة في تبويبات لتشغيل نماذج Stable Diffusion على معالج الرسومات (GPU) الخاص بك. صدر على GitHub في 22 أغسطس 2022، أي بعد شهر واحد من الإطلاق العام لـ Stable Diffusion، وأصبح أول واجهة رسومية تُعتمد على نطاق واسع لتوليد الصور محليًا، ولا تزال مراجعات جهات خارجية تصفها بأنها من أكثر الخيارات استخدامًا وتوثيقًا في هذه الفئة، بفضل نظام إضافات ضخم (ControlNet وتدريب LoRA وآلاف السكربتات المجتمعية). تتناول هذه المراجعة ما هو AUTOMATIC1111 فعليًا، وكيف يختلف عن نموذج Stable Diffusion نفسه وعن واجهات أحدث مثل ComfyUI وForge وInvokeAI، وحالة صيانته الحقيقية مع اقتراب 2026، وشروط الترخيص، ومتطلبات العتاد، وإرشادات صادقة حول من يجب أن يستخدمه — ومن لا ينبغي له ذلك — اليوم.',
     metaDescription:
@@ -2257,8 +2257,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/automatic1111-review-hero-zh.webp',
-    title: 'AUTOMATIC1111评测（2026年）：详解Stable Diffusion WebUI',
-    seoTitle: 'AUTOMATIC1111评测2026：Stable Diffusion WebUI指南',
+    title: 'AUTOMATIC1111评测：详解Stable Diffusion WebUI',
+    seoTitle: 'AUTOMATIC1111评测：Stable Diffusion WebUI指南',
     intro:
       'AUTOMATIC1111——正式名称为"Stable Diffusion web UI"——是一款免费、开源、采用标签页布局的Web界面，用于在自己的GPU上运行Stable Diffusion模型。它于2022年8月22日在GitHub上发布，比Stable Diffusion公开发布晚了一个月，成为第一个被广泛采用的本地图像生成图形前端，并且至今仍被第三方评测称为该类别中使用最广泛、文档最完善的选择之一，这得益于其庞大的扩展生态系统（ControlNet、LoRA训练以及数千个社区脚本）。本评测将说明AUTOMATIC1111究竟是什么，它与Stable Diffusion模型本身以及ComfyUI、Forge、InvokeAI等更新的界面有何不同，展望2026年的真实维护状态、许可条款、硬件需求，并诚实地说明如今谁应该——以及谁不应该——使用它。',
     metaDescription:
@@ -2577,8 +2577,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/automatic1111-review-hero-ko.webp',
-    title: 'AUTOMATIC1111 리뷰(2026년): Stable Diffusion WebUI 완전 정리',
-    seoTitle: 'AUTOMATIC1111 리뷰 2026: Stable Diffusion WebUI 가이드',
+    title: 'AUTOMATIC1111 리뷰: Stable Diffusion WebUI 완전 정리',
+    seoTitle: 'AUTOMATIC1111 리뷰: Stable Diffusion WebUI 가이드',
     intro:
       'AUTOMATIC1111 — 공식 명칭 "Stable Diffusion web UI" — 는 자신의 GPU에서 Stable Diffusion 모델을 실행하기 위한 무료 오픈소스 탭 방식 웹 인터페이스입니다. Stable Diffusion 공개 출시 한 달 뒤인 2022년 8월 22일 GitHub에 공개되어 로컬 이미지 생성용으로 널리 채택된 최초의 그래픽 프런트엔드가 되었으며, ControlNet, LoRA 학습, 수천 개의 커뮤니티 스크립트로 이루어진 거대한 확장 기능 생태계 덕분에 제3자 리뷰에서도 여전히 이 카테고리에서 가장 많이 사용되고 문서화가 가장 잘된 옵션 중 하나로 꼽힙니다. 이 리뷰에서는 AUTOMATIC1111이 실제로 무엇인지, 모델 자체인 Stable Diffusion 및 ComfyUI·Forge·InvokeAI 같은 더 새로운 UI와 어떻게 다른지, 2026년을 앞둔 실제 유지보수 상태, 라이선스 조건, 하드웨어 요구 사항, 그리고 오늘날 누가 사용해야 하고 누가 사용하지 말아야 하는지에 대한 솔직한 안내를 다룹니다.',
     metaDescription:

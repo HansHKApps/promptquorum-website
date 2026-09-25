@@ -14,8 +14,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-en.webp',
-    title: 'Private LLM Review (2026): On-Device AI Chat for iPhone, iPad, and Mac',
-    seoTitle: 'Private LLM Review 2026: On-Device AI for iPhone & Mac',
+    title: 'Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac',
+    seoTitle: 'Private LLM Review: On-Device AI for iPhone & Mac',
     intro:
       'Private LLM, made by [Numen Technologies Limited](https://privatellm.app/en), is a paid, one-time-purchase app for iPhone, iPad, and Mac that runs open-source language models entirely on-device, with no account, no cloud fallback, and no subscription. It costs [$4.99 on the Apple App Store](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) — a single purchase that covers all three Apple platforms and, via Family Sharing, up to six people. The app supports more than 140 open-source models from families including Llama, Qwen, Gemma, Mistral, and Phi-4, and uses a quantization method called OmniQuant (paired with GPTQ) that the developer says preserves more model quality than the simpler round-to-nearest quantization used by some competing apps. The practical question for a reader comparing local-AI apps is not whether on-device chat works on an iPhone — several apps on this site already prove that — it is whether a one-time $4.99 purchase with 140+ curated models is worth it next to free alternatives like [PocketPal AI](/power-local-llm/pocketpal-ai-review) or [Enclave AI](/power-local-llm/enclave-ai-review).',
     metaDescription:
@@ -454,8 +454,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-de.webp',
-    title: 'Private LLM im Test (2026): KI-Chat auf dem Gerät für iPhone, iPad und Mac',
-    seoTitle: 'Private LLM Test 2026: On-Device-KI für iPhone & Mac',
+    title: 'Private LLM im Test: KI-Chat auf dem Gerät für iPhone, iPad und Mac',
+    seoTitle: 'Private LLM Test: On-Device-KI für iPhone & Mac',
     intro:
       'Private LLM, entwickelt von [Numen Technologies Limited](https://privatellm.app/en), ist eine kostenpflichtige App mit einmaligem Kaufpreis für iPhone, iPad und Mac, die Open-Source-Sprachmodelle vollständig auf dem Gerät ausführt — ohne Konto, ohne Cloud-Fallback und ohne Abonnement. Sie kostet [4,99 $ im Apple App Store](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) — ein einmaliger Kauf, der alle drei Apple-Plattformen abdeckt und über Familienfreigabe bis zu sechs Personen einschließt. App-Store-Preise können je nach Region variieren; prüfen Sie vor dem Kauf den aktuellen Preis im deutschen App Store. Die App unterstützt mehr als 140 Open-Source-Modelle aus Familien wie Llama, Qwen, Gemma, Mistral und Phi-4 und nutzt ein Quantisierungsverfahren namens OmniQuant (kombiniert mit GPTQ), das laut Entwickler mehr Modellqualität erhält als die einfachere Round-to-Nearest-Quantisierung, die manche konkurrierende Apps verwenden. Die praktische Frage für Leser, die lokale KI-Apps vergleichen, ist nicht, ob On-Device-Chat auf einem iPhone funktioniert — mehrere auf dieser Seite behandelte Apps beweisen das bereits —, sondern ob ein einmaliger Kauf für 4,99 $ mit 140+ kuratierten Modellen sich gegenüber kostenlosen Alternativen wie [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) oder [Enclave AI](/de/power-local-llm/enclave-ai-review) lohnt.',
     metaDescription:
@@ -907,8 +907,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-es.webp',
-    title: 'Private LLM: Análisis (2026): Chat de IA en el dispositivo para iPhone, iPad y Mac',
-    seoTitle: 'Private LLM 2026: IA en el dispositivo para iPhone y Mac',
+    title: 'Private LLM: Análisis: Chat de IA en el dispositivo para iPhone, iPad y Mac',
+    seoTitle: 'Private LLM: IA en el dispositivo para iPhone y Mac',
     intro:
       'Private LLM, creada por [Numen Technologies Limited](https://privatellm.app/en), es una app de pago con compra única para iPhone, iPad y Mac que ejecuta modelos de lenguaje de código abierto completamente en el dispositivo, sin cuenta, sin respaldo en la nube y sin suscripción. Cuesta [4,99 $ en la App Store de Apple](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) — una compra única que cubre las tres plataformas de Apple y, mediante Compartir en familia, hasta seis personas. Los precios de la App Store pueden variar según la región; confirma el precio actual en tu App Store local antes de comprar. La app admite más de 140 modelos de código abierto de familias como Llama, Qwen, Gemma, Mistral y Phi-4, y usa un método de cuantización llamado OmniQuant (combinado con GPTQ) que, según el desarrollador, conserva más calidad del modelo que la cuantización round-to-nearest más simple que usan algunas apps de la competencia. La pregunta práctica para quien compara apps de IA local no es si el chat en el dispositivo funciona en un iPhone — varias apps cubiertas en este sitio ya lo demuestran —, sino si una compra única de 4,99 $ con más de 140 modelos curados vale la pena frente a alternativas gratuitas como [PocketPal AI](/es/power-local-llm/pocketpal-ai-review) o [Enclave AI](/es/power-local-llm/enclave-ai-review).',
     metaDescription:
@@ -1360,8 +1360,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-fr.webp',
-    title: 'Private LLM : test (2026) de l\'IA embarquée pour iPhone, iPad et Mac',
-    seoTitle: 'Private LLM 2026 : IA embarquée pour iPhone et Mac',
+    title: 'Private LLM: test de l\'IA embarquée pour iPhone, iPad et Mac',
+    seoTitle: 'Private LLM: IA embarquée pour iPhone et Mac',
     intro:
       'Private LLM, développée par [Numen Technologies Limited](https://privatellm.app/en), est une application payante à achat unique pour iPhone, iPad et Mac qui exécute des modèles de langage open source entièrement sur l\'appareil, sans compte, sans repli vers le cloud et sans abonnement. Elle coûte [4,99 $ sur l\'App Store d\'Apple](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) — un achat unique qui couvre les trois plateformes Apple et, via le Partage familial, jusqu\'à six personnes. Les prix de l\'App Store peuvent varier selon la région ; vérifiez le prix actuel sur l\'App Store français avant d\'acheter. L\'application prend en charge plus de 140 modèles open source de familles telles que Llama, Qwen, Gemma, Mistral et Phi-4, et utilise une méthode de quantification appelée OmniQuant (associée à GPTQ) qui, selon l\'éditeur, préserve davantage de qualité du modèle que la quantification round-to-nearest plus simple utilisée par certaines applications concurrentes. La question pratique pour un lecteur qui compare des applications d\'IA locale n\'est pas de savoir si le chat embarqué fonctionne sur un iPhone — plusieurs applications déjà couvertes sur ce site le prouvent —, mais si un achat unique à 4,99 $ avec plus de 140 modèles sélectionnés vaut le coup face à des alternatives gratuites comme [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) ou [Enclave AI](/fr/power-local-llm/enclave-ai-review).',
     metaDescription:
@@ -1813,8 +1813,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-ja.webp',
-    title: 'Private LLMレビュー（2026年）：iPhone・iPad・Mac向けオンデバイスAIチャット',
-    seoTitle: 'Private LLM 2026レビュー：iPhone/Mac向けオンデバイスAI',
+    title: 'Private LLMレビュー：iPhone・iPad・Mac向けオンデバイスAIチャット',
+    seoTitle: 'Private LLM レビュー：iPhone/Mac向けオンデバイスAI',
     intro:
       '[Numen Technologies Limited](https://privatellm.app/en)が開発したPrivate LLMは、iPhone・iPad・Mac向けの買い切り型有料アプリで、オープンソースの言語モデルを完全にオンデバイスで実行します。アカウント登録もクラウドへのフォールバックもサブスクリプションも不要です。[Apple App Storeでの価格は4.99ドル](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860)で、一度の購入でApple製3プラットフォームすべてをカバーし、ファミリー共有を使えば最大6人まで利用できます。App Storeの価格は地域によって異なる場合があるため、購入前に現地App Storeで現在の価格を確認してください。アプリはLlama、Qwen、Gemma、Mistral、Phi-4など140以上のオープンソースモデルファミリーに対応し、OmniQuant（一部モデルではGPTQと併用）という量子化手法を採用しています。開発者によれば、これは一部の競合アプリが使うより単純なround-to-nearest量子化よりもモデル品質を維持できるとのことです。ローカルAIアプリを比較する読者にとって実際に重要な問いは、iPhone上でオンデバイスチャットが動くかどうかではありません（このサイトで扱う複数のアプリがすでに実証済みです）——140以上の厳選モデルを備えた4.99ドルの買い切り購入が、[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)や[Enclave AI](/ja/power-local-llm/enclave-ai-review)のような無料の代替アプリと比べて価値があるかどうかです。',
     metaDescription:
@@ -2266,8 +2266,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-pt.webp',
-    title: 'Private LLM: Análise (2026) do chat de IA no dispositivo para iPhone, iPad e Mac',
-    seoTitle: 'Private LLM 2026: IA no dispositivo para iPhone e Mac',
+    title: 'Private LLM: Análise do chat de IA no dispositivo para iPhone, iPad e Mac',
+    seoTitle: 'Private LLM: IA no dispositivo para iPhone e Mac',
     intro:
       'O Private LLM, feito pela [Numen Technologies Limited](https://privatellm.app/en), é um aplicativo pago de compra única para iPhone, iPad e Mac que executa modelos de linguagem de código aberto inteiramente no dispositivo, sem conta, sem depender da nuvem e sem assinatura. Ele custa [US$ 4,99 na App Store da Apple](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) — uma compra única que cobre as três plataformas da Apple e, via Compartilhamento familiar, até seis pessoas. Os preços da App Store podem variar por região; confirme o preço atual na App Store brasileira antes de comprar. O app suporta mais de 140 modelos de código aberto de famílias como Llama, Qwen, Gemma, Mistral e Phi-4, e usa um método de quantização chamado OmniQuant (combinado com GPTQ) que, segundo o desenvolvedor, preserva mais qualidade do modelo do que a quantização round-to-nearest mais simples usada por alguns apps concorrentes. A pergunta prática para quem compara apps de IA local não é se o chat no dispositivo funciona em um iPhone — vários apps já cobertos neste site provam isso —, mas sim se uma compra única de US$ 4,99 com mais de 140 modelos selecionados vale a pena frente a alternativas gratuitas como [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) ou [Enclave AI](/pt/power-local-llm/enclave-ai-review).',
     metaDescription:
@@ -2719,8 +2719,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-ar.webp',
-    title: 'مراجعة Private LLM (2026): محادثة ذكاء اصطناعي على الجهاز لأجهزة iPhone وiPad وMac',
-    seoTitle: 'مراجعة Private LLM 2026: ذكاء اصطناعي على الجهاز لـ iPhone وMac',
+    title: 'مراجعة Private LLM: محادثة ذكاء اصطناعي على الجهاز لأجهزة iPhone وiPad وMac',
+    seoTitle: 'مراجعة Private LLM: ذكاء اصطناعي على الجهاز لـ iPhone وMac',
     intro:
       'تطبيق Private LLM، من تطوير [Numen Technologies Limited](https://privatellm.app/en)، هو تطبيق مدفوع بشراء لمرة واحدة لأجهزة iPhone وiPad وMac يشغّل نماذج لغوية مفتوحة المصدر بالكامل على الجهاز، دون حساب ودون الاعتماد على السحابة ودون اشتراك. سعره [4.99 دولار أمريكي في App Store من Apple](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) — شراء لمرة واحدة يغطي منصات Apple الثلاث، وعبر ميزة المشاركة العائلية يغطي حتى ستة أشخاص. قد تختلف أسعار App Store حسب المنطقة؛ تأكد من السعر الحالي في متجر التطبيقات المحلي قبل الشراء. يدعم التطبيق أكثر من 140 نموذجًا مفتوح المصدر من عائلات مثل Llama وQwen وGemma وMistral وPhi-4، ويستخدم أسلوب تكميم (quantization) يُسمى OmniQuant (مقترنًا بـ GPTQ في بعض النماذج) يقول المطوّر إنه يحافظ على جودة أكبر للنموذج مقارنة بتكميم round-to-nearest الأبسط الذي تستخدمه بعض التطبيقات المنافسة. السؤال العملي لمن يقارن تطبيقات الذكاء الاصطناعي المحلي ليس ما إذا كانت المحادثة على الجهاز تعمل على iPhone — فعدة تطبيقات مغطاة على هذا الموقع تثبت ذلك بالفعل — بل ما إذا كان الشراء لمرة واحدة بسعر 4.99 دولار مع أكثر من 140 نموذجًا منتقى يستحق مقارنةً ببدائل مجانية مثل [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) أو [Enclave AI](/ar/power-local-llm/enclave-ai-review).',
     metaDescription:
@@ -3172,8 +3172,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-zh.webp',
-    title: 'Private LLM评测（2026）：iPhone、iPad和Mac的本地设备端AI聊天应用',
-    seoTitle: 'Private LLM 2026评测：iPhone/Mac端侧AI',
+    title: 'Private LLM评测：iPhone、iPad和Mac的本地设备端AI聊天应用',
+    seoTitle: 'Private LLM 评测：iPhone/Mac端侧AI',
     intro:
       'Private LLM由[Numen Technologies Limited](https://privatellm.app/en)开发，是一款面向iPhone、iPad和Mac的一次性付费应用，可完全在设备端运行开源语言模型——无需账号、无需依赖云端、无需订阅。它在[Apple App Store上的售价为4.99美元](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860)，一次购买即可覆盖三个Apple平台，通过家人共享最多可供六人使用。App Store价格可能因地区而异，购买前请在当地App Store确认当前价格。该应用支持140多个开源模型，涵盖Llama、Qwen、Gemma、Mistral、Phi-4等系列，并采用名为OmniQuant的量化方法（部分模型搭配GPTQ），开发者称这比一些竞品应用使用的更简单的round-to-nearest量化能保留更多模型质量。对于比较本地AI应用的读者来说，实际的问题不是iPhone上能否运行设备端聊天——本站已收录的多款应用早已证明这一点——而是花4.99美元一次性购买、获得140多个精选模型是否比[PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)或[Enclave AI](/zh/power-local-llm/enclave-ai-review)等免费替代品更划算。',
     metaDescription:
@@ -3625,8 +3625,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-ko.webp',
-    title: 'Private LLM 리뷰(2026): iPhone·iPad·Mac용 온디바이스 AI 챗',
-    seoTitle: 'Private LLM 2026 리뷰: iPhone·Mac 온디바이스 AI',
+    title: 'Private LLM 리뷰: iPhone·iPad·Mac용 온디바이스 AI 챗',
+    seoTitle: 'Private LLM 리뷰: iPhone·Mac 온디바이스 AI',
     intro:
       '[Numen Technologies Limited](https://privatellm.app/en)가 개발한 Private LLM은 iPhone, iPad, Mac용 일회성 유료 구매 앱으로, 오픈소스 언어 모델을 완전히 기기 내에서 실행합니다. 계정도, 클라우드 대체 수단도, 구독도 필요하지 않습니다. [Apple App Store 가격은 4.99달러](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860)이며, 한 번 구매하면 Apple 세 플랫폼을 모두 사용할 수 있고 가족 공유를 이용하면 최대 6명까지 사용할 수 있습니다. App Store 가격은 지역에 따라 다를 수 있으므로 구매 전 현지 App Store에서 현재 가격을 확인하십시오. 이 앱은 Llama, Qwen, Gemma, Mistral, Phi-4 등 140개가 넘는 오픈소스 모델 계열을 지원하며, OmniQuant(일부 모델은 GPTQ 병행)라는 양자화 방식을 사용합니다. 개발사에 따르면 이 방식은 일부 경쟁 앱이 사용하는 더 단순한 round-to-nearest 양자화보다 모델 품질을 더 잘 보존한다고 합니다. 로컬 AI 앱을 비교하는 독자에게 실질적으로 중요한 질문은 iPhone에서 온디바이스 챗이 작동하는지 여부가 아닙니다——이 사이트에서 다루는 여러 앱이 이미 그것을 입증했습니다——4.99달러를 한 번 지불하고 140개 이상의 선별된 모델을 얻는 것이 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)나 [Enclave AI](/ko/power-local-llm/enclave-ai-review) 같은 무료 대안에 비해 가치가 있는지가 핵심입니다.',
     metaDescription:

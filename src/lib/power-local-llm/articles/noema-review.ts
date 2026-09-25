@@ -16,8 +16,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/noema-review-hero-en.webp',
-    title: 'Noema Review (2026): Multi-Format Local AI for iPhone, iPad, and Mac',
-    seoTitle: 'Noema Review 2026: Local AI App for iPhone & Mac',
+    title: 'Noema Review: Multi-Format Local AI for iPhone, iPad, and Mac',
+    seoTitle: 'Noema Review: Local AI App for iPhone & Mac',
     intro:
       'Noema, listed on the App Store as "Noema: Local AI & Offline LLM" (developer account: Alexandru Stamate; company: [NoemaAI LLC](https://noemaai.com/ownership)), is a free app for iPhone, iPad, Mac (Apple Silicon), and Apple Vision Pro that runs open-source language models entirely on-device. It is free to download from the [Apple App Store](' +
       APP_STORE_URL +
@@ -531,8 +531,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/noema-review-hero-de.webp',
-    title: 'Noema im Test (2026): Multi-Format-KI lokal für iPhone, iPad und Mac',
-    seoTitle: 'Noema Test 2026: Lokale KI-App für iPhone & Mac',
+    title: 'Noema im Test: Multi-Format-KI lokal für iPhone, iPad und Mac',
+    seoTitle: 'Noema Test: Lokale KI-App für iPhone & Mac',
     intro:
       'Noema, im App Store als "Noema: Local AI & Offline LLM" gelistet (Entwicklerkonto: Alexandru Stamate; Unternehmen: [NoemaAI LLC](https://noemaai.com/ownership)), ist eine kostenlose App für iPhone, iPad, Mac (Apple Silicon) und Apple Vision Pro, die Open-Source-Sprachmodelle vollständig auf dem Gerät ausführt. Sie ist kostenlos im [Apple App Store](' +
       APP_STORE_URL +
@@ -1046,8 +1046,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/noema-review-hero-fr.webp',
-    title: 'Noema : notre avis (2026) — IA multi-format en local pour iPhone, iPad et Mac',
-    seoTitle: 'Noema : avis 2026 — IA locale pour iPhone et Mac',
+    title: 'Noema: notre avis — IA multi-format en local pour iPhone, iPad et Mac',
+    seoTitle: 'Noema: avis — IA locale pour iPhone et Mac',
     intro:
       'Noema, référencée sur l\'App Store sous le nom « Noema: Local AI & Offline LLM » (compte développeur : Alexandru Stamate ; société : [NoemaAI LLC](https://noemaai.com/ownership)), est une application gratuite pour iPhone, iPad, Mac (Apple Silicon) et Apple Vision Pro qui exécute des modèles de langage open source entièrement sur l\'appareil. Elle est gratuite au téléchargement sur l\'[App Store d\'Apple](' +
       APP_STORE_URL +
@@ -1561,8 +1561,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/noema-review-hero-es.webp',
-    title: 'Noema: reseña (2026) — IA local multiformato para iPhone, iPad y Mac',
-    seoTitle: 'Noema: reseña 2026 — IA local para iPhone y Mac',
+    title: 'Noema: reseña — IA local multiformato para iPhone, iPad y Mac',
+    seoTitle: 'Noema: reseña — IA local para iPhone y Mac',
     intro:
       'Noema, listada en la App Store como "Noema: Local AI & Offline LLM" (cuenta de desarrollador: Alexandru Stamate; empresa: [NoemaAI LLC](https://noemaai.com/ownership)), es una app gratuita para iPhone, iPad, Mac (Apple Silicon) y Apple Vision Pro que ejecuta modelos de lenguaje de código abierto totalmente en el dispositivo. Es gratuita para descargar desde la [App Store de Apple](' +
       APP_STORE_URL +
@@ -2076,8 +2076,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/noema-review-hero-pt.webp',
-    title: 'Noema: análise (2026) — IA local multiformato para iPhone, iPad e Mac',
-    seoTitle: 'Noema: análise 2026 — IA local para iPhone e Mac',
+    title: 'Noema: análise — IA local multiformato para iPhone, iPad e Mac',
+    seoTitle: 'Noema: análise — IA local para iPhone e Mac',
     intro:
       'O Noema, listado na App Store como "Noema: Local AI & Offline LLM" (conta de desenvolvedor: Alexandru Stamate; empresa: [NoemaAI LLC](https://noemaai.com/ownership)), é um aplicativo gratuito para iPhone, iPad, Mac (Apple Silicon) e Apple Vision Pro que executa modelos de linguagem de código aberto totalmente no dispositivo. É gratuito para baixar na [App Store da Apple](' +
       APP_STORE_URL +
@@ -2591,8 +2591,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/noema-review-hero-ja.webp',
-    title: 'Noemaレビュー(2026):iPhone・iPad・Mac向けマルチフォーマットのローカルAI',
-    seoTitle: 'Noemaレビュー2026:iPhone・Mac向けローカルAIアプリ',
+    title: 'Noemaレビュー:iPhone・iPad・Mac向けマルチフォーマットのローカルAI',
+    seoTitle: 'Noemaレビュー:iPhone・Mac向けローカルAIアプリ',
     intro:
       'Noemaは、App Storeで「Noema: Local AI & Offline LLM」として掲載されているアプリです(開発者アカウント:Alexandru Stamate、企業:[NoemaAI LLC](https://noemaai.com/ownership))。iPhone、iPad、Mac(Apple Silicon)、Apple Vision Pro向けの無料アプリで、オープンソースの言語モデルを完全にオンデバイスで実行します。[Apple App Store](' +
       APP_STORE_URL +
@@ -3106,8 +3106,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/noema-review-hero-zh.webp',
-    title: 'Noema 评测(2026):适用于 iPhone、iPad 和 Mac 的多格式本地 AI',
-    seoTitle: 'Noema 评测 2026:iPhone 和 Mac 本地 AI 应用',
+    title: 'Noema 评测:适用于 iPhone、iPad 和 Mac 的多格式本地 AI',
+    seoTitle: 'Noema 评测:iPhone 和 Mac 本地 AI 应用',
     intro:
       'Noema 在 App Store 上的名称是 "Noema: Local AI & Offline LLM"(开发者账号:Alexandru Stamate;公司:[NoemaAI LLC](https://noemaai.com/ownership)),是一款适用于 iPhone、iPad、Mac(Apple Silicon)和 Apple Vision Pro 的免费应用,完全在设备端运行开源语言模型。它可以从 [Apple App Store](' +
       APP_STORE_URL +
@@ -3621,8 +3621,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/noema-review-hero-ar.webp',
-    title: 'مراجعة Noema (2026): ذكاء اصطناعي محلي متعدد الصيغ لأجهزة iPhone وiPad وMac',
-    seoTitle: 'مراجعة Noema 2026: تطبيق ذكاء اصطناعي محلي لـ iPhone وMac',
+    title: 'مراجعة Noema: ذكاء اصطناعي محلي متعدد الصيغ لأجهزة iPhone وiPad وMac',
+    seoTitle: 'مراجعة Noema: تطبيق ذكاء اصطناعي محلي لـ iPhone وMac',
     intro:
       'Noema، المدرَج في متجر التطبيقات باسم "Noema: Local AI & Offline LLM" (حساب المطور: Alexandru Stamate؛ الشركة: [NoemaAI LLC](https://noemaai.com/ownership))، هو تطبيق مجاني لأجهزة iPhone وiPad وMac (Apple Silicon) وApple Vision Pro يشغّل نماذج لغوية مفتوحة المصدر بالكامل على الجهاز. يمكن تنزيله مجانًا من [متجر تطبيقات Apple](' +
       APP_STORE_URL +
@@ -4136,8 +4136,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/noema-review-hero-ko.webp',
-    title: 'Noema 리뷰(2026): iPhone·iPad·Mac용 멀티 포맷 로컬 AI',
-    seoTitle: 'Noema 리뷰 2026: iPhone·Mac용 로컬 AI 앱',
+    title: 'Noema 리뷰: iPhone·iPad·Mac용 멀티 포맷 로컬 AI',
+    seoTitle: 'Noema 리뷰: iPhone·Mac용 로컬 AI 앱',
     intro:
       'App Store에 "Noema: Local AI & Offline LLM"으로 등록된 Noema(개발자 계정: Alexandru Stamate, 회사: [NoemaAI LLC](https://noemaai.com/ownership))는 iPhone, iPad, Mac(Apple Silicon), Apple Vision Pro용 무료 앱으로, 오픈소스 언어 모델을 완전히 온디바이스에서 실행합니다. [Apple App Store](' +
       APP_STORE_URL +

@@ -18,8 +18,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/controlnet-review-hero-en.webp',
-    title: 'ControlNet Review (2026): Structural Control for Stable Diffusion',
-    seoTitle: 'ControlNet Review 2026: Pose, Depth & Edge Control Guide',
+    title: 'ControlNet Review: Structural Control for Stable Diffusion',
+    seoTitle: 'ControlNet Review: Pose, Depth & Edge Control Guide',
     intro:
       'ControlNet is a neural network architecture that adds precise structural conditioning — pose, depth, edge maps, scribbles, segmentation — to Stable Diffusion image generation, giving a text-to-image model a second input besides the prompt. It was introduced in the paper [Adding Conditional Control to Text-to-Image Diffusion Models](https://arxiv.org/abs/2302.05543) by Lvmin Zhang, Anyi Rao, and Maneesh Agrawala of Stanford University, published at ICCV 2023. ControlNet is not a downloadable app: it is a technique with a reference implementation on [GitHub](https://github.com/lllyasviel/ControlNet), distributed as model weights that plug into a Stable Diffusion UI you already have installed — AUTOMATIC1111, ComfyUI, or InvokeAI. This review covers what ControlNet actually is, its real license terms (which differ between the code, the original checkpoints, and newer community/official checkpoints), the conditioning types available, where to get the weights, and how it compares with newer conditioning techniques.',
     metaDescription:
@@ -352,8 +352,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/controlnet-review-hero-de.webp',
-    title: 'ControlNet Test (2026): Strukturelle Kontrolle für Stable Diffusion',
-    seoTitle: 'ControlNet Test 2026: Pose, Tiefe & Kanten-Guide',
+    title: 'ControlNet Test: Strukturelle Kontrolle für Stable Diffusion',
+    seoTitle: 'ControlNet Test: Pose, Tiefe & Kanten-Guide',
     intro:
       'ControlNet ist eine neuronale Netzwerkarchitektur, die Stable-Diffusion-Bildgenerierung um präzise strukturelle Steuerung erweitert — Pose, Tiefe, Kantenkarten, Skizzen, Segmentierung. Damit erhält ein Text-zu-Bild-Modell neben dem Prompt eine zweite Eingabe. Vorgestellt wurde die Methode im Paper [Adding Conditional Control to Text-to-Image Diffusion Models](https://arxiv.org/abs/2302.05543) von Lvmin Zhang, Anyi Rao und Maneesh Agrawala von der Stanford University, veröffentlicht auf der ICCV 2023. ControlNet ist keine herunterladbare App: Es handelt sich um eine Technik mit Referenzimplementierung auf [GitHub](https://github.com/lllyasviel/ControlNet), verteilt als Modellgewichte, die in eine bereits installierte Stable-Diffusion-Oberfläche eingebunden werden — AUTOMATIC1111, ComfyUI oder InvokeAI. Dieser Test erklärt, was ControlNet tatsächlich ist, die realen Lizenzbedingungen (die sich zwischen Code, den ursprünglichen Checkpoints und neueren Community-/offiziellen Checkpoints unterscheiden), die verfügbaren Konditionierungstypen, wo Sie die Gewichte bekommen, und wie es sich mit neueren Konditionierungstechniken vergleicht.',
     metaDescription:
@@ -686,8 +686,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/controlnet-review-hero-es.webp',
-    title: 'ControlNet: Análisis (2026): Control estructural para Stable Diffusion',
-    seoTitle: 'ControlNet 2026: Guía de pose, profundidad y bordes',
+    title: 'ControlNet: Análisis: Control estructural para Stable Diffusion',
+    seoTitle: 'ControlNet: Guía de pose, profundidad y bordes',
     intro:
       'ControlNet es una arquitectura de red neuronal que añade condicionamiento estructural preciso —pose, profundidad, mapas de bordes, garabatos, segmentación— a la generación de imágenes con Stable Diffusion, dando a un modelo de texto a imagen una segunda entrada además del prompt. Se presentó en el artículo [Adding Conditional Control to Text-to-Image Diffusion Models](https://arxiv.org/abs/2302.05543) de Lvmin Zhang, Anyi Rao y Maneesh Agrawala, de la Universidad de Stanford, publicado en ICCV 2023. ControlNet no es una aplicación descargable: es una técnica con una implementación de referencia en [GitHub](https://github.com/lllyasviel/ControlNet), distribuida como pesos de modelo que se conectan a una interfaz de Stable Diffusion que ya tienes instalada —AUTOMATIC1111, ComfyUI o InvokeAI—. Este análisis explica qué es ControlNet en realidad, sus condiciones de licencia reales (que difieren entre el código, los checkpoints originales y los checkpoints más recientes de la comunidad u oficiales), los tipos de condicionamiento disponibles, dónde conseguir los pesos, y cómo se compara con técnicas de condicionamiento más recientes.',
     metaDescription:
@@ -1020,8 +1020,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/controlnet-review-hero-fr.webp',
-    title: 'ControlNet : Test (2026) : contrôle structurel pour Stable Diffusion',
-    seoTitle: 'ControlNet 2026 : guide pose, profondeur et contours',
+    title: 'ControlNet: Test: contrôle structurel pour Stable Diffusion',
+    seoTitle: 'ControlNet: guide pose, profondeur et contours',
     intro:
       'ControlNet est une architecture de réseau de neurones qui ajoute un conditionnement structurel précis — pose, profondeur, cartes de contours, gribouillis, segmentation — à la génération d\'images avec Stable Diffusion, en donnant à un modèle texte-image une seconde entrée en plus du prompt. Il a été présenté dans l\'article [Adding Conditional Control to Text-to-Image Diffusion Models](https://arxiv.org/abs/2302.05543) de Lvmin Zhang, Anyi Rao et Maneesh Agrawala, de l\'université Stanford, publié à l\'ICCV 2023. ControlNet n\'est pas une application téléchargeable : c\'est une technique dotée d\'une implémentation de référence sur [GitHub](https://github.com/lllyasviel/ControlNet), distribuée sous forme de poids de modèle qui s\'intègrent à une interface Stable Diffusion déjà installée — AUTOMATIC1111, ComfyUI ou InvokeAI. Ce test explique ce qu\'est réellement ControlNet, ses véritables conditions de licence (qui diffèrent entre le code, les checkpoints d\'origine et les checkpoints communautaires ou officiels plus récents), les types de conditionnement disponibles, où trouver les poids, et comment il se compare aux techniques de conditionnement plus récentes.',
     metaDescription:
@@ -1354,8 +1354,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/controlnet-review-hero-ja.webp',
-    title: 'ControlNetレビュー（2026年）: Stable Diffusionの構造制御アドオン',
-    seoTitle: 'ControlNetレビュー2026: ポーズ・深度・エッジ制御ガイド',
+    title: 'ControlNetレビュー: Stable Diffusionの構造制御アドオン',
+    seoTitle: 'ControlNetレビュー: ポーズ・深度・エッジ制御ガイド',
     intro:
       'ControlNetは、Stable Diffusionの画像生成にポーズ、深度、エッジマップ、スケッチ、セグメンテーションなど正確な構造的条件付けを追加するニューラルネットワーク・アーキテクチャです。これにより、テキスト画像モデルはプロンプトに加えて第2の入力を受け取れます。この技術はスタンフォード大学のLvmin Zhang、Anyi Rao、Maneesh Agrawalaによる論文[Adding Conditional Control to Text-to-Image Diffusion Models](https://arxiv.org/abs/2302.05543)で発表され、ICCV 2023で公開されました。ControlNetはダウンロード可能なアプリではありません。[GitHub](https://github.com/lllyasviel/ControlNet)上に参照実装を持つ技術であり、モデルの重みとして配布され、すでにインストール済みのStable Diffusion用UI（AUTOMATIC1111、ComfyUI、InvokeAI）に組み込んで使用します。このレビューでは、ControlNetの正体、実際のライセンス条件（コード、オリジナルのチェックポイント、新しいコミュニティ/公式チェックポイントで異なります）、利用可能な条件付けタイプ、重みの入手先、新しい条件付け技術との比較について解説します。',
     metaDescription:
@@ -1688,8 +1688,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/controlnet-review-hero-pt.webp',
-    title: 'ControlNet: Análise (2026): Controle Estrutural para o Stable Diffusion',
-    seoTitle: 'ControlNet 2026: Guia de Pose, Profundidade e Bordas',
+    title: 'ControlNet: Análise: Controle Estrutural para o Stable Diffusion',
+    seoTitle: 'ControlNet: Guia de Pose, Profundidade e Bordas',
     intro:
       'O ControlNet é uma arquitetura de rede neural que adiciona condicionamento estrutural preciso — pose, profundidade, mapas de bordas, rabiscos, segmentação — à geração de imagens com Stable Diffusion, dando a um modelo texto-para-imagem uma segunda entrada além do prompt. Foi apresentado no artigo [Adding Conditional Control to Text-to-Image Diffusion Models](https://arxiv.org/abs/2302.05543), de Lvmin Zhang, Anyi Rao e Maneesh Agrawala, da Universidade Stanford, publicado na ICCV 2023. O ControlNet não é um aplicativo para baixar: é uma técnica com implementação de referência no [GitHub](https://github.com/lllyasviel/ControlNet), distribuída como pesos de modelo que se conectam a uma interface de Stable Diffusion já instalada — AUTOMATIC1111, ComfyUI ou InvokeAI. Esta análise explica o que o ControlNet realmente é, seus termos reais de licença (que diferem entre o código, os checkpoints originais e checkpoints mais novos da comunidade/oficiais), os tipos de condicionamento disponíveis, onde obter os pesos, e como ele se compara a técnicas de condicionamento mais recentes.',
     metaDescription:
@@ -2022,8 +2022,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/controlnet-review-hero-ar.webp',
-    title: 'مراجعة ControlNet (2026): تحكم بنيوي دقيق لـ Stable Diffusion',
-    seoTitle: 'مراجعة ControlNet 2026: دليل التحكم بالوضعية والعمق والحواف',
+    title: 'مراجعة ControlNet: تحكم بنيوي دقيق لـ Stable Diffusion',
+    seoTitle: 'مراجعة ControlNet: دليل التحكم بالوضعية والعمق والحواف',
     intro:
       'ControlNet هو معمارية شبكة عصبية تضيف اشتراطًا بنيويًا دقيقًا — الوضعية، العمق، خرائط الحواف، الرسومات التخطيطية، التجزئة — إلى توليد الصور بواسطة Stable Diffusion، ما يمنح نموذج تحويل النص إلى صورة مُدخلًا ثانيًا إلى جانب الوصف النصي (prompt). قُدِّم هذا الأسلوب في ورقة [Adding Conditional Control to Text-to-Image Diffusion Models](https://arxiv.org/abs/2302.05543) للباحثين Lvmin Zhang وAnyi Rao وManeesh Agrawala من جامعة ستانفورد، ونُشرت في مؤتمر ICCV 2023. ControlNet ليس تطبيقًا قابلًا للتنزيل: إنه أسلوب له تنفيذ مرجعي على [GitHub](https://github.com/lllyasviel/ControlNet)، يُوزَّع كأوزان نموذج تُدمج في واجهة Stable Diffusion مثبَّتة مسبقًا لديك — سواء AUTOMATIC1111 أو ComfyUI أو InvokeAI. تشرح هذه المراجعة ما هو ControlNet فعليًا، وشروط ترخيصه الحقيقية (التي تختلف بين الكود، ونقاط التفتيش الأصلية، ونقاط التفتيش المجتمعية أو الرسمية الأحدث)، وأنواع الاشتراط المتاحة، ومكان الحصول على الأوزان، وكيف يقارَن بأساليب اشتراط أحدث.',
     metaDescription:
@@ -2356,8 +2356,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/controlnet-review-hero-zh.webp',
-    title: 'ControlNet评测（2026）：Stable Diffusion的结构化控制插件',
-    seoTitle: 'ControlNet评测2026：姿势、深度与边缘控制指南',
+    title: 'ControlNet评测：Stable Diffusion的结构化控制插件',
+    seoTitle: 'ControlNet评测：姿势、深度与边缘控制指南',
     intro:
       'ControlNet是一种神经网络架构，为Stable Diffusion图像生成添加精确的结构化条件控制——姿势、深度、边缘图、涂鸦草图、语义分割等，使文本到图像模型除提示词外还能接收第二种输入。该技术由斯坦福大学的Lvmin Zhang、Anyi Rao和Maneesh Agrawala在论文[Adding Conditional Control to Text-to-Image Diffusion Models](https://arxiv.org/abs/2302.05543)中提出，发表于ICCV 2023。ControlNet不是可下载的应用程序：它是一种在[GitHub](https://github.com/lllyasviel/ControlNet)上拥有参考实现的技术，以模型权重形式分发，需要接入你已经安装的Stable Diffusion界面——AUTOMATIC1111、ComfyUI或InvokeAI。本评测将说明ControlNet究竟是什么、其真实的许可条款（代码、原始检查点与更新的社区/官方检查点各不相同）、可用的条件类型、权重获取渠道，以及它与更新的条件控制技术相比如何。',
     metaDescription:
@@ -2690,8 +2690,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/controlnet-review-hero-ko.webp',
-    title: 'ControlNet 리뷰 (2026): Stable Diffusion을 위한 구조적 제어 애드온',
-    seoTitle: 'ControlNet 리뷰 2026: 포즈·깊이·엣지 제어 가이드',
+    title: 'ControlNet 리뷰: Stable Diffusion을 위한 구조적 제어 애드온',
+    seoTitle: 'ControlNet 리뷰: 포즈·깊이·엣지 제어 가이드',
     intro:
       'ControlNet은 Stable Diffusion 이미지 생성에 포즈, 깊이, 엣지 맵, 스케치, 세그멘테이션 등 정밀한 구조적 조건을 추가하는 신경망 아키텍처로, 텍스트-이미지 모델이 프롬프트 외에 두 번째 입력을 받을 수 있게 해줍니다. 이 기법은 스탠퍼드 대학교의 Lvmin Zhang, Anyi Rao, Maneesh Agrawala가 발표한 논문 [Adding Conditional Control to Text-to-Image Diffusion Models](https://arxiv.org/abs/2302.05543)에서 소개되었으며, ICCV 2023에서 발표되었습니다. ControlNet은 다운로드 가능한 앱이 아닙니다. [GitHub](https://github.com/lllyasviel/ControlNet)에 참조 구현이 있는 기법으로, 모델 가중치 형태로 배포되어 이미 설치된 Stable Diffusion용 UI(AUTOMATIC1111, ComfyUI, InvokeAI)에 연동해서 사용합니다. 이 리뷰에서는 ControlNet이 실제로 무엇인지, 실제 라이선스 조건(코드, 원본 체크포인트, 최신 커뮤니티/공식 체크포인트마다 다름), 이용 가능한 조건화 유형, 가중치를 구할 수 있는 곳, 그리고 최신 조건화 기법과의 비교를 다룹니다.',
     metaDescription:

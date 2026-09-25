@@ -13,8 +13,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/whisper-cpp-review-hero-en.webp',
-    title: 'Whisper.cpp Review (2026): Local Speech-to-Text in Pure C/C++',
-    seoTitle: 'Whisper.cpp Review 2026: Local STT in C/C++',
+    title: 'Whisper.cpp Review: Local Speech-to-Text in Pure C/C++',
+    seoTitle: 'Whisper.cpp Review: Local STT in C/C++',
     intro:
       'whisper.cpp is a C/C++ reimplementation of OpenAI\'s Whisper automatic speech recognition model, created by Georgi Gerganov and now maintained under the [ggml-org GitHub organization](https://github.com/ggml-org/whisper.cpp). It transcribes speech to text entirely on-device, with no Python runtime and no cloud API call, and runs on hardware ranging from a Raspberry Pi to an Apple Silicon Mac to an NVIDIA GPU server. This review covers its history, how to install and run it, real command-line usage, its MIT license and cost (free), and where it is not the right tool — including a link to PromptQuorum\'s side-by-side benchmark against faster-whisper for readers deciding between the two.',
     metaDescription:
@@ -358,8 +358,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/whisper-cpp-review-hero-de.webp',
-    title: 'Whisper.cpp im Test (2026): Lokale Spracherkennung in reinem C/C++',
-    seoTitle: 'Whisper.cpp Test 2026: Lokale STT in C/C++',
+    title: 'Whisper.cpp im Test: Lokale Spracherkennung in reinem C/C++',
+    seoTitle: 'Whisper.cpp Test: Lokale STT in C/C++',
     intro:
       'whisper.cpp ist eine C/C++-Neuimplementierung des Spracherkennungsmodells Whisper von OpenAI, entwickelt von Georgi Gerganov und heute unter der [ggml-org-Organisation auf GitHub](https://github.com/ggml-org/whisper.cpp) gepflegt. Es wandelt Sprache vollständig lokal auf dem Gerät in Text um, ohne Cloud-API-Aufruf, und läuft auf Hardware vom Raspberry Pi über Apple-Silicon-Macs bis zu NVIDIA-GPU-Servern. Dieser Test behandelt die Geschichte des Projekts, Installation und Ausführung, echte Kommandozeilenbefehle, die MIT-Lizenz und die Kosten (kostenlos) sowie die Grenzen des Tools — inklusive Verweis auf den direkten Benchmark-Vergleich von PromptQuorum mit faster-whisper für alle, die sich zwischen beiden entscheiden müssen.',
     metaDescription:
@@ -703,8 +703,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/whisper-cpp-review-hero-fr.webp',
-    title: 'Whisper.cpp : avis (2026) — reconnaissance vocale locale en C/C++ pur',
-    seoTitle: 'Whisper.cpp 2026 : avis STT local en C/C++',
+    title: 'Whisper.cpp: avis — reconnaissance vocale locale en C/C++ pur',
+    seoTitle: 'Whisper.cpp: avis STT local en C/C++',
     intro:
       'whisper.cpp est une réimplémentation en C/C++ du modèle de reconnaissance vocale Whisper d\'OpenAI, créée par Georgi Gerganov et désormais maintenue sous l\'organisation [ggml-org sur GitHub](https://github.com/ggml-org/whisper.cpp). Il transcrit la parole en texte entièrement sur l\'appareil, sans appel à une API cloud, et fonctionne sur du matériel allant du Raspberry Pi à un Mac Apple Silicon jusqu\'à un serveur GPU NVIDIA. Cet avis couvre son histoire, l\'installation et l\'exécution, de vraies commandes en ligne de commande, sa licence MIT et son coût (gratuit), ainsi que ses limites — avec un lien vers le comparatif chiffré de PromptQuorum face à faster-whisper pour les lecteurs indécis entre les deux.',
     metaDescription:
@@ -1048,8 +1048,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/whisper-cpp-review-hero-es.webp',
-    title: 'Whisper.cpp: análisis (2026) — reconocimiento de voz local en C/C++ puro',
-    seoTitle: 'Whisper.cpp 2026: análisis de STT local en C/C++',
+    title: 'Whisper.cpp: análisis — reconocimiento de voz local en C/C++ puro',
+    seoTitle: 'Whisper.cpp: análisis de STT local en C/C++',
     intro:
       'whisper.cpp es una reimplementación en C/C++ del modelo de reconocimiento de voz Whisper de OpenAI, creada por Georgi Gerganov y mantenida hoy bajo la organización [ggml-org en GitHub](https://github.com/ggml-org/whisper.cpp). Transcribe voz a texto totalmente en el dispositivo, sin llamadas a una API en la nube, y funciona en hardware que va desde una Raspberry Pi hasta un Mac con Apple Silicon o un servidor con GPU NVIDIA. Este análisis cubre su historia, cómo instalarlo y ejecutarlo, comandos reales de línea de comandos, su licencia MIT y coste (gratis), y dónde no es la herramienta adecuada — incluyendo un enlace al comparativo directo de PromptQuorum frente a faster-whisper para quien tenga que elegir entre ambos.',
     metaDescription:
@@ -1393,8 +1393,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/whisper-cpp-review-hero-ja.webp',
-    title: 'whisper.cppレビュー(2026):純粋なC/C++によるローカル音声認識',
-    seoTitle: 'whisper.cppレビュー2026:C/C++のローカルSTT',
+    title: 'whisper.cppレビュー:純粋なC/C++によるローカル音声認識',
+    seoTitle: 'whisper.cppレビュー:C/C++のローカルSTT',
     intro:
       'whisper.cppは、OpenAIの音声認識モデルWhisperをC/C++で再実装したもので、Georgi Gerganov氏が開発し、現在は[GitHubのggml-org組織](https://github.com/ggml-org/whisper.cpp)で保守されています。クラウドAPIを呼び出すことなく、デバイス上で完全に音声をテキストに変換し、Raspberry PiからApple SiliconのMac、NVIDIA GPUサーバーまで幅広いハードウェアで動作します。本レビューでは、開発の歴史、インストールと実行手順、実際のコマンドライン例、MITライセンスとコスト(無料)、そして向いていない用途までを解説し、faster-whisperとの選択で迷う読者向けにPromptQuorumの比較検証記事へのリンクも掲載します。',
     metaDescription:
@@ -1739,8 +1739,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/whisper-cpp-review-hero-pt.webp',
-    title: 'Whisper.cpp: análise (2026) — reconhecimento de voz local em C/C++ puro',
-    seoTitle: 'Whisper.cpp 2026: análise de STT local em C/C++',
+    title: 'Whisper.cpp: análise — reconhecimento de voz local em C/C++ puro',
+    seoTitle: 'Whisper.cpp: análise de STT local em C/C++',
     intro:
       'O whisper.cpp é uma reimplementação em C/C++ do modelo de reconhecimento de voz Whisper da OpenAI, criada por Georgi Gerganov e hoje mantida sob a organização [ggml-org no GitHub](https://github.com/ggml-org/whisper.cpp). Ele transcreve voz em texto totalmente no dispositivo, sem chamadas a uma API na nuvem, e roda em hardware que vai de um Raspberry Pi a um Mac com Apple Silicon ou um servidor com GPU NVIDIA. Esta análise cobre sua história, como instalar e executar, comandos reais de linha de comando, sua licença MIT e custo (gratuito), e onde ele não é a ferramenta certa — incluindo um link para o comparativo direto da PromptQuorum com o faster-whisper para quem precisa escolher entre os dois.',
     metaDescription:
@@ -2084,8 +2084,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/whisper-cpp-review-hero-ar.webp',
-    title: 'مراجعة whisper.cpp (2026): تحويل الكلام إلى نص محليًا بلغة C/C++ خالصة',
-    seoTitle: 'مراجعة whisper.cpp 2026: تحويل كلام محلي بـ C/C++',
+    title: 'مراجعة whisper.cpp: تحويل الكلام إلى نص محليًا بلغة C/C++ خالصة',
+    seoTitle: 'مراجعة whisper.cpp: تحويل كلام محلي بـ C/C++',
     intro:
       'whisper.cpp هو إعادة تنفيذ بلغة C/C++ لنموذج تحويل الكلام إلى نص Whisper من OpenAI، طوّره Georgi Gerganov ويُصان حاليًا ضمن منظمة [ggml-org على GitHub](https://github.com/ggml-org/whisper.cpp). يقوم بتحويل الكلام إلى نص بالكامل على الجهاز نفسه، دون أي استدعاء لواجهة برمجة تطبيقات سحابية، ويعمل على أجهزة تتراوح من Raspberry Pi إلى أجهزة Mac بمعالج Apple Silicon وحتى خوادم بمعالجات NVIDIA GPU. تتناول هذه المراجعة تاريخ المشروع، وكيفية التثبيت والتشغيل، وأوامر سطر أوامر حقيقية، ورخصة MIT وتكلفته (مجاني)، والحالات التي لا يناسبها — مع رابط إلى مقارنة PromptQuorum المباشرة مع faster-whisper لمن يحتار بين الاثنين.',
     metaDescription:
@@ -2429,8 +2429,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/whisper-cpp-review-hero-zh.webp',
-    title: 'whisper.cpp评测(2026):纯C/C++本地语音识别',
-    seoTitle: 'whisper.cpp评测2026:C/C++本地STT',
+    title: 'whisper.cpp评测:纯C/C++本地语音识别',
+    seoTitle: 'whisper.cpp评测:C/C++本地STT',
     intro:
       'whisper.cpp是OpenAI语音识别模型Whisper的C/C++重新实现,由Georgi Gerganov开发,目前由[GitHub上的ggml-org组织](https://github.com/ggml-org/whisper.cpp)维护。它完全在设备本地将语音转换为文本,无需调用云端API,可在从Raspberry Pi到Apple Silicon Mac,再到NVIDIA GPU服务器的各类硬件上运行。本评测涵盖其发展历史、安装与运行方法、真实命令行示例、MIT许可证与成本(免费),以及它不适合的场景——并附上PromptQuorum与faster-whisper直接对比测评的链接,供需要在两者之间做选择的读者参考。',
     metaDescription:
@@ -2775,8 +2775,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/whisper-cpp-review-hero-ko.webp',
-    title: 'whisper.cpp 리뷰(2026): 순수 C/C++로 구현한 로컬 음성 인식',
-    seoTitle: 'whisper.cpp 리뷰 2026: C/C++ 로컬 STT',
+    title: 'whisper.cpp 리뷰: 순수 C/C++로 구현한 로컬 음성 인식',
+    seoTitle: 'whisper.cpp 리뷰: C/C++ 로컬 STT',
     intro:
       'whisper.cpp는 OpenAI의 음성 인식 모델 Whisper를 C/C++로 재구현한 프로젝트로, Georgi Gerganov가 개발했으며 현재는 [GitHub의 ggml-org 조직](https://github.com/ggml-org/whisper.cpp)에서 관리하고 있습니다. 클라우드 API를 호출하지 않고 기기 내에서 완전히 음성을 텍스트로 변환하며, Raspberry Pi부터 Apple Silicon Mac, NVIDIA GPU 서버에 이르기까지 다양한 하드웨어에서 동작합니다. 이 리뷰에서는 개발 역사, 설치 및 실행 방법, 실제 명령줄 예시, MIT 라이선스와 비용(무료), 그리고 적합하지 않은 용도까지 다루며, faster-whisper와의 선택을 고민하는 독자를 위해 PromptQuorum의 직접 비교 벤치마크 링크도 함께 제공합니다.',
     metaDescription:

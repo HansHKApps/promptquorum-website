@@ -13,8 +13,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/off-grid-ai-review-hero-en.webp',
-    title: 'Off Grid AI Review (2026): Cross-Platform Local AI for iOS, Android, macOS, and Windows',
-    seoTitle: 'Off Grid AI Review 2026: Local AI for 4 Platforms',
+    title: 'Off Grid AI Review: Cross-Platform Local AI for iOS, Android, macOS, and Windows',
+    seoTitle: 'Off Grid AI Review: Local AI for 4 Platforms',
     intro:
       'Off Grid AI, made by [Wednesday Solutions, Inc.](https://getoffgridai.co), is a free, open-source, account-free app that runs open-weight AI models entirely on-device across four platforms: iOS, Android, macOS, and Windows. Per the developer\'s own site, it has passed [180,000+ combined downloads](https://getoffgridai.co) across the App Store, Google Play, and GitHub, and its mobile client, [OGAM on GitHub](https://github.com/off-grid-ai/OGAM), has more than 3,000 stars under the MIT license. The App Store listing alone tells a thinner story — [Off Grid AI - Private Local AI](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) shows a 3.1-star average from only 26 ratings, which is a weak signal in isolation. This review checks both pictures directly: the cross-platform download and star numbers from [getoffgridai.co](https://getoffgridai.co) and GitHub, and the narrower iOS-only rating from the App Store, so readers can weigh a small rating sample against a larger, verifiable open-source footprint.',
     metaDescription:
@@ -311,8 +311,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/off-grid-ai-review-hero-de.webp',
-    title: 'Off Grid AI Test (2026): Plattformübergreifende lokale KI für iOS, Android, macOS und Windows',
-    seoTitle: 'Off Grid AI Test 2026: Lokale KI für 4 Plattformen',
+    title: 'Off Grid AI Test: Plattformübergreifende lokale KI für iOS, Android, macOS und Windows',
+    seoTitle: 'Off Grid AI Test: Lokale KI für 4 Plattformen',
     intro:
       'Off Grid AI von [Wednesday Solutions, Inc.](https://getoffgridai.co) ist eine kostenlose, quelloffene App ohne Konto, die offene KI-Modelle vollständig auf dem Gerät ausführt — auf vier Plattformen: iOS, Android, macOS und Windows. Laut der eigenen Website des Entwicklers hat die App [über 180.000 Downloads](https://getoffgridai.co) im App Store, bei Google Play und auf GitHub zusammen erreicht, und der Mobil-Client [OGAM auf GitHub](https://github.com/off-grid-ai/OGAM) hat unter MIT-Lizenz mehr als 3.000 Sterne. Der App-Store-Eintrag allein zeichnet ein dünneres Bild — [Off Grid AI - Private Local AI](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) zeigt einen Durchschnitt von nur 3,1 Sternen bei 26 Bewertungen, was isoliert betrachtet ein schwaches Signal ist. Dieser Test prüft beide Bilder direkt: die plattformübergreifenden Download- und Sternezahlen von [getoffgridai.co](https://getoffgridai.co) und GitHub sowie die schmalere iOS-Bewertung im App Store, damit Leser eine kleine Bewertungsstichprobe gegen eine größere, überprüfbare Open-Source-Basis abwägen können.',
     metaDescription:
@@ -609,8 +609,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/off-grid-ai-review-hero-fr.webp',
-    title: 'Avis Off Grid AI (2026) : IA locale multiplateforme pour iOS, Android, macOS et Windows',
-    seoTitle: 'Avis Off Grid AI 2026 : IA locale sur 4 plateformes',
+    title: 'Avis Off Grid AI: IA locale multiplateforme pour iOS, Android, macOS et Windows',
+    seoTitle: 'Avis Off Grid AI: IA locale sur 4 plateformes',
     intro:
       'Off Grid AI, créé par [Wednesday Solutions, Inc.](https://getoffgridai.co), est une application gratuite, open source et sans compte qui exécute des modèles d\'IA ouverts entièrement sur l\'appareil, sur quatre plateformes : iOS, Android, macOS et Windows. Selon le site du développeur, elle a dépassé [180 000 téléchargements cumulés](https://getoffgridai.co) entre l\'App Store, Google Play et GitHub, et son client mobile, [OGAM sur GitHub](https://github.com/off-grid-ai/OGAM), compte plus de 3 000 étoiles sous licence MIT. La fiche App Store, elle seule, raconte une histoire plus modeste — [Off Grid AI - Private Local AI](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) affiche une moyenne de 3,1 étoiles sur seulement 26 avis, un signal faible isolément. Cet avis vérifie les deux images directement : les chiffres multiplateformes de téléchargements et d\'étoiles de [getoffgridai.co](https://getoffgridai.co) et GitHub, ainsi que la note iOS plus étroite de l\'App Store, afin que le lecteur puisse mettre en balance un petit échantillon d\'avis et une base open source plus large et vérifiable.',
     metaDescription:
@@ -907,8 +907,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/off-grid-ai-review-hero-es.webp',
-    title: 'Reseña de Off Grid AI (2026): IA local multiplataforma para iOS, Android, macOS y Windows',
-    seoTitle: 'Reseña de Off Grid AI 2026: IA local en 4 plataformas',
+    title: 'Reseña de Off Grid AI: IA local multiplataforma para iOS, Android, macOS y Windows',
+    seoTitle: 'Reseña de Off Grid AI: IA local en 4 plataformas',
     intro:
       'Off Grid AI, creada por [Wednesday Solutions, Inc.](https://getoffgridai.co), es una aplicación gratuita, de código abierto y sin cuenta que ejecuta modelos de IA abiertos completamente en el dispositivo, en cuatro plataformas: iOS, Android, macOS y Windows. Según el propio sitio del desarrollador, ha superado [180.000 descargas combinadas](https://getoffgridai.co) entre App Store, Google Play y GitHub, y su cliente móvil, [OGAM en GitHub](https://github.com/off-grid-ai/OGAM), tiene más de 3.000 estrellas bajo licencia MIT. La ficha de la App Store por sí sola cuenta una historia más modesta: [Off Grid AI - Private Local AI](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) muestra un promedio de 3,1 estrellas con solo 26 valoraciones, una señal débil de forma aislada. Esta reseña verifica ambas imágenes directamente: las cifras multiplataforma de descargas y estrellas de [getoffgridai.co](https://getoffgridai.co) y GitHub, y la valoración más estrecha solo de iOS en la App Store, para que el lector pueda sopesar una pequeña muestra de valoraciones frente a una base open source más amplia y verificable.',
     metaDescription:
@@ -1205,8 +1205,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/off-grid-ai-review-hero-pt.webp',
-    title: 'Análise do Off Grid AI (2026): IA local multiplataforma para iOS, Android, macOS e Windows',
-    seoTitle: 'Análise Off Grid AI 2026: IA local em 4 plataformas',
+    title: 'Análise do Off Grid AI: IA local multiplataforma para iOS, Android, macOS e Windows',
+    seoTitle: 'Análise Off Grid AI: IA local em 4 plataformas',
     intro:
       'Off Grid AI, criado pela [Wednesday Solutions, Inc.](https://getoffgridai.co), é um aplicativo gratuito, de código aberto e sem conta que executa modelos de IA abertos inteiramente no dispositivo, em quatro plataformas: iOS, Android, macOS e Windows. Segundo o próprio site do desenvolvedor, já passou de [180.000 downloads combinados](https://getoffgridai.co) entre App Store, Google Play e GitHub, e seu cliente móvel, [OGAM no GitHub](https://github.com/off-grid-ai/OGAM), tem mais de 3.000 estrelas sob licença MIT. A ficha da App Store isoladamente conta uma história mais modesta — [Off Grid AI - Private Local AI](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) mostra uma média de 3,1 estrelas com apenas 26 avaliações, um sinal fraco isoladamente. Esta análise verifica os dois quadros diretamente: os números multiplataforma de downloads e estrelas de [getoffgridai.co](https://getoffgridai.co) e do GitHub, e a avaliação mais restrita apenas do iOS na App Store, para que o leitor possa ponderar uma amostra pequena de avaliações contra uma base open source maior e verificável.',
     metaDescription:
@@ -1503,8 +1503,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/off-grid-ai-review-hero-ja.webp',
-    title: 'Off Grid AIレビュー（2026年）：iOS・Android・macOS・Windows対応のクロスプラットフォームローカルAI',
-    seoTitle: 'Off Grid AIレビュー2026：4プラットフォーム対応のローカルAI',
+    title: 'Off Grid AIレビュー：iOS・Android・macOS・Windows対応のクロスプラットフォームローカルAI',
+    seoTitle: 'Off Grid AIレビュー：4プラットフォーム対応のローカルAI',
     intro:
       '[Wednesday Solutions, Inc.](https://getoffgridai.co)が開発するOff Grid AIは、無料・オープンソース・アカウント不要で、iOS、Android、macOS、Windowsの4プラットフォームで完全にデバイス上でオープンウェイトAIモデルを実行するアプリです。開発元の公式サイトによると、App Store、Google Play、GitHubを合わせて[累計18万件以上のダウンロード](https://getoffgridai.co)を達成しており、モバイルクライアントの[GitHub上のOGAM](https://github.com/off-grid-ai/OGAM)はMITライセンスの下で3,000以上のスターを獲得しています。App Storeの掲載情報だけを見ると、もっと控えめな数字になります——[Off Grid AI - Private Local AI](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882)の評価はわずか26件のレビューで平均3.1星と、単独で見ると弱いシグナルです。本レビューは両方の実態を直接検証しました。[getoffgridai.co](https://getoffgridai.co)とGitHubのクロスプラットフォームなダウンロード数・スター数、そしてApp Storeの狭いiOS限定の評価の両方を確認し、読者が小さな評価サンプルと、より大規模で検証可能なオープンソースの実績を比較検討できるようにしています。',
     metaDescription:
@@ -1801,8 +1801,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/off-grid-ai-review-hero-zh.webp',
-    title: 'Off Grid AI评测（2026年）：支持iOS、Android、macOS和Windows的跨平台本地AI',
-    seoTitle: 'Off Grid AI评测2026：四大平台本地AI',
+    title: 'Off Grid AI评测：支持iOS、Android、macOS和Windows的跨平台本地AI',
+    seoTitle: 'Off Grid AI评测：四大平台本地AI',
     intro:
       'Off Grid AI由[Wednesday Solutions, Inc.](https://getoffgridai.co)开发，是一款免费、开源、无需账号的应用，可在iOS、Android、macOS和Windows四个平台上完全在设备本地运行开放权重AI模型。据开发者官网称，其在App Store、Google Play和GitHub上的[累计下载量已超过18万次](https://getoffgridai.co)，其移动端仓库[GitHub上的OGAM](https://github.com/off-grid-ai/OGAM)在MIT许可证下获得了超过3,000颗星标。仅看App Store的信息则呈现出更单薄的一面——[Off Grid AI - Private Local AI](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882)仅有26条评分，平均3.1星，单独来看是一个较弱的信号。本评测直接核实了两方面的情况：来自[getoffgridai.co](https://getoffgridai.co)和GitHub的跨平台下载量与星标数字，以及仅限iOS的App Store评分，以便读者权衡一个较小的评分样本与更庞大、可核实的开源基础。',
     metaDescription:
@@ -2099,8 +2099,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/off-grid-ai-review-hero-ar.webp',
-    title: 'مراجعة Off Grid AI (2026): ذكاء اصطناعي محلي عبر المنصات لـ iOS وAndroid وmacOS وWindows',
-    seoTitle: 'مراجعة Off Grid AI 2026: ذكاء اصطناعي محلي على 4 منصات',
+    title: 'مراجعة Off Grid AI: ذكاء اصطناعي محلي عبر المنصات لـ iOS وAndroid وmacOS وWindows',
+    seoTitle: 'مراجعة Off Grid AI: ذكاء اصطناعي محلي على 4 منصات',
     intro:
       'تطبيق Off Grid AI، الذي طورته [Wednesday Solutions, Inc.](https://getoffgridai.co)، هو تطبيق مجاني ومفتوح المصدر ولا يتطلب حسابًا، يُشغّل نماذج ذكاء اصطناعي مفتوحة بالكامل على الجهاز عبر أربع منصات: iOS وAndroid وmacOS وWindows. وفقًا لموقع المطوّر نفسه، تجاوز التطبيق [180,000+ تنزيل مجمّع](https://getoffgridai.co) عبر App Store وGoogle Play وGitHub، ويحمل عميله للجوال، [OGAM على GitHub](https://github.com/off-grid-ai/OGAM)، أكثر من 3,000 نجمة بموجب رخصة MIT. أما قائمة App Store وحدها فتروي قصة أضعف — يُظهر [Off Grid AI - Private Local AI](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) متوسط 3.1 نجوم من 26 تقييمًا فقط، وهي إشارة ضعيفة عند النظر إليها بمعزل عن غيرها. تتحقق هذه المراجعة من الصورتين مباشرة: أرقام التنزيلات والنجوم عبر المنصات من [getoffgridai.co](https://getoffgridai.co) وGitHub، وتقييم App Store الأضيق الخاص بـ iOS فقط، لكي يتمكن القارئ من الموازنة بين عيّنة تقييم صغيرة وقاعدة مفتوحة المصدر أكبر وقابلة للتحقق.',
     metaDescription:
@@ -2397,8 +2397,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/off-grid-ai-review-hero-ko.webp',
-    title: 'Off Grid AI 리뷰 (2026년): iOS, Android, macOS, Windows용 크로스플랫폼 로컬 AI',
-    seoTitle: 'Off Grid AI 리뷰 2026: 4개 플랫폼용 로컬 AI',
+    title: 'Off Grid AI 리뷰: iOS, Android, macOS, Windows용 크로스플랫폼 로컬 AI',
+    seoTitle: 'Off Grid AI 리뷰: 4개 플랫폼용 로컬 AI',
     intro:
       '[Wednesday Solutions, Inc.](https://getoffgridai.co)가 개발한 Off Grid AI는 iOS, Android, macOS, Windows 네 개 플랫폼에서 완전히 기기 내에서 오픈 웨이트 AI 모델을 실행하는 무료, 오픈소스, 계정 불필요 앱입니다. 개발사 자체 웹사이트에 따르면 App Store, Google Play, GitHub를 합쳐 [누적 18만 건 이상의 다운로드](https://getoffgridai.co)를 기록했으며, 모바일 클라이언트인 [GitHub의 OGAM](https://github.com/off-grid-ai/OGAM)은 MIT 라이선스 하에 3,000개 이상의 스타를 보유하고 있습니다. App Store 등록 정보만 보면 더 빈약한 그림을 보여줍니다 — [Off Grid AI - Private Local AI](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882)는 단 26개의 평가로 평균 3.1점을 기록하고 있으며, 이는 단독으로 보면 약한 신호입니다. 이 리뷰는 두 그림을 모두 직접 확인했습니다: [getoffgridai.co](https://getoffgridai.co)와 GitHub의 크로스플랫폼 다운로드 및 스타 수치, 그리고 App Store에서만 확인되는 좁은 iOS 평점을 함께 검토하여, 독자가 작은 평가 표본과 더 크고 검증 가능한 오픈소스 기반을 저울질할 수 있도록 했습니다.',
     metaDescription:

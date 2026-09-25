@@ -20,8 +20,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/rikkahub-review-hero-en.webp',
-    title: 'RikkaHub Review (2026): Multi-Provider AI Chat for Android',
-    seoTitle: 'RikkaHub Review 2026: Free Open-Source Android AI Client',
+    title: 'RikkaHub Review: Multi-Provider AI Chat for Android',
+    seoTitle: 'RikkaHub Review: Free Open-Source Android AI Client',
     intro:
       'RikkaHub is a free, open-source Android app that lets you chat with cloud AI providers — OpenAI, Google Gemini, Anthropic, and any OpenAI-compatible endpoint — from one interface using your own API keys. It does not run language models on the phone itself; it is a client, not an on-device inference engine, though it can connect to a self-hosted Ollama or LM Studio server on your own network through the same custom-endpoint field. Built primarily by developer re-ovo and now maintained under the [rikkahub GitHub organization](https://github.com/rikkahub/rikkahub), the project is licensed under the GNU Affero General Public License v3.0 (AGPL-3.0) and has accumulated over 7,400 stars since its repository was created in March 2025. This review covers exactly what RikkaHub does and does not run locally, its real feature set, pricing, and who should — and should not — install it instead of an on-device app like PocketPal AI or Private LLM.',
     metaDescription:
@@ -484,8 +484,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/rikkahub-review-hero-de.webp',
-    title: 'RikkaHub im Test (2026): KI-Chat für Android mit vielen Anbietern',
-    seoTitle: 'RikkaHub Test 2026: Open-Source Android KI-Client',
+    title: 'RikkaHub im Test: KI-Chat für Android mit vielen Anbietern',
+    seoTitle: 'RikkaHub Test: Open-Source Android KI-Client',
     intro:
       'RikkaHub ist eine kostenlose, quelloffene Android-App, mit der Sie über eine einzige Oberfläche mit Cloud-KI-Anbietern chatten — OpenAI, Google Gemini, Anthropic und jedem OpenAI-kompatiblen Endpunkt — und dabei Ihre eigenen API-Schlüssel verwenden. Die App führt keine Sprachmodelle auf dem Smartphone selbst aus; sie ist ein Client, keine Inferenz-Engine auf dem Gerät, kann sich aber über dasselbe Feld für benutzerdefinierte Endpunkte mit einem selbst gehosteten Ollama- oder LM-Studio-Server im eigenen Netzwerk verbinden. Entwickelt wurde das Projekt hauptsächlich vom Entwickler re-ovo und wird inzwischen unter der [rikkahub-GitHub-Organisation](https://github.com/rikkahub/rikkahub) gepflegt. Es steht unter der GNU Affero General Public License v3.0 (AGPL-3.0) und hat seit der Erstellung des Repositorys im März 2025 über 7.400 Sterne gesammelt. Dieser Test beschreibt genau, was RikkaHub lokal ausführt und was nicht, den tatsächlichen Funktionsumfang, die Preisgestaltung sowie für wen sich die App eignet — und für wen eine On-Device-App wie PocketPal AI oder Private LLM die bessere Wahl ist.',
     metaDescription:
@@ -948,8 +948,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/rikkahub-review-hero-es.webp',
-    title: 'RikkaHub: reseña (2026) — chat de IA multiproveedor para Android',
-    seoTitle: 'RikkaHub 2026: reseña de app Android de código abierto',
+    title: 'RikkaHub: reseña — chat de IA multiproveedor para Android',
+    seoTitle: 'RikkaHub: reseña de app Android de código abierto',
     intro:
       'RikkaHub es una app de Android gratuita y de código abierto que te permite chatear con proveedores de IA en la nube —OpenAI, Google Gemini, Anthropic y cualquier endpoint compatible con OpenAI— desde una sola interfaz, usando tus propias claves API. No ejecuta modelos de lenguaje en el propio teléfono; es un cliente, no un motor de inferencia local, aunque puede conectarse a un servidor Ollama o LM Studio autoalojado en tu propia red mediante ese mismo campo de endpoint personalizado. Desarrollado principalmente por el desarrollador re-ovo y mantenido ahora bajo la [organización de GitHub rikkahub](https://github.com/rikkahub/rikkahub), el proyecto tiene licencia GNU Affero General Public License v3.0 (AGPL-3.0) y ha acumulado más de 7.400 estrellas desde que se creó el repositorio en marzo de 2025. Esta reseña detalla exactamente qué ejecuta RikkaHub localmente y qué no, sus funciones reales, el precio, y para quién es —y para quién no— una mejor opción que una app on-device como PocketPal AI o Private LLM.',
     metaDescription:
@@ -1412,8 +1412,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/rikkahub-review-hero-fr.webp',
-    title: 'RikkaHub : test (2026) — chat IA multi-fournisseurs pour Android',
-    seoTitle: 'RikkaHub 2026 : test de l\'app Android open source',
+    title: 'RikkaHub: test — chat IA multi-fournisseurs pour Android',
+    seoTitle: 'RikkaHub: test de l\'app Android open source',
     intro:
       'RikkaHub est une application Android gratuite et open source qui permet de dialoguer avec des fournisseurs d\'IA dans le cloud — OpenAI, Google Gemini, Anthropic et tout endpoint compatible OpenAI — depuis une seule interface, avec vos propres clés API. Elle n\'exécute aucun modèle de langage sur le téléphone lui-même : c\'est un client, pas un moteur d\'inférence embarqué, même si elle peut se connecter à un serveur Ollama ou LM Studio auto-hébergé sur votre propre réseau via ce même champ d\'endpoint personnalisé. Développé principalement par le développeur re-ovo et désormais maintenu sous l\'[organisation GitHub rikkahub](https://github.com/rikkahub/rikkahub), le projet est sous licence GNU Affero General Public License v3.0 (AGPL-3.0) et a cumulé plus de 7 400 étoiles depuis la création du dépôt en mars 2025. Ce test détaille précisément ce que RikkaHub exécute localement et ce qu\'elle n\'exécute pas, ses fonctionnalités réelles, son prix, et à qui elle s\'adresse — ou ne s\'adresse pas — par rapport à une application embarquée comme PocketPal AI ou Private LLM.',
     metaDescription:
@@ -1876,8 +1876,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/rikkahub-review-hero-ja.webp',
-    title: 'RikkaHubレビュー(2026):Android向けマルチプロバイダーAIチャット',
-    seoTitle: 'RikkaHub 2026レビュー:無料オープンソースAndroidクライアント',
+    title: 'RikkaHubレビュー:Android向けマルチプロバイダーAIチャット',
+    seoTitle: 'RikkaHub レビュー:無料オープンソースAndroidクライアント',
     intro:
       'RikkaHubは、OpenAI、Google Gemini、Anthropic、その他OpenAI互換エンドポイントなどクラウドAIプロバイダーと、自分のAPIキーを使って1つの画面からチャットできる無料オープンソースのAndroidアプリです。スマートフォン自体で言語モデルを実行するわけではなく、あくまでクライアントであってオンデバイス推論エンジンではありません。同じカスタムエンドポイント欄を使えば、自宅ネットワーク上でセルフホストしたOllamaやLM Studioサーバーに接続することもできます。開発は主にデベロッパーre-ovoによって行われ、現在は[rikkahub GitHub Organization](https://github.com/rikkahub/rikkahub)の下で管理されています。プロジェクトはGNU Affero General Public License v3.0(AGPL-3.0)のもとで公開されており、2025年3月にリポジトリが作成されて以来、7,400以上のスターを獲得しています。このレビューでは、RikkaHubが実際にローカルで実行する部分としない部分、実際の機能セット、価格、そしてPocketPal AIやPrivate LLMのようなオンデバイスアプリの代わりに導入すべき人・すべきでない人を詳しく解説します。',
     metaDescription:
@@ -2341,8 +2341,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/rikkahub-review-hero-pt.webp',
-    title: 'RikkaHub: análise (2026) — chat de IA multiprovedor para Android',
-    seoTitle: 'RikkaHub 2026: análise do app Android de código aberto',
+    title: 'RikkaHub: análise — chat de IA multiprovedor para Android',
+    seoTitle: 'RikkaHub: análise do app Android de código aberto',
     intro:
       'O RikkaHub é um aplicativo Android gratuito e de código aberto que permite conversar com provedores de IA na nuvem — OpenAI, Google Gemini, Anthropic e qualquer endpoint compatível com OpenAI — a partir de uma única interface, usando suas próprias chaves de API. Ele não executa modelos de linguagem no próprio celular; é um cliente, não um mecanismo de inferência no dispositivo, embora possa se conectar a um servidor Ollama ou LM Studio auto-hospedado na sua própria rede pelo mesmo campo de endpoint personalizado. Desenvolvido principalmente pelo desenvolvedor re-ovo e agora mantido sob a [organização rikkahub no GitHub](https://github.com/rikkahub/rikkahub), o projeto tem licença GNU Affero General Public License v3.0 (AGPL-3.0) e acumulou mais de 7.400 estrelas desde que o repositório foi criado em março de 2025. Esta análise detalha exatamente o que o RikkaHub executa localmente e o que não executa, seus recursos reais, o preço e para quem ele é indicado — e para quem não é — em comparação a um app on-device como o PocketPal AI ou o Private LLM.',
     metaDescription:
@@ -2805,8 +2805,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/rikkahub-review-hero-ar.webp',
-    title: 'مراجعة RikkaHub (2026): محادثة ذكاء اصطناعي متعددة المزودين لأندرويد',
-    seoTitle: 'مراجعة RikkaHub 2026: تطبيق أندرويد مفتوح المصدر',
+    title: 'مراجعة RikkaHub: محادثة ذكاء اصطناعي متعددة المزودين لأندرويد',
+    seoTitle: 'مراجعة RikkaHub: تطبيق أندرويد مفتوح المصدر',
     intro:
       'RikkaHub تطبيق أندرويد مجاني ومفتوح المصدر يتيح لك التحدث مع مزودي الذكاء الاصطناعي السحابي — OpenAI وGoogle Gemini وAnthropic وأي نقطة نهاية متوافقة مع OpenAI — من واجهة واحدة باستخدام مفاتيح API الخاصة بك. لا يقوم التطبيق بتشغيل نماذج اللغة على الهاتف نفسه؛ فهو عميل (client) وليس محرك استدلال محلي على الجهاز، رغم أنه يمكنه الاتصال بخادم Ollama أو LM Studio مستضاف ذاتياً على شبكتك الخاصة عبر نفس حقل نقطة النهاية المخصصة. طوّره بشكل أساسي المطور re-ovo، وهو الآن تحت إشراف [منظمة rikkahub على GitHub](https://github.com/rikkahub/rikkahub)، ويخضع لرخصة GNU Affero General Public License v3.0 (AGPL-3.0)، وقد جمع أكثر من 7,400 نجمة منذ إنشاء المستودع في مارس 2025. تستعرض هذه المراجعة بدقة ما يشغّله RikkaHub محلياً وما لا يشغّله، وميزاته الفعلية وتسعيره، ولمن يناسب — ولمن لا يناسب — مقارنة بتطبيق يعمل على الجهاز مثل PocketPal AI أو Private LLM.',
     metaDescription:
@@ -3269,8 +3269,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/rikkahub-review-hero-zh.webp',
-    title: 'RikkaHub评测(2026):Android多提供商AI聊天客户端',
-    seoTitle: 'RikkaHub 2026评测:免费开源Android AI客户端',
+    title: 'RikkaHub评测:Android多提供商AI聊天客户端',
+    seoTitle: 'RikkaHub 评测:免费开源Android AI客户端',
     intro:
       'RikkaHub是一款免费开源的Android应用,让你可以用自己的API密钥,在一个界面里和OpenAI、Google Gemini、Anthropic以及任何兼容OpenAI的接口聊天。它本身并不在手机上运行语言模型——它是一个客户端,而不是设备端推理引擎,不过可以通过同一个自定义端点字段连接到你自己网络上自托管的Ollama或LM Studio服务器。项目主要由开发者re-ovo构建,现在由[rikkahub GitHub组织](https://github.com/rikkahub/rikkahub)维护,采用GNU Affero General Public License v3.0(AGPL-3.0)许可证,自2025年3月仓库创建以来已获得超过7,400颗星标。本文将详细说明RikkaHub究竟在本地运行了什么、没有运行什么,它的真实功能、价格,以及哪些人适合使用它,哪些人更适合选择PocketPal AI或Private LLM这类真正在设备端运行的应用。',
     metaDescription:
@@ -3734,8 +3734,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/rikkahub-review-hero-ko.webp',
-    title: 'RikkaHub 리뷰(2026): Android용 멀티 프로바이더 AI 채팅',
-    seoTitle: 'RikkaHub 2026 리뷰: 무료 오픈소스 Android 클라이언트',
+    title: 'RikkaHub 리뷰: Android용 멀티 프로바이더 AI 채팅',
+    seoTitle: 'RikkaHub 리뷰: 무료 오픈소스 Android 클라이언트',
     intro:
       'RikkaHub는 OpenAI, Google Gemini, Anthropic, 그리고 OpenAI 호환 엔드포인트 등 클라우드 AI 프로바이더와 하나의 화면에서 대화할 수 있는 무료 오픈소스 Android 앱으로, 자신의 API 키를 사용합니다. 스마트폰 자체에서 언어 모델을 실행하지는 않으며, 온디바이스 추론 엔진이 아니라 클라이언트입니다. 다만 동일한 커스텀 엔드포인트 필드를 이용해 자체 네트워크에 셀프 호스팅한 Ollama나 LM Studio 서버에 연결할 수도 있습니다. 이 프로젝트는 주로 개발자 re-ovo가 개발했으며, 현재는 [rikkahub GitHub 조직](https://github.com/rikkahub/rikkahub) 아래에서 관리되고 있습니다. GNU Affero General Public License v3.0(AGPL-3.0) 라이선스를 따르며, 2025년 3월 저장소가 생성된 이후 7,400개 이상의 스타를 모았습니다. 이 리뷰에서는 RikkaHub가 실제로 로컬에서 실행하는 부분과 그렇지 않은 부분, 실제 기능, 가격, 그리고 PocketPal AI나 Private LLM 같은 온디바이스 앱 대신 RikkaHub를 선택해야 할 사람과 그렇지 않은 사람을 정확히 설명합니다.',
     metaDescription:

@@ -18,8 +18,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-en.webp',
-    title: 'ComfyUI Review (2026): Free Node-Based UI for Stable Diffusion & Flux',
-    seoTitle: 'ComfyUI Review 2026: Node Editor for Local Image Generation',
+    title: 'ComfyUI Review: Free Node-Based UI for Stable Diffusion & Flux',
+    seoTitle: 'ComfyUI Review: Node Editor for Local Image Generation',
     intro:
       'ComfyUI is a free, open-source, node-based visual interface for running diffusion models — Stable Diffusion, SDXL, SD 3.5, Flux, and others — locally on your own GPU. It is not a model itself: ComfyUI is the engine and workflow editor that loads a diffusion model and lets you wire together each generation step (model loading, prompt encoding, sampling, upscaling) as a graph of connected nodes, rather than a fixed set of tabs and sliders. This review covers what ComfyUI actually does, how its node-graph approach differs from simpler UIs like AUTOMATIC1111 and Fooocus, its GPL-3.0 license, hardware requirements by model, ComfyUI Manager for custom nodes, and the separate paid Comfy Cloud hosting tier versus the free self-hosted core.',
     metaDescription:
@@ -348,8 +348,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-de.webp',
-    title: 'ComfyUI Test (2026): Kostenlose node-basierte Oberfläche für Stable Diffusion & Flux',
-    seoTitle: 'ComfyUI Test 2026: Node-Editor für lokale Bildgenerierung',
+    title: 'ComfyUI Test: Kostenlose node-basierte Oberfläche für Stable Diffusion & Flux',
+    seoTitle: 'ComfyUI Test: Node-Editor für lokale Bildgenerierung',
     intro:
       'ComfyUI ist eine kostenlose, quelloffene, node-basierte visuelle Oberfläche zum lokalen Ausführen von Diffusionsmodellen — Stable Diffusion, SDXL, SD 3.5, Flux und weitere — auf der eigenen GPU. Es ist kein Modell selbst: ComfyUI ist die Engine und der Workflow-Editor, der ein Diffusionsmodell lädt und es erlaubt, jeden einzelnen Schritt der Bildgenerierung (Modell laden, Prompt-Encoding, Sampling, Upscaling) als Graph aus verbundenen Nodes zusammenzustellen, statt eines festen Satzes aus Tabs und Reglern. Dieser Test erklärt, was ComfyUI tatsächlich macht, wie sich sein Node-Graph-Ansatz von einfacheren Oberflächen wie AUTOMATIC1111 und Fooocus unterscheidet, die GPL-3.0-Lizenz, die Hardware-Anforderungen je Modell, den ComfyUI Manager für Custom Nodes und den separaten kostenpflichtigen Comfy-Cloud-Hosting-Tarif im Vergleich zum kostenlosen selbst gehosteten Kern.',
     metaDescription:
@@ -677,8 +677,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-es.webp',
-    title: 'ComfyUI Análisis (2026): Interfaz gratuita basada en nodos para Stable Diffusion y Flux',
-    seoTitle: 'ComfyUI Análisis 2026: Editor de nodos para generación de imágenes local',
+    title: 'ComfyUI Análisis: Interfaz gratuita basada en nodos para Stable Diffusion y Flux',
+    seoTitle: 'ComfyUI Análisis: Editor de nodos para generación de imágenes local',
     intro:
       'ComfyUI es una interfaz visual gratuita, de código abierto y basada en nodos para ejecutar modelos de difusión — Stable Diffusion, SDXL, SD 3.5, Flux y otros — de forma local en tu propia GPU. No es un modelo en sí: ComfyUI es el motor y el editor de workflows que carga un modelo de difusión y te permite conectar cada paso de la generación de imágenes (carga del modelo, codificación del prompt, muestreo, escalado) como un grafo de nodos conectados, en lugar de un conjunto fijo de pestañas y controles deslizantes. Este análisis explica qué hace realmente ComfyUI, en qué se diferencia su enfoque de grafo de nodos de interfaces más simples como AUTOMATIC1111 y Fooocus, su licencia GPL-3.0, los requisitos de hardware según el modelo, ComfyUI Manager para nodos personalizados, y el nivel de pago independiente Comfy Cloud frente al núcleo gratuito autoalojado.',
     metaDescription:
@@ -1006,8 +1006,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-fr.webp',
-    title: 'Avis ComfyUI (2026) : interface gratuite à base de nœuds pour Stable Diffusion et Flux',
-    seoTitle: 'Avis ComfyUI 2026 : éditeur de nœuds pour la génération d\'images locale',
+    title: 'Avis ComfyUI: interface gratuite à base de nœuds pour Stable Diffusion et Flux',
+    seoTitle: 'Avis ComfyUI: éditeur de nœuds pour la génération d\'images locale',
     intro:
       'ComfyUI est une interface visuelle gratuite, open source et à base de nœuds pour exécuter des modèles de diffusion — Stable Diffusion, SDXL, SD 3.5, Flux et d\'autres — localement sur votre propre GPU. Ce n\'est pas un modèle en soi : ComfyUI est le moteur et l\'éditeur de workflow qui charge un modèle de diffusion et vous permet de relier chaque étape de la génération d\'image (chargement du modèle, encodage du prompt, échantillonnage, upscaling) sous forme d\'un graphe de nœuds connectés, plutôt qu\'un ensemble fixe d\'onglets et de curseurs. Cet avis explique ce que fait réellement ComfyUI, en quoi son approche par graphe de nœuds diffère des interfaces plus simples comme AUTOMATIC1111 et Fooocus, sa licence GPL-3.0, les besoins matériels selon le modèle, ComfyUI Manager pour les nœuds personnalisés, et l\'offre payante distincte Comfy Cloud face au socle gratuit auto-hébergé.',
     metaDescription:
@@ -1335,8 +1335,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-ja.webp',
-    title: 'ComfyUIレビュー(2026):Stable DiffusionとFluxを動かす無料ノードベースUI',
-    seoTitle: 'ComfyUIレビュー2026:ローカル画像生成のノードエディタ',
+    title: 'ComfyUIレビュー:Stable DiffusionとFluxを動かす無料ノードベースUI',
+    seoTitle: 'ComfyUIレビュー:ローカル画像生成のノードエディタ',
     intro:
       'ComfyUIは、Stable Diffusion、SDXL、SD 3.5、Fluxなどの拡散モデルを自分のGPU上でローカルに実行するための、無料でオープンソースのノードベース・ビジュアルインターフェースです。モデルそのものではありません。ComfyUIは拡散モデルを読み込み、画像生成の各ステップ(モデルの読み込み、プロンプトのエンコード、サンプリング、アップスケーリング)を固定されたタブやスライダーの集合ではなく、接続されたノードのグラフとして組み立てられるようにするエンジンおよびワークフローエディタです。本レビューでは、ComfyUIが実際に何をするのか、そのノードグラフ方式がAUTOMATIC1111やFooocusのようなよりシンプルなUIとどう異なるのか、GPL-3.0ライセンス、モデルごとのハードウェア要件、カスタムノード用のComfyUI Manager、そして無料の自己ホスト型コアとは別の有料Comfy Cloudホスティング階層について解説します。',
     metaDescription:
@@ -1664,8 +1664,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-pt.webp',
-    title: 'Análise do ComfyUI (2026): interface gratuita baseada em nós para Stable Diffusion e Flux',
-    seoTitle: 'Análise do ComfyUI 2026: editor de nós para geração de imagens local',
+    title: 'Análise do ComfyUI: interface gratuita baseada em nós para Stable Diffusion e Flux',
+    seoTitle: 'Análise do ComfyUI: editor de nós para geração de imagens local',
     intro:
       'O ComfyUI é uma interface visual gratuita, de código aberto e baseada em nós para executar modelos de difusão — Stable Diffusion, SDXL, SD 3.5, Flux e outros — localmente na sua própria GPU. Não é um modelo em si: o ComfyUI é o motor e o editor de workflow que carrega um modelo de difusão e permite conectar cada etapa da geração de imagem (carregamento do modelo, codificação do prompt, amostragem, upscaling) como um grafo de nós conectados, em vez de um conjunto fixo de abas e controles deslizantes. Esta análise explica o que o ComfyUI realmente faz, em que sua abordagem de grafo de nós difere de interfaces mais simples como AUTOMATIC1111 e Fooocus, sua licença GPL-3.0, os requisitos de hardware por modelo, o ComfyUI Manager para nós personalizados, e o nível pago separado Comfy Cloud em comparação com o núcleo gratuito autoalojado.',
     metaDescription:
@@ -1993,8 +1993,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-ar.webp',
-    title: 'مراجعة ComfyUI (2026): واجهة مجانية قائمة على العُقد لتشغيل Stable Diffusion وFlux',
-    seoTitle: 'مراجعة ComfyUI 2026: محرر عُقد لتوليد الصور محليًا',
+    title: 'مراجعة ComfyUI: واجهة مجانية قائمة على العُقد لتشغيل Stable Diffusion وFlux',
+    seoTitle: 'مراجعة ComfyUI: محرر عُقد لتوليد الصور محليًا',
     intro:
       'ComfyUI هي واجهة بصرية مجانية ومفتوحة المصدر وقائمة على العُقد لتشغيل نماذج الانتشار — Stable Diffusion وSDXL وSD 3.5 وFlux وغيرها — محليًا على معالج الرسومات (GPU) الخاص بك. إنها ليست نموذجًا بحد ذاتها: ComfyUI هي المحرك ومحرر سير العمل الذي يُحمّل نموذج انتشار ويتيح لك ربط كل خطوة من خطوات توليد الصورة (تحميل النموذج، ترميز الطلب، أخذ العينات، تكبير الدقة) كمخطط من العُقد المتصلة، بدلًا من مجموعة ثابتة من الألسنة وأشرطة التمرير. تشرح هذه المراجعة ما تفعله ComfyUI فعليًا، وكيف يختلف نهجها القائم على مخطط العُقد عن واجهات أبسط مثل AUTOMATIC1111 وFooocus، ورخصتها GPL-3.0، ومتطلبات الأجهزة حسب النموذج، وComfyUI Manager للعُقد المخصصة، وباقة Comfy Cloud المدفوعة المنفصلة مقارنة بالنواة المجانية المستضافة ذاتيًا.',
     metaDescription:
@@ -2322,8 +2322,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-zh.webp',
-    title: 'ComfyUI评测(2026):运行Stable Diffusion与Flux的免费节点式界面',
-    seoTitle: 'ComfyUI评测2026:本地图像生成的节点编辑器',
+    title: 'ComfyUI评测:运行Stable Diffusion与Flux的免费节点式界面',
+    seoTitle: 'ComfyUI评测:本地图像生成的节点编辑器',
     intro:
       'ComfyUI是一款免费、开源、基于节点的可视化界面,用于在自己的GPU上本地运行扩散模型——Stable Diffusion、SDXL、SD 3.5、Flux等。它本身不是模型:ComfyUI是加载扩散模型的引擎和工作流编辑器,让你把图像生成的每一步(模型加载、提示词编码、采样、放大)以相连节点组成的图形来搭建,而不是一组固定的标签页和滑块。本评测将说明ComfyUI实际做什么、其节点图方式与AUTOMATIC1111、Fooocus等更简单界面的区别、GPL-3.0许可证、按模型划分的硬件要求、用于自定义节点的ComfyUI Manager,以及独立的付费托管服务Comfy Cloud与免费自托管核心之间的区别。',
     metaDescription:
@@ -2651,8 +2651,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-ko.webp',
-    title: 'ComfyUI 리뷰(2026): Stable Diffusion과 Flux를 구동하는 무료 노드 기반 UI',
-    seoTitle: 'ComfyUI 리뷰 2026: 로컬 이미지 생성을 위한 노드 에디터',
+    title: 'ComfyUI 리뷰: Stable Diffusion과 Flux를 구동하는 무료 노드 기반 UI',
+    seoTitle: 'ComfyUI 리뷰: 로컬 이미지 생성을 위한 노드 에디터',
     intro:
       'ComfyUI는 Stable Diffusion, SDXL, SD 3.5, Flux 등 확산 모델을 자신의 GPU에서 로컬로 실행하기 위한 무료 오픈소스 노드 기반 시각적 인터페이스입니다. 모델 자체는 아닙니다. ComfyUI는 확산 모델을 불러와 이미지 생성의 각 단계(모델 로딩, 프롬프트 인코딩, 샘플링, 업스케일링)를 고정된 탭과 슬라이더 대신 연결된 노드의 그래프로 조립할 수 있게 해주는 엔진이자 워크플로우 편집기입니다. 이 리뷰에서는 ComfyUI가 실제로 무엇을 하는지, 그 노드 그래프 방식이 AUTOMATIC1111이나 Fooocus 같은 더 단순한 UI와 어떻게 다른지, GPL-3.0 라이선스, 모델별 하드웨어 요구 사항, 커스텀 노드를 위한 ComfyUI Manager, 그리고 무료 자체 호스팅 코어와 별도인 유료 Comfy Cloud 호스팅 등급을 다룹니다.',
     metaDescription:

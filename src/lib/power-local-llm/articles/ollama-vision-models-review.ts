@@ -14,8 +14,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/ollama-vision-models-review-hero-en.webp',
-    title: 'Ollama Vision Models (2026): How to Actually Run Image Models Locally',
-    seoTitle: 'Ollama Vision Models 2026: A Practical Running Guide',
+    title: 'Ollama Vision Models: How to Actually Run Image Models Locally',
+    seoTitle: 'Ollama Vision Models: A Practical Running Guide',
     intro:
       'Ollama, the local model runner built on top of [llama.cpp](https://github.com/ggml-org/llama.cpp), added multimodal (image-input) support in version 0.1.15 back in December 2023, and rebuilt it into a dedicated multimodal engine in May 2026. This guide is a focused, practical reference for actually running vision-capable models through Ollama today: which models are currently listed in its [library](https://ollama.com/library), the real CLI and HTTP API syntax for passing an image, and honest guidance on what Ollama is not good for. If you want a deep dive on one specific model, see PromptQuorum\'s [LLaVA review](/power-local-llm/llava-review); for a broader comparison across all local vision models regardless of runner, see the [local vision models guide](/power-local-llm/local-vision-models-llava-ollama-2026).',
     metaDescription:
@@ -439,8 +439,8 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/ollama-vision-models-review-hero-de.webp',
-    title: 'Ollama-Vision-Modelle (2026): So führen Sie Bildmodelle wirklich lokal aus',
-    seoTitle: 'Ollama-Vision-Modelle 2026: Ein praktischer Leitfaden',
+    title: 'Ollama-Vision-Modelle: So führen Sie Bildmodelle wirklich lokal aus',
+    seoTitle: 'Ollama-Vision-Modelle: Ein praktischer Leitfaden',
     intro:
       'Ollama, der lokale Modell-Runner auf Basis von [llama.cpp](https://github.com/ggml-org/llama.cpp), fügte die Unterstützung für Multimodalität (Bildeingabe) bereits in Version 0.1.15 im Dezember 2023 hinzu und baute sie im Mai 2026 zu einer dedizierten Multimodal-Engine um. Dieser Leitfaden ist eine fokussierte, praktische Referenz zum tatsächlichen Ausführen von Vision-fähigen Modellen über Ollama: welche Modelle derzeit in seiner [Bibliothek](https://ollama.com/library) gelistet sind, die echte CLI- und HTTP-API-Syntax zum Übergeben eines Bildes, sowie ehrliche Hinweise darauf, wofür Ollama nicht geeignet ist. Für einen Tiefgang zu einem bestimmten Modell siehe PromptQuorums [LLaVA-Test](/de/power-local-llm/llava-review); für einen breiteren Vergleich über alle lokalen Vision-Modelle hinweg, unabhängig vom Runner, siehe den [Leitfaden zu lokalen Vision-Modellen](/de/power-local-llm/local-vision-models-llava-ollama-2026).',
     metaDescription:
@@ -864,8 +864,8 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/ollama-vision-models-review-hero-fr.webp',
-    title: 'Modèles de vision Ollama (2026) : comment exécuter réellement des modèles d\'image en local',
-    seoTitle: 'Modèles de vision Ollama 2026 : un guide pratique',
+    title: 'Modèles de vision Ollama: comment exécuter réellement des modèles d\'image en local',
+    seoTitle: 'Modèles de vision Ollama: un guide pratique',
     intro:
       'Ollama, l\'exécuteur de modèles locaux construit sur [llama.cpp](https://github.com/ggml-org/llama.cpp), a ajouté la prise en charge multimodale (entrée d\'image) dès la version 0.1.15 en décembre 2023, et l\'a reconstruite en un moteur multimodal dédié en mai 2026. Ce guide est une référence pratique et ciblée pour exécuter réellement des modèles capables de vision via Ollama aujourd\'hui : quels modèles sont actuellement listés dans sa [bibliothèque](https://ollama.com/library), la vraie syntaxe CLI et API HTTP pour transmettre une image, et des conseils honnêtes sur ce pour quoi Ollama n\'est pas adapté. Pour un approfondissement sur un modèle spécifique, voir l\'[avis LLaVA](/fr/power-local-llm/llava-review) de PromptQuorum ; pour une comparaison plus large de tous les modèles de vision locaux quel que soit l\'exécuteur, voir le [guide des modèles de vision locaux](/fr/power-local-llm/local-vision-models-llava-ollama-2026).',
     metaDescription:
@@ -1289,8 +1289,8 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/ollama-vision-models-review-hero-es.webp',
-    title: 'Modelos de visión de Ollama (2026): cómo ejecutar realmente modelos de imagen en local',
-    seoTitle: 'Modelos de visión de Ollama 2026: una guía práctica',
+    title: 'Modelos de visión de Ollama: cómo ejecutar realmente modelos de imagen en local',
+    seoTitle: 'Modelos de visión de Ollama: una guía práctica',
     intro:
       'Ollama, el ejecutor de modelos locales construido sobre [llama.cpp](https://github.com/ggml-org/llama.cpp), añadió soporte multimodal (entrada de imagen) ya en la versión 0.1.15 en diciembre de 2023, y lo reconstruyó en un motor multimodal dedicado en mayo de 2026. Esta guía es una referencia práctica y enfocada para ejecutar realmente modelos capaces de visión a través de Ollama hoy: qué modelos figuran actualmente en su [biblioteca](https://ollama.com/library), la sintaxis real de CLI y API HTTP para pasar una imagen, y orientación honesta sobre para qué no es bueno Ollama. Para un análisis profundo de un modelo específico, consulta el [análisis de LLaVA](/es/power-local-llm/llava-review) de PromptQuorum; para una comparación más amplia entre todos los modelos de visión locales sin importar el ejecutor, consulta la [guía de modelos de visión locales](/es/power-local-llm/local-vision-models-llava-ollama-2026).',
     metaDescription:
@@ -1714,8 +1714,8 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/ollama-vision-models-review-hero-ja.webp',
-    title: 'Ollamaのビジョンモデル(2026):画像モデルをローカルで実際に動かす方法',
-    seoTitle: 'Ollamaビジョンモデル2026:実践ガイド',
+    title: 'Ollamaのビジョンモデル:画像モデルをローカルで実際に動かす方法',
+    seoTitle: 'Ollamaビジョンモデル:実践ガイド',
     intro:
       '[llama.cpp](https://github.com/ggml-org/llama.cpp)上に構築されたローカルモデルランナーOllamaは、2023年12月のバージョン0.1.15でマルチモーダル(画像入力)対応を追加し、2026年5月には専用のマルチモーダルエンジンへと作り直された。本ガイドは、Ollamaで実際にビジョン対応モデルを動かすための実践的なリファレンスである。現在[ライブラリ](https://ollama.com/library)に掲載されているモデル、画像を渡す実際のCLIおよびHTTP APIの構文、そしてOllamaが不向きな用途についても正直に解説する。特定のモデルを深く知りたい場合はPromptQuorumの[LLaVAレビュー](/ja/power-local-llm/llava-review)を、ランナーを問わずローカルビジョンモデル全体を比較したい場合は[ローカルビジョンモデルガイド](/ja/power-local-llm/local-vision-models-llava-ollama-2026)を参照してほしい。',
     metaDescription:
@@ -2139,8 +2139,8 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/ollama-vision-models-review-hero-pt.webp',
-    title: 'Modelos de Visão do Ollama (2026): Como Realmente Rodar Modelos de Imagem Localmente',
-    seoTitle: 'Modelos de Visão do Ollama 2026: Guia Prático',
+    title: 'Modelos de Visão do Ollama: Como Realmente Rodar Modelos de Imagem Localmente',
+    seoTitle: 'Modelos de Visão do Ollama: Guia Prático',
     intro:
       'O Ollama, o executor de modelos locais construído sobre o [llama.cpp](https://github.com/ggml-org/llama.cpp), adicionou suporte multimodal (entrada de imagem) na versão 0.1.15 em dezembro de 2023, e o reconstruiu como um mecanismo multimodal dedicado em maio de 2026. Este guia é uma referência prática e focada em realmente rodar modelos com capacidade de visão pelo Ollama hoje: quais modelos estão listados atualmente em sua [biblioteca](https://ollama.com/library), a sintaxe real de CLI e API HTTP para passar uma imagem, e orientações honestas sobre para que o Ollama não serve. Para um aprofundamento em um modelo específico, veja a [análise do LLaVA](/pt/power-local-llm/llava-review) do PromptQuorum; para uma comparação mais ampla entre todos os modelos de visão locais, independentemente do executor, veja o [guia de modelos de visão locais](/pt/power-local-llm/local-vision-models-llava-ollama-2026).',
     metaDescription:
@@ -2564,8 +2564,8 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/ollama-vision-models-review-hero-ar.webp',
-    title: 'نماذج الرؤية في Ollama (2026): كيف تُشغّل نماذج الصور محليًا فعليًا',
-    seoTitle: 'نماذج رؤية Ollama 2026: دليل عملي للتشغيل',
+    title: 'نماذج الرؤية في Ollama: كيف تُشغّل نماذج الصور محليًا فعليًا',
+    seoTitle: 'نماذج رؤية Ollama: دليل عملي للتشغيل',
     intro:
       'أضاف Ollama، مُشغّل النماذج المحلي المبني فوق [llama.cpp](https://github.com/ggml-org/llama.cpp)، دعم الوسائط المتعددة (إدخال الصور) في الإصدار 0.1.15 في ديسمبر 2023، وأعاد بناءه ليصبح محرك وسائط متعددة مخصصًا في مايو 2026. هذا الدليل مرجع عملي ومركّز لتشغيل النماذج القادرة على الرؤية عبر Ollama اليوم فعليًا: ما هي النماذج المدرجة حاليًا في [مكتبته](https://ollama.com/library)، وصيغة سطر الأوامر وواجهة HTTP API الفعلية لتمرير صورة، وإرشادات صريحة حول ما لا يصلح له Ollama. للاطلاع بعمق على نموذج محدد، راجع [مراجعة LLaVA](/ar/power-local-llm/llava-review) من PromptQuorum؛ ولمقارنة أوسع بين جميع نماذج الرؤية المحلية بغض النظر عن المُشغّل، راجع [دليل نماذج الرؤية المحلية](/ar/power-local-llm/local-vision-models-llava-ollama-2026).',
     metaDescription:
@@ -2989,8 +2989,8 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/ollama-vision-models-review-hero-zh.webp',
-    title: 'Ollama视觉模型(2026):如何真正在本地运行图像模型',
-    seoTitle: 'Ollama视觉模型2026:实用运行指南',
+    title: 'Ollama视觉模型:如何真正在本地运行图像模型',
+    seoTitle: 'Ollama视觉模型:实用运行指南',
     intro:
       '基于[llama.cpp](https://github.com/ggml-org/llama.cpp)构建的本地模型运行工具Ollama,早在2023年12月的0.1.15版本中就加入了多模态(图像输入)支持,并在2026年5月将其重构为专门的多模态引擎。本指南是一份聚焦实践的参考资料,介绍如何真正通过Ollama运行具备视觉能力的模型:目前其[模型库](https://ollama.com/library)中列出了哪些模型、传递图像的真实CLI与HTTP API语法,以及Ollama不适合做什么的坦诚说明。如果想深入了解某个具体模型,请参阅PromptQuorum的[LLaVA评测](/zh/power-local-llm/llava-review);若想不分运行工具、更广泛地比较所有本地视觉模型,请参阅[本地视觉模型指南](/zh/power-local-llm/local-vision-models-llava-ollama-2026)。',
     metaDescription:
@@ -3414,8 +3414,8 @@ def ask_vision_model(image_path: str, prompt: str, model: str = "llava") -> str:
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/ollama-vision-models-review-hero-ko.webp',
-    title: 'Ollama 비전 모델(2026): 이미지 모델을 로컬에서 실제로 실행하는 방법',
-    seoTitle: 'Ollama 비전 모델 2026: 실전 실행 가이드',
+    title: 'Ollama 비전 모델: 이미지 모델을 로컬에서 실제로 실행하는 방법',
+    seoTitle: 'Ollama 비전 모델: 실전 실행 가이드',
     intro:
       '[llama.cpp](https://github.com/ggml-org/llama.cpp) 위에 구축된 로컬 모델 실행 도구인 Ollama는 2023년 12월 출시된 버전 0.1.15에서 멀티모달(이미지 입력) 지원을 추가했고, 2026년 5월에는 전용 멀티모달 엔진으로 재구축했다. 이 가이드는 Ollama로 비전 지원 모델을 실제로 실행하기 위한 실용적인 참고 자료다: 현재 [라이브러리](https://ollama.com/library)에 등록된 모델은 무엇인지, 이미지를 전달하는 실제 CLI 및 HTTP API 문법은 어떻게 되는지, 그리고 Ollama가 적합하지 않은 부분에 대한 솔직한 안내까지 다룬다. 특정 모델을 더 깊이 알고 싶다면 PromptQuorum의 [LLaVA 리뷰](/ko/power-local-llm/llava-review)를, 실행 도구와 무관하게 로컬 비전 모델 전반을 비교하고 싶다면 [로컬 비전 모델 가이드](/ko/power-local-llm/local-vision-models-llava-ollama-2026)를 참고하라.',
     metaDescription:

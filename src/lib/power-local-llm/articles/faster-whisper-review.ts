@@ -13,8 +13,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/faster-whisper-review-hero-en.webp',
-    title: 'faster-whisper Review (2026): CTranslate2-Accelerated Local Speech-to-Text',
-    seoTitle: 'faster-whisper Review 2026: Fast Local STT',
+    title: 'faster-whisper Review: CTranslate2-Accelerated Local Speech-to-Text',
+    seoTitle: 'faster-whisper Review: Fast Local STT',
     intro:
       'faster-whisper is a Python reimplementation of OpenAI\'s Whisper automatic speech recognition model, built on the [CTranslate2](https://github.com/OpenNMT/CTranslate2) inference engine and created by Guillaume Klein, now maintained under [SYSTRAN on GitHub](https://github.com/SYSTRAN/faster-whisper). It delivers up to roughly 4x the transcription throughput of the original OpenAI implementation on the same hardware, using less memory via int8 quantization. This review covers its history, real Python usage examples, installation, its MIT license and cost (free), and where it is not the right tool — including a link to PromptQuorum\'s side-by-side benchmark against whisper.cpp for readers choosing between the two.',
     metaDescription:
@@ -369,8 +369,8 @@ for segment in segments:
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/faster-whisper-review-hero-de.webp',
-    title: 'faster-whisper im Test (2026): Lokale Spracherkennung mit CTranslate2-Beschleunigung',
-    seoTitle: 'faster-whisper Test 2026: Schnelle lokale STT',
+    title: 'faster-whisper im Test: Lokale Spracherkennung mit CTranslate2-Beschleunigung',
+    seoTitle: 'faster-whisper Test: Schnelle lokale STT',
     intro:
       'faster-whisper ist eine Python-Neuimplementierung des Spracherkennungsmodells Whisper von OpenAI, aufgebaut auf der Inferenz-Engine [CTranslate2](https://github.com/OpenNMT/CTranslate2), entwickelt von Guillaume Klein und heute unter [SYSTRAN auf GitHub](https://github.com/SYSTRAN/faster-whisper) gepflegt. Es liefert auf derselben Hardware etwa die vierfache Transkriptionsgeschwindigkeit der ursprünglichen OpenAI-Implementierung, bei geringerem Speicherverbrauch durch int8-Quantisierung. Dieser Test behandelt die Geschichte des Projekts, echte Python-Anwendungsbeispiele, die Installation, die MIT-Lizenz und die Kosten (kostenlos) sowie die Grenzen des Tools — inklusive Verweis auf den direkten Benchmark-Vergleich von PromptQuorum mit whisper.cpp für alle, die sich zwischen beiden entscheiden müssen.',
     metaDescription:
@@ -725,8 +725,8 @@ for segment in segments:
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/faster-whisper-review-hero-fr.webp',
-    title: 'faster-whisper : avis (2026) — reconnaissance vocale locale accélérée par CTranslate2',
-    seoTitle: 'faster-whisper 2026 : STT locale rapide',
+    title: 'faster-whisper: avis — reconnaissance vocale locale accélérée par CTranslate2',
+    seoTitle: 'faster-whisper: STT locale rapide',
     intro:
       'faster-whisper est une réimplémentation en Python du modèle de reconnaissance vocale Whisper d\'OpenAI, construite sur le moteur d\'inférence [CTranslate2](https://github.com/OpenNMT/CTranslate2), créée par Guillaume Klein et aujourd\'hui maintenue sous [SYSTRAN sur GitHub](https://github.com/SYSTRAN/faster-whisper). Elle offre environ 4 fois le débit de transcription de l\'implémentation originale d\'OpenAI sur le même matériel, avec une consommation mémoire réduite grâce à la quantification int8. Cet avis couvre son histoire, de vrais exemples d\'utilisation en Python, l\'installation, sa licence MIT et son coût (gratuit), ainsi que ses limites — avec un lien vers le comparatif chiffré de PromptQuorum face à whisper.cpp pour les lecteurs indécis entre les deux.',
     metaDescription:
@@ -1081,8 +1081,8 @@ for segment in segments:
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/faster-whisper-review-hero-es.webp',
-    title: 'faster-whisper: análisis (2026) — reconocimiento de voz local acelerado con CTranslate2',
-    seoTitle: 'faster-whisper 2026: STT local rápido',
+    title: 'faster-whisper: análisis — reconocimiento de voz local acelerado con CTranslate2',
+    seoTitle: 'faster-whisper: STT local rápido',
     intro:
       'faster-whisper es una reimplementación en Python del modelo de reconocimiento de voz Whisper de OpenAI, construida sobre el motor de inferencia [CTranslate2](https://github.com/OpenNMT/CTranslate2), creada por Guillaume Klein y hoy mantenida bajo [SYSTRAN en GitHub](https://github.com/SYSTRAN/faster-whisper). Ofrece aproximadamente 4 veces el rendimiento de transcripción de la implementación original de OpenAI en el mismo hardware, con menor consumo de memoria gracias a la cuantización int8. Este análisis cubre su historia, ejemplos reales de uso en Python, la instalación, su licencia MIT y coste (gratis), y dónde no es la herramienta adecuada — incluyendo un enlace al comparativo directo de PromptQuorum frente a whisper.cpp para quien tenga que elegir entre ambos.',
     metaDescription:
@@ -1437,8 +1437,8 @@ for segment in segments:
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/faster-whisper-review-hero-ja.webp',
-    title: 'faster-whisperレビュー(2026):CTranslate2で高速化したローカル音声認識',
-    seoTitle: 'faster-whisperレビュー2026:高速ローカルSTT',
+    title: 'faster-whisperレビュー:CTranslate2で高速化したローカル音声認識',
+    seoTitle: 'faster-whisperレビュー:高速ローカルSTT',
     intro:
       'faster-whisperは、OpenAIの音声認識モデルWhisperをPythonで再実装したもので、推論エンジン[CTranslate2](https://github.com/OpenNMT/CTranslate2)の上に構築され、Guillaume Klein氏が開発し、現在は[GitHubのSYSTRAN](https://github.com/SYSTRAN/faster-whisper)で保守されています。同じハードウェア上でOpenAIのオリジナル実装の約4倍のスループットを実現し、int8量子化によりメモリ使用量も抑えています。本レビューでは、開発の歴史、実際のPython使用例、インストール方法、MITライセンスとコスト(無料)、そして向いていない用途までを解説し、whisper.cppとの選択で迷う読者向けにPromptQuorumの比較検証記事へのリンクも掲載します。',
     metaDescription:
@@ -1794,8 +1794,8 @@ for segment in segments:
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/faster-whisper-review-hero-pt.webp',
-    title: 'faster-whisper: análise (2026) — reconhecimento de voz local acelerado com CTranslate2',
-    seoTitle: 'faster-whisper 2026: STT local rápido',
+    title: 'faster-whisper: análise — reconhecimento de voz local acelerado com CTranslate2',
+    seoTitle: 'faster-whisper: STT local rápido',
     intro:
       'O faster-whisper é uma reimplementação em Python do modelo de reconhecimento de voz Whisper da OpenAI, construída sobre o motor de inferência [CTranslate2](https://github.com/OpenNMT/CTranslate2), criada por Guillaume Klein e hoje mantida sob [SYSTRAN no GitHub](https://github.com/SYSTRAN/faster-whisper). Ele oferece aproximadamente 4 vezes o throughput de transcrição da implementação original da OpenAI no mesmo hardware, com menor consumo de memória graças à quantização int8. Esta análise cobre sua história, exemplos reais de uso em Python, a instalação, sua licença MIT e custo (gratuito), e onde ele não é a ferramenta certa — incluindo um link para o comparativo direto da PromptQuorum com o whisper.cpp para quem precisa escolher entre os dois.',
     metaDescription:
@@ -2150,8 +2150,8 @@ for segment in segments:
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/faster-whisper-review-hero-ar.webp',
-    title: 'مراجعة faster-whisper (2026): تحويل كلام محلي مُسرَّع بـ CTranslate2',
-    seoTitle: 'مراجعة faster-whisper 2026: STT محلي سريع',
+    title: 'مراجعة faster-whisper: تحويل كلام محلي مُسرَّع بـ CTranslate2',
+    seoTitle: 'مراجعة faster-whisper: STT محلي سريع',
     intro:
       'faster-whisper هو إعادة تنفيذ بلغة Python لنموذج تحويل الكلام إلى نص Whisper من OpenAI، مبني على محرك الاستدلال [CTranslate2](https://github.com/OpenNMT/CTranslate2)، طوّره Guillaume Klein ويُصان حاليًا ضمن [SYSTRAN على GitHub](https://github.com/SYSTRAN/faster-whisper). يوفر أداءً أعلى بنحو 4 أضعاف تقريبًا مقارنة بتنفيذ OpenAI الأصلي على نفس الجهاز، مع استهلاك أقل للذاكرة بفضل الضغط الكمّي int8. تتناول هذه المراجعة تاريخ المشروع، وأمثلة استخدام حقيقية بلغة Python، والتثبيت، ورخصة MIT وتكلفته (مجاني)، والحالات التي لا يناسبها — مع رابط إلى مقارنة PromptQuorum المباشرة مع whisper.cpp لمن يحتار بين الاثنين.',
     metaDescription:
@@ -2506,8 +2506,8 @@ for segment in segments:
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/faster-whisper-review-hero-zh.webp',
-    title: 'faster-whisper评测(2026):CTranslate2加速的本地语音识别',
-    seoTitle: 'faster-whisper评测2026:快速本地STT',
+    title: 'faster-whisper评测:CTranslate2加速的本地语音识别',
+    seoTitle: 'faster-whisper评测:快速本地STT',
     intro:
       'faster-whisper是OpenAI语音识别模型Whisper的Python重新实现,构建于[CTranslate2](https://github.com/OpenNMT/CTranslate2)推理引擎之上,由Guillaume Klein开发,目前由[GitHub上的SYSTRAN](https://github.com/SYSTRAN/faster-whisper)维护。在相同硬件上,它的转录吞吐量约为OpenAI原始实现的4倍,并通过int8量化降低内存占用。本评测涵盖其发展历史、真实的Python使用示例、安装方法、MIT许可证与成本(免费),以及它不适合的场景——并附上PromptQuorum与whisper.cpp直接对比测评的链接,供需要在两者之间做选择的读者参考。',
     metaDescription:
@@ -2863,8 +2863,8 @@ for segment in segments:
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/faster-whisper-review-hero-ko.webp',
-    title: 'faster-whisper 리뷰(2026): CTranslate2로 가속한 로컬 음성 인식',
-    seoTitle: 'faster-whisper 리뷰 2026: 빠른 로컬 STT',
+    title: 'faster-whisper 리뷰: CTranslate2로 가속한 로컬 음성 인식',
+    seoTitle: 'faster-whisper 리뷰: 빠른 로컬 STT',
     intro:
       'faster-whisper는 OpenAI의 음성 인식 모델 Whisper를 Python으로 재구현한 프로젝트로, 추론 엔진 [CTranslate2](https://github.com/OpenNMT/CTranslate2) 위에 구축되었으며 Guillaume Klein이 개발했고 현재는 [GitHub의 SYSTRAN](https://github.com/SYSTRAN/faster-whisper)에서 관리하고 있습니다. 동일한 하드웨어에서 OpenAI 원본 구현 대비 약 4배의 전사 처리량을 제공하며, int8 양자화를 통해 메모리 사용량도 줄입니다. 이 리뷰에서는 개발 역사, 실제 Python 사용 예시, 설치 방법, MIT 라이선스와 비용(무료), 그리고 적합하지 않은 용도까지 다루며, whisper.cpp와의 선택을 고민하는 독자를 위해 PromptQuorum의 직접 비교 벤치마크 링크도 함께 제공합니다.',
     metaDescription:

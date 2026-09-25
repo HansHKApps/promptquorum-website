@@ -15,8 +15,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/ai-on-device-review-hero-en.webp',
-    title: 'AI on Device Review (2026): A $4.99 Apple Intelligence-Only App',
-    seoTitle: 'AI on Device Review 2026: Offline AI for Apple Intelligence',
+    title: 'AI on Device Review: A $4.99 Apple Intelligence-Only App',
+    seoTitle: 'AI on Device Review: Offline AI for Apple Intelligence',
     intro:
       'AI on Device is a $4.99, one-time-purchase iPhone and Mac app by independent developer Eduardo Dominguez Menendez, listed on the [Apple App Store](' +
       APP_STORE_URL +
@@ -494,8 +494,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/ai-on-device-review-hero-de.webp',
-    title: 'AI on Device im Test (2026): Eine 4,99-$-App nur für Apple Intelligence',
-    seoTitle: 'AI on Device Test 2026: Offline-KI für Apple Intelligence',
+    title: 'AI on Device im Test: Eine 4,99-$-App nur für Apple Intelligence',
+    seoTitle: 'AI on Device Test: Offline-KI für Apple Intelligence',
     intro:
       'AI on Device ist eine App für iPhone und Mac des unabhängigen Entwicklers Eduardo Dominguez Menendez, einmalig kostenpflichtig für 4,99 $, gelistet im [Apple App Store](' +
       APP_STORE_URL +
@@ -973,8 +973,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/ai-on-device-review-hero-fr.webp',
-    title: 'AI on Device en test (2026) : une app à 4,99 $ réservée à Apple Intelligence',
-    seoTitle: 'AI on Device : test 2026 de l\'IA hors ligne Apple Intelligence',
+    title: 'AI on Device en test: une app à 4,99 $ réservée à Apple Intelligence',
+    seoTitle: 'AI on Device: test de l\'IA hors ligne Apple Intelligence',
     intro:
       'AI on Device est une application pour iPhone et Mac du développeur indépendant Eduardo Dominguez Menendez, disponible pour un achat unique de 4,99 $, référencée sur l\'[Apple App Store](' +
       APP_STORE_URL +
@@ -1452,8 +1452,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/ai-on-device-review-hero-es.webp',
-    title: 'AI on Device: reseña (2026) de una app de 4,99 $ solo para Apple Intelligence',
-    seoTitle: 'AI on Device: reseña 2026 de IA offline con Apple Intelligence',
+    title: 'AI on Device: reseña de una app de 4,99 $ solo para Apple Intelligence',
+    seoTitle: 'AI on Device: reseña de IA offline con Apple Intelligence',
     intro:
       'AI on Device es una aplicación para iPhone y Mac del desarrollador independiente Eduardo Dominguez Menendez, disponible por una compra única de $4.99, listada en la [App Store de Apple](' +
       APP_STORE_URL +
@@ -1931,8 +1931,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/ai-on-device-review-hero-pt.webp',
-    title: 'AI on Device: análise (2026) de um app de $4,99 só para Apple Intelligence',
-    seoTitle: 'AI on Device: análise 2026 da IA offline com Apple Intelligence',
+    title: 'AI on Device: análise de um app de $4,99 só para Apple Intelligence',
+    seoTitle: 'AI on Device: análise da IA offline com Apple Intelligence',
     intro:
       'AI on Device é um aplicativo para iPhone e Mac do desenvolvedor independente Eduardo Dominguez Menendez, disponível por uma compra única de $4,99, listado na [App Store da Apple](' +
       APP_STORE_URL +
@@ -2410,8 +2410,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/ai-on-device-review-hero-ja.webp',
-    title: 'AI on Deviceレビュー(2026):Apple Intelligence専用の4.99ドルアプリ',
-    seoTitle: 'AI on Deviceレビュー2026:Apple Intelligence対応オフラインAI',
+    title: 'AI on Deviceレビュー:Apple Intelligence専用の4.99ドルアプリ',
+    seoTitle: 'AI on Deviceレビュー:Apple Intelligence対応オフラインAI',
     intro:
       'AI on Deviceは、独立系開発者Eduardo Dominguez Menendez氏によるiPhone・Mac向けアプリで、4.99ドルの一括払いで購入でき、[Apple App Store](' +
       APP_STORE_URL +
@@ -2889,8 +2889,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/ai-on-device-review-hero-zh.webp',
-    title: 'AI on Device 评测(2026):一款仅限 Apple Intelligence 的 4.99 美元应用',
-    seoTitle: 'AI on Device 评测 2026:Apple Intelligence 离线 AI',
+    title: 'AI on Device 评测:一款仅限 Apple Intelligence 的 4.99 美元应用',
+    seoTitle: 'AI on Device 评测:Apple Intelligence 离线 AI',
     intro:
       'AI on Device 是独立开发者 Eduardo Dominguez Menendez 推出的一款 iPhone 和 Mac 应用,一次性支付 4.99 美元即可购买,在 [Apple App Store](' +
       APP_STORE_URL +
@@ -3368,8 +3368,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/ai-on-device-review-hero-ar.webp',
-    title: 'مراجعة AI on Device (2026): تطبيق بـ4.99 دولار مخصص لـApple Intelligence فقط',
-    seoTitle: 'مراجعة AI on Device 2026: ذكاء اصطناعي دون اتصال مع Apple Intelligence',
+    title: 'مراجعة AI on Device: تطبيق بـ4.99 دولار مخصص لـApple Intelligence فقط',
+    seoTitle: 'مراجعة AI on Device: ذكاء اصطناعي دون اتصال مع Apple Intelligence',
     intro:
       'AI on Device هو تطبيق لأجهزة iPhone وMac من المطوّر المستقل Eduardo Dominguez Menendez، متاح بشراء لمرة واحدة بقيمة 4.99 دولار، ومدرج في [متجر تطبيقات Apple](' +
       APP_STORE_URL +
@@ -3847,8 +3847,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/ai-on-device-review-hero-ko.webp',
-    title: 'AI on Device 리뷰 (2026): Apple Intelligence 전용 4.99달러 앱',
-    seoTitle: 'AI on Device 리뷰 2026: Apple Intelligence 오프라인 AI',
+    title: 'AI on Device 리뷰: Apple Intelligence 전용 4.99달러 앱',
+    seoTitle: 'AI on Device 리뷰: Apple Intelligence 오프라인 AI',
     intro:
       'AI on Device는 독립 개발자 Eduardo Dominguez Menendez가 만든 iPhone 및 Mac용 앱으로, 4.99달러 일회성 구매로 이용할 수 있으며 [Apple App Store](' +
       APP_STORE_URL +
