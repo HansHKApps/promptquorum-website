@@ -24,6 +24,9 @@ export const BALCONY_SOLAR_CATEGORIES: BalconySolarCategory[] = [
       'best-balcony-solar-batteries-2026',
       'best-balcony-solar-microinverters',
       'home-assistant-balcony-solar-no-cloud',
+      'best-balcony-solar-home-battery-us-2026',
+      'local-platforms-balcony-solar-home-assistant-alternatives',
+      'connect-balcony-solar-home-assistant-local',
     ],
   },
   {
@@ -83,6 +86,10 @@ export const BALCONY_SOLAR_CATEGORIES: BalconySolarCategory[] = [
       'balkonstrom-balcony-solar',
       'green-solar-pluginenergy-balcony-solar',
       'meyer-burger-solarwatt-heckert-balcony-solar',
+      'renogy-balcony-solar',
+      'allpowers-balcony-solar',
+      'jackery-balcony-solar',
+      'bluetti-balcony-solar',
     ],
   },
   {
