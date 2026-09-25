@@ -4,9 +4,10 @@
 // (README + releases page), verified independently of the maker's email — see apps/hilbertraum.ts
 // for the matching ToolRecord and pqReview.version, which this article's body must match exactly.
 //
-// TODO(follow-up): maker Vladimir Tosovic (HilbertraumAI, hilbertraum.ai) reached out 2026-09-25
-// offering to stay in touch — request founder Q&A / quote for a "From the Maker" section before
-// the next refresh. No founder quote exists yet, so this article intentionally has no such section.
+// Maker follow-up 2026-09-25: Vladimir Tosovic emailed corrections (dictation via Whisper, not
+// text-to-speech; the normal portable-USB path is simpler than the prepare-drive script implied)
+// plus a founder quote and note of an upcoming pre-configured USB stick — see the "From the Maker"
+// section below and the matching founder field in apps/hilbertraum.ts.
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -57,6 +58,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Usage Examples', anchor: 'usage-examples' },
       { label: 'Download HilbertRaum for Windows, macOS, and Linux', anchor: 'download-links' },
       { label: 'HilbertRaum Pricing and License', anchor: 'pricing-license' },
+      { label: 'From the Maker', anchor: 'from-the-maker' },
       { label: 'Who Should Use HilbertRaum?', anchor: 'who-should-use' },
       { label: 'HilbertRaum vs. Other Local Chat Apps', anchor: 'hilbertraum-competitors' },
       { label: 'Common Mistakes When Evaluating HilbertRaum', anchor: 'common-mistakes' },
@@ -77,7 +79,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Portable by design: the app, models, and an AES-256-GCM-encrypted workspace can live on a USB drive or external disk and move between machines',
           'Answers questions about your own PDFs, Word files, and text documents with citations, using hybrid search and reranking',
           'Detects the RAM and VRAM available on the machine it is running on and recommends a model size that fits, from roughly 8 GB RAM upward',
-          'Also includes optional offline Wikipedia archives (Kiwix/ZIM format), image understanding, audio transcription and text-to-speech, OCR for scanned documents, and document translation across 51 languages',
+          'Also includes optional offline Wikipedia archives (Kiwix/ZIM format), image understanding, dictation (speech-to-text via Whisper), OCR for scanned documents, and document translation across 51 languages',
           'Available on Windows, macOS (Apple Silicon), and Linux',
           'Developed by HilbertraumAI, per the GitHub organization hosting the code',
         ],
@@ -103,11 +105,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Key Features',
         content: 'HilbertRaum\'s feature set centers on three things: running entirely offline, working without installation, and helping you pick a model that actually fits your hardware. Here is what each part does, per the official [GitHub README](https://github.com/HilbertraumAI/HilbertRaum) and [hilbertraum.ai](https://hilbertraum.ai).',
         items: [
-          '**Portable, no-install mode** — the app, downloaded models, and an AES-256-GCM-encrypted workspace can all be placed on a USB drive or external disk using a one-command setup script (`prepare-drive.ps1` on Windows, `prepare-drive.sh` on macOS/Linux), so the entire setup moves between machines without reinstalling anything',
+          '**Portable, no-install mode** — download the portable build from GitHub, copy it to a USB drive or external disk, and run it there: pick a model directly in the app, and HilbertRaum downloads the matching engine and model files itself once you confirm. A separate one-command setup script (`prepare-drive.ps1` on Windows, `prepare-drive.sh` on macOS/Linux) is also available for pre-loading a drive with an encrypted workspace and a chosen model in advance, but that script is an optional shortcut for preparing a stick ahead of time, not the normal way to use HilbertRaum',
           '**Document Q&A with citations** — import PDFs, Word files, or plain text, and ask questions against them; answers use hybrid search and a reranking model (BGE v2 M3), and can be converted into reviewable records with frozen source snippets for verification',
           '**Hardware-detection model suggestions** — HilbertRaum benchmarks the RAM and VRAM it finds and recommends a chat model sized for that machine, from roughly 8 GB RAM (a small Qwen model) up to 32 GB+ (a larger quantized model) rather than leaving the user to guess',
           '**Offline Wikipedia (Knowledge Packs)** — optional Kiwix-format (ZIM) Wikipedia archives, in roughly 100 languages per the project\'s documentation, that can be queried alongside your own documents without an internet connection',
-          '**Multimodal support** — image understanding via a bundled vision model, audio transcription via Whisper, text-to-speech dictation, and OCR for scanned documents',
+          '**Multimodal support** — image understanding via a bundled vision model, dictation (speech-to-text via Whisper), and OCR for scanned documents',
           '**Document translation** — built-in translation across 51 languages via an opt-in translation model (TranslateGemma)',
           '**Document skills** — summarization, comparison, and structured extraction (for example, from invoices, bank statements, or contracts)',
           '**Local API** — an optional, OpenAI-compatible loopback endpoint so other local applications can use HilbertRaum\'s running model as a backend',
@@ -120,8 +122,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'These are concrete workflows built from HilbertRaum\'s documented features above — not hypothetical use cases.',
         subsections: [
           {
-            title: 'Run the entire workspace from a USB drive',
-            content: 'Run the platform-specific setup script against a USB drive or external disk (for example, `scripts/prepare-drive.sh --target /Volumes/HILBERTRAUM --with-assets --accept-license` on macOS/Linux) to place the app, a recommended model, and an encrypted workspace on that drive. Plug the drive into any supported machine and run HilbertRaum directly from it — no separate installation step on that machine.',
+            title: 'Run HilbertRaum from a USB drive',
+            content: 'Download the portable build for your platform from the [GitHub releases page](https://github.com/HilbertraumAI/HilbertRaum/releases), copy it onto a USB drive or external disk, and launch it from there — no installer runs on the host machine. On first launch, pick a model directly in the app; HilbertRaum downloads the matching engine and model files itself once you confirm. For pre-loading a drive with an encrypted workspace and a model in advance, for example to hand a ready-to-go stick to someone else, run the platform-specific setup script instead (for example, `scripts/prepare-drive.sh --target /Volumes/HILBERTRAUM --with-assets --accept-license` on macOS/Linux) — that script is an optional shortcut, not a required step.',
           },
           {
             title: 'Ask questions about your own PDFs with citations',
@@ -157,7 +159,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Chat model weights are downloaded separately and are not covered by HilbertRaum\'s own license — the README states they are primarily Apache-2.0 licensed, but verify the specific model\'s license before any commercial use',
           '"HilbertRaum" and its logo are stated as trademarks in the README, with a note that forks must use separate branding',
         ],
-        note: 'This review found no evidence of a paid tier, subscription, or enterprise pricing anywhere on hilbertraum.ai or in the GitHub repository as of the verification date above. If that changes in a future release, treat the official [GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases) page and [hilbertraum.ai](https://hilbertraum.ai) as the authoritative source, not this review.',
+        note: 'This review found no evidence of a paid tier, subscription, or enterprise pricing anywhere on hilbertraum.ai or in the GitHub repository as of the verification date above. If that changes in a future release, treat the official [GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases) page and [hilbertraum.ai](https://hilbertraum.ai) as the authoritative source, not this review. HilbertRaum\'s maker is also preparing a separate, ready-to-use USB stick with vetted models pre-installed, for people who would rather not set anything up themselves; it runs the same free, open-source app and would be priced separately from the software itself. A waitlist for that stick is open at [hilbertraum.ai](https://hilbertraum.ai), but as of this review it is not yet available for purchase.',
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'From the Maker',
+        content: [
+          'PromptQuorum asked the HilbertRaum maker to describe the app\'s design goals in their own words. The following is presented as their own statement, unedited except for formatting.',
+          '"We want to make local AI as easy as possible. As AI use grows, protecting private data and documents matters more every day. That\'s why we built HilbertRaum: offline AI for everyone, without having to deal with runtimes, quantization, or model files."',
+          '"In the best case, you just plug in a USB stick and get started. We\'re currently preparing exactly that: a ready-to-use stick with pre-installed, vetted models."',
+          '"If you don\'t want to wait, or you\'re a bit more technical, you can download the app for free and run it directly from your own computer or an external drive, with no installation. The app detects your hardware and recommends suitable models, which we curate and benchmark ourselves beforehand. The software is, and will remain, free and open source. If you\'d rather have the ready-made stick, you can join the waitlist at [hilbertraum.ai](https://hilbertraum.ai)."',
+        ],
+        note: '— Vladimir Tosovic, HilbertraumAI',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -235,6 +248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Does HilbertRaum send any data to the cloud?', a: 'No, by design. The project\'s README describes an offline guard that blocks cloud fallback, web search integration, and telemetry, and logs any connection attempt while the application runs disconnected.' },
           { q: 'What is the offline Wikipedia (Knowledge Packs) feature?', a: 'HilbertRaum can optionally load Kiwix-format (ZIM) Wikipedia archives, available in roughly 100 languages per the project\'s documentation, and query them alongside your own documents without an internet connection.' },
           { q: 'What is HilbertRaum\'s current version?', a: 'Version 0.1.61, per the [official GitHub Releases page](https://github.com/HilbertraumAI/HilbertRaum/releases), verified 2026-09-25. Check that page directly for anything shipped after this review\'s publish date.' },
+          { q: 'Is there a ready-made HilbertRaum USB stick I can just buy?', a: 'Not yet, as of this review. The maker is preparing a separate, ready-to-use stick with vetted models pre-installed for people who would rather not set anything up themselves — see HilbertRaum Pricing and License above for the waitlist link. The free download remains the same open-source app either way.' },
         ],
       },
       sources: {
@@ -304,6 +318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Anwendungsbeispiele', anchor: 'usage-examples' },
       { label: 'HilbertRaum herunterladen für Windows, macOS und Linux', anchor: 'download-links' },
       { label: 'HilbertRaum Preise und Lizenz', anchor: 'pricing-license' },
+      { label: 'Vom Hersteller', anchor: 'from-the-maker' },
       { label: 'Für wen eignet sich HilbertRaum?', anchor: 'who-should-use' },
       { label: 'HilbertRaum vs. andere lokale Chat-Apps', anchor: 'hilbertraum-competitors' },
       { label: 'Häufige Fehler bei der Bewertung von HilbertRaum', anchor: 'common-mistakes' },
@@ -324,7 +339,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Portabel per Design: App, Modelle und ein AES-256-GCM-verschlüsselter Arbeitsbereich können auf einem USB-Stick oder einer externen Festplatte liegen und zwischen Rechnern wandern',
           'Beantwortet Fragen zu eigenen PDFs, Word-Dateien und Textdokumenten mit Quellenangaben, unter Nutzung von Hybrid-Suche und Reranking',
           'Erkennt das verfügbare RAM und VRAM des Rechners und empfiehlt eine passende Modellgröße, ab etwa 8 GB RAM aufwärts',
-          'Enthält außerdem optionale Offline-Wikipedia-Archive (Kiwix/ZIM-Format), Bildverständnis, Audio-Transkription und Sprachausgabe, OCR für gescannte Dokumente sowie Dokumentenübersetzung in 51 Sprachen',
+          'Enthält außerdem optionale Offline-Wikipedia-Archive (Kiwix/ZIM-Format), Bildverständnis, Diktat (Spracheingabe über Whisper), OCR für gescannte Dokumente sowie Dokumentenübersetzung in 51 Sprachen',
           'Verfügbar für Windows, macOS (Apple Silicon) und Linux',
           'Entwickelt von HilbertraumAI, laut der GitHub-Organisation, die den Code hostet',
         ],
@@ -350,11 +365,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Kernfunktionen',
         content: 'Der Funktionsumfang von HilbertRaum dreht sich um drei Dinge: vollständig offline laufen, ohne Installation funktionieren und dabei helfen, ein Modell zu wählen, das wirklich zur eigenen Hardware passt. Hier ist, was jeder Teil laut dem offiziellen [GitHub-README](https://github.com/HilbertraumAI/HilbertRaum) und [hilbertraum.ai](https://hilbertraum.ai) tatsächlich tut.',
         items: [
-          '**Portabler Modus ohne Installation** — App, heruntergeladene Modelle und ein AES-256-GCM-verschlüsselter Arbeitsbereich können mithilfe eines Ein-Befehl-Setup-Skripts (`prepare-drive.ps1` unter Windows, `prepare-drive.sh` unter macOS/Linux) auf einen USB-Stick oder eine externe Festplatte gelegt werden, sodass die gesamte Einrichtung zwischen Rechnern wandert, ohne etwas neu zu installieren',
+          '**Portabler Modus ohne Installation** — Portable Version von GitHub herunterladen, auf einen USB-Stick oder eine externe Festplatte kopieren und von dort starten: Modell direkt in der App auswählen, Engine und Modell lädt HilbertRaum nach Bestätigung selbst nach. Ein separates Ein-Befehl-Setup-Skript (`prepare-drive.ps1` unter Windows, `prepare-drive.sh` unter macOS/Linux) steht zusätzlich bereit, um einen Stick vorab mit einem verschlüsselten Arbeitsbereich und einem ausgewählten Modell zu bespielen – das Skript ist eine optionale Abkürzung zum Vorbereiten eines Sticks, nicht der normale Weg, HilbertRaum zu nutzen',
           '**Dokumenten-Q&A mit Quellenangaben** — importieren Sie PDFs, Word-Dateien oder reinen Text und stellen Sie Fragen dazu; Antworten nutzen Hybrid-Suche und ein Reranking-Modell (BGE v2 M3) und lassen sich zur Überprüfung in nachvollziehbare Aufzeichnungen mit eingefrorenen Quellenausschnitten umwandeln',
           '**Hardware-Erkennung mit Modellvorschlägen** — HilbertRaum benchmarkt das gefundene RAM und VRAM und empfiehlt ein passendes Chat-Modell, von etwa 8 GB RAM (ein kleines Qwen-Modell) bis 32 GB+ (ein größeres quantisiertes Modell), statt die Nutzer raten zu lassen',
           '**Offline-Wikipedia (Knowledge Packs)** — optionale Wikipedia-Archive im Kiwix-Format (ZIM), laut Projektdokumentation in rund 100 Sprachen, die ohne Internetverbindung neben eigenen Dokumenten abgefragt werden können',
-          '**Multimodale Unterstützung** — Bildverständnis über ein mitgeliefertes Vision-Modell, Audio-Transkription über Whisper, Sprachausgabe-Diktat und OCR für gescannte Dokumente',
+          '**Multimodale Unterstützung** — Bildverständnis über ein mitgeliefertes Vision-Modell, Diktat (Spracheingabe über Whisper) und OCR für gescannte Dokumente',
           '**Dokumentenübersetzung** — integrierte Übersetzung in 51 Sprachen über ein optionales Übersetzungsmodell (TranslateGemma)',
           '**Dokument-Fähigkeiten** — Zusammenfassung, Vergleich und strukturierte Extraktion (zum Beispiel aus Rechnungen, Kontoauszügen oder Verträgen)',
           '**Lokale API** — ein optionaler, OpenAI-kompatibler Loopback-Endpunkt, damit andere lokale Anwendungen das laufende Modell von HilbertRaum als Backend nutzen können',
@@ -367,8 +382,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Dies sind konkrete Abläufe, die aus den oben dokumentierten Funktionen von HilbertRaum abgeleitet sind — keine hypothetischen Anwendungsfälle.',
         subsections: [
           {
-            title: 'Den gesamten Arbeitsbereich von einem USB-Stick ausführen',
-            content: 'Führen Sie das plattformspezifische Setup-Skript gegen einen USB-Stick oder eine externe Festplatte aus (zum Beispiel `scripts/prepare-drive.sh --target /Volumes/HILBERTRAUM --with-assets --accept-license` unter macOS/Linux), um App, ein empfohlenes Modell und einen verschlüsselten Arbeitsbereich auf diesem Laufwerk abzulegen. Stecken Sie das Laufwerk in jeden unterstützten Rechner und führen Sie HilbertRaum direkt davon aus — kein separater Installationsschritt auf diesem Rechner.',
+            title: 'HilbertRaum von einem USB-Stick ausführen',
+            content: 'Laden Sie die portable Version für Ihre Plattform von der [GitHub-Releases-Seite](https://github.com/HilbertraumAI/HilbertRaum/releases) herunter, kopieren Sie sie auf einen USB-Stick oder eine externe Festplatte, und starten Sie sie von dort – auf dem Rechner selbst läuft kein Installationsprogramm. Beim ersten Start wählen Sie ein Modell direkt in der App; HilbertRaum lädt die passende Engine und die Modelldateien nach Bestätigung selbst nach. Um einen Stick vorab mit einem verschlüsselten Arbeitsbereich und einem Modell zu bespielen, etwa um jemand anderem einen fertigen Stick zu geben, führen Sie stattdessen das plattformspezifische Setup-Skript aus (zum Beispiel `scripts/prepare-drive.sh --target /Volumes/HILBERTRAUM --with-assets --accept-license` unter macOS/Linux) – dieses Skript ist eine optionale Abkürzung, kein notwendiger Schritt.',
           },
           {
             title: 'Fragen zu eigenen PDFs mit Quellenangaben stellen',
@@ -404,7 +419,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Die Gewichte der Chat-Modelle werden separat heruntergeladen und sind nicht von HilbertRaums eigener Lizenz erfasst — laut README sind sie vorwiegend Apache-2.0-lizenziert, prüfen Sie aber vor jeder kommerziellen Nutzung die Lizenz des konkreten Modells',
           '"HilbertRaum" und sein Logo werden im README als Marken bezeichnet, mit dem Hinweis, dass Forks ein eigenes Branding verwenden müssen',
         ],
-        note: 'Diese Review fand zum genannten Prüfdatum keine Hinweise auf eine kostenpflichtige Stufe, ein Abonnement oder Enterprise-Preise auf hilbertraum.ai oder im GitHub-Repository. Sollte sich dies in einer zukünftigen Version ändern, betrachten Sie die offizielle Seite [GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases) und [hilbertraum.ai](https://hilbertraum.ai) als maßgebliche Quelle, nicht diese Review.',
+        note: 'Diese Review fand zum genannten Prüfdatum keine Hinweise auf eine kostenpflichtige Stufe, ein Abonnement oder Enterprise-Preise auf hilbertraum.ai oder im GitHub-Repository. Sollte sich dies in einer zukünftigen Version ändern, betrachten Sie die offizielle Seite [GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases) und [hilbertraum.ai](https://hilbertraum.ai) als maßgebliche Quelle, nicht diese Review. Der Hersteller von HilbertRaum bereitet außerdem einen separaten, fertig eingerichteten USB-Stick mit vorinstallierten, geprüften Modellen vor – für alle, die nichts selbst einrichten möchten. Er soll dieselbe kostenlose Open-Source-App nutzen und getrennt von der Software bepreist werden. Eine Warteliste steht unter [hilbertraum.ai](https://hilbertraum.ai) bereit, ist zum Zeitpunkt dieser Review aber noch nicht käuflich erhältlich.',
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Vom Hersteller',
+        content: [
+          'PromptQuorum hat den Entwickler von HilbertRaum gebeten, die Designziele der App in eigenen Worten zu beschreiben. Es folgt seine eigene, nur formal angepasste Aussage.',
+          '„Wir wollen lokale KI so einfach wie möglich machen. Mit zunehmender Nutzung von KI wird es immer wichtiger, private Daten und Dokumente zu schützen. Deshalb haben wir HilbertRaum gebaut: Offline-KI für alle, ohne dass man sich mit Runtimes, Quantisierungen oder Modelldateien auseinandersetzen muss."',
+          '„Im besten Fall steckt man einfach einen USB-Stick ein und fängt an. Genau so einen fertig eingerichteten Stick mit vorinstallierten, geprüften Modellen bereiten wir gerade vor."',
+          '„Wer nicht warten will oder technisch etwas versierter ist, lädt die App kostenlos herunter und startet sie direkt vom eigenen Rechner oder von einem externen Laufwerk, ohne Installation. Die App erkennt die Hardware und empfiehlt passende Modelle, die wir vorher selbst kuratieren und benchmarken. Die Software ist und bleibt kostenlos und Open Source. Wer lieber den fertigen Stick möchte, kann sich auf [hilbertraum.ai](https://hilbertraum.ai) in die Warteliste eintragen."',
+        ],
+        note: '— Vladimir Tosovic, HilbertraumAI',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -482,6 +508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Sendet HilbertRaum Daten an die Cloud?', a: 'Nein, per Design. Das README des Projekts beschreibt einen Offline-Schutz, der Cloud-Fallback, Websuche-Integration und Telemetrie blockiert und jeden Verbindungsversuch protokolliert, während die Anwendung getrennt läuft.' },
           { q: 'Was ist die Offline-Wikipedia-Funktion (Knowledge Packs)?', a: 'HilbertRaum kann optional Wikipedia-Archive im Kiwix-Format (ZIM) laden, laut Projektdokumentation in rund 100 Sprachen verfügbar, und diese ohne Internetverbindung neben eigenen Dokumenten abfragen.' },
           { q: 'Welche Version hat HilbertRaum aktuell?', a: 'Version 0.1.61, laut der [offiziellen GitHub-Releases-Seite](https://github.com/HilbertraumAI/HilbertRaum/releases), geprüft am 25.09.2026. Prüfen Sie diese Seite direkt für alles, was nach dem Veröffentlichungsdatum dieser Review erschienen ist.' },
+          { q: 'Gibt es einen fertig eingerichteten HilbertRaum-USB-Stick zu kaufen?', a: 'Noch nicht, Stand dieser Review. Der Hersteller bereitet einen separaten, fertig eingerichteten Stick mit vorinstallierten, geprüften Modellen vor, für alle, die nichts selbst einrichten möchten – siehe HilbertRaum Preise und Lizenz oben für den Link zur Warteliste. Der kostenlose Download bleibt in jedem Fall dieselbe Open-Source-App.' },
         ],
       },
       sources: {
@@ -551,6 +578,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Exemples d\'utilisation', anchor: 'usage-examples' },
       { label: 'Télécharger HilbertRaum pour Windows, macOS et Linux', anchor: 'download-links' },
       { label: 'Tarifs et licence de HilbertRaum', anchor: 'pricing-license' },
+      { label: 'Le mot du créateur', anchor: 'from-the-maker' },
       { label: 'À qui s\'adresse HilbertRaum ?', anchor: 'who-should-use' },
       { label: 'HilbertRaum face aux autres applications de chat local', anchor: 'hilbertraum-competitors' },
       { label: 'Erreurs courantes lors de l\'évaluation de HilbertRaum', anchor: 'common-mistakes' },
@@ -571,7 +599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Portable par conception : l\'application, les modèles et un espace de travail chiffré en AES-256-GCM peuvent résider sur une clé USB ou un disque externe et voyager entre machines',
           'Répond aux questions sur vos PDF, fichiers Word et documents texte avec citations, via recherche hybride et reranking',
           'Détecte la RAM et la VRAM disponibles sur la machine et recommande une taille de modèle adaptée, à partir d\'environ 8 Go de RAM',
-          'Inclut aussi des archives Wikipédia hors ligne optionnelles (format Kiwix/ZIM), la compréhension d\'images, la transcription et la synthèse vocale, l\'OCR pour documents scannés, et la traduction de documents dans 51 langues',
+          'Inclut aussi des archives Wikipédia hors ligne optionnelles (format Kiwix/ZIM), la compréhension d\'images, la dictée (reconnaissance vocale via Whisper), l\'OCR pour documents scannés, et la traduction de documents dans 51 langues',
           'Disponible sous Windows, macOS (Apple Silicon) et Linux',
           'Développé par HilbertraumAI, selon l\'organisation GitHub hébergeant le code',
         ],
@@ -597,11 +625,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fonctionnalités clés',
         content: 'Les fonctionnalités de HilbertRaum s\'articulent autour de trois axes : fonctionner entièrement hors ligne, fonctionner sans installation, et aider à choisir un modèle réellement adapté à votre matériel. Voici ce que fait chaque partie, selon le [README GitHub](https://github.com/HilbertraumAI/HilbertRaum) officiel et [hilbertraum.ai](https://hilbertraum.ai).',
         items: [
-          '**Mode portable sans installation** — l\'application, les modèles téléchargés et un espace de travail chiffré en AES-256-GCM peuvent être placés sur une clé USB ou un disque externe via un script de configuration en une commande (`prepare-drive.ps1` sous Windows, `prepare-drive.sh` sous macOS/Linux), afin que toute la configuration voyage entre machines sans rien réinstaller',
+          '**Mode portable sans installation** — téléchargez la version portable depuis GitHub, copiez-la sur une clé USB ou un disque externe, et lancez-la depuis là : choisissez un modèle directement dans l\'application, et HilbertRaum télécharge lui-même le moteur et les fichiers du modèle correspondants après confirmation. Un script de configuration en une commande distinct (`prepare-drive.ps1` sous Windows, `prepare-drive.sh` sous macOS/Linux) est également disponible pour préparer une clé à l\'avance avec un espace de travail chiffré et un modèle choisi, mais ce script est un raccourci optionnel, pas la méthode normale d\'utilisation de HilbertRaum',
           '**Questions-réponses sur documents avec citations** — importez des PDF, fichiers Word ou texte brut, puis interrogez-les ; les réponses utilisent une recherche hybride et un modèle de reranking (BGE v2 M3), et peuvent être converties en enregistrements vérifiables avec extraits sources figés',
           '**Suggestions de modèle par détection matérielle** — HilbertRaum évalue la RAM et la VRAM détectées et recommande un modèle de chat adapté à cette machine, d\'environ 8 Go de RAM (un petit modèle Qwen) jusqu\'à 32 Go et plus (un modèle quantifié plus grand), plutôt que de laisser l\'utilisateur deviner',
           '**Wikipédia hors ligne (Knowledge Packs)** — archives Wikipédia optionnelles au format Kiwix (ZIM), en environ 100 langues selon la documentation du projet, interrogeables aux côtés de vos propres documents sans connexion internet',
-          '**Prise en charge multimodale** — compréhension d\'images via un modèle de vision embarqué, transcription audio via Whisper, dictée par synthèse vocale, et OCR pour documents scannés',
+          '**Prise en charge multimodale** — compréhension d\'images via un modèle de vision embarqué, dictée (reconnaissance vocale via Whisper), et OCR pour documents scannés',
           '**Traduction de documents** — traduction intégrée dans 51 langues via un modèle de traduction optionnel (TranslateGemma)',
           '**Compétences documentaires** — résumé, comparaison et extraction structurée (par exemple à partir de factures, relevés bancaires ou contrats)',
           '**API locale** — un point de terminaison local optionnel compatible OpenAI, permettant à d\'autres applications locales d\'utiliser le modèle en cours d\'exécution de HilbertRaum comme backend',
@@ -614,8 +642,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Voici des scénarios concrets construits à partir des fonctionnalités documentées de HilbertRaum ci-dessus — pas des cas d\'usage hypothétiques.',
         subsections: [
           {
-            title: 'Exécuter tout l\'espace de travail depuis une clé USB',
-            content: 'Exécutez le script de configuration spécifique à la plateforme sur une clé USB ou un disque externe (par exemple `scripts/prepare-drive.sh --target /Volumes/HILBERTRAUM --with-assets --accept-license` sous macOS/Linux) pour y placer l\'application, un modèle recommandé et un espace de travail chiffré. Branchez la clé sur n\'importe quelle machine compatible et exécutez HilbertRaum directement depuis celle-ci — aucune étape d\'installation séparée sur cette machine.',
+            title: 'Exécuter HilbertRaum depuis une clé USB',
+            content: 'Téléchargez la version portable pour votre plateforme depuis la [page des releases GitHub](https://github.com/HilbertraumAI/HilbertRaum/releases), copiez-la sur une clé USB ou un disque externe, et lancez-la depuis là — aucun installateur ne s\'exécute sur la machine hôte. Au premier lancement, choisissez un modèle directement dans l\'application ; HilbertRaum télécharge lui-même le moteur et les fichiers du modèle correspondants après confirmation. Pour préparer une clé à l\'avance avec un espace de travail chiffré et un modèle, par exemple pour remettre une clé prête à l\'emploi à quelqu\'un d\'autre, exécutez plutôt le script de configuration spécifique à la plateforme (par exemple `scripts/prepare-drive.sh --target /Volumes/HILBERTRAUM --with-assets --accept-license` sous macOS/Linux) — ce script est un raccourci optionnel, pas une étape obligatoire.',
           },
           {
             title: 'Interroger vos propres PDF avec citations',
@@ -651,7 +679,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les poids des modèles de chat sont téléchargés séparément et ne sont pas couverts par la licence propre de HilbertRaum — le README indique qu\'ils sont principalement sous licence Apache-2.0, mais vérifiez la licence du modèle spécifique avant tout usage commercial',
           '« HilbertRaum » et son logo sont indiqués comme des marques dans le README, avec une note précisant que les forks doivent utiliser une image de marque distincte',
         ],
-        note: 'Cette revue n\'a trouvé aucune preuve d\'offre payante, d\'abonnement ou de tarification entreprise sur hilbertraum.ai ou dans le dépôt GitHub à la date de vérification ci-dessus. Si cela change dans une future version, considérez la page officielle [GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases) et [hilbertraum.ai](https://hilbertraum.ai) comme la source faisant foi, pas cette revue.',
+        note: 'Cette revue n\'a trouvé aucune preuve d\'offre payante, d\'abonnement ou de tarification entreprise sur hilbertraum.ai ou dans le dépôt GitHub à la date de vérification ci-dessus. Si cela change dans une future version, considérez la page officielle [GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases) et [hilbertraum.ai](https://hilbertraum.ai) comme la source faisant foi, pas cette revue. Le créateur de HilbertRaum prépare également une clé USB prête à l\'emploi, vendue séparément, avec des modèles vérifiés préinstallés, pour celles et ceux qui préfèrent ne rien configurer eux-mêmes ; elle utilise la même application gratuite et open source, avec un tarif distinct du logiciel. Une liste d\'attente est ouverte sur [hilbertraum.ai](https://hilbertraum.ai), mais au moment de cette revue, elle n\'est pas encore disponible à l\'achat.',
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'Le mot du créateur',
+        content: [
+          'PromptQuorum a demandé au créateur de HilbertRaum de décrire les objectifs de conception de l\'application avec ses propres mots. Voici sa déclaration, inchangée hormis la mise en forme.',
+          '« Nous voulons rendre l\'IA locale aussi simple que possible. Avec l\'usage croissant de l\'IA, il devient de plus en plus important de protéger les données et documents privés. C\'est pourquoi nous avons créé HilbertRaum : une IA hors ligne pour tous, sans avoir à se soucier des moteurs d\'exécution, de la quantification ou des fichiers de modèles. »',
+          '« Dans l\'idéal, il suffit de brancher une clé USB pour commencer. C\'est exactement ce que nous préparons actuellement : une clé prête à l\'emploi avec des modèles préinstallés et vérifiés. »',
+          '« Pour ceux qui ne veulent pas attendre, ou qui sont un peu plus à l\'aise techniquement, il suffit de télécharger l\'application gratuitement et de la lancer directement depuis son ordinateur ou un disque externe, sans installation. L\'application détecte le matériel et recommande des modèles adaptés, que nous curons et testons nous-mêmes au préalable. Le logiciel est et restera gratuit et open source. Ceux qui préfèrent la clé prête à l\'emploi peuvent s\'inscrire sur la liste d\'attente sur [hilbertraum.ai](https://hilbertraum.ai). »',
+        ],
+        note: '— Vladimir Tosovic, HilbertraumAI',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -729,6 +768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'HilbertRaum envoie-t-il des données vers le cloud ?', a: 'Non, par conception. Le README du projet décrit un blocage hors ligne qui empêche le repli vers le cloud, l\'intégration de recherche web et la télémétrie, et journalise toute tentative de connexion pendant que l\'application fonctionne déconnectée.' },
           { q: 'Qu\'est-ce que la fonction Wikipédia hors ligne (Knowledge Packs) ?', a: 'HilbertRaum peut charger de manière optionnelle des archives Wikipédia au format Kiwix (ZIM), disponibles en environ 100 langues selon la documentation du projet, et les interroger aux côtés de vos propres documents sans connexion internet.' },
           { q: 'Quelle est la version actuelle de HilbertRaum ?', a: 'Version 0.1.61, selon la [page GitHub Releases officielle](https://github.com/HilbertraumAI/HilbertRaum/releases), vérifiée le 25/09/2026. Consultez cette page directement pour tout ce qui a été publié après la date de publication de cette revue.' },
+          { q: 'Existe-t-il une clé USB HilbertRaum prête à l\'emploi que je peux simplement acheter ?', a: 'Pas encore, à la date de cette revue. Le créateur prépare une clé prête à l\'emploi, vendue séparément, avec des modèles vérifiés préinstallés, pour celles et ceux qui préfèrent ne rien configurer eux-mêmes — voir Tarifs et licence de HilbertRaum ci-dessus pour le lien vers la liste d\'attente. Le téléchargement gratuit reste dans tous les cas la même application open source.' },
         ],
       },
       sources: {
@@ -798,6 +838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Ejemplos de uso', anchor: 'usage-examples' },
       { label: 'Descargar HilbertRaum para Windows, macOS y Linux', anchor: 'download-links' },
       { label: 'Precios y licencia de HilbertRaum', anchor: 'pricing-license' },
+      { label: 'La palabra del creador', anchor: 'from-the-maker' },
       { label: '¿Quién debería usar HilbertRaum?', anchor: 'who-should-use' },
       { label: 'HilbertRaum frente a otras apps de chat local', anchor: 'hilbertraum-competitors' },
       { label: 'Errores comunes al evaluar HilbertRaum', anchor: 'common-mistakes' },
@@ -818,7 +859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Portátil por diseño: la app, los modelos y un espacio de trabajo cifrado con AES-256-GCM pueden vivir en una memoria USB o disco externo y moverse entre equipos',
           'Responde preguntas sobre tus propios PDF, archivos Word y documentos de texto con citas, usando búsqueda híbrida y reranking',
           'Detecta la RAM y VRAM disponibles en el equipo y recomienda un tamaño de modelo adecuado, desde aproximadamente 8 GB de RAM en adelante',
-          'También incluye archivos de Wikipedia offline opcionales (formato Kiwix/ZIM), comprensión de imágenes, transcripción de audio y texto a voz, OCR para documentos escaneados, y traducción de documentos en 51 idiomas',
+          'También incluye archivos de Wikipedia offline opcionales (formato Kiwix/ZIM), comprensión de imágenes, dictado (voz a texto mediante Whisper), OCR para documentos escaneados, y traducción de documentos en 51 idiomas',
           'Disponible en Windows, macOS (Apple Silicon) y Linux',
           'Desarrollado por HilbertraumAI, según la organización de GitHub que aloja el código',
         ],
@@ -844,11 +885,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Funciones clave',
         content: 'Las funciones de HilbertRaum giran en torno a tres cosas: funcionar completamente offline, funcionar sin instalación, y ayudarte a elegir un modelo que realmente se ajuste a tu hardware. Esto es lo que hace cada parte, según el [README de GitHub](https://github.com/HilbertraumAI/HilbertRaum) oficial y [hilbertraum.ai](https://hilbertraum.ai).',
         items: [
-          '**Modo portátil sin instalación** — la app, los modelos descargados y un espacio de trabajo cifrado con AES-256-GCM pueden colocarse en una memoria USB o disco externo mediante un script de configuración de un solo comando (`prepare-drive.ps1` en Windows, `prepare-drive.sh` en macOS/Linux), de modo que toda la configuración se mueve entre equipos sin reinstalar nada',
+          '**Modo portátil sin instalación** — descarga la versión portátil desde GitHub, cópiala en una memoria USB o disco externo, y ejecútala desde ahí: elige un modelo directamente en la app, y HilbertRaum descarga por sí mismo el motor y los archivos del modelo correspondientes tras confirmar. También hay disponible un script de configuración de un solo comando (`prepare-drive.ps1` en Windows, `prepare-drive.sh` en macOS/Linux) para preparar una memoria de antemano con un espacio de trabajo cifrado y un modelo elegido, pero ese script es un atajo opcional, no la forma habitual de usar HilbertRaum',
           '**Preguntas y respuestas sobre documentos con citas** — importa PDF, archivos Word o texto plano, y hazles preguntas; las respuestas usan búsqueda híbrida y un modelo de reranking (BGE v2 M3), y pueden convertirse en registros revisables con fragmentos de origen congelados para verificación',
           '**Sugerencias de modelo por detección de hardware** — HilbertRaum evalúa la RAM y VRAM detectadas y recomienda un modelo de chat con el tamaño adecuado, desde unos 8 GB de RAM (un modelo Qwen pequeño) hasta 32 GB o más (un modelo cuantizado más grande), en lugar de dejar que el usuario adivine',
           '**Wikipedia offline (Knowledge Packs)** — archivos opcionales de Wikipedia en formato Kiwix (ZIM), en aproximadamente 100 idiomas según la documentación del proyecto, consultables junto a tus propios documentos sin conexión a internet',
-          '**Soporte multimodal** — comprensión de imágenes mediante un modelo de visión integrado, transcripción de audio con Whisper, dictado por texto a voz, y OCR para documentos escaneados',
+          '**Soporte multimodal** — comprensión de imágenes mediante un modelo de visión integrado, dictado (voz a texto mediante Whisper), y OCR para documentos escaneados',
           '**Traducción de documentos** — traducción integrada en 51 idiomas mediante un modelo de traducción opcional (TranslateGemma)',
           '**Habilidades documentales** — resumen, comparación y extracción estructurada (por ejemplo, de facturas, extractos bancarios o contratos)',
           '**API local** — un endpoint local opcional compatible con OpenAI, para que otras aplicaciones locales puedan usar el modelo en ejecución de HilbertRaum como backend',
@@ -861,8 +902,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Estos son flujos de trabajo concretos construidos a partir de las funciones documentadas de HilbertRaum descritas arriba — no casos de uso hipotéticos.',
         subsections: [
           {
-            title: 'Ejecutar todo el espacio de trabajo desde una memoria USB',
-            content: 'Ejecuta el script de configuración específico de la plataforma sobre una memoria USB o disco externo (por ejemplo, `scripts/prepare-drive.sh --target /Volumes/HILBERTRAUM --with-assets --accept-license` en macOS/Linux) para colocar la app, un modelo recomendado y un espacio de trabajo cifrado en esa unidad. Conecta la unidad a cualquier equipo compatible y ejecuta HilbertRaum directamente desde ella — sin ningún paso de instalación separado en ese equipo.',
+            title: 'Ejecutar HilbertRaum desde una memoria USB',
+            content: 'Descarga la versión portátil para tu plataforma desde la [página de releases de GitHub](https://github.com/HilbertraumAI/HilbertRaum/releases), cópiala en una memoria USB o disco externo, y ejecútala desde ahí — no se ejecuta ningún instalador en el equipo anfitrión. En el primer inicio, elige un modelo directamente en la app; HilbertRaum descarga por sí mismo el motor y los archivos del modelo correspondientes tras confirmar. Para preparar una unidad de antemano con un espacio de trabajo cifrado y un modelo, por ejemplo para entregarle a alguien una memoria ya lista, ejecuta en su lugar el script de configuración específico de la plataforma (por ejemplo, `scripts/prepare-drive.sh --target /Volumes/HILBERTRAUM --with-assets --accept-license` en macOS/Linux) — ese script es un atajo opcional, no un paso obligatorio.',
           },
           {
             title: 'Hacer preguntas sobre tus propios PDF con citas',
@@ -898,7 +939,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Los pesos de los modelos de chat se descargan por separado y no están cubiertos por la licencia propia de HilbertRaum — el README indica que son principalmente de licencia Apache-2.0, pero verifica la licencia del modelo específico antes de cualquier uso comercial',
           '"HilbertRaum" y su logotipo se indican como marcas en el README, con una nota de que los forks deben usar una marca distinta',
         ],
-        note: 'Esta reseña no encontró evidencia de ningún nivel de pago, suscripción o precios empresariales en hilbertraum.ai ni en el repositorio de GitHub a la fecha de verificación indicada arriba. Si esto cambia en una versión futura, considera la página oficial de [GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases) y [hilbertraum.ai](https://hilbertraum.ai) como la fuente autorizada, no esta reseña.',
+        note: 'Esta reseña no encontró evidencia de ningún nivel de pago, suscripción o precios empresariales en hilbertraum.ai ni en el repositorio de GitHub a la fecha de verificación indicada arriba. Si esto cambia en una versión futura, considera la página oficial de [GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases) y [hilbertraum.ai](https://hilbertraum.ai) como la fuente autorizada, no esta reseña. El creador de HilbertRaum también está preparando una memoria USB lista para usar, vendida por separado, con modelos verificados preinstalados, para quienes prefieran no configurar nada por su cuenta; funciona con la misma app gratuita y de código abierto, con un precio independiente del software. Hay una lista de espera abierta en [hilbertraum.ai](https://hilbertraum.ai), aunque al momento de esta reseña todavía no está a la venta.',
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'La palabra del creador',
+        content: [
+          'PromptQuorum le pidió al creador de HilbertRaum que describiera los objetivos de diseño de la app con sus propias palabras. A continuación, su declaración, sin editar salvo por el formato.',
+          '"Queremos hacer que la IA local sea lo más sencilla posible. Con el uso creciente de la IA, proteger los datos y documentos privados es cada vez más importante. Por eso creamos HilbertRaum: IA offline para todos, sin tener que lidiar con runtimes, cuantización o archivos de modelos."',
+          '"Lo ideal es simplemente conectar una memoria USB y empezar. Precisamente eso es lo que estamos preparando: una memoria lista para usar con modelos preinstalados y verificados."',
+          '"Quien no quiera esperar, o tenga algo más de conocimientos técnicos, puede descargar la app gratis y ejecutarla directamente desde su propio equipo o una unidad externa, sin instalación. La app detecta el hardware y recomienda los modelos adecuados, que nosotros mismos seleccionamos y probamos de antemano. El software es, y seguirá siendo, gratuito y de código abierto. Quien prefiera la memoria ya lista puede apuntarse a la lista de espera en [hilbertraum.ai](https://hilbertraum.ai)."',
+        ],
+        note: '— Vladimir Tosovic, HilbertraumAI',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -976,6 +1028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿HilbertRaum envía algún dato a la nube?', a: 'No, por diseño. El README del proyecto describe un bloqueo offline que impide el respaldo en la nube, la integración de búsqueda web y la telemetría, y registra cualquier intento de conexión mientras la aplicación funciona desconectada.' },
           { q: '¿Qué es la función de Wikipedia offline (Knowledge Packs)?', a: 'HilbertRaum puede cargar opcionalmente archivos de Wikipedia en formato Kiwix (ZIM), disponibles en aproximadamente 100 idiomas según la documentación del proyecto, y consultarlos junto a tus propios documentos sin conexión a internet.' },
           { q: '¿Cuál es la versión actual de HilbertRaum?', a: 'Versión 0.1.61, según la [página oficial de GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases), verificada el 25-09-2026. Consulta esa página directamente para cualquier novedad posterior a la fecha de publicación de esta reseña.' },
+          { q: '¿Existe una memoria USB de HilbertRaum ya lista que pueda comprar?', a: 'Todavía no, a la fecha de esta reseña. El creador está preparando una memoria lista para usar, vendida por separado, con modelos verificados preinstalados, para quienes prefieran no configurar nada por su cuenta — ver Precios y licencia de HilbertRaum arriba para el enlace a la lista de espera. La descarga gratuita sigue siendo la misma app de código abierto en cualquier caso.' },
         ],
       },
       sources: {
@@ -1045,6 +1098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Exemplos de uso', anchor: 'usage-examples' },
       { label: 'Baixar o HilbertRaum para Windows, macOS e Linux', anchor: 'download-links' },
       { label: 'Preços e licença do HilbertRaum', anchor: 'pricing-license' },
+      { label: 'A palavra do criador', anchor: 'from-the-maker' },
       { label: 'Quem deveria usar o HilbertRaum?', anchor: 'who-should-use' },
       { label: 'HilbertRaum vs. outros apps de chat local', anchor: 'hilbertraum-competitors' },
       { label: 'Erros comuns ao avaliar o HilbertRaum', anchor: 'common-mistakes' },
@@ -1065,7 +1119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Portátil por design: o app, os modelos e um espaço de trabalho criptografado com AES-256-GCM podem ficar em um pendrive USB ou disco externo e viajar entre máquinas',
           'Responde perguntas sobre seus próprios PDFs, arquivos Word e documentos de texto com citações, usando busca híbrida e reranking',
           'Detecta a RAM e a VRAM disponíveis na máquina e recomenda um tamanho de modelo adequado, a partir de cerca de 8 GB de RAM',
-          'Também inclui arquivos opcionais da Wikipédia offline (formato Kiwix/ZIM), compreensão de imagens, transcrição de áudio e texto para voz, OCR para documentos escaneados, e tradução de documentos em 51 idiomas',
+          'Também inclui arquivos opcionais da Wikipédia offline (formato Kiwix/ZIM), compreensão de imagens, ditado (voz para texto via Whisper), OCR para documentos escaneados, e tradução de documentos em 51 idiomas',
           'Disponível para Windows, macOS (Apple Silicon) e Linux',
           'Desenvolvido pela HilbertraumAI, conforme a organização no GitHub que hospeda o código',
         ],
@@ -1091,11 +1145,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Principais recursos',
         content: 'Os recursos do HilbertRaum giram em torno de três pontos: funcionar totalmente offline, funcionar sem instalação, e ajudar você a escolher um modelo que realmente caiba no seu hardware. Veja o que cada parte faz, segundo o [README no GitHub](https://github.com/HilbertraumAI/HilbertRaum) oficial e o [hilbertraum.ai](https://hilbertraum.ai).',
         items: [
-          '**Modo portátil sem instalação** — o app, os modelos baixados e um espaço de trabalho criptografado com AES-256-GCM podem ser colocados em um pendrive USB ou disco externo usando um script de configuração de um único comando (`prepare-drive.ps1` no Windows, `prepare-drive.sh` no macOS/Linux), de modo que toda a configuração viaja entre máquinas sem reinstalar nada',
+          '**Modo portátil sem instalação** — baixe a versão portátil do GitHub, copie-a para um pendrive USB ou disco externo, e execute a partir dali: escolha um modelo diretamente no app, e o HilbertRaum baixa sozinho o mecanismo e os arquivos do modelo correspondentes após a confirmação. Também há um script de configuração de um único comando (`prepare-drive.ps1` no Windows, `prepare-drive.sh` no macOS/Linux) para preparar um pendrive com antecedência, com um espaço de trabalho criptografado e um modelo escolhido, mas esse script é um atalho opcional, não a forma normal de usar o HilbertRaum',
           '**Perguntas e respostas sobre documentos com citações** — importe PDFs, arquivos Word ou texto simples, e faça perguntas sobre eles; as respostas usam busca híbrida e um modelo de reranking (BGE v2 M3), e podem ser convertidas em registros revisáveis com trechos de origem congelados para verificação',
           '**Sugestões de modelo por detecção de hardware** — o HilbertRaum avalia a RAM e a VRAM detectadas e recomenda um modelo de chat do tamanho certo, de cerca de 8 GB de RAM (um modelo Qwen pequeno) até 32 GB ou mais (um modelo quantizado maior), em vez de deixar o usuário adivinhar',
           '**Wikipédia offline (Knowledge Packs)** — arquivos opcionais da Wikipédia em formato Kiwix (ZIM), em cerca de 100 idiomas segundo a documentação do projeto, consultáveis junto com seus próprios documentos sem conexão à internet',
-          '**Suporte multimodal** — compreensão de imagens via um modelo de visão embutido, transcrição de áudio via Whisper, ditado por texto para voz, e OCR para documentos escaneados',
+          '**Suporte multimodal** — compreensão de imagens via um modelo de visão embutido, ditado (voz para texto via Whisper), e OCR para documentos escaneados',
           '**Tradução de documentos** — tradução integrada em 51 idiomas via um modelo de tradução opcional (TranslateGemma)',
           '**Habilidades para documentos** — resumo, comparação e extração estruturada (por exemplo, de faturas, extratos bancários ou contratos)',
           '**API local** — um endpoint local opcional compatível com OpenAI, para que outros aplicativos locais possam usar o modelo em execução do HilbertRaum como backend',
@@ -1108,8 +1162,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Estes são fluxos de trabalho concretos, construídos a partir dos recursos documentados do HilbertRaum descritos acima — não casos de uso hipotéticos.',
         subsections: [
           {
-            title: 'Rodar todo o espaço de trabalho a partir de um pendrive USB',
-            content: 'Execute o script de configuração específico da plataforma sobre um pendrive USB ou disco externo (por exemplo, `scripts/prepare-drive.sh --target /Volumes/HILBERTRAUM --with-assets --accept-license` no macOS/Linux) para colocar o app, um modelo recomendado e um espaço de trabalho criptografado nesse drive. Conecte o drive a qualquer máquina compatível e execute o HilbertRaum diretamente dele — sem nenhuma etapa de instalação separada nessa máquina.',
+            title: 'Executar o HilbertRaum a partir de um pendrive USB',
+            content: 'Baixe a versão portátil para a sua plataforma na [página de releases do GitHub](https://github.com/HilbertraumAI/HilbertRaum/releases), copie-a para um pendrive USB ou disco externo, e execute a partir dali — nenhum instalador roda na máquina host. Na primeira execução, escolha um modelo diretamente no app; o HilbertRaum baixa sozinho o mecanismo e os arquivos do modelo correspondentes após a confirmação. Para preparar um pendrive com antecedência, com um espaço de trabalho criptografado e um modelo, por exemplo para entregar a alguém um pendrive já pronto, execute em vez disso o script de configuração específico da plataforma (por exemplo, `scripts/prepare-drive.sh --target /Volumes/HILBERTRAUM --with-assets --accept-license` no macOS/Linux) — esse script é um atalho opcional, não uma etapa obrigatória.',
           },
           {
             title: 'Fazer perguntas sobre seus próprios PDFs com citações',
@@ -1145,7 +1199,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Os pesos dos modelos de chat são baixados separadamente e não são cobertos pela própria licença do HilbertRaum — o README indica que são majoritariamente licenciados sob Apache-2.0, mas verifique a licença do modelo específico antes de qualquer uso comercial',
           '"HilbertRaum" e seu logotipo são indicados como marcas registradas no README, com uma observação de que forks devem usar uma identidade visual separada',
         ],
-        note: 'Esta análise não encontrou evidências de nenhum nível pago, assinatura ou preços empresariais no hilbertraum.ai nem no repositório do GitHub até a data de verificação acima. Se isso mudar em uma versão futura, considere a página oficial de [GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases) e o [hilbertraum.ai](https://hilbertraum.ai) como a fonte oficial, não esta análise.',
+        note: 'Esta análise não encontrou evidências de nenhum nível pago, assinatura ou preços empresariais no hilbertraum.ai nem no repositório do GitHub até a data de verificação acima. Se isso mudar em uma versão futura, considere a página oficial de [GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases) e o [hilbertraum.ai](https://hilbertraum.ai) como a fonte oficial, não esta análise. O criador do HilbertRaum também está preparando um pendrive USB pronto para uso, vendido separadamente, com modelos verificados pré-instalados, para quem preferir não configurar nada por conta própria; ele roda o mesmo app gratuito e de código aberto, com preço independente do software. Há uma lista de espera aberta em [hilbertraum.ai](https://hilbertraum.ai), embora no momento desta análise ainda não esteja disponível para compra.',
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'A palavra do criador',
+        content: [
+          'A PromptQuorum pediu ao criador do HilbertRaum que descrevesse os objetivos de design do app com suas próprias palavras. A seguir, sua declaração, sem edições além da formatação.',
+          '"Queremos tornar a IA local o mais simples possível. Com o uso crescente da IA, proteger dados e documentos privados se torna cada vez mais importante. Por isso criamos o HilbertRaum: IA offline para todos, sem precisar lidar com runtimes, quantização ou arquivos de modelo."',
+          '"No melhor cenário, basta conectar um pendrive USB e começar. É exatamente isso que estamos preparando: um pendrive pronto para uso, com modelos pré-instalados e verificados."',
+          '"Quem não quiser esperar, ou for um pouco mais experiente tecnicamente, pode baixar o app gratuitamente e executá-lo diretamente do próprio computador ou de um disco externo, sem instalação. O app detecta o hardware e recomenda modelos adequados, que nós mesmos selecionamos e testamos previamente. O software é, e continuará sendo, gratuito e de código aberto. Quem preferir o pendrive pronto pode entrar na lista de espera em [hilbertraum.ai](https://hilbertraum.ai)."',
+        ],
+        note: '— Vladimir Tosovic, HilbertraumAI',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1223,6 +1288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'O HilbertRaum envia algum dado para a nuvem?', a: 'Não, por design. O README do projeto descreve um bloqueio offline que impede o fallback para a nuvem, a integração de busca na web e a telemetria, e registra qualquer tentativa de conexão enquanto o aplicativo roda desconectado.' },
           { q: 'O que é o recurso de Wikipédia offline (Knowledge Packs)?', a: 'O HilbertRaum pode carregar opcionalmente arquivos da Wikipédia em formato Kiwix (ZIM), disponíveis em cerca de 100 idiomas segundo a documentação do projeto, e consultá-los junto com seus próprios documentos sem conexão à internet.' },
           { q: 'Qual é a versão atual do HilbertRaum?', a: 'Versão 0.1.61, segundo a [página oficial de GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases), verificada em 25/09/2026. Consulte essa página diretamente para qualquer novidade lançada após a data de publicação desta análise.' },
+          { q: 'Existe um pendrive HilbertRaum já pronto que eu possa simplesmente comprar?', a: 'Ainda não, até a data desta análise. O criador está preparando um pendrive pronto para uso, vendido separadamente, com modelos verificados pré-instalados, para quem preferir não configurar nada por conta própria — veja Preços e licença do HilbertRaum acima para o link da lista de espera. O download gratuito continua sendo o mesmo app de código aberto de qualquer forma.' },
         ],
       },
       sources: {
@@ -1292,6 +1358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '活用例', anchor: 'usage-examples' },
       { label: 'HilbertRaumをWindows、macOS、Linux向けにダウンロード', anchor: 'download-links' },
       { label: 'HilbertRaumの料金とライセンス', anchor: 'pricing-license' },
+      { label: '開発者からのメッセージ', anchor: 'from-the-maker' },
       { label: 'HilbertRaumは誰におすすめか?', anchor: 'who-should-use' },
       { label: 'HilbertRaum対他のローカルチャットアプリ', anchor: 'hilbertraum-competitors' },
       { label: 'HilbertRaumを評価する際によくある間違い', anchor: 'common-mistakes' },
@@ -1312,7 +1379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '設計からしてポータブル:アプリ、モデル、AES-256-GCMで暗号化されたワークスペースをUSBドライブや外付けディスクに置き、マシン間で持ち運べます',
           'ハイブリッド検索とリランキングを使い、自分のPDF、Wordファイル、テキスト文書について出典付きで質問に回答',
           'マシンで検出したRAMとVRAMに応じて、約8GB RAM以上から適したモデルサイズを推奨',
-          'オフラインWikipediaアーカイブ(Kiwix/ZIM形式)、画像理解、音声文字起こしと音声合成、スキャン文書向けOCR、51言語対応の文書翻訳もオプションで利用可能',
+          'オフラインWikipediaアーカイブ(Kiwix/ZIM形式)、画像理解、口述筆記(Whisperによる音声認識)、スキャン文書向けOCR、51言語対応の文書翻訳もオプションで利用可能',
           'Windows、macOS(Apple Silicon)、Linuxで利用可能',
           'HilbertraumAIが開発。コードをホストするGitHub組織による情報に基づく',
         ],
@@ -1338,11 +1405,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '主な機能',
         content: 'HilbertRaumの機能は、完全にオフラインで動作すること、インストール不要で使えること、そして自分のハードウェアに実際に合ったモデルを選ぶ手助けをすることの3点を中心に据えています。公式の[GitHub README](https://github.com/HilbertraumAI/HilbertRaum)と[hilbertraum.ai](https://hilbertraum.ai)によれば、それぞれ次のような機能です。',
         items: [
-          '**ポータブル・インストール不要モード** — アプリ、ダウンロードしたモデル、AES-256-GCMで暗号化されたワークスペースを、1コマンドのセットアップスクリプト(Windowsでは`prepare-drive.ps1`、macOS/Linuxでは`prepare-drive.sh`)を使ってUSBドライブや外付けディスクにまとめて配置でき、環境全体を再インストールなしでマシン間で持ち運べます',
+          '**ポータブル・インストール不要モード** — GitHubからポータブル版をダウンロードし、USBドライブや外付けディスクにコピーして、そこから起動します。アプリ内で直接モデルを選択すると、確認後にHilbertRaumが対応するエンジンとモデルファイルを自動でダウンロードします。ドライブを事前に暗号化されたワークスペースと選択したモデルであらかじめ準備しておくための、1コマンドのセットアップスクリプト(Windowsでは`prepare-drive.ps1`、macOS/Linuxでは`prepare-drive.sh`)も別途用意されていますが、これはあくまで事前準備用のオプションのショートカットであり、通常の使い方ではありません',
           '**出典付き文書Q&A** — PDF、Wordファイル、プレーンテキストをインポートして質問できます。回答にはハイブリッド検索とリランキングモデル(BGE v2 M3)が使われ、検証用に凍結された出典抜粋付きのレビュー可能な記録に変換することもできます',
           '**ハードウェア検出によるモデル提案** — HilbertRaumは検出したRAMとVRAMをベンチマークし、約8GB RAM(小型のQwenモデル)から32GB以上(より大きな量子化モデル)まで、そのマシンに合ったチャットモデルを推奨します。ユーザーに推測させることはありません',
           '**オフラインWikipedia(Knowledge Packs)** — プロジェクトのドキュメントによれば約100言語対応のKiwix形式(ZIM)のWikipediaアーカイブをオプションで読み込み、インターネット接続なしで自分の文書と並べて検索できます',
-          '**マルチモーダル対応** — 内蔵のビジョンモデルによる画像理解、Whisperによる音声文字起こし、音声合成による口述筆記、スキャン文書向けOCR',
+          '**マルチモーダル対応** — 内蔵のビジョンモデルによる画像理解、Whisperによる口述筆記(音声認識)、スキャン文書向けOCR',
           '**文書翻訳** — オプションの翻訳モデル(TranslateGemma)による、51言語対応の統合翻訳機能',
           '**文書スキル** — 要約、比較、構造化抽出(例:請求書、銀行取引明細書、契約書から)',
           '**ローカルAPI** — 他のローカルアプリケーションがHilbertRaumの起動中のモデルをバックエンドとして利用できる、OpenAI互換のオプションのループバックエンドポイント',
@@ -1392,7 +1459,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'チャットモデルの重みは別途ダウンロードされ、HilbertRaum自体のライセンスの対象外です——READMEでは主にApache-2.0ライセンスとされていますが、商用利用前には個々のモデルのライセンスを必ず確認してください',
           'READMEには「HilbertRaum」とそのロゴが商標である旨が記載されており、フォークは別のブランディングを使用する必要があるとの注記があります',
         ],
-        note: 'このレビューでは、上記の検証日時点でhilbertraum.aiまたはGitHubリポジトリのいずれにも、有料プラン、サブスクリプション、エンタープライズ料金の証拠は見つかりませんでした。今後のリリースでこれが変わる場合は、このレビューではなく、公式の[GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases)ページと[hilbertraum.ai](https://hilbertraum.ai)を正式な情報源として参照してください。',
+        note: 'このレビューでは、上記の検証日時点でhilbertraum.aiまたはGitHubリポジトリのいずれにも、有料プラン、サブスクリプション、エンタープライズ料金の証拠は見つかりませんでした。今後のリリースでこれが変わる場合は、このレビューではなく、公式の[GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases)ページと[hilbertraum.ai](https://hilbertraum.ai)を正式な情報源として参照してください。HilbertRaumの開発者は、自分で設定したくない人向けに、検証済みモデルがあらかじめインストールされた、そのまま使えるUSBスティックも別売りで準備しています。使用するアプリ自体は同じ無料・オープンソース版で、価格はソフトウェアとは別に設定されます。ウェイトリストは[hilbertraum.ai](https://hilbertraum.ai)で受け付けていますが、このレビューの時点ではまだ購入できません。',
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '開発者からのメッセージ',
+        content: [
+          'PromptQuorumは、HilbertRaumの開発者に、このアプリの設計目標を自分の言葉で説明してもらいました。以下は、書式以外は編集していない本人の発言です。',
+          '「私たちは、ローカルAIをできる限りシンプルにしたいと考えています。AIの利用が広がるにつれ、個人データや文書を守ることはますます重要になっています。だからこそ私たちはHilbertRaumを作りました。ランタイムや量子化、モデルファイルを意識する必要のない、誰のためのオフラインAIです。」',
+          '「理想を言えば、USBスティックを挿すだけで使い始められることです。まさにそれを実現するため、事前インストール済みの検証済みモデルを備えた、そのまま使えるスティックを現在準備しています。」',
+          '「待ちたくない方や、技術に多少詳しい方は、アプリを無料でダウンロードし、自分のパソコンや外付けドライブから直接、インストールなしで起動できます。アプリはハードウェアを検出し、事前に私たち自身が選定・ベンチマークした適切なモデルを推奨します。ソフトウェアは今後も無料・オープンソースのままです。完成済みのスティックを希望する方は、[hilbertraum.ai](https://hilbertraum.ai)のウェイトリストに登録できます。」',
+        ],
+        note: '— Vladimir Tosovic、HilbertraumAI',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1470,6 +1548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'HilbertRaumはクラウドに何らかのデータを送信しますか?', a: 'いいえ、設計上送信しません。プロジェクトのREADMEでは、クラウドフォールバック、Web検索統合、テレメトリーをブロックし、アプリケーションが切断状態で動作している間の接続試行をログに記録するオフライン保護機能が説明されています。' },
           { q: 'オフラインWikipedia機能(Knowledge Packs)とは何ですか?', a: 'HilbertRaumは、プロジェクトのドキュメントによれば約100言語で利用可能なKiwix形式(ZIM)のWikipediaアーカイブをオプションで読み込み、インターネット接続なしで自分の文書と並べて検索できます。' },
           { q: 'HilbertRaumの現在のバージョンは何ですか?', a: '[公式GitHub Releasesページ](https://github.com/HilbertraumAI/HilbertRaum/releases)によれば、バージョン0.1.61(2026年9月25日確認)です。このレビューの公開日以降にリリースされた内容については、そのページを直接確認してください。' },
+          { q: 'そのまま使える完成済みのHilbertRaum USBスティックを購入できますか?', a: 'このレビューの時点では、まだ購入できません。開発者は、自分で設定したくない人向けに、検証済みモデルがあらかじめインストールされた、そのまま使えるスティックを別売りで準備しています——ウェイトリストのリンクは上記のHilbertRaumの料金とライセンスを参照してください。無料ダウンロード版はいずれの場合も同じオープンソースアプリです。' },
         ],
       },
       sources: {
@@ -1539,6 +1618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '使用示例', anchor: 'usage-examples' },
       { label: '下载适用于Windows、macOS和Linux的HilbertRaum', anchor: 'download-links' },
       { label: 'HilbertRaum的定价与许可证', anchor: 'pricing-license' },
+      { label: '来自开发者', anchor: 'from-the-maker' },
       { label: '谁适合使用HilbertRaum?', anchor: 'who-should-use' },
       { label: 'HilbertRaum与其他本地聊天应用对比', anchor: 'hilbertraum-competitors' },
       { label: '评估HilbertRaum时的常见误区', anchor: 'common-mistakes' },
@@ -1559,7 +1639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '设计上即为可移动:应用、模型以及采用AES-256-GCM加密的工作空间都可以放在U盘或外接硬盘上,在不同机器间移动',
           '使用混合检索和重排序技术,对你自己的PDF、Word文件和文本文档提问并给出带引用来源的答案',
           '检测机器上可用的RAM和VRAM,推荐合适的模型大小,大致从8GB RAM起步',
-          '还提供可选的离线维基百科档案(Kiwix/ZIM格式)、图像理解、音频转录与文字转语音、扫描文档OCR,以及支持51种语言的文档翻译',
+          '还提供可选的离线维基百科档案(Kiwix/ZIM格式)、图像理解、听写(通过Whisper实现语音转文字)、扫描文档OCR,以及支持51种语言的文档翻译',
           '适用于Windows、macOS(Apple Silicon)和Linux',
           '由HilbertraumAI开发,依据托管代码的GitHub组织信息',
         ],
@@ -1585,11 +1665,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '主要功能',
         content: 'HilbertRaum的功能集中在三点:完全离线运行、无需安装即可使用,以及帮助你选择真正适合自己硬件的模型。以下是根据官方[GitHub README](https://github.com/HilbertraumAI/HilbertRaum)和[hilbertraum.ai](https://hilbertraum.ai),各项功能的具体说明。',
         items: [
-          '**可移动、无需安装模式** — 应用、已下载的模型和采用AES-256-GCM加密的工作空间,都可以通过一条命令的安装脚本(Windows上为`prepare-drive.ps1`,macOS/Linux上为`prepare-drive.sh`)放到U盘或外接硬盘上,让整套配置在机器间移动时无需重新安装任何内容',
+          '**可移动、无需安装模式** — 从GitHub下载便携版,复制到U盘或外接硬盘,然后从那里启动:直接在应用内选择一个模型,确认后HilbertRaum会自行下载对应的引擎和模型文件。另外还提供一条命令的安装脚本(Windows上为`prepare-drive.ps1`,macOS/Linux上为`prepare-drive.sh`),可提前用加密工作空间和所选模型预装U盘,但该脚本只是提前准备U盘的可选捷径,并非使用HilbertRaum的常规方式',
           '**带引用来源的文档问答** — 导入PDF、Word文件或纯文本并对其提问;答案使用混合检索和重排序模型(BGE v2 M3),并可转换为带有冻结原文片段的可核查记录,便于验证',
           '**基于硬件检测的模型建议** — HilbertRaum会对检测到的RAM和VRAM进行基准测试,推荐适合该机器的聊天模型,从约8GB RAM(小型Qwen模型)到32GB以上(更大的量化模型),而不是让用户自己猜测',
           '**离线维基百科(Knowledge Packs)** — 可选加载Kiwix格式(ZIM)的维基百科档案,据项目文档介绍覆盖约100种语言,可在无网络连接的情况下与你自己的文档一起检索',
-          '**多模态支持** — 通过内置视觉模型实现图像理解、通过Whisper实现音频转录、文字转语音口述,以及针对扫描文档的OCR',
+          '**多模态支持** — 通过内置视觉模型实现图像理解、通过Whisper实现听写(语音转文字),以及针对扫描文档的OCR',
           '**文档翻译** — 通过可选的翻译模型(TranslateGemma)实现的内置翻译功能,支持51种语言',
           '**文档技能** — 摘要、比较和结构化提取(例如从发票、银行对账单或合同中提取信息)',
           '**本地API** — 一个可选的、与OpenAI兼容的本地回环端点,让其他本地应用可以把HilbertRaum正在运行的模型当作后端使用',
@@ -1602,8 +1682,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '以下是根据上述HilbertRaum已记录功能整理的具体工作流程——并非假设性的用例。',
         subsections: [
           {
-            title: '完全从U盘运行整个工作空间',
-            content: '针对U盘或外接硬盘运行对应平台的安装脚本(例如在macOS/Linux上运行`scripts/prepare-drive.sh --target /Volumes/HILBERTRAUM --with-assets --accept-license`),即可在该驱动器上放置应用、一个推荐模型和一个加密工作空间。将驱动器插入任意受支持的机器,即可直接从中运行HilbertRaum——在该机器上无需任何单独的安装步骤。',
+            title: '从U盘运行HilbertRaum',
+            content: '从[GitHub发布页面](https://github.com/HilbertraumAI/HilbertRaum/releases)下载适合你平台的便携版,复制到U盘或外接硬盘,然后从那里启动——主机上不会运行任何安装程序。首次启动时,直接在应用内选择一个模型;确认后HilbertRaum会自行下载对应的引擎和模型文件。如果想提前用加密工作空间和一个模型预装U盘,例如要把一个现成的U盘交给别人使用,可改为运行对应平台的安装脚本(例如在macOS/Linux上运行`scripts/prepare-drive.sh --target /Volumes/HILBERTRAUM --with-assets --accept-license`)——该脚本只是一个可选的捷径,并非必需步骤。',
           },
           {
             title: '对自己的PDF提问并获得引用来源',
@@ -1639,7 +1719,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '聊天模型的权重单独下载,不受HilbertRaum自身许可证约束——README表示这些权重主要采用Apache-2.0许可证,但在任何商业使用前,请核实具体模型的许可证',
           'README中说明“HilbertRaum”及其徽标为商标,并注明分支项目(fork)必须使用独立的品牌标识',
         ],
-        note: '截至上述核实日期,本评测在hilbertraum.ai或GitHub仓库中均未发现任何付费层级、订阅或企业定价的证据。如果未来版本有所变化,请以官方[GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases)页面和[hilbertraum.ai](https://hilbertraum.ai)为准,而非本评测。',
+        note: '截至上述核实日期,本评测在hilbertraum.ai或GitHub仓库中均未发现任何付费层级、订阅或企业定价的证据。如果未来版本有所变化,请以官方[GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases)页面和[hilbertraum.ai](https://hilbertraum.ai)为准,而非本评测。HilbertRaum的开发者还在准备一款单独销售的即插即用USB闪存盘,预装了经过验证的模型,面向不想自行设置的用户;它运行的是同一款免费开源应用,价格与软件本身分开计算。可在[hilbertraum.ai](https://hilbertraum.ai)加入等候名单,不过截至本评测发布,该产品尚未开售。',
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '来自开发者',
+        content: [
+          'PromptQuorum邀请HilbertRaum的开发者用自己的话描述这款应用的设计目标。以下是他本人的原话,仅在格式上做了调整。',
+          '“我们希望让本地AI尽可能简单易用。随着AI使用的增加,保护个人数据和文档变得越来越重要。这正是我们打造HilbertRaum的原因:面向所有人的离线AI,无需处理运行时、量化或模型文件。”',
+          '“理想情况下,只需插入一个USB闪存盘就能开始使用。我们目前正在准备的正是这样一个开箱即用、预装了经过验证模型的闪存盘。”',
+          '“如果不想等待,或者技术水平较高,也可以免费下载应用,直接从自己的电脑或外部驱动器运行,无需安装。应用会检测硬件并推荐合适的模型,这些模型都是我们事先自行筛选和基准测试过的。软件现在是、并将永远是免费和开源的。如果更喜欢现成的闪存盘,可以在[hilbertraum.ai](https://hilbertraum.ai)加入等候名单。”',
+        ],
+        note: '— Vladimir Tosovic,HilbertraumAI',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1717,6 +1808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'HilbertRaum会向云端发送任何数据吗?', a: '不会,这是设计使然。项目的README描述了一套离线保护机制,阻止云端回退、网络搜索集成和遥测,并在应用离线运行期间记录任何连接尝试。' },
           { q: '离线维基百科(Knowledge Packs)功能是什么?', a: 'HilbertRaum可以选择性地加载Kiwix格式(ZIM)的维基百科档案,据项目文档介绍覆盖约100种语言,并可在无网络连接的情况下与你自己的文档一起检索。' },
           { q: 'HilbertRaum目前的版本是多少?', a: '据[官方GitHub Releases页面](https://github.com/HilbertraumAI/HilbertRaum/releases),版本为0.1.61,已于2026年9月25日核实。本评测发布日期之后发布的任何内容,请直接查看该页面。' },
+          { q: '有没有可以直接购买的即插即用HilbertRaum U盘?', a: '截至本评测,尚未推出。开发者正在准备一款单独销售的即插即用U盘,预装了经过验证的模型,面向不想自行设置的用户——等候名单链接见上文的HilbertRaum的定价与许可证部分。无论如何,免费下载版都是同一款开源应用。' },
         ],
       },
       sources: {
@@ -1786,6 +1878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'أمثلة على الاستخدام', anchor: 'usage-examples' },
       { label: 'تنزيل HilbertRaum لأنظمة Windows وmacOS وLinux', anchor: 'download-links' },
       { label: 'أسعار وترخيص HilbertRaum', anchor: 'pricing-license' },
+      { label: 'كلمة من الصانع', anchor: 'from-the-maker' },
       { label: 'لمن يناسب HilbertRaum؟', anchor: 'who-should-use' },
       { label: 'HilbertRaum مقابل تطبيقات الدردشة المحلية الأخرى', anchor: 'hilbertraum-competitors' },
       { label: 'أخطاء شائعة عند تقييم HilbertRaum', anchor: 'common-mistakes' },
@@ -1806,7 +1899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'محمول بالتصميم: يمكن أن يقيم التطبيق والنماذج ومساحة عمل مشفَّرة بتقنية AES-256-GCM على محرك أقراص USB أو قرص خارجي، وتنتقل بين الأجهزة',
           'يجيب عن أسئلة حول ملفات PDF وWord والنصوص الخاصة بك مع ذكر المصادر، باستخدام بحث هجين وإعادة ترتيب النتائج',
           'يكتشف ذاكرة RAM وVRAM المتوفرة على الجهاز ويوصي بحجم نموذج مناسب، بدءًا من نحو 8 جيجابايت من RAM فما فوق',
-          'يتضمن أيضًا أرشيفات ويكيبيديا اختيارية دون اتصال (بصيغة Kiwix/ZIM)، وفهم الصور، وتفريغ الصوت وتحويل النص إلى كلام، والتعرف الضوئي على الحروف (OCR) للمستندات الممسوحة ضوئيًا، وترجمة المستندات بـ51 لغة',
+          'يتضمن أيضًا أرشيفات ويكيبيديا اختيارية دون اتصال (بصيغة Kiwix/ZIM)، وفهم الصور، والإملاء (تحويل الكلام إلى نص عبر Whisper)، والتعرف الضوئي على الحروف (OCR) للمستندات الممسوحة ضوئيًا، وترجمة المستندات بـ51 لغة',
           'متوفر لأنظمة Windows وmacOS (Apple Silicon) وLinux',
           'طوَّرته HilbertraumAI، وفق منظمة GitHub التي تستضيف الكود',
         ],
@@ -1832,11 +1925,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الميزات الأساسية',
         content: 'تتمحور مجموعة ميزات HilbertRaum حول ثلاثة أمور: العمل دون اتصال بالكامل، والعمل دون تثبيت، والمساعدة في اختيار نموذج يناسب عتادك فعليًا. إليك ما يقوم به كل جزء، وفق [ملف README الرسمي على GitHub](https://github.com/HilbertraumAI/HilbertRaum) وموقع [hilbertraum.ai](https://hilbertraum.ai).',
         items: [
-          '**وضع محمول دون تثبيت** — يمكن وضع التطبيق والنماذج المُنزَّلة ومساحة عمل مشفَّرة بتقنية AES-256-GCM على محرك أقراص USB أو قرص خارجي باستخدام نص برمجي للإعداد بأمر واحد (`prepare-drive.ps1` على Windows، و`prepare-drive.sh` على macOS/Linux)، بحيث ينتقل الإعداد بأكمله بين الأجهزة دون إعادة تثبيت أي شيء',
+          '**وضع محمول دون تثبيت** — نزّل النسخة المحمولة من GitHub، وانسخها إلى محرك أقراص USB أو قرص خارجي، وشغّلها من هناك: اختر نموذجًا مباشرة داخل التطبيق، وسيقوم HilbertRaum بتنزيل المحرك وملفات النموذج المطابقة بنفسه بعد التأكيد. يتوفر أيضًا نص برمجي منفصل للإعداد بأمر واحد (`prepare-drive.ps1` على Windows، و`prepare-drive.sh` على macOS/Linux) لتجهيز محرك مسبقًا بمساحة عمل مشفَّرة ونموذج مُختار، لكن هذا النص البرمجي مجرد اختصار اختياري للتجهيز المسبق، وليس الطريقة المعتادة لاستخدام HilbertRaum',
           '**أسئلة وأجوبة على المستندات مع ذكر المصادر** — استورد ملفات PDF أو Word أو نصًا عاديًا واطرح أسئلة حولها؛ تستخدم الإجابات بحثًا هجينًا ونموذج إعادة ترتيب (BGE v2 M3)، ويمكن تحويلها إلى سجلات قابلة للمراجعة مع مقاطع مصدرية مجمَّدة للتحقق',
           '**اقتراحات نماذج عبر اكتشاف الأجهزة** — يقيس HilbertRaum ذاكرة RAM وVRAM المكتشفة ويوصي بنموذج دردشة مناسب الحجم لذلك الجهاز، من نحو 8 جيجابايت RAM (نموذج Qwen صغير) وحتى 32 جيجابايت فأكثر (نموذج مُكمَّم أكبر)، بدلًا من ترك المستخدم يخمِّن',
           '**ويكيبيديا دون اتصال (Knowledge Packs)** — أرشيفات ويكيبيديا اختيارية بصيغة Kiwix (ZIM)، متوفرة بنحو 100 لغة وفق توثيق المشروع، ويمكن الاستعلام عنها إلى جانب مستنداتك الخاصة دون اتصال بالإنترنت',
-          '**دعم متعدد الوسائط** — فهم الصور عبر نموذج رؤية مدمج، وتفريغ الصوت عبر Whisper، وإملاء بتحويل النص إلى كلام، وتعرف ضوئي على الحروف (OCR) للمستندات الممسوحة ضوئيًا',
+          '**دعم متعدد الوسائط** — فهم الصور عبر نموذج رؤية مدمج، والإملاء (تحويل الكلام إلى نص عبر Whisper)، وتعرف ضوئي على الحروف (OCR) للمستندات الممسوحة ضوئيًا',
           '**ترجمة المستندات** — ترجمة مدمجة تغطي 51 لغة عبر نموذج ترجمة اختياري (TranslateGemma)',
           '**مهارات المستندات** — التلخيص والمقارنة والاستخلاص المُهيكل (على سبيل المثال، من الفواتير أو كشوف الحسابات البنكية أو العقود)',
           '**واجهة برمجة تطبيقات محلية** — نقطة نهاية محلية اختيارية متوافقة مع OpenAI، لتتمكن التطبيقات المحلية الأخرى من استخدام النموذج الجاري تشغيله في HilbertRaum كخادم خلفي',
@@ -1849,8 +1942,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'هذه سيناريوهات عملية مبنية على ميزات HilbertRaum الموثَّقة أعلاه — وليست حالات استخدام افتراضية.',
         subsections: [
           {
-            title: 'تشغيل مساحة العمل بأكملها من محرك أقراص USB',
-            content: 'شغِّل النص البرمجي للإعداد الخاص بالمنصة على محرك أقراص USB أو قرص خارجي (مثل `scripts/prepare-drive.sh --target /Volumes/HILBERTRAUM --with-assets --accept-license` على macOS/Linux) لوضع التطبيق ونموذج موصى به ومساحة عمل مشفَّرة على ذلك المحرك. وصِّل المحرك بأي جهاز مدعوم وشغِّل HilbertRaum مباشرةً منه — دون أي خطوة تثبيت منفصلة على ذلك الجهاز.',
+            title: 'تشغيل HilbertRaum من محرك أقراص USB',
+            content: 'نزّل النسخة المحمولة المناسبة لنظامك من [صفحة إصدارات GitHub](https://github.com/HilbertraumAI/HilbertRaum/releases)، وانسخها إلى محرك أقراص USB أو قرص خارجي، وشغّلها من هناك — لن يعمل أي برنامج تثبيت على الجهاز المضيف. عند أول تشغيل، اختر نموذجًا مباشرة داخل التطبيق؛ وسيقوم HilbertRaum بتنزيل المحرك وملفات النموذج المطابقة بنفسه بعد التأكيد. لتجهيز محرك مسبقًا بمساحة عمل مشفَّرة ونموذج مختار، على سبيل المثال لتسليم محرك جاهز لشخص آخر، شغِّل بدلاً من ذلك النص البرمجي الخاص بالمنصة (مثل `scripts/prepare-drive.sh --target /Volumes/HILBERTRAUM --with-assets --accept-license` على macOS/Linux) — وهذا النص البرمجي مجرد اختصار اختياري، وليس خطوة إلزامية.',
           },
           {
             title: 'طرح أسئلة حول ملفات PDF الخاصة بك مع ذكر المصادر',
@@ -1886,7 +1979,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تُنزَّل أوزان نماذج الدردشة بشكل منفصل ولا يغطيها ترخيص HilbertRaum نفسه — يذكر ملف README أنها مرخَّصة بشكل أساسي بموجب Apache-2.0، لكن تحقق من ترخيص النموذج المحدد قبل أي استخدام تجاري',
           'يذكر ملف README أن "HilbertRaum" وشعاره علامتان تجاريتان، مع ملاحظة أن الفروع (forks) يجب أن تستخدم هوية بصرية منفصلة',
         ],
-        note: 'لم تجد هذه المراجعة أي دليل على وجود خطة مدفوعة أو اشتراك أو أسعار للمؤسسات على hilbertraum.ai أو في مستودع GitHub حتى تاريخ التحقق أعلاه. إذا تغيَّر ذلك في إصدار مستقبلي، اعتبر صفحة [GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases) الرسمية وموقع [hilbertraum.ai](https://hilbertraum.ai) المصدر الموثوق، لا هذه المراجعة.',
+        note: 'لم تجد هذه المراجعة أي دليل على وجود خطة مدفوعة أو اشتراك أو أسعار للمؤسسات على hilbertraum.ai أو في مستودع GitHub حتى تاريخ التحقق أعلاه. إذا تغيَّر ذلك في إصدار مستقبلي، اعتبر صفحة [GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases) الرسمية وموقع [hilbertraum.ai](https://hilbertraum.ai) المصدر الموثوق، لا هذه المراجعة. يُعِدّ صانع HilbertRaum أيضًا عصا USB جاهزة للاستخدام تُباع بشكل منفصل، مع نماذج تم التحقق منها مثبَّتة مسبقًا، لمن يفضّل عدم إعداد أي شيء بنفسه؛ وتعمل بنفس التطبيق المجاني ومفتوح المصدر، بسعر منفصل عن البرنامج نفسه. قائمة الانتظار متاحة على [hilbertraum.ai](https://hilbertraum.ai)، لكنها حتى وقت كتابة هذه المراجعة غير متاحة للشراء بعد.',
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: 'كلمة من الصانع',
+        content: [
+          'طلبت PromptQuorum من مطوّر HilbertRaum أن يصف أهداف تصميم التطبيق بكلماته الخاصة. وفيما يلي تصريحه كما ورد، دون تعديل باستثناء التنسيق.',
+          '"نريد أن نجعل الذكاء الاصطناعي المحلي بسيطًا قدر الإمكان. مع تزايد استخدام الذكاء الاصطناعي، تزداد أهمية حماية البيانات والمستندات الخاصة يومًا بعد يوم. لهذا بنينا HilbertRaum: ذكاء اصطناعي يعمل دون اتصال للجميع، دون الحاجة للتعامل مع بيئات التشغيل أو الضغط الكمي أو ملفات النماذج."',
+          '"في أفضل الحالات، يكفي توصيل عصا USB والبدء مباشرة. وهذا بالضبط ما نُجهّزه حاليًا: عصا جاهزة للاستخدام مثبَّت عليها مسبقًا نماذج تم التحقق منها."',
+          '"من لا يريد الانتظار، أو من لديه خبرة تقنية أكبر بقليل، يمكنه تنزيل التطبيق مجانًا وتشغيله مباشرة من جهازه الخاص أو من قرص خارجي، دون تثبيت. يكتشف التطبيق العتاد ويوصي بالنماذج المناسبة التي نقوم نحن أنفسنا باختيارها واختبارها مسبقًا. البرنامج مجاني ومفتوح المصدر وسيبقى كذلك. من يفضّل العصا الجاهزة يمكنه التسجيل في قائمة الانتظار على [hilbertraum.ai](https://hilbertraum.ai)."',
+        ],
+        note: '— Vladimir Tosovic، HilbertraumAI',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -1964,6 +2068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'هل يرسل HilbertRaum أي بيانات إلى السحابة؟', a: 'لا، بحكم التصميم. يصف ملف README الخاص بالمشروع حماية لوضع عدم الاتصال تمنع الرجوع إلى السحابة وتكامل البحث على الويب وجمع بيانات القياس عن بُعد، وتسجِّل أي محاولة اتصال أثناء عمل التطبيق دون اتصال.' },
           { q: 'ما هي ميزة ويكيبيديا دون اتصال (Knowledge Packs)؟', a: 'يمكن لـ HilbertRaum تحميل أرشيفات ويكيبيديا اختياريًا بصيغة Kiwix (ZIM)، متوفرة بنحو 100 لغة وفق توثيق المشروع، والاستعلام عنها إلى جانب مستنداتك الخاصة دون اتصال بالإنترنت.' },
           { q: 'ما هو إصدار HilbertRaum الحالي؟', a: 'الإصدار 0.1.61، وفق [صفحة GitHub Releases الرسمية](https://github.com/HilbertraumAI/HilbertRaum/releases)، وتم التحقق منه في 25-09-2026. راجع تلك الصفحة مباشرةً لأي شيء صدر بعد تاريخ نشر هذه المراجعة.' },
+          { q: 'هل توجد عصا USB جاهزة من HilbertRaum يمكنني شراؤها مباشرة؟', a: 'ليس بعد، حتى تاريخ هذه المراجعة. يُعِدّ الصانع عصا جاهزة للاستخدام تُباع بشكل منفصل، مع نماذج تم التحقق منها مثبَّتة مسبقًا، لمن يفضّل عدم إعداد أي شيء بنفسه — راجع أسعار وترخيص HilbertRaum أعلاه للحصول على رابط قائمة الانتظار. يبقى التنزيل المجاني في كل الأحوال هو نفس التطبيق مفتوح المصدر.' },
         ],
       },
       sources: {
@@ -2033,6 +2138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '사용 예시', anchor: 'usage-examples' },
       { label: 'Windows, macOS, Linux용 HilbertRaum 다운로드', anchor: 'download-links' },
       { label: 'HilbertRaum 가격 및 라이선스', anchor: 'pricing-license' },
+      { label: '제작자의 말', anchor: 'from-the-maker' },
       { label: 'HilbertRaum은 누구에게 적합한가?', anchor: 'who-should-use' },
       { label: 'HilbertRaum과 다른 로컬 채팅 앱 비교', anchor: 'hilbertraum-competitors' },
       { label: 'HilbertRaum 평가 시 흔한 오해', anchor: 'common-mistakes' },
@@ -2053,7 +2159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '설계상 휴대 가능: 앱, 모델, AES-256-GCM으로 암호화된 작업 공간이 USB 드라이브나 외장 디스크에 있을 수 있으며 기기 간 이동이 가능합니다',
           '하이브리드 검색과 재순위화(reranking)를 사용해 자신의 PDF, Word 파일, 텍스트 문서에 대해 출처를 인용해 질문에 답변합니다',
           '기기에서 사용 가능한 RAM과 VRAM을 감지하여 약 8GB RAM 이상부터 적합한 모델 크기를 추천합니다',
-          '선택적인 오프라인 위키백과 아카이브(Kiwix/ZIM 형식), 이미지 이해, 오디오 전사 및 텍스트 음성 변환, 스캔 문서용 OCR, 51개 언어에 걸친 문서 번역도 제공합니다',
+          '선택적인 오프라인 위키백과 아카이브(Kiwix/ZIM 형식), 이미지 이해, 받아쓰기(Whisper 기반 음성 인식), 스캔 문서용 OCR, 51개 언어에 걸친 문서 번역도 제공합니다',
           'Windows, macOS(Apple Silicon), Linux에서 사용 가능합니다',
           '코드를 호스팅하는 GitHub 조직에 따르면 HilbertraumAI가 개발했습니다',
         ],
@@ -2079,11 +2185,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '주요 기능',
         content: 'HilbertRaum의 기능은 세 가지를 중심으로 합니다: 완전히 오프라인으로 작동하는 것, 설치 없이 작동하는 것, 그리고 실제로 사용자의 하드웨어에 맞는 모델을 선택하도록 돕는 것입니다. 공식 [GitHub README](https://github.com/HilbertraumAI/HilbertRaum)와 [hilbertraum.ai](https://hilbertraum.ai)에 따르면 각 부분은 다음과 같은 역할을 합니다.',
         items: [
-          '**설치 불필요 휴대 모드** — 앱, 다운로드된 모델, AES-256-GCM으로 암호화된 작업 공간을 명령어 하나로 실행되는 설정 스크립트(Windows에서는 `prepare-drive.ps1`, macOS/Linux에서는 `prepare-drive.sh`)를 사용해 USB 드라이브나 외장 디스크에 둘 수 있으므로, 전체 설정이 아무것도 재설치하지 않고 기기 간에 이동합니다',
+          '**설치 불필요 휴대 모드** — GitHub에서 포터블 버전을 다운로드해 USB 드라이브나 외장 디스크에 복사한 뒤 그곳에서 실행합니다. 앱에서 직접 모델을 선택하면 확인 후 HilbertRaum이 해당 엔진과 모델 파일을 직접 다운로드합니다. 드라이브를 암호화된 작업 공간과 선택한 모델로 미리 준비해 두기 위한 별도의 명령어 하나짜리 설정 스크립트(Windows에서는 `prepare-drive.ps1`, macOS/Linux에서는 `prepare-drive.sh`)도 제공되지만, 이 스크립트는 사전 준비를 위한 선택적 지름길일 뿐 HilbertRaum을 사용하는 일반적인 방법은 아닙니다',
           '**출처가 인용된 문서 질의응답** — PDF, Word 파일 또는 일반 텍스트를 가져와 질문할 수 있습니다. 답변은 하이브리드 검색과 재순위화 모델(BGE v2 M3)을 사용하며, 검증을 위해 고정된 출처 발췌문이 포함된 검토 가능한 기록으로 변환할 수 있습니다',
           '**하드웨어 감지 기반 모델 추천** — HilbertRaum은 감지된 RAM과 VRAM을 벤치마크하여 사용자가 직접 추측하지 않도록, 약 8GB RAM(소형 Qwen 모델)부터 32GB 이상(더 큰 양자화 모델)까지 해당 기기에 맞는 채팅 모델을 추천합니다',
           '**오프라인 위키백과(Knowledge Packs)** — 프로젝트 문서에 따르면 약 100개 언어로 제공되는 Kiwix 형식(ZIM)의 선택적 위키백과 아카이브를 인터넷 연결 없이 자신의 문서와 함께 조회할 수 있습니다',
-          '**멀티모달 지원** — 내장된 비전 모델을 통한 이미지 이해, Whisper를 통한 오디오 전사, 텍스트 음성 변환을 통한 받아쓰기, 스캔 문서용 OCR',
+          '**멀티모달 지원** — 내장된 비전 모델을 통한 이미지 이해, Whisper를 통한 받아쓰기(음성 인식), 스캔 문서용 OCR',
           '**문서 번역** — 선택적인 번역 모델(TranslateGemma)을 통해 51개 언어에 걸친 내장 번역 기능',
           '**문서 스킬** — 요약, 비교, 구조화된 추출(예: 청구서, 은행 명세서, 계약서에서)',
           '**로컬 API** — 다른 로컬 애플리케이션이 HilbertRaum이 실행 중인 모델을 백엔드로 사용할 수 있게 해주는 선택적인 OpenAI 호환 루프백 엔드포인트',
@@ -2096,8 +2202,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '다음은 위에서 설명한 HilbertRaum의 문서화된 기능을 바탕으로 한 구체적인 워크플로이며, 가상의 사용 사례가 아닙니다.',
         subsections: [
           {
-            title: 'USB 드라이브에서 전체 작업 공간 실행하기',
-            content: 'USB 드라이브나 외장 디스크에 플랫폼별 설정 스크립트를 실행합니다(예: macOS/Linux에서 `scripts/prepare-drive.sh --target /Volumes/HILBERTRAUM --with-assets --accept-license`). 그러면 해당 드라이브에 앱, 추천 모델, 암호화된 작업 공간이 배치됩니다. 지원되는 어떤 기기에든 드라이브를 꽂아 HilbertRaum을 직접 실행할 수 있으며, 해당 기기에서 별도의 설치 단계가 필요 없습니다.',
+            title: 'USB 드라이브에서 HilbertRaum 실행하기',
+            content: '[GitHub 릴리스 페이지](https://github.com/HilbertraumAI/HilbertRaum/releases)에서 자신의 플랫폼에 맞는 포터블 버전을 다운로드해 USB 드라이브나 외장 디스크에 복사한 뒤 그곳에서 실행합니다. 호스트 기기에서는 별도의 설치 프로그램이 실행되지 않습니다. 처음 실행할 때 앱에서 직접 모델을 선택하면, 확인 후 HilbertRaum이 해당 엔진과 모델 파일을 직접 다운로드합니다. 예를 들어 다른 사람에게 바로 쓸 수 있는 드라이브를 건네주기 위해 암호화된 작업 공간과 모델을 미리 준비해 두려면, 대신 플랫폼별 설정 스크립트를 실행하세요(예: macOS/Linux에서 `scripts/prepare-drive.sh --target /Volumes/HILBERTRAUM --with-assets --accept-license`). 이 스크립트는 선택적인 지름길일 뿐 필수 단계는 아닙니다.',
           },
           {
             title: '자신의 PDF에 대해 출처를 인용해 질문하기',
@@ -2133,7 +2239,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '채팅 모델 가중치는 별도로 다운로드되며 HilbertRaum 자체 라이선스의 적용을 받지 않습니다 — README는 이들이 주로 Apache-2.0 라이선스라고 밝히고 있지만, 상업적으로 사용하기 전에는 반드시 해당 모델의 라이선스를 확인하세요',
           'README에는 "HilbertRaum"과 그 로고가 상표라고 명시되어 있으며, 포크는 별도의 브랜딩을 사용해야 한다는 안내가 있습니다',
         ],
-        note: '이 리뷰는 위에 명시된 확인 날짜 기준으로 hilbertraum.ai나 GitHub 저장소 어디에서도 유료 등급, 구독, 또는 엔터프라이즈 가격 정책의 증거를 찾지 못했습니다. 향후 릴리스에서 이것이 바뀐다면, 이 리뷰가 아니라 공식 [GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases) 페이지와 [hilbertraum.ai](https://hilbertraum.ai)를 신뢰할 수 있는 출처로 삼으세요.',
+        note: '이 리뷰는 위에 명시된 확인 날짜 기준으로 hilbertraum.ai나 GitHub 저장소 어디에서도 유료 등급, 구독, 또는 엔터프라이즈 가격 정책의 증거를 찾지 못했습니다. 향후 릴리스에서 이것이 바뀐다면, 이 리뷰가 아니라 공식 [GitHub Releases](https://github.com/HilbertraumAI/HilbertRaum/releases) 페이지와 [hilbertraum.ai](https://hilbertraum.ai)를 신뢰할 수 있는 출처로 삼으세요. HilbertRaum 제작자는 직접 설정하고 싶지 않은 사용자를 위해, 검증된 모델이 미리 설치된 별매 USB 스틱도 준비하고 있습니다. 동일한 무료 오픈소스 앱을 사용하며, 가격은 소프트웨어와 별도로 책정됩니다. 대기자 명단은 [hilbertraum.ai](https://hilbertraum.ai)에서 신청할 수 있지만, 이 리뷰 시점에는 아직 구매할 수 없습니다.',
+      },
+      fromTheMaker: {
+        id: 'from-the-maker',
+        title: '제작자의 말',
+        content: [
+          'PromptQuorum은 HilbertRaum 제작자에게 앱의 설계 목표를 직접 자신의 말로 설명해 달라고 요청했습니다. 다음은 서식 외에는 수정하지 않은 본인의 발언입니다.',
+          '"저희는 로컬 AI를 최대한 간단하게 만들고 싶습니다. AI 사용이 늘어날수록 개인 데이터와 문서를 보호하는 일이 점점 더 중요해지고 있습니다. 그래서 저희는 HilbertRaum을 만들었습니다. 런타임, 양자화, 모델 파일을 신경 쓸 필요 없는 모두를 위한 오프라인 AI입니다."',
+          '"가장 이상적인 방법은 USB 스틱을 꽂기만 하면 바로 시작할 수 있는 것입니다. 지금 저희가 준비하고 있는 것이 바로 그것입니다. 검증된 모델이 미리 설치된, 바로 쓸 수 있는 USB 스틱입니다."',
+          '"기다리고 싶지 않거나 기술에 조금 더 익숙한 분이라면, 앱을 무료로 다운로드해 별도의 설치 없이 자신의 컴퓨터나 외장 드라이브에서 바로 실행할 수 있습니다. 앱이 하드웨어를 감지해 적합한 모델을 추천해 주며, 이 모델들은 저희가 사전에 직접 선별하고 벤치마크한 것입니다. 소프트웨어는 지금도 앞으로도 무료 오픈소스로 유지됩니다. 완제품 스틱을 원하시는 분은 [hilbertraum.ai](https://hilbertraum.ai)에서 대기자 명단에 등록하실 수 있습니다."',
+        ],
+        note: '— Vladimir Tosovic, HilbertraumAI',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -2211,6 +2328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'HilbertRaum은 클라우드로 데이터를 전송합니까?', a: '아니요, 설계상 그렇지 않습니다. 프로젝트의 README는 클라우드 폴백, 웹 검색 통합, 원격 측정을 차단하고 애플리케이션이 연결이 끊긴 상태로 실행되는 동안 모든 연결 시도를 기록하는 오프라인 보호 기능을 설명합니다.' },
           { q: '오프라인 위키백과(Knowledge Packs) 기능은 무엇입니까?', a: 'HilbertRaum은 프로젝트 문서에 따르면 약 100개 언어로 제공되는 Kiwix 형식(ZIM)의 위키백과 아카이브를 선택적으로 불러와, 인터넷 연결 없이 자신의 문서와 함께 조회할 수 있습니다.' },
           { q: 'HilbertRaum의 현재 버전은 무엇입니까?', a: '[공식 GitHub Releases 페이지](https://github.com/HilbertraumAI/HilbertRaum/releases)에 따르면 버전 0.1.61이며, 2026년 9월 25일에 확인되었습니다. 이 리뷰의 게시일 이후에 출시된 내용은 해당 페이지에서 직접 확인하세요.' },
+          { q: '바로 쓸 수 있게 완성된 HilbertRaum USB 스틱을 구매할 수 있나요?', a: '이 리뷰 기준으로는 아직 불가능합니다. 제작자는 직접 설정하고 싶지 않은 사용자를 위해, 검증된 모델이 미리 설치된 별매 USB 스틱을 준비하고 있습니다 — 대기자 명단 링크는 위의 HilbertRaum 가격 및 라이선스를 참고하세요. 무료 다운로드 버전은 어느 경우든 동일한 오픈소스 앱입니다.' },
         ],
       },
       sources: {
