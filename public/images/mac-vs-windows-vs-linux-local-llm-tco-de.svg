@@ -8,9 +8,9 @@
   <text x="620" y="72" font-size="11" font-weight="700" fill="#79747E">Ideal für</text>
   <line x1="18" y1="80" x2="782" y2="80" stroke="#E8DEF8" stroke-width="1.5"/>
   <!-- Mac mini -->
-  <text x="50" y="108" font-size="10" font-weight="600" fill="#1C1B1F">Mac mini M4 Pro 64GB</text>
-  <text x="280" y="108" font-size="10" fill="#49454F">ca. 2.299 €</text>
-  <text x="440" y="108" font-size="10" font-weight="600" fill="#1C1B1F">ca. 2.319 €</text>
+  <text x="50" y="108" font-size="10" font-weight="600" fill="#1C1B1F">Mac mini M5 Pro 64GB</text>
+  <text x="280" y="108" font-size="10" fill="#49454F">ca. 1.999 €</text>
+  <text x="440" y="108" font-size="10" font-weight="600" fill="#1C1B1F">ca. 2.019 €</text>
   <circle cx="715" cy="102" r="12" fill="#34A853"/><text x="715" y="108" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">✓</text>
   <line x1="18" y1="118" x2="782" y2="118" stroke="#F7F2FA" stroke-width="1"/>
   <!-- M5 Pro -->
