@@ -54,6 +54,7 @@ import { app as app_page_assist } from './apps/page-assist'
 import { app as app_chatbox } from './apps/chatbox'
 import { app as app_continue_dev } from './apps/continue-dev'
 import { app as app_cline } from './apps/cline'
+import { app as app_atlarix } from './apps/atlarix'
 import { app as app_pearai } from './apps/pearai'
 import { app as app_windsurf } from './apps/windsurf'
 import { app as app_sourcegraph_cody } from './apps/sourcegraph-cody'
@@ -283,6 +284,7 @@ export const localAiApps: ToolRecord[] = [
   app_chatbox,
   app_continue_dev,
   app_cline,
+  app_atlarix,
   app_pearai,
   app_windsurf,
   app_sourcegraph_cody,

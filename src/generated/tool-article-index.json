@@ -11,6 +11,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-ai-coding-tools-comparison-2026",
+        "title": "Best AI Coding Tools Compared 2026: Cursor vs Cline",
+        "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
+        "dateModified": "2026-09-25",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
@@ -72,14 +80,6 @@
         "url": "/power-local-llm/local-llm-images-video-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-run-serve-compared",
-        "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-        "url": "/power-local-llm/local-llm-run-serve-compared",
-        "dateModified": "2026-09-20",
-        "tier": "about"
       }
     ],
     "totalCount": 289,
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-ai-coding-tools-comparison-2026",
+        "title": "Best AI Coding Tools Compared 2026: Cursor vs Cline",
+        "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
+        "dateModified": "2026-09-25",
         "tier": "about"
       },
       {
@@ -156,14 +164,6 @@
         "slug": "parlor-review",
         "title": "Parlor Review: On-Device Real-Time Voice and Vision AI",
         "url": "/power-local-llm/parlor-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "rapid-mlx-review",
-        "title": "Rapid-MLX Review: Native MLX Inference Server for Apple Silicon",
-        "url": "/power-local-llm/rapid-mlx-review",
         "dateModified": "2026-09-19",
         "tier": "about"
       }
@@ -861,6 +861,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-ai-coding-tools-comparison-2026",
+        "title": "Best AI Coding Tools Compared 2026: Cursor vs Cline",
+        "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
+        "dateModified": "2026-09-25",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review 2026: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
@@ -920,14 +928,6 @@
         "slug": "translate-books-with-llms-review",
         "title": "TranslateBooksWithLLMs Review: Translate Full Books With a Local or Cloud LLM",
         "url": "/power-local-llm/translate-books-with-llms-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "web-search-mcp-review",
-        "title": "web-search-mcp Review: Web Search Tool Access for Local LLMs",
-        "url": "/power-local-llm/web-search-mcp-review",
         "dateModified": "2026-09-19",
         "tier": "about"
       }
@@ -2609,6 +2609,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-ai-coding-tools-comparison-2026",
+        "title": "Best AI Coding Tools Compared 2026: Cursor vs Cline",
+        "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
+        "dateModified": "2026-09-25",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
@@ -2670,14 +2678,6 @@
         "url": "/local-llms/local-llms-with-vscode-cursor",
         "dateModified": "2026-08-29",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "autonomous-local-agents-actually-work",
-        "title": "Local AI Agents in 2026: What Actually Works (And What Still Fails)",
-        "url": "/power-local-llm/autonomous-local-agents-actually-work",
-        "dateModified": "2026-08-29",
-        "tier": "about"
       }
     ],
     "totalCount": 41,
@@ -2691,6 +2691,14 @@
         "title": "Cline Review: The Open-Source Agent That Grew From Claude Dev",
         "url": "/power-local-llm/cline-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "best-ai-coding-tools-comparison-2026",
+        "title": "Best AI Coding Tools Compared 2026: Cursor vs Cline",
+        "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
+        "dateModified": "2026-09-25",
         "tier": "about"
       },
       {
@@ -2756,17 +2764,9 @@
         "url": "/power-local-llm/autonomous-local-agents-actually-work",
         "dateModified": "2026-08-29",
         "tier": "about"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "local-llm-openai-compatible-api",
-        "title": "LM Studio & Ollama OpenAI-Compatible API Documentation: Python, Node.js, Aider, Cline & Roo Code (2026)",
-        "url": "/local-llms/local-llm-openai-compatible-api",
-        "dateModified": "2026-08-28",
-        "tier": "about"
       }
     ],
-    "totalCount": 39,
+    "totalCount": 40,
     "capped": true
   },
   "PearAI": {
@@ -2888,19 +2888,19 @@
         "tier": "about"
       },
       {
+        "cluster": "power-local-llm",
+        "slug": "best-ai-coding-tools-comparison-2026",
+        "title": "Best AI Coding Tools Compared 2026: Cursor vs Cline",
+        "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
+        "dateModified": "2026-09-25",
+        "tier": "about"
+      },
+      {
         "cluster": "local-llms",
         "slug": "best-ai-coding-assistant-local-llm",
         "title": "Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared",
         "url": "/local-llms/best-ai-coding-assistant-local-llm",
         "dateModified": "2026-08-30",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "best-ai-coding-tools-comparison-2026",
-        "title": "Best AI Coding Tools Compared 2026: Cursor vs Continue.dev",
-        "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
-        "dateModified": "2026-08-29",
         "tier": "about"
       },
       {
@@ -10295,6 +10295,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "best-ai-coding-tools-comparison-2026",
+        "title": "Best AI Coding Tools Compared 2026: Cursor vs Cline",
+        "url": "/power-local-llm/best-ai-coding-tools-comparison-2026",
+        "dateModified": "2026-09-25",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-code-development-compared",
         "title": "Local Coding Assistants, Agents & Workflow Tools Compared (2026): IDE Plugins, Agent Frameworks and Autonomous Agents",
         "url": "/power-local-llm/local-llm-code-development-compared",
@@ -10354,14 +10362,6 @@
         "slug": "nanobot-review",
         "title": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026",
         "url": "/power-local-llm/nanobot-review",
-        "dateModified": "2026-09-20",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "openclaw-review",
-        "title": "OpenClaw Review 2026: Renamed Twice, Now Run by a Nonprofit",
-        "url": "/power-local-llm/openclaw-review",
         "dateModified": "2026-09-20",
         "tier": "mentioned"
       }

@@ -9,7 +9,7 @@ import * as Dialog from '@radix-ui/react-dialog'
 import { useState, type ReactNode } from 'react'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import type { Language } from '@/lib/blog/blogContent'
-import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
+import type { ToolRecord, FounderSocialKey } from '@/lib/power-local-llm/apps/types'
 import { HardwareBlock } from './HardwareBlock'
 import { CompatibilityBadge } from './CompatibilityBadge'
 import { computeHardwareDisplay, computeCompatibilityVerdict, computeVariesByModelFitGb } from './hardware'
@@ -45,13 +45,40 @@ function DetailRow({ label, value }: { label: string; value: ReactNode }) {
 // is that it IS his words, not a summary of them. Height-capped with an
 // internal scrollbar so a long quote doesn't force the drawer itself to
 // grow — the drawer's own footprint stays fixed.
-function FounderFullQuote({ paragraphs, source }: { paragraphs: string[]; source?: string }) {
+const FOUNDER_SOCIAL_LABEL: Record<FounderSocialKey, string> = {
+  linkedin: 'LinkedIn',
+  github: 'GitHub',
+  x: 'X',
+  instagram: 'Instagram',
+  website: 'Website',
+}
+
+type FounderSocialLinks = Partial<Record<FounderSocialKey, string>>
+
+function FounderSocials({ socials, lang }: { socials?: FounderSocialLinks; lang: Language }) {
+  if (!socials) return null
+  const entries = Object.entries(socials).filter(([, url]) => !!url) as [FounderSocialKey, string][]
+  if (entries.length === 0) return null
+  return (
+    <p className="text-xs text-text-secondary/80 pt-1.5 flex flex-wrap gap-x-3 gap-y-1">
+      <span className="font-semibold text-text-primary/70">{t('founderConnect', lang)}</span>
+      {entries.map(([key, url]) => (
+        <a key={key} href={url} target="_blank" rel="noopener noreferrer nofollow" className="text-primary hover:underline">
+          {FOUNDER_SOCIAL_LABEL[key]}
+        </a>
+      ))}
+    </p>
+  )
+}
+
+function FounderFullQuote({ paragraphs, source, socials, lang }: { paragraphs: string[]; source?: string; socials?: FounderSocialLinks; lang: Language }) {
   return (
     <div className="max-h-64 overflow-y-auto rounded-lg border border-primary/10 bg-primary/5 p-3 space-y-2">
       {paragraphs.map((p, i) => (
         <p key={i} className="text-sm text-text-secondary italic leading-relaxed">{p}</p>
       ))}
       {source && <p className="text-xs text-text-secondary/80 not-italic pt-1">— {source}</p>}
+      <FounderSocials socials={socials} lang={lang} />
     </div>
   )
 }
@@ -392,12 +419,13 @@ export function ToolDrawer({
                 {app.founder && founderParagraphs(app.founder.fullQuote, lang) ? (
                   // A verbatim quote exists — show his own words only, not a
                   // PromptQuorum paraphrase mixed in underneath.
-                  <FounderFullQuote paragraphs={founderParagraphs(app.founder.fullQuote, lang) ?? []} source={app.founder.who[lang] ?? app.founder.who.en} />
+                  <FounderFullQuote paragraphs={founderParagraphs(app.founder.fullQuote, lang) ?? []} source={app.founder.who[lang] ?? app.founder.who.en} socials={app.founder.socials} lang={lang} />
                 ) : app.founder ? (
                   <div className="text-sm text-text-secondary space-y-1.5">
                     <p>{founderText(app.founder.why, lang)}</p>
                     {app.founder.best && <p><span className="font-semibold text-text-primary">{t('bestFor', lang)}</span> {founderText(app.founder.best, lang)}</p>}
                     {app.founder.limits && <p><span className="font-semibold text-text-primary">{t('limits', lang)}</span> {founderText(app.founder.limits, lang)}</p>}
+                    <FounderSocials socials={app.founder.socials} lang={lang} />
                   </div>
                 ) : (
                   <FounderClaimBox key={app.slug} appName={app.name} lang={lang} />
