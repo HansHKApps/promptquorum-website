@@ -274,6 +274,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'runanywhere-review',
   'draw-things-review',
   'ekorbia-review',
+  // HilbertRaum review — maker outreach — 2026-09-25
+  'hilbertraum-review',
   // Enterprise/B2B — governance & risk — 2026-09-03
   'shadow-ai-controls-by-company-size',
   'agentic-ai-security-identity-access',
