@@ -1,4 +1,4 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2025 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"><metadata><rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"><rdf:Description rdf:about=""><dc:creator>PromptQuorum</dc:creator><dc:rights>© 2026 PromptQuorum. All rights reserved.</dc:rights><dc:source>https://www.promptquorum.com</dc:source></rdf:Description></rdf:RDF></metadata>
   <!-- Background -->
   <rect width="800" height="400" fill="#FFFFFF"/>
 
@@ -7,8 +7,8 @@
     Matériel Mac pour LLMs locaux
   </text>
 
-  <!-- M3 MacBook Pro -->
-  <g id="m3-macbook">
+  <!-- Mac mini M6/M5 Pro -->
+  <g id="mac-mini">
     <rect x="40" y="70" width="220" height="300" rx="8" fill="#FEF7FF" stroke="#6750A4" stroke-width="2.5"/>
 
     <!-- Mac icon/representation -->
@@ -16,23 +16,23 @@
     <text x="150" y="135" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4" text-anchor="middle" font-weight="700">🖥</text>
 
     <text x="150" y="195" font-family="system-ui, sans-serif" font-size="16" fill="#1C1B1F" text-anchor="middle" font-weight="700">
-      M3 MacBook Pro
+      Mac mini M6 / M5 Pro
     </text>
     <text x="150" y="216" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
-      Modèle 16"
+      à partir de 899 $
     </text>
 
     <line x1="50" y1="226" x2="250" y2="226" stroke="#E8DEF8" stroke-width="1.5"/>
 
-    <text x="60" y="250" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">Mémoire: 18 Go</text>
-    <text x="60" y="270" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">Meilleur: 7B rapide</text>
-    <text x="60" y="290" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">13B: Lent</text>
+    <text x="60" y="250" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">Mémoire : jusqu'à 64 Go</text>
+    <text x="60" y="270" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">Meilleur : 7B–13B rapide</text>
+    <text x="60" y="290" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">70B : M5 Pro (64Go) seul</text>
 
-    <text x="150" y="350" font-family="system-ui, sans-serif" font-size="12" color="#6750A4" text-anchor="middle" font-weight="700" style="font-style: italic;">Portable</text>
+    <text x="150" y="350" font-family="system-ui, sans-serif" font-size="12" color="#6750A4" text-anchor="middle" font-weight="700" style="font-style: italic;">Bureau économique</text>
   </g>
 
-  <!-- M3 Mac Studio -->
-  <g id="m3-studio">
+  <!-- Mac Studio M5 Max -->
+  <g id="m5-max-studio">
     <rect x="290" y="55" width="220" height="315" rx="8" fill="#E8DEF8" stroke="#6750A4" stroke-width="3"/>
 
     <!-- Mac icon -->
@@ -40,23 +40,23 @@
     <text x="400" y="120" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4" text-anchor="middle" font-weight="700">🖥</text>
 
     <text x="400" y="190" font-family="system-ui, sans-serif" font-size="16" fill="#1C1B1F" text-anchor="middle" font-weight="700">
-      M3 Mac Studio
+      Mac Studio M5 Max
     </text>
     <text x="400" y="211" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
-      Bureau ⭐
+      à partir de 2 499 $
     </text>
 
     <line x1="300" y1="221" x2="500" y2="221" stroke="#6750A4" stroke-width="1.5"/>
 
-    <text x="310" y="250" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">Mémoire: 36 Go</text>
-    <text x="310" y="270" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">Meilleur: 13B bien</text>
-    <text x="310" y="290" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">Mém. partagée CPU/GPU</text>
+    <text x="310" y="250" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">Mémoire : jusqu'à 128 Go</text>
+    <text x="310" y="270" font-family="system-ui, sans-serif" font-size="12" fill="#1C1B1F" font-weight="700">Meilleur : 30B–70B bien</text>
+    <text x="310" y="290" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">Jusqu'à 40 cœurs GPU</text>
 
-    <text x="400" y="350" font-family="system-ui, sans-serif" font-size="12" color="#6750A4" text-anchor="middle" font-weight="700" style="font-style: italic;"></text>
+    <text x="400" y="350" font-family="system-ui, sans-serif" font-size="12" color="#6750A4" text-anchor="middle" font-weight="700" style="font-style: italic;">Bureau ⭐</text>
   </g>
 
-  <!-- M4 Mac Studio -->
-  <g id="m4-studio">
+  <!-- Mac Studio M5 Ultra -->
+  <g id="m5-ultra-studio">
     <rect x="540" y="70" width="220" height="300" rx="8" fill="#FEF7FF" stroke="#6750A4" stroke-width="2.5"/>
 
     <!-- Mac icon -->
@@ -64,23 +64,23 @@
     <text x="650" y="135" font-family="system-ui, sans-serif" font-size="20" fill="#6750A4" text-anchor="middle" font-weight="700">🖥</text>
 
     <text x="650" y="195" font-family="system-ui, sans-serif" font-size="16" fill="#1C1B1F" text-anchor="middle" font-weight="700">
-      M4 Mac Studio
+      Mac Studio M5 Ultra
     </text>
     <text x="650" y="216" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" text-anchor="middle" font-weight="600">
-      Arrivée 2026
+      à partir de 5 499 $
     </text>
 
     <line x1="550" y1="226" x2="750" y2="226" stroke="#E8DEF8" stroke-width="1.5"/>
 
-    <text x="560" y="250" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">Mémoire: 40+ Go</text>
-    <text x="560" y="270" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">Meilleur: 13–30B</text>
-    <text x="560" y="290" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">70B: Non idéal</text>
+    <text x="560" y="250" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">Mémoire : jusqu'à 512 Go</text>
+    <text x="560" y="270" font-family="system-ui, sans-serif" font-size="12" fill="#6750A4" font-weight="700">Meilleur : 70B+ / multi-modèle</text>
+    <text x="560" y="290" font-family="system-ui, sans-serif" font-size="12" fill="#49454F" font-weight="600">Jusqu'à 80 cœurs GPU</text>
 
-    <text x="650" y="350" font-family="system-ui, sans-serif" font-size="12" color="#6750A4" text-anchor="middle" font-weight="700" style="font-style: italic;">Avenir</text>
+    <text x="650" y="350" font-family="system-ui, sans-serif" font-size="12" color="#6750A4" text-anchor="middle" font-weight="700" style="font-style: italic;">Haut de gamme</text>
   </g>
 
   <!-- Bottom note -->
   <text x="400" y="395" font-family="system-ui, sans-serif" font-size="12" fill="#79747E" text-anchor="middle" font-weight="500">
-    Mac = avantage mémoire unifiée. RTX 4090 surpasse toujours M3 pour 70B, mais M4 rattrape.
+    Mac = avantage mémoire unifiée, pas de limite VRAM. Un PC multi-GPU garde l'avantage en débit brut 7B–13B.
   </text>
 <text x="792" y="395" font-family="system-ui,sans-serif" font-size="9" fill="#BBBBBB" text-anchor="end">promptquorum.com</text></svg>
