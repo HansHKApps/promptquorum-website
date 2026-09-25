@@ -1818,7 +1818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           q: 'リソース制限（GPU、メモリ）がある場合、どのスタックが適していますか？',
-          a: '8GB VRAM 以下の環境では：Cline + Ollama（Qwen3-Coder 7B または 14B）が最適。もしくは Continue.dev で API ベースモデルを使用。LangGraph は複雑さによって 16GB 以上が推奨。MetaGPT は複数エージェント間通信のため 24GB 以上が必要。OpenInterpreter は任意コード実行のため、推奨リソースは明確ですが、セキュリティの問題のため避けるべき。',
+          a: '8GB VRAM 以下の環境では：Cline + Ollama（Qwen2.5-Coder 7B または 14B）が最適。もしくは Continue.dev で API ベースモデルを使用。LangGraph は複雑さによって 16GB 以上が推奨。MetaGPT は複数エージェント間通信のため 24GB 以上が必要。OpenInterpreter は任意コード実行のため、推奨リソースは明確ですが、セキュリティの問題のため避けるべき。',
         },
         {
           q: 'このテストで使用されたモデルは何ですか？このテストで別のモデルを使用できますか？',
@@ -2468,7 +2468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**堆栈：** Qwen3-Coder 30B（或7B）+ Cline/Continue.dev + Ollama。纯本地运行，无API调用。',
           '**成功率：** Cline + Ollama：90%（大多数编码任务）。Continue.dev：70%。LangGraph：45%。AutoGPT：25%。OpenInterpreter：20%。MetaGPT：30%。',
-          '**硬件要求：** 8GB VRAM（Qwen3-Coder 7B），16GB用于30B模型，24GB用于生产设置和多任务。',
+          '**硬件要求：** 8GB VRAM（Qwen2.5-Coder 7B），16GB用于30B模型，24GB用于生产设置和多任务。',
           '**监督成本：** Cline：每任务15分钟。LangGraph：45分钟。AutoGPT：60分钟。OpenInterpreter：90分钟。MetaGPT：120分钟。',
           '**最可靠的组合：** Apple M5 Max 64GB + Qwen3-Coder 30B + Cline。或任何具有24GB VRAM的Linux GPU机器。',
           '**完全开源：** Ollama（MIT）、Cline（MIT）、Continue.dev（Apache）、所有模型都是开放权重。',
@@ -2739,11 +2739,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '资源受限（GPU、内存）时选择哪个堆栈？',
-            a: '8GB VRAM及以下：Cline + Ollama（Qwen3-Coder 7B或14B）或Continue.dev + API模型。LangGraph需16GB以上。MetaGPT多代理通信需24GB以上。OpenInterpreter任意代码执行推荐资源不明确，但安全问题优先排除。',
+            a: '8GB VRAM及以下：Cline + Ollama（Qwen2.5-Coder 7B或14B）或Continue.dev + API模型。LangGraph需16GB以上。MetaGPT多代理通信需24GB以上。OpenInterpreter任意代码执行推荐资源不明确，但安全问题优先排除。',
           },
           {
             q: '此测试使用的模型是什么？能用其他模型吗？',
-            a: '测试使用Qwen3-Coder 30B（代码生成）、Llama 3.3 70B（通用）、Gemma 4 27B（轻量）。用其他模型时，确认Ollama支持。注意模型切换影响精度。Qwen3-Coder 7B版本GPU需求低但精度降20%。',
+            a: '测试使用Qwen3-Coder 30B（代码生成）、Llama 3.3 70B（通用）、Gemma 4 27B（轻量）。用其他模型时，确认Ollama支持。注意模型切换影响精度。Qwen2.5-Coder 7B版本GPU需求低但精度降20%。',
           },
           {
             q: '能否减少代理的"监督成本"？',

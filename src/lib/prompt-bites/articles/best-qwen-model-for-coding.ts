@@ -7,7 +7,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-qwen-model-for-coding-overview-hero-en.webp',
     title: 'Best Qwen Model for Coding?',
     seoTitle: 'Qwen3-Coder 2026: 7B vs 14B vs 32B by VRAM Tier',
-    metaDescription: 'Qwen3-Coder 32B leads at 24 GB VRAM with 91.5% HumanEval. At 8 GB, 7B hits 79.7%. 14B is the sweet spot at 12 GB. Size guide for every tier.',
+    metaDescription: 'Qwen2.5-Coder 32B leads at 24 GB VRAM with 91.5% HumanEval. At 8 GB, 7B hits 79.7%. 14B is the sweet spot at 12 GB. Size guide for every tier.',
     publishDate: '2026-05-26',
     dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
@@ -20,52 +20,52 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Best Qwen model for coding?',
-        answer: 'Qwen3-Coder 32B is the best Qwen coding model if you have 24 GB VRAM (91.5% HumanEval). At 8 GB VRAM, the 7B version scores 79.7% and runs at 8–15 tok/s. The 14B is the sweet spot for most developers at 12 GB VRAM.',
+        answer: 'Qwen2.5-Coder 32B is the best Qwen coding model if you have 24 GB VRAM (91.5% HumanEval). At 8 GB VRAM, the 7B version scores 79.7% and runs at 8–15 tok/s. The 14B is the sweet spot for most developers at 12 GB VRAM.',
         bullets: [
-          'Qwen3-Coder 7B Q4_K_M: 5.5 GB VRAM, 79.7% HumanEval, 8–15 tok/s — for RTX 3060 or 16 GB RAM',
-          'Qwen3-Coder 14B Q4_K_M: 9.5 GB VRAM, 88.0% HumanEval, 4–8 tok/s — sweet spot for RTX 3080/4070',
-          'Qwen3-Coder 32B Q4_K_M: 20.5 GB VRAM, 91.5% HumanEval, 2–4 tok/s — for RTX 4090 or M3 Max',
+          'Qwen2.5-Coder 7B Q4_K_M: 5.5 GB VRAM, 79.7% HumanEval, 8–15 tok/s — for RTX 3060 or 16 GB RAM',
+          'Qwen2.5-Coder 14B Q4_K_M: 9.5 GB VRAM, 88.0% HumanEval, 4–8 tok/s — sweet spot for RTX 3080/4070',
+          'Qwen2.5-Coder 32B Q4_K_M: 20.5 GB VRAM, 91.5% HumanEval, 2–4 tok/s — for RTX 4090 or M3 Max',
           'CPU-only (no GPU): 7B on 16 GB RAM, ~8 tok/s; acceptable for autocomplete',
         ],
         updatedDate: '2026-05',
       },
       de: {
         question: 'Bestes Qwen-Modell für Coding?',
-        answer: 'Qwen3-Coder 32B ist das beste Qwen-Coding-Modell mit 24 GB VRAM (91,5 % HumanEval). Bei 8 GB VRAM erreicht die 7B-Version 79,7 % und läuft mit 8–15 tok/s. Die 14B ist der Sweet Spot für die meisten Entwickler bei 12 GB VRAM.',
+        answer: 'Qwen2.5-Coder 32B ist das beste Qwen-Coding-Modell mit 24 GB VRAM (91,5 % HumanEval). Bei 8 GB VRAM erreicht die 7B-Version 79,7 % und läuft mit 8–15 tok/s. Die 14B ist der Sweet Spot für die meisten Entwickler bei 12 GB VRAM.',
         bullets: [
-          'Qwen3-Coder 7B Q4_K_M: 5,5 GB VRAM, 79,7 % HumanEval — für RTX 3060 oder 16 GB RAM',
-          'Qwen3-Coder 14B Q4_K_M: 9,5 GB VRAM, 88,0 % HumanEval — Sweet Spot für RTX 3080/4070',
-          'Qwen3-Coder 32B Q4_K_M: 20,5 GB VRAM, 91,5 % HumanEval — für RTX 4090 oder M3 Max',
+          'Qwen2.5-Coder 7B Q4_K_M: 5,5 GB VRAM, 79,7 % HumanEval — für RTX 3060 oder 16 GB RAM',
+          'Qwen2.5-Coder 14B Q4_K_M: 9,5 GB VRAM, 88,0 % HumanEval — Sweet Spot für RTX 3080/4070',
+          'Qwen2.5-Coder 32B Q4_K_M: 20,5 GB VRAM, 91,5 % HumanEval — für RTX 4090 oder M3 Max',
         ],
         updatedDate: '2026-05',
       },
       fr: {
         question: 'Meilleur modèle Qwen pour le codage ?',
-        answer: 'Qwen3-Coder 32B est le meilleur avec 24 Go VRAM (91,5 % HumanEval). À 8 Go VRAM, le 7B atteint 79,7%. Le 14B est le meilleur choix pour la plupart des développeurs à 12 Go VRAM.',
+        answer: 'Qwen2.5-Coder 32B est le meilleur avec 24 Go VRAM (91,5 % HumanEval). À 8 Go VRAM, le 7B atteint 79,7%. Le 14B est le meilleur choix pour la plupart des développeurs à 12 Go VRAM.',
         bullets: [
-          'Qwen3-Coder 7B Q4_K_M : 5,5 Go VRAM, 79,7 % HumanEval',
-          'Qwen3-Coder 14B Q4_K_M : 9,5 Go VRAM, 88,0 % HumanEval — meilleur rapport qualité/VRAM',
-          'Qwen3-Coder 32B Q4_K_M : 20,5 Go VRAM, 91,5 % HumanEval',
+          'Qwen2.5-Coder 7B Q4_K_M : 5,5 Go VRAM, 79,7 % HumanEval',
+          'Qwen2.5-Coder 14B Q4_K_M : 9,5 Go VRAM, 88,0 % HumanEval — meilleur rapport qualité/VRAM',
+          'Qwen2.5-Coder 32B Q4_K_M : 20,5 Go VRAM, 91,5 % HumanEval',
         ],
         updatedDate: '2026-05',
       },
       ja: {
         question: 'コーディング向け最適Qwenモデルは？',
-        answer: 'Qwen3-Coder 32Bは24 GB VRAMで最高性能（HumanEval 91.5%）。8 GB VRAMなら7B版が79.7%・8–15 tok/s。14Bは12 GB VRAMで多くの開発者に最適なスイートスポット。',
+        answer: 'Qwen2.5-Coder 32Bは24 GB VRAMで最高性能（HumanEval 91.5%）。8 GB VRAMなら7B版が79.7%・8–15 tok/s。14Bは12 GB VRAMで多くの開発者に最適なスイートスポット。',
         bullets: [
-          'Qwen3-Coder 7B Q4_K_M：5.5 GB VRAM、HumanEval 79.7%',
-          'Qwen3-Coder 14B Q4_K_M：9.5 GB VRAM、HumanEval 88.0%——スイートスポット',
-          'Qwen3-Coder 32B Q4_K_M：20.5 GB VRAM、HumanEval 91.5%',
+          'Qwen2.5-Coder 7B Q4_K_M：5.5 GB VRAM、HumanEval 79.7%',
+          'Qwen2.5-Coder 14B Q4_K_M：9.5 GB VRAM、HumanEval 88.0%——スイートスポット',
+          'Qwen2.5-Coder 32B Q4_K_M：20.5 GB VRAM、HumanEval 91.5%',
         ],
         updatedDate: '2026-05',
       },
       zh: {
         question: '编程最佳Qwen模型是哪个？',
-        answer: 'Qwen3-Coder 32B在24 GB显存下表现最佳（HumanEval 91.5%）。8 GB显存选7B（79.7%，8–15 tok/s）；14B是12 GB显存开发者的最优选择。',
+        answer: 'Qwen2.5-Coder 32B在24 GB显存下表现最佳（HumanEval 91.5%）。8 GB显存选7B（79.7%，8–15 tok/s）；14B是12 GB显存开发者的最优选择。',
         bullets: [
-          'Qwen3-Coder 7B Q4_K_M：5.5 GB显存，HumanEval 79.7%，8–15 tok/s',
-          'Qwen3-Coder 14B Q4_K_M：9.5 GB显存，HumanEval 88.0%——最优性价比',
-          'Qwen3-Coder 32B Q4_K_M：20.5 GB显存，HumanEval 91.5%——顶级性能',
+          'Qwen2.5-Coder 7B Q4_K_M：5.5 GB显存，HumanEval 79.7%，8–15 tok/s',
+          'Qwen2.5-Coder 14B Q4_K_M：9.5 GB显存，HumanEval 88.0%——最优性价比',
+          'Qwen2.5-Coder 32B Q4_K_M：20.5 GB显存，HumanEval 91.5%——顶级性能',
           'CPU-only：16 GB内存运行7B，约8 tok/s',
         ],
         updatedDate: '2026-05',
@@ -75,9 +75,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'Qwen3-Coder 32B Q4_K_M: 91.5% HumanEval — best Qwen coding model, needs 24 GB VRAM (RTX 4090 or M3 Max 48 GB)',
-          'Qwen3-Coder 14B Q4_K_M: 88.0% HumanEval at 9.5 GB VRAM — sweet spot for RTX 3080 / RTX 4070 / M2 Pro',
-          'Qwen3-Coder 7B Q4_K_M: 79.7% HumanEval at 5.5 GB VRAM — works on any RTX 3060 or 16 GB RAM CPU',
+          'Qwen2.5-Coder 32B Q4_K_M: 91.5% HumanEval — best Qwen coding model, needs 24 GB VRAM (RTX 4090 or M3 Max 48 GB)',
+          'Qwen2.5-Coder 14B Q4_K_M: 88.0% HumanEval at 9.5 GB VRAM — sweet spot for RTX 3080 / RTX 4070 / M2 Pro',
+          'Qwen2.5-Coder 7B Q4_K_M: 79.7% HumanEval at 5.5 GB VRAM — works on any RTX 3060 or 16 GB RAM CPU',
           'All sizes support: Python, TypeScript, Go, Rust, Java, C++, SQL, Bash, and 40+ other languages',
           'Install any size: `ollama pull qwen2.5-coder:7b` / `14b` / `32b`',
         ],
@@ -89,9 +89,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         comparisonTable: {
           columns: ['Model', 'VRAM (Q4_K_M)', 'HumanEval (%)', 'Speed (GPU)', 'Best For'],
           rows: [
-            { 'Model': 'Qwen3-Coder 7B',  'VRAM (Q4_K_M)': '5.5 GB',  'HumanEval (%)': '79.7', 'Speed (GPU)': '8–15 tok/s', 'Best For': 'RTX 3060 / 16 GB RAM laptop' },
-            { 'Model': 'Qwen3-Coder 14B', 'VRAM (Q4_K_M)': '9.5 GB',  'HumanEval (%)': '88.0', 'Speed (GPU)': '4–8 tok/s',  'Best For': 'RTX 3080 / RTX 4070 / M2 Pro' },
-            { 'Model': 'Qwen3-Coder 32B', 'VRAM (Q4_K_M)': '20.5 GB', 'HumanEval (%)': '91.5', 'Speed (GPU)': '2–4 tok/s',  'Best For': 'RTX 4090 / M3 Max 48 GB' },
+            { 'Model': 'Qwen2.5-Coder 7B',  'VRAM (Q4_K_M)': '5.5 GB',  'HumanEval (%)': '79.7', 'Speed (GPU)': '8–15 tok/s', 'Best For': 'RTX 3060 / 16 GB RAM laptop' },
+            { 'Model': 'Qwen2.5-Coder 14B', 'VRAM (Q4_K_M)': '9.5 GB',  'HumanEval (%)': '88.0', 'Speed (GPU)': '4–8 tok/s',  'Best For': 'RTX 3080 / RTX 4070 / M2 Pro' },
+            { 'Model': 'Qwen2.5-Coder 32B', 'VRAM (Q4_K_M)': '20.5 GB', 'HumanEval (%)': '91.5', 'Speed (GPU)': '2–4 tok/s',  'Best For': 'RTX 4090 / M3 Max 48 GB' },
           ],
         },
       },
@@ -99,9 +99,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'verdict',
         title: 'Verdict: Which Size to Run',
         content: [
-          '**8 GB VRAM or less (RTX 3060, GTX 1080 Ti, M2 16 GB):** Run Qwen3-Coder 7B Q4_K_M. It fits in 5.5 GB VRAM with room for the KV cache. For autocomplete and function generation in an IDE plugin, 79.7% HumanEval is sufficient.',
-          '**12–16 GB VRAM (RTX 3080, RTX 4070, M2 Pro 32 GB):** Run Qwen3-Coder 14B Q4_K_M. The jump from 7B to 14B is the biggest quality-per-VRAM leap in the Qwen Coder family.',
-          '**24 GB VRAM (RTX 4090, M3 Max 48 GB):** Run Qwen3-Coder 32B Q4_K_M. It outperforms GPT-5.5 mini on code generation benchmarks and handles multi-file context better.',
+          '**8 GB VRAM or less (RTX 3060, GTX 1080 Ti, M2 16 GB):** Run Qwen2.5-Coder 7B Q4_K_M. It fits in 5.5 GB VRAM with room for the KV cache. For autocomplete and function generation in an IDE plugin, 79.7% HumanEval is sufficient.',
+          '**12–16 GB VRAM (RTX 3080, RTX 4070, M2 Pro 32 GB):** Run Qwen2.5-Coder 14B Q4_K_M. The jump from 7B to 14B is the biggest quality-per-VRAM leap in the Qwen Coder family.',
+          '**24 GB VRAM (RTX 4090, M3 Max 48 GB):** Run Qwen2.5-Coder 32B Q4_K_M. It outperforms GPT-5.5 mini on code generation benchmarks and handles multi-file context better.',
           '**CPU-only (no discrete GPU):** 7B Q4_K_M on 16 GB RAM, ~8 tok/s. Acceptable for occasional generation; too slow for real-time autocomplete.',
         ],
       },
@@ -109,12 +109,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-            { q: 'Is Qwen3-Coder better than DeepSeek-Coder for Python?', a: 'Qwen3-Coder 32B scores 91.5% HumanEval vs DeepSeek-Coder-V2-Lite at ~80%. For Python specifically, Qwen3-Coder 32B leads at the same VRAM tier.' },
+            { q: 'Is Qwen3-Coder better than DeepSeek-Coder for Python?', a: 'Qwen2.5-Coder 32B scores 91.5% HumanEval vs DeepSeek-Coder-V2-Lite at ~80%. For Python specifically, Qwen2.5-Coder 32B leads at the same VRAM tier.' },
             { q: 'Does Qwen3-Coder support Chinese code comments?', a: 'Yes. It handles mixed Chinese/English code comments natively — a significant advantage for Chinese developers.' },
             { q: 'Can I use Qwen3-Coder with Continue.dev or Cline?', a: 'Yes. Both support Ollama backends. Set the model to `qwen2.5-coder:32b` (or your chosen size) in the Continue.dev config or Cline settings.' },
             { q: 'What quantization level should I use?', a: 'Q4_K_M is the best balance: near full-precision quality, ~35% VRAM reduction. Use Q8_0 only if you have abundant VRAM and want maximum accuracy.' },
-            { q: 'Best Qwen model for coding at 8 GB VRAM?', a: 'Qwen3-Coder 7B Q4_K_M — fits in 5.5 GB VRAM, 79.7% HumanEval, 8–15 tok/s.' },
-            { q: 'Best Qwen coding model at 12–16 GB VRAM?', a: 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM, 88.0% HumanEval, the best quality-per-VRAM in the Coder family.' },
+            { q: 'Best Qwen model for coding at 8 GB VRAM?', a: 'Qwen2.5-Coder 7B Q4_K_M — fits in 5.5 GB VRAM, 79.7% HumanEval, 8–15 tok/s.' },
+            { q: 'Best Qwen coding model at 12–16 GB VRAM?', a: 'Qwen2.5-Coder 14B Q4_K_M — 9.5 GB VRAM, 88.0% HumanEval, the best quality-per-VRAM in the Coder family.' },
           ],
       },
     },
@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'Is Qwen3-Coder better than DeepSeek-Coder for Python?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 32B scores 91.5% HumanEval vs DeepSeek-Coder-V2-Lite at ~80%. For Python specifically, Qwen3-Coder 32B leads at the same VRAM tier.',
+              'text': 'Qwen2.5-Coder 32B scores 91.5% HumanEval vs DeepSeek-Coder-V2-Lite at ~80%. For Python specifically, Qwen2.5-Coder 32B leads at the same VRAM tier.',
             },
           },
           {
@@ -176,7 +176,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'Best Qwen model for coding at 8 GB VRAM?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 7B Q4_K_M — fits in 5.5 GB VRAM, 79.7% HumanEval, 8–15 tok/s.',
+              'text': 'Qwen2.5-Coder 7B Q4_K_M — fits in 5.5 GB VRAM, 79.7% HumanEval, 8–15 tok/s.',
             },
           },
           {
@@ -184,7 +184,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'Best Qwen coding model at 12–16 GB VRAM?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM, 88.0% HumanEval, the best quality-per-VRAM in the Coder family.',
+              'text': 'Qwen2.5-Coder 14B Q4_K_M — 9.5 GB VRAM, 88.0% HumanEval, the best quality-per-VRAM in the Coder family.',
             },
           },
         ],
@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-qwen-model-for-coding-overview-hero-de.webp',
     title: 'Bestes Qwen-Modell für Coding?',
     seoTitle: 'Qwen3-Coder 2026: 7B vs 14B vs 32B nach VRAM-Tier',
-    metaDescription: 'Qwen3-Coder 32B führt mit 24 GB VRAM (91,5 % HumanEval). Bei 8 GB: 7B mit 79,7 %. 14B ist der Sweet Spot bei 12 GB. Größenleitfaden für jede Tier.',
+    metaDescription: 'Qwen2.5-Coder 32B führt mit 24 GB VRAM (91,5 % HumanEval). Bei 8 GB: 7B mit 79,7 %. 14B ist der Sweet Spot bei 12 GB. Größenleitfaden für jede Tier.',
     publishDate: '2026-05-26',
     dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
@@ -207,14 +207,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['qwen-coder-vs-deepseek-coder', 'can-you-run-qwen3-on-ollama'],
     is_living_page: false,
     quickAnswerTop: {
-      en: { question: 'Best Qwen model for coding?', answer: 'Qwen3-Coder 32B at 24 GB VRAM (91.5% HumanEval). 7B at 8 GB, 14B sweet spot at 12 GB.', bullets: ['7B: 5.5 GB VRAM', '14B: 9.5 GB VRAM sweet spot', '32B: 20.5 GB VRAM best'], updatedDate: '2026-05' },
+      en: { question: 'Best Qwen model for coding?', answer: 'Qwen2.5-Coder 32B at 24 GB VRAM (91.5% HumanEval). 7B at 8 GB, 14B sweet spot at 12 GB.', bullets: ['7B: 5.5 GB VRAM', '14B: 9.5 GB VRAM sweet spot', '32B: 20.5 GB VRAM best'], updatedDate: '2026-05' },
       de: {
         question: 'Bestes Qwen-Modell für Coding?',
-        answer: 'Qwen3-Coder 32B ist das beste Qwen-Coding-Modell mit 24 GB VRAM (91,5 % HumanEval). Bei 8 GB VRAM: 7B mit 79,7 %. 14B ist der Sweet Spot für die meisten Entwickler bei 12 GB VRAM.',
-        bullets: ['Qwen3-Coder 7B Q4_K_M: 5,5 GB VRAM, 79,7 % HumanEval', 'Qwen3-Coder 14B Q4_K_M: 9,5 GB VRAM, 88,0 % HumanEval', 'Qwen3-Coder 32B Q4_K_M: 20,5 GB VRAM, 91,5 % HumanEval'],
+        answer: 'Qwen2.5-Coder 32B ist das beste Qwen-Coding-Modell mit 24 GB VRAM (91,5 % HumanEval). Bei 8 GB VRAM: 7B mit 79,7 %. 14B ist der Sweet Spot für die meisten Entwickler bei 12 GB VRAM.',
+        bullets: ['Qwen2.5-Coder 7B Q4_K_M: 5,5 GB VRAM, 79,7 % HumanEval', 'Qwen2.5-Coder 14B Q4_K_M: 9,5 GB VRAM, 88,0 % HumanEval', 'Qwen2.5-Coder 32B Q4_K_M: 20,5 GB VRAM, 91,5 % HumanEval'],
         updatedDate: '2026-05',
       },
-      fr: { question: 'Meilleur modèle Qwen pour coder ?', answer: 'Qwen3-Coder 32B à 24 Go VRAM (91,5%). 7B à 8 Go, 14B sweet spot à 12 Go.', bullets: ['7B: 5,5 Go VRAM', '14B: 9,5 Go sweet spot', '32B: 20,5 Go meilleur'], updatedDate: '2026-05' },
+      fr: { question: 'Meilleur modèle Qwen pour coder ?', answer: 'Qwen2.5-Coder 32B à 24 Go VRAM (91,5%). 7B à 8 Go, 14B sweet spot à 12 Go.', bullets: ['7B: 5,5 Go VRAM', '14B: 9,5 Go sweet spot', '32B: 20,5 Go meilleur'], updatedDate: '2026-05' },
       ja: { question: 'コーディング向け最適Qwenモデルは？', answer: '24 GB VRAMなら32B (91.5%)、8 GB VRAMなら7B、12 GB VRAMのスイートスポットは14B。', bullets: ['7B：5.5 GB VRAM', '14B：9.5 GB VRAMスイートスポット', '32B：20.5 GB VRAM'], updatedDate: '2026-05' },
       zh: { question: '编程最佳Qwen模型？', answer: '24 GB显存选32B（91.5%），8 GB选7B，12 GB最优选14B。', bullets: ['7B：5.5 GB显存', '14B：9.5 GB最优性价比', '32B：20.5 GB最佳性能'], updatedDate: '2026-05' },
     },
@@ -222,9 +222,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'Qwen3-Coder 32B Q4_K_M: 91,5 % HumanEval — bestes Qwen-Coding-Modell, benötigt 24 GB VRAM',
-          'Qwen3-Coder 14B Q4_K_M: 88,0 % HumanEval bei 9,5 GB VRAM — Sweet Spot für RTX 3080/4070',
-          'Qwen3-Coder 7B Q4_K_M: 79,7 % HumanEval bei 5,5 GB VRAM — für RTX 3060 oder 16 GB RAM',
+          'Qwen2.5-Coder 32B Q4_K_M: 91,5 % HumanEval — bestes Qwen-Coding-Modell, benötigt 24 GB VRAM',
+          'Qwen2.5-Coder 14B Q4_K_M: 88,0 % HumanEval bei 9,5 GB VRAM — Sweet Spot für RTX 3080/4070',
+          'Qwen2.5-Coder 7B Q4_K_M: 79,7 % HumanEval bei 5,5 GB VRAM — für RTX 3060 oder 16 GB RAM',
           'Installation: `ollama pull qwen2.5-coder:7b` / `14b` / `32b`',
         ],
       },
@@ -235,9 +235,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         comparisonTable: {
           columns: ['Modell', 'VRAM (Q4_K_M)', 'HumanEval (%)', 'Geschwindigkeit (GPU)', 'Geeignet für'],
           rows: [
-            { 'Modell': 'Qwen3-Coder 7B',  'VRAM (Q4_K_M)': '5,5 GB',  'HumanEval (%)': '79,7', 'Geschwindigkeit (GPU)': '8–15 tok/s', 'Geeignet für': 'RTX 3060 / 16 GB RAM-Laptop' },
-            { 'Modell': 'Qwen3-Coder 14B', 'VRAM (Q4_K_M)': '9,5 GB',  'HumanEval (%)': '88,0', 'Geschwindigkeit (GPU)': '4–8 tok/s',  'Geeignet für': 'RTX 3080 / RTX 4070 / M2 Pro' },
-            { 'Modell': 'Qwen3-Coder 32B', 'VRAM (Q4_K_M)': '20,5 GB', 'HumanEval (%)': '91,5', 'Geschwindigkeit (GPU)': '2–4 tok/s',  'Geeignet für': 'RTX 4090 / M3 Max 48 GB' },
+            { 'Modell': 'Qwen2.5-Coder 7B',  'VRAM (Q4_K_M)': '5,5 GB',  'HumanEval (%)': '79,7', 'Geschwindigkeit (GPU)': '8–15 tok/s', 'Geeignet für': 'RTX 3060 / 16 GB RAM-Laptop' },
+            { 'Modell': 'Qwen2.5-Coder 14B', 'VRAM (Q4_K_M)': '9,5 GB',  'HumanEval (%)': '88,0', 'Geschwindigkeit (GPU)': '4–8 tok/s',  'Geeignet für': 'RTX 3080 / RTX 4070 / M2 Pro' },
+            { 'Modell': 'Qwen2.5-Coder 32B', 'VRAM (Q4_K_M)': '20,5 GB', 'HumanEval (%)': '91,5', 'Geschwindigkeit (GPU)': '2–4 tok/s',  'Geeignet für': 'RTX 4090 / M3 Max 48 GB' },
           ],
         },
       },
@@ -245,20 +245,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'verdict',
         title: 'Urteil: Welche Größe verwenden',
         content: [
-          '**8 GB VRAM oder weniger (RTX 3060, M2 16 GB):** Qwen3-Coder 7B Q4_K_M. Passt in 5,5 GB VRAM mit Platz für den KV-Cache.',
-          '**12–16 GB VRAM (RTX 3080, RTX 4070, M2 Pro 32 GB):** Qwen3-Coder 14B Q4_K_M. Der Sprung von 7B auf 14B ist der größte Qualitätsgewinn pro VRAM.',
-          '**24 GB VRAM (RTX 4090, M3 Max 48 GB):** Qwen3-Coder 32B Q4_K_M — überbietet GPT-4o mini bei Code-Generierungs-Benchmarks.',
+          '**8 GB VRAM oder weniger (RTX 3060, M2 16 GB):** Qwen2.5-Coder 7B Q4_K_M. Passt in 5,5 GB VRAM mit Platz für den KV-Cache.',
+          '**12–16 GB VRAM (RTX 3080, RTX 4070, M2 Pro 32 GB):** Qwen2.5-Coder 14B Q4_K_M. Der Sprung von 7B auf 14B ist der größte Qualitätsgewinn pro VRAM.',
+          '**24 GB VRAM (RTX 4090, M3 Max 48 GB):** Qwen2.5-Coder 32B Q4_K_M — überbietet GPT-4o mini bei Code-Generierungs-Benchmarks.',
         ],
       },
       faqSection: {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-            { q: 'Ist Qwen3-Coder besser als DeepSeek-Coder für Python?', a: 'Qwen3-Coder 32B erzielt 91,5 % HumanEval vs. ~80 % für DeepSeek-Coder-V2-Lite bei gleichem VRAM.' },
+            { q: 'Ist Qwen3-Coder besser als DeepSeek-Coder für Python?', a: 'Qwen2.5-Coder 32B erzielt 91,5 % HumanEval vs. ~80 % für DeepSeek-Coder-V2-Lite bei gleichem VRAM.' },
             { q: 'Unterstützt Qwen3-Coder chinesische Code-Kommentare?', a: 'Ja. Es verarbeitet gemischte chinesische/englische Code-Kommentare nativ.' },
             { q: 'Kann ich Qwen3-Coder mit Continue.dev oder Cline verwenden?', a: 'Ja. Ollama als Backend konfigurieren, Modell auf `qwen2.5-coder:32b` setzen.' },
             { q: 'Welches Quantisierungsniveau sollte ich verwenden?', a: 'Q4_K_M: bestes Gleichgewicht zwischen Qualität und VRAM-Reduzierung (~35 %).' },
-            { q: 'Bestes Qwen-Coding-Modell bei 8 GB VRAM?', a: 'Qwen3-Coder 7B Q4_K_M — 5,5 GB VRAM, 79,7 % HumanEval.' },
+            { q: 'Bestes Qwen-Coding-Modell bei 8 GB VRAM?', a: 'Qwen2.5-Coder 7B Q4_K_M — 5,5 GB VRAM, 79,7 % HumanEval.' },
           ],
       },
     },
@@ -287,7 +287,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'Ist Qwen3-Coder besser als DeepSeek-Coder für Python?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 32B erzielt 91,5 % HumanEval vs. ~80 % für DeepSeek-Coder-V2-Lite bei gleichem VRAM.',
+              'text': 'Qwen2.5-Coder 32B erzielt 91,5 % HumanEval vs. ~80 % für DeepSeek-Coder-V2-Lite bei gleichem VRAM.',
             },
           },
           {
@@ -319,7 +319,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'Bestes Qwen-Coding-Modell bei 8 GB VRAM?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 7B Q4_K_M — 5,5 GB VRAM, 79,7 % HumanEval.',
+              'text': 'Qwen2.5-Coder 7B Q4_K_M — 5,5 GB VRAM, 79,7 % HumanEval.',
             },
           },
         ],
@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-qwen-model-for-coding-overview-hero-fr.webp',
     title: 'Meilleur modèle Qwen pour le codage ?',
     seoTitle: 'Qwen3-Coder 2026 : 7B vs 14B vs 32B par niveau VRAM',
-    metaDescription: 'Qwen3-Coder 32B en tête à 24 Go VRAM (91,5 % HumanEval). À 8 Go : 7B atteint 79,7 %. Le 14B est le sweet spot à 12 Go. Guide par niveau de VRAM.',
+    metaDescription: 'Qwen2.5-Coder 32B en tête à 24 Go VRAM (91,5 % HumanEval). À 8 Go : 7B atteint 79,7 %. Le 14B est le sweet spot à 12 Go. Guide par niveau de VRAM.',
     publishDate: '2026-05-26',
     dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
@@ -346,11 +346,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       de: { question: 'Bestes Qwen-Modell für Coding?', answer: '32B bei 24 GB VRAM, 14B Sweet Spot bei 12 GB, 7B bei 8 GB.', bullets: ['7B: 5,5 GB VRAM', '14B: Sweet Spot', '32B: beste Qualität'], updatedDate: '2026-05' },
       fr: {
         question: 'Meilleur modèle Qwen pour le codage ?',
-        answer: 'Qwen3-Coder 32B est le meilleur avec 24 Go VRAM (91,5 % HumanEval). À 8 Go VRAM, le 7B atteint 79,7 %. Le 14B est le sweet spot à 12 Go.',
+        answer: 'Qwen2.5-Coder 32B est le meilleur avec 24 Go VRAM (91,5 % HumanEval). À 8 Go VRAM, le 7B atteint 79,7 %. Le 14B est le sweet spot à 12 Go.',
         bullets: [
-          'Qwen3-Coder 7B Q4_K_M : 5,5 Go VRAM, 79,7 % HumanEval',
-          'Qwen3-Coder 14B Q4_K_M : 9,5 Go VRAM, 88,0 % — meilleur rapport qualité/VRAM',
-          'Qwen3-Coder 32B Q4_K_M : 20,5 Go VRAM, 91,5 % — meilleure qualité',
+          'Qwen2.5-Coder 7B Q4_K_M : 5,5 Go VRAM, 79,7 % HumanEval',
+          'Qwen2.5-Coder 14B Q4_K_M : 9,5 Go VRAM, 88,0 % — meilleur rapport qualité/VRAM',
+          'Qwen2.5-Coder 32B Q4_K_M : 20,5 Go VRAM, 91,5 % — meilleure qualité',
         ],
         updatedDate: '2026-05',
       },
@@ -361,9 +361,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'Qwen3-Coder 32B Q4_K_M : 91,5 % HumanEval — meilleur modèle Qwen pour le code, nécessite 24 Go VRAM',
-          'Qwen3-Coder 14B Q4_K_M : 88,0 % HumanEval à 9,5 Go VRAM — sweet spot pour RTX 3080/4070',
-          'Qwen3-Coder 7B Q4_K_M : 79,7 % HumanEval à 5,5 Go VRAM — pour RTX 3060 ou 16 Go RAM',
+          'Qwen2.5-Coder 32B Q4_K_M : 91,5 % HumanEval — meilleur modèle Qwen pour le code, nécessite 24 Go VRAM',
+          'Qwen2.5-Coder 14B Q4_K_M : 88,0 % HumanEval à 9,5 Go VRAM — sweet spot pour RTX 3080/4070',
+          'Qwen2.5-Coder 7B Q4_K_M : 79,7 % HumanEval à 5,5 Go VRAM — pour RTX 3060 ou 16 Go RAM',
           'Installation : `ollama pull qwen2.5-coder:7b` / `14b` / `32b`',
         ],
       },
@@ -374,9 +374,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         comparisonTable: {
           columns: ['Modèle', 'VRAM (Q4_K_M)', 'HumanEval (%)', 'Vitesse (GPU)', 'Idéal pour'],
           rows: [
-            { 'Modèle': 'Qwen3-Coder 7B',  'VRAM (Q4_K_M)': '5,5 Go',  'HumanEval (%)': '79,7', 'Vitesse (GPU)': '8–15 tok/s', 'Idéal pour': 'RTX 3060 / 16 Go RAM' },
-            { 'Modèle': 'Qwen3-Coder 14B', 'VRAM (Q4_K_M)': '9,5 Go',  'HumanEval (%)': '88,0', 'Vitesse (GPU)': '4–8 tok/s',  'Idéal pour': 'RTX 3080 / RTX 4070 / M2 Pro' },
-            { 'Modèle': 'Qwen3-Coder 32B', 'VRAM (Q4_K_M)': '20,5 Go', 'HumanEval (%)': '91,5', 'Vitesse (GPU)': '2–4 tok/s',  'Idéal pour': 'RTX 4090 / M3 Max 48 Go' },
+            { 'Modèle': 'Qwen2.5-Coder 7B',  'VRAM (Q4_K_M)': '5,5 Go',  'HumanEval (%)': '79,7', 'Vitesse (GPU)': '8–15 tok/s', 'Idéal pour': 'RTX 3060 / 16 Go RAM' },
+            { 'Modèle': 'Qwen2.5-Coder 14B', 'VRAM (Q4_K_M)': '9,5 Go',  'HumanEval (%)': '88,0', 'Vitesse (GPU)': '4–8 tok/s',  'Idéal pour': 'RTX 3080 / RTX 4070 / M2 Pro' },
+            { 'Modèle': 'Qwen2.5-Coder 32B', 'VRAM (Q4_K_M)': '20,5 Go', 'HumanEval (%)': '91,5', 'Vitesse (GPU)': '2–4 tok/s',  'Idéal pour': 'RTX 4090 / M3 Max 48 Go' },
           ],
         },
       },
@@ -384,20 +384,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'verdict',
         title: 'Verdict : quelle taille choisir',
         content: [
-          '**8 Go VRAM ou moins :** Qwen3-Coder 7B Q4_K_M. Tient en 5,5 Go VRAM avec espace pour le KV cache.',
-          '**12–16 Go VRAM :** Qwen3-Coder 14B Q4_K_M. Le bond de 7B à 14B est le meilleur gain qualité/VRAM.',
-          '**24 Go VRAM :** Qwen3-Coder 32B Q4_K_M — dépasse GPT-4o mini sur les benchmarks de génération de code.',
+          '**8 Go VRAM ou moins :** Qwen2.5-Coder 7B Q4_K_M. Tient en 5,5 Go VRAM avec espace pour le KV cache.',
+          '**12–16 Go VRAM :** Qwen2.5-Coder 14B Q4_K_M. Le bond de 7B à 14B est le meilleur gain qualité/VRAM.',
+          '**24 Go VRAM :** Qwen2.5-Coder 32B Q4_K_M — dépasse GPT-4o mini sur les benchmarks de génération de code.',
         ],
       },
       faqSection: {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-            { q: 'Qwen3-Coder est-il meilleur que DeepSeek-Coder ?', a: 'Qwen3-Coder 32B atteint 91,5 % HumanEval vs ~80 % pour DeepSeek-Coder-V2-Lite au même VRAM.' },
+            { q: 'Qwen3-Coder est-il meilleur que DeepSeek-Coder ?', a: 'Qwen2.5-Coder 32B atteint 91,5 % HumanEval vs ~80 % pour DeepSeek-Coder-V2-Lite au même VRAM.' },
             { q: 'Qwen3-Coder supporte-t-il les commentaires en chinois ?', a: 'Oui, il gère nativement les commentaires chinois/anglais mixtes.' },
             { q: 'Compatible avec Continue.dev ou Cline ?', a: 'Oui. Configurer Ollama comme backend, modèle `qwen2.5-coder:32b`.' },
             { q: 'Quelle quantisation utiliser ?', a: 'Q4_K_M : meilleur équilibre qualité/réduction VRAM (~35 %).' },
-            { q: 'Meilleur modèle Qwen pour coder à 8 Go VRAM ?', a: 'Qwen3-Coder 7B Q4_K_M — 5,5 Go VRAM, 79,7 % HumanEval.' },
+            { q: 'Meilleur modèle Qwen pour coder à 8 Go VRAM ?', a: 'Qwen2.5-Coder 7B Q4_K_M — 5,5 Go VRAM, 79,7 % HumanEval.' },
           ],
       },
     },
@@ -426,7 +426,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'Qwen3-Coder est-il meilleur que DeepSeek-Coder ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 32B atteint 91,5 % HumanEval vs ~80 % pour DeepSeek-Coder-V2-Lite au même VRAM.',
+              'text': 'Qwen2.5-Coder 32B atteint 91,5 % HumanEval vs ~80 % pour DeepSeek-Coder-V2-Lite au même VRAM.',
             },
           },
           {
@@ -458,7 +458,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'Meilleur modèle Qwen pour coder à 8 Go VRAM ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 7B Q4_K_M — 5,5 Go VRAM, 79,7 % HumanEval.',
+              'text': 'Qwen2.5-Coder 7B Q4_K_M — 5,5 Go VRAM, 79,7 % HumanEval.',
             },
           },
         ],
@@ -470,7 +470,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-qwen-model-for-coding-overview-hero-ja.webp',
     title: 'コーディング向け最適Qwenモデルは？',
     seoTitle: 'コーディング向け最適Qwen3-Coderモデル 2026 | 7B vs 14B vs 32B',
-    metaDescription: 'Qwen3-Coder 32Bが24 GB VRAMで最高（HumanEval 91.5%）。8 GBなら7B（79.7%）。12 GBのスイートスポットは14B。VRAMティア別サイズガイド。',
+    metaDescription: 'Qwen2.5-Coder 32Bが24 GB VRAMで最高（HumanEval 91.5%）。8 GBなら7B（79.7%）。12 GBのスイートスポットは14B。VRAMティア別サイズガイド。',
     publishDate: '2026-05-26',
     dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
@@ -486,11 +486,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       fr: { question: 'Meilleur Qwen pour coder ?', answer: '32B à 24 Go, 14B sweet spot à 12 Go, 7B à 8 Go.', bullets: ['7B: 5,5 Go', '14B: sweet spot', '32B: meilleur'], updatedDate: '2026-05' },
       ja: {
         question: 'コーディング向け最適Qwenモデルは？',
-        answer: 'Qwen3-Coder 32Bが24 GB VRAMで最高性能（HumanEval 91.5%）。8 GB VRAMなら7B（79.7%、8–15 tok/s）。14Bは12 GB VRAMの開発者に最適なスイートスポット。',
+        answer: 'Qwen2.5-Coder 32Bが24 GB VRAMで最高性能（HumanEval 91.5%）。8 GB VRAMなら7B（79.7%、8–15 tok/s）。14Bは12 GB VRAMの開発者に最適なスイートスポット。',
         bullets: [
-          'Qwen3-Coder 7B Q4_K_M：5.5 GB VRAM、HumanEval 79.7%——RTX 3060向け',
-          'Qwen3-Coder 14B Q4_K_M：9.5 GB VRAM、HumanEval 88.0%——スイートスポット',
-          'Qwen3-Coder 32B Q4_K_M：20.5 GB VRAM、HumanEval 91.5%——最高性能',
+          'Qwen2.5-Coder 7B Q4_K_M：5.5 GB VRAM、HumanEval 79.7%——RTX 3060向け',
+          'Qwen2.5-Coder 14B Q4_K_M：9.5 GB VRAM、HumanEval 88.0%——スイートスポット',
+          'Qwen2.5-Coder 32B Q4_K_M：20.5 GB VRAM、HumanEval 91.5%——最高性能',
         ],
         updatedDate: '2026-05',
       },
@@ -500,9 +500,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'Qwen3-Coder 32B Q4_K_M：HumanEval 91.5%——最高のQwenコーディングモデル、24 GB VRAM必要',
-          'Qwen3-Coder 14B Q4_K_M：9.5 GB VRAMでHumanEval 88.0%——RTX 3080/4070のスイートスポット',
-          'Qwen3-Coder 7B Q4_K_M：5.5 GB VRAMでHumanEval 79.7%——RTX 3060や16 GB RAMに対応',
+          'Qwen2.5-Coder 32B Q4_K_M：HumanEval 91.5%——最高のQwenコーディングモデル、24 GB VRAM必要',
+          'Qwen2.5-Coder 14B Q4_K_M：9.5 GB VRAMでHumanEval 88.0%——RTX 3080/4070のスイートスポット',
+          'Qwen2.5-Coder 7B Q4_K_M：5.5 GB VRAMでHumanEval 79.7%——RTX 3060や16 GB RAMに対応',
           'インストール：`ollama pull qwen2.5-coder:7b` / `14b` / `32b`',
         ],
       },
@@ -513,9 +513,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         comparisonTable: {
           columns: ['モデル', 'VRAM (Q4_K_M)', 'HumanEval (%)', 'GPU速度', '推奨環境'],
           rows: [
-            { 'モデル': 'Qwen3-Coder 7B',  'VRAM (Q4_K_M)': '5.5 GB',  'HumanEval (%)': '79.7', 'GPU速度': '8–15 tok/s', '推奨環境': 'RTX 3060 / 16 GB RAM' },
-            { 'モデル': 'Qwen3-Coder 14B', 'VRAM (Q4_K_M)': '9.5 GB',  'HumanEval (%)': '88.0', 'GPU速度': '4–8 tok/s',  '推奨環境': 'RTX 3080 / RTX 4070 / M2 Pro' },
-            { 'モデル': 'Qwen3-Coder 32B', 'VRAM (Q4_K_M)': '20.5 GB', 'HumanEval (%)': '91.5', 'GPU速度': '2–4 tok/s',  '推奨環境': 'RTX 4090 / M3 Max 48 GB' },
+            { 'モデル': 'Qwen2.5-Coder 7B',  'VRAM (Q4_K_M)': '5.5 GB',  'HumanEval (%)': '79.7', 'GPU速度': '8–15 tok/s', '推奨環境': 'RTX 3060 / 16 GB RAM' },
+            { 'モデル': 'Qwen2.5-Coder 14B', 'VRAM (Q4_K_M)': '9.5 GB',  'HumanEval (%)': '88.0', 'GPU速度': '4–8 tok/s',  '推奨環境': 'RTX 3080 / RTX 4070 / M2 Pro' },
+            { 'モデル': 'Qwen2.5-Coder 32B', 'VRAM (Q4_K_M)': '20.5 GB', 'HumanEval (%)': '91.5', 'GPU速度': '2–4 tok/s',  '推奨環境': 'RTX 4090 / M3 Max 48 GB' },
           ],
         },
       },
@@ -523,20 +523,20 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'verdict',
         title: '結論：どのサイズを選ぶか',
         content: [
-          '**8 GB VRAM以下（RTX 3060、M2 16 GB）：** Qwen3-Coder 7B Q4_K_M。KVキャッシュ用のスペースを残してVRAMに収まります。',
-          '**12–16 GB VRAM（RTX 3080、RTX 4070、M2 Pro）：** Qwen3-Coder 14B Q4_K_M。7Bから14Bへの品質向上が最もコスパ高い。',
-          '**24 GB VRAM（RTX 4090、M3 Max 48 GB）：** Qwen3-Coder 32B Q4_K_M——コード生成ベンチマークでGPT-4o miniを上回ります。',
+          '**8 GB VRAM以下（RTX 3060、M2 16 GB）：** Qwen2.5-Coder 7B Q4_K_M。KVキャッシュ用のスペースを残してVRAMに収まります。',
+          '**12–16 GB VRAM（RTX 3080、RTX 4070、M2 Pro）：** Qwen2.5-Coder 14B Q4_K_M。7Bから14Bへの品質向上が最もコスパ高い。',
+          '**24 GB VRAM（RTX 4090、M3 Max 48 GB）：** Qwen2.5-Coder 32B Q4_K_M——コード生成ベンチマークでGPT-4o miniを上回ります。',
         ],
       },
       faqSection: {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-            { q: 'Qwen3-CoderはDeepSeek-CoderよりPython性能が良いですか？', a: 'Qwen3-Coder 32BはHumanEval 91.5%で、同VRAMのDeepSeek-Coder-V2-Lite（~80%）を上回ります。' },
+            { q: 'Qwen3-CoderはDeepSeek-CoderよりPython性能が良いですか？', a: 'Qwen2.5-Coder 32BはHumanEval 91.5%で、同VRAMのDeepSeek-Coder-V2-Lite（~80%）を上回ります。' },
             { q: 'Qwen3-Coderは中国語コメントに対応していますか？', a: 'はい。中英混在コメントをネイティブで処理できます。' },
             { q: 'Continue.devやClineで使えますか？', a: 'はい。OllamaバックエンドとしてモデルをQwen3-Coderに設定するだけです。' },
             { q: '推奨量子化レベルは？', a: 'Q4_K_M——品質とVRAM削減（~35%）の最良バランス。' },
-            { q: '8 GB VRAMでのコーディング向け最適Qwenモデルは？', a: 'Qwen3-Coder 7B Q4_K_M——5.5 GB VRAM、HumanEval 79.7%。' },
+            { q: '8 GB VRAMでのコーディング向け最適Qwenモデルは？', a: 'Qwen2.5-Coder 7B Q4_K_M——5.5 GB VRAM、HumanEval 79.7%。' },
           ],
       },
     },
@@ -565,7 +565,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'Qwen3-CoderはDeepSeek-CoderよりPython性能が良いですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 32BはHumanEval 91.5%で、同VRAMのDeepSeek-Coder-V2-Lite（~80%）を上回ります。',
+              'text': 'Qwen2.5-Coder 32BはHumanEval 91.5%で、同VRAMのDeepSeek-Coder-V2-Lite（~80%）を上回ります。',
             },
           },
           {
@@ -597,7 +597,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': '8 GB VRAMでのコーディング向け最適Qwenモデルは？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 7B Q4_K_M——5.5 GB VRAM、HumanEval 79.7%。',
+              'text': 'Qwen2.5-Coder 7B Q4_K_M——5.5 GB VRAM、HumanEval 79.7%。',
             },
           },
         ],
@@ -609,7 +609,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-qwen-model-for-coding-overview-hero-zh.webp',
     title: '编程最佳Qwen模型是哪个？',
     seoTitle: 'Qwen3-Coder 2026编程对比：7B vs 14B vs 32B各显存层级完整指南',
-    metaDescription: 'Qwen3-Coder 32B在24 GB显存下以91.5% HumanEval得分领先；14B是12 GB显存速度与精度最均衡的选择；7B在8 GB显存下得79.7%，适合低显存设备。三款均支持Ollama本地运行，按显存预算精准匹配，无需订阅费用。',
+    metaDescription: 'Qwen2.5-Coder 32B在24 GB显存下以91.5% HumanEval得分领先；14B是12 GB显存速度与精度最均衡的选择；7B在8 GB显存下得79.7%，适合低显存设备。三款均支持Ollama本地运行，按显存预算精准匹配，无需订阅费用。',
     publishDate: '2026-05-26',
     dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
@@ -626,11 +626,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       ja: { question: 'コーディング向け最適Qwenモデルは？', answer: '24 GB VRAMなら32B、12 GBスイートスポットは14B。', bullets: ['7B：5.5 GB', '14B：スイートスポット'], updatedDate: '2026-05' },
       zh: {
         question: '编程最佳Qwen模型是哪个？',
-        answer: 'Qwen3-Coder 32B在24 GB显存下表现最佳（HumanEval 91.5%）。8 GB显存选7B（79.7%，8–15 tok/s）；12 GB显存最优选择是14B（88.0%）。',
+        answer: 'Qwen2.5-Coder 32B在24 GB显存下表现最佳（HumanEval 91.5%）。8 GB显存选7B（79.7%，8–15 tok/s）；12 GB显存最优选择是14B（88.0%）。',
         bullets: [
-          'Qwen3-Coder 7B Q4_K_M：5.5 GB显存，HumanEval 79.7%，8–15 tok/s——RTX 3060或16 GB内存适用',
-          'Qwen3-Coder 14B Q4_K_M：9.5 GB显存，HumanEval 88.0%——性价比最优',
-          'Qwen3-Coder 32B Q4_K_M：20.5 GB显存，HumanEval 91.5%——最高性能',
+          'Qwen2.5-Coder 7B Q4_K_M：5.5 GB显存，HumanEval 79.7%，8–15 tok/s——RTX 3060或16 GB内存适用',
+          'Qwen2.5-Coder 14B Q4_K_M：9.5 GB显存，HumanEval 88.0%——性价比最优',
+          'Qwen2.5-Coder 32B Q4_K_M：20.5 GB显存，HumanEval 91.5%——最高性能',
           '纯CPU（无独立显卡）：16 GB内存运行7B，约8 tok/s',
         ],
         updatedDate: '2026-05',
@@ -640,9 +640,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'Qwen3-Coder 32B Q4_K_M：HumanEval 91.5%——最佳Qwen编程模型，需24 GB显存',
-          'Qwen3-Coder 14B Q4_K_M：9.5 GB显存下HumanEval 88.0%——RTX 3080/4070的最优选择',
-          'Qwen3-Coder 7B Q4_K_M：5.5 GB显存下HumanEval 79.7%——RTX 3060或16 GB内存可用',
+          'Qwen2.5-Coder 32B Q4_K_M：HumanEval 91.5%——最佳Qwen编程模型，需24 GB显存',
+          'Qwen2.5-Coder 14B Q4_K_M：9.5 GB显存下HumanEval 88.0%——RTX 3080/4070的最优选择',
+          'Qwen2.5-Coder 7B Q4_K_M：5.5 GB显存下HumanEval 79.7%——RTX 3060或16 GB内存可用',
           '安装命令：`ollama pull qwen2.5-coder:7b` / `14b` / `32b`',
         ],
       },
@@ -653,9 +653,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         comparisonTable: {
           columns: ['模型', '显存 (Q4_K_M)', 'HumanEval (%)', 'GPU速度', '适用场景'],
           rows: [
-            { '模型': 'Qwen3-Coder 7B',  '显存 (Q4_K_M)': '5.5 GB',  'HumanEval (%)': '79.7', 'GPU速度': '8–15 tok/s', '适用场景': 'RTX 3060 / 16 GB内存' },
-            { '模型': 'Qwen3-Coder 14B', '显存 (Q4_K_M)': '9.5 GB',  'HumanEval (%)': '88.0', 'GPU速度': '4–8 tok/s',  '适用场景': 'RTX 3080 / RTX 4070 / M2 Pro' },
-            { '模型': 'Qwen3-Coder 32B', '显存 (Q4_K_M)': '20.5 GB', 'HumanEval (%)': '91.5', 'GPU速度': '2–4 tok/s',  '适用场景': 'RTX 4090 / M3 Max 48 GB' },
+            { '模型': 'Qwen2.5-Coder 7B',  '显存 (Q4_K_M)': '5.5 GB',  'HumanEval (%)': '79.7', 'GPU速度': '8–15 tok/s', '适用场景': 'RTX 3060 / 16 GB内存' },
+            { '模型': 'Qwen2.5-Coder 14B', '显存 (Q4_K_M)': '9.5 GB',  'HumanEval (%)': '88.0', 'GPU速度': '4–8 tok/s',  '适用场景': 'RTX 3080 / RTX 4070 / M2 Pro' },
+            { '模型': 'Qwen2.5-Coder 32B', '显存 (Q4_K_M)': '20.5 GB', 'HumanEval (%)': '91.5', 'GPU速度': '2–4 tok/s',  '适用场景': 'RTX 4090 / M3 Max 48 GB' },
           ],
         },
       },
@@ -663,9 +663,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'verdict',
         title: '结论：选哪个规格',
         content: [
-          '**8 GB显存或更少（RTX 3060、M2 16 GB）：** Qwen3-Coder 7B Q4_K_M。5.5 GB显存装载后还有KV缓存空间。',
-          '**12–16 GB显存（RTX 3080、RTX 4070、M2 Pro）：** Qwen3-Coder 14B Q4_K_M。从7B到14B是Coder系列中性价比最高的提升。',
-          '**24 GB显存（RTX 4090、M3 Max 48 GB）：** Qwen3-Coder 32B Q4_K_M——代码生成基准测试超越GPT-4o mini，多文件上下文处理更强。',
+          '**8 GB显存或更少（RTX 3060、M2 16 GB）：** Qwen2.5-Coder 7B Q4_K_M。5.5 GB显存装载后还有KV缓存空间。',
+          '**12–16 GB显存（RTX 3080、RTX 4070、M2 Pro）：** Qwen2.5-Coder 14B Q4_K_M。从7B到14B是Coder系列中性价比最高的提升。',
+          '**24 GB显存（RTX 4090、M3 Max 48 GB）：** Qwen2.5-Coder 32B Q4_K_M——代码生成基准测试超越GPT-4o mini，多文件上下文处理更强。',
           '**纯CPU（无独立GPU）：** 16 GB内存运行7B Q4_K_M，约8 tok/s——偶尔生成可接受，实时自动补全偏慢。',
         ],
       },
@@ -673,11 +673,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-            { q: 'Qwen3-Coder比DeepSeek-Coder更适合Python吗？', a: 'Qwen3-Coder 32B HumanEval 91.5%，同显存的DeepSeek-Coder-V2-Lite约80%。Python专项Qwen3-Coder 32B领先。' },
+            { q: 'Qwen3-Coder比DeepSeek-Coder更适合Python吗？', a: 'Qwen2.5-Coder 32B HumanEval 91.5%，同显存的DeepSeek-Coder-V2-Lite约80%。Python专项Qwen2.5-Coder 32B领先。' },
             { q: 'Qwen3-Coder支持中文代码注释吗？', a: '支持。原生处理中英混合代码注释——对中文开发者是显著优势。' },
             { q: '可以与Continue.dev或Cline配合使用吗？', a: '可以。两者均支持Ollama后端，在设置中将模型设为`qwen2.5-coder:32b`即可。' },
             { q: '应该使用哪种量化级别？', a: 'Q4_K_M：质量与显存节省（~35%）的最佳平衡。' },
-            { q: '8 GB显存下编程最佳Qwen模型？', a: 'Qwen3-Coder 7B Q4_K_M——5.5 GB显存，HumanEval 79.7%。' },
+            { q: '8 GB显存下编程最佳Qwen模型？', a: 'Qwen2.5-Coder 7B Q4_K_M——5.5 GB显存，HumanEval 79.7%。' },
           ],
       },
       relatedReading: {
@@ -714,7 +714,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'Qwen3-Coder比DeepSeek-Coder更适合Python吗？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 32B HumanEval 91.5%，同显存的DeepSeek-Coder-V2-Lite约80%。Python专项Qwen3-Coder 32B领先。',
+              'text': 'Qwen2.5-Coder 32B HumanEval 91.5%，同显存的DeepSeek-Coder-V2-Lite约80%。Python专项Qwen2.5-Coder 32B领先。',
             },
           },
           {
@@ -746,7 +746,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': '8 GB显存下编程最佳Qwen模型？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 7B Q4_K_M——5.5 GB显存，HumanEval 79.7%。',
+              'text': 'Qwen2.5-Coder 7B Q4_K_M——5.5 GB显存，HumanEval 79.7%。',
             },
           },
         ],
@@ -758,7 +758,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-qwen-model-for-coding-overview-hero-pt.webp',
     title: 'Qual é o melhor modelo Qwen para programar?',
     seoTitle: 'Qwen3-Coder 2026: 7B vs 14B vs 32B por nível de VRAM',
-    metaDescription: 'Qwen3-Coder 32B lidera com 24 GB de VRAM (HumanEval 91,5%). Com 8 GB o 7B alcança 79,7%. O 14B é o ponto ideal para a maioria dos desenvolvedores em 12 GB. Guia por hardware.',
+    metaDescription: 'Qwen2.5-Coder 32B lidera com 24 GB de VRAM (HumanEval 91,5%). Com 8 GB o 7B alcança 79,7%. O 14B é o ponto ideal para a maioria dos desenvolvedores em 12 GB. Guia por hardware.',
     publishDate: '2026-05-26',
     dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
@@ -776,11 +776,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       zh: { question: '编程最佳Qwen模型？', answer: '24 GB显存选32B，12 GB选14B。', bullets: ['7B：5.5 GB显存', '14B：最优性价比'], updatedDate: '2026-05' },
       pt: {
         question: 'Qual é o melhor modelo Qwen para programar?',
-        answer: 'Qwen3-Coder 32B é o melhor com 24 GB de VRAM (HumanEval 91,5%). Com 8 GB de VRAM o 7B alcança 79,7%. O 14B é o ponto ideal em 12 GB de VRAM.',
+        answer: 'Qwen2.5-Coder 32B é o melhor com 24 GB de VRAM (HumanEval 91,5%). Com 8 GB de VRAM o 7B alcança 79,7%. O 14B é o ponto ideal em 12 GB de VRAM.',
         bullets: [
-          'Qwen3-Coder 7B Q4_K_M: 5,5 GB VRAM, HumanEval 79,7%',
-          'Qwen3-Coder 14B Q4_K_M: 9,5 GB VRAM, HumanEval 88,0% — ponto ideal',
-          'Qwen3-Coder 32B Q4_K_M: 20,5 GB VRAM, HumanEval 91,5% — máxima qualidade',
+          'Qwen2.5-Coder 7B Q4_K_M: 5,5 GB VRAM, HumanEval 79,7%',
+          'Qwen2.5-Coder 14B Q4_K_M: 9,5 GB VRAM, HumanEval 88,0% — ponto ideal',
+          'Qwen2.5-Coder 32B Q4_K_M: 20,5 GB VRAM, HumanEval 91,5% — máxima qualidade',
         ],
         updatedDate: '2026-05',
       },
@@ -789,9 +789,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'Qwen3-Coder 32B Q4_K_M: HumanEval 91,5% — melhor modelo Qwen para código, precisa de 24 GB de VRAM',
-          'Qwen3-Coder 14B Q4_K_M: HumanEval 88,0% com 9,5 GB de VRAM — ponto ideal para RTX 3080/4070',
-          'Qwen3-Coder 7B Q4_K_M: HumanEval 79,7% com 5,5 GB de VRAM — funciona com RTX 3060 ou 16 GB de RAM',
+          'Qwen2.5-Coder 32B Q4_K_M: HumanEval 91,5% — melhor modelo Qwen para código, precisa de 24 GB de VRAM',
+          'Qwen2.5-Coder 14B Q4_K_M: HumanEval 88,0% com 9,5 GB de VRAM — ponto ideal para RTX 3080/4070',
+          'Qwen2.5-Coder 7B Q4_K_M: HumanEval 79,7% com 5,5 GB de VRAM — funciona com RTX 3060 ou 16 GB de RAM',
           'Instalação: `ollama pull qwen2.5-coder:7b` / `14b` / `32b`',
         ],
       },
@@ -802,9 +802,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         comparisonTable: {
           columns: ['Modelo', 'VRAM (Q4_K_M)', 'HumanEval (%)', 'Velocidade (GPU)', 'Melhor para'],
           rows: [
-            { 'Modelo': 'Qwen3-Coder 7B',  'VRAM (Q4_K_M)': '5,5 GB',  'HumanEval (%)': '79,7', 'Velocidade (GPU)': '8–15 tok/s', 'Melhor para': 'RTX 3060 / 16 GB de RAM' },
-            { 'Modelo': 'Qwen3-Coder 14B', 'VRAM (Q4_K_M)': '9,5 GB',  'HumanEval (%)': '88,0', 'Velocidade (GPU)': '4–8 tok/s',  'Melhor para': 'RTX 3080 / RTX 4070 / M2 Pro' },
-            { 'Modelo': 'Qwen3-Coder 32B', 'VRAM (Q4_K_M)': '20,5 GB', 'HumanEval (%)': '91,5', 'Velocidade (GPU)': '2–4 tok/s',  'Melhor para': 'RTX 4090 / M3 Max 48 GB' },
+            { 'Modelo': 'Qwen2.5-Coder 7B',  'VRAM (Q4_K_M)': '5,5 GB',  'HumanEval (%)': '79,7', 'Velocidade (GPU)': '8–15 tok/s', 'Melhor para': 'RTX 3060 / 16 GB de RAM' },
+            { 'Modelo': 'Qwen2.5-Coder 14B', 'VRAM (Q4_K_M)': '9,5 GB',  'HumanEval (%)': '88,0', 'Velocidade (GPU)': '4–8 tok/s',  'Melhor para': 'RTX 3080 / RTX 4070 / M2 Pro' },
+            { 'Modelo': 'Qwen2.5-Coder 32B', 'VRAM (Q4_K_M)': '20,5 GB', 'HumanEval (%)': '91,5', 'Velocidade (GPU)': '2–4 tok/s',  'Melhor para': 'RTX 4090 / M3 Max 48 GB' },
           ],
         },
       },
@@ -812,9 +812,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'verdict',
         title: 'Veredicto: qual tamanho executar',
         content: [
-          '**8 GB de VRAM ou menos (RTX 3060, M2 16 GB):** Qwen3-Coder 7B Q4_K_M. Cabe em 5,5 GB de VRAM com espaço para o cache KV. Para autocompletar e gerar funções em um plugin de IDE, 79,7% de HumanEval é suficiente.',
-          '**12–16 GB de VRAM (RTX 3080, RTX 4070, M2 Pro):** Qwen3-Coder 14B Q4_K_M. O salto de 7B para 14B é o maior ganho de qualidade por VRAM da família Qwen Coder.',
-          '**24 GB de VRAM (RTX 4090, M3 Max 48 GB):** Qwen3-Coder 32B Q4_K_M. Supera o GPT-4o mini em benchmarks de geração de código e lida melhor com contexto de múltiplos arquivos.',
+          '**8 GB de VRAM ou menos (RTX 3060, M2 16 GB):** Qwen2.5-Coder 7B Q4_K_M. Cabe em 5,5 GB de VRAM com espaço para o cache KV. Para autocompletar e gerar funções em um plugin de IDE, 79,7% de HumanEval é suficiente.',
+          '**12–16 GB de VRAM (RTX 3080, RTX 4070, M2 Pro):** Qwen2.5-Coder 14B Q4_K_M. O salto de 7B para 14B é o maior ganho de qualidade por VRAM da família Qwen Coder.',
+          '**24 GB de VRAM (RTX 4090, M3 Max 48 GB):** Qwen2.5-Coder 32B Q4_K_M. Supera o GPT-4o mini em benchmarks de geração de código e lida melhor com contexto de múltiplos arquivos.',
           '**Apenas CPU (sem GPU dedicada):** 7B Q4_K_M com 16 GB de RAM, ~8 tok/s. Aceitável para geração ocasional; lento demais para autocompletar em tempo real.',
         ],
       },
@@ -822,12 +822,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-            { q: 'Qwen3-Coder é melhor que DeepSeek-Coder para Python?', a: 'Qwen3-Coder 32B obtém 91,5% de HumanEval frente a ~80% do DeepSeek-Coder-V2-Lite. Para Python especificamente, Qwen3-Coder 32B lidera no mesmo nível de VRAM.' },
+            { q: 'Qwen3-Coder é melhor que DeepSeek-Coder para Python?', a: 'Qwen2.5-Coder 32B obtém 91,5% de HumanEval frente a ~80% do DeepSeek-Coder-V2-Lite. Para Python especificamente, Qwen2.5-Coder 32B lidera no mesmo nível de VRAM.' },
             { q: 'Qwen3-Coder suporta comentários em chinês?', a: 'Sim. Lida nativamente com comentários de código mistos chinês/inglês — uma vantagem significativa para desenvolvedores chineses.' },
             { q: 'Posso usar Qwen3-Coder com Continue.dev ou Cline?', a: 'Sim. Ambos suportam backends Ollama. Defina o modelo como `qwen2.5-coder:32b` na configuração do Continue.dev ou nas configurações do Cline.' },
             { q: 'Qual nível de quantização devo usar?', a: 'Q4_K_M é o melhor equilíbrio: qualidade quase igual à precisão total com ~35% de redução de VRAM. Use Q8_0 apenas se tiver VRAM sobrando e quiser máxima precisão.' },
-            { q: 'Qual é o melhor modelo Qwen para programar com 8 GB de VRAM?', a: 'Qwen3-Coder 7B Q4_K_M — cabe em 5,5 GB de VRAM, HumanEval 79,7%, 8–15 tok/s.' },
-            { q: 'Qual é o melhor modelo Qwen para programar com 12–16 GB de VRAM?', a: 'Qwen3-Coder 14B Q4_K_M — 9,5 GB de VRAM, HumanEval 88,0%, a melhor relação qualidade/VRAM da família.' },
+            { q: 'Qual é o melhor modelo Qwen para programar com 8 GB de VRAM?', a: 'Qwen2.5-Coder 7B Q4_K_M — cabe em 5,5 GB de VRAM, HumanEval 79,7%, 8–15 tok/s.' },
+            { q: 'Qual é o melhor modelo Qwen para programar com 12–16 GB de VRAM?', a: 'Qwen2.5-Coder 14B Q4_K_M — 9,5 GB de VRAM, HumanEval 88,0%, a melhor relação qualidade/VRAM da família.' },
           ],
       },
     },
@@ -857,7 +857,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'Qwen3-Coder é melhor que DeepSeek-Coder para Python?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 32B obtém 91,5% de HumanEval frente a ~80% do DeepSeek-Coder-V2-Lite. Para Python especificamente, Qwen3-Coder 32B lidera no mesmo nível de VRAM.',
+              'text': 'Qwen2.5-Coder 32B obtém 91,5% de HumanEval frente a ~80% do DeepSeek-Coder-V2-Lite. Para Python especificamente, Qwen2.5-Coder 32B lidera no mesmo nível de VRAM.',
             },
           },
           {
@@ -889,7 +889,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'Qual é o melhor modelo Qwen para programar com 8 GB de VRAM?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 7B Q4_K_M — cabe em 5,5 GB de VRAM, HumanEval 79,7%, 8–15 tok/s.',
+              'text': 'Qwen2.5-Coder 7B Q4_K_M — cabe em 5,5 GB de VRAM, HumanEval 79,7%, 8–15 tok/s.',
             },
           },
           {
@@ -897,7 +897,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'Qual é o melhor modelo Qwen para programar com 12–16 GB de VRAM?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 14B Q4_K_M — 9,5 GB de VRAM, HumanEval 88,0%, a melhor relação qualidade/VRAM da família.',
+              'text': 'Qwen2.5-Coder 14B Q4_K_M — 9,5 GB de VRAM, HumanEval 88,0%, a melhor relação qualidade/VRAM da família.',
             },
           },
         ],
@@ -908,7 +908,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-qwen-model-for-coding-overview-hero-es.webp',
     title: '¿Cuál es el mejor modelo Qwen para programar?',
     seoTitle: 'Qwen3-Coder 2026: 7B vs 14B vs 32B por nivel de VRAM',
-    metaDescription: 'Qwen3-Coder 32B lidera con 24 GB de VRAM (HumanEval 91,5%). Con 8 GB el 7B logra 79,7%. El 14B es el punto óptimo a 12 GB. Guía de tamaños por hardware.',
+    metaDescription: 'Qwen2.5-Coder 32B lidera con 24 GB de VRAM (HumanEval 91,5%). Con 8 GB el 7B logra 79,7%. El 14B es el punto óptimo a 12 GB. Guía de tamaños por hardware.',
     publishDate: '2026-05-26',
     dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
@@ -926,11 +926,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       zh: { question: '编程最佳Qwen模型？', answer: '24 GB显存选32B，12 GB选14B。', bullets: ['7B：5.5 GB显存', '14B：最优性价比'], updatedDate: '2026-05' },
       es: {
         question: '¿Cuál es el mejor modelo Qwen para programar?',
-        answer: 'Qwen3-Coder 32B es el mejor con 24 GB VRAM (HumanEval 91.5%). A 8 GB VRAM el 7B alcanza 79.7%. El 14B es el punto óptimo a 12 GB VRAM.',
+        answer: 'Qwen2.5-Coder 32B es el mejor con 24 GB VRAM (HumanEval 91.5%). A 8 GB VRAM el 7B alcanza 79.7%. El 14B es el punto óptimo a 12 GB VRAM.',
         bullets: [
-          'Qwen3-Coder 7B Q4_K_M: 5.5 GB VRAM, HumanEval 79.7%',
-          'Qwen3-Coder 14B Q4_K_M: 9.5 GB VRAM, HumanEval 88.0% — punto óptimo',
-          'Qwen3-Coder 32B Q4_K_M: 20.5 GB VRAM, HumanEval 91.5% — máxima calidad',
+          'Qwen2.5-Coder 7B Q4_K_M: 5.5 GB VRAM, HumanEval 79.7%',
+          'Qwen2.5-Coder 14B Q4_K_M: 9.5 GB VRAM, HumanEval 88.0% — punto óptimo',
+          'Qwen2.5-Coder 32B Q4_K_M: 20.5 GB VRAM, HumanEval 91.5% — máxima calidad',
         ],
         updatedDate: '2026-05',
       },
@@ -939,9 +939,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'Qwen3-Coder 32B Q4_K_M: HumanEval 91.5% — mejor modelo Qwen para código, necesita 24 GB VRAM',
-          'Qwen3-Coder 14B Q4_K_M: HumanEval 88.0% a 9.5 GB VRAM — punto óptimo para RTX 3080/4070',
-          'Qwen3-Coder 7B Q4_K_M: HumanEval 79.7% a 5.5 GB VRAM — funciona con RTX 3060 o 16 GB RAM',
+          'Qwen2.5-Coder 32B Q4_K_M: HumanEval 91.5% — mejor modelo Qwen para código, necesita 24 GB VRAM',
+          'Qwen2.5-Coder 14B Q4_K_M: HumanEval 88.0% a 9.5 GB VRAM — punto óptimo para RTX 3080/4070',
+          'Qwen2.5-Coder 7B Q4_K_M: HumanEval 79.7% a 5.5 GB VRAM — funciona con RTX 3060 o 16 GB RAM',
           'Instalación: `ollama pull qwen2.5-coder:7b` / `14b` / `32b`',
         ],
       },
@@ -952,9 +952,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         comparisonTable: {
           columns: ['Modelo', 'VRAM (Q4_K_M)', 'HumanEval (%)', 'Velocidad (GPU)', 'Mejor para'],
           rows: [
-            { 'Modelo': 'Qwen3-Coder 7B',  'VRAM (Q4_K_M)': '5.5 GB',  'HumanEval (%)': '79.7', 'Velocidad (GPU)': '8–15 tok/s', 'Mejor para': 'RTX 3060 / 16 GB RAM' },
-            { 'Modelo': 'Qwen3-Coder 14B', 'VRAM (Q4_K_M)': '9.5 GB',  'HumanEval (%)': '88.0', 'Velocidad (GPU)': '4–8 tok/s',  'Mejor para': 'RTX 3080 / RTX 4070 / M2 Pro' },
-            { 'Modelo': 'Qwen3-Coder 32B', 'VRAM (Q4_K_M)': '20.5 GB', 'HumanEval (%)': '91.5', 'Velocidad (GPU)': '2–4 tok/s',  'Mejor para': 'RTX 4090 / M3 Max 48 GB' },
+            { 'Modelo': 'Qwen2.5-Coder 7B',  'VRAM (Q4_K_M)': '5.5 GB',  'HumanEval (%)': '79.7', 'Velocidad (GPU)': '8–15 tok/s', 'Mejor para': 'RTX 3060 / 16 GB RAM' },
+            { 'Modelo': 'Qwen2.5-Coder 14B', 'VRAM (Q4_K_M)': '9.5 GB',  'HumanEval (%)': '88.0', 'Velocidad (GPU)': '4–8 tok/s',  'Mejor para': 'RTX 3080 / RTX 4070 / M2 Pro' },
+            { 'Modelo': 'Qwen2.5-Coder 32B', 'VRAM (Q4_K_M)': '20.5 GB', 'HumanEval (%)': '91.5', 'Velocidad (GPU)': '2–4 tok/s',  'Mejor para': 'RTX 4090 / M3 Max 48 GB' },
           ],
         },
       },
@@ -962,9 +962,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'verdict',
         title: 'Veredicto: qué tamaño ejecutar',
         content: [
-          '**8 GB VRAM o menos (RTX 3060, M2 16 GB):** Qwen3-Coder 7B Q4_K_M. Cabe en 5.5 GB VRAM con margen para la caché KV. Para autocompletado y generación de funciones en un plugin de IDE, 79.7% HumanEval es suficiente.',
-          '**12–16 GB VRAM (RTX 3080, RTX 4070, M2 Pro):** Qwen3-Coder 14B Q4_K_M. El salto de 7B a 14B es el mayor en calidad por VRAM de la familia Qwen Coder.',
-          '**24 GB VRAM (RTX 4090, M3 Max 48 GB):** Qwen3-Coder 32B Q4_K_M. Supera a GPT-4o mini en benchmarks de generación de código y maneja mejor el contexto multi-archivo.',
+          '**8 GB VRAM o menos (RTX 3060, M2 16 GB):** Qwen2.5-Coder 7B Q4_K_M. Cabe en 5.5 GB VRAM con margen para la caché KV. Para autocompletado y generación de funciones en un plugin de IDE, 79.7% HumanEval es suficiente.',
+          '**12–16 GB VRAM (RTX 3080, RTX 4070, M2 Pro):** Qwen2.5-Coder 14B Q4_K_M. El salto de 7B a 14B es el mayor en calidad por VRAM de la familia Qwen Coder.',
+          '**24 GB VRAM (RTX 4090, M3 Max 48 GB):** Qwen2.5-Coder 32B Q4_K_M. Supera a GPT-4o mini en benchmarks de generación de código y maneja mejor el contexto multi-archivo.',
           '**Solo CPU (sin GPU dedicada):** 7B Q4_K_M con 16 GB RAM, ~8 tok/s. Aceptable para generación ocasional; demasiado lento para autocompletado en tiempo real.',
         ],
       },
@@ -972,12 +972,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-            { q: '¿Es Qwen3-Coder mejor que DeepSeek-Coder para Python?', a: 'Qwen3-Coder 32B obtiene 91.5% HumanEval frente a ~80% de DeepSeek-Coder-V2-Lite. Para Python específicamente, Qwen3-Coder 32B lidera al mismo nivel de VRAM.' },
+            { q: '¿Es Qwen3-Coder mejor que DeepSeek-Coder para Python?', a: 'Qwen2.5-Coder 32B obtiene 91.5% HumanEval frente a ~80% de DeepSeek-Coder-V2-Lite. Para Python específicamente, Qwen2.5-Coder 32B lidera al mismo nivel de VRAM.' },
             { q: '¿Qwen3-Coder admite comentarios en chino?', a: 'Sí. Maneja comentarios de código mixtos chino/inglés de forma nativa — una ventaja significativa para desarrolladores chinos.' },
             { q: '¿Puedo usar Qwen3-Coder con Continue.dev o Cline?', a: 'Sí. Ambos admiten backends de Ollama. Establece el modelo como `qwen2.5-coder:32b` en la configuración de Continue.dev o Cline.' },
             { q: '¿Qué nivel de cuantización debo usar?', a: 'Q4_K_M es el mejor equilibrio: calidad casi igual a la precisión completa con ~35% de reducción de VRAM. Usa Q8_0 solo si tienes VRAM de sobra y quieres máxima precisión.' },
-            { q: '¿Cuál es el mejor modelo Qwen para programar con 8 GB VRAM?', a: 'Qwen3-Coder 7B Q4_K_M — cabe en 5.5 GB VRAM, HumanEval 79.7%, 8–15 tok/s.' },
-            { q: '¿Cuál es el mejor modelo Qwen para programar con 12–16 GB VRAM?', a: 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM, HumanEval 88.0%, la mejor relación calidad/VRAM de la familia.' },
+            { q: '¿Cuál es el mejor modelo Qwen para programar con 8 GB VRAM?', a: 'Qwen2.5-Coder 7B Q4_K_M — cabe en 5.5 GB VRAM, HumanEval 79.7%, 8–15 tok/s.' },
+            { q: '¿Cuál es el mejor modelo Qwen para programar con 12–16 GB VRAM?', a: 'Qwen2.5-Coder 14B Q4_K_M — 9.5 GB VRAM, HumanEval 88.0%, la mejor relación calidad/VRAM de la familia.' },
           ],
       },
     },
@@ -1007,7 +1007,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': '¿Es Qwen3-Coder mejor que DeepSeek-Coder para Python?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 32B obtiene 91.5% HumanEval frente a ~80% de DeepSeek-Coder-V2-Lite. Para Python específicamente, Qwen3-Coder 32B lidera al mismo nivel de VRAM.',
+              'text': 'Qwen2.5-Coder 32B obtiene 91.5% HumanEval frente a ~80% de DeepSeek-Coder-V2-Lite. Para Python específicamente, Qwen2.5-Coder 32B lidera al mismo nivel de VRAM.',
             },
           },
           {
@@ -1039,7 +1039,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': '¿Cuál es el mejor modelo Qwen para programar con 8 GB VRAM?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 7B Q4_K_M — cabe en 5.5 GB VRAM, HumanEval 79.7%, 8–15 tok/s.',
+              'text': 'Qwen2.5-Coder 7B Q4_K_M — cabe en 5.5 GB VRAM, HumanEval 79.7%, 8–15 tok/s.',
             },
           },
           {
@@ -1047,7 +1047,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': '¿Cuál es el mejor modelo Qwen para programar con 12–16 GB VRAM?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM, HumanEval 88.0%, la mejor relación calidad/VRAM de la familia.',
+              'text': 'Qwen2.5-Coder 14B Q4_K_M — 9.5 GB VRAM, HumanEval 88.0%, la mejor relación calidad/VRAM de la familia.',
             },
           },
         ],
@@ -1058,7 +1058,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-qwen-model-for-coding-overview-hero-ar.webp',
     title: 'ما هو أفضل نموذج ⁨Qwen⁩ للبرمجة؟',
     seoTitle: '⁨Qwen3-Coder⁩ للبرمجة ⁨2026⁩: ⁨7B⁩ مقابل ⁨14B⁩ مقابل ⁨32B⁩',
-    metaDescription: '⁨Qwen3-Coder 32B⁩ يحقق ⁨91.5% HumanEval⁩ بـ⁨24 GB VRAM. 14B⁩ النقطة المثلى بـ⁨9.5 GB⁩ (⁨88.0%⁩). ⁨7B⁩ يعمل بـ⁨5.5 GB⁩ على ⁨RTX 3060⁩ بـ⁨8⁩–⁨15⁩ رمز/ثانية.',
+    metaDescription: '⁨Qwen2.5-Coder 32B⁩ يحقق ⁨91.5% HumanEval⁩ بـ⁨24 GB VRAM. 14B⁩ النقطة المثلى بـ⁨9.5 GB⁩ (⁨88.0%⁩). ⁨7B⁩ يعمل بـ⁨5.5 GB⁩ على ⁨RTX 3060⁩ بـ⁨8⁩–⁨15⁩ رمز/ثانية.',
     publishDate: '2026-05-26',
     dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
@@ -1071,11 +1071,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'ما هو أفضل نموذج Qwen للبرمجة؟',
-        answer: 'Qwen3-Coder 32B هو الأفضل بـ24 GB VRAM (HumanEval 91.5%). بـ8 GB VRAM يحقق 7B نسبة 79.7%. 14B هو النقطة المثلى بـ12 GB VRAM.',
+        answer: 'Qwen2.5-Coder 32B هو الأفضل بـ24 GB VRAM (HumanEval 91.5%). بـ8 GB VRAM يحقق 7B نسبة 79.7%. 14B هو النقطة المثلى بـ12 GB VRAM.',
         bullets: [
-          'Qwen3-Coder 7B Q4_K_M: 5.5 GB VRAM، HumanEval 79.7%',
-          'Qwen3-Coder 14B Q4_K_M: 9.5 GB VRAM، HumanEval 88.0% — النقطة المثلى',
-          'Qwen3-Coder 32B Q4_K_M: 20.5 GB VRAM، HumanEval 91.5% — أعلى جودة',
+          'Qwen2.5-Coder 7B Q4_K_M: 5.5 GB VRAM، HumanEval 79.7%',
+          'Qwen2.5-Coder 14B Q4_K_M: 9.5 GB VRAM، HumanEval 88.0% — النقطة المثلى',
+          'Qwen2.5-Coder 32B Q4_K_M: 20.5 GB VRAM، HumanEval 91.5% — أعلى جودة',
         ],
         updatedDate: '2026-05',
       },
@@ -1084,9 +1084,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'Qwen3-Coder 32B Q4_K_M: HumanEval 91.5% — أفضل نموذج Qwen للبرمجة، يحتاج 24 GB VRAM',
-          'Qwen3-Coder 14B Q4_K_M: HumanEval 88.0% بـ9.5 GB VRAM — النقطة المثلى لـRTX 3080/4070',
-          'Qwen3-Coder 7B Q4_K_M: HumanEval 79.7% بـ5.5 GB VRAM — يعمل مع RTX 3060 أو 16 GB RAM',
+          'Qwen2.5-Coder 32B Q4_K_M: HumanEval 91.5% — أفضل نموذج Qwen للبرمجة، يحتاج 24 GB VRAM',
+          'Qwen2.5-Coder 14B Q4_K_M: HumanEval 88.0% بـ9.5 GB VRAM — النقطة المثلى لـRTX 3080/4070',
+          'Qwen2.5-Coder 7B Q4_K_M: HumanEval 79.7% بـ5.5 GB VRAM — يعمل مع RTX 3060 أو 16 GB RAM',
           'التثبيت: `ollama pull qwen2.5-coder:7b` / `14b` / `32b`',
         ],
       },
@@ -1097,9 +1097,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         comparisonTable: {
           columns: ['النموذج', 'VRAM (Q4_K_M)', 'HumanEval (%)', 'السرعة (GPU)', 'الأفضل لـ'],
           rows: [
-            { 'النموذج': 'Qwen3-Coder 7B',  'VRAM (Q4_K_M)': '5.5 GB',  'HumanEval (%)': '79.7', 'السرعة (GPU)': '8–15 رمز/ثانية', 'الأفضل لـ': 'RTX 3060 / 16 GB RAM' },
-            { 'النموذج': 'Qwen3-Coder 14B', 'VRAM (Q4_K_M)': '9.5 GB',  'HumanEval (%)': '88.0', 'السرعة (GPU)': '4–8 رمز/ثانية',  'الأفضل لـ': 'RTX 3080 / RTX 4070 / M2 Pro' },
-            { 'النموذج': 'Qwen3-Coder 32B', 'VRAM (Q4_K_M)': '20.5 GB', 'HumanEval (%)': '91.5', 'السرعة (GPU)': '2–4 رمز/ثانية',  'الأفضل لـ': 'RTX 4090 / M3 Max 48 GB' },
+            { 'النموذج': 'Qwen2.5-Coder 7B',  'VRAM (Q4_K_M)': '5.5 GB',  'HumanEval (%)': '79.7', 'السرعة (GPU)': '8–15 رمز/ثانية', 'الأفضل لـ': 'RTX 3060 / 16 GB RAM' },
+            { 'النموذج': 'Qwen2.5-Coder 14B', 'VRAM (Q4_K_M)': '9.5 GB',  'HumanEval (%)': '88.0', 'السرعة (GPU)': '4–8 رمز/ثانية',  'الأفضل لـ': 'RTX 3080 / RTX 4070 / M2 Pro' },
+            { 'النموذج': 'Qwen2.5-Coder 32B', 'VRAM (Q4_K_M)': '20.5 GB', 'HumanEval (%)': '91.5', 'السرعة (GPU)': '2–4 رمز/ثانية',  'الأفضل لـ': 'RTX 4090 / M3 Max 48 GB' },
           ],
         },
       },
@@ -1107,9 +1107,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'verdict',
         title: 'الحكم: أي حجم تشغّل',
         content: [
-          '**8 GB VRAM أو أقل (RTX 3060، M2 16 GB):** Qwen3-Coder 7B Q4_K_M. يتسع في 5.5 GB VRAM مع مساحة لذاكرة KV. للإكمال التلقائي وتوليد الدوال في ملحقة IDE، 79.7% HumanEval كافٍ.',
-          '**12–16 GB VRAM (RTX 3080، RTX 4070، M2 Pro):** Qwen3-Coder 14B Q4_K_M. القفزة من 7B إلى 14B هي أكبر مكسب جودة مقابل VRAM في عائلة Qwen Coder.',
-          '**24 GB VRAM (RTX 4090، M3 Max 48 GB):** Qwen3-Coder 32B Q4_K_M. يتفوق على GPT-4o mini في معايير توليد الكود ويتعامل أفضل مع السياق متعدد الملفات.',
+          '**8 GB VRAM أو أقل (RTX 3060، M2 16 GB):** Qwen2.5-Coder 7B Q4_K_M. يتسع في 5.5 GB VRAM مع مساحة لذاكرة KV. للإكمال التلقائي وتوليد الدوال في ملحقة IDE، 79.7% HumanEval كافٍ.',
+          '**12–16 GB VRAM (RTX 3080، RTX 4070، M2 Pro):** Qwen2.5-Coder 14B Q4_K_M. القفزة من 7B إلى 14B هي أكبر مكسب جودة مقابل VRAM في عائلة Qwen Coder.',
+          '**24 GB VRAM (RTX 4090، M3 Max 48 GB):** Qwen2.5-Coder 32B Q4_K_M. يتفوق على GPT-4o mini في معايير توليد الكود ويتعامل أفضل مع السياق متعدد الملفات.',
           '**CPU فقط (بدون GPU مخصصة):** 7B Q4_K_M بـ16 GB RAM، ~8 رمز/ثانية. مقبول للتوليد العرضي؛ بطيء جداً للإكمال التلقائي الفوري.',
         ],
       },
@@ -1117,12 +1117,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'أسئلة متكررة',
         faqs: [
-            { q: 'هل Qwen3-Coder أفضل من DeepSeek-Coder لـPython؟', a: 'Qwen3-Coder 32B يحقق 91.5% HumanEval مقابل ~80% لـDeepSeek-Coder-V2-Lite. لـPython تحديداً، Qwen3-Coder 32B يتصدر عند نفس مستوى VRAM.' },
+            { q: 'هل Qwen3-Coder أفضل من DeepSeek-Coder لـPython؟', a: 'Qwen2.5-Coder 32B يحقق 91.5% HumanEval مقابل ~80% لـDeepSeek-Coder-V2-Lite. لـPython تحديداً، Qwen2.5-Coder 32B يتصدر عند نفس مستوى VRAM.' },
             { q: 'هل Qwen3-Coder يدعم التعليقات باللغة الصينية؟', a: 'نعم. يتعامل بشكل أصلي مع تعليقات الكود المختلطة صيني/إنجليزي — ميزة مهمة للمطورين الصينيين.' },
             { q: 'هل يمكنني استخدام Qwen3-Coder مع Continue.dev أو Cline؟', a: 'نعم. كلاهما يدعم خلفيات Ollama. اضبط النموذج على `qwen2.5-coder:32b` في إعدادات Continue.dev أو في إعدادات Cline.' },
             { q: 'ما مستوى التكميم الذي يجب استخدامه؟', a: 'Q4_K_M هو أفضل توازن: جودة تقترب من الدقة الكاملة مع تخفيض ~35% في VRAM. استخدم Q8_0 فقط إذا كان لديك VRAM زائدة وتريد أقصى دقة.' },
-            { q: 'ما هو أفضل نموذج Qwen للبرمجة بـ8 GB VRAM؟', a: 'Qwen3-Coder 7B Q4_K_M — يتسع في 5.5 GB VRAM، HumanEval 79.7%، 8–15 رمز/ثانية.' },
-            { q: 'ما هو أفضل نموذج Qwen للبرمجة بـ12–16 GB VRAM؟', a: 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM، HumanEval 88.0%، أفضل نسبة جودة/VRAM في العائلة.' },
+            { q: 'ما هو أفضل نموذج Qwen للبرمجة بـ8 GB VRAM؟', a: 'Qwen2.5-Coder 7B Q4_K_M — يتسع في 5.5 GB VRAM، HumanEval 79.7%، 8–15 رمز/ثانية.' },
+            { q: 'ما هو أفضل نموذج Qwen للبرمجة بـ12–16 GB VRAM؟', a: 'Qwen2.5-Coder 14B Q4_K_M — 9.5 GB VRAM، HumanEval 88.0%، أفضل نسبة جودة/VRAM في العائلة.' },
           ],
       },
     },
@@ -1152,7 +1152,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'هل Qwen3-Coder أفضل من DeepSeek-Coder لـPython؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 32B يحقق 91.5% HumanEval مقابل ~80% لـDeepSeek-Coder-V2-Lite. لـPython تحديداً، Qwen3-Coder 32B يتصدر عند نفس مستوى VRAM.',
+              'text': 'Qwen2.5-Coder 32B يحقق 91.5% HumanEval مقابل ~80% لـDeepSeek-Coder-V2-Lite. لـPython تحديداً، Qwen2.5-Coder 32B يتصدر عند نفس مستوى VRAM.',
             },
           },
           {
@@ -1184,7 +1184,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'ما هو أفضل نموذج Qwen للبرمجة بـ8 GB VRAM؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 7B Q4_K_M — يتسع في 5.5 GB VRAM، HumanEval 79.7%، 8–15 رمز/ثانية.',
+              'text': 'Qwen2.5-Coder 7B Q4_K_M — يتسع في 5.5 GB VRAM، HumanEval 79.7%، 8–15 رمز/ثانية.',
             },
           },
           {
@@ -1192,7 +1192,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'ما هو أفضل نموذج Qwen للبرمجة بـ12–16 GB VRAM؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM، HumanEval 88.0%، أفضل نسبة جودة/VRAM في العائلة.',
+              'text': 'Qwen2.5-Coder 14B Q4_K_M — 9.5 GB VRAM، HumanEval 88.0%، أفضل نسبة جودة/VRAM في العائلة.',
             },
           },
         ],
@@ -1203,7 +1203,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-qwen-model-for-coding-overview-hero-ko.webp',
     title: '코딩에 가장 적합한 Qwen 모델은 무엇입니까?',
     seoTitle: 'Qwen3-Coder 2026: VRAM 용량별 7B vs 14B vs 32B 비교',
-    metaDescription: 'Qwen3-Coder 32B는 24 GB VRAM에서 HumanEval 91.5%로 최고 성능입니다. 8 GB에서는 7B가 79.7%를 달성합니다. 14B는 12 GB에서 최적의 균형을 제공합니다.',
+    metaDescription: 'Qwen2.5-Coder 32B는 24 GB VRAM에서 HumanEval 91.5%로 최고 성능입니다. 8 GB에서는 7B가 79.7%를 달성합니다. 14B는 12 GB에서 최적의 균형을 제공합니다.',
     publishDate: '2026-05-26',
     dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
@@ -1216,11 +1216,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '코딩에 가장 적합한 Qwen 모델은 무엇입니까?',
-        answer: 'Qwen3-Coder 32B는 24 GB VRAM에서 HumanEval 91.5%로 최고의 Qwen 코딩 모델입니다. 8 GB VRAM에서는 7B가 79.7%를 기록합니다. 14B는 12 GB VRAM에서 대부분의 개발자에게 최적의 선택입니다.',
+        answer: 'Qwen2.5-Coder 32B는 24 GB VRAM에서 HumanEval 91.5%로 최고의 Qwen 코딩 모델입니다. 8 GB VRAM에서는 7B가 79.7%를 기록합니다. 14B는 12 GB VRAM에서 대부분의 개발자에게 최적의 선택입니다.',
         bullets: [
-          'Qwen3-Coder 7B Q4_K_M: 5.5 GB VRAM, HumanEval 79.7% — RTX 3060 또는 16 GB RAM용',
-          'Qwen3-Coder 14B Q4_K_M: 9.5 GB VRAM, HumanEval 88.0% — RTX 3080/4070의 최적 선택',
-          'Qwen3-Coder 32B Q4_K_M: 20.5 GB VRAM, HumanEval 91.5% — 최고 품질',
+          'Qwen2.5-Coder 7B Q4_K_M: 5.5 GB VRAM, HumanEval 79.7% — RTX 3060 또는 16 GB RAM용',
+          'Qwen2.5-Coder 14B Q4_K_M: 9.5 GB VRAM, HumanEval 88.0% — RTX 3080/4070의 최적 선택',
+          'Qwen2.5-Coder 32B Q4_K_M: 20.5 GB VRAM, HumanEval 91.5% — 최고 품질',
         ],
         updatedDate: '2026-05',
       },
@@ -1229,9 +1229,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'Qwen3-Coder 32B Q4_K_M: HumanEval 91.5% — 최고의 Qwen 코딩 모델, 24 GB VRAM 필요',
-          'Qwen3-Coder 14B Q4_K_M: HumanEval 88.0%, 9.5 GB VRAM — RTX 3080/4070의 최적 선택',
-          'Qwen3-Coder 7B Q4_K_M: HumanEval 79.7%, 5.5 GB VRAM — RTX 3060 또는 16 GB RAM에서 동작',
+          'Qwen2.5-Coder 32B Q4_K_M: HumanEval 91.5% — 최고의 Qwen 코딩 모델, 24 GB VRAM 필요',
+          'Qwen2.5-Coder 14B Q4_K_M: HumanEval 88.0%, 9.5 GB VRAM — RTX 3080/4070의 최적 선택',
+          'Qwen2.5-Coder 7B Q4_K_M: HumanEval 79.7%, 5.5 GB VRAM — RTX 3060 또는 16 GB RAM에서 동작',
           '설치 명령: `ollama pull qwen2.5-coder:7b` / `14b` / `32b`',
         ],
       },
@@ -1240,15 +1240,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Qwen3-Coder 크기별 비교표',
         content: ['Q4_K_M 양자화 기준으로 CPU에 레이어를 오프로드하지 않고 VRAM에 완전히 적재할 수 있는 가장 큰 모델을 선택하십시오.'],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3-Coder 14B Q4_K_M은 9.5 GB VRAM에서 HumanEval 88.0%를 달성하여 대부분의 개발자에게 최적의 성능 대비 VRAM 효율을 제공합니다.' },
+          { type: 'one-sentence', text: 'Qwen2.5-Coder 14B Q4_K_M은 9.5 GB VRAM에서 HumanEval 88.0%를 달성하여 대부분의 개발자에게 최적의 성능 대비 VRAM 효율을 제공합니다.' },
           { type: 'plain-terms', text: 'VRAM 8 GB 이하라면 7B, 12–16 GB라면 14B, 24 GB라면 32B를 선택하십시오.' },
         ],
         comparisonTable: {
           columns: ['모델', 'VRAM (Q4_K_M)', 'HumanEval (%)', '속도 (GPU)', '권장 하드웨어'],
           rows: [
-            { '모델': 'Qwen3-Coder 7B',  'VRAM (Q4_K_M)': '5.5 GB',  'HumanEval (%)': '79.7', '속도 (GPU)': '8–15 tok/s', '권장 하드웨어': 'RTX 3060 / 16 GB RAM' },
-            { '모델': 'Qwen3-Coder 14B', 'VRAM (Q4_K_M)': '9.5 GB',  'HumanEval (%)': '88.0', '속도 (GPU)': '4–8 tok/s',  '권장 하드웨어': 'RTX 3080 / RTX 4070 / M2 Pro' },
-            { '모델': 'Qwen3-Coder 32B', 'VRAM (Q4_K_M)': '20.5 GB', 'HumanEval (%)': '91.5', '속도 (GPU)': '2–4 tok/s',  '권장 하드웨어': 'RTX 4090 / M3 Max 48 GB' },
+            { '모델': 'Qwen2.5-Coder 7B',  'VRAM (Q4_K_M)': '5.5 GB',  'HumanEval (%)': '79.7', '속도 (GPU)': '8–15 tok/s', '권장 하드웨어': 'RTX 3060 / 16 GB RAM' },
+            { '모델': 'Qwen2.5-Coder 14B', 'VRAM (Q4_K_M)': '9.5 GB',  'HumanEval (%)': '88.0', '속도 (GPU)': '4–8 tok/s',  '권장 하드웨어': 'RTX 3080 / RTX 4070 / M2 Pro' },
+            { '모델': 'Qwen2.5-Coder 32B', 'VRAM (Q4_K_M)': '20.5 GB', 'HumanEval (%)': '91.5', '속도 (GPU)': '2–4 tok/s',  '권장 하드웨어': 'RTX 4090 / M3 Max 48 GB' },
           ],
         },
       },
@@ -1256,9 +1256,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'verdict',
         title: '결론: 어떤 크기를 실행해야 합니까',
         content: [
-          '**VRAM 8 GB 이하 (RTX 3060, M2 16 GB):** Qwen3-Coder 7B Q4_K_M을 선택하십시오. 5.5 GB VRAM에 KV 캐시 여유를 두고 적재됩니다. IDE 플러그인의 자동 완성 및 함수 생성에서 HumanEval 79.7%는 충분한 수준입니다.',
-          '**VRAM 12–16 GB (RTX 3080, RTX 4070, M2 Pro):** Qwen3-Coder 14B Q4_K_M을 선택하십시오. 7B에서 14B로의 성능 향상이 Qwen Coder 패밀리에서 VRAM 대비 품질 향상이 가장 큰 구간입니다.',
-          '**VRAM 24 GB (RTX 4090, M3 Max 48 GB):** Qwen3-Coder 32B Q4_K_M을 선택하십시오. 코드 생성 벤치마크에서 GPT-4o mini를 능가하며 다중 파일 컨텍스트 처리에서도 우수합니다.',
+          '**VRAM 8 GB 이하 (RTX 3060, M2 16 GB):** Qwen2.5-Coder 7B Q4_K_M을 선택하십시오. 5.5 GB VRAM에 KV 캐시 여유를 두고 적재됩니다. IDE 플러그인의 자동 완성 및 함수 생성에서 HumanEval 79.7%는 충분한 수준입니다.',
+          '**VRAM 12–16 GB (RTX 3080, RTX 4070, M2 Pro):** Qwen2.5-Coder 14B Q4_K_M을 선택하십시오. 7B에서 14B로의 성능 향상이 Qwen Coder 패밀리에서 VRAM 대비 품질 향상이 가장 큰 구간입니다.',
+          '**VRAM 24 GB (RTX 4090, M3 Max 48 GB):** Qwen2.5-Coder 32B Q4_K_M을 선택하십시오. 코드 생성 벤치마크에서 GPT-4o mini를 능가하며 다중 파일 컨텍스트 처리에서도 우수합니다.',
           '**CPU 전용 (전용 GPU 없음):** 16 GB RAM에서 7B Q4_K_M을 사용하면 ~8 tok/s입니다. 간헐적 생성에는 허용 가능하지만 실시간 자동 완성에는 너무 느립니다.',
         ],
       },
@@ -1266,12 +1266,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-            { q: 'Qwen3-Coder는 Python에서 DeepSeek-Coder보다 뛰어납니까?', a: 'Qwen3-Coder 32B는 HumanEval 91.5%를 달성하는 반면 DeepSeek-Coder-V2-Lite는 약 80%입니다. Python 전용으로는 동일한 VRAM 수준에서 Qwen3-Coder 32B가 앞서 있습니다.' },
+            { q: 'Qwen3-Coder는 Python에서 DeepSeek-Coder보다 뛰어납니까?', a: 'Qwen2.5-Coder 32B는 HumanEval 91.5%를 달성하는 반면 DeepSeek-Coder-V2-Lite는 약 80%입니다. Python 전용으로는 동일한 VRAM 수준에서 Qwen2.5-Coder 32B가 앞서 있습니다.' },
             { q: 'Qwen3-Coder는 중국어 주석을 지원합니까?', a: '예, 중국어/영어 혼합 코드 주석을 기본적으로 처리합니다. 이는 중국어권 개발자에게 상당한 장점입니다.' },
             { q: 'Qwen3-Coder를 Continue.dev 또는 Cline과 함께 사용할 수 있습니까?', a: '예, 두 도구 모두 Ollama 백엔드를 지원합니다. Continue.dev 또는 Cline 설정에서 모델을 `qwen2.5-coder:32b`로 지정하십시오.' },
             { q: '어떤 양자화 수준을 사용해야 합니까?', a: 'Q4_K_M이 최적의 균형을 제공합니다. VRAM을 약 35% 절약하면서 전체 정밀도에 거의 근접한 품질을 유지합니다. Q8_0은 VRAM이 충분하고 최대 정밀도가 필요한 경우에만 사용하십시오.' },
-            { q: 'VRAM 8 GB에서 가장 적합한 Qwen 코딩 모델은?', a: 'Qwen3-Coder 7B Q4_K_M — 5.5 GB VRAM에 적재, HumanEval 79.7%, 8–15 tok/s.' },
-            { q: 'VRAM 12–16 GB에서 가장 적합한 Qwen 코딩 모델은?', a: 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM, HumanEval 88.0%, 패밀리 내 최고 VRAM 대비 품질 비율.' },
+            { q: 'VRAM 8 GB에서 가장 적합한 Qwen 코딩 모델은?', a: 'Qwen2.5-Coder 7B Q4_K_M — 5.5 GB VRAM에 적재, HumanEval 79.7%, 8–15 tok/s.' },
+            { q: 'VRAM 12–16 GB에서 가장 적합한 Qwen 코딩 모델은?', a: 'Qwen2.5-Coder 14B Q4_K_M — 9.5 GB VRAM, HumanEval 88.0%, 패밀리 내 최고 VRAM 대비 품질 비율.' },
           ],
       },
       relatedReading: {
@@ -1319,7 +1319,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'Qwen3-Coder는 Python에서 DeepSeek-Coder보다 뛰어납니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 32B는 HumanEval 91.5%를 달성하는 반면 DeepSeek-Coder-V2-Lite는 약 80%입니다. Python 전용으로는 동일한 VRAM 수준에서 Qwen3-Coder 32B가 앞서 있습니다.',
+              'text': 'Qwen2.5-Coder 32B는 HumanEval 91.5%를 달성하는 반면 DeepSeek-Coder-V2-Lite는 약 80%입니다. Python 전용으로는 동일한 VRAM 수준에서 Qwen2.5-Coder 32B가 앞서 있습니다.',
             },
           },
           {
@@ -1351,7 +1351,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'VRAM 8 GB에서 가장 적합한 Qwen 코딩 모델은?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 7B Q4_K_M — 5.5 GB VRAM에 적재, HumanEval 79.7%, 8–15 tok/s.',
+              'text': 'Qwen2.5-Coder 7B Q4_K_M — 5.5 GB VRAM에 적재, HumanEval 79.7%, 8–15 tok/s.',
             },
           },
           {
@@ -1359,7 +1359,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             'name': 'VRAM 12–16 GB에서 가장 적합한 Qwen 코딩 모델은?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 14B Q4_K_M — 9.5 GB VRAM, HumanEval 88.0%, 패밀리 내 최고 VRAM 대비 품질 비율.',
+              'text': 'Qwen2.5-Coder 14B Q4_K_M — 9.5 GB VRAM, HumanEval 88.0%, 패밀리 내 최고 VRAM 대비 품질 비율.',
             },
           },
         ],

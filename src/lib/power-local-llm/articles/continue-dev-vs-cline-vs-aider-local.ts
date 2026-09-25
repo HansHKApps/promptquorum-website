@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Three local coding harnesses, three different workflow primitives. Continue.dev for autocomplete, Cline for autonomous agents, Aider for git-native diffs. Verdict per workflow inside.',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
-      'Qwen3-Coder 7B',
+      'Qwen2.5-Coder 7B',
       'DeepSeek Coder V3',
       'Llama 3.3 70B',
       'Codestral 22B',
@@ -523,7 +523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Drei lokale Coding-Harnesses, drei verschiedene Workflow-Primitive. Continue.dev für Autocomplete, Cline für autonome Agenten, Aider für Git-native Diffs. Fazit pro Workflow siehe unten.',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
-      'Qwen3-Coder 7B',
+      'Qwen2.5-Coder 7B',
       'DeepSeek Coder V3',
       'Llama 3.3 70B',
       'Codestral 22B',
@@ -1025,7 +1025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Trois outils de codage locaux, trois primitives de flux de travail différentes. Continue.dev pour l\'autocomplétion, Cline pour les agents autonomes, Aider pour les diffs natifs Git. Verdict par flux de travail à l\'intérieur.',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
-      'Qwen3-Coder 7B',
+      'Qwen2.5-Coder 7B',
       'DeepSeek Coder V3',
       'Llama 3.3 70B',
       'Codestral 22B',
@@ -1527,7 +1527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '3 つのローカルコーディングツール、3 つの異なるワークフロープリミティブ。オートコンプリートのための Continue.dev、自律エージェントのための Cline、Git ネイティブ diff のための Aider。ワークフロー別の判定結果。',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
-      'Qwen3-Coder 7B',
+      'Qwen2.5-Coder 7B',
       'DeepSeek Coder V3',
       'Llama 3.3 70B',
       'Codestral 22B',
@@ -2028,7 +2028,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '三个本地编码工具，三个不同的工作流原语。Continue.dev 用于自动完成，Cline 用于自主代理，Aider 用于 Git 原生差异。按工作流的判决在内部。',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
-      'Qwen3-Coder 7B',
+      'Qwen2.5-Coder 7B',
       'DeepSeek Coder V3',
       'Llama 3.3 70B',
       'Codestral 22B',
@@ -2529,7 +2529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Tres herramientas de código local, tres primitivas de flujo de trabajo distintas. Continue.dev para autocompletado, Cline para agentes autónomos, Aider para diffs nativos de Git. Veredicto por flujo de trabajo.',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
-      'Qwen3-Coder 7B',
+      'Qwen2.5-Coder 7B',
       'DeepSeek Coder V3',
       'Llama 3.3 70B',
       'Codestral 22B',
@@ -3044,7 +3044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Três ferramentas de código local, três primitivas de fluxo de trabalho distintas. Continue.dev para autocompletar, Cline para agentes autônomos, Aider para diffs nativos do Git. Veredito por fluxo de trabalho.',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
-      'Qwen3-Coder 7B',
+      'Qwen2.5-Coder 7B',
       'DeepSeek Coder V3',
       'Llama 3.3 70B',
       'Codestral 22B',
@@ -3559,7 +3559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ثلاث أدوات برمجة محلية، وثلاث بدائيات سير عمل مختلفة. تطبيق Continue.dev للإكمال التلقائي، وأداة Cline للوكلاء المستقلين، وأداة Aider للفوارق الأصيلة في Git. الحكم حسب سير العمل.',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
-      'Qwen3-Coder 7B',
+      'Qwen2.5-Coder 7B',
       'DeepSeek Coder V3',
       'Llama 3.3 70B',
       'Codestral 22B',
@@ -4074,7 +4074,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '세 가지 로컬 코딩 도구, 세 가지 고유한 워크플로우 원시 요소. Continue.dev는 자동완성, Cline은 자율 에이전트, Aider는 Git 네이티브 diff. 워크플로우별 최종 판정.',
     current_models_mentioned: [
       'Qwen3-Coder 30B',
-      'Qwen3-Coder 7B',
+      'Qwen2.5-Coder 7B',
       'DeepSeek Coder V3',
       'Llama 3.3 70B',
       'Codestral 22B',

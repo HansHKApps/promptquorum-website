@@ -102,7 +102,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'When to Upgrade or Stay',
         content: [
           '<strong>This rig runs 7B–8B models at 20+ tok/s — sufficient for general chat, Python scripting, TypeScript tooling, and single-file code review.</strong> If that describes your workload, there is no pressing reason to upgrade.',
-          'If you need 14B coding models without a quality or speed penalty, the GPU is the upgrade target — not the CPU. A used RTX 3060 12 GB (typically $200–$300) or RTX 4070 base (12 GB) unlocks Qwen 3 Coder 14B at Q4 at full throughput. The 5800X3D is the top AM4 CPU upgrade, but its 3D V-Cache benefit is specific to gaming and CPU-bound scientific workloads — LLM inference is GPU-memory-bandwidth-bound and the 5700X is not the bottleneck here.',
+          'If you need 14B coding models without a quality or speed penalty, the GPU is the upgrade target — not the CPU. A used RTX 3060 12 GB (typically $200–$300) or RTX 4070 base (12 GB) unlocks Qwen2.5-Coder 14B at Q4 at full throughput. The 5800X3D is the top AM4 CPU upgrade, but its 3D V-Cache benefit is specific to gaming and CPU-bound scientific workloads — LLM inference is GPU-memory-bandwidth-bound and the 5700X is not the bottleneck here.',
           'For the full GPU selection guide and how memory bandwidth maps to LLM inference speed, see the <a href="/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">best GPUs for local LLMs guide</a>.',
         ],
       },
@@ -183,7 +183,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Wann upgraden oder wann bleiben?',
         content: [
           '<strong>Diese Ausstattung läuft 7B–8B-Modelle mit 20+ tok/s — ausreichend für allgemeines Chat, Python-Scripting, TypeScript-Tooling und Code-Review einzelner Dateien.</strong> Wenn das Ihre Workload beschreibt, gibt es keinen drängenden Grund zu upgraden.',
-          'Wenn Sie 14B-Coding-Modelle ohne Qualitäts- oder Geschwindigkeitsverlust benötigen, ist die GPU das Upgrade-Ziel — nicht die CPU. Eine gebrauchte RTX 3060 12 GB (typischerweise 200–300 EUR) oder RTX 4070 base (12 GB) freischalt Qwen 3 Coder 14B bei Q4 mit voller Durchsatzrate. Die 5800X3D ist das beste AM4-CPU-Upgrade, aber ihr 3D-V-Cache-Vorteil ist spezifisch für Gaming und CPU-gebundene wissenschaftliche Workloads — LLM-Inferenz ist GPU-Speicherbandbreiten-gebunden und der 5700X ist hier nicht der Engpass.',
+          'Wenn Sie 14B-Coding-Modelle ohne Qualitäts- oder Geschwindigkeitsverlust benötigen, ist die GPU das Upgrade-Ziel — nicht die CPU. Eine gebrauchte RTX 3060 12 GB (typischerweise 200–300 EUR) oder RTX 4070 base (12 GB) freischalt Qwen2.5-Coder 14B bei Q4 mit voller Durchsatzrate. Die 5800X3D ist das beste AM4-CPU-Upgrade, aber ihr 3D-V-Cache-Vorteil ist spezifisch für Gaming und CPU-gebundene wissenschaftliche Workloads — LLM-Inferenz ist GPU-Speicherbandbreiten-gebunden und der 5700X ist hier nicht der Engpass.',
           'Für den vollständigen GPU-Auswahlratgeber und die Zuordnung von Speicherbandbreite zu LLM-Inferenzgeschwindigkeit, siehe den <a href="/de/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">Leitfaden zu den besten GPUs für lokale LLMs</a>.',
         ],
       },
@@ -264,7 +264,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Quand faire une mise à niveau ou rester',
         content: [
           '<strong>Cette configuration exécute les modèles 7B–8B à 20+ tok/s — suffisant pour le chat général, les scripts Python, les outils TypeScript et la révision de code d\'un seul fichier.</strong> Si c\'est votre charge de travail, il n\'y a pas de raison impérieuse de faire une mise à niveau.',
-          'Si vous avez besoin de modèles 14B de codage sans perte de qualité ou de vitesse, c\'est la GPU qui est la cible de mise à niveau — pas le CPU. Une RTX 3060 12 Go d\'occasion (typiquement 200–300 EUR) ou RTX 4070 base (12 Go) déverrouille Qwen 3 Coder 14B en Q4 à débit complet. La 5800X3D est la meilleure mise à niveau CPU AM4, mais son avantage 3D V-Cache est spécifique aux jeux et aux charges de travail scientifiques liées au CPU — l\'inférence LLM est limitée par la bande passante mémoire du GPU et le 5700X n\'est pas le goulot d\'étranglement ici.',
+          'Si vous avez besoin de modèles 14B de codage sans perte de qualité ou de vitesse, c\'est la GPU qui est la cible de mise à niveau — pas le CPU. Une RTX 3060 12 Go d\'occasion (typiquement 200–300 EUR) ou RTX 4070 base (12 Go) déverrouille Qwen2.5-Coder 14B en Q4 à débit complet. La 5800X3D est la meilleure mise à niveau CPU AM4, mais son avantage 3D V-Cache est spécifique aux jeux et aux charges de travail scientifiques liées au CPU — l\'inférence LLM est limitée par la bande passante mémoire du GPU et le 5700X n\'est pas le goulot d\'étranglement ici.',
           'Pour le guide complet de sélection GPU et comment la bande passante se traduit en vitesse d\'inférence, consultez le <a href="/fr/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">guide des meilleures GPU pour LLMs locaux</a>.',
         ],
       },
@@ -345,7 +345,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'いつアップグレードするか、いつ留まるか',
         content: [
           '<strong>このリグは 7B–8B モデルを 20+ tok/s で実行します — 一般的なチャット、Python スクリプティング、TypeScript ツール、および単一ファイルコード レビューに十分です。</strong> それがあなたのワークロードを説明する場合、アップグレードする差し迫った理由はありません。',
-          '品質またはスピードの低下なしで 14B コーディング モデルが必要な場合、アップグレード対象は GPU です — CPU ではありません。中古の RTX 3060 12 GB（通常 200–300 USD）または RTX 4070 ベース（12 GB）は Qwen 3 Coder 14B を Q4 で完全スループット時にロック解除します。5800X3D は最高の AM4 CPU アップグレードですが、その 3D V-Cache の利点はゲーミングおよび CPU バウンド科学ワークロードに固有です — LLM 推論は GPU メモリ帯域幅バウンドであり、5700X はこのリグではボトルネックではありません。',
+          '品質またはスピードの低下なしで 14B コーディング モデルが必要な場合、アップグレード対象は GPU です — CPU ではありません。中古の RTX 3060 12 GB（通常 200–300 USD）または RTX 4070 ベース（12 GB）は Qwen2.5-Coder 14B を Q4 で完全スループット時にロック解除します。5800X3D は最高の AM4 CPU アップグレードですが、その 3D V-Cache の利点はゲーミングおよび CPU バウンド科学ワークロードに固有です — LLM 推論は GPU メモリ帯域幅バウンドであり、5700X はこのリグではボトルネックではありません。',
           '完全な GPU 選択ガイドおよびメモリ帯域幅が LLM 推論速度にどのようにマップするかについては、<a href="/ja/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">ローカル LLM 向けベスト GPU ガイド</a>を参照してください。',
         ],
       },
@@ -426,7 +426,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '何时升级或保持不变',
         content: [
           '<strong>这套配置以 20+ tok/s 运行 7B–8B 模型——足以胜任通用聊天、Python 脚本编写、TypeScript 工具编写和单文件代码审查。</strong> 如果这描述了你的工作负载，就没有迫切的升级理由。',
-          '如果你需要 14B 编码模型而不牺牲质量或速度，升级目标是 GPU——而非 CPU。二手 RTX 3060 12 GB（通常 200–300 美元）或 RTX 4070 基础版（12 GB）可以解锁 Qwen 3 Coder 14B Q4 全速运行。5800X3D 是最好的 AM4 CPU 升级，但其 3D V-Cache 优势仅限于游戏和 CPU 密集型科学工作负载——LLM 推理受 GPU 内存带宽限制，而 5700X 在这套配置中不是瓶颈。',
+          '如果你需要 14B 编码模型而不牺牲质量或速度，升级目标是 GPU——而非 CPU。二手 RTX 3060 12 GB（通常 200–300 美元）或 RTX 4070 基础版（12 GB）可以解锁 Qwen2.5-Coder 14B Q4 全速运行。5800X3D 是最好的 AM4 CPU 升级，但其 3D V-Cache 优势仅限于游戏和 CPU 密集型科学工作负载——LLM 推理受 GPU 内存带宽限制，而 5700X 在这套配置中不是瓶颈。',
           '关于完整 GPU 选购指南及带宽与 LLM 推理速度的对应关系，请参阅<a href="/zh/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">本地 LLM 最佳 GPU 指南</a>。',
         ],
       },
@@ -507,7 +507,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Cuándo actualizar o quedarse',
         content: [
           '<strong>Este equipo ejecuta modelos 7B–8B a 20+ tok/s — suficiente para chat general, scripting en Python, herramientas TypeScript y revisión de código de un solo archivo.</strong> Si eso describe tu carga de trabajo, no hay razón urgente para actualizar.',
-          'Si necesitas modelos de codificación 14B sin penalización de calidad o velocidad, la GPU es el objetivo de actualización — no la CPU. Una RTX 3060 12 GB usada (típicamente $200–$300) o RTX 4070 base (12 GB) desbloquea Qwen 3 Coder 14B en Q4 con rendimiento completo. La 5800X3D es la mejor actualización de CPU AM4, pero su ventaja de 3D V-Cache es específica para gaming y cargas de trabajo científicas limitadas por CPU — la inferencia LLM está limitada por el ancho de banda de memoria de la GPU y el 5700X no es el cuello de botella aquí.',
+          'Si necesitas modelos de codificación 14B sin penalización de calidad o velocidad, la GPU es el objetivo de actualización — no la CPU. Una RTX 3060 12 GB usada (típicamente $200–$300) o RTX 4070 base (12 GB) desbloquea Qwen2.5-Coder 14B en Q4 con rendimiento completo. La 5800X3D es la mejor actualización de CPU AM4, pero su ventaja de 3D V-Cache es específica para gaming y cargas de trabajo científicas limitadas por CPU — la inferencia LLM está limitada por el ancho de banda de memoria de la GPU y el 5700X no es el cuello de botella aquí.',
           'Para la guía completa de selección de GPU y cómo el ancho de banda de memoria se traduce en velocidad de inferencia LLM, consulta la <a href="/es/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">guía de las mejores GPUs para LLMs locales</a>.',
         ],
       },
@@ -588,7 +588,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Quando atualizar ou ficar',
         content: [
           '<strong>Esse equipamento executa modelos 7B–8B a 20+ tok/s — suficiente para chat geral, scripts Python, ferramentas TypeScript e revisão de código de arquivo único.</strong> Se isso descreve sua carga de trabalho, não há razão urgente para atualizar.',
-          'Se você precisar de modelos de programação 14B sem penalidade de qualidade ou velocidade, a GPU é o alvo de atualização — não a CPU. Uma RTX 3060 12 GB usada (tipicamente $200–$300) ou RTX 4070 base (12 GB) desbloqueia o Qwen 3 Coder 14B em Q4 com throughput total. A 5800X3D é a melhor atualização de CPU AM4, mas sua vantagem de 3D V-Cache é específica para jogos e cargas de trabalho científicas vinculadas à CPU — a inferência de LLM é limitada pela largura de banda de memória da GPU e o 5700X não é o gargalo aqui.',
+          'Se você precisar de modelos de programação 14B sem penalidade de qualidade ou velocidade, a GPU é o alvo de atualização — não a CPU. Uma RTX 3060 12 GB usada (tipicamente $200–$300) ou RTX 4070 base (12 GB) desbloqueia o Qwen2.5-Coder 14B em Q4 com throughput total. A 5800X3D é a melhor atualização de CPU AM4, mas sua vantagem de 3D V-Cache é específica para jogos e cargas de trabalho científicas vinculadas à CPU — a inferência de LLM é limitada pela largura de banda de memória da GPU e o 5700X não é o gargalo aqui.',
           'Para o guia completo de seleção de GPU e como a largura de banda de memória se traduz em velocidade de inferência de LLM, consulte o <a href="/pt/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">guia das melhores GPUs para LLMs locais</a>.',
         ],
       },
@@ -669,7 +669,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'متى تترقى أو تبقى',
         content: [
           '<strong>هذا الجهاز يشغّل نماذج 7B–8B بـ20+ رمز/ثانية — كافٍ للدردشة العامة وكتابة سكريبتات Python وأدوات TypeScript ومراجعة كود ملف واحد.</strong> إذا كان ذلك يصف حمل عملك، لا يوجد سبب عاجل للترقية.',
-          'إذا احتجت لنماذج برمجة 14B دون عقوبة جودة أو سرعة، GPU هو هدف الترقية — لا CPU. RTX 3060 12 GB مستعملة (عادةً $200–$300) أو RTX 4070 الأساسية (12 GB) تتيح Qwen 3 Coder 14B في Q4 بأداء كامل. 5800X3D هي أفضل ترقية CPU لـAM4، لكن ميزة 3D V-Cache خاصة بالألعاب وأحمال العمل العلمية المحدودة بـCPU — استدلال نماذج اللغة الكبيرة محدود بعرض نطاق ذاكرة GPU و5700X ليس عنق الزجاجة هنا.',
+          'إذا احتجت لنماذج برمجة 14B دون عقوبة جودة أو سرعة، GPU هو هدف الترقية — لا CPU. RTX 3060 12 GB مستعملة (عادةً $200–$300) أو RTX 4070 الأساسية (12 GB) تتيح Qwen2.5-Coder 14B في Q4 بأداء كامل. 5800X3D هي أفضل ترقية CPU لـAM4، لكن ميزة 3D V-Cache خاصة بالألعاب وأحمال العمل العلمية المحدودة بـCPU — استدلال نماذج اللغة الكبيرة محدود بعرض نطاق ذاكرة GPU و5700X ليس عنق الزجاجة هنا.',
           'للدليل الشامل لاختيار GPU وكيف يتحول عرض نطاق الذاكرة إلى سرعة استدلال نماذج اللغة الكبيرة، راجع <a href="/ar/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">دليل أفضل بطاقات GPU لنماذج اللغة الكبيرة المحلية</a>.',
         ],
       },
@@ -761,7 +761,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '업그레이드 시점과 현재 유지 판단',
         content: [
           '<strong>이 구성은 7B~8B 모델을 20+ tok/s로 실행합니다 — 일반 채팅, Python 스크립팅, TypeScript 툴링, 단일 파일 코드 리뷰에 충분합니다.</strong> 이것이 귀하의 작업 부하에 해당한다면 업그레이드할 긴급한 이유가 없습니다.',
-          '품질이나 속도 저하 없이 14B 코딩 모델이 필요하다면 업그레이드 대상은 GPU입니다 — CPU가 아닙니다. 중고 RTX 3060 12 GB(일반적으로 약 30~40만 원) 또는 RTX 4070 기본형(12 GB)으로 업그레이드하면 Qwen 3 Coder 14B를 Q4 전체 처리량으로 실행할 수 있습니다. 5800X3D는 최고의 AM4 CPU 업그레이드이지만, 3D V-Cache 이점은 게임 및 CPU에 제한된 과학 작업에 특화되어 있습니다 — LLM 추론은 GPU 메모리 대역폭에 의해 제한되며 5700X는 이 구성에서 병목이 아닙니다.',
+          '품질이나 속도 저하 없이 14B 코딩 모델이 필요하다면 업그레이드 대상은 GPU입니다 — CPU가 아닙니다. 중고 RTX 3060 12 GB(일반적으로 약 30~40만 원) 또는 RTX 4070 기본형(12 GB)으로 업그레이드하면 Qwen2.5-Coder 14B를 Q4 전체 처리량으로 실행할 수 있습니다. 5800X3D는 최고의 AM4 CPU 업그레이드이지만, 3D V-Cache 이점은 게임 및 CPU에 제한된 과학 작업에 특화되어 있습니다 — LLM 추론은 GPU 메모리 대역폭에 의해 제한되며 5700X는 이 구성에서 병목이 아닙니다.',
           '전체 GPU 선택 가이드와 메모리 대역폭이 LLM 추론 속도에 어떻게 작용하는지는 <a href="/ko/local-llms/best-gpus-for-local-llms" class="text-primary hover:underline">로컬 LLM 최적 GPU 가이드</a>를 참조하십시오.',
         ],
       },

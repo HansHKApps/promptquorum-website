@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-03-02',
-    current_models_mentioned: ['Qwen 3 0.6B', 'Qwen 3 8B', 'Qwen3 32B', 'Qwen3-30B-A3B'],
+    current_models_mentioned: ['Qwen3 0.6B', 'Qwen3 8B', 'Qwen3 32B', 'Qwen3-30B-A3B'],
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
     audience: 'Developers wanting to run Qwen 3 models locally',
@@ -80,7 +80,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Is Qwen 3 better than Llama 3 for coding?',
-            a: 'For coding: yes, Qwen 3 14B outperforms Llama 3 8B on HumanEval benchmarks. For general conversation at the 8B tier: Llama 3 8B remains competitive. For the current top Ollama picks across all tasks, see <a href="/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">the best Ollama models right now</a>.',
+            a: 'For coding: yes, Qwen3 14B outperforms Llama 3 8B on HumanEval benchmarks. For general conversation at the 8B tier: Llama 3 8B remains competitive. For the current top Ollama picks across all tasks, see <a href="/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">the best Ollama models right now</a>.',
           },
           {
             q: 'Does Qwen 3 support tool calling on Ollama?',
@@ -160,7 +160,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Ist Qwen 3 besser als Llama 3 für Coding?',
-            a: 'Für Coding: Ja, Qwen 3 14B übertrifft Llama 3 8B bei HumanEval-Benchmarks. Für allgemeine Unterhaltung auf 8B-Niveau bleibt Llama 3 8B wettbewerbsfähig. Die aktuellen Top-Ollama-Empfehlungen für alle Aufgaben finden Sie unter <a href="/de/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">den besten Ollama-Modellen aktuell</a>.',
+            a: 'Für Coding: Ja, Qwen3 14B übertrifft Llama 3 8B bei HumanEval-Benchmarks. Für allgemeine Unterhaltung auf 8B-Niveau bleibt Llama 3 8B wettbewerbsfähig. Die aktuellen Top-Ollama-Empfehlungen für alle Aufgaben finden Sie unter <a href="/de/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">den besten Ollama-Modellen aktuell</a>.',
           },
           {
             q: 'Unterstützt Qwen 3 Tool Calling auf Ollama?',
@@ -240,7 +240,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Qwen 3 est-il meilleur que Llama 3 pour le code ?',
-            a: 'Pour le code : oui, Qwen 3 14B surpasse Llama 3 8B sur les benchmarks HumanEval. Pour la conversation générale au niveau 8B : Llama 3 8B reste compétitif. Pour les meilleures recommandations Ollama toutes tâches confondues, consultez <a href="/fr/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">les meilleurs modèles Ollama en ce moment</a>.',
+            a: 'Pour le code : oui, Qwen3 14B surpasse Llama 3 8B sur les benchmarks HumanEval. Pour la conversation générale au niveau 8B : Llama 3 8B reste compétitif. Pour les meilleures recommandations Ollama toutes tâches confondues, consultez <a href="/fr/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">les meilleurs modèles Ollama en ce moment</a>.',
           },
           {
             q: 'Qwen 3 supporte-t-il le tool calling sur Ollama ?',
@@ -320,7 +320,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Qwen 3 はコーディングで Llama 3 より優れていますか？',
-            a: 'コーディングに関しては：はい、Qwen 3 14B は HumanEval ベンチマークで Llama 3 8B を上回ります。8B ティアでの一般的な会話では、Llama 3 8B は競争力を維持しています。全タスクの現在のトップ Ollama 推奨については、<a href="/ja/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">現在の最適 Ollama モデル</a>をご覧ください。',
+            a: 'コーディングに関しては：はい、Qwen3 14B は HumanEval ベンチマークで Llama 3 8B を上回ります。8B ティアでの一般的な会話では、Llama 3 8B は競争力を維持しています。全タスクの現在のトップ Ollama 推奨については、<a href="/ja/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">現在の最適 Ollama モデル</a>をご覧ください。',
           },
           {
             q: 'Qwen 3 は Ollama でツール呼び出しをサポートしていますか？',
@@ -400,7 +400,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Qwen 3在代码任务上比Llama 3更好吗？',
-            a: '代码任务：是的，Qwen 3 14B在HumanEval基准上优于Llama 3 8B。8B层级的通用对话：Llama 3 8B仍具竞争力。跨任务的当前最佳Ollama选择，请参阅<a href="/zh/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">当前最佳Ollama模型</a>。',
+            a: '代码任务：是的，Qwen3 14B在HumanEval基准上优于Llama 3 8B。8B层级的通用对话：Llama 3 8B仍具竞争力。跨任务的当前最佳Ollama选择，请参阅<a href="/zh/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">当前最佳Ollama模型</a>。',
           },
           {
             q: 'Qwen 3在Ollama上支持工具调用吗？',
@@ -480,7 +480,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Qwen 3 é melhor que Llama 3 para código?',
-            a: 'Para código: sim, Qwen 3 14B supera Llama 3 8B nos benchmarks HumanEval. Para conversação geral no nível 8B: Llama 3 8B ainda é competitivo. Para as melhores opções atuais do Ollama em todas as tarefas, consulte <a href="/pt/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">os melhores modelos do Ollama agora</a>.',
+            a: 'Para código: sim, Qwen3 14B supera Llama 3 8B nos benchmarks HumanEval. Para conversação geral no nível 8B: Llama 3 8B ainda é competitivo. Para as melhores opções atuais do Ollama em todas as tarefas, consulte <a href="/pt/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">os melhores modelos do Ollama agora</a>.',
           },
           {
             q: 'Qwen 3 suporta chamadas de ferramentas no Ollama?',
@@ -560,7 +560,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Es Qwen 3 mejor que Llama 3 para código?',
-            a: 'Para código: sí, Qwen 3 14B supera a Llama 3 8B en los benchmarks HumanEval. Para conversación general en el nivel 8B: Llama 3 8B sigue siendo competitivo. Para las mejores opciones actuales de Ollama en todas las tareas, consulta <a href="/es/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">los mejores modelos de Ollama ahora mismo</a>.',
+            a: 'Para código: sí, Qwen3 14B supera a Llama 3 8B en los benchmarks HumanEval. Para conversación general en el nivel 8B: Llama 3 8B sigue siendo competitivo. Para las mejores opciones actuales de Ollama en todas las tareas, consulta <a href="/es/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">los mejores modelos de Ollama ahora mismo</a>.',
           },
           {
             q: '¿Qwen 3 admite llamadas a herramientas en Ollama?',
@@ -640,7 +640,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'هل Qwen 3 أفضل من Llama 3 للبرمجة؟',
-            a: 'للبرمجة: نعم، يتفوق Qwen 3 14B على Llama 3 8B في اختبارات HumanEval. للمحادثة العامة على مستوى 8B: يظل Llama 3 8B منافسًا. للاطلاع على أفضل نماذج Ollama الحالية عبر جميع المهام، راجع <a href="/ar/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">أفضل نماذج Ollama في الوقت الحالي</a>.',
+            a: 'للبرمجة: نعم، يتفوق Qwen3 14B على Llama 3 8B في اختبارات HumanEval. للمحادثة العامة على مستوى 8B: يظل Llama 3 8B منافسًا. للاطلاع على أفضل نماذج Ollama الحالية عبر جميع المهام، راجع <a href="/ar/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">أفضل نماذج Ollama في الوقت الحالي</a>.',
           },
           {
             q: 'هل يدعم Qwen 3 استدعاء الأدوات على Ollama؟',
@@ -668,7 +668,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       'Ollama Qwen 3 실행',
       'Qwen 3 로컬 설치',
       'ollama run qwen3 VRAM',
-      'Qwen 3 8B 로컬 LLM',
+      'Qwen3 8B 로컬 LLM',
     ],
     readTime: '4분 분량',
     quickAnswerTop: {
@@ -731,7 +731,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Qwen 3는 코딩에서 Llama 3보다 우수합니까?',
-            a: '코딩 측면에서는 그렇습니다. Qwen 3 14B는 HumanEval 벤치마크에서 Llama 3 8B를 능가합니다. 8B 수준의 일반 대화에서는 Llama 3 8B도 경쟁력이 있습니다. 모든 작업에서 현재 최고의 Ollama 모델은 <a href="/ko/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">지금 당장 최적의 Ollama 모델</a>을 참조하십시오.',
+            a: '코딩 측면에서는 그렇습니다. Qwen3 14B는 HumanEval 벤치마크에서 Llama 3 8B를 능가합니다. 8B 수준의 일반 대화에서는 Llama 3 8B도 경쟁력이 있습니다. 모든 작업에서 현재 최고의 Ollama 모델은 <a href="/ko/prompt-bites/best-ollama-models-right-now" class="text-primary hover:underline">지금 당장 최적의 Ollama 모델</a>을 참조하십시오.',
           },
           {
             q: 'Qwen 3는 Ollama에서 도구 호출을 지원합니까?',

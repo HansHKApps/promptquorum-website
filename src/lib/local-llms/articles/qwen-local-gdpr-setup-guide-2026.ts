@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'DPOs, IT leads, and legal ops teams setting up a GDPR-compliant local LLM stack',
     primaryTerm: 'GDPR-compliant local LLM setup',
     leadAnswerBlock: '**Running Qwen3 14B locally via Ollama on your own hardware produces a deployment where no prompt data leaves your jurisdiction — directly satisfying GDPR Articles 44, 25, and 5(1)(f).**',
-    current_models_mentioned: ['Qwen3 14B', 'Qwen3-Coder 14B', 'Qwen3 8B', 'Llama 4 Scout'],
+    current_models_mentioned: ['Qwen3 14B', 'Qwen2.5-Coder 14B', 'Qwen3 8B', 'Llama 4 Scout'],
     current_hardware_mentioned: ['RTX 3080', 'RTX 4070', 'RTX 3090'],
     quickAnswerTop: {
       en: {
@@ -205,7 +205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which Qwen model variant is best for legal and HR text in European languages?',
-            a: 'Qwen3 14B Q4_K_M is the recommended baseline: strong across German, French, Italian, Spanish, and English at the 14B tier. For code-heavy legal workflows (e.g., processing contracts with embedded code clauses or structured data), Qwen3-Coder 14B Q4_K_M. For organisations limited to 6–8 GB VRAM, Qwen3 8B performs well on multilingual text.',
+            a: 'Qwen3 14B Q4_K_M is the recommended baseline: strong across German, French, Italian, Spanish, and English at the 14B tier. For code-heavy legal workflows (e.g., processing contracts with embedded code clauses or structured data), Qwen2.5-Coder 14B Q4_K_M. For organisations limited to 6–8 GB VRAM, Qwen3 8B performs well on multilingual text.',
           },
           {
             q: 'Do I need a Data Processing Agreement with Ollama?',
@@ -665,7 +665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué variante del modelo Qwen es mejor para texto legal y de RR.HH. en idiomas europeos?',
-            a: 'Qwen3 14B Q4_K_M es la base recomendada: fuerte en alemán, francés, italiano, español e inglés en el nivel 14B. Para flujos de trabajo legales con mucho código (p. ej., procesamiento de contratos con cláusulas de código incorporado o datos estructurados), Qwen3-Coder 14B Q4_K_M. Para organizaciones limitadas a 6–8 GB de VRAM, Qwen3 8B rinde bien con texto multilingüe.',
+            a: 'Qwen3 14B Q4_K_M es la base recomendada: fuerte en alemán, francés, italiano, español e inglés en el nivel 14B. Para flujos de trabajo legales con mucho código (p. ej., procesamiento de contratos con cláusulas de código incorporado o datos estructurados), Qwen2.5-Coder 14B Q4_K_M. Para organizaciones limitadas a 6–8 GB de VRAM, Qwen3 8B rinde bien con texto multilingüe.',
           },
           {
             q: '¿Necesito un Acuerdo de Encargado del Tratamiento con Ollama?',
@@ -823,7 +823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'أي متغير من نموذج Qwen أفضل للنصوص القانونية والموارد البشرية باللغات الأوروبية؟',
-            a: 'Qwen3 14B Q4_K_M هو الأساس الموصى به: قوي في الألمانية والفرنسية والإيطالية والإسبانية والإنجليزية على مستوى 14B. لسير العمل القانوني كثيف الكود (مثلًا معالجة عقود ببنود كود مضمّنة أو بيانات منظمة)، Qwen3-Coder 14B Q4_K_M. للمؤسسات المحدودة بـ 6–8 GB من VRAM، يؤدي Qwen3 8B جيدًا مع النصوص متعددة اللغات.',
+            a: 'Qwen3 14B Q4_K_M هو الأساس الموصى به: قوي في الألمانية والفرنسية والإيطالية والإسبانية والإنجليزية على مستوى 14B. لسير العمل القانوني كثيف الكود (مثلًا معالجة عقود ببنود كود مضمّنة أو بيانات منظمة)، Qwen2.5-Coder 14B Q4_K_M. للمؤسسات المحدودة بـ 6–8 GB من VRAM، يؤدي Qwen3 8B جيدًا مع النصوص متعددة اللغات.',
           },
           {
             q: 'هل أحتاج إلى اتفاقية معالجة بيانات مع Ollama؟',
@@ -1098,7 +1098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual variante do modelo Qwen é melhor para texto jurídico e de RH em idiomas europeus?',
-            a: 'O Qwen3 14B Q4_K_M é a base recomendada: forte em alemão, francês, italiano, espanhol e inglês no nível 14B. Para fluxos jurídicos com muito código (p. ex., processamento de contratos com cláusulas de código incorporado ou dados estruturados), o Qwen3-Coder 14B Q4_K_M. Para organizações limitadas a 6–8 GB de VRAM, o Qwen3 8B se sai bem com texto multilíngue.',
+            a: 'O Qwen3 14B Q4_K_M é a base recomendada: forte em alemão, francês, italiano, espanhol e inglês no nível 14B. Para fluxos jurídicos com muito código (p. ex., processamento de contratos com cláusulas de código incorporado ou dados estruturados), o Qwen2.5-Coder 14B Q4_K_M. Para organizações limitadas a 6–8 GB de VRAM, o Qwen3 8B se sai bem com texto multilíngue.',
           },
           {
             q: 'Preciso de um Acordo de Operador de Tratamento com o Ollama?',
@@ -1147,7 +1147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'GDPR 준수 로컬 LLM 환경을 구성하는 DPO, IT 책임자, 법무 운영 팀',
     primaryTerm: 'GDPR 준수 로컬 LLM 설치',
     leadAnswerBlock: '자체 하드웨어에서 Ollama를 통해 Qwen3 14B를 로컬로 실행하면 프롬프트 데이터가 관할 구역 밖으로 전혀 전송되지 않는 배포 환경이 구성됩니다. 이는 GDPR Article 44, 25, 5(1)(f)를 단일 아키텍처 결정으로 직접 충족합니다.',
-    current_models_mentioned: ['Qwen3 14B', 'Qwen3-Coder 14B', 'Qwen3 8B', 'Llama 4 Scout'],
+    current_models_mentioned: ['Qwen3 14B', 'Qwen2.5-Coder 14B', 'Qwen3 8B', 'Llama 4 Scout'],
     current_hardware_mentioned: ['RTX 3080', 'RTX 4070', 'RTX 3090'],
     quickAnswerTop: {
       ko: {
@@ -1295,7 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '유럽 언어로 된 법률 및 인사 텍스트에 가장 적합한 Qwen 모델 변형은 무엇입니까?',
-            a: 'Qwen3 14B Q4_K_M이 권장 기준입니다. 독일어, 프랑스어, 이탈리아어, 스페인어, 영어 전반에서 14B 티어의 강력한 성능을 발휘합니다. 코드가 포함된 법률 워크플로우(예: 임베디드 코드 조항이나 구조화 데이터가 포함된 계약서 처리)의 경우 Qwen3-Coder 14B Q4_K_M을 사용합니다. 6~8 GB VRAM으로 제한된 조직에서는 Qwen3 8B가 다국어 텍스트에서 우수한 성능을 발휘합니다.',
+            a: 'Qwen3 14B Q4_K_M이 권장 기준입니다. 독일어, 프랑스어, 이탈리아어, 스페인어, 영어 전반에서 14B 티어의 강력한 성능을 발휘합니다. 코드가 포함된 법률 워크플로우(예: 임베디드 코드 조항이나 구조화 데이터가 포함된 계약서 처리)의 경우 Qwen2.5-Coder 14B Q4_K_M을 사용합니다. 6~8 GB VRAM으로 제한된 조직에서는 Qwen3 8B가 다국어 텍스트에서 우수한 성능을 발휘합니다.',
           },
           {
             q: 'Ollama와 데이터 처리 계약(DPA)을 체결해야 합니까?',

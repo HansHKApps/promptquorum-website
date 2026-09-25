@@ -94,7 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Recent tagged releases include model- and platform-specific builds (for example, releases tied to specific model families like DeepSeek, Kimi, or Solar), reflecting how tightly the project tracks new open-weight model releases',
           'The project reached general production-readiness milestones NVIDIA describes as including zero-config deployment, agentic inference support, multimodal encode/prefill/decode handling, and native video-generation support',
-          'NVIDIA\'s own published results for later versions cite substantial throughput gains on specific model/hardware combinations (for example, DeepSeek R1 and NVIDIA GB300 NVL72 systems) — these are vendor-reported benchmarks, not figures PromptQuorum has independently verified',
+          'NVIDIA\'s own published results for later versions cite substantial throughput gains on specific model/hardware combinations (for example, DeepSeek-R1 and NVIDIA GB300 NVL72 systems) — these are vendor-reported benchmarks, not figures PromptQuorum has independently verified',
         ],
         note: 'Because Dynamo ships frequent model-specific release tags rather than a small number of major versions, check the repository\'s own Releases page for the current tag relevant to your target model and inference backend before deploying.',
       },
@@ -380,7 +380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Aktuelle getaggte Releases umfassen modell- und plattformspezifische Builds (zum Beispiel Releases, die an bestimmte Modellfamilien wie DeepSeek, Kimi oder Solar gebunden sind), was zeigt, wie eng das Projekt neue offene Modellveröffentlichungen verfolgt',
           'Das Projekt erreichte Meilensteine, die NVIDIA als Produktionsreife beschreibt, darunter Zero-Config-Deployment, Unterstützung für agentische Inferenz, multimodale Encode-/Prefill-/Decode-Verarbeitung und native Videogenerierungs-Unterstützung',
-          'NVIDIAs eigene veröffentlichte Ergebnisse für spätere Versionen nennen erhebliche Durchsatzgewinne bei bestimmten Modell-/Hardware-Kombinationen (zum Beispiel DeepSeek R1 und NVIDIA-GB300-NVL72-Systeme) — dies sind herstellerseitig berichtete Benchmarks, keine von PromptQuorum unabhängig verifizierten Zahlen',
+          'NVIDIAs eigene veröffentlichte Ergebnisse für spätere Versionen nennen erhebliche Durchsatzgewinne bei bestimmten Modell-/Hardware-Kombinationen (zum Beispiel DeepSeek-R1 und NVIDIA-GB300-NVL72-Systeme) — dies sind herstellerseitig berichtete Benchmarks, keine von PromptQuorum unabhängig verifizierten Zahlen',
         ],
         note: 'Da Dynamo häufige modellspezifische Release-Tags statt einer kleinen Zahl an Hauptversionen veröffentlicht, prüfen Sie die eigene Releases-Seite des Repositorys auf den für Ihr Zielmodell und Ihr Inferenz-Backend relevanten aktuellen Tag, bevor Sie es bereitstellen.',
       },
@@ -666,7 +666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Los lanzamientos etiquetados recientes incluyen compilaciones específicas por modelo y por plataforma (por ejemplo, versiones vinculadas a familias de modelos específicas como DeepSeek, Kimi o Solar), lo que refleja lo de cerca que el proyecto sigue los nuevos lanzamientos de modelos de peso abierto',
           'El proyecto alcanzó hitos de preparación para producción general que NVIDIA describe como incluyendo despliegue sin configuración, soporte de inferencia agéntica, manejo multimodal de codificación/prefill/decode y soporte nativo de generación de video',
-          'Los propios resultados publicados por NVIDIA para versiones posteriores citan mejoras sustanciales de throughput en combinaciones específicas de modelo/hardware (por ejemplo, DeepSeek R1 y sistemas NVIDIA GB300 NVL72) — se trata de benchmarks reportados por el proveedor, no de cifras que PromptQuorum haya verificado de forma independiente',
+          'Los propios resultados publicados por NVIDIA para versiones posteriores citan mejoras sustanciales de throughput en combinaciones específicas de modelo/hardware (por ejemplo, DeepSeek-R1 y sistemas NVIDIA GB300 NVL72) — se trata de benchmarks reportados por el proveedor, no de cifras que PromptQuorum haya verificado de forma independiente',
         ],
         note: 'Como Dynamo publica etiquetas de versión frecuentes específicas por modelo en lugar de un número reducido de versiones mayores, revisa la propia página de Releases del repositorio para conocer la etiqueta actual relevante para tu modelo objetivo y tu backend de inferencia antes de desplegar.',
       },
@@ -952,7 +952,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Les versions tagguées récentes incluent des versions spécifiques à des modèles et à des plateformes (par exemple, des versions liées à des familles de modèles spécifiques comme DeepSeek, Kimi ou Solar), reflétant l\'étroitesse avec laquelle le projet suit les nouvelles sorties de modèles à poids ouverts',
           'Le projet a atteint des jalons de maturité pour la production que NVIDIA décrit comme incluant un déploiement sans configuration, une prise en charge de l\'inférence agentique, une gestion multimodale encode/prefill/decode, et une prise en charge native de la génération de vidéo',
-          'Les résultats publiés par NVIDIA lui-même pour les versions plus récentes citent des gains de débit substantiels sur des combinaisons modèle/matériel spécifiques (par exemple, DeepSeek R1 et les systèmes NVIDIA GB300 NVL72) — il s\'agit de benchmarks rapportés par le fournisseur, pas de chiffres vérifiés de manière indépendante par PromptQuorum',
+          'Les résultats publiés par NVIDIA lui-même pour les versions plus récentes citent des gains de débit substantiels sur des combinaisons modèle/matériel spécifiques (par exemple, DeepSeek-R1 et les systèmes NVIDIA GB300 NVL72) — il s\'agit de benchmarks rapportés par le fournisseur, pas de chiffres vérifiés de manière indépendante par PromptQuorum',
         ],
         note: 'Comme Dynamo publie des tags de version fréquents et spécifiques aux modèles plutôt qu\'un petit nombre de versions majeures, vérifiez la page Releases du dépôt pour connaître le tag actuel pertinent pour votre modèle cible et votre moteur d\'inférence avant de déployer.',
       },
@@ -1810,7 +1810,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Releases recentes com tags incluem builds específicos de modelo e de plataforma (por exemplo, releases vinculados a famílias de modelos específicas como DeepSeek, Kimi ou Solar), refletindo o quão de perto o projeto acompanha novos lançamentos de modelos de peso aberto',
           'O projeto atingiu marcos de prontidão para produção geral que a NVIDIA descreve como incluindo implantação sem configuração (zero-config), suporte a inferência agêntica, tratamento multimodal de encode/prefill/decode e suporte nativo à geração de vídeo',
-          'Os próprios resultados publicados pela NVIDIA para versões posteriores citam ganhos substanciais de throughput em combinações específicas de modelo/hardware (por exemplo, DeepSeek R1 e sistemas NVIDIA GB300 NVL72) — esses são benchmarks reportados pelo fornecedor, não números verificados independentemente pelo PromptQuorum',
+          'Os próprios resultados publicados pela NVIDIA para versões posteriores citam ganhos substanciais de throughput em combinações específicas de modelo/hardware (por exemplo, DeepSeek-R1 e sistemas NVIDIA GB300 NVL72) — esses são benchmarks reportados pelo fornecedor, não números verificados independentemente pelo PromptQuorum',
         ],
         note: 'Como o Dynamo lança tags de release frequentes e específicas de modelo em vez de um pequeno número de versões principais, verifique a própria página de Releases do repositório para a tag atual relevante ao seu modelo alvo e backend de inferência antes de implantar.',
       },
@@ -2096,7 +2096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'تشمل الإصدارات الموسومة الأخيرة إصدارات خاصة بنماذج ومنصات محددة (على سبيل المثال، إصدارات مرتبطة بعائلات نماذج معينة مثل DeepSeek أو Kimi أو Solar)، ما يعكس مدى متابعة المشروع الدقيقة لإصدارات النماذج المفتوحة الأوزان الجديدة',
           'حقق المشروع معالم جاهزية إنتاج عامة تصفها NVIDIA بأنها تشمل النشر بدون إعداد، ودعم الاستدلال الوكيلي (agentic)، ومعالجة التهيئة/التشفير/فك التشفير متعددة الوسائط، ودعم توليد الفيديو الأصلي',
-          'تشير نتائج NVIDIA المنشورة للإصدارات اللاحقة إلى مكاسب كبيرة في الإنتاجية على تركيبات نماذج/أجهزة محددة (على سبيل المثال DeepSeek R1 وأنظمة NVIDIA GB300 NVL72) — وهذه معايير أداء مُعلَنة من المورّد، وليست أرقامًا تحقق منها PromptQuorum بشكل مستقل',
+          'تشير نتائج NVIDIA المنشورة للإصدارات اللاحقة إلى مكاسب كبيرة في الإنتاجية على تركيبات نماذج/أجهزة محددة (على سبيل المثال DeepSeek-R1 وأنظمة NVIDIA GB300 NVL72) — وهذه معايير أداء مُعلَنة من المورّد، وليست أرقامًا تحقق منها PromptQuorum بشكل مستقل',
         ],
         note: 'نظرًا لأن Dynamo يصدر علامات إصدار متكررة خاصة بنماذج محددة بدلاً من عدد صغير من الإصدارات الرئيسية، تحقق من صفحة الإصدارات الخاصة بالمستودع للعثور على العلامة الحالية ذات الصلة بنموذجك المستهدف وخلفية الاستدلال قبل النشر.',
       },

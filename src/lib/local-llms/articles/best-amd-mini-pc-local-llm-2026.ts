@@ -416,7 +416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~45–55 tok/s. GMKtec EVO-X2 ~40 tok/s.',
           'Llama 3.3 70B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~18–22 tok/s (estimated). GMKtec EVO-X2 ~14–16 tok/s.',
-          'Qwen 3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR ~35–40 tok/s. GMKtec ~30 tok/s.',
+          'Qwen3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR ~35–40 tok/s. GMKtec ~30 tok/s.',
           'Note: These estimates are based on iGPU plus NPU acceleration. CPU-only inference would be 3–5x slower.',
         ],
         image: '/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-en.webp',
@@ -967,7 +967,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~45–55 tok/s. GMKtec EVO-X2 ~40 tok/s.',
           'Llama 3.3 70B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~18–22 tok/s (estimado). GMKtec EVO-X2 ~14–16 tok/s.',
-          'Qwen 3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR ~35–40 tok/s. GMKtec ~30 tok/s.',
+          'Qwen3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR ~35–40 tok/s. GMKtec ~30 tok/s.',
           'Nota: estas estimaciones se basan en aceleración iGPU más NPU. La inferencia solo con CPU sería 3–5 veces más lenta.',
         ],
         image: '/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-es.webp',
@@ -1545,7 +1545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR نحو 45–55 tok/s. GMKtec EVO-X2 نحو 40 tok/s.',
           'Llama 3.3 70B (Q4_K_M): Minisforum/Beelink/AOOSTAR نحو 18–22 tok/s (تقديري). GMKtec EVO-X2 نحو 14–16 tok/s.',
-          'Qwen 3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR نحو 35–40 tok/s. GMKtec نحو 30 tok/s.',
+          'Qwen3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR نحو 35–40 tok/s. GMKtec نحو 30 tok/s.',
           'ملاحظة: تستند هذه التقديرات إلى تسريع iGPU إضافةً إلى NPU. الاستدلال بـ CPU وحده سيكون أبطأ بـ 3–5 مرات.',
         ],
         image: '/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-ar.webp',
@@ -2278,7 +2278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~45–55 tok/s. GMKtec EVO-X2 ~40 tok/s.',
           'Llama 3.3 70B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~18–22 tok/s (geschätzt). GMKtec EVO-X2 ~14–16 tok/s.',
-          'Qwen 3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR ~35–40 tok/s. GMKtec ~30 tok/s.',
+          'Qwen3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR ~35–40 tok/s. GMKtec ~30 tok/s.',
           'Hinweis: Diese Schätzungen basieren auf iGPU plus NPU-Beschleunigung. Reine CPU-Inferenz wäre 3–5x langsamer.',
         ],
         image: '/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-de.webp',
@@ -2795,7 +2795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~45–55 tok/s. GMKtec EVO-X2 ~40 tok/s.',
           'Llama 3.3 70B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~18–22 tok/s (estimé). GMKtec EVO-X2 ~14–16 tok/s.',
-          'Qwen 3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR ~35–40 tok/s. GMKtec ~30 tok/s.',
+          'Qwen3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR ~35–40 tok/s. GMKtec ~30 tok/s.',
           'Note: Ces estimations basées sur iGPU plus accélération NPU. Inférence CPU-only serait 3–5x plus lent.',
         ],
         image: '/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-fr.webp',
@@ -3292,7 +3292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Llama 3.1 8B (Q4_K_M):Minisforum/Beelink/AOOSTAR ~45–55 tok/s。GMKtec EVO-X2 ~40 tok/s。',
           'Llama 3.3 70B (Q4_K_M):Minisforum/Beelink/AOOSTAR ~18–22 tok/s(推定)。GMKtec EVO-X2 ~14–16 tok/s。',
-          'Qwen 3 32B (Q5_K_M):Minisforum/Beelink/AOOSTAR ~35–40 tok/s。GMKtec ~30 tok/s。',
+          'Qwen3 32B (Q5_K_M):Minisforum/Beelink/AOOSTAR ~35–40 tok/s。GMKtec ~30 tok/s。',
           '注:これら推定値はiGPU + NPU加速に基づく。CPU単独推論は3–5倍遅くなります。',
         ],
         image: '/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-ja.webp',
@@ -3784,7 +3784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Llama 3.1 8B (Q4_K_M):Minisforum/Beelink/AOOSTAR ~45–55 tok/s。GMKtec EVO-X2 ~40 tok/s。',
           'Llama 3.3 70B (Q4_K_M):Minisforum/Beelink/AOOSTAR ~18–22 tok/s(估计)。GMKtec EVO-X2 ~14–16 tok/s。',
-          'Qwen 3 32B (Q5_K_M):Minisforum/Beelink/AOOSTAR ~35–40 tok/s。GMKtec ~30 tok/s。',
+          'Qwen3 32B (Q5_K_M):Minisforum/Beelink/AOOSTAR ~35–40 tok/s。GMKtec ~30 tok/s。',
           '注:这些估计基于iGPU + NPU加速。纯CPU推理速度会慢3~5倍。',
         ],
         image: '/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-zh.webp',
@@ -4295,7 +4295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR 약 45~55 tok/s. GMKtec EVO-X2 약 40 tok/s.',
           'Llama 3.3 70B (Q4_K_M): Minisforum/Beelink/AOOSTAR 약 18~22 tok/s(추정). GMKtec EVO-X2 약 14~16 tok/s.',
-          'Qwen 3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR 약 35~40 tok/s. GMKtec 약 30 tok/s.',
+          'Qwen3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR 약 35~40 tok/s. GMKtec 약 30 tok/s.',
           '참고: 이 추정치는 iGPU + NPU 가속 기반입니다. CPU 단독 추론은 3~5배 느립니다.',
         ],
         image: '/images/best-amd-mini-pc-local-llm-2026-benchmarks-hero-ko.webp',

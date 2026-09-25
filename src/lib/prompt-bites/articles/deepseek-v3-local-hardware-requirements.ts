@@ -5,24 +5,24 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
     heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-en.webp',
-    title: 'DeepSeek V3 Local Hardware Requirements?',
-    seoTitle: 'DeepSeek V3 Local 2026: 400 GB Reality + Alternatives',
-    metaDescription: 'DeepSeek V3 is 671B MoE — impractical on consumer hardware. Q4_K_M needs ~400 GB RAM. Practical alternatives at every VRAM tier with exact numbers.',
+    title: 'DeepSeek-V3 Local Hardware Requirements?',
+    seoTitle: 'DeepSeek-V3 Local 2026: 400 GB Reality + Alternatives',
+    metaDescription: 'DeepSeek-V3 is 671B MoE — impractical on consumer hardware. Q4_K_M needs ~400 GB RAM. Practical alternatives at every VRAM tier with exact numbers.',
     publishDate: '2026-05-26',
     dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     educationalLevel: 'Intermediate',
-    audience: 'Users trying to run DeepSeek V3 locally',
+    audience: 'Users trying to run DeepSeek-V3 locally',
     parentArticle: '/power-local-llm/deepseek-vs-qwen-local-comparison-2026',
     siblingBites: ['vram-for-70b-model', 'best-moe-models-local-coding'],
     is_living_page: false,
     quickAnswerTop: {
       en: {
-        question: 'Can you run DeepSeek V3 locally?',
-        answer: 'DeepSeek V3 is a 671B MoE model. Running it locally at Q4_K_M requires approximately 400 GB of RAM — well beyond any consumer hardware. The practical alternative is DeepSeek-R1-Distill-Qwen-32B (20.5 GB VRAM, consumer-viable) which delivers strong reasoning at a fraction of the size.',
+        question: 'Can you run DeepSeek-V3 locally?',
+        answer: 'DeepSeek-V3 is a 671B MoE model. Running it locally at Q4_K_M requires approximately 400 GB of RAM — well beyond any consumer hardware. The practical alternative is DeepSeek-R1-Distill-Qwen-32B (20.5 GB VRAM, consumer-viable) which delivers strong reasoning at a fraction of the size.',
         bullets: [
-          'DeepSeek V3 full model: 671B parameters, MoE architecture — ~400 GB RAM at Q4_K_M',
+          'DeepSeek-V3 full model: 671B parameters, MoE architecture — ~400 GB RAM at Q4_K_M',
           'Not practical on any consumer GPU (even RTX 4090 has only 24 GB VRAM)',
           'Distilled alternatives: DS-R1-Distill-Qwen-7B (5.5 GB), 14B (9.5 GB), 32B (20.5 GB)',
           'For reasoning tasks: DS-R1-Distill-Qwen-32B scores 94% MATH-500 — better than the full V3 on math',
@@ -31,18 +31,18 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         updatedDate: '2026-05',
       },
       de: {
-        question: 'Kann man DeepSeek V3 lokal betreiben?',
-        answer: 'DeepSeek V3 ist ein 671B-MoE-Modell und benötigt bei Q4_K_M ca. 400 GB RAM. Das ist mit Consumer-Hardware nicht machbar. Praktische Alternative: DS-R1-Distill-Qwen-32B (20,5 GB VRAM) liefert starke Reasoning-Leistung bei konsumerfreundlicher Größe.',
+        question: 'Kann man DeepSeek-V3 lokal betreiben?',
+        answer: 'DeepSeek-V3 ist ein 671B-MoE-Modell und benötigt bei Q4_K_M ca. 400 GB RAM. Das ist mit Consumer-Hardware nicht machbar. Praktische Alternative: DS-R1-Distill-Qwen-32B (20,5 GB VRAM) liefert starke Reasoning-Leistung bei konsumerfreundlicher Größe.',
         bullets: [
-          'DeepSeek V3: 671B Parameter, MoE — ~400 GB RAM bei Q4_K_M', 'Nicht machbar mit Consumer-GPU', 'Destillierte Alternative: DS-R1-Distill-Qwen-32B, 20,5 GB VRAM, 94 % MATH-500',
+          'DeepSeek-V3: 671B Parameter, MoE — ~400 GB RAM bei Q4_K_M', 'Nicht machbar mit Consumer-GPU', 'Destillierte Alternative: DS-R1-Distill-Qwen-32B, 20,5 GB VRAM, 94 % MATH-500',
         ],
         updatedDate: '2026-05',
       },
       fr: {
-        question: 'Peut-on faire tourner DeepSeek V3 localement ?',
-        answer: 'DeepSeek V3 est un modèle MoE de 671B paramètres nécessitant ~400 Go RAM en Q4_K_M — impossible sur du matériel grand public. Alternative : DS-R1-Distill-Qwen-32B (20,5 Go VRAM).',
+        question: 'Peut-on faire tourner DeepSeek-V3 localement ?',
+        answer: 'DeepSeek-V3 est un modèle MoE de 671B paramètres nécessitant ~400 Go RAM en Q4_K_M — impossible sur du matériel grand public. Alternative : DS-R1-Distill-Qwen-32B (20,5 Go VRAM).',
         bullets: [
-          'DeepSeek V3 : 671B, MoE — ~400 Go RAM en Q4_K_M', 'Impossible sur GPU grand public', 'Alternative distillée : DS-R1-Distill-Qwen-32B, 20,5 Go VRAM, 94 % MATH-500',
+          'DeepSeek-V3 : 671B, MoE — ~400 Go RAM en Q4_K_M', 'Impossible sur GPU grand public', 'Alternative distillée : DS-R1-Distill-Qwen-32B, 20,5 Go VRAM, 94 % MATH-500',
         ],
         updatedDate: '2026-05',
       },
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         question: 'DeepSeek V3をローカルで実行できますか？',
         answer: 'DeepSeek V3は671B MoEモデル。Q4_K_Mで約400 GB RAMが必要——コンシューマーハードウェアでは不可能。実用的代替案：DS-R1-Distill-Qwen-32B（20.5 GB VRAM）が高い推論性能を提供。',
         bullets: [
-          'DeepSeek V3：671Bパラメーター、MoE——Q4_K_Mで約400 GB RAM', 'コンシューマーGPUでは実行不可', '蒸留代替：DS-R1-Distill-Qwen-32B、20.5 GB VRAM、MATH-500 94%',
+          'DeepSeek-V3：671Bパラメーター、MoE——Q4_K_Mで約400 GB RAM', 'コンシューマーGPUでは実行不可', '蒸留代替：DS-R1-Distill-Qwen-32B、20.5 GB VRAM、MATH-500 94%',
         ],
         updatedDate: '2026-05',
       },
@@ -71,26 +71,26 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'DeepSeek V3 (671B MoE) at Q4_K_M needs ~400 GB RAM — not achievable on any consumer hardware in 2026',
+          'DeepSeek-V3 (671B MoE) at Q4_K_M needs ~400 GB RAM — not achievable on any consumer hardware in 2026',
           'DeepSeek-R1-Distill-Qwen-32B: 20.5 GB VRAM, 94% MATH-500 — the practical local reasoning model from the DeepSeek family',
           'At 8 GB VRAM: DS-R1-Distill-Qwen-7B (5.5 GB), 88% MATH-500 — still beats most local alternatives on reasoning',
-          'For general-purpose use at DeepSeek V3 level: use the DeepSeek API (cloud inference) or Qwen3-72B locally if you have 64 GB RAM',
-          'MoE architecture note: DeepSeek V3 activates only ~37B parameters per forward pass, but ALL 671B must be loaded into RAM/VRAM',
+          'For general-purpose use at DeepSeek-V3 level: use the DeepSeek API (cloud inference) or Qwen3-72B locally if you have 64 GB RAM',
+          'MoE architecture note: DeepSeek-V3 activates only ~37B parameters per forward pass, but ALL 671B must be loaded into RAM/VRAM',
         ],
       },
       hardware: {
         id: 'hardware-requirements',
-        title: 'DeepSeek V3 Hardware Reality Check',
+        title: 'DeepSeek-V3 Hardware Reality Check',
         content: [
           '**Full model (671B, FP16):** ~1.3 TB RAM — server cluster territory. Not possible on any single machine.',
           '**Full model (671B, Q4_K_M):** ~400 GB RAM — requires a workstation with 8× 64 GB DIMMs or a server. No consumer GPU supports this.',
           '**Full model (671B, Q2_K):** ~200 GB RAM — still server-grade. The lowest viable quantisation still exceeds 4-socket workstation configs.',
-          '**Why MoE doesn\'t help here:** DeepSeek V3\'s MoE architecture activates only ~37B parameters per token forward pass — which is why it\'s fast in inference. But all 671B weight tensors must be resident in memory simultaneously. You cannot run only the active weights.',
+          '**Why MoE doesn\'t help here:** DeepSeek-V3\'s MoE architecture activates only ~37B parameters per token forward pass — which is why it\'s fast in inference. But all 671B weight tensors must be resident in memory simultaneously. You cannot run only the active weights.',
         ],
         comparisonTable: {
           columns: ['Model', 'Parameters', 'RAM (Q4_K_M)', 'VRAM', 'Viable locally?'],
           rows: [
-            { 'Model': 'DeepSeek V3 (full)',          'Parameters': '671B MoE', 'RAM (Q4_K_M)': '~400 GB', 'VRAM': 'N/A',      'Viable locally?': '❌ No' },
+            { 'Model': 'DeepSeek-V3 (full)',          'Parameters': '671B MoE', 'RAM (Q4_K_M)': '~400 GB', 'VRAM': 'N/A',      'Viable locally?': '❌ No' },
             { 'Model': 'DS-R1-Distill-Qwen-32B',      'Parameters': '32B dense','RAM (Q4_K_M)': '20.5 GB', 'VRAM': '20.5 GB',  'Viable locally?': '✅ RTX 4090 / M3 Max' },
             { 'Model': 'DS-R1-Distill-Qwen-14B',      'Parameters': '14B dense','RAM (Q4_K_M)': '9.5 GB',  'VRAM': '9.5 GB',   'Viable locally?': '✅ RTX 3080 / M2 Pro' },
             { 'Model': 'DS-R1-Distill-Qwen-7B',       'Parameters': '7B dense', 'RAM (Q4_K_M)': '5.5 GB',  'VRAM': '5.5 GB',   'Viable locally?': '✅ RTX 3060 / M2' },
@@ -112,28 +112,28 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-            { q: 'How much RAM does DeepSeek V3 need locally?', a: 'Approximately 400 GB RAM at Q4_K_M quantisation. At FP16 precision, over 1.3 TB of RAM is required.' },
-            { q: 'Can I run DeepSeek V3 with llama.cpp?', a: 'Technically yes if you have ~400 GB RAM and accept extremely slow inference (~0.1–0.5 tok/s). For practical use, the distilled versions are the right choice.' },
-            { q: 'Is the distilled version as good as DeepSeek V3?', a: 'For reasoning tasks: DS-R1-Distill-Qwen-32B (94% MATH-500) actually outperforms the full DeepSeek V3 on maths benchmarks. For broad general knowledge, V3 is better, but requires cloud API access.' },
-            { q: 'What is DeepSeek V3 vs DeepSeek-R1?', a: 'DeepSeek V3 is a general-purpose chat model (671B MoE). DeepSeek-R1 is a reasoning model trained via reinforcement learning. The distilled versions (Qwen-7B/14B/32B) are smaller dense models that retain R1\'s reasoning capability.' },
-            { q: 'What is the best local alternative to DeepSeek V3?', a: 'DS-R1-Distill-Qwen-32B at 20.5 GB VRAM delivers 94% MATH-500 — actually outperforming full V3 on maths benchmarks.' },
-            { q: 'Can llama.cpp run DeepSeek V3?', a: 'Technically yes with ~400 GB RAM, but inference speed would be 0.1–0.5 tok/s. Use distilled versions for practical local deployment.' },
+            { q: 'How much RAM does DeepSeek-V3 need locally?', a: 'Approximately 400 GB RAM at Q4_K_M quantisation. At FP16 precision, over 1.3 TB of RAM is required.' },
+            { q: 'Can I run DeepSeek-V3 with llama.cpp?', a: 'Technically yes if you have ~400 GB RAM and accept extremely slow inference (~0.1–0.5 tok/s). For practical use, the distilled versions are the right choice.' },
+            { q: 'Is the distilled version as good as DeepSeek-V3?', a: 'For reasoning tasks: DS-R1-Distill-Qwen-32B (94% MATH-500) actually outperforms the full DeepSeek-V3 on maths benchmarks. For broad general knowledge, V3 is better, but requires cloud API access.' },
+            { q: 'What is DeepSeek-V3 vs DeepSeek-R1?', a: 'DeepSeek-V3 is a general-purpose chat model (671B MoE). DeepSeek-R1 is a reasoning model trained via reinforcement learning. The distilled versions (Qwen-7B/14B/32B) are smaller dense models that retain R1\'s reasoning capability.' },
+            { q: 'What is the best local alternative to DeepSeek-V3?', a: 'DS-R1-Distill-Qwen-32B at 20.5 GB VRAM delivers 94% MATH-500 — actually outperforming full V3 on maths benchmarks.' },
+            { q: 'Can llama.cpp run DeepSeek-V3?', a: 'Technically yes with ~400 GB RAM, but inference speed would be 0.1–0.5 tok/s. Use distilled versions for practical local deployment.' },
           ],
       },
     },
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'DeepSeek V3 Local Hardware Requirements: Can You Run It?',
-      description: 'DeepSeek V3 (671B MoE) needs ~400 GB RAM locally at Q4_K_M — not viable on consumer hardware. Practical distilled alternatives at every VRAM tier.',
+      headline: 'DeepSeek-V3 Local Hardware Requirements: Can You Run It?',
+      description: 'DeepSeek-V3 (671B MoE) needs ~400 GB RAM locally at Q4_K_M — not viable on consumer hardware. Practical distilled alternatives at every VRAM tier.',
       url: 'https://www.promptquorum.com/prompt-bites/deepseek-v3-local-hardware-requirements',
       inLanguage: 'en',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      about: [{ '@type': 'Thing', name: 'DeepSeek V3 Local Deployment' }],
-      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      about: [{ '@type': 'Thing', name: 'DeepSeek-V3 Local Deployment' }],
+      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek-V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       mainEntity: [
           {
             '@type': 'Question',
-            'name': 'How much RAM does DeepSeek V3 need locally?',
+            'name': 'How much RAM does DeepSeek-V3 need locally?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Approximately 400 GB RAM at Q4_K_M quantisation. At FP16 precision, over 1.3 TB of RAM is required.',
@@ -152,7 +152,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'Can I run DeepSeek V3 with llama.cpp?',
+            'name': 'Can I run DeepSeek-V3 with llama.cpp?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Technically yes if you have ~400 GB RAM and accept extremely slow inference (~0.1–0.5 tok/s). For practical use, the distilled versions are the right choice.',
@@ -160,23 +160,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'Is the distilled version as good as DeepSeek V3?',
+            'name': 'Is the distilled version as good as DeepSeek-V3?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'For reasoning tasks: DS-R1-Distill-Qwen-32B (94% MATH-500) actually outperforms the full DeepSeek V3 on maths benchmarks. For broad general knowledge, V3 is better, but requires cloud API access.',
+              'text': 'For reasoning tasks: DS-R1-Distill-Qwen-32B (94% MATH-500) actually outperforms the full DeepSeek-V3 on maths benchmarks. For broad general knowledge, V3 is better, but requires cloud API access.',
             },
           },
           {
             '@type': 'Question',
-            'name': 'What is DeepSeek V3 vs DeepSeek-R1?',
+            'name': 'What is DeepSeek-V3 vs DeepSeek-R1?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'DeepSeek V3 is a general-purpose chat model (671B MoE). DeepSeek-R1 is a reasoning model trained via reinforcement learning. The distilled versions (Qwen-7B/14B/32B) are smaller dense models that retain R1\'s reasoning capability.',
+              'text': 'DeepSeek-V3 is a general-purpose chat model (671B MoE). DeepSeek-R1 is a reasoning model trained via reinforcement learning. The distilled versions (Qwen-7B/14B/32B) are smaller dense models that retain R1\'s reasoning capability.',
             },
           },
           {
             '@type': 'Question',
-            'name': 'What is the best local alternative to DeepSeek V3?',
+            'name': 'What is the best local alternative to DeepSeek-V3?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'DS-R1-Distill-Qwen-32B at 20.5 GB VRAM delivers 94% MATH-500 — actually outperforming full V3 on maths benchmarks.',
@@ -184,7 +184,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'Can llama.cpp run DeepSeek V3?',
+            'name': 'Can llama.cpp run DeepSeek-V3?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Technically yes with ~400 GB RAM, but inference speed would be 0.1–0.5 tok/s. Use distilled versions for practical local deployment.',
@@ -197,27 +197,27 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   de: {
     theme: 'Model Comparisons',
     heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-de.webp',
-    title: 'DeepSeek V3 lokale Hardware-Anforderungen?',
-    seoTitle: 'DeepSeek V3 Hardware 2026: 400 GB Realität + Alternativen',
-    metaDescription: 'DeepSeek V3 ist ein 671B-MoE-Modell — nicht machbar auf Consumer-Hardware. Q4_K_M benötigt ~400 GB RAM. Praktische Alternativen mit genauen Zahlen.',
+    title: 'DeepSeek-V3 lokale Hardware-Anforderungen?',
+    seoTitle: 'DeepSeek-V3 Hardware 2026: 400 GB Realität + Alternativen',
+    metaDescription: 'DeepSeek-V3 ist ein 671B-MoE-Modell — nicht machbar auf Consumer-Hardware. Q4_K_M benötigt ~400 GB RAM. Praktische Alternativen mit genauen Zahlen.',
     publishDate: '2026-05-26',
     dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     educationalLevel: 'Intermediate',
-    audience: 'Nutzer, die DeepSeek V3 lokal ausführen möchten',
+    audience: 'Nutzer, die DeepSeek-V3 lokal ausführen möchten',
     parentArticle: '/power-local-llm/deepseek-vs-qwen-local-comparison-2026',
     siblingBites: ['vram-for-70b-model', 'best-moe-models-local-coding'],
     is_living_page: false,
     quickAnswerTop: {
-      en: { question: 'Can you run DeepSeek V3 locally?', answer: 'No — 671B MoE needs ~400 GB RAM. Use distilled versions instead.', bullets: ['DS-R1-Distill-Qwen-32B: 20.5 GB VRAM', '94% MATH-500'], updatedDate: '2026-05' },
+      en: { question: 'Can you run DeepSeek-V3 locally?', answer: 'No — 671B MoE needs ~400 GB RAM. Use distilled versions instead.', bullets: ['DS-R1-Distill-Qwen-32B: 20.5 GB VRAM', '94% MATH-500'], updatedDate: '2026-05' },
       de: {
-        question: 'Kann man DeepSeek V3 lokal betreiben?',
-        answer: 'Nein — DeepSeek V3 (671B MoE) benötigt bei Q4_K_M ca. 400 GB RAM. Das ist mit Consumer-Hardware nicht machbar. Praktische Alternative: DS-R1-Distill-Qwen-32B (20,5 GB VRAM, 94 % MATH-500).',
-        bullets: ['DeepSeek V3: 671B MoE, ~400 GB RAM bei Q4_K_M', 'Kein Consumer-GPU kann das', 'DS-R1-Distill-Qwen-32B: 20,5 GB VRAM, 94 % MATH-500 ✓'],
+        question: 'Kann man DeepSeek-V3 lokal betreiben?',
+        answer: 'Nein — DeepSeek-V3 (671B MoE) benötigt bei Q4_K_M ca. 400 GB RAM. Das ist mit Consumer-Hardware nicht machbar. Praktische Alternative: DS-R1-Distill-Qwen-32B (20,5 GB VRAM, 94 % MATH-500).',
+        bullets: ['DeepSeek-V3: 671B MoE, ~400 GB RAM bei Q4_K_M', 'Kein Consumer-GPU kann das', 'DS-R1-Distill-Qwen-32B: 20,5 GB VRAM, 94 % MATH-500 ✓'],
         updatedDate: '2026-05',
       },
-      fr: { question: 'Peut-on faire tourner DeepSeek V3 localement ?', answer: 'Non — 671B MoE nécessite ~400 Go RAM. Utiliser les versions distillées.', bullets: ['DS-R1-Distill-Qwen-32B: 20,5 Go VRAM', '94% MATH-500'], updatedDate: '2026-05' },
+      fr: { question: 'Peut-on faire tourner DeepSeek-V3 localement ?', answer: 'Non — 671B MoE nécessite ~400 Go RAM. Utiliser les versions distillées.', bullets: ['DS-R1-Distill-Qwen-32B: 20,5 Go VRAM', '94% MATH-500'], updatedDate: '2026-05' },
       ja: { question: 'DeepSeek V3はローカル実行可能ですか？', answer: '不可能——671B MoEはQ4_K_Mで約400 GB RAM必要。蒸留版を使用。', bullets: ['DS-R1-Distill-Qwen-32B：20.5 GB VRAM', 'MATH-500 94%'], updatedDate: '2026-05' },
       zh: { question: '能本地运行DeepSeek V3吗？', answer: '不行——671B MoE需约400 GB内存。使用蒸馏版本代替。', bullets: ['DS-R1-Distill-Qwen-32B：20.5 GB显存', 'MATH-500 94%'], updatedDate: '2026-05' },
     },
@@ -225,7 +225,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'DeepSeek V3 (671B MoE) benötigt bei Q4_K_M ~400 GB RAM — nicht erreichbar mit Consumer-Hardware',
+          'DeepSeek-V3 (671B MoE) benötigt bei Q4_K_M ~400 GB RAM — nicht erreichbar mit Consumer-Hardware',
           'DS-R1-Distill-Qwen-32B: 20,5 GB VRAM, 94 % MATH-500 — das praktische lokale Reasoning-Modell',
           'Bei 8 GB VRAM: DS-R1-Distill-Qwen-7B (5,5 GB), 88 % MATH-500 — stärkstes lokales 7B-Reasoning-Modell',
           'MoE-Anmerkung: Alle 671B Gewichtstensoren müssen gleichzeitig im RAM liegen — aktive Parameter reichen nicht',
@@ -233,15 +233,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       hardware: {
         id: 'hardware-requirements',
-        title: 'DeepSeek V3 Hardware-Realitätscheck',
+        title: 'DeepSeek-V3 Hardware-Realitätscheck',
         content: [
           '**Vollständiges Modell (671B, Q4_K_M):** ~400 GB RAM — Server-Workstation erforderlich. Kein Consumer-GPU unterstützt das.',
-          '**Warum MoE hier nicht hilft:** DeepSeek V3 aktiviert pro Forward Pass nur ~37B Parameter. Aber alle 671B Gewichtstensoren müssen gleichzeitig im Speicher liegen.',
+          '**Warum MoE hier nicht hilft:** DeepSeek-V3 aktiviert pro Forward Pass nur ~37B Parameter. Aber alle 671B Gewichtstensoren müssen gleichzeitig im Speicher liegen.',
         ],
         comparisonTable: {
           columns: ['Modell', 'Parameter', 'RAM (Q4_K_M)', 'VRAM', 'Lokal machbar?'],
           rows: [
-            { 'Modell': 'DeepSeek V3 (voll)',         'Parameter': '671B MoE', 'RAM (Q4_K_M)': '~400 GB', 'VRAM': 'n/v',      'Lokal machbar?': '❌ Nein' },
+            { 'Modell': 'DeepSeek-V3 (voll)',         'Parameter': '671B MoE', 'RAM (Q4_K_M)': '~400 GB', 'VRAM': 'n/v',      'Lokal machbar?': '❌ Nein' },
             { 'Modell': 'DS-R1-Distill-Qwen-32B',     'Parameter': '32B',      'RAM (Q4_K_M)': '20,5 GB', 'VRAM': '20,5 GB',  'Lokal machbar?': '✅ RTX 4090 / M3 Max' },
             { 'Modell': 'DS-R1-Distill-Qwen-14B',     'Parameter': '14B',      'RAM (Q4_K_M)': '9,5 GB',  'VRAM': '9,5 GB',   'Lokal machbar?': '✅ RTX 3080 / M2 Pro' },
             { 'Modell': 'DS-R1-Distill-Qwen-7B',      'Parameter': '7B',       'RAM (Q4_K_M)': '5,5 GB',  'VRAM': '5,5 GB',   'Lokal machbar?': '✅ RTX 3060 / M2' },
@@ -262,8 +262,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Wie viel RAM benötigt DeepSeek V3 lokal?', a: 'Ca. 400 GB RAM bei Q4_K_M. Bei FP16-Präzision über 1,3 TB.' },
-          { q: 'Kann llama.cpp DeepSeek V3 ausführen?', a: 'Technisch ja mit ~400 GB RAM, aber Inferenzgeschwindigkeit von ~0,1–0,5 tok/s. Destillierte Versionen sind praktischer.' },
+          { q: 'Wie viel RAM benötigt DeepSeek-V3 lokal?', a: 'Ca. 400 GB RAM bei Q4_K_M. Bei FP16-Präzision über 1,3 TB.' },
+          { q: 'Kann llama.cpp DeepSeek-V3 ausführen?', a: 'Technisch ja mit ~400 GB RAM, aber Inferenzgeschwindigkeit von ~0,1–0,5 tok/s. Destillierte Versionen sind praktischer.' },
           { q: 'Ist die destillierte Version genauso gut wie V3?', a: 'Bei Reasoning-Aufgaben: DS-R1-Distill-Qwen-32B (94 % MATH-500) übertrifft V3 bei Mathe-Benchmarks.' },
           { q: 'Was ist der Unterschied zwischen V3 und R1?', a: 'V3 ist ein Allzweck-Chat-Modell (671B MoE). R1 ist ein Reasoning-Modell via Reinforcement Learning.' },
         ],
@@ -272,16 +272,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'DeepSeek V3 lokale Hardware-Anforderungen: Machbar?',
-      description: 'DeepSeek V3 (671B MoE) benötigt ~400 GB RAM — nicht Consumer-fähig. Praktische destillierte Alternativen für jeden VRAM-Tier.',
+      headline: 'DeepSeek-V3 lokale Hardware-Anforderungen: Machbar?',
+      description: 'DeepSeek-V3 (671B MoE) benötigt ~400 GB RAM — nicht Consumer-fähig. Praktische destillierte Alternativen für jeden VRAM-Tier.',
       url: 'https://www.promptquorum.com/de/prompt-bites/deepseek-v3-local-hardware-requirements',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      about: [{ '@type': 'Thing', name: 'DeepSeek V3 lokale Ausführung' }],
-      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      about: [{ '@type': 'Thing', name: 'DeepSeek-V3 lokale Ausführung' }],
+      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek-V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -289,7 +289,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'de',
       mainEntity: [
-        { '@type': 'Question', name: 'Wie viel RAM benötigt DeepSeek V3 lokal?', acceptedAnswer: { '@type': 'Answer', text: 'Ca. 400 GB RAM bei Q4_K_M — nicht Consumer-fähig.' } },
+        { '@type': 'Question', name: 'Wie viel RAM benötigt DeepSeek-V3 lokal?', acceptedAnswer: { '@type': 'Answer', text: 'Ca. 400 GB RAM bei Q4_K_M — nicht Consumer-fähig.' } },
       ],
     },
   },
@@ -297,25 +297,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   fr: {
     theme: 'Model Comparisons',
     heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-fr.webp',
-    title: 'Prérequis matériels pour DeepSeek V3 en local ?',
-    seoTitle: 'Prérequis matériels DeepSeek V3 local 2026 : faisable ?',
-    metaDescription: 'DeepSeek V3 est un modèle MoE de 671B — impraticable sur matériel grand public. Q4_K_M nécessite ~400 Go RAM. Alternatives pratiques à chaque niveau.',
+    title: 'Prérequis matériels pour DeepSeek-V3 en local ?',
+    seoTitle: 'Prérequis matériels DeepSeek-V3 local 2026 : faisable ?',
+    metaDescription: 'DeepSeek-V3 est un modèle MoE de 671B — impraticable sur matériel grand public. Q4_K_M nécessite ~400 Go RAM. Alternatives pratiques à chaque niveau.',
     publishDate: '2026-05-26',
     dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     educationalLevel: 'Intermediate',
-    audience: 'Utilisateurs voulant faire tourner DeepSeek V3 localement',
+    audience: 'Utilisateurs voulant faire tourner DeepSeek-V3 localement',
     parentArticle: '/power-local-llm/deepseek-vs-qwen-local-comparison-2026',
     siblingBites: ['vram-for-70b-model', 'best-moe-models-local-coding'],
     is_living_page: false,
     quickAnswerTop: {
-      en: { question: 'Can you run DeepSeek V3 locally?', answer: 'No — 671B MoE needs ~400 GB RAM. Use distilled versions.', bullets: ['DS-R1-Distill-Qwen-32B: 20.5 GB VRAM', '94% MATH-500'], updatedDate: '2026-05' },
-      de: { question: 'DeepSeek V3 lokal?', answer: 'Nein, 671B MoE braucht ~400 GB RAM.', bullets: ['Alternativen: Distilled-Versionen'], updatedDate: '2026-05' },
+      en: { question: 'Can you run DeepSeek-V3 locally?', answer: 'No — 671B MoE needs ~400 GB RAM. Use distilled versions.', bullets: ['DS-R1-Distill-Qwen-32B: 20.5 GB VRAM', '94% MATH-500'], updatedDate: '2026-05' },
+      de: { question: 'DeepSeek-V3 lokal?', answer: 'Nein, 671B MoE braucht ~400 GB RAM.', bullets: ['Alternativen: Distilled-Versionen'], updatedDate: '2026-05' },
       fr: {
-        question: 'Peut-on faire tourner DeepSeek V3 localement ?',
-        answer: 'Non. DeepSeek V3 (671B MoE) nécessite ~400 Go RAM en Q4_K_M, bien au-delà du matériel grand public. Alternative pratique : DS-R1-Distill-Qwen-32B (20,5 Go VRAM, 94 % MATH-500).',
-        bullets: ['DeepSeek V3 : 671B MoE — ~400 Go RAM en Q4_K_M', 'Aucun GPU grand public ne peut le charger', 'DS-R1-Distill-Qwen-32B : 20,5 Go VRAM, 94 % MATH-500 ✓'],
+        question: 'Peut-on faire tourner DeepSeek-V3 localement ?',
+        answer: 'Non. DeepSeek-V3 (671B MoE) nécessite ~400 Go RAM en Q4_K_M, bien au-delà du matériel grand public. Alternative pratique : DS-R1-Distill-Qwen-32B (20,5 Go VRAM, 94 % MATH-500).',
+        bullets: ['DeepSeek-V3 : 671B MoE — ~400 Go RAM en Q4_K_M', 'Aucun GPU grand public ne peut le charger', 'DS-R1-Distill-Qwen-32B : 20,5 Go VRAM, 94 % MATH-500 ✓'],
         updatedDate: '2026-05',
       },
       ja: { question: 'DeepSeek V3をローカル実行可能？', answer: '不可能——671B MoEはQ4_K_Mで~400 GB RAM必要。', bullets: ['DS-R1-Distill-Qwen-32B：20.5 GB VRAM推奨'], updatedDate: '2026-05' },
@@ -325,7 +325,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'DeepSeek V3 (671B MoE) nécessite ~400 Go RAM en Q4_K_M — impossible sur matériel grand public',
+          'DeepSeek-V3 (671B MoE) nécessite ~400 Go RAM en Q4_K_M — impossible sur matériel grand public',
           'DS-R1-Distill-Qwen-32B : 20,5 Go VRAM, 94 % MATH-500 — alternative pratique locale',
           'À 8 Go VRAM : DS-R1-Distill-Qwen-7B (5,5 Go), 88 % MATH-500',
           'Note MoE : tous les 671B poids doivent être en mémoire simultanément — les paramètres actifs ne suffisent pas',
@@ -333,15 +333,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       hardware: {
         id: 'hardware-requirements',
-        title: 'Vérification réaliste des prérequis DeepSeek V3',
+        title: 'Vérification réaliste des prérequis DeepSeek-V3',
         content: [
           '**Modèle complet (671B, Q4_K_M) :** ~400 Go RAM — serveur requis. Aucun GPU grand public ne supporte cela.',
-          '**Pourquoi MoE ne résout pas le problème :** DeepSeek V3 n\'active que ~37B paramètres par forward pass, mais TOUS les 671B poids doivent être en mémoire simultanément.',
+          '**Pourquoi MoE ne résout pas le problème :** DeepSeek-V3 n\'active que ~37B paramètres par forward pass, mais TOUS les 671B poids doivent être en mémoire simultanément.',
         ],
         comparisonTable: {
           columns: ['Modèle', 'Paramètres', 'RAM (Q4_K_M)', 'VRAM', 'Viable localement ?'],
           rows: [
-            { 'Modèle': 'DeepSeek V3 (complet)',       'Paramètres': '671B MoE', 'RAM (Q4_K_M)': '~400 Go', 'VRAM': 'N/A',     'Viable localement ?': '❌ Non' },
+            { 'Modèle': 'DeepSeek-V3 (complet)',       'Paramètres': '671B MoE', 'RAM (Q4_K_M)': '~400 Go', 'VRAM': 'N/A',     'Viable localement ?': '❌ Non' },
             { 'Modèle': 'DS-R1-Distill-Qwen-32B',      'Paramètres': '32B',      'RAM (Q4_K_M)': '20,5 Go', 'VRAM': '20,5 Go', 'Viable localement ?': '✅ RTX 4090 / M3 Max' },
             { 'Modèle': 'DS-R1-Distill-Qwen-14B',      'Paramètres': '14B',      'RAM (Q4_K_M)': '9,5 Go',  'VRAM': '9,5 Go',  'Viable localement ?': '✅ RTX 3080 / M2 Pro' },
             { 'Modèle': 'DS-R1-Distill-Qwen-7B',       'Paramètres': '7B',       'RAM (Q4_K_M)': '5,5 Go',  'VRAM': '5,5 Go',  'Viable localement ?': '✅ RTX 3060 / M2' },
@@ -362,8 +362,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-          { q: 'Quelle RAM pour DeepSeek V3 en local ?', a: 'Environ 400 Go RAM en Q4_K_M. En FP16 : plus de 1,3 To.' },
-          { q: 'llama.cpp peut-il faire tourner DeepSeek V3 ?', a: 'Techniquement oui avec ~400 Go RAM, mais à ~0,1–0,5 tok/s. Les versions distillées sont plus pratiques.' },
+          { q: 'Quelle RAM pour DeepSeek-V3 en local ?', a: 'Environ 400 Go RAM en Q4_K_M. En FP16 : plus de 1,3 To.' },
+          { q: 'llama.cpp peut-il faire tourner DeepSeek-V3 ?', a: 'Techniquement oui avec ~400 Go RAM, mais à ~0,1–0,5 tok/s. Les versions distillées sont plus pratiques.' },
           { q: 'La version distillée vaut-elle V3 ?', a: 'Pour le raisonnement : DS-R1-Distill-Qwen-32B (94 % MATH-500) surpasse V3 sur les benchmarks maths.' },
           { q: 'Différence entre V3 et R1 ?', a: 'V3 est un modèle de chat généraliste (671B MoE). R1 est un modèle de raisonnement par RL. Les versions distillées conservent les capacités de raisonnement de R1.' },
         ],
@@ -372,16 +372,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Prérequis matériels DeepSeek V3 en local : faisable ?',
-      description: 'DeepSeek V3 (671B MoE) nécessite ~400 Go RAM — impossible sur matériel grand public. Alternatives distillées pratiques à chaque niveau VRAM.',
+      headline: 'Prérequis matériels DeepSeek-V3 en local : faisable ?',
+      description: 'DeepSeek-V3 (671B MoE) nécessite ~400 Go RAM — impossible sur matériel grand public. Alternatives distillées pratiques à chaque niveau VRAM.',
       url: 'https://www.promptquorum.com/fr/prompt-bites/deepseek-v3-local-hardware-requirements',
       inLanguage: 'fr',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      about: [{ '@type': 'Thing', name: 'DeepSeek V3 déploiement local' }],
-      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      about: [{ '@type': 'Thing', name: 'DeepSeek-V3 déploiement local' }],
+      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek-V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -389,7 +389,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'fr',
       mainEntity: [
-        { '@type': 'Question', name: 'Quelle RAM pour DeepSeek V3 en local ?', acceptedAnswer: { '@type': 'Answer', text: 'Environ 400 Go RAM en Q4_K_M — impossible sur matériel grand public.' } },
+        { '@type': 'Question', name: 'Quelle RAM pour DeepSeek-V3 en local ?', acceptedAnswer: { '@type': 'Answer', text: 'Environ 400 Go RAM en Q4_K_M — impossible sur matériel grand public.' } },
       ],
     },
   },
@@ -398,7 +398,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-ja.webp',
     title: 'DeepSeek V3のローカル実行ハードウェア要件は？',
-    seoTitle: 'DeepSeek V3 ローカル実行 2026：400GB RAMの現実とVRAMティア別代替モデル',
+    seoTitle: 'DeepSeek-V3 ローカル実行 2026：400GB RAMの現実とVRAMティア別代替モデル',
     metaDescription: 'DeepSeek V3は六百七十一億パラメーターのMoEモデル——コンシューマーハードウェアでは実行不可能。Q4_K_Mで約四百GBのRAMが必要。本記事では各VRAMティアの実用的代替案とDS-R1-Distill-Qwen系列の詳細ベンチマーク数値を提供します。',
     publishDate: '2026-05-26',
     dateModified: '2026-06-20',
@@ -410,14 +410,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['vram-for-70b-model', 'best-moe-models-local-coding'],
     is_living_page: false,
     quickAnswerTop: {
-      en: { question: 'Can you run DeepSeek V3 locally?', answer: 'No — 671B MoE needs ~400 GB RAM.', bullets: ['DS-R1-Distill-Qwen-32B: 20.5 GB VRAM is practical'], updatedDate: '2026-05' },
-      de: { question: 'DeepSeek V3 lokal?', answer: 'Nein, ~400 GB RAM nötig.', bullets: ['Alternativen: Distilled-Versionen'], updatedDate: '2026-05' },
-      fr: { question: 'DeepSeek V3 en local ?', answer: 'Non, ~400 Go RAM requises.', bullets: ['Utiliser les versions distillées'], updatedDate: '2026-05' },
+      en: { question: 'Can you run DeepSeek-V3 locally?', answer: 'No — 671B MoE needs ~400 GB RAM.', bullets: ['DS-R1-Distill-Qwen-32B: 20.5 GB VRAM is practical'], updatedDate: '2026-05' },
+      de: { question: 'DeepSeek-V3 lokal?', answer: 'Nein, ~400 GB RAM nötig.', bullets: ['Alternativen: Distilled-Versionen'], updatedDate: '2026-05' },
+      fr: { question: 'DeepSeek-V3 en local ?', answer: 'Non, ~400 Go RAM requises.', bullets: ['Utiliser les versions distillées'], updatedDate: '2026-05' },
       ja: {
         question: 'DeepSeek V3をローカルで実行できますか？',
         answer: 'DeepSeek V3は671B MoEモデルです。Q4_K_Mでローカル実行するには約400 GB RAMが必要——コンシューマーハードウェアでは不可能。実用的な代替案：DS-R1-Distill-Qwen-32B（20.5 GB VRAM、MATH-500 94%）。',
         bullets: [
-          'DeepSeek V3：671Bパラメーター、MoE——Q4_K_Mで約400 GB RAM必要',
+          'DeepSeek-V3：671Bパラメーター、MoE——Q4_K_Mで約400 GB RAM必要',
           'コンシューマーGPUでは不可能（RTX 4090でも24 GB VRAMのみ）',
           'DS-R1-Distill-Qwen-32B：20.5 GB VRAM、MATH-500 94%——実用的代替',
         ],
@@ -429,7 +429,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'DeepSeek V3（671B MoE）はQ4_K_Mで約400 GB RAM必要——2026年のコンシューマーハードウェアでは不可能',
+          'DeepSeek-V3（671B MoE）はQ4_K_Mで約400 GB RAM必要——2026年のコンシューマーハードウェアでは不可能',
           'DS-R1-Distill-Qwen-32B：20.5 GB VRAM、MATH-500 94%——実用的なローカル推論モデル',
           '8 GB VRAMの場合：DS-R1-Distill-Qwen-7B（5.5 GB）、MATH-500 88%',
           'MoEの注意点：DeepSeek V3はフォワードパスで37Bのみ活性化するが、全671Bウェイトをメモリに常駐する必要あり',
@@ -437,7 +437,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       hardware: {
         id: 'hardware-requirements',
-        title: 'DeepSeek V3 ハードウェア現実チェック',
+        title: 'DeepSeek-V3 ハードウェア現実チェック',
         content: [
           '**完全モデル（671B、Q4_K_M）：** 約400 GB RAM——サーバーグレードのワークステーション必要。コンシューマーGPUでは不可能。',
           '**MoEが解決策にならない理由：** DeepSeek V3はフォワードパスごとに約37Bパラメーターのみ活性化。しかし全671Bウェイトテンソルを同時にメモリに保持する必要があります。',
@@ -445,7 +445,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         comparisonTable: {
           columns: ['モデル', 'パラメーター', 'RAM (Q4_K_M)', 'VRAM', 'ローカル実行可能?'],
           rows: [
-            { 'モデル': 'DeepSeek V3 (完全)',          'パラメーター': '671B MoE', 'RAM (Q4_K_M)': '約400 GB', 'VRAM': '不可',      'ローカル実行可能?': '❌ 不可' },
+            { 'モデル': 'DeepSeek-V3 (完全)',          'パラメーター': '671B MoE', 'RAM (Q4_K_M)': '約400 GB', 'VRAM': '不可',      'ローカル実行可能?': '❌ 不可' },
             { 'モデル': 'DS-R1-Distill-Qwen-32B',     'パラメーター': '32B',      'RAM (Q4_K_M)': '20.5 GB', 'VRAM': '20.5 GB',  'ローカル実行可能?': '✅ RTX 4090 / M3 Max' },
             { 'モデル': 'DS-R1-Distill-Qwen-14B',     'パラメーター': '14B',      'RAM (Q4_K_M)': '9.5 GB',  'VRAM': '9.5 GB',   'ローカル実行可能?': '✅ RTX 3080 / M2 Pro' },
             { 'モデル': 'DS-R1-Distill-Qwen-7B',      'パラメーター': '7B',       'RAM (Q4_K_M)': '5.5 GB',  'VRAM': '5.5 GB',   'ローカル実行可能?': '✅ RTX 3060 / M2' },
@@ -477,7 +477,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'DeepSeek V3ローカル実行ハードウェア要件：実現可能？',
-      description: 'DeepSeek V3（671B MoE）はQ4_K_Mで約400 GB RAM必要——コンシューマー不可。各VRAMティアの実用的蒸留代替案。',
+      description: 'DeepSeek-V3（671B MoE）はQ4_K_Mで約400 GB RAM必要——コンシューマー不可。各VRAMティアの実用的蒸留代替案。',
       url: 'https://www.promptquorum.com/ja/prompt-bites/deepseek-v3-local-hardware-requirements',
       inLanguage: 'ja',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -485,7 +485,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'DeepSeek V3ローカルデプロイ' }],
-      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek-V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -514,9 +514,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     siblingBites: ['vram-for-70b-model', 'best-moe-models-local-coding'],
     is_living_page: false,
     quickAnswerTop: {
-      en: { question: 'Can you run DeepSeek V3 locally?', answer: 'No — 671B MoE needs ~400 GB RAM.', bullets: ['DS-R1-Distill-Qwen-32B: 20.5 GB VRAM is practical'], updatedDate: '2026-05' },
-      de: { question: 'DeepSeek V3 lokal?', answer: 'Nein, ~400 GB RAM nötig.', bullets: ['Alternativen: Distilled-Versionen'], updatedDate: '2026-05' },
-      fr: { question: 'DeepSeek V3 en local ?', answer: 'Non, ~400 Go RAM.', bullets: ['Utiliser les versions distillées'], updatedDate: '2026-05' },
+      en: { question: 'Can you run DeepSeek-V3 locally?', answer: 'No — 671B MoE needs ~400 GB RAM.', bullets: ['DS-R1-Distill-Qwen-32B: 20.5 GB VRAM is practical'], updatedDate: '2026-05' },
+      de: { question: 'DeepSeek-V3 lokal?', answer: 'Nein, ~400 GB RAM nötig.', bullets: ['Alternativen: Distilled-Versionen'], updatedDate: '2026-05' },
+      fr: { question: 'DeepSeek-V3 en local ?', answer: 'Non, ~400 Go RAM.', bullets: ['Utiliser les versions distillées'], updatedDate: '2026-05' },
       ja: { question: 'DeepSeek V3はローカル実行可能？', answer: '不可——671B MoEはQ4_K_Mで約400 GB RAM必要。', bullets: ['蒸留版DS-R1-Distill-Qwen-32B（20.5 GB VRAM）を使用'], updatedDate: '2026-05' },
       zh: {
         question: '能在本地运行DeepSeek V3吗？',
@@ -534,7 +534,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'DeepSeek V3（671B MoE）Q4_K_M量化需约400 GB内存——2026年消费级硬件无法实现',
+          'DeepSeek-V3（671B MoE）Q4_K_M量化需约400 GB内存——2026年消费级硬件无法实现',
           'DS-R1-Distill-Qwen-32B：20.5 GB显存，MATH-500 94%——实用本地推理模型',
           '8 GB显存：DS-R1-Distill-Qwen-7B（5.5 GB），MATH-500 88%',
           'MoE注意事项：DeepSeek V3每次前向传播仅激活约37B参数，但全部671B权重张量必须同时驻留在内存中',
@@ -550,7 +550,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         comparisonTable: {
           columns: ['模型', '参数量', '内存需求(Q4_K_M)', '显存', '本地可行？'],
           rows: [
-            { '模型': 'DeepSeek V3（完整）',      '参数量': '671B MoE', '内存需求(Q4_K_M)': '约400 GB', '显存': '不适用',   '本地可行？': '❌ 不可行' },
+            { '模型': 'DeepSeek-V3（完整）',      '参数量': '671B MoE', '内存需求(Q4_K_M)': '约400 GB', '显存': '不适用',   '本地可行？': '❌ 不可行' },
             { '模型': 'DS-R1-Distill-Qwen-32B',   '参数量': '32B',      '内存需求(Q4_K_M)': '20.5 GB', '显存': '20.5 GB',  '本地可行？': '✅ RTX 4090 / M3 Max' },
             { '模型': 'DS-R1-Distill-Qwen-14B',   '参数量': '14B',      '内存需求(Q4_K_M)': '9.5 GB',  '显存': '9.5 GB',   '本地可行？': '✅ RTX 3080 / M2 Pro' },
             { '模型': 'DS-R1-Distill-Qwen-7B',    '参数量': '7B',       '内存需求(Q4_K_M)': '5.5 GB',  '显存': '5.5 GB',   '本地可行？': '✅ RTX 3060 / M2' },
@@ -591,7 +591,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'DeepSeek V3本地运行硬件要求：能实现吗？',
-      description: 'DeepSeek V3（671B MoE）Q4_K_M需约400 GB内存——消费级不可行。各显存层级的实用蒸馏替代方案。',
+      description: 'DeepSeek-V3（671B MoE）Q4_K_M需约400 GB内存——消费级不可行。各显存层级的实用蒸馏替代方案。',
       url: 'https://www.promptquorum.com/zh/prompt-bites/deepseek-v3-local-hardware-requirements',
       inLanguage: 'zh',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -599,7 +599,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
       about: [{ '@type': 'Thing', name: 'DeepSeek V3本地部署' }],
-      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek-V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -654,29 +654,29 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   pt: {
     theme: 'Model Comparisons',
     heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-pt.webp',
-    title: 'Quais são os requisitos de hardware para rodar o DeepSeek V3 localmente?',
-    seoTitle: 'DeepSeek V3 local 2026: 400 GB e alternativas reais',
-    metaDescription: 'DeepSeek V3 é um MoE de 671B, inviável em hardware de consumo: Q4_K_M precisa de ~400 GB de RAM. Alternativas práticas com números exatos por nível de VRAM.',
+    title: 'Quais são os requisitos de hardware para rodar o DeepSeek-V3 localmente?',
+    seoTitle: 'DeepSeek-V3 local 2026: 400 GB e alternativas reais',
+    metaDescription: 'DeepSeek-V3 é um MoE de 671B, inviável em hardware de consumo: Q4_K_M precisa de ~400 GB de RAM. Alternativas práticas com números exatos por nível de VRAM.',
     publishDate: '2026-05-26',
     dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     educationalLevel: 'Intermediate',
-    audience: 'Usuários tentando rodar o DeepSeek V3 localmente',
+    audience: 'Usuários tentando rodar o DeepSeek-V3 localmente',
     parentArticle: '/power-local-llm/deepseek-vs-qwen-local-comparison-2026',
     siblingBites: ['vram-for-70b-model', 'best-moe-models-local-coding'],
     is_living_page: false,
     quickAnswerTop: {
-      en: { question: 'Can you run DeepSeek V3 locally?', answer: 'No — 671B MoE needs ~400 GB RAM. Use distilled versions instead.', bullets: ['DS-R1-Distill-Qwen-32B: 20.5 GB VRAM', '94% MATH-500'], updatedDate: '2026-05' },
-      de: { question: 'DeepSeek V3 lokal?', answer: 'Nein, ~400 GB RAM nötig.', bullets: ['Alternativen: Distilled-Versionen'], updatedDate: '2026-05' },
-      fr: { question: 'DeepSeek V3 en local ?', answer: 'Non, ~400 Go RAM.', bullets: ['Utiliser les versions distillées'], updatedDate: '2026-05' },
+      en: { question: 'Can you run DeepSeek-V3 locally?', answer: 'No — 671B MoE needs ~400 GB RAM. Use distilled versions instead.', bullets: ['DS-R1-Distill-Qwen-32B: 20.5 GB VRAM', '94% MATH-500'], updatedDate: '2026-05' },
+      de: { question: 'DeepSeek-V3 lokal?', answer: 'Nein, ~400 GB RAM nötig.', bullets: ['Alternativen: Distilled-Versionen'], updatedDate: '2026-05' },
+      fr: { question: 'DeepSeek-V3 en local ?', answer: 'Non, ~400 Go RAM.', bullets: ['Utiliser les versions distillées'], updatedDate: '2026-05' },
       ja: { question: 'DeepSeek V3はローカル実行可能？', answer: '不可能——671B MoEはQ4_K_Mで約400 GB RAM必要。', bullets: ['蒸留版DS-R1-Distill-Qwen-32B（20.5 GB VRAM）を使用'], updatedDate: '2026-05' },
       zh: { question: '能本地运行DeepSeek V3吗？', answer: '不行——671B MoE需约400 GB内存。使用蒸馏版本代替。', bullets: ['DS-R1-Distill-Qwen-32B：20.5 GB显存', 'MATH-500 94%'], updatedDate: '2026-05' },
       pt: {
-        question: 'É possível rodar o DeepSeek V3 localmente?',
-        answer: 'Não. DeepSeek V3 (671B MoE) precisa de ~400 GB de RAM em Q4_K_M — muito além de qualquer hardware de consumo. Alternativa prática: DS-R1-Distill-Qwen-32B (20,5 GB de VRAM, 94% MATH-500).',
+        question: 'É possível rodar o DeepSeek-V3 localmente?',
+        answer: 'Não. DeepSeek-V3 (671B MoE) precisa de ~400 GB de RAM em Q4_K_M — muito além de qualquer hardware de consumo. Alternativa prática: DS-R1-Distill-Qwen-32B (20,5 GB de VRAM, 94% MATH-500).',
         bullets: [
-          'DeepSeek V3: 671B MoE — ~400 GB de RAM em Q4_K_M',
+          'DeepSeek-V3: 671B MoE — ~400 GB de RAM em Q4_K_M',
           'Nenhuma GPU de consumo consegue carregá-lo',
           'DS-R1-Distill-Qwen-32B: 20,5 GB de VRAM, 94% MATH-500 ✓',
         ],
@@ -687,23 +687,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'DeepSeek V3 (671B MoE) em Q4_K_M precisa de ~400 GB de RAM — impossível com hardware de consumo em 2026',
+          'DeepSeek-V3 (671B MoE) em Q4_K_M precisa de ~400 GB de RAM — impossível com hardware de consumo em 2026',
           'DS-R1-Distill-Qwen-32B: 20,5 GB de VRAM, 94% MATH-500 — o modelo de raciocínio local mais prático',
           'Com 8 GB de VRAM: DS-R1-Distill-Qwen-7B (5,5 GB), 88% MATH-500',
-          'Nota MoE: DeepSeek V3 ativa apenas ~37B parâmetros por forward pass, mas todos os 671B de pesos devem estar na memória simultaneamente',
+          'Nota MoE: DeepSeek-V3 ativa apenas ~37B parâmetros por forward pass, mas todos os 671B de pesos devem estar na memória simultaneamente',
         ],
       },
       hardware: {
         id: 'hardware-requirements',
-        title: 'Verificação da realidade do hardware do DeepSeek V3',
+        title: 'Verificação da realidade do hardware do DeepSeek-V3',
         content: [
           '**Modelo completo (671B, Q4_K_M):** ~400 GB de RAM — necessário workstation de servidor. Nenhuma GPU de consumo suporta isso.',
-          '**Por que MoE não ajuda aqui:** DeepSeek V3 ativa apenas ~37B parâmetros por forward pass. Mas todos os 671B tensores de pesos devem estar na memória simultaneamente.',
+          '**Por que MoE não ajuda aqui:** DeepSeek-V3 ativa apenas ~37B parâmetros por forward pass. Mas todos os 671B tensores de pesos devem estar na memória simultaneamente.',
         ],
         comparisonTable: {
           columns: ['Modelo', 'Parâmetros', 'RAM (Q4_K_M)', 'VRAM', 'Viável localmente?'],
           rows: [
-            { 'Modelo': 'DeepSeek V3 (completo)',      'Parâmetros': '671B MoE', 'RAM (Q4_K_M)': '~400 GB', 'VRAM': 'N/A',      'Viável localmente?': '❌ Não' },
+            { 'Modelo': 'DeepSeek-V3 (completo)',      'Parâmetros': '671B MoE', 'RAM (Q4_K_M)': '~400 GB', 'VRAM': 'N/A',      'Viável localmente?': '❌ Não' },
             { 'Modelo': 'DS-R1-Distill-Qwen-32B',      'Parâmetros': '32B',      'RAM (Q4_K_M)': '20,5 GB', 'VRAM': '20,5 GB',  'Viável localmente?': '✅ RTX 4090 / M3 Max' },
             { 'Modelo': 'DS-R1-Distill-Qwen-14B',      'Parâmetros': '14B',      'RAM (Q4_K_M)': '9,5 GB',  'VRAM': '9,5 GB',   'Viável localmente?': '✅ RTX 3080 / M2 Pro' },
             { 'Modelo': 'DS-R1-Distill-Qwen-7B',       'Parâmetros': '7B',       'RAM (Q4_K_M)': '5,5 GB',  'VRAM': '5,5 GB',   'Viável localmente?': '✅ RTX 3060 / M2' },
@@ -725,27 +725,27 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-            { q: 'Quanta RAM o DeepSeek V3 precisa localmente?', a: 'Aproximadamente 400 GB de RAM em quantização Q4_K_M. Em precisão FP16, são necessários mais de 1,3 TB de RAM.' },
-            { q: 'O llama.cpp consegue rodar o DeepSeek V3?', a: 'Tecnicamente sim com ~400 GB de RAM, mas a velocidade de inferência seria ~0,1–0,5 tok/s. Para uso prático, as versões destiladas são a escolha certa.' },
-            { q: 'A versão destilada é tão boa quanto o DeepSeek V3?', a: 'Para tarefas de raciocínio: DS-R1-Distill-Qwen-32B (94% MATH-500) supera o V3 completo nos benchmarks de matemática. Para conhecimento geral amplo, o V3 é melhor, mas requer acesso à API em nuvem.' },
-            { q: 'Qual a diferença entre DeepSeek V3 e DeepSeek-R1?', a: 'DeepSeek V3 é um modelo de chat de propósito geral (671B MoE). DeepSeek-R1 é um modelo de raciocínio treinado por aprendizado por reforço. As versões destiladas (Qwen-7B/14B/32B) são modelos densos menores que mantêm a capacidade de raciocínio do R1.' },
-            { q: 'Qual é a melhor alternativa local ao DeepSeek V3?', a: 'DS-R1-Distill-Qwen-32B com 20,5 GB de VRAM e 94% MATH-500 — supera o V3 completo nos benchmarks de matemática.' },
+            { q: 'Quanta RAM o DeepSeek-V3 precisa localmente?', a: 'Aproximadamente 400 GB de RAM em quantização Q4_K_M. Em precisão FP16, são necessários mais de 1,3 TB de RAM.' },
+            { q: 'O llama.cpp consegue rodar o DeepSeek-V3?', a: 'Tecnicamente sim com ~400 GB de RAM, mas a velocidade de inferência seria ~0,1–0,5 tok/s. Para uso prático, as versões destiladas são a escolha certa.' },
+            { q: 'A versão destilada é tão boa quanto o DeepSeek-V3?', a: 'Para tarefas de raciocínio: DS-R1-Distill-Qwen-32B (94% MATH-500) supera o V3 completo nos benchmarks de matemática. Para conhecimento geral amplo, o V3 é melhor, mas requer acesso à API em nuvem.' },
+            { q: 'Qual a diferença entre DeepSeek-V3 e DeepSeek-R1?', a: 'DeepSeek-V3 é um modelo de chat de propósito geral (671B MoE). DeepSeek-R1 é um modelo de raciocínio treinado por aprendizado por reforço. As versões destiladas (Qwen-7B/14B/32B) são modelos densos menores que mantêm a capacidade de raciocínio do R1.' },
+            { q: 'Qual é a melhor alternativa local ao DeepSeek-V3?', a: 'DS-R1-Distill-Qwen-32B com 20,5 GB de VRAM e 94% MATH-500 — supera o V3 completo nos benchmarks de matemática.' },
           ],
       },
     },
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Requisitos de hardware do DeepSeek V3 localmente: é possível?',
-      description: 'DeepSeek V3 (671B MoE) precisa de ~400 GB de RAM — inviável para consumo. Alternativas destiladas práticas para cada nível de VRAM.',
+      headline: 'Requisitos de hardware do DeepSeek-V3 localmente: é possível?',
+      description: 'DeepSeek-V3 (671B MoE) precisa de ~400 GB de RAM — inviável para consumo. Alternativas destiladas práticas para cada nível de VRAM.',
       url: 'https://www.promptquorum.com/pt/prompt-bites/deepseek-v3-local-hardware-requirements',
       inLanguage: 'pt-BR',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      about: [{ '@type': 'Thing', name: 'DeepSeek V3 implantação local' }],
-      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      about: [{ '@type': 'Thing', name: 'DeepSeek-V3 implantação local' }],
+      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek-V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -756,7 +756,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       mainEntity: [
           {
             '@type': 'Question',
-            'name': 'Quanta RAM o DeepSeek V3 precisa localmente?',
+            'name': 'Quanta RAM o DeepSeek-V3 precisa localmente?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Aproximadamente 400 GB de RAM em quantização Q4_K_M. Em precisão FP16, são necessários mais de 1,3 TB de RAM.',
@@ -764,7 +764,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'O llama.cpp consegue rodar o DeepSeek V3?',
+            'name': 'O llama.cpp consegue rodar o DeepSeek-V3?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Tecnicamente sim com ~400 GB de RAM, mas a velocidade de inferência seria ~0,1–0,5 tok/s. Para uso prático, as versões destiladas são a escolha certa.',
@@ -772,7 +772,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'A versão destilada é tão boa quanto o DeepSeek V3?',
+            'name': 'A versão destilada é tão boa quanto o DeepSeek-V3?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Para tarefas de raciocínio: DS-R1-Distill-Qwen-32B (94% MATH-500) supera o V3 completo nos benchmarks de matemática. Para conhecimento geral amplo, o V3 é melhor, mas requer acesso à API em nuvem.',
@@ -780,15 +780,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'Qual a diferença entre DeepSeek V3 e DeepSeek-R1?',
+            'name': 'Qual a diferença entre DeepSeek-V3 e DeepSeek-R1?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'DeepSeek V3 é um modelo de chat de propósito geral (671B MoE). DeepSeek-R1 é um modelo de raciocínio treinado por aprendizado por reforço. As versões destiladas (Qwen-7B/14B/32B) são modelos densos menores que mantêm a capacidade de raciocínio do R1.',
+              'text': 'DeepSeek-V3 é um modelo de chat de propósito geral (671B MoE). DeepSeek-R1 é um modelo de raciocínio treinado por aprendizado por reforço. As versões destiladas (Qwen-7B/14B/32B) são modelos densos menores que mantêm a capacidade de raciocínio do R1.',
             },
           },
           {
             '@type': 'Question',
-            'name': 'Qual é a melhor alternativa local ao DeepSeek V3?',
+            'name': 'Qual é a melhor alternativa local ao DeepSeek-V3?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'DS-R1-Distill-Qwen-32B com 20,5 GB de VRAM e 94% MATH-500 — supera o V3 completo nos benchmarks de matemática.',
@@ -800,39 +800,39 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   es: {
     theme: 'Model Comparisons',
     heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-es.webp',
-    title: '¿Cuáles son los requisitos de hardware para ejecutar DeepSeek V3 en local?',
-    seoTitle: 'DeepSeek V3 en local 2026: 400 GB y alternativas reales',
-    metaDescription: 'DeepSeek V3 es un MoE de 671B, inviable en hardware de consumo: Q4_K_M necesita ~400 GB de RAM. Alternativas prácticas con cifras exactas por nivel de VRAM.',
+    title: '¿Cuáles son los requisitos de hardware para ejecutar DeepSeek-V3 en local?',
+    seoTitle: 'DeepSeek-V3 en local 2026: 400 GB y alternativas reales',
+    metaDescription: 'DeepSeek-V3 es un MoE de 671B, inviable en hardware de consumo: Q4_K_M necesita ~400 GB de RAM. Alternativas prácticas con cifras exactas por nivel de VRAM.',
     publishDate: '2026-05-26',
     dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     educationalLevel: 'Intermediate',
-    audience: 'Usuarios que intentan ejecutar DeepSeek V3 en local',
+    audience: 'Usuarios que intentan ejecutar DeepSeek-V3 en local',
     parentArticle: '/power-local-llm/deepseek-vs-qwen-local-comparison-2026',
     siblingBites: ['vram-for-70b-model', 'best-moe-models-local-coding'],
     is_living_page: false,
     quickAnswerTop: {
-      en: { question: 'Can you run DeepSeek V3 locally?', answer: 'No — 671B MoE needs ~400 GB RAM. Use distilled versions instead.', bullets: ['DS-R1-Distill-Qwen-32B: 20.5 GB VRAM', '94% MATH-500'], updatedDate: '2026-05' },
-      de: { question: 'DeepSeek V3 lokal?', answer: 'Nein, ~400 GB RAM nötig.', bullets: ['Alternativen: Distilled-Versionen'], updatedDate: '2026-05' },
-      fr: { question: 'DeepSeek V3 en local ?', answer: 'Non, ~400 Go RAM.', bullets: ['Utiliser les versions distillées'], updatedDate: '2026-05' },
+      en: { question: 'Can you run DeepSeek-V3 locally?', answer: 'No — 671B MoE needs ~400 GB RAM. Use distilled versions instead.', bullets: ['DS-R1-Distill-Qwen-32B: 20.5 GB VRAM', '94% MATH-500'], updatedDate: '2026-05' },
+      de: { question: 'DeepSeek-V3 lokal?', answer: 'Nein, ~400 GB RAM nötig.', bullets: ['Alternativen: Distilled-Versionen'], updatedDate: '2026-05' },
+      fr: { question: 'DeepSeek-V3 en local ?', answer: 'Non, ~400 Go RAM.', bullets: ['Utiliser les versions distillées'], updatedDate: '2026-05' },
       ja: { question: 'DeepSeek V3はローカル実行可能？', answer: '不可能——671B MoEはQ4_K_Mで約400 GB RAM必要。', bullets: ['蒸留版DS-R1-Distill-Qwen-32B（20.5 GB VRAM）を使用'], updatedDate: '2026-05' },
       zh: { question: '能本地运行DeepSeek V3吗？', answer: '不行——671B MoE需约400 GB内存。使用蒸馏版本代替。', bullets: ['DS-R1-Distill-Qwen-32B：20.5 GB显存', 'MATH-500 94%'], updatedDate: '2026-05' },
       ar: {
-        question: 'هل يمكن تشغيل DeepSeek V3 محلياً؟',
-        answer: 'لا. DeepSeek V3 (671B MoE) يحتاج حوالي 400 GB RAM بـ Q4_K_M — أعلى بكثير من أي جهاز استهلاكي. البديل العملي: DS-R1-Distill-Qwen-32B (20.5 GB VRAM، 94% MATH-500).',
+        question: 'هل يمكن تشغيل DeepSeek-V3 محلياً؟',
+        answer: 'لا. DeepSeek-V3 (671B MoE) يحتاج حوالي 400 GB RAM بـ Q4_K_M — أعلى بكثير من أي جهاز استهلاكي. البديل العملي: DS-R1-Distill-Qwen-32B (20.5 GB VRAM، 94% MATH-500).',
         bullets: [
-          'DeepSeek V3: 671B MoE — حوالي 400 GB RAM بـ Q4_K_M',
+          'DeepSeek-V3: 671B MoE — حوالي 400 GB RAM بـ Q4_K_M',
           'لا توجد GPU استهلاكية تستطيع تحميله',
           'DS-R1-Distill-Qwen-32B: 20.5 GB VRAM، 94% MATH-500 ✓',
         ],
         updatedDate: '2026-05',
       },
       es: {
-        question: '¿Se puede ejecutar DeepSeek V3 en local?',
-        answer: 'No. DeepSeek V3 (671B MoE) necesita ~400 GB RAM en Q4_K_M — muy por encima de cualquier hardware de consumo. Alternativa práctica: DS-R1-Distill-Qwen-32B (20.5 GB VRAM, 94% MATH-500).',
+        question: '¿Se puede ejecutar DeepSeek-V3 en local?',
+        answer: 'No. DeepSeek-V3 (671B MoE) necesita ~400 GB RAM en Q4_K_M — muy por encima de cualquier hardware de consumo. Alternativa práctica: DS-R1-Distill-Qwen-32B (20.5 GB VRAM, 94% MATH-500).',
         bullets: [
-          'DeepSeek V3: 671B MoE — ~400 GB RAM en Q4_K_M',
+          'DeepSeek-V3: 671B MoE — ~400 GB RAM en Q4_K_M',
           'Ninguna GPU de consumo puede cargarlo',
           'DS-R1-Distill-Qwen-32B: 20.5 GB VRAM, 94% MATH-500 ✓',
         ],
@@ -843,23 +843,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'DeepSeek V3 (671B MoE) en Q4_K_M necesita ~400 GB RAM — imposible con hardware de consumo en 2026',
+          'DeepSeek-V3 (671B MoE) en Q4_K_M necesita ~400 GB RAM — imposible con hardware de consumo en 2026',
           'DS-R1-Distill-Qwen-32B: 20.5 GB VRAM, 94% MATH-500 — el modelo de razonamiento local más práctico',
           'Con 8 GB VRAM: DS-R1-Distill-Qwen-7B (5.5 GB), 88% MATH-500',
-          'Nota MoE: DeepSeek V3 activa solo ~37B parámetros por forward pass, pero los 671B de pesos deben estar en memoria simultáneamente',
+          'Nota MoE: DeepSeek-V3 activa solo ~37B parámetros por forward pass, pero los 671B de pesos deben estar en memoria simultáneamente',
         ],
       },
       hardware: {
         id: 'hardware-requirements',
-        title: 'Verificación de la realidad del hardware de DeepSeek V3',
+        title: 'Verificación de la realidad del hardware de DeepSeek-V3',
         content: [
           '**Modelo completo (671B, Q4_K_M):** ~400 GB RAM — se necesita una workstation de servidor. Ninguna GPU de consumo lo soporta.',
-          '**Por qué MoE no ayuda aquí:** DeepSeek V3 activa solo ~37B parámetros por forward pass. Pero todos los 671B tensores de pesos deben estar en memoria simultáneamente.',
+          '**Por qué MoE no ayuda aquí:** DeepSeek-V3 activa solo ~37B parámetros por forward pass. Pero todos los 671B tensores de pesos deben estar en memoria simultáneamente.',
         ],
         comparisonTable: {
           columns: ['Modelo', 'Parámetros', 'RAM (Q4_K_M)', 'VRAM', '¿Viable en local?'],
           rows: [
-            { 'Modelo': 'DeepSeek V3 (completo)',      'Parámetros': '671B MoE', 'RAM (Q4_K_M)': '~400 GB', 'VRAM': 'N/A',      '¿Viable en local?': '❌ No' },
+            { 'Modelo': 'DeepSeek-V3 (completo)',      'Parámetros': '671B MoE', 'RAM (Q4_K_M)': '~400 GB', 'VRAM': 'N/A',      '¿Viable en local?': '❌ No' },
             { 'Modelo': 'DS-R1-Distill-Qwen-32B',      'Parámetros': '32B',      'RAM (Q4_K_M)': '20.5 GB', 'VRAM': '20.5 GB',  '¿Viable en local?': '✅ RTX 4090 / M3 Max' },
             { 'Modelo': 'DS-R1-Distill-Qwen-14B',      'Parámetros': '14B',      'RAM (Q4_K_M)': '9.5 GB',  'VRAM': '9.5 GB',   '¿Viable en local?': '✅ RTX 3080 / M2 Pro' },
             { 'Modelo': 'DS-R1-Distill-Qwen-7B',       'Parámetros': '7B',       'RAM (Q4_K_M)': '5.5 GB',  'VRAM': '5.5 GB',   '¿Viable en local?': '✅ RTX 3060 / M2' },
@@ -881,27 +881,27 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-            { q: '¿Cuánta RAM necesita DeepSeek V3 en local?', a: 'Aproximadamente 400 GB RAM en cuantización Q4_K_M. En precisión FP16, se necesitan más de 1.3 TB de RAM.' },
-            { q: '¿Puede llama.cpp ejecutar DeepSeek V3?', a: 'Técnicamente sí si tienes ~400 GB RAM, pero la velocidad de inferencia sería ~0.1–0.5 tok/s. Para uso práctico, las versiones destiladas son la opción correcta.' },
-            { q: '¿Es la versión destilada igual de buena que DeepSeek V3?', a: 'Para tareas de razonamiento: DS-R1-Distill-Qwen-32B (94% MATH-500) supera al V3 completo en benchmarks de matemáticas. Para conocimiento general amplio, V3 es mejor, pero requiere acceso a la API cloud.' },
-            { q: '¿Cuál es la diferencia entre DeepSeek V3 y DeepSeek-R1?', a: 'DeepSeek V3 es un modelo de chat de propósito general (671B MoE). DeepSeek-R1 es un modelo de razonamiento entrenado con reinforcement learning. Las versiones destiladas (Qwen-7B/14B/32B) son modelos densos más pequeños que conservan la capacidad de razonamiento de R1.' },
-            { q: '¿Cuál es la mejor alternativa local a DeepSeek V3?', a: 'DS-R1-Distill-Qwen-32B a 20.5 GB VRAM con 94% MATH-500 — supera al V3 completo en benchmarks de matemáticas.' },
+            { q: '¿Cuánta RAM necesita DeepSeek-V3 en local?', a: 'Aproximadamente 400 GB RAM en cuantización Q4_K_M. En precisión FP16, se necesitan más de 1.3 TB de RAM.' },
+            { q: '¿Puede llama.cpp ejecutar DeepSeek-V3?', a: 'Técnicamente sí si tienes ~400 GB RAM, pero la velocidad de inferencia sería ~0.1–0.5 tok/s. Para uso práctico, las versiones destiladas son la opción correcta.' },
+            { q: '¿Es la versión destilada igual de buena que DeepSeek-V3?', a: 'Para tareas de razonamiento: DS-R1-Distill-Qwen-32B (94% MATH-500) supera al V3 completo en benchmarks de matemáticas. Para conocimiento general amplio, V3 es mejor, pero requiere acceso a la API cloud.' },
+            { q: '¿Cuál es la diferencia entre DeepSeek-V3 y DeepSeek-R1?', a: 'DeepSeek-V3 es un modelo de chat de propósito general (671B MoE). DeepSeek-R1 es un modelo de razonamiento entrenado con reinforcement learning. Las versiones destiladas (Qwen-7B/14B/32B) son modelos densos más pequeños que conservan la capacidad de razonamiento de R1.' },
+            { q: '¿Cuál es la mejor alternativa local a DeepSeek-V3?', a: 'DS-R1-Distill-Qwen-32B a 20.5 GB VRAM con 94% MATH-500 — supera al V3 completo en benchmarks de matemáticas.' },
           ],
       },
     },
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Requisitos de hardware de DeepSeek V3 en local: ¿es posible?',
-      description: 'DeepSeek V3 (671B MoE) necesita ~400 GB RAM — inviable en hardware de consumo. Alternativas destiladas prácticas para cada nivel de VRAM.',
+      headline: 'Requisitos de hardware de DeepSeek-V3 en local: ¿es posible?',
+      description: 'DeepSeek-V3 (671B MoE) necesita ~400 GB RAM — inviable en hardware de consumo. Alternativas destiladas prácticas para cada nivel de VRAM.',
       url: 'https://www.promptquorum.com/es/prompt-bites/deepseek-v3-local-hardware-requirements',
       inLanguage: 'es',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      about: [{ '@type': 'Thing', name: 'DeepSeek V3 despliegue local' }],
-      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      about: [{ '@type': 'Thing', name: 'DeepSeek-V3 despliegue local' }],
+      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek-V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -912,7 +912,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       mainEntity: [
           {
             '@type': 'Question',
-            'name': '¿Cuánta RAM necesita DeepSeek V3 en local?',
+            'name': '¿Cuánta RAM necesita DeepSeek-V3 en local?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Aproximadamente 400 GB RAM en cuantización Q4_K_M. En precisión FP16, se necesitan más de 1.3 TB de RAM.',
@@ -920,7 +920,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': '¿Puede llama.cpp ejecutar DeepSeek V3?',
+            'name': '¿Puede llama.cpp ejecutar DeepSeek-V3?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Técnicamente sí si tienes ~400 GB RAM, pero la velocidad de inferencia sería ~0.1–0.5 tok/s. Para uso práctico, las versiones destiladas son la opción correcta.',
@@ -928,7 +928,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': '¿Es la versión destilada igual de buena que DeepSeek V3?',
+            'name': '¿Es la versión destilada igual de buena que DeepSeek-V3?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Para tareas de razonamiento: DS-R1-Distill-Qwen-32B (94% MATH-500) supera al V3 completo en benchmarks de matemáticas. Para conocimiento general amplio, V3 es mejor, pero requiere acceso a la API cloud.',
@@ -936,15 +936,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': '¿Cuál es la diferencia entre DeepSeek V3 y DeepSeek-R1?',
+            'name': '¿Cuál es la diferencia entre DeepSeek-V3 y DeepSeek-R1?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'DeepSeek V3 es un modelo de chat de propósito general (671B MoE). DeepSeek-R1 es un modelo de razonamiento entrenado con reinforcement learning. Las versiones destiladas (Qwen-7B/14B/32B) son modelos densos más pequeños que conservan la capacidad de razonamiento de R1.',
+              'text': 'DeepSeek-V3 es un modelo de chat de propósito general (671B MoE). DeepSeek-R1 es un modelo de razonamiento entrenado con reinforcement learning. Las versiones destiladas (Qwen-7B/14B/32B) son modelos densos más pequeños que conservan la capacidad de razonamiento de R1.',
             },
           },
           {
             '@type': 'Question',
-            'name': '¿Cuál es la mejor alternativa local a DeepSeek V3?',
+            'name': '¿Cuál es la mejor alternativa local a DeepSeek-V3?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'DS-R1-Distill-Qwen-32B a 20.5 GB VRAM con 94% MATH-500 — supera al V3 completo en benchmarks de matemáticas.',
@@ -956,24 +956,24 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   ar: {
     theme: 'Model Comparisons',
     heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-ar.webp',
-    title: 'ما هي متطلبات الأجهزة لتشغيل ⁨DeepSeek V3⁩ محلياً؟',
-    seoTitle: '⁨DeepSeek V3⁩ محلياً: ⁨400 GB RAM⁩ وبدائل ⁨2026⁩',
-    metaDescription: '⁨DeepSeek V3⁩ (⁨671B MoE⁩) يستلزم حوالي ⁨400 GB RAM⁩ بتكميم ⁨Q4⁩_⁨K⁩_⁨M⁩ — مستحيل على أجهزة المستهلكين. بدائل عملية بأرقام ⁨VRAM⁩ دقيقة لكل مستوى.',
+    title: 'ما هي متطلبات الأجهزة لتشغيل ⁨DeepSeek-V3⁩ محلياً؟',
+    seoTitle: '⁨DeepSeek-V3⁩ محلياً: ⁨400 GB RAM⁩ وبدائل ⁨2026⁩',
+    metaDescription: '⁨DeepSeek-V3⁩ (⁨671B MoE⁩) يستلزم حوالي ⁨400 GB RAM⁩ بتكميم ⁨Q4⁩_⁨K⁩_⁨M⁩ — مستحيل على أجهزة المستهلكين. بدائل عملية بأرقام ⁨VRAM⁩ دقيقة لكل مستوى.',
     publishDate: '2026-05-26',
     dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-26',
     educationalLevel: 'Intermediate',
-    audience: 'المستخدمون الذين يحاولون تشغيل DeepSeek V3 محلياً',
+    audience: 'المستخدمون الذين يحاولون تشغيل DeepSeek-V3 محلياً',
     parentArticle: '/power-local-llm/deepseek-vs-qwen-local-comparison-2026',
     siblingBites: ['vram-for-70b-model', 'best-moe-models-local-coding'],
     is_living_page: false,
     quickAnswerTop: {
       ar: {
-        question: 'هل يمكن تشغيل DeepSeek V3 محلياً؟',
-        answer: 'لا. DeepSeek V3 (671B MoE) يحتاج حوالي 400 GB RAM بـ Q4_K_M — أعلى بكثير من أي جهاز استهلاكي. البديل العملي: DS-R1-Distill-Qwen-32B (20.5 GB VRAM، 94% MATH-500).',
+        question: 'هل يمكن تشغيل DeepSeek-V3 محلياً؟',
+        answer: 'لا. DeepSeek-V3 (671B MoE) يحتاج حوالي 400 GB RAM بـ Q4_K_M — أعلى بكثير من أي جهاز استهلاكي. البديل العملي: DS-R1-Distill-Qwen-32B (20.5 GB VRAM، 94% MATH-500).',
         bullets: [
-          'DeepSeek V3: 671B MoE — حوالي 400 GB RAM بـ Q4_K_M',
+          'DeepSeek-V3: 671B MoE — حوالي 400 GB RAM بـ Q4_K_M',
           'لا توجد GPU استهلاكية تستطيع تحميله',
           'DS-R1-Distill-Qwen-32B: 20.5 GB VRAM، 94% MATH-500 ✓',
         ],
@@ -984,23 +984,23 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'DeepSeek V3 (671B MoE) بـ Q4_K_M يحتاج حوالي 400 GB RAM — مستحيل على أجهزة المستهلكين في 2026',
+          'DeepSeek-V3 (671B MoE) بـ Q4_K_M يحتاج حوالي 400 GB RAM — مستحيل على أجهزة المستهلكين في 2026',
           'DS-R1-Distill-Qwen-32B: 20.5 GB VRAM، 94% MATH-500 — أكثر نماذج الاستدلال المحلية عملية',
           'مع 8 GB VRAM: DS-R1-Distill-Qwen-7B (5.5 GB)، 88% MATH-500',
-          'ملاحظة MoE: يُنشّط DeepSeek V3 حوالي 37B معامل فقط لكل تمرير أمامي، لكن جميع أوزان الـ 671B يجب أن تكون في الذاكرة في آنٍ واحد',
+          'ملاحظة MoE: يُنشّط DeepSeek-V3 حوالي 37B معامل فقط لكل تمرير أمامي، لكن جميع أوزان الـ 671B يجب أن تكون في الذاكرة في آنٍ واحد',
         ],
       },
       hardware: {
         id: 'hardware-requirements',
-        title: 'اختبار واقعية متطلبات أجهزة DeepSeek V3',
+        title: 'اختبار واقعية متطلبات أجهزة DeepSeek-V3',
         content: [
           '**النموذج الكامل (671B، Q4_K_M):** حوالي 400 GB RAM — تحتاج إلى محطة عمل خادم. لا توجد GPU استهلاكية تدعمه.',
-          '**لماذا لا يساعد MoE هنا:** ينشّط DeepSeek V3 حوالي 37B معامل فقط لكل تمرير أمامي. لكن جميع متجهات أوزان الـ 671B يجب أن تكون في الذاكرة في آنٍ واحد.',
+          '**لماذا لا يساعد MoE هنا:** ينشّط DeepSeek-V3 حوالي 37B معامل فقط لكل تمرير أمامي. لكن جميع متجهات أوزان الـ 671B يجب أن تكون في الذاكرة في آنٍ واحد.',
         ],
         comparisonTable: {
           columns: ['النموذج', 'المعاملات', 'RAM (Q4_K_M)', 'VRAM', 'قابل للتشغيل محلياً؟'],
           rows: [
-            { 'النموذج': 'DeepSeek V3 (كامل)',         'المعاملات': '671B MoE', 'RAM (Q4_K_M)': '~400 GB', 'VRAM': 'N/A',      'قابل للتشغيل محلياً؟': '❌ لا' },
+            { 'النموذج': 'DeepSeek-V3 (كامل)',         'المعاملات': '671B MoE', 'RAM (Q4_K_M)': '~400 GB', 'VRAM': 'N/A',      'قابل للتشغيل محلياً؟': '❌ لا' },
             { 'النموذج': 'DS-R1-Distill-Qwen-32B',     'المعاملات': '32B',      'RAM (Q4_K_M)': '20.5 GB', 'VRAM': '20.5 GB',  'قابل للتشغيل محلياً؟': '✅ RTX 4090 / M3 Max' },
             { 'النموذج': 'DS-R1-Distill-Qwen-14B',     'المعاملات': '14B',      'RAM (Q4_K_M)': '9.5 GB',  'VRAM': '9.5 GB',   'قابل للتشغيل محلياً؟': '✅ RTX 3080 / M2 Pro' },
             { 'النموذج': 'DS-R1-Distill-Qwen-7B',      'المعاملات': '7B',       'RAM (Q4_K_M)': '5.5 GB',  'VRAM': '5.5 GB',   'قابل للتشغيل محلياً؟': '✅ RTX 3060 / M2' },
@@ -1022,27 +1022,27 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-            { q: 'كم من RAM يحتاج DeepSeek V3 للتشغيل محلياً؟', a: 'حوالي 400 GB RAM بتكميم Q4_K_M. بدقة FP16، تحتاج إلى أكثر من 1.3 TB من RAM.' },
-            { q: 'هل يمكن لـ llama.cpp تشغيل DeepSeek V3؟', a: 'من الناحية التقنية نعم إذا كنت تمتلك حوالي 400 GB RAM، لكن سرعة الاستنتاج ستكون حوالي 0.1–0.5 رمز/ثانية. للاستخدام العملي، الإصدارات المقطّرة هي الخيار الصحيح.' },
-            { q: 'هل الإصدار المقطّر جيد مثل DeepSeek V3؟', a: 'لمهام الاستدلال: DS-R1-Distill-Qwen-32B (94% MATH-500) يتفوق على V3 الكامل في اختبارات الرياضيات. للمعرفة العامة الواسعة، V3 أفضل، لكنه يتطلب الوصول إلى واجهة API سحابية.' },
-            { q: 'ما الفرق بين DeepSeek V3 وDeepSeek-R1؟', a: 'DeepSeek V3 نموذج دردشة للأغراض العامة (671B MoE). DeepSeek-R1 نموذج استدلال مُدرَّب بالتعلم المعزز. الإصدارات المقطّرة (Qwen-7B/14B/32B) نماذج كثيفة أصغر تحتفظ بقدرة الاستدلال من R1.' },
-            { q: 'ما أفضل بديل محلي لـ DeepSeek V3؟', a: 'DS-R1-Distill-Qwen-32B بـ 20.5 GB VRAM و94% MATH-500 — يتفوق على V3 الكامل في اختبارات الرياضيات.' },
+            { q: 'كم من RAM يحتاج DeepSeek-V3 للتشغيل محلياً؟', a: 'حوالي 400 GB RAM بتكميم Q4_K_M. بدقة FP16، تحتاج إلى أكثر من 1.3 TB من RAM.' },
+            { q: 'هل يمكن لـ llama.cpp تشغيل DeepSeek-V3؟', a: 'من الناحية التقنية نعم إذا كنت تمتلك حوالي 400 GB RAM، لكن سرعة الاستنتاج ستكون حوالي 0.1–0.5 رمز/ثانية. للاستخدام العملي، الإصدارات المقطّرة هي الخيار الصحيح.' },
+            { q: 'هل الإصدار المقطّر جيد مثل DeepSeek-V3؟', a: 'لمهام الاستدلال: DS-R1-Distill-Qwen-32B (94% MATH-500) يتفوق على V3 الكامل في اختبارات الرياضيات. للمعرفة العامة الواسعة، V3 أفضل، لكنه يتطلب الوصول إلى واجهة API سحابية.' },
+            { q: 'ما الفرق بين DeepSeek-V3 وDeepSeek-R1؟', a: 'DeepSeek-V3 نموذج دردشة للأغراض العامة (671B MoE). DeepSeek-R1 نموذج استدلال مُدرَّب بالتعلم المعزز. الإصدارات المقطّرة (Qwen-7B/14B/32B) نماذج كثيفة أصغر تحتفظ بقدرة الاستدلال من R1.' },
+            { q: 'ما أفضل بديل محلي لـ DeepSeek-V3؟', a: 'DS-R1-Distill-Qwen-32B بـ 20.5 GB VRAM و94% MATH-500 — يتفوق على V3 الكامل في اختبارات الرياضيات.' },
           ],
       },
     },
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'متطلبات أجهزة DeepSeek V3 محلياً: هل هو ممكن؟',
-      description: 'DeepSeek V3 (671B MoE) يحتاج حوالي 400 GB RAM — غير قابل للتشغيل على أجهزة المستهلكين. بدائل مقطّرة عملية لكل مستوى VRAM.',
+      headline: 'متطلبات أجهزة DeepSeek-V3 محلياً: هل هو ممكن؟',
+      description: 'DeepSeek-V3 (671B MoE) يحتاج حوالي 400 GB RAM — غير قابل للتشغيل على أجهزة المستهلكين. بدائل مقطّرة عملية لكل مستوى VRAM.',
       url: 'https://www.promptquorum.com/ar/prompt-bites/deepseek-v3-local-hardware-requirements',
       inLanguage: 'ar',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      about: [{ '@type': 'Thing', name: 'نشر DeepSeek V3 محلياً' }],
-      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      about: [{ '@type': 'Thing', name: 'نشر DeepSeek-V3 محلياً' }],
+      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek-V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1052,7 +1052,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       mainEntity: [
           {
             '@type': 'Question',
-            'name': 'كم من RAM يحتاج DeepSeek V3 للتشغيل محلياً؟',
+            'name': 'كم من RAM يحتاج DeepSeek-V3 للتشغيل محلياً؟',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'حوالي 400 GB RAM بتكميم Q4_K_M. بدقة FP16، تحتاج إلى أكثر من 1.3 TB من RAM.',
@@ -1060,7 +1060,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'هل يمكن لـ llama.cpp تشغيل DeepSeek V3؟',
+            'name': 'هل يمكن لـ llama.cpp تشغيل DeepSeek-V3؟',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'من الناحية التقنية نعم إذا كنت تمتلك حوالي 400 GB RAM، لكن سرعة الاستنتاج ستكون حوالي 0.1–0.5 رمز/ثانية. للاستخدام العملي، الإصدارات المقطّرة هي الخيار الصحيح.',
@@ -1068,7 +1068,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'هل الإصدار المقطّر جيد مثل DeepSeek V3؟',
+            'name': 'هل الإصدار المقطّر جيد مثل DeepSeek-V3؟',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'لمهام الاستدلال: DS-R1-Distill-Qwen-32B (94% MATH-500) يتفوق على V3 الكامل في اختبارات الرياضيات. للمعرفة العامة الواسعة، V3 أفضل، لكنه يتطلب الوصول إلى واجهة API سحابية.',
@@ -1076,15 +1076,15 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'ما الفرق بين DeepSeek V3 وDeepSeek-R1؟',
+            'name': 'ما الفرق بين DeepSeek-V3 وDeepSeek-R1؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'DeepSeek V3 نموذج دردشة للأغراض العامة (671B MoE). DeepSeek-R1 نموذج استدلال مُدرَّب بالتعلم المعزز. الإصدارات المقطّرة (Qwen-7B/14B/32B) نماذج كثيفة أصغر تحتفظ بقدرة الاستدلال من R1.',
+              'text': 'DeepSeek-V3 نموذج دردشة للأغراض العامة (671B MoE). DeepSeek-R1 نموذج استدلال مُدرَّب بالتعلم المعزز. الإصدارات المقطّرة (Qwen-7B/14B/32B) نماذج كثيفة أصغر تحتفظ بقدرة الاستدلال من R1.',
             },
           },
           {
             '@type': 'Question',
-            'name': 'ما أفضل بديل محلي لـ DeepSeek V3؟',
+            'name': 'ما أفضل بديل محلي لـ DeepSeek-V3؟',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'DS-R1-Distill-Qwen-32B بـ 20.5 GB VRAM و94% MATH-500 — يتفوق على V3 الكامل في اختبارات الرياضيات.',
@@ -1097,8 +1097,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Model Comparisons',
     heroImage: '/images/deepseek-v3-local-hardware-requirements-overview-hero-ko.webp',
     title: 'DeepSeek V3를 로컬에서 실행하려면 어떤 하드웨어가 필요합니까?',
-    seoTitle: 'DeepSeek V3 로컬 실행 2026: 400 GB RAM과 실용적 대안',
-    metaDescription: 'DeepSeek V3 (671B MoE)는 Q4_K_M 양자화 기준 약 400 GB RAM이 필요합니다. 소비자용 하드웨어에서는 실행 불가합니다. VRAM 수준별 증류 모델 대안을 정확한 수치로 안내합니다.',
+    seoTitle: 'DeepSeek-V3 로컬 실행 2026: 400 GB RAM과 실용적 대안',
+    metaDescription: 'DeepSeek-V3 (671B MoE)는 Q4_K_M 양자화 기준 약 400 GB RAM이 필요합니다. 소비자용 하드웨어에서는 실행 불가합니다. VRAM 수준별 증류 모델 대안을 정확한 수치로 안내합니다.',
     publishDate: '2026-05-26',
     dateModified: '2026-06-20',
     freshness_tier: 'semi_annual',
@@ -1111,9 +1111,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: 'DeepSeek V3를 로컬에서 실행할 수 있습니까?',
-        answer: '아닙니다. DeepSeek V3 (671B MoE)는 Q4_K_M 기준 약 400 GB RAM이 필요합니다. 소비자용 하드웨어로는 불가능합니다. 실용적 대안: DS-R1-Distill-Qwen-32B (20.5 GB VRAM, 94% MATH-500).',
+        answer: '아닙니다. DeepSeek-V3 (671B MoE)는 Q4_K_M 기준 약 400 GB RAM이 필요합니다. 소비자용 하드웨어로는 불가능합니다. 실용적 대안: DS-R1-Distill-Qwen-32B (20.5 GB VRAM, 94% MATH-500).',
         bullets: [
-          'DeepSeek V3: 671B MoE — Q4_K_M 기준 약 400 GB RAM 필요',
+          'DeepSeek-V3: 671B MoE — Q4_K_M 기준 약 400 GB RAM 필요',
           '소비자용 GPU로는 로드 불가',
           'DS-R1-Distill-Qwen-32B: 20.5 GB VRAM, 94% MATH-500 ✓',
         ],
@@ -1124,7 +1124,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       tldr: {
         isTldr: true,
         items: [
-          'DeepSeek V3 (671B MoE) Q4_K_M 기준 약 400 GB RAM 필요 — 2026년 기준 소비자용 하드웨어로는 실행 불가',
+          'DeepSeek-V3 (671B MoE) Q4_K_M 기준 약 400 GB RAM 필요 — 2026년 기준 소비자용 하드웨어로는 실행 불가',
           'DS-R1-Distill-Qwen-32B: 20.5 GB VRAM, 94% MATH-500 — 가장 실용적인 로컬 추론 모델',
           '8 GB VRAM 환경: DS-R1-Distill-Qwen-7B (5.5 GB), 88% MATH-500',
           'MoE 특성 주의: DeepSeek V3는 포워드 패스당 약 37B 파라미터만 활성화하지만, 671B 전체 가중치가 메모리에 동시에 로드되어야 합니다',
@@ -1132,19 +1132,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       hardware: {
         id: 'hardware-requirements',
-        title: 'DeepSeek V3 하드웨어 요구사항 현실 점검',
+        title: 'DeepSeek-V3 하드웨어 요구사항 현실 점검',
         content: [
           '**전체 모델 (671B, Q4_K_M):** 약 400 GB RAM 필요 — 서버급 워크스테이션이 필요합니다. 소비자용 GPU로는 지원되지 않습니다.',
           '**MoE가 이 경우 도움이 되지 않는 이유:** DeepSeek V3는 포워드 패스당 약 37B 파라미터만 활성화합니다. 하지만 671B 전체 가중치 텐서가 메모리에 동시에 존재해야 합니다.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'DeepSeek V3 전체 모델(671B MoE)은 Q4_K_M 양자화 기준 약 400 GB RAM이 필요하므로 소비자용 하드웨어로는 실행이 불가능합니다.' },
+          { type: 'one-sentence', text: 'DeepSeek-V3 전체 모델(671B MoE)은 Q4_K_M 양자화 기준 약 400 GB RAM이 필요하므로 소비자용 하드웨어로는 실행이 불가능합니다.' },
           { type: 'plain-terms', text: 'DeepSeek V3는 671억 개 파라미터를 가진 MoE 모델입니다. Q4_K_M 양자화로도 약 400 GB RAM이 필요해 일반 소비자 GPU로는 실행할 수 없습니다. 대신 DS-R1-Distill-Qwen-32B 같은 증류 모델을 사용하십시오.' },
         ],
         comparisonTable: {
           columns: ['모델', '파라미터', 'RAM (Q4_K_M)', 'VRAM', '로컬 실행 가능?'],
           rows: [
-            { '모델': 'DeepSeek V3 (전체)', '파라미터': '671B MoE', 'RAM (Q4_K_M)': '~400 GB', 'VRAM': 'N/A', '로컬 실행 가능?': '❌ 불가' },
+            { '모델': 'DeepSeek-V3 (전체)', '파라미터': '671B MoE', 'RAM (Q4_K_M)': '~400 GB', 'VRAM': 'N/A', '로컬 실행 가능?': '❌ 불가' },
             { '모델': 'DS-R1-Distill-Qwen-32B', '파라미터': '32B', 'RAM (Q4_K_M)': '20.5 GB', 'VRAM': '20.5 GB', '로컬 실행 가능?': '✅ RTX 4090 / M3 Max' },
             { '모델': 'DS-R1-Distill-Qwen-14B', '파라미터': '14B', 'RAM (Q4_K_M)': '9.5 GB', 'VRAM': '9.5 GB', '로컬 실행 가능?': '✅ RTX 3080 / M2 Pro' },
             { '모델': 'DS-R1-Distill-Qwen-7B', '파라미터': '7B', 'RAM (Q4_K_M)': '5.5 GB', 'VRAM': '5.5 GB', '로컬 실행 가능?': '✅ RTX 3060 / M2' },
@@ -1185,25 +1185,25 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     readTime: '4분 분량',
     targetKeywords: [
-      'DeepSeek V3 로컬 실행',
-      'DeepSeek V3 RAM 요구사항',
-      'DeepSeek V3 VRAM',
-      'DeepSeek V3 하드웨어 사양',
+      'DeepSeek-V3 로컬 실행',
+      'DeepSeek-V3 RAM 요구사항',
+      'DeepSeek-V3 VRAM',
+      'DeepSeek-V3 하드웨어 사양',
       '로컬 LLM 671B 실행',
     ],
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'DeepSeek V3 로컬 실행 하드웨어 요구사항: 가능합니까?',
-      description: 'DeepSeek V3 (671B MoE)는 약 400 GB RAM이 필요합니다. 소비자용 하드웨어로는 실행이 불가능합니다. VRAM 수준별 실용적인 증류 모델 대안을 안내합니다.',
+      headline: 'DeepSeek-V3 로컬 실행 하드웨어 요구사항: 가능합니까?',
+      description: 'DeepSeek-V3 (671B MoE)는 약 400 GB RAM이 필요합니다. 소비자용 하드웨어로는 실행이 불가능합니다. VRAM 수준별 실용적인 증류 모델 대안을 안내합니다.',
       url: 'https://www.promptquorum.com/ko/prompt-bites/deepseek-v3-local-hardware-requirements',
       inLanguage: 'ko',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
       dateModified: '2026-05-26',
-      about: [{ '@type': 'Thing', name: 'DeepSeek V3 로컬 배포' }],
-      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
+      about: [{ '@type': 'Thing', name: 'DeepSeek-V3 로컬 배포' }],
+      mentions: [{ '@type': 'SoftwareApplication', name: 'DeepSeek-V3' }, { '@type': 'SoftwareApplication', name: 'Ollama' }],
       'proficiencyLevel': 'Intermediate',
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
@@ -1213,7 +1213,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
         { '@type': 'ListItem', position: 2, name: 'Prompt Bites', item: '[www.promptquorum.com/ko/prompt-bites](https://www.promptquorum.com/ko/prompt-bites)' },
-        { '@type': 'ListItem', position: 3, name: 'DeepSeek V3 로컬 실행 하드웨어 요구사항', item: '[www.promptquorum.com/ko/prompt-bites/deepseek-v3-local-hardware-requirements](https://www.promptquorum.com/ko/prompt-bites/deepseek-v3-local-hardware-requirements)' },
+        { '@type': 'ListItem', position: 3, name: 'DeepSeek-V3 로컬 실행 하드웨어 요구사항', item: '[www.promptquorum.com/ko/prompt-bites/deepseek-v3-local-hardware-requirements](https://www.promptquorum.com/ko/prompt-bites/deepseek-v3-local-hardware-requirements)' },
       ],
     },
     faqSchema: {

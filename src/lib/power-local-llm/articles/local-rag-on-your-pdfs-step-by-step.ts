@@ -379,7 +379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Should I use a different model than Qwen3 8B?',
-            a: 'Qwen3 8B Q4_K_M is the best quality-per-RAM trade-off in 2026 for 16 GB systems. On 8 GB RAM use Phi-4 Mini Q4_K_M (~2.5 GB). On 24 GB+ try Qwen 3 14B Q4 for noticeably better synthesis on long documents. For multilingual workloads, Mistral Nemo 12B handles non-English better than Llama 3.3.',
+            a: 'Qwen3 8B Q4_K_M is the best quality-per-RAM trade-off in 2026 for 16 GB systems. On 8 GB RAM use Phi-4 Mini Q4_K_M (~2.5 GB). On 24 GB+ try Qwen3 14B Q4 for noticeably better synthesis on long documents. For multilingual workloads, Mistral Nemo 12B handles non-English better than Llama 3.3.',
           },
           {
             q: 'How do I update the model later?',
@@ -853,7 +853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Sollte ich ein anderes Modell als Qwen3 8B verwenden?',
-            a: 'Qwen3 8B Q4_K_M ist das beste Qualitäts-pro-RAM-Verhältnis 2026 für 16 GB Systeme. Auf 8 GB RAM verwende Phi-4 Mini Q4_K_M (~2,5 GB). Auf 24 GB+ probiere Qwen 3 14B Q4 für merklich bessere Synthese bei langen Dokumenten. Für mehrsprachige Arbeitsbereiche, Mistral Nemo 12B behandelt Nicht-Englisch besser als Llama 3.3.',
+            a: 'Qwen3 8B Q4_K_M ist das beste Qualitäts-pro-RAM-Verhältnis 2026 für 16 GB Systeme. Auf 8 GB RAM verwende Phi-4 Mini Q4_K_M (~2,5 GB). Auf 24 GB+ probiere Qwen3 14B Q4 für merklich bessere Synthese bei langen Dokumenten. Für mehrsprachige Arbeitsbereiche, Mistral Nemo 12B behandelt Nicht-Englisch besser als Llama 3.3.',
           },
           {
             q: 'Wie aktualisiere ich das Modell später?',
@@ -1336,7 +1336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Devrais-je utiliser un modèle différent de Qwen3 8B?',
-            a: 'Qwen3 8B Q4_K_M est le meilleur tradeoff qualité-par-RAM 2026 pour systèmes 16 Go. Sur 8 Go RAM, utilisez Phi-4 Mini Q4_K_M (~2,4 Go). Sur 24 Go+, essayez Qwen 3 14B Q4 pour synthèse notablement meilleure sur longs documents. Pour charges-travail multilingues, Mistral Nemo 12B traite mieux non-English que Llama 3.3.',
+            a: 'Qwen3 8B Q4_K_M est le meilleur tradeoff qualité-par-RAM 2026 pour systèmes 16 Go. Sur 8 Go RAM, utilisez Phi-4 Mini Q4_K_M (~2,4 Go). Sur 24 Go+, essayez Qwen3 14B Q4 pour synthèse notablement meilleure sur longs documents. Pour charges-travail multilingues, Mistral Nemo 12B traite mieux non-English que Llama 3.3.',
           },
           {
             q: 'Comment mets-à-jour le modèle après?',
@@ -1811,7 +1811,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qwen3 8B 以外のモデルを使うべき?',
-            a: 'Qwen3 8B Q4_K_M は 16GB system での 2026 best quality-per-RAM tradeoff。8GB RAM では Phi-4 Mini Q4_K_M (~2.4GB)。24GB+ では Qwen 3 14B Q4 for notably better synthesis on long document。Multilingual workload は Mistral Nemo 12B が non-English より優秀 (Llama 3.3 より)。',
+            a: 'Qwen3 8B Q4_K_M は 16GB system での 2026 best quality-per-RAM tradeoff。8GB RAM では Phi-4 Mini Q4_K_M (~2.4GB)。24GB+ では Qwen3 14B Q4 for notably better synthesis on long document。Multilingual workload は Mistral Nemo 12B が non-English より優秀 (Llama 3.3 より)。',
           },
           {
             q: '後でモデルを update する方法は?',
@@ -2279,7 +2279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '应该使用 Qwen3 8B 以外的模型吗？',
-            a: 'Qwen3 8B Q4_K_M 是2026年16 GB系统上质量与内存比的最佳选择。8 GB内存使用 Phi-4 Mini Q4_K_M（约2.5 GB）。24 GB+可尝试 Qwen 3 14B Q4，长文档综合能力明显更强。多语言工作负载下，Mistral Nemo 12B 处理非英语内容优于 Llama 3.3。',
+            a: 'Qwen3 8B Q4_K_M 是2026年16 GB系统上质量与内存比的最佳选择。8 GB内存使用 Phi-4 Mini Q4_K_M（约2.5 GB）。24 GB+可尝试 Qwen3 14B Q4，长文档综合能力明显更强。多语言工作负载下，Mistral Nemo 12B 处理非英语内容优于 Llama 3.3。',
           },
           {
             q: '以后如何更新模型？',
@@ -2754,7 +2754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Debería usar un modelo diferente a Qwen3 8B?',
-            a: 'Qwen3 8B Q4_K_M es la mejor relación calidad-RAM en 2026 para sistemas con 16 GB. Con 8 GB de RAM usa Phi-4 Mini Q4_K_M (~2,5 GB). Con 24 GB o más, prueba Qwen 3 14B Q4 para una síntesis notablemente mejor en documentos largos. Para cargas de trabajo multilingüe, Mistral Nemo 12B maneja mejor el contenido que no está en inglés que Llama 3.3.',
+            a: 'Qwen3 8B Q4_K_M es la mejor relación calidad-RAM en 2026 para sistemas con 16 GB. Con 8 GB de RAM usa Phi-4 Mini Q4_K_M (~2,5 GB). Con 24 GB o más, prueba Qwen3 14B Q4 para una síntesis notablemente mejor en documentos largos. Para cargas de trabajo multilingüe, Mistral Nemo 12B maneja mejor el contenido que no está en inglés que Llama 3.3.',
           },
           {
             q: '¿Cómo actualizo el modelo más adelante?',
@@ -3224,7 +3224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qwen3 8B 외에 다른 모델을 사용해야 합니까?',
-            a: 'Qwen3 8B Q4_K_M은 2026년 16GB 시스템에서 최고의 품질 대 RAM 비율을 제공합니다. RAM 8GB에서는 Phi-4 Mini Q4_K_M(약 2.4GB)을 사용하십시오. RAM 24GB 이상에서는 긴 문서에서 현저히 나은 종합을 위해 Qwen 3 14B Q4를 시도하십시오. 다국어 워크로드의 경우 Mistral Nemo 12B가 Llama 3.3보다 한국어 콘텐츠를 더 잘 처리합니다.',
+            a: 'Qwen3 8B Q4_K_M은 2026년 16GB 시스템에서 최고의 품질 대 RAM 비율을 제공합니다. RAM 8GB에서는 Phi-4 Mini Q4_K_M(약 2.4GB)을 사용하십시오. RAM 24GB 이상에서는 긴 문서에서 현저히 나은 종합을 위해 Qwen3 14B Q4를 시도하십시오. 다국어 워크로드의 경우 Mistral Nemo 12B가 Llama 3.3보다 한국어 콘텐츠를 더 잘 처리합니다.',
           },
           {
             q: '나중에 모델을 어떻게 업데이트합니까?',
@@ -3695,7 +3695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Devo usar um modelo diferente do Qwen3 8B?',
-            a: 'O Qwen3 8B Q4_K_M é a melhor relação qualidade-RAM em 2026 para sistemas com 16 GB. Com 8 GB de RAM use o Phi-4 Mini Q4_K_M (~2,5 GB). Com 24 GB ou mais, experimente o Qwen 3 14B Q4 para uma síntese notavelmente melhor em documentos longos. Para cargas de trabalho multilíngues, o Mistral Nemo 12B lida melhor com conteúdo que não está em inglês do que o Llama 3.3.',
+            a: 'O Qwen3 8B Q4_K_M é a melhor relação qualidade-RAM em 2026 para sistemas com 16 GB. Com 8 GB de RAM use o Phi-4 Mini Q4_K_M (~2,5 GB). Com 24 GB ou mais, experimente o Qwen3 14B Q4 para uma síntese notavelmente melhor em documentos longos. Para cargas de trabalho multilíngues, o Mistral Nemo 12B lida melhor com conteúdo que não está em inglês do que o Llama 3.3.',
           },
           {
             q: 'Como atualizo o modelo mais tarde?',
@@ -4165,7 +4165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل ينبغي أن أستخدم نموذجًا غير Qwen3 8B؟',
-            a: 'Qwen3 8B Q4_K_M هو أفضل نسبة جودة-إلى-ذاكرة في 2026 للأنظمة بذاكرة 16 غيغابايت. وبذاكرة 8 غيغابايت استخدم Phi-4 Mini Q4_K_M (~2.4 غيغابايت). وبذاكرة 24 غيغابايت أو أكثر، جرّب Qwen 3 14B Q4 لتركيب أفضل ملحوظًا في المستندات الطويلة. ولأعباء العمل متعددة اللغات، يتعامل Mistral Nemo 12B مع المحتوى غير الإنجليزي أفضل من Llama 3.3.',
+            a: 'Qwen3 8B Q4_K_M هو أفضل نسبة جودة-إلى-ذاكرة في 2026 للأنظمة بذاكرة 16 غيغابايت. وبذاكرة 8 غيغابايت استخدم Phi-4 Mini Q4_K_M (~2.4 غيغابايت). وبذاكرة 24 غيغابايت أو أكثر، جرّب Qwen3 14B Q4 لتركيب أفضل ملحوظًا في المستندات الطويلة. ولأعباء العمل متعددة اللغات، يتعامل Mistral Nemo 12B مع المحتوى غير الإنجليزي أفضل من Llama 3.3.',
           },
           {
             q: 'كيف أحدّث النموذج لاحقًا؟',

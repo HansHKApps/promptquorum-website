@@ -93,7 +93,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 vs R1: Don\'t Confuse Them',
         content: [
-          '**DeepSeek-V3 is a chat model; DeepSeek-R1 (and these distills) are reasoning models.** This table is for the R1 reasoning family only. If you are looking for V3, it is a 671B MoE chat model that is also not consumer-runnable — see the [DeepSeek V3 hardware bite](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**DeepSeek-V3 is a chat model; DeepSeek-R1 (and these distills) are reasoning models.** This table is for the R1 reasoning family only. If you are looking for V3, it is a 671B MoE chat model that is also not consumer-runnable — see the [DeepSeek-V3 hardware bite](/prompt-bites/deepseek-v3-local-hardware-requirements).',
           '**Update:** DeepSeek has since released DeepSeek-V4 (Flash and Pro) as its newer flagship generation, also available as open weights. The R1 distills covered here are not being discontinued and remain fully valid to run locally — if you want the newest architecture, V4 is worth evaluating alongside them.',
         ],
       },
@@ -113,7 +113,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[Best DeepSeek Distill for Your GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — match your card to a distill plus the Ollama command and expected tok/s',
           '[Best Local Reasoning Model 2026: DeepSeek-R1 Ranked](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — the full ranked guide with benchmarks',
-          '[DeepSeek V3 Local Hardware Requirements](/prompt-bites/deepseek-v3-local-hardware-requirements) — the V3 chat-model counterpart',
+          '[DeepSeek-V3 Local Hardware Requirements](/prompt-bites/deepseek-v3-local-hardware-requirements) — the V3 chat-model counterpart',
         ],
       },
     },
@@ -209,7 +209,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 vs. R1: Nicht verwechseln',
         content: [
-          '**DeepSeek-V3 ist ein Chat-Modell; DeepSeek-R1 (und diese Distills) sind Reasoning-Modelle.** Diese Tabelle gilt nur für die R1-Reasoning-Familie. Wenn Sie V3 suchen: Es ist ein 671B-MoE-Chat-Modell, das ebenfalls nicht auf Consumer-Hardware läuft — siehe den [DeepSeek V3 Hardware-Bite](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**DeepSeek-V3 ist ein Chat-Modell; DeepSeek-R1 (und diese Distills) sind Reasoning-Modelle.** Diese Tabelle gilt nur für die R1-Reasoning-Familie. Wenn Sie V3 suchen: Es ist ein 671B-MoE-Chat-Modell, das ebenfalls nicht auf Consumer-Hardware läuft — siehe den [DeepSeek-V3 Hardware-Bite](/prompt-bites/deepseek-v3-local-hardware-requirements).',
           '**Update:** DeepSeek hat inzwischen DeepSeek-V4 (Flash und Pro) als neuere Flaggschiff-Generation veröffentlicht, ebenfalls als offene Gewichte verfügbar. Die hier behandelten R1-Distillate werden nicht eingestellt und bleiben weiterhin uneingeschränkt lokal nutzbar — wer die neueste Architektur möchte, sollte V4 zusätzlich in Betracht ziehen.',
         ],
       },
@@ -229,7 +229,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[Bester DeepSeek Distill für Ihre GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — passen Sie Ihre Karte an einen Distill an, plus Ollama-Befehl und erwartete tok/s',
           '[Bestes lokales Reasoning-Modell 2026: DeepSeek-R1 im Ranking](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — der vollständige Ranking-Leitfaden mit Benchmarks',
-          '[DeepSeek V3 lokale Hardware-Anforderungen](/prompt-bites/deepseek-v3-local-hardware-requirements) — das V3-Chat-Modell-Pendant',
+          '[DeepSeek-V3 lokale Hardware-Anforderungen](/prompt-bites/deepseek-v3-local-hardware-requirements) — das V3-Chat-Modell-Pendant',
         ],
       },
     },
@@ -325,7 +325,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 vs R1 : ne les confondez pas',
         content: [
-          '**DeepSeek-V3 est un modèle de chat ; DeepSeek-R1 (et ces distillations) sont des modèles de raisonnement.** Ce tableau concerne uniquement la famille de raisonnement R1. Si vous cherchez V3, c\'est un modèle de chat MoE 671B qui n\'est pas non plus exécutable par le grand public — voir le [bite matériel DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**DeepSeek-V3 est un modèle de chat ; DeepSeek-R1 (et ces distillations) sont des modèles de raisonnement.** Ce tableau concerne uniquement la famille de raisonnement R1. Si vous cherchez V3, c\'est un modèle de chat MoE 671B qui n\'est pas non plus exécutable par le grand public — voir le [bite matériel DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
           '**Mise à jour :** DeepSeek a depuis publié DeepSeek-V4 (Flash et Pro) comme nouvelle génération phare, également disponible en poids ouverts. Les distillations R1 présentées ici ne sont pas abandonnées et restent pleinement utilisables en local — si vous voulez l\'architecture la plus récente, V4 mérite d\'être évalué en complément.',
         ],
       },
@@ -345,7 +345,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[Meilleure distillation DeepSeek pour votre GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — associez votre carte à une distillation, avec la commande Ollama et les tok/s attendus',
           '[Meilleur modèle de raisonnement local 2026 : classement DeepSeek-R1](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — le guide de classement complet avec benchmarks',
-          '[Exigences matérielles locales DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — l\'équivalent du modèle de chat V3',
+          '[Exigences matérielles locales DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — l\'équivalent du modèle de chat V3',
         ],
       },
     },
@@ -461,7 +461,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[あなたのGPUに最適なDeepSeek Distill](/prompt-bites/best-deepseek-distill-for-your-gpu) — カードをDistillに合わせ、Ollamaコマンドと想定tok/sも掲載',
           '[2026年版 最適なローカル推論モデル：DeepSeek-R1ランキング](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — ベンチマーク付きの完全なランキングガイド',
-          '[DeepSeek V3 ローカルハードウェア要件](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3チャットモデルの対応版',
+          '[DeepSeek-V3 ローカルハードウェア要件](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3チャットモデルの対応版',
         ],
       },
     },
@@ -557,7 +557,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 与 R1：不要混淆',
         content: [
-          '**DeepSeek-V3 是对话模型；DeepSeek-R1（以及这些 distill）是推理模型。** 此表仅针对 R1 推理系列。如果你要找的是 V3，它是一款 671B MoE 对话模型，同样无法在消费级硬件上运行——参见 [DeepSeek V3 硬件速览](/prompt-bites/deepseek-v3-local-hardware-requirements)。',
+          '**DeepSeek-V3 是对话模型；DeepSeek-R1（以及这些 distill）是推理模型。** 此表仅针对 R1 推理系列。如果你要找的是 V3，它是一款 671B MoE 对话模型，同样无法在消费级硬件上运行——参见 [DeepSeek-V3 硬件速览](/prompt-bites/deepseek-v3-local-hardware-requirements)。',
           '**更新:** DeepSeek 此后发布了新一代旗舰模型 DeepSeek-V4(Flash 和 Pro),同样提供开源权重。本文介绍的 R1 蒸馏模型并未停用,依然可以完整地在本地运行——如果你想使用最新架构,可以将 V4 一并纳入考虑。',
         ],
       },
@@ -577,7 +577,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[适合你 GPU 的最佳 DeepSeek Distill](/prompt-bites/best-deepseek-distill-for-your-gpu) — 为你的显卡匹配 distill，并附 Ollama 命令和预期 tok/s',
           '[2026 最佳本地推理模型：DeepSeek-R1 排名](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 含基准测试的完整排名指南',
-          '[DeepSeek V3 本地硬件要求](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 对话模型的对应版本',
+          '[DeepSeek-V3 本地硬件要求](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 对话模型的对应版本',
         ],
       },
     },
@@ -673,7 +673,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 vs R1: no los confundas',
         content: [
-          '**DeepSeek-V3 es un modelo de chat; DeepSeek-R1 (y estos distills) son modelos de razonamiento.** Esta tabla es solo para la familia de razonamiento R1. Si buscas V3, es un modelo de chat MoE de 671B que tampoco puede ejecutarse en hardware de consumo; consulta el [resumen de hardware de DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**DeepSeek-V3 es un modelo de chat; DeepSeek-R1 (y estos distills) son modelos de razonamiento.** Esta tabla es solo para la familia de razonamiento R1. Si buscas V3, es un modelo de chat MoE de 671B que tampoco puede ejecutarse en hardware de consumo; consulta el [resumen de hardware de DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
           '**Actualización:** DeepSeek ha lanzado desde entonces DeepSeek-V4 (Flash y Pro) como su nueva generación insignia, también disponible en pesos abiertos. Las destilaciones de R1 tratadas aquí no se están descontinuando y siguen siendo totalmente válidas para ejecutar en local — si quieres la arquitectura más reciente, vale la pena evaluar V4 también.',
         ],
       },
@@ -693,7 +693,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[El mejor distill de DeepSeek para tu GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — empareja tu tarjeta con un distill, más el comando de Ollama y los tok/s esperados',
           '[Mejor modelo de razonamiento local 2026: DeepSeek-R1 clasificado](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — la guía completa con clasificación y benchmarks',
-          '[Requisitos de hardware local de DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — la contraparte del modelo de chat V3',
+          '[Requisitos de hardware local de DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — la contraparte del modelo de chat V3',
         ],
       },
     },
@@ -789,7 +789,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 vs R1: não confunda',
         content: [
-          '**O DeepSeek-V3 é um modelo de chat; o DeepSeek-R1 (e estes distills) são modelos de raciocínio.** Esta tabela é só para a família de raciocínio R1. Se você procura o V3, ele é um modelo de chat MoE de 671B que também não roda em hardware de consumo — veja a [análise de hardware do DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**O DeepSeek-V3 é um modelo de chat; o DeepSeek-R1 (e estes distills) são modelos de raciocínio.** Esta tabela é só para a família de raciocínio R1. Se você procura o V3, ele é um modelo de chat MoE de 671B que também não roda em hardware de consumo — veja a [análise de hardware do DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
           '**Atualização:** Desde então, a DeepSeek lançou o DeepSeek-V4 (Flash e Pro) como sua nova geração principal, também disponível em pesos abertos. As destilações do R1 abordadas aqui não estão sendo descontinuadas e continuam totalmente válidas para rodar localmente — se você quiser a arquitetura mais recente, vale a pena avaliar o V4 também.',
         ],
       },
@@ -809,7 +809,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[Melhor distill do DeepSeek para sua GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — combine sua placa com um distill, além do comando do Ollama e os tok/s esperados',
           '[Melhor modelo de raciocínio local 2026: DeepSeek-R1 no ranking](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — o guia completo com ranking e benchmarks',
-          '[Requisitos de hardware local do DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — a contraparte do modelo de chat V3',
+          '[Requisitos de hardware local do DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — a contraparte do modelo de chat V3',
         ],
       },
     },
@@ -905,7 +905,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 مقابل R1: لا تخلط بينهما',
         content: [
-          '**DeepSeek-V3 نموذج محادثة؛ أما DeepSeek-R1 (وهذه النماذج المقطّرة distill) فهي نماذج استدلال.** هذا الجدول مخصص لعائلة الاستدلال R1 فقط. إذا كنت تبحث عن V3، فهو نموذج محادثة MoE بحجم 671B لا يمكن تشغيله أيضًا على عتاد المستهلك — راجع [موجز عتاد DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**DeepSeek-V3 نموذج محادثة؛ أما DeepSeek-R1 (وهذه النماذج المقطّرة distill) فهي نماذج استدلال.** هذا الجدول مخصص لعائلة الاستدلال R1 فقط. إذا كنت تبحث عن V3، فهو نموذج محادثة MoE بحجم 671B لا يمكن تشغيله أيضًا على عتاد المستهلك — راجع [موجز عتاد DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
           '**تحديث:** أصدرت DeepSeek منذ ذلك الحين DeepSeek-V4 (Flash وPro) كجيلها الرئيسي الأحدث، وهو متاح أيضًا كأوزان مفتوحة. نسخ R1 المقطّرة المتناولة هنا لم يتم إيقافها ولا تزال صالحة تمامًا للتشغيل محليًا — إذا كنت تريد أحدث بنية، يستحق V4 التقييم أيضًا.',
         ],
       },
@@ -925,7 +925,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[أفضل DeepSeek Distill لبطاقتك GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — طابِق بطاقتك مع نموذج distill، مع أمر Ollama ومعدل tok/s المتوقع',
           '[أفضل نموذج استدلال محلي 2026: تصنيف DeepSeek-R1](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — الدليل الكامل بالتصنيف والمعايير القياسية',
-          '[متطلبات العتاد المحلي لـ DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — النظير من نموذج المحادثة V3',
+          '[متطلبات العتاد المحلي لـ DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — النظير من نموذج المحادثة V3',
         ],
       },
     },
@@ -1021,7 +1021,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 vs R1: 혼동하지 마십시오',
         content: [
-          '**DeepSeek-V3은 채팅 모델이고, DeepSeek-R1(및 이 distill들)은 추론 모델입니다.** 이 표는 R1 추론 계열 전용입니다. V3을 찾고 있다면, 그것은 671B MoE 채팅 모델로 역시 소비자용 하드웨어에서 구동할 수 없습니다 — [DeepSeek V3 하드웨어 요약](/ko/prompt-bites/deepseek-v3-local-hardware-requirements)을 참고하십시오.',
+          '**DeepSeek-V3은 채팅 모델이고, DeepSeek-R1(및 이 distill들)은 추론 모델입니다.** 이 표는 R1 추론 계열 전용입니다. V3을 찾고 있다면, 그것은 671B MoE 채팅 모델로 역시 소비자용 하드웨어에서 구동할 수 없습니다 — [DeepSeek-V3 하드웨어 요약](/ko/prompt-bites/deepseek-v3-local-hardware-requirements)을 참고하십시오.',
           '**업데이트:** DeepSeek는 이후 새로운 플래그십 세대인 DeepSeek-V4(Flash 및 Pro)를 출시했으며, 이 역시 오픈 웨이트로 제공됩니다. 여기서 다루는 R1 증류 모델은 단종되지 않았으며 로컬에서 계속 문제없이 실행할 수 있습니다 — 최신 아키텍처를 원한다면 V4도 함께 검토할 가치가 있습니다.',
         ],
       },
@@ -1041,7 +1041,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[당신의 GPU에 가장 적합한 DeepSeek Distill](/ko/prompt-bites/best-deepseek-distill-for-your-gpu) — 카드를 distill에 맞추고, Ollama 명령어와 예상 tok/s까지 제공',
           '[2026 최고의 로컬 추론 모델: DeepSeek-R1 순위](/ko/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 벤치마크가 포함된 전체 순위 가이드',
-          '[DeepSeek V3 로컬 하드웨어 요구 사항](/ko/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 채팅 모델 버전',
+          '[DeepSeek-V3 로컬 하드웨어 요구 사항](/ko/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 채팅 모델 버전',
         ],
       },
     },

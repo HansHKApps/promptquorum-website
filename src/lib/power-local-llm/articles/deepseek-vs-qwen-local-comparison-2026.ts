@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'For math and reasoning tasks, DeepSeek-R1 distilled models are stronger (94% MATH-500 at 32B). For coding and Chinese text, Qwen3 is stronger (91.5% HumanEval at 32B). Both families run on identical hardware at equivalent parameter counts.',
         bullets: [
           'Math / reasoning: DeepSeek-R1-Distill-Qwen-32B (94% MATH-500)',
-          'Coding: Qwen3-Coder 32B (91.5% HumanEval)',
+          'Coding: Qwen2.5-Coder 32B (91.5% HumanEval)',
           'Chinese text: Qwen3 8B–72B (native tokenisation)',
           'Same VRAM: both 7B models need 5.5 GB at Q4_K_M',
           'Apple Silicon: both run well on M-series unified memory',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Für Mathematik und Schlussfolgern sind DeepSeek-R1-destillierte Modelle stärker (94 % MATH-500 bei 32B). Für Programmierung und chinesischen Text ist Qwen3 stärker (91,5 % HumanEval bei 32B). Beide Familien laufen bei gleicher Parameterzahl auf identischer Hardware.',
         bullets: [
           'Mathematik/Schlussfolgern: DeepSeek-R1-Distill-Qwen-32B (94 % MATH-500)',
-          'Programmierung: Qwen3-Coder 32B (91,5 % HumanEval)',
+          'Programmierung: Qwen2.5-Coder 32B (91,5 % HumanEval)',
           'Chinesischer Text: Qwen3 8B–72B (natives Tokenisierung)',
           'Gleicher VRAM: beide 7B-Modelle brauchen 5,5 GB bei Q4_K_M',
         ],
@@ -62,7 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pour les mathématiques et le raisonnement, les modèles distillés DeepSeek-R1 sont plus forts (94 % MATH-500 à 32B). Pour le code et le texte chinois, Qwen3 est plus fort (91,5 % HumanEval à 32B). Les deux familles fonctionnent sur le même matériel à nombre de paramètres équivalent.',
         bullets: [
           'Maths / raisonnement : DeepSeek-R1-Distill-Qwen-32B (94 % MATH-500)',
-          'Code : Qwen3-Coder 32B (91,5 % HumanEval)',
+          'Code : Qwen2.5-Coder 32B (91,5 % HumanEval)',
           'Texte chinois : Qwen3 8B–72B (tokenisation native)',
           'Même VRAM : les deux modèles 7B nécessitent 5,5 Go en Q4_K_M',
         ],
@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '数学・推論タスクではDeepSeek-R1蒸留モデルが優れています（32BでMATH-500 94%）。コーディングと中国語テキストではQwen3が優れています（32BでHumanEval 91.5%）。同じパラメータ数なら両ファミリーに同じハードウェアが必要です。',
         bullets: [
           '数学・推論：DeepSeek-R1-Distill-Qwen-32B（MATH-500 94%）',
-          'コーディング：Qwen3-Coder 32B（HumanEval 91.5%）',
+          'コーディング：Qwen2.5-Coder 32B（HumanEval 91.5%）',
           '中国語テキスト：Qwen3 8B〜72B（ネイティブトークナイゼーション）',
           '同じVRAM：両7BモデルともQ4_K_Mで5.5 GBが必要',
         ],
@@ -86,7 +86,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '数学和推理任务：DeepSeek-R1 蒸馏模型更强（32B MATH-500 达94%）。编程和中文文本：Qwen3 更强（32B HumanEval 达91.5%）。同等参数量下两者所需硬件相同。',
         bullets: [
           '数学/推理：DeepSeek-R1-Distill-Qwen-32B（MATH-500 94%）',
-          '编程：Qwen3-Coder 32B（HumanEval 91.5%）',
+          '编程：Qwen2.5-Coder 32B（HumanEval 91.5%）',
           '中文文本：Qwen3 8B–72B（原生分词）',
           '相同显存：两款7B模型Q4_K_M均需5.5 GB',
         ],
@@ -123,7 +123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Same VRAM: both 7B models need 5.5 GB at Q4_K_M; both 32B need 20.5 GB',
           'Math: DeepSeek-R1-Distill-Qwen-32B wins (94% MATH-500 vs 90.3%)',
-          'Code: Qwen3-Coder 32B wins (91.5% HumanEval vs 83%)',
+          'Code: Qwen2.5-Coder 32B wins (91.5% HumanEval vs 83%)',
           'Chinese: Qwen3 wins — native tokenisation, 30–40% more efficient on CJK text',
           'Reasoning chains: DeepSeek-R1 distills produce long chain-of-thought by default',
           'General chat: Qwen3 14B is slightly more fluent; DeepSeek 14B distill tends to over-reason',
@@ -194,7 +194,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**8 GB VRAM (RTX 3060 / M2 16 GB):** Qwen3 8B for coding/chat; DS-R1-Distill-Qwen-7B for math tutoring',
           '**12 GB VRAM (RTX 3080 / M2 Pro 24 GB):** Qwen3 14B for general use; DS-R1-Distill-Qwen-14B for reasoning chains',
-          '**24 GB VRAM (RTX 4090 / M3 Max 48 GB):** Qwen3-Coder 32B or Qwen3 32B — best all-round local model in this tier',
+          '**24 GB VRAM (RTX 4090 / M3 Max 48 GB):** Qwen2.5-Coder 32B or Qwen3 32B — best all-round local model in this tier',
           '**48 GB+ (M2/M3 Ultra / dual RTX 4090):** Qwen3 72B (86.1% MMLU, 97% HumanEval) — near GPT-4 class',
           '**CPU-only (32+ GB RAM):** Qwen3 8B or DS-R1-Distill 7B — both run at 3–8 tok/s on modern laptop CPUs',
         ],
@@ -221,7 +221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3 8B:** 5.5 GB VRAM. Best general-purpose 7B for coding and Chinese text. 74.6% HumanEval outperforms every 7B competitor on code.',
           '**Qwen3 14B:** 9.5 GB VRAM. The sweet spot for balanced quality vs speed. 82.1% HumanEval, 79.2% MMLU. Best choice for most 12 GB VRAM setups.',
           '**Qwen3 32B:** 20.5 GB VRAM. 91.5% HumanEval — best coding benchmark score under 48 GB VRAM.',
-          '**Qwen3-Coder 32B:** Same VRAM as base 32B, fine-tuned specifically for code generation and review. Use instead of base when coding is the primary task.',
+          '**Qwen2.5-Coder 32B:** Same VRAM as base 32B, fine-tuned specifically for code generation and review. Use instead of base when coding is the primary task.',
           '**Qwen3 72B:** 46 GB VRAM. 86.1% MMLU, 97% HumanEval. Only runs on 48+ GB unified memory (M2/M3 Ultra) or multi-GPU setups.',
           'Ollama command: `ollama run qwen3:14b`',
         ],
@@ -271,12 +271,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       useCaseVerdicts: {
-        id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-en.svg', imageCaption: 'Use-case guide for DeepSeek vs Qwen: math tutoring and reasoning chains favor DeepSeek-R1-Distill-Qwen, while code generation (Qwen3-Coder 32B, 91.5% HumanEval) and Chinese-language chat favor Qwen3.',
+        id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-en.svg', imageCaption: 'Use-case guide for DeepSeek vs Qwen: math tutoring and reasoning chains favor DeepSeek-R1-Distill-Qwen, while code generation (Qwen2.5-Coder 32B, 91.5% HumanEval) and Chinese-language chat favor Qwen3.',
         title: 'Use Case Verdicts',
         content: 'One-sentence answer for each common local-LLM use case:',
         items: [
           '**Math homework / tutoring:** DS-R1-Distill-Qwen-7B — 88% MATH-500 outperforms Qwen3 8B (62.5%) at the same VRAM',
-          '**Code generation / review:** Qwen3-Coder 32B — 91.5% HumanEval, the highest of any consumer-runnable model',
+          '**Code generation / review:** Qwen2.5-Coder 32B — 91.5% HumanEval, the highest of any consumer-runnable model',
           '**Chinese-language chat:** Qwen3 8B — native CJK tokenisation, 30–40% more token-efficient on Chinese text',
           '**Step-by-step analysis / reasoning chains:** DS-R1-Distill-Qwen-14B — produces explicit chain-of-thought by default',
           '**General daily assistant (8 GB VRAM):** Qwen3 8B — more fluent conversation, avoids DeepSeek\'s over-reasoning on simple tasks',
@@ -319,7 +319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-08-29',
       about: [
-        { '@type': 'Thing', name: 'DeepSeek R1' },
+        { '@type': 'Thing', name: 'DeepSeek-R1' },
         { '@type': 'Thing', name: 'Qwen3' },
         { '@type': 'Thing', name: 'Local LLM' },
       ],
@@ -417,7 +417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'For math and reasoning tasks, DeepSeek-R1 distilled models are stronger (94% MATH-500 at 32B). For coding and Chinese text, Qwen3 is stronger (91.5% HumanEval at 32B). Both families run on identical hardware at equivalent parameter counts.',
         bullets: [
           'Math / reasoning: DeepSeek-R1-Distill-Qwen-32B (94% MATH-500)',
-          'Coding: Qwen3-Coder 32B (91.5% HumanEval)',
+          'Coding: Qwen2.5-Coder 32B (91.5% HumanEval)',
           'Chinese text: Qwen3 8B–72B (native tokenisation)',
           'Same VRAM: both 7B models need 5.5 GB at Q4_K_M',
           'Apple Silicon: both run well on M-series unified memory',
@@ -430,7 +430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Für Mathematik und Schlussfolgern sind DeepSeek-R1-destillierte Modelle stärker (94 % MATH-500 bei 32B). Für Programmierung und chinesischen Text ist Qwen3 stärker (91,5 % HumanEval bei 32B).',
         bullets: [
           'Mathematik/Schlussfolgern: DeepSeek-R1-Distill-Qwen-32B (94 % MATH-500)',
-          'Programmierung: Qwen3-Coder 32B (91,5 % HumanEval)',
+          'Programmierung: Qwen2.5-Coder 32B (91,5 % HumanEval)',
           'Chinesischer Text: Qwen3 8B–72B (natives Tokenisierung)',
           'Gleicher VRAM: beide 7B-Modelle brauchen 5,5 GB bei Q4_K_M',
         ],
@@ -442,7 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pour les mathématiques et le raisonnement, les modèles distillés DeepSeek-R1 sont plus forts (94 % MATH-500 à 32B). Pour le code et le texte chinois, Qwen3 est plus fort (91,5 % HumanEval à 32B).',
         bullets: [
           'Maths / raisonnement : DeepSeek-R1-Distill-Qwen-32B (94 % MATH-500)',
-          'Code : Qwen3-Coder 32B (91,5 % HumanEval)',
+          'Code : Qwen2.5-Coder 32B (91,5 % HumanEval)',
           'Texte chinois : Qwen3 8B–72B (tokenisation native)',
           'Même VRAM : les deux modèles 7B nécessitent 5,5 Go en Q4_K_M',
         ],
@@ -454,7 +454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '数学・推論タスクではDeepSeek-R1蒸留モデルが優れています（32BでMATH-500 94%）。コーディングと中国語テキストではQwen3が優れています（32BでHumanEval 91.5%）。',
         bullets: [
           '数学・推論：DeepSeek-R1-Distill-Qwen-32B（MATH-500 94%）',
-          'コーディング：Qwen3-Coder 32B（HumanEval 91.5%）',
+          'コーディング：Qwen2.5-Coder 32B（HumanEval 91.5%）',
           '中国語テキスト：Qwen3 8B〜72B（ネイティブトークナイゼーション）',
           '同じVRAM：両7BモデルともQ4_K_Mで5.5 GBが必要',
         ],
@@ -466,7 +466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '数学和推理任务：DeepSeek-R1 蒸馏模型更强（32B MATH-500 达94%）。编程和中文文本：Qwen3 更强（32B HumanEval 达91.5%）。同等参数量下两者所需硬件相同。',
         bullets: [
           '数学/推理：DeepSeek-R1-Distill-Qwen-32B（MATH-500 94%）',
-          '编程：Qwen3-Coder 32B（HumanEval 91.5%）',
+          '编程：Qwen2.5-Coder 32B（HumanEval 91.5%）',
           '中文文本：Qwen3 8B–72B（原生分词）',
           '相同显存：两款7B模型Q4_K_M均需5.5 GB',
         ],
@@ -478,7 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Para matemáticas y razonamiento, los modelos destilados de DeepSeek-R1 son más potentes (94% MATH-500 en 32B). Para programación y texto en chino, Qwen3 es más potente (91,5% HumanEval en 32B). Ambas familias funcionan en hardware idéntico con el mismo número de parámetros.',
         bullets: [
           'Matemáticas / razonamiento: DeepSeek-R1-Distill-Qwen-32B (94% MATH-500)',
-          'Programación: Qwen3-Coder 32B (91,5% HumanEval)',
+          'Programación: Qwen2.5-Coder 32B (91,5% HumanEval)',
           'Texto en chino: Qwen3 8B–72B (tokenización nativa)',
           'Mismo VRAM: ambos modelos 7B necesitan 5,5 GB en Q4_K_M',
           'Apple Silicon: ambos funcionan bien con memoria unificada de la serie M',
@@ -516,7 +516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Mismo VRAM: ambos modelos 7B necesitan 5,5 GB en Q4_K_M; ambos 32B necesitan 20,5 GB',
           'Matemáticas: DeepSeek-R1-Distill-Qwen-32B gana (94% MATH-500 vs 90,3%)',
-          'Programación: Qwen3-Coder 32B gana (91,5% HumanEval vs 83%)',
+          'Programación: Qwen2.5-Coder 32B gana (91,5% HumanEval vs 83%)',
           'Texto en chino: Qwen3 gana — tokenización nativa, 30–40% más eficiente en texto CJK',
           'Cadenas de razonamiento: los destilados DeepSeek-R1 producen cadenas de pensamiento largas por defecto',
           'Asistente general: Qwen3 14B es algo más fluido; el destilado DeepSeek 14B tiende a razonar en exceso',
@@ -587,7 +587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**8 GB VRAM (RTX 3060 / M2 16 GB):** Qwen3 8B para programación/chat; DS-R1-Distill-Qwen-7B para tutoría matemática',
           '**12 GB VRAM (RTX 3080 / M2 Pro 24 GB):** Qwen3 14B para uso general; DS-R1-Distill-Qwen-14B para cadenas de razonamiento',
-          '**24 GB VRAM (RTX 4090 / M3 Max 48 GB):** Qwen3-Coder 32B o Qwen3 32B — el mejor modelo local de propósito general en este nivel',
+          '**24 GB VRAM (RTX 4090 / M3 Max 48 GB):** Qwen2.5-Coder 32B o Qwen3 32B — el mejor modelo local de propósito general en este nivel',
           '**48 GB+ (M2/M3 Ultra / RTX 4090 dual):** Qwen3 72B (86,1% MMLU, 97% HumanEval) — casi al nivel de GPT-4',
           '**Solo CPU (32+ GB RAM):** Qwen3 8B o DS-R1-Distill 7B — ambos funcionan a 3–8 tok/s en CPUs de portátiles modernos',
         ],
@@ -614,7 +614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3 8B:** 5,5 GB VRAM. El mejor 7B de propósito general para programación y texto en chino. Un 74,6% en HumanEval supera a todos los competidores 7B en código.',
           '**Qwen3 14B:** 9,5 GB VRAM. El punto óptimo entre calidad y velocidad. 82,1% HumanEval, 79,2% MMLU. La mejor opción para la mayoría de configuraciones con 12 GB VRAM.',
           '**Qwen3 32B:** 20,5 GB VRAM. 91,5% HumanEval — la mejor puntuación de benchmark de programación por debajo de 48 GB VRAM.',
-          '**Qwen3-Coder 32B:** Mismo VRAM que el base 32B, ajustado específicamente para generación y revisión de código. Úsalo en lugar del base cuando la programación sea la tarea principal.',
+          '**Qwen2.5-Coder 32B:** Mismo VRAM que el base 32B, ajustado específicamente para generación y revisión de código. Úsalo en lugar del base cuando la programación sea la tarea principal.',
           '**Qwen3 72B:** 46 GB VRAM. 86,1% MMLU, 97% HumanEval. Solo funciona en memoria unificada de 48+ GB (M2/M3 Ultra) o configuraciones multi-GPU.',
           'Comando Ollama: `ollama run qwen3:14b`',
         ],
@@ -664,12 +664,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       useCaseVerdicts: {
-        id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-es.svg', imageCaption: 'Guía de casos de uso DeepSeek vs Qwen: la tutoría matemática y las cadenas de razonamiento favorecen a DeepSeek-R1-Distill-Qwen, mientras que la generación de código (Qwen3-Coder 32B, 91,5% HumanEval) y el chat en chino favorecen a Qwen3.',
+        id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-es.svg', imageCaption: 'Guía de casos de uso DeepSeek vs Qwen: la tutoría matemática y las cadenas de razonamiento favorecen a DeepSeek-R1-Distill-Qwen, mientras que la generación de código (Qwen2.5-Coder 32B, 91,5% HumanEval) y el chat en chino favorecen a Qwen3.',
         title: 'Veredictos por caso de uso',
         content: 'Respuesta en una frase para cada caso de uso habitual de LLM local:',
         items: [
           '**Deberes de matemáticas / tutoría:** DS-R1-Distill-Qwen-7B — 88% MATH-500 supera a Qwen3 8B (62,5%) con el mismo VRAM',
-          '**Generación / revisión de código:** Qwen3-Coder 32B — 91,5% HumanEval, el más alto de cualquier modelo ejecutable en hardware de consumo',
+          '**Generación / revisión de código:** Qwen2.5-Coder 32B — 91,5% HumanEval, el más alto de cualquier modelo ejecutable en hardware de consumo',
           '**Chat en chino:** Qwen3 8B — tokenización CJK nativa, 30–40% más eficiente en token con texto chino',
           '**Análisis paso a paso / cadenas de razonamiento:** DS-R1-Distill-Qwen-14B — produce cadena de pensamiento explícita por defecto',
           '**Asistente general diario (8 GB VRAM):** Qwen3 8B — conversación más fluida, evita el exceso de razonamiento de DeepSeek en tareas simples',
@@ -712,7 +712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-08-29',
       about: [
-        { '@type': 'Thing', name: 'DeepSeek R1' },
+        { '@type': 'Thing', name: 'DeepSeek-R1' },
         { '@type': 'Thing', name: 'Qwen3' },
         { '@type': 'Thing', name: 'Local LLM' },
       ],
@@ -809,7 +809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'For math and reasoning tasks, DeepSeek-R1 distilled models are stronger (94% MATH-500 at 32B). For coding and Chinese text, Qwen3 is stronger (91.5% HumanEval at 32B). Both families run on identical hardware at equivalent parameter counts.',
         bullets: [
           'Math / reasoning: DeepSeek-R1-Distill-Qwen-32B (94% MATH-500)',
-          'Coding: Qwen3-Coder 32B (91.5% HumanEval)',
+          'Coding: Qwen2.5-Coder 32B (91.5% HumanEval)',
           'Chinese text: Qwen3 8B–72B (native tokenisation)',
           'Same VRAM: both 7B models need 5.5 GB at Q4_K_M',
           'Apple Silicon: both run well on M-series unified memory',
@@ -822,7 +822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Für Mathematik und Schlussfolgern sind DeepSeek-R1-destillierte Modelle stärker (94 % MATH-500 bei 32B). Für Programmierung und chinesischen Text ist Qwen3 stärker (91,5 % HumanEval bei 32B).',
         bullets: [
           'Mathematik/Schlussfolgern: DeepSeek-R1-Distill-Qwen-32B (94 % MATH-500)',
-          'Programmierung: Qwen3-Coder 32B (91,5 % HumanEval)',
+          'Programmierung: Qwen2.5-Coder 32B (91,5 % HumanEval)',
           'Chinesischer Text: Qwen3 8B–72B (natives Tokenisierung)',
           'Gleicher VRAM: beide 7B-Modelle brauchen 5,5 GB bei Q4_K_M',
         ],
@@ -834,7 +834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pour les mathématiques et le raisonnement, les modèles distillés DeepSeek-R1 sont plus forts (94 % MATH-500 à 32B). Pour le code et le texte chinois, Qwen3 est plus fort (91,5 % HumanEval à 32B).',
         bullets: [
           'Maths / raisonnement : DeepSeek-R1-Distill-Qwen-32B (94 % MATH-500)',
-          'Code : Qwen3-Coder 32B (91,5 % HumanEval)',
+          'Code : Qwen2.5-Coder 32B (91,5 % HumanEval)',
           'Texte chinois : Qwen3 8B–72B (tokenisation native)',
           'Même VRAM : les deux modèles 7B nécessitent 5,5 Go en Q4_K_M',
         ],
@@ -846,7 +846,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '数学・推論タスクではDeepSeek-R1蒸留モデルが優れています（32BでMATH-500 94%）。コーディングと中国語テキストではQwen3が優れています（32BでHumanEval 91.5%）。',
         bullets: [
           '数学・推論：DeepSeek-R1-Distill-Qwen-32B（MATH-500 94%）',
-          'コーディング：Qwen3-Coder 32B（HumanEval 91.5%）',
+          'コーディング：Qwen2.5-Coder 32B（HumanEval 91.5%）',
           '中国語テキスト：Qwen3 8B〜72B（ネイティブトークナイゼーション）',
           '同じVRAM：両7BモデルともQ4_K_Mで5.5 GBが必要',
         ],
@@ -858,7 +858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '数学和推理任务：DeepSeek-R1 蒸馏模型更强（32B MATH-500 达94%）。编程和中文文本：Qwen3 更强（32B HumanEval 达91.5%）。同等参数量下两者所需硬件相同。',
         bullets: [
           '数学/推理：DeepSeek-R1-Distill-Qwen-32B（MATH-500 94%）',
-          '编程：Qwen3-Coder 32B（HumanEval 91.5%）',
+          '编程：Qwen2.5-Coder 32B（HumanEval 91.5%）',
           '中文文本：Qwen3 8B–72B（原生分词）',
           '相同显存：两款7B模型Q4_K_M均需5.5 GB',
         ],
@@ -870,7 +870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Para tarefas de matemática e raciocínio, os modelos destilados do DeepSeek-R1 são mais fortes (94% MATH-500 em 32B). Para programação e texto em chinês, o Qwen3 é mais forte (91,5% HumanEval em 32B). Ambas as famílias rodam em hardware idêntico com o mesmo número de parâmetros.',
         bullets: [
           'Matemática / raciocínio: DeepSeek-R1-Distill-Qwen-32B (94% MATH-500)',
-          'Programação: Qwen3-Coder 32B (91,5% HumanEval)',
+          'Programação: Qwen2.5-Coder 32B (91,5% HumanEval)',
           'Texto em chinês: Qwen3 8B–72B (tokenização nativa)',
           'Mesma VRAM: ambos os modelos 7B precisam de 5,5 GB em Q4_K_M',
           'Apple Silicon: ambos rodam bem com memória unificada da série M',
@@ -908,7 +908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Mesma VRAM: ambos os modelos 7B precisam de 5,5 GB em Q4_K_M; ambos os 32B precisam de 20,5 GB',
           'Matemática: DeepSeek-R1-Distill-Qwen-32B vence (94% MATH-500 vs 90,3%)',
-          'Programação: Qwen3-Coder 32B vence (91,5% HumanEval vs 83%)',
+          'Programação: Qwen2.5-Coder 32B vence (91,5% HumanEval vs 83%)',
           'Texto em chinês: Qwen3 vence — tokenização nativa, 30–40% mais eficiente em texto CJK',
           'Cadeias de raciocínio: os destilados DeepSeek-R1 produzem cadeias de pensamento longas por padrão',
           'Assistente geral: o Qwen3 14B é um pouco mais fluido; o destilado DeepSeek 14B tende a raciocinar em excesso',
@@ -979,7 +979,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**8 GB VRAM (RTX 3060 / M2 16 GB):** Qwen3 8B para programação/chat; DS-R1-Distill-Qwen-7B para tutoria de matemática',
           '**12 GB VRAM (RTX 3080 / M2 Pro 24 GB):** Qwen3 14B para uso geral; DS-R1-Distill-Qwen-14B para cadeias de raciocínio',
-          '**24 GB VRAM (RTX 4090 / M3 Max 48 GB):** Qwen3-Coder 32B ou Qwen3 32B — o melhor modelo local de propósito geral neste nível',
+          '**24 GB VRAM (RTX 4090 / M3 Max 48 GB):** Qwen2.5-Coder 32B ou Qwen3 32B — o melhor modelo local de propósito geral neste nível',
           '**48 GB+ (M2/M3 Ultra / RTX 4090 dupla):** Qwen3 72B (86,1% MMLU, 97% HumanEval) — quase no nível do GPT-4',
           '**Só CPU (32+ GB RAM):** Qwen3 8B ou DS-R1-Distill 7B — ambos rodam a 3–8 tok/s em CPUs de notebooks modernos',
         ],
@@ -1006,7 +1006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3 8B:** 5,5 GB VRAM. O melhor 7B de propósito geral para programação e texto em chinês. Os 74,6% no HumanEval superam todos os concorrentes 7B em código.',
           '**Qwen3 14B:** 9,5 GB VRAM. O ponto ideal entre qualidade e velocidade. 82,1% HumanEval, 79,2% MMLU. A melhor opção para a maioria das configurações com 12 GB VRAM.',
           '**Qwen3 32B:** 20,5 GB VRAM. 91,5% HumanEval — a melhor pontuação de benchmark de programação abaixo de 48 GB VRAM.',
-          '**Qwen3-Coder 32B:** Mesma VRAM que o base 32B, ajustado especificamente para geração e revisão de código. Use-o no lugar do base quando a programação for a tarefa principal.',
+          '**Qwen2.5-Coder 32B:** Mesma VRAM que o base 32B, ajustado especificamente para geração e revisão de código. Use-o no lugar do base quando a programação for a tarefa principal.',
           '**Qwen3 72B:** 46 GB VRAM. 86,1% MMLU, 97% HumanEval. Só funciona em memória unificada de 48+ GB (M2/M3 Ultra) ou configurações multi-GPU.',
           'Comando Ollama: `ollama run qwen3:14b`',
         ],
@@ -1056,12 +1056,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       useCaseVerdicts: {
-        id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-pt.svg', imageCaption: 'Guia de casos de uso DeepSeek vs Qwen: tutoria de matemática e cadeias de raciocínio favorecem o DeepSeek-R1-Distill-Qwen, enquanto geração de código (Qwen3-Coder 32B, 91,5% HumanEval) e chat em chinês favorecem o Qwen3.',
+        id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-pt.svg', imageCaption: 'Guia de casos de uso DeepSeek vs Qwen: tutoria de matemática e cadeias de raciocínio favorecem o DeepSeek-R1-Distill-Qwen, enquanto geração de código (Qwen2.5-Coder 32B, 91,5% HumanEval) e chat em chinês favorecem o Qwen3.',
         title: 'Veredictos por caso de uso',
         content: 'Resposta em uma frase para cada caso de uso comum de LLM local:',
         items: [
           '**Lição de matemática / tutoria:** DS-R1-Distill-Qwen-7B — 88% MATH-500 supera o Qwen3 8B (62,5%) com a mesma VRAM',
-          '**Geração / revisão de código:** Qwen3-Coder 32B — 91,5% HumanEval, o mais alto de qualquer modelo executável em hardware de consumo',
+          '**Geração / revisão de código:** Qwen2.5-Coder 32B — 91,5% HumanEval, o mais alto de qualquer modelo executável em hardware de consumo',
           '**Chat em chinês:** Qwen3 8B — tokenização CJK nativa, 30–40% mais eficiente em token com texto chinês',
           '**Análise passo a passo / cadeias de raciocínio:** DS-R1-Distill-Qwen-14B — produz cadeia de pensamento explícita por padrão',
           '**Assistente geral do dia a dia (8 GB VRAM):** Qwen3 8B — conversa mais fluida, evita o excesso de raciocínio do DeepSeek em tarefas simples',
@@ -1105,7 +1105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-08-29',
       about: [
-        { '@type': 'Thing', name: 'DeepSeek R1' },
+        { '@type': 'Thing', name: 'DeepSeek-R1' },
         { '@type': 'Thing', name: 'Qwen3' },
         { '@type': 'Thing', name: 'Local LLM' },
       ],
@@ -1210,7 +1210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لمهام الرياضيات والاستدلال، النماذج المقطّرة من DeepSeek-R1 أقوى (94% MATH-500 عند 32B). للبرمجة والنصوص الصينية، Qwen3 أقوى (91.5% HumanEval عند 32B). تعمل كلتا العائلتين على أجهزة متطابقة بعدد معاملات مكافئ.',
         bullets: [
           'الرياضيات / الاستدلال: DeepSeek-R1-Distill-Qwen-32B (94% MATH-500)',
-          'البرمجة: Qwen3-Coder 32B (91.5% HumanEval)',
+          'البرمجة: Qwen2.5-Coder 32B (91.5% HumanEval)',
           'النصوص الصينية: Qwen3 8B–72B (تحليل نصوص أصيل)',
           'نفس VRAM: كلا النموذجين 7B يحتاجان 5.5 جيجابايت في Q4_K_M',
           'Apple Silicon: كلاهما يعمل بشكل جيد على الذاكرة الموحدة لسلسلة M',
@@ -1248,7 +1248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'نفس VRAM: كلا النموذجين 7B يحتاجان 5.5 جيجابايت في Q4_K_M؛ وكلا النموذجين 32B يحتاجان 20.5 جيجابايت',
           'الرياضيات: DeepSeek-R1-Distill-Qwen-32B يفوز (94% MATH-500 مقابل 90.3%)',
-          'البرمجة: Qwen3-Coder 32B يفوز (91.5% HumanEval مقابل 83%)',
+          'البرمجة: Qwen2.5-Coder 32B يفوز (91.5% HumanEval مقابل 83%)',
           'النصوص الصينية: Qwen3 يفوز — تحليل نصوص CJK أصيل، أكثر كفاءةً بـ30–40% في النصوص الصينية',
           'سلاسل الاستدلال: تنتج مقطّرات DeepSeek-R1 سلاسل تفكير طويلة افتراضياً',
           'المساعد العام: Qwen3 14B أكثر سلاسةً؛ يميل مقطّر DeepSeek 14B إلى الإفراط في الاستدلال في المهام البسيطة',
@@ -1319,7 +1319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**8 جيجابايت VRAM (RTX 3060 / M2 16 جيجابايت):** Qwen3 8B للبرمجة والدردشة؛ DS-R1-Distill-Qwen-7B لتدريس الرياضيات',
           '**12 جيجابايت VRAM (RTX 3080 / M2 Pro 24 جيجابايت):** Qwen3 14B للاستخدام العام؛ DS-R1-Distill-Qwen-14B لسلاسل الاستدلال',
-          '**24 جيجابايت VRAM (RTX 4090 / M3 Max 48 جيجابايت):** Qwen3-Coder 32B أو Qwen3 32B — أفضل نموذج محلي للأغراض العامة في هذا المستوى',
+          '**24 جيجابايت VRAM (RTX 4090 / M3 Max 48 جيجابايت):** Qwen2.5-Coder 32B أو Qwen3 32B — أفضل نموذج محلي للأغراض العامة في هذا المستوى',
           '**48 جيجابايت+ (M2/M3 Ultra / RTX 4090 مزدوج):** Qwen3 72B (86.1% MMLU، 97% HumanEval) — قريب من مستوى GPT-4',
           '**CPU فقط (32+ جيجابايت RAM):** Qwen3 8B أو DS-R1-Distill 7B — كلاهما يعمل بـ3–8 tok/s على معالجات الحواسيب المحمولة الحديثة',
         ],
@@ -1346,7 +1346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3 8B:** 5.5 جيجابايت VRAM. أفضل 7B للأغراض العامة للبرمجة والنصوص الصينية. 74.6% في HumanEval يتفوق على جميع المنافسين 7B في الكود.',
           '**Qwen3 14B:** 9.5 جيجابايت VRAM. نقطة التوازن المثلى بين الجودة والسرعة. 82.1% HumanEval، 79.2% MMLU. الخيار الأفضل لمعظم الإعدادات بـ12 جيجابايت VRAM.',
           '**Qwen3 32B:** 20.5 جيجابايت VRAM. 91.5% HumanEval — أعلى درجة معيارية للبرمجة دون 48 جيجابايت VRAM.',
-          '**Qwen3-Coder 32B:** نفس VRAM كالنموذج الأساسي 32B، مضبوط دقيقاً خصيصاً لتوليد الكود ومراجعته. استخدمه بدلاً من الأساسي حين تكون البرمجة المهمة الرئيسية.',
+          '**Qwen2.5-Coder 32B:** نفس VRAM كالنموذج الأساسي 32B، مضبوط دقيقاً خصيصاً لتوليد الكود ومراجعته. استخدمه بدلاً من الأساسي حين تكون البرمجة المهمة الرئيسية.',
           '**Qwen3 72B:** 46 جيجابايت VRAM. 86.1% MMLU، 97% HumanEval. يعمل فقط على الذاكرة الموحدة 48+ جيجابايت (M2/M3 Ultra) أو إعدادات متعددة GPU.',
           'أمر Ollama: `ollama run qwen3:14b`',
         ],
@@ -1396,12 +1396,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       useCaseVerdicts: {
-        id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-ar.svg', imageCaption: 'دليل حالات استخدام DeepSeek مقابل Qwen: يفضَّل DeepSeek-R1-Distill-Qwen لتدريس الرياضيات وسلاسل الاستدلال، بينما يفضَّل Qwen3 لتوليد الكود (Qwen3-Coder 32B بنسبة 91.5% HumanEval) والدردشة بالصينية.',
+        id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-ar.svg', imageCaption: 'دليل حالات استخدام DeepSeek مقابل Qwen: يفضَّل DeepSeek-R1-Distill-Qwen لتدريس الرياضيات وسلاسل الاستدلال، بينما يفضَّل Qwen3 لتوليد الكود (Qwen2.5-Coder 32B بنسبة 91.5% HumanEval) والدردشة بالصينية.',
         title: 'الأحكام حسب حالة الاستخدام',
         content: 'إجابة في جملة واحدة لكل حالة استخدام شائعة للنماذج اللغوية المحلية:',
         items: [
           '**الواجبات الرياضية / التدريس:** DS-R1-Distill-Qwen-7B — 88% MATH-500 يتفوق على Qwen3 8B (62.5%) بنفس VRAM',
-          '**توليد الكود / مراجعته:** Qwen3-Coder 32B — 91.5% HumanEval، الأعلى لأي نموذج يعمل على أجهزة المستهلك',
+          '**توليد الكود / مراجعته:** Qwen2.5-Coder 32B — 91.5% HumanEval، الأعلى لأي نموذج يعمل على أجهزة المستهلك',
           '**الدردشة بالصينية:** Qwen3 8B — تحليل نصوص CJK أصيل، أكثر كفاءةً بـ30–40% في التوكن مع النصوص الصينية',
           '**التحليل خطوة بخطوة / سلاسل الاستدلال:** DS-R1-Distill-Qwen-14B — ينتج سلسلة تفكير صريحة افتراضياً',
           '**المساعد العام اليومي (8 جيجابايت VRAM):** Qwen3 8B — محادثة أكثر سلاسةً، يتجنب الإفراط في الاستدلال من DeepSeek في المهام البسيطة',
@@ -1444,7 +1444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-08-29',
       about: [
-        { '@type': 'Thing', name: 'DeepSeek R1' },
+        { '@type': 'Thing', name: 'DeepSeek-R1' },
         { '@type': 'Thing', name: 'Qwen3' },
         { '@type': 'Thing', name: 'Local LLM' },
       ],
@@ -1538,18 +1538,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       en: {
         question: 'Which is better locally: DeepSeek or Qwen?',
         answer: 'For math and reasoning tasks, DeepSeek-R1 distilled models are stronger (94% MATH-500 at 32B). For coding and Chinese text, Qwen3 is stronger (91.5% HumanEval at 32B).',
-        bullets: ['Math: DeepSeek-R1-Distill-Qwen-32B (94% MATH-500)', 'Code: Qwen3-Coder 32B (91.5% HumanEval)', 'Chinese: Qwen3', 'Same VRAM at equivalent parameter count'],
+        bullets: ['Math: DeepSeek-R1-Distill-Qwen-32B (94% MATH-500)', 'Code: Qwen2.5-Coder 32B (91.5% HumanEval)', 'Chinese: Qwen3', 'Same VRAM at equivalent parameter count'],
         updatedDate: '2026-05',
       },
       de: {
         question: 'Was ist besser lokal: DeepSeek oder Qwen?',
         answer: 'Für Mathematik sind DeepSeek-R1-Destillate stärker (94 % MATH-500 bei 32B). Für Programmierung und chinesischen Text ist Qwen3 stärker (91,5 % HumanEval bei 32B).',
-        bullets: ['Mathematik: DeepSeek-R1-Distill-Qwen-32B (94 % MATH-500)', 'Programmierung: Qwen3-Coder 32B (91,5 % HumanEval)', 'Chinesisch: Qwen3', 'Gleicher VRAM bei gleicher Parameterzahl'],
+        bullets: ['Mathematik: DeepSeek-R1-Distill-Qwen-32B (94 % MATH-500)', 'Programmierung: Qwen2.5-Coder 32B (91,5 % HumanEval)', 'Chinesisch: Qwen3', 'Gleicher VRAM bei gleicher Parameterzahl'],
         updatedDate: '2026-05',
       },
-      fr: { question: 'Lequel est le meilleur localement : DeepSeek ou Qwen ?', answer: 'Pour les maths, DeepSeek-R1 distillé est plus fort (94 % MATH-500). Pour le code, Qwen3 est plus fort (91,5 % HumanEval).', bullets: ['Maths : DeepSeek-R1-Distill-Qwen-32B', 'Code : Qwen3-Coder 32B', 'Même VRAM'], updatedDate: '2026-05' },
-      ja: { question: 'DeepSeekとQwenどちらが優れている？', answer: '数学・推論ではDeepSeek-R1蒸留モデルが優れています（32B: MATH-500 94%）。コーディングではQwen3が優れています（32B: HumanEval 91.5%）。', bullets: ['数学: DeepSeek-R1-Distill-Qwen-32B', 'コーディング: Qwen3-Coder 32B', 'VRAM同等'], updatedDate: '2026-05' },
-      zh: { question: 'DeepSeek 和 Qwen 哪个本地运行更好？', answer: '数学推理：DeepSeek-R1蒸馏模型更强（32B MATH-500 94%）。编程：Qwen3更强（32B HumanEval 91.5%）。', bullets: ['数学: DeepSeek-R1-Distill-Qwen-32B', '编程: Qwen3-Coder 32B', '显存相同'], updatedDate: '2026-05' },
+      fr: { question: 'Lequel est le meilleur localement : DeepSeek ou Qwen ?', answer: 'Pour les maths, DeepSeek-R1 distillé est plus fort (94 % MATH-500). Pour le code, Qwen3 est plus fort (91,5 % HumanEval).', bullets: ['Maths : DeepSeek-R1-Distill-Qwen-32B', 'Code : Qwen2.5-Coder 32B', 'Même VRAM'], updatedDate: '2026-05' },
+      ja: { question: 'DeepSeekとQwenどちらが優れている？', answer: '数学・推論ではDeepSeek-R1蒸留モデルが優れています（32B: MATH-500 94%）。コーディングではQwen3が優れています（32B: HumanEval 91.5%）。', bullets: ['数学: DeepSeek-R1-Distill-Qwen-32B', 'コーディング: Qwen2.5-Coder 32B', 'VRAM同等'], updatedDate: '2026-05' },
+      zh: { question: 'DeepSeek 和 Qwen 哪个本地运行更好？', answer: '数学推理：DeepSeek-R1蒸馏模型更强（32B MATH-500 94%）。编程：Qwen3更强（32B HumanEval 91.5%）。', bullets: ['数学: DeepSeek-R1-Distill-Qwen-32B', '编程: Qwen2.5-Coder 32B', '显存相同'], updatedDate: '2026-05' },
     },
     toc: [
       { label: 'Zusammenfassung', anchor: 'tldr' },
@@ -1573,7 +1573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Gleicher VRAM: beide 7B-Modelle brauchen 5,5 GB bei Q4_K_M; beide 32B brauchen 20,5 GB',
           'Mathematik: DeepSeek-R1-Distill-Qwen-32B gewinnt (94 % MATH-500 vs 90,3 %)',
-          'Programmierung: Qwen3-Coder 32B gewinnt (91,5 % HumanEval vs 83,2 %)',
+          'Programmierung: Qwen2.5-Coder 32B gewinnt (91,5 % HumanEval vs 83,2 %)',
           'Chinesischer Text: Qwen3 gewinnt — native Tokenisierung, 30–40 % effizienter bei CJK-Text',
           'Schlussfolgern: DeepSeek-R1-Destillate produzieren standardmäßig lange Gedankenketten',
           'DSGVO: beide laufen vollständig lokal — kein Datentransfer an Dritte',
@@ -1600,7 +1600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**8 GB VRAM (RTX 3060 / M2 16 GB):** Qwen3 8B für Programmierung/Chat; DS-R1-Distill-Qwen-7B für Mathe-Nachhilfe',
           '**12 GB VRAM (RTX 3080 / M2 Pro 24 GB):** Qwen3 14B für allgemeine Nutzung; DS-R1-Distill-Qwen-14B für Argumentationsketten',
-          '**24 GB VRAM (RTX 4090 / M3 Max 48 GB):** Qwen3-Coder 32B — bestes Allround-Modell in diesem Tier',
+          '**24 GB VRAM (RTX 4090 / M3 Max 48 GB):** Qwen2.5-Coder 32B — bestes Allround-Modell in diesem Tier',
           '**48 GB+ (M2/M3 Ultra / RTX 4090 Dual):** Qwen3 72B (86,1 % MMLU, 97 % HumanEval)',
           '**Nur CPU (32+ GB RAM):** Qwen3 8B oder DS-R1-Distill 7B — beide laufen bei 3–8 Tok/s auf modernen Laptop-CPUs',
         ],
@@ -1625,7 +1625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3 8B:** 5,5 GB VRAM. Bestes Allzweck-7B für Programmierung und chinesischen Text.',
           '**Qwen3 14B:** 9,5 GB VRAM. Bestes Gleichgewicht Qualität/Geschwindigkeit für 12-GB-VRAM-Setups.',
           '**Qwen3 32B:** 20,5 GB VRAM. 91,5 % HumanEval — bester Coding-Benchmark unter 48 GB VRAM.',
-          '**Qwen3-Coder 32B:** Gleicher VRAM wie 32B-Basis, speziell für Code-Generierung feinabgestimmt.',
+          '**Qwen2.5-Coder 32B:** Gleicher VRAM wie 32B-Basis, speziell für Code-Generierung feinabgestimmt.',
           'Ollama-Befehl: `ollama run qwen3:14b`',
         ],
       },
@@ -1641,12 +1641,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       useCaseVerdicts: {
-        id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-de.svg', imageCaption: 'Anwendungsfall-Guide DeepSeek vs Qwen: Mathe-Nachhilfe und Argumentationsketten sprechen für DeepSeek-R1-Distill-Qwen, während Code-Generierung (Qwen3-Coder 32B, 91,5 % HumanEval) und chinesischer Chat für Qwen3 sprechen.',
+        id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-de.svg', imageCaption: 'Anwendungsfall-Guide DeepSeek vs Qwen: Mathe-Nachhilfe und Argumentationsketten sprechen für DeepSeek-R1-Distill-Qwen, während Code-Generierung (Qwen2.5-Coder 32B, 91,5 % HumanEval) und chinesischer Chat für Qwen3 sprechen.',
         title: 'Anwendungsfall-Urteile',
         content: 'Ein-Satz-Antwort für jeden häufigen lokalen LLM-Anwendungsfall:',
         items: [
           '**Mathe-Nachhilfe:** DS-R1-Distill-Qwen-7B — 88 % MATH-500 vs 62,5 % für Qwen3 8B',
-          '**Code-Generierung/-Review:** Qwen3-Coder 32B — 91,5 % HumanEval, bestes Consumer-Modell',
+          '**Code-Generierung/-Review:** Qwen2.5-Coder 32B — 91,5 % HumanEval, bestes Consumer-Modell',
           '**Chinesischsprachiger Chat:** Qwen3 8B — native CJK-Tokenisierung, 30–40 % effizienter',
           '**Schritt-für-Schritt-Analyse:** DS-R1-Distill-Qwen-14B — produziert standardmäßig explizite Gedankenketten',
           '**Allgemeiner täglicher Assistent (8 GB VRAM):** Qwen3 8B — flüssigere Konversation',
@@ -1686,7 +1686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       datePublished: '2026-05-26',
       dateModified: '2026-08-29',
-      about: [{ '@type': 'Thing', name: 'DeepSeek R1' }, { '@type': 'Thing', name: 'Qwen3' }],
+      about: [{ '@type': 'Thing', name: 'DeepSeek-R1' }, { '@type': 'Thing', name: 'Qwen3' }],
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
     },
     faqSchema: {
@@ -1768,9 +1768,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       '**Pour les mathématiques, DeepSeek-R1-Distill-Qwen-32B gagne (94 % MATH-500 contre 90,3 % pour Qwen3 32B). Pour le code, Qwen3 32B gagne (91,5 % HumanEval contre 83,2 %). Les deux nécessitent une VRAM identique à nombre de paramètres équivalent.**',
     quickAnswerTop: {
-      en: { question: 'Which is better locally: DeepSeek or Qwen?', answer: 'Math/reasoning: DeepSeek-R1 distilled (94% MATH-500). Code/Chinese: Qwen3 (91.5% HumanEval).', bullets: ['Math: DeepSeek-R1-Distill-Qwen-32B', 'Code: Qwen3-Coder 32B', 'Same VRAM'], updatedDate: '2026-05' },
-      de: { question: 'Was ist besser lokal: DeepSeek oder Qwen?', answer: 'Mathematik: DeepSeek-R1 destilliert. Code: Qwen3.', bullets: ['Mathe: DeepSeek-R1-Distill-Qwen-32B', 'Code: Qwen3-Coder 32B'], updatedDate: '2026-05' },
-      fr: { question: 'Lequel est le meilleur localement : DeepSeek ou Qwen ?', answer: 'Pour les maths, DeepSeek-R1 distillé est plus fort (94 % MATH-500 à 32B). Pour le code, Qwen3 est plus fort (91,5 % HumanEval à 32B).', bullets: ['Maths : DeepSeek-R1-Distill-Qwen-32B (94 % MATH-500)', 'Code : Qwen3-Coder 32B (91,5 % HumanEval)', 'Même VRAM aux deux'], updatedDate: '2026-05' },
+      en: { question: 'Which is better locally: DeepSeek or Qwen?', answer: 'Math/reasoning: DeepSeek-R1 distilled (94% MATH-500). Code/Chinese: Qwen3 (91.5% HumanEval).', bullets: ['Math: DeepSeek-R1-Distill-Qwen-32B', 'Code: Qwen2.5-Coder 32B', 'Same VRAM'], updatedDate: '2026-05' },
+      de: { question: 'Was ist besser lokal: DeepSeek oder Qwen?', answer: 'Mathematik: DeepSeek-R1 destilliert. Code: Qwen3.', bullets: ['Mathe: DeepSeek-R1-Distill-Qwen-32B', 'Code: Qwen2.5-Coder 32B'], updatedDate: '2026-05' },
+      fr: { question: 'Lequel est le meilleur localement : DeepSeek ou Qwen ?', answer: 'Pour les maths, DeepSeek-R1 distillé est plus fort (94 % MATH-500 à 32B). Pour le code, Qwen3 est plus fort (91,5 % HumanEval à 32B).', bullets: ['Maths : DeepSeek-R1-Distill-Qwen-32B (94 % MATH-500)', 'Code : Qwen2.5-Coder 32B (91,5 % HumanEval)', 'Même VRAM aux deux'], updatedDate: '2026-05' },
       ja: { question: 'DeepSeekとQwenどちらが優れている？', answer: '数学：DeepSeek-R1蒸留。コード：Qwen3。', bullets: ['数学: DeepSeek-R1', 'コーディング: Qwen3'], updatedDate: '2026-05' },
       zh: { question: 'DeepSeek 和 Qwen 哪个本地运行更好？', answer: '数学：DeepSeek-R1蒸馏。编程：Qwen3。', bullets: ['数学: DeepSeek-R1', '编程: Qwen3'], updatedDate: '2026-05' },
     },
@@ -1789,13 +1789,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { type: 'plain-terms', content: 'DeepSeek a publié un modèle de raisonnement (R1) et des versions distillées plus petites pour usage local. Qwen3 est la famille polyvalente d\'Alibaba. Les deux modèles 7B tiennent dans 5,5 Go de VRAM. La différence : DeepSeek est meilleur en maths ; Qwen est meilleur pour le code et le texte chinois.' },
     ],
     sections: {
-      tldr: { id: 'tldr', title: 'Résumé', isTldr: true, items: ['Même VRAM : les deux modèles 7B nécessitent 5,5 Go en Q4_K_M ; les 32B nécessitent 20,5 Go', 'Maths : DeepSeek-R1-Distill-Qwen-32B gagne (94 % MATH-500 vs 90,3 %)', 'Code : Qwen3-Coder 32B gagne (91,5 % HumanEval vs 83,2 %)', 'Texte chinois : Qwen3 — tokenisation native, 30–40 % plus efficace sur le CJK', 'Raisonnement : les distillats DeepSeek-R1 produisent des chaînes de pensée par défaut', 'Conformité RGPD : les deux fonctionnent entièrement localement — aucun transfert de données'] },
+      tldr: { id: 'tldr', title: 'Résumé', isTldr: true, items: ['Même VRAM : les deux modèles 7B nécessitent 5,5 Go en Q4_K_M ; les 32B nécessitent 20,5 Go', 'Maths : DeepSeek-R1-Distill-Qwen-32B gagne (94 % MATH-500 vs 90,3 %)', 'Code : Qwen2.5-Coder 32B gagne (91,5 % HumanEval vs 83,2 %)', 'Texte chinois : Qwen3 — tokenisation native, 30–40 % plus efficace sur le CJK', 'Raisonnement : les distillats DeepSeek-R1 produisent des chaînes de pensée par défaut', 'Conformité RGPD : les deux fonctionnent entièrement localement — aucun transfert de données'] },
       benchmarkTable: { id: 'benchmark-table', image: '/images/deepseek-vs-qwen-local-comparison-2026-benchmark-comparison-fr.svg', imageCaption: 'Pour les mathématiques, DeepSeek-R1-Distill-Qwen-32B gagne (94 % MATH-500 contre 90,3 % pour Qwen3 32B). Pour le code, Qwen3 32B gagne (91,5 % HumanEval contre 83,2 %).', title: 'Tableau de benchmarks direct', content: 'Tous les scores en quantisation Q4_K_M.', columns: ['Modèle', 'VRAM', 'MMLU (%)', 'MATH-500 (%)', 'HumanEval (%)', 'Vitesse'], rows: [{ 'Modèle': 'Qwen3 8B', 'VRAM': '5,5 Go', 'MMLU (%)': '72,5', 'MATH-500 (%)': '62,5', 'HumanEval (%)': '74,6', 'Vitesse': '50–80 t/s' }, { 'Modèle': 'DS-R1-Distill-Qwen 7B', 'VRAM': '5,5 Go', 'MMLU (%)': '70,1', 'MATH-500 (%)': '88,0', 'HumanEval (%)': '68,4', 'Vitesse': '50–80 t/s' }, { 'Modèle': 'Qwen3 32B', 'VRAM': '20,5 Go', 'MMLU (%)': '83,4', 'MATH-500 (%)': '90,3', 'HumanEval (%)': '91,5', 'Vitesse': '15–30 t/s' }, { 'Modèle': 'DS-R1-Distill-Qwen 32B', 'VRAM': '20,5 Go', 'MMLU (%)': '80,6', 'MATH-500 (%)': '94,0', 'HumanEval (%)': '83,2', 'Vitesse': '15–30 t/s' }], },
-      hardwareTiers: { id: 'hardware-tiers', title: 'Quel modèle à quel niveau matériel', content: 'Les besoins VRAM sont identiques entre les deux familles. Le choix est une préférence de tâche.', items: ['**8 Go VRAM (RTX 3060 / M2 16 Go) :** Qwen3 8B pour le code ; DS-R1-Distill-Qwen-7B pour les maths', '**24 Go VRAM (RTX 4090 / M3 Max 48 Go) :** Qwen3-Coder 32B — meilleur modèle polyvalent', '**CPU uniquement (32+ Go RAM) :** Qwen3 8B ou DS-R1-Distill 7B — 3–8 t/s sur CPU moderne'] },
+      hardwareTiers: { id: 'hardware-tiers', title: 'Quel modèle à quel niveau matériel', content: 'Les besoins VRAM sont identiques entre les deux familles. Le choix est une préférence de tâche.', items: ['**8 Go VRAM (RTX 3060 / M2 16 Go) :** Qwen3 8B pour le code ; DS-R1-Distill-Qwen-7B pour les maths', '**24 Go VRAM (RTX 4090 / M3 Max 48 Go) :** Qwen2.5-Coder 32B — meilleur modèle polyvalent', '**CPU uniquement (32+ Go RAM) :** Qwen3 8B ou DS-R1-Distill 7B — 3–8 t/s sur CPU moderne'] },
       deepseekModels: { id: 'deepseek-models', title: 'Modèles locaux DeepSeek expliqués', content: 'DeepSeek-R1 est un modèle MoE 671B nécessitant du matériel serveur. Pour usage local, les versions distillées sont l\'option pratique.', items: ['**DS-R1-Distill-Qwen-7B :** 5,5 Go VRAM. 88 % MATH-500 — meilleur modèle maths du tier 7B.', '**DS-R1-Distill-Qwen-32B :** 20,5 Go VRAM. 94 % MATH-500 — meilleur score maths parmi les modèles grand public.', 'Commande Ollama : `ollama run deepseek-r1:7b`'] },
-      qwenModels: { id: 'qwen-models', title: 'Modèles locaux Qwen3 expliqués', content: 'Qwen3 est la version d\'octobre 2025 d\'Alibaba. Tous les modèles de base utilisent un contexte de 128K tokens et une licence Apache 2.0. **Mise à jour :** Alibaba a depuis lancé Qwen3.6 (avril 2026), une génération plus récente avec une conception d\'attention hybride et de meilleurs benchmarks de code/agents — le Qwen3.6-27B dense atteint par exemple 77,2 % sur SWE-bench Verified. Les modèles Qwen3 comparés dans ce guide ne sont pas abandonnés et restent pleinement valables en local ; pour la génération la plus récente, évaluez Qwen3.6 en parallèle.', items: ['**Qwen3 8B :** 5,5 Go VRAM. Meilleur polyvalent 7B pour le code et le texte chinois.', '**Qwen3-Coder 32B :** 20,5 Go VRAM. 91,5 % HumanEval — meilleur modèle de code pour matériel grand public.', 'Commande Ollama : `ollama run qwen3:14b`'] },
+      qwenModels: { id: 'qwen-models', title: 'Modèles locaux Qwen3 expliqués', content: 'Qwen3 est la version d\'octobre 2025 d\'Alibaba. Tous les modèles de base utilisent un contexte de 128K tokens et une licence Apache 2.0. **Mise à jour :** Alibaba a depuis lancé Qwen3.6 (avril 2026), une génération plus récente avec une conception d\'attention hybride et de meilleurs benchmarks de code/agents — le Qwen3.6-27B dense atteint par exemple 77,2 % sur SWE-bench Verified. Les modèles Qwen3 comparés dans ce guide ne sont pas abandonnés et restent pleinement valables en local ; pour la génération la plus récente, évaluez Qwen3.6 en parallèle.', items: ['**Qwen3 8B :** 5,5 Go VRAM. Meilleur polyvalent 7B pour le code et le texte chinois.', '**Qwen2.5-Coder 32B :** 20,5 Go VRAM. 91,5 % HumanEval — meilleur modèle de code pour matériel grand public.', 'Commande Ollama : `ollama run qwen3:14b`'] },
       macVsNvidia: { id: 'mac-vs-nvidia', title: 'Apple Silicon vs NVIDIA', content: 'Les deux familles fonctionnent bien sur Apple Silicon via Ollama avec accélération Metal.', columns: ['Matériel', 'Meilleur tier', 'Vitesse (7B)', 'Vitesse (32B)'], rows: [{ 'Matériel': 'M2/M3 16 Go', 'Meilleur tier': '7B uniquement', 'Vitesse (7B)': '30–50 t/s', 'Vitesse (32B)': 'N/A' }, { 'Matériel': 'M3 Max 48 Go', 'Meilleur tier': '32B confortablement', 'Vitesse (7B)': '80–120 t/s', 'Vitesse (32B)': '15–25 t/s' }, { 'Matériel': 'RTX 4090 24 Go', 'Meilleur tier': '32B', 'Vitesse (7B)': '100–150 t/s', 'Vitesse (32B)': '18–28 t/s' }], },
-      useCaseVerdicts: { id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-fr.svg', imageCaption: 'Guide des cas d\'usage DeepSeek vs Qwen : les cours de maths et le raisonnement pas à pas favorisent DeepSeek-R1-Distill-Qwen, tandis que la génération de code (Qwen3-Coder 32B, 91,5 % HumanEval) et le chat en chinois favorisent Qwen3.', title: 'Verdicts par cas d\'usage', content: 'Réponse en une phrase pour chaque usage courant :', items: ['**Maths / cours particuliers :** DS-R1-Distill-Qwen-7B — 88 % MATH-500 vs 62,5 % pour Qwen3 8B', '**Génération / révision de code :** Qwen3-Coder 32B — 91,5 % HumanEval', '**Chat en chinois :** Qwen3 8B — tokenisation CJK native, 30–40 % plus efficace', '**Conformité RGPD :** les deux options — exécution 100 % locale, pas de transfert de données'] },
+      useCaseVerdicts: { id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-fr.svg', imageCaption: 'Guide des cas d\'usage DeepSeek vs Qwen : les cours de maths et le raisonnement pas à pas favorisent DeepSeek-R1-Distill-Qwen, tandis que la génération de code (Qwen2.5-Coder 32B, 91,5 % HumanEval) et le chat en chinois favorisent Qwen3.', title: 'Verdicts par cas d\'usage', content: 'Réponse en une phrase pour chaque usage courant :', items: ['**Maths / cours particuliers :** DS-R1-Distill-Qwen-7B — 88 % MATH-500 vs 62,5 % pour Qwen3 8B', '**Génération / révision de code :** Qwen2.5-Coder 32B — 91,5 % HumanEval', '**Chat en chinois :** Qwen3 8B — tokenisation CJK native, 30–40 % plus efficace', '**Conformité RGPD :** les deux options — exécution 100 % locale, pas de transfert de données'] },
       faqSection: { id: 'faq', title: '常见问题', faqs: [
         { q: 'DeepSeek-R1 est-il identique aux modèles distillés ?', a: 'Non. DeepSeek-R1 est le modèle MoE 671B. Les versions distillées (7B, 14B, 32B) sont des modèles denses séparés, pratiques pour usage local.' },
         { q: 'DeepSeek et Qwen nécessitent-ils la même VRAM ?', a: 'Oui, à quantisation équivalente. Les deux modèles 7B nécessitent environ 5,5 Go en Q4_K_M ; les 32B nécessitent 20,5 Go.' },
@@ -1804,7 +1804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ] },
       relatedReading: { id: 'related-reading', title: 'Lectures connexes', items: ['[Guide de déploiement local Qwen 2026](/fr/local-llms/qwen-local-deployment-guide-2026) — Tableau matériel complet', '[Guide d\'achat GPU pour LLM locaux 2026](/fr/power-local-llm/best-gpu-buying-guide-local-llm-2026)', '[Qwen vs Llama vs Mistral 2026](/fr/local-llms/qwen-vs-llama-vs-mistral)', '[Déploiement Local de Qwen : Guide Complet de Production 2026](/fr/power-local-llm/qwen-local-deployment-complete-guide-2026)'] },
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'DeepSeek vs Qwen : Comparaison LLM local 2026', description: 'DeepSeek-R1 distillé vs Qwen3 local : VRAM, MMLU, MATH-500, HumanEval. Quel modèle à quel niveau matériel.', url: 'https://www.promptquorum.com/fr/power-local-llm/deepseek-vs-qwen-local-comparison-2026', inLanguage: 'fr', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-08-29', about: [{ '@type': 'Thing', name: 'DeepSeek R1' }, { '@type': 'Thing', name: 'Qwen3' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'DeepSeek vs Qwen : Comparaison LLM local 2026', description: 'DeepSeek-R1 distillé vs Qwen3 local : VRAM, MMLU, MATH-500, HumanEval. Quel modèle à quel niveau matériel.', url: 'https://www.promptquorum.com/fr/power-local-llm/deepseek-vs-qwen-local-comparison-2026', inLanguage: 'fr', author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-08-29', about: [{ '@type': 'Thing', name: 'DeepSeek-R1' }, { '@type': 'Thing', name: 'Qwen3' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'fr', mainEntity: [{ '@type': 'Question', name: 'DeepSeek et Qwen nécessitent-ils la même VRAM ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, à quantisation équivalente. Les deux 7B nécessitent 5,5 Go en Q4_K_M.' } }, { '@type': 'Question', name: 'Ces modèles sont-ils conformes au RGPD ?', acceptedAnswer: { '@type': 'Answer', text: 'En exécution locale, aucune donnée ne quitte votre matériel. Pas de DPA requis avec des fournisseurs externes.' } }] },
   },
 
@@ -1830,10 +1830,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       '**数学では、DeepSeek-R1-Distill-Qwen-32BがMATH-500 94%でQwen3 32B（90.3%）を上回ります。コーディングでは、Qwen3 32BがHumanEval 91.5%でDeepSeek蒸留（83.2%）を上回ります。両者は同じパラメータ数で同一のVRAMを必要とします。**',
     quickAnswerTop: {
-      en: { question: 'Which is better locally: DeepSeek or Qwen?', answer: 'Math/reasoning: DeepSeek-R1 distilled. Code/Chinese: Qwen3.', bullets: ['Math: DeepSeek-R1-Distill-Qwen-32B', 'Code: Qwen3-Coder 32B'], updatedDate: '2026-05' },
+      en: { question: 'Which is better locally: DeepSeek or Qwen?', answer: 'Math/reasoning: DeepSeek-R1 distilled. Code/Chinese: Qwen3.', bullets: ['Math: DeepSeek-R1-Distill-Qwen-32B', 'Code: Qwen2.5-Coder 32B'], updatedDate: '2026-05' },
       de: { question: 'Was ist besser lokal: DeepSeek oder Qwen?', answer: 'Mathematik: DeepSeek-R1. Code: Qwen3.', bullets: ['Mathe: DeepSeek-R1', 'Code: Qwen3'], updatedDate: '2026-05' },
       fr: { question: 'Lequel est le meilleur localement ?', answer: 'Maths: DeepSeek-R1. Code: Qwen3.', bullets: ['Maths: DeepSeek-R1', 'Code: Qwen3'], updatedDate: '2026-05' },
-      ja: { question: 'ローカルで優れているのはDeepSeekとQwenのどちら？', answer: '数学・推論ではDeepSeek-R1蒸留モデルが優れています（32B MATH-500 94%）。コーディングと中国語ではQwen3が優れています（32B HumanEval 91.5%）。', bullets: ['数学: DeepSeek-R1-Distill-Qwen-32B（MATH-500 94%）', 'コーディング: Qwen3-Coder 32B（HumanEval 91.5%）', '中国語テキスト: Qwen3（ネイティブトークナイゼーション）', '同じVRAM：どちらの7Bモデルも5.5 GBが必要'], updatedDate: '2026-05' },
+      ja: { question: 'ローカルで優れているのはDeepSeekとQwenのどちら？', answer: '数学・推論ではDeepSeek-R1蒸留モデルが優れています（32B MATH-500 94%）。コーディングと中国語ではQwen3が優れています（32B HumanEval 91.5%）。', bullets: ['数学: DeepSeek-R1-Distill-Qwen-32B（MATH-500 94%）', 'コーディング: Qwen2.5-Coder 32B（HumanEval 91.5%）', '中国語テキスト: Qwen3（ネイティブトークナイゼーション）', '同じVRAM：どちらの7Bモデルも5.5 GBが必要'], updatedDate: '2026-05' },
       zh: { question: 'DeepSeek 和 Qwen 哪个本地运行更好？', answer: '数学：DeepSeek-R1蒸馏。编程：Qwen3。', bullets: ['数学: DeepSeek-R1', '编程: Qwen3'], updatedDate: '2026-05' },
     },
     toc: [
@@ -1851,13 +1851,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { type: 'plain-terms', content: 'DeepSeekは推論特化モデル（R1）を公開し、ローカル利用向けに小型の蒸留版を提供しています。Qwen3はアリババの汎用ファミリーです。どちらの7Bモデルも5.5 GBのVRAMに収まります。違いは得意分野：DeepSeekは数学が得意、Qwenはコーディングと中国語が得意です。' },
     ],
     sections: {
-      tldr: { id: 'tldr', title: 'まとめ', isTldr: true, items: ['同じVRAM：どちらの7Bモデルも5.5 GB（Q4_K_M）；32Bは20.5 GB', '数学：DeepSeek-R1-Distill-Qwen-32Bが勝利（MATH-500 94% vs 90.3%）', 'コーディング：Qwen3-Coder 32Bが勝利（HumanEval 91.5% vs 83.2%）', '中国語：Qwen3が勝利——ネイティブCJKトークナイゼーション、30–40%効率向上', '推論チェーン：DeepSeek-R1蒸留はデフォルトで長い思考連鎖を生成'] },
+      tldr: { id: 'tldr', title: 'まとめ', isTldr: true, items: ['同じVRAM：どちらの7Bモデルも5.5 GB（Q4_K_M）；32Bは20.5 GB', '数学：DeepSeek-R1-Distill-Qwen-32Bが勝利（MATH-500 94% vs 90.3%）', 'コーディング：Qwen2.5-Coder 32Bが勝利（HumanEval 91.5% vs 83.2%）', '中国語：Qwen3が勝利——ネイティブCJKトークナイゼーション、30–40%効率向上', '推論チェーン：DeepSeek-R1蒸留はデフォルトで長い思考連鎖を生成'] },
       benchmarkTable: { id: 'benchmark-table', image: '/images/deepseek-vs-qwen-local-comparison-2026-benchmark-comparison-ja.svg', imageCaption: '数学では、DeepSeek-R1-Distill-Qwen-32BがMATH-500 94%でQwen3 32B（90.3%）を上回ります。コーディングでは、Qwen3 32BがHumanEval 91.5%でDeepSeek蒸留（83.2%）を上回ります。', title: '直接ベンチマーク比較', content: 'すべてのスコアはQ4_K_M量子化での値。', columns: ['モデル', 'VRAM', 'MMLU (%)', 'MATH-500 (%)', 'HumanEval (%)', '速度（tok/s）'], rows: [{ 'モデル': 'Qwen3 8B', 'VRAM': '5.5 GB', 'MMLU (%)': '72.5', 'MATH-500 (%)': '62.5', 'HumanEval (%)': '74.6', '速度（tok/s）': '50–80' }, { 'モデル': 'DS-R1-Distill-Qwen 7B', 'VRAM': '5.5 GB', 'MMLU (%)': '70.1', 'MATH-500 (%)': '88.0', 'HumanEval (%)': '68.4', '速度（tok/s）': '50–80' }, { 'モデル': 'Qwen3 32B', 'VRAM': '20.5 GB', 'MMLU (%)': '83.4', 'MATH-500 (%)': '90.3', 'HumanEval (%)': '91.5', '速度（tok/s）': '15–30' }, { 'モデル': 'DS-R1-Distill-Qwen 32B', 'VRAM': '20.5 GB', 'MMLU (%)': '80.6', 'MATH-500 (%)': '94.0', 'HumanEval (%)': '83.2', '速度（tok/s）': '15–30' }], },
-      hardwareTiers: { id: 'hardware-tiers', title: 'ハードウェア層別おすすめモデル', content: 'VRAM要件は両ファミリーで同一です。DeepSeekとQwenの選択はタスクの好みであり、ハードウェアの制約ではありません。', items: ['**8 GB VRAM（RTX 3060 / M2 16 GB）：** コーディング・チャットはQwen3 8B；数学tutoring はDS-R1-Distill-Qwen-7B', '**24 GB VRAM（RTX 4090 / M3 Max 48 GB）：** Qwen3-Coder 32B——このティアで最高の汎用モデル', '**CPUのみ（32+ GB RAM）：** Qwen3 8BまたはDS-R1-Distill 7B——3〜8 tok/sで動作'] },
+      hardwareTiers: { id: 'hardware-tiers', title: 'ハードウェア層別おすすめモデル', content: 'VRAM要件は両ファミリーで同一です。DeepSeekとQwenの選択はタスクの好みであり、ハードウェアの制約ではありません。', items: ['**8 GB VRAM（RTX 3060 / M2 16 GB）：** コーディング・チャットはQwen3 8B；数学tutoring はDS-R1-Distill-Qwen-7B', '**24 GB VRAM（RTX 4090 / M3 Max 48 GB）：** Qwen2.5-Coder 32B——このティアで最高の汎用モデル', '**CPUのみ（32+ GB RAM）：** Qwen3 8BまたはDS-R1-Distill 7B——3〜8 tok/sで動作'] },
       deepseekModels: { id: 'deepseek-models', title: 'DeepSeekローカルモデル解説', content: 'DeepSeek-R1は671B MoEモデルでサーバー用ハードウェアが必要です。ローカル利用には蒸留版が実用的な選択肢です。', items: ['**DS-R1-Distill-Qwen-7B：** 5.5 GB VRAM。MATH-500 88%——7Bティアで最強の数学モデル。', '**DS-R1-Distill-Qwen-32B：** 20.5 GB VRAM。MATH-500 94%——コンシューマー向けモデル中最高の数学スコア。', 'Ollamaコマンド：`ollama run deepseek-r1:7b`'] },
-      qwenModels: { id: 'qwen-models', title: 'Qwen3ローカルモデル解説', content: 'Qwen3はアリババの2025年10月リリースで、ベース・Coder・Vision-Languageバリアントをカバーします。**更新：** アリババはその後、2026年4月にQwen3.6をリリースしました。ハイブリッドアテンション設計を採用し、コーディング・エージェント系ベンチマークが強化された新世代です — 例えば高密度のQwen3.6-27BはSWE-bench Verifiedで77.2%を記録しています。本ガイドで比較しているQwen3モデルは廃止されておらず、引き続きローカルで問題なく利用できます。最新世代を求める場合はQwen3.6も合わせて検討してください。', items: ['**Qwen3 8B：** 5.5 GB VRAM。コーディングと中国語テキストに最適な汎用7Bモデル。', '**Qwen3-Coder 32B：** 20.5 GB VRAM。HumanEval 91.5%——コンシューマー向けで最高のコーディングモデル。', 'Ollamaコマンド：`ollama run qwen3:14b`'] },
+      qwenModels: { id: 'qwen-models', title: 'Qwen3ローカルモデル解説', content: 'Qwen3はアリババの2025年10月リリースで、ベース・Coder・Vision-Languageバリアントをカバーします。**更新：** アリババはその後、2026年4月にQwen3.6をリリースしました。ハイブリッドアテンション設計を採用し、コーディング・エージェント系ベンチマークが強化された新世代です — 例えば高密度のQwen3.6-27BはSWE-bench Verifiedで77.2%を記録しています。本ガイドで比較しているQwen3モデルは廃止されておらず、引き続きローカルで問題なく利用できます。最新世代を求める場合はQwen3.6も合わせて検討してください。', items: ['**Qwen3 8B：** 5.5 GB VRAM。コーディングと中国語テキストに最適な汎用7Bモデル。', '**Qwen2.5-Coder 32B：** 20.5 GB VRAM。HumanEval 91.5%——コンシューマー向けで最高のコーディングモデル。', 'Ollamaコマンド：`ollama run qwen3:14b`'] },
       macVsNvidia: { id: 'mac-vs-nvidia', title: 'Apple Silicon vs NVIDIA', content: '両ファミリーともOllamaとMetal加速でApple Siliconで良好に動作します。', columns: ['ハードウェア', '最適モデル層', '速度（7B）', '速度（32B）'], rows: [{ 'ハードウェア': 'M2/M3 16 GB', '最適モデル層': '7Bのみ', '速度（7B）': '30–50 tok/s', '速度（32B）': 'N/A' }, { 'ハードウェア': 'M3 Max 48 GB', '最適モデル層': '32B (快適)', '速度（7B）': '80–120 tok/s', '速度（32B）': '15–25 tok/s' }, { 'ハードウェア': 'RTX 4090 24 GB', '最適モデル層': '32B', '速度（7B）': '100–150 tok/s', '速度（32B）': '18–28 tok/s' }], },
-      useCaseVerdicts: { id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-ja.svg', imageCaption: 'DeepSeek対Qwenのユースケースガイド：数学の家庭教師とステップバイステップ推論はDeepSeek-R1-Distill-Qwenが有利、コード生成（Qwen3-Coder 32B、HumanEval 91.5%）と中国語チャットはQwen3が有利です。', title: 'ユースケース別判定', content: '各ユースケースに対する一文の回答：', items: ['**数学/家庭教師：** DS-R1-Distill-Qwen-7B——MATH-500 88% vs Qwen3 8Bの62.5%', '**コード生成・レビュー：** Qwen3-Coder 32B——HumanEval 91.5%', '**中国語チャット：** Qwen3 8B——ネイティブCJKトークナイゼーション', '**ステップバイステップ分析：** DS-R1-Distill-Qwen-14B——デフォルトで明示的な思考連鎖を生成'] },
+      useCaseVerdicts: { id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-ja.svg', imageCaption: 'DeepSeek対Qwenのユースケースガイド：数学の家庭教師とステップバイステップ推論はDeepSeek-R1-Distill-Qwenが有利、コード生成（Qwen2.5-Coder 32B、HumanEval 91.5%）と中国語チャットはQwen3が有利です。', title: 'ユースケース別判定', content: '各ユースケースに対する一文の回答：', items: ['**数学/家庭教師：** DS-R1-Distill-Qwen-7B——MATH-500 88% vs Qwen3 8Bの62.5%', '**コード生成・レビュー：** Qwen2.5-Coder 32B——HumanEval 91.5%', '**中国語チャット：** Qwen3 8B——ネイティブCJKトークナイゼーション', '**ステップバイステップ分析：** DS-R1-Distill-Qwen-14B——デフォルトで明示的な思考連鎖を生成'] },
       faqSection: { id: 'faq', title: 'よくある質問', faqs: [
             { q: 'DeepSeek-R1と蒸留モデルは同じですか？', a: 'いいえ。DeepSeek-R1は671B MoEモデルです。蒸留版（7B、14B、32B）はローカル利用のために訓練された別の高密度モデルです。' },
             { q: 'DeepSeekとQwenは同じVRAMを使いますか？', a: 'はい、同じ量子化レベルで。両方の7Bモデルは約5.5 GB（Q4_K_M）が必要；両方の32Bは20.5 GBが必要です。' },
@@ -1867,7 +1867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ] },
       relatedReading: { id: 'related-reading', title: '関連記事', items: ['[Qwenローカル展開ガイド 2026](/ja/local-llms/qwen-local-deployment-guide-2026) — 全Qwen3バリアントのハードウェア表', '[ローカルLLM向けGPU購入ガイド 2026](/ja/power-local-llm/best-gpu-buying-guide-local-llm-2026)', '[Qwen vs Llama vs Mistral 2026](/ja/local-llms/qwen-vs-llama-vs-mistral)', '[Qwenローカルデプロイ完全ガイド2026：Docker・APIサーバー・マルチGPU](/ja/power-local-llm/qwen-local-deployment-complete-guide-2026)'] },
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'DeepSeek vs Qwen：ローカルLLM比較 2026', description: 'DeepSeek-R1蒸留 vs Qwen3ローカル：VRAM・MMLU・MATH-500・HumanEvalの直接比較。', url: 'https://www.promptquorum.com/ja/power-local-llm/deepseek-vs-qwen-local-comparison-2026', inLanguage: 'ja', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-08-29', about: [{ '@type': 'Thing', name: 'DeepSeek R1' }, { '@type': 'Thing', name: 'Qwen3' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'DeepSeek vs Qwen：ローカルLLM比較 2026', description: 'DeepSeek-R1蒸留 vs Qwen3ローカル：VRAM・MMLU・MATH-500・HumanEvalの直接比較。', url: 'https://www.promptquorum.com/ja/power-local-llm/deepseek-vs-qwen-local-comparison-2026', inLanguage: 'ja', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-08-29', about: [{ '@type': 'Thing', name: 'DeepSeek-R1' }, { '@type': 'Thing', name: 'Qwen3' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'ja', mainEntity: [
           {
             '@type': 'Question',
@@ -1934,11 +1934,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       '**数学方面：DeepSeek-R1-Distill-Qwen-32B以MATH-500 94%击败Qwen3 32B（90.3%）。编程方面：Qwen3 32B以HumanEval 91.5%击败DeepSeek蒸馏（83.2%）。两者在同等参数规模下所需显存完全相同。**',
     quickAnswerTop: {
-      en: { question: 'Which is better locally: DeepSeek or Qwen?', answer: 'Math/reasoning: DeepSeek-R1 distilled. Code/Chinese: Qwen3.', bullets: ['Math: DeepSeek-R1-Distill-Qwen-32B', 'Code: Qwen3-Coder 32B'], updatedDate: '2026-05' },
+      en: { question: 'Which is better locally: DeepSeek or Qwen?', answer: 'Math/reasoning: DeepSeek-R1 distilled. Code/Chinese: Qwen3.', bullets: ['Math: DeepSeek-R1-Distill-Qwen-32B', 'Code: Qwen2.5-Coder 32B'], updatedDate: '2026-05' },
       de: { question: 'Was ist besser lokal: DeepSeek oder Qwen?', answer: 'Mathematik: DeepSeek-R1. Code: Qwen3.', bullets: ['Mathe: DeepSeek-R1', 'Code: Qwen3'], updatedDate: '2026-05' },
       fr: { question: 'Lequel est le meilleur localement ?', answer: 'Maths: DeepSeek-R1. Code: Qwen3.', bullets: ['Maths: DeepSeek-R1', 'Code: Qwen3'], updatedDate: '2026-05' },
       ja: { question: 'DeepSeekとQwenどちらが優れている？', answer: '数学：DeepSeek-R1。コード：Qwen3。', bullets: ['数学: DeepSeek-R1', 'コード: Qwen3'], updatedDate: '2026-05' },
-      zh: { question: 'DeepSeek 和 Qwen 哪个本地运行更好？', answer: '数学和推理：DeepSeek-R1蒸馏模型更强（32B MATH-500达94%）。编程和中文文本：Qwen3更强（32B HumanEval达91.5%）。同等参数量下两者所需硬件相同。', bullets: ['数学/推理：DeepSeek-R1-Distill-Qwen-32B（MATH-500 94%）', '编程：Qwen3-Coder 32B（HumanEval 91.5%）', '中文文本：Qwen3（原生分词，效率提升30–40%）', '显存相同：两款7B模型Q4_K_M均需5.5 GB', '符合《数据安全法》：本地运行，数据不出设备'], updatedDate: '2026-05' },
+      zh: { question: 'DeepSeek 和 Qwen 哪个本地运行更好？', answer: '数学和推理：DeepSeek-R1蒸馏模型更强（32B MATH-500达94%）。编程和中文文本：Qwen3更强（32B HumanEval达91.5%）。同等参数量下两者所需硬件相同。', bullets: ['数学/推理：DeepSeek-R1-Distill-Qwen-32B（MATH-500 94%）', '编程：Qwen2.5-Coder 32B（HumanEval 91.5%）', '中文文本：Qwen3（原生分词，效率提升30–40%）', '显存相同：两款7B模型Q4_K_M均需5.5 GB', '符合《数据安全法》：本地运行，数据不出设备'], updatedDate: '2026-05' },
     },
     toc: [
       { label: '摘要', anchor: 'tldr' },
@@ -1955,13 +1955,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { type: 'plain-terms', content: 'DeepSeek发布了推理专用模型（R1），并提供了适合本地使用的小型蒸馏版本。Qwen3是阿里巴巴的通用系列。两款7B模型均可在5.5 GB显存中运行。区别在于强项：DeepSeek擅长数学，Qwen擅长编程和中文。' },
     ],
     sections: {
-      tldr: { id: 'tldr', title: '摘要', isTldr: true, items: ['显存相同：两款7B模型Q4_K_M均需5.5 GB；两款32B均需20.5 GB', '数学：DeepSeek-R1-Distill-Qwen-32B胜出（MATH-500 94% vs 90.3%）', '编程：Qwen3-Coder 32B胜出（HumanEval 91.5% vs 83.2%）', '中文文本：Qwen3胜出——原生分词，CJK文本效率提升30–40%', '逐步推理：DeepSeek-R1蒸馏默认生成长思维链', '符合《数据安全法》：本地运行，数据不出设备，满足数据驻留要求'] },
+      tldr: { id: 'tldr', title: '摘要', isTldr: true, items: ['显存相同：两款7B模型Q4_K_M均需5.5 GB；两款32B均需20.5 GB', '数学：DeepSeek-R1-Distill-Qwen-32B胜出（MATH-500 94% vs 90.3%）', '编程：Qwen2.5-Coder 32B胜出（HumanEval 91.5% vs 83.2%）', '中文文本：Qwen3胜出——原生分词，CJK文本效率提升30–40%', '逐步推理：DeepSeek-R1蒸馏默认生成长思维链', '符合《数据安全法》：本地运行，数据不出设备，满足数据驻留要求'] },
       benchmarkTable: { id: 'benchmark-table', image: '/images/deepseek-vs-qwen-local-comparison-2026-benchmark-comparison-zh.svg', imageCaption: '数学方面：DeepSeek-R1-Distill-Qwen-32B以MATH-500 94%击败Qwen3 32B（90.3%）。编程方面：Qwen3 32B以HumanEval 91.5%击败DeepSeek蒸馏（83.2%）。', title: '基准测试直接对比', content: '所有分数均为Q4_K_M量化格式，速度在NVIDIA RTX 4090（24 GB显存）上测试。', columns: ['模型', '显存', 'MMLU (%)', 'MATH-500 (%)', 'HumanEval (%)', '速度（词元/秒）'], rows: [{ '模型': 'Qwen3 8B', '显存': '5.5 GB', 'MMLU (%)': '72.5', 'MATH-500 (%)': '62.5', 'HumanEval (%)': '74.6', '速度（词元/秒）': '50–80' }, { '模型': 'DS-R1蒸馏-Qwen 7B', '显存': '5.5 GB', 'MMLU (%)': '70.1', 'MATH-500 (%)': '88.0', 'HumanEval (%)': '68.4', '速度（词元/秒）': '50–80' }, { '模型': 'Qwen3 14B', '显存': '9.5 GB', 'MMLU (%)': '79.2', 'MATH-500 (%)': '76.1', 'HumanEval (%)': '82.1', '速度（词元/秒）': '30–50' }, { '模型': 'DS-R1蒸馏-Qwen 14B', '显存': '9.5 GB', 'MMLU (%)': '75.8', 'MATH-500 (%)': '90.0', 'HumanEval (%)': '75.5', '速度（词元/秒）': '30–50' }, { '模型': 'Qwen3 32B', '显存': '20.5 GB', 'MMLU (%)': '83.4', 'MATH-500 (%)': '90.3', 'HumanEval (%)': '91.5', '速度（词元/秒）': '15–30' }, { '模型': 'DS-R1蒸馏-Qwen 32B', '显存': '20.5 GB', 'MMLU (%)': '80.6', 'MATH-500 (%)': '94.0', 'HumanEval (%)': '83.2', '速度（词元/秒）': '15–30' }], },
-      hardwareTiers: { id: 'hardware-tiers', title: '各硬件配置推荐模型', content: '两个系列在相同参数量下显存需求相同。选择DeepSeek还是Qwen取决于任务需求，而非硬件限制。', items: ['**8 GB显存（RTX 3060 / M2 16 GB统一内存）：** 编程/聊天选Qwen3 8B；数学辅导选DS-R1蒸馏-Qwen-7B', '**12 GB显存（RTX 3080 / M2 Pro 24 GB）：** 通用任务选Qwen3 14B；推理链选DS-R1蒸馏-Qwen-14B', '**24 GB显存（RTX 4090 / M3 Max 48 GB）：** Qwen3-Coder 32B——此配置下最佳全能模型', '**48 GB+（M2/M3 Ultra / 双RTX 4090）：** Qwen3 72B（MMLU 86.1%，HumanEval 97%）', '**仅CPU（32+ GB内存）：** Qwen3 8B或DS-R1蒸馏 7B——现代笔记本CPU上速度3–8词元/秒'] },
+      hardwareTiers: { id: 'hardware-tiers', title: '各硬件配置推荐模型', content: '两个系列在相同参数量下显存需求相同。选择DeepSeek还是Qwen取决于任务需求，而非硬件限制。', items: ['**8 GB显存（RTX 3060 / M2 16 GB统一内存）：** 编程/聊天选Qwen3 8B；数学辅导选DS-R1蒸馏-Qwen-7B', '**12 GB显存（RTX 3080 / M2 Pro 24 GB）：** 通用任务选Qwen3 14B；推理链选DS-R1蒸馏-Qwen-14B', '**24 GB显存（RTX 4090 / M3 Max 48 GB）：** Qwen2.5-Coder 32B——此配置下最佳全能模型', '**48 GB+（M2/M3 Ultra / 双RTX 4090）：** Qwen3 72B（MMLU 86.1%，HumanEval 97%）', '**仅CPU（32+ GB内存）：** Qwen3 8B或DS-R1蒸馏 7B——现代笔记本CPU上速度3–8词元/秒'] },
       deepseekModels: { id: 'deepseek-models', title: 'DeepSeek本地模型解析', content: 'DeepSeek-R1是671B MoE模型，需要服务器级硬件。本地使用的实用选择是蒸馏版本。', items: ['**DS-R1蒸馏-Qwen-7B：** 5.5 GB显存。MATH-500 88%——7B层级中最强的数学模型。', '**DS-R1蒸馏-Qwen-14B：** 9.5 GB显存。14B层级中最佳的推理效率。', '**DS-R1蒸馏-Qwen-32B：** 20.5 GB显存。所有消费级模型中最高的MATH-500分数（94%）。', '**DeepSeek-V3（完整版）：** 671B MoE——Q4格式需400+ GB内存——不适合消费硬件。', 'Ollama命令：`ollama run deepseek-r1:7b`'] },
-      qwenModels: { id: 'qwen-models', title: 'Qwen3本地模型解析', content: 'Qwen3是阿里巴巴2025年10月发布的系列，涵盖基础版、Coder和视觉语言变体。所有基础模型使用128K上下文窗口和Apache 2.0许可证。**更新：** 阿里巴巴此后于2026年4月发布了Qwen3.6，这是采用混合注意力设计、编程与智能体基准测试更强的新一代模型——例如密集架构的Qwen3.6-27B在SWE-bench Verified上得分77.2%。本指南中比较的Qwen3模型并未停产，在本地部署仍然完全有效；如果需要最新一代，可将Qwen3.6一并纳入评估。', items: ['**Qwen3 8B：** 5.5 GB显存。编程和中文文本的最佳通用7B模型。', '**Qwen3 14B：** 9.5 GB显存。12 GB显存配置下质量与速度的最佳平衡点。', '**Qwen3 32B：** 20.5 GB显存。HumanEval 91.5%——48 GB显存以下最佳编程基准分数。', '**Qwen3-Coder 32B：** 显存需求与32B基础版相同，专门针对代码生成进行微调。', 'Ollama命令：`ollama run qwen3:14b`'] },
+      qwenModels: { id: 'qwen-models', title: 'Qwen3本地模型解析', content: 'Qwen3是阿里巴巴2025年10月发布的系列，涵盖基础版、Coder和视觉语言变体。所有基础模型使用128K上下文窗口和Apache 2.0许可证。**更新：** 阿里巴巴此后于2026年4月发布了Qwen3.6，这是采用混合注意力设计、编程与智能体基准测试更强的新一代模型——例如密集架构的Qwen3.6-27B在SWE-bench Verified上得分77.2%。本指南中比较的Qwen3模型并未停产，在本地部署仍然完全有效；如果需要最新一代，可将Qwen3.6一并纳入评估。', items: ['**Qwen3 8B：** 5.5 GB显存。编程和中文文本的最佳通用7B模型。', '**Qwen3 14B：** 9.5 GB显存。12 GB显存配置下质量与速度的最佳平衡点。', '**Qwen3 32B：** 20.5 GB显存。HumanEval 91.5%——48 GB显存以下最佳编程基准分数。', '**Qwen2.5-Coder 32B：** 显存需求与32B基础版相同，专门针对代码生成进行微调。', 'Ollama命令：`ollama run qwen3:14b`'] },
       macVsNvidia: { id: 'mac-vs-nvidia', title: 'Apple Silicon vs NVIDIA：运行两个系列', content: '两个模型系列均可通过Ollama和Metal加速在Apple Silicon上良好运行。', columns: ['硬件', '最佳模型层级', '速度（7B）', '速度（32B）', '备注'], rows: [{ '硬件': 'M2/M3 16 GB统一内存', '最佳模型层级': '仅7B', '速度（7B）': '30–50词元/秒', '速度（32B）': 'N/A', '备注': '两款7B模型均可运行' }, { '硬件': 'M3 Max 48 GB', '最佳模型层级': '32B（流畅）', '速度（7B）': '80–120词元/秒', '速度（32B）': '15–25词元/秒', '备注': '最佳消费级Apple Silicon运行32B' }, { '硬件': 'RTX 4090 24 GB', '最佳模型层级': '32B', '速度（7B）': '100–150词元/秒', '速度（32B）': '18–28词元/秒', '备注': '最佳单GPU运行32B' }], },
-      useCaseVerdicts: { id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-zh.svg', imageCaption: 'DeepSeek与Qwen使用场景指南：数学辅导和逐步推理更适合DeepSeek-R1-Distill-Qwen，而代码生成（Qwen3-Coder 32B，HumanEval 91.5%）和中文对话更适合Qwen3。', title: '使用场景结论', content: '针对每种常见本地LLM使用场景的一句话结论：', items: ['**数学/辅导：** DS-R1蒸馏-Qwen-7B——MATH-500 88%，远超Qwen3 8B（62.5%），显存需求相同', '**代码生成/审查：** Qwen3-Coder 32B——HumanEval 91.5%，消费级最高分', '**中文对话：** Qwen3 8B——原生CJK分词，效率提升30–40%', '**逐步分析推理：** DS-R1蒸馏-Qwen-14B——默认生成明确的思维链', '**通用日常助手（8 GB显存）：** Qwen3 8B——对话更流畅，避免DeepSeek在简单任务中的过度推理', '**企业合规部署（中国）：** Qwen3——Apache 2.0许可，阿里巴巴出品，更易满足CAC合规文档要求'] },
+      useCaseVerdicts: { id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-zh.svg', imageCaption: 'DeepSeek与Qwen使用场景指南：数学辅导和逐步推理更适合DeepSeek-R1-Distill-Qwen，而代码生成（Qwen2.5-Coder 32B，HumanEval 91.5%）和中文对话更适合Qwen3。', title: '使用场景结论', content: '针对每种常见本地LLM使用场景的一句话结论：', items: ['**数学/辅导：** DS-R1蒸馏-Qwen-7B——MATH-500 88%，远超Qwen3 8B（62.5%），显存需求相同', '**代码生成/审查：** Qwen2.5-Coder 32B——HumanEval 91.5%，消费级最高分', '**中文对话：** Qwen3 8B——原生CJK分词，效率提升30–40%', '**逐步分析推理：** DS-R1蒸馏-Qwen-14B——默认生成明确的思维链', '**通用日常助手（8 GB显存）：** Qwen3 8B——对话更流畅，避免DeepSeek在简单任务中的过度推理', '**企业合规部署（中国）：** Qwen3——Apache 2.0许可，阿里巴巴出品，更易满足CAC合规文档要求'] },
       faqSection: { id: 'faq', title: '常见问题', faqs: [
         { q: 'DeepSeek-R1和蒸馏模型是同一个吗？', a: '不是。DeepSeek-R1是671B MoE模型，需要服务器级硬件。蒸馏版本（7B、14B、32B）是独立的密集型模型，专为本地使用设计。' },
         { q: 'DeepSeek和Qwen显存需求相同吗？', a: '是的，在相同量化级别下。两款7B模型Q4_K_M格式约需5.5 GB；两款32B模型均需20.5 GB。' },
@@ -1972,7 +1972,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ] },
       relatedReading: { id: 'related-reading', title: '相关阅读', items: ['[Qwen本地部署指南 2026](/zh/local-llms/qwen-local-deployment-guide-2026) — 所有Qwen3变体的完整硬件表', '[本地LLM显卡选购指南 2026](/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026) — RTX 4060 vs 4070 vs 4090对比', '[Qwen vs Llama vs Mistral 2026](/zh/local-llms/qwen-vs-llama-vs-mistral) — 三方对比', '[Qwen本地部署指南2026](/zh/local-llms/qwen-local-deployment-guide-2026) — 通过Ollama逐步设置Qwen3 8B到72B。', '[DeepSeek v3本地硬件要求](/zh/prompt-bites/deepseek-v3-local-hardware-requirements) — 运行DeepSeek v3完整版和量化版的最低VRAM要求。', '[Qwen本地部署完整指南2026：Docker、API服务器、多GPU配置](/zh/power-local-llm/qwen-local-deployment-complete-guide-2026)'] },
     },
-    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'DeepSeek vs Qwen：本地LLM对比 2026', description: 'DeepSeek-R1蒸馏 vs Qwen3本地部署：显存、MMLU、MATH-500、HumanEval基准直接对比，附各硬件配置推荐模型。', url: 'https://www.promptquorum.com/zh/power-local-llm/deepseek-vs-qwen-local-comparison-2026', inLanguage: 'zh', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-08-29', about: [{ '@type': 'Thing', name: 'DeepSeek R1' }, { '@type': 'Thing', name: 'Qwen3' }, { '@type': 'Thing', name: '本地LLM' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
+    schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'DeepSeek vs Qwen：本地LLM对比 2026', description: 'DeepSeek-R1蒸馏 vs Qwen3本地部署：显存、MMLU、MATH-500、HumanEval基准直接对比，附各硬件配置推荐模型。', url: 'https://www.promptquorum.com/zh/power-local-llm/deepseek-vs-qwen-local-comparison-2026', inLanguage: 'zh', author: { '@type': 'Organization', name: 'PromptQuorum' }, publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' }, datePublished: '2026-05-26', dateModified: '2026-08-29', about: [{ '@type': 'Thing', name: 'DeepSeek-R1' }, { '@type': 'Thing', name: 'Qwen3' }, { '@type': 'Thing', name: '本地LLM' }], speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] } },
     faqSchema: { '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: 'zh', mainEntity: [{ '@type': 'Question', name: 'DeepSeek和Qwen显存需求相同吗？', acceptedAnswer: { '@type': 'Answer', text: '是的。两款7B模型Q4_K_M均需约5.5 GB；两款32B均需20.5 GB。' } }, { '@type': 'Question', name: '本地运行是否符合中国《数据安全法》？', acceptedAnswer: { '@type': 'Answer', text: '本地推理意味着数据始终留在您的硬件上，满足《数据安全法》的数据驻留要求。' } }, { '@type': 'Question', name: 'DeepSeek-V3可以在本地运行吗？', acceptedAnswer: { '@type': 'Answer', text: '实际上不行。完整的DeepSeek-V3是671B MoE模型，Q4格式需约400 GB内存。请改用蒸馏版本。' } }] },
   },
   ko: {
@@ -2010,7 +2010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '수학 및 추론 작업에서는 DeepSeek-R1 증류 모델이 더 강력합니다(32B에서 MATH-500 94%). 코딩 및 중국어 텍스트에서는 Qwen3가 더 강력합니다(32B에서 HumanEval 91.5%). 두 계열 모두 동일한 파라미터 수에서 동일한 하드웨어에서 실행됩니다.',
         bullets: [
           '수학/추론: DeepSeek-R1-Distill-Qwen-32B (MATH-500 94%)',
-          '코딩: Qwen3-Coder 32B (HumanEval 91.5%)',
+          '코딩: Qwen2.5-Coder 32B (HumanEval 91.5%)',
           '중국어 텍스트: Qwen3 8B–72B (네이티브 토크나이저)',
           '동일 VRAM: 7B 모델 모두 Q4_K_M 기준 5.5 GB 필요',
           'Apple Silicon: M 시리즈 통합 메모리에서 모두 잘 실행됨',
@@ -2046,7 +2046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '동일 VRAM: 7B 모델 모두 Q4_K_M 기준 5.5 GB; 32B 모델 모두 20.5 GB 필요',
           '수학: DeepSeek-R1-Distill-Qwen-32B 우세 (MATH-500 94% vs 90.3%)',
-          '코딩: Qwen3-Coder 32B 우세 (HumanEval 91.5% vs 83%)',
+          '코딩: Qwen2.5-Coder 32B 우세 (HumanEval 91.5% vs 83%)',
           '중국어 텍스트: Qwen3 우세 — 네이티브 토크나이저로 CJK 텍스트 30–40% 더 효율적',
           '추론 체인: DeepSeek-R1 증류 모델은 기본적으로 긴 사고 체인을 생성합니다',
           '범용 어시스턴트: Qwen3 14B가 다소 더 유창하며, DeepSeek 증류 14B는 단순 작업에서 과도한 추론 경향이 있습니다',
@@ -2117,7 +2117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**8 GB VRAM (RTX 3060 / M2 16 GB):** 코딩/채팅에는 Qwen3 8B; 수학 튜터링에는 DS-R1-Distill-Qwen-7B',
           '**12 GB VRAM (RTX 3080 / M2 Pro 24 GB):** 범용 사용에는 Qwen3 14B; 추론 체인에는 DS-R1-Distill-Qwen-14B',
-          '**24 GB VRAM (RTX 4090 / M3 Max 48 GB):** Qwen3-Coder 32B 또는 Qwen3 32B — 이 등급에서 최고의 범용 로컬 모델',
+          '**24 GB VRAM (RTX 4090 / M3 Max 48 GB):** Qwen2.5-Coder 32B 또는 Qwen3 32B — 이 등급에서 최고의 범용 로컬 모델',
           '**48 GB+ (M2/M3 Ultra / RTX 4090 듀얼):** Qwen3 72B (MMLU 86.1%, HumanEval 97%) — GPT-4에 근접한 성능',
           '**CPU 전용 (32+ GB RAM):** Qwen3 8B 또는 DS-R1-Distill 7B — 최신 노트북 CPU에서 분당 3–8 토큰으로 동작',
         ],
@@ -2144,7 +2144,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3 8B:** 5.5 GB VRAM. 코딩 및 중국어 텍스트에 가장 적합한 7B 범용 모델. HumanEval 74.6%는 코드 분야에서 모든 7B 경쟁 모델을 능가합니다.',
           '**Qwen3 14B:** 9.5 GB VRAM. 품질과 속도의 최적 균형점. HumanEval 82.1%, MMLU 79.2%. 12 GB VRAM 설정 대부분에서 최선의 선택입니다.',
           '**Qwen3 32B:** 20.5 GB VRAM. HumanEval 91.5% — 48 GB VRAM 미만에서 최고의 코딩 벤치마크 점수.',
-          '**Qwen3-Coder 32B:** 베이스 32B와 동일한 VRAM으로 코드 생성 및 리뷰에 특화 미세 조정됨. 코딩이 주요 작업일 때 베이스 대신 사용하십시오.',
+          '**Qwen2.5-Coder 32B:** 베이스 32B와 동일한 VRAM으로 코드 생성 및 리뷰에 특화 미세 조정됨. 코딩이 주요 작업일 때 베이스 대신 사용하십시오.',
           '**Qwen3 72B:** 46 GB VRAM. MMLU 86.1%, HumanEval 97%. 48 GB+ 통합 메모리(M2/M3 Ultra) 또는 멀티 GPU 설정에서만 실행 가능합니다.',
           'Ollama 명령어: `ollama run qwen3:14b`',
         ],
@@ -2194,12 +2194,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       useCaseVerdicts: {
-        id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-ko.svg', imageCaption: 'DeepSeek vs Qwen 사용 사례 가이드: 수학 튜터링과 단계별 추론 체인에는 DeepSeek-R1-Distill-Qwen이 적합하고, 코드 생성(Qwen3-Coder 32B, HumanEval 91.5%)과 중국어 채팅에는 Qwen3가 적합합니다.',
+        id: 'use-case-verdicts', image: '/images/deepseek-vs-qwen-local-comparison-2026-use-case-decision-ko.svg', imageCaption: 'DeepSeek vs Qwen 사용 사례 가이드: 수학 튜터링과 단계별 추론 체인에는 DeepSeek-R1-Distill-Qwen이 적합하고, 코드 생성(Qwen2.5-Coder 32B, HumanEval 91.5%)과 중국어 채팅에는 Qwen3가 적합합니다.',
         title: '사용 사례별 판정',
         content: '일반적인 로컬 LLM 사용 사례별 한 문장 답변:',
         items: [
           '**수학 과외/튜터링:** DS-R1-Distill-Qwen-7B — MATH-500 88%로 동일 VRAM의 Qwen3 8B(62.5%)를 압도',
-          '**코드 생성/검토:** Qwen3-Coder 32B — HumanEval 91.5%, 소비자 하드웨어에서 실행 가능한 모델 중 최고',
+          '**코드 생성/검토:** Qwen2.5-Coder 32B — HumanEval 91.5%, 소비자 하드웨어에서 실행 가능한 모델 중 최고',
           '**중국어 채팅:** Qwen3 8B — 네이티브 CJK 토크나이저로 중국어 텍스트를 30–40% 더 효율적으로 처리',
           '**단계별 분석/추론 체인:** DS-R1-Distill-Qwen-14B — 기본적으로 명시적인 사고 체인을 생성',
           '**일상 범용 어시스턴트 (8 GB VRAM):** Qwen3 8B — 더 유창한 대화, 단순 작업에서 DeepSeek의 과도한 추론 방지',
@@ -2243,7 +2243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       datePublished: '2026-05-26',
       dateModified: '2026-08-29',
       about: [
-        { '@type': 'Thing', name: 'DeepSeek R1' },
+        { '@type': 'Thing', name: 'DeepSeek-R1' },
         { '@type': 'Thing', name: 'Qwen3' },
         { '@type': 'Thing', name: '로컬 LLM' },
       ],

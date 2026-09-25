@@ -255,7 +255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hybrid-setup',
         title: 'Hybrid Setup: Phone STT + Remote Ollama',
         content:
-          '**The hybrid stack moves only the LLM call to a home machine, keeping STT and TTS on-device.** This gives access to 70B-class models (Llama 3.3 70B, Qwen3-Coder 32B) while preserving privacy for the audio (which never leaves the phone — only the text transcript is sent over your home Wi-Fi).',
+          '**The hybrid stack moves only the LLM call to a home machine, keeping STT and TTS on-device.** This gives access to 70B-class models (Llama 3.3 70B, Qwen2.5-Coder 32B) while preserving privacy for the audio (which never leaves the phone — only the text transcript is sent over your home Wi-Fi).',
         numberedItems: [
           'On the home machine (Mac, PC, or NAS): install Ollama. Pull a 70B model: `ollama pull llama3.3:70b` (requires ~40 GB free disk + ~48 GB RAM or 24 GB GPU VRAM).',
           'Bind Ollama to your local network: `OLLAMA_HOST=0.0.0.0:11434 ollama serve`. Note the home machine\'s local IP (e.g., 192.168.1.20).',
@@ -694,7 +694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hybrid-setup',
         title: 'Hybrid-Setup: Telefon-STT + Remote Ollama',
         content:
-          '**Der Hybrid-Stack verschiebt nur den LLM-Anruf auf einen Home-Computer, hält STT und TTS auf dem Gerät.** Dies gibt Zugriff auf 70B-Klassenmodelle (Llama 3.3 70B, Qwen3-Coder 32B), während der Datenschutz für das Audio erhalten bleibt (das nie das Telefon verlässt — nur die Textabschrift wird über Ihr Home-Wi-Fi gesendet).',
+          '**Der Hybrid-Stack verschiebt nur den LLM-Anruf auf einen Home-Computer, hält STT und TTS auf dem Gerät.** Dies gibt Zugriff auf 70B-Klassenmodelle (Llama 3.3 70B, Qwen2.5-Coder 32B), während der Datenschutz für das Audio erhalten bleibt (das nie das Telefon verlässt — nur die Textabschrift wird über Ihr Home-Wi-Fi gesendet).',
         numberedItems: [
           'Auf dem Home-Computer (Mac, PC oder NAS): Installieren Sie Ollama. Ziehen Sie ein 70B Modell: `ollama pull llama3.3:70b` (erfordert ~40 GB freier Speicher + ~48 GB RAM oder 24 GB GPU VRAM).',
           'Binden Sie Ollama an Ihr lokales Netzwerk: `OLLAMA_HOST=0.0.0.0:11434 ollama serve`. Notieren Sie sich die lokale IP des Home-Computers (z. B. 192.168.1.20).',
@@ -1177,7 +1177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hybrid-setup',
         title: 'Configuration hybride : STT téléphone + Ollama distant',
         content:
-          '**La pile hybride ne déplace que l\'appel LLM vers un ordinateur maison, maintenant STT et TTS sur l\'appareil.** Cela donne accès aux modèles classe 70B (Llama 3.3 70B, Qwen3-Coder 32B) tout en préservant la confidentialité pour l\'audio (qui ne quitte jamais le téléphone — seule la transcription textuelle est envoyée sur votre Wi-Fi maison).',
+          '**La pile hybride ne déplace que l\'appel LLM vers un ordinateur maison, maintenant STT et TTS sur l\'appareil.** Cela donne accès aux modèles classe 70B (Llama 3.3 70B, Qwen2.5-Coder 32B) tout en préservant la confidentialité pour l\'audio (qui ne quitte jamais le téléphone — seule la transcription textuelle est envoyée sur votre Wi-Fi maison).',
         numberedItems: [
           'Sur l\'ordinateur maison (Mac, PC ou NAS) : installez Ollama. Tirez un modèle 70B : `ollama pull llama3.3:70b` (nécessite ~40 GB d\'espace disque libre + ~48 GB de RAM ou 24 GB de VRAM GPU).',
           'Liez Ollama à votre réseau local : `OLLAMA_HOST=0.0.0.0:11434 ollama serve`. Notez l\'adresse IP locale de l\'ordinateur maison (par exemple, 192.168.1.20).',
@@ -1660,7 +1660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hybrid-setup',
         title: 'ハイブリッド設定：スマートフォンSTT +リモートOllama',
         content:
-          '**ハイブリッドスタックはLLM呼び出しをホームマシンに移動し、デバイスでSTTとTTSを保持します。** これは、70Bクラスのモデル（Llama 3.3 70B、Qwen3-Coder 32B）へのアクセスを与えながら、オーディオの機密性を保持します（スマートフォンを離れることはありません—テキストトランスクリプトのみがホームWi-Fi経由で送信されます）。',
+          '**ハイブリッドスタックはLLM呼び出しをホームマシンに移動し、デバイスでSTTとTTSを保持します。** これは、70Bクラスのモデル（Llama 3.3 70B、Qwen2.5-Coder 32B）へのアクセスを与えながら、オーディオの機密性を保持します（スマートフォンを離れることはありません—テキストトランスクリプトのみがホームWi-Fi経由で送信されます）。',
         numberedItems: [
           'ホームマシン（Mac、PC、またはNAS）では：Ollama をインストール。70Bモデルをプル：`ollama pull llama3.3:70b`（~40 GBフリーディスク+ ~48 GB RAMまたは24 GB GPU VRAMが必要）。',
           'Ollamaをローカルネットワークにバインド：`OLLAMA_HOST=0.0.0.0:11434 ollama serve`。ホームマシンのローカルIP（例：192.168.1.20）に注意してください。',
@@ -2143,7 +2143,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hybrid-setup',
         title: '混合设置：手机STT +远程Ollama',
         content:
-          '**混合堆栈仅将LLM调用移动到家庭机器，在设备上保持STT和TTS。** 这提供了对70B级模型（Llama 3.3 70B、Qwen3-Coder 32B）的访问，同时保持了音频隐私（从不离开手机—仅文本转录通过您的家庭Wi-Fi发送）。',
+          '**混合堆栈仅将LLM调用移动到家庭机器，在设备上保持STT和TTS。** 这提供了对70B级模型（Llama 3.3 70B、Qwen2.5-Coder 32B）的访问，同时保持了音频隐私（从不离开手机—仅文本转录通过您的家庭Wi-Fi发送）。',
         numberedItems: [
           '在家庭机器（Mac、PC或NAS）上：安装Ollama。拉取70B模型：`ollama pull llama3.3:70b`（需要~40 GB自由磁盘+ ~48 GB RAM或24 GB GPU VRAM）。',
           '将Ollama绑定到您的本地网络：`OLLAMA_HOST=0.0.0.0:11434 ollama serve`。注意家庭机器的本地IP（例如192.168.1.20）。',
@@ -2626,7 +2626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hybrid-setup',
         title: 'Configuración híbrida: STT en el teléfono + Ollama remoto',
         content:
-          '**El stack híbrido solo mueve la llamada al LLM a un ordenador en casa, manteniendo STT y TTS en el dispositivo.** Esto da acceso a modelos de clase 70B (Llama 3.3 70B, Qwen3-Coder 32B) mientras se preserva la privacidad del audio (que nunca sale del teléfono — solo la transcripción de texto se envía por tu Wi-Fi doméstico).',
+          '**El stack híbrido solo mueve la llamada al LLM a un ordenador en casa, manteniendo STT y TTS en el dispositivo.** Esto da acceso a modelos de clase 70B (Llama 3.3 70B, Qwen2.5-Coder 32B) mientras se preserva la privacidad del audio (que nunca sale del teléfono — solo la transcripción de texto se envía por tu Wi-Fi doméstico).',
         numberedItems: [
           'En el ordenador de casa (Mac, PC o NAS): instala Ollama. Descarga un modelo 70B: `ollama pull llama3.3:70b` (requiere ~40 GB de espacio libre en disco + ~48 GB de RAM o 24 GB de VRAM de GPU).',
           'Vincula Ollama a tu red local: `OLLAMA_HOST=0.0.0.0:11434 ollama serve`. Anota la IP local del ordenador de casa (por ejemplo, 192.168.1.20).',
@@ -3109,7 +3109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hybrid-setup',
         title: '하이브리드 설정: 전화기 STT + 원격 Ollama',
         content:
-          '**하이브리드 스택은 기기에서 STT와 TTS를 유지하면서 LLM 호출만 집의 컴퓨터로 이동합니다.** 이를 통해 오디오 개인 정보 보호를 유지하면서(전화기를 떠나지 않음 — 텍스트 전사만 홈 Wi-Fi를 통해 전송) 70B급 모델(Llama 3.3 70B, Qwen3-Coder 32B)에 접근할 수 있습니다.',
+          '**하이브리드 스택은 기기에서 STT와 TTS를 유지하면서 LLM 호출만 집의 컴퓨터로 이동합니다.** 이를 통해 오디오 개인 정보 보호를 유지하면서(전화기를 떠나지 않음 — 텍스트 전사만 홈 Wi-Fi를 통해 전송) 70B급 모델(Llama 3.3 70B, Qwen2.5-Coder 32B)에 접근할 수 있습니다.',
         numberedItems: [
           '집의 컴퓨터(Mac, PC 또는 NAS)에 Ollama를 설치하십시오. 70B 모델 다운로드: `ollama pull llama3.3:70b`(~40GB 여유 디스크 공간 + ~48GB RAM 또는 24GB GPU VRAM 필요).',
           'Ollama를 로컬 네트워크에 바인딩: `OLLAMA_HOST=0.0.0.0:11434 ollama serve`. 집 컴퓨터의 로컬 IP를 메모하십시오(예: 192.168.1.20).',
@@ -3592,7 +3592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hybrid-setup',
         title: 'Configuração híbrida: STT no telefone + Ollama remoto',
         content:
-          '**O stack híbrido move apenas a chamada ao LLM para um computador em casa, mantendo o STT e o TTS no dispositivo.** Isso dá acesso a modelos de classe 70B (Llama 3.3 70B, Qwen3-Coder 32B) enquanto preserva a privacidade do áudio (que nunca sai do telefone — apenas a transcrição de texto é enviada pelo seu Wi-Fi doméstico).',
+          '**O stack híbrido move apenas a chamada ao LLM para um computador em casa, mantendo o STT e o TTS no dispositivo.** Isso dá acesso a modelos de classe 70B (Llama 3.3 70B, Qwen2.5-Coder 32B) enquanto preserva a privacidade do áudio (que nunca sai do telefone — apenas a transcrição de texto é enviada pelo seu Wi-Fi doméstico).',
         numberedItems: [
           'No computador de casa (Mac, PC ou NAS): instale o Ollama. Baixe um modelo 70B: `ollama pull llama3.3:70b` (requer ~40 GB de espaço livre em disco + ~48 GB de RAM ou 24 GB de VRAM de GPU).',
           'Vincule o Ollama à sua rede local: `OLLAMA_HOST=0.0.0.0:11434 ollama serve`. Anote o IP local do computador de casa (por exemplo, 192.168.1.20).',
@@ -4076,7 +4076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'hybrid-setup',
         title: 'الإعداد الهجين: STT على الهاتف + Ollama عن بُعد',
         content:
-          '**الحزمة الهجينة تنقل فقط مكالمة LLM إلى جهاز كمبيوتر في المنزل، مبقيةً STT وTTS على الجهاز.** هذا يتيح الوصول إلى نماذج 70B ‏(Llama 3.3 70B، Qwen3-Coder 32B)‏ مع الحفاظ على خصوصية الصوت ‏(لا يغادر الهاتف أبدًا — فقط النسخة النصية تُرسَل عبر Wi-Fi المنزلي)‏.',
+          '**الحزمة الهجينة تنقل فقط مكالمة LLM إلى جهاز كمبيوتر في المنزل، مبقيةً STT وTTS على الجهاز.** هذا يتيح الوصول إلى نماذج 70B ‏(Llama 3.3 70B، Qwen2.5-Coder 32B)‏ مع الحفاظ على خصوصية الصوت ‏(لا يغادر الهاتف أبدًا — فقط النسخة النصية تُرسَل عبر Wi-Fi المنزلي)‏.',
         numberedItems: [
           'على جهاز الكمبيوتر المنزلي ‏(Mac أو PC أو NAS)‏: ثبّت Ollama. نزّل نموذج 70B: `ollama pull llama3.3:70b` ‏(يتطلب ~40 جيجابايت مساحة + ~48 جيجابايت RAM أو 24 جيجابايت VRAM للـ GPU)‏.',
           'ربط Ollama بشبكتك المحلية: `OLLAMA_HOST=0.0.0.0:11434 ollama serve`. سجّل IP الجهاز المنزلي ‏(مثلًا 192.168.1.20)‏.',
