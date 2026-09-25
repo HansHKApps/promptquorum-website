@@ -14,8 +14,8 @@
   <text x="48" y="200" font-size="12" fill="#1C1B1F">✓ MLX, Metal, Core ML 통합</text>
   <text x="48" y="224" font-size="12" fill="#1C1B1F">✓ 3년 전기 비용 더 낮음</text>
   <line x1="48" y1="240" x2="348" y2="240" stroke="#F7F2FA" stroke-width="1"/>
-  <text x="48" y="264" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#6750A4">$3,499</text>
-  <text x="48" y="284" font-size="11" fill="#49454F">70B Q4/Q5 — $4,500 이상의 PC 사양과 경쟁</text>
+  <text x="48" y="264" font-family="'SF Mono', Monaco, monospace" font-size="13" font-weight="700" fill="#6750A4">$4,499</text>
+  <text x="48" y="284" font-size="11" fill="#49454F">70B Q4/Q5 — $6,000 이상의 PC 사양과 경쟁</text>
 
   <!-- Right: PC Workstation RTX 5090 -->
   <rect x="432" y="52" width="340" height="270" rx="6" fill="#FFFFFF" stroke="#7D5260" stroke-width="2"/>
