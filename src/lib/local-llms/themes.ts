@@ -128,6 +128,8 @@ export const llmThemes: LLMTheme[] = [
       'create-custom-local-models',
       'future-of-local-llms',
       'run-qwen-vl-locally-2026',
+      'open-weight-vs-open-source-ai-models',
+      'mcp-vs-api-explained',
     ],
   },
   {

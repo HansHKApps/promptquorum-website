@@ -86,6 +86,7 @@ export const themes: PETheme[] = [
           'extract-and-summarise',
           'ai-code-review',
           'prompting-across-languages',
+          'knowledge-cutoffs-and-geo',
         ],
       },
       {
@@ -119,6 +120,7 @@ export const themes: PETheme[] = [
       'best-prompt-engineering-ides',
       'braintrust-vs-prompthub-vs-vellum-vs-promptfoo',
       'promptlayer-vs-mirascope-vs-promptperfect',
+      'langsmith-vs-helicone-vs-langfuse',
       'prompt-engineering-vs-fine-tuning',
       'prompt-engineering-vs-rag-decision',
       'manual-vs-automated-prompt-optimization',
