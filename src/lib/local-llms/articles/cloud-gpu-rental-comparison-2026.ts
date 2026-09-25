@@ -314,6 +314,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'DPA': '✓ Available',
             'Note': 'US company, but EU data centers available',
           },
+          {
+            'Provider': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
+            'Location': 'Spain, Norway',
+            'DPA': '✓ Available',
+            'Note': 'UK company, but EU data centers available',
+          },
         ],
       },
       gdprNonCompliant: {
@@ -1071,6 +1077,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Ubicación': 'Países Bajos, Rumanía',
             'DPA': '✓ Disponible',
             'Nota': 'Empresa estadounidense, pero con centros de datos EU disponibles',
+          },
+          {
+            'Proveedor': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
+            'Ubicación': 'España, Noruega',
+            'DPA': '✓ Disponible',
+            'Nota': 'Empresa británica, pero con centros de datos EU disponibles',
           },
         ],
       },
@@ -1849,6 +1861,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الموقع': 'هولندا، رومانيا',
             'DPA': '✓ متاح',
             'ملاحظة': 'شركة أمريكية، لكن مع مراكز بيانات EU متاحة',
+          },
+          {
+            'المزود': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
+            'الموقع': 'إسبانيا، النرويج',
+            'DPA': '✓ متاح',
+            'ملاحظة': 'شركة بريطانية، لكن مع مراكز بيانات EU متاحة',
           },
         ],
       },
@@ -2757,6 +2775,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'AVV': '✓ Verfügbar',
             'Anmerkung': 'US-Unternehmen, aber EU-Rechenzentren verfügbar',
           },
+          {
+            'Anbieter': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
+            'Standort': 'Spanien, Norwegen',
+            'AVV': '✓ Verfügbar',
+            'Anmerkung': 'Britisches Unternehmen, aber EU-Rechenzentren verfügbar',
+          },
         ],
       },
       gdprNonCompliant: {
@@ -3237,6 +3261,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'DPA': '✓ Disponible',
             'Note': 'Entreprise américaine, mais centres de données UE disponibles',
           },
+          {
+            'Fournisseur': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
+            'Localisation': 'Espagne, Norvège',
+            'DPA': '✓ Disponible',
+            'Note': 'Entreprise britannique, mais centres de données UE disponibles',
+          },
         ],
       },
       gdprNonCompliant: {
@@ -3629,6 +3659,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'DPA': '✓ 利用可能',
             '注記': '米国企業だが、EUデータセンター利用可',
           },
+          {
+            'プロバイダー': '[Hyperstack](https://www.hyperstack.cloud)(NexGen Cloud)',
+            '場所': 'スペイン、ノルウェー',
+            'DPA': '✓ 利用可能',
+            '注記': '英国企業だが、EUデータセンター利用可',
+          },
         ],
       },
       gdprNonCompliant: {
@@ -4020,6 +4056,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '位置': '荷兰、罗马尼亚',
             'DPA': '✓ 可用',
             '注释': '美国公司,但EU数据中心可用',
+          },
+          {
+            '提供商': '[Hyperstack](https://www.hyperstack.cloud)(NexGen Cloud)',
+            '位置': '西班牙、挪威',
+            'DPA': '✓ 可用',
+            '注释': '英国公司,但EU数据中心可用',
           },
         ],
       },
@@ -4482,6 +4524,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '위치': '네덜란드, 루마니아',
           'DPA': '✓ 제공 가능',
           '비고': '미국 회사이지만 EU 데이터센터 이용 가능',
+        },
+        {
+          '공급업체': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
+          '위치': '스페인, 노르웨이',
+          'DPA': '✓ 제공 가능',
+          '비고': '영국 회사이지만 EU 데이터센터 이용 가능',
         },
       ],
     },
