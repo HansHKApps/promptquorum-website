@@ -236,6 +236,7 @@ import { app as app_vllm_mlx } from './apps/vllm-mlx'
 import { app as app_weaviate } from './apps/weaviate'
 import { app as app_web_search_mcp } from './apps/web-search-mcp'
 import { app as app_willow_inference_server } from './apps/willow-inference-server'
+import { app as app_radiant_canvas } from './apps/radiant-canvas'
 
 export const localAiApps: ToolRecord[] = [
   app_ollama,
@@ -462,6 +463,7 @@ export const localAiApps: ToolRecord[] = [
   app_weaviate,
   app_web_search_mcp,
   app_willow_inference_server,
+  app_radiant_canvas,
 ]
 
 export const TOTAL_TOOL_COUNT = localAiApps.length
