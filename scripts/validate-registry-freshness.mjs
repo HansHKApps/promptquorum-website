@@ -18,7 +18,7 @@ import { loadRegistry } from './lib/registry.mjs'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const MAX_REGISTRY_AGE_DAYS = 45 // matches the monthly refresh cadence in MODEL_REGISTRY_REFRESH.md
+const MAX_REGISTRY_AGE_DAYS = 14 // matches the weekly refresh cadence in skills/model-registry-refresh/SKILL.md
 const MAX_ENTRY_AGE_DAYS = 90
 
 function daysSince(dateStr) {

@@ -1,4 +1,4 @@
-name: Model Name Validation (nightly)
+name: Model Name Validation (weekly)
 
 # Runs the strict model-name check (unknown/stale model mentions) on a
 # schedule, separate from the Vercel deploy path. prebuild runs this same
@@ -8,7 +8,7 @@ name: Model Name Validation (nightly)
 
 on:
   schedule:
-    - cron: '0 6 * * *'
+    - cron: '0 6 * * 1'
   workflow_dispatch: {}
 
 jobs:

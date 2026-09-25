@@ -1,11 +1,11 @@
 ---
 name: model-registry-refresh
-description: Monthly refresh of data/model-registry.json against official lab sources, diffed against site content, with a build-gated validator closing the loop. Use when asked to run a model-registry refresh cycle, close LINEAGE_DANGLING errors, resolve a NEEDS_RETRIEVAL/CONTESTED registry entry, or investigate why the model-name validator is failing.
+description: Weekly refresh of data/model-registry.json against official lab sources, diffed against site content, with a build-gated validator closing the loop. Use when asked to run a model-registry refresh cycle, close LINEAGE_DANGLING errors, resolve a NEEDS_RETRIEVAL/CONTESTED registry entry, or investigate why the model-name validator is failing.
 ---
 
 **Recommended model to run this skill: Claude Sonnet 5 (`claude-sonnet-5`).**
 Escalate a specific cycle to Opus 4.8 only if a review catches factual errors in
-the registry — do not switch by default; this runs monthly and cost compounds.
+the registry — do not switch by default; this runs weekly and cost compounds.
 
 ## Purpose
 
@@ -13,7 +13,7 @@ Keep `data/model-registry.json` (source of truth for every LLM model referenced
 anywhere on promptquorum.com) current against official lab sources, and keep
 site content from silently drifting away from it. Two halves:
 
-1. **Retrieval** (this doc, human-triggered, monthly) — update the registry
+1. **Retrieval** (this doc, human-triggered, weekly) — update the registry
    from primary sources.
 2. **Enforcement** (`scripts/validate-model-names.mjs`, build-gated) — fails
    the build if site content names a model the registry doesn't recognize, or
@@ -32,7 +32,7 @@ official source dated the day it was checked.
 
 ## When to run
 
-Manually triggered, monthly (target: first week of each month). Not
+Manually triggered, weekly (target: same weekday each week). Not
 automated/cron — a human reviews the diff report before any page edits ship.
 Also run ad hoc when `scripts/validate-registry-freshness.mjs` fails, or when
 `validate-model-names.mjs` flags a genuinely new model with no registry entry.
@@ -232,11 +232,11 @@ you didn't do defeats the purpose of the ledger.
 
 ### Step 9 — Branching
 
-One branch for the whole monthly cycle: `fix/model-refresh-YYYY-MM`. Land it
-before starting the next cycle — do not let it sit alongside other open
-feature branches. Before any history operation, check for other sessions'
-in-flight work (concurrent Claude Code sessions run in this repo); never
-`git reset` or rebase on local `main`.
+One branch for the whole weekly cycle: `fix/model-refresh-YYYY-MM-DD` (the
+Monday the cycle started). Land it before starting the next cycle — do not
+let it sit alongside other open feature branches. Before any history
+operation, check for other sessions' in-flight work (concurrent Claude Code
+sessions run in this repo); never `git reset` or rebase on local `main`.
 
 ## Verification checklist
 
