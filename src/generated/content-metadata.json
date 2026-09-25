@@ -5913,7 +5913,7 @@
       "images": []
     },
     "local-llm-electricity-cost-balcony-solar-2026": {
-      "dateModified": "2026-09-01",
+      "dateModified": "2026-09-25",
       "lastFactChecked": null,
       "publishDate": "2026-09-01",
       "hasSections": true,
@@ -7463,7 +7463,7 @@
       ]
     },
     "apple-mlx-vs-nvidia-cuda-local-llm-2026": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-09-25",
       "lastFactChecked": null,
       "publishDate": "2026-05-24",
       "hasSections": true,
@@ -7489,7 +7489,7 @@
         },
         {
           "url": "/images/apple-mlx-vs-nvidia-cuda-cost-hero-en.webp",
-          "title": "Total system cost to run 7B to 96B models locally: NVIDIA wins under $1,500; Apple wins at the 70B tier (Mac Studio M4 Max 64GB ~$3,199 vs $7,000+ multi-GPU system)."
+          "title": "Total system cost to run 7B to 96B models locally: NVIDIA wins under $1,500; Apple wins at the 70B tier (Mac Studio M5 Max 36GB ~$2,499 vs $7,000+ multi-GPU system)."
         }
       ]
     },
@@ -9506,7 +9506,7 @@
       "images": []
     },
     "exo-review": {
-      "dateModified": "2026-09-12",
+      "dateModified": "2026-09-25",
       "lastFactChecked": null,
       "publishDate": "2026-09-12",
       "hasSections": true,
@@ -13720,7 +13720,7 @@
       "images": []
     },
     "m4MaxVsM4ProLocalLlm": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-09-25",
       "lastFactChecked": null,
       "publishDate": "2026-07-14",
       "hasSections": true,
@@ -17438,7 +17438,7 @@
       ]
     },
     "euCompaniesLocalQwenGdpr": {
-      "lastmod": "2026-05-16",
+      "lastmod": "2026-09-25",
       "langs": [
         "en",
         "de",
