@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Qwen Models',
     title: 'Qwen Local Deployment Guide 2026: Qwen 3.6 27B, Coder & VL Hardware Tiers',
     seoTitle: 'Qwen 3.6 27B Local Setup Guide 2026: Coder, VL & Hardware Tiers',
-    intro: 'Qwen 3.6 27B is the new flagship pick for local deployment — a dense, Apache 2.0 model with a 256K context window that runs in ~17 GB of VRAM at Q4_K_M via `ollama run qwen3.6:27b`. Qwen3 8B runs in 5.5 GB of VRAM via Ollama — one command, no configuration — while Qwen3-Coder 32B reaches 92.7% on HumanEval and Qwen2-VL 7B leads local vision models for Chinese and Japanese document OCR. This guide covers which Qwen sub-family to run at each hardware tier, with Ollama and LM Studio setup, Q4_K_M quantization picks, and benchmark data from 7B through 72B. Hardware tiers range from an RTX 3060 at 5.5 GB VRAM for Qwen3 8B to dual RTX 3090s or Apple M2 Ultra for Qwen2.5-72B.',
+    intro: 'Qwen 3.6 27B is the new flagship pick for local deployment — a dense, Apache 2.0 model with a 256K context window that runs in ~17 GB of VRAM at Q4_K_M via `ollama run qwen3.6:27b`. Qwen3 8B runs in 5.5 GB of VRAM via Ollama — one command, no configuration — while Qwen2.5-Coder 32B reaches 92.7% on HumanEval and Qwen2-VL 7B leads local vision models for Chinese and Japanese document OCR. This guide covers which Qwen sub-family to run at each hardware tier, with Ollama and LM Studio setup, Q4_K_M quantization picks, and benchmark data from 7B through 72B. Hardware tiers range from an RTX 3060 at 5.5 GB VRAM for Qwen3 8B to dual RTX 3090s or Apple M2 Ultra for Qwen2.5-72B.',
     metaDescription: 'Run Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder and Qwen2-VL locally in 2026. VRAM requirements, Ollama + LM Studio setup, Q4_K_M benchmarks, and hardware tier guide.',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-en.webp',
     publishDate: '2026-05-26',
@@ -38,9 +38,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Qwen3 14B',
       'Qwen3 32B',
       'Qwen2.5-72B',
-      'Qwen3-Coder 7B',
-      'Qwen3-Coder 14B',
-      'Qwen3-Coder 32B',
+      'Qwen2.5-Coder 7B',
+      'Qwen2.5-Coder 14B',
+      'Qwen2.5-Coder 32B',
       'Qwen2-VL 7B',
       'Qwen2-VL 72B',
       'DeepSeek-V2.5',
@@ -77,7 +77,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'FAQ', anchor: '#faq' },
     ],
     gammaEmbedUrl: '/presentations/qwen-local-deployment-guide-2026-static.html',
-    gammaDescription: 'The slide deck below covers: the new Qwen 3.6 27B flagship (256K context, ~17 GB at Q4_K_M), the complete Qwen model family at a glance (Qwen3 0.6B–32B, Qwen2.5 7B–72B), VRAM requirements per hardware tier, benchmark data for Qwen3-Coder 32B, and a Qwen vs DeepSeek vs Llama decision chart. Download as a Qwen deployment reference card.',
+    gammaDescription: 'The slide deck below covers: the new Qwen 3.6 27B flagship (256K context, ~17 GB at Q4_K_M), the complete Qwen model family at a glance (Qwen3 0.6B–32B, Qwen2.5 7B–72B), VRAM requirements per hardware tier, benchmark data for Qwen2.5-Coder 32B, and a Qwen vs DeepSeek vs Llama decision chart. Download as a Qwen deployment reference card.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -106,7 +106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '@type': 'Question',
           name: 'What is the best Qwen model for coding locally?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 32B is the best locally runnable coding model — it scores 92.7% on HumanEval and needs a 24 GB GPU (RTX 3090 or RTX 4090). If your VRAM is 12 GB or less, use Qwen3-Coder 14B (HumanEval 85.2%, 9.5 GB VRAM).' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5-Coder 32B is the best locally runnable coding model — it scores 92.7% on HumanEval and needs a 24 GB GPU (RTX 3090 or RTX 4090). If your VRAM is 12 GB or less, use Qwen2.5-Coder 14B (HumanEval 85.2%, 9.5 GB VRAM).' },
         },
         {
           '@type': 'Question',
@@ -154,7 +154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hardware decision**: 12 GB VRAM → 14B model; 24 GB VRAM → 32B; 48 GB+ (two GPUs or Apple Silicon 64 GB) → 72B.',
         ],
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Qwen3 8B runs in 5.5 GB VRAM via Ollama; Qwen3-Coder 32B needs 24 GB and scores 92.7% on HumanEval.' },
+          { type: 'one-sentence', text: 'Qwen3 8B runs in 5.5 GB VRAM via Ollama; Qwen2.5-Coder 32B needs 24 GB and scores 92.7% on HumanEval.' },
           { type: 'plain-terms', text: 'Qwen3 is a family of open-weight AI models from Alibaba that run on consumer GPUs — from a laptop GPU to a desktop RTX 4090 — without sending data to any cloud.' },
         ],
       },
@@ -183,12 +183,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         rows: [
           { 'Model': 'Qwen3 8B Q4_K_M', 'VRAM': '5.5 GB', 'Minimum GPU': 'RTX 3060 6 GB, RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', 'Speed (RTX 3060)': '~57 tok/s' },
-          { 'Model': 'Qwen3-Coder 7B Q4_K_M', 'VRAM': '5.5 GB', 'Minimum GPU': 'RTX 3060 6 GB, RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', 'Speed (RTX 3060)': '~55 tok/s' },
+          { 'Model': 'Qwen2.5-Coder 7B Q4_K_M', 'VRAM': '5.5 GB', 'Minimum GPU': 'RTX 3060 6 GB, RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', 'Speed (RTX 3060)': '~55 tok/s' },
           { 'Model': 'Qwen2-VL 7B Q4_K_M', 'VRAM': '6.2 GB', 'Minimum GPU': 'RTX 3060 8 GB, RTX 4060', 'Apple Silicon': 'M1/M2 16 GB', 'Speed (RTX 4060)': '~38 tok/s' },
           { 'Model': 'Qwen3 14B Q4_K_M', 'VRAM': '9.5 GB', 'Minimum GPU': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', 'Speed (RTX 4070)': '~38 tok/s' },
-          { 'Model': 'Qwen3-Coder 14B Q4_K_M', 'VRAM': '9.5 GB', 'Minimum GPU': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', 'Speed (RTX 4070)': '~36 tok/s' },
+          { 'Model': 'Qwen2.5-Coder 14B Q4_K_M', 'VRAM': '9.5 GB', 'Minimum GPU': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', 'Speed (RTX 4070)': '~36 tok/s' },
           { 'Model': 'Qwen3 32B Q4_K_M', 'VRAM': '20.5 GB', 'Minimum GPU': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', 'Speed (RTX 4090)': '~28 tok/s' },
-          { 'Model': 'Qwen3-Coder 32B Q4_K_M', 'VRAM': '20.5 GB', 'Minimum GPU': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', 'Speed (RTX 4090)': '~27 tok/s' },
+          { 'Model': 'Qwen2.5-Coder 32B Q4_K_M', 'VRAM': '20.5 GB', 'Minimum GPU': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', 'Speed (RTX 4090)': '~27 tok/s' },
           { 'Model': 'Qwen 3.6 27B Q4_K_M', 'VRAM': '~17 GB', 'Minimum GPU': 'RTX 4090 24 GB', 'Apple Silicon': 'M3 Max 36 GB', 'Speed (RTX 4090)': '~24 tok/s' },
           { 'Model': 'Qwen2.5-72B Q4_K_M', 'VRAM': '46 GB', 'Minimum GPU': '2× RTX 3090 (48 GB)', 'Apple Silicon': 'M2 Ultra 64 GB', 'Speed (2×RTX 4090)': '~12 tok/s' },
         ],
@@ -281,14 +281,14 @@ curl http://localhost:11434/v1/chat/completions \\
           { 'Model (Q4_K_M)': 'Qwen3 14B', 'MMLU': '79.9%', 'Math': '69.8%', 'HumanEval': '64.6%', 'Speed (RTX 4070 12 GB)': '38 tok/s' },
           { 'Model (Q4_K_M)': 'Qwen3 32B', 'MMLU': '83.3%', 'Math': '79.5%', 'HumanEval': '71.3%', 'Speed (RTX 4090 24 GB)': '28 tok/s' },
           { 'Model (Q4_K_M)': 'Qwen2.5-72B', 'MMLU': '86.1%', 'Math': '83.1%', 'HumanEval': '73.2%', 'Speed (2×RTX 3090)': '12 tok/s' },
-          { 'Model (Q4_K_M)': 'Qwen3-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75.6%', 'Speed (RTX 3060 12 GB)': '55 tok/s' },
-          { 'Model (Q4_K_M)': 'Qwen3-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85.2%', 'Speed (RTX 4070 12 GB)': '36 tok/s' },
-          { 'Model (Q4_K_M)': 'Qwen3-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92.7%', 'Speed (RTX 4090 24 GB)': '27 tok/s' },
+          { 'Model (Q4_K_M)': 'Qwen2.5-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75.6%', 'Speed (RTX 3060 12 GB)': '55 tok/s' },
+          { 'Model (Q4_K_M)': 'Qwen2.5-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85.2%', 'Speed (RTX 4070 12 GB)': '36 tok/s' },
+          { 'Model (Q4_K_M)': 'Qwen2.5-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92.7%', 'Speed (RTX 4090 24 GB)': '27 tok/s' },
         ],
         columns: ['Model (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', 'Speed (RTX 3060 12 GB)'],
         tableFormat: true,
         callouts: [
-          { type: 'tip', text: 'Want that 92.7% HumanEval score at 27 tok/s? See the [24 GB GPU that runs Qwen3-Coder 32B](#affiliate-picks).' },
+          { type: 'tip', text: 'Want that 92.7% HumanEval score at 27 tok/s? See the [24 GB GPU that runs Qwen2.5-Coder 32B](#affiliate-picks).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-en.webp',
         imageCaption: 'Qwen3 benchmark scores (Q4_K_M) — PromptQuorum 2026',
@@ -301,8 +301,8 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'VRAM Tier': '6 GB', 'Best Qwen': 'Qwen3 8B', 'Best Competitor': 'Llama 3.2 3B (fits, but 3B)', 'Verdict': 'Qwen3 8B wins — same VRAM, much larger model' },
-          { 'VRAM Tier': '12 GB', 'Best Qwen': 'Qwen3-Coder 14B', 'Best Competitor': 'Llama 3.1 8B Instruct', 'Verdict': 'Qwen3-Coder 14B for coding; Llama 3.1 8B for general chat' },
-          { 'VRAM Tier': '24 GB', 'Best Qwen': 'Qwen3-Coder 32B', 'Best Competitor': 'Llama 3.3 70B (offloaded)', 'Verdict': 'Qwen3-Coder 32B for code; Llama 3.3 70B if quality > speed' },
+          { 'VRAM Tier': '12 GB', 'Best Qwen': 'Qwen2.5-Coder 14B', 'Best Competitor': 'Llama 3.1 8B Instruct', 'Verdict': 'Qwen2.5-Coder 14B for coding; Llama 3.1 8B for general chat' },
+          { 'VRAM Tier': '24 GB', 'Best Qwen': 'Qwen2.5-Coder 32B', 'Best Competitor': 'Llama 3.3 70B (offloaded)', 'Verdict': 'Qwen2.5-Coder 32B for code; Llama 3.3 70B if quality > speed' },
           { 'VRAM Tier': '48 GB+', 'Best Qwen': 'Qwen2.5-72B', 'Best Competitor': 'DeepSeek-V2.5 236B MoE', 'Verdict': 'DeepSeek needs ~130 GB RAM; Qwen2.5-72B is the practical 48 GB choice' },
         ],
         columns: ['VRAM Tier', 'Best Qwen', 'Best Competitor', 'Verdict'],
@@ -335,15 +335,15 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 1,
             name: 'NVIDIA RTX 4060 8 GB',
-            tagline: 'Budget pick — Qwen3 8B, Qwen3-Coder 7B (5.5 GB VRAM)',
-            verdict: 'The cheapest card on this list that clears the 5.5 GB Qwen3 8B requirement with headroom for context. Runs Qwen3-Coder 7B at ~55 tok/s — fast enough for interactive coding assist.',
+            tagline: 'Budget pick — Qwen3 8B, Qwen2.5-Coder 7B (5.5 GB VRAM)',
+            verdict: 'The cheapest card on this list that clears the 5.5 GB Qwen3 8B requirement with headroom for context. Runs Qwen2.5-Coder 7B at ~55 tok/s — fast enough for interactive coding assist.',
             pros: [
               '5.5 GB VRAM requirement fits with room to spare for long-context KV cache',
               'Lowest price on this list — the right first GPU if you have never run a local LLM',
               '50–57 tok/s on 7B/8B models, on par with the pricier cards at this model size',
             ],
             cons: [
-              'Caps out at Qwen3 8B / Qwen3-Coder 7B — no headroom to grow into 14B without a KV-cache squeeze',
+              'Caps out at Qwen3 8B / Qwen2.5-Coder 7B — no headroom to grow into 14B without a KV-cache squeeze',
             ],
             affiliateLinks: [
               { url: 'https://www.amazon.com/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: '$340–430', label: 'Check current price →' },
@@ -352,8 +352,8 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 2,
             name: 'NVIDIA RTX 4070 Super 12 GB',
-            tagline: 'Mid-range pick — Qwen3 14B, Qwen3-Coder 14B (9.5 GB VRAM)',
-            verdict: 'Runs Qwen3-Coder 14B (85.2% HumanEval) at 36–38 tok/s with 2–3 GB of VRAM left over for context — the tier where coding quality jumps noticeably over the 7B/8B models.',
+            tagline: 'Mid-range pick — Qwen3 14B, Qwen2.5-Coder 14B (9.5 GB VRAM)',
+            verdict: 'Runs Qwen2.5-Coder 14B (85.2% HumanEval) at 36–38 tok/s with 2–3 GB of VRAM left over for context — the tier where coding quality jumps noticeably over the 7B/8B models.',
             pros: [
               '9.5 GB model fits with 2–3 GB VRAM to spare — room for longer context windows',
               'HumanEval jumps from 75.6% (7B) to 85.2% (14B) — the clearest quality-per-dollar step up in the lineup',
@@ -369,11 +369,11 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 3,
             name: 'NVIDIA RTX 4090 24 GB (or used RTX 3090 24 GB)',
-            tagline: 'High-end pick — Qwen3-Coder 32B, Qwen 3.6 27B (~17–20.5 GB VRAM)',
-            verdict: 'The 4090 delivers 27–28 tok/s on Qwen3-Coder 32B — real-time coding speed at 92.7% HumanEval. A used RTX 3090 has the same 24 GB VRAM and lands within ~15% of the 4090\'s inference speed for meaningfully less money if you can find a trusted used listing.',
+            tagline: 'High-end pick — Qwen2.5-Coder 32B, Qwen 3.6 27B (~17–20.5 GB VRAM)',
+            verdict: 'The 4090 delivers 27–28 tok/s on Qwen2.5-Coder 32B — real-time coding speed at 92.7% HumanEval. A used RTX 3090 has the same 24 GB VRAM and lands within ~15% of the 4090\'s inference speed for meaningfully less money if you can find a trusted used listing.',
             pros: [
               '24 GB VRAM covers every Qwen3 32B variant and Qwen 3.6 27B with room to spare',
-              '27–28 tok/s on Qwen3-Coder 32B (92.7% HumanEval) — fast enough for real-time pair programming',
+              '27–28 tok/s on Qwen2.5-Coder 32B (92.7% HumanEval) — fast enough for real-time pair programming',
               'Used RTX 3090 is the value alternative: same VRAM ceiling, ~15% slower, meaningfully cheaper second-hand',
             ],
             cons: [
@@ -428,7 +428,7 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Ignoring the context window size.** Qwen3 supports 128K context. Ollama\'s Modelfile spec defaults `num_ctx` to 2048, but the runtime actually picks a VRAM-tiered default instead — 4K under 24 GiB, 32K from 24–48 GiB, 256K above 48 GiB. Don\'t rely on either default: set `num_ctx` explicitly, e.g. add `--num-ctx 8192` (or higher) to the run command — otherwise the model silently truncates input.',
           '**Choosing Q2_K quantization for Chinese-language use.** At 2-bit precision, Qwen3\'s Chinese output becomes noticeably degraded — character substitutions increase. Use Q4_K_M as the minimum for any Chinese-language work.',
           '**Running the 32B model with too little VRAM.** If your GPU has 16 GB and the model needs 20.5 GB, Ollama offloads layers to system RAM. The model runs but at 3–5 tok/s — unusable for interactive use. Check the hardware table above and pick a model that fits your VRAM.',
-          '**Using the wrong sub-family for coding.** Qwen3 8B (general) scores 57.3% on HumanEval. Qwen3-Coder 7B scores 75.6% on the same benchmark — a 32% relative improvement. If your use case is code, always use the Coder variant of the same size.',
+          '**Using the wrong sub-family for coding.** Qwen3 8B (general) scores 57.3% on HumanEval. Qwen2.5-Coder 7B scores 75.6% on the same benchmark — a 32% relative improvement. If your use case is code, always use the Coder variant of the same size.',
         ],
       },
       nextSteps: {
@@ -444,7 +444,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Frequently Asked Questions',
         faqs: [
           { q: 'How much VRAM do I need to run Qwen3 8B locally?', a: 'Qwen3 8B Q4_K_M requires 5.5 GB of VRAM. An RTX 3060 6 GB, RTX 4060, or Apple M-series chip with 8 GB of unified memory all run it. At 8 GB VRAM you have headroom for context and system RAM.' },
-          { q: 'What is the best Qwen model for coding locally?', a: 'Qwen3-Coder 32B is the best locally runnable coding model — it scores 92.7% on HumanEval and needs a 24 GB GPU (RTX 3090 or RTX 4090). If your VRAM is 12 GB or less, use Qwen3-Coder 14B (HumanEval 85.2%, 9.5 GB VRAM).' },
+          { q: 'What is the best Qwen model for coding locally?', a: 'Qwen2.5-Coder 32B is the best locally runnable coding model — it scores 92.7% on HumanEval and needs a 24 GB GPU (RTX 3090 or RTX 4090). If your VRAM is 12 GB or less, use Qwen2.5-Coder 14B (HumanEval 85.2%, 9.5 GB VRAM).' },
           { q: 'How does Qwen compare to DeepSeek for local deployment?', a: 'Qwen2.5-72B and DeepSeek-V2.5 are competitive on general tasks, but Qwen uses a dense architecture that fits on consumer hardware. DeepSeek-V2.5 is a 236B MoE model — it requires ~130 GB RAM at Q4, unreachable without server-grade hardware. For VRAM under 48 GB, Qwen3 is the practical choice.' },
           { q: 'Can I run Qwen on a Mac?', a: 'Yes. Apple Silicon uses unified memory — an M2 Pro 32 GB runs Qwen3 14B at ~32 tok/s. An M3 Max 64 GB handles Qwen3 32B at ~22 tok/s. Use the Ollama macOS app or LM Studio for the simplest setup.' },
           { q: 'What Ollama command do I use for Qwen?', a: 'For the flagship, run `ollama run qwen3.6:27b` (~17 GB VRAM). For Qwen3, use `ollama pull qwen3:8b`. For Qwen2.5, use `ollama pull qwen2.5:7b` for 7B, `ollama pull qwen2.5:14b` for 14B, `ollama pull qwen2.5:32b` for 32B, or `ollama pull qwen2.5-coder:32b` for the coding variant. Always use explicit size tags.' },
@@ -472,7 +472,7 @@ curl http://localhost:11434/v1/chat/completions \\
     theme: 'Qwen Models',
     title: 'Guía de despliegue local de Qwen 2026: Qwen 3.6 27B, Coder y VL en cada nivel de hardware',
     seoTitle: 'Qwen 3.6 27B en local 2026: Coder, VL y niveles de hardware',
-    intro: 'Qwen 3.6 27B es la nueva recomendación insignia para despliegue local — un modelo denso con licencia Apache 2.0 y ventana de contexto de 256K que funciona con ~17 GB de VRAM en Q4_K_M mediante `ollama run qwen3.6:27b`. Qwen3 8B funciona con solo 5,5 GB de VRAM mediante Ollama — un único comando, sin configuración. Qwen3-Coder 32B alcanza el 92,7 % en HumanEval. Qwen2-VL 7B es el modelo de visión local líder para OCR de documentos en chino y japonés. Esta guía cubre la familia completa de modelos Qwen: qué modelo ejecutar en cada nivel de hardware, configuración con Ollama y LM Studio, recomendaciones de cuantización, datos de benchmarks y cómo se compara Qwen con DeepSeek y Llama en hardware de consumo en 2026.',
+    intro: 'Qwen 3.6 27B es la nueva recomendación insignia para despliegue local — un modelo denso con licencia Apache 2.0 y ventana de contexto de 256K que funciona con ~17 GB de VRAM en Q4_K_M mediante `ollama run qwen3.6:27b`. Qwen3 8B funciona con solo 5,5 GB de VRAM mediante Ollama — un único comando, sin configuración. Qwen2.5-Coder 32B alcanza el 92,7 % en HumanEval. Qwen2-VL 7B es el modelo de visión local líder para OCR de documentos en chino y japonés. Esta guía cubre la familia completa de modelos Qwen: qué modelo ejecutar en cada nivel de hardware, configuración con Ollama y LM Studio, recomendaciones de cuantización, datos de benchmarks y cómo se compara Qwen con DeepSeek y Llama en hardware de consumo en 2026.',
     metaDescription: 'Ejecuta Qwen 3.6 27B, Qwen3, Qwen2.5 (7B–72B), Qwen3-Coder y Qwen2-VL en local en 2026. Requisitos de VRAM, configuración Ollama y LM Studio y guía por nivel de hardware.',
     heroImage: '/images/qwen-local-deployment-guide-2026-hardware-hero-es.webp',
     publishDate: '2026-05-26',
@@ -501,7 +501,7 @@ curl http://localhost:11434/v1/chat/completions \\
       { label: 'Preguntas frecuentes', anchor: '#faq' },
     ],
     gammaEmbedUrl: '/presentations/qwen-local-deployment-guide-2026-static.html',
-    gammaDescription: 'La presentación a continuación cubre: la nueva recomendación insignia Qwen 3.6 27B (contexto 256K, ~17 GB en Q4_K_M), la familia completa de modelos Qwen (Qwen3 0.6B–32B, Qwen2.5 7B–72B), los requisitos de VRAM por nivel de hardware, los datos de benchmark de Qwen3-Coder 32B y un cuadro de decisión Qwen vs DeepSeek vs Llama. Descárgala como tarjeta de referencia de despliegue de Qwen.',
+    gammaDescription: 'La presentación a continuación cubre: la nueva recomendación insignia Qwen 3.6 27B (contexto 256K, ~17 GB en Q4_K_M), la familia completa de modelos Qwen (Qwen3 0.6B–32B, Qwen2.5 7B–72B), los requisitos de VRAM por nivel de hardware, los datos de benchmark de Qwen2.5-Coder 32B y un cuadro de decisión Qwen vs DeepSeek vs Llama. Descárgala como tarjeta de referencia de despliegue de Qwen.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -534,7 +534,7 @@ curl http://localhost:11434/v1/chat/completions \\
             'name': '¿Cuál es el mejor modelo Qwen para programación en local?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 32B — 92,7 % en HumanEval, necesita GPU de 24 GB. Con 12 GB de VRAM o menos: Qwen3-Coder 14B (85,2 %, 9,5 GB de VRAM).',
+              'text': 'Qwen2.5-Coder 32B — 92,7 % en HumanEval, necesita GPU de 24 GB. Con 12 GB de VRAM o menos: Qwen2.5-Coder 14B (85,2 %, 9,5 GB de VRAM).',
             },
           },
           {
@@ -630,12 +630,12 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'Modelo': 'Qwen3 8B Q4_K_M', 'VRAM': '5,5 GB', 'GPU mínima': 'RTX 3060 6 GB, RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', 'Velocidad (RTX 3060)': '~57 tok/s' },
-          { 'Modelo': 'Qwen3-Coder 7B Q4_K_M', 'VRAM': '5,5 GB', 'GPU mínima': 'RTX 3060 6 GB, RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', 'Velocidad (RTX 3060)': '~55 tok/s' },
+          { 'Modelo': 'Qwen2.5-Coder 7B Q4_K_M', 'VRAM': '5,5 GB', 'GPU mínima': 'RTX 3060 6 GB, RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', 'Velocidad (RTX 3060)': '~55 tok/s' },
           { 'Modelo': 'Qwen2-VL 7B Q4_K_M', 'VRAM': '6,2 GB', 'GPU mínima': 'RTX 3060 8 GB, RTX 4060', 'Apple Silicon': 'M1/M2 16 GB', 'Velocidad (RTX 4060)': '~38 tok/s' },
           { 'Modelo': 'Qwen3 14B Q4_K_M', 'VRAM': '9,5 GB', 'GPU mínima': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', 'Velocidad (RTX 4070)': '~38 tok/s' },
-          { 'Modelo': 'Qwen3-Coder 14B Q4_K_M', 'VRAM': '9,5 GB', 'GPU mínima': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', 'Velocidad (RTX 4070)': '~36 tok/s' },
+          { 'Modelo': 'Qwen2.5-Coder 14B Q4_K_M', 'VRAM': '9,5 GB', 'GPU mínima': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', 'Velocidad (RTX 4070)': '~36 tok/s' },
           { 'Modelo': 'Qwen3 32B Q4_K_M', 'VRAM': '20,5 GB', 'GPU mínima': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', 'Velocidad (RTX 4090)': '~28 tok/s' },
-          { 'Modelo': 'Qwen3-Coder 32B Q4_K_M', 'VRAM': '20,5 GB', 'GPU mínima': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', 'Velocidad (RTX 4090)': '~27 tok/s' },
+          { 'Modelo': 'Qwen2.5-Coder 32B Q4_K_M', 'VRAM': '20,5 GB', 'GPU mínima': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', 'Velocidad (RTX 4090)': '~27 tok/s' },
           { 'Modelo': 'Qwen 3.6 27B Q4_K_M', 'VRAM': '~17 GB', 'GPU mínima': 'RTX 4090 24 GB', 'Apple Silicon': 'M3 Max 36 GB', 'Velocidad (RTX 4090)': '~24 tok/s' },
           { 'Modelo': 'Qwen2.5-72B Q4_K_M', 'VRAM': '46 GB', 'GPU mínima': '2× RTX 3090 (48 GB)', 'Apple Silicon': 'M2 Ultra 64 GB', 'Velocidad (2×RTX 4090)': '~12 tok/s' },
         ],
@@ -728,14 +728,14 @@ curl http://localhost:11434/v1/chat/completions \\
           { 'Modelo (Q4_K_M)': 'Qwen3 14B', 'MMLU': '79,9 %', 'Math': '69,8 %', 'HumanEval': '64,6 %', 'Velocidad (RTX 4070 12 GB)': '38 tok/s' },
           { 'Modelo (Q4_K_M)': 'Qwen3 32B', 'MMLU': '83,3 %', 'Math': '79,5 %', 'HumanEval': '71,3 %', 'Velocidad (RTX 4090 24 GB)': '28 tok/s' },
           { 'Modelo (Q4_K_M)': 'Qwen2.5-72B', 'MMLU': '86,1 %', 'Math': '83,1 %', 'HumanEval': '73,2 %', 'Velocidad (2×RTX 3090)': '12 tok/s' },
-          { 'Modelo (Q4_K_M)': 'Qwen3-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75,6 %', 'Velocidad (RTX 3060 12 GB)': '55 tok/s' },
-          { 'Modelo (Q4_K_M)': 'Qwen3-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85,2 %', 'Velocidad (RTX 4070 12 GB)': '36 tok/s' },
-          { 'Modelo (Q4_K_M)': 'Qwen3-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92,7 %', 'Velocidad (RTX 4090 24 GB)': '27 tok/s' },
+          { 'Modelo (Q4_K_M)': 'Qwen2.5-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75,6 %', 'Velocidad (RTX 3060 12 GB)': '55 tok/s' },
+          { 'Modelo (Q4_K_M)': 'Qwen2.5-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85,2 %', 'Velocidad (RTX 4070 12 GB)': '36 tok/s' },
+          { 'Modelo (Q4_K_M)': 'Qwen2.5-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92,7 %', 'Velocidad (RTX 4090 24 GB)': '27 tok/s' },
         ],
         columns: ['Modelo (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', 'Velocidad (RTX 3060 12 GB)'],
         tableFormat: true,
         callouts: [
-          { type: 'tip', text: '¿Quieres esa puntuación del 92,7 % en HumanEval a 27 tok/s? Consulta la [GPU de 24 GB que ejecuta Qwen3-Coder 32B](#affiliate-picks).' },
+          { type: 'tip', text: '¿Quieres esa puntuación del 92,7 % en HumanEval a 27 tok/s? Consulta la [GPU de 24 GB que ejecuta Qwen2.5-Coder 32B](#affiliate-picks).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-es.webp',
         imageCaption: 'Puntuaciones de benchmark de Qwen3 (Q4_K_M) — PromptQuorum 2026',
@@ -748,8 +748,8 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'Nivel de VRAM': '6 GB', 'Mejor Qwen': 'Qwen3 8B', 'Mejor competidor': 'Llama 3.2 3B (cabe, pero solo 3B)', 'Veredicto': 'Qwen3 8B gana — misma VRAM, modelo mucho mayor' },
-          { 'Nivel de VRAM': '12 GB', 'Mejor Qwen': 'Qwen3-Coder 14B', 'Mejor competidor': 'Llama 3.1 8B Instruct', 'Veredicto': 'Qwen3-Coder 14B para código; Llama 3.1 8B para chat general' },
-          { 'Nivel de VRAM': '24 GB', 'Mejor Qwen': 'Qwen3-Coder 32B', 'Mejor competidor': 'Llama 3.3 70B (con descarga)', 'Veredicto': 'Qwen3-Coder 32B para código; Llama 3.3 70B si calidad > velocidad' },
+          { 'Nivel de VRAM': '12 GB', 'Mejor Qwen': 'Qwen2.5-Coder 14B', 'Mejor competidor': 'Llama 3.1 8B Instruct', 'Veredicto': 'Qwen2.5-Coder 14B para código; Llama 3.1 8B para chat general' },
+          { 'Nivel de VRAM': '24 GB', 'Mejor Qwen': 'Qwen2.5-Coder 32B', 'Mejor competidor': 'Llama 3.3 70B (con descarga)', 'Veredicto': 'Qwen2.5-Coder 32B para código; Llama 3.3 70B si calidad > velocidad' },
           { 'Nivel de VRAM': '48 GB+', 'Mejor Qwen': 'Qwen2.5-72B', 'Mejor competidor': 'DeepSeek-V2.5 236B MoE', 'Veredicto': 'DeepSeek necesita ~130 GB de RAM; Qwen2.5-72B es la opción práctica para 48 GB' },
         ],
         columns: ['Nivel de VRAM', 'Mejor Qwen', 'Mejor competidor', 'Veredicto'],
@@ -782,15 +782,15 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 1,
             name: 'NVIDIA RTX 4060 8 GB',
-            tagline: 'Opción económica — Qwen3 8B, Qwen3-Coder 7B (5,5 GB de VRAM)',
-            verdict: 'La tarjeta más barata de esta lista que cubre el requisito de 5,5 GB de Qwen3 8B con margen para el contexto. Ejecuta Qwen3-Coder 7B a ~55 tok/s — suficientemente rápido para asistencia de código interactiva.',
+            tagline: 'Opción económica — Qwen3 8B, Qwen2.5-Coder 7B (5,5 GB de VRAM)',
+            verdict: 'La tarjeta más barata de esta lista que cubre el requisito de 5,5 GB de Qwen3 8B con margen para el contexto. Ejecuta Qwen2.5-Coder 7B a ~55 tok/s — suficientemente rápido para asistencia de código interactiva.',
             pros: [
               'El requisito de 5,5 GB de VRAM se cubre con margen para caché KV de contexto largo',
               'El precio más bajo de esta lista — la GPU adecuada para empezar si nunca has ejecutado un LLM local',
               '50–57 tok/s en modelos 7B/8B, a la par con tarjetas más caras en este tamaño de modelo',
             ],
             cons: [
-              'Se queda en Qwen3 8B / Qwen3-Coder 7B — sin margen para crecer a 14B sin apretar la caché KV',
+              'Se queda en Qwen3 8B / Qwen2.5-Coder 7B — sin margen para crecer a 14B sin apretar la caché KV',
             ],
             affiliateLinks: [
               { url: 'https://www.amazon.es/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: '470–600 €', label: 'Consultar precio actual →' },
@@ -799,8 +799,8 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 2,
             name: 'NVIDIA RTX 4070 Super 12 GB',
-            tagline: 'Opción de gama media — Qwen3 14B, Qwen3-Coder 14B (9,5 GB de VRAM)',
-            verdict: 'Ejecuta Qwen3-Coder 14B (85,2 % en HumanEval) a 36–38 tok/s con 2–3 GB de VRAM libres para el contexto — el nivel donde la calidad de código da un salto notable respecto a los modelos 7B/8B.',
+            tagline: 'Opción de gama media — Qwen3 14B, Qwen2.5-Coder 14B (9,5 GB de VRAM)',
+            verdict: 'Ejecuta Qwen2.5-Coder 14B (85,2 % en HumanEval) a 36–38 tok/s con 2–3 GB de VRAM libres para el contexto — el nivel donde la calidad de código da un salto notable respecto a los modelos 7B/8B.',
             pros: [
               'El modelo de 9,5 GB cabe con 2–3 GB de VRAM de margen — espacio para ventanas de contexto más largas',
               'HumanEval sube del 75,6 % (7B) al 85,2 % (14B) — el salto de calidad por precio más claro de la gama',
@@ -816,11 +816,11 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 3,
             name: 'NVIDIA RTX 4090 24 GB (o RTX 3090 24 GB de segunda mano)',
-            tagline: 'Opción de gama alta — Qwen3-Coder 32B, Qwen 3.6 27B (~17–20,5 GB de VRAM)',
-            verdict: 'La 4090 entrega 27–28 tok/s en Qwen3-Coder 32B — velocidad de código en tiempo real con un 92,7 % en HumanEval. Una RTX 3090 de segunda mano tiene la misma VRAM de 24 GB y se queda a un ~15 % de la velocidad de inferencia de la 4090, por bastante menos dinero si encuentras un anuncio de confianza.',
+            tagline: 'Opción de gama alta — Qwen2.5-Coder 32B, Qwen 3.6 27B (~17–20,5 GB de VRAM)',
+            verdict: 'La 4090 entrega 27–28 tok/s en Qwen2.5-Coder 32B — velocidad de código en tiempo real con un 92,7 % en HumanEval. Una RTX 3090 de segunda mano tiene la misma VRAM de 24 GB y se queda a un ~15 % de la velocidad de inferencia de la 4090, por bastante menos dinero si encuentras un anuncio de confianza.',
             pros: [
               '24 GB de VRAM cubren todas las variantes de Qwen3 32B y Qwen 3.6 27B con margen',
-              '27–28 tok/s en Qwen3-Coder 32B (92,7 % en HumanEval) — suficientemente rápido para programación en pareja en tiempo real',
+              '27–28 tok/s en Qwen2.5-Coder 32B (92,7 % en HumanEval) — suficientemente rápido para programación en pareja en tiempo real',
               'La RTX 3090 de segunda mano es la alternativa económica: mismo límite de VRAM, ~15 % más lenta, bastante más barata de segunda mano',
             ],
             cons: [
@@ -875,7 +875,7 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Ignorar el tamaño de la ventana de contexto.** Qwen3 soporta un contexto de 128K. La especificación del Modelfile de Ollama establece `num_ctx` en 2048 por defecto, pero en tiempo de ejecución se aplica un valor predeterminado escalonado según la VRAM: 4K por debajo de 24 GiB, 32K entre 24 y 48 GiB, y 256K por encima de 48 GiB. No confíes en ninguno de los dos valores predeterminados: configura `num_ctx` explícitamente, por ejemplo añadiendo `--num-ctx 8192` (o más) al comando de ejecución — de lo contrario el modelo trunca la entrada en silencio.',
           '**Elegir cuantización Q2_K para uso en chino.** A 2 bits de precisión, la salida en chino de Qwen3 se degrada notablemente. Usa Q4_K_M como mínimo para cualquier trabajo en chino.',
           '**Ejecutar el modelo 32B con poca VRAM.** Si la GPU tiene 16 GB y el modelo necesita 20,5 GB, Ollama descarga capas a la RAM del sistema. El modelo funciona pero a 3–5 tok/s — inutilizable para uso interactivo. Consulta la tabla de hardware y elige un modelo que quepa en tu VRAM.',
-          '**Usar la subfamilia incorrecta para programación.** Qwen3 8B (uso general) puntúa 57,3 % en HumanEval. Qwen3-Coder 7B puntúa 75,6 % en el mismo benchmark — una mejora relativa del 32 %. Si tu caso de uso es código, usa siempre la variante Coder del mismo tamaño.',
+          '**Usar la subfamilia incorrecta para programación.** Qwen3 8B (uso general) puntúa 57,3 % en HumanEval. Qwen2.5-Coder 7B puntúa 75,6 % en el mismo benchmark — una mejora relativa del 32 %. Si tu caso de uso es código, usa siempre la variante Coder del mismo tamaño.',
         ],
       },
       nextSteps: {
@@ -891,7 +891,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Preguntas frecuentes',
         faqs: [
             { q: '¿Cuánta VRAM necesito para ejecutar Qwen3 8B en local?', a: 'Qwen3 8B Q4_K_M requiere 5,5 GB de VRAM. Una RTX 3060 6 GB, RTX 4060 o chip Apple M con 8 GB de memoria unificada son suficientes.' },
-            { q: '¿Cuál es el mejor modelo Qwen para programación en local?', a: 'Qwen3-Coder 32B — 92,7 % en HumanEval, necesita GPU de 24 GB. Con 12 GB de VRAM o menos: Qwen3-Coder 14B (85,2 %, 9,5 GB de VRAM).' },
+            { q: '¿Cuál es el mejor modelo Qwen para programación en local?', a: 'Qwen2.5-Coder 32B — 92,7 % en HumanEval, necesita GPU de 24 GB. Con 12 GB de VRAM o menos: Qwen2.5-Coder 14B (85,2 %, 9,5 GB de VRAM).' },
             { q: '¿Cómo se compara Qwen con DeepSeek para el despliegue local?', a: 'Qwen3 usa arquitectura densa compatible con hardware de consumo. DeepSeek-V2.5 es un modelo MoE de 236B que necesita ~130 GB de RAM — inviable sin GPU de servidor.' },
             { q: '¿Puedo ejecutar Qwen en un Mac?', a: 'Sí. M2 Pro 32 GB ejecuta Qwen3 14B a ~32 tok/s. M3 Max 64 GB maneja Qwen3 32B a ~22 tok/s.' },
             { q: '¿Qué comando de Ollama uso para Qwen?', a: 'Para la insignia, `ollama run qwen3.6:27b` (~17 GB de VRAM). Para Qwen3, `ollama pull qwen3:8b`. Para Qwen2.5, `ollama pull qwen2.5:7b` para 7B, `:14b` para 14B, `:32b` para 32B, o `qwen2.5-coder:32b` para la variante de programación. Usa siempre etiquetas de tamaño explícitas.' },
@@ -948,7 +948,7 @@ curl http://localhost:11434/v1/chat/completions \\
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
     ],
     gammaEmbedUrl: '/presentations/qwen-local-deployment-guide-2026-static.html',
-    gammaDescription: 'يغطي العرض التقديمي أدناه: الاختيار الرائد الجديد Qwen 3.6 27B (سياق 256K، ~17 GB عند Q4_K_M)، وعائلة نماذج Qwen الكاملة (Qwen3 من 0.6B إلى 32B، وQwen2.5 من 7B إلى 72B)، ومتطلبات VRAM حسب مستوى الأجهزة، وبيانات معيار Qwen3-Coder 32B، وجدول قرار Qwen مقابل DeepSeek مقابل Llama. نزّله كبطاقة مرجعية لنشر Qwen.',
+    gammaDescription: 'يغطي العرض التقديمي أدناه: الاختيار الرائد الجديد Qwen 3.6 27B (سياق 256K، ~17 GB عند Q4_K_M)، وعائلة نماذج Qwen الكاملة (Qwen3 من 0.6B إلى 32B، وQwen2.5 من 7B إلى 72B)، ومتطلبات VRAM حسب مستوى الأجهزة، وبيانات معيار Qwen2.5-Coder 32B، وجدول قرار Qwen مقابل DeepSeek مقابل Llama. نزّله كبطاقة مرجعية لنشر Qwen.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -969,7 +969,7 @@ curl http://localhost:11434/v1/chat/completions \\
       inLanguage: 'ar',
       mainEntity: [
         { '@type': 'Question', name: 'كم من VRAM أحتاج لتشغيل Qwen3 8B محليًا؟', acceptedAnswer: { '@type': 'Answer', text: 'يتطلب Qwen3 8B Q4_K_M 5.5 GB من VRAM. تكفي NVIDIA RTX 3060 6 GB أو RTX 4060 أو شريحة Apple M بذاكرة موحدة 8 GB.' } },
-        { '@type': 'Question', name: 'ما أفضل نموذج Qwen للبرمجة محليًا؟', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 32B هو أفضل نموذج برمجة قابل للتشغيل محليًا — يحقق 92.7% في HumanEval ويحتاج إلى بطاقة رسوم بسعة 24 GB (RTX 3090 أو RTX 4090). بـ 12 GB من VRAM أو أقل، استخدم Qwen3-Coder 14B (HumanEval 85.2%، 9.5 GB من VRAM).' } },
+        { '@type': 'Question', name: 'ما أفضل نموذج Qwen للبرمجة محليًا؟', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5-Coder 32B هو أفضل نموذج برمجة قابل للتشغيل محليًا — يحقق 92.7% في HumanEval ويحتاج إلى بطاقة رسوم بسعة 24 GB (RTX 3090 أو RTX 4090). بـ 12 GB من VRAM أو أقل، استخدم Qwen2.5-Coder 14B (HumanEval 85.2%، 9.5 GB من VRAM).' } },
         { '@type': 'Question', name: 'كيف يقارن Qwen بـ DeepSeek للنشر المحلي؟', acceptedAnswer: { '@type': 'Answer', text: 'يستخدم Qwen3 بنية كثيفة تتسع في الأجهزة الاستهلاكية. DeepSeek-V2.5 نموذج MoE بحجم 236B — يحتاج إلى نحو 130 GB من RAM في Q4، غير ميسور دون بطاقة رسوم خوادم. بأقل من 48 GB من VRAM، Qwen3 هو الخيار العملي.' } },
         { '@type': 'Question', name: 'هل يمكنني تشغيل Qwen على جهاز Mac؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. يستخدم Apple Silicon ذاكرة موحدة — يشغّل M2 Pro 32 GB نموذج Qwen3 14B بـ ~32 token/ثانية. ويتعامل M3 Max 64 GB مع Qwen3 32B بـ ~22 token/ثانية.' } },
         { '@type': 'Question', name: 'ما أمر Ollama الذي أستخدمه لـ Qwen؟', acceptedAnswer: { '@type': 'Answer', text: 'للنموذج الرائد، نفّذ `ollama run qwen3.6:27b` (~17 GB من VRAM). لـ Qwen3، استخدم `ollama pull qwen3:8b`. لـ Qwen2.5، استخدم `ollama pull qwen2.5:7b` لـ 7B، و`ollama pull qwen2.5:14b` لـ 14B، و`ollama pull qwen2.5:32b` لـ 32B، أو `ollama pull qwen2.5-coder:32b` لمتغير البرمجة. استخدم دائمًا وسوم حجم صريحة.' } },
@@ -1021,12 +1021,12 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'Modelo': 'Qwen3 8B Q4_K_M', 'VRAM': '5.5 GB', 'GPU mínima': 'RTX 3060 6 GB، RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', 'Velocidad (RTX 3060)': '~57 tok/s' },
-          { 'Modelo': 'Qwen3-Coder 7B Q4_K_M', 'VRAM': '5.5 GB', 'GPU mínima': 'RTX 3060 6 GB، RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', 'Velocidad (RTX 3060)': '~55 tok/s' },
+          { 'Modelo': 'Qwen2.5-Coder 7B Q4_K_M', 'VRAM': '5.5 GB', 'GPU mínima': 'RTX 3060 6 GB، RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', 'Velocidad (RTX 3060)': '~55 tok/s' },
           { 'Modelo': 'Qwen2-VL 7B Q4_K_M', 'VRAM': '6.2 GB', 'GPU mínima': 'RTX 3060 8 GB، RTX 4060', 'Apple Silicon': 'M1/M2 16 GB', 'Velocidad (RTX 4060)': '~38 tok/s' },
           { 'Modelo': 'Qwen3 14B Q4_K_M', 'VRAM': '9.5 GB', 'GPU mínima': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', 'Velocidad (RTX 4070)': '~38 tok/s' },
-          { 'Modelo': 'Qwen3-Coder 14B Q4_K_M', 'VRAM': '9.5 GB', 'GPU mínima': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', 'Velocidad (RTX 4070)': '~36 tok/s' },
+          { 'Modelo': 'Qwen2.5-Coder 14B Q4_K_M', 'VRAM': '9.5 GB', 'GPU mínima': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', 'Velocidad (RTX 4070)': '~36 tok/s' },
           { 'Modelo': 'Qwen3 32B Q4_K_M', 'VRAM': '20.5 GB', 'GPU mínima': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', 'Velocidad (RTX 4090)': '~28 tok/s' },
-          { 'Modelo': 'Qwen3-Coder 32B Q4_K_M', 'VRAM': '20.5 GB', 'GPU mínima': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', 'Velocidad (RTX 4090)': '~27 tok/s' },
+          { 'Modelo': 'Qwen2.5-Coder 32B Q4_K_M', 'VRAM': '20.5 GB', 'GPU mínima': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', 'Velocidad (RTX 4090)': '~27 tok/s' },
           { 'Modelo': 'Qwen 3.6 27B Q4_K_M', 'VRAM': '~17 GB', 'GPU mínima': 'RTX 4090 24 GB', 'Apple Silicon': 'M3 Max 36 GB', 'Velocidad (RTX 4090)': '~24 tok/s' },
           { 'Modelo': 'Qwen2.5-72B Q4_K_M', 'VRAM': '46 GB', 'GPU mínima': '2× RTX 3090 (48 GB)', 'Apple Silicon': 'M2 Ultra 64 GB', 'Velocidad (2×RTX 4090)': '~12 tok/s' },
         ],
@@ -1119,14 +1119,14 @@ curl http://localhost:11434/v1/chat/completions \\
           { 'Modelo (Q4_K_M)': 'Qwen3 14B', 'MMLU': '79.9%', 'Math': '69.8%', 'HumanEval': '64.6%', 'Velocidad (RTX 4070 12 GB)': '38 tok/s' },
           { 'Modelo (Q4_K_M)': 'Qwen3 32B', 'MMLU': '83.3%', 'Math': '79.5%', 'HumanEval': '71.3%', 'Velocidad (RTX 4090 24 GB)': '28 tok/s' },
           { 'Modelo (Q4_K_M)': 'Qwen2.5-72B', 'MMLU': '86.1%', 'Math': '83.1%', 'HumanEval': '73.2%', 'Velocidad (2×RTX 3090)': '12 tok/s' },
-          { 'Modelo (Q4_K_M)': 'Qwen3-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75.6%', 'Velocidad (RTX 3060 12 GB)': '55 tok/s' },
-          { 'Modelo (Q4_K_M)': 'Qwen3-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85.2%', 'Velocidad (RTX 4070 12 GB)': '36 tok/s' },
-          { 'Modelo (Q4_K_M)': 'Qwen3-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92.7%', 'Velocidad (RTX 4090 24 GB)': '27 tok/s' },
+          { 'Modelo (Q4_K_M)': 'Qwen2.5-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75.6%', 'Velocidad (RTX 3060 12 GB)': '55 tok/s' },
+          { 'Modelo (Q4_K_M)': 'Qwen2.5-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85.2%', 'Velocidad (RTX 4070 12 GB)': '36 tok/s' },
+          { 'Modelo (Q4_K_M)': 'Qwen2.5-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92.7%', 'Velocidad (RTX 4090 24 GB)': '27 tok/s' },
         ],
         columns: ['Modelo (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', 'Velocidad (RTX 3060 12 GB)'],
         tableFormat: true,
         callouts: [
-          { type: 'tip', text: 'هل تريد تحقيق درجة 92.7% في HumanEval بسرعة 27 token/ثانية؟ اطّلع على [بطاقة الرسوم بسعة 24 GB التي تشغّل Qwen3-Coder 32B](#affiliate-picks).' },
+          { type: 'tip', text: 'هل تريد تحقيق درجة 92.7% في HumanEval بسرعة 27 token/ثانية؟ اطّلع على [بطاقة الرسوم بسعة 24 GB التي تشغّل Qwen2.5-Coder 32B](#affiliate-picks).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-ar.webp',
         imageCaption: 'درجات معيار Qwen3 (Q4_K_M) — PromptQuorum 2026',
@@ -1139,8 +1139,8 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'Nivel de VRAM': '6 GB', 'Mejor Qwen': 'Qwen3 8B', 'Mejor competidor': 'Llama 3.2 3B (يتسع، لكنه 3B فقط)', 'Veredicto': 'يفوز Qwen3 8B — نفس VRAM، نموذج أكبر بكثير' },
-          { 'Nivel de VRAM': '12 GB', 'Mejor Qwen': 'Qwen3-Coder 14B', 'Mejor competidor': 'Llama 3.1 8B Instruct', 'Veredicto': 'Qwen3-Coder 14B للكود؛ Llama 3.1 8B للدردشة العامة' },
-          { 'Nivel de VRAM': '24 GB', 'Mejor Qwen': 'Qwen3-Coder 32B', 'Mejor competidor': 'Llama 3.3 70B (مع تفريغ)', 'Veredicto': 'Qwen3-Coder 32B للكود؛ Llama 3.3 70B إذا كانت الجودة > السرعة' },
+          { 'Nivel de VRAM': '12 GB', 'Mejor Qwen': 'Qwen2.5-Coder 14B', 'Mejor competidor': 'Llama 3.1 8B Instruct', 'Veredicto': 'Qwen2.5-Coder 14B للكود؛ Llama 3.1 8B للدردشة العامة' },
+          { 'Nivel de VRAM': '24 GB', 'Mejor Qwen': 'Qwen2.5-Coder 32B', 'Mejor competidor': 'Llama 3.3 70B (مع تفريغ)', 'Veredicto': 'Qwen2.5-Coder 32B للكود؛ Llama 3.3 70B إذا كانت الجودة > السرعة' },
           { 'Nivel de VRAM': '48 GB+', 'Mejor Qwen': 'Qwen2.5-72B', 'Mejor competidor': 'DeepSeek-V2.5 236B MoE', 'Veredicto': 'يحتاج DeepSeek إلى ~130 GB من RAM؛ Qwen2.5-72B هو الخيار العملي لـ 48 GB' },
         ],
         columns: ['Nivel de VRAM', 'Mejor Qwen', 'Mejor competidor', 'Veredicto'],
@@ -1173,15 +1173,15 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 1,
             name: 'NVIDIA RTX 4060 8 GB',
-            tagline: 'اختيار اقتصادي — Qwen3 8B وQwen3-Coder 7B (5.5 GB VRAM)',
-            verdict: 'أرخص بطاقة في هذه القائمة تحقّق متطلب 5.5 GB لـ Qwen3 8B مع هامش للسياق. تشغّل Qwen3-Coder 7B بسرعة ~55 token/ثانية — سرعة كافية للمساعدة البرمجية التفاعلية.',
+            tagline: 'اختيار اقتصادي — Qwen3 8B وQwen2.5-Coder 7B (5.5 GB VRAM)',
+            verdict: 'أرخص بطاقة في هذه القائمة تحقّق متطلب 5.5 GB لـ Qwen3 8B مع هامش للسياق. تشغّل Qwen2.5-Coder 7B بسرعة ~55 token/ثانية — سرعة كافية للمساعدة البرمجية التفاعلية.',
             pros: [
               'يتحقق متطلب 5.5 GB من VRAM مع هامش لذاكرة KV المؤقتة للسياق الطويل',
               'أقل سعر في هذه القائمة — بطاقة الرسوم الأولى المناسبة إذا لم تشغّل نموذج LLM محليًا من قبل',
               '50–57 token/ثانية على نماذج 7B/8B، بأداء مماثل للبطاقات الأغلى عند هذا الحجم من النماذج',
             ],
             cons: [
-              'يقتصر على Qwen3 8B / Qwen3-Coder 7B — لا هامش للانتقال إلى 14B دون ضغط ذاكرة KV المؤقتة',
+              'يقتصر على Qwen3 8B / Qwen2.5-Coder 7B — لا هامش للانتقال إلى 14B دون ضغط ذاكرة KV المؤقتة',
             ],
             affiliateLinks: [
               { url: 'https://www.amazon.sa/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: '1,600–2,000 ريال', label: 'تحقّق من السعر الحالي ←' },
@@ -1190,8 +1190,8 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 2,
             name: 'NVIDIA RTX 4070 Super 12 GB',
-            tagline: 'اختيار متوسط — Qwen3 14B وQwen3-Coder 14B (9.5 GB VRAM)',
-            verdict: 'تشغّل Qwen3-Coder 14B (85.2% في HumanEval) بسرعة 36–38 token/ثانية مع بقاء 2–3 GB من VRAM للسياق — المستوى الذي تقفز فيه جودة البرمجة بشكل ملحوظ مقارنةً بنماذج 7B/8B.',
+            tagline: 'اختيار متوسط — Qwen3 14B وQwen2.5-Coder 14B (9.5 GB VRAM)',
+            verdict: 'تشغّل Qwen2.5-Coder 14B (85.2% في HumanEval) بسرعة 36–38 token/ثانية مع بقاء 2–3 GB من VRAM للسياق — المستوى الذي تقفز فيه جودة البرمجة بشكل ملحوظ مقارنةً بنماذج 7B/8B.',
             pros: [
               'يتسع النموذج بحجم 9.5 GB مع بقاء 2–3 GB من VRAM — مساحة لنوافذ سياق أطول',
               'ترتفع نتيجة HumanEval من 75.6% (7B) إلى 85.2% (14B) — أوضح قفزة في الجودة مقابل السعر ضمن هذه المجموعة',
@@ -1207,11 +1207,11 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 3,
             name: 'NVIDIA RTX 4090 24 GB (أو RTX 3090 24 GB مستعملة)',
-            tagline: 'اختيار فئة عليا — Qwen3-Coder 32B وQwen 3.6 27B (~17–20.5 GB VRAM)',
-            verdict: 'تقدّم 4090 سرعة 27–28 token/ثانية على Qwen3-Coder 32B — سرعة برمجة في الوقت الفعلي بدرجة 92.7% في HumanEval. تملك RTX 3090 المستعملة نفس سعة 24 GB من VRAM، وتقترب من سرعة استدلال 4090 بفارق نحو 15% فقط، بسعر أقل بكثير إذا وجدت عرضًا مستعملًا موثوقًا.',
+            tagline: 'اختيار فئة عليا — Qwen2.5-Coder 32B وQwen 3.6 27B (~17–20.5 GB VRAM)',
+            verdict: 'تقدّم 4090 سرعة 27–28 token/ثانية على Qwen2.5-Coder 32B — سرعة برمجة في الوقت الفعلي بدرجة 92.7% في HumanEval. تملك RTX 3090 المستعملة نفس سعة 24 GB من VRAM، وتقترب من سرعة استدلال 4090 بفارق نحو 15% فقط، بسعر أقل بكثير إذا وجدت عرضًا مستعملًا موثوقًا.',
             pros: [
               'تغطي سعة 24 GB من VRAM جميع إصدارات Qwen3 32B وQwen 3.6 27B مع هامش إضافي',
-              '27–28 token/ثانية على Qwen3-Coder 32B (92.7% في HumanEval) — سريعة بما يكفي للبرمجة الزوجية في الوقت الفعلي',
+              '27–28 token/ثانية على Qwen2.5-Coder 32B (92.7% في HumanEval) — سريعة بما يكفي للبرمجة الزوجية في الوقت الفعلي',
               'RTX 3090 المستعملة هي البديل الاقتصادي: سقف VRAM نفسه، أبطأ بنحو 15%، وأرخص بشكل ملحوظ مستعملة',
             ],
             cons: [
@@ -1266,7 +1266,7 @@ curl http://localhost:11434/v1/chat/completions \\
           '**تجاهل حجم نافذة السياق.** يدعم Qwen3 سياق 128K. تحدد مواصفات Modelfile في Ollama القيمة الافتراضية لـ `num_ctx` بـ 2048، لكن وقت التشغيل الفعلي يختار قيمة افتراضية متدرجة حسب VRAM: 4K أقل من 24 GiB، و32K بين 24 و48 GiB، و256K فوق 48 GiB. لا تعتمد على أي من القيمتين الافتراضيتين: اضبط `num_ctx` صراحةً، مثلاً بإضافة `--num-ctx 8192` (أو أكثر) إلى أمر التشغيل — وإلا يقتطع النموذج الإدخال بصمت.',
           '**اختيار تكميم Q2_K للاستخدام بالصينية.** بدقة 2 بت، تتدهور مخرجات Qwen3 بالصينية بشكل ملحوظ. استخدم Q4_K_M كحد أدنى لأي عمل بالصينية.',
           '**تشغيل نموذج 32B بـ VRAM قليل.** إذا كانت بطاقة الرسوم تملك 16 GB والنموذج يحتاج إلى 20.5 GB، يفرّغ Ollama الطبقات إلى RAM النظام. يعمل النموذج لكن بـ 3–5 token/ثانية — غير قابل للاستخدام التفاعلي. راجع جدول الأجهزة واختر نموذجًا يتسع في VRAM لديك.',
-          '**استخدام العائلة الفرعية الخاطئة للبرمجة.** يسجّل Qwen3 8B (استخدام عام) 57.3% في HumanEval. ويسجّل Qwen3-Coder 7B نسبة 75.6% في المعيار نفسه — تحسّن نسبي بنسبة 32%. إذا كانت حالة استخدامك هي الكود، استخدم دائمًا متغير Coder بالحجم نفسه.',
+          '**استخدام العائلة الفرعية الخاطئة للبرمجة.** يسجّل Qwen3 8B (استخدام عام) 57.3% في HumanEval. ويسجّل Qwen2.5-Coder 7B نسبة 75.6% في المعيار نفسه — تحسّن نسبي بنسبة 32%. إذا كانت حالة استخدامك هي الكود، استخدم دائمًا متغير Coder بالحجم نفسه.',
         ],
       },
       nextSteps: {
@@ -1282,7 +1282,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'الأسئلة الشائعة',
         faqs: [
           { q: 'كم من VRAM أحتاج لتشغيل Qwen3 8B محليًا؟', a: 'يتطلب Qwen3 8B Q4_K_M 5.5 GB من VRAM. تكفي RTX 3060 6 GB أو RTX 4060 أو شريحة Apple M بذاكرة موحدة 8 GB.' },
-          { q: 'ما أفضل نموذج Qwen للبرمجة محليًا؟', a: 'Qwen3-Coder 32B — 92.7% في HumanEval، يحتاج إلى بطاقة رسوم بسعة 24 GB. بـ 12 GB من VRAM أو أقل: Qwen3-Coder 14B (85.2%، 9.5 GB من VRAM).' },
+          { q: 'ما أفضل نموذج Qwen للبرمجة محليًا؟', a: 'Qwen2.5-Coder 32B — 92.7% في HumanEval، يحتاج إلى بطاقة رسوم بسعة 24 GB. بـ 12 GB من VRAM أو أقل: Qwen2.5-Coder 14B (85.2%، 9.5 GB من VRAM).' },
           { q: 'كيف يقارن Qwen بـ DeepSeek للنشر المحلي؟', a: 'يستخدم Qwen3 بنية كثيفة متوافقة مع الأجهزة الاستهلاكية. DeepSeek-V2.5 نموذج MoE بحجم 236B يحتاج إلى ~130 GB من RAM — غير عملي دون بطاقة رسوم خوادم.' },
           { q: 'هل يمكنني تشغيل Qwen على جهاز Mac؟', a: 'نعم. يشغّل M2 Pro 32 GB نموذج Qwen3 14B بـ ~32 token/ثانية. ويتعامل M3 Max 64 GB مع Qwen3 32B بـ ~22 token/ثانية.' },
           { q: 'ما أمر Ollama الذي أستخدمه لـ Qwen؟', a: 'للنموذج الرائد، `ollama run qwen3.6:27b` (~17 GB من VRAM). لـ Qwen3، `ollama pull qwen3:8b`. لـ Qwen2.5، `ollama pull qwen2.5:7b` لـ 7B، و`:14b` لـ 14B، و`:32b` لـ 32B، أو `qwen2.5-coder:32b` لمتغير البرمجة. استخدم دائمًا وسوم حجم صريحة.' },
@@ -1360,7 +1360,7 @@ curl http://localhost:11434/v1/chat/completions \\
       inLanguage: 'pt-BR',
       mainEntity: [
         { '@type': 'Question', name: 'Quanta VRAM preciso para executar o Qwen3 8B localmente?', acceptedAnswer: { '@type': 'Answer', text: 'O Qwen3 8B Q4_K_M requer 5,5 GB de VRAM. Uma NVIDIA RTX 3060 6 GB, RTX 4060 ou chip Apple M com 8 GB de memória unificada são suficientes.' } },
-        { '@type': 'Question', name: 'Qual é o melhor modelo Qwen para programação localmente?', acceptedAnswer: { '@type': 'Answer', text: 'O Qwen3-Coder 32B é o melhor modelo de programação executável localmente — atinge 92,7% no HumanEval e precisa de uma GPU de 24 GB (RTX 3090 ou RTX 4090). Com 12 GB de VRAM ou menos, use o Qwen3-Coder 14B (HumanEval 85,2%, 9,5 GB de VRAM).' } },
+        { '@type': 'Question', name: 'Qual é o melhor modelo Qwen para programação localmente?', acceptedAnswer: { '@type': 'Answer', text: 'O Qwen2.5-Coder 32B é o melhor modelo de programação executável localmente — atinge 92,7% no HumanEval e precisa de uma GPU de 24 GB (RTX 3090 ou RTX 4090). Com 12 GB de VRAM ou menos, use o Qwen2.5-Coder 14B (HumanEval 85,2%, 9,5 GB de VRAM).' } },
         { '@type': 'Question', name: 'Como o Qwen se compara ao DeepSeek para implantação local?', acceptedAnswer: { '@type': 'Answer', text: 'O Qwen3 usa uma arquitetura densa que cabe em hardware de consumo. O DeepSeek-V2.5 é um modelo MoE de 236B — precisa de aproximadamente 130 GB de RAM em Q4, inviável sem GPU de servidor. Com menos de 48 GB de VRAM, o Qwen3 é a opção prática.' } },
         { '@type': 'Question', name: 'Posso executar o Qwen em um Mac?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. O Apple Silicon usa memória unificada — um M2 Pro 32 GB executa o Qwen3 14B a ~32 tokens/seg. Um M3 Max 64 GB gerencia o Qwen3 32B a ~22 tokens/seg.' } },
         { '@type': 'Question', name: 'Qual comando do Ollama uso para o Qwen?', acceptedAnswer: { '@type': 'Answer', text: 'Para o novo flagship, execute `ollama run qwen3.6:27b` (~17 GB de VRAM). Para o Qwen3, use `ollama pull qwen3:8b`. Para o Qwen2.5, use `ollama pull qwen2.5:7b` para 7B, `ollama pull qwen2.5:14b` para 14B, `ollama pull qwen2.5:32b` para 32B, ou `ollama pull qwen2.5-coder:32b` para a variante de programação. Sempre use tags de tamanho explícitas.' } },
@@ -1412,12 +1412,12 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'Modelo': 'Qwen3 8B Q4_K_M', 'VRAM': '5,5 GB', 'GPU mínima': 'RTX 3060 6 GB, RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', 'Velocidade (RTX 3060)': '~57 tok/s' },
-          { 'Modelo': 'Qwen3-Coder 7B Q4_K_M', 'VRAM': '5,5 GB', 'GPU mínima': 'RTX 3060 6 GB, RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', 'Velocidade (RTX 3060)': '~55 tok/s' },
+          { 'Modelo': 'Qwen2.5-Coder 7B Q4_K_M', 'VRAM': '5,5 GB', 'GPU mínima': 'RTX 3060 6 GB, RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', 'Velocidade (RTX 3060)': '~55 tok/s' },
           { 'Modelo': 'Qwen2-VL 7B Q4_K_M', 'VRAM': '6,2 GB', 'GPU mínima': 'RTX 3060 8 GB, RTX 4060', 'Apple Silicon': 'M1/M2 16 GB', 'Velocidade (RTX 4060)': '~38 tok/s' },
           { 'Modelo': 'Qwen3 14B Q4_K_M', 'VRAM': '9,5 GB', 'GPU mínima': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', 'Velocidade (RTX 4070)': '~38 tok/s' },
-          { 'Modelo': 'Qwen3-Coder 14B Q4_K_M', 'VRAM': '9,5 GB', 'GPU mínima': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', 'Velocidade (RTX 4070)': '~36 tok/s' },
+          { 'Modelo': 'Qwen2.5-Coder 14B Q4_K_M', 'VRAM': '9,5 GB', 'GPU mínima': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', 'Velocidade (RTX 4070)': '~36 tok/s' },
           { 'Modelo': 'Qwen3 32B Q4_K_M', 'VRAM': '20,5 GB', 'GPU mínima': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', 'Velocidade (RTX 4090)': '~28 tok/s' },
-          { 'Modelo': 'Qwen3-Coder 32B Q4_K_M', 'VRAM': '20,5 GB', 'GPU mínima': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', 'Velocidade (RTX 4090)': '~27 tok/s' },
+          { 'Modelo': 'Qwen2.5-Coder 32B Q4_K_M', 'VRAM': '20,5 GB', 'GPU mínima': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', 'Velocidade (RTX 4090)': '~27 tok/s' },
           { 'Modelo': 'Qwen 3.6 27B Q4_K_M', 'VRAM': '~17 GB', 'GPU mínima': 'RTX 4090 24 GB', 'Apple Silicon': 'M3 Max 36 GB', 'Velocidade (RTX 4090)': '~24 tok/s' },
           { 'Modelo': 'Qwen2.5-72B Q4_K_M', 'VRAM': '46 GB', 'GPU mínima': '2× RTX 3090 (48 GB)', 'Apple Silicon': 'M2 Ultra 64 GB', 'Velocidade (2×RTX 4090)': '~12 tok/s' },
         ],
@@ -1510,14 +1510,14 @@ curl http://localhost:11434/v1/chat/completions \\
           { 'Modelo (Q4_K_M)': 'Qwen3 14B', 'MMLU': '79,9%', 'Math': '69,8%', 'HumanEval': '64,6%', 'Velocidade (RTX 4070 12 GB)': '38 tok/s' },
           { 'Modelo (Q4_K_M)': 'Qwen3 32B', 'MMLU': '83,3%', 'Math': '79,5%', 'HumanEval': '71,3%', 'Velocidade (RTX 4090 24 GB)': '28 tok/s' },
           { 'Modelo (Q4_K_M)': 'Qwen2.5-72B', 'MMLU': '86,1%', 'Math': '83,1%', 'HumanEval': '73,2%', 'Velocidade (2×RTX 3090)': '12 tok/s' },
-          { 'Modelo (Q4_K_M)': 'Qwen3-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75,6%', 'Velocidade (RTX 3060 12 GB)': '55 tok/s' },
-          { 'Modelo (Q4_K_M)': 'Qwen3-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85,2%', 'Velocidade (RTX 4070 12 GB)': '36 tok/s' },
-          { 'Modelo (Q4_K_M)': 'Qwen3-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92,7%', 'Velocidade (RTX 4090 24 GB)': '27 tok/s' },
+          { 'Modelo (Q4_K_M)': 'Qwen2.5-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75,6%', 'Velocidade (RTX 3060 12 GB)': '55 tok/s' },
+          { 'Modelo (Q4_K_M)': 'Qwen2.5-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85,2%', 'Velocidade (RTX 4070 12 GB)': '36 tok/s' },
+          { 'Modelo (Q4_K_M)': 'Qwen2.5-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92,7%', 'Velocidade (RTX 4090 24 GB)': '27 tok/s' },
         ],
         columns: ['Modelo (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', 'Velocidade (RTX 3060 12 GB)'],
         tableFormat: true,
         callouts: [
-          { type: 'tip', text: 'Quer essa pontuação de 92,7% no HumanEval a 27 tok/s? Veja a [GPU de 24 GB que executa o Qwen3-Coder 32B](#affiliate-picks).' },
+          { type: 'tip', text: 'Quer essa pontuação de 92,7% no HumanEval a 27 tok/s? Veja a [GPU de 24 GB que executa o Qwen2.5-Coder 32B](#affiliate-picks).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-pt.webp',
         imageCaption: 'Pontuações de benchmark do Qwen3 (Q4_K_M) — PromptQuorum 2026',
@@ -1530,8 +1530,8 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'Nível de VRAM': '6 GB', 'Melhor Qwen': 'Qwen3 8B', 'Melhor concorrente': 'Llama 3.2 3B (cabe, mas apenas 3B)', 'Veredicto': 'Qwen3 8B vence — mesma VRAM, modelo muito maior' },
-          { 'Nível de VRAM': '12 GB', 'Melhor Qwen': 'Qwen3-Coder 14B', 'Melhor concorrente': 'Llama 3.1 8B Instruct', 'Veredicto': 'Qwen3-Coder 14B para código; Llama 3.1 8B para chat geral' },
-          { 'Nível de VRAM': '24 GB', 'Melhor Qwen': 'Qwen3-Coder 32B', 'Melhor concorrente': 'Llama 3.3 70B (com descarregamento)', 'Veredicto': 'Qwen3-Coder 32B para código; Llama 3.3 70B se qualidade > velocidade' },
+          { 'Nível de VRAM': '12 GB', 'Melhor Qwen': 'Qwen2.5-Coder 14B', 'Melhor concorrente': 'Llama 3.1 8B Instruct', 'Veredicto': 'Qwen2.5-Coder 14B para código; Llama 3.1 8B para chat geral' },
+          { 'Nível de VRAM': '24 GB', 'Melhor Qwen': 'Qwen2.5-Coder 32B', 'Melhor concorrente': 'Llama 3.3 70B (com descarregamento)', 'Veredicto': 'Qwen2.5-Coder 32B para código; Llama 3.3 70B se qualidade > velocidade' },
           { 'Nível de VRAM': '48 GB+', 'Melhor Qwen': 'Qwen2.5-72B', 'Melhor concorrente': 'DeepSeek-V2.5 236B MoE', 'Veredicto': 'DeepSeek precisa de ~130 GB de RAM; Qwen2.5-72B é a opção prática para 48 GB' },
         ],
         columns: ['Nível de VRAM', 'Melhor Qwen', 'Melhor concorrente', 'Veredicto'],
@@ -1563,15 +1563,15 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 1,
             name: 'NVIDIA RTX 4060 8 GB',
-            tagline: 'Opção econômica — Qwen3 8B, Qwen3-Coder 7B (5,5 GB de VRAM)',
-            verdict: 'A placa mais barata desta lista que atende ao requisito de 5,5 GB do Qwen3 8B com folga para o contexto. Executa o Qwen3-Coder 7B a ~55 tok/s — velocidade suficiente para assistência de código interativa.',
+            tagline: 'Opção econômica — Qwen3 8B, Qwen2.5-Coder 7B (5,5 GB de VRAM)',
+            verdict: 'A placa mais barata desta lista que atende ao requisito de 5,5 GB do Qwen3 8B com folga para o contexto. Executa o Qwen2.5-Coder 7B a ~55 tok/s — velocidade suficiente para assistência de código interativa.',
             pros: [
               'O requisito de 5,5 GB de VRAM é atendido com folga para o cache KV de contexto longo',
               'Preço mais baixo desta lista — a primeira GPU certa se você nunca executou um LLM local',
               '50–57 tok/s em modelos 7B/8B, no mesmo nível de placas mais caras nesse tamanho de modelo',
             ],
             cons: [
-              'Limita-se ao Qwen3 8B / Qwen3-Coder 7B — sem margem para crescer para 14B sem comprimir o cache KV',
+              'Limita-se ao Qwen3 8B / Qwen2.5-Coder 7B — sem margem para crescer para 14B sem comprimir o cache KV',
             ],
             affiliateLinks: [
               { url: 'https://www.amazon.com.br/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: 'R$ 3.600–4.600', label: 'Ver preço atual →' },
@@ -1580,8 +1580,8 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 2,
             name: 'NVIDIA RTX 4070 Super 12 GB',
-            tagline: 'Opção intermediária — Qwen3 14B, Qwen3-Coder 14B (9,5 GB de VRAM)',
-            verdict: 'Executa o Qwen3-Coder 14B (85,2% no HumanEval) a 36–38 tok/s, com 2–3 GB de VRAM sobrando para contexto — o nível em que a qualidade de código dá um salto perceptível em relação aos modelos 7B/8B.',
+            tagline: 'Opção intermediária — Qwen3 14B, Qwen2.5-Coder 14B (9,5 GB de VRAM)',
+            verdict: 'Executa o Qwen2.5-Coder 14B (85,2% no HumanEval) a 36–38 tok/s, com 2–3 GB de VRAM sobrando para contexto — o nível em que a qualidade de código dá um salto perceptível em relação aos modelos 7B/8B.',
             pros: [
               'O modelo de 9,5 GB cabe com 2–3 GB de VRAM sobrando — espaço para janelas de contexto maiores',
               'O HumanEval sobe de 75,6% (7B) para 85,2% (14B) — o salto de custo-benefício mais claro da linha',
@@ -1597,11 +1597,11 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 3,
             name: 'NVIDIA RTX 4090 24 GB (ou RTX 3090 24 GB usada)',
-            tagline: 'Opção de alto desempenho — Qwen3-Coder 32B, Qwen 3.6 27B (~17–20,5 GB de VRAM)',
-            verdict: 'A 4090 entrega 27–28 tok/s no Qwen3-Coder 32B — velocidade de codificação em tempo real com 92,7% no HumanEval. Uma RTX 3090 usada tem a mesma VRAM de 24 GB e fica cerca de 15% atrás da velocidade de inferência da 4090, por um preço bem menor se você encontrar um anúncio de segunda mão confiável.',
+            tagline: 'Opção de alto desempenho — Qwen2.5-Coder 32B, Qwen 3.6 27B (~17–20,5 GB de VRAM)',
+            verdict: 'A 4090 entrega 27–28 tok/s no Qwen2.5-Coder 32B — velocidade de codificação em tempo real com 92,7% no HumanEval. Uma RTX 3090 usada tem a mesma VRAM de 24 GB e fica cerca de 15% atrás da velocidade de inferência da 4090, por um preço bem menor se você encontrar um anúncio de segunda mão confiável.',
             pros: [
               '24 GB de VRAM cobrem todas as variantes do Qwen3 32B e o Qwen 3.6 27B com folga',
-              '27–28 tok/s no Qwen3-Coder 32B (92,7% no HumanEval) — rápido o suficiente para pair programming em tempo real',
+              '27–28 tok/s no Qwen2.5-Coder 32B (92,7% no HumanEval) — rápido o suficiente para pair programming em tempo real',
               'A RTX 3090 usada é a alternativa econômica: mesmo limite de VRAM, cerca de 15% mais lenta, bem mais barata de segunda mão',
             ],
             cons: [
@@ -1656,7 +1656,7 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Ignorar o tamanho da janela de contexto.** O Qwen3 suporta um contexto de 128K. A especificação do Modelfile do Ollama define `num_ctx` como 2048 por padrão, mas o runtime na verdade aplica um padrão escalonado por VRAM: 4K abaixo de 24 GiB, 32K entre 24 e 48 GiB, 256K acima de 48 GiB. Não confie em nenhum dos dois padrões: defina `num_ctx` explicitamente, por exemplo adicionando `--num-ctx 8192` (ou mais) ao comando de execução — caso contrário o modelo trunca a entrada silenciosamente.',
           '**Escolher quantização Q2_K para uso em chinês.** A 2 bits de precisão, a saída em chinês do Qwen3 se degrada notavelmente. Use Q4_K_M no mínimo para qualquer trabalho em chinês.',
           '**Executar o modelo 32B com pouca VRAM.** Se a GPU tiver 16 GB e o modelo precisar de 20,5 GB, o Ollama descarrega camadas para a RAM do sistema. O modelo funciona mas a 3–5 tok/s — inutilizável para uso interativo.',
-          '**Usar a subfamília errada para programação.** O Qwen3 8B (uso geral) pontua 57,3% no HumanEval. O Qwen3-Coder 7B pontua 75,6% — uma melhoria relativa de 32%. Para código, sempre use a variante Coder do mesmo tamanho.',
+          '**Usar a subfamília errada para programação.** O Qwen3 8B (uso geral) pontua 57,3% no HumanEval. O Qwen2.5-Coder 7B pontua 75,6% — uma melhoria relativa de 32%. Para código, sempre use a variante Coder do mesmo tamanho.',
         ],
       },
       nextSteps: {
@@ -1672,7 +1672,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Perguntas frequentes',
         faqs: [
           { q: 'Quanta VRAM preciso para executar o Qwen3 8B localmente?', a: 'O Qwen3 8B Q4_K_M requer 5,5 GB de VRAM. Uma RTX 3060 6 GB, RTX 4060 ou chip Apple M com 8 GB de memória unificada são suficientes.' },
-          { q: 'Qual é o melhor modelo Qwen para programação localmente?', a: 'Qwen3-Coder 32B — 92,7% no HumanEval, precisa de GPU de 24 GB. Com 12 GB de VRAM ou menos: Qwen3-Coder 14B (85,2%, 9,5 GB de VRAM).' },
+          { q: 'Qual é o melhor modelo Qwen para programação localmente?', a: 'Qwen2.5-Coder 32B — 92,7% no HumanEval, precisa de GPU de 24 GB. Com 12 GB de VRAM ou menos: Qwen2.5-Coder 14B (85,2%, 9,5 GB de VRAM).' },
           { q: 'Como o Qwen se compara ao DeepSeek para implantação local?', a: 'O Qwen3 usa arquitetura densa compatível com hardware de consumo. O DeepSeek-V2.5 é um modelo MoE de 236B que precisa de ~130 GB de RAM — inviável sem GPU de servidor.' },
           { q: 'Posso executar o Qwen em um Mac?', a: 'Sim. M2 Pro 32 GB executa o Qwen3 14B a ~32 tok/s. M3 Max 64 GB gerencia o Qwen3 32B a ~22 tok/s.' },
           { q: 'Qual comando do Ollama uso para o Qwen?', a: 'Para o flagship, `ollama run qwen3.6:27b` (~17 GB de VRAM). Para o Qwen3, `ollama pull qwen3:8b`. Para o Qwen2.5, `ollama pull qwen2.5:7b` para 7B, `:14b` para 14B, `:32b` para 32B, ou `qwen2.5-coder:32b` para a variante de programação. Sempre use tags de tamanho explícitas.' },
@@ -1728,7 +1728,7 @@ curl http://localhost:11434/v1/chat/completions \\
       { label: 'Questions fréquentes', anchor: '#faq' },
     ],
     gammaEmbedUrl: '/presentations/qwen-local-deployment-guide-2026-static.html',
-    gammaDescription: 'La présentation ci-dessous couvre : le nouveau modèle phare Qwen 3.6 27B (contexte 256 K, ~17 Go en Q4_K_M), la famille complète Qwen (Qwen3 0,6B–32B, Qwen2.5 7B–72B), les exigences VRAM par niveau matériel, les données de benchmark pour Qwen3-Coder 32B et un tableau de décision Qwen vs DeepSeek vs Llama. Télécharger comme fiche de référence.',
+    gammaDescription: 'La présentation ci-dessous couvre : le nouveau modèle phare Qwen 3.6 27B (contexte 256 K, ~17 Go en Q4_K_M), la famille complète Qwen (Qwen3 0,6B–32B, Qwen2.5 7B–72B), les exigences VRAM par niveau matériel, les données de benchmark pour Qwen2.5-Coder 32B et un tableau de décision Qwen vs DeepSeek vs Llama. Télécharger comme fiche de référence.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -1760,7 +1760,7 @@ curl http://localhost:11434/v1/chat/completions \\
             'name': 'Quel est le meilleur modèle Qwen pour le code en local ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 32B — 92,7 % sur HumanEval, GPU 24 Go requis. Avec 12 Go de VRAM : Qwen3-Coder 14B (85,2 %, 9,5 Go VRAM).',
+              'text': 'Qwen2.5-Coder 32B — 92,7 % sur HumanEval, GPU 24 Go requis. Avec 12 Go de VRAM : Qwen2.5-Coder 14B (85,2 %, 9,5 Go VRAM).',
             },
           },
           {
@@ -1871,12 +1871,12 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'Modèle': 'Qwen3 8B Q4_K_M', 'VRAM': '5,5 Go', 'GPU minimum': 'RTX 3060 6 Go, RTX 4060', 'Apple Silicon': 'M1/M2 8 Go', 'Vitesse (RTX 3060)': '~57 tokens/s' },
-          { 'Modèle': 'Qwen3-Coder 7B Q4_K_M', 'VRAM': '5,5 Go', 'GPU minimum': 'RTX 3060 6 Go, RTX 4060', 'Apple Silicon': 'M1/M2 8 Go', 'Vitesse (RTX 3060)': '~55 tokens/s' },
+          { 'Modèle': 'Qwen2.5-Coder 7B Q4_K_M', 'VRAM': '5,5 Go', 'GPU minimum': 'RTX 3060 6 Go, RTX 4060', 'Apple Silicon': 'M1/M2 8 Go', 'Vitesse (RTX 3060)': '~55 tokens/s' },
           { 'Modèle': 'Qwen2-VL 7B Q4_K_M', 'VRAM': '6,2 Go', 'GPU minimum': 'RTX 3060 8 Go, RTX 4060', 'Apple Silicon': 'M1/M2 16 Go', 'Vitesse (RTX 4060)': '~38 tokens/s' },
           { 'Modèle': 'Qwen3 14B Q4_K_M', 'VRAM': '9,5 Go', 'GPU minimum': 'RTX 4070 12 Go', 'Apple Silicon': 'M2 Pro 16 Go', 'Vitesse (RTX 4070)': '~38 tokens/s' },
-          { 'Modèle': 'Qwen3-Coder 14B Q4_K_M', 'VRAM': '9,5 Go', 'GPU minimum': 'RTX 4070 12 Go', 'Apple Silicon': 'M2 Pro 16 Go', 'Vitesse (RTX 4070)': '~36 tokens/s' },
+          { 'Modèle': 'Qwen2.5-Coder 14B Q4_K_M', 'VRAM': '9,5 Go', 'GPU minimum': 'RTX 4070 12 Go', 'Apple Silicon': 'M2 Pro 16 Go', 'Vitesse (RTX 4070)': '~36 tokens/s' },
           { 'Modèle': 'Qwen3 32B Q4_K_M', 'VRAM': '20,5 Go', 'GPU minimum': 'RTX 3090 24 Go', 'Apple Silicon': 'M3 Max 48 Go', 'Vitesse (RTX 4090)': '~28 tokens/s' },
-          { 'Modèle': 'Qwen3-Coder 32B Q4_K_M', 'VRAM': '20,5 Go', 'GPU minimum': 'RTX 3090 24 Go', 'Apple Silicon': 'M3 Max 48 Go', 'Vitesse (RTX 4090)': '~27 tokens/s' },
+          { 'Modèle': 'Qwen2.5-Coder 32B Q4_K_M', 'VRAM': '20,5 Go', 'GPU minimum': 'RTX 3090 24 Go', 'Apple Silicon': 'M3 Max 48 Go', 'Vitesse (RTX 4090)': '~27 tokens/s' },
           { 'Modèle': 'Qwen 3.6 27B Q4_K_M', 'VRAM': '~17 Go', 'GPU minimum': 'RTX 4090 24 Go', 'Apple Silicon': 'M3 Max 36 Go', 'Vitesse (RTX 4090)': '~24 tokens/s' },
           { 'Modèle': 'Qwen2.5-72B Q4_K_M', 'VRAM': '46 Go', 'GPU minimum': '2× RTX 3090 (48 Go)', 'Apple Silicon': 'M2 Ultra 64 Go', 'Vitesse (2×RTX 4090)': '~12 tokens/s' },
         ],
@@ -1969,14 +1969,14 @@ curl http://localhost:11434/v1/chat/completions \\
           { 'Modèle (Q4_K_M)': 'Qwen3 14B', 'MMLU': '79,9 %', 'Math': '69,8 %', 'HumanEval': '64,6 %', 'Vitesse (RTX 4070 12 Go)': '38 tokens/s' },
           { 'Modèle (Q4_K_M)': 'Qwen3 32B', 'MMLU': '83,3 %', 'Math': '79,5 %', 'HumanEval': '71,3 %', 'Vitesse (RTX 4090 24 Go)': '28 tokens/s' },
           { 'Modèle (Q4_K_M)': 'Qwen2.5-72B', 'MMLU': '86,1 %', 'Math': '83,1 %', 'HumanEval': '73,2 %', 'Vitesse (2×RTX 3090)': '12 tokens/s' },
-          { 'Modèle (Q4_K_M)': 'Qwen3-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75,6 %', 'Vitesse (RTX 3060 12 Go)': '55 tokens/s' },
-          { 'Modèle (Q4_K_M)': 'Qwen3-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85,2 %', 'Vitesse (RTX 4070 12 Go)': '36 tokens/s' },
-          { 'Modèle (Q4_K_M)': 'Qwen3-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92,7 %', 'Vitesse (RTX 4090 24 Go)': '27 tokens/s' },
+          { 'Modèle (Q4_K_M)': 'Qwen2.5-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75,6 %', 'Vitesse (RTX 3060 12 Go)': '55 tokens/s' },
+          { 'Modèle (Q4_K_M)': 'Qwen2.5-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85,2 %', 'Vitesse (RTX 4070 12 Go)': '36 tokens/s' },
+          { 'Modèle (Q4_K_M)': 'Qwen2.5-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92,7 %', 'Vitesse (RTX 4090 24 Go)': '27 tokens/s' },
         ],
         columns: ['Modèle (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', 'Vitesse (RTX 3060 12 Go)'],
         tableFormat: true,
         callouts: [
-          { type: 'tip', text: 'Vous voulez ce score HumanEval de 92,7 % à 27 tokens/s ? Consultez le [GPU 24 Go qui exécute Qwen3-Coder 32B](#affiliate-picks).' },
+          { type: 'tip', text: 'Vous voulez ce score HumanEval de 92,7 % à 27 tokens/s ? Consultez le [GPU 24 Go qui exécute Qwen2.5-Coder 32B](#affiliate-picks).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-fr.webp',
         imageCaption: 'Scores benchmark Qwen3 (Q4_K_M) — PromptQuorum 2026',
@@ -1989,8 +1989,8 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'Niveau VRAM': '6 Go', 'Meilleur Qwen': 'Qwen3 8B', 'Meilleur concurrent': 'Llama 3.2 3B', 'Recommandation': 'Qwen3 8B — même VRAM, modèle beaucoup plus grand' },
-          { 'Niveau VRAM': '12 Go', 'Meilleur Qwen': 'Qwen3-Coder 14B', 'Meilleur concurrent': 'Llama 3.1 8B Instruct', 'Recommandation': 'Qwen3-Coder 14B pour le code ; Llama 3.1 8B pour le chat' },
-          { 'Niveau VRAM': '24 Go', 'Meilleur Qwen': 'Qwen3-Coder 32B', 'Meilleur concurrent': 'Llama 3.3 70B (déchargé)', 'Recommandation': 'Qwen3-Coder 32B pour le code ; Llama 3.3 70B si qualité > vitesse' },
+          { 'Niveau VRAM': '12 Go', 'Meilleur Qwen': 'Qwen2.5-Coder 14B', 'Meilleur concurrent': 'Llama 3.1 8B Instruct', 'Recommandation': 'Qwen2.5-Coder 14B pour le code ; Llama 3.1 8B pour le chat' },
+          { 'Niveau VRAM': '24 Go', 'Meilleur Qwen': 'Qwen2.5-Coder 32B', 'Meilleur concurrent': 'Llama 3.3 70B (déchargé)', 'Recommandation': 'Qwen2.5-Coder 32B pour le code ; Llama 3.3 70B si qualité > vitesse' },
           { 'Niveau VRAM': '48 Go+', 'Meilleur Qwen': 'Qwen2.5-72B', 'Meilleur concurrent': 'DeepSeek-V2.5 236B MoE', 'Recommandation': 'DeepSeek nécessite ~130 Go RAM ; Qwen2.5-72B est le choix pratique' },
         ],
         columns: ['Niveau VRAM', 'Meilleur Qwen', 'Meilleur concurrent', 'Recommandation'],
@@ -2023,15 +2023,15 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 1,
             name: 'NVIDIA RTX 4060 8 Go',
-            tagline: 'Choix entrée de gamme — Qwen3 8B, Qwen3-Coder 7B (5,5 Go de VRAM)',
-            verdict: 'La carte la moins chère de cette liste qui atteint le seuil de 5,5 Go requis par Qwen3 8B tout en laissant de la marge pour le contexte. Exécute Qwen3-Coder 7B à ~55 tokens/s — assez rapide pour une assistance au code interactive.',
+            tagline: 'Choix entrée de gamme — Qwen3 8B, Qwen2.5-Coder 7B (5,5 Go de VRAM)',
+            verdict: 'La carte la moins chère de cette liste qui atteint le seuil de 5,5 Go requis par Qwen3 8B tout en laissant de la marge pour le contexte. Exécute Qwen2.5-Coder 7B à ~55 tokens/s — assez rapide pour une assistance au code interactive.',
             pros: [
               'Le besoin de 5,5 Go de VRAM est couvert avec de la marge pour un cache KV à contexte long',
               'Prix le plus bas de cette liste — le bon premier GPU si vous n\'avez jamais exécuté de LLM local',
               '50–57 tokens/s sur les modèles 7B/8B, au niveau des cartes plus chères à cette taille de modèle',
             ],
             cons: [
-              'Plafonne à Qwen3 8B / Qwen3-Coder 7B — aucune marge pour passer à 14B sans compresser le cache KV',
+              'Plafonne à Qwen3 8B / Qwen2.5-Coder 7B — aucune marge pour passer à 14B sans compresser le cache KV',
             ],
             affiliateLinks: [
               { url: 'https://www.amazon.fr/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 Go', productCategory: 'GPU', priceRange: 'env. 470–600 €', label: 'Vérifier le prix actuel →' },
@@ -2040,8 +2040,8 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 2,
             name: 'NVIDIA RTX 4070 Super 12 Go',
-            tagline: 'Choix milieu de gamme — Qwen3 14B, Qwen3-Coder 14B (9,5 Go de VRAM)',
-            verdict: 'Exécute Qwen3-Coder 14B (85,2 % HumanEval) à 36–38 tokens/s avec 2–3 Go de VRAM restants pour le contexte — le niveau où la qualité du code progresse nettement par rapport aux modèles 7B/8B.',
+            tagline: 'Choix milieu de gamme — Qwen3 14B, Qwen2.5-Coder 14B (9,5 Go de VRAM)',
+            verdict: 'Exécute Qwen2.5-Coder 14B (85,2 % HumanEval) à 36–38 tokens/s avec 2–3 Go de VRAM restants pour le contexte — le niveau où la qualité du code progresse nettement par rapport aux modèles 7B/8B.',
             pros: [
               'Le modèle de 9,5 Go tient avec 2–3 Go de VRAM en réserve — de la place pour des fenêtres de contexte plus longues',
               'HumanEval passe de 75,6 % (7B) à 85,2 % (14B) — le saut qualité/prix le plus clair de la gamme',
@@ -2057,11 +2057,11 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 3,
             name: 'NVIDIA RTX 4090 24 Go (ou RTX 3090 24 Go d\'occasion)',
-            tagline: 'Choix haut de gamme — Qwen3-Coder 32B, Qwen 3.6 27B (~17–20,5 Go de VRAM)',
-            verdict: 'La 4090 délivre 27–28 tokens/s sur Qwen3-Coder 32B — une vitesse de code en temps réel à 92,7 % de HumanEval. Une RTX 3090 d\'occasion offre la même VRAM de 24 Go et se situe à environ 15 % de la vitesse d\'inférence de la 4090, pour un prix nettement plus bas si vous trouvez une annonce d\'occasion fiable.',
+            tagline: 'Choix haut de gamme — Qwen2.5-Coder 32B, Qwen 3.6 27B (~17–20,5 Go de VRAM)',
+            verdict: 'La 4090 délivre 27–28 tokens/s sur Qwen2.5-Coder 32B — une vitesse de code en temps réel à 92,7 % de HumanEval. Une RTX 3090 d\'occasion offre la même VRAM de 24 Go et se situe à environ 15 % de la vitesse d\'inférence de la 4090, pour un prix nettement plus bas si vous trouvez une annonce d\'occasion fiable.',
             pros: [
               '24 Go de VRAM couvrent toutes les variantes de Qwen3 32B et Qwen 3.6 27B avec de la marge',
-              '27–28 tokens/s sur Qwen3-Coder 32B (92,7 % HumanEval) — assez rapide pour du pair programming en temps réel',
+              '27–28 tokens/s sur Qwen2.5-Coder 32B (92,7 % HumanEval) — assez rapide pour du pair programming en temps réel',
               'La RTX 3090 d\'occasion est l\'alternative économique : même plafond de VRAM, environ 15 % plus lente, nettement moins chère d\'occasion',
             ],
             cons: [
@@ -2116,7 +2116,7 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Ignorer la taille de la fenêtre de contexte.** Qwen3 supporte 128K de contexte. La spécification du Modelfile d\'Ollama fixe `num_ctx` à 2048 par défaut, mais le runtime applique en réalité une valeur par défaut échelonnée selon la VRAM : 4K en dessous de 24 Gio, 32K entre 24 et 48 Gio, 256K au-delà de 48 Gio. Ne comptez sur aucun des deux réglages par défaut : définissez `num_ctx` explicitement, par exemple en ajoutant `--num-ctx 8192` (ou plus) à la commande d\'exécution — sinon le modèle tronque silencieusement l\'entrée.',
           '**Choisir la quantification Q2_K pour du chinois.** À 2 bits, la sortie en langue chinoise de Qwen3 se dégrade notablement. Utiliser au minimum Q4_K_M pour tout travail en CJK.',
           '**Exécuter le modèle 32B avec trop peu de VRAM.** Si votre GPU a 16 Go et que le modèle en nécessite 20,5 Go, Ollama décharge des couches en RAM — le modèle tourne à 3–5 tokens/s, inutilisable en interactif.',
-          '**Utiliser la mauvaise sous-famille pour le code.** Qwen3 8B (usage général) : 57,3 % sur HumanEval. Qwen3-Coder 7B : 75,6 % — soit +32 % de performance relative. Toujours utiliser la variante Coder pour le code.',
+          '**Utiliser la mauvaise sous-famille pour le code.** Qwen3 8B (usage général) : 57,3 % sur HumanEval. Qwen2.5-Coder 7B : 75,6 % — soit +32 % de performance relative. Toujours utiliser la variante Coder pour le code.',
         ],
       },
       nextSteps: {
@@ -2132,7 +2132,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'Questions fréquentes',
         faqs: [
             { q: 'Quelle quantité de VRAM est nécessaire pour Qwen3 8B en local ?', a: 'Qwen3 8B Q4_K_M nécessite 5,5 Go de VRAM. Une RTX 3060 6 Go, RTX 4060 ou puce Apple M avec 8 Go de mémoire unifiée suffisent.' },
-            { q: 'Quel est le meilleur modèle Qwen pour le code en local ?', a: 'Qwen3-Coder 32B — 92,7 % sur HumanEval, GPU 24 Go requis. Avec 12 Go de VRAM : Qwen3-Coder 14B (85,2 %, 9,5 Go VRAM).' },
+            { q: 'Quel est le meilleur modèle Qwen pour le code en local ?', a: 'Qwen2.5-Coder 32B — 92,7 % sur HumanEval, GPU 24 Go requis. Avec 12 Go de VRAM : Qwen2.5-Coder 14B (85,2 %, 9,5 Go VRAM).' },
             { q: 'Comment Qwen se compare-t-il à DeepSeek ?', a: 'Qwen3 utilise une architecture dense compatible matériel grand public. DeepSeek-V2.5 nécessite ~130 Go RAM — inaccessible sans GPU serveur.' },
             { q: 'Puis-je utiliser Qwen sur un Mac ?', a: 'Oui. M2 Pro 32 Go : Qwen3 14B à ~32 tokens/s. M3 Max 64 Go : Qwen3 32B à ~22 tokens/s.' },
             { q: 'Quelle commande Ollama utiliser pour Qwen ?', a: 'Pour le modèle phare, `ollama run qwen3.6:27b` (~17 Go de VRAM). Pour Qwen3, `ollama pull qwen3:8b`. Pour Qwen2.5, `ollama pull qwen2.5:7b` pour 7B, `:14b` pour 14B, `:32b` pour 32B, ou `qwen2.5-coder:32b` pour la variante code. Toujours des tags explicites.' },
@@ -2191,7 +2191,7 @@ curl http://localhost:11434/v1/chat/completions \\
       { label: 'Häufig gestellte Fragen', anchor: '#faq' },
     ],
     gammaEmbedUrl: '/presentations/qwen-local-deployment-guide-2026-static.html',
-    gammaDescription: 'Die Präsentation unten enthält: das neue Flagship-Modell Qwen 3.6 27B (256K-Kontext, ~17 GB in Q4_K_M), die gesamte Qwen-Modellfamilie auf einen Blick (Qwen3 0,6B–32B, Qwen2.5 7B–72B), VRAM-Anforderungen je Hardware-Tier, Benchmark-Daten für Qwen3-Coder 32B und ein Entscheidungsdiagramm Qwen vs. DeepSeek vs. Llama. Als Qwen-Deployment-Referenzkarte herunterladen.',
+    gammaDescription: 'Die Präsentation unten enthält: das neue Flagship-Modell Qwen 3.6 27B (256K-Kontext, ~17 GB in Q4_K_M), die gesamte Qwen-Modellfamilie auf einen Blick (Qwen3 0,6B–32B, Qwen2.5 7B–72B), VRAM-Anforderungen je Hardware-Tier, Benchmark-Daten für Qwen2.5-Coder 32B und ein Entscheidungsdiagramm Qwen vs. DeepSeek vs. Llama. Als Qwen-Deployment-Referenzkarte herunterladen.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -2211,7 +2211,7 @@ curl http://localhost:11434/v1/chat/completions \\
       inLanguage: 'de',
       mainEntity: [
         { '@type': 'Question', name: 'Wie viel VRAM benötige ich für Qwen3 8B lokal?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3 8B Q4_K_M benötigt 5,5 GB VRAM. Eine NVIDIA RTX 3060 6 GB, RTX 4060 oder ein Apple-M-Chip mit 8 GB Unified Memory reichen aus.' } },
-        { '@type': 'Question', name: 'Welches Qwen-Modell eignet sich am besten für Coding lokal?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 32B ist das beste lokal ausführbare Coding-Modell — es erreicht 92,7 % auf HumanEval und benötigt eine 24-GB-GPU (RTX 3090 oder RTX 4090). Bei 12 GB VRAM oder weniger: Qwen3-Coder 14B (HumanEval 85,2 %, 9,5 GB VRAM).' } },
+        { '@type': 'Question', name: 'Welches Qwen-Modell eignet sich am besten für Coding lokal?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5-Coder 32B ist das beste lokal ausführbare Coding-Modell — es erreicht 92,7 % auf HumanEval und benötigt eine 24-GB-GPU (RTX 3090 oder RTX 4090). Bei 12 GB VRAM oder weniger: Qwen2.5-Coder 14B (HumanEval 85,2 %, 9,5 GB VRAM).' } },
         { '@type': 'Question', name: 'Wie schneidet Qwen im Vergleich zu DeepSeek ab?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5-72B und DeepSeek-V2.5 sind bei allgemeinen Aufgaben vergleichbar, aber Qwen verwendet eine Dense-Architektur, die auf Consumer-Hardware passt. DeepSeek-V2.5 ist ein 236B-MoE-Modell und benötigt ~130 GB RAM — ohne Server-GPU nicht realisierbar.' } },
         { '@type': 'Question', name: 'Kann ich Qwen auf einem Mac betreiben?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Apple Silicon nutzt Unified Memory — ein M2 Pro 32 GB führt Qwen3 14B flüssig mit ~32 Tokens/Sek. aus. Ein M3 Max 64 GB bewältigt Qwen3 32B mit ~22 Tokens/Sek.' } },
         { '@type': 'Question', name: 'Welchen Ollama-Befehl verwende ich für Qwen?', acceptedAnswer: { '@type': 'Answer', text: 'Für das neue Flagship-Modell: `ollama run qwen3.6:27b` (~17 GB VRAM). Für Qwen3: `ollama pull qwen3:8b`. Für Qwen2.5: `ollama pull qwen2.5:7b` für 7B, `ollama pull qwen2.5:14b` für 14B, `ollama pull qwen2.5:32b` für 32B oder `ollama pull qwen2.5-coder:32b` für die Coding-Variante. Immer explizite Größen-Tags verwenden.' } },
@@ -2265,12 +2265,12 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'Modell': 'Qwen3 8B Q4_K_M', 'VRAM': '5,5 GB', 'Mindest-GPU': 'RTX 3060 6 GB, RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', 'Geschwindigkeit (RTX 3060)': '~57 Tokens/Sek.' },
-          { 'Modell': 'Qwen3-Coder 7B Q4_K_M', 'VRAM': '5,5 GB', 'Mindest-GPU': 'RTX 3060 6 GB, RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', 'Geschwindigkeit (RTX 3060)': '~55 Tokens/Sek.' },
+          { 'Modell': 'Qwen2.5-Coder 7B Q4_K_M', 'VRAM': '5,5 GB', 'Mindest-GPU': 'RTX 3060 6 GB, RTX 4060', 'Apple Silicon': 'M1/M2 8 GB', 'Geschwindigkeit (RTX 3060)': '~55 Tokens/Sek.' },
           { 'Modell': 'Qwen2-VL 7B Q4_K_M', 'VRAM': '6,2 GB', 'Mindest-GPU': 'RTX 3060 8 GB, RTX 4060', 'Apple Silicon': 'M1/M2 16 GB', 'Geschwindigkeit (RTX 4060)': '~38 Tokens/Sek.' },
           { 'Modell': 'Qwen3 14B Q4_K_M', 'VRAM': '9,5 GB', 'Mindest-GPU': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', 'Geschwindigkeit (RTX 4070)': '~38 Tokens/Sek.' },
-          { 'Modell': 'Qwen3-Coder 14B Q4_K_M', 'VRAM': '9,5 GB', 'Mindest-GPU': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', 'Geschwindigkeit (RTX 4070)': '~36 Tokens/Sek.' },
+          { 'Modell': 'Qwen2.5-Coder 14B Q4_K_M', 'VRAM': '9,5 GB', 'Mindest-GPU': 'RTX 4070 12 GB', 'Apple Silicon': 'M2 Pro 16 GB', 'Geschwindigkeit (RTX 4070)': '~36 Tokens/Sek.' },
           { 'Modell': 'Qwen3 32B Q4_K_M', 'VRAM': '20,5 GB', 'Mindest-GPU': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', 'Geschwindigkeit (RTX 4090)': '~28 Tokens/Sek.' },
-          { 'Modell': 'Qwen3-Coder 32B Q4_K_M', 'VRAM': '20,5 GB', 'Mindest-GPU': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', 'Geschwindigkeit (RTX 4090)': '~27 Tokens/Sek.' },
+          { 'Modell': 'Qwen2.5-Coder 32B Q4_K_M', 'VRAM': '20,5 GB', 'Mindest-GPU': 'RTX 3090 24 GB', 'Apple Silicon': 'M3 Max 48 GB', 'Geschwindigkeit (RTX 4090)': '~27 Tokens/Sek.' },
           { 'Modell': 'Qwen 3.6 27B Q4_K_M', 'VRAM': '~17 GB', 'Mindest-GPU': 'RTX 4090 24 GB', 'Apple Silicon': 'M3 Max 36 GB', 'Geschwindigkeit (RTX 4090)': '~24 Tokens/Sek.' },
           { 'Modell': 'Qwen2.5-72B Q4_K_M', 'VRAM': '46 GB', 'Mindest-GPU': '2× RTX 3090 (48 GB)', 'Apple Silicon': 'M2 Ultra 64 GB', 'Geschwindigkeit (2×RTX 4090)': '~12 Tokens/Sek.' },
         ],
@@ -2363,14 +2363,14 @@ curl http://localhost:11434/v1/chat/completions \\
           { 'Modell (Q4_K_M)': 'Qwen3 14B', 'MMLU': '79,9 %', 'Math': '69,8 %', 'HumanEval': '64,6 %', 'Geschwindigkeit (RTX 4070 12 GB)': '38 Tokens/Sek.' },
           { 'Modell (Q4_K_M)': 'Qwen3 32B', 'MMLU': '83,3 %', 'Math': '79,5 %', 'HumanEval': '71,3 %', 'Geschwindigkeit (RTX 4090 24 GB)': '28 Tokens/Sek.' },
           { 'Modell (Q4_K_M)': 'Qwen2.5-72B', 'MMLU': '86,1 %', 'Math': '83,1 %', 'HumanEval': '73,2 %', 'Geschwindigkeit (2×RTX 3090)': '12 Tokens/Sek.' },
-          { 'Modell (Q4_K_M)': 'Qwen3-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75,6 %', 'Geschwindigkeit (RTX 3060 12 GB)': '55 Tokens/Sek.' },
-          { 'Modell (Q4_K_M)': 'Qwen3-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85,2 %', 'Geschwindigkeit (RTX 4070 12 GB)': '36 Tokens/Sek.' },
-          { 'Modell (Q4_K_M)': 'Qwen3-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92,7 %', 'Geschwindigkeit (RTX 4090 24 GB)': '27 Tokens/Sek.' },
+          { 'Modell (Q4_K_M)': 'Qwen2.5-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75,6 %', 'Geschwindigkeit (RTX 3060 12 GB)': '55 Tokens/Sek.' },
+          { 'Modell (Q4_K_M)': 'Qwen2.5-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85,2 %', 'Geschwindigkeit (RTX 4070 12 GB)': '36 Tokens/Sek.' },
+          { 'Modell (Q4_K_M)': 'Qwen2.5-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92,7 %', 'Geschwindigkeit (RTX 4090 24 GB)': '27 Tokens/Sek.' },
         ],
         columns: ['Modell (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', 'Geschwindigkeit (RTX 3060 12 GB)'],
         tableFormat: true,
         callouts: [
-          { type: 'tip', text: 'Sie möchten diesen HumanEval-Score von 92,7 % bei 27 Tokens/Sek.? Sehen Sie sich die [24-GB-GPU an, die Qwen3-Coder 32B ausführt](#affiliate-picks).' },
+          { type: 'tip', text: 'Sie möchten diesen HumanEval-Score von 92,7 % bei 27 Tokens/Sek.? Sehen Sie sich die [24-GB-GPU an, die Qwen2.5-Coder 32B ausführt](#affiliate-picks).' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-de.webp',
         imageCaption: 'Qwen3 Benchmark-Ergebnisse (Q4_K_M) — PromptQuorum 2026',
@@ -2383,8 +2383,8 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'VRAM-Stufe': '6 GB', 'Bestes Qwen': 'Qwen3 8B', 'Bester Konkurrent': 'Llama 3.2 3B (passt, aber nur 3B)', 'Empfehlung': 'Qwen3 8B gewinnt — gleiches VRAM, viel größeres Modell' },
-          { 'VRAM-Stufe': '12 GB', 'Bestes Qwen': 'Qwen3-Coder 14B', 'Bester Konkurrent': 'Llama 3.1 8B Instruct', 'Empfehlung': 'Qwen3-Coder 14B für Coding; Llama 3.1 8B für allgemeinen Chat' },
-          { 'VRAM-Stufe': '24 GB', 'Bestes Qwen': 'Qwen3-Coder 32B', 'Bester Konkurrent': 'Llama 3.3 70B (ausgelagert)', 'Empfehlung': 'Qwen3-Coder 32B für Code; Llama 3.3 70B wenn Qualität > Geschwindigkeit' },
+          { 'VRAM-Stufe': '12 GB', 'Bestes Qwen': 'Qwen2.5-Coder 14B', 'Bester Konkurrent': 'Llama 3.1 8B Instruct', 'Empfehlung': 'Qwen2.5-Coder 14B für Coding; Llama 3.1 8B für allgemeinen Chat' },
+          { 'VRAM-Stufe': '24 GB', 'Bestes Qwen': 'Qwen2.5-Coder 32B', 'Bester Konkurrent': 'Llama 3.3 70B (ausgelagert)', 'Empfehlung': 'Qwen2.5-Coder 32B für Code; Llama 3.3 70B wenn Qualität > Geschwindigkeit' },
           { 'VRAM-Stufe': '48 GB+', 'Bestes Qwen': 'Qwen2.5-72B', 'Bester Konkurrent': 'DeepSeek-V2.5 236B MoE', 'Empfehlung': 'DeepSeek benötigt ~130 GB RAM; Qwen2.5-72B ist die praktische 48-GB-Wahl' },
         ],
         columns: ['VRAM-Stufe', 'Bestes Qwen', 'Bester Konkurrent', 'Empfehlung'],
@@ -2417,15 +2417,15 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 1,
             name: 'NVIDIA RTX 4060 8 GB',
-            tagline: 'Einsteiger-Empfehlung — Qwen3 8B, Qwen3-Coder 7B (5,5 GB VRAM)',
-            verdict: 'Die günstigste Karte auf dieser Liste, die die 5,5-GB-Anforderung von Qwen3 8B mit Spielraum für Kontext erfüllt. Führt Qwen3-Coder 7B mit ~55 Tokens/Sek. aus — schnell genug für interaktive Coding-Unterstützung.',
+            tagline: 'Einsteiger-Empfehlung — Qwen3 8B, Qwen2.5-Coder 7B (5,5 GB VRAM)',
+            verdict: 'Die günstigste Karte auf dieser Liste, die die 5,5-GB-Anforderung von Qwen3 8B mit Spielraum für Kontext erfüllt. Führt Qwen2.5-Coder 7B mit ~55 Tokens/Sek. aus — schnell genug für interaktive Coding-Unterstützung.',
             pros: [
               'Erfüllt die 5,5-GB-VRAM-Anforderung mit Puffer für langen Kontext-KV-Cache',
               'Niedrigster Preis auf dieser Liste — die richtige erste GPU, wenn Sie noch nie ein lokales LLM betrieben haben',
               '50–57 Tokens/Sek. bei 7B/8B-Modellen, gleichauf mit teureren Karten bei dieser Modellgröße',
             ],
             cons: [
-              'Deckelt bei Qwen3 8B / Qwen3-Coder 7B — kein Spielraum für 14B ohne KV-Cache-Engpass',
+              'Deckelt bei Qwen3 8B / Qwen2.5-Coder 7B — kein Spielraum für 14B ohne KV-Cache-Engpass',
             ],
             affiliateLinks: [
               { url: 'https://www.amazon.de/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: 'ca. 470–600 €', label: 'Aktuellen Preis prüfen →' },
@@ -2434,8 +2434,8 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 2,
             name: 'NVIDIA RTX 4070 Super 12 GB',
-            tagline: 'Mittelklasse-Empfehlung — Qwen3 14B, Qwen3-Coder 14B (9,5 GB VRAM)',
-            verdict: 'Führt Qwen3-Coder 14B (85,2 % HumanEval) mit 36–38 Tokens/Sek. aus und lässt dabei noch 2–3 GB VRAM für Kontext übrig — die Stufe, auf der die Coding-Qualität spürbar über die 7B/8B-Modelle hinaus zunimmt.',
+            tagline: 'Mittelklasse-Empfehlung — Qwen3 14B, Qwen2.5-Coder 14B (9,5 GB VRAM)',
+            verdict: 'Führt Qwen2.5-Coder 14B (85,2 % HumanEval) mit 36–38 Tokens/Sek. aus und lässt dabei noch 2–3 GB VRAM für Kontext übrig — die Stufe, auf der die Coding-Qualität spürbar über die 7B/8B-Modelle hinaus zunimmt.',
             pros: [
               'Das 9,5-GB-Modell passt mit 2–3 GB VRAM-Puffer — Raum für längere Kontextfenster',
               'HumanEval springt von 75,6 % (7B) auf 85,2 % (14B) — der klarste Preis-Leistungs-Sprung in der Reihe',
@@ -2451,11 +2451,11 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 3,
             name: 'NVIDIA RTX 4090 24 GB (oder gebrauchte RTX 3090 24 GB)',
-            tagline: 'High-End-Empfehlung — Qwen3-Coder 32B, Qwen 3.6 27B (~17–20,5 GB VRAM)',
-            verdict: 'Die 4090 liefert 27–28 Tokens/Sek. bei Qwen3-Coder 32B — Echtzeit-Coding-Geschwindigkeit bei 92,7 % HumanEval. Eine gebrauchte RTX 3090 hat dasselbe 24-GB-VRAM und liegt bei der Inferenzgeschwindigkeit rund 15 % hinter der 4090 — bei deutlich geringeren Kosten, sofern Sie ein vertrauenswürdiges Gebrauchtangebot finden.',
+            tagline: 'High-End-Empfehlung — Qwen2.5-Coder 32B, Qwen 3.6 27B (~17–20,5 GB VRAM)',
+            verdict: 'Die 4090 liefert 27–28 Tokens/Sek. bei Qwen2.5-Coder 32B — Echtzeit-Coding-Geschwindigkeit bei 92,7 % HumanEval. Eine gebrauchte RTX 3090 hat dasselbe 24-GB-VRAM und liegt bei der Inferenzgeschwindigkeit rund 15 % hinter der 4090 — bei deutlich geringeren Kosten, sofern Sie ein vertrauenswürdiges Gebrauchtangebot finden.',
             pros: [
               '24 GB VRAM deckt jede Qwen3-32B-Variante und Qwen 3.6 27B mit Spielraum ab',
-              '27–28 Tokens/Sek. bei Qwen3-Coder 32B (92,7 % HumanEval) — schnell genug für Echtzeit-Pair-Programming',
+              '27–28 Tokens/Sek. bei Qwen2.5-Coder 32B (92,7 % HumanEval) — schnell genug für Echtzeit-Pair-Programming',
               'Gebrauchte RTX 3090 ist die preiswerte Alternative: gleiche VRAM-Grenze, ~15 % langsamer, gebraucht deutlich günstiger',
             ],
             cons: [
@@ -2510,7 +2510,7 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Kontextfenstergröße ignorieren.** Qwen3 unterstützt 128K-Kontext. Die Modelfile-Spezifikation von Ollama setzt `num_ctx` standardmäßig auf 2048, doch die Laufzeitumgebung wählt tatsächlich einen VRAM-gestaffelten Standardwert: 4K unter 24 GiB, 32K zwischen 24 und 48 GiB, 256K über 48 GiB. Verlassen Sie sich auf keinen der beiden Standardwerte: Legen Sie `num_ctx` explizit fest, zum Beispiel mit `--num-ctx 8192` (oder höher) im Run-Befehl — andernfalls kürzt das Modell die Eingabe stillschweigend.',
           '**Q2_K-Quantisierung für chinesischsprachige Nutzung wählen.** Bei 2-Bit-Präzision verschlechtert sich Qwen3\'s chinesische Ausgabe spürbar. Q4_K_M als Minimum für jede chinesischsprachige Arbeit verwenden.',
           '**32B-Modell mit zu wenig VRAM ausführen.** Wenn die GPU 16 GB hat und das Modell 20,5 GB benötigt, lagert Ollama Layer in den System-RAM aus. Das Modell läuft, aber mit 3–5 Tokens/Sek. — für interaktive Nutzung unbrauchbar.',
-          '**Falsche Teilfamilie für Coding verwenden.** Qwen3 8B (allgemein) erreicht 57,3 % auf HumanEval. Qwen3-Coder 7B erreicht 75,6 % auf demselben Benchmark — eine 32 %ige relative Verbesserung. Für Coding immer die Coder-Variante gleicher Größe verwenden.',
+          '**Falsche Teilfamilie für Coding verwenden.** Qwen3 8B (allgemein) erreicht 57,3 % auf HumanEval. Qwen2.5-Coder 7B erreicht 75,6 % auf demselben Benchmark — eine 32 %ige relative Verbesserung. Für Coding immer die Coder-Variante gleicher Größe verwenden.',
         ],
       },
       nextSteps: {
@@ -2530,7 +2530,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { q: 'Welcher Ollama-Befehl lädt Qwen 3.6 27B?', a: '`ollama run qwen3.6:27b` lädt das Modell beim ersten Aufruf herunter und startet es direkt. Ollama verwendet standardmäßig eine Q4_K_M-Quantisierung, was hier den ~17 GB VRAM entspricht. Soll das Modell nur geladen, aber noch nicht gestartet werden, nutzen Sie `ollama pull qwen3.6:27b`.' },
           { q: 'Läuft Qwen 3.6 27B auf 12 GB VRAM?', a: 'Nicht sinnvoll. Mit ~17 GB Bedarf in Q4_K_M passt das Modell nicht vollständig auf eine 12-GB-Karte; ein Teil müsste in den System-RAM ausgelagert werden, was die Geschwindigkeit stark einbrechen lässt. Auf 12 GB VRAM fahren Sie mit einem kleineren Qwen-Modell deutlich besser — dort bleibt auch Platz für einen längeren Kontext.' },
           { q: 'Wie viel VRAM benötige ich für Qwen3 8B lokal?', a: 'Qwen3 8B Q4_K_M benötigt 5,5 GB VRAM. Eine RTX 3060 6 GB, RTX 4060 oder ein Apple-M-Chip mit 8 GB Unified Memory reichen aus.' },
-          { q: 'Welches Qwen-Modell eignet sich am besten für Coding lokal?', a: 'Qwen3-Coder 32B ist das beste lokal ausführbare Coding-Modell — 92,7 % auf HumanEval, benötigt 24 GB GPU. Bei 12 GB VRAM: Qwen3-Coder 14B (85,2 %, 9,5 GB VRAM).' },
+          { q: 'Welches Qwen-Modell eignet sich am besten für Coding lokal?', a: 'Qwen2.5-Coder 32B ist das beste lokal ausführbare Coding-Modell — 92,7 % auf HumanEval, benötigt 24 GB GPU. Bei 12 GB VRAM: Qwen2.5-Coder 14B (85,2 %, 9,5 GB VRAM).' },
           { q: 'Wie schneidet Qwen im Vergleich zu DeepSeek ab?', a: 'Qwen3 nutzt Dense-Architektur, die auf Consumer-Hardware passt. DeepSeek-V2.5 ist ein 236B-MoE-Modell und benötigt ~130 GB RAM — ohne Server-GPU nicht praktikabel.' },
           { q: 'Kann ich Qwen auf einem Mac betreiben?', a: 'Ja. M2 Pro 32 GB führt Qwen3 14B mit ~32 Tokens/Sek. aus. M3 Max 64 GB bewältigt Qwen3 32B mit ~22 Tokens/Sek.' },
           { q: 'Welchen Ollama-Befehl verwende ich für Qwen?', a: 'Für das Flagship-Modell: `ollama run qwen3.6:27b` (~17 GB VRAM). Für Qwen3: `ollama pull qwen3:8b`. Für Qwen2.5: `ollama pull qwen2.5:7b` für 7B, `:14b` für 14B, `:32b` für 32B oder `qwen2.5-coder:32b` für die Coding-Variante. Immer explizite Größen-Tags verwenden.' },
@@ -2589,7 +2589,7 @@ curl http://localhost:11434/v1/chat/completions \\
       { label: 'よくある質問', anchor: '#faq' },
     ],
     gammaEmbedUrl: '/presentations/qwen-local-deployment-guide-2026-static.html',
-    gammaDescription: '下記スライドデッキの内容：新フラッグシップQwen 3.6 27B（256Kコンテキスト、Q4_K_M約17GB）、Qwenモデルファミリー全体像（Qwen3 0.6B〜32B、Qwen2.5 7B〜72B）、ハードウェア階層別VRAM要件、Qwen3-Coder 32Bのベンチマークデータ、Qwen vs DeepSeek vs Llamaの意思決定チャート。Qwenデプロイ参照カードとしてダウンロード可能。',
+    gammaDescription: '下記スライドデッキの内容：新フラッグシップQwen 3.6 27B（256Kコンテキスト、Q4_K_M約17GB）、Qwenモデルファミリー全体像（Qwen3 0.6B〜32B、Qwen2.5 7B〜72B）、ハードウェア階層別VRAM要件、Qwen2.5-Coder 32Bのベンチマークデータ、Qwen vs DeepSeek vs Llamaの意思決定チャート。Qwenデプロイ参照カードとしてダウンロード可能。',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -2622,7 +2622,7 @@ curl http://localhost:11434/v1/chat/completions \\
             'name': 'コーディング用途に最適なQwenモデルは？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 32B — HumanEval 92.7%、GPU 24GB必要。VRAM 12GB以下ならQwen3-Coder 14B（85.2%、9.5GB VRAM）。',
+              'text': 'Qwen2.5-Coder 32B — HumanEval 92.7%、GPU 24GB必要。VRAM 12GB以下ならQwen2.5-Coder 14B（85.2%、9.5GB VRAM）。',
             },
           },
           {
@@ -2840,14 +2840,14 @@ curl http://localhost:11434/v1/chat/completions \\
           { 'モデル（Q4_K_M）': 'Qwen3 14B', 'MMLU': '79.9%', 'Math': '69.8%', 'HumanEval': '64.6%', '速度（RTX 4070 12GB）': '38トークン/秒' },
           { 'モデル（Q4_K_M）': 'Qwen3 32B', 'MMLU': '83.3%', 'Math': '79.5%', 'HumanEval': '71.3%', '速度（RTX 4090 24GB）': '28トークン/秒' },
           { 'モデル（Q4_K_M）': 'Qwen2.5-72B', 'MMLU': '86.1%', 'Math': '83.1%', 'HumanEval': '73.2%', '速度（2×RTX 3090）': '12トークン/秒' },
-          { 'モデル（Q4_K_M）': 'Qwen3-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75.6%', '速度（RTX 3060 12GB）': '55トークン/秒' },
-          { 'モデル（Q4_K_M）': 'Qwen3-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85.2%', '速度（RTX 4070 12GB）': '36トークン/秒' },
-          { 'モデル（Q4_K_M）': 'Qwen3-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92.7%', '速度（RTX 4090 24GB）': '27トークン/秒' },
+          { 'モデル（Q4_K_M）': 'Qwen2.5-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75.6%', '速度（RTX 3060 12GB）': '55トークン/秒' },
+          { 'モデル（Q4_K_M）': 'Qwen2.5-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85.2%', '速度（RTX 4070 12GB）': '36トークン/秒' },
+          { 'モデル（Q4_K_M）': 'Qwen2.5-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92.7%', '速度（RTX 4090 24GB）': '27トークン/秒' },
         ],
         columns: ['モデル（Q4_K_M）', 'MMLU', 'Math', 'HumanEval', '速度（RTX 3060 12GB）'],
         tableFormat: true,
         callouts: [
-          { type: 'tip', text: '27トークン/秒でHumanEval 92.7%を狙いたいですか？[Qwen3-Coder 32Bを動かせる24GB GPU](#affiliate-picks)をご覧ください。' },
+          { type: 'tip', text: '27トークン/秒でHumanEval 92.7%を狙いたいですか？[Qwen2.5-Coder 32Bを動かせる24GB GPU](#affiliate-picks)をご覧ください。' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-ja.webp',
         imageCaption: 'Qwen3ベンチマークスコア（Q4_K_M）— PromptQuorum 2026',
@@ -2860,8 +2860,8 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'VRAM階層': '6GB', '最良Qwen': 'Qwen3 8B', '最良競合': 'Llama 3.2 3B（収まるが3Bのみ）', '判定': 'Qwen3 8Bが優位 — 同VRAM、より大きなモデル' },
-          { 'VRAM階層': '12GB', '最良Qwen': 'Qwen3-Coder 14B', '最良競合': 'Llama 3.1 8B Instruct', '判定': 'コーディングにはQwen3-Coder 14B；汎用チャットにはLlama 3.1 8B' },
-          { 'VRAM階層': '24GB', '最良Qwen': 'Qwen3-Coder 32B', '最良競合': 'Llama 3.3 70B（オフロード）', '判定': 'コードにはQwen3-Coder 32B；品質>速度ならLlama 3.3 70B' },
+          { 'VRAM階層': '12GB', '最良Qwen': 'Qwen2.5-Coder 14B', '最良競合': 'Llama 3.1 8B Instruct', '判定': 'コーディングにはQwen2.5-Coder 14B；汎用チャットにはLlama 3.1 8B' },
+          { 'VRAM階層': '24GB', '最良Qwen': 'Qwen2.5-Coder 32B', '最良競合': 'Llama 3.3 70B（オフロード）', '判定': 'コードにはQwen2.5-Coder 32B；品質>速度ならLlama 3.3 70B' },
           { 'VRAM階層': '48GB+', '最良Qwen': 'Qwen2.5-72B', '最良競合': 'DeepSeek-V2.5 236B MoE', '判定': 'DeepSeekは約130GB RAM必要；Qwen2.5-72Bが48GBの現実的な選択' },
         ],
         columns: ['VRAM階層', '最良Qwen', '最良競合', '判定'],
@@ -2894,15 +2894,15 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 1,
             name: 'NVIDIA RTX 4060 8 GB',
-            tagline: 'エントリー向け — Qwen3 8B、Qwen3-Coder 7B（5.5GB VRAM）',
-            verdict: 'このリストの中で、5.5GBのQwen3 8B要件をコンテキスト用の余裕を残しつつクリアできる最も安いカードです。Qwen3-Coder 7Bは約55トークン/秒で動作し、インタラクティブなコーディング支援に十分な速度です。',
+            tagline: 'エントリー向け — Qwen3 8B、Qwen2.5-Coder 7B（5.5GB VRAM）',
+            verdict: 'このリストの中で、5.5GBのQwen3 8B要件をコンテキスト用の余裕を残しつつクリアできる最も安いカードです。Qwen2.5-Coder 7Bは約55トークン/秒で動作し、インタラクティブなコーディング支援に十分な速度です。',
             pros: [
               '5.5GBのVRAM要件を、長いコンテキストのKVキャッシュ分の余裕を残してクリア',
               'このリストで最も低価格 — ローカルLLMを初めて使うなら最適な最初の1枚',
               '7B/8Bモデルで50〜57トークン/秒、より高価なカードと同等の性能をこのモデルサイズで発揮',
             ],
             cons: [
-              'Qwen3 8B / Qwen3-Coder 7Bが上限 — KVキャッシュを圧迫せずに14Bへ拡張する余地はない',
+              'Qwen3 8B / Qwen2.5-Coder 7Bが上限 — KVキャッシュを圧迫せずに14Bへ拡張する余地はない',
             ],
             affiliateLinks: [
               { url: 'https://www.amazon.co.jp/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8GB', productCategory: 'GPU', priceRange: '約¥42,000〜53,000', label: '現在の価格を確認 →' },
@@ -2911,8 +2911,8 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 2,
             name: 'NVIDIA RTX 4070 Super 12 GB',
-            tagline: 'ミドルレンジ向け — Qwen3 14B、Qwen3-Coder 14B（9.5GB VRAM）',
-            verdict: 'Qwen3-Coder 14B（HumanEval 85.2%）を36〜38トークン/秒で動作させ、コンテキスト用に2〜3GBのVRAM余裕が残ります — 7B/8Bモデルからコーディング品質が明確に向上する階層です。',
+            tagline: 'ミドルレンジ向け — Qwen3 14B、Qwen2.5-Coder 14B（9.5GB VRAM）',
+            verdict: 'Qwen2.5-Coder 14B（HumanEval 85.2%）を36〜38トークン/秒で動作させ、コンテキスト用に2〜3GBのVRAM余裕が残ります — 7B/8Bモデルからコーディング品質が明確に向上する階層です。',
             pros: [
               '9.5GBのモデルが2〜3GBのVRAM余裕を残して動作 — より長いコンテキストウィンドウの余地',
               'HumanEvalが75.6%（7B）から85.2%（14B）へ上昇 — ラインアップの中で最も分かりやすいコストパフォーマンスの向上',
@@ -2928,11 +2928,11 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 3,
             name: 'NVIDIA RTX 4090 24 GB（または中古のRTX 3090 24 GB）',
-            tagline: 'ハイエンド向け — Qwen3-Coder 32B、Qwen 3.6 27B（約17〜20.5GB VRAM）',
-            verdict: '4090はQwen3-Coder 32Bで27〜28トークン/秒を発揮します — HumanEval 92.7%でリアルタイムのコーディング速度です。中古のRTX 3090は同じ24GB VRAMを備え、信頼できる中古品を見つけられれば4090の推論速度の約15%以内で、大幅に安く入手できます。',
+            tagline: 'ハイエンド向け — Qwen2.5-Coder 32B、Qwen 3.6 27B（約17〜20.5GB VRAM）',
+            verdict: '4090はQwen2.5-Coder 32Bで27〜28トークン/秒を発揮します — HumanEval 92.7%でリアルタイムのコーディング速度です。中古のRTX 3090は同じ24GB VRAMを備え、信頼できる中古品を見つけられれば4090の推論速度の約15%以内で、大幅に安く入手できます。',
             pros: [
               '24GBのVRAMですべてのQwen3 32BバリアントとQwen 3.6 27Bを余裕でカバー',
-              'Qwen3-Coder 32B（HumanEval 92.7%）で27〜28トークン/秒 — リアルタイムのペアプログラミングに十分な速度',
+              'Qwen2.5-Coder 32B（HumanEval 92.7%）で27〜28トークン/秒 — リアルタイムのペアプログラミングに十分な速度',
               '中古のRTX 3090はコスパの高い代替案：VRAMの上限は同じで、速度は約15%遅いが中古価格は大幅に安い',
             ],
             cons: [
@@ -2987,7 +2987,7 @@ curl http://localhost:11434/v1/chat/completions \\
           '**コンテキストウィンドウサイズを無視する。** Qwen3は128Kコンテキストをサポートします。OllamaのModelfile仕様では`num_ctx`のデフォルトは2048ですが、実際のランタイムはVRAM容量に応じた段階的なデフォルト値を採用します（24GiB未満は4K、24〜48GiBは32K、48GiB超は256K）。どちらのデフォルトにも依存せず、`num_ctx`を明示的に設定してください。例えば実行コマンドに`--num-ctx 8192`（またはそれ以上）を追加します。設定しないと、モデルは入力を黙って切り詰めます。',
           '**中国語用途にQ2_K量子化を選ぶ。** 2ビット精度では、Qwen3の中国語出力品質が著しく低下します。中国語作業には最低でもQ4_K_Mを使用してください。',
           '**VRAMが不足した状態で32Bモデルを実行する。** GPUが16GBでモデルが20.5GB必要な場合、Ollamaはシステムメモリにレイヤーをオフロードします。3〜5トークン/秒でインタラクティブ使用には不向きです。',
-          '**コーディングに間違ったサブファミリーを使う。** Qwen3 8B（汎用）はHumanEvalで57.3%。Qwen3-Coder 7Bは同ベンチマークで75.6% — 相対的に32%の改善。コーディングには必ず同サイズのCoder バリアントを使用してください。',
+          '**コーディングに間違ったサブファミリーを使う。** Qwen3 8B（汎用）はHumanEvalで57.3%。Qwen2.5-Coder 7Bは同ベンチマークで75.6% — 相対的に32%の改善。コーディングには必ず同サイズのCoder バリアントを使用してください。',
         ],
       },
       nextSteps: {
@@ -3003,7 +3003,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: 'よくある質問',
         faqs: [
             { q: 'Qwen3 8Bをローカルで動かすのに必要なVRAMは？', a: 'Qwen3 8B Q4_K_MにはVRAM 5.5GBが必要です。RTX 3060 6GB、RTX 4060、またはApple M系8GBユニファイドメモリで動作します。' },
-            { q: 'コーディング用途に最適なQwenモデルは？', a: 'Qwen3-Coder 32B — HumanEval 92.7%、GPU 24GB必要。VRAM 12GB以下ならQwen3-Coder 14B（85.2%、9.5GB VRAM）。' },
+            { q: 'コーディング用途に最適なQwenモデルは？', a: 'Qwen2.5-Coder 32B — HumanEval 92.7%、GPU 24GB必要。VRAM 12GB以下ならQwen2.5-Coder 14B（85.2%、9.5GB VRAM）。' },
             { q: 'QwenとDeepSeekのローカルデプロイ比較は？', a: 'Qwen3はコンシューマーハードウェアに収まるDenseアーキテクチャ。DeepSeek-V2.5は236B MoEで約130GB RAM必要 — コンシューマーGPUでは非現実的。' },
             { q: 'MacでQwenを動かせますか？', a: 'はい。M2 Pro 32GBはQwen3 14Bを約32トークン/秒で実行。M3 Max 64GBはQwen3 32Bを約22トークン/秒で処理。' },
             { q: 'QwenのOllamaコマンドは？', a: 'フラッグシップは`ollama run qwen3.6:27b`（VRAM約17GB）。Qwen3は`ollama pull qwen3:8b`。Qwen2.5は`ollama pull qwen2.5:7b`（7B）、`:14b`（14B）、`:32b`（32B）、`qwen2.5-coder:32b`（コーディング版）。常に明示的なサイズタグを使用。' },
@@ -3063,7 +3063,7 @@ curl http://localhost:11434/v1/chat/completions \\
       { label: '常见问题', anchor: '#faq' },
     ],
     gammaEmbedUrl: '/presentations/qwen-local-deployment-guide-2026-static.html',
-    gammaDescription: '下方幻灯片涵盖：新旗舰Qwen 3.6 27B（256K上下文，Q4_K_M约17GB）、Qwen模型家族全览（Qwen3 0.6B至32B，Qwen2.5 7B至72B）、各硬件层级显存要求、Qwen3-Coder 32B基准数据，以及Qwen vs DeepSeek vs Llama决策图表。可下载作为Qwen部署参考卡片。',
+    gammaDescription: '下方幻灯片涵盖：新旗舰Qwen 3.6 27B（256K上下文，Q4_K_M约17GB）、Qwen模型家族全览（Qwen3 0.6B至32B，Qwen2.5 7B至72B）、各硬件层级显存要求、Qwen2.5-Coder 32B基准数据，以及Qwen vs DeepSeek vs Llama决策图表。可下载作为Qwen部署参考卡片。',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -3096,7 +3096,7 @@ curl http://localhost:11434/v1/chat/completions \\
             'name': '本地运行最适合代码任务的Qwen模型？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 32B——HumanEval 92.7%，需24GB GPU。显存12GB或以下：Qwen3-Coder 14B（85.2%，9.5GB显存）。',
+              'text': 'Qwen2.5-Coder 32B——HumanEval 92.7%，需24GB GPU。显存12GB或以下：Qwen2.5-Coder 14B（85.2%，9.5GB显存）。',
             },
           },
           {
@@ -3306,14 +3306,14 @@ curl http://localhost:11434/v1/chat/completions \\
           { '模型（Q4_K_M）': 'Qwen3 14B', 'MMLU': '79.9%', 'Math': '69.8%', 'HumanEval': '64.6%', '速度（RTX 4070 12GB）': '38 token/秒' },
           { '模型（Q4_K_M）': 'Qwen3 32B', 'MMLU': '83.3%', 'Math': '79.5%', 'HumanEval': '71.3%', '速度（RTX 4090 24GB）': '28 token/秒' },
           { '模型（Q4_K_M）': 'Qwen2.5-72B', 'MMLU': '86.1%', 'Math': '83.1%', 'HumanEval': '73.2%', '速度（2×RTX 3090）': '12 token/秒' },
-          { '模型（Q4_K_M）': 'Qwen3-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75.6%', '速度（RTX 3060 12GB）': '55 token/秒' },
-          { '模型（Q4_K_M）': 'Qwen3-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85.2%', '速度（RTX 4070 12GB）': '36 token/秒' },
-          { '模型（Q4_K_M）': 'Qwen3-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92.7%', '速度（RTX 4090 24GB）': '27 token/秒' },
+          { '模型（Q4_K_M）': 'Qwen2.5-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75.6%', '速度（RTX 3060 12GB）': '55 token/秒' },
+          { '模型（Q4_K_M）': 'Qwen2.5-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85.2%', '速度（RTX 4070 12GB）': '36 token/秒' },
+          { '模型（Q4_K_M）': 'Qwen2.5-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92.7%', '速度（RTX 4090 24GB）': '27 token/秒' },
         ],
         columns: ['模型（Q4_K_M）', 'MMLU', 'Math', 'HumanEval', '速度（RTX 3060 12GB）'],
         tableFormat: true,
         callouts: [
-          { type: 'tip', text: '想要以27 token/秒的速度获得92.7%的HumanEval评分？查看[运行Qwen3-Coder 32B所需的24GB显存GPU](#affiliate-picks)。' },
+          { type: 'tip', text: '想要以27 token/秒的速度获得92.7%的HumanEval评分？查看[运行Qwen2.5-Coder 32B所需的24GB显存GPU](#affiliate-picks)。' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-zh.webp',
         imageCaption: 'Qwen3基准测试评分（Q4_K_M）— PromptQuorum 2026',
@@ -3326,8 +3326,8 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { '显存档位': '6GB', '最佳Qwen': 'Qwen3 8B', '最佳竞品': 'Llama 3.2 3B（可装入但仅3B）', '建议': 'Qwen3 8B胜出——相同显存，更大模型' },
-          { '显存档位': '12GB', '最佳Qwen': 'Qwen3-Coder 14B', '最佳竞品': 'Llama 3.1 8B Instruct', '建议': '代码用Qwen3-Coder 14B；通用对话用Llama 3.1 8B' },
-          { '显存档位': '24GB', '最佳Qwen': 'Qwen3-Coder 32B', '最佳竞品': 'Llama 3.3 70B（卸载）', '建议': '代码用Qwen3-Coder 32B；质量优先于速度则选Llama 3.3 70B' },
+          { '显存档位': '12GB', '最佳Qwen': 'Qwen2.5-Coder 14B', '最佳竞品': 'Llama 3.1 8B Instruct', '建议': '代码用Qwen2.5-Coder 14B；通用对话用Llama 3.1 8B' },
+          { '显存档位': '24GB', '最佳Qwen': 'Qwen2.5-Coder 32B', '最佳竞品': 'Llama 3.3 70B（卸载）', '建议': '代码用Qwen2.5-Coder 32B；质量优先于速度则选Llama 3.3 70B' },
           { '显存档位': '48GB+', '最佳Qwen': 'Qwen2.5-72B', '最佳竞品': 'DeepSeek-V2.5 236B MoE', '建议': 'DeepSeek需约130GB内存；Qwen2.5-72B是48GB的实际可行选择' },
         ],
         columns: ['显存档位', '最佳Qwen', '最佳竞品', '建议'],
@@ -3360,15 +3360,15 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 1,
             name: 'NVIDIA RTX 4060 8GB',
-            tagline: '入门级选择——Qwen3 8B、Qwen3-Coder 7B（5.5GB显存）',
-            verdict: '这是清单中能满足Qwen3 8B 5.5GB显存需求、同时仍留有上下文余量的最便宜显卡。运行Qwen3-Coder 7B可达约55 token/秒——足以支持交互式编码辅助。',
+            tagline: '入门级选择——Qwen3 8B、Qwen2.5-Coder 7B（5.5GB显存）',
+            verdict: '这是清单中能满足Qwen3 8B 5.5GB显存需求、同时仍留有上下文余量的最便宜显卡。运行Qwen2.5-Coder 7B可达约55 token/秒——足以支持交互式编码辅助。',
             pros: [
               '5.5GB显存需求可轻松满足，还留有长上下文KV缓存的余量',
               '清单中价格最低——如果你从未运行过本地LLM，这是合适的第一块显卡',
               '在7B/8B模型上达到50–57 token/秒，与该模型规模下更贵的显卡表现相当',
             ],
             cons: [
-              '上限为Qwen3 8B/Qwen3-Coder 7B——若不压缩KV缓存，无法升级到14B',
+              '上限为Qwen3 8B/Qwen2.5-Coder 7B——若不压缩KV缓存，无法升级到14B',
             ],
             affiliateLinks: [
               { url: 'https://www.amazon.com/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: '$340–430', label: '查看当前价格 →' },
@@ -3377,8 +3377,8 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 2,
             name: 'NVIDIA RTX 4070 Super 12GB',
-            tagline: '中端选择——Qwen3 14B、Qwen3-Coder 14B（9.5GB显存）',
-            verdict: '以36–38 token/秒运行Qwen3-Coder 14B（HumanEval 85.2%），还留有2–3GB显存用于上下文——这是编码质量相比7B/8B模型明显跃升的档位。',
+            tagline: '中端选择——Qwen3 14B、Qwen2.5-Coder 14B（9.5GB显存）',
+            verdict: '以36–38 token/秒运行Qwen2.5-Coder 14B（HumanEval 85.2%），还留有2–3GB显存用于上下文——这是编码质量相比7B/8B模型明显跃升的档位。',
             pros: [
               '9.5GB模型可运行，还留有2–3GB显存余量——可支持更长的上下文窗口',
               'HumanEval从75.6%（7B）跃升至85.2%（14B）——整条产品线中性价比提升最明显的一档',
@@ -3394,11 +3394,11 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 3,
             name: 'NVIDIA RTX 4090 24GB（或二手RTX 3090 24GB）',
-            tagline: '高端选择——Qwen3-Coder 32B、Qwen 3.6 27B（约17–20.5GB显存）',
-            verdict: '4090在Qwen3-Coder 32B上可达27–28 token/秒——以92.7%的HumanEval评分实现实时编码速度。二手RTX 3090同样拥有24GB显存，推理速度约为4090的85%左右，如果能找到可信赖的二手卖家，价格会明显更低。',
+            tagline: '高端选择——Qwen2.5-Coder 32B、Qwen 3.6 27B（约17–20.5GB显存）',
+            verdict: '4090在Qwen2.5-Coder 32B上可达27–28 token/秒——以92.7%的HumanEval评分实现实时编码速度。二手RTX 3090同样拥有24GB显存，推理速度约为4090的85%左右，如果能找到可信赖的二手卖家，价格会明显更低。',
             pros: [
               '24GB显存可覆盖所有Qwen3 32B变体和Qwen 3.6 27B，还留有余量',
-              '在Qwen3-Coder 32B（HumanEval 92.7%）上达到27–28 token/秒——足以支持实时结对编程',
+              '在Qwen2.5-Coder 32B（HumanEval 92.7%）上达到27–28 token/秒——足以支持实时结对编程',
               '二手RTX 3090是高性价比替代方案：显存上限相同，速度约慢15%，但二手价格明显更低',
             ],
             cons: [
@@ -3453,7 +3453,7 @@ curl http://localhost:11434/v1/chat/completions \\
           '**忽略上下文窗口大小。** Qwen3支持128K上下文。Ollama的Modelfile规范将`num_ctx`默认设为2048，但实际运行时会根据显存大小分级采用不同默认值：低于24 GiB为4K，24-48 GiB为32K，超过48 GiB为256K。不要依赖这两种默认值中的任何一个，应显式设置`num_ctx`，例如在运行命令中添加`--num-ctx 8192`（或更高）——否则模型会静默截断输入。',
           '**中文用途选择Q2_K量化。** 2位精度下，Qwen3的中文输出质量明显下降——出现字符替换问题。中文任务至少使用Q4_K_M。',
           '**显存不足时运行32B模型。** 若GPU只有16GB而模型需要20.5GB，Ollama会将层卸载到系统内存。模型可运行但速度仅3–5 token/秒，不适合交互使用。',
-          '**代码任务使用错误的子系列。** Qwen3 8B（通用版）在HumanEval上得57.3%。Qwen3-Coder 7B得75.6%——相对提升32%。代码任务始终使用同等规格的Coder版本。',
+          '**代码任务使用错误的子系列。** Qwen3 8B（通用版）在HumanEval上得57.3%。Qwen2.5-Coder 7B得75.6%——相对提升32%。代码任务始终使用同等规格的Coder版本。',
         ],
       },
       nextSteps: {
@@ -3469,7 +3469,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: '常见问题',
         faqs: [
             { q: '本地运行Qwen3 8B需要多少显存？', a: 'Qwen3 8B Q4_K_M需要5.5GB显存。RTX 3060 6GB、RTX 4060或Apple M系列芯片8GB统一内存均可。' },
-            { q: '本地运行最适合代码任务的Qwen模型？', a: 'Qwen3-Coder 32B——HumanEval 92.7%，需24GB GPU。显存12GB或以下：Qwen3-Coder 14B（85.2%，9.5GB显存）。' },
+            { q: '本地运行最适合代码任务的Qwen模型？', a: 'Qwen2.5-Coder 32B——HumanEval 92.7%，需24GB GPU。显存12GB或以下：Qwen2.5-Coder 14B（85.2%，9.5GB显存）。' },
             { q: 'Qwen与DeepSeek本地部署对比？', a: 'Qwen3使用适合消费级硬件的Dense架构。DeepSeek-V2.5是236B MoE，需约130GB内存，没有服务器级GPU无法实现。' },
             { q: '可以在Mac上运行Qwen吗？', a: '可以。M2 Pro 32GB可流畅运行Qwen3 14B，约32 token/秒。M3 Max 64GB可处理Qwen3 32B，约22 token/秒。' },
             { q: 'Qwen的Ollama命令是什么？', a: '旗舰模型使用`ollama run qwen3.6:27b`（约17GB显存）。Qwen3使用`ollama pull qwen3:8b`。Qwen2.5的7B用`ollama pull qwen2.5:7b`，14B用`:14b`，32B用`:32b`，代码版用`qwen2.5-coder:32b`。始终使用明确的尺寸标签。' },
@@ -3489,7 +3489,7 @@ curl http://localhost:11434/v1/chat/completions \\
           { url: '/zh/local-llms/qwen-vs-llama-vs-mistral', title: 'Qwen vs Llama vs Mistral 2026', description: 'Qwen 3.6 27B、Llama 4 Scout和Mistral Small 3.1在MMLU、SWE-bench和MATH上的基准对比。' },
           { url: '/zh/local-llms/llm-quantization-explained', title: 'LLM量化解析', description: 'Q4_K_M、Q8_0和IQ4_XS的含义——对显存、速度和输出质量的影响。' },
           { url: '/zh/power-local-llm/deepseek-vs-qwen-local-comparison-2026', title: 'DeepSeek vs Qwen本地对比2026', description: '完整对比：DeepSeek-V2.5 vs Qwen3在代码、推理、中文和创意写作上的表现——含Mac vs NVIDIA详细分析。' },
-          { url: '/zh/prompt-bites/best-qwen-model-for-coding', title: '最佳Qwen编码模型', description: 'Qwen3-Coder 7B vs 32B：本地自动补全与代码审查的选择指南。' },
+          { url: '/zh/prompt-bites/best-qwen-model-for-coding', title: '最佳Qwen编码模型', description: 'Qwen2.5-Coder 7B vs 32B：本地自动补全与代码审查的选择指南。' },
           { url: '/zh/power-local-llm/deepseek-offline-china-self-hosted-2026', title: '本地离线部署 DeepSeek：完全断网运行指南', description: '想用推理模型？了解如何在完全离线环境中本地部署 DeepSeek-R1 Distill，数据零出境，满足《数据安全法》合规要求。' },
         ],
       },
@@ -3524,9 +3524,9 @@ curl http://localhost:11434/v1/chat/completions \\
       'Qwen3 14B',
       'Qwen3 32B',
       'Qwen2.5-72B',
-      'Qwen3-Coder 7B',
-      'Qwen3-Coder 14B',
-      'Qwen3-Coder 32B',
+      'Qwen2.5-Coder 7B',
+      'Qwen2.5-Coder 14B',
+      'Qwen2.5-Coder 32B',
       'Qwen2-VL 7B',
       'Qwen2-VL 72B',
       'DeepSeek-V2.5',
@@ -3563,7 +3563,7 @@ curl http://localhost:11434/v1/chat/completions \\
       { label: '자주 묻는 질문', anchor: '#faq' },
     ],
     gammaEmbedUrl: '/presentations/qwen-local-deployment-guide-2026-static.html',
-    gammaDescription: '아래 슬라이드 덱은 다음 내용을 다룹니다: 새로운 플래그십 Qwen 3.6 27B(256K 컨텍스트, Q4_K_M 기준 약 17GB), Qwen 모델 패밀리 전체 개요(Qwen3 0.6B–32B, Qwen2.5 7B–72B), 하드웨어 티어별 VRAM 요구사항, Qwen3-Coder 32B 벤치마크 데이터, Qwen vs DeepSeek vs Llama 의사결정 차트. Qwen 배포 참고 카드로 다운로드하십시오.',
+    gammaDescription: '아래 슬라이드 덱은 다음 내용을 다룹니다: 새로운 플래그십 Qwen 3.6 27B(256K 컨텍스트, Q4_K_M 기준 약 17GB), Qwen 모델 패밀리 전체 개요(Qwen3 0.6B–32B, Qwen2.5 7B–72B), 하드웨어 티어별 VRAM 요구사항, Qwen2.5-Coder 32B 벤치마크 데이터, Qwen vs DeepSeek vs Llama 의사결정 차트. Qwen 배포 참고 카드로 다운로드하십시오.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -3589,7 +3589,7 @@ curl http://localhost:11434/v1/chat/completions \\
         {
           '@type': 'Question',
           name: '로컬에서 코딩에 가장 적합한 Qwen 모델은 무엇입니까?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 32B는 로컬에서 실행 가능한 최고의 코딩 모델입니다 — HumanEval에서 92.7%를 기록하며 24 GB GPU(RTX 3090 또는 RTX 4090)가 필요합니다. VRAM이 12 GB 이하인 경우 Qwen3-Coder 14B(HumanEval 85.2%, 9.5 GB VRAM)를 사용하십시오.' },
+          acceptedAnswer: { '@type': 'Answer', text: 'Qwen2.5-Coder 32B는 로컬에서 실행 가능한 최고의 코딩 모델입니다 — HumanEval에서 92.7%를 기록하며 24 GB GPU(RTX 3090 또는 RTX 4090)가 필요합니다. VRAM이 12 GB 이하인 경우 Qwen2.5-Coder 14B(HumanEval 85.2%, 9.5 GB VRAM)를 사용하십시오.' },
         },
         {
           '@type': 'Question',
@@ -3764,14 +3764,14 @@ curl http://localhost:11434/v1/chat/completions \\
           { '모델 (Q4_K_M)': 'Qwen3 14B', 'MMLU': '79.9%', 'Math': '69.8%', 'HumanEval': '64.6%', '속도 (RTX 4070 12 GB)': '38 tok/s' },
           { '모델 (Q4_K_M)': 'Qwen3 32B', 'MMLU': '83.3%', 'Math': '79.5%', 'HumanEval': '71.3%', '속도 (RTX 4090 24 GB)': '28 tok/s' },
           { '모델 (Q4_K_M)': 'Qwen2.5-72B', 'MMLU': '86.1%', 'Math': '83.1%', 'HumanEval': '73.2%', '속도 (2×RTX 3090)': '12 tok/s' },
-          { '모델 (Q4_K_M)': 'Qwen3-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75.6%', '속도 (RTX 3060 12 GB)': '55 tok/s' },
-          { '모델 (Q4_K_M)': 'Qwen3-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85.2%', '속도 (RTX 4070 12 GB)': '36 tok/s' },
-          { '모델 (Q4_K_M)': 'Qwen3-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92.7%', '속도 (RTX 4090 24 GB)': '27 tok/s' },
+          { '모델 (Q4_K_M)': 'Qwen2.5-Coder 7B', 'MMLU': '—', 'Math': '—', 'HumanEval': '75.6%', '속도 (RTX 3060 12 GB)': '55 tok/s' },
+          { '모델 (Q4_K_M)': 'Qwen2.5-Coder 14B', 'MMLU': '—', 'Math': '—', 'HumanEval': '85.2%', '속도 (RTX 4070 12 GB)': '36 tok/s' },
+          { '모델 (Q4_K_M)': 'Qwen2.5-Coder 32B', 'MMLU': '—', 'Math': '—', 'HumanEval': '92.7%', '속도 (RTX 4090 24 GB)': '27 tok/s' },
         ],
         columns: ['모델 (Q4_K_M)', 'MMLU', 'Math', 'HumanEval', '속도 (RTX 3060 12 GB)'],
         tableFormat: true,
         callouts: [
-          { type: 'tip', text: '초당 27 토큰으로 HumanEval 92.7% 점수를 원하십니까? [Qwen3-Coder 32B를 실행하는 24 GB GPU](#affiliate-picks)를 확인하십시오.' },
+          { type: 'tip', text: '초당 27 토큰으로 HumanEval 92.7% 점수를 원하십니까? [Qwen2.5-Coder 32B를 실행하는 24 GB GPU](#affiliate-picks)를 확인하십시오.' },
         ],
         image: '/images/qwen-local-deployment-guide-2026-benchmarks-hero-ko.webp',
         imageCaption: 'Qwen3 벤치마크 점수 (Q4_K_M) — PromptQuorum 2026',
@@ -3784,8 +3784,8 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'VRAM 티어': '6 GB', '최고 Qwen': 'Qwen3 8B', '최고 경쟁자': 'Llama 3.2 3B (맞지만 3B)', '결론': 'Qwen3 8B 우위 — 같은 VRAM, 훨씬 큰 모델' },
-          { 'VRAM 티어': '12 GB', '최고 Qwen': 'Qwen3-Coder 14B', '최고 경쟁자': 'Llama 3.1 8B Instruct', '결론': '코딩은 Qwen3-Coder 14B; 일반 채팅은 Llama 3.1 8B' },
-          { 'VRAM 티어': '24 GB', '최고 Qwen': 'Qwen3-Coder 32B', '최고 경쟁자': 'Llama 3.3 70B (오프로드)', '결론': '코드는 Qwen3-Coder 32B; 품질 > 속도면 Llama 3.3 70B' },
+          { 'VRAM 티어': '12 GB', '최고 Qwen': 'Qwen2.5-Coder 14B', '최고 경쟁자': 'Llama 3.1 8B Instruct', '결론': '코딩은 Qwen2.5-Coder 14B; 일반 채팅은 Llama 3.1 8B' },
+          { 'VRAM 티어': '24 GB', '최고 Qwen': 'Qwen2.5-Coder 32B', '최고 경쟁자': 'Llama 3.3 70B (오프로드)', '결론': '코드는 Qwen2.5-Coder 32B; 품질 > 속도면 Llama 3.3 70B' },
           { 'VRAM 티어': '48 GB+', '최고 Qwen': 'Qwen2.5-72B', '최고 경쟁자': 'DeepSeek-V2.5 236B MoE', '결론': 'DeepSeek는 ~130 GB RAM 필요; Qwen2.5-72B가 48 GB에서 실용적 선택' },
         ],
         columns: ['VRAM 티어', '최고 Qwen', '최고 경쟁자', '결론'],
@@ -3818,15 +3818,15 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 1,
             name: 'NVIDIA RTX 4060 8 GB',
-            tagline: '보급형 선택 — Qwen3 8B, Qwen3-Coder 7B (5.5 GB VRAM)',
-            verdict: '5.5 GB의 Qwen3 8B 요구사항을 컨텍스트 여유 공간까지 확보하면서 충족하는 이 목록에서 가장 저렴한 카드입니다. Qwen3-Coder 7B를 초당 약 55 토큰으로 실행합니다 — 인터랙티브 코딩 지원에 충분한 속도입니다.',
+            tagline: '보급형 선택 — Qwen3 8B, Qwen2.5-Coder 7B (5.5 GB VRAM)',
+            verdict: '5.5 GB의 Qwen3 8B 요구사항을 컨텍스트 여유 공간까지 확보하면서 충족하는 이 목록에서 가장 저렴한 카드입니다. Qwen2.5-Coder 7B를 초당 약 55 토큰으로 실행합니다 — 인터랙티브 코딩 지원에 충분한 속도입니다.',
             pros: [
               '5.5 GB VRAM 요구사항을 긴 컨텍스트 KV 캐시를 위한 여유 공간까지 확보하며 충족',
               '이 목록에서 가장 저렴한 가격 — 로컬 LLM을 처음 실행한다면 적합한 첫 GPU',
               '7B/8B 모델에서 초당 50–57 토큰 — 이 모델 크기에서는 더 비싼 카드와 대등한 수준',
             ],
             cons: [
-              'Qwen3 8B / Qwen3-Coder 7B에서 상한선 — KV 캐시 압박 없이 14B로 확장할 여유가 없음',
+              'Qwen3 8B / Qwen2.5-Coder 7B에서 상한선 — KV 캐시 압박 없이 14B로 확장할 여유가 없음',
             ],
             affiliateLinks: [
               { url: 'https://www.amazon.com/dp/B0CJWMKN3D', productName: 'NVIDIA RTX 4060 8 GB', productCategory: 'GPU', priceRange: '$340–430', label: '현재 가격 확인 →' },
@@ -3835,8 +3835,8 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 2,
             name: 'NVIDIA RTX 4070 Super 12 GB',
-            tagline: '중급 선택 — Qwen3 14B, Qwen3-Coder 14B (9.5 GB VRAM)',
-            verdict: 'Qwen3-Coder 14B(HumanEval 85.2%)를 초당 36–38 토큰으로 실행하며 컨텍스트를 위한 2–3 GB의 VRAM 여유가 남습니다 — 7B/8B 모델 대비 코딩 품질이 눈에 띄게 도약하는 티어입니다.',
+            tagline: '중급 선택 — Qwen3 14B, Qwen2.5-Coder 14B (9.5 GB VRAM)',
+            verdict: 'Qwen2.5-Coder 14B(HumanEval 85.2%)를 초당 36–38 토큰으로 실행하며 컨텍스트를 위한 2–3 GB의 VRAM 여유가 남습니다 — 7B/8B 모델 대비 코딩 품질이 눈에 띄게 도약하는 티어입니다.',
             pros: [
               '9.5 GB 모델이 2–3 GB의 VRAM 여유와 함께 실행 — 더 긴 컨텍스트 창을 위한 공간',
               'HumanEval이 75.6%(7B)에서 85.2%(14B)로 상승 — 라인업에서 가격 대비 품질이 가장 명확하게 도약하는 구간',
@@ -3852,11 +3852,11 @@ curl http://localhost:11434/v1/chat/completions \\
           {
             rank: 3,
             name: 'NVIDIA RTX 4090 24 GB (또는 중고 RTX 3090 24 GB)',
-            tagline: '고급 선택 — Qwen3-Coder 32B, Qwen 3.6 27B (~17–20.5 GB VRAM)',
-            verdict: '4090은 Qwen3-Coder 32B에서 초당 27–28 토큰을 제공합니다 — HumanEval 92.7%의 실시간 코딩 속도입니다. 중고 RTX 3090은 동일한 24 GB VRAM을 갖추고 있으며, 신뢰할 수 있는 중고 매물을 찾을 수 있다면 4090 추론 속도의 약 85% 수준으로 훨씬 저렴하게 구매할 수 있습니다.',
+            tagline: '고급 선택 — Qwen2.5-Coder 32B, Qwen 3.6 27B (~17–20.5 GB VRAM)',
+            verdict: '4090은 Qwen2.5-Coder 32B에서 초당 27–28 토큰을 제공합니다 — HumanEval 92.7%의 실시간 코딩 속도입니다. 중고 RTX 3090은 동일한 24 GB VRAM을 갖추고 있으며, 신뢰할 수 있는 중고 매물을 찾을 수 있다면 4090 추론 속도의 약 85% 수준으로 훨씬 저렴하게 구매할 수 있습니다.',
             pros: [
               '24 GB VRAM으로 모든 Qwen3 32B 변형과 Qwen 3.6 27B를 여유 있게 커버',
-              'Qwen3-Coder 32B(HumanEval 92.7%)에서 초당 27–28 토큰 — 실시간 페어 프로그래밍에 충분한 속도',
+              'Qwen2.5-Coder 32B(HumanEval 92.7%)에서 초당 27–28 토큰 — 실시간 페어 프로그래밍에 충분한 속도',
               '중고 RTX 3090은 가성비 대안: VRAM 한계는 동일, 속도는 약 15% 느리지만 중고가는 훨씬 저렴',
             ],
             cons: [
@@ -3911,7 +3911,7 @@ curl http://localhost:11434/v1/chat/completions \\
           '**컨텍스트 창 크기 무시.** Qwen3는 128K 컨텍스트를 지원합니다. Ollama의 Modelfile 사양은 `num_ctx` 기본값을 2048로 지정하지만, 실제 런타임은 VRAM 용량에 따라 단계별 기본값을 적용합니다(24 GiB 미만은 4K, 24~48 GiB는 32K, 48 GiB 초과는 256K). 두 기본값 중 어느 것에도 의존하지 말고 `num_ctx`를 명시적으로 설정하십시오. 예를 들어 실행 명령어에 `--num-ctx 8192`(또는 더 높은 값)를 추가합니다 — 그렇지 않으면 모델이 자동으로 입력을 잘라냅니다.',
           '**중국어 용도에 Q2_K 양자화 선택.** 2비트 정밀도에서 Qwen3의 중국어 출력이 눈에 띄게 저하됩니다 — 문자 대체가 증가합니다. 중국어 작업에는 Q4_K_M을 최소값으로 사용하십시오.',
           '**VRAM이 부족한 상태에서 32B 모델 실행.** GPU에 16 GB가 있고 모델에 20.5 GB가 필요한 경우 Ollama가 레이어를 시스템 RAM으로 오프로드합니다. 모델은 실행되지만 초당 3–5 토큰으로 — 대화형 사용에는 적합하지 않습니다. 위의 하드웨어 표를 확인하고 VRAM에 맞는 모델을 선택하십시오.',
-          '**코딩에 잘못된 하위 패밀리 사용.** Qwen3 8B(범용)는 HumanEval에서 57.3%를 기록합니다. Qwen3-Coder 7B는 같은 벤치마크에서 75.6%를 기록합니다 — 상대적으로 32% 향상입니다. 코딩이 목적이라면 항상 같은 크기의 Coder 변형을 사용하십시오.',
+          '**코딩에 잘못된 하위 패밀리 사용.** Qwen3 8B(범용)는 HumanEval에서 57.3%를 기록합니다. Qwen2.5-Coder 7B는 같은 벤치마크에서 75.6%를 기록합니다 — 상대적으로 32% 향상입니다. 코딩이 목적이라면 항상 같은 크기의 Coder 변형을 사용하십시오.',
         ],
       },
       nextSteps: {
@@ -3927,7 +3927,7 @@ curl http://localhost:11434/v1/chat/completions \\
         title: '자주 묻는 질문',
         faqs: [
           { q: 'Qwen3 8B를 로컬에서 실행하려면 VRAM이 얼마나 필요합니까?', a: 'Qwen3 8B Q4_K_M는 5.5 GB의 VRAM이 필요합니다. RTX 3060 6 GB, RTX 4060, 또는 통합 메모리 8 GB의 Apple M 시리즈 칩에서 모두 실행됩니다. VRAM이 8 GB이면 컨텍스트 및 시스템 RAM을 위한 여유 공간이 생깁니다.' },
-          { q: '로컬에서 코딩에 가장 적합한 Qwen 모델은 무엇입니까?', a: 'Qwen3-Coder 32B는 로컬에서 실행 가능한 최고의 코딩 모델입니다 — HumanEval에서 92.7%를 기록하며 24 GB GPU(RTX 3090 또는 RTX 4090)가 필요합니다. VRAM이 12 GB 이하인 경우 Qwen3-Coder 14B(HumanEval 85.2%, 9.5 GB VRAM)를 사용하십시오.' },
+          { q: '로컬에서 코딩에 가장 적합한 Qwen 모델은 무엇입니까?', a: 'Qwen2.5-Coder 32B는 로컬에서 실행 가능한 최고의 코딩 모델입니다 — HumanEval에서 92.7%를 기록하며 24 GB GPU(RTX 3090 또는 RTX 4090)가 필요합니다. VRAM이 12 GB 이하인 경우 Qwen2.5-Coder 14B(HumanEval 85.2%, 9.5 GB VRAM)를 사용하십시오.' },
           { q: '로컬 배포에서 Qwen은 DeepSeek와 어떻게 비교됩니까?', a: 'Qwen2.5-72B와 DeepSeek-V2.5는 일반 작업에서 경쟁력이 있지만, Qwen은 소비자 하드웨어에 맞는 밀집 아키텍처를 사용합니다. DeepSeek-V2.5는 236B MoE 모델로 Q4에서 약 130 GB RAM이 필요하며 서버급 하드웨어 없이는 도달하기 어렵습니다. VRAM이 48 GB 미만인 경우 Qwen3가 실용적인 선택입니다.' },
           { q: 'Mac에서 Qwen을 실행할 수 있습니까?', a: '가능합니다. Apple Silicon은 통합 메모리를 사용합니다 — M2 Pro 32 GB는 Qwen3 14B를 초당 약 32 토큰으로 실행합니다. M3 Max 64 GB는 Qwen3 32B를 초당 약 22 토큰으로 처리합니다. 가장 간단한 설정을 위해 Ollama macOS 앱 또는 LM Studio를 사용하십시오.' },
           { q: 'Qwen에 사용할 Ollama 명령어는 무엇입니까?', a: '플래그십 모델은 `ollama run qwen3.6:27b`(약 17GB VRAM)를 사용하십시오. Qwen3는 `ollama pull qwen3:8b`를 사용하십시오. Qwen2.5는 7B는 `ollama pull qwen2.5:7b`, 14B는 `ollama pull qwen2.5:14b`, 32B는 `ollama pull qwen2.5:32b`, 코딩 변형은 `ollama pull qwen2.5-coder:32b`를 사용하십시오. 항상 명시적 크기 태그를 사용하십시오.' },

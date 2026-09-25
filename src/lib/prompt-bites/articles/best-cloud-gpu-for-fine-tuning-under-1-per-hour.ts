@@ -89,7 +89,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Task': 'Llama 3.1 8B QLoRA, 1K samples, 1K steps', 'GPU Needed': 'RTX 4090 (24 GB)', 'Duration': '~2 hrs', 'Platform': 'RunPod spot ($0.44/hr)', 'Total Cost': '~$0.88' },
           { 'Task': 'Qwen3 14B QLoRA, 5K samples, 3K steps', 'GPU Needed': 'A40 48GB', 'Duration': '~5 hrs', 'Platform': 'RunPod spot ($0.44/hr)', 'Total Cost': '~$2.20' },
           { 'Task': 'Llama 3.3 70B QLoRA-4bit, 1K samples', 'GPU Needed': 'A100 80GB', 'Duration': '~8 hrs', 'Platform': 'RunPod ($1.49/hr)', 'Total Cost': '~$11.92' },
-          { 'Task': 'Qwen3-Coder 7B, SQL dataset, 10K steps', 'GPU Needed': 'RTX 3090 (24 GB)', 'Duration': '~4 hrs', 'Platform': 'Vast.ai ($0.13/hr)', 'Total Cost': '~$0.52' },
+          { 'Task': 'Qwen2.5-Coder 7B, SQL dataset, 10K steps', 'GPU Needed': 'RTX 3090 (24 GB)', 'Duration': '~4 hrs', 'Platform': 'Vast.ai ($0.13/hr)', 'Total Cost': '~$0.52' },
         ],
       },
       faq: {
@@ -106,7 +106,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[RunPod vs Vast.ai Pricing: Which Is Cheaper?](/prompt-bites/runpod-vs-vastai-pricing) -- GPU cloud pricing comparison',
           '[Cloud GPU Cost per Hour](/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU pricing',
-          '[DeepSeek R1 Distill VRAM Cheatsheet](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
+          '[DeepSeek-R1 Distill VRAM Cheatsheet](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
           '[Best DeepSeek Distill for Your GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) -- DeepSeek distill guide',
         ],
       },
@@ -255,7 +255,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[RunPod vs Vast.ai Pricing: Which Is Cheaper?](/de/prompt-bites/runpod-vs-vastai-pricing) -- GPU cloud pricing comparison',
           '[Cloud GPU Cost per Hour](/de/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU pricing',
-          '[DeepSeek R1 Distill VRAM Cheatsheet](/de/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
+          '[DeepSeek-R1 Distill VRAM Cheatsheet](/de/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
           '[Best DeepSeek Distill for Your GPU](/de/prompt-bites/best-deepseek-distill-for-your-gpu) -- DeepSeek distill guide',
         ],
       },
@@ -394,7 +394,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[RunPod vs Vast.ai Pricing: Which Is Cheaper?](/fr/prompt-bites/runpod-vs-vastai-pricing) -- GPU cloud pricing comparison',
           '[Cloud GPU Cost per Hour](/fr/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU pricing',
-          '[DeepSeek R1 Distill VRAM Cheatsheet](/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
+          '[DeepSeek-R1 Distill VRAM Cheatsheet](/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
           '[Best DeepSeek Distill for Your GPU](/fr/prompt-bites/best-deepseek-distill-for-your-gpu) -- DeepSeek distill guide',
         ],
       },
@@ -533,7 +533,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[RunPod vs Vast.ai Pricing: Which Is Cheaper?](/ja/prompt-bites/runpod-vs-vastai-pricing) -- GPU cloud pricing comparison',
           '[Cloud GPU Cost per Hour](/ja/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU pricing',
-          '[DeepSeek R1 Distill VRAM Cheatsheet](/ja/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
+          '[DeepSeek-R1 Distill VRAM Cheatsheet](/ja/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
           '[Best DeepSeek Distill for Your GPU](/ja/prompt-bites/best-deepseek-distill-for-your-gpu) -- DeepSeek distill guide',
         ],
       },
@@ -673,7 +673,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[RunPod vs Vast.ai Pricing: Which Is Cheaper?](/zh/prompt-bites/runpod-vs-vastai-pricing) -- GPU cloud pricing comparison',
           '[Cloud GPU Cost per Hour](/zh/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU pricing',
-          '[DeepSeek R1 Distill VRAM Cheatsheet](/zh/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
+          '[DeepSeek-R1 Distill VRAM Cheatsheet](/zh/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
           '[Best DeepSeek Distill for Your GPU](/zh/prompt-bites/best-deepseek-distill-for-your-gpu) -- DeepSeek distill guide',
         ],
       },
@@ -817,7 +817,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Tarea': 'Llama 3.1 8B QLoRA, 1K muestras, 1K pasos', 'GPU necesaria': 'RTX 4090 (24 GB)', 'Duración': '~2 horas', 'Plataforma': 'RunPod spot ($0.44/hora)', 'Coste total': '~$0.88' },
           { 'Tarea': 'Qwen3 14B QLoRA, 5K muestras, 3K pasos', 'GPU necesaria': 'A40 48GB', 'Duración': '~5 horas', 'Plataforma': 'RunPod spot ($0.44/hora)', 'Coste total': '~$2.20' },
           { 'Tarea': 'Llama 3.3 70B QLoRA-4bit, 1K muestras', 'GPU necesaria': 'A100 80GB', 'Duración': '~8 horas', 'Plataforma': 'RunPod ($1.49/hora)', 'Coste total': '~$11.92' },
-          { 'Tarea': 'Qwen3-Coder 7B, dataset SQL, 10K pasos', 'GPU necesaria': 'RTX 3090 (24 GB)', 'Duración': '~4 horas', 'Plataforma': 'Vast.ai ($0.28/hora)', 'Coste total': '~$1.12' },
+          { 'Tarea': 'Qwen2.5-Coder 7B, dataset SQL, 10K pasos', 'GPU necesaria': 'RTX 3090 (24 GB)', 'Duración': '~4 horas', 'Plataforma': 'Vast.ai ($0.28/hora)', 'Coste total': '~$1.12' },
         ],
       },
       faq: {
@@ -834,7 +834,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[RunPod vs Vast.ai Pricing: Which Is Cheaper?](/es/prompt-bites/runpod-vs-vastai-pricing) -- GPU cloud pricing comparison',
           '[Cloud GPU Cost per Hour](/es/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU pricing',
-          '[DeepSeek R1 Distill VRAM Cheatsheet](/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
+          '[DeepSeek-R1 Distill VRAM Cheatsheet](/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
           '[Best DeepSeek Distill for Your GPU](/es/prompt-bites/best-deepseek-distill-for-your-gpu) -- DeepSeek distill guide',
         ],
       },
@@ -977,7 +977,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Tarefa': 'Llama 3.1 8B QLoRA, 1K amostras, 1K passos', 'GPU necessária': 'RTX 4090 (24 GB)', 'Duração': '~2 horas', 'Plataforma': 'RunPod spot ($0,44/hora)', 'Custo total': '~$0,88' },
           { 'Tarefa': 'Qwen3 14B QLoRA, 5K amostras, 3K passos', 'GPU necessária': 'A40 48GB', 'Duração': '~5 horas', 'Plataforma': 'RunPod spot ($0,44/hora)', 'Custo total': '~$2,20' },
           { 'Tarefa': 'Llama 3.3 70B QLoRA-4bit, 1K amostras', 'GPU necessária': 'A100 80GB', 'Duração': '~8 horas', 'Plataforma': 'RunPod ($1,49/hora)', 'Custo total': '~$11,92' },
-          { 'Tarefa': 'Qwen3-Coder 7B, dataset SQL, 10K passos', 'GPU necessária': 'RTX 3090 (24 GB)', 'Duração': '~4 horas', 'Plataforma': 'Vast.ai ($0,28/hora)', 'Custo total': '~$1,12' },
+          { 'Tarefa': 'Qwen2.5-Coder 7B, dataset SQL, 10K passos', 'GPU necessária': 'RTX 3090 (24 GB)', 'Duração': '~4 horas', 'Plataforma': 'Vast.ai ($0,28/hora)', 'Custo total': '~$1,12' },
         ],
       },
       faq: {
@@ -994,7 +994,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[RunPod vs Vast.ai Pricing: Which Is Cheaper?](/pt/prompt-bites/runpod-vs-vastai-pricing) -- GPU cloud pricing comparison',
           '[Cloud GPU Cost per Hour](/pt/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU pricing',
-          '[DeepSeek R1 Distill VRAM Cheatsheet](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
+          '[DeepSeek-R1 Distill VRAM Cheatsheet](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
           '[Best DeepSeek Distill for Your GPU](/pt/prompt-bites/best-deepseek-distill-for-your-gpu) -- DeepSeek distill guide',
         ],
       },
@@ -1137,7 +1137,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'المهمة': 'Llama 3.1 8B QLoRA، 1K عينة، 1K خطوة', 'معالج الرسومات المطلوب': 'RTX 4090 (24 جيجابايت)', 'المدة': '~2 ساعة', 'المنصة': 'RunPod الفوري (0.44 دولار/ساعة)', 'التكلفة الإجمالية': '~0.88 دولار' },
           { 'المهمة': 'Qwen3 14B QLoRA، 5K عينة، 3K خطوة', 'معالج الرسومات المطلوب': 'A40 48GB', 'المدة': '~5 ساعات', 'المنصة': 'RunPod الفوري (0.44 دولار/ساعة)', 'التكلفة الإجمالية': '~2.20 دولار' },
           { 'المهمة': 'Llama 3.3 70B QLoRA-4bit، 1K عينة', 'معالج الرسومات المطلوب': 'A100 80GB', 'المدة': '~8 ساعات', 'المنصة': 'RunPod (1.49 دولار/ساعة)', 'التكلفة الإجمالية': '~11.92 دولار' },
-          { 'المهمة': 'Qwen3-Coder 7B، مجموعة بيانات SQL، 10K خطوة', 'معالج الرسومات المطلوب': 'RTX 3090 (24 جيجابايت)', 'المدة': '~4 ساعات', 'المنصة': 'Vast.ai (0.28 دولار/ساعة)', 'التكلفة الإجمالية': '~1.12 دولار' },
+          { 'المهمة': 'Qwen2.5-Coder 7B، مجموعة بيانات SQL، 10K خطوة', 'معالج الرسومات المطلوب': 'RTX 3090 (24 جيجابايت)', 'المدة': '~4 ساعات', 'المنصة': 'Vast.ai (0.28 دولار/ساعة)', 'التكلفة الإجمالية': '~1.12 دولار' },
         ],
       },
       faq: {
@@ -1154,7 +1154,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[RunPod vs Vast.ai Pricing: Which Is Cheaper?](/ar/prompt-bites/runpod-vs-vastai-pricing) -- GPU cloud pricing comparison',
           '[Cloud GPU Cost per Hour](/ar/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU pricing',
-          '[DeepSeek R1 Distill VRAM Cheatsheet](/ar/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
+          '[DeepSeek-R1 Distill VRAM Cheatsheet](/ar/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
           '[Best DeepSeek Distill for Your GPU](/ar/prompt-bites/best-deepseek-distill-for-your-gpu) -- DeepSeek distill guide',
         ],
       },
@@ -1298,7 +1298,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { '작업': 'Llama 3.1 8B QLoRA, 1K 샘플, 1K 스텝', '필요 GPU': 'RTX 4090 (24 GB)', '소요 시간': '~2시간', '플랫폼': 'RunPod 스팟 ($0.44/시간)', '총 비용': '~$0.88' },
           { '작업': 'Qwen3 14B QLoRA, 5K 샘플, 3K 스텝', '필요 GPU': 'A40 48GB', '소요 시간': '~5시간', '플랫폼': 'RunPod 스팟 ($0.44/시간)', '총 비용': '~$2.20' },
           { '작업': 'Llama 3.3 70B QLoRA-4bit, 1K 샘플', '필요 GPU': 'A100 80GB', '소요 시간': '~8시간', '플랫폼': 'RunPod ($1.49/시간)', '총 비용': '~$11.92' },
-          { '작업': 'Qwen3-Coder 7B, SQL 데이터셋, 10K 스텝', '필요 GPU': 'RTX 3090 (24 GB)', '소요 시간': '~4시간', '플랫폼': 'Vast.ai ($0.28/시간)', '총 비용': '~$1.12' },
+          { '작업': 'Qwen2.5-Coder 7B, SQL 데이터셋, 10K 스텝', '필요 GPU': 'RTX 3090 (24 GB)', '소요 시간': '~4시간', '플랫폼': 'Vast.ai ($0.28/시간)', '총 비용': '~$1.12' },
         ],
       },
       faq: {
@@ -1315,7 +1315,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[RunPod vs Vast.ai Pricing: Which Is Cheaper?](/ko/prompt-bites/runpod-vs-vastai-pricing) -- GPU cloud pricing comparison',
           '[Cloud GPU Cost per Hour](/ko/prompt-bites/cloud-gpu-cost-per-hour) -- cloud GPU pricing',
-          '[DeepSeek R1 Distill VRAM Cheatsheet](/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
+          '[DeepSeek-R1 Distill VRAM Cheatsheet](/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet) -- VRAM requirements',
           '[Best DeepSeek Distill for Your GPU](/ko/prompt-bites/best-deepseek-distill-for-your-gpu) -- DeepSeek distill guide',
         ],
       },

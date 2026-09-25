@@ -42,16 +42,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GGUF MLX chat app iPhone',
       'On Device AI vs AI on Device',
     ],
-    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
+    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen3', 'DeepSeek', 'Phi-4', 'Mistral'],
     current_hardware_mentioned: ['iPhone 14+', 'iPad mini (7th generation)+', 'Apple Silicon Mac', 'Apple Vision Pro'],
-    leadAnswerBlock: `**On Device AI is a free app for iPhone, iPad, Apple Silicon Mac, and Apple Vision Pro that runs AI models entirely on the device, giving you a choice of more than 200 downloadable open-weight models rather than a single bundled one.** It uses two local inference engines — [llama.cpp](https://github.com/ggml-org/llama.cpp) for GGUF-format models and MLX for Apple Silicon — and supports model families including Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4, and Mistral. Beyond chat, it bundles voice transcription with speaker diarization, document and RSS import into "knowledge libraries," multi-agent workflows, on-device text-to-speech, and Siri Shortcuts automation. The app is free to download from the [App Store](${APP_STORE_URL}), with in-app purchases ranging from $3.99 to $99.99 and optional, bring-your-own-key connections to external cloud AI providers. It requires an iPhone 14 or later, an iPad mini (7th generation) or later, an Apple Silicon Mac, or an Apple Vision Pro. It is a different app from the paid, single-fixed-model "[AI on Device](/power-local-llm/ai-on-device-review)" by a different developer — see the naming clarification in this review before choosing between them.`,
+    leadAnswerBlock: `**On Device AI is a free app for iPhone, iPad, Apple Silicon Mac, and Apple Vision Pro that runs AI models entirely on the device, giving you a choice of more than 200 downloadable open-weight models rather than a single bundled one.** It uses two local inference engines — [llama.cpp](https://github.com/ggml-org/llama.cpp) for GGUF-format models and MLX for Apple Silicon — and supports model families including Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4, and Mistral. Beyond chat, it bundles voice transcription with speaker diarization, document and RSS import into "knowledge libraries," multi-agent workflows, on-device text-to-speech, and Siri Shortcuts automation. The app is free to download from the [App Store](${APP_STORE_URL}), with in-app purchases ranging from $3.99 to $99.99 and optional, bring-your-own-key connections to external cloud AI providers. It requires an iPhone 14 or later, an iPad mini (7th generation) or later, an Apple Silicon Mac, or an Apple Vision Pro. It is a different app from the paid, single-fixed-model "[AI on Device](/power-local-llm/ai-on-device-review)" by a different developer — see the naming clarification in this review before choosing between them.`,
     quickAnswerTop: {
       en: {
         question: 'What is On Device AI and how many models does it support?',
         answer: `On Device AI is a free app for iPhone, iPad, Apple Silicon Mac, and Apple Vision Pro, developed by Zijie Deng, that lets you download and run more than 200 open-weight AI models directly on your device. It uses [llama.cpp](https://github.com/ggml-org/llama.cpp) for GGUF-format models and MLX for models optimized for Apple Silicon, so processing happens locally instead of on a remote server. The app is free to use, with optional in-app purchases for Pro features and optional connections to external cloud AI providers if you supply your own API key.`,
         bullets: [
           'Runs 200+ downloadable open-weight local models via two engines: llama.cpp (GGUF) and MLX',
-          'Supports model families including Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4, and Mistral',
+          'Supports model families including Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4, and Mistral',
           'Free to download, with optional in-app purchases ($3.99-$99.99) for Pro features',
           'Optional cloud provider connections require your own API credentials — not required for local use',
           'Additional features: voice transcription with speaker diarization, document/RSS "knowledge libraries," multi-agent workflows, on-device text-to-speech, Siri Shortcuts automation',
@@ -103,7 +103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Is On Device AI?',
         content: `**On Device AI is an app for iPhone, iPad, Apple Silicon Mac, and Apple Vision Pro that runs AI models directly on the device, rather than sending conversations to a cloud server.** Instead of bundling one model, it gives you a library of more than 200 open-weight models to browse and download, so the model you run is a choice you make based on your device's storage and memory rather than a fixed decision the developer made for you.`,
         items: [
-          'Model selection: 200+ open-weight models available to browse and download, including Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4, and Mistral families',
+          'Model selection: 200+ open-weight models available to browse and download, including Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4, and Mistral families',
           'On-device execution: models run using the device\'s own compute via llama.cpp or MLX, not a cloud API call',
           'Custom models: supports importing compatible GGUF models from Hugging Face, beyond the built-in library',
           'Platform scope: iPhone, iPad, Apple Silicon Mac, and Apple Vision Pro — an Apple-only app with no Android or Windows version',
@@ -257,7 +257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'What is On Device AI?', a: `On Device AI ([ondevice-ai.app](${APP_SITE_URL})) is a free app for iPhone, iPad, Apple Silicon Mac, and Apple Vision Pro from developer Zijie Deng that runs more than 200 downloadable open-weight AI models locally, using llama.cpp for GGUF models and MLX for Apple Silicon.` },
           { q: 'Is On Device AI the same app as "AI on Device"?', a: 'No. On Device AI (this review\'s subject) and AI on Device are two separate apps from different developers. On Device AI offers 200+ downloadable models for free with optional in-app purchases; AI on Device is a $4.99 one-time-purchase app from developer Eduardo Dominguez Menendez that bundles a single fixed 3B model and requires an Apple Intelligence-compatible device. See the dedicated [AI on Device review](/power-local-llm/ai-on-device-review) if that is the app you are looking for.' },
-          { q: 'How many models does On Device AI support?', a: 'More than 200 downloadable open-weight models, including Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4, and Mistral families, run through two local engines: llama.cpp for GGUF-format models and MLX for models optimized for Apple Silicon.' },
+          { q: 'How many models does On Device AI support?', a: 'More than 200 downloadable open-weight models, including Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4, and Mistral families, run through two local engines: llama.cpp for GGUF-format models and MLX for models optimized for Apple Silicon.' },
           { q: 'Is On Device AI free?', a: `On Device AI is free to download from the [App Store](${APP_STORE_URL}) with free access to core local model workflows. It offers optional in-app purchases ranging from $3.99 to $99.99 for Pro features, and optional cloud provider connections that require your own API key.` },
           { q: 'What devices does On Device AI support?', a: 'iPhone 14 or later (iOS 18+), iPad mini (7th generation) or later plus other recent iPads (iPadOS 18+), any Apple Silicon Mac (macOS 15+), and Apple Vision Pro (visionOS 2.0+). It does not support Android, Windows, or Intel Macs.' },
           { q: 'Does On Device AI work without an internet connection?', a: 'Once a model is downloaded, local chat and other on-device processing work without an internet connection. Downloading a model, and using an optional cloud provider connection, both require internet access.' },
@@ -313,16 +313,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GGUF MLX Chat-App iPhone',
       'On Device AI vs AI on Device',
     ],
-    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
+    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen3', 'DeepSeek', 'Phi-4', 'Mistral'],
     current_hardware_mentioned: ['iPhone 14+', 'iPad mini (7. Generation)+', 'Apple-Silicon-Mac', 'Apple Vision Pro'],
-    leadAnswerBlock: `**On Device AI ist eine kostenlose App für iPhone, iPad, Apple-Silicon-Mac und Apple Vision Pro, die KI-Modelle vollständig auf dem Gerät ausführt und Ihnen die Wahl zwischen mehr als 200 herunterladbaren Open-Weight-Modellen lässt, statt eines einzigen fest eingebauten Modells.** Die App nutzt zwei lokale Inferenz-Engines — [llama.cpp](https://github.com/ggml-org/llama.cpp) für Modelle im GGUF-Format und MLX für Apple Silicon — und unterstützt Modellfamilien wie Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 und Mistral. Über den Chat hinaus bietet sie Sprachtranskription mit Sprechererkennung, Import von Dokumenten und RSS-Feeds in „Wissensbibliotheken", Multi-Agenten-Workflows, On-Device-Text-zu-Sprache und Automatisierung über Siri-Kurzbefehle. Die App ist im [App Store](${APP_STORE_URL}) kostenlos herunterladbar, mit In-App-Käufen von 3,99 $ bis 99,99 $ und optionalen Verbindungen zu externen Cloud-KI-Anbietern über einen eigenen API-Schlüssel. Vorausgesetzt werden ein iPhone 14 oder neuer, ein iPad mini (7. Generation) oder neuer, ein Apple-Silicon-Mac oder eine Apple Vision Pro. Es handelt sich um eine andere App als das kostenpflichtige, auf ein festes Modell beschränkte „[AI on Device](/de/power-local-llm/ai-on-device-review)" eines anderen Entwicklers — siehe die Klarstellung zur Namensverwechslung in dieser Review, bevor Sie sich entscheiden.`,
+    leadAnswerBlock: `**On Device AI ist eine kostenlose App für iPhone, iPad, Apple-Silicon-Mac und Apple Vision Pro, die KI-Modelle vollständig auf dem Gerät ausführt und Ihnen die Wahl zwischen mehr als 200 herunterladbaren Open-Weight-Modellen lässt, statt eines einzigen fest eingebauten Modells.** Die App nutzt zwei lokale Inferenz-Engines — [llama.cpp](https://github.com/ggml-org/llama.cpp) für Modelle im GGUF-Format und MLX für Apple Silicon — und unterstützt Modellfamilien wie Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4 und Mistral. Über den Chat hinaus bietet sie Sprachtranskription mit Sprechererkennung, Import von Dokumenten und RSS-Feeds in „Wissensbibliotheken", Multi-Agenten-Workflows, On-Device-Text-zu-Sprache und Automatisierung über Siri-Kurzbefehle. Die App ist im [App Store](${APP_STORE_URL}) kostenlos herunterladbar, mit In-App-Käufen von 3,99 $ bis 99,99 $ und optionalen Verbindungen zu externen Cloud-KI-Anbietern über einen eigenen API-Schlüssel. Vorausgesetzt werden ein iPhone 14 oder neuer, ein iPad mini (7. Generation) oder neuer, ein Apple-Silicon-Mac oder eine Apple Vision Pro. Es handelt sich um eine andere App als das kostenpflichtige, auf ein festes Modell beschränkte „[AI on Device](/de/power-local-llm/ai-on-device-review)" eines anderen Entwicklers — siehe die Klarstellung zur Namensverwechslung in dieser Review, bevor Sie sich entscheiden.`,
     quickAnswerTop: {
       de: {
         question: 'Was ist On Device AI, und wie viele Modelle unterstützt die App?',
         answer: `On Device AI ist eine kostenlose App für iPhone, iPad, Apple-Silicon-Mac und Apple Vision Pro von Entwickler Zijie Deng, mit der Sie mehr als 200 Open-Weight-KI-Modelle direkt auf Ihrem Gerät herunterladen und ausführen können. Sie nutzt [llama.cpp](https://github.com/ggml-org/llama.cpp) für Modelle im GGUF-Format und MLX für auf Apple Silicon optimierte Modelle, sodass die Verarbeitung lokal statt auf einem entfernten Server stattfindet. Die App ist kostenlos nutzbar, mit optionalen In-App-Käufen für Pro-Funktionen und optionalen Verbindungen zu externen Cloud-KI-Anbietern, wenn Sie einen eigenen API-Schlüssel angeben.`,
         bullets: [
           'Führt 200+ herunterladbare Open-Weight-Modelle über zwei lokale Engines aus: llama.cpp (GGUF) und MLX',
-          'Unterstützt Modellfamilien wie Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 und Mistral',
+          'Unterstützt Modellfamilien wie Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4 und Mistral',
           'Kostenlos zum Download, mit optionalen In-App-Käufen (3,99 $-99,99 $) für Pro-Funktionen',
           'Optionale Cloud-Anbieter-Verbindungen erfordern eigene API-Zugangsdaten — für die lokale Nutzung nicht erforderlich',
           'Zusatzfunktionen: Sprachtranskription mit Sprechererkennung, Dokument-/RSS-„Wissensbibliotheken", Multi-Agenten-Workflows, On-Device-Text-zu-Sprache, Automatisierung über Siri-Kurzbefehle',
@@ -374,7 +374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was ist On Device AI?',
         content: `**On Device AI ist eine App für iPhone, iPad, Apple-Silicon-Mac und Apple Vision Pro, die KI-Modelle direkt auf dem Gerät ausführt, statt Unterhaltungen an einen Cloud-Server zu senden.** Statt ein einzelnes Modell mitzuliefern, bietet die App eine Bibliothek mit mehr als 200 Open-Weight-Modellen zum Durchsuchen und Herunterladen — welches Modell Sie ausführen, ist damit eine Entscheidung, die Sie anhand von Speicherplatz und Arbeitsspeicher Ihres Geräts treffen, statt eine feste Vorgabe des Entwicklers.`,
         items: [
-          'Modellauswahl: 200+ Open-Weight-Modelle zum Durchsuchen und Herunterladen, darunter die Familien Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 und Mistral',
+          'Modellauswahl: 200+ Open-Weight-Modelle zum Durchsuchen und Herunterladen, darunter die Familien Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4 und Mistral',
           'Ausführung auf dem Gerät: Modelle laufen über die eigene Rechenleistung des Geräts via llama.cpp oder MLX, nicht über einen Cloud-API-Aufruf',
           'Eigene Modelle: unterstützt den Import kompatibler GGUF-Modelle von Hugging Face, zusätzlich zur eingebauten Bibliothek',
           'Plattform-Umfang: iPhone, iPad, Apple-Silicon-Mac und Apple Vision Pro — eine reine Apple-App ohne Android- oder Windows-Version',
@@ -528,7 +528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'Was ist On Device AI?', a: `On Device AI ([ondevice-ai.app](${APP_SITE_URL})) ist eine kostenlose App für iPhone, iPad, Apple-Silicon-Mac und Apple Vision Pro von Entwickler Zijie Deng, die mehr als 200 herunterladbare Open-Weight-KI-Modelle lokal ausführt, mit llama.cpp für GGUF-Modelle und MLX für Apple Silicon.` },
           { q: 'Ist On Device AI dieselbe App wie „AI on Device"?', a: 'Nein. On Device AI (das Thema dieser Review) und AI on Device sind zwei separate Apps unterschiedlicher Entwickler. On Device AI bietet 200+ herunterladbare Modelle kostenlos mit optionalen In-App-Käufen; AI on Device ist eine einmalig 4,99 $ kostende App von Entwickler Eduardo Dominguez Menendez, die ein einzelnes festes 3B-Modell bündelt und ein Apple-Intelligence-kompatibles Gerät voraussetzt. Siehe die eigene [AI-on-Device-Review](/de/power-local-llm/ai-on-device-review), falls Sie diese App gesucht haben.' },
-          { q: 'Wie viele Modelle unterstützt On Device AI?', a: 'Mehr als 200 herunterladbare Open-Weight-Modelle, darunter die Familien Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 und Mistral, laufen über zwei lokale Engines: llama.cpp für Modelle im GGUF-Format und MLX für auf Apple Silicon optimierte Modelle.' },
+          { q: 'Wie viele Modelle unterstützt On Device AI?', a: 'Mehr als 200 herunterladbare Open-Weight-Modelle, darunter die Familien Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4 und Mistral, laufen über zwei lokale Engines: llama.cpp für Modelle im GGUF-Format und MLX für auf Apple Silicon optimierte Modelle.' },
           { q: 'Ist On Device AI kostenlos?', a: `On Device AI ist im [App Store](${APP_STORE_URL}) kostenlos herunterladbar, mit kostenlosem Zugriff auf zentrale lokale Modell-Workflows. Sie bietet optionale In-App-Käufe von 3,99 $ bis 99,99 $ für Pro-Funktionen sowie optionale Cloud-Anbieter-Verbindungen, die einen eigenen API-Schlüssel erfordern.` },
           { q: 'Welche Geräte unterstützt On Device AI?', a: 'iPhone 14 oder neuer (iOS 18+), iPad mini (7. Generation) oder neuer sowie weitere aktuelle iPads (iPadOS 18+), jeder Apple-Silicon-Mac (macOS 15+) und Apple Vision Pro (visionOS 2.0+). Nicht unterstützt werden Android, Windows oder Intel-Macs.' },
           { q: 'Funktioniert On Device AI ohne Internetverbindung?', a: 'Sobald ein Modell heruntergeladen ist, funktionieren lokaler Chat und andere On-Device-Verarbeitung ohne Internetverbindung. Für den Download eines Modells und für die Nutzung einer optionalen Cloud-Anbieter-Verbindung ist jeweils Internetzugang erforderlich.' },
@@ -584,16 +584,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'application chat GGUF MLX iPhone',
       'On Device AI vs AI on Device',
     ],
-    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
+    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen3', 'DeepSeek', 'Phi-4', 'Mistral'],
     current_hardware_mentioned: ['iPhone 14+', 'iPad mini (7e génération)+', 'Mac Apple Silicon', 'Apple Vision Pro'],
-    leadAnswerBlock: `**On Device AI est une application gratuite pour iPhone, iPad, Mac Apple Silicon et Apple Vision Pro qui exécute des modèles d'IA entièrement sur l'appareil, en vous laissant choisir parmi plus de 200 modèles open-weight téléchargeables plutôt qu'un seul modèle intégré.** Elle utilise deux moteurs d'inférence locale — [llama.cpp](https://github.com/ggml-org/llama.cpp) pour les modèles au format GGUF et MLX pour Apple Silicon — et prend en charge des familles de modèles telles que Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 et Mistral. Au-delà du chat, elle intègre la transcription vocale avec identification des locuteurs, l'import de documents et de flux RSS dans des « bibliothèques de connaissances », des workflows multi-agents, la synthèse vocale sur l'appareil et l'automatisation via les raccourcis Siri. L'application est gratuite sur l'[App Store](${APP_STORE_URL}), avec des achats intégrés de 3,99 $ à 99,99 $ et des connexions optionnelles à des fournisseurs d'IA cloud externes via votre propre clé API. Elle nécessite un iPhone 14 ou ultérieur, un iPad mini (7e génération) ou ultérieur, un Mac Apple Silicon ou un Apple Vision Pro. Il s'agit d'une application différente de « [AI on Device](/fr/power-local-llm/ai-on-device-review) », payante et limitée à un modèle unique, d'un autre développeur — consultez la clarification sur les noms dans cet avis avant de choisir entre les deux.`,
+    leadAnswerBlock: `**On Device AI est une application gratuite pour iPhone, iPad, Mac Apple Silicon et Apple Vision Pro qui exécute des modèles d'IA entièrement sur l'appareil, en vous laissant choisir parmi plus de 200 modèles open-weight téléchargeables plutôt qu'un seul modèle intégré.** Elle utilise deux moteurs d'inférence locale — [llama.cpp](https://github.com/ggml-org/llama.cpp) pour les modèles au format GGUF et MLX pour Apple Silicon — et prend en charge des familles de modèles telles que Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4 et Mistral. Au-delà du chat, elle intègre la transcription vocale avec identification des locuteurs, l'import de documents et de flux RSS dans des « bibliothèques de connaissances », des workflows multi-agents, la synthèse vocale sur l'appareil et l'automatisation via les raccourcis Siri. L'application est gratuite sur l'[App Store](${APP_STORE_URL}), avec des achats intégrés de 3,99 $ à 99,99 $ et des connexions optionnelles à des fournisseurs d'IA cloud externes via votre propre clé API. Elle nécessite un iPhone 14 ou ultérieur, un iPad mini (7e génération) ou ultérieur, un Mac Apple Silicon ou un Apple Vision Pro. Il s'agit d'une application différente de « [AI on Device](/fr/power-local-llm/ai-on-device-review) », payante et limitée à un modèle unique, d'un autre développeur — consultez la clarification sur les noms dans cet avis avant de choisir entre les deux.`,
     quickAnswerTop: {
       fr: {
         question: "Qu'est-ce que On Device AI et combien de modèles prend-elle en charge ?",
         answer: `On Device AI est une application gratuite pour iPhone, iPad, Mac Apple Silicon et Apple Vision Pro, développée par Zijie Deng, qui permet de télécharger et d'exécuter plus de 200 modèles d'IA open-weight directement sur l'appareil. Elle utilise [llama.cpp](https://github.com/ggml-org/llama.cpp) pour les modèles au format GGUF et MLX pour les modèles optimisés pour Apple Silicon, si bien que le traitement se fait localement plutôt que sur un serveur distant. L'application est gratuite, avec des achats intégrés optionnels pour les fonctionnalités Pro et des connexions optionnelles à des fournisseurs d'IA cloud externes si vous fournissez votre propre clé API.`,
         bullets: [
           'Exécute 200+ modèles locaux téléchargeables via deux moteurs : llama.cpp (GGUF) et MLX',
-          'Prend en charge des familles de modèles dont Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 et Mistral',
+          'Prend en charge des familles de modèles dont Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4 et Mistral',
           'Gratuite au téléchargement, avec achats intégrés optionnels (3,99 $-99,99 $) pour les fonctionnalités Pro',
           "Les connexions à des fournisseurs cloud optionnels nécessitent vos propres identifiants API — non requis pour un usage local",
           'Fonctionnalités additionnelles : transcription vocale avec identification des locuteurs, « bibliothèques de connaissances » documents/RSS, workflows multi-agents, synthèse vocale sur l\'appareil, automatisation via raccourcis Siri',
@@ -645,7 +645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: "Qu'est-ce que On Device AI ?",
         content: `**On Device AI est une application pour iPhone, iPad, Mac Apple Silicon et Apple Vision Pro qui exécute des modèles d'IA directement sur l'appareil, plutôt que d'envoyer les conversations à un serveur cloud.** Au lieu d'inclure un seul modèle, elle propose une bibliothèque de plus de 200 modèles open-weight à parcourir et à télécharger, ce qui fait du modèle exécuté un choix basé sur le stockage et la mémoire de votre appareil, plutôt qu'une décision fixe prise par le développeur.`,
         items: [
-          'Sélection de modèles : 200+ modèles open-weight à parcourir et télécharger, dont les familles Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 et Mistral',
+          'Sélection de modèles : 200+ modèles open-weight à parcourir et télécharger, dont les familles Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4 et Mistral',
           "Exécution sur l'appareil : les modèles s'exécutent via la puce de l'appareil, avec llama.cpp ou MLX, pas via un appel à une API cloud",
           "Modèles personnalisés : prend en charge l'import de modèles GGUF compatibles depuis Hugging Face, en plus de la bibliothèque intégrée",
           "Portée des plateformes : iPhone, iPad, Mac Apple Silicon et Apple Vision Pro — une application exclusivement Apple, sans version Android ni Windows",
@@ -799,7 +799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: "Qu'est-ce que On Device AI ?", a: `On Device AI ([ondevice-ai.app](${APP_SITE_URL})) est une application gratuite pour iPhone, iPad, Mac Apple Silicon et Apple Vision Pro du développeur Zijie Deng, qui exécute localement plus de 200 modèles d'IA open-weight téléchargeables, avec llama.cpp pour les modèles GGUF et MLX pour Apple Silicon.` },
           { q: 'On Device AI est-elle la même application que « AI on Device » ?', a: "Non. On Device AI (le sujet de cet avis) et AI on Device sont deux applications distinctes de développeurs différents. On Device AI offre 200+ modèles téléchargeables gratuitement avec achats intégrés optionnels ; AI on Device est une application à 4,99 $ à l'achat unique du développeur Eduardo Dominguez Menendez, qui regroupe un seul modèle fixe 3B et nécessite un appareil compatible Apple Intelligence. Voir l'[avis dédié AI on Device](/fr/power-local-llm/ai-on-device-review) si c'est cette application que vous cherchiez." },
-          { q: 'Combien de modèles On Device AI prend-elle en charge ?', a: 'Plus de 200 modèles open-weight téléchargeables, dont les familles Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 et Mistral, s\'exécutent via deux moteurs locaux : llama.cpp pour les modèles au format GGUF et MLX pour les modèles optimisés pour Apple Silicon.' },
+          { q: 'Combien de modèles On Device AI prend-elle en charge ?', a: 'Plus de 200 modèles open-weight téléchargeables, dont les familles Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4 et Mistral, s\'exécutent via deux moteurs locaux : llama.cpp pour les modèles au format GGUF et MLX pour les modèles optimisés pour Apple Silicon.' },
           { q: 'On Device AI est-elle gratuite ?', a: `On Device AI est gratuite à télécharger sur l'[App Store](${APP_STORE_URL}), avec un accès gratuit aux workflows de modèles locaux principaux. Elle propose des achats intégrés optionnels de 3,99 $ à 99,99 $ pour les fonctionnalités Pro, ainsi que des connexions optionnelles à des fournisseurs cloud nécessitant votre propre clé API.` },
           { q: 'Quels appareils On Device AI prend-elle en charge ?', a: "iPhone 14 ou ultérieur (iOS 18+), iPad mini (7e génération) ou ultérieur ainsi que d'autres iPads récents (iPadOS 18+), tout Mac Apple Silicon (macOS 15+), et Apple Vision Pro (visionOS 2.0+). Elle ne prend pas en charge Android, Windows ou les Mac Intel." },
           { q: 'On Device AI fonctionne-t-elle sans connexion internet ?', a: "Une fois un modèle téléchargé, le chat local et les autres traitements sur l'appareil fonctionnent sans connexion internet. Le téléchargement d'un modèle, ainsi que l'utilisation d'une connexion optionnelle à un fournisseur cloud, nécessitent tous deux un accès internet." },
@@ -855,16 +855,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app de chat GGUF MLX iPhone',
       'On Device AI vs AI on Device',
     ],
-    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
+    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen3', 'DeepSeek', 'Phi-4', 'Mistral'],
     current_hardware_mentioned: ['iPhone 14+', 'iPad mini (7.ª generación)+', 'Mac con Apple Silicon', 'Apple Vision Pro'],
-    leadAnswerBlock: `**On Device AI es una app gratuita para iPhone, iPad, Mac con Apple Silicon y Apple Vision Pro que ejecuta modelos de IA totalmente en el dispositivo, dándote a elegir entre más de 200 modelos de pesos abiertos descargables en lugar de uno solo integrado.** Usa dos motores de inferencia local — [llama.cpp](https://github.com/ggml-org/llama.cpp) para modelos en formato GGUF y MLX para Apple Silicon — y admite familias de modelos como Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 y Mistral. Más allá del chat, incluye transcripción de voz con identificación de hablantes, importación de documentos y feeds RSS a "bibliotecas de conocimiento", flujos de trabajo multiagente, texto a voz en el dispositivo y automatización con Atajos de Siri. La app es gratuita en la [App Store](${APP_STORE_URL}), con compras dentro de la app de entre $3.99 y $99.99 y conexiones opcionales, con tu propia clave, a proveedores de IA en la nube externos. Requiere un iPhone 14 o posterior, un iPad mini (7.ª generación) o posterior, un Mac con Apple Silicon o un Apple Vision Pro. Es una app distinta de "[AI on Device](/es/power-local-llm/ai-on-device-review)", de pago y con un único modelo fijo, de otro desarrollador — revisa la aclaración de nombres en esta reseña antes de elegir entre ambas.`,
+    leadAnswerBlock: `**On Device AI es una app gratuita para iPhone, iPad, Mac con Apple Silicon y Apple Vision Pro que ejecuta modelos de IA totalmente en el dispositivo, dándote a elegir entre más de 200 modelos de pesos abiertos descargables en lugar de uno solo integrado.** Usa dos motores de inferencia local — [llama.cpp](https://github.com/ggml-org/llama.cpp) para modelos en formato GGUF y MLX para Apple Silicon — y admite familias de modelos como Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4 y Mistral. Más allá del chat, incluye transcripción de voz con identificación de hablantes, importación de documentos y feeds RSS a "bibliotecas de conocimiento", flujos de trabajo multiagente, texto a voz en el dispositivo y automatización con Atajos de Siri. La app es gratuita en la [App Store](${APP_STORE_URL}), con compras dentro de la app de entre $3.99 y $99.99 y conexiones opcionales, con tu propia clave, a proveedores de IA en la nube externos. Requiere un iPhone 14 o posterior, un iPad mini (7.ª generación) o posterior, un Mac con Apple Silicon o un Apple Vision Pro. Es una app distinta de "[AI on Device](/es/power-local-llm/ai-on-device-review)", de pago y con un único modelo fijo, de otro desarrollador — revisa la aclaración de nombres en esta reseña antes de elegir entre ambas.`,
     quickAnswerTop: {
       es: {
         question: '¿Qué es On Device AI y cuántos modelos admite?',
         answer: `On Device AI es una app gratuita para iPhone, iPad, Mac con Apple Silicon y Apple Vision Pro, desarrollada por Zijie Deng, que permite descargar y ejecutar más de 200 modelos de IA de pesos abiertos directamente en tu dispositivo. Usa [llama.cpp](https://github.com/ggml-org/llama.cpp) para modelos en formato GGUF y MLX para modelos optimizados para Apple Silicon, de modo que el procesamiento ocurre localmente en vez de en un servidor remoto. La app es gratuita, con compras opcionales dentro de la app para funciones Pro y conexiones opcionales a proveedores de IA en la nube externos si aportas tu propia clave de API.`,
         bullets: [
           'Ejecuta 200+ modelos locales descargables mediante dos motores: llama.cpp (GGUF) y MLX',
-          'Admite familias de modelos como Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 y Mistral',
+          'Admite familias de modelos como Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4 y Mistral',
           'Gratis para descargar, con compras opcionales dentro de la app ($3.99-$99.99) para funciones Pro',
           'Las conexiones opcionales a proveedores en la nube requieren tus propias credenciales de API — no son necesarias para el uso local',
           'Funciones adicionales: transcripción de voz con identificación de hablantes, "bibliotecas de conocimiento" de documentos/RSS, flujos de trabajo multiagente, texto a voz en el dispositivo, automatización con Atajos de Siri',
@@ -916,7 +916,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Qué es On Device AI?',
         content: `**On Device AI es una app para iPhone, iPad, Mac con Apple Silicon y Apple Vision Pro que ejecuta modelos de IA directamente en el dispositivo, en lugar de enviar las conversaciones a un servidor en la nube.** En vez de incluir un único modelo, ofrece una biblioteca de más de 200 modelos de pesos abiertos para explorar y descargar, de modo que el modelo que ejecutas es una elección basada en el almacenamiento y la memoria de tu dispositivo, no una decisión fija tomada por el desarrollador.`,
         items: [
-          'Selección de modelos: 200+ modelos de pesos abiertos para explorar y descargar, incluyendo las familias Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 y Mistral',
+          'Selección de modelos: 200+ modelos de pesos abiertos para explorar y descargar, incluyendo las familias Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4 y Mistral',
           'Ejecución en el dispositivo: los modelos corren usando el propio cómputo del dispositivo vía llama.cpp o MLX, no mediante una llamada a una API en la nube',
           'Modelos personalizados: admite importar modelos GGUF compatibles desde Hugging Face, más allá de la biblioteca integrada',
           'Alcance de plataformas: iPhone, iPad, Mac con Apple Silicon y Apple Vision Pro — una app exclusiva de Apple, sin versión para Android o Windows',
@@ -1070,7 +1070,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: '¿Qué es On Device AI?', a: `On Device AI ([ondevice-ai.app](${APP_SITE_URL})) es una app gratuita para iPhone, iPad, Mac con Apple Silicon y Apple Vision Pro del desarrollador Zijie Deng que ejecuta localmente más de 200 modelos de IA de pesos abiertos descargables, usando llama.cpp para modelos GGUF y MLX para Apple Silicon.` },
           { q: '¿Es On Device AI la misma app que "AI on Device"?', a: 'No. On Device AI (el tema de esta reseña) y AI on Device son dos apps separadas de desarrolladores distintos. On Device AI ofrece 200+ modelos descargables gratis con compras opcionales dentro de la app; AI on Device es una app de pago único de $4.99 del desarrollador Eduardo Dominguez Menendez que agrupa un único modelo fijo de 3B y requiere un dispositivo compatible con Apple Intelligence. Consulta la [reseña dedicada de AI on Device](/es/power-local-llm/ai-on-device-review) si es esa app la que buscabas.' },
-          { q: '¿Cuántos modelos admite On Device AI?', a: 'Más de 200 modelos de pesos abiertos descargables, incluyendo las familias Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 y Mistral, se ejecutan mediante dos motores locales: llama.cpp para modelos en formato GGUF y MLX para modelos optimizados para Apple Silicon.' },
+          { q: '¿Cuántos modelos admite On Device AI?', a: 'Más de 200 modelos de pesos abiertos descargables, incluyendo las familias Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4 y Mistral, se ejecutan mediante dos motores locales: llama.cpp para modelos en formato GGUF y MLX para modelos optimizados para Apple Silicon.' },
           { q: '¿Es gratis On Device AI?', a: `On Device AI es gratis de descargar desde la [App Store](${APP_STORE_URL}), con acceso gratuito a los flujos de trabajo de modelos locales principales. Ofrece compras opcionales dentro de la app de $3.99 a $99.99 para funciones Pro, y conexiones opcionales a proveedores en la nube que requieren tu propia clave de API.` },
           { q: '¿Qué dispositivos admite On Device AI?', a: 'iPhone 14 o posterior (iOS 18+), iPad mini (7.ª generación) o posterior junto con otros iPads recientes (iPadOS 18+), cualquier Mac con Apple Silicon (macOS 15+), y Apple Vision Pro (visionOS 2.0+). No admite Android, Windows ni Macs con Intel.' },
           { q: '¿Funciona On Device AI sin conexión a internet?', a: 'Una vez descargado un modelo, el chat local y otros procesamientos en el dispositivo funcionan sin conexión a internet. Descargar un modelo, y usar una conexión opcional a un proveedor en la nube, requieren acceso a internet.' },
@@ -1126,16 +1126,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GGUF MLX チャットアプリ iPhone',
       'On Device AI vs AI on Device',
     ],
-    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
+    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen3', 'DeepSeek', 'Phi-4', 'Mistral'],
     current_hardware_mentioned: ['iPhone 14以降', 'iPad mini(第7世代)以降', 'Apple SiliconMac', 'Apple Vision Pro'],
-    leadAnswerBlock: `**On Device AIは、iPhone・iPad・Apple SiliconMac・Apple Vision Pro向けの無料アプリで、固定の1モデルではなく200以上のダウンロード可能なオープンウェイトモデルから選んで、AIモデルを完全に端末上で実行できます。**GGUF形式のモデル用[llama.cpp](https://github.com/ggml-org/llama.cpp)とApple Silicon向けMLXという2つのローカル推論エンジンを使い、Llama 3、Gemma 3、Qwen 3、DeepSeek、Phi-4、Mistralといったモデルファミリーに対応しています。チャット以外にも、話者識別付きの音声文字起こし、ドキュメントやRSSフィードを「ナレッジライブラリ」に取り込む機能、マルチエージェントのワークフロー、オンデバイスの音声合成、Siriショートカットによる自動化を備えています。アプリは[App Store](${APP_STORE_URL})で無料ダウンロードでき、3.99ドルから99.99ドルのアプリ内課金と、自分のAPIキーを使う任意の外部クラウドAIプロバイダー接続があります。動作にはiPhone 14以降、iPad mini(第7世代)以降、Apple SiliconMac、またはApple Vision Proが必要です。別の開発者による、固定1モデルの有料アプリ「[AI on Device](/ja/power-local-llm/ai-on-device-review)」とは異なるアプリなので、選ぶ前に本レビューの名称の違いに関する説明を確認してください。`,
+    leadAnswerBlock: `**On Device AIは、iPhone・iPad・Apple SiliconMac・Apple Vision Pro向けの無料アプリで、固定の1モデルではなく200以上のダウンロード可能なオープンウェイトモデルから選んで、AIモデルを完全に端末上で実行できます。**GGUF形式のモデル用[llama.cpp](https://github.com/ggml-org/llama.cpp)とApple Silicon向けMLXという2つのローカル推論エンジンを使い、Llama 3、Gemma 3、Qwen3、DeepSeek、Phi-4、Mistralといったモデルファミリーに対応しています。チャット以外にも、話者識別付きの音声文字起こし、ドキュメントやRSSフィードを「ナレッジライブラリ」に取り込む機能、マルチエージェントのワークフロー、オンデバイスの音声合成、Siriショートカットによる自動化を備えています。アプリは[App Store](${APP_STORE_URL})で無料ダウンロードでき、3.99ドルから99.99ドルのアプリ内課金と、自分のAPIキーを使う任意の外部クラウドAIプロバイダー接続があります。動作にはiPhone 14以降、iPad mini(第7世代)以降、Apple SiliconMac、またはApple Vision Proが必要です。別の開発者による、固定1モデルの有料アプリ「[AI on Device](/ja/power-local-llm/ai-on-device-review)」とは異なるアプリなので、選ぶ前に本レビューの名称の違いに関する説明を確認してください。`,
     quickAnswerTop: {
       ja: {
         question: 'On Device AIとは何ですか。何個のモデルに対応していますか。',
         answer: `On Device AIは、開発者Zijie DengによるiPhone・iPad・Apple SiliconMac・Apple Vision Pro向けの無料アプリで、200以上のオープンウェイトAIモデルを端末に直接ダウンロードして実行できます。GGUF形式のモデル用に[llama.cpp](https://github.com/ggml-org/llama.cpp)、Apple Silicon向けに最適化されたモデル用にMLXを使うため、処理はリモートサーバーではなくローカルで行われます。アプリ自体は無料で、Pro機能の任意のアプリ内課金と、自分のAPIキーを用意すれば外部クラウドAIプロバイダーへの任意接続が利用できます。`,
         bullets: [
           'llama.cpp(GGUF)とMLXという2つのエンジンで、200以上のダウンロード可能なオープンウェイトのローカルモデルを実行',
-          'Llama 3、Gemma 3、Qwen 3、DeepSeek、Phi-4、Mistralなどのモデルファミリーに対応',
+          'Llama 3、Gemma 3、Qwen3、DeepSeek、Phi-4、Mistralなどのモデルファミリーに対応',
           '無料ダウンロード、Pro機能向けの任意のアプリ内課金あり(3.99ドル~99.99ドル)',
           'クラウドプロバイダーへの任意接続には自分のAPI認証情報が必要——ローカル利用には不要',
           '追加機能:話者識別付き音声文字起こし、ドキュメント/RSSの「ナレッジライブラリ」、マルチエージェントワークフロー、オンデバイス音声合成、Siriショートカットによる自動化',
@@ -1187,7 +1187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'On Device AIとは',
         content: `**On Device AIは、会話をクラウドサーバーに送るのではなく、AIモデルを端末上で直接実行するiPhone・iPad・Apple SiliconMac・Apple Vision Pro向けアプリです。**1つのモデルを内蔵するのではなく、閲覧してダウンロードできる200以上のオープンウェイトモデルのライブラリを提供しているため、実行するモデルは開発者が固定した決定ではなく、端末のストレージとメモリに基づく自分自身の選択になります。`,
         items: [
-          'モデル選択:Llama 3、Gemma 3、Qwen 3、DeepSeek、Phi-4、Mistralの各ファミリーを含む、閲覧・ダウンロード可能な200以上のオープンウェイトモデル',
+          'モデル選択:Llama 3、Gemma 3、Qwen3、DeepSeek、Phi-4、Mistralの各ファミリーを含む、閲覧・ダウンロード可能な200以上のオープンウェイトモデル',
           'オンデバイス実行:モデルはクラウドAPI呼び出しではなく、llama.cppまたはMLXを介して端末自体の演算能力で動作',
           'カスタムモデル:内蔵ライブラリに加え、Hugging Faceから互換性のあるGGUFモデルをインポート可能',
           '対応プラットフォームの範囲:iPhone・iPad・Apple SiliconMac・Apple Vision Pro——Apple専用アプリで、AndroidやWindows版はなし',
@@ -1341,7 +1341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'On Device AIとは何ですか。', a: `On Device AI([ondevice-ai.app](${APP_SITE_URL}))は、開発者Zijie DengによるiPhone・iPad・Apple SiliconMac・Apple Vision Pro向けの無料アプリで、GGUFモデル用のllama.cppとApple Silicon向けのMLXを使い、200以上のダウンロード可能なオープンウェイトAIモデルをローカルで実行します。` },
           { q: 'On Device AIは「AI on Device」と同じアプリですか。', a: 'いいえ。On Device AI(本レビューの対象)とAI on Deviceは、異なる開発者による2つの別々のアプリです。On Device AIは200以上のモデルを無料でダウンロードでき、任意のアプリ内課金があります。AI on Deviceは開発者Eduardo Dominguez Menendezによる一括4.99ドルのアプリで、固定の3Bモデル1つをバンドルし、Apple Intelligence対応端末を必要とします。そちらのアプリをお探しの場合は、独立した[AI on Deviceレビュー](/ja/power-local-llm/ai-on-device-review)をご覧ください。' },
-          { q: 'On Device AIは何個のモデルに対応していますか。', a: 'Llama 3、Gemma 3、Qwen 3、DeepSeek、Phi-4、Mistralの各ファミリーを含む200以上のダウンロード可能なオープンウェイトモデルが、GGUF形式のモデル用のllama.cppとApple Silicon向けに最適化されたモデル用のMLXという2つのローカルエンジンで動作します。' },
+          { q: 'On Device AIは何個のモデルに対応していますか。', a: 'Llama 3、Gemma 3、Qwen3、DeepSeek、Phi-4、Mistralの各ファミリーを含む200以上のダウンロード可能なオープンウェイトモデルが、GGUF形式のモデル用のllama.cppとApple Silicon向けに最適化されたモデル用のMLXという2つのローカルエンジンで動作します。' },
           { q: 'On Device AIは無料ですか。', a: `On Device AIは[App Store](${APP_STORE_URL})から無料でダウンロードでき、中心となるローカルモデルのワークフローに無料でアクセスできます。Pro機能向けに3.99ドルから99.99ドルの任意のアプリ内課金があり、自分のAPIキーが必要な任意のクラウドプロバイダー接続も用意されています。` },
           { q: 'On Device AIはどの端末に対応していますか。', a: 'iPhone 14以降(iOS 18+)、iPad mini(第7世代)以降を含む最近のiPad(iPadOS 18+)、任意のApple SiliconMac(macOS 15+)、Apple Vision Pro(visionOS 2.0+)です。Android、Windows、Intel Macには対応していません。' },
           { q: 'On Device AIはインターネット接続なしで動作しますか。', a: 'モデルをダウンロードすれば、ローカルチャットやその他のオンデバイス処理はインターネット接続なしで動作します。モデルのダウンロードと、任意のクラウドプロバイダー接続の利用には、それぞれインターネットアクセスが必要です。' },
@@ -1397,16 +1397,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GGUF MLX 聊天应用 iPhone',
       'On Device AI vs AI on Device',
     ],
-    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
+    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen3', 'DeepSeek', 'Phi-4', 'Mistral'],
     current_hardware_mentioned: ['iPhone 14及以上', 'iPad mini(第7代)及以上', 'Apple芯片Mac', 'Apple Vision Pro'],
-    leadAnswerBlock: `**On Device AI是一款适用于iPhone、iPad、Apple芯片Mac和Apple Vision Pro的免费应用,完全在设备端运行AI模型,让你从200多种可下载的开放权重模型中选择,而不是使用单一内置模型。**它使用两个本地推理引擎——[llama.cpp](https://github.com/ggml-org/llama.cpp)用于GGUF格式模型,MLX用于Apple芯片——支持Llama 3、Gemma 3、Qwen 3、DeepSeek、Phi-4和Mistral等模型系列。除了聊天,它还集成了带说话人识别的语音转录、将文档和RSS源导入"知识库"、多智能体工作流、设备端文本转语音,以及通过Siri快捷指令实现自动化。该应用在[App Store](${APP_STORE_URL})免费下载,提供3.99美元到99.99美元的应用内购买,并可使用你自己的API密钥选择性连接外部云端AI提供商。使用要求为iPhone 14或更新机型、iPad mini(第7代)或更新机型、Apple芯片Mac,或Apple Vision Pro。它与另一位开发者推出的付费单一固定模型应用"[AI on Device](/zh/power-local-llm/ai-on-device-review)"不是同一款应用——在两者之间做选择前,请先查看本评测中关于名称混淆的说明。`,
+    leadAnswerBlock: `**On Device AI是一款适用于iPhone、iPad、Apple芯片Mac和Apple Vision Pro的免费应用,完全在设备端运行AI模型,让你从200多种可下载的开放权重模型中选择,而不是使用单一内置模型。**它使用两个本地推理引擎——[llama.cpp](https://github.com/ggml-org/llama.cpp)用于GGUF格式模型,MLX用于Apple芯片——支持Llama 3、Gemma 3、Qwen3、DeepSeek、Phi-4和Mistral等模型系列。除了聊天,它还集成了带说话人识别的语音转录、将文档和RSS源导入"知识库"、多智能体工作流、设备端文本转语音,以及通过Siri快捷指令实现自动化。该应用在[App Store](${APP_STORE_URL})免费下载,提供3.99美元到99.99美元的应用内购买,并可使用你自己的API密钥选择性连接外部云端AI提供商。使用要求为iPhone 14或更新机型、iPad mini(第7代)或更新机型、Apple芯片Mac,或Apple Vision Pro。它与另一位开发者推出的付费单一固定模型应用"[AI on Device](/zh/power-local-llm/ai-on-device-review)"不是同一款应用——在两者之间做选择前,请先查看本评测中关于名称混淆的说明。`,
     quickAnswerTop: {
       zh: {
         question: 'On Device AI是什么?它支持多少种模型?',
         answer: `On Device AI是开发者Zijie Deng为iPhone、iPad、Apple芯片Mac和Apple Vision Pro打造的免费应用,可让你直接在设备上下载并运行200多种开放权重AI模型。它使用[llama.cpp](https://github.com/ggml-org/llama.cpp)运行GGUF格式模型,使用MLX运行针对Apple芯片优化的模型,因此处理在本地进行,而非在远程服务器上。该应用本身免费使用,提供可选的Pro功能应用内购买,以及在你提供自己API密钥的情况下可选连接外部云端AI提供商。`,
         bullets: [
           '通过llama.cpp(GGUF)和MLX两个引擎运行200多种可下载的本地开放权重模型',
-          '支持Llama 3、Gemma 3、Qwen 3、DeepSeek、Phi-4和Mistral等模型系列',
+          '支持Llama 3、Gemma 3、Qwen3、DeepSeek、Phi-4和Mistral等模型系列',
           '免费下载,提供可选的Pro功能应用内购买(3.99美元-99.99美元)',
           '可选的云端提供商连接需要你自己的API凭证——本地使用无需此项',
           '附加功能:带说话人识别的语音转录、文档/RSS"知识库"、多智能体工作流、设备端文本转语音、Siri快捷指令自动化',
@@ -1458,7 +1458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'On Device AI是什么?',
         content: `**On Device AI是一款适用于iPhone、iPad、Apple芯片Mac和Apple Vision Pro的应用,直接在设备上运行AI模型,而不是将对话发送到云端服务器。**它没有捆绑单一模型,而是提供一个包含200多种开放权重模型的库供浏览和下载,因此你运行哪种模型是根据设备存储和内存做出的选择,而不是开发者替你固定好的决定。`,
         items: [
-          '模型选择:200多种可浏览和下载的开放权重模型,包括Llama 3、Gemma 3、Qwen 3、DeepSeek、Phi-4和Mistral系列',
+          '模型选择:200多种可浏览和下载的开放权重模型,包括Llama 3、Gemma 3、Qwen3、DeepSeek、Phi-4和Mistral系列',
           '设备端执行:模型通过llama.cpp或MLX使用设备自身算力运行,而非调用云端API',
           '自定义模型:除内置库外,支持从Hugging Face导入兼容的GGUF模型',
           '平台范围:iPhone、iPad、Apple芯片Mac和Apple Vision Pro——纯Apple应用,没有Android或Windows版本',
@@ -1612,7 +1612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'On Device AI是什么?', a: `On Device AI([ondevice-ai.app](${APP_SITE_URL}))是开发者Zijie Deng为iPhone、iPad、Apple芯片Mac和Apple Vision Pro打造的免费应用,使用llama.cpp运行GGUF模型、MLX运行Apple芯片模型,在本地运行200多种可下载的开放权重AI模型。` },
           { q: 'On Device AI和"AI on Device"是同一款应用吗?', a: '不是。On Device AI(本评测主题)与AI on Device是不同开发者推出的两款独立应用。On Device AI免费提供200多种可下载模型,并有可选的应用内购买;AI on Device是开发者Eduardo Dominguez Menendez推出的一次性4.99美元应用,捆绑单一固定3B模型,并要求支持Apple Intelligence的设备。如果你要找的是那款应用,请参见专门的[AI on Device评测](/zh/power-local-llm/ai-on-device-review)。' },
-          { q: 'On Device AI支持多少种模型?', a: '超过200种可下载的开放权重模型,包括Llama 3、Gemma 3、Qwen 3、DeepSeek、Phi-4和Mistral系列,通过两个本地引擎运行:llama.cpp用于GGUF格式模型,MLX用于针对Apple芯片优化的模型。' },
+          { q: 'On Device AI支持多少种模型?', a: '超过200种可下载的开放权重模型,包括Llama 3、Gemma 3、Qwen3、DeepSeek、Phi-4和Mistral系列,通过两个本地引擎运行:llama.cpp用于GGUF格式模型,MLX用于针对Apple芯片优化的模型。' },
           { q: 'On Device AI免费吗?', a: `On Device AI可从[App Store](${APP_STORE_URL})免费下载,并可免费使用核心本地模型工作流。它为Pro功能提供3.99美元到99.99美元的可选应用内购买,以及需要你自备API密钥的可选云端提供商连接。` },
           { q: 'On Device AI支持哪些设备?', a: 'iPhone 14或更新机型(iOS 18+)、iPad mini(第7代)或更新机型及其他近期iPad(iPadOS 18+)、任何Apple芯片Mac(macOS 15+),以及Apple Vision Pro(visionOS 2.0+)。它不支持Android、Windows或Intel Mac。' },
           { q: 'On Device AI能在没有网络连接的情况下运行吗?', a: '模型下载完成后,本地聊天和其他设备端处理无需联网即可运行。下载模型以及使用可选的云端提供商连接均需要联网。' },
@@ -1668,16 +1668,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app de chat GGUF MLX iPhone',
       'On Device AI vs AI on Device',
     ],
-    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
+    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen3', 'DeepSeek', 'Phi-4', 'Mistral'],
     current_hardware_mentioned: ['iPhone 14+', 'iPad mini (7ª geração)+', 'Mac com Apple Silicon', 'Apple Vision Pro'],
-    leadAnswerBlock: `**On Device AI é um app gratuito para iPhone, iPad, Mac com Apple Silicon e Apple Vision Pro que executa modelos de IA totalmente no dispositivo, permitindo escolher entre mais de 200 modelos de pesos abertos para baixar, em vez de um único modelo embutido.** Ele usa dois mecanismos de inferência local — [llama.cpp](https://github.com/ggml-org/llama.cpp) para modelos em formato GGUF e MLX para Apple Silicon — e oferece suporte a famílias de modelos como Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 e Mistral. Além do chat, ele inclui transcrição de voz com identificação de interlocutores, importação de documentos e feeds RSS para "bibliotecas de conhecimento", fluxos de trabalho multiagente, texto para voz no dispositivo e automação via Atalhos da Siri. O app é gratuito na [App Store](${APP_STORE_URL}), com compras dentro do app de $3,99 a $99,99 e conexões opcionais, com sua própria chave, a provedores de IA em nuvem externos. Ele exige um iPhone 14 ou posterior, um iPad mini (7ª geração) ou posterior, um Mac com Apple Silicon ou um Apple Vision Pro. É um app diferente do "[AI on Device](/pt/power-local-llm/ai-on-device-review)", pago e com um único modelo fixo, de outro desenvolvedor — confira o esclarecimento sobre nomes neste review antes de escolher entre os dois.`,
+    leadAnswerBlock: `**On Device AI é um app gratuito para iPhone, iPad, Mac com Apple Silicon e Apple Vision Pro que executa modelos de IA totalmente no dispositivo, permitindo escolher entre mais de 200 modelos de pesos abertos para baixar, em vez de um único modelo embutido.** Ele usa dois mecanismos de inferência local — [llama.cpp](https://github.com/ggml-org/llama.cpp) para modelos em formato GGUF e MLX para Apple Silicon — e oferece suporte a famílias de modelos como Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4 e Mistral. Além do chat, ele inclui transcrição de voz com identificação de interlocutores, importação de documentos e feeds RSS para "bibliotecas de conhecimento", fluxos de trabalho multiagente, texto para voz no dispositivo e automação via Atalhos da Siri. O app é gratuito na [App Store](${APP_STORE_URL}), com compras dentro do app de $3,99 a $99,99 e conexões opcionais, com sua própria chave, a provedores de IA em nuvem externos. Ele exige um iPhone 14 ou posterior, um iPad mini (7ª geração) ou posterior, um Mac com Apple Silicon ou um Apple Vision Pro. É um app diferente do "[AI on Device](/pt/power-local-llm/ai-on-device-review)", pago e com um único modelo fixo, de outro desenvolvedor — confira o esclarecimento sobre nomes neste review antes de escolher entre os dois.`,
     quickAnswerTop: {
       pt: {
         question: 'O que é o On Device AI e quantos modelos ele suporta?',
         answer: `On Device AI é um app gratuito para iPhone, iPad, Mac com Apple Silicon e Apple Vision Pro, desenvolvido por Zijie Deng, que permite baixar e executar mais de 200 modelos de IA de pesos abertos diretamente no seu dispositivo. Ele usa [llama.cpp](https://github.com/ggml-org/llama.cpp) para modelos em formato GGUF e MLX para modelos otimizados para Apple Silicon, de modo que o processamento ocorre localmente em vez de em um servidor remoto. O app é gratuito para usar, com compras opcionais dentro do app para recursos Pro e conexões opcionais a provedores de IA em nuvem externos, caso você forneça sua própria chave de API.`,
         bullets: [
           'Executa 200+ modelos locais para baixar via dois mecanismos: llama.cpp (GGUF) e MLX',
-          'Suporta famílias de modelos como Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 e Mistral',
+          'Suporta famílias de modelos como Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4 e Mistral',
           'Gratuito para baixar, com compras opcionais dentro do app ($3,99-$99,99) para recursos Pro',
           'Conexões opcionais a provedores de nuvem exigem suas próprias credenciais de API — não necessárias para uso local',
           'Recursos adicionais: transcrição de voz com identificação de interlocutores, "bibliotecas de conhecimento" de documentos/RSS, fluxos de trabalho multiagente, texto para voz no dispositivo, automação via Atalhos da Siri',
@@ -1729,7 +1729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que é o On Device AI?',
         content: `**On Device AI é um app para iPhone, iPad, Mac com Apple Silicon e Apple Vision Pro que executa modelos de IA diretamente no dispositivo, em vez de enviar conversas para um servidor na nuvem.** Em vez de vir com um único modelo, ele oferece uma biblioteca de mais de 200 modelos de pesos abertos para navegar e baixar, então o modelo que você executa é uma escolha baseada no armazenamento e na memória do seu dispositivo, e não uma decisão fixa tomada pelo desenvolvedor.`,
         items: [
-          'Seleção de modelos: 200+ modelos de pesos abertos para navegar e baixar, incluindo as famílias Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 e Mistral',
+          'Seleção de modelos: 200+ modelos de pesos abertos para navegar e baixar, incluindo as famílias Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4 e Mistral',
           'Execução no dispositivo: os modelos rodam usando o próprio poder de processamento do dispositivo via llama.cpp ou MLX, não uma chamada de API na nuvem',
           'Modelos personalizados: suporta a importação de modelos GGUF compatíveis do Hugging Face, além da biblioteca embutida',
           'Alcance de plataformas: iPhone, iPad, Mac com Apple Silicon e Apple Vision Pro — um app exclusivo da Apple, sem versão para Android ou Windows',
@@ -1883,7 +1883,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'O que é o On Device AI?', a: `On Device AI ([ondevice-ai.app](${APP_SITE_URL})) é um app gratuito para iPhone, iPad, Mac com Apple Silicon e Apple Vision Pro do desenvolvedor Zijie Deng que executa localmente mais de 200 modelos de IA de pesos abertos para baixar, usando llama.cpp para modelos GGUF e MLX para Apple Silicon.` },
           { q: 'O On Device AI é o mesmo app que "AI on Device"?', a: 'Não. On Device AI (o assunto deste review) e AI on Device são dois apps separados de desenvolvedores diferentes. O On Device AI oferece 200+ modelos para baixar gratuitamente com compras opcionais dentro do app; o AI on Device é um app de pagamento único de $4,99 do desenvolvedor Eduardo Dominguez Menendez que reúne um único modelo fixo de 3B e exige um dispositivo compatível com Apple Intelligence. Veja o [review dedicado do AI on Device](/pt/power-local-llm/ai-on-device-review) se for esse o app que você procurava.' },
-          { q: 'Quantos modelos o On Device AI suporta?', a: 'Mais de 200 modelos de pesos abertos para baixar, incluindo as famílias Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4 e Mistral, rodam por meio de dois mecanismos locais: llama.cpp para modelos em formato GGUF e MLX para modelos otimizados para Apple Silicon.' },
+          { q: 'Quantos modelos o On Device AI suporta?', a: 'Mais de 200 modelos de pesos abertos para baixar, incluindo as famílias Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4 e Mistral, rodam por meio de dois mecanismos locais: llama.cpp para modelos em formato GGUF e MLX para modelos otimizados para Apple Silicon.' },
           { q: 'O On Device AI é gratuito?', a: `O On Device AI é gratuito para baixar na [App Store](${APP_STORE_URL}), com acesso gratuito aos fluxos de trabalho de modelos locais principais. Ele oferece compras opcionais dentro do app de $3,99 a $99,99 para recursos Pro, e conexões opcionais a provedores de nuvem que exigem sua própria chave de API.` },
           { q: 'Quais dispositivos o On Device AI suporta?', a: 'iPhone 14 ou posterior (iOS 18+), iPad mini (7ª geração) ou posterior mais outros iPads recentes (iPadOS 18+), qualquer Mac com Apple Silicon (macOS 15+), e Apple Vision Pro (visionOS 2.0+). Ele não suporta Android, Windows ou Macs Intel.' },
           { q: 'O On Device AI funciona sem conexão com a internet?', a: 'Depois que um modelo é baixado, o chat local e outros processamentos no dispositivo funcionam sem conexão com a internet. Baixar um modelo, e usar uma conexão opcional a um provedor de nuvem, exigem acesso à internet.' },
@@ -1939,16 +1939,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تطبيق دردشة GGUF MLX iPhone',
       'On Device AI مقابل AI on Device',
     ],
-    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
+    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen3', 'DeepSeek', 'Phi-4', 'Mistral'],
     current_hardware_mentioned: ['iPhone 14 فما فوق', 'iPad mini (الجيل السابع) فما فوق', 'Mac بمعالج Apple Silicon', 'Apple Vision Pro'],
-    leadAnswerBlock: `**On Device AI هو تطبيق مجاني لأجهزة iPhone وiPad وMac بمعالج Apple Silicon وApple Vision Pro، يشغّل نماذج الذكاء الاصطناعي بالكامل على الجهاز، ويتيح لك الاختيار من بين أكثر من 200 نموذج مفتوح الأوزان قابل للتنزيل بدلاً من نموذج واحد مدمج.** يستخدم التطبيق محركَي استدلال محليَّين — [llama.cpp](https://github.com/ggml-org/llama.cpp) لنماذج بصيغة GGUF وMLX لمعالجات Apple Silicon — ويدعم عائلات نماذج مثل Llama 3 وGemma 3 وQwen 3 وDeepSeek وPhi-4 وMistral. إضافة إلى الدردشة، يضم التطبيق تفريغ صوتي نصي مع تمييز المتحدثين، واستيراد المستندات وخلاصات RSS إلى "مكتبات معرفة"، وسير عمل متعدد الوكلاء، وتحويل نص إلى كلام على الجهاز، وأتمتة عبر اختصارات Siri. التطبيق مجاني على [App Store](${APP_STORE_URL})، مع مشتريات داخل التطبيق تتراوح بين 3.99 و99.99 دولارًا واتصالات اختيارية، بمفتاح API خاص بك، بمزودي ذكاء اصطناعي سحابي خارجيين. يتطلب جهاز iPhone 14 أو أحدث، أو iPad mini (الجيل السابع) أو أحدث، أو Mac بمعالج Apple Silicon، أو Apple Vision Pro. هذا تطبيق مختلف عن "[AI on Device](/ar/power-local-llm/ai-on-device-review)" المدفوع والمحدود بنموذج ثابت واحد من مطور آخر — راجع توضيح الأسماء في هذه المراجعة قبل الاختيار بينهما.`,
+    leadAnswerBlock: `**On Device AI هو تطبيق مجاني لأجهزة iPhone وiPad وMac بمعالج Apple Silicon وApple Vision Pro، يشغّل نماذج الذكاء الاصطناعي بالكامل على الجهاز، ويتيح لك الاختيار من بين أكثر من 200 نموذج مفتوح الأوزان قابل للتنزيل بدلاً من نموذج واحد مدمج.** يستخدم التطبيق محركَي استدلال محليَّين — [llama.cpp](https://github.com/ggml-org/llama.cpp) لنماذج بصيغة GGUF وMLX لمعالجات Apple Silicon — ويدعم عائلات نماذج مثل Llama 3 وGemma 3 وQwen3 وDeepSeek وPhi-4 وMistral. إضافة إلى الدردشة، يضم التطبيق تفريغ صوتي نصي مع تمييز المتحدثين، واستيراد المستندات وخلاصات RSS إلى "مكتبات معرفة"، وسير عمل متعدد الوكلاء، وتحويل نص إلى كلام على الجهاز، وأتمتة عبر اختصارات Siri. التطبيق مجاني على [App Store](${APP_STORE_URL})، مع مشتريات داخل التطبيق تتراوح بين 3.99 و99.99 دولارًا واتصالات اختيارية، بمفتاح API خاص بك، بمزودي ذكاء اصطناعي سحابي خارجيين. يتطلب جهاز iPhone 14 أو أحدث، أو iPad mini (الجيل السابع) أو أحدث، أو Mac بمعالج Apple Silicon، أو Apple Vision Pro. هذا تطبيق مختلف عن "[AI on Device](/ar/power-local-llm/ai-on-device-review)" المدفوع والمحدود بنموذج ثابت واحد من مطور آخر — راجع توضيح الأسماء في هذه المراجعة قبل الاختيار بينهما.`,
     quickAnswerTop: {
       ar: {
         question: 'ما هو On Device AI وكم عدد النماذج التي يدعمها؟',
         answer: `On Device AI هو تطبيق مجاني لأجهزة iPhone وiPad وMac بمعالج Apple Silicon وApple Vision Pro، طوّره Zijie Deng، ويتيح لك تنزيل وتشغيل أكثر من 200 نموذج ذكاء اصطناعي مفتوح الأوزان مباشرة على جهازك. يستخدم [llama.cpp](https://github.com/ggml-org/llama.cpp) للنماذج بصيغة GGUF وMLX للنماذج المُحسَّنة لمعالجات Apple Silicon، بحيث تتم المعالجة محليًا بدلاً من خادم بعيد. التطبيق مجاني الاستخدام، مع مشتريات اختيارية داخل التطبيق لميزات Pro واتصالات اختيارية بمزودي ذكاء اصطناعي سحابي خارجيين إذا وفّرت مفتاح API الخاص بك.`,
         bullets: [
           'يشغّل أكثر من 200 نموذج محلي قابل للتنزيل عبر محركين: llama.cpp (GGUF) وMLX',
-          'يدعم عائلات نماذج مثل Llama 3 وGemma 3 وQwen 3 وDeepSeek وPhi-4 وMistral',
+          'يدعم عائلات نماذج مثل Llama 3 وGemma 3 وQwen3 وDeepSeek وPhi-4 وMistral',
           'مجاني للتنزيل، مع مشتريات اختيارية داخل التطبيق (3.99-99.99 دولارًا) لميزات Pro',
           'تتطلب الاتصالات الاختيارية بمزودي السحابة بيانات اعتماد API خاصة بك — غير مطلوبة للاستخدام المحلي',
           'ميزات إضافية: تفريغ صوتي مع تمييز المتحدثين، "مكتبات معرفة" للمستندات/RSS، سير عمل متعدد الوكلاء، تحويل نص إلى كلام على الجهاز، أتمتة عبر اختصارات Siri',
@@ -2000,7 +2000,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما هو On Device AI؟',
         content: `**On Device AI هو تطبيق لأجهزة iPhone وiPad وMac بمعالج Apple Silicon وApple Vision Pro، يشغّل نماذج الذكاء الاصطناعي مباشرة على الجهاز بدلاً من إرسال المحادثات إلى خادم سحابي.** بدلاً من تضمين نموذج واحد، يوفّر التطبيق مكتبة تضم أكثر من 200 نموذج مفتوح الأوزان للتصفح والتنزيل، بحيث يصبح النموذج الذي تشغّله اختيارًا يعتمد على مساحة تخزين جهازك وذاكرته، لا قرارًا ثابتًا اتخذه المطور نيابة عنك.`,
         items: [
-          'اختيار النماذج: أكثر من 200 نموذج مفتوح الأوزان للتصفح والتنزيل، بما في ذلك عائلات Llama 3 وGemma 3 وQwen 3 وDeepSeek وPhi-4 وMistral',
+          'اختيار النماذج: أكثر من 200 نموذج مفتوح الأوزان للتصفح والتنزيل، بما في ذلك عائلات Llama 3 وGemma 3 وQwen3 وDeepSeek وPhi-4 وMistral',
           'التنفيذ على الجهاز: تعمل النماذج باستخدام قدرة الحوسبة الخاصة بالجهاز عبر llama.cpp أو MLX، وليس عبر استدعاء واجهة برمجة تطبيقات سحابية',
           'نماذج مخصصة: يدعم استيراد نماذج GGUF متوافقة من Hugging Face، بالإضافة إلى المكتبة المدمجة',
           'نطاق المنصات: iPhone وiPad وMac بمعالج Apple Silicon وApple Vision Pro — تطبيق حصري لأجهزة Apple بلا نسخة لأندرويد أو ويندوز',
@@ -2154,7 +2154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'ما هو On Device AI؟', a: `On Device AI ([ondevice-ai.app](${APP_SITE_URL})) هو تطبيق مجاني لأجهزة iPhone وiPad وMac بمعالج Apple Silicon وApple Vision Pro من المطور Zijie Deng، يشغّل محليًا أكثر من 200 نموذج ذكاء اصطناعي مفتوح الأوزان قابل للتنزيل، باستخدام llama.cpp لنماذج GGUF وMLX لمعالجات Apple Silicon.` },
           { q: 'هل On Device AI هو نفس تطبيق "AI on Device"؟', a: 'لا. On Device AI (موضوع هذه المراجعة) وAI on Device تطبيقان منفصلان من مطورين مختلفين. يوفّر On Device AI أكثر من 200 نموذج قابل للتنزيل مجانًا مع مشتريات اختيارية داخل التطبيق؛ بينما AI on Device هو تطبيق بسعر دفعة واحدة قدره 4.99 دولارًا من المطور Eduardo Dominguez Menendez يجمع نموذجًا واحدًا ثابتًا بحجم 3B ويتطلب جهازًا متوافقًا مع Apple Intelligence. راجع [مراجعة AI on Device](/ar/power-local-llm/ai-on-device-review) المخصصة إذا كان ذلك التطبيق هو ما تبحث عنه.' },
-          { q: 'كم عدد النماذج التي يدعمها On Device AI؟', a: 'أكثر من 200 نموذج مفتوح الأوزان قابل للتنزيل، بما في ذلك عائلات Llama 3 وGemma 3 وQwen 3 وDeepSeek وPhi-4 وMistral، تعمل عبر محركين محليين: llama.cpp للنماذج بصيغة GGUF وMLX للنماذج المُحسَّنة لمعالجات Apple Silicon.' },
+          { q: 'كم عدد النماذج التي يدعمها On Device AI؟', a: 'أكثر من 200 نموذج مفتوح الأوزان قابل للتنزيل، بما في ذلك عائلات Llama 3 وGemma 3 وQwen3 وDeepSeek وPhi-4 وMistral، تعمل عبر محركين محليين: llama.cpp للنماذج بصيغة GGUF وMLX للنماذج المُحسَّنة لمعالجات Apple Silicon.' },
           { q: 'هل On Device AI مجاني؟', a: `On Device AI مجاني للتنزيل من [App Store](${APP_STORE_URL}) مع وصول مجاني إلى سير عمل النماذج المحلية الأساسية. يقدّم مشتريات اختيارية داخل التطبيق من 3.99 إلى 99.99 دولارًا لميزات Pro، واتصالات اختيارية بمزودي سحابة تتطلب مفتاح API خاصًا بك.` },
           { q: 'ما الأجهزة التي يدعمها On Device AI؟', a: 'iPhone 14 أو أحدث (iOS 18+)، وiPad mini (الجيل السابع) أو أحدث بالإضافة إلى أجهزة iPad حديثة أخرى (iPadOS 18+)، وأي Mac بمعالج Apple Silicon (macOS 15+)، وApple Vision Pro (visionOS 2.0+). لا يدعم أندرويد أو ويندوز أو أجهزة Mac بمعالج Intel.' },
           { q: 'هل يعمل On Device AI دون اتصال بالإنترنت؟', a: 'بمجرد تنزيل نموذج، تعمل الدردشة المحلية والمعالجات الأخرى على الجهاز دون اتصال بالإنترنت. يتطلب تنزيل نموذج، واستخدام اتصال اختياري بمزود سحابي، الوصول إلى الإنترنت.' },
@@ -2210,16 +2210,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'GGUF MLX 채팅 앱 iPhone',
       'On Device AI vs AI on Device',
     ],
-    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen 3', 'DeepSeek', 'Phi-4', 'Mistral'],
+    current_models_mentioned: ['Llama 3', 'Gemma 4', 'Qwen3', 'DeepSeek', 'Phi-4', 'Mistral'],
     current_hardware_mentioned: ['iPhone 14 이상', 'iPad mini(7세대) 이상', 'Apple 실리콘 Mac', 'Apple Vision Pro'],
-    leadAnswerBlock: `**On Device AI는 iPhone·iPad·Apple 실리콘 Mac·Apple Vision Pro용 무료 앱으로, AI 모델을 기기에서 완전히 실행하며 고정된 단일 모델 대신 200개 이상의 다운로드 가능한 오픈 웨이트 모델 중에서 선택할 수 있게 해줍니다.** GGUF 형식 모델용 [llama.cpp](https://github.com/ggml-org/llama.cpp)와 Apple 실리콘용 MLX라는 두 가지 로컬 추론 엔진을 사용하며, Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4, Mistral 등의 모델 계열을 지원합니다. 채팅 외에도 화자 구분이 가능한 음성 전사, 문서와 RSS 피드를 "지식 라이브러리"로 가져오는 기능, 멀티 에이전트 워크플로, 기기 내 텍스트 음성 변환, Siri 단축어를 통한 자동화 기능을 갖추고 있습니다. 이 앱은 [App Store](${APP_STORE_URL})에서 무료로 제공되며, 3.99달러에서 99.99달러 사이의 인앱 구매와 자신의 API 키를 사용하는 외부 클라우드 AI 제공업체에 대한 선택적 연결이 있습니다. iPhone 14 이상, iPad mini(7세대) 이상, Apple 실리콘 Mac, 또는 Apple Vision Pro가 필요합니다. 이는 다른 개발자가 만든 유료 고정 단일 모델 앱인 "[AI on Device](/ko/power-local-llm/ai-on-device-review)"와는 다른 앱이므로, 둘 중 하나를 선택하기 전에 본 리뷰의 이름 구분 설명을 확인하시기 바랍니다.`,
+    leadAnswerBlock: `**On Device AI는 iPhone·iPad·Apple 실리콘 Mac·Apple Vision Pro용 무료 앱으로, AI 모델을 기기에서 완전히 실행하며 고정된 단일 모델 대신 200개 이상의 다운로드 가능한 오픈 웨이트 모델 중에서 선택할 수 있게 해줍니다.** GGUF 형식 모델용 [llama.cpp](https://github.com/ggml-org/llama.cpp)와 Apple 실리콘용 MLX라는 두 가지 로컬 추론 엔진을 사용하며, Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4, Mistral 등의 모델 계열을 지원합니다. 채팅 외에도 화자 구분이 가능한 음성 전사, 문서와 RSS 피드를 "지식 라이브러리"로 가져오는 기능, 멀티 에이전트 워크플로, 기기 내 텍스트 음성 변환, Siri 단축어를 통한 자동화 기능을 갖추고 있습니다. 이 앱은 [App Store](${APP_STORE_URL})에서 무료로 제공되며, 3.99달러에서 99.99달러 사이의 인앱 구매와 자신의 API 키를 사용하는 외부 클라우드 AI 제공업체에 대한 선택적 연결이 있습니다. iPhone 14 이상, iPad mini(7세대) 이상, Apple 실리콘 Mac, 또는 Apple Vision Pro가 필요합니다. 이는 다른 개발자가 만든 유료 고정 단일 모델 앱인 "[AI on Device](/ko/power-local-llm/ai-on-device-review)"와는 다른 앱이므로, 둘 중 하나를 선택하기 전에 본 리뷰의 이름 구분 설명을 확인하시기 바랍니다.`,
     quickAnswerTop: {
       ko: {
         question: 'On Device AI란 무엇이며 몇 개의 모델을 지원합니까?',
         answer: `On Device AI는 개발자 Zijie Deng이 만든 iPhone·iPad·Apple 실리콘 Mac·Apple Vision Pro용 무료 앱으로, 200개 이상의 오픈 웨이트 AI 모델을 기기에 직접 다운로드하여 실행할 수 있습니다. GGUF 형식 모델에는 [llama.cpp](https://github.com/ggml-org/llama.cpp)를, Apple 실리콘에 최적화된 모델에는 MLX를 사용하므로, 처리가 원격 서버가 아닌 로컬에서 이루어집니다. 앱 자체는 무료이며, Pro 기능을 위한 선택적 인앱 구매와 자신의 API 키를 제공할 경우 외부 클라우드 AI 제공업체에 대한 선택적 연결을 이용할 수 있습니다.`,
         bullets: [
           'llama.cpp(GGUF)와 MLX라는 두 가지 엔진으로 200개 이상의 다운로드 가능한 로컬 모델을 실행',
-          'Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4, Mistral 등의 모델 계열 지원',
+          'Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4, Mistral 등의 모델 계열 지원',
           '무료 다운로드, Pro 기능을 위한 선택적 인앱 구매(3.99달러-99.99달러)',
           '클라우드 제공업체에 대한 선택적 연결에는 자신의 API 자격 증명이 필요——로컬 사용에는 필요하지 않음',
           '추가 기능: 화자 구분이 가능한 음성 전사, 문서/RSS "지식 라이브러리", 멀티 에이전트 워크플로, 기기 내 텍스트 음성 변환, Siri 단축어를 통한 자동화',
@@ -2271,7 +2271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'On Device AI란 무엇입니까?',
         content: `**On Device AI는 대화를 클라우드 서버로 보내는 대신 AI 모델을 기기에서 직접 실행하는 iPhone·iPad·Apple 실리콘 Mac·Apple Vision Pro용 앱입니다.** 단일 모델을 탑재하는 대신, 둘러보고 다운로드할 수 있는 200개 이상의 오픈 웨이트 모델 라이브러리를 제공하므로, 실행하는 모델은 개발자가 고정해 둔 결정이 아니라 기기의 저장 공간과 메모리에 따른 자신의 선택이 됩니다.`,
         items: [
-          '모델 선택: Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4, Mistral 계열을 포함해 둘러보고 다운로드할 수 있는 200개 이상의 오픈 웨이트 모델',
+          '모델 선택: Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4, Mistral 계열을 포함해 둘러보고 다운로드할 수 있는 200개 이상의 오픈 웨이트 모델',
           '온디바이스 실행: 모델은 클라우드 API 호출이 아니라 llama.cpp 또는 MLX를 통해 기기 자체의 연산 능력을 사용해 실행됨',
           '사용자 지정 모델: 내장 라이브러리 외에도 Hugging Face에서 호환되는 GGUF 모델을 가져오는 것을 지원',
           '플랫폼 범위: iPhone·iPad·Apple 실리콘 Mac·Apple Vision Pro——Android나 Windows 버전이 없는 Apple 전용 앱',
@@ -2425,7 +2425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           { q: 'On Device AI란 무엇입니까?', a: `On Device AI([ondevice-ai.app](${APP_SITE_URL}))는 개발자 Zijie Deng이 만든 iPhone·iPad·Apple 실리콘 Mac·Apple Vision Pro용 무료 앱으로, GGUF 모델에는 llama.cpp를, Apple 실리콘에는 MLX를 사용해 200개 이상의 다운로드 가능한 오픈 웨이트 AI 모델을 로컬로 실행합니다.` },
           { q: 'On Device AI는 "AI on Device"와 같은 앱입니까?', a: '아닙니다. On Device AI(본 리뷰의 대상)와 AI on Device는 서로 다른 개발자가 만든 별개의 앱입니다. On Device AI는 200개 이상의 모델을 무료로 다운로드할 수 있고 선택적 인앱 구매가 있습니다. AI on Device는 개발자 Eduardo Dominguez Menendez가 만든 일회성 4.99달러 앱으로, 고정된 3B 모델 1개를 번들로 제공하며 Apple Intelligence 호환 기기를 요구합니다. 그 앱을 찾고 계셨다면 별도의 [AI on Device 리뷰](/ko/power-local-llm/ai-on-device-review)를 참조하십시오.' },
-          { q: 'On Device AI는 몇 개의 모델을 지원합니까?', a: 'Llama 3, Gemma 3, Qwen 3, DeepSeek, Phi-4, Mistral 계열을 포함해 200개 이상의 다운로드 가능한 오픈 웨이트 모델이, GGUF 형식 모델용 llama.cpp와 Apple 실리콘에 최적화된 모델용 MLX라는 두 가지 로컬 엔진을 통해 실행됩니다.' },
+          { q: 'On Device AI는 몇 개의 모델을 지원합니까?', a: 'Llama 3, Gemma 3, Qwen3, DeepSeek, Phi-4, Mistral 계열을 포함해 200개 이상의 다운로드 가능한 오픈 웨이트 모델이, GGUF 형식 모델용 llama.cpp와 Apple 실리콘에 최적화된 모델용 MLX라는 두 가지 로컬 엔진을 통해 실행됩니다.' },
           { q: 'On Device AI는 무료입니까?', a: `On Device AI는 [App Store](${APP_STORE_URL})에서 무료로 다운로드할 수 있으며, 핵심 로컬 모델 워크플로에 무료로 접근할 수 있습니다. Pro 기능을 위한 3.99달러에서 99.99달러 사이의 선택적 인앱 구매와, 자신의 API 키가 필요한 선택적 클라우드 제공업체 연결을 제공합니다.` },
           { q: 'On Device AI는 어떤 기기를 지원합니까?', a: 'iPhone 14 이상(iOS 18+), iPad mini(7세대) 이상을 포함한 최신 iPad(iPadOS 18+), 모든 Apple 실리콘 Mac(macOS 15+), Apple Vision Pro(visionOS 2.0+)입니다. Android, Windows, Intel Mac은 지원하지 않습니다.' },
           { q: 'On Device AI는 인터넷 연결 없이 작동합니까?', a: '모델을 다운로드하면, 로컬 채팅과 그 밖의 온디바이스 처리는 인터넷 연결 없이 작동합니다. 모델 다운로드와 선택적 클라우드 제공업체 연결 사용에는 모두 인터넷 접속이 필요합니다.' },

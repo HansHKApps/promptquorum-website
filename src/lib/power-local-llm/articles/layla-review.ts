@@ -38,7 +38,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local ai companion app',
       'layla vs pocketpal ai',
     ],
-    current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'GGUF models', 'Stable Diffusion 1.5'],
+    current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'Stable Diffusion 1.5'],
     current_hardware_mentioned: ['Android', 'iPhone', 'iPad'],
     leadAnswerBlock:
       '**Layla is a $19.99 one-time-purchase app for Android and iOS, made by [Layla Network Pty Ltd](https://www.layla-network.ai), that runs GGUF language models on-device for a persona-driven AI companion, complete with roleplay characters, voices, and image generation.** Per the developer\'s own [privacy policy](https://blog.layla-network.ai/privacy), the app\'s core functionality is designed to run offline, and it shows a warning before any data leaves the device — but Layla also ships an optional, separately activated cloud mode called Layla Cloud, which is not the same as the fully local, no-cloud-component design of an app like [PocketPal AI](/power-local-llm/pocketpal-ai-review). Readers who want the strongest possible "never touches a server, ever" guarantee should weigh that distinction carefully before buying.',
@@ -570,7 +570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'lokale ki begleiter app',
       'layla vs pocketpal ai',
     ],
-    current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'GGUF models', 'Stable Diffusion 1.5'],
+    current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'Stable Diffusion 1.5'],
     current_hardware_mentioned: ['Android', 'iPhone', 'iPad'],
     leadAnswerBlock:
       '**Layla ist eine App mit einmaligem Kaufpreis von 19,99 $ für Android und iOS, entwickelt von [Layla Network Pty Ltd](https://www.layla-network.ai), die Sprachmodelle im GGUF-Format auf dem Gerät ausführt, für einen persona-basierten KI-Begleiter mit Rollenspiel-Charakteren, Stimmen und Bildgenerierung.** Laut der eigenen [Datenschutzrichtlinie](https://blog.layla-network.ai/privacy) des Entwicklers ist die Kernfunktion der App darauf ausgelegt, offline zu laufen, und die App zeigt eine Warnung, bevor Daten das Gerät verlassen — Layla bietet aber zusätzlich einen optionalen, separat aktivierten Cloud-Modus namens Layla Cloud, was ein anderes Design ist als bei einer App ohne jegliche Cloud-Komponente wie [PocketPal AI](/de/power-local-llm/pocketpal-ai-review). Leser, die die stärkstmögliche Garantie wollen — ein Produkt, das gar keinen Cloud-Modus zum Aktivieren anbietet —, sollten diesen Unterschied vor dem Kauf sorgfältig abwägen.',
@@ -1069,7 +1069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app de compañero de ia local',
       'layla vs pocketpal ai',
     ],
-    current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'GGUF models', 'Stable Diffusion 1.5'],
+    current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'Stable Diffusion 1.5'],
     current_hardware_mentioned: ['Android', 'iPhone', 'iPad'],
     leadAnswerBlock:
       '**Layla es una app de compra única de $19.99 para Android e iOS, creada por [Layla Network Pty Ltd](https://www.layla-network.ai), que ejecuta modelos de lenguaje GGUF en el dispositivo para un compañero de IA basado en personas, con personajes de rol, voces y generación de imágenes.** Según la propia [política de privacidad](https://blog.layla-network.ai/privacy) del desarrollador, la funcionalidad principal de la app está diseñada para funcionar sin conexión, y esta muestra una advertencia antes de que cualquier dato salga del dispositivo; sin embargo, Layla también incluye un modo de nube opcional y activado por separado llamado Layla Cloud, algo distinto del diseño totalmente local, sin ningún componente de nube, de una app como [PocketPal AI](/es/power-local-llm/pocketpal-ai-review). Los lectores que buscan la garantía más sólida posible de que "nunca se conecta a un servidor" deben sopesar cuidadosamente esta distinción antes de comprar.',
@@ -1568,7 +1568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'application compagnon ia locale',
       'layla vs pocketpal ai',
     ],
-    current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'GGUF models', 'Stable Diffusion 1.5'],
+    current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'Stable Diffusion 1.5'],
     current_hardware_mentioned: ['Android', 'iPhone', 'iPad'],
     leadAnswerBlock:
       '**Layla est une application à achat unique de 19,99 $ pour Android et iOS, développée par [Layla Network Pty Ltd](https://www.layla-network.ai), qui exécute des modèles de langage GGUF sur l\'appareil pour un compagnon IA basé sur des personas, avec personnages de jeu de rôle, voix et génération d\'images.** Selon la propre [politique de confidentialité](https://blog.layla-network.ai/privacy) du développeur, la fonctionnalité principale de l\'application est conçue pour fonctionner hors ligne, et celle-ci affiche un avertissement avant que des données ne quittent l\'appareil — mais Layla propose également un mode cloud optionnel et activé séparément, appelé Layla Cloud, ce qui diffère de la conception entièrement locale, sans aucune composante cloud, d\'une application comme [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review). Les lecteurs souhaitant la garantie la plus forte possible qu\'aucune donnée ne touche jamais un serveur devraient bien évaluer cette distinction avant d\'acheter.',
@@ -2067,7 +2067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカル ai コンパニオン アプリ',
       'layla vs pocketpal ai',
     ],
-    current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'GGUF models', 'Stable Diffusion 1.5'],
+    current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'Stable Diffusion 1.5'],
     current_hardware_mentioned: ['Android', 'iPhone', 'iPad'],
     leadAnswerBlock:
       '**Laylaは、[Layla Network Pty Ltd](https://www.layla-network.ai)が開発したAndroid・iOS向けの19.99ドル買い切りアプリで、GGUF形式の言語モデルを端末上で動かし、ロールプレイキャラクター・音声・画像生成を備えたペルソナベースのAIコンパニオンを提供します。** 開発者自身の[プライバシーポリシー](https://blog.layla-network.ai/privacy)によれば、アプリのコア機能はオフラインで動作するよう設計されており、データが端末外に送信される前に警告を表示するとされています。しかしLaylaには「Layla Cloud」という、デフォルトでは無効な、別途有効化が必要なオプションのクラウドモードも搭載されており、これは[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)のようなクラウドコンポーネントが一切ないアプリの設計とは異なります。「サーバーに一切触れない」という最も強い保証を求める読者は、購入前にこの違いを慎重に検討する必要があります。',
@@ -2566,7 +2566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app de companheiro de ia local',
       'layla vs pocketpal ai',
     ],
-    current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'GGUF models', 'Stable Diffusion 1.5'],
+    current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'Stable Diffusion 1.5'],
     current_hardware_mentioned: ['Android', 'iPhone', 'iPad'],
     leadAnswerBlock:
       '**A Layla é um app de compra única por $19,99 para Android e iOS, criado pela [Layla Network Pty Ltd](https://www.layla-network.ai), que executa modelos de linguagem GGUF no dispositivo para um companheiro de IA baseado em personas, com personagens de roleplay, vozes e geração de imagens.** Segundo a própria [política de privacidade](https://blog.layla-network.ai/privacy) do desenvolvedor, a funcionalidade principal do app é projetada para funcionar offline, e o app exibe um aviso antes de qualquer dado sair do dispositivo — mas a Layla também traz um modo de nuvem opcional e ativado separadamente, chamado Layla Cloud, o que é diferente do design totalmente local, sem nenhum componente de nuvem, de um app como o [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review). Leitores que buscam a garantia mais forte possível de que "nunca toca em um servidor" devem avaliar essa distinção com cuidado antes de comprar.',
@@ -3065,7 +3065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تطبيق رفيق ذكاء اصطناعي محلي',
       'layla vs pocketpal ai',
     ],
-    current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'GGUF models', 'Stable Diffusion 1.5'],
+    current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'Stable Diffusion 1.5'],
     current_hardware_mentioned: ['Android', 'iPhone', 'iPad'],
     leadAnswerBlock:
       '**Layla هو تطبيق شراء لمرة واحدة بسعر 19.99 دولاراً لأندرويد و iOS، من تطوير [Layla Network Pty Ltd](https://www.layla-network.ai)، يشغّل نماذج لغوية بصيغة GGUF على الجهاز لرفيق ذكاء اصطناعي مبني على الشخصيات، مع شخصيات لعب أدوار وأصوات وتوليد صور.** وفقاً لـ[سياسة الخصوصية](https://blog.layla-network.ai/privacy) الخاصة بالمطوّر نفسه، صُمّمت الوظيفة الأساسية للتطبيق لتعمل دون اتصال بالإنترنت، ويعرض التطبيق تحذيراً قبل خروج أي بيانات من الجهاز — لكن Layla يتضمن أيضاً وضعاً سحابياً اختيارياً يُفعَّل بشكل منفصل يُسمى Layla Cloud، وهو ما يختلف عن التصميم المحلي بالكامل بلا أي مكوّن سحابي في تطبيق مثل [PocketPal AI](/ar/power-local-llm/pocketpal-ai-review). القراء الذين يريدون أقوى ضمان ممكن بأن البيانات "لا تصل أبداً إلى خادم" يجب أن يزنوا هذا الفارق بعناية قبل الشراء.',
@@ -3564,7 +3564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '本地 ai 伴侣 应用',
       'layla vs pocketpal ai',
     ],
-    current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'GGUF models', 'Stable Diffusion 1.5'],
+    current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'Stable Diffusion 1.5'],
     current_hardware_mentioned: ['Android', 'iPhone', 'iPad'],
     leadAnswerBlock:
       '**Layla 是一款面向 Android 和 iOS、一次性付费 19.99 美元的应用,由 [Layla Network Pty Ltd](https://www.layla-network.ai) 开发,可在设备本地运行 GGUF 格式的语言模型,提供基于人设的 AI 伴侣,包含角色扮演角色、语音和图像生成功能。** 根据开发商自身的[隐私政策](https://blog.layla-network.ai/privacy),该应用的核心功能设计为离线运行,并会在任何数据离开设备前显示警告——但 Layla 同时也提供一个需单独启用的可选云端模式,名为 Layla Cloud,这与 [PocketPal AI](/zh/power-local-llm/pocketpal-ai-review) 这类完全没有任何云端组件的应用设计不同。希望获得"数据绝不触及服务器"这一最强保证的读者,购买前应仔细权衡这一区别。',
@@ -4063,7 +4063,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '로컬 ai 컴패니언 앱',
       'layla vs pocketpal ai',
     ],
-    current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'GGUF models', 'Stable Diffusion 1.5'],
+    current_models_mentioned: ['Llama2 7B Layla', 'OpenLLaMA 3B v2 Layla', 'Stable Diffusion 1.5'],
     current_hardware_mentioned: ['Android', 'iPhone', 'iPad'],
     leadAnswerBlock:
       '**Layla는 [Layla Network Pty Ltd](https://www.layla-network.ai)가 개발한 Android·iOS용 19.99달러 일회성 구매 앱으로, GGUF 형식의 언어 모델을 기기에서 실행하여 롤플레이 캐릭터, 음성, 이미지 생성 기능을 갖춘 페르소나 기반 AI 컴패니언을 제공합니다.** 개발사 자체의 [개인정보 처리방침](https://blog.layla-network.ai/privacy)에 따르면, 앱의 핵심 기능은 오프라인으로 작동하도록 설계되어 있으며 데이터가 기기 밖으로 나가기 전에 경고를 표시한다고 명시되어 있습니다. 다만 Layla는 기본적으로 비활성화되어 있고 별도로 활성화해야 하는 선택적 클라우드 모드인 Layla Cloud도 함께 제공하는데, 이는 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)처럼 클라우드 구성 요소가 전혀 없는 앱의 설계와는 다릅니다. "서버에 절대 닿지 않는다"는 가장 강력한 보장을 원하는 독자는 구매 전 이 차이를 신중히 검토해야 합니다.',

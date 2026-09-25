@@ -255,11 +255,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '1. Install Continue from the VS Code marketplace.',
             '2. Point it to your Ollama instance (Config → Configure Continue → Add localhost:11434).',
             '3. Start typing code and press Tab or Ctrl+Shift+\\\ to get completions.',
-            'Continue still works well for developers who want code suggestions without sending code to cloud APIs, but if you want a tool that keeps receiving updates, Tabby is a self-hosted, open-source alternative built specifically for local code completion. For coding tasks, Ollama with Qwen3-Coder 7B or Llama Code models produces reasonable suggestions with either extension.',
+            'Continue still works well for developers who want code suggestions without sending code to cloud APIs, but if you want a tool that keeps receiving updates, Tabby is a self-hosted, open-source alternative built specifically for local code completion. For coding tasks, Ollama with Qwen2.5-Coder 7B or Llama Code models produces reasonable suggestions with either extension.',
           ],
           callouts: [
             { type: '⚠️ Warning', text: 'Cursor acquired Continue in June 2026 and the continuedev/continue GitHub repository is now read-only -- the extension still works with Ollama, but expect no new features or bug fixes. For ongoing development, evaluate Tabby as a self-hosted alternative.' },
-            { type: '💡 Pro Tip', text: 'For code completion, Qwen3-Coder 7B (`ollama run qwen3-coder:7b`) outperforms general models like Llama 3.2 on code tasks. Switch the model in Continue\'s config.json after setup.' },
+            { type: '💡 Pro Tip', text: 'For code completion, Qwen2.5-Coder 7B (`ollama run qwen3-coder:7b`) outperforms general models like Llama 3.2 on code tasks. Switch the model in Continue\'s config.json after setup.' },
           ],
         },
         selfHosted: {
@@ -578,7 +578,7 @@ schema: {
             '1. Installieren Sie Continue aus dem VS Code Marketplace.',
             '2. Zeigen Sie es auf Ihre Ollama-Instanz (Config → Configure Continue → Add localhost:11434).',
             '3. Beginnen Sie Code zu schreiben und drücken Sie Tab oder Ctrl+Shift+\\\\ für Vervollständigungen.',
-            'Continue funktioniert weiterhin gut für Entwickler, die Code-Vorschläge ohne Cloud-APIs möchten. Wer aber ein Tool mit laufenden Updates sucht, sollte Tabby prüfen -- eine selbst gehostete, quelloffene Alternative speziell für lokale Code-Vervollständigung. Für Coding-Aufgaben produziert Ollama mit Qwen3-Coder 7B oder Llama Code Modellen mit beiden Erweiterungen vernünftige Vorschläge.',
+            'Continue funktioniert weiterhin gut für Entwickler, die Code-Vorschläge ohne Cloud-APIs möchten. Wer aber ein Tool mit laufenden Updates sucht, sollte Tabby prüfen -- eine selbst gehostete, quelloffene Alternative speziell für lokale Code-Vervollständigung. Für Coding-Aufgaben produziert Ollama mit Qwen2.5-Coder 7B oder Llama Code Modellen mit beiden Erweiterungen vernünftige Vorschläge.',
           ],
           callouts: [
             { type: '⚠️ Warnung', text: 'Cursor hat Continue im Juni 2026 übernommen, das Repository continuedev/continue ist jetzt schreibgeschützt -- die Erweiterung funktioniert weiterhin mit Ollama, aber es sind keine neuen Funktionen oder Bugfixes mehr zu erwarten. Für laufende Weiterentwicklung ist Tabby als selbst gehostete Alternative einen Blick wert.' },
@@ -1574,7 +1574,7 @@ schema: {
           title: '地域背景：中国、亚太及全球指导',
           content: [
             '**中国（数据安全法）**',
-            '中国2021年《数据安全法》要求关键信息基础设施敏感数据必须保持国内。本地LLM推理（使用开源Qwen3 Chat通过Alibaba Apache 2.0许可）满足此要求。对于金融机构、医疗提供商、电信公司的代码审查工作流，使用Open WebUI+本地Ollama确保源代码（可能含敏感信息）永不离开国内基础设施。在Dual RTX-4090工作站（48GB VRAM）上Qwen3-Coder 32B可原生处理中文代码注释。',
+            '中国2021年《数据安全法》要求关键信息基础设施敏感数据必须保持国内。本地LLM推理（使用开源Qwen3 Chat通过Alibaba Apache 2.0许可）满足此要求。对于金融机构、医疗提供商、电信公司的代码审查工作流，使用Open WebUI+本地Ollama确保源代码（可能含敏感信息）永不离开国内基础设施。在Dual RTX-4090工作站（48GB VRAM）上Qwen2.5-Coder 32B可原生处理中文代码注释。',
             '**亚太地区（跨境数据）**',
             '新加坡《个人数据保护法》、台湾《个人信息保护法》、印度数据保护框架均推荐本地数据处理。对于跨多个东南亚办公室的开发团队，配置集中化vLLM服务器加Open WebUI （通过VPN安全访问）比使用云API更合规。Qwen3-Coder对亚洲语言的原生支持（日文、中文、韩文）使其成为区域首选。',
             '**企业部署：金融、医疗、法律**',
@@ -1878,11 +1878,11 @@ schema: {
             '1. Instala Continue desde el marketplace de VS Code.',
             '2. Apúntalo a tu instancia de Ollama (Config → Configure Continue → Add localhost:11434).',
             '3. Empieza a escribir código y presiona Tab o Ctrl+Shift+\\ para obtener completados.',
-            'Continue sigue funcionando bien para desarrolladores que quieren sugerencias de código sin enviar código a APIs en la nube, pero si buscas una herramienta que siga recibiendo actualizaciones, Tabby es una alternativa autoalojada y de código abierto diseñada específicamente para el completado de código local. Para tareas de codificación, Ollama con modelos Qwen3-Coder 7B o Llama Code produce sugerencias razonables con cualquiera de las dos extensiones.',
+            'Continue sigue funcionando bien para desarrolladores que quieren sugerencias de código sin enviar código a APIs en la nube, pero si buscas una herramienta que siga recibiendo actualizaciones, Tabby es una alternativa autoalojada y de código abierto diseñada específicamente para el completado de código local. Para tareas de codificación, Ollama con modelos Qwen2.5-Coder 7B o Llama Code produce sugerencias razonables con cualquiera de las dos extensiones.',
           ],
           callouts: [
             { type: '⚠️ Advertencia', text: 'Cursor adquirió Continue en junio de 2026 y el repositorio continuedev/continue en GitHub ahora es de solo lectura: la extensión sigue funcionando con Ollama, pero no esperes nuevas funciones ni correcciones de errores. Para desarrollo continuo, evalúa Tabby como alternativa autoalojada.' },
-            { type: '💡 Consejo profesional', text: 'Para completado de código, Qwen3-Coder 7B (`ollama run qwen3-coder:7b`) supera a modelos generales como Llama 3.2 en tareas de código. Cambia el modelo en el config.json de Continue después de la configuración.' },
+            { type: '💡 Consejo profesional', text: 'Para completado de código, Qwen2.5-Coder 7B (`ollama run qwen3-coder:7b`) supera a modelos generales como Llama 3.2 en tareas de código. Cambia el modelo en el config.json de Continue después de la configuración.' },
           ],
         },
         selfHosted: {
@@ -2200,10 +2200,10 @@ schema: {
             '1. ثبّت Continue من سوق VS Code.',
             '2. وجّهه إلى مثيل Ollama لديك (Config → Configure Continue → Add localhost:11434).',
             '3. ابدأ كتابة الكود واضغط Tab أو Ctrl+Shift+\\ للحصول على إكمالات.',
-            'Continue مثالي للمطورين الذين يريدون اقتراحات برمجية دون إرسال الكود إلى واجهات API سحابية. لمهام البرمجة، ينتج Ollama مع نماذج Qwen3-Coder 7B أو Llama Code اقتراحات معقولة.',
+            'Continue مثالي للمطورين الذين يريدون اقتراحات برمجية دون إرسال الكود إلى واجهات API سحابية. لمهام البرمجة، ينتج Ollama مع نماذج Qwen2.5-Coder 7B أو Llama Code اقتراحات معقولة.',
           ],
           callouts: [
-            { type: '💡 نصيحة احترافية', text: 'للإكمال البرمجي، يتفوق Qwen3-Coder 7B (`ollama run qwen3-coder:7b`) على النماذج العامة مثل Llama 3.2 في مهام البرمجة. غيّر النموذج في config.json الخاص بـ Continue بعد التهيئة.' },
+            { type: '💡 نصيحة احترافية', text: 'للإكمال البرمجي، يتفوق Qwen2.5-Coder 7B (`ollama run qwen3-coder:7b`) على النماذج العامة مثل Llama 3.2 في مهام البرمجة. غيّر النموذج في config.json الخاص بـ Continue بعد التهيئة.' },
           ],
         },
         selfHosted: {
@@ -2651,10 +2651,10 @@ schema: {
         '1. VS Code 마켓플레이스에서 Continue를 설치하십시오.',
         '2. Ollama 인스턴스를 가리키도록 설정하십시오 (Config → Configure Continue → Add localhost:11434).',
         '3. 코드 타이핑을 시작하고 Tab 또는 Ctrl+Shift+\\를 눌러 완성을 받으십시오.',
-        'Continue는 코드를 클라우드 API에 보내지 않고 코드 제안을 원하는 개발자에게 완벽합니다. 코딩 작업에는 Ollama와 Qwen3-Coder 7B 또는 Llama Code 모델이 합리적인 제안을 생성합니다.',
+        'Continue는 코드를 클라우드 API에 보내지 않고 코드 제안을 원하는 개발자에게 완벽합니다. 코딩 작업에는 Ollama와 Qwen2.5-Coder 7B 또는 Llama Code 모델이 합리적인 제안을 생성합니다.',
       ],
       callouts: [
-        { type: '💡 Pro Tip', text: '코드 완성의 경우 Qwen3-Coder 7B(`ollama run qwen3-coder:7b`)가 코드 작업에서 Llama 3.2와 같은 일반 모델보다 우수합니다. 설정 후 Continue의 config.json에서 모델을 전환하십시오.' },
+        { type: '💡 Pro Tip', text: '코드 완성의 경우 Qwen2.5-Coder 7B(`ollama run qwen3-coder:7b`)가 코드 작업에서 Llama 3.2와 같은 일반 모델보다 우수합니다. 설정 후 Continue의 config.json에서 모델을 전환하십시오.' },
       ],
     },
     selfHosted: {

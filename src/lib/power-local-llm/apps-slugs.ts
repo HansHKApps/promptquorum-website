@@ -33,6 +33,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'draw-things':                             'draw-things',
   'ekorbia':                                 'ekorbia',
   'hanoki':                                  'hanoki',
+  'hilbertraum':                             'hilbertraum',
   'open-felix':                              'open-felix',
   'osaurus':                                 'osaurus',
   'bobe':                                    'bobe',

@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     last_full_refresh: '2026-08-25',
     next_seo_review_due: '2026-10-01',
     last_seo_review: '2026-08-25',
-    current_benchmarks_used: ['Qwen3 72B tokens/sec', 'first-token latency'],
+    current_benchmarks_used: ['Qwen2.5-72B tokens/sec', 'first-token latency'],
     theme: 'Cost & Comparisons',
     title: 'AutoDL Pricing 2026: A100 80 GB vs Alibaba Cloud & Tencent GPU',
     seoTitle: 'AutoDL GPU Pricing 2026: A100 vs Alibaba & Tencent',
@@ -62,9 +62,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'aliyun vs tencent cloud ai 2026',
     ],
     current_models_mentioned: [
-      'Qwen3 72B',
+      'Qwen2.5-72B',
       'DeepSeek-V3',
-      'Qwen3-Coder 32B',
+      'Qwen2.5-Coder 32B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -117,7 +117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'New account promotions: Alibaba Cloud offers ¥300 free credit for new users; AutoDL offers ¥10 free GPU credit (enough for 2–4 hours of A100 testing).',
           'For Western developers accessing Chinese cloud: Alibaba Cloud International supports international credit cards and English-language console; AutoDL and Tencent Cloud require Chinese bank cards or Alipay — but Alipay itself doesn\'t require a Chinese bank account (a passport, foreign phone number, and linked international card are enough).',
           'All three providers store data in mainland China, which satisfies PIPL for products serving Chinese users — but it is not GDPR compliance and does not help EU-regulated workloads; see the Data Residency section.',
-          'Qwen3 72B runs fastest on Alibaba Cloud PAI due to the Qwen-optimized inference runtime from the Alibaba DAMO Academy team.',
+          'Qwen2.5-72B runs fastest on Alibaba Cloud PAI due to the Qwen-optimized inference runtime from the Alibaba DAMO Academy team.',
         ],
       },
       providerComparison: {
@@ -181,7 +181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '0': 'RTX 3090', '1': '24 GB', '2': '¥1.68/hr', '3': '~$0.23', '4': '7B–13B inference, small fine-tunes' },
           { '0': 'RTX 4090', '1': '24 GB', '2': 'from ¥2.68/hr', '3': '~$0.37', '4': 'Fastest single-card for 7B–32B, best value' },
           { '0': 'A100', '1': '40 GB', '2': 'from ¥3.45/hr', '3': '~$0.48', '4': 'Quantized 70B inference, mid-size fine-tuning' },
-          { '0': 'A100', '1': '80 GB', '2': '¥5.98/hr', '3': '~$0.82', '4': 'Full-precision 70B, Qwen3 72B single-card' },
+          { '0': 'A100', '1': '80 GB', '2': '¥5.98/hr', '3': '~$0.82', '4': 'Full-precision 70B, Qwen2.5-72B single-card' },
           { '0': 'H100', '1': '80 GB', '2': 'from ¥11.98/hr', '3': '~$1.65', '4': 'High-throughput production inference' },
         ],
         note: 'AutoDL A100 80 GB (¥5.98/hr) is cheaper than Alibaba Cloud PAI (¥8–12/hr) and Tencent Cloud TI (¥7.5–10/hr) for the same card. Prices sourced from the AutoDL price page in July 2026, re-verified against independent GPU-rental pricing trackers in August 2026 with no material change; rates change with supply and promotions — confirm the live rate at [autodl.com/docs/latest_price](https://www.autodl.com/docs/latest_price) before booking. AutoDL is the lowest-cost option in this comparison. → [Check current AutoDL GPU prices](https://www.autodl.com)',
@@ -234,7 +234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qwen Inference Performance by Provider',
         content:
           '**Alibaba Cloud PAI runs Qwen models 20–30% faster than equivalent hardware on other platforms.** The performance advantage comes from the PAI-EAS inference runtime, co-developed by the Qwen team at Alibaba DAMO Academy. This is the same team that trains Qwen — they have access to model internals that external providers do not.',
-        columns: ['Platform', 'GPU', 'Qwen3 72B speed (tok/s)', 'Latency (first token)', 'Notes'],
+        columns: ['Platform', 'GPU', 'Qwen2.5-72B speed (tok/s)', 'Latency (first token)', 'Notes'],
         rows: [
           { '0': 'Alibaba Cloud PAI (PAI-EAS)', '1': 'A100 80 GB', '2': '22–28 tok/s', '3': '~120ms', '4': 'Qwen-optimized runtime, FlashAttention 3' },
           { '0': 'AutoDL (Ollama)', '1': 'A100 80 GB', '2': '16–20 tok/s', '3': '~180ms', '4': 'Standard Ollama stack, no optimization' },
@@ -243,7 +243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '0': 'RunPod (Western, A100 80 GB)', '1': 'A100 80 GB', '2': '15–18 tok/s', '3': '~200ms', '4': 'Higher latency from cross-Pacific routing' },
         ],
         image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-en.webp',
-        imageCaption: 'Qwen Inference Speed by Provider -- Qwen3 72B on A100 80GB',
+        imageCaption: 'Qwen Inference Speed by Provider -- Qwen2.5-72B on A100 80GB',
         note: 'If Qwen is your primary workload, the 20–30% speedup on Alibaba Cloud PAI usually justifies the higher hourly price. → [Get Alibaba Cloud offer](https://www.alibabacloud.com). If hourly cost is the primary concern and the speed difference does not matter for your use case, AutoDL running vLLM (19–24 tok/s) gets most of the benefit at a fraction of the price. → [Check AutoDL GPU prices](https://www.autodl.com)',
         affiliateLinks: [
           { url: 'https://www.alibabacloud.com', productName: 'Alibaba Cloud PAI', productCategory: 'cloud-gpu', priceRange: 'From ¥6/hr (A100 40GB)', label: 'Get Alibaba Cloud offer →' },
@@ -344,9 +344,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Can I use Alibaba Cloud GPU from outside China?', a: 'Yes. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) accepts international credit cards (Visa, Mastercard, American Express) and provides an English-language console — the easiest onboarding of the three providers for non-Chinese users, since AutoDL and Tencent Cloud\'s domestic portals expect a Chinese bank card or Alipay. Note that the International portal and the China domestic portal have separate accounts and different pricing — the International portal is slightly more expensive but easier to set up. → [Get Alibaba Cloud offer](https://www.alibabacloud.com)' },
             { q: 'How does a foreigner without a Chinese bank account pay with Alipay for AutoDL or Tencent Cloud?', a: 'You don\'t need a Chinese bank account. Register in the Alipay app with a passport and a foreign phone number, then link an eligible international Visa or Mastercard directly — this direct card-linking has replaced the older TourCard prepaid workaround for most users. If direct linking fails for your card, Alipay\'s TourCard option lets you prepay from an international card into a 90-day Alipay balance instead. Once Alipay is set up this way, it works the same for AutoDL and Tencent Cloud\'s domestic checkout as a Chinese bank card would. This still only solves payment — it doesn\'t give you an English-language console; for that, use [Alibaba Cloud International](https://www.alibabacloud.com) instead.' },
             { q: 'Is AutoDL reliable enough for production inference?', a: 'AutoDL is designed for research and development, not production-grade inference. It lacks formal SLAs and spot instances can be preempted with short notice. For production inference with guaranteed availability, use Alibaba Cloud PAI or Tencent Cloud TI with on-demand instances. AutoDL is best for fine-tuning runs, development, and cost-sensitive batch processing where occasional interruptions are acceptable.' },
-            { q: 'How does Alibaba Cloud\'s Qwen inference compare to running Ollama myself?', a: 'Alibaba Cloud PAI-EAS runs Qwen 20–30% faster than standard Ollama on equivalent hardware (tested: A100 80 GB, Qwen3 72B). The speedup comes from the PAI-EAS inference runtime developed by the Alibaba DAMO Academy Qwen team, which includes Qwen-specific optimizations like specialized attention kernels and KV-cache tuning that are not in the public Ollama build.' },
+            { q: 'How does Alibaba Cloud\'s Qwen inference compare to running Ollama myself?', a: 'Alibaba Cloud PAI-EAS runs Qwen 20–30% faster than standard Ollama on equivalent hardware (tested: A100 80 GB, Qwen2.5-72B). The speedup comes from the PAI-EAS inference runtime developed by the Alibaba DAMO Academy Qwen team, which includes Qwen-specific optimizations like specialized attention kernels and KV-cache tuning that are not in the public Ollama build.' },
             { q: 'Is there a free tier for testing Chinese cloud GPU?', a: 'Alibaba Cloud and Tencent Cloud both run new-account credit promotions from time to time (check the current offer on each provider\'s signup page — amounts change and are not guaranteed). AutoDL provides a small free GPU credit for new accounts (roughly 1–2 hours of A100 time, or several hours on cheaper cards). None offer a permanently free GPU tier — all GPU usage is metered.' },
-            { q: 'What is the best GPU for Qwen3 72B on Chinese cloud platforms?', a: 'A100 80 GB is the recommended GPU for single-card Qwen3 72B inference — it fits the full model in VRAM at BF16 precision without quantization. At Q4_K_M quantization, Qwen3 72B (43.5 GB) also fits on an A100 40 GB, at slightly lower quality. H100 80 GB is 25–35% faster than A100 80 GB but costs 2–2.5× more per hour — only worth the premium for sustained high-throughput production workloads.' },
+            { q: 'What is the best GPU for Qwen2.5-72B on Chinese cloud platforms?', a: 'A100 80 GB is the recommended GPU for single-card Qwen2.5-72B inference — it fits the full model in VRAM at BF16 precision without quantization. At Q4_K_M quantization, Qwen2.5-72B (43.5 GB) also fits on an A100 40 GB, at slightly lower quality. H100 80 GB is 25–35% faster than A100 80 GB but costs 2–2.5× more per hour — only worth the premium for sustained high-throughput production workloads.' },
           ],
       },
       updateLog: {
@@ -410,7 +410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'How does Alibaba Cloud\'s Qwen inference compare to running Ollama myself?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Alibaba Cloud PAI-EAS runs Qwen 20–30% faster than standard Ollama on equivalent hardware (tested: A100 80 GB, Qwen3 72B). The speedup comes from the PAI-EAS inference runtime developed by the Alibaba DAMO Academy Qwen team, which includes Qwen-specific optimizations like specialized attention kernels and KV-cache tuning that are not in the public Ollama build.',
+              'text': 'Alibaba Cloud PAI-EAS runs Qwen 20–30% faster than standard Ollama on equivalent hardware (tested: A100 80 GB, Qwen2.5-72B). The speedup comes from the PAI-EAS inference runtime developed by the Alibaba DAMO Academy Qwen team, which includes Qwen-specific optimizations like specialized attention kernels and KV-cache tuning that are not in the public Ollama build.',
             },
           },
           {
@@ -423,10 +423,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'What is the best GPU for Qwen3 72B on Chinese cloud platforms?',
+            'name': 'What is the best GPU for Qwen2.5-72B on Chinese cloud platforms?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'A100 80 GB is the recommended GPU for single-card Qwen3 72B inference — it fits the full model in VRAM at BF16 precision without quantization. At Q4_K_M quantization, Qwen3 72B (43.5 GB) also fits on an A100 40 GB, at slightly lower quality. H100 80 GB is 25–35% faster than A100 80 GB but costs 2–2.5× more per hour — only worth the premium for sustained high-throughput production workloads.',
+              'text': 'A100 80 GB is the recommended GPU for single-card Qwen2.5-72B inference — it fits the full model in VRAM at BF16 precision without quantization. At Q4_K_M quantization, Qwen2.5-72B (43.5 GB) also fits on an A100 40 GB, at slightly lower quality. H100 80 GB is 25–35% faster than A100 80 GB but costs 2–2.5× more per hour — only worth the premium for sustained high-throughput production workloads.',
             },
           },
         ],
@@ -482,9 +482,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'aliyun vs tencent cloud ia 2026',
     ],
     current_models_mentioned: [
-      'Qwen3 72B',
+      'Qwen2.5-72B',
       'DeepSeek-V3',
-      'Qwen3-Coder 32B',
+      'Qwen2.5-Coder 32B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -536,7 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Los tres proveedores admiten residencia de datos en China continental — fundamental para el cumplimiento de la Ley de Protección de Información Personal (PIPL).',
           'Promociones para nuevas cuentas: Alibaba Cloud ofrece ¥300 de crédito gratuito; AutoDL ofrece ¥10 de crédito GPU gratuito (suficiente para 2–4 horas de pruebas con A100).',
           'Para desarrolladores occidentales que acceden a la nube china: Alibaba Cloud International admite tarjetas de crédito internacionales y consola en inglés; AutoDL y Tencent Cloud requieren tarjetas bancarias chinas o Alipay.',
-          'Qwen3 72B corre más rápido en Alibaba Cloud PAI gracias al runtime de inferencia optimizado para Qwen del equipo de Alibaba DAMO Academy.',
+          'Qwen2.5-72B corre más rápido en Alibaba Cloud PAI gracias al runtime de inferencia optimizado para Qwen del equipo de Alibaba DAMO Academy.',
         ],
       },
       providerComparison: {
@@ -600,7 +600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '0': 'RTX 3090', '1': '24 GB', '2': '¥1,68/h', '3': '~$0,23', '4': 'Inferencia 7B–13B, ajustes finos pequeños' },
           { '0': 'RTX 4090', '1': '24 GB', '2': 'desde ¥2,68/h', '3': '~$0,37', '4': 'La monotarjeta más rápida para 7B–32B, mejor relación calidad-precio' },
           { '0': 'A100', '1': '40 GB', '2': 'desde ¥3,45/h', '3': '~$0,48', '4': 'Inferencia 70B cuantizada, ajuste fino de tamaño medio' },
-          { '0': 'A100', '1': '80 GB', '2': '¥5,98/h', '3': '~$0,82', '4': '70B a plena precisión, Qwen3 72B en una sola tarjeta' },
+          { '0': 'A100', '1': '80 GB', '2': '¥5,98/h', '3': '~$0,82', '4': '70B a plena precisión, Qwen2.5-72B en una sola tarjeta' },
           { '0': 'H100', '1': '80 GB', '2': 'desde ¥11,98/h', '3': '~$1,65', '4': 'Inferencia de producción de alto rendimiento' },
         ],
         note: 'El A100 80 GB de AutoDL (¥5,98/h) es más barato que Alibaba Cloud PAI (¥8–12/h) y Tencent Cloud TI (¥7,5–10/h) para la misma tarjeta. Precios obtenidos de la página de precios de AutoDL en julio 2026 y contrastados con artículos comparativos independientes; las tarifas cambian según la oferta y las promociones — confirma la tarifa en vivo en [autodl.com/docs/latest_price](https://www.autodl.com/docs/latest_price) antes de reservar. AutoDL es la opción más económica de esta comparativa. → [Consulta precios de AutoDL](https://www.autodl.com)',
@@ -653,16 +653,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Rendimiento de inferencia Qwen por proveedor',
         content:
           '**Alibaba Cloud PAI ejecuta modelos Qwen un 20–30 % más rápido que hardware equivalente en otras plataformas.** La ventaja de rendimiento proviene del runtime de inferencia PAI-EAS, codesarrollado por el equipo Qwen en Alibaba DAMO Academy. Este es el mismo equipo que entrena Qwen — tienen acceso a los internos del modelo que los proveedores externos no tienen.',
-        columns: ['Plataforma', 'GPU', 'Velocidad Qwen3 72B (tok/s)', 'Latencia (primer token)', 'Notas'],
+        columns: ['Plataforma', 'GPU', 'Velocidad Qwen2.5-72B (tok/s)', 'Latencia (primer token)', 'Notas'],
         rows: [
-          { 'Plataforma': 'Alibaba Cloud PAI (PAI-EAS)', 'GPU': 'A100 80 GB', 'Velocidad Qwen3 72B (tok/s)': '22–28 tok/s', 'Latencia (primer token)': '~120ms', 'Notas': 'Runtime optimizado para Qwen, FlashAttention 3' },
-          { 'Plataforma': 'AutoDL (Ollama)', 'GPU': 'A100 80 GB', 'Velocidad Qwen3 72B (tok/s)': '16–20 tok/s', 'Latencia (primer token)': '~180ms', 'Notas': 'Stack Ollama estándar, sin optimización' },
-          { 'Plataforma': 'AutoDL (vLLM)', 'GPU': 'A100 80 GB', 'Velocidad Qwen3 72B (tok/s)': '19–24 tok/s', 'Latencia (primer token)': '~150ms', 'Notas': 'vLLM con cuantización AWQ' },
-          { 'Plataforma': 'Tencent Cloud TI (vLLM)', 'GPU': 'A100 80 GB', 'Velocidad Qwen3 72B (tok/s)': '17–22 tok/s', 'Latencia (primer token)': '~160ms', 'Notas': 'Stack vLLM estándar' },
-          { 'Plataforma': 'RunPod (occidental, A100 80 GB)', 'GPU': 'A100 80 GB', 'Velocidad Qwen3 72B (tok/s)': '15–18 tok/s', 'Latencia (primer token)': '~200ms', 'Notas': 'Mayor latencia por enrutamiento transpacífico' },
+          { 'Plataforma': 'Alibaba Cloud PAI (PAI-EAS)', 'GPU': 'A100 80 GB', 'Velocidad Qwen2.5-72B (tok/s)': '22–28 tok/s', 'Latencia (primer token)': '~120ms', 'Notas': 'Runtime optimizado para Qwen, FlashAttention 3' },
+          { 'Plataforma': 'AutoDL (Ollama)', 'GPU': 'A100 80 GB', 'Velocidad Qwen2.5-72B (tok/s)': '16–20 tok/s', 'Latencia (primer token)': '~180ms', 'Notas': 'Stack Ollama estándar, sin optimización' },
+          { 'Plataforma': 'AutoDL (vLLM)', 'GPU': 'A100 80 GB', 'Velocidad Qwen2.5-72B (tok/s)': '19–24 tok/s', 'Latencia (primer token)': '~150ms', 'Notas': 'vLLM con cuantización AWQ' },
+          { 'Plataforma': 'Tencent Cloud TI (vLLM)', 'GPU': 'A100 80 GB', 'Velocidad Qwen2.5-72B (tok/s)': '17–22 tok/s', 'Latencia (primer token)': '~160ms', 'Notas': 'Stack vLLM estándar' },
+          { 'Plataforma': 'RunPod (occidental, A100 80 GB)', 'GPU': 'A100 80 GB', 'Velocidad Qwen2.5-72B (tok/s)': '15–18 tok/s', 'Latencia (primer token)': '~200ms', 'Notas': 'Mayor latencia por enrutamiento transpacífico' },
         ],
         image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-es.webp',
-        imageCaption: 'Velocidad de Inferencia Qwen por Proveedor -- Qwen3 72B en A100 80GB',
+        imageCaption: 'Velocidad de Inferencia Qwen por Proveedor -- Qwen2.5-72B en A100 80GB',
         note: 'Si Qwen es tu carga de trabajo principal, la mejora del 20–30 % en Alibaba Cloud PAI suele justificar el precio por hora más alto. → [Obtén oferta de Alibaba Cloud](https://www.alibabacloud.com). Si el coste por hora es la prioridad y la diferencia de velocidad no es crítica para tu caso, AutoDL con vLLM (19–24 tok/s) obtiene gran parte del beneficio a una fracción del precio. → [Consulta precios de AutoDL](https://www.autodl.com)',
         affiliateLinks: [
           { url: 'https://www.alibabacloud.com', productName: 'Alibaba Cloud PAI', productCategory: 'cloud-gpu', priceRange: 'Desde ¥6/h (A100 40GB)', label: 'Obtén oferta de Alibaba Cloud →' },
@@ -763,9 +763,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: '¿Puedo usar Alibaba Cloud GPU desde fuera de China?', a: 'Sí. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) acepta tarjetas de crédito internacionales (Visa, Mastercard, American Express) y ofrece una consola en inglés — el registro más sencillo de los tres proveedores para usuarios no chinos, ya que AutoDL y Tencent Cloud requieren tarjeta bancaria china o Alipay en sus portales domésticos. Ten en cuenta que el portal internacional y el portal doméstico chino tienen cuentas separadas y precios distintos — el portal internacional es ligeramente más caro, pero más fácil de configurar. → [Obtén oferta de Alibaba Cloud](https://www.alibabacloud.com)' },
             { q: '¿Cómo paga con Alipay alguien sin cuenta bancaria china, para usar AutoDL o Tencent Cloud?', a: 'No necesitas una cuenta bancaria china. Regístrate en la app de Alipay con tu pasaporte y un número de teléfono extranjero, y vincula directamente una tarjeta Visa o Mastercard internacional elegible — esta vinculación directa ha sustituido a la antigua opción prepago TourCard para la mayoría de usuarios. Si la vinculación directa falla con tu tarjeta, la opción TourCard de Alipay permite prepagar desde una tarjeta internacional a un saldo de Alipay válido por 90 días. Una vez configurado así, Alipay funciona igual que una tarjeta bancaria china en el checkout doméstico de AutoDL y Tencent Cloud. Esto solo resuelve el pago — no te da una consola en inglés; para eso, usa [Alibaba Cloud International](https://www.alibabacloud.com).' },
             { q: '¿Es AutoDL suficientemente fiable para inferencia en producción?', a: 'AutoDL está diseñado para investigación y desarrollo, no para inferencia de grado productivo. Carece de SLA formales y las instancias spot pueden ser interrumpidas con poco aviso. Para inferencia en producción con disponibilidad garantizada, usa Alibaba Cloud PAI o Tencent Cloud TI con instancias bajo demanda. AutoDL es ideal para ejecuciones de ajuste fino, desarrollo y procesamiento por lotes sensible al coste donde las interrupciones ocasionales son aceptables.' },
-            { q: '¿Cómo se compara la inferencia Qwen de Alibaba Cloud con ejecutar Ollama por mi cuenta?', a: 'Alibaba Cloud PAI-EAS ejecuta Qwen un 20–30 % más rápido que Ollama estándar en hardware equivalente (probado: A100 80 GB, Qwen3 72B). La aceleración proviene del runtime de inferencia PAI-EAS desarrollado por el equipo Qwen de Alibaba DAMO Academy, que incluye optimizaciones específicas de Qwen como kernels de atención especializados y ajuste de KV-cache que no están en la compilación pública de Ollama.' },
+            { q: '¿Cómo se compara la inferencia Qwen de Alibaba Cloud con ejecutar Ollama por mi cuenta?', a: 'Alibaba Cloud PAI-EAS ejecuta Qwen un 20–30 % más rápido que Ollama estándar en hardware equivalente (probado: A100 80 GB, Qwen2.5-72B). La aceleración proviene del runtime de inferencia PAI-EAS desarrollado por el equipo Qwen de Alibaba DAMO Academy, que incluye optimizaciones específicas de Qwen como kernels de atención especializados y ajuste de KV-cache que no están en la compilación pública de Ollama.' },
             { q: '¿Existe un nivel gratuito para probar GPU en la nube china?', a: 'Alibaba Cloud y Tencent Cloud suelen ofrecer promociones de crédito para cuentas nuevas (consulta la oferta vigente en la página de registro de cada proveedor — los importes cambian y no están garantizados). AutoDL ofrece un pequeño crédito gratuito de GPU para cuentas nuevas (aproximadamente 1–2 horas de A100, o varias horas en tarjetas más económicas). Ninguno ofrece un nivel de GPU permanentemente gratuito — todo el uso de GPU es tarifado.' },
-            { q: '¿Qué GPU es mejor para Qwen3 72B en plataformas de nube china?', a: 'A100 80 GB es la GPU recomendada para inferencia de Qwen3 72B en una sola tarjeta — cabe el modelo completo en VRAM con precisión BF16 sin cuantización. Con cuantización Q4_K_M, Qwen3 72B (43,5 GB) también cabe en un A100 40 GB, con una calidad ligeramente inferior. H100 80 GB es un 25–35 % más rápido que A100 80 GB, pero cuesta 2–2,5 veces más por hora — solo vale la prima para cargas de trabajo de producción sostenida de alto rendimiento.' },
+            { q: '¿Qué GPU es mejor para Qwen2.5-72B en plataformas de nube china?', a: 'A100 80 GB es la GPU recomendada para inferencia de Qwen2.5-72B en una sola tarjeta — cabe el modelo completo en VRAM con precisión BF16 sin cuantización. Con cuantización Q4_K_M, Qwen2.5-72B (43,5 GB) también cabe en un A100 40 GB, con una calidad ligeramente inferior. H100 80 GB es un 25–35 % más rápido que A100 80 GB, pero cuesta 2–2,5 veces más por hora — solo vale la prima para cargas de trabajo de producción sostenida de alto rendimiento.' },
           ],
       },
       updateLog: {
@@ -828,7 +828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '¿Cómo se compara la inferencia Qwen de Alibaba Cloud con ejecutar Ollama por mi cuenta?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Alibaba Cloud PAI-EAS ejecuta Qwen un 20–30 % más rápido que Ollama estándar en hardware equivalente (probado: A100 80 GB, Qwen3 72B). La aceleración proviene del runtime de inferencia PAI-EAS desarrollado por el equipo Qwen de Alibaba DAMO Academy, que incluye optimizaciones específicas de Qwen como kernels de atención especializados y ajuste de KV-cache que no están en la compilación pública de Ollama.',
+              'text': 'Alibaba Cloud PAI-EAS ejecuta Qwen un 20–30 % más rápido que Ollama estándar en hardware equivalente (probado: A100 80 GB, Qwen2.5-72B). La aceleración proviene del runtime de inferencia PAI-EAS desarrollado por el equipo Qwen de Alibaba DAMO Academy, que incluye optimizaciones específicas de Qwen como kernels de atención especializados y ajuste de KV-cache que no están en la compilación pública de Ollama.',
             },
           },
           {
@@ -841,10 +841,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': '¿Qué GPU es mejor para Qwen3 72B en plataformas de nube china?',
+            'name': '¿Qué GPU es mejor para Qwen2.5-72B en plataformas de nube china?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'A100 80 GB es la GPU recomendada para inferencia de Qwen3 72B en una sola tarjeta — cabe el modelo completo en VRAM con precisión BF16 sin cuantización. Con cuantización Q4_K_M, Qwen3 72B (43,5 GB) también cabe en un A100 40 GB, con una calidad ligeramente inferior. H100 80 GB es un 25–35 % más rápido que A100 80 GB, pero cuesta 2–2,5 veces más por hora — solo vale la prima para cargas de trabajo de producción sostenida de alto rendimiento.',
+              'text': 'A100 80 GB es la GPU recomendada para inferencia de Qwen2.5-72B en una sola tarjeta — cabe el modelo completo en VRAM con precisión BF16 sin cuantización. Con cuantización Q4_K_M, Qwen2.5-72B (43,5 GB) también cabe en un A100 40 GB, con una calidad ligeramente inferior. H100 80 GB es un 25–35 % más rápido que A100 80 GB, pero cuesta 2–2,5 veces más por hora — solo vale la prima para cargas de trabajo de producción sostenida de alto rendimiento.',
             },
           },
         ],
@@ -908,9 +908,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'aliyun مقابل tencent cloud للذكاء الاصطناعي 2026',
     ],
     current_models_mentioned: [
-      'Qwen3 72B',
+      'Qwen2.5-72B',
       'DeepSeek-V3',
-      'Qwen3-Coder 32B',
+      'Qwen2.5-Coder 32B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -960,7 +960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يدعم المزوّدون الثلاثة إقامة البيانات داخل الصين القارية — أساسي لامتثال قانون حماية المعلومات الشخصية (PIPL).',
           'عروض الحسابات الجديدة: يقدّم Alibaba Cloud رصيدًا مجانيًا بقيمة ¥300؛ ويقدّم AutoDL رصيد GPU مجاني بقيمة ¥10 (يكفي لـ 2–4 ساعات اختبار مع A100).',
           'للمطورين الغربيين الذين يصلون إلى السحابة الصينية: يدعم Alibaba Cloud International بطاقات الائتمان الدولية ولوحة تحكم بالإنجليزية؛ بينما يتطلب AutoDL وTencent Cloud بطاقات مصرفية صينية أو Alipay.',
-          'يعمل Qwen3 72B أسرع على Alibaba Cloud PAI بفضل بيئة الاستدلال المحسَّنة لـ Qwen من فريق Alibaba DAMO Academy.',
+          'يعمل Qwen2.5-72B أسرع على Alibaba Cloud PAI بفضل بيئة الاستدلال المحسَّنة لـ Qwen من فريق Alibaba DAMO Academy.',
         ],
       },
       providerComparison: {
@@ -1015,7 +1015,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '0': 'RTX 3090', '1': '24 GB', '2': '¥1.68/ساعة', '3': 'نحو 0.23 دولار', '4': 'استدلال 7B–13B، ضبط دقيق صغير' },
           { '0': 'RTX 4090', '1': '24 GB', '2': 'ابتداءً من ¥2.68/ساعة', '3': 'نحو 0.37 دولار', '4': 'أسرع كرت مفرد لـ 7B–32B، أفضل قيمة' },
           { '0': 'A100', '1': '40 GB', '2': 'ابتداءً من ¥3.45/ساعة', '3': 'نحو 0.48 دولار', '4': 'استدلال 70B مكمَّم، ضبط دقيق متوسط الحجم' },
-          { '0': 'A100', '1': '80 GB', '2': '¥5.98/ساعة', '3': 'نحو 0.82 دولار', '4': '70B بدقة كاملة، Qwen3 72B على كرت واحد' },
+          { '0': 'A100', '1': '80 GB', '2': '¥5.98/ساعة', '3': 'نحو 0.82 دولار', '4': '70B بدقة كاملة، Qwen2.5-72B على كرت واحد' },
           { '0': 'H100', '1': '80 GB', '2': 'ابتداءً من ¥11.98/ساعة', '3': 'نحو 1.65 دولار', '4': 'استدلال إنتاجي عالي الإنتاجية' },
         ],
         note: 'A100 80 GB لدى AutoDL (¥5.98/ساعة) أرخص من Alibaba Cloud PAI (¥8–12/ساعة) وTencent Cloud TI (¥7.5–10/ساعة) للبطاقة نفسها. الأسعار مأخوذة من صفحة أسعار AutoDL في يوليو 2026 ومُدقَّقة مقابل مقالات مقارنة مستقلة؛ تتغيّر الأسعار مع العرض والعروض الترويجية — تأكد من السعر الحي على [autodl.com/docs/latest_price](https://www.autodl.com/docs/latest_price) قبل الحجز. AutoDL هو الخيار الأقل تكلفة في هذه المقارنة. ← [تحقّق من أسعار AutoDL](https://www.autodl.com)',
@@ -1068,16 +1068,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'أداء استدلال Qwen حسب المزوّد',
         content:
           '**يشغّل Alibaba Cloud PAI نماذج Qwen أسرع بنسبة 20–30% من عتاد مكافئ على منصات أخرى.** تأتي ميزة الأداء من بيئة استدلال PAI-EAS، المطوَّرة بالاشتراك مع فريق Qwen في Alibaba DAMO Academy. وهو الفريق نفسه الذي يدرّب Qwen — لديهم وصول إلى دواخل النموذج لا يملكه المزوّدون الخارجيون.',
-        columns: ['المنصة', 'GPU', 'سرعة Qwen3 72B (tok/s)', 'زمن الاستجابة (أول token)', 'ملاحظات'],
+        columns: ['المنصة', 'GPU', 'سرعة Qwen2.5-72B (tok/s)', 'زمن الاستجابة (أول token)', 'ملاحظات'],
         rows: [
-          { 'المنصة': 'Alibaba Cloud PAI (PAI-EAS)', 'GPU': 'A100 80 GB', 'سرعة Qwen3 72B (tok/s)': '22–28 tok/s', 'زمن الاستجابة (أول token)': 'نحو 120ms', 'ملاحظات': 'بيئة محسَّنة لـ Qwen، FlashAttention 3' },
-          { 'المنصة': 'AutoDL (Ollama)', 'GPU': 'A100 80 GB', 'سرعة Qwen3 72B (tok/s)': '16–20 tok/s', 'زمن الاستجابة (أول token)': 'نحو 180ms', 'ملاحظات': 'حزمة Ollama قياسية، دون تحسين' },
-          { 'المنصة': 'AutoDL (vLLM)', 'GPU': 'A100 80 GB', 'سرعة Qwen3 72B (tok/s)': '19–24 tok/s', 'زمن الاستجابة (أول token)': 'نحو 150ms', 'ملاحظات': 'vLLM بتكميم AWQ' },
-          { 'المنصة': 'Tencent Cloud TI (vLLM)', 'GPU': 'A100 80 GB', 'سرعة Qwen3 72B (tok/s)': '17–22 tok/s', 'زمن الاستجابة (أول token)': 'نحو 160ms', 'ملاحظات': 'حزمة vLLM قياسية' },
-          { 'المنصة': 'RunPod (غربي، A100 80 GB)', 'GPU': 'A100 80 GB', 'سرعة Qwen3 72B (tok/s)': '15–18 tok/s', 'زمن الاستجابة (أول token)': 'نحو 200ms', 'ملاحظات': 'زمن استجابة أعلى بسبب التوجيه عبر المحيط الهادئ' },
+          { 'المنصة': 'Alibaba Cloud PAI (PAI-EAS)', 'GPU': 'A100 80 GB', 'سرعة Qwen2.5-72B (tok/s)': '22–28 tok/s', 'زمن الاستجابة (أول token)': 'نحو 120ms', 'ملاحظات': 'بيئة محسَّنة لـ Qwen، FlashAttention 3' },
+          { 'المنصة': 'AutoDL (Ollama)', 'GPU': 'A100 80 GB', 'سرعة Qwen2.5-72B (tok/s)': '16–20 tok/s', 'زمن الاستجابة (أول token)': 'نحو 180ms', 'ملاحظات': 'حزمة Ollama قياسية، دون تحسين' },
+          { 'المنصة': 'AutoDL (vLLM)', 'GPU': 'A100 80 GB', 'سرعة Qwen2.5-72B (tok/s)': '19–24 tok/s', 'زمن الاستجابة (أول token)': 'نحو 150ms', 'ملاحظات': 'vLLM بتكميم AWQ' },
+          { 'المنصة': 'Tencent Cloud TI (vLLM)', 'GPU': 'A100 80 GB', 'سرعة Qwen2.5-72B (tok/s)': '17–22 tok/s', 'زمن الاستجابة (أول token)': 'نحو 160ms', 'ملاحظات': 'حزمة vLLM قياسية' },
+          { 'المنصة': 'RunPod (غربي، A100 80 GB)', 'GPU': 'A100 80 GB', 'سرعة Qwen2.5-72B (tok/s)': '15–18 tok/s', 'زمن الاستجابة (أول token)': 'نحو 200ms', 'ملاحظات': 'زمن استجابة أعلى بسبب التوجيه عبر المحيط الهادئ' },
         ],
         image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-ar.webp',
-        imageCaption: 'سرعة استدلال Qwen حسب المزوّد -- Qwen3 72B على A100 80GB',
+        imageCaption: 'سرعة استدلال Qwen حسب المزوّد -- Qwen2.5-72B على A100 80GB',
         note: 'إذا كان Qwen هو حِمل عملك الأساسي، فإن التسريع بنسبة 20–30% على Alibaba Cloud PAI يبرر عادةً السعر الأعلى بالساعة. ← [احصل على عرض Alibaba Cloud](https://www.alibabacloud.com). وإذا كانت التكلفة بالساعة هي الأولوية، يحصل AutoDL عبر vLLM (19–24 tok/s) على معظم الفائدة بجزء من السعر. ← [تحقّق من أسعار AutoDL](https://www.autodl.com)',
         affiliateLinks: [
           { url: 'https://www.alibabacloud.com', productName: 'Alibaba Cloud PAI', productCategory: 'cloud-gpu', priceRange: 'ابتداءً من ¥6/ساعة', label: 'احصل على عرض Alibaba Cloud ←' },
@@ -1178,9 +1178,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'هل يمكنني استخدام Alibaba Cloud GPU من خارج الصين؟', a: 'نعم. يقبل Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) بطاقات الائتمان الدولية (Visa، Mastercard، American Express) ويقدّم لوحة تحكم بالإنجليزية. لاحظ أن البوابة الدولية والبوابة المحلية الصينية لهما حسابات منفصلة وأسعار مختلفة — البوابة الدولية أغلى قليلًا، لكنها أسهل في الإعداد للمستخدمين غير الصينيين. ← [احصل على عرض Alibaba Cloud](https://www.alibabacloud.com)' },
             { q: 'كيف يدفع شخص ليس لديه حساب مصرفي صيني عبر Alipay لاستخدام AutoDL أو Tencent Cloud؟', a: 'لا تحتاج إلى حساب مصرفي صيني. سجّل في تطبيق Alipay بجواز سفرك ورقم هاتف أجنبي، ثم اربط بطاقة Visa أو Mastercard دولية مؤهَّلة مباشرة — هذا الربط المباشر حلّ محل خيار الدفع المسبق TourCard القديم لمعظم المستخدمين. إذا فشل الربط المباشر مع بطاقتك، يتيح لك خيار TourCard من Alipay الدفع المسبق من بطاقة دولية إلى رصيد Alipay صالح لمدة 90 يومًا. بمجرد إعداد Alipay بهذه الطريقة، يعمل عند الدفع المحلي لـ AutoDL وTencent Cloud مثل البطاقة المصرفية الصينية تمامًا. هذا يحل مشكلة الدفع فقط — ولا يمنحك لوحة تحكم بالإنجليزية؛ لذلك استخدم [Alibaba Cloud International](https://www.alibabacloud.com) بدلاً من ذلك.' },
             { q: 'هل AutoDL موثوق بما يكفي للاستدلال في الإنتاج؟', a: 'AutoDL مصمَّم للبحث والتطوير، لا للاستدلال على مستوى الإنتاج. يفتقر إلى SLA رسمي وقد تُقطع نسخ spot بإشعار قصير. للاستدلال في الإنتاج بتوافر مضمون، استخدم Alibaba Cloud PAI أو Tencent Cloud TI بنسخ عند الطلب. يُعد AutoDL مثاليًا لتشغيلات الضبط الدقيق والتطوير والمعالجة الدُفعية الحساسة للتكلفة حيث تكون الانقطاعات العرضية مقبولة.' },
-            { q: 'كيف يُقارن استدلال Qwen لدى Alibaba Cloud بتشغيل Ollama بنفسي؟', a: 'يشغّل Alibaba Cloud PAI-EAS نموذج Qwen أسرع بنسبة 20–30% من Ollama القياسي على عتاد مكافئ (مُختبَر: A100 80 GB، Qwen3 72B). يأتي التسريع من بيئة استدلال PAI-EAS المطوَّرة من فريق Qwen في Alibaba DAMO Academy، والتي تتضمن تحسينات خاصة بـ Qwen مثل أنوية انتباه متخصصة وضبط KV-cache غير الموجودة في البناء العام لـ Ollama.' },
+            { q: 'كيف يُقارن استدلال Qwen لدى Alibaba Cloud بتشغيل Ollama بنفسي؟', a: 'يشغّل Alibaba Cloud PAI-EAS نموذج Qwen أسرع بنسبة 20–30% من Ollama القياسي على عتاد مكافئ (مُختبَر: A100 80 GB، Qwen2.5-72B). يأتي التسريع من بيئة استدلال PAI-EAS المطوَّرة من فريق Qwen في Alibaba DAMO Academy، والتي تتضمن تحسينات خاصة بـ Qwen مثل أنوية انتباه متخصصة وضبط KV-cache غير الموجودة في البناء العام لـ Ollama.' },
             { q: 'هل توجد طبقة مجانية لتجربة GPU في السحابة الصينية؟', a: 'يقدّم Alibaba Cloud رصيدًا مجانيًا بقيمة ¥300 للحسابات الجديدة (عبر [intl.aliyun.com](https://www.alibabacloud.com) للمستخدمين الدوليين)، يكفي لنحو 30–40 ساعة استدلال A10. ويقدّم Tencent Cloud أرصدة ترويجية مماثلة للمستخدمين الجدد. ويوفّر AutoDL رصيد GPU مجاني بقيمة ¥10 (2–4 ساعات من وقت A100). لا يقدّم أي منهم طبقة GPU مجانية دائمًا — كل استخدام GPU مُسعَّر.' },
-            { q: 'أي GPU أفضل لـ Qwen3 72B على منصات السحابة الصينية؟', a: 'A100 80 GB هو الـ GPU الموصى به لاستدلال Qwen3 72B على كرت واحد — يتسع للنموذج كاملًا في VRAM بدقة BF16 دون تكميم. مع تكميم Q4_K_M، يتسع Qwen3 72B (43.5 GB) أيضًا في A100 40 GB، بجودة أدنى قليلًا. H100 80 GB أسرع بنسبة 25–35% من A100 80 GB، لكنه يكلف 2–2.5 ضعفًا لكل ساعة — يستحق العلاوة فقط لأحمال الإنتاج المستدامة عالية الإنتاجية.' },
+            { q: 'أي GPU أفضل لـ Qwen2.5-72B على منصات السحابة الصينية؟', a: 'A100 80 GB هو الـ GPU الموصى به لاستدلال Qwen2.5-72B على كرت واحد — يتسع للنموذج كاملًا في VRAM بدقة BF16 دون تكميم. مع تكميم Q4_K_M، يتسع Qwen2.5-72B (43.5 GB) أيضًا في A100 40 GB، بجودة أدنى قليلًا. H100 80 GB أسرع بنسبة 25–35% من A100 80 GB، لكنه يكلف 2–2.5 ضعفًا لكل ساعة — يستحق العلاوة فقط لأحمال الإنتاج المستدامة عالية الإنتاجية.' },
             { q: 'كيف يدفع شخص بلا حساب مصرفي صيني عبر Alipay؟', a: 'لا حاجة لحساب مصرفي صيني. سجّل في Alipay بجواز سفر ورقم هاتف أجنبي، واربط مباشرة بطاقة Visa أو Mastercard دولية مؤهَّلة. إذا فشل الربط المباشر، يتيح خيار TourCard الدفع المسبق من بطاقة دولية إلى رصيد Alipay صالح لمدة 90 يومًا.' },
           ],
       },
@@ -1245,7 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'كيف يُقارن استدلال Qwen لدى Alibaba Cloud بتشغيل Ollama بنفسي؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'يشغّل Alibaba Cloud PAI-EAS نموذج Qwen أسرع بنسبة 20–30% من Ollama القياسي على عتاد مكافئ (مُختبَر: A100 80 GB، Qwen3 72B). يأتي التسريع من بيئة استدلال PAI-EAS المطوَّرة من فريق Qwen في Alibaba DAMO Academy، والتي تتضمن تحسينات خاصة بـ Qwen مثل أنوية انتباه متخصصة وضبط KV-cache غير الموجودة في البناء العام لـ Ollama.',
+              'text': 'يشغّل Alibaba Cloud PAI-EAS نموذج Qwen أسرع بنسبة 20–30% من Ollama القياسي على عتاد مكافئ (مُختبَر: A100 80 GB، Qwen2.5-72B). يأتي التسريع من بيئة استدلال PAI-EAS المطوَّرة من فريق Qwen في Alibaba DAMO Academy، والتي تتضمن تحسينات خاصة بـ Qwen مثل أنوية انتباه متخصصة وضبط KV-cache غير الموجودة في البناء العام لـ Ollama.',
             },
           },
           {
@@ -1258,10 +1258,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'أي GPU أفضل لـ Qwen3 72B على منصات السحابة الصينية؟',
+            'name': 'أي GPU أفضل لـ Qwen2.5-72B على منصات السحابة الصينية؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'A100 80 GB هو الـ GPU الموصى به لاستدلال Qwen3 72B على كرت واحد — يتسع للنموذج كاملًا في VRAM بدقة BF16 دون تكميم. مع تكميم Q4_K_M، يتسع Qwen3 72B (43.5 GB) أيضًا في A100 40 GB، بجودة أدنى قليلًا. H100 80 GB أسرع بنسبة 25–35% من A100 80 GB، لكنه يكلف 2–2.5 ضعفًا لكل ساعة — يستحق العلاوة فقط لأحمال الإنتاج المستدامة عالية الإنتاجية.',
+              'text': 'A100 80 GB هو الـ GPU الموصى به لاستدلال Qwen2.5-72B على كرت واحد — يتسع للنموذج كاملًا في VRAM بدقة BF16 دون تكميم. مع تكميم Q4_K_M، يتسع Qwen2.5-72B (43.5 GB) أيضًا في A100 40 GB، بجودة أدنى قليلًا. H100 80 GB أسرع بنسبة 25–35% من A100 80 GB، لكنه يكلف 2–2.5 ضعفًا لكل ساعة — يستحق العلاوة فقط لأحمال الإنتاج المستدامة عالية الإنتاجية.',
             },
           },
           {
@@ -1334,9 +1334,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'aliyun vs tencent cloud ia 2026',
     ],
     current_models_mentioned: [
-      'Qwen3 72B',
+      'Qwen2.5-72B',
       'DeepSeek-V3',
-      'Qwen3-Coder 32B',
+      'Qwen2.5-Coder 32B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -1388,7 +1388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Os três provedores oferecem residência de dados na China continental — fundamental para a conformidade com a Lei de Proteção de Informações Pessoais (PIPL).',
           'Promoções para novas contas: o Alibaba Cloud oferece ¥300 de crédito gratuito; o AutoDL oferece ¥10 de crédito de GPU gratuito (suficiente para 2–4 horas de testes com A100).',
           'Para desenvolvedores ocidentais que acessam a nuvem chinesa: o Alibaba Cloud International aceita cartões de crédito internacionais e console em inglês; AutoDL e Tencent Cloud exigem cartões bancários chineses ou Alipay.',
-          'O Qwen3 72B roda mais rápido no Alibaba Cloud PAI graças ao runtime de inferência otimizado para Qwen da equipe da Alibaba DAMO Academy.',
+          'O Qwen2.5-72B roda mais rápido no Alibaba Cloud PAI graças ao runtime de inferência otimizado para Qwen da equipe da Alibaba DAMO Academy.',
         ],
       },
       providerComparison: {
@@ -1443,7 +1443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '0': 'RTX 3090', '1': '24 GB', '2': '¥1,68/h', '3': '~US$ 0,23', '4': 'Inferência 7B–13B, fine-tunes pequenos' },
           { '0': 'RTX 4090', '1': '24 GB', '2': 'a partir de ¥2,68/h', '3': '~US$ 0,37', '4': 'Placa única mais rápida para 7B–32B, melhor custo-benefício' },
           { '0': 'A100', '1': '40 GB', '2': 'a partir de ¥3,45/h', '3': '~US$ 0,48', '4': 'Inferência 70B quantizada, fine-tuning de médio porte' },
-          { '0': 'A100', '1': '80 GB', '2': '¥5,98/h', '3': '~US$ 0,82', '4': '70B em precisão total, Qwen3 72B em placa única' },
+          { '0': 'A100', '1': '80 GB', '2': '¥5,98/h', '3': '~US$ 0,82', '4': '70B em precisão total, Qwen2.5-72B em placa única' },
           { '0': 'H100', '1': '80 GB', '2': 'a partir de ¥11,98/h', '3': '~US$ 1,65', '4': 'Inferência de produção de alta vazão' },
         ],
         note: 'O A100 80 GB do AutoDL (¥5,98/h) é mais barato que o Alibaba Cloud PAI (¥8–12/h) e o Tencent Cloud TI (¥7,5–10/h) para a mesma placa. Preços obtidos na página de preços do AutoDL em julho 2026 e cruzados com artigos comparativos independentes; as tarifas mudam conforme oferta e promoções — confirme a tarifa ao vivo em [autodl.com/docs/latest_price](https://www.autodl.com/docs/latest_price) antes de reservar. O AutoDL é a opção mais econômica deste comparativo. → [Ver preços do AutoDL](https://www.autodl.com)',
@@ -1496,16 +1496,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Desempenho de inferência Qwen por provedor',
         content:
           '**O Alibaba Cloud PAI executa modelos Qwen 20–30% mais rápido que hardware equivalente em outras plataformas.** A vantagem de desempenho vem do runtime de inferência PAI-EAS, codesenvolvido pela equipe Qwen na Alibaba DAMO Academy. É a mesma equipe que treina o Qwen — ela tem acesso aos internos do modelo que provedores externos não têm.',
-        columns: ['Plataforma', 'GPU', 'Velocidade Qwen3 72B (tok/s)', 'Latência (primeiro token)', 'Notas'],
+        columns: ['Plataforma', 'GPU', 'Velocidade Qwen2.5-72B (tok/s)', 'Latência (primeiro token)', 'Notas'],
         rows: [
-          { 'Plataforma': 'Alibaba Cloud PAI (PAI-EAS)', 'GPU': 'A100 80 GB', 'Velocidade Qwen3 72B (tok/s)': '22–28 tok/s', 'Latência (primeiro token)': '~120ms', 'Notas': 'Runtime otimizado para Qwen, FlashAttention 3' },
-          { 'Plataforma': 'AutoDL (Ollama)', 'GPU': 'A100 80 GB', 'Velocidade Qwen3 72B (tok/s)': '16–20 tok/s', 'Latência (primeiro token)': '~180ms', 'Notas': 'Stack Ollama padrão, sem otimização' },
-          { 'Plataforma': 'AutoDL (vLLM)', 'GPU': 'A100 80 GB', 'Velocidade Qwen3 72B (tok/s)': '19–24 tok/s', 'Latência (primeiro token)': '~150ms', 'Notas': 'vLLM com quantização AWQ' },
-          { 'Plataforma': 'Tencent Cloud TI (vLLM)', 'GPU': 'A100 80 GB', 'Velocidade Qwen3 72B (tok/s)': '17–22 tok/s', 'Latência (primeiro token)': '~160ms', 'Notas': 'Stack vLLM padrão' },
-          { 'Plataforma': 'RunPod (ocidental, A100 80 GB)', 'GPU': 'A100 80 GB', 'Velocidade Qwen3 72B (tok/s)': '15–18 tok/s', 'Latência (primeiro token)': '~200ms', 'Notas': 'Maior latência por roteamento transpacífico' },
+          { 'Plataforma': 'Alibaba Cloud PAI (PAI-EAS)', 'GPU': 'A100 80 GB', 'Velocidade Qwen2.5-72B (tok/s)': '22–28 tok/s', 'Latência (primeiro token)': '~120ms', 'Notas': 'Runtime otimizado para Qwen, FlashAttention 3' },
+          { 'Plataforma': 'AutoDL (Ollama)', 'GPU': 'A100 80 GB', 'Velocidade Qwen2.5-72B (tok/s)': '16–20 tok/s', 'Latência (primeiro token)': '~180ms', 'Notas': 'Stack Ollama padrão, sem otimização' },
+          { 'Plataforma': 'AutoDL (vLLM)', 'GPU': 'A100 80 GB', 'Velocidade Qwen2.5-72B (tok/s)': '19–24 tok/s', 'Latência (primeiro token)': '~150ms', 'Notas': 'vLLM com quantização AWQ' },
+          { 'Plataforma': 'Tencent Cloud TI (vLLM)', 'GPU': 'A100 80 GB', 'Velocidade Qwen2.5-72B (tok/s)': '17–22 tok/s', 'Latência (primeiro token)': '~160ms', 'Notas': 'Stack vLLM padrão' },
+          { 'Plataforma': 'RunPod (ocidental, A100 80 GB)', 'GPU': 'A100 80 GB', 'Velocidade Qwen2.5-72B (tok/s)': '15–18 tok/s', 'Latência (primeiro token)': '~200ms', 'Notas': 'Maior latência por roteamento transpacífico' },
         ],
         image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-pt.webp',
-        imageCaption: 'Velocidade de Inferência do Qwen por Provedor -- Qwen3 72B em A100 80GB',
+        imageCaption: 'Velocidade de Inferência do Qwen por Provedor -- Qwen2.5-72B em A100 80GB',
         note: 'Se o Qwen é sua carga de trabalho principal, o ganho de 20–30% no Alibaba Cloud PAI costuma justificar o preço por hora mais alto. → [Ver oferta do Alibaba Cloud](https://www.alibabacloud.com). Se o custo por hora é a prioridade e a diferença de velocidade não é crítica, o AutoDL com vLLM (19–24 tok/s) entrega boa parte do benefício por uma fração do preço. → [Ver preços do AutoDL](https://www.autodl.com)',
         affiliateLinks: [
           { url: 'https://www.alibabacloud.com', productName: 'Alibaba Cloud PAI', productCategory: 'cloud-gpu', priceRange: 'A partir de ¥6/h (A100 40GB)', label: 'Ver oferta do Alibaba Cloud →' },
@@ -1606,9 +1606,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Posso usar o Alibaba Cloud GPU de fora da China?', a: 'Sim. O Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) aceita cartões de crédito internacionais (Visa, Mastercard, American Express) e oferece um console em inglês — o cadastro mais simples dos três provedores para usuários não chineses, já que AutoDL e Tencent Cloud exigem cartão bancário chinês ou Alipay em seus portais domésticos. Observe que o portal internacional e o portal doméstico chinês têm contas separadas e preços distintos. → [Ver oferta do Alibaba Cloud](https://www.alibabacloud.com)' },
             { q: 'Como alguém sem conta bancária chinesa paga com Alipay para usar AutoDL ou Tencent Cloud?', a: 'Você não precisa de conta bancária chinesa. Cadastre-se no app do Alipay com passaporte e um número de telefone estrangeiro, e vincule diretamente um cartão Visa ou Mastercard internacional elegível — essa vinculação direta substituiu a antiga opção pré-paga TourCard para a maioria dos usuários. Se a vinculação direta falhar com seu cartão, a opção TourCard do Alipay permite pré-pagar com um cartão internacional para um saldo Alipay válido por 90 dias. Depois de configurado assim, o Alipay funciona igual a um cartão bancário chinês no checkout doméstico do AutoDL e do Tencent Cloud. Isso resolve só o pagamento — não te dá um console em inglês; para isso, use o [Alibaba Cloud International](https://www.alibabacloud.com).' },
             { q: 'O AutoDL é confiável o suficiente para inferência em produção?', a: 'O AutoDL foi projetado para pesquisa e desenvolvimento, não para inferência de nível produtivo. Faltam SLAs formais e as instâncias spot podem ser interrompidas com pouco aviso. Para inferência em produção com disponibilidade garantida, use Alibaba Cloud PAI ou Tencent Cloud TI com instâncias sob demanda. O AutoDL é ideal para execuções de fine-tuning, desenvolvimento e processamento em lote sensível a custo, em que interrupções ocasionais são aceitáveis.' },
-            { q: 'Como a inferência Qwen do Alibaba Cloud se compara a rodar o Ollama por conta própria?', a: 'O Alibaba Cloud PAI-EAS executa o Qwen 20–30% mais rápido que o Ollama padrão em hardware equivalente (testado: A100 80 GB, Qwen3 72B). A aceleração vem do runtime de inferência PAI-EAS desenvolvido pela equipe Qwen da Alibaba DAMO Academy, que inclui otimizações específicas do Qwen como kernels de atenção especializados e ajuste de KV-cache que não estão na compilação pública do Ollama.' },
+            { q: 'Como a inferência Qwen do Alibaba Cloud se compara a rodar o Ollama por conta própria?', a: 'O Alibaba Cloud PAI-EAS executa o Qwen 20–30% mais rápido que o Ollama padrão em hardware equivalente (testado: A100 80 GB, Qwen2.5-72B). A aceleração vem do runtime de inferência PAI-EAS desenvolvido pela equipe Qwen da Alibaba DAMO Academy, que inclui otimizações específicas do Qwen como kernels de atenção especializados e ajuste de KV-cache que não estão na compilação pública do Ollama.' },
             { q: 'Existe um nível gratuito para testar GPU na nuvem chinesa?', a: 'O Alibaba Cloud oferece ¥300 de crédito gratuito para novas contas (via [intl.aliyun.com](https://www.alibabacloud.com) para usuários internacionais), suficiente para cerca de 30–40 horas de inferência A10. O Tencent Cloud oferece créditos promocionais semelhantes para novos usuários. O AutoDL fornece ¥10 de crédito de GPU gratuito (2–4 horas de A100). Nenhum oferece um nível de GPU permanentemente gratuito — todo uso de GPU é tarifado.' },
-            { q: 'Qual GPU é melhor para o Qwen3 72B em plataformas de nuvem chinesa?', a: 'A A100 80 GB é a GPU recomendada para inferência do Qwen3 72B em uma única placa — o modelo completo cabe na VRAM em precisão BF16 sem quantização. Com quantização Q4_K_M, o Qwen3 72B (43,5 GB) também cabe em uma A100 40 GB, com qualidade um pouco inferior. A H100 80 GB é 25–35% mais rápida que a A100 80 GB, mas custa 2–2,5 vezes mais por hora — só vale o prêmio para cargas de produção sustentada de alta vazão.' },
+            { q: 'Qual GPU é melhor para o Qwen2.5-72B em plataformas de nuvem chinesa?', a: 'A A100 80 GB é a GPU recomendada para inferência do Qwen2.5-72B em uma única placa — o modelo completo cabe na VRAM em precisão BF16 sem quantização. Com quantização Q4_K_M, o Qwen2.5-72B (43,5 GB) também cabe em uma A100 40 GB, com qualidade um pouco inferior. A H100 80 GB é 25–35% mais rápida que a A100 80 GB, mas custa 2–2,5 vezes mais por hora — só vale o prêmio para cargas de produção sustentada de alta vazão.' },
             { q: 'Como pagar com Alipay sem conta bancária chinesa?', a: 'Não é preciso conta bancária chinesa. Cadastre-se no Alipay com passaporte e telefone estrangeiro, e vincule diretamente um cartão Visa ou Mastercard internacional. Se a vinculação direta falhar, a opção TourCard permite pré-pagar com um cartão internacional para um saldo Alipay válido por 90 dias.' },
           ],
       },
@@ -1672,7 +1672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Como a inferência Qwen do Alibaba Cloud se compara a rodar o Ollama por conta própria?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'O Alibaba Cloud PAI-EAS executa o Qwen 20–30% mais rápido que o Ollama padrão em hardware equivalente (testado: A100 80 GB, Qwen3 72B). A aceleração vem do runtime de inferência PAI-EAS desenvolvido pela equipe Qwen da Alibaba DAMO Academy, que inclui otimizações específicas do Qwen como kernels de atenção especializados e ajuste de KV-cache que não estão na compilação pública do Ollama.',
+              'text': 'O Alibaba Cloud PAI-EAS executa o Qwen 20–30% mais rápido que o Ollama padrão em hardware equivalente (testado: A100 80 GB, Qwen2.5-72B). A aceleração vem do runtime de inferência PAI-EAS desenvolvido pela equipe Qwen da Alibaba DAMO Academy, que inclui otimizações específicas do Qwen como kernels de atenção especializados e ajuste de KV-cache que não estão na compilação pública do Ollama.',
             },
           },
           {
@@ -1685,10 +1685,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'Qual GPU é melhor para o Qwen3 72B em plataformas de nuvem chinesa?',
+            'name': 'Qual GPU é melhor para o Qwen2.5-72B em plataformas de nuvem chinesa?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'A A100 80 GB é a GPU recomendada para inferência do Qwen3 72B em uma única placa — o modelo completo cabe na VRAM em precisão BF16 sem quantização. Com quantização Q4_K_M, o Qwen3 72B (43,5 GB) também cabe em uma A100 40 GB, com qualidade um pouco inferior. A H100 80 GB é 25–35% mais rápida que a A100 80 GB, mas custa 2–2,5 vezes mais por hora — só vale o prêmio para cargas de produção sustentada de alta vazão.',
+              'text': 'A A100 80 GB é a GPU recomendada para inferência do Qwen2.5-72B em uma única placa — o modelo completo cabe na VRAM em precisão BF16 sem quantização. Com quantização Q4_K_M, o Qwen2.5-72B (43,5 GB) também cabe em uma A100 40 GB, com qualidade um pouco inferior. A H100 80 GB é 25–35% mais rápida que a A100 80 GB, mas custa 2–2,5 vezes mais por hora — só vale o prêmio para cargas de produção sustentada de alta vazão.',
             },
           },
           {
@@ -1831,7 +1831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '0': 'RTX 3090', '1': '24 GB', '2': '¥1,68/Std.', '3': '~0,23 $', '4': '7B–13B-Inferenz, kleine Fine-Tunes' },
           { '0': 'RTX 4090', '1': '24 GB', '2': 'ab ¥2,68/Std.', '3': '~0,37 $', '4': 'Schnellste Einzelkarte für 7B–32B, bestes Preis-Leistungs-Verhältnis' },
           { '0': 'A100', '1': '40 GB', '2': 'ab ¥3,45/Std.', '3': '~0,48 $', '4': 'Quantisierte 70B-Inferenz, mittelgroßes Fine-Tuning' },
-          { '0': 'A100', '1': '80 GB', '2': '¥5,98/Std.', '3': '~0,82 $', '4': '70B in voller Präzision, Qwen3 72B auf einer Karte' },
+          { '0': 'A100', '1': '80 GB', '2': '¥5,98/Std.', '3': '~0,82 $', '4': '70B in voller Präzision, Qwen2.5-72B auf einer Karte' },
           { '0': 'H100', '1': '80 GB', '2': 'ab ¥11,98/Std.', '3': '~1,65 $', '4': 'Produktions-Inferenz mit hohem Durchsatz' },
         ],
         note: 'Die A100 80 GB von AutoDL (¥5,98/Std.) ist günstiger als Alibaba Cloud PAI (¥8–12/Std.) und Tencent Cloud TI (¥7,5–10/Std.) für dieselbe Karte. Preise von der AutoDL-Preisseite im Juli 2026, abgeglichen mit Community-Listings; die Sätze ändern sich mit Angebot und Aktionen — bestätigen Sie den aktuellen Satz auf [autodl.com/docs/latest_price](https://www.autodl.com/docs/latest_price) vor der Buchung.',
@@ -1956,7 +1956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Welcher chinesische Cloud-GPU-Anbieter ist am besten für Qwen?', a: 'Alibaba Cloud PAI. Die PAI-EAS-Laufzeit läuft Qwen-Modelle 20–30 % schneller als Standard-Ollama auf derselben Hardware. → [Alibaba-Cloud-Angebot ansehen](https://www.alibabacloud.com)' },
             { q: 'Kann ich Alibaba Cloud GPU von außerhalb Chinas nutzen?', a: 'Ja. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com)) akzeptiert internationale Kreditkarten (Visa, Mastercard, American Express) und bietet eine englischsprachige Konsole. Das International-Portal und das China-Inlandsportal haben separate Konten und unterschiedliche Preise — das International-Portal ist etwas teurer, aber für Nicht-China-Nutzer einfacher einzurichten. → [Alibaba-Cloud-Angebot ansehen](https://www.alibabacloud.com)' },
             { q: 'Wie zahlt jemand ohne chinesisches Bankkonto per Alipay für AutoDL oder Tencent Cloud?', a: 'Sie brauchen kein chinesisches Bankkonto. Registrieren Sie sich in der Alipay-App mit Reisepass und ausländischer Telefonnummer und verknüpfen Sie direkt eine berechtigte internationale Visa- oder Mastercard — diese direkte Kartenverknüpfung hat die frühere TourCard-Prepaid-Lösung für die meisten Nutzer abgelöst. Schlägt die direkte Verknüpfung fehl, erlaubt die TourCard-Option von Alipay das Aufladen eines 90 Tage gültigen Alipay-Guthabens von einer internationalen Karte aus. Einmal so eingerichtet, funktioniert Alipay beim inländischen Checkout von AutoDL und Tencent Cloud genauso wie eine chinesische Bankkarte. Das löst nur die Zahlung — für eine englischsprachige Konsole nutzen Sie stattdessen [Alibaba Cloud International](https://www.alibabacloud.com).' },
-            { q: 'Wie vergleicht sich Alibaba Cloud PAI mit eigenem Ollama-Betrieb für Qwen?', a: 'Alibaba Cloud PAI-EAS läuft Qwen-Modelle 20–30 % schneller als Standard-Ollama auf vergleichbarer Hardware (getestet: A100 80 GB, Qwen3 72B). Der Geschwindigkeitsvorteil kommt aus der PAI-EAS-Inferenz-Runtime, die vom Alibaba DAMO Academy Qwen-Team entwickelt wurde.' },
+            { q: 'Wie vergleicht sich Alibaba Cloud PAI mit eigenem Ollama-Betrieb für Qwen?', a: 'Alibaba Cloud PAI-EAS läuft Qwen-Modelle 20–30 % schneller als Standard-Ollama auf vergleichbarer Hardware (getestet: A100 80 GB, Qwen2.5-72B). Der Geschwindigkeitsvorteil kommt aus der PAI-EAS-Inferenz-Runtime, die vom Alibaba DAMO Academy Qwen-Team entwickelt wurde.' },
             { q: 'Gibt es eine kostenlose Testmöglichkeit für chinesische Cloud-GPUs?', a: 'Alibaba Cloud: ¥300 Startguthaben für neue Konten über [intl.aliyun.com](https://www.alibabacloud.com) (ca. 30–40 Stunden A10-Inferenz). Tencent Cloud: ähnliche Promotions für neue Nutzer. AutoDL: ¥10 GPU-Guthaben (2–4 Stunden A100). Kein dauerhaft kostenloses GPU-Kontingent bei keinem Anbieter.' },
           ],
       },
@@ -2011,7 +2011,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Wie vergleicht sich Alibaba Cloud PAI mit eigenem Ollama-Betrieb für Qwen?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Alibaba Cloud PAI-EAS läuft Qwen-Modelle 20–30 % schneller als Standard-Ollama auf vergleichbarer Hardware (getestet: A100 80 GB, Qwen3 72B). Der Geschwindigkeitsvorteil kommt aus der PAI-EAS-Inferenz-Runtime, die vom Alibaba DAMO Academy Qwen-Team entwickelt wurde.',
+              'text': 'Alibaba Cloud PAI-EAS läuft Qwen-Modelle 20–30 % schneller als Standard-Ollama auf vergleichbarer Hardware (getestet: A100 80 GB, Qwen2.5-72B). Der Geschwindigkeitsvorteil kommt aus der PAI-EAS-Inferenz-Runtime, die vom Alibaba DAMO Academy Qwen-Team entwickelt wurde.',
             },
           },
           {
@@ -2139,7 +2139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '0': 'RTX 3090', '1': '24 Go', '2': '¥1,68/h', '3': '~0,23 $', '4': 'Inférence 7B–13B, petits fine-tunings' },
           { '0': 'RTX 4090', '1': '24 Go', '2': 'dès ¥2,68/h', '3': '~0,37 $', '4': 'Carte unique la plus rapide pour 7B–32B, meilleur rapport qualité-prix' },
           { '0': 'A100', '1': '40 Go', '2': 'dès ¥3,45/h', '3': '~0,48 $', '4': 'Inférence 70B quantifiée, fine-tuning de taille moyenne' },
-          { '0': 'A100', '1': '80 Go', '2': '¥5,98/h', '3': '~0,82 $', '4': '70B en pleine précision, Qwen3 72B sur une seule carte' },
+          { '0': 'A100', '1': '80 Go', '2': '¥5,98/h', '3': '~0,82 $', '4': '70B en pleine précision, Qwen2.5-72B sur une seule carte' },
           { '0': 'H100', '1': '80 Go', '2': 'dès ¥11,98/h', '3': '~1,65 $', '4': 'Inférence de production à haut débit' },
         ],
         note: 'L\'A100 80 Go d\'AutoDL (¥5,98/h) est moins chère qu\'Alibaba Cloud PAI (¥8–12/h) et Tencent Cloud TI (¥7,5–10/h) pour la même carte. Prix issus de la page tarifaire AutoDL en juillet 2026 et recoupés avec les annonces de la communauté ; les tarifs évoluent selon l\'offre et les promotions — confirmez le tarif en direct sur [autodl.com/docs/latest_price](https://www.autodl.com/docs/latest_price) avant de réserver.',
@@ -2175,7 +2175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'qwen-performance',
         title: 'Performance d\'inférence Qwen par fournisseur',
         content: '**Alibaba Cloud PAI exécute les modèles Qwen 20–30 % plus vite que du matériel équivalent sur d\'autres plateformes** — grâce au runtime PAI-EAS, codéveloppé par l\'équipe Qwen d\'Alibaba DAMO Academy.',
-        columns: ['Plateforme', 'GPU', 'Vitesse Qwen3 72B (tok/s)', 'Latence', 'Notes'],
+        columns: ['Plateforme', 'GPU', 'Vitesse Qwen2.5-72B (tok/s)', 'Latence', 'Notes'],
         rows: [
           { '0': 'Alibaba Cloud PAI (PAI-EAS)', '1': 'A100 80 Go', '2': '22–28 tok/s', '3': '~120ms', '4': 'Optimisé Qwen, FlashAttention 3' },
           { '0': 'AutoDL (Ollama)', '1': 'A100 80 Go', '2': '16–20 tok/s', '3': '~180ms', '4': 'Stack standard, sans optimisation' },
@@ -2447,7 +2447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '0': 'RTX 3090', '1': '24GB', '2': '¥1.68/時間', '3': '約0.23ドル', '4': '7B〜13B推論、小規模ファインチューニング' },
           { '0': 'RTX 4090', '1': '24GB', '2': '¥2.68/時間から', '3': '約0.37ドル', '4': '7B〜32Bで最速の単一カード、最良のコスパ' },
           { '0': 'A100', '1': '40GB', '2': '¥3.45/時間から', '3': '約0.48ドル', '4': '量子化70B推論、中規模ファインチューニング' },
-          { '0': 'A100', '1': '80GB', '2': '¥5.98/時間', '3': '約0.82ドル', '4': 'フル精度70B、Qwen3 72Bを単一カードで' },
+          { '0': 'A100', '1': '80GB', '2': '¥5.98/時間', '3': '約0.82ドル', '4': 'フル精度70B、Qwen2.5-72Bを単一カードで' },
           { '0': 'H100', '1': '80GB', '2': '¥11.98/時間から', '3': '約1.65ドル', '4': '高スループットの本番推論' },
         ],
         note: 'AutoDLのA100 80GB（¥5.98/時間）は、同じカードでAlibaba Cloud PAI（¥8〜12/時間）やテンセントクラウドTI（¥7.5〜10/時間）より安価です。価格は2026年7月のAutoDL料金ページから取得し、コミュニティの掲載情報と照合しています。料金は供給とキャンペーンで変動するため、予約前に[autodl.com/docs/latest_price](https://www.autodl.com/docs/latest_price)で最新料金をご確認ください。',
@@ -2483,7 +2483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'qwen-performance',
         title: 'プロバイダー別Qwen推論性能',
         content: '**Alibaba Cloud PAIは他社の同等ハードウェアよりQwenモデルを20〜30%高速に実行します**——Alibaba DAMO AcademyのQwenチームが共同開発したPAI-EASランタイムによるものです。',
-        columns: ['プラットフォーム', 'GPU', 'Qwen3 72B速度（tok/s）', 'レイテンシ', '備考'],
+        columns: ['プラットフォーム', 'GPU', 'Qwen2.5-72B速度（tok/s）', 'レイテンシ', '備考'],
         rows: [
           { '0': 'Alibaba Cloud PAI（PAI-EAS）', '1': 'A100 80GB', '2': '22〜28 tok/s', '3': '約120ms', '4': 'Qwen最適化、FlashAttention 3' },
           { '0': 'AutoDL（Ollama）', '1': 'A100 80GB', '2': '16〜20 tok/s', '3': '約180ms', '4': '標準スタック、最適化なし' },
@@ -2573,7 +2573,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: '中国外からAlibaba Cloud GPUを使えますか？', a: 'はい。Alibaba Cloud International（[alibabacloud.com](https://www.alibabacloud.com)）は国際クレジットカード（Visa、Mastercard、American Express）に対応し、英語コンソールを提供します。国際版と中国国内版は別アカウントで、若干価格が異なります。→ [Alibaba Cloudの特典を見る](https://www.alibabacloud.com)' },
             { q: '中国の銀行口座を持たない外国人がAutoDLやテンセントクラウド利用のためAlipayで支払うにはどうすればいいですか？', a: '中国の銀行口座は不要です。パスポートと海外の電話番号でAlipayアプリに登録し、対応する海外発行のVisaまたはMastercardを直接紐付けます——この直接紐付けにより、従来のTourCardプリペイド方式は多くのユーザーにとって不要になりました。カードの直接紐付けに失敗した場合は、Alipayの「TourCard」オプションで海外カードから90日間有効なAlipay残高にチャージすることもできます。こうして設定したAlipayは、AutoDLやテンセントクラウドの国内決済で中国の銀行カードと同じように使えます。ただしこれは支払い手段の解決にすぎず、英語コンソールは得られません——それには代わりに[Alibaba Cloud International](https://www.alibabacloud.com)を利用してください。' },
             { q: 'AutoDLは本番推論に使えますか？', a: 'AutoDLは研究・開発向けで、正式なSLAがなく、スポットインスタンスは予告なく中断される可能性があります。本番環境にはAlibaba Cloud PAIまたはテンセントクラウドTIのオンデマンドインスタンスが適しています。' },
-            { q: 'Alibaba Cloud PAIはQwen推論でOllamaより何倍速いですか？', a: 'PAI-EASはA100 80GB上でQwen3 72Bを標準Ollamaより20〜30%高速に実行します（22〜28 tok/s対16〜20 tok/s）。これはAlibaba DAMO AcademyのQwenチームが開発したQwen専用最適化ランタイムによるものです。' },
+            { q: 'Alibaba Cloud PAIはQwen推論でOllamaより何倍速いですか？', a: 'PAI-EASはA100 80GB上でQwen2.5-72Bを標準Ollamaより20〜30%高速に実行します（22〜28 tok/s対16〜20 tok/s）。これはAlibaba DAMO AcademyのQwenチームが開発したQwen専用最適化ランタイムによるものです。' },
             { q: '中国の銀行口座なしでAlipayで支払うには？', a: '中国の銀行口座は不要です。パスポートと海外の電話番号でAlipayに登録し、海外発行のVisaまたはMastercardを直接紐付けます。失敗した場合は、TourCardオプションで海外カードから90日間有効なAlipay残高にチャージできます。' },
           ],
       },
@@ -2636,7 +2636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Alibaba Cloud PAIはQwen推論でOllamaより何倍速いですか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'PAI-EASはA100 80GB上でQwen3 72Bを標準Ollamaより20〜30%高速に実行します（22〜28 tok/s対16〜20 tok/s）。これはAlibaba DAMO AcademyのQwenチームが開発したQwen専用最適化ランタイムによるものです。',
+              'text': 'PAI-EASはA100 80GB上でQwen2.5-72Bを標準Ollamaより20〜30%高速に実行します（22〜28 tok/s対16〜20 tok/s）。これはAlibaba DAMO AcademyのQwenチームが開発したQwen専用最適化ランタイムによるものです。',
             },
           },
           {
@@ -2711,7 +2711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '三家默认将数据存储在中国境内——个人信息保护法(PIPL)合规的关键',
           '新账户优惠：阿里云提供¥300免费额度；AutoDL提供¥10 GPU体验额度',
           '面向境外用户：阿里云国际版（[intl.aliyun.com](https://www.alibabacloud.com)）接受国际信用卡，提供英文控制台',
-          'Qwen3 72B在阿里云PAI上运行最快，因为PAI-EAS运行时由Qwen团队（阿里达摩院）共同开发',
+          'Qwen2.5-72B在阿里云PAI上运行最快，因为PAI-EAS运行时由Qwen团队（阿里达摩院）共同开发',
         ],
       },
       providerComparison: {
@@ -2766,7 +2766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '0': 'RTX 3090', '1': '24GB', '2': '¥1.68/时', '3': '约0.23美元', '4': '7B-13B推理、小规模微调' },
           { '0': 'RTX 4090', '1': '24GB', '2': '¥2.68/时起', '3': '约0.37美元', '4': '7B-32B最快单卡、性价比最优' },
           { '0': 'A100', '1': '40GB', '2': '¥3.45/时起', '3': '约0.48美元', '4': '量化70B推理、中等规模微调' },
-          { '0': 'A100', '1': '80GB', '2': '¥5.98/时', '3': '约0.82美元', '4': '全精度70B、Qwen3 72B单卡' },
+          { '0': 'A100', '1': '80GB', '2': '¥5.98/时', '3': '约0.82美元', '4': '全精度70B、Qwen2.5-72B单卡' },
           { '0': 'H100', '1': '80GB', '2': '¥11.98/时起', '3': '约1.65美元', '4': '高吞吐生产推理' },
         ],
         note: 'AutoDL的A100 80GB（¥5.98/时）同款卡比阿里云PAI（¥8-12/时）和腾讯云TI（¥7.5-10/时）更便宜。价格取自2026年7月AutoDL价格页并与社区报价交叉核对；费率随供给和促销变化——预订前请在[autodl.com/docs/latest_price](https://www.autodl.com/docs/latest_price)确认实时费率。',
@@ -2805,7 +2805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'qwen-performance',
         title: '各服务商Qwen推理性能对比',
         content: '**阿里云PAI运行Qwen模型比其他平台的同等硬件快20-30%**——这一优势来自阿里达摩院Qwen团队共同开发的PAI-EAS运行时。',
-        columns: ['平台', 'GPU', 'Qwen3 72B速度（tok/s）', '延迟', '备注'],
+        columns: ['平台', 'GPU', 'Qwen2.5-72B速度（tok/s）', '延迟', '备注'],
         rows: [
           { '0': '阿里云PAI（PAI-EAS）', '1': 'A100 80GB', '2': '22-28 tok/s', '3': '约120ms', '4': 'Qwen优化、FlashAttention 3' },
           { '0': 'AutoDL（Ollama）', '1': 'A100 80GB', '2': '16-20 tok/s', '3': '约180ms', '4': '标准栈、未优化' },
@@ -2895,9 +2895,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: '海外用户能使用阿里云GPU吗？', a: '可以。阿里云国际版（[alibabacloud.com](https://www.alibabacloud.com)）接受国际信用卡（Visa、Mastercard、American Express），提供英文控制台。国际版和国内版账号独立，价格略有差异——国际版略贵但对非中国用户开通更便捷。→ [查看阿里云优惠](https://www.alibabacloud.com)' },
             { q: '没有中国银行账户的外国用户，如何用支付宝为AutoDL或腾讯云付款？', a: '不需要中国银行账户。用护照和境外手机号注册支付宝App，然后直接绑定符合条件的境外Visa或Mastercard卡——对大多数用户来说，这种直接绑卡方式已经取代了早期的TourCard预付卡方案。如果直接绑卡失败，支付宝的TourCard选项可以用境外卡预付充值到一个90天有效期的支付宝余额账户。这样设置好之后，支付宝在AutoDL和腾讯云的国内结账流程中，使用体验和中国银行卡完全一样。不过这只解决了支付问题——并不能获得英文控制台；如需英文控制台，请改用[阿里云国际版](https://www.alibabacloud.com)。' },
             { q: 'AutoDL适合生产环境推理吗？', a: 'AutoDL定位研究和开发，没有正式SLA，现货实例可能被抢占。生产环境建议使用阿里云PAI或腾讯云TI的按需实例，两者提供企业级SLA。AutoDL最适合微调、开发和可接受偶尔中断的批处理任务。' },
-            { q: '阿里云PAI比自己运行Ollama快多少？', a: '阿里云PAI-EAS运行Qwen模型比同等硬件上的标准Ollama快20-30%（测试：A100 80GB，Qwen3 72B，22-28 tok/s对比16-20 tok/s）。速度提升来自阿里达摩院Qwen团队开发的PAI-EAS推理运行时，包含注意力核专项优化和KV缓存调优。' },
+            { q: '阿里云PAI比自己运行Ollama快多少？', a: '阿里云PAI-EAS运行Qwen模型比同等硬件上的标准Ollama快20-30%（测试：A100 80GB，Qwen2.5-72B，22-28 tok/s对比16-20 tok/s）。速度提升来自阿里达摩院Qwen团队开发的PAI-EAS推理运行时，包含注意力核专项优化和KV缓存调优。' },
             { q: '有免费试用中国云GPU的方式吗？', a: '阿里云和腾讯云会不定期为新账户推出免费额度活动（具体金额请以各平台[alibabacloud.com](https://www.alibabacloud.com)、[cloud.tencent.com](https://cloud.tencent.com)注册页面的当前活动为准）。AutoDL为新账户提供小额GPU体验额度（约1-2小时A100，或更便宜显卡的数小时）。三家均无永久免费GPU配额。' },
-            { q: 'Qwen3 72B在中国云平台上用什么GPU最合适？', a: 'A100 80GB最推荐——BF16精度可完整放入显存，无需量化。Q4_K_M量化下（43.5GB），Qwen3 72B也可放入A100 40GB，质量略降。H100 80GB比A100 80GB快25-35%，但价格高2-2.5倍——只适合持续高吞吐的生产场景。' },
+            { q: 'Qwen2.5-72B在中国云平台上用什么GPU最合适？', a: 'A100 80GB最推荐——BF16精度可完整放入显存，无需量化。Q4_K_M量化下（43.5GB），Qwen2.5-72B也可放入A100 40GB，质量略降。H100 80GB比A100 80GB快25-35%，但价格高2-2.5倍——只适合持续高吞吐的生产场景。' },
             { q: '没有中国银行账户如何用支付宝付款？', a: '不需要中国银行账户。用护照和境外手机号注册支付宝，直接绑定境外Visa或Mastercard卡。若绑卡失败，可用TourCard选项将境外卡预付充值到90天有效期的支付宝余额。' },
           ],
       },
@@ -2960,7 +2960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '阿里云PAI比自己运行Ollama快多少？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '阿里云PAI-EAS运行Qwen模型比同等硬件上的标准Ollama快20-30%（测试：A100 80GB，Qwen3 72B，22-28 tok/s对比16-20 tok/s）。速度提升来自阿里达摩院Qwen团队开发的PAI-EAS推理运行时，包含注意力核专项优化和KV缓存调优。',
+              'text': '阿里云PAI-EAS运行Qwen模型比同等硬件上的标准Ollama快20-30%（测试：A100 80GB，Qwen2.5-72B，22-28 tok/s对比16-20 tok/s）。速度提升来自阿里达摩院Qwen团队开发的PAI-EAS推理运行时，包含注意力核专项优化和KV缓存调优。',
             },
           },
           {
@@ -2973,10 +2973,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': 'Qwen3 72B在中国云平台上用什么GPU最合适？',
+            'name': 'Qwen2.5-72B在中国云平台上用什么GPU最合适？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'A100 80GB最推荐——BF16精度可完整放入显存，无需量化。Q4_K_M量化下（43.5GB），Qwen3 72B也可放入A100 40GB，质量略降。H100 80GB比A100 80GB快25-35%，但价格高2-2.5倍——只适合持续高吞吐的生产场景。',
+              'text': 'A100 80GB最推荐——BF16精度可完整放入显存，无需量化。Q4_K_M量化下（43.5GB），Qwen2.5-72B也可放入A100 40GB，质量略降。H100 80GB比A100 80GB快25-35%，但价格高2-2.5倍——只适合持续高吞吐的生产场景。',
             },
           },
           {
@@ -3033,9 +3033,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'aliyun vs tencent cloud ai 2026',
     ],
     current_models_mentioned: [
-      'Qwen3 72B',
+      'Qwen2.5-72B',
       'DeepSeek-V3',
-      'Qwen3-Coder 32B',
+      'Qwen2.5-Coder 32B',
       'Llama 3.3 70B',
     ],
     current_hardware_mentioned: [
@@ -3087,7 +3087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '세 공급자 모두 중국 본토 내 데이터 레지던시를 지원합니다 — 개인정보 보호법(PIPL) 준수에 매우 중요합니다.',
           '신규 계정 혜택: Alibaba Cloud는 신규 사용자에게 ¥300 무료 크레딧을 제공합니다. AutoDL은 ¥10 무료 GPU 크레딧을 제공합니다 (A100 테스트 2–4시간 분량).',
           '중국 클라우드를 사용하는 해외 개발자: Alibaba Cloud International은 국제 신용카드와 영문 콘솔을 지원합니다. AutoDL과 Tencent Cloud는 중국 은행 카드 또는 Alipay가 필요합니다.',
-          'Qwen3 72B는 Alibaba DAMO Academy Qwen 팀이 개발한 Qwen 최적화 추론 런타임 덕분에 Alibaba Cloud PAI에서 가장 빠르게 실행됩니다.',
+          'Qwen2.5-72B는 Alibaba DAMO Academy Qwen 팀이 개발한 Qwen 최적화 추론 런타임 덕분에 Alibaba Cloud PAI에서 가장 빠르게 실행됩니다.',
         ],
       },
       providerComparison: {
@@ -3150,7 +3150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '0': 'RTX 3090', '1': '24 GB', '2': '¥1.68/시간', '3': '~$0.23', '4': '7B–13B 추론, 소규모 파인튜닝' },
           { '0': 'RTX 4090', '1': '24 GB', '2': '¥2.68/시간부터', '3': '~$0.37', '4': '7B–32B 최고속 단일 카드, 최고의 가성비' },
           { '0': 'A100', '1': '40 GB', '2': '¥3.45/시간부터', '3': '~$0.48', '4': '양자화 70B 추론, 중간 규모 파인튜닝' },
-          { '0': 'A100', '1': '80 GB', '2': '¥5.98/시간', '3': '~$0.82', '4': '전체 정밀도 70B, Qwen3 72B 단일 카드' },
+          { '0': 'A100', '1': '80 GB', '2': '¥5.98/시간', '3': '~$0.82', '4': '전체 정밀도 70B, Qwen2.5-72B 단일 카드' },
           { '0': 'H100', '1': '80 GB', '2': '¥11.98/시간부터', '3': '~$1.65', '4': '고처리량 프로덕션 추론' },
         ],
         note: 'AutoDL A100 80 GB(¥5.98/시간)는 동일 카드 기준 Alibaba Cloud PAI(¥8–12/시간)와 Tencent Cloud TI(¥7.5–10/시간)보다 저렴합니다. 가격은 2026년 7월 AutoDL 가격 페이지에서 수집하고 독립적인 비교 기사와 교차 확인했습니다. 요금은 공급과 프로모션에 따라 변동되므로 예약 전 [autodl.com/docs/latest_price](https://www.autodl.com/docs/latest_price)에서 실시간 요금을 확인하십시오. AutoDL이 이 비교에서 가장 저렴한 옵션입니다. → [AutoDL 가격 확인하기](https://www.autodl.com)',
@@ -3203,7 +3203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '공급자별 Qwen 추론 성능',
         content:
           '**Alibaba Cloud PAI는 동급 하드웨어 대비 다른 플랫폼보다 Qwen 모델을 20–30% 빠르게 실행합니다.** 이 성능 우위는 Alibaba DAMO Academy Qwen 팀이 공동 개발한 PAI-EAS 추론 런타임에서 비롯됩니다. 이 팀은 Qwen을 직접 학습시키는 팀으로, 외부 공급자가 접근할 수 없는 모델 내부 정보를 보유하고 있습니다.',
-        columns: ['플랫폼', 'GPU', 'Qwen3 72B 속도 (tok/s)', '첫 토큰 지연', '비고'],
+        columns: ['플랫폼', 'GPU', 'Qwen2.5-72B 속도 (tok/s)', '첫 토큰 지연', '비고'],
         rows: [
           { '0': 'Alibaba Cloud PAI (PAI-EAS)', '1': 'A100 80 GB', '2': '22–28 tok/s', '3': '~120ms', '4': 'Qwen 최적화 런타임, FlashAttention 3' },
           { '0': 'AutoDL (Ollama)', '1': 'A100 80 GB', '2': '16–20 tok/s', '3': '~180ms', '4': '표준 Ollama 스택, 최적화 없음' },
@@ -3212,7 +3212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '0': 'RunPod (서양, A100 80 GB)', '1': 'A100 80 GB', '2': '15–18 tok/s', '3': '~200ms', '4': '태평양 횡단 라우팅으로 지연 증가' },
         ],
         image: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-qwen-performance-hero-ko.webp',
-        imageCaption: '제공업체별 Qwen 추론 속도 -- A100 80GB에서 Qwen3 72B',
+        imageCaption: '제공업체별 Qwen 추론 속도 -- A100 80GB에서 Qwen2.5-72B',
         note: 'Qwen이 주요 워크로드라면 Alibaba Cloud PAI의 20–30% 속도 향상이 대체로 더 높은 시간당 요금을 정당화합니다. → [Alibaba Cloud 혜택 보기](https://www.alibabacloud.com). 시간당 비용이 최우선이고 속도 차이가 중요하지 않다면 vLLM을 사용하는 AutoDL(19–24 tok/s)이 훨씬 저렴한 가격에 대부분의 이점을 제공합니다. → [AutoDL 가격 확인하기](https://www.autodl.com)',
         affiliateLinks: [
           { url: 'https://www.alibabacloud.com', productName: 'Alibaba Cloud PAI', productCategory: 'cloud-gpu', priceRange: '¥6/시간부터 (A100 40GB)', label: 'Alibaba Cloud 혜택 보기 →' },
@@ -3312,9 +3312,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: '중국 외부에서 Alibaba Cloud GPU를 사용할 수 있습니까?', a: '네. Alibaba Cloud International ([alibabacloud.com](https://www.alibabacloud.com))은 국제 신용카드(Visa, Mastercard, American Express)를 허용하며 영문 콘솔을 제공합니다 — AutoDL과 Tencent Cloud의 국내 포털은 중국 은행 카드나 Alipay가 필요하므로, 비중국 사용자에게는 세 공급자 중 가장 쉬운 가입 절차입니다. International 포털과 중국 국내 포털은 별도 계정이며 가격이 다릅니다 — International 포털이 약간 더 비싸지만 설정하기 더 쉽습니다. → [Alibaba Cloud 혜택 보기](https://www.alibabacloud.com)' },
             { q: '중국 은행 계좌가 없는 외국인이 AutoDL이나 Tencent Cloud를 이용하려면 Alipay로 어떻게 결제합니까?', a: '중국 은행 계좌는 필요하지 않습니다. 여권과 해외 전화번호로 Alipay 앱에 가입한 뒤, 사용 가능한 해외 Visa 또는 Mastercard 카드를 직접 연결하면 됩니다 — 이 직접 카드 연결 방식이 대부분의 사용자에게 기존의 TourCard 선불 방식을 대체했습니다. 카드 직접 연결이 실패하는 경우, Alipay의 TourCard 옵션을 이용해 해외 카드로 90일간 유효한 Alipay 잔액을 충전할 수 있습니다. 이렇게 설정하면 Alipay는 AutoDL과 Tencent Cloud의 국내 결제에서 중국 은행 카드와 동일하게 작동합니다. 다만 이는 결제 문제만 해결할 뿐 영문 콘솔은 제공하지 않습니다 — 영문 콘솔이 필요하면 대신 [Alibaba Cloud International](https://www.alibabacloud.com)을 이용하십시오.' },
             { q: 'AutoDL은 프로덕션 추론에 충분히 신뢰할 수 있습니까?', a: 'AutoDL은 연구 및 개발용으로 설계되었으며 프로덕션급 추론에는 적합하지 않습니다. 공식 SLA가 없으며 스팟 인스턴스는 짧은 예고로 선점될 수 있습니다. 가용성이 보장된 프로덕션 추론에는 온디맨드 인스턴스로 Alibaba Cloud PAI 또는 Tencent Cloud TI를 사용하십시오. AutoDL은 간헐적 중단이 허용되는 파인튜닝, 개발, 비용 민감형 배치 처리에 가장 적합합니다.' },
-            { q: 'Alibaba Cloud의 Qwen 추론은 직접 Ollama를 실행하는 것과 어떻게 다릅니까?', a: 'Alibaba Cloud PAI-EAS는 동급 하드웨어에서 표준 Ollama보다 Qwen을 20–30% 빠르게 실행합니다 (테스트: A100 80 GB, Qwen3 72B). 속도 향상은 Alibaba DAMO Academy Qwen 팀이 개발한 PAI-EAS 추론 런타임에서 비롯되며, 공개 Ollama 빌드에는 없는 Qwen 특화 주의 커널 및 KV-캐시 튜닝이 포함됩니다.' },
+            { q: 'Alibaba Cloud의 Qwen 추론은 직접 Ollama를 실행하는 것과 어떻게 다릅니까?', a: 'Alibaba Cloud PAI-EAS는 동급 하드웨어에서 표준 Ollama보다 Qwen을 20–30% 빠르게 실행합니다 (테스트: A100 80 GB, Qwen2.5-72B). 속도 향상은 Alibaba DAMO Academy Qwen 팀이 개발한 PAI-EAS 추론 런타임에서 비롯되며, 공개 Ollama 빌드에는 없는 Qwen 특화 주의 커널 및 KV-캐시 튜닝이 포함됩니다.' },
             { q: '중국 클라우드 GPU를 테스트할 수 있는 무료 티어가 있습니까?', a: 'Alibaba Cloud와 Tencent Cloud는 신규 계정에 프로모션 크레딧을 수시로 제공합니다 (정확한 금액은 각 공급자의 가입 페이지에서 현재 진행 중인 프로모션을 확인하세요 — 금액은 변동되며 보장되지 않습니다). AutoDL은 신규 계정에 소액의 무료 GPU 크레딧을 제공합니다 (A100 기준 약 1–2시간, 더 저렴한 카드는 더 긴 시간). 영구 무료 GPU 티어를 제공하는 플랫폼은 없으며 모든 GPU 사용량은 과금됩니다.' },
-            { q: '중국 클라우드 플랫폼에서 Qwen3 72B에 가장 적합한 GPU는 무엇입니까?', a: 'A100 80 GB가 단일 카드 Qwen3 72B 추론에 권장됩니다 — 양자화 없이 BF16 정밀도로 전체 모델이 VRAM에 맞습니다. Q4_K_M 양자화 시 Qwen3 72B (43.5 GB)는 A100 40 GB에도 들어가지만 품질이 약간 낮아집니다. H100 80 GB는 A100 80 GB보다 25–35% 빠르지만 시간당 비용이 2–2.5배 더 높습니다 — 지속적인 고처리량 프로덕션 워크로드에만 프리미엄 가치가 있습니다.' },
+            { q: '중국 클라우드 플랫폼에서 Qwen2.5-72B에 가장 적합한 GPU는 무엇입니까?', a: 'A100 80 GB가 단일 카드 Qwen2.5-72B 추론에 권장됩니다 — 양자화 없이 BF16 정밀도로 전체 모델이 VRAM에 맞습니다. Q4_K_M 양자화 시 Qwen2.5-72B (43.5 GB)는 A100 40 GB에도 들어가지만 품질이 약간 낮아집니다. H100 80 GB는 A100 80 GB보다 25–35% 빠르지만 시간당 비용이 2–2.5배 더 높습니다 — 지속적인 고처리량 프로덕션 워크로드에만 프리미엄 가치가 있습니다.' },
             { q: '중국 은행 계좌 없이 Alipay로 결제하려면?', a: '중국 은행 계좌는 필요하지 않습니다. 여권과 해외 전화번호로 Alipay에 가입한 뒤 해외 Visa 또는 Mastercard를 직접 연결하면 됩니다. 실패할 경우 TourCard 옵션으로 해외 카드에서 90일간 유효한 Alipay 잔액을 충전할 수 있습니다.' },
             { q: 'Alibaba Cloud PAI는 Qwen 추론에서 Ollama보다 얼마나 빠릅니까?', a: 'Alibaba Cloud PAI-EAS는 동급 하드웨어에서 표준 Ollama보다 Qwen을 20–30% 빠르게 실행합니다. 속도 향상은 Alibaba DAMO Academy Qwen 팀이 개발한 PAI-EAS 런타임의 Qwen 특화 최적화에서 비롯됩니다.' },
           ],
@@ -3380,7 +3380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'Alibaba Cloud의 Qwen 추론은 직접 Ollama를 실행하는 것과 어떻게 다릅니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Alibaba Cloud PAI-EAS는 동급 하드웨어에서 표준 Ollama보다 Qwen을 20–30% 빠르게 실행합니다 (테스트: A100 80 GB, Qwen3 72B). 속도 향상은 Alibaba DAMO Academy Qwen 팀이 개발한 PAI-EAS 추론 런타임에서 비롯되며, 공개 Ollama 빌드에는 없는 Qwen 특화 주의 커널 및 KV-캐시 튜닝이 포함됩니다.',
+              'text': 'Alibaba Cloud PAI-EAS는 동급 하드웨어에서 표준 Ollama보다 Qwen을 20–30% 빠르게 실행합니다 (테스트: A100 80 GB, Qwen2.5-72B). 속도 향상은 Alibaba DAMO Academy Qwen 팀이 개발한 PAI-EAS 추론 런타임에서 비롯되며, 공개 Ollama 빌드에는 없는 Qwen 특화 주의 커널 및 KV-캐시 튜닝이 포함됩니다.',
             },
           },
           {
@@ -3393,10 +3393,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '@type': 'Question',
-            'name': '중국 클라우드 플랫폼에서 Qwen3 72B에 가장 적합한 GPU는 무엇입니까?',
+            'name': '중국 클라우드 플랫폼에서 Qwen2.5-72B에 가장 적합한 GPU는 무엇입니까?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'A100 80 GB가 단일 카드 Qwen3 72B 추론에 권장됩니다 — 양자화 없이 BF16 정밀도로 전체 모델이 VRAM에 맞습니다. Q4_K_M 양자화 시 Qwen3 72B (43.5 GB)는 A100 40 GB에도 들어가지만 품질이 약간 낮아집니다. H100 80 GB는 A100 80 GB보다 25–35% 빠르지만 시간당 비용이 2–2.5배 더 높습니다 — 지속적인 고처리량 프로덕션 워크로드에만 프리미엄 가치가 있습니다.',
+              'text': 'A100 80 GB가 단일 카드 Qwen2.5-72B 추론에 권장됩니다 — 양자화 없이 BF16 정밀도로 전체 모델이 VRAM에 맞습니다. Q4_K_M 양자화 시 Qwen2.5-72B (43.5 GB)는 A100 40 GB에도 들어가지만 품질이 약간 낮아집니다. H100 80 GB는 A100 80 GB보다 25–35% 빠르지만 시간당 비용이 2–2.5배 더 높습니다 — 지속적인 고처리량 프로덕션 워크로드에만 프리미엄 가치가 있습니다.',
             },
           },
           {

@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'off grid ai pro price',
       'open source local llm app cross platform',
     ],
-    current_models_mentioned: ['Llama', 'Qwen 3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
+    current_models_mentioned: ['Llama', 'Qwen3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
     current_hardware_mentioned: ['iPhone (iOS 17+)', 'Android 10+', 'Apple Silicon Mac (M1 or later)', 'Windows PC'],
     leadAnswerBlock:
       '**Off Grid AI is a free, open-source, account-free app that runs GGUF-format language models, Stable Diffusion image models, and Whisper speech-to-text entirely on-device on iOS, Android, macOS, and Windows.** Made by [Wednesday Solutions, Inc.](https://getoffgridai.co), it reports [180,000+ combined downloads](https://getoffgridai.co) across the App Store, Google Play, and GitHub, and its mobile repository, [OGAM](https://github.com/off-grid-ai/OGAM), carries more than 3,000 GitHub stars under the MIT license — figures this review verified directly against GitHub and the developer\'s own site, not just the developer\'s claim. Its [App Store listing](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882), taken alone, shows only 26 ratings averaging 3.1 stars — a genuinely weak signal that this review does not hide behind the stronger cross-platform numbers. An optional Off Grid AI Pro tier ($69 lifetime or $49/year, per the developer\'s site) adds extras on top of a free core that already has no account, no subscription requirement, and no cloud dependency.',
@@ -173,7 +173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Supported Models',
         content: [
           '**Off Grid AI supports any GGUF-format language model, plus dedicated image and speech models, rather than locking users into a single curated list.**',
-          'For text and chat: Llama, Qwen 3 and Qwen 3.5, Gemma 3 and Gemma 4, Phi-4, Mistral, and other GGUF-format open-weight models. For image generation: Stable Diffusion XL and other Stable Diffusion-family models. For speech-to-text: Whisper-based transcription models. Model support depends on the app version and the device\'s available memory — larger models generally need a Mac or Windows PC rather than a phone.',
+          'For text and chat: Llama, Qwen3 and Qwen 3.5, Gemma 3 and Gemma 4, Phi-4, Mistral, and other GGUF-format open-weight models. For image generation: Stable Diffusion XL and other Stable Diffusion-family models. For speech-to-text: Whisper-based transcription models. Model support depends on the app version and the device\'s available memory — larger models generally need a Mac or Windows PC rather than a phone.',
         ],
       },
       tractionAndRatings: {
@@ -335,7 +335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'off grid ai pro preis',
       'open source lokale llm app plattformübergreifend',
     ],
-    current_models_mentioned: ['Llama', 'Qwen 3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
+    current_models_mentioned: ['Llama', 'Qwen3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
     current_hardware_mentioned: ['iPhone (iOS 17+)', 'Android 10+', 'Apple-Silicon-Mac (M1 oder neuer)', 'Windows-PC'],
     leadAnswerBlock:
       '**Off Grid AI ist eine kostenlose, quelloffene App ohne Konto, die GGUF-Sprachmodelle, Stable-Diffusion-Bildmodelle und Whisper-Sprache-zu-Text vollständig auf dem Gerät ausführt — auf iOS, Android, macOS und Windows.** Entwickelt von [Wednesday Solutions, Inc.](https://getoffgridai.co), meldet die App [über 180.000 Downloads](https://getoffgridai.co) zusammen über App Store, Google Play und GitHub, und ihr Mobil-Repository [OGAM](https://github.com/off-grid-ai/OGAM) trägt unter MIT-Lizenz mehr als 3.000 GitHub-Sterne — Zahlen, die dieser Test direkt gegen GitHub und die eigene Website des Entwicklers geprüft hat, nicht nur gegen die Behauptung des Entwicklers. Der [App-Store-Eintrag](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) allein zeigt nur 26 Bewertungen mit einem Durchschnitt von 3,1 Sternen — ein wirklich schwaches Signal, das dieser Test nicht hinter den stärkeren plattformübergreifenden Zahlen versteckt. Eine optionale Off-Grid-AI-Pro-Stufe (69 $ einmalig oder 49 $/Jahr laut Website des Entwicklers) bietet Extras zusätzlich zu einem kostenlosen Kern, der bereits ohne Konto, ohne Abo-Pflicht und ohne Cloud-Abhängigkeit auskommt.',
@@ -471,7 +471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Unterstützte Modelle',
         content: [
           '**Off Grid AI unterstützt jedes Sprachmodell im GGUF-Format sowie dedizierte Bild- und Sprachmodelle, statt Nutzer auf eine einzige kuratierte Liste zu beschränken.**',
-          'Für Text und Chat: Llama, Qwen 3 und Qwen 3.5, Gemma 3 und Gemma 4, Phi-4, Mistral und andere offene GGUF-Format-Modelle. Für Bildgenerierung: Stable Diffusion XL und andere Modelle der Stable-Diffusion-Familie. Für Sprache-zu-Text: Whisper-basierte Transkriptionsmodelle. Die Modellunterstützung hängt von der App-Version und dem verfügbaren Gerätespeicher ab — größere Modelle brauchen in der Regel einen Mac oder Windows-PC statt eines Telefons.',
+          'Für Text und Chat: Llama, Qwen3 und Qwen 3.5, Gemma 3 und Gemma 4, Phi-4, Mistral und andere offene GGUF-Format-Modelle. Für Bildgenerierung: Stable Diffusion XL und andere Modelle der Stable-Diffusion-Familie. Für Sprache-zu-Text: Whisper-basierte Transkriptionsmodelle. Die Modellunterstützung hängt von der App-Version und dem verfügbaren Gerätespeicher ab — größere Modelle brauchen in der Regel einen Mac oder Windows-PC statt eines Telefons.',
         ],
       },
       tractionAndRatings: {
@@ -633,7 +633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'off grid ai pro prix',
       'application llm locale open source multiplateforme',
     ],
-    current_models_mentioned: ['Llama', 'Qwen 3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
+    current_models_mentioned: ['Llama', 'Qwen3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
     current_hardware_mentioned: ['iPhone (iOS 17+)', 'Android 10+', 'Mac Apple Silicon (M1 ou plus récent)', 'PC Windows'],
     leadAnswerBlock:
       '**Off Grid AI est une application gratuite, open source et sans compte qui exécute des modèles de langage au format GGUF, des modèles d\'image Stable Diffusion et la transcription vocale Whisper entièrement sur l\'appareil, sur iOS, Android, macOS et Windows.** Créée par [Wednesday Solutions, Inc.](https://getoffgridai.co), elle revendique [plus de 180 000 téléchargements cumulés](https://getoffgridai.co) entre l\'App Store, Google Play et GitHub, et son dépôt mobile, [OGAM](https://github.com/off-grid-ai/OGAM), affiche plus de 3 000 étoiles GitHub sous licence MIT — des chiffres que cet avis a vérifiés directement sur GitHub et le site du développeur, pas seulement acceptés sur parole. Sa [fiche App Store](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882), prise isolément, ne montre que 26 avis pour une moyenne de 3,1 étoiles — un signal réellement faible que cet avis n\'occulte pas derrière les chiffres multiplateformes plus favorables. Une offre Off Grid AI Pro optionnelle (69 $ à vie ou 49 $/an, selon le site du développeur) ajoute des extras à un cœur gratuit déjà sans compte, sans obligation d\'abonnement et sans dépendance au cloud.',
@@ -769,7 +769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Modèles pris en charge',
         content: [
           '**Off Grid AI prend en charge tout modèle de langage au format GGUF, ainsi que des modèles dédiés d\'image et de voix, plutôt que d\'enfermer les utilisateurs dans une seule liste organisée.**',
-          'Pour le texte et le chat : Llama, Qwen 3 et Qwen 3.5, Gemma 3 et Gemma 4, Phi-4, Mistral et d\'autres modèles ouverts au format GGUF. Pour la génération d\'images : Stable Diffusion XL et d\'autres modèles de la famille Stable Diffusion. Pour la transcription vocale : des modèles basés sur Whisper. La prise en charge des modèles dépend de la version de l\'application et de la mémoire disponible sur l\'appareil — les modèles plus grands nécessitent généralement un Mac ou un PC Windows plutôt qu\'un téléphone.',
+          'Pour le texte et le chat : Llama, Qwen3 et Qwen 3.5, Gemma 3 et Gemma 4, Phi-4, Mistral et d\'autres modèles ouverts au format GGUF. Pour la génération d\'images : Stable Diffusion XL et d\'autres modèles de la famille Stable Diffusion. Pour la transcription vocale : des modèles basés sur Whisper. La prise en charge des modèles dépend de la version de l\'application et de la mémoire disponible sur l\'appareil — les modèles plus grands nécessitent généralement un Mac ou un PC Windows plutôt qu\'un téléphone.',
         ],
       },
       tractionAndRatings: {
@@ -931,7 +931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'off grid ai pro precio',
       'app llm local open source multiplataforma',
     ],
-    current_models_mentioned: ['Llama', 'Qwen 3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
+    current_models_mentioned: ['Llama', 'Qwen3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
     current_hardware_mentioned: ['iPhone (iOS 17+)', 'Android 10+', 'Mac Apple Silicon (M1 o posterior)', 'PC con Windows'],
     leadAnswerBlock:
       '**Off Grid AI es una aplicación gratuita, de código abierto y sin cuenta que ejecuta modelos de lenguaje en formato GGUF, modelos de imagen Stable Diffusion y transcripción de voz Whisper completamente en el dispositivo, en iOS, Android, macOS y Windows.** Creada por [Wednesday Solutions, Inc.](https://getoffgridai.co), reporta [más de 180.000 descargas combinadas](https://getoffgridai.co) entre App Store, Google Play y GitHub, y su repositorio móvil, [OGAM](https://github.com/off-grid-ai/OGAM), tiene más de 3.000 estrellas en GitHub bajo licencia MIT — cifras que esta reseña verificó directamente contra GitHub y el sitio del propio desarrollador, no solo aceptadas de palabra. Su [ficha en la App Store](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882), considerada sola, muestra solo 26 valoraciones con un promedio de 3,1 estrellas — una señal genuinamente débil que esta reseña no oculta detrás de las cifras multiplataforma más favorables. Un nivel opcional Off Grid AI Pro (69 $ de por vida o 49 $/año, según el sitio del desarrollador) añade extras sobre un núcleo gratuito que ya no requiere cuenta, ni suscripción obligatoria, ni dependencia de la nube.',
@@ -1067,7 +1067,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Modelos compatibles',
         content: [
           '**Off Grid AI admite cualquier modelo de lenguaje en formato GGUF, además de modelos dedicados de imagen y voz, en lugar de limitar a los usuarios a una única lista curada.**',
-          'Para texto y chat: Llama, Qwen 3 y Qwen 3.5, Gemma 3 y Gemma 4, Phi-4, Mistral y otros modelos abiertos en formato GGUF. Para generación de imágenes: Stable Diffusion XL y otros modelos de la familia Stable Diffusion. Para transcripción de voz: modelos basados en Whisper. El soporte de modelos depende de la versión de la app y de la memoria disponible del dispositivo — los modelos más grandes generalmente necesitan un Mac o PC con Windows en lugar de un teléfono.',
+          'Para texto y chat: Llama, Qwen3 y Qwen 3.5, Gemma 3 y Gemma 4, Phi-4, Mistral y otros modelos abiertos en formato GGUF. Para generación de imágenes: Stable Diffusion XL y otros modelos de la familia Stable Diffusion. Para transcripción de voz: modelos basados en Whisper. El soporte de modelos depende de la versión de la app y de la memoria disponible del dispositivo — los modelos más grandes generalmente necesitan un Mac o PC con Windows en lugar de un teléfono.',
         ],
       },
       tractionAndRatings: {
@@ -1229,7 +1229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'off grid ai pro preço',
       'app llm local open source multiplataforma',
     ],
-    current_models_mentioned: ['Llama', 'Qwen 3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
+    current_models_mentioned: ['Llama', 'Qwen3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
     current_hardware_mentioned: ['iPhone (iOS 17+)', 'Android 10+', 'Mac Apple Silicon (M1 ou mais recente)', 'PC com Windows'],
     leadAnswerBlock:
       '**Off Grid AI é um aplicativo gratuito, de código aberto e sem conta que executa modelos de linguagem no formato GGUF, modelos de imagem Stable Diffusion e transcrição de voz Whisper inteiramente no dispositivo, em iOS, Android, macOS e Windows.** Criado pela [Wednesday Solutions, Inc.](https://getoffgridai.co), reporta [mais de 180.000 downloads combinados](https://getoffgridai.co) entre App Store, Google Play e GitHub, e seu repositório móvel, [OGAM](https://github.com/off-grid-ai/OGAM), tem mais de 3.000 estrelas no GitHub sob licença MIT — números que esta análise verificou diretamente no GitHub e no site do próprio desenvolvedor, não apenas aceitos de palavra. Sua [ficha na App Store](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882), isoladamente, mostra apenas 26 avaliações com média de 3,1 estrelas — um sinal genuinamente fraco que esta análise não esconde atrás dos números multiplataforma mais favoráveis. Um nível opcional Off Grid AI Pro (US$ 69 vitalício ou US$ 49/ano, segundo o site do desenvolvedor) adiciona extras sobre um núcleo gratuito que já não exige conta, nem assinatura obrigatória, nem dependência de nuvem.',
@@ -1365,7 +1365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Modelos suportados',
         content: [
           '**Off Grid AI suporta qualquer modelo de linguagem em formato GGUF, além de modelos dedicados de imagem e voz, em vez de limitar os usuários a uma única lista curada.**',
-          'Para texto e chat: Llama, Qwen 3 e Qwen 3.5, Gemma 3 e Gemma 4, Phi-4, Mistral e outros modelos abertos em formato GGUF. Para geração de imagens: Stable Diffusion XL e outros modelos da família Stable Diffusion. Para transcrição de voz: modelos baseados em Whisper. O suporte a modelos depende da versão do app e da memória disponível no dispositivo — modelos maiores geralmente precisam de um Mac ou PC com Windows em vez de um telefone.',
+          'Para texto e chat: Llama, Qwen3 e Qwen 3.5, Gemma 3 e Gemma 4, Phi-4, Mistral e outros modelos abertos em formato GGUF. Para geração de imagens: Stable Diffusion XL e outros modelos da família Stable Diffusion. Para transcrição de voz: modelos baseados em Whisper. O suporte a modelos depende da versão do app e da memória disponível no dispositivo — modelos maiores geralmente precisam de um Mac ou PC com Windows em vez de um telefone.',
         ],
       },
       tractionAndRatings: {
@@ -1527,7 +1527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'off grid ai pro 価格',
       'オープンソース ローカルllm アプリ クロスプラットフォーム',
     ],
-    current_models_mentioned: ['Llama', 'Qwen 3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
+    current_models_mentioned: ['Llama', 'Qwen3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
     current_hardware_mentioned: ['iPhone（iOS 17以降）', 'Android 10以降', 'Apple Silicon搭載Mac（M1以降）', 'Windows PC'],
     leadAnswerBlock:
       '**Off Grid AIは、GGUF形式の言語モデル、Stable Diffusion画像モデル、Whisper音声認識をiOS、Android、macOS、Windows上で完全にデバイス内で実行する、無料・オープンソース・アカウント不要のアプリです。** [Wednesday Solutions, Inc.](https://getoffgridai.co)が開発し、App Store、Google Play、GitHubを合わせて[累計18万件以上のダウンロード](https://getoffgridai.co)を報告しており、モバイルリポジトリの[OGAM](https://github.com/off-grid-ai/OGAM)はMITライセンスの下で3,000以上のGitHubスターを持ちます——これらの数字は本レビューが開発元の主張を鵜呑みにせず、GitHubと開発元の公式サイトに対して直接検証したものです。[App Storeの掲載情報](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882)だけを見ると、わずか26件のレビューで平均3.1星と、本レビューはより有利なクロスプラットフォームの数字の陰に隠さず、率直に示す本当に弱いシグナルです。オプションのOff Grid AI Pro階層（開発元のサイトによると生涯69ドルまたは年間49ドル）は、すでにアカウント不要・サブスクリプション義務なし・クラウド依存なしの無料コアに追加機能を加えます。',
@@ -1663,7 +1663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '対応モデル',
         content: [
           '**Off Grid AIは、ユーザーを単一の厳選リストに限定するのではなく、任意のGGUF形式の言語モデルに加え、専用の画像・音声モデルにも対応しています。**',
-          'テキストとチャット向け：Llama、Qwen 3・Qwen 3.5、Gemma 3・Gemma 4、Phi-4、Mistral、その他のオープンなGGUF形式モデル。画像生成向け：Stable Diffusion XLおよびStable Diffusionファミリーの他のモデル。音声認識向け：Whisperベースの文字起こしモデル。モデルのサポートはアプリのバージョンとデバイスの利用可能メモリに依存し、大きなモデルは一般的にスマートフォンではなくMacやWindows PCが必要です。',
+          'テキストとチャット向け：Llama、Qwen3・Qwen 3.5、Gemma 3・Gemma 4、Phi-4、Mistral、その他のオープンなGGUF形式モデル。画像生成向け：Stable Diffusion XLおよびStable Diffusionファミリーの他のモデル。音声認識向け：Whisperベースの文字起こしモデル。モデルのサポートはアプリのバージョンとデバイスの利用可能メモリに依存し、大きなモデルは一般的にスマートフォンではなくMacやWindows PCが必要です。',
         ],
       },
       tractionAndRatings: {
@@ -1825,7 +1825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'off grid ai pro 价格',
       '开源本地llm应用 跨平台',
     ],
-    current_models_mentioned: ['Llama', 'Qwen 3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
+    current_models_mentioned: ['Llama', 'Qwen3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
     current_hardware_mentioned: ['iPhone（iOS 17以上）', 'Android 10以上', '搭载Apple Silicon的Mac（M1或更新）', 'Windows PC'],
     leadAnswerBlock:
       '**Off Grid AI是一款免费、开源、无需账号的应用，可在iOS、Android、macOS和Windows上完全在设备本地运行GGUF格式的语言模型、Stable Diffusion图像模型以及Whisper语音转文字。** 由[Wednesday Solutions, Inc.](https://getoffgridai.co)开发，据其官网称，App Store、Google Play和GitHub上的[累计下载量已超过18万次](https://getoffgridai.co)，其移动端仓库[OGAM](https://github.com/off-grid-ai/OGAM)在MIT许可证下拥有超过3,000个GitHub星标——本评测直接对照GitHub和开发者官网核实了这些数字，而非仅仅采信开发者的说法。仅看[App Store页面](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882)，只有26条评分，平均3.1星——这确实是一个较弱的信号，本评测不会将其掩藏在更有利的跨平台数字背后。一个可选的Off Grid AI Pro层级（据开发者官网称为终身69美元或每年49美元）在已经无需账号、无强制订阅、无云依赖的免费核心基础上增加了额外功能。',
@@ -2123,7 +2123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'سعر off grid ai pro',
       'تطبيق llm محلي مفتوح المصدر عابر للمنصات',
     ],
-    current_models_mentioned: ['Llama', 'Qwen 3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
+    current_models_mentioned: ['Llama', 'Qwen3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
     current_hardware_mentioned: ['آيفون (iOS 17 فأعلى)', 'أندرويد 10 فأعلى', 'ماك بمعالج Apple Silicon (M1 أو أحدث)', 'حاسوب Windows'],
     leadAnswerBlock:
       '**Off Grid AI تطبيق مجاني ومفتوح المصدر ولا يتطلب حسابًا، يُشغّل نماذج لغوية بصيغة GGUF ونماذج صور Stable Diffusion وتفريغ صوتي عبر Whisper بالكامل على الجهاز، على iOS وAndroid وmacOS وWindows.** طوّرته [Wednesday Solutions, Inc.](https://getoffgridai.co)، ويُبلغ عن [أكثر من 180,000 تنزيل مجمّع](https://getoffgridai.co) عبر App Store وGoogle Play وGitHub، ويحمل مستودعه الخاص بالجوال، [OGAM](https://github.com/off-grid-ai/OGAM)، أكثر من 3,000 نجمة على GitHub بموجب رخصة MIT — وهي أرقام تحققت منها هذه المراجعة مباشرة مقابل GitHub وموقع المطوّر نفسه، وليس مجرد قبول ادعاء المطوّر. أما [قائمة App Store](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) بمفردها فتُظهر 26 تقييمًا فقط بمتوسط 3.1 نجوم — إشارة ضعيفة فعلًا لا تُخفيها هذه المراجعة خلف الأرقام العابرة للمنصات الأكثر إيجابية. تضيف طبقة اختيارية Off Grid AI Pro (69 دولارًا مدى الحياة أو 49 دولارًا سنويًا، بحسب موقع المطوّر) مزايا إضافية فوق نواة مجانية لا تتطلب أصلًا حسابًا، ولا اشتراكًا إلزاميًا، ولا اعتمادًا على السحابة.',
@@ -2259,7 +2259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'النماذج المدعومة',
         content: [
           '**يدعم Off Grid AI أي نموذج لغوي بصيغة GGUF، إضافة إلى نماذج صور وصوت مخصصة، بدلًا من حصر المستخدمين في قائمة واحدة منتقاة.**',
-          'للنصوص والدردشة: Llama وQwen 3 وQwen 3.5 وGemma 3 وGemma 4 وPhi-4 وMistral ونماذج مفتوحة أخرى بصيغة GGUF. لتوليد الصور: Stable Diffusion XL ونماذج أخرى من عائلة Stable Diffusion. للتفريغ الصوتي: نماذج تفريغ معتمدة على Whisper. يعتمد دعم النماذج على إصدار التطبيق والذاكرة المتاحة في الجهاز — عادةً ما تحتاج النماذج الأكبر إلى ماك أو حاسوب Windows بدلًا من الهاتف.',
+          'للنصوص والدردشة: Llama وQwen3 وQwen 3.5 وGemma 3 وGemma 4 وPhi-4 وMistral ونماذج مفتوحة أخرى بصيغة GGUF. لتوليد الصور: Stable Diffusion XL ونماذج أخرى من عائلة Stable Diffusion. للتفريغ الصوتي: نماذج تفريغ معتمدة على Whisper. يعتمد دعم النماذج على إصدار التطبيق والذاكرة المتاحة في الجهاز — عادةً ما تحتاج النماذج الأكبر إلى ماك أو حاسوب Windows بدلًا من الهاتف.',
         ],
       },
       tractionAndRatings: {
@@ -2421,7 +2421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'off grid ai pro 가격',
       '오픈소스 로컬 llm 앱 크로스플랫폼',
     ],
-    current_models_mentioned: ['Llama', 'Qwen 3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
+    current_models_mentioned: ['Llama', 'Qwen3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
     current_hardware_mentioned: ['iPhone(iOS 17 이상)', 'Android 10 이상', 'Apple Silicon Mac(M1 이상)', 'Windows PC'],
     leadAnswerBlock:
       '**Off Grid AI는 GGUF 형식 언어 모델, Stable Diffusion 이미지 모델, Whisper 음성 텍스트 변환을 iOS, Android, macOS, Windows에서 완전히 기기 내에서 실행하는 무료, 오픈소스, 계정 불필요 앱입니다.** [Wednesday Solutions, Inc.](https://getoffgridai.co)가 개발했으며, App Store, Google Play, GitHub를 합쳐 [누적 18만 건 이상의 다운로드](https://getoffgridai.co)를 보고하고 있고, 모바일 저장소인 [OGAM](https://github.com/off-grid-ai/OGAM)은 MIT 라이선스 하에 3,000개 이상의 GitHub 스타를 보유하고 있습니다 — 이 수치는 이 리뷰가 개발사의 주장을 그대로 받아들이지 않고 GitHub와 개발사 자체 웹사이트에 직접 대조하여 검증한 것입니다. [App Store 등록 정보](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882)만 보면 단 26개의 평가로 평균 3.1점에 불과합니다 — 이 리뷰는 더 유리한 크로스플랫폼 수치 뒤에 이를 숨기지 않고, 실제로 약한 이 신호를 그대로 밝힙니다. 선택적인 Off Grid AI Pro 등급(개발사 웹사이트에 따르면 평생 69달러 또는 연 49달러)은 이미 계정, 필수 구독, 클라우드 의존성이 없는 무료 코어 위에 추가 기능을 더합니다.',
@@ -2557,7 +2557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '지원 모델',
         content: [
           '**Off Grid AI는 사용자를 단일 큐레이션 목록에 제한하는 대신, 모든 GGUF 형식 언어 모델과 전용 이미지·음성 모델을 지원합니다.**',
-          '텍스트 및 채팅용: Llama, Qwen 3 및 Qwen 3.5, Gemma 3 및 Gemma 4, Phi-4, Mistral, 그리고 기타 오픈 GGUF 형식 모델. 이미지 생성용: Stable Diffusion XL 및 Stable Diffusion 계열의 다른 모델. 음성 텍스트 변환용: Whisper 기반 전사 모델. 모델 지원 여부는 앱 버전과 기기의 가용 메모리에 따라 달라지며, 더 큰 모델은 일반적으로 휴대폰이 아닌 Mac이나 Windows PC가 필요합니다.',
+          '텍스트 및 채팅용: Llama, Qwen3 및 Qwen 3.5, Gemma 3 및 Gemma 4, Phi-4, Mistral, 그리고 기타 오픈 GGUF 형식 모델. 이미지 생성용: Stable Diffusion XL 및 Stable Diffusion 계열의 다른 모델. 음성 텍스트 변환용: Whisper 기반 전사 모델. 모델 지원 여부는 앱 버전과 기기의 가용 메모리에 따라 달라지며, 더 큰 모델은 일반적으로 휴대폰이 아닌 Mac이나 Windows PC가 필요합니다.',
         ],
       },
       tractionAndRatings: {

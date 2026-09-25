@@ -99,7 +99,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'Cline — Best Overall (Free, Open-Source, Actively Maintained)',
-            content: 'Cline (formerly Claude Dev) is the best-maintained agentic coding plugin for local LLMs in 2026 — it took the top spot after Continue was acquired by Cursor in June 2026. It reads and writes files, runs terminal commands, browses the web (via browser tool), and uses MCP servers. With Ollama + Qwen3-Coder 32B, Cline can implement entire features from a prompt. Limitations: 32B models are required for reliable multi-step agentic tasks; 14B models work for simple tasks. Pricing: free (BYOK — bring your own API key from Anthropic, OpenAI, or 30+ providers); ClinePass at $9.99/month (intro $4.99 first month) for managed routing with no API key needed; Teams at $20/user/month (first 10 seats free). VS Code and the full JetBrains family: IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, GoLand, Rider, CLion, RustRover, RubyMine, and DataGrip. Compatible backends: Ollama, LM Studio, LiteLLM proxy, and 30+ cloud providers. 5M+ installs across VS Code, JetBrains, and other editors.',
+            content: 'Cline (formerly Claude Dev) is the best-maintained agentic coding plugin for local LLMs in 2026 — it took the top spot after Continue was acquired by Cursor in June 2026. It reads and writes files, runs terminal commands, browses the web (via browser tool), and uses MCP servers. With Ollama + Qwen2.5-Coder 32B, Cline can implement entire features from a prompt. Limitations: 32B models are required for reliable multi-step agentic tasks; 14B models work for simple tasks. Pricing: free (BYOK — bring your own API key from Anthropic, OpenAI, or 30+ providers); ClinePass at $9.99/month (intro $4.99 first month) for managed routing with no API key needed; Teams at $20/user/month (first 10 seats free). VS Code and the full JetBrains family: IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, GoLand, Rider, CLion, RustRover, RubyMine, and DataGrip. Compatible backends: Ollama, LM Studio, LiteLLM proxy, and 30+ cloud providers. 5M+ installs across VS Code, JetBrains, and other editors.',
             affiliateLinks: [
               { label: 'Cline on VS Code Marketplace (free)', url: 'https://github.com/cline/cline' },
             ],
@@ -115,7 +115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'Continue — Still Functional, No Longer Maintained [Acquired by Cursor, June 2026 — Final v2.0.0-vscode]',
-            content: 'Continue was the leading open-source AI coding assistant for local LLMs before its June 2026 acquisition by Cursor. It connects to Ollama, LM Studio, llama.cpp, and any OpenAI-compatible API. Features: inline chat (Cmd+L), autocomplete (Tab), model context protocol (MCP) tools, codebase indexing, and custom slash commands. VS Code extension has 2M+ installs. JetBrains plugin works in IntelliJ IDEA, PyCharm, GoLand, WebStorm, and Rider — it does not cover CLion or RustRover. Best local models: Qwen3-Coder 14B (coding), Llama 3.1 8B (chat). Setup: install extension, set provider to Ollama, choose model — done in 2 minutes. Note (June 2026): Continue was acquired by Cursor. Version 2.0.0-vscode, released June 19, 2026, is the final release; the GitHub repo is now read-only, and Continue-hosted cloud data was deleted after July 15, 2026. The extension still installs and runs fully offline with Ollama and BYO-LLM — but no further development from the original team. Community forks are active.',
+            content: 'Continue was the leading open-source AI coding assistant for local LLMs before its June 2026 acquisition by Cursor. It connects to Ollama, LM Studio, llama.cpp, and any OpenAI-compatible API. Features: inline chat (Cmd+L), autocomplete (Tab), model context protocol (MCP) tools, codebase indexing, and custom slash commands. VS Code extension has 2M+ installs. JetBrains plugin works in IntelliJ IDEA, PyCharm, GoLand, WebStorm, and Rider — it does not cover CLion or RustRover. Best local models: Qwen2.5-Coder 14B (coding), Llama 3.1 8B (chat). Setup: install extension, set provider to Ollama, choose model — done in 2 minutes. Note (June 2026): Continue was acquired by Cursor. Version 2.0.0-vscode, released June 19, 2026, is the final release; the GitHub repo is now read-only, and Continue-hosted cloud data was deleted after July 15, 2026. The extension still installs and runs fully offline with Ollama and BYO-LLM — but no further development from the original team. Community forks are active.',
             affiliateLinks: [
               { label: 'Continue on VS Code Marketplace (free)', url: 'https://continue.dev' },
             ],
@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Aider — Best Terminal-Native AI Coding',
-            content: 'Aider is a terminal-based AI pair programmer that integrates with git. It understands your full repository structure, makes multi-file edits, and commits changes automatically. Works with Ollama (via --model ollama/qwen2.5-coder:14b), LM Studio, or any OpenAI-compatible API. Best local models: Qwen3-Coder 32B (architect mode) + Qwen3-Coder 7B (editor mode). Aider uses a two-model approach: a large model plans changes, a small model implements them. 44K+ GitHub stars. Cost: free and open-source. Note: Aider is still in 0.x versioning as of 2026, so CLI flags and the .aider.conf.yml format occasionally change between minor releases — check the changelog after upgrading.',
+            content: 'Aider is a terminal-based AI pair programmer that integrates with git. It understands your full repository structure, makes multi-file edits, and commits changes automatically. Works with Ollama (via --model ollama/qwen2.5-coder:14b), LM Studio, or any OpenAI-compatible API. Best local models: Qwen2.5-Coder 32B (architect mode) + Qwen2.5-Coder 7B (editor mode). Aider uses a two-model approach: a large model plans changes, a small model implements them. 44K+ GitHub stars. Cost: free and open-source. Note: Aider is still in 0.x versioning as of 2026, so CLI flags and the .aider.conf.yml format occasionally change between minor releases — check the changelog after upgrading.',
             affiliateLinks: [
               { label: 'Aider on GitHub (open-source)', url: 'https://aider.chat' },
             ],
@@ -186,11 +186,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Best Local Models by Plugin and Task',
         columns: ['Plugin', 'Best Coding Model (Local)', 'Best Chat Model (Local)', 'Min VRAM'],
         rows: [
-          { 'Plugin': 'Cline', 'Best Coding Model (Local)': 'Qwen3-Coder 32B Q4', 'Best Chat Model (Local)': 'Qwen3 32B Q4', 'Min VRAM': '24 GB' },
+          { 'Plugin': 'Cline', 'Best Coding Model (Local)': 'Qwen2.5-Coder 32B Q4', 'Best Chat Model (Local)': 'Qwen3 32B Q4', 'Min VRAM': '24 GB' },
           { 'Plugin': 'Bodega One Code', 'Best Coding Model (Local)': 'Any local model (BYOL)', 'Best Chat Model (Local)': 'Any local model (BYOL)', 'Min VRAM': 'Depends on chosen model' },
-          { 'Plugin': 'Continue (legacy)', 'Best Coding Model (Local)': 'Qwen3-Coder 14B Q8', 'Best Chat Model (Local)': 'Llama 3.1 8B Q4', 'Min VRAM': '16 GB' },
+          { 'Plugin': 'Continue (legacy)', 'Best Coding Model (Local)': 'Qwen2.5-Coder 14B Q8', 'Best Chat Model (Local)': 'Llama 3.1 8B Q4', 'Min VRAM': '16 GB' },
           { 'Plugin': 'Tabby', 'Best Coding Model (Local)': 'StarCoder2-7B (built-in)', 'Best Chat Model (Local)': 'N/A (code only)', 'Min VRAM': '8 GB' },
-          { 'Plugin': 'Aider', 'Best Coding Model (Local)': 'Qwen3-Coder 14B (editor)', 'Best Chat Model (Local)': 'Qwen3-Coder 32B (architect)', 'Min VRAM': '16–24 GB' },
+          { 'Plugin': 'Aider', 'Best Coding Model (Local)': 'Qwen2.5-Coder 14B (editor)', 'Best Chat Model (Local)': 'Qwen2.5-Coder 32B (architect)', 'Min VRAM': '16–24 GB' },
           { 'Plugin': 'Cursor', 'Best Coding Model (Local)': 'DeepSeek-Coder-V2 (via Ollama)', 'Best Chat Model (Local)': 'Qwen3 14B', 'Min VRAM': '16 GB' },
         ],
         image: '/images/best-local-llm-ide-plugins-2026-model-recommendations-hero-en.webp',
@@ -216,7 +216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Which plugin works best for multi-file refactoring?',
-            a: 'Cline or Aider. Both can read multiple files, understand dependencies, and make coordinated edits across a codebase. Cline works inside VS Code or JetBrains (better for visual feedback); Aider works in the terminal (better for CI/CD integration and git-aware commits). For 30B+ models with 24 GB VRAM, Cline with Qwen3-Coder 32B handles complex refactoring reliably.',
+            a: 'Cline or Aider. Both can read multiple files, understand dependencies, and make coordinated edits across a codebase. Cline works inside VS Code or JetBrains (better for visual feedback); Aider works in the terminal (better for CI/CD integration and git-aware commits). For 30B+ models with 24 GB VRAM, Cline with Qwen2.5-Coder 32B handles complex refactoring reliably.',
           },
           {
             q: 'Does Tabby work without a GPU?',
@@ -437,7 +437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'Cline — Bestes Gesamtpaket (kostenlos, Open-Source, aktiv gepflegt)',
-            content: 'Cline (früher Claude Dev) ist 2026 das am besten gepflegte agentische Coding-Plugin für lokale LLMs — es übernahm die Spitzenposition, nachdem Continue im Juni 2026 von Cursor übernommen wurde. Es liest und schreibt Dateien, führt Terminal-Befehle aus, durchsucht das Web (über ein Browser-Tool) und nutzt MCP-Server. Mit Ollama + Qwen3-Coder 32B kann Cline komplette Features aus einem Prompt implementieren. Einschränkungen: 32B-Modelle sind für zuverlässige Multi-Schritt-Agenten nötig; 14B-Modelle reichen für einfache Aufgaben. Preise: kostenlos (BYOK — eigener API-Schlüssel von Anthropic, OpenAI oder 30+ Anbietern); ClinePass für 9,99 $/Monat (Einstieg 4,99 $ im ersten Monat) für verwaltetes Routing ohne eigenen API-Schlüssel; Teams für 20 $/Nutzer/Monat (erste 10 Plätze kostenlos). VS Code und die gesamte JetBrains-Familie: IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, GoLand, Rider, CLion, RustRover, RubyMine und DataGrip. Kompatible Backends: Ollama, LM Studio, LiteLLM-Proxy und 30+ Cloud-Anbieter. 5M+ Installs über VS Code, JetBrains und weitere Editoren.',
+            content: 'Cline (früher Claude Dev) ist 2026 das am besten gepflegte agentische Coding-Plugin für lokale LLMs — es übernahm die Spitzenposition, nachdem Continue im Juni 2026 von Cursor übernommen wurde. Es liest und schreibt Dateien, führt Terminal-Befehle aus, durchsucht das Web (über ein Browser-Tool) und nutzt MCP-Server. Mit Ollama + Qwen2.5-Coder 32B kann Cline komplette Features aus einem Prompt implementieren. Einschränkungen: 32B-Modelle sind für zuverlässige Multi-Schritt-Agenten nötig; 14B-Modelle reichen für einfache Aufgaben. Preise: kostenlos (BYOK — eigener API-Schlüssel von Anthropic, OpenAI oder 30+ Anbietern); ClinePass für 9,99 $/Monat (Einstieg 4,99 $ im ersten Monat) für verwaltetes Routing ohne eigenen API-Schlüssel; Teams für 20 $/Nutzer/Monat (erste 10 Plätze kostenlos). VS Code und die gesamte JetBrains-Familie: IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, GoLand, Rider, CLion, RustRover, RubyMine und DataGrip. Kompatible Backends: Ollama, LM Studio, LiteLLM-Proxy und 30+ Cloud-Anbieter. 5M+ Installs über VS Code, JetBrains und weitere Editoren.',
             affiliateLinks: [
               { label: 'Cline im VS Code Marketplace (kostenlos)', url: 'https://github.com/cline/cline' },
             ],
@@ -453,7 +453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'Continue — Noch funktionsfähig, aber nicht mehr gepflegt [Von Cursor übernommen, Juni 2026 — Finale Version v2.0.0-vscode]',
-            content: 'Continue war der führende Open-Source-KI-Coding-Assistent für lokale LLMs vor seiner Übernahme durch Cursor im Juni 2026. Er verbindet sich mit Ollama, LM Studio, llama.cpp und jeder OpenAI-kompatiblen API. Features: Inline-Chat (Cmd+L), Autocomplete (Tab), Model-Context-Protocol(MCP)-Tools, Codebase-Indexierung und benutzerdefinierte Slash-Befehle. VS-Code-Extension hat 2M+ Installs. JetBrains-Plugin läuft in IntelliJ IDEA, PyCharm, GoLand, WebStorm und Rider — CLion und RustRover werden nicht abgedeckt. Beste lokale Modelle: Qwen3-Coder 14B (Coding), Llama 3.1 8B (Chat). Setup: Extension installieren, Provider auf Ollama setzen, Modell wählen — in 2 Minuten erledigt. Hinweis (Juni 2026): Continue wurde von Cursor übernommen. Version 2.0.0-vscode, veröffentlicht am 19. Juni 2026, ist die letzte Version; das GitHub-Repository ist nun schreibgeschützt, und die von Continue gehosteten Cloud-Daten wurden nach dem 15. Juli 2026 gelöscht. Die Extension läuft weiterhin vollständig offline mit Ollama und BYO-LLM — jedoch ohne weitere Entwicklung durch das ursprüngliche Team. Community-Forks sind aktiv.',
+            content: 'Continue war der führende Open-Source-KI-Coding-Assistent für lokale LLMs vor seiner Übernahme durch Cursor im Juni 2026. Er verbindet sich mit Ollama, LM Studio, llama.cpp und jeder OpenAI-kompatiblen API. Features: Inline-Chat (Cmd+L), Autocomplete (Tab), Model-Context-Protocol(MCP)-Tools, Codebase-Indexierung und benutzerdefinierte Slash-Befehle. VS-Code-Extension hat 2M+ Installs. JetBrains-Plugin läuft in IntelliJ IDEA, PyCharm, GoLand, WebStorm und Rider — CLion und RustRover werden nicht abgedeckt. Beste lokale Modelle: Qwen2.5-Coder 14B (Coding), Llama 3.1 8B (Chat). Setup: Extension installieren, Provider auf Ollama setzen, Modell wählen — in 2 Minuten erledigt. Hinweis (Juni 2026): Continue wurde von Cursor übernommen. Version 2.0.0-vscode, veröffentlicht am 19. Juni 2026, ist die letzte Version; das GitHub-Repository ist nun schreibgeschützt, und die von Continue gehosteten Cloud-Daten wurden nach dem 15. Juli 2026 gelöscht. Die Extension läuft weiterhin vollständig offline mit Ollama und BYO-LLM — jedoch ohne weitere Entwicklung durch das ursprüngliche Team. Community-Forks sind aktiv.',
             affiliateLinks: [
               { label: 'Continue im VS Code Marketplace (kostenlos)', url: 'https://continue.dev' },
             ],
@@ -469,7 +469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Aider — Bestes Terminal-Tool für KI-Coding',
-            content: 'Aider ist ein terminal-basierter KI-Pair-Programmer mit Git-Integration. Er versteht die Struktur des gesamten Repositories, macht Multi-Datei-Änderungen und committed automatisch. Funktioniert mit Ollama (--model ollama/qwen2.5-coder:14b), LM Studio oder jeder OpenAI-kompatiblen API. Beste lokale Modelle: Qwen3-Coder 32B (Architekt-Modus) + Qwen3-Coder 7B (Editor-Modus). Aider nutzt einen Zwei-Modell-Ansatz: ein großes Modell plant Änderungen, ein kleines setzt sie um. 44K+ GitHub-Sterne. Kosten: kostenlos und Open-Source. Hinweis: Aider ist 2026 weiterhin bei 0.x-Versionierung, CLI-Flags und das .aider.conf.yml-Format ändern sich gelegentlich zwischen Minor-Releases — nach einem Update das Changelog prüfen.',
+            content: 'Aider ist ein terminal-basierter KI-Pair-Programmer mit Git-Integration. Er versteht die Struktur des gesamten Repositories, macht Multi-Datei-Änderungen und committed automatisch. Funktioniert mit Ollama (--model ollama/qwen2.5-coder:14b), LM Studio oder jeder OpenAI-kompatiblen API. Beste lokale Modelle: Qwen2.5-Coder 32B (Architekt-Modus) + Qwen2.5-Coder 7B (Editor-Modus). Aider nutzt einen Zwei-Modell-Ansatz: ein großes Modell plant Änderungen, ein kleines setzt sie um. 44K+ GitHub-Sterne. Kosten: kostenlos und Open-Source. Hinweis: Aider ist 2026 weiterhin bei 0.x-Versionierung, CLI-Flags und das .aider.conf.yml-Format ändern sich gelegentlich zwischen Minor-Releases — nach einem Update das Changelog prüfen.',
             affiliateLinks: [
               { label: 'Aider auf GitHub (Open-Source)', url: 'https://aider.chat' },
             ],
@@ -524,11 +524,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Beste lokale Modelle nach Plugin und Aufgabe',
         columns: ['Plugin', 'Bestes Coding-Modell (lokal)', 'Bestes Chat-Modell (lokal)', 'Min. VRAM'],
         rows: [
-          { 'Plugin': 'Cline', 'Bestes Coding-Modell (lokal)': 'Qwen3-Coder 32B Q4', 'Bestes Chat-Modell (lokal)': 'Qwen3 32B Q4', 'Min. VRAM': '24 GB' },
+          { 'Plugin': 'Cline', 'Bestes Coding-Modell (lokal)': 'Qwen2.5-Coder 32B Q4', 'Bestes Chat-Modell (lokal)': 'Qwen3 32B Q4', 'Min. VRAM': '24 GB' },
           { 'Plugin': 'Bodega One Code', 'Bestes Coding-Modell (lokal)': 'Beliebiges lokales Modell (BYOL)', 'Bestes Chat-Modell (lokal)': 'Beliebiges lokales Modell (BYOL)', 'Min. VRAM': 'Abhängig vom gewählten Modell' },
-          { 'Plugin': 'Continue (Legacy)', 'Bestes Coding-Modell (lokal)': 'Qwen3-Coder 14B Q8', 'Bestes Chat-Modell (lokal)': 'Llama 3.1 8B Q4', 'Min. VRAM': '16 GB' },
+          { 'Plugin': 'Continue (Legacy)', 'Bestes Coding-Modell (lokal)': 'Qwen2.5-Coder 14B Q8', 'Bestes Chat-Modell (lokal)': 'Llama 3.1 8B Q4', 'Min. VRAM': '16 GB' },
           { 'Plugin': 'Tabby', 'Bestes Coding-Modell (lokal)': 'StarCoder2-7B (integriert)', 'Bestes Chat-Modell (lokal)': 'N/A (nur Code)', 'Min. VRAM': '8 GB' },
-          { 'Plugin': 'Aider', 'Bestes Coding-Modell (lokal)': 'Qwen3-Coder 14B (Editor)', 'Bestes Chat-Modell (lokal)': 'Qwen3-Coder 32B (Architekt)', 'Min. VRAM': '16–24 GB' },
+          { 'Plugin': 'Aider', 'Bestes Coding-Modell (lokal)': 'Qwen2.5-Coder 14B (Editor)', 'Bestes Chat-Modell (lokal)': 'Qwen2.5-Coder 32B (Architekt)', 'Min. VRAM': '16–24 GB' },
           { 'Plugin': 'Cursor', 'Bestes Coding-Modell (lokal)': 'DeepSeek-Coder-V2 (via Ollama)', 'Bestes Chat-Modell (lokal)': 'Qwen3 14B', 'Min. VRAM': '16 GB' },
         ],
         image: '/images/best-local-llm-ide-plugins-2026-model-recommendations-hero-de.webp',
@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'Cline — Meilleur choix global (gratuit, open-source, activement maintenu)',
-            content: 'Cline (anciennement Claude Dev) est en 2026 le plugin de codage agentique le mieux maintenu pour les LLMs locaux — il a pris la première place après le rachat de Continue par Cursor en juin 2026. Il lit et écrit des fichiers, exécute des commandes terminal, navigue sur le web (via un outil navigateur) et utilise des serveurs MCP. Avec Ollama + Qwen3-Coder 32B, Cline peut implémenter des fonctionnalités complètes à partir d\'une invite. Limites : les modèles 32B sont requis pour des tâches agentiques multi-étapes fiables ; les modèles 14B suffisent pour des tâches simples. Tarifs : gratuit (BYOK — apportez votre propre clé API d\'Anthropic, OpenAI ou 30+ fournisseurs) ; ClinePass à 9,99 $/mois (essai à 4,99 $ le premier mois) pour un routage géré sans clé API requise ; Teams à 20 $/utilisateur/mois (10 premiers sièges gratuits). VS Code et toute la famille JetBrains : IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, GoLand, Rider, CLion, RustRover, RubyMine et DataGrip. Backends compatibles : Ollama, LM Studio, proxy LiteLLM et 30+ fournisseurs cloud. 5M+ installations sur VS Code, JetBrains et d\'autres éditeurs.',
+            content: 'Cline (anciennement Claude Dev) est en 2026 le plugin de codage agentique le mieux maintenu pour les LLMs locaux — il a pris la première place après le rachat de Continue par Cursor en juin 2026. Il lit et écrit des fichiers, exécute des commandes terminal, navigue sur le web (via un outil navigateur) et utilise des serveurs MCP. Avec Ollama + Qwen2.5-Coder 32B, Cline peut implémenter des fonctionnalités complètes à partir d\'une invite. Limites : les modèles 32B sont requis pour des tâches agentiques multi-étapes fiables ; les modèles 14B suffisent pour des tâches simples. Tarifs : gratuit (BYOK — apportez votre propre clé API d\'Anthropic, OpenAI ou 30+ fournisseurs) ; ClinePass à 9,99 $/mois (essai à 4,99 $ le premier mois) pour un routage géré sans clé API requise ; Teams à 20 $/utilisateur/mois (10 premiers sièges gratuits). VS Code et toute la famille JetBrains : IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, GoLand, Rider, CLion, RustRover, RubyMine et DataGrip. Backends compatibles : Ollama, LM Studio, proxy LiteLLM et 30+ fournisseurs cloud. 5M+ installations sur VS Code, JetBrains et d\'autres éditeurs.',
             affiliateLinks: [
               { label: 'Cline sur VS Code Marketplace (gratuit)', url: 'https://github.com/cline/cline' },
             ],
@@ -761,7 +761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'Continue — Toujours fonctionnel, plus maintenu [Racheté par Cursor, juin 2026 — Version finale v2.0.0-vscode]',
-            content: 'Continue était le principal assistant de codage IA open-source pour les LLMs locaux avant son rachat par Cursor en juin 2026. Il se connecte à Ollama, LM Studio, llama.cpp et toute API OpenAI-compatible. Fonctionnalités : chat inline (Cmd+L), autocomplétion (Tab), outils du protocole de contexte de modèle (MCP), indexation de codebase et commandes slash personnalisées. L\'extension VS Code compte 2M+ installations. Le plugin JetBrains fonctionne dans IntelliJ IDEA, PyCharm, GoLand, WebStorm et Rider — il ne couvre pas CLion ni RustRover. Meilleurs modèles locaux : Qwen3-Coder 14B (codage), Llama 3.1 8B (chat). Installation : installer l\'extension, définir le provider sur Ollama, choisir un modèle — terminé en 2 minutes. Note (juin 2026) : Continue a été racheté par Cursor. La version 2.0.0-vscode, sortie le 19 juin 2026, est la dernière ; le dépôt GitHub est désormais en lecture seule, et les données cloud hébergées par Continue ont été supprimées après le 15 juillet 2026. L\'extension continue de s\'installer et de fonctionner pleinement hors ligne avec Ollama et le BYO-LLM — mais sans développement ultérieur de la part de l\'équipe d\'origine. Des forks communautaires restent actifs.',
+            content: 'Continue était le principal assistant de codage IA open-source pour les LLMs locaux avant son rachat par Cursor en juin 2026. Il se connecte à Ollama, LM Studio, llama.cpp et toute API OpenAI-compatible. Fonctionnalités : chat inline (Cmd+L), autocomplétion (Tab), outils du protocole de contexte de modèle (MCP), indexation de codebase et commandes slash personnalisées. L\'extension VS Code compte 2M+ installations. Le plugin JetBrains fonctionne dans IntelliJ IDEA, PyCharm, GoLand, WebStorm et Rider — il ne couvre pas CLion ni RustRover. Meilleurs modèles locaux : Qwen2.5-Coder 14B (codage), Llama 3.1 8B (chat). Installation : installer l\'extension, définir le provider sur Ollama, choisir un modèle — terminé en 2 minutes. Note (juin 2026) : Continue a été racheté par Cursor. La version 2.0.0-vscode, sortie le 19 juin 2026, est la dernière ; le dépôt GitHub est désormais en lecture seule, et les données cloud hébergées par Continue ont été supprimées après le 15 juillet 2026. L\'extension continue de s\'installer et de fonctionner pleinement hors ligne avec Ollama et le BYO-LLM — mais sans développement ultérieur de la part de l\'équipe d\'origine. Des forks communautaires restent actifs.',
             affiliateLinks: [
               { label: 'Continue sur VS Code Marketplace (gratuit)', url: 'https://continue.dev' },
             ],
@@ -777,7 +777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Aider — Meilleur outil terminal pour le codage IA',
-            content: 'Aider est un pair-programmeur IA en terminal qui s\'intègre avec git. Il comprend la structure complète du dépôt, fait des modifications multi-fichiers et commit automatiquement. Fonctionne avec Ollama (--model ollama/qwen2.5-coder:14b), LM Studio ou toute API OpenAI-compatible. Meilleurs modèles locaux : Qwen3-Coder 32B (mode architecte) + Qwen3-Coder 7B (mode éditeur). Aider utilise une approche à deux modèles : un grand modèle planifie les changements, un petit les implémente. 44K+ étoiles GitHub. Coût : gratuit et open-source. Note : Aider reste en versionnage 0.x en 2026, les flags CLI et le format .aider.conf.yml changent parfois entre versions mineures — vérifiez le changelog après une mise à jour.',
+            content: 'Aider est un pair-programmeur IA en terminal qui s\'intègre avec git. Il comprend la structure complète du dépôt, fait des modifications multi-fichiers et commit automatiquement. Fonctionne avec Ollama (--model ollama/qwen2.5-coder:14b), LM Studio ou toute API OpenAI-compatible. Meilleurs modèles locaux : Qwen2.5-Coder 32B (mode architecte) + Qwen2.5-Coder 7B (mode éditeur). Aider utilise une approche à deux modèles : un grand modèle planifie les changements, un petit les implémente. 44K+ étoiles GitHub. Coût : gratuit et open-source. Note : Aider reste en versionnage 0.x en 2026, les flags CLI et le format .aider.conf.yml changent parfois entre versions mineures — vérifiez le changelog après une mise à jour.',
             affiliateLinks: [
               { label: 'Aider sur GitHub (open-source)', url: 'https://aider.chat' },
             ],
@@ -832,11 +832,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Meilleurs modèles locaux par plugin et tâche',
         columns: ['Plugin', 'Meilleur modèle de codage (local)', 'Meilleur modèle de chat (local)', 'VRAM min.'],
         rows: [
-          { 'Plugin': 'Cline', 'Meilleur modèle de codage (local)': 'Qwen3-Coder 32B Q4', 'Meilleur modèle de chat (local)': 'Qwen3 32B Q4', 'VRAM min.': '24 Go' },
+          { 'Plugin': 'Cline', 'Meilleur modèle de codage (local)': 'Qwen2.5-Coder 32B Q4', 'Meilleur modèle de chat (local)': 'Qwen3 32B Q4', 'VRAM min.': '24 Go' },
           { 'Plugin': 'Bodega One Code', 'Meilleur modèle de codage (local)': 'Tout modèle local (BYOL)', 'Meilleur modèle de chat (local)': 'Tout modèle local (BYOL)', 'VRAM min.': 'Selon le modèle choisi' },
-          { 'Plugin': 'Continue (héritage)', 'Meilleur modèle de codage (local)': 'Qwen3-Coder 14B Q8', 'Meilleur modèle de chat (local)': 'Llama 3.1 8B Q4', 'VRAM min.': '16 Go' },
+          { 'Plugin': 'Continue (héritage)', 'Meilleur modèle de codage (local)': 'Qwen2.5-Coder 14B Q8', 'Meilleur modèle de chat (local)': 'Llama 3.1 8B Q4', 'VRAM min.': '16 Go' },
           { 'Plugin': 'Tabby', 'Meilleur modèle de codage (local)': 'StarCoder2-7B (intégré)', 'Meilleur modèle de chat (local)': 'N/A (code uniquement)', 'VRAM min.': '8 Go' },
-          { 'Plugin': 'Aider', 'Meilleur modèle de codage (local)': 'Qwen3-Coder 14B (éditeur)', 'Meilleur modèle de chat (local)': 'Qwen3-Coder 32B (architecte)', 'VRAM min.': '16–24 Go' },
+          { 'Plugin': 'Aider', 'Meilleur modèle de codage (local)': 'Qwen2.5-Coder 14B (éditeur)', 'Meilleur modèle de chat (local)': 'Qwen2.5-Coder 32B (architecte)', 'VRAM min.': '16–24 Go' },
           { 'Plugin': 'Cursor', 'Meilleur modèle de codage (local)': 'DeepSeek-Coder-V2 (via Ollama)', 'Meilleur modèle de chat (local)': 'Qwen3 14B', 'VRAM min.': '16 Go' },
         ],
         image: '/images/best-local-llm-ide-plugins-2026-model-recommendations-hero-fr.webp',
@@ -862,7 +862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quel plugin est le meilleur pour le refactoring multi-fichiers ?',
-            a: 'Cline ou Aider. Les deux lisent plusieurs fichiers, comprennent les dépendances et font des modifications coordonnées. Cline fonctionne dans VS Code (meilleur retour visuel) ; Aider fonctionne dans le terminal (meilleur pour l\'intégration CI/CD et les commits git-aware). Pour des modèles 30B+ avec 24 Go de VRAM, Cline avec Qwen3-Coder 32B gère le refactoring complexe de manière fiable.',
+            a: 'Cline ou Aider. Les deux lisent plusieurs fichiers, comprennent les dépendances et font des modifications coordonnées. Cline fonctionne dans VS Code (meilleur retour visuel) ; Aider fonctionne dans le terminal (meilleur pour l\'intégration CI/CD et les commits git-aware). Pour des modèles 30B+ avec 24 Go de VRAM, Cline avec Qwen2.5-Coder 32B gère le refactoring complexe de manière fiable.',
           },
           {
             q: 'Tabby fonctionne-t-il sans GPU ?',
@@ -1053,7 +1053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'Cline — 総合ベスト（無料・オープンソース・活発にメンテナンス）',
-            content: 'Cline（旧Claude Dev）は2026年のローカルLLM向け最もメンテナンスの行き届いたエージェント的コーディングプラグインです——2026年6月にContinueがCursorに買収された後、首位の座を獲得しました。ファイルの読み書き、ターミナルコマンド実行、Webブラウジング（ブラウザツール経由）、MCPサーバーの利用が可能。Ollama + Qwen3-Coder 32Bとの組み合わせで、プロンプトから完全な機能実装が可能。制限：信頼性の高いマルチステップエージェントタスクには32Bモデルが必要（14Bモデルは単純なタスクに対応）。料金：無料（BYOK — Anthropic、OpenAI、または30以上のプロバイダーから自分のAPIキーを持ち込む）；ClinePassが月額$9.99（初月は$4.99）でAPIキー不要のマネージドルーティング；Teamsが月額$20/ユーザー（最初の10シートは無料）。VS CodeとJetBrainsファミリー全体：IntelliJ IDEA、PyCharm、WebStorm、PhpStorm、GoLand、Rider、CLion、RustRover、RubyMine、DataGrip。対応バックエンド：Ollama、LM Studio、LiteLLMプロキシ、30以上のクラウドプロバイダー。VS Code・JetBrains等を合わせて500万インストール以上。',
+            content: 'Cline（旧Claude Dev）は2026年のローカルLLM向け最もメンテナンスの行き届いたエージェント的コーディングプラグインです——2026年6月にContinueがCursorに買収された後、首位の座を獲得しました。ファイルの読み書き、ターミナルコマンド実行、Webブラウジング（ブラウザツール経由）、MCPサーバーの利用が可能。Ollama + Qwen2.5-Coder 32Bとの組み合わせで、プロンプトから完全な機能実装が可能。制限：信頼性の高いマルチステップエージェントタスクには32Bモデルが必要（14Bモデルは単純なタスクに対応）。料金：無料（BYOK — Anthropic、OpenAI、または30以上のプロバイダーから自分のAPIキーを持ち込む）；ClinePassが月額$9.99（初月は$4.99）でAPIキー不要のマネージドルーティング；Teamsが月額$20/ユーザー（最初の10シートは無料）。VS CodeとJetBrainsファミリー全体：IntelliJ IDEA、PyCharm、WebStorm、PhpStorm、GoLand、Rider、CLion、RustRover、RubyMine、DataGrip。対応バックエンド：Ollama、LM Studio、LiteLLMプロキシ、30以上のクラウドプロバイダー。VS Code・JetBrains等を合わせて500万インストール以上。',
             affiliateLinks: [
               { label: 'Cline をVS Code Marketplaceでダウンロード（無料）', url: 'https://github.com/cline/cline' },
             ],
@@ -1069,7 +1069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'Continue — まだ動作するがメンテナンス終了[2026年6月にCursorが買収 — 最終バージョンv2.0.0-vscode]',
-            content: '2026年6月にCursorに買収される前、ContinueはローカルLLM向けの主要オープンソースAIコーディングアシスタントでした。Ollama、LM Studio、llama.cpp、すべてのOpenAI互換APIに接続。機能：インラインチャット（Cmd+L）、オートコンプリート（Tab）、MCPツール、コードベースインデックス化、カスタムスラッシュコマンド。VS Code拡張は200万以上のインストール実績。JetBrainsプラグインはIntelliJ IDEA、PyCharm、GoLand、WebStorm、Riderで動作——CLionとRustRoverは非対応。推奨ローカルモデル：Qwen3-Coder 14B（コーディング）、Llama 3.1 8B（チャット）。セットアップ：拡張機能をインストールし、プロバイダーをOllamaに設定、モデルを選択——2分で完了。注記（2026年6月）：ContinueはCursorに買収されました。2026年6月19日リリースのv2.0.0-vscodeが最終版で、GitHubリポジトリは読み取り専用、Continueがホストしていたクラウドデータは2026年7月15日以降削除されました。Ollama・BYO-LLMとの連携は引き続き完全にオフラインで機能しますが、オリジナルチームによる開発は終了しています。コミュニティフォークは活発です。',
+            content: '2026年6月にCursorに買収される前、ContinueはローカルLLM向けの主要オープンソースAIコーディングアシスタントでした。Ollama、LM Studio、llama.cpp、すべてのOpenAI互換APIに接続。機能：インラインチャット（Cmd+L）、オートコンプリート（Tab）、MCPツール、コードベースインデックス化、カスタムスラッシュコマンド。VS Code拡張は200万以上のインストール実績。JetBrainsプラグインはIntelliJ IDEA、PyCharm、GoLand、WebStorm、Riderで動作——CLionとRustRoverは非対応。推奨ローカルモデル：Qwen2.5-Coder 14B（コーディング）、Llama 3.1 8B（チャット）。セットアップ：拡張機能をインストールし、プロバイダーをOllamaに設定、モデルを選択——2分で完了。注記（2026年6月）：ContinueはCursorに買収されました。2026年6月19日リリースのv2.0.0-vscodeが最終版で、GitHubリポジトリは読み取り専用、Continueがホストしていたクラウドデータは2026年7月15日以降削除されました。Ollama・BYO-LLMとの連携は引き続き完全にオフラインで機能しますが、オリジナルチームによる開発は終了しています。コミュニティフォークは活発です。',
             affiliateLinks: [
               { label: 'Continue をVS Code Marketplaceでダウンロード（無料）', url: 'https://continue.dev' },
             ],
@@ -1085,7 +1085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Aider — ターミナルネイティブAIコーディング最良',
-            content: 'Aiderはgit統合のターミナルベースAIペアプログラマーです。リポジトリ全体の構造を理解し、マルチファイル編集を行い、変更を自動コミット。Ollama（--model ollama/qwen2.5-coder:14b）、LM Studio、すべてのOpenAI互換APIで動作。推奨ローカルモデル：Qwen3-Coder 32B（アーキテクトモード）+ Qwen3-Coder 7B（エディターモード）。Aiderは2モデル方式を採用——大型モデルが変更を計画し、小型モデルが実装します。GitHubスター4.4万以上。コスト：無料・オープンソース。注記：Aiderは2026年時点でも0.xバージョニングのままで、CLIフラグや.aider.conf.yml形式がマイナーリリース間で変わることがあります——アップグレード後はチェンジログを確認してください。',
+            content: 'Aiderはgit統合のターミナルベースAIペアプログラマーです。リポジトリ全体の構造を理解し、マルチファイル編集を行い、変更を自動コミット。Ollama（--model ollama/qwen2.5-coder:14b）、LM Studio、すべてのOpenAI互換APIで動作。推奨ローカルモデル：Qwen2.5-Coder 32B（アーキテクトモード）+ Qwen2.5-Coder 7B（エディターモード）。Aiderは2モデル方式を採用——大型モデルが変更を計画し、小型モデルが実装します。GitHubスター4.4万以上。コスト：無料・オープンソース。注記：Aiderは2026年時点でも0.xバージョニングのままで、CLIフラグや.aider.conf.yml形式がマイナーリリース間で変わることがあります——アップグレード後はチェンジログを確認してください。',
             affiliateLinks: [
               { label: 'Aider をGitHubで確認（オープンソース）', url: 'https://aider.chat' },
             ],
@@ -1140,11 +1140,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'プラグインとタスク別の最良ローカルモデル',
         columns: ['プラグイン', '最良コーディングモデル（ローカル）', '最良チャットモデル（ローカル）', '最小VRAM'],
         rows: [
-          { 'プラグイン': 'Cline', '最良コーディングモデル（ローカル）': 'Qwen3-Coder 32B Q4', '最良チャットモデル（ローカル）': 'Qwen3 32B Q4', '最小VRAM': '24 GB' },
+          { 'プラグイン': 'Cline', '最良コーディングモデル（ローカル）': 'Qwen2.5-Coder 32B Q4', '最良チャットモデル（ローカル）': 'Qwen3 32B Q4', '最小VRAM': '24 GB' },
           { 'プラグイン': 'Bodega One Code', '最良コーディングモデル（ローカル）': '任意のローカルモデル（BYOL）', '最良チャットモデル（ローカル）': '任意のローカルモデル（BYOL）', '最小VRAM': '選択したモデルに依存' },
-          { 'プラグイン': 'Continue（レガシー）', '最良コーディングモデル（ローカル）': 'Qwen3-Coder 14B Q8', '最良チャットモデル（ローカル）': 'Llama 3.1 8B Q4', '最小VRAM': '16 GB' },
+          { 'プラグイン': 'Continue（レガシー）', '最良コーディングモデル（ローカル）': 'Qwen2.5-Coder 14B Q8', '最良チャットモデル（ローカル）': 'Llama 3.1 8B Q4', '最小VRAM': '16 GB' },
           { 'プラグイン': 'Tabby', '最良コーディングモデル（ローカル）': 'StarCoder2-7B（内蔵）', '最良チャットモデル（ローカル）': 'N/A（コードのみ）', '最小VRAM': '8 GB' },
-          { 'プラグイン': 'Aider', '最良コーディングモデル（ローカル）': 'Qwen3-Coder 14B（エディター）', '最良チャットモデル（ローカル）': 'Qwen3-Coder 32B（アーキテクト）', '最小VRAM': '16–24 GB' },
+          { 'プラグイン': 'Aider', '最良コーディングモデル（ローカル）': 'Qwen2.5-Coder 14B（エディター）', '最良チャットモデル（ローカル）': 'Qwen2.5-Coder 32B（アーキテクト）', '最小VRAM': '16–24 GB' },
           { 'プラグイン': 'Cursor', '最良コーディングモデル（ローカル）': 'DeepSeek-Coder-V2（Ollama経由）', '最良チャットモデル（ローカル）': 'Qwen3 14B', '最小VRAM': '16 GB' },
         ],
         image: '/images/best-local-llm-ide-plugins-2026-model-recommendations-hero-ja.webp',
@@ -1170,7 +1170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'マルチファイルリファクタリングに最適なプラグインはどれですか？',
-            a: 'ClineまたはAiderです。両方とも複数ファイルを読み込み、依存関係を理解し、コードベース全体で協調した変更を行えます。Clineはビジュアルフィードバックに優れ（VS Code内）、Aiderはgit対応コミットに優れています（ターミナル、CI/CD連携）。30B以上（24GB VRAM）のモデルなら、Cline + Qwen3-Coder 32Bが複雑なリファクタリングを確実に処理できます。',
+            a: 'ClineまたはAiderです。両方とも複数ファイルを読み込み、依存関係を理解し、コードベース全体で協調した変更を行えます。Clineはビジュアルフィードバックに優れ（VS Code内）、Aiderはgit対応コミットに優れています（ターミナル、CI/CD連携）。30B以上（24GB VRAM）のモデルなら、Cline + Qwen2.5-Coder 32Bが複雑なリファクタリングを確実に処理できます。',
           },
           {
             q: 'OllamaではなくLM Studioでこれらのプラグインを使えますか？',
@@ -1357,7 +1357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'Cline — 综合最佳（免费、开源、持续维护）',
-            content: 'Cline（原名Claude Dev）是2026年本地LLM中维护最完善的智能体编程插件——在2026年6月Continue被Cursor收购后登顶第一。它可以读写文件、运行终端命令、浏览网页（通过浏览器工具）、使用MCP服务器。配合Ollama + Qwen3-Coder 32B，Cline能从一个提示词实现完整功能。限制：可靠的多步骤智能体任务需要32B模型（14B模型可处理简单任务）。定价：免费（BYOK——自带来自Anthropic、OpenAI或30多家提供商的API密钥）；ClinePass每月$9.99（首月优惠价$4.99），提供无需API密钥的托管路由；Teams每用户每月$20（前10个席位免费）。支持VS Code和整个JetBrains系列：IntelliJ IDEA、PyCharm、WebStorm、PhpStorm、GoLand、Rider、CLion、RustRover、RubyMine和DataGrip。兼容后端：Ollama、LM Studio、LiteLLM代理及30多家云服务商。在VS Code、JetBrains及其他编辑器上安装量合计超500万。',
+            content: 'Cline（原名Claude Dev）是2026年本地LLM中维护最完善的智能体编程插件——在2026年6月Continue被Cursor收购后登顶第一。它可以读写文件、运行终端命令、浏览网页（通过浏览器工具）、使用MCP服务器。配合Ollama + Qwen2.5-Coder 32B，Cline能从一个提示词实现完整功能。限制：可靠的多步骤智能体任务需要32B模型（14B模型可处理简单任务）。定价：免费（BYOK——自带来自Anthropic、OpenAI或30多家提供商的API密钥）；ClinePass每月$9.99（首月优惠价$4.99），提供无需API密钥的托管路由；Teams每用户每月$20（前10个席位免费）。支持VS Code和整个JetBrains系列：IntelliJ IDEA、PyCharm、WebStorm、PhpStorm、GoLand、Rider、CLion、RustRover、RubyMine和DataGrip。兼容后端：Ollama、LM Studio、LiteLLM代理及30多家云服务商。在VS Code、JetBrains及其他编辑器上安装量合计超500万。',
             affiliateLinks: [
               { label: '在VS Code Marketplace下载Cline（免费）', url: 'https://github.com/cline/cline' },
             ],
@@ -1373,7 +1373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'Continue — 仍可使用但已停止维护 [已于2026年6月被Cursor收购 — 最终版本v2.0.0-vscode]',
-            content: '在2026年6月被Cursor收购之前，Continue是本地LLM领先的开源AI编程助手。连接Ollama、LM Studio、llama.cpp和所有OpenAI兼容API。功能：内联对话（Cmd+L）、代码补全（Tab）、MCP工具、代码库索引、自定义斜杠命令。VS Code扩展已有200万以上安装量。JetBrains插件支持IntelliJ IDEA、PyCharm、GoLand、WebStorm和Rider——不包括CLion和RustRover。推荐本地模型：Qwen3-Coder 14B（编程）、Llama 3.1 8B（对话）。设置：安装扩展，将提供商设为Ollama，选择模型——2分钟内完成。注意（2026年6月）：Continue已被Cursor收购。2026年6月19日发布的v2.0.0-vscode为最终版本，GitHub仓库现为只读状态，Continue托管的云端数据已于2026年7月15日后删除。插件仍可与Ollama及自带模型完全离线正常运行，但原团队已停止开发。社区分支仍然活跃。',
+            content: '在2026年6月被Cursor收购之前，Continue是本地LLM领先的开源AI编程助手。连接Ollama、LM Studio、llama.cpp和所有OpenAI兼容API。功能：内联对话（Cmd+L）、代码补全（Tab）、MCP工具、代码库索引、自定义斜杠命令。VS Code扩展已有200万以上安装量。JetBrains插件支持IntelliJ IDEA、PyCharm、GoLand、WebStorm和Rider——不包括CLion和RustRover。推荐本地模型：Qwen2.5-Coder 14B（编程）、Llama 3.1 8B（对话）。设置：安装扩展，将提供商设为Ollama，选择模型——2分钟内完成。注意（2026年6月）：Continue已被Cursor收购。2026年6月19日发布的v2.0.0-vscode为最终版本，GitHub仓库现为只读状态，Continue托管的云端数据已于2026年7月15日后删除。插件仍可与Ollama及自带模型完全离线正常运行，但原团队已停止开发。社区分支仍然活跃。',
             affiliateLinks: [
               { label: '在VS Code Marketplace下载Continue（免费）', url: 'https://continue.dev' },
             ],
@@ -1389,7 +1389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Aider — 最佳终端原生AI编程工具',
-            content: 'Aider是集成git的终端AI配对程序员。理解整个代码库结构，进行多文件编辑，自动提交更改。支持Ollama（--model ollama/qwen2.5-coder:14b）、LM Studio或任何OpenAI兼容API。推荐本地模型：Qwen3-Coder 32B（架构模式）+ Qwen3-Coder 7B（编辑模式）。Aider采用双模型方案：大模型负责规划变更，小模型负责实现。GitHub星标4.4万以上。费用：免费开源。注意：截至2026年，Aider仍处于0.x版本阶段，CLI参数和.aider.conf.yml格式在次要版本之间偶有变动——升级后请查看更新日志。',
+            content: 'Aider是集成git的终端AI配对程序员。理解整个代码库结构，进行多文件编辑，自动提交更改。支持Ollama（--model ollama/qwen2.5-coder:14b）、LM Studio或任何OpenAI兼容API。推荐本地模型：Qwen2.5-Coder 32B（架构模式）+ Qwen2.5-Coder 7B（编辑模式）。Aider采用双模型方案：大模型负责规划变更，小模型负责实现。GitHub星标4.4万以上。费用：免费开源。注意：截至2026年，Aider仍处于0.x版本阶段，CLI参数和.aider.conf.yml格式在次要版本之间偶有变动——升级后请查看更新日志。',
             affiliateLinks: [
               { label: 'Aider在GitHub上查看（开源）', url: 'https://aider.chat' },
             ],
@@ -1444,11 +1444,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '按插件与任务划分的最佳本地模型',
         columns: ['插件', '最佳编程模型（本地）', '最佳对话模型（本地）', '最低显存'],
         rows: [
-          { '插件': 'Cline', '最佳编程模型（本地）': 'Qwen3-Coder 32B Q4', '最佳对话模型（本地）': 'Qwen3 32B Q4', '最低显存': '24 GB' },
+          { '插件': 'Cline', '最佳编程模型（本地）': 'Qwen2.5-Coder 32B Q4', '最佳对话模型（本地）': 'Qwen3 32B Q4', '最低显存': '24 GB' },
           { '插件': 'Bodega One Code', '最佳编程模型（本地）': '任意本地模型（BYOL）', '最佳对话模型（本地）': '任意本地模型（BYOL）', '最低显存': '取决于所选模型' },
-          { '插件': 'Continue（旧版）', '最佳编程模型（本地）': 'Qwen3-Coder 14B Q8', '最佳对话模型（本地）': 'Llama 3.1 8B Q4', '最低显存': '16 GB' },
+          { '插件': 'Continue（旧版）', '最佳编程模型（本地）': 'Qwen2.5-Coder 14B Q8', '最佳对话模型（本地）': 'Llama 3.1 8B Q4', '最低显存': '16 GB' },
           { '插件': 'Tabby', '最佳编程模型（本地）': 'StarCoder2-7B（内置）', '最佳对话模型（本地）': 'N/A（仅代码）', '最低显存': '8 GB' },
-          { '插件': 'Aider', '最佳编程模型（本地）': 'Qwen3-Coder 14B（编辑模式）', '最佳对话模型（本地）': 'Qwen3-Coder 32B（架构模式）', '最低显存': '16–24 GB' },
+          { '插件': 'Aider', '最佳编程模型（本地）': 'Qwen2.5-Coder 14B（编辑模式）', '最佳对话模型（本地）': 'Qwen2.5-Coder 32B（架构模式）', '最低显存': '16–24 GB' },
           { '插件': 'Cursor', '最佳编程模型（本地）': 'DeepSeek-Coder-V2（通过Ollama）', '最佳对话模型（本地）': 'Qwen3 14B', '最低显存': '16 GB' },
         ],
         image: '/images/best-local-llm-ide-plugins-2026-model-recommendations-hero-zh.webp',
@@ -1474,7 +1474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '哪个插件最适合多文件重构？',
-            a: 'Cline或Aider。两者都能读取多个文件、理解依赖关系并在代码库间进行协调更改。Cline在VS Code内提供更好的可视化反馈；Aider在终端中运行，更适合CI/CD集成和git感知提交。配合30B以上模型（24GB显存），Cline + Qwen3-Coder 32B可以可靠地处理复杂重构。',
+            a: 'Cline或Aider。两者都能读取多个文件、理解依赖关系并在代码库间进行协调更改。Cline在VS Code内提供更好的可视化反馈；Aider在终端中运行，更适合CI/CD集成和git感知提交。配合30B以上模型（24GB显存），Cline + Qwen2.5-Coder 32B可以可靠地处理复杂重构。',
           },
           {
             q: 'Tabby在没有GPU的情况下能运行吗？',
@@ -1670,7 +1670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'Cline — Mejor opción global (gratuito, código abierto, mantenimiento activo)',
-            content: 'Cline (anteriormente Claude Dev) es el plugin de codificación agéntica con mejor mantenimiento para LLMs locales en 2026 — tomó el primer puesto después de que Continue fuera adquirido por Cursor en junio de 2026. Lee y escribe archivos, ejecuta comandos de terminal, navega la web (mediante herramienta de navegador) y usa servidores MCP. Con Ollama + Qwen3-Coder 32B, Cline puede implementar funcionalidades completas a partir de un prompt. Limitaciones: se requieren modelos de 32B para tareas agénticas de múltiples pasos fiables; los modelos de 14B funcionan para tareas simples. Precio: gratuito (BYOK — trae tu propia clave API de Anthropic, OpenAI, o más de 30 proveedores); ClinePass a $9,99/mes (introductorio a $4,99 el primer mes) para enrutamiento gestionado sin necesidad de clave API; Teams a $20/usuario/mes (primeros 10 puestos gratuitos). Disponible en VS Code y en toda la familia JetBrains: IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, GoLand, Rider, CLion, RustRover, RubyMine y DataGrip. Backends compatibles: Ollama, LM Studio, proxy LiteLLM y más de 30 proveedores cloud. Más de 5M de instalaciones entre VS Code, JetBrains y otros editores.',
+            content: 'Cline (anteriormente Claude Dev) es el plugin de codificación agéntica con mejor mantenimiento para LLMs locales en 2026 — tomó el primer puesto después de que Continue fuera adquirido por Cursor en junio de 2026. Lee y escribe archivos, ejecuta comandos de terminal, navega la web (mediante herramienta de navegador) y usa servidores MCP. Con Ollama + Qwen2.5-Coder 32B, Cline puede implementar funcionalidades completas a partir de un prompt. Limitaciones: se requieren modelos de 32B para tareas agénticas de múltiples pasos fiables; los modelos de 14B funcionan para tareas simples. Precio: gratuito (BYOK — trae tu propia clave API de Anthropic, OpenAI, o más de 30 proveedores); ClinePass a $9,99/mes (introductorio a $4,99 el primer mes) para enrutamiento gestionado sin necesidad de clave API; Teams a $20/usuario/mes (primeros 10 puestos gratuitos). Disponible en VS Code y en toda la familia JetBrains: IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, GoLand, Rider, CLion, RustRover, RubyMine y DataGrip. Backends compatibles: Ollama, LM Studio, proxy LiteLLM y más de 30 proveedores cloud. Más de 5M de instalaciones entre VS Code, JetBrains y otros editores.',
             affiliateLinks: [
               { label: 'Cline en VS Code Marketplace (gratuito)', url: 'https://github.com/cline/cline' },
             ],
@@ -1686,7 +1686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'Continue — Todavía funcional, sin mantenimiento [Adquirido por Cursor, junio de 2026 — versión final v2.0.0-vscode]',
-            content: 'Continue fue el asistente de codificación de IA open-source líder para LLMs locales antes de su adquisición por Cursor en junio de 2026. Se conecta a Ollama, LM Studio, llama.cpp y cualquier API compatible con OpenAI. Funciones: chat en línea (Cmd+L), autocompletado (Tab), herramientas del protocolo de contexto de modelo (MCP), indexación de codebase y comandos slash personalizados. La extensión de VS Code tiene más de 2M de instalaciones. El plugin de JetBrains funciona en IntelliJ IDEA, PyCharm, GoLand, WebStorm y Rider — no cubre CLion ni RustRover. Mejores modelos locales: Qwen3-Coder 14B (codificación), Llama 3.1 8B (chat). Configuración: instala la extensión, define el proveedor como Ollama, elige el modelo — listo en 2 minutos. Nota (junio de 2026): Continue fue adquirido por Cursor. La versión 2.0.0-vscode, publicada el 19 de junio de 2026, es la última; el repositorio de GitHub ahora es de solo lectura, y los datos en la nube alojados por Continue se eliminaron después del 15 de julio de 2026. La extensión sigue instalándose y funcionando completamente offline con Ollama y BYO-LLM — pero sin más desarrollo por parte del equipo original. Hay forks de la comunidad activos.',
+            content: 'Continue fue el asistente de codificación de IA open-source líder para LLMs locales antes de su adquisición por Cursor en junio de 2026. Se conecta a Ollama, LM Studio, llama.cpp y cualquier API compatible con OpenAI. Funciones: chat en línea (Cmd+L), autocompletado (Tab), herramientas del protocolo de contexto de modelo (MCP), indexación de codebase y comandos slash personalizados. La extensión de VS Code tiene más de 2M de instalaciones. El plugin de JetBrains funciona en IntelliJ IDEA, PyCharm, GoLand, WebStorm y Rider — no cubre CLion ni RustRover. Mejores modelos locales: Qwen2.5-Coder 14B (codificación), Llama 3.1 8B (chat). Configuración: instala la extensión, define el proveedor como Ollama, elige el modelo — listo en 2 minutos. Nota (junio de 2026): Continue fue adquirido por Cursor. La versión 2.0.0-vscode, publicada el 19 de junio de 2026, es la última; el repositorio de GitHub ahora es de solo lectura, y los datos en la nube alojados por Continue se eliminaron después del 15 de julio de 2026. La extensión sigue instalándose y funcionando completamente offline con Ollama y BYO-LLM — pero sin más desarrollo por parte del equipo original. Hay forks de la comunidad activos.',
             affiliateLinks: [
               { label: 'Continue en VS Code Marketplace (gratuito)', url: 'https://continue.dev' },
             ],
@@ -1702,7 +1702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Aider — La mejor codificación de IA nativa de terminal',
-            content: 'Aider es un programador en par de IA basado en terminal que se integra con git. Entiende la estructura completa de tu repositorio, realiza ediciones multi-archivo y hace commits de los cambios automáticamente. Funciona con Ollama (via --model ollama/qwen2.5-coder:14b), LM Studio o cualquier API compatible con OpenAI. Mejores modelos locales: Qwen3-Coder 32B (modo arquitecto) + Qwen3-Coder 7B (modo editor). Aider usa un enfoque de dos modelos: un modelo grande planifica los cambios, uno pequeño los implementa. Más de 44K estrellas en GitHub. Coste: gratuito y open-source. Nota: Aider sigue en versionado 0.x en 2026, así que las flags de la CLI y el formato .aider.conf.yml cambian ocasionalmente entre versiones menores — revisa el changelog tras actualizar.',
+            content: 'Aider es un programador en par de IA basado en terminal que se integra con git. Entiende la estructura completa de tu repositorio, realiza ediciones multi-archivo y hace commits de los cambios automáticamente. Funciona con Ollama (via --model ollama/qwen2.5-coder:14b), LM Studio o cualquier API compatible con OpenAI. Mejores modelos locales: Qwen2.5-Coder 32B (modo arquitecto) + Qwen2.5-Coder 7B (modo editor). Aider usa un enfoque de dos modelos: un modelo grande planifica los cambios, uno pequeño los implementa. Más de 44K estrellas en GitHub. Coste: gratuito y open-source. Nota: Aider sigue en versionado 0.x en 2026, así que las flags de la CLI y el formato .aider.conf.yml cambian ocasionalmente entre versiones menores — revisa el changelog tras actualizar.',
             affiliateLinks: [
               { label: 'Aider en GitHub (open-source)', url: 'https://aider.chat' },
             ],
@@ -1757,11 +1757,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Mejores modelos locales por plugin y tarea',
         columns: ['Plugin', 'Mejor modelo de codificación (local)', 'Mejor modelo de chat (local)', 'VRAM mínima'],
         rows: [
-          { 'Plugin': 'Cline', 'Mejor modelo de codificación (local)': 'Qwen3-Coder 32B Q4', 'Mejor modelo de chat (local)': 'Qwen3 32B Q4', 'VRAM mínima': '24 GB' },
+          { 'Plugin': 'Cline', 'Mejor modelo de codificación (local)': 'Qwen2.5-Coder 32B Q4', 'Mejor modelo de chat (local)': 'Qwen3 32B Q4', 'VRAM mínima': '24 GB' },
           { 'Plugin': 'Bodega One Code', 'Mejor modelo de codificación (local)': 'Cualquier modelo local (BYOL)', 'Mejor modelo de chat (local)': 'Cualquier modelo local (BYOL)', 'VRAM mínima': 'Depende del modelo elegido' },
-          { 'Plugin': 'Continue (heredado)', 'Mejor modelo de codificación (local)': 'Qwen3-Coder 14B Q8', 'Mejor modelo de chat (local)': 'Llama 3.1 8B Q4', 'VRAM mínima': '16 GB' },
+          { 'Plugin': 'Continue (heredado)', 'Mejor modelo de codificación (local)': 'Qwen2.5-Coder 14B Q8', 'Mejor modelo de chat (local)': 'Llama 3.1 8B Q4', 'VRAM mínima': '16 GB' },
           { 'Plugin': 'Tabby', 'Mejor modelo de codificación (local)': 'StarCoder2-7B (integrado)', 'Mejor modelo de chat (local)': 'N/A (solo código)', 'VRAM mínima': '8 GB' },
-          { 'Plugin': 'Aider', 'Mejor modelo de codificación (local)': 'Qwen3-Coder 14B (editor)', 'Mejor modelo de chat (local)': 'Qwen3-Coder 32B (arquitecto)', 'VRAM mínima': '16–24 GB' },
+          { 'Plugin': 'Aider', 'Mejor modelo de codificación (local)': 'Qwen2.5-Coder 14B (editor)', 'Mejor modelo de chat (local)': 'Qwen2.5-Coder 32B (arquitecto)', 'VRAM mínima': '16–24 GB' },
           { 'Plugin': 'Cursor', 'Mejor modelo de codificación (local)': 'DeepSeek-Coder-V2 (via Ollama)', 'Mejor modelo de chat (local)': 'Qwen3 14B', 'VRAM mínima': '16 GB' },
         ],
         image: '/images/best-local-llm-ide-plugins-2026-model-recommendations-hero-es.webp',
@@ -1787,7 +1787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué plugin funciona mejor para refactorización multi-archivo?',
-            a: 'Cline o Aider. Ambos pueden leer múltiples archivos, entender dependencias y realizar ediciones coordinadas en un codebase. Cline funciona dentro de VS Code (mejor para retroalimentación visual); Aider funciona en la terminal (mejor para integración CI/CD y commits conscientes de git). Para modelos de 30B+ con 24 GB de VRAM, Cline con Qwen3-Coder 32B maneja refactorizaciones complejas de forma fiable.',
+            a: 'Cline o Aider. Ambos pueden leer múltiples archivos, entender dependencias y realizar ediciones coordinadas en un codebase. Cline funciona dentro de VS Code (mejor para retroalimentación visual); Aider funciona en la terminal (mejor para integración CI/CD y commits conscientes de git). Para modelos de 30B+ con 24 GB de VRAM, Cline con Qwen2.5-Coder 32B maneja refactorizaciones complejas de forma fiable.',
           },
           {
             q: '¿Tabby funciona sin GPU?',
@@ -2010,7 +2010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'Cline — 종합 최고(무료, 오픈소스, 활발히 유지보수)',
-            content: 'Cline(이전 이름 Claude Dev)은 2026년 로컬 LLM을 위해 가장 잘 유지보수되는 에이전트 기반 코딩 플러그인입니다 — 2026년 6월 Continue가 Cursor에 인수된 이후 1위 자리를 차지했습니다. 파일을 읽고 쓰며, 터미널 명령을 실행하고, (브라우저 도구를 통해) 웹을 탐색하며, MCP 서버를 사용할 수 있습니다. Ollama + Qwen3-Coder 32B와 함께 사용하면 Cline은 프롬프트 하나로 전체 기능을 구현할 수 있습니다. 제한 사항: 신뢰할 수 있는 다단계 에이전트 작업에는 32B 모델이 필요합니다(14B 모델은 단순 작업에 적합). 가격: 무료(BYOK — Anthropic, OpenAI, 또는 30개 이상 제공업체의 API 키 사용); API 키 없이 관리형 라우팅을 원한다면 ClinePass 월 $9.99(첫 달 할인가 $4.99); Teams는 사용자당 월 $20(첫 10석 무료). VS Code와 JetBrains 전체 제품군: IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, GoLand, Rider, CLion, RustRover, RubyMine, DataGrip. 호환 백엔드: Ollama, LM Studio, LiteLLM 프록시, 그리고 30개 이상의 클라우드 제공업체. VS Code, JetBrains 및 기타 에디터를 합쳐 500만 건 이상 설치되었습니다.',
+            content: 'Cline(이전 이름 Claude Dev)은 2026년 로컬 LLM을 위해 가장 잘 유지보수되는 에이전트 기반 코딩 플러그인입니다 — 2026년 6월 Continue가 Cursor에 인수된 이후 1위 자리를 차지했습니다. 파일을 읽고 쓰며, 터미널 명령을 실행하고, (브라우저 도구를 통해) 웹을 탐색하며, MCP 서버를 사용할 수 있습니다. Ollama + Qwen2.5-Coder 32B와 함께 사용하면 Cline은 프롬프트 하나로 전체 기능을 구현할 수 있습니다. 제한 사항: 신뢰할 수 있는 다단계 에이전트 작업에는 32B 모델이 필요합니다(14B 모델은 단순 작업에 적합). 가격: 무료(BYOK — Anthropic, OpenAI, 또는 30개 이상 제공업체의 API 키 사용); API 키 없이 관리형 라우팅을 원한다면 ClinePass 월 $9.99(첫 달 할인가 $4.99); Teams는 사용자당 월 $20(첫 10석 무료). VS Code와 JetBrains 전체 제품군: IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, GoLand, Rider, CLion, RustRover, RubyMine, DataGrip. 호환 백엔드: Ollama, LM Studio, LiteLLM 프록시, 그리고 30개 이상의 클라우드 제공업체. VS Code, JetBrains 및 기타 에디터를 합쳐 500만 건 이상 설치되었습니다.',
             affiliateLinks: [
               { label: 'VS Code Marketplace에서 Cline 받기(무료)', url: 'https://github.com/cline/cline' },
             ],
@@ -2026,7 +2026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'Continue — 여전히 작동하지만 더 이상 유지보수되지 않음 [2026년 6월 Cursor에 인수됨 — 최종 버전 v2.0.0-vscode]',
-            content: '2026년 6월 Cursor에 인수되기 전까지 Continue는 로컬 LLM을 위한 대표적인 오픈소스 AI 코딩 어시스턴트였습니다. Ollama, LM Studio, llama.cpp, 그리고 모든 OpenAI 호환 API에 연결됩니다. 기능: 인라인 채팅(Cmd+L), 자동완성(Tab), MCP(모델 컨텍스트 프로토콜) 도구, 코드베이스 인덱싱, 사용자 지정 슬래시 명령. VS Code 확장은 200만 건 이상 설치되었습니다. JetBrains 플러그인은 IntelliJ IDEA, PyCharm, GoLand, WebStorm, Rider에서 작동합니다 — CLion과 RustRover는 지원하지 않습니다. 추천 로컬 모델: Qwen3-Coder 14B(코딩), Llama 3.1 8B(채팅). 설정: 확장 설치, 제공업체를 Ollama로 설정, 모델 선택 — 2분이면 끝납니다. 참고(2026년 6월): Continue는 Cursor에 인수되었습니다. 2026년 6월 19일 출시된 v2.0.0-vscode가 최종 버전이며, GitHub 저장소는 이제 읽기 전용이고, Continue가 호스팅하던 클라우드 데이터는 2026년 7월 15일 이후 삭제되었습니다. 확장은 여전히 Ollama와 BYO-LLM으로 완전히 오프라인 작동하지만 원래 팀의 추가 개발은 없습니다. 커뮤니티 포크는 활발히 활동 중입니다.',
+            content: '2026년 6월 Cursor에 인수되기 전까지 Continue는 로컬 LLM을 위한 대표적인 오픈소스 AI 코딩 어시스턴트였습니다. Ollama, LM Studio, llama.cpp, 그리고 모든 OpenAI 호환 API에 연결됩니다. 기능: 인라인 채팅(Cmd+L), 자동완성(Tab), MCP(모델 컨텍스트 프로토콜) 도구, 코드베이스 인덱싱, 사용자 지정 슬래시 명령. VS Code 확장은 200만 건 이상 설치되었습니다. JetBrains 플러그인은 IntelliJ IDEA, PyCharm, GoLand, WebStorm, Rider에서 작동합니다 — CLion과 RustRover는 지원하지 않습니다. 추천 로컬 모델: Qwen2.5-Coder 14B(코딩), Llama 3.1 8B(채팅). 설정: 확장 설치, 제공업체를 Ollama로 설정, 모델 선택 — 2분이면 끝납니다. 참고(2026년 6월): Continue는 Cursor에 인수되었습니다. 2026년 6월 19일 출시된 v2.0.0-vscode가 최종 버전이며, GitHub 저장소는 이제 읽기 전용이고, Continue가 호스팅하던 클라우드 데이터는 2026년 7월 15일 이후 삭제되었습니다. 확장은 여전히 Ollama와 BYO-LLM으로 완전히 오프라인 작동하지만 원래 팀의 추가 개발은 없습니다. 커뮤니티 포크는 활발히 활동 중입니다.',
             affiliateLinks: [
               { label: 'VS Code Marketplace에서 Continue 받기(무료)', url: 'https://continue.dev' },
             ],
@@ -2042,7 +2042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Aider — 최고의 터미널 네이티브 AI 코딩',
-            content: 'Aider는 git과 통합된 터미널 기반 AI 페어 프로그래머입니다. 저장소 전체 구조를 이해하고, 멀티 파일 편집을 수행하며, 변경 사항을 자동으로 커밋합니다. Ollama(--model ollama/qwen2.5-coder:14b), LM Studio, 또는 모든 OpenAI 호환 API와 함께 작동합니다. 추천 로컬 모델: Qwen3-Coder 32B(아키텍트 모드) + Qwen3-Coder 7B(에디터 모드). Aider는 대형 모델이 변경을 계획하고 소형 모델이 이를 구현하는 두 모델 방식을 사용합니다. GitHub 스타 4.4만 개 이상. 비용: 무료, 오픈소스. 참고: Aider는 2026년 기준 여전히 0.x 버전 체계이므로 CLI 플래그와 .aider.conf.yml 형식이 마이너 릴리스 사이에 간혹 변경됩니다 — 업그레이드 후에는 변경 이력을 확인하세요.',
+            content: 'Aider는 git과 통합된 터미널 기반 AI 페어 프로그래머입니다. 저장소 전체 구조를 이해하고, 멀티 파일 편집을 수행하며, 변경 사항을 자동으로 커밋합니다. Ollama(--model ollama/qwen2.5-coder:14b), LM Studio, 또는 모든 OpenAI 호환 API와 함께 작동합니다. 추천 로컬 모델: Qwen2.5-Coder 32B(아키텍트 모드) + Qwen2.5-Coder 7B(에디터 모드). Aider는 대형 모델이 변경을 계획하고 소형 모델이 이를 구현하는 두 모델 방식을 사용합니다. GitHub 스타 4.4만 개 이상. 비용: 무료, 오픈소스. 참고: Aider는 2026년 기준 여전히 0.x 버전 체계이므로 CLI 플래그와 .aider.conf.yml 형식이 마이너 릴리스 사이에 간혹 변경됩니다 — 업그레이드 후에는 변경 이력을 확인하세요.',
             affiliateLinks: [
               { label: 'GitHub에서 Aider 확인(오픈소스)', url: 'https://aider.chat' },
             ],
@@ -2097,11 +2097,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '플러그인과 작업별 최적 로컬 모델',
         columns: ['플러그인', '최고의 코딩 모델 (로컬)', '최고의 채팅 모델 (로컬)', '최소 VRAM'],
         rows: [
-          { '플러그인': 'Cline', '최고의 코딩 모델 (로컬)': 'Qwen3-Coder 32B Q4', '최고의 채팅 모델 (로컬)': 'Qwen3 32B Q4', '최소 VRAM': '24 GB' },
+          { '플러그인': 'Cline', '최고의 코딩 모델 (로컬)': 'Qwen2.5-Coder 32B Q4', '최고의 채팅 모델 (로컬)': 'Qwen3 32B Q4', '최소 VRAM': '24 GB' },
           { '플러그인': 'Bodega One Code', '최고의 코딩 모델 (로컬)': '임의의 로컬 모델 (BYOL)', '최고의 채팅 모델 (로컬)': '임의의 로컬 모델 (BYOL)', '최소 VRAM': '선택한 모델에 따라 다름' },
-          { '플러그인': 'Continue (레거시)', '최고의 코딩 모델 (로컬)': 'Qwen3-Coder 14B Q8', '최고의 채팅 모델 (로컬)': 'Llama 3.1 8B Q4', '최소 VRAM': '16 GB' },
+          { '플러그인': 'Continue (레거시)', '최고의 코딩 모델 (로컬)': 'Qwen2.5-Coder 14B Q8', '최고의 채팅 모델 (로컬)': 'Llama 3.1 8B Q4', '최소 VRAM': '16 GB' },
           { '플러그인': 'Tabby', '최고의 코딩 모델 (로컬)': 'StarCoder2-7B (내장)', '최고의 채팅 모델 (로컬)': 'N/A (코드 전용)', '최소 VRAM': '8 GB' },
-          { '플러그인': 'Aider', '최고의 코딩 모델 (로컬)': 'Qwen3-Coder 14B (에디터)', '최고의 채팅 모델 (로컬)': 'Qwen3-Coder 32B (아키텍트)', '최소 VRAM': '16–24 GB' },
+          { '플러그인': 'Aider', '최고의 코딩 모델 (로컬)': 'Qwen2.5-Coder 14B (에디터)', '최고의 채팅 모델 (로컬)': 'Qwen2.5-Coder 32B (아키텍트)', '최소 VRAM': '16–24 GB' },
           { '플러그인': 'Cursor', '최고의 코딩 모델 (로컬)': 'DeepSeek-Coder-V2 (Ollama 경유)', '최고의 채팅 모델 (로컬)': 'Qwen3 14B', '최소 VRAM': '16 GB' },
         ],
         image: '/images/best-local-llm-ide-plugins-2026-model-recommendations-hero-ko.webp',
@@ -2127,7 +2127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '멀티 파일 리팩터링에 가장 적합한 플러그인은 무엇입니까?',
-            a: 'Cline 또는 Aider입니다. 둘 다 여러 파일을 읽고, 의존 관계를 파악하며, 코드베이스 전반에 걸쳐 조율된 편집을 수행할 수 있습니다. Cline은 VS Code나 JetBrains 안에서 작동해 시각적 피드백이 유리하고, Aider는 터미널에서 작동해 CI/CD 연동과 git 인식 커밋에 유리합니다. 24 GB VRAM으로 30B급 이상 모델을 사용한다면 Cline과 Qwen3-Coder 32B 조합이 복잡한 리팩터링도 안정적으로 처리합니다.',
+            a: 'Cline 또는 Aider입니다. 둘 다 여러 파일을 읽고, 의존 관계를 파악하며, 코드베이스 전반에 걸쳐 조율된 편집을 수행할 수 있습니다. Cline은 VS Code나 JetBrains 안에서 작동해 시각적 피드백이 유리하고, Aider는 터미널에서 작동해 CI/CD 연동과 git 인식 커밋에 유리합니다. 24 GB VRAM으로 30B급 이상 모델을 사용한다면 Cline과 Qwen2.5-Coder 32B 조합이 복잡한 리팩터링도 안정적으로 처리합니다.',
           },
           {
             q: 'Tabby는 GPU 없이도 작동합니까?',
@@ -2352,7 +2352,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'Cline — Melhor opção geral (gratuito, código aberto, mantido ativamente)',
-            content: 'Cline (anteriormente Claude Dev) é o plugin de codificação agêntica mais bem mantido para LLMs locais em 2026 — assumiu o primeiro lugar depois que o Continue foi adquirido pela Cursor em junho de 2026. Ele lê e escreve arquivos, executa comandos de terminal, navega na web (via ferramenta de navegador) e usa servidores MCP. Com Ollama + Qwen3-Coder 32B, o Cline consegue implementar funcionalidades inteiras a partir de um prompt. Limitações: modelos de 32B são necessários para tarefas agênticas confiáveis de múltiplos passos; modelos de 14B funcionam para tarefas simples. Preços: gratuito (BYOK — traga sua própria chave de API da Anthropic, OpenAI ou mais de 30 provedores); ClinePass a $9,99/mês (introdutório a $4,99 no primeiro mês) para roteamento gerenciado sem necessidade de chave de API; Teams a $20/usuário/mês (primeiras 10 vagas gratuitas). VS Code e toda a família JetBrains: IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, GoLand, Rider, CLion, RustRover, RubyMine e DataGrip. Backends compatíveis: Ollama, LM Studio, proxy LiteLLM e mais de 30 provedores em nuvem. Mais de 5M de instalações somando VS Code, JetBrains e outros editores.',
+            content: 'Cline (anteriormente Claude Dev) é o plugin de codificação agêntica mais bem mantido para LLMs locais em 2026 — assumiu o primeiro lugar depois que o Continue foi adquirido pela Cursor em junho de 2026. Ele lê e escreve arquivos, executa comandos de terminal, navega na web (via ferramenta de navegador) e usa servidores MCP. Com Ollama + Qwen2.5-Coder 32B, o Cline consegue implementar funcionalidades inteiras a partir de um prompt. Limitações: modelos de 32B são necessários para tarefas agênticas confiáveis de múltiplos passos; modelos de 14B funcionam para tarefas simples. Preços: gratuito (BYOK — traga sua própria chave de API da Anthropic, OpenAI ou mais de 30 provedores); ClinePass a $9,99/mês (introdutório a $4,99 no primeiro mês) para roteamento gerenciado sem necessidade de chave de API; Teams a $20/usuário/mês (primeiras 10 vagas gratuitas). VS Code e toda a família JetBrains: IntelliJ IDEA, PyCharm, WebStorm, PhpStorm, GoLand, Rider, CLion, RustRover, RubyMine e DataGrip. Backends compatíveis: Ollama, LM Studio, proxy LiteLLM e mais de 30 provedores em nuvem. Mais de 5M de instalações somando VS Code, JetBrains e outros editores.',
             affiliateLinks: [
               { label: 'Cline no VS Code Marketplace (gratuito)', url: 'https://github.com/cline/cline' },
             ],
@@ -2368,7 +2368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'Continue — Ainda funcional, sem manutenção [Adquirido pela Cursor em junho de 2026 — versão final v2.0.0-vscode]',
-            content: 'O Continue era o principal assistente de codificação de IA open-source para LLMs locais antes de sua aquisição pela Cursor em junho de 2026. Conecta-se ao Ollama, LM Studio, llama.cpp e a qualquer API compatível com OpenAI. Recursos: chat inline (Cmd+L), autocompletar (Tab), ferramentas de protocolo de contexto de modelo (MCP), indexação de codebase e comandos slash personalizados. A extensão do VS Code tem mais de 2M de instalações. O plugin do JetBrains funciona no IntelliJ IDEA, PyCharm, GoLand, WebStorm e Rider — não cobre CLion nem RustRover. Melhores modelos locais: Qwen3-Coder 14B (codificação), Llama 3.1 8B (chat). Configuração: instale a extensão, defina o provedor como Ollama, escolha o modelo — pronto em 2 minutos. Nota (junho de 2026): o Continue foi adquirido pela Cursor. A versão 2.0.0-vscode, lançada em 19 de junho de 2026, é a última; o repositório do GitHub agora é somente leitura, e os dados na nuvem hospedados pelo Continue foram excluídos após 15 de julho de 2026. A extensão continua instalando e funcionando totalmente offline com Ollama e BYO-LLM — mas sem mais desenvolvimento da equipe original. Forks da comunidade estão ativos.',
+            content: 'O Continue era o principal assistente de codificação de IA open-source para LLMs locais antes de sua aquisição pela Cursor em junho de 2026. Conecta-se ao Ollama, LM Studio, llama.cpp e a qualquer API compatível com OpenAI. Recursos: chat inline (Cmd+L), autocompletar (Tab), ferramentas de protocolo de contexto de modelo (MCP), indexação de codebase e comandos slash personalizados. A extensão do VS Code tem mais de 2M de instalações. O plugin do JetBrains funciona no IntelliJ IDEA, PyCharm, GoLand, WebStorm e Rider — não cobre CLion nem RustRover. Melhores modelos locais: Qwen2.5-Coder 14B (codificação), Llama 3.1 8B (chat). Configuração: instale a extensão, defina o provedor como Ollama, escolha o modelo — pronto em 2 minutos. Nota (junho de 2026): o Continue foi adquirido pela Cursor. A versão 2.0.0-vscode, lançada em 19 de junho de 2026, é a última; o repositório do GitHub agora é somente leitura, e os dados na nuvem hospedados pelo Continue foram excluídos após 15 de julho de 2026. A extensão continua instalando e funcionando totalmente offline com Ollama e BYO-LLM — mas sem mais desenvolvimento da equipe original. Forks da comunidade estão ativos.',
             affiliateLinks: [
               { label: 'Continue no VS Code Marketplace (gratuito)', url: 'https://continue.dev' },
             ],
@@ -2384,7 +2384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Aider — Melhor codificação de IA nativa de terminal',
-            content: 'Aider é um par de programação de IA baseado em terminal que se integra ao git. Ele entende a estrutura completa do seu repositório, faz edições multiarquivo e faz commit das mudanças automaticamente. Funciona com Ollama (via --model ollama/qwen2.5-coder:14b), LM Studio ou qualquer API compatível com OpenAI. Melhores modelos locais: Qwen3-Coder 32B (modo arquiteto) + Qwen3-Coder 7B (modo editor). O Aider usa uma abordagem de dois modelos: um modelo grande planeja as mudanças, um modelo pequeno as implementa. Mais de 44 mil estrelas no GitHub. Custo: gratuito e open-source. Nota: o Aider ainda está na versão 0.x em 2026, então as flags da CLI e o formato do .aider.conf.yml mudam ocasionalmente entre versões menores — confira o changelog após atualizar.',
+            content: 'Aider é um par de programação de IA baseado em terminal que se integra ao git. Ele entende a estrutura completa do seu repositório, faz edições multiarquivo e faz commit das mudanças automaticamente. Funciona com Ollama (via --model ollama/qwen2.5-coder:14b), LM Studio ou qualquer API compatível com OpenAI. Melhores modelos locais: Qwen2.5-Coder 32B (modo arquiteto) + Qwen2.5-Coder 7B (modo editor). O Aider usa uma abordagem de dois modelos: um modelo grande planeja as mudanças, um modelo pequeno as implementa. Mais de 44 mil estrelas no GitHub. Custo: gratuito e open-source. Nota: o Aider ainda está na versão 0.x em 2026, então as flags da CLI e o formato do .aider.conf.yml mudam ocasionalmente entre versões menores — confira o changelog após atualizar.',
             affiliateLinks: [
               { label: 'Aider no GitHub (open-source)', url: 'https://aider.chat' },
             ],
@@ -2439,11 +2439,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Melhores modelos locais por plugin e tarefa',
         columns: ['Plugin', 'Melhor modelo de codificação (local)', 'Melhor modelo de chat (local)', 'VRAM mínima'],
         rows: [
-          { 'Plugin': 'Cline', 'Melhor modelo de codificação (local)': 'Qwen3-Coder 32B Q4', 'Melhor modelo de chat (local)': 'Qwen3 32B Q4', 'VRAM mínima': '24 GB' },
+          { 'Plugin': 'Cline', 'Melhor modelo de codificação (local)': 'Qwen2.5-Coder 32B Q4', 'Melhor modelo de chat (local)': 'Qwen3 32B Q4', 'VRAM mínima': '24 GB' },
           { 'Plugin': 'Bodega One Code', 'Melhor modelo de codificação (local)': 'Qualquer modelo local (BYOL)', 'Melhor modelo de chat (local)': 'Qualquer modelo local (BYOL)', 'VRAM mínima': 'Depende do modelo escolhido' },
-          { 'Plugin': 'Continue (legado)', 'Melhor modelo de codificação (local)': 'Qwen3-Coder 14B Q8', 'Melhor modelo de chat (local)': 'Llama 3.1 8B Q4', 'VRAM mínima': '16 GB' },
+          { 'Plugin': 'Continue (legado)', 'Melhor modelo de codificação (local)': 'Qwen2.5-Coder 14B Q8', 'Melhor modelo de chat (local)': 'Llama 3.1 8B Q4', 'VRAM mínima': '16 GB' },
           { 'Plugin': 'Tabby', 'Melhor modelo de codificação (local)': 'StarCoder2-7B (integrado)', 'Melhor modelo de chat (local)': 'N/A (apenas código)', 'VRAM mínima': '8 GB' },
-          { 'Plugin': 'Aider', 'Melhor modelo de codificação (local)': 'Qwen3-Coder 14B (editor)', 'Melhor modelo de chat (local)': 'Qwen3-Coder 32B (arquiteto)', 'VRAM mínima': '16–24 GB' },
+          { 'Plugin': 'Aider', 'Melhor modelo de codificação (local)': 'Qwen2.5-Coder 14B (editor)', 'Melhor modelo de chat (local)': 'Qwen2.5-Coder 32B (arquiteto)', 'VRAM mínima': '16–24 GB' },
           { 'Plugin': 'Cursor', 'Melhor modelo de codificação (local)': 'DeepSeek-Coder-V2 (via Ollama)', 'Melhor modelo de chat (local)': 'Qwen3 14B', 'VRAM mínima': '16 GB' },
         ],
         image: '/images/best-local-llm-ide-plugins-2026-model-recommendations-hero-pt.webp',
@@ -2469,7 +2469,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qual plugin funciona melhor para refatoração multiarquivo?',
-            a: 'Cline ou Aider. Ambos conseguem ler vários arquivos, entender dependências e fazer edições coordenadas em um codebase. O Cline funciona dentro do VS Code (melhor para feedback visual); o Aider funciona no terminal (melhor para integração CI/CD e commits com reconhecimento de git). Para modelos de 30B+ com 24 GB de VRAM, o Cline com Qwen3-Coder 32B lida com refatorações complexas de forma confiável.',
+            a: 'Cline ou Aider. Ambos conseguem ler vários arquivos, entender dependências e fazer edições coordenadas em um codebase. O Cline funciona dentro do VS Code (melhor para feedback visual); o Aider funciona no terminal (melhor para integração CI/CD e commits com reconhecimento de git). Para modelos de 30B+ com 24 GB de VRAM, o Cline com Qwen2.5-Coder 32B lida com refatorações complexas de forma confiável.',
           },
           {
             q: 'O Tabby funciona sem GPU?',
@@ -2692,7 +2692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 1,
             title: 'Cline — الأفضل عموماً (مجانية، مفتوحة المصدر، تتم صيانتها بفعالية)',
-            content: 'تُعد Cline (المعروفة سابقاً بـClaude Dev) إضافة البرمجة الوكيلية الأفضل صيانةً لنماذج LLM المحلية في 2026 — تصدّرت الترتيب بعد استحواذ Cursor على Continue في يونيو 2026. تقرأ وتكتب الملفات، وتنفذ أوامر الطرفية، وتتصفح الويب (عبر أداة المتصفح)، وتستخدم خوادم MCP. مع Ollama + Qwen3-Coder 32B، يمكن لـCline تنفيذ ميزات كاملة من موجّه واحد. القيود: النماذج بحجم 32B ضرورية للمهام الوكيلية الموثوقة متعددة الخطوات؛ نماذج 14B تعمل للمهام البسيطة. الأسعار: مجانية (BYOK — أحضر مفتاح API الخاص بك من Anthropic أو OpenAI أو أكثر من 30 مزوداً)؛ ClinePass بـ9.99$/شهر (تمهيدي بـ4.99$ للشهر الأول) لتوجيه مُدار دون الحاجة لمفتاح API؛ Teams بـ20$/مستخدم/شهر (أول 10 مقاعد مجانية). VS Code وعائلة JetBrains بأكملها: IntelliJ IDEA وPyCharm وWebStorm وPhpStorm وGoLand وRider وCLion وRustRover وRubyMine وDataGrip. الخلفيات المتوافقة: Ollama وLM Studio وLiteLLM proxy وأكثر من 30 مزود سحابي. أكثر من 5 ملايين تثبيت عبر VS Code وJetBrains ومحررات أخرى.',
+            content: 'تُعد Cline (المعروفة سابقاً بـClaude Dev) إضافة البرمجة الوكيلية الأفضل صيانةً لنماذج LLM المحلية في 2026 — تصدّرت الترتيب بعد استحواذ Cursor على Continue في يونيو 2026. تقرأ وتكتب الملفات، وتنفذ أوامر الطرفية، وتتصفح الويب (عبر أداة المتصفح)، وتستخدم خوادم MCP. مع Ollama + Qwen2.5-Coder 32B، يمكن لـCline تنفيذ ميزات كاملة من موجّه واحد. القيود: النماذج بحجم 32B ضرورية للمهام الوكيلية الموثوقة متعددة الخطوات؛ نماذج 14B تعمل للمهام البسيطة. الأسعار: مجانية (BYOK — أحضر مفتاح API الخاص بك من Anthropic أو OpenAI أو أكثر من 30 مزوداً)؛ ClinePass بـ9.99$/شهر (تمهيدي بـ4.99$ للشهر الأول) لتوجيه مُدار دون الحاجة لمفتاح API؛ Teams بـ20$/مستخدم/شهر (أول 10 مقاعد مجانية). VS Code وعائلة JetBrains بأكملها: IntelliJ IDEA وPyCharm وWebStorm وPhpStorm وGoLand وRider وCLion وRustRover وRubyMine وDataGrip. الخلفيات المتوافقة: Ollama وLM Studio وLiteLLM proxy وأكثر من 30 مزود سحابي. أكثر من 5 ملايين تثبيت عبر VS Code وJetBrains ومحررات أخرى.',
             affiliateLinks: [
               { label: 'Cline في VS Code Marketplace (مجاني)', url: 'https://github.com/cline/cline' },
             ],
@@ -2708,7 +2708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'Continue — لا تزال تعمل لكن لم يعد يتم صيانتها [استحوذت عليها Cursor في يونيو 2026 — الإصدار النهائي v2.0.0-vscode]',
-            content: 'كانت Continue المساعد البرمجي الرائد مفتوح المصدر لنماذج LLM المحلية قبل استحواذ Cursor عليها في يونيو 2026. تتصل بـOllama وLM Studio وllama.cpp وأي API متوافقة مع OpenAI. الميزات: دردشة داخل المحرر (Cmd+L)، إكمال تلقائي (Tab)، أدوات بروتوكول سياق النموذج (MCP)، فهرسة قاعدة الكود وأوامر slash مخصصة. تجاوزت تثبيتات إضافة VS Code مليونَي تثبيت. إضافة JetBrains تعمل في IntelliJ IDEA وPyCharm وGoLand وWebStorm وRider — ولا تغطي CLion أو RustRover. أفضل النماذج المحلية: Qwen3-Coder 14B (للبرمجة)، Llama 3.1 8B (للدردشة). الإعداد: ثبّت الإضافة، عيّن المزوّد على Ollama، اختر النموذج — ينتهي الأمر خلال دقيقتين. ملاحظة (يونيو 2026): استحوذت Cursor على Continue. الإصدار v2.0.0-vscode، الصادر في 19 يونيو 2026، هو الإصدار النهائي؛ مستودع GitHub أصبح للقراءة فقط، وحُذفت بيانات السحابة المستضافة لدى Continue بعد 15 يوليو 2026. لا تزال الإضافة تُثبَّت وتعمل بالكامل بلا اتصال مع Ollama وBYO-LLM — لكن دون أي تطوير إضافي من الفريق الأصلي. تظل النسخ المتفرعة (forks) من المجتمع نشطة.',
+            content: 'كانت Continue المساعد البرمجي الرائد مفتوح المصدر لنماذج LLM المحلية قبل استحواذ Cursor عليها في يونيو 2026. تتصل بـOllama وLM Studio وllama.cpp وأي API متوافقة مع OpenAI. الميزات: دردشة داخل المحرر (Cmd+L)، إكمال تلقائي (Tab)، أدوات بروتوكول سياق النموذج (MCP)، فهرسة قاعدة الكود وأوامر slash مخصصة. تجاوزت تثبيتات إضافة VS Code مليونَي تثبيت. إضافة JetBrains تعمل في IntelliJ IDEA وPyCharm وGoLand وWebStorm وRider — ولا تغطي CLion أو RustRover. أفضل النماذج المحلية: Qwen2.5-Coder 14B (للبرمجة)، Llama 3.1 8B (للدردشة). الإعداد: ثبّت الإضافة، عيّن المزوّد على Ollama، اختر النموذج — ينتهي الأمر خلال دقيقتين. ملاحظة (يونيو 2026): استحوذت Cursor على Continue. الإصدار v2.0.0-vscode، الصادر في 19 يونيو 2026، هو الإصدار النهائي؛ مستودع GitHub أصبح للقراءة فقط، وحُذفت بيانات السحابة المستضافة لدى Continue بعد 15 يوليو 2026. لا تزال الإضافة تُثبَّت وتعمل بالكامل بلا اتصال مع Ollama وBYO-LLM — لكن دون أي تطوير إضافي من الفريق الأصلي. تظل النسخ المتفرعة (forks) من المجتمع نشطة.',
             affiliateLinks: [
               { label: 'Continue في VS Code Marketplace (مجاني)', url: 'https://continue.dev' },
             ],
@@ -2724,7 +2724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 5,
             title: 'Aider — أفضل برمجة ذكاء اصطناعي أصيلة للطرفية',
-            content: 'Aider هو مبرمج زوجي مبني على الطرفية يتكامل مع git. يفهم هيكل مستودعك بالكامل، ويجري تعديلات متعددة الملفات، ويُعمل commit للتغييرات تلقائياً. يعمل مع Ollama (عبر --model ollama/qwen2.5-coder:14b) وLM Studio وأي API متوافقة مع OpenAI. أفضل النماذج المحلية: Qwen3-Coder 32B (وضع المهندس المعماري) + Qwen3-Coder 7B (وضع المحرر). يستخدم Aider نهج النموذجَين: نموذج كبير يخطط للتغييرات، ونموذج صغير ينفذها. أكثر من 44 ألف نجمة على GitHub. التكلفة: مجاني ومفتوح المصدر. ملاحظة: لا يزال Aider في نظام ترقيم إصدارات 0.x حتى 2026، لذا تتغير أحياناً أعلام سطر الأوامر (CLI) وصيغة ملف .aider.conf.yml بين الإصدارات الفرعية — راجع سجل التغييرات بعد كل تحديث.',
+            content: 'Aider هو مبرمج زوجي مبني على الطرفية يتكامل مع git. يفهم هيكل مستودعك بالكامل، ويجري تعديلات متعددة الملفات، ويُعمل commit للتغييرات تلقائياً. يعمل مع Ollama (عبر --model ollama/qwen2.5-coder:14b) وLM Studio وأي API متوافقة مع OpenAI. أفضل النماذج المحلية: Qwen2.5-Coder 32B (وضع المهندس المعماري) + Qwen2.5-Coder 7B (وضع المحرر). يستخدم Aider نهج النموذجَين: نموذج كبير يخطط للتغييرات، ونموذج صغير ينفذها. أكثر من 44 ألف نجمة على GitHub. التكلفة: مجاني ومفتوح المصدر. ملاحظة: لا يزال Aider في نظام ترقيم إصدارات 0.x حتى 2026، لذا تتغير أحياناً أعلام سطر الأوامر (CLI) وصيغة ملف .aider.conf.yml بين الإصدارات الفرعية — راجع سجل التغييرات بعد كل تحديث.',
             affiliateLinks: [
               { label: 'Aider على GitHub (مفتوح المصدر)', url: 'https://aider.chat' },
             ],
@@ -2779,11 +2779,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'أفضل النماذج المحلية حسب الإضافة والمهمة',
         columns: ['الإضافة', 'أفضل نموذج برمجة (محلي)', 'أفضل نموذج دردشة (محلي)', 'الحد الأدنى من VRAM'],
         rows: [
-          { 'الإضافة': 'Cline', 'أفضل نموذج برمجة (محلي)': 'Qwen3-Coder 32B Q4', 'أفضل نموذج دردشة (محلي)': 'Qwen3 32B Q4', 'الحد الأدنى من VRAM': '24 GB' },
+          { 'الإضافة': 'Cline', 'أفضل نموذج برمجة (محلي)': 'Qwen2.5-Coder 32B Q4', 'أفضل نموذج دردشة (محلي)': 'Qwen3 32B Q4', 'الحد الأدنى من VRAM': '24 GB' },
           { 'الإضافة': 'Bodega One Code', 'أفضل نموذج برمجة (محلي)': 'أي نموذج محلي (BYOL)', 'أفضل نموذج دردشة (محلي)': 'أي نموذج محلي (BYOL)', 'الحد الأدنى من VRAM': 'يعتمد على النموذج المختار' },
-          { 'الإضافة': 'Continue (قديم)', 'أفضل نموذج برمجة (محلي)': 'Qwen3-Coder 14B Q8', 'أفضل نموذج دردشة (محلي)': 'Llama 3.1 8B Q4', 'الحد الأدنى من VRAM': '16 GB' },
+          { 'الإضافة': 'Continue (قديم)', 'أفضل نموذج برمجة (محلي)': 'Qwen2.5-Coder 14B Q8', 'أفضل نموذج دردشة (محلي)': 'Llama 3.1 8B Q4', 'الحد الأدنى من VRAM': '16 GB' },
           { 'الإضافة': 'Tabby', 'أفضل نموذج برمجة (محلي)': 'StarCoder2-7B (مدمج)', 'أفضل نموذج دردشة (محلي)': 'غير متاح (الكود فقط)', 'الحد الأدنى من VRAM': '8 GB' },
-          { 'الإضافة': 'Aider', 'أفضل نموذج برمجة (محلي)': 'Qwen3-Coder 14B (محرر)', 'أفضل نموذج دردشة (محلي)': 'Qwen3-Coder 32B (مهندس معماري)', 'الحد الأدنى من VRAM': '16–24 GB' },
+          { 'الإضافة': 'Aider', 'أفضل نموذج برمجة (محلي)': 'Qwen2.5-Coder 14B (محرر)', 'أفضل نموذج دردشة (محلي)': 'Qwen2.5-Coder 32B (مهندس معماري)', 'الحد الأدنى من VRAM': '16–24 GB' },
           { 'الإضافة': 'Cursor', 'أفضل نموذج برمجة (محلي)': 'DeepSeek-Coder-V2 (عبر Ollama)', 'أفضل نموذج دردشة (محلي)': 'Qwen3 14B', 'الحد الأدنى من VRAM': '16 GB' },
         ],
         image: '/images/best-local-llm-ide-plugins-2026-model-recommendations-hero-ar.webp',
@@ -2809,7 +2809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'أي إضافة تعمل بشكل أفضل لإعادة الهيكلة متعددة الملفات؟',
-            a: 'Cline أو Aider. كلاهما يمكنه قراءة ملفات متعددة وفهم التبعيات وإجراء تعديلات منسقة في قاعدة الكود. تعمل Cline داخل VS Code أو JetBrains (أفضل للتغذية الراجعة المرئية)؛ يعمل Aider في الطرفية (أفضل لتكامل CI/CD وcommits المدركة لـgit). للنماذج بحجم 30B+ مع 24 GB من VRAM، يتعامل Cline مع Qwen3-Coder 32B مع إعادة الهيكلة المعقدة بشكل موثوق.',
+            a: 'Cline أو Aider. كلاهما يمكنه قراءة ملفات متعددة وفهم التبعيات وإجراء تعديلات منسقة في قاعدة الكود. تعمل Cline داخل VS Code أو JetBrains (أفضل للتغذية الراجعة المرئية)؛ يعمل Aider في الطرفية (أفضل لتكامل CI/CD وcommits المدركة لـgit). للنماذج بحجم 30B+ مع 24 GB من VRAM، يتعامل Cline مع Qwen2.5-Coder 32B مع إعادة الهيكلة المعقدة بشكل موثوق.',
           },
           {
             q: 'هل يعمل Tabby بدون GPU؟',

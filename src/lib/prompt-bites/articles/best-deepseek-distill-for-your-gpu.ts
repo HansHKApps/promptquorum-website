@@ -95,7 +95,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 vs R1: This Table Is R1 Only',
         content: [
-          '**DeepSeek-R1 is the reasoning family these commands install; DeepSeek-V3 is a separate chat model.** Do not expect a V3 experience from these distills — they are tuned to show step-by-step reasoning for math and logic. V3 is also a 671B MoE and not consumer-runnable; see the [DeepSeek V3 hardware bite](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**DeepSeek-R1 is the reasoning family these commands install; DeepSeek-V3 is a separate chat model.** Do not expect a V3 experience from these distills — they are tuned to show step-by-step reasoning for math and logic. V3 is also a 671B MoE and not consumer-runnable; see the [DeepSeek-V3 hardware bite](/prompt-bites/deepseek-v3-local-hardware-requirements).',
           '**Update:** DeepSeek has since released DeepSeek-V4 (Flash and Pro) as its newer flagship generation, also available as open weights. The R1 distills covered here are not being discontinued and remain fully valid to run locally — if you want the newest architecture, V4 is worth evaluating alongside them.',
         ],
       },
@@ -115,7 +115,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[DeepSeek-R1 Distill VRAM Cheatsheet](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — every distill by quant (Q4_K_M, Q8, FP16) with VRAM and min-GPU',
           '[Best Local Reasoning Model 2026: DeepSeek-R1 Ranked](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — the full ranked guide with benchmarks and tiers',
-          '[DeepSeek V3 Local Hardware Requirements](/prompt-bites/deepseek-v3-local-hardware-requirements) — the V3 chat-model counterpart',
+          '[DeepSeek-V3 Local Hardware Requirements](/prompt-bites/deepseek-v3-local-hardware-requirements) — the V3 chat-model counterpart',
         ],
       },
     },
@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 vs R1 : ce tableau ne concerne que R1',
         content: [
-          '**DeepSeek-R1 est la famille de raisonnement qu\'installent ces commandes ; DeepSeek-V3 est un modèle de chat distinct.** N\'attendez pas une expérience V3 de ces distillations — elles sont réglées pour montrer un raisonnement étape par étape en mathématiques et en logique. V3 est en outre un MoE 671B non exécutable sur du matériel grand public ; voir la [fiche matériel DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**DeepSeek-R1 est la famille de raisonnement qu\'installent ces commandes ; DeepSeek-V3 est un modèle de chat distinct.** N\'attendez pas une expérience V3 de ces distillations — elles sont réglées pour montrer un raisonnement étape par étape en mathématiques et en logique. V3 est en outre un MoE 671B non exécutable sur du matériel grand public ; voir la [fiche matériel DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
           '**Mise à jour :** DeepSeek a depuis publié DeepSeek-V4 (Flash et Pro) comme nouvelle génération phare, également disponible en poids ouverts. Les distillations R1 présentées ici ne sont pas abandonnées et restent pleinement utilisables en local — si vous voulez l\'architecture la plus récente, V4 mérite d\'être évalué en complément.',
         ],
       },
@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[Fiche VRAM des distillations DeepSeek-R1](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — chaque distillation par quant (Q4_K_M, Q8, FP16) avec VRAM et GPU minimal',
           '[Meilleur modèle de raisonnement local 2026 : DeepSeek-R1 classé](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — le guide classé complet avec benchmarks et paliers',
-          '[Configuration matérielle locale DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — le pendant du modèle de chat V3',
+          '[Configuration matérielle locale DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — le pendant du modèle de chat V3',
         ],
       },
     },
@@ -469,7 +469,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[DeepSeek-R1 Distill VRAM早見表](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — quant別（Q4_K_M、Q8、FP16）の各distillとVRAMおよび最小GPU',
           '[最良のローカル推論モデル2026：DeepSeek-R1ランキング](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — ベンチマークとティアを含む完全ランキングガイド',
-          '[DeepSeek V3 ローカルハードウェア要件](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3チャットモデルの対応版',
+          '[DeepSeek-V3 ローカルハードウェア要件](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3チャットモデルの対応版',
         ],
       },
     },
@@ -567,7 +567,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 与 R1：此表仅针对 R1',
         content: [
-          '**DeepSeek-R1 是这些命令安装的推理家族；DeepSeek-V3 是另一个独立的聊天模型。** 不要指望这些蒸馏模型提供 V3 体验——它们经过调优以展示数学和逻辑的逐步推理。此外 V3 是 671B MoE，无法在消费级硬件上运行；参见 [DeepSeek V3 硬件简报](/prompt-bites/deepseek-v3-local-hardware-requirements)。',
+          '**DeepSeek-R1 是这些命令安装的推理家族；DeepSeek-V3 是另一个独立的聊天模型。** 不要指望这些蒸馏模型提供 V3 体验——它们经过调优以展示数学和逻辑的逐步推理。此外 V3 是 671B MoE，无法在消费级硬件上运行；参见 [DeepSeek-V3 硬件简报](/prompt-bites/deepseek-v3-local-hardware-requirements)。',
           '**更新:** DeepSeek 此后发布了新一代旗舰模型 DeepSeek-V4(Flash 和 Pro),同样提供开源权重。本文介绍的 R1 蒸馏模型并未停用,依然可以完整地在本地运行——如果你想使用最新架构,可以将 V4 一并纳入考虑。',
         ],
       },
@@ -587,7 +587,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[DeepSeek-R1 蒸馏 VRAM 速查表](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — 按量化（Q4_K_M、Q8、FP16）列出每个蒸馏模型及 VRAM 和最低 GPU',
           '[2026 最佳本地推理模型：DeepSeek-R1 排名](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 含基准和分级的完整排名指南',
-          '[DeepSeek V3 本地硬件要求](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 聊天模型对应版',
+          '[DeepSeek-V3 本地硬件要求](/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 聊天模型对应版',
         ],
       },
     },
@@ -685,7 +685,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 vs R1: esta tabla es solo para R1',
         content: [
-          '**DeepSeek-R1 es la familia de razonamiento que instalan estos comandos; DeepSeek-V3 es un modelo de chat aparte.** No esperes una experiencia V3 de estas destilaciones: están ajustadas para mostrar razonamiento paso a paso en matemáticas y lógica. Además, V3 es un MoE de 671B y no se puede ejecutar en hardware de consumo; consulta la [ficha de hardware de DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**DeepSeek-R1 es la familia de razonamiento que instalan estos comandos; DeepSeek-V3 es un modelo de chat aparte.** No esperes una experiencia V3 de estas destilaciones: están ajustadas para mostrar razonamiento paso a paso en matemáticas y lógica. Además, V3 es un MoE de 671B y no se puede ejecutar en hardware de consumo; consulta la [ficha de hardware de DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
           '**Actualización:** DeepSeek ha lanzado desde entonces DeepSeek-V4 (Flash y Pro) como su nueva generación insignia, también disponible en pesos abiertos. Las destilaciones de R1 tratadas aquí no se están descontinuando y siguen siendo totalmente válidas para ejecutar en local — si quieres la arquitectura más reciente, vale la pena evaluar V4 también.',
         ],
       },
@@ -705,7 +705,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[Chuleta de VRAM de destilaciones DeepSeek-R1](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — cada destilación por cuantización (Q4_K_M, Q8, FP16) con VRAM y GPU mínima',
           '[Mejor modelo de razonamiento local 2026: DeepSeek-R1 clasificado](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — la guía completa clasificada con benchmarks y niveles',
-          '[Requisitos de hardware local de DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — la contraparte del modelo de chat V3',
+          '[Requisitos de hardware local de DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — la contraparte del modelo de chat V3',
         ],
       },
     },
@@ -803,7 +803,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 vs R1: esta tabela é só de R1',
         content: [
-          '**A DeepSeek-R1 é a família de raciocínio que estes comandos instalam; a DeepSeek-V3 é um modelo de chat separado.** Não espere uma experiência V3 dessas destilações — elas são ajustadas para mostrar raciocínio passo a passo em matemática e lógica. A V3 também é um MoE de 671B e não roda em hardware de consumo; veja a [ficha de hardware da DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**A DeepSeek-R1 é a família de raciocínio que estes comandos instalam; a DeepSeek-V3 é um modelo de chat separado.** Não espere uma experiência V3 dessas destilações — elas são ajustadas para mostrar raciocínio passo a passo em matemática e lógica. A V3 também é um MoE de 671B e não roda em hardware de consumo; veja a [ficha de hardware da DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
           '**Atualização:** Desde então, a DeepSeek lançou o DeepSeek-V4 (Flash e Pro) como sua nova geração principal, também disponível em pesos abertos. As destilações do R1 abordadas aqui não estão sendo descontinuadas e continuam totalmente válidas para rodar localmente — se você quiser a arquitetura mais recente, vale a pena avaliar o V4 também.',
         ],
       },
@@ -823,7 +823,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[Tabela de VRAM das destilações DeepSeek-R1](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — cada destilação por quantização (Q4_K_M, Q8, FP16) com VRAM e GPU mínima',
           '[Melhor modelo de raciocínio local 2026: DeepSeek-R1 classificado](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — o guia classificado completo com benchmarks e níveis',
-          '[Requisitos de hardware local da DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — a contraparte do modelo de chat V3',
+          '[Requisitos de hardware local da DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — a contraparte do modelo de chat V3',
         ],
       },
     },
@@ -921,7 +921,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 مقابل R1: هذا الجدول لـ R1 فقط',
         content: [
-          '**DeepSeek-R1 هي العائلة الاستدلالية التي تثبّتها هذه الأوامر؛ أما DeepSeek-V3 فهو نموذج محادثة منفصل.** لا تتوقع تجربة V3 من هذه النماذج المقطّرة — فهي مضبوطة لإظهار الاستدلال خطوة بخطوة في الرياضيات والمنطق. كما أن V3 هو نموذج MoE بحجم 671B ولا يمكن تشغيله على عتاد المستهلك؛ راجع [بطاقة عتاد DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
+          '**DeepSeek-R1 هي العائلة الاستدلالية التي تثبّتها هذه الأوامر؛ أما DeepSeek-V3 فهو نموذج محادثة منفصل.** لا تتوقع تجربة V3 من هذه النماذج المقطّرة — فهي مضبوطة لإظهار الاستدلال خطوة بخطوة في الرياضيات والمنطق. كما أن V3 هو نموذج MoE بحجم 671B ولا يمكن تشغيله على عتاد المستهلك؛ راجع [بطاقة عتاد DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements).',
           '**تحديث:** أصدرت DeepSeek منذ ذلك الحين DeepSeek-V4 (Flash وPro) كجيلها الرئيسي الأحدث، وهو متاح أيضًا كأوزان مفتوحة. نسخ R1 المقطّرة المتناولة هنا لم يتم إيقافها ولا تزال صالحة تمامًا للتشغيل محليًا — إذا كنت تريد أحدث بنية، يستحق V4 التقييم أيضًا.',
         ],
       },
@@ -941,7 +941,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[جدول VRAM لنماذج DeepSeek-R1 المقطّرة](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — كل نموذج مقطّر حسب الكمّنة (Q4_K_M، Q8، FP16) مع VRAM والحد الأدنى من كرت الشاشة',
           '[أفضل نموذج استدلال محلي 2026: تصنيف DeepSeek-R1](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — الدليل المصنّف الكامل مع المعايير والفئات',
-          '[متطلبات العتاد المحلي لـ DeepSeek V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — نظير نموذج المحادثة V3',
+          '[متطلبات العتاد المحلي لـ DeepSeek-V3](/prompt-bites/deepseek-v3-local-hardware-requirements) — نظير نموذج المحادثة V3',
         ],
       },
     },
@@ -1039,7 +1039,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'v3-vs-r1',
         title: 'V3 대 R1: 이 표는 R1 전용입니다',
         content: [
-          '**DeepSeek-R1은 이 명령어가 설치하는 추론 계열이며, DeepSeek-V3는 별도의 채팅 모델입니다.** 이 디스틸에서 V3 경험을 기대하지 마십시오 — 이들은 수학과 논리에 대한 단계별 추론을 보여주도록 조정되어 있습니다. 또한 V3는 671B MoE이며 소비자 하드웨어에서 실행할 수 없습니다. [DeepSeek V3 하드웨어 바이트](/ko/prompt-bites/deepseek-v3-local-hardware-requirements)를 참조하십시오.',
+          '**DeepSeek-R1은 이 명령어가 설치하는 추론 계열이며, DeepSeek-V3는 별도의 채팅 모델입니다.** 이 디스틸에서 V3 경험을 기대하지 마십시오 — 이들은 수학과 논리에 대한 단계별 추론을 보여주도록 조정되어 있습니다. 또한 V3는 671B MoE이며 소비자 하드웨어에서 실행할 수 없습니다. [DeepSeek-V3 하드웨어 바이트](/ko/prompt-bites/deepseek-v3-local-hardware-requirements)를 참조하십시오.',
           '**업데이트:** DeepSeek는 이후 새로운 플래그십 세대인 DeepSeek-V4(Flash 및 Pro)를 출시했으며, 이 역시 오픈 웨이트로 제공됩니다. 여기서 다루는 R1 증류 모델은 단종되지 않았으며 로컬에서 계속 문제없이 실행할 수 있습니다 — 최신 아키텍처를 원한다면 V4도 함께 검토할 가치가 있습니다.',
         ],
       },
@@ -1059,7 +1059,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[DeepSeek-R1 디스틸 VRAM 치트시트](/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — 양자화별(Q4_K_M, Q8, FP16) 각 디스틸과 VRAM 및 최소 GPU',
           '[2026 최고의 로컬 추론 모델: DeepSeek-R1 순위](/ko/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 벤치마크와 등급이 포함된 전체 순위 가이드',
-          '[DeepSeek V3 로컬 하드웨어 요구 사항](/ko/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 채팅 모델 대응판',
+          '[DeepSeek-V3 로컬 하드웨어 요구 사항](/ko/prompt-bites/deepseek-v3-local-hardware-requirements) — V3 채팅 모델 대응판',
         ],
       },
     },

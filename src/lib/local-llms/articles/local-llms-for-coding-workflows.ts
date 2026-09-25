@@ -162,7 +162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'What is Qwen3\'s HumanEval score for coding?',
-              a: 'Qwen3 8B scores approximately 76% on HumanEval (legacy single-function benchmark). The coding-specialized Qwen3-Coder 32B variant scores 87% on HumanEval. As of 2026, SWE-bench (real-world GitHub issue resolution) has replaced HumanEval as the primary benchmark for coding LLMs — on SWE-bench, Qwen3.8-27B scores 61.7% and Kimi K2.6 scores 58.6 on SWE-Bench Pro.',
+              a: 'Qwen3 8B scores approximately 76% on HumanEval (legacy single-function benchmark). The coding-specialized Qwen2.5-Coder 32B variant scores 87% on HumanEval. As of 2026, SWE-bench (real-world GitHub issue resolution) has replaced HumanEval as the primary benchmark for coding LLMs — on SWE-bench, Qwen3.8-27B scores 61.7% and Kimi K2.6 scores 58.6 on SWE-Bench Pro.',
             },
             {
               q: 'How does Kimi K2.6 compare to GitHub Copilot?',
@@ -247,7 +247,7 @@ schema: {
         '@type': 'FAQPage',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Which local LLM is best for coding in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6 (58.6 SWE-Bench Pro, MoE) for maximum accuracy. Qwen3.8-27B (61.7% SWE-bench) for the best dense-model quality on 24 GB VRAM. Devstral Small 24B for agentic multi-file coding. Codestral 22B for IDE autocomplete. Qwen3 8B for 8 GB VRAM. For MacBook: Qwen3 8B via Ollama runs well on M1 Pro+.' } },
-          { '@type': 'Question', 'name': 'What is Qwen3\'s HumanEval score for coding?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B scores approximately 76% on HumanEval (legacy benchmark). Qwen3-Coder 32B scores 87% on HumanEval. As of 2026, SWE-bench has replaced HumanEval as the primary benchmark — Qwen3.8-27B scores 61.7% SWE-bench, Kimi K2.6 scores 58.6 SWE-Bench Pro.' } },
+          { '@type': 'Question', 'name': 'What is Qwen3\'s HumanEval score for coding?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B scores approximately 76% on HumanEval (legacy benchmark). Qwen2.5-Coder 32B scores 87% on HumanEval. As of 2026, SWE-bench has replaced HumanEval as the primary benchmark — Qwen3.8-27B scores 61.7% SWE-bench, Kimi K2.6 scores 58.6 SWE-Bench Pro.' } },
           { '@type': 'Question', 'name': 'How does Kimi K2.6 compare to GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6 scores 58.6 on SWE-Bench Pro, competitive with several frontier cloud models on real-world issue resolution. Speed: local is 2–5 seconds vs Copilot\'s ~300ms. Privacy: local keeps code on-device. Cost: local $0/month after hardware; Copilot $228/year.' } },
           { '@type': 'Question', 'name': 'Can I use a local coding LLM in VS Code?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes — install Continue.dev (free, open source). Configure to connect to Ollama at localhost:11434. Tab or Ctrl+Shift+\\\\ triggers suggestions. Works with Kimi K2.6, Qwen3.8-27B, Devstral Small 24B, Codestral 22B, Qwen3 8B, and all Ollama models.' } },
           { '@type': 'Question', 'name': 'Is Copilot or local LLM better for a proprietary codebase?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Local LLM. With Copilot, code is sent to Microsoft/OpenAI servers. Local keeps code on-device. For regulated industries (finance, healthcare, defense), local is the only compliant option. The quality gap has narrowed with SWE-bench-tuned models like Kimi K2.6.' } },
@@ -426,7 +426,7 @@ schema: {
             },
             {
               q: 'Welchen HumanEval-Score erreicht Qwen3 beim Programmieren?',
-              a: 'Qwen3 8B erreicht etwa 76% auf HumanEval (veralteter Einzelfunktions-Benchmark). Die programmierspezialisierte Variante Qwen3-Coder 32B erreicht 87% auf HumanEval. Seit 2026 hat SWE-bench (Lösung realer GitHub-Issues) HumanEval als primären Benchmark für Programmier-LLMs abgelöst — auf SWE-bench erreicht Qwen3.8-27B 61,7% und Kimi K2.6 58,6 auf SWE-Bench Pro.',
+              a: 'Qwen3 8B erreicht etwa 76% auf HumanEval (veralteter Einzelfunktions-Benchmark). Die programmierspezialisierte Variante Qwen2.5-Coder 32B erreicht 87% auf HumanEval. Seit 2026 hat SWE-bench (Lösung realer GitHub-Issues) HumanEval als primären Benchmark für Programmier-LLMs abgelöst — auf SWE-bench erreicht Qwen3.8-27B 61,7% und Kimi K2.6 58,6 auf SWE-Bench Pro.',
             },
             {
               q: 'Wie vergleicht sich Kimi K2.6 mit GitHub Copilot?',
@@ -517,7 +517,7 @@ schema: {
         '@type': 'FAQPage',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Welches lokale LLM ist 2026 am besten für Programmieren?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Stand Juli 2026: Kimi K2.6 (58,6 SWE-Bench Pro, MoE) für maximale Genauigkeit. Qwen3.8-27B (61,7% SWE-bench) für die beste Qualität unter den dichten Modellen auf 24 GB VRAM. Devstral Small 24B für agentisches Multi-Datei-Programmieren. Codestral 22B für IDE-Autovervollständigung. Qwen3 8B für 8 GB VRAM. Für MacBook: Qwen3 8B läuft via Ollama gut auf M1 Pro+.' } },
-          { '@type': 'Question', 'name': 'Welchen HumanEval-Score erreicht Qwen3 beim Programmieren?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B erreicht etwa 76% auf HumanEval (veralteter Benchmark). Qwen3-Coder 32B erreicht 87% auf HumanEval. Seit 2026 hat SWE-bench HumanEval als primären Benchmark abgelöst — Qwen3.8-27B erreicht 61,7% SWE-bench, Kimi K2.6 58,6 SWE-Bench Pro.' } },
+          { '@type': 'Question', 'name': 'Welchen HumanEval-Score erreicht Qwen3 beim Programmieren?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B erreicht etwa 76% auf HumanEval (veralteter Benchmark). Qwen2.5-Coder 32B erreicht 87% auf HumanEval. Seit 2026 hat SWE-bench HumanEval als primären Benchmark abgelöst — Qwen3.8-27B erreicht 61,7% SWE-bench, Kimi K2.6 58,6 SWE-Bench Pro.' } },
           { '@type': 'Question', 'name': 'Wie vergleicht sich Kimi K2.6 mit GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6 erreicht 58,6 auf SWE-Bench Pro, konkurrenzfähig mit mehreren Frontier-Cloud-Modellen bei der Lösung realer Probleme. Geschwindigkeit: lokal 2–5 Sekunden vs. Copilots ~300ms. Datenschutz: lokal hält Code auf dem Gerät. Kosten: lokal 0 €/Monat nach Hardware; Copilot ca. 188 €/Jahr.' } },
           { '@type': 'Question', 'name': 'Kann ich ein lokales Programmierungsmodell in VS Code verwenden?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja — installieren Sie Continue.dev (kostenlos, Open Source). Konfigurieren Sie es für Ollama auf localhost:11434. Tab oder Ctrl+Shift+\\\\ löst Vorschläge aus. Funktioniert mit Kimi K2.6, Qwen3.8-27B, Devstral Small 24B, Codestral 22B, Qwen3 8B und allen Ollama-Modellen.' } },
           { '@type': 'Question', 'name': 'Ist Copilot oder ein lokales LLM besser für eine proprietäre Codebasis?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Lokales LLM. Bei Copilot wird Code an Microsoft/OpenAI-Server gesendet. Lokal bleibt Code auf Ihrem Gerät. Für regulierte Industrien (Finanz, Gesundheit, Verteidigung) ist lokal die einzige konforme Option. Der Qualitätsunterschied hat sich mit SWE-bench-optimierten Modellen wie Kimi K2.6 deutlich verringert.' } },
@@ -698,7 +698,7 @@ schema: {
             },
             {
               q: 'Quel est le score HumanEval de Qwen3 pour la programmation ?',
-              a: 'Qwen3 8B obtient environ 76% sur HumanEval (benchmark hérité mono-fonction). La variante spécialisée Qwen3-Coder 32B obtient 87% sur HumanEval. Depuis 2026, SWE-bench (résolution de problèmes GitHub réels) a remplacé HumanEval comme benchmark de référence pour les LLM de programmation — sur SWE-bench, Qwen3.8-27B obtient 61,7% et Kimi K2.6 obtient 58,6 sur SWE-Bench Pro.',
+              a: 'Qwen3 8B obtient environ 76% sur HumanEval (benchmark hérité mono-fonction). La variante spécialisée Qwen2.5-Coder 32B obtient 87% sur HumanEval. Depuis 2026, SWE-bench (résolution de problèmes GitHub réels) a remplacé HumanEval comme benchmark de référence pour les LLM de programmation — sur SWE-bench, Qwen3.8-27B obtient 61,7% et Kimi K2.6 obtient 58,6 sur SWE-Bench Pro.',
             },
             {
               q: 'Comment Kimi K2.6 se compare-t-il à GitHub Copilot ?',
@@ -781,7 +781,7 @@ schema: {
         '@type': 'FAQPage',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Quel est le meilleur LLM local pour la programmation en 2026 ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'En juillet 2026 : Kimi K2.6 (58,6 SWE-Bench Pro, MoE) pour la précision maximale. Qwen3.8-27B (61,7% SWE-bench) pour la meilleure qualité dense sur 22 GB de VRAM. Devstral Small 24B pour la programmation agentique. Codestral 22B pour l\'autocomplétion IDE. Qwen3 8B pour 8 GB de VRAM. Pour MacBook : Qwen3 8B fonctionne bien via Ollama sur M1 Pro+.' } },
-          { '@type': 'Question', 'name': 'Quel est le score HumanEval de Qwen3 pour la programmation ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B obtient environ 76% sur HumanEval (benchmark hérité). Qwen3-Coder 32B obtient 87% sur HumanEval. Depuis 2026, SWE-bench a remplacé HumanEval comme benchmark de référence — Qwen3.8-27B obtient 61,7% SWE-bench, Kimi K2.6 obtient 58,6 SWE-Bench Pro.' } },
+          { '@type': 'Question', 'name': 'Quel est le score HumanEval de Qwen3 pour la programmation ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B obtient environ 76% sur HumanEval (benchmark hérité). Qwen2.5-Coder 32B obtient 87% sur HumanEval. Depuis 2026, SWE-bench a remplacé HumanEval comme benchmark de référence — Qwen3.8-27B obtient 61,7% SWE-bench, Kimi K2.6 obtient 58,6 SWE-Bench Pro.' } },
           { '@type': 'Question', 'name': 'Comment Kimi K2.6 se compare-t-il à GitHub Copilot ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6 obtient 58,6 sur SWE-Bench Pro, compétitif avec plusieurs modèles cloud de pointe. Vitesse : local 2–5 secondes vs Copilot ~300ms. Confidentialité : local garde le code sur l\'appareil. Coût : local env. 0 €/mois après matériel ; Copilot env. 188 €/an.' } },
           { '@type': 'Question', 'name': 'Puis-je utiliser un LLM de programmation local dans VS Code ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui — installez Continue.dev (gratuite, open source). Configurez-la pour Ollama sur localhost:11434. Tab ou Ctrl+Maj+\\\\ déclenche les suggestions. Fonctionne avec Kimi K2.6, Qwen3.8-27B, Devstral Small 24B, Codestral 22B, Qwen3 8B et tous les modèles Ollama.' } },
           { '@type': 'Question', 'name': 'Copilot ou LLM local pour une base de code propriétaire ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLM local. Avec Copilot, le code est envoyé aux serveurs Microsoft/OpenAI. Local garde le code sur l\'appareil. Pour les secteurs réglementés (finance, santé, défense), local est la seule option conforme. L\'écart de qualité s\'est réduit avec des modèles optimisés SWE-bench comme Kimi K2.6.' } },
@@ -960,7 +960,7 @@ schema: {
             },
             {
               q: 'Qwen3のHumanEvalスコアはどのくらいですか',
-              a: 'Qwen3 8BはHumanEval（レガシーな単一関数ベンチマーク）で約76%を記録します。プログラミング特化版のQwen3-Coder 32BはHumanEvalで87%を記録します。2026年時点で、SWE-bench（実際のGitHub issue解決）がプログラミングLLMの主要ベンチマークとしてHumanEvalに取って代わりました——SWE-benchでは、Qwen3.8-27Bが61.7%、Kimi K2.6がSWE-Bench Proで58.6を記録します。',
+              a: 'Qwen3 8BはHumanEval（レガシーな単一関数ベンチマーク）で約76%を記録します。プログラミング特化版のQwen2.5-Coder 32BはHumanEvalで87%を記録します。2026年時点で、SWE-bench（実際のGitHub issue解決）がプログラミングLLMの主要ベンチマークとしてHumanEvalに取って代わりました——SWE-benchでは、Qwen3.8-27Bが61.7%、Kimi K2.6がSWE-Bench Proで58.6を記録します。',
             },
             {
               q: 'Kimi K2.6はGitHub Copilotとどう比較？',
@@ -1043,7 +1043,7 @@ schema: {
         '@type': 'FAQPage',
         'mainEntity': [
           { '@type': 'Question', 'name': '2026年のプログラミング向けベストローカルLLMは？', 'acceptedAnswer': { '@type': 'Answer', 'text': '2026年7月時点：最大精度ならKimi K2.6（58.6 SWE-Bench Pro、MoE）。24 GB VRAMで最良のdense品質ならQwen3.8-27B（61.7% SWE-bench）。agenticなマルチファイルプログラミングにはDevstral Small 24B。IDEオートコンプリートにはCodestral 22B。8 GB VRAMにはQwen3 8B。MacBook：Qwen3 8BはM1 Pro+上で快適に動作。' } },
-          { '@type': 'Question', 'name': 'Qwen3のHumanEvalスコアはどのくらいですか', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8BはHumanEval（レガシーベンチマーク）で約76%。Qwen3-Coder 32BはHumanEvalで87%。2026年時点で、SWE-benchが主要ベンチマークとしてHumanEvalに取って代わりました——Qwen3.8-27Bは61.7% SWE-bench、Kimi K2.6は58.6 SWE-Bench Pro。' } },
+          { '@type': 'Question', 'name': 'Qwen3のHumanEvalスコアはどのくらいですか', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8BはHumanEval（レガシーベンチマーク）で約76%。Qwen2.5-Coder 32BはHumanEvalで87%。2026年時点で、SWE-benchが主要ベンチマークとしてHumanEvalに取って代わりました——Qwen3.8-27Bは61.7% SWE-bench、Kimi K2.6は58.6 SWE-Bench Pro。' } },
           { '@type': 'Question', 'name': 'Kimi K2.6はGitHub Copilotとどう比較？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6はSWE-Bench Proで58.6を記録し、複数のフロンティアクラウドモデルと競合します。速度：ローカル2～5秒 vs Copilot ~300ms。プライバシー：ローカルはコードをデバイスに保つ。費用：ローカル硬体後0円/月；Copilot 約¥37,200/年。' } },
           { '@type': 'Question', 'name': 'ローカルプログラミングLLMをVS Codeで使用できる？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい——Continue.dev拡張をインストール（無料、オープンソース）。localhost:11434のOllamaに接続。TabまたはCtrl+Shift+\\\\でトリガー。Kimi K2.6、Qwen3.8-27B、Devstral Small 24B、Codestral 22B、Qwen3 8B、全Ollamaモデルをサポート。' } },
           { '@type': 'Question', 'name': 'proprietary codebaseにはCopilotまたはローカルLLMか', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ローカルLLM。Copilotではコードがサーバーに送られます。Ollama上のローカルモデルはコードがマシンを離れません。規制産業ではローカルが唯一のコンプライアント選択肢。Kimi K2.6のようなSWE-bench最適化モデルの登場で品質差は縮小。' } },
@@ -1222,7 +1222,7 @@ schema: {
             },
             {
               q: 'Qwen3的HumanEval得分是多少？',
-              a: 'Qwen3 8B在HumanEval（传统单函数基准）上约得76%。编程专用变体Qwen3-Coder 32B在HumanEval上得87%。截至2026年，SWE-bench（真实GitHub问题解决）已取代HumanEval成为编程LLM的主要基准——在SWE-bench上，Qwen3.8-27B得61.7%，Kimi K2.6在SWE-Bench Pro上得58.6。',
+              a: 'Qwen3 8B在HumanEval（传统单函数基准）上约得76%。编程专用变体Qwen2.5-Coder 32B在HumanEval上得87%。截至2026年，SWE-bench（真实GitHub问题解决）已取代HumanEval成为编程LLM的主要基准——在SWE-bench上，Qwen3.8-27B得61.7%，Kimi K2.6在SWE-Bench Pro上得58.6。',
             },
             {
               q: 'Kimi K2.6与GitHub Copilot相比如何？',
@@ -1305,7 +1305,7 @@ schema: {
         '@type': 'FAQPage',
         'mainEntity': [
           { '@type': 'Question', 'name': '2026年编程的最佳本地LLM是什么？', 'acceptedAnswer': { '@type': 'Answer', 'text': '截至2026年7月：Kimi K2.6（58.6 SWE-Bench Pro，MoE）追求最大精度。Qwen3.8-27B（61.7% SWE-bench）在24 GB VRAM上提供最佳稠密模型质量。Devstral Small 24B用于agentic多文件编程。Codestral 22B用于IDE自动补全。Qwen3 8B适合8 GB VRAM。MacBook：Qwen3 8B在M1 Pro+上运行流畅。' } },
-          { '@type': 'Question', 'name': 'Qwen3的HumanEval得分是多少？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B在HumanEval（传统基准）上约得76%。Qwen3-Coder 32B在HumanEval上得87%。截至2026年，SWE-bench已取代HumanEval成为主要基准——Qwen3.8-27B得61.7% SWE-bench，Kimi K2.6得58.6 SWE-Bench Pro。' } },
+          { '@type': 'Question', 'name': 'Qwen3的HumanEval得分是多少？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B在HumanEval（传统基准）上约得76%。Qwen2.5-Coder 32B在HumanEval上得87%。截至2026年，SWE-bench已取代HumanEval成为主要基准——Qwen3.8-27B得61.7% SWE-bench，Kimi K2.6得58.6 SWE-Bench Pro。' } },
           { '@type': 'Question', 'name': 'Kimi K2.6与GitHub Copilot相比如何？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6在SWE-Bench Pro上得58.6，可与多个前沿云端模型竞争。速度：本地2-5秒 vs Copilot ~300ms。隐私：本地在设备上保留代码。成本：本地硬体后$0/月；Copilot $228/年。' } },
           { '@type': 'Question', 'name': '我能在VS Code中使用本地编程LLM吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以——安装Continue.dev扩展（免费、开源）。配置其连接到localhost:11434上的Ollama。Tab或Ctrl+Shift+\\\\触发建议。支持Kimi K2.6、Qwen3.8-27B、Devstral Small 24B、Codestral 22B、Qwen3 8B和所有Ollama模型。' } },
           { '@type': 'Question', 'name': '对于专有代码库，Copilot还是本地LLM更好？', 'acceptedAnswer': { '@type': 'Answer', 'text': '本地LLM。Copilot将代码发送到服务器。本地在设备上保留代码。受监管行业（金融、医疗、防卫）需要本地。自Kimi K2.6等SWE-bench优化模型问世以来，质量差距已缩小。' } },
@@ -1484,7 +1484,7 @@ schema: {
             },
             {
               q: '¿Cuál es la puntuación HumanEval de Qwen3 para programar?',
-              a: 'Qwen3 8B obtiene aproximadamente un 76% en HumanEval (benchmark heredado de una sola función). La variante especializada Qwen3-Coder 32B obtiene un 87% en HumanEval. Desde 2026, SWE-bench (resolución de incidencias reales de GitHub) ha reemplazado a HumanEval como el benchmark de referencia para LLMs de programación — en SWE-bench, Qwen3.8-27B obtiene un 61,7% y Kimi K2.6 obtiene 58,6 en SWE-Bench Pro.',
+              a: 'Qwen3 8B obtiene aproximadamente un 76% en HumanEval (benchmark heredado de una sola función). La variante especializada Qwen2.5-Coder 32B obtiene un 87% en HumanEval. Desde 2026, SWE-bench (resolución de incidencias reales de GitHub) ha reemplazado a HumanEval como el benchmark de referencia para LLMs de programación — en SWE-bench, Qwen3.8-27B obtiene un 61,7% y Kimi K2.6 obtiene 58,6 en SWE-Bench Pro.',
             },
             {
               q: '¿Cómo se compara Kimi K2.6 con GitHub Copilot?',
@@ -1573,7 +1573,7 @@ schema: {
         '@type': 'FAQPage',
         'mainEntity': [
           { '@type': 'Question', 'name': '¿Cuál es el mejor LLM local para programar en 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Desde julio de 2026: Kimi K2.6 (58,6 SWE-Bench Pro, MoE) para la máxima precisión. Qwen3.8-27B (61,7% SWE-bench) para la mejor calidad densa con 22 GB de VRAM. Devstral Small 24B para programación agéntica. Codestral 22B para autocompletado en el IDE. Qwen3 8B para 8 GB de VRAM. Para MacBook: Qwen3 8B funciona bien vía Ollama en M1 Pro+.' } },
-          { '@type': 'Question', 'name': '¿Cuál es la puntuación HumanEval de Qwen3 para programar?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B obtiene aproximadamente un 76% en HumanEval (benchmark heredado). Qwen3-Coder 32B obtiene un 87% en HumanEval. Desde 2026, SWE-bench ha reemplazado a HumanEval como benchmark de referencia — Qwen3.8-27B obtiene 61,7% SWE-bench, Kimi K2.6 obtiene 58,6 SWE-Bench Pro.' } },
+          { '@type': 'Question', 'name': '¿Cuál es la puntuación HumanEval de Qwen3 para programar?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B obtiene aproximadamente un 76% en HumanEval (benchmark heredado). Qwen2.5-Coder 32B obtiene un 87% en HumanEval. Desde 2026, SWE-bench ha reemplazado a HumanEval como benchmark de referencia — Qwen3.8-27B obtiene 61,7% SWE-bench, Kimi K2.6 obtiene 58,6 SWE-Bench Pro.' } },
           { '@type': 'Question', 'name': '¿Cómo se compara Kimi K2.6 con GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6 obtiene 58,6 en SWE-Bench Pro, competitivo con varios modelos de nube de vanguardia. Velocidad: local 2-5 segundos vs ~300 ms de Copilot. Privacidad: local mantiene el código en el dispositivo. Coste: local $0/mes tras el hardware; Copilot $228/año.' } },
           { '@type': 'Question', 'name': '¿Puedo usar un LLM de programación local en VS Code?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí — instala Continue.dev (gratuita, código abierto). Configúrala para conectarse a Ollama en localhost:11434. Tab o Ctrl+Shift+\\\\ activa las sugerencias. Compatible con Kimi K2.6, Qwen3.8-27B, Devstral Small 24B, Codestral 22B, Qwen3 8B y todos los modelos de Ollama.' } },
           { '@type': 'Question', 'name': '¿Es mejor Copilot o un LLM local para una base de código propietaria?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Un LLM local. Con Copilot, el código se envía a servidores de Microsoft/OpenAI. Con un modelo local en Ollama, el código nunca sale de tu máquina. Para sectores regulados (finanzas, sanidad, defensa), el local es la única opción conforme. La diferencia de calidad se ha reducido con modelos optimizados SWE-bench como Kimi K2.6.' } },
@@ -1752,7 +1752,7 @@ schema: {
             },
             {
               q: 'ما درجة HumanEval التي يحقّقها Qwen3 في البرمجة؟',
-              a: 'يحقّق Qwen3 8B نحو 76% في HumanEval (معيار قديم لدالة واحدة). أما النسخة المتخصصة Qwen3-Coder 32B فتحقّق 87% في HumanEval. اعتبارًا من 2026، حلّ SWE-bench (حل مشكلات GitHub الحقيقية) محل HumanEval كمعيار رئيسي لنماذج LLM البرمجية — وعلى SWE-bench، يحقّق Qwen3.8-27B نسبة 61.7%، ويحقّق Kimi K2.6 نسبة 58.6 على SWE-Bench Pro.',
+              a: 'يحقّق Qwen3 8B نحو 76% في HumanEval (معيار قديم لدالة واحدة). أما النسخة المتخصصة Qwen2.5-Coder 32B فتحقّق 87% في HumanEval. اعتبارًا من 2026، حلّ SWE-bench (حل مشكلات GitHub الحقيقية) محل HumanEval كمعيار رئيسي لنماذج LLM البرمجية — وعلى SWE-bench، يحقّق Qwen3.8-27B نسبة 61.7%، ويحقّق Kimi K2.6 نسبة 58.6 على SWE-Bench Pro.',
             },
             {
               q: 'كيف يُقارَن Kimi K2.6 بـGitHub Copilot؟',
@@ -1841,7 +1841,7 @@ schema: {
         '@type': 'FAQPage',
         'mainEntity': [
           { '@type': 'Question', 'name': 'ما أفضل نموذج LLM محلي للبرمجة في 2026؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'اعتبارًا من يوليو 2026: Kimi K2.6 (58.6 SWE-Bench Pro، MoE) لأقصى دقة. Qwen3.8-27B (61.7% SWE-bench) لأفضل جودة كثيفة بـ22 GB من VRAM. Devstral Small 24B للبرمجة الوكيلية متعددة الملفات. Codestral 22B للإكمال التلقائي في IDE. Qwen3 8B لـ8 GB من VRAM. لـMacBook: يعمل Qwen3 8B عبر Ollama بشكل جيد على M1 Pro+.' } },
-          { '@type': 'Question', 'name': 'ما درجة HumanEval التي يحقّقها Qwen3 في البرمجة؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يحقّق Qwen3 8B نحو 76% في HumanEval (معيار قديم). ويحقّق Qwen3-Coder 32B نسبة 87% في HumanEval. اعتبارًا من 2026، حلّ SWE-bench محل HumanEval كمعيار رئيسي — يحقّق Qwen3.8-27B نسبة 61.7% SWE-bench، ويحقّق Kimi K2.6 نسبة 58.6 SWE-Bench Pro.' } },
+          { '@type': 'Question', 'name': 'ما درجة HumanEval التي يحقّقها Qwen3 في البرمجة؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يحقّق Qwen3 8B نحو 76% في HumanEval (معيار قديم). ويحقّق Qwen2.5-Coder 32B نسبة 87% في HumanEval. اعتبارًا من 2026، حلّ SWE-bench محل HumanEval كمعيار رئيسي — يحقّق Qwen3.8-27B نسبة 61.7% SWE-bench، ويحقّق Kimi K2.6 نسبة 58.6 SWE-Bench Pro.' } },
           { '@type': 'Question', 'name': 'كيف يُقارَن Kimi K2.6 بـGitHub Copilot؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يحقّق Kimi K2.6 نسبة 58.6 على SWE-Bench Pro، وهو تنافسي مع عدة نماذج سحابية متقدّمة. السرعة: المحلي 2-5 ثوانٍ مقابل ~300 مللي ثانية لـCopilot. الخصوصية: المحلي يُبقي الشيفرة على الجهاز. التكلفة: المحلي 0$/شهر بعد العتاد؛ Copilot 228$/سنة.' } },
           { '@type': 'Question', 'name': 'هل يمكنني استخدام نموذج LLM برمجي محلي في VS Code؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم — ثبّت Continue.dev (مجانية، مفتوحة المصدر). اضبطها للاتصال بـOllama على localhost:11434. Tab أو Ctrl+Shift+\\\\ يُفعّل الاقتراحات. متوافق مع Kimi K2.6 وQwen3.8-27B وDevstral Small 24B وCodestral 22B وQwen3 8B وجميع نماذج Ollama.' } },
           { '@type': 'Question', 'name': 'أيهما أفضل لقاعدة شيفرة خاصة: Copilot أم نموذج LLM محلي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نموذج LLM محلي. مع Copilot، تُرسَل الشيفرة إلى خوادم Microsoft/OpenAI. مع نموذج محلي في Ollama، لا تغادر الشيفرة جهازك أبدًا. للقطاعات الخاضعة للتنظيم (المالية، الصحية، الدفاع)، المحلي هو الخيار المتوافق الوحيد. تقلّص فارق الجودة مع نماذج مُحسَّنة لـSWE-bench مثل Kimi K2.6.' } },
@@ -1928,7 +1928,7 @@ schema: {
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'Qual é o melhor LLM local para programação em 2026?', a: 'Em julho de 2026: Kimi K2.6 (58,6 SWE-Bench Pro, MoE) para máxima precisão. Qwen3.8-27B (61,7% SWE-bench) para a melhor qualidade entre modelos densos em 22 GB de VRAM. Devstral Small 24B para programação agêntica multiarquivo. Codestral 22B para autocompletar no IDE. Qwen3 8B para 8 GB de VRAM.' },
-            { q: 'Qual é a pontuação do Qwen3 no HumanEval para programação?', a: 'Qwen3 8B pontua aproximadamente 76% no HumanEval (benchmark legado). Qwen3-Coder 32B pontua 87% no HumanEval. Em 2026, o SWE-bench substituiu o HumanEval como benchmark principal — Qwen3.8-27B pontua 61,7% no SWE-bench, Kimi K2.6 pontua 58,6 no SWE-Bench Pro.' },
+            { q: 'Qual é a pontuação do Qwen3 no HumanEval para programação?', a: 'Qwen3 8B pontua aproximadamente 76% no HumanEval (benchmark legado). Qwen2.5-Coder 32B pontua 87% no HumanEval. Em 2026, o SWE-bench substituiu o HumanEval como benchmark principal — Qwen3.8-27B pontua 61,7% no SWE-bench, Kimi K2.6 pontua 58,6 no SWE-Bench Pro.' },
             { q: 'Como o Kimi K2.6 se compara ao GitHub Copilot?', a: 'Kimi K2.6 pontua 58,6 no SWE-Bench Pro, competitivo com vários modelos de nuvem de ponta na resolução de problemas do mundo real. Velocidade: local é 2-5 segundos vs. ~300ms do Copilot. Privacidade: local mantém o código no dispositivo. Custo: local $0/mês após o hardware; Copilot $228/ano.' },
             { q: 'Posso usar um LLM de programação local no VS Code?', a: 'Sim — instale o Continue.dev (gratuito, código aberto). Configure para conectar ao Ollama em localhost:11434. Tab ou Ctrl+Shift+\\\\ ativa as sugestões. Funciona com Kimi K2.6, Qwen3.8-27B, Devstral Small 24B, Codestral 22B, Qwen3 8B e todos os modelos Ollama.' },
             { q: 'O Copilot ou um LLM local é melhor para uma base de código proprietária?', a: 'LLM local. Com o Copilot, o código é enviado para servidores da Microsoft/OpenAI. O local mantém o código no dispositivo. Para setores regulados (finanças, saúde, defesa), o local é a única opção compatível.' },
@@ -1944,7 +1944,7 @@ schema: {
         '@type': 'FAQPage',
         'mainEntity': [
           { '@type': 'Question', 'name': 'Qual é o melhor LLM local para programação em 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Em julho de 2026: Kimi K2.6 (58,6 SWE-Bench Pro, MoE) para máxima precisão. Qwen3.8-27B (61,7% SWE-bench) para a melhor qualidade entre modelos densos em 22 GB de VRAM. Devstral Small 24B para programação agêntica multiarquivo. Codestral 22B para autocompletar no IDE. Qwen3 8B para 8 GB de VRAM.' } },
-          { '@type': 'Question', 'name': 'Qual é a pontuação do Qwen3 no HumanEval para programação?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B pontua aproximadamente 76% no HumanEval (benchmark legado). Qwen3-Coder 32B pontua 87% no HumanEval. Em 2026, o SWE-bench substituiu o HumanEval como benchmark principal — Qwen3.8-27B pontua 61,7% no SWE-bench, Kimi K2.6 pontua 58,6 no SWE-Bench Pro.' } },
+          { '@type': 'Question', 'name': 'Qual é a pontuação do Qwen3 no HumanEval para programação?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3 8B pontua aproximadamente 76% no HumanEval (benchmark legado). Qwen2.5-Coder 32B pontua 87% no HumanEval. Em 2026, o SWE-bench substituiu o HumanEval como benchmark principal — Qwen3.8-27B pontua 61,7% no SWE-bench, Kimi K2.6 pontua 58,6 no SWE-Bench Pro.' } },
           { '@type': 'Question', 'name': 'Como o Kimi K2.6 se compara ao GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6 pontua 58,6 no SWE-Bench Pro, competitivo com vários modelos de nuvem de ponta na resolução de problemas do mundo real. Velocidade: local é 2-5 segundos vs. ~300ms do Copilot. Privacidade: local mantém o código no dispositivo. Custo: local $0/mês após o hardware; Copilot $228/ano.' } },
           { '@type': 'Question', 'name': 'Posso usar um LLM de programação local no VS Code?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim — instale o Continue.dev (gratuito, código aberto). Configure para conectar ao Ollama em localhost:11434. Tab ou Ctrl+Shift+\\\\ ativa as sugestões. Funciona com Kimi K2.6, Qwen3.8-27B, Devstral Small 24B, Codestral 22B, Qwen3 8B e todos os modelos Ollama.' } },
           { '@type': 'Question', 'name': 'O Copilot ou um LLM local é melhor para uma base de código proprietária?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'LLM local. Com o Copilot, o código é enviado para servidores da Microsoft/OpenAI. O local mantém o código no dispositivo. Para setores regulados (finanças, saúde, defesa), o local é a única opção compatível.' } },
@@ -1974,12 +1974,12 @@ schema: {
       theme: 'Advanced Techniques',
       title: '코딩 워크플로를 위한 로컬 LLM: 코드 생성, 리뷰, 테스트',
       seoTitle: '로컬 LLM 코딩 2026: Qwen3-Coder 92% HumanEval',
-      intro: '로컬 LLM은 코딩을 보조할 수 있습니다. 보일러플레이트 생성, 코드 리뷰, 테스트 작성, 함수 설명 등의 작업을 수행합니다. 2026년 4월 기준, Qwen3-Coder 32B 및 CodeLlama 34B와 같은 모델은 HumanEval 벤치마크에서 72~92.7%의 정확도를 달성합니다. 속도는 클라우드보다 느리지만(응답당 2~5초), 코드가 외부로 유출되지 않습니다.',
-      metaDescription: 'Qwen3-Coder 32B: 92.7% HumanEval, 24 GB VRAM에서 실행. Qwen3-Coder 7B: 5 GB에서 72%. Ollama + VS Code로 코드 생성, 리뷰, 테스트 작성. 전체 벤치마크 표 포함.',
+      intro: '로컬 LLM은 코딩을 보조할 수 있습니다. 보일러플레이트 생성, 코드 리뷰, 테스트 작성, 함수 설명 등의 작업을 수행합니다. 2026년 4월 기준, Qwen2.5-Coder 32B 및 CodeLlama 34B와 같은 모델은 HumanEval 벤치마크에서 72~92.7%의 정확도를 달성합니다. 속도는 클라우드보다 느리지만(응답당 2~5초), 코드가 외부로 유출되지 않습니다.',
+      metaDescription: 'Qwen2.5-Coder 32B: 92.7% HumanEval, 24 GB VRAM에서 실행. Qwen2.5-Coder 7B: 5 GB에서 72%. Ollama + VS Code로 코드 생성, 리뷰, 테스트 작성. 전체 벤치마크 표 포함.',
       heroImage: '/images/local-llms-for-coding-workflows-generation-workflow-hero-ko.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-08-31',
-      leadAnswerBlock: '로컬 LLM은 코딩을 보조할 수 있습니다. 보일러플레이트 생성, 코드 리뷰, 테스트 작성, 함수 설명 등의 작업을 수행합니다. 2026년 4월 기준, Qwen3-Coder 32B(92.7% HumanEval) 및 CodeLlama 34B(75% HumanEval)와 같은 모델은 프로그래밍 벤치마크에서 최고 수준의 정확도를 달성합니다.',
+      leadAnswerBlock: '로컬 LLM은 코딩을 보조할 수 있습니다. 보일러플레이트 생성, 코드 리뷰, 테스트 작성, 함수 설명 등의 작업을 수행합니다. 2026년 4월 기준, Qwen2.5-Coder 32B(92.7% HumanEval) 및 CodeLlama 34B(75% HumanEval)와 같은 모델은 프로그래밍 벤치마크에서 최고 수준의 정확도를 달성합니다.',
       audience: '소비자용 하드웨어에서 로컬 코딩 AI를 설정하는 개발자',
       readTime: '11분 읽기',
       educationalLevel: 'Intermediate',
@@ -2006,7 +2006,7 @@ schema: {
             { type: 'plain-terms', text: '자신의 컴퓨터에서 실행되는 무료 오픈 AI 모델을 사용해 코드를 작성, 검토, 테스트할 수 있습니다 -- GitHub Copilot과 비슷하지만 코드가 절대 내 컴퓨터를 벗어나지 않고 구독료도 없습니다. 클라우드 도구보다는 다소 느리지만, 보일러플레이트 생성, 코드 검토, 테스트 작성에는 효과적입니다.' },
           ],
           items: [
-            '**최고의 코딩 모델 (2026):** Qwen3-Coder 32B (92.7% HumanEval), Qwen3-Coder 7B (72% HumanEval), CodeLlama 34B (75%).',
+            '**최고의 코딩 모델 (2026):** Qwen2.5-Coder 32B (92.7% HumanEval), Qwen2.5-Coder 7B (72% HumanEval), CodeLlama 34B (75%).',
             '**속도:** 코드 제안당 2~5초. 개발에 충분히 빠르지만 GitHub Copilot(~300ms)보다는 느립니다.',
             '**프라이버시:** 코드가 절대 외부로 전송되지 않습니다. 독점 코드베이스에 매우 중요합니다.',
             '**사용 사례:** 보일러플레이트 생성, 코드 리뷰, 테스트 작성, 문서화. 복잡한 아키텍처 결정에는 적합하지 않습니다.',
@@ -2017,15 +2017,15 @@ schema: {
           id: 'best-models',
           title: '로컬 코딩에 가장 적합한 모델은 무엇입니까?',
           content: [
-            '**최고의 로컬 코딩 모델은 정확도, 속도, 메모리 사용량의 균형을 갖춰야 합니다. Qwen3-Coder 32B가 정확도(92.7%)에서 선두를 달리며, Qwen3-Coder 7B는 속도와 품질의 최적 균형을 제공합니다.**',
+            '**최고의 로컬 코딩 모델은 정확도, 속도, 메모리 사용량의 균형을 갖춰야 합니다. Qwen2.5-Coder 32B가 정확도(92.7%)에서 선두를 달리며, Qwen2.5-Coder 7B는 속도와 품질의 최적 균형을 제공합니다.**',
           ],
           callouts: [
-            { type: 'tip', text: '**팁:** VRAM이 4~6 GB라면 Qwen3-Coder 7B(72% 정확도)로 시작하십시오. 최대 정확도를 원하신다면 24 GB+ VRAM에서 Qwen3-Coder 32B(92.7% 정확도)를 사용하십시오. CodeLlama 34B는 75% 정확도의 안정적인 중간 선택지입니다.' },
+            { type: 'tip', text: '**팁:** VRAM이 4~6 GB라면 Qwen2.5-Coder 7B(72% 정확도)로 시작하십시오. 최대 정확도를 원하신다면 24 GB+ VRAM에서 Qwen2.5-Coder 32B(92.7% 정확도)를 사용하십시오. CodeLlama 34B는 75% 정확도의 안정적인 중간 선택지입니다.' },
           ],
           rows: [
-            { 'Model': 'Qwen3-Coder 32B', 'HumanEval %': '92.7%', 'VRAM': '22 GB', '추론 속도': '느림 (3~5초)', '적합한 용도': '최대 정확도' },
+            { 'Model': 'Qwen2.5-Coder 32B', 'HumanEval %': '92.7%', 'VRAM': '22 GB', '추론 속도': '느림 (3~5초)', '적합한 용도': '최대 정확도' },
             { 'Model': 'CodeLlama 34B', 'HumanEval %': '75%', 'VRAM': '22 GB', '추론 속도': '느림 (3~5초)', '적합한 용도': '고품질, 멀티모달' },
-            { 'Model': 'Qwen3-Coder 7B', 'HumanEval %': '72%', 'VRAM': '4.7 GB', '추론 속도': '매우 빠름', '적합한 용도': '속도/품질 균형' },
+            { 'Model': 'Qwen2.5-Coder 7B', 'HumanEval %': '72%', 'VRAM': '4.7 GB', '추론 속도': '매우 빠름', '적합한 용도': '속도/품질 균형' },
             { 'Model': 'DeepSeek-Coder 6.7B', 'HumanEval %': '68%', 'VRAM': '4 GB', '추론 속도': '매우 빠름', '적합한 용도': '소형, 경량' },
           ],
           columns: ['Model', 'HumanEval %', 'VRAM', '추론 속도', '적합한 용도'],
@@ -2090,20 +2090,20 @@ schema: {
             '인라인 완성: Ctrl+Shift+\\\\ (VS Code) 또는 Cmd+Shift+\\\\ (Mac)으로 로컬 LLM 제안을 트리거합니다.',
           ],
           image: '/images/local-llms-for-coding-workflows-ide-setup-hero-ko.webp',
-          imageCaption: 'IDE 연동 설정: Ollama([ollama.ai](https://ollama.ai)) 설치 → Continue.dev VS Code 확장 설치 → localhost:11434 설정 → Qwen3-Coder 7B 모델 선택 → Ctrl+Shift+\\로 인라인 제안 트리거. 3단계 설정 완료.',
+          imageCaption: 'IDE 연동 설정: Ollama([ollama.ai](https://ollama.ai)) 설치 → Continue.dev VS Code 확장 설치 → localhost:11434 설정 → Qwen2.5-Coder 7B 모델 선택 → Ctrl+Shift+\\로 인라인 제안 트리거. 3단계 설정 완료.',
         },
         commonMistakes: {
           id: 'common-mistakes',
           title: '흔한 실수는 무엇입니까?',
           items: [
             '**검토 없이 생성된 코드를 신뢰하는 것.** 생성된 코드에는 버그가 있을 수 있습니다. 항상 검토하십시오.',
-            '**너무 작은 모델 사용.** Qwen3-Coder 7B가 실용적인 코딩의 최소 요구 사항입니다. 3B 모델은 저품질 코드를 생성합니다.',
+            '**너무 작은 모델 사용.** Qwen2.5-Coder 7B가 실용적인 코딩의 최소 요구 사항입니다. 3B 모델은 저품질 코드를 생성합니다.',
             '**컨텍스트를 제공하지 않는 것.** 코드 품질은 프롬프트 컨텍스트에 달려 있습니다. 함수 시그니처, 타입, docstring을 제공하십시오.',
             '**아키텍처를 이해할 것으로 기대하는 것.** 로컬 모델은 개별 함수를 이해하지만 시스템 설계는 이해하지 못합니다.',
-            '**코딩 전용 모델을 사용하지 않는 것.** 범용 모델(Llama 3.1 8B, Mistral Small)은 코딩 모델(Qwen3-Coder 7B: 72%)보다 HumanEval에서 15~25% 낮은 점수를 기록합니다(Llama 3.1 8B: 55%). 항상 코드를 위해 특별히 훈련된 모델을 사용하십시오. Ollama에서: `ollama pull qwen2.5-coder:7b` — 코딩 작업에는 `ollama pull llama3.1:8b`가 아닙니다.',
+            '**코딩 전용 모델을 사용하지 않는 것.** 범용 모델(Llama 3.1 8B, Mistral Small)은 코딩 모델(Qwen2.5-Coder 7B: 72%)보다 HumanEval에서 15~25% 낮은 점수를 기록합니다(Llama 3.1 8B: 55%). 항상 코드를 위해 특별히 훈련된 모델을 사용하십시오. Ollama에서: `ollama pull qwen2.5-coder:7b` — 코딩 작업에는 `ollama pull llama3.1:8b`가 아닙니다.',
           ],
           image: '/images/local-llms-for-coding-workflows-mistakes-hero-ko.webp',
-          imageCaption: '흔한 코딩 실수 대 모범 사례: 3B 모델 회피(낮은 정확도), 최소 Qwen3-Coder 7B 사용(72% HumanEval). 반복 횟수 제한(10~20), 항상 코드 검토, 범용 Mistral 또는 Llama가 아닌 코딩 전용 모델 사용.',
+          imageCaption: '흔한 코딩 실수 대 모범 사례: 3B 모델 회피(낮은 정확도), 최소 Qwen2.5-Coder 7B 사용(72% HumanEval). 반복 횟수 제한(10~20), 항상 코드 검토, 범용 Mistral 또는 Llama가 아닌 코딩 전용 모델 사용.',
         },
         faqSection: {
           id: 'faq',
@@ -2111,11 +2111,11 @@ schema: {
           faqs: [
             {
               q: '2026년 코딩에 가장 좋은 로컬 LLM은 무엇입니까?',
-              a: '24 GB VRAM에서 최고 품질을 위해 Qwen3-Coder 32B(92.7% HumanEval)를 사용하십시오. 5 GB VRAM에서 속도를 원하신다면 Qwen3-Coder 7B(72%)를 사용하십시오. Apple Silicon MacBook 사용자: Qwen3-Coder 7B는 Ollama를 통해 M1 Pro+에서 30~60 tok/sec로 실행됩니다.',
+              a: '24 GB VRAM에서 최고 품질을 위해 Qwen2.5-Coder 32B(92.7% HumanEval)를 사용하십시오. 5 GB VRAM에서 속도를 원하신다면 Qwen2.5-Coder 7B(72%)를 사용하십시오. Apple Silicon MacBook 사용자: Qwen2.5-Coder 7B는 Ollama를 통해 M1 Pro+에서 30~60 tok/sec로 실행됩니다.',
             },
             {
-              q: 'Qwen3-Coder 32B는 GitHub Copilot과 어떻게 비교됩니까?',
-              a: 'Qwen3-Coder 32B는 HumanEval에서 92.7%를 기록합니다 — Copilot의 GPT-5.2 백엔드(~94%)와 2% 이내의 차이입니다. 속도: 로컬은 제안당 2~5초 대 Copilot의 ~300ms(클라우드 이점). 품질은 거의 동등합니다. 프라이버시: 로컬은 코드를 온디바이스에 보관합니다. 비용: 로컬은 하드웨어 후 월 $0; Copilot은 월 $19($228/년).',
+              q: 'Qwen2.5-Coder 32B는 GitHub Copilot과 어떻게 비교됩니까?',
+              a: 'Qwen2.5-Coder 32B는 HumanEval에서 92.7%를 기록합니다 — Copilot의 GPT-5.2 백엔드(~94%)와 2% 이내의 차이입니다. 속도: 로컬은 제안당 2~5초 대 Copilot의 ~300ms(클라우드 이점). 품질은 거의 동등합니다. 프라이버시: 로컬은 코드를 온디바이스에 보관합니다. 비용: 로컬은 하드웨어 후 월 $0; Copilot은 월 $19($228/년).',
             },
             {
               q: 'VS Code에서 로컬 코딩 LLM을 사용할 수 있습니까?',
@@ -2127,19 +2127,19 @@ schema: {
             },
             {
               q: '로컬 코딩 LLM에는 VRAM이 얼마나 필요합니까?',
-              a: '최소: Qwen3-Coder 7B Q4를 위해 5 GB VRAM. 권장: 7B 추론을 위해 8 GB. 프리미엄: 최고 품질의 Qwen3-Coder 32B를 위해 24 GB. RTX 4060 Ti(8 GB)는 7B 모델을 실행합니다. RTX 4070(12 GB)은 14~16B 모델을 실행합니다. RTX 4090/5090(24~32 GB)은 32B 모델을 실행합니다.',
+              a: '최소: Qwen2.5-Coder 7B Q4를 위해 5 GB VRAM. 권장: 7B 추론을 위해 8 GB. 프리미엄: 최고 품질의 Qwen2.5-Coder 32B를 위해 24 GB. RTX 4060 Ti(8 GB)는 7B 모델을 실행합니다. RTX 4070(12 GB)은 14~16B 모델을 실행합니다. RTX 4090/5090(24~32 GB)은 32B 모델을 실행합니다.',
             },
             {
               q: '로컬 코딩 LLM은 Copilot처럼 자동 완성을 지원합니까?',
-              a: '지원합니다 — Continue.dev 또는 Cursor 에디터를 통해 사용할 수 있습니다. 두 방법 모두 모델이 커서 위아래의 코드를 보고 중간을 생성하는 fill-in-the-middle(FIM) 모드를 지원합니다. Qwen3-Coder 7B는 FIM을 기본 지원합니다. 응답 시간: GPU에서 1~3초(Copilot의 200~300ms 클라우드 대비).',
+              a: '지원합니다 — Continue.dev 또는 Cursor 에디터를 통해 사용할 수 있습니다. 두 방법 모두 모델이 커서 위아래의 코드를 보고 중간을 생성하는 fill-in-the-middle(FIM) 모드를 지원합니다. Qwen2.5-Coder 7B는 FIM을 기본 지원합니다. 응답 시간: GPU에서 1~3초(Copilot의 200~300ms 클라우드 대비).',
             },
             {
               q: '내 코드베이스에 맞게 코딩 모델을 파인튜닝할 수 있습니까?',
-              a: '가능합니다 — Unsloth를 사용하여 LoRA/QLoRA로 파인튜닝하십시오. 인스트럭션 형식으로 코드베이스에서 500개 이상의 코드 예시를 준비하십시오(입력: 함수 시그니처 + docstring, 출력: 구현). 8 GB VRAM에서 Qwen3-Coder 7B 파인튜닝은 1~2시간이 소요됩니다. 일반적인 정확도 향상: 특정 코드 패턴에서 10~15%.',
+              a: '가능합니다 — Unsloth를 사용하여 LoRA/QLoRA로 파인튜닝하십시오. 인스트럭션 형식으로 코드베이스에서 500개 이상의 코드 예시를 준비하십시오(입력: 함수 시그니처 + docstring, 출력: 구현). 8 GB VRAM에서 Qwen2.5-Coder 7B 파인튜닝은 1~2시간이 소요됩니다. 일반적인 정확도 향상: 특정 코드 패턴에서 10~15%.',
             },
             {
               q: '가장 많은 프로그래밍 언어를 지원하는 코딩 LLM은 무엇입니까?',
-              a: 'Qwen3-Coder 32B와 DeepSeek-Coder-V2 모두 Python, JavaScript, TypeScript, Rust, Go, Java, C++, SQL, Bash, Ruby를 포함한 90개 이상의 언어를 지원합니다. CodeLlama는 Python과 C++에서 가장 강력합니다. 틈새 언어(Haskell, Erlang, Elixir)의 경우 Qwen3-Coder 32B가 가장 넓은 지원 범위를 제공합니다.',
+              a: 'Qwen2.5-Coder 32B와 DeepSeek-Coder-V2 모두 Python, JavaScript, TypeScript, Rust, Go, Java, C++, SQL, Bash, Ruby를 포함한 90개 이상의 언어를 지원합니다. CodeLlama는 Python과 C++에서 가장 강력합니다. 틈새 언어(Haskell, Erlang, Elixir)의 경우 Qwen2.5-Coder 32B가 가장 넓은 지원 범위를 제공합니다.',
             },
           ],
         },

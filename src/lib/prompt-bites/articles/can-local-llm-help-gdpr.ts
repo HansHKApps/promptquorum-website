@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     publishDate: '2026-05-22',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-22',
-    current_models_mentioned: ['Qwen 3 14B', 'Qwen2.5-Coder 14B', 'Llama 4 Scout', 'Qwen 3 8B'],
+    current_models_mentioned: ['Qwen3 14B', 'Qwen2.5-Coder 14B', 'Llama 4 Scout', 'Qwen3 8B'],
     current_hardware_mentioned: [],
     educationalLevel: 'Beginner',
     audience: 'DPOs, legal ops, HR, and IT teams investigating AI compliance options',
@@ -22,19 +22,19 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Can a local LLM help with GDPR compliance?',
-        answer: 'Yes — running an open-weight model locally eliminates the Article 44 third-country data transfer that makes cloud AI legally complex under GDPR, meaning your prompts and responses never leave your server. Local models like Qwen 3 14B or Llama 4 Scout can handle HR, legal, and medical text entirely on-premises.',
+        answer: 'Yes — running an open-weight model locally eliminates the Article 44 third-country data transfer that makes cloud AI legally complex under GDPR, meaning your prompts and responses never leave your server. Local models like Qwen3 14B or Llama 4 Scout can handle HR, legal, and medical text entirely on-premises.',
         bullets: [
           'No transfer = no Article 44 problem: the biggest GDPR hurdle for cloud AI disappears',
           'Article 25 (privacy by design) satisfied: data never leaves your jurisdiction by architecture',
-          'Best for 12 GB VRAM: Qwen 3 14B Q4_K_M via Ollama — general + coding capable',
+          'Best for 12 GB VRAM: Qwen3 14B Q4_K_M via Ollama — general + coding capable',
         ],
         updatedDate: '2026-05',
       },
-      de: { question: 'Kann ein lokales LLM bei der DSGVO-Compliance helfen?', answer: 'Ja — ein Open-Weight-Modell lokal zu betreiben beseitigt den Artikel-44-Drittlandtransfer, der Cloud-KI unter der DSGVO rechtlich komplex macht: Prompts und Antworten verlassen Ihren Server nie. Lokale Modelle wie Qwen 3 14B oder Llama 4 Scout können HR-, Rechts- und medizinische Texte vollständig lokal verarbeiten.', bullets: ['Kein Transfer = kein Artikel-44-Problem: die größte DSGVO-Hürde für Cloud-KI entfällt', 'Artikel 25 (Datenschutz durch Technikgestaltung) erfüllt: Daten verlassen Ihre Jurisdiktion durch Architektur nie', 'Bestes für 12 GB VRAM: Qwen 3 14B Q4_K_M via Ollama — allgemein und coding-fähig'], updatedDate: '2026-05' },
-      fr: { question: 'Un LLM local peut-il aider à la conformité RGPD ?', answer: 'Oui — exécuter un modèle open-weight localement élimine le transfert vers un pays tiers de l\'Article 44 qui complexifie juridiquement l\'IA cloud sous le RGPD : vos prompts et réponses ne quittent jamais votre serveur. Les modèles locaux comme Qwen 3 14B ou Llama 4 Scout peuvent traiter les textes RH, juridiques et médicaux entièrement sur site.', bullets: ['Pas de transfert = pas de problème Article 44 : le principal obstacle RGPD pour l\'IA cloud disparaît', 'Article 25 (protection dès la conception) satisfait : les données ne quittent jamais votre juridiction par architecture', 'Meilleur pour 12 Go VRAM : Qwen 3 14B Q4_K_M via Ollama — polyvalent et capable en code'], updatedDate: '2026-05' },
-      ja: { question: 'ローカルLLMはGDPRコンプライアンスに役立ちますか？', answer: 'はい——オープンウェイトモデルをローカル実行すると、クラウドAIをGDPR下で法的に複雑にする第44条の第三国転送が排除され、プロンプトと応答がサーバーを離れることがありません。Qwen 3 14BやLlama 4 ScoutなどのローカルモデルはHR・法務・医療テキストをすべてオンプレミスで処理できます。', bullets: ['転送なし = 第44条問題なし：クラウドAIの最大のGDPLハードルが消える', '第25条（プライバシーバイデザイン）満足：アーキテクチャによりデータが管轄を離れない', '12 GB VRAMに最適：Ollama経由Qwen 3 14B Q4_K_M——汎用＋コーディング対応'], updatedDate: '2026-05' },
-      zh: { question: '本地LLM能帮助GDPR合规吗？', answer: '可以——在本地运行开源权重模型完全消除了第44条第三国数据传输问题（这正是云AI在GDPR下法律复杂的原因），提示词和响应永远不会离开您的服务器。Qwen 3 14B或Llama 4 Scout等本地模型可以完全在本地处理HR、法律和医疗文本。', bullets: ['无传输 = 无第44条问题：云AI的最大GDPR障碍消失', '满足第25条（隐私设计）：通过架构确保数据不离开您的管辖范围', '12 GB VRAM最佳选择：Ollama本地Qwen 3 14B Q4_K_M——通用+代码能力兼备'], updatedDate: '2026-05' },
-      es: { question: '¿Puede un LLM local ayudar con el cumplimiento del RGPD?', answer: 'Sí — ejecutar un modelo de código abierto localmente elimina la transferencia de datos a terceros países del Artículo 44 que hace legalmente complejo el uso de IA en la nube bajo el RGPD, lo que significa que tus prompts y respuestas nunca salen de tu servidor. Modelos locales como Qwen 3 14B o Llama 4 Scout pueden manejar textos de RRHH, legal y médico completamente en las instalaciones.', bullets: ['Sin transferencia = sin problema del Artículo 44: el mayor obstáculo RGPD para la IA en la nube desaparece', 'Artículo 25 (privacidad desde el diseño) satisfecho: los datos nunca abandonan tu jurisdicción por arquitectura', 'El mejor para 12 GB de VRAM: Qwen 3 14B Q4_K_M via Ollama — versátil y con capacidad de código'], updatedDate: '2026-05' },
+      de: { question: 'Kann ein lokales LLM bei der DSGVO-Compliance helfen?', answer: 'Ja — ein Open-Weight-Modell lokal zu betreiben beseitigt den Artikel-44-Drittlandtransfer, der Cloud-KI unter der DSGVO rechtlich komplex macht: Prompts und Antworten verlassen Ihren Server nie. Lokale Modelle wie Qwen3 14B oder Llama 4 Scout können HR-, Rechts- und medizinische Texte vollständig lokal verarbeiten.', bullets: ['Kein Transfer = kein Artikel-44-Problem: die größte DSGVO-Hürde für Cloud-KI entfällt', 'Artikel 25 (Datenschutz durch Technikgestaltung) erfüllt: Daten verlassen Ihre Jurisdiktion durch Architektur nie', 'Bestes für 12 GB VRAM: Qwen3 14B Q4_K_M via Ollama — allgemein und coding-fähig'], updatedDate: '2026-05' },
+      fr: { question: 'Un LLM local peut-il aider à la conformité RGPD ?', answer: 'Oui — exécuter un modèle open-weight localement élimine le transfert vers un pays tiers de l\'Article 44 qui complexifie juridiquement l\'IA cloud sous le RGPD : vos prompts et réponses ne quittent jamais votre serveur. Les modèles locaux comme Qwen3 14B ou Llama 4 Scout peuvent traiter les textes RH, juridiques et médicaux entièrement sur site.', bullets: ['Pas de transfert = pas de problème Article 44 : le principal obstacle RGPD pour l\'IA cloud disparaît', 'Article 25 (protection dès la conception) satisfait : les données ne quittent jamais votre juridiction par architecture', 'Meilleur pour 12 Go VRAM : Qwen3 14B Q4_K_M via Ollama — polyvalent et capable en code'], updatedDate: '2026-05' },
+      ja: { question: 'ローカルLLMはGDPRコンプライアンスに役立ちますか？', answer: 'はい——オープンウェイトモデルをローカル実行すると、クラウドAIをGDPR下で法的に複雑にする第44条の第三国転送が排除され、プロンプトと応答がサーバーを離れることがありません。Qwen3 14BやLlama 4 ScoutなどのローカルモデルはHR・法務・医療テキストをすべてオンプレミスで処理できます。', bullets: ['転送なし = 第44条問題なし：クラウドAIの最大のGDPLハードルが消える', '第25条（プライバシーバイデザイン）満足：アーキテクチャによりデータが管轄を離れない', '12 GB VRAMに最適：Ollama経由Qwen3 14B Q4_K_M——汎用＋コーディング対応'], updatedDate: '2026-05' },
+      zh: { question: '本地LLM能帮助GDPR合规吗？', answer: '可以——在本地运行开源权重模型完全消除了第44条第三国数据传输问题（这正是云AI在GDPR下法律复杂的原因），提示词和响应永远不会离开您的服务器。Qwen3 14B或Llama 4 Scout等本地模型可以完全在本地处理HR、法律和医疗文本。', bullets: ['无传输 = 无第44条问题：云AI的最大GDPR障碍消失', '满足第25条（隐私设计）：通过架构确保数据不离开您的管辖范围', '12 GB VRAM最佳选择：Ollama本地Qwen3 14B Q4_K_M——通用+代码能力兼备'], updatedDate: '2026-05' },
+      es: { question: '¿Puede un LLM local ayudar con el cumplimiento del RGPD?', answer: 'Sí — ejecutar un modelo de código abierto localmente elimina la transferencia de datos a terceros países del Artículo 44 que hace legalmente complejo el uso de IA en la nube bajo el RGPD, lo que significa que tus prompts y respuestas nunca salen de tu servidor. Modelos locales como Qwen3 14B o Llama 4 Scout pueden manejar textos de RRHH, legal y médico completamente en las instalaciones.', bullets: ['Sin transferencia = sin problema del Artículo 44: el mayor obstáculo RGPD para la IA en la nube desaparece', 'Artículo 25 (privacidad desde el diseño) satisfecho: los datos nunca abandonan tu jurisdicción por arquitectura', 'El mejor para 12 GB de VRAM: Qwen3 14B Q4_K_M via Ollama — versátil y con capacidad de código'], updatedDate: '2026-05' },
     },
     sections: {
       tldr: {
@@ -44,7 +44,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'The core GDPR problem with cloud AI is Article 44: any prompt containing personal data sent to a non-EU server is a third-country transfer requiring legal basis',
           'Local LLMs eliminate the transfer entirely — no transfer means no Article 44 issue, regardless of what the prompt contains',
           'GDPR Article 25 (privacy by design) is directly satisfied: your infrastructure processes data in-jurisdiction by default',
-          'Practical starting point: Qwen 3 14B Q4_K_M via Ollama on a 12 GB VRAM GPU — handles HR summaries, legal drafting, and medical text at production quality',
+          'Practical starting point: Qwen3 14B Q4_K_M via Ollama on a 12 GB VRAM GPU — handles HR summaries, legal drafting, and medical text at production quality',
         ],
       },
       body1: {
@@ -62,16 +62,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Which Local Models Are Practical for GDPR-Regulated Work',
         content: [
-          '<strong>Three open-weight models cover the main GDPR-regulated workflows in 2026. For general HR, legal, and document drafting: Qwen 3 14B Q4_K_M (needs 10–12 GB VRAM). For code analysis and technical documentation: Qwen2.5-Coder 14B (same VRAM, stronger on structured output). For organisations with a single GPU or tighter hardware: Qwen 3 8B Q4_K_M (6–8 GB VRAM).</strong>',
+          '<strong>Three open-weight models cover the main GDPR-regulated workflows in 2026. For general HR, legal, and document drafting: Qwen3 14B Q4_K_M (needs 10–12 GB VRAM). For code analysis and technical documentation: Qwen2.5-Coder 14B (same VRAM, stronger on structured output). For organisations with a single GPU or tighter hardware: Qwen3 8B Q4_K_M (6–8 GB VRAM).</strong>',
           'All three run via Ollama with a single command and require no cloud connectivity after the one-time model download. The download happens once from Hugging Face over HTTPS and can be done on an air-gapped machine via sneakernet. After that: fully offline.',
           'For larger organisations needing near-frontier quality: Llama 4 Scout (17B MoE) fits on 24 GB VRAM with a 10M token context window — suitable for processing long contracts, HR policy documents, or medical records in a single context.',
         ],
         columns: ['Workflow', 'Recommended Model', 'VRAM Required', 'Ollama Command'],
         rows: [
-          { 'Workflow': 'HR documents, summaries', 'Recommended Model': 'Qwen 3 14B Q4_K_M', 'VRAM Required': '10–12 GB', 'Ollama Command': 'ollama run qwen3:14b' },
-          { 'Workflow': 'Legal drafting, contracts', 'Recommended Model': 'Qwen 3 14B Q4_K_M', 'VRAM Required': '10–12 GB', 'Ollama Command': 'ollama run qwen3:14b' },
+          { 'Workflow': 'HR documents, summaries', 'Recommended Model': 'Qwen3 14B Q4_K_M', 'VRAM Required': '10–12 GB', 'Ollama Command': 'ollama run qwen3:14b' },
+          { 'Workflow': 'Legal drafting, contracts', 'Recommended Model': 'Qwen3 14B Q4_K_M', 'VRAM Required': '10–12 GB', 'Ollama Command': 'ollama run qwen3:14b' },
           { 'Workflow': 'Code, technical docs', 'Recommended Model': 'Qwen2.5-Coder 14B', 'VRAM Required': '10–12 GB', 'Ollama Command': 'ollama run qwen2.5-coder:14b' },
-          { 'Workflow': 'Budget / 8 GB VRAM', 'Recommended Model': 'Qwen 3 8B Q4_K_M', 'VRAM Required': '6–8 GB', 'Ollama Command': 'ollama run qwen3:8b' },
+          { 'Workflow': 'Budget / 8 GB VRAM', 'Recommended Model': 'Qwen3 8B Q4_K_M', 'VRAM Required': '6–8 GB', 'Ollama Command': 'ollama run qwen3:8b' },
           { 'Workflow': 'Long documents (>100K tokens)', 'Recommended Model': 'Llama 4 Scout', 'VRAM Required': '24 GB', 'Ollama Command': 'ollama run llama4:scout' },
         ],
       },
@@ -112,11 +112,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Kann ein lokales LLM bei der DSGVO-Compliance helfen?',
-        answer: 'Ja — ein Open-Weight-Modell lokal zu betreiben beseitigt den Artikel-44-Drittlandtransfer, der Cloud-KI unter der DSGVO rechtlich komplex macht: Prompts und Antworten verlassen Ihren Server nie. Lokale Modelle wie Qwen 3 14B oder Llama 4 Scout können HR-, Rechts- und medizinische Texte vollständig lokal verarbeiten.',
+        answer: 'Ja — ein Open-Weight-Modell lokal zu betreiben beseitigt den Artikel-44-Drittlandtransfer, der Cloud-KI unter der DSGVO rechtlich komplex macht: Prompts und Antworten verlassen Ihren Server nie. Lokale Modelle wie Qwen3 14B oder Llama 4 Scout können HR-, Rechts- und medizinische Texte vollständig lokal verarbeiten.',
         bullets: [
           'Kein Transfer = kein Artikel-44-Problem: die größte DSGVO-Hürde für Cloud-KI entfällt',
           'Artikel 25 (Datenschutz durch Technikgestaltung) erfüllt: Daten verlassen Ihre Jurisdiktion durch Architektur nie',
-          'Bestes für 12 GB VRAM: Qwen 3 14B Q4_K_M via Ollama — allgemein und coding-fähig',
+          'Bestes für 12 GB VRAM: Qwen3 14B Q4_K_M via Ollama — allgemein und coding-fähig',
         ],
         updatedDate: '2026-05',
       },
@@ -129,7 +129,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Das DSGVO-Kernproblem mit Cloud-KI ist Artikel 44: jeder Prompt mit personenbezogenen Daten an einen Nicht-EU-Server ist ein Drittlandtransfer, der einer Rechtsgrundlage bedarf',
           'Lokale LLMs beseitigen den Transfer vollständig — kein Transfer bedeutet kein Artikel-44-Problem, unabhängig vom Inhalt des Prompts',
           'DSGVO-Artikel 25 (Datenschutz durch Technikgestaltung) wird direkt erfüllt: Ihre Infrastruktur verarbeitet Daten standardmäßig jurisdiktionsintern',
-          'Praktischer Einstieg: Qwen 3 14B Q4_K_M via Ollama auf einer 12-GB-VRAM-GPU — verarbeitet HR-Zusammenfassungen, Rechtsentwürfe und medizinische Texte in Produktionsqualität',
+          'Praktischer Einstieg: Qwen3 14B Q4_K_M via Ollama auf einer 12-GB-VRAM-GPU — verarbeitet HR-Zusammenfassungen, Rechtsentwürfe und medizinische Texte in Produktionsqualität',
         ],
       },
       body1: {
@@ -147,16 +147,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Welche lokalen Modelle für DSGVO-regulierte Arbeit praktikabel sind',
         content: [
-          '<strong>Drei Open-Weight-Modelle decken die wichtigsten DSGVO-regulierten Workflows im Jahr 2026 ab. Für allgemeines HR, Recht und Dokumentenerststellung: Qwen 3 14B Q4_K_M (benötigt 10–12 GB VRAM). Für Code-Analyse und technische Dokumentation: Qwen2.5-Coder 14B (gleiches VRAM, stärker bei strukturierter Ausgabe). Für Organisationen mit einer GPU oder engerer Hardware: Qwen 3 8B Q4_K_M (6–8 GB VRAM).</strong>',
+          '<strong>Drei Open-Weight-Modelle decken die wichtigsten DSGVO-regulierten Workflows im Jahr 2026 ab. Für allgemeines HR, Recht und Dokumentenerststellung: Qwen3 14B Q4_K_M (benötigt 10–12 GB VRAM). Für Code-Analyse und technische Dokumentation: Qwen2.5-Coder 14B (gleiches VRAM, stärker bei strukturierter Ausgabe). Für Organisationen mit einer GPU oder engerer Hardware: Qwen3 8B Q4_K_M (6–8 GB VRAM).</strong>',
           'Alle drei laufen via Ollama mit einem einzigen Befehl und benötigen nach dem einmaligen Modell-Download keine Cloud-Konnektivität mehr. Das Modell kann einmalig über HTTPS von Hugging Face heruntergeladen werden, auch auf einem Air-Gap-Rechner via Datenträger. Danach: vollständig offline.',
           'Für größere Organisationen, die nahezu frontier-nahe Qualität benötigen: Llama 4 Scout (17B MoE) passt auf 24 GB VRAM mit einem 10M-Token-Kontextfenster — geeignet für die Verarbeitung langer Verträge, HR-Richtlinien oder medizinischer Unterlagen in einem einzigen Kontext.',
         ],
         columns: ['Workflow', 'Empfohlenes Modell', 'Benötigtes VRAM', 'Ollama-Befehl'],
         rows: [
-          { 'Workflow': 'HR-Dokumente, Zusammenfassungen', 'Empfohlenes Modell': 'Qwen 3 14B Q4_K_M', 'Benötigtes VRAM': '10–12 GB', 'Ollama-Befehl': 'ollama run qwen3:14b' },
-          { 'Workflow': 'Rechtsentwürfe, Verträge', 'Empfohlenes Modell': 'Qwen 3 14B Q4_K_M', 'Benötigtes VRAM': '10–12 GB', 'Ollama-Befehl': 'ollama run qwen3:14b' },
+          { 'Workflow': 'HR-Dokumente, Zusammenfassungen', 'Empfohlenes Modell': 'Qwen3 14B Q4_K_M', 'Benötigtes VRAM': '10–12 GB', 'Ollama-Befehl': 'ollama run qwen3:14b' },
+          { 'Workflow': 'Rechtsentwürfe, Verträge', 'Empfohlenes Modell': 'Qwen3 14B Q4_K_M', 'Benötigtes VRAM': '10–12 GB', 'Ollama-Befehl': 'ollama run qwen3:14b' },
           { 'Workflow': 'Code, technische Dokumente', 'Empfohlenes Modell': 'Qwen2.5-Coder 14B', 'Benötigtes VRAM': '10–12 GB', 'Ollama-Befehl': 'ollama run qwen2.5-coder:14b' },
-          { 'Workflow': 'Budget / 8 GB VRAM', 'Empfohlenes Modell': 'Qwen 3 8B Q4_K_M', 'Benötigtes VRAM': '6–8 GB', 'Ollama-Befehl': 'ollama run qwen3:8b' },
+          { 'Workflow': 'Budget / 8 GB VRAM', 'Empfohlenes Modell': 'Qwen3 8B Q4_K_M', 'Benötigtes VRAM': '6–8 GB', 'Ollama-Befehl': 'ollama run qwen3:8b' },
           { 'Workflow': 'Lange Dokumente (>100K Token)', 'Empfohlenes Modell': 'Llama 4 Scout', 'Benötigtes VRAM': '24 GB', 'Ollama-Befehl': 'ollama run llama4:scout' },
         ],
       },
@@ -170,7 +170,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Welches lokale Modell empfehlen Sie für die DSGVO-Compliance?',
-            a: 'Für 12 GB VRAM ist Qwen 3 14B Q4_K_M via Ollama der Ausgangspunkt: stark bei deutschen und mehrsprachigen Texten, allgemein einsatzfähig, Apache-2.0-Lizenz mit prüfbaren Gewichten. Für 8 GB VRAM: Qwen 3 8B Q4_K_M. Vollständige Einrichtungsschritte mit DSGVO-Checkliste finden Sie im <a href="/de/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">DSGVO-Qwen-Einrichtungsleitfaden</a>.',
+            a: 'Für 12 GB VRAM ist Qwen3 14B Q4_K_M via Ollama der Ausgangspunkt: stark bei deutschen und mehrsprachigen Texten, allgemein einsatzfähig, Apache-2.0-Lizenz mit prüfbaren Gewichten. Für 8 GB VRAM: Qwen3 8B Q4_K_M. Vollständige Einrichtungsschritte mit DSGVO-Checkliste finden Sie im <a href="/de/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">DSGVO-Qwen-Einrichtungsleitfaden</a>.',
           },
         ],
       },
@@ -189,11 +189,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Un LLM local peut-il aider à la conformité RGPD ?',
-        answer: 'Oui — exécuter un modèle open-weight localement élimine le transfert vers un pays tiers de l\'Article 44 qui complexifie juridiquement l\'IA cloud sous le RGPD : vos prompts et réponses ne quittent jamais votre serveur. Les modèles locaux comme Qwen 3 14B ou Llama 4 Scout peuvent traiter les textes RH, juridiques et médicaux entièrement sur site.',
+        answer: 'Oui — exécuter un modèle open-weight localement élimine le transfert vers un pays tiers de l\'Article 44 qui complexifie juridiquement l\'IA cloud sous le RGPD : vos prompts et réponses ne quittent jamais votre serveur. Les modèles locaux comme Qwen3 14B ou Llama 4 Scout peuvent traiter les textes RH, juridiques et médicaux entièrement sur site.',
         bullets: [
           'Pas de transfert = pas de problème Article 44 : le principal obstacle RGPD pour l\'IA cloud disparaît',
           'Article 25 (protection dès la conception) satisfait : les données ne quittent jamais votre juridiction par architecture',
-          'Meilleur pour 12 Go VRAM : Qwen 3 14B Q4_K_M via Ollama — polyvalent et capable en code',
+          'Meilleur pour 12 Go VRAM : Qwen3 14B Q4_K_M via Ollama — polyvalent et capable en code',
         ],
         updatedDate: '2026-05',
       },
@@ -206,7 +206,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Le problème RGPD central avec l\'IA cloud est l\'Article 44 : tout prompt contenant des données personnelles envoyé à un serveur hors UE est un transfert vers un pays tiers nécessitant une base légale',
           'Les LLMs locaux éliminent entièrement le transfert — pas de transfert signifie pas de problème Article 44, quel que soit le contenu du prompt',
           'L\'Article 25 du RGPD (protection dès la conception) est directement satisfait : votre infrastructure traite les données dans votre juridiction par défaut',
-          'Point de départ pratique : Qwen 3 14B Q4_K_M via Ollama sur un GPU 12 Go VRAM — traite résumés RH, rédaction juridique et textes médicaux en qualité production',
+          'Point de départ pratique : Qwen3 14B Q4_K_M via Ollama sur un GPU 12 Go VRAM — traite résumés RH, rédaction juridique et textes médicaux en qualité production',
         ],
       },
       body1: {
@@ -224,16 +224,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Quels modèles locaux sont pratiques pour le travail réglementé RGPD',
         content: [
-          '<strong>Trois modèles open-weight couvrent les principaux flux de travail réglementés RGPD en 2026. Pour les RH généraux, le juridique et la rédaction documentaire : Qwen 3 14B Q4_K_M (nécessite 10–12 Go VRAM). Pour l\'analyse de code et la documentation technique : Qwen2.5-Coder 14B (même VRAM, plus fort sur les sorties structurées). Pour les organisations avec un seul GPU ou matériel limité : Qwen 3 8B Q4_K_M (6–8 Go VRAM).</strong>',
+          '<strong>Trois modèles open-weight couvrent les principaux flux de travail réglementés RGPD en 2026. Pour les RH généraux, le juridique et la rédaction documentaire : Qwen3 14B Q4_K_M (nécessite 10–12 Go VRAM). Pour l\'analyse de code et la documentation technique : Qwen2.5-Coder 14B (même VRAM, plus fort sur les sorties structurées). Pour les organisations avec un seul GPU ou matériel limité : Qwen3 8B Q4_K_M (6–8 Go VRAM).</strong>',
           'Les trois fonctionnent via Ollama avec une seule commande et ne nécessitent plus de connectivité cloud après le téléchargement unique du modèle. Le téléchargement s\'effectue une fois depuis Hugging Face via HTTPS et peut se faire sur une machine isolée par support physique. Ensuite : entièrement hors ligne.',
           'Pour les grandes organisations nécessitant une qualité proche du frontier : Llama 4 Scout (17B MoE) tient sur 24 Go VRAM avec une fenêtre de contexte de 10M tokens — adapté au traitement de longs contrats, politiques RH ou dossiers médicaux dans un seul contexte.',
         ],
         columns: ['Flux de travail', 'Modèle recommandé', 'VRAM requis', 'Commande Ollama'],
         rows: [
-          { 'Flux de travail': 'Documents RH, résumés', 'Modèle recommandé': 'Qwen 3 14B Q4_K_M', 'VRAM requis': '10–12 Go', 'Commande Ollama': 'ollama run qwen3:14b' },
-          { 'Flux de travail': 'Rédaction juridique, contrats', 'Modèle recommandé': 'Qwen 3 14B Q4_K_M', 'VRAM requis': '10–12 Go', 'Commande Ollama': 'ollama run qwen3:14b' },
+          { 'Flux de travail': 'Documents RH, résumés', 'Modèle recommandé': 'Qwen3 14B Q4_K_M', 'VRAM requis': '10–12 Go', 'Commande Ollama': 'ollama run qwen3:14b' },
+          { 'Flux de travail': 'Rédaction juridique, contrats', 'Modèle recommandé': 'Qwen3 14B Q4_K_M', 'VRAM requis': '10–12 Go', 'Commande Ollama': 'ollama run qwen3:14b' },
           { 'Flux de travail': 'Code, documentation technique', 'Modèle recommandé': 'Qwen2.5-Coder 14B', 'VRAM requis': '10–12 Go', 'Commande Ollama': 'ollama run qwen2.5-coder:14b' },
-          { 'Flux de travail': 'Budget / 8 Go VRAM', 'Modèle recommandé': 'Qwen 3 8B Q4_K_M', 'VRAM requis': '6–8 Go', 'Commande Ollama': 'ollama run qwen3:8b' },
+          { 'Flux de travail': 'Budget / 8 Go VRAM', 'Modèle recommandé': 'Qwen3 8B Q4_K_M', 'VRAM requis': '6–8 Go', 'Commande Ollama': 'ollama run qwen3:8b' },
           { 'Flux de travail': 'Longs documents (>100K tokens)', 'Modèle recommandé': 'Llama 4 Scout', 'VRAM requis': '24 Go', 'Commande Ollama': 'ollama run llama4:scout' },
         ],
       },
@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quel modèle local recommandez-vous pour la conformité RGPD ?',
-            a: 'Pour 12 Go de VRAM, Qwen 3 14B Q4_K_M via Ollama est le point de départ : fort sur le français et les textes multilingues, polyvalent, licence Apache 2.0 avec poids auditables. Pour 8 Go de VRAM : Qwen 3 8B Q4_K_M. Les étapes d\'installation complètes avec une check-list RGPD sont dans le <a href="/fr/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">guide de configuration RGPD pour Qwen</a>.',
+            a: 'Pour 12 Go de VRAM, Qwen3 14B Q4_K_M via Ollama est le point de départ : fort sur le français et les textes multilingues, polyvalent, licence Apache 2.0 avec poids auditables. Pour 8 Go de VRAM : Qwen3 8B Q4_K_M. Les étapes d\'installation complètes avec une check-list RGPD sont dans le <a href="/fr/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">guide de configuration RGPD pour Qwen</a>.',
           },
         ],
       },
@@ -266,11 +266,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'ローカルLLMはGDPRコンプライアンスに役立ちますか？',
-        answer: 'はい——オープンウェイトモデルをローカル実行すると、クラウドAIをGDPR下で法的に複雑にする第44条の第三国転送が排除され、プロンプトと応答がサーバーを離れることがありません。Qwen 3 14BやLlama 4 ScoutなどのローカルモデルはHR・法務・医療テキストをすべてオンプレミスで処理できます。',
+        answer: 'はい——オープンウェイトモデルをローカル実行すると、クラウドAIをGDPR下で法的に複雑にする第44条の第三国転送が排除され、プロンプトと応答がサーバーを離れることがありません。Qwen3 14BやLlama 4 ScoutなどのローカルモデルはHR・法務・医療テキストをすべてオンプレミスで処理できます。',
         bullets: [
           '転送なし = 第44条問題なし：クラウドAIの最大のGDPRハードルが消える',
           '第25条（プライバシーバイデザイン）満足：アーキテクチャによりデータが管轄を離れない',
-          '12 GB VRAMに最適：Ollama経由Qwen 3 14B Q4_K_M——汎用＋コーディング対応',
+          '12 GB VRAMに最適：Ollama経由Qwen3 14B Q4_K_M——汎用＋コーディング対応',
         ],
         updatedDate: '2026-05',
       },
@@ -283,7 +283,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'クラウドAIのGDPRコア問題は第44条：EU外サーバーに個人データを含むプロンプトを送ると、法的根拠が必要な第三国転送になる',
           'ローカルLLMは転送を完全に排除——転送がなければ、プロンプトの内容に関わらず第44条問題は発生しない',
           'GDPR第25条（プライバシーバイデザイン）が直接満たされる：インフラがデフォルトで管轄内でデータを処理する',
-          '実践的な出発点：12 GB VRAM GPUでOllama経由Qwen 3 14B Q4_K_M——HR要約・法的起草・医療テキストを本番品質で処理',
+          '実践的な出発点：12 GB VRAM GPUでOllama経由Qwen3 14B Q4_K_M——HR要約・法的起草・医療テキストを本番品質で処理',
         ],
       },
       body1: {
@@ -301,16 +301,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'GDPR規制業務に実用的なローカルモデル',
         content: [
-          '<strong>2026年には3つのオープンウェイトモデルが主要なGDPR規制ワークフローをカバーします。汎用HR・法務・文書作成：Qwen 3 14B Q4_K_M（10〜12 GB VRAMが必要）。コード分析と技術文書：Qwen2.5-Coder 14B（同VRAM、構造化出力で強い）。単一GPUまたはハードウェアが限られる組織：Qwen 3 8B Q4_K_M（6〜8 GB VRAM）。</strong>',
+          '<strong>2026年には3つのオープンウェイトモデルが主要なGDPR規制ワークフローをカバーします。汎用HR・法務・文書作成：Qwen3 14B Q4_K_M（10〜12 GB VRAMが必要）。コード分析と技術文書：Qwen2.5-Coder 14B（同VRAM、構造化出力で強い）。単一GPUまたはハードウェアが限られる組織：Qwen3 8B Q4_K_M（6〜8 GB VRAM）。</strong>',
           '3つとも単一コマンドでOllama経由で動作し、一度のモデルダウンロード後はクラウド接続が不要です。ダウンロードはHTTPS経由でHugging Faceから一度行い、エアギャップマシンでも物理メディア経由で可能です。その後は完全オフライン。',
           '大規模組織でフロンティア近くの品質が必要な場合：Llama 4 Scout（17B MoE）は24 GB VRAMに収まり、10Mトークンコンテキストウィンドウを持ちます——長い契約書・HR方針文書・医療記録の処理に適しています。',
         ],
         columns: ['ワークフロー', '推奨モデル', '必要VRAM', 'Ollamaコマンド'],
         rows: [
-          { 'ワークフロー': 'HR文書、要約', '推奨モデル': 'Qwen 3 14B Q4_K_M', '必要VRAM': '10〜12 GB', 'Ollamaコマンド': 'ollama run qwen3:14b' },
-          { 'ワークフロー': '法的起草、契約書', '推奨モデル': 'Qwen 3 14B Q4_K_M', '必要VRAM': '10〜12 GB', 'Ollamaコマンド': 'ollama run qwen3:14b' },
+          { 'ワークフロー': 'HR文書、要約', '推奨モデル': 'Qwen3 14B Q4_K_M', '必要VRAM': '10〜12 GB', 'Ollamaコマンド': 'ollama run qwen3:14b' },
+          { 'ワークフロー': '法的起草、契約書', '推奨モデル': 'Qwen3 14B Q4_K_M', '必要VRAM': '10〜12 GB', 'Ollamaコマンド': 'ollama run qwen3:14b' },
           { 'ワークフロー': 'コード、技術文書', '推奨モデル': 'Qwen2.5-Coder 14B', '必要VRAM': '10〜12 GB', 'Ollamaコマンド': 'ollama run qwen2.5-coder:14b' },
-          { 'ワークフロー': 'バジェット / 8 GB VRAM', '推奨モデル': 'Qwen 3 8B Q4_K_M', '必要VRAM': '6〜8 GB', 'Ollamaコマンド': 'ollama run qwen3:8b' },
+          { 'ワークフロー': 'バジェット / 8 GB VRAM', '推奨モデル': 'Qwen3 8B Q4_K_M', '必要VRAM': '6〜8 GB', 'Ollamaコマンド': 'ollama run qwen3:8b' },
           { 'ワークフロー': '長文書（100Kトークン以上）', '推奨モデル': 'Llama 4 Scout', '必要VRAM': '24 GB', 'Ollamaコマンド': 'ollama run llama4:scout' },
         ],
       },
@@ -324,7 +324,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'GDPRコンプライアンスにどのローカルモデルを推奨しますか？',
-            a: '12 GB VRAMにはOllama経由のQwen 3 14B Q4_K_Mが出発点：日本語と多言語テキストに強く、汎用で、検証可能な重みのApache 2.0ライセンス。8 GB VRAM：Qwen 3 8B Q4_K_M。GDPRチェックリスト付きの完全なセットアップ手順は<a href="/ja/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">Qwen GDPRセットアップガイド</a>をご覧ください。',
+            a: '12 GB VRAMにはOllama経由のQwen3 14B Q4_K_Mが出発点：日本語と多言語テキストに強く、汎用で、検証可能な重みのApache 2.0ライセンス。8 GB VRAM：Qwen3 8B Q4_K_M。GDPRチェックリスト付きの完全なセットアップ手順は<a href="/ja/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">Qwen GDPRセットアップガイド</a>をご覧ください。',
           },
         ],
       },
@@ -343,11 +343,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '本地LLM能帮助GDPR合规吗？',
-        answer: '可以——在本地运行开源权重模型完全消除了第44条第三国数据传输问题（这正是云AI在GDPR下法律复杂的原因），提示词和响应永远不会离开您的服务器。Qwen 3 14B或Llama 4 Scout等本地模型可以完全在本地处理HR、法律和医疗文本。',
+        answer: '可以——在本地运行开源权重模型完全消除了第44条第三国数据传输问题（这正是云AI在GDPR下法律复杂的原因），提示词和响应永远不会离开您的服务器。Qwen3 14B或Llama 4 Scout等本地模型可以完全在本地处理HR、法律和医疗文本。',
         bullets: [
           '无传输 = 无第44条问题：云AI的最大GDPR障碍消失',
           '满足第25条（隐私设计）：通过架构确保数据不离开您的管辖范围',
-          '12 GB VRAM最佳选择：Ollama本地Qwen 3 14B Q4_K_M——通用+代码能力兼备',
+          '12 GB VRAM最佳选择：Ollama本地Qwen3 14B Q4_K_M——通用+代码能力兼备',
         ],
         updatedDate: '2026-05',
       },
@@ -360,7 +360,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '云AI的GDPR核心问题是第44条：包含个人数据的提示词发送到非欧盟服务器就是需要法律依据的第三国传输',
           '本地LLM完全消除传输——无传输意味着无第44条问题，无论提示词包含什么内容',
           'GDPR第25条（隐私设计）直接满足：您的基础设施默认在管辖范围内处理数据',
-          '实践起点：12 GB VRAM GPU上通过Ollama运行Qwen 3 14B Q4_K_M——以生产质量处理HR摘要、法律起草和医疗文本',
+          '实践起点：12 GB VRAM GPU上通过Ollama运行Qwen3 14B Q4_K_M——以生产质量处理HR摘要、法律起草和医疗文本',
         ],
       },
       body1: {
@@ -378,16 +378,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: '适合GDPR监管工作的实用本地模型',
         content: [
-          '<strong>2026年有三个开源权重模型涵盖主要GDPR监管工作流程。通用HR、法务和文档起草：Qwen 3 14B Q4_K_M（需要10-12 GB VRAM）。代码分析和技术文档：Qwen2.5-Coder 14B（相同VRAM，结构化输出更强）。单GPU或硬件受限的机构：Qwen 3 8B Q4_K_M（6-8 GB VRAM）。</strong>',
+          '<strong>2026年有三个开源权重模型涵盖主要GDPR监管工作流程。通用HR、法务和文档起草：Qwen3 14B Q4_K_M（需要10-12 GB VRAM）。代码分析和技术文档：Qwen2.5-Coder 14B（相同VRAM，结构化输出更强）。单GPU或硬件受限的机构：Qwen3 8B Q4_K_M（6-8 GB VRAM）。</strong>',
           '三者都通过Ollama单命令运行，一次性下载模型后无需云连接。下载可通过HTTPS从Hugging Face一次性完成，也可在隔离机器上通过物理介质完成。之后完全离线。',
           '对于需要接近前沿质量的大型机构：Llama 4 Scout（17B MoE）可在24 GB VRAM上运行，拥有10M令牌上下文窗口——适合在单一上下文中处理长合同、HR政策文档或医疗记录。',
         ],
         columns: ['工作流程', '推荐模型', '所需VRAM', 'Ollama命令'],
         rows: [
-          { '工作流程': 'HR文档、摘要', '推荐模型': 'Qwen 3 14B Q4_K_M', '所需VRAM': '10-12 GB', 'Ollama命令': 'ollama run qwen3:14b' },
-          { '工作流程': '法律起草、合同', '推荐模型': 'Qwen 3 14B Q4_K_M', '所需VRAM': '10-12 GB', 'Ollama命令': 'ollama run qwen3:14b' },
+          { '工作流程': 'HR文档、摘要', '推荐模型': 'Qwen3 14B Q4_K_M', '所需VRAM': '10-12 GB', 'Ollama命令': 'ollama run qwen3:14b' },
+          { '工作流程': '法律起草、合同', '推荐模型': 'Qwen3 14B Q4_K_M', '所需VRAM': '10-12 GB', 'Ollama命令': 'ollama run qwen3:14b' },
           { '工作流程': '代码、技术文档', '推荐模型': 'Qwen2.5-Coder 14B', '所需VRAM': '10-12 GB', 'Ollama命令': 'ollama run qwen2.5-coder:14b' },
-          { '工作流程': '预算型 / 8 GB VRAM', '推荐模型': 'Qwen 3 8B Q4_K_M', '所需VRAM': '6-8 GB', 'Ollama命令': 'ollama run qwen3:8b' },
+          { '工作流程': '预算型 / 8 GB VRAM', '推荐模型': 'Qwen3 8B Q4_K_M', '所需VRAM': '6-8 GB', 'Ollama命令': 'ollama run qwen3:8b' },
           { '工作流程': '长文档（>10万令牌）', '推荐模型': 'Llama 4 Scout', '所需VRAM': '24 GB', 'Ollama命令': 'ollama run llama4:scout' },
         ],
       },
@@ -401,7 +401,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'GDPR合规推荐哪个本地模型？',
-            a: '12 GB VRAM推荐通过Ollama使用Qwen 3 14B Q4_K_M：中文和多语言文本表现强，通用性好，Apache 2.0许可证权重可审计。8 GB VRAM：Qwen 3 8B Q4_K_M。带GDPR检查清单的完整安装步骤请参阅<a href="/zh/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">Qwen GDPR配置完整指南</a>。',
+            a: '12 GB VRAM推荐通过Ollama使用Qwen3 14B Q4_K_M：中文和多语言文本表现强，通用性好，Apache 2.0许可证权重可审计。8 GB VRAM：Qwen3 8B Q4_K_M。带GDPR检查清单的完整安装步骤请参阅<a href="/zh/local-llms/qwen-local-gdpr-setup-guide-2026" class="text-primary hover:underline">Qwen GDPR配置完整指南</a>。',
           },
         ],
       },
@@ -420,11 +420,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'Um LLM local pode ajudar com a conformidade do RGPD?',
-        answer: 'Sim — executar um modelo de pesos abertos localmente elimina a transferência de dados para países terceiros do Artigo 44 que torna a IA em nuvem legalmente complexa sob o RGPD, o que significa que seus prompts e respostas nunca saem do seu servidor. Modelos locais como Qwen 3 14B ou Llama 4 Scout podem lidar com textos de RH, jurídico e médico inteiramente nas instalações.',
+        answer: 'Sim — executar um modelo de pesos abertos localmente elimina a transferência de dados para países terceiros do Artigo 44 que torna a IA em nuvem legalmente complexa sob o RGPD, o que significa que seus prompts e respostas nunca saem do seu servidor. Modelos locais como Qwen3 14B ou Llama 4 Scout podem lidar com textos de RH, jurídico e médico inteiramente nas instalações.',
         bullets: [
           'Sem transferência = sem problema do Artigo 44: o maior obstáculo do RGPD para a IA em nuvem desaparece',
           'Artigo 25 (privacidade desde o design) satisfeito: os dados nunca saem da sua jurisdição por arquitetura',
-          'O melhor para 12 GB de VRAM: Qwen 3 14B Q4_K_M via Ollama — versátil e com capacidade de código',
+          'O melhor para 12 GB de VRAM: Qwen3 14B Q4_K_M via Ollama — versátil e com capacidade de código',
         ],
         updatedDate: '2026-05',
       },
@@ -437,7 +437,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'O problema central do RGPD com a IA em nuvem é o Artigo 44: qualquer prompt com dados pessoais enviado a um servidor fora da UE é uma transferência para país terceiro que exige base legal',
           'LLMs locais eliminam a transferência por completo — sem transferência não há problema com o Artigo 44, independentemente do conteúdo do prompt',
           'O Artigo 25 do RGPD (privacidade desde o design) fica diretamente satisfeito: sua infraestrutura processa dados dentro da sua jurisdição por padrão',
-          'Ponto de partida prático: Qwen 3 14B Q4_K_M via Ollama em uma GPU com 12 GB de VRAM — processa resumos de RH, rascunhos jurídicos e textos médicos com qualidade de produção',
+          'Ponto de partida prático: Qwen3 14B Q4_K_M via Ollama em uma GPU com 12 GB de VRAM — processa resumos de RH, rascunhos jurídicos e textos médicos com qualidade de produção',
         ],
       },
       body1: {
@@ -455,16 +455,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Quais modelos locais são práticos para trabalho regulado pelo RGPD',
         content: [
-          '<strong>Três modelos de pesos abertos cobrem os principais fluxos de trabalho regulados pelo RGPD em 2026. Para RH geral, jurídico e redação de documentos: Qwen 3 14B Q4_K_M (precisa de 10–12 GB de VRAM). Para análise de código e documentação técnica: Qwen2.5-Coder 14B (mesmo VRAM, mais forte em saída estruturada). Para organizações com uma única GPU ou hardware mais limitado: Qwen 3 8B Q4_K_M (6–8 GB de VRAM).</strong>',
+          '<strong>Três modelos de pesos abertos cobrem os principais fluxos de trabalho regulados pelo RGPD em 2026. Para RH geral, jurídico e redação de documentos: Qwen3 14B Q4_K_M (precisa de 10–12 GB de VRAM). Para análise de código e documentação técnica: Qwen2.5-Coder 14B (mesmo VRAM, mais forte em saída estruturada). Para organizações com uma única GPU ou hardware mais limitado: Qwen3 8B Q4_K_M (6–8 GB de VRAM).</strong>',
           'Todos os três rodam via Ollama com um único comando e não exigem conectividade em nuvem após o download único do modelo. O download é feito uma vez do Hugging Face via HTTPS e pode ser feito em uma máquina air-gapped via mídia física. Depois: totalmente offline.',
           'Para organizações maiores que precisam de qualidade próxima à fronteira: Llama 4 Scout (17B MoE) cabe em 24 GB de VRAM com uma janela de contexto de 10M tokens — adequado para processar contratos longos, documentos de política de RH ou registros médicos em um único contexto.',
         ],
         columns: ['Fluxo de trabalho', 'Modelo recomendado', 'VRAM necessária', 'Comando Ollama'],
         rows: [
-          { 'Fluxo de trabalho': 'Documentos de RH, resumos', 'Modelo recomendado': 'Qwen 3 14B Q4_K_M', 'VRAM necessária': '10–12 GB', 'Comando Ollama': 'ollama run qwen3:14b' },
-          { 'Fluxo de trabalho': 'Redação jurídica, contratos', 'Modelo recomendado': 'Qwen 3 14B Q4_K_M', 'VRAM necessária': '10–12 GB', 'Comando Ollama': 'ollama run qwen3:14b' },
+          { 'Fluxo de trabalho': 'Documentos de RH, resumos', 'Modelo recomendado': 'Qwen3 14B Q4_K_M', 'VRAM necessária': '10–12 GB', 'Comando Ollama': 'ollama run qwen3:14b' },
+          { 'Fluxo de trabalho': 'Redação jurídica, contratos', 'Modelo recomendado': 'Qwen3 14B Q4_K_M', 'VRAM necessária': '10–12 GB', 'Comando Ollama': 'ollama run qwen3:14b' },
           { 'Fluxo de trabalho': 'Código, documentação técnica', 'Modelo recomendado': 'Qwen2.5-Coder 14B', 'VRAM necessária': '10–12 GB', 'Comando Ollama': 'ollama run qwen2.5-coder:14b' },
-          { 'Fluxo de trabalho': 'Orçamento / 8 GB VRAM', 'Modelo recomendado': 'Qwen 3 8B Q4_K_M', 'VRAM necessária': '6–8 GB', 'Comando Ollama': 'ollama run qwen3:8b' },
+          { 'Fluxo de trabalho': 'Orçamento / 8 GB VRAM', 'Modelo recomendado': 'Qwen3 8B Q4_K_M', 'VRAM necessária': '6–8 GB', 'Comando Ollama': 'ollama run qwen3:8b' },
           { 'Fluxo de trabalho': 'Documentos longos (>100K tokens)', 'Modelo recomendado': 'Llama 4 Scout', 'VRAM necessária': '24 GB', 'Comando Ollama': 'ollama run llama4:scout' },
         ],
       },
@@ -505,11 +505,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Puede un LLM local ayudar con el cumplimiento del RGPD?',
-        answer: 'Sí — ejecutar un modelo de código abierto localmente elimina la transferencia de datos a terceros países del Artículo 44 que hace legalmente complejo el uso de IA en la nube bajo el RGPD, lo que significa que tus prompts y respuestas nunca salen de tu servidor. Modelos locales como Qwen 3 14B o Llama 4 Scout pueden manejar textos de RRHH, legal y médico completamente en las instalaciones.',
+        answer: 'Sí — ejecutar un modelo de código abierto localmente elimina la transferencia de datos a terceros países del Artículo 44 que hace legalmente complejo el uso de IA en la nube bajo el RGPD, lo que significa que tus prompts y respuestas nunca salen de tu servidor. Modelos locales como Qwen3 14B o Llama 4 Scout pueden manejar textos de RRHH, legal y médico completamente en las instalaciones.',
         bullets: [
           'Sin transferencia = sin problema del Artículo 44: el mayor obstáculo RGPD para la IA en la nube desaparece',
           'Artículo 25 (privacidad desde el diseño) satisfecho: los datos nunca abandonan tu jurisdicción por arquitectura',
-          'El mejor para 12 GB de VRAM: Qwen 3 14B Q4_K_M via Ollama — versátil y con capacidad de código',
+          'El mejor para 12 GB de VRAM: Qwen3 14B Q4_K_M via Ollama — versátil y con capacidad de código',
         ],
         updatedDate: '2026-05',
       },
@@ -522,7 +522,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'El problema central del RGPD con la IA en la nube es el Artículo 44: cualquier prompt con datos personales enviado a un servidor fuera de la UE es una transferencia a terceros países que requiere base legal',
           'Los LLMs locales eliminan la transferencia por completo: sin transferencia no hay problema con el Artículo 44, independientemente del contenido del prompt',
           'El Artículo 25 del RGPD (privacidad desde el diseño) queda directamente satisfecho: tu infraestructura procesa los datos dentro de tu jurisdicción por defecto',
-          'Punto de partida práctico: Qwen 3 14B Q4_K_M via Ollama en una GPU con 12 GB de VRAM — gestiona resúmenes de RRHH, redacción legal y texto médico con calidad de producción',
+          'Punto de partida práctico: Qwen3 14B Q4_K_M via Ollama en una GPU con 12 GB de VRAM — gestiona resúmenes de RRHH, redacción legal y texto médico con calidad de producción',
         ],
       },
       body1: {
@@ -540,16 +540,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'Qué modelos locales son prácticos para el trabajo regulado por el RGPD',
         content: [
-          '<strong>Tres modelos de código abierto cubren los principales flujos de trabajo regulados por el RGPD en 2026. Para RRHH general, legal y redacción de documentos: Qwen 3 14B Q4_K_M (necesita 10–12 GB de VRAM). Para análisis de código y documentación técnica: Qwen2.5-Coder 14B (mismo VRAM, más potente en salida estructurada). Para organizaciones con una sola GPU o hardware más limitado: Qwen 3 8B Q4_K_M (6–8 GB de VRAM).</strong>',
+          '<strong>Tres modelos de código abierto cubren los principales flujos de trabajo regulados por el RGPD en 2026. Para RRHH general, legal y redacción de documentos: Qwen3 14B Q4_K_M (necesita 10–12 GB de VRAM). Para análisis de código y documentación técnica: Qwen2.5-Coder 14B (mismo VRAM, más potente en salida estructurada). Para organizaciones con una sola GPU o hardware más limitado: Qwen3 8B Q4_K_M (6–8 GB de VRAM).</strong>',
           'Los tres funcionan via Ollama con un solo comando y no requieren conectividad en la nube tras la descarga única del modelo. La descarga se realiza una vez desde Hugging Face a través de HTTPS y puede hacerse en una máquina air-gapped mediante soporte físico. Después: completamente offline.',
           'Para organizaciones más grandes que necesitan calidad cercana a la frontera: Llama 4 Scout (17B MoE) cabe en 24 GB de VRAM con una ventana de contexto de 10M tokens, ideal para procesar contratos largos, documentos de política de RRHH o registros médicos en un único contexto.',
         ],
         columns: ['Flujo de trabajo', 'Modelo recomendado', 'VRAM requerida', 'Comando Ollama'],
         rows: [
-          { 'Flujo de trabajo': 'Documentos de RRHH, resúmenes', 'Modelo recomendado': 'Qwen 3 14B Q4_K_M', 'VRAM requerida': '10–12 GB', 'Comando Ollama': 'ollama run qwen3:14b' },
-          { 'Flujo de trabajo': 'Redacción legal, contratos', 'Modelo recomendado': 'Qwen 3 14B Q4_K_M', 'VRAM requerida': '10–12 GB', 'Comando Ollama': 'ollama run qwen3:14b' },
+          { 'Flujo de trabajo': 'Documentos de RRHH, resúmenes', 'Modelo recomendado': 'Qwen3 14B Q4_K_M', 'VRAM requerida': '10–12 GB', 'Comando Ollama': 'ollama run qwen3:14b' },
+          { 'Flujo de trabajo': 'Redacción legal, contratos', 'Modelo recomendado': 'Qwen3 14B Q4_K_M', 'VRAM requerida': '10–12 GB', 'Comando Ollama': 'ollama run qwen3:14b' },
           { 'Flujo de trabajo': 'Código, documentación técnica', 'Modelo recomendado': 'Qwen2.5-Coder 14B', 'VRAM requerida': '10–12 GB', 'Comando Ollama': 'ollama run qwen2.5-coder:14b' },
-          { 'Flujo de trabajo': 'Presupuesto / 8 GB VRAM', 'Modelo recomendado': 'Qwen 3 8B Q4_K_M', 'VRAM requerida': '6–8 GB', 'Comando Ollama': 'ollama run qwen3:8b' },
+          { 'Flujo de trabajo': 'Presupuesto / 8 GB VRAM', 'Modelo recomendado': 'Qwen3 8B Q4_K_M', 'VRAM requerida': '6–8 GB', 'Comando Ollama': 'ollama run qwen3:8b' },
           { 'Flujo de trabajo': 'Documentos largos (>100K tokens)', 'Modelo recomendado': 'Llama 4 Scout', 'VRAM requerida': '24 GB', 'Comando Ollama': 'ollama run llama4:scout' },
         ],
       },
@@ -582,7 +582,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/can-local-llm-help-gdpr-overview-hero-ar.webp',
     title: 'هل يمكن لنموذج ⁨LLM⁩ المحلي المساعدة في الامتثال للائحة ⁨GDPR⁩؟',
     seoTitle: '⁨LLM⁩ محلي لامتثال ⁨GDPR 2026⁩: إلغاء المادة ⁨44⁩',
-    metaDescription: 'نعم — النموذج المحلي يُلغي نقل بيانات المادة ⁨44⁩ من ⁨GDPR. Qwen 3 14B Q4⁩_⁨K⁩_⁨M⁩ عبر ⁨Ollama⁩ يحتاج ⁨12 GB VRAM⁩ ويعالج نصوص ⁨HR⁩ والوثائق القانونية محليًا.',
+    metaDescription: 'نعم — النموذج المحلي يُلغي نقل بيانات المادة ⁨44⁩ من ⁨GDPR. Qwen3 14B Q4⁩_⁨K⁩_⁨M⁩ عبر ⁨Ollama⁩ يحتاج ⁨12 GB VRAM⁩ ويعالج نصوص ⁨HR⁩ والوثائق القانونية محليًا.',
     publishDate: '2026-05-22',
     dateModified: '2026-09-02',
     freshness_tier: 'semi_annual',
@@ -590,11 +590,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل يمكن لنموذج LLM المحلي المساعدة في الامتثال للائحة GDPR؟',
-        answer: 'نعم — تشغيل نموذج مفتوح الأوزان محليًا يُزيل نقل البيانات إلى دولة ثالثة بموجب المادة 44 الذي يُعقّد استخدام الذكاء الاصطناعي السحابي قانونيًا تحت GDPR، مما يعني أن مطالباتك وردودك لا تغادر خادمك أبدًا. النماذج المحلية مثل Qwen 3 14B أو Llama 4 Scout يمكنها التعامل مع نصوص الموارد البشرية والقانون والطب بالكامل داخل مقراتك.',
+        answer: 'نعم — تشغيل نموذج مفتوح الأوزان محليًا يُزيل نقل البيانات إلى دولة ثالثة بموجب المادة 44 الذي يُعقّد استخدام الذكاء الاصطناعي السحابي قانونيًا تحت GDPR، مما يعني أن مطالباتك وردودك لا تغادر خادمك أبدًا. النماذج المحلية مثل Qwen3 14B أو Llama 4 Scout يمكنها التعامل مع نصوص الموارد البشرية والقانون والطب بالكامل داخل مقراتك.',
         bullets: [
           'لا نقل = لا مشكلة المادة 44: يختفي أكبر عقبة GDPR أمام الذكاء الاصطناعي السحابي',
           'المادة 25 (الخصوصية في التصميم) مُستوفاة: البيانات لا تغادر ولايتك القضائية بحكم البنية المعمارية',
-          'الأفضل لـ 12 GB VRAM: Qwen 3 14B Q4_K_M عبر Ollama — متعدد الأغراض وقادر على البرمجة',
+          'الأفضل لـ 12 GB VRAM: Qwen3 14B Q4_K_M عبر Ollama — متعدد الأغراض وقادر على البرمجة',
         ],
         updatedDate: '2026-05',
       },
@@ -607,7 +607,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'المشكلة الجوهرية لـ GDPR مع الذكاء الاصطناعي السحابي هي المادة 44: أي مطالبة تحتوي بيانات شخصية تُرسَل إلى خادم خارج الاتحاد الأوروبي تُعدّ نقلًا إلى دولة ثالثة يستلزم أساسًا قانونيًا',
           'تُزيل نماذج LLM المحلية النقل بالكامل — لا نقل يعني لا مشكلة في المادة 44 بصرف النظر عمّا تحتويه المطالبة',
           'المادة 25 من GDPR (الخصوصية في التصميم) تُستوفى مباشرةً: بنيتك التحتية تعالج البيانات داخل ولايتك القضائية بشكل افتراضي',
-          'نقطة البداية العملية: Qwen 3 14B Q4_K_M عبر Ollama على GPU بـ 12 GB VRAM — يتعامل مع ملخصات الموارد البشرية وصياغة الوثائق القانونية والنصوص الطبية بجودة الإنتاج',
+          'نقطة البداية العملية: Qwen3 14B Q4_K_M عبر Ollama على GPU بـ 12 GB VRAM — يتعامل مع ملخصات الموارد البشرية وصياغة الوثائق القانونية والنصوص الطبية بجودة الإنتاج',
         ],
       },
       body1: {
@@ -625,16 +625,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'النماذج المحلية العملية للعمل الخاضع لتنظيم GDPR',
         content: [
-          '<strong>ثلاثة نماذج مفتوحة الأوزان تغطّي سير العمل الرئيسية الخاضعة لتنظيم GDPR في 2026. للموارد البشرية العامة والشؤون القانونية وصياغة الوثائق: Qwen 3 14B Q4_K_M (يحتاج 10-12 GB VRAM). لتحليل الشيفرة البرمجية والتوثيق التقني: Qwen2.5-Coder 14B (نفس VRAM، أقوى في المخرجات المنظّمة). للمؤسسات التي تمتلك بطاقة رسوميات واحدة أو أجهزة محدودة: Qwen 3 8B Q4_K_M (6-8 GB VRAM).</strong>',
+          '<strong>ثلاثة نماذج مفتوحة الأوزان تغطّي سير العمل الرئيسية الخاضعة لتنظيم GDPR في 2026. للموارد البشرية العامة والشؤون القانونية وصياغة الوثائق: Qwen3 14B Q4_K_M (يحتاج 10-12 GB VRAM). لتحليل الشيفرة البرمجية والتوثيق التقني: Qwen2.5-Coder 14B (نفس VRAM، أقوى في المخرجات المنظّمة). للمؤسسات التي تمتلك بطاقة رسوميات واحدة أو أجهزة محدودة: Qwen3 8B Q4_K_M (6-8 GB VRAM).</strong>',
           'تعمل النماذج الثلاثة عبر Ollama بأمر واحد ولا تتطلب اتصالًا سحابيًا بعد تنزيل النموذج لمرة واحدة. يتم التنزيل مرة واحدة من Hugging Face عبر HTTPS ويمكن إجراؤه على جهاز معزول عبر وسيط مادي. بعد ذلك: وضع غير متصل تمامًا.',
           'للمؤسسات الكبيرة التي تحتاج جودةً قريبة من الحدود: Llama 4 Scout (17B MoE) يعمل على 24 GB VRAM بنافذة سياق 10 ملايين رمز — مناسب لمعالجة العقود الطويلة ووثائق سياسات الموارد البشرية أو السجلات الطبية في سياق واحد.',
         ],
         columns: ['سير العمل', 'النموذج الموصى به', 'VRAM المطلوب', 'أمر Ollama'],
         rows: [
-          { 'سير العمل': 'وثائق الموارد البشرية والملخصات', 'النموذج الموصى به': 'Qwen 3 14B Q4_K_M', 'VRAM المطلوب': '10-12 GB', 'أمر Ollama': 'ollama run qwen3:14b' },
-          { 'سير العمل': 'الصياغة القانونية والعقود', 'النموذج الموصى به': 'Qwen 3 14B Q4_K_M', 'VRAM المطلوب': '10-12 GB', 'أمر Ollama': 'ollama run qwen3:14b' },
+          { 'سير العمل': 'وثائق الموارد البشرية والملخصات', 'النموذج الموصى به': 'Qwen3 14B Q4_K_M', 'VRAM المطلوب': '10-12 GB', 'أمر Ollama': 'ollama run qwen3:14b' },
+          { 'سير العمل': 'الصياغة القانونية والعقود', 'النموذج الموصى به': 'Qwen3 14B Q4_K_M', 'VRAM المطلوب': '10-12 GB', 'أمر Ollama': 'ollama run qwen3:14b' },
           { 'سير العمل': 'الشيفرة البرمجية والتوثيق التقني', 'النموذج الموصى به': 'Qwen2.5-Coder 14B', 'VRAM المطلوب': '10-12 GB', 'أمر Ollama': 'ollama run qwen2.5-coder:14b' },
-          { 'سير العمل': 'ميزانية محدودة / 8 GB VRAM', 'النموذج الموصى به': 'Qwen 3 8B Q4_K_M', 'VRAM المطلوب': '6-8 GB', 'أمر Ollama': 'ollama run qwen3:8b' },
+          { 'سير العمل': 'ميزانية محدودة / 8 GB VRAM', 'النموذج الموصى به': 'Qwen3 8B Q4_K_M', 'VRAM المطلوب': '6-8 GB', 'أمر Ollama': 'ollama run qwen3:8b' },
           { 'سير العمل': 'الوثائق الطويلة (أكثر من 100K رمز)', 'النموذج الموصى به': 'Llama 4 Scout', 'VRAM المطلوب': '24 GB', 'أمر Ollama': 'ollama run llama4:scout' },
         ],
       },
@@ -683,11 +683,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '로컬 LLM이 GDPR 컴플라이언스에 도움이 됩니까?',
-        answer: '네 — 오픈 웨이트 모델을 로컬에서 실행하면 클라우드 AI를 GDPR 하에서 법적으로 복잡하게 만드는 제44조 제3국 이전이 완전히 제거됩니다. 프롬프트와 응답이 서버를 벗어나지 않습니다. Qwen 3 14B나 Llama 4 Scout와 같은 로컬 모델은 HR, 법무, 의료 텍스트를 완전히 온프레미스에서 처리할 수 있습니다.',
+        answer: '네 — 오픈 웨이트 모델을 로컬에서 실행하면 클라우드 AI를 GDPR 하에서 법적으로 복잡하게 만드는 제44조 제3국 이전이 완전히 제거됩니다. 프롬프트와 응답이 서버를 벗어나지 않습니다. Qwen3 14B나 Llama 4 Scout와 같은 로컬 모델은 HR, 법무, 의료 텍스트를 완전히 온프레미스에서 처리할 수 있습니다.',
         bullets: [
           '이전 없음 = 제44조 문제 없음: 클라우드 AI의 가장 큰 GDPR 장벽이 사라집니다',
           '제25조(프라이버시 바이 디자인) 충족: 아키텍처 설계상 데이터가 관할권을 벗어나지 않습니다',
-          '12 GB VRAM 최적 모델: Ollama를 통한 Qwen 3 14B Q4_K_M — 범용 및 코딩 지원',
+          '12 GB VRAM 최적 모델: Ollama를 통한 Qwen3 14B Q4_K_M — 범용 및 코딩 지원',
         ],
         updatedDate: '2026-05',
       },
@@ -700,7 +700,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'GDPR에서 클라우드 AI의 핵심 문제는 제44조입니다. 개인정보를 포함한 프롬프트를 EU 역외 서버로 전송하면 법적 근거가 필요한 제3국 이전에 해당합니다.',
           '로컬 LLM은 이전 자체를 완전히 제거합니다. 이전이 없으면 프롬프트 내용에 관계없이 제44조 문제가 발생하지 않습니다.',
           'GDPR 제25조(프라이버시 바이 디자인)가 직접 충족됩니다. 인프라 기본 설정으로 관할권 내에서 데이터를 처리합니다.',
-          '실용적인 출발점: 12 GB VRAM GPU에서 Ollama로 실행하는 Qwen 3 14B Q4_K_M — HR 요약, 법무 문서 작성, 의료 텍스트를 프로덕션 수준으로 처리합니다.',
+          '실용적인 출발점: 12 GB VRAM GPU에서 Ollama로 실행하는 Qwen3 14B Q4_K_M — HR 요약, 법무 문서 작성, 의료 텍스트를 프로덕션 수준으로 처리합니다.',
         ],
       },
       body1: {
@@ -718,16 +718,16 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body2: {
         title: 'GDPR 규제 업무에 실용적인 로컬 모델',
         content: [
-          '<strong>2026년 기준으로 세 가지 오픈 웨이트 모델이 주요 GDPR 규제 업무 흐름을 커버합니다. 일반 HR, 법무, 문서 작성용: Qwen 3 14B Q4_K_M(10~12 GB VRAM 필요). 코드 분석 및 기술 문서용: Qwen2.5-Coder 14B(동일한 VRAM, 구조화 출력 능력이 더 뛰어남). 단일 GPU 또는 더 제한된 하드웨어를 보유한 조직용: Qwen 3 8B Q4_K_M(6~8 GB VRAM).</strong>',
+          '<strong>2026년 기준으로 세 가지 오픈 웨이트 모델이 주요 GDPR 규제 업무 흐름을 커버합니다. 일반 HR, 법무, 문서 작성용: Qwen3 14B Q4_K_M(10~12 GB VRAM 필요). 코드 분석 및 기술 문서용: Qwen2.5-Coder 14B(동일한 VRAM, 구조화 출력 능력이 더 뛰어남). 단일 GPU 또는 더 제한된 하드웨어를 보유한 조직용: Qwen3 8B Q4_K_M(6~8 GB VRAM).</strong>',
           '세 모델 모두 Ollama를 통해 단일 명령어로 실행되며 최초 모델 다운로드 이후 클라우드 연결이 필요하지 않습니다. 다운로드는 Hugging Face에서 HTTPS로 한 번만 이루어지며 물리적 매체를 통해 에어갭 환경 기계에서도 수행할 수 있습니다. 이후에는 완전 오프라인으로 운영됩니다.',
           '프론티어급 품질이 필요한 대규모 조직의 경우: Llama 4 Scout(17B MoE)는 24 GB VRAM에서 1000만 토큰 컨텍스트 윈도우로 실행됩니다. 긴 계약서, HR 정책 문서, 의료 기록을 단일 컨텍스트에서 처리하기에 적합합니다.',
         ],
         columns: ['업무 흐름', '권장 모델', '필요 VRAM', 'Ollama 명령어'],
         rows: [
-          { '업무 흐름': 'HR 문서, 요약', '권장 모델': 'Qwen 3 14B Q4_K_M', '필요 VRAM': '10~12 GB', 'Ollama 명령어': 'ollama run qwen3:14b' },
-          { '업무 흐름': '법무 문서 작성, 계약서', '권장 모델': 'Qwen 3 14B Q4_K_M', '필요 VRAM': '10~12 GB', 'Ollama 명령어': 'ollama run qwen3:14b' },
+          { '업무 흐름': 'HR 문서, 요약', '권장 모델': 'Qwen3 14B Q4_K_M', '필요 VRAM': '10~12 GB', 'Ollama 명령어': 'ollama run qwen3:14b' },
+          { '업무 흐름': '법무 문서 작성, 계약서', '권장 모델': 'Qwen3 14B Q4_K_M', '필요 VRAM': '10~12 GB', 'Ollama 명령어': 'ollama run qwen3:14b' },
           { '업무 흐름': '코드, 기술 문서', '권장 모델': 'Qwen2.5-Coder 14B', '필요 VRAM': '10~12 GB', 'Ollama 명령어': 'ollama run qwen2.5-coder:14b' },
-          { '업무 흐름': '예산 제한 / 8 GB VRAM', '권장 모델': 'Qwen 3 8B Q4_K_M', '필요 VRAM': '6~8 GB', 'Ollama 명령어': 'ollama run qwen3:8b' },
+          { '업무 흐름': '예산 제한 / 8 GB VRAM', '권장 모델': 'Qwen3 8B Q4_K_M', '필요 VRAM': '6~8 GB', 'Ollama 명령어': 'ollama run qwen3:8b' },
           { '업무 흐름': '장문 문서(100K 토큰 이상)', '권장 모델': 'Llama 4 Scout', '필요 VRAM': '24 GB', 'Ollama 명령어': 'ollama run llama4:scout' },
         ],
       },

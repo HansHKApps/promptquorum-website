@@ -56,6 +56,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'runanywhere-review':                       'runanywhere-review',
   'draw-things-review':                      'draw-things-review',
   'ekorbia-review':                          'ekorbia-review',
+  // HilbertRaum review — maker outreach — 2026-09-25
+  'hilbertraum-review':                      'hilbertraum-review',
 
   // Category 5 — Creative & Roleplay
   'best-local-llm-creative-writing-2026':        'best-local-llm-creative-writing-2026',

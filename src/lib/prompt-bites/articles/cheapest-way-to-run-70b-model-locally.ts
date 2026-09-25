@@ -201,7 +201,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         items: [
           '[RTX 3090 for Local LLMs: Buy Used or Rent?](/power-local-llm/rtx-3090-local-llm-buy-or-rent) — the buy-vs-rent break-even math for the card this page recommends',
           '[How Much VRAM Does a 70B Model Need?](/prompt-bites/vram-for-70b-model) — how much VRAM for a 70B model',
-          '[DeepSeek R1 Distill VRAM Cheatsheet](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek R1 distill VRAM cheatsheet',
+          '[DeepSeek-R1 Distill VRAM Cheatsheet](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek-R1 distill VRAM cheatsheet',
           '[Best DeepSeek Distill for Your GPU](/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',
           '[Cloud GPU Cost Per Hour 2026](/prompt-bites/cloud-gpu-cost-per-hour) — cloud GPU cost per hour',
         ],
@@ -438,7 +438,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Verwandte Leitfäden',
         items: [
           '[Wie viel VRAM braucht ein 70B-Modell?](/de/prompt-bites/vram-for-70b-model) — how much VRAM for a 70B model',
-          '[DeepSeek R1 Distill VRAM-Spickzettel](/de/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek R1 distill VRAM cheatsheet',
+          '[DeepSeek-R1 Distill VRAM-Spickzettel](/de/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek-R1 distill VRAM cheatsheet',
           '[Bestes DeepSeek Distill für Ihre GPU](/de/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',
           '[Cloud-GPU-Kosten pro Stunde 2026](/de/prompt-bites/cloud-gpu-cost-per-hour) — cloud GPU cost per hour',
         ],
@@ -642,7 +642,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Guides associés',
         items: [
           '[Quelle VRAM pour un modèle 70B ?](/fr/prompt-bites/vram-for-70b-model) — how much VRAM for a 70B model',
-          '[Aide-mémoire VRAM DeepSeek R1 Distill](/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek R1 distill VRAM cheatsheet',
+          '[Aide-mémoire VRAM DeepSeek-R1 Distill](/fr/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek-R1 distill VRAM cheatsheet',
           '[Meilleur DeepSeek Distill pour votre GPU](/fr/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',
           '[Coût GPU cloud par heure 2026](/fr/prompt-bites/cloud-gpu-cost-per-hour) — cloud GPU cost per hour',
         ],
@@ -846,7 +846,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '関連ガイド',
         items: [
           '[70Bモデルに必要なVRAMは？](/ja/prompt-bites/vram-for-70b-model) — how much VRAM for a 70B model',
-          '[DeepSeek R1 Distill VRAMチートシート](/ja/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek R1 distill VRAM cheatsheet',
+          '[DeepSeek-R1 Distill VRAMチートシート](/ja/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek-R1 distill VRAM cheatsheet',
           '[お使いのGPUに最適なDeepSeek Distill](/ja/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',
           '[2026年版 クラウドGPUの時間あたりコスト](/ja/prompt-bites/cloud-gpu-cost-per-hour) — cloud GPU cost per hour',
         ],
@@ -1050,7 +1050,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Guías relacionadas',
         items: [
           '[¿Cuánta VRAM necesita un modelo 70B?](/es/prompt-bites/vram-for-70b-model) — how much VRAM for a 70B model',
-          '[Chuleta de VRAM para DeepSeek R1 Distill](/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek R1 distill VRAM cheatsheet',
+          '[Chuleta de VRAM para DeepSeek-R1 Distill](/es/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek-R1 distill VRAM cheatsheet',
           '[Mejor DeepSeek Distill para tu GPU](/es/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',
           '[Coste de GPU en la nube por hora 2026](/es/prompt-bites/cloud-gpu-cost-per-hour) — cloud GPU cost per hour',
         ],
@@ -1254,7 +1254,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '相关指南',
         items: [
           '[70B模型需要多少显存？](/zh/prompt-bites/vram-for-70b-model) — how much VRAM for a 70B model',
-          '[DeepSeek R1 Distill显存速查表](/zh/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek R1 distill VRAM cheatsheet',
+          '[DeepSeek-R1 Distill显存速查表](/zh/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek-R1 distill VRAM cheatsheet',
           '[最适合你显卡的DeepSeek Distill](/zh/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',
           '[2026年云端GPU每小时费用](/zh/prompt-bites/cloud-gpu-cost-per-hour) — cloud GPU cost per hour',
         ],
@@ -1458,7 +1458,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Guias Relacionados',
         items: [
           '[Quanta VRAM um Modelo 70B Precisa?](/pt/prompt-bites/vram-for-70b-model) — how much VRAM for a 70B model',
-          '[Cola de VRAM para DeepSeek R1 Distill](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek R1 distill VRAM cheatsheet',
+          '[Cola de VRAM para DeepSeek-R1 Distill](/pt/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek-R1 distill VRAM cheatsheet',
           '[Melhor DeepSeek Distill para sua GPU](/pt/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',
           '[Custo de GPU na Nuvem por Hora 2026](/pt/prompt-bites/cloud-gpu-cost-per-hour) — cloud GPU cost per hour',
         ],
@@ -1662,7 +1662,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'أدلة ذات صلة',
         items: [
           '[كم من VRAM يحتاجه نموذج 70B؟](/ar/prompt-bites/vram-for-70b-model) — how much VRAM for a 70B model',
-          '[ورقة غش VRAM لـ DeepSeek R1 Distill](/ar/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek R1 distill VRAM cheatsheet',
+          '[ورقة غش VRAM لـ DeepSeek-R1 Distill](/ar/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek-R1 distill VRAM cheatsheet',
           '[أفضل DeepSeek Distill لبطاقتك الرسومية](/ar/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',
           '[تكلفة البطاقة الرسومية السحابية في الساعة 2026](/ar/prompt-bites/cloud-gpu-cost-per-hour) — cloud GPU cost per hour',
         ],
@@ -1866,7 +1866,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '관련 가이드',
         items: [
           '[70B 모델에 필요한 VRAM은 얼마입니까?](/ko/prompt-bites/vram-for-70b-model) — how much VRAM for a 70B model',
-          '[DeepSeek R1 Distill VRAM 치트시트](/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek R1 distill VRAM cheatsheet',
+          '[DeepSeek-R1 Distill VRAM 치트시트](/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — DeepSeek-R1 distill VRAM cheatsheet',
           '[GPU에 가장 적합한 DeepSeek Distill](/ko/prompt-bites/best-deepseek-distill-for-your-gpu) — best DeepSeek distill for your GPU',
           '[2026년 클라우드 GPU 시간당 비용](/ko/prompt-bites/cloud-gpu-cost-per-hour) — cloud GPU cost per hour',
         ],

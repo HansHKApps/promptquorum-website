@@ -19,9 +19,19 @@ export function normalize(s) {
     .replace(/）/g, ')')
     .replace(/　/g, ' ') // full-width space (used in some ja/zh locale strings)
     .toLowerCase()
+    .replace(/:/g, ' ') // Ollama-tag style site strings ("gpt-oss:20b") vs registry's space-separated form
     .replace(/\s+/g, ' ')
     .replace(/\s*([()])\s*/g, '$1') // ja/zh locale strings often omit the space before a full-width paren
     .trim()
+}
+
+// Common vendor-prefixed phrasings that don't literally equal a registry
+// `family` value but clearly refer to one generically (no specific version).
+// Keys are pre-normalized.
+const FAMILY_ALIASES = {
+  'google gemini': 'Gemini',
+  'anthropic claude': 'Claude',
+  'openai gpt': 'GPT',
 }
 
 export function buildRegistryIndex(registry) {
@@ -34,7 +44,12 @@ export function buildRegistryIndex(registry) {
 
 // Site strings often carry a size suffix the registry entry doesn't (e.g.
 // site "Qwen3 32B" vs registry "Qwen3"), so try an exact match first, then
-// the longest family-prefix match.
+// the longest family-prefix match. Finally, a BARE mention of just a vendor
+// family with no version at all ("Qwen", "DeepSeek", "Google Gemini") is
+// accepted as a deliberately generic reference — it can't carry a stale
+// "current as of" claim the way a specific model name can — and always
+// resolves to a synthetic `current`-status match, never inheriting the
+// status of whichever real entry happens to share that family.
 export function findRegistryMatch(registry, registryByName, siteModel) {
   const norm = normalize(siteModel)
   if (registryByName[norm]) return registryByName[norm]
@@ -45,7 +60,27 @@ export function findRegistryMatch(registry, registryByName, siteModel) {
       if (!best || rn.length > normalize(best.model).length) best = m
     }
   }
-  return best
+  if (best) return best
+
+  const families = new Set(registry.models.map((m) => m.family))
+  const aliased = FAMILY_ALIASES[norm]
+  const targetFamily = aliased ?? [...families].find((f) => normalize(f) === norm)
+  if (targetFamily && families.has(targetFamily)) {
+    return {
+      company: null,
+      family: targetFamily,
+      model: targetFamily,
+      type: null,
+      release_date: null,
+      status: 'current',
+      superseded_by: null,
+      source_url: null,
+      verified_date: null,
+      notes: `Synthetic match: bare/generic reference to the '${targetFamily}' family, no specific version named.`,
+      __bareFamily: true,
+    }
+  }
+  return null
 }
 
 // Discovers article files carrying `current_models_mentioned` data. Mirrors

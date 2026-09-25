@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gguf mlx executorch core ml app',
       'best free local llm app for iphone',
     ],
-    current_models_mentioned: ['Noema 1.5 2B'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple Silicon Mac (M1 or later)', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Noema is a free iOS, iPadOS, macOS, and visionOS app, made by independent developer Alexandru Stamate ([NoemaAI LLC](https://noemaai.com/ownership)), that runs open-source language models entirely on-device in five different formats: GGUF, MLX, ExecuTorch, Core ML, and Apple\'s own Foundation Models.** It costs nothing on the [Apple App Store](' +
@@ -557,7 +557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gguf mlx executorch core ml app',
       'best free local llm app for iphone',
     ],
-    current_models_mentioned: ['Noema 1.5 2B'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple Silicon Mac (M1 oder neuer)', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Noema ist eine kostenlose iOS-, iPadOS-, macOS- und visionOS-App des unabhängigen Entwicklers Alexandru Stamate ([NoemaAI LLC](https://noemaai.com/ownership)), die Open-Source-Sprachmodelle vollständig auf dem Gerät in fünf verschiedenen Formaten ausführt: GGUF, MLX, ExecuTorch, Core ML und Apples eigene Foundation Models.** Sie kostet nichts im [Apple App Store](' +
@@ -1072,7 +1072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gguf mlx executorch core ml app',
       'best free local llm app for iphone',
     ],
-    current_models_mentioned: ['Noema 1.5 2B'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Mac Apple Silicon (M1 ou ultérieur)', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Noema est une application gratuite iOS, iPadOS, macOS et visionOS, développée par le développeur indépendant Alexandru Stamate ([NoemaAI LLC](https://noemaai.com/ownership)), qui exécute des modèles de langage open source entièrement sur l\'appareil dans cinq formats différents : GGUF, MLX, ExecuTorch, Core ML et les Foundation Models d\'Apple.** Elle ne coûte rien sur l\'[App Store d\'Apple](' +
@@ -1587,7 +1587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gguf mlx executorch core ml app',
       'best free local llm app for iphone',
     ],
-    current_models_mentioned: ['Noema 1.5 2B'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Mac Apple Silicon (M1 o posterior)', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Noema es una app gratuita para iOS, iPadOS, macOS y visionOS, creada por el desarrollador independiente Alexandru Stamate ([NoemaAI LLC](https://noemaai.com/ownership)), que ejecuta modelos de lenguaje de código abierto totalmente en el dispositivo en cinco formatos distintos: GGUF, MLX, ExecuTorch, Core ML y los propios Foundation Models de Apple.** No cuesta nada en la [App Store de Apple](' +
@@ -2102,7 +2102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gguf mlx executorch core ml app',
       'best free local llm app for iphone',
     ],
-    current_models_mentioned: ['Noema 1.5 2B'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Mac Apple Silicon (M1 ou posterior)', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**O Noema é um app gratuito para iOS, iPadOS, macOS e visionOS, feito pelo desenvolvedor independente Alexandru Stamate ([NoemaAI LLC](https://noemaai.com/ownership)), que executa modelos de linguagem de código aberto totalmente no dispositivo em cinco formatos diferentes: GGUF, MLX, ExecuTorch, Core ML e os próprios Foundation Models da Apple.** Ele não custa nada na [App Store da Apple](' +
@@ -2617,7 +2617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gguf mlx executorch core ml app',
       'best free local llm app for iphone',
     ],
-    current_models_mentioned: ['Noema 1.5 2B'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple SiliconMac(M1以降)', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Noemaは、独立系開発者Alexandru Stamate氏([NoemaAI LLC](https://noemaai.com/ownership))によるiOS・iPadOS・macOS・visionOS向けの無料アプリで、オープンソースの言語モデルをGGUF、MLX、ExecuTorch、Core ML、Apple独自のFoundation Modelsという5つの異なる形式で完全にオンデバイス実行します。**[Apple App Store](' +
@@ -3132,7 +3132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gguf mlx executorch core ml app',
       'best free local llm app for iphone',
     ],
-    current_models_mentioned: ['Noema 1.5 2B'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple Silicon Mac(M1 或更新)', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Noema 是一款适用于 iOS、iPadOS、macOS 和 visionOS 的免费应用,由独立开发者 Alexandru Stamate([NoemaAI LLC](https://noemaai.com/ownership))制作,以五种不同格式——GGUF、MLX、ExecuTorch、Core ML 和 Apple 自家的 Foundation Models——完全在设备端运行开源语言模型。**它在 [Apple App Store](' +
@@ -3647,7 +3647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gguf mlx executorch core ml app',
       'best free local llm app for iphone',
     ],
-    current_models_mentioned: ['Noema 1.5 2B'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Mac بمعالج Apple Silicon (M1 أو أحدث)', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Noema هو تطبيق مجاني لأنظمة iOS وiPadOS وmacOS وvisionOS، من صنع المطور المستقل Alexandru Stamate ([NoemaAI LLC](https://noemaai.com/ownership))، يشغّل نماذج لغوية مفتوحة المصدر بالكامل على الجهاز بخمس صيغ مختلفة: GGUF وMLX وExecuTorch وCore ML ونماذج Apple Foundation الخاصة بها.** لا يكلف شيئًا على [متجر تطبيقات Apple](' +
@@ -4162,7 +4162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gguf mlx executorch core ml app',
       'best free local llm app for iphone',
     ],
-    current_models_mentioned: ['Noema 1.5 2B'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Apple Silicon Mac(M1 이상)', 'Apple Vision Pro'],
     leadAnswerBlock:
       '**Noema는 독립 개발자 Alexandru Stamate([NoemaAI LLC](https://noemaai.com/ownership))가 만든 무료 iOS·iPadOS·macOS·visionOS 앱으로, 오픈소스 언어 모델을 GGUF, MLX, ExecuTorch, Core ML, Apple 자체 Foundation Models라는 다섯 가지 형식으로 완전히 온디바이스에서 실행합니다.** [Apple App Store](' +

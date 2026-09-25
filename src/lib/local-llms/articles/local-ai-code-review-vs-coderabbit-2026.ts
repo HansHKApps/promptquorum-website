@@ -8,7 +8,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'Local AI Code Review vs. CodeRabbit: Is DIY Worth It?',
     seoTitle: 'Local AI Code Review vs CodeRabbit: DIY vs SaaS (2026)',
-    metaDescription: 'CodeRabbit costs $24/dev/month and works in 5 minutes. A self-hosted Qwen3-Coder 32B + PR-Agent setup is free but catches fewer bugs. Here is the honest trade-off.',
+    metaDescription: 'CodeRabbit costs $24/dev/month and works in 5 minutes. A self-hosted Qwen2.5-Coder 32B + PR-Agent setup is free but catches fewer bugs. Here is the honest trade-off.',
     educationalLevel: 'Advanced',
     audience: 'Developers already running local LLMs who are deciding whether to self-host code review too',
     affiliateDisclosure: true,
@@ -23,14 +23,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'PR-Agent self-hosted',
       'local code review pipeline',
     ],
-    leadAnswerBlock: '**Go local if code privacy matters more than catching every bug, you already run a local LLM setup, or you review low-stakes personal repos — pair Qwen3-Coder 32B (20 GB VRAM, Apache 2.0) with the open-source PR-Agent harness and a git hook, for $0/month. Go with CodeRabbit if you need production-grade review quality, want it working in five minutes, or review proprietary client code — it starts at $24/developer/month and is free forever on public repositories.** There is no clean local clone of CodeRabbit; the local path means assembling a model, a review harness, and a hook yourself.',
+    leadAnswerBlock: '**Go local if code privacy matters more than catching every bug, you already run a local LLM setup, or you review low-stakes personal repos — pair Qwen2.5-Coder 32B (20 GB VRAM, Apache 2.0) with the open-source PR-Agent harness and a git hook, for $0/month. Go with CodeRabbit if you need production-grade review quality, want it working in five minutes, or review proprietary client code — it starts at $24/developer/month and is free forever on public repositories.** There is no clean local clone of CodeRabbit; the local path means assembling a model, a review harness, and a hook yourself.',
     quickAnswerTop: {
       question: 'Can a local LLM replace CodeRabbit for AI code review?',
-      answer: '**Partially.** A self-hosted Qwen3-Coder 32B model driving the open-source PR-Agent harness catches roughly 88% of the bugs a 7B model would miss and costs nothing beyond hardware you may already own — but it lags CodeRabbit\'s frontier-model-backed review on complex, multi-file diffs, and it takes an afternoon of setup rather than a five-minute signup. There is no single open-source product that replicates CodeRabbit feature-for-feature; the "local" option is several pieces assembled, not one install.',
+      answer: '**Partially.** A self-hosted Qwen2.5-Coder 32B model driving the open-source PR-Agent harness catches roughly 88% of the bugs a 7B model would miss and costs nothing beyond hardware you may already own — but it lags CodeRabbit\'s frontier-model-backed review on complex, multi-file diffs, and it takes an afternoon of setup rather than a five-minute signup. There is no single open-source product that replicates CodeRabbit feature-for-feature; the "local" option is several pieces assembled, not one install.',
       bullets: [
         '**Local wins on:** privacy (code never leaves your machine), cost ($0/month after hardware), and full control over the review prompt',
         '**CodeRabbit wins on:** setup time (minutes, not an afternoon), review quality on complex diffs, and zero maintenance burden',
-        '**Minimum viable local setup:** Qwen3-Coder 32B (20 GB VRAM/RAM, Apache 2.0) + PR-Agent (Apache 2.0, self-hosted) + a git pre-commit or CI hook',
+        '**Minimum viable local setup:** Qwen2.5-Coder 32B (20 GB VRAM/RAM, Apache 2.0) + PR-Agent (Apache 2.0, self-hosted) + a git pre-commit or CI hook',
         '**CodeRabbit starting price:** $24/developer/month (Essentials, billed annually), free forever on public repositories, 14-day trial',
       ],
       updatedDate: '2026-09-01',
@@ -68,7 +68,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'A self-hosted Qwen3-Coder 32B model paired with the open-source PR-Agent review harness can perform AI code review entirely on local hardware for $0/month, but it takes an afternoon of assembly and lags CodeRabbit\'s frontier-model-backed review on complex or large-diff pull requests.',
+            text: 'A self-hosted Qwen2.5-Coder 32B model paired with the open-source PR-Agent review harness can perform AI code review entirely on local hardware for $0/month, but it takes an afternoon of assembly and lags CodeRabbit\'s frontier-model-backed review on complex or large-diff pull requests.',
           },
           {
             type: 'plain-terms',
@@ -77,7 +77,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**No clean local clone of CodeRabbit exists.** Going local means assembling a coding model + a review harness + a git hook, not installing one competitor app.',
-          '**Minimum viable local model:** Qwen3-Coder 32B, 20 GB VRAM/RAM at Q4_K_M, Apache 2.0 licence — catches roughly 88% of injected bugs in internal benchmarking one tier down (Qwen3-Coder 7B, 5 GB) manages closer to 60%.',
+          '**Minimum viable local model:** Qwen2.5-Coder 32B, 20 GB VRAM/RAM at Q4_K_M, Apache 2.0 licence — catches roughly 88% of injected bugs in internal benchmarking one tier down (Qwen2.5-Coder 7B, 5 GB) manages closer to 60%.',
           '**Review harness:** PR-Agent (Apache 2.0), donated by Qodo to the community in 2026 and now maintained under the-pr-agent org — self-hostable via CLI, Docker, or GitHub Actions.',
           '**Honest limitation:** local coding models still trail frontier cloud models on complex, multi-file diff review — treat local as "good enough for most PRs," not a like-for-like swap.',
           '**CodeRabbit pricing (verified 2026-09-01):** Essentials $24/dev/month, Team $48, Advanced $72 (all annual billing), Enterprise custom with self-hosting; free forever on public repositories, 14-day trial on every paid tier.',
@@ -90,7 +90,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Work down this list and stop at the first line that describes you — the decision turns on privacy needs, existing hardware, and how much review quality you can afford to lose.**',
         items: [
           '**Best for most teams → CodeRabbit.** Five-minute setup, free forever on public repositories, 14-day trial, from $24/developer/month. Best when review quality and zero maintenance matter more than owning the stack.',
-          '**Best for privacy → Local AI.** Qwen3-Coder 32B + PR-Agent, roughly $0 in software cost, needs 20+ GB VRAM and several hours of setup and ongoing maintenance, with a lower ceiling on complex multi-file review.',
+          '**Best for privacy → Local AI.** Qwen2.5-Coder 32B + PR-Agent, roughly $0 in software cost, needs 20+ GB VRAM and several hours of setup and ongoing maintenance, with a lower ceiling on complex multi-file review.',
           '**Best of both → Use both.** Run local review as a pre-commit pass for fast, private feedback, then let CodeRabbit do the authoritative review once a pull request opens — see the "Can I use both" FAQ below for how teams actually run this.',
         ],
         columns: ['Factor', 'Local AI', 'CodeRabbit'],
@@ -121,7 +121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Your team is too small to justify the maintenance burden of running and updating a local model + harness stack indefinitely',
           ],
           quick: [
-            'Free, private, DIY → **Qwen3-Coder 32B + PR-Agent** (20 GB VRAM, $0/month, Apache 2.0 throughout)',
+            'Free, private, DIY → **Qwen2.5-Coder 32B + PR-Agent** (20 GB VRAM, $0/month, Apache 2.0 throughout)',
             'Working in 5 minutes, best quality → **CodeRabbit** ($24/dev/mo Essentials, free on public repos)',
             'Regulated/air-gapped, can pay for it → **CodeRabbit Enterprise (self-hosted)** — custom pricing, sales conversation required',
             'Fewer than 5 PRs a week → **neither** — human review is still fast enough at that volume',
@@ -149,10 +149,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Building a Local Code Review Pipeline',
         content: '**The local setup today is three pieces: a self-hosted coding model, an open-source review harness, and a hook that runs it on every diff — not one app you install.** Be clear-eyed about that going in: this is assembly work, not a product purchase.',
         items: [
-          '**The model:** Qwen3-Coder 32B (Alibaba, Apache 2.0) is the practical baseline — it needs roughly 20 GB VRAM or unified memory at Q4_K_M quantization and catches around 88% of injected bugs in the benchmarking behind our [local LLMs for code review guide](/local-llms/best-local-llms-code-review). On tighter hardware, Qwen3-Coder 7B (about 5 GB) is usable for lint-level feedback but manages closer to 60% accuracy — treat it as a first pass, not a gate.',
+          '**The model:** Qwen2.5-Coder 32B (Alibaba, Apache 2.0) is the practical baseline — it needs roughly 20 GB VRAM or unified memory at Q4_K_M quantization and catches around 88% of injected bugs in the benchmarking behind our [local LLMs for code review guide](/local-llms/best-local-llms-code-review). On tighter hardware, Qwen2.5-Coder 7B (about 5 GB) is usable for lint-level feedback but manages closer to 60% accuracy — treat it as a first pass, not a gate.',
           '**The harness:** [PR-Agent](https://github.com/The-PR-Agent/pr-agent) is an open-source (Apache 2.0), self-hostable PR review agent — originally built by Qodo/CodiumAI, donated to the community in 2026 and now maintained under the community-owned The-PR-Agent GitHub organisation. It runs via CLI, Docker, GitHub Actions, or a webhook, and it will call any OpenAI-compatible endpoint — including a local Ollama or vLLM server.',
           '**The wiring:** point PR-Agent\'s model configuration at your local inference server\'s OpenAI-compatible API (Ollama and vLLM both expose one), then trigger it from a git pre-commit hook for local-only feedback, or from a GitHub Actions/GitLab CI step so it comments on every pull request the way CodeRabbit does.',
-          '**A realistic minimum spec:** one GPU with 20+ GB VRAM (an RTX 4090 or better) or an Apple Silicon Mac with 32+ GB unified memory. Below that, drop to Qwen3-Coder 7B and accept the lower accuracy — or skip local review for anything security-sensitive.',
+          '**A realistic minimum spec:** one GPU with 20+ GB VRAM (an RTX 4090 or better) or an Apple Silicon Mac with 32+ GB unified memory. Below that, drop to Qwen2.5-Coder 7B and accept the lower accuracy — or skip local review for anything security-sensitive.',
         ],
         numberedItems: [
           'Start a local inference server exposing an OpenAI-compatible API: `ollama serve` (Ollama) or `python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen3-Coder-32B-Instruct` (vLLM).',
@@ -167,7 +167,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       limitations: {
         id: 'limitations',
         title: 'Where the Local Route Actually Falls Short',
-        content: '**Current local coding models are behind frontier cloud models on complex, large-diff review quality — this is the honest limit, not a reason to skip local review entirely.** Say this plainly rather than overselling the DIY route: a self-hosted Qwen3-Coder 32B setup will miss things CodeRabbit\'s cloud-backed review catches, particularly on architectural issues that span many files or reasoning-heavy security analysis.',
+        content: '**Current local coding models are behind frontier cloud models on complex, large-diff review quality — this is the honest limit, not a reason to skip local review entirely.** Say this plainly rather than overselling the DIY route: a self-hosted Qwen2.5-Coder 32B setup will miss things CodeRabbit\'s cloud-backed review catches, particularly on architectural issues that span many files or reasoning-heavy security analysis.',
         items: [
           '**Multi-file, architectural review is the weak spot.** A 20 GB local model has a smaller effective context and less reasoning depth than the frontier models CodeRabbit\'s pipeline draws on — cross-file breakage several hops away is exactly what a diff-only or single-model local setup is most likely to miss.',
           '**No continuous model improvement.** CodeRabbit\'s review quality improves automatically as the underlying frontier models it uses improve. A local model is frozen at whatever checkpoint you downloaded until you manually re-download and re-benchmark a newer one.',
@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Recommendation by Use Case',
         content: '**Four reader profiles cover most people asking this question — match yours and skip the rest.**',
         items: [
-          '**Personal or open-source repos, privacy-conscious, already has local-LLM hardware** → Local. You already own the GPU, the stakes of a missed bug are low, and there is no reason to send public or personal code to a third party. Use Qwen3-Coder 32B + PR-Agent.',
+          '**Personal or open-source repos, privacy-conscious, already has local-LLM hardware** → Local. You already own the GPU, the stakes of a missed bug are low, and there is no reason to send public or personal code to a third party. Use Qwen2.5-Coder 32B + PR-Agent.',
           '**Startup or small team, wants it working today** → CodeRabbit. Setup time beats subscription cost at this stage — install the app, get review comments on the next PR, move on.',
           '**Regulated industry, cannot send code off-prem** → Local, or CodeRabbit Enterprise\'s self-hosted tier if budget and procurement allow a vendor relationship. Do not default to "no vendor offers this" — CodeRabbit does have a self-hosted Enterprise option; it is a custom-priced sales conversation, not a self-serve plan, so weigh that against building the DIY stack yourself.',
           '**Large team, complex diffs, quality-critical** → CodeRabbit (or Greptile/Qodo, depending on platform and deployment needs — see the [three-way cloud comparison](/local-llms/best-ai-code-review-tools)). This is the profile where the local route\'s honest limitation on multi-file, architectural review matters most.',
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Running a 7B model and expecting 32B-class accuracy',
-            whyItMatters: 'Qwen3-Coder 7B is useful for fast, lint-level feedback at roughly 60% bug-catch accuracy, not for the review quality that a 32B model or CodeRabbit delivers. Match the model tier to how much you are trusting the output.',
+            whyItMatters: 'Qwen2.5-Coder 7B is useful for fast, lint-level feedback at roughly 60% bug-catch accuracy, not for the review quality that a 32B model or CodeRabbit delivers. Match the model tier to how much you are trusting the output.',
           },
         ],
       },
@@ -280,8 +280,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          { q: 'Can a local LLM fully replace CodeRabbit?', a: 'Not as a like-for-like swap. A self-hosted Qwen3-Coder 32B model plus the open-source PR-Agent harness can catch most bugs a human reviewer would want flagged, but it still lags CodeRabbit\'s frontier-model-backed review on complex, multi-file diffs — and it requires assembling three separate pieces rather than installing one product.' },
-          { q: 'What is the minimum hardware for local AI code review?', a: 'Qwen3-Coder 32B at Q4_K_M quantization needs roughly 20 GB of VRAM or unified memory. On tighter hardware, Qwen3-Coder 7B runs in about 5 GB but drops to roughly 60% bug-catch accuracy versus 88% for the 32B model, so treat it as a first pass rather than a full review gate.' },
+          { q: 'Can a local LLM fully replace CodeRabbit?', a: 'Not as a like-for-like swap. A self-hosted Qwen2.5-Coder 32B model plus the open-source PR-Agent harness can catch most bugs a human reviewer would want flagged, but it still lags CodeRabbit\'s frontier-model-backed review on complex, multi-file diffs — and it requires assembling three separate pieces rather than installing one product.' },
+          { q: 'What is the minimum hardware for local AI code review?', a: 'Qwen2.5-Coder 32B at Q4_K_M quantization needs roughly 20 GB of VRAM or unified memory. On tighter hardware, Qwen2.5-Coder 7B runs in about 5 GB but drops to roughly 60% bug-catch accuracy versus 88% for the 32B model, so treat it as a first pass rather than a full review gate.' },
           { q: 'Is PR-Agent still maintained?', a: 'Yes. Qodo (the company behind PR-Agent, formerly CodiumAI) donated the project to the community in 2026; it is now maintained under the community-owned The-PR-Agent GitHub organisation under the Apache 2.0 licence, and remains self-hostable via CLI, Docker, or GitHub Actions.' },
           { q: 'How much does CodeRabbit cost in 2026?', a: 'CodeRabbit\'s Essentials plan is $24 per developer per month billed annually, Team is $48, and Advanced is $72. Enterprise is custom-priced and includes self-hosting. Every plan includes a 14-day free trial with no card required, and public repositories get review for free, permanently.' },
           { q: 'Does CodeRabbit offer a self-hosted or on-premises option?', a: 'Yes, on the Enterprise tier. It is custom-priced and requires a sales conversation rather than a self-serve signup, but it is a real option for regulated teams that need on-prem deployment without building a DIY local stack.' },
@@ -289,14 +289,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'What is the biggest weakness of the local approach?', a: 'Review quality on complex, multi-file or architectural diffs. Local models in the 20-32 GB VRAM range have a smaller effective context and less reasoning depth than the frontier models cloud tools draw on, so cross-file breakage several files away is the kind of issue most likely to slip through a local setup.' },
           { q: 'Which is cheaper for a 5-person team?', a: 'CodeRabbit at Essentials pricing is $120/month for five developers. A local setup is $0/month in software but assumes at least one GPU with 20+ GB VRAM already exists or gets purchased, plus setup and maintenance time — model that time honestly against $120/month before assuming local wins on cost.' },
           { q: 'Can I use both a local model and CodeRabbit together?', a: 'Yes, and it is a reasonable pattern: use a local model for fast, private, pre-commit feedback before code is even pushed, and CodeRabbit for the authoritative review once a pull request opens. This gets you privacy on the first pass and frontier-model quality on the pass that matters most.' },
-          { q: 'Which local model should I actually pick?', a: 'Qwen3-Coder 32B for most cases — it is the current practical baseline for serious local code review. See our dedicated [best local LLMs for code review guide](/local-llms/best-local-llms-code-review) for the full ranked comparison across model sizes and review types.' },
+          { q: 'Which local model should I actually pick?', a: 'Qwen2.5-Coder 32B for most cases — it is the current practical baseline for serious local code review. See our dedicated [best local LLMs for code review guide](/local-llms/best-local-llms-code-review) for the full ranked comparison across model sizes and review types.' },
         ],
       },
       verdict: {
         id: 'verdict',
         title: 'Final Verdict',
         items: [
-          '**Go local if** privacy matters more than catching every last bug and you already have 20+ GB VRAM — next step: pull Qwen3-Coder 32B via Ollama and wire it to PR-Agent with a GitHub Actions hook.',
+          '**Go local if** privacy matters more than catching every last bug and you already have 20+ GB VRAM — next step: pull Qwen2.5-Coder 32B via Ollama and wire it to PR-Agent with a GitHub Actions hook.',
           '**Go with CodeRabbit if** you want it working today and your review quality bar is high — next step: install the app on your primary repository and use the 14-day trial to compare its output against your current review process.',
           '**Go with CodeRabbit Enterprise (self-hosted) if** you are regulated and cannot send code off-prem but want CodeRabbit\'s review quality — next step: book the Enterprise conversation rather than assuming self-hosting is not offered.',
           '**Run both if** you want privacy on the first pass and frontier-model quality on the pass that matters most — next step: wire the local model into a pre-commit hook for private, instant feedback, and let CodeRabbit handle the authoritative PR review.',
@@ -309,7 +309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: 'https://www.coderabbit.ai/pricing', title: 'CodeRabbit pricing', description: 'Essentials, Team, Advanced and Enterprise tiers, the 14-day trial, and free access for public repositories — verified 2026-09-01.' },
           { url: 'https://github.com/The-PR-Agent/pr-agent', title: 'PR-Agent (community-maintained)', description: 'Apache 2.0-licensed, self-hostable PR review agent, donated by Qodo to the community in 2026.' },
-          { url: '/local-llms/best-local-llms-code-review', title: 'Best Local LLMs for Code Review (PromptQuorum)', description: 'Ranked comparison of Qwen3-Coder, Llama 3.3, and DeepSeek-R1 for local code review, including the 88% bug-catch figure for Qwen3-Coder 32B cited on this page.' },
+          { url: '/local-llms/best-local-llms-code-review', title: 'Best Local LLMs for Code Review (PromptQuorum)', description: 'Ranked comparison of Qwen3-Coder, Llama 3.3, and DeepSeek-R1 for local code review, including the 88% bug-catch figure for Qwen2.5-Coder 32B cited on this page.' },
           { url: '/local-llms/best-ai-code-review-tools', title: 'CodeRabbit vs Greptile vs Qodo (PromptQuorum)', description: 'The full three-way cloud comparison this page defers to rather than re-litigating.' },
         ],
       },
@@ -321,14 +321,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Best Local LLMs for Code Review](/local-llms/best-local-llms-code-review) — ranked model comparison (Qwen3-Coder, Llama 3.3, DeepSeek-R1) for the local half of this page',
           '[Best AI Coding Assistant for Local LLM](/local-llms/best-ai-coding-assistant-local-llm) — the tools that write the diff a review pipeline (local or cloud) reads',
           '[The Local LLM Developer Stack](/local-llms/local-llm-developer-stack) — where a self-hosted review pipeline fits in a wider local-first toolchain',
-          '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — the VRAM math behind the 20 GB Qwen3-Coder 32B figure used on this page',
+          '[LLM Quantization Explained](/local-llms/llm-quantization-explained) — the VRAM math behind the 20 GB Qwen2.5-Coder 32B figure used on this page',
         ],
       },
     },
     schema: {
       '@type': 'TechArticle',
       headline: 'Local AI Code Review vs. CodeRabbit: Is DIY Worth It?',
-      description: 'Whether a self-hosted Qwen3-Coder 32B + PR-Agent pipeline can replace CodeRabbit for AI code review — honest trade-offs, verified pricing, and a use-case-based recommendation.',
+      description: 'Whether a self-hosted Qwen2.5-Coder 32B + PR-Agent pipeline can replace CodeRabbit for AI code review — honest trade-offs, verified pricing, and a use-case-based recommendation.',
       datePublished: '2026-09-01',
       dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/local-llms/local-ai-code-review-vs-coderabbit',
@@ -358,7 +358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Can a local LLM fully replace CodeRabbit?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Not as a like-for-like swap. A self-hosted Qwen3-Coder 32B model plus the open-source PR-Agent harness can catch most bugs a human reviewer would want flagged, but it still lags CodeRabbit\'s frontier-model-backed review on complex, multi-file diffs — and it requires assembling three separate pieces rather than installing one product.',
+            'text': 'Not as a like-for-like swap. A self-hosted Qwen2.5-Coder 32B model plus the open-source PR-Agent harness can catch most bugs a human reviewer would want flagged, but it still lags CodeRabbit\'s frontier-model-backed review on complex, multi-file diffs — and it requires assembling three separate pieces rather than installing one product.',
           },
         },
         {
@@ -366,7 +366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'What is the minimum hardware for local AI code review?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Qwen3-Coder 32B at Q4_K_M quantization needs roughly 20 GB of VRAM or unified memory. On tighter hardware, Qwen3-Coder 7B runs in about 5 GB but drops to roughly 60% bug-catch accuracy versus 88% for the 32B model, so treat it as a first pass rather than a full review gate.',
+            'text': 'Qwen2.5-Coder 32B at Q4_K_M quantization needs roughly 20 GB of VRAM or unified memory. On tighter hardware, Qwen2.5-Coder 7B runs in about 5 GB but drops to roughly 60% bug-catch accuracy versus 88% for the 32B model, so treat it as a first pass rather than a full review gate.',
           },
         },
         {
@@ -430,7 +430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Which local model should I actually pick?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Qwen3-Coder 32B for most cases — it is the current practical baseline for serious local code review. See our dedicated best local LLMs for code review guide for the full ranked comparison across model sizes and review types.',
+            'text': 'Qwen2.5-Coder 32B for most cases — it is the current practical baseline for serious local code review. See our dedicated best local LLMs for code review guide for the full ranked comparison across model sizes and review types.',
           },
         },
       ],
@@ -442,7 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'Lokale KI-Code-Review vs. CodeRabbit: Lohnt sich Selbstbau?',
     seoTitle: 'Lokale KI-Code-Review vs. CodeRabbit: DIY vs. SaaS (2026)',
-    metaDescription: 'CodeRabbit kostet 24 $/Entwickler/Monat und läuft in 5 Minuten. Ein selbst gehostetes Setup mit Qwen3-Coder 32B + PR-Agent ist kostenlos, findet aber weniger Bugs. Hier der ehrliche Kompromiss.',
+    metaDescription: 'CodeRabbit kostet 24 $/Entwickler/Monat und läuft in 5 Minuten. Ein selbst gehostetes Setup mit Qwen2.5-Coder 32B + PR-Agent ist kostenlos, findet aber weniger Bugs. Hier der ehrliche Kompromiss.',
     educationalLevel: 'Advanced',
     audience: 'Entwicklerinnen und Entwickler, die bereits lokale LLMs betreiben und entscheiden, ob sie auch die Code-Review selbst hosten sollen',
     affiliateDisclosure: true,
@@ -457,14 +457,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'PR-Agent selbst hosten',
       'lokale Code-Review-Pipeline',
     ],
-    leadAnswerBlock: '**Setzen Sie auf lokal, wenn Code-Datenschutz wichtiger ist als jeden letzten Bug zu finden, Sie bereits ein lokales LLM-Setup betreiben oder Sie risikoarme private Repositories prüfen — kombinieren Sie Qwen3-Coder 32B (20 GB VRAM, Apache 2.0) mit dem Open-Source-Harness PR-Agent und einem Git-Hook, für 0 $/Monat. Setzen Sie auf CodeRabbit, wenn Sie produktionsreife Review-Qualität brauchen, es in fünf Minuten laufen soll oder Sie proprietären Kundencode prüfen — es beginnt bei 24 $/Entwickler/Monat und ist auf öffentlichen Repositories für immer kostenlos.** Es gibt keinen sauberen lokalen Klon von CodeRabbit; der lokale Weg bedeutet, Modell, Review-Harness und Hook selbst zusammenzustellen.',
+    leadAnswerBlock: '**Setzen Sie auf lokal, wenn Code-Datenschutz wichtiger ist als jeden letzten Bug zu finden, Sie bereits ein lokales LLM-Setup betreiben oder Sie risikoarme private Repositories prüfen — kombinieren Sie Qwen2.5-Coder 32B (20 GB VRAM, Apache 2.0) mit dem Open-Source-Harness PR-Agent und einem Git-Hook, für 0 $/Monat. Setzen Sie auf CodeRabbit, wenn Sie produktionsreife Review-Qualität brauchen, es in fünf Minuten laufen soll oder Sie proprietären Kundencode prüfen — es beginnt bei 24 $/Entwickler/Monat und ist auf öffentlichen Repositories für immer kostenlos.** Es gibt keinen sauberen lokalen Klon von CodeRabbit; der lokale Weg bedeutet, Modell, Review-Harness und Hook selbst zusammenzustellen.',
     quickAnswerTop: {
       question: 'Kann ein lokales LLM CodeRabbit bei der KI-Code-Review ersetzen?',
       answer: '**Teilweise.** Ein selbst gehostetes Qwen3-Coder-32B-Modell, das den Open-Source-Harness PR-Agent antreibt, findet rund 88 % der Bugs, die ein 7B-Modell übersehen würde, und kostet nichts außer der Hardware, die Sie möglicherweise bereits besitzen — liegt aber bei komplexen Diffs mit mehreren Dateien hinter CodeRabbits von Frontier-Modellen gestützter Review zurück, und es braucht einen Nachmittag Einrichtung statt einer Fünf-Minuten-Anmeldung. Es gibt kein einzelnes Open-Source-Produkt, das CodeRabbit Funktion für Funktion nachbildet; die „lokale" Option besteht aus mehreren zusammengesetzten Teilen, nicht aus einer Installation.',
       bullets: [
         '**Lokal gewinnt bei:** Datenschutz (Code verlässt nie Ihren Rechner), Kosten (0 $/Monat nach der Hardware) und voller Kontrolle über den Review-Prompt',
         '**CodeRabbit gewinnt bei:** Einrichtungszeit (Minuten statt eines Nachmittags), Review-Qualität bei komplexen Diffs und null Wartungsaufwand',
-        '**Minimal funktionsfähiges lokales Setup:** Qwen3-Coder 32B (20 GB VRAM/RAM, Apache 2.0) + PR-Agent (Apache 2.0, selbst gehostet) + ein Git-Pre-Commit- oder CI-Hook',
+        '**Minimal funktionsfähiges lokales Setup:** Qwen2.5-Coder 32B (20 GB VRAM/RAM, Apache 2.0) + PR-Agent (Apache 2.0, selbst gehostet) + ein Git-Pre-Commit- oder CI-Hook',
         '**CodeRabbit-Einstiegspreis:** 24 $/Entwickler/Monat (Essentials, jährlich abgerechnet), auf öffentlichen Repositories für immer kostenlos, 14-tägige Testphase',
       ],
       updatedDate: '2026-09-01',
@@ -511,7 +511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Es gibt keinen sauberen lokalen Klon von CodeRabbit.** Lokal zu gehen bedeutet, ein Coding-Modell + einen Review-Harness + einen Git-Hook zusammenzustellen, nicht eine einzelne konkurrierende App zu installieren.',
-          '**Minimal funktionsfähiges lokales Modell:** Qwen3-Coder 32B, 20 GB VRAM/RAM bei Q4_K_M, Apache-2.0-Lizenz — findet in internen Benchmarks rund 88 % der eingeschleusten Bugs; eine Stufe darunter (Qwen3-Coder 7B, 5 GB) schafft eher 60 %.',
+          '**Minimal funktionsfähiges lokales Modell:** Qwen2.5-Coder 32B, 20 GB VRAM/RAM bei Q4_K_M, Apache-2.0-Lizenz — findet in internen Benchmarks rund 88 % der eingeschleusten Bugs; eine Stufe darunter (Qwen2.5-Coder 7B, 5 GB) schafft eher 60 %.',
           '**Review-Harness:** PR-Agent (Apache 2.0), 2026 von Qodo an die Community gespendet und inzwischen unter der Organisation the-pr-agent gepflegt — selbst hostbar über CLI, Docker oder GitHub Actions.',
           '**Ehrliche Einschränkung:** Lokale Coding-Modelle liegen bei komplexer Multi-Datei-Diff-Review weiterhin hinter Frontier-Cloud-Modellen zurück — behandeln Sie lokal als „gut genug für die meisten PRs", nicht als gleichwertigen Ersatz.',
           '**CodeRabbit-Preise (verifiziert am 01.09.2026):** Essentials 24 $/Entwickler/Monat, Team 48 $, Advanced 72 $ (alle jährlich abgerechnet), Enterprise mit individuellem Preis und Self-Hosting; auf öffentlichen Repositories für immer kostenlos, 14-tägige Testphase in jeder bezahlten Stufe.',
@@ -524,7 +524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Arbeiten Sie diese Liste von oben nach unten durch und stoppen Sie bei der ersten Zeile, die auf Sie zutrifft — die Entscheidung hängt von Datenschutzanforderungen, vorhandener Hardware und davon ab, wie viel Review-Qualität Sie sich zu verlieren leisten können.**',
         items: [
           '**Am besten für die meisten Teams → CodeRabbit.** Fünf-Minuten-Einrichtung, auf öffentlichen Repositories für immer kostenlos, 14-tägige Testphase, ab 24 $/Entwickler/Monat. Ideal, wenn Review-Qualität und null Wartungsaufwand wichtiger sind als der Besitz des Stacks.',
-          '**Am besten für den Datenschutz → Lokale KI.** Qwen3-Coder 32B + PR-Agent, Softwarekosten von rund 0 $, braucht 20+ GB VRAM sowie mehrere Stunden Einrichtung und laufende Wartung, mit einer niedrigeren Obergrenze bei komplexer Multi-Datei-Review.',
+          '**Am besten für den Datenschutz → Lokale KI.** Qwen2.5-Coder 32B + PR-Agent, Softwarekosten von rund 0 $, braucht 20+ GB VRAM sowie mehrere Stunden Einrichtung und laufende Wartung, mit einer niedrigeren Obergrenze bei komplexer Multi-Datei-Review.',
           '**Das Beste aus beiden Welten → Beides nutzen.** Führen Sie die lokale Review als Pre-Commit-Durchgang für schnelles, privates Feedback aus, und lassen Sie CodeRabbit die maßgebliche Review übernehmen, sobald ein Pull Request geöffnet wird — siehe die FAQ „Kann ich ein lokales Modell und CodeRabbit zusammen nutzen?" weiter unten dafür, wie Teams das in der Praxis handhaben.',
         ],
         columns: ['Faktor', 'Lokale KI', 'CodeRabbit'],
@@ -555,7 +555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Ihr Team ist zu klein, um den Wartungsaufwand für den dauerhaften Betrieb und die Aktualisierung eines lokalen Modell-plus-Harness-Stacks zu rechtfertigen',
           ],
           quick: [
-            'Kostenlos, privat, DIY → **Qwen3-Coder 32B + PR-Agent** (20 GB VRAM, 0 $/Monat, durchgehend Apache 2.0)',
+            'Kostenlos, privat, DIY → **Qwen2.5-Coder 32B + PR-Agent** (20 GB VRAM, 0 $/Monat, durchgehend Apache 2.0)',
             'In 5 Minuten funktionsfähig, beste Qualität → **CodeRabbit** (24 $/Entwickler/Monat Essentials, kostenlos bei öffentlichen Repos)',
             'Reguliert/abgeschottet, kann dafür zahlen → **CodeRabbit Enterprise (selbst gehostet)** — individueller Preis, Vertriebsgespräch nötig',
             'Weniger als 5 PRs pro Woche → **keins von beidem** — menschliche Review ist bei diesem Volumen noch schnell genug',
@@ -583,10 +583,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Eine lokale Code-Review-Pipeline aufbauen',
         content: '**Das lokale Setup besteht heute aus drei Teilen: einem selbst gehosteten Coding-Modell, einem Open-Source-Review-Harness und einem Hook, der ihn bei jedem Diff auslöst — nicht aus einer App, die Sie installieren.** Seien Sie sich das von Anfang an klar: Das ist Montagearbeit, kein Produktkauf.',
         items: [
-          '**Das Modell:** Qwen3-Coder 32B (Alibaba, Apache 2.0) ist die praktische Basis — es braucht etwa 20 GB VRAM oder Unified Memory bei Q4_K_M-Quantisierung und findet rund 88 % der eingeschleusten Bugs in den Benchmarks hinter unserem [Leitfaden zu lokalen LLMs für Code-Review](/de/local-llms/best-local-llms-code-review). Auf knapperer Hardware ist Qwen3-Coder 7B (etwa 5 GB) für Feedback auf Lint-Niveau brauchbar, schafft aber eher 60 % Genauigkeit — behandeln Sie es als ersten Durchgang, nicht als Freigabe-Gate.',
+          '**Das Modell:** Qwen2.5-Coder 32B (Alibaba, Apache 2.0) ist die praktische Basis — es braucht etwa 20 GB VRAM oder Unified Memory bei Q4_K_M-Quantisierung und findet rund 88 % der eingeschleusten Bugs in den Benchmarks hinter unserem [Leitfaden zu lokalen LLMs für Code-Review](/de/local-llms/best-local-llms-code-review). Auf knapperer Hardware ist Qwen2.5-Coder 7B (etwa 5 GB) für Feedback auf Lint-Niveau brauchbar, schafft aber eher 60 % Genauigkeit — behandeln Sie es als ersten Durchgang, nicht als Freigabe-Gate.',
           '**Der Harness:** [PR-Agent](https://github.com/The-PR-Agent/pr-agent) ist ein Open-Source-Agent (Apache 2.0) für PR-Reviews, der sich selbst hosten lässt — ursprünglich von Qodo/CodiumAI gebaut, 2026 an die Community gespendet und inzwischen unter der community-eigenen GitHub-Organisation The-PR-Agent gepflegt. Er läuft über CLI, Docker, GitHub Actions oder einen Webhook und ruft jeden OpenAI-kompatiblen Endpunkt auf — auch einen lokalen Ollama- oder vLLM-Server.',
           '**Die Verdrahtung:** Richten Sie die Modellkonfiguration von PR-Agent auf die OpenAI-kompatible API Ihres lokalen Inferenzservers aus (sowohl Ollama als auch vLLM stellen eine bereit), und lösen Sie ihn dann über einen Git-Pre-Commit-Hook für rein lokales Feedback aus, oder über einen GitHub-Actions-/GitLab-CI-Schritt, sodass er wie CodeRabbit jeden Pull Request kommentiert.',
-          '**Eine realistische Mindestausstattung:** eine GPU mit 20+ GB VRAM (eine RTX 4090 oder besser) oder ein Apple-Silicon-Mac mit 32+ GB Unified Memory. Darunter wechseln Sie zu Qwen3-Coder 7B und akzeptieren die geringere Genauigkeit — oder verzichten Sie bei sicherheitskritischem Code auf lokale Review.',
+          '**Eine realistische Mindestausstattung:** eine GPU mit 20+ GB VRAM (eine RTX 4090 oder besser) oder ein Apple-Silicon-Mac mit 32+ GB Unified Memory. Darunter wechseln Sie zu Qwen2.5-Coder 7B und akzeptieren die geringere Genauigkeit — oder verzichten Sie bei sicherheitskritischem Code auf lokale Review.',
         ],
         numberedItems: [
           'Starten Sie einen lokalen Inferenzserver mit OpenAI-kompatibler API: `ollama serve` (Ollama) oder `python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen3-Coder-32B-Instruct` (vLLM).',
@@ -681,7 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Empfehlung nach Anwendungsfall',
         content: '**Vier Leserprofile decken die meisten Menschen ab, die sich diese Frage stellen — finden Sie Ihres und überspringen Sie den Rest.**',
         items: [
-          '**Private oder Open-Source-Repos, datenschutzbewusst, hat bereits lokale-LLM-Hardware** → Lokal. Sie besitzen die GPU bereits, das Risiko eines übersehenen Bugs ist gering, und es gibt keinen Grund, öffentlichen oder privaten Code an Dritte zu senden. Nutzen Sie Qwen3-Coder 32B + PR-Agent.',
+          '**Private oder Open-Source-Repos, datenschutzbewusst, hat bereits lokale-LLM-Hardware** → Lokal. Sie besitzen die GPU bereits, das Risiko eines übersehenen Bugs ist gering, und es gibt keinen Grund, öffentlichen oder privaten Code an Dritte zu senden. Nutzen Sie Qwen2.5-Coder 32B + PR-Agent.',
           '**Startup oder kleines Team, will es heute laufen haben** → CodeRabbit. Die Einrichtungszeit schlägt in diesem Stadium die Abo-Kosten — App installieren, Review-Kommentare zum nächsten PR erhalten, weitermachen.',
           '**Regulierte Branche, darf Code nicht extern senden** → Lokal, oder CodeRabbit Enterprises selbst gehostete Stufe, wenn Budget und Beschaffung eine Anbieterbeziehung erlauben. Gehen Sie nicht davon aus, dass „kein Anbieter das anbietet" — CodeRabbit hat tatsächlich eine selbst gehostete Enterprise-Option; es ist ein Vertriebsgespräch mit individuellem Preis, kein Self-Service-Plan, wägen Sie das also gegen den Aufbau des DIY-Stacks selbst ab.',
           '**Großes Team, komplexe Diffs, qualitätskritisch** → CodeRabbit (oder Greptile/Qodo, je nach Plattform und Deployment-Bedarf — siehe den [Dreiervergleich in der Cloud](/de/local-llms/best-ai-code-review-tools)). Das ist das Profil, bei dem die ehrliche Einschränkung des lokalen Wegs bei Multi-Datei-, architektonischer Review am meisten zählt.',
@@ -706,7 +706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Ein 7B-Modell betreiben und Genauigkeit der 32B-Klasse erwarten',
-            whyItMatters: 'Qwen3-Coder 7B ist nützlich für schnelles Feedback auf Lint-Niveau mit rund 60 % Bug-Erkennungsgenauigkeit, nicht für die Review-Qualität, die ein 32B-Modell oder CodeRabbit liefert. Passen Sie die Modellstufe daran an, wie sehr Sie der Ausgabe vertrauen.',
+            whyItMatters: 'Qwen2.5-Coder 7B ist nützlich für schnelles Feedback auf Lint-Niveau mit rund 60 % Bug-Erkennungsgenauigkeit, nicht für die Review-Qualität, die ein 32B-Modell oder CodeRabbit liefert. Passen Sie die Modellstufe daran an, wie sehr Sie der Ausgabe vertrauen.',
           },
         ],
       },
@@ -715,7 +715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Kann ein lokales LLM CodeRabbit vollständig ersetzen?', a: 'Nicht als gleichwertiger Ersatz. Ein selbst gehostetes Qwen3-Coder-32B-Modell plus der Open-Source-Harness PR-Agent kann die meisten Bugs finden, die ein menschlicher Reviewer markiert haben möchte, liegt aber bei komplexen Diffs mit mehreren Dateien weiterhin hinter CodeRabbits von Frontier-Modellen gestützter Review zurück — und erfordert das Zusammenstellen von drei separaten Teilen statt der Installation eines Produkts.' },
-          { q: 'Was ist die Mindesthardware für lokale KI-Code-Review?', a: 'Qwen3-Coder 32B bei Q4_K_M-Quantisierung braucht etwa 20 GB VRAM oder Unified Memory. Auf knapperer Hardware läuft Qwen3-Coder 7B in rund 5 GB, fällt aber auf etwa 60 % Bug-Erkennungsgenauigkeit gegenüber 88 % beim 32B-Modell, behandeln Sie es also als ersten Durchgang statt als vollständiges Review-Gate.' },
+          { q: 'Was ist die Mindesthardware für lokale KI-Code-Review?', a: 'Qwen2.5-Coder 32B bei Q4_K_M-Quantisierung braucht etwa 20 GB VRAM oder Unified Memory. Auf knapperer Hardware läuft Qwen2.5-Coder 7B in rund 5 GB, fällt aber auf etwa 60 % Bug-Erkennungsgenauigkeit gegenüber 88 % beim 32B-Modell, behandeln Sie es also als ersten Durchgang statt als vollständiges Review-Gate.' },
           { q: 'Wird PR-Agent noch gepflegt?', a: 'Ja. Qodo (das Unternehmen hinter PR-Agent, früher CodiumAI) hat das Projekt 2026 an die Community gespendet; es wird jetzt unter der community-eigenen GitHub-Organisation The-PR-Agent unter der Apache-2.0-Lizenz gepflegt und bleibt über CLI, Docker oder GitHub Actions selbst hostbar.' },
           { q: 'Wie viel kostet CodeRabbit 2026?', a: 'CodeRabbits Essentials-Plan kostet 24 $ pro Entwickler und Monat, jährlich abgerechnet, Team kostet 48 $ und Advanced 72 $. Enterprise hat individuellen Preis und umfasst Self-Hosting. Jeder Plan enthält eine 14-tägige kostenlose Testphase ohne Kartenpflicht, und öffentliche Repositories erhalten dauerhaft kostenlose Review.' },
           { q: 'Bietet CodeRabbit eine selbst gehostete oder On-Premises-Option?', a: 'Ja, auf der Enterprise-Stufe. Sie hat individuellen Preis und erfordert ein Vertriebsgespräch statt einer Self-Service-Anmeldung, ist aber eine echte Option für regulierte Teams, die On-Premises-Deployment brauchen, ohne einen lokalen DIY-Stack aufzubauen.' },
@@ -723,16 +723,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Was ist die größte Schwäche des lokalen Ansatzes?', a: 'Die Review-Qualität bei komplexen, Multi-Datei- oder architektonischen Diffs. Lokale Modelle im Bereich von 20–32 GB VRAM haben einen kleineren effektiven Kontext und weniger Denktiefe als die Frontier-Modelle, aus denen Cloud-Tools schöpfen, sodass ein Bruch zwischen mehreren Dateien entfernt genau die Art von Problem ist, die bei einem lokalen Setup am ehesten durchrutscht.' },
           { q: 'Was ist günstiger für ein Fünf-Personen-Team?', a: 'CodeRabbit zum Essentials-Preis kostet 120 $/Monat für fünf Entwickler. Ein lokales Setup kostet 0 $/Monat an Software, setzt aber voraus, dass mindestens eine GPU mit 20+ GB VRAM bereits vorhanden ist oder angeschafft wird, plus Einrichtungs- und Wartungszeit — rechnen Sie diese Zeit ehrlich gegen 120 $/Monat, bevor Sie annehmen, dass lokal bei den Kosten gewinnt.' },
           { q: 'Kann ich ein lokales Modell und CodeRabbit zusammen nutzen?', a: 'Ja, und das ist ein sinnvolles Muster: Nutzen Sie ein lokales Modell für schnelles, privates Pre-Commit-Feedback, bevor Code überhaupt gepusht wird, und CodeRabbit für die maßgebliche Review, sobald ein Pull Request geöffnet wird. So erhalten Sie Datenschutz beim ersten Durchgang und Frontier-Modell-Qualität beim wichtigsten Durchgang.' },
-          { q: 'Welches lokale Modell sollte ich tatsächlich wählen?', a: 'Qwen3-Coder 32B für die meisten Fälle — es ist die aktuelle praktische Basis für ernsthafte lokale Code-Review. Den vollständigen, geordneten Vergleich über Modellgrößen und Review-Arten hinweg finden Sie in unserem eigenen [Leitfaden zu den besten lokalen LLMs für Code-Review](/de/local-llms/best-local-llms-code-review).' },
+          { q: 'Welches lokale Modell sollte ich tatsächlich wählen?', a: 'Qwen2.5-Coder 32B für die meisten Fälle — es ist die aktuelle praktische Basis für ernsthafte lokale Code-Review. Den vollständigen, geordneten Vergleich über Modellgrößen und Review-Arten hinweg finden Sie in unserem eigenen [Leitfaden zu den besten lokalen LLMs für Code-Review](/de/local-llms/best-local-llms-code-review).' },
           { q: 'Muss ich bei der Verwendung von lokaler Code-Review oder CodeRabbit die DSGVO beachten?', a: 'Bei einem selbst gehosteten Qwen3-Coder-32B-Setup verlässt der Code nie Ihre eigene Infrastruktur, was die Einhaltung der Auftragsverarbeitungspflichten nach DSGVO-Artikel 28 erheblich vereinfacht — der Diff wird nie an einen Dritten übermittelt, solange Sie die BSI-Grundschutz-Kataloge für Zugriffskontrolle und Protokollierung beachten. Bei CodeRabbit werden Diffs an eine US-amerikanische API gesendet, was eine Übermittlung personenbezogener oder unternehmensbezogener Daten im Sinne der Artikel 44–49 DSGVO darstellen kann, sofern Quellcode personenbezogene Daten enthält (etwa in Kommentaren oder Testdaten); Sie brauchen dafür einen Auftragsverarbeitungsvertrag mit CodeRabbit sowie eine geeignete Übermittlungsgrundlage. CodeRabbit Enterprise mit Self-Hosting ist die naheliegende Antwort, wenn Managed Cloud aus DSGVO-Gründen nicht infrage kommt.' },
-          { q: 'Ist lokale KI-Code-Review für den deutschen Mittelstand geeignet?', a: 'Für viele Mittelständler ja, besonders wenn bereits ein lokales LLM für andere Aufgaben läuft: Qwen3-Coder 32B + PR-Agent ist kostenlos, Apache 2.0 lizenziert und lässt sich auf vorhandener Hardware betreiben, ohne Quellcode nach außen zu geben — relevant für Firmen mit strengen BSI-Grundschutz-Vorgaben oder Kunden, die deutsche Datenhaltung verlangen. Fehlt die Zeit oder das Know-how für den Selbstbetrieb, ist CodeRabbits selbst gehostete Enterprise-Stufe eine Alternative, die dieselbe Datenkontrolle mit professionellem Support kombiniert — allerdings zu individuellem Preis und mit Vertriebsgespräch statt Self-Service-Anmeldung.' },
+          { q: 'Ist lokale KI-Code-Review für den deutschen Mittelstand geeignet?', a: 'Für viele Mittelständler ja, besonders wenn bereits ein lokales LLM für andere Aufgaben läuft: Qwen2.5-Coder 32B + PR-Agent ist kostenlos, Apache 2.0 lizenziert und lässt sich auf vorhandener Hardware betreiben, ohne Quellcode nach außen zu geben — relevant für Firmen mit strengen BSI-Grundschutz-Vorgaben oder Kunden, die deutsche Datenhaltung verlangen. Fehlt die Zeit oder das Know-how für den Selbstbetrieb, ist CodeRabbits selbst gehostete Enterprise-Stufe eine Alternative, die dieselbe Datenkontrolle mit professionellem Support kombiniert — allerdings zu individuellem Preis und mit Vertriebsgespräch statt Self-Service-Anmeldung.' },
         ],
       },
       verdict: {
         id: 'verdict',
         title: 'Fazit',
         items: [
-          '**Gehen Sie lokal, wenn** Datenschutz Ihnen wichtiger ist, als jeden letzten Bug zu finden, und Sie bereits 20+ GB VRAM haben — nächster Schritt: Qwen3-Coder 32B über Ollama herunterladen und mit einem GitHub-Actions-Hook an PR-Agent anbinden.',
+          '**Gehen Sie lokal, wenn** Datenschutz Ihnen wichtiger ist, als jeden letzten Bug zu finden, und Sie bereits 20+ GB VRAM haben — nächster Schritt: Qwen2.5-Coder 32B über Ollama herunterladen und mit einem GitHub-Actions-Hook an PR-Agent anbinden.',
           '**Gehen Sie mit CodeRabbit, wenn** Sie es heute laufen haben wollen und Ihre Review-Qualitätsanforderung hoch ist — nächster Schritt: die App in Ihrem wichtigsten Repository installieren und die 14-tägige Testphase nutzen, um die Ausgabe mit Ihrem aktuellen Review-Prozess zu vergleichen.',
           '**Gehen Sie mit CodeRabbit Enterprise (selbst gehostet), wenn** Sie reguliert sind und Code nicht extern senden dürfen, aber CodeRabbits Review-Qualität wollen — nächster Schritt: das Enterprise-Gespräch buchen, statt anzunehmen, Self-Hosting werde nicht angeboten.',
           '**Nutzen Sie beides, wenn** Sie beim ersten Durchgang Datenschutz wollen und bei dem Durchgang, der am meisten zählt, Frontier-Modell-Qualität — nächster Schritt: das lokale Modell an einen Pre-Commit-Hook für privates, sofortiges Feedback anbinden und CodeRabbit die maßgebliche PR-Review übernehmen lassen.',
@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: 'https://www.coderabbit.ai/pricing', title: 'CodeRabbit-Preise', description: 'Stufen Essentials, Team, Advanced und Enterprise, die 14-tägige Testphase und kostenloser Zugang für öffentliche Repositories — verifiziert am 01.09.2026.' },
           { url: 'https://github.com/The-PR-Agent/pr-agent', title: 'PR-Agent (community-gepflegt)', description: 'Apache-2.0-lizenzierter, selbst hostbarer PR-Review-Agent, 2026 von Qodo an die Community gespendet.' },
-          { url: '/de/local-llms/best-local-llms-code-review', title: 'Beste lokale LLMs für Code-Review (PromptQuorum)', description: 'Geordneter Vergleich von Qwen3-Coder, Llama 3.3 und DeepSeek-R1 für lokale Code-Review, einschließlich der auf dieser Seite zitierten 88-%-Bug-Erkennungszahl für Qwen3-Coder 32B.' },
+          { url: '/de/local-llms/best-local-llms-code-review', title: 'Beste lokale LLMs für Code-Review (PromptQuorum)', description: 'Geordneter Vergleich von Qwen3-Coder, Llama 3.3 und DeepSeek-R1 für lokale Code-Review, einschließlich der auf dieser Seite zitierten 88-%-Bug-Erkennungszahl für Qwen2.5-Coder 32B.' },
           { url: '/de/local-llms/best-ai-code-review-tools', title: 'CodeRabbit vs. Greptile vs. Qodo (PromptQuorum)', description: 'Der vollständige Dreiervergleich in der Cloud, auf den diese Seite verweist, statt ihn neu zu verhandeln.' },
         ],
       },
@@ -757,7 +757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Beste lokale LLMs für Code-Review](/de/local-llms/best-local-llms-code-review) — geordneter Modellvergleich (Qwen3-Coder, Llama 3.3, DeepSeek-R1) für die lokale Hälfte dieser Seite',
           '[Bester KI-Coding-Assistent für lokale LLMs](/de/local-llms/best-ai-coding-assistant-local-llm) — die Tools, die den Diff schreiben, den eine Review-Pipeline (lokal oder Cloud) liest',
           '[Der lokale-LLM-Entwickler-Stack](/de/local-llms/local-llm-developer-stack) — wo eine selbst gehostete Review-Pipeline in eine breitere lokale Toolchain passt',
-          '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) — die VRAM-Rechnung hinter der auf dieser Seite verwendeten 20-GB-Zahl für Qwen3-Coder 32B',
+          '[LLM-Quantisierung erklärt](/de/local-llms/llm-quantization-explained) — die VRAM-Rechnung hinter der auf dieser Seite verwendeten 20-GB-Zahl für Qwen2.5-Coder 32B',
         ],
       },
     },
@@ -802,7 +802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Was ist die Mindesthardware für lokale KI-Code-Review?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Qwen3-Coder 32B bei Q4_K_M-Quantisierung braucht etwa 20 GB VRAM oder Unified Memory. Auf knapperer Hardware läuft Qwen3-Coder 7B in rund 5 GB, fällt aber auf etwa 60 % Bug-Erkennungsgenauigkeit gegenüber 88 % beim 32B-Modell, behandeln Sie es also als ersten Durchgang statt als vollständiges Review-Gate.',
+            'text': 'Qwen2.5-Coder 32B bei Q4_K_M-Quantisierung braucht etwa 20 GB VRAM oder Unified Memory. Auf knapperer Hardware läuft Qwen2.5-Coder 7B in rund 5 GB, fällt aber auf etwa 60 % Bug-Erkennungsgenauigkeit gegenüber 88 % beim 32B-Modell, behandeln Sie es also als ersten Durchgang statt als vollständiges Review-Gate.',
           },
         },
         {
@@ -866,7 +866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Welches lokale Modell sollte ich tatsächlich wählen?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Qwen3-Coder 32B für die meisten Fälle — es ist die aktuelle praktische Basis für ernsthafte lokale Code-Review. Den vollständigen, geordneten Vergleich über Modellgrößen und Review-Arten hinweg finden Sie in unserem eigenen Leitfaden zu den besten lokalen LLMs für Code-Review.',
+            'text': 'Qwen2.5-Coder 32B für die meisten Fälle — es ist die aktuelle praktische Basis für ernsthafte lokale Code-Review. Den vollständigen, geordneten Vergleich über Modellgrößen und Review-Arten hinweg finden Sie in unserem eigenen Leitfaden zu den besten lokalen LLMs für Code-Review.',
           },
         },
         {
@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Ist lokale KI-Code-Review für den deutschen Mittelstand geeignet?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Für viele Mittelständler ja, besonders wenn bereits ein lokales LLM für andere Aufgaben läuft: Qwen3-Coder 32B + PR-Agent ist kostenlos, Apache 2.0 lizenziert und lässt sich auf vorhandener Hardware betreiben, ohne Quellcode nach außen zu geben — relevant für Firmen mit strengen BSI-Grundschutz-Vorgaben oder Kunden, die deutsche Datenhaltung verlangen. Fehlt die Zeit oder das Know-how für den Selbstbetrieb, ist CodeRabbits selbst gehostete Enterprise-Stufe eine Alternative, die dieselbe Datenkontrolle mit professionellem Support kombiniert — allerdings zu individuellem Preis und mit Vertriebsgespräch statt Self-Service-Anmeldung.',
+            'text': 'Für viele Mittelständler ja, besonders wenn bereits ein lokales LLM für andere Aufgaben läuft: Qwen2.5-Coder 32B + PR-Agent ist kostenlos, Apache 2.0 lizenziert und lässt sich auf vorhandener Hardware betreiben, ohne Quellcode nach außen zu geben — relevant für Firmen mit strengen BSI-Grundschutz-Vorgaben oder Kunden, die deutsche Datenhaltung verlangen. Fehlt die Zeit oder das Know-how für den Selbstbetrieb, ist CodeRabbits selbst gehostete Enterprise-Stufe eine Alternative, die dieselbe Datenkontrolle mit professionellem Support kombiniert — allerdings zu individuellem Preis und mit Vertriebsgespräch statt Self-Service-Anmeldung.',
           },
         },
       ],
@@ -894,7 +894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'Revisión de código con IA local vs. CodeRabbit: ¿vale la pena hacerlo tú mismo?',
     seoTitle: 'Revisión de código con IA local vs CodeRabbit: DIY vs SaaS (2026)',
-    metaDescription: 'CodeRabbit cuesta 24 $/dev/mes y funciona en 5 minutos. Un montaje autoalojado con Qwen3-Coder 32B + PR-Agent es gratis pero detecta menos errores. Aquí está el compromiso real.',
+    metaDescription: 'CodeRabbit cuesta 24 $/dev/mes y funciona en 5 minutos. Un montaje autoalojado con Qwen2.5-Coder 32B + PR-Agent es gratis pero detecta menos errores. Aquí está el compromiso real.',
     educationalLevel: 'Advanced',
     audience: 'Desarrolladores que ya ejecutan LLM locales y están decidiendo si también autoalojar la revisión de código',
     affiliateDisclosure: true,
@@ -909,14 +909,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'PR-Agent autoalojado',
       'pipeline de revisión de código local',
     ],
-    leadAnswerBlock: '**Ve con lo local si la privacidad del código te importa más que detectar hasta el último error, ya tienes un montaje de LLM local en marcha, o revisas repositorios personales de bajo riesgo — combina Qwen3-Coder 32B (20 GB de VRAM, Apache 2.0) con el harness open source PR-Agent y un git hook, por 0 $/mes. Ve con CodeRabbit si necesitas calidad de revisión de nivel producción, quieres tenerlo funcionando en cinco minutos, o revisas código propietario de clientes — empieza en 24 $/desarrollador/mes y es gratis para siempre en repositorios públicos.** No existe un clon local limpio de CodeRabbit; la vía local significa ensamblar tú mismo un modelo, un harness de revisión y un hook.',
+    leadAnswerBlock: '**Ve con lo local si la privacidad del código te importa más que detectar hasta el último error, ya tienes un montaje de LLM local en marcha, o revisas repositorios personales de bajo riesgo — combina Qwen2.5-Coder 32B (20 GB de VRAM, Apache 2.0) con el harness open source PR-Agent y un git hook, por 0 $/mes. Ve con CodeRabbit si necesitas calidad de revisión de nivel producción, quieres tenerlo funcionando en cinco minutos, o revisas código propietario de clientes — empieza en 24 $/desarrollador/mes y es gratis para siempre en repositorios públicos.** No existe un clon local limpio de CodeRabbit; la vía local significa ensamblar tú mismo un modelo, un harness de revisión y un hook.',
     quickAnswerTop: {
       question: '¿Puede un LLM local reemplazar a CodeRabbit en la revisión de código con IA?',
-      answer: '**Parcialmente.** Un modelo Qwen3-Coder 32B autoalojado que impulsa el harness open source PR-Agent detecta aproximadamente el 88% de los errores que un modelo de 7B pasaría por alto, y no cuesta nada más allá del hardware que ya podrías tener — pero se queda por detrás de la revisión de CodeRabbit, respaldada por modelos de frontera, en diffs complejos con varios archivos, y requiere una tarde de configuración en lugar de un registro de cinco minutos. No existe un único producto open source que replique a CodeRabbit función por función; la opción "local" son varias piezas ensambladas, no una sola instalación.',
+      answer: '**Parcialmente.** Un modelo Qwen2.5-Coder 32B autoalojado que impulsa el harness open source PR-Agent detecta aproximadamente el 88% de los errores que un modelo de 7B pasaría por alto, y no cuesta nada más allá del hardware que ya podrías tener — pero se queda por detrás de la revisión de CodeRabbit, respaldada por modelos de frontera, en diffs complejos con varios archivos, y requiere una tarde de configuración en lugar de un registro de cinco minutos. No existe un único producto open source que replique a CodeRabbit función por función; la opción "local" son varias piezas ensambladas, no una sola instalación.',
       bullets: [
         '**Lo local gana en:** privacidad (el código nunca sale de tu máquina), costo (0 $/mes tras el hardware), y control total sobre el prompt de revisión',
         '**CodeRabbit gana en:** tiempo de configuración (minutos, no una tarde), calidad de revisión en diffs complejos, y cero carga de mantenimiento',
-        '**Montaje local mínimo viable:** Qwen3-Coder 32B (20 GB de VRAM/RAM, Apache 2.0) + PR-Agent (Apache 2.0, autoalojado) + un hook de pre-commit de git o de CI',
+        '**Montaje local mínimo viable:** Qwen2.5-Coder 32B (20 GB de VRAM/RAM, Apache 2.0) + PR-Agent (Apache 2.0, autoalojado) + un hook de pre-commit de git o de CI',
         '**Precio inicial de CodeRabbit:** 24 $/desarrollador/mes (Essentials, facturación anual), gratis para siempre en repositorios públicos, prueba de 14 días',
       ],
       updatedDate: '2026-09-01',
@@ -954,7 +954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Un modelo Qwen3-Coder 32B autoalojado, combinado con el harness de revisión open source PR-Agent, puede realizar revisión de código con IA por completo en hardware local por 0 $/mes, pero requiere una tarde de montaje y se queda por detrás de la revisión de CodeRabbit, respaldada por modelos de frontera, en pull requests con diffs complejos o grandes.',
+            text: 'Un modelo Qwen2.5-Coder 32B autoalojado, combinado con el harness de revisión open source PR-Agent, puede realizar revisión de código con IA por completo en hardware local por 0 $/mes, pero requiere una tarde de montaje y se queda por detrás de la revisión de CodeRabbit, respaldada por modelos de frontera, en pull requests con diffs complejos o grandes.',
           },
           {
             type: 'plain-terms',
@@ -963,7 +963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**No existe un clon local limpio de CodeRabbit.** Ir por la vía local significa ensamblar un modelo de código + un harness de revisión + un git hook, no instalar una sola app competidora.',
-          '**Modelo local mínimo viable:** Qwen3-Coder 32B, 20 GB de VRAM/RAM en Q4_K_M, licencia Apache 2.0 — detecta aproximadamente el 88% de los errores inyectados en nuestras pruebas internas; un nivel por debajo (Qwen3-Coder 7B, 5 GB) se queda más cerca del 60%.',
+          '**Modelo local mínimo viable:** Qwen2.5-Coder 32B, 20 GB de VRAM/RAM en Q4_K_M, licencia Apache 2.0 — detecta aproximadamente el 88% de los errores inyectados en nuestras pruebas internas; un nivel por debajo (Qwen2.5-Coder 7B, 5 GB) se queda más cerca del 60%.',
           '**Harness de revisión:** PR-Agent (Apache 2.0), donado por Qodo a la comunidad en 2026 y ahora mantenido bajo la organización the-pr-agent — autoalojable vía CLI, Docker o GitHub Actions.',
           '**Limitación honesta:** los modelos de código locales todavía van por detrás de los modelos de frontera en la nube en revisión de diffs complejos con varios archivos — trata lo local como "suficientemente bueno para la mayoría de PRs", no como un reemplazo equivalente.',
           '**Precios de CodeRabbit (verificados el 2026-09-01):** Essentials 24 $/dev/mes, Team 48 $, Advanced 72 $ (todos con facturación anual), Enterprise con precio personalizado y opción autoalojada; gratis para siempre en repositorios públicos, prueba de 14 días en cada nivel de pago.',
@@ -976,7 +976,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Recorre esta lista y detente en la primera línea que te describa — la decisión depende de tus necesidades de privacidad, el hardware que ya tienes, y cuánta calidad de revisión puedes permitirte perder.**',
         items: [
           '**Mejor para la mayoría de los equipos → CodeRabbit.** Configuración de cinco minutos, gratis para siempre en repositorios públicos, prueba de 14 días, desde 24 $/desarrollador/mes. Ideal cuando la calidad de revisión y el mantenimiento cero importan más que ser dueño del stack.',
-          '**Mejor para la privacidad → IA local.** Qwen3-Coder 32B + PR-Agent, aproximadamente 0 $ en costo de software, necesita 20+ GB de VRAM y varias horas de configuración y mantenimiento continuo, con un techo más bajo en revisión compleja multi-archivo.',
+          '**Mejor para la privacidad → IA local.** Qwen2.5-Coder 32B + PR-Agent, aproximadamente 0 $ en costo de software, necesita 20+ GB de VRAM y varias horas de configuración y mantenimiento continuo, con un techo más bajo en revisión compleja multi-archivo.',
           '**Lo mejor de ambos → Usa los dos.** Ejecuta la revisión local como una pasada de pre-commit para feedback rápido y privado, y luego deja que CodeRabbit haga la revisión autorizada cuando se abra un pull request — consulta la pregunta frecuente "¿Puedo usar ambos?" más abajo para ver cómo lo hacen los equipos en la práctica.',
         ],
         columns: ['Factor', 'IA local', 'CodeRabbit'],
@@ -1007,7 +1007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Tu equipo es demasiado pequeño para justificar la carga de mantenimiento de ejecutar y actualizar indefinidamente un stack de modelo local + harness',
           ],
           quick: [
-            'Gratis, privado, DIY → **Qwen3-Coder 32B + PR-Agent** (20 GB de VRAM, 0 $/mes, Apache 2.0 en todo)',
+            'Gratis, privado, DIY → **Qwen2.5-Coder 32B + PR-Agent** (20 GB de VRAM, 0 $/mes, Apache 2.0 en todo)',
             'Funcionando en 5 minutos, mejor calidad → **CodeRabbit** (24 $/dev/mes Essentials, gratis en repos públicos)',
             'Regulado/aislado, puedes pagarlo → **CodeRabbit Enterprise (autoalojado)** — precio personalizado, requiere hablar con ventas',
             'Menos de 5 PRs a la semana → **ninguno de los dos** — la revisión humana sigue siendo suficientemente rápida a ese volumen',
@@ -1035,10 +1035,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cómo construir un pipeline de revisión de código local',
         content: '**El montaje local hoy son tres piezas: un modelo de código autoalojado, un harness de revisión open source, y un hook que lo ejecuta en cada diff — no una sola app que instalas.** Ten esto claro desde el principio: esto es trabajo de ensamblaje, no una compra de producto.',
         items: [
-          '**El modelo:** Qwen3-Coder 32B (Alibaba, Apache 2.0) es la base práctica — necesita aproximadamente 20 GB de VRAM o memoria unificada en cuantización Q4_K_M y detecta alrededor del 88% de los errores inyectados en las pruebas detrás de nuestra [guía de LLM locales para revisión de código](/es/local-llms/best-local-llms-code-review). En hardware más ajustado, Qwen3-Coder 7B (unos 5 GB) sirve para feedback a nivel de lint pero se queda más cerca del 60% de precisión — trátalo como una primera pasada, no como un filtro definitivo.',
+          '**El modelo:** Qwen2.5-Coder 32B (Alibaba, Apache 2.0) es la base práctica — necesita aproximadamente 20 GB de VRAM o memoria unificada en cuantización Q4_K_M y detecta alrededor del 88% de los errores inyectados en las pruebas detrás de nuestra [guía de LLM locales para revisión de código](/es/local-llms/best-local-llms-code-review). En hardware más ajustado, Qwen2.5-Coder 7B (unos 5 GB) sirve para feedback a nivel de lint pero se queda más cerca del 60% de precisión — trátalo como una primera pasada, no como un filtro definitivo.',
           '**El harness:** [PR-Agent](https://github.com/The-PR-Agent/pr-agent) es un agente de revisión de PR open source (Apache 2.0) y autoalojable — construido originalmente por Qodo/CodiumAI, donado a la comunidad en 2026 y ahora mantenido bajo la organización de GitHub The-PR-Agent, propiedad de la comunidad. Se ejecuta vía CLI, Docker, GitHub Actions o un webhook, y llama a cualquier endpoint compatible con OpenAI — incluido un servidor local de Ollama o vLLM.',
           '**La conexión:** apunta la configuración de modelo de PR-Agent a la API compatible con OpenAI de tu servidor de inferencia local (tanto Ollama como vLLM exponen una), y luego actívalo desde un hook de pre-commit de git para feedback solo local, o desde un paso de GitHub Actions/GitLab CI para que comente en cada pull request, igual que hace CodeRabbit.',
-          '**Una especificación mínima realista:** una GPU con 20+ GB de VRAM (una RTX 4090 o mejor) o un Mac con Apple Silicon con 32+ GB de memoria unificada. Por debajo de eso, baja a Qwen3-Coder 7B y acepta la menor precisión — o evita la revisión local para cualquier cosa sensible en seguridad.',
+          '**Una especificación mínima realista:** una GPU con 20+ GB de VRAM (una RTX 4090 o mejor) o un Mac con Apple Silicon con 32+ GB de memoria unificada. Por debajo de eso, baja a Qwen2.5-Coder 7B y acepta la menor precisión — o evita la revisión local para cualquier cosa sensible en seguridad.',
         ],
         numberedItems: [
           'Arranca un servidor de inferencia local que exponga una API compatible con OpenAI: `ollama serve` (Ollama) o `python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen3-Coder-32B-Instruct` (vLLM).',
@@ -1053,7 +1053,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       limitations: {
         id: 'limitations',
         title: 'Dónde se queda corta realmente la vía local',
-        content: '**Los modelos de código locales actuales van por detrás de los modelos de frontera en la nube en calidad de revisión de diffs grandes y complejos — este es el límite honesto, no una razón para descartar la revisión local por completo.** Dilo con claridad en lugar de sobrevender la vía DIY: un montaje autoalojado de Qwen3-Coder 32B se perderá cosas que la revisión de CodeRabbit, respaldada en la nube, sí detecta, sobre todo en problemas arquitectónicos que abarcan muchos archivos o en análisis de seguridad que exige mucho razonamiento.',
+        content: '**Los modelos de código locales actuales van por detrás de los modelos de frontera en la nube en calidad de revisión de diffs grandes y complejos — este es el límite honesto, no una razón para descartar la revisión local por completo.** Dilo con claridad en lugar de sobrevender la vía DIY: un montaje autoalojado de Qwen2.5-Coder 32B se perderá cosas que la revisión de CodeRabbit, respaldada en la nube, sí detecta, sobre todo en problemas arquitectónicos que abarcan muchos archivos o en análisis de seguridad que exige mucho razonamiento.',
         items: [
           '**La revisión arquitectónica multi-archivo es el punto débil.** Un modelo local de 20 GB tiene un contexto efectivo más pequeño y menos profundidad de razonamiento que los modelos de frontera de los que se nutre el pipeline de CodeRabbit — una rotura entre archivos varios saltos más allá es exactamente lo que un montaje local basado solo en el diff o en un único modelo tiene más probabilidades de pasar por alto.',
           '**Sin mejora continua del modelo.** La calidad de revisión de CodeRabbit mejora automáticamente conforme mejoran los modelos de frontera subyacentes que usa. Un modelo local queda congelado en el checkpoint que descargaste hasta que tú mismo vuelvas a descargar y volver a evaluar uno más nuevo.',
@@ -1133,7 +1133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Recomendación según el caso de uso',
         content: '**Cuatro perfiles de lector cubren a la mayoría de quienes se hacen esta pregunta — encuentra el tuyo y sáltate el resto.**',
         items: [
-          '**Repos personales o de código abierto, consciente de la privacidad, ya tiene hardware para LLM local** → Local. Ya tienes la GPU, el riesgo de un error pasado por alto es bajo, y no hay razón para enviar código público o personal a un tercero. Usa Qwen3-Coder 32B + PR-Agent.',
+          '**Repos personales o de código abierto, consciente de la privacidad, ya tiene hardware para LLM local** → Local. Ya tienes la GPU, el riesgo de un error pasado por alto es bajo, y no hay razón para enviar código público o personal a un tercero. Usa Qwen2.5-Coder 32B + PR-Agent.',
           '**Startup o equipo pequeño, quiere tenerlo funcionando hoy** → CodeRabbit. El tiempo de configuración pesa más que el costo de la suscripción en esta etapa — instala la app, recibe comentarios de revisión en el próximo PR, sigue adelante.',
           '**Industria regulada, no puede enviar código fuera de sus instalaciones** → Local, o el nivel autoalojado de CodeRabbit Enterprise si el presupuesto y las compras permiten una relación con un proveedor. No des por hecho que "ningún proveedor ofrece esto" — CodeRabbit sí tiene una opción Enterprise autoalojada; es una conversación de ventas con precio personalizado, no un plan de autoservicio, así que sopesa eso frente a construir el stack DIY tú mismo.',
           '**Equipo grande, diffs complejos, calidad crítica** → CodeRabbit (o Greptile/Qodo, según la plataforma y las necesidades de despliegue — consulta la [comparación en la nube a tres bandas](/es/local-llms/best-ai-code-review-tools)). Este es el perfil donde más importa la limitación honesta de la vía local en revisión arquitectónica multi-archivo.',
@@ -1158,7 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Ejecutar un modelo de 7B y esperar precisión de clase 32B',
-            whyItMatters: 'Qwen3-Coder 7B es útil para feedback rápido a nivel de lint, con aproximadamente un 60% de precisión en detección de errores, no para la calidad de revisión que ofrece un modelo de 32B o CodeRabbit. Ajusta el nivel del modelo a cuánto confías en su salida.',
+            whyItMatters: 'Qwen2.5-Coder 7B es útil para feedback rápido a nivel de lint, con aproximadamente un 60% de precisión en detección de errores, no para la calidad de revisión que ofrece un modelo de 32B o CodeRabbit. Ajusta el nivel del modelo a cuánto confías en su salida.',
           },
         ],
       },
@@ -1166,8 +1166,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          { q: '¿Puede un LLM local reemplazar por completo a CodeRabbit?', a: 'No como un reemplazo equivalente. Un modelo Qwen3-Coder 32B autoalojado más el harness open source PR-Agent puede detectar la mayoría de los errores que un revisor humano querría señalar, pero todavía va por detrás de la revisión de CodeRabbit, respaldada por modelos de frontera, en diffs complejos con varios archivos — y requiere ensamblar tres piezas separadas en lugar de instalar un solo producto.' },
-          { q: '¿Cuál es el hardware mínimo para revisión de código con IA local?', a: 'Qwen3-Coder 32B en cuantización Q4_K_M necesita aproximadamente 20 GB de VRAM o memoria unificada. En hardware más ajustado, Qwen3-Coder 7B corre en unos 5 GB pero baja a aproximadamente un 60% de precisión en detección de errores frente al 88% del modelo de 32B, así que trátalo como una primera pasada y no como un filtro de revisión completo.' },
+          { q: '¿Puede un LLM local reemplazar por completo a CodeRabbit?', a: 'No como un reemplazo equivalente. Un modelo Qwen2.5-Coder 32B autoalojado más el harness open source PR-Agent puede detectar la mayoría de los errores que un revisor humano querría señalar, pero todavía va por detrás de la revisión de CodeRabbit, respaldada por modelos de frontera, en diffs complejos con varios archivos — y requiere ensamblar tres piezas separadas en lugar de instalar un solo producto.' },
+          { q: '¿Cuál es el hardware mínimo para revisión de código con IA local?', a: 'Qwen2.5-Coder 32B en cuantización Q4_K_M necesita aproximadamente 20 GB de VRAM o memoria unificada. En hardware más ajustado, Qwen2.5-Coder 7B corre en unos 5 GB pero baja a aproximadamente un 60% de precisión en detección de errores frente al 88% del modelo de 32B, así que trátalo como una primera pasada y no como un filtro de revisión completo.' },
           { q: '¿Se sigue manteniendo PR-Agent?', a: 'Sí. Qodo (la empresa detrás de PR-Agent, antes CodiumAI) donó el proyecto a la comunidad en 2026; ahora se mantiene bajo la organización de GitHub The-PR-Agent, propiedad de la comunidad, bajo la licencia Apache 2.0, y sigue siendo autoalojable vía CLI, Docker o GitHub Actions.' },
           { q: '¿Cuánto cuesta CodeRabbit en 2026?', a: 'El plan Essentials de CodeRabbit cuesta 24 $ por desarrollador al mes con facturación anual, Team cuesta 48 $, y Advanced cuesta 72 $. Enterprise tiene precio personalizado e incluye autoalojamiento. Todos los planes incluyen una prueba gratuita de 14 días sin necesidad de tarjeta, y los repositorios públicos reciben revisión gratis, de forma permanente.' },
           { q: '¿Ofrece CodeRabbit una opción autoalojada u on-premises?', a: 'Sí, en el nivel Enterprise. Tiene precio personalizado y requiere una conversación de ventas en lugar de un registro de autoservicio, pero es una opción real para equipos regulados que necesitan despliegue on-premises sin construir un stack DIY local.' },
@@ -1175,14 +1175,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '¿Cuál es la mayor debilidad del enfoque local?', a: 'La calidad de revisión en diffs complejos, multi-archivo o arquitectónicos. Los modelos locales en el rango de 20-32 GB de VRAM tienen un contexto efectivo más pequeño y menos profundidad de razonamiento que los modelos de frontera de los que se nutren las herramientas en la nube, así que una rotura entre archivos varios archivos más allá es el tipo de problema con más probabilidades de pasar desapercibido en un montaje local.' },
           { q: '¿Qué opción es más barata para un equipo de 5 personas?', a: 'CodeRabbit con el precio de Essentials cuesta 120 $/mes para cinco desarrolladores. Un montaje local cuesta 0 $/mes en software, pero asume que ya existe (o se compra) al menos una GPU con 20+ GB de VRAM, más tiempo de configuración y mantenimiento — calcula ese tiempo con honestidad frente a los 120 $/mes antes de asumir que lo local gana en costo.' },
           { q: '¿Puedo usar un modelo local y CodeRabbit juntos?', a: 'Sí, y es un patrón razonable: usa un modelo local para feedback rápido y privado antes del commit, incluso antes de hacer push del código, y CodeRabbit para la revisión autorizada una vez que se abre un pull request. Esto te da privacidad en la primera pasada y calidad de modelo de frontera en la pasada que más importa.' },
-          { q: '¿Qué modelo local debería elegir realmente?', a: 'Qwen3-Coder 32B para la mayoría de los casos — es la base práctica actual para revisión de código local en serio. Consulta nuestra guía dedicada de [mejores LLM locales para revisión de código](/es/local-llms/best-local-llms-code-review) para ver la comparación completa clasificada entre tamaños de modelo y tipos de revisión.' },
+          { q: '¿Qué modelo local debería elegir realmente?', a: 'Qwen2.5-Coder 32B para la mayoría de los casos — es la base práctica actual para revisión de código local en serio. Consulta nuestra guía dedicada de [mejores LLM locales para revisión de código](/es/local-llms/best-local-llms-code-review) para ver la comparación completa clasificada entre tamaños de modelo y tipos de revisión.' },
         ],
       },
       verdict: {
         id: 'verdict',
         title: 'Veredicto final',
         items: [
-          '**Ve con lo local si** la privacidad te importa más que detectar hasta el último error y ya tienes 20+ GB de VRAM — siguiente paso: descarga Qwen3-Coder 32B vía Ollama y conéctalo a PR-Agent con un hook de GitHub Actions.',
+          '**Ve con lo local si** la privacidad te importa más que detectar hasta el último error y ya tienes 20+ GB de VRAM — siguiente paso: descarga Qwen2.5-Coder 32B vía Ollama y conéctalo a PR-Agent con un hook de GitHub Actions.',
           '**Ve con CodeRabbit si** quieres tenerlo funcionando hoy y tu exigencia de calidad de revisión es alta — siguiente paso: instala la app en tu repositorio principal y usa la prueba de 14 días para comparar su resultado con tu proceso de revisión actual.',
           '**Ve con CodeRabbit Enterprise (autoalojado) si** estás regulado y no puedes enviar código fuera de tus instalaciones pero quieres la calidad de revisión de CodeRabbit — siguiente paso: agenda la conversación Enterprise en lugar de asumir que no se ofrece autoalojamiento.',
           '**Usa ambos si** quieres privacidad en la primera pasada y calidad de modelo de frontera en la pasada que más importa — siguiente paso: conecta el modelo local a un hook de pre-commit para feedback privado e instantáneo, y deja que CodeRabbit se encargue de la revisión autorizada del PR.',
@@ -1195,7 +1195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: 'https://www.coderabbit.ai/pricing', title: 'Precios de CodeRabbit', description: 'Niveles Essentials, Team, Advanced y Enterprise, la prueba de 14 días, y el acceso gratuito para repositorios públicos — verificado el 2026-09-01.' },
           { url: 'https://github.com/The-PR-Agent/pr-agent', title: 'PR-Agent (mantenido por la comunidad)', description: 'Agente de revisión de PR con licencia Apache 2.0 y autoalojable, donado por Qodo a la comunidad en 2026.' },
-          { url: '/es/local-llms/best-local-llms-code-review', title: 'Mejores LLM locales para revisión de código (PromptQuorum)', description: 'Comparación clasificada de Qwen3-Coder, Llama 3.3 y DeepSeek-R1 para revisión de código local, incluida la cifra del 88% de detección de errores para Qwen3-Coder 32B citada en esta página.' },
+          { url: '/es/local-llms/best-local-llms-code-review', title: 'Mejores LLM locales para revisión de código (PromptQuorum)', description: 'Comparación clasificada de Qwen3-Coder, Llama 3.3 y DeepSeek-R1 para revisión de código local, incluida la cifra del 88% de detección de errores para Qwen2.5-Coder 32B citada en esta página.' },
           { url: '/es/local-llms/best-ai-code-review-tools', title: 'CodeRabbit vs Greptile vs Qodo (PromptQuorum)', description: 'La comparación completa en la nube a tres bandas a la que remite esta página en lugar de repetirla.' },
         ],
       },
@@ -1207,14 +1207,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Mejores LLM locales para revisión de código](/es/local-llms/best-local-llms-code-review) — comparación clasificada de modelos (Qwen3-Coder, Llama 3.3, DeepSeek-R1) para la mitad local de esta página',
           '[Mejor asistente de codificación con IA para LLM local](/es/local-llms/best-ai-coding-assistant-local-llm) — las herramientas que escriben el diff que lee un pipeline de revisión (local o en la nube)',
           '[El stack de desarrollador con LLM local](/es/local-llms/local-llm-developer-stack) — dónde encaja un pipeline de revisión autoalojado dentro de una cadena de herramientas más amplia enfocada en lo local',
-          '[Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained) — las matemáticas de VRAM detrás de la cifra de 20 GB para Qwen3-Coder 32B usada en esta página',
+          '[Cuantización de LLM explicada](/es/local-llms/llm-quantization-explained) — las matemáticas de VRAM detrás de la cifra de 20 GB para Qwen2.5-Coder 32B usada en esta página',
         ],
       },
     },
     schema: {
       '@type': 'TechArticle',
       headline: 'Revisión de código con IA local vs. CodeRabbit: ¿vale la pena hacerlo tú mismo?',
-      description: 'Si un pipeline autoalojado de Qwen3-Coder 32B + PR-Agent puede reemplazar a CodeRabbit para la revisión de código con IA — compromisos honestos, precios verificados y una recomendación según el caso de uso.',
+      description: 'Si un pipeline autoalojado de Qwen2.5-Coder 32B + PR-Agent puede reemplazar a CodeRabbit para la revisión de código con IA — compromisos honestos, precios verificados y una recomendación según el caso de uso.',
       datePublished: '2026-09-01',
       dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/es/local-llms/local-ai-code-review-vs-coderabbit',
@@ -1244,7 +1244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': '¿Puede un LLM local reemplazar por completo a CodeRabbit?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'No como un reemplazo equivalente. Un modelo Qwen3-Coder 32B autoalojado más el harness open source PR-Agent puede detectar la mayoría de los errores que un revisor humano querría señalar, pero todavía va por detrás de la revisión de CodeRabbit, respaldada por modelos de frontera, en diffs complejos con varios archivos — y requiere ensamblar tres piezas separadas en lugar de instalar un solo producto.',
+            'text': 'No como un reemplazo equivalente. Un modelo Qwen2.5-Coder 32B autoalojado más el harness open source PR-Agent puede detectar la mayoría de los errores que un revisor humano querría señalar, pero todavía va por detrás de la revisión de CodeRabbit, respaldada por modelos de frontera, en diffs complejos con varios archivos — y requiere ensamblar tres piezas separadas en lugar de instalar un solo producto.',
           },
         },
         {
@@ -1252,7 +1252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': '¿Cuál es el hardware mínimo para revisión de código con IA local?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Qwen3-Coder 32B en cuantización Q4_K_M necesita aproximadamente 20 GB de VRAM o memoria unificada. En hardware más ajustado, Qwen3-Coder 7B corre en unos 5 GB pero baja a aproximadamente un 60% de precisión en detección de errores frente al 88% del modelo de 32B, así que trátalo como una primera pasada y no como un filtro de revisión completo.',
+            'text': 'Qwen2.5-Coder 32B en cuantización Q4_K_M necesita aproximadamente 20 GB de VRAM o memoria unificada. En hardware más ajustado, Qwen2.5-Coder 7B corre en unos 5 GB pero baja a aproximadamente un 60% de precisión en detección de errores frente al 88% del modelo de 32B, así que trátalo como una primera pasada y no como un filtro de revisión completo.',
           },
         },
         {
@@ -1316,7 +1316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': '¿Qué modelo local debería elegir realmente?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Qwen3-Coder 32B para la mayoría de los casos — es la base práctica actual para revisión de código local en serio. Consulta nuestra guía dedicada de mejores LLM locales para revisión de código para ver la comparación completa clasificada entre tamaños de modelo y tipos de revisión.',
+            'text': 'Qwen2.5-Coder 32B para la mayoría de los casos — es la base práctica actual para revisión de código local en serio. Consulta nuestra guía dedicada de mejores LLM locales para revisión de código para ver la comparación completa clasificada entre tamaños de modelo y tipos de revisión.',
           },
         },
       ],
@@ -1328,7 +1328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'Revue de code IA locale vs CodeRabbit : le DIY en vaut-il la peine ?',
     seoTitle: 'Revue de code IA locale vs CodeRabbit : DIY vs SaaS (2026)',
-    metaDescription: 'CodeRabbit coûte 24 $/dev/mois et fonctionne en 5 minutes. Un montage auto-hébergé avec Qwen3-Coder 32B + PR-Agent est gratuit mais détecte moins de bugs. Voici l\'arbitrage honnête.',
+    metaDescription: 'CodeRabbit coûte 24 $/dev/mois et fonctionne en 5 minutes. Un montage auto-hébergé avec Qwen2.5-Coder 32B + PR-Agent est gratuit mais détecte moins de bugs. Voici l\'arbitrage honnête.',
     educationalLevel: 'Advanced',
     audience: 'Développeurs faisant déjà tourner des LLM locaux et se demandant s\'ils doivent aussi auto-héberger la revue de code',
     affiliateDisclosure: true,
@@ -1343,14 +1343,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'PR-Agent auto-hébergé',
       'pipeline de revue de code local',
     ],
-    leadAnswerBlock: '**Optez pour le local si la confidentialité du code compte plus que détecter chaque bug, si vous exploitez déjà un montage LLM local, ou si vous relisez des dépôts personnels à faible enjeu — associez Qwen3-Coder 32B (20 Go de VRAM, Apache 2.0) au harness open source PR-Agent et à un hook git, pour 0 $/mois. Optez pour CodeRabbit si vous avez besoin d\'une qualité de revue digne de la production, si vous voulez que ce soit opérationnel en cinq minutes, ou si vous relisez du code client propriétaire — à partir de 24 $/développeur/mois, et gratuit à vie sur les dépôts publics.** Il n\'existe pas de clone local propre de CodeRabbit ; la voie locale signifie assembler vous-même un modèle, un harness de revue et un hook.',
+    leadAnswerBlock: '**Optez pour le local si la confidentialité du code compte plus que détecter chaque bug, si vous exploitez déjà un montage LLM local, ou si vous relisez des dépôts personnels à faible enjeu — associez Qwen2.5-Coder 32B (20 Go de VRAM, Apache 2.0) au harness open source PR-Agent et à un hook git, pour 0 $/mois. Optez pour CodeRabbit si vous avez besoin d\'une qualité de revue digne de la production, si vous voulez que ce soit opérationnel en cinq minutes, ou si vous relisez du code client propriétaire — à partir de 24 $/développeur/mois, et gratuit à vie sur les dépôts publics.** Il n\'existe pas de clone local propre de CodeRabbit ; la voie locale signifie assembler vous-même un modèle, un harness de revue et un hook.',
     quickAnswerTop: {
       question: 'Un LLM local peut-il remplacer CodeRabbit pour la revue de code IA ?',
-      answer: '**Partiellement.** Un modèle Qwen3-Coder 32B auto-hébergé pilotant le harness open source PR-Agent détecte environ 88 % des bugs qu\'un modèle 7B laisserait passer, et ne coûte rien au-delà du matériel que vous possédez peut-être déjà — mais il reste en retrait face à la revue de CodeRabbit, adossée à des modèles de pointe, sur les diffs complexes multi-fichiers, et demande une après-midi de configuration plutôt qu\'une inscription de cinq minutes. Aucun produit open source unique ne réplique CodeRabbit fonctionnalité par fonctionnalité ; l\'option « locale » est un assemblage de plusieurs pièces, pas une seule installation.',
+      answer: '**Partiellement.** Un modèle Qwen2.5-Coder 32B auto-hébergé pilotant le harness open source PR-Agent détecte environ 88 % des bugs qu\'un modèle 7B laisserait passer, et ne coûte rien au-delà du matériel que vous possédez peut-être déjà — mais il reste en retrait face à la revue de CodeRabbit, adossée à des modèles de pointe, sur les diffs complexes multi-fichiers, et demande une après-midi de configuration plutôt qu\'une inscription de cinq minutes. Aucun produit open source unique ne réplique CodeRabbit fonctionnalité par fonctionnalité ; l\'option « locale » est un assemblage de plusieurs pièces, pas une seule installation.',
       bullets: [
         '**Le local l\'emporte sur :** la confidentialité (le code ne quitte jamais votre machine), le coût (0 $/mois après le matériel), et le contrôle total du prompt de revue',
         '**CodeRabbit l\'emporte sur :** le temps de configuration (des minutes, pas une après-midi), la qualité de revue sur les diffs complexes, et une charge de maintenance nulle',
-        '**Montage local minimal viable :** Qwen3-Coder 32B (20 Go de VRAM/RAM, Apache 2.0) + PR-Agent (Apache 2.0, auto-hébergé) + un hook git pre-commit ou CI',
+        '**Montage local minimal viable :** Qwen2.5-Coder 32B (20 Go de VRAM/RAM, Apache 2.0) + PR-Agent (Apache 2.0, auto-hébergé) + un hook git pre-commit ou CI',
         '**Prix d\'entrée de CodeRabbit :** 24 $/développeur/mois (Essentials, facturation annuelle), gratuit à vie sur les dépôts publics, essai de 14 jours',
       ],
       updatedDate: '2026-09-01',
@@ -1388,7 +1388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Un modèle Qwen3-Coder 32B auto-hébergé associé au harness de revue open source PR-Agent peut assurer la revue de code IA entièrement sur du matériel local pour 0 $/mois, mais demande une après-midi d\'assemblage et reste en retrait face à la revue de CodeRabbit, adossée à des modèles de pointe, sur les pull requests aux diffs complexes ou volumineux.',
+            text: 'Un modèle Qwen2.5-Coder 32B auto-hébergé associé au harness de revue open source PR-Agent peut assurer la revue de code IA entièrement sur du matériel local pour 0 $/mois, mais demande une après-midi d\'assemblage et reste en retrait face à la revue de CodeRabbit, adossée à des modèles de pointe, sur les pull requests aux diffs complexes ou volumineux.',
           },
           {
             type: 'plain-terms',
@@ -1397,7 +1397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Aucun clone local propre de CodeRabbit n\'existe.** Aller vers le local signifie assembler un modèle de code + un harness de revue + un hook git, pas installer une seule app concurrente.',
-          '**Modèle local minimal viable :** Qwen3-Coder 32B, 20 Go de VRAM/RAM en Q4_K_M, licence Apache 2.0 — détecte environ 88 % des bugs injectés dans nos tests internes ; un cran en dessous (Qwen3-Coder 7B, 5 Go) approche plutôt les 60 %.',
+          '**Modèle local minimal viable :** Qwen2.5-Coder 32B, 20 Go de VRAM/RAM en Q4_K_M, licence Apache 2.0 — détecte environ 88 % des bugs injectés dans nos tests internes ; un cran en dessous (Qwen2.5-Coder 7B, 5 Go) approche plutôt les 60 %.',
           '**Harness de revue :** PR-Agent (Apache 2.0), donné à la communauté par Qodo en 2026 et désormais maintenu sous l\'organisation the-pr-agent — auto-hébergeable via CLI, Docker ou GitHub Actions.',
           '**Limite honnête :** les modèles de code locaux restent en retrait face aux modèles cloud de pointe sur la revue de diffs complexes multi-fichiers — considérez le local comme « suffisant pour la plupart des PR », pas comme un remplacement équivalent.',
           '**Tarifs CodeRabbit (vérifiés le 2026-09-01) :** Essentials 24 $/dev/mois, Team 48 $, Advanced 72 $ (tous en facturation annuelle), Enterprise à prix personnalisé avec option auto-hébergée ; gratuit à vie sur les dépôts publics, essai de 14 jours sur chaque palier payant.',
@@ -1410,7 +1410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Parcourez cette liste et arrêtez-vous à la première ligne qui vous décrit — la décision dépend de vos besoins de confidentialité, du matériel déjà disponible, et de la quantité de qualité de revue que vous pouvez vous permettre de perdre.**',
         items: [
           '**Idéal pour la plupart des équipes → CodeRabbit.** Configuration en cinq minutes, gratuit à vie sur les dépôts publics, essai de 14 jours, à partir de 24 $/développeur/mois. Idéal quand la qualité de revue et l\'absence de maintenance comptent plus que la possession de la pile.',
-          '**Idéal pour la confidentialité → IA locale.** Qwen3-Coder 32B + PR-Agent, environ 0 $ de coût logiciel, nécessite 20+ Go de VRAM et plusieurs heures de configuration et de maintenance continue, avec un plafond plus bas sur la revue complexe multi-fichiers.',
+          '**Idéal pour la confidentialité → IA locale.** Qwen2.5-Coder 32B + PR-Agent, environ 0 $ de coût logiciel, nécessite 20+ Go de VRAM et plusieurs heures de configuration et de maintenance continue, avec un plafond plus bas sur la revue complexe multi-fichiers.',
           '**Le meilleur des deux → Utiliser les deux.** Faites tourner la revue locale comme passe pre-commit pour un retour rapide et privé, puis laissez CodeRabbit assurer la revue faisant autorité une fois la pull request ouverte — voir la FAQ « Puis-je utiliser un modèle local et CodeRabbit ensemble ? » plus bas pour la façon dont les équipes procèdent en pratique.',
         ],
         columns: ['Facteur', 'IA locale', 'CodeRabbit'],
@@ -1441,7 +1441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Votre équipe est trop réduite pour justifier la charge de maintenance d\'exploiter et de mettre à jour indéfiniment une pile modèle local + harness',
           ],
           quick: [
-            'Gratuit, privé, DIY → **Qwen3-Coder 32B + PR-Agent** (20 Go de VRAM, 0 $/mois, Apache 2.0 de bout en bout)',
+            'Gratuit, privé, DIY → **Qwen2.5-Coder 32B + PR-Agent** (20 Go de VRAM, 0 $/mois, Apache 2.0 de bout en bout)',
             'Opérationnel en 5 minutes, meilleure qualité → **CodeRabbit** (24 $/dev/mois Essentials, gratuit sur les dépôts publics)',
             'Réglementé/isolé, budget disponible → **CodeRabbit Enterprise (auto-hébergé)** — prix personnalisé, conversation commerciale requise',
             'Moins de 5 PR par semaine → **ni l\'un ni l\'autre** — la revue humaine reste assez rapide à ce volume',
@@ -1469,10 +1469,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Construire un pipeline de revue de code local',
         content: '**Le montage local aujourd\'hui, ce sont trois pièces : un modèle de code auto-hébergé, un harness de revue open source, et un hook qui l\'exécute sur chaque diff — pas une app unique à installer.** Soyez lucide dès le départ : c\'est du travail d\'assemblage, pas un achat de produit.',
         items: [
-          '**Le modèle :** Qwen3-Coder 32B (Alibaba, Apache 2.0) est la base pratique — il faut environ 20 Go de VRAM ou de mémoire unifiée en quantization Q4_K_M, et il détecte environ 88 % des bugs injectés dans les tests derrière notre [guide des LLM locaux pour la revue de code](/fr/local-llms/best-local-llms-code-review). Sur du matériel plus limité, Qwen3-Coder 7B (environ 5 Go) convient pour un retour de niveau lint mais approche plutôt les 60 % de précision — traitez-le comme une première passe, pas comme un filtre définitif.',
+          '**Le modèle :** Qwen2.5-Coder 32B (Alibaba, Apache 2.0) est la base pratique — il faut environ 20 Go de VRAM ou de mémoire unifiée en quantization Q4_K_M, et il détecte environ 88 % des bugs injectés dans les tests derrière notre [guide des LLM locaux pour la revue de code](/fr/local-llms/best-local-llms-code-review). Sur du matériel plus limité, Qwen2.5-Coder 7B (environ 5 Go) convient pour un retour de niveau lint mais approche plutôt les 60 % de précision — traitez-le comme une première passe, pas comme un filtre définitif.',
           '**Le harness :** [PR-Agent](https://github.com/The-PR-Agent/pr-agent) est un agent de revue de PR open source (Apache 2.0) et auto-hébergeable — construit à l\'origine par Qodo/CodiumAI, donné à la communauté en 2026 et désormais maintenu sous l\'organisation GitHub The-PR-Agent, propriété de la communauté. Il tourne via CLI, Docker, GitHub Actions ou un webhook, et appelle n\'importe quel endpoint compatible OpenAI — y compris un serveur Ollama ou vLLM local.',
           '**Le câblage :** pointez la configuration de modèle de PR-Agent vers l\'API compatible OpenAI de votre serveur d\'inférence local (Ollama comme vLLM en exposent une), puis déclenchez-le depuis un hook git pre-commit pour un retour purement local, ou depuis une étape GitHub Actions/GitLab CI pour qu\'il commente chaque pull request, comme le fait CodeRabbit.',
-          '**Une configuration minimale réaliste :** un GPU avec 20+ Go de VRAM (une RTX 4090 ou mieux) ou un Mac Apple Silicon avec 32+ Go de mémoire unifiée. En dessous, passez à Qwen3-Coder 7B et acceptez la précision plus faible — ou renoncez à la revue locale pour tout ce qui est sensible côté sécurité.',
+          '**Une configuration minimale réaliste :** un GPU avec 20+ Go de VRAM (une RTX 4090 ou mieux) ou un Mac Apple Silicon avec 32+ Go de mémoire unifiée. En dessous, passez à Qwen2.5-Coder 7B et acceptez la précision plus faible — ou renoncez à la revue locale pour tout ce qui est sensible côté sécurité.',
         ],
         numberedItems: [
           'Démarrez un serveur d\'inférence local exposant une API compatible OpenAI : `ollama serve` (Ollama) ou `python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen3-Coder-32B-Instruct` (vLLM).',
@@ -1487,7 +1487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       limitations: {
         id: 'limitations',
         title: 'Où la voie locale montre vraiment ses limites',
-        content: '**Les modèles de code locaux actuels restent en retrait face aux modèles cloud de pointe sur la qualité de revue des diffs complexes et volumineux — c\'est la limite honnête, pas une raison d\'écarter la revue locale dans son ensemble.** Dites-le clairement plutôt que de survendre la voie DIY : un montage Qwen3-Coder 32B auto-hébergé manquera des choses que la revue de CodeRabbit, adossée au cloud, détecte, en particulier sur les problèmes architecturaux touchant de nombreux fichiers ou l\'analyse de sécurité exigeant beaucoup de raisonnement.',
+        content: '**Les modèles de code locaux actuels restent en retrait face aux modèles cloud de pointe sur la qualité de revue des diffs complexes et volumineux — c\'est la limite honnête, pas une raison d\'écarter la revue locale dans son ensemble.** Dites-le clairement plutôt que de survendre la voie DIY : un montage Qwen2.5-Coder 32B auto-hébergé manquera des choses que la revue de CodeRabbit, adossée au cloud, détecte, en particulier sur les problèmes architecturaux touchant de nombreux fichiers ou l\'analyse de sécurité exigeant beaucoup de raisonnement.',
         items: [
           '**La revue architecturale multi-fichiers est le point faible.** Un modèle local de 20 Go a un contexte effectif plus réduit et moins de profondeur de raisonnement que les modèles de pointe sur lesquels s\'appuie le pipeline de CodeRabbit — une rupture entre fichiers à plusieurs sauts de distance est exactement ce qu\'un montage local basé sur le diff seul ou un modèle unique risque le plus de manquer.',
           '**Aucune amélioration continue du modèle.** La qualité de revue de CodeRabbit s\'améliore automatiquement à mesure que les modèles de pointe sous-jacents s\'améliorent. Un modèle local reste figé au checkpoint téléchargé jusqu\'à ce que vous en retéléchargiez et rebenchmarkiez manuellement un plus récent.',
@@ -1567,7 +1567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Recommandation par cas d\'usage',
         content: '**Quatre profils de lecteurs couvrent la plupart des personnes qui se posent cette question — trouvez le vôtre et sautez le reste.**',
         items: [
-          '**Dépôts personnels ou open source, soucieux de confidentialité, dispose déjà du matériel LLM local** → Local. Vous possédez déjà le GPU, l\'enjeu d\'un bug manqué est faible, et rien ne justifie d\'envoyer du code public ou personnel à un tiers. Utilisez Qwen3-Coder 32B + PR-Agent.',
+          '**Dépôts personnels ou open source, soucieux de confidentialité, dispose déjà du matériel LLM local** → Local. Vous possédez déjà le GPU, l\'enjeu d\'un bug manqué est faible, et rien ne justifie d\'envoyer du code public ou personnel à un tiers. Utilisez Qwen2.5-Coder 32B + PR-Agent.',
           '**Startup ou petite équipe, veut que ça marche aujourd\'hui** → CodeRabbit. Le temps de configuration l\'emporte sur le coût d\'abonnement à ce stade — installez l\'app, obtenez des commentaires de revue sur la prochaine PR, passez à autre chose.',
           '**Secteur réglementé, ne peut pas envoyer le code hors site** → Local, ou le palier auto-hébergé de CodeRabbit Enterprise si le budget et les achats permettent une relation fournisseur. Ne présumez pas qu\'« aucun fournisseur ne propose cela » — CodeRabbit a bien une option Enterprise auto-hébergée ; c\'est une conversation commerciale à prix personnalisé, pas un plan en libre-service, donc pesez cela face à la construction vous-même de la pile DIY.',
           '**Grande équipe, diffs complexes, qualité critique** → CodeRabbit (ou Greptile/Qodo, selon la plateforme et les besoins de déploiement — voir le [comparatif cloud à trois](/fr/local-llms/best-ai-code-review-tools)). C\'est le profil où la limite honnête de la voie locale sur la revue architecturale multi-fichiers compte le plus.',
@@ -1592,7 +1592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Faire tourner un modèle 7B en attendant une précision de classe 32B',
-            whyItMatters: 'Qwen3-Coder 7B est utile pour un retour rapide de niveau lint, avec environ 60 % de précision de détection des bugs, pas pour la qualité de revue qu\'offre un modèle 32B ou CodeRabbit. Adaptez le niveau du modèle à la confiance que vous accordez à sa sortie.',
+            whyItMatters: 'Qwen2.5-Coder 7B est utile pour un retour rapide de niveau lint, avec environ 60 % de précision de détection des bugs, pas pour la qualité de revue qu\'offre un modèle 32B ou CodeRabbit. Adaptez le niveau du modèle à la confiance que vous accordez à sa sortie.',
           },
         ],
       },
@@ -1600,8 +1600,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-          { q: 'Un LLM local peut-il remplacer entièrement CodeRabbit ?', a: 'Pas comme un remplacement équivalent. Un modèle Qwen3-Coder 32B auto-hébergé associé au harness open source PR-Agent peut détecter la plupart des bugs qu\'un relecteur humain voudrait signaler, mais il reste en retrait face à la revue de CodeRabbit, adossée à des modèles de pointe, sur les diffs complexes multi-fichiers — et il faut assembler trois pièces séparées plutôt qu\'installer un seul produit.' },
-          { q: 'Quel est le matériel minimal pour la revue de code IA locale ?', a: 'Qwen3-Coder 32B en quantization Q4_K_M nécessite environ 20 Go de VRAM ou de mémoire unifiée. Sur du matériel plus limité, Qwen3-Coder 7B tourne dans environ 5 Go mais retombe à environ 60 % de précision de détection des bugs contre 88 % pour le modèle 32B, traitez-le donc comme une première passe plutôt qu\'un filtre de revue complet.' },
+          { q: 'Un LLM local peut-il remplacer entièrement CodeRabbit ?', a: 'Pas comme un remplacement équivalent. Un modèle Qwen2.5-Coder 32B auto-hébergé associé au harness open source PR-Agent peut détecter la plupart des bugs qu\'un relecteur humain voudrait signaler, mais il reste en retrait face à la revue de CodeRabbit, adossée à des modèles de pointe, sur les diffs complexes multi-fichiers — et il faut assembler trois pièces séparées plutôt qu\'installer un seul produit.' },
+          { q: 'Quel est le matériel minimal pour la revue de code IA locale ?', a: 'Qwen2.5-Coder 32B en quantization Q4_K_M nécessite environ 20 Go de VRAM ou de mémoire unifiée. Sur du matériel plus limité, Qwen2.5-Coder 7B tourne dans environ 5 Go mais retombe à environ 60 % de précision de détection des bugs contre 88 % pour le modèle 32B, traitez-le donc comme une première passe plutôt qu\'un filtre de revue complet.' },
           { q: 'PR-Agent est-il toujours maintenu ?', a: 'Oui. Qodo (l\'entreprise derrière PR-Agent, anciennement CodiumAI) a donné le projet à la communauté en 2026 ; il est désormais maintenu sous l\'organisation GitHub The-PR-Agent, propriété de la communauté, sous licence Apache 2.0, et reste auto-hébergeable via CLI, Docker ou GitHub Actions.' },
           { q: 'Combien coûte CodeRabbit en 2026 ?', a: 'Le palier Essentials de CodeRabbit coûte 24 $ par développeur et par mois en facturation annuelle, Team coûte 48 $, et Advanced 72 $. Enterprise est à prix personnalisé et inclut l\'auto-hébergement. Chaque palier inclut un essai gratuit de 14 jours sans carte requise, et les dépôts publics bénéficient d\'une revue gratuite, en permanence.' },
           { q: 'CodeRabbit propose-t-il une option auto-hébergée ou sur site ?', a: 'Oui, sur le palier Enterprise. Il est à prix personnalisé et nécessite une conversation commerciale plutôt qu\'une inscription en libre-service, mais c\'est une option réelle pour les équipes réglementées ayant besoin d\'un déploiement sur site sans construire une pile DIY locale.' },
@@ -1609,14 +1609,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Quelle est la plus grande faiblesse de l\'approche locale ?', a: 'La qualité de revue sur les diffs complexes, multi-fichiers ou architecturaux. Les modèles locaux dans la plage 20-32 Go de VRAM ont un contexte effectif plus réduit et moins de profondeur de raisonnement que les modèles de pointe sur lesquels s\'appuient les outils cloud, donc une rupture entre plusieurs fichiers de distance est le type de problème le plus susceptible de passer inaperçu dans un montage local.' },
           { q: 'Quelle option est la moins chère pour une équipe de 5 personnes ?', a: 'CodeRabbit au tarif Essentials coûte 120 $/mois pour cinq développeurs. Un montage local coûte 0 $/mois en logiciel, mais suppose qu\'au moins un GPU avec 20+ Go de VRAM existe déjà ou est acheté, plus du temps de configuration et de maintenance — comparez honnêtement ce temps aux 120 $/mois avant de présumer que le local gagne sur le coût.' },
           { q: 'Puis-je utiliser un modèle local et CodeRabbit ensemble ?', a: 'Oui, et c\'est un schéma raisonnable : utilisez un modèle local pour un retour rapide et privé en pre-commit, avant même que le code soit poussé, et CodeRabbit pour la revue faisant autorité une fois qu\'une pull request est ouverte. Vous obtenez ainsi la confidentialité sur la première passe et la qualité de modèle de pointe sur la passe qui compte le plus.' },
-          { q: 'Quel modèle local devrais-je réellement choisir ?', a: 'Qwen3-Coder 32B dans la plupart des cas — c\'est la base pratique actuelle pour une revue de code locale sérieuse. Consultez notre [guide dédié aux meilleurs LLM locaux pour la revue de code](/fr/local-llms/best-local-llms-code-review) pour le comparatif complet classé selon la taille des modèles et le type de revue.' },
+          { q: 'Quel modèle local devrais-je réellement choisir ?', a: 'Qwen2.5-Coder 32B dans la plupart des cas — c\'est la base pratique actuelle pour une revue de code locale sérieuse. Consultez notre [guide dédié aux meilleurs LLM locaux pour la revue de code](/fr/local-llms/best-local-llms-code-review) pour le comparatif complet classé selon la taille des modèles et le type de revue.' },
         ],
       },
       verdict: {
         id: 'verdict',
         title: 'Verdict final',
         items: [
-          '**Optez pour le local si** la confidentialité compte plus pour vous que détecter chaque bug et que vous disposez déjà de 20+ Go de VRAM — étape suivante : téléchargez Qwen3-Coder 32B via Ollama et connectez-le à PR-Agent avec un hook GitHub Actions.',
+          '**Optez pour le local si** la confidentialité compte plus pour vous que détecter chaque bug et que vous disposez déjà de 20+ Go de VRAM — étape suivante : téléchargez Qwen2.5-Coder 32B via Ollama et connectez-le à PR-Agent avec un hook GitHub Actions.',
           '**Optez pour CodeRabbit si** vous voulez que ça marche aujourd\'hui et que votre exigence de qualité de revue est élevée — étape suivante : installez l\'app sur votre dépôt principal et utilisez l\'essai de 14 jours pour comparer son résultat à votre processus de revue actuel.',
           '**Optez pour CodeRabbit Enterprise (auto-hébergé) si** vous êtes réglementé et ne pouvez pas envoyer le code hors site, mais voulez la qualité de revue de CodeRabbit — étape suivante : réservez la conversation Enterprise plutôt que de présumer que l\'auto-hébergement n\'est pas proposé.',
           '**Utilisez les deux si** vous voulez la confidentialité sur la première passe et la qualité d\'un modèle de pointe sur la passe qui compte le plus — étape suivante : connectez le modèle local à un hook pre-commit pour un retour privé et instantané, et laissez CodeRabbit assurer la revue de PR faisant autorité.',
@@ -1629,7 +1629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: 'https://www.coderabbit.ai/pricing', title: 'Tarifs CodeRabbit', description: 'Paliers Essentials, Team, Advanced et Enterprise, l\'essai de 14 jours, et l\'accès gratuit pour les dépôts publics — vérifié le 2026-09-01.' },
           { url: 'https://github.com/The-PR-Agent/pr-agent', title: 'PR-Agent (maintenu par la communauté)', description: 'Agent de revue de PR sous licence Apache 2.0, auto-hébergeable, donné à la communauté par Qodo en 2026.' },
-          { url: '/fr/local-llms/best-local-llms-code-review', title: 'Meilleurs LLM locaux pour la revue de code (PromptQuorum)', description: 'Comparatif classé de Qwen3-Coder, Llama 3.3 et DeepSeek-R1 pour la revue de code locale, incluant le chiffre de 88 % de détection de bugs pour Qwen3-Coder 32B cité sur cette page.' },
+          { url: '/fr/local-llms/best-local-llms-code-review', title: 'Meilleurs LLM locaux pour la revue de code (PromptQuorum)', description: 'Comparatif classé de Qwen3-Coder, Llama 3.3 et DeepSeek-R1 pour la revue de code locale, incluant le chiffre de 88 % de détection de bugs pour Qwen2.5-Coder 32B cité sur cette page.' },
           { url: '/fr/local-llms/best-ai-code-review-tools', title: 'CodeRabbit vs Greptile vs Qodo (PromptQuorum)', description: 'Le comparatif cloud à trois complet vers lequel cette page renvoie plutôt que de le refaire.' },
         ],
       },
@@ -1641,14 +1641,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Meilleurs LLM locaux pour la revue de code](/fr/local-llms/best-local-llms-code-review) — comparatif classé des modèles (Qwen3-Coder, Llama 3.3, DeepSeek-R1) pour la moitié locale de cette page',
           '[Meilleur assistant de codage IA pour LLM local](/fr/local-llms/best-ai-coding-assistant-local-llm) — les outils qui écrivent le diff que lit un pipeline de revue (local ou cloud)',
           '[La pile développeur LLM local](/fr/local-llms/local-llm-developer-stack) — où s\'insère un pipeline de revue auto-hébergé dans une chaîne d\'outils plus large centrée sur le local',
-          '[La quantization des LLM expliquée](/fr/local-llms/llm-quantization-explained) — le calcul de VRAM derrière le chiffre de 20 Go pour Qwen3-Coder 32B utilisé sur cette page',
+          '[La quantization des LLM expliquée](/fr/local-llms/llm-quantization-explained) — le calcul de VRAM derrière le chiffre de 20 Go pour Qwen2.5-Coder 32B utilisé sur cette page',
         ],
       },
     },
     schema: {
       '@type': 'TechArticle',
       headline: 'Revue de code IA locale vs CodeRabbit : le DIY en vaut-il la peine ?',
-      description: 'Si un pipeline auto-hébergé Qwen3-Coder 32B + PR-Agent peut remplacer CodeRabbit pour la revue de code IA — arbitrages honnêtes, tarifs vérifiés, et une recommandation par cas d\'usage.',
+      description: 'Si un pipeline auto-hébergé Qwen2.5-Coder 32B + PR-Agent peut remplacer CodeRabbit pour la revue de code IA — arbitrages honnêtes, tarifs vérifiés, et une recommandation par cas d\'usage.',
       datePublished: '2026-09-01',
       dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/fr/local-llms/local-ai-code-review-vs-coderabbit',
@@ -1678,7 +1678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Un LLM local peut-il remplacer entièrement CodeRabbit ?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Pas comme un remplacement équivalent. Un modèle Qwen3-Coder 32B auto-hébergé associé au harness open source PR-Agent peut détecter la plupart des bugs qu\'un relecteur humain voudrait signaler, mais il reste en retrait face à la revue de CodeRabbit, adossée à des modèles de pointe, sur les diffs complexes multi-fichiers — et il faut assembler trois pièces séparées plutôt qu\'installer un seul produit.',
+            'text': 'Pas comme un remplacement équivalent. Un modèle Qwen2.5-Coder 32B auto-hébergé associé au harness open source PR-Agent peut détecter la plupart des bugs qu\'un relecteur humain voudrait signaler, mais il reste en retrait face à la revue de CodeRabbit, adossée à des modèles de pointe, sur les diffs complexes multi-fichiers — et il faut assembler trois pièces séparées plutôt qu\'installer un seul produit.',
           },
         },
         {
@@ -1686,7 +1686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Quel est le matériel minimal pour la revue de code IA locale ?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Qwen3-Coder 32B en quantization Q4_K_M nécessite environ 20 Go de VRAM ou de mémoire unifiée. Sur du matériel plus limité, Qwen3-Coder 7B tourne dans environ 5 Go mais retombe à environ 60 % de précision de détection des bugs contre 88 % pour le modèle 32B, traitez-le donc comme une première passe plutôt qu\'un filtre de revue complet.',
+            'text': 'Qwen2.5-Coder 32B en quantization Q4_K_M nécessite environ 20 Go de VRAM ou de mémoire unifiée. Sur du matériel plus limité, Qwen2.5-Coder 7B tourne dans environ 5 Go mais retombe à environ 60 % de précision de détection des bugs contre 88 % pour le modèle 32B, traitez-le donc comme une première passe plutôt qu\'un filtre de revue complet.',
           },
         },
         {
@@ -1750,7 +1750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Quel modèle local devrais-je réellement choisir ?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Qwen3-Coder 32B dans la plupart des cas — c\'est la base pratique actuelle pour une revue de code locale sérieuse. Consultez notre guide dédié aux meilleurs LLM locaux pour la revue de code pour le comparatif complet classé selon la taille des modèles et le type de revue.',
+            'text': 'Qwen2.5-Coder 32B dans la plupart des cas — c\'est la base pratique actuelle pour une revue de code locale sérieuse. Consultez notre guide dédié aux meilleurs LLM locaux pour la revue de code pour le comparatif complet classé selon la taille des modèles et le type de revue.',
           },
         },
       ],
@@ -1762,7 +1762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'ローカルAIコードレビュー vs CodeRabbit：自作は割に合うか？',
     seoTitle: 'ローカルAIコードレビュー vs CodeRabbit：DIYかSaaSか（2026年）',
-    metaDescription: 'CodeRabbitは月24ドル/開発者、5分で使い始められます。自社運用のQwen3-Coder 32B + PR-Agentは無料ですが検出できるバグは少なめです。正直なトレードオフを解説します。',
+    metaDescription: 'CodeRabbitは月24ドル/開発者、5分で使い始められます。自社運用のQwen2.5-Coder 32B + PR-Agentは無料ですが検出できるバグは少なめです。正直なトレードオフを解説します。',
     educationalLevel: 'Advanced',
     audience: 'すでにローカルLLMを運用しており、コードレビューも自社運用すべきか検討している開発者',
     affiliateDisclosure: true,
@@ -1777,14 +1777,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'PR-Agent 自社運用',
       'ローカル コードレビュー パイプライン',
     ],
-    leadAnswerBlock: '**コードのプライバシーがバグ検出率より重要、すでにローカルLLM環境がある、あるいは低リスクの個人リポジトリをレビューするならローカル一択です。Qwen3-Coder 32B（20GB VRAM、Apache 2.0）とオープンソースのPR-Agentハーネス、gitフックを組み合わせれば月0ドルで運用できます。本番品質のレビューが必要、5分で動かしたい、または顧客の非公開コードをレビューするならCodeRabbitです。月24ドル/開発者から、パブリックリポジトリなら永久無料です。** CodeRabbitをそのまま置き換えるローカルのクローンは存在しません。ローカルの道を選ぶとは、モデル・レビューハーネス・フックを自分で組み立てることを意味します。',
+    leadAnswerBlock: '**コードのプライバシーがバグ検出率より重要、すでにローカルLLM環境がある、あるいは低リスクの個人リポジトリをレビューするならローカル一択です。Qwen2.5-Coder 32B（20GB VRAM、Apache 2.0）とオープンソースのPR-Agentハーネス、gitフックを組み合わせれば月0ドルで運用できます。本番品質のレビューが必要、5分で動かしたい、または顧客の非公開コードをレビューするならCodeRabbitです。月24ドル/開発者から、パブリックリポジトリなら永久無料です。** CodeRabbitをそのまま置き換えるローカルのクローンは存在しません。ローカルの道を選ぶとは、モデル・レビューハーネス・フックを自分で組み立てることを意味します。',
     quickAnswerTop: {
       question: 'ローカルLLMはAIコードレビューでCodeRabbitを代替できますか？',
-      answer: '**部分的には可能です。** 自社運用のQwen3-Coder 32Bモデルでオープンソースのハーネス、PR-Agentを動かすと、7Bモデルが見逃すバグの約88%を検出でき、すでに持っているハードウェア以外に費用はかかりません。ただし複雑なマルチファイル差分では、フロンティアモデルに支えられたCodeRabbitのレビューに劣りますし、5分の登録ではなく半日の構築作業が必要です。CodeRabbitを機能単位でそのまま再現するオープンソース製品は1つも存在せず、「ローカル」という選択肢は複数のパーツを自分で組み立てたものです。',
+      answer: '**部分的には可能です。** 自社運用のQwen2.5-Coder 32Bモデルでオープンソースのハーネス、PR-Agentを動かすと、7Bモデルが見逃すバグの約88%を検出でき、すでに持っているハードウェア以外に費用はかかりません。ただし複雑なマルチファイル差分では、フロンティアモデルに支えられたCodeRabbitのレビューに劣りますし、5分の登録ではなく半日の構築作業が必要です。CodeRabbitを機能単位でそのまま再現するオープンソース製品は1つも存在せず、「ローカル」という選択肢は複数のパーツを自分で組み立てたものです。',
       bullets: [
         '**ローカルが勝る点：** プライバシー（コードが自分のマシンから出ない）、コスト（ハードウェア以外は月0ドル）、レビュープロンプトの完全な制御',
         '**CodeRabbitが勝る点：** 構築時間（半日ではなく数分）、複雑な差分でのレビュー品質、メンテナンス負荷ゼロ',
-        '**最小構成のローカル環境：** Qwen3-Coder 32B（20GB VRAM/RAM、Apache 2.0）+ PR-Agent（Apache 2.0、自社運用）+ git pre-commitまたはCIフック',
+        '**最小構成のローカル環境：** Qwen2.5-Coder 32B（20GB VRAM/RAM、Apache 2.0）+ PR-Agent（Apache 2.0、自社運用）+ git pre-commitまたはCIフック',
         '**CodeRabbitの開始価格：** 月24ドル/開発者（Essentials、年払い）、パブリックリポジトリは永久無料、14日間トライアル',
       ],
       updatedDate: '2026-09-01',
@@ -1822,7 +1822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '自社運用のQwen3-Coder 32Bモデルとオープンソースのレビューハーネス、PR-Agentを組み合わせれば、AIコードレビューをローカルハードウェアだけで月0ドルで行えますが、半日の組み立て作業が必要で、複雑または大規模な差分のプルリクエストではフロンティアモデルに支えられたCodeRabbitのレビューに劣ります。',
+            text: '自社運用のQwen2.5-Coder 32Bモデルとオープンソースのレビューハーネス、PR-Agentを組み合わせれば、AIコードレビューをローカルハードウェアだけで月0ドルで行えますが、半日の組み立て作業が必要で、複雑または大規模な差分のプルリクエストではフロンティアモデルに支えられたCodeRabbitのレビューに劣ります。',
           },
           {
             type: 'plain-terms',
@@ -1831,7 +1831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**CodeRabbitをそのまま置き換えるローカルのクローンは存在しません。** ローカルへ行くとは、コーディングモデル＋レビューハーネス＋gitフックを組み立てることであり、1つの競合アプリをインストールすることではありません。',
-          '**最小構成のローカルモデル：** Qwen3-Coder 32B、Q4_K_MでVRAM/RAM 20GB、Apache 2.0ライセンス——社内ベンチマークでは注入したバグの約88%を検出。1段階小さいQwen3-Coder 7B（5GB）はおよそ60%にとどまります。',
+          '**最小構成のローカルモデル：** Qwen2.5-Coder 32B、Q4_K_MでVRAM/RAM 20GB、Apache 2.0ライセンス——社内ベンチマークでは注入したバグの約88%を検出。1段階小さいQwen2.5-Coder 7B（5GB）はおよそ60%にとどまります。',
           '**レビューハーネス：** PR-Agent（Apache 2.0）。2026年にQodoからコミュニティへ寄贈され、現在はthe-pr-agent組織のもとで保守されています——CLI、Docker、GitHub Actionsで自社運用可能です。',
           '**正直な限界：** ローカルのコーディングモデルは、複雑なマルチファイル差分のレビューでは依然としてフロンティアのクラウドモデルに及びません。ローカルは「ほとんどのPRには十分」であって、同等の置き換えではないと捉えてください。',
           '**CodeRabbitの料金（2026年9月1日確認）：** Essentials 月24ドル/開発者、Team 48ドル、Advanced 72ドル（いずれも年払い）、Enterpriseは自社運用込みの個別見積もり。パブリックリポジトリは永久無料、有料プランはすべて14日間トライアル付き。',
@@ -1844,7 +1844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**このリストを上から見て、自分に当てはまる最初の行で止まってください——判断はプライバシーの必要性、手持ちのハードウェア、そしてどれだけレビュー品質を犠牲にできるかで決まります。**',
         items: [
           '**ほとんどのチームに最適 → CodeRabbit。** 5分で設定完了、パブリックリポジトリは永久無料、14日間トライアル、月24ドル/開発者から。レビュー品質とメンテナンス不要であることが、スタックを自分で所有することより重要な場合に最適です。',
-          '**プライバシー重視に最適 → ローカルAI。** Qwen3-Coder 32B + PR-Agent、ソフトウェアコストは約0ドル、VRAM 20GB以上と数時間の構築・継続的なメンテナンスが必要で、複雑なマルチファイルレビューでは上限が低くなります。',
+          '**プライバシー重視に最適 → ローカルAI。** Qwen2.5-Coder 32B + PR-Agent、ソフトウェアコストは約0ドル、VRAM 20GB以上と数時間の構築・継続的なメンテナンスが必要で、複雑なマルチファイルレビューでは上限が低くなります。',
           '**両方のいいとこ取り → 両方を使う。** ローカルレビューをpre-commitのパスとして動かし、素早くプライベートなフィードバックを得てから、プルリクエストが開かれた後の本番レビューはCodeRabbitに任せます——実際のチームがどう運用しているかは、下の「ローカルモデルとCodeRabbitを併用できますか？」のFAQを参照してください。',
         ],
         columns: ['項目', 'ローカルAI', 'CodeRabbit'],
@@ -1875,7 +1875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'チームが小さすぎて、ローカルモデル＋ハーネス構成を無期限に運用・更新するメンテナンス負荷を正当化できない',
           ],
           quick: [
-            '無料、プライベート、DIY → **Qwen3-Coder 32B + PR-Agent**（VRAM 20GB、月0ドル、全体Apache 2.0）',
+            '無料、プライベート、DIY → **Qwen2.5-Coder 32B + PR-Agent**（VRAM 20GB、月0ドル、全体Apache 2.0）',
             '5分で稼働、最高品質 → **CodeRabbit**（月24ドル/開発者 Essentials、パブリックリポジトリは無料）',
             '規制業界・エアギャップ、支払い可能 → **CodeRabbit Enterprise（自社運用）**——個別見積もり、営業対応が必要',
             '週5件未満のPR → **どちらも不要**——この量なら人間によるレビューで十分速い',
@@ -1903,10 +1903,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ローカルコードレビューパイプラインの構築',
         content: '**今日のローカル構成は3つのパーツです。自社運用のコーディングモデル、オープンソースのレビューハーネス、そしてすべての差分で実行するフック——1つのアプリをインストールするのではありません。** 最初からはっきりさせておきましょう。これは組み立て作業であり、製品の購入ではありません。',
         items: [
-          '**モデル：** Qwen3-Coder 32B（Alibaba、Apache 2.0）が実用的な基準です——Q4_K_M量子化でVRAMまたは統合メモリが約20GB必要で、[コードレビュー向けローカルLLMガイド](/ja/local-llms/best-local-llms-code-review)のベンチマークでは注入したバグの約88%を検出します。ハードウェアが限られる場合、Qwen3-Coder 7B（約5GB）はlintレベルのフィードバックには使えますが、精度はおよそ60%にとどまります——最終ゲートではなく一次チェックとして扱ってください。',
+          '**モデル：** Qwen2.5-Coder 32B（Alibaba、Apache 2.0）が実用的な基準です——Q4_K_M量子化でVRAMまたは統合メモリが約20GB必要で、[コードレビュー向けローカルLLMガイド](/ja/local-llms/best-local-llms-code-review)のベンチマークでは注入したバグの約88%を検出します。ハードウェアが限られる場合、Qwen2.5-Coder 7B（約5GB）はlintレベルのフィードバックには使えますが、精度はおよそ60%にとどまります——最終ゲートではなく一次チェックとして扱ってください。',
           '**ハーネス：** [PR-Agent](https://github.com/The-PR-Agent/pr-agent)はオープンソース（Apache 2.0）で自社運用可能なPRレビューエージェントです——もともとQodo/CodiumAIが構築し、2026年にコミュニティへ寄贈され、現在はコミュニティ所有のThe-PR-Agent GitHub組織のもとで保守されています。CLI、Docker、GitHub Actions、またはWebhookで動作し、ローカルのOllamaやvLLMサーバーを含む、OpenAI互換のエンドポイントを何でも呼び出せます。',
           '**配線：** PR-Agentのモデル設定を、ローカル推論サーバーのOpenAI互換API（OllamaとvLLMのどちらも提供しています）へ向け、gitのpre-commitフックからローカル限定のフィードバックとしてトリガーするか、GitHub Actions/GitLab CIのステップから、CodeRabbitと同じようにすべてのプルリクエストにコメントさせます。',
-          '**現実的な最小スペック：** VRAM 20GB以上のGPU（RTX 4090以上）、またはユニファイドメモリ32GB以上のApple Siliconマシン。それ未満ならQwen3-Coder 7Bに落とし、精度の低下を受け入れるか、セキュリティ上重要なものについてはローカルレビューを見送ってください。',
+          '**現実的な最小スペック：** VRAM 20GB以上のGPU（RTX 4090以上）、またはユニファイドメモリ32GB以上のApple Siliconマシン。それ未満ならQwen2.5-Coder 7Bに落とし、精度の低下を受け入れるか、セキュリティ上重要なものについてはローカルレビューを見送ってください。',
         ],
         numberedItems: [
           'OpenAI互換APIを公開するローカル推論サーバーを起動：`ollama serve`（Ollama）または`python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen3-Coder-32B-Instruct`（vLLM）。',
@@ -1921,7 +1921,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       limitations: {
         id: 'limitations',
         title: 'ローカルの道が実際に不足する点',
-        content: '**現在のローカルコーディングモデルは、複雑で大規模な差分のレビュー品質でフロンティアのクラウドモデルに劣ります——これは正直な限界であって、ローカルレビューを丸ごと避ける理由ではありません。** DIYの道を過大に売り込むのではなく、率直に言っておきます。自社運用のQwen3-Coder 32B構成は、特に多数のファイルにまたがるアーキテクチャ上の問題や、推論を多く要するセキュリティ分析で、CodeRabbitのクラウドレビューが検出するものを見逃します。',
+        content: '**現在のローカルコーディングモデルは、複雑で大規模な差分のレビュー品質でフロンティアのクラウドモデルに劣ります——これは正直な限界であって、ローカルレビューを丸ごと避ける理由ではありません。** DIYの道を過大に売り込むのではなく、率直に言っておきます。自社運用のQwen2.5-Coder 32B構成は、特に多数のファイルにまたがるアーキテクチャ上の問題や、推論を多く要するセキュリティ分析で、CodeRabbitのクラウドレビューが検出するものを見逃します。',
         items: [
           '**マルチファイル、アーキテクチャレビューが弱点です。** 20GBのローカルモデルは、CodeRabbitのパイプラインが依拠するフロンティアモデルより実効コンテキストが小さく、推論の深さも浅くなります——数ホップ離れたファイル間の破壊は、差分のみ、あるいは単一モデルのローカル構成が最も見逃しやすいものです。',
           '**モデルの継続的な改善がありません。** CodeRabbitのレビュー品質は、使用しているフロンティアモデルの改善に伴って自動的に向上します。ローカルモデルはダウンロードしたチェックポイントのまま凍結され、手動で新しいモデルを再ダウンロード・再ベンチマークするまで変わりません。',
@@ -2001,7 +2001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ユースケース別の推奨',
         content: '**この質問をする人の大半は、次の4つの読者プロファイルのどれかに当てはまります——自分に近いものを見つけて、残りは読み飛ばしてください。**',
         items: [
-          '**個人またはオープンソースのリポジトリ、プライバシー重視、すでにローカルLLM用ハードウェアを持っている** → ローカル。GPUはすでに手元にあり、見逃したバグの被害は小さく、公開コードや個人コードをサードパーティへ送る理由はありません。Qwen3-Coder 32B + PR-Agentを使ってください。',
+          '**個人またはオープンソースのリポジトリ、プライバシー重視、すでにローカルLLM用ハードウェアを持っている** → ローカル。GPUはすでに手元にあり、見逃したバグの被害は小さく、公開コードや個人コードをサードパーティへ送る理由はありません。Qwen2.5-Coder 32B + PR-Agentを使ってください。',
           '**スタートアップまたは小規模チーム、今日から動かしたい** → CodeRabbit。この段階では構築時間のほうが購読コストより重要です——アプリをインストールし、次のPRでレビューコメントを受け取り、前へ進んでください。',
           '**規制業界、コードをオンプレミスの外へ出せない** → ローカル、または予算と調達がベンダー関係を許すならCodeRabbit Enterpriseの自社運用プラン。「どのベンダーもこれを提供していない」と決めつけないでください——CodeRabbitには実際に自社運用のEnterpriseオプションがあります。個別見積もりの営業対応であってセルフサービスプランではないため、DIYスタックを自分で構築する場合と比較検討してください。',
           '**大規模チーム、複雑な差分、品質が最優先** → CodeRabbit（またはプラットフォームや展開要件次第でGreptile/Qodo——[3社のクラウド比較](/ja/local-llms/best-ai-code-review-tools)を参照）。ローカルの道の正直な限界であるマルチファイル・アーキテクチャレビューが最も効いてくるプロファイルです。',
@@ -2026,7 +2026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '7Bモデルを動かして32Bクラスの精度を期待する',
-            whyItMatters: 'Qwen3-Coder 7Bは、バグ検出精度およそ60%での高速なlintレベルのフィードバックには有用ですが、32Bモデルまたは CodeRabbitが提供するレビュー品質には及びません。出力への信頼度に合わせてモデルの階級を選んでください。',
+            whyItMatters: 'Qwen2.5-Coder 7Bは、バグ検出精度およそ60%での高速なlintレベルのフィードバックには有用ですが、32Bモデルまたは CodeRabbitが提供するレビュー品質には及びません。出力への信頼度に合わせてモデルの階級を選んでください。',
           },
         ],
       },
@@ -2034,8 +2034,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          { q: 'ローカルLLMはCodeRabbitを完全に代替できますか？', a: '一対一の置き換えとしてはできません。自社運用のQwen3-Coder 32Bモデルとオープンソースのハーネス、PR-Agentは、人間のレビュアーが指摘したいバグの大半を検出できますが、複雑なマルチファイル差分では、フロンティアモデルに支えられたCodeRabbitのレビューに依然として劣ります。また1つの製品をインストールするのではなく、3つの別々のパーツを組み立てる必要があります。' },
-          { q: 'ローカルAIコードレビューに必要な最小ハードウェアは？', a: 'Q4_K_M量子化のQwen3-Coder 32Bには、VRAMまたは統合メモリが約20GB必要です。ハードウェアが限られる場合、Qwen3-Coder 7Bは約5GBで動きますが、バグ検出精度は32Bモデルの88%に対しおよそ60%まで下がります。最終ゲートではなく一次チェックとして扱ってください。' },
+          { q: 'ローカルLLMはCodeRabbitを完全に代替できますか？', a: '一対一の置き換えとしてはできません。自社運用のQwen2.5-Coder 32Bモデルとオープンソースのハーネス、PR-Agentは、人間のレビュアーが指摘したいバグの大半を検出できますが、複雑なマルチファイル差分では、フロンティアモデルに支えられたCodeRabbitのレビューに依然として劣ります。また1つの製品をインストールするのではなく、3つの別々のパーツを組み立てる必要があります。' },
+          { q: 'ローカルAIコードレビューに必要な最小ハードウェアは？', a: 'Q4_K_M量子化のQwen2.5-Coder 32Bには、VRAMまたは統合メモリが約20GB必要です。ハードウェアが限られる場合、Qwen2.5-Coder 7Bは約5GBで動きますが、バグ検出精度は32Bモデルの88%に対しおよそ60%まで下がります。最終ゲートではなく一次チェックとして扱ってください。' },
           { q: 'PR-Agentはまだ保守されていますか？', a: 'はい。PR-Agentを手がける企業Qodo（旧CodiumAI）が、2026年にこのプロジェクトをコミュニティへ寄贈しました。現在はコミュニティ所有のThe-PR-Agent GitHub組織のもとで、Apache 2.0ライセンスで保守されており、CLI、Docker、GitHub Actionsによる自社運用を引き続きサポートしています。' },
           { q: '2026年のCodeRabbitの料金はいくらですか？', a: 'CodeRabbitのEssentialsプランは年払いで1開発者あたり月24ドル、Teamは48ドル、Advancedは72ドルです。Enterpriseは個別見積もりで自社運用が含まれます。すべてのプランにカード不要の14日間無料トライアルが付き、パブリックリポジトリは永久に無料でレビューされます。' },
           { q: 'CodeRabbitに自社運用・オンプレミスのオプションはありますか？', a: 'はい、Enterpriseプランにあります。個別見積もりでセルフサービスの登録ではなく営業対応が必要ですが、DIYのローカルスタックを構築せずにオンプレミス展開が必要な規制業界チームにとって実在する選択肢です。' },
@@ -2043,14 +2043,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ローカルアプローチの最大の弱点は何ですか？', a: '複雑でマルチファイル、あるいはアーキテクチャに関わる差分でのレビュー品質です。VRAM 20〜32GB帯のローカルモデルは、クラウドツールが依拠するフロンティアモデルより実効コンテキストが小さく推論も浅いため、数ファイル離れた場所での破壊が、ローカル構成で最も見逃されやすい問題です。' },
           { q: '5人チームにとってどちらが安いですか？', a: 'Essentials料金のCodeRabbitは5人の開発者で月120ドルです。ローカル構成はソフトウェアとしては月0ドルですが、VRAM 20GB以上のGPUがすでに存在するか新規購入することが前提で、構築とメンテナンスの時間もかかります。ローカルがコストで勝ると決めつける前に、その時間を月120ドルと正直に比較してください。' },
           { q: 'ローカルモデルとCodeRabbitを併用できますか？', a: 'はい、それは合理的なパターンです。プッシュ前の高速でプライベートなpre-commitフィードバックにはローカルモデルを、プルリクエストが開かれた後の最終的なレビューにはCodeRabbitを使ってください。最初のパスでプライバシーを確保しつつ、最も重要なパスでフロンティアモデルの品質を得られます。' },
-          { q: '実際にはどのローカルモデルを選ぶべきですか？', a: 'ほとんどの場合Qwen3-Coder 32Bです——本格的なローカルコードレビューの現時点での実用的な基準です。モデルサイズとレビュー種別ごとの完全なランキング比較は、[コードレビュー向けベストローカルLLMガイド](/ja/local-llms/best-local-llms-code-review)をご覧ください。' },
+          { q: '実際にはどのローカルモデルを選ぶべきですか？', a: 'ほとんどの場合Qwen2.5-Coder 32Bです——本格的なローカルコードレビューの現時点での実用的な基準です。モデルサイズとレビュー種別ごとの完全なランキング比較は、[コードレビュー向けベストローカルLLMガイド](/ja/local-llms/best-local-llms-code-review)をご覧ください。' },
         ],
       },
       verdict: {
         id: 'verdict',
         title: '最終評価',
         items: [
-          '**ローカルを選ぶべき場合：** すべてのバグを検出することよりプライバシーが重要で、すでにVRAM 20GB以上を持っている場合——次の一手：OllamaでQwen3-Coder 32Bを取得し、GitHub Actionsフックで PR-Agentへ接続してください。',
+          '**ローカルを選ぶべき場合：** すべてのバグを検出することよりプライバシーが重要で、すでにVRAM 20GB以上を持っている場合——次の一手：OllamaでQwen2.5-Coder 32Bを取得し、GitHub Actionsフックで PR-Agentへ接続してください。',
           '**CodeRabbitを選ぶべき場合：** 今日から動かしたく、レビュー品質の基準が高い場合——次の一手：主要リポジトリにアプリをインストールし、14日間トライアルで現在のレビュープロセスと結果を比較してください。',
           '**CodeRabbit Enterprise（自社運用）を選ぶべき場合：** 規制業界でコードをオンプレミスの外へ出せないが、CodeRabbitのレビュー品質は欲しい場合——次の一手：自社運用は提供されていないと決めつけず、Enterpriseとの会話を予約してください。',
           '**両方を使うべき場合：** 最初のパスではプライバシーを、最も重要なパスではフロンティアモデルの品質を求める場合——次の一手：ローカルモデルをpre-commitフックに接続して即座のプライベートなフィードバックを得て、PRの本番レビューはCodeRabbitに任せてください。',
@@ -2063,7 +2063,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: 'https://www.coderabbit.ai/pricing', title: 'CodeRabbitの料金', description: 'Essentials・Team・Advanced・Enterpriseの各プラン、14日間トライアル、パブリックリポジトリの無料アクセス——2026年9月1日確認。' },
           { url: 'https://github.com/The-PR-Agent/pr-agent', title: 'PR-Agent（コミュニティ保守）', description: 'Apache 2.0ライセンスの自社運用可能なPRレビューエージェント。2026年にQodoからコミュニティへ寄贈。' },
-          { url: '/ja/local-llms/best-local-llms-code-review', title: 'コードレビュー向けベストローカルLLM（PromptQuorum）', description: 'コードレビュー向けQwen3-Coder、Llama 3.3、DeepSeek-R1のランキング比較。本ページで引用したQwen3-Coder 32Bの88%というバグ検出率の出典を含む。' },
+          { url: '/ja/local-llms/best-local-llms-code-review', title: 'コードレビュー向けベストローカルLLM（PromptQuorum）', description: 'コードレビュー向けQwen3-Coder、Llama 3.3、DeepSeek-R1のランキング比較。本ページで引用したQwen2.5-Coder 32Bの88%というバグ検出率の出典を含む。' },
           { url: '/ja/local-llms/best-ai-code-review-tools', title: 'CodeRabbit vs Greptile vs Qodo（PromptQuorum）', description: '本ページが再論するのではなく参照する、3社によるクラウド比較の全体。' },
         ],
       },
@@ -2075,14 +2075,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[コードレビュー向けベストローカルLLM](/ja/local-llms/best-local-llms-code-review) — 本ページのローカル部分に対応するモデル比較（Qwen3-Coder、Llama 3.3、DeepSeek-R1）',
           '[ローカルLLM向けベストAIコーディングアシスタント](/ja/local-llms/best-ai-coding-assistant-local-llm) — レビューパイプライン（ローカルまたはクラウド）が読む差分を書くツール',
           '[ローカルLLM開発者スタック](/ja/local-llms/local-llm-developer-stack) — 自社運用のレビューパイプラインが、より広いローカル優先のツールチェーンのどこに位置するか',
-          '[LLM量子化の解説](/ja/local-llms/llm-quantization-explained) — 本ページで使用したQwen3-Coder 32Bの20GBという数字の背後にあるVRAMの計算',
+          '[LLM量子化の解説](/ja/local-llms/llm-quantization-explained) — 本ページで使用したQwen2.5-Coder 32Bの20GBという数字の背後にあるVRAMの計算',
         ],
       },
     },
     schema: {
       '@type': 'TechArticle',
       headline: 'ローカルAIコードレビュー vs CodeRabbit：自作は割に合うか？',
-      description: '自社運用のQwen3-Coder 32B + PR-Agentパイプラインで、AIコードレビューにおいてCodeRabbitを代替できるか——正直なトレードオフ、確認済みの料金、ユースケース別の推奨。',
+      description: '自社運用のQwen2.5-Coder 32B + PR-Agentパイプラインで、AIコードレビューにおいてCodeRabbitを代替できるか——正直なトレードオフ、確認済みの料金、ユースケース別の推奨。',
       datePublished: '2026-09-01',
       dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/ja/local-llms/local-ai-code-review-vs-coderabbit',
@@ -2112,7 +2112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'ローカルLLMはCodeRabbitを完全に代替できますか？',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': '一対一の置き換えとしてはできません。自社運用のQwen3-Coder 32Bモデルとオープンソースのハーネス、PR-Agentは、人間のレビュアーが指摘したいバグの大半を検出できますが、複雑なマルチファイル差分では、フロンティアモデルに支えられたCodeRabbitのレビューに依然として劣ります。また1つの製品をインストールするのではなく、3つの別々のパーツを組み立てる必要があります。',
+            'text': '一対一の置き換えとしてはできません。自社運用のQwen2.5-Coder 32Bモデルとオープンソースのハーネス、PR-Agentは、人間のレビュアーが指摘したいバグの大半を検出できますが、複雑なマルチファイル差分では、フロンティアモデルに支えられたCodeRabbitのレビューに依然として劣ります。また1つの製品をインストールするのではなく、3つの別々のパーツを組み立てる必要があります。',
           },
         },
         {
@@ -2120,7 +2120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'ローカルAIコードレビューに必要な最小ハードウェアは？',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Q4_K_M量子化のQwen3-Coder 32Bには、VRAMまたは統合メモリが約20GB必要です。ハードウェアが限られる場合、Qwen3-Coder 7Bは約5GBで動きますが、バグ検出精度は32Bモデルの88%に対しおよそ60%まで下がります。最終ゲートではなく一次チェックとして扱ってください。',
+            'text': 'Q4_K_M量子化のQwen2.5-Coder 32Bには、VRAMまたは統合メモリが約20GB必要です。ハードウェアが限られる場合、Qwen2.5-Coder 7Bは約5GBで動きますが、バグ検出精度は32Bモデルの88%に対しおよそ60%まで下がります。最終ゲートではなく一次チェックとして扱ってください。',
           },
         },
         {
@@ -2184,7 +2184,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': '実際にはどのローカルモデルを選ぶべきですか？',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'ほとんどの場合Qwen3-Coder 32Bです——本格的なローカルコードレビューの現時点での実用的な基準です。モデルサイズとレビュー種別ごとの完全なランキング比較は、コードレビュー向けベストローカルLLMガイドをご覧ください。',
+            'text': 'ほとんどの場合Qwen2.5-Coder 32Bです——本格的なローカルコードレビューの現時点での実用的な基準です。モデルサイズとレビュー種別ごとの完全なランキング比較は、コードレビュー向けベストローカルLLMガイドをご覧ください。',
           },
         },
       ],
@@ -2196,7 +2196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: '本地 AI 代码审查 vs CodeRabbit：自己动手值得吗？',
     seoTitle: '本地 AI 代码审查 vs CodeRabbit：DIY 还是 SaaS（2026）',
-    metaDescription: 'CodeRabbit 每位开发者每月 24 美元，5 分钟即可用。自托管 Qwen3-Coder 32B + PR-Agent 方案免费，但能发现的 bug 更少。这是一份诚实的权衡分析。',
+    metaDescription: 'CodeRabbit 每位开发者每月 24 美元，5 分钟即可用。自托管 Qwen2.5-Coder 32B + PR-Agent 方案免费，但能发现的 bug 更少。这是一份诚实的权衡分析。',
     educationalLevel: 'Advanced',
     audience: '已经在运行本地 LLM、正在考虑是否也自托管代码审查的开发者',
     affiliateDisclosure: true,
@@ -2211,14 +2211,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'PR-Agent 自托管',
       '本地代码审查流水线',
     ],
-    leadAnswerBlock: '**如果代码隐私比抓住每一个 bug 更重要，你已经在运行本地 LLM 环境，或者只审查低风险的个人仓库，就选本地方案——把 Qwen3-Coder 32B（20 GB VRAM，Apache 2.0）与开源的 PR-Agent 审查框架和一个 git 钩子组合起来，每月 0 美元。如果你需要生产级的审查质量、想要五分钟内就能用起来，或者要审查客户的专有代码，就选 CodeRabbit——起价每位开发者每月 24 美元，公开仓库永久免费。** 市面上没有干净利落的 CodeRabbit 本地克隆版；走本地路线意味着你要自己组装模型、审查框架和钩子。',
+    leadAnswerBlock: '**如果代码隐私比抓住每一个 bug 更重要，你已经在运行本地 LLM 环境，或者只审查低风险的个人仓库，就选本地方案——把 Qwen2.5-Coder 32B（20 GB VRAM，Apache 2.0）与开源的 PR-Agent 审查框架和一个 git 钩子组合起来，每月 0 美元。如果你需要生产级的审查质量、想要五分钟内就能用起来，或者要审查客户的专有代码，就选 CodeRabbit——起价每位开发者每月 24 美元，公开仓库永久免费。** 市面上没有干净利落的 CodeRabbit 本地克隆版；走本地路线意味着你要自己组装模型、审查框架和钩子。',
     quickAnswerTop: {
       question: '本地 LLM 能在 AI 代码审查上替代 CodeRabbit 吗？',
-      answer: '**部分可以。** 用自托管的 Qwen3-Coder 32B 模型驱动开源的 PR-Agent 审查框架，能发现大约 88% 的、7B 模型会漏掉的 bug，除了你可能本来就有的硬件外不产生任何费用——但在复杂的多文件差异上，它仍不及 CodeRabbit 那种由前沿模型支撑的审查，而且需要一个下午的搭建时间，而不是五分钟的注册。没有任何单一的开源产品能逐项复刻 CodeRabbit 的功能；「本地」这个选项是把好几块拼装起来，而不是安装一个东西。',
+      answer: '**部分可以。** 用自托管的 Qwen2.5-Coder 32B 模型驱动开源的 PR-Agent 审查框架，能发现大约 88% 的、7B 模型会漏掉的 bug，除了你可能本来就有的硬件外不产生任何费用——但在复杂的多文件差异上，它仍不及 CodeRabbit 那种由前沿模型支撑的审查，而且需要一个下午的搭建时间，而不是五分钟的注册。没有任何单一的开源产品能逐项复刻 CodeRabbit 的功能；「本地」这个选项是把好几块拼装起来，而不是安装一个东西。',
       bullets: [
         '**本地方案的优势：** 隐私（代码不离开你的机器）、成本（硬件之外每月 0 美元）、对审查提示词的完全掌控',
         '**CodeRabbit 的优势：** 搭建时间（几分钟而非一个下午）、复杂差异上的审查质量，以及零维护负担',
-        '**最小可用本地配置：** Qwen3-Coder 32B（20 GB VRAM/RAM，Apache 2.0）+ PR-Agent（Apache 2.0，自托管）+ 一个 git pre-commit 或 CI 钩子',
+        '**最小可用本地配置：** Qwen2.5-Coder 32B（20 GB VRAM/RAM，Apache 2.0）+ PR-Agent（Apache 2.0，自托管）+ 一个 git pre-commit 或 CI 钩子',
         '**CodeRabbit 起价：** 每位开发者每月 24 美元（Essentials，按年付费），公开仓库永久免费，14 天试用',
       ],
       updatedDate: '2026-09-01',
@@ -2256,7 +2256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '把自托管的 Qwen3-Coder 32B 模型与开源的 PR-Agent 审查框架搭配使用，可以完全在本地硬件上以每月 0 美元完成 AI 代码审查，但需要一个下午的组装时间，且在复杂或大型差异的拉取请求上，仍不及 CodeRabbit 由前沿模型支撑的审查。',
+            text: '把自托管的 Qwen2.5-Coder 32B 模型与开源的 PR-Agent 审查框架搭配使用，可以完全在本地硬件上以每月 0 美元完成 AI 代码审查，但需要一个下午的组装时间，且在复杂或大型差异的拉取请求上，仍不及 CodeRabbit 由前沿模型支撑的审查。',
           },
           {
             type: 'plain-terms',
@@ -2265,7 +2265,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**不存在干净利落的 CodeRabbit 本地克隆版。** 走本地路线意味着组装一个编程模型 + 一个审查框架 + 一个 git 钩子，而不是安装一个竞品应用。',
-          '**最小可用的本地模型：** Qwen3-Coder 32B，Q4_K_M 量化下需要 20 GB VRAM/RAM，Apache 2.0 许可证——在内部基准测试中能发现大约 88% 被注入的 bug；低一档的 Qwen3-Coder 7B（5 GB）大约只能达到 60%。',
+          '**最小可用的本地模型：** Qwen2.5-Coder 32B，Q4_K_M 量化下需要 20 GB VRAM/RAM，Apache 2.0 许可证——在内部基准测试中能发现大约 88% 被注入的 bug；低一档的 Qwen2.5-Coder 7B（5 GB）大约只能达到 60%。',
           '**审查框架：** PR-Agent（Apache 2.0），由 Qodo 于 2026 年捐赠给社区，现由 the-pr-agent 组织维护——可通过 CLI、Docker 或 GitHub Actions 自托管。',
           '**诚实地说：** 在复杂的多文件差异审查上，本地编程模型仍落后于前沿云端模型——把本地方案当作「对多数 PR 来说够用」，而不是等价替代品。',
           '**CodeRabbit 定价（2026 年 9 月 1 日核实）：** Essentials 每位开发者每月 24 美元，Team 48 美元，Advanced 72 美元（均为按年付费），Enterprise 定制报价并支持自托管；公开仓库永久免费，每个付费层级均提供 14 天试用。',
@@ -2278,7 +2278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**按顺序往下看这份清单，在第一条符合你情况的地方停下——这个决定取决于隐私需求、现有硬件，以及你能承受多少审查质量的损失。**',
         items: [
           '**多数团队的最佳选择 → CodeRabbit。** 5 分钟即可搭建完成，公开仓库永久免费，14 天试用，起价每位开发者每月 24 美元。当审查质量和免维护比自己掌控整套技术栈更重要时，选它最合适。',
-          '**注重隐私的最佳选择 → 本地方案。** Qwen3-Coder 32B + PR-Agent，软件成本约 0 美元，需要 20 GB 以上 VRAM，外加数小时的搭建和持续维护，在复杂多文件审查上上限更低。',
+          '**注重隐私的最佳选择 → 本地方案。** Qwen2.5-Coder 32B + PR-Agent，软件成本约 0 美元，需要 20 GB 以上 VRAM，外加数小时的搭建和持续维护，在复杂多文件审查上上限更低。',
           '**两全其美 → 两者都用。** 把本地审查作为 pre-commit 关卡，先获得快速、私密的反馈，再让 CodeRabbit 负责拉取请求打开后的正式审查——实际团队如何操作，参见下方「本地模型和 CodeRabbit 可以一起用吗？」的常见问题。',
         ],
         columns: ['项目', '本地方案', 'CodeRabbit'],
@@ -2309,7 +2309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '你的团队太小，不值得长期承担运行和更新本地模型+框架技术栈的维护负担',
           ],
           quick: [
-            '免费、私密、DIY → **Qwen3-Coder 32B + PR-Agent**（20 GB VRAM，每月 0 美元，全程 Apache 2.0）',
+            '免费、私密、DIY → **Qwen2.5-Coder 32B + PR-Agent**（20 GB VRAM，每月 0 美元，全程 Apache 2.0）',
             '5 分钟内可用，质量最佳 → **CodeRabbit**（Essentials 每位开发者每月 24 美元，公开仓库免费）',
             '受监管/物理隔离环境，且能付费 → **CodeRabbit Enterprise（自托管）**——定制报价，需要与销售沟通',
             '每周少于 5 个 PR → **两者都不需要**——这个量级下人工审查已经足够快',
@@ -2337,10 +2337,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '搭建本地代码审查流水线',
         content: '**目前的本地方案由三部分组成：一个自托管的编程模型、一个开源审查框架，以及一个在每次差异上运行它的钩子——而不是一个你直接安装的应用。** 在开始之前要看清楚这一点：这是组装工作，不是购买产品。',
         items: [
-          '**模型：** Qwen3-Coder 32B（阿里巴巴，Apache 2.0）是实用的基准选择——在 Q4_K_M 量化下大约需要 20 GB VRAM 或统一内存，在我们[代码审查最佳本地 LLM 指南](/zh/local-llms/best-local-llms-code-review)背后的基准测试中，能发现大约 88% 被注入的 bug。硬件更紧张时，Qwen3-Coder 7B（约 5 GB）可用于 lint 级别的反馈，但准确率大约只有 60%——把它当作初步检查，而不是最终把关。',
+          '**模型：** Qwen2.5-Coder 32B（阿里巴巴，Apache 2.0）是实用的基准选择——在 Q4_K_M 量化下大约需要 20 GB VRAM 或统一内存，在我们[代码审查最佳本地 LLM 指南](/zh/local-llms/best-local-llms-code-review)背后的基准测试中，能发现大约 88% 被注入的 bug。硬件更紧张时，Qwen2.5-Coder 7B（约 5 GB）可用于 lint 级别的反馈，但准确率大约只有 60%——把它当作初步检查，而不是最终把关。',
           '**框架：** [PR-Agent](https://github.com/The-PR-Agent/pr-agent) 是一个开源（Apache 2.0）、可自托管的 PR 审查代理——最初由 Qodo/CodiumAI 构建，于 2026 年捐赠给社区，现在由社区拥有的 The-PR-Agent GitHub 组织维护。它可以通过 CLI、Docker、GitHub Actions 或 webhook 运行，并能调用任何兼容 OpenAI 接口的端点——包括本地的 Ollama 或 vLLM 服务器。',
           '**连接：** 把 PR-Agent 的模型配置指向你本地推理服务器的 OpenAI 兼容 API（Ollama 和 vLLM 都提供这样的接口），然后通过 git 的 pre-commit 钩子触发它以获得仅限本地的反馈，或者通过 GitHub Actions/GitLab CI 步骤触发，让它像 CodeRabbit 一样对每个拉取请求发表评论。',
-          '**现实的最低配置：** 一块 20 GB 以上 VRAM 的 GPU（RTX 4090 或更高），或一台 32 GB 以上统一内存的 Apple Silicon Mac。低于这个配置，就退而使用 Qwen3-Coder 7B 并接受更低的准确率——或者对任何安全敏感的内容跳过本地审查。',
+          '**现实的最低配置：** 一块 20 GB 以上 VRAM 的 GPU（RTX 4090 或更高），或一台 32 GB 以上统一内存的 Apple Silicon Mac。低于这个配置，就退而使用 Qwen2.5-Coder 7B 并接受更低的准确率——或者对任何安全敏感的内容跳过本地审查。',
         ],
         numberedItems: [
           '启动一个暴露 OpenAI 兼容 API 的本地推理服务器：`ollama serve`（Ollama），或 `python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen3-Coder-32B-Instruct`（vLLM）。',
@@ -2355,7 +2355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       limitations: {
         id: 'limitations',
         title: '本地方案的真正短板',
-        content: '**在复杂、大型差异的审查质量上，当前的本地编程模型仍落后于前沿云端模型——这是诚实的局限，而不是完全放弃本地审查的理由。** 与其过度美化 DIY 路线，不如直说：一套自托管的 Qwen3-Coder 32B 方案会漏掉 CodeRabbit 云端审查能发现的问题，尤其是跨越多个文件的架构性问题，或需要大量推理的安全分析。',
+        content: '**在复杂、大型差异的审查质量上，当前的本地编程模型仍落后于前沿云端模型——这是诚实的局限，而不是完全放弃本地审查的理由。** 与其过度美化 DIY 路线，不如直说：一套自托管的 Qwen2.5-Coder 32B 方案会漏掉 CodeRabbit 云端审查能发现的问题，尤其是跨越多个文件的架构性问题，或需要大量推理的安全分析。',
         items: [
           '**多文件、架构层面的审查是短板。** 一个 20 GB 的本地模型，有效上下文比 CodeRabbit 流水线所依赖的前沿模型更小，推理深度也更浅——几步之外的跨文件破坏，正是仅看差异或单模型本地方案最容易漏掉的东西。',
           '**没有持续的模型改进。** 随着底层前沿模型的进步，CodeRabbit 的审查质量会自动提升。而本地模型会一直冻结在你下载的那个检查点，直到你手动重新下载并重新测试更新的版本。',
@@ -2435,7 +2435,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '按使用场景给出的推荐',
         content: '**四种读者画像覆盖了大多数问这个问题的人——找到符合你的那一种，其余可以跳过。**',
         items: [
-          '**个人或开源仓库、重视隐私、已经有本地 LLM 硬件** → 本地方案。你已经拥有 GPU，漏掉一个 bug 的代价很低，也没有理由把公开或个人代码发送给第三方。使用 Qwen3-Coder 32B + PR-Agent。',
+          '**个人或开源仓库、重视隐私、已经有本地 LLM 硬件** → 本地方案。你已经拥有 GPU，漏掉一个 bug 的代价很低，也没有理由把公开或个人代码发送给第三方。使用 Qwen2.5-Coder 32B + PR-Agent。',
           '**初创公司或小团队，今天就想用上** → CodeRabbit。在这个阶段，搭建时间比订阅费更重要——安装应用，在下一个 PR 上获得审查评论，然后继续前进。',
           '**受监管行业，代码不能离开本地环境** → 本地方案，或者如果预算和采购流程允许建立厂商关系，可以选 CodeRabbit Enterprise 的自托管层级。不要默认「没有厂商提供这个」——CodeRabbit 确实有自托管的 Enterprise 选项；它是需要与销售沟通的定制报价，而不是自助方案，所以要把它和自己搭建 DIY 技术栈做权衡。',
           '**大型团队、复杂差异、质量至关重要** → CodeRabbit（或 Greptile/Qodo，取决于平台和部署需求——参见[三者云端对比](/zh/local-llms/best-ai-code-review-tools)）。对于这类画像，本地路线在多文件、架构性审查上的诚实局限影响最大。',
@@ -2460,7 +2460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '运行 7B 模型却期待 32B 级别的准确率',
-            whyItMatters: 'Qwen3-Coder 7B 适合以大约 60% 的 bug 发现准确率提供快速、lint 级别的反馈，无法达到 32B 模型或 CodeRabbit 提供的审查质量。要根据你对输出的信任程度来匹配模型的级别。',
+            whyItMatters: 'Qwen2.5-Coder 7B 适合以大约 60% 的 bug 发现准确率提供快速、lint 级别的反馈，无法达到 32B 模型或 CodeRabbit 提供的审查质量。要根据你对输出的信任程度来匹配模型的级别。',
           },
         ],
       },
@@ -2468,8 +2468,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          { q: '本地 LLM 能完全替代 CodeRabbit 吗？', a: '不能等价替代。自托管的 Qwen3-Coder 32B 模型加上开源的 PR-Agent 框架，可以发现大多数人工审查者想要标记的 bug，但在复杂的多文件差异上，它仍不及 CodeRabbit 由前沿模型支撑的审查——而且需要组装三个独立的部件，而不是安装一个产品。' },
-          { q: '本地 AI 代码审查的最低硬件要求是什么？', a: 'Q4_K_M 量化下的 Qwen3-Coder 32B 大约需要 20 GB 的 VRAM 或统一内存。硬件更紧张时，Qwen3-Coder 7B 大约 5 GB 就能运行，但 bug 发现准确率会从 32B 模型的 88% 降到大约 60%，所以要把它当作初步检查，而不是完整的审查关卡。' },
+          { q: '本地 LLM 能完全替代 CodeRabbit 吗？', a: '不能等价替代。自托管的 Qwen2.5-Coder 32B 模型加上开源的 PR-Agent 框架，可以发现大多数人工审查者想要标记的 bug，但在复杂的多文件差异上，它仍不及 CodeRabbit 由前沿模型支撑的审查——而且需要组装三个独立的部件，而不是安装一个产品。' },
+          { q: '本地 AI 代码审查的最低硬件要求是什么？', a: 'Q4_K_M 量化下的 Qwen2.5-Coder 32B 大约需要 20 GB 的 VRAM 或统一内存。硬件更紧张时，Qwen2.5-Coder 7B 大约 5 GB 就能运行，但 bug 发现准确率会从 32B 模型的 88% 降到大约 60%，所以要把它当作初步检查，而不是完整的审查关卡。' },
           { q: 'PR-Agent 还在维护吗？', a: '在维护。Qodo（PR-Agent 背后的公司，前身为 CodiumAI）于 2026 年把该项目捐赠给了社区；现在它以 Apache 2.0 许可证在社区拥有的 The-PR-Agent GitHub 组织下维护，并且依然可以通过 CLI、Docker 或 GitHub Actions 自托管。' },
           { q: '2026 年 CodeRabbit 的价格是多少？', a: 'CodeRabbit 的 Essentials 计划按年付费为每位开发者每月 24 美元，Team 为 48 美元，Advanced 为 72 美元。Enterprise 为定制报价，包含自托管。每个计划都提供无需信用卡的 14 天免费试用，公开仓库可永久免费获得审查。' },
           { q: 'CodeRabbit 提供自托管或本地部署选项吗？', a: '有，在 Enterprise 层级提供。它是定制报价，需要与销售沟通，而不是自助注册，但对于需要本地部署、又不想自己搭建 DIY 本地技术栈的受监管团队来说，这是一个真实可行的选项。' },
@@ -2477,14 +2477,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '本地方案最大的弱点是什么？', a: '在复杂、多文件或架构性差异上的审查质量。20 到 32 GB VRAM 范围内的本地模型，有效上下文比云端工具所依赖的前沿模型更小，推理深度也更浅，所以几个文件之外的跨文件破坏，正是最容易从本地方案中漏掉的问题类型。' },
           { q: '对一个 5 人团队来说，哪个更便宜？', a: '按 Essentials 定价，五位开发者使用 CodeRabbit 每月是 120 美元。本地方案在软件层面每月 0 美元，但前提是至少已有一块 20 GB 以上 VRAM 的 GPU 或需要新购一块，再加上搭建和维护的时间——在假设本地方案在成本上更划算之前，先把这些时间诚实地和每月 120 美元做个比较。' },
           { q: '本地模型和 CodeRabbit 可以一起用吗？', a: '可以，而且这是一种合理的模式：在代码推送之前，用本地模型提供快速、私密的 pre-commit 反馈；一旦拉取请求打开，再用 CodeRabbit 做权威的审查。这样你在第一轮获得了隐私保护，在最重要的那一轮获得了前沿模型的质量。' },
-          { q: '实际上应该选哪个本地模型？', a: '大多数情况下选 Qwen3-Coder 32B——它是目前认真做本地代码审查的实用基准。完整的模型规模和审查类型排行对比，请参见我们专门的[代码审查最佳本地 LLM 指南](/zh/local-llms/best-local-llms-code-review)。' },
+          { q: '实际上应该选哪个本地模型？', a: '大多数情况下选 Qwen2.5-Coder 32B——它是目前认真做本地代码审查的实用基准。完整的模型规模和审查类型排行对比，请参见我们专门的[代码审查最佳本地 LLM 指南](/zh/local-llms/best-local-llms-code-review)。' },
         ],
       },
       verdict: {
         id: 'verdict',
         title: '最终结论',
         items: [
-          '**选本地方案，如果** 隐私比抓住每一个 bug 更重要，而且你已经有 20 GB 以上的 VRAM——下一步：通过 Ollama 拉取 Qwen3-Coder 32B，并用 GitHub Actions 钩子把它接到 PR-Agent 上。',
+          '**选本地方案，如果** 隐私比抓住每一个 bug 更重要，而且你已经有 20 GB 以上的 VRAM——下一步：通过 Ollama 拉取 Qwen2.5-Coder 32B，并用 GitHub Actions 钩子把它接到 PR-Agent 上。',
           '**选 CodeRabbit，如果** 你想今天就用上，而且对审查质量的要求很高——下一步：在你的主要仓库上安装该应用，用 14 天试用把它的输出与你当前的审查流程做对比。',
           '**选 CodeRabbit Enterprise（自托管），如果** 你受监管、代码不能离开本地环境，但仍想要 CodeRabbit 的审查质量——下一步：预约 Enterprise 沟通，而不要想当然地认为不提供自托管。',
           '**两者都用，如果** 第一轮反馈你想要隐私保护，而最重要的那一轮你想要前沿模型的质量——下一步：把本地模型接入 pre-commit 钩子，获得即时、私密的反馈，再把 PR 的正式审查交给 CodeRabbit。',
@@ -2497,7 +2497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: 'https://www.coderabbit.ai/pricing', title: 'CodeRabbit 定价', description: 'Essentials、Team、Advanced 和 Enterprise 各层级、14 天试用，以及公开仓库的免费访问——于 2026 年 9 月 1 日核实。' },
           { url: 'https://github.com/The-PR-Agent/pr-agent', title: 'PR-Agent（社区维护）', description: 'Apache 2.0 许可证、可自托管的 PR 审查代理，由 Qodo 于 2026 年捐赠给社区。' },
-          { url: '/zh/local-llms/best-local-llms-code-review', title: '代码审查最佳本地 LLM（PromptQuorum）', description: '针对本地代码审查的 Qwen3-Coder、Llama 3.3 和 DeepSeek-R1 排行对比，包含本页引用的 Qwen3-Coder 32B 88% bug 发现率数据的出处。' },
+          { url: '/zh/local-llms/best-local-llms-code-review', title: '代码审查最佳本地 LLM（PromptQuorum）', description: '针对本地代码审查的 Qwen3-Coder、Llama 3.3 和 DeepSeek-R1 排行对比，包含本页引用的 Qwen2.5-Coder 32B 88% bug 发现率数据的出处。' },
           { url: '/zh/local-llms/best-ai-code-review-tools', title: 'CodeRabbit vs Greptile vs Qodo（PromptQuorum）', description: '本页参照而非重复讨论的完整三方云端对比。' },
         ],
       },
@@ -2509,14 +2509,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[代码审查最佳本地 LLM](/zh/local-llms/best-local-llms-code-review) — 本页本地部分对应的模型排行对比（Qwen3-Coder、Llama 3.3、DeepSeek-R1）',
           '[本地 LLM 最佳 AI 编程助手](/zh/local-llms/best-ai-coding-assistant-local-llm) — 那些写出差异、供审查流水线（无论本地还是云端）读取的工具',
           '[本地 LLM 开发者技术栈](/zh/local-llms/local-llm-developer-stack) — 自托管审查流水线在更广泛的本地优先工具链中的位置',
-          '[LLM 量化详解](/zh/local-llms/llm-quantization-explained) — 本页使用的 Qwen3-Coder 32B 20 GB 数字背后的 VRAM 计算',
+          '[LLM 量化详解](/zh/local-llms/llm-quantization-explained) — 本页使用的 Qwen2.5-Coder 32B 20 GB 数字背后的 VRAM 计算',
         ],
       },
     },
     schema: {
       '@type': 'TechArticle',
       headline: '本地 AI 代码审查 vs CodeRabbit：自己动手值得吗？',
-      description: '一套自托管的 Qwen3-Coder 32B + PR-Agent 流水线能否在 AI 代码审查上替代 CodeRabbit——诚实的权衡、核实过的价格，以及基于使用场景的推荐。',
+      description: '一套自托管的 Qwen2.5-Coder 32B + PR-Agent 流水线能否在 AI 代码审查上替代 CodeRabbit——诚实的权衡、核实过的价格，以及基于使用场景的推荐。',
       datePublished: '2026-09-01',
       dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/zh/local-llms/local-ai-code-review-vs-coderabbit',
@@ -2546,7 +2546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': '本地 LLM 能完全替代 CodeRabbit 吗？',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': '不能等价替代。自托管的 Qwen3-Coder 32B 模型加上开源的 PR-Agent 框架，可以发现大多数人工审查者想要标记的 bug，但在复杂的多文件差异上，它仍不及 CodeRabbit 由前沿模型支撑的审查——而且需要组装三个独立的部件，而不是安装一个产品。',
+            'text': '不能等价替代。自托管的 Qwen2.5-Coder 32B 模型加上开源的 PR-Agent 框架，可以发现大多数人工审查者想要标记的 bug，但在复杂的多文件差异上，它仍不及 CodeRabbit 由前沿模型支撑的审查——而且需要组装三个独立的部件，而不是安装一个产品。',
           },
         },
         {
@@ -2554,7 +2554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': '本地 AI 代码审查的最低硬件要求是什么？',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Q4_K_M 量化下的 Qwen3-Coder 32B 大约需要 20 GB 的 VRAM 或统一内存。硬件更紧张时，Qwen3-Coder 7B 大约 5 GB 就能运行，但 bug 发现准确率会从 32B 模型的 88% 降到大约 60%，所以要把它当作初步检查，而不是完整的审查关卡。',
+            'text': 'Q4_K_M 量化下的 Qwen2.5-Coder 32B 大约需要 20 GB 的 VRAM 或统一内存。硬件更紧张时，Qwen2.5-Coder 7B 大约 5 GB 就能运行，但 bug 发现准确率会从 32B 模型的 88% 降到大约 60%，所以要把它当作初步检查，而不是完整的审查关卡。',
           },
         },
         {
@@ -2618,7 +2618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': '实际上应该选哪个本地模型？',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': '大多数情况下选 Qwen3-Coder 32B——它是目前认真做本地代码审查的实用基准。完整的模型规模和审查类型排行对比，请参见我们专门的代码审查最佳本地 LLM 指南。',
+            'text': '大多数情况下选 Qwen2.5-Coder 32B——它是目前认真做本地代码审查的实用基准。完整的模型规模和审查类型排行对比，请参见我们专门的代码审查最佳本地 LLM 指南。',
           },
         },
       ],
@@ -2630,7 +2630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'Revisão de código com IA local vs. CodeRabbit: vale a pena fazer você mesmo?',
     seoTitle: 'Revisão de código com IA local vs CodeRabbit: DIY vs SaaS (2026)',
-    metaDescription: 'O CodeRabbit custa $24/dev/mês e funciona em 5 minutos. Um setup self-hosted com Qwen3-Coder 32B + PR-Agent é gratuito mas detecta menos bugs. Aqui está a troca real.',
+    metaDescription: 'O CodeRabbit custa $24/dev/mês e funciona em 5 minutos. Um setup self-hosted com Qwen2.5-Coder 32B + PR-Agent é gratuito mas detecta menos bugs. Aqui está a troca real.',
     educationalLevel: 'Advanced',
     audience: 'Desenvolvedores que já rodam LLMs locais e estão decidindo se também devem hospedar a revisão de código',
     affiliateDisclosure: true,
@@ -2645,14 +2645,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'PR-Agent self-hosted',
       'pipeline de revisão de código local',
     ],
-    leadAnswerBlock: '**Vá de local se a privacidade do código importa mais do que pegar o último bug, você já tem um setup de LLM local rodando, ou revisa repositórios pessoais de baixo risco — combine o Qwen3-Coder 32B (20GB de VRAM, Apache 2.0) com o harness open source PR-Agent e um git hook, por $0/mês. Vá de CodeRabbit se precisa de qualidade de revisão nível produção, quer funcionando em cinco minutos, ou revisa código proprietário de clientes — começa em $24/desenvolvedor/mês e é gratuito para sempre em repositórios públicos.** Não existe um clone local limpo do CodeRabbit; o caminho local significa montar você mesmo um modelo, um harness de revisão e um hook.',
+    leadAnswerBlock: '**Vá de local se a privacidade do código importa mais do que pegar o último bug, você já tem um setup de LLM local rodando, ou revisa repositórios pessoais de baixo risco — combine o Qwen2.5-Coder 32B (20GB de VRAM, Apache 2.0) com o harness open source PR-Agent e um git hook, por $0/mês. Vá de CodeRabbit se precisa de qualidade de revisão nível produção, quer funcionando em cinco minutos, ou revisa código proprietário de clientes — começa em $24/desenvolvedor/mês e é gratuito para sempre em repositórios públicos.** Não existe um clone local limpo do CodeRabbit; o caminho local significa montar você mesmo um modelo, um harness de revisão e um hook.',
     quickAnswerTop: {
       question: 'Um LLM local pode substituir o CodeRabbit na revisão de código com IA?',
-      answer: '**Parcialmente.** Um modelo Qwen3-Coder 32B self-hosted rodando o harness open source PR-Agent detecta cerca de 88% dos bugs que um modelo de 7B deixaria passar, e não custa nada além do hardware que você talvez já tenha — mas fica atrás da revisão do CodeRabbit, apoiada em modelos de fronteira, em diffs complexos com vários arquivos, e exige uma tarde de configuração em vez de um cadastro de cinco minutos. Não existe um único produto open source que replique o CodeRabbit função por função; a opção "local" são várias peças montadas, não uma instalação única.',
+      answer: '**Parcialmente.** Um modelo Qwen2.5-Coder 32B self-hosted rodando o harness open source PR-Agent detecta cerca de 88% dos bugs que um modelo de 7B deixaria passar, e não custa nada além do hardware que você talvez já tenha — mas fica atrás da revisão do CodeRabbit, apoiada em modelos de fronteira, em diffs complexos com vários arquivos, e exige uma tarde de configuração em vez de um cadastro de cinco minutos. Não existe um único produto open source que replique o CodeRabbit função por função; a opção "local" são várias peças montadas, não uma instalação única.',
       bullets: [
         '**O local ganha em:** privacidade (o código nunca sai da sua máquina), custo ($0/mês além do hardware) e controle total sobre o prompt de revisão',
         '**O CodeRabbit ganha em:** tempo de configuração (minutos, não uma tarde), qualidade de revisão em diffs complexos e zero carga de manutenção',
-        '**Setup local mínimo viável:** Qwen3-Coder 32B (20GB de VRAM/RAM, Apache 2.0) + PR-Agent (Apache 2.0, self-hosted) + um hook de pre-commit do git ou de CI',
+        '**Setup local mínimo viável:** Qwen2.5-Coder 32B (20GB de VRAM/RAM, Apache 2.0) + PR-Agent (Apache 2.0, self-hosted) + um hook de pre-commit do git ou de CI',
         '**Preço inicial do CodeRabbit:** $24/desenvolvedor/mês (Essentials, faturamento anual), gratuito para sempre em repositórios públicos, teste de 14 dias',
       ],
       updatedDate: '2026-09-01',
@@ -2690,7 +2690,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Um modelo Qwen3-Coder 32B self-hosted, combinado com o harness de revisão open source PR-Agent, consegue fazer revisão de código com IA inteiramente em hardware local por $0/mês, mas exige uma tarde de montagem e fica atrás da revisão do CodeRabbit, apoiada em modelos de fronteira, em pull requests com diffs grandes ou complexos.',
+            text: 'Um modelo Qwen2.5-Coder 32B self-hosted, combinado com o harness de revisão open source PR-Agent, consegue fazer revisão de código com IA inteiramente em hardware local por $0/mês, mas exige uma tarde de montagem e fica atrás da revisão do CodeRabbit, apoiada em modelos de fronteira, em pull requests com diffs grandes ou complexos.',
           },
           {
             type: 'plain-terms',
@@ -2699,7 +2699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Não existe um clone local limpo do CodeRabbit.** Ir pelo caminho local significa montar um modelo de código + um harness de revisão + um git hook, não instalar um único app concorrente.',
-          '**Modelo local mínimo viável:** Qwen3-Coder 32B, 20GB de VRAM/RAM em Q4_K_M, licença Apache 2.0 — detecta cerca de 88% dos bugs injetados em nossos testes internos; um nível abaixo (Qwen3-Coder 7B, cerca de 5GB) fica mais perto de 60%.',
+          '**Modelo local mínimo viável:** Qwen2.5-Coder 32B, 20GB de VRAM/RAM em Q4_K_M, licença Apache 2.0 — detecta cerca de 88% dos bugs injetados em nossos testes internos; um nível abaixo (Qwen2.5-Coder 7B, cerca de 5GB) fica mais perto de 60%.',
           '**Harness de revisão:** PR-Agent (Apache 2.0), doado pela Qodo à comunidade em 2026 e agora mantido sob a organização the-pr-agent — self-hostable via CLI, Docker ou GitHub Actions.',
           '**Limitação honesta:** modelos de código locais ainda ficam atrás dos modelos de fronteira na nuvem na revisão de diffs complexos com vários arquivos — trate o local como "bom o suficiente para a maioria dos PRs", não como substituto equivalente.',
           '**Preços do CodeRabbit (verificados em 2026-09-01):** Essentials $24/dev/mês, Team $48, Advanced $72 (todos com faturamento anual), Enterprise com preço personalizado e opção self-hosted; gratuito para sempre em repositórios públicos, teste de 14 dias em cada nível pago.',
@@ -2712,7 +2712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Percorra esta lista e pare na primeira linha que descreva você — a decisão depende das suas necessidades de privacidade, do hardware que já possui e de quanta qualidade de revisão você pode abrir mão.**',
         items: [
           '**Melhor para a maioria das equipes → CodeRabbit.** Configuração em cinco minutos, gratuito para sempre em repositórios públicos, teste de 14 dias, a partir de $24/desenvolvedor/mês. Melhor quando qualidade de revisão e manutenção zero importam mais do que ter controle total sobre o stack.',
-          '**Melhor para privacidade → IA local.** Qwen3-Coder 32B + PR-Agent, custo de software de aproximadamente $0, exige 20+ GB de VRAM e várias horas de configuração e manutenção contínua, com um teto mais baixo em revisão complexa multi-arquivo.',
+          '**Melhor para privacidade → IA local.** Qwen2.5-Coder 32B + PR-Agent, custo de software de aproximadamente $0, exige 20+ GB de VRAM e várias horas de configuração e manutenção contínua, com um teto mais baixo em revisão complexa multi-arquivo.',
           '**Melhor dos dois mundos → Use os dois.** Rode a revisão local como uma etapa de pre-commit para feedback rápido e privado, e deixe o CodeRabbit fazer a revisão autorizada quando um pull request é aberto — veja a pergunta "Posso usar um modelo local e o CodeRabbit juntos?" abaixo para como as equipes realmente fazem isso.',
         ],
         columns: ['Fator', 'IA Local', 'CodeRabbit'],
@@ -2743,7 +2743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Sua equipe é pequena demais para justificar a carga de manutenção de rodar e atualizar indefinidamente um stack de modelo local + harness',
           ],
           quick: [
-            'Grátis, privado, DIY → **Qwen3-Coder 32B + PR-Agent** (20GB de VRAM, $0/mês, Apache 2.0 em tudo)',
+            'Grátis, privado, DIY → **Qwen2.5-Coder 32B + PR-Agent** (20GB de VRAM, $0/mês, Apache 2.0 em tudo)',
             'Funcionando em 5 minutos, melhor qualidade → **CodeRabbit** ($24/dev/mês Essentials, gratuito em repos públicos)',
             'Regulado/isolado, pode pagar → **CodeRabbit Enterprise (self-hosted)** — preço personalizado, exige falar com vendas',
             'Menos de 5 PRs por semana → **nenhum dos dois** — revisão humana ainda é rápida o suficiente nesse volume',
@@ -2771,10 +2771,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Como montar um pipeline de revisão de código local',
         content: '**O setup local hoje são três peças: um modelo de código self-hosted, um harness de revisão open source e um hook que o executa em cada diff — não um único app que você instala.** Deixe isso claro desde o início: isso é trabalho de montagem, não uma compra de produto.',
         items: [
-          '**O modelo:** Qwen3-Coder 32B (Alibaba, Apache 2.0) é a base prática — precisa de cerca de 20GB de VRAM ou memória unificada em quantização Q4_K_M e detecta cerca de 88% dos bugs injetados nos testes por trás do nosso [guia de LLMs locais para revisão de código](/pt/local-llms/best-local-llms-code-review). Em hardware mais limitado, o Qwen3-Coder 7B (cerca de 5GB) serve para feedback nível lint mas fica mais perto de 60% de precisão — trate-o como uma primeira passada, não como um filtro definitivo.',
+          '**O modelo:** Qwen2.5-Coder 32B (Alibaba, Apache 2.0) é a base prática — precisa de cerca de 20GB de VRAM ou memória unificada em quantização Q4_K_M e detecta cerca de 88% dos bugs injetados nos testes por trás do nosso [guia de LLMs locais para revisão de código](/pt/local-llms/best-local-llms-code-review). Em hardware mais limitado, o Qwen2.5-Coder 7B (cerca de 5GB) serve para feedback nível lint mas fica mais perto de 60% de precisão — trate-o como uma primeira passada, não como um filtro definitivo.',
           '**O harness:** [PR-Agent](https://github.com/The-PR-Agent/pr-agent) é um agente de revisão de PR open source (Apache 2.0) e self-hostable — construído originalmente pela Qodo/CodiumAI, doado à comunidade em 2026 e agora mantido sob a organização The-PR-Agent no GitHub, de propriedade da comunidade. Roda via CLI, Docker, GitHub Actions ou um webhook, e chama qualquer endpoint compatível com OpenAI — incluindo um servidor local do Ollama ou vLLM.',
           '**A conexão:** aponte a configuração de modelo do PR-Agent para a API compatível com OpenAI do seu servidor de inferência local (tanto Ollama quanto vLLM expõem uma), e então dispare a partir de um hook de pre-commit do git para feedback só local, ou a partir de uma etapa do GitHub Actions/GitLab CI para comentar em cada pull request, como o CodeRabbit faz.',
-          '**Uma especificação mínima realista:** uma GPU com 20+ GB de VRAM (uma RTX 4090 ou melhor) ou um Mac com Apple Silicon com 32+ GB de memória unificada. Abaixo disso, desça para o Qwen3-Coder 7B e aceite a precisão menor — ou evite revisão local para qualquer coisa sensível em segurança.',
+          '**Uma especificação mínima realista:** uma GPU com 20+ GB de VRAM (uma RTX 4090 ou melhor) ou um Mac com Apple Silicon com 32+ GB de memória unificada. Abaixo disso, desça para o Qwen2.5-Coder 7B e aceite a precisão menor — ou evite revisão local para qualquer coisa sensível em segurança.',
         ],
         numberedItems: [
           'Suba um servidor de inferência local que exponha uma API compatível com OpenAI: `ollama serve` (Ollama) ou `python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen3-Coder-32B-Instruct` (vLLM).',
@@ -2789,7 +2789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       limitations: {
         id: 'limitations',
         title: 'Onde o caminho local realmente fica devendo',
-        content: '**Modelos de código locais de hoje ficam atrás dos modelos de fronteira na nuvem em qualidade de revisão de diffs grandes e complexos — este é o limite honesto, não um motivo para descartar a revisão local por completo.** Diga isso com clareza em vez de supervender o caminho DIY: um setup self-hosted do Qwen3-Coder 32B vai deixar passar coisas que a revisão do CodeRabbit, apoiada na nuvem, pega, principalmente em problemas arquiteturais que atravessam muitos arquivos ou em análise de segurança que exige muito raciocínio.',
+        content: '**Modelos de código locais de hoje ficam atrás dos modelos de fronteira na nuvem em qualidade de revisão de diffs grandes e complexos — este é o limite honesto, não um motivo para descartar a revisão local por completo.** Diga isso com clareza em vez de supervender o caminho DIY: um setup self-hosted do Qwen2.5-Coder 32B vai deixar passar coisas que a revisão do CodeRabbit, apoiada na nuvem, pega, principalmente em problemas arquiteturais que atravessam muitos arquivos ou em análise de segurança que exige muito raciocínio.',
         items: [
           '**A revisão arquitetural multi-arquivo é o ponto fraco.** Um modelo local de 20GB tem um contexto efetivo menor e menos profundidade de raciocínio do que os modelos de fronteira que alimentam o pipeline do CodeRabbit — uma quebra entre arquivos vários passos adiante é exatamente o tipo de coisa que um setup local baseado só no diff ou em um único modelo tem mais chance de deixar passar.',
           '**Sem melhoria contínua do modelo.** A qualidade de revisão do CodeRabbit melhora automaticamente conforme os modelos de fronteira subjacentes que ele usa melhoram. Um modelo local fica congelado no checkpoint que você baixou até você mesmo baixar e reavaliar um mais novo.',
@@ -2869,7 +2869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Recomendação por caso de uso',
         content: '**Quatro perfis de leitor cobrem a maioria de quem se faz essa pergunta — encontre o seu e pule o resto.**',
         items: [
-          '**Repos pessoais ou open source, consciente de privacidade, já tem hardware para LLM local** → Local. Você já tem a GPU, o risco de um bug não detectado é baixo, e não há motivo para enviar código público ou pessoal a um terceiro. Use Qwen3-Coder 32B + PR-Agent.',
+          '**Repos pessoais ou open source, consciente de privacidade, já tem hardware para LLM local** → Local. Você já tem a GPU, o risco de um bug não detectado é baixo, e não há motivo para enviar código público ou pessoal a um terceiro. Use Qwen2.5-Coder 32B + PR-Agent.',
           '**Startup ou equipe pequena, quer funcionando hoje** → CodeRabbit. O tempo de configuração pesa mais do que o custo da assinatura nesta fase — instale o app, receba comentários de revisão no próximo PR, siga em frente.',
           '**Setor regulamentado, não pode enviar código para fora das instalações** → Local, ou o nível self-hosted do CodeRabbit Enterprise se orçamento e compras permitirem uma relação com fornecedor. Não presuma que "nenhum fornecedor oferece isso" — o CodeRabbit tem sim uma opção Enterprise self-hosted; é uma conversa de vendas com preço personalizado, não um plano de autoatendimento, então pese isso contra construir o stack DIY você mesmo.',
           '**Equipe grande, diffs complexos, qualidade crítica** → CodeRabbit (ou Greptile/Qodo, dependendo da plataforma e das necessidades de implantação — veja a [comparação completa em nuvem entre os três](/pt/local-llms/best-ai-code-review-tools)). Este é o perfil em que a limitação honesta do caminho local em revisão arquitetural multi-arquivo mais importa.',
@@ -2894,7 +2894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Rodar um modelo de 7B e esperar precisão classe 32B',
-            whyItMatters: 'O Qwen3-Coder 7B é útil para feedback rápido nível lint, com cerca de 60% de precisão na detecção de bugs, não para a qualidade de revisão que um modelo de 32B ou o CodeRabbit oferecem. Ajuste o nível do modelo a quanto você confia na saída dele.',
+            whyItMatters: 'O Qwen2.5-Coder 7B é útil para feedback rápido nível lint, com cerca de 60% de precisão na detecção de bugs, não para a qualidade de revisão que um modelo de 32B ou o CodeRabbit oferecem. Ajuste o nível do modelo a quanto você confia na saída dele.',
           },
         ],
       },
@@ -2902,8 +2902,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
-          { q: 'Um LLM local pode substituir totalmente o CodeRabbit?', a: 'Não como substituto equivalente. Um modelo Qwen3-Coder 32B self-hosted mais o harness open source PR-Agent consegue detectar a maioria dos bugs que um revisor humano apontaria, mas ainda fica atrás da revisão do CodeRabbit, apoiada em modelos de fronteira, em diffs complexos com vários arquivos — e exige montar três peças separadas em vez de instalar um único produto.' },
-          { q: 'Qual é o hardware mínimo para revisão de código com IA local?', a: 'O Qwen3-Coder 32B em quantização Q4_K_M precisa de cerca de 20GB de VRAM ou memória unificada. Em hardware mais limitado, o Qwen3-Coder 7B roda em cerca de 5GB mas cai para cerca de 60% de precisão na detecção de bugs contra os 88% do modelo de 32B, então trate-o como uma primeira passada e não como um filtro de revisão completo.' },
+          { q: 'Um LLM local pode substituir totalmente o CodeRabbit?', a: 'Não como substituto equivalente. Um modelo Qwen2.5-Coder 32B self-hosted mais o harness open source PR-Agent consegue detectar a maioria dos bugs que um revisor humano apontaria, mas ainda fica atrás da revisão do CodeRabbit, apoiada em modelos de fronteira, em diffs complexos com vários arquivos — e exige montar três peças separadas em vez de instalar um único produto.' },
+          { q: 'Qual é o hardware mínimo para revisão de código com IA local?', a: 'O Qwen2.5-Coder 32B em quantização Q4_K_M precisa de cerca de 20GB de VRAM ou memória unificada. Em hardware mais limitado, o Qwen2.5-Coder 7B roda em cerca de 5GB mas cai para cerca de 60% de precisão na detecção de bugs contra os 88% do modelo de 32B, então trate-o como uma primeira passada e não como um filtro de revisão completo.' },
           { q: 'O PR-Agent ainda é mantido?', a: 'Sim. A Qodo (a empresa por trás do PR-Agent, antes CodiumAI) doou o projeto à comunidade em 2026; agora é mantido sob a organização The-PR-Agent no GitHub, de propriedade da comunidade, sob a licença Apache 2.0, e continua self-hostable via CLI, Docker ou GitHub Actions.' },
           { q: 'Quanto custa o CodeRabbit em 2026?', a: 'O plano Essentials do CodeRabbit custa $24 por desenvolvedor por mês com faturamento anual, o Team custa $48, e o Advanced custa $72. O Enterprise tem preço personalizado e inclui self-hosting. Todos os planos incluem um teste grátis de 14 dias sem necessidade de cartão, e repositórios públicos recebem revisão gratuita, permanentemente.' },
           { q: 'O CodeRabbit oferece uma opção self-hosted ou on-premises?', a: 'Sim, no nível Enterprise. Tem preço personalizado e exige uma conversa de vendas em vez de um cadastro de autoatendimento, mas é uma opção real para equipes regulamentadas que precisam de implantação on-premises sem construir um stack DIY local.' },
@@ -2911,14 +2911,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Qual é a maior fraqueza da abordagem local?', a: 'A qualidade de revisão em diffs complexos, multi-arquivo ou arquiteturais. Modelos locais na faixa de 20-32GB de VRAM têm um contexto efetivo menor e menos profundidade de raciocínio do que os modelos de fronteira que alimentam as ferramentas em nuvem, então uma quebra entre vários arquivos de distância é o tipo de problema com mais chance de passar despercebido em um setup local.' },
           { q: 'Qual opção é mais barata para uma equipe de 5 pessoas?', a: 'O CodeRabbit com preço Essentials custa $120/mês para cinco desenvolvedores. Um setup local custa $0/mês em software, mas presume que pelo menos uma GPU com 20+ GB de VRAM já existe (ou será comprada), mais tempo de configuração e manutenção — calcule esse tempo com honestidade contra os $120/mês antes de presumir que o local ganha em custo.' },
           { q: 'Posso usar um modelo local e o CodeRabbit juntos?', a: 'Sim, e é um padrão razoável: use um modelo local para feedback rápido e privado antes do commit, mesmo antes de dar push no código, e o CodeRabbit para a revisão autorizada quando um pull request é aberto. Isso dá privacidade na primeira passada e qualidade de modelo de fronteira na passada que mais importa.' },
-          { q: 'Qual modelo local eu deveria realmente escolher?', a: 'Qwen3-Coder 32B para a maioria dos casos — é a base prática atual para revisão de código local séria. Veja nosso guia dedicado de [melhores LLMs locais para revisão de código](/pt/local-llms/best-local-llms-code-review) para a comparação completa ranqueada entre tamanhos de modelo e tipos de revisão.' },
+          { q: 'Qual modelo local eu deveria realmente escolher?', a: 'Qwen2.5-Coder 32B para a maioria dos casos — é a base prática atual para revisão de código local séria. Veja nosso guia dedicado de [melhores LLMs locais para revisão de código](/pt/local-llms/best-local-llms-code-review) para a comparação completa ranqueada entre tamanhos de modelo e tipos de revisão.' },
         ],
       },
       verdict: {
         id: 'verdict',
         title: 'Veredito final',
         items: [
-          '**Vá de local se** a privacidade importa mais para você do que pegar até o último bug e você já tem 20+ GB de VRAM — próximo passo: baixe o Qwen3-Coder 32B via Ollama e conecte-o ao PR-Agent com um hook do GitHub Actions.',
+          '**Vá de local se** a privacidade importa mais para você do que pegar até o último bug e você já tem 20+ GB de VRAM — próximo passo: baixe o Qwen2.5-Coder 32B via Ollama e conecte-o ao PR-Agent com um hook do GitHub Actions.',
           '**Vá de CodeRabbit se** quer funcionando hoje e sua exigência de qualidade de revisão é alta — próximo passo: instale o app no seu repositório principal e use o teste de 14 dias para comparar o resultado com seu processo de revisão atual.',
           '**Vá de CodeRabbit Enterprise (self-hosted) se** você é regulamentado e não pode enviar código para fora das instalações mas quer a qualidade de revisão do CodeRabbit — próximo passo: agende a conversa Enterprise em vez de presumir que self-hosting não é oferecido.',
           '**Rode os dois se** você quer privacidade na primeira passada e qualidade de modelo de fronteira na passada que mais importa — próximo passo: conecte o modelo local a um hook de pre-commit para feedback privado e instantâneo, e deixe o CodeRabbit cuidar da revisão autorizada do PR.',
@@ -2931,7 +2931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: 'https://www.coderabbit.ai/pricing', title: 'Preços do CodeRabbit', description: 'Níveis Essentials, Team, Advanced e Enterprise, o teste de 14 dias, e o acesso gratuito para repositórios públicos — verificado em 2026-09-01.' },
           { url: 'https://github.com/The-PR-Agent/pr-agent', title: 'PR-Agent (mantido pela comunidade)', description: 'Agente de revisão de PR com licença Apache 2.0 e self-hostable, doado pela Qodo à comunidade em 2026.' },
-          { url: '/pt/local-llms/best-local-llms-code-review', title: 'Melhores LLMs locais para revisão de código (PromptQuorum)', description: 'Comparação ranqueada de Qwen3-Coder, Llama 3.3 e DeepSeek-R1 para revisão de código local, incluindo o número de 88% de detecção de bugs para o Qwen3-Coder 32B citado nesta página.' },
+          { url: '/pt/local-llms/best-local-llms-code-review', title: 'Melhores LLMs locais para revisão de código (PromptQuorum)', description: 'Comparação ranqueada de Qwen3-Coder, Llama 3.3 e DeepSeek-R1 para revisão de código local, incluindo o número de 88% de detecção de bugs para o Qwen2.5-Coder 32B citado nesta página.' },
           { url: '/pt/local-llms/best-ai-code-review-tools', title: 'CodeRabbit vs Greptile vs Qodo (PromptQuorum)', description: 'A comparação completa em nuvem entre os três para a qual esta página remete em vez de repeti-la.' },
         ],
       },
@@ -2943,14 +2943,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Melhores LLMs locais para revisão de código](/pt/local-llms/best-local-llms-code-review) — comparação ranqueada de modelos (Qwen3-Coder, Llama 3.3, DeepSeek-R1) para a metade local desta página',
           '[Melhor assistente de codificação com IA para LLM local](/pt/local-llms/best-ai-coding-assistant-local-llm) — as ferramentas que escrevem o diff que um pipeline de revisão (local ou em nuvem) lê',
           '[O stack de desenvolvedor com LLM local](/pt/local-llms/local-llm-developer-stack) — onde um pipeline de revisão self-hosted se encaixa em uma cadeia de ferramentas mais ampla focada em local',
-          '[Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained) — a matemática de VRAM por trás do número de 20GB para o Qwen3-Coder 32B usado nesta página',
+          '[Quantização de LLM explicada](/pt/local-llms/llm-quantization-explained) — a matemática de VRAM por trás do número de 20GB para o Qwen2.5-Coder 32B usado nesta página',
         ],
       },
     },
     schema: {
       '@type': 'TechArticle',
       headline: 'Revisão de código com IA local vs. CodeRabbit: vale a pena fazer você mesmo?',
-      description: 'Se um pipeline self-hosted de Qwen3-Coder 32B + PR-Agent pode substituir o CodeRabbit para revisão de código com IA — trocas honestas, preços verificados e uma recomendação por caso de uso.',
+      description: 'Se um pipeline self-hosted de Qwen2.5-Coder 32B + PR-Agent pode substituir o CodeRabbit para revisão de código com IA — trocas honestas, preços verificados e uma recomendação por caso de uso.',
       datePublished: '2026-09-01',
       dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/pt/local-llms/local-ai-code-review-vs-coderabbit',
@@ -2980,7 +2980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Um LLM local pode substituir totalmente o CodeRabbit?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Não como substituto equivalente. Um modelo Qwen3-Coder 32B self-hosted mais o harness open source PR-Agent consegue detectar a maioria dos bugs que um revisor humano apontaria, mas ainda fica atrás da revisão do CodeRabbit, apoiada em modelos de fronteira, em diffs complexos com vários arquivos — e exige montar três peças separadas em vez de instalar um único produto.',
+            'text': 'Não como substituto equivalente. Um modelo Qwen2.5-Coder 32B self-hosted mais o harness open source PR-Agent consegue detectar a maioria dos bugs que um revisor humano apontaria, mas ainda fica atrás da revisão do CodeRabbit, apoiada em modelos de fronteira, em diffs complexos com vários arquivos — e exige montar três peças separadas em vez de instalar um único produto.',
           },
         },
         {
@@ -2988,7 +2988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Qual é o hardware mínimo para revisão de código com IA local?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'O Qwen3-Coder 32B em quantização Q4_K_M precisa de cerca de 20GB de VRAM ou memória unificada. Em hardware mais limitado, o Qwen3-Coder 7B roda em cerca de 5GB mas cai para cerca de 60% de precisão na detecção de bugs contra os 88% do modelo de 32B, então trate-o como uma primeira passada e não como um filtro de revisão completo.',
+            'text': 'O Qwen2.5-Coder 32B em quantização Q4_K_M precisa de cerca de 20GB de VRAM ou memória unificada. Em hardware mais limitado, o Qwen2.5-Coder 7B roda em cerca de 5GB mas cai para cerca de 60% de precisão na detecção de bugs contra os 88% do modelo de 32B, então trate-o como uma primeira passada e não como um filtro de revisão completo.',
           },
         },
         {
@@ -3052,7 +3052,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'Qual modelo local eu deveria realmente escolher?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Qwen3-Coder 32B para a maioria dos casos — é a base prática atual para revisão de código local séria. Veja nosso guia dedicado de melhores LLMs locais para revisão de código para a comparação completa ranqueada entre tamanhos de modelo e tipos de revisão.',
+            'text': 'Qwen2.5-Coder 32B para a maioria dos casos — é a base prática atual para revisão de código local séria. Veja nosso guia dedicado de melhores LLMs locais para revisão de código para a comparação completa ranqueada entre tamanhos de modelo e tipos de revisão.',
           },
         },
       ],
@@ -3064,7 +3064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'مراجعة الكود بالذكاء الاصطناعي المحلي مقابل CodeRabbit: هل يستحق القيام بها بنفسك؟',
     seoTitle: 'مراجعة الكود بالذكاء الاصطناعي المحلي مقابل CodeRabbit (2026)',
-    metaDescription: 'يكلف CodeRabbit 24 دولارًا لكل مطور شهريًا ويعمل خلال 5 دقائق. الإعداد الذاتي الاستضافة باستخدام Qwen3-Coder 32B + PR-Agent مجاني لكنه يكتشف أخطاء أقل. إليك المقايضة الحقيقية.',
+    metaDescription: 'يكلف CodeRabbit 24 دولارًا لكل مطور شهريًا ويعمل خلال 5 دقائق. الإعداد الذاتي الاستضافة باستخدام Qwen2.5-Coder 32B + PR-Agent مجاني لكنه يكتشف أخطاء أقل. إليك المقايضة الحقيقية.',
     educationalLevel: 'Advanced',
     audience: 'مطورون يشغّلون بالفعل نماذج LLM محلية ويقررون ما إذا كانوا سيستضيفون مراجعة الكود ذاتيًا أيضًا',
     affiliateDisclosure: true,
@@ -3079,14 +3079,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'PR-Agent ذاتي الاستضافة',
       'خط أنابيب مراجعة كود محلي',
     ],
-    leadAnswerBlock: '**اختر المحلي إذا كانت خصوصية الكود أهم من اكتشاف آخر خطأ، ولديك بالفعل إعداد LLM محلي يعمل، أو تراجع مستودعات شخصية منخفضة المخاطر — اجمع بين Qwen3-Coder 32B (20 جيجابايت من VRAM، رخصة Apache 2.0) وأداة المراجعة مفتوحة المصدر PR-Agent وhook من git، مقابل 0 دولار شهريًا. اختر CodeRabbit إذا كنت تحتاج جودة مراجعة بمستوى الإنتاج، وتريدها تعمل خلال خمس دقائق، أو تراجع كودًا مملوكًا لعملاء — يبدأ من 24 دولارًا لكل مطور شهريًا ومجاني إلى الأبد في المستودعات العامة.** لا يوجد نسخة محلية نظيفة من CodeRabbit؛ المسار المحلي يعني تجميع نموذج وأداة مراجعة وhook بنفسك.',
+    leadAnswerBlock: '**اختر المحلي إذا كانت خصوصية الكود أهم من اكتشاف آخر خطأ، ولديك بالفعل إعداد LLM محلي يعمل، أو تراجع مستودعات شخصية منخفضة المخاطر — اجمع بين Qwen2.5-Coder 32B (20 جيجابايت من VRAM، رخصة Apache 2.0) وأداة المراجعة مفتوحة المصدر PR-Agent وhook من git، مقابل 0 دولار شهريًا. اختر CodeRabbit إذا كنت تحتاج جودة مراجعة بمستوى الإنتاج، وتريدها تعمل خلال خمس دقائق، أو تراجع كودًا مملوكًا لعملاء — يبدأ من 24 دولارًا لكل مطور شهريًا ومجاني إلى الأبد في المستودعات العامة.** لا يوجد نسخة محلية نظيفة من CodeRabbit؛ المسار المحلي يعني تجميع نموذج وأداة مراجعة وhook بنفسك.',
     quickAnswerTop: {
       question: 'هل يمكن لنموذج LLM محلي أن يحل محل CodeRabbit في مراجعة الكود بالذكاء الاصطناعي؟',
-      answer: '**جزئيًا.** يكتشف نموذج Qwen3-Coder 32B ذاتي الاستضافة الذي يشغّل أداة PR-Agent مفتوحة المصدر نحو 88% من الأخطاء التي قد يفوتها نموذج بحجم 7B، ولا يكلف شيئًا سوى العتاد الذي قد تملكه بالفعل — لكنه يتأخر عن مراجعة CodeRabbit المدعومة بنماذج متطورة في الفروقات (diffs) المعقدة متعددة الملفات، ويتطلب فترة بعد ظهر كاملة للإعداد بدلًا من تسجيل خمس دقائق. لا يوجد منتج واحد مفتوح المصدر يحاكي CodeRabbit وظيفة بوظيفة؛ الخيار "المحلي" هو عدة أجزاء مجمّعة، وليس تثبيتًا واحدًا.',
+      answer: '**جزئيًا.** يكتشف نموذج Qwen2.5-Coder 32B ذاتي الاستضافة الذي يشغّل أداة PR-Agent مفتوحة المصدر نحو 88% من الأخطاء التي قد يفوتها نموذج بحجم 7B، ولا يكلف شيئًا سوى العتاد الذي قد تملكه بالفعل — لكنه يتأخر عن مراجعة CodeRabbit المدعومة بنماذج متطورة في الفروقات (diffs) المعقدة متعددة الملفات، ويتطلب فترة بعد ظهر كاملة للإعداد بدلًا من تسجيل خمس دقائق. لا يوجد منتج واحد مفتوح المصدر يحاكي CodeRabbit وظيفة بوظيفة؛ الخيار "المحلي" هو عدة أجزاء مجمّعة، وليس تثبيتًا واحدًا.',
       bullets: [
         '**يتفوق المحلي في:** الخصوصية (الكود لا يغادر جهازك أبدًا)، التكلفة (0 دولار شهريًا بخلاف العتاد)، والتحكم الكامل في موجّه المراجعة',
         '**يتفوق CodeRabbit في:** وقت الإعداد (دقائق وليس بعد ظهر كاملًا)، جودة المراجعة في الفروقات المعقدة، وانعدام عبء الصيانة',
-        '**الإعداد المحلي الأدنى القابل للتطبيق:** Qwen3-Coder 32B (20 جيجابايت VRAM/RAM، رخصة Apache 2.0) + PR-Agent (Apache 2.0، ذاتي الاستضافة) + hook من نوع pre-commit في git أو CI',
+        '**الإعداد المحلي الأدنى القابل للتطبيق:** Qwen2.5-Coder 32B (20 جيجابايت VRAM/RAM، رخصة Apache 2.0) + PR-Agent (Apache 2.0، ذاتي الاستضافة) + hook من نوع pre-commit في git أو CI',
         '**سعر CodeRabbit المبدئي:** 24 دولارًا لكل مطور شهريًا (Essentials، فوترة سنوية)، مجاني إلى الأبد في المستودعات العامة، تجربة 14 يومًا',
       ],
       updatedDate: '2026-09-01',
@@ -3124,7 +3124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'يمكن لنموذج Qwen3-Coder 32B ذاتي الاستضافة، مقترنًا بأداة المراجعة مفتوحة المصدر PR-Agent، تنفيذ مراجعة كود بالذكاء الاصطناعي بالكامل على عتاد محلي مقابل 0 دولار شهريًا، لكنه يتطلب فترة بعد ظهر كاملة للتجميع ويتأخر عن مراجعة CodeRabbit المدعومة بنماذج متطورة في طلبات السحب ذات الفروقات الكبيرة أو المعقدة.',
+            text: 'يمكن لنموذج Qwen2.5-Coder 32B ذاتي الاستضافة، مقترنًا بأداة المراجعة مفتوحة المصدر PR-Agent، تنفيذ مراجعة كود بالذكاء الاصطناعي بالكامل على عتاد محلي مقابل 0 دولار شهريًا، لكنه يتطلب فترة بعد ظهر كاملة للتجميع ويتأخر عن مراجعة CodeRabbit المدعومة بنماذج متطورة في طلبات السحب ذات الفروقات الكبيرة أو المعقدة.',
           },
           {
             type: 'plain-terms',
@@ -3133,7 +3133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**لا توجد نسخة محلية نظيفة من CodeRabbit.** السير في المسار المحلي يعني تجميع نموذج كود + أداة مراجعة + hook من git، لا تثبيت تطبيق منافس واحد.',
-          '**النموذج المحلي الأدنى القابل للتطبيق:** Qwen3-Coder 32B، بحاجة إلى 20 جيجابايت من VRAM/RAM بتكميم Q4_K_M، رخصة Apache 2.0 — يكتشف نحو 88% من الأخطاء المحقونة في اختباراتنا الداخلية؛ مستوى أدنى (Qwen3-Coder 7B، نحو 5 جيجابايت) يقترب أكثر من 60%.',
+          '**النموذج المحلي الأدنى القابل للتطبيق:** Qwen2.5-Coder 32B، بحاجة إلى 20 جيجابايت من VRAM/RAM بتكميم Q4_K_M، رخصة Apache 2.0 — يكتشف نحو 88% من الأخطاء المحقونة في اختباراتنا الداخلية؛ مستوى أدنى (Qwen2.5-Coder 7B، نحو 5 جيجابايت) يقترب أكثر من 60%.',
           '**أداة المراجعة:** PR-Agent (Apache 2.0)، تبرعت به شركة Qodo للمجتمع في 2026 ويُصان الآن تحت منظمة the-pr-agent — قابل للاستضافة الذاتية عبر CLI أو Docker أو GitHub Actions.',
           '**قيد صادق:** لا تزال نماذج الكود المحلية متأخرة عن النماذج المتطورة السحابية في مراجعة الفروقات المعقدة متعددة الملفات — عامل المحلي كـ"جيد بما يكفي لمعظم طلبات السحب"، وليس كبديل مكافئ.',
           '**أسعار CodeRabbit (تم التحقق منها في 2026-09-01):** Essentials بـ24 دولارًا لكل مطور شهريًا، Team بـ48 دولارًا، Advanced بـ72 دولارًا (كلها بفوترة سنوية)، Enterprise بسعر مخصص مع خيار الاستضافة الذاتية؛ مجاني إلى الأبد في المستودعات العامة، تجربة 14 يومًا في كل مستوى مدفوع.',
@@ -3146,7 +3146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**اقرأ هذه القائمة وتوقف عند أول سطر يصفك — يعتمد القرار على احتياجات الخصوصية لديك، والعتاد الذي تملكه بالفعل، ومقدار جودة المراجعة التي يمكنك التنازل عنها.**',
         items: [
           '**أفضل خيار لمعظم الفرق ← CodeRabbit.** إعداد خلال خمس دقائق، مجاني إلى الأبد في المستودعات العامة، تجربة 14 يومًا، يبدأ من 24 دولارًا لكل مطور شهريًا. الأفضل عندما تكون جودة المراجعة وانعدام الصيانة أهم من امتلاك الحزمة بالكامل.',
-          '**الأفضل للخصوصية ← الذكاء الاصطناعي المحلي.** Qwen3-Coder 32B + PR-Agent، بتكلفة برمجيات تقارب 0 دولار، يحتاج 20+ جيجابايت VRAM وعدة ساعات من الإعداد والصيانة المستمرة، بسقف أقل في مراجعة الفروقات المعقدة متعددة الملفات.',
+          '**الأفضل للخصوصية ← الذكاء الاصطناعي المحلي.** Qwen2.5-Coder 32B + PR-Agent، بتكلفة برمجيات تقارب 0 دولار، يحتاج 20+ جيجابايت VRAM وعدة ساعات من الإعداد والصيانة المستمرة، بسقف أقل في مراجعة الفروقات المعقدة متعددة الملفات.',
           '**الأفضل من الاثنين ← استخدم كليهما.** شغّل المراجعة المحلية كخطوة pre-commit للحصول على تعليقات سريعة وخاصة، ثم دع CodeRabbit يقوم بالمراجعة الرسمية عند فتح طلب سحب — راجع سؤال "هل يمكنني استخدام نموذج محلي وCodeRabbit معًا؟" أدناه لمعرفة كيف تفعل الفرق ذلك فعليًا.',
         ],
         columns: ['العامل', 'المحلي', 'CodeRabbit'],
@@ -3177,7 +3177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'فريقك صغير جدًا بحيث لا يبرر عبء صيانة تشغيل وتحديث حزمة نموذج محلي + أداة مراجعة إلى ما لا نهاية',
           ],
           quick: [
-            'مجاني، خاص، DIY ← **Qwen3-Coder 32B + PR-Agent** (20 جيجابايت VRAM، 0 دولار شهريًا، Apache 2.0 في كل شيء)',
+            'مجاني، خاص، DIY ← **Qwen2.5-Coder 32B + PR-Agent** (20 جيجابايت VRAM، 0 دولار شهريًا، Apache 2.0 في كل شيء)',
             'يعمل خلال 5 دقائق، جودة أفضل ← **CodeRabbit** (24 دولارًا لكل مطور شهريًا Essentials، مجاني في المستودعات العامة)',
             'منظّم/معزول، بإمكانك الدفع ← **CodeRabbit Enterprise (ذاتي الاستضافة)** — سعر مخصص، يتطلب التحدث مع المبيعات',
             'أقل من 5 طلبات سحب أسبوعيًا ← **لا هذا ولا ذاك** — المراجعة البشرية لا تزال سريعة بما يكفي بهذا الحجم',
@@ -3205,10 +3205,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كيفية بناء خط أنابيب مراجعة كود محلي',
         content: '**الإعداد المحلي اليوم هو ثلاثة أجزاء: نموذج كود ذاتي الاستضافة، وأداة مراجعة مفتوحة المصدر، وhook يشغّلها عند كل فرق (diff) — وليس تطبيقًا واحدًا تثبّته.** كن واضحًا حيال ذلك من البداية: هذا عمل تجميع، وليس شراء منتج.',
         items: [
-          '**النموذج:** Qwen3-Coder 32B (Alibaba، رخصة Apache 2.0) هو الأساس العملي — يحتاج نحو 20 جيجابايت من VRAM أو ذاكرة موحدة بتكميم Q4_K_M ويكتشف نحو 88% من الأخطاء المحقونة في الاختبارات وراء [دليلنا لنماذج LLM المحلية لمراجعة الكود](/ar/local-llms/best-local-llms-code-review). على عتاد أضيق، يصلح Qwen3-Coder 7B (نحو 5 جيجابايت) لتعليقات بمستوى linting لكنه يقترب أكثر من دقة 60% — عامله كتمريرة أولى، لا كمرشح مراجعة نهائي.',
+          '**النموذج:** Qwen2.5-Coder 32B (Alibaba، رخصة Apache 2.0) هو الأساس العملي — يحتاج نحو 20 جيجابايت من VRAM أو ذاكرة موحدة بتكميم Q4_K_M ويكتشف نحو 88% من الأخطاء المحقونة في الاختبارات وراء [دليلنا لنماذج LLM المحلية لمراجعة الكود](/ar/local-llms/best-local-llms-code-review). على عتاد أضيق، يصلح Qwen2.5-Coder 7B (نحو 5 جيجابايت) لتعليقات بمستوى linting لكنه يقترب أكثر من دقة 60% — عامله كتمريرة أولى، لا كمرشح مراجعة نهائي.',
           '**الأداة:** [PR-Agent](https://github.com/The-PR-Agent/pr-agent) هو وكيل مراجعة طلبات سحب مفتوح المصدر (Apache 2.0) وقابل للاستضافة الذاتية — بُني أصلًا من قبل Qodo/CodiumAI، وتبرعت به للمجتمع في 2026 ويُصان الآن تحت منظمة The-PR-Agent على GitHub المملوكة للمجتمع. يعمل عبر CLI أو Docker أو GitHub Actions أو webhook، ويستدعي أي نقطة نهاية متوافقة مع OpenAI — بما في ذلك خادم Ollama أو vLLM محلي.',
           '**الربط:** وجّه إعداد نموذج PR-Agent إلى واجهة برمجة التطبيقات المتوافقة مع OpenAI الخاصة بخادم الاستدلال المحلي لديك (يعرض كل من Ollama وvLLM واحدة)، ثم فعّله من hook من نوع pre-commit في git لتعليقات محلية فقط، أو من خطوة في GitHub Actions/GitLab CI للتعليق على كل طلب سحب، تمامًا كما يفعل CodeRabbit.',
-          '**مواصفة دنيا واقعية:** بطاقة رسومات بذاكرة 20+ جيجابايت VRAM (RTX 4090 أو أفضل) أو جهاز Mac بمعالج Apple Silicon وذاكرة موحدة 32+ جيجابايت. دون ذلك، انتقل إلى Qwen3-Coder 7B وتقبّل الدقة الأقل — أو تجنّب المراجعة المحلية لأي شيء حساس أمنيًا.',
+          '**مواصفة دنيا واقعية:** بطاقة رسومات بذاكرة 20+ جيجابايت VRAM (RTX 4090 أو أفضل) أو جهاز Mac بمعالج Apple Silicon وذاكرة موحدة 32+ جيجابايت. دون ذلك، انتقل إلى Qwen2.5-Coder 7B وتقبّل الدقة الأقل — أو تجنّب المراجعة المحلية لأي شيء حساس أمنيًا.',
         ],
         numberedItems: [
           'شغّل خادم استدلال محلي يعرض واجهة برمجة تطبيقات متوافقة مع OpenAI: `ollama serve` (Ollama) أو `python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen3-Coder-32B-Instruct` (vLLM).',
@@ -3223,7 +3223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       limitations: {
         id: 'limitations',
         title: 'أين يقصر المسار المحلي فعليًا',
-        content: '**لا تزال نماذج الكود المحلية اليوم متأخرة عن النماذج المتطورة السحابية في جودة مراجعة الفروقات الكبيرة والمعقدة — هذا هو الحد الصادق، وليس سببًا لرفض المراجعة المحلية تمامًا.** قله بوضوح بدلًا من المبالغة في تسويق مسار DIY: سيفوت إعداد Qwen3-Coder 32B ذاتي الاستضافة أشياء تكتشفها مراجعة CodeRabbit المدعومة سحابيًا، خصوصًا في المشكلات المعمارية التي تمتد عبر ملفات كثيرة أو تحليل الأمان الذي يتطلب استدلالًا مكثفًا.',
+        content: '**لا تزال نماذج الكود المحلية اليوم متأخرة عن النماذج المتطورة السحابية في جودة مراجعة الفروقات الكبيرة والمعقدة — هذا هو الحد الصادق، وليس سببًا لرفض المراجعة المحلية تمامًا.** قله بوضوح بدلًا من المبالغة في تسويق مسار DIY: سيفوت إعداد Qwen2.5-Coder 32B ذاتي الاستضافة أشياء تكتشفها مراجعة CodeRabbit المدعومة سحابيًا، خصوصًا في المشكلات المعمارية التي تمتد عبر ملفات كثيرة أو تحليل الأمان الذي يتطلب استدلالًا مكثفًا.',
         items: [
           '**المراجعة المعمارية متعددة الملفات هي نقطة الضعف.** يمتلك نموذج محلي بذاكرة 20 جيجابايت سياقًا فعليًا أصغر وعمق استدلال أقل من النماذج المتطورة التي يعتمد عليها خط أنابيب CodeRabbit — كسر بين ملفات على بعد عدة خطوات هو بالضبط النوع الذي من الأرجح أن يفوته إعداد محلي يعتمد فقط على الفرق (diff) أو على نموذج واحد.',
           '**لا يوجد تحسين مستمر للنموذج.** تتحسن جودة مراجعة CodeRabbit تلقائيًا مع تحسّن النماذج المتطورة الأساسية التي يستخدمها. يظل النموذج المحلي مجمدًا عند نقطة التحقق (checkpoint) التي حملتها حتى تعيد بنفسك تحميل وتقييم نموذج أحدث.',
@@ -3303,7 +3303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'التوصية حسب حالة الاستخدام',
         content: '**أربعة ملامح قارئ تغطي معظم من يطرح هذا السؤال — ابحث عن ملفك وتخطَّ الباقي.**',
         items: [
-          '**مستودعات شخصية أو مفتوحة المصدر، مهتم بالخصوصية، يملك بالفعل عتاد LLM محلي** ← المحلي. لديك بالفعل بطاقة الرسومات، ومخاطر تفويت خطأ منخفضة، ولا سبب لإرسال كود عام أو شخصي إلى طرف ثالث. استخدم Qwen3-Coder 32B + PR-Agent.',
+          '**مستودعات شخصية أو مفتوحة المصدر، مهتم بالخصوصية، يملك بالفعل عتاد LLM محلي** ← المحلي. لديك بالفعل بطاقة الرسومات، ومخاطر تفويت خطأ منخفضة، ولا سبب لإرسال كود عام أو شخصي إلى طرف ثالث. استخدم Qwen2.5-Coder 32B + PR-Agent.',
           '**شركة ناشئة أو فريق صغير، يريده يعمل اليوم** ← CodeRabbit. وقت الإعداد يرجّح أكثر من تكلفة الاشتراك في هذه المرحلة — ثبّت التطبيق، احصل على تعليقات مراجعة في طلب السحب التالي، تابع.',
           '**قطاع منظّم، لا يمكنه إرسال الكود خارج منشآته** ← المحلي، أو مستوى CodeRabbit Enterprise ذاتي الاستضافة إذا سمحت الميزانية والمشتريات بعلاقة مع مزوّد. لا تفترض أن "لا يوجد مزوّد يقدّم هذا" — يمتلك CodeRabbit بالفعل خيار Enterprise ذاتي الاستضافة؛ إنه محادثة مبيعات بسعر مخصص، وليس خطة ذاتية الخدمة، فوازن ذلك مقابل بناء حزمة DIY بنفسك.',
           '**فريق كبير، فروقات معقدة، جودة حرجة** ← CodeRabbit (أو Greptile/Qodo، حسب المنصة واحتياجات النشر — راجع [المقارنة السحابية الثلاثية الكاملة](/ar/local-llms/best-ai-code-review-tools)). هذا هو الملف الذي يهم فيه أكثر القيد الصادق للمسار المحلي في المراجعة المعمارية متعددة الملفات.',
@@ -3328,7 +3328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'تشغيل نموذج بحجم 7B وتوقع دقة بحجم 32B',
-            whyItMatters: 'Qwen3-Coder 7B مفيد لتعليقات سريعة بمستوى linting، بدقة نحو 60% في اكتشاف الأخطاء، وليس لجودة المراجعة التي يقدّمها نموذج 32B أو CodeRabbit. عدّل مستوى النموذج بحسب مقدار ثقتك في مخرجاته.',
+            whyItMatters: 'Qwen2.5-Coder 7B مفيد لتعليقات سريعة بمستوى linting، بدقة نحو 60% في اكتشاف الأخطاء، وليس لجودة المراجعة التي يقدّمها نموذج 32B أو CodeRabbit. عدّل مستوى النموذج بحسب مقدار ثقتك في مخرجاته.',
           },
         ],
       },
@@ -3336,8 +3336,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
-          { q: 'هل يمكن لنموذج LLM محلي أن يحل محل CodeRabbit بالكامل؟', a: 'ليس كبديل مكافئ. يمكن لنموذج Qwen3-Coder 32B ذاتي الاستضافة مع أداة PR-Agent مفتوحة المصدر اكتشاف معظم الأخطاء التي قد يشير إليها مراجع بشري، لكنه لا يزال متأخرًا عن مراجعة CodeRabbit المدعومة بنماذج متطورة في الفروقات المعقدة متعددة الملفات — ويتطلب تجميع ثلاثة أجزاء منفصلة بدلًا من تثبيت منتج واحد.' },
-          { q: 'ما هو الحد الأدنى من العتاد لمراجعة الكود بالذكاء الاصطناعي المحلي؟', a: 'يحتاج Qwen3-Coder 32B بتكميم Q4_K_M نحو 20 جيجابايت من VRAM أو ذاكرة موحدة. على عتاد أضيق، يعمل Qwen3-Coder 7B في نحو 5 جيجابايت لكنه ينخفض إلى نحو 60% من دقة اكتشاف الأخطاء مقابل 88% لنموذج 32B، فعامله كتمريرة أولى لا كمرشح مراجعة كامل.' },
+          { q: 'هل يمكن لنموذج LLM محلي أن يحل محل CodeRabbit بالكامل؟', a: 'ليس كبديل مكافئ. يمكن لنموذج Qwen2.5-Coder 32B ذاتي الاستضافة مع أداة PR-Agent مفتوحة المصدر اكتشاف معظم الأخطاء التي قد يشير إليها مراجع بشري، لكنه لا يزال متأخرًا عن مراجعة CodeRabbit المدعومة بنماذج متطورة في الفروقات المعقدة متعددة الملفات — ويتطلب تجميع ثلاثة أجزاء منفصلة بدلًا من تثبيت منتج واحد.' },
+          { q: 'ما هو الحد الأدنى من العتاد لمراجعة الكود بالذكاء الاصطناعي المحلي؟', a: 'يحتاج Qwen2.5-Coder 32B بتكميم Q4_K_M نحو 20 جيجابايت من VRAM أو ذاكرة موحدة. على عتاد أضيق، يعمل Qwen2.5-Coder 7B في نحو 5 جيجابايت لكنه ينخفض إلى نحو 60% من دقة اكتشاف الأخطاء مقابل 88% لنموذج 32B، فعامله كتمريرة أولى لا كمرشح مراجعة كامل.' },
           { q: 'هل لا يزال PR-Agent يُصان؟', a: 'نعم. تبرعت شركة Qodo (الشركة وراء PR-Agent، سابقًا CodiumAI) بالمشروع للمجتمع في 2026؛ يُصان الآن تحت منظمة The-PR-Agent على GitHub المملوكة للمجتمع، بموجب رخصة Apache 2.0، ولا يزال قابلًا للاستضافة الذاتية عبر CLI أو Docker أو GitHub Actions.' },
           { q: 'كم يكلف CodeRabbit في 2026؟', a: 'تكلف خطة CodeRabbit Essentials 24 دولارًا لكل مطور شهريًا بفوترة سنوية، وTeam تكلف 48 دولارًا، وAdvanced تكلف 72 دولارًا. يحمل Enterprise سعرًا مخصصًا ويشمل الاستضافة الذاتية. تشمل جميع الخطط تجربة مجانية لمدة 14 يومًا دون الحاجة لبطاقة، وتحصل المستودعات العامة على مراجعة مجانية إلى الأبد.' },
           { q: 'هل يقدّم CodeRabbit خيار استضافة ذاتية أو داخل المنشأة؟', a: 'نعم، في مستوى Enterprise. يحمل سعرًا مخصصًا ويتطلب محادثة مبيعات بدلًا من تسجيل ذاتي الخدمة، لكنه خيار حقيقي للفرق المنظّمة التي تحتاج نشرًا داخل المنشأة دون بناء حزمة DIY محلية.' },
@@ -3345,14 +3345,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'ما هي أكبر نقطة ضعف في النهج المحلي؟', a: 'جودة المراجعة في الفروقات المعقدة أو متعددة الملفات أو المعمارية. تمتلك النماذج المحلية في نطاق 20-32 جيجابايت من VRAM سياقًا فعليًا أصغر وعمق استدلال أقل من النماذج المتطورة التي تعتمد عليها الأدوات السحابية، لذا فإن كسرًا بين عدة ملفات بعيدة هو النوع الأكثر عرضة لعدم الانتباه إليه في إعداد محلي.' },
           { q: 'أي خيار أرخص لفريق من 5 أشخاص؟', a: 'يكلف CodeRabbit بسعر Essentials 120 دولارًا شهريًا لخمسة مطورين. يكلف الإعداد المحلي 0 دولار شهريًا في البرمجيات، لكنه يفترض وجود (أو شراء) بطاقة رسومات واحدة على الأقل بذاكرة 20+ جيجابايت VRAM، بالإضافة إلى وقت الإعداد والصيانة — احسب ذلك الوقت بصدق مقابل 120 دولارًا شهريًا قبل افتراض أن المحلي يفوز في التكلفة.' },
           { q: 'هل يمكنني استخدام نموذج محلي وCodeRabbit معًا؟', a: 'نعم، وهذا نمط معقول: استخدم نموذجًا محليًا لتعليقات سريعة وخاصة قبل الالتزام (commit)، حتى قبل دفع الكود، وCodeRabbit للمراجعة الرسمية عند فتح طلب سحب. هذا يمنحك خصوصية في التمريرة الأولى وجودة نموذج متطور في التمريرة الأكثر أهمية.' },
-          { q: 'ما النموذج المحلي الذي يجب أن أختاره فعليًا؟', a: 'Qwen3-Coder 32B لمعظم الحالات — إنه الأساس العملي الحالي لمراجعة كود محلية جادة. راجع دليلنا المخصص لـ[أفضل نماذج LLM محلية لمراجعة الكود](/ar/local-llms/best-local-llms-code-review) للمقارنة الكاملة المرتبة بين أحجام النماذج وأنواع المراجعة.' },
+          { q: 'ما النموذج المحلي الذي يجب أن أختاره فعليًا؟', a: 'Qwen2.5-Coder 32B لمعظم الحالات — إنه الأساس العملي الحالي لمراجعة كود محلية جادة. راجع دليلنا المخصص لـ[أفضل نماذج LLM محلية لمراجعة الكود](/ar/local-llms/best-local-llms-code-review) للمقارنة الكاملة المرتبة بين أحجام النماذج وأنواع المراجعة.' },
         ],
       },
       verdict: {
         id: 'verdict',
         title: 'الحكم النهائي',
         items: [
-          '**اختر المحلي إذا** كانت الخصوصية أهم لديك من اكتشاف آخر خطأ ولديك بالفعل 20+ جيجابايت من VRAM — الخطوة التالية: حمّل Qwen3-Coder 32B عبر Ollama واربطه بـPR-Agent باستخدام hook من GitHub Actions.',
+          '**اختر المحلي إذا** كانت الخصوصية أهم لديك من اكتشاف آخر خطأ ولديك بالفعل 20+ جيجابايت من VRAM — الخطوة التالية: حمّل Qwen2.5-Coder 32B عبر Ollama واربطه بـPR-Agent باستخدام hook من GitHub Actions.',
           '**اختر CodeRabbit إذا** أردته يعمل اليوم وكان مطلبك من جودة المراجعة عاليًا — الخطوة التالية: ثبّت التطبيق في مستودعك الرئيسي واستخدم تجربة الـ14 يومًا لمقارنة نتيجته بعملية المراجعة الحالية لديك.',
           '**اختر CodeRabbit Enterprise (ذاتي الاستضافة) إذا** كنت منظّمًا ولا يمكنك إرسال الكود خارج منشآتك لكنك تريد جودة مراجعة CodeRabbit — الخطوة التالية: احجز محادثة Enterprise بدلًا من افتراض أن الاستضافة الذاتية غير متاحة.',
           '**استخدم كليهما إذا** أردت الخصوصية في التمريرة الأولى وجودة نموذج متطور في التمريرة الأكثر أهمية — الخطوة التالية: اربط النموذج المحلي بـhook من نوع pre-commit للحصول على تعليقات خاصة وفورية، ودع CodeRabbit يتولى المراجعة الرسمية لطلب السحب.',
@@ -3365,7 +3365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: 'https://www.coderabbit.ai/pricing', title: 'أسعار CodeRabbit', description: 'مستويات Essentials وTeam وAdvanced وEnterprise، وتجربة الـ14 يومًا، والوصول المجاني للمستودعات العامة — تم التحقق منه في 2026-09-01.' },
           { url: 'https://github.com/The-PR-Agent/pr-agent', title: 'PR-Agent (يصونه المجتمع)', description: 'وكيل مراجعة طلبات سحب برخصة Apache 2.0 وقابل للاستضافة الذاتية، تبرعت به Qodo للمجتمع في 2026.' },
-          { url: '/ar/local-llms/best-local-llms-code-review', title: 'أفضل نماذج LLM محلية لمراجعة الكود (PromptQuorum)', description: 'مقارنة مرتبة بين Qwen3-Coder وLlama 3.3 وDeepSeek-R1 لمراجعة الكود المحلية، تشمل رقم 88% لاكتشاف الأخطاء في Qwen3-Coder 32B المذكور في هذه الصفحة.' },
+          { url: '/ar/local-llms/best-local-llms-code-review', title: 'أفضل نماذج LLM محلية لمراجعة الكود (PromptQuorum)', description: 'مقارنة مرتبة بين Qwen3-Coder وLlama 3.3 وDeepSeek-R1 لمراجعة الكود المحلية، تشمل رقم 88% لاكتشاف الأخطاء في Qwen2.5-Coder 32B المذكور في هذه الصفحة.' },
           { url: '/ar/local-llms/best-ai-code-review-tools', title: 'CodeRabbit مقابل Greptile مقابل Qodo (PromptQuorum)', description: 'المقارنة السحابية الثلاثية الكاملة التي تحيل إليها هذه الصفحة بدلًا من تكرارها.' },
         ],
       },
@@ -3377,14 +3377,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[أفضل نماذج LLM محلية لمراجعة الكود](/ar/local-llms/best-local-llms-code-review) — مقارنة مرتبة للنماذج (Qwen3-Coder، Llama 3.3، DeepSeek-R1) للنصف المحلي من هذه الصفحة',
           '[أفضل مساعد برمجة بالذكاء الاصطناعي لـLLM المحلي](/ar/local-llms/best-ai-coding-assistant-local-llm) — الأدوات التي تكتب الفرق (diff) الذي تقرأه أداة مراجعة (محلية أو سحابية)',
           '[حزمة أدوات المطور بـLLM المحلي](/ar/local-llms/local-llm-developer-stack) — أين يندرج خط أنابيب مراجعة ذاتي الاستضافة ضمن سلسلة أدوات أوسع تركّز على المحلي',
-          '[شرح تكميم LLM](/ar/local-llms/llm-quantization-explained) — رياضيات VRAM وراء رقم 20 جيجابايت لـQwen3-Coder 32B المستخدم في هذه الصفحة',
+          '[شرح تكميم LLM](/ar/local-llms/llm-quantization-explained) — رياضيات VRAM وراء رقم 20 جيجابايت لـQwen2.5-Coder 32B المستخدم في هذه الصفحة',
         ],
       },
     },
     schema: {
       '@type': 'TechArticle',
       headline: 'مراجعة الكود بالذكاء الاصطناعي المحلي مقابل CodeRabbit: هل يستحق القيام بها بنفسك؟',
-      description: 'ما إذا كان خط أنابيب ذاتي الاستضافة من Qwen3-Coder 32B + PR-Agent يمكن أن يحل محل CodeRabbit لمراجعة الكود بالذكاء الاصطناعي — مقايضات صادقة، أسعار تم التحقق منها، وتوصية حسب حالة الاستخدام.',
+      description: 'ما إذا كان خط أنابيب ذاتي الاستضافة من Qwen2.5-Coder 32B + PR-Agent يمكن أن يحل محل CodeRabbit لمراجعة الكود بالذكاء الاصطناعي — مقايضات صادقة، أسعار تم التحقق منها، وتوصية حسب حالة الاستخدام.',
       datePublished: '2026-09-01',
       dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/ar/local-llms/local-ai-code-review-vs-coderabbit',
@@ -3414,7 +3414,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'هل يمكن لنموذج LLM محلي أن يحل محل CodeRabbit بالكامل؟',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'ليس كبديل مكافئ. يمكن لنموذج Qwen3-Coder 32B ذاتي الاستضافة مع أداة PR-Agent مفتوحة المصدر اكتشاف معظم الأخطاء التي قد يشير إليها مراجع بشري، لكنه لا يزال متأخرًا عن مراجعة CodeRabbit المدعومة بنماذج متطورة في الفروقات المعقدة متعددة الملفات — ويتطلب تجميع ثلاثة أجزاء منفصلة بدلًا من تثبيت منتج واحد.',
+            'text': 'ليس كبديل مكافئ. يمكن لنموذج Qwen2.5-Coder 32B ذاتي الاستضافة مع أداة PR-Agent مفتوحة المصدر اكتشاف معظم الأخطاء التي قد يشير إليها مراجع بشري، لكنه لا يزال متأخرًا عن مراجعة CodeRabbit المدعومة بنماذج متطورة في الفروقات المعقدة متعددة الملفات — ويتطلب تجميع ثلاثة أجزاء منفصلة بدلًا من تثبيت منتج واحد.',
           },
         },
         {
@@ -3422,7 +3422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'ما هو الحد الأدنى من العتاد لمراجعة الكود بالذكاء الاصطناعي المحلي؟',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'يحتاج Qwen3-Coder 32B بتكميم Q4_K_M نحو 20 جيجابايت من VRAM أو ذاكرة موحدة. على عتاد أضيق، يعمل Qwen3-Coder 7B في نحو 5 جيجابايت لكنه ينخفض إلى نحو 60% من دقة اكتشاف الأخطاء مقابل 88% لنموذج 32B، فعامله كتمريرة أولى لا كمرشح مراجعة كامل.',
+            'text': 'يحتاج Qwen2.5-Coder 32B بتكميم Q4_K_M نحو 20 جيجابايت من VRAM أو ذاكرة موحدة. على عتاد أضيق، يعمل Qwen2.5-Coder 7B في نحو 5 جيجابايت لكنه ينخفض إلى نحو 60% من دقة اكتشاف الأخطاء مقابل 88% لنموذج 32B، فعامله كتمريرة أولى لا كمرشح مراجعة كامل.',
           },
         },
         {
@@ -3486,7 +3486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': 'ما النموذج المحلي الذي يجب أن أختاره فعليًا؟',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Qwen3-Coder 32B لمعظم الحالات — إنه الأساس العملي الحالي لمراجعة كود محلية جادة. راجع دليلنا المخصص لأفضل نماذج LLM محلية لمراجعة الكود للمقارنة الكاملة المرتبة بين أحجام النماذج وأنواع المراجعة.',
+            'text': 'Qwen2.5-Coder 32B لمعظم الحالات — إنه الأساس العملي الحالي لمراجعة كود محلية جادة. راجع دليلنا المخصص لأفضل نماذج LLM محلية لمراجعة الكود للمقارنة الكاملة المرتبة بين أحجام النماذج وأنواع المراجعة.',
           },
         },
       ],
@@ -3498,7 +3498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: '로컬 AI 코드 리뷰 대 CodeRabbit: 직접 구축할 가치가 있을까?',
     seoTitle: '로컬 AI 코드 리뷰 대 CodeRabbit: DIY 대 SaaS (2026)',
-    metaDescription: 'CodeRabbit은 개발자당 월 $24이며 5분이면 작동합니다. Qwen3-Coder 32B + PR-Agent로 만드는 셀프 호스팅 구성은 무료지만 버그를 더 적게 잡아냅니다. 실제 트레이드오프를 정리했습니다.',
+    metaDescription: 'CodeRabbit은 개발자당 월 $24이며 5분이면 작동합니다. Qwen2.5-Coder 32B + PR-Agent로 만드는 셀프 호스팅 구성은 무료지만 버그를 더 적게 잡아냅니다. 실제 트레이드오프를 정리했습니다.',
     educationalLevel: 'Advanced',
     audience: '이미 로컬 LLM을 운영 중이며 코드 리뷰도 직접 호스팅할지 결정하려는 개발자',
     affiliateDisclosure: true,
@@ -3513,14 +3513,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'pr-agent 셀프 호스팅',
       '로컬 코드 리뷰 파이프라인',
     ],
-    leadAnswerBlock: '**코드의 프라이버시가 마지막 버그 하나를 잡는 것보다 중요하거나, 이미 로컬 LLM 구성을 운영 중이거나, 위험도가 낮은 개인 저장소를 리뷰한다면 로컬을 선택하십시오 — Qwen3-Coder 32B(20GB VRAM, Apache 2.0)와 오픈소스 하네스 PR-Agent, git hook을 조합하면 월 $0입니다. 프로덕션급 리뷰 품질이 필요하거나, 5분 안에 작동시키고 싶거나, 고객의 독점 코드를 리뷰한다면 CodeRabbit을 선택하십시오 — 개발자당 월 $24부터 시작하며 퍼블릭 저장소에서는 영구 무료입니다.** CodeRabbit을 그대로 복제한 깔끔한 로컬 대안은 없습니다. 로컬 경로는 모델과 리뷰 하네스, hook을 직접 조립하는 것을 의미합니다.',
+    leadAnswerBlock: '**코드의 프라이버시가 마지막 버그 하나를 잡는 것보다 중요하거나, 이미 로컬 LLM 구성을 운영 중이거나, 위험도가 낮은 개인 저장소를 리뷰한다면 로컬을 선택하십시오 — Qwen2.5-Coder 32B(20GB VRAM, Apache 2.0)와 오픈소스 하네스 PR-Agent, git hook을 조합하면 월 $0입니다. 프로덕션급 리뷰 품질이 필요하거나, 5분 안에 작동시키고 싶거나, 고객의 독점 코드를 리뷰한다면 CodeRabbit을 선택하십시오 — 개발자당 월 $24부터 시작하며 퍼블릭 저장소에서는 영구 무료입니다.** CodeRabbit을 그대로 복제한 깔끔한 로컬 대안은 없습니다. 로컬 경로는 모델과 리뷰 하네스, hook을 직접 조립하는 것을 의미합니다.',
     quickAnswerTop: {
       question: '로컬 LLM이 AI 코드 리뷰에서 CodeRabbit을 대체할 수 있을까요?',
-      answer: '**부분적으로 가능합니다.** 오픈소스 하네스 PR-Agent를 구동하는 셀프 호스팅 Qwen3-Coder 32B 모델은 7B 모델이 놓칠 버그의 약 88%를 잡아내며, 이미 보유하고 있을지 모를 하드웨어 외에는 비용이 들지 않습니다 — 하지만 여러 파일에 걸친 복잡한 diff에서는 프론티어 모델 기반 CodeRabbit의 리뷰에 뒤처지며, 5분짜리 가입 대신 반나절의 설정 작업이 필요합니다. CodeRabbit을 기능 단위로 그대로 복제하는 단일 오픈소스 제품은 존재하지 않습니다. "로컬" 옵션은 여러 부품을 조립한 것이지 단일 설치가 아닙니다.',
+      answer: '**부분적으로 가능합니다.** 오픈소스 하네스 PR-Agent를 구동하는 셀프 호스팅 Qwen2.5-Coder 32B 모델은 7B 모델이 놓칠 버그의 약 88%를 잡아내며, 이미 보유하고 있을지 모를 하드웨어 외에는 비용이 들지 않습니다 — 하지만 여러 파일에 걸친 복잡한 diff에서는 프론티어 모델 기반 CodeRabbit의 리뷰에 뒤처지며, 5분짜리 가입 대신 반나절의 설정 작업이 필요합니다. CodeRabbit을 기능 단위로 그대로 복제하는 단일 오픈소스 제품은 존재하지 않습니다. "로컬" 옵션은 여러 부품을 조립한 것이지 단일 설치가 아닙니다.',
       bullets: [
         '**로컬이 앞서는 부분:** 프라이버시(코드가 절대 내 기기를 떠나지 않음), 비용(하드웨어 외 월 $0), 리뷰 프롬프트에 대한 완전한 제어',
         '**CodeRabbit이 앞서는 부분:** 설정 시간(반나절이 아니라 몇 분), 복잡한 diff에서의 리뷰 품질, 유지보수 부담 제로',
-        '**최소 실행 가능한 로컬 구성:** Qwen3-Coder 32B(20GB VRAM/RAM, Apache 2.0) + PR-Agent(Apache 2.0, 셀프 호스팅) + git pre-commit hook 또는 CI hook',
+        '**최소 실행 가능한 로컬 구성:** Qwen2.5-Coder 32B(20GB VRAM/RAM, Apache 2.0) + PR-Agent(Apache 2.0, 셀프 호스팅) + git pre-commit hook 또는 CI hook',
         '**CodeRabbit 시작 가격:** 개발자당 월 $24(Essentials, 연간 결제), 퍼블릭 저장소 영구 무료, 14일 체험',
       ],
       updatedDate: '2026-09-01',
@@ -3558,7 +3558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: '셀프 호스팅 Qwen3-Coder 32B 모델을 오픈소스 리뷰 하네스 PR-Agent와 결합하면 로컬 하드웨어만으로 AI 코드 리뷰를 월 $0에 완전히 수행할 수 있지만, 반나절의 조립 작업이 필요하고 크거나 복잡한 diff를 가진 풀 리퀘스트에서는 프론티어 모델 기반 CodeRabbit의 리뷰에 뒤처집니다.',
+            text: '셀프 호스팅 Qwen2.5-Coder 32B 모델을 오픈소스 리뷰 하네스 PR-Agent와 결합하면 로컬 하드웨어만으로 AI 코드 리뷰를 월 $0에 완전히 수행할 수 있지만, 반나절의 조립 작업이 필요하고 크거나 복잡한 diff를 가진 풀 리퀘스트에서는 프론티어 모델 기반 CodeRabbit의 리뷰에 뒤처집니다.',
           },
           {
             type: 'plain-terms',
@@ -3567,7 +3567,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**CodeRabbit을 그대로 복제한 깔끔한 로컬 대안은 없습니다.** 로컬 경로는 코드 모델 + 리뷰 하네스 + git hook을 조립하는 것이지, 경쟁 앱 하나를 설치하는 것이 아닙니다.',
-          '**최소 실행 가능한 로컬 모델:** Qwen3-Coder 32B, Q4_K_M 양자화 기준 20GB VRAM/RAM 필요, Apache 2.0 라이선스 — 내부 테스트에서 주입된 버그의 약 88%를 탐지합니다. 한 단계 아래(Qwen3-Coder 7B, 약 5GB)는 약 60%에 더 가깝습니다.',
+          '**최소 실행 가능한 로컬 모델:** Qwen2.5-Coder 32B, Q4_K_M 양자화 기준 20GB VRAM/RAM 필요, Apache 2.0 라이선스 — 내부 테스트에서 주입된 버그의 약 88%를 탐지합니다. 한 단계 아래(Qwen2.5-Coder 7B, 약 5GB)는 약 60%에 더 가깝습니다.',
           '**리뷰 하네스:** PR-Agent(Apache 2.0)는 Qodo가 2026년 커뮤니티에 기부했으며 현재 the-pr-agent 조직 아래에서 관리됩니다 — CLI, Docker, GitHub Actions를 통해 셀프 호스팅 가능합니다.',
           '**정직한 한계:** 로컬 코드 모델은 여러 파일에 걸친 복잡한 diff 리뷰에서 여전히 클라우드 프론티어 모델에 뒤처집니다 — 로컬을 동등한 대체재가 아니라 "대부분의 PR에 충분히 좋은" 수준으로 대하십시오.',
           '**CodeRabbit 가격(2026-09-01 기준 확인):** Essentials 개발자당 월 $24, Team $48, Advanced $72(모두 연간 결제), Enterprise는 맞춤 가격이며 셀프 호스팅 옵션 제공. 퍼블릭 저장소는 영구 무료, 모든 유료 등급에서 14일 체험 제공.',
@@ -3580,7 +3580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**이 목록을 훑어보고 자신을 가장 잘 설명하는 첫 줄에서 멈추십시오 — 결정은 프라이버시 요구 사항, 이미 보유한 하드웨어, 감수할 수 있는 리뷰 품질 저하 정도에 달려 있습니다.**',
         items: [
           '**대부분의 팀에게 최선 ← CodeRabbit.** 5분 만에 설정 완료, 퍼블릭 저장소에서 영구 무료, 14일 체험, 개발자당 월 $24부터. 리뷰 품질과 유지보수 부담 제로가 스택을 직접 소유하는 것보다 중요할 때 최선입니다.',
-          '**프라이버시에는 최선 ← 로컬 AI.** Qwen3-Coder 32B + PR-Agent 조합은 소프트웨어 비용이 사실상 월 $0이지만, 20GB 이상의 VRAM과 몇 시간의 설정 및 지속적인 유지보수가 필요하며 복잡한 다중 파일 리뷰에서는 상한선이 더 낮습니다.',
+          '**프라이버시에는 최선 ← 로컬 AI.** Qwen2.5-Coder 32B + PR-Agent 조합은 소프트웨어 비용이 사실상 월 $0이지만, 20GB 이상의 VRAM과 몇 시간의 설정 및 지속적인 유지보수가 필요하며 복잡한 다중 파일 리뷰에서는 상한선이 더 낮습니다.',
           '**둘 다의 장점을 원한다면 ← 둘 다 사용하십시오.** 로컬 리뷰를 pre-commit 단계로 실행해 빠르고 프라이빗한 피드백을 받은 다음, 풀 리퀘스트가 열리면 CodeRabbit이 공식 리뷰를 맡도록 하십시오 — 팀이 실제로 이를 어떻게 운영하는지는 아래 "둘 다 사용할 수 있나요?" FAQ를 참고하십시오.',
         ],
         columns: ['요소', '로컬 AI', 'CodeRabbit'],
@@ -3611,7 +3611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '팀 규모가 작아 로컬 모델 + 하네스 스택을 무기한 실행하고 업데이트하는 유지보수 부담을 정당화하기 어렵습니다',
           ],
           quick: [
-            '무료, 프라이빗, DIY → **Qwen3-Coder 32B + PR-Agent**(20GB VRAM, 월 $0, 전부 Apache 2.0)',
+            '무료, 프라이빗, DIY → **Qwen2.5-Coder 32B + PR-Agent**(20GB VRAM, 월 $0, 전부 Apache 2.0)',
             '5분 안에 작동, 더 나은 품질 → **CodeRabbit**(Essentials 개발자당 월 $24, 퍼블릭 저장소 무료)',
             '규제 산업/격리 환경, 비용 지불 가능 → **CodeRabbit Enterprise(셀프 호스팅)** — 맞춤 가격, 영업팀과 상담 필요',
             '주당 PR 5건 미만 → **둘 다 필요 없음** — 이 정도 물량에서는 사람이 직접 리뷰해도 충분히 빠릅니다',
@@ -3639,10 +3639,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '로컬 코드 리뷰 파이프라인 구축 방법',
         content: '**오늘날의 로컬 구성은 세 가지 부품으로 이루어집니다: 셀프 호스팅 코드 모델, 오픈소스 리뷰 하네스, 그리고 모든 diff에서 이를 실행하는 hook — 설치하는 단일 앱이 아닙니다.** 처음부터 이 점을 분명히 하십시오: 이것은 제품 구매가 아니라 조립 작업입니다.',
         items: [
-          '**모델:** Qwen3-Coder 32B(Alibaba, Apache 2.0)가 실용적인 기준선입니다 — Q4_K_M 양자화 기준 약 20GB의 VRAM 또는 통합 메모리가 필요하며, 저희의 [코드 리뷰용 로컬 LLM 가이드](/ko/local-llms/best-local-llms-code-review) 뒤에 있는 테스트에서 주입된 버그의 약 88%를 탐지합니다. 더 제한적인 하드웨어에서는 Qwen3-Coder 7B(약 5GB)가 린트 수준의 피드백에는 쓸 만하지만 정확도는 약 60%에 더 가깝습니다 — 최종 필터가 아니라 1차 검토로 취급하십시오.',
+          '**모델:** Qwen2.5-Coder 32B(Alibaba, Apache 2.0)가 실용적인 기준선입니다 — Q4_K_M 양자화 기준 약 20GB의 VRAM 또는 통합 메모리가 필요하며, 저희의 [코드 리뷰용 로컬 LLM 가이드](/ko/local-llms/best-local-llms-code-review) 뒤에 있는 테스트에서 주입된 버그의 약 88%를 탐지합니다. 더 제한적인 하드웨어에서는 Qwen2.5-Coder 7B(약 5GB)가 린트 수준의 피드백에는 쓸 만하지만 정확도는 약 60%에 더 가깝습니다 — 최종 필터가 아니라 1차 검토로 취급하십시오.',
           '**하네스:** [PR-Agent](https://github.com/The-PR-Agent/pr-agent)는 오픈소스(Apache 2.0)이며 셀프 호스팅 가능한 PR 리뷰 에이전트입니다 — 원래 Qodo/CodiumAI가 만들었고 2026년 커뮤니티에 기부되었으며 현재 커뮤니티 소유의 The-PR-Agent GitHub 조직 아래에서 관리됩니다. CLI, Docker, GitHub Actions 또는 webhook을 통해 실행되며, OpenAI 호환 엔드포인트라면 무엇이든 호출할 수 있습니다 — 로컬 Ollama나 vLLM 서버도 포함됩니다.',
           '**연결:** PR-Agent의 모델 설정을 로컬 추론 서버의 OpenAI 호환 API로 지정한 다음(Ollama와 vLLM 모두 이를 노출합니다), 로컬 전용 피드백을 위해서는 git pre-commit hook에서, CodeRabbit처럼 모든 풀 리퀘스트에 코멘트를 달려면 GitHub Actions/GitLab CI 단계에서 트리거하십시오.',
-          '**현실적인 최소 사양:** 20GB 이상의 VRAM을 갖춘 GPU(RTX 4090 이상) 또는 32GB 이상의 통합 메모리를 갖춘 Apple Silicon Mac. 이보다 낮다면 Qwen3-Coder 7B로 내려가서 낮은 정확도를 감수하거나, 보안에 민감한 작업에는 로컬 리뷰를 피하십시오.',
+          '**현실적인 최소 사양:** 20GB 이상의 VRAM을 갖춘 GPU(RTX 4090 이상) 또는 32GB 이상의 통합 메모리를 갖춘 Apple Silicon Mac. 이보다 낮다면 Qwen2.5-Coder 7B로 내려가서 낮은 정확도를 감수하거나, 보안에 민감한 작업에는 로컬 리뷰를 피하십시오.',
         ],
         numberedItems: [
           'OpenAI 호환 API를 노출하는 로컬 추론 서버를 시작하십시오: `ollama serve`(Ollama) 또는 `python -m vllm.entrypoints.openai.api_server --model Qwen/Qwen3-Coder-32B-Instruct`(vLLM).',
@@ -3657,7 +3657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       limitations: {
         id: 'limitations',
         title: '로컬 경로가 실제로 부족한 부분',
-        content: '**오늘날의 로컬 코드 모델은 크고 복잡한 diff의 리뷰 품질에서 여전히 클라우드 프론티어 모델에 뒤처집니다 — 이것이 정직한 한계이지, 로컬 리뷰를 완전히 배제할 이유는 아닙니다.** DIY 경로를 과대 포장하는 대신 명확히 말하십시오: 셀프 호스팅 Qwen3-Coder 32B 구성은 클라우드 기반 CodeRabbit 리뷰가 잡아내는 것을 놓칠 것입니다. 특히 여러 파일에 걸친 아키텍처 문제나 깊은 추론이 필요한 보안 분석에서 그렇습니다.',
+        content: '**오늘날의 로컬 코드 모델은 크고 복잡한 diff의 리뷰 품질에서 여전히 클라우드 프론티어 모델에 뒤처집니다 — 이것이 정직한 한계이지, 로컬 리뷰를 완전히 배제할 이유는 아닙니다.** DIY 경로를 과대 포장하는 대신 명확히 말하십시오: 셀프 호스팅 Qwen2.5-Coder 32B 구성은 클라우드 기반 CodeRabbit 리뷰가 잡아내는 것을 놓칠 것입니다. 특히 여러 파일에 걸친 아키텍처 문제나 깊은 추론이 필요한 보안 분석에서 그렇습니다.',
         items: [
           '**다중 파일 아키텍처 리뷰가 약점입니다.** 20GB 로컬 모델은 CodeRabbit 파이프라인을 뒷받침하는 프론티어 모델보다 실질적인 컨텍스트가 작고 추론 깊이가 얕습니다 — 여러 단계 떨어진 파일 간의 문제는 diff만 보거나 단일 모델에 의존하는 로컬 구성이 놓칠 가능성이 가장 큰 유형입니다.',
           '**모델의 지속적인 개선이 없습니다.** CodeRabbit의 리뷰 품질은 사용하는 기반 프론티어 모델이 개선될 때마다 자동으로 향상됩니다. 로컬 모델은 직접 더 새로운 모델을 다운로드하고 재평가하기 전까지는 다운로드한 체크포인트에 그대로 고정됩니다.',
@@ -3737,7 +3737,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '사용 사례별 추천',
         content: '**네 가지 독자 유형이 이 질문을 던지는 대부분의 사람을 아우릅니다 — 본인에게 해당하는 유형을 찾고 나머지는 건너뛰십시오.**',
         items: [
-          '**개인 또는 오픈소스 저장소, 프라이버시를 중시함, 이미 로컬 LLM 하드웨어 보유** → 로컬. 이미 GPU가 있고, 버그를 놓칠 위험이 낮으며, 공개 코드나 개인 코드를 제3자에게 보낼 이유가 없습니다. Qwen3-Coder 32B + PR-Agent를 사용하십시오.',
+          '**개인 또는 오픈소스 저장소, 프라이버시를 중시함, 이미 로컬 LLM 하드웨어 보유** → 로컬. 이미 GPU가 있고, 버그를 놓칠 위험이 낮으며, 공개 코드나 개인 코드를 제3자에게 보낼 이유가 없습니다. Qwen2.5-Coder 32B + PR-Agent를 사용하십시오.',
           '**스타트업 또는 소규모 팀, 오늘 바로 작동시키고 싶음** → CodeRabbit. 이 단계에서는 설정 시간이 구독 비용보다 더 큰 비중을 차지합니다 — 앱을 설치하고, 다음 PR에서 리뷰 코멘트를 받고, 계속 진행하십시오.',
           '**규제 산업, 시설 밖으로 코드를 보낼 수 없음** → 로컬, 또는 예산과 구매 절차가 공급업체와의 관계를 허용한다면 CodeRabbit Enterprise의 셀프 호스팅 등급. "어떤 공급업체도 이를 제공하지 않는다"고 가정하지 마십시오 — CodeRabbit은 실제로 셀프 호스팅 Enterprise 옵션을 갖고 있습니다. 이는 자율 가입형 플랜이 아니라 맞춤 가격의 영업 상담이므로, DIY 스택을 직접 구축하는 것과 비교해 저울질하십시오.',
           '**대규모 팀, 복잡한 diff, 품질이 핵심** → CodeRabbit(또는 플랫폼과 배포 요구 사항에 따라 Greptile/Qodo — [완전한 3자 클라우드 비교](/ko/local-llms/best-ai-code-review-tools) 참고). 다중 파일 아키텍처 리뷰에서 로컬 경로의 정직한 한계가 가장 중요해지는 유형이 바로 이것입니다.',
@@ -3762,7 +3762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '7B 모델을 실행하면서 32B급 정확도를 기대하는 것',
-            whyItMatters: 'Qwen3-Coder 7B는 약 60%의 버그 탐지 정확도로 빠른 린트 수준 피드백에는 유용하지만, 32B 모델이나 CodeRabbit이 제공하는 리뷰 품질에는 미치지 못합니다. 모델 등급을 그 출력을 얼마나 신뢰하는지에 맞춰 조정하십시오.',
+            whyItMatters: 'Qwen2.5-Coder 7B는 약 60%의 버그 탐지 정확도로 빠른 린트 수준 피드백에는 유용하지만, 32B 모델이나 CodeRabbit이 제공하는 리뷰 품질에는 미치지 못합니다. 모델 등급을 그 출력을 얼마나 신뢰하는지에 맞춰 조정하십시오.',
           },
         ],
       },
@@ -3770,8 +3770,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          { q: '로컬 LLM이 CodeRabbit을 완전히 대체할 수 있습니까?', a: '동등한 대체재로는 불가능합니다. 셀프 호스팅 Qwen3-Coder 32B 모델과 오픈소스 하네스 PR-Agent는 사람 리뷰어가 지적할 만한 버그 대부분을 탐지할 수 있지만, 여러 파일에 걸친 복잡한 diff에서는 여전히 프론티어 모델 기반 CodeRabbit의 리뷰에 뒤처지며, 단일 제품을 설치하는 대신 세 가지 별도 부품을 조립해야 합니다.' },
-          { q: '로컬 AI 코드 리뷰를 위한 최소 하드웨어는 무엇입니까?', a: 'Q4_K_M 양자화 기준 Qwen3-Coder 32B는 약 20GB의 VRAM 또는 통합 메모리가 필요합니다. 더 제한적인 하드웨어에서는 Qwen3-Coder 7B가 약 5GB에서 실행되지만 버그 탐지 정확도가 32B 모델의 88%에서 약 60%로 떨어지므로, 완전한 리뷰 필터가 아니라 1차 검토로 취급하십시오.' },
+          { q: '로컬 LLM이 CodeRabbit을 완전히 대체할 수 있습니까?', a: '동등한 대체재로는 불가능합니다. 셀프 호스팅 Qwen2.5-Coder 32B 모델과 오픈소스 하네스 PR-Agent는 사람 리뷰어가 지적할 만한 버그 대부분을 탐지할 수 있지만, 여러 파일에 걸친 복잡한 diff에서는 여전히 프론티어 모델 기반 CodeRabbit의 리뷰에 뒤처지며, 단일 제품을 설치하는 대신 세 가지 별도 부품을 조립해야 합니다.' },
+          { q: '로컬 AI 코드 리뷰를 위한 최소 하드웨어는 무엇입니까?', a: 'Q4_K_M 양자화 기준 Qwen2.5-Coder 32B는 약 20GB의 VRAM 또는 통합 메모리가 필요합니다. 더 제한적인 하드웨어에서는 Qwen2.5-Coder 7B가 약 5GB에서 실행되지만 버그 탐지 정확도가 32B 모델의 88%에서 약 60%로 떨어지므로, 완전한 리뷰 필터가 아니라 1차 검토로 취급하십시오.' },
           { q: 'PR-Agent는 아직 유지보수되고 있습니까?', a: '네. PR-Agent를 만든 회사(이전 CodiumAI)인 Qodo가 2026년 이 프로젝트를 커뮤니티에 기부했습니다. 현재는 Apache 2.0 라이선스 아래 커뮤니티 소유의 The-PR-Agent GitHub 조직에서 관리되며, CLI, Docker, GitHub Actions를 통해 여전히 셀프 호스팅할 수 있습니다.' },
           { q: '2026년 CodeRabbit의 가격은 얼마입니까?', a: 'CodeRabbit의 Essentials 플랜은 연간 결제 기준 개발자당 월 $24이며, Team은 $48, Advanced는 $72입니다. Enterprise는 맞춤 가격이며 셀프 호스팅을 포함합니다. 모든 플랜은 카드 등록 없이 14일 무료 체험을 제공하며, 퍼블릭 저장소는 영구적으로 무료 리뷰를 받습니다.' },
           { q: 'CodeRabbit은 셀프 호스팅이나 온프레미스 옵션을 제공합니까?', a: '네, Enterprise 등급에서 제공합니다. 맞춤 가격이며 자율 가입 대신 영업 상담이 필요하지만, 로컬 DIY 스택을 구축하지 않고도 온프레미스 배포가 필요한 규제 산업 팀에게 실질적인 선택지입니다.' },
@@ -3779,14 +3779,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '로컬 방식의 가장 큰 약점은 무엇입니까?', a: '복잡하거나, 다중 파일이거나, 아키텍처적인 diff에서의 리뷰 품질입니다. 20-32GB VRAM 범위의 로컬 모델은 클라우드 도구를 뒷받침하는 프론티어 모델보다 실질적인 컨텍스트가 작고 추론 깊이가 얕으므로, 여러 파일 떨어진 곳의 문제는 로컬 구성에서 눈에 띄지 않고 지나갈 가능성이 가장 큰 유형입니다.' },
           { q: '5인 팀에게는 어떤 옵션이 더 저렴합니까?', a: 'Essentials 가격의 CodeRabbit은 개발자 5명 기준 월 $120입니다. 로컬 구성은 소프트웨어 비용이 월 $0이지만, 20GB 이상 VRAM GPU가 최소 한 대는 이미 있거나(또는 구매해야) 한다고 가정하며, 여기에 설정과 유지보수 시간이 더해집니다 — 로컬이 비용 면에서 유리하다고 가정하기 전에 그 시간을 월 $120과 정직하게 비교해 계산하십시오.' },
           { q: '로컬 모델과 CodeRabbit을 함께 사용할 수 있습니까?', a: '네, 그리고 이는 합리적인 패턴입니다: 커밋 전, 심지어 코드를 푸시하기도 전에 빠르고 프라이빗한 피드백을 위해 로컬 모델을 사용하고, 풀 리퀘스트가 열리면 공식 리뷰를 위해 CodeRabbit을 사용하십시오. 이렇게 하면 1차 검토에서는 프라이버시를, 가장 중요한 단계에서는 프론티어 모델 수준의 품질을 얻을 수 있습니다.' },
-          { q: '실제로 어떤 로컬 모델을 선택해야 합니까?', a: '대부분의 경우 Qwen3-Coder 32B입니다 — 본격적인 로컬 코드 리뷰를 위한 현재의 실용적인 기준선입니다. 모델 크기와 리뷰 유형에 대한 전체 순위 비교는 저희의 전용 가이드인 [코드 리뷰를 위한 최고의 로컬 LLM](/ko/local-llms/best-local-llms-code-review)을 참고하십시오.' },
+          { q: '실제로 어떤 로컬 모델을 선택해야 합니까?', a: '대부분의 경우 Qwen2.5-Coder 32B입니다 — 본격적인 로컬 코드 리뷰를 위한 현재의 실용적인 기준선입니다. 모델 크기와 리뷰 유형에 대한 전체 순위 비교는 저희의 전용 가이드인 [코드 리뷰를 위한 최고의 로컬 LLM](/ko/local-llms/best-local-llms-code-review)을 참고하십시오.' },
         ],
       },
       verdict: {
         id: 'verdict',
         title: '최종 결론',
         items: [
-          '**로컬을 선택하십시오, 만약** 마지막 버그 하나를 잡는 것보다 프라이버시가 더 중요하고 이미 20GB 이상의 VRAM을 갖고 있다면 — 다음 단계: Ollama를 통해 Qwen3-Coder 32B를 다운로드하고 GitHub Actions hook으로 PR-Agent에 연결하십시오.',
+          '**로컬을 선택하십시오, 만약** 마지막 버그 하나를 잡는 것보다 프라이버시가 더 중요하고 이미 20GB 이상의 VRAM을 갖고 있다면 — 다음 단계: Ollama를 통해 Qwen2.5-Coder 32B를 다운로드하고 GitHub Actions hook으로 PR-Agent에 연결하십시오.',
           '**CodeRabbit을 선택하십시오, 만약** 오늘 바로 작동시키고 싶고 리뷰 품질 요구 수준이 높다면 — 다음 단계: 주요 저장소에 앱을 설치하고 14일 체험을 이용해 결과를 현재 리뷰 프로세스와 비교하십시오.',
           '**CodeRabbit Enterprise(셀프 호스팅)를 선택하십시오, 만약** 규제 산업에 속해 있어 시설 밖으로 코드를 보낼 수 없지만 CodeRabbit의 리뷰 품질을 원한다면 — 다음 단계: 셀프 호스팅이 제공되지 않는다고 가정하지 말고 Enterprise 상담을 예약하십시오.',
           '**둘 다 사용하십시오, 만약** 첫 번째 패스에서는 프라이버시를, 가장 중요한 패스에서는 프론티어 모델 수준의 품질을 원한다면 — 다음 단계: 로컬 모델을 pre-commit hook에 연결해 프라이빗하고 즉각적인 피드백을 받고, 공식 PR 리뷰는 CodeRabbit이 맡도록 하십시오.',
@@ -3799,7 +3799,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         links: [
           { url: 'https://www.coderabbit.ai/pricing', title: 'CodeRabbit 가격', description: 'Essentials, Team, Advanced, Enterprise 등급, 14일 체험, 퍼블릭 저장소 무료 이용 — 2026-09-01 기준 확인.' },
           { url: 'https://github.com/The-PR-Agent/pr-agent', title: 'PR-Agent(커뮤니티 관리)', description: 'Apache 2.0 라이선스의 셀프 호스팅 가능한 PR 리뷰 에이전트로, Qodo가 2026년 커뮤니티에 기부했습니다.' },
-          { url: '/ko/local-llms/best-local-llms-code-review', title: '코드 리뷰를 위한 최고의 로컬 LLM (PromptQuorum)', description: '로컬 코드 리뷰를 위한 Qwen3-Coder, Llama 3.3, DeepSeek-R1의 순위 비교로, 이 페이지에서 인용한 Qwen3-Coder 32B의 88% 버그 탐지 수치를 포함합니다.' },
+          { url: '/ko/local-llms/best-local-llms-code-review', title: '코드 리뷰를 위한 최고의 로컬 LLM (PromptQuorum)', description: '로컬 코드 리뷰를 위한 Qwen3-Coder, Llama 3.3, DeepSeek-R1의 순위 비교로, 이 페이지에서 인용한 Qwen2.5-Coder 32B의 88% 버그 탐지 수치를 포함합니다.' },
           { url: '/ko/local-llms/best-ai-code-review-tools', title: 'CodeRabbit 대 Greptile 대 Qodo (PromptQuorum)', description: '이 페이지가 반복하는 대신 참조하는 완전한 3자 클라우드 비교.' },
         ],
       },
@@ -3811,14 +3811,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[코드 리뷰를 위한 최고의 로컬 LLM](/ko/local-llms/best-local-llms-code-review) — 이 페이지의 로컬 부분을 위한 모델(Qwen3-Coder, Llama 3.3, DeepSeek-R1) 순위 비교',
           '[로컬 LLM을 위한 최고의 AI 코딩 어시스턴트](/ko/local-llms/best-ai-coding-assistant-local-llm) — 리뷰 파이프라인(로컬 또는 클라우드)이 읽는 diff를 작성하는 도구들',
           '[로컬 LLM 개발자 스택](/ko/local-llms/local-llm-developer-stack) — 셀프 호스팅 리뷰 파이프라인이 로컬 중심의 더 넓은 도구 체인 안에서 어디에 위치하는지',
-          '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — 이 페이지에서 사용한 Qwen3-Coder 32B의 20GB 수치 뒤에 있는 VRAM 계산',
+          '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — 이 페이지에서 사용한 Qwen2.5-Coder 32B의 20GB 수치 뒤에 있는 VRAM 계산',
         ],
       },
     },
     schema: {
       '@type': 'TechArticle',
       headline: '로컬 AI 코드 리뷰 대 CodeRabbit: 직접 구축할 가치가 있을까?',
-      description: '셀프 호스팅 Qwen3-Coder 32B + PR-Agent 파이프라인이 AI 코드 리뷰에서 CodeRabbit을 대체할 수 있는지 — 정직한 트레이드오프, 확인된 가격, 사용 사례별 추천.',
+      description: '셀프 호스팅 Qwen2.5-Coder 32B + PR-Agent 파이프라인이 AI 코드 리뷰에서 CodeRabbit을 대체할 수 있는지 — 정직한 트레이드오프, 확인된 가격, 사용 사례별 추천.',
       datePublished: '2026-09-01',
       dateModified: '2026-09-01',
       url: 'https://www.promptquorum.com/ko/local-llms/local-ai-code-review-vs-coderabbit',
@@ -3848,7 +3848,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': '로컬 LLM이 CodeRabbit을 완전히 대체할 수 있습니까?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': '동등한 대체재로는 불가능합니다. 셀프 호스팅 Qwen3-Coder 32B 모델과 오픈소스 하네스 PR-Agent는 사람 리뷰어가 지적할 만한 버그 대부분을 탐지할 수 있지만, 여러 파일에 걸친 복잡한 diff에서는 여전히 프론티어 모델 기반 CodeRabbit의 리뷰에 뒤처지며, 단일 제품을 설치하는 대신 세 가지 별도 부품을 조립해야 합니다.',
+            'text': '동등한 대체재로는 불가능합니다. 셀프 호스팅 Qwen2.5-Coder 32B 모델과 오픈소스 하네스 PR-Agent는 사람 리뷰어가 지적할 만한 버그 대부분을 탐지할 수 있지만, 여러 파일에 걸친 복잡한 diff에서는 여전히 프론티어 모델 기반 CodeRabbit의 리뷰에 뒤처지며, 단일 제품을 설치하는 대신 세 가지 별도 부품을 조립해야 합니다.',
           },
         },
         {
@@ -3856,7 +3856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': '로컬 AI 코드 리뷰를 위한 최소 하드웨어는 무엇입니까?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Q4_K_M 양자화 기준 Qwen3-Coder 32B는 약 20GB의 VRAM 또는 통합 메모리가 필요합니다. 더 제한적인 하드웨어에서는 Qwen3-Coder 7B가 약 5GB에서 실행되지만 버그 탐지 정확도가 32B 모델의 88%에서 약 60%로 떨어지므로, 완전한 리뷰 필터가 아니라 1차 검토로 취급하십시오.',
+            'text': 'Q4_K_M 양자화 기준 Qwen2.5-Coder 32B는 약 20GB의 VRAM 또는 통합 메모리가 필요합니다. 더 제한적인 하드웨어에서는 Qwen2.5-Coder 7B가 약 5GB에서 실행되지만 버그 탐지 정확도가 32B 모델의 88%에서 약 60%로 떨어지므로, 완전한 리뷰 필터가 아니라 1차 검토로 취급하십시오.',
           },
         },
         {
@@ -3920,7 +3920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'name': '실제로 어떤 로컬 모델을 선택해야 합니까?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': '대부분의 경우 Qwen3-Coder 32B입니다 — 본격적인 로컬 코드 리뷰를 위한 현재의 실용적인 기준선입니다. 모델 크기와 리뷰 유형에 대한 전체 순위 비교는 저희의 전용 가이드인 코드 리뷰를 위한 최고의 로컬 LLM을 참고하십시오.',
+            'text': '대부분의 경우 Qwen2.5-Coder 32B입니다 — 본격적인 로컬 코드 리뷰를 위한 현재의 실용적인 기준선입니다. 모델 크기와 리뷰 유형에 대한 전체 순위 비교는 저희의 전용 가이드인 코드 리뷰를 위한 최고의 로컬 LLM을 참고하십시오.',
           },
         },
       ],

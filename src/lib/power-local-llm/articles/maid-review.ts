@@ -36,7 +36,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gguf chat app android',
       'mobile artificial intelligence maid',
     ],
-    current_models_mentioned: ['GGUF models via llama.cpp'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**Maid is a free, open-source (MIT license) Android app that runs GGUF language models locally via llama.cpp, and can also connect to remote providers — Anthropic, OpenAI, Ollama, Mistral, DeepSeek, Novita, and OrcaRouter — using your own API key.** It is developed by the [Mobile-Artificial-Intelligence GitHub organization](https://github.com/Mobile-Artificial-Intelligence/maid), founded by Dane Madsen, who started the project in October 2023. The app was originally built with Flutter and shipped for Android, iOS (sideload), Windows, macOS, and Linux through version 2.0.7 (April 2025); version 3.0.0 (March 2026) rewrote the app in React Native and narrowed distribution to Android only — there is currently no iOS, Windows, macOS, or Linux build. The project remains actively developed, with commits and merged pull requests as recent as September 2026.',
@@ -454,7 +454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gguf chat app android',
       'mobile artificial intelligence maid',
     ],
-    current_models_mentioned: ['GGUF-Modelle über llama.cpp'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**Maid ist eine kostenlose, quelloffene (MIT-Lizenz) Android-App, die GGUF-Sprachmodelle lokal über llama.cpp ausführt und sich zusätzlich mit einem eigenen API-Schlüssel mit externen Anbietern verbinden kann — Anthropic, OpenAI, Ollama, Mistral, DeepSeek, Novita und OrcaRouter.** Entwickelt wird sie von der [GitHub-Organisation Mobile-Artificial-Intelligence](https://github.com/Mobile-Artificial-Intelligence/maid), gegründet von Dane Madsen, der das Projekt im Oktober 2023 startete. Ursprünglich war die App mit Flutter gebaut und erschien bis Version 2.0.7 (April 2025) für Android, iOS (Sideload), Windows, macOS und Linux; Version 3.0.0 (März 2026) schrieb die App in React Native neu und beschränkte den Vertrieb auf Android — aktuell gibt es keinen iOS-, Windows-, macOS- oder Linux-Build. Das Projekt wird weiterhin aktiv entwickelt, mit Commits und gemergten Pull Requests bis September 2026.',
@@ -872,7 +872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app chat gguf android',
       'mobile artificial intelligence maid',
     ],
-    current_models_mentioned: ['Modelos GGUF vía llama.cpp'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**Maid es una app Android gratuita y de código abierto (licencia MIT) que ejecuta modelos de lenguaje GGUF localmente mediante llama.cpp, y que también puede conectarse a proveedores remotos —Anthropic, OpenAI, Ollama, Mistral, DeepSeek, Novita y OrcaRouter— usando tu propia clave de API.** La desarrolla la [organización de GitHub Mobile-Artificial-Intelligence](https://github.com/Mobile-Artificial-Intelligence/maid), fundada por Dane Madsen, quien inició el proyecto en octubre de 2023. La app se construyó originalmente con Flutter y se distribuyó para Android, iOS (sideload), Windows, macOS y Linux hasta la versión 2.0.7 (abril de 2025); la versión 3.0.0 (marzo de 2026) reescribió la app en React Native y limitó la distribución solo a Android — actualmente no existe build para iOS, Windows, macOS ni Linux. El proyecto se sigue desarrollando activamente, con commits y pull requests fusionados tan recientes como septiembre de 2026.',
@@ -1290,7 +1290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'application chat gguf android',
       'mobile artificial intelligence maid',
     ],
-    current_models_mentioned: ['Modèles GGUF via llama.cpp'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**Maid est une application Android gratuite et open source (licence MIT) qui exécute des modèles de langage GGUF localement via llama.cpp, et qui peut aussi se connecter à des fournisseurs distants — Anthropic, OpenAI, Ollama, Mistral, DeepSeek, Novita et OrcaRouter — avec votre propre clé API.** Elle est développée par l\'[organisation GitHub Mobile-Artificial-Intelligence](https://github.com/Mobile-Artificial-Intelligence/maid), fondée par Dane Madsen, qui a lancé le projet en octobre 2023. L\'application était à l\'origine construite avec Flutter et distribuée pour Android, iOS (sideload), Windows, macOS et Linux jusqu\'à la version 2.0.7 (avril 2025) ; la version 3.0.0 (mars 2026) a réécrit l\'application en React Native et restreint la distribution à Android — il n\'existe actuellement aucune version pour iOS, Windows, macOS ou Linux. Le projet continue d\'être développé activement, avec des commits et des pull requests fusionnées aussi récentes que septembre 2026.',
@@ -1708,7 +1708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gguf チャット アプリ android',
       'mobile artificial intelligence maid',
     ],
-    current_models_mentioned: ['llama.cpp経由のGGUFモデル'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**Maidは、llama.cpp経由でGGUF言語モデルをローカルで実行し、さらに自分のAPIキーを使ってAnthropic、OpenAI、Ollama、Mistral、DeepSeek、Novita、OrcaRouterといったリモートプロバイダーにも接続できる、無料でオープンソース(MITライセンス)のAndroidアプリです。**開発は[Mobile-Artificial-Intelligence GitHub組織](https://github.com/Mobile-Artificial-Intelligence/maid)が担っており、2023年10月にプロジェクトを開始したDane Madsenが創設者です。アプリはもともとFlutterで構築され、バージョン2.0.7(2025年4月)までAndroid、iOS(サイドロード)、Windows、macOS、Linux向けに配布されていましたが、バージョン3.0.0(2026年3月)でReact Nativeに書き直され、配布はAndroidのみに絞られました——現時点でiOS版、Windows版、macOS版、Linux版はありません。プロジェクトは現在も活発に開発が続いており、2026年9月時点までコミットとマージ済みプルリクエストが確認できます。',
@@ -2127,7 +2127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'app chat gguf android',
       'mobile artificial intelligence maid',
     ],
-    current_models_mentioned: ['Modelos GGUF via llama.cpp'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**O Maid é um app Android gratuito e de código aberto (licença MIT) que executa modelos de linguagem GGUF localmente via llama.cpp, e que também pode se conectar a provedores remotos — Anthropic, OpenAI, Ollama, Mistral, DeepSeek, Novita e OrcaRouter — usando sua própria chave de API.** Ele é desenvolvido pela [organização Mobile-Artificial-Intelligence no GitHub](https://github.com/Mobile-Artificial-Intelligence/maid), fundada por Dane Madsen, que iniciou o projeto em outubro de 2023. O app foi originalmente construído com Flutter e distribuído para Android, iOS (sideload), Windows, macOS e Linux até a versão 2.0.7 (abril de 2025); a versão 3.0.0 (março de 2026) reescreveu o app em React Native e restringiu a distribuição apenas ao Android — atualmente não há build para iOS, Windows, macOS ou Linux. O projeto continua sendo desenvolvido ativamente, com commits e pull requests mescladas tão recentes quanto setembro de 2026.',
@@ -2545,7 +2545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'تطبيق دردشة gguf android',
       'mobile artificial intelligence maid',
     ],
-    current_models_mentioned: ['نماذج GGUF عبر llama.cpp'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**Maid هو تطبيق Android مجاني ومفتوح المصدر (برخصة MIT) يشغّل نماذج لغوية بصيغة GGUF محليًا عبر llama.cpp، ويمكنه أيضًا الاتصال بمزودين عن بُعد — Anthropic وOpenAI وOllama وMistral وDeepSeek وNovita وOrcaRouter — باستخدام مفتاح API الخاص بك.** يطوّره [منظمة Mobile-Artificial-Intelligence على GitHub](https://github.com/Mobile-Artificial-Intelligence/maid)، التي أسسها Dane Madsen، الذي بدأ المشروع في أكتوبر 2023. بُني التطبيق في الأصل بـFlutter وصدر لأنظمة Android وiOS (تثبيت جانبي) وWindows وmacOS وLinux حتى الإصدار 2.0.7 (أبريل 2025)؛ أعاد الإصدار 3.0.0 (مارس 2026) كتابة التطبيق بـReact Native وقصر التوزيع على Android فقط — لا يوجد حاليًا إصدار لـiOS أو Windows أو macOS أو Linux. لا يزال المشروع قيد التطوير النشط، بوجود commits وطلبات دمج (pull requests) مدموجة حتى سبتمبر 2026.',
@@ -2963,7 +2963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'android gguf 聊天应用',
       'mobile artificial intelligence maid',
     ],
-    current_models_mentioned: ['通过 llama.cpp 运行的 GGUF 模型'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**Maid 是一款免费开源(MIT 许可证)的 Android 应用,可通过 llama.cpp 在本地运行 GGUF 语言模型,还能使用你自己的 API 密钥连接 Anthropic、OpenAI、Ollama、Mistral、DeepSeek、Novita 和 OrcaRouter 等远程提供商。**开发方是由 Dane Madsen 创立的 [Mobile-Artificial-Intelligence GitHub 组织](https://github.com/Mobile-Artificial-Intelligence/maid),他于 2023 年 10 月启动了该项目。该应用最初使用 Flutter 构建,并在 2.0.7 版(2025 年 4 月)之前一直面向 Android、iOS(侧载)、Windows、macOS 和 Linux 发布;3.0.0 版(2026 年 3 月)将应用重写为 React Native,并将分发范围收窄至仅限 Android——目前没有 iOS、Windows、macOS 或 Linux 版本。该项目仍在积极开发中,截至 2026 年 9 月仍有提交(commit)和已合并的拉取请求(pull request)。',
@@ -3382,7 +3382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'gguf 채팅 앱 android',
       'mobile artificial intelligence maid',
     ],
-    current_models_mentioned: ['llama.cpp를 통한 GGUF 모델'],
+    current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
       '**Maid는 llama.cpp를 통해 GGUF 언어 모델을 로컬에서 실행하고, 자신의 API 키로 Anthropic, OpenAI, Ollama, Mistral, DeepSeek, Novita, OrcaRouter 같은 원격 제공업체에도 연결할 수 있는 무료 오픈소스(MIT 라이선스) Android 앱입니다.** 개발은 2023년 10월 프로젝트를 시작한 Dane Madsen이 설립한 [Mobile-Artificial-Intelligence GitHub 조직](https://github.com/Mobile-Artificial-Intelligence/maid)이 담당하고 있습니다. 이 앱은 원래 Flutter로 제작되어 2.0.7 버전(2025년 4월)까지 Android, iOS(사이드로드), Windows, macOS, Linux용으로 배포되었으나, 3.0.0 버전(2026년 3월)에서 React Native로 재작성되면서 배포 범위가 Android로 한정되었습니다——현재 iOS, Windows, macOS, Linux 빌드는 존재하지 않습니다. 이 프로젝트는 현재도 활발히 개발되고 있으며, 2026년 9월까지 커밋과 병합된 풀 리퀘스트가 확인됩니다.',

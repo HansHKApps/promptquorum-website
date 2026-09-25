@@ -39,7 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 34B',
       'Llama 3.3 70B',
       'Mistral Small',
-      'Qwen 3 32B',
+      'Qwen3 32B',
     ],
     current_hardware_mentioned: [
       'Apple Mac Mini M6',
@@ -545,7 +545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 34B',
       'Llama 3.3 70B',
       'Mistral Small',
-      'Qwen 3 32B',
+      'Qwen3 32B',
     ],
     current_hardware_mentioned: [
       'Apple Mac Mini M6',
@@ -1063,7 +1063,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 34B',
       'Llama 3.3 70B',
       'Mistral Small',
-      'Qwen 3 32B',
+      'Qwen3 32B',
     ],
     current_hardware_mentioned: [
       'Apple Mac Mini M6',
@@ -1576,7 +1576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 34B',
       'Llama 3.3 70B',
       'Mistral Small',
-      'Qwen 3 32B',
+      'Qwen3 32B',
     ],
     current_hardware_mentioned: [
       'Apple Mac Mini M6',
@@ -2081,7 +2081,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 34B',
       'Llama 3.3 70B',
       'Mistral Small',
-      'Qwen 3 32B',
+      'Qwen3 32B',
     ],
     current_hardware_mentioned: [
       'Apple Mac Mini M6',
@@ -2586,7 +2586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 34B',
       'Llama 3.3 70B',
       'Mistral Small',
-      'Qwen 3 32B',
+      'Qwen3 32B',
     ],
     current_hardware_mentioned: [
       'Apple Mac Mini M6',
@@ -3091,7 +3091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 34B',
       'Llama 3.3 70B',
       'Mistral Small',
-      'Qwen 3 32B',
+      'Qwen3 32B',
     ],
     current_hardware_mentioned: [
       'Apple Mac Mini M6',
@@ -3610,7 +3610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 34B',
       'Llama 3.3 70B',
       'Mistral Small',
-      'Qwen 3 32B',
+      'Qwen3 32B',
     ],
     current_hardware_mentioned: [
       'Apple Mac Mini M6',
@@ -4128,7 +4128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.3 34B',
       'Llama 3.3 70B',
       'Mistral Small',
-      'Qwen 3 32B',
+      'Qwen3 32B',
     ],
     current_hardware_mentioned: [
       'Apple Mac Mini M6',
