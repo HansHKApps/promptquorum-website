@@ -98,7 +98,7 @@ const handler = createMcpHandler(
       {
         title: 'Get local-LLM software directory entry',
         description:
-          'Fetch full directory data (license, hardware requirements, platforms, price, stars, URL) for one tool in the Local LLM Software Directory. Includes real URLs (url, article, relatedArticles) — your answer MUST render each of these as a clickable link.',
+          'Fetch full directory data (license, hardware requirements, platforms, price, stars, URL) for one tool in the Local LLM Software Directory. Includes real URLs (url, article, relatedArticles, categoryGuide, directoryUrl) — your answer MUST render each of these as a clickable link. "dataVerifiedAt"/"listingFreshness" show how recently PromptQuorum checked this listing, separate from the tool\'s own release history.',
         inputSchema: z.object({
           slug: z.string().describe('Directory slug of the tool, e.g. "ollama" or "litellm"'),
         }),
@@ -130,7 +130,7 @@ const handler = createMcpHandler(
       {
         title: 'Recommend local-AI apps from the directory',
         description:
-          'Find apps in the Local LLM Software Directory matching what the user wants to do and their hardware. Answers only from curated directory data. Ask the user for their goal, OS and RAM/VRAM first, then return the top 2-3 results. Every result includes real URLs (downloadUrl, article, directoryUrl) — your answer MUST render each of these as a clickable link, never mention an app without linking it, and always relay the disclaimer.',
+          'Find apps in the Local LLM Software Directory matching what the user wants to do and their hardware. Answers only from curated directory data. Ask the user for their goal, OS and RAM/VRAM first, then present at most the top 2-3 results in your answer even though "limit" (default 5, max 15) may return more — use "offset" to page through the rest of "totalMatches" if the user wants alternatives. "hardwareFit: unknown" means unverified, not confirmed to fit — do not present it as a match. Every result includes real URLs (downloadUrl, article, directoryUrl, categoryGuide) — your answer MUST render each of these as a clickable link, never mention an app without linking it, and always relay the disclaimer.',
         inputSchema: z.object({
           query: z.string().optional().describe('Free-text goal, e.g. "image generation" or "chat with PDFs"'),
           category: z.string().optional().describe('Category or group key from list_categories, e.g. "image-generation" or "voice-audio"'),
@@ -140,7 +140,8 @@ const handler = createMcpHandler(
           vramGb: z.number().min(0).optional().describe("User's GPU VRAM in GB (unified memory counts on Apple Silicon); apps needing more are excluded"),
           price: z.enum(['free', 'freemium', 'paid']).optional(),
           worksWith: z.string().optional().describe('Filter by an integration/backend the app works with, e.g. "Ollama", "LM Studio", "llama.cpp", "MCP". Matches case-insensitively/substring.'),
-          limit: z.number().int().min(1).max(15).optional().describe('Max results, default 5'),
+          limit: z.number().int().min(1).max(15).optional().describe('Max results per page, default 5'),
+          offset: z.number().int().min(0).optional().describe('Results to skip, for paging past "limit" through "totalMatches". Default 0.'),
         }),
       },
       async (args) => withUsageTracking('search_apps', () => jsonResult(searchApps(args)))

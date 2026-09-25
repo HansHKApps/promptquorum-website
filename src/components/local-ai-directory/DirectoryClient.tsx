@@ -32,9 +32,33 @@ import { detectDefaultMachine, readStoredMachine, writeStoredMachine, readStored
 import { emptyFilterState, machineCategory, type FilterState, type HardwareProfile, type MachineCategory, type MachineType, type SortDir, type SortKey, type ViewMode } from './types'
 import { cn } from '@/lib/utils'
 import { getDeviceCategoryLabels, getMachineLabels, t } from './directory-i18n'
+import { CATEGORY_SUB_LABEL } from '@/lib/power-local-llm/apps/categories'
 
 const DESKTOP_MACHINES: readonly MachineType[] = ['dgpu', 'apple', 'cpu']
 const MOBILE_MACHINES: readonly MachineType[] = ['ios', 'android']
+
+const OS_FILTER_VALUES: readonly string[] = ['mac', 'win', 'linux', 'ios', 'android', 'web']
+const PRICE_FILTER_VALUES: readonly string[] = ['free', 'freemium', 'paid']
+
+// Reads a filtered-view deep link produced by the MCP server's search_apps/
+// get_app_details "directoryUrl" (see src/lib/power-local-llm/app-search.ts's
+// directoryUrlFor) — e.g. /power-local-llm/local-llm-software-directory-2026
+// ?category=editing-upscaling&os=mac&price=free. Same one-time
+// hydration-divergence pattern as `want`/`hw` below: server always sees no
+// params, client may diverge once on first render. Unknown/invalid values
+// are dropped rather than passed through blindly.
+function filtersFromUrl(): FilterState {
+  const state = emptyFilterState()
+  if (typeof window === 'undefined') return state
+  const params = new URLSearchParams(window.location.search)
+  const category = params.get('category')
+  if (category && category in CATEGORY_SUB_LABEL) state.category.add(category)
+  const os = params.get('os')
+  if (os && OS_FILTER_VALUES.includes(os)) state.platforms.add(os)
+  const price = params.get('price')
+  if (price && PRICE_FILTER_VALUES.includes(price)) state.price.add(price)
+  return state
+}
 
 // page-redesign-v2.md §4 step 3: "24 cards, then 'Show 24 more · N remaining'"
 const PAGE_SIZE = 24
@@ -58,14 +82,18 @@ export function DirectoryClient({ apps, lang }: Props) {
     const fromUrl = new URLSearchParams(window.location.search).get('want')
     return fromUrl && (WANT_ORDER as readonly string[]).includes(fromUrl) ? fromUrl : null
   })
-  // Scroll the pre-filtered result into view once, only when `want` arrived
-  // via the URL (not from a viewer's own chip click a moment later).
+  // category/os/price filters, deep-linkable from `?category=`/`?os=`/`?price=`
+  // (see filtersFromUrl above) alongside the pre-existing `?want=`.
+  const [filters, setFilters] = useState<FilterState>(filtersFromUrl)
+  // Scroll the pre-filtered result into view once, only when `want` or a
+  // category/os/price filter arrived via the URL (not from a viewer's own
+  // chip/checkbox click a moment later).
   useEffect(() => {
-    if (want) document.getElementById('directory-toolbar')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    const hasUrlFilters = filters.category.size > 0 || filters.platforms.size > 0 || filters.price.size > 0
+    if (want || hasUrlFilters) document.getElementById('directory-toolbar')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
     else if (hwWidgetExpanded) document.getElementById('hw-profile-widget')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-  const [filters, setFilters] = useState<FilterState>(emptyFilterState)
   const [view, setView] = useState<ViewMode>('cards')
   const [sortKey, setSortKey] = useState<SortKey>('category')
   const [sortDir, setSortDir] = useState<SortDir>('asc')

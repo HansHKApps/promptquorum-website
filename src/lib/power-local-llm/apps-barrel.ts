@@ -133,7 +133,6 @@ import { app as app_stableswarmui } from './apps/stableswarmui'
 import { app as app_controlnet } from './apps/controlnet'
 import { app as app_real_esrgan } from './apps/real-esrgan'
 import { app as app_animatediff } from './apps/animatediff'
-import { app as app_dall_e_3_local_ollama_vision } from './apps/dall-e-3-local-ollama-vision'
 import { app as app_smart_connections } from './apps/smart-connections'
 import { app as app_copilot_for_obsidian } from './apps/copilot-for-obsidian'
 import { app as app_text_generator } from './apps/text-generator'
@@ -365,7 +364,6 @@ export const localAiApps: ToolRecord[] = [
   app_controlnet,
   app_real_esrgan,
   app_animatediff,
-  app_dall_e_3_local_ollama_vision,
   app_smart_connections,
   app_copilot_for_obsidian,
   app_text_generator,
