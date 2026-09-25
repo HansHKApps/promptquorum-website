@@ -67,7 +67,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
       'Which app works without GPU?',
       'Can I dual-boot for local AI?',
       'Does WSL2 work for local LLMs?',
-      'Best app for Mac mini M4?',
+      'Best app for Mac mini M6?',
       'Linux Mint vs Ubuntu for local AI?',
     ],
     mobileAngle:
