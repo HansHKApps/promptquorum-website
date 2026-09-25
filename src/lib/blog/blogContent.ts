@@ -25704,6 +25704,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       intro: 'A wave of EU organisations shifted from cloud AI to local Qwen deployments in early 2026. GDPR enforcement actions, rising API costs, and the performance parity of Qwen 3.6 27B removed the three main objections to local LLMs. This editorial examines the legal, economic, and technical drivers behind the shift — and why the momentum is accelerating.',
       publishDate: 'Published May 16, 2026',
       last_full_refresh: '2026-06-28',
+      dateModified: '2026-09-25',
       readTime: '10 min read',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-11-16',
@@ -25740,7 +25741,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'The main technical objection to local AI — "cloud models are smarter" — became empirically false for most coding and analysis tasks in July 2026, when Alibaba released Qwen 3.6 27B. The model scores 92.1% HumanEval and 77.2% SWE-bench. Claude Sonnet 4.6 scores 89.4% HumanEval and approximately 72% SWE-bench.',
             'For the EU organisations that drove most cloud AI adoption — software development teams, legal document analysis, internal knowledge management — Qwen 3.6 27B performs comparably or better. The quality argument for cloud exclusivity no longer holds for these use cases.',
-            'The hardware requirement is within reach of most EU tech companies: a single RTX 4090 (€1,500–2,000), or Apple Silicon with 48+ GB unified memory runs Qwen 3.6 27B at 35–42 tokens per second. Mac Mini M4 Pro (€1,599) and Mac Mini M5 Pro (€1,799) are entry-level options. For teams requiring more capacity: M5 Max Mac Studio (128 GB, €3,500) or M4 Pro Mac Studio (64 GB, €2,200) deliver sustained performance for team-wide AI use.',
+            'The hardware requirement is within reach of most EU tech companies: a single RTX 4090 (€1,500–2,000), or Apple Silicon with 48+ GB unified memory runs Qwen 3.6 27B at 35–42 tokens per second. Mac mini (M6, €1,049) and Mac mini (M5 Pro, €1,999) are entry-level options. For teams requiring more capacity: Mac Studio (M5 Max, €2,999) or Mac Studio (M5 Ultra, €6,599) deliver sustained performance for team-wide AI use.',
           ],
         },
         costAnalysis: {
@@ -25752,8 +25753,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { Option: 'Claude Sonnet 4.6 API', 'Monthly Cost': '$1,500 (input only)', 'GDPR Risk': '⚠️ SCC required', 'Setup Complexity': 'Low' },
             { Option: 'DeepSeek R2 API', 'Monthly Cost': '$210', 'GDPR Risk': '❌ High (China)', 'Setup Complexity': 'Low' },
             { Option: 'Local Qwen (RTX 4090 ×2)', 'Monthly Cost': '€60 (electricity)', 'GDPR Risk': '✅ None', 'Setup Complexity': 'Medium' },
-            { Option: 'Local Qwen (Mac Mini M4 Pro ×3)', 'Monthly Cost': '€40 (electricity)', 'GDPR Risk': '✅ None', 'Setup Complexity': 'Low' },
-            { Option: 'Local Qwen (Mac Mini M5 Pro ×3)', 'Monthly Cost': '€45 (electricity)', 'GDPR Risk': '✅ None', 'Setup Complexity': 'Low' },
+            { Option: 'Local Qwen (Mac mini M6 ×3)', 'Monthly Cost': '€40 (electricity)', 'GDPR Risk': '✅ None', 'Setup Complexity': 'Low' },
+            { Option: 'Local Qwen (Mac mini M5 Pro ×3)', 'Monthly Cost': '€45 (electricity)', 'GDPR Risk': '✅ None', 'Setup Complexity': 'Low' },
           ],
           columns: ['Option', 'Monthly Cost', 'GDPR Risk', 'Setup Complexity'],
         },
@@ -25809,7 +25810,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           faqs: [
             { q: 'Does running local AI mean we can ignore GDPR entirely?', a: 'No. Local AI eliminates [Article 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1) cross-border transfer obligations, but GDPR still applies to your AI processing under [Article 5](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1226-1-1) (principles), [Article 25](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1516-1-1) (data protection by design), and [Article 32](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1843-1-1) (security). You still need a lawful basis for processing personal data with AI, must implement data minimisation, and need to document AI processing in your [Article 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1) records. Local AI makes compliance structurally simpler — it does not eliminate compliance obligations.' },
             { q: 'Is Qwen 3.6 27B good enough for production use?', a: 'Yes for coding, document analysis, and knowledge management tasks. Qwen 3.6 27B scores 92.1% HumanEval and 77.2% SWE-bench — comparable to or better than Claude Sonnet 4.6 (89.4% HumanEval) on software engineering tasks. For mathematical reasoning and multi-domain knowledge breadth, frontier cloud models still lead. The practical answer is: deploy locally for the majority of tasks and use cloud APIs for the minority of tasks where frontier quality is demonstrably necessary.' },
-            { q: 'What is the minimum hardware investment for an EU team?', a: 'For a team of 3–5: one Mac Mini M4 Pro with 48 GB unified memory (~€1,599) or Mac Mini M5 Pro (~€1,799) handles Qwen 3.6 27B at 40+ tokens/second. For a team of 10+: one RTX 4090 system (~€2,000 total), two Mac Mini M4 Pros, or one M5 Max Mac Studio (128 GB, €3,500). Hardware breaks even against Claude Sonnet 4.6 API costs in 2–3 months at heavy usage, and against DeepSeek R2 in 12–18 months — while providing GDPR compliance from day one.' },
+            { q: 'What is the minimum hardware investment for an EU team?', a: 'For a team of 3–5: one Mac mini (M6, ~€1,049) or Mac mini (M5 Pro, ~€1,999) handles Qwen 3.6 27B at 40+ tokens/second. For a team of 10+: one RTX 4090 system (~€2,000 total), two Mac mini (M6), or one Mac Studio (M5 Max, €2,999). Hardware breaks even against Claude Sonnet 4.6 API costs in 2–3 months at heavy usage, and against DeepSeek R2 in 12–18 months — while providing GDPR compliance from day one.' },
             { q: 'Can we use PromptQuorum with local Qwen?', a: 'Yes. PromptQuorum supports local Ollama endpoints. Set OLLAMA_BASE_URL to your Ollama server URL (e.g., http://localhost:11434/v1) and model to your Qwen model name. PromptQuorum then handles dispatch routing, model fallback, and response handling across local and cloud models.' },
           ],
         },
@@ -25831,7 +25832,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'What is the minimum hardware investment for an EU team?',
-            acceptedAnswer: { '@type': 'Answer', text: 'One Mac Mini M4 Pro with 48 GB unified memory (~€1,599) handles Qwen 3.6 27B at 40+ tokens/second for a team of 3–5. Hardware breaks even against Claude Sonnet 4.6 API costs in 2–3 months at heavy usage.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'One Mac mini (M6, ~€1,049) handles Qwen 3.6 27B at 40+ tokens/second for a team of 3–5. Hardware breaks even against Claude Sonnet 4.6 API costs in 2–3 months at heavy usage.' },
           },
           {
             '@type': 'Question',
@@ -25883,7 +25884,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'La principal objeción técnica frente a la IA local ("los modelos en la nube son más inteligentes") se volvió empíricamente falsa para la mayoría de las tareas de programación y análisis en July 2026, cuando Alibaba lanzó Qwen 3.6 27B. El modelo obtiene un 92.1% en HumanEval y un 77.2% en SWE-bench. Claude Sonnet 4.6 obtiene un 89.4% en HumanEval y aproximadamente un 72% en SWE-bench.',
             'Para las organizaciones de la UE que impulsaron la mayor parte de la adopción de la IA en la nube (equipos de desarrollo de software, análisis de documentos legales, gestión del conocimiento interno), Qwen 3.6 27B rinde de forma comparable o mejor. El argumento de calidad a favor de la exclusividad de la nube ya no se sostiene para estos casos de uso.',
-            'El requisito de hardware está al alcance de la mayoría de las empresas tecnológicas de la UE: una sola RTX 4090 (1.500–2.000 €), o Apple Silicon con 48+ GB de memoria unificada, ejecuta Qwen 3.6 27B a 35–42 tokens por segundo. Mac Mini M4 Pro (1.599 €) y Mac Mini M5 Pro (1.799 €) son opciones de nivel de entrada. Para los equipos que necesitan más capacidad: M5 Max Mac Studio (128 GB, 3.500 €) o M4 Pro Mac Studio (64 GB, 2.200 €) ofrecen un rendimiento sostenido para el uso de IA en todo el equipo.',
+            'El requisito de hardware está al alcance de la mayoría de las empresas tecnológicas de la UE: una sola RTX 4090 (1.500–2.000 €), o Apple Silicon con 48+ GB de memoria unificada, ejecuta Qwen 3.6 27B a 35–42 tokens por segundo. Mac mini (M6, 1.069 €) y Mac mini (M5 Pro, 2.019 €) son opciones de nivel de entrada. Para los equipos que necesitan más capacidad: Mac Studio (M5 Max, 3.029 €) o Mac Studio (M5 Ultra, 6.649 €) ofrecen un rendimiento sostenido para el uso de IA en todo el equipo.',
           ],
         },
         costAnalysis: {
@@ -25895,8 +25896,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { Opción: 'API de Claude Sonnet 4.6', 'Coste mensual': '$1,500 (solo input)', 'Riesgo RGPD': '⚠️ Requiere CCT', 'Complejidad de configuración': 'Baja' },
             { Opción: 'API de DeepSeek R2', 'Coste mensual': '$210', 'Riesgo RGPD': '❌ Alto (China)', 'Complejidad de configuración': 'Baja' },
             { Opción: 'Qwen local (RTX 4090 ×2)', 'Coste mensual': '60 € (electricidad)', 'Riesgo RGPD': '✅ Ninguno', 'Complejidad de configuración': 'Media' },
-            { Opción: 'Qwen local (Mac Mini M4 Pro ×3)', 'Coste mensual': '40 € (electricidad)', 'Riesgo RGPD': '✅ Ninguno', 'Complejidad de configuración': 'Baja' },
-            { Opción: 'Qwen local (Mac Mini M5 Pro ×3)', 'Coste mensual': '45 € (electricidad)', 'Riesgo RGPD': '✅ Ninguno', 'Complejidad de configuración': 'Baja' },
+            { Opción: 'Qwen local (Mac mini M6 ×3)', 'Coste mensual': '40 € (electricidad)', 'Riesgo RGPD': '✅ Ninguno', 'Complejidad de configuración': 'Baja' },
+            { Opción: 'Qwen local (Mac mini M5 Pro ×3)', 'Coste mensual': '45 € (electricidad)', 'Riesgo RGPD': '✅ Ninguno', 'Complejidad de configuración': 'Baja' },
           ],
           columns: ['Opción', 'Coste mensual', 'Riesgo RGPD', 'Complejidad de configuración'],
         },
@@ -25952,7 +25953,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           faqs: [
             { q: '¿Ejecutar IA local significa que podemos ignorar por completo el RGPD?', a: 'No. La IA local elimina las obligaciones de transferencia transfronteriza del [artículo 44](https://eur-lex.europa.eu/legal-content/es/TXT/?uri=celex%3A32016R0679#d1e1567-1-1), pero el RGPD sigue aplicándose a tu procesamiento con IA conforme al [artículo 5](https://eur-lex.europa.eu/legal-content/es/TXT/?uri=celex%3A32016R0679#d1e1226-1-1) (principios), el [artículo 25](https://eur-lex.europa.eu/legal-content/es/TXT/?uri=celex%3A32016R0679#d1e1516-1-1) (protección de datos desde el diseño) y el [artículo 32](https://eur-lex.europa.eu/legal-content/es/TXT/?uri=celex%3A32016R0679#d1e1843-1-1) (seguridad). Sigues necesitando una base jurídica para tratar datos personales con IA, debes aplicar la minimización de datos y tienes que documentar el procesamiento con IA en tus registros del [artículo 30](https://eur-lex.europa.eu/legal-content/es/TXT/?uri=celex%3A32016R0679#d1e1803-1-1). La IA local simplifica estructuralmente el cumplimiento, pero no elimina las obligaciones de cumplimiento.' },
             { q: '¿Es Qwen 3.6 27B lo bastante bueno para uso en producción?', a: 'Sí para tareas de programación, análisis de documentos y gestión del conocimiento. Qwen 3.6 27B obtiene un 92.1% en HumanEval y un 77.2% en SWE-bench, comparable o mejor que Claude Sonnet 4.6 (89.4% en HumanEval) en tareas de ingeniería de software. Para el razonamiento matemático y la amplitud de conocimiento multidominio, los modelos frontera en la nube siguen liderando. La respuesta práctica es: despliega en local para la mayoría de las tareas y usa las API en la nube para la minoría de tareas donde la calidad frontera sea demostrablemente necesaria.' },
-            { q: '¿Cuál es la inversión mínima en hardware para un equipo de la UE?', a: 'Para un equipo de 3–5 personas: un Mac Mini M4 Pro con 48 GB de memoria unificada (~1.599 €) o un Mac Mini M5 Pro (~1.799 €) ejecuta Qwen 3.6 27B a 40+ tokens/segundo. Para un equipo de 10 o más: un sistema con RTX 4090 (~2.000 € en total), dos Mac Mini M4 Pro o un M5 Max Mac Studio (128 GB, 3.500 €). El hardware se amortiza frente a los costes de la API de Claude Sonnet 4.6 en 2–3 meses con uso intensivo, y frente a DeepSeek R2 en 12–18 meses, ofreciendo cumplimiento del RGPD desde el primer día.' },
+            { q: '¿Cuál es la inversión mínima en hardware para un equipo de la UE?', a: 'Para un equipo de 3–5 personas: un Mac mini (M6, ~1.069 €) o un Mac mini (M5 Pro, ~2.019 €) ejecuta Qwen 3.6 27B a 40+ tokens/segundo. Para un equipo de 10 o más: un sistema con RTX 4090 (~2.000 € en total), dos Mac mini (M6) o un Mac Studio (M5 Max, 3.029 €). El hardware se amortiza frente a los costes de la API de Claude Sonnet 4.6 en 2–3 meses con uso intensivo, y frente a DeepSeek R2 en 12–18 meses, ofreciendo cumplimiento del RGPD desde el primer día.' },
             { q: '¿Podemos usar PromptQuorum con Qwen local?', a: 'Sí. PromptQuorum admite endpoints locales de Ollama. Configura OLLAMA_BASE_URL con la URL de tu servidor Ollama (por ejemplo, http://localhost:11434/v1) y el modelo con el nombre de tu modelo Qwen. PromptQuorum se encarga entonces del enrutamiento de despacho, el respaldo de modelos y la gestión de respuestas entre modelos locales y en la nube.' },
           ],
         },
@@ -25976,7 +25977,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: '¿Cuál es la inversión mínima en hardware para un equipo de la UE?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Un Mac Mini M4 Pro con 48 GB de memoria unificada (~1.599 €) ejecuta Qwen 3.6 27B a 40+ tokens/segundo para un equipo de 3–5 personas. El hardware se amortiza frente a los costes de la API de Claude Sonnet 4.6 en 2–3 meses con uso intensivo.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Un Mac mini (M6, ~1.069 €) ejecuta Qwen 3.6 27B a 40+ tokens/segundo para un equipo de 3–5 personas. El hardware se amortiza frente a los costes de la API de Claude Sonnet 4.6 en 2–3 meses con uso intensivo.' },
           },
           {
             '@type': 'Question',
@@ -26028,7 +26029,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'الاعتراض التقني الرئيسي على الذكاء الاصطناعي المحلي — «النماذج السحابية أذكى» — أصبح خاطئًا تجريبيًا بالنسبة لمعظم مهام البرمجة والتحليل في يوليو 2026، عندما أصدرت Alibaba نموذج Qwen 3.6 27B. يحقق النموذج 92.1% على HumanEval و77.2% على SWE-bench. ويحقق Claude Sonnet 4.6 نسبة 89.4% على HumanEval ونحو 72% على SWE-bench.',
             'بالنسبة لمؤسسات الاتحاد الأوروبي التي قادت معظم تبني الذكاء الاصطناعي السحابي — فرق تطوير البرمجيات وتحليل الوثائق القانونية وإدارة المعرفة الداخلية — يؤدي Qwen 3.6 27B أداءً مماثلًا أو أفضل. لم تعد حجة الجودة لصالح حصرية السحابة قائمة لهذه الحالات الاستخدامية.',
-            'متطلبات الأجهزة في متناول معظم شركات التكنولوجيا في الاتحاد الأوروبي: بطاقة RTX 4090 واحدة (1,500–2,000 يورو)، أو Apple Silicon بذاكرة موحّدة سعة 48 جيجابايت فأكثر، تُشغّل Qwen 3.6 27B بسرعة 35–42 رمزًا في الثانية. ويُعد Mac Mini M4 Pro (1,599 يورو) وMac Mini M5 Pro (1,799 يورو) خيارين للمبتدئين. أما الفرق التي تتطلب سعة أكبر: فإن M5 Max Mac Studio (128 جيجابايت، 3,500 يورو) أو M4 Pro Mac Studio (64 جيجابايت، 2,200 يورو) يوفران أداءً مستدامًا لاستخدام الذكاء الاصطناعي على مستوى الفريق بأكمله.',
+            'متطلبات الأجهزة في متناول معظم شركات التكنولوجيا في الاتحاد الأوروبي: بطاقة RTX 4090 واحدة (1,500–2,000 يورو)، أو Apple Silicon بذاكرة موحّدة سعة 48 جيجابايت فأكثر، تُشغّل Qwen 3.6 27B بسرعة 35–42 رمزًا في الثانية. ويُعد Mac mini (M6، 1,049 يورو) وMac mini (M5 Pro، 1,999 يورو) خيارين للمبتدئين. أما الفرق التي تتطلب سعة أكبر: فإن Mac Studio (M5 Max، 2,999 يورو) أو Mac Studio (M5 Ultra، 6,599 يورو) يوفران أداءً مستدامًا لاستخدام الذكاء الاصطناعي على مستوى الفريق بأكمله.',
           ],
         },
         costAnalysis: {
@@ -26040,8 +26041,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { Option: 'Claude Sonnet 4.6 API', 'Monthly Cost': '$1,500 (المدخلات فقط)', 'GDPR Risk': '⚠️ يتطلب SCC', 'Setup Complexity': 'منخفض' },
             { Option: 'DeepSeek R2 API', 'Monthly Cost': '$210', 'GDPR Risk': '❌ مرتفع (الصين)', 'Setup Complexity': 'منخفض' },
             { Option: 'Qwen المحلي (RTX 4090 ×2)', 'Monthly Cost': '60 يورو (كهرباء)', 'GDPR Risk': '✅ لا يوجد', 'Setup Complexity': 'متوسط' },
-            { Option: 'Qwen المحلي (Mac Mini M4 Pro ×3)', 'Monthly Cost': '40 يورو (كهرباء)', 'GDPR Risk': '✅ لا يوجد', 'Setup Complexity': 'منخفض' },
-            { Option: 'Qwen المحلي (Mac Mini M5 Pro ×3)', 'Monthly Cost': '45 يورو (كهرباء)', 'GDPR Risk': '✅ لا يوجد', 'Setup Complexity': 'منخفض' },
+            { Option: 'Qwen المحلي (Mac mini M6 ×3)', 'Monthly Cost': '40 يورو (كهرباء)', 'GDPR Risk': '✅ لا يوجد', 'Setup Complexity': 'منخفض' },
+            { Option: 'Qwen المحلي (Mac mini M5 Pro ×3)', 'Monthly Cost': '45 يورو (كهرباء)', 'GDPR Risk': '✅ لا يوجد', 'Setup Complexity': 'منخفض' },
           ],
           columns: ['Option', 'Monthly Cost', 'GDPR Risk', 'Setup Complexity'],
         },
@@ -26097,7 +26098,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           faqs: [
             { q: 'هل يعني تشغيل الذكاء الاصطناعي محليًا أنه يمكننا تجاهل GDPR بالكامل؟', a: 'لا. يُلغي الذكاء الاصطناعي المحلي التزامات النقل عبر الحدود بموجب [المادة 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)، لكن GDPR لا يزال ينطبق على معالجتك للذكاء الاصطناعي بموجب [المادة 5](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1226-1-1) (المبادئ) و[المادة 25](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1516-1-1) (حماية البيانات حسب التصميم) و[المادة 32](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1843-1-1) (الأمن). لا تزال بحاجة إلى أساس قانوني لمعالجة البيانات الشخصية بالذكاء الاصطناعي، ويجب تطبيق تقليل البيانات، وتوثيق معالجة الذكاء الاصطناعي في سجلاتك بموجب [المادة 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1). يجعل الذكاء الاصطناعي المحلي الامتثال أبسط بنيويًا — لكنه لا يُلغي التزامات الامتثال.' },
             { q: 'هل Qwen 3.6 27B جيد بما يكفي للاستخدام الإنتاجي؟', a: 'نعم لمهام البرمجة وتحليل الوثائق وإدارة المعرفة. يحقق Qwen 3.6 27B نسبة 92.1% على HumanEval و77.2% على SWE-bench — مماثلًا أو أفضل من Claude Sonnet 4.6 (89.4% على HumanEval) في مهام هندسة البرمجيات. أما بالنسبة للاستدلال الرياضي واتساع المعرفة متعددة المجالات، فلا تزال النماذج السحابية المتقدمة في الصدارة. الإجابة العملية هي: انشر محليًا لغالبية المهام واستخدم واجهات API السحابية للأقلية من المهام التي تكون فيها الجودة المتقدمة ضرورية بشكل واضح.' },
-            { q: 'ما هو الحد الأدنى للاستثمار في الأجهزة لفريق في الاتحاد الأوروبي؟', a: 'لفريق من 3–5: جهاز Mac Mini M4 Pro واحد بذاكرة موحّدة سعة 48 جيجابايت (~1,599 يورو) أو Mac Mini M5 Pro (~1,799 يورو) يشغّل Qwen 3.6 27B بسرعة 40 رمزًا في الثانية فأكثر. لفريق من 10 أشخاص فأكثر: نظام RTX 4090 واحد (~2,000 يورو إجمالًا)، أو جهازا Mac Mini M4 Pro، أو جهاز M5 Max Mac Studio واحد (128 جيجابايت، 3,500 يورو). تسترد الأجهزة تكلفتها مقابل تكاليف API الخاصة بـ Claude Sonnet 4.6 خلال 2–3 أشهر عند الاستخدام المكثف، ومقابل DeepSeek R2 خلال 12–18 شهرًا — مع توفير الامتثال لـ GDPR منذ اليوم الأول.' },
+            { q: 'ما هو الحد الأدنى للاستثمار في الأجهزة لفريق في الاتحاد الأوروبي؟', a: 'لفريق من 3–5: جهاز Mac mini (M6، ~1,049 يورو) أو Mac mini (M5 Pro، ~1,999 يورو) يشغّل Qwen 3.6 27B بسرعة 40 رمزًا في الثانية فأكثر. لفريق من 10 أشخاص فأكثر: نظام RTX 4090 واحد (~2,000 يورو إجمالًا)، أو جهازا Mac mini (M6)، أو جهاز Mac Studio (M5 Max، 2,999 يورو). تسترد الأجهزة تكلفتها مقابل تكاليف API الخاصة بـ Claude Sonnet 4.6 خلال 2–3 أشهر عند الاستخدام المكثف، ومقابل DeepSeek R2 خلال 12–18 شهرًا — مع توفير الامتثال لـ GDPR منذ اليوم الأول.' },
             { q: 'هل يمكننا استخدام PromptQuorum مع Qwen المحلي؟', a: 'نعم. يدعم PromptQuorum نقاط نهاية Ollama المحلية. اضبط OLLAMA_BASE_URL على عنوان URL لخادم Ollama لديك (مثل http://localhost:11434/v1) واضبط النموذج على اسم نموذج Qwen الخاص بك. يتولى PromptQuorum بعد ذلك توجيه التوزيع والاحتياطي بين النماذج ومعالجة الاستجابات عبر النماذج المحلية والسحابية.' },
           ],
         },
@@ -26121,7 +26122,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'ما هو الحد الأدنى للاستثمار في الأجهزة لفريق في الاتحاد الأوروبي؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'جهاز Mac Mini M4 Pro واحد بذاكرة موحّدة سعة 48 جيجابايت (~1,599 يورو) يشغّل Qwen 3.6 27B بسرعة 40 رمزًا في الثانية فأكثر لفريق من 3–5. تسترد الأجهزة تكلفتها مقابل تكاليف API الخاصة بـ Claude Sonnet 4.6 خلال 2–3 أشهر عند الاستخدام المكثف.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'جهاز Mac mini (M6، ~1,049 يورو) يشغّل Qwen 3.6 27B بسرعة 40 رمزًا في الثانية فأكثر لفريق من 3–5. تسترد الأجهزة تكلفتها مقابل تكاليف API الخاصة بـ Claude Sonnet 4.6 خلال 2–3 أشهر عند الاستخدام المكثف.' },
           },
           {
             '@type': 'Question',
@@ -26173,7 +26174,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'Der wichtigste technische Einwand gegen lokale KI — „Cloud-Modelle sind intelligenter" — wurde für die meisten Coding- und Analyseaufgaben im July 2026 empirisch widerlegt, als Alibaba Qwen 3.6 27B veröffentlichte. Das Modell erzielt 92,1 % HumanEval und 77,2 % SWE-bench. Claude Sonnet 4.6 erzielt 89,4 % HumanEval und ca. 72 % SWE-bench.',
             'Für die EU-Organisationen, die den größten Teil der Cloud-KI-Adoption vorangetrieben haben — Software-Entwicklungsteams, juristische Dokumentenanalyse, internes Wissensmanagement — ist Qwen 3.6 27B vergleichbar oder besser. Das Qualitätsargument für ausschließliche Cloud-Nutzung gilt für diese Anwendungsfälle nicht mehr.',
-            'Die Hardwareanforderungen sind für die meisten EU-Technologieunternehmen erschwinglich: ein einzelner RTX 4090 (1.500–2.000 €) oder Apple Silicon mit 48+ GB Unified Memory betreibt Qwen 3.6 27B mit 35–42 Tokens pro Sekunde. Mac Mini M4 Pro (1.599 €) und Mac Mini M5 Pro (1.799 €) sind Einstiegsoptionen. Für Teams mit höherem Bedarf: M5 Max Mac Studio (128 GB, 3.500 €) oder M4 Pro Mac Studio (64 GB, 2.200 €) bieten nachhaltige Leistung für den teamweiten KI-Betrieb.',
+            'Die Hardwareanforderungen sind für die meisten EU-Technologieunternehmen erschwinglich: ein einzelner RTX 4090 (1.500–2.000 €) oder Apple Silicon mit 48+ GB Unified Memory betreibt Qwen 3.6 27B mit 35–42 Tokens pro Sekunde. Mac mini (M6, 1.049 €) und Mac mini (M5 Pro, 1.999 €) sind Einstiegsoptionen. Für Teams mit höherem Bedarf: Mac Studio (M5 Max, 2.999 €) oder Mac Studio (M5 Ultra, 6.599 €) bieten nachhaltige Leistung für den teamweiten KI-Betrieb.',
           ],
         },
         costAnalysis: {
@@ -26185,8 +26186,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { Variante: 'Claude Sonnet 4.6 API', 'Monatliche Kosten': '$1.500 (nur Input)', 'DSGVO-Risiko': '⚠️ SVK erforderlich', Einrichtungsaufwand: 'Gering' },
             { Variante: 'DeepSeek R2 API', 'Monatliche Kosten': '$210', 'DSGVO-Risiko': '❌ Hoch (China)', Einrichtungsaufwand: 'Gering' },
             { Variante: 'Lokales Qwen (RTX 4090 ×2)', 'Monatliche Kosten': '60 € (Strom)', 'DSGVO-Risiko': '✅ Keines', Einrichtungsaufwand: 'Mittel' },
-            { Variante: 'Lokales Qwen (Mac Mini M4 Pro ×3)', 'Monatliche Kosten': '40 € (Strom)', 'DSGVO-Risiko': '✅ Keines', Einrichtungsaufwand: 'Gering' },
-            { Variante: 'Lokales Qwen (Mac Mini M5 Pro ×3)', 'Monatliche Kosten': '45 € (Strom)', 'DSGVO-Risiko': '✅ Keines', Einrichtungsaufwand: 'Gering' },
+            { Variante: 'Lokales Qwen (Mac mini M6 ×3)', 'Monatliche Kosten': '40 € (Strom)', 'DSGVO-Risiko': '✅ Keines', Einrichtungsaufwand: 'Gering' },
+            { Variante: 'Lokales Qwen (Mac mini M5 Pro ×3)', 'Monatliche Kosten': '45 € (Strom)', 'DSGVO-Risiko': '✅ Keines', Einrichtungsaufwand: 'Gering' },
           ],
           columns: ['Variante', 'Monatliche Kosten', 'DSGVO-Risiko', 'Einrichtungsaufwand'],
         },
@@ -26236,10 +26237,10 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           faqs: [
             { q: 'Bedeutet der Betrieb lokaler KI, dass wir die DSGVO vollständig ignorieren können?', a: 'Nein. Lokale KI eliminiert die grenzüberschreitenden Übertragungspflichten nach [Art. 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1), aber die DSGVO gilt weiterhin für Ihre KI-Verarbeitung gemäß [Art. 5](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1226-1-1) (Grundsätze), [Art. 25](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1516-1-1) (Datenschutz durch Technikgestaltung) und [Art. 32](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1843-1-1) (Sicherheit). Sie benötigen weiterhin eine Rechtsgrundlage für die KI-gestützte Verarbeitung personenbezogener Daten, müssen Datensparsamkeit umsetzen und die KI-Verarbeitung in Ihrem Verzeichnis nach [Art. 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1) dokumentieren. Lokale KI macht die Compliance strukturell einfacher — sie eliminiert die Compliance-Pflichten nicht.' },
             { q: 'Ist Qwen 3.6 27B für den produktiven Einsatz gut genug?', a: 'Ja, für Coding-, Dokumentenanalyse- und Wissensmanagement-Aufgaben. Qwen 3.6 27B erzielt 92,1 % HumanEval und 77,2 % SWE-bench — vergleichbar mit oder besser als Claude Sonnet 4.6 (89,4 % HumanEval) bei Software-Engineering-Aufgaben. Bei mathematischem Reasoning und fachdomänenübergreifendem Wissen führen Frontier-Cloud-Modelle weiterhin. Die praktische Antwort lautet: für die Mehrheit der Aufgaben lokal deployen und Cloud-APIs für die Minderheit nutzen, bei der Frontier-Qualität nachweislich erforderlich ist.' },
-            { q: 'Was ist der minimale Hardware-Invest für ein EU-Team?', a: 'Für ein Team von 3–5: ein Mac Mini M4 Pro mit 48 GB Unified Memory (~1.599 €) oder Mac Mini M5 Pro (~1.799 €) betreibt Qwen 3.6 27B mit 40+ Tokens/Sekunde. Für ein Team ab 10 Personen: ein RTX-4090-System (~2.000 € gesamt), zwei Mac Mini M4 Pros oder ein M5 Max Mac Studio (128 GB, 3.500 €). Die Hardware amortisiert sich gegenüber den Claude Sonnet 4.6 API-Kosten in 2–3 Monaten bei intensiver Nutzung und gegenüber DeepSeek R2 in 12–18 Monaten — bei DSGVO-Compliance vom ersten Tag an.' },
+            { q: 'Was ist der minimale Hardware-Invest für ein EU-Team?', a: 'Für ein Team von 3–5: ein Mac mini (M6, ~1.049 €) oder Mac mini (M5 Pro, ~1.999 €) betreibt Qwen 3.6 27B mit 40+ Tokens/Sekunde. Für ein Team ab 10 Personen: ein RTX-4090-System (~2.000 € gesamt), zwei Mac mini (M6) oder ein Mac Studio (M5 Max, 2.999 €). Die Hardware amortisiert sich gegenüber den Claude Sonnet 4.6 API-Kosten in 2–3 Monaten bei intensiver Nutzung und gegenüber DeepSeek R2 in 12–18 Monaten — bei DSGVO-Compliance vom ersten Tag an.' },
             { q: 'Kann ich PromptQuorum mit lokalem Qwen verwenden?', a: 'Ja. PromptQuorum unterstützt lokale Ollama-Endpunkte. Setzen Sie OLLAMA_BASE_URL auf Ihre Ollama-Server-URL (z. B. http://localhost:11434/v1) und den Modellnamen auf Ihren Qwen-Modellnamen. PromptQuorum übernimmt dann das Dispatch-Routing, den Modell-Fallback und die Antwortverarbeitung für lokale und Cloud-Modelle.' },
             { q: 'Muss ich bei der Nutzung von lokalem Qwen die DSGVO beachten?', a: 'Ja, aber mit deutlich reduziertem Aufwand. Lokale Deployments auf EU-Hardware eliminieren Art.-44-Übertragungspflichten vollständig — kein AVV mit einem Cloud-Anbieter, keine Standardvertragsklauseln. Sie benötigen weiterhin: eine Rechtsgrundlage für die KI-Verarbeitung (Art. 6 DSGVO), einen Eintrag im Verarbeitungsverzeichnis (Art. 30) sowie technisch-organisatorische Maßnahmen (Art. 32). Unternehmen, die BSI-Grundschutz-Kataloge anwenden, können lokale KI-Deployments in ihr bestehendes IT-Sicherheits-Framework integrieren, ohne neue Cloud-Dienstleister-Risiken einzuführen.' },
-            { q: 'Ist lokales Qwen für den deutschen Mittelstand geeignet?', a: 'Ja, insbesondere für Branchen mit erhöhter Datensensibilität — Rechtsdienstleistungen, Gesundheitswesen, Finanzdienstleistungen und verarbeitendes Gewerbe. Ein Mac Mini M4 Pro (1.599 €) reicht für Teams bis 5 Personen mit Qwen 3.6 27B aus. Der BSI empfiehlt grundsätzlich die lokale Verarbeitung für personenbezogene und vertrauliche Unternehmensdaten. Mittelständische Unternehmen profitieren zudem davon, dass keine Datenweitergabe an Drittanbieter außerhalb der EU stattfindet — ein entscheidender Vorteil gegenüber Cloud-KI-APIs, die oft in den USA oder China betrieben werden.' },
+            { q: 'Ist lokales Qwen für den deutschen Mittelstand geeignet?', a: 'Ja, insbesondere für Branchen mit erhöhter Datensensibilität — Rechtsdienstleistungen, Gesundheitswesen, Finanzdienstleistungen und verarbeitendes Gewerbe. Ein Mac mini (M6, 1.049 €) reicht für Teams bis 5 Personen mit Qwen 3.6 27B aus. Der BSI empfiehlt grundsätzlich die lokale Verarbeitung für personenbezogene und vertrauliche Unternehmensdaten. Mittelständische Unternehmen profitieren zudem davon, dass keine Datenweitergabe an Drittanbieter außerhalb der EU stattfindet — ein entscheidender Vorteil gegenüber Cloud-KI-APIs, die oft in den USA oder China betrieben werden.' },
           ],
         },
       },
@@ -26262,7 +26263,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'Was ist der minimale Hardware-Invest für ein EU-Team?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ein Mac Mini M4 Pro mit 48 GB Unified Memory (~1.599 €) oder Mac Mini M5 Pro (~1.799 €) betreibt Qwen 3.6 27B mit 40+ Tokens/Sekunde für ein Team von 3–5. Hardware amortisiert sich gegenüber Claude Sonnet 4.6 API-Kosten in 2–3 Monaten bei intensiver Nutzung.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Ein Mac mini (M6, ~1.049 €) oder Mac mini (M5 Pro, ~1.999 €) betreibt Qwen 3.6 27B mit 40+ Tokens/Sekunde für ein Team von 3–5. Hardware amortisiert sich gegenüber Claude Sonnet 4.6 API-Kosten in 2–3 Monaten bei intensiver Nutzung.' },
           },
           {
             '@type': 'Question',
@@ -26277,7 +26278,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'Ist lokales Qwen für den deutschen Mittelstand geeignet?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ja, insbesondere für Recht, Gesundheitswesen, Finanzen und verarbeitendes Gewerbe. Ein Mac Mini M4 Pro (1.599 €) reicht für Teams bis 5. Der BSI empfiehlt lokale Verarbeitung für vertrauliche Daten. Kein Datentransfer an Drittanbieter außerhalb der EU.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja, insbesondere für Recht, Gesundheitswesen, Finanzen und verarbeitendes Gewerbe. Ein Mac mini (M6, 1.049 €) reicht für Teams bis 5. Der BSI empfiehlt lokale Verarbeitung für vertrauliche Daten. Kein Datentransfer an Drittanbieter außerhalb der EU.' },
           },
         ],
       },
@@ -26324,7 +26325,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'La principale objection technique à l\'IA locale — « les modèles cloud sont plus intelligents » — est devenue empiriquement fausse pour la plupart des tâches de code et d\'analyse en avril 2026, lorsqu\'Alibaba a publié Qwen 3.6 27B. Le modèle obtient 92,1 % HumanEval et 77,2 % SWE-bench. Claude Sonnet 4.6 obtient 89,4 % HumanEval et environ 72 % SWE-bench.',
             'Pour les organisations européennes qui ont porté l\'adoption du cloud AI — équipes de développement logiciel, analyse juridique de documents, gestion des connaissances internes — Qwen 3.6 27B est comparable ou supérieur. L\'argument qualité en faveur d\'une exclusivité cloud ne tient plus pour ces cas d\'usage.',
-            'Les prérequis matériels sont à la portée de la plupart des entreprises tech européennes : un seul RTX 4090 (1 500–2 000 €) ou Apple Silicon avec 48+ Go de mémoire unifiée fait tourner Qwen 3.6 27B à 35–42 tokens par seconde. Le Mac Mini M4 Pro (1 599 €) et le Mac Mini M5 Pro (1 799 €) constituent les options d\'entrée de gamme. Pour les équipes nécessitant plus de capacité : le M5 Max Mac Studio (128 Go, 3 500 €) ou le M4 Pro Mac Studio (64 Go, 2 200 €) offrent des performances soutenues pour un usage IA à l\'échelle de l\'équipe.',
+            'Les prérequis matériels sont à la portée de la plupart des entreprises tech européennes : un seul RTX 4090 (1 500–2 000 €) ou Apple Silicon avec 48+ Go de mémoire unifiée fait tourner Qwen 3.6 27B à 35–42 tokens par seconde. Le Mac mini (M6, 1 049 €) et le Mac mini (M5 Pro, 1 999 €) constituent les options d\'entrée de gamme. Pour les équipes nécessitant plus de capacité : le Mac Studio (M5 Max, 2 999 €) ou les configurations Mac Studio (M5 Ultra) supérieures offrent des performances soutenues pour un usage IA à l\'échelle de l\'équipe.',
           ],
         },
         costAnalysis: {
@@ -26336,8 +26337,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { Option: 'API Claude Sonnet 4.6', 'Coût mensuel': '$1 500 (entrée seule)', 'Risque RGPD': '⚠️ CCT requises', Complexité: 'Faible' },
             { Option: 'API DeepSeek R2', 'Coût mensuel': '$210', 'Risque RGPD': '❌ Élevé (Chine)', Complexité: 'Faible' },
             { Option: 'Qwen local (RTX 4090 ×2)', 'Coût mensuel': '60 € (électricité)', 'Risque RGPD': '✅ Aucun', Complexité: 'Moyen' },
-            { Option: 'Qwen local (Mac Mini M4 Pro ×3)', 'Coût mensuel': '40 € (électricité)', 'Risque RGPD': '✅ Aucun', Complexité: 'Faible' },
-            { Option: 'Qwen local (Mac Mini M5 Pro ×3)', 'Coût mensuel': '45 € (électricité)', 'Risque RGPD': '✅ Aucun', Complexité: 'Faible' },
+            { Option: 'Qwen local (Mac mini M6 ×3)', 'Coût mensuel': '40 € (électricité)', 'Risque RGPD': '✅ Aucun', Complexité: 'Faible' },
+            { Option: 'Qwen local (Mac mini M5 Pro ×3)', 'Coût mensuel': '45 € (électricité)', 'Risque RGPD': '✅ Aucun', Complexité: 'Faible' },
           ],
           columns: ['Option', 'Coût mensuel', 'Risque RGPD', 'Complexité'],
         },
@@ -26387,7 +26388,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           faqs: [
             { q: 'Utiliser l\'IA locale signifie-t-il que nous pouvons ignorer le RGPD ?', a: 'Non. L\'IA locale élimine les obligations de transfert transfrontalier au titre de l\'[Article 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1), mais le RGPD s\'applique toujours à votre traitement IA en vertu de l\'[Article 5](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1226-1-1) (principes), l\'[Article 25](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1516-1-1) (protection des données dès la conception) et l\'[Article 32](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1843-1-1) (sécurité). Vous devez toujours disposer d\'une base légale pour le traitement des données personnelles par IA, mettre en œuvre la minimisation des données et documenter le traitement IA dans votre registre au titre de l\'[Article 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1). L\'IA locale simplifie la conformité structurellement — elle ne supprime pas les obligations.' },
             { q: 'Qwen 3.6 27B est-il suffisamment performant pour un usage en production ?', a: 'Oui pour les tâches de code, d\'analyse documentaire et de gestion des connaissances. Qwen 3.6 27B obtient 92,1 % HumanEval et 77,2 % SWE-bench — comparable ou supérieur à Claude Sonnet 4.6 (89,4 % HumanEval) sur les tâches d\'ingénierie logicielle. Pour le raisonnement mathématique et l\'étendue des connaissances multi-domaines, les modèles frontier cloud restent en tête. La réponse pratique : déployez localement pour la majorité des tâches et utilisez les API cloud pour la minorité où la qualité frontier est réellement nécessaire.' },
-            { q: 'Quel est l\'investissement matériel minimum pour une équipe européenne ?', a: 'Pour une équipe de 3 à 5 personnes : un Mac Mini M4 Pro avec 48 Go de mémoire unifiée (~1 599 €) ou Mac Mini M5 Pro (~1 799 €) fait tourner Qwen 3.6 27B à 40+ tokens/seconde. Pour une équipe de 10+ : un système RTX 4090 (~2 000 € au total), deux Mac Mini M4 Pro ou un M5 Max Mac Studio (128 Go, 3 500 €). Le matériel atteint l\'équilibre face aux coûts API de Claude Sonnet 4.6 en 2 à 3 mois à usage intensif, et face à DeepSeek R2 en 12 à 18 mois — avec conformité RGPD dès le premier jour.' },
+            { q: 'Quel est l\'investissement matériel minimum pour une équipe européenne ?', a: 'Pour une équipe de 3 à 5 personnes : un Mac mini (M6, ~1 049 €) ou Mac mini (M5 Pro, ~1 999 €) fait tourner Qwen 3.6 27B à 40+ tokens/seconde. Pour une équipe de 10+ : un système RTX 4090 (~2 000 € au total), deux Mac mini (M6) ou un Mac Studio (M5 Max, 2 999 €). Le matériel atteint l\'équilibre face aux coûts API de Claude Sonnet 4.6 en 2 à 3 mois à usage intensif, et face à DeepSeek R2 en 12 à 18 mois — avec conformité RGPD dès le premier jour.' },
             { q: 'Peut-on utiliser PromptQuorum avec Qwen local ?', a: 'Oui. PromptQuorum prend en charge les endpoints Ollama locaux. Définissez OLLAMA_BASE_URL sur l\'URL de votre serveur Ollama (ex. http://localhost:11434/v1) et le nom du modèle sur votre modèle Qwen. PromptQuorum gère ensuite le routage de dispatch, le fallback de modèle et le traitement des réponses pour les modèles locaux et cloud.' },
           ],
         },
@@ -26411,7 +26412,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'Quel est l\'investissement matériel minimum pour une équipe européenne ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Un Mac Mini M4 Pro avec 48 Go de mémoire unifiée (~1 599 €) ou Mac Mini M5 Pro (~1 799 €) pour une équipe de 3 à 5. Équilibre face à Claude Sonnet 4.6 API atteint en 2 à 3 mois à usage intensif.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Un Mac mini (M6, ~1 049 €) ou Mac mini (M5 Pro, ~1 999 €) pour une équipe de 3 à 5. Équilibre face à Claude Sonnet 4.6 API atteint en 2 à 3 mois à usage intensif.' },
           },
           {
             '@type': 'Question',
@@ -26463,7 +26464,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'ローカルAIに対する主要な技術的異議 — 「クラウドモデルの方が賢い」— は、2026年4月にAlibabaがQwen 3.6 27Bをリリースしたことで、ほとんどのコーディング・分析タスクにおいて経験的に覆されました。同モデルはHumanEval 92.1%、SWE-bench 77.2%を記録しています。Claude Sonnet 4.6はHumanEval 89.4%、SWE-bench約72%です。',
             'クラウドAI導入を主導してきたEU組織 — ソフトウェア開発チーム、法律文書分析、社内ナレッジマネジメント — にとって、Qwen 3.6 27Bは同等以上の性能を発揮します。これらのユースケースにおける「クラウド独占」の品質論は成立しなくなりました。',
-            'ハードウェア要件は多くのEUテック企業が手の届く範囲です。単一のRTX 4090（1,500〜2,000€）、または48GB以上のUnified MemoryのApple Siliconで、Qwen 3.6 27Bを毎秒35〜42トークンで動作させられます。Mac Mini M4 Pro（1,599€）とMac Mini M5 Pro（1,799€）がエントリーオプションです。より大きな処理能力が必要なチームには、M5 Max Mac Studio（128GB、3,500€）またはM4 Pro Mac Studio（64GB、2,200€）がチーム規模でのAI利用に対応します。',
+            'ハードウェア要件は多くのEUテック企業が手の届く範囲です。単一のRTX 4090（1,500〜2,000€）、または48GB以上のUnified MemoryのApple Siliconで、Qwen 3.6 27Bを毎秒35〜42トークンで動作させられます。Mac mini（M6、1,049€）とMac mini（M5 Pro、1,999€）がエントリーオプションです。より大きな処理能力が必要なチームには、Mac Studio（M5 Max、2,999€）またはMac Studio（M5 Ultra、6,599€）がチーム規模でのAI利用に対応します。',
           ],
         },
         costAnalysis: {
@@ -26475,8 +26476,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { Option: 'Claude Sonnet 4.6 API', '月額コスト': '$1,500（入力のみ）', 'GDPRリスク': '⚠️ SCC必要', '導入難易度': '低' },
             { Option: 'DeepSeek R2 API', '月額コスト': '$210', 'GDPRリスク': '❌ 高（中国）', '導入難易度': '低' },
             { Option: 'ローカルQwen（RTX 4090 ×2）', '月額コスト': '60€（電気代）', 'GDPRリスク': '✅ なし', '導入難易度': '中' },
-            { Option: 'ローカルQwen（Mac Mini M4 Pro ×3）', '月額コスト': '40€（電気代）', 'GDPRリスク': '✅ なし', '導入難易度': '低' },
-            { Option: 'ローカルQwen（Mac Mini M5 Pro ×3）', '月額コスト': '45€（電気代）', 'GDPRリスク': '✅ なし', '導入難易度': '低' },
+            { Option: 'ローカルQwen（Mac mini M6 ×3）', '月額コスト': '40€（電気代）', 'GDPRリスク': '✅ なし', '導入難易度': '低' },
+            { Option: 'ローカルQwen（Mac mini M5 Pro ×3）', '月額コスト': '45€（電気代）', 'GDPRリスク': '✅ なし', '導入難易度': '低' },
           ],
           columns: ['Option', '月額コスト', 'GDPRリスク', '導入難易度'],
         },
@@ -26526,7 +26527,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           faqs: [
             { q: 'ローカルAIを運用すればGDPRを完全に無視できますか？', a: 'いいえ。ローカルAIは[第44条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)の越境転送義務を排除しますが、GDPRは[第5条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1226-1-1)（原則）、[第25条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1516-1-1)（プライバシーバイデザイン）、[第32条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1843-1-1)（セキュリティ）に基づくAI処理に引き続き適用されます。個人データのAI処理には適法な根拠が必要で、データ最小化の実装が求められ、[第30条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1)の記録へのAI処理の記載が必要です。ローカルAIはコンプライアンスを構造的に簡素化しますが、義務を消滅させるわけではありません。' },
             { q: 'Qwen 3.6 27Bは本番環境での利用に十分ですか？', a: 'コーディング、文書分析、ナレッジマネジメントのタスクには十分です。Qwen 3.6 27BはHumanEval 92.1%、SWE-bench 77.2%を記録しており、ソフトウェアエンジニアリングタスクでClaude Sonnet 4.6（HumanEval 89.4%）と同等以上です。数学的推論や多領域にわたる知識の広さではフロンティアクラウドモデルが優位です。実践的な回答：タスクの大部分はローカルデプロイし、フロンティア品質が明らかに必要な少数のタスクにのみクラウドAPIを使用してください。' },
-            { q: 'EUチームの最小ハードウェア投資はどれくらいですか？', a: '3〜5名のチームなら：48GBユニファイドメモリのMac Mini M4 Pro（約1,599€）またはMac Mini M5 Pro（約1,799€）でQwen 3.6 27Bが毎秒40+トークンで動作します。10名以上のチームなら：RTX 4090システム（合計約2,000€）、Mac Mini M4 Pro ×2台、またはM5 Max Mac Studio（128GB、3,500€）。ハードウェアは集中使用時2〜3か月でClaude Sonnet 4.6 APIコストに対して損益分岐点に達し、DeepSeek R2に対しては12〜18か月です — 初日からGDPRコンプライアンスを維持しながら。' },
+            { q: 'EUチームの最小ハードウェア投資はどれくらいですか？', a: '3〜5名のチームなら：Mac mini（M6、約1,049€）またはMac mini（M5 Pro、約1,999€）でQwen 3.6 27Bが毎秒40+トークンで動作します。10名以上のチームなら：RTX 4090システム（合計約2,000€）、Mac mini（M6）×2台、またはMac Studio（M5 Max、2,999€）。ハードウェアは集中使用時2〜3か月でClaude Sonnet 4.6 APIコストに対して損益分岐点に達し、DeepSeek R2に対しては12〜18か月です — 初日からGDPRコンプライアンスを維持しながら。' },
             { q: 'PromptQuorumをローカルQwenで使用できますか？', a: 'はい。PromptQuorumはローカルOllamaエンドポイントをサポートしています。OLLAMA_BASE_URLにOllamaサーバーのURL（例：http://localhost:11434/v1）を設定し、モデル名にQwenモデル名を指定してください。PromptQuorumがローカルモデルとクラウドモデルのDispatchルーティング、モデルフォールバック、レスポンス処理を担います。' },
           ],
         },
@@ -26550,7 +26551,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'EUチームの最小ハードウェア投資はどれくらいですか？',
-            acceptedAnswer: { '@type': 'Answer', text: '3〜5名のチームなら48GBのMac Mini M4 Pro（約1,599€）で毎秒40+トークン。集中使用時2〜3か月でClaude Sonnet 4.6 APIコストに対して損益分岐点に達します。' },
+            acceptedAnswer: { '@type': 'Answer', text: '3〜5名のチームならMac mini（M6、約1,049€）で毎秒40+トークン。集中使用時2〜3か月でClaude Sonnet 4.6 APIコストに対して損益分岐点に達します。' },
           },
           {
             '@type': 'Question',
@@ -26602,7 +26603,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '对本地AI的主要技术异议——"云模型更智能"——在2026年4月Alibaba发布Qwen 3.6 27B后，就大多数编程和分析任务而言已被实证推翻。该模型在HumanEval上达到92.1%，在SWE-bench上达到77.2%。Claude Sonnet 4.6的HumanEval为89.4%，SWE-bench约72%。',
             '对于推动大部分云AI采用的EU组织——软件开发团队、法律文档分析、内部知识管理——Qwen 3.6 27B的性能相当或更优。这些使用场景中云独占的质量论据已站不住脚。',
-            '硬件要求在大多数EU科技企业的承受范围之内：单台RTX 4090（1,500至2,000€），或48GB以上统一内存的Apple Silicon，可使Qwen 3.6 27B以每秒35至42个令牌运行。Mac Mini M4 Pro（1,599€）和Mac Mini M5 Pro（1,799€）是入门级选项。需要更大容量的团队：M5 Max Mac Studio（128GB，3,500€）或M4 Pro Mac Studio（64GB，2,200€）可满足团队规模的AI使用需求。',
+            '硬件要求在大多数EU科技企业的承受范围之内：单台RTX 4090（1,500至2,000€），或48GB以上统一内存的Apple Silicon，可使Qwen 3.6 27B以每秒35至42个令牌运行。Mac mini（M6，1,049€）和Mac mini（M5 Pro，1,999€）是入门级选项。需要更大容量的团队：Mac Studio（M5 Max，2,999€）或Mac Studio（M5 Ultra，6,599€）可满足团队规模的AI使用需求。',
           ],
         },
         costAnalysis: {
@@ -26614,8 +26615,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { 选项: 'Claude Sonnet 4.6 API', 月度成本: '$1,500（仅输入）', 'GDPR风险': '⚠️ 需要SCC', 部署复杂度: '低' },
             { 选项: 'DeepSeek R2 API', 月度成本: '$210', 'GDPR风险': '❌ 高（中国）', 部署复杂度: '低' },
             { 选项: '本地Qwen（RTX 4090 ×2）', 月度成本: '60€（电费）', 'GDPR风险': '✅ 无', 部署复杂度: '中' },
-            { 选项: '本地Qwen（Mac Mini M4 Pro ×3）', 月度成本: '40€（电费）', 'GDPR风险': '✅ 无', 部署复杂度: '低' },
-            { 选项: '本地Qwen（Mac Mini M5 Pro ×3）', 月度成本: '45€（电费）', 'GDPR风险': '✅ 无', 部署复杂度: '低' },
+            { 选项: '本地Qwen（Mac mini M6 ×3）', 月度成本: '40€（电费）', 'GDPR风险': '✅ 无', 部署复杂度: '低' },
+            { 选项: '本地Qwen（Mac mini M5 Pro ×3）', 月度成本: '45€（电费）', 'GDPR风险': '✅ 无', 部署复杂度: '低' },
           ],
           columns: ['选项', '月度成本', 'GDPR风险', '部署复杂度'],
         },
@@ -26665,7 +26666,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           faqs: [
             { q: '运行本地AI意味着可以完全忽略GDPR吗？', a: '不。本地AI消除了[第44条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)的跨境传输义务，但GDPR仍通过[第5条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1226-1-1)（原则）、[第25条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1516-1-1)（隐私设计）和[第32条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1843-1-1)（安全）适用于您的AI处理。您仍需要有处理个人数据的合法依据，必须实施数据最小化，并在[第30条](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1)记录中记录AI处理情况。本地AI使合规在结构上更简单——并不消除合规义务。' },
             { q: 'Qwen 3.6 27B是否足以满足生产环境需求？', a: '对于编程、文档分析和知识管理任务，答案是肯定的。Qwen 3.6 27B在HumanEval上达到92.1%，SWE-bench达到77.2%——在软件工程任务上与Claude Sonnet 4.6（HumanEval 89.4%）相当或更优。在数学推理和多领域知识广度方面，前沿云模型仍然领先。实用建议：对大多数任务进行本地部署，对少数确实需要前沿质量的任务使用云API。' },
-            { q: 'EU团队的最低硬件投入是多少？', a: '3至5人团队：一台48GB统一内存的Mac Mini M4 Pro（约1,599€）或Mac Mini M5 Pro（约1,799€）可使Qwen 3.6 27B以40+令牌/秒运行。10人以上团队：一套RTX 4090系统（约2,000€）、两台Mac Mini M4 Pro，或一台M5 Max Mac Studio（128GB，3,500€）。在高强度使用下，硬件在2至3个月内与Claude Sonnet 4.6 API成本持平，12至18个月内与DeepSeek R2持平——同时从第一天起即满足GDPR合规要求。' },
+            { q: 'EU团队的最低硬件投入是多少？', a: '3至5人团队：一台Mac mini（M6，约1,049€）或Mac mini（M5 Pro，约1,999€）可使Qwen 3.6 27B以40+令牌/秒运行。10人以上团队：一套RTX 4090系统（约2,000€）、两台Mac mini（M6），或一台Mac Studio（M5 Max，2,999€）。在高强度使用下，硬件在2至3个月内与Claude Sonnet 4.6 API成本持平，12至18个月内与DeepSeek R2持平——同时从第一天起即满足GDPR合规要求。' },
             { q: '能否将PromptQuorum与本地Qwen配合使用？', a: '可以。PromptQuorum支持本地Ollama端点。将OLLAMA_BASE_URL设置为您的Ollama服务器URL（例如http://localhost:11434/v1），并将模型名称设置为您的Qwen模型名称。PromptQuorum随后处理本地模型和云模型的调度路由、模型回退和响应处理。' },
           ],
         },
@@ -26689,7 +26690,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'EU团队的最低硬件投入是多少？',
-            acceptedAnswer: { '@type': 'Answer', text: '3至5人团队：Mac Mini M4 Pro（约1,599€）或M5 Pro（约1,799€）可使Qwen 3.6 27B以40+令牌/秒运行。高强度使用下2至3个月内与Claude Sonnet 4.6 API成本持平。' },
+            acceptedAnswer: { '@type': 'Answer', text: '3至5人团队：Mac mini（M6，约1,049€）或M5 Pro（约1,999€）可使Qwen 3.6 27B以40+令牌/秒运行。高强度使用下2至3个月内与Claude Sonnet 4.6 API成本持平。' },
           },
           {
             '@type': 'Question',
@@ -26741,7 +26742,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'A principal objeção técnica ao AI local — "os modelos cloud são mais inteligentes" — tornou-se empiricamente falsa para a maioria das tarefas de codificação e análise em julho de 2026, quando a Alibaba lançou o Qwen 3.6 27B. O modelo pontua 92,1% no HumanEval e 77,2% no SWE-bench. O Claude Sonnet 4.6 pontua 89,4% no HumanEval e aproximadamente 72% no SWE-bench.',
             'Para as organizações da UE que impulsionaram a maior parte da adoção de cloud AI — equipes de desenvolvimento de software, análise jurídica de documentos, gestão interna do conhecimento — o Qwen 3.6 27B tem desempenho comparável ou superior.',
-            'O requisito de hardware está ao alcance da maioria das empresas de tecnologia da UE: um único RTX 4090 (€1.500 a €2.000), ou Apple Silicon com 48 GB ou mais de memória unificada, executa o Qwen 3.6 27B a 35 a 42 tokens por segundo. Mac Mini M4 Pro (€1.599) e Mac Mini M5 Pro (€1.799) são opções de entrada. Para equipes que precisam de mais capacidade: M5 Max Mac Studio (128 GB, €3.500) ou M4 Pro Mac Studio (64 GB, €2.200).',
+            'O requisito de hardware está ao alcance da maioria das empresas de tecnologia da UE: um único RTX 4090 (€1.500 a €2.000), ou Apple Silicon com 48 GB ou mais de memória unificada, executa o Qwen 3.6 27B a 35 a 42 tokens por segundo. Mac mini (M6, €1.049) e Mac mini (M5 Pro, €1.999) são opções de entrada. Para equipes que precisam de mais capacidade: Mac Studio (M5 Max, €2.999) ou Mac Studio (M5 Ultra, €6.599).',
           ],
         },
         costAnalysis: {
@@ -26751,8 +26752,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { Opção: 'API Claude Sonnet 4.6', 'Custo Mensal': '$1.500 (apenas entrada)', 'Risco RGPD': '⚠️ SCC necessário', 'Complexidade de Configuração': 'Baixa' },
             { Opção: 'API DeepSeek R2', 'Custo Mensal': '$210', 'Risco RGPD': '❌ Alto (China)', 'Complexidade de Configuração': 'Baixa' },
             { Opção: 'Qwen Local (RTX 4090 ×2)', 'Custo Mensal': '€60 (eletricidade)', 'Risco RGPD': '✅ Nenhum', 'Complexidade de Configuração': 'Média' },
-            { Opção: 'Qwen Local (Mac Mini M4 Pro ×3)', 'Custo Mensal': '€40 (eletricidade)', 'Risco RGPD': '✅ Nenhum', 'Complexidade de Configuração': 'Baixa' },
-            { Opção: 'Qwen Local (Mac Mini M5 Pro ×3)', 'Custo Mensal': '€45 (eletricidade)', 'Risco RGPD': '✅ Nenhum', 'Complexidade de Configuração': 'Baixa' },
+            { Opção: 'Qwen Local (Mac mini M6 ×3)', 'Custo Mensal': '€40 (eletricidade)', 'Risco RGPD': '✅ Nenhum', 'Complexidade de Configuração': 'Baixa' },
+            { Opção: 'Qwen Local (Mac mini M5 Pro ×3)', 'Custo Mensal': '€45 (eletricidade)', 'Risco RGPD': '✅ Nenhum', 'Complexidade de Configuração': 'Baixa' },
           ],
           columns: ['Opção', 'Custo Mensal', 'Risco RGPD', 'Complexidade de Configuração'],
         },
@@ -26806,7 +26807,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           faqs: [
             { q: 'Executar IA local significa que podemos ignorar o RGPD completamente?', a: 'Não. A IA local elimina as obrigações de transferência transfronteiriça do [Artigo 44](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1), mas o RGPD ainda se aplica ao seu processamento de IA nos termos do [Artigo 5](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1226-1-1) (princípios), [Artigo 25](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1516-1-1) (proteção de dados desde a conceção) e [Artigo 32](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1843-1-1) (segurança). Você ainda precisa de uma base jurídica para processar dados pessoais com IA e deve documentar o processamento de IA nos seus registos do [Artigo 30](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1). A IA local torna a conformidade estruturalmente mais simples — não elimina as obrigações de conformidade.' },
             { q: 'O Qwen 3.6 27B é suficientemente bom para uso em produção?', a: 'Sim, para tarefas de codificação, análise de documentos e gestão do conhecimento. O Qwen 3.6 27B pontua 92,1% no HumanEval e 77,2% no SWE-bench — comparável ou superior ao Claude Sonnet 4.6 (89,4% HumanEval) em tarefas de engenharia de software. A resposta prática é: implante localmente para a maioria das tarefas e use APIs cloud para a minoria onde a qualidade frontier é demonstravelmente necessária.' },
-            { q: 'Qual é o investimento mínimo em hardware para uma equipe da UE?', a: 'Para uma equipe de 3 a 5: um Mac Mini M4 Pro com 48 GB de memória unificada (~€1.599) ou Mac Mini M5 Pro (~€1.799) executa o Qwen 3.6 27B a 40+ tokens/segundo. Para uma equipe de 10+: um sistema RTX 4090 (~€2.000 total), dois Mac Mini M4 Pro ou um M5 Max Mac Studio (128 GB, €3.500). O hardware atinge o ponto de equilíbrio frente aos custos da API do Claude Sonnet 4.6 em 2 a 3 meses com uso intensivo.' },
+            { q: 'Qual é o investimento mínimo em hardware para uma equipe da UE?', a: 'Para uma equipe de 3 a 5: um Mac mini (M6, ~€1.049) ou Mac mini (M5 Pro, ~€1.999) executa o Qwen 3.6 27B a 40+ tokens/segundo. Para uma equipe de 10+: um sistema RTX 4090 (~€2.000 total), dois Mac mini (M6) ou um Mac Studio (M5 Max, €2.999). O hardware atinge o ponto de equilíbrio frente aos custos da API do Claude Sonnet 4.6 em 2 a 3 meses com uso intensivo.' },
             { q: 'Podemos usar o PromptQuorum com o Qwen local?', a: 'Sim. O PromptQuorum suporta endpoints Ollama locais. Defina OLLAMA_BASE_URL como o URL do seu servidor Ollama (por exemplo, http://localhost:11434/v1) e o nome do modelo como o seu modelo Qwen. O PromptQuorum então trata do roteamento de despacho, fallback de modelo e tratamento de respostas para modelos locais e cloud.' },
           ],
         },
@@ -26830,7 +26831,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'Qual é o investimento mínimo em hardware para uma equipe da UE?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Um Mac Mini M4 Pro com 48 GB de memória unificada (~€1.599) ou Mac Mini M5 Pro (~€1.799) para uma equipe de 3 a 5. Atinge o ponto de equilíbrio frente aos custos da API do Claude Sonnet 4.6 em 2 a 3 meses com uso intensivo.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Um Mac mini (M6, ~€1.049) ou Mac mini (M5 Pro, ~€1.999) para uma equipe de 3 a 5. Atinge o ponto de equilíbrio frente aos custos da API do Claude Sonnet 4.6 em 2 a 3 meses com uso intensivo.' },
           },
           {
             '@type': 'Question',
@@ -26882,7 +26883,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             '로컬 AI에 대한 주요 기술적 반론인 "클라우드 모델이 더 뛰어나다"는 주장은 알리바바가 Qwen 3.6 27B를 출시한 2026년 7월에 대부분의 코딩 및 분석 과제에서 사실이 아님이 경험적으로 밝혀졌습니다. 이 모델은 HumanEval 92.1%, SWE-bench 77.2%를 기록했습니다. Claude Sonnet 4.6은 HumanEval 89.4%, SWE-bench 약 72%입니다.',
             '클라우드 AI 도입을 주도한 EU 조직들, 즉 소프트웨어 개발 팀, 법률 문서 분석, 내부 지식 관리 분야에서 Qwen 3.6 27B는 동등하거나 더 뛰어난 성능을 보입니다. 이러한 사용 사례에서 클라우드 독점에 대한 품질 논거는 더 이상 유효하지 않습니다.',
-            '하드웨어 요구사항은 대부분의 EU 기술 기업이 감당할 수 있는 수준입니다. 단일 RTX 4090(1,500~2,000유로) 또는 48GB 이상의 통합 메모리를 갖춘 Apple Silicon이 Qwen 3.6 27B를 초당 35~42 토큰으로 실행합니다. Mac Mini M4 Pro(1,599유로)와 Mac Mini M5 Pro(1,799유로)는 입문 옵션입니다. 더 많은 용량이 필요한 팀의 경우: M5 Max Mac Studio(128GB, 3,500유로) 또는 M4 Pro Mac Studio(64GB, 2,200유로)가 팀 전체 AI 사용을 위한 지속적인 성능을 제공합니다.',
+            '하드웨어 요구사항은 대부분의 EU 기술 기업이 감당할 수 있는 수준입니다. 단일 RTX 4090(1,500~2,000유로) 또는 48GB 이상의 통합 메모리를 갖춘 Apple Silicon이 Qwen 3.6 27B를 초당 35~42 토큰으로 실행합니다. Mac mini(M6, 1,049유로)와 Mac mini(M5 Pro, 1,999유로)는 입문 옵션입니다. 더 많은 용량이 필요한 팀의 경우: Mac Studio(M5 Max, 2,999유로) 또는 Mac Studio(M5 Ultra, 6,599유로)가 팀 전체 AI 사용을 위한 지속적인 성능을 제공합니다.',
           ],
         },
         costAnalysis: {
@@ -26894,8 +26895,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { '옵션': 'Claude Sonnet 4.6 API', '월 비용': '$1,500 (입력만)', 'GDPR 위험': '⚠️ SCC 필요', '설정 복잡도': '낮음' },
             { '옵션': 'DeepSeek R2 API', '월 비용': '$210', 'GDPR 위험': '❌ 높음 (중국)', '설정 복잡도': '낮음' },
             { '옵션': '로컬 Qwen (RTX 4090 ×2)', '월 비용': '€60 (전기요금)', 'GDPR 위험': '✅ 없음', '설정 복잡도': '중간' },
-            { '옵션': '로컬 Qwen (Mac Mini M4 Pro ×3)', '월 비용': '€40 (전기요금)', 'GDPR 위험': '✅ 없음', '설정 복잡도': '낮음' },
-            { '옵션': '로컬 Qwen (Mac Mini M5 Pro ×3)', '월 비용': '€45 (전기요금)', 'GDPR 위험': '✅ 없음', '설정 복잡도': '낮음' },
+            { '옵션': '로컬 Qwen (Mac mini M6 ×3)', '월 비용': '€40 (전기요금)', 'GDPR 위험': '✅ 없음', '설정 복잡도': '낮음' },
+            { '옵션': '로컬 Qwen (Mac mini M5 Pro ×3)', '월 비용': '€45 (전기요금)', 'GDPR 위험': '✅ 없음', '설정 복잡도': '낮음' },
           ],
           columns: ['옵션', '월 비용', 'GDPR 위험', '설정 복잡도'],
         },
@@ -26951,7 +26952,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           faqs: [
             { q: '로컬 AI를 사용하면 GDPR을 완전히 무시할 수 있나요?', a: '아니요. 로컬 AI는 [제44조](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1567-1-1)의 국경 간 이전 의무를 제거하지만, GDPR은 여전히 [제5조](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1226-1-1)(원칙), [제25조](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1516-1-1)(설계에 의한 데이터 보호), [제32조](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1843-1-1)(보안)에 따른 AI 처리에 적용됩니다. AI로 개인정보를 처리하기 위한 적법한 근거가 여전히 필요하고, 데이터 최소화를 구현해야 하며, [제30조](https://eur-lex.europa.eu/legal-content/en/TXT/?uri=celex%3A32016R0679#d1e1803-1-1) 기록에 AI 처리를 문서화해야 합니다. 로컬 AI는 준수를 구조적으로 간단하게 만들지만, 준수 의무를 없애지는 않습니다.' },
             { q: 'Qwen 3.6 27B는 프로덕션 사용에 충분히 좋은가요?', a: '코딩, 문서 분석, 지식 관리 작업에는 적합합니다. Qwen 3.6 27B는 소프트웨어 엔지니어링 작업에서 HumanEval 92.1%, SWE-bench 77.2%를 기록했으며, Claude Sonnet 4.6(HumanEval 89.4%)과 동등하거나 더 뛰어납니다. 수학적 추론과 다학문 지식 폭에서는 프론티어 클라우드 모델이 여전히 앞섭니다. 현실적인 답변은: 대부분의 작업에는 로컬 배포를 사용하고, 프론티어 품질이 분명히 필요한 소수의 작업에만 클라우드 API를 사용하는 것입니다.' },
-            { q: 'EU 팀을 위한 최소 하드웨어 투자는 얼마인가요?', a: '3~5명 팀의 경우: 48GB 통합 메모리를 갖춘 Mac Mini M4 Pro(약 1,599유로) 또는 Mac Mini M5 Pro(약 1,799유로)가 Qwen 3.6 27B를 초당 40+ 토큰으로 실행합니다. 10명 이상 팀의 경우: RTX 4090 시스템(총 약 2,000유로), Mac Mini M4 Pro 2대, 또는 M5 Max Mac Studio(128GB, 3,500유로). 하드웨어는 집중 사용 시 2~3개월 내에 Claude Sonnet 4.6 API 비용과 손익분기를 맞추며, DeepSeek R2 대비로는 12~18개월이 소요됩니다. 첫날부터 GDPR 준수를 보장합니다.' },
+            { q: 'EU 팀을 위한 최소 하드웨어 투자는 얼마인가요?', a: '3~5명 팀의 경우: Mac mini(M6, 약 1,049유로) 또는 Mac mini(M5 Pro, 약 1,999유로)가 Qwen 3.6 27B를 초당 40+ 토큰으로 실행합니다. 10명 이상 팀의 경우: RTX 4090 시스템(총 약 2,000유로), Mac mini(M6) 2대, 또는 Mac Studio(M5 Max, 2,999유로). 하드웨어는 집중 사용 시 2~3개월 내에 Claude Sonnet 4.6 API 비용과 손익분기를 맞추며, DeepSeek R2 대비로는 12~18개월이 소요됩니다. 첫날부터 GDPR 준수를 보장합니다.' },
             { q: 'PromptQuorum을 로컬 Qwen과 함께 사용할 수 있나요?', a: '네. PromptQuorum은 로컬 Ollama 엔드포인트를 지원합니다. OLLAMA_BASE_URL을 Ollama 서버 URL(예: http://localhost:11434/v1)로 설정하고 모델을 Qwen 모델 이름으로 설정하세요. PromptQuorum이 로컬 모델과 클라우드 모델 간의 디스패치 라우팅, 모델 폴백, 응답 처리를 담당합니다.' },
           ],
         },
@@ -26973,7 +26974,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           {
             '@type': 'Question',
             name: 'EU 팀을 위한 최소 하드웨어 투자는 얼마인가요?',
-            acceptedAnswer: { '@type': 'Answer', text: '48GB 통합 메모리를 갖춘 Mac Mini M4 Pro(약 1,599유로) 또는 Mac Mini M5 Pro(약 1,799유로)가 3~5명 팀에서 Qwen 3.6 27B를 초당 40+ 토큰으로 실행합니다. 집중 사용 시 2~3개월 내에 Claude Sonnet 4.6 API 비용과 손익분기를 맞춥니다.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Mac mini(M6, 약 1,049유로) 또는 Mac mini(M5 Pro, 약 1,999유로)가 3~5명 팀에서 Qwen 3.6 27B를 초당 40+ 토큰으로 실행합니다. 집중 사용 시 2~3개월 내에 Claude Sonnet 4.6 API 비용과 손익분기를 맞춥니다.' },
           },
           {
             '@type': 'Question',
