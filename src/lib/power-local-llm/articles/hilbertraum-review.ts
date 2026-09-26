@@ -119,6 +119,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       usageExamples: {
         id: 'usage-examples',
         title: 'Usage Examples: Three Ways to Use HilbertRaum',
+        image: '/images/hilbertraum-review-docqa-example-en.webp',
+        imageCaption: 'Example from HilbertRaum: asking it to list every deadline and notice period in a rental contract, with the answer citing the exact clause and page for each one.',
         content: 'These are concrete workflows built from HilbertRaum\'s documented features above — not hypothetical use cases.',
         subsections: [
           {
@@ -379,6 +381,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       usageExamples: {
         id: 'usage-examples',
         title: 'Anwendungsbeispiele: Drei Wege, HilbertRaum zu nutzen',
+        image: '/images/hilbertraum-review-docqa-example-de.webp',
+        imageCaption: 'Beispiel aus HilbertRaum: Die App wird gebeten, alle Fristen und Kündigungsfristen in einem Mietvertrag aufzulisten – die Antwort verweist bei jedem Punkt auf die genaue Klausel und Seite.',
         content: 'Dies sind konkrete Abläufe, die aus den oben dokumentierten Funktionen von HilbertRaum abgeleitet sind — keine hypothetischen Anwendungsfälle.',
         subsections: [
           {
@@ -639,6 +643,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       usageExamples: {
         id: 'usage-examples',
         title: 'Exemples d\'utilisation : trois façons d\'utiliser HilbertRaum',
+        image: '/images/hilbertraum-review-docqa-example-en.webp',
+        imageCaption: 'Exemple issu de HilbertRaum : on lui demande de lister tous les délais et préavis d\'un contrat de location, et la réponse cite la clause et la page exactes pour chacun.',
         content: 'Voici des scénarios concrets construits à partir des fonctionnalités documentées de HilbertRaum ci-dessus — pas des cas d\'usage hypothétiques.',
         subsections: [
           {
@@ -899,6 +905,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       usageExamples: {
         id: 'usage-examples',
         title: 'Ejemplos de uso: tres formas de usar HilbertRaum',
+        image: '/images/hilbertraum-review-docqa-example-en.webp',
+        imageCaption: 'Ejemplo de HilbertRaum: se le pide que liste todos los plazos y periodos de preaviso de un contrato de alquiler, y la respuesta cita la cláusula y página exactas de cada uno.',
         content: 'Estos son flujos de trabajo concretos construidos a partir de las funciones documentadas de HilbertRaum descritas arriba — no casos de uso hipotéticos.',
         subsections: [
           {
@@ -1159,6 +1167,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       usageExamples: {
         id: 'usage-examples',
         title: 'Exemplos de uso: três formas de usar o HilbertRaum',
+        image: '/images/hilbertraum-review-docqa-example-en.webp',
+        imageCaption: 'Exemplo do HilbertRaum: pedindo que ele liste todos os prazos e períodos de aviso prévio de um contrato de aluguel, com a resposta citando a cláusula e a página exatas de cada um.',
         content: 'Estes são fluxos de trabalho concretos, construídos a partir dos recursos documentados do HilbertRaum descritos acima — não casos de uso hipotéticos.',
         subsections: [
           {
@@ -1419,6 +1429,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       usageExamples: {
         id: 'usage-examples',
         title: '活用例:HilbertRaumの3つの使い方',
+        image: '/images/hilbertraum-review-docqa-example-en.webp',
+        imageCaption: 'HilbertRaumの実例:賃貸契約書に含まれるすべての期限と解約予告期間を一覧にするよう依頼したところ、回答が各項目について正確な条項とページを引用している。',
         content: '以下は、上記で紹介したHilbertRaumの文書化された機能に基づく具体的なワークフローであり、仮定の使用例ではありません。',
         subsections: [
           {
@@ -1679,6 +1691,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       usageExamples: {
         id: 'usage-examples',
         title: '使用示例:三种使用HilbertRaum的方式',
+        image: '/images/hilbertraum-review-docqa-example-en.webp',
+        imageCaption: 'HilbertRaum实例:要求它列出租房合同中的所有截止日期和通知期限,回答中为每一项都引用了确切的条款和页码。',
         content: '以下是根据上述HilbertRaum已记录功能整理的具体工作流程——并非假设性的用例。',
         subsections: [
           {
@@ -1939,6 +1953,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       usageExamples: {
         id: 'usage-examples',
         title: 'أمثلة على الاستخدام: ثلاث طرق لاستخدام HilbertRaum',
+        image: '/images/hilbertraum-review-docqa-example-en.webp',
+        imageCaption: 'مثال من HilbertRaum: طُلب منه سرد جميع المواعيد النهائية وفترات الإشعار في عقد إيجار، وجاءت الإجابة مع ذكر البند والصفحة الدقيقين لكل عنصر.',
         content: 'هذه سيناريوهات عملية مبنية على ميزات HilbertRaum الموثَّقة أعلاه — وليست حالات استخدام افتراضية.',
         subsections: [
           {
@@ -2199,6 +2215,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       usageExamples: {
         id: 'usage-examples',
         title: '사용 예시: HilbertRaum을 활용하는 세 가지 방법',
+        image: '/images/hilbertraum-review-docqa-example-en.webp',
+        imageCaption: 'HilbertRaum 실제 예시: 임대 계약서의 모든 기한과 해지 통지 기간을 나열해 달라고 요청하자, 답변이 각 항목의 정확한 조항과 페이지를 인용하고 있다.',
         content: '다음은 위에서 설명한 HilbertRaum의 문서화된 기능을 바탕으로 한 구체적인 워크플로이며, 가상의 사용 사례가 아닙니다.',
         subsections: [
           {
