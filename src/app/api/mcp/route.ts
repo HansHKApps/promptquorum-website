@@ -119,7 +119,7 @@ const handler = createMcpHandler(
       {
         title: 'List directory categories, use cases and operating systems',
         description:
-          'List the valid category, use-case and OS values that search_apps accepts. Call this first when helping a user pick a local-AI app, so follow-up questions use real filter values.',
+          'List the valid category, use-case and OS values that search_apps accepts, each with a "count" of listed apps and up to 3 "exampleApps" — use these to pick a plausible category instead of guessing one blind, and to check a category actually has listings before recommending it. Call this first when helping a user pick a local-AI app, so follow-up questions use real filter values.',
         inputSchema: z.object({}),
       },
       async () => withUsageTracking('list_categories', () => jsonResult(listCategories()))
@@ -130,7 +130,7 @@ const handler = createMcpHandler(
       {
         title: 'Recommend local-AI apps from the directory',
         description:
-          'Find apps in the Local LLM Software Directory matching what the user wants to do and their hardware. Answers only from curated directory data. Ask the user for their goal, OS and RAM/VRAM first, then present at most the top 2-3 results in your answer even though "limit" (default 5, max 15) may return more — use "offset" to page through the rest of "totalMatches" if the user wants alternatives. "hardwareFit: unknown" means unverified, not confirmed to fit — do not present it as a match. Every result includes real URLs (downloadUrl, article, directoryUrl, categoryGuide) — your answer MUST render each of these as a clickable link, never mention an app without linking it, and always relay the disclaimer.',
+          'Find apps in the Local LLM Software Directory matching what the user wants to do and their hardware. Answers only from curated directory data. Ask the user for their goal, OS and RAM/VRAM first, then present at most the top 2-3 results in your answer even though "limit" (default 5, max 15) may return more — use "offset" to page through the rest of "totalMatches" if the user wants alternatives. "hardwareFit: unknown" means unverified, not confirmed to fit — do not present it as a match. A zero-match response has no "results" but includes a "scope" field describing what this directory does and does not cover, plus "suggestedCategories" — use those instead of just reporting "no results." Every result includes real URLs (downloadUrl, article, directoryUrl, categoryGuide) and a "whyMatched" reason — your answer MUST render each URL as a clickable link, never mention an app without linking it, and always relay the disclaimer.',
         inputSchema: z.object({
           query: z.string().optional().describe('Free-text goal, e.g. "image generation" or "chat with PDFs"'),
           category: z.string().optional().describe('Category or group key from list_categories, e.g. "image-generation" or "voice-audio"'),

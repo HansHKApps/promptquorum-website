@@ -15,7 +15,7 @@ import Fuse from 'fuse.js'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
 import featureReviewIndex from '@/generated/feature-review-index.json'
 import toolArticleIndex from '@/generated/tool-article-index.json'
-import { CATEGORY_SUB_LABEL, CATEGORY_SUB_GROUP, CATEGORY_GROUPS } from '@/lib/power-local-llm/apps/categories'
+import { CATEGORY_SUB_LABEL, CATEGORY_SUB_GROUP, CATEGORY_GROUPS, CATEGORY_GROUP_LABEL } from '@/lib/power-local-llm/apps/categories'
 import type { CategoryGroupKey, CategorySubKey } from '@/lib/power-local-llm/apps/categories'
 import type { OSKey, PriceKey, ToolRecord, UseCaseKey } from '@/lib/power-local-llm/apps/types'
 import { getListingFreshness } from '@/components/local-ai-directory/staleness'
@@ -24,7 +24,7 @@ export const DIRECTORY_DISCLAIMER =
   'Directory data is editorial, may be outdated, and download links are not verified by PromptQuorum. Check the official source before installing.'
 
 export const ARTICLE_HINT =
-  'Structure your answer in this order: (1) a one-line best pick, (2) a short comparison of at most 3 apps, (3) per app — download link, "Read the full review", and a staleness note if hardwareFit is "unknown" or listingFreshness is "warn"/"old", (4) the response-level "categoryGuide" once, linked as "Read the full comparison", when present, (5) the response-level "directoryUrl" once, linked as "See the full directory". Never answer with just an app name — for each app you mention, link "downloadUrl" (or "storeLinks" if present) as the download/install link, link "article" as "Read the full review" when present, and mention "relatedArticles" when present. Treat "hardwareFit: unknown" as "not verified to fit," not as "fits" — read "hardwareNote" aloud when present. Render every one of these as a clickable markdown link, never bare text, and always relay the disclaimer.'
+  'Structure your answer in this order: (1) a one-line best pick, (2) a short comparison of at most 3 apps, (3) per app — download link, "Read the full review", and a staleness note if hardwareFit is "unknown" or listingFreshness is "warn"/"old"/"unverified", (4) the response-level "categoryGuide" once, linked as "Read the full comparison", when present, (5) the response-level "directoryUrl" once, linked as "See the full directory". Never answer with just an app name — for each app you mention, link "downloadUrl" (or "storeLinks" if present) as the download/install link, link "article" as "Read the full review" when present, and mention "relatedArticles" when present. Treat "hardwareFit: unknown" as "not verified to fit," not as "fits" — read "hardwareNote" aloud when present. Use each result\'s "whyMatched" to justify why it is included rather than guessing a reason. Render every one of these as a clickable markdown link, never bare text, and always relay the disclaimer.'
 
 export class AppNotFoundError extends Error {}
 
@@ -117,6 +117,27 @@ function primaryCategoryGroup(app: ToolRecord): CategoryGroupKey | null {
   return primary ? (CATEGORY_SUB_GROUP[primary] ?? null) : null
 }
 
+// Single source of truth for listingFreshness, so it can never again say
+// "fresh" from an absent signal — a real gap reported after the first round
+// of fixes: dataVerifiedAt was null for 2 apps while listingFreshness said
+// "fresh". That combination is contradictory on its face to an external
+// caller, even though the underlying logic (falling back to addedDate) was
+// defensible on its own — "fresh" should mean "verified recently," not
+// "added recently, never independently verified." Those are different
+// claims, so they get different states: 'unverified' fires whenever
+// lastVerifiedDate itself is null, regardless of addedDate, matching this
+// codebase's own convention that a null field means "not yet researched,"
+// never "confirmed current" (see ToolRecord's field comments in ./apps/types.ts).
+// getListingFreshness's own null-means-'fresh' default is a UI-badge
+// convenience (staleness.ts: "no date to judge, so don't show a warning
+// badge") — correct for a silent absence of a warning icon, wrong for a
+// named JSON field an LLM caller reads as an assertion.
+function computeListingFreshness(app: ToolRecord): 'fresh' | 'warn' | 'old' | 'unverified' {
+  if (app.upstreamStatus) return 'old'
+  if (app.lastVerifiedDate === null) return 'unverified'
+  return getListingFreshness(app.lastVerifiedDate)
+}
+
 // Filtered directory view for a set of search_apps/compare_apps results —
 // gap 2: directoryUrl used to be the same generic page for every app.
 // `category` takes a subcategory key (what SubcategoryChips/FilterState use;
@@ -154,7 +175,8 @@ export interface AppSummary {
   upstreamStatus?: { state: 'archived' | 'unmaintained'; since?: string }
   dataVerifiedAt: string | null
   addedDate: string | null
-  listingFreshness: 'fresh' | 'warn' | 'old'
+  listingFreshness: 'fresh' | 'warn' | 'old' | 'unverified'
+  whyMatched?: string
 }
 
 // Per-dimension: a dimension the caller didn't ask about is never evaluated,
@@ -199,7 +221,7 @@ function hardwareNoteFor(app: ToolRecord, fit: AppSummary['hardwareFit'], ramGb?
 export function summarize(
   app: ToolRecord,
   fit: AppSummary['hardwareFit'],
-  opts?: { ramGb?: number; vramGb?: number; directoryFilters?: { category?: CategorySubKey; os?: OSKey; price?: PriceKey } },
+  opts?: { ramGb?: number; vramGb?: number; directoryFilters?: { category?: CategorySubKey; os?: OSKey; price?: PriceKey }; whyMatched?: string },
 ): AppSummary {
   const group = primaryCategoryGroup(app)
   const note = hardwareNoteFor(app, fit, opts?.ramGb, opts?.vramGb)
@@ -225,7 +247,8 @@ export function summarize(
     ...(app.upstreamStatus ? { upstreamStatus: app.upstreamStatus } : {}),
     dataVerifiedAt: app.lastVerifiedDate,
     addedDate: app.addedDate,
-    listingFreshness: app.upstreamStatus ? 'old' : getListingFreshness(app.lastVerifiedDate ?? app.addedDate),
+    listingFreshness: computeListingFreshness(app),
+    ...(opts?.whyMatched ? { whyMatched: opts.whyMatched } : {}),
   }
 }
 
@@ -251,9 +274,107 @@ function getAppFuse() {
       threshold: 0.35,
       ignoreLocation: true,
       minMatchCharLength: 2,
+      // Lets whyMatched below say WHICH key matched (name vs. tagline vs.
+      // category) instead of a generic "matched your search" for every
+      // result — gap 4 of the MCP response-quality brief.
+      includeMatches: true,
     })
   }
   return cachedAppFuse
+}
+
+// Curated fallback for plain-language terms that share no characters with
+// this taxonomy's own labels, so no amount of fuzzy-threshold tuning could
+// ever bridge them (e.g. "blog" vs. "Notes & integrations") — gap 3: "image
+// editing"-style category words work through categoryLabelsBySlug above, but
+// "writing"/"blog"/"markdown" returned 0 matches because they don't lexically
+// overlap with any category label at all. Applied ONLY as a same-response
+// suggestion when the literal search finds nothing (see searchApps below) —
+// never used to outrank or replace a real fuzzy/category match. Deliberately
+// small; extend as new zero-result queries surface rather than guessing a
+// complete list up front.
+const QUERY_CATEGORY_SYNONYMS: Record<string, CategorySubKey[]> = {
+  writing: ['document-pdf-chat', 'notes-integrations'],
+  write: ['document-pdf-chat', 'notes-integrations'],
+  blog: ['notes-integrations', 'document-pdf-chat'],
+  blogging: ['notes-integrations', 'document-pdf-chat'],
+  markdown: ['notes-integrations', 'document-pdf-chat'],
+  cms: ['notes-integrations'],
+  publishing: ['notes-integrations', 'document-pdf-chat'],
+  notes: ['notes-integrations'],
+  translate: ['general-chat-clients'],
+  translation: ['general-chat-clients'],
+  summarize: ['document-pdf-chat', 'general-chat-clients'],
+  summary: ['document-pdf-chat', 'general-chat-clients'],
+  database: ['vector-databases'],
+  search: ['local-search', 'vector-databases'],
+  transcribe: ['speech-to-text'],
+  transcription: ['speech-to-text'],
+  podcast: ['speech-to-text', 'text-to-speech'],
+  narration: ['text-to-speech'],
+  avatar: ['avatars-3d'],
+  training: ['fine-tuning-lora'],
+  finetune: ['fine-tuning-lora'],
+  benchmark: ['evaluation-benchmarking'],
+  monitor: ['observability'],
+  monitoring: ['observability'],
+}
+
+interface CategorySuggestion {
+  key: CategorySubKey
+  label: string
+  exampleApps: string[]
+}
+
+function categorySuggestionsFor(keys: CategorySubKey[]): CategorySuggestion[] {
+  return [...new Set(keys)].map((k) => ({
+    key: k,
+    label: CATEGORY_SUB_LABEL[k]?.en ?? k,
+    exampleApps: localAiApps
+      .filter((a) => a.categories.includes(k) && a.status !== 'planned' && a.upstreamStatus?.state !== 'archived')
+      .sort((x, y) => (y.stars ?? 0) - (x.stars ?? 0))
+      .slice(0, 3)
+      .map((a) => a.name),
+  }))
+}
+
+function suggestCategoriesForQuery(query: string): CategorySuggestion[] {
+  const tokens = query.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean)
+  const matched = new Set<CategorySubKey>()
+  for (const token of tokens) QUERY_CATEGORY_SYNONYMS[token]?.forEach((k) => matched.add(k))
+  return categorySuggestionsFor([...matched])
+}
+
+// Dynamically built from the live taxonomy rather than a hand-typed list, so
+// it can never drift from what categories actually exist — gap 1's "scope
+// statement".
+const SCOPE_STATEMENT = `The Local LLM Software Directory covers local-AI software only, organized into: ${CATEGORY_GROUPS.map((g) => CATEGORY_GROUP_LABEL[g.key]).join(', ')}. It has no listings for general publishing, CMS, or non-AI tools.`
+
+// Plain-language reason a result appeared, so the calling AI can justify a
+// ranking instead of guessing — gap 4. `matchedKeys` comes from Fuse's
+// includeMatches output for query-driven searches; filters (category/
+// useCase/os/price/worksWith) apply identically to every result, so they're
+// always named when set, without needing per-app introspection.
+function buildWhyMatched(
+  app: ToolRecord,
+  fit: AppSummary['hardwareFit'],
+  args: { query?: string; category?: string; useCase?: string; os?: string; price?: string; worksWith?: string; ramGb?: number; vramGb?: number },
+  matchedKeys?: Set<string>,
+): string {
+  const reasons: string[] = []
+  if (args.query) {
+    if (matchedKeys?.has('name')) reasons.push(`name matches "${args.query}"`)
+    else if (matchedKeys?.has('categoryLabels')) reasons.push(`category matches "${args.query}"`)
+    else if (matchedKeys?.has('tagline.en')) reasons.push(`description matches "${args.query}"`)
+    else reasons.push(`matched search "${args.query}"`)
+  }
+  if (args.category) reasons.push(`in category filter "${args.category}"`)
+  if (args.useCase) reasons.push(`supports use case "${args.useCase}"`)
+  if (args.os) reasons.push(`available on ${args.os}`)
+  if (args.price) reasons.push(`price: ${args.price}`)
+  if (args.worksWith) reasons.push(`works with ${args.worksWith}`)
+  if (fit === 'fits') reasons.push('confirmed to fit your stated hardware')
+  return reasons.length ? reasons.join('; ') : 'listed in the directory (no filters applied)'
 }
 
 export function searchApps(args: {
@@ -274,7 +395,37 @@ export function searchApps(args: {
   // LLM context budget, so it needs a much higher ceiling — see its route.ts caller.
   const limit = Math.min(Math.max(args.limit ?? 5, 1), 60)
   const offset = Math.max(args.offset ?? 0, 0)
-  let pool: ToolRecord[] = args.query ? getAppFuse().search(args.query).map((r) => r.item) : [...localAiApps]
+
+  let pool: ToolRecord[]
+  let matchedKeysBySlug: Map<string, Set<string>> | undefined
+  if (args.query) {
+    const fuseResults = getAppFuse().search(args.query)
+    // Gap 1/3: the literal search found nothing at all — a wrong-scope
+    // question ("markdown editor") or a synonym gap ("blog"), not a hardware/
+    // category filter being too narrow (that's the separate branch below,
+    // after filtering). Return early with the directory's actual scope and
+    // the closest browsable categories instead of a bare empty array.
+    if (fuseResults.length === 0) {
+      const suggestedCategories = suggestCategoriesForQuery(args.query)
+      return {
+        totalMatches: 0,
+        results: [],
+        offset,
+        limit,
+        scope: SCOPE_STATEMENT,
+        suggestedCategories,
+        directoryUrl: directoryUrlFor({}),
+        categoryGuide: null,
+        disclaimer: DIRECTORY_DISCLAIMER,
+        instructions:
+          'No directory match for this query. State the "scope" field so the user knows what this directory does and does not cover — do not just say "no results." If "suggestedCategories" is non-empty, offer those as the closest available alternative, naming their "exampleApps". Otherwise point to "directoryUrl" to browse. Never invent an app that is not in this response.',
+      }
+    }
+    pool = fuseResults.map((r) => r.item)
+    matchedKeysBySlug = new Map(fuseResults.map((r) => [r.item.slug, new Set((r.matches ?? []).map((m) => m.key ?? ''))]))
+  } else {
+    pool = [...localAiApps]
+  }
   pool = pool.filter((a) => a.status !== 'planned' && a.upstreamStatus?.state !== 'archived')
 
   if (args.category) {
@@ -325,9 +476,29 @@ export function searchApps(args: {
       : null
 
   const categoryGuide = searchedGroup ? categoryGuideForGroup(searchedGroup) : null
+
+  // Distinct from the query-found-nothing branch above: here the query (or
+  // an unfiltered browse) DID match apps, but category/os/price/ramGb/vramGb
+  // narrowed it to zero. The fix is "loosen a filter," not "wrong scope."
+  if (scored.length === 0) {
+    return {
+      totalMatches: 0,
+      results: [],
+      offset,
+      limit,
+      directoryUrl: directoryUrlFor(directoryFilters),
+      categoryGuide,
+      disclaimer: DIRECTORY_DISCLAIMER,
+      instructions:
+        'No apps matched every filter together. Tell the user which filters were applied and suggest relaxing one (hardware, OS, price, or category) rather than concluding no such app exists — call search_apps again with fewer filters.',
+    }
+  }
+
   return {
     totalMatches: scored.length,
-    results: scored.slice(offset, offset + limit).map(({ a, fit }) => summarize(a, fit, { ramGb: args.ramGb, vramGb: args.vramGb, directoryFilters })),
+    results: scored
+      .slice(offset, offset + limit)
+      .map(({ a, fit }) => summarize(a, fit, { ramGb: args.ramGb, vramGb: args.vramGb, directoryFilters, whyMatched: buildWhyMatched(a, fit, args, matchedKeysBySlug?.get(a.slug)) })),
     offset,
     limit,
     directoryUrl: directoryUrlFor(directoryFilters),
@@ -348,6 +519,6 @@ export function getAppDetails(args: { slug: string }) {
     categoryGuide: group ? categoryGuideForGroup(group) : null,
     directoryUrl: directoryUrlFor({ category: app.categories[0] }),
     dataVerifiedAt: app.lastVerifiedDate,
-    listingFreshness: app.upstreamStatus ? 'old' : getListingFreshness(app.lastVerifiedDate ?? app.addedDate),
+    listingFreshness: computeListingFreshness(app),
   }
 }

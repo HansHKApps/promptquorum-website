@@ -14,7 +14,7 @@ import { SUPPORTED_LANGS, HUB_LABELS } from '@/components/search/search-utils'
 import { buildAllSearchEntries } from '@/lib/search/build-search-entries'
 import { matchLicenseFamilies } from '@/lib/power-local-llm/license-taxonomy'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
-import { CATEGORY_GROUPS, CATEGORY_GROUP_LABEL, CATEGORY_SUB_LABEL } from '@/lib/power-local-llm/apps/categories'
+import { CATEGORY_GROUPS, CATEGORY_GROUP_LABEL, CATEGORY_SUB_LABEL, CATEGORY_SUB_GROUP } from '@/lib/power-local-llm/apps/categories'
 import type { CompareValue, OSKey, UseCaseKey } from '@/lib/power-local-llm/apps/types'
 // Directory search/hardware-match logic lives in its own module (not here)
 // so routes that only need it — the homepage "What Can I Run?"/"Can I Run
@@ -207,16 +207,35 @@ export function explainLicense(args: { licenseString: string }) {
 const USE_CASES: UseCaseKey[] = ['chat', 'code', 'agent', 'docs', 'image', 'audio', 'phone', 'build', 'serve']
 const OS_KEYS: OSKey[] = ['mac', 'win', 'linux', 'ios', 'android', 'web']
 
+// listedApps: excludes 'planned'/archived entries so counts and exampleApps
+// match what search_apps would actually return — see MCP response-quality
+// brief round 2, gap 2: an AI had to guess a category blind (no counts, no
+// examples) because list_categories gave no signal on which ones actually
+// have listings.
+const listedApps = localAiApps.filter((a) => a.status !== 'planned' && a.upstreamStatus?.state !== 'archived')
+
 export function listCategories() {
   return {
     groups: CATEGORY_GROUPS.map((g) => ({
       key: g.key,
       label: CATEGORY_GROUP_LABEL[g.key],
-      categories: g.subs.map((k) => ({ key: k, label: CATEGORY_SUB_LABEL[k].en })),
+      count: listedApps.filter((a) => a.categories.some((k) => CATEGORY_SUB_GROUP[k] === g.key)).length,
+      categories: g.subs.map((k) => {
+        const inCategory = listedApps.filter((a) => a.categories.includes(k))
+        return {
+          key: k,
+          label: CATEGORY_SUB_LABEL[k].en,
+          count: inCategory.length,
+          exampleApps: inCategory
+            .sort((x, y) => (y.stars ?? 0) - (x.stars ?? 0))
+            .slice(0, 3)
+            .map((a) => a.name),
+        }
+      }),
     })),
     useCases: USE_CASES,
     operatingSystems: OS_KEYS,
-    hint: 'Ask the user what they want to do and their OS and RAM/VRAM, then call search_apps.',
+    hint: 'Ask the user what they want to do and their OS and RAM/VRAM, then call search_apps. Use each category\'s "count"/"exampleApps" to pick a plausible category before guessing — a category with count 0 has no listings.',
   }
 }
 
