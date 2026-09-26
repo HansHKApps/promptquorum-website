@@ -195,6 +195,7 @@ import { app as app_chroma } from './apps/chroma'
 import { app as app_claude_code_local } from './apps/claude-code-local'
 import { app as app_clawrouter } from './apps/clawrouter'
 import { app as app_cognee } from './apps/cognee'
+import { app as app_cognira } from './apps/cognira'
 import { app as app_dreamserver } from './apps/dreamserver'
 import { app as app_dynamo } from './apps/dynamo'
 import { app as app_farfalle } from './apps/farfalle'
@@ -423,6 +424,7 @@ export const localAiApps: ToolRecord[] = [
   app_claude_code_local,
   app_clawrouter,
   app_cognee,
+  app_cognira,
   app_dreamserver,
   app_dynamo,
   app_farfalle,

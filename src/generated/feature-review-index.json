@@ -914,6 +914,11 @@
     "urlSlug": "cognee-review",
     "url": "/power-local-llm/cognee-review"
   },
+  "cognira": {
+    "cluster": "power-local-llm",
+    "urlSlug": "cognira-review",
+    "url": "/power-local-llm/cognira-review"
+  },
   "dreamserver": {
     "cluster": "power-local-llm",
     "urlSlug": "dreamserver-review",

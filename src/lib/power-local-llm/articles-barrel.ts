@@ -18,6 +18,7 @@ import { article as a_arbiter_local_ai_chat_review } from './articles/arbiter-lo
 import { article as a_chatty_mini_review } from './articles/chatty-mini-review'
 import { article as a_continue_dev_review } from './articles/continue-dev-review'
 import { article as a_cline_review } from './articles/cline-review'
+import { article as a_cognira_review } from './articles/cognira-review'
 import { article as a_atlarix_review } from './articles/atlarix-review'
 import { article as a_pearai_review } from './articles/pearai-review'
 import { article as a_windsurf_review } from './articles/windsurf-review'
@@ -521,6 +522,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   // Continue.dev, Cline, PearAI reviews — 2026-09-05
   'continue-dev-review':                           a_continue_dev_review,
   'cline-review':                                  a_cline_review,
+  'cognira-review':                                a_cognira_review,
   'atlarix-review':                                a_atlarix_review,
   'pearai-review':                                 a_pearai_review,
   'whisper-cpp-review':                            a_whisper_cpp_review,

@@ -9415,6 +9415,24 @@
       ],
       "images": []
     },
+    "cognira-review": {
+      "dateModified": "2026-09-26",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-26",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "atlarix-review": {
       "dateModified": "2026-09-25",
       "lastFactChecked": null,
