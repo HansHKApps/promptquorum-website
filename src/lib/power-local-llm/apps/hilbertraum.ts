@@ -9,7 +9,8 @@
 // script suggested — copy the portable build to a drive and pick a model in the app) plus a founder
 // quote and note of an upcoming pre-configured USB stick (same free/open-source app, priced
 // separately, waitlist at hilbertraum.ai). Corrections applied to the review article and below;
-// founderReviewedDate intentionally left unset pending operator confirmation of the badge.
+// operator confirmed 2026-09-26 that Vladimir's own technical corrections (not just the quote)
+// qualify as a founder technical review — founderReviewedDate set accordingly.
 
 import type { ToolRecord } from './types'
 
@@ -144,6 +145,10 @@ export const app: ToolRecord = {
       ],
     },
   },
+  // Fact-check credit, not a repeat of the quote above: Vladimir Tosovic's 2026-09-25 email corrected
+  // this entry's technical claims (dictation via Whisper, not text-to-speech; the simpler portable/USB
+  // path), which is itself a founder technical review of the listing's accuracy.
+  founderReviewedDate: '2026-09-25',
   changelog: [
     {
       date: '2026-09-25',
