@@ -320,7 +320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Anwendungsbeispiele', anchor: 'usage-examples' },
       { label: 'HilbertRaum herunterladen für Windows, macOS und Linux', anchor: 'download-links' },
       { label: 'HilbertRaum Preise und Lizenz', anchor: 'pricing-license' },
-      { label: 'Vom Hersteller', anchor: 'from-the-maker' },
+      { label: 'Vom Entwickler', anchor: 'from-the-maker' },
       { label: 'Für wen eignet sich HilbertRaum?', anchor: 'who-should-use' },
       { label: 'HilbertRaum vs. andere lokale Chat-Apps', anchor: 'hilbertraum-competitors' },
       { label: 'Häufige Fehler bei der Bewertung von HilbertRaum', anchor: 'common-mistakes' },
@@ -427,7 +427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       fromTheMaker: {
         id: 'from-the-maker',
-        title: 'Vom Hersteller',
+        title: 'Vom Entwickler',
         content: [
           'PromptQuorum hat den Entwickler von HilbertRaum gebeten, die Designziele der App in eigenen Worten zu beschreiben. Es folgt seine eigene, nur formal angepasste Aussage.',
           '„Wir wollen lokale KI so einfach wie möglich machen. Mit zunehmender Nutzung von KI wird es immer wichtiger, private Daten und Dokumente zu schützen. Deshalb haben wir HilbertRaum gebaut: Offline-KI für alle, ohne dass man sich mit Runtimes, Quantisierungen oder Modelldateien auseinandersetzen muss."',

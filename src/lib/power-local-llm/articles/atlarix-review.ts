@@ -310,7 +310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Lokal vs. hybrid: der Datenfluss im Detail', anchor: 'data-flow' },
       { label: 'Plattform, Preise und Lizenzierung', anchor: 'platform-and-licensing' },
       { label: 'Atlarix herunterladen', anchor: 'download-links' },
-      { label: 'Vom Hersteller', anchor: 'from-the-maker' },
+      { label: 'Vom Entwickler', anchor: 'from-the-maker' },
       { label: 'Für wen eignet sich Atlarix?', anchor: 'who-should-use' },
       { label: 'Wofür Atlarix nicht gut geeignet ist', anchor: 'not-good-for' },
       { label: 'Häufige Fehler bei der Bewertung von Atlarix', anchor: 'common-mistakes' },
@@ -415,7 +415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       fromMaker: {
         id: 'from-the-maker',
-        title: 'Vom Hersteller: Amariah Abishai über Atlarix',
+        title: 'Vom Entwickler: Amariah Abishai über Atlarix',
         content: [
           '"I built Atlarix because I wanted an AI agent I could trust with a real codebase: one that plans, edits, runs the project\'s own tests, and never changes a file until I approve the diff."',
           '"With Ollama or LM Studio, everything stays on your machine; there\'s no index, no embeddings, and nothing leaves the laptop. The Chrome extension and Atlarix Reviewer extend the same agent to the browser and to pull requests, and those two run on our managed models."',

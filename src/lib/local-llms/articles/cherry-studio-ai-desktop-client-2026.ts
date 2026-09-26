@@ -382,7 +382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Was ist Cherry Studio?', anchor: '#what-is-cherry-studio' },
       { label: 'Was hat sich in Cherry Studio 2.0 geändert?', anchor: '#whats-new-2-0' },
       { label: 'Was können Sie damit tatsächlich tun?', anchor: '#key-features' },
-      { label: 'Vom Hersteller', anchor: '#from-the-maker' },
+      { label: 'Vom Entwickler', anchor: '#from-the-maker' },
       { label: 'Für wen eignet sich Cherry Studio?', anchor: '#who-should-use' },
       { label: 'Wann sollten Sie Cherry Studio NICHT nutzen?', anchor: '#when-not-to-use' },
       { label: 'Wie richten Sie Cherry Studio ein?', anchor: '#installation' },
@@ -476,7 +476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       fromTheMaker: {
         id: 'from-the-maker',
-        title: 'Vom Hersteller',
+        title: 'Vom Entwickler',
         content: [
           'PromptQuorum hat das Cherry-Studio-Team gebeten zu beschreiben, wohin sich das Produkt nach dem Neuaufbau in 2.0 entwickelt. Das Folgende wird als eigene Aussage des Teams wiedergegeben, das Team hat sie auf Englisch bereitgestellt; hier ist sie ins Deutsche übersetzt, abgesehen von der Formatierung unverändert.',
           '„Früher mussten Nutzer aktiv lernen, wie man eine Wissensdatenbank anlegt, Tools aufruft, Modelle konfiguriert und sich durch verschiedene Funktionen navigiert. Künftig wollen wir aber, dass Nutzer an nichts davon mehr denken müssen. Sie sollen nur noch sagen: ‚Hilf mir, das zu erledigen‘, und der Agent entscheidet automatisch, ob er die Wissensdatenbank abfragt, OCR auslöst, ein Bild generiert, eine Datei verarbeitet oder eine Notiz schreibt. Jede Fähigkeit wird zu nichts weiter als einem weiteren Tool, das der Agent aufrufen kann.“',
@@ -1882,7 +1882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'O que é o Cherry Studio?', anchor: '#what-is-cherry-studio' },
       { label: 'O que mudou no Cherry Studio 2.0?', anchor: '#whats-new-2-0' },
       { label: 'O que você pode realmente fazer com ele?', anchor: '#key-features' },
-      { label: 'Palavra do fabricante', anchor: '#from-the-maker' },
+      { label: 'A palavra do criador', anchor: '#from-the-maker' },
       { label: 'Para quem o Cherry Studio é indicado?', anchor: '#who-should-use' },
       { label: 'Quando você NÃO deve usar o Cherry Studio?', anchor: '#when-not-to-use' },
       { label: 'Como configurar o Cherry Studio?', anchor: '#installation' },
@@ -1976,7 +1976,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       fromTheMaker: {
         id: 'from-the-maker',
-        title: 'Palavra do fabricante',
+        title: 'A palavra do criador',
         content: [
           'O PromptQuorum pediu à equipe do Cherry Studio que descrevesse para onde o produto caminha depois da reconstrução 2.0. A declaração abaixo foi fornecida em inglês pela equipe do Cherry Studio e está traduzida aqui; é apresentada como a declaração da própria equipe, sem edição além da formatação.',
           '“No passado, os usuários precisavam aprender ativamente a criar uma base de conhecimento, chamar ferramentas, configurar modelos e navegar por diferentes recursos. Daqui para frente, porém, queremos que os usuários nunca precisem pensar em nada disso. Tudo o que precisarão dizer é “Ajude-me a resolver isto”, e o Agente decidirá automaticamente se deve consultar a base de conhecimento, acionar o OCR, gerar uma imagem, processar um arquivo ou escrever uma nota. Cada capacidade passa a ser apenas mais uma ferramenta que o Agente pode chamar.”',
