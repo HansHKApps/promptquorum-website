@@ -51,9 +51,11 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['chat'],
   url: 'cognira.dev',
-  storeLinks: {
-    web: 'https://cognira.dev',
-  },
+  // No storeLinks: cognira.dev is the only distribution channel (no App Store/GitHub/Google Play
+  // listing), so the card falls back to the plain `url` field and renders the standard "Get it ↗"
+  // CTA — same as every other app in the directory with no separate download channel. Setting
+  // storeLinks: { web: ... } here would be redundant with `url` and mislabels the button "Website"
+  // instead of "Get it ↗" (verified against ToolCard.tsx's getDownloadLinks 2026-09-26).
   tagline: {
     en: 'Self-learning AI assistant with a sealed local binary and private, forgettable memory',
     de: 'Selbstlernender KI-Assistent mit versiegelter lokaler Binärdatei und privatem, löschbarem Gedächtnis',
