@@ -50,6 +50,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'chatbox':                                 'chatbox',
   'continue-dev':                            'continue-dev',
   'cline':                                   'cline',
+  'cognira':                                 'cognira',
   'pearai':                                  'pearai',
   'windsurf':                                'windsurf',
   'sourcegraph-cody':                        'sourcegraph-cody',
