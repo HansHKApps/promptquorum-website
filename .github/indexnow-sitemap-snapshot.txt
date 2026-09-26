@@ -300,6 +300,7 @@ https://www.promptquorum.com/power-local-llm/clawrouter-review
 https://www.promptquorum.com/power-local-llm/cline-review
 https://www.promptquorum.com/power-local-llm/codegpt-review
 https://www.promptquorum.com/power-local-llm/cognee-review
+https://www.promptquorum.com/power-local-llm/cognira-review
 https://www.promptquorum.com/power-local-llm/comfyui-review
 https://www.promptquorum.com/power-local-llm/continue-dev-review
 https://www.promptquorum.com/power-local-llm/continue-dev-vs-cline-vs-aider-local
