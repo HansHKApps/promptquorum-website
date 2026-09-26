@@ -1062,6 +1062,7 @@ const HUB_THEMES: Array<{
       'khoj-ai-second-brain-review',
       'obsidian-logseq-ai-plugins',
       'second-me-review',
+      'cognira-review',
       'unsloth-review',
       'llama-factory-review',
       'siyuan-review',
