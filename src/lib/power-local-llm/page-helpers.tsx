@@ -8,7 +8,7 @@ import { buildCategoryCompareData, getCategoryLinksForReview } from '@/lib/power
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { truncateTitle } from '@/lib/utils'
 import { PowerLocalLLMPostClient } from '@/components/PowerLocalLLMPostClient'
 import { powerLLMContent } from './content'

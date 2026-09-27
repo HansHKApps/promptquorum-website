@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect, Fragment } from 'react'
 import { ClusterBanner } from '@/components/ClusterBanner'
 import Image from 'next/image'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'

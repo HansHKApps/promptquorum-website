@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import type { Language } from '@/lib/blog/blogContent'
 import { getRotatingTip } from '@/lib/home/quick-tips'
 import { HomeIcon } from './HomeIcon'

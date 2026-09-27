@@ -4,7 +4,7 @@
 // this with its own `lang`. No client interactivity here, so this stays a
 // plain (server) component rather than 'use client'.
 
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import type { Language } from '@/lib/blog/blogContent'
 import { getLangDir } from '@/lib/i18n/constants'
 import type { McpToolName, UsageSnapshot } from '@/lib/mcp/usage'

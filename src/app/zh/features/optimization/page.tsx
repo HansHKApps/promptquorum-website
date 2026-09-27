@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { translations } from '@/translations'
 import { generateAlternates } from '@/lib/hreflang'
 import { OptimizationShowcase } from '@/components/OptimizationShowcase'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = 'zh'

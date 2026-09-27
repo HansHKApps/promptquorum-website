@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { translations } from '@/translations'
 import { FRAMEWORKS } from '@/lib/frameworksData'
 import { generateAlternates } from '@/lib/hreflang'

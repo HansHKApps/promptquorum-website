@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { HomeIcon, type HomeIconName } from './HomeIcon'
 import { SURFACE_CLASS, type HomeCardVariant } from './homeSurface'
 

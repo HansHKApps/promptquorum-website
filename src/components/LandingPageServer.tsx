@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { InteractivePipeline } from './InteractivePipeline'
 import { LandingPageClient } from './LandingPageClient'
 import { YouTubeFacade } from './YouTubeFacade'

@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { Logo } from './Logo'
 import { LanguageSwitcherWrapper } from './LanguageSwitcherWrapper'
 import { SearchTrigger } from './search/SearchTrigger'
@@ -193,7 +193,7 @@ function HeaderInner() {
         {t('skipToMain', lang)}
       </a>
       <div className="px-4 sm:px-6 h-16 flex items-center justify-between">
-        <Link href={navHref('/', lang)} className="flex flex-col justify-center min-w-0 flex-shrink sm:flex-shrink-0">
+        <Link prefetch href={navHref('/', lang)} className="flex flex-col justify-center min-w-0 flex-shrink sm:flex-shrink-0">
           <span className="flex items-center gap-2">
             <Logo size={36} className="w-9 h-9 flex-shrink-0" />
             <span className="font-semibold text-gray-900 whitespace-nowrap">PromptQuorum</span>
@@ -205,15 +205,15 @@ function HeaderInner() {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-6 ml-auto mr-6">
-          <Link href={navHref('/about', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('about', lang)}</Link>
-          <Link href={navHref('/prompt-engineering', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptEngineering', lang)}</Link>
-          <Link href={directoryHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('directory', lang)}</Link>
-          <Link href={navHref('/local-llms', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('localLlms', lang)}</Link>
-          <Link href={powerLocalLlmHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('powerLocalLlm', lang)}</Link>
-          <Link href={promptBitesHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptBites', lang)}</Link>
-          <Link href={smartHomeHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('smartHome', lang)}</Link>
-          <Link href={balconySolarHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('balconySolar', lang)}</Link>
-          <Link href={pqAppsHref(lang)} className="text-gray-600 hover:text-purple-600 font-medium transition-colors text-sm">{t('pqApps', lang)}</Link>
+          <Link prefetch href={navHref('/about', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('about', lang)}</Link>
+          <Link prefetch href={navHref('/prompt-engineering', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptEngineering', lang)}</Link>
+          <Link prefetch href={directoryHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('directory', lang)}</Link>
+          <Link prefetch href={navHref('/local-llms', lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('localLlms', lang)}</Link>
+          <Link prefetch href={powerLocalLlmHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('powerLocalLlm', lang)}</Link>
+          <Link prefetch href={promptBitesHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('promptBites', lang)}</Link>
+          <Link prefetch href={smartHomeHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('smartHome', lang)}</Link>
+          <Link prefetch href={balconySolarHref(lang)} className="text-gray-600 hover:text-purple-600 transition-colors text-sm">{t('balconySolar', lang)}</Link>
+          <Link prefetch href={pqAppsHref(lang)} className="text-gray-600 hover:text-purple-600 font-medium transition-colors text-sm">{t('pqApps', lang)}</Link>
         </nav>
 
         {/* Search + Language Switcher + Mobile Menu */}

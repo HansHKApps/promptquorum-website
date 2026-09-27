@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { useMemo } from 'react'
 import { themes, type PETheme } from '@/lib/prompt-engineering/themes'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'

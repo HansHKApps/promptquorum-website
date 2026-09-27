@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { AffiliateLink } from '@/components/AffiliateLink'
 import { AFFILIATE_LINK_MARKER } from '@/lib/affiliate-links'
 import type { CompareColumn, CompareRow, CompareTableUi } from '@/lib/power-local-llm/compare-data'

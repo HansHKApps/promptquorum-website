@@ -28,7 +28,7 @@ import { guideForCategories } from '@/lib/power-local-llm/compare-guide'
 import { LicenseInfoModal } from './LicenseInfoModal'
 import { LastUpdatedBadge } from './LastUpdatedBadge'
 import { t } from './directory-i18n'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 
 function DetailRow({ label, value }: { label: string; value: ReactNode }) {
   if (value == null || value === '') return null

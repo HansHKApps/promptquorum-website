@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { ClusterBanner } from '@/components/ClusterBanner'
 import Image from 'next/image'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { LangLinksBar } from '@/components/LangLinksBar'
 import { CopyButton } from '@/components/CopyButton'

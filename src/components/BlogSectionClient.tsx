@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { useLang } from '@/hooks/useLang'
 import { blogMetadata } from '@/lib/blog/blogTranslations'
 import { translations } from '@/translations'

@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { LangLinksBar } from '@/components/LangLinksBar'
 import { PROMPT_BITES_CATEGORIES } from '@/lib/prompt-bites/categories'
 import { PROMPT_BITES_PUBLISHED_SLUGS } from '@/lib/prompt-bites/published'
