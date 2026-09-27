@@ -6,6 +6,12 @@
 // tab. Built on Radix Dialog, same primitive ToolDrawer.tsx already uses
 // in this component tree, but sized as a centered popup rather than a
 // slide-in panel — this is a quick lookup, not a detail view.
+//
+// Bundle-size fix (Item 3) note: this file stays on the original
+// directory-i18n.ts `t(key, lang)` import rather than the `ui`-prop shim
+// used by ToolDrawer.tsx (its other caller) — it is also rendered from
+// ToolCard.tsx, which is explicit phase-2 scope (untouched in this branch)
+// and only has `lang`, not a resolved `ui` object, available to pass down.
 
 import * as Dialog from '@radix-ui/react-dialog'
 import type { Language } from '@/lib/blog/blogContent'

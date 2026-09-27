@@ -15,7 +15,7 @@ import { CATEGORY_SUB_LABEL, type CategorySubKey } from '@/lib/power-local-llm/a
 import type { FilterOptionCount } from './types'
 import { CloseIcon } from './icons'
 import type { Language } from '@/lib/blog/blogContent'
-import { t } from './directory-i18n'
+import { t, type DirUi } from './directory-ui-client'
 
 export function SubcategoryChips({
   counts,
@@ -23,12 +23,14 @@ export function SubcategoryChips({
   onToggle,
   onClear,
   lang,
+  ui,
 }: {
   counts: FilterOptionCount[]
   selected: Set<string>
   onToggle: (value: string) => void
   onClear: () => void
   lang: Language
+  ui: DirUi
 }) {
   if (counts.length === 0) return null
 
@@ -38,9 +40,9 @@ export function SubcategoryChips({
     <div
       className="flex flex-wrap items-center gap-1.5 rounded-lg border border-dashed border-primary/25 bg-primary/[0.03] px-3 py-2.5 animate-in fade-in slide-in-from-top-1 duration-150"
       role="group"
-      aria-label={t('narrowDownAriaLabel', lang)}
+      aria-label={t('narrowDownAriaLabel', ui)}
     >
-      <span className="text-xs font-medium text-text-secondary shrink-0">{t('narrowDownLabel', lang)}</span>
+      <span className="text-xs font-medium text-text-secondary shrink-0">{t('narrowDownLabel', ui)}</span>
       {counts.map(({ value, count }) => {
         const isSelected = selected.has(value)
         return (
@@ -67,7 +69,7 @@ export function SubcategoryChips({
           onClick={onClear}
           className="inline-flex items-center gap-1 text-xs font-medium text-text-secondary hover:text-primary"
         >
-          {t('clear', lang)}
+          {t('clear', ui)}
           <CloseIcon className="h-3 w-3" />
         </button>
       )}

@@ -22,7 +22,7 @@ import { LLMImageSelector } from '@/components/local-llms/LLMImageSelector'
 import { AffiliateLink } from '@/components/AffiliateLink'
 import { AFFILIATE_DISCLOSURE, SPONSORED_LABEL } from '@/lib/tracking/affiliate'
 import { VramCalculator } from '@/components/VramCalculator'
-import { EdgeHardwareSelector } from '@/components/EdgeHardwareSelector'
+import dynamic from 'next/dynamic'
 import { RobotInferenceBudgetCalculator } from '@/components/RobotInferenceBudgetCalculator'
 import { EdgeVideoBandwidthCalculator } from '@/components/EdgeVideoBandwidthCalculator'
 import { ShadowAiExposureAssessment } from '@/components/ShadowAiExposureAssessment'
@@ -40,7 +40,18 @@ import { CopyButton } from '@/components/CopyButton'
 import toolArticleIndex from '@/generated/tool-article-index.json'
 import { getCalloutLabel } from '@/lib/calloutLabels'
 import { StarIcon } from '@/components/local-ai-directory/icons'
-import { t as directoryT } from '@/components/local-ai-directory/directory-i18n'
+import { t as directoryT, type DirUi } from '@/components/local-ai-directory/directory-ui-client'
+
+// Lazy-loaded, client-only: EdgeHardwareSelector is a self-contained,
+// below-the-fold interactive widget (its own Jetson/hardware-tier table
+// data + a small UI dictionary, no props, no SEO-relevant text) that most
+// visitors on the 27 routes sharing this file's chunk never open. `ssr:
+// false` is safe here — nothing in it is crawler-relevant content that
+// needs to exist in the initial server-rendered HTML.
+const EdgeHardwareSelector = dynamic(
+  () => import('@/components/EdgeHardwareSelector').then((mod) => mod.EdgeHardwareSelector),
+  { ssr: false, loading: () => <div className="my-8 h-48 animate-pulse rounded-xl bg-gray-100" /> }
+)
 
 type ToolArticleEntry = { cluster: string; slug: string; title: string; url: string; dateModified: string | null; tier: 'about' | 'mentioned' }
 type ToolArticleIndex = Record<string, { articles: ToolArticleEntry[]; totalCount: number; capped: boolean }>
@@ -69,6 +80,14 @@ interface Props {
    * drawer (ToolCard.tsx/ToolDrawer.tsx), self-expiring on the same schedule.
    */
   founderReviewed?: { appName: string; date: string }
+  /**
+   * Resolved server-side via directory-i18n.ts's `resolveAll(lang)` (see
+   * page-helpers.tsx) — only used for the `founderReviewed` banner's two
+   * strings above. Keeps the full 9-language directory-i18n dictionary out
+   * of this client bundle (shared across all power-local-llm/directory
+   * routes) even though this file only ever needs two of its keys.
+   */
+  ui: DirUi
   /**
    * Set only on a category comparison article (see CATEGORY_COMPARE_ARTICLE in
    * apps/compare-schema.ts): the tool-record-derived comparison data rendered by any
@@ -1345,7 +1364,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks, compareData }: {
   )
 }
 
-function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, directorySlot, founderReviewed, compareData, categoryLinks }: Props) {
+function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs, directorySlot, founderReviewed, compareData, categoryLinks }: Props) {
   if (!articleData) {
     return <div className="min-h-screen bg-surface pt-32 flex items-center justify-center"><p className="text-text-secondary">Article not found.</p></div>
   }
@@ -1423,8 +1442,8 @@ function PowerLocalLLMPostContent({ slug, lang, articleData, availableLangs, dir
           <div className="flex items-start gap-2 rounded-xl border-2 border-amber-500 bg-amber-100 p-3 mb-6">
             <StarIcon className="h-4 w-4 mt-0.5 shrink-0 fill-amber-600 text-amber-600" />
             <p className="text-xs text-amber-900">
-              <span className="font-extrabold uppercase tracking-wide">{directoryT('founderReviewedBannerLabel', lang)}</span>{' '}
-              {directoryT('founderReviewedBannerBodyTemplate', lang, { name: founderReviewed.appName })}
+              <span className="font-extrabold uppercase tracking-wide">{directoryT('founderReviewedBannerLabel', ui)}</span>{' '}
+              {directoryT('founderReviewedBannerBodyTemplate', ui, { name: founderReviewed.appName })}
             </p>
           </div>
         )}
