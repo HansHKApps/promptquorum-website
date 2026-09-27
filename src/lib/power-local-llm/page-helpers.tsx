@@ -25,6 +25,7 @@ import { getPowerLLMGeoEntities } from '@/lib/geo-schema'
 import { toOutputLocale } from '@/lib/i18n/constants'
 import { narrowArticleData } from '@/lib/narrowArticleData'
 import { DirectoryClient } from '@/components/local-ai-directory/DirectoryClient'
+import { resolveAll } from '@/components/local-ai-directory/directory-i18n'
 import { localAiApps } from './apps-barrel'
 import { TOTAL_CATEGORY_GROUP_COUNT } from './apps/categories'
 import { buildLocalAiAppsItemListSchema } from './apps-schema'
@@ -402,8 +403,15 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
   // hub; everything else (LangLinksBar, header, intro, key-takeaways,
   // how-current, sources, faq, related-reading) still renders through the
   // normal PowerLocalLLMPostClient path, unchanged.
+  //
+  // `ui` (bundle-size fix, Item 3): resolved server-side here, once per
+  // request, via directory-i18n.ts's resolveAll(lang) — DirectoryClient and
+  // PowerLocalLLMPostClient (its founder-reviewed banner) both receive the
+  // already-resolved, single-language dictionary as a prop instead of
+  // importing the full 9-language DIR_UI object client-side.
+  const ui = resolveAll(lang)
   const directorySlot = isLocalAiDirectory
-    ? { sectionKeys: LOCAL_AI_DIRECTORY_TOOL_SECTION_KEYS, element: <DirectoryClient apps={localAiApps} lang={lang} /> }
+    ? { sectionKeys: LOCAL_AI_DIRECTORY_TOOL_SECTION_KEYS, element: <DirectoryClient apps={localAiApps} lang={lang} ui={ui} /> }
     : undefined
 
   // Surface the same "founder-reviewed" fact-check credit shown on the tool's
@@ -435,7 +443,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       {itemListSchemas.map((schema, i) => (
         <script key={`itemlist-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <PowerLocalLLMPostClient slug={slug} lang={lang} directorySlot={directorySlot} founderReviewed={founderReviewed} compareData={compareData} categoryLinks={categoryLinks} {...narrowArticleData(articleData, lang)} />
+      <PowerLocalLLMPostClient slug={slug} lang={lang} ui={ui} directorySlot={directorySlot} founderReviewed={founderReviewed} compareData={compareData} categoryLinks={categoryLinks} {...narrowArticleData(articleData, lang)} />
     </>
   )
 }

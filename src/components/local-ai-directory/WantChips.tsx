@@ -3,10 +3,9 @@
 // "I want to…" quick-filter chips, single-select toggle, keyed by UseCaseKey.
 
 import { cn } from '@/lib/utils'
-import type { Language } from '@/lib/blog/blogContent'
 import type { UseCaseKey } from '@/lib/power-local-llm/apps/types'
 import type { FilterOptionCount } from './types'
-import { getWantLabels, t } from './directory-i18n'
+import { t, wantLabelsFromUi, type DirUi } from './directory-ui-client'
 
 // Exported so DirectoryClient can validate a `?want=` deep-link value against
 // the same set of keys this UI actually supports, without duplicating the list.
@@ -16,18 +15,18 @@ export function WantChips({
   counts,
   selected,
   onSelect,
-  lang,
+  ui,
 }: {
   counts: FilterOptionCount[]
   selected: string | null
   onSelect: (value: string | null) => void
-  lang: Language
+  ui: DirUi
 }) {
   const countByValue = new Map(counts.map((c) => [c.value, c.count]))
-  const wantLabels = getWantLabels(lang)
+  const wantLabels = wantLabelsFromUi(ui)
 
   return (
-    <div className="flex flex-wrap gap-2" role="group" aria-label={t('wantGroupAriaLabel', lang)}>
+    <div className="flex flex-wrap gap-2" role="group" aria-label={t('wantGroupAriaLabel', ui)}>
       {WANT_ORDER.map((key) => {
         const count = countByValue.get(key) ?? 0
         const isSelected = selected === key

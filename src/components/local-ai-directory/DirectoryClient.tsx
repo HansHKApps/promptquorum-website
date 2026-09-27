@@ -31,7 +31,7 @@ import { countByLocality, countsForGroup, countsForUses, filterTools, sortTools 
 import { detectDefaultMachine, readStoredMachine, writeStoredMachine, readStoredProfile } from './hardware'
 import { emptyFilterState, machineCategory, type FilterState, type HardwareProfile, type MachineCategory, type MachineType, type SortDir, type SortKey, type ViewMode } from './types'
 import { cn } from '@/lib/utils'
-import { getDeviceCategoryLabels, getMachineLabels, t } from './directory-i18n'
+import { t, machineLabelsFromUi, deviceCategoryLabelsFromUi, type DirUi } from './directory-ui-client'
 import { CATEGORY_SUB_LABEL } from '@/lib/power-local-llm/apps/categories'
 
 const DESKTOP_MACHINES: readonly MachineType[] = ['dgpu', 'apple', 'cpu']
@@ -66,11 +66,14 @@ const PAGE_SIZE = 24
 interface Props {
   apps: ToolRecord[]
   lang: Language
+  /** Resolved server-side via directory-i18n.ts's `resolveAll(lang)` (see page-helpers.tsx) —
+   *  keeps the full 9-language DIR_UI dictionary out of this client bundle. */
+  ui: DirUi
 }
 
-export function DirectoryClient({ apps, lang }: Props) {
-  const MACHINE_LABEL = useMemo(() => getMachineLabels(lang), [lang])
-  const DEVICE_CATEGORY_LABEL = useMemo(() => getDeviceCategoryLabels(lang), [lang])
+export function DirectoryClient({ apps, lang, ui }: Props) {
+  const MACHINE_LABEL = useMemo(() => machineLabelsFromUi(ui), [ui])
+  const DEVICE_CATEGORY_LABEL = useMemo(() => deviceCategoryLabelsFromUi(ui), [ui])
   const [search, setSearch] = useState('')
   // Deep-linkable from `?want=<UseCaseKey>` (e.g. /directory?want=docs), so
   // pages like About can send a reader straight into a pre-filtered view
@@ -245,7 +248,7 @@ export function DirectoryClient({ apps, lang }: Props) {
       {lang === 'en' && <McpConnectPanel />}
       <div id="directory-toolbar" className="space-y-4 mb-6 scroll-mt-24">
         <StatsBar total={apps.length} visible={sorted.length} byLocality={localityCounts} lang={lang} />
-        <WantChips counts={wantCounts} selected={want} onSelect={handleWant} lang={lang} />
+        <WantChips counts={wantCounts} selected={want} onSelect={handleWant} ui={ui} />
         {want && (
           <SubcategoryChips
             counts={countsByGroup.category}
@@ -253,6 +256,7 @@ export function DirectoryClient({ apps, lang }: Props) {
             onToggle={(value) => toggleFilter('category', value)}
             onClear={clearCategoryFilters}
             lang={lang}
+            ui={ui}
           />
         )}
       </div>
@@ -271,24 +275,24 @@ export function DirectoryClient({ apps, lang }: Props) {
               filtersOpen ? 'bg-primary text-white border-primary' : 'bg-white text-text-primary border-primary/20 hover:bg-primary/5'
             )}
           >
-            {t('filtersButton', lang)} {hasActiveFilters && !filtersOpen && <span className="text-xs">●</span>}
+            {t('filtersButton', ui)} {hasActiveFilters && !filtersOpen && <span className="text-xs">●</span>}
           </button>
 
           <div className="relative flex-1 min-w-[200px]">
             <SearchIcon className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-text-secondary/60" />
             <input
               type="text"
-              aria-label={t('searchAriaLabel', lang)}
+              aria-label={t('searchAriaLabel', ui)}
               value={search}
               onChange={(e) => handleSearch(e.target.value)}
-              placeholder={t('searchPlaceholder', lang)}
+              placeholder={t('searchPlaceholder', ui)}
               className="w-full rounded-lg border border-primary/20 bg-white pl-9 pr-9 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
             />
             {search && (
               <button
                 type="button"
                 onClick={() => handleSearch('')}
-                aria-label={t('clearSearchAriaLabel', lang)}
+                aria-label={t('clearSearchAriaLabel', ui)}
                 className="absolute right-2.5 top-1/2 -translate-y-1/2 text-text-secondary/60 hover:text-text-secondary"
               >
                 <CloseIcon className="h-3.5 w-3.5" />
@@ -303,7 +307,7 @@ export function DirectoryClient({ apps, lang }: Props) {
             aria-controls="local-ai-mobile-options"
             className="min-[560px]:hidden inline-flex items-center justify-between gap-1.5 rounded-lg border border-primary/20 bg-white px-3 py-2 text-sm font-medium text-text-primary hover:bg-primary/5"
           >
-            {t('moreOptionsButton', lang)}
+            {t('moreOptionsButton', ui)}
             <ChevronRightIcon className={cn('h-4 w-4 shrink-0 transition-transform', mobileOptionsOpen && 'rotate-90')} />
           </button>
 
@@ -315,8 +319,8 @@ export function DirectoryClient({ apps, lang }: Props) {
             )}
           >
           <label className="flex items-center gap-2 text-sm">
-            <span className="text-text-secondary shrink-0">{t('deviceCategoryLabel', lang)}</span>
-            <div className="inline-flex rounded-lg border border-primary/20 overflow-hidden shrink-0" role="group" aria-label={t('deviceCategoryLabel', lang)}>
+            <span className="text-text-secondary shrink-0">{t('deviceCategoryLabel', ui)}</span>
+            <div className="inline-flex rounded-lg border border-primary/20 overflow-hidden shrink-0" role="group" aria-label={t('deviceCategoryLabel', ui)}>
               {(['desktop', 'mobile'] as MachineCategory[]).map((cat) => (
                 <button
                   key={cat}
@@ -337,7 +341,7 @@ export function DirectoryClient({ apps, lang }: Props) {
 
           <label className="flex items-center gap-2 text-sm">
             <span className="text-text-secondary shrink-0">
-              {t(deviceCategory === 'mobile' ? 'myPhoneLabel' : 'myMachineLabel', lang)}
+              {t(deviceCategory === 'mobile' ? 'myPhoneLabel' : 'myMachineLabel', ui)}
             </span>
             <select
               value={machine}
@@ -354,38 +358,38 @@ export function DirectoryClient({ apps, lang }: Props) {
             machine={machine}
             profile={profile}
             onProfileChange={setProfile}
-            lang={lang}
+            ui={ui}
             expanded={hwWidgetExpanded}
             onExpandedChange={setHwWidgetExpanded}
           />
 
           {view === 'cards' && (
             <label className="flex items-center gap-2 text-sm">
-              <span className="text-text-secondary shrink-0">{t('sortLabel', lang)}</span>
+              <span className="text-text-secondary shrink-0">{t('sortLabel', ui)}</span>
               <select
                 value={sortKey}
                 onChange={(e) => handleSort(e.target.value as SortKey)}
                 className="rounded-lg border border-primary/20 bg-white px-2.5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"
               >
-                <option value="category">{t('groupCategory', lang)}</option>
-                <option value="stars">{t('colStars', lang)}</option>
-                <option value="name">{t('sortName', lang)}</option>
-                <option value="added">{t('sortAdded', lang)}</option>
-                <option value="ram">{t('sortRam', lang)}</option>
-                <option value="status">{t('colStatus', lang)}</option>
+                <option value="category">{t('groupCategory', ui)}</option>
+                <option value="stars">{t('colStars', ui)}</option>
+                <option value="name">{t('sortName', ui)}</option>
+                <option value="added">{t('sortAdded', ui)}</option>
+                <option value="ram">{t('sortRam', ui)}</option>
+                <option value="status">{t('colStatus', ui)}</option>
               </select>
               <button
                 type="button"
                 onClick={() => setSortDir((d) => (d === 'asc' ? 'desc' : 'asc'))}
                 className="text-text-secondary hover:text-primary"
-                aria-label={t('toggleSortDirAriaLabel', lang)}
+                aria-label={t('toggleSortDirAriaLabel', ui)}
               >
                 {sortDir === 'asc' ? '↑' : '↓'}
               </button>
             </label>
           )}
 
-          <div className="inline-flex rounded-lg border border-primary/20 overflow-hidden shrink-0" role="group" aria-label={t('viewModeAriaLabel', lang)}>
+          <div className="inline-flex rounded-lg border border-primary/20 overflow-hidden shrink-0" role="group" aria-label={t('viewModeAriaLabel', ui)}>
             <button
               type="button"
               onClick={() => setView('cards')}
@@ -393,7 +397,7 @@ export function DirectoryClient({ apps, lang }: Props) {
               className={cn('flex items-center gap-1.5 px-3 py-2 text-sm font-medium', view === 'cards' ? 'bg-primary text-white' : 'bg-white text-text-secondary hover:bg-primary/5')}
             >
               <GridIcon className="h-4 w-4" />
-              {t('viewCards', lang)}
+              {t('viewCards', ui)}
             </button>
             <button
               type="button"
@@ -402,12 +406,12 @@ export function DirectoryClient({ apps, lang }: Props) {
               className={cn('flex items-center gap-1.5 px-3 py-2 text-sm font-medium border-l border-primary/20', view === 'table' ? 'bg-primary text-white' : 'bg-white text-text-secondary hover:bg-primary/5')}
             >
               <TableIcon className="h-4 w-4" />
-              {t('viewTable', lang)}
+              {t('viewTable', ui)}
             </button>
           </div>
 
           <span className="hidden md:flex items-center text-sm text-text-secondary shrink-0">
-            {t('appsCountTemplate', lang, { visible: sorted.length, total: apps.length })}
+            {t('appsCountTemplate', ui, { visible: sorted.length, total: apps.length })}
           </span>
           </div>
         </div>
@@ -420,6 +424,7 @@ export function DirectoryClient({ apps, lang }: Props) {
           onClearAll={clearAllFilters}
           hasActiveFilters={hasActiveFilters}
           lang={lang}
+          ui={ui}
         />
 
         <ActiveFilterChips
@@ -428,6 +433,7 @@ export function DirectoryClient({ apps, lang }: Props) {
           onClearWant={() => handleWant(null)}
           onClearFilter={clearOneFilter}
           lang={lang}
+          ui={ui}
         />
       </div>
 
@@ -435,7 +441,7 @@ export function DirectoryClient({ apps, lang }: Props) {
         {view === 'cards' && (
           <>
             {sorted.length === 0 ? (
-              <p className="text-sm text-text-secondary italic py-10 text-center">{t('noToolsMatch', lang)}</p>
+              <p className="text-sm text-text-secondary italic py-10 text-center">{t('noToolsMatch', ui)}</p>
             ) : (
               <>
                 {/* Breakpoints match page-redesign-v2.md §2 exactly (1180/860/560px),
@@ -462,7 +468,7 @@ export function DirectoryClient({ apps, lang }: Props) {
                       onClick={() => setShown((s) => s + PAGE_SIZE)}
                       className="rounded-lg border border-primary/20 bg-white px-5 py-2.5 text-sm font-medium text-text-primary hover:bg-primary/5"
                     >
-                      {t('showMoreTemplate', lang, { n: Math.min(PAGE_SIZE, remaining), remaining })}
+                      {t('showMoreTemplate', ui, { n: Math.min(PAGE_SIZE, remaining), remaining })}
                     </button>
                   </div>
                 )}
@@ -473,7 +479,7 @@ export function DirectoryClient({ apps, lang }: Props) {
 
         {view === 'table' && (
           sorted.length === 0 ? (
-            <p className="text-sm text-text-secondary italic py-10 text-center">{t('noToolsMatch', lang)}</p>
+            <p className="text-sm text-text-secondary italic py-10 text-center">{t('noToolsMatch', ui)}</p>
           ) : (
             <ToolTable
               apps={visibleRows}
@@ -494,6 +500,7 @@ export function DirectoryClient({ apps, lang }: Props) {
         app={openTool}
         allApps={apps}
         lang={lang}
+        ui={ui}
         machine={machine}
         profile={profile}
         onClose={() => setOpenSlug(null)}

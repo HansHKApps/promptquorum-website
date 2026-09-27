@@ -20,10 +20,9 @@
 // numbers — see src/lib/tracking/hardwareProfile.ts for the full contract.
 
 import { useState } from 'react'
-import type { Language } from '@/lib/blog/blogContent'
 import type { HardwareProfile, MachineType } from './types'
 import { writeStoredProfile, clearStoredProfile } from './hardware'
-import { getMachineLabels, t } from './directory-i18n'
+import { t, machineLabelsFromUi, type DirUi } from './directory-ui-client'
 import { trackHardwareProfileSaved } from '@/lib/tracking/hardwareProfile'
 
 /**
@@ -72,14 +71,14 @@ export function HardwareProfileWidget({
   machine,
   profile,
   onProfileChange,
-  lang,
+  ui,
   expanded,
   onExpandedChange,
 }: {
   machine: MachineType
   profile: HardwareProfile | null
   onProfileChange: (profile: HardwareProfile | null) => void
-  lang: Language
+  ui: DirUi
   expanded: boolean
   onExpandedChange: (next: boolean) => void
 }) {
@@ -119,16 +118,16 @@ export function HardwareProfileWidget({
   }
 
   if (!expanded) {
-    let summary = t('hwProfileSetLink', lang)
+    let summary = t('hwProfileSetLink', ui)
     if (matchesMachine && profile) {
-      if (profile.machine === 'dgpu') summary = t('hwProfileSummaryDgpuTemplate', lang, { ram: profile.ramGb, vram: profile.vramGb })
+      if (profile.machine === 'dgpu') summary = t('hwProfileSummaryDgpuTemplate', ui, { ram: profile.ramGb, vram: profile.vramGb })
       else if (profile.machine === 'cpu' || profile.machine === 'ios' || profile.machine === 'android') {
-        summary = t('hwProfileSummaryCpuTemplate', lang, { ram: profile.ramGb })
-      } else summary = t('hwProfileSummaryAppleTemplate', lang, { unified: profile.unifiedGb })
+        summary = t('hwProfileSummaryCpuTemplate', ui, { ram: profile.ramGb })
+      } else summary = t('hwProfileSummaryAppleTemplate', ui, { unified: profile.unifiedGb })
     } else if (profile) {
       // Saved, but for a machine type the viewer has since switched away
       // from in the selector above — the numbers don't apply anymore.
-      summary = t('hwProfileStaleForMachineTemplate', lang, { machine: getMachineLabels(lang)[machine] })
+      summary = t('hwProfileStaleForMachineTemplate', ui, { machine: machineLabelsFromUi(ui)[machine] })
     }
     return (
       <button
@@ -147,26 +146,26 @@ export function HardwareProfileWidget({
       <div className="flex flex-wrap items-end gap-3">
         {(machine === 'dgpu' || machine === 'cpu' || machine === 'ios' || machine === 'android') && (
           <NumberField
-            label={t('hwProfileRamLabel', lang)}
+            label={t('hwProfileRamLabel', ui)}
             value={ramGb}
             onChange={setRamGb}
-            hint={memoryHint != null && !(profile && 'ramGb' in profile) ? t('hwProfileDetectedHintTemplate', lang, { n: memoryHint }) : null}
+            hint={memoryHint != null && !(profile && 'ramGb' in profile) ? t('hwProfileDetectedHintTemplate', ui, { n: memoryHint }) : null}
           />
         )}
         {machine === 'dgpu' && (
-          <NumberField label={t('hwProfileVramLabel', lang)} value={vramGb} onChange={setVramGb} />
+          <NumberField label={t('hwProfileVramLabel', ui)} value={vramGb} onChange={setVramGb} />
         )}
         {machine === 'apple' && (
           <NumberField
-            label={t('hwProfileUnifiedLabel', lang)}
+            label={t('hwProfileUnifiedLabel', ui)}
             value={unifiedGb}
             onChange={setUnifiedGb}
-            hint={memoryHint != null && !(profile && 'unifiedGb' in profile) ? t('hwProfileDetectedHintTemplate', lang, { n: memoryHint }) : null}
+            hint={memoryHint != null && !(profile && 'unifiedGb' in profile) ? t('hwProfileDetectedHintTemplate', ui, { n: memoryHint }) : null}
           />
         )}
       </div>
 
-      <p className="text-[11px] text-text-secondary/70">{t('hwProfilePrivacyNote', lang)}</p>
+      <p className="text-[11px] text-text-secondary/70">{t('hwProfilePrivacyNote', ui)}</p>
 
       <div className="flex flex-wrap items-center gap-2">
         <button
@@ -174,14 +173,14 @@ export function HardwareProfileWidget({
           onClick={handleSave}
           className="rounded-lg border border-primary bg-primary px-3 py-1.5 text-xs font-bold text-white hover:bg-primary/90"
         >
-          {t('hwProfileSaveButton', lang)}
+          {t('hwProfileSaveButton', ui)}
         </button>
         <button
           type="button"
           onClick={() => onExpandedChange(false)}
           className="rounded-lg border border-primary/20 px-3 py-1.5 text-xs font-semibold text-text-primary hover:bg-primary/5"
         >
-          {t('hwProfileCancelButton', lang)}
+          {t('hwProfileCancelButton', ui)}
         </button>
         {profile && (
           <button
@@ -189,7 +188,7 @@ export function HardwareProfileWidget({
             onClick={handleForget}
             className="rounded-lg border border-rose-200 bg-rose-50 px-3 py-1.5 text-xs font-semibold text-rose-700 hover:bg-rose-100"
           >
-            {t('hwProfileForgetButton', lang)}
+            {t('hwProfileForgetButton', ui)}
           </button>
         )}
       </div>

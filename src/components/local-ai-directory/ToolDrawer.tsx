@@ -27,7 +27,7 @@ import { featureReviewUrl } from './reviewLinks'
 import { guideForCategories } from '@/lib/power-local-llm/compare-guide'
 import { LicenseInfoModal } from './LicenseInfoModal'
 import { LastUpdatedBadge } from './LastUpdatedBadge'
-import { t } from './directory-i18n'
+import { t, type DirUi } from './directory-ui-client'
 import { AppLink as Link } from '@/components/AppLink'
 
 function DetailRow({ label, value }: { label: string; value: ReactNode }) {
@@ -55,13 +55,13 @@ const FOUNDER_SOCIAL_LABEL: Record<FounderSocialKey, string> = {
 
 type FounderSocialLinks = Partial<Record<FounderSocialKey, string>>
 
-function FounderSocials({ socials, lang }: { socials?: FounderSocialLinks; lang: Language }) {
+function FounderSocials({ socials, ui }: { socials?: FounderSocialLinks; ui: DirUi }) {
   if (!socials) return null
   const entries = Object.entries(socials).filter(([, url]) => !!url) as [FounderSocialKey, string][]
   if (entries.length === 0) return null
   return (
     <p className="text-xs text-text-secondary/80 pt-1.5 flex flex-wrap gap-x-3 gap-y-1">
-      <span className="font-semibold text-text-primary/70">{t('founderConnect', lang)}</span>
+      <span className="font-semibold text-text-primary/70">{t('founderConnect', ui)}</span>
       {entries.map(([key, url]) => (
         <a key={key} href={url} target="_blank" rel="noopener noreferrer nofollow" className="text-primary hover:underline">
           {FOUNDER_SOCIAL_LABEL[key]}
@@ -71,14 +71,14 @@ function FounderSocials({ socials, lang }: { socials?: FounderSocialLinks; lang:
   )
 }
 
-function FounderFullQuote({ paragraphs, source, socials, lang }: { paragraphs: string[]; source?: string; socials?: FounderSocialLinks; lang: Language }) {
+function FounderFullQuote({ paragraphs, source, socials, ui }: { paragraphs: string[]; source?: string; socials?: FounderSocialLinks; ui: DirUi }) {
   return (
     <div className="max-h-64 overflow-y-auto rounded-lg border border-primary/10 bg-primary/5 p-3 space-y-2">
       {paragraphs.map((p, i) => (
         <p key={i} className="text-sm text-text-secondary italic leading-relaxed">{p}</p>
       ))}
       {source && <p className="text-xs text-text-secondary/80 not-italic pt-1">— {source}</p>}
-      <FounderSocials socials={socials} lang={lang} />
+      <FounderSocials socials={socials} ui={ui} />
     </div>
   )
 }
@@ -89,23 +89,23 @@ function joinOrUnknown(values: string[] | null): ReactNode {
 }
 
 /** Renders the reader-facing label for an enum value, never the raw key ("rag", "external"). */
-function labelFor(group: keyof ReturnType<typeof getValueLabels>, value: string | null, lang: Language): ReactNode {
+function labelFor(group: keyof ReturnType<typeof getValueLabels>, value: string | null, lang: Language, ui: DirUi): ReactNode {
   if (!value || value === 'TODO') return null
-  return getValueLabels(lang)[group]?.[value] ?? value
+  return getValueLabels(lang, ui)[group]?.[value] ?? value
 }
 
-function labelList(group: keyof ReturnType<typeof getValueLabels>, values: string[] | null, lang: Language): ReactNode {
+function labelList(group: keyof ReturnType<typeof getValueLabels>, values: string[] | null, lang: Language, ui: DirUi): ReactNode {
   if (!values || values.length === 0) return null
-  const labels = getValueLabels(lang)
+  const labels = getValueLabels(lang, ui)
   return values.map((v) => labels[group]?.[v] ?? v).join(', ')
 }
 
-function FounderClaimBox({ appName, lang }: { appName: string; lang: Language }) {
+function FounderClaimBox({ appName, ui }: { appName: string; ui: DirUi }) {
   const [expanded, setExpanded] = useState(false)
   return (
     <div className="rounded-xl border border-dashed border-primary/25 bg-primary/[0.03] p-4">
       <p className="text-sm text-text-secondary italic">
-        {t('claimEntryTemplate', lang, { appName })}
+        {t('claimEntryTemplate', ui, { appName })}
       </p>
       <button
         type="button"
@@ -116,32 +116,32 @@ function FounderClaimBox({ appName, lang }: { appName: string; lang: Language })
         <span className="inline-flex h-4 w-4 items-center justify-center rounded-full border border-primary text-[11px] leading-none">
           {expanded ? '–' : '+'}
         </span>
-        {expanded ? t('hideDetails', lang) : t('whyClaimIt', lang)}
+        {expanded ? t('hideDetails', ui) : t('whyClaimIt', ui)}
       </button>
       {expanded && (
         <div className="mt-3 space-y-2.5 text-sm text-text-secondary border-t border-primary/10 pt-3">
           <p>
-            <span className="font-semibold text-text-primary">{t('verifiedBadgeTitle', lang)}</span>{' '}
-            {t('verifiedBadgeBodyTemplate', lang, { appName })}
+            <span className="font-semibold text-text-primary">{t('verifiedBadgeTitle', ui)}</span>{' '}
+            {t('verifiedBadgeBodyTemplate', ui, { appName })}
           </p>
           <p>
-            <span className="font-semibold text-text-primary">{t('correctRecordTitle', lang)}</span>{' '}
-            {t('correctRecordBody', lang)}
+            <span className="font-semibold text-text-primary">{t('correctRecordTitle', ui)}</span>{' '}
+            {t('correctRecordBody', ui)}
           </p>
           <p>
-            <span className="font-semibold text-text-primary">{t('addStatementTitle', lang)}</span>{' '}
-            {t('addStatementBody', lang)}
+            <span className="font-semibold text-text-primary">{t('addStatementTitle', ui)}</span>{' '}
+            {t('addStatementBody', ui)}
           </p>
           <p>
-            <span className="font-semibold text-text-primary">{t('freeVisibilityTitle', lang)}</span>{' '}
-            {t('freeVisibilityBodyTemplate', lang, { appName })}
+            <span className="font-semibold text-text-primary">{t('freeVisibilityTitle', ui)}</span>{' '}
+            {t('freeVisibilityBodyTemplate', ui, { appName })}
           </p>
           <p className="pt-1">
-            {t('emailPrefix', lang)}{' '}
+            {t('emailPrefix', ui)}{' '}
             <a href="mailto:hello@promptquorum.com" className="text-primary hover:underline">
               hello@promptquorum.com
             </a>{' '}
-            {t('emailSuffixTemplate', lang, { appName })}
+            {t('emailSuffixTemplate', ui, { appName })}
           </p>
         </div>
       )}
@@ -153,6 +153,7 @@ export function ToolDrawer({
   app,
   allApps,
   lang,
+  ui,
   machine,
   profile,
   onClose,
@@ -162,6 +163,7 @@ export function ToolDrawer({
   app: ToolRecord | null
   allApps: ToolRecord[]
   lang: Language
+  ui: DirUi
   machine: MachineType
   profile: HardwareProfile | null
   onClose: () => void
@@ -176,10 +178,10 @@ export function ToolDrawer({
   const guideHref = guide ? `${lang === 'en' ? '' : `/${lang}`}/power-local-llm/${guide.slug}` : null
 
   const STATUS_LABEL: Record<ToolRecord['status'], string> = {
-    planned: t('statusPlanned', lang),
-    listed: t('statusListed', lang),
-    verified: t('statusVerified', lang),
-    tested: t('statusTested', lang),
+    planned: t('statusPlanned', ui),
+    listed: t('statusListed', ui),
+    verified: t('statusVerified', ui),
+    tested: t('statusTested', ui),
   }
 
   const alternatives = app
@@ -189,18 +191,18 @@ export function ToolDrawer({
   async function handleCopy() {
     if (!app) return
     const rows: [string, ReactNode][] = [
-      [t('detailCategory', lang), app.categories.map((c) => CATEGORY_SUB_LABEL[c][lang]).join(', ')],
-      [t('detailInterface', lang), app.interfaces.map((i) => INTERFACE_LABEL[i][lang]).join(', ')],
-      [t('detailRuns', lang), labelFor('locality', app.locality, lang)],
-      [t('detailEngine', lang), labelFor('engine', app.engine, lang)],
-      [t('detailPrice', lang), labelFor('price', app.price, lang)],
-      [t('detailLicense', lang), app.license === 'TODO' ? null : app.license],
-      [t('detailPlatforms', lang), labelList('platforms', app.platforms, lang)],
-      [t('detailWorksWith', lang), joinOrUnknown(app.worksWith)],
-      [t('detailMcp', lang), app.mcpSupport ? t('mcpSupported', lang) : null],
-      [t('detailVersion', lang), app.pqReview?.version ? `${app.pqReview.version} (${formatDisplayDate(app.pqReview.date, lang)})` : null],
-      [t('detailAdded', lang), app.addedDate ? formatDisplayDate(app.addedDate, lang) : null],
-      [t('detailLastVerified', lang), app.lastVerifiedDate ? formatDisplayDate(app.lastVerifiedDate, lang) : null],
+      [t('detailCategory', ui), app.categories.map((c) => CATEGORY_SUB_LABEL[c][lang]).join(', ')],
+      [t('detailInterface', ui), app.interfaces.map((i) => INTERFACE_LABEL[i][lang]).join(', ')],
+      [t('detailRuns', ui), labelFor('locality', app.locality, lang, ui)],
+      [t('detailEngine', ui), labelFor('engine', app.engine, lang, ui)],
+      [t('detailPrice', ui), labelFor('price', app.price, lang, ui)],
+      [t('detailLicense', ui), app.license === 'TODO' ? null : app.license],
+      [t('detailPlatforms', ui), labelList('platforms', app.platforms, lang, ui)],
+      [t('detailWorksWith', ui), joinOrUnknown(app.worksWith)],
+      [t('detailMcp', ui), app.mcpSupport ? t('mcpSupported', ui) : null],
+      [t('detailVersion', ui), app.pqReview?.version ? `${app.pqReview.version} (${formatDisplayDate(app.pqReview.date, lang)})` : null],
+      [t('detailAdded', ui), app.addedDate ? formatDisplayDate(app.addedDate, lang) : null],
+      [t('detailLastVerified', ui), app.lastVerifiedDate ? formatDisplayDate(app.lastVerifiedDate, lang) : null],
     ]
 
     const lines = [
@@ -214,13 +216,13 @@ export function ToolDrawer({
     ]
 
     if (app.founder) {
-      lines.push('', `${t('fromTheMaker', lang)}:`, founderText(app.founder.why, lang))
-      if (app.founder.best) lines.push(`${t('bestFor', lang)} ${founderText(app.founder.best, lang)}`)
-      if (app.founder.limits) lines.push(`${t('limits', lang)} ${founderText(app.founder.limits, lang)}`)
+      lines.push('', `${t('fromTheMaker', ui)}:`, founderText(app.founder.why, lang))
+      if (app.founder.best) lines.push(`${t('bestFor', ui)} ${founderText(app.founder.best, lang)}`)
+      if (app.founder.limits) lines.push(`${t('limits', ui)} ${founderText(app.founder.limits, lang)}`)
     }
 
     if (app.pqReview?.text) {
-      lines.push('', `${t('pqReviewHeading', lang)}:`, app.pqReview.text[lang] ?? app.pqReview.text.en ?? '')
+      lines.push('', `${t('pqReviewHeading', ui)}:`, app.pqReview.text[lang] ?? app.pqReview.text.en ?? '')
     }
 
     const text = lines.filter((l) => l != null).join('\n')
@@ -252,23 +254,23 @@ export function ToolDrawer({
                   <button
                     type="button"
                     onClick={handleCopy}
-                    aria-label={t('copyEntryAriaLabel', lang)}
+                    aria-label={t('copyEntryAriaLabel', ui)}
                     className="inline-flex items-center gap-1 rounded-full px-2 py-1.5 text-xs font-medium text-text-secondary hover:bg-gray-100"
                   >
                     {copied ? (
                       <>
                         <CheckIcon className="h-3.5 w-3.5 text-emerald-600" />
-                        <span className="text-emerald-600">{t('copied', lang)}</span>
+                        <span className="text-emerald-600">{t('copied', ui)}</span>
                       </>
                     ) : (
                       <>
                         <CopyIcon className="h-3.5 w-3.5" />
-                        <span>{t('copyLabel', lang)}</span>
+                        <span>{t('copyLabel', ui)}</span>
                       </>
                     )}
                   </button>
                   <Dialog.Close asChild>
-                    <button type="button" aria-label={t('closeAriaLabel', lang)} className="rounded-full p-1.5 text-text-secondary hover:bg-gray-100">
+                    <button type="button" aria-label={t('closeAriaLabel', ui)} className="rounded-full p-1.5 text-text-secondary hover:bg-gray-100">
                       <CloseIcon className="h-4 w-4" />
                     </button>
                   </Dialog.Close>
@@ -281,7 +283,7 @@ export function ToolDrawer({
 
               {app.upstreamStatus && (
                 <span className="mb-4 inline-flex w-fit items-center gap-1 rounded-full border border-gray-300 bg-gray-100 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-700">
-                  {t(app.upstreamStatus.state === 'archived' ? 'archivedBadge' : 'unmaintainedBadge', lang)}
+                  {t(app.upstreamStatus.state === 'archived' ? 'archivedBadge' : 'unmaintainedBadge', ui)}
                 </span>
               )}
 
@@ -293,9 +295,9 @@ export function ToolDrawer({
                     className={`mb-4 inline-flex w-fit items-center gap-1 rounded-full border px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide ${
                       freshness === 'old' ? 'border-amber-300 bg-amber-50 text-amber-800' : 'border-yellow-200 bg-yellow-50 text-yellow-700'
                     }`}
-                    title={t(freshness === 'old' ? 'staleListingTooltipOld' : 'staleListingTooltipWarn', lang)}
+                    title={t(freshness === 'old' ? 'staleListingTooltipOld' : 'staleListingTooltipWarn', ui)}
                   >
-                    {t(freshness === 'old' ? 'staleListingBadgeOld' : 'staleListingBadgeWarn', lang)}
+                    {t(freshness === 'old' ? 'staleListingBadgeOld' : 'staleListingBadgeWarn', ui)}
                   </span>
                 )
               })()}
@@ -304,8 +306,8 @@ export function ToolDrawer({
                 <div className="flex items-start gap-2 rounded-xl border border-amber-200 bg-amber-50 p-3 mb-5">
                   <StarIcon className="h-4 w-4 mt-0.5 shrink-0 text-amber-500" />
                   <p className="text-xs text-amber-900">
-                    <span className="font-bold uppercase tracking-wide">{t('founderReviewedBannerLabel', lang)}</span>{' '}
-                    {t('founderReviewedBannerBodyTemplate', lang, { name: app.name })}
+                    <span className="font-bold uppercase tracking-wide">{t('founderReviewedBannerLabel', ui)}</span>{' '}
+                    {t('founderReviewedBannerBodyTemplate', ui, { name: app.name })}
                   </p>
                 </div>
               )}
@@ -338,13 +340,13 @@ export function ToolDrawer({
               {/* Full details */}
               <section className="border border-primary/10 rounded-xl p-4 mb-5">
                 <dl className="space-y-2">
-                  <DetailRow label={t('detailCategory', lang)} value={app.categories.map((c) => CATEGORY_SUB_LABEL[c][lang]).join(', ')} />
-                  <DetailRow label={t('detailInterface', lang)} value={app.interfaces.map((i) => INTERFACE_LABEL[i][lang]).join(', ')} />
-                  <DetailRow label={t('detailRuns', lang)} value={labelFor('locality', app.locality, lang)} />
-                  <DetailRow label={t('detailEngine', lang)} value={labelFor('engine', app.engine, lang)} />
-                  <DetailRow label={t('detailPrice', lang)} value={labelFor('price', app.price, lang)} />
+                  <DetailRow label={t('detailCategory', ui)} value={app.categories.map((c) => CATEGORY_SUB_LABEL[c][lang]).join(', ')} />
+                  <DetailRow label={t('detailInterface', ui)} value={app.interfaces.map((i) => INTERFACE_LABEL[i][lang]).join(', ')} />
+                  <DetailRow label={t('detailRuns', ui)} value={labelFor('locality', app.locality, lang, ui)} />
+                  <DetailRow label={t('detailEngine', ui)} value={labelFor('engine', app.engine, lang, ui)} />
+                  <DetailRow label={t('detailPrice', ui)} value={labelFor('price', app.price, lang, ui)} />
                   <DetailRow
-                    label={t('detailLicense', lang)}
+                    label={t('detailLicense', ui)}
                     value={
                       app.license && app.license !== 'TODO' ? (
                         <button
@@ -357,11 +359,11 @@ export function ToolDrawer({
                       ) : null
                     }
                   />
-                  <DetailRow label={t('detailPlatforms', lang)} value={labelList('platforms', app.platforms, lang)} />
-                  <DetailRow label={t('detailWorksWith', lang)} value={joinOrUnknown(app.worksWith)} />
-                  {app.mcpSupport && <DetailRow label={t('detailMcp', lang)} value={t('mcpSupported', lang)} />}
+                  <DetailRow label={t('detailPlatforms', ui)} value={labelList('platforms', app.platforms, lang, ui)} />
+                  <DetailRow label={t('detailWorksWith', ui)} value={joinOrUnknown(app.worksWith)} />
+                  {app.mcpSupport && <DetailRow label={t('detailMcp', ui)} value={t('mcpSupported', ui)} />}
                   <DetailRow
-                    label={t('detailHardware', lang)}
+                    label={t('detailHardware', ui)}
                     value={
                       computeHardwareDisplay(app.hardware, machine, lang, app.engine, { interfaces: app.interfaces, platforms: app.platforms }).known ? (
                         <div className="flex flex-wrap items-center gap-2">
@@ -389,7 +391,7 @@ export function ToolDrawer({
                   />
                   {app.pqReview?.version && (
                     <DetailRow
-                      label={t('detailVersion', lang)}
+                      label={t('detailVersion', ui)}
                       value={
                         app.pqReview.versionSourceUrl ? (
                           <a href={app.pqReview.versionSourceUrl} target="_blank" rel="noopener noreferrer nofollow" className="underline hover:text-text-primary">
@@ -401,9 +403,9 @@ export function ToolDrawer({
                       }
                     />
                   )}
-                  <DetailRow label={t('detailAdded', lang)} value={app.addedDate ? formatDisplayDate(app.addedDate, lang) : null} />
+                  <DetailRow label={t('detailAdded', ui)} value={app.addedDate ? formatDisplayDate(app.addedDate, lang) : null} />
                   <DetailRow
-                    label={t('detailLastVerified', lang)}
+                    label={t('detailLastVerified', ui)}
                     value={
                       app.lastVerifiedDate ? (
                         <LastUpdatedBadge lang={lang} date={formatDisplayDate(app.lastVerifiedDate, lang)} variant="plain" />
@@ -415,31 +417,31 @@ export function ToolDrawer({
 
               {/* From the Maker */}
               <section className="mb-5">
-                <h3 className="text-sm font-bold text-text-primary mb-2">{t('fromTheMaker', lang)}</h3>
+                <h3 className="text-sm font-bold text-text-primary mb-2">{t('fromTheMaker', ui)}</h3>
                 {app.founder && founderParagraphs(app.founder.fullQuote, lang) ? (
                   // A verbatim quote exists — show his own words only, not a
                   // PromptQuorum paraphrase mixed in underneath.
-                  <FounderFullQuote paragraphs={founderParagraphs(app.founder.fullQuote, lang) ?? []} source={app.founder.who[lang] ?? app.founder.who.en} socials={app.founder.socials} lang={lang} />
+                  <FounderFullQuote paragraphs={founderParagraphs(app.founder.fullQuote, lang) ?? []} source={app.founder.who[lang] ?? app.founder.who.en} socials={app.founder.socials} ui={ui} />
                 ) : app.founder ? (
                   <div className="text-sm text-text-secondary space-y-1.5">
                     <p>{founderText(app.founder.why, lang)}</p>
-                    {app.founder.best && <p><span className="font-semibold text-text-primary">{t('bestFor', lang)}</span> {founderText(app.founder.best, lang)}</p>}
-                    {app.founder.limits && <p><span className="font-semibold text-text-primary">{t('limits', lang)}</span> {founderText(app.founder.limits, lang)}</p>}
-                    <FounderSocials socials={app.founder.socials} lang={lang} />
+                    {app.founder.best && <p><span className="font-semibold text-text-primary">{t('bestFor', ui)}</span> {founderText(app.founder.best, lang)}</p>}
+                    {app.founder.limits && <p><span className="font-semibold text-text-primary">{t('limits', ui)}</span> {founderText(app.founder.limits, lang)}</p>}
+                    <FounderSocials socials={app.founder.socials} ui={ui} />
                   </div>
                 ) : (
-                  <FounderClaimBox key={app.slug} appName={app.name} lang={lang} />
+                  <FounderClaimBox key={app.slug} appName={app.name} ui={ui} />
                 )}
               </section>
 
               {/* PromptQuorum review */}
               {app.pqReview?.text && (
                 <section className="mb-5">
-                  <h3 className="text-sm font-bold text-text-primary mb-2">{t('pqReviewHeading', lang)}</h3>
+                  <h3 className="text-sm font-bold text-text-primary mb-2">{t('pqReviewHeading', ui)}</h3>
                   <div className="text-sm text-text-secondary space-y-1.5">
                     <p>{app.pqReview.text[lang] ?? app.pqReview.text.en ?? ''}</p>
                     {app.pqReview.hw && (
-                      <p className="text-xs text-text-secondary/80">{t('testedOnTemplate', lang, { date: formatDisplayDate(app.pqReview.date, lang), hw: app.pqReview.hw })}</p>
+                      <p className="text-xs text-text-secondary/80">{t('testedOnTemplate', ui, { date: formatDisplayDate(app.pqReview.date, lang), hw: app.pqReview.hw })}</p>
                     )}
                   </div>
                 </section>
@@ -451,17 +453,17 @@ export function ToolDrawer({
               {featureReview && (
                 <section className="mb-5">
                   <span className="inline-flex w-fit items-center gap-1 rounded-full border border-primary/30 bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary mb-2">
-                    {t('featureArticleBadge', lang)}
+                    {t('featureArticleBadge', ui)}
                   </span>
                   <Link
                     href={featureReview}
                     className="block text-sm font-bold underline underline-offset-2 text-primary hover:text-primary/80"
                   >
-                    {t('readReview', lang)}
+                    {t('readReview', ui)}
                   </Link>
                   {guideHref && (
                     <Link href={guideHref} className="mt-2 block text-sm font-semibold underline underline-offset-2 text-primary hover:text-primary/80">
-                      {t('readGuide', lang)}{guide ? ` — ${guide.label}` : ''}
+                      {t('readGuide', ui)}{guide ? ` — ${guide.label}` : ''}
                     </Link>
                   )}
                 </section>
@@ -469,14 +471,14 @@ export function ToolDrawer({
 
               {/* PromptQuorum articles */}
               <section className="mb-5">
-                <h3 className="text-sm font-bold text-text-primary mb-2">{t('pqArticlesHeading', lang)}</h3>
+                <h3 className="text-sm font-bold text-text-primary mb-2">{t('pqArticlesHeading', ui)}</h3>
                 <ArticlesBlock toolName={app.name} lang={lang} />
               </section>
 
               {/* Alternatives */}
               {alternatives.length > 0 && (
                 <section className="mb-5">
-                  <h3 className="text-sm font-bold text-text-primary mb-2">{t('alternativesHeading', lang)}</h3>
+                  <h3 className="text-sm font-bold text-text-primary mb-2">{t('alternativesHeading', ui)}</h3>
                   <div className="flex flex-wrap gap-2">
                     {alternatives.map((alt) => (
                       <button

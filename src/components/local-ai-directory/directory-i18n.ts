@@ -695,3 +695,23 @@ export function getWantLabels(lang: Language): Record<UseCaseKey, string> {
     serve: t('wantServe', lang),
   }
 }
+
+/**
+ * Bundle-size fix (Item 3, directory/power-local-llm shared chunk): resolves
+ * every DIR_UI key down to the one requested language, server-side. Server
+ * components (page-helpers.tsx) call this once per request and pass the
+ * resulting small `Record<DirUiKey, string>` down as a `ui` prop, so client
+ * components can read `ui[key]` (or the `t(key, ui, vars)` shim in
+ * `directory-ui-client.ts`) instead of importing this file's full 9-language
+ * DIR_UI object directly. This function itself still touches the whole
+ * dictionary and must never be imported from a 'use client' file — only from
+ * server-side code (page.tsx / page-helpers.tsx).
+ */
+export function resolveAll(lang: Language): Record<DirUiKey, string> {
+  const out = {} as Record<DirUiKey, string>
+  for (const key of Object.keys(DIR_UI) as DirUiKey[]) {
+    const entry = DIR_UI[key]
+    out[key] = entry[lang] ?? entry.en
+  }
+  return out
+}
