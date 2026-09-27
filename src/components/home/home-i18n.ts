@@ -16,14 +16,14 @@ const HOME_UI = {
   /** Aligned 2026-09-23 with the site's "Discovery Engine" positioning (replaces the 2026-09-22 "Usage Layer" wording, same idea site-wide — see src/lib/about/copy.*.ts h1 and translations.ts aboutMetaTitle) per site-owner direction: DE/FR/ES/PT keep a natural "your/Ihre/votre/tu/seu" framing, JA/ZH/KO/AR use the punchier definite-article framing that's idiomatic for headlines in those languages (matches how the prior H1 was phrased in each). Updated 2026-09-23 to add "open-source" alongside "open-weight" so the H1 matches the About page's h1 wording site-wide. */
   pageH1: {
     en: 'PromptQuorum: Your Discovery Engine for Open-Weight & Open-Source AI',
-    de: 'PromptQuorum: Ihre Entdeckungsmaschine für Open-Weight- und Open-Source-KI',
-    fr: 'PromptQuorum : votre moteur de découverte pour l\'IA à poids ouverts et open source',
-    ja: 'PromptQuorum：オープンウェイト＆オープンソースAIの発見エンジン',
-    zh: 'PromptQuorum：您的开放权重与开源 AI 发现引擎',
-    es: 'PromptQuorum: tu motor de descubrimiento para la IA de pesos abiertos y de código abierto',
-    pt: 'PromptQuorum: seu motor de descoberta para IA de pesos abertos e código aberto',
-    ar: 'PromptQuorum: محرك الاكتشاف للذكاء الاصطناعي مفتوح الأوزان ومفتوح المصدر',
-    ko: 'PromptQuorum: 오픈 웨이트 및 오픈소스 AI를 위한 발견 엔진',
+    de: 'PromptQuorum: Ihr Wegweiser zu Open-Weight- und Open-Source-KI',
+    fr: 'PromptQuorum : votre guide de l\'IA à poids ouverts et open source',
+    ja: 'PromptQuorum：オープンウェイト＆オープンソースAIのガイド',
+    zh: 'PromptQuorum：您的开放权重与开源 AI 指南',
+    es: 'PromptQuorum: tu guía de la IA de pesos abiertos y de código abierto',
+    pt: 'PromptQuorum: seu guia de IA de pesos abertos e código aberto',
+    ar: 'PromptQuorum: دليلك للذكاء الاصطناعي مفتوح الأوزان ومفتوح المصدر',
+    ko: 'PromptQuorum: 오픈 웨이트 및 오픈소스 AI를 위한 가이드',
   },
   /** Short punchy tagline under the H1 — carries the directory/guides/comparison identity that used to lead the H1 itself. */
   heroTagline: {
