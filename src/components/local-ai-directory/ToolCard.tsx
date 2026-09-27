@@ -183,7 +183,7 @@ export function ToolCard({
             {app.name.charAt(0).toUpperCase()}
           </span>
           <div className="min-w-0 flex-1">
-            <h3 className="text-base font-bold text-text-primary leading-snug">{app.name}</h3>
+            <h3 className="text-base font-bold text-text-primary leading-snug truncate" title={app.name}>{app.name}</h3>
             <span className={`inline-block mt-1 rounded px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide ${accent.chip}`}>
               {categoryLabel}
             </span>
