@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import type { Language } from '@/lib/blog/blogContent'
 import { SURFACE_CLASS } from './homeSurface'
 import { t } from './home-i18n'

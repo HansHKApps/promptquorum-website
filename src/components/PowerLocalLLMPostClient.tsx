@@ -11,7 +11,7 @@
 
 import { useState, useRef, useEffect, Fragment } from 'react'
 import { ClusterBanner } from '@/components/ClusterBanner'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import Image from 'next/image'
 import type { Language } from '@/lib/blog/blogContent'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'

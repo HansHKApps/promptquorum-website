@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from 'react'
 import { useLang } from '@/hooks/useLang'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { LangLinksBar } from '@/components/LangLinksBar'
 
 // ---------------------------------------------------------------------------

@@ -4,7 +4,7 @@
 // tiers, `capped`/`totalCount` for the "+N more" line). Do not reinvent this
 // lookup — it's generated at build time by scripts/generate-tool-article-index.mjs.
 
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import type { Language } from '@/lib/blog/blogContent'
 import toolArticleIndex from '@/generated/tool-article-index.json'

@@ -3,7 +3,7 @@ import { translations } from '@/translations'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { OptimizationShowcase } from '@/components/OptimizationShowcase'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = 'ja'

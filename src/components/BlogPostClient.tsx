@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { ClusterBanner } from '@/components/ClusterBanner'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { useLang } from '@/hooks/useLang'
 import type { BlogPost, Language } from '@/lib/blog/blogContent'
 import { blogMetadata } from '@/lib/blog/blogTranslations'

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { PromptEngineeringPostClient } from '@/components/PromptEngineeringPostClient'
 import { peContent, type PEArticle } from '@/lib/prompt-engineering/content'
 import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'

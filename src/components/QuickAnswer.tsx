@@ -1,7 +1,7 @@
 'use client'
 
 import { ReactNode, Fragment } from 'react'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 
 type Language = 'en' | 'de' | 'fr' | 'ja' | 'zh' | 'es' | 'pt' | 'ar' | 'ko'
 

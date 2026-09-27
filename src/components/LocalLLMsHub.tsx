@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { useMemo, useRef, useState, useEffect } from 'react'
 import { llmThemes, type LLMTheme } from '@/lib/local-llms/themes'
 import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'

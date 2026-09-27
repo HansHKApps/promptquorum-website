@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { LocalLLMsPostClient } from '@/components/LocalLLMsPostClient'
 import { llmContent } from '@/lib/local-llms/content'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { notFound } from 'next/navigation'
 import { FRAMEWORKS, getFrameworkLocalized } from '@/lib/frameworksData'
 import { getFrameworkUiLabels } from '@/lib/frameworksUiLabels'

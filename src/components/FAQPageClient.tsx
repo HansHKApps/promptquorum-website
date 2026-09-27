@@ -3,7 +3,7 @@
 import { useLang } from '@/hooks/useLang'
 import type { Lang } from '@/hooks/useLang'
 import { LangLinksBar } from '@/components/LangLinksBar'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { FAQAccordion } from './FAQAccordion'
 import Image from 'next/image'
 

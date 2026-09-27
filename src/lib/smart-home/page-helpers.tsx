@@ -14,7 +14,7 @@
 
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { truncateTitle } from '@/lib/utils'
 import { SmartHomePostClient } from '@/components/SmartHomePostClient'
 import { SmartHomeWaitlistCTA } from '@/components/SmartHomeWaitlistCTA'

@@ -5,7 +5,7 @@
 // itself). Every card has the same structure so the grid never looks ragged
 // (audit item #4/#5: two competing card formats, most fields missing).
 
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { useState } from 'react'
 import type { Language } from '@/lib/blog/blogContent'
 import { STORE_LINK_LABEL, type ToolRecord } from '@/lib/power-local-llm/apps/types'

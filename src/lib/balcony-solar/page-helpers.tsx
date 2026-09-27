@@ -14,7 +14,7 @@
 
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { truncateTitle } from '@/lib/utils'
 import { BalconySolarPostClient } from '@/components/BalconySolarPostClient'
 import { BalconySolarWaitlistCTA } from '@/components/BalconySolarWaitlistCTA'

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 import { Sparkles, Layers, Brain, Zap, Shield } from 'lucide-react'
 import { PromptOptimizerShowcase } from '@/components/PromptOptimizerShowcase'
 import { OptimizationShowcase } from '@/components/OptimizationShowcase'

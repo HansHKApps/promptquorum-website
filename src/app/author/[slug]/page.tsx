@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import { AppLink as Link } from '@/components/AppLink'
 
 interface AuthorPageProps {
   params: Promise<{ slug: string }>
