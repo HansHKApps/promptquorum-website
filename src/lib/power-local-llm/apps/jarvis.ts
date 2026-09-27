@@ -22,6 +22,13 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['audio', 'chat'],
   url: 'jarvis-mac.lovable.app',
+  // Direct GitHub release download — jarvis-mac.lovable.app's own "Download" button pointed at
+  // .../releases/download/v1.0.0/Jarvis-macos.dmg, which 404s; the actual release asset is named
+  // Jarvis.dmg (verified via `gh api repos/Reezxy/Jarvis---Local-Voice-assistant/releases`, 2026-09-27).
+  storeLinks: {
+    github: 'https://github.com/Reezxy/Jarvis---Local-Voice-assistant/releases/download/v1.0.0/Jarvis.dmg',
+    web: 'https://jarvis-mac.lovable.app',
+  },
   tagline: {
     en: 'macOS voice assistant, fully offline (Llama, Whisper, Kokoro)',
     de: 'macOS-Sprachassistent, komplett offline (Llama, Whisper, Kokoro)',
