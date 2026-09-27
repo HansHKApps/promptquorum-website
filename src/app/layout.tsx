@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Suspense } from 'react'
-import { Plus_Jakarta_Sans, JetBrains_Mono, Noto_Sans_Arabic, Noto_Sans_KR } from 'next/font/google'
+import { Plus_Jakarta_Sans, JetBrains_Mono, Noto_Sans_Arabic } from 'next/font/google'
 import './globals.css'
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -23,25 +23,12 @@ const notoSansArabic = Noto_Sans_Arabic({
   variable: '--font-arabic',
   display: 'swap',
 })
-const notoSansKR = Noto_Sans_KR({
-  // 'korean' is not a valid next/font subset for this family — Google's font
-  // metadata only exposes cyrillic/latin/latin-ext/vietnamese as SUPPLEMENTARY
-  // subsets for Noto Sans KR (same for Noto Sans JP/SC/TC: none of the CJK
-  // Noto families expose a same-script subset). The Hangul glyphs are always
-  // bundled regardless of which of these is chosen — 'subsets' here only
-  // controls whether accessory Latin/Cyrillic/Vietnamese characters are
-  // included alongside them. 'latin' was already correct on this axis; the
-  // actual defect was that --font-korean had zero CSS references anywhere
-  // (fixed in globals.css), so the font was never applied to any element.
-  //
-  // A prior commit (fdb048efd, part of #217) removed this font entirely as
-  // "unused" — correct at the time (no CSS referenced --font-korean), but no
-  // longer true now that globals.css has the html[lang="ko"] rule. Re-added.
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-korean',
-  display: 'swap',
-})
+// Noto Sans KR (--font-korean) moved to src/app/ko/layout.tsx: the loader call
+// (and the CSS payload it generates — hundreds of @font-face rules, since the
+// Hangul glyph set is bundled regardless of subset) is scoped to the /ko route
+// instead of shipping in the shared global CSS bundle for all 9 locales. See
+// src/app/ko/layout.tsx for the loader call and the `.font-korean-scope`
+// wrapper, and globals.css for the matching selector.
 
 import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
@@ -136,7 +123,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" dir="ltr" className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} ${notoSansArabic.variable} ${notoSansKR.variable}`} suppressHydrationWarning>
+    <html lang="en" dir="ltr" className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} ${notoSansArabic.variable}`} suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#6750A4" />
 

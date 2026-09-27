@@ -174,10 +174,11 @@ html[dir="rtl"] body {
   font-family: var(--font-arabic), system-ui, sans-serif;
 }
 
-/* Korean — font. Scoped to lang="ko" so the korean subset is only ever
-   requested by the browser when rendering a /ko/ page (no element matches
-   this selector elsewhere, so no other locale pays for the download). */
-html[lang="ko"] body {
+/* Korean — font. Scoped via .font-korean-scope, a wrapper div rendered only
+   by src/app/ko/layout.tsx (nested layouts can't redeclare html[lang] in the
+   App Router). Normal CSS inheritance carries font-family to all descendants,
+   so no other locale's build references this rule or its @font-face CSS. */
+.font-korean-scope {
   font-family: var(--font-korean), system-ui, sans-serif;
 }
 
