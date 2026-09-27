@@ -2008,12 +2008,12 @@ function ArticleCard({
   return (
     <div className={`relative h-full transition-all rounded-xl ${showNew ? 'ring-2 ring-emerald-400/60 shadow-[0_0_12px_rgba(52,211,153,0.25)]' : showUpdated ? 'ring-2 ring-amber-400/60 shadow-[0_0_12px_rgba(251,191,36,0.25)]' : ''}`}>
       {showNew && (
-        <span className="absolute top-0 right-3 -translate-y-1/2 text-[11px] font-black uppercase tracking-widest text-white bg-emerald-500 border-2 border-emerald-300 shadow-md rounded px-2.5 py-0.5 z-10">
+        <span className="absolute top-0 right-3 -translate-y-1/2 text-[11px] font-bold uppercase tracking-widest text-white bg-emerald-500 border-2 border-emerald-300 shadow-md rounded px-2.5 py-0.5 z-10">
           {NEW_LABEL[lang] ?? NEW_LABEL['en']}
         </span>
       )}
       {showUpdated && (
-        <span className="absolute top-0 right-3 -translate-y-1/2 text-[11px] font-black uppercase tracking-widest text-white bg-amber-500 border-2 border-amber-300 shadow-md rounded px-2.5 py-0.5 z-10">
+        <span className="absolute top-0 right-3 -translate-y-1/2 text-[11px] font-bold uppercase tracking-widest text-white bg-amber-500 border-2 border-amber-300 shadow-md rounded px-2.5 py-0.5 z-10">
           {UPDATED_LABEL[lang] ?? UPDATED_LABEL['en']}
         </span>
       )}
@@ -2422,10 +2422,10 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
           return (
             <section className="mb-16 border-2 border-emerald-400/40 rounded-2xl p-6 bg-emerald-50/30">
               <div className="flex items-center gap-3 mb-1">
-                <h2 className="text-2xl font-black text-emerald-800 tracking-tight">
+                <h2 className="text-2xl font-bold text-emerald-800 tracking-tight">
                   {RECENT_HEADING[lang] ?? RECENT_HEADING['en']}
                 </h2>
-                <span className="text-xs font-black uppercase tracking-widest text-white bg-emerald-500 border-2 border-emerald-300 shadow-sm rounded px-2.5 py-1">
+                <span className="text-xs font-bold uppercase tracking-widest text-white bg-emerald-500 border-2 border-emerald-300 shadow-sm rounded px-2.5 py-1">
                   {recentSlugs.length}
                 </span>
               </div>
