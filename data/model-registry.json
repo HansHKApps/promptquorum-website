@@ -1,6 +1,39 @@
 {
-  "last_updated": "2026-09-25",
+  "last_updated": "2026-09-28",
   "models": [
+    {
+      "company": "Supersonic Labs",
+      "family": "Julia",
+      "model": "Julia-1",
+      "type": "open-weight",
+      "release_date": "2026-09-24",
+      "status": "current",
+      "source_url": "https://huggingface.co/SupersonicLabs/Julia-1",
+      "verified_date": "2026-09-28",
+      "notes": "144.3M-parameter decision model built on mmBERT-small; Apache 2.0 license; scores 2-20 fixed candidate answers (classification/routing/ordered-scale/yes-no) rather than generating free text; runs on CPU, ~550.5 MiB (FP32) on disk. release_date is the model card's own 'measured/evaluated on' date, not a confirmed separate launch date."
+    },
+    {
+      "company": "TypeSafe AI",
+      "family": "Jev",
+      "model": "Jev",
+      "type": "closed",
+      "release_date": "2026-09-15",
+      "status": "current",
+      "source_url": "https://www.digitalocean.com/resources/articles/what-is-jev",
+      "verified_date": "2026-09-28",
+      "notes": "Cloud-only 'System 1' decision model, early access launched 2026-09-15 with a viral (~40M view) launch video and a $40M DCVC-led seed round; returns typed/calibrated decisions instead of free text for routing/scoring/triage/moderation. Parameter count and architecture undisclosed. $0.042 per million input tokens, output tokens free at launch, 70-500ms vendor-reported latency. Not open-weight, not locally runnable."
+    },
+    {
+      "company": "Johns Hopkins CLSP",
+      "family": "mmBERT",
+      "model": "mmBERT-small",
+      "type": "open-weight",
+      "release_date": "2026-01-01",
+      "status": "current",
+      "source_url": "https://huggingface.co/jhu-clsp/mmBERT-small",
+      "verified_date": "2026-09-28",
+      "notes": "140M-parameter (42M non-embedding) multilingual ModernBERT-architecture encoder; MIT license; trained on 1,800+ languages (1,833 in the decay phase). Base model for Supersonic Labs' Julia-1 decision model. Exact release day unconfirmed — release_date is a placeholder for 'sometime in 2026', not a verified launch date."
+    },
     {
       "company": "Anthropic",
       "family": "Claude",

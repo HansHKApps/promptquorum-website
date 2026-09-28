@@ -24,6 +24,7 @@ import { article as qwen14bVsLlama8b } from './articles/qwen-14b-vs-llama-8b'
 import { article as best14bModelsCoding } from './articles/best-14b-models-coding'
 import { article as bestMiniPcForLocalLlm } from './articles/best-mini-pc-for-local-llm'
 import { article as bestMoeModelsLocalCoding } from './articles/best-moe-models-local-coding'
+import { article as julia1VsJev } from './articles/julia-1-vs-jev'
 import { article as bestLocalLlmCoding12gbVram } from './articles/best-local-llm-coding-12gb-vram'
 import { article as bestModelsAmd5700x3070ti } from './articles/best-models-amd-5700x-3070ti'
 import { article as radeon6800mLocalLlm } from './articles/radeon-6800m-local-llm'
@@ -284,4 +285,6 @@ export const promptBitesContent: Record<string, Partial<Record<Language, PromptB
   localAiTrend2027LocalAgenticAi,
   localAiTrend2027DataSovereigntyCompliance,
   localAiTrend2027NoCodeFineTuning,
+
+  julia1VsJev,
 }

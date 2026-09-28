@@ -35,6 +35,7 @@ export const PROMPT_BITES_SLUG_TO_KEY: Record<string, string> = {
   'best-14b-models-coding':               'best14bModelsCoding',
   'best-mini-pc-for-local-llm':           'bestMiniPcForLocalLlm',
   'best-moe-models-local-coding':         'bestMoeModelsLocalCoding',
+  'julia-1-vs-jev':                       'julia1VsJev',
 
   // Cluster E — Hardware-Specific
   'best-local-llm-coding-12gb-vram':      'bestLocalLlmCoding12gbVram',

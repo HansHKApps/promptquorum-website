@@ -9017,7 +9017,12 @@
         "ar",
         "ko"
       ],
-      "images": []
+      "images": [
+        {
+          "url": "/images/hilbertraum-review-docqa-example-en.webp",
+          "title": "Example from HilbertRaum: asking it to list every deadline and notice period in a rental contract, with the answer citing the exact clause and page for each one."
+        }
+      ]
     },
     "shadow-ai-controls-by-company-size": {
       "dateModified": "2026-09-04",
@@ -14605,6 +14610,24 @@
       "dateModified": "2026-07-16",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "julia1VsJev": {
+      "dateModified": "2026-09-28",
+      "lastFactChecked": null,
+      "publishDate": "2026-09-28",
       "hasSections": true,
       "langs": [
         "en",

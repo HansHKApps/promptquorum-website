@@ -35,6 +35,7 @@ export const PROMPT_BITES_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'best-14b-models-coding',
   'best-mini-pc-for-local-llm',
   'best-moe-models-local-coding',
+  'julia-1-vs-jev',
   // Cluster E — Hardware-Specific
   'best-local-llm-coding-12gb-vram',
   'best-models-amd-5700x-3070ti',
