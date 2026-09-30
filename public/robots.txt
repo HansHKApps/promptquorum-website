@@ -5,6 +5,7 @@
 User-Agent: *
 Allow: /
 Allow: /api/og/
+Allow: /api/mcp
 Disallow: /api/
 Disallow: /presentations/
 
@@ -34,6 +35,7 @@ User-Agent: ImagesiftBot
 User-Agent: Valerian
 Allow: /
 Allow: /api/og/
+Allow: /api/mcp
 Disallow: /api/
 Disallow: /presentations/
 
@@ -41,6 +43,7 @@ Disallow: /presentations/
 User-Agent: Bingbot
 Allow: /
 Allow: /api/og/
+Allow: /api/mcp
 Disallow: /api/
 Disallow: /presentations/
 
