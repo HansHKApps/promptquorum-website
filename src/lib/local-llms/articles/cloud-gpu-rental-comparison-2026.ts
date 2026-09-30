@@ -316,7 +316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Provider': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
-            'Location': 'Spain, Norway',
+            'Location': 'Sweden, Norway',
             'DPA': '✓ Available',
             'Note': 'UK company, but EU data centers available',
           },
@@ -1080,7 +1080,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Proveedor': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
-            'Ubicación': 'España, Noruega',
+            'Ubicación': 'Suecia, Noruega',
             'DPA': '✓ Disponible',
             'Nota': 'Empresa británica, pero con centros de datos EU disponibles',
           },
@@ -1864,7 +1864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'المزود': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
-            'الموقع': 'إسبانيا، النرويج',
+            'الموقع': 'السويد، النرويج',
             'DPA': '✓ متاح',
             'ملاحظة': 'شركة بريطانية، لكن مع مراكز بيانات EU متاحة',
           },
@@ -2658,7 +2658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Provedor': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
-            'Localização': 'Espanha, Noruega',
+            'Localização': 'Suécia, Noruega',
             'DPA': '✓ Disponível',
             'Observação': 'Empresa do Reino Unido, mas com data centers na UE disponíveis',
           },
@@ -3124,7 +3124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Anbieter': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
-            'Standort': 'Spanien, Norwegen',
+            'Standort': 'Schweden, Norwegen',
             'AVV': '✓ Verfügbar',
             'Anmerkung': 'Britisches Unternehmen, aber EU-Rechenzentren verfügbar',
           },
@@ -3610,7 +3610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Fournisseur': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
-            'Localisation': 'Espagne, Norvège',
+            'Localisation': 'Suède, Norvège',
             'DPA': '✓ Disponible',
             'Note': 'Entreprise britannique, mais centres de données UE disponibles',
           },
@@ -4008,7 +4008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'プロバイダー': '[Hyperstack](https://www.hyperstack.cloud)(NexGen Cloud)',
-            '場所': 'スペイン、ノルウェー',
+            '場所': 'スウェーデン、ノルウェー',
             'DPA': '✓ 利用可能',
             '注記': '英国企業だが、EUデータセンター利用可',
           },
@@ -4406,7 +4406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '提供商': '[Hyperstack](https://www.hyperstack.cloud)(NexGen Cloud)',
-            '位置': '西班牙、挪威',
+            '位置': '瑞典、挪威',
             'DPA': '✓ 可用',
             '注释': '英国公司,但EU数据中心可用',
           },
@@ -4874,7 +4874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           '공급업체': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
-          '위치': '스페인, 노르웨이',
+          '위치': '스웨덴, 노르웨이',
           'DPA': '✓ 제공 가능',
           '비고': '영국 회사이지만 EU 데이터센터 이용 가능',
         },
