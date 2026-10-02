@@ -33374,7 +33374,7 @@
   {
     "lang": "en",
     "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
-    "excerpt": "Compare 46 tools for running models locally: inference engines (llama.cpp, vLLM, SGLang, MLX and more), runtimes and managers (Ollama, LM Studio, Jan) and gateways. Licenses, GPU support, OpenAI-compatible APIs, from official documentation.",
+    "excerpt": "Compare 47 tools for running models locally: inference engines (llama.cpp, vLLM, SGLang, MLX and more), runtimes and managers (Ollama, LM Studio, Jan) and gateways. Licenses, GPU support, OpenAI-compatible APIs, from official documentation.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/power-local-llm/local-llm-run-serve-compared",
@@ -33383,7 +33383,7 @@
   {
     "lang": "de",
     "title": "Lokale Inferenz-Engines, Runtimes & Gateways im Vergleich (2026): Modelle ausführen und bereitstellen",
-    "excerpt": "Vergleich von 46 Werkzeugen für den lokalen Modellbetrieb: Inferenz-Engines (llama.cpp, vLLM, SGLang, MLX u. a.), Runtimes und Manager (Ollama, LM Studio, Jan) sowie Gateways. Lizenzen, GPU-Unterstützung, OpenAI-kompatible APIs laut offizieller Dokumentation.",
+    "excerpt": "Vergleich von 47 Werkzeugen für den lokalen Modellbetrieb: Inferenz-Engines (llama.cpp, vLLM, SGLang, MLX u. a.), Runtimes und Manager (Ollama, LM Studio, Jan) sowie Gateways. Lizenzen, GPU-Unterstützung, OpenAI-kompatible APIs laut offizieller Dokumentation.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/de/power-local-llm/local-llm-run-serve-compared",
@@ -33392,7 +33392,7 @@
   {
     "lang": "fr",
     "title": "Moteurs d'inférence, runtimes et passerelles locaux : comparatif (2026) pour exécuter et servir des modèles",
-    "excerpt": "Comparatif de 46 outils pour exécuter des modèles en local : moteurs d'inférence, runtimes (Ollama, LM Studio, Jan) et passerelles. Licences, GPU, API compatibles OpenAI.",
+    "excerpt": "Comparatif de 47 outils pour exécuter des modèles en local : moteurs d'inférence, runtimes (Ollama, LM Studio, Jan) et passerelles. Licences, GPU, API compatibles OpenAI.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/fr/power-local-llm/local-llm-run-serve-compared",
@@ -33401,7 +33401,7 @@
   {
     "lang": "ja",
     "title": "ローカル推論エンジン・ランタイム・ゲートウェイ比較(2026):モデルの実行とサーブ",
-    "excerpt": "ローカルでモデルを動かす46ツールを比較:推論エンジン(llama.cpp、vLLM、SGLang、MLXなど)、ランタイム・マネージャー(Ollama、LM Studio、Jan)、ゲートウェイ。ライセンス、GPU対応、OpenAI互換APIを公式ドキュメントに基づいて整理。",
+    "excerpt": "ローカルでモデルを動かす47ツールを比較:推論エンジン(llama.cpp、vLLM、SGLang、MLXなど)、ランタイム・マネージャー(Ollama、LM Studio、Jan)、ゲートウェイ。ライセンス、GPU対応、OpenAI互換APIを公式ドキュメントに基づいて整理。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ja/power-local-llm/local-llm-run-serve-compared",
@@ -33410,7 +33410,7 @@
   {
     "lang": "zh",
     "title": "本地推理引擎、运行时与网关对比(2026):运行和部署模型",
-    "excerpt": "对比46款本地运行模型的工具:推理引擎(llama.cpp、vLLM、SGLang、MLX等)、运行时与管理器(Ollama、LM Studio、Jan)以及网关。许可证、GPU支持、OpenAI兼容API,均来自官方文档。",
+    "excerpt": "对比47款本地运行模型的工具:推理引擎(llama.cpp、vLLM、SGLang、MLX等)、运行时与管理器(Ollama、LM Studio、Jan)以及网关。许可证、GPU支持、OpenAI兼容API,均来自官方文档。",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/zh/power-local-llm/local-llm-run-serve-compared",
@@ -33419,7 +33419,7 @@
   {
     "lang": "es",
     "title": "Motores de inferencia, runtimes y gateways locales: comparativa (2026) para ejecutar y servir modelos",
-    "excerpt": "Compara 46 herramientas para ejecutar modelos en local: motores de inferencia (llama.cpp, vLLM, SGLang, MLX y más), runtimes y gestores (Ollama, LM Studio, Jan) y gateways. Licencias, GPU y API compatibles con OpenAI, según la documentación oficial.",
+    "excerpt": "Compara 47 herramientas para ejecutar modelos en local: motores de inferencia (llama.cpp, vLLM, SGLang, MLX y más), runtimes y gestores (Ollama, LM Studio, Jan) y gateways. Licencias, GPU y API compatibles con OpenAI, según la documentación oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/es/power-local-llm/local-llm-run-serve-compared",
@@ -33428,7 +33428,7 @@
   {
     "lang": "pt",
     "title": "Mecanismos de inferência, runtimes e gateways locais comparados (2026): executar e servir modelos",
-    "excerpt": "Compare 46 ferramentas para executar modelos localmente: mecanismos de inferência (llama.cpp, vLLM, SGLang, MLX e outros), runtimes e gerenciadores (Ollama, LM Studio, Jan) e gateways. Licenças, suporte a GPU, APIs compatíveis com OpenAI, segundo a documentação oficial.",
+    "excerpt": "Compare 47 ferramentas para executar modelos localmente: mecanismos de inferência (llama.cpp, vLLM, SGLang, MLX e outros), runtimes e gerenciadores (Ollama, LM Studio, Jan) e gateways. Licenças, suporte a GPU, APIs compatíveis com OpenAI, segundo a documentação oficial.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/pt/power-local-llm/local-llm-run-serve-compared",
@@ -33437,7 +33437,7 @@
   {
     "lang": "ar",
     "title": "مقارنة محركات الاستدلال وبيئات التشغيل والبوابات المحلية (2026): تشغيل النماذج وتقديمها",
-    "excerpt": "قارن 46 أداة لتشغيل النماذج محليًا: محركات استدلال مثل llama.cpp وvLLM، وبيئات تشغيل مثل Ollama وLM Studio، وبوابات. الرخص ودعم GPU وواجهات OpenAI من التوثيق الرسمي.",
+    "excerpt": "قارن 47 أداة لتشغيل النماذج محليًا: محركات استدلال مثل llama.cpp وvLLM، وبيئات تشغيل مثل Ollama وLM Studio، وبوابات. الرخص ودعم GPU وواجهات OpenAI من التوثيق الرسمي.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ar/power-local-llm/local-llm-run-serve-compared",
@@ -33446,7 +33446,7 @@
   {
     "lang": "ko",
     "title": "로컬 추론 엔진·런타임·게이트웨이 비교(2026): 모델 실행과 서빙",
-    "excerpt": "로컬 모델 실행 도구 46개 비교: 추론 엔진(llama.cpp, vLLM, SGLang, MLX 등), 런타임·매니저(Ollama, LM Studio, Jan), 게이트웨이. 라이선스, GPU 지원, OpenAI 호환 API를 공식 문서 기준으로 정리했습니다.",
+    "excerpt": "로컬 모델 실행 도구 47개 비교: 추론 엔진(llama.cpp, vLLM, SGLang, MLX 등), 런타임·매니저(Ollama, LM Studio, Jan), 게이트웨이. 라이선스, GPU 지원, OpenAI 호환 API를 공식 문서 기준으로 정리했습니다.",
     "publishDate": "2026-09-20",
     "dateModified": "2026-09-20",
     "url": "/ko/power-local-llm/local-llm-run-serve-compared",
@@ -38391,6 +38391,87 @@
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-06",
     "url": "/ko/power-local-llm/layla-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Ollama Local AI Review: Android LLM Runner and LAN API Proxy",
+    "excerpt": "Ollama Local AI review: an Android app that runs GGUF models on-device and serves an OpenAI-compatible API on your LAN. What the listing confirms, and what it leaves unverified.",
+    "publishDate": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "url": "/power-local-llm/ollama-local-ai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Ollama Local AI im Test: Android-LLM-Runner und LAN-API-Proxy",
+    "excerpt": "Ollama Local AI im Test: Android-App führt GGUF-Modelle lokal aus und bietet im LAN eine OpenAI-kompatible API. Was der Eintrag bestätigt und was offen bleibt.",
+    "publishDate": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "url": "/de/power-local-llm/ollama-local-ai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Ollama Local AI : Avis — Exécuteur de LLM Android et Proxy d'API sur le LAN",
+    "excerpt": "Avis Ollama Local AI : app Android qui exécute des modèles GGUF sur l'appareil et sert une API compatible OpenAI sur votre LAN. Ce que la fiche confirme ou non.",
+    "publishDate": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "url": "/fr/power-local-llm/ollama-local-ai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "Ollama Local AI レビュー:Android向けLLM実行アプリ兼LAN APIプロキシ",
+    "excerpt": "Ollama Local AIレビュー:GGUFモデルを端末上で動かし、LAN上にOpenAI互換APIを公開するAndroidアプリ。Google Playの掲載情報で確認できる点と、未確認の点を整理して解説します。",
+    "publishDate": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "url": "/ja/power-local-llm/ollama-local-ai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "Ollama Local AI 评测:Android 端 LLM 运行器与局域网 API 代理",
+    "excerpt": "Ollama Local AI 评测:一款在设备上运行 GGUF 模型、并在局域网中提供 OpenAI 兼容 API 的 Android 应用。梳理 Google Play 页面已确认的内容,以及仍未经验证的部分。",
+    "publishDate": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "url": "/zh/power-local-llm/ollama-local-ai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Análisis de Ollama Local AI: ejecutor de LLM y proxy de API en la LAN para Android",
+    "excerpt": "Análisis de Ollama Local AI: app Android que ejecuta modelos GGUF en el dispositivo y sirve una API compatible con OpenAI en tu LAN. Qué confirma la ficha.",
+    "publishDate": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "url": "/es/power-local-llm/ollama-local-ai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Ollama Local AI: Análise do Executor de LLM para Android e Proxy de API na LAN",
+    "excerpt": "Análise do Ollama Local AI: app Android que roda modelos GGUF no dispositivo e serve uma API compatível com a OpenAI na LAN. O que a ficha confirma e o que não.",
+    "publishDate": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "url": "/pt/power-local-llm/ollama-local-ai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة Ollama Local AI: مشغّل نماذج لغوية لأندرويد ووكيل API على الشبكة المحلية",
+    "excerpt": "مراجعة Ollama Local AI: تطبيق أندرويد يشغّل نماذج GGUF على الجهاز ويوفّر واجهة API متوافقة مع OpenAI على شبكتك المحلية. ما تؤكده الصفحة وما تتركه دون تحقق.",
+    "publishDate": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "url": "/ar/power-local-llm/ollama-local-ai-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "Ollama Local AI 리뷰: Android LLM 실행기 겸 LAN API 프록시",
+    "excerpt": "Ollama Local AI 리뷰: GGUF 모델을 기기에서 실행하고 LAN에 OpenAI 호환 API를 제공하는 Android 앱입니다. Ollama 프로젝트와는 무관하며, Google Play 게재 정보로 확인되는 내용과 확인되지 않은 내용을 정리했습니다.",
+    "publishDate": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "url": "/ko/power-local-llm/ollama-local-ai-review",
     "cluster": "power-local-llm"
   },
   {
