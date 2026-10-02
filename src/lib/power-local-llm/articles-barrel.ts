@@ -81,6 +81,7 @@ import { article as a_private_llm_review } from './articles/private-llm-review'
 import { article as a_google_ai_edge_gallery_review } from './articles/google-ai-edge-gallery-review'
 import { article as a_off_grid_ai_review } from './articles/off-grid-ai-review'
 import { article as a_pocket_ai_review } from './articles/pocket-ai-review'
+import { article as a_paios_review } from './articles/paios-review'
 import { article as a_stable_diffusion_review } from './articles/stable-diffusion-review'
 import { article as a_enterprise_llm_inference_servers_vllm_tgi_nim_2026 } from './articles/enterprise-llm-inference-servers-vllm-tgi-nim-2026'
 import { article as a_best_local_llms_customer_support_call_centers_enterprise } from './articles/best-local-llms-customer-support-call-centers-enterprise'
@@ -560,6 +561,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'off-grid-ai-review':                            a_off_grid_ai_review,
   // Pocket AI - No Internet review — 2026-09-11
   'pocket-ai-review':                              a_pocket_ai_review,
+  'paios-review':                                  a_paios_review,
   // Stable Diffusion review — 2026-09-05
   'stable-diffusion-review':                        a_stable_diffusion_review,
   'amd-gaia-review':                                a_amd_gaia_review,
