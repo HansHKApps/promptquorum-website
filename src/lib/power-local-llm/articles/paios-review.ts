@@ -39,7 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Pixel 9', 'Pixel 10'],
     leadAnswerBlock:
-      '**PAIOS is a chat front end for Google\'s Gemini Nano model that, per its README, runs entirely on an Android phone through Google AI Core, with its code released into the public domain under the [Unlicense](https://github.com/Puzzaks/PAIOS).** It is a client, not a model library: it only works on phones where AI Core is supported (the README names the Pixel 9 and 10 series as examples) and, per its documentation, only with Gemini Nano. The project labels itself alpha, and this review (version 1.1.8) is based on its public documentation, not hands-on device testing.',
+      '**PAIOS is a chat front end for Google\'s Gemini Nano model that, per its README, runs entirely on an Android phone through Google AI Core, with its code released under the [Unlicense](https://github.com/Puzzaks/PAIOS), a public-domain-style license.** It is a client, not a model library: it only works on phones where AI Core is supported (the README names the Pixel 9 and 10 series as examples) and, per its documentation, only with Gemini Nano. The project labels itself alpha, and this review (version 1.1.8, the latest GitHub release, published April 21, 2026) is based on its public documentation, not hands-on device testing.',
     quickAnswerTop: {
       en: {
         question: 'Is PAIOS worth installing on an Android phone?',
@@ -89,8 +89,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Version reviewed: 1.1.8, the latest [GitHub release](https://github.com/Puzzaks/PAIOS/releases).',
-          'Price and license: free, with no in-app purchases listed on [Google Play](https://play.google.com/store/apps/details?id=page.puzzak.paios); the code is public domain under the Unlicense.',
+          'Version reviewed: 1.1.8, the latest [GitHub release](https://github.com/Puzzaks/PAIOS/releases) at the time of review, published April 21, 2026.',
+          'Price and license: free, with no in-app purchases listed on [Google Play](https://play.google.com/store/apps/details?id=page.puzzak.paios); the code is under the Unlicense, a public-domain-style license.',
           'Model: Gemini Nano, run by Google AI Core on the phone; the documentation describes no way to load other models.',
           'Platform: Android only, and only on AI Core-supported phones (see Device Requirements).',
           'Maturity: the developer labels it alpha, and the project had its last commit in May 2026.',
@@ -127,7 +127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Attribute': 'Platform', 'PAIOS': 'Android only' },
           { 'Attribute': 'Price', 'PAIOS': 'Free' },
-          { 'Attribute': 'License', 'PAIOS': 'Unlicense (public domain)' },
+          { 'Attribute': 'License', 'PAIOS': 'Unlicense (public-domain-style)' },
           { 'Attribute': 'Runs fully offline', 'PAIOS': 'Chat runs on-device; see Privacy for network use' },
           { 'Attribute': 'Import your own models', 'PAIOS': 'Not stated; Gemini Nano is the documented model' },
           { 'Attribute': 'In-app model downloads', 'PAIOS': 'Not stated' },
@@ -210,8 +210,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Benefit', 'What it means in real use', 'Limitation / caveat'],
         rows: [
           {
-            'Benefit': 'Free and public domain',
-            'What it means in real use': 'No price, no account, and no license restrictions on the code.',
+            'Benefit': 'Free, public-domain-style license',
+            'What it means in real use': 'No price, no account, and a very permissive license on the code.',
             'Limitation / caveat': 'Mostly one maintainer; the last commit was in May 2026, so update pace is uncertain.',
           },
           {
@@ -285,7 +285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Who Should Use PAIOS',
         items: [
           '**Owners of an AI Core-supported phone who want a free chat front end for Gemini Nano.** It is the most direct way to talk to the model Google already ships on the device.',
-          '**Privacy-minded users who prefer open source.** The code is public and under a public-domain license, so the data-handling claims can be checked.',
+          '**Privacy-minded users who prefer open source.** The code is public and under the public-domain-style Unlicense, so the data-handling claims can be checked.',
           '**Tinkerers who like to steer a small model.** Per-chat prompts, temperature, and a prompt library with Markdown import and export reward experimentation.',
         ],
       },
@@ -398,7 +398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Pixel 9', 'Pixel 10'],
     leadAnswerBlock:
-      '**PAIOS ist eine Chat-Oberfläche für Googles Modell Gemini Nano, das laut README über Google AI Core vollständig auf einem Android-Smartphone läuft; der Code ist unter der [Unlicense](https://github.com/Puzzaks/PAIOS) gemeinfrei veröffentlicht.** Die App ist ein Client, keine Modellbibliothek: Sie funktioniert nur auf Smartphones, auf denen AI Core unterstützt wird (die README nennt als Beispiele die Pixel-9- und Pixel-10-Reihe), und laut Dokumentation nur mit Gemini Nano. Das Projekt bezeichnet sich selbst als Alpha, und dieser Test (Version 1.1.8) beruht auf der öffentlichen Dokumentation, nicht auf praktischen Tests auf einem Gerät.',
+      '**PAIOS ist eine Chat-Oberfläche für Googles Modell Gemini Nano, das laut README über Google AI Core vollständig auf einem Android-Smartphone läuft; der Code ist unter der [Unlicense](https://github.com/Puzzaks/PAIOS) veröffentlicht, einer Lizenz im Stil der Gemeinfreiheit.** Die App ist ein Client, keine Modellbibliothek: Sie funktioniert nur auf Smartphones, auf denen AI Core unterstützt wird (die README nennt als Beispiele die Pixel-9- und Pixel-10-Reihe), und laut Dokumentation nur mit Gemini Nano. Das Projekt bezeichnet sich selbst als Alpha, und dieser Test (Version 1.1.8, das zum Zeitpunkt des Tests aktuelle GitHub-Release, veröffentlicht am 21. April 2026) beruht auf der öffentlichen Dokumentation, nicht auf praktischen Tests auf einem Gerät.',
     quickAnswerTop: {
       de: {
         question: 'Lohnt sich die Installation von PAIOS auf einem Android-Smartphone?',
@@ -448,8 +448,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Getestete Version: 1.1.8, das aktuelle [GitHub-Release](https://github.com/Puzzaks/PAIOS/releases).',
-          'Preis und Lizenz: kostenlos, ohne gelistete In-App-Käufe bei [Google Play](https://play.google.com/store/apps/details?id=page.puzzak.paios); der Code ist unter der Unlicense gemeinfrei.',
+          'Getestete Version: 1.1.8, das zum Zeitpunkt des Tests aktuelle [GitHub-Release](https://github.com/Puzzaks/PAIOS/releases), veröffentlicht am 21. April 2026.',
+          'Preis und Lizenz: kostenlos, ohne gelistete In-App-Käufe bei [Google Play](https://play.google.com/store/apps/details?id=page.puzzak.paios); der Code steht unter der Unlicense, einer Lizenz im Stil der Gemeinfreiheit.',
           'Modell: Gemini Nano, ausgeführt von Google AI Core auf dem Smartphone; die Dokumentation beschreibt keine Möglichkeit, andere Modelle zu laden.',
           'Plattform: nur Android, und nur auf Smartphones mit AI-Core-Unterstützung (siehe Geräteanforderungen).',
           'Reifegrad: Der Entwickler bezeichnet die App als Alpha, und der letzte Commit des Projekts stammt vom Mai 2026.',
@@ -486,7 +486,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Merkmal': 'Plattform', 'PAIOS': 'Nur Android' },
           { 'Merkmal': 'Preis', 'PAIOS': 'Kostenlos' },
-          { 'Merkmal': 'Lizenz', 'PAIOS': 'Unlicense (gemeinfrei)' },
+          { 'Merkmal': 'Lizenz', 'PAIOS': 'Unlicense (gemeinfreiheitsähnlich)' },
           { 'Merkmal': 'Läuft vollständig offline', 'PAIOS': 'Chat läuft auf dem Gerät; Netzwerknutzung siehe Datenschutz' },
           { 'Merkmal': 'Eigene Modelle importieren', 'PAIOS': 'Nicht angegeben; dokumentiert ist nur Gemini Nano' },
           { 'Merkmal': 'Modell-Downloads in der App', 'PAIOS': 'Nicht angegeben' },
@@ -569,8 +569,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Vorteil', 'Bedeutung im Alltag', 'Einschränkung / Hinweis'],
         rows: [
           {
-            'Vorteil': 'Kostenlos und gemeinfrei',
-            'Bedeutung im Alltag': 'Kein Preis, kein Konto und keine Lizenzbeschränkungen für den Code.',
+            'Vorteil': 'Kostenlos, Lizenz im Stil der Gemeinfreiheit',
+            'Bedeutung im Alltag': 'Kein Preis, kein Konto und eine sehr permissive Lizenz für den Code.',
             'Einschränkung / Hinweis': 'Überwiegend ein Maintainer; der letzte Commit stammt vom Mai 2026, das Update-Tempo ist daher unsicher.',
           },
           {
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wer PAIOS nutzen sollte',
         items: [
           '**Besitzer eines AI-Core-fähigen Smartphones, die eine kostenlose Chat-Oberfläche für Gemini Nano wollen.** Es ist der direkteste Weg, mit dem Modell zu sprechen, das Google bereits auf dem Gerät mitliefert.',
-          '**Datenschutzbewusste Nutzer, die Open Source bevorzugen.** Der Code ist öffentlich und gemeinfrei lizenziert, sodass sich die Angaben zum Umgang mit Daten prüfen lassen.',
+          '**Datenschutzbewusste Nutzer, die Open Source bevorzugen.** Der Code ist öffentlich und unter der Unlicense lizenziert, einer Lizenz im Stil der Gemeinfreiheit, sodass sich die Angaben zum Umgang mit Daten prüfen lassen.',
           '**Tüftler, die gern ein kleines Modell steuern.** Prompts und Temperatur pro Chat sowie eine Prompt-Bibliothek mit Markdown-Import und -Export belohnen das Experimentieren.',
         ],
       },
@@ -757,7 +757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Pixel 9', 'Pixel 10'],
     leadAnswerBlock:
-      '**PAIOS est une interface de chat pour le modèle Gemini Nano de Google, qui, selon son README, s\'exécute entièrement sur un téléphone Android via Google AI Core, avec un code placé dans le domaine public sous [Unlicense](https://github.com/Puzzaks/PAIOS).** C\'est un client, pas une bibliothèque de modèles : il ne fonctionne que sur les téléphones où AI Core est pris en charge (le README cite les séries Pixel 9 et 10 en exemple) et, selon sa documentation, uniquement avec Gemini Nano. Le projet se déclare en alpha, et cet avis (version 1.1.8) s\'appuie sur sa documentation publique, pas sur des tests pratiques sur un appareil.',
+      '**PAIOS est une interface de chat pour le modèle Gemini Nano de Google, qui, selon son README, s\'exécute entièrement sur un téléphone Android via Google AI Core, avec un code publié sous [Unlicense](https://github.com/Puzzaks/PAIOS), une licence de type domaine public.** C\'est un client, pas une bibliothèque de modèles : il ne fonctionne que sur les téléphones où AI Core est pris en charge (le README cite les séries Pixel 9 et 10 en exemple) et, selon sa documentation, uniquement avec Gemini Nano. Le projet se déclare en alpha, et cet avis (version 1.1.8, la dernière version GitHub, publiée le 21 avril 2026) s\'appuie sur sa documentation publique, pas sur des tests pratiques sur un appareil.',
     quickAnswerTop: {
       fr: {
         question: 'PAIOS vaut-elle d\'être installée sur un téléphone Android ?',
@@ -807,8 +807,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Version testée : 1.1.8, la dernière [version GitHub](https://github.com/Puzzaks/PAIOS/releases).',
-          'Prix et licence : gratuite, sans achat intégré indiqué sur [Google Play](https://play.google.com/store/apps/details?id=page.puzzak.paios) ; le code est dans le domaine public sous Unlicense.',
+          'Version testée : 1.1.8, la dernière [version GitHub](https://github.com/Puzzaks/PAIOS/releases) au moment de l\'avis, publiée le 21 avril 2026.',
+          'Prix et licence : gratuite, sans achat intégré indiqué sur [Google Play](https://play.google.com/store/apps/details?id=page.puzzak.paios) ; le code est sous Unlicense, une licence de type domaine public.',
           'Modèle : Gemini Nano, exécuté par Google AI Core sur le téléphone ; la documentation ne décrit aucun moyen de charger d\'autres modèles.',
           'Plateforme : Android uniquement, et seulement sur les téléphones compatibles AI Core (voir Configuration requise).',
           'Maturité : le développeur la qualifie d\'alpha, et le dernier commit du projet date de mai 2026.',
@@ -845,7 +845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Attribut': 'Plateforme', 'PAIOS': 'Android uniquement' },
           { 'Attribut': 'Prix', 'PAIOS': 'Gratuit' },
-          { 'Attribut': 'Licence', 'PAIOS': 'Unlicense (domaine public)' },
+          { 'Attribut': 'Licence', 'PAIOS': 'Unlicense (de type domaine public)' },
           { 'Attribut': 'Fonctionne hors ligne', 'PAIOS': 'Chat sur l\'appareil ; voir Confidentialité pour le réseau' },
           { 'Attribut': 'Import de vos modèles', 'PAIOS': 'Non précisé ; Gemini Nano est le modèle documenté' },
           { 'Attribut': 'Téléchargement de modèles', 'PAIOS': 'Non précisé' },
@@ -928,8 +928,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Avantage', 'Ce que cela signifie en usage réel', 'Limite / réserve'],
         rows: [
           {
-            'Avantage': 'Gratuite et dans le domaine public',
-            'Ce que cela signifie en usage réel': 'Pas de prix, pas de compte, et aucune restriction de licence sur le code.',
+            'Avantage': 'Gratuite, licence de type domaine public',
+            'Ce que cela signifie en usage réel': 'Pas de prix, pas de compte, et une licence très permissive sur le code.',
             'Limite / réserve': 'Surtout un seul mainteneur ; le dernier commit date de mai 2026, le rythme des mises à jour est donc incertain.',
           },
           {
@@ -1003,7 +1003,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qui devrait utiliser PAIOS',
         items: [
           '**Les propriétaires d\'un téléphone compatible AI Core qui veulent une interface de chat gratuite pour Gemini Nano.** C\'est le moyen le plus direct de dialoguer avec le modèle que Google livre déjà sur l\'appareil.',
-          '**Les utilisateurs soucieux de leur vie privée qui préfèrent l\'open source.** Le code est public et sous licence du domaine public ; les affirmations sur le traitement des données peuvent donc être vérifiées.',
+          '**Les utilisateurs soucieux de leur vie privée qui préfèrent l\'open source.** Le code est public et sous Unlicense, une licence de type domaine public ; les affirmations sur le traitement des données peuvent donc être vérifiées.',
           '**Les bricoleurs qui aiment orienter un petit modèle.** Prompts par conversation, température et bibliothèque de prompts avec import et export Markdown récompensent l\'expérimentation.',
         ],
       },
@@ -1116,7 +1116,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Pixel 9', 'Pixel 10'],
     leadAnswerBlock:
-      '**PAIOSは、READMEによれば、Google AI Core経由でAndroidスマートフォン上だけで動作するGoogleのGemini Nano向けチャットフロントエンドで、コードは[Unlicense](https://github.com/Puzzaks/PAIOS)の下でパブリックドメインとして公開されています。** これはモデルライブラリではなくクライアントです。AI Coreに対応した端末(READMEは例としてPixel 9と10シリーズを挙げています)でのみ、しかもドキュメントによればGemini Nanoだけで動作します。プロジェクト自身はアルファ版と位置づけており、本レビュー(バージョン1.1.8)は端末での実機テストではなく、公開されているドキュメントに基づいています。',
+      '**PAIOSは、READMEによれば、Google AI Core経由でAndroidスマートフォン上だけで動作するGoogleのGemini Nano向けチャットフロントエンドで、コードは[Unlicense](https://github.com/Puzzaks/PAIOS)(パブリックドメイン風のライセンス)の下で公開されています。** これはモデルライブラリではなくクライアントです。AI Coreに対応した端末(READMEは例としてPixel 9と10シリーズを挙げています)でのみ、しかもドキュメントによればGemini Nanoだけで動作します。プロジェクト自身はアルファ版と位置づけており、本レビュー(GitHubの最新リリースであるバージョン1.1.8、2026年4月21日公開)は端末での実機テストではなく、公開されているドキュメントに基づいています。',
     quickAnswerTop: {
       ja: {
         question: 'PAIOSはAndroidスマートフォンにインストールする価値がありますか?',
@@ -1166,8 +1166,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'レビュー対象のバージョン:1.1.8、最新の[GitHubリリース](https://github.com/Puzzaks/PAIOS/releases)。',
-          '価格とライセンス:無料で、[Google Play](https://play.google.com/store/apps/details?id=page.puzzak.paios)にアプリ内課金の記載はなく、コードはUnlicenseのパブリックドメイン。',
+          'レビュー対象のバージョン:1.1.8、レビュー時点での最新の[GitHubリリース](https://github.com/Puzzaks/PAIOS/releases)(2026年4月21日公開)。',
+          '価格とライセンス:無料で、[Google Play](https://play.google.com/store/apps/details?id=page.puzzak.paios)にアプリ内課金の記載はなく、コードはパブリックドメイン風のライセンスであるUnlicenseの下にあります。',
           'モデル:端末上のGoogle AI Coreが実行するGemini Nano。他のモデルを読み込む方法はドキュメントに記載がない。',
           'プラットフォーム:Androidのみで、AI Core対応の端末に限られる(必要な端末要件を参照)。',
           '成熟度:開発者はアルファ版としており、プロジェクトの最後のコミットは2026年5月。',
@@ -1204,7 +1204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '項目': 'プラットフォーム', 'PAIOS': 'Androidのみ' },
           { '項目': '価格', 'PAIOS': '無料' },
-          { '項目': 'ライセンス', 'PAIOS': 'Unlicense(パブリックドメイン)' },
+          { '項目': 'ライセンス', 'PAIOS': 'Unlicense(パブリックドメイン風)' },
           { '項目': '完全オフラインで動作', 'PAIOS': 'チャットは端末上で実行。通信はプライバシー参照' },
           { '項目': '独自モデルのインポート', 'PAIOS': '記載なし。ドキュメント上のモデルはGemini Nano' },
           { '項目': 'アプリ内モデルダウンロード', 'PAIOS': '記載なし' },
@@ -1287,8 +1287,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['メリット', '実際の利用での意味', '制約・注意点'],
         rows: [
           {
-            'メリット': '無料でパブリックドメイン',
-            '実際の利用での意味': '価格もアカウントもコードのライセンス上の制限もない。',
+            'メリット': '無料で、パブリックドメイン風のライセンス',
+            '実際の利用での意味': '価格もアカウントも不要で、コードのライセンスは非常に寛容。',
             '制約・注意点': 'メンテナーはほぼ1人で、最後のコミットは2026年5月のため、更新のペースは不明。',
           },
           {
@@ -1362,7 +1362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'PAIOSを使うべき人',
         items: [
           '**AI Core対応のスマートフォンを持ち、Gemini Nano向けの無料のチャットフロントエンドを求める人。** Googleが端末にすでに搭載しているモデルと会話する、最も直接的な方法です。',
-          '**オープンソースを好むプライバシー重視のユーザー。** コードは公開されパブリックドメインのライセンスの下にあるため、データの取り扱いに関する主張を確認できます。',
+          '**オープンソースを好むプライバシー重視のユーザー。** コードは公開されており、パブリックドメイン風のライセンスであるUnlicenseの下にあるため、データの取り扱いに関する主張を確認できます。',
           '**小型モデルの誘導を試してみたい人。** チャットごとのプロンプトやtemperature、Markdownでインポート・エクスポートできるプロンプトライブラリは、試行錯誤に向いています。',
         ],
       },
@@ -1475,7 +1475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Pixel 9', 'Pixel 10'],
     leadAnswerBlock:
-      '**PAIOS是Google的Gemini Nano模型的聊天前端，按其README所述，通过Google AI Core完全在Android手机上运行，其代码以[Unlicense](https://github.com/Puzzaks/PAIOS)发布到公有领域。** 它是客户端，而不是模型库：只能在支持AI Core的手机上使用（README以Pixel 9和10系列为例），并且根据其文档，只能使用Gemini Nano。项目自称处于alpha阶段，本评测（版本1.1.8）基于其公开文档，并未在真机上实际测试。',
+      '**PAIOS是Google的Gemini Nano模型的聊天前端，按其README所述，通过Google AI Core完全在Android手机上运行，其代码以[Unlicense](https://github.com/Puzzaks/PAIOS)发布，这是一种类公有领域许可证。** 它是客户端，而不是模型库：只能在支持AI Core的手机上使用（README以Pixel 9和10系列为例），并且根据其文档，只能使用Gemini Nano。项目自称处于alpha阶段，本评测（版本1.1.8，最新的GitHub发布版本，发布于2026年4月21日）基于其公开文档，并未在真机上实际测试。',
     quickAnswerTop: {
       zh: {
         question: '在Android手机上安装PAIOS值得吗？',
@@ -1525,8 +1525,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '评测版本：1.1.8，即最新的[GitHub发布版本](https://github.com/Puzzaks/PAIOS/releases)。',
-          '价格与许可证：免费，[Google Play](https://play.google.com/store/apps/details?id=page.puzzak.paios)页面未列出应用内购买；代码以Unlicense进入公有领域。',
+          '评测版本：1.1.8，即评测时最新的[GitHub发布版本](https://github.com/Puzzaks/PAIOS/releases)，发布于2026年4月21日。',
+          '价格与许可证：免费，[Google Play](https://play.google.com/store/apps/details?id=page.puzzak.paios)页面未列出应用内购买；代码采用Unlicense，这是一种类公有领域许可证。',
           '模型：Gemini Nano，由手机上的Google AI Core运行；文档中没有描述加载其他模型的方式。',
           '平台：仅限Android，且仅限支持AI Core的手机（见“设备要求”）。',
           '成熟度：开发者将其标注为alpha阶段，项目最近一次提交在2026年5月。',
@@ -1563,7 +1563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '属性': '平台', 'PAIOS': '仅限Android' },
           { '属性': '价格', 'PAIOS': '免费' },
-          { '属性': '许可证', 'PAIOS': 'Unlicense（公有领域）' },
+          { '属性': '许可证', 'PAIOS': 'Unlicense（类公有领域）' },
           { '属性': '完全离线运行', 'PAIOS': '聊天在设备端运行；网络使用请见隐私部分' },
           { '属性': '导入自己的模型', 'PAIOS': '未说明；文档中的模型为Gemini Nano' },
           { '属性': '应用内下载模型', 'PAIOS': '未说明' },
@@ -1646,8 +1646,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['优点', '实际使用中的意义', '局限/注意事项'],
         rows: [
           {
-            '优点': '免费且属于公有领域',
-            '实际使用中的意义': '无需付费、无需账号，对代码也没有许可证限制。',
+            '优点': '免费，类公有领域许可证',
+            '实际使用中的意义': '无需付费、无需账号，代码采用非常宽松的许可证。',
             '局限/注意事项': '主要由一位维护者负责；最近一次提交在2026年5月，更新节奏尚不确定。',
           },
           {
@@ -1721,7 +1721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '谁适合使用PAIOS',
         items: [
           '**拥有支持AI Core的手机、想要免费Gemini Nano聊天前端的用户。** 这是与Google已预装在设备上的模型对话最直接的方式。',
-          '**注重隐私、偏好开源的用户。** 代码公开并采用公有领域许可证，因此数据处理方面的说法可以核查。',
+          '**注重隐私、偏好开源的用户。** 代码公开并采用类公有领域的Unlicense许可证，因此数据处理方面的说法可以核查。',
           '**喜欢引导小型模型的折腾爱好者。** 每个对话独立的提示词、温度，以及支持Markdown导入导出的提示词库，适合反复试验。',
         ],
       },
@@ -1834,7 +1834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Pixel 9', 'Pixel 10'],
     leadAnswerBlock:
-      '**PAIOS es una interfaz de chat para el modelo Gemini Nano de Google que, según su README, se ejecuta íntegramente en un teléfono Android mediante Google AI Core, con su código liberado al dominio público bajo la [Unlicense](https://github.com/Puzzaks/PAIOS).** Es un cliente, no una biblioteca de modelos: solo funciona en teléfonos compatibles con AI Core (el README cita como ejemplo las series Pixel 9 y 10) y, según su documentación, solo con Gemini Nano. El proyecto se define a sí mismo como alfa, y esta reseña (versión 1.1.8) se basa en su documentación pública, no en pruebas prácticas en un dispositivo.',
+      '**PAIOS es una interfaz de chat para el modelo Gemini Nano de Google que, según su README, se ejecuta íntegramente en un teléfono Android mediante Google AI Core, con su código publicado bajo la [Unlicense](https://github.com/Puzzaks/PAIOS), una licencia de estilo dominio público.** Es un cliente, no una biblioteca de modelos: solo funciona en teléfonos compatibles con AI Core (el README cita como ejemplo las series Pixel 9 y 10) y, según su documentación, solo con Gemini Nano. El proyecto se define a sí mismo como alfa, y esta reseña (versión 1.1.8, la última versión en GitHub, publicada el 21 de abril de 2026) se basa en su documentación pública, no en pruebas prácticas en un dispositivo.',
     quickAnswerTop: {
       es: {
         question: '¿Vale la pena instalar PAIOS en un teléfono Android?',
@@ -1884,8 +1884,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Versión reseñada: 1.1.8, la última [versión en GitHub](https://github.com/Puzzaks/PAIOS/releases).',
-          'Precio y licencia: gratis, sin compras dentro de la app indicadas en [Google Play](https://play.google.com/store/apps/details?id=page.puzzak.paios); el código es de dominio público bajo la Unlicense.',
+          'Versión reseñada: 1.1.8, la última [versión en GitHub](https://github.com/Puzzaks/PAIOS/releases) en el momento de la reseña, publicada el 21 de abril de 2026.',
+          'Precio y licencia: gratis, sin compras dentro de la app indicadas en [Google Play](https://play.google.com/store/apps/details?id=page.puzzak.paios); el código está bajo la Unlicense, una licencia de estilo dominio público.',
           'Modelo: Gemini Nano, ejecutado por Google AI Core en el teléfono; la documentación no describe ninguna forma de cargar otros modelos.',
           'Plataforma: solo Android, y solo en teléfonos compatibles con AI Core (vea Requisitos del dispositivo).',
           'Madurez: el desarrollador la define como alfa, y el proyecto tuvo su último commit en mayo de 2026.',
@@ -1922,7 +1922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Atributo': 'Plataforma', 'PAIOS': 'Solo Android' },
           { 'Atributo': 'Precio', 'PAIOS': 'Gratis' },
-          { 'Atributo': 'Licencia', 'PAIOS': 'Unlicense (dominio público)' },
+          { 'Atributo': 'Licencia', 'PAIOS': 'Unlicense (estilo dominio público)' },
           { 'Atributo': 'Funciona totalmente offline', 'PAIOS': 'Chat en el dispositivo; red: ver Privacidad' },
           { 'Atributo': 'Importar modelos propios', 'PAIOS': 'No indicado; Gemini Nano es el modelo documentado' },
           { 'Atributo': 'Descarga de modelos en la app', 'PAIOS': 'No indicado' },
@@ -2005,8 +2005,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Ventaja', 'Qué significa en el uso real', 'Limitación / advertencia'],
         rows: [
           {
-            'Ventaja': 'Gratuita y de dominio público',
-            'Qué significa en el uso real': 'Sin precio, sin cuenta y sin restricciones de licencia sobre el código.',
+            'Ventaja': 'Gratuita, licencia de estilo dominio público',
+            'Qué significa en el uso real': 'Sin precio, sin cuenta y con una licencia muy permisiva sobre el código.',
             'Limitación / advertencia': 'Mayormente un solo mantenedor; el último commit fue en mayo de 2026, así que el ritmo de actualización es incierto.',
           },
           {
@@ -2080,7 +2080,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quién debería usar PAIOS',
         items: [
           '**Propietarios de un teléfono compatible con AI Core que quieren una interfaz de chat gratuita para Gemini Nano.** Es la forma más directa de hablar con el modelo que Google ya incluye en el dispositivo.',
-          '**Usuarios atentos a la privacidad que prefieren el código abierto.** El código es público y tiene una licencia de dominio público, así que las afirmaciones sobre el manejo de datos pueden comprobarse.',
+          '**Usuarios atentos a la privacidad que prefieren el código abierto.** El código es público y está bajo la Unlicense, una licencia de estilo dominio público, así que las afirmaciones sobre el manejo de datos pueden comprobarse.',
           '**Aficionados que disfrutan guiando un modelo pequeño.** Los prompts por chat, la temperatura y una biblioteca de prompts con importación y exportación en Markdown premian la experimentación.',
         ],
       },
@@ -2193,7 +2193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Pixel 9', 'Pixel 10'],
     leadAnswerBlock:
-      '**O PAIOS é uma interface de chat para o modelo Gemini Nano do Google que, segundo o README, roda inteiramente em um celular Android por meio do Google AI Core, com o código liberado em domínio público sob a [Unlicense](https://github.com/Puzzaks/PAIOS).** Ele é um cliente, não uma biblioteca de modelos: só funciona em celulares com suporte ao AI Core (o README cita as linhas Pixel 9 e 10 como exemplos) e, segundo a documentação, somente com o Gemini Nano. O projeto se declara alfa, e esta análise (versão 1.1.8) se baseia na documentação pública, não em testes práticos no aparelho.',
+      '**O PAIOS é uma interface de chat para o modelo Gemini Nano do Google que, segundo o README, roda inteiramente em um celular Android por meio do Google AI Core, com o código liberado sob a [Unlicense](https://github.com/Puzzaks/PAIOS), uma licença no estilo domínio público.** Ele é um cliente, não uma biblioteca de modelos: só funciona em celulares com suporte ao AI Core (o README cita as linhas Pixel 9 e 10 como exemplos) e, segundo a documentação, somente com o Gemini Nano. O projeto se declara alfa, e esta análise (versão 1.1.8, a versão mais recente no GitHub, publicada em 21 de abril de 2026) se baseia na documentação pública, não em testes práticos no aparelho.',
     quickAnswerTop: {
       pt: {
         question: 'Vale a pena instalar o PAIOS em um celular Android?',
@@ -2243,8 +2243,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Versão analisada: 1.1.8, a [versão mais recente no GitHub](https://github.com/Puzzaks/PAIOS/releases).',
-          'Preço e licença: gratuito, sem compras no aplicativo listadas no [Google Play](https://play.google.com/store/apps/details?id=page.puzzak.paios); o código é de domínio público sob a Unlicense.',
+          'Versão analisada: 1.1.8, a [versão mais recente no GitHub](https://github.com/Puzzaks/PAIOS/releases) no momento da análise, publicada em 21 de abril de 2026.',
+          'Preço e licença: gratuito, sem compras no aplicativo listadas no [Google Play](https://play.google.com/store/apps/details?id=page.puzzak.paios); o código está sob a Unlicense, uma licença no estilo domínio público.',
           'Modelo: Gemini Nano, executado pelo Google AI Core no celular; a documentação não descreve nenhuma forma de carregar outros modelos.',
           'Plataforma: somente Android, e apenas em celulares com suporte ao AI Core (veja Requisitos do aparelho).',
           'Maturidade: o desenvolvedor o classifica como alfa, e o último commit do projeto foi em maio de 2026.',
@@ -2281,7 +2281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Atributo': 'Plataforma', 'PAIOS': 'Somente Android' },
           { 'Atributo': 'Preço', 'PAIOS': 'Gratuito' },
-          { 'Atributo': 'Licença', 'PAIOS': 'Unlicense (domínio público)' },
+          { 'Atributo': 'Licença', 'PAIOS': 'Unlicense (estilo domínio público)' },
           { 'Atributo': 'Funciona totalmente offline', 'PAIOS': 'O chat roda no aparelho; veja Privacidade (uso de rede)' },
           { 'Atributo': 'Importar seus próprios modelos', 'PAIOS': 'Não informado; o Gemini Nano é o modelo documentado' },
           { 'Atributo': 'Download de modelos no app', 'PAIOS': 'Não informado' },
@@ -2364,8 +2364,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Benefício', 'O que significa no uso real', 'Limitação / ressalva'],
         rows: [
           {
-            'Benefício': 'Gratuito e de domínio público',
-            'O que significa no uso real': 'Sem preço, sem conta e sem restrições de licença sobre o código.',
+            'Benefício': 'Gratuito, com licença no estilo domínio público',
+            'O que significa no uso real': 'Sem preço, sem conta e com uma licença muito permissiva sobre o código.',
             'Limitação / ressalva': 'Em geral um único mantenedor; o último commit foi em maio de 2026, então o ritmo de atualizações é incerto.',
           },
           {
@@ -2439,7 +2439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quem deveria usar o PAIOS',
         items: [
           '**Donos de um celular com suporte ao AI Core que querem uma interface de chat gratuita para o Gemini Nano.** É a forma mais direta de conversar com o modelo que o Google já entrega no aparelho.',
-          '**Usuários atentos à privacidade que preferem código aberto.** O código é público e está sob licença de domínio público, então as afirmações sobre tratamento de dados podem ser verificadas.',
+          '**Usuários atentos à privacidade que preferem código aberto.** O código é público e está sob a Unlicense, uma licença no estilo domínio público, então as afirmações sobre tratamento de dados podem ser verificadas.',
           '**Entusiastas que gostam de direcionar um modelo pequeno.** Prompts por conversa, temperatura e uma biblioteca de prompts com importação e exportação em Markdown recompensam a experimentação.',
         ],
       },
@@ -2552,7 +2552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Pixel 9', 'Pixel 10'],
     leadAnswerBlock:
-      '**PAIOS واجهة دردشة لنموذج Gemini Nano من جوجل تعمل، بحسب ملف README، بالكامل على هاتف أندرويد عبر Google AI Core، وقد أُتيحت شيفرتها للملكية العامة بموجب ترخيص [Unlicense](https://github.com/Puzzaks/PAIOS).** هي عميل وليست مكتبة نماذج: لا تعمل إلا على الهواتف التي يدعمها AI Core (يذكر ملف README سلسلتي Pixel 9 وPixel 10 مثالين) ومع Gemini Nano وحده بحسب وثائقه. يصف المشروع نفسه بأنه في مرحلة ألفا، وتستند هذه المراجعة (للإصدار 1.1.8) إلى وثائقه العلنية، لا إلى اختبار عملي على جهاز.',
+      '**PAIOS واجهة دردشة لنموذج Gemini Nano من جوجل تعمل، بحسب ملف README، بالكامل على هاتف أندرويد عبر Google AI Core، وقد أُتيحت شيفرتها بموجب ترخيص [Unlicense](https://github.com/Puzzaks/PAIOS)، وهو ترخيص شبيه بالملكية العامة.** هي عميل وليست مكتبة نماذج: لا تعمل إلا على الهواتف التي يدعمها AI Core (يذكر ملف README سلسلتي Pixel 9 وPixel 10 مثالين) ومع Gemini Nano وحده بحسب وثائقه. يصف المشروع نفسه بأنه في مرحلة ألفا، وتستند هذه المراجعة (للإصدار 1.1.8، وهو أحدث إصدار على GitHub وقت المراجعة، ونُشر في 21 أبريل 2026) إلى وثائقه العلنية، لا إلى اختبار عملي على جهاز.',
     quickAnswerTop: {
       ar: {
         question: 'هل يستحق PAIOS التثبيت على هاتف أندرويد؟',
@@ -2602,8 +2602,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'الإصدار المراجَع: 1.1.8، وهو أحدث [إصدار على GitHub](https://github.com/Puzzaks/PAIOS/releases).',
-          'السعر والترخيص: مجاني، ولا مشتريات داخل التطبيق مدرجة على [Google Play](https://play.google.com/store/apps/details?id=page.puzzak.paios)؛ والشيفرة ملكية عامة بموجب Unlicense.',
+          'الإصدار المراجَع: 1.1.8، وهو أحدث [إصدار على GitHub](https://github.com/Puzzaks/PAIOS/releases) وقت المراجعة، ونُشر في 21 أبريل 2026.',
+          'السعر والترخيص: مجاني، ولا مشتريات داخل التطبيق مدرجة على [Google Play](https://play.google.com/store/apps/details?id=page.puzzak.paios)؛ والشيفرة بموجب Unlicense، وهو ترخيص شبيه بالملكية العامة.',
           'النموذج: Gemini Nano، يشغّله Google AI Core على الهاتف؛ ولا تصف الوثائق أي طريقة لتحميل نماذج أخرى.',
           'المنصة: أندرويد فقط، وعلى الهواتف المدعومة من AI Core فقط (راجع متطلبات الجهاز).',
           'النضج: يصنّفه مطوّره في مرحلة ألفا، وكان آخر إيداع (commit) للمشروع في مايو 2026.',
@@ -2640,7 +2640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'الخاصية': 'المنصة', 'PAIOS': 'أندرويد فقط' },
           { 'الخاصية': 'السعر', 'PAIOS': 'مجاني' },
-          { 'الخاصية': 'الترخيص', 'PAIOS': 'Unlicense (ملكية عامة)' },
+          { 'الخاصية': 'الترخيص', 'PAIOS': 'Unlicense (شبيه بالملكية العامة)' },
           { 'الخاصية': 'يعمل دون إنترنت بالكامل', 'PAIOS': 'الدردشة على الجهاز؛ راجع الخصوصية لاستخدام الشبكة' },
           { 'الخاصية': 'استيراد نماذجك الخاصة', 'PAIOS': 'غير مذكور؛ النموذج الموثّق هو Gemini Nano' },
           { 'الخاصية': 'تنزيل النماذج داخل التطبيق', 'PAIOS': 'غير مذكور' },
@@ -2723,8 +2723,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['الميزة', 'ما تعنيه في الاستخدام الفعلي', 'القيد / الملاحظة'],
         rows: [
           {
-            'الميزة': 'مجاني وملكية عامة',
-            'ما تعنيه في الاستخدام الفعلي': 'دون سعر ودون حساب ودون قيود ترخيص على الشيفرة.',
+            'الميزة': 'مجاني وبترخيص شبيه بالملكية العامة',
+            'ما تعنيه في الاستخدام الفعلي': 'دون سعر ودون حساب، وبترخيص متساهل جدًا على الشيفرة.',
             'القيد / الملاحظة': 'مشرف واحد في الغالب؛ وكان آخر إيداع في مايو 2026، لذا وتيرة التحديث غير مؤكدة.',
           },
           {
@@ -2798,7 +2798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'من يجب أن يستخدم PAIOS',
         items: [
           '**مالكو هاتف يدعم AI Core ويريدون واجهة دردشة مجانية لـ Gemini Nano.** هو أكثر الطرق مباشرة للتحدث مع النموذج الذي تشحنه جوجل أصلًا على الجهاز.',
-          '**المهتمون بالخصوصية الذين يفضلون المصدر المفتوح.** الشيفرة متاحة للعموم وتحت ترخيص ملكية عامة، فيمكن التحقق من ادعاءات التعامل مع البيانات.',
+          '**المهتمون بالخصوصية الذين يفضلون المصدر المفتوح.** الشيفرة متاحة للعموم وتحت ترخيص Unlicense الشبيه بالملكية العامة، فيمكن التحقق من ادعاءات التعامل مع البيانات.',
           '**المهتمون بالتجريب الذين يحبون توجيه نموذج صغير.** تكافئ التعليمات ودرجة الحرارة لكل محادثة، ومكتبة التعليمات مع استيراد Markdown وتصديره، من يحب التجريب.',
         ],
       },
@@ -2911,7 +2911,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Pixel 9', 'Pixel 10'],
     leadAnswerBlock:
-      '**PAIOS는 README에 따르면 Google AI Core를 통해 안드로이드 휴대전화에서 완전히 기기 내에서 실행되는 구글의 Gemini Nano 모델용 채팅 프런트엔드이며, 코드는 [Unlicense](https://github.com/Puzzaks/PAIOS)로 퍼블릭 도메인에 공개되어 있습니다.** 모델 라이브러리가 아니라 클라이언트입니다. AI Core가 지원되는 휴대전화(README는 픽셀 9 및 10 시리즈를 예로 듭니다)에서만, 그리고 문서에 따르면 Gemini Nano와만 작동합니다. 프로젝트는 스스로를 알파 단계라고 표시하며, 이 리뷰(버전 1.1.8)는 기기에서 직접 테스트한 결과가 아니라 공개 문서에 근거합니다.',
+      '**PAIOS는 README에 따르면 Google AI Core를 통해 안드로이드 휴대전화에서 완전히 기기 내에서 실행되는 구글의 Gemini Nano 모델용 채팅 프런트엔드이며, 코드는 [Unlicense](https://github.com/Puzzaks/PAIOS)라는 퍼블릭 도메인 방식의 라이선스로 공개되어 있습니다.** 모델 라이브러리가 아니라 클라이언트입니다. AI Core가 지원되는 휴대전화(README는 픽셀 9 및 10 시리즈를 예로 듭니다)에서만, 그리고 문서에 따르면 Gemini Nano와만 작동합니다. 프로젝트는 스스로를 알파 단계라고 표시하며, 이 리뷰(GitHub 최신 릴리스인 버전 1.1.8, 2026년 4월 21일 게시)는 기기에서 직접 테스트한 결과가 아니라 공개 문서에 근거합니다.',
     quickAnswerTop: {
       ko: {
         question: 'PAIOS를 안드로이드 휴대전화에 설치할 가치가 있나요?',
@@ -2961,8 +2961,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          '검토한 버전: 1.1.8, 최신 [GitHub 릴리스](https://github.com/Puzzaks/PAIOS/releases).',
-          '가격 및 라이선스: 무료이며 [구글 플레이](https://play.google.com/store/apps/details?id=page.puzzak.paios)에 앱 내 구매 표시가 없음; 코드는 Unlicense로 퍼블릭 도메인.',
+          '검토한 버전: 1.1.8, 검토 시점의 최신 [GitHub 릴리스](https://github.com/Puzzaks/PAIOS/releases)이며 2026년 4월 21일에 게시되었습니다.',
+          '가격 및 라이선스: 무료이며 [구글 플레이](https://play.google.com/store/apps/details?id=page.puzzak.paios)에 앱 내 구매 표시가 없음; 코드는 퍼블릭 도메인 방식의 라이선스인 Unlicense.',
           '모델: 휴대전화의 Google AI Core가 실행하는 Gemini Nano; 문서에는 다른 모델을 불러오는 방법이 나와 있지 않음.',
           '플랫폼: 안드로이드 전용이며 AI Core를 지원하는 휴대전화에서만 작동(기기 요구 사항 참고).',
           '성숙도: 개발자는 알파 단계라고 밝히고 있으며, 프로젝트의 마지막 커밋은 2026년 5월.',
@@ -2999,7 +2999,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '항목': '플랫폼', 'PAIOS': '안드로이드 전용' },
           { '항목': '가격', 'PAIOS': '무료' },
-          { '항목': '라이선스', 'PAIOS': 'Unlicense(퍼블릭 도메인)' },
+          { '항목': '라이선스', 'PAIOS': 'Unlicense(퍼블릭 도메인 방식)' },
           { '항목': '완전 오프라인 실행', 'PAIOS': '채팅은 기기 내 실행; 네트워크 사용은 개인정보 참조' },
           { '항목': '직접 모델 가져오기', 'PAIOS': '명시 없음; 문서상 모델은 Gemini Nano' },
           { '항목': '앱 내 모델 다운로드', 'PAIOS': '명시 없음' },
@@ -3082,8 +3082,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['이점', '실제 사용에서의 의미', '한계 / 유의 사항'],
         rows: [
           {
-            '이점': '무료이며 퍼블릭 도메인',
-            '실제 사용에서의 의미': '가격도, 계정도, 코드에 대한 라이선스 제약도 없습니다.',
+            '이점': '무료, 퍼블릭 도메인 방식 라이선스',
+            '실제 사용에서의 의미': '가격도, 계정도 없고, 코드에는 매우 관대한 라이선스가 적용됩니다.',
             '한계 / 유의 사항': '대체로 유지 관리자 한 명; 마지막 커밋이 2026년 5월이라 업데이트 속도는 불확실',
           },
           {
@@ -3157,7 +3157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'PAIOS를 사용해야 하는 사람',
         items: [
           '**AI Core를 지원하는 휴대전화를 보유하고 Gemini Nano용 무료 채팅 프런트엔드를 원하는 사용자.** 기기에 이미 탑재된 구글의 모델과 대화하는 가장 직접적인 방법입니다.',
-          '**오픈소스를 선호하는 개인정보 보호 중시 사용자.** 코드가 공개되어 있고 퍼블릭 도메인 라이선스이므로 데이터 처리에 관한 주장을 직접 확인할 수 있습니다.',
+          '**오픈소스를 선호하는 개인정보 보호 중시 사용자.** 코드가 공개되어 있고 퍼블릭 도메인 방식의 Unlicense이므로 데이터 처리에 관한 주장을 직접 확인할 수 있습니다.',
           '**소형 모델을 직접 다듬어 보기 좋아하는 사용자.** 채팅별 프롬프트, 온도, 그리고 Markdown 가져오기/내보내기를 지원하는 프롬프트 라이브러리가 실험을 뒷받침합니다.',
         ],
       },
