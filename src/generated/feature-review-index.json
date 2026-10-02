@@ -1138,5 +1138,10 @@
     "cluster": "power-local-llm",
     "urlSlug": "ollama-local-ai-review",
     "url": "/power-local-llm/ollama-local-ai-review"
+  },
+  "paios": {
+    "cluster": "power-local-llm",
+    "urlSlug": "paios-review",
+    "url": "/power-local-llm/paios-review"
   }
 }

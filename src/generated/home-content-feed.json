@@ -35479,6 +35479,87 @@
   },
   {
     "lang": "en",
+    "title": "PAIOS Review: Offline Gemini Nano Chat for Android",
+    "excerpt": "PAIOS review: free, open-source Android chat app (Unlicense) for Google's on-device Gemini Nano. Features, supported devices, privacy details, limits, and how it compares to Layla and PocketPal AI.",
+    "publishDate": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "url": "/power-local-llm/paios-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "PAIOS Test: Offline-Chat mit Gemini Nano für Android",
+    "excerpt": "PAIOS Test: kostenlose, quelloffene Android-Chat-App (Unlicense) für Googles On-Device-Modell Gemini Nano. Funktionen, unterstützte Geräte, Datenschutz, Grenzen und Vergleich mit Layla und PocketPal AI.",
+    "publishDate": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "url": "/de/power-local-llm/paios-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Avis PAIOS: chat Gemini Nano hors ligne pour Android",
+    "excerpt": "Avis PAIOS : application de chat Android gratuite et open source (Unlicense) pour Gemini Nano de Google sur l'appareil. Fonctionnalités, appareils compatibles, confidentialité, limites et comparaison avec Layla et PocketPal AI.",
+    "publishDate": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "url": "/fr/power-local-llm/paios-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "PAIOSレビュー:Android向けオフラインGemini Nanoチャット",
+    "excerpt": "PAIOSレビュー:Googleのオンデバイス「Gemini Nano」向け無料オープンソース(Unlicense)Androidチャットアプリ。機能、対応機種、プライバシー、制約、LaylaやPocketPal AIとの比較を解説。",
+    "publishDate": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "url": "/ja/power-local-llm/paios-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "PAIOS评测：适用于Android的离线Gemini Nano聊天应用",
+    "excerpt": "PAIOS评测：面向Google设备端Gemini Nano的免费开源Android聊天应用（Unlicense）。功能、支持的设备、隐私细节、局限，以及与Layla和PocketPal AI的对比。",
+    "publishDate": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "url": "/zh/power-local-llm/paios-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Reseña de PAIOS: chat offline con Gemini Nano para Android",
+    "excerpt": "Reseña de PAIOS: app de chat gratuita y de código abierto (Unlicense) para Android que usa Gemini Nano de Google en el dispositivo. Funciones, dispositivos compatibles, privacidad, límites y comparación con Layla y PocketPal AI.",
+    "publishDate": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "url": "/es/power-local-llm/paios-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Análise do PAIOS: chat offline com Gemini Nano no Android",
+    "excerpt": "Análise do PAIOS: aplicativo de chat Android gratuito e de código aberto (Unlicense) para o Gemini Nano no dispositivo. Recursos, aparelhos compatíveis, privacidade, limites e comparação com Layla e PocketPal AI.",
+    "publishDate": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "url": "/pt/power-local-llm/paios-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "مراجعة PAIOS: دردشة Gemini Nano دون إنترنت على أندرويد",
+    "excerpt": "مراجعة PAIOS: تطبيق دردشة أندرويد مجاني ومفتوح المصدر (Unlicense) لنموذج Gemini Nano من جوجل على الجهاز. الميزات والأجهزة المدعومة وتفاصيل الخصوصية والقيود والمقارنة مع Layla وPocketPal AI.",
+    "publishDate": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "url": "/ar/power-local-llm/paios-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "PAIOS 리뷰: 안드로이드용 오프라인 Gemini Nano 채팅",
+    "excerpt": "PAIOS 리뷰: 구글의 온디바이스 Gemini Nano를 위한 무료 오픈소스(Unlicense) 안드로이드 채팅 앱. 기능, 지원 기기, 개인정보 보호 세부 사항, 한계, 그리고 Layla 및 PocketPal AI와의 비교.",
+    "publishDate": "2026-10-02",
+    "dateModified": "2026-10-02",
+    "url": "/ko/power-local-llm/paios-review",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
     "title": "Stable Diffusion Review: Free Local Text-to-Image Models",
     "excerpt": "Stable Diffusion review 2026: real license terms by version (RAIL-M vs. Community License), VRAM needs for SD 1.5/SDXL/SD 3.5, download links, and honest comparison with FLUX and Midjourney.",
     "publishDate": "2026-09-05",

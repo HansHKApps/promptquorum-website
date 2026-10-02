@@ -10068,6 +10068,24 @@
       ],
       "images": []
     },
+    "paios-review": {
+      "dateModified": "2026-10-02",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-02",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "stable-diffusion-review": {
       "dateModified": "2026-09-05",
       "lastFactChecked": null,

@@ -5753,6 +5753,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "paios-review",
+        "title": "PAIOS Review: Offline Gemini Nano Chat for Android",
+        "url": "/power-local-llm/paios-review",
+        "dateModified": "2026-10-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -5814,17 +5822,9 @@
         "url": "/power-local-llm/layla-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "llm-farm-review",
-        "title": "LLM Farm Review: Open-Source GGUF App, Off the App Store",
-        "url": "/power-local-llm/llm-farm-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 23,
+    "totalCount": 24,
     "capped": true
   },
   "Pocket AI": {
@@ -6023,6 +6023,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "paios-review",
+        "title": "PAIOS Review: Offline Gemini Nano Chat for Android",
+        "url": "/power-local-llm/paios-review",
+        "dateModified": "2026-10-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "voice-assistant-local-mobile-offline",
         "title": "Build a Local Voice Assistant on Your Phone: Whisper + Local LLM (No Cloud) — 2026",
         "url": "/power-local-llm/voice-assistant-local-mobile-offline",
@@ -6062,7 +6070,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 6,
+    "totalCount": 7,
     "capped": false
   },
   "Maid": {
@@ -6508,9 +6516,17 @@
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "paios-review",
+        "title": "PAIOS Review: Offline Gemini Nano Chat for Android",
+        "url": "/power-local-llm/paios-review",
+        "dateModified": "2026-10-02",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Stable Diffusion": {
@@ -11050,6 +11066,20 @@
         "slug": "ollama-local-ai-review",
         "title": "Ollama Local AI Review: Android LLM Runner and LAN API Proxy",
         "url": "/power-local-llm/ollama-local-ai-review",
+        "dateModified": "2026-10-02",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "PAIOS": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "paios-review",
+        "title": "PAIOS Review: Offline Gemini Nano Chat for Android",
+        "url": "/power-local-llm/paios-review",
         "dateModified": "2026-10-02",
         "tier": "about"
       }

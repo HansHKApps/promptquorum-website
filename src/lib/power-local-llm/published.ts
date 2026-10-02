@@ -360,6 +360,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Pocket AI - No Internet review (Mobile & Edge LLMs) — 2026-09-11
   'pocket-ai-review',
+  // PAIOS review (Mobile & Edge LLMs) — 2026-10-02
+  'paios-review',
 
   // Stable Diffusion review (Image & Video Generation) — 2026-09-05
   'stable-diffusion-review',
