@@ -14909,6 +14909,11 @@
     "width": 800,
     "height": 465
   },
+  "/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-pt.svg": {
+    "encodingFormat": "image/svg+xml",
+    "width": 800,
+    "height": 465
+  },
   "/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-zh.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -36300,6 +36305,51 @@
     "height": 675
   },
   "/images/ollama-latest-version-overview-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ollama-local-ai-review-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ollama-local-ai-review-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ollama-local-ai-review-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ollama-local-ai-review-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ollama-local-ai-review-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ollama-local-ai-review-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ollama-local-ai-review-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ollama-local-ai-review-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/ollama-local-ai-review-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
