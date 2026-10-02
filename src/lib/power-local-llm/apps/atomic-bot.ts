@@ -27,7 +27,7 @@ export const app: ToolRecord = {
   worksWith: ['OpenAI API', 'Anthropic API', 'Mistral API', 'Groq', 'Hugging Face'],
   engine: 'external',
   license: 'MIT (Atomic Bot\'s own app repo; packages the separately-licensed OpenClaw stack)',
-  price: 'TODO',
+  price: 'freemium', // free to install and run locally (MIT, own repo); optional paid cloud deployment, from about $19/month per the vendor's pricing page — see atomic-bot-review
   hardware: { ramGb: null, vramGb: null, cpuOnly: null }, // per github.com/AtomicBot-ai/atomicbot README: no stated RAM/GPU/VRAM requirements — it's an agent gateway/orchestrator supporting both API-based and local model backends, hardware floor depends entirely on the backend chosen; verified 2026-09-13
   stars: 324, // Atomic Bot's own repo (github.com/AtomicBot-ai/atomicbot), verified via the GitHub API on 2026-09-12 — not the much larger OpenClaw ecosystem figure
   addedDate: '2026-09-05',
