@@ -97,6 +97,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
+            text: 'Name warning: "Ollama Local AI" is only the app\'s name on Google Play. According to the app\'s own disclaimer, it is not made by, affiliated with, sponsored by, or endorsed by Ollama, the open-source project at [ollama.com](https://ollama.com). It is a separate Android app, so do not expect official Ollama support, and do not confuse it with the Ollama software you install on a computer.',
+          },
+          {
+            type: 'note',
             text: 'This review is based only on the Google Play listing, checked on 2 October 2026. PromptQuorum found no public source code, license, documentation, or version number for the app and has not tested or benchmarked it.',
           },
         ],
@@ -460,6 +464,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
+            text: 'Namenshinweis: „Ollama Local AI“ ist nur der Name der App bei Google Play. Laut dem eigenen Haftungsausschluss der App wird sie nicht von Ollama, dem Open-Source-Projekt unter [ollama.com](https://ollama.com), hergestellt und ist weder mit diesem verbunden noch wird sie von ihm gesponsert oder unterstützt. Es handelt sich um eine eigenständige Android-App; erwarten Sie daher keinen offiziellen Ollama-Support und verwechseln Sie sie nicht mit der Ollama-Software, die Sie auf einem Computer installieren.',
+          },
+          {
+            type: 'note',
             text: 'Dieser Test stützt sich ausschließlich auf den Google-Play-Eintrag, geprüft am 2. Oktober 2026. PromptQuorum hat weder öffentlichen Quellcode noch eine Lizenz, Dokumentation oder Versionsnummer für die App gefunden und sie weder getestet noch einem Benchmark unterzogen.',
           },
         ],
@@ -788,6 +796,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Indicadores de la tienda el 2 de octubre de 2026: más de 10 mil descargas, 4.2 estrellas con 267 reseñas, última actualización el 1 de octubre de 2026.',
         ],
         callouts: [
+          {
+            type: 'note',
+            text: 'Aviso sobre el nombre: «Ollama Local AI» es solo el nombre de la app en Google Play. Según el propio aviso de la app, no está creada por Ollama, el proyecto de código abierto de [ollama.com](https://ollama.com), ni está afiliada, patrocinada o respaldada por él. Es una app de Android independiente, así que no esperes soporte oficial de Ollama y no la confundas con el software Ollama que se instala en un ordenador.',
+          },
           {
             type: 'note',
             text: 'Este análisis se basa únicamente en la ficha de Google Play, consultada el 2 de octubre de 2026. PromptQuorum no encontró código fuente público, licencia, documentación ni número de versión de la app, y no la ha probado ni evaluado con pruebas comparativas.',
@@ -1120,6 +1132,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
+            text: 'Avertissement sur le nom : « Ollama Local AI » n\'est que le nom de l\'application sur Google Play. Selon l\'avertissement de l\'application elle-même, elle n\'est ni développée par Ollama, le projet open source présent sur [ollama.com](https://ollama.com), ni affiliée, sponsorisée ou approuvée par lui. Il s\'agit d\'une application Android distincte ; n\'attendez donc pas de support officiel d\'Ollama, et ne la confondez pas avec le logiciel Ollama que vous installez sur un ordinateur.',
+          },
+          {
+            type: 'note',
             text: 'Cet avis se fonde uniquement sur la fiche Google Play, consultée le 2 octobre 2026. PromptQuorum n\'a trouvé ni code source public, ni licence, ni documentation, ni numéro de version pour l\'application, et ne l\'a ni testée ni évaluée par benchmark.',
           },
         ],
@@ -1448,6 +1464,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '2026年10月2日時点のストア指標:10K+ダウンロード、267件のレビューで星4.2、最終更新は2026年10月1日。',
         ],
         callouts: [
+          {
+            type: 'note',
+            text: '名称に関する注意:「Ollama Local AI」は、Google Playでのアプリ名にすぎません。アプリ自身の免責事項によると、このアプリは、[ollama.com](https://ollama.com)のオープンソースプロジェクトであるOllamaが開発したものではなく、Ollamaと提携・後援・推奨関係にもありません。これは別個のAndroidアプリですので、Ollamaの公式サポートは期待しないでください。また、コンピューターにインストールするOllamaソフトウェアと混同しないでください。',
+          },
           {
             type: 'note',
             text: '本レビューは、2026年10月2日に確認したGoogle Playの掲載情報のみに基づいています。PromptQuorumは、このアプリの公開ソースコード、ライセンス、ドキュメント、バージョン番号を見つけられず、テストやベンチマークも行っていません。',
@@ -1780,6 +1800,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
+            text: 'Aviso sobre o nome: "Ollama Local AI" é apenas o nome do app no Google Play. De acordo com o próprio aviso do app, ele não é criado, afiliado, patrocinado nem endossado pelo Ollama, o projeto de código aberto em [ollama.com](https://ollama.com). É um app Android separado, então não espere suporte oficial do Ollama e não o confunda com o software Ollama que você instala em um computador.',
+          },
+          {
+            type: 'note',
             text: 'Esta análise se baseia somente na ficha do Google Play, consultada em 2 de outubro de 2026. A PromptQuorum não encontrou código-fonte público, licença, documentação nem número de versão do app e não o testou nem fez benchmarks.',
           },
         ],
@@ -2108,6 +2132,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مؤشرات المتجر في 2 أكتوبر 2026: أكثر من 10 آلاف تنزيل، و4.2 نجمة من 267 مراجعة، وآخر تحديث في 1 أكتوبر 2026.',
         ],
         callouts: [
+          {
+            type: 'note',
+            text: 'تنبيه بشأن الاسم: «Ollama Local AI» هو فقط اسم التطبيق في Google Play. وبحسب إخلاء المسؤولية الخاص بالتطبيق نفسه، فهو ليس من تطوير Ollama، المشروع مفتوح المصدر على [ollama.com](https://ollama.com)، ولا يتبع له، ولا يحظى برعايته أو بتأييده. إنه تطبيق أندرويد مستقل، لذا لا تتوقع دعماً رسمياً من Ollama، ولا تخلط بينه وبين برنامج Ollama الذي تثبّته على الكمبيوتر.',
+          },
           {
             type: 'note',
             text: 'تستند هذه المراجعة إلى صفحة Google Play فقط، التي جرى التحقق منها في 2 أكتوبر 2026. لم تعثر PromptQuorum على كود مصدري عام أو ترخيص أو وثائق أو رقم إصدار للتطبيق، ولم تختبره أو تقِس أداءه.',
@@ -2440,6 +2468,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
+            text: '名称提示:“Ollama Local AI”只是该应用在 Google Play 上的名称。根据该应用自身的免责声明,它并非由 [ollama.com](https://ollama.com) 上的开源项目 Ollama 开发,也与 Ollama 没有关联,未获得其赞助或认可。它是一款独立的 Android 应用,因此请勿期待获得 Ollama 官方支持,也不要将其与安装在电脑上的 Ollama 软件混淆。',
+          },
+          {
+            type: 'note',
             text: '本评测仅基于 Google Play 页面信息,核实于 2026 年 10 月 2 日。PromptQuorum 没有找到该应用的公开源代码、许可证、文档或版本号,也未对其进行实测或基准测试。',
           },
         ],
@@ -2768,6 +2800,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '2026년 10월 2일 기준 스토어 지표: 다운로드 1만 회 이상, 267건의 리뷰에서 별 4.2개, 최종 업데이트 2026년 10월 1일.',
         ],
         callouts: [
+          {
+            type: 'note',
+            text: '이름 관련 주의: \'Ollama Local AI\'는 Google Play에서의 앱 이름일 뿐입니다. 앱 자체의 면책 문구에 따르면, 이 앱은 [ollama.com](https://ollama.com)의 오픈 소스 프로젝트인 Ollama가 만든 것이 아니며, Ollama와 제휴, 후원, 보증 관계도 없습니다. 이 앱은 별개의 Android 앱이므로 Ollama의 공식 지원을 기대하지 마시고, 컴퓨터에 설치하는 Ollama 소프트웨어와 혼동하지 마십시오.',
+          },
           {
             type: 'note',
             text: '이 리뷰는 2026년 10월 2일에 확인한 Google Play 게재 정보만을 근거로 합니다. PromptQuorum은 이 앱의 공개 소스 코드, 라이선스, 문서, 버전 번호를 찾지 못했으며 앱을 테스트하거나 벤치마크하지 않았습니다.',
