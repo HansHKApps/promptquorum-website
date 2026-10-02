@@ -10,7 +10,7 @@ export const app: ToolRecord = {
   categories: ['notes-integrations', 'local-search'],
   interfaces: ['web', 'mobile', 'plugin'], // self-hosted web app plus iOS/Android apps and Chrome/Firefox extensions, verified 2026-09-18
   locality: 'hybrid', // fully self-hosted data store, but AI auto-tagging/summarization defaults to a configured LLM provider (OpenAI API or a local Ollama endpoint), verified 2026-09-18
-  platforms: null, // self-hosted Docker web app; see interfaces/worksWith for the native mobile/browser clients
+  platforms: ['web', 'ios', 'android'], // self-hosted web app plus the iOS and Android apps listed in the project README (github.com/karakeep-app/karakeep), verified 2026-10-02; browser extensions are covered under interfaces
   worksWith: ['OpenAI API', 'Ollama'],
   engine: 'external',
   license: 'AGPL-3.0',

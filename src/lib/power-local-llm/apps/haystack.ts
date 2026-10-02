@@ -34,7 +34,7 @@ export const app: ToolRecord = {
     ko: 'deepset의 검색 및 RAG 프레임워크',
   },
   reviewSlug: 'haystack-deepset-rag-framework-review', // dedicated PromptQuorum review — pinned to #1 in the article index
-  pqReview: { date: '2026-09-25', version: 'v3.2.0', versionSourceUrl: 'https://github.com/deepset-ai/haystack/releases/tag/v3.2.0' },
+  pqReview: { date: '2026-09-25', version: '3.2.0', versionSourceUrl: 'https://github.com/deepset-ai/haystack/releases/tag/v3.2.0' },
   // Comparison attributes: each value verified against the project's official README/site on 2026-09-25; a missing key = not stated there, never false.
   // visualBuilder false for the OSS framework itself — the drag-and-drop builder is deepset Studio, a separate deepset product, not the haystack repo.
   // multiVector confirmed via the Document Store integrations (Elasticsearch, OpenSearch, Qdrant, Weaviate, Milvus, Chroma, LanceDB, Pinecone, pgvector, MongoDB, Neo4j, ...): https://docs.haystack.deepset.ai/docs/choosing-a-document-store
