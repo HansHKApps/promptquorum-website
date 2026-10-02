@@ -14,7 +14,7 @@ export const app: ToolRecord = {
   platforms: ['android'],
   worksWith: null,
   engine: 'builtin', // no model files of its own: inference runs on-device through Google's AICore system service (Gemini Nano), so no cloud or external backend is involved
-  license: 'Unlicense', // per GitHub API (spdx_id: Unlicense) — public-domain dedication
+  license: 'Unlicense', // per GitHub API (spdx_id: Unlicense) — a public-domain-style dedication
   price: 'free', // Play listing shows no in-app purchases or ads; the project roadmap lists monetization only as a future, unchecked item
   hardware: { ramGb: null, vramGb: null, cpuOnly: null, variesByModel: false }, // per README: "requires a supported device with Google AI Core (e.g., Pixel 9/10 series)" — a device-support list, not a numeric RAM/VRAM floor, and no CPU-only statement is published — verified 2026-10-02
   stars: 168, // GitHub Puzzaks/PAIOS star count, verified via the GitHub API 2026-10-02
@@ -40,7 +40,7 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'paios-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: {
-    date: '2026-10-02',
+    date: '2026-10-02', // 1.1.8 = latest GitHub release at that date, published 2026-04-21
     version: '1.1.8',
     versionSourceUrl: 'https://github.com/Puzzaks/PAIOS/releases',
   },
