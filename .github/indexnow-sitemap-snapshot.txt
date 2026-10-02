@@ -452,6 +452,7 @@ https://www.promptquorum.com/power-local-llm/nvidia-g-assist-review
 https://www.promptquorum.com/power-local-llm/obsidian-logseq-ai-plugins
 https://www.promptquorum.com/power-local-llm/odysseus-review
 https://www.promptquorum.com/power-local-llm/off-grid-ai-review
+https://www.promptquorum.com/power-local-llm/ollama-local-ai-review
 https://www.promptquorum.com/power-local-llm/ollama-review
 https://www.promptquorum.com/power-local-llm/ollama-vision-models-review
 https://www.promptquorum.com/power-local-llm/ollitert-review
