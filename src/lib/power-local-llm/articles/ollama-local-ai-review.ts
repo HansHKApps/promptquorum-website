@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Ollama Local AI Review: Android LLM Runner and LAN API Proxy',
     seoTitle: 'Ollama Local AI Review: Android LLM Runner & Proxy',
     intro:
-      'Ollama Local AI is an Android app by a developer listed on Google Play as [FreeRouter Team](https://play.google.com/store/apps/details?id=com.llmproxy) that does two jobs: it runs GGUF language models on the phone through an embedded llama.cpp engine, and it exposes an OpenAI-compatible API on your Wi-Fi so tools such as Cursor, VS Code extensions, and Windsurf can use the phone as their model endpoint. It is free to install with in-app purchases, and despite its name it is not made by, or affiliated with, the Ollama project. This review is based only on the app\'s Google Play listing, because no public source repository, developer website, or documentation was found, and PromptQuorum has not tested the app hands-on.',
+      'Ollama Local AI is an independent third-party Android app that runs local AI models on the phone and can connect to Ollama servers. It is not the Ollama software and is not made by the Ollama project. Google Play lists [FreeRouter Team](https://play.google.com/store/apps/details?id=com.llmproxy) as the developer. The app does two jobs: it runs GGUF language models on the phone through an embedded llama.cpp engine, and it exposes an OpenAI-compatible API on your Wi-Fi so tools such as Cursor, VS Code extensions, and Windsurf can use the phone as their model endpoint. It is free to install with in-app purchases. This review is based only on the app\'s Google Play listing, checked on 2 October 2026, because no public source repository, developer website, or detailed developer documentation was identified from that listing, and PromptQuorum has not tested the app hands-on.',
     metaDescription:
       'Ollama Local AI review: an Android app that runs GGUF models on-device and serves an OpenAI-compatible API on your LAN. What the listing confirms, and what it leaves unverified.',
     twitterDescription:
@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Llama 3', 'Mistral', 'Phi', 'Gemma', 'Qwen'],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
-      '**Ollama Local AI is a free-to-install Android app (Google Play package com.llmproxy, listed under the developer name FreeRouter Team) that runs GGUF models on-device via llama.cpp and serves an OpenAI-compatible API to other devices on your Wi-Fi.** It can also forward requests to a self-hosted Ollama instance, a llama.cpp server, or cloud APIs such as OpenAI and Anthropic. It is not part of the Ollama project — the listing itself says so — and no license, source code, or version number is published, so treat it as a closed, unaudited utility until the developer says otherwise.',
+      '**Ollama Local AI is an independent third-party Android app (Google Play package com.llmproxy, developer listed as FreeRouter Team) that runs GGUF models on-device via llama.cpp and serves an OpenAI-compatible API to other devices on your Wi-Fi.** It can also forward requests to a self-hosted Ollama server, a llama.cpp server, or cloud APIs such as OpenAI and Anthropic, but connecting to an Ollama server does not make it part of Ollama: the listing itself says the app is not affiliated with the Ollama project. No license, source code, or version number is published in the listing, so treat it as an unaudited utility until the developer says otherwise.',
     quickAnswerTop: {
       en: {
         question: 'Is Ollama Local AI the official Ollama app for Android?',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Two functions: run GGUF models on the phone, and serve an OpenAI-compatible API (/v1/chat/completions, /v1/models, /health) to devices on the same network.',
           'Android only, free to install with in-app purchases; what the purchases unlock is not stated in the listing.',
-          'Google Play shows 10K+ downloads and a 4.2 rating from 267 reviews, last updated 1 October 2026.',
+          'As checked on 2 October 2026, Google Play showed 10K+ downloads and a 4.2 rating from 267 reviews, with the listing last updated on 1 October 2026.',
           'The developer\'s Data safety section declares no data collected and no data shared with third parties — a self-declaration PromptQuorum has not audited.',
         ],
         updatedDate: '2026-10',
@@ -88,20 +88,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Developer: listed on [Google Play](https://play.google.com/store/apps/details?id=com.llmproxy) as FreeRouter Team, category Productivity; no website or repository is linked from the listing.',
+          'Developer: [Google Play](https://play.google.com/store/apps/details?id=com.llmproxy) identifies FreeRouter Team as the developer (category Productivity) and provides developer contact information; no public source repository, developer website, or detailed developer documentation was identified from the listing.',
           'Price: free to install, with in-app purchases whose contents are not described.',
           'On-device models: GGUF files run through an embedded llama.cpp engine; the listing names Llama 3, Mistral, Phi, Gemma, and Qwen as examples.',
           'LAN gateway: exposes OpenAI-style endpoints to other devices on your Wi-Fi and can route to local models, self-hosted Ollama, llama.cpp servers, OpenAI, Anthropic, NVIDIA NIM, and Hugging Face.',
-          'Store signals on 2 October 2026: 10K+ downloads, 4.2 stars from 267 reviews, last updated 1 October 2026.',
+          'Store signals as checked on 2 October 2026: 10K+ downloads, 4.2 stars from 267 reviews, listing last updated on 1 October 2026.',
         ],
         callouts: [
           {
             type: 'note',
-            text: 'Name warning: "Ollama Local AI" is only the app\'s name on Google Play. According to the app\'s own disclaimer, it is not made by, affiliated with, sponsored by, or endorsed by Ollama, the open-source project at [ollama.com](https://ollama.com). It is a separate Android app, so do not expect official Ollama support, and do not confuse it with the Ollama software you install on a computer.',
+            text: 'Entity warning: despite using "Ollama" in its product name, Ollama Local AI is an independent third-party Android application. It is not made by, affiliated with, sponsored by, or endorsed by the [Ollama project](https://ollama.com). The app can connect to Ollama servers, but Ollama Local AI itself is not the Ollama software.',
           },
           {
             type: 'note',
-            text: 'This review is based only on the Google Play listing, checked on 2 October 2026. PromptQuorum found no public source code, license, documentation, or version number for the app and has not tested or benchmarked it.',
+            text: 'This review is based only on the Google Play listing, checked on 2 October 2026. PromptQuorum did not identify a public source repository, a stated license, a version number, or detailed developer documentation, and has not tested or benchmarked the app.',
           },
         ],
       },
@@ -110,7 +110,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Is Ollama Local AI?',
         content: [
           '**Ollama Local AI is an Android app that combines an on-device model runner with a local-network API gateway.** According to its [Google Play listing](https://play.google.com/store/apps/details?id=com.llmproxy), it runs quantized GGUF models directly on the phone\'s CPU or GPU through an embedded [llama.cpp](https://github.com/ggml-org/llama.cpp) engine, and it can also act as a router that forwards requests to other backends you configure.',
-          'The name is the main source of confusion. The listing\'s closing disclaimer says the app is an independent developer utility and not affiliated with, sponsored by, or endorsed by Ollama, OpenAI, Anthropic, or any mentioned provider. The app can connect to an [Ollama](https://ollama.com) server that you host elsewhere, but it does not embed Ollama itself. Search results and the Play package name (com.llmproxy) refer to the same app.',
+          'The name is the main source of confusion. The listing\'s closing disclaimer says the app is an independent developer utility and not affiliated with, sponsored by, or endorsed by Ollama, OpenAI, Anthropic, or any mentioned provider. The app can connect to an [Ollama](https://ollama.com) server that you host elsewhere, but connecting to an Ollama server does not establish any affiliation, and per the listing the app runs its own embedded llama.cpp engine rather than Ollama. Search results and the Play package name (com.llmproxy) refer to the same app.',
+          'Three terms are used strictly in this review: **Ollama** is the separate open-source project and its software; **Ollama Local AI** is the independent Android app reviewed here; an **Ollama server** is an Ollama installation that you run yourself and that the app can connect to.',
         ],
         note: 'GGUF is a file format for quantized open-weight language models that runtimes such as llama.cpp can load on consumer hardware, including phones.',
       },
@@ -118,7 +119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'get-it',
         title: 'Get It',
         content: [
-          '**The only official channel the listing points to is Google Play; no iOS build, desktop build, APK mirror, or GitHub release is linked.**',
+          '**The only download channel the listing points to is Google Play; no iOS build, desktop build, APK mirror, or GitHub release is linked.**',
         ],
         columns: ['Platform', 'Where to get it'],
         rows: [
@@ -131,7 +132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Where to get it': 'Not offered, per the listing',
           },
         ],
-        note: 'This page is companion material to the app\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). No version number is shown in the listing text PromptQuorum could read, so none is stated here; check the Play page for the current build.',
+        note: 'This page is companion material to the app\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). No version number is shown in the listing text PromptQuorum could read, so none is stated here; check the Play listing for the build available when you read this.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -185,7 +186,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'The app is closed source as far as PromptQuorum could find, so the claims above cannot be checked against code. Anyone handling regulated or confidential data should verify behavior themselves before relying on them.',
+            text: 'No public source code for the app was identified, so the claims above cannot be checked against code. Anyone handling regulated or confidential data should verify behavior themselves before relying on them.',
           },
         ],
       },
@@ -230,11 +231,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'What We Could Not Verify',
         items: [
-          '**License and source code.** Neither is stated on the listing and no public repository was found, so the app is treated as closed source; readers who need auditable code should choose an open-source app from the alternatives below.',
+          '**License and source code.** License: not stated in the Google Play listing, and no public source repository was identified. Any license of the separate Ollama project says nothing about this app. Readers who need auditable code should choose an open-source app from the alternatives below.',
           '**Version number.** The listing text PromptQuorum could read shows no version, so this page cannot tie its claims to a specific build.',
           '**In-app purchases.** The listing says they exist but not what they unlock or what they cost.',
           '**Hardware floor and performance.** No minimum RAM, Android version, or speed figures are published.',
-          '**Developer identity.** The listing shows the name FreeRouter Team and a contact email, with no website or company details.',
+          '**Developer identity versus verifiability.** Google Play identifies FreeRouter Team as the developer and provides developer contact information. However, no developer website, public source repository, or detailed developer documentation was identified from the listing, so the app\'s behavior cannot be checked beyond what the listing states.',
           '**Not for iOS or desktop users.** The app is Android-only.',
         ],
       },
@@ -244,12 +245,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Competitors and Alternatives',
         columns: ['App', 'Platforms', 'Price / license', 'Key difference'],
         rows: [
-          {
-            'App': 'Ollama Local AI',
-            'Platforms': 'Android',
-            'Price / license': 'Free + IAP / not stated',
-            'Key difference': 'Serves an OpenAI-compatible API to your LAN and routes to cloud and self-hosted backends',
-          },
           {
             'App': '[PocketPal AI](/power-local-llm/pocketpal-ai-review)',
             'Platforms': 'Android, iOS',
@@ -286,6 +281,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: 'No. The listing\'s disclaimer says the app is independent and not affiliated with or endorsed by Ollama. It can connect to an Ollama server you run yourself, but it ships its own llama.cpp engine.',
           },
           {
+            q: 'Who makes Ollama Local AI, and does the developer have a website?',
+            a: 'Google Play identifies FreeRouter Team as the developer and provides developer contact information. No developer website, public source repository, or detailed developer documentation was identified from the listing, and the developer is not presented as the developer of Ollama.',
+          },
+          {
             q: 'What is the Google Play package name?',
             a: 'The package ID is com.llmproxy, which is why the app turns up under "LLM Proxy" searches although its store name is Ollama Local AI.',
           },
@@ -307,7 +306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is it open source?',
-            a: 'No license or repository is stated, and none was found, so PromptQuorum lists it as closed source. If the developer publishes one, this review will be updated.',
+            a: 'License: not stated in the Google Play listing, and no public source repository was identified, so PromptQuorum cannot confirm the app is open source. If the developer publishes a license or source, this review will be updated.',
           },
           {
             q: 'What do the in-app purchases unlock?',
@@ -319,13 +318,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Ollama Local AI addresses a narrow, real need: using an Android phone as an OpenAI-compatible endpoint for desktop coding tools while also running GGUF models on the device. The Play listing describes a feature set that goes beyond plain on-device chat — LAN serving, multi-provider routing, failover, clustering, and traffic diagnostics — and store signals of 10K+ downloads and a 4.2 rating suggest real use. Against that, the app is an unaudited utility from a developer with no visible website, and its version, license, source code, hardware floor, and purchase scope are all unpublished, and its name invites confusion with the Ollama project. It suits developers who want to experiment with a phone-as-gateway setup on a private network; readers who need auditable code or iOS support should start with [PocketPal AI](/power-local-llm/pocketpal-ai-review) or [Maid](/power-local-llm/maid-review).',
+          'Ollama Local AI addresses a narrow, real need: using an Android phone as an OpenAI-compatible endpoint for desktop coding tools while also running GGUF models on the device. The Play listing describes a feature set that goes beyond plain on-device chat — LAN serving, multi-provider routing, failover, clustering, and traffic diagnostics — and store signals as of 2 October 2026 (10K+ downloads, a 4.2 rating) suggest real use. Against that, the app is an unaudited utility: Google Play identifies FreeRouter Team as the developer and gives contact information, but no developer website or public source repository was identified, its version, license, hardware floor, and purchase scope are not stated in the listing, and its name invites confusion with the separate Ollama project, with which it is not affiliated. It suits developers who want to experiment with a phone-as-gateway setup on a private network; readers who need auditable code or iOS support should start with [PocketPal AI](/power-local-llm/pocketpal-ai-review) or [Maid](/power-local-llm/maid-review).',
       },
       sources: {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[Ollama Local AI on Google Play](https://play.google.com/store/apps/details?id=com.llmproxy) — description, developer name, Data safety declaration, download count, rating, and last-updated date, checked 2 October 2026.',
+          '[Ollama Local AI on Google Play](https://play.google.com/store/apps/details?id=com.llmproxy) — description, developer name and contact information, Data safety declaration, download count, rating, and last-updated date, checked 2 October 2026.',
         ],
       },
       relatedReading: {
