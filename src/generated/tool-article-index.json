@@ -11,6 +11,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ollama-local-ai-review",
+        "title": "Ollama Local AI Review: Android LLM Runner and LAN API Proxy",
+        "url": "/power-local-llm/ollama-local-ai-review",
+        "dateModified": "2026-10-02",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "apple-mlx-vs-nvidia-cuda-local-llm-2026",
         "title": "Apple MLX vs NVIDIA CUDA for Local LLMs: Which System Should You Choose in 2026?",
         "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026",
@@ -72,17 +80,9 @@
         "url": "/power-local-llm/autogpt-local-review-2026",
         "dateModified": "2026-09-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "koboldcpp-review",
-        "title": "KoboldCpp Review: One File, No Install, Built for Roleplay",
-        "url": "/power-local-llm/koboldcpp-review",
-        "dateModified": "2026-09-20",
-        "tier": "about"
       }
     ],
-    "totalCount": 294,
+    "totalCount": 295,
     "capped": true
   },
   "llama.cpp": {
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ollama-local-ai-review",
+        "title": "Ollama Local AI Review: Android LLM Runner and LAN API Proxy",
+        "url": "/power-local-llm/ollama-local-ai-review",
+        "dateModified": "2026-10-02",
         "tier": "about"
       },
       {
@@ -158,17 +166,9 @@
         "url": "/power-local-llm/mlx-serve-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mlxcel-review",
-        "title": "mlxcel Review: Rust-Native MLX Inference Runtime",
-        "url": "/power-local-llm/mlxcel-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 153,
+    "totalCount": 154,
     "capped": true
   },
   "vLLM": {
@@ -2112,7 +2112,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 52,
+    "totalCount": 53,
     "capped": true
   },
   "LibreChat": {
@@ -2718,7 +2718,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 42,
+    "totalCount": 43,
     "capped": true
   },
   "Cline": {
@@ -2804,7 +2804,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 40,
+    "totalCount": 41,
     "capped": true
   },
   "Atlarix": {
@@ -2851,6 +2851,14 @@
         "title": "Windsurf Review: From Codeium to a $2.4B Google Deal to Devin Desktop",
         "url": "/power-local-llm/windsurf-review",
         "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ollama-local-ai-review",
+        "title": "Ollama Local AI Review: Android LLM Runner and LAN API Proxy",
+        "url": "/power-local-llm/ollama-local-ai-review",
+        "dateModified": "2026-10-02",
         "tier": "about"
       },
       {
@@ -2916,18 +2924,10 @@
         "url": "/power-local-llm/pearai-review",
         "dateModified": "2026-09-05",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "best-local-llms-code-review",
-        "title": "Best Local LLMs for Code Review in 2026: Ranked by Bug Detection, Speed, and VRAM",
-        "url": "/local-llms/best-local-llms-code-review",
-        "dateModified": "2026-08-28",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 10,
-    "capped": false
+    "totalCount": 11,
+    "capped": true
   },
   "Sourcegraph Cody": {
     "articles": [
@@ -3279,14 +3279,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "atlarix-review",
-        "title": "Atlarix Review: A Free, Local-First AI Coding Agent",
-        "url": "/power-local-llm/atlarix-review",
-        "dateModified": "2026-09-25",
+        "slug": "ollama-local-ai-review",
+        "title": "Ollama Local AI Review: Android LLM Runner and LAN API Proxy",
+        "url": "/power-local-llm/ollama-local-ai-review",
+        "dateModified": "2026-10-02",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 34,
+    "totalCount": 35,
     "capped": true
   },
   "ShellGPT": {
@@ -3888,7 +3888,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 26,
+    "totalCount": 27,
     "capped": true
   },
   "Haystack": {
@@ -4168,7 +4168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 40,
+    "totalCount": 41,
     "capped": true
   },
   "CrewAI": {
@@ -4254,7 +4254,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 21,
+    "totalCount": 22,
     "capped": true
   },
   "AutoGen": {
@@ -4333,14 +4333,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "intentkit-review",
-        "title": "IntentKit Review: Self-Hosted Agent Cluster With Built-In APIs",
-        "url": "/power-local-llm/intentkit-review",
-        "dateModified": "2026-09-19",
+        "slug": "ollama-local-ai-review",
+        "title": "Ollama Local AI Review: Android LLM Runner and LAN API Proxy",
+        "url": "/power-local-llm/ollama-local-ai-review",
+        "dateModified": "2026-10-02",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 20,
+    "totalCount": 21,
     "capped": true
   },
   "Semantic Kernel": {
@@ -5824,7 +5824,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 22,
+    "totalCount": 23,
     "capped": true
   },
   "Pocket AI": {
@@ -6109,6 +6109,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "ollama-local-ai-review",
+        "title": "Ollama Local AI Review: Android LLM Runner and LAN API Proxy",
+        "url": "/power-local-llm/ollama-local-ai-review",
+        "dateModified": "2026-10-02",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "chapper-review",
         "title": "Chapper Review: AI & LM Studio Client for iPhone, iPad, and Mac",
         "url": "/power-local-llm/chapper-review",
@@ -6132,7 +6140,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 8,
+    "totalCount": 9,
     "capped": false
   },
   "Chapper": {
@@ -9128,7 +9136,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "multica": {
@@ -11029,6 +11037,20 @@
         "title": "Radiant Canvas Review: Local AI Image Generation for Mac",
         "url": "/power-local-llm/radiant-canvas",
         "dateModified": "2026-09-25",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Ollama Local AI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "ollama-local-ai-review",
+        "title": "Ollama Local AI Review: Android LLM Runner and LAN API Proxy",
+        "url": "/power-local-llm/ollama-local-ai-review",
+        "dateModified": "2026-10-02",
         "tier": "about"
       }
     ],

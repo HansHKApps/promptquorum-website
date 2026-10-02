@@ -1133,5 +1133,10 @@
     "cluster": "power-local-llm",
     "urlSlug": "radiant-canvas",
     "url": "/power-local-llm/radiant-canvas"
+  },
+  "ollama-local-ai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "ollama-local-ai-review",
+    "url": "/power-local-llm/ollama-local-ai-review"
   }
 }

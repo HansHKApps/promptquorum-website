@@ -250,19 +250,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'App': '[PocketPal AI](/power-local-llm/pocketpal-ai-review)',
             'Platforms': 'Android, iOS',
             'Price / license': 'Free / MIT',
-            'Key difference': 'Open-source on-device chat client; no LAN API server in its core design',
+            'Key difference': 'Open-source on-device chat client',
           },
           {
             'App': '[Maid](/power-local-llm/maid-review)',
             'Platforms': 'Android',
             'Price / license': 'Free / MIT',
-            'Key difference': 'Open-source chat app for local GGUF or remote providers; a client, not a network gateway',
+            'Key difference': 'Open-source chat app for local GGUF or remote providers',
           },
           {
             'App': '[RikkaHub](/power-local-llm/rikkahub-review)',
             'Platforms': 'Android',
             'Price / license': 'Free / open source',
-            'Key difference': 'Multi-provider chat client rather than a server for other devices',
+            'Key difference': 'Multi-provider chat client',
           },
           {
             'App': '[Layla](/power-local-llm/layla-review)',
@@ -315,7 +315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Ollama Local AI addresses a narrow, real need: using an Android phone as an OpenAI-compatible endpoint for desktop coding tools while also running GGUF models on the device. The Play listing describes a feature set that goes further than most phone chat apps — LAN serving, multi-provider routing, failover, clustering, and traffic diagnostics — and store signals of 10K+ downloads and a 4.2 rating suggest real use. Against that, the app is a closed, unaudited utility from a developer with no visible website, its version, license, hardware floor, and purchase scope are all unpublished, and its name invites confusion with the Ollama project. It suits developers who want to experiment with a phone-as-gateway setup on a private network; readers who need auditable code or iOS support should start with [PocketPal AI](/power-local-llm/pocketpal-ai-review) or [Maid](/power-local-llm/maid-review).',
+          'Ollama Local AI addresses a narrow, real need: using an Android phone as an OpenAI-compatible endpoint for desktop coding tools while also running GGUF models on the device. The Play listing describes a feature set that goes beyond plain on-device chat — LAN serving, multi-provider routing, failover, clustering, and traffic diagnostics — and store signals of 10K+ downloads and a 4.2 rating suggest real use. Against that, the app is an unaudited utility from a developer with no visible website, and its version, license, source code, hardware floor, and purchase scope are all unpublished, and its name invites confusion with the Ollama project. It suits developers who want to experiment with a phone-as-gateway setup on a private network; readers who need auditable code or iOS support should start with [PocketPal AI](/power-local-llm/pocketpal-ai-review) or [Maid](/power-local-llm/maid-review).',
       },
       sources: {
         id: 'sources',
@@ -613,19 +613,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'App': '[PocketPal AI](/de/power-local-llm/pocketpal-ai-review)',
             'Plattformen': 'Android, iOS',
             'Preis / Lizenz': 'Kostenlos / MIT',
-            'Wesentlicher Unterschied': 'Quelloffener Chat-Client auf dem Gerät; kein LAN-API-Server im Kerndesign',
+            'Wesentlicher Unterschied': 'Quelloffener Chat-Client auf dem Gerät',
           },
           {
             'App': '[Maid](/de/power-local-llm/maid-review)',
             'Plattformen': 'Android',
             'Preis / Lizenz': 'Kostenlos / MIT',
-            'Wesentlicher Unterschied': 'Quelloffene Chat-App für lokale GGUF-Modelle oder Remote-Anbieter; ein Client, kein Netzwerk-Gateway',
+            'Wesentlicher Unterschied': 'Quelloffene Chat-App für lokale GGUF-Modelle oder Remote-Anbieter',
           },
           {
             'App': '[RikkaHub](/de/power-local-llm/rikkahub-review)',
             'Plattformen': 'Android',
             'Preis / Lizenz': 'Kostenlos / Open Source',
-            'Wesentlicher Unterschied': 'Multi-Provider-Chat-Client statt eines Servers für andere Geräte',
+            'Wesentlicher Unterschied': 'Multi-Provider-Chat-Client',
           },
           {
             'App': '[Layla](/de/power-local-llm/layla-review)',
@@ -678,7 +678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Ollama Local AI adressiert einen engen, realen Bedarf: ein Android-Smartphone als OpenAI-kompatiblen Endpunkt für Desktop-Coding-Tools zu nutzen und zugleich GGUF-Modelle auf dem Gerät auszuführen. Der Play-Eintrag beschreibt einen Funktionsumfang, der weiter geht als bei den meisten Smartphone-Chat-Apps — LAN-Serving, Routing über mehrere Anbieter, Failover, Clustering und Traffic-Diagnose —, und Store-Signale von 10K+ Downloads und einer Bewertung von 4,2 deuten auf reale Nutzung hin. Dem steht gegenüber, dass die App ein geschlossenes, ungeprüftes Hilfsprogramm eines Entwicklers ohne sichtbare Website ist, dass Version, Lizenz, Hardware-Untergrenze und Umfang der Käufe allesamt unveröffentlicht sind und dass ihr Name zur Verwechslung mit dem Ollama-Projekt einlädt. Sie eignet sich für Entwickler, die in einem privaten Netzwerk mit einem Smartphone-als-Gateway-Aufbau experimentieren möchten; Leser, die prüfbaren Code oder iOS-Unterstützung benötigen, sollten mit [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) oder [Maid](/de/power-local-llm/maid-review) beginnen.',
+          'Ollama Local AI adressiert einen engen, realen Bedarf: ein Android-Smartphone als OpenAI-kompatiblen Endpunkt für Desktop-Coding-Tools zu nutzen und zugleich GGUF-Modelle auf dem Gerät auszuführen. Der Play-Eintrag beschreibt einen Funktionsumfang, der über reinen Chat auf dem Gerät hinausgeht — LAN-Serving, Routing über mehrere Anbieter, Failover, Clustering und Traffic-Diagnose —, und Store-Signale von 10K+ Downloads und einer Bewertung von 4,2 deuten auf reale Nutzung hin. Dem steht gegenüber, dass die App ein ungeprüftes Hilfsprogramm eines Entwicklers ohne sichtbare Website ist, dass Version, Lizenz, Quellcode, Hardware-Untergrenze und Umfang der Käufe allesamt unveröffentlicht sind und dass ihr Name zur Verwechslung mit dem Ollama-Projekt einlädt. Sie eignet sich für Entwickler, die in einem privaten Netzwerk mit einem Smartphone-als-Gateway-Aufbau experimentieren möchten; Leser, die prüfbaren Code oder iOS-Unterstützung benötigen, sollten mit [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) oder [Maid](/de/power-local-llm/maid-review) beginnen.',
       },
       sources: {
         id: 'sources',
@@ -943,19 +943,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'App': '[PocketPal AI](/es/power-local-llm/pocketpal-ai-review)',
             'Plataformas': 'Android, iOS',
             'Precio / licencia': 'Gratis / MIT',
-            'Diferencia clave': 'Cliente de chat de código abierto en el dispositivo; sin servidor de API LAN en su diseño central',
+            'Diferencia clave': 'Cliente de chat de código abierto en el dispositivo',
           },
           {
             'App': '[Maid](/es/power-local-llm/maid-review)',
             'Plataformas': 'Android',
             'Precio / licencia': 'Gratis / MIT',
-            'Diferencia clave': 'App de chat de código abierto para GGUF locales o proveedores remotos; un cliente, no una pasarela de red',
+            'Diferencia clave': 'App de chat de código abierto para GGUF locales o proveedores remotos',
           },
           {
             'App': '[RikkaHub](/es/power-local-llm/rikkahub-review)',
             'Plataformas': 'Android',
             'Precio / licencia': 'Gratis / código abierto',
-            'Diferencia clave': 'Cliente de chat multiproveedor, en lugar de un servidor para otros dispositivos',
+            'Diferencia clave': 'Cliente de chat multiproveedor',
           },
           {
             'App': '[Layla](/es/power-local-llm/layla-review)',
@@ -1008,7 +1008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'Ollama Local AI responde a una necesidad concreta y real: usar un teléfono Android como endpoint compatible con OpenAI para herramientas de programación de escritorio y, a la vez, ejecutar modelos GGUF en el dispositivo. La ficha de Play describe un conjunto de funciones que va más allá de la mayoría de las apps de chat para teléfono —servicio en la LAN, enrutamiento multiproveedor, conmutación por error, clústeres y diagnósticos de tráfico—, y los indicadores de la tienda, con más de 10 mil descargas y una calificación de 4.2, sugieren un uso real. En contra, la app es una utilidad cerrada y sin auditar de un desarrollador sin sitio web visible, su versión, licencia, requisitos de hardware y alcance de las compras no están publicados, y su nombre invita a confundirla con el proyecto Ollama. Es adecuada para desarrolladores que quieran experimentar con una configuración de teléfono como pasarela en una red privada; quienes necesiten código auditable o compatibilidad con iOS deberían empezar por [PocketPal AI](/es/power-local-llm/pocketpal-ai-review) o [Maid](/es/power-local-llm/maid-review).',
+          'Ollama Local AI responde a una necesidad concreta y real: usar un teléfono Android como endpoint compatible con OpenAI para herramientas de programación de escritorio y, a la vez, ejecutar modelos GGUF en el dispositivo. La ficha de Play describe un conjunto de funciones que va más allá del chat básico en el dispositivo —servicio en la LAN, enrutamiento multiproveedor, conmutación por error, clústeres y diagnósticos de tráfico—, y los indicadores de la tienda, con más de 10 mil descargas y una calificación de 4.2, sugieren un uso real. En contra, la app es una utilidad sin auditar de un desarrollador sin sitio web visible, y su versión, licencia, código fuente, requisitos de hardware y alcance de las compras no están publicados, y su nombre invita a confundirla con el proyecto Ollama. Es adecuada para desarrolladores que quieran experimentar con una configuración de teléfono como pasarela en una red privada; quienes necesiten código auditable o compatibilidad con iOS deberían empezar por [PocketPal AI](/es/power-local-llm/pocketpal-ai-review) o [Maid](/es/power-local-llm/maid-review).',
       },
       sources: {
         id: 'sources',
@@ -1273,19 +1273,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Application': '[PocketPal AI](/fr/power-local-llm/pocketpal-ai-review)',
             'Plateformes': 'Android, iOS',
             'Prix / licence': 'Gratuite / MIT',
-            'Différence clé': 'Client de chat open source sur l\'appareil ; pas de serveur d\'API LAN dans sa conception de base',
+            'Différence clé': 'Client de chat open source sur l\'appareil',
           },
           {
             'Application': '[Maid](/fr/power-local-llm/maid-review)',
             'Plateformes': 'Android',
             'Prix / licence': 'Gratuite / MIT',
-            'Différence clé': 'Application de chat open source pour GGUF local ou fournisseurs distants ; un client, pas une passerelle réseau',
+            'Différence clé': 'Application de chat open source pour GGUF local ou fournisseurs distants',
           },
           {
             'Application': '[RikkaHub](/fr/power-local-llm/rikkahub-review)',
             'Plateformes': 'Android',
             'Prix / licence': 'Gratuite / open source',
-            'Différence clé': 'Client de chat multi-fournisseurs plutôt qu\'un serveur pour d\'autres appareils',
+            'Différence clé': 'Client de chat multi-fournisseurs',
           },
           {
             'Application': '[Layla](/fr/power-local-llm/layla-review)',
@@ -1338,7 +1338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'Ollama Local AI répond à un besoin étroit mais réel : utiliser un téléphone Android comme point de terminaison compatible OpenAI pour des outils de codage de bureau, tout en exécutant des modèles GGUF sur l\'appareil. La fiche Play décrit un ensemble de fonctions qui va plus loin que la plupart des applications de chat pour téléphone — service LAN, routage multi-fournisseurs, basculement, clustering et diagnostics de trafic — et les indicateurs de la boutique, plus de 10 000 téléchargements et une note de 4,2, laissent penser à un usage réel. En face, l\'application est un utilitaire fermé et non audité, d\'un développeur sans site web visible, dont la version, la licence, le matériel minimal et la portée des achats ne sont pas publiés, et son nom prête à confusion avec le projet Ollama. Elle convient aux développeurs qui veulent expérimenter une configuration téléphone-passerelle sur un réseau privé ; les lecteurs qui ont besoin d\'un code auditable ou d\'une prise en charge d\'iOS devraient commencer par [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) ou [Maid](/fr/power-local-llm/maid-review).',
+          'Ollama Local AI répond à un besoin étroit mais réel : utiliser un téléphone Android comme point de terminaison compatible OpenAI pour des outils de codage de bureau, tout en exécutant des modèles GGUF sur l\'appareil. La fiche Play décrit un ensemble de fonctions qui va au-delà du simple chat sur l\'appareil — service LAN, routage multi-fournisseurs, basculement, clustering et diagnostics de trafic — et les indicateurs de la boutique, plus de 10 000 téléchargements et une note de 4,2, laissent penser à un usage réel. En face, l\'application est un utilitaire non audité, d\'un développeur sans site web visible, dont la version, la licence, le code source, le matériel minimal et la portée des achats ne sont pas publiés, et son nom prête à confusion avec le projet Ollama. Elle convient aux développeurs qui veulent expérimenter une configuration téléphone-passerelle sur un réseau privé ; les lecteurs qui ont besoin d\'un code auditable ou d\'une prise en charge d\'iOS devraient commencer par [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) ou [Maid](/fr/power-local-llm/maid-review).',
       },
       sources: {
         id: 'sources',
@@ -1603,19 +1603,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'アプリ': '[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)',
             'プラットフォーム': 'Android、iOS',
             '料金/ライセンス': '無料/MIT',
-            '主な違い': 'オープンソースのオンデバイスチャットクライアント。基本設計にLAN向けAPIサーバーはない',
+            '主な違い': 'オープンソースのオンデバイスチャットクライアント',
           },
           {
             'アプリ': '[Maid](/ja/power-local-llm/maid-review)',
             'プラットフォーム': 'Android',
             '料金/ライセンス': '無料/MIT',
-            '主な違い': 'ローカルGGUFまたはリモートプロバイダー向けのオープンソースチャットアプリ。クライアントであり、ネットワークゲートウェイではない',
+            '主な違い': 'ローカルGGUFまたはリモートプロバイダー向けのオープンソースチャットアプリ',
           },
           {
             'アプリ': '[RikkaHub](/ja/power-local-llm/rikkahub-review)',
             'プラットフォーム': 'Android',
             '料金/ライセンス': '無料/オープンソース',
-            '主な違い': '他のデバイス向けのサーバーではなく、マルチプロバイダー対応のチャットクライアント',
+            '主な違い': 'マルチプロバイダー対応のチャットクライアント',
           },
           {
             'アプリ': '[Layla](/ja/power-local-llm/layla-review)',
@@ -1668,7 +1668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content:
-          'Ollama Local AIは、AndroidスマートフォンをデスクトップのコーディングツールのOpenAI互換エンドポイントとして使いつつ、端末上でGGUFモデルも動かす、という限られてはいるが実在するニーズに応えるアプリです。Playの掲載情報が説明する機能は、LAN上での提供、マルチプロバイダーのルーティング、フェイルオーバー、クラスタリング、トラフィック診断と、一般的なスマートフォン向けチャットアプリより幅広く、10K+ダウンロードと4.2の評価というストア指標は、実際に使われていることを示唆しています。一方で、このアプリはウェブサイトの見当たらない開発者によるクローズドで監査されていないユーティリティであり、バージョン、ライセンス、ハードウェアの下限、課金の範囲はいずれも公開されておらず、名前がOllamaプロジェクトと混同されやすいという問題もあります。プライベートネットワーク上でスマートフォンをゲートウェイにする構成を試したい開発者には向いています。監査可能なコードやiOS対応が必要な読者は、[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)か[Maid](/ja/power-local-llm/maid-review)から始めてください。',
+          'Ollama Local AIは、AndroidスマートフォンをデスクトップのコーディングツールのOpenAI互換エンドポイントとして使いつつ、端末上でGGUFモデルも動かす、という限られてはいるが実在するニーズに応えるアプリです。Playの掲載情報が説明する機能は、LAN上での提供、マルチプロバイダーのルーティング、フェイルオーバー、クラスタリング、トラフィック診断と、単なるチャットの範囲を超えており、10K+ダウンロードと4.2の評価というストア指標は、実際に使われていることを示唆しています。一方で、このアプリはウェブサイトの見当たらない開発者による監査されていないユーティリティであり、バージョン、ライセンス、ソースコード、ハードウェアの下限、課金の範囲はいずれも公開されておらず、名前がOllamaプロジェクトと混同されやすいという問題もあります。プライベートネットワーク上でスマートフォンをゲートウェイにする構成を試したい開発者には向いています。監査可能なコードやiOS対応が必要な読者は、[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)か[Maid](/ja/power-local-llm/maid-review)から始めてください。',
       },
       sources: {
         id: 'sources',
@@ -1933,19 +1933,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'App': '[PocketPal AI](/pt/power-local-llm/pocketpal-ai-review)',
             'Plataformas': 'Android, iOS',
             'Preço / licença': 'Grátis / MIT',
-            'Principal diferença': 'Cliente de chat de código aberto no dispositivo; sem servidor de API na LAN no design principal',
+            'Principal diferença': 'Cliente de chat de código aberto no dispositivo',
           },
           {
             'App': '[Maid](/pt/power-local-llm/maid-review)',
             'Plataformas': 'Android',
             'Preço / licença': 'Grátis / MIT',
-            'Principal diferença': 'App de chat de código aberto para GGUF local ou provedores remotos; um cliente, não um gateway de rede',
+            'Principal diferença': 'App de chat de código aberto para GGUF local ou provedores remotos',
           },
           {
             'App': '[RikkaHub](/pt/power-local-llm/rikkahub-review)',
             'Plataformas': 'Android',
             'Preço / licença': 'Grátis / código aberto',
-            'Principal diferença': 'Cliente de chat com vários provedores, e não um servidor para outros dispositivos',
+            'Principal diferença': 'Cliente de chat com vários provedores',
           },
           {
             'App': '[Layla](/pt/power-local-llm/layla-review)',
@@ -1998,7 +1998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito',
         content:
-          'O Ollama Local AI atende a uma necessidade estreita e real: usar um celular Android como endpoint compatível com a OpenAI para ferramentas de programação do desktop, ao mesmo tempo em que roda modelos GGUF no próprio dispositivo. A ficha do Play descreve um conjunto de recursos que vai além da maioria dos apps de chat para celular — serviço na LAN, roteamento entre vários provedores, failover, clustering e diagnósticos de tráfego —, e os sinais da loja, com mais de 10 mil downloads e nota 4,2, sugerem uso real. Em contrapartida, o app é um utilitário fechado e não auditado, de um desenvolvedor sem site visível; sua versão, licença, requisitos de hardware e escopo das compras não são publicados; e o nome convida à confusão com o projeto Ollama. Ele serve a desenvolvedores que querem experimentar uma configuração de celular como gateway em uma rede privada; quem precisa de código auditável ou de suporte a iOS deve começar pelo [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) ou pelo [Maid](/pt/power-local-llm/maid-review).',
+          'O Ollama Local AI atende a uma necessidade estreita e real: usar um celular Android como endpoint compatível com a OpenAI para ferramentas de programação do desktop, ao mesmo tempo em que roda modelos GGUF no próprio dispositivo. A ficha do Play descreve um conjunto de recursos que vai além do chat básico no dispositivo — serviço na LAN, roteamento entre vários provedores, failover, clustering e diagnósticos de tráfego —, e os sinais da loja, com mais de 10 mil downloads e nota 4,2, sugerem uso real. Em contrapartida, o app é um utilitário não auditado, de um desenvolvedor sem site visível; sua versão, licença, código-fonte, requisitos de hardware e escopo das compras não são publicados; e o nome convida à confusão com o projeto Ollama. Ele serve a desenvolvedores que querem experimentar uma configuração de celular como gateway em uma rede privada; quem precisa de código auditável ou de suporte a iOS deve começar pelo [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) ou pelo [Maid](/pt/power-local-llm/maid-review).',
       },
       sources: {
         id: 'sources',
@@ -2263,19 +2263,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'التطبيق': '[PocketPal AI](/ar/power-local-llm/pocketpal-ai-review)',
             'المنصات': 'أندرويد، iOS',
             'السعر / الترخيص': 'مجاني / MIT',
-            'الفرق الرئيسي': 'عميل دردشة مفتوح المصدر على الجهاز؛ دون خادم API للشبكة المحلية في تصميمه الأساسي',
+            'الفرق الرئيسي': 'عميل دردشة مفتوح المصدر على الجهاز',
           },
           {
             'التطبيق': '[Maid](/ar/power-local-llm/maid-review)',
             'المنصات': 'أندرويد',
             'السعر / الترخيص': 'مجاني / MIT',
-            'الفرق الرئيسي': 'تطبيق دردشة مفتوح المصدر لنماذج GGUF المحلية أو المزوّدين البعيدين؛ عميل وليس بوابة شبكة',
+            'الفرق الرئيسي': 'تطبيق دردشة مفتوح المصدر لنماذج GGUF المحلية أو المزوّدين البعيدين',
           },
           {
             'التطبيق': '[RikkaHub](/ar/power-local-llm/rikkahub-review)',
             'المنصات': 'أندرويد',
             'السعر / الترخيص': 'مجاني / مفتوح المصدر',
-            'الفرق الرئيسي': 'عميل دردشة متعدد المزوّدين وليس خادماً لأجهزة أخرى',
+            'الفرق الرئيسي': 'عميل دردشة متعدد المزوّدين',
           },
           {
             'التطبيق': '[Layla](/ar/power-local-llm/layla-review)',
@@ -2328,7 +2328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'يلبّي Ollama Local AI حاجة ضيقة وحقيقية: استخدام هاتف أندرويد كنقطة نهاية متوافقة مع OpenAI لأدوات البرمجة على الحاسوب، مع تشغيل نماذج GGUF على الجهاز في الوقت نفسه. تصف صفحة Play مجموعة ميزات تتجاوز معظم تطبيقات الدردشة على الهواتف — خدمة الشبكة المحلية، والتوجيه متعدد المزوّدين، والتحويل عند الفشل، والتجميع، وتشخيصات الحركة — وتوحي مؤشرات المتجر، أكثر من 10 آلاف تنزيل وتقييم 4.2، باستخدام حقيقي. في المقابل، التطبيق أداة مغلقة غير مدقَّقة من مطوّر بلا موقع ظاهر، وإصداره وترخيصه وحدّه الأدنى للعتاد ونطاق مشترياته كلها غير منشورة، واسمه يدعو إلى الخلط بينه وبين مشروع Ollama. يناسب المطوّرين الذين يريدون تجربة إعداد الهاتف كبوابة على شبكة خاصة؛ أما القراء الذين يحتاجون إلى كود قابل للتدقيق أو إلى دعم iOS فعليهم البدء بـ[PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) أو [Maid](/ar/power-local-llm/maid-review).',
+          'يلبّي Ollama Local AI حاجة ضيقة وحقيقية: استخدام هاتف أندرويد كنقطة نهاية متوافقة مع OpenAI لأدوات البرمجة على الحاسوب، مع تشغيل نماذج GGUF على الجهاز في الوقت نفسه. تصف صفحة Play مجموعة ميزات تتجاوز الدردشة البسيطة على الجهاز — خدمة الشبكة المحلية، والتوجيه متعدد المزوّدين، والتحويل عند الفشل، والتجميع، وتشخيصات الحركة — وتوحي مؤشرات المتجر، أكثر من 10 آلاف تنزيل وتقييم 4.2، باستخدام حقيقي. في المقابل، التطبيق أداة غير مدقَّقة من مطوّر بلا موقع ظاهر، وإصداره وترخيصه وشيفرته المصدرية وحدّه الأدنى للعتاد ونطاق مشترياته كلها غير منشورة، واسمه يدعو إلى الخلط بينه وبين مشروع Ollama. يناسب المطوّرين الذين يريدون تجربة إعداد الهاتف كبوابة على شبكة خاصة؛ أما القراء الذين يحتاجون إلى كود قابل للتدقيق أو إلى دعم iOS فعليهم البدء بـ[PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) أو [Maid](/ar/power-local-llm/maid-review).',
       },
       sources: {
         id: 'sources',
@@ -2593,19 +2593,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '应用': '[PocketPal AI](/zh/power-local-llm/pocketpal-ai-review)',
             '平台': 'Android, iOS',
             '价格 / 许可证': '免费 / MIT',
-            '主要区别': '开源的设备端聊天客户端;其核心设计中没有局域网 API 服务器',
+            '主要区别': '开源的设备端聊天客户端',
           },
           {
             '应用': '[Maid](/zh/power-local-llm/maid-review)',
             '平台': 'Android',
             '价格 / 许可证': '免费 / MIT',
-            '主要区别': '面向本地 GGUF 或远程服务商的开源聊天应用;是客户端,而非网络网关',
+            '主要区别': '面向本地 GGUF 或远程服务商的开源聊天应用',
           },
           {
             '应用': '[RikkaHub](/zh/power-local-llm/rikkahub-review)',
             '平台': 'Android',
             '价格 / 许可证': '免费 / 开源',
-            '主要区别': '多服务商聊天客户端,而不是为其他设备提供服务的服务器',
+            '主要区别': '多服务商聊天客户端',
           },
           {
             '应用': '[Layla](/zh/power-local-llm/layla-review)',
@@ -2658,7 +2658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          'Ollama Local AI 满足的是一个狭窄但真实的需求:把 Android 手机用作桌面编程工具的 OpenAI 兼容端点,同时在设备上运行 GGUF 模型。Play 页面描述的功能集比大多数手机聊天应用走得更远——局域网服务、多服务商路由、故障转移、集群和流量诊断——10K+ 的下载量和 4.2 的评分也表明确实有人在使用。但另一方面,这是一款闭源、未经审计的工具,开发者没有可见的网站,其版本、许可证、硬件门槛和购买范围均未公布,而且它的名称容易让人与 Ollama 项目混淆。它适合想在私有网络中尝试"手机即网关"配置的开发者;需要可审计代码或 iOS 支持的读者,应先从 [PocketPal AI](/zh/power-local-llm/pocketpal-ai-review) 或 [Maid](/zh/power-local-llm/maid-review) 入手。',
+          'Ollama Local AI 满足的是一个狭窄但真实的需求:把 Android 手机用作桌面编程工具的 OpenAI 兼容端点,同时在设备上运行 GGUF 模型。Play 页面描述的功能集超出了单纯的设备端聊天——局域网服务、多服务商路由、故障转移、集群和流量诊断——10K+ 的下载量和 4.2 的评分也表明确实有人在使用。但另一方面,这是一款未经审计的工具,开发者没有可见的网站,其版本、许可证、源代码、硬件门槛和购买范围均未公布,而且它的名称容易让人与 Ollama 项目混淆。它适合想在私有网络中尝试"手机即网关"配置的开发者;需要可审计代码或 iOS 支持的读者,应先从 [PocketPal AI](/zh/power-local-llm/pocketpal-ai-review) 或 [Maid](/zh/power-local-llm/maid-review) 入手。',
       },
       sources: {
         id: 'sources',
@@ -2923,19 +2923,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '앱': '[PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)',
             '플랫폼': 'Android, iOS',
             '가격 / 라이선스': '무료 / MIT',
-            '핵심 차이': '오픈소스 온디바이스 채팅 클라이언트, 핵심 설계에 LAN API 서버는 없음',
+            '핵심 차이': '오픈소스 온디바이스 채팅 클라이언트',
           },
           {
             '앱': '[Maid](/ko/power-local-llm/maid-review)',
             '플랫폼': 'Android',
             '가격 / 라이선스': '무료 / MIT',
-            '핵심 차이': '로컬 GGUF 또는 원격 제공업체용 오픈소스 채팅 앱, 네트워크 게이트웨이가 아닌 클라이언트',
+            '핵심 차이': '로컬 GGUF 또는 원격 제공업체용 오픈소스 채팅 앱',
           },
           {
             '앱': '[RikkaHub](/ko/power-local-llm/rikkahub-review)',
             '플랫폼': 'Android',
             '가격 / 라이선스': '무료 / 오픈소스',
-            '핵심 차이': '다른 기기를 위한 서버가 아닌 멀티 제공업체 채팅 클라이언트',
+            '핵심 차이': '멀티 제공업체 채팅 클라이언트',
           },
           {
             '앱': '[Layla](/ko/power-local-llm/layla-review)',
@@ -2988,7 +2988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content:
-          'Ollama Local AI는 좁지만 실재하는 필요를 겨냥합니다. Android 휴대폰을 데스크톱 코딩 도구용 OpenAI 호환 엔드포인트로 쓰면서 기기에서 GGUF 모델도 실행하려는 경우입니다. Play 게재 정보에 설명된 기능은 LAN 서비스, 멀티 제공업체 라우팅, 페일오버, 클러스터링, 트래픽 진단 등 대부분의 휴대폰 채팅 앱보다 폭이 넓고, 다운로드 1만 회 이상과 평점 4.2라는 스토어 지표는 실제 사용이 있음을 시사합니다. 반면 이 앱은 보이는 웹사이트가 없는 개발자의 클로즈드 소스이자 감사되지 않은 유틸리티이고, 버전, 라이선스, 하드웨어 최소 사양, 구매 범위가 모두 공개되어 있지 않으며, 이름 때문에 Ollama 프로젝트와 혼동하기 쉽습니다. 사설 네트워크에서 휴대폰을 게이트웨이로 쓰는 구성을 실험해 보려는 개발자에게는 맞지만, 감사 가능한 코드나 iOS 지원이 필요한 독자는 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)나 [Maid](/ko/power-local-llm/maid-review)부터 시작하는 것이 좋습니다.',
+          'Ollama Local AI는 좁지만 실재하는 필요를 겨냥합니다. Android 휴대폰을 데스크톱 코딩 도구용 OpenAI 호환 엔드포인트로 쓰면서 기기에서 GGUF 모델도 실행하려는 경우입니다. Play 게재 정보에 설명된 기능은 LAN 서비스, 멀티 제공업체 라우팅, 페일오버, 클러스터링, 트래픽 진단 등 단순한 온디바이스 채팅을 넘어서고, 다운로드 1만 회 이상과 평점 4.2라는 스토어 지표는 실제 사용이 있음을 시사합니다. 반면 이 앱은 보이는 웹사이트가 없는 개발자의 감사되지 않은 유틸리티이고, 버전, 라이선스, 소스 코드, 하드웨어 최소 사양, 구매 범위가 모두 공개되어 있지 않으며, 이름 때문에 Ollama 프로젝트와 혼동하기 쉽습니다. 사설 네트워크에서 휴대폰을 게이트웨이로 쓰는 구성을 실험해 보려는 개발자에게는 맞지만, 감사 가능한 코드나 iOS 지원이 필요한 독자는 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)나 [Maid](/ko/power-local-llm/maid-review)부터 시작하는 것이 좋습니다.',
       },
       sources: {
         id: 'sources',

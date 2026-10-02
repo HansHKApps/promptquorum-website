@@ -541,6 +541,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'candle-vllm-review',
   'swiftlm-review',
   'radiant-canvas',
+
+  // Ollama Local AI review (Mobile & Edge LLMs) — 2026-10-02
+  'ollama-local-ai-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
