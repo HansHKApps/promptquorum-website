@@ -1045,6 +1045,7 @@ const HUB_THEMES: Array<{
       'ai-on-device-review',
       'google-ai-edge-gallery-review',
       'off-grid-ai-review',
+      'paios-review',
       'toolneuron-review',
       'localai-apexcreator-review',
       'solair-ai-review',

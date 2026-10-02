@@ -313,6 +313,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'off-grid-ai-review':                      'off-grid-ai-review',
   // Pocket AI - No Internet review — 2026-09-11
   'pocket-ai-review':                        'pocket-ai-review',
+  'paios-review':                            'paios-review',
   // Stable Diffusion review — 2026-09-05
   'stable-diffusion-review':                 'stable-diffusion-review',
 
