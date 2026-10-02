@@ -11,6 +11,8 @@ export interface ExpandableListItem {
   url?: string
   date: string
   description?: string
+  /** Set (already localized, e.g. "New") when the item is within the fresh window — renders the loud highlight treatment. */
+  freshLabel?: string
 }
 
 /**
@@ -36,15 +38,28 @@ export function ExpandableList({
     <div className="flex-1 flex flex-col">
       <ul className="space-y-2.5">
         {shown.map((item) => {
+          const fresh = Boolean(item.freshLabel)
           const row = (
             <>
-              <p className="text-sm font-semibold text-text-primary line-clamp-1">{item.title}</p>
+              {fresh && (
+                <span className="mb-1 inline-block rounded-full bg-primary px-2 py-0.5 text-[11px] font-extrabold uppercase tracking-wide text-white">
+                  {item.freshLabel}
+                </span>
+              )}
+              <p className={`text-sm text-text-primary line-clamp-1 ${fresh ? 'font-extrabold' : 'font-semibold'}`}>{item.title}</p>
               {item.description && <p className="text-xs text-text-secondary line-clamp-1">{item.description}</p>}
-              <p className="text-xs text-text-muted">{item.date}</p>
+              <p className={`text-xs ${fresh ? 'font-semibold text-text-secondary' : 'text-text-muted'}`}>{item.date}</p>
             </>
           )
           return (
-            <li key={item.key} className="border-b border-border/60 pb-2 last:border-0">
+            <li
+              key={item.key}
+              className={
+                fresh
+                  ? 'rounded-md border-l-4 border-primary bg-primary/10 py-2 pl-3 pr-2'
+                  : 'border-b border-border/60 pb-2 last:border-0'
+              }
+            >
               {item.url ? (
                 <Link href={item.url} className="block hover:text-primary transition-colors">
                   {row}

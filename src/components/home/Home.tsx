@@ -3,6 +3,7 @@ import { getLangDir } from '@/lib/i18n/constants'
 import { getComparableGroups } from '@/lib/power-local-llm/compare-data'
 import { ComparisonToolShell } from './ComparisonToolShell'
 import { IntentSearchBlock } from './IntentSearchBlock'
+import { FreshStripBlock } from './FreshStripBlock'
 import { LatestPostsBlock } from './LatestPostsBlock'
 import { LatestAppsBlock } from './LatestAppsBlock'
 import { FounderReviewsBlock } from './FounderReviewsBlock'
@@ -39,6 +40,12 @@ export function Home({ lang }: { lang: Language }) {
         </div>
       </div>
       <div className="container mx-auto px-4 py-8 max-w-7xl">
+        {/* Just published — last 3 days, loudest element on the page; renders nothing when empty */}
+        <FreshStripBlock lang={lang} />
+
+        {/* By the numbers — compact bar, moved up from Tier 3 */}
+        <ByTheNumbersBlock lang={lang} layout="bar" />
+
         {/* Tier 1 — large, top of page */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           <IntentSearchBlock lang={lang} />
@@ -59,8 +66,7 @@ export function Home({ lang }: { lang: Language }) {
         </section>
 
         {/* Tier 3 — small/compact */}
-        <section className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-          <ByTheNumbersBlock lang={lang} />
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <RecentMentionsBlock lang={lang} />
           <FeedbackBlock lang={lang} />
           <QuickTipBlock lang={lang} />

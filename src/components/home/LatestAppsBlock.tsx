@@ -3,6 +3,7 @@ import { getLatestApps } from '@/lib/home/apps-feed'
 import { CATEGORY_SUB_LABEL } from '@/lib/power-local-llm/apps/categories'
 import type { CategorySubKey } from '@/lib/power-local-llm/apps/categories'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
+import { freshAgeDays } from '@/lib/article-freshness'
 import { HomeCard } from './HomeCard'
 import { ExpandableList } from './ExpandableList'
 import { t } from './home-i18n'
@@ -24,6 +25,7 @@ export function LatestAppsBlock({ lang = 'en' }: { lang?: Language }) {
           url: a.url,
           description: `${a.tagline} — ${CATEGORY_SUB_LABEL[a.category as CategorySubKey]?.[lang] ?? CATEGORY_SUB_LABEL[a.category as CategorySubKey]?.en ?? a.category}`,
           date: formatDisplayDate(a.addedDate, lang),
+          freshLabel: freshAgeDays(a.addedDate) !== null ? t('freshNew', lang) : undefined,
         }))}
       />
     </HomeCard>

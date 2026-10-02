@@ -1,6 +1,7 @@
 import type { Language } from '@/lib/blog/blogContent'
 import { getLatestPosts } from '@/lib/home/content-feed'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
+import { freshAgeDays } from '@/lib/article-freshness'
 import { HomeCard } from './HomeCard'
 import { ExpandableList } from './ExpandableList'
 import { t } from './home-i18n'
@@ -22,6 +23,7 @@ export function LatestPostsBlock({ lang = 'en' }: { lang?: Language }) {
           url: p.url,
           description: p.excerpt,
           date: formatDisplayDate(p.publishDate, lang),
+          freshLabel: freshAgeDays(p.publishDate) !== null ? t('freshNew', lang) : undefined,
         }))}
       />
     </HomeCard>
