@@ -2,7 +2,7 @@
 // One-off hero generator for ollama-local-ai-review (all 9 locales).
 // Facts strip pulled from src/lib/power-local-llm/apps/ollama-local-ai.ts per CLAUDE.md's mandatory
 // FeatureAppPost hero rule: hardware (varies by model — no fixed floor in the listing), price
-// (freemium), license (closed source / not stated), platforms (Android).
+// (freemium), license (not stated in the listing), platforms (Android).
 // Title/subtitle/bullets reuse each locale block of the article itself (markdown stripped, since
 // Satori does not render markdown syntax); the article is loaded by transpiling the TS source.
 import fs from 'fs'
@@ -30,15 +30,15 @@ const stripMd = (s) =>
     .trim()
 
 const L = {
-  en: { hw: 'Hardware', hwV: 'Varies by model', price: 'Price', priceV: 'Free + paid tier', lic: 'License', plat: 'Platforms', footer: 'PromptQuorum Guide' },
-  de: { hw: 'Hardware', hwV: 'Je nach Modell', price: 'Preis', priceV: 'Kostenlos + kostenpflichtige Stufe', lic: 'Lizenz', plat: 'Plattformen', footer: 'PromptQuorum-Leitfaden' },
-  fr: { hw: 'Matériel', hwV: 'Selon le modèle', price: 'Prix', priceV: 'Gratuit + offre payante', lic: 'Licence', plat: 'Plateformes', footer: 'Guide PromptQuorum' },
-  es: { hw: 'Hardware', hwV: 'Según el modelo', price: 'Precio', priceV: 'Gratis + plan de pago', lic: 'Licencia', plat: 'Plataformas', footer: 'Guía de PromptQuorum' },
-  ja: { hw: 'ハードウェア', hwV: 'モデルにより異なる', price: '価格', priceV: '無料＋有料プラン', lic: 'ライセンス', plat: '対応プラットフォーム', footer: 'PromptQuorumガイド' },
-  zh: { hw: '硬件', hwV: '因模型而异', price: '价格', priceV: '免费+付费版', lic: '许可证', plat: '支持平台', footer: 'PromptQuorum 指南' },
-  pt: { hw: 'Hardware', hwV: 'Depende do modelo', price: 'Preço', priceV: 'Grátis + plano pago', lic: 'Licença', plat: 'Plataformas', footer: 'Guia PromptQuorum' },
-  ar: { hw: 'العتاد', hwV: 'يختلف حسب النموذج', price: 'السعر', priceV: 'مجاني + خطة مدفوعة', lic: 'الترخيص', plat: 'المنصات', footer: 'دليل PromptQuorum' },
-  ko: { hw: '하드웨어', hwV: '모델에 따라 다름', price: '가격', priceV: '무료 + 유료 요금제', lic: '라이선스', plat: '플랫폼', footer: 'PromptQuorum 가이드' },
+  en: { licV: 'Not stated', hw: 'Hardware', hwV: 'Varies by model', price: 'Price', priceV: 'Free + paid tier', lic: 'License', plat: 'Platforms', footer: 'PromptQuorum Guide' },
+  de: { licV: 'Nicht angegeben', hw: 'Hardware', hwV: 'Je nach Modell', price: 'Preis', priceV: 'Kostenlos + kostenpflichtige Stufe', lic: 'Lizenz', plat: 'Plattformen', footer: 'PromptQuorum-Leitfaden' },
+  fr: { licV: 'Non indiquée', hw: 'Matériel', hwV: 'Selon le modèle', price: 'Prix', priceV: 'Gratuit + offre payante', lic: 'Licence', plat: 'Plateformes', footer: 'Guide PromptQuorum' },
+  es: { licV: 'No indicada', hw: 'Hardware', hwV: 'Según el modelo', price: 'Precio', priceV: 'Gratis + plan de pago', lic: 'Licencia', plat: 'Plataformas', footer: 'Guía de PromptQuorum' },
+  ja: { licV: '記載なし', hw: 'ハードウェア', hwV: 'モデルにより異なる', price: '価格', priceV: '無料＋有料プラン', lic: 'ライセンス', plat: '対応プラットフォーム', footer: 'PromptQuorumガイド' },
+  zh: { licV: '未说明', hw: '硬件', hwV: '因模型而异', price: '价格', priceV: '免费+付费版', lic: '许可证', plat: '支持平台', footer: 'PromptQuorum 指南' },
+  pt: { licV: 'Não informada', hw: 'Hardware', hwV: 'Depende do modelo', price: 'Preço', priceV: 'Grátis + plano pago', lic: 'Licença', plat: 'Plataformas', footer: 'Guia PromptQuorum' },
+  ar: { licV: 'غير مذكور', hw: 'العتاد', hwV: 'يختلف حسب النموذج', price: 'السعر', priceV: 'مجاني + خطة مدفوعة', lic: 'الترخيص', plat: 'المنصات', footer: 'دليل PromptQuorum' },
+  ko: { licV: '명시되지 않음', hw: '하드웨어', hwV: '모델에 따라 다름', price: '가격', priceV: '무료 + 유료 요금제', lic: '라이선스', plat: '플랫폼', footer: 'PromptQuorum 가이드' },
 }
 
 async function main() {
@@ -61,7 +61,7 @@ async function main() {
       facts: [
         { label: t.hw, value: t.hwV, tone: 'slate' },
         { label: t.price, value: t.priceV, tone: 'amber' },
-        { label: t.lic, value: 'Closed source', tone: 'rose' },
+        { label: t.lic, value: t.licV, tone: 'slate' },
         { label: t.plat, value: 'Android', tone: 'slate' },
       ],
       footer: t.footer,

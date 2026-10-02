@@ -19,7 +19,7 @@ export const app: ToolRecord = {
   platforms: ['android'],
   worksWith: ['Ollama', 'llama.cpp', 'OpenAI API', 'Anthropic API', 'NVIDIA NIM', 'Hugging Face'],
   engine: 'both', // embedded llama.cpp for on-device GGUF models + external backends it proxies to
-  license: 'Closed source', // not stated on the Play listing and no public repository found; treated as proprietary until the developer says otherwise
+  license: 'Not stated', // License: not stated in the Google Play listing; no public source repository was identified. Do NOT infer a license from the separate Ollama project.
   price: 'freemium', // Play listing: free to install, offers in-app purchases
   hardware: { ramGb: null, vramGb: null, cpuOnly: null, variesByModel: true }, // listing gives no RAM/Android-version floor; the on-device model size sets the real RAM need
   stars: null,
