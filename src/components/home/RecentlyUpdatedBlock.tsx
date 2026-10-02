@@ -1,6 +1,7 @@
 import type { Language } from '@/lib/blog/blogContent'
 import { getRecentlyUpdated } from '@/lib/home/content-feed'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
+import { freshAgeDays } from '@/lib/article-freshness'
 import { HomeCard } from './HomeCard'
 import { ExpandableList } from './ExpandableList'
 import { t } from './home-i18n'
@@ -23,6 +24,7 @@ export function RecentlyUpdatedBlock({ lang = 'en' }: { lang?: Language }) {
           title: u.title,
           url: u.url,
           date: t('updatedOnTemplate', lang, { date: formatDisplayDate(u.dateModified, lang) }),
+          freshLabel: freshAgeDays(u.dateModified) !== null ? t('freshUpdated', lang) : undefined,
         }))}
       />
     </HomeCard>

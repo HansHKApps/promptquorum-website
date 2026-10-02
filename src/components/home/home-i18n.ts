@@ -392,6 +392,18 @@ const HOME_UI = {
     pt: 'Mostrar {n} instantâneos anteriores', ar: 'إظهار {n} لقطات سابقة', ko: '이전 스냅샷 {n}개 보기',
   },
 
+  // --- "Just published" strip + fresh-item highlight (last 3 days) ---
+  freshTitle: { en: 'Just published', de: 'Neu veröffentlicht', fr: 'Vient de paraître', ja: '公開されたばかり', zh: '最新发布', es: 'Recién publicado', pt: 'Acabou de ser publicado', ar: 'نُشر حديثًا', ko: '방금 게시됨' },
+  freshSubtitleTemplate: { en: 'Added in the last {n} days', de: 'In den letzten {n} Tagen hinzugefügt', fr: 'Ajouté ces {n} derniers jours', ja: '過去{n}日以内に追加', zh: '过去{n}天内新增', es: 'Añadido en los últimos {n} días', pt: 'Adicionado nos últimos {n} dias', ar: 'أُضيف خلال آخر {n} أيام', ko: '최근 {n}일 이내 추가' },
+  freshNew: { en: 'New', de: 'Neu', fr: 'Nouveau', ja: '新着', zh: '新', es: 'Nuevo', pt: 'Novo', ar: 'جديد', ko: '신규' },
+  freshUpdated: { en: 'Updated', de: 'Aktualisiert', fr: 'Mis à jour', ja: '更新', zh: '已更新', es: 'Actualizado', pt: 'Atualizado', ar: 'محدَّث', ko: '업데이트됨' },
+  freshKindReview: { en: 'Review', de: 'Test', fr: 'Avis', ja: 'レビュー', zh: '评测', es: 'Reseña', pt: 'Análise', ar: 'مراجعة', ko: '리뷰' },
+  freshKindApp: { en: 'App', de: 'App', fr: 'Appli', ja: 'アプリ', zh: '应用', es: 'App', pt: 'App', ar: 'تطبيق', ko: '앱' },
+  freshKindGuide: { en: 'Guide', de: 'Ratgeber', fr: 'Guide', ja: 'ガイド', zh: '指南', es: 'Guía', pt: 'Guia', ar: 'دليل', ko: '가이드' },
+  freshToday: { en: 'Today', de: 'Heute', fr: "Aujourd'hui", ja: '今日', zh: '今天', es: 'Hoy', pt: 'Hoje', ar: 'اليوم', ko: '오늘' },
+  freshYesterday: { en: 'Yesterday', de: 'Gestern', fr: 'Hier', ja: '昨日', zh: '昨天', es: 'Ayer', pt: 'Ontem', ar: 'أمس', ko: '어제' },
+  freshDaysAgoTemplate: { en: '{n} days ago', de: 'vor {n} Tagen', fr: 'il y a {n} jours', ja: '{n}日前', zh: '{n}天前', es: 'hace {n} días', pt: 'há {n} dias', ar: 'قبل {n} أيام', ko: '{n}일 전' },
+
   // --- PromptQuorum app banner ---
   pqBannerEyebrow: { en: 'PromptQuorum App · Beta', de: "PromptQuorum App · Beta", fr: "Application PromptQuorum · Bêta", ja: "PromptQuorum アプリ · ベータ", zh: "PromptQuorum 应用 · 测试版", es: "App PromptQuorum · Beta", pt: "App PromptQuorum · Beta", ar: "تطبيق PromptQuorum · تجريبي", ko: "PromptQuorum 앱 · 베타" },
   pqBannerHeading: { en: 'Optimize one prompt. Ask 25+ AIs. Compare the answers.', de: "Einen Prompt optimieren. 25+ KIs fragen. Antworten vergleichen.", fr: "Optimisez un prompt. Interrogez 25+ IA. Comparez les réponses.", ja: "1つのプロンプトを最適化。25以上のAIに質問。回答を比較。", zh: "优化一条提示词，询问 25+ 个 AI，对比所有答案。", es: "Optimiza un prompt. Pregunta a más de 25 IA. Compara las respuestas.", pt: "Otimize um prompt. Pergunte a mais de 25 IAs. Compare as respostas.", ar: "حسّن موجّهًا واحدًا، واسأل أكثر من 25 ذكاءً اصطناعيًا، وقارن الإجابات.", ko: "프롬프트 하나를 최적화하고, 25개 이상의 AI에 묻고, 답변을 비교하세요." },

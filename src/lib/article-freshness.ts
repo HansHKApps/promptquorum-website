@@ -12,6 +12,20 @@ function daysSince(dateStr: string): number {
   return Math.floor((today.getTime() - date.getTime()) / (1000 * 60 * 60 * 24))
 }
 
+/** Window for the homepage "Just published" highlight — a stricter, louder tier inside the 14-day "New" badge. */
+export const FRESH_DAYS = 3
+
+/**
+ * Whole days between `dateStr` and the (build-frozen) current date when that is within the
+ * FRESH_DAYS window, else null. Same build-date basis as the New/Updated badges, so output stays
+ * stable across ISR revalidations until the next deployment.
+ */
+export function freshAgeDays(dateStr?: string): number | null {
+  if (!dateStr) return null
+  const days = daysSince(dateStr)
+  return days >= 0 && days <= FRESH_DAYS ? days : null
+}
+
 export function isNewArticle(publishDate?: string): boolean {
   if (!publishDate) return false
   const days = daysSince(publishDate)
