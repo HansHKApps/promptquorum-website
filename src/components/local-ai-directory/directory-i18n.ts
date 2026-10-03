@@ -649,6 +649,131 @@ const DIR_UI = {
     ar: 'محفوظ لنوع جهاز مختلف — اضبطه لـ {machine}',
     ko: '다른 기기 유형으로 저장됨 — {machine}용으로 다시 설정하세요',
   },
+
+  // --- CloudAlternativeLookup (image-generation pilot) ---
+  altTitle: {
+    en: 'Find a local alternative to an online app',
+    de: 'Lokale Alternative zu einer Online-App finden',
+    fr: 'Trouver une alternative locale à une application en ligne',
+    ja: 'オンラインアプリのローカル代替を探す',
+    zh: '为在线应用寻找本地替代方案',
+    es: 'Encuentra una alternativa local a una aplicación en línea',
+    pt: 'Encontre uma alternativa local para um app online',
+    ar: 'ابحث عن بديل محلي لتطبيق عبر الإنترنت',
+    ko: '온라인 앱의 로컬 대안 찾기',
+  },
+  altBadge: {
+    en: 'Test feature', de: 'Testfunktion', fr: 'Fonction de test', ja: 'テスト機能', zh: '测试功能',
+    es: 'Función de prueba', pt: 'Recurso de teste', ar: 'ميزة تجريبية', ko: '테스트 기능',
+  },
+  altScopeNotice: {
+    en: 'Test feature, image generation only. This lookup currently covers {count} online image apps; any other app returns no result. Search terms are saved anonymously (text only, no IP address) so we can decide what to map next.',
+    de: 'Testfunktion, nur Bildgenerierung. Die Suche deckt derzeit {count} Online-Bild-Apps ab; jede andere App liefert kein Ergebnis. Suchbegriffe werden anonym gespeichert (nur Text, keine IP-Adresse), damit wir entscheiden können, was wir als Nächstes erfassen.',
+    fr: 'Fonction de test, génération d’images uniquement. Cette recherche couvre actuellement {count} applications d’images en ligne ; toute autre application ne renvoie aucun résultat. Les termes recherchés sont enregistrés de façon anonyme (texte uniquement, sans adresse IP) pour décider de la suite à couvrir.',
+    ja: 'テスト機能（画像生成のみ）。現在この検索が対象とするオンライン画像アプリは{count}件で、それ以外のアプリでは結果が表示されません。次に対応するアプリを決めるため、検索語は匿名で保存されます（テキストのみ、IPアドレスなし）。',
+    zh: '测试功能，仅限图像生成。目前此查询涵盖 {count} 个在线图像应用，其他应用不会返回结果。搜索词会匿名保存（仅文本，不含 IP 地址），用于决定下一步收录哪些应用。',
+    es: 'Función de prueba, solo generación de imágenes. Esta búsqueda cubre actualmente {count} aplicaciones de imágenes en línea; cualquier otra aplicación no devuelve resultados. Los términos de búsqueda se guardan de forma anónima (solo texto, sin dirección IP) para decidir qué añadir después.',
+    pt: 'Recurso de teste, somente geração de imagens. Esta busca cobre atualmente {count} apps de imagem online; qualquer outro app não retorna resultado. Os termos pesquisados são salvos de forma anônima (somente texto, sem endereço IP) para decidirmos o que mapear a seguir.',
+    ar: 'ميزة تجريبية، لتوليد الصور فقط. يغطي هذا البحث حاليًا {count} من تطبيقات الصور عبر الإنترنت، وأي تطبيق آخر لا يعرض نتيجة. تُحفظ مصطلحات البحث دون كشف الهوية (نص فقط، بدون عنوان IP) لنقرر ما سنضيفه لاحقًا.',
+    ko: '테스트 기능으로, 이미지 생성만 지원합니다. 현재 온라인 이미지 앱 {count}개를 다루며, 그 외의 앱은 결과가 나오지 않습니다. 다음에 추가할 대상을 정하기 위해 검색어는 익명으로 저장됩니다(텍스트만, IP 주소 없음).',
+  },
+  altInputLabel: {
+    en: 'Online app name', de: 'Name der Online-App', fr: 'Nom de l’application en ligne', ja: 'オンラインアプリ名', zh: '在线应用名称',
+    es: 'Nombre de la aplicación en línea', pt: 'Nome do app online', ar: 'اسم التطبيق عبر الإنترنت', ko: '온라인 앱 이름',
+  },
+  altPlaceholder: {
+    en: 'e.g. Midjourney, Adobe Firefly, Leonardo', de: 'z. B. Midjourney, Adobe Firefly, Leonardo', fr: 'p. ex. Midjourney, Adobe Firefly, Leonardo',
+    ja: '例: Midjourney、Adobe Firefly、Leonardo', zh: '例如 Midjourney、Adobe Firefly、Leonardo', es: 'p. ej. Midjourney, Adobe Firefly, Leonardo',
+    pt: 'ex.: Midjourney, Adobe Firefly, Leonardo', ar: 'مثال: Midjourney، Adobe Firefly، Leonardo', ko: '예: Midjourney, Adobe Firefly, Leonardo',
+  },
+  altButton: {
+    en: 'Find alternatives', de: 'Alternativen finden', fr: 'Trouver des alternatives', ja: '代替を探す', zh: '查找替代方案',
+    es: 'Buscar alternativas', pt: 'Buscar alternativas', ar: 'ابحث عن بدائل', ko: '대안 찾기',
+  },
+  altSupported: {
+    en: 'Try:', de: 'Probieren:', fr: 'Essayez :', ja: '例:', zh: '试试：', es: 'Prueba:', pt: 'Experimente:', ar: 'جرّب:', ko: '예시:',
+  },
+  altTierClosest: {
+    en: 'Closest', de: 'Am nächsten', fr: 'Les plus proches', ja: '最も近い', zh: '最接近',
+    es: 'Más cercanas', pt: 'Mais próximas', ar: 'الأقرب', ko: '가장 가까움',
+  },
+  altTierSimilar: {
+    en: 'Similar workflow', de: 'Ähnlicher Workflow', fr: 'Flux de travail similaire', ja: '似たワークフロー', zh: '相似的工作流程',
+    es: 'Flujo de trabajo similar', pt: 'Fluxo de trabalho semelhante', ar: 'سير عمل مشابه', ko: '비슷한 워크플로',
+  },
+  altTierPartial: {
+    en: 'Partial overlap', de: 'Teilweise Überschneidung', fr: 'Recouvrement partiel', ja: '部分的に重なる', zh: '部分重叠',
+    es: 'Coincidencia parcial', pt: 'Sobreposição parcial', ar: 'تداخل جزئي', ko: '일부 겹침',
+  },
+  altResultTitle: {
+    en: 'Local alternatives to {name}', de: 'Lokale Alternativen zu {name}', fr: 'Alternatives locales à {name}',
+    ja: '{name}のローカル代替', zh: '{name} 的本地替代方案', es: 'Alternativas locales a {name}',
+    pt: 'Alternativas locais ao {name}', ar: 'بدائل محلية لـ {name}', ko: '{name}의 로컬 대안',
+  },
+  altNoLocal: {
+    en: 'No close local equivalent mapped yet.',
+    de: 'Noch kein nahes lokales Gegenstück erfasst.',
+    fr: 'Aucun équivalent local proche n’est encore répertorié.',
+    ja: '近いローカル代替はまだ登録されていません。',
+    zh: '尚未收录相近的本地替代方案。',
+    es: 'Todavía no hay un equivalente local cercano registrado.',
+    pt: 'Ainda não há um equivalente local próximo mapeado.',
+    ar: 'لم يُسجَّل بعد بديل محلي قريب.',
+    ko: '아직 가까운 로컬 대안이 등록되지 않았습니다.',
+  },
+  altMissTitle: {
+    en: 'No mapping for "{query}" yet', de: 'Noch keine Zuordnung für „{query}“', fr: 'Pas encore de correspondance pour « {query} »',
+    ja: '「{query}」の対応はまだありません', zh: '尚无“{query}”的对应项', es: 'Aún no hay correspondencia para «{query}»',
+    pt: 'Ainda não há mapeamento para "{query}"', ar: 'لا يوجد ربط لـ "{query}" بعد', ko: '"{query}"에 대한 매핑이 아직 없습니다',
+  },
+  altMissBody: {
+    en: 'This test covers image generation only. Your search was saved anonymously so we can prioritise what to add next.',
+    de: 'Dieser Test deckt nur Bildgenerierung ab. Deine Suche wurde anonym gespeichert, damit wir priorisieren können, was als Nächstes hinzukommt.',
+    fr: 'Ce test ne couvre que la génération d’images. Votre recherche a été enregistrée de façon anonyme pour prioriser les prochains ajouts.',
+    ja: 'このテストは画像生成のみが対象です。次に追加する内容の優先順位付けのため、検索内容は匿名で保存されました。',
+    zh: '此测试仅涵盖图像生成。您的搜索已匿名保存，以便我们确定下一步优先添加的内容。',
+    es: 'Esta prueba solo cubre la generación de imágenes. Tu búsqueda se guardó de forma anónima para priorizar lo que añadiremos después.',
+    pt: 'Este teste cobre apenas geração de imagens. Sua busca foi salva de forma anônima para priorizarmos o que adicionar a seguir.',
+    ar: 'يقتصر هذا الاختبار على توليد الصور. حُفظ بحثك دون كشف الهوية لنحدد أولويات ما سنضيفه لاحقًا.',
+    ko: '이 테스트는 이미지 생성만 다룹니다. 다음에 추가할 항목의 우선순위를 정하기 위해 검색어가 익명으로 저장되었습니다.',
+  },
+  altBrowseImage: {
+    en: 'Browse all image generation apps', de: 'Alle Apps zur Bildgenerierung ansehen', fr: 'Parcourir toutes les applications de génération d’images',
+    ja: '画像生成アプリをすべて見る', zh: '浏览所有图像生成应用', es: 'Ver todas las aplicaciones de generación de imágenes',
+    pt: 'Ver todos os apps de geração de imagens', ar: 'تصفّح جميع تطبيقات توليد الصور', ko: '이미지 생성 앱 모두 보기',
+  },
+  altAssumption: {
+    en: 'Editorial judgment, not verified', de: 'Redaktionelle Einschätzung, nicht geprüft', fr: 'Appréciation éditoriale, non vérifiée',
+    ja: '編集上の判断（未検証）', zh: '编辑判断，未经核实', es: 'Criterio editorial, no verificado',
+    pt: 'Julgamento editorial, não verificado', ar: 'تقدير تحريري، غير مُتحقَّق منه', ko: '편집 판단, 미검증',
+  },
+  altVerifiedOn: {
+    en: 'Mapping checked on {date}', de: 'Zuordnung geprüft am {date}', fr: 'Correspondance vérifiée le {date}',
+    ja: '対応関係の確認日: {date}', zh: '对应关系核查日期：{date}', es: 'Correspondencia comprobada el {date}',
+    pt: 'Mapeamento verificado em {date}', ar: 'تم التحقق من الربط في {date}', ko: '매핑 확인일: {date}',
+  },
+  altSources: {
+    en: 'Sources', de: 'Quellen', fr: 'Sources', ja: '出典', zh: '来源', es: 'Fuentes', pt: 'Fontes', ar: 'المصادر', ko: '출처',
+  },
+  altDisclaimer: {
+    en: 'Closeness reflects tool type and workflow, not image quality. Output depends on the model you load and your hardware. Data may be outdated; report corrections.',
+    de: 'Die Nähe beschreibt Werkzeugtyp und Workflow, nicht die Bildqualität. Das Ergebnis hängt vom geladenen Modell und deiner Hardware ab. Daten können veraltet sein; Korrekturen bitte melden.',
+    fr: 'La proximité reflète le type d’outil et le flux de travail, pas la qualité d’image. Le résultat dépend du modèle chargé et de votre matériel. Les données peuvent être obsolètes ; signalez les corrections.',
+    ja: '近さはツールの種類とワークフローを示すもので、画質を示すものではありません。出力は読み込むモデルとお使いのハードウェアに依存します。情報が古い場合があります。修正があればお知らせください。',
+    zh: '接近程度反映的是工具类型和工作流程，而非图像质量。输出结果取决于您加载的模型和硬件。数据可能已过时，欢迎反馈更正。',
+    es: 'La cercanía refleja el tipo de herramienta y el flujo de trabajo, no la calidad de la imagen. El resultado depende del modelo que cargues y de tu hardware. Los datos pueden estar desactualizados; comunica las correcciones.',
+    pt: 'A proximidade reflete o tipo de ferramenta e o fluxo de trabalho, não a qualidade da imagem. O resultado depende do modelo que você carrega e do seu hardware. Os dados podem estar desatualizados; informe correções.',
+    ar: 'يعكس القرب نوع الأداة وسير العمل، لا جودة الصورة. تعتمد النتيجة على النموذج الذي تحمّله وعلى جهازك. قد تكون البيانات قديمة؛ يُرجى الإبلاغ عن التصحيحات.',
+    ko: '근접도는 도구 유형과 워크플로를 나타내며 이미지 품질을 뜻하지 않습니다. 결과물은 불러오는 모델과 하드웨어에 따라 달라집니다. 데이터가 오래되었을 수 있으니 수정 사항을 알려 주세요.',
+  },
+  altHw: {
+    en: 'Hardware', de: 'Hardware', fr: 'Matériel', ja: 'ハードウェア', zh: '硬件', es: 'Hardware', pt: 'Hardware', ar: 'العتاد', ko: '하드웨어',
+  },
+  altHwVaries: {
+    en: 'Depends on the model you load', de: 'Hängt vom geladenen Modell ab', fr: 'Dépend du modèle chargé',
+    ja: '読み込むモデルによる', zh: '取决于您加载的模型', es: 'Depende del modelo que cargues',
+    pt: 'Depende do modelo que você carrega', ar: 'يعتمد على النموذج الذي تحمّله', ko: '불러오는 모델에 따라 다름',
+  },
 } satisfies Record<string, Dict>
 
 export type DirUiKey = keyof typeof DIR_UI
