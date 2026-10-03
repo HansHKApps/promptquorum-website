@@ -287,15 +287,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Menschen, die viele KI-Prompts und Nachrichten schreiben und sie lieber diktieren als tippen möchten',
     primaryTerm: 'AquaVoice',
     affiliateDisclosure: true,
-    disclosureNote: 'Offenlegung: AquaVoice hat PromptQuorum für diesen Test kostenlosen Zugang zum Produkt gewährt. PromptQuorum erhält von AquaVoice weder eine Zahlung noch eine Provision. Die Meinungen und die hier beschriebene Nutzung sind die des Autors.',
-    title: 'AquaVoice im Test: Sprachdiktat für KI-Prompts',
-    seoTitle: 'AquaVoice im Test: Sprachdiktat für KI',
-    intro: "AquaVoice (Aqua) ist eine Diktier-App unter [aquavoice.com](https://aquavoice.com/), die gesprochene Sprache in Echtzeit in Text umwandelt und in die App einfügt, in der Sie gerade arbeiten. Dieser Test beruht auf der täglichen Nutzung durch den Autor, der damit Prompts in Claude Code und Nachrichten in WhatsApp diktiert. Das zentrale Argument ist einfach: Sprechen ist schneller als Tippen, daher enthält eine diktierte Anfrage mehr Kontext, und mehr Kontext führt zu einer besseren Antwort der KI.",
-    metaDescription: 'AquaVoice im Test: Prompts in Claude Code und WhatsApp diktieren, warum Sprechen der KI mehr Kontext gibt, Mehrsprachigkeit und Grenzen im Alltag.',
+    disclosureNote: 'Offenlegung: AquaVoice hat PromptQuorum für diese Rezension kostenlosen Zugang zum Produkt gewährt. PromptQuorum erhält von AquaVoice weder eine Zahlung noch eine Provision. Die Meinungen und die hier beschriebene Nutzung sind die des Autors.',
+    title: 'AquaVoice-Rezension: Sprachdiktat für KI-Prompts',
+    seoTitle: 'AquaVoice-Rezension: Sprachdiktat für KI',
+    intro: "AquaVoice (Aqua) ist eine Diktier-App unter [aquavoice.com](https://aquavoice.com/), die gesprochene Sprache in Echtzeit in Text umwandelt und in die App einfügt, in der Sie gerade arbeiten. Diese Rezension beruht auf der täglichen Nutzung durch den Autor, der damit Prompts in Claude Code und Nachrichten in WhatsApp diktiert. Das zentrale Argument ist einfach: Sprechen ist schneller als Tippen, daher enthält eine diktierte Anfrage mehr Kontext, und mehr Kontext führt zu einer besseren Antwort der KI.",
+    metaDescription: 'AquaVoice-Rezension: Prompts in Claude Code und WhatsApp diktieren, warum Sprechen der KI mehr Kontext gibt, Mehrsprachigkeit und Grenzen im Alltag.',
     readTime: '7 Min. Lesezeit',
     targetKeywords: [
-      'aquavoice test',
-      'aqua voice test',
+      'aquavoice rezension',
+      'aqua voice rezension',
       'sprachdiktat für ki-prompts',
       'prompts diktieren claude code',
       'spracherkennung für ki-kontext',
@@ -344,13 +344,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Kernidee: Sprechen ist schneller als Tippen und hilft, die eigene Sichtweise besser auszudrücken; so enthält jede KI-Anfrage mehr Kontext und führt zu einem besseren Ergebnis',
           'Nutzung durch den Autor: grundlegendes Diktieren in Claude Code, WhatsApp und andere KI-Tools auf einem MacBook; funktioniert einwandfrei, die Spracherfassung ist zuverlässig',
-          'Sprachen: Deutsch, Englisch, Französisch und Russisch wurden in den Tests des Autors alle verstanden',
+          'Sprachen: Deutsch, Englisch, Französisch und Russisch wurden im eigenen Gebrauch des Autors alle verstanden',
           'Grenzen: Das Zielfenster muss aktiv sein; gelegentliches Abdriften in den Übersetzungsmodus, das durch eine feste Spracheinstellung verringert wird',
           'Datenschutz: Audio und Text werden an die Server von AquaVoice gesendet; wo sie gehostet werden, ist nicht veröffentlicht und EU-Hosting wird nicht genannt, daher vertrauliche Nutzung zuerst individuell prüfen',
           'Preise in US-Dollar: Free (1.000 Wörter), Pro $8 pro Monat bei jährlicher Abrechnung ($10 monatlich), Max $24 pro Monat bei jährlicher Abrechnung ($30 monatlich)',
         ],
         callouts: [
-          { type: 'note', text: 'AquaVoice hat PromptQuorum für diesen Test kostenlosen Zugang gewährt und zahlt darüber hinaus nichts. Wenn Sie eine vollständig lokale Spracherkennung bevorzugen, lesen Sie den [MacWhisper-Test](/power-local-llm/macwhisper-review).' },
+          { type: 'note', text: 'AquaVoice hat PromptQuorum für diese Rezension kostenlosen Zugang gewährt und zahlt darüber hinaus nichts. Wenn Sie eine vollständig lokale Spracherkennung bevorzugen, lesen Sie den [MacWhisper-Rezension](/power-local-llm/macwhisper-review).' },
         ],
       },
       overview: {
@@ -364,7 +364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Stufen: Free (1.000 Wörter), Pro (unbegrenzte Wörter, Custom Instructions), Max (zusätzlich Realtime Mode und Sprachbefehle), Business (Team-Tarife)',
           'Datenschutz: Das Diktat wird an die Server von AquaVoice gesendet; ein optionaler Privacy Mode begrenzt die Speicherung von Transkripten, und der Hosting-Standort ist nicht veröffentlicht',
         ],
-        note: 'Funktionsliste von [aquavoice.com](https://aquavoice.com/) am 2026-10-03 übernommen. Der Autor hat nur die grundlegende Diktierfunktion genutzt; Realtime Mode, Sprachbefehle und Custom Instructions wurden für diesen Test nicht ausprobiert.',
+        note: 'Funktionsliste von [aquavoice.com](https://aquavoice.com/) am 2026-10-03 übernommen. Der Autor hat nur die grundlegende Diktierfunktion genutzt; Realtime Mode, Sprachbefehle und Custom Instructions wurden für diese Rezension nicht ausprobiert.',
       },
       whyDictation: {
         id: 'why-dictation-gives-ai-more-context',
@@ -388,7 +388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             list: [
               'Stabilität: keine Probleme in der täglichen Nutzung des Autors auf dem MacBook; das Tool läuft völlig stabil',
               'Erfassung: Das Übernehmen des gesprochenen Textes funktioniert einwandfrei',
-              'Sprachen: Deutsch und Englisch ohne Probleme; Französisch wurde im kurzen Test verstanden; Russisch ebenfalls',
+              'Sprachen: Deutsch und Englisch ohne Probleme; Französisch wurde beim kurzen Ausprobieren verstanden; Russisch ebenfalls',
             ],
           },
           {
@@ -421,7 +421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-aquavoice',
         title: 'AquaVoice herunterladen',
-        content: "**Registrieren Sie sich und laden Sie die App von der offiziellen Website herunter.** Dieser Test verlinkt auf die eigenen Seiten von AquaVoice; vergewissern Sie sich immer, dass Sie sich auf der offiziellen Domain befinden, bevor Sie sich anmelden.",
+        content: "**Registrieren Sie sich und laden Sie die App von der offiziellen Website herunter.** Diese Rezension verlinkt auf die eigenen Seiten von AquaVoice; vergewissern Sie sich immer, dass Sie sich auf der offiziellen Domain befinden, bevor Sie sich anmelden.",
         columns: ['Was', 'Link'],
         rows: [
           { 'Was': 'Offizielle Website', 'Link': '[aquavoice.com](https://aquavoice.com/)' },
@@ -471,7 +471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       alternatives: {
         id: 'alternatives',
         title: 'Alternativen',
-        content: "AquaVoice ist ein Diktier-Tool. MacWhisper ist der nächstliegende Test derselben Kategorie auf dieser Website, hat aber eine andere Aufgabe: lokale Transkription von Dateien und Meetings sowie Diktat auf dem Mac. Die unten genannten Open-Source-Optionen sind Entwickler-Tools.",
+        content: "AquaVoice ist ein Diktier-Tool. MacWhisper ist der nächstliegende Rezension derselben Kategorie auf dieser Website, hat aber eine andere Aufgabe: lokale Transkription von Dateien und Meetings sowie Diktat auf dem Mac. Die unten genannten Open-Source-Optionen sind Entwickler-Tools.",
         columns: ['Tool', 'Hauptaufgabe', 'Wo es läuft', 'Plattformen'],
         rows: [
           { 'Tool': 'AquaVoice', 'Hauptaufgabe': 'Diktat in Echtzeit in jede App', 'Wo es läuft': 'AquaVoice-Server (Standort nicht veröffentlicht)', 'Plattformen': 'macOS, iOS, Android, Windows' },
@@ -511,7 +511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Was kostet AquaVoice?', a: 'Es gibt eine kostenlose Stufe mit 1.000 Wörtern; Pro kostet $8 pro Monat bei jährlicher Abrechnung ($10 monatlich) und Max $24 pro Monat bei jährlicher Abrechnung ($30 monatlich), jeweils in US-Dollar.' },
           { q: 'Werden meine diktierten Daten in die Cloud gesendet, und wo werden sie gehostet?', a: 'Ja, sie werden an die Server von AquaVoice gesendet; der Hosting-Standort ist nicht veröffentlicht und EU-Hosting wird nicht genannt, daher sollte vertrauliche Nutzung zuerst individuell geprüft werden.' },
           { q: 'Kann ich vertrauliche Daten mit AquaVoice diktieren?', a: 'Nicht ohne Weiteres: Prüfen Sie es zuerst individuell, einschließlich der Bedingungen zur Datenverarbeitung, des Hosting-Standorts und der Unterauftragsverarbeiter, und aktivieren Sie den Privacy Mode.' },
-          { q: 'Wurde dieser Test bezahlt?', a: 'AquaVoice hat PromptQuorum kostenlosen Zugang zum Produkt gewährt; PromptQuorum erhält weder eine Zahlung noch eine Provision.' },
+          { q: 'Wurde diese Rezension bezahlt?', a: 'AquaVoice hat PromptQuorum kostenlosen Zugang zum Produkt gewährt; PromptQuorum erhält weder eine Zahlung noch eine Provision.' },
         ],
       },
       sources: {
@@ -526,9 +526,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[MacWhisper im Test: lokale Spracherkennung für den Mac](/power-local-llm/macwhisper-review) — vollständig lokale Transkription und Diktat auf dem Mac.',
-          '[Whisper.cpp im Test](/power-local-llm/whisper-cpp-review) — kostenlose, quelloffene Spracherkennung für Entwickler.',
-          '[faster-whisper im Test](/power-local-llm/faster-whisper-review) — eine Python-Bibliothek für Spracherkennung.',
+          '[MacWhisper Review: Lokale Sprache-zu-Text-App für Mac](/power-local-llm/macwhisper-review) — vollständig lokale Transkription und Diktat auf dem Mac.',
+          '[Whisper.cpp-Rezension](/power-local-llm/whisper-cpp-review) — kostenlose, quelloffene Spracherkennung für Entwickler.',
+          '[faster-whisper-Rezension](/power-local-llm/faster-whisper-review) — eine Python-Bibliothek für Spracherkennung.',
         ],
       },
     },
@@ -544,14 +544,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     audience: 'Les personnes qui rédigent beaucoup de prompts et de messages pour l’IA et préfèrent les dicter plutôt que les taper',
     primaryTerm: 'AquaVoice',
     affiliateDisclosure: true,
-    disclosureNote: 'Transparence : AquaVoice a donné à PromptQuorum un accès gratuit au produit pour ce test. PromptQuorum ne reçoit ni paiement ni commission de la part d’AquaVoice. Les opinions et l’usage décrits ici sont ceux de l’auteur.',
-    title: 'Test d’AquaVoice : la dictée vocale pour vos prompts IA',
-    seoTitle: 'Test d’AquaVoice : dictée vocale pour l’IA',
-    intro: "AquaVoice (Aqua) est une application de dictée vocale, disponible sur [aquavoice.com](https://aquavoice.com/), qui transforme la parole en texte en temps réel et l’insère dans l’application dans laquelle vous travaillez. Ce test repose sur l’usage quotidien de l’auteur, qui dicte des prompts dans Claude Code et des messages dans WhatsApp. Son argument central est simple : parler est plus rapide que taper, donc une demande dictée contient plus de contexte, et plus de contexte donne une meilleure réponse de l’IA.",
-    metaDescription: 'Test d’AquaVoice : dicter des prompts dans Claude Code et WhatsApp, pourquoi parler donne plus de contexte à l’IA, résultats multilingues et limites constatées.',
+    disclosureNote: 'Transparence : AquaVoice a donné à PromptQuorum un accès gratuit au produit pour cet avis. PromptQuorum ne reçoit ni paiement ni commission de la part d’AquaVoice. Les opinions et l’usage décrits ici sont ceux de l’auteur.',
+    title: 'Avis sur AquaVoice : la dictée vocale pour vos prompts IA',
+    seoTitle: 'Avis sur AquaVoice : dictée vocale pour l’IA',
+    intro: "AquaVoice (Aqua) est une application de dictée vocale, disponible sur [aquavoice.com](https://aquavoice.com/), qui transforme la parole en texte en temps réel et l’insère dans l’application dans laquelle vous travaillez. Cet avis repose sur l’usage quotidien de l’auteur, qui dicte des prompts dans Claude Code et des messages dans WhatsApp. Son argument central est simple : parler est plus rapide que taper, donc une demande dictée contient plus de contexte, et plus de contexte donne une meilleure réponse de l’IA.",
+    metaDescription: 'Avis sur AquaVoice : dicter des prompts dans Claude Code et WhatsApp, pourquoi parler donne plus de contexte à l’IA, résultats multilingues et limites constatées.',
     readTime: '7 min de lecture',
     targetKeywords: [
-      'test aquavoice',
+      'avis aquavoice',
       'avis aqua voice',
       'dictée vocale pour prompts ia',
       'dicter des prompts claude code',
@@ -601,13 +601,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Idée centrale : parler est plus rapide que taper et aide à mieux exprimer son point de vue, donc chaque demande à l’IA contient plus de contexte et obtient un meilleur résultat',
           'Usage de l’auteur : dictée de base dans Claude Code, WhatsApp et d’autres outils d’IA sur un MacBook ; fonctionne parfaitement, avec une capture voix-texte fiable',
-          'Langues : allemand, anglais, français et russe ont tous été compris lors des tests de l’auteur',
+          'Langues : allemand, anglais, français et russe ont tous été compris lors de l’usage de l’auteur',
           'Limites : la fenêtre cible doit être active ; dérive occasionnelle vers le mode traduction, réduite en verrouillant la langue dans les réglages',
           'Confidentialité : l’audio et le texte sont envoyés aux serveurs d’AquaVoice ; leur lieu d’hébergement n’est pas publié et l’hébergement dans l’UE n’est pas mentionné, donc vérifiez d’abord au cas par cas tout usage confidentiel',
           'Tarifs en dollars américains : Free (1 000 mots), Pro $8 par mois facturé annuellement ($10 en mensuel), Max $24 par mois facturé annuellement ($30 en mensuel)',
         ],
         callouts: [
-          { type: 'note', text: 'AquaVoice a donné à PromptQuorum un accès gratuit pour ce test et ne verse rien d’autre. Si vous préférez une reconnaissance vocale entièrement locale, consultez le [test de MacWhisper](/power-local-llm/macwhisper-review).' },
+          { type: 'note', text: 'AquaVoice a donné à PromptQuorum un accès gratuit pour cet avis et ne verse rien d’autre. Si vous préférez une reconnaissance vocale entièrement locale, consultez le [avis sur MacWhisper](/power-local-llm/macwhisper-review).' },
         ],
       },
       overview: {
@@ -621,7 +621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Offres : Free (1 000 mots), Pro (mots illimités, custom instructions), Max (ajoute le Realtime Mode et les commandes vocales), Business (offres d’équipe)',
           'Confidentialité : la dictée est envoyée aux serveurs d’AquaVoice ; un Privacy Mode optionnel limite la conservation des transcriptions, et le lieu d’hébergement n’est pas publié',
         ],
-        note: 'Liste des fonctionnalités reprise de [aquavoice.com](https://aquavoice.com/) le 2026-10-03. L’auteur n’a utilisé que la fonction de dictée de base ; le Realtime Mode, les commandes vocales et les custom instructions n’ont pas été testés pour ce test.',
+        note: 'Liste des fonctionnalités reprise de [aquavoice.com](https://aquavoice.com/) le 2026-10-03. L’auteur n’a utilisé que la fonction de dictée de base ; le Realtime Mode, les commandes vocales et les custom instructions n’ont pas été essayés pour cet avis.',
       },
       whyDictation: {
         id: 'why-dictation-gives-ai-more-context',
@@ -645,7 +645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             list: [
               'Stabilité : aucun problème dans l’usage quotidien de l’auteur sur le MacBook ; l’outil tourne de façon totalement stable',
               'Capture : la reprise du texte dicté fonctionne parfaitement',
-              'Langues : allemand et anglais sans problème ; français compris lors d’un test rapide ; russe également compris',
+              'Langues : allemand et anglais sans problème ; français compris lors d’un essai rapide ; russe également compris',
             ],
           },
           {
@@ -678,7 +678,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'download-aquavoice',
         title: 'Télécharger AquaVoice',
-        content: "**Inscrivez-vous et téléchargez l’application depuis le site officiel.** Ce test renvoie vers les pages d’AquaVoice elles-mêmes ; vérifiez toujours que vous êtes sur le domaine officiel avant de vous connecter.",
+        content: "**Inscrivez-vous et téléchargez l’application depuis le site officiel.** Cet avis renvoie vers les pages d’AquaVoice elles-mêmes ; vérifiez toujours que vous êtes sur le domaine officiel avant de vous connecter.",
         columns: ['Quoi', 'Lien'],
         rows: [
           { 'Quoi': 'Site officiel', 'Lien': '[aquavoice.com](https://aquavoice.com/)' },
@@ -728,7 +728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       alternatives: {
         id: 'alternatives',
         title: 'Alternatives',
-        content: "AquaVoice est un outil de dictée. MacWhisper est le test de la même catégorie le plus proche sur ce site, mais il vise un autre usage : la transcription locale de fichiers et de réunions, ainsi que la dictée sur Mac. Les options open source ci-dessous sont des outils pour développeurs.",
+        content: "AquaVoice est un outil de dictée. MacWhisper est l’avis de la même catégorie le plus proche sur ce site, mais il vise un autre usage : la transcription locale de fichiers et de réunions, ainsi que la dictée sur Mac. Les options open source ci-dessous sont des outils pour développeurs.",
         columns: ['Outil', 'Fonction principale', 'Où il s’exécute', 'Plateformes'],
         rows: [
           { 'Outil': 'AquaVoice', 'Fonction principale': 'Dictée en temps réel dans n’importe quelle application', 'Où il s’exécute': 'Serveurs d’AquaVoice (lieu non publié)', 'Plateformes': 'macOS, iOS, Android, Windows' },
@@ -768,7 +768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Combien coûte AquaVoice ?', a: 'Il existe une offre gratuite de 1 000 mots ; Pro coûte $8 par mois facturé annuellement ($10 en mensuel) et Max $24 par mois facturé annuellement ($30 en mensuel), en dollars américains.' },
           { q: 'Mes données dictées sont-elles envoyées dans le cloud, et où sont-elles hébergées ?', a: 'Oui, elles sont envoyées aux serveurs d’AquaVoice ; le lieu d’hébergement n’est pas publié et l’hébergement dans l’UE n’est pas mentionné, donc examinez d’abord au cas par cas tout usage confidentiel.' },
           { q: 'Puis-je dicter des données confidentielles avec AquaVoice ?', a: 'Pas par défaut : évaluez-le d’abord au cas par cas, y compris ses conditions de traitement des données, son lieu d’hébergement et ses sous-traitants, et activez le Privacy Mode.' },
-          { q: 'Ce test a-t-il été rémunéré ?', a: 'AquaVoice a donné à PromptQuorum un accès gratuit au produit ; PromptQuorum ne reçoit ni paiement ni commission.' },
+          { q: 'Cet avis a-t-il été rémunéré ?', a: 'AquaVoice a donné à PromptQuorum un accès gratuit au produit ; PromptQuorum ne reçoit ni paiement ni commission.' },
         ],
       },
       sources: {
@@ -783,9 +783,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Test de MacWhisper : reconnaissance vocale locale pour Mac](/power-local-llm/macwhisper-review) — transcription et dictée entièrement locales sur Mac.',
-          '[Test de Whisper.cpp](/power-local-llm/whisper-cpp-review) — reconnaissance vocale gratuite et open source pour développeurs.',
-          '[Test de faster-whisper](/power-local-llm/faster-whisper-review) — une bibliothèque Python de reconnaissance vocale.',
+          '[Avis sur MacWhisper : reconnaissance vocale locale pour Mac](/power-local-llm/macwhisper-review) — transcription et dictée entièrement locales sur Mac.',
+          '[Avis sur Whisper.cpp](/power-local-llm/whisper-cpp-review) — reconnaissance vocale gratuite et open source pour développeurs.',
+          '[Avis sur faster-whisper](/power-local-llm/faster-whisper-review) — une bibliothèque Python de reconnaissance vocale.',
         ],
       },
     },

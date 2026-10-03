@@ -397,7 +397,7 @@ const HOME_UI = {
   freshSubtitleTemplate: { en: 'Added in the last {n} days', de: 'In den letzten {n} Tagen hinzugefügt', fr: 'Ajouté ces {n} derniers jours', ja: '過去{n}日以内に追加', zh: '过去{n}天内新增', es: 'Añadido en los últimos {n} días', pt: 'Adicionado nos últimos {n} dias', ar: 'أُضيف خلال آخر {n} أيام', ko: '최근 {n}일 이내 추가' },
   freshNew: { en: 'New', de: 'Neu', fr: 'Nouveau', ja: '新着', zh: '新', es: 'Nuevo', pt: 'Novo', ar: 'جديد', ko: '신규' },
   freshUpdated: { en: 'Updated', de: 'Aktualisiert', fr: 'Mis à jour', ja: '更新', zh: '已更新', es: 'Actualizado', pt: 'Atualizado', ar: 'محدَّث', ko: '업데이트됨' },
-  freshKindReview: { en: 'Review', de: 'Test', fr: 'Avis', ja: 'レビュー', zh: '评测', es: 'Reseña', pt: 'Análise', ar: 'مراجعة', ko: '리뷰' },
+  freshKindReview: { en: 'Review', de: 'Rezension', fr: 'Avis', ja: 'レビュー', zh: '评测', es: 'Reseña', pt: 'Análise', ar: 'مراجعة', ko: '리뷰' },
   freshKindApp: { en: 'App', de: 'App', fr: 'Appli', ja: 'アプリ', zh: '应用', es: 'App', pt: 'App', ar: 'تطبيق', ko: '앱' },
   freshKindGuide: { en: 'Guide', de: 'Ratgeber', fr: 'Guide', ja: 'ガイド', zh: '指南', es: 'Guía', pt: 'Guia', ar: 'دليل', ko: '가이드' },
   freshToday: { en: 'Today', de: 'Heute', fr: "Aujourd'hui", ja: '今日', zh: '今天', es: 'Hoy', pt: 'Hoje', ar: 'اليوم', ko: '오늘' },
