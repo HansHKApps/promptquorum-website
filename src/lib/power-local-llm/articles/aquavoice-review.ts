@@ -6,8 +6,9 @@
 // `affiliateDisclosure: true`. Do NOT add sponsoredSlot or affiliateLinks; do not say "sponsored"
 // or "affiliate" — neither is true. Links to aquavoice.com get rel="sponsored nofollow" via
 // SPONSORED_HOSTS in PowerLocalLLMPostClient.tsx.
-// Product facts verified on 2026-10-03 against aquavoice.com, its privacy policy (effective
-// 2026-07-29), its terms of service and its iOS App Store listing. The company is "Aqua Voice, Inc."
+// Product facts verified on 2026-10-03 against aquavoice.com, its /pricing page (USD, no regional or
+// VAT note; the author sees the same USD prices from Germany), its privacy policy (effective
+// 2026-07-29), its terms of service and its iOS App Store listing (higher in-app prices). The company is "Aqua Voice, Inc."
 // (terms: binding arbitration in Delaware, US; third-party profiles: San Francisco, YC W24). No
 // source states Singapore — do NOT write Singapore. No page states where data is hosted or
 // processed, no EU hosting is mentioned anywhere, and sub-processors for transcription are not
@@ -55,7 +56,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Quirk 1: the window you want the text to land in must be active, or the text has nowhere to go',
           'Quirk 2: two or three times it slipped into translation mode; locking the language in settings reduced this a lot',
           'Privacy: your voice data leaves your device; the hosting location is not published and no EU hosting is stated, so confidential data needs an individual review first',
-          'Pricing: a free allowance of 1,000 words, then paid tiers; current prices are on [aquavoice.com](https://aquavoice.com/)',
+          'Pricing: Free (1,000 words), Pro from $8 per month billed annually, Max from $24 per month billed annually, in US dollars on the [pricing page](https://aquavoice.com/pricing)',
         ],
         updatedDate: '2026-10',
       },
@@ -88,7 +89,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Languages: German, English, French and Russian all understood in the author\'s tests',
           'Limits: the target window must be active; occasional drift into translation mode, reduced by locking the language in settings',
           'Privacy: audio and text are sent to AquaVoice\'s servers; where they are hosted is not published and EU hosting is not stated, so check confidential use individually first',
-          'Free allowance of 1,000 words; paid tiers listed on [aquavoice.com](https://aquavoice.com/)',
+          'Pricing in US dollars: Free (1,000 words), Pro $8 per month billed annually ($10 monthly), Max $24 per month billed annually ($30 monthly)',
         ],
         callouts: [
           { type: 'note', text: 'AquaVoice gave PromptQuorum free access for this review and pays nothing else. If you prefer fully local speech-to-text, see the [MacWhisper review](/power-local-llm/macwhisper-review).' },
@@ -147,15 +148,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'aquavoice-pricing',
         itemHeadings: true,
         title: 'How Much Does AquaVoice Cost?',
-        content: "**AquaVoice has a free allowance and paid tiers; the only prices found are the in-app purchase prices on its iOS App Store listing, so check [aquavoice.com](https://aquavoice.com/) for current desktop pricing.** The free tier gives 1,000 words with the Avalon model.",
-        columns: ['Tier', 'What the site says'],
+        content: "**AquaVoice's [pricing page](https://aquavoice.com/pricing) lists a free tier and three paid options in US dollars: Pro at $8 per month billed annually, Max at $24 per month billed annually, and Business at $19 per seat per month billed annually.** Monthly billing costs more, and the iOS App Store charges different, higher in-app prices. The page shows no regional pricing or VAT information, and the author saw the same US-dollar prices from Germany.",
+        columns: ['Tier', 'Price and what is included'],
         rows: [
-          { 'Tier': 'Free', 'What the site says': '1,000 free words with Avalon transcription' },
-          { 'Tier': 'Pro', 'What the site says': 'Unlimited words with custom instructions; iOS App Store: $12.99 monthly or $119 per year (US store)' },
-          { 'Tier': 'Max', 'What the site says': 'Pro features plus Realtime Mode and voice commands; iOS App Store: $39.99 monthly or $374.99 per year (US store)' },
-          { 'Tier': 'Business', 'What the site says': 'Team plans with SSO/SAML, advanced reporting, zero data retention' },
+          { 'Tier': 'Free', 'Price and what is included': '$0: 1,000 free words with the Avalon transcription model, no credit card required' },
+          { 'Tier': 'Pro', 'Price and what is included': '$8 per month billed annually ($96 per year) or $10 monthly: unlimited words, Custom Instructions, Expanded Custom Dictionary' },
+          { 'Tier': 'Max', 'Price and what is included': '$24 per month billed annually ($288 per year) or $30 monthly: everything in Pro plus Realtime Mode, the "Send it" voice command and early access to new features' },
+          { 'Tier': 'Business', 'Price and what is included': '$19 per seat per month billed annually or $24 monthly, minimum 2 seats: everything in Max plus SSO/SAML, SCIM, advanced reporting and Zero Data Retention' },
+          { 'Tier': 'Student discount', 'Price and what is included': '70% off Pro and Max, per the pricing page' },
+          { 'Tier': 'iOS App Store (US store)', 'Price and what is included': 'Pro $12.99 monthly or $119 per year; Max $39.99 monthly or $374.99 per year, higher than the website prices' },
         ],
-        note: 'Tier descriptions from [aquavoice.com](https://aquavoice.com/) and prices from the US iOS App Store listing, both checked on 2026-10-03. Desktop prices were not stated on the pages reviewed and may differ from the iOS prices.',
+        note: 'Prices from the [pricing page](https://aquavoice.com/pricing) and the US iOS App Store listing, checked on 2026-10-03; both are in US dollars and may change. Taxes such as VAT are not mentioned on the page, so the final price in your country may differ. Check the checkout before you buy.',
       },
       downloads: {
         id: 'download-aquavoice',
@@ -247,7 +250,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Does AquaVoice work in German and French?', a: 'In the author\'s use it handled German and English well and understood French and Russian; the site lists 49 languages.' },
           { q: 'Why did my dictation come out in another language?', a: 'The author saw this two or three times; locking dictation to a single language in settings reduced it a lot. The cause is not yet known.' },
           { q: 'Why did the text not appear anywhere?', a: 'The window where the text should go must be active; otherwise AquaVoice does not know where to put it.' },
-          { q: 'Is AquaVoice free?', a: 'It has a free allowance of 1,000 words; unlimited use needs a paid tier, with current prices on its official site.' },
+          { q: 'How much does AquaVoice cost?', a: 'There is a free tier with 1,000 words; Pro is $8 per month billed annually ($10 monthly) and Max is $24 per month billed annually ($30 monthly), in US dollars.' },
           { q: 'Is my dictated data sent to the cloud, and where is it hosted?', a: 'Yes, it is sent to AquaVoice\'s servers; the hosting location is not published and EU hosting is not stated, so review confidential use individually first.' },
           { q: 'Can I dictate confidential data with AquaVoice?', a: 'Not by default: assess it individually first, including its data-processing terms, hosting location and sub-processors, and enable Privacy Mode.' },
           { q: 'Was this review paid for?', a: 'AquaVoice gave PromptQuorum free access to the product; PromptQuorum receives no payment and no commission.' },
