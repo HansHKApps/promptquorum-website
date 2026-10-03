@@ -551,6 +551,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Private Mind review (Mobile & Edge LLMs) — 2026-10-03
   'private-mind-review',
+
+  // LLM Hub review (Mobile & Edge LLMs) — 2026-10-03
+  'llm-hub-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true

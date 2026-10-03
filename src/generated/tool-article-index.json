@@ -168,7 +168,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 154,
+    "totalCount": 155,
     "capped": true
   },
   "vLLM": {
@@ -5824,7 +5824,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 25,
+    "totalCount": 26,
     "capped": true
   },
   "Pocket AI": {
@@ -8225,6 +8225,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "llm-hub-review",
+        "title": "LLM Hub Review: On-Device AI Suite for Android and iPhone",
+        "url": "/power-local-llm/llm-hub-review",
+        "dateModified": "2026-10-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-run-serve-compared",
         "title": "Local Inference Engines, Runtimes & Gateways Compared (2026): Run and Serve Models",
         "url": "/power-local-llm/local-llm-run-serve-compared",
@@ -8232,7 +8240,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "NVIDIA Project G-Assist": {
@@ -11134,9 +11142,63 @@
         "url": "/power-local-llm/private-mind-review",
         "dateModified": "2026-10-03",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "llm-hub-review",
+        "title": "LLM Hub Review: On-Device AI Suite for Android and iPhone",
+        "url": "/power-local-llm/llm-hub-review",
+        "dateModified": "2026-10-03",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
+    "capped": false
+  },
+  "LLM Hub": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "llm-hub-review",
+        "title": "LLM Hub Review: On-Device AI Suite for Android and iPhone",
+        "url": "/power-local-llm/llm-hub-review",
+        "dateModified": "2026-10-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "shadow-ai-controls-by-company-size",
+        "title": "Shadow AI: Which Controls Actually Fit Your Company Size",
+        "url": "/power-local-llm/shadow-ai-controls-by-company-size",
+        "dateModified": "2026-09-04",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "agentic-ai-security-identity-access",
+        "title": "Agentic AI Security in 2026: The Identity and Access Controls That Work",
+        "url": "/power-local-llm/agentic-ai-security-identity-access",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "ai-generated-content-ip-risk",
+        "title": "AI-Generated Content and IP Risk: What You Actually Own, Infringe, and Leak",
+        "url": "/power-local-llm/ai-generated-content-ip-risk",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "us-state-ai-employment-laws-compliance",
+        "title": "US State AI Employment Laws: What Actually Applies to Your Hiring Process",
+        "url": "/power-local-llm/us-state-ai-employment-laws-compliance",
+        "dateModified": "2026-09-03",
+        "tier": "mentioned"
+      }
+    ],
+    "totalCount": 5,
     "capped": false
   }
 }

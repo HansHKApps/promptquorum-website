@@ -173,6 +173,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'ollama-local-ai':                         'ollama-local-ai',
   'paios':                                   'paios',
   'private-mind':                            'private-mind',
+  'llm-hub':                                 'llm-hub',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)

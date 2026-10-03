@@ -114,6 +114,7 @@ import { app as app_google_ai_edge_gallery } from './apps/google-ai-edge-gallery
 import { app as app_llm_farm } from './apps/llm-farm'
 import { app as app_ollama_local_ai } from './apps/ollama-local-ai'
 import { app as app_private_mind } from './apps/private-mind'
+import { app as app_llm_hub } from './apps/llm-hub'
 import { app as app_layla } from './apps/layla'
 import { app as app_maid } from './apps/maid'
 import { app as app_chapper } from './apps/chapper'
@@ -476,6 +477,7 @@ export const localAiApps: ToolRecord[] = [
   app_ollama_local_ai,
   app_paios,
   app_private_mind,
+  app_llm_hub,
 ]
 
 export const TOTAL_TOOL_COUNT = localAiApps.length
