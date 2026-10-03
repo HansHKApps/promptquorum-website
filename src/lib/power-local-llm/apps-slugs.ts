@@ -171,6 +171,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'radiant-canvas':                          'radiant-canvas',
   'ollama-local-ai':                         'ollama-local-ai',
   'paios':                                   'paios',
+  'private-mind':                            'private-mind',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)
