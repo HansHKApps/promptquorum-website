@@ -1158,5 +1158,10 @@
     "cluster": "power-local-llm",
     "urlSlug": "llm-hub-review",
     "url": "/power-local-llm/llm-hub-review"
+  },
+  "tokforge": {
+    "cluster": "power-local-llm",
+    "urlSlug": "tokforge-review",
+    "url": "/power-local-llm/tokforge-review"
   }
 }
