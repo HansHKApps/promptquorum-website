@@ -16,8 +16,8 @@ const COMPAREGEN: CloudAppSource = {
 const VERIFIED = '2026-10-03'
 
 // Source note: the sources above are undated trade/review pages whose titles say 2026.
-// CompareGen lists Ideogram as closed/cloud-only while The Decoder reports open weights
-// for Ideogram 4.0. Re-check before launch. No `closest` tier is assigned on an `assumption`
+// CompareGen lists Ideogram as closed/cloud-only; The Decoder (fetched 2026-10-03, article dated 2026-06-03)
+// confirms open weights for Ideogram 4.0 with a paid commercial license, so we follow The Decoder. No `closest` tier is assigned on an `assumption`
 // basis; unverified placements sit at `similar` or lower.
 
 export const IMAGE_CLOUD_APPS: CloudApp[] = [
@@ -58,7 +58,7 @@ export const IMAGE_CLOUD_APPS: CloudApp[] = [
     name: 'Midjourney',
     vendor: 'Midjourney, Inc.',
     aliases: ['midjourney', 'mid journey', 'midjourney v7', 'midjourney v8', 'mj'],
-    summary: 'Closed model with a web editor (inpainting/outpainting); cinematic, art-directed look; no API.',
+    summary: 'Closed model with a web editor (inpainting/outpainting); cinematic, art-directed look; no API (per CompareGen).',
     localMatches: [
       { slug: 'fooocus', tier: 'similar', basis: 'Simple prompt-first UI with minimal tuning, near Midjourney in ease of use. Directory shows no release since 2024.', confidence: 'assumption' },
       { slug: 'invoke-ai', tier: 'similar', basis: 'Canvas editor with inpainting, comparable to Midjourney\'s web editor workflow.', confidence: 'assumption' },
@@ -111,11 +111,11 @@ export const IMAGE_CLOUD_APPS: CloudApp[] = [
     aliases: ['ideogram', 'ideogram ai', 'ideogram 4', 'ideogram 4.0'],
     summary: 'Typography and poster focus, layout control, 2K output. Reported open weights for Ideogram 4.0; commercial use reportedly needs a paid license.',
     localMatches: [
-      { slug: 'comfyui', tier: 'similar', basis: 'General runner for open-weight models; support for Ideogram 4.0 weights is not verified.', confidence: 'assumption' },
+      { slug: 'comfyui', tier: 'similar', basis: 'The Decoder lists ComfyUI among the platforms offering Ideogram 4.0 (released June 3, 2026); check the ComfyUI docs for current support.', confidence: 'sourced' },
       { slug: 'invoke-ai', tier: 'partial', basis: 'General image UI; text rendering depends on the model loaded.', confidence: 'assumption' },
       { slug: 'stableswarmui', tier: 'partial', basis: 'Multi-model UI; directory shows no release since 2024.', confidence: 'sourced' },
     ],
-    gapNote: 'The Decoder reports Ideogram 4.0 weights as downloadable with a paid commercial license; other sources list Ideogram as cloud-only. No directory app is confirmed to run them.',
+    gapNote: 'Per The Decoder (June 3, 2026), Ideogram 4.0 weights and code are on GitHub and commercial use requires a paid license. Older sources list Ideogram as cloud-only.',
     verifiedAt: VERIFIED,
     sources: [DECODER, TURING, COMPAREGEN],
   },

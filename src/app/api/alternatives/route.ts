@@ -1,13 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { timingSafeEqual } from 'crypto'
+import { createHash, timingSafeEqual } from 'crypto'
 import { Ratelimit } from '@upstash/ratelimit'
 import { redis } from '@/lib/redis'
 import { isLoggableQuery, matchCloudApp, normalizeQuery, MAX_LOGGED_MISS_WORDS } from '@/lib/power-local-llm/alternatives/match'
 import { IMAGE_CLOUD_APPS } from '@/lib/power-local-llm/alternatives/cloud-apps.image'
 
 // Cloud-app → local-alternative lookup: anonymous search log (image-generation pilot).
-// Stores ONLY normalized query text + counters. No IP (used in-memory for rate limiting only), no cookie,
-// no user id, no hardware profile.
+// Stores ONLY normalized query text + counters. No cookie, no user id, no hardware profile.
+// The rate limiter keeps a salted SHA-256 hash of the IP (never the raw IP) for the 1 h window; it is never
+// linked to the search text.
 // POST: client sends the raw query; the SERVER re-runs the matcher (client cannot spoof hit/miss).
 // GET : owner-only export (Authorization: Bearer ALTERNATIVES_LOG_TOKEN). ?format=csv for a file.
 
@@ -27,7 +28,8 @@ const ipLimiter = new Ratelimit({
 
 export async function POST(req: NextRequest) {
   const ip = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? '127.0.0.1'
-  const limit = await ipLimiter.limit(ip)
+  const ipKey = createHash('sha256').update(`${process.env.ALTERNATIVES_LOG_TOKEN ?? ''}:${ip}`).digest('hex')
+  const limit = await ipLimiter.limit(ipKey)
   if (!limit.success) {
     return NextResponse.json({ error: 'Too many requests.' }, { status: 429, headers: { 'Retry-After': '3600' } })
   }
