@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useMemo, useState, type FormEvent } from 'react'
 import type { Language } from '@/lib/blog/blogContent'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
@@ -7,6 +8,7 @@ import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { matchCloudApp, SUPPORTED_APPS, type MatchResult } from '@/lib/power-local-llm/alternatives/match'
 import type { LocalMatch, MatchTier } from '@/lib/power-local-llm/alternatives/types'
 import { t, type DirUi } from './directory-ui-client'
+import { featureReviewUrl } from './reviewLinks'
 
 interface Props {
   apps: ToolRecord[]
@@ -136,6 +138,7 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseIma
                       const tool = bySlug.get(m.slug)
                       if (!tool) return null
                       const hw = hardwareText(tool, t('altHwVaries', ui))
+                      const review = featureReviewUrl(tool.slug, lang)
                       return (
                         <li key={m.slug} className="rounded-lg border border-slate-200 p-3">
                           <div className="flex flex-wrap items-center gap-2">
@@ -152,6 +155,11 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseIma
                           </div>
                           <p className="mt-1 text-sm text-slate-700">{tool.tagline[lang] ?? tool.tagline.en}</p>
                           <p className="mt-1 text-xs text-slate-500">{m.basis}</p>
+                          {review && (
+                            <Link href={review} className="mt-2 inline-block text-sm font-semibold text-violet-700 hover:underline">
+                              {t('readReview', ui)} →
+                            </Link>
+                          )}
                         </li>
                       )
                     })}
