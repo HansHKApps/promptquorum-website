@@ -23,6 +23,7 @@ const VERIFIED = '2026-10-03'
 export const IMAGE_CLOUD_APPS: CloudApp[] = [
   {
     id: 'chatgpt-images',
+    category: 'image',
     name: 'ChatGPT Images (GPT Image)',
     vendor: 'OpenAI',
     aliases: ['chatgpt images', 'chatgpt image', 'chatgpt image generation', 'gpt image', 'gpt image 2', 'gpt images', 'openai image', 'openai images', 'dall-e', 'dalle', 'dall e 3', 'dall-e 3'],
@@ -39,6 +40,7 @@ export const IMAGE_CLOUD_APPS: CloudApp[] = [
   },
   {
     id: 'nano-banana',
+    category: 'image',
     name: 'Google Nano Banana (Gemini image)',
     vendor: 'Google',
     aliases: ['nano banana', 'nano banana 2', 'nano banana pro', 'gemini image', 'gemini images', 'gemini image generation', 'google nano banana'],
@@ -55,6 +57,7 @@ export const IMAGE_CLOUD_APPS: CloudApp[] = [
   },
   {
     id: 'midjourney',
+    category: 'image',
     name: 'Midjourney',
     vendor: 'Midjourney, Inc.',
     aliases: ['midjourney', 'mid journey', 'midjourney v7', 'midjourney v8', 'mj'],
@@ -73,6 +76,7 @@ export const IMAGE_CLOUD_APPS: CloudApp[] = [
   },
   {
     id: 'adobe-firefly',
+    category: 'image',
     name: 'Adobe Firefly',
     vendor: 'Adobe',
     aliases: ['adobe firefly', 'firefly', 'adobe firefly image', 'firefly image model', 'adobe generative fill', 'generative fill'],
@@ -89,6 +93,7 @@ export const IMAGE_CLOUD_APPS: CloudApp[] = [
   },
   {
     id: 'leonardo-ai',
+    category: 'image',
     name: 'Leonardo AI',
     vendor: 'Leonardo.Ai',
     aliases: ['leonardo ai', 'leonardo', 'leonardo.ai', 'leonardo canvas'],
@@ -106,6 +111,7 @@ export const IMAGE_CLOUD_APPS: CloudApp[] = [
   },
   {
     id: 'ideogram',
+    category: 'image',
     name: 'Ideogram',
     vendor: 'Ideogram AI',
     aliases: ['ideogram', 'ideogram ai', 'ideogram 4', 'ideogram 4.0'],
@@ -121,6 +127,7 @@ export const IMAGE_CLOUD_APPS: CloudApp[] = [
   },
   {
     id: 'recraft',
+    category: 'image',
     name: 'Recraft',
     vendor: 'Recraft',
     aliases: ['recraft', 'recraft v4', 'recraft ai'],
@@ -132,6 +139,7 @@ export const IMAGE_CLOUD_APPS: CloudApp[] = [
   },
   {
     id: 'grok-imagine',
+    category: 'image',
     name: 'Grok Imagine',
     vendor: 'xAI',
     aliases: ['grok imagine', 'grok image', 'grok images', 'xai image', 'grok imagine image'],

@@ -1,4 +1,5 @@
 import { IMAGE_CLOUD_APPS } from './cloud-apps.image'
+import { VOICE_CLOUD_APPS } from './cloud-apps.voice'
 import type { CloudApp } from './types'
 
 // Words that add no identity to an app name. Deliberately small.
@@ -38,14 +39,16 @@ interface AliasEntry {
   tokens: string[]
 }
 
-const INDEX: AliasEntry[] = IMAGE_CLOUD_APPS.flatMap((app) =>
+export const ALL_CLOUD_APPS: readonly CloudApp[] = [...IMAGE_CLOUD_APPS, ...VOICE_CLOUD_APPS]
+
+const INDEX: AliasEntry[] = ALL_CLOUD_APPS.flatMap((app) =>
   [app.name, ...app.aliases]
     .map((a) => normalizeQuery(a))
     .filter((n) => n.length > 0)
     .map((norm) => ({ app, norm, tokens: norm.split(' ') })),
 )
 
-export const SUPPORTED_APPS: readonly CloudApp[] = IMAGE_CLOUD_APPS
+export const SUPPORTED_APPS: readonly CloudApp[] = ALL_CLOUD_APPS
 
 export type MatchResult =
   | { kind: 'hit'; app: CloudApp; how: 'exact' | 'contains' | 'fuzzy' }
