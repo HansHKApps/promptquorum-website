@@ -118,6 +118,7 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
                 </tbody>
               </table>
             </div>
+            <P>{t.privacyAltLookupNote}</P>
             <P>{t.privacyS2Closure}</P>
           </section>
 

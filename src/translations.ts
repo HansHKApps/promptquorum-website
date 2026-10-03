@@ -126,6 +126,7 @@ export const translations = {
     // Section 2
     privacyS2Title: "Data we collect and why",
     privacyS2Intro: "We collect the following personal data:",
+    privacyAltLookupNote: "Directory alternatives lookup (test feature): when you search for an online app, we store only the normalized search text and a counter. We store no IP address, cookie or identifier with it. Your IP address is processed in memory only to rate-limit requests and is not stored. Do not enter personal data into the search field.",
     privacyS2Col1: "Data",
     privacyS2Col2: "How collected",
     privacyS2Col3: "Purpose",
@@ -432,6 +433,7 @@ export const translations = {
     // Section 2
     privacyS2Title: "Daten, die wir sammeln, und warum",
     privacyS2Intro: "Wir sammeln die folgenden personenbezogenen Daten:",
+    privacyAltLookupNote: "Alternativen-Suche im Verzeichnis (Testfunktion): Wenn du nach einer Online-App suchst, speichern wir nur den normalisierten Suchtext und einen Zähler. Wir speichern dazu keine IP-Adresse, kein Cookie und keine Kennung. Deine IP-Adresse wird ausschließlich im Arbeitsspeicher zur Begrenzung der Anfragen verarbeitet und nicht gespeichert. Gib keine personenbezogenen Daten in das Suchfeld ein.",
     privacyS2Col1: "Daten",
     privacyS2Col2: "Wie gesammelt",
     privacyS2Col3: "Zweck",
@@ -746,6 +748,7 @@ export const translations = {
     // Section 2
     privacyS2Title: "Données que nous collectons et pourquoi",
     privacyS2Intro: "Nous collectons les données personnelles suivantes:",
+    privacyAltLookupNote: "Recherche d’alternatives dans l’annuaire (fonction de test) : lorsque vous recherchez une application en ligne, nous ne conservons que le texte de recherche normalisé et un compteur. Aucune adresse IP, aucun cookie ni identifiant n’y est associé. Votre adresse IP est traitée uniquement en mémoire pour limiter le nombre de requêtes et n’est pas conservée. Ne saisissez pas de données personnelles dans le champ de recherche.",
     privacyS2Col1: "Données",
     privacyS2Col2: "Comment collectées",
     privacyS2Col3: "Objet",
@@ -1052,6 +1055,7 @@ export const translations = {
     // Section 2
     privacyS2Title: "収集するデータとその理由",
     privacyS2Intro: "私たちは以下の個人データを収集します:",
+    privacyAltLookupNote: "ディレクトリの代替検索（テスト機能）：オンラインアプリを検索すると、正規化した検索テキストとカウンターのみを保存します。IPアドレス、Cookie、識別子は一緒に保存しません。IPアドレスはリクエスト数の制限のためメモリ上でのみ処理され、保存されません。検索欄に個人データを入力しないでください。",
     privacyS2Col1: "データ",
     privacyS2Col2: "収集方法",
     privacyS2Col3: "目的",
@@ -1358,6 +1362,7 @@ export const translations = {
     // Section 2
     privacyS2Title: "我们收集的数据及其原因",
     privacyS2Intro: "我们收集以下个人数据:",
+    privacyAltLookupNote: "目录中的替代方案查询（测试功能）：当您搜索在线应用时，我们仅保存规范化后的搜索文本和一个计数器，不会同时保存 IP 地址、Cookie 或标识符。您的 IP 地址仅在内存中处理以限制请求频率，不会被存储。请勿在搜索框中输入个人数据。",
     privacyS2Col1: "数据",
     privacyS2Col2: "收集方式",
     privacyS2Col3: "用途",
@@ -1664,6 +1669,7 @@ export const translations = {
     // Section 2
     privacyS2Title: "Datos que recopilamos y por qué",
     privacyS2Intro: "Recopilamos los siguientes datos personales:",
+    privacyAltLookupNote: "Búsqueda de alternativas en el directorio (función de prueba): cuando buscas una aplicación en línea, solo almacenamos el texto de búsqueda normalizado y un contador. No almacenamos con ello ninguna dirección IP, cookie ni identificador. Tu dirección IP se procesa únicamente en memoria para limitar las solicitudes y no se almacena. No introduzcas datos personales en el campo de búsqueda.",
     privacyS2Col1: "Dato",
     privacyS2Col2: "Cómo se recopila",
     privacyS2Col3: "Finalidad",
@@ -1970,6 +1976,7 @@ export const translations = {
     // Section 2
     privacyS2Title: "Dados que coletamos e por quê",
     privacyS2Intro: "Coletamos os seguintes dados pessoais:",
+    privacyAltLookupNote: "Busca de alternativas no diretório (recurso de teste): quando você pesquisa um app online, armazenamos apenas o texto de busca normalizado e um contador. Não armazenamos endereço IP, cookie ou identificador junto a ele. Seu endereço IP é processado apenas em memória para limitar solicitações e não é armazenado. Não insira dados pessoais no campo de busca.",
     privacyS2Col1: "Dado",
     privacyS2Col2: "Como coletado",
     privacyS2Col3: "Finalidade",
@@ -2276,6 +2283,7 @@ export const translations = {
     // Section 2
     privacyS2Title: "البيانات التي نجمعها ولماذا",
     privacyS2Intro: "نجمع البيانات الشخصية الآتية:",
+    privacyAltLookupNote: "البحث عن البدائل في الدليل (ميزة تجريبية): عند بحثك عن تطبيق عبر الإنترنت نحفظ فقط نص البحث بعد توحيده وعدّادًا، ولا نحفظ معه أي عنوان IP أو ملف تعريف ارتباط أو معرّف. تتم معالجة عنوان IP في الذاكرة فقط للحد من عدد الطلبات ولا يُخزَّن. لا تُدخل بيانات شخصية في حقل البحث.",
     privacyS2Col1: "البيان",
     privacyS2Col2: "كيفية الجمع",
     privacyS2Col3: "الغرض",
@@ -2582,6 +2590,7 @@ export const translations = {
     // Section 2
     privacyS2Title: "수집 데이터 및 수집 이유",
     privacyS2Intro: "당사는 다음 개인 데이터를 수집합니다:",
+    privacyAltLookupNote: "디렉터리 대안 검색(테스트 기능): 온라인 앱을 검색하면 정규화된 검색 텍스트와 카운터만 저장하며, IP 주소·쿠키·식별자는 함께 저장하지 않습니다. IP 주소는 요청 횟수 제한을 위해 메모리에서만 처리되고 저장되지 않습니다. 검색란에 개인정보를 입력하지 마세요.",
     privacyS2Col1: "데이터",
     privacyS2Col2: "수집 방법",
     privacyS2Col3: "목적",
