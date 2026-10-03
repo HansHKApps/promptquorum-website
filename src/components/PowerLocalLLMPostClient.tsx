@@ -453,6 +453,14 @@ const PRESENTATION_UI: Partial<Record<Language, { heading: string; description: 
   },
 }
 
+// Links to vendors that gave PromptQuorum free access or other material
+// benefits carry rel="sponsored nofollow" (see the page's disclosureNote).
+const SPONSORED_HOSTS = ['aquavoice.com']
+const externalRel = (url: string) =>
+  SPONSORED_HOSTS.some((h) => url.includes(h))
+    ? 'sponsored nofollow noopener noreferrer'
+    : 'noopener noreferrer'
+
 // Render bare URLs. Bold is handled one level up in renderInlineLinks, before
 // the markdown-link split, so a bold span can safely contain links.
 function renderUrlsAndBold(text: string, keyOffset: number, slug = '') {
@@ -467,7 +475,7 @@ function renderUrlsAndBold(text: string, keyOffset: number, slug = '') {
               key={j}
               href={seg}
               target="_blank"
-              rel="noopener noreferrer"
+              rel={externalRel(seg)}
               className="text-primary font-medium hover:underline break-all"
             >
               {seg}
@@ -523,7 +531,7 @@ function renderInlineLinksNoBold(
             key={i}
             href={url}
             target="_blank"
-            rel="noopener noreferrer"
+            rel={externalRel(url)}
             className="text-primary font-medium hover:underline"
           >
             {label}
@@ -1519,6 +1527,13 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
         {article.affiliateDisclosure && (
           <p className="affiliate-disclosure text-xs text-text-secondary bg-gray-50 border border-gray-200 rounded-lg px-4 py-2.5 mb-6">
             {AFFILIATE_DISCLOSURE[lang] ?? AFFILIATE_DISCLOSURE['en']}
+          </p>
+        )}
+
+        {/* Page-specific material-connection disclosure (e.g. free product access) */}
+        {typeof (article as any).disclosureNote === 'string' && (
+          <p className="disclosure-note text-sm text-text-primary bg-amber-50 border border-amber-200 rounded-lg px-4 py-3 mb-6">
+            {renderInlineLinks((article as any).disclosureNote, lang)}
           </p>
         )}
 
