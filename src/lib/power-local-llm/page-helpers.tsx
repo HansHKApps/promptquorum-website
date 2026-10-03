@@ -1120,6 +1120,7 @@ const HUB_THEMES: Array<{
       'voice-ai-writers-cloud-vs-local',
       'local-llm-voice-audio-compared',
       'macwhisper-review',
+      'aquavoice-review',
       'meetily-review',
       'funclip-review',
       'openai-edge-tts-review',

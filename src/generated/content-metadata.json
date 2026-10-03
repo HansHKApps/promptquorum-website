@@ -11058,6 +11058,24 @@
       ],
       "images": []
     },
+    "aquavoice-review": {
+      "dateModified": "2026-10-03",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "solair-ai-review": {
       "dateModified": "2026-09-12",
       "lastFactChecked": null,

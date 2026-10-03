@@ -8839,6 +8839,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "aquavoice-review",
+        "title": "AquaVoice Review: Voice Dictation for AI Prompts",
+        "url": "/power-local-llm/aquavoice-review",
+        "dateModified": "2026-10-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-voice-audio-compared",
         "title": "Local Voice & Speech Tools Compared (2026): Text-to-Speech, Speech-to-Text and Voice Agents",
         "url": "/power-local-llm/local-llm-voice-audio-compared",
@@ -8862,7 +8870,21 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 5,
+    "totalCount": 6,
+    "capped": false
+  },
+  "AquaVoice": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "aquavoice-review",
+        "title": "AquaVoice Review: Voice Dictation for AI Prompts",
+        "url": "/power-local-llm/aquavoice-review",
+        "dateModified": "2026-10-03",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   },
   "Solair AI": {
@@ -10425,6 +10447,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "aquavoice-review",
+        "title": "AquaVoice Review: Voice Dictation for AI Prompts",
+        "url": "/power-local-llm/aquavoice-review",
+        "dateModified": "2026-10-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "cognira-review",
         "title": "Cognira Review: A Self-Learning AI Assistant With a Local Binary and Private Memory",
         "url": "/power-local-llm/cognira-review",
@@ -10486,17 +10516,9 @@
         "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
         "dateModified": "2026-09-20",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-chat-assistants-compared",
-        "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-        "url": "/power-local-llm/local-llm-chat-assistants-compared",
-        "dateModified": "2026-09-20",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 185,
+    "totalCount": 186,
     "capped": true
   },
   "Qdrant": {

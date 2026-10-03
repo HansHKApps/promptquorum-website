@@ -412,6 +412,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'diffusionbee-review':                     'diffusionbee-review',
   // MacWhisper review — 2026-09-12
   'macwhisper-review':                       'macwhisper-review',
+  // AquaVoice review — 2026-10-03
+  'aquavoice-review':                        'aquavoice-review',
   // Solair AI review — 2026-09-12
   'solair-ai-review':                        'solair-ai-review',
   // Kilo Code review — 2026-09-12
