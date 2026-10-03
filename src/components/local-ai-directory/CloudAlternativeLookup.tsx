@@ -1,12 +1,12 @@
 'use client'
 
 import Link from 'next/link'
-import { useMemo, useState, type FormEvent } from 'react'
+import { useEffect, useMemo, useState, type FormEvent } from 'react'
 import type { Language } from '@/lib/blog/blogContent'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import { matchCloudApp, SUPPORTED_APPS, type MatchResult } from '@/lib/power-local-llm/alternatives/match'
-import type { LocalMatch, MatchTier } from '@/lib/power-local-llm/alternatives/types'
+import type { CloudAppCategory, LocalMatch, MatchTier } from '@/lib/power-local-llm/alternatives/types'
 import { t, type DirUi } from './directory-ui-client'
 import { featureReviewUrl } from './reviewLinks'
 
@@ -16,9 +16,12 @@ interface Props {
   ui: DirUi
   /** Opens the existing ToolDrawer for a slug (pass setOpenSlug). */
   onOpenTool: (slug: string) => void
-  /** Applies the existing "Generate images" want-filter. */
-  onBrowseImageApps: () => void
+  /** Applies the existing want-filter for a category ('image' or 'audio'). */
+  onBrowseApps: (want: 'image' | 'audio') => void
 }
+
+const STORAGE_KEY = 'pq_alt_lookup_open'
+const WANT_FOR: Record<CloudAppCategory, 'image' | 'audio'> = { image: 'image', voice: 'audio' }
 
 const TIER_ORDER: readonly MatchTier[] = ['closest', 'similar', 'partial']
 
@@ -33,11 +36,41 @@ function hardwareText(tool: ToolRecord, variesLabel: string): string | null {
   return parts.length > 0 ? parts.join(' · ') : null
 }
 
-export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseImageApps }: Props) {
+export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseApps }: Props) {
   const [query, setQuery] = useState('')
   const [submitted, setSubmitted] = useState('')
   const [result, setResult] = useState<MatchResult | null>(null)
+  const [open, setOpen] = useState(true)
   const bySlug = useMemo(() => new Map(apps.map((a) => [a.slug, a])), [apps])
+
+  // Per-viewer convenience only: remember a collapsed panel. Storage may be unavailable, so it never gates rendering.
+  useEffect(() => {
+    let collapsed = false
+    try {
+      collapsed = window.localStorage.getItem(STORAGE_KEY) === '0'
+    } catch {
+      /* storage blocked: keep the default (open) */
+    }
+    if (!collapsed) return
+    const id = window.setTimeout(() => setOpen(false), 0)
+    return () => window.clearTimeout(id)
+  }, [])
+
+  function toggleOpen() {
+    const next = !open
+    setOpen(next)
+    try {
+      window.localStorage.setItem(STORAGE_KEY, next ? '1' : '0')
+    } catch {
+      /* ignore */
+    }
+  }
+
+  function clearResults() {
+    setResult(null)
+    setSubmitted('')
+    setQuery('')
+  }
 
   function run(text: string) {
     const trimmed = text.trim()
@@ -71,8 +104,18 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseIma
         <span className="rounded-full border border-amber-300 bg-amber-50 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-amber-800">
           {t('altBadge', ui)}
         </span>
+        <button
+          type="button"
+          onClick={toggleOpen}
+          aria-expanded={open}
+          aria-controls="alt-lookup-body"
+          className="ms-auto rounded-lg border border-slate-300 px-3 py-1 text-xs font-semibold text-slate-700 hover:border-violet-400 hover:text-violet-700"
+        >
+          {open ? t('altHide', ui) : t('altShow', ui)}
+        </button>
       </div>
 
+      <div id="alt-lookup-body" hidden={!open}>
       <p role="note" className="mt-2 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-900">
         {t('altScopeNotice', ui, { count: SUPPORTED_APPS.length })}
       </p>
@@ -93,28 +136,49 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseIma
         </button>
       </form>
 
-      <div className="mt-2 flex flex-wrap items-center gap-1.5 text-xs text-slate-600">
+      <div className="mt-2 space-y-1.5 text-xs text-slate-600">
         <span>{t('altSupported', ui)}</span>
-        {SUPPORTED_APPS.map((app) => (
-          <button
-            key={app.id}
-            type="button"
-            onClick={() => { setQuery(app.name); run(app.name) }}
-            className="rounded-full border border-slate-200 px-2 py-0.5 hover:border-violet-400 hover:text-violet-700"
-          >
-            {app.name}
-          </button>
+        {(['image', 'voice'] as const).map((category) => (
+          <div key={category} className="flex flex-wrap items-center gap-1.5">
+            <span className="font-semibold">{t(category === 'image' ? 'altGroupImage' : 'altGroupVoice', ui)}</span>
+            {SUPPORTED_APPS.filter((app) => app.category === category).map((app) => (
+              <button
+                key={app.id}
+                type="button"
+                onClick={() => { setQuery(app.name); run(app.name) }}
+                className="rounded-full border border-slate-200 px-2 py-0.5 hover:border-violet-400 hover:text-violet-700"
+              >
+                {app.name}
+              </button>
+            ))}
+          </div>
         ))}
       </div>
 
       <div aria-live="polite" className="mt-4">
+        {(result?.kind === 'hit' || result?.kind === 'miss') && (
+          <div className="mb-3 flex justify-end">
+            <button
+              type="button"
+              onClick={clearResults}
+              className="rounded-lg border border-slate-300 px-3 py-1 text-xs font-semibold text-slate-700 hover:border-violet-400 hover:text-violet-700"
+            >
+              {t('altClearResults', ui)} ×
+            </button>
+          </div>
+        )}
         {result?.kind === 'miss' && (
           <div className="rounded-lg border border-slate-200 bg-slate-50 p-3 text-sm text-slate-700">
             <p className="font-semibold">{t('altMissTitle', ui, { query: submitted })}</p>
             <p className="mt-1">{t('altMissBody', ui)}</p>
-            <button type="button" onClick={onBrowseImageApps} className="mt-2 font-semibold text-violet-700 underline">
-              {t('altBrowseImage', ui)}
-            </button>
+            <div className="mt-2 flex flex-wrap gap-x-4 gap-y-1">
+              <button type="button" onClick={() => onBrowseApps('image')} className="font-semibold text-violet-700 underline">
+                {t('altBrowseImage', ui)}
+              </button>
+              <button type="button" onClick={() => onBrowseApps('audio')} className="font-semibold text-violet-700 underline">
+                {t('altBrowseAudio', ui)}
+              </button>
+            </div>
           </div>
         )}
 
@@ -175,13 +239,21 @@ export function CloudAlternativeLookup({ apps, lang, ui, onOpenTool, onBrowseIma
               {result.app.sources.map((s, i) => (
                 <span key={s.url}>
                   {i > 0 && ', '}
-                  <a href={s.url} target="_blank" rel="noopener noreferrer nofollow" className="underline">{s.label}</a>
+                  {s.url.startsWith('/') ? (
+                    <Link href={lang === 'en' ? s.url : `/${lang}${s.url}`} className="underline">{s.label}</Link>
+                  ) : (
+                    <a href={s.url} target="_blank" rel="noopener noreferrer nofollow" className="underline">{s.label}</a>
+                  )}
                 </span>
               ))}
             </p>
             <p className="mt-1 text-xs text-slate-500">{t('altDisclaimer', ui)}</p>
+            <button type="button" onClick={() => onBrowseApps(WANT_FOR[result.app.category])} className="mt-3 text-sm font-semibold text-violet-700 underline">
+              {t(result.app.category === 'image' ? 'altBrowseImage' : 'altBrowseAudio', ui)}
+            </button>
           </div>
         )}
+      </div>
       </div>
     </section>
   )

@@ -252,7 +252,7 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
         lang={lang}
         ui={ui}
         onOpenTool={setOpenSlug}
-        onBrowseImageApps={() => handleWant('image')}
+        onBrowseApps={handleWant}
       />
       <div id="directory-toolbar" className="space-y-4 mb-6 scroll-mt-24">
         <StatsBar total={apps.length} visible={sorted.length} byLocality={localityCounts} lang={lang} />
