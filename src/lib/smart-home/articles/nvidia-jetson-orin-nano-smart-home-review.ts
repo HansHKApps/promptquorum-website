@@ -174,10 +174,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-01-16',
     theme: "Buyer's Guides",
     heroImage: '/images/nvidia-jetson-orin-nano-smart-home-review-overview-hero-de.webp',
-    title: 'NVIDIA Jetson Orin Nano für Smart-Home-KI: Test (2026)',
+    title: 'NVIDIA Jetson Orin Nano für Smart-Home-KI: Rezension (2026)',
     seoTitle: 'Jetson Orin Nano für Smart-Home-KI (2026)',
     intro:
-      'Das NVIDIA Jetson Orin Nano Super Developer Kit ($249, 8GB) ist ein GPU-Inferenz-Edge-Board — eine grundlegend andere Hardwareklasse als die x86-Mini-PCs, die anderswo in diesem Cluster getestet werden — aufgebaut rund um CUDA/TensorRT-beschleunigte Inferenz statt allgemeiner Datenverarbeitung. Ollama bietet offizielle Jetson-Unterstützung, und Frigate kann dessen GPU über einen dedizierten TensorRT-Build nutzen, wobei beide mehr Einrichtungsaufwand mit sich bringen als der x86-Weg. Dieser Test ordnet ein, für wen es sich eignet, im Vergleich zum bestehenden x86-Mini-PC-Überblick.',
+      'Das NVIDIA Jetson Orin Nano Super Developer Kit ($249, 8GB) ist ein GPU-Inferenz-Edge-Board — eine grundlegend andere Hardwareklasse als die x86-Mini-PCs, die anderswo in diesem Cluster getestet werden — aufgebaut rund um CUDA/TensorRT-beschleunigte Inferenz statt allgemeiner Datenverarbeitung. Ollama bietet offizielle Jetson-Unterstützung, und Frigate kann dessen GPU über einen dedizierten TensorRT-Build nutzen, wobei beide mehr Einrichtungsaufwand mit sich bringen als der x86-Weg. Diese Rezension ordnet ein, für wen es sich eignet, im Vergleich zum bestehenden x86-Mini-PC-Überblick.',
     metaDescription:
       'NVIDIA Jetson Orin Nano für Smart-Home-KI 2026: ein GPU-Inferenz-Edge-Board, das sich von den anderswo getesteten x86-Mini-PCs unterscheidet. Für wen es sich eignet und aktuelle Specs zum Nachprüfen.',
     twitterDescription:
@@ -301,7 +301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'NVIDIA Jetson Orin Nano für Smart-Home-KI: Test (2026)',
+      headline: 'NVIDIA Jetson Orin Nano für Smart-Home-KI: Rezension (2026)',
       description: 'NVIDIA Jetson Orin Nano für Smart-Home-KI: ein GPU-Inferenz-Edge-Board, das sich von den anderswo getesteten x86-Mini-PCs unterscheidet.',
       url: 'https://www.promptquorum.com/de/smart-home/nvidia-jetson-orin-nano-smart-home-review',
       inLanguage: 'de',

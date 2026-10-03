@@ -262,7 +262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'SillyTavern 2026: Das kostenlose Frontend für KI-Charakter-Rollenspiele und lange Chats',
     dateModified: '2026-09-05',
-    seoTitle: 'SillyTavern 2026: Rollenspiel-Frontend im Test',
+    seoTitle: 'SillyTavern-Rezension 2026: Rollenspiel-Frontend',
     intro: 'SillyTavern ist ein kostenloses, quelloffenes Chat-Frontend, das um Charakterkarten, Lorebooks und Gruppenchats mit mehreren Charakteren herum aufgebaut ist, statt um das Einzel-Assistenten-Format von ChatGPT-artigen Tools. Es entstand im Februar 2023 als Fork von TavernAI durch einen Maintainer, der als Cohee bekannt ist, und hat inzwischen über 33.000 GitHub-Stars und mehr als 300 Mitwirkende. Es generiert selbst keinen Text — dafür benötigt es ein separat verbundenes Backend oder einen API-Schlüssel, um überhaupt zu antworten.',
     metaDescription: 'SillyTavern ist ein kostenloses, quelloffenes Frontend für KI-Charakter-Rollenspiele mit Lorebooks, Gruppenchats und Vektor-Speicher. Geschichte, Installationslinks, Preise, ehrliche Grenzen und Alternativen.',
     publishDate: '2026-09-05',
@@ -274,7 +274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'SillyTavern 2026: Rollenspiel-Frontend im Test',
+      'headline': 'SillyTavern-Rezension 2026: Rollenspiel-Frontend',
       'description': 'SillyTavern ist ein kostenloses, quelloffenes Frontend für KI-Charakter-Rollenspiele mit Lorebooks, Gruppenchats und Vektor-Speicher. Geschichte, Installationslinks, Preise, ehrliche Grenzen und Alternativen.',
       'url': 'https://www.promptquorum.com/de/local-llms/sillytavern-review',
       'datePublished': '2026-09-05',

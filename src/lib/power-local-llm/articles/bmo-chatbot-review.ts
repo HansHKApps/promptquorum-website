@@ -377,7 +377,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'v2.3.3 veröffentlicht — 25. Juli 2024', whyItMatters: 'Dies ist laut der [Releases-Seite](https://github.com/longy2k/obsidian-bmo-chatbot/releases) des Repositorys das jüngste getaggte Release zum Zeitpunkt dieser Review.' },
           { title: 'Keine Commits seit dem 12. September 2024', whyItMatters: 'Der Commit-Verlauf des Repositorys zeigt seit rund zwei Jahren keine weiteren Code-Änderungen mehr — ein wichtiges Signal für alle, die abwägen, ob sie sich für einen laufenden Workflow auf dieses Plugin verlassen wollen.' },
         ],
-        note: 'Diese Review stellt die Wartungslücke bewusst voran, weil sie die praktische Empfehlung verändert: Das Plugin funktioniert zum Zeitpunkt dieses Tests weiterhin, doch eine zweijährige Lücke bei gleichzeitig 54 offenen Issues (laut Issue-Tracker des Repositorys zum Zeitpunkt dieser Review) bedeutet, dass Fehlerbehebungen und Kompatibilitäts-Updates für neuere Obsidian-Versionen nicht garantiert sind. Prüfen Sie vor einer Nutzung für kritische Arbeit den aktuellen Stand direkt im Repository.',
+        note: 'Diese Review stellt die Wartungslücke bewusst voran, weil sie die praktische Empfehlung verändert: Das Plugin funktioniert zum Zeitpunkt dieser Rezension weiterhin, doch eine zweijährige Lücke bei gleichzeitig 54 offenen Issues (laut Issue-Tracker des Repositorys zum Zeitpunkt dieser Review) bedeutet, dass Fehlerbehebungen und Kompatibilitäts-Updates für neuere Obsidian-Versionen nicht garantiert sind. Prüfen Sie vor einer Nutzung für kritische Arbeit den aktuellen Stand direkt im Repository.',
       },
       features: {
         id: 'bmo-chatbot-features',

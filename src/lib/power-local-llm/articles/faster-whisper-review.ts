@@ -369,19 +369,19 @@ for segment in segments:
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/faster-whisper-review-hero-de.webp',
-    title: 'faster-whisper im Test: Lokale Spracherkennung mit CTranslate2-Beschleunigung',
-    seoTitle: 'faster-whisper Test: Schnelle lokale STT',
+    title: 'faster-whisper-Rezension: Lokale Spracherkennung mit CTranslate2-Beschleunigung',
+    seoTitle: 'faster-whisper-Rezension: Schnelle lokale STT',
     intro:
-      'faster-whisper ist eine Python-Neuimplementierung des Spracherkennungsmodells Whisper von OpenAI, aufgebaut auf der Inferenz-Engine [CTranslate2](https://github.com/OpenNMT/CTranslate2), entwickelt von Guillaume Klein und heute unter [SYSTRAN auf GitHub](https://github.com/SYSTRAN/faster-whisper) gepflegt. Es liefert auf derselben Hardware etwa die vierfache Transkriptionsgeschwindigkeit der ursprünglichen OpenAI-Implementierung, bei geringerem Speicherverbrauch durch int8-Quantisierung. Dieser Test behandelt die Geschichte des Projekts, echte Python-Anwendungsbeispiele, die Installation, die MIT-Lizenz und die Kosten (kostenlos) sowie die Grenzen des Tools — inklusive Verweis auf den direkten Benchmark-Vergleich von PromptQuorum mit whisper.cpp für alle, die sich zwischen beiden entscheiden müssen.',
+      'faster-whisper ist eine Python-Neuimplementierung des Spracherkennungsmodells Whisper von OpenAI, aufgebaut auf der Inferenz-Engine [CTranslate2](https://github.com/OpenNMT/CTranslate2), entwickelt von Guillaume Klein und heute unter [SYSTRAN auf GitHub](https://github.com/SYSTRAN/faster-whisper) gepflegt. Es liefert auf derselben Hardware etwa die vierfache Transkriptionsgeschwindigkeit der ursprünglichen OpenAI-Implementierung, bei geringerem Speicherverbrauch durch int8-Quantisierung. Diese Rezension behandelt die Geschichte des Projekts, echte Python-Anwendungsbeispiele, die Installation, die MIT-Lizenz und die Kosten (kostenlos) sowie die Grenzen des Tools — inklusive Verweis auf den direkten Benchmark-Vergleich von PromptQuorum mit whisper.cpp für alle, die sich zwischen beiden entscheiden müssen.',
     metaDescription:
-      'faster-whisper im Test: die MIT-lizenzierte, CTranslate2-basierte Python-Bibliothek für schnelle lokale Spracherkennung. Geschichte, Installation, echter Python-Code, Lizenz und wann whisper.cpp die bessere Wahl ist.',
+      'faster-whisper-Rezension: die MIT-lizenzierte, CTranslate2-basierte Python-Bibliothek für schnelle lokale Spracherkennung. Geschichte, Installation, echter Python-Code, Lizenz und wann whisper.cpp die bessere Wahl ist.',
     twitterDescription:
-      'faster-whisper im Test 2026: Guillaume Klein\'s CTranslate2-beschleunigter Python-Port von OpenAI Whisper. Bis zu 4x schnellere Transkription, echte Codebeispiele, MIT-Lizenz und ehrliche Grenzen.',
+      'faster-whisper-Rezension 2026: Guillaume Klein\'s CTranslate2-beschleunigter Python-Port von OpenAI Whisper. Bis zu 4x schnellere Transkription, echte Codebeispiele, MIT-Lizenz und ehrliche Grenzen.',
     audience:
       'Entwickler, die Python-Pipelines für Spracherkennung auf NVIDIA-GPUs oder CPUs bauen und schnellere, speicherschonendere Transkription als die ursprüngliche OpenAI-Whisper-Implementierung wollen.',
     readTime: '11 Min. Lesezeit',
     educationalLevel: 'Intermediate',
-    primaryTerm: 'faster-whisper Test',
+    primaryTerm: 'faster-whisper Rezension',
     targetKeywords: [
       'faster-whisper test',
       'faster-whisper',
@@ -451,7 +451,7 @@ for segment in segments:
         callouts: [
           {
             type: 'note',
-            text: 'Dieser Test konzentriert sich auf faster-whisper als eigenständiges Werkzeug: Geschichte, Installation, echten Python-Code, Lizenzierung und ehrliche Grenzen. Für einen direkten Benchmark-Vergleich mit whisper.cpp auf Apple Silicon und NVIDIA-GPUs siehe den [Whisper.cpp-vs-faster-whisper-Vergleich](/de/power-local-llm/local-whisper-stt-comparison-2026).',
+            text: 'Diese Rezension konzentriert sich auf faster-whisper als eigenständiges Werkzeug: Geschichte, Installation, echten Python-Code, Lizenzierung und ehrliche Grenzen. Für einen direkten Benchmark-Vergleich mit whisper.cpp auf Apple Silicon und NVIDIA-GPUs siehe den [Whisper.cpp-vs-faster-whisper-Vergleich](/de/power-local-llm/local-whisper-stt-comparison-2026).',
           },
         ],
       },
@@ -678,9 +678,9 @@ for segment in segments:
         title: 'Weiterführende Artikel',
         items: [
           '[Whisper.cpp vs faster-whisper 2026: Lokale STT-Benchmarks, Setup & GPU-Beschleunigung](/de/power-local-llm/local-whisper-stt-comparison-2026) — der direkte Vergleich für alle, die sich zwischen whisper.cpp und faster-whisper entscheiden müssen.',
-          '[Whisper.cpp im Test](/de/power-local-llm/whisper-cpp-review) — die Python-freie C/C++-Alternative, im selben Detailgrad getestet.',
+          '[Whisper.cpp-Rezension](/de/power-local-llm/whisper-cpp-review) — die Python-freie C/C++-Alternative, im selben Detailgrad getestet.',
           '[Einen vollständig offline Sprachassistenten bauen 2026](/de/power-local-llm/build-local-voice-assistant-2026) — eine Whisper-basierte STT-Engine mit einem lokalen LLM und Piper TTS zu einer vollständigen Sprachpipeline verbinden.',
-          '[Piper TTS im Test](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — das lokale Text-zu-Sprache-Gegenstück, um generierten Text offline wieder in Sprache umzuwandeln.',
+          '[Piper-TTS-Rezension](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — das lokale Text-zu-Sprache-Gegenstück, um generierten Text offline wieder in Sprache umzuwandeln.',
           '[Das vollständige Local-LLM-Software-Verzeichnis](/de/directory) — ein umfassenderes Verzeichnis lokaler KI-Werkzeuge über alle Kategorien hinweg.',
         ],
       },
@@ -688,9 +688,9 @@ for segment in segments:
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'faster-whisper im Test (2026): Lokale Spracherkennung mit CTranslate2-Beschleunigung',
+      headline: 'faster-whisper-Rezension (2026): Lokale Spracherkennung mit CTranslate2-Beschleunigung',
       description:
-        'faster-whisper im Test: die MIT-lizenzierte, CTranslate2-basierte Python-Bibliothek für schnelle lokale Spracherkennung. Geschichte, Installation, echter Python-Code, Lizenz und wann whisper.cpp die bessere Wahl ist.',
+        'faster-whisper-Rezension: die MIT-lizenzierte, CTranslate2-basierte Python-Bibliothek für schnelle lokale Spracherkennung. Geschichte, Installation, echter Python-Code, Lizenz und wann whisper.cpp die bessere Wahl ist.',
       url: 'https://promptquorum.com/de/power-local-llm/faster-whisper-review',
       inLanguage: 'de',
       datePublished: '2026-09-05',
@@ -714,7 +714,7 @@ for segment in segments:
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://promptquorum.com' },
         { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/de/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'faster-whisper im Test (2026)', item: 'https://promptquorum.com/de/power-local-llm/faster-whisper-review' },
+        { '@type': 'ListItem', position: 3, name: 'faster-whisper-Rezension (2026)', item: 'https://promptquorum.com/de/power-local-llm/faster-whisper-review' },
       ],
     },
   },

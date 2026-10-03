@@ -483,19 +483,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/llm-farm-review-hero-de.webp',
-    title: 'LLM Farm im Test: Open-Source-GGUF-App, nicht mehr im App Store',
-    seoTitle: 'LLM Farm Test: Open-Source iOS GGUF Runtime',
+    title: 'LLM-Farm-Rezension: Open-Source-GGUF-App, nicht mehr im App Store',
+    seoTitle: 'LLM-Farm-Rezension: Open-Source iOS GGUF Runtime',
     intro:
-      'LLM Farm ist eine kostenlose, unter der MIT-Lizenz quelloffene App für iOS und macOS, die GGUF-Sprachmodelle direkt auf dem Gerät ausführt — über einen Swift-Wrapper rund um [ggml](https://github.com/ggerganov/ggml) und llama.cpp. Entwickelt wurde sie von Artem Savkin (GitHub-Nutzername [guinmoon](https://github.com/guinmoon)), der die App im Dezember 2023 erstmals im App Store veröffentlichte. Zum Zeitpunkt dieses Tests lässt sich LLM Farm weder aus dem App Store noch über TestFlight installieren — Apple entfernte den Eintrag im August 2025, und das [GitHub-README](https://github.com/guinmoon/LLMFarm) des Projekts beschreibt die App weiterhin als „vorübergehend nicht verfügbar" in beiden Kanälen. Dieser Test beschreibt, was die App leistet, ihre LoRA-Finetuning- und Merge-Werkzeuge (eine Funktion, die den meisten mobilen Local-AI-Apps fehlt), wie man sie heute aus dem Quellcode baut — und vor allem, warum sie für alle ungeeignet ist, die keine eigene iOS-App kompilieren möchten.',
+      'LLM Farm ist eine kostenlose, unter der MIT-Lizenz quelloffene App für iOS und macOS, die GGUF-Sprachmodelle direkt auf dem Gerät ausführt — über einen Swift-Wrapper rund um [ggml](https://github.com/ggerganov/ggml) und llama.cpp. Entwickelt wurde sie von Artem Savkin (GitHub-Nutzername [guinmoon](https://github.com/guinmoon)), der die App im Dezember 2023 erstmals im App Store veröffentlichte. Zum Zeitpunkt dieser Rezension lässt sich LLM Farm weder aus dem App Store noch über TestFlight installieren — Apple entfernte den Eintrag im August 2025, und das [GitHub-README](https://github.com/guinmoon/LLMFarm) des Projekts beschreibt die App weiterhin als „vorübergehend nicht verfügbar" in beiden Kanälen. Diese Rezension beschreibt, was die App leistet, ihre LoRA-Finetuning- und Merge-Werkzeuge (eine Funktion, die den meisten mobilen Local-AI-Apps fehlt), wie man sie heute aus dem Quellcode baut — und vor allem, warum sie für alle ungeeignet ist, die keine eigene iOS-App kompilieren möchten.',
     metaDescription:
-      'LLM Farm im Test: die quelloffene, MIT-lizenzierte iOS/macOS-GGUF-App mit LoRA-Finetuning auf dem Gerät. Derzeit nicht im App Store — was das bedeutet und wie man sie baut.',
+      'LLM-Farm-Rezension: die quelloffene, MIT-lizenzierte iOS/macOS-GGUF-App mit LoRA-Finetuning auf dem Gerät. Derzeit nicht im App Store — was das bedeutet und wie man sie baut.',
     twitterDescription:
-      'LLM Farm Test 2026: die quelloffene iOS/macOS-GGUF-Runtime mit LoRA-Werkzeugen auf dem Gerät — derzeit aus dem App Store entfernt, nur per Quellcode baubar.',
+      'LLM-Farm-Rezension 2026: die quelloffene iOS/macOS-GGUF-Runtime mit LoRA-Werkzeugen auf dem Gerät — derzeit aus dem App Store entfernt, nur per Quellcode baubar.',
     audience:
       'Technisch versierte iOS- und macOS-Nutzer, die eine quelloffene GGUF-Runtime mit LoRA-Finetuning wollen und bereit sind, die App selbst aus dem Quellcode zu bauen.',
     readTime: '11 Min. Lesezeit',
     educationalLevel: 'Advanced',
-    primaryTerm: 'LLM Farm Test',
+    primaryTerm: 'LLM Farm Rezension',
     targetKeywords: [
       'llm farm test',
       'llmfarm ios',
@@ -509,7 +509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma', 'Qwen', 'Phi', 'LLaMA', 'Mixtral', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Mac'],
     leadAnswerBlock:
-      '**LLM Farm ist eine kostenlose, quelloffene (MIT-Lizenz) iOS- und macOS-App, die GGUF-Sprachmodelle vollständig auf dem Gerät ausführt — sie lässt sich aktuell weder über den App Store noch über TestFlight installieren.** Entwickelt von Artem Savkin ([guinmoon](https://github.com/guinmoon) auf GitHub) und erstmals im Dezember 2023 veröffentlicht, hat das [GitHub-Repository](https://github.com/guinmoon/LLMFarm) über 2.000 Sterne und mehr als 180 Forks. Apple entfernte den App-Store-Eintrag im August 2025, und das README beschreibt beide Vertriebswege — App Store und TestFlight — zum Zeitpunkt dieses Tests weiterhin als „vorübergehend nicht verfügbar". Der Quellcode bleibt öffentlich und MIT-lizenziert, sodass sich die App per Xcode kompilieren und installieren lässt — dafür braucht es jedoch einen Apple-Entwickler-Account und Erfahrung im Bauen von iOS-Apps aus dem Quellcode. Für die meisten Nutzer ist dies keine App mehr zum Antippen und Installieren.',
+      '**LLM Farm ist eine kostenlose, quelloffene (MIT-Lizenz) iOS- und macOS-App, die GGUF-Sprachmodelle vollständig auf dem Gerät ausführt — sie lässt sich aktuell weder über den App Store noch über TestFlight installieren.** Entwickelt von Artem Savkin ([guinmoon](https://github.com/guinmoon) auf GitHub) und erstmals im Dezember 2023 veröffentlicht, hat das [GitHub-Repository](https://github.com/guinmoon/LLMFarm) über 2.000 Sterne und mehr als 180 Forks. Apple entfernte den App-Store-Eintrag im August 2025, und das README beschreibt beide Vertriebswege — App Store und TestFlight — zum Zeitpunkt dieser Rezension weiterhin als „vorübergehend nicht verfügbar". Der Quellcode bleibt öffentlich und MIT-lizenziert, sodass sich die App per Xcode kompilieren und installieren lässt — dafür braucht es jedoch einen Apple-Entwickler-Account und Erfahrung im Bauen von iOS-Apps aus dem Quellcode. Für die meisten Nutzer ist dies keine App mehr zum Antippen und Installieren.',
     quickAnswerTop: {
       de: {
         question: 'Kann ich LLM Farm noch installieren, und lohnt sich das?',
@@ -517,7 +517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nicht über den App Store — Apple entfernte den Eintrag im August 2025, und das GitHub-README des Projekts listet App Store und TestFlight weiterhin als „vorübergehend nicht verfügbar". Der einzige aktuelle Weg ist, die quelloffene App selbst mit Xcode aus dem Quellcode zu bauen, wofür ein Apple-Entwickler-Account und grundlegende Erfahrung mit iOS-Builds nötig sind. Wer das kann, bekommt mit LLM Farm eine der wenigen mobilen Apps mit echtem LoRA-Finetuning und Merge-Werkzeugen; wer das nicht kann, findet mit PocketPal AI oder Private LLM Alternativen, die sich heute tatsächlich direkt installieren lassen.',
         bullets: [
           'Kostenlos und quelloffen unter der MIT-Lizenz, entwickelt von Artem Savkin ([guinmoon](https://github.com/guinmoon/LLMFarm) auf GitHub).',
-          'Aktuell nicht über App Store oder TestFlight installierbar — Apple hat die App im August 2025 aus dem Store entfernt; das GitHub-README bestätigt den Status „vorübergehend nicht verfügbar" zum Zeitpunkt dieses Tests.',
+          'Aktuell nicht über App Store oder TestFlight installierbar — Apple hat die App im August 2025 aus dem Store entfernt; das GitHub-README bestätigt den Status „vorübergehend nicht verfügbar" zum Zeitpunkt dieser Rezension.',
           'Der einzige aktuelle Installationsweg ist der Eigenbau per Xcode, wofür ein Apple-Entwickler-Account nötig ist.',
           'Unterstützt das Laden, Finetuning und Zusammenführen von LoRA-Adaptern direkt auf dem Gerät — eine Funktion, die den meisten konkurrierenden Apps fehlt.',
           'Führt GGUF-Modelle über mehr als 16 Architekturen aus (LLaMA, Gemma, Qwen, Phi, Mixtral, DeepSeek und weitere) mit einer eigenen ggml/llama.cpp-basierten Engine.',
@@ -571,11 +571,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Dieser Test basiert auf dem öffentlichen [GitHub-Repository](https://github.com/guinmoon/LLMFarm) (README, Wiki-FAQ, Lizenzdatei, Commit- und Release-Historie) sowie dem Status im Apple App Store, geprüft im September 2026. PromptQuorum hat für diesen Test keine eigenen praktischen Tests mit LLM Farm durchgeführt — die Hardware-Angaben unten sind allgemeine Richtwerte für lokale LLMs, keine app-spezifischen Messungen.',
+            text: 'Diese Rezension basiert auf dem öffentlichen [GitHub-Repository](https://github.com/guinmoon/LLMFarm) (README, Wiki-FAQ, Lizenzdatei, Commit- und Release-Historie) sowie dem Status im Apple App Store, geprüft im September 2026. PromptQuorum hat für diese Rezension keine eigenen praktischen Tests mit LLM Farm durchgeführt — die Hardware-Angaben unten sind allgemeine Richtwerte für lokale LLMs, keine app-spezifischen Messungen.',
           },
           {
             type: 'warning',
-            text: 'Zum Zeitpunkt dieses Tests lässt sich LLM Farm weder aus dem App Store noch über TestFlight installieren. Der frühere App-Store-Eintrag unter `apps.apple.com/app/llm-farm/id6461209867` ist nicht mehr erreichbar. Wer die App nutzen möchte, muss sie selbst mit Xcode aus dem Quellcode bauen — dafür ist ein kostenloser oder kostenpflichtiger Apple-Entwickler-Account sowie Erfahrung mit iOS-Build-Tools nötig.',
+            text: 'Zum Zeitpunkt dieser Rezension lässt sich LLM Farm weder aus dem App Store noch über TestFlight installieren. Der frühere App-Store-Eintrag unter `apps.apple.com/app/llm-farm/id6461209867` ist nicht mehr erreichbar. Wer die App nutzen möchte, muss sie selbst mit Xcode aus dem Quellcode bauen — dafür ist ein kostenloser oder kostenpflichtiger Apple-Entwickler-Account sowie Erfahrung mit iOS-Build-Tools nötig.',
           },
         ],
       },
@@ -593,13 +593,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wer hat LLM Farm entwickelt?',
         content: [
           '**LLM Farm wurde von Artem Savkin entwickelt, der unter dem GitHub-Namen [guinmoon](https://github.com/guinmoon) veröffentlicht, und erschien erstmals am 13. Dezember 2023 im App Store.** Die [Lizenzdatei im Repository](https://github.com/guinmoon/LLMFarm/blob/main/LICENSE) nennt Artem Savkin als Urheberrechtsinhaber, datiert auf 2023.',
-          'Das Projekt wird unabhängig gepflegt, nicht von einem finanzierten Unternehmen. Das [GitHub-Repository](https://github.com/guinmoon/LLMFarm) wurde im Juni 2023 angelegt und hat zum Zeitpunkt dieses Tests über 2.000 Sterne und mehr als 180 Forks gesammelt, bei 46 offenen Issues im Tracker. Die Entwicklung ging seit der Entfernung aus dem App Store unregelmäßig weiter: Die Commit-Historie zeigt Aktualisierungen der zugrunde liegenden llama.cpp-Engine bis Dezember 2025 sowie ein README-Update im Januar 2026 — der letzte getaggte Release (Version 1.4.3) erschien jedoch im Januar 2025, sodass seit über einem Jahr Code-Änderungen ohne neues gepacktes Release erfolgen.',
+          'Das Projekt wird unabhängig gepflegt, nicht von einem finanzierten Unternehmen. Das [GitHub-Repository](https://github.com/guinmoon/LLMFarm) wurde im Juni 2023 angelegt und hat zum Zeitpunkt dieser Rezension über 2.000 Sterne und mehr als 180 Forks gesammelt, bei 46 offenen Issues im Tracker. Die Entwicklung ging seit der Entfernung aus dem App Store unregelmäßig weiter: Die Commit-Historie zeigt Aktualisierungen der zugrunde liegenden llama.cpp-Engine bis Dezember 2025 sowie ein README-Update im Januar 2026 — der letzte getaggte Release (Version 1.4.3) erschien jedoch im Januar 2025, sodass seit über einem Jahr Code-Änderungen ohne neues gepacktes Release erfolgen.',
         ],
         items: [
           'Entwickler: Artem Savkin (GitHub: [guinmoon](https://github.com/guinmoon)), arbeitet unabhängig statt als Unternehmen.',
           'App-Store-Start: 13. Dezember 2023. GitHub-Repository angelegt: 14. Juni 2023.',
           'Lizenz: MIT — permissive Open-Source-Lizenz, frei nutzbar, forkbar und veränderbar. Urheberrechtsinhaber laut Lizenzdatei: Artem Savkin, 2023.',
-          'Über 2.000 GitHub-Sterne und mehr als 180 Forks zum Zeitpunkt dieses Tests, bei einem aktiven, aber unbearbeiteten Issue-Tracker (46 offene Issues).',
+          'Über 2.000 GitHub-Sterne und mehr als 180 Forks zum Zeitpunkt dieser Rezension, bei einem aktiven, aber unbearbeiteten Issue-Tracker (46 offene Issues).',
           'Entwicklungstempo: seit 2025 unregelmäßig — Commits zur Aktualisierung der llama.cpp-Abhängigkeit und der Dokumentation liefen bis Anfang 2026 weiter, aber seit Version 1.4.3 im Januar 2025 erschien kein neuer getaggter Release.',
         ],
       },
@@ -607,12 +607,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'app-store-status',
         title: 'Ist LLM Farm noch im App Store?',
         content: [
-          '**Nein. Zum Zeitpunkt dieses Tests lässt sich LLM Farm nicht aus dem Apple App Store herunterladen, und auch der TestFlight-Beta-Kanal ist geschlossen.** Die App wurde ursprünglich am 13. Dezember 2023 im App Store veröffentlicht und laut Release- und Commit-Historie des Projekts um den 8. August 2025 von Apple entfernt. Der frühere App-Store-Eintrag unter `apps.apple.com/app/llm-farm/id6461209867` ist nicht mehr erreichbar.',
-          'Das [GitHub-README](https://github.com/guinmoon/LLMFarm) des Projekts erklärt direkt: „The app is temporarily unavailable in TestFlight and Appstore" (Die App ist vorübergehend nicht in TestFlight und im App Store verfügbar). PromptQuorum konnte den Grund für die Entfernung nicht ermitteln — das Repository nennt keinen — und kann nicht bestätigen, ob oder wann die App in einen der beiden Vertriebswege zurückkehren könnte. Eine ältere Wiki-FAQ-Seite erwähnt, dass der Entwickler früher angeboten hat, Nutzern per E-Mail eine manuelle `.ipa`-Datei zu bauen, falls TestFlight nicht zugänglich war; dieser Test konnte nicht bestätigen, ob dieses Angebot noch gilt, da das aktuelle README es nicht wiederholt.',
+          '**Nein. Zum Zeitpunkt dieser Rezension lässt sich LLM Farm nicht aus dem Apple App Store herunterladen, und auch der TestFlight-Beta-Kanal ist geschlossen.** Die App wurde ursprünglich am 13. Dezember 2023 im App Store veröffentlicht und laut Release- und Commit-Historie des Projekts um den 8. August 2025 von Apple entfernt. Der frühere App-Store-Eintrag unter `apps.apple.com/app/llm-farm/id6461209867` ist nicht mehr erreichbar.',
+          'Das [GitHub-README](https://github.com/guinmoon/LLMFarm) des Projekts erklärt direkt: „The app is temporarily unavailable in TestFlight and Appstore" (Die App ist vorübergehend nicht in TestFlight und im App Store verfügbar). PromptQuorum konnte den Grund für die Entfernung nicht ermitteln — das Repository nennt keinen — und kann nicht bestätigen, ob oder wann die App in einen der beiden Vertriebswege zurückkehren könnte. Eine ältere Wiki-FAQ-Seite erwähnt, dass der Entwickler früher angeboten hat, Nutzern per E-Mail eine manuelle `.ipa`-Datei zu bauen, falls TestFlight nicht zugänglich war; diese Rezension konnte nicht bestätigen, ob dieses Angebot noch gilt, da das aktuelle README es nicht wiederholt.',
         ],
         items: [
           'App-Store-Status: laut Commit- und Release-Historie des Projekts seit etwa August 2025 entfernt.',
-          'TestFlight-Status: laut aktuellem GitHub-README zum Zeitpunkt dieses Tests geschlossen.',
+          'TestFlight-Status: laut aktuellem GitHub-README zum Zeitpunkt dieser Rezension geschlossen.',
           'Grund für die Entfernung: weder vom Entwickler noch von Apple in einer für PromptQuorum auffindbaren Quelle genannt.',
           'Einziger bestätigter aktueller Weg zur Installation: Eigenbau aus dem Quellcode per Xcode über das öffentliche GitHub-Repository.',
         ],
@@ -679,7 +679,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Plattform': 'iPhone / iPad',
-            'Verfügbarkeit': 'Erfordert Eigenbau per Xcode — zum Zeitpunkt dieses Tests nicht im App Store installierbar',
+            'Verfügbarkeit': 'Erfordert Eigenbau per Xcode — zum Zeitpunkt dieser Rezension nicht im App Store installierbar',
             'Hinweise': 'Mindestens iOS 16 laut Projekt-README; für die Inferenz auf dem Gerät wird Metal-Beschleunigung genutzt.',
           },
           {
@@ -738,7 +738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Zusammenführen eines trainierten LoRA-Adapters mit dem Basismodell und Export über Settings > Merge Lora.',
           'Kompromiss: Laut Wiki lässt sich das speicherplatz-schonende mmap-Laden nicht nutzen, solange ein LoRA-Adapter angehängt ist, was den RAM-Bedarf gegenüber dem alleinigen Basismodell erhöht.',
         ],
-        note: 'Dieser Test hat kein eigenes Finetuning eines Modells in LLM Farm durchgeführt, um Trainingsgeschwindigkeit oder Ausgabequalität zu prüfen — die obige Beschreibung fasst zusammen, was die Projektdokumentation selbst zur Funktion angibt, keinen PromptQuorum-Benchmark.',
+        note: 'Diese Rezension hat kein eigenes Finetuning eines Modells in LLM Farm durchgeführt, um Trainingsgeschwindigkeit oder Ausgabequalität zu prüfen — die obige Beschreibung fasst zusammen, was die Projektdokumentation selbst zur Funktion angibt, keinen PromptQuorum-Benchmark.',
       },
       hardware: {
         id: 'hardware-requirements',
@@ -769,7 +769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Für wen sich LLM Farm nicht eignet',
         items: [
-          '**Alle, die keine iOS/macOS-App aus dem Quellcode bauen können oder wollen.** Das ist der größte Grund, LLM Farm derzeit zu meiden: Es gibt keine App-Store-Installation und zum Zeitpunkt dieses Tests keinen bestätigten TestFlight-Zugang.',
+          '**Alle, die keine iOS/macOS-App aus dem Quellcode bauen können oder wollen.** Das ist der größte Grund, LLM Farm derzeit zu meiden: Es gibt keine App-Store-Installation und zum Zeitpunkt dieser Rezension keinen bestätigten TestFlight-Zugang.',
           '**Nutzer, die Android-, Windows- oder Linux-Unterstützung brauchen.** LLM Farm ist reine Apple-Software; Android-Nutzer sollten RikkaHub, ChatterUI oder Maid in Betracht ziehen, Desktop-Nutzer ohne Mac Ollama, LM Studio oder Jan AI.',
           '**Nutzer, die heute eine garantiert installierbare App wollen.** PocketPal AI und Private LLM lassen sich beide sofort aus dem App Store installieren, ohne etwas selbst zu bauen.',
           '**Nutzer, die häufige, versionierte Releases erwarten.** Der letzte getaggte Release des Projekts erschien im Januar 2025; obwohl Commits seitdem unregelmäßig weiterliefen, gab es seit über einem Jahr kein neues gepacktes Release.',
@@ -833,7 +833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'App': '[AnythingLLM Mobile](https://anythingllm.com/mobile)',
             'Lizenz / Kosten': 'Kostenlos, quelloffen',
-            'Plattformen': 'Android; iOS zum Zeitpunkt dieses Tests noch nicht verfügbar',
+            'Plattformen': 'Android; iOS zum Zeitpunkt dieser Rezension noch nicht verfügbar',
             'Aktueller Installationsweg': 'Google Play oder die AnythingLLM-Mobile-Seite',
           },
         ],
@@ -845,7 +845,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Gibt es LLM Farm noch?',
-            a: 'Das quelloffene Projekt ist auf GitHub weiterhin aktiv, die App lässt sich aber aktuell weder über den App Store noch über TestFlight installieren. Apple entfernte den App-Store-Eintrag etwa im August 2025, und das README des Projekts beschreibt beide Kanäle zum Zeitpunkt dieses Tests weiterhin als „vorübergehend nicht verfügbar". Der einzige aktuelle Weg ist der Eigenbau per Xcode.',
+            a: 'Das quelloffene Projekt ist auf GitHub weiterhin aktiv, die App lässt sich aber aktuell weder über den App Store noch über TestFlight installieren. Apple entfernte den App-Store-Eintrag etwa im August 2025, und das README des Projekts beschreibt beide Kanäle zum Zeitpunkt dieser Rezension weiterhin als „vorübergehend nicht verfügbar". Der einzige aktuelle Weg ist der Eigenbau per Xcode.',
           },
           {
             q: 'Warum wurde LLM Farm aus dem App Store entfernt?',
@@ -885,18 +885,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'LLM Farm bleibt eines der technisch leistungsfähigsten quelloffenen Local-AI-Projekte für Apple-Geräte — Architekturabdeckung sowie LoRA-Finetuning und -Merging auf dem Gerät gehen weiter als bei den meisten mobilen Apps dieser Kategorie, PocketPal AI und Private LLM eingeschlossen. Doch zum Zeitpunkt dieses Tests ist es keine App, die die meisten Menschen tatsächlich installieren können: Apple hat sie im August 2025 aus dem App Store entfernt, der TestFlight-Zugang ist laut Projekt-README geschlossen, und der einzige bestätigte Weg zur Nutzung ist das eigenständige Kompilieren des quelloffenen Codes in Xcode. Das ist ein vertretbarer Aufwand für Entwickler, die den Code einsehen, mit LoRA-Finetuning experimentieren oder eine ungewöhnliche Modellarchitektur nutzen möchten. Für alle, die heute einfach eine App herunterladen und privat chatten möchten, ist das jedoch keine zumutbare Hürde — dafür sind PocketPal AI (kostenlos, quelloffen, direkt installierbar) oder Private LLM (kostenpflichtig, ausgereift, direkt installierbar) die praktikablen Optionen aus dem Abschnitt zu Alternativen oben.',
+          'LLM Farm bleibt eines der technisch leistungsfähigsten quelloffenen Local-AI-Projekte für Apple-Geräte — Architekturabdeckung sowie LoRA-Finetuning und -Merging auf dem Gerät gehen weiter als bei den meisten mobilen Apps dieser Kategorie, PocketPal AI und Private LLM eingeschlossen. Doch zum Zeitpunkt dieser Rezension ist es keine App, die die meisten Menschen tatsächlich installieren können: Apple hat sie im August 2025 aus dem App Store entfernt, der TestFlight-Zugang ist laut Projekt-README geschlossen, und der einzige bestätigte Weg zur Nutzung ist das eigenständige Kompilieren des quelloffenen Codes in Xcode. Das ist ein vertretbarer Aufwand für Entwickler, die den Code einsehen, mit LoRA-Finetuning experimentieren oder eine ungewöhnliche Modellarchitektur nutzen möchten. Für alle, die heute einfach eine App herunterladen und privat chatten möchten, ist das jedoch keine zumutbare Hürde — dafür sind PocketPal AI (kostenlos, quelloffen, direkt installierbar) oder Private LLM (kostenpflichtig, ausgereift, direkt installierbar) die praktikablen Optionen aus dem Abschnitt zu Alternativen oben.',
       },
       sources: {
         id: 'sources',
         title: 'Quellen',
         items: [
-          '[LLM Farm auf GitHub](https://github.com/guinmoon/LLMFarm) — Quellcode, Lizenz (MIT), README, Commit-Historie sowie Sterne-/Fork-Zahlen aus diesem Test.',
+          '[LLM Farm auf GitHub](https://github.com/guinmoon/LLMFarm) — Quellcode, Lizenz (MIT), README, Commit-Historie sowie Sterne-/Fork-Zahlen aus dieser Rezension.',
           '[LLM Farm LICENSE-Datei](https://github.com/guinmoon/LLMFarm/blob/main/LICENSE) — MIT-Lizenztext und Urheberrechtsinhaber (Artem Savkin, 2023).',
           '[LLM Farm Wiki: FAQ](https://github.com/guinmoon/LLMFarm/wiki/FAQ) — Installationshinweise und unterstützte Dateiformate.',
           '[LLM Farm Wiki: LoRA](https://github.com/guinmoon/LLMFarm/wiki/lora) — Dokumentation zu LoRA-Laden, Finetuning und Merging.',
-          '[llmfarm_core.swift auf GitHub](https://github.com/guinmoon/llmfarm_core.swift) — die in diesem Test referenzierte Inferenz-Bibliothek.',
-          '[GitHub-Release-Historie für guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm/releases) — letzter getaggter Release (1.4.3, Januar 2025), referenziert in diesem Test.',
+          '[llmfarm_core.swift auf GitHub](https://github.com/guinmoon/llmfarm_core.swift) — die in dieser Rezension referenzierte Inferenz-Bibliothek.',
+          '[GitHub-Release-Historie für guinmoon/LLMFarm](https://github.com/guinmoon/LLMFarm/releases) — letzter getaggter Release (1.4.3, Januar 2025), referenziert in dieser Rezension.',
         ],
       },
       relatedReading: {
@@ -904,9 +904,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Best Local LLM Apps for iPhone in 2026](/de/power-local-llm/best-local-llm-apps-iphone-2026) — die iOS-Übersicht mit direkt installierbaren Alternativen zu LLM Farm.',
-          '[PocketPal AI im Test](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene, direkt installierbare Alternative für iPhone, iPad und Android.',
-          '[Private LLM im Test](/de/power-local-llm/private-llm-review) — eine kostenpflichtige, Closed-Source-Alternative nur für Apple mit großem kuratiertem Modellkatalog.',
-          '[Enclave AI im Test](/de/power-local-llm/enclave-ai-review) — eine reine Apple-Alternative mit Siri- und Shortcuts-Automatisierung.',
+          '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene, direkt installierbare Alternative für iPhone, iPad und Android.',
+          '[Private-LLM-Rezension](/de/power-local-llm/private-llm-review) — eine kostenpflichtige, Closed-Source-Alternative nur für Apple mit großem kuratiertem Modellkatalog.',
+          '[Enclave-AI-Rezension](/de/power-local-llm/enclave-ai-review) — eine reine Apple-Alternative mit Siri- und Shortcuts-Automatisierung.',
           '[Loci AI Review: Offline AI for iPhone, Android, iPad, Mac and Windows](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine kostenpflichtige, Closed-Source-Alternative für fünf Plattformen mit kuratierter Modellbibliothek.',
         ],
       },
@@ -914,9 +914,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'LLM Farm im Test (2026): Open-Source-GGUF-App, nicht mehr im App Store',
+      headline: 'LLM-Farm-Rezension (2026): Open-Source-GGUF-App, nicht mehr im App Store',
       description:
-        'LLM Farm im Test: die quelloffene, MIT-lizenzierte iOS/macOS-GGUF-App mit LoRA-Finetuning auf dem Gerät. Derzeit nicht im App Store — was das bedeutet und wie man sie baut.',
+        'LLM-Farm-Rezension: die quelloffene, MIT-lizenzierte iOS/macOS-GGUF-App mit LoRA-Finetuning auf dem Gerät. Derzeit nicht im App Store — was das bedeutet und wie man sie baut.',
       url: 'https://promptquorum.com/power-local-llm/llm-farm-review',
       inLanguage: 'de',
       datePublished: '2026-09-06',
@@ -941,7 +941,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://promptquorum.com' },
         { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'LLM Farm im Test (2026)', item: 'https://promptquorum.com/power-local-llm/llm-farm-review' },
+        { '@type': 'ListItem', position: 3, name: 'LLM-Farm-Rezension (2026)', item: 'https://promptquorum.com/power-local-llm/llm-farm-review' },
       ],
     },
   },

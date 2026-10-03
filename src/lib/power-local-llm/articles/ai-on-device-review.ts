@@ -494,16 +494,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/ai-on-device-review-hero-de.webp',
-    title: 'AI on Device im Test: Eine 4,99-$-App nur für Apple Intelligence',
-    seoTitle: 'AI on Device Test: Offline-KI für Apple Intelligence',
+    title: 'AI-on-Device-Rezension: Eine 4,99-$-App nur für Apple Intelligence',
+    seoTitle: 'AI-on-Device-Rezension: Offline-KI für Apple Intelligence',
     intro:
       'AI on Device ist eine App für iPhone und Mac des unabhängigen Entwicklers Eduardo Dominguez Menendez, einmalig kostenpflichtig für 4,99 $, gelistet im [Apple App Store](' +
       APP_STORE_URL +
-      ') unter der App-Store-ID 6753206463. Sie führt ein Sprachmodell mit 3 Milliarden Parametern aus, quantisiert auf 2-Bit-Präzision, vollständig offline, ohne dass Daten das Gerät verlassen. Die App hat eine harte Voraussetzung, die die meisten bestehenden iPhones ausschließt: Sie funktioniert nur auf Geräten, die mit Apple Intelligence kompatibel sind und iOS 26.0 oder macOS 26.0 oder neuer benötigen. Zum Zeitpunkt der Erstellung lag die Version bei 1.00.01, zuletzt aktualisiert am 13. Oktober 2025 — fast ein Jahr vor diesem Test, obwohl die App noch jung ist — und es gab im App Store zu wenige Bewertungen für eine Sternedurchschnittsanzeige. Dieser Test behandelt beide Tatsachen als wesentliche Einschränkungen, nicht als Fußnoten: Eine kaum aktualisierte App eines einzelnen unabhängigen Entwicklers ohne sichtbare Erfolgsbilanz muss sich das Vertrauen der Leser über belegbare Fakten verdienen, nicht über Reputation.',
+      ') unter der App-Store-ID 6753206463. Sie führt ein Sprachmodell mit 3 Milliarden Parametern aus, quantisiert auf 2-Bit-Präzision, vollständig offline, ohne dass Daten das Gerät verlassen. Die App hat eine harte Voraussetzung, die die meisten bestehenden iPhones ausschließt: Sie funktioniert nur auf Geräten, die mit Apple Intelligence kompatibel sind und iOS 26.0 oder macOS 26.0 oder neuer benötigen. Zum Zeitpunkt der Erstellung lag die Version bei 1.00.01, zuletzt aktualisiert am 13. Oktober 2025 — fast ein Jahr vor dieser Rezension, obwohl die App noch jung ist — und es gab im App Store zu wenige Bewertungen für eine Sternedurchschnittsanzeige. Diese Rezension behandelt beide Tatsachen als wesentliche Einschränkungen, nicht als Fußnoten: Eine kaum aktualisierte App eines einzelnen unabhängigen Entwicklers ohne sichtbare Erfolgsbilanz muss sich das Vertrauen der Leser über belegbare Fakten verdienen, nicht über Reputation.',
     metaDescription:
-      'AI on Device im Test: 4,99-$-Einmalkauf-App für iPhone/Mac mit offline laufendem 3B-2-Bit-Modell. Erfordert ein Apple-Intelligence-kompatibles Gerät (iOS/macOS 26+). Ehrlicher Blick auf Bewertungszahl und Update-Historie.',
+      'AI-on-Device-Rezension: 4,99-$-Einmalkauf-App für iPhone/Mac mit offline laufendem 3B-2-Bit-Modell. Erfordert ein Apple-Intelligence-kompatibles Gerät (iOS/macOS 26+). Ehrlicher Blick auf Bewertungszahl und Update-Historie.',
     twitterDescription:
-      'AI on Device im Test: eine 4,99-$-Einmalkauf-App für iPhone/Mac mit einem vollständig offline laufenden, 2-Bit-quantisierten 3B-Modell — funktioniert aber nur auf Apple-Intelligence-kompatibler Hardware und hat zu wenige Bewertungen für einen Sternedurchschnitt.',
+      'AI-on-Device-Rezension: eine 4,99-$-Einmalkauf-App für iPhone/Mac mit einem vollständig offline laufenden, 2-Bit-quantisierten 3B-Modell — funktioniert aber nur auf Apple-Intelligence-kompatibler Hardware und hat zu wenige Bewertungen für einen Sternedurchschnitt.',
     audience:
       'iPhone- und Mac-Besitzer mit Apple-Intelligence-kompatibler Hardware, die eine kostenpflichtige Offline-KI-App eines einzelnen Entwicklers gegenüber freieren oder etablierteren Alternativen wie Private LLM, PocketPal AI und Noema bewerten — behandelt die Hardwarevoraussetzung, Preisgestaltung, das feste Modell und die geringe Bewertungszahl.',
     readTime: '9 Min. Lesezeit',
@@ -544,14 +544,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       de: {
         question: 'Lohnt sich AI on Device für 4,99 $ für Offline-KI auf dem iPhone?',
         answer:
-          'Nur wenn Ihr iPhone oder Mac bereits Apple-Intelligence-kompatibel ist (iOS 26.0 / macOS 26.0 oder neuer) — andernfalls startet die App gar nicht. Sie bündelt ein festes 3-Milliarden-Parameter-Modell, quantisiert auf 2-Bit-Präzision, für eine einmalige Zahlung von 4,99 $ ohne Abonnement oder Nutzungskontingente. Zum Zeitpunkt dieses Tests gab es zu wenige Bewertungen für eine Sternedurchschnittsanzeige, und das letzte Update war am 13. Oktober 2025 — behandeln Sie es daher als unbewiesene, wenig verbreitete App eines einzelnen Entwicklers und nicht als etabliertes Produkt.',
+          'Nur wenn Ihr iPhone oder Mac bereits Apple-Intelligence-kompatibel ist (iOS 26.0 / macOS 26.0 oder neuer) — andernfalls startet die App gar nicht. Sie bündelt ein festes 3-Milliarden-Parameter-Modell, quantisiert auf 2-Bit-Präzision, für eine einmalige Zahlung von 4,99 $ ohne Abonnement oder Nutzungskontingente. Zum Zeitpunkt dieser Rezension gab es zu wenige Bewertungen für eine Sternedurchschnittsanzeige, und das letzte Update war am 13. Oktober 2025 — behandeln Sie es daher als unbewiesene, wenig verbreitete App eines einzelnen Entwicklers und nicht als etabliertes Produkt.',
         bullets: [
           'Einmaliger Kauf für 4,99 $ im Apple App Store — kein Abonnement, keine nutzungsbasierten Gebühren, keine Kontingente.',
           'Erfordert ein Apple-Intelligence-kompatibles Gerät: iOS 26.0 oder macOS 26.0 oder neuer.',
           'Führt ein festes Modell aus: 3 Milliarden Parameter, quantisiert auf 2-Bit-Präzision.',
           '100 % Offline-Inferenz; laut Entwickler verlassen keine Daten das Gerät und werden keine Daten gesammelt.',
           'Version 1.00.01, zuletzt aktualisiert am 13. Oktober 2025 — zum Zeitpunkt der Erstellung fast ein Jahr alt.',
-          'Zu wenige Bewertungen im App Store für eine Sternedurchschnittsanzeige zum Zeitpunkt dieses Tests.',
+          'Zu wenige Bewertungen im App Store für eine Sternedurchschnittsanzeige zum Zeitpunkt dieser Rezension.',
         ],
         updatedDate: '2026-09-12',
       },
@@ -694,7 +694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Datenschutz: 100 % Offline-Inferenz; laut Entwickler verlassen keine Daten das Gerät und werden keine gesammelt.',
           'Entwickler: [Eduardo Dominguez Menendez](https://apps.apple.com/us/developer/eduardo-dominguez-menendez/id1697629661), ein unabhängiger Entwickler, kein Unternehmen.',
           'Version 1.00.01, zuletzt aktualisiert am 13. Oktober 2025 — zum Zeitpunkt der Erstellung fast ein Jahr alt, obwohl die App jung ist.',
-          'Bewertung: zu wenige Bewertungen im App Store zum Zeitpunkt dieses Tests für eine Sternedurchschnittsanzeige.',
+          'Bewertung: zu wenige Bewertungen im App Store zum Zeitpunkt dieser Rezension für eine Sternedurchschnittsanzeige.',
         ],
       },
       whatIsAiOnDevice: {
@@ -705,7 +705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           APP_STORE_URL +
           ') unter der App-Store-ID 6753206463 gelistet, entwickelt von [Eduardo Dominguez Menendez](https://apps.apple.com/us/developer/eduardo-dominguez-menendez/id1697629661) — einem unabhängigen Entwickler, nicht einem benannten Unternehmen oder Studio.',
           'Die App-Beschreibung selbst gibt an, ein Modell mit "3 Milliarden Parametern, vollständig quantisiert auf 2-Bit-Präzision" auszuführen, und behauptet 100 % Offline-Betrieb ohne von der App gesammelte Daten. Sie bewirbt außerdem nutzerfreundliche Prompt-Vorlagen und eine speziell für Apple-Hardware gebaute Integration statt eines allgemeinen plattformübergreifenden Wrappers.',
-          'Dieser Test bewertet die eigenen App-Store-Angaben des Entwicklers — die 2-Bit-Quantisierungszahl, die Aussage zur Nichterhebung von Daten, die Apple-Intelligence-Voraussetzung — im Vergleich zu dem, was der öffentliche App-Store-Eintrag selbst offenlegt, statt die Beschreibung unhinterfragt zu übernehmen. PromptQuorum hat die Ausgabequalität des Modells nicht unabhängig gegen andere On-Device-Modelle getestet.',
+          'Diese Rezension bewertet die eigenen App-Store-Angaben des Entwicklers — die 2-Bit-Quantisierungszahl, die Aussage zur Nichterhebung von Daten, die Apple-Intelligence-Voraussetzung — im Vergleich zu dem, was der öffentliche App-Store-Eintrag selbst offenlegt, statt die Beschreibung unhinterfragt zu übernehmen. PromptQuorum hat die Ausgabequalität des Modells nicht unabhängig gegen andere On-Device-Modelle getestet.',
         ],
       },
       howToGetStarted: {
@@ -791,7 +791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Keine Datenerhebung, laut eigener Angabe des Entwicklers.** Die App-Store-Beschreibung gibt an, dass der Entwickler keine Daten von der App sammelt.',
           '**100 % Offline-Inferenz.** Die Kernfunktion der App — das Ausführen des eingebetteten 3-Milliarden-Parameter-Modells — benötigt nach der Installation keine Internetverbindung.',
-          '**Keine unabhängige Prüfung.** Dieser Test stützt sich auf die eigenen App-Store-Angaben des Entwicklers, nicht auf eine unabhängige Quellcode-Prüfung oder Netzwerkverkehrsanalyse.',
+          '**Keine unabhängige Prüfung.** Diese Rezension stützt sich auf die eigenen App-Store-Angaben des Entwicklers, nicht auf eine unabhängige Quellcode-Prüfung oder Netzwerkverkehrsanalyse.',
         ],
       },
       tradeOffs: {
@@ -808,7 +808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Vorteil': 'Vollständig Offline-Inferenz',
             'Was das in der Praxis bedeutet': 'Das eingebettete Modell läuft nach der Installation ohne Internetverbindung.',
-            'Einschränkung / Vorbehalt': 'Dieser Test stützt sich auf die eigene Angabe des Entwicklers zur Nichterhebung von Daten, nicht auf eine unabhängige Prüfung.',
+            'Einschränkung / Vorbehalt': 'Diese Rezension stützt sich auf die eigene Angabe des Entwicklers zur Nichterhebung von Daten, nicht auf eine unabhängige Prüfung.',
           },
           {
             'Vorteil': 'Kleines, effizientes 2-Bit-Modell',
@@ -828,7 +828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Vorteil': 'N/A',
             'Was das in der Praxis bedeutet': 'N/A',
-            'Einschränkung / Vorbehalt': 'Zu wenige Bewertungen im App Store zum Zeitpunkt dieses Tests für eine Sternedurchschnittsanzeige, zuletzt aktualisiert am 13. Oktober 2025 — fast ein Jahr vor diesem Test, obwohl die App jung ist.',
+            'Einschränkung / Vorbehalt': 'Zu wenige Bewertungen im App Store zum Zeitpunkt dieser Rezension für eine Sternedurchschnittsanzeige, zuletzt aktualisiert am 13. Oktober 2025 — fast ein Jahr vor dieser Rezension, obwohl die App jung ist.',
           },
         ],
       },
@@ -870,8 +870,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'App': '[Enclave AI](/de/power-local-llm/enclave-ai-review)',
             'Plattformen': 'Siehe aktuelle Auflistung',
             'Preis': 'Siehe aktuelle Auflistung',
-            'Modellflexibilität': 'Siehe vollständigen Test für aktuelle Modellunterstützung',
-            'Hauptunterschied': 'Siehe den vollständigen Enclave-AI-Test für einen detaillierten Vergleich',
+            'Modellflexibilität': 'Siehe die vollständige Rezension für aktuelle Modellunterstützung',
+            'Hauptunterschied': 'Siehe die vollständige Rezension für einen detaillierten Vergleich',
           },
         ],
         note: 'Plattform-, Preis- und Funktionsangaben für Drittanbieter-Apps ändern sich häufig — prüfen Sie vor einer Entscheidung die aktuellen Angaben im jeweiligen App-Eintrag.',
@@ -892,7 +892,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Leser, deren iPhone oder Mac Apple Intelligence nicht unterstützt.** Die App startet ihre Kernfunktion auf nicht unterstützter Hardware nicht — Kompatibilität vor dem Kauf für 4,99 $ prüfen. Die meisten bestehenden iPhones fallen in diese Kategorie.',
           '**Leser, die mehrere Modelloptionen möchten.** AI on Device bündelt ein festes Modell; [Private LLM](/de/power-local-llm/private-llm-review) bietet 140+ kuratierte Modelle und [Noema](/de/power-local-llm/noema-review) unterstützt fünf Modellformate.',
-          '**Leser, denen eine belegte Erfolgsbilanz wichtig ist.** Mit zu wenigen Bewertungen für einen Sternedurchschnitt und einem letzten Update von fast einem Jahr vor diesem Test sollten Leser, die viel Wert auf Social Proof legen, stattdessen mit [Private LLM](/de/power-local-llm/private-llm-review) oder [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) beginnen.',
+          '**Leser, denen eine belegte Erfolgsbilanz wichtig ist.** Mit zu wenigen Bewertungen für einen Sternedurchschnitt und einem letzten Update von fast einem Jahr vor dieser Rezension sollten Leser, die viel Wert auf Social Proof legen, stattdessen mit [Private LLM](/de/power-local-llm/private-llm-review) oder [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) beginnen.',
           '**Leser, die eine kostenlose Option möchten.** [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) und [Noema](/de/power-local-llm/noema-review) sind beide kostenlos mit breiterer oder flexiblerer Modellunterstützung.',
           '**iPad-, Android-, Windows- oder Linux-Nutzer.** AI on Device ist laut App-Store-Eintrag nur für iPhone und Mac.',
         ],
@@ -903,7 +903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Was kostet AI on Device?',
-            a: 'AI on Device ist ein [einmaliger Kauf für 4,99 $](' + APP_STORE_URL + '), verifiziert für diesen Test am 2026-09-12, ohne Abonnement, ohne nutzungsbasierte Gebühren und ohne Kontingente, laut App-Store-Eintrag. App-Store-Preise können sich im Laufe der Zeit ändern — prüfen Sie den aktuellen Preis vor dem Kauf.',
+            a: 'AI on Device ist ein [einmaliger Kauf für 4,99 $](' + APP_STORE_URL + '), verifiziert für diese Rezension am 2026-09-12, ohne Abonnement, ohne nutzungsbasierte Gebühren und ohne Kontingente, laut App-Store-Eintrag. App-Store-Preise können sich im Laufe der Zeit ändern — prüfen Sie den aktuellen Preis vor dem Kauf.',
           },
           {
             q: 'Funktioniert AI on Device auf meinem iPhone?',
@@ -923,15 +923,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Funktioniert AI on Device vollständig offline?',
-            a: 'Ja. Der Entwickler gibt an, dass die App laut App-Store-Beschreibung 100 % offline läuft und keine Daten sammelt. Dieser Test stützt sich auf die eigene Angabe des Entwicklers, nicht auf eine unabhängige Netzwerkverkehrsprüfung.',
+            a: 'Ja. Der Entwickler gibt an, dass die App laut App-Store-Beschreibung 100 % offline läuft und keine Daten sammelt. Diese Rezension stützt sich auf die eigene Angabe des Entwicklers, nicht auf eine unabhängige Netzwerkverkehrsprüfung.',
           },
           {
             q: 'Wie zuverlässig ist die App-Store-Bewertung von AI on Device?',
-            a: 'Zum Zeitpunkt dieses Tests zeigt der App-Store-Eintrag zu wenige Bewertungen, um überhaupt einen Sternedurchschnitt anzuzeigen — ein stärkerer Vorbehalt als ein niedriger Sternedurchschnitt mit vielen Bewertungen. Behandeln Sie die App als unbewiesen, statt aus Social Proof auf Qualität zu schließen, und prüfen Sie die aktuelle Bewertungszahl im App Store, bevor Sie sich darauf verlassen.',
+            a: 'Zum Zeitpunkt dieser Rezension zeigt der App-Store-Eintrag zu wenige Bewertungen, um überhaupt einen Sternedurchschnitt anzuzeigen — ein stärkerer Vorbehalt als ein niedriger Sternedurchschnitt mit vielen Bewertungen. Behandeln Sie die App als unbewiesen, statt aus Social Proof auf Qualität zu schließen, und prüfen Sie die aktuelle Bewertungszahl im App Store, bevor Sie sich darauf verlassen.',
           },
           {
             q: 'Wie oft wird AI on Device aktualisiert?',
-            a: 'Der App-Store-Eintrag zeigt Version 1.00.01, zuletzt aktualisiert am 13. Oktober 2025 — fast ein Jahr vor Veröffentlichung dieses Tests, obwohl die App relativ jung ist. Das ist eine langsamere Update-Taktung als bei mehreren aktiv gepflegten Konkurrenten in diesem Cluster und sollte zusammen mit der geringen Bewertungszahl gewichtet werden.',
+            a: 'Der App-Store-Eintrag zeigt Version 1.00.01, zuletzt aktualisiert am 13. Oktober 2025 — fast ein Jahr vor Veröffentlichung dieser Rezension, obwohl die App relativ jung ist. Das ist eine langsamere Update-Taktung als bei mehreren aktiv gepflegten Konkurrenten in diesem Cluster und sollte zusammen mit der geringen Bewertungszahl gewichtet werden.',
           },
           {
             q: 'Wie schneidet AI on Device im Vergleich zu Private LLM ab?',
@@ -943,7 +943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'AI on Device ist eine unkomplizierte, ehrlich bepreiste App — einmalig 4,99 $, kein Abonnement, keine Kontingente —, die ein festes 3-Milliarden-Parameter-Modell mit 2-Bit-Quantisierung vollständig offline ausführt. Diese Einfachheit ist zugleich die größte Einschränkung: Es gibt keine Modellbibliothek zur Auswahl, und die App ist durch eine harte Apple-Intelligence-Hardwarevoraussetzung (iOS 26.0 / macOS 26.0 oder neuer) gesperrt, die die meisten bestehenden iPhones von vornherein ausschließt. Die ehrlichen Vorbehalte enden dort nicht: Zum Zeitpunkt dieses Tests zeigt der App Store zu wenige Bewertungen für eine Sternedurchschnittsanzeige, und das letzte Update war am 13. Oktober 2025 — fast ein Jahr vor diesem Test, obwohl die App jung ist. Diese Kombination — ein einzelner unabhängiger Entwickler, keine sichtbare Erfolgsbilanz und eine veraltete Update-Historie — bedeutet, dass dies kein Kauf auf Basis von Reputation sein sollte. Leser, die bereits Apple-Intelligence-kompatible Hardware besitzen und bereit sind, Early Adopter einer unbewiesenen App zu sein, können sie für 4,99 $ vertretbar ausprobieren. Alle anderen, insbesondere Leser, die eine breitere Modellbibliothek oder eine längere Erfolgsbilanz wünschen, sollten stattdessen mit [Private LLM](/de/power-local-llm/private-llm-review), [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) oder [Noema](/de/power-local-llm/noema-review) beginnen.',
+          'AI on Device ist eine unkomplizierte, ehrlich bepreiste App — einmalig 4,99 $, kein Abonnement, keine Kontingente —, die ein festes 3-Milliarden-Parameter-Modell mit 2-Bit-Quantisierung vollständig offline ausführt. Diese Einfachheit ist zugleich die größte Einschränkung: Es gibt keine Modellbibliothek zur Auswahl, und die App ist durch eine harte Apple-Intelligence-Hardwarevoraussetzung (iOS 26.0 / macOS 26.0 oder neuer) gesperrt, die die meisten bestehenden iPhones von vornherein ausschließt. Die ehrlichen Vorbehalte enden dort nicht: Zum Zeitpunkt dieser Rezension zeigt der App Store zu wenige Bewertungen für eine Sternedurchschnittsanzeige, und das letzte Update war am 13. Oktober 2025 — fast ein Jahr vor dieser Rezension, obwohl die App jung ist. Diese Kombination — ein einzelner unabhängiger Entwickler, keine sichtbare Erfolgsbilanz und eine veraltete Update-Historie — bedeutet, dass dies kein Kauf auf Basis von Reputation sein sollte. Leser, die bereits Apple-Intelligence-kompatible Hardware besitzen und bereit sind, Early Adopter einer unbewiesenen App zu sein, können sie für 4,99 $ vertretbar ausprobieren. Alle anderen, insbesondere Leser, die eine breitere Modellbibliothek oder eine längere Erfolgsbilanz wünschen, sollten stattdessen mit [Private LLM](/de/power-local-llm/private-llm-review), [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) oder [Noema](/de/power-local-llm/noema-review) beginnen.',
       },
       sources: {
         id: 'sources',
@@ -957,10 +957,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Themen',
         items: [
-          '[Private LLM im Test](/de/power-local-llm/private-llm-review) — eine kostenpflichtige, kuratierte Alternative ohne Apple-Intelligence-Voraussetzung und mit längerer Veröffentlichungshistorie.',
-          '[PocketPal AI im Test](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene, breit kompatible Alternative.',
-          '[Noema im Test](/de/power-local-llm/noema-review) — eine kostenlose Alternative mit fünf Formaten und austauschbarer Modellbibliothek.',
-          '[Enclave AI im Test](/de/power-local-llm/enclave-ai-review) — eine weitere On-Device-KI-App zum Vergleich.',
+          '[Private-LLM-Rezension](/de/power-local-llm/private-llm-review) — eine kostenpflichtige, kuratierte Alternative ohne Apple-Intelligence-Voraussetzung und mit längerer Veröffentlichungshistorie.',
+          '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene, breit kompatible Alternative.',
+          '[Noema-Rezension](/de/power-local-llm/noema-review) — eine kostenlose Alternative mit fünf Formaten und austauschbarer Modellbibliothek.',
+          '[Enclave-AI-Rezension](/de/power-local-llm/enclave-ai-review) — eine weitere On-Device-KI-App zum Vergleich.',
           '[Das vollständige Local-LLM-Software-Verzeichnis](/de/directory) — ein breiteres Verzeichnis lokaler LLM-Tools über alle Plattformen hinweg.',
         ],
       },

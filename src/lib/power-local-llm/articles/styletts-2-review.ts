@@ -376,19 +376,19 @@ custom_tts = tts.StyleTTS2(
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/styletts-2-review-hero-de.webp',
-    title: 'StyleTTS 2 im Test: Columbias MIT-lizenziertes Forschungsmodell für natürliche Sprache',
-    seoTitle: 'StyleTTS 2 im Test: MIT-lizenzierte Sprachsynthese',
+    title: 'StyleTTS-2-Rezension: Columbias MIT-lizenziertes Forschungsmodell für natürliche Sprache',
+    seoTitle: 'StyleTTS-2-Rezension: MIT-lizenzierte Sprachsynthese',
     intro:
-      'StyleTTS 2 ist ein quelloffenes Text-zu-Sprache-Modell von Forschern der Columbia University, veröffentlicht auf [GitHub](https://github.com/yl4579/StyleTTS2), das natürlich klingende Sprache mittels Style-Diffusion und adversarialem Training mit großen Sprachmodellen für Audio erzeugt. Der Code steht unter der **MIT-Lizenz**, doch das README fügt eine separate, nicht-lizenzrechtliche Offenlegungsbedingung für die vortrainierten Modellgewichte hinzu, und das öffentliche Repository zeigt seit dem 7. März 2024 keine Commits mehr. Dieser Test behandelt, was StyleTTS 2 tatsächlich tut, echte Installations- und Inferenzbefehle, die Lizenz-Nuance zwischen dem MIT-Code und den bedingten Modellgewichten sowie seinen ruhenden, aber nicht archivierten Pflegestatus — das ehrliche Bild für jeden, der es 2026 evaluiert.',
+      'StyleTTS 2 ist ein quelloffenes Text-zu-Sprache-Modell von Forschern der Columbia University, veröffentlicht auf [GitHub](https://github.com/yl4579/StyleTTS2), das natürlich klingende Sprache mittels Style-Diffusion und adversarialem Training mit großen Sprachmodellen für Audio erzeugt. Der Code steht unter der **MIT-Lizenz**, doch das README fügt eine separate, nicht-lizenzrechtliche Offenlegungsbedingung für die vortrainierten Modellgewichte hinzu, und das öffentliche Repository zeigt seit dem 7. März 2024 keine Commits mehr. Diese Rezension behandelt, was StyleTTS 2 tatsächlich tut, echte Installations- und Inferenzbefehle, die Lizenz-Nuance zwischen dem MIT-Code und den bedingten Modellgewichten sowie seinen ruhenden, aber nicht archivierten Pflegestatus — das ehrliche Bild für jeden, der es 2026 evaluiert.',
     metaDescription:
-      'StyleTTS 2 im Test: Columbia Universitys MIT-lizenziertes Style-Diffusion-Sprachmodell. Echte Installationsbefehle, die Lizenz-Nuance bei den Modellgewichten und sein Pflegestatus (keine Commits seit März 2024) für 2026.',
+      'StyleTTS-2-Rezension: Columbia Universitys MIT-lizenziertes Style-Diffusion-Sprachmodell. Echte Installationsbefehle, die Lizenz-Nuance bei den Modellgewichten und sein Pflegestatus (keine Commits seit März 2024) für 2026.',
     twitterDescription:
-      'StyleTTS 2 im Test 2026: Columbias Forschungsmodell nutzt Style-Diffusion und adversariales Training für natürliche Erzählstimmen, unter MIT-Lizenz mit einem dokumentationsseitigen Haken bei den vortrainierten Gewichten. Echte Befehle, ehrliche Grenzen und ein Pflegestatus-Check.',
+      'StyleTTS-2-Rezension 2026: Columbias Forschungsmodell nutzt Style-Diffusion und adversariales Training für natürliche Erzählstimmen, unter MIT-Lizenz mit einem dokumentationsseitigen Haken bei den vortrainierten Gewichten. Echte Befehle, ehrliche Grenzen und ein Pflegestatus-Check.',
     audience:
       'Entwickler und Forscher, die ein lokales, MIT-lizenziertes Text-zu-Sprache-Modell für hochwertige Erzählungen evaluieren und dessen Forschungs-Repo-Pflegestatus sowie Lizenz-Nuance verstehen müssen, bevor sie darauf aufbauen.',
     readTime: '12 Min. Lesezeit',
     educationalLevel: 'Intermediate',
-    primaryTerm: 'StyleTTS 2 im Test',
+    primaryTerm: 'StyleTTS 2 Rezension',
     targetKeywords: [
       'styletts 2 test',
       'styletts2',
@@ -470,7 +470,7 @@ custom_tts = tts.StyleTTS2(
           '**StyleTTS 2 wurde von Forschern der Fakultät für Elektrotechnik der Columbia University entwickelt** — Yinghao Aaron Li, Cong Han, Vinay S. Raghavan, Gavin Mischler und Nima Mesgarani — und als NeurIPS-2023-Paper mit dem Titel „StyleTTS 2: Towards Human-Level Text-to-Speech through Style Diffusion and Adversarial Training with Large Speech Language Models" veröffentlicht.',
           '**Die zentrale These des Papers ist, dass die Kombination aus Style-Diffusion (Modellierung des Sprechstils als latente Wahrscheinlichkeitsverteilung statt als einzelner fester Vektor) und adversarialem Training gegen große vortrainierte Sprachmodelle für Audio menschenähnliche Sprachvariation genauer modelliert als frühere Ansätze.** Beim Einzelsprecher-Benchmark LJSpeech berichtet das Paper, dass StyleTTS 2 in Hörerbewertungen echte menschliche Sprachaufnahmen erreicht oder übertrifft; beim Multi-Speaker-Datensatz LibriTTS übertrifft es demnach zuvor verfügbare öffentliche Modelle bei der Zero-Shot-Sprecheranpassung.',
           '**Das öffentliche [yl4579/StyleTTS2](https://github.com/yl4579/StyleTTS2)-GitHub-Repository hat über 6.300 Sterne gesammelt** und ist nicht als archiviert markiert — doch PromptQuorum fand seit dem 7. März 2024 keine Commits mehr im Hauptzweig des Repositorys, basierend auf der öffentlichen Commit-Historie des Projekts. Das passt eher zu einer universitären Forschungsveröffentlichung als zu einem kommerziell gepflegten Open-Source-Produkt: Code, Paper und vortrainierte Checkpoints wurden begleitend zur Forschung veröffentlicht, ohne laufende Verpflichtung zu Feature-Entwicklung oder Bugfix-Releases.',
-          '**Ein community-gepflegtes pip-Paket, `styletts2` des Entwicklers Sidharth Rajaram**, verpackt den ursprünglichen Forschungscode in ein installierbares Paket (`pip install styletts2`), das den GPL-3.0-lizenzierten Phonemizer espeak-ng gegen die MIT-lizenzierte Bibliothek gruut austauscht, um die gesamte Installationskette freizügig lizenziert zu halten. Das jüngste Release auf [PyPI](https://pypi.org/project/styletts2/) ist Version 0.1.6, veröffentlicht am 11. Januar 2024 — zum Zeitpunkt dieses Tests ebenfalls über zweieinhalb Jahre alt und ein separates Drittprojekt, losgelöst vom ursprünglichen Columbia-Forschungscode.',
+          '**Ein community-gepflegtes pip-Paket, `styletts2` des Entwicklers Sidharth Rajaram**, verpackt den ursprünglichen Forschungscode in ein installierbares Paket (`pip install styletts2`), das den GPL-3.0-lizenzierten Phonemizer espeak-ng gegen die MIT-lizenzierte Bibliothek gruut austauscht, um die gesamte Installationskette freizügig lizenziert zu halten. Das jüngste Release auf [PyPI](https://pypi.org/project/styletts2/) ist Version 0.1.6, veröffentlicht am 11. Januar 2024 — zum Zeitpunkt dieser Rezension ebenfalls über zweieinhalb Jahre alt und ein separates Drittprojekt, losgelöst vom ursprünglichen Columbia-Forschungscode.',
         ],
         faqs: [
           {
@@ -670,7 +670,7 @@ custom_tts = tts.StyleTTS2(
         id: 'verdict',
         title: 'Fazit',
         content:
-          'StyleTTS 2 bleibt bei der Ausgabequalität wirklich beeindruckend: Sein Ansatz aus Style-Diffusion und adversarialem Training wird im eigenen NeurIPS-Paper als Erreichen oder Übertreffen der Qualität menschlicher Aufnahmen beim LJSpeech-Benchmark angeführt, unter einer Code-Lizenz (MIT), die kaum freizügiger sein könnte. Was es für die meisten Leser zu keiner einfachen Empfehlung macht, ist alles rund um dieses Kernmodell: eine dokumentationsseitige Offenlegungsbedingung für die vortrainierten Gewichte, die außerhalb der formalen MIT-Gewährung liegt, ein offizieller Inferenzpfad, der eine GPL-3.0-Abhängigkeit nach sich zieht, ein Community-pip-Paket, das diese Abhängigkeit vermeidet, aber selbst über zweieinhalb Jahre veraltet ist, und keine Commits im offiziellen Repository seit dem 7. März 2024. Wenn Sie die höchste verfügbare natürlich klingende englische Erzählqualität lokal wollen und mit forschungsorientiertem Setup sowie einer ungepflegten Abhängigkeitskette einverstanden sind, liefert StyleTTS 2. Wenn Sie eine einfachere Installation, aktive Pflege oder verpacktes Voice-Cloning wollen, kombinieren Sie diesen Test mit PromptQuorums Abdeckung von [Piper](/de/power-local-llm/piper-tts-review) für schnelle reine CPU-Synthese, [XTTS v2](/de/power-local-llm/xtts-v2-review) für verpacktes Voice-Cloning oder dem [ElevenLabs-Vergleich](/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) für eine vollständig verwaltete Alternative. Dieser Test ist der letzte von sechs lokalen Sprach-zu-Text- und Text-zu-Sprache-Engines, die PromptQuorum ausführlich getestet hat, neben [Whisper.cpp](/de/power-local-llm/whisper-cpp-review), [Faster Whisper](/de/power-local-llm/faster-whisper-review), Piper, [Coqui TTS](/de/power-local-llm/coqui-tts-review), XTTS v2 und [Bark](/de/power-local-llm/bark-tts-review).',
+          'StyleTTS 2 bleibt bei der Ausgabequalität wirklich beeindruckend: Sein Ansatz aus Style-Diffusion und adversarialem Training wird im eigenen NeurIPS-Paper als Erreichen oder Übertreffen der Qualität menschlicher Aufnahmen beim LJSpeech-Benchmark angeführt, unter einer Code-Lizenz (MIT), die kaum freizügiger sein könnte. Was es für die meisten Leser zu keiner einfachen Empfehlung macht, ist alles rund um dieses Kernmodell: eine dokumentationsseitige Offenlegungsbedingung für die vortrainierten Gewichte, die außerhalb der formalen MIT-Gewährung liegt, ein offizieller Inferenzpfad, der eine GPL-3.0-Abhängigkeit nach sich zieht, ein Community-pip-Paket, das diese Abhängigkeit vermeidet, aber selbst über zweieinhalb Jahre veraltet ist, und keine Commits im offiziellen Repository seit dem 7. März 2024. Wenn Sie die höchste verfügbare natürlich klingende englische Erzählqualität lokal wollen und mit forschungsorientiertem Setup sowie einer ungepflegten Abhängigkeitskette einverstanden sind, liefert StyleTTS 2. Wenn Sie eine einfachere Installation, aktive Pflege oder verpacktes Voice-Cloning wollen, kombinieren Sie diese Rezension mit PromptQuorums Abdeckung von [Piper](/de/power-local-llm/piper-tts-review) für schnelle reine CPU-Synthese, [XTTS v2](/de/power-local-llm/xtts-v2-review) für verpacktes Voice-Cloning oder dem [ElevenLabs-Vergleich](/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) für eine vollständig verwaltete Alternative. Diese Rezension ist der letzte von sechs lokalen Sprach-zu-Text- und Text-zu-Sprache-Engines, die PromptQuorum ausführlich getestet hat, neben [Whisper.cpp](/de/power-local-llm/whisper-cpp-review), [Faster Whisper](/de/power-local-llm/faster-whisper-review), Piper, [Coqui TTS](/de/power-local-llm/coqui-tts-review), XTTS v2 und [Bark](/de/power-local-llm/bark-tts-review).',
       },
       sources: {
         id: 'sources',
@@ -688,10 +688,10 @@ custom_tts = tts.StyleTTS2(
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[XTTS v2 Test](/de/power-local-llm/xtts-v2-review) — verpacktes Voice-Cloning aus 6 Sekunden Referenzaudio, unter nicht-kommerzieller Lizenz.',
-          '[Bark TTS Test](/de/power-local-llm/bark-tts-review) — das ausdrucksstarke, nicht-sprachliche Audio-Modell mit einer einzigen, eindeutigen MIT-Lizenz.',
-          '[Piper TTS Test](/de/power-local-llm/piper-tts-review) — die schnelle, einfach zu installierende, reine CPU-lokale TTS-Alternative.',
-          '[Coqui TTS Test](/de/power-local-llm/coqui-tts-review) — das flexible Multi-Backend-Toolkit und der community-gepflegte Fork.',
+          '[XTTS-v2-Rezension](/de/power-local-llm/xtts-v2-review) — verpacktes Voice-Cloning aus 6 Sekunden Referenzaudio, unter nicht-kommerzieller Lizenz.',
+          '[Bark-TTS-Rezension](/de/power-local-llm/bark-tts-review) — das ausdrucksstarke, nicht-sprachliche Audio-Modell mit einer einzigen, eindeutigen MIT-Lizenz.',
+          '[Piper-TTS-Rezension](/de/power-local-llm/piper-tts-review) — die schnelle, einfach zu installierende, reine CPU-lokale TTS-Alternative.',
+          '[Coqui-TTS-Rezension](/de/power-local-llm/coqui-tts-review) — das flexible Multi-Backend-Toolkit und der community-gepflegte Fork.',
           '[Lokale TTS- & Voice-Cloning-Lizenzen: Piper, XTTS v2, F5-TTS und Coqui](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — die Lizenz-Tiefenanalyse über alle wichtigen lokalen TTS-Engines hinweg.',
           '[ElevenLabs vs Piper vs XTTS v2](/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — der Cloud-vs-lokal-Vergleich für Leser, die entscheiden, ob sie selbst hosten sollten.',
         ],
@@ -700,9 +700,9 @@ custom_tts = tts.StyleTTS2(
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'StyleTTS 2 im Test (2026): Columbias MIT-lizenziertes Forschungsmodell für natürliche Sprache',
+      headline: 'StyleTTS-2-Rezension (2026): Columbias MIT-lizenziertes Forschungsmodell für natürliche Sprache',
       description:
-        'StyleTTS 2 im Test: Columbia Universitys MIT-lizenziertes Style-Diffusion-Sprachmodell. Echte Installationsbefehle, die Lizenz-Nuance bei den Modellgewichten und sein Pflegestatus (keine Commits seit März 2024) für 2026.',
+        'StyleTTS-2-Rezension: Columbia Universitys MIT-lizenziertes Style-Diffusion-Sprachmodell. Echte Installationsbefehle, die Lizenz-Nuance bei den Modellgewichten und sein Pflegestatus (keine Commits seit März 2024) für 2026.',
       url: 'https://promptquorum.com/de/power-local-llm/styletts-2-review',
       inLanguage: 'de',
       datePublished: '2026-09-06',
@@ -726,7 +726,7 @@ custom_tts = tts.StyleTTS2(
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://promptquorum.com' },
         { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/de/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'StyleTTS 2 im Test (2026)', item: 'https://promptquorum.com/de/power-local-llm/styletts-2-review' },
+        { '@type': 'ListItem', position: 3, name: 'StyleTTS-2-Rezension (2026)', item: 'https://promptquorum.com/de/power-local-llm/styletts-2-review' },
       ],
     },
   },

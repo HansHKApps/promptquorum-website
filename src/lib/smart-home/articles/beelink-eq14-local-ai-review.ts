@@ -432,18 +432,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Decision & Comparison',
     heroImage: '/images/beelink-eq14-local-ai-review-overview-hero-de.webp',
     affiliateDisclosure: true,
-    title: 'Beelink EQ14 N150 Test (2026): Bester günstiger Mini-PC für Home-Assistant-Netzwerk',
-    seoTitle: 'Beelink EQ14 N150 Test 2026: Günstige HA-Netzwerkbox',
+    title: 'Beelink-EQ14-N150-Rezension (2026): Bester günstiger Mini-PC für Home-Assistant-Netzwerk',
+    seoTitle: 'Beelink-EQ14-N150-Rezension 2026: Günstige HA-Netzwerkbox',
     intro:
-      'Der Beelink EQ14 (Intel N150, 16 GB DDR4, zwei 2.5GbE beim Standard-SKU) ist ein günstiger Mini-PC für ein lokal-first Smart Home. Für rund 199–219 € in der Konfiguration 16 GB / 500 GB (Preis geprüft am 25. August 2026) betreibt er Home Assistant und ein kleines lokales Modell gut, doch sein eigentlicher Vorteil sind zwei 2.5GbE-Ethernet-Ports zu einem Preis, bei dem die meisten Konkurrenten nur einen — oder gar keinen — bieten. Dieser Test prüft die Spezifikationen gegen Hersteller- und unabhängige Quellen, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs und bewertet ihn direkt im Vergleich zum GMKtec G3 Plus und zu Ryzen-Boxen der nächsten Stufe.',
+      'Der Beelink EQ14 (Intel N150, 16 GB DDR4, zwei 2.5GbE beim Standard-SKU) ist ein günstiger Mini-PC für ein lokal-first Smart Home. Für rund 199–219 € in der Konfiguration 16 GB / 500 GB (Preis geprüft am 25. August 2026) betreibt er Home Assistant und ein kleines lokales Modell gut, doch sein eigentlicher Vorteil sind zwei 2.5GbE-Ethernet-Ports zu einem Preis, bei dem die meisten Konkurrenten nur einen — oder gar keinen — bieten. Diese Rezension prüft die Spezifikationen gegen Hersteller- und unabhängige Quellen, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs und bewertet ihn direkt im Vergleich zum GMKtec G3 Plus und zu Ryzen-Boxen der nächsten Stufe.',
     metaDescription:
-      'Beelink EQ14 N150 Test 2026: reale Preise (Aug. 2026), Scorecard, LAN-Varianten-Warnung und direkter G3-Plus-Vergleich. Günstige Home-Assistant-Box mit zwei 2.5GbE.',
+      'Beelink-EQ14-N150-Rezension 2026: reale Preise (Aug. 2026), Scorecard, LAN-Varianten-Warnung und direkter G3-Plus-Vergleich. Günstige Home-Assistant-Box mit zwei 2.5GbE.',
     twitterDescription:
       'Beelink EQ14 (2026): Intel N150, 16 GB DDR4, zwei 2.5GbE, ca. 199–219 €. Scorecard, Konfigurationsempfehlung und warum sein Netzwerk — nicht seine KI — der Kaufgrund ist.',
     readTime: '9 Min. Lesezeit',
     educationalLevel: 'Beginner',
     audience: 'Preisbewusste Käufer, die Home Assistant und ein kleines lokales Modell mit starkem Netzwerk betreiben wollen',
-    primaryTerm: 'Beelink EQ14 Test',
+    primaryTerm: 'Beelink EQ14 Rezension',
     targetKeywords: [
       'beelink eq14 test',
       'beelink eq14 n150',
@@ -611,7 +611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Merkmal: 'Am besten für', EQ14: 'Netzwerklastiges Home Assistant, Dual-NIC-Setups', 'G3 Plus': 'Aufrüstbarer RAM, Single-LAN-Setups', Sieger: 'Kommt auf Priorität an' },
         ],
         items: [
-          '**Unsere Empfehlung:** Wählen Sie den EQ14, wenn Sie doppeltes 2.5GbE oder einen USB-C-Port wollen. Wählen Sie den G3 Plus, wenn Ihnen RAM-Reserve bis 32 GB wichtiger ist als ein zweiter Ethernet-Port — siehe den [vollständigen GMKtec-G3-Plus-Test](/de/smart-home/gmktec-g3-plus-local-ai-review).',
+          '**Unsere Empfehlung:** Wählen Sie den EQ14, wenn Sie doppeltes 2.5GbE oder einen USB-C-Port wollen. Wählen Sie den G3 Plus, wenn Ihnen RAM-Reserve bis 32 GB wichtiger ist als ein zweiter Ethernet-Port — siehe den [vollständigen GMKtec-G3-Plus-Rezension](/de/smart-home/gmktec-g3-plus-local-ai-review).',
           'Keine der beiden Boxen übertrifft die andere spürbar bei Home Assistant oder Small-Model-KI-Leistung — CPU und iGPU sind identisch.',
         ],
         affiliateLinks: [
@@ -677,7 +677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Ausgezeichnete Eignung:** Home Assistant, ZHA, Zigbee2MQTT, Mosquitto, Node-RED, AdGuard Home, Docker, Dashboards, Datenbanken, allgemeine Automatisierungsdienste.',
           '**Gute Eignung:** Ollama mit einem kleinen (1–3B) lokalen Modell, lokale Sprachkomponenten, leichte KI-unterstützte Automatisierung.',
           '**Eingeschränkt:** ein lokales 7B-LLM (funktioniert, aber langsam für interaktive Nutzung), anspruchsvollere Frigate-Objekterkennung, gleichzeitige KI-Inferenz und Videoanalyse.',
-          '**Schlechte Eignung — andere Hardware kaufen:** große lokale LLMs (8B+), ernsthafte KI-Vision-Workloads, GPU-lastige Inferenz. Siehe den [Beelink-SER8-Test](/de/smart-home/beelink-ser8-local-ai-review) für eine Box, die dafür gebaut ist.',
+          '**Schlechte Eignung — andere Hardware kaufen:** große lokale LLMs (8B+), ernsthafte KI-Vision-Workloads, GPU-lastige Inferenz. Siehe den [Beelink-SER8-Rezension](/de/smart-home/beelink-ser8-local-ai-review) für eine Box, die dafür gebaut ist.',
           '**Bonus-Eignung (dank doppeltem 2.5GbE):** leichter Netzwerk-Appliance-Betrieb neben Home Assistant — DNS-Filterung, VLAN-segmentierter IoT-Traffic oder eine dedizierte Hochgeschwindigkeitsverbindung zu einem NAS. Siehe [Warum doppeltes 2.5GbE wichtig ist](#why-networking) oben.',
         ],
       },
@@ -756,7 +756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'methodology',
         title: 'Wie wir bewerten',
         content:
-          '**Dieser Test wurde nicht von PromptQuorum an einem physischen Gerät durchgeführt.** Er basiert auf herstellerseitig veröffentlichten Spezifikationen und unabhängigen Tests Dritter, unten klar getrennt, damit Sie wissen, was bestätigt und was geschätzt ist.',
+          '**Diese Rezension wurde nicht von PromptQuorum an einem physischen Gerät durchgeführt.** Er basiert auf herstellerseitig veröffentlichten Spezifikationen und unabhängigen Tests Dritter, unten klar getrennt, damit Sie wissen, was bestätigt und was geschätzt ist.',
         items: [
           '**Herstellerseitig bestätigt:** CPU, RAM-Typ und -Obergrenze, Speicherschnittstellen, Anschlüsse, Abmessungen, offizielle Preisstufen und die Existenz separater LAN-Varianten-SKUs — direkt aus Beelinks Produktangaben.',
           '**Unabhängige Beobachtungen (Drittanbieter-Tests, nicht PromptQuorum):** Leerlauf-/Lastverbrauchswerte, Thermik- und Geräuschverhalten sowie reale Benchmark-Ergebnisse — abgeglichen mit unabhängigen Testern, die Geräte physisch getestet haben.',
@@ -790,9 +790,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) — der Vergleich, zu dem dieser Test gehört',
-          '[GMKtec G3 Plus Test](/de/smart-home/gmktec-g3-plus-local-ai-review) — der direkte Konkurrent aus dem Vergleich oben',
-          '[Beelink SER8 Test](/de/smart-home/beelink-ser8-local-ai-review) — die Aufstiegsoption für echte lokale-KI-Geschwindigkeit',
+          '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) — der Vergleich, zu dem diese Rezension gehört',
+          '[GMKtec-G3-Plus-Rezension](/de/smart-home/gmktec-g3-plus-local-ai-review) — der direkte Konkurrent aus dem Vergleich oben',
+          '[Beelink-SER8-Rezension](/de/smart-home/beelink-ser8-local-ai-review) — die Aufstiegsoption für echte lokale-KI-Geschwindigkeit',
           '[Beste Hardware für ein lokales Smart Home](/de/smart-home/best-hardware-for-local-smart-home) — Pi vs. Mini-PC vs. NAS',
           '[Ihr Smart Home mit einem lokalen LLM betreiben](/de/smart-home/local-llm-smart-home-complete-guide) — was die Box tatsächlich ausführt',
           '[Ollama installieren](/de/local-llms/how-to-install-ollama) — ein kleines Modell auf dem EQ14 testen',
@@ -803,7 +803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'Review',
-      name: 'Beelink EQ14 N150 Test (2026): Bester günstiger Mini-PC für Home-Assistant-Netzwerk',
+      name: 'Beelink-EQ14-N150-Rezension (2026): Bester günstiger Mini-PC für Home-Assistant-Netzwerk',
       reviewBody:
         'Der Beelink EQ14 ist ein günstiger Intel-N150-Mini-PC mit 16 GB DDR4 (hart gedeckelt, kein Aufrüstpfad) und doppeltem 2.5GbE beim Standard-SKU. Er betreibt Home Assistant und ein kleines 1B–3B-Modell für rund 199–219 € (16 GB/500 GB, geprüft am 25. August 2026). Ein netzwerkorientierter Hub, keine LLM-Maschine — die Einschätzung von PromptQuorum bewertet ihn mit 8,4/10 insgesamt auf Basis der Herstellerspezifikationen und unabhängiger Testquellen, kein physischer Gerätetest.',
       datePublished: '2026-07-03',

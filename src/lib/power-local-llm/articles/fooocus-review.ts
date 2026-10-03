@@ -349,19 +349,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/fooocus-review-hero-de.webp',
-    title: 'Fooocus Test: Die einfachste lokale Stable-Diffusion-Oberfläche',
-    seoTitle: 'Fooocus Test: Einfachste lokale Stable-Diffusion-UI',
+    title: 'Fooocus-Rezension: Die einfachste lokale Stable-Diffusion-Oberfläche',
+    seoTitle: 'Fooocus-Rezension: Einfachste lokale Stable-Diffusion-UI',
     intro:
-      'Fooocus ist eine kostenlose, quelloffene Bildgenerierungs-Oberfläche für Stable Diffusion XL, die vollständig offline läuft. Entwickelt wurde sie von Lvmin Zhang (GitHub-Name lllyasviel), der auch für [ControlNet](https://github.com/lllyasviel/ControlNet) bekannt ist. Fooocus blendet fast alle technischen Einstellungen aus — Sampler, CFG-Skala, Auflösungsraster — und ersetzt sie durch Voreinstellungen sowie eine automatische Prompt-Erweiterung, sodass man in rund drei Klicks vom leeren Textfeld zum fertigen Bild kommt. Dieser Test zeigt, was Fooocus technisch tatsächlich macht, seine GPL-3.0-Lizenz, die realen Hardware-Anforderungen und – besonders wichtig – den ehrlichen aktuellen Wartungsstatus, denn das Original-Repository hat öffentlich erklärt, sich nun im reinen Bugfix-Modus zu befinden.',
+      'Fooocus ist eine kostenlose, quelloffene Bildgenerierungs-Oberfläche für Stable Diffusion XL, die vollständig offline läuft. Entwickelt wurde sie von Lvmin Zhang (GitHub-Name lllyasviel), der auch für [ControlNet](https://github.com/lllyasviel/ControlNet) bekannt ist. Fooocus blendet fast alle technischen Einstellungen aus — Sampler, CFG-Skala, Auflösungsraster — und ersetzt sie durch Voreinstellungen sowie eine automatische Prompt-Erweiterung, sodass man in rund drei Klicks vom leeren Textfeld zum fertigen Bild kommt. Diese Rezension zeigt, was Fooocus technisch tatsächlich macht, seine GPL-3.0-Lizenz, die realen Hardware-Anforderungen und – besonders wichtig – den ehrlichen aktuellen Wartungsstatus, denn das Original-Repository hat öffentlich erklärt, sich nun im reinen Bugfix-Modus zu befinden.',
     metaDescription:
-      'Fooocus Test 2026: die einsteigerfreundliche lokale Stable-Diffusion-UI von ControlNet-Entwickler lllyasviel — reale VRAM-Anforderungen, GPL-3.0-Lizenz und ehrlicher Wartungsstatus (LTS/nur Bugfixes seit 2024).',
+      'Fooocus-Rezension 2026: die einsteigerfreundliche lokale Stable-Diffusion-UI von ControlNet-Entwickler lllyasviel — reale VRAM-Anforderungen, GPL-3.0-Lizenz und ehrlicher Wartungsstatus (LTS/nur Bugfixes seit 2024).',
     twitterDescription:
-      'Fooocus Test 2026: die lokale Stable-Diffusion-UI mit den wenigsten Klicks, vom Schöpfer von ControlNet — VRAM-Bedarf, GPT-2-Prompt-Erweiterung, GPL-3.0-Lizenz und die ehrliche Wahrheit zum Wartungsstatus.',
+      'Fooocus-Rezension 2026: die lokale Stable-Diffusion-UI mit den wenigsten Klicks, vom Schöpfer von ControlNet — VRAM-Bedarf, GPT-2-Prompt-Erweiterung, GPL-3.0-Lizenz und die ehrliche Wahrheit zum Wartungsstatus.',
     audience:
       'Leser, die Stable Diffusion so einfach wie möglich lokal betreiben wollen, ohne AUTOMATIC1111 oder ComfyUI lernen zu müssen — behandelt Installation, Hardware-Bedarf und ob das Projekt noch aktiv gepflegt wird.',
     readTime: '10 Min. Lesezeit',
     educationalLevel: 'Beginner',
-    primaryTerm: 'Fooocus Test',
+    primaryTerm: 'Fooocus Rezension',
     targetKeywords: [
       'fooocus test',
       'fooocus vs comfyui',
@@ -456,7 +456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Die [README von lllyasviel/Fooocus](https://github.com/lllyasviel/Fooocus) enthält einen Abschnitt mit dem Titel **„Project Status: Limited Long-Term Support (LTS) with Bug Fixes Only"**, in dem erklärt wird, dass das Projekt — vollständig auf der Stable-Diffusion-XL-Architektur aufgebaut — inzwischen als funktional abgeschlossen gilt und dass sich „zukünftige Updates ausschließlich auf die Behebung eventuell auftretender Fehler konzentrieren werden". Die README stellt ausdrücklich klar, dass es aktuell keine Pläne gibt, zu neueren Modellarchitekturen wie FLUX zu migrieren oder diese zu integrieren — lässt die Tür aber offen, falls sich die Open-Source-Community auf eine einzige dominante Nachfolgemethode einigt.',
           'Leser:innen, die die neuesten Modelle nutzen möchten, verweist die README selbst auf alternative Plattformen — konkret [WebUI Forge](https://github.com/lllyasviel/stable-diffusion-webui-forge) (ebenfalls vom selben Entwickler) sowie [ComfyUI](https://github.com/comfy-org/ComfyUI) oder dessen vereinfachte Oberfläche [SwarmUI](https://github.com/mcmonkeyprojects/SwarmUI) — statt FLUX-Unterstützung innerhalb von Fooocus selbst zu versprechen.',
-          'Das ist nicht dasselbe wie ein aufgegebenes Projekt. Das GitHub-Repository ist **nicht archiviert**, bleibt offen für Issues und Pull Requests (314 offene Issues zum Zeitpunkt dieses Tests), und GitHubs eigene Aktivitätsdaten zeigen Commits noch im Dezember 2025 — über ein Jahr nach dem letzten getaggten Release. Die README dankt Mitwirkendem **mashb1t** für „enorme Anstrengungen" bei der Reduzierung offener Fehler im Code, und mashb1t pflegt separat einen Fork unter [github.com/mashb1t/Fooocus](https://github.com/mashb1t/Fooocus), der noch aktueller Commits erhielt (zuletzt im Oktober 2025) — auch dieser Fork hat allerdings seit August 2024 kein neues getaggtes Release veröffentlicht und folgt damit dem Tempo des Original-Projekts.',
+          'Das ist nicht dasselbe wie ein aufgegebenes Projekt. Das GitHub-Repository ist **nicht archiviert**, bleibt offen für Issues und Pull Requests (314 offene Issues zum Zeitpunkt dieser Rezension), und GitHubs eigene Aktivitätsdaten zeigen Commits noch im Dezember 2025 — über ein Jahr nach dem letzten getaggten Release. Die README dankt Mitwirkendem **mashb1t** für „enorme Anstrengungen" bei der Reduzierung offener Fehler im Code, und mashb1t pflegt separat einen Fork unter [github.com/mashb1t/Fooocus](https://github.com/mashb1t/Fooocus), der noch aktueller Commits erhielt (zuletzt im Oktober 2025) — auch dieser Fork hat allerdings seit August 2024 kein neues getaggtes Release veröffentlicht und folgt damit dem Tempo des Original-Projekts.',
           'Die praktische Konsequenz: Fooocus ist heute stabil und sicher zu installieren, aber wer speziell FLUX, SD 3.5 oder andere Modellarchitekturen nach 2024 in einer vereinfachten Oberfläche sucht, findet das in Fooocus nicht und sollte stattdessen ComfyUI, SwarmUI oder WebUI Forge prüfen.',
         ],
         note: 'Die Fakten zum Wartungsstatus wurden am 2026-09-06 direkt anhand des GitHub-Repositorys und der README von lllyasviel/Fooocus sowie des Forks mashb1t/Fooocus verifiziert — Push-Daten, Release-Daten und die Zahl offener Issues ändern sich mit der Zeit; vor jeder erneuten Bewertung [github.com/lllyasviel/Fooocus](https://github.com/lllyasviel/Fooocus) erneut prüfen.',
@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Wichtigster Kompromiss': 'Kleinere Community als ComfyUI oder AUTOMATIC1111; weniger einsteigerorientiert als Fooocus',
           },
         ],
-        note: 'Dies ist eine Einordnung, keine Benchmark-Rangliste. Lizenzen, Sterne-Zahlen und Wartungsstatus wurden am 2026-09-06 direkt anhand des jeweiligen GitHub-Repositorys verifiziert und können sich ändern — siehe [Stable Diffusion Test](/de/power-local-llm/stable-diffusion-review) für die zugrunde liegende Modellfamilie, auf der dieser Artikel und jede der oben genannten Oberflächen aufbauen.',
+        note: 'Dies ist eine Einordnung, keine Benchmark-Rangliste. Lizenzen, Sterne-Zahlen und Wartungsstatus wurden am 2026-09-06 direkt anhand des jeweiligen GitHub-Repositorys verifiziert und können sich ändern — siehe [Stable-Diffusion-Rezension](/de/power-local-llm/stable-diffusion-review) für die zugrunde liegende Modellfamilie, auf der dieser Artikel und jede der oben genannten Oberflächen aufbauen.',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -666,7 +666,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Stable Diffusion Test: Kostenlose lokale Text-zu-Bild-Modelle](/de/power-local-llm/stable-diffusion-review) — die zugrunde liegende offene Modellfamilie, auf der Fooocus läuft, samt Lizenzbedingungen und Versionshistorie.',
+          '[Stable-Diffusion-Rezension: Kostenlose lokale Text-zu-Bild-Modelle](/de/power-local-llm/stable-diffusion-review) — die zugrunde liegende offene Modellfamilie, auf der Fooocus läuft, samt Lizenzbedingungen und Versionshistorie.',
           '[Lokale KI-Bildgenerierung vs. Cloud: FLUX, SD 3.5, Qwen-Image vs. Adobe Firefly & getimg.ai](/de/power-local-llm/local-ai-image-generation-vs-cloud) — ein tieferer Vergleich lokaler Bildmodell-Familien für Leser:innen, die über Fooocus\' reinen SDXL-Fokus hinauswachsen.',
           '[Verzeichnis lokaler LLM-Software 2026](/de/directory) — umfassendes App- und Tool-Verzeichnis für alle Plattformen.',
         ],

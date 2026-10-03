@@ -311,20 +311,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/off-grid-ai-review-hero-de.webp',
-    title: 'Off Grid AI Test: Plattformübergreifende lokale KI für iOS, Android, macOS und Windows',
-    seoTitle: 'Off Grid AI Test: Lokale KI für 4 Plattformen',
+    title: 'Off-Grid-AI-Rezension: Plattformübergreifende lokale KI für iOS, Android, macOS und Windows',
+    seoTitle: 'Off-Grid-AI-Rezension: Lokale KI für 4 Plattformen',
     intro:
-      'Off Grid AI von [Wednesday Solutions, Inc.](https://getoffgridai.co) ist eine kostenlose, quelloffene App ohne Konto, die offene KI-Modelle vollständig auf dem Gerät ausführt — auf vier Plattformen: iOS, Android, macOS und Windows. Laut der eigenen Website des Entwicklers hat die App [über 180.000 Downloads](https://getoffgridai.co) im App Store, bei Google Play und auf GitHub zusammen erreicht, und der Mobil-Client [OGAM auf GitHub](https://github.com/off-grid-ai/OGAM) hat unter MIT-Lizenz mehr als 3.000 Sterne. Der App-Store-Eintrag allein zeichnet ein dünneres Bild — [Off Grid AI - Private Local AI](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) zeigt einen Durchschnitt von nur 3,1 Sternen bei 26 Bewertungen, was isoliert betrachtet ein schwaches Signal ist. Dieser Test prüft beide Bilder direkt: die plattformübergreifenden Download- und Sternezahlen von [getoffgridai.co](https://getoffgridai.co) und GitHub sowie die schmalere iOS-Bewertung im App Store, damit Leser eine kleine Bewertungsstichprobe gegen eine größere, überprüfbare Open-Source-Basis abwägen können.',
+      'Off Grid AI von [Wednesday Solutions, Inc.](https://getoffgridai.co) ist eine kostenlose, quelloffene App ohne Konto, die offene KI-Modelle vollständig auf dem Gerät ausführt — auf vier Plattformen: iOS, Android, macOS und Windows. Laut der eigenen Website des Entwicklers hat die App [über 180.000 Downloads](https://getoffgridai.co) im App Store, bei Google Play und auf GitHub zusammen erreicht, und der Mobil-Client [OGAM auf GitHub](https://github.com/off-grid-ai/OGAM) hat unter MIT-Lizenz mehr als 3.000 Sterne. Der App-Store-Eintrag allein zeichnet ein dünneres Bild — [Off Grid AI - Private Local AI](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) zeigt einen Durchschnitt von nur 3,1 Sternen bei 26 Bewertungen, was isoliert betrachtet ein schwaches Signal ist. Diese Rezension prüft beide Bilder direkt: die plattformübergreifenden Download- und Sternezahlen von [getoffgridai.co](https://getoffgridai.co) und GitHub sowie die schmalere iOS-Bewertung im App Store, damit Leser eine kleine Bewertungsstichprobe gegen eine größere, überprüfbare Open-Source-Basis abwägen können.',
     metaDescription:
-      'Off Grid AI Test 2026: kostenlose, quelloffene, kontofreie lokale KI für iOS, Android, macOS und Windows. 180.000+ Downloads, 3.000+ GitHub-Sterne, aber nur 3,1 Sterne bei 26 Bewertungen im App Store. Vollständige Prüfung, Preise und Alternativen.',
+      'Off-Grid-AI-Rezension 2026: kostenlose, quelloffene, kontofreie lokale KI für iOS, Android, macOS und Windows. 180.000+ Downloads, 3.000+ GitHub-Sterne, aber nur 3,1 Sterne bei 26 Bewertungen im App Store. Vollständige Prüfung, Preise und Alternativen.',
     twitterDescription:
-      'Off Grid AI Test 2026: kostenlose, quelloffene, plattformübergreifende lokale KI (iOS/Android/macOS/Windows). 180.000+ Downloads und 3.000+ GitHub-Sterne laut Entwickler, gegenüber einem dünnen App-Store-Eintrag mit 3,1 Sternen bei 26 Bewertungen. Geprüfte Links, Preise und Vergleich mit Private LLM, PocketPal AI, Enclave AI und Loci.',
+      'Off-Grid-AI-Rezension 2026: kostenlose, quelloffene, plattformübergreifende lokale KI (iOS/Android/macOS/Windows). 180.000+ Downloads und 3.000+ GitHub-Sterne laut Entwickler, gegenüber einem dünnen App-Store-Eintrag mit 3,1 Sternen bei 26 Bewertungen. Geprüfte Links, Preise und Vergleich mit Private LLM, PocketPal AI, Enclave AI und Loci.',
     audience:
       'Leser, die kostenlose, quelloffene, plattformübergreifende lokale KI-Apps mit bezahlten oder mobil-only Alternativen vergleichen — mit geprüften Download-/Sternezahlen, der App-Store-Bewertungslücke, unterstützten Modellen, Preisen und Datenschutz.',
     readTime: '9 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: false,
-    primaryTerm: 'Off Grid AI Test',
+    primaryTerm: 'Off Grid AI Rezension',
     targetKeywords: [
       'off grid ai test',
       'off grid ai app',
@@ -338,7 +338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Llama', 'Qwen3', 'Qwen 3.5', 'Gemma 4', 'Phi-4', 'Mistral', 'Stable Diffusion XL'],
     current_hardware_mentioned: ['iPhone (iOS 17+)', 'Android 10+', 'Apple-Silicon-Mac (M1 oder neuer)', 'Windows-PC'],
     leadAnswerBlock:
-      '**Off Grid AI ist eine kostenlose, quelloffene App ohne Konto, die GGUF-Sprachmodelle, Stable-Diffusion-Bildmodelle und Whisper-Sprache-zu-Text vollständig auf dem Gerät ausführt — auf iOS, Android, macOS und Windows.** Entwickelt von [Wednesday Solutions, Inc.](https://getoffgridai.co), meldet die App [über 180.000 Downloads](https://getoffgridai.co) zusammen über App Store, Google Play und GitHub, und ihr Mobil-Repository [OGAM](https://github.com/off-grid-ai/OGAM) trägt unter MIT-Lizenz mehr als 3.000 GitHub-Sterne — Zahlen, die dieser Test direkt gegen GitHub und die eigene Website des Entwicklers geprüft hat, nicht nur gegen die Behauptung des Entwicklers. Der [App-Store-Eintrag](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) allein zeigt nur 26 Bewertungen mit einem Durchschnitt von 3,1 Sternen — ein wirklich schwaches Signal, das dieser Test nicht hinter den stärkeren plattformübergreifenden Zahlen versteckt. Eine optionale Off-Grid-AI-Pro-Stufe (69 $ einmalig oder 49 $/Jahr laut Website des Entwicklers) bietet Extras zusätzlich zu einem kostenlosen Kern, der bereits ohne Konto, ohne Abo-Pflicht und ohne Cloud-Abhängigkeit auskommt.',
+      '**Off Grid AI ist eine kostenlose, quelloffene App ohne Konto, die GGUF-Sprachmodelle, Stable-Diffusion-Bildmodelle und Whisper-Sprache-zu-Text vollständig auf dem Gerät ausführt — auf iOS, Android, macOS und Windows.** Entwickelt von [Wednesday Solutions, Inc.](https://getoffgridai.co), meldet die App [über 180.000 Downloads](https://getoffgridai.co) zusammen über App Store, Google Play und GitHub, und ihr Mobil-Repository [OGAM](https://github.com/off-grid-ai/OGAM) trägt unter MIT-Lizenz mehr als 3.000 GitHub-Sterne — Zahlen, die diese Rezension direkt gegen GitHub und die eigene Website des Entwicklers geprüft hat, nicht nur gegen die Behauptung des Entwicklers. Der [App-Store-Eintrag](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) allein zeigt nur 26 Bewertungen mit einem Durchschnitt von 3,1 Sternen — ein wirklich schwaches Signal, das diese Rezension nicht hinter den stärkeren plattformübergreifenden Zahlen versteckt. Eine optionale Off-Grid-AI-Pro-Stufe (69 $ einmalig oder 49 $/Jahr laut Website des Entwicklers) bietet Extras zusätzlich zu einem kostenlosen Kern, der bereits ohne Konto, ohne Abo-Pflicht und ohne Cloud-Abhängigkeit auskommt.',
     quickAnswerTop: {
       de: {
         question: 'Lohnt sich Off Grid AI trotz der schwachen App-Store-Bewertung?',
@@ -348,7 +348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kostenloser Kern: kein Konto, kein Abo, keine Cloud — geprüft auf [getoffgridai.co](https://getoffgridai.co).',
           'Plattformübergreifend: iOS 17+, Android 10+, macOS 14+ (Apple Silicon) und Windows — nicht nur iOS.',
           'Über 180.000 Downloads insgesamt und über 3.000 GitHub-Sterne (MIT-lizenziertes [OGAM](https://github.com/off-grid-ai/OGAM)-Repo) laut Website des Entwicklers, direkt gegen GitHub geprüft.',
-          'Signal allein aus dem App Store ist schwach: [Off Grid AI - Private Local AI](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) zeigt zum Zeitpunkt dieses Tests 3,1 Sterne bei 26 Bewertungen.',
+          'Signal allein aus dem App Store ist schwach: [Off Grid AI - Private Local AI](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) zeigt zum Zeitpunkt dieser Rezension 3,1 Sterne bei 26 Bewertungen.',
           'Optional Off Grid AI Pro: 69 $ einmalig oder 49 $/Jahr laut Preisseite des Entwicklers — Kernfunktionen für Chat, Vision, Bildgenerierung und Sprache benötigen es nicht.',
         ],
         updatedDate: '2026-09-12',
@@ -391,7 +391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kostenlos und quelloffen: kein Konto, kein Abo, keine Cloud-Abhängigkeit für die Kern-App — [MIT-Lizenz](https://github.com/off-grid-ai/OGAM).',
           'Plattformübergreifend: iOS, Android, macOS und Windows — der Desktop-Client (OGAD) ist bei stabiler Version 0.0.43; der iOS-App-Store-Eintrag bei Version 0.0.107.',
           'Über 180.000 Downloads insgesamt und über 3.000 GitHub-Sterne laut [getoffgridai.co](https://getoffgridai.co), direkt auf GitHub geprüft.',
-          'App-Store-Bewertung ist isoliert dünn: 3,1 Sterne bei 26 Bewertungen auf [dem iOS-Eintrag](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) zum Zeitpunkt dieses Tests — eine Tatsache, die dieser Test klar neben den stärkeren plattformübergreifenden Zahlen nennt, nicht anstelle davon.',
+          'App-Store-Bewertung ist isoliert dünn: 3,1 Sterne bei 26 Bewertungen auf [dem iOS-Eintrag](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) zum Zeitpunkt dieser Rezension — eine Tatsache, die diese Rezension klar neben den stärkeren plattformübergreifenden Zahlen nennt, nicht anstelle davon.',
           'Modelle: Llama, Qwen 3.5, Gemma, Phi-4, Mistral und jedes GGUF-Format-Modell für Chat; Stable Diffusion XL für Bildgenerierung; Whisper für Sprache-zu-Text.',
           'Community: eine Slack-Community und ein aktives [r/off_grid_ai](https://www.reddit.com/r/off_grid_ai/)-Subreddit, laut Entwickler mit über 600 Mitgliedern.',
           'Optional Off Grid AI Pro: 69 $ einmalig (Entwickler nennt einen steigenden Preis Richtung 149 $) oder 49 $/Jahr laut Preisseite des Entwicklers — nicht erforderlich für Kernfunktionen wie Chat, Vision, Bild oder Sprache.',
@@ -403,7 +403,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Off Grid AI ist eine quelloffene App, die offene KI-Modelle direkt auf Telefon, Tablet, Mac oder Windows-PC herunterlädt und ausführt, ohne serverseitige Komponente für die Kernfunktionen.** Sobald ein Modell heruntergeladen ist, laufen Chat, Bildgenerierung, Vision und Sprachtranskription ohne Internetverbindung.',
           'Entwickelt wird die App von [Wednesday Solutions, Inc.](https://getoffgridai.co), deren Positionierung auf der eigenen Website lautet: "kein Konto, kein Abo für den Kern, keine Cloud". Das Projekt verteilt sich auf mehrere GitHub-Repositories unter der [off-grid-ai-Organisation](https://github.com/off-grid-ai): [OGAM](https://github.com/off-grid-ai/OGAM) (iOS und Android, das größte Repo mit über 3.000 Sternen), [OGAD](https://github.com/off-grid-ai/OGAD) (macOS- und Windows-Desktop, aktuell stabile Version 0.0.43), sowie kleinere Begleit-Repositories für Enterprise-Governance (OGAC) und lokales Datei-/Text-Sharing zwischen Geräten (OGAS).',
-          'Die iOS/Android-App von Off Grid AI erschien zuerst im App Store als [Off Grid AI - Private Local AI](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882), aktuell bei Version 0.0.107. Diese rein aus dem App Store gewonnene Sicht — 3,1 Sterne bei 26 Bewertungen zum Zeitpunkt dieses Tests — unterschätzt die tatsächliche Reichweite des Projekts, sobald Desktop-Apps, GitHub-Releases und Google-Play-Installationen zusammengezählt werden: über 180.000 Downloads und über 3.000 GitHub-Sterne laut der eigenen Startseite des Entwicklers, in diesem Test direkt gegen GitHub-Sternezahlen geprüft.',
+          'Die iOS/Android-App von Off Grid AI erschien zuerst im App Store als [Off Grid AI - Private Local AI](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882), aktuell bei Version 0.0.107. Diese rein aus dem App Store gewonnene Sicht — 3,1 Sterne bei 26 Bewertungen zum Zeitpunkt dieser Rezension — unterschätzt die tatsächliche Reichweite des Projekts, sobald Desktop-Apps, GitHub-Releases und Google-Play-Installationen zusammengezählt werden: über 180.000 Downloads und über 3.000 GitHub-Sterne laut der eigenen Startseite des Entwicklers, in dieser Rezension direkt gegen GitHub-Sternezahlen geprüft.',
         ],
       },
       getItCTA: {
@@ -420,7 +420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Plattform': '**macOS**', 'Wo man es bekommt': '[DMG-Download](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest.dmg)', 'Hinweise': 'Benötigt macOS 14+ auf Apple Silicon (M1 oder neuer). Desktop-Stabilversion 0.0.43.' },
           { 'Plattform': '**Windows**', 'Wo man es bekommt': '[Setup-.exe-Download](https://github.com/off-grid-ai/OGAD/releases/latest/download/OffGrid-latest-setup.exe)', 'Hinweise': 'Desktop-Stabilversion 0.0.43, gleicher Release-Kanal wie macOS.' },
         ],
-        note: 'Dieser Test ist ein Begleitartikel zum Eintrag von Off Grid AI im [Verzeichnis lokaler LLM-Software](/de/directory), das die App neben anderen mobilen und plattformübergreifenden lokalen KI-Apps listet. Alle vier Links oben wurden für diesen Test direkt geprüft und zeigten zum Zeitpunkt der Erstellung eine aktive Seite; Versionsnummern und Preise können sich zwischen Releases ändern — prüfen Sie die aktuellen Angaben auf [getoffgridai.co](https://getoffgridai.co), bevor Sie installieren.',
+        note: 'Diese Rezension ist ein Begleitartikel zum Eintrag von Off Grid AI im [Verzeichnis lokaler LLM-Software](/de/directory), das die App neben anderen mobilen und plattformübergreifenden lokalen KI-Apps listet. Alle vier Links oben wurden für diese Rezension direkt geprüft und zeigten zum Zeitpunkt der Erstellung eine aktive Seite; Versionsnummern und Preise können sich zwischen Releases ändern — prüfen Sie die aktuellen Angaben auf [getoffgridai.co](https://getoffgridai.co), bevor Sie installieren.',
       },
       howToGetStarted: {
         id: 'how-to-get-started',
@@ -457,14 +457,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preise: Kostenloser Kern vs. Off Grid AI Pro',
         itemHeadings: true,
         content: [
-          '**Die Kern-App von Off Grid AI ist auf allen vier Plattformen kostenlos, ohne Konto und ohne Abo.** Eine optionale Off-Grid-AI-Pro-Stufe bietet Extras für Leser, die mehr wollen; dieser Test hat den Preis direkt auf der Website des Entwicklers geprüft.',
+          '**Die Kern-App von Off Grid AI ist auf allen vier Plattformen kostenlos, ohne Konto und ohne Abo.** Eine optionale Off-Grid-AI-Pro-Stufe bietet Extras für Leser, die mehr wollen; diese Rezension hat den Preis direkt auf der Website des Entwicklers geprüft.',
         ],
         columns: ['Stufe', 'Preis', 'Was enthalten ist'],
         rows: [
           { 'Stufe': '**Kern-App**', 'Preis': 'Kostenlos', 'Was enthalten ist': 'On-Device-Chat, Vision, Stable-Diffusion-XL-Bildgenerierung und Whisper-Sprachtranskription — kein Konto, kein Abo, keine Cloud.' },
           { 'Stufe': '**Off Grid AI Pro**', 'Preis': '69 $ einmalig oder 49 $/Jahr', 'Was enthalten ist': 'Entwickler nennt einen mit der Zeit auf 149 $ steigenden Einmalpreis; genaue Pro-exklusive Funktionen sollten vor dem Kauf auf der aktuellen Preisseite geprüft werden.' },
         ],
-        note: 'Preise für optionale Stufen können sich zwischen App-Updates ändern — dieser Test hat die obigen Zahlen zum Zeitpunkt der Erstellung gegen die Website des Entwicklers geprüft, Leser sollten den aktuellen Preis vor dem Kauf aber selbst verifizieren.',
+        note: 'Preise für optionale Stufen können sich zwischen App-Updates ändern — diese Rezension hat die obigen Zahlen zum Zeitpunkt der Erstellung gegen die Website des Entwicklers geprüft, Leser sollten den aktuellen Preis vor dem Kauf aber selbst verifizieren.',
       },
       supportedModels: {
         id: 'supported-models',
@@ -479,9 +479,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Downloads, GitHub-Sterne und die App-Store-Bewertungslücke',
         itemHeadings: true,
         content: [
-          '**Die Reichweite von Off Grid AI sieht sehr unterschiedlich aus, je nachdem, welche einzelne Quelle man prüft — dieser Test hat alle geprüft, statt sich auf eine zu verlassen.**',
-          'Auf der eigenen Startseite des Entwicklers, [getoffgridai.co](https://getoffgridai.co), werden über 180.000 Downloads insgesamt über App Store, Google Play und GitHub sowie eine "über 600-köpfige Community" genannt. Dieser Test hat den GitHub-Sterne-Teil dieser Behauptung direkt geprüft: Die [GitHub-Organisation off-grid-ai](https://github.com/off-grid-ai) zeigt das [OGAM-Repository](https://github.com/off-grid-ai/OGAM) (iOS und Android, MIT-lizenziert) mit über 3.000 Sternen, während das [OGAD-Repository](https://github.com/off-grid-ai/OGAD) (macOS und Windows) rund 100 Sterne hat — beide zusammen, plus kleinere Begleit-Repositories, ergeben die Zahl "über 3.000 GitHub-Sterne" auf der Startseite.',
-          'Der [App-Store-Eintrag](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) allein zeichnet ein viel dünneres Bild: 3,1 Sterne bei nur 26 Bewertungen, bei Version 0.0.107, zum Zeitpunkt dieses Tests. Das ist für sich genommen eine kleine, schwache Stichprobe — bei Weitem nicht genug Bewertungen, um allein aus der App-Store-Seite ein verlässliches Qualitätsurteil abzuleiten. Dieser Test nennt diese Tatsache klar, statt sie hinter den größeren plattformübergreifenden Zahlen zu verstecken. Die ehrliche Einschätzung: Off Grid AI hat eine überprüfbare, beachtliche Open-Source-Fangemeinde und Download-Basis, aber speziell die iOS-App-Store-Bewertungshistorie ist dünn, und ein Leser, der sich nur auf die App-Store-Sternebewertung verlässt, sähe ein deutlich schwächeres Signal, als das Gesamtbild hergibt.',
+          '**Die Reichweite von Off Grid AI sieht sehr unterschiedlich aus, je nachdem, welche einzelne Quelle man prüft — diese Rezension hat alle geprüft, statt sich auf eine zu verlassen.**',
+          'Auf der eigenen Startseite des Entwicklers, [getoffgridai.co](https://getoffgridai.co), werden über 180.000 Downloads insgesamt über App Store, Google Play und GitHub sowie eine "über 600-köpfige Community" genannt. Diese Rezension hat den GitHub-Sterne-Teil dieser Behauptung direkt geprüft: Die [GitHub-Organisation off-grid-ai](https://github.com/off-grid-ai) zeigt das [OGAM-Repository](https://github.com/off-grid-ai/OGAM) (iOS und Android, MIT-lizenziert) mit über 3.000 Sternen, während das [OGAD-Repository](https://github.com/off-grid-ai/OGAD) (macOS und Windows) rund 100 Sterne hat — beide zusammen, plus kleinere Begleit-Repositories, ergeben die Zahl "über 3.000 GitHub-Sterne" auf der Startseite.',
+          'Der [App-Store-Eintrag](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) allein zeichnet ein viel dünneres Bild: 3,1 Sterne bei nur 26 Bewertungen, bei Version 0.0.107, zum Zeitpunkt dieser Rezension. Das ist für sich genommen eine kleine, schwache Stichprobe — bei Weitem nicht genug Bewertungen, um allein aus der App-Store-Seite ein verlässliches Qualitätsurteil abzuleiten. Diese Rezension nennt diese Tatsache klar, statt sie hinter den größeren plattformübergreifenden Zahlen zu verstecken. Die ehrliche Einschätzung: Off Grid AI hat eine überprüfbare, beachtliche Open-Source-Fangemeinde und Download-Basis, aber speziell die iOS-App-Store-Bewertungshistorie ist dünn, und ein Leser, der sich nur auf die App-Store-Sternebewertung verlässt, sähe ein deutlich schwächeres Signal, als das Gesamtbild hergibt.',
         ],
       },
       privacy: {
@@ -503,7 +503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Vorteil': 'Kostenlose Kern-App, kein Konto, kein Abo, keine Cloud-Abhängigkeit.', 'Einschränkung / Hinweis': 'Optionale Pro-Stufe (69 $ einmalig oder 49 $/Jahr) wird für manche Extras benötigt.' },
           { 'Vorteil': 'Läuft auf iOS, Android, macOS und Windows — wirklich plattformübergreifend.', 'Einschränkung / Hinweis': 'Desktop- (0.0.43) und Mobil-Versionsnummer (0.0.107) unterscheiden sich, da es separate Codebasen sind (OGAD vs. OGAM).' },
-          { 'Vorteil': 'Quelloffen unter MIT-Lizenz; über 3.000 GitHub-Sterne sind unabhängig überprüfbar.', 'Einschränkung / Hinweis': 'App-Store-Bewertung ist dünn: nur 26 Bewertungen mit 3,1 Sternen im Durchschnitt zum Zeitpunkt dieses Tests.' },
+          { 'Vorteil': 'Quelloffen unter MIT-Lizenz; über 3.000 GitHub-Sterne sind unabhängig überprüfbar.', 'Einschränkung / Hinweis': 'App-Store-Bewertung ist dünn: nur 26 Bewertungen mit 3,1 Sternen im Durchschnitt zum Zeitpunkt dieser Rezension.' },
           { 'Vorteil': 'Unterstützt Chat, Vision, Stable-Diffusion-XL-Bildgenerierung und Whisper-Sprache — nicht nur Chat.', 'Einschränkung / Hinweis': 'Größere, hochwertigere Modelle brauchen weiterhin einen Mac oder Windows-PC statt eines Telefons.' },
         ],
       },
@@ -550,11 +550,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Warum hat Off Grid AI eine so niedrige App-Store-Bewertung?',
-            a: 'Der App-Store-Eintrag zeigt zum Zeitpunkt dieses Tests 3,1 Sterne bei nur 26 Bewertungen — eine kleine Stichprobe, die für sich genommen ein schwaches Signal ist. Diese Zahl spiegelt speziell die iOS-App-Store-Bewertungen wider; sie erfasst nicht die breitere Reichweite der App über Android, macOS, Windows und GitHub, wo der Entwickler über 180.000 Downloads insgesamt meldet und die Mobil-Codebasis über 3.000 GitHub-Sterne hat.',
+            a: 'Der App-Store-Eintrag zeigt zum Zeitpunkt dieser Rezension 3,1 Sterne bei nur 26 Bewertungen — eine kleine Stichprobe, die für sich genommen ein schwaches Signal ist. Diese Zahl spiegelt speziell die iOS-App-Store-Bewertungen wider; sie erfasst nicht die breitere Reichweite der App über Android, macOS, Windows und GitHub, wo der Entwickler über 180.000 Downloads insgesamt meldet und die Mobil-Codebasis über 3.000 GitHub-Sterne hat.',
           },
           {
             q: 'Ist Off Grid AI quelloffen?',
-            a: 'Ja. Sowohl der Mobil-Client OGAM als auch der Desktop-Client OGAD sind unter MIT-Lizenz auf GitHub veröffentlicht, unter der [off-grid-ai-Organisation](https://github.com/off-grid-ai). Dieser Test hat die Sternezahlen und die Lizenz direkt auf GitHub geprüft, statt sich nur auf die Behauptung des Entwicklers zu verlassen.',
+            a: 'Ja. Sowohl der Mobil-Client OGAM als auch der Desktop-Client OGAD sind unter MIT-Lizenz auf GitHub veröffentlicht, unter der [off-grid-ai-Organisation](https://github.com/off-grid-ai). Diese Rezension hat die Sternezahlen und die Lizenz direkt auf GitHub geprüft, statt sich nur auf die Behauptung des Entwicklers zu verlassen.',
           },
           {
             q: 'Was ist der Unterschied zwischen den Desktop- und Mobil-Versionsnummern von Off Grid AI?',
@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content: [
-          '**Off Grid AI gehört zu den besseren kostenlosen, plattformübergreifenden lokalen KI-Optionen, mit einem ehrlichen Vorbehalt: Die iOS-App-Store-Bewertungshistorie ist dünn.** Der App-Store-Eintrag mit 3,1 Sternen bei 26 Bewertungen ist isoliert ein schwaches Signal, und dieser Test verschweigt das nicht. Er steht aber neben einer geprüften, quelloffenen Codebasis mit über 3.000 GitHub-Sternen und laut Entwickler über 180.000 Downloads insgesamt über App Store, Google Play und GitHub — ein deutlich vollständigeres Bild, als die App-Store-Seite allein zeigt. Leser, die die breiteste kostenlose, quelloffene Vier-Plattformen-Option wollen, sollten die App installieren und selbst urteilen; Leser, die vor dem Kauf eine große bestehende App-Store-Bewertungshistorie sehen wollen, sollten sich stattdessen [Private LLM](/de/power-local-llm/private-llm-review) ansehen.',
+          '**Off Grid AI gehört zu den besseren kostenlosen, plattformübergreifenden lokalen KI-Optionen, mit einem ehrlichen Vorbehalt: Die iOS-App-Store-Bewertungshistorie ist dünn.** Der App-Store-Eintrag mit 3,1 Sternen bei 26 Bewertungen ist isoliert ein schwaches Signal, und diese Rezension verschweigt das nicht. Er steht aber neben einer geprüften, quelloffenen Codebasis mit über 3.000 GitHub-Sternen und laut Entwickler über 180.000 Downloads insgesamt über App Store, Google Play und GitHub — ein deutlich vollständigeres Bild, als die App-Store-Seite allein zeigt. Leser, die die breiteste kostenlose, quelloffene Vier-Plattformen-Option wollen, sollten die App installieren und selbst urteilen; Leser, die vor dem Kauf eine große bestehende App-Store-Bewertungshistorie sehen wollen, sollten sich stattdessen [Private LLM](/de/power-local-llm/private-llm-review) ansehen.',
         ],
       },
       sources: {
@@ -583,7 +583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '[Offizielle Off-Grid-AI-Website](https://getoffgridai.co) — Download-Zahlen, GitHub-Sterne-Behauptung, Community-Größe und Pro-Preise.',
           '[Off Grid AI - Private Local AI im App Store](https://apps.apple.com/us/app/off-grid-private-ai-chat/id6759299882) — iOS-Versionsnummer, Sternebewertung, Bewertungsanzahl und Preis.',
-          '[GitHub-Organisation off-grid-ai](https://github.com/off-grid-ai) — Repository-Liste und Sternezahlen, für diesen Test direkt geprüft.',
+          '[GitHub-Organisation off-grid-ai](https://github.com/off-grid-ai) — Repository-Liste und Sternezahlen, für diese Rezension direkt geprüft.',
           '[OGAM-Repository](https://github.com/off-grid-ai/OGAM) (iOS/Android, MIT-Lizenz) — Mobil-Sternezahl und Lizenz.',
           '[OGAD-Repository](https://github.com/off-grid-ai/OGAD) (macOS/Windows) — Desktop-Versionsnummer und Releases.',
           '[Google-Play-Eintrag](https://play.google.com/store/apps/details?id=ai.offgridmobile) — Android-Download-Link.',
@@ -594,10 +594,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         content: [
           '[Das vollständige Verzeichnis lokaler LLM-Software](/de/directory) — ein breiteres Verzeichnis lokaler LLM-Tools über alle Plattformen hinweg.',
-          '[Private LLM Test](/de/power-local-llm/private-llm-review) — eine bezahlte, closed-source, nur-Apple-Alternative mit 140+ kuratierten Modellen.',
-          '[PocketPal AI Test](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene, nur-mobile Alternative.',
-          '[Enclave AI Test](/de/power-local-llm/enclave-ai-review) — eine weitere kostenlose mobile lokale KI-App zum Vergleich der Modellbibliotheken.',
-          '[Loci AI Test](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine kuratierte, reibungslose plattformübergreifende Alternative.',
+          '[Private-LLM-Rezension](/de/power-local-llm/private-llm-review) — eine bezahlte, closed-source, nur-Apple-Alternative mit 140+ kuratierten Modellen.',
+          '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene, nur-mobile Alternative.',
+          '[Enclave-AI-Rezension](/de/power-local-llm/enclave-ai-review) — eine weitere kostenlose mobile lokale KI-App zum Vergleich der Modellbibliotheken.',
+          '[Loci-AI-Rezension](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine kuratierte, reibungslose plattformübergreifende Alternative.',
         ],
       },
     },

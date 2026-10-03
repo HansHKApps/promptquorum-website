@@ -296,9 +296,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'Entwickler, die lokale oder selbst gehostete RAG-Pipelines bauen und eine produktionsreife, selbst hostbare Vektordatenbank für groß angelegte Ähnlichkeitssuche benötigen',
     primaryTerm: 'Milvus',
-    title: 'Milvus im Test: Die quelloffene Vektordatenbank für lokales RAG',
+    title: 'Milvus-Rezension: Die quelloffene Vektordatenbank für lokales RAG',
     seoTitle: 'Milvus Review: Quelloffene Vektordatenbank',
-    intro: 'Milvus ([milvus.io](https://milvus.io), Quellcode unter [github.com/milvus-io/milvus](https://github.com/milvus-io/milvus)) ist eine kostenlose, quelloffene, cloud-native Vektordatenbank, die speziell für die Speicherung und Suche der Embeddings entwickelt wurde, die Retrieval-Augmented Generation (RAG), semantische Suche und Empfehlungssysteme antreiben. Sie ist vollständig selbst hostbar — von einem einzelnen `pip install` für lokales Prototyping bis zu einer verteilten Kubernetes-Bereitstellung für Milliarden von Vektoren — und wird von der LF AI & Data Foundation verwaltet, wobei Zilliz der wichtigste Unternehmensbeitragende ist. Dieser Test behandelt, was Milvus tatsächlich leistet, woher es kommt, wie man es installiert, was es kostet und wie es neben anderen quelloffenen Vektordatenbanken in einem lokalen LLM-Stack einzuordnen ist.',
+    intro: 'Milvus ([milvus.io](https://milvus.io), Quellcode unter [github.com/milvus-io/milvus](https://github.com/milvus-io/milvus)) ist eine kostenlose, quelloffene, cloud-native Vektordatenbank, die speziell für die Speicherung und Suche der Embeddings entwickelt wurde, die Retrieval-Augmented Generation (RAG), semantische Suche und Empfehlungssysteme antreiben. Sie ist vollständig selbst hostbar — von einem einzelnen `pip install` für lokales Prototyping bis zu einer verteilten Kubernetes-Bereitstellung für Milliarden von Vektoren — und wird von der LF AI & Data Foundation verwaltet, wobei Zilliz der wichtigste Unternehmensbeitragende ist. Diese Rezension behandelt, was Milvus tatsächlich leistet, woher es kommt, wie man es installiert, was es kostet und wie es neben anderen quelloffenen Vektordatenbanken in einem lokalen LLM-Stack einzuordnen ist.',
     metaDescription: 'Milvus ist eine kostenlose, quelloffene, selbst hostbare Vektordatenbank für RAG und Ähnlichkeitssuche, von einem einzelnen pip install bis zu Kubernetes-Clustern. Geprüfte Fakten für 2026.',
     readTime: '12 Min. Lesezeit',
     targetKeywords: [
@@ -358,7 +358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Zilliz Cloud](https://zilliz.com/cloud) ist ein separater, optionaler verwalteter Hosting-Dienst von Zilliz — nicht erforderlich, um Milvus selbst zu betreiben',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test ist der vertiefende Begleitartikel zu Milvus\' Eintrag im [Local LLM Software Directory](/de/directory) — dort sieht man auf einen Blick, wie Milvus im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet, einschließlich anderer Vektordatenbanken.' },
+          { type: 'note', text: 'Diese Rezension ist der vertiefende Begleitartikel zu Milvus\' Eintrag im [Local LLM Software Directory](/de/directory) — dort sieht man auf einen Blick, wie Milvus im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet, einschließlich anderer Vektordatenbanken.' },
         ],
       },
       overview: {
@@ -387,9 +387,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'Januar 2022: Milvus 2.0 veröffentlicht', whyItMatters: 'Ein vollständiger architektonischer Umbau mit einem verteilten, cloud-nativen Design und getrennter Speicher- und Rechenschicht — die Grundlage der bis heute in der 2.x-Linie genutzten Architektur.' },
           { title: '2.4.x: GPU-beschleunigte Indizierung hinzugefügt', whyItMatters: 'Fügte GPU-Indextypen (wie CAGRA) für deutlich schnelleren Indexaufbau und schnellere Suche auf unterstützter Hardware hinzu.' },
           { title: '2.5.x: Volltextsuche (BM25) und erweiterte hybride Suche', whyItMatters: 'Fügte native spärliche/Volltextsuche neben der dichten Vektorsuche hinzu, sodass eine einzelne Abfrage stichwortartige und semantische Suche kombinieren kann.' },
-          { title: '2.6.x — laufend bis 2026: Kontinuierliche Performance- und Zuverlässigkeits-Releases', whyItMatters: 'Jüngere 2.6.x-Punkt-Releases (laut der [GitHub-Releases-Seite](https://github.com/milvus-io/milvus/releases)) konzentrieren sich auf Effizienz bei der Abfrageplanung, Korrektheitskorrekturen bei der GPU-Suche und Sicherheitshärtung — 2.6.23 erschien am 28. August 2026 als das jüngste Punkt-Release, das dieser Test verifizieren konnte.' },
+          { title: '2.6.x — laufend bis 2026: Kontinuierliche Performance- und Zuverlässigkeits-Releases', whyItMatters: 'Jüngere 2.6.x-Punkt-Releases (laut der [GitHub-Releases-Seite](https://github.com/milvus-io/milvus/releases)) konzentrieren sich auf Effizienz bei der Abfrageplanung, Korrektheitskorrekturen bei der GPU-Suche und Sicherheitshärtung — 2.6.23 erschien am 28. August 2026 als das jüngste Punkt-Release, das diese Rezension verifizieren konnte.' },
         ],
-        note: 'Versionsnummern und Daten oben stammen von Milvus\' [offizieller GitHub-Releases-Seite](https://github.com/milvus-io/milvus/releases) und der [Ankündigung der LF AI & Data Foundation zum Abschluss der Milvus-Inkubation](https://lfaidata.foundation/blog/2021/06/23/lf-ai-data-foundation-announces-graduation-of-milvus-project/) — bitte diese Quellen direkt prüfen für alles, was nach dem Veröffentlichungsdatum dieses Tests erschienen ist.',
+        note: 'Versionsnummern und Daten oben stammen von Milvus\' [offizieller GitHub-Releases-Seite](https://github.com/milvus-io/milvus/releases) und der [Ankündigung der LF AI & Data Foundation zum Abschluss der Milvus-Inkubation](https://lfaidata.foundation/blog/2021/06/23/lf-ai-data-foundation-announces-graduation-of-milvus-project/) — bitte diese Quellen direkt prüfen für alles, was nach dem Veröffentlichungsdatum dieser Rezension erschienen ist.',
       },
       features: {
         id: 'what-milvus-does',
@@ -451,7 +451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Rechenleistung, Speicher und jegliches Cloud-Hosting für den Betrieb von selbst gehostetem Milvus sind Kosten, die man selbst kontrolliert und separat trägt (eigener Server oder Cloud-VM), keine Gebühr an Milvus oder Zilliz',
           '[Zilliz Cloud](https://zilliz.com/cloud) — ein vollständig verwalteter, kostenpflichtiger Hosting-Dienst für Milvus — ist vollständig optional und wird von Zilliz, Milvus\' wichtigstem Unternehmensbeitragenden, getrennt vom Open-Source-Projekt selbst angeboten',
         ],
-        note: 'Dieser Test nennt keine konkreten Zilliz-Cloud-Preisstufen, da sich die Preise des verwalteten Dienstes unabhängig vom quelloffenen Milvus-Projekt ändern und für die Nutzung von Milvus nicht erforderlich sind — bei Interesse an einer verwalteten Option direkt [zilliz.com/cloud](https://zilliz.com/cloud) prüfen.',
+        note: 'Diese Rezension nennt keine konkreten Zilliz-Cloud-Preisstufen, da sich die Preise des verwalteten Dienstes unabhängig vom quelloffenen Milvus-Projekt ändern und für die Nutzung von Milvus nicht erforderlich sind — bei Interesse an einer verwalteten Option direkt [zilliz.com/cloud](https://zilliz.com/cloud) prüfen.',
       },
       comparisonQdrant: {
         id: 'milvus-vs-qdrant',
@@ -467,7 +467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspekt': 'Governance', 'Milvus': 'LF AI & Data Foundation (abgeschlossenes Inkubationsprojekt); wichtigster Beitragender Zilliz', 'Qdrant': 'Unternehmensgeführtes Open-Source-Projekt (Qdrant Solutions GmbH)' },
           { 'Aspekt': 'Typische Eignung', 'Milvus': 'Großskalige, verteilte Produktions-Workloads; mehr architektonische Komplexität im Betrieb', 'Qdrant': 'Einfacher selbst zu hosten für RAG-Apps im kleinen bis mittleren Maßstab; leichterer operativer Footprint' },
         ],
-        note: 'Wer Wert auf bewährte Skalierung auf Dutzende Milliarden Vektoren und GPU-beschleunigte Indizierung unter neutraler Foundation-Governance legt, findet in Milvus\' Architektur die schwergewichtigere, produktionsorientiertere der beiden. Wer die einfachste mögliche selbst gehostete Vektordatenbank für ein RAG-Projekt im kleinen bis mittleren Maßstab sucht, sollte Qdrant direkt prüfen — siehe den [Qdrant-Test](/de/power-local-llm/qdrant-review) für eine vollständige Übersicht. Beide sind kostenlos und quelloffen; aktuelle Funktionsdetails vor einer Entscheidung direkt auf der jeweiligen Projektseite prüfen, da beide häufig Updates veröffentlichen.',
+        note: 'Wer Wert auf bewährte Skalierung auf Dutzende Milliarden Vektoren und GPU-beschleunigte Indizierung unter neutraler Foundation-Governance legt, findet in Milvus\' Architektur die schwergewichtigere, produktionsorientiertere der beiden. Wer die einfachste mögliche selbst gehostete Vektordatenbank für ein RAG-Projekt im kleinen bis mittleren Maßstab sucht, sollte Qdrant direkt prüfen — siehe den [Qdrant-Rezension](/de/power-local-llm/qdrant-review) für eine vollständige Übersicht. Beide sind kostenlos und quelloffen; aktuelle Funktionsdetails vor einer Entscheidung direkt auf der jeweiligen Projektseite prüfen, da beide häufig Updates veröffentlichen.',
       },
       whoShouldUse: {
         id: 'who-should-use-milvus',
@@ -500,11 +500,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Milvus vs. andere Vektordatenbanken',
         content: 'Milvus ist eine von mehreren quelloffenen Vektordatenbanken, die häufig in lokalen und selbst gehosteten RAG-Stacks eingesetzt werden. Siehe das [Local LLM Software Directory](/de/directory) für den vollständigen Katalog und den dedizierten [Milvus-vs.-Qdrant-Vergleich](#milvus-vs-qdrant) oben für den nächstliegenden direkten Vergleich.',
         items: [
-          '**[Qdrant](https://qdrant.tech)** — eine in Rust geschriebene quelloffene Vektordatenbank mit einfacherem operativem Footprint, beliebt für selbst gehostetes RAG im kleinen bis mittleren Maßstab; siehe den dedizierten Vergleichsabschnitt oben und den [Qdrant-Test](/de/power-local-llm/qdrant-review).',
-          '**[Chroma](https://www.trychroma.com)** — eine leichtgewichtige, entwicklerfreundliche quelloffene Embedding-Datenbank, oft für schnelles lokales RAG-Prototyping genutzt; siehe den [Chroma-Test](/de/power-local-llm/chroma-review).',
-          '**[txtai](https://neuml.github.io/txtai)** — eine eingebettete, Python-native Vektor-/Semantiksuche-Bibliothek, die in-process statt als separater Server läuft, eine leichtgewichtigere Alternative für kleinere lokale Projekte; siehe den [txtai-Test](/de/power-local-llm/txtai-embedded-vector-database-review).',
+          '**[Qdrant](https://qdrant.tech)** — eine in Rust geschriebene quelloffene Vektordatenbank mit einfacherem operativem Footprint, beliebt für selbst gehostetes RAG im kleinen bis mittleren Maßstab; siehe den dedizierten Vergleichsabschnitt oben und den [Qdrant-Rezension](/de/power-local-llm/qdrant-review).',
+          '**[Chroma](https://www.trychroma.com)** — eine leichtgewichtige, entwicklerfreundliche quelloffene Embedding-Datenbank, oft für schnelles lokales RAG-Prototyping genutzt; siehe den [Chroma-Rezension](/de/power-local-llm/chroma-review).',
+          '**[txtai](https://neuml.github.io/txtai)** — eine eingebettete, Python-native Vektor-/Semantiksuche-Bibliothek, die in-process statt als separater Server läuft, eine leichtgewichtigere Alternative für kleinere lokale Projekte; siehe den [txtai-Rezension](/de/power-local-llm/txtai-embedded-vector-database-review).',
         ],
-        note: 'Dies ist keine vollständige Liste quelloffener Vektordatenbanken — siehe das [Local LLM Software Directory](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Milvus\' eigenem Directory-Eintrag. (Redaktioneller Hinweis: Die oben verlinkten Tests zu Qdrant und Chroma werden im selben Content-Batch wie dieser Milvus-Test veröffentlicht und sind möglicherweise nicht zu jedem Zeitpunkt zwischen den Veröffentlichungen bereits live — txtais Test ist der eine bereits live verfügbare Vektordatenbank-Test im selben Segment auf PromptQuorum, Stand des Veröffentlichungsdatums dieses Tests.)',
+        note: 'Dies ist keine vollständige Liste quelloffener Vektordatenbanken — siehe das [Local LLM Software Directory](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich Milvus\' eigenem Directory-Eintrag. (Redaktioneller Hinweis: Die oben verlinkten Tests zu Qdrant und Chroma werden im selben Content-Batch wie dieser Milvus-Test veröffentlicht und sind möglicherweise nicht zu jedem Zeitpunkt zwischen den Veröffentlichungen bereits live — txtais Test ist der eine bereits live verfügbare Vektordatenbank-Test im selben Segment auf PromptQuorum, Stand des Veröffentlichungsdatums dieser Rezension.)',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -553,7 +553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://milvus.io', title: 'Milvus', description: 'Die offizielle Homepage, die Milvus\' Positionierung als quelloffene, cloud-native Vektordatenbank für GenAI-Anwendungen beschreibt.' },
           { url: 'https://github.com/milvus-io/milvus', title: 'Milvus auf GitHub', description: 'Das kanonische Quellcode-Repository mit README, Star-Anzahl und Release-Historie.' },
           { url: 'https://github.com/milvus-io/milvus/blob/master/LICENSE', title: 'Milvus LICENSE-Datei', description: 'Der Lizenztext des Projekts: Apache License 2.0.' },
-          { url: 'https://github.com/milvus-io/milvus/releases', title: 'Milvus GitHub Releases', description: 'Offizielle Versionshistorie, verwendet für die 2.6.x-Meilenstein- und Versionsnummer-Details dieses Tests.' },
+          { url: 'https://github.com/milvus-io/milvus/releases', title: 'Milvus GitHub Releases', description: 'Offizielle Versionshistorie, verwendet für die 2.6.x-Meilenstein- und Versionsnummer-Details dieser Rezension.' },
           { url: 'https://lfaidata.foundation/blog/2021/06/23/lf-ai-data-foundation-announces-graduation-of-milvus-project/', title: 'LF AI & Data Foundation: Milvus-Abschlussankündigung', description: 'Offizielle Ankündigung, die den Abschluss der Milvus-Inkubation bei der LF AI & Data Foundation im Juni 2021 bestätigt.' },
           { url: 'https://milvus.io/docs', title: 'Milvus-Dokumentation', description: 'Offizielle Dokumentation zu Bereitstellungsmodi, Indizierung, hybrider Suche und RAG-Integrationen.' },
           { url: 'https://milvus.io/docs/milvus_lite.md', title: 'Milvus-Lite-Dokumentation', description: 'Offizielle Dokumentation für den eingebetteten, per pip installierbaren Bereitstellungsmodus Milvus Lite.' },
@@ -565,9 +565,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Milvus\' Directory-Eintrag.',
-          '[Qdrant-Test](/de/power-local-llm/qdrant-review) — eine in Rust geschriebene quelloffene Vektordatenbank mit leichterem operativem Footprint, oben direkt mit Milvus verglichen.',
-          '[Chroma-Test](/de/power-local-llm/chroma-review) — eine leichtgewichtige, entwicklerfreundliche quelloffene Embedding-Datenbank, beliebt für lokales RAG-Prototyping.',
-          '[txtai-Test](/de/power-local-llm/txtai-embedded-vector-database-review) — eine eingebettete, Python-native Vektorsuche-Bibliothek, die in-process statt als separater Server läuft.',
+          '[Qdrant-Rezension](/de/power-local-llm/qdrant-review) — eine in Rust geschriebene quelloffene Vektordatenbank mit leichterem operativem Footprint, oben direkt mit Milvus verglichen.',
+          '[Chroma-Rezension](/de/power-local-llm/chroma-review) — eine leichtgewichtige, entwicklerfreundliche quelloffene Embedding-Datenbank, beliebt für lokales RAG-Prototyping.',
+          '[txtai-Rezension](/de/power-local-llm/txtai-embedded-vector-database-review) — eine eingebettete, Python-native Vektorsuche-Bibliothek, die in-process statt als separater Server läuft.',
         ],
       },
     },

@@ -280,8 +280,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Beginner',
     audience: 'Datenschutzbewusste Mac-Nutzer, die Cloud- und lokale KI-Modelle in einer verzweigten Chat-Oberfläche vergleichen möchten, mit eigenen API-Schlüsseln oder einer lokalen Ollama-Installation',
     primaryTerm: 'Hanoki',
-    title: 'Hanoki im Test: Verzweigte KI-Chat-App für Mac',
-    seoTitle: 'Hanoki im Test: Verzweigte KI-Chat-App für Mac',
+    title: 'Hanoki-Rezension: Verzweigte KI-Chat-App für Mac',
+    seoTitle: 'Hanoki-Rezension: Verzweigte KI-Chat-App für Mac',
     intro: 'Hanoki ist eine Desktop-Chat-App für macOS, die um eine verzweigte Gesprächsoberfläche herum aufgebaut ist: Sie können jede KI-Antwort in einen alternativen Antwortpfad verzweigen, Chats in verschachtelten Ordnern organisieren und wichtige Zweige anheften. Hanoki ist eine Hybrid-App, keine rein lokale App — sie kann Modelle lokal über eine eigene laufende Ollama-Instanz ausführen oder Cloud-Modelle wie Claude und GPT-4 über API-Schlüssel nutzen, die Sie selbst bereitstellen und bezahlen.',
     metaDescription: 'Hanoki ist eine hybride, verzweigte KI-Chat-App für Mac — Cloud-Modelle über eigene API-Schlüssel oder lokale Modelle über Ollama. Chats werden lokal in SQLite gespeichert.',
     readTime: '9 Min. Lesezeit',
@@ -510,7 +510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Atomic Chat im Test](/de/power-local-llm/atomic-chat-review) — eine rein lokale Alternative mit eigener Inferenz-Engine statt separater Ollama-Installation.',
+          '[Atomic-Chat-Rezension](/de/power-local-llm/atomic-chat-review) — eine rein lokale Alternative mit eigener Inferenz-Engine statt separater Ollama-Installation.',
           '[LM Studio vs. Jan vs. GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — reine Desktop-Apps, die Modelle ohne Cloud-Fallback ausführen.',
           '[Die einfachste lokale KI-App für Windows, Mac und Linux](/de/power-local-llm/easiest-local-ai-app-windows-mac-linux) — plattformübergreifende lokale Chat-Apps für alle, die heute Windows oder Linux benötigen.',
           '[Das lokale LLM-Software-Verzeichnis](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
@@ -520,7 +520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Hanoki im Test: Verzweigte KI-Chat-App für Mac (2026)',
+      headline: 'Hanoki-Rezension: Verzweigte KI-Chat-App für Mac (2026)',
       description: 'Hanoki ist eine hybride, verzweigte KI-Chat-App für Mac — Cloud-Modelle über eigene API-Schlüssel oder lokale Modelle über Ollama. Chats werden lokal in SQLite gespeichert.',
       url: 'https://promptquorum.com/de/power-local-llm/hanoki-review',
       inLanguage: 'de',

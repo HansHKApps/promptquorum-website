@@ -434,20 +434,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-03',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-mind-review-hero-de.webp',
-    title: 'Private Mind im Test: Quelloffene Offline-KI-Chat-App für iPhone und Android',
-    seoTitle: 'Private Mind Test: Quelloffene Offline-KI-Chat-App',
+    title: 'Private-Mind-Rezension: Quelloffene Offline-KI-Chat-App für iPhone und Android',
+    seoTitle: 'Private-Mind-Rezension: Quelloffene Offline-KI-Chat-App',
     intro:
-      'Private Mind ist eine kostenlose, quelloffene Chat-App von [Software Mansion](https://swmansion.com), einem polnischen Softwareunternehmen, die Open-Weight-Sprachmodelle über die Bibliothek React Native ExecuTorch auf einem iPhone, iPad oder Android-Smartphone ausführt. Über den Chat hinaus bietet sie Dokumenten-Q&A auf dem Gerät mit Quellenangaben, Diktat mit Whisper, Modelle mit Bildverständnis, integrierte Geschwindigkeits-Benchmarks und — seit Version 1.3.0 — einen optionalen Web-Schalter, der Seiten aus dem Internet abruft. Der Quellcode ist unter der MIT-Lizenz auf [GitHub](https://github.com/software-mansion-labs/private-mind) veröffentlicht. Dieser Test stützt sich auf die Einträge im App Store und bei Google Play sowie auf das öffentliche Repository, geprüft am 3. Oktober 2026; PromptQuorum hat die App nicht praktisch getestet.',
+      'Private Mind ist eine kostenlose, quelloffene Chat-App von [Software Mansion](https://swmansion.com), einem polnischen Softwareunternehmen, die Open-Weight-Sprachmodelle über die Bibliothek React Native ExecuTorch auf einem iPhone, iPad oder Android-Smartphone ausführt. Über den Chat hinaus bietet sie Dokumenten-Q&A auf dem Gerät mit Quellenangaben, Diktat mit Whisper, Modelle mit Bildverständnis, integrierte Geschwindigkeits-Benchmarks und — seit Version 1.3.0 — einen optionalen Web-Schalter, der Seiten aus dem Internet abruft. Der Quellcode ist unter der MIT-Lizenz auf [GitHub](https://github.com/software-mansion-labs/private-mind) veröffentlicht. Diese Rezension stützt sich auf die Einträge im App Store und bei Google Play sowie auf das öffentliche Repository, geprüft am 3. Oktober 2026; PromptQuorum hat die App nicht praktisch getestet.',
     metaDescription:
-      'Private Mind im Test: kostenlose, MIT-lizenzierte Offline-KI-Chat-App für iPhone und Android mit Dokumenten-Q&A. Modelle, Datenschutz, Websuche und Grenzen.',
+      'Private-Mind-Rezension: kostenlose, MIT-lizenzierte Offline-KI-Chat-App für iPhone und Android mit Dokumenten-Q&A. Modelle, Datenschutz, Websuche und Grenzen.',
     twitterDescription:
-      'Private Mind im Test: die kostenlose, quelloffene (MIT) Offline-KI-Chat-App von Software Mansion für iPhone und Android — Dokumenten-Q&A, Benchmarks, Vision-Modelle und eine optionale Websuche, der einzige Teil, der online geht.',
+      'Private-Mind-Rezension: die kostenlose, quelloffene (MIT) Offline-KI-Chat-App von Software Mansion für iPhone und Android — Dokumenten-Q&A, Benchmarks, Vision-Modelle und eine optionale Websuche, der einzige Teil, der online geht.',
     audience:
       'iPhone-, iPad- und Android-Nutzer, die eine kostenlose, quelloffene Chat-App wünschen, die Sprachmodelle auf dem Gerät ausführt, und die genau wissen müssen, was offline bleibt, welche Modelle sie anbietet und was die Quellen nicht bestätigen.',
     readTime: '9 Min. Lesezeit',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
-    primaryTerm: 'Private Mind Test',
+    primaryTerm: 'Private Mind Rezension',
     targetKeywords: [
       'private mind app test',
       'private mind lokale ki',
@@ -517,7 +517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Dieser Test stützt sich auf die Einträge im App Store und bei Google Play sowie auf das öffentliche GitHub-Repository (README, Lizenz, Releases, Modellkatalog sowie die eigenen Release Notes und das Dokument zu bekannten Problemen des Projekts), geprüft am 3. Oktober 2026. PromptQuorum hat die App weder getestet noch einem Benchmark unterzogen.',
+            text: 'Diese Rezension stützt sich auf die Einträge im App Store und bei Google Play sowie auf das öffentliche GitHub-Repository (README, Lizenz, Releases, Modellkatalog sowie die eigenen Release Notes und das Dokument zu bekannten Problemen des Projekts), geprüft am 3. Oktober 2026. PromptQuorum hat die App weder getestet noch einem Benchmark unterzogen.',
           },
         ],
       },
@@ -803,10 +803,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[PocketPal AI Test](/de/power-local-llm/pocketpal-ai-review) — ein kostenloser, quelloffener Chat-Client auf dem Gerät für iOS und Android.',
-          '[Google AI Edge Gallery Test](/de/power-local-llm/google-ai-edge-gallery-review) — Googles quelloffene KI-App für das Gerät.',
-          '[MLC Chat Test](/de/power-local-llm/mlc-chat-review) — eine quelloffene Chat-App auf dem Gerät, aufgebaut auf MLC LLM.',
-          '[Maid Test](/de/power-local-llm/maid-review) — eine quelloffene App für lokale GGUF-Modelle oder Remote-Anbieter.',
+          '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — ein kostenloser, quelloffener Chat-Client auf dem Gerät für iOS und Android.',
+          '[Google-AI-Edge-Gallery-Rezension](/de/power-local-llm/google-ai-edge-gallery-review) — Googles quelloffene KI-App für das Gerät.',
+          '[MLC-Chat-Rezension](/de/power-local-llm/mlc-chat-review) — eine quelloffene Chat-App auf dem Gerät, aufgebaut auf MLC LLM.',
+          '[Maid-Rezension](/de/power-local-llm/maid-review) — eine quelloffene App für lokale GGUF-Modelle oder Remote-Anbieter.',
           '[Beste lokale LLM-Apps für Android 2026](/de/power-local-llm/best-local-llm-apps-android-2026) — der breitere Android-Überblick.',
           '[Beste lokale LLM-Apps für das iPhone 2026](/de/power-local-llm/best-local-llm-apps-iphone-2026) — der breitere iPhone-Überblick.',
         ],

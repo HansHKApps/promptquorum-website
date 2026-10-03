@@ -381,19 +381,19 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/piper-tts-review-hero-de.webp',
-    title: 'Piper TTS im Test: Schnelle, lokale neuronale Sprachsynthese',
-    seoTitle: 'Piper TTS im Test: Schnelle lokale TTS',
+    title: 'Piper-TTS-Rezension: Schnelle, lokale neuronale Sprachsynthese',
+    seoTitle: 'Piper-TTS-Rezension: Schnelle lokale TTS',
     intro:
-      'Piper ist eine kostenlose, lokale neuronale Text-zu-Sprache-Engine, die Text vollständig auf dem eigenen Gerät in gesprochenes Audio umwandelt. Ursprünglich wurde Piper innerhalb des Open-Source-Sprachassistenten-Projekts [Rhasspy](https://github.com/rhasspy) von Michael Hansen entwickelt. 2025 zog die aktive Entwicklung in ein neues Repository um: [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl), gepflegt von der [Open Home Foundation](https://www.openhomefoundation.org/) — der gemeinnützigen Organisation hinter Home Assistant. Das ursprüngliche Repository [rhasspy/piper](https://github.com/rhasspy/piper) wurde am 6. Oktober 2025 archiviert (nur noch lesbar). Dieser Test behandelt diese Geschichte, echte Installations- und Nutzungsbefehle, die aktuelle Lizenz (die von MIT auf GPL-3.0-or-later wechselte) und die Grenzen von Piper — inklusive Verweis auf PromptQuorums Lizenz-Deep-Dive und den Vergleich mit ElevenLabs.',
+      'Piper ist eine kostenlose, lokale neuronale Text-zu-Sprache-Engine, die Text vollständig auf dem eigenen Gerät in gesprochenes Audio umwandelt. Ursprünglich wurde Piper innerhalb des Open-Source-Sprachassistenten-Projekts [Rhasspy](https://github.com/rhasspy) von Michael Hansen entwickelt. 2025 zog die aktive Entwicklung in ein neues Repository um: [OHF-Voice/piper1-gpl](https://github.com/OHF-Voice/piper1-gpl), gepflegt von der [Open Home Foundation](https://www.openhomefoundation.org/) — der gemeinnützigen Organisation hinter Home Assistant. Das ursprüngliche Repository [rhasspy/piper](https://github.com/rhasspy/piper) wurde am 6. Oktober 2025 archiviert (nur noch lesbar). Diese Rezension behandelt diese Geschichte, echte Installations- und Nutzungsbefehle, die aktuelle Lizenz (die von MIT auf GPL-3.0-or-later wechselte) und die Grenzen von Piper — inklusive Verweis auf PromptQuorums Lizenz-Deep-Dive und den Vergleich mit ElevenLabs.',
     metaDescription:
-      'Piper TTS im Test: die kostenlose, lokale neuronale Text-zu-Sprache-Engine aus dem Rhasspy-Projekt, heute von der Open Home Foundation gepflegt. Geschichte, Installation, echte Befehle, aktuelle GPL-3.0-Lizenz und wann XTTS v2 die bessere Wahl ist.',
+      'Piper-TTS-Rezension: die kostenlose, lokale neuronale Text-zu-Sprache-Engine aus dem Rhasspy-Projekt, heute von der Open Home Foundation gepflegt. Geschichte, Installation, echte Befehle, aktuelle GPL-3.0-Lizenz und wann XTTS v2 die bessere Wahl ist.',
     twitterDescription:
-      'Piper TTS im Test 2026: schnelle, lokale, sogar auf einem Raspberry Pi echtzeitfähige neuronale Sprachsynthese, entwickelt von Michael Hansen und heute von der Open Home Foundation gepflegt. Echte Installationsbefehle, der GPL-3.0-Lizenzwechsel 2025 und ehrliche Grenzen.',
+      'Piper-TTS-Rezension 2026: schnelle, lokale, sogar auf einem Raspberry Pi echtzeitfähige neuronale Sprachsynthese, entwickelt von Michael Hansen und heute von der Open Home Foundation gepflegt. Echte Installationsbefehle, der GPL-3.0-Lizenzwechsel 2025 und ehrliche Grenzen.',
     audience:
       'Entwickler und Hobbyisten, die lokale Sprachassistenten, Barrierefreiheits-Tools oder Offline-Apps bauen und schnelle Sprachsynthese ohne Cloud-API, GPU oder Kosten pro Zeichen benötigen.',
     readTime: '11 Min. Lesezeit',
     educationalLevel: 'Intermediate',
-    primaryTerm: 'Piper TTS im Test',
+    primaryTerm: 'Piper TTS Rezension',
     targetKeywords: [
       'piper tts test',
       'piper tts',
@@ -703,17 +703,17 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
           '[Lokale TTS- und Voice-Cloning-Lizenzen: Piper, XTTS v2, F5-TTS und Coqui](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — der Lizenz-Deep-Dive über alle wichtigen lokalen TTS-Engines.',
           '[ElevenLabs vs. Piper vs. XTTS v2](/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — der Cloud-vs-lokal-Vergleich für alle, die über Self-Hosting entscheiden.',
           '[Einen vollständig offline Sprachassistenten bauen 2026](/de/power-local-llm/build-local-voice-assistant-2026) — Piper mit einem lokalen LLM und einer Whisper-basierten STT-Engine zu einer vollständigen Sprachpipeline verbinden.',
-          '[Whisper.cpp im Test](/de/power-local-llm/whisper-cpp-review) — das lokale Spracherkennungs-Gegenstück, im selben Detailgrad getestet.',
-          '[faster-whisper im Test](/de/power-local-llm/faster-whisper-review) — die CTranslate2-basierte Spracherkennungs-Alternative, im selben Detailgrad getestet.',
+          '[Whisper.cpp-Rezension](/de/power-local-llm/whisper-cpp-review) — das lokale Spracherkennungs-Gegenstück, im selben Detailgrad getestet.',
+          '[faster-whisper-Rezension](/de/power-local-llm/faster-whisper-review) — die CTranslate2-basierte Spracherkennungs-Alternative, im selben Detailgrad getestet.',
         ],
       },
     },
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Piper TTS im Test (2026): Schnelle, lokale neuronale Sprachsynthese',
+      headline: 'Piper-TTS-Rezension (2026): Schnelle, lokale neuronale Sprachsynthese',
       description:
-        'Piper TTS im Test: die kostenlose, lokale neuronale Text-zu-Sprache-Engine aus dem Rhasspy-Projekt, heute von der Open Home Foundation gepflegt. Geschichte, Installation, echte Befehle, aktuelle GPL-3.0-Lizenz und wann XTTS v2 die bessere Wahl ist.',
+        'Piper-TTS-Rezension: die kostenlose, lokale neuronale Text-zu-Sprache-Engine aus dem Rhasspy-Projekt, heute von der Open Home Foundation gepflegt. Geschichte, Installation, echte Befehle, aktuelle GPL-3.0-Lizenz und wann XTTS v2 die bessere Wahl ist.',
       url: 'https://promptquorum.com/power-local-llm/piper-tts-review',
       inLanguage: 'de',
       datePublished: '2026-09-05',
@@ -737,7 +737,7 @@ for chunk in voice.synthesize("Streamed audio, chunk by chunk."):
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://promptquorum.com' },
         { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'Piper TTS im Test (2026)', item: 'https://promptquorum.com/power-local-llm/piper-tts-review' },
+        { '@type': 'ListItem', position: 3, name: 'Piper-TTS-Rezension (2026)', item: 'https://promptquorum.com/power-local-llm/piper-tts-review' },
       ],
     },
   },

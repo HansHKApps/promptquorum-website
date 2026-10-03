@@ -325,19 +325,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chatty-mini-review-hero-de.webp',
-    title: 'Chatty-mini im Test: Privater, lokaler GGUF-Chat für Android',
-    seoTitle: 'Chatty-mini Test: Lokaler GGUF-Chat für Android',
+    title: 'Chatty-mini-Rezension: Privater, lokaler GGUF-Chat für Android',
+    seoTitle: 'Chatty-mini-Rezension: Lokaler GGUF-Chat für Android',
     intro:
-      'Chatty-mini, entwickelt von Fractal Media Infrastructure, ist bei Google Play als „Chatty-mini: Your Personal, Private AI Workspace" gelistet — eine im Hochformat ausgelegte Android-App, die GGUF-Modelle direkt auf dem Gerät ausführt. Der [Google-Play-Eintrag](https://play.google.com/store/apps/details?id=io.instance001.chatmini) beschreibt sie als „private, lokale KI-Chat-App" für Offline-Kreativschreiben, Notizen und einen privaten Chat-Bereich, ohne einen Cloud-Fallback zu nennen. Dieser Test beschränkt sich auf das, was der öffentliche Play-Store-Eintrag tatsächlich dokumentiert — Chatty-mini ist ein kleines, unabhängig entwickeltes Projekt, und vieles, was ein vollständiger Test normalerweise prüfen würde (konkrete unterstützte Modellfamilien, Speicherbedarf, Preise und Nutzerfeedback zur Zuverlässigkeit), ist nirgends veröffentlicht außer auf der Store-Seite selbst.',
+      'Chatty-mini, entwickelt von Fractal Media Infrastructure, ist bei Google Play als „Chatty-mini: Your Personal, Private AI Workspace" gelistet — eine im Hochformat ausgelegte Android-App, die GGUF-Modelle direkt auf dem Gerät ausführt. Der [Google-Play-Eintrag](https://play.google.com/store/apps/details?id=io.instance001.chatmini) beschreibt sie als „private, lokale KI-Chat-App" für Offline-Kreativschreiben, Notizen und einen privaten Chat-Bereich, ohne einen Cloud-Fallback zu nennen. Diese Rezension beschränkt sich auf das, was der öffentliche Play-Store-Eintrag tatsächlich dokumentiert — Chatty-mini ist ein kleines, unabhängig entwickeltes Projekt, und vieles, was ein vollständiger Test normalerweise prüfen würde (konkrete unterstützte Modellfamilien, Speicherbedarf, Preise und Nutzerfeedback zur Zuverlässigkeit), ist nirgends veröffentlicht außer auf der Store-Seite selbst.',
     metaDescription:
-      'Chatty-mini im Test: eine App im Hochformat, die GGUF-Modelle lokal auf Android ausführt. Was der Google-Play-Eintrag bestätigt, was nicht, und für wen sich die App eignet.',
+      'Chatty-mini-Rezension: eine App im Hochformat, die GGUF-Modelle lokal auf Android ausführt. Was der Google-Play-Eintrag bestätigt, was nicht, und für wen sich die App eignet.',
     twitterDescription:
-      'Chatty-mini im Test 2026: eine Android-App, die GGUF-Modelle lokal auf dem Gerät ausführt. Basierend ausschließlich auf dem, was der Google-Play-Eintrag dokumentiert.',
+      'Chatty-mini-Rezension 2026: eine Android-App, die GGUF-Modelle lokal auf dem Gerät ausführt. Basierend ausschließlich auf dem, was der Google-Play-Eintrag dokumentiert.',
     audience:
       'Android-Nutzer, die eine kleine, unabhängig entwickelte lokale KI-Chat-App mit besser dokumentierten Alternativen wie Loci, Private LLM oder PocketPal AI vergleichen.',
     readTime: '7 Min. Lesezeit',
     educationalLevel: 'Intermediate',
-    primaryTerm: 'Chatty-mini Test',
+    primaryTerm: 'Chatty-mini Rezension',
     targetKeywords: [
       'chatty-mini test',
       'chatty-mini android',
@@ -351,7 +351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
-      '**Chatty-mini ist eine kleine, unabhängig entwickelte Android-App von Fractal Media Infrastructure, die GGUF-Modelle für privaten, lokalen Chat auf dem Gerät ausführt.** Der [Google-Play-Eintrag](https://play.google.com/store/apps/details?id=io.instance001.chatmini) positioniert die App als „schlanken, hochformatorientierten Assistenten" für Offline-Kreativschreiben, Notizen und einen privaten Chat-Bereich. Über diese Store-Beschreibung hinaus gibt es keine unabhängige Dokumentation (Entwickler-Website, Änderungsprotokoll oder veröffentlichte technische Spezifikation), die bestätigt, welche GGUF-Modellfamilien unterstützt werden, wie groß der Speicherbedarf ist oder welches Preismodell gilt — dieser Test hält sich daher an das, was der Eintrag selbst aussagt, und markiert alles, was er nicht aussagt.',
+      '**Chatty-mini ist eine kleine, unabhängig entwickelte Android-App von Fractal Media Infrastructure, die GGUF-Modelle für privaten, lokalen Chat auf dem Gerät ausführt.** Der [Google-Play-Eintrag](https://play.google.com/store/apps/details?id=io.instance001.chatmini) positioniert die App als „schlanken, hochformatorientierten Assistenten" für Offline-Kreativschreiben, Notizen und einen privaten Chat-Bereich. Über diese Store-Beschreibung hinaus gibt es keine unabhängige Dokumentation (Entwickler-Website, Änderungsprotokoll oder veröffentlichte technische Spezifikation), die bestätigt, welche GGUF-Modellfamilien unterstützt werden, wie groß der Speicherbedarf ist oder welches Preismodell gilt — diese Rezension hält sich daher an das, was der Eintrag selbst aussagt, und markiert alles, was er nicht aussagt.',
     quickAnswerTop: {
       de: {
         question: 'Lohnt sich Chatty-mini für privaten, lokalen KI-Chat auf Android?',
@@ -362,7 +362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Führt laut Beschreibung GGUF-Modelle direkt auf dem Gerät aus.',
           'Entwickler: Fractal Media Infrastructure (developer_url: [instance001.github.io](https://instance001.github.io)).',
           'Paket-ID: io.instance001.chatmini.',
-          'Zum Zeitpunkt dieses Tests keine öffentlichen Angaben zu Preis, Bewertungsanzahl, Downloadzahl oder unterstützter Modellliste über die Store-Seite hinaus.',
+          'Zum Zeitpunkt dieser Rezension keine öffentlichen Angaben zu Preis, Bewertungsanzahl, Downloadzahl oder unterstützter Modellliste über die Store-Seite hinaus.',
         ],
         updatedDate: '2026-09-04',
       },
@@ -372,7 +372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Was Chatty-mini ist', anchor: 'what-is-chatty-mini' },
       { label: 'Was der Eintrag über die Funktionen sagt', anchor: 'what-it-does' },
       { label: 'Nur Android: Was Sie erwarten können', anchor: 'platform' },
-      { label: 'Was dieser Test nicht überprüfen konnte', anchor: 'unverified' },
+      { label: 'Was diese Rezension nicht überprüfen konnte', anchor: 'unverified' },
       { label: 'Chatty-mini vs. besser dokumentierte Alternativen', anchor: 'vs-alternatives' },
       { label: 'Für wen Chatty-mini infrage kommt', anchor: 'who-should-use' },
       { label: 'Für wen Chatty-mini nicht infrage kommt', anchor: 'who-should-not-use' },
@@ -407,7 +407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Dieser Test basiert ausschließlich auf dem öffentlichen Google-Play-Eintrag zu Chatty-mini (io.instance001.chatmini), Stand September 2026. Es handelt sich um eine kleinere, unabhängig entwickelte App — behandeln Sie jede Aussage unten als „laut Eintrag", sofern nicht anders angegeben, und prüfen Sie aktuelle Details vor der Installation auf der [Google-Play-Seite](https://play.google.com/store/apps/details?id=io.instance001.chatmini).',
+            text: 'Diese Rezension basiert ausschließlich auf dem öffentlichen Google-Play-Eintrag zu Chatty-mini (io.instance001.chatmini), Stand September 2026. Es handelt sich um eine kleinere, unabhängig entwickelte App — behandeln Sie jede Aussage unten als „laut Eintrag", sofern nicht anders angegeben, und prüfen Sie aktuelle Details vor der Installation auf der [Google-Play-Seite](https://play.google.com/store/apps/details?id=io.instance001.chatmini).',
           },
         ],
       },
@@ -416,7 +416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was Chatty-mini ist',
         content: [
           'Chatty-mini ist eine Android-Anwendung, die bei Google Play unter dem Titel „Chatty-mini: Your Personal, Private AI Workspace" veröffentlicht ist (Paket-ID `io.instance001.chatmini`). Der Eintrag nennt Fractal Media Infrastructure als Entwickler, mit der Entwickler-URL [instance001.github.io](https://instance001.github.io).',
-          'Die kurze Google-Play-Beschreibung lautet: „Private, local-first AI chat. Run GGUF models offline on your Android device." Die längere Beschreibung ergänzt: „Chatty-mini is a lightweight, portrait-first assistant designed to run GGUF models directly on your device", ausgerichtet auf „an offline companion for creative writing, a fast assistant for your notes, or a secure space for your..." — die Beschreibung wurde an dieser Stelle abgeschnitten, als dieser Test recherchiert wurde, sodass alles nach diesem Satzfragment hier nicht wiedergegeben wird.',
+          'Die kurze Google-Play-Beschreibung lautet: „Private, local-first AI chat. Run GGUF models offline on your Android device." Die längere Beschreibung ergänzt: „Chatty-mini is a lightweight, portrait-first assistant designed to run GGUF models directly on your device", ausgerichtet auf „an offline companion for creative writing, a fast assistant for your notes, or a secure space for your..." — die Beschreibung wurde an dieser Stelle abgeschnitten, als diese Rezension recherchiert wurde, sodass alles nach diesem Satzfragment hier nicht wiedergegeben wird.',
         ],
         note: 'GGUF ist ein Dateiformat zum Verpacken und lokalen Ausführen offener Sprachmodelle (über Laufzeitumgebungen wie llama.cpp) statt über einen Cloud-API-Aufruf. Wenn eine App angibt, „GGUF-Modelle auszuführen", bedeutet das, dass die Inferenz auf dem Gerät stattfinden soll — nicht, dass ein bestimmtes Modell bereits in der Installation enthalten ist.',
       },
@@ -460,17 +460,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       unverified: {
         id: 'unverified',
-        title: 'Was dieser Test nicht überprüfen konnte',
+        title: 'Was diese Rezension nicht überprüfen konnte',
         content: [
-          'Ein verantwortungsvoller Test legt seine eigenen Lücken ebenso klar offen wie seine Ergebnisse. Folgende Punkte sind Standardprüfungen für einen Test lokaler KI-Apps, die für Chatty-mini nicht abgeschlossen werden konnten, weil die Informationen nirgends veröffentlicht sind, die dieser Test finden konnte — nur im Google-Play-Eintrag selbst, der sie nicht abdeckt:',
+          'Ein verantwortungsvoller Test legt seine eigenen Lücken ebenso klar offen wie seine Ergebnisse. Folgende Punkte sind Standardprüfungen für einen Test lokaler KI-Apps, die für Chatty-mini nicht abgeschlossen werden konnten, weil die Informationen nirgends veröffentlicht sind, die diese Rezension finden konnte — nur im Google-Play-Eintrag selbst, der sie nicht abdeckt:',
         ],
         items: [
           '**Preis.** Hier wird kein Preis, Abo-Modell oder In-App-Kauf genannt, da im recherchierten Auszug des Eintrags keiner sichtbar war. Prüfen Sie den aktuellen Preis direkt im [Google-Play-Eintrag](https://play.google.com/store/apps/details?id=io.instance001.chatmini), bevor Sie installieren.',
           '**Liste unterstützter Modelle.** Der Eintrag spricht allgemein von „GGUF models"; er nennt keine konkreten Modellfamilien (zum Beispiel Llama, Qwen, Gemma oder Phi), daher wird hier keine Kompatibilität mit einem benannten Modell behauptet.',
           '**Download- und Bewertungszahlen.** Hier nicht genannt — diese ändern sich fortlaufend und sollten live auf der Store-Seite geprüft werden statt aus einer Testmomentaufnahme übernommen zu werden.',
-          '**Details zur Datenschutzerklärung.** Die Kurzbeschreibung nennt die App „private, local-first", doch dieser Test hatte keinen Zugriff auf eine vollständige, eigenständige Datenschutzerklärung, um zu prüfen, welche Daten die App gegebenenfalls erhebt (Analyse, Absturzberichte oder Kontodaten). Prüfen Sie vor der Installation den Bereich „Datensicherheit" im Play Store, statt von null Datenerhebung auszugehen.',
-          '**Speicherbedarf und Geräteanforderungen.** App-Größe, Modelldateigrößen und Mindest-RAM sind im für diesen Test verfügbaren Auszug des Eintrags nicht veröffentlicht.',
-          '**Unabhängiges Nutzerfeedback.** Dieser Test zitiert keine Nutzerbewertungen, da eine kleine Stichprobe von Play-Store-Bewertungen kein verlässlicher Ersatz für einen praktischen Test ist, und PromptQuorum hat für diesen Artikel keinen praktischen Test von Chatty-mini durchgeführt.',
+          '**Details zur Datenschutzerklärung.** Die Kurzbeschreibung nennt die App „private, local-first", doch diese Rezension hatte keinen Zugriff auf eine vollständige, eigenständige Datenschutzerklärung, um zu prüfen, welche Daten die App gegebenenfalls erhebt (Analyse, Absturzberichte oder Kontodaten). Prüfen Sie vor der Installation den Bereich „Datensicherheit" im Play Store, statt von null Datenerhebung auszugehen.',
+          '**Speicherbedarf und Geräteanforderungen.** App-Größe, Modelldateigrößen und Mindest-RAM sind im für diese Rezension verfügbaren Auszug des Eintrags nicht veröffentlicht.',
+          '**Unabhängiges Nutzerfeedback.** Diese Rezension zitiert keine Nutzerbewertungen, da eine kleine Stichprobe von Play-Store-Bewertungen kein verlässlicher Ersatz für einen praktischen Test ist, und PromptQuorum hat für diesen Artikel keinen praktischen Test von Chatty-mini durchgeführt.',
         ],
       },
       vsAlternatives: {
@@ -519,9 +519,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Für wen Chatty-mini nicht infrage kommt',
         items: [
           '**Nutzer, die iOS-, Mac- oder Windows-Unterstützung benötigen.** Für diese Plattformen wurde kein Eintrag gefunden; Chatty-mini scheint reine Android-Software zu sein.',
-          '**Nutzer, die vor dem Vertrauen privater Gespräche eine geprüfte, dokumentierte Datenschutzerklärung benötigen.** Dieser Test konnte über die Aussage „private, local-first" in der Kurzbeschreibung hinaus keine vollständige Datenschutzerklärung verifizieren — prüfen Sie vor der Nutzung für sensible Inhalte selbst den Bereich „Datensicherheit" im Play Store.',
+          '**Nutzer, die vor dem Vertrauen privater Gespräche eine geprüfte, dokumentierte Datenschutzerklärung benötigen.** Diese Rezension konnte über die Aussage „private, local-first" in der Kurzbeschreibung hinaus keine vollständige Datenschutzerklärung verifizieren — prüfen Sie vor der Nutzung für sensible Inhalte selbst den Bereich „Datensicherheit" im Play Store.',
           '**Nutzer, die Kontrolle darüber wollen, welches konkrete Modell ihre Chats bearbeitet.** Der Eintrag nennt keine unterstützten Modellfamilien; wer Wert auf ein bestimmtes Modell legt (etwa eine bestimmte Llama- oder Qwen-Variante), sollte eine App wie PocketPal AI oder Private LLM wählen, die dies dokumentiert.',
-          '**Nutzer, die eine Erfolgsbilanz wünschen.** Da für diesen Test keine unabhängigen Bewertungen, kein Änderungsprotokoll und keine Langzeitnutzungsdaten gefunden wurden, sollten Nutzer, die eine App mit etablierter öffentlicher Historie bevorzugen, stattdessen Loci, Private LLM oder PocketPal AI in Betracht ziehen.',
+          '**Nutzer, die eine Erfolgsbilanz wünschen.** Da für diese Rezension keine unabhängigen Bewertungen, kein Änderungsprotokoll und keine Langzeitnutzungsdaten gefunden wurden, sollten Nutzer, die eine App mit etablierter öffentlicher Historie bevorzugen, stattdessen Loci, Private LLM oder PocketPal AI in Betracht ziehen.',
         ],
       },
       faq: {
@@ -534,15 +534,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist Chatty-mini kostenlos?',
-            a: 'Dieser Test konnte den aktuellen Preis aus dem recherchierten Auszug des Eintrags nicht bestätigen. Prüfen Sie den [Google-Play-Eintrag](https://play.google.com/store/apps/details?id=io.instance001.chatmini) direkt, da sich Preise und In-App-Käufe ändern können und aus einem statischen Test nicht verlässlich zitiert werden können.',
+            a: 'Diese Rezension konnte den aktuellen Preis aus dem recherchierten Auszug des Eintrags nicht bestätigen. Prüfen Sie den [Google-Play-Eintrag](https://play.google.com/store/apps/details?id=io.instance001.chatmini) direkt, da sich Preise und In-App-Käufe ändern können und aus einem statischen Test nicht verlässlich zitiert werden können.',
           },
           {
             q: 'Funktioniert Chatty-mini vollständig offline?',
-            a: 'Die Google-Play-Beschreibung besagt, dass die App „GGUF models offline on your Android device" ausführt, was darauf hindeutet, dass Inferenz auf dem Gerät das Designziel ist. Dieser Test hat das Offline-Verhalten (etwa im Flugmodus) nicht unabhängig getestet — behandeln Sie „offlinefähig" als Aussage des Entwicklers, nicht als unabhängig verifiziertes Ergebnis.',
+            a: 'Die Google-Play-Beschreibung besagt, dass die App „GGUF models offline on your Android device" ausführt, was darauf hindeutet, dass Inferenz auf dem Gerät das Designziel ist. Diese Rezension hat das Offline-Verhalten (etwa im Flugmodus) nicht unabhängig getestet — behandeln Sie „offlinefähig" als Aussage des Entwicklers, nicht als unabhängig verifiziertes Ergebnis.',
           },
           {
             q: 'Welche KI-Modelle unterstützt Chatty-mini?',
-            a: 'Der Eintrag spricht allgemein von „GGUF models", nennt aber im für diesen Test verfügbaren Beschreibungsauszug keine konkreten unterstützten Modellfamilien. Benötigen Sie ein bestimmtes Modell, prüfen Sie die Kompatibilität in der App selbst oder wählen Sie eine App wie PocketPal AI oder Private LLM, die ihre unterstützte Modellliste veröffentlicht.',
+            a: 'Der Eintrag spricht allgemein von „GGUF models", nennt aber im für diese Rezension verfügbaren Beschreibungsauszug keine konkreten unterstützten Modellfamilien. Benötigen Sie ein bestimmtes Modell, prüfen Sie die Kompatibilität in der App selbst oder wählen Sie eine App wie PocketPal AI oder Private LLM, die ihre unterstützte Modellliste veröffentlicht.',
           },
           {
             q: 'Ist Chatty-mini für iPhone oder iPad verfügbar?',
@@ -550,19 +550,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wer entwickelt Chatty-mini?',
-            a: 'Der Google-Play-Eintrag nennt Fractal Media Infrastructure als Entwickler, mit der Entwickler-URL [instance001.github.io](https://instance001.github.io). Über diese Angabe im Eintrag hinaus fand dieser Test keine eigenständige Unternehmens-Website oder öffentliche Erfolgsbilanz des Entwicklers.',
+            a: 'Der Google-Play-Eintrag nennt Fractal Media Infrastructure als Entwickler, mit der Entwickler-URL [instance001.github.io](https://instance001.github.io). Über diese Angabe im Eintrag hinaus fand diese Rezension keine eigenständige Unternehmens-Website oder öffentliche Erfolgsbilanz des Entwicklers.',
           },
           {
             q: 'Ist Chatty-mini sicher für private Gespräche?',
-            a: 'Die Kurzbeschreibung nennt die App „private, local-first", doch dieser Test hatte keinen Zugriff auf eine vollständige, eigenständige Datenschutzerklärung, um zu prüfen, welche Daten die App gegebenenfalls erhebt. Prüfen Sie vor dem Anvertrauen sensibler Inhalte den Bereich „Datensicherheit" im Google-Play-Eintrag und die Datenschutzerklärung in der App, da diese von der Marketingbeschreibung abweichen können.',
+            a: 'Die Kurzbeschreibung nennt die App „private, local-first", doch diese Rezension hatte keinen Zugriff auf eine vollständige, eigenständige Datenschutzerklärung, um zu prüfen, welche Daten die App gegebenenfalls erhebt. Prüfen Sie vor dem Anvertrauen sensibler Inhalte den Bereich „Datensicherheit" im Google-Play-Eintrag und die Datenschutzerklärung in der App, da diese von der Marketingbeschreibung abweichen können.',
           },
           {
             q: 'Erfordert Chatty-mini nach der Installation einen Modell-Download?',
-            a: 'Das wird im für diesen Test verfügbaren Auszug des Eintrags nicht bestätigt. Apps, die GGUF-Modelle ausführen, bündeln in der Regel entweder ein kleines Modell oder erfordern einen ersten Download; der Eintrag von Chatty-mini spezifiziert nicht, welchen Ansatz die App verfolgt. Prüfen Sie den Einrichtungsprozess in der App nach der Installation, um dies zu klären.',
+            a: 'Das wird im für diese Rezension verfügbaren Auszug des Eintrags nicht bestätigt. Apps, die GGUF-Modelle ausführen, bündeln in der Regel entweder ein kleines Modell oder erfordern einen ersten Download; der Eintrag von Chatty-mini spezifiziert nicht, welchen Ansatz die App verfolgt. Prüfen Sie den Einrichtungsprozess in der App nach der Installation, um dies zu klären.',
           },
           {
-            q: 'Warum ist dieser Test bei Chatty-mini zurückhaltender als andere App-Tests auf dieser Website?',
-            a: 'Weil das verfügbare Quellenmaterial dünner ist. Chatty-mini ist eine kleinere, unabhängig entwickelte App, deren einzige öffentliche Dokumentation zum Testzeitpunkt der Google-Play-Eintrag ist — keine Entwickler-Website mit technischen Spezifikationen, kein veröffentlichtes Änderungsprotokoll und kein von PromptQuorum unabhängig durchgeführter praktischer Test. Dieser Test gibt nur das wieder, was der Eintrag aussagt, und benennt offen, was ungeklärt bleibt, statt Lücken mit Annahmen zu füllen.',
+            q: 'Warum ist diese Rezension bei Chatty-mini zurückhaltender als andere App-Tests auf dieser Website?',
+            a: 'Weil das verfügbare Quellenmaterial dünner ist. Chatty-mini ist eine kleinere, unabhängig entwickelte App, deren einzige öffentliche Dokumentation zum Testzeitpunkt der Google-Play-Eintrag ist — keine Entwickler-Website mit technischen Spezifikationen, kein veröffentlichtes Änderungsprotokoll und kein von PromptQuorum unabhängig durchgeführter praktischer Test. Diese Rezension gibt nur das wieder, was der Eintrag aussagt, und benennt offen, was ungeklärt bleibt, statt Lücken mit Annahmen zu füllen.',
           },
         ],
       },
@@ -570,13 +570,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Chatty-mini ist eine kleine, unabhängig entwickelte Android-App mit einer klaren, engen Idee: GGUF-Modelle für privaten, lokalen Chat auf dem Gerät ausführen, in einer schlanken Oberfläche im Hochformat für Kreativschreiben, Notizen und einen privaten Chat-Bereich. Diese Idee ist glaubwürdig und passt zu der Art, wie GGUF-basierte lokale Inferenz auf anderen Android-Apps funktioniert. Was diesen Test von einer uneingeschränkten Empfehlung unterscheidet, ist die Dokumentation, nicht das Konzept: Zum Testzeitpunkt ist der Google-Play-Eintrag die einzige öffentliche Quelle für Chatty-mini, ohne eigenständige Entwickler-Website, veröffentlichte Modellliste, Datenschutzdetails oder bestätigte Preise über diese Seite hinaus. Nutzer, die eine kleine, reine Android-App auf GGUF-Basis auf eigene Faust ausprobieren möchten — und bereit sind, den Bereich „Datensicherheit" im Play Store und die App-Einstellungen selbst zu prüfen —, könnten Chatty-mini einen risikoarmen Test wert finden. Nutzer, die plattformübergreifende Unterstützung, eine dokumentierte Modellbibliothek, geprüfte Preise oder eine etablierte Erfolgsbilanz benötigen, sollten stattdessen mit Loci, Private LLM oder PocketPal AI beginnen, die alle deutlich mehr öffentliche Dokumentation bereitstellen.',
+          'Chatty-mini ist eine kleine, unabhängig entwickelte Android-App mit einer klaren, engen Idee: GGUF-Modelle für privaten, lokalen Chat auf dem Gerät ausführen, in einer schlanken Oberfläche im Hochformat für Kreativschreiben, Notizen und einen privaten Chat-Bereich. Diese Idee ist glaubwürdig und passt zu der Art, wie GGUF-basierte lokale Inferenz auf anderen Android-Apps funktioniert. Was diese Rezension von einer uneingeschränkten Empfehlung unterscheidet, ist die Dokumentation, nicht das Konzept: Zum Testzeitpunkt ist der Google-Play-Eintrag die einzige öffentliche Quelle für Chatty-mini, ohne eigenständige Entwickler-Website, veröffentlichte Modellliste, Datenschutzdetails oder bestätigte Preise über diese Seite hinaus. Nutzer, die eine kleine, reine Android-App auf GGUF-Basis auf eigene Faust ausprobieren möchten — und bereit sind, den Bereich „Datensicherheit" im Play Store und die App-Einstellungen selbst zu prüfen —, könnten Chatty-mini einen risikoarmen Test wert finden. Nutzer, die plattformübergreifende Unterstützung, eine dokumentierte Modellbibliothek, geprüfte Preise oder eine etablierte Erfolgsbilanz benötigen, sollten stattdessen mit Loci, Private LLM oder PocketPal AI beginnen, die alle deutlich mehr öffentliche Dokumentation bereitstellen.',
       },
       sources: {
         id: 'sources',
         title: 'Quellen',
         items: [
-          '[Chatty-mini bei Google Play](https://play.google.com/store/apps/details?id=io.instance001.chatmini) — die einzige öffentliche Quelle für diesen Test: Titel, Kurz- und Langbeschreibung sowie Entwicklerangabe.',
+          '[Chatty-mini bei Google Play](https://play.google.com/store/apps/details?id=io.instance001.chatmini) — die einzige öffentliche Quelle für diese Rezension: Titel, Kurz- und Langbeschreibung sowie Entwicklerangabe.',
           '[Loci im App Store](https://apps.apple.com/us/app/loci-private-local-ai/id6762100748) — zum Vergleich herangezogen; Datenschutz-Kennzeichnung und Plattformverfügbarkeit.',
           '[Private LLM offizielle Website](https://privatellm.app/en) — zum Vergleich herangezogen; Preise, Modellbibliothek und Plattformunterstützung.',
         ],
@@ -585,7 +585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Loci AI Test: Offline-KI für iPhone, Android, iPad, Mac und Windows](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine besser dokumentierte plattformübergreifende Alternative mit veröffentlichter Datenschutz-Kennzeichnung.',
+          '[Loci-AI-Rezension: Offline-KI für iPhone, Android, iPad, Mac und Windows](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine besser dokumentierte plattformübergreifende Alternative mit veröffentlichter Datenschutz-Kennzeichnung.',
           '[Die besten lokalen KI-Apps für Android 2026](/de/power-local-llm/best-local-llm-apps-android-2026) — die Android-App-Übersicht, u. a. MLC Chat, Maid, Layla, Ollama über Termux und PocketPal AI.',
           '[Die besten mobilen KI-Modelle 2026: Phi-4 Mini vs. Gemma 4 vs. SmolLM](/de/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — der Modell-Begleitartikel dazu, welche GGUF-kompatiblen Modelle wirklich auf ein Smartphone passen.',
           '[Ein lokales LLM auf dem Tablet ausführen: iPad und Android](/de/power-local-llm/run-ai-on-tablet-ipad-android) — geräteorientierter Leitfaden für lokale und entfernte Inferenz auf Tablets.',
@@ -596,9 +596,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Chatty-mini im Test (2026): Privater, lokaler GGUF-Chat für Android',
+      headline: 'Chatty-mini-Rezension (2026): Privater, lokaler GGUF-Chat für Android',
       description:
-        'Chatty-mini im Test: eine App im Hochformat, die GGUF-Modelle lokal auf Android ausführt. Was der Google-Play-Eintrag bestätigt, was nicht, und für wen sich die App eignet.',
+        'Chatty-mini-Rezension: eine App im Hochformat, die GGUF-Modelle lokal auf Android ausführt. Was der Google-Play-Eintrag bestätigt, was nicht, und für wen sich die App eignet.',
       url: 'https://promptquorum.com/de/power-local-llm/chatty-mini-review',
       inLanguage: 'de',
       datePublished: '2026-09-04',
@@ -622,7 +622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://promptquorum.com' },
         { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/de/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'Chatty-mini im Test (2026)', item: 'https://promptquorum.com/de/power-local-llm/chatty-mini-review' },
+        { '@type': 'ListItem', position: 3, name: 'Chatty-mini-Rezension (2026)', item: 'https://promptquorum.com/de/power-local-llm/chatty-mini-review' },
       ],
     },
   },

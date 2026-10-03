@@ -463,19 +463,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/anythingllm-mobile-review-hero-de.webp',
-    title: 'AnythingLLM Mobile im Test: Chat + RAG auf dem Gerät',
-    seoTitle: 'AnythingLLM Mobile Test: On-Device oder Client?',
+    title: 'AnythingLLM-Mobile-Rezension: Chat + RAG auf dem Gerät',
+    seoTitle: 'AnythingLLM-Mobile-Rezension: On-Device oder Client?',
     intro:
-      'AnythingLLM Mobile ist eine kostenlose, unter der MIT-Lizenz veröffentlichte Android-App von [Mintplex Labs](https://mintplex.com), die ein kleines Sprachmodell und eine lokale Vektordatenbank direkt auf dem Smartphone ausführt, um Dokumente offline durchsuchbar zu machen. Optional lässt sich die App per Kopplung mit einer selbst gehosteten [AnythingLLM-Desktop](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)- oder AnythingLLM-Cloud-Instanz im lokalen Netzwerk verbinden, um den vollen Funktionsumfang der Desktop-Version zu nutzen. Dieser Test erklärt genau, wie sich der eigenständige On-Device-Modus vom verbundenen Modus unterscheidet, welche Plattformen wirklich unterstützt werden (Android ist verfügbar, iOS noch nicht), was die App im Vergleich zum separat bepreisten AnythingLLM-Cloud-Dienst kostet, und für wen sie sich eignet — und für wen nicht.',
+      'AnythingLLM Mobile ist eine kostenlose, unter der MIT-Lizenz veröffentlichte Android-App von [Mintplex Labs](https://mintplex.com), die ein kleines Sprachmodell und eine lokale Vektordatenbank direkt auf dem Smartphone ausführt, um Dokumente offline durchsuchbar zu machen. Optional lässt sich die App per Kopplung mit einer selbst gehosteten [AnythingLLM-Desktop](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)- oder AnythingLLM-Cloud-Instanz im lokalen Netzwerk verbinden, um den vollen Funktionsumfang der Desktop-Version zu nutzen. Diese Rezension erklärt genau, wie sich der eigenständige On-Device-Modus vom verbundenen Modus unterscheidet, welche Plattformen wirklich unterstützt werden (Android ist verfügbar, iOS noch nicht), was die App im Vergleich zum separat bepreisten AnythingLLM-Cloud-Dienst kostet, und für wen sie sich eignet — und für wen nicht.',
     metaDescription:
-      'AnythingLLM Mobile im Test: kostenlose, MIT-lizenzierte Android-App, die Modelle auf dem Gerät ausführt UND mit einer selbst gehosteten AnythingLLM-Instanz synchronisiert. iOS-Status, Preise, RAG.',
+      'AnythingLLM-Mobile-Rezension: kostenlose, MIT-lizenzierte Android-App, die Modelle auf dem Gerät ausführt UND mit einer selbst gehosteten AnythingLLM-Instanz synchronisiert. iOS-Status, Preise, RAG.',
     twitterDescription:
-      'AnythingLLM Mobile Test 2026: läuft für den Offline-Chat direkt auf dem Gerät, lässt sich aber auch mit einer selbst gehosteten AnythingLLM-Instanz koppeln. Nur Android — noch keine iOS-App.',
+      'AnythingLLM-Mobile-Rezension 2026: läuft für den Offline-Chat direkt auf dem Gerät, lässt sich aber auch mit einer selbst gehosteten AnythingLLM-Instanz koppeln. Nur Android — noch keine iOS-App.',
     audience:
       'Datenschutzbewusste Android-Nutzer und bestehende AnythingLLM-Desktop-/Self-Hosting-Nutzer, die eine mobile Ergänzung suchen.',
     readTime: '11 Min. Lesezeit',
     educationalLevel: 'Intermediate',
-    primaryTerm: 'AnythingLLM Mobile Test',
+    primaryTerm: 'AnythingLLM Mobile Rezension',
     targetKeywords: [
       'anythingllm mobile test',
       'anythingllm mobile app',
@@ -489,7 +489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
-      '**AnythingLLM Mobile ist eine kostenlose, unter der MIT-Lizenz stehende Android-App, die auf zwei Arten funktioniert: eigenständig, mit einem kleinen, ausgewählten Sprachmodell samt lokaler Vektordatenbank vollständig auf dem Gerät für Offline-Dokumentenchat und RAG, oder verbunden, indem Chats, Workspaces und Dokumente per QR-Code-Kopplung im lokalen Netzwerk mit einer selbst gehosteten [AnythingLLM-Desktop](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)- oder AnythingLLM-Cloud-Instanz synchronisiert werden.** Entwickelt wird sie von [Mintplex Labs](https://mintplex.com), dem Unternehmen hinter dem Open-Source-Projekt AnythingLLM für Desktop und Server, veröffentlicht auf [GitHub](https://github.com/Mintplex-Labs/anythingllm-mobile) unter der MIT-Lizenz. Zum Zeitpunkt dieses Tests ist die App ausschließlich über [Google Play](https://play.google.com/store/apps/details?id=com.anythingllm) für Android erhältlich; eine iOS-Version im App Store gibt es noch nicht.',
+      '**AnythingLLM Mobile ist eine kostenlose, unter der MIT-Lizenz stehende Android-App, die auf zwei Arten funktioniert: eigenständig, mit einem kleinen, ausgewählten Sprachmodell samt lokaler Vektordatenbank vollständig auf dem Gerät für Offline-Dokumentenchat und RAG, oder verbunden, indem Chats, Workspaces und Dokumente per QR-Code-Kopplung im lokalen Netzwerk mit einer selbst gehosteten [AnythingLLM-Desktop](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag)- oder AnythingLLM-Cloud-Instanz synchronisiert werden.** Entwickelt wird sie von [Mintplex Labs](https://mintplex.com), dem Unternehmen hinter dem Open-Source-Projekt AnythingLLM für Desktop und Server, veröffentlicht auf [GitHub](https://github.com/Mintplex-Labs/anythingllm-mobile) unter der MIT-Lizenz. Zum Zeitpunkt dieser Rezension ist die App ausschließlich über [Google Play](https://play.google.com/store/apps/details?id=com.anythingllm) für Android erhältlich; eine iOS-Version im App Store gibt es noch nicht.',
     quickAnswerTop: {
       de: {
         question: 'Führt AnythingLLM Mobile Modelle auf dem Smartphone aus, oder ist es nur ein Client für einen Server?',
@@ -498,7 +498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Der eigenständige Modus führt ein mitgeliefertes kleines Modell plus lokale Vektordatenbank vollständig auf dem Gerät aus — ohne Server, ohne Konto, funktioniert offline.',
           'Der verbundene Modus koppelt sich (per QR-Code) mit einer selbst gehosteten AnythingLLM-Desktop- oder Cloud-Instanz für benutzerdefinierte Agenten-Tools und geräteübergreifende Synchronisierung.',
-          'Nur Android, über [Google Play](https://play.google.com/store/apps/details?id=com.anythingllm) oder direkte APK; zum Zeitpunkt dieses Tests keine iOS-App-Store-Version.',
+          'Nur Android, über [Google Play](https://play.google.com/store/apps/details?id=com.anythingllm) oder direkte APK; zum Zeitpunkt dieser Rezension keine iOS-App-Store-Version.',
           'Kostenlos und quelloffen unter der MIT-Lizenz; der separate AnythingLLM-Cloud-Hosting-Dienst startet bei 50 $/Monat für alle, die den verbundenen Modus ohne eigenes Hosting nutzen möchten.',
           'Entwickelt von [Mintplex Labs](https://mintplex.com), einem Y-Combinator-Unternehmen (Sommer 2022), gegründet von Timothy Carambat, das auch hinter dem Desktop-/Server-Projekt AnythingLLM steht.',
         ],
@@ -542,14 +542,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Kostenlos und quelloffen (MIT-Lizenz); der Quellcode der mobilen App ist auf [GitHub](https://github.com/Mintplex-Labs/anythingllm-mobile) öffentlich.',
           'Zwei Modi: eigenständige On-Device-Inferenz (Cactus-Compute-Engine, mitgeliefertes GGUF-Modell, lokale Vektordatenbank) oder verbundener Modus mit Kopplung an eine selbst gehostete Desktop-/Cloud-Instanz per QR-Code.',
-          'Zum Zeitpunkt dieses Tests nur Android — verfügbar über [Google Play](https://play.google.com/store/apps/details?id=com.anythingllm) und als direkte APK; noch keine iOS-App-Store-Version.',
+          'Zum Zeitpunkt dieser Rezension nur Android — verfügbar über [Google Play](https://play.google.com/store/apps/details?id=com.anythingllm) und als direkte APK; noch keine iOS-App-Store-Version.',
           'Entwickelt von [Mintplex Labs](https://mintplex.com), einem Y-Combinator-Unternehmen, das auch für das [Desktop-/Server-Projekt AnythingLLM](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) verantwortlich ist.',
           'Die mobile App selbst hat kein Abo; AnythingLLM Cloud, der separate gehostete Serverdienst, mit dem sich manche Nutzer koppeln, startet bei 50 $/Monat.',
         ],
         callouts: [
           {
             type: 'note',
-            text: 'Dieser Test basiert auf dem öffentlichen [AnythingLLM-Mobile-GitHub-Repository](https://github.com/Mintplex-Labs/anythingllm-mobile), der offiziellen [Mobile-Dokumentation](https://docs.anythingllm.com/mobile/overview), dem [Google-Play-Eintrag](https://play.google.com/store/apps/details?id=com.anythingllm) und [anythingllm.com](https://anythingllm.com/mobile), Stand September 2026. PromptQuorum hat für diesen Test kein eigenes Hands-on-Benchmarking von AnythingLLM Mobile durchgeführt — die unten genannten Leistungswerte sind allgemeine Hardware-Richtwerte für lokale LLMs, keine app-spezifischen Messungen.',
+            text: 'Diese Rezension basiert auf dem öffentlichen [AnythingLLM-Mobile-GitHub-Repository](https://github.com/Mintplex-Labs/anythingllm-mobile), der offiziellen [Mobile-Dokumentation](https://docs.anythingllm.com/mobile/overview), dem [Google-Play-Eintrag](https://play.google.com/store/apps/details?id=com.anythingllm) und [anythingllm.com](https://anythingllm.com/mobile), Stand September 2026. PromptQuorum hat für diese Rezension kein eigenes Hands-on-Benchmarking von AnythingLLM Mobile durchgeführt — die unten genannten Leistungswerte sind allgemeine Hardware-Richtwerte für lokale LLMs, keine app-spezifischen Messungen.',
           },
         ],
       },
@@ -655,11 +655,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plattform': 'Android',
             'Verfügbarkeit': 'Verfügbar über [Google Play](https://play.google.com/store/apps/details?id=com.anythingllm) und als direkter APK-Download',
-            'Anmerkungen': 'Dies ist zum Zeitpunkt dieses Tests die einzige verfügbare mobile Plattform.',
+            'Anmerkungen': 'Dies ist zum Zeitpunkt dieser Rezension die einzige verfügbare mobile Plattform.',
           },
           {
             'Plattform': 'iPhone / iPad (iOS)',
-            'Verfügbarkeit': 'Nicht veröffentlicht — zum Zeitpunkt dieses Tests kein App-Store-Eintrag für AnythingLLM Mobile gefunden',
+            'Verfügbarkeit': 'Nicht veröffentlicht — zum Zeitpunkt dieser Rezension kein App-Store-Eintrag für AnythingLLM Mobile gefunden',
             'Anmerkungen': 'iOS-Unterstützung wurde öffentlich im [GitHub-Issue-Tracker](https://github.com/Mintplex-Labs/anything-llm/issues/5428) des Projekts diskutiert, PromptQuorum fand jedoch keine offizielle App-Store-Veröffentlichung oder Ankündigung von Mintplex Labs mit einem konkreten Termin. Verlassen Sie sich nicht auf iOS-Verfügbarkeit aus Berichten anderer Seiten — prüfen Sie direkt im [App Store](https://apps.apple.com/), bevor Sie sie erwarten.',
           },
           {
@@ -730,7 +730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Für wen eignet sich AnythingLLM Mobile nicht',
         items: [
-          '**iPhone- und iPad-Nutzer.** Zum Zeitpunkt dieses Tests gibt es keine iOS-Version; für Apple-Geräte eignen sich stattdessen [Private LLM](/de/power-local-llm/private-llm-review) oder [PocketPal AI](/de/power-local-llm/pocketpal-ai-review).',
+          '**iPhone- und iPad-Nutzer.** Zum Zeitpunkt dieser Rezension gibt es keine iOS-Version; für Apple-Geräte eignen sich stattdessen [Private LLM](/de/power-local-llm/private-llm-review) oder [PocketPal AI](/de/power-local-llm/pocketpal-ai-review).',
           '**Nutzer, die einen einzigen einfachen Modus ohne Entscheidungen möchten.** Die Trennung zwischen eigenständig und verbunden ist eine echte Design-Entscheidung, die Nutzer verstehen müssen; wer ein einziges, geführtes Erlebnis mit kuratierter Modellliste ohne Server-Kopplungskonzept möchte, ist bei [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) oder [Loci](/de/power-local-llm/loci-ai-review-offline-local-ai) besser aufgehoben.',
           '**Nutzer, die vollständige benutzerdefinierte Agenten-Tools ohne jeden Server möchten.** Die Konfiguration benutzerdefinierter Agenten-Tools ist im aktuellen Design dieser App an den verbundenen Modus gebunden — wer diese Fähigkeit vollständig On-Device haben möchte, sollte sich heute anderswo umsehen.',
           '**Nutzer, die kostenlosen Enterprise-Support benötigen.** Community-Support ist kostenlos, ein Support-SLA erfordert jedoch ein kostenpflichtiges AnythingLLM-Cloud-Pro- oder -Enterprise-Abo, nicht allein die mobile App.',
@@ -804,7 +804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Gibt es AnythingLLM Mobile für iPhone?',
-            a: 'Nein. Zum Zeitpunkt dieses Tests hat AnythingLLM Mobile keinen App-Store-Eintrag und ist ausschließlich für Android über Google Play oder als direkten APK-Download verfügbar. iOS-Unterstützung wurde im GitHub-Issue-Tracker des Projekts diskutiert, es gibt jedoch keine offizielle Ankündigung von Mintplex Labs zu einem Veröffentlichungstermin.',
+            a: 'Nein. Zum Zeitpunkt dieser Rezension hat AnythingLLM Mobile keinen App-Store-Eintrag und ist ausschließlich für Android über Google Play oder als direkten APK-Download verfügbar. iOS-Unterstützung wurde im GitHub-Issue-Tracker des Projekts diskutiert, es gibt jedoch keine offizielle Ankündigung von Mintplex Labs zu einem Veröffentlichungstermin.',
           },
           {
             q: 'Ist AnythingLLM Mobile kostenlos?',
@@ -858,11 +858,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         items: [
-          '[AnythingLLM Mobile auf GitHub](https://github.com/Mintplex-Labs/anythingllm-mobile) — Quellcode, Lizenz (MIT) und die in diesem Test erwähnte Nutzung von Cactus Compute.',
+          '[AnythingLLM Mobile auf GitHub](https://github.com/Mintplex-Labs/anythingllm-mobile) — Quellcode, Lizenz (MIT) und die in dieser Rezension erwähnte Nutzung von Cactus Compute.',
           '[Offizielle Dokumentation zu AnythingLLM Mobile](https://docs.anythingllm.com/mobile/overview) — eigenständiger vs. verbundener Modus, Kopplungsschritte und Einrichtung der Netzwerkerkennung.',
           '[AnythingLLM Mobile auf Google Play](https://play.google.com/store/apps/details?id=com.anythingllm) — Android-Verfügbarkeit und App-Beschreibung.',
           '[Offizielle Seite zu AnythingLLM Mobile](https://anythingllm.com/mobile) — Download-Links und Funktionsübersicht.',
-          '[Preise für AnythingLLM Cloud](https://anythingllm.com/pricing) — in diesem Test referenzierte Basic-, Pro- und Enterprise-Tarife.',
+          '[Preise für AnythingLLM Cloud](https://anythingllm.com/pricing) — in dieser Rezension referenzierte Basic-, Pro- und Enterprise-Tarife.',
           '[Mintplex Labs bei Y Combinator](https://www.ycombinator.com/companies/mintplex-labs) — Unternehmensgründung, Jahrgang und Hintergrund.',
           '[GitHub-Repository der Desktop-/Server-Anwendung AnythingLLM](https://github.com/Mintplex-Labs/anything-llm) — das begleitende Projekt, mit dem sich diese mobile App verbinden lässt.',
         ],
@@ -872,19 +872,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI: Welches RAG-Tool gewinnt?](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — der Vergleich der Desktop-/Server-Version von AnythingLLM, mit der sich diese mobile App verbinden lässt.',
-          '[PocketPal AI im Test (2026)](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene, reine On-Device-Alternative für iPhone und Android.',
-          '[Private LLM im Test](/de/power-local-llm/private-llm-review) — eine kostenpflichtige, reine On-Device-Alternative nur für Apple-Geräte mit großem integriertem Modellkatalog.',
+          '[PocketPal-AI-im-Rezension (2026)](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene, reine On-Device-Alternative für iPhone und Android.',
+          '[Private-LLM-Rezension](/de/power-local-llm/private-llm-review) — eine kostenpflichtige, reine On-Device-Alternative nur für Apple-Geräte mit großem integriertem Modellkatalog.',
           '[Die besten Local-LLM-Apps für Android 2026](/de/power-local-llm/best-local-llm-apps-android-2026) — die umfassendere Android-App-Übersicht.',
-          '[Loci im Test: Offline-KI für iPhone, Android, iPad, Mac und Windows](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine kuratierte Alternative über fünf Plattformen für alle, die einen einzigen geführten Modus möchten.',
+          '[Loci-Rezension: Offline-KI für iPhone, Android, iPad, Mac und Windows](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine kuratierte Alternative über fünf Plattformen für alle, die einen einzigen geführten Modus möchten.',
         ],
       },
     },
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'AnythingLLM Mobile im Test (2026): Chat + RAG auf dem Gerät',
+      headline: 'AnythingLLM-Mobile-Rezension (2026): Chat + RAG auf dem Gerät',
       description:
-        'AnythingLLM Mobile im Test: kostenlose, MIT-lizenzierte Android-App, die Modelle auf dem Gerät ausführt UND mit einer selbst gehosteten AnythingLLM-Instanz synchronisiert. iOS-Status, Preise, RAG.',
+        'AnythingLLM-Mobile-Rezension: kostenlose, MIT-lizenzierte Android-App, die Modelle auf dem Gerät ausführt UND mit einer selbst gehosteten AnythingLLM-Instanz synchronisiert. iOS-Status, Preise, RAG.',
       url: 'https://promptquorum.com/de/power-local-llm/anythingllm-mobile-review',
       inLanguage: 'de',
       datePublished: '2026-09-06',
@@ -909,7 +909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://promptquorum.com' },
         { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/de/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'AnythingLLM Mobile im Test (2026)', item: 'https://promptquorum.com/de/power-local-llm/anythingllm-mobile-review' },
+        { '@type': 'ListItem', position: 3, name: 'AnythingLLM-Mobile-Rezension (2026)', item: 'https://promptquorum.com/de/power-local-llm/anythingllm-mobile-review' },
       ],
     },
   },

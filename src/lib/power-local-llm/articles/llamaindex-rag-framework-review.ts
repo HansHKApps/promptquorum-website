@@ -282,9 +282,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'Entwickler, die produktive RAG-Pipelines bauen und programmatische, code-first-Kontrolle über Indexierung und Retrieval wollen — nicht Leser, die einen No-Code-Visual-Builder suchen',
     primaryTerm: 'LlamaIndex',
-    title: 'LlamaIndex Test: Code-First-RAG-Framework mit MIT-Lizenz, kein No-Code-Builder',
-    seoTitle: 'LlamaIndex Test: Python-RAG-Framework, MIT-Lizenz',
-    intro: 'LlamaIndex ist ein Python-Framework, das man importiert und gegen das man Code schreibt — keine Oberfläche, auf der man Boxen verschiebt. Dieser Test erklärt, was es tatsächlich leistet, was kostenlos und was kostenpflichtig ist, und zeigt ein lauffähiges Codebeispiel.',
+    title: 'LlamaIndex-Rezension: Code-First-RAG-Framework mit MIT-Lizenz, kein No-Code-Builder',
+    seoTitle: 'LlamaIndex-Rezension: Python-RAG-Framework, MIT-Lizenz',
+    intro: 'LlamaIndex ist ein Python-Framework, das man importiert und gegen das man Code schreibt — keine Oberfläche, auf der man Boxen verschiebt. Diese Rezension erklärt, was es tatsächlich leistet, was kostenlos und was kostenpflichtig ist, und zeigt ein lauffähiges Codebeispiel.',
     metaDescription: 'LlamaIndex ist ein kostenloses, quelloffenes (MIT) Python-Framework für RAG-Pipelines mit eigenen Daten. Kernkonzepte, LlamaCloud-Preise und ein funktionierendes Codebeispiel.',
     readTime: '12 Min. Lesezeit',
     targetKeywords: [
@@ -535,7 +535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Flowise Test: Visueller LangChain-Workflow-Builder](/de/power-local-llm/flowise-ai-visual-workflow-builder-review) — die No-Code-Alternative zu LlamaIndex für alle, die statt Python eine visuelle Oberfläche wollen.',
+          '[Flowise-Rezension: Visueller LangChain-Workflow-Builder](/de/power-local-llm/flowise-ai-visual-workflow-builder-review) — die No-Code-Alternative zu LlamaIndex für alle, die statt Python eine visuelle Oberfläche wollen.',
           '[Beste RAG-Tools für Geschäftsdokumente](/de/power-local-llm/best-rag-tools-for-business-documents-2026) — ein Kaufratgeber für Dokumenten-Chat-RAG-Tools jenseits von code-first-Frameworks.',
           '[Local-LLM-Software-Verzeichnis](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],

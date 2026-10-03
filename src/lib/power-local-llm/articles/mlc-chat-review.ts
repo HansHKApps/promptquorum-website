@@ -322,10 +322,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/mlc-chat-review-hero-de.webp',
-    title: 'MLC-Chat-Test: Die mobile App auf Basis von MLC LLM, ehrlich bewertet',
-    seoTitle: 'MLC-Chat-Test: iOS, Android & plattformübergreifendes Setup',
+    title: 'MLC-Chat-Rezension: Die mobile App auf Basis von MLC LLM, ehrlich bewertet',
+    seoTitle: 'MLC-Chat-Rezension: iOS, Android & plattformübergreifendes Setup',
     intro:
-      'MLC Chat ist die für Endnutzer gedachte Chat-App, die auf dem [MLC LLM](https://github.com/mlc-ai/mlc-llm)-Compiler und der zugehörigen Laufzeitumgebung aufbaut — dem Projekt, das PromptQuorum ausführlich in [MLC LLM erklärt](/de/power-local-llm/mlc-llm-explained) behandelt. Dieser Test konzentriert sich speziell auf das App-Erlebnis: echte Download-Kanäle, tatsächliche Einrichtungsschritte, mit welchen Modellen sie ausgeliefert wird, und ehrliche Einschränkungen, statt die zugrunde liegende Kompilierungstechnologie erneut zu erklären. Wer das tiefere technische Bild davon möchte, wie MLC LLM Modelle für GPU-beschleunigte Inferenz plattformübergreifend kompiliert, sollte zuerst [MLC LLM erklärt](/de/power-local-llm/mlc-llm-explained) lesen; dieser Artikel setzt diesen Kontext voraus und konzentriert sich auf die App selbst.',
+      'MLC Chat ist die für Endnutzer gedachte Chat-App, die auf dem [MLC LLM](https://github.com/mlc-ai/mlc-llm)-Compiler und der zugehörigen Laufzeitumgebung aufbaut — dem Projekt, das PromptQuorum ausführlich in [MLC LLM erklärt](/de/power-local-llm/mlc-llm-explained) behandelt. Diese Rezension konzentriert sich speziell auf das App-Erlebnis: echte Download-Kanäle, tatsächliche Einrichtungsschritte, mit welchen Modellen sie ausgeliefert wird, und ehrliche Einschränkungen, statt die zugrunde liegende Kompilierungstechnologie erneut zu erklären. Wer das tiefere technische Bild davon möchte, wie MLC LLM Modelle für GPU-beschleunigte Inferenz plattformübergreifend kompiliert, sollte zuerst [MLC LLM erklärt](/de/power-local-llm/mlc-llm-explained) lesen; dieser Artikel setzt diesen Kontext voraus und konzentriert sich auf die App selbst.',
     metaDescription:
       'MLC-Chat-Test 2026: die Mobile-/Desktop-Chat-App auf Basis von MLC LLM. Echte iOS-App-Store- und Android-APK-Download-Kanäle, tatsächliche Einrichtungsschritte, Apache-2.0-Lizenz und ehrliche Einschränkungen für KI-Chat auf dem Gerät.',
     twitterDescription:
@@ -348,19 +348,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Llama 3'],
     current_hardware_mentioned: ['iOS', 'Android', 'NVIDIA GPU', 'AMD GPU', 'Apple Silicon'],
     leadAnswerBlock:
-      '**MLC Chat ist eine kostenlose, plattformübergreifende Chat-App zum Ausführen großer Sprachmodelle direkt auf dem eigenen Gerät**, entwickelt vom MLC-AI-Team auf Basis des eigenen [MLC LLM](https://github.com/mlc-ai/mlc-llm)-Compilers und der Laufzeitumgebung, veröffentlicht unter der Apache-2.0-Lizenz. Sie ist im [iOS App Store](https://apps.apple.com/us/app/mlc-chat/id6448482937) verfügbar und als direkt herunterladbare [Android-APK](https://github.com/mlc-ai/binary-mlc-llm-libs/releases/download/Android/mlc-chat.apk) über MLCs eigene GitHub-Releases; die Desktop-Nutzung erfolgt über MLC LLMs Python-, REST- und CLI-Schnittstellen statt über eine separat verpackte Desktop-App. Ihr Alleinstellungsmerkmal ist GPU-beschleunigte Inferenz auf dem Gerät, erreicht durch Machine-Learning-Kompilierung — ein Modell wird im Voraus für ein bestimmtes Hardware-Ziel kompiliert (Metal auf Apple-GPUs, OpenCL auf Android-GPUs, Vulkan/CUDA/ROCm auf dem Desktop) — statt sich auf eine einzige generische Laufzeitumgebung zu verlassen. Zum Zeitpunkt dieses Tests unterstützt MLC Chat offiziell keine Vision-Language-Modelle (Bildeingabe). Für die tiefere technische Erklärung, wie der zugrunde liegende Compiler funktioniert, siehe PromptQuorums [MLC LLM erklärt](/de/power-local-llm/mlc-llm-explained).',
+      '**MLC Chat ist eine kostenlose, plattformübergreifende Chat-App zum Ausführen großer Sprachmodelle direkt auf dem eigenen Gerät**, entwickelt vom MLC-AI-Team auf Basis des eigenen [MLC LLM](https://github.com/mlc-ai/mlc-llm)-Compilers und der Laufzeitumgebung, veröffentlicht unter der Apache-2.0-Lizenz. Sie ist im [iOS App Store](https://apps.apple.com/us/app/mlc-chat/id6448482937) verfügbar und als direkt herunterladbare [Android-APK](https://github.com/mlc-ai/binary-mlc-llm-libs/releases/download/Android/mlc-chat.apk) über MLCs eigene GitHub-Releases; die Desktop-Nutzung erfolgt über MLC LLMs Python-, REST- und CLI-Schnittstellen statt über eine separat verpackte Desktop-App. Ihr Alleinstellungsmerkmal ist GPU-beschleunigte Inferenz auf dem Gerät, erreicht durch Machine-Learning-Kompilierung — ein Modell wird im Voraus für ein bestimmtes Hardware-Ziel kompiliert (Metal auf Apple-GPUs, OpenCL auf Android-GPUs, Vulkan/CUDA/ROCm auf dem Desktop) — statt sich auf eine einzige generische Laufzeitumgebung zu verlassen. Zum Zeitpunkt dieser Rezension unterstützt MLC Chat offiziell keine Vision-Language-Modelle (Bildeingabe). Für die tiefere technische Erklärung, wie der zugrunde liegende Compiler funktioniert, siehe PromptQuorums [MLC LLM erklärt](/de/power-local-llm/mlc-llm-explained).',
     quickAnswerTop: {
       en: {
         question: 'Was ist MLC Chat und wie lade ich es tatsächlich herunter und richte es ein?',
         answer:
-          'MLC Chat ist eine kostenlose Chat-App, die große Sprachmodelle lokal auf Ihrem Gerät ausführt, aufgebaut auf dem MLC-LLM-Compiler und der Laufzeitumgebung des MLC-AI-Teams, lizenziert unter Apache-2.0. Auf iOS laden Sie sie direkt aus dem [App Store](https://apps.apple.com/us/app/mlc-chat/id6448482937) herunter. Auf Android listet MLC sie derzeit nicht im Google Play Store; laden Sie die APK direkt von [MLCs eigenen GitHub-Releases](https://github.com/mlc-ai/binary-mlc-llm-libs/releases/download/Android/mlc-chat.apk) herunter — dies erfordert die Aktivierung von Installationen aus unbekannten Quellen, und der Android-Build ist von OpenCL-GPU-Unterstützung abhängig, die auf manchen Geräten (etwa bestimmten Samsung-Galaxy-Modellen) bestätigt funktioniert, auf anderen (etwa manchen Google-Pixel-Modellen) jedoch nicht zuverlässig. Es gibt keine separat verpackte Desktop-App; auf dem Desktop wird MLC LLM über sein Python-Paket, einen REST-Server oder die Kommandozeile genutzt, dokumentiert unter [llm.mlc.ai](https://llm.mlc.ai). MLC Chat unterstützt derzeit nur textbasierten Chat — es unterstützt zum Zeitpunkt dieses Tests offiziell keine Vision-Language-Modelle (Bildeingabe).',
+          'MLC Chat ist eine kostenlose Chat-App, die große Sprachmodelle lokal auf Ihrem Gerät ausführt, aufgebaut auf dem MLC-LLM-Compiler und der Laufzeitumgebung des MLC-AI-Teams, lizenziert unter Apache-2.0. Auf iOS laden Sie sie direkt aus dem [App Store](https://apps.apple.com/us/app/mlc-chat/id6448482937) herunter. Auf Android listet MLC sie derzeit nicht im Google Play Store; laden Sie die APK direkt von [MLCs eigenen GitHub-Releases](https://github.com/mlc-ai/binary-mlc-llm-libs/releases/download/Android/mlc-chat.apk) herunter — dies erfordert die Aktivierung von Installationen aus unbekannten Quellen, und der Android-Build ist von OpenCL-GPU-Unterstützung abhängig, die auf manchen Geräten (etwa bestimmten Samsung-Galaxy-Modellen) bestätigt funktioniert, auf anderen (etwa manchen Google-Pixel-Modellen) jedoch nicht zuverlässig. Es gibt keine separat verpackte Desktop-App; auf dem Desktop wird MLC LLM über sein Python-Paket, einen REST-Server oder die Kommandozeile genutzt, dokumentiert unter [llm.mlc.ai](https://llm.mlc.ai). MLC Chat unterstützt derzeit nur textbasierten Chat — es unterstützt zum Zeitpunkt dieser Rezension offiziell keine Vision-Language-Modelle (Bildeingabe).',
         bullets: [
           'iOS: direkt im [App Store](https://apps.apple.com/us/app/mlc-chat/id6448482937) verfügbar.',
           'Android: kein bestätigter Google-Play-Eintrag; APK direkt von [MLCs GitHub-Releases](https://github.com/mlc-ai/binary-mlc-llm-libs/releases/download/Android/mlc-chat.apk) herunterladen.',
           'Android ist von OpenCL-GPU-Unterstützung abhängig — auf manchen Geräten bestätigt funktionierend, auf anderen nicht zuverlässig.',
           'Desktop: keine separat verpackte App; MLC LLMs Python-Paket, REST-Server oder CLI direkt nutzen.',
           'Lizenz: Apache-2.0, gemäß dem [mlc-ai/mlc-llm](https://github.com/mlc-ai/mlc-llm)-Repository.',
-          'Zum Zeitpunkt dieses Tests keine offizielle Unterstützung für Vision-Language-Modelle (Bildeingabe) — nur Text-Chat.',
+          'Zum Zeitpunkt dieser Rezension keine offizielle Unterstützung für Vision-Language-Modelle (Bildeingabe) — nur Text-Chat.',
         ],
         updatedDate: '2026-09-07',
       },
@@ -386,25 +386,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'MLC Chat ist eine kostenlose, Apache-2.0-lizenzierte Chat-App auf Basis des MLC-LLM-Compilers, die große Sprachmodelle lokal auf iOS (über den App Store), Android (über eine direkt herunterladbare APK) und Desktop (über MLC LLMs Python-/REST-/CLI-Schnittstellen) ausführt, mit GPU-beschleunigter Kompilierung auf dem Gerät statt einer generischen Laufzeitumgebung, und die zum Zeitpunkt dieses Tests offiziell keine Vision-Language-Modelle unterstützt.',
+            text: 'MLC Chat ist eine kostenlose, Apache-2.0-lizenzierte Chat-App auf Basis des MLC-LLM-Compilers, die große Sprachmodelle lokal auf iOS (über den App Store), Android (über eine direkt herunterladbare APK) und Desktop (über MLC LLMs Python-/REST-/CLI-Schnittstellen) ausführt, mit GPU-beschleunigter Kompilierung auf dem Gerät statt einer generischen Laufzeitumgebung, und die zum Zeitpunkt dieser Rezension offiziell keine Vision-Language-Modelle unterstützt.',
           },
           {
             type: 'plain-terms',
-            text: 'MLC Chat ist eine kostenlose App, mit der Sie ohne Internetverbindung direkt auf Ihrem Smartphone oder Computer mit KI-Modellen chatten können, indem diese Modelle speziell für den Grafikchip Ihres Geräts kompiliert werden — dieser Test behandelt die echten Download-Links, Einrichtungsschritte und wo sie gut und wo weniger gut funktioniert.',
+            text: 'MLC Chat ist eine kostenlose App, mit der Sie ohne Internetverbindung direkt auf Ihrem Smartphone oder Computer mit KI-Modellen chatten können, indem diese Modelle speziell für den Grafikchip Ihres Geräts kompiliert werden — diese Rezension behandelt die echten Download-Links, Einrichtungsschritte und wo sie gut und wo weniger gut funktioniert.',
           },
         ],
         items: [
           'iOS: direkt im App Store verfügbar; Android: kein bestätigter Google-Play-Eintrag, APK direkt von MLCs GitHub-Releases herunterladen.',
           'Alleinstellungsmerkmal: Modelle werden im Voraus für ein bestimmtes Hardware-Ziel kompiliert (Metal, OpenCL, Vulkan, CUDA, ROCm) mittels Machine-Learning-Kompilierung, statt über einen generischen Interpreter zu laufen.',
           'Lizenz: Apache-2.0, gemäß dem GitHub-Repository mlc-ai/mlc-llm.',
-          'Zum Zeitpunkt dieses Tests keine offizielle Unterstützung für Vision-Language-Modelle (Bildeingabe) — nur Text-Chat, mit inoffiziellen Community-Workarounds, die nicht offiziell unterstützt werden.',
+          'Zum Zeitpunkt dieser Rezension keine offizielle Unterstützung für Vision-Language-Modelle (Bildeingabe) — nur Text-Chat, mit inoffiziellen Community-Workarounds, die nicht offiziell unterstützt werden.',
           'Der Android-Build ist von OpenCL-GPU-Unterstützung abhängig, auf manchen Geräten bestätigt funktionierend, auf anderen nicht zuverlässig.',
           'Dies ist der letzte Teil von PromptQuorums elfteiliger Testreihe zu lokalen KI-Tools.',
         ],
         callouts: [
           {
             type: 'note',
-            text: 'Dieser Test konzentriert sich speziell auf die App MLC Chat. Für die tiefere technische Erklärung des MLC-LLM-Compilers und der TVM-basierten Laufzeitumgebung dahinter siehe PromptQuorums eigenen Artikel [MLC LLM erklärt](/de/power-local-llm/mlc-llm-explained), den dieser Test bewusst nicht dupliziert.',
+            text: 'Diese Rezension konzentriert sich speziell auf die App MLC Chat. Für die tiefere technische Erklärung des MLC-LLM-Compilers und der TVM-basierten Laufzeitumgebung dahinter siehe PromptQuorums eigenen Artikel [MLC LLM erklärt](/de/power-local-llm/mlc-llm-explained), den diese Rezension bewusst nicht dupliziert.',
           },
         ],
       },
@@ -473,7 +473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Lizenz: Apache-2.0.** Sowohl die App MLC Chat als auch das zugrunde liegende MLC-LLM-Repository sind unter der Apache-2.0-Lizenz veröffentlicht, direkt bestätigt im [GitHub-Repository mlc-ai/mlc-llm](https://github.com/mlc-ai/mlc-llm).',
           '**Die Modellunterstützung ist breiter als jedes einzelne Schnellstart-Beispiel.** MLC LLMs eigene Schnellstart-Dokumentation demonstriert den Arbeitsablauf mit `Llama-3-8B-Instruct-q4f16_1-MLC`, doch die Modellbibliothek des Projekts erstreckt sich auf weitere Open-Weight-Modellfamilien, kompiliert für seine unterstützten Hardware-Ziele — PromptQuorum empfiehlt, [MLC LLMs eigene Modellliste](https://llm.mlc.ai) direkt für den aktuellen Stand zu prüfen, da sich die Verfügbarkeit kompilierter Modelle mit neuen Releases ändert, statt sich auf eine einzelne zwischengespeicherte Liste zu verlassen.',
-          '**Keine offizielle Unterstützung für Vision-Language-Modelle.** Zum Zeitpunkt dieses Tests unterstützt MLC LLM offiziell keine Vision-Language-Modelle (Bildeingabe) — es stellt keine eingebauten Module zur gemeinsamen Verarbeitung von Bild- und Texteingaben in der Chat-App bereit. Es existieren Community-Projekte, die Vision-Language-Modell-Code an MLC LLMs Kompilierungs-Pipeline anpassen, doch diese werden nicht offiziell vom MLC-AI-Team gepflegt oder unterstützt, und PromptQuorum hat deren aktuelle Zuverlässigkeit nicht überprüft.',
+          '**Keine offizielle Unterstützung für Vision-Language-Modelle.** Zum Zeitpunkt dieser Rezension unterstützt MLC LLM offiziell keine Vision-Language-Modelle (Bildeingabe) — es stellt keine eingebauten Module zur gemeinsamen Verarbeitung von Bild- und Texteingaben in der Chat-App bereit. Es existieren Community-Projekte, die Vision-Language-Modell-Code an MLC LLMs Kompilierungs-Pipeline anpassen, doch diese werden nicht offiziell vom MLC-AI-Team gepflegt oder unterstützt, und PromptQuorum hat deren aktuelle Zuverlässigkeit nicht überprüft.',
         ],
         faqs: [
           {
@@ -482,7 +482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Unterstützt MLC Chat Vision-Modelle wie LLaVA?',
-            a: 'Nein, zum Zeitpunkt dieses Tests nicht offiziell. MLC LLM bietet keine offizielle Unterstützung für Vision-Language-Modelle (Bildeingabe). Es existieren von der Community entwickelte Workarounds, die Vision-Language-Modell-Code an MLC LLMs Pipeline anpassen, doch diese sind inoffiziell, und ihre aktuelle Zuverlässigkeit wurde für diesen Test nicht überprüft. Für Vision-fähige lokale Modelle siehe stattdessen PromptQuorums LLaVA-Test, Idefics-Test oder Ollama-Vision-Modelle-Leitfaden.',
+            a: 'Nein, zum Zeitpunkt dieser Rezension nicht offiziell. MLC LLM bietet keine offizielle Unterstützung für Vision-Language-Modelle (Bildeingabe). Es existieren von der Community entwickelte Workarounds, die Vision-Language-Modell-Code an MLC LLMs Pipeline anpassen, doch diese sind inoffiziell, und ihre aktuelle Zuverlässigkeit wurde für diese Rezension nicht überprüft. Für Vision-fähige lokale Modelle siehe stattdessen PromptQuorums LLaVA-Test, Idefics-Test oder Ollama-Vision-Modelle-Leitfaden.',
           },
         ],
       },
@@ -494,7 +494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Desktop-Nutzer, die die einfachstmögliche Einrichtung wünschen.** MLC Chat hat keine verpackte Desktop-Anwendung — Desktop-Nutzung bedeutet, ein Python-Paket zu installieren und mit einem REST-Server, einer CLI oder einer Python-API zu arbeiten. Nutzer, die ein Ein-Klick-Desktop-Erlebnis wünschen, finden [Ollama](/de/power-local-llm/ollama-vision-models-review) oder [LM Studio](https://lmstudio.ai) deutlich bequemer, auch wenn MLC Chats Vorteil der mobilen GPU-Kompilierung auf dem Desktop nicht in gleicher Weise gilt.',
-          '**Vision- oder Bildeingabe-Aufgaben.** MLC LLM unterstützt offiziell keine Vision-Language-Modelle. Wenn Ihr Anwendungsfall das Ausführen eines Modells umfasst, das Bilder betrachten kann, siehe stattdessen PromptQuorums [LLaVA-Test](/de/power-local-llm/llava-review), [Idefics-Test](/de/power-local-llm/idefics-review) oder [Ollama-Vision-Modelle-Leitfaden](/de/power-local-llm/ollama-vision-models-review).',
+          '**Vision- oder Bildeingabe-Aufgaben.** MLC LLM unterstützt offiziell keine Vision-Language-Modelle. Wenn Ihr Anwendungsfall das Ausführen eines Modells umfasst, das Bilder betrachten kann, siehe stattdessen PromptQuorums [LLaVA-Rezension](/de/power-local-llm/llava-review), [Idefics-Rezension](/de/power-local-llm/idefics-review) oder [Ollama-Vision-Modelle-Leitfaden](/de/power-local-llm/ollama-vision-models-review).',
           '**Die größten verfügbaren Modelle.** Mobile Hardware bringt reale Einschränkungen mit sich — MLC LLMs eigenes Schnellstart-Beispiel benötigt mindestens 6 GB freies VRAM für ein 8B-Parameter-Modell bei int4-Quantisierung, und Telefon-GPUs und -Speicher sind begrenzter als eine Desktop-GPU. Nutzer, die die größten verfügbaren Open-Weight-Modelle lokal ausführen möchten, sind mit Desktop-Tools mit mehr VRAM-Spielraum besser bedient.',
           '**Android-Nutzer mit Hardware mit eingeschränkter OpenCL-Unterstützung.** Die GPU-Beschleunigung des Android-Builds hängt von OpenCL ab, das auf manchen Geräten bestätigt funktioniert, auf anderen jedoch nicht zuverlässig — überprüfen Sie Ihr spezifisches Gerätemodell, bevor Sie ein reibungsloses Erlebnis erwarten.',
         ],
@@ -522,7 +522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Tool': '[PocketPal AI](/de/power-local-llm/pocketpal-ai-review)',
-            'Am besten geeignet': 'Eine weitere dedizierte mobile lokale LLM-App; siehe PromptQuorums eigenen Test für einen direkten Vergleich',
+            'Am besten geeignet': 'Eine weitere dedizierte mobile lokale LLM-App; siehe PromptQuorums eigene Rezension für einen direkten Vergleich',
             'Lizenz': 'Unterschiedlich — siehe PromptQuorums PocketPal-AI-Test',
           },
         ],
@@ -545,7 +545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Unterstützt MLC Chat Vision-Modelle?',
-            a: 'Nein, zum Zeitpunkt dieses Tests nicht offiziell. MLC LLM unterstützt offiziell keine Vision-Language-Modelle (Bildeingabe). Es existieren inoffizielle Community-Workarounds, die für diesen Test jedoch nicht überprüft wurden.',
+            a: 'Nein, zum Zeitpunkt dieser Rezension nicht offiziell. MLC LLM unterstützt offiziell keine Vision-Language-Modelle (Bildeingabe). Es existieren inoffizielle Community-Workarounds, die für diese Rezension jedoch nicht überprüft wurden.',
           },
           {
             q: 'Was unterscheidet MLC Chat von Ollama oder llama.cpp?',
@@ -561,7 +561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit: Der letzte Teil dieser Serie',
         content:
-          'MLC Chat löst ein tatsächlich unverwechselbares Versprechen ein: plattformübergreifenden, GPU-beschleunigten LLM-Chat auf dem Gerät, erreicht durch Machine-Learning-Kompilierung statt einer Einheitslösung für alle, mit einer echten Präsenz im iOS App Store und einer direkt herunterladbaren Android-APK, alles unter einer freizügigen Apache-2.0-Lizenz. Es ist jedoch nicht die bequemste Wahl für Desktop-Nutzer — dieser Workflow bedeutet ein Python-Paket und eine REST-/CLI-Schnittstelle statt einer verpackten App — und es unterstützt derzeit überhaupt keine Vision-Language-Modelle, offiziell. Wählen Sie MLC Chat speziell für mobilen Chat auf dem Gerät, wo sich sein kompilierter, hardware-zielspezifischer Ansatz auszahlt; wählen Sie [Ollama](/de/power-local-llm/ollama-vision-models-review) oder [LM Studio](https://lmstudio.ai) für das einfachste Desktop-Erlebnis, und PromptQuorums [LLaVA](/de/power-local-llm/llava-review)- oder [Idefics](/de/power-local-llm/idefics-review)-Tests stattdessen für Vision-fähige lokale Modelle. Für das tiefere technische Bild des Compilers hinter MLC Chat siehe PromptQuorums [MLC LLM erklärt](/de/power-local-llm/mlc-llm-explained). Dieser Test schließt PromptQuorums elfteilige Serie zu lokalen KI-Tools ab — von Spracherkennung (Whisper.cpp, faster-whisper) und Sprachsynthese (Piper, Coqui TTS, XTTS v2, Bark, StyleTTS 2) über Vision-Language-Modelle (LLaVA, Ollama-Vision-Modelle, Idefics) bis zu diesem letzten Teil über plattformübergreifende Kompilierung auf dem Gerät.',
+          'MLC Chat löst ein tatsächlich unverwechselbares Versprechen ein: plattformübergreifenden, GPU-beschleunigten LLM-Chat auf dem Gerät, erreicht durch Machine-Learning-Kompilierung statt einer Einheitslösung für alle, mit einer echten Präsenz im iOS App Store und einer direkt herunterladbaren Android-APK, alles unter einer freizügigen Apache-2.0-Lizenz. Es ist jedoch nicht die bequemste Wahl für Desktop-Nutzer — dieser Workflow bedeutet ein Python-Paket und eine REST-/CLI-Schnittstelle statt einer verpackten App — und es unterstützt derzeit überhaupt keine Vision-Language-Modelle, offiziell. Wählen Sie MLC Chat speziell für mobilen Chat auf dem Gerät, wo sich sein kompilierter, hardware-zielspezifischer Ansatz auszahlt; wählen Sie [Ollama](/de/power-local-llm/ollama-vision-models-review) oder [LM Studio](https://lmstudio.ai) für das einfachste Desktop-Erlebnis, und PromptQuorums [LLaVA](/de/power-local-llm/llava-review)- oder [Idefics](/de/power-local-llm/idefics-review)-Tests stattdessen für Vision-fähige lokale Modelle. Für das tiefere technische Bild des Compilers hinter MLC Chat siehe PromptQuorums [MLC LLM erklärt](/de/power-local-llm/mlc-llm-explained). Diese Rezension schließt PromptQuorums elfteilige Serie zu lokalen KI-Tools ab — von Spracherkennung (Whisper.cpp, faster-whisper) und Sprachsynthese (Piper, Coqui TTS, XTTS v2, Bark, StyleTTS 2) über Vision-Language-Modelle (LLaVA, Ollama-Vision-Modelle, Idefics) bis zu diesem letzten Teil über plattformübergreifende Kompilierung auf dem Gerät.',
       },
       sources: {
         id: 'sources',
@@ -572,7 +572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[mlc-ai/mlc-llm auf GitHub](https://github.com/mlc-ai/mlc-llm) — Lizenz (Apache-2.0), Plattformunterstützung, TVM-Abstammungsdokumentation.',
           '[MLC-LLM-Schnellstart-Dokumentation](https://llm.mlc.ai/docs/get_started/quick_start.html) — Desktop-Einrichtungsschritte, Beispielmodell, VRAM-Anforderung.',
           '[MLC-LLM-Android-SDK-Dokumentation](https://llm.mlc.ai/docs/deploy/android.html) — Android-OpenCL-Abhängigkeit und Hinweise zur Gerätekompatibilität.',
-          'PromptQuorum-Recherche zur Vision-Language-Modell-Unterstützung von MLC LLM, die keine offizielle VLM-Unterstützung und die Existenz inoffizieller Community-Workarounds (z. B. MLC-VLM-template) zum Zeitpunkt dieses Tests bestätigt.',
+          'PromptQuorum-Recherche zur Vision-Language-Modell-Unterstützung von MLC LLM, die keine offizielle VLM-Unterstützung und die Existenz inoffizieller Community-Workarounds (z. B. MLC-VLM-template) zum Zeitpunkt dieser Rezension bestätigt.',
         ],
       },
       relatedReading: {
@@ -580,10 +580,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[MLC LLM erklärt (2026)](/de/power-local-llm/mlc-llm-explained) — der tiefere technische Einblick in den Compiler und die Laufzeitumgebung hinter MLC Chat.',
-          '[LLaVA-Test (2026)](/de/power-local-llm/llava-review) — ein Vision-fähiges lokales Modell, für Anwendungsfälle, die MLC Chat offiziell nicht unterstützt.',
-          '[Idefics-Test (2026)](/de/power-local-llm/idefics-review) — eine weitere offene Vision-Language-Modell-Option.',
+          '[LLaVA-Rezension (2026)](/de/power-local-llm/llava-review) — ein Vision-fähiges lokales Modell, für Anwendungsfälle, die MLC Chat offiziell nicht unterstützt.',
+          '[Idefics-Rezension (2026)](/de/power-local-llm/idefics-review) — eine weitere offene Vision-Language-Modell-Option.',
           '[Ollama-Vision-Modelle (2026)](/de/power-local-llm/ollama-vision-models-review) — welche Vision-Modelle heute tatsächlich über Ollama abrufbar sind.',
-          '[PocketPal-AI-Test](/de/power-local-llm/pocketpal-ai-review) — eine weitere dedizierte mobile lokale LLM-App, für einen direkten Vergleich.',
+          '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — eine weitere dedizierte mobile lokale LLM-App, für einen direkten Vergleich.',
         ],
       },
     },

@@ -499,7 +499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Flowise Test 2026: Visueller LangChain-Workflow-Builder wird eingestellt](/de/power-local-llm/flowise-ai-visual-workflow-builder-review) — warum Flowise keine sichere Standardwahl mehr ist und was sich für Self-Hosting-Nutzer geändert hat.',
+          '[Flowise-Rezension 2026: Visueller LangChain-Workflow-Builder wird eingestellt](/de/power-local-llm/flowise-ai-visual-workflow-builder-review) — warum Flowise keine sichere Standardwahl mehr ist und was sich für Self-Hosting-Nutzer geändert hat.',
           '[AnythingLLM vs. PrivateGPT vs. Open WebUI für RAG](/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag) — aktiv gepflegte RAG-Tools für Self-Hosting im Vergleich.',
           '[Local-LLM-Software-Verzeichnis](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
           '[Beste RAG-Tools für Geschäftsdokumente](/de/power-local-llm/best-rag-tools-for-business-documents-2026) — ein Kaufratgeber für Dokumenten-Chat-RAG-Tools jenseits von Langflow.',

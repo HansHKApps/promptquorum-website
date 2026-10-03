@@ -531,16 +531,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/noema-review-hero-de.webp',
-    title: 'Noema im Test: Multi-Format-KI lokal für iPhone, iPad und Mac',
-    seoTitle: 'Noema Test: Lokale KI-App für iPhone & Mac',
+    title: 'Noema-Rezension: Multi-Format-KI lokal für iPhone, iPad und Mac',
+    seoTitle: 'Noema-Rezension: Lokale KI-App für iPhone & Mac',
     intro:
       'Noema, im App Store als "Noema: Local AI & Offline LLM" gelistet (Entwicklerkonto: Alexandru Stamate; Unternehmen: [NoemaAI LLC](https://noemaai.com/ownership)), ist eine kostenlose App für iPhone, iPad, Mac (Apple Silicon) und Apple Vision Pro, die Open-Source-Sprachmodelle vollständig auf dem Gerät ausführt. Sie ist kostenlos im [Apple App Store](' +
       APP_STORE_URL +
-      ') erhältlich, ohne Abonnement und ohne In-App-Käufe. Zum Zeitpunkt dieses Tests lag die aktuelle Version bei 3.9, bewertet mit 4,5 von 5 Sternen aus nur 26 Bewertungen — prüfen Sie die aktuelle App-Store-Auflistung für die aktuellen Zahlen, da die App fast täglich Updates erhält. Was Noema von vielen Mobil-Apps für lokale KI mit nur einem Format unterscheidet, ist, dass sie Modelle auf fünf verschiedene Arten lädt — GGUF, MLX, ExecuTorch, Core ML und Apples eigene On-Device-Foundation-Models — statt Nutzer auf ein einziges Laufzeitformat festzulegen. Sie unterstützt außerdem Dokument-Chat: PDFs und EPUBs importieren und fundierte Fragen zu indexierten Textstellen stellen — ein Retrieval-ähnlicher Ablauf, der vollständig auf dem Gerät läuft statt über eine Cloud-RAG-Pipeline.',
+      ') erhältlich, ohne Abonnement und ohne In-App-Käufe. Zum Zeitpunkt dieser Rezension lag die aktuelle Version bei 3.9, bewertet mit 4,5 von 5 Sternen aus nur 26 Bewertungen — prüfen Sie die aktuelle App-Store-Auflistung für die aktuellen Zahlen, da die App fast täglich Updates erhält. Was Noema von vielen Mobil-Apps für lokale KI mit nur einem Format unterscheidet, ist, dass sie Modelle auf fünf verschiedene Arten lädt — GGUF, MLX, ExecuTorch, Core ML und Apples eigene On-Device-Foundation-Models — statt Nutzer auf ein einziges Laufzeitformat festzulegen. Sie unterstützt außerdem Dokument-Chat: PDFs und EPUBs importieren und fundierte Fragen zu indexierten Textstellen stellen — ein Retrieval-ähnlicher Ablauf, der vollständig auf dem Gerät läuft statt über eine Cloud-RAG-Pipeline.',
     metaDescription:
-      'Noema im Test: kostenlose iPhone/iPad/Mac-App mit 5 Modellformaten (GGUF, MLX, ExecuTorch, Core ML, Apple Foundation Models) plus PDF/EPUB-Dokument-Chat auf dem Gerät. Preis, Datenschutz und Alternativen.',
+      'Noema-Rezension: kostenlose iPhone/iPad/Mac-App mit 5 Modellformaten (GGUF, MLX, ExecuTorch, Core ML, Apple Foundation Models) plus PDF/EPUB-Dokument-Chat auf dem Gerät. Preis, Datenschutz und Alternativen.',
     twitterDescription:
-      'Noema im Test: eine kostenlose App für iPhone, iPad und Mac, die lokale KI-Modelle in fünf Formaten ausführt — GGUF, MLX, ExecuTorch, Core ML und Apple Foundation Models — plus Dokument-Chat auf dem Gerät für PDFs und EPUBs.',
+      'Noema-Rezension: eine kostenlose App für iPhone, iPad und Mac, die lokale KI-Modelle in fünf Formaten ausführt — GGUF, MLX, ExecuTorch, Core ML und Apple Foundation Models — plus Dokument-Chat auf dem Gerät für PDFs und EPUBs.',
     audience:
       'iPhone-, iPad- und Mac-Nutzer, die eine kostenlose Multi-Format-App für lokale KI mit Dokument-Chat gegenüber Alternativen wie Private LLM, PocketPal AI und Enclave AI bewerten — behandelt unterstützte Formate, Dokument-Q&A, Datenschutz und die Einschränkung durch die kleine Bewertungsstichprobe.',
     readTime: '9 Min. Lesezeit',
@@ -562,7 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       '**Noema ist eine kostenlose iOS-, iPadOS-, macOS- und visionOS-App des unabhängigen Entwicklers Alexandru Stamate ([NoemaAI LLC](https://noemaai.com/ownership)), die Open-Source-Sprachmodelle vollständig auf dem Gerät in fünf verschiedenen Formaten ausführt: GGUF, MLX, ExecuTorch, Core ML und Apples eigene Foundation Models.** Sie kostet nichts im [Apple App Store](' +
       APP_STORE_URL +
-      '), ohne Abonnement oder In-App-Käufe, und bietet zusätzlich Dokument-Chat auf dem Gerät für PDFs und EPUBs. Zum Zeitpunkt dieses Tests hielt sie eine Bewertung von 4,5 von 5 aus nur 26 Bewertungen — eine Stichprobe, die klein genug ist, um sie nicht mit einer App mit Tausenden Bewertungen gleichzusetzen. Leser, die eine länger etablierte Erfolgsbilanz wünschen, sollten sie auch mit [Private LLM](/de/power-local-llm/private-llm-review) oder [Enclave AI](/de/power-local-llm/enclave-ai-review) vergleichen.',
+      '), ohne Abonnement oder In-App-Käufe, und bietet zusätzlich Dokument-Chat auf dem Gerät für PDFs und EPUBs. Zum Zeitpunkt dieser Rezension hielt sie eine Bewertung von 4,5 von 5 aus nur 26 Bewertungen — eine Stichprobe, die klein genug ist, um sie nicht mit einer App mit Tausenden Bewertungen gleichzusetzen. Leser, die eine länger etablierte Erfolgsbilanz wünschen, sollten sie auch mit [Private LLM](/de/power-local-llm/private-llm-review) oder [Enclave AI](/de/power-local-llm/enclave-ai-review) vergleichen.',
     quickAnswerTop: {
       en: {
         question: 'Is Noema a good free local AI app for iPhone and Mac?',
@@ -587,8 +587,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'iPhone, iPad, Mac (Apple Silicon) und Apple Vision Pro — erfordert iOS/iPadOS 18 oder neuer.',
           'Lädt Modelle in fünf Formaten: GGUF, MLX, ExecuTorch, Core ML und Apple Foundation Models.',
           'Dokument-Chat: PDFs und EPUBs importieren für indexierte, fundierte Fragen und Antworten auf dem Gerät.',
-          'Version 3.9 zum Zeitpunkt der Erstellung, wenige Stunden vor diesem Test aktualisiert — aktuelle Version im App Store prüfen.',
-          '4,5/5 Bewertung aus 26 Bewertungen zum Zeitpunkt dieses Tests — eine kleine Stichprobe.',
+          'Version 3.9 zum Zeitpunkt der Erstellung, wenige Stunden vor dieser Rezension aktualisiert — aktuelle Version im App Store prüfen.',
+          '4,5/5 Bewertung aus 26 Bewertungen zum Zeitpunkt dieser Rezension — eine kleine Stichprobe.',
         ],
         updatedDate: '2026-09-12',
       },
@@ -724,14 +724,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Preis: kostenlos im [Apple App Store](' + APP_STORE_URL + '); kein Abonnement und keine In-App-Käufe zum Zeitpunkt dieses Tests gelistet.',
+          'Preis: kostenlos im [Apple App Store](' + APP_STORE_URL + '); kein Abonnement und keine In-App-Käufe zum Zeitpunkt dieser Rezension gelistet.',
           'Plattformen: iPhone, iPad, Mac (Apple Silicon) und Apple Vision Pro — keine offizielle Android-, Windows- oder Linux-App.',
           'Entwickler: [Alexandru Stamate](https://apps.apple.com/ro/developer/alexandru-stamate/id1833786674) / [NoemaAI LLC](https://noemaai.com/ownership).',
           'Modellformate: GGUF, MLX, ExecuTorch, Core ML und Apples On-Device-Foundation-Models — fünf Formate in einer App.',
           'Dokument-Chat: PDFs und EPUBs importieren; die App indexiert Textstellen für fundierte Fragen und Antworten auf dem Gerät.',
           'Datenschutz: Der Entwickler gibt an, dass die App keine Daten sammelt; für die Nutzung ist kein Konto erforderlich.',
-          'Bewertung: 4,5 von 5 aus nur 26 Bewertungen zum Zeitpunkt dieses Tests — eine kleine Stichprobe, keine lange Erfolgsbilanz.',
-          'Version 3.9 zum Zeitpunkt der Erstellung, mit einem Update wenige Stunden vor diesem Test — bestätigen Sie die aktuelle Version im App Store, bevor Sie sich auf ein bestimmtes Feature verlassen.',
+          'Bewertung: 4,5 von 5 aus nur 26 Bewertungen zum Zeitpunkt dieser Rezension — eine kleine Stichprobe, keine lange Erfolgsbilanz.',
+          'Version 3.9 zum Zeitpunkt der Erstellung, mit einem Update wenige Stunden vor dieser Rezension — bestätigen Sie die aktuelle Version im App Store, bevor Sie sich auf ein bestimmtes Feature verlassen.',
         ],
       },
       whatIsNoema: {
@@ -741,8 +741,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Noema ist eine native Apple-App, die Open-Source-Sprachmodelle direkt auf einem iPhone, iPad, Mac oder Vision-Pro-Headset herunterlädt und ausführt, ohne dass eine serverseitige Komponente für lokalen Chat erforderlich ist.** Sobald ein Modell heruntergeladen ist, kann die App eine Antwort ohne Internetverbindung generieren.',
           'Sie wird von [Alexandru Stamate](https://apps.apple.com/ro/developer/alexandru-stamate/id1833786674) entwickelt, dessen Unternehmen [NoemaAI LLC](https://noemaai.com/ownership) laut der eigenen Ownership-Seite der Seite die App und die Website [noemaai.com](' +
           SITE_URL +
-          ') besitzt und betreibt. Die App ist im App Store unter der App-Store-ID 6751169935 gelistet. Dieser Test prüft die eigenen Angaben des Entwicklers — "0 Cloud für lokalen Chat erforderlich", keine Kontopflicht, keine Datensammlung — anhand des App-Store-Datenschutzlabels und der öffentlichen Beschreibung der App, statt die Marketingtexte einfach zu übernehmen.',
-          'Die App wird ungewöhnlich häufig aktualisiert: Die für diesen Test geprüfte Version 3.9 war erst wenige Stunden vor Erstellung dieses Tests erschienen, und die "Neuerungen"-Hinweise dieser Version beschrieben Fixes für MLX-Modellstabilität, Dokumentindexierung, Vision-Modelle und Core-ML-Kompatibilität — ein Beleg für aktive, laufende Pflege statt für ein stillgelegtes oder aufgegebenes Projekt.',
+          ') besitzt und betreibt. Die App ist im App Store unter der App-Store-ID 6751169935 gelistet. Diese Rezension prüft die eigenen Angaben des Entwicklers — "0 Cloud für lokalen Chat erforderlich", keine Kontopflicht, keine Datensammlung — anhand des App-Store-Datenschutzlabels und der öffentlichen Beschreibung der App, statt die Marketingtexte einfach zu übernehmen.',
+          'Die App wird ungewöhnlich häufig aktualisiert: Die für diese Rezension geprüfte Version 3.9 war erst wenige Stunden vor Erstellung dieser Rezension erschienen, und die "Neuerungen"-Hinweise dieser Version beschrieben Fixes für MLX-Modellstabilität, Dokumentindexierung, Vision-Modelle und Core-ML-Kompatibilität — ein Beleg für aktive, laufende Pflege statt für ein stillgelegtes oder aufgegebenes Projekt.',
         ],
       },
       howToGetStarted: {
@@ -818,7 +818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Noema importiert PDFs und EPUBs, einschließlich Lehrbücher, und indexiert deren Textstellen auf dem Gerät, sodass ein geladenes Modell Fragen beantworten kann, die auf diesem spezifischen Dokument beruhen.** Die eigene Website des Entwicklers beschreibt dies als ein "gründlicheres" Lesen eines Dokuments und als Fundierung der Antworten "in Ihren eigenen Datensätzen mit Retrieval, das auf dem Gerät bleibt" — ein Retrieval-ähnlicher Ablauf, im Geiste ähnlich der serverseitigen Retrieval-Augmented Generation (RAG), aber lokal statt gegen eine Cloud-Vektordatenbank ausgeführt.',
           'Über die Fragebeantwortung hinaus kann die App Zusammenfassungen, Notizen und Karteikarten aus einem importierten Dokument erstellen und unterstützt Vision-fähige Modelle für Dokumente oder Bilder mit Diagrammen oder gescannten Seiten.',
-          'Dieser Test hat die Retrieval-Genauigkeit von Noemas Dokumentindexierung nicht unabhängig gegenüber dedizierten Desktop-RAG-Tools benchmarkt — die obige Beschreibung gibt die vom Entwickler selbst angegebenen Funktionen wieder, keinen unabhängigen Genauigkeitstest.',
+          'Diese Rezension hat die Retrieval-Genauigkeit von Noemas Dokumentindexierung nicht unabhängig gegenüber dedizierten Desktop-RAG-Tools benchmarkt — die obige Beschreibung gibt die vom Entwickler selbst angegebenen Funktionen wieder, keinen unabhängigen Genauigkeitstest.',
         ],
       },
       platforms: {
@@ -840,7 +840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plattform': 'Apple Vision Pro',
             'Was Sie erwartet': 'Als unterstütztes Gerät im App Store gelistet.',
-            'Wichtiger Hinweis': 'Dieser Test hat die Vision-Pro-Erfahrung nicht unabhängig getestet; behandeln Sie dies als im App Store gelistete Kompatibilität, nicht als praktisch verifiziertes Feature.',
+            'Wichtiger Hinweis': 'Diese Rezension hat die Vision-Pro-Erfahrung nicht unabhängig getestet; behandeln Sie dies als im App Store gelistete Kompatibilität, nicht als praktisch verifiziertes Feature.',
           },
           {
             'Plattform': 'Android, Windows, Linux',
@@ -862,7 +862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Keine Datensammlung laut App-Store-Label.** Apples Datenschutz-Nährwertkennzeichnung für diesen Eintrag zeigt keine gesammelten Daten aus der App.',
           '**Off-grid-Modus.** Die eigene Website des Entwicklers beschreibt einen Modus, der externen HTTP- und HTTPS-Verkehr blockiert — für Leser, die eine feste Garantie gegen jeglichen ausgehenden Netzwerkaufruf wollen.',
           '**Optionale Netzwerkfunktionen sind Opt-in.** Websuche und Verbindungen zu entfernten Anbietern werden als Funktionen beschrieben, die Nutzer ausdrücklich aktivieren müssen, nicht als Standardzustand.',
-          '**Lokale API und Noema Relay.** Die Website des Entwicklers beschreibt eine private lokale Netzwerk-API, um andere Apps mit in Noema laufenden Modellen zu verbinden, sowie ein "Noema Relay"-Feature für geräteübergreifenden Modellzugriff — dieser Test behandelt dies als vom Entwickler beschriebene Funktionen, nicht als unabhängig verifizierte Netzwerksicherheitsprüfungen.',
+          '**Lokale API und Noema Relay.** Die Website des Entwicklers beschreibt eine private lokale Netzwerk-API, um andere Apps mit in Noema laufenden Modellen zu verbinden, sowie ein "Noema Relay"-Feature für geräteübergreifenden Modellzugriff — diese Rezension behandelt dies als vom Entwickler beschriebene Funktionen, nicht als unabhängig verifizierte Netzwerksicherheitsprüfungen.',
         ],
       },
       tradeOffs: {
@@ -889,12 +889,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Vorteil': 'Kein Konto, keine Datensammlung',
             'Was das in der Praxis bedeutet': 'Nutzen Sie die App sofort, ohne sich für irgendetwas anmelden zu müssen; das App-Store-Datenschutzlabel zeigt keine gesammelten Daten.',
-            'Einschränkung / Vorbehalt': 'Dieser Test hat den Quellcode der App nicht unabhängig geprüft; er stützt sich auf das App-Store-Datenschutzlabel und die eigenen Angaben des Entwicklers.',
+            'Einschränkung / Vorbehalt': 'Diese Rezension hat den Quellcode der App nicht unabhängig geprüft; er stützt sich auf das App-Store-Datenschutzlabel und die eigenen Angaben des Entwicklers.',
           },
           {
             'Vorteil': 'Sehr aktive Update-Frequenz',
             'Was das in der Praxis bedeutet': 'Häufige Releases deuten auf eine aktiv gepflegte App hin statt auf ein aufgegebenes Projekt.',
-            'Einschränkung / Vorbehalt': 'Eine hohe Release-Frequenz bedeutet auch, dass bestimmte Versionsnummern, Feature-Details und Fehlerzustände in diesem Test schneller veralten können als bei einer langsamer entwickelten App — prüfen Sie das aktuelle Verhalten in der App.',
+            'Einschränkung / Vorbehalt': 'Eine hohe Release-Frequenz bedeutet auch, dass bestimmte Versionsnummern, Feature-Details und Fehlerzustände in dieser Rezension schneller veralten können als bei einer langsamer entwickelten App — prüfen Sie das aktuelle Verhalten in der App.',
           },
           {
             'Vorteil': 'Bewertet mit 4,5 von 5',
@@ -934,8 +934,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'App': '[Enclave AI](/de/power-local-llm/enclave-ai-review)',
             'Plattformen': 'Siehe aktuellen Eintrag',
             'Preis': 'Siehe aktuellen Eintrag',
-            'Modellflexibilität': 'Siehe vollständigen Test für aktuelle Modellunterstützung',
-            'Wichtiger Unterschied': 'Siehe den vollständigen Enclave-AI-Test für einen detaillierten Vergleich',
+            'Modellflexibilität': 'Siehe die vollständige Rezension für aktuelle Modellunterstützung',
+            'Wichtiger Unterschied': 'Siehe die vollständige Rezension für einen detaillierten Vergleich',
           },
           {
             'App': '[Locally AI](/de/power-local-llm/locally-ai-review)',
@@ -962,10 +962,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wer Noema nicht nutzen sollte',
         items: [
           '**Android-, Windows- oder Linux-Nutzer.** Noema hat keine offizielle App auf einer dieser Plattformen — wählen Sie stattdessen [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) (teilweise Android-Unterstützung) oder eine andere plattformübergreifende Option.',
-          '**Leser, die vor dem Vertrauen in eine App eine lange, etablierte Bewertungshistorie wollen.** Mit nur 26 Bewertungen zum Zeitpunkt dieses Tests sollten Leser, die auf sozialen Beweis Wert legen, auch [Private LLM](/de/power-local-llm/private-llm-review) abwägen, das eine mehrjährige öffentliche Release-Historie hat.',
+          '**Leser, die vor dem Vertrauen in eine App eine lange, etablierte Bewertungshistorie wollen.** Mit nur 26 Bewertungen zum Zeitpunkt dieser Rezension sollten Leser, die auf sozialen Beweis Wert legen, auch [Private LLM](/de/power-local-llm/private-llm-review) abwägen, das eine mehrjährige öffentliche Release-Historie hat.',
           '**Leser, die die größtmögliche kuratierte Modellbibliothek wollen.** Noemas Formatflexibilität ist groß, aber sie liefert nicht die 140+ Modelle umfassende kuratierte Bibliothek, wie es [Private LLM](/de/power-local-llm/private-llm-review) tut.',
           '**Teams, die eine zentral verwaltete Bereitstellung wollen.** Noema ist eine Einzelnutzer-, Einzelgeräte-Consumer-App ohne Admin-Konsole oder Team-Abrechnung — Organisationen sollten stattdessen selbstgehostete, serverseitige Infrastruktur für lokale LLMs in Betracht ziehen.',
-          '**Leser, die unabhängige Drittbenchmarks der Dokument-Retrieval-Genauigkeit benötigen.** Dieser Test stützt sich auf die eigene Beschreibung des Dokument-Chat-Features durch den Entwickler, nicht auf einen unabhängigen Genauigkeitsbenchmark gegenüber dedizierten RAG-Tools.',
+          '**Leser, die unabhängige Drittbenchmarks der Dokument-Retrieval-Genauigkeit benötigen.** Diese Rezension stützt sich auf die eigene Beschreibung des Dokument-Chat-Features durch den Entwickler, nicht auf einen unabhängigen Genauigkeitsbenchmark gegenüber dedizierten RAG-Tools.',
         ],
       },
       faq: {
@@ -974,7 +974,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Wie viel kostet Noema?',
-            a: 'Noema ist [kostenlos im Apple App Store](' + APP_STORE_URL + '), verifiziert für diesen Test am 2026-09-12. Es gibt kein Abonnement und keine In-App-Käufe im aktuellen App-Store-Eintrag. Die App-Store-Verfügbarkeit kann sich mit der Zeit ändern — prüfen Sie den aktuellen Preis vor dem Herunterladen.',
+            a: 'Noema ist [kostenlos im Apple App Store](' + APP_STORE_URL + '), verifiziert für diese Rezension am 2026-09-12. Es gibt kein Abonnement und keine In-App-Käufe im aktuellen App-Store-Eintrag. Die App-Store-Verfügbarkeit kann sich mit der Zeit ändern — prüfen Sie den aktuellen Preis vor dem Herunterladen.',
           },
           {
             q: 'Welche Modellformate unterstützt Noema?',
@@ -998,15 +998,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Sammelt Noema persönliche Daten?',
-            a: 'Apples App-Store-Datenschutz-Nährwertkennzeichnung für diesen Eintrag gibt an, dass der Entwickler keine Daten aus der App sammelt, und es ist kein Konto oder Login erforderlich. Dieser Test stützt sich auf das App-Store-Datenschutzlabel und die eigenen Angaben des Entwicklers, nicht auf eine unabhängige Quellcode-Prüfung.',
+            a: 'Apples App-Store-Datenschutz-Nährwertkennzeichnung für diesen Eintrag gibt an, dass der Entwickler keine Daten aus der App sammelt, und es ist kein Konto oder Login erforderlich. Diese Rezension stützt sich auf das App-Store-Datenschutzlabel und die eigenen Angaben des Entwicklers, nicht auf eine unabhängige Quellcode-Prüfung.',
           },
           {
             q: 'Wie verlässlich ist Noemas 4,5-Sterne-Bewertung?',
-            a: 'Der Durchschnitt von 4,5 von 5 basiert auf nur 26 Bewertungen zum Zeitpunkt dieses Tests — eine kleine Stichprobe im Vergleich zu Apps mit Hunderten oder Tausenden Bewertungen. Betrachten Sie es als frühes, positives Signal statt als Beweis für eine lange, belegte Erfolgsbilanz, und prüfen Sie die aktuelle Bewertungsanzahl im App Store, bevor Sie sich darauf verlassen.',
+            a: 'Der Durchschnitt von 4,5 von 5 basiert auf nur 26 Bewertungen zum Zeitpunkt dieser Rezension — eine kleine Stichprobe im Vergleich zu Apps mit Hunderten oder Tausenden Bewertungen. Betrachten Sie es als frühes, positives Signal statt als Beweis für eine lange, belegte Erfolgsbilanz, und prüfen Sie die aktuelle Bewertungsanzahl im App Store, bevor Sie sich darauf verlassen.',
           },
           {
             q: 'Wie schneidet Noema im Vergleich zu Private LLM ab?',
-            a: 'Noema ist kostenlos und unterstützt fünf Modellformate (GGUF, MLX, ExecuTorch, Core ML, Apple Foundation Models) plus Dokument-Chat auf dem Gerät, hat aber zum Zeitpunkt dieses Tests nur 26 Bewertungen. [Private LLM](/de/power-local-llm/private-llm-review) kostet 4,99 $ als Einmalkauf, liefert eine kuratierte Bibliothek mit 140+ Modellen und hat eine dreijährige öffentliche Release-Historie. Wählen Sie Noema für Formatflexibilität und Dokument-Chat ohne Kosten; wählen Sie Private LLM für eine länger etablierte, kuratierte Erfahrung.',
+            a: 'Noema ist kostenlos und unterstützt fünf Modellformate (GGUF, MLX, ExecuTorch, Core ML, Apple Foundation Models) plus Dokument-Chat auf dem Gerät, hat aber zum Zeitpunkt dieser Rezension nur 26 Bewertungen. [Private LLM](/de/power-local-llm/private-llm-review) kostet 4,99 $ als Einmalkauf, liefert eine kuratierte Bibliothek mit 140+ Modellen und hat eine dreijährige öffentliche Release-Historie. Wählen Sie Noema für Formatflexibilität und Dokument-Chat ohne Kosten; wählen Sie Private LLM für eine länger etablierte, kuratierte Erfahrung.',
           },
         ],
       },
@@ -1014,7 +1014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Noema sticht im Cluster der mobilen KI-Apps für lokale Inferenz aus einem konkreten, überprüfbaren Grund hervor: Sie lädt Modelle in fünf verschiedenen Formaten — GGUF, MLX, ExecuTorch, Core ML und Apples eigenen Foundation Models —, während sich die meisten konkurrierenden Apps auf nur ein oder zwei festlegen. Sie kombiniert das mit Dokument-Chat auf dem Gerät für PDFs und EPUBs, alles kostenlos ohne Abonnement. Ihre sehr häufige Update-Frequenz, belegt durch eine Version, die wenige Stunden vor diesem Test erschien, deutet auf aktive Pflege statt auf ein aufgegebenes Nebenprojekt hin. Der ehrliche Vorbehalt betrifft ihre Jugend als bewertetes Produkt: Ein 4,5-Sterne-Durchschnitt auf Basis von nur 26 Bewertungen ist ein positives frühes Signal, aber keine Erfolgsbilanz mit großer Stichprobe, wie sie [Private LLM](/de/power-local-llm/private-llm-review) oder [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) nach Jahren im App Store vorweisen können. Leser, die Formatflexibilität und Dokument-Chat zu null Kosten wollen, sollten sie ausprobieren; Leser, die sozialen Beweis und eine längere öffentliche Historie stärker gewichten, sollten stattdessen mit Private LLM oder PocketPal AI beginnen und Noema erneut betrachten, sobald ihre Bewertungsanzahl wächst.',
+          'Noema sticht im Cluster der mobilen KI-Apps für lokale Inferenz aus einem konkreten, überprüfbaren Grund hervor: Sie lädt Modelle in fünf verschiedenen Formaten — GGUF, MLX, ExecuTorch, Core ML und Apples eigenen Foundation Models —, während sich die meisten konkurrierenden Apps auf nur ein oder zwei festlegen. Sie kombiniert das mit Dokument-Chat auf dem Gerät für PDFs und EPUBs, alles kostenlos ohne Abonnement. Ihre sehr häufige Update-Frequenz, belegt durch eine Version, die wenige Stunden vor dieser Rezension erschien, deutet auf aktive Pflege statt auf ein aufgegebenes Nebenprojekt hin. Der ehrliche Vorbehalt betrifft ihre Jugend als bewertetes Produkt: Ein 4,5-Sterne-Durchschnitt auf Basis von nur 26 Bewertungen ist ein positives frühes Signal, aber keine Erfolgsbilanz mit großer Stichprobe, wie sie [Private LLM](/de/power-local-llm/private-llm-review) oder [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) nach Jahren im App Store vorweisen können. Leser, die Formatflexibilität und Dokument-Chat zu null Kosten wollen, sollten sie ausprobieren; Leser, die sozialen Beweis und eine längere öffentliche Historie stärker gewichten, sollten stattdessen mit Private LLM oder PocketPal AI beginnen und Noema erneut betrachten, sobald ihre Bewertungsanzahl wächst.',
       },
       sources: {
         id: 'sources',
@@ -1030,10 +1030,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Private LLM Test](/de/power-local-llm/private-llm-review) — eine kostenpflichtige Alternative mit kuratierter Bibliothek und längerer Release-Historie.',
-          '[PocketPal AI Test](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, Open-Source-Alternative nur für GGUF.',
-          '[Enclave AI Test](/de/power-local-llm/enclave-ai-review) — eine weitere On-Device-KI-App zum Vergleich.',
-          '[Locally AI Test](/de/power-local-llm/locally-ai-review) — eine kostenlose, nur-Apple-MLX-Alternative.',
+          '[Private-LLM-Rezension](/de/power-local-llm/private-llm-review) — eine kostenpflichtige Alternative mit kuratierter Bibliothek und längerer Release-Historie.',
+          '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, Open-Source-Alternative nur für GGUF.',
+          '[Enclave-AI-Rezension](/de/power-local-llm/enclave-ai-review) — eine weitere On-Device-KI-App zum Vergleich.',
+          '[Locally-AI-Rezension](/de/power-local-llm/locally-ai-review) — eine kostenlose, nur-Apple-MLX-Alternative.',
           '[Das vollständige Verzeichnis lokaler LLM-Software](/de/directory) — ein umfassenderes Verzeichnis von Tools für lokale LLMs auf allen Plattformen.',
         ],
       },

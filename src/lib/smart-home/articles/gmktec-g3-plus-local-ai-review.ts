@@ -423,18 +423,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Decision & Comparison',
     heroImage: '/images/gmktec-g3-plus-local-ai-review-overview-hero-de.webp',
     affiliateDisclosure: true,
-    title: 'GMKtec G3 Plus N150 Test (2026): Bester günstiger Mini-PC für Home Assistant + lokale KI?',
-    seoTitle: 'GMKtec G3 Plus N150 Test 2026: Günstiger HA-Mini-PC',
+    title: 'GMKtec-G3-Plus-N150-Rezension (2026): Bester günstiger Mini-PC für Home Assistant + lokale KI?',
+    seoTitle: 'GMKtec-G3-Plus-N150-Rezension 2026: Günstiger HA-Mini-PC',
     intro:
-      'Der GMKtec NucBox G3 Plus (Intel N150, Single-Channel-DDR4, aufrüstbar auf 32 GB) ist ein günstiger Mini-PC für ein lokal betriebenes Smart Home. Für rund 159,99 € in der Konfiguration 16 GB / 512 GB (Preis geprüft am 25. August 2026) betreibt er Home Assistant und ein kleines lokales Modell — mit einem echten Vorteil gegenüber manchen Konkurrenten: Sein RAM ist ein austauschbares SO-DIMM, nicht verlötet. Dieser Test prüft die Spezifikationen gegen Hersteller- und unabhängige Quellen, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs und bewertet ihn direkt gegen den Beelink EQ14 und die Ryzen-Boxen der nächsten Stufe.',
+      'Der GMKtec NucBox G3 Plus (Intel N150, Single-Channel-DDR4, aufrüstbar auf 32 GB) ist ein günstiger Mini-PC für ein lokal betriebenes Smart Home. Für rund 159,99 € in der Konfiguration 16 GB / 512 GB (Preis geprüft am 25. August 2026) betreibt er Home Assistant und ein kleines lokales Modell — mit einem echten Vorteil gegenüber manchen Konkurrenten: Sein RAM ist ein austauschbares SO-DIMM, nicht verlötet. Diese Rezension prüft die Spezifikationen gegen Hersteller- und unabhängige Quellen, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs und bewertet ihn direkt gegen den Beelink EQ14 und die Ryzen-Boxen der nächsten Stufe.',
     metaDescription:
-      'GMKtec G3 Plus N150 Test 2026: reale Preise (Aug. 2026), Bewertungstabelle, Konfigurationsleitfaden und direkter EQ14-Vergleich. Günstige Home-Assistant-Box mit aufrüstbarem RAM.',
+      'GMKtec-G3-Plus-N150-Rezension 2026: reale Preise (Aug. 2026), Bewertungstabelle, Konfigurationsleitfaden und direkter EQ14-Vergleich. Günstige Home-Assistant-Box mit aufrüstbarem RAM.',
     twitterDescription:
       'GMKtec G3 Plus (2026): Intel N150, DDR4 aufrüstbar auf 32 GB (nicht verlötet), ca. 159,99 €. Bewertungstabelle, Konfigurationsempfehlung und wo er gegen den Beelink EQ14 gewinnt — und verliert.',
     readTime: '9 Min. Lesezeit',
     educationalLevel: 'Beginner',
     audience: 'Sparsame Käufer, die Home Assistant und ein kleines lokales Modell betreiben',
-    primaryTerm: 'GMKtec G3 Plus Test',
+    primaryTerm: 'GMKtec G3 Plus Rezension',
     targetKeywords: [
       'gmktec g3 plus test',
       'gmktec g3 plus n150',
@@ -590,7 +590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Merkmal: 'Am besten für', 'G3 Plus': 'Aufrüstbaren RAM, Single-LAN-Setups', 'Beelink EQ14': 'Netzwerklastiges Home Assistant, z. B. als sekundäre routernahe Box', Sieger: 'Kommt auf Ihre Priorität an' },
         ],
         items: [
-          '**Unsere Empfehlung:** Wählen Sie den G3 Plus, wenn Sie RAM-Reserve schätzen und keinen zweiten Ethernet-Port brauchen. Wählen Sie den EQ14, wenn Sie Dual-2,5GbE oder einen USB-C-Port benötigen — siehe den [vollständigen Beelink-EQ14-Test](/de/smart-home/beelink-eq14-local-ai-review).',
+          '**Unsere Empfehlung:** Wählen Sie den G3 Plus, wenn Sie RAM-Reserve schätzen und keinen zweiten Ethernet-Port brauchen. Wählen Sie den EQ14, wenn Sie Dual-2,5GbE oder einen USB-C-Port benötigen — siehe den [vollständigen Beelink-EQ14-Rezension](/de/smart-home/beelink-eq14-local-ai-review).',
           'Keine der beiden Boxen ist der anderen bei Home Assistant oder Small-Model-KI-Leistung nennenswert überlegen — CPU und iGPU sind identisch.',
         ],
         affiliateLinks: [
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gut für schlanke lokale Assistenten, Zusammenfassungen und Automatisierungen mit kleinen Modellen.',
           'Die Aufrüstung auf 32 GB hilft der Kontextlänge und Modellgröße mehr als der reinen Token-Geschwindigkeit — die Speicherbandbreite bleibt unverändert, der Durchsatz bleibt also ähnlich.',
           'Kein NPU und begrenzte iGPU-Beschleunigung, daher ist die Inferenz vollständig CPU-gebunden.',
-          'Für anspruchsvollere lokale KI (Vision, ein schneller 7B-Assistent) wählen Sie stattdessen eine Ryzen-Box — siehe den [Beelink-SER8-Test](/de/smart-home/beelink-ser8-local-ai-review).',
+          'Für anspruchsvollere lokale KI (Vision, ein schneller 7B-Assistent) wählen Sie stattdessen eine Ryzen-Box — siehe den [Beelink-SER8-Rezension](/de/smart-home/beelink-ser8-local-ai-review).',
           'Siehe [wie man Ollama installiert](/de/local-llms/how-to-install-ollama), um ein kleines Modell auszuprobieren, und den [Hardware-Guide für lokale LLMs](/de/local-llms/local-llm-hardware-guide-2026) für den Kontext.',
         ],
         affiliateLinks: [
@@ -659,7 +659,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Konfiguration 1 — Home-Assistant-Zentrale:** Home Assistant OS, Zigbee2MQTT, Mosquitto, Node-RED, AdGuard. **Ausgezeichnete Eignung** — das ist die Kernaufgabe der Box, und sie bewältigt sie mit Reserve.',
           '**Konfiguration 2 — Home Assistant + leichte lokale KI:** Home Assistant, Ollama mit einem 1B–4B-Modell, Node-RED. **Gute Eignung** — die 16-GB-Konfiguration bewältigt das komfortabel.',
           '**Konfiguration 3 — Home Assistant + Frigate:** Home Assistant, Frigate-Kameraerkennung, Ollama. **Möglich, aber nicht ideal** — die reine CPU-Erkennung von Frigate ist begrenzt; rechnen Sie mit moderater Kameraanzahl und -auflösung, und ziehen Sie das 32-GB-Upgrade für zusätzliche Reserve in Betracht.',
-          '**Konfiguration 4 — ernsthafte lokale KI (7B+, Vision, mehrere gleichzeitige Dienste):** **Kaufen Sie stattdessen einen Ryzen-Mini-PC** — siehe den [Beelink-SER8-Test](/de/smart-home/beelink-ser8-local-ai-review) für eine Box, die dafür gebaut ist.',
+          '**Konfiguration 4 — ernsthafte lokale KI (7B+, Vision, mehrere gleichzeitige Dienste):** **Kaufen Sie stattdessen einen Ryzen-Mini-PC** — siehe den [Beelink-SER8-Rezension](/de/smart-home/beelink-ser8-local-ai-review) für eine Box, die dafür gebaut ist.',
         ],
       },
       powerCost: {
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'methodology',
         title: 'Wie wir Mini-PCs bewerten',
         content:
-          '**Dieser Test wurde nicht von PromptQuorum an einem physischen Gerät praktisch getestet.** Er basiert auf herstellerseitig veröffentlichten Spezifikationen und unabhängigen Tests Dritter, unten klar getrennt, damit Sie wissen, was bestätigt und was geschätzt ist.',
+          '**Diese Rezension wurde nicht von PromptQuorum an einem physischen Gerät praktisch getestet.** Er basiert auf herstellerseitig veröffentlichten Spezifikationen und unabhängigen Tests Dritter, unten klar getrennt, damit Sie wissen, was bestätigt und was geschätzt ist.',
         items: [
           '**Herstellerbestätigt:** CPU, RAM-Typ und -Obergrenze, Speicherschnittstellen, Anschlüsse, Abmessungen, offizielle Preisstufen — direkt aus GMKtecs Produktangaben.',
           '**Unabhängige Beobachtungen (Tests Dritter, nicht PromptQuorum):** Leerlauf-/Lastverbrauchswerte, thermisches und akustisches Verhalten sowie reale Benchmark-Ergebnisse — abgeglichen mit unabhängigen Testern, die Geräte physisch getestet haben.',
@@ -772,9 +772,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) — die Übersicht, zu der dieser Test gehört',
-          '[Beelink-EQ14-Test](/de/smart-home/beelink-eq14-local-ai-review) — der direkte Konkurrent aus dem Vergleich oben',
-          '[Beelink-SER8-Test](/de/smart-home/beelink-ser8-local-ai-review) — die Aufsteiger-Wahl für echte lokale-KI-Geschwindigkeit',
+          '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) — die Übersicht, zu der diese Rezension gehört',
+          '[Beelink-EQ14-Rezension](/de/smart-home/beelink-eq14-local-ai-review) — der direkte Konkurrent aus dem Vergleich oben',
+          '[Beelink-SER8-Rezension](/de/smart-home/beelink-ser8-local-ai-review) — die Aufsteiger-Wahl für echte lokale-KI-Geschwindigkeit',
           '[Beste Hardware für ein lokales Smart Home](/de/smart-home/best-hardware-for-local-smart-home) — Pi vs. Mini-PC vs. NAS',
           '[Ihr Smart Home mit einem lokalen LLM betreiben](/de/smart-home/local-llm-smart-home-complete-guide) — was die Box tatsächlich betreibt',
           '[Wie man Ollama installiert](/de/local-llms/how-to-install-ollama) — ein kleines Modell auf dem G3 Plus ausprobieren',
@@ -785,7 +785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'Review',
-      name: 'GMKtec G3 Plus N150 Test (2026): Bester günstiger Mini-PC für Home Assistant + lokale KI?',
+      name: 'GMKtec-G3-Plus-N150-Rezension (2026): Bester günstiger Mini-PC für Home Assistant + lokale KI?',
       reviewBody:
         'Der GMKtec NucBox G3 Plus ist ein günstiger Intel-N150-Mini-PC mit einem austauschbaren DDR4-SO-DIMM, aufrüstbar auf 32 GB. Er betreibt Home Assistant und ein kleines lokales Modell für etwa 159,99 € (16 GB/512 GB, geprüft am 25. August 2026). Eine Zentrale mit Speicherreserve, keine schnelle KI-Maschine — die Einschätzung von PromptQuorum bewertet ihn insgesamt mit 7,9/10, basierend auf Herstellerspezifikationen und unabhängigen Testquellen, kein praktischer Gerätetest.',
       datePublished: '2026-07-03',

@@ -281,9 +281,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'Nutzer von Apple-Silicon-Macs, die sich zutrauen, Software aus dem Quellcode zu bauen, und die ein bestimmtes großes Modell lokal mit begrenztem RAM ausführen möchten',
     primaryTerm: 'TurboFieldfare',
-    title: 'TurboFieldfare im Test: Gemma 4 26B-A4B mit 2 GB RAM ausführen',
-    seoTitle: 'TurboFieldfare Test 2026: Gemma 4 auf 8-GB-Macs',
-    intro: 'TurboFieldfare ([github.com/drumih/turbo-fieldfare](https://github.com/drumih/turbo-fieldfare)) ist eine kostenlose, quelloffene (Apache 2.0) native Swift-und-Metal-Laufzeitumgebung, die gezielt entwickelt wurde, um Googles [Gemma 4 26B-A4B](https://ai.google.dev/gemma/docs/core/model_card_4) auf Apple-Silicon-Macs auszuführen – auch auf 8-GB-Geräten – bei einem Speicherbedarf von rund 2 GB RAM zur Inferenzzeit, mit über 6.750 GitHub-Stars. Dieser Test behandelt, was TurboFieldfare leistet, wie es diesen geringen Speicherbedarf erreicht, wie man es baut und installiert, und für wen es geeignet ist.',
+    title: 'TurboFieldfare-Rezension: Gemma 4 26B-A4B mit 2 GB RAM ausführen',
+    seoTitle: 'TurboFieldfare-Rezension 2026: Gemma 4 auf 8-GB-Macs',
+    intro: 'TurboFieldfare ([github.com/drumih/turbo-fieldfare](https://github.com/drumih/turbo-fieldfare)) ist eine kostenlose, quelloffene (Apache 2.0) native Swift-und-Metal-Laufzeitumgebung, die gezielt entwickelt wurde, um Googles [Gemma 4 26B-A4B](https://ai.google.dev/gemma/docs/core/model_card_4) auf Apple-Silicon-Macs auszuführen – auch auf 8-GB-Geräten – bei einem Speicherbedarf von rund 2 GB RAM zur Inferenzzeit, mit über 6.750 GitHub-Stars. Diese Rezension behandelt, was TurboFieldfare leistet, wie es diesen geringen Speicherbedarf erreicht, wie man es baut und installiert, und für wen es geeignet ist.',
     metaDescription: 'TurboFieldfare ist eine kostenlose, quelloffene Swift/Metal-Laufzeitumgebung, die Gemma 4 26B-A4B mit ca. 2 GB RAM auf jedem M-Series-Mac ausführt. So funktioniert es und für wen es sich eignet.',
     readTime: '11 Min. Lesezeit',
     targetKeywords: [
@@ -304,7 +304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nutzt rund 2 GB RAM, indem der Großteil der Mixture-of-Experts-Gewichte des Modells von der SSD statt vollständig (14,3 GB) in den Speicher geladen wird',
           'Bringt drei Nutzungswege mit: eine native Mac-App, eine CLI (TurboFieldfareCLI) und einen experimentellen Loopback-OpenAI-kompatiblen Server (TurboFieldfareServer)',
           'Erfordert einen Apple-Silicon-Mac mit macOS 26 und Metal 4 sowie Xcode 26 / Swift 6.2 oder neuer zum Bauen',
-          'Über 6.750 GitHub-Stars und 430+ Forks zum Zeitpunkt dieses Tests',
+          'Über 6.750 GitHub-Stars und 430+ Forks zum Zeitpunkt dieser Rezension',
         ],
         updatedDate: '2026-09',
       },
@@ -339,10 +339,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Erreicht einen RAM-Bedarf von rund 2 GB, indem ein 1,35 GB großer gemeinsamer Kern plus ein 4K-Token-KV-Cache im Speicher gehalten und die übrigen Mixture-of-Experts-Gewichte per `pread`-Aufrufen während der Generierung von der SSD gestreamt werden',
           'Bringt drei Nutzungswege mit: eine native SwiftUI/AppKit-Mac-App, eine Kommandozeilen-Oberfläche (TurboFieldfareCLI) und einen experimentellen Loopback-OpenAI-kompatiblen Server (TurboFieldfareServer)',
           'Erfordert einen Apple-Silicon-Mac, macOS 26 mit Metal 4 sowie Xcode 26 mit Swift 6.2 oder neuer zum Bauen aus dem Quellcode – das Paket ist rein arm64',
-          'Über 6.750 GitHub-Stars und 430+ Forks zum Zeitpunkt dieses Tests',
+          'Über 6.750 GitHub-Stars und 430+ Forks zum Zeitpunkt dieser Rezension',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test ist der ausführliche Begleitartikel zum Eintrag von TurboFieldfare im [Local LLM Software Directory](/de/directory) – dort finden Sie einen schnellen Vergleich von TurboFieldfare mit Dutzenden anderer lokaler KI-Tools.' },
+          { type: 'note', text: 'Diese Rezension ist der ausführliche Begleitartikel zum Eintrag von TurboFieldfare im [Local LLM Software Directory](/de/directory) – dort finden Sie einen schnellen Vergleich von TurboFieldfare mit Dutzenden anderer lokaler KI-Tools.' },
         ],
       },
       overview: {
@@ -354,7 +354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Umfang: modellspezifisch, führt ausschließlich Gemma 4 26B-A4B (instruction-tuned) aus, keine Multi-Modell-Engine',
           'Repository: [github.com/drumih/turbo-fieldfare](https://github.com/drumih/turbo-fieldfare), erstellt am 17. Juli 2026',
           'Lizenz: Apache 2.0 für den Quellcode; die Modellgewichte unterliegen Googles eigenen Gemma-Nutzungsbedingungen und werden separat von Hugging Face heruntergeladen',
-          'Größe: über 6.750 GitHub-Stars, 430+ Forks und 26 offene Issues zum Zeitpunkt dieses Tests',
+          'Größe: über 6.750 GitHub-Stars, 430+ Forks und 26 offene Issues zum Zeitpunkt dieser Rezension',
           'Abgrenzung: Es existieren mehrere nahezu identisch benannte Repositories mit ähnlicher Beschreibung unter anderen GitHub-Accounts; drumih/turbo-fieldfare ist das Original mit den meisten Stars und das hier besprochene Repository',
         ],
         note: 'Das README von TurboFieldfare bringt die technische Kernaufgabe direkt auf den Punkt: "Speicher wurde teuer. Also habe ich einem Modell mit 26 Milliarden Parametern ein Budget von rund 2 GB gegeben." Das Projekt veröffentlicht ein detailliertes [Experiment-Verzeichnis](https://github.com/drumih/turbo-fieldfare/blob/main/docs/experiments/EXPERIMENT_INVENTORY.md) mit gemessenen Ergebnissen zu Kernels, Caching, I/O, Prefill und Decode – lesenswert, wenn Sie die Speicherreduktions-Angaben selbst nachprüfen möchten, statt sie unbesehen zu übernehmen.',
@@ -368,7 +368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: 'v0.7.2 — vorheriges Release', whyItMatters: 'Das Release unmittelbar vor v0.8.0, referenziert im Changelog-Vergleichslink dieses Releases.' },
           { title: 'v0.8.0 — 8. September 2026: Lokaler Gesprächsverlauf', whyItMatters: 'Laut offiziellen Release Notes speichert die Mac-App seither Gesprächsverläufe lokal, sodass Nutzer frühere Chats – inklusive gespeicherter Texte und Bilder – über die Seitenleiste durchsuchen, umbenennen, löschen und erneut öffnen können. Dieses Release ist ausdrücklich als "nur Quellcode" markiert, ohne beigefügte fertige Binärdateien.' },
         ],
-        note: 'Versionsnummern und Daten oben stammen von der [GitHub-Releases-Seite](https://github.com/drumih/turbo-fieldfare/releases) von TurboFieldfare – prüfen Sie diese Seite direkt für alles, was nach dem Veröffentlichungsdatum dieses Tests erschienen ist. Das GitHub-Repository von TurboFieldfare zeigt Stand September 2026 rund 6.750 Stars und 430 Forks.',
+        note: 'Versionsnummern und Daten oben stammen von der [GitHub-Releases-Seite](https://github.com/drumih/turbo-fieldfare/releases) von TurboFieldfare – prüfen Sie diese Seite direkt für alles, was nach dem Veröffentlichungsdatum dieser Rezension erschienen ist. Das GitHub-Repository von TurboFieldfare zeigt Stand September 2026 rund 6.750 Stars und 430 Forks.',
       },
       whatItDoes: {
         id: 'what-turbofieldfare-does',
@@ -442,7 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspekt': 'Speicheransatz', 'TurboFieldfare vs. Ollama': 'TurboFieldfare streamt den Großteil der Experten-Gewichte von der SSD, um auf einen 8-GB-Mac zu passen; Ollama lädt Modelle entsprechend dem verfügbaren RAM/VRAM Ihrer Hardware und benötigt für ein vergleichbar großes Modell in der Regel mehr Speicher.' },
           { 'Aspekt': 'Engine-Basis', 'TurboFieldfare vs. Ollama': 'TurboFieldfare ist eine eigene Swift/Metal-Laufzeitumgebung, nicht auf llama.cpp aufgebaut; Ollama basiert auf llama.cpp (GGML) als Inferenz-Kern.' },
         ],
-        note: 'Wenn Ihre Priorität darin besteht, genau ein großes Modell auf speicherbegrenzter Apple-Silicon-Hardware auszuführen, ist der enge Fokus von TurboFieldfare genau der Punkt. Wenn Ihre Priorität Flexibilität über viele Modelle und Plattformen hinweg ist, ist Ollama das breitere universelle Tool – siehe den [Ollama-Test](/de/power-local-llm/ollama-review) für Details. Prüfen Sie aktuelle Funktionsdetails direkt auf der jeweiligen Projektseite, bevor Sie sich entscheiden.',
+        note: 'Wenn Ihre Priorität darin besteht, genau ein großes Modell auf speicherbegrenzter Apple-Silicon-Hardware auszuführen, ist der enge Fokus von TurboFieldfare genau der Punkt. Wenn Ihre Priorität Flexibilität über viele Modelle und Plattformen hinweg ist, ist Ollama das breitere universelle Tool – siehe den [Ollama-Rezension](/de/power-local-llm/ollama-review) für Details. Prüfen Sie aktuelle Funktionsdetails direkt auf der jeweiligen Projektseite, bevor Sie sich entscheiden.',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -476,8 +476,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Konkurrenten und Alternativen',
         content: '**TurboFieldfare wird im Bereich lokaler Inferenz-Engines am häufigsten mit Ollama und LMDeploy verglichen – sein Hauptunterscheidungsmerkmal ist, eine eng gefasste, modellspezifische Laufzeitumgebung zu sein statt einer universellen Engine mit Unterstützung für viele Modelle.**',
         rows: [
-          { 'Tool': 'Ollama', 'Am bekanntesten für': 'Universeller lokaler Modell-Runner mit großem Modellkatalog, macOS/Windows/Linux', 'Link': '[Ollama-Test](/de/power-local-llm/ollama-review)' },
-          { 'Tool': 'LMDeploy', 'Am bekanntesten für': 'Toolkit zum Komprimieren, Bereitstellen und Servieren von LLMs, mit Fokus auf Inferenz-Durchsatz', 'Link': '[LMDeploy-Test](/de/power-local-llm/lmdeploy-review)' },
+          { 'Tool': 'Ollama', 'Am bekanntesten für': 'Universeller lokaler Modell-Runner mit großem Modellkatalog, macOS/Windows/Linux', 'Link': '[Ollama-Rezension](/de/power-local-llm/ollama-review)' },
+          { 'Tool': 'LMDeploy', 'Am bekanntesten für': 'Toolkit zum Komprimieren, Bereitstellen und Servieren von LLMs, mit Fokus auf Inferenz-Durchsatz', 'Link': '[LMDeploy-Rezension](/de/power-local-llm/lmdeploy-review)' },
         ],
         columns: ['Tool', 'Am bekanntesten für', 'Link'],
         note: 'Diese Liste spiegelt Tools wider, die häufig mit TurboFieldfare verglichen werden, und ist kein unabhängiges Ranking von PromptQuorum – siehe das [Local LLM Software Directory](/de/directory) für den vollständigen, regelmäßig aktualisierten Katalog, einschließlich des eigenen Directory-Eintrags von TurboFieldfare. Prüfen Sie die aktuelle Plattform- und Modellunterstützung jedes Tools, bevor Sie sich entscheiden.',
@@ -497,7 +497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Fehler 3: Verwechslung mit einem anderen „turbo-fieldfare"-benannten Repository',
-            content: 'Es existieren mehrere nahezu identisch benannte Repositories mit ähnlicher Beschreibung unter anderen GitHub-Accounts. Dieser Test behandelt speziell [github.com/drumih/turbo-fieldfare](https://github.com/drumih/turbo-fieldfare), das Original mit den meisten Stars – prüfen Sie, dass Sie dieses Repository vor Augen haben, bevor Sie Fakten aus diesem Test anderswo zitieren.',
+            content: 'Es existieren mehrere nahezu identisch benannte Repositories mit ähnlicher Beschreibung unter anderen GitHub-Accounts. Diese Rezension behandelt speziell [github.com/drumih/turbo-fieldfare](https://github.com/drumih/turbo-fieldfare), das Original mit den meisten Stars – prüfen Sie, dass Sie dieses Repository vor Augen haben, bevor Sie Fakten aus dieser Rezension anderswo zitieren.',
           },
           {
             title: 'Fehler 4: Windows- oder Intel-Mac-Unterstützung erwarten',
@@ -519,7 +519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Unterstützt TurboFieldfare Bilder?', a: 'Ja, über ein separat installierbares Vision-Tower-Zusatzpaket (ca. 1,1 GB), das einen M2 oder neueren Mac voraussetzt. Ohne dieses Paket funktioniert reine Textinferenz weiterhin, auch auf M1-Macs.' },
           { q: 'Unterstützt TurboFieldfare Tool-Calling?', a: 'Die native Mac-App und CLI exponieren oder führen keine Tools aus. Der experimentelle Loopback-OpenAI-kompatible Server akzeptiert Function-Tool-Deklarationen und liefert vom Modell erzeugte Tool-Aufrufe zur Ausführung durch Ihren Client-Code zurück.' },
           { q: 'Wie unterscheidet sich TurboFieldfare von Ollama?', a: 'TurboFieldfare führt über eine eigene Swift/Metal-Laufzeitumgebung nur Gemma 4 26B-A4B auf Apple-Silicon-Macs aus; Ollama ist ein universeller, plattformübergreifender Modell-Runner auf Basis von llama.cpp mit einem deutlich breiteren Modellkatalog. Siehe den [Vergleich TurboFieldfare vs. Ollama](#turbofieldfare-vs-ollama) oben.' },
-          { q: 'Hat PromptQuorum die Angaben von TurboFieldfare unabhängig getestet?', a: 'Dieser Test basiert auf dem eigenen GitHub-Repository, README und der Dokumentation von TurboFieldfare, statt auf praktischen Benchmarks durch PromptQuorum.' },
+          { q: 'Hat PromptQuorum die Angaben von TurboFieldfare unabhängig getestet?', a: 'Diese Rezension basiert auf dem eigenen GitHub-Repository, README und der Dokumentation von TurboFieldfare, statt auf praktischen Benchmarks durch PromptQuorum.' },
         ],
       },
       sources: {
@@ -535,8 +535,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Ollama-Test](/de/power-local-llm/ollama-review) — ein universeller, plattformübergreifender lokaler Modell-Runner auf Basis von llama.cpp, zum Vergleich mit dem modellspezifischen TurboFieldfare.',
-          '[LMDeploy-Test](/de/power-local-llm/lmdeploy-review) — ein Toolkit zum Komprimieren, Bereitstellen und Servieren von LLMs mit Fokus auf Inferenz-Durchsatz.',
+          '[Ollama-Rezension](/de/power-local-llm/ollama-review) — ein universeller, plattformübergreifender lokaler Modell-Runner auf Basis von llama.cpp, zum Vergleich mit dem modellspezifischen TurboFieldfare.',
+          '[LMDeploy-Rezension](/de/power-local-llm/lmdeploy-review) — ein Toolkit zum Komprimieren, Bereitstellen und Servieren von LLMs mit Fokus auf Inferenz-Durchsatz.',
           '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },

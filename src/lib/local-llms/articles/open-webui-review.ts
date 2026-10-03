@@ -258,7 +258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'Open WebUI 2026: Die selbst gehostete ChatGPT-Oberfläche für Ollama und jedes KI-Modell',
     dateModified: '2026-09-05',
-    seoTitle: 'Open WebUI 2026: Selbst gehostetes ChatGPT-UI im Test',
+    seoTitle: 'Open-WebUI-Rezension 2026: Selbst gehostetes ChatGPT-UI',
     intro: 'Open WebUI ist eine kostenlose, selbst gehostete Weboberfläche, die aus Ollama, vLLM, llama.cpp oder jeder OpenAI-kompatiblen API eine private, ChatGPT-ähnliche Chat-App macht, die Sie vollständig selbst kontrollieren. Das Projekt startete im Oktober 2023 als kleines Nebenprojekt namens „Ollama WebUI", wurde Anfang 2024 umbenannt und ist seither zur meistmarkierten selbst gehosteten KI-Chat-Oberfläche auf GitHub mit über 150.000 Sternen gewachsen.',
     metaDescription: 'Open WebUI macht aus Ollama oder jeder OpenAI-kompatiblen API eine selbst gehostete ChatGPT-Oberfläche mit RAG, Mehrbenutzer-Login und Plugins. Geschichte, Installation, Preise, ehrliche Grenzen.',
     publishDate: '2026-09-05',
@@ -270,7 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'Open WebUI 2026: Selbst gehostetes ChatGPT-UI im Test',
+      'headline': 'Open-WebUI-Rezension 2026: Selbst gehostetes ChatGPT-UI',
       'description': 'Open WebUI macht aus Ollama oder jeder OpenAI-kompatiblen API eine selbst gehostete ChatGPT-Oberfläche mit RAG, Mehrbenutzer-Login und Plugins. Geschichte, Installation, Preise, ehrliche Grenzen.',
       'url': 'https://www.promptquorum.com/de/local-llms/open-webui-review',
       'datePublished': '2026-09-05',

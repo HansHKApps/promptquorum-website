@@ -375,14 +375,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-02',
     theme: 'Creative & Roleplay',
     heroImage: '/images/backyard-ai-review-local-roleplay-2026-hero-de.webp',
-    title: 'Backyard AI im Test: Lokaler KI-Charakter-Chat und Rollenspiel',
-    seoTitle: 'Backyard AI Test: Lokales Rollenspiel & Charakter-Chat',
+    title: 'Backyard-AI-Rezension: Lokaler KI-Charakter-Chat und Rollenspiel',
+    seoTitle: 'Backyard-AI-Rezension: Lokales Rollenspiel & Charakter-Chat',
     intro:
       'Backyard AI ([backyard.ai](https://backyard.ai)), früher Faraday.dev genannt, ist eine kostenlose, closed-source Desktop-App für Windows und Mac, die speziell für KI-Charakter-Chat und Rollenspiel entwickelt wurde. Sie führt Open-Source-Modelle — Llama, Mistral, Gemma und community-getunte Rollenspiel-Fine-Tunes wie Fimbulvetr 10.7B — vollständig auf Ihrer eigenen Hardware aus, ohne Konto und ohne Kreditkarte für die lokale Nutzung. Der Character Hub liefert von Anfang an tausende von Community-erstellten Personas zum sofortigen Chatten, und eine optionale kostenpflichtige Backyard-Cloud-Stufe bietet gehostete Inferenz für Leser ohne leistungsfähige lokale GPU. Die praktische Frage ist nicht, ob lokales Rollenspiel möglich ist — SillyTavern und RisuAI beweisen das bereits —, sondern ob die Klick-und-fertig-Einfachheit von Backyard AI angesichts des closed-source Modells und der kuratierten Charakter-Bibliothek den offeneren, konfigurierbareren Frontends dieser Seite vorzuziehen ist.',
     metaDescription:
-      'Backyard AI Test 2026: kostenlose lokale Rollenspiel-App für Windows und Mac. Character Hub, Fimbulvetr 10.7B, Backyard-Cloud-Preise (7 $/18 $/35 $), Hardware-Bedarf und Vergleich mit Loci AI und SillyTavern.',
+      'Backyard-AI-Rezension 2026: kostenlose lokale Rollenspiel-App für Windows und Mac. Character Hub, Fimbulvetr 10.7B, Backyard-Cloud-Preise (7 $/18 $/35 $), Hardware-Bedarf und Vergleich mit Loci AI und SillyTavern.',
     twitterDescription:
-      'Backyard AI Test 2026: kostenloser lokaler Charakter-Chat für Windows/Mac, Character Hub, optionale Backyard-Cloud-Stufen und Vergleich mit SillyTavern, Loci AI und RisuAI.',
+      'Backyard-AI-Rezension 2026: kostenloser lokaler Charakter-Chat für Windows/Mac, Character Hub, optionale Backyard-Cloud-Stufen und Vergleich mit SillyTavern, Loci AI und RisuAI.',
     audience:
       'Rollenspiel- und KI-Charakter-Chat-Nutzer, die zwischen der unkomplizierten lokalen App von Backyard AI, ihren kostenpflichtigen Cloud-Stufen und konfigurierbareren lokalen Frontends wie SillyTavern, Agnai oder RisuAI entscheiden — behandelt Einrichtung, Hardware-Bedarf, Preise und Datenschutz-Kompromisse.',
     readTime: '9 Min. Lesezeit',
@@ -736,7 +736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Unzensierte lokale LLMs für kreatives Schreiben: Ethik, Legalität & Best Practices](/de/power-local-llm/uncensored-local-llm-creative-writing-ethics) — modellseitige Hinweise, die für jedes lokale Rollenspiel-Frontend gelten, Backyard AI eingeschlossen.',
           '[Lokale-LLM-Prompts für Belletristik-Autoren](/de/power-local-llm/local-llm-prompts-for-fiction-writers) — Prompt-Strukturen für Charakterstimme und narrative Konsistenz.',
           '[Beste lokale LLMs für kreatives Schreiben 2026](/de/power-local-llm/best-local-llm-creative-writing-2026) — modellseitiger Vergleich zur Auswahl, was in Backyard AI oder jedem anderen Frontend laufen soll.',
-          '[Loci AI im Test: Offline-KI für iPhone, Android, iPad, Mac und Windows](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine allgemeine (nicht rollenspielfokussierte) On-Device-Chat-App zum Vergleich.',
+          '[Loci-AI-Rezension: Offline-KI für iPhone, Android, iPad, Mac und Windows](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine allgemeine (nicht rollenspielfokussierte) On-Device-Chat-App zum Vergleich.',
           '[Lokale-LLM-Software-Verzeichnis 2026](/de/directory) — umfassendes App- und Tool-Verzeichnis für alle Plattformen.',
         ],
       },

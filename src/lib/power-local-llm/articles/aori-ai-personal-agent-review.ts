@@ -545,14 +545,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/aori-ai-personal-agent-review-hero-de.webp',
-    title: 'Aori AI Test: Local-First Persönlicher KI-Agent für Desktop und Mobilgeräte',
-    seoTitle: 'Aori AI Test: Local-First Persönlicher KI-Agent',
+    title: 'Aori-AI-Rezension: Local-First Persönlicher KI-Agent für Desktop und Mobilgeräte',
+    seoTitle: 'Aori-AI-Rezension: Local-First Persönlicher KI-Agent',
     intro:
-      'Aori ist eine App für einen persönlichen KI-Agenten, die auf Ihrem Desktop und Smartphone läuft, mit dauerhaftem Gedächtnis, umschaltbaren Personas und geplanten Routinen. Sie speichert Ihre API-Schlüssel und Unterhaltungen lokal statt auf einem von Aori betriebenen Server, ist aber standardmäßig keine vollständig offline-fähige App — der Großteil ihrer Intelligenz stammt von dem Cloud-LLM-Anbieter, den Sie anbinden. Dieser Test zeigt, was Aori tatsächlich leistet, welche Plattformen vollständig lokale Inferenz über Ollama unterstützen und wo der Local-First-Anspruch endet und die Cloud-Abhängigkeit beginnt.',
+      'Aori ist eine App für einen persönlichen KI-Agenten, die auf Ihrem Desktop und Smartphone läuft, mit dauerhaftem Gedächtnis, umschaltbaren Personas und geplanten Routinen. Sie speichert Ihre API-Schlüssel und Unterhaltungen lokal statt auf einem von Aori betriebenen Server, ist aber standardmäßig keine vollständig offline-fähige App — der Großteil ihrer Intelligenz stammt von dem Cloud-LLM-Anbieter, den Sie anbinden. Diese Rezension zeigt, was Aori tatsächlich leistet, welche Plattformen vollständig lokale Inferenz über Ollama unterstützen und wo der Local-First-Anspruch endet und die Cloud-Abhängigkeit beginnt.',
     metaDescription:
-      'Aori AI Test: ein local-first persönlicher Agent mit Gedächtnis, Personas und Routinen für Desktop und Android. Wann läuft er offline über Ollama, wann hängt er von Cloud-Anbietern ab?',
+      'Aori-AI-Rezension: ein local-first persönlicher Agent mit Gedächtnis, Personas und Routinen für Desktop und Android. Wann läuft er offline über Ollama, wann hängt er von Cloud-Anbietern ab?',
     twitterDescription:
-      'Aori AI Test 2026: persönliche Agenten-App für Desktop und Android mit Gedächtnis, Personas und Routinen. Lokal über Ollama nur auf dem Desktop — ehrliche Analyse des Hybridmodells.',
+      'Aori-AI-Rezension 2026: persönliche Agenten-App für Desktop und Android mit Gedächtnis, Personas und Routinen. Lokal über Ollama nur auf dem Desktop — ehrliche Analyse des Hybridmodells.',
     audience:
       'Nutzer, die entscheiden, ob sie einen persönlichen KI-Agenten über Aori mit ihrem eigenen Cloud-API-Schlüssel oder vollständig lokal über Ollama auf dem Desktop betreiben — mit Plattformunterstützung, Funktionsumfang und der Abwägung zwischen lokal und Cloud.',
     readTime: '7 Min. Lesezeit',
@@ -673,7 +673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plattform / Plan': 'iOS',
             'Was Sie erwarten können': 'Noch nicht verfügbar.',
-            'Wichtiger Hinweis': 'Aori hat angekündigt, dass iOS „später" folgt, ohne veröffentlichtes Erscheinungsdatum zum Zeitpunkt dieses Tests.',
+            'Wichtiger Hinweis': 'Aori hat angekündigt, dass iOS „später" folgt, ohne veröffentlichtes Erscheinungsdatum zum Zeitpunkt dieser Rezension.',
           },
           {
             'Plattform / Plan': 'Preise',
@@ -795,8 +795,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Hermes-Agent-Test: Lokaler autonomer KI-Agent](/de/power-local-llm/hermes-agent-review) — ein vergleichbarer local-first Agent, getestet auf dieser Website.',
-          '[BabyAGI-Test: Autonomer lokaler Agent](/de/power-local-llm/babyagi-review-autonomous-agent) — ein weiteres autonomes Agenten-Framework auf dieser Website.',
+          '[Hermes-Agent-Rezension: Lokaler autonomer KI-Agent](/de/power-local-llm/hermes-agent-review) — ein vergleichbarer local-first Agent, getestet auf dieser Website.',
+          '[BabyAGI-Rezension: Autonomer lokaler Agent](/de/power-local-llm/babyagi-review-autonomous-agent) — ein weiteres autonomes Agenten-Framework auf dieser Website.',
           '[Ein lokales LLM mit Obsidian betreiben](/de/power-local-llm/local-llm-with-obsidian-2026) — lokale Modelle mit Ihrem Obsidian-Vault verbinden, derselbe Integrationsweg, den Aori unterstützt.',
           '[Grammarly und Notion AI durch lokale Modelle ersetzen](/de/power-local-llm/replace-grammarly-notion-ai-with-local) — lokale KI neben einem Notion-Workspace nutzen.',
           '[Local LLM Software-Verzeichnis 2026](/de/directory) — vollständiges Verzeichnis lokaler KI-Apps und -Tools für alle Plattformen.',

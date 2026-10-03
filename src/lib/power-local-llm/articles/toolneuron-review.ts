@@ -361,14 +361,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/toolneuron-review-hero-de.webp',
-    title: 'ToolNeuron im Test: Open-Source-Android-App für verschlüsselte On-Device-KI',
-    seoTitle: 'ToolNeuron Test: Verschlüsselte Android-KI-Chat-App',
+    title: 'ToolNeuron-Rezension: Open-Source-Android-App für verschlüsselte On-Device-KI',
+    seoTitle: 'ToolNeuron-Rezension: Verschlüsselte Android-KI-Chat-App',
     intro:
-      '[ToolNeuron](https://play.google.com/store/apps/details?id=com.dark.tool_neuron), entwickelt von [Siddhesh Sonar](https://github.com/Siddhesh2377) und als Open Source unter der [MIT-Lizenz](https://github.com/Siddhesh2377/ToolNeuron/blob/re-write/LICENSE) veröffentlicht, ist eine kostenlose Android-App, die GGUF-Sprachmodelle über llama.cpp auf dem Gerät ausführt, mit Dokumenten-RAG, Sprachein-/ausgabe, einem OpenAI-kompatiblen lokalen HTTP-Server und einem darauf aufbauenden Plugin-System. Laut eigenem README der App ist "kein Google-Play-Dienst, keine Telemetrie, keine Cloud" das zentrale Designziel, unterlegt mit AES-256-GCM-Verschlüsselung über den Android Keystore und Argon2id-Authentifizierung für gespeicherte Daten. Dieser Test behandelt, was die App leistet, was sie benötigt, und wie sie im Vergleich zu anderen On-Device-Android-Chat-Apps wie Layla und RikkaHub steht — basierend auf dem öffentlichen GitHub-Repository und dem Play-Store-Eintrag des Projekts, nicht auf einem unabhängigen Praxistest.',
+      '[ToolNeuron](https://play.google.com/store/apps/details?id=com.dark.tool_neuron), entwickelt von [Siddhesh Sonar](https://github.com/Siddhesh2377) und als Open Source unter der [MIT-Lizenz](https://github.com/Siddhesh2377/ToolNeuron/blob/re-write/LICENSE) veröffentlicht, ist eine kostenlose Android-App, die GGUF-Sprachmodelle über llama.cpp auf dem Gerät ausführt, mit Dokumenten-RAG, Sprachein-/ausgabe, einem OpenAI-kompatiblen lokalen HTTP-Server und einem darauf aufbauenden Plugin-System. Laut eigenem README der App ist "kein Google-Play-Dienst, keine Telemetrie, keine Cloud" das zentrale Designziel, unterlegt mit AES-256-GCM-Verschlüsselung über den Android Keystore und Argon2id-Authentifizierung für gespeicherte Daten. Diese Rezension behandelt, was die App leistet, was sie benötigt, und wie sie im Vergleich zu anderen On-Device-Android-Chat-Apps wie Layla und RikkaHub steht — basierend auf dem öffentlichen GitHub-Repository und dem Play-Store-Eintrag des Projekts, nicht auf einem unabhängigen Praxistest.',
     metaDescription:
-      'ToolNeuron Test 2026: kostenlose, quelloffene (MIT) Android-App für verschlüsselten On-Device-KI-Chat, Dokumenten-RAG, Sprache und lokale Bildgenerierung. Anforderungen, Sicherheitsmodell und Vergleich mit Layla und RikkaHub.',
+      'ToolNeuron-Rezension 2026: kostenlose, quelloffene (MIT) Android-App für verschlüsselten On-Device-KI-Chat, Dokumenten-RAG, Sprache und lokale Bildgenerierung. Anforderungen, Sicherheitsmodell und Vergleich mit Layla und RikkaHub.',
     twitterDescription:
-      'ToolNeuron Test: eine kostenlose, quelloffene Android-App, die GGUF-Modelle vollständig auf dem Gerät ausführt — verschlüsselter lokaler Speicher, Dokumenten-RAG, Sprachein-/ausgabe, ein OpenAI-kompatibler lokaler Server und ein Plugin-System. Keine Cloud, keine Telemetrie, laut eigenem README des Projekts.',
+      'ToolNeuron-Rezension: eine kostenlose, quelloffene Android-App, die GGUF-Modelle vollständig auf dem Gerät ausführt — verschlüsselter lokaler Speicher, Dokumenten-RAG, Sprachein-/ausgabe, ein OpenAI-kompatibler lokaler Server und ein Plugin-System. Keine Cloud, keine Telemetrie, laut eigenem README des Projekts.',
     audience:
       'Android-Nutzer, die eine kostenlose, quelloffene, auf Datenschutz ausgelegte On-Device-KI-Chat-App in Betracht ziehen — behandelt das Sicherheitsmodell, unterstützte Funktionen, Hardware-Anforderungen und den Vergleich mit anderen lokalen Android-KI-Apps auf dieser Seite.',
     readTime: '9 Min. Lesezeit',
@@ -388,7 +388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Llama', 'Mistral', 'Gemma'],
     current_hardware_mentioned: ['Android 12'],
     leadAnswerBlock:
-      '**ToolNeuron ist eine kostenlose, quelloffene (MIT) Android-App, die GGUF-Sprachmodelle vollständig auf dem Gerät über llama.cpp ausführt, mit Dokumenten-RAG, Sprachein-/ausgabe und einem OpenAI-kompatiblen lokalen HTTP-Server — ohne Cloud-Komponente, ohne Telemetrie, laut eigenem README des Projekts.** Entwickelt von [Siddhesh Sonar](https://github.com/Siddhesh2377), verpackt die App ihren lokalen Speicher in eine über den Android Keystore abgesicherte AES-256-GCM-Verschlüsselung mit Argon2id-Authentifizierung und benötigt Android 12 (API 31) oder neuer. Leser, die einen Vergleichspunkt suchen, sollten auch den [Layla-Test](/de/power-local-llm/layla-review) oder den [RikkaHub-Test](/de/power-local-llm/rikkahub-review) lesen.',
+      '**ToolNeuron ist eine kostenlose, quelloffene (MIT) Android-App, die GGUF-Sprachmodelle vollständig auf dem Gerät über llama.cpp ausführt, mit Dokumenten-RAG, Sprachein-/ausgabe und einem OpenAI-kompatiblen lokalen HTTP-Server — ohne Cloud-Komponente, ohne Telemetrie, laut eigenem README des Projekts.** Entwickelt von [Siddhesh Sonar](https://github.com/Siddhesh2377), verpackt die App ihren lokalen Speicher in eine über den Android Keystore abgesicherte AES-256-GCM-Verschlüsselung mit Argon2id-Authentifizierung und benötigt Android 12 (API 31) oder neuer. Leser, die einen Vergleichspunkt suchen, sollten auch den [Layla-Rezension](/de/power-local-llm/layla-review) oder den [RikkaHub-Rezension](/de/power-local-llm/rikkahub-review) lesen.',
     quickAnswerTop: {
       en: {
         question: 'Is ToolNeuron worth installing?',
@@ -466,7 +466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ToolNeuron holen',
         content: [
           '**ToolNeuron ist über Google Play oder als direkter APK-Download von der GitHub-Releases-Seite erhältlich.** Beide Vertriebskanäle liefern dieselbe quelloffene App.',
-          'Dieser Test ist eine Ergänzung zu PromptQuorums [Verzeichnis lokaler LLM-Software](/de/directory), das lokale KI-Tools über Plattformen hinweg auflistet, einschließlich des eigenen Eintrags von ToolNeuron.',
+          'Diese Rezension ist eine Ergänzung zu PromptQuorums [Verzeichnis lokaler LLM-Software](/de/directory), das lokale KI-Tools über Plattformen hinweg auflistet, einschließlich des eigenen Eintrags von ToolNeuron.',
         ],
         columns: ['Kanal', 'Holen'],
         rows: [
@@ -487,7 +487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**ToolNeuron ist eine Android-App, die GGUF-Format-Sprachmodelle direkt über llama.cpp auf dem Gerät ausführt, ohne serverseitige Komponente.** Laut eigener Beschreibung des Projekts strebt sie an, "On-Device-KI für Android" zu sein — "kein Google-Play-Dienst, keine Telemetrie, keine Cloud" — Modelle, Chats, für die Suche verwendete Dokumente und Verschlüsselungsschlüsselmaterial sind alle so konzipiert, dass sie auf dem Telefon bleiben.',
           'Über den reinen Chat hinaus bündelt die App Dokumentenabruf (RAG) über gängige Dateiformate, Sprachein- und -ausgabe über die sherpa-onnx-Sprach-Engine, einen lokalen HTTP-Server, der eine OpenAI-kompatible API für andere Apps bereitstellt, einen integrierten Hugging-Face-Modellbrowser und ein sandboxed Plugin-System zum Installieren zusätzlicher Funktionen.',
-          'Dieser Test stützt sich auf das öffentliche GitHub-Repository des Projekts — dessen README, Lizenzdatei und Repository-Metadaten — sowie auf den Google-Play-Eintrag, nicht auf eine unabhängige Code-Prüfung oder praktische Benchmark-Tests.',
+          'Diese Rezension stützt sich auf das öffentliche GitHub-Repository des Projekts — dessen README, Lizenzdatei und Repository-Metadaten — sowie auf den Google-Play-Eintrag, nicht auf eine unabhängige Code-Prüfung oder praktische Benchmark-Tests.',
         ],
       },
       whoBuiltIt: {
@@ -573,12 +573,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Vorteil': 'Breiteres Funktionsspektrum als reiner Chat',
             'Was das in der Praxis bedeutet': 'Dokumenten-RAG, Sprache, ein lokaler API-Server und Plugins sind alle eingebunden, keine separaten Apps zu verwalten.',
-            'Einschränkung / Hinweis': 'Mehr bewegliche Teile als bei einer Einzelzweck-Chat-App; dieser Test hat die Zuverlässigkeit jeder einzelnen Funktion nicht unabhängig verifiziert.',
+            'Einschränkung / Hinweis': 'Mehr bewegliche Teile als bei einer Einzelzweck-Chat-App; diese Rezension hat die Zuverlässigkeit jeder einzelnen Funktion nicht unabhängig verifiziert.',
           },
           {
             'Vorteil': 'Detailliertes, dokumentiertes Sicherheitsmodell',
             'Was das in der Praxis bedeutet': 'Verschlüsselter lokaler Speicher und PIN-basierte Authentifizierung schützen Daten, falls das Telefon verloren geht oder von jemand anderem aufgerufen wird.',
-            'Einschränkung / Hinweis': 'Die Sicherheitsdokumentation stammt vom Projekt selbst; dieser Test hat die App nicht unabhängig einem Penetrationstest unterzogen.',
+            'Einschränkung / Hinweis': 'Die Sicherheitsdokumentation stammt vom Projekt selbst; diese Rezension hat die App nicht unabhängig einem Penetrationstest unterzogen.',
           },
           {
             'Vorteil': 'Keine Cloud-Abhängigkeit für zentrale Funktionen',
@@ -688,7 +688,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'ToolNeuron liefert eine wirklich breite, kostenlose und quelloffene On-Device-KI-App für Android: GGUF-Chat über llama.cpp, Dokumenten-RAG, Sprachein-/ausgabe, einen lokalen OpenAI-kompatiblen API-Server und ein Plugin-System, alles unterlegt mit einer dokumentierten, verschlüsselungsorientierten Sicherheitsarchitektur statt eines vagen Datenschutzversprechens.',
           'Der veröffentlichte MIT-lizenzierte Quellcode ist ein bedeutender Vorteil gegenüber quellcodegeschlossenen Android-Alternativen — Leser, denen es wichtig ist zu prüfen, was eine App tatsächlich mit lokalen Daten macht, können den Code direkt einsehen, statt allein einem Eintrag zu vertrauen.',
-          'Was diesen Test eher zurückhaltend als uneingeschränkt begeistert hält, ist das relativ junge Alter der App und das Fehlen unabhängiger, praktischer Benchmark-Tests ihrer vielen Funktionen speziell durch PromptQuorum; Leser mit leistungskritischen Anforderungen sollten die App zuerst auf ihrem eigenen Gerät testen, bevor sie sich stark darauf verlassen.',
+          'Was diese Rezension eher zurückhaltend als uneingeschränkt begeistert hält, ist das relativ junge Alter der App und das Fehlen unabhängiger, praktischer Benchmark-Tests ihrer vielen Funktionen speziell durch PromptQuorum; Leser mit leistungskritischen Anforderungen sollten die App zuerst auf ihrem eigenen Gerät testen, bevor sie sich stark darauf verlassen.',
           'Android-Nutzer, die eine kostenlose, quelloffene, auf Datenschutz ausgelegte App mit mehr als reinem Chat möchten, sollten sie ausprobieren; Leser, die eine iPhone-App, einen einfacheren Einzelzweck-Client oder eine etabliertere Erfolgsbilanz möchten, sollten stattdessen [Layla](/de/power-local-llm/layla-review) oder [RikkaHub](/de/power-local-llm/rikkahub-review) in Betracht ziehen.',
         ],
       },
@@ -705,10 +705,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Layla-Test](/de/power-local-llm/layla-review) — eine kostenpflichtige, plattformübergreifende On-Device-Begleit-App mit optionalem Cloud-Modus.',
-          '[RikkaHub-Test](/de/power-local-llm/rikkahub-review) — eine weitere kostenlose, quelloffene Android-Chat-App für lokale KI.',
-          '[Maid-Test](/de/power-local-llm/maid-review) — ein kostenloser, quelloffener, plattformübergreifender (Android und iOS) Chat-Client.',
-          '[PocketPal-AI-Test](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene lokale KI-App mit iOS- und teilweiser Android-Unterstützung.',
+          '[Layla-Rezension](/de/power-local-llm/layla-review) — eine kostenpflichtige, plattformübergreifende On-Device-Begleit-App mit optionalem Cloud-Modus.',
+          '[RikkaHub-Rezension](/de/power-local-llm/rikkahub-review) — eine weitere kostenlose, quelloffene Android-Chat-App für lokale KI.',
+          '[Maid-Rezension](/de/power-local-llm/maid-review) — ein kostenloser, quelloffener, plattformübergreifender (Android und iOS) Chat-Client.',
+          '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene lokale KI-App mit iOS- und teilweiser Android-Unterstützung.',
           '[Das vollständige lokale LLM-Software-Verzeichnis](/de/directory) — ein umfassenderes Verzeichnis lokaler LLM-Tools über Plattformen hinweg.',
         ],
       },

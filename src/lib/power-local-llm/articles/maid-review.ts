@@ -431,19 +431,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/maid-review-hero-de.webp',
-    title: 'Maid im Test: Open-Source-LLM-Chat-App für Android',
-    seoTitle: 'Maid Test: Open-Source Android LLM App',
+    title: 'Maid-Rezension: Open-Source-LLM-Chat-App für Android',
+    seoTitle: 'Maid-Rezension: Open-Source Android LLM App',
     intro:
-      'Maid ist eine kostenlose, quelloffene (MIT-lizenzierte) Chat-App, die GGUF-Sprachmodelle lokal über [llama.cpp](https://github.com/ggml-org/llama.cpp) ausführt oder sich mit einem eigenen API-Schlüssel mit externen Anbietern wie Anthropic, OpenAI, Ollama, Mistral, DeepSeek, Novita und OrcaRouter verbindet. Das Projekt startete 2023 als plattformübergreifende Flutter-App des australischen Entwicklers Dane Madsen, wurde jedoch für Version 3.0.0 (März 2026) in React Native neu geschrieben und läuft heute nur noch auf Android — die Desktop- und iOS-Builds der älteren Flutter-Versionen gibt es in der aktuellen Version nicht mehr. Dieser Test beschreibt, was Maid heute leistet, was sich durch den Umbau geändert hat, welche Plattform- und Hardware-Anforderungen wirklich gelten, wie das Preismodell aussieht (kostenlos, keine kostenpflichtige Stufe) und für wen sich die App eignet — und für wen nicht.',
+      'Maid ist eine kostenlose, quelloffene (MIT-lizenzierte) Chat-App, die GGUF-Sprachmodelle lokal über [llama.cpp](https://github.com/ggml-org/llama.cpp) ausführt oder sich mit einem eigenen API-Schlüssel mit externen Anbietern wie Anthropic, OpenAI, Ollama, Mistral, DeepSeek, Novita und OrcaRouter verbindet. Das Projekt startete 2023 als plattformübergreifende Flutter-App des australischen Entwicklers Dane Madsen, wurde jedoch für Version 3.0.0 (März 2026) in React Native neu geschrieben und läuft heute nur noch auf Android — die Desktop- und iOS-Builds der älteren Flutter-Versionen gibt es in der aktuellen Version nicht mehr. Diese Rezension beschreibt, was Maid heute leistet, was sich durch den Umbau geändert hat, welche Plattform- und Hardware-Anforderungen wirklich gelten, wie das Preismodell aussieht (kostenlos, keine kostenpflichtige Stufe) und für wen sich die App eignet — und für wen nicht.',
     metaDescription:
-      'Maid im Test: eine kostenlose, quelloffene (MIT) Android-App, die GGUF-Modelle lokal über llama.cpp ausführt oder sich mit KI-Anbietern verbindet. Plattformen, Historie und Zielgruppe.',
+      'Maid-Rezension: eine kostenlose, quelloffene (MIT) Android-App, die GGUF-Modelle lokal über llama.cpp ausführt oder sich mit KI-Anbietern verbindet. Plattformen, Historie und Zielgruppe.',
     twitterDescription:
-      'Maid im Test 2026: die kostenlose, quelloffene Android-App für lokalen GGUF-Chat über llama.cpp — seit einem Umbau 2026 nur noch für Android. Was sich geändert hat und für wen sie passt.',
+      'Maid-Rezension 2026: die kostenlose, quelloffene Android-App für lokalen GGUF-Chat über llama.cpp — seit einem Umbau 2026 nur noch für Android. Was sich geändert hat und für wen sie passt.',
     audience:
       'Android-Nutzer, die eine kostenlose, quelloffene lokale oder Multi-Provider-KI-Chat-App möchten und mit einem community-gepflegten, reinen Android-Projekt einverstanden sind.',
     readTime: '10 Min. Lesezeit',
     educationalLevel: 'Intermediate',
-    primaryTerm: 'Maid Test',
+    primaryTerm: 'Maid Rezension',
     targetKeywords: [
       'maid ai test',
       'maid app android',
@@ -517,7 +517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Dieser Test basiert auf dem öffentlichen [GitHub-Repository](https://github.com/Mobile-Artificial-Intelligence/maid), dessen README, der Versionshistorie und dem Google-Play-Eintrag, geprüft im September 2026. PromptQuorum hat für diesen Test keine eigenen praktischen Benchmarks von Maid durchgeführt — die Leistungsangaben unten sind allgemeine Hardware-Richtwerte für lokale LLMs, keine app-spezifischen Messungen.',
+            text: 'Diese Rezension basiert auf dem öffentlichen [GitHub-Repository](https://github.com/Mobile-Artificial-Intelligence/maid), dessen README, der Versionshistorie und dem Google-Play-Eintrag, geprüft im September 2026. PromptQuorum hat für diese Rezension keine eigenen praktischen Benchmarks von Maid durchgeführt — die Leistungsangaben unten sind allgemeine Hardware-Richtwerte für lokale LLMs, keine app-spezifischen Messungen.',
           },
         ],
       },
@@ -624,7 +624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Basis-App:** Kostenlos, kein Abo, MIT-lizenzierte Open-Source-Software.',
           '**Lokaler Chat (GGUF-Modelle auf dem Gerät):** Kostenlos — keine Gebühr pro Nachricht oder Token, da die Inferenz auf Ihrem eigenen Gerät läuft.',
           '**Chat über externe Anbieter:** Über Maid kostenlos nutzbar, Sie zahlen jedoch, was der jeweilige Anbieter (OpenAI, Anthropic usw.) unter Ihrem eigenen Konto und API-Schlüssel berechnet.',
-          '**Optionales Cloud-Backup:** Die App unterstützt eine Registrierung oder Anmeldung, um Einstellungen und Chatverlauf über Supabase zu sichern; dieser Test fand keine gesonderte Gebühr für diese Funktion.',
+          '**Optionales Cloud-Backup:** Die App unterstützt eine Registrierung oder Anmeldung, um Einstellungen und Chatverlauf über Supabase zu sichern; diese Rezension fand keine gesonderte Gebühr für diese Funktion.',
           '**Speicherkosten:** Keine monetären, aber reale Kosten — jedes heruntergeladene GGUF-Modell belegt üblicherweise mehrere Gigabyte Gerätespeicher.',
         ],
       },
@@ -788,7 +788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         items: [
-          '[Maid auf GitHub](https://github.com/Mobile-Artificial-Intelligence/maid) — Quellcode, Lizenz (MIT), README und Versionshistorie, referenziert in diesem Test.',
+          '[Maid auf GitHub](https://github.com/Mobile-Artificial-Intelligence/maid) — Quellcode, Lizenz (MIT), README und Versionshistorie, referenziert in dieser Rezension.',
           '[Maid-Releases-Seite](https://github.com/Mobile-Artificial-Intelligence/maid/releases) — Versionshistorie, Changelogs und Build-Pakete von v2.0.4 bis v3.0.0.',
           '[Commit-Historie des Maid-Repositorys](https://github.com/Mobile-Artificial-Intelligence/maid/commits/main) — aktuelle Commit- und Pull-Request-Aktivität, verwendet zur Einschätzung des Pflegestatus.',
           '[Maid bei Google Play](https://play.google.com/store/apps/details?id=com.danemadsen.maid) — Verfügbarkeit für Android.',
@@ -801,9 +801,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Die besten lokalen KI-Apps für Android 2026](/de/power-local-llm/best-local-llm-apps-android-2026) — die Android-App-Übersicht, u. a. mit Maid, MLC Chat und PocketPal AI.',
-          '[PocketPal AI im Test](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene Alternative, die zusätzlich iPhone und iPad abdeckt.',
-          '[Private LLM im Test](/de/power-local-llm/private-llm-review) — eine kostenpflichtige, Closed-Source-Alternative nur für Apple mit größerem integriertem Modellkatalog.',
-          '[Enclave AI im Test](/de/power-local-llm/enclave-ai-review) — eine reine Apple-Alternative mit Siri- und Shortcuts-Automatisierung.',
+          '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene Alternative, die zusätzlich iPhone und iPad abdeckt.',
+          '[Private-LLM-Rezension](/de/power-local-llm/private-llm-review) — eine kostenpflichtige, Closed-Source-Alternative nur für Apple mit größerem integriertem Modellkatalog.',
+          '[Enclave-AI-Rezension](/de/power-local-llm/enclave-ai-review) — eine reine Apple-Alternative mit Siri- und Shortcuts-Automatisierung.',
           '[Die besten mobilen LLM-Modelle 2026: Phi-4 Mini vs. Gemma 4 vs. SmolLM](/de/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — der Modell-Begleitartikel zur Wahl des passenden GGUF-Modells für Ihr Smartphone.',
         ],
       },
@@ -811,9 +811,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Maid im Test (2026): Open-Source-LLM-Chat-App für Android',
+      headline: 'Maid-Rezension (2026): Open-Source-LLM-Chat-App für Android',
       description:
-        'Maid im Test: eine kostenlose, quelloffene (MIT) Android-App, die GGUF-Modelle lokal über llama.cpp ausführt oder sich mit KI-Anbietern verbindet. Plattformen, Historie und Zielgruppe.',
+        'Maid-Rezension: eine kostenlose, quelloffene (MIT) Android-App, die GGUF-Modelle lokal über llama.cpp ausführt oder sich mit KI-Anbietern verbindet. Plattformen, Historie und Zielgruppe.',
       url: 'https://promptquorum.com/de/power-local-llm/maid-review',
       inLanguage: 'de',
       datePublished: '2026-09-06',
@@ -838,7 +838,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://promptquorum.com' },
         { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/de/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'Maid im Test (2026)', item: 'https://promptquorum.com/de/power-local-llm/maid-review' },
+        { '@type': 'ListItem', position: 3, name: 'Maid-Rezension (2026)', item: 'https://promptquorum.com/de/power-local-llm/maid-review' },
       ],
     },
   },

@@ -255,7 +255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die Open Interpreter als Coding-Agent für offene Modelle wie Kimi K3 oder DeepSeek bewerten, und Leser, die das ursprüngliche Python-Tool „Computer per KI steuern" kennen und wissen wollen, was sich geändert hat',
     primaryTerm: 'Open Interpreter',
-    title: 'Open Interpreter im Test: Rust-Kern statt Python, Apache statt AGPL',
+    title: 'Open-Interpreter-Rezension: Rust-Kern statt Python, Apache statt AGPL',
     seoTitle: 'Open Interpreter: Rust-Kern, Apache-2.0-Lizenz',
     intro: 'Open Interpreter war ursprünglich ein Python-Tool, mit dem ein Sprachmodell Code auf dem eigenen Rechner schreiben und ausführen konnte — eine lokale, uneingeschränkte Alternative zu OpenAIs gehostetem Code Interpreter. 2026 wurde das Projekt vollständig in Rust neu geschrieben, von OpenAIs eigenem Open-Source-Codex abgeleitet, und bezeichnet sich jetzt als Coding-Agent für offene Modelle wie Kimi K3. Auch die Lizenz hat sich geändert: AGPL 3.0 ist Geschichte, ersetzt durch Apache 2.0.',
     metaDescription: 'Open Interpreter hat sein Python/AGPL-Tool in Rust neu geschrieben, von OpenAI Codex abgeleitet und auf Apache 2.0 umgestellt. Was sich änderte, Installation und Vergleich mit Aider, Cline.',
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Ist Open Interpreter noch Open Source, und welche Lizenz gilt jetzt?',
-        answer: 'Ja. Open Interpreter ([github.com/openinterpreter/openinterpreter](https://github.com/openinterpreter/openinterpreter)) ist zum Zeitpunkt dieses Tests unter Apache 2.0 lizenziert — eine Änderung gegenüber der ursprünglichen AGPL-3.0-Lizenz. Das Projekt wurde in Rust als Fork von OpenAIs Open-Source-Codex neu geschrieben und positioniert sich als Coding-Agent für offene Modelle wie Kimi K3, DeepSeek, Qwen und GLM/Z.AI.',
+        answer: 'Ja. Open Interpreter ([github.com/openinterpreter/openinterpreter](https://github.com/openinterpreter/openinterpreter)) ist zum Zeitpunkt dieser Rezension unter Apache 2.0 lizenziert — eine Änderung gegenüber der ursprünglichen AGPL-3.0-Lizenz. Das Projekt wurde in Rust als Fork von OpenAIs Open-Source-Codex neu geschrieben und positioniert sich als Coding-Agent für offene Modelle wie Kimi K3, DeepSeek, Qwen und GLM/Z.AI.',
         bullets: [
           'Lizenz: Apache 2.0 (bestätigt über die GitHub-API und die LICENSE-Datei im Repository) — geändert von AGPL 3.0',
           '68.227 Sterne, 5.871 Forks, 10 offene Issues, letzter Push am 2026-08-20',
@@ -314,7 +314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Das ursprüngliche Python/AGPL-Tool „Computer steuern" lebt als Community-Fork unter endolith/open-interpreter weiter',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test behandelt die aktuelle Rust/Codex-Fork-Version von Open Interpreter. Wer das ursprüngliche Python-Tool aus 2023 sucht, das per natürlicher Sprache im Web browst und Dateien bearbeitet, findet es im Community-Fork, nicht im Haupt-Repository.' },
+          { type: 'note', text: 'Diese Rezension behandelt die aktuelle Rust/Codex-Fork-Version von Open Interpreter. Wer das ursprüngliche Python-Tool aus 2023 sucht, das per natürlicher Sprache im Web browst und Dateien bearbeitet, findet es im Community-Fork, nicht im Haupt-Repository.' },
         ],
       },
       overview: {
@@ -329,7 +329,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Homepage: openinterpreter.com',
           'Gegründet von Killian Lucas, der als CEO und Lead Developer Open Interpreter Inc. leitet',
         ],
-        note: 'Das ursprüngliche Tool aus 2023 — ein Python-Programm, das einem lokalen oder entfernten LLM erlaubte, Code (Python, JavaScript, Shell) auf dem eigenen Rechner zu schreiben und auszuführen, im Sinne von OpenAIs gehostetem Code Interpreter, aber ohne dessen Sandbox-Grenzen — existiert weiterhin. Es lebt als community-gepflegter Fork unter github.com/endolith/open-interpreter weiter, getrennt vom aktiv entwickelten Rust-Projekt, das dieser Test behandelt.',
+        note: 'Das ursprüngliche Tool aus 2023 — ein Python-Programm, das einem lokalen oder entfernten LLM erlaubte, Code (Python, JavaScript, Shell) auf dem eigenen Rechner zu schreiben und auszuführen, im Sinne von OpenAIs gehostetem Code Interpreter, aber ohne dessen Sandbox-Grenzen — existiert weiterhin. Es lebt als community-gepflegter Fork unter github.com/endolith/open-interpreter weiter, getrennt vom aktiv entwickelten Rust-Projekt, das diese Rezension behandelt.',
       },
       history: {
         id: 'open-interpreter-history',
@@ -362,7 +362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Auf ein offenes Modell wie Kimi K3, DeepSeek, Qwen oder GLM/Z.AI verweisen, gemäß dessen Setup-Anleitung — das Projekt dokumentiert kein einzelnes zwingendes Backend.',
           'Direkt im Terminal nutzen oder über einen ACP-kompatiblen Editor anbinden, wer lieber in einer IDE als in einem eigenständigen CLI arbeitet.',
         ],
-        note: 'Dies sind die im offiziellen README des Projekts veröffentlichten Installationsbefehle zum Zeitpunkt dieses Tests, wörtlich übernommen. Vor der Ausführung gegen das aktuelle Repository prüfen, da sich Installationsskripte zwischen Tests ändern können.',
+        note: 'Dies sind die im offiziellen README des Projekts veröffentlichten Installationsbefehle zum Zeitpunkt dieser Rezension, wörtlich übernommen. Vor der Ausführung gegen das aktuelle Repository prüfen, da sich Installationsskripte zwischen Tests ändern können.',
       },
       licenseChange: {
         id: 'open-interpreter-license-change',
@@ -378,7 +378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'is-open-interpreter-still-maintained',
         title: 'Wird Open Interpreter noch gepflegt?',
         content: [
-          'Jedes am Repository verfügbare Signal deutet auf aktive, laufende Pflege hin, nicht auf ein Projekt, das von vergangener Popularität zehrt. Der letzte Push erfolgte am 2026-08-20 — etwa zwei Wochen vor diesem Test — bei nur 10 offenen Issues gegenüber 68.227 Sternen und 5.871 Forks, ein niedriges Verhältnis für ein Repository dieser Größe.',
+          'Jedes am Repository verfügbare Signal deutet auf aktive, laufende Pflege hin, nicht auf ein Projekt, das von vergangener Popularität zehrt. Der letzte Push erfolgte am 2026-08-20 — etwa zwei Wochen vor dieser Rezension — bei nur 10 offenen Issues gegenüber 68.227 Sternen und 5.871 Forks, ein niedriges Verhältnis für ein Repository dieser Größe.',
           'Das Projekt betreibt zudem ein umfangreiches automatisiertes CI-Setup, belegt durch die Workflow-Dateien im Verzeichnis .github/workflows/: rust-ci.yml, rust-ci-full.yml und rust-ci-full-nextest-platform.yml führen die Rust-Testsuite über cargo nextest auf mehreren Betriebssystem-Plattformen aus; cargo-ci.yml und cargo-deny.yml decken Abhängigkeits- und Sicherheitsprüfungen ab; blocking-ci.yml ist ein Pflicht-Check, der Merges blockiert; postmerge-ci.yml und public-ci.yml führen weitere Validierungen aus; python-runtime-build.yml und python-sdk-release.yml bauen und veröffentlichen die Python-SDK-Komponente; repo-checks.yml und codespell.yml kümmern sich um Repository-Hygiene.',
         ],
         itemHeadings: true,
@@ -391,7 +391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         columns: ['Signal', 'What it shows'],
         callouts: [
-          { type: 'note', text: 'Wir haben für diesen Test keine eigene Testsuite gegen Open Interpreter laufen lassen. Die obigen Pflege-Signale stammen aus der öffentlichen Commit-Historie des Repositorys, der Issue-Zahl und dessen eigenen veröffentlichten CI-Workflow-Dateien, nicht aus von PromptQuorum erzeugten Benchmarks. Aktuellen Status vor größerem Zeitaufwand direkt im Repository prüfen.' },
+          { type: 'note', text: 'Wir haben für diese Rezension keine eigene Testsuite gegen Open Interpreter laufen lassen. Die obigen Pflege-Signale stammen aus der öffentlichen Commit-Historie des Repositorys, der Issue-Zahl und dessen eigenen veröffentlichten CI-Workflow-Dateien, nicht aus von PromptQuorum erzeugten Benchmarks. Aktuellen Status vor größerem Zeitaufwand direkt im Repository prüfen.' },
         ],
       },
       whoShouldUse: {
@@ -472,8 +472,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         links: [
-          { url: 'https://github.com/openinterpreter/openinterpreter', title: 'openinterpreter/openinterpreter auf GitHub', description: 'Das kanonische Quell-Repository, inklusive aktueller Lizenz, Workflow-Dateien und der in diesem Test referenzierten Commit-/Issue-Aktivität.' },
-          { url: 'https://openinterpreter.com', title: 'Open-Interpreter-Homepage', description: 'Die offizielle Seite des Projekts, inklusive der in diesem Test wörtlich übernommenen Installationsbefehle.' },
+          { url: 'https://github.com/openinterpreter/openinterpreter', title: 'openinterpreter/openinterpreter auf GitHub', description: 'Das kanonische Quell-Repository, inklusive aktueller Lizenz, Workflow-Dateien und der in dieser Rezension referenzierten Commit-/Issue-Aktivität.' },
+          { url: 'https://openinterpreter.com', title: 'Open-Interpreter-Homepage', description: 'Die offizielle Seite des Projekts, inklusive der in dieser Rezension wörtlich übernommenen Installationsbefehle.' },
           { url: 'https://github.com/openinterpreter/openinterpreter/blob/main/LICENSE', title: 'Open-Interpreter-LICENSE-Datei', description: 'Die rohe LICENSE-Datei, die die aktuelle Apache-2.0-Lizenz bestätigt.' },
           { url: 'https://github.com/endolith/open-interpreter', title: 'endolith/open-interpreter (Community-Fork)', description: 'Der community-gepflegte Fork des ursprünglichen Python-Tools aus 2023 unter AGPL 3.0.' },
         ],

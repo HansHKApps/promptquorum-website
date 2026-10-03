@@ -358,19 +358,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/whisper-cpp-review-hero-de.webp',
-    title: 'Whisper.cpp im Test: Lokale Spracherkennung in reinem C/C++',
-    seoTitle: 'Whisper.cpp Test: Lokale STT in C/C++',
+    title: 'Whisper.cpp-Rezension: Lokale Spracherkennung in reinem C/C++',
+    seoTitle: 'Whisper.cpp-Rezension: Lokale STT in C/C++',
     intro:
-      'whisper.cpp ist eine C/C++-Neuimplementierung des Spracherkennungsmodells Whisper von OpenAI, entwickelt von Georgi Gerganov und heute unter der [ggml-org-Organisation auf GitHub](https://github.com/ggml-org/whisper.cpp) gepflegt. Es wandelt Sprache vollständig lokal auf dem Gerät in Text um, ohne Cloud-API-Aufruf, und läuft auf Hardware vom Raspberry Pi über Apple-Silicon-Macs bis zu NVIDIA-GPU-Servern. Dieser Test behandelt die Geschichte des Projekts, Installation und Ausführung, echte Kommandozeilenbefehle, die MIT-Lizenz und die Kosten (kostenlos) sowie die Grenzen des Tools — inklusive Verweis auf den direkten Benchmark-Vergleich von PromptQuorum mit faster-whisper für alle, die sich zwischen beiden entscheiden müssen.',
+      'whisper.cpp ist eine C/C++-Neuimplementierung des Spracherkennungsmodells Whisper von OpenAI, entwickelt von Georgi Gerganov und heute unter der [ggml-org-Organisation auf GitHub](https://github.com/ggml-org/whisper.cpp) gepflegt. Es wandelt Sprache vollständig lokal auf dem Gerät in Text um, ohne Cloud-API-Aufruf, und läuft auf Hardware vom Raspberry Pi über Apple-Silicon-Macs bis zu NVIDIA-GPU-Servern. Diese Rezension behandelt die Geschichte des Projekts, Installation und Ausführung, echte Kommandozeilenbefehle, die MIT-Lizenz und die Kosten (kostenlos) sowie die Grenzen des Tools — inklusive Verweis auf den direkten Benchmark-Vergleich von PromptQuorum mit faster-whisper für alle, die sich zwischen beiden entscheiden müssen.',
     metaDescription:
-      'Whisper.cpp im Test: der MIT-lizenzierte C/C++-Port von OpenAI Whisper für lokale Spracherkennung. Geschichte, Installation, echte CLI-Befehle, Lizenz und wann faster-whisper die bessere Wahl ist.',
+      'Whisper.cpp-Rezension: der MIT-lizenzierte C/C++-Port von OpenAI Whisper für lokale Spracherkennung. Geschichte, Installation, echte CLI-Befehle, Lizenz und wann faster-whisper die bessere Wahl ist.',
     twitterDescription:
-      'Whisper.cpp im Test 2026: Georgi Gerganovs C/C++-Port von OpenAI Whisper für lokale, offline Spracherkennung. Geschichte, Setup, echte Befehle, MIT-Lizenz und ehrliche Grenzen.',
+      'Whisper.cpp-Rezension 2026: Georgi Gerganovs C/C++-Port von OpenAI Whisper für lokale, offline Spracherkennung. Geschichte, Setup, echte Befehle, MIT-Lizenz und ehrliche Grenzen.',
     audience:
       'Entwickler und Selbsthoster, die lokale, geräteseitige Spracherkennung ohne Python-Laufzeitumgebung oder Cloud-API wollen — vom Raspberry-Pi-Projekt bis zu Apple-Silicon- und NVIDIA-GPU-Pipelines.',
     readTime: '11 Min. Lesezeit',
     educationalLevel: 'Intermediate',
-    primaryTerm: 'whisper.cpp Test',
+    primaryTerm: 'whisper.cpp Rezension',
     targetKeywords: [
       'whisper.cpp test',
       'whisper.cpp',
@@ -440,7 +440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Dieser Test konzentriert sich auf whisper.cpp als eigenständiges Werkzeug: Geschichte, Installation, echte Befehle, Lizenzierung und ehrliche Grenzen. Für einen direkten Benchmark-Vergleich mit faster-whisper auf Apple Silicon und NVIDIA-GPUs siehe den [Whisper.cpp-vs-faster-whisper-Vergleich](/de/power-local-llm/local-whisper-stt-comparison-2026).',
+            text: 'Diese Rezension konzentriert sich auf whisper.cpp als eigenständiges Werkzeug: Geschichte, Installation, echte Befehle, Lizenzierung und ehrliche Grenzen. Für einen direkten Benchmark-Vergleich mit faster-whisper auf Apple Silicon und NVIDIA-GPUs siehe den [Whisper.cpp-vs-faster-whisper-Vergleich](/de/power-local-llm/local-whisper-stt-comparison-2026).',
           },
         ],
       },
@@ -656,9 +656,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Whisper.cpp vs faster-whisper 2026: Lokale STT-Benchmarks, Setup & GPU-Beschleunigung](/de/power-local-llm/local-whisper-stt-comparison-2026) — der direkte Vergleich für alle, die sich zwischen whisper.cpp und faster-whisper entscheiden müssen.',
-          'faster-whisper im Test — die CTranslate2-basierte Alternative, im selben Detailgrad getestet.',
+          'faster-whisper-Rezension — die CTranslate2-basierte Alternative, im selben Detailgrad getestet.',
           '[Einen vollständig offline Sprachassistenten bauen 2026](/de/power-local-llm/build-local-voice-assistant-2026) — whisper.cpp mit einem lokalen LLM und Piper TTS zu einer vollständigen Sprachpipeline verbinden.',
-          'Piper TTS im Test — das lokale Text-zu-Sprache-Gegenstück, um generierten Text offline wieder in Sprache umzuwandeln.',
+          'Piper-TTS-Rezension — das lokale Text-zu-Sprache-Gegenstück, um generierten Text offline wieder in Sprache umzuwandeln.',
           '[Das vollständige Local-LLM-Software-Verzeichnis](/de/directory) — ein umfassenderes Verzeichnis lokaler KI-Werkzeuge über alle Kategorien hinweg.',
         ],
       },
@@ -666,9 +666,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'Whisper.cpp im Test (2026): Lokale Spracherkennung in reinem C/C++',
+      headline: 'Whisper.cpp-Rezension (2026): Lokale Spracherkennung in reinem C/C++',
       description:
-        'Whisper.cpp im Test: der MIT-lizenzierte C/C++-Port von OpenAI Whisper für lokale Spracherkennung. Geschichte, Installation, echte CLI-Befehle, Lizenz und wann faster-whisper die bessere Wahl ist.',
+        'Whisper.cpp-Rezension: der MIT-lizenzierte C/C++-Port von OpenAI Whisper für lokale Spracherkennung. Geschichte, Installation, echte CLI-Befehle, Lizenz und wann faster-whisper die bessere Wahl ist.',
       url: 'https://promptquorum.com/de/power-local-llm/whisper-cpp-review',
       inLanguage: 'de',
       datePublished: '2026-09-05',
@@ -692,7 +692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Startseite', item: 'https://promptquorum.com' },
         { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/de/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'Whisper.cpp im Test (2026)', item: 'https://promptquorum.com/de/power-local-llm/whisper-cpp-review' },
+        { '@type': 'ListItem', position: 3, name: 'Whisper.cpp-Rezension (2026)', item: 'https://promptquorum.com/de/power-local-llm/whisper-cpp-review' },
       ],
     },
   },

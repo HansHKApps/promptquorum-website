@@ -394,14 +394,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-11',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocket-ai-review-hero-de.webp',
-    title: 'Pocket AI im Test: Offline-KI-Chat auf dem Gerät für iPhone',
-    seoTitle: 'Pocket AI Test: Offline-KI-Chat fürs iPhone',
+    title: 'Pocket-AI-Rezension: Offline-KI-Chat auf dem Gerät für iPhone',
+    seoTitle: 'Pocket-AI-Rezension: Offline-KI-Chat fürs iPhone',
     intro:
-      'Anders als viele lokale KI-Apps fürs iPhone, die nur als Sideload, TestFlight-Beta oder selbst gebautes GitHub-Projekt erscheinen, wird Pocket AI direkt über den [Apple App Store](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) vertrieben. Dieser Test behandelt, was die App leistet, was sie kostet und welche Hardware sie benötigt.',
+      'Anders als viele lokale KI-Apps fürs iPhone, die nur als Sideload, TestFlight-Beta oder selbst gebautes GitHub-Projekt erscheinen, wird Pocket AI direkt über den [Apple App Store](https://apps.apple.com/us/app/pocket-ai-no-internet/id6759989702) vertrieben. Diese Rezension behandelt, was die App leistet, was sie kostet und welche Hardware sie benötigt.',
     metaDescription:
-      'Pocket AI - No Internet Test 2026: kostenlose iPhone-App für Offline-KI-Chat auf dem Gerät via llama.cpp, einmaliger Pro-Kauf für Whisper-Spracheingabe, kein Abo. Preise, Anforderungen und App-Store-Vertrieb.',
+      'Pocket-AI-No-Internet-Rezension 2026: kostenlose iPhone-App für Offline-KI-Chat auf dem Gerät via llama.cpp, einmaliger Pro-Kauf für Whisper-Spracheingabe, kein Abo. Preise, Anforderungen und App-Store-Vertrieb.',
     twitterDescription:
-      'Pocket AI - No Internet Test 2026: eine kostenlose iPhone-App, die Open-Weight-Modelle auf dem Gerät via llama.cpp mit Metal-Beschleunigung ausführt. Einmaliger 4,99-$-Pro-Kauf für On-Device-Whisper-Spracheingabe. Kein Konto, kein Abo, funktioniert im Flugmodus.',
+      'Pocket-AI-No-Internet-Rezension 2026: eine kostenlose iPhone-App, die Open-Weight-Modelle auf dem Gerät via llama.cpp mit Metal-Beschleunigung ausführt. Einmaliger 4,99-$-Pro-Kauf für On-Device-Whisper-Spracheingabe. Kein Konto, kein Abo, funktioniert im Flugmodus.',
     audience:
       'iPhone-Nutzer, die eine kostenlose, offline funktionierende, lokale KI-Chat-App in Betracht ziehen — behandelt Preise, den Pro-Kauf, unterstützte Modellfamilien, Hardware-Anforderungen und den Vergleich mit anderen Einzel-App-Tests auf dieser Seite.',
     readTime: '8 Min. Lesezeit',
@@ -421,7 +421,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Qwen', 'Gemma', 'Llama', 'Mistral', 'Phi', 'DeepSeek'],
     current_hardware_mentioned: ['iPhone 12'],
     leadAnswerBlock:
-      '**Pocket AI - No Internet ist eine kostenlose iPhone-App, die Open-Weight-KI-Modelle vollständig auf dem Gerät über [llama.cpp](https://github.com/ggml-org/llama.cpp) mit Metal-Beschleunigung ausführt — ohne Konto, ohne Server, und vollständig offline nutzbar, sobald ein Modell heruntergeladen ist.** Entwickelt von Faisal, umfasst die Modellbibliothek laut Entwickler 28 Modelle aus den Familien Qwen, Gemma, Llama, Mistral, Phi und DeepSeek. Die App ist für Text-Chat kostenlos nutzbar; ein kostenpflichtiger Pro-Kauf schaltet On-Device-Whisper-Spracheingabe frei. Sie benötigt ein iPhone 12 oder neuer, was der Entwickler damit begründet, dass Inferenz speicherlimitiert ist. Zum Vergleich eignen sich auch der [Private-LLM-Test](/de/power-local-llm/private-llm-review) oder der [PocketPal-AI-Test](/de/power-local-llm/pocketpal-ai-review).',
+      '**Pocket AI - No Internet ist eine kostenlose iPhone-App, die Open-Weight-KI-Modelle vollständig auf dem Gerät über [llama.cpp](https://github.com/ggml-org/llama.cpp) mit Metal-Beschleunigung ausführt — ohne Konto, ohne Server, und vollständig offline nutzbar, sobald ein Modell heruntergeladen ist.** Entwickelt von Faisal, umfasst die Modellbibliothek laut Entwickler 28 Modelle aus den Familien Qwen, Gemma, Llama, Mistral, Phi und DeepSeek. Die App ist für Text-Chat kostenlos nutzbar; ein kostenpflichtiger Pro-Kauf schaltet On-Device-Whisper-Spracheingabe frei. Sie benötigt ein iPhone 12 oder neuer, was der Entwickler damit begründet, dass Inferenz speicherlimitiert ist. Zum Vergleich eignen sich auch der [Private-LLM-Rezension](/de/power-local-llm/private-llm-review) oder der [PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review).',
     quickAnswerTop: {
       en: {
         question: 'Is Pocket AI - No Internet worth downloading?',
@@ -500,7 +500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Pocket AI holen',
         content: [
           '**Pocket AI - No Internet ist direkt im Apple App Store erhältlich** — kein Sideloading, keine TestFlight-Beta und kein Selbstbauen aus dem Quellcode nötig.',
-          'Dieser Test ist eine Ergänzung zu PromptQuorums [Verzeichnis lokaler LLM-Software](/de/directory), das lokale KI-Tools über Plattformen hinweg auflistet; Pocket AI hat dort noch keinen eigenen Eintrag.',
+          'Diese Rezension ist eine Ergänzung zu PromptQuorums [Verzeichnis lokaler LLM-Software](/de/directory), das lokale KI-Tools über Plattformen hinweg auflistet; Pocket AI hat dort noch keinen eigenen Eintrag.',
         ],
         columns: ['Plattform', 'Holen'],
         rows: [
@@ -517,7 +517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Pocket AI - No Internet ist eine iPhone-App, die Open-Weight-Sprachmodelle herunterlädt und direkt auf dem Gerät ausführt, ohne serverseitige Komponente.** Sobald ein Modell heruntergeladen ist, benötigt die App keine Internetverbindung, um eine Antwort zu generieren — die Inferenz läuft lokal über llama.cpp, beschleunigt durch Apples Metal-Grafik-Framework.',
           'Laut Entwickler war die Motivation, dass andere lokale iPhone-KI-Apps typischerweise zuerst ein Konto, ein Abonnement oder eine Serverkommunikation verlangten, bevor man chatten konnte — Pocket AI ist so gebaut, dass keines davon nötig ist.',
-          'Dieser Test stützt sich auf die eigene Beschreibung der App-Architektur und Modellbibliothek durch den Entwickler sowie auf den öffentlichen App-Store-Eintrag, nicht auf eine unabhängige Code-Prüfung — die App ist quellcodegeschlossen (siehe Abschnitt Datenschutz unten).',
+          'Diese Rezension stützt sich auf die eigene Beschreibung der App-Architektur und Modellbibliothek durch den Entwickler sowie auf den öffentlichen App-Store-Eintrag, nicht auf eine unabhängige Code-Prüfung — die App ist quellcodegeschlossen (siehe Abschnitt Datenschutz unten).',
         ],
       },
       howToGetStarted: {
@@ -577,7 +577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Unterstützte Modelle',
         content: [
           '**Die Modellbibliothek von Pocket AI umfasst laut Entwickler 28 Open-Weight-Modelle aus den Familien Qwen, Gemma, Llama, Mistral, Phi und DeepSeek.** Diese Zahl stammt direkt vom Entwickler und wurde während der Kontaktaufnahme mit PromptQuorum von einer anfänglichen Beschreibung von "über 25" Modellen nach oben korrigiert — die Bibliothek der App scheint sich aktiv zu erweitern statt fest zu sein.',
-          'Modelle laufen über [llama.cpp](https://github.com/ggml-org/llama.cpp), eine Open-Source-Inferenz-Engine, wobei Apples Metal-Grafik-Framework die GPU-Beschleunigung auf dem Gerät übernimmt. Der Entwickler hat zum Zeitpunkt dieses Tests keine unabhängig verifizierten Benchmark-Zahlen für konkrete Modell-Geräte-Kombinationen veröffentlicht; Leser mit leistungskritischen Anforderungen sollten ein bestimmtes Modell selbst auf ihrem iPhone testen, bevor sie sich darauf verlassen.',
+          'Modelle laufen über [llama.cpp](https://github.com/ggml-org/llama.cpp), eine Open-Source-Inferenz-Engine, wobei Apples Metal-Grafik-Framework die GPU-Beschleunigung auf dem Gerät übernimmt. Der Entwickler hat zum Zeitpunkt dieser Rezension keine unabhängig verifizierten Benchmark-Zahlen für konkrete Modell-Geräte-Kombinationen veröffentlicht; Leser mit leistungskritischen Anforderungen sollten ein bestimmtes Modell selbst auf ihrem iPhone testen, bevor sie sich darauf verlassen.',
         ],
       },
       requirements: {
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Vorteil': '28-Modell-Bibliothek über wichtige Open-Weight-Familien',
             'Was das in der Praxis bedeutet': 'Auswahl zwischen Qwen, Gemma, Llama, Mistral, Phi und DeepSeek, ohne selbst nach Modelldateien zu suchen.',
-            'Einschränkung / Hinweis': 'Die Bibliothek wird vom Entwickler kuratiert, und dieser Test hat die Leistung nicht unabhängig über alle 28 Modelle auf konkreter iPhone-Hardware benchmarkt.',
+            'Einschränkung / Hinweis': 'Die Bibliothek wird vom Entwickler kuratiert, und diese Rezension hat die Leistung nicht unabhängig über alle 28 Modelle auf konkreter iPhone-Hardware benchmarkt.',
           },
           {
             'Vorteil': 'Kein Konto, vollständig offline nach dem Download',
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Vorteil': 'llama.cpp mit Metal-Beschleunigung',
             'Was das in der Praxis bedeutet': 'Nutzt eine weit verbreitete Open-Source-Inferenz-Engine statt einer proprietären Eigenentwicklung.',
-            'Einschränkung / Hinweis': 'Die tatsächliche Geschwindigkeit hängt vom konkreten Modell und iPhone-Modell ab; dieser Test veröffentlicht keine unabhängigen Benchmark-Zahlen.',
+            'Einschränkung / Hinweis': 'Die tatsächliche Geschwindigkeit hängt vom konkreten Modell und iPhone-Modell ab; diese Rezension veröffentlicht keine unabhängigen Benchmark-Zahlen.',
           },
         ],
       },
@@ -740,7 +740,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Sammelt Pocket AI persönliche Daten oder erfordert es ein Konto?',
-            a: 'Für Text-Chat ist kein Konto oder Login erforderlich. Da die App quellcodegeschlossen ist, stützt sich dieser Test auf die eigenen Aussagen des Entwicklers und den öffentlichen App-Store-Eintrag, nicht auf eine unabhängige Code-Prüfung.',
+            a: 'Für Text-Chat ist kein Konto oder Login erforderlich. Da die App quellcodegeschlossen ist, stützt sich diese Rezension auf die eigenen Aussagen des Entwicklers und den öffentlichen App-Store-Eintrag, nicht auf eine unabhängige Code-Prüfung.',
           },
           {
             q: 'Wie schneidet Pocket AI im Vergleich zu Private LLM oder PocketPal AI ab?',
@@ -754,7 +754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Pocket AI - No Internet hält ein einfaches Versprechen: eine kostenlose iPhone-App, die Open-Weight-Modelle vollständig auf dem Gerät über llama.cpp ausführt, ohne Konto und ohne Serverkommunikation, vertrieben über den Apple App Store statt als Sideload oder Beta-Build.',
           'Die 28-Modell-Bibliothek über die Familien Qwen, Gemma, Llama, Mistral, Phi und DeepSeek ist für eine kostenlose App ein vernünftiger Ausgangspunkt, und die eigene Begründung des Entwicklers für das iPhone-12-Minimum — speicherlimitierte Inferenz — ist eine plausible, konkrete Erklärung statt einer vagen Hardware-Anforderung.',
-          'Was diesen Test eher vorsichtig als begeistert hält, sind das junge Alter der App und der geschlossene Quellcode: Datenschutz- und Offline-Angaben beruhen auf dem Wort des Entwicklers statt auf unabhängiger Code-Prüfung, und die App hat eine kürzere Erfolgsbilanz als etabliertere Alternativen.',
+          'Was diese Rezension eher vorsichtig als begeistert hält, sind das junge Alter der App und der geschlossene Quellcode: Datenschutz- und Offline-Angaben beruhen auf dem Wort des Entwicklers statt auf unabhängiger Code-Prüfung, und die App hat eine kürzere Erfolgsbilanz als etabliertere Alternativen.',
           'Leser, die eine kostenlose Chat-App ohne Abonnement mit plausibler Datenschutz-Story auf dem Gerät möchten, sollten sie ausprobieren; Leser, denen eine etablierte App-Store-Erfolgsbilanz und unabhängig prüfbarer Quellcode wichtiger sind, sollten stattdessen mit [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) beginnen oder für [Private LLM](/de/power-local-llm/private-llm-review) budgetieren.',
         ],
       },
@@ -771,10 +771,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Private-LLM-Test](/de/power-local-llm/private-llm-review) — eine kostenpflichtige, etabliertere reine Apple-Alternative mit deutlich größerer Modellbibliothek.',
-          '[PocketPal-AI-Test](/de/power-local-llm/pocketpal-ai-review) — die kostenlose Open-Source-Alternative mit manuellem GGUF-Import.',
+          '[Private-LLM-Rezension](/de/power-local-llm/private-llm-review) — eine kostenpflichtige, etabliertere reine Apple-Alternative mit deutlich größerer Modellbibliothek.',
+          '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — die kostenlose Open-Source-Alternative mit manuellem GGUF-Import.',
           '[Die besten lokalen LLM-Apps fürs iPhone](/de/power-local-llm/best-local-llm-apps-iphone-2026) — die vollständige iPhone-App-Übersicht.',
-          '[Locally-AI-Test](/de/power-local-llm/locally-ai-review) — eine kostenlose Apple-MLX-basierte Alternative.',
+          '[Locally-AI-Rezension](/de/power-local-llm/locally-ai-review) — eine kostenlose Apple-MLX-basierte Alternative.',
           '[Das vollständige lokale LLM-Software-Verzeichnis](/de/directory) — ein umfassenderes Verzeichnis lokaler LLM-Tools über Plattformen hinweg.',
         ],
       },

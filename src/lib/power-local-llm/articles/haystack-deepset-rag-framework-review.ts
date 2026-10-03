@@ -262,10 +262,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'Entwickler und technische Teams, die produktive Such- und RAG-Pipelines bauen und Haystack gegen LangChain, LlamaIndex oder eine selbst gebaute Retrieval-Lösung evaluieren',
     primaryTerm: 'Haystack',
-    title: 'Haystack von deepset: Python-RAG-Framework mit Pipeline-Architektur im Test',
-    seoTitle: 'Haystack: deepset-RAG-Framework im Detail-Test',
+    title: 'Haystack-Rezension: Python-RAG-Framework von deepset mit Pipeline-Architektur',
+    seoTitle: 'Haystack-Rezension: deepset-RAG-Framework im Detail',
     intro: 'Haystack ist älter als der Begriff "RAG" — deepset baute es 2019 als Framework für extraktive Frage-Antwort-Systeme, Jahre bevor Retrieval-Augmented Generation zum Standardansatz wurde, um ein LLM auf eigenen Dokumenten zu verankern. Diese Herkunft aus der Suchmaschinen-Welt prägt die Architektur bis heute: Jeder Schritt ist eine typisierte Component, verdrahtet in eine explizite Pipeline — keine Kette impliziter Aufrufe.',
-    metaDescription: 'Haystack ist deepsets Open-Source-Python-Framework (Apache 2.0) für produktive RAG- und Suchpipelines, aufgebaut auf expliziten Component- und Pipeline-Abstraktionen. Test mit lauffähigem Codebeispiel.',
+    metaDescription: 'Haystack ist deepsets Open-Source-Python-Framework (Apache 2.0) für produktive RAG- und Suchpipelines, aufgebaut auf expliziten Component- und Pipeline-Abstraktionen. Rezension mit lauffähigem Codebeispiel.',
     readTime: '12 Min. Lesezeit',
     targetKeywords: [
       'Haystack Test',
@@ -322,7 +322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'deepset verkauft zusätzlich Haystack Enterprise Platform und Haystack Enterprise Starter — kommerzielle Schichten mit visuellem Pipeline-Builder und verwaltetem Deployment auf demselben Open-Source-Kern',
         ],
         callouts: [
-          { type: 'note', text: 'Das Open-Source-Framework und deepsets kommerzielle Produkte sind getrennt: Dieser Test behandelt ausschließlich den kostenlosen, selbst gehosteten Apache-2.0-Code, sofern ein Abschnitt nicht ausdrücklich "Enterprise Platform" nennt.' },
+          { type: 'note', text: 'Das Open-Source-Framework und deepsets kommerzielle Produkte sind getrennt: Diese Rezension behandelt ausschließlich den kostenlosen, selbst gehosteten Apache-2.0-Code, sofern ein Abschnitt nicht ausdrücklich "Enterprise Platform" nennt.' },
         ],
       },
       overview: {
@@ -478,7 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Wie unterscheidet sich Haystack von LlamaIndex?', a: 'Haystack organisiert Pipelines um explizite, typisierte Components, verdrahtet in einen Pipeline-Graphen. LlamaIndex organisiert um den Bau eines Index über den eigenen Daten und die Abfrage über einen Retriever und QueryEngine. LlamaIndex ist meist schneller zum Indexieren von Daten geeignet; Haystacks expliziter Graph bietet mehr Sichtbarkeit und Kontrolle für Produktivpipelines.' },
           { q: 'Wie unterscheidet sich Haystack von LangChain?', a: 'Beide sind code-first-Python-Frameworks ohne visuellen Builder im Open-Source-Kern. LangChain dreht sich um Chains und, über LangGraph, um einen State-Graph für Agenten. Haystack dreht sich um eine Pipeline aus typisierten Components, wobei Retrieval und Suche als erstklassige, messbare Anliegen behandelt werden, statt als ein Glied in einer allgemeinen Chain.' },
           { q: 'Braucht Haystack eine bestimmte Vektordatenbank?', a: 'Nein. Haystack liefert einen In-Memory-Document-Store für die Entwicklung und integriert mehrere Vektordatenbanken und Such-Backends, darunter Elasticsearch, Weaviate und Pinecone, über dieselbe Component-Schnittstelle — ein Backend-Wechsel erfordert kein Neuschreiben der Pipeline.' },
-          { q: 'Was ist deepsets Haystack Enterprise Platform?', a: 'Das ist deepsets kostenpflichtiges, kommerzielles Angebot auf Basis des Open-Source-Haystack-Frameworks, das einen visuellen Pipeline-Builder sowie verwaltete oder selbst gehostete Deployment-Optionen ergänzt. Es ist getrennt vom kostenlosen, selbst gehosteten Open-Source-Framework unter Apache 2.0, das dieser Test behandelt.' },
+          { q: 'Was ist deepsets Haystack Enterprise Platform?', a: 'Das ist deepsets kostenpflichtiges, kommerzielles Angebot auf Basis des Open-Source-Haystack-Frameworks, das einen visuellen Pipeline-Builder sowie verwaltete oder selbst gehostete Deployment-Optionen ergänzt. Es ist getrennt vom kostenlosen, selbst gehosteten Open-Source-Framework unter Apache 2.0, das diese Rezension behandelt.' },
           { q: 'Ist Haystack DSGVO-konform einsetzbar?', a: 'Bei Self-Hosting auf eigener Infrastruktur in der EU/DACH-Region verarbeiten Sie Dokumente und Anfragen selbst, was Artikel 28 DSGVO (Auftragsverarbeitung) vereinfacht, solange keine externen LLM-APIs außerhalb der EU eingebunden werden. Modellanbieter und Document-Store-Backend bestimmen den tatsächlichen Datenfluss — beides ist bei Haystack frei wählbar, prüfen Sie aber jede Integration einzeln auf ihren Serverstandort. Dies ist keine Rechtsberatung; lassen Sie die konkrete datenschutzrechtliche Einordnung für Ihren Anwendungsfall von einem Datenschutzbeauftragten oder einer Kanzlei prüfen.' },
           { q: 'Ist Haystack für den deutschen Mittelstand geeignet?', a: 'Für Teams mit Python-Kenntnissen, die eine produktive, messbare Such- oder RAG-Lösung selbst hosten wollen, ja — das Framework stammt von einem deutschen Unternehmen und wird aktiv gepflegt. Für Teams ohne Entwicklungsressourcen ist eine No-Code-RAG-Anwendung oder deepsets kostenpflichtige Enterprise Platform mit visuellem Builder meist der praktischere Einstieg.' },
         ],

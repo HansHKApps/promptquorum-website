@@ -772,10 +772,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Beginner',
     audience: 'Datenschutzbewusste Nutzerinnen und Nutzer, Entwicklerinnen und Entwickler sowie nicht-technische Personen, die Atomic Chat als lokale KI-App, als lokale OpenAI-kompatible API für Agenten oder als beides bewerten möchten',
     primaryTerm: 'Atomic Chat',
-    title: 'Atomic Chat Test: Lokale KI, Agenten und API',
-    seoTitle: 'Atomic Chat Test: Lokale KI, Agenten und API',
+    title: 'Atomic-Chat-Rezension: Lokale KI, Agenten und API',
+    seoTitle: 'Atomic-Chat-Rezension: Lokale KI, Agenten und API',
     intro: 'Atomic Chat ist eine kostenlose, quelloffene App, mit der sich KI-Modelle direkt auf dem eigenen Gerät ausführen lassen — ohne Konto, ohne Abonnement und mit lokaler Inferenz, die keinen Cloud-Anbieter voraussetzt. Sie läuft auf macOS, Windows, Linux, iOS und Android, durchsucht über 1.000 Modelle von Hugging Face, stellt eine lokale OpenAI-kompatible API für Entwicklerinnen, Entwickler und Agenten bereit und unterstützt zusätzlich optionale Cloud-Modelle von Anbietern wie OpenAI und Anthropic, falls Sie einen davon verbinden möchten.',
-    metaDescription: 'Atomic Chat im Test: kostenlose, quelloffene lokale KI-App für Mac, Windows, Linux, iOS und Android mit Agenten, lokaler OpenAI-kompatibler API und optionalen Cloud-Modellen.',
+    metaDescription: 'Atomic-Chat-Rezension: kostenlose, quelloffene lokale KI-App für Mac, Windows, Linux, iOS und Android mit Agenten, lokaler OpenAI-kompatibler API und optionalen Cloud-Modellen.',
     readTime: '14 Min. Lesezeit',
     targetKeywords: [
       'Atomic Chat Test',
@@ -814,7 +814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Für wen eignet sich Atomic Chat?', anchor: 'who-should-use-atomic-chat' },
       { label: 'Atomic Chat vs. Alternativen', anchor: 'atomic-chat-vs-alternatives' },
       { label: 'Fazit', anchor: 'atomic-chat-verdict' },
-      { label: 'Grenzen und was dieser Test nicht abdeckt', anchor: 'limitations' },
+      { label: 'Grenzen und was diese Rezension nicht abdeckt', anchor: 'limitations' },
       { label: 'Häufige Fehler', anchor: 'common-mistakes' },
       { label: 'Häufig gestellte Fragen', anchor: 'faq' },
     ],
@@ -839,7 +839,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Begann als Fork von [Jan](https://jan.ai) von Menlo Research, bevor eine eigene Richtung bei Inferenz-Engine, Agent und API entwickelt wurde',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test basiert auf der offiziellen Website von Atomic Chat, dem öffentlichen GitHub-Repository und öffentlich verfügbaren Produktinformationen, nicht auf einem unabhängigen praktischen Benchmark. Konkrete Geschwindigkeits- oder Genauigkeitswerte, die Atomic Chat zugeschrieben werden, sind als Herstellerangaben gekennzeichnet, da sie für diesen Artikel nicht unabhängig gemessen wurden.' },
+          { type: 'note', text: 'Diese Rezension basiert auf der offiziellen Website von Atomic Chat, dem öffentlichen GitHub-Repository und öffentlich verfügbaren Produktinformationen, nicht auf einem unabhängigen praktischen Benchmark. Konkrete Geschwindigkeits- oder Genauigkeitswerte, die Atomic Chat zugeschrieben werden, sind als Herstellerangaben gekennzeichnet, da sie für diesen Artikel nicht unabhängig gemessen wurden.' },
         ],
       },
       pricing: {
@@ -868,7 +868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Chat- und Projektorganisation mit dauerhaftem Gedächtnis, sodass Kontext über Sitzungen hinweg erhalten bleibt',
           'Eine vom Hersteller entwickelte Inferenz-Optimierung namens TurboQuant, basierend auf einem Fork von llama.cpp',
         ],
-        note: 'Atomic Chat begann laut GitHub-Repository als Fork von [Jan](https://jan.ai) von Menlo Research, bevor eine eigene Richtung entwickelt wurde — einschließlich TurboQuant, Agenten-Integrationen und der unten beschriebenen lokalen API. Jan gehört außerdem zu den später in diesem Test verglichenen Apps, sodass Leserinnen und Leser, die Jan bereits kennen, einen nützlichen Bezugspunkt dafür haben, wie sich Atomic Chat davon entfernt hat.',
+        note: 'Atomic Chat begann laut GitHub-Repository als Fork von [Jan](https://jan.ai) von Menlo Research, bevor eine eigene Richtung entwickelt wurde — einschließlich TurboQuant, Agenten-Integrationen und der unten beschriebenen lokalen API. Jan gehört außerdem zu den später in dieser Rezension verglichenen Apps, sodass Leserinnen und Leser, die Jan bereits kennen, einen nützlichen Bezugspunkt dafür haben, wie sich Atomic Chat davon entfernt hat.',
       },
       features: {
         id: 'atomic-chat-features',
@@ -925,7 +925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ein separater lokaler Inferenz-Server (etwa ein eigenständiger llama.cpp-Serverprozess) ist nicht zwingend nötig, da Atomic Chat den Endpunkt selbst bereitstellt',
           'Lokale und optionale Cloud-Modelle lassen sich über dieselbe API nutzen, sodass ein Wechsel zwischen beiden nicht bedeutet, jedes angebundene Tool neu konfigurieren zu müssen',
         ],
-        note: 'Das ist einer der für Entwicklerinnen und Entwickler relevanteren Unterschiede zwischen Atomic Chat und rein lokalen Einzweck-Chat-Apps: Es fungiert als lokales Inferenz-Backend, das andere Tools nutzen, nicht nur als eigenständiges Chatfenster. Ob diese Integrationsliste aktuell bleibt und wie sich jede einzelne Integration verhält, wurde für diesen Test nicht unabhängig geprüft — verifizieren Sie das jeweils genutzte Tool anhand der eigenen Dokumentation von Atomic Chat, bevor Sie sich darauf verlassen.',
+        note: 'Das ist einer der für Entwicklerinnen und Entwickler relevanteren Unterschiede zwischen Atomic Chat und rein lokalen Einzweck-Chat-Apps: Es fungiert als lokales Inferenz-Backend, das andere Tools nutzen, nicht nur als eigenständiges Chatfenster. Ob diese Integrationsliste aktuell bleibt und wie sich jede einzelne Integration verhält, wurde für diese Rezension nicht unabhängig geprüft — verifizieren Sie das jeweils genutzte Tool anhand der eigenen Dokumentation von Atomic Chat, bevor Sie sich darauf verlassen.',
       },
       turboQuant: {
         id: 'turboquant-explained',
@@ -1016,7 +1016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Meiden Sie Atomic Chat, wenn',
             list: [
               'Sie eine minimalistische Einzweck-Laufzeitumgebung wollen und lieber keine Cloud-Anbieter-Einstellungen, Agentenfunktionen oder einen API-Server überhaupt in der App hätten',
-              'Sie vor der Wahl einer App vom Hersteller veröffentlichte, unabhängig geprüfte Benchmarkzahlen brauchen — dieser Test und die eigenen Materialien des Herstellers zum Veröffentlichungszeitpunkt liefern keine von Dritten geprüften Leistungsdaten zu TurboQuant oder zur allgemeinen Inferenzgeschwindigkeit',
+              'Sie vor der Wahl einer App vom Hersteller veröffentlichte, unabhängig geprüfte Benchmarkzahlen brauchen — diese Rezension und die eigenen Materialien des Herstellers zum Veröffentlichungszeitpunkt liefern keine von Dritten geprüften Leistungsdaten zu TurboQuant oder zur allgemeinen Inferenzgeschwindigkeit',
               'Sie speziell Enterprise-Support-Verträge, SLAs oder Compliance-Zertifizierungen für eine regulierte Branche benötigen — klären Sie diese Anforderungen direkt mit dem Hersteller, bevor Sie die App dafür einsetzen',
               'Ihre Hardware moderne lokale Modelle unabhängig von der gewählten App nicht komfortabel ausführen kann — prüfen Sie die Größe eines Modells gegen den Speicher Ihres Geräts, statt anzunehmen, dass jede lokale KI-App sich schnell anfühlt',
             ],
@@ -1064,13 +1064,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       limitations: {
         id: 'limitations',
-        title: 'Was deckt dieser Test nicht ab?',
-        content: 'Dieser Test fasst die öffentlich dokumentierten Funktionen von Atomic Chat, das GitHub-Repository und die eigenen Angaben des Herstellers zusammen. Es handelt sich nicht um einen praktischen Benchmark-Bericht, und diese Lücke offen zu benennen ist wichtiger, als vollständig zu wirken.',
+        title: 'Was deckt diese Rezension nicht ab?',
+        content: 'Diese Rezension fasst die öffentlich dokumentierten Funktionen von Atomic Chat, das GitHub-Repository und die eigenen Angaben des Herstellers zusammen. Es handelt sich nicht um einen praktischen Benchmark-Bericht, und diese Lücke offen zu benennen ist wichtiger, als vollständig zu wirken.',
         items: [
           'Keine unabhängig gemessenen Werte für Tokens pro Sekunde, Latenz oder TurboQuant-Geschwindigkeit/-Speicherverbrauch — keine davon sind als unabhängig verifiziert enthalten, da für diesen Artikel keine Messungen durchgeführt wurden',
           'Kein unabhängiges Sicherheitsaudit des Anspruchs „0 Bytes verlassen Ihr Gerät" für lokale Inferenz — er wird hier als erklärte Position des Herstellers wiedergegeben, nicht als verifizierter Befund',
           'Kein direkter Vergleich der Ausgabequalität mit LM Studio, Jan AI, GPT4All oder AnythingLLM — Unterschiede in der Antwortqualität hängen stark vom jeweils geladenen Modell ab, nicht nur von der verwendeten App',
-          'Keine unabhängige Prüfung der dokumentierten API-Integrationen (Claude Code, Codex CLI, Cline, OpenCode, Goose, OpenHands, Copilot CLI, Kilo Code, Zed) — dieser Test gibt wieder, was das Repository von Atomic Chat dokumentiert, nicht Ergebnisse aus dem Verbinden jedes einzelnen Tools',
+          'Keine unabhängige Prüfung der dokumentierten API-Integrationen (Claude Code, Codex CLI, Cline, OpenCode, Goose, OpenHands, Copilot CLI, Kilo Code, Zed) — diese Rezension gibt wieder, was das Repository von Atomic Chat dokumentiert, nicht Ergebnisse aus dem Verbinden jedes einzelnen Tools',
           'Keine Abdeckung von Enterprise-Support-Konditionen, SLAs oder Compliance-Zertifizierungen — wenden Sie sich für solche Anforderungen direkt an den Hersteller',
         ],
         note: 'Wenn eine dieser Lücken für Ihre Entscheidung ausschlaggebend ist, besteht der verantwortungsvolle nächste Schritt darin, Atomic Chat selbst herunterzuladen (kostenlos, ohne Konto für die lokale Nutzung) und das für Sie relevante Modell, die Integration oder den Workflow selbst zu testen, statt sich auf einen einzelnen Test — einschließlich diesem hier — zu verlassen.',

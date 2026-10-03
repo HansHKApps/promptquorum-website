@@ -363,14 +363,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Entwickler, die eine lokal-first KI-Coding-IDE evaluieren, bei der sie selbst den LLM-Anbieter wählen können, statt an einen Anbieter gebunden zu sein',
     primaryTerm: 'Bodega One Code',
-    title: 'Bodega One Code im Test: Eine lokal-first BYOLLM-Coding-IDE',
-    seoTitle: 'Bodega One Code Test: BYOLLM-Coding-IDE',
+    title: 'Bodega-One-Code-Rezension: Eine lokal-first BYOLLM-Coding-IDE',
+    seoTitle: 'Bodega-One-Code-Rezension: BYOLLM-Coding-IDE',
     intro:
-      'Bodega One Code ist eine Coding-IDE, die einen Code-Editor, ein KI-Chat-Fenster und einen autonomen Coding-Agenten in einer Anwendung bündelt, die auf dem eigenen Rechner läuft. Das zentrale Konzept ist „Bring Your Own LLM" (BYOLLM): Statt fest an einen Modellanbieter gebunden zu sein, lässt sich Bodega One Code auf Ollama, LM Studio, llama.cpp oder eine Cloud-API wie OpenAI oder Anthropic ausrichten — laut Hersteller lässt sich dabei zwischen Anbietern wechseln, ohne die Anwendung neu zu starten. Dieser Test beschreibt, was die IDE laut den eigenen Produktseiten von Bodega One Code enthält, wie das Anbieter- und Agentensystem funktioniert, welche Preis- und Lizenzbedingungen aktuell gelten und wie das Tool im Vergleich zu anderen lokal-fähigen Coding-Tools wie Continue.dev, Cline und Aider abschneidet.',
+      'Bodega One Code ist eine Coding-IDE, die einen Code-Editor, ein KI-Chat-Fenster und einen autonomen Coding-Agenten in einer Anwendung bündelt, die auf dem eigenen Rechner läuft. Das zentrale Konzept ist „Bring Your Own LLM" (BYOLLM): Statt fest an einen Modellanbieter gebunden zu sein, lässt sich Bodega One Code auf Ollama, LM Studio, llama.cpp oder eine Cloud-API wie OpenAI oder Anthropic ausrichten — laut Hersteller lässt sich dabei zwischen Anbietern wechseln, ohne die Anwendung neu zu starten. Diese Rezension beschreibt, was die IDE laut den eigenen Produktseiten von Bodega One Code enthält, wie das Anbieter- und Agentensystem funktioniert, welche Preis- und Lizenzbedingungen aktuell gelten und wie das Tool im Vergleich zu anderen lokal-fähigen Coding-Tools wie Continue.dev, Cline und Aider abschneidet.',
     metaDescription:
-      'Bodega One Code im Test: eine lokal-first Coding-IDE mit BYOLLM-Anbieterwechsel, Monaco-Editor und autonomem Agenten. Preise, Lizenz, Air-Gap-Modus und Vergleich mit Continue.dev, Cline und Aider.',
+      'Bodega-One-Code-Rezension: eine lokal-first Coding-IDE mit BYOLLM-Anbieterwechsel, Monaco-Editor und autonomem Agenten. Preise, Lizenz, Air-Gap-Modus und Vergleich mit Continue.dev, Cline und Aider.',
     twitterDescription:
-      'Bodega One Code Test 2026: lokal-first Coding-IDE, BYOLLM über 10+ Anbieter, Monaco-Editor, autonomer Agent, Air-Gap-Modus. Preise, Lizenz und Vergleich mit Continue.dev, Cline und Aider.',
+      'Bodega-One-Code-Rezension 2026: lokal-first Coding-IDE, BYOLLM über 10+ Anbieter, Monaco-Editor, autonomer Agent, Air-Gap-Modus. Preise, Lizenz und Vergleich mit Continue.dev, Cline und Aider.',
     readTime: '10 Min. Lesezeit',
     targetKeywords: [
       'bodega one code test',
@@ -456,7 +456,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Dieser Test beschreibt, was Bodega One Code auf bodegaone.ai und im GitHub-Releases-Repository ([github.com/BodegaoneAI/bodegaone-releases](https://github.com/BodegaoneAI/bodegaone-releases)) über sich selbst veröffentlicht. PromptQuorum hat die Verifikationsschleife, den Air-Gap-Modus oder die Latenz beim Anbieterwechsel nicht unabhängig getestet, und es besteht keine Affiliate- oder Geschäftsbeziehung zwischen PromptQuorum und Bodega One Code.',
+            text: 'Diese Rezension beschreibt, was Bodega One Code auf bodegaone.ai und im GitHub-Releases-Repository ([github.com/BodegaoneAI/bodegaone-releases](https://github.com/BodegaoneAI/bodegaone-releases)) über sich selbst veröffentlicht. PromptQuorum hat die Verifikationsschleife, den Air-Gap-Modus oder die Latenz beim Anbieterwechsel nicht unabhängig getestet, und es besteht keine Affiliate- oder Geschäftsbeziehung zwischen PromptQuorum und Bodega One Code.',
           },
         ],
       },
@@ -513,7 +513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was ist die 5-stufige Verifikationsschleife?',
         content: [
           '**Bodega One Code beschreibt eine 5-stufige Verifikationsschleife, die jede vom Agenten vorgenommene Änderung durchläuft, bevor sie als abgeschlossen markiert wird — mit Syntaxprüfung, Typprüfung und Tests.** Dies ist die Eigenbeschreibung der Quality Enforcement Layer durch den Hersteller; PromptQuorum hat weder Genauigkeit noch Falsch-Positiv-Rate noch Auswirkung auf die Bearbeitungszeit unabhängig gemessen.',
-          'Die praktische Konsequenz laut Herstellerbeschreibung ist, dass der Agent defekte Syntax, Typfehler und fehlschlagende Tests selbst erkennen soll, statt diese Prüfung vollständig der Entwicklerin oder dem Entwickler im Nachhinein zu überlassen. Ob das in der Praxis trägt, hängt von Sprache, Testabdeckung und Konfiguration des jeweiligen Projekts ab — nichts davon wurde in diesem Test direkt geprüft.',
+          'Die praktische Konsequenz laut Herstellerbeschreibung ist, dass der Agent defekte Syntax, Typfehler und fehlschlagende Tests selbst erkennen soll, statt diese Prüfung vollständig der Entwicklerin oder dem Entwickler im Nachhinein zu überlassen. Ob das in der Praxis trägt, hängt von Sprache, Testabdeckung und Konfiguration des jeweiligen Projekts ab — nichts davon wurde in dieser Rezension direkt geprüft.',
           'Die Quality Enforcement Layer und die zugehörige agentische Orchestrierung sind proprietäre Komponenten von Bodega One Code und nicht Teil einer Open-Source-Veröffentlichung, auch wenn für andere Teile der Codebasis nach der Distribution eine Business Source License gilt.',
         ],
       },
@@ -559,7 +559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Vorteil': 'Lokal-first, mit Air-Gap-Option',
             'Was das in der Praxis bedeutet': 'Lässt sich so konfigurieren, dass es vollständig gegen lokale Modelle ohne ausgehenden Netzwerkverkehr läuft.',
-            'Einschränkung / Hinweis': 'Wirksamkeit des Air-Gap-Modus und Genauigkeit der Verifikationsschleife sind Herstellerangaben, die in diesem Test nicht unabhängig geprüft wurden.',
+            'Einschränkung / Hinweis': 'Wirksamkeit des Air-Gap-Modus und Genauigkeit der Verifikationsschleife sind Herstellerangaben, die in dieser Rezension nicht unabhängig geprüft wurden.',
           },
           {
             'Vorteil': 'Keine Abo-Preise',
@@ -635,7 +635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Entwickler, die in VS Code selbst bleiben wollen.** Bodega One Code ist eine eigenständige Anwendung, keine VS-Code-Erweiterung — wer KI-Funktionen im bestehenden VS-Code-Setup ergänzen möchte, ist mit Continue.dev oder Cline besser bedient.',
           '**Teams, die durchgängig vollständig quelloffenes Tooling benötigen.** Die Quality Enforcement Layer und die agentische Orchestrierung sind proprietär, und für manche Komponenten gilt nach der Distribution eine Business Source License — Teams, die jede Schicht als Open Source benötigen (wie bei Aider, Continue.dev oder Cline), sollten zuerst die Lizenzbedingungen prüfen.',
-          '**Wer die Aussagen zu Verifikationsschleife oder Air-Gap-Modus unabhängig geprüft haben muss, bevor er sich darauf verlässt.** Dieser Test gibt wieder, was Bodega One Code über die 5-stufige Verifikationsschleife und den 9-schichtigen Air-Gap-Modus veröffentlicht; keines von beidem wurde von PromptQuorum benchmarkt oder sicherheitsgeprüft. Regulierte oder hochsichere Umgebungen sollten eine eigene Prüfung durchführen.',
+          '**Wer die Aussagen zu Verifikationsschleife oder Air-Gap-Modus unabhängig geprüft haben muss, bevor er sich darauf verlässt.** Diese Rezension gibt wieder, was Bodega One Code über die 5-stufige Verifikationsschleife und den 9-schichtigen Air-Gap-Modus veröffentlicht; keines von beidem wurde von PromptQuorum benchmarkt oder sicherheitsgeprüft. Regulierte oder hochsichere Umgebungen sollten eine eigene Prüfung durchführen.',
           '**Nutzer, die einen reinen Terminal-Workflow brauchen.** Bodega One Code ist eine grafische Anwendung rund um einen Editor; wer ein kommandozeilenorientiertes Pair-Programming-Tool bevorzugt, sollte sich Aider ansehen.',
           '**Wer die heutigen kostenlosen Beta-Preise als langfristige Garantie einplant.** Preise und Lizenzbedingungen nach der Beta sind die vom Hersteller angegebene Absicht, keine vertragliche Zusicherung — prüfen Sie aktuelle Bedingungen direkt auf bodegaone.ai, bevor Sie damit kalkulieren.',
         ],

@@ -447,7 +447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tool': '[LangGraph](https://www.langchain.com/langgraph)', 'Oberfläche': 'Python-/TS-Code', 'Lizenz': 'MIT', 'Träger': 'LangChain, Inc.', 'Pflegestatus': 'Aktiv' },
           { 'Tool': '[Langflow](https://www.langflow.org)', 'Oberfläche': 'Visuell, Python-basiert', 'Lizenz': 'MIT', 'Träger': 'IBM (via DataStax)', 'Pflegestatus': 'Aktiv' },
         ],
-        note: 'Eine ausführliche Einordnung von Langflows Eigentümerschaft und Self-Hosting-Weg finden Sie im [Langflow-Test](/de/power-local-llm/langflow-visual-ai-orchestration-review). Wie gut lokale Agenten-Stacks bei echten Aufgaben tatsächlich abschneiden, zeigt [Lokale KI-Agenten 2026: Was wirklich funktioniert](/de/power-local-llm/autonomous-local-agents-actually-work).',
+        note: 'Eine ausführliche Einordnung von Langflows Eigentümerschaft und Self-Hosting-Weg finden Sie im [Langflow-Rezension](/de/power-local-llm/langflow-visual-ai-orchestration-review). Wie gut lokale Agenten-Stacks bei echten Aufgaben tatsächlich abschneiden, zeigt [Lokale KI-Agenten 2026: Was wirklich funktioniert](/de/power-local-llm/autonomous-local-agents-actually-work).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -498,7 +498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Lokale KI-Agenten 2026: Was wirklich funktioniert (und was noch scheitert)](/de/power-local-llm/autonomous-local-agents-actually-work) — ein getesteter Vergleich lokaler Agenten-Stacks für Leser, die ein funktionierendes lokales Setup brauchen statt einer historischen Referenz wie BabyAGI.',
-          '[Langflow Test 2026: Visueller LangChain-Builder unter IBM](/de/power-local-llm/langflow-visual-ai-orchestration-review) — ein aktiv gepflegter, konzerngestützter visueller Agenten-/RAG-Builder zum Vergleich.',
+          '[Langflow-Rezension 2026: Visueller LangChain-Builder unter IBM](/de/power-local-llm/langflow-visual-ai-orchestration-review) — ein aktiv gepflegter, konzerngestützter visueller Agenten-/RAG-Builder zum Vergleich.',
           '[Local LLM Software-Verzeichnis](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des BabyAGI-Eintrags in der Tabelle spezialisierter Tools.',
         ],
       },

@@ -329,19 +329,19 @@ for chunk in tts.tts_stream(
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/xtts-v2-review-hero-de.webp',
-    title: 'XTTS v2 im Test: Mehrsprachiges Voice-Cloning aus 6 Sekunden Audio',
-    seoTitle: 'XTTS v2 im Test: Mehrsprachiges Voice-Cloning',
+    title: 'XTTS-v2-Rezension: Mehrsprachiges Voice-Cloning aus 6 Sekunden Audio',
+    seoTitle: 'XTTS-v2-Rezension: Mehrsprachiges Voice-Cloning',
     intro:
-      'XTTS v2 ist ein mehrsprachiges Voice-Cloning-Modell von Coqui, veröffentlicht auf [Hugging Face](https://huggingface.co/coqui/XTTS-v2), das eine Stimme aus nur 6 Sekunden Referenzaudio klont und sie in 17 Sprachen sprechen lässt. Es läuft über das [Coqui-TTS-Toolkit](/de/power-local-llm/coqui-tts-review) — der aktiv gepflegte Fork ist [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) — oder kann eigenständig über die Modellgewichte verwendet werden. Dieser Test behandelt, was XTTS v2 tatsächlich tut, echte Nutzungsbefehle, seine Lizenz (die Coqui Public Model License, CPML, die nicht-kommerziell ist) und wo es das richtige Werkzeug ist und wo nicht — denn Coqui AI, das Unternehmen, das es ursprünglich veröffentlichte, stellte seine kostenpflichtigen Dienste im Dezember 2023 ein.',
+      'XTTS v2 ist ein mehrsprachiges Voice-Cloning-Modell von Coqui, veröffentlicht auf [Hugging Face](https://huggingface.co/coqui/XTTS-v2), das eine Stimme aus nur 6 Sekunden Referenzaudio klont und sie in 17 Sprachen sprechen lässt. Es läuft über das [Coqui-TTS-Toolkit](/de/power-local-llm/coqui-tts-review) — der aktiv gepflegte Fork ist [idiap/coqui-ai-TTS](https://github.com/idiap/coqui-ai-TTS) — oder kann eigenständig über die Modellgewichte verwendet werden. Diese Rezension behandelt, was XTTS v2 tatsächlich tut, echte Nutzungsbefehle, seine Lizenz (die Coqui Public Model License, CPML, die nicht-kommerziell ist) und wo es das richtige Werkzeug ist und wo nicht — denn Coqui AI, das Unternehmen, das es ursprünglich veröffentlichte, stellte seine kostenpflichtigen Dienste im Dezember 2023 ein.',
     metaDescription:
-      'XTTS v2 im Test: Coquis mehrsprachiges Voice-Cloning-Modell, klont eine Stimme aus 6 Sekunden Audio in 17 Sprachen. Echte Befehle, die nicht-kommerzielle CPML-Lizenz und ehrliche Grenzen für 2026.',
+      'XTTS-v2-Rezension: Coquis mehrsprachiges Voice-Cloning-Modell, klont eine Stimme aus 6 Sekunden Audio in 17 Sprachen. Echte Befehle, die nicht-kommerzielle CPML-Lizenz und ehrliche Grenzen für 2026.',
     twitterDescription:
-      'XTTS v2 im Test 2026: Coquis Voice-Cloning-Modell klont eine Stimme aus nur 6 Sekunden Referenzaudio und spricht sie in 17 Sprachen. Echte Befehle, die nicht-kommerzielle CPML-Lizenz erklärt, und wann Sie stattdessen etwas anderes nutzen sollten.',
+      'XTTS-v2-Rezension 2026: Coquis Voice-Cloning-Modell klont eine Stimme aus nur 6 Sekunden Referenzaudio und spricht sie in 17 Sprachen. Echte Befehle, die nicht-kommerzielle CPML-Lizenz erklärt, und wann Sie stattdessen etwas anderes nutzen sollten.',
     audience:
       'Entwickler und Forscher, die lokales, selbst gehostetes Voice-Cloning für private Projekte, Forschung oder Prototyping evaluieren und die nicht-kommerzielle Lizenz verstehen müssen, bevor sie etwas Reales darauf aufbauen.',
     readTime: '12 Min. Lesezeit',
     educationalLevel: 'Intermediate',
-    primaryTerm: 'XTTS v2 im Test',
+    primaryTerm: 'XTTS v2 Rezension',
     targetKeywords: [
       'xtts v2 test',
       'xtts v2',
@@ -427,7 +427,7 @@ for chunk in tts.tts_stream(
           '**Läuft über das Coqui-TTS-Toolkit.** Der primäre unterstützte Weg, XTTS v2 auszuführen, ist über [Coqui TTS](/de/power-local-llm/coqui-tts-review) (`pip install coqui-tts`), das es als `TTS("tts_models/multilingual/multi-dataset/xtts_v2")` bereitstellt.',
           '**Wiederverwendung von Speaker-Embeddings.** Über das jedes Mal erneute Übergeben eines rohen Referenzclips hinaus unterstützt das Toolkit das Berechnen und Wiederverwenden des latenten Embeddings eines Sprechers, was erneute Berechnungen bei wiederholter Synthese mit derselben geklonten Stimme vermeidet.',
         ],
-        note: 'XTTS v2 ist ein Modell, kein Toolkit — für die Software, die es (und andere Modelle) ausführt, siehe PromptQuorums dedizierten [Coqui-TTS-Test](/de/power-local-llm/coqui-tts-review).',
+        note: 'XTTS v2 ist ein Modell, kein Toolkit — für die Software, die es (und andere Modelle) ausführt, siehe PromptQuorums dedizierten [Coqui-TTS-Rezension](/de/power-local-llm/coqui-tts-review).',
       },
       usageExamples: {
         id: 'usage-examples',
@@ -579,7 +579,7 @@ for chunk in tts.tts_stream(
         id: 'verdict',
         title: 'Fazit',
         content:
-          'XTTS v2 bleibt eines der qualitativ hochwertigsten lokal verfügbaren Voice-Cloning-Modelle im Jahr 2026, und die Kombination aus einer 6-Sekunden-Cloning-Anforderung, 17-sprachiger sprachübergreifender Unterstützung und Streaming-Latenz unter 200 ms ist für private Nutzung, Forschung und Prototyping wirklich leistungsfähig. Die Entscheidung, die für die meisten Leser tatsächlich zählt, ist die Lizenz: Die Coqui Public Model License ist eindeutig nicht-kommerziell, und da Coqui AI im Dezember 2023 geschlossen hat, gibt es heute keinen bestätigten aktiven Weg zu einer kommerziellen Lizenz. Wenn Ihr Anwendungsfall privat, akademisch oder ein nicht-kommerzieller Prototyp ist, ist XTTS v2 eine starke, gut dokumentierte Wahl. Wenn Sie kommerzielles Voice-Cloning benötigen, bestätigen Sie die Lizenzbedingungen unabhängig, bevor Sie darauf aufbauen, oder kombinieren Sie diesen Test mit PromptQuorums Abdeckung von [Piper](/de/power-local-llm/piper-tts-review) und [Bark](/de/power-local-llm/bark-tts-review) für freizügig lizenzierte Alternativen oder dem [ElevenLabs-Vergleich](/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) für eine verwaltete kommerzielle Option.',
+          'XTTS v2 bleibt eines der qualitativ hochwertigsten lokal verfügbaren Voice-Cloning-Modelle im Jahr 2026, und die Kombination aus einer 6-Sekunden-Cloning-Anforderung, 17-sprachiger sprachübergreifender Unterstützung und Streaming-Latenz unter 200 ms ist für private Nutzung, Forschung und Prototyping wirklich leistungsfähig. Die Entscheidung, die für die meisten Leser tatsächlich zählt, ist die Lizenz: Die Coqui Public Model License ist eindeutig nicht-kommerziell, und da Coqui AI im Dezember 2023 geschlossen hat, gibt es heute keinen bestätigten aktiven Weg zu einer kommerziellen Lizenz. Wenn Ihr Anwendungsfall privat, akademisch oder ein nicht-kommerzieller Prototyp ist, ist XTTS v2 eine starke, gut dokumentierte Wahl. Wenn Sie kommerzielles Voice-Cloning benötigen, bestätigen Sie die Lizenzbedingungen unabhängig, bevor Sie darauf aufbauen, oder kombinieren Sie diese Rezension mit PromptQuorums Abdeckung von [Piper](/de/power-local-llm/piper-tts-review) und [Bark](/de/power-local-llm/bark-tts-review) für freizügig lizenzierte Alternativen oder dem [ElevenLabs-Vergleich](/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) für eine verwaltete kommerzielle Option.',
       },
       sources: {
         id: 'sources',
@@ -588,7 +588,7 @@ for chunk in tts.tts_stream(
           '[XTTS v2 auf Hugging Face](https://huggingface.co/coqui/XTTS-v2) — die Model-Card: Sprachen, Cloning-Anforderungen und Lizenzverweis.',
           '[XTTS v2 LICENSE.txt](https://huggingface.co/coqui/XTTS-v2/blob/main/LICENSE.txt) — der vollständige Text der Coqui Public Model License (CPML) 1.0.0.',
           '[idiap/coqui-ai-TTS auf GitHub](https://github.com/idiap/coqui-ai-TTS) — das aktiv gepflegte Toolkit, das XTTS v2 ausführt, mit Nutzungsdokumentation.',
-          '[Coqui-TTS-Test](/de/power-local-llm/coqui-tts-review) — PromptQuorums dedizierter Test des Toolkits, einschließlich seiner Pflegegeschichte nach der Schließung.',
+          '[Coqui-TTS-Rezension](/de/power-local-llm/coqui-tts-review) — PromptQuorums dedizierte Rezension des Toolkits, einschließlich seiner Pflegegeschichte nach der Schließung.',
           '[Lokale TTS- & Voice-Cloning-Lizenzen](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — vollständiger Lizenzvergleich über lokale TTS-Engines hinweg.',
         ],
       },
@@ -596,20 +596,20 @@ for chunk in tts.tts_stream(
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Coqui-TTS-Test](/de/power-local-llm/coqui-tts-review) — das Toolkit, das XTTS v2 ausführt, einschließlich seines Pflegestatus nach der Schließung von Coqui AI.',
+          '[Coqui-TTS-Rezension](/de/power-local-llm/coqui-tts-review) — das Toolkit, das XTTS v2 ausführt, einschließlich seines Pflegestatus nach der Schließung von Coqui AI.',
           '[Lokale TTS- und Voice-Cloning-Lizenzen: Piper, XTTS v2, F5-TTS und Coqui](/de/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) — der Lizenz-Deep-Dive über alle wichtigen lokalen TTS-Engines.',
           '[ElevenLabs vs Piper vs XTTS v2](/de/power-local-llm/elevenlabs-vs-local-tts-piper-xtts) — der Cloud-vs-lokal-Vergleich für Leser, die zwischen Self-Hosting entscheiden.',
-          '[Piper-TTS-Test](/de/power-local-llm/piper-tts-review) — die schnelle, freizügig lizenzierte, reine-CPU-lokale-TTS-Alternative.',
-          '[Bark-TTS-Test](/de/power-local-llm/bark-tts-review) — das ausdrucksstarke, nicht-sprachliche lokale TTS-Modell, in derselben Tiefe getestet.',
+          '[Piper-TTS-Rezension](/de/power-local-llm/piper-tts-review) — die schnelle, freizügig lizenzierte, reine-CPU-lokale-TTS-Alternative.',
+          '[Bark-TTS-Rezension](/de/power-local-llm/bark-tts-review) — das ausdrucksstarke, nicht-sprachliche lokale TTS-Modell, in derselben Tiefe getestet.',
         ],
       },
     },
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'XTTS v2 im Test (2026): Mehrsprachiges Voice-Cloning aus 6 Sekunden Audio',
+      headline: 'XTTS-v2-Rezension (2026): Mehrsprachiges Voice-Cloning aus 6 Sekunden Audio',
       description:
-        'XTTS v2 im Test: Coquis mehrsprachiges Voice-Cloning-Modell, klont eine Stimme aus 6 Sekunden Audio in 17 Sprachen. Echte Befehle, die nicht-kommerzielle CPML-Lizenz und ehrliche Grenzen für 2026.',
+        'XTTS-v2-Rezension: Coquis mehrsprachiges Voice-Cloning-Modell, klont eine Stimme aus 6 Sekunden Audio in 17 Sprachen. Echte Befehle, die nicht-kommerzielle CPML-Lizenz und ehrliche Grenzen für 2026.',
       url: 'https://promptquorum.com/power-local-llm/xtts-v2-review',
       inLanguage: 'de',
       datePublished: '2026-09-05',
@@ -633,7 +633,7 @@ for chunk in tts.tts_stream(
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://promptquorum.com' },
         { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'XTTS v2 im Test (2026)', item: 'https://promptquorum.com/power-local-llm/xtts-v2-review' },
+        { '@type': 'ListItem', position: 3, name: 'XTTS-v2-Rezension (2026)', item: 'https://promptquorum.com/power-local-llm/xtts-v2-review' },
       ],
     },
   },

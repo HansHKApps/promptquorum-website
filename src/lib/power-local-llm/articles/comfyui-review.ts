@@ -348,14 +348,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/comfyui-review-hero-de.webp',
-    title: 'ComfyUI Test: Kostenlose node-basierte Oberfläche für Stable Diffusion & Flux',
-    seoTitle: 'ComfyUI Test: Node-Editor für lokale Bildgenerierung',
+    title: 'ComfyUI-Rezension: Kostenlose node-basierte Oberfläche für Stable Diffusion & Flux',
+    seoTitle: 'ComfyUI-Rezension: Node-Editor für lokale Bildgenerierung',
     intro:
-      'ComfyUI ist eine kostenlose, quelloffene, node-basierte visuelle Oberfläche zum lokalen Ausführen von Diffusionsmodellen — Stable Diffusion, SDXL, SD 3.5, Flux und weitere — auf der eigenen GPU. Es ist kein Modell selbst: ComfyUI ist die Engine und der Workflow-Editor, der ein Diffusionsmodell lädt und es erlaubt, jeden einzelnen Schritt der Bildgenerierung (Modell laden, Prompt-Encoding, Sampling, Upscaling) als Graph aus verbundenen Nodes zusammenzustellen, statt eines festen Satzes aus Tabs und Reglern. Dieser Test erklärt, was ComfyUI tatsächlich macht, wie sich sein Node-Graph-Ansatz von einfacheren Oberflächen wie AUTOMATIC1111 und Fooocus unterscheidet, die GPL-3.0-Lizenz, die Hardware-Anforderungen je Modell, den ComfyUI Manager für Custom Nodes und den separaten kostenpflichtigen Comfy-Cloud-Hosting-Tarif im Vergleich zum kostenlosen selbst gehosteten Kern.',
+      'ComfyUI ist eine kostenlose, quelloffene, node-basierte visuelle Oberfläche zum lokalen Ausführen von Diffusionsmodellen — Stable Diffusion, SDXL, SD 3.5, Flux und weitere — auf der eigenen GPU. Es ist kein Modell selbst: ComfyUI ist die Engine und der Workflow-Editor, der ein Diffusionsmodell lädt und es erlaubt, jeden einzelnen Schritt der Bildgenerierung (Modell laden, Prompt-Encoding, Sampling, Upscaling) als Graph aus verbundenen Nodes zusammenzustellen, statt eines festen Satzes aus Tabs und Reglern. Diese Rezension erklärt, was ComfyUI tatsächlich macht, wie sich sein Node-Graph-Ansatz von einfacheren Oberflächen wie AUTOMATIC1111 und Fooocus unterscheidet, die GPL-3.0-Lizenz, die Hardware-Anforderungen je Modell, den ComfyUI Manager für Custom Nodes und den separaten kostenpflichtigen Comfy-Cloud-Hosting-Tarif im Vergleich zum kostenlosen selbst gehosteten Kern.',
     metaDescription:
-      'ComfyUI Test 2026: GPL-3.0-Lizenz, Node-Graph-Workflow erklärt, VRAM-Bedarf für SD 1.5/SDXL/Flux, ComfyUI Manager, Comfy-Cloud-Preise und der Vergleich mit AUTOMATIC1111, InvokeAI und Fooocus.',
+      'ComfyUI-Rezension 2026: GPL-3.0-Lizenz, Node-Graph-Workflow erklärt, VRAM-Bedarf für SD 1.5/SDXL/Flux, ComfyUI Manager, Comfy-Cloud-Preise und der Vergleich mit AUTOMATIC1111, InvokeAI und Fooocus.',
     twitterDescription:
-      'ComfyUI Test 2026: die kostenlose node-basierte Engine für Stable Diffusion und Flux lokal — GPL-3.0-Lizenz, VRAM-Bedarf, ComfyUI Manager, Comfy-Cloud-Preise und der Vergleich mit AUTOMATIC1111 und Fooocus.',
+      'ComfyUI-Rezension 2026: die kostenlose node-basierte Engine für Stable Diffusion und Flux lokal — GPL-3.0-Lizenz, VRAM-Bedarf, ComfyUI Manager, Comfy-Cloud-Preise und der Vergleich mit AUTOMATIC1111 und Fooocus.',
     audience:
       'Leser, die entscheiden möchten, ob sie ComfyUI für lokale, node-basierte Bildgenerierung einsetzen — inkl. Lizenz, Hardware-Anforderungen je Diffusionsmodell, ComfyUI Manager, Comfy-Cloud-Preise und Vergleich mit einfacheren Oberflächen.',
     readTime: '12 Min. Lesezeit',
@@ -483,7 +483,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { type: 'plain-terms', text: 'ComfyUIs eigene Lizenz deckt nur die ComfyUI-Software ab; sie sagt nichts darüber aus, was Sie mit Bildern tun dürfen, die mit einem Modell wie Stable Diffusion oder Flux erzeugt wurden — das hängt vollständig von der Lizenz des jeweiligen Modells ab, nicht von ComfyUI.' },
         ],
         content: [
-          'ComfyUI wird unter der [GNU General Public License Version 3.0 (GPL-3.0)](https://github.com/comfyanonymous/ComfyUI/blob/master/LICENSE) veröffentlicht, einer Copyleft-Open-Source-Lizenz. Das bedeutet: Die Software ist kostenlos herunterzuladen, auszuführen, zu verändern und weiterzugeben — auch kommerziell — ohne Umsatzschwelle und ohne Registrierungsschritt, anders als die Stability AI Community License, die neuere Stable-Diffusion-Versionen abdeckt (siehe [unseren Stable-Diffusion-Test](/de/power-local-llm/stable-diffusion-review) für diese Unterscheidung).',
+          'ComfyUI wird unter der [GNU General Public License Version 3.0 (GPL-3.0)](https://github.com/comfyanonymous/ComfyUI/blob/master/LICENSE) veröffentlicht, einer Copyleft-Open-Source-Lizenz. Das bedeutet: Die Software ist kostenlos herunterzuladen, auszuführen, zu verändern und weiterzugeben — auch kommerziell — ohne Umsatzschwelle und ohne Registrierungsschritt, anders als die Stability AI Community License, die neuere Stable-Diffusion-Versionen abdeckt (siehe [unseren Stable-Diffusion-Rezension](/de/power-local-llm/stable-diffusion-review) für diese Unterscheidung).',
           'Die Copyleft-Bedingung von GPL-3.0 ist vor allem für Entwickler relevant, nicht für Leser, die nur Bilder erzeugen wollen: Wer den Kerncode von ComfyUI verändert und diese veränderte Version weitergibt, muss laut GPL-3.0 seine Änderungen unter derselben Lizenz veröffentlichen. Laut einer [Maintainer-Diskussion im offiziellen Repository](https://github.com/comfyanonymous/ComfyUI/issues/3362) werden Custom Nodes, die ComfyUI über seine Plugin-Schnittstelle erweitern (im `custom_nodes`-Ordner), grundsätzlich als eigenständige Werke mit eigener Lizenz behandelt — ein Fork oder eine direkte Änderung des ComfyUI-Kerncodes ist dagegen ein abgeleitetes Werk und muss GPL-3.0 bleiben. Prüfen Sie die Lizenz jedes einzelnen Custom Nodes, den Sie installieren, da von der Community erstellte Nodes nicht unter ComfyUIs eigener Lizenz stehen und in den Bedingungen variieren.',
           '**ComfyUIs GPL-3.0-Lizenz sagt nichts darüber aus, was Sie mit erzeugten Bildern tun dürfen — das wird ausschließlich durch die Lizenz des jeweils geladenen Diffusionsmodells geregelt.** Stable Diffusion 1.5, SD 2.1 und SDXL stehen unter der CreativeML-Open-RAIL-M-/RAIL++-M-Lizenz ohne kommerzielle Umsatzgrenze; SD 3 und SD 3.5 nutzen die Stability AI Community License, kostenlos nur unter 1 Mio. USD Jahresumsatz; FLUX.1 schnell steht unter Apache 2.0 (unbeschränkt), während FLUX.1 dev für kommerzielle Nutzung eine separate kommerzielle Lizenz von [Black Forest Labs](https://blackforestlabs.ai) erfordert. Diese Modelle in ComfyUI auszuführen ändert oder überschreibt deren Lizenzbedingungen nicht.',
         ],
@@ -572,7 +572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Wichtigster Kompromiss': 'Keine lokale Kontrolle, kein Node-Graph, keine Offline-Nutzung',
           },
         ],
-        note: 'Siehe [Stable Diffusion Test](/de/power-local-llm/stable-diffusion-review) für Lizenz- und Hardware-Details des zugrunde liegenden Modells und [Local AI Image Generation vs. Cloud](/de/power-local-llm/local-ai-image-generation-vs-cloud) für einen breiteren Vergleich lokaler Modellfamilien mit Cloud-Tools wie Adobe Firefly und [getimg.ai](https://getimg.ai). Siehe auch die Tests zu [AUTOMATIC1111](/de/power-local-llm/automatic1111-review), [InvokeAI](/de/power-local-llm/invokeai-review), [Fooocus](/de/power-local-llm/fooocus-review) und [SwarmUI](/de/power-local-llm/stableswarmui-review).',
+        note: 'Siehe [Stable-Diffusion-Rezension](/de/power-local-llm/stable-diffusion-review) für Lizenz- und Hardware-Details des zugrunde liegenden Modells und [Local AI Image Generation vs. Cloud](/de/power-local-llm/local-ai-image-generation-vs-cloud) für einen breiteren Vergleich lokaler Modellfamilien mit Cloud-Tools wie Adobe Firefly und [getimg.ai](https://getimg.ai). Siehe auch die Tests zu [AUTOMATIC1111](/de/power-local-llm/automatic1111-review), [InvokeAI](/de/power-local-llm/invokeai-review), [Fooocus](/de/power-local-llm/fooocus-review) und [SwarmUI](/de/power-local-llm/stableswarmui-review).',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -662,8 +662,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Stable Diffusion Test (2026)](/de/power-local-llm/stable-diffusion-review) — die Modellfamilie, die ComfyUI am häufigsten ausführt, inklusive vollständiger Lizenz- und Hardware-Details je Version.',
-          '[Real-ESRGAN Test: KI-Bild-Upscaler](/de/power-local-llm/real-esrgan-ai-image-upscaler-review) — ein ergänzendes lokales Tool zum Hochskalieren von Bildern, die mit ComfyUI erzeugt wurden.',
+          '[Stable-Diffusion-Rezension (2026)](/de/power-local-llm/stable-diffusion-review) — die Modellfamilie, die ComfyUI am häufigsten ausführt, inklusive vollständiger Lizenz- und Hardware-Details je Version.',
+          '[Real-ESRGAN-Rezension: KI-Bild-Upscaler](/de/power-local-llm/real-esrgan-ai-image-upscaler-review) — ein ergänzendes lokales Tool zum Hochskalieren von Bildern, die mit ComfyUI erzeugt wurden.',
           '[Lokale KI-Bildgenerierung vs. Cloud](/de/power-local-llm/local-ai-image-generation-vs-cloud) — breiterer Vergleich lokaler Modellfamilien mit Cloud-Tools wie Adobe Firefly und [getimg.ai](https://getimg.ai).',
           '[AnimateDiff-Videogenerierungs-Guide](/de/power-local-llm/animatediff-video-generation-guide) — ein ComfyUI-kompatibler Workflow, um Diffusionsmodelle in kurze Animationen zu verwandeln.',
         ],

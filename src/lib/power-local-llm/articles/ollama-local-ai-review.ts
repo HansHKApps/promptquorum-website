@@ -381,20 +381,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-02',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/ollama-local-ai-review-hero-de.webp',
-    title: 'Ollama Local AI im Test: Android-LLM-Runner und LAN-API-Proxy',
-    seoTitle: 'Ollama Local AI Test: Android-LLM-Runner & Proxy',
+    title: 'Ollama-Local-AI-Rezension: Android-LLM-Runner und LAN-API-Proxy',
+    seoTitle: 'Ollama-Local-AI-Rezension: Android-LLM-Runner & Proxy',
     intro:
-      'Ollama Local AI ist eine unabhängige Android-App eines Drittanbieters, die lokale KI-Modelle auf dem Smartphone ausführt und sich mit Ollama-Servern verbinden kann. Sie ist nicht die Ollama-Software und wird nicht vom Ollama-Projekt hergestellt. Google Play führt [FreeRouter Team](https://play.google.com/store/apps/details?id=com.llmproxy) als Entwickler. Die App erfüllt zwei Aufgaben: Sie führt GGUF-Sprachmodelle über eine eingebettete llama.cpp-Engine auf dem Smartphone aus, und sie stellt in Ihrem WLAN eine OpenAI-kompatible API bereit, sodass Tools wie Cursor, VS-Code-Erweiterungen und Windsurf das Smartphone als Modell-Endpunkt nutzen können. Die Installation ist kostenlos, mit In-App-Käufen. Dieser Test stützt sich ausschließlich auf den Google-Play-Eintrag der App, geprüft am 2. Oktober 2026, weil anhand dieses Eintrags weder ein öffentliches Quellcode-Repository noch eine Entwickler-Website oder eine ausführliche Entwicklerdokumentation ermittelt wurde und PromptQuorum die App nicht praktisch getestet hat.',
+      'Ollama Local AI ist eine unabhängige Android-App eines Drittanbieters, die lokale KI-Modelle auf dem Smartphone ausführt und sich mit Ollama-Servern verbinden kann. Sie ist nicht die Ollama-Software und wird nicht vom Ollama-Projekt hergestellt. Google Play führt [FreeRouter Team](https://play.google.com/store/apps/details?id=com.llmproxy) als Entwickler. Die App erfüllt zwei Aufgaben: Sie führt GGUF-Sprachmodelle über eine eingebettete llama.cpp-Engine auf dem Smartphone aus, und sie stellt in Ihrem WLAN eine OpenAI-kompatible API bereit, sodass Tools wie Cursor, VS-Code-Erweiterungen und Windsurf das Smartphone als Modell-Endpunkt nutzen können. Die Installation ist kostenlos, mit In-App-Käufen. Diese Rezension stützt sich ausschließlich auf den Google-Play-Eintrag der App, geprüft am 2. Oktober 2026, weil anhand dieses Eintrags weder ein öffentliches Quellcode-Repository noch eine Entwickler-Website oder eine ausführliche Entwicklerdokumentation ermittelt wurde und PromptQuorum die App nicht praktisch getestet hat.',
     metaDescription:
-      'Ollama Local AI im Test: Android-App führt GGUF-Modelle lokal aus und bietet im LAN eine OpenAI-kompatible API. Was der Eintrag bestätigt und was offen bleibt.',
+      'Ollama-Local-AI-Rezension: Android-App führt GGUF-Modelle lokal aus und bietet im LAN eine OpenAI-kompatible API. Was der Eintrag bestätigt und was offen bleibt.',
     twitterDescription:
-      'Ollama Local AI im Test: eine Android-App, die das Smartphone zum LLM-Runner auf dem Gerät und zum OpenAI-kompatiblen LAN-Gateway macht. Nicht das Ollama-Projekt — und was der Play-Eintrag nicht verrät.',
+      'Ollama-Local-AI-Rezension: eine Android-App, die das Smartphone zum LLM-Runner auf dem Gerät und zum OpenAI-kompatiblen LAN-Gateway macht. Nicht das Ollama-Projekt — und was der Play-Eintrag nicht verrät.',
     audience:
       'Android-Nutzer und Entwickler, die GGUF-Modelle auf einem Smartphone ausführen oder Desktop-Coding-Tools über das lokale WLAN auf ihr Smartphone richten möchten und genau wissen müssen, was der öffentliche Eintrag bestätigt und was nicht.',
     readTime: '8 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: false,
-    primaryTerm: 'Ollama Local AI Test',
+    primaryTerm: 'Ollama Local AI Rezension',
     targetKeywords: [
       'ollama local ai android',
       'ollama local ai app test',
@@ -467,7 +467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'note',
-            text: 'Dieser Test stützt sich ausschließlich auf den Google-Play-Eintrag, geprüft am 2. Oktober 2026. PromptQuorum hat weder ein öffentliches Quellcode-Repository noch eine angegebene Lizenz, eine Versionsnummer oder eine ausführliche Entwicklerdokumentation ermittelt und die App weder getestet noch einem Benchmark unterzogen.',
+            text: 'Diese Rezension stützt sich ausschließlich auf den Google-Play-Eintrag, geprüft am 2. Oktober 2026. PromptQuorum hat weder ein öffentliches Quellcode-Repository noch eine angegebene Lizenz, eine Versionsnummer oder eine ausführliche Entwicklerdokumentation ermittelt und die App weder getestet noch einem Benchmark unterzogen.',
           },
         ],
       },
@@ -477,7 +477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Ollama Local AI ist eine Android-App, die einen Modell-Runner auf dem Gerät mit einem API-Gateway im lokalen Netzwerk verbindet.** Laut ihrem [Google-Play-Eintrag](https://play.google.com/store/apps/details?id=com.llmproxy) führt sie quantisierte GGUF-Modelle direkt auf der CPU oder GPU des Smartphones über eine eingebettete [llama.cpp](https://github.com/ggml-org/llama.cpp)-Engine aus und kann zusätzlich als Router arbeiten, der Anfragen an andere von Ihnen konfigurierte Backends weiterleitet.',
           'Der Name ist die Hauptquelle von Verwechslungen. Der abschließende Haftungsausschluss des Eintrags besagt, dass die App ein unabhängiges Hilfsprogramm eines Entwicklers ist und nicht mit Ollama, OpenAI, Anthropic oder einem erwähnten Anbieter verbunden ist und von diesen weder gesponsert noch unterstützt wird. Die App kann eine Verbindung zu einem [Ollama](https://ollama.com)-Server herstellen, den Sie anderswo hosten, doch die Verbindung zu einem Ollama-Server begründet keinerlei Zugehörigkeit, und laut Eintrag nutzt die App ihre eigene eingebettete llama.cpp-Engine statt Ollama. Suchergebnisse und der Play-Paketname (com.llmproxy) beziehen sich auf dieselbe App.',
-          'Drei Begriffe werden in diesem Test streng unterschieden: **Ollama** ist das eigenständige Open-Source-Projekt und seine Software; **Ollama Local AI** ist die hier getestete unabhängige Android-App; ein **Ollama-Server** ist eine Ollama-Installation, die Sie selbst betreiben und mit der sich die App verbinden kann.',
+          'Drei Begriffe werden in dieser Rezension streng unterschieden: **Ollama** ist das eigenständige Open-Source-Projekt und seine Software; **Ollama Local AI** ist die hier getestete unabhängige Android-App; ein **Ollama-Server** ist eine Ollama-Installation, die Sie selbst betreiben und mit der sich die App verbinden kann.',
         ],
         note: 'GGUF ist ein Dateiformat für quantisierte Open-Weight-Sprachmodelle, das Laufzeitumgebungen wie llama.cpp auf handelsüblicher Hardware, einschließlich Smartphones, laden können.',
       },
@@ -672,7 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist sie Open Source?',
-            a: 'Lizenz: im Google-Play-Eintrag nicht angegeben, und es wurde kein öffentliches Quellcode-Repository ermittelt; PromptQuorum kann daher nicht bestätigen, dass die App Open Source ist. Sollte der Entwickler eine Lizenz oder den Quellcode veröffentlichen, wird dieser Test aktualisiert.',
+            a: 'Lizenz: im Google-Play-Eintrag nicht angegeben, und es wurde kein öffentliches Quellcode-Repository ermittelt; PromptQuorum kann daher nicht bestätigen, dass die App Open Source ist. Sollte der Entwickler eine Lizenz oder den Quellcode veröffentlichen, wird diese Rezension aktualisiert.',
           },
           {
             q: 'Was schalten die In-App-Käufe frei?',
@@ -697,11 +697,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[PocketPal AI Test](/de/power-local-llm/pocketpal-ai-review) — ein kostenloser, quelloffener Chat-Client auf dem Gerät für Android und iOS.',
-          '[Maid Test](/de/power-local-llm/maid-review) — eine quelloffene Android-App für lokale GGUF-Modelle oder Remote-Anbieter.',
-          '[RikkaHub Test](/de/power-local-llm/rikkahub-review) — ein Android-Client für mehrere Anbieter.',
-          '[Layla Test](/de/power-local-llm/layla-review) — eine kostenpflichtige App auf dem Gerät im Begleiter-Stil.',
-          '[LiteLLM Test](/de/power-local-llm/litellm-review) — der Desktop- und serverseitige Weg zur selben Idee eines einzigen Endpunkts.',
+          '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — ein kostenloser, quelloffener Chat-Client auf dem Gerät für Android und iOS.',
+          '[Maid-Rezension](/de/power-local-llm/maid-review) — eine quelloffene Android-App für lokale GGUF-Modelle oder Remote-Anbieter.',
+          '[RikkaHub-Rezension](/de/power-local-llm/rikkahub-review) — ein Android-Client für mehrere Anbieter.',
+          '[Layla-Rezension](/de/power-local-llm/layla-review) — eine kostenpflichtige App auf dem Gerät im Begleiter-Stil.',
+          '[LiteLLM-Rezension](/de/power-local-llm/litellm-review) — der Desktop- und serverseitige Weg zur selben Idee eines einzigen Endpunkts.',
           '[Beste lokale LLM-Apps für Android 2026](/de/power-local-llm/best-local-llm-apps-android-2026) — der breitere Android-Überblick.',
         ],
       },
