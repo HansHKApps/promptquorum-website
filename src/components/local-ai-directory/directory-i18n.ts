@@ -272,7 +272,7 @@ const DIR_UI = {
   // dedicated review (src/generated/feature-review-index.json) — visually
   // distinct from the plain "Read review" text link and from the "N articles
   // mention this tool" count, both of which stay unchanged.
-  featureArticleBadge: { en: 'Feature Article', de: 'Ausführlicher Test', fr: 'Article dédié', ja: '特集記事', zh: '专题评测', es: 'Artículo destacado', pt: 'Artigo destacado', ar: 'مقال متخصص', ko: '심층 리뷰' },
+  featureArticleBadge: { en: 'Feature Article', de: 'Ausführliche Rezension', fr: 'Article dédié', ja: '特集記事', zh: '专题评测', es: 'Artículo destacado', pt: 'Artigo destacado', ar: 'مقال متخصص', ko: '심층 리뷰' },
   archivedBadge: { en: 'Archived', de: 'Archiviert', fr: 'Archivé', ja: 'アーカイブ済み', zh: '已归档', es: 'Archivado', pt: 'Arquivado', ar: 'مؤرشف', ko: '보관됨' },
   unmaintainedBadge: { en: 'No longer maintained', de: 'Nicht mehr gepflegt', fr: 'Plus maintenu', ja: 'メンテナンス終了', zh: '已停止维护', es: 'Sin mantenimiento', pt: 'Sem manutenção', ar: 'لم يعد مُصانًا', ko: '유지보수 종료' },
   staleListingBadgeWarn: { en: 'Not verified in 6+ months', de: 'Seit über 6 Monaten nicht geprüft', fr: 'Non vérifié depuis plus de 6 mois', ja: '6ヶ月以上未確認', zh: '超过6个月未核实', es: 'Sin verificar desde hace más de 6 meses', pt: 'Não verificado há mais de 6 meses', ar: 'لم يُتحقَّق منه منذ أكثر من 6 أشهر', ko: '6개월 넘게 확인되지 않음' },
