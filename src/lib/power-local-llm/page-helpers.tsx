@@ -1036,6 +1036,7 @@ const HUB_THEMES: Array<{
       'maid-review',
       'private-mind-review',
       'llm-hub-review',
+      'tokforge-review',
       'ollama-local-ai-review',
       'mlc-chat-review',
       'pocket-ai-review',

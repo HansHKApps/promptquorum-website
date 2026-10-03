@@ -97,6 +97,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "tokforge-review",
+        "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
+        "url": "/power-local-llm/tokforge-review",
+        "dateModified": "2026-10-03",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "ollama-local-ai-review",
         "title": "Ollama Local AI Review: Android LLM Runner and LAN API Proxy",
         "url": "/power-local-llm/ollama-local-ai-review",
@@ -158,17 +166,9 @@
         "url": "/power-local-llm/local-deep-research-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "mlx-serve-review",
-        "title": "mlx-serve Review: Native Zig Inference Server for Apple Silicon",
-        "url": "/power-local-llm/mlx-serve-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 155,
+    "totalCount": 156,
     "capped": true
   },
   "vLLM": {
@@ -5824,7 +5824,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 26,
+    "totalCount": 27,
     "capped": true
   },
   "Pocket AI": {
@@ -11150,9 +11150,17 @@
         "url": "/power-local-llm/llm-hub-review",
         "dateModified": "2026-10-03",
         "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "tokforge-review",
+        "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
+        "url": "/power-local-llm/tokforge-review",
+        "dateModified": "2026-10-03",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "LLM Hub": {
@@ -11199,6 +11207,20 @@
       }
     ],
     "totalCount": 5,
+    "capped": false
+  },
+  "TokForge": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "tokforge-review",
+        "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
+        "url": "/power-local-llm/tokforge-review",
+        "dateModified": "2026-10-03",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
     "capped": false
   }
 }

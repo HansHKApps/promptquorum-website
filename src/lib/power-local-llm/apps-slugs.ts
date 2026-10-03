@@ -174,6 +174,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'paios':                                   'paios',
   'private-mind':                            'private-mind',
   'llm-hub':                                 'llm-hub',
+  'tokforge':                                'tokforge',
 }
 
 export const LOCAL_AI_APP_SLUGS: string[] = Object.keys(LOCAL_AI_APP_SLUG_TO_KEY)
