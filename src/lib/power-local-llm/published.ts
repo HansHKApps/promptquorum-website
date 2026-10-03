@@ -554,6 +554,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // LLM Hub review (Mobile & Edge LLMs) — 2026-10-03
   'llm-hub-review',
+
+  // TokForge review (Mobile & Edge LLMs) — 2026-10-03
+  'tokforge-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
