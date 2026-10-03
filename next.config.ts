@@ -172,6 +172,27 @@ const nextConfig: NextConfig = {
         destination: '/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026',
         permanent: true,
       },
+      // Dead URLs still requested by crawlers/old links (no in-repo source): send to the nearest live page.
+      {
+        source: '/prompt-engineering/cost-optimization',
+        destination: '/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/prompt-engineering/cost-optimization',
+        destination: '/:lang/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting',
+        permanent: true,
+      },
+      {
+        source: '/local-llms/gpu-requirements-local-llm',
+        destination: '/local-llms/how-much-vram-local-llm',
+        permanent: true,
+      },
+      {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/local-llms/gpu-requirements-local-llm',
+        destination: '/:lang/local-llms/how-much-vram-local-llm',
+        permanent: true,
+      },
       // English-only pages: no /{lang}/* routes exist; sitemap bug caused Google to crawl these
       {
         source: '/:lang(de|fr|ja|zh|es|pt|ar)/image-license',
@@ -693,23 +714,15 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
-        source: '/api/data/:match*',
-        destination: 'https://www.promptquorum.com/_vercel/insights/:match*',
-      },
-      {
         source: '/lib/s/:match*',
         destination: 'https://cloud.umami.is/:match*',
-      },
-      {
-        source: '/api/clarity/:match*',
-        destination: 'https://www.clarity.ms/:match*',
       },
     ]
   },
   async headers() {
     const cspHeader = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.onesignal.com https://scripts.clarity.ms https://www.clarity.ms https://*.clarity.ms https://*.vercel-analytics.com https://*.vercel-insights.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.onesignal.com https://scripts.clarity.ms https://www.clarity.ms https://*.clarity.ms",
       "worker-src 'self'",
       // Without an explicit frame-src this fell back to `default-src 'self'`, which blocked
       // every YouTube embed rendered by YouTubeFacade.tsx — a silent CSP violation on any
@@ -718,7 +731,7 @@ const nextConfig: NextConfig = {
       "style-src 'self' 'unsafe-inline'",
       "font-src 'self'",
       "img-src 'self' data: https:",
-      "connect-src 'self' https://i.clarity.ms https://*.clarity.ms https://c.bing.com https://*.vercel-insights.com https://*.vercel-analytics.com https://vitals.vercel-insights.com https://api.vercel.com https://onesignal.com https://*.onesignal.com",
+      "connect-src 'self' https://i.clarity.ms https://*.clarity.ms https://c.bing.com https://onesignal.com https://*.onesignal.com",
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",
@@ -750,6 +763,11 @@ const nextConfig: NextConfig = {
           { key: 'Access-Control-Allow-Origin', value: '*' },
           { key: 'Cache-Control', value: 'public, max-age=86400, s-maxage=31536000, immutable' },
         ],
+      },
+      {
+        // Chrome's prefetch proxy probes this on every origin; without the file each probe was a 404.
+        source: '/.well-known/traffic-advice',
+        headers: [{ key: 'Content-Type', value: 'application/trafficadvice+json' }],
       },
       {
         // The MCP server and its usage-counter status endpoint are live,
