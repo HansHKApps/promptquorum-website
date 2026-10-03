@@ -24,7 +24,9 @@ export function RecentlyUpdatedBlock({ lang = 'en' }: { lang?: Language }) {
           title: u.title,
           url: u.url,
           date: t('updatedOnTemplate', lang, { date: formatDisplayDate(u.dateModified, lang) }),
-          freshLabel: freshAgeDays(u.dateModified) !== null ? t('freshUpdated', lang) : undefined,
+          freshText: t('freshUpdated', lang),
+          isoDate: u.dateModified,
+          freshAtBuild: freshAgeDays(u.dateModified) !== null,
         }))}
       />
     </HomeCard>

@@ -23,7 +23,9 @@ export function LatestPostsBlock({ lang = 'en' }: { lang?: Language }) {
           url: p.url,
           description: p.excerpt,
           date: formatDisplayDate(p.publishDate, lang),
-          freshLabel: freshAgeDays(p.publishDate) !== null ? t('freshNew', lang) : undefined,
+          freshText: t('freshNew', lang),
+          isoDate: p.publishDate,
+          freshAtBuild: freshAgeDays(p.publishDate) !== null,
         }))}
       />
     </HomeCard>

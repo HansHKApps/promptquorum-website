@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import { AppLink as Link } from '@/components/AppLink'
 import type { Language } from '@/lib/blog/blogContent'
+import { isFreshAge, localAgeDays } from '@/lib/home/fresh-age'
+import { useLocalToday } from '@/lib/home/useLocalToday'
 import { t } from './home-i18n'
 
 export interface ExpandableListItem {
@@ -11,8 +13,14 @@ export interface ExpandableListItem {
   url?: string
   date: string
   description?: string
-  /** Set (already localized, e.g. "New") when the item is within the fresh window — renders the loud highlight treatment. */
-  freshLabel?: string
+  /**
+   * Fresh-highlight inputs. `freshText` is the already-localized pill ("New"/"Updated"); the item gets the loud
+   * treatment while `isoDate` is within the fresh window by the VISITOR's clock (re-checked after mount, so it
+   * ages out on its own between deploys). `freshAtBuild` is the build-time verdict, used only for the server HTML.
+   */
+  freshText?: string
+  isoDate?: string
+  freshAtBuild?: boolean
 }
 
 /**
@@ -31,6 +39,7 @@ export function ExpandableList({
   lang?: Language
 }) {
   const [expanded, setExpanded] = useState(false)
+  const now = useLocalToday()
   const shown = expanded ? items : items.slice(0, visibleCount)
   const hasMore = items.length > visibleCount
 
@@ -38,12 +47,12 @@ export function ExpandableList({
     <div className="flex-1 flex flex-col">
       <ul className="space-y-2.5">
         {shown.map((item) => {
-          const fresh = Boolean(item.freshLabel)
+          const fresh = Boolean(item.freshText) && (now && item.isoDate ? isFreshAge(localAgeDays(item.isoDate, now)) : Boolean(item.freshAtBuild))
           const row = (
             <>
               {fresh && (
                 <span className="mb-1 inline-block rounded-full bg-primary px-2 py-0.5 text-[11px] font-extrabold uppercase tracking-wide text-white">
-                  {item.freshLabel}
+                  {item.freshText}
                 </span>
               )}
               <p className={`text-sm text-text-primary line-clamp-1 ${fresh ? 'font-extrabold' : 'font-semibold'}`}>{item.title}</p>
