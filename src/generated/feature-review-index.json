@@ -1143,5 +1143,10 @@
     "cluster": "power-local-llm",
     "urlSlug": "paios-review",
     "url": "/power-local-llm/paios-review"
+  },
+  "private-mind": {
+    "cluster": "power-local-llm",
+    "urlSlug": "private-mind-review",
+    "url": "/power-local-llm/private-mind-review"
   }
 }

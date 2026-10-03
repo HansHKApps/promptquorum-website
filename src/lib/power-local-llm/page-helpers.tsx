@@ -1034,6 +1034,7 @@ const HUB_THEMES: Array<{
       'layla-review',
       'llm-farm-review',
       'maid-review',
+      'private-mind-review',
       'ollama-local-ai-review',
       'mlc-chat-review',
       'pocket-ai-review',

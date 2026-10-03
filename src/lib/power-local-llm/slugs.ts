@@ -382,6 +382,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'llm-farm-review':                         'llm-farm-review',
   // Layla review — 2026-09-06
   'layla-review':                            'layla-review',
+  // Private Mind review — 2026-10-03
+  'private-mind-review':                     'private-mind-review',
   // Ollama Local AI review — 2026-10-02
   'ollama-local-ai-review':                  'ollama-local-ai-review',
   // ComfyUI review — 2026-09-06

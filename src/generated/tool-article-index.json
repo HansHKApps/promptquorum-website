@@ -5824,7 +5824,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 24,
+    "totalCount": 25,
     "capped": true
   },
   "Pocket AI": {
@@ -5955,6 +5955,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "private-mind-review",
+        "title": "Private Mind Review: Open-Source Offline AI Chat for iPhone and Android",
+        "url": "/power-local-llm/private-mind-review",
+        "dateModified": "2026-10-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "loci-ai-review-offline-local-ai",
         "title": "Loci AI Review (2026): Offline AI for iPhone, Android, iPad, Mac and Windows",
         "url": "/power-local-llm/loci-ai-review-offline-local-ai",
@@ -5962,7 +5970,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "LLM Farm": {
@@ -11081,6 +11089,20 @@
         "title": "PAIOS Review: Offline Gemini Nano Chat for Android",
         "url": "/power-local-llm/paios-review",
         "dateModified": "2026-10-02",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Private Mind": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "private-mind-review",
+        "title": "Private Mind Review: Open-Source Offline AI Chat for iPhone and Android",
+        "url": "/power-local-llm/private-mind-review",
+        "dateModified": "2026-10-03",
         "tier": "about"
       }
     ],

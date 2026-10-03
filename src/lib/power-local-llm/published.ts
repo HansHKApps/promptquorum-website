@@ -546,6 +546,9 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Ollama Local AI review (Mobile & Edge LLMs) — 2026-10-02
   'ollama-local-ai-review',
+
+  // Private Mind review (Mobile & Edge LLMs) — 2026-10-03
+  'private-mind-review',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
