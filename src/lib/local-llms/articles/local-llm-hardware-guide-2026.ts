@@ -9,6 +9,7 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'monthly',
+      affiliateDisclosure: true,
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2026-10-01',
       last_full_refresh: '2026-09-01',
@@ -299,6 +300,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**The hardware requirement to run a 70B model locally at usable Q4_K_M quality is ~40 GB of VRAM — so a single 24 GB RTX 4090 is not enough.** Your real options for 70B in 2026 are: 2× RTX 5090 (64 GB combined), an RTX 5090 (32 GB) with light CPU offload, a 48-80 GB server GPU (RTX 6000 Ada / A100), or an Apple M5 Max / 128 GB unified-memory system. The common misconception is that "Q4 is small" — at 70B parameters, even Q4 needs ~40 GB.',
             'On a single 24 GB card, the better strategy is a 27-32B model, which delivers strong quality and fits comfortably with context headroom. Qwen3.6 27B at Q4_K_M is the best dense coding model (77.2% SWE-bench); DeepSeek-R1 32B is the best reasoning pick. A 24 GB GPU can only hold 70B at Q2_K, where quality drops noticeably. See [how to run 70B models on 24 GB VRAM](/local-llms/run-70b-models-24gb-vram) for offload and dual-GPU techniques.',
+            '**If you want 64 GB without building a dual-card rig, single GPUs with 64 GB of VRAM exist and are worth comparing.** At that capacity, a 70B model at Q4_K_M (~40 GB) or Q5 (45 GB+) fits on one card with room left for KV cache and a longer context window. Check each card\'s memory bandwidth, software support (CUDA, ROCm or other), power draw and warranty before buying, because speed and compatibility vary and can differ from a dual RTX 5090 setup. One listing of cards in this class is [Orange Hardwares\' 64 GB graphics card collection](https://www.orangehardwares.com/collections/64-gb-graphics-cards).',
+            '**Disclosure:** Orange Hardwares suggested this link to us. PromptQuorum has no commercial relationship with Orange Hardwares and receives no payment, commission or other compensation for it. The link is marked as sponsored, is not an endorsement, and we have not tested or verified the cards, prices or availability listed there.',
           ],
           rows: [
             { 'Model': 'Qwen 3.6 27B', 'Quantization': 'Q4_K_M', 'VRAM Required': '~16 GB', 'Fits 24 GB?': '✅ Yes', 'Speed (RTX 4090)': '55 tok/sec', 'Notes': 'Best dense coding model, 77.2% SWE-bench' },
@@ -511,7 +514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'What are the best llama.cpp models for a MacBook with M3 and 8 GB RAM?', a: 'On a MacBook M3 with 8 GB RAM, run 3-4B models at Q4_K_M: Phi-4 Mini 3.8B, Llama 3.2 3B, or Gemma 3 4B. Use Ollama or llama.cpp — both use the Metal GPU backend automatically. A 7B model is borderline and will swap under load; keep context under 4096 tokens. For comfortable 7-8B use on a Mac, 16 GB unified memory is the practical minimum.' },
             { q: 'What CPU is best for local LLMs without a GPU?', a: 'High-core-count CPUs with large L3 cache: AMD Ryzen 9 7950X or Intel Core i9-14900K. Expect 5-15 tokens/sec for 7B models. CPU inference is 3-5× slower than GPU.' },
             { q: 'Does storage speed affect local LLM performance?', a: 'Yes, at model load time. NVMe SSD (3-7 GB/s) loads a 7B model in 2-5 seconds vs. 20-60 seconds on HDD. Inference speed after loading is unaffected by storage.' },
-            { q: 'Can I use multiple GPUs to run larger models?', a: 'Yes, via tensor parallelism. Two RTX 5090s (32 GB each) provide 64 GB VRAM, enough for a 70B model at Q4_K_M. Ollama and llama.cpp support multi-GPU via --n-gpu-layers split across cards.' },
+            { q: 'Can I use multiple GPUs to run larger models?', a: 'Yes, via tensor parallelism. Two RTX 5090s (32 GB each) provide 64 GB VRAM, enough for a 70B model at Q4_K_M. Ollama and llama.cpp support multi-GPU via --n-gpu-layers split across cards. If you prefer a single card, GPUs with 64 GB of VRAM can also hold a 70B model at Q4_K_M or Q5 with room for KV cache; compare memory bandwidth and software support first. The 70B section of this guide links to a vendor-suggested listing, with our disclosure.' },
             { q: 'What are the best local LLMs for 16 GB VRAM in 2026?', a: 'Mistral Small 3.1 24B Q4_K_M (13 GB, 55 tok/sec) is the best overall for RTX 5080 / RTX 5070 Ti / RTX 4090 laptop. For agentic coding: Devstral Small 24B Q4_K_M (16 GB, 45 tok/sec). For reasoning: DeepSeek-R1 14B (15 GB, 40 tok/sec). The newer Mistral Small 4 (March 2026) is the one-model successor. Llama 3.3 70B does not fit -- it requires ~40 GB at Q4_K_M.' },
             { q: 'Can a single RTX 4090 run a 70B model at good quality?', a: 'No -- not at Q4_K_M quality. Llama 3.3 70B at Q4_K_M requires ~39 GB VRAM. The RTX 4090 has 24 GB. You can run it at Q2_K (~24 GB) but quality drops noticeably. Better options: Qwen 3.6 27B Q4_K_M (~16 GB, 77.2% SWE-bench, best dense coding) or DeepSeek-R1 32B Q4_K_M (~19 GB, best reasoning).' },
             { q: 'What is the best local LLM for 16 GB system RAM without a GPU?', a: 'Phi-4 Mini 3.8B Q4_K_M (2.5 GB RAM, ~25 tok/sec on Ryzen 9 7950X) is the best option for CPU-only inference on 16 GB system RAM. Gemma 2 2B Q8 is the fastest at ~28 tok/sec. Llama 3.1 8B Q4_K_M (4.9 GB) also fits but runs at ~12 tok/sec -- slow for interactive use.' },
@@ -695,7 +698,7 @@ schema: {
             'name': 'Can I use multiple GPUs to run larger models?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes, via tensor parallelism. Two RTX 5090s (32 GB each) provide 64 GB VRAM, enough for a 70B model at Q4_K_M. Ollama and llama.cpp support multi-GPU via --n-gpu-layers split across cards.',
+              'text': 'Yes, via tensor parallelism. Two RTX 5090s (32 GB each) provide 64 GB VRAM, enough for a 70B model at Q4_K_M. Ollama and llama.cpp support multi-GPU via --n-gpu-layers split across cards. If you prefer a single card, GPUs with 64 GB of VRAM can also hold a 70B model at Q4_K_M or Q5 with room for KV cache; compare memory bandwidth and software support first. The 70B section of this guide links to a vendor-suggested listing, with our disclosure.',
             },
           },
           {
@@ -833,6 +836,7 @@ schema: {
     },
     es: {
       freshness_tier: 'monthly',
+      affiliateDisclosure: true,
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2026-10-01',
       last_full_refresh: '2026-09-01',
@@ -1119,6 +1123,8 @@ schema: {
           content: [
             '**El requisito de hardware para ejecutar un modelo de 70B en local con calidad Q4_K_M utilizable es ~40 GB de VRAM — así que una sola RTX 4090 de 24 GB no es suficiente.** Tus opciones reales para 70B en 2026 son: 2× RTX 5090 (64 GB combinados), una RTX 5090 (32 GB) con descarga ligera a CPU, una GPU de servidor de 48-80 GB (RTX 6000 Ada / A100), o un Apple M5 Max / sistema de memoria unificada de 128 GB. El malentendido común es que "Q4 es pequeño" — con 70B parámetros, incluso Q4 necesita ~40 GB.',
             'En una sola tarjeta de 24 GB, la mejor estrategia es un modelo de 27-32B, que ofrece una calidad fuerte y cabe cómodamente con margen de contexto. Qwen3.6 27B en Q4_K_M es el mejor modelo de programación denso (77,2% SWE-bench); DeepSeek-R1 32B es la mejor opción de razonamiento. Una GPU de 24 GB solo puede albergar un 70B en Q2_K, donde la calidad cae notablemente. Consulta [cómo ejecutar modelos de 70B en 24 GB de VRAM](/es/local-llms/run-70b-models-24gb-vram) para técnicas de descarga y GPU dual.',
+            '**Si quieres 64 GB sin montar un equipo con dos tarjetas, existen GPU individuales con 64 GB de VRAM que vale la pena comparar.** Con esa capacidad, un modelo de 70B en Q4_K_M (~40 GB) o Q5 (45 GB+) cabe en una sola tarjeta y deja margen para el KV cache y una ventana de contexto más larga. Revisa el ancho de banda de memoria, la compatibilidad de software (CUDA, ROCm u otra), el consumo de energía y la garantía de cada tarjeta antes de comprar, porque la velocidad y la compatibilidad varían y pueden diferir de una configuración con dos RTX 5090. Un listado de tarjetas de esta clase es la [colección de tarjetas gráficas de 64 GB de Orange Hardwares](https://www.orangehardwares.com/collections/64-gb-graphics-cards).',
+            '**Divulgación:** Orange Hardwares nos sugirió este enlace. PromptQuorum no tiene ninguna relación comercial con Orange Hardwares y no recibe pago, comisión ni otra compensación por él. El enlace está marcado como patrocinado, no constituye una recomendación, y no hemos probado ni verificado las tarjetas, los precios ni la disponibilidad que se muestran allí.',
           ],
           rows: [
             { 'Modelo': 'Qwen 3.6 27B', 'Cuantización': 'Q4_K_M', 'VRAM requerida': '~16 GB', '¿Cabe en 24 GB?': '✅ Sí', 'Velocidad (RTX 4090)': '55 tok/seg', 'Notas': 'Mejor modelo de programación denso, 77,2% SWE-bench' },
@@ -1331,7 +1337,7 @@ schema: {
             { q: '¿Cuáles son los mejores modelos de llama.cpp para un MacBook con M3 y 8 GB de RAM?', a: 'En un MacBook M3 con 8 GB de RAM, ejecuta modelos de 3-4B en Q4_K_M: Phi-4 Mini 3.8B, Llama 3.2 3B o Gemma 3 4B. Usa Ollama o llama.cpp — ambos usan el backend de GPU Metal automáticamente. Un modelo de 7B está al límite y hará swap bajo carga; mantén el contexto por debajo de 4096 tokens. Para un uso cómodo de 7-8B en un Mac, 16 GB de memoria unificada es el mínimo práctico.' },
             { q: '¿Qué CPU es la mejor para LLM locales sin GPU?', a: 'CPU con alto número de núcleos y gran caché L3: AMD Ryzen 9 7950X o Intel Core i9-14900K. Espera 5-15 tokens/seg para modelos de 7B. La inferencia por CPU es 3-5× más lenta que por GPU.' },
             { q: '¿Afecta la velocidad de almacenamiento al rendimiento del LLM local?', a: 'Sí, en el tiempo de carga del modelo. Un SSD NVMe (3-7 GB/s) carga un modelo de 7B en 2-5 segundos frente a 20-60 segundos en HDD. La velocidad de inferencia tras la carga no se ve afectada por el almacenamiento.' },
-            { q: '¿Puedo usar varias GPU para ejecutar modelos más grandes?', a: 'Sí, mediante paralelismo de tensores. Dos RTX 5090 (32 GB cada una) proporcionan 64 GB de VRAM, suficiente para un modelo de 70B en Q4_K_M. Ollama y llama.cpp soportan multi-GPU mediante --n-gpu-layers repartido entre tarjetas.' },
+            { q: '¿Puedo usar varias GPU para ejecutar modelos más grandes?', a: 'Sí, mediante paralelismo de tensores. Dos RTX 5090 (32 GB cada una) proporcionan 64 GB de VRAM, suficiente para un modelo de 70B en Q4_K_M. Ollama y llama.cpp soportan multi-GPU mediante --n-gpu-layers repartido entre tarjetas. Si prefieres una sola tarjeta, las GPU con 64 GB de VRAM también pueden alojar un modelo de 70B en Q4_K_M o Q5 con margen para el KV cache; compara primero el ancho de banda de memoria y la compatibilidad de software. La sección de 70B de esta guía enlaza a un listado sugerido por un proveedor, junto con nuestra divulgación.' },
             { q: '¿Cuáles son los mejores LLM locales para 16 GB de VRAM en 2026?', a: 'Mistral Small 3.1 24B Q4_K_M (13 GB, 55 tok/seg) es el mejor en general para RTX 5080 / RTX 5070 Ti / RTX 4090 de portátil. Para programación agéntica: Devstral Small 24B Q4_K_M (16 GB, 45 tok/seg). Para razonamiento: DeepSeek-R1 14B (15 GB, 40 tok/seg). El más nuevo Mistral Small 4 (marzo de 2026) es el sucesor de un solo modelo. Llama 3.3 70B no cabe -- requiere ~40 GB en Q4_K_M.' },
             { q: '¿Puede una sola RTX 4090 ejecutar un modelo de 70B con buena calidad?', a: 'No -- no con calidad Q4_K_M. Llama 3.3 70B en Q4_K_M requiere ~39 GB de VRAM. La RTX 4090 tiene 24 GB. Puedes ejecutarlo en Q2_K (~24 GB) pero la calidad cae notablemente. Mejores opciones: Qwen 3.6 27B Q4_K_M (~16 GB, 77,2% SWE-bench, mejor programación densa) o DeepSeek-R1 32B Q4_K_M (~19 GB, mejor razonamiento).' },
             { q: '¿Cuál es el mejor LLM local para 16 GB de RAM del sistema sin GPU?', a: 'Phi-4 Mini 3.8B Q4_K_M (2,5 GB de RAM, ~25 tok/seg en Ryzen 9 7950X) es la mejor opción para inferencia solo por CPU en 16 GB de RAM del sistema. Gemma 2 2B Q8 es el más rápido a ~28 tok/seg. Llama 3.1 8B Q4_K_M (4,9 GB) también cabe pero funciona a ~12 tok/seg -- lento para uso interactivo.' },
@@ -1513,7 +1519,7 @@ schema: {
             'name': '¿Puedo usar varias GPU para ejecutar modelos más grandes?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sí, mediante paralelismo de tensores. Dos RTX 5090 (32 GB cada una) proporcionan 64 GB de VRAM, suficiente para un modelo de 70B en Q4_K_M. Ollama y llama.cpp soportan multi-GPU mediante --n-gpu-layers repartido entre tarjetas.',
+              'text': 'Sí, mediante paralelismo de tensores. Dos RTX 5090 (32 GB cada una) proporcionan 64 GB de VRAM, suficiente para un modelo de 70B en Q4_K_M. Ollama y llama.cpp soportan multi-GPU mediante --n-gpu-layers repartido entre tarjetas. Si prefieres una sola tarjeta, las GPU con 64 GB de VRAM también pueden alojar un modelo de 70B en Q4_K_M o Q5 con margen para el KV cache; compara primero el ancho de banda de memoria y la compatibilidad de software. La sección de 70B de esta guía enlaza a un listado sugerido por un proveedor, junto con nuestra divulgación.',
             },
           },
           {
@@ -1635,6 +1641,7 @@ schema: {
     },
     ar: {
       freshness_tier: 'monthly',
+      affiliateDisclosure: true,
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2026-10-01',
       last_full_refresh: '2026-09-01',
@@ -1921,6 +1928,8 @@ schema: {
           content: [
             '**متطلب العتاد لتشغيل نموذج 70B محليًا بجودة Q4_K_M قابلة للاستخدام هو ~40 GB من VRAM — لذا فإن RTX 4090 الواحدة بسعة 24 GB ليست كافية.** خياراتك الحقيقية لـ 70B في 2026 هي: 2× RTX 5090 (64 GB مجتمعة)، أو RTX 5090 (32 GB) مع إزاحة CPU خفيفة، أو GPU خادم بسعة 48-80 GB (RTX 6000 Ada / A100)، أو نظام Apple M5 Max / ذاكرة موحدة 128 GB. الاعتقاد الخاطئ الشائع هو أن "Q4 صغير" — عند 70B معامل، حتى Q4 يحتاج ~40 GB.',
             'على بطاقة 24 GB واحدة، الاستراتيجية الأفضل هي نموذج 27-32B، الذي يقدم جودة قوية ويتسع بشكل مريح مع هامش سياق. Qwen3.6 27B عند Q4_K_M هو أفضل نموذج برمجة كثيف (77.2% SWE-bench)؛ وDeepSeek-R1 32B هو أفضل اختيار للاستدلال. يمكن لبطاقة GPU بسعة 24 GB أن تحمل 70B فقط عند Q2_K، حيث تنخفض الجودة بشكل ملحوظ. راجع [كيفية تشغيل نماذج 70B على 24 GB VRAM](/ar/local-llms/run-70b-models-24gb-vram) لتقنيات الإزاحة وثنائية GPU.',
+            '**إذا كنت ترغب في 64 GB دون بناء منظومة ببطاقتين، فهناك وحدات GPU منفردة بسعة 64 GB من VRAM تستحق المقارنة.** عند هذه السعة، يمكن لنموذج 70B بصيغة Q4_K_M (حوالي 40 GB) أو Q5 (45 GB وأكثر) أن يعمل على بطاقة واحدة مع مساحة متبقية لـ KV cache ونافذة سياق أطول. تحقق من عرض النطاق الترددي للذاكرة ودعم البرمجيات (CUDA أو ROCm أو غيرهما) واستهلاك الطاقة والضمان لكل بطاقة قبل الشراء، لأن السرعة والتوافق يختلفان وقد يختلفان عن إعداد مزدوج من RTX 5090. من القوائم التي تضم بطاقات من هذه الفئة [مجموعة بطاقات الرسوميات بسعة 64 GB لدى Orange Hardwares](https://www.orangehardwares.com/collections/64-gb-graphics-cards).',
+            '**إفصاح:** اقترحت علينا Orange Hardwares هذا الرابط. لا تربط PromptQuorum أي علاقة تجارية بـ Orange Hardwares ولا تتلقى أي مبلغ أو عمولة أو تعويض آخر مقابله. الرابط موسوم بأنه برعاية، وليس توصية، ولم نختبر البطاقات أو الأسعار أو التوفر المدرجة هناك ولم نتحقق منها.',
           ],
           rows: [
             { 'النموذج': 'Qwen 3.6 27B', 'التكميم': 'Q4_K_M', 'VRAM المطلوب': '~16 GB', 'يتسع في 24 GB؟': '✅ نعم', 'السرعة (RTX 4090)': '55 tok/sec', 'ملاحظات': 'أفضل نموذج برمجة كثيف، 77.2% SWE-bench' },
@@ -2133,7 +2142,7 @@ schema: {
             { q: 'ما أفضل نماذج llama.cpp لـ MacBook بمعالج M3 وذاكرة 8 GB؟', a: 'على MacBook M3 بذاكرة 8 GB، شغّل نماذج 3-4B عند Q4_K_M: Phi-4 Mini 3.8B أو Llama 3.2 3B أو Gemma 3 4B. استخدم Ollama أو llama.cpp — كلاهما يستخدم خلفية Metal GPU تلقائيًا. نموذج 7B على الحافة وسيستخدم التبديل تحت الحمل؛ أبقِ السياق دون 4096 رمزًا. للاستخدام المريح لنماذج 7-8B على Mac، 16 GB ذاكرة موحدة هو الحد الأدنى العملي.' },
             { q: 'أي CPU هو الأفضل لنماذج LLM المحلية دون GPU؟', a: 'معالجات عالية عدد الأنوية بذاكرة L3 كبيرة: AMD Ryzen 9 7950X أو Intel Core i9-14900K. توقّع 5-15 رمز/ثانية لنماذج 7B. استدلال CPU أبطأ 3-5× من GPU.' },
             { q: 'هل تؤثر سرعة التخزين على أداء LLM المحلي؟', a: 'نعم، عند وقت تحميل النموذج. يحمّل NVMe SSD (3-7 GB/s) نموذج 7B في 2-5 ثوانٍ مقابل 20-60 ثانية على HDD. سرعة الاستدلال بعد التحميل لا تتأثر بالتخزين.' },
-            { q: 'هل يمكنني استخدام بطاقات GPU متعددة لتشغيل نماذج أكبر؟', a: 'نعم، عبر التوازي الموتري. توفر بطاقتا RTX 5090 (32 GB لكل منهما) 64 GB VRAM، تكفي لنموذج 70B عند Q4_K_M. يدعم Ollama وllama.cpp تعدد GPU عبر --n-gpu-layers موزّعة على البطاقات.' },
+            { q: 'هل يمكنني استخدام بطاقات GPU متعددة لتشغيل نماذج أكبر؟', a: 'نعم، عبر التوازي الموتري. توفر بطاقتا RTX 5090 (32 GB لكل منهما) 64 GB VRAM، تكفي لنموذج 70B عند Q4_K_M. يدعم Ollama وllama.cpp تعدد GPU عبر --n-gpu-layers موزّعة على البطاقات. إذا كنت تفضل بطاقة واحدة، فيمكن لوحدات GPU بسعة 64 GB من VRAM أيضًا استيعاب نموذج 70B بصيغة Q4_K_M أو Q5 مع مساحة متبقية لـ KV cache؛ قارن أولًا عرض النطاق الترددي للذاكرة ودعم البرمجيات. يحتوي قسم 70B في هذا الدليل على رابط لقائمة اقترحها أحد الموردين، مع إفصاحنا.' },
             { q: 'ما أفضل نماذج LLM المحلية لـ 16 GB VRAM في 2026؟', a: 'Mistral Small 3.1 24B Q4_K_M (13 GB، 55 tok/sec) هو الأفضل إجمالًا لـ RTX 5080 / RTX 5070 Ti / RTX 4090 لحاسوب محمول. للبرمجة الوكيلة: Devstral Small 24B Q4_K_M (16 GB، 45 tok/sec). للاستدلال: DeepSeek-R1 14B (15 GB، 40 tok/sec). يُعد Mistral Small 4 الأحدث (مارس 2026) الخليفة ذا النموذج الواحد. لا يتسع Llama 3.3 70B -- يتطلب ~40 GB عند Q4_K_M.' },
             { q: 'هل يمكن لـ RTX 4090 واحدة تشغيل نموذج 70B بجودة جيدة؟', a: 'لا -- ليس بجودة Q4_K_M. يتطلب Llama 3.3 70B عند Q4_K_M ~39 GB VRAM. تملك RTX 4090 سعة 24 GB. يمكنك تشغيله عند Q2_K (~24 GB) لكن الجودة تنخفض بشكل ملحوظ. خيارات أفضل: Qwen 3.6 27B Q4_K_M (~16 GB، 77.2% SWE-bench، أفضل برمجة كثيفة) أو DeepSeek-R1 32B Q4_K_M (~19 GB، أفضل استدلال).' },
             { q: 'ما أفضل نموذج LLM محلي لذاكرة نظام 16 GB دون GPU؟', a: 'Phi-4 Mini 3.8B Q4_K_M (2.5 GB ذاكرة، ~25 tok/sec على Ryzen 9 7950X) هو أفضل خيار للاستدلال على CPU فقط بذاكرة نظام 16 GB. Gemma 2 2B Q8 هو الأسرع عند ~28 tok/sec. يتسع Llama 3.1 8B Q4_K_M (4.9 GB) أيضًا لكنه يعمل بسرعة ~12 tok/sec -- بطيء للاستخدام التفاعلي.' },
@@ -2317,7 +2326,7 @@ schema: {
             'name': 'هل يمكنني استخدام بطاقات GPU متعددة لتشغيل نماذج أكبر؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'نعم، عبر التوازي الموتري. توفر بطاقتا RTX 5090 (32 GB لكل منهما) 64 GB VRAM، تكفي لنموذج 70B عند Q4_K_M. يدعم Ollama وllama.cpp تعدد GPU عبر --n-gpu-layers موزّعة على البطاقات.',
+              'text': 'نعم، عبر التوازي الموتري. توفر بطاقتا RTX 5090 (32 GB لكل منهما) 64 GB VRAM، تكفي لنموذج 70B عند Q4_K_M. يدعم Ollama وllama.cpp تعدد GPU عبر --n-gpu-layers موزّعة على البطاقات. إذا كنت تفضل بطاقة واحدة، فيمكن لوحدات GPU بسعة 64 GB من VRAM أيضًا استيعاب نموذج 70B بصيغة Q4_K_M أو Q5 مع مساحة متبقية لـ KV cache؛ قارن أولًا عرض النطاق الترددي للذاكرة ودعم البرمجيات. يحتوي قسم 70B في هذا الدليل على رابط لقائمة اقترحها أحد الموردين، مع إفصاحنا.',
             },
           },
           {
@@ -2455,6 +2464,7 @@ schema: {
     },
     pt: {
       freshness_tier: 'monthly',
+      affiliateDisclosure: true,
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2026-10-01',
       last_full_refresh: '2026-09-01',
@@ -2741,6 +2751,8 @@ schema: {
           content: [
             '**O requisito de hardware para rodar um modelo 70B localmente com qualidade Q4_K_M utilizável é de ~40 GB de VRAM — então uma única RTX 4090 de 24 GB não é suficiente.** Suas opções reais para 70B em 2026 são: 2× RTX 5090 (64 GB combinados), uma RTX 5090 (32 GB) com leve offload de CPU, uma GPU de servidor de 48-80 GB (RTX 6000 Ada / A100), ou um Apple M5 Max / sistema com 128 GB de memória unificada. O equívoco comum é achar que "Q4 é pequeno" — com 70B de parâmetros, até o Q4 precisa de ~40 GB.',
             'Em uma única placa de 24 GB, a melhor estratégia é um modelo 27-32B, que entrega forte qualidade e cabe confortavelmente com folga de contexto. O Qwen3.6 27B em Q4_K_M é o melhor modelo de codificação denso (77,2% SWE-bench); o DeepSeek-R1 32B é a melhor escolha de raciocínio. Uma GPU de 24 GB só comporta 70B em Q2_K, onde a qualidade cai visivelmente. Veja [como rodar modelos 70B em 24 GB de VRAM](/pt/local-llms/run-70b-models-24gb-vram) para técnicas de offload e dual-GPU.',
+            '**Se você quer 64 GB sem montar um equipamento com duas placas, existem GPUs individuais com 64 GB de VRAM que vale a pena comparar.** Com essa capacidade, um modelo de 70B em Q4_K_M (~40 GB) ou Q5 (45 GB+) cabe em uma única placa, com folga para o KV cache e uma janela de contexto maior. Verifique a largura de banda de memória, o suporte de software (CUDA, ROCm ou outro), o consumo de energia e a garantia de cada placa antes de comprar, pois a velocidade e a compatibilidade variam e podem diferir de uma configuração com duas RTX 5090. Uma lista de placas dessa categoria é a [coleção de placas de vídeo de 64 GB da Orange Hardwares](https://www.orangehardwares.com/collections/64-gb-graphics-cards).',
+            '**Divulgação:** A Orange Hardwares nos sugeriu este link. A PromptQuorum não tem nenhuma relação comercial com a Orange Hardwares e não recebe pagamento, comissão ou outra compensação por ele. O link está marcado como patrocinado, não é uma recomendação, e nós não testamos nem verificamos as placas, os preços ou a disponibilidade listados lá.',
           ],
           rows: [
             { 'Modelo': 'Qwen 3.6 27B', 'Quantização': 'Q4_K_M', 'VRAM Necessária': '~16 GB', 'Cabe em 24 GB?': '✅ Sim', 'Velocidade (RTX 4090)': '55 tok/sec', 'Notas': 'Melhor modelo de codificação denso, 77,2% SWE-bench' },
@@ -2953,7 +2965,7 @@ schema: {
             { q: 'Quais são os melhores modelos llama.cpp para um MacBook com M3 e 8 GB de RAM?', a: 'Em um MacBook M3 com 8 GB de RAM, rode modelos 3-4B em Q4_K_M: Phi-4 Mini 3.8B, Llama 3.2 3B ou Gemma 3 4B. Use Ollama ou llama.cpp — ambos usam o backend de GPU Metal automaticamente. Um modelo 7B fica no limite e fará swap sob carga; mantenha o contexto abaixo de 4096 tokens. Para uso confortável de 7-8B em um Mac, 16 GB de memória unificada é o mínimo prático.' },
             { q: 'Qual CPU é melhor para LLMs locais sem uma GPU?', a: 'CPUs com alta contagem de núcleos e grande cache L3: AMD Ryzen 9 7950X ou Intel Core i9-14900K. Espere 5-15 tokens/sec para modelos 7B. A inferência por CPU é 3-5× mais lenta que por GPU.' },
             { q: 'A velocidade do armazenamento afeta o desempenho do LLM local?', a: 'Sim, no momento de carregar o modelo. Um SSD NVMe (3-7 GB/s) carrega um modelo 7B em 2-5 segundos vs. 20-60 segundos em HDD. A velocidade de inferência após o carregamento não é afetada pelo armazenamento.' },
-            { q: 'Posso usar múltiplas GPUs para rodar modelos maiores?', a: 'Sim, via paralelismo de tensores. Duas RTX 5090 (32 GB cada) fornecem 64 GB de VRAM, suficiente para um modelo 70B em Q4_K_M. O Ollama e o llama.cpp suportam multi-GPU via --n-gpu-layers dividido entre as placas.' },
+            { q: 'Posso usar múltiplas GPUs para rodar modelos maiores?', a: 'Sim, via paralelismo de tensores. Duas RTX 5090 (32 GB cada) fornecem 64 GB de VRAM, suficiente para um modelo 70B em Q4_K_M. O Ollama e o llama.cpp suportam multi-GPU via --n-gpu-layers dividido entre as placas. Se você prefere uma única placa, GPUs com 64 GB de VRAM também podem comportar um modelo de 70B em Q4_K_M ou Q5 com folga para o KV cache; compare primeiro a largura de banda de memória e o suporte de software. A seção de 70B deste guia aponta para uma lista sugerida por um fornecedor, junto com a nossa divulgação.' },
             { q: 'Quais são os melhores LLMs locais para 16 GB de VRAM em 2026?', a: 'O Mistral Small 3.1 24B Q4_K_M (13 GB, 55 tok/sec) é o melhor geral para a RTX 5080 / RTX 5070 Ti / RTX 4090 de laptop. Para codificação agêntica: Devstral Small 24B Q4_K_M (16 GB, 45 tok/sec). Para raciocínio: DeepSeek-R1 14B (15 GB, 40 tok/sec). O mais novo Mistral Small 4 (março de 2026) é o sucessor de modelo único. O Llama 3.3 70B não cabe -- ele requer ~40 GB em Q4_K_M.' },
             { q: 'Uma única RTX 4090 pode rodar um modelo 70B com boa qualidade?', a: 'Não -- não com qualidade Q4_K_M. O Llama 3.3 70B em Q4_K_M requer ~39 GB de VRAM. A RTX 4090 tem 24 GB. Você pode rodá-lo em Q2_K (~24 GB), mas a qualidade cai visivelmente. Melhores opções: Qwen 3.6 27B Q4_K_M (~16 GB, 77,2% SWE-bench, melhor codificação densa) ou DeepSeek-R1 32B Q4_K_M (~19 GB, melhor raciocínio).' },
             { q: 'Qual é o melhor LLM local para 16 GB de RAM do sistema sem uma GPU?', a: 'O Phi-4 Mini 3.8B Q4_K_M (2,5 GB de RAM, ~25 tok/sec no Ryzen 9 7950X) é a melhor opção para inferência apenas por CPU em 16 GB de RAM do sistema. O Gemma 2 2B Q8 é o mais rápido a ~28 tok/sec. O Llama 3.1 8B Q4_K_M (4,9 GB) também cabe, mas roda a ~12 tok/sec -- lento para uso interativo.' },
@@ -3136,7 +3148,7 @@ schema: {
             'name': 'Posso usar múltiplas GPUs para rodar modelos maiores?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sim, via paralelismo de tensores. Duas RTX 5090 (32 GB cada) fornecem 64 GB de VRAM, suficiente para um modelo 70B em Q4_K_M. O Ollama e o llama.cpp suportam multi-GPU via --n-gpu-layers dividido entre as placas.',
+              'text': 'Sim, via paralelismo de tensores. Duas RTX 5090 (32 GB cada) fornecem 64 GB de VRAM, suficiente para um modelo 70B em Q4_K_M. O Ollama e o llama.cpp suportam multi-GPU via --n-gpu-layers dividido entre as placas. Se você prefere uma única placa, GPUs com 64 GB de VRAM também podem comportar um modelo de 70B em Q4_K_M ou Q5 com folga para o KV cache; compare primeiro a largura de banda de memória e o suporte de software. A seção de 70B deste guia aponta para uma lista sugerida por um fornecedor, junto com a nossa divulgação.',
             },
           },
           {
@@ -3266,6 +3278,7 @@ schema: {
     },
     de: {
       freshness_tier: 'monthly',
+      affiliateDisclosure: true,
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2026-10-01',
       last_full_refresh: '2026-09-01',
@@ -3552,6 +3565,8 @@ schema: {
           content: [
             '**Die Hardware-Anforderung, um ein 70B-Modell lokal in brauchbarer Q4_K_M-Qualitaet zu betreiben, betraegt ~40 GB VRAM — eine einzelne 24-GB-RTX-4090 reicht also nicht.** Deine realen Optionen fuer 70B im Jahr 2026 sind: 2x RTX 5090 (64 GB kombiniert), eine RTX 5090 (32 GB) mit leichtem CPU-Offload, eine Server-GPU mit 48-80 GB (RTX 6000 Ada / A100) oder ein Apple M5 Max / 128-GB-Unified-Memory-System. Das haeufige Missverstaendnis ist, dass "Q4 klein ist" — bei 70B Parametern braucht selbst Q4 ~40 GB.',
             'Auf einer einzelnen 24-GB-Karte ist die bessere Strategie ein 27-32B-Modell, das starke Qualitaet liefert und bequem mit Kontextreserve passt. Qwen3.6 27B bei Q4_K_M ist das beste dichte Coding-Modell (77,2 % SWE-bench); DeepSeek-R1 32B ist die beste Reasoning-Wahl. Eine 24-GB-GPU kann 70B nur bei Q2_K fassen, wo die Qualitaet merklich faellt. Siehe [wie man 70B-Modelle auf 24 GB VRAM betreibt](/de/local-llms/run-70b-models-24gb-vram) fuer Offload- und Dual-GPU-Techniken.',
+            '**Wenn Sie 64 GB ohne Dual-Karten-Aufbau wünschen: Es gibt einzelne GPUs mit 64 GB VRAM, die einen Vergleich wert sind.** Bei dieser Kapazität passt ein 70B-Modell in Q4_K_M (~40 GB) oder Q5 (45 GB+) auf eine einzelne Karte, mit Reserve für den KV cache und ein längeres Kontextfenster. Prüfen Sie vor dem Kauf Speicherbandbreite, Software-Unterstützung (CUDA, ROCm oder andere), Leistungsaufnahme und Garantie der jeweiligen Karte, denn Geschwindigkeit und Kompatibilität variieren und können von einem Dual-RTX-5090-Setup abweichen. Eine Übersicht über Karten dieser Klasse bietet die [64-GB-Grafikkarten-Kollektion von Orange Hardwares](https://www.orangehardwares.com/collections/64-gb-graphics-cards).',
+            '**Offenlegung:** Orange Hardwares hat uns diesen Link vorgeschlagen. PromptQuorum hat keine geschäftliche Beziehung zu Orange Hardwares und erhält dafür weder eine Zahlung noch eine Provision oder sonstige Vergütung. Der Link ist als gesponsert gekennzeichnet, stellt keine Empfehlung dar, und wir haben die dort aufgeführten Karten, Preise oder die Verfügbarkeit weder getestet noch überprüft.',
           ],
           rows: [
             { 'Modell': 'Qwen 3.6 27B', 'Quantisierung': 'Q4_K_M', 'VRAM benoetigt': '~16 GB', 'Passt 24 GB?': '✅ Ja', 'Geschwindigkeit (RTX 4090)': '55 tok/sec', 'Anmerkungen': 'Bestes dichtes Coding-Modell, 77,2 % SWE-bench' },
@@ -3764,7 +3779,7 @@ schema: {
             { q: 'Was sind die besten llama.cpp-Modelle fuer ein MacBook mit M3 und 8 GB RAM?', a: 'Auf einem MacBook M3 mit 8 GB RAM fuehre 3-4B-Modelle bei Q4_K_M aus: Phi-4 Mini 3.8B, Llama 3.2 3B oder Gemma 3 4B. Nutze Ollama oder llama.cpp — beide nutzen automatisch das Metal-GPU-Backend. Ein 7B-Modell ist grenzwertig und swappt unter Last; halte den Kontext unter 4096 Token. Fuer bequeme 7-8B-Nutzung auf einem Mac ist 16 GB Unified Memory das praktische Minimum.' },
             { q: 'Welche CPU ist die beste fuer lokale LLMs ohne GPU?', a: 'CPUs mit hoher Kernzahl und grossem L3-Cache: AMD Ryzen 9 7950X oder Intel Core i9-14900K. Erwarte 5-15 Token/sec fuer 7B-Modelle. CPU-Inferenz ist 3-5x langsamer als GPU.' },
             { q: 'Beeinflusst die Speichergeschwindigkeit die Leistung lokaler LLMs?', a: 'Ja, beim Modellladen. Eine NVMe-SSD (3-7 GB/s) laedt ein 7B-Modell in 2-5 Sekunden gegenueber 20-60 Sekunden auf einer HDD. Die Inferenzgeschwindigkeit nach dem Laden ist vom Speicher unbeeinflusst.' },
-            { q: 'Kann ich mehrere GPUs nutzen, um groessere Modelle auszufuehren?', a: 'Ja, via Tensor-Parallelismus. Zwei RTX 5090 (je 32 GB) liefern 64 GB VRAM, genug fuer ein 70B-Modell bei Q4_K_M. Ollama und llama.cpp unterstuetzen Multi-GPU via --n-gpu-layers, aufgeteilt auf die Karten.' },
+            { q: 'Kann ich mehrere GPUs nutzen, um groessere Modelle auszufuehren?', a: 'Ja, via Tensor-Parallelismus. Zwei RTX 5090 (je 32 GB) liefern 64 GB VRAM, genug fuer ein 70B-Modell bei Q4_K_M. Ollama und llama.cpp unterstuetzen Multi-GPU via --n-gpu-layers, aufgeteilt auf die Karten. Wenn Sie eine einzelne Karte bevorzugen, können auch GPUs mit 64 GB VRAM ein 70B-Modell in Q4_K_M oder Q5 mit Reserve für den KV cache aufnehmen; vergleichen Sie zuerst Speicherbandbreite und Software-Unterstützung. Der 70B-Abschnitt dieses Leitfadens verlinkt auf eine vom Anbieter vorgeschlagene Übersicht, zusammen mit unserer Offenlegung.' },
             { q: 'Was sind die besten lokalen LLMs fuer 16 GB VRAM im Jahr 2026?', a: 'Mistral Small 3.1 24B Q4_K_M (13 GB, 55 tok/sec) ist das beste insgesamt fuer RTX 5080 / RTX 5070 Ti / RTX-4090-Laptop. Fuer agentisches Coding: Devstral Small 24B Q4_K_M (16 GB, 45 tok/sec). Fuer Reasoning: DeepSeek-R1 14B (15 GB, 40 tok/sec). Das neuere Mistral Small 4 (Maerz 2026) ist der Ein-Modell-Nachfolger. Llama 3.3 70B passt nicht -- es braucht ~40 GB bei Q4_K_M.' },
             { q: 'Kann eine einzelne RTX 4090 ein 70B-Modell in guter Qualitaet ausfuehren?', a: 'Nein -- nicht in Q4_K_M-Qualitaet. Llama 3.3 70B bei Q4_K_M braucht ~39 GB VRAM. Die RTX 4090 hat 24 GB. Du kannst es bei Q2_K (~24 GB) ausfuehren, aber die Qualitaet faellt merklich. Bessere Optionen: Qwen 3.6 27B Q4_K_M (~16 GB, 77,2 % SWE-bench, bestes dichtes Coding) oder DeepSeek-R1 32B Q4_K_M (~19 GB, bestes Reasoning).' },
             { q: 'Was ist das beste lokale LLM fuer 16 GB Arbeitsspeicher ohne GPU?', a: 'Phi-4 Mini 3.8B Q4_K_M (2,5 GB RAM, ~25 tok/sec auf Ryzen 9 7950X) ist die beste Option fuer CPU-only-Inferenz auf 16 GB Arbeitsspeicher. Gemma 2 2B Q8 ist am schnellsten mit ~28 tok/sec. Llama 3.1 8B Q4_K_M (4,9 GB) passt ebenfalls, laeuft aber mit ~12 tok/sec -- langsam fuer interaktive Nutzung.' },
@@ -3948,7 +3963,7 @@ schema: {
             'name': 'Kann ich mehrere GPUs nutzen, um groessere Modelle auszufuehren?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Ja, via Tensor-Parallelismus. Zwei RTX 5090 (je 32 GB) liefern 64 GB VRAM, genug fuer ein 70B-Modell bei Q4_K_M. Ollama und llama.cpp unterstuetzen Multi-GPU via --n-gpu-layers, aufgeteilt auf die Karten.',
+              'text': 'Ja, via Tensor-Parallelismus. Zwei RTX 5090 (je 32 GB) liefern 64 GB VRAM, genug fuer ein 70B-Modell bei Q4_K_M. Ollama und llama.cpp unterstuetzen Multi-GPU via --n-gpu-layers, aufgeteilt auf die Karten. Wenn Sie eine einzelne Karte bevorzugen, können auch GPUs mit 64 GB VRAM ein 70B-Modell in Q4_K_M oder Q5 mit Reserve für den KV cache aufnehmen; vergleichen Sie zuerst Speicherbandbreite und Software-Unterstützung. Der 70B-Abschnitt dieses Leitfadens verlinkt auf eine vom Anbieter vorgeschlagene Übersicht, zusammen mit unserer Offenlegung.',
             },
           },
           {
@@ -4086,6 +4101,7 @@ schema: {
     },
     fr: {
       freshness_tier: 'monthly',
+      affiliateDisclosure: true,
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2026-10-01',
       last_full_refresh: '2026-09-01',
@@ -4372,6 +4388,8 @@ schema: {
           content: [
             '**Le besoin materiel pour faire tourner un modele 70B en local a une qualite Q4_K_M utilisable est de ~40 Go de VRAM — donc une seule RTX 4090 de 24 Go ne suffit pas.** Vos vraies options pour le 70B en 2026 sont : 2x RTX 5090 (64 Go combines), une RTX 5090 (32 Go) avec un leger deport CPU, un GPU serveur de 48-80 Go (RTX 6000 Ada / A100), ou un Apple M5 Max / systeme a 128 Go de memoire unifiee. L\'idee fausse courante est que « Q4 est petit » — a 70B parametres, meme Q4 necessite ~40 Go.',
             'Sur une seule carte de 24 Go, la meilleure strategie est un modele 27-32B, qui offre une forte qualite et tient confortablement avec de la marge de contexte. Qwen3.6 27B en Q4_K_M est le meilleur modele de codage dense (77,2 % SWE-bench) ; DeepSeek-R1 32B est le meilleur choix raisonnement. Un GPU de 24 Go ne peut accueillir le 70B qu\'en Q2_K, ou la qualite chute nettement. Voir [comment faire tourner des modeles 70B sur 24 Go de VRAM](/fr/local-llms/run-70b-models-24gb-vram) pour les techniques de deport et multi-GPU.',
+            '**Si vous souhaitez 64 Go sans monter une configuration à deux cartes, il existe des GPU uniques dotés de 64 Go de VRAM qui méritent d\'être comparés.** À cette capacité, un modèle 70B en Q4_K_M (~40 Go) ou en Q5 (45 Go+) tient sur une seule carte, avec de la marge pour le KV cache et une fenêtre de contexte plus longue. Vérifiez la bande passante mémoire, la prise en charge logicielle (CUDA, ROCm ou autre), la consommation électrique et la garantie de chaque carte avant d\'acheter, car la vitesse et la compatibilité varient et peuvent différer d\'une configuration à deux RTX 5090. Un exemple de liste de cartes de cette catégorie est la [collection de cartes graphiques 64 Go d\'Orange Hardwares](https://www.orangehardwares.com/collections/64-gb-graphics-cards).',
+            '**Transparence :** Orange Hardwares nous a suggéré ce lien. PromptQuorum n\'entretient aucune relation commerciale avec Orange Hardwares et ne reçoit ni paiement, ni commission, ni autre contrepartie à ce titre. Le lien est signalé comme sponsorisé, ne constitue pas une recommandation, et nous n\'avons ni testé ni vérifié les cartes, les prix ou la disponibilité qui y figurent.',
           ],
           rows: [
             { 'Model': 'Qwen 3.6 27B', 'Quantization': 'Q4_K_M', 'VRAM Required': '~16 GB', 'Fits 24 GB?': '✅ Oui', 'Speed (RTX 4090)': '55 tok/sec', 'Notes': 'Meilleur modele de codage dense, 77,2 % SWE-bench' },
@@ -4585,7 +4603,7 @@ schema: {
             { q: 'Quels sont les meilleurs modeles llama.cpp pour un MacBook avec M3 et 8 Go de RAM ?', a: 'Sur un MacBook M3 avec 8 Go de RAM, faites tourner des modeles 3-4B en Q4_K_M : Phi-4 Mini 3.8B, Llama 3.2 3B ou Gemma 3 4B. Utilisez Ollama ou llama.cpp — les deux utilisent le backend GPU Metal automatiquement. Un modele 7B est limite et fera du swap sous charge ; maintenez le contexte sous 4096 tokens. Pour un usage confortable en 7-8B sur un Mac, 16 Go de memoire unifiee est le minimum pratique.' },
             { q: 'Quel CPU est le meilleur pour les LLM locaux sans GPU ?', a: 'Des CPU a grand nombre de cœurs avec un grand cache L3 : AMD Ryzen 9 7950X ou Intel Core i9-14900K. Comptez 5-15 tokens/sec pour les modeles 7B. L\'inference CPU est 3-5x plus lente que le GPU.' },
             { q: 'La vitesse de stockage affecte-t-elle les performances du LLM local ?', a: 'Oui, au moment du chargement du modele. Un SSD NVMe (3-7 Go/s) charge un modele 7B en 2-5 secondes contre 20-60 secondes sur un disque dur. La vitesse d\'inference apres chargement n\'est pas affectee par le stockage.' },
-            { q: 'Puis-je utiliser plusieurs GPU pour faire tourner des modeles plus grands ?', a: 'Oui, via le parallelisme tensoriel. Deux RTX 5090 (32 Go chacune) offrent 64 Go de VRAM, assez pour un modele 70B en Q4_K_M. Ollama et llama.cpp prennent en charge le multi-GPU via --n-gpu-layers reparti sur les cartes.' },
+            { q: 'Puis-je utiliser plusieurs GPU pour faire tourner des modeles plus grands ?', a: 'Oui, via le parallelisme tensoriel. Deux RTX 5090 (32 Go chacune) offrent 64 Go de VRAM, assez pour un modele 70B en Q4_K_M. Ollama et llama.cpp prennent en charge le multi-GPU via --n-gpu-layers reparti sur les cartes. Si vous préférez une seule carte, les GPU dotés de 64 Go de VRAM peuvent aussi contenir un modèle 70B en Q4_K_M ou en Q5 avec de la marge pour le KV cache ; comparez d\'abord la bande passante mémoire et la prise en charge logicielle. La section 70B de ce guide renvoie vers une liste suggérée par un fournisseur, accompagnée de notre mention de transparence.' },
             { q: 'Quels sont les meilleurs LLM locaux pour 16 Go de VRAM en 2026 ?', a: 'Mistral Small 3.1 24B Q4_K_M (13 Go, 55 tok/sec) est le meilleur global pour RTX 5080 / RTX 5070 Ti / RTX 4090 de portable. Pour le codage agentique : Devstral Small 24B Q4_K_M (16 Go, 45 tok/sec). Pour le raisonnement : DeepSeek-R1 14B (15 Go, 40 tok/sec). Le Mistral Small 4 plus recent (mars 2026) est le successeur tout-en-un. Llama 3.3 70B ne tient pas -- il necessite ~40 Go en Q4_K_M.' },
             { q: 'Une seule RTX 4090 peut-elle faire tourner un modele 70B a bonne qualite ?', a: 'Non -- pas a la qualite Q4_K_M. Llama 3.3 70B en Q4_K_M necessite ~39 Go de VRAM. La RTX 4090 a 24 Go. Vous pouvez le faire tourner en Q2_K (~24 Go) mais la qualite chute nettement. Meilleures options : Qwen 3.6 27B Q4_K_M (~16 Go, 77,2 % SWE-bench, meilleur codage dense) ou DeepSeek-R1 32B Q4_K_M (~19 Go, meilleur raisonnement).' },
             { q: 'Quel est le meilleur LLM local pour 16 Go de RAM systeme sans GPU ?', a: 'Phi-4 Mini 3.8B Q4_K_M (2,5 Go de RAM, ~25 tok/sec sur Ryzen 9 7950X) est la meilleure option pour l\'inference CPU seul sur 16 Go de RAM systeme. Gemma 2 2B Q8 est le plus rapide a ~28 tok/sec. Llama 3.1 8B Q4_K_M (4,9 Go) tient aussi mais tourne a ~12 tok/sec -- lent pour un usage interactif.' },
@@ -4768,7 +4786,7 @@ schema: {
             'name': 'Puis-je utiliser plusieurs GPU pour faire tourner des modeles plus grands ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Oui, via le parallelisme tensoriel. Deux RTX 5090 (32 Go chacune) offrent 64 Go de VRAM, assez pour un modele 70B en Q4_K_M. Ollama et llama.cpp prennent en charge le multi-GPU via --n-gpu-layers reparti sur les cartes.',
+              'text': 'Oui, via le parallelisme tensoriel. Deux RTX 5090 (32 Go chacune) offrent 64 Go de VRAM, assez pour un modele 70B en Q4_K_M. Ollama et llama.cpp prennent en charge le multi-GPU via --n-gpu-layers reparti sur les cartes. Si vous préférez une seule carte, les GPU dotés de 64 Go de VRAM peuvent aussi contenir un modèle 70B en Q4_K_M ou en Q5 avec de la marge pour le KV cache ; comparez d\'abord la bande passante mémoire et la prise en charge logicielle. La section 70B de ce guide renvoie vers une liste suggérée par un fournisseur, accompagnée de notre mention de transparence.',
             },
           },
           {
@@ -4898,6 +4916,7 @@ schema: {
     },
     ja: {
       freshness_tier: 'monthly',
+      affiliateDisclosure: true,
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2026-10-01',
       last_full_refresh: '2026-09-01',
@@ -5184,6 +5203,8 @@ schema: {
           content: [
             '**70Bモデルを実用的なQ4_K_M品質でローカルに実行するためのハードウェア要件は約40 GBのVRAMです — したがって単一の24 GB RTX 4090では不十分です。** 2026年における70Bの現実的な選択肢は：2× RTX 5090（合計64 GB）、軽いCPUオフロードを伴うRTX 5090（32 GB）、48〜80 GBのサーバーGPU（RTX 6000 Ada / A100）、またはApple M5 Max / 128 GBユニファイドメモリシステムです。よくある誤解は「Q4は小さい」というものですが — 70Bパラメータでは、Q4でさえ約40 GBを必要とします。',
             '単一の24 GBカードでは、より良い戦略は27〜32Bモデルであり、強力な品質を提供し、コンテキストの余裕をもって快適に収まります。Qwen3.6 27BのQ4_K_Mは最良の密結合コーディングモデル（77.2% SWE-bench）であり、DeepSeek-R1 32Bは最良の推論の選択肢です。24 GB GPUは70BをQ2_Kでのみ保持でき、そこでは品質が著しく低下します。オフロードとデュアルGPUの手法については、[24 GB VRAMで70Bモデルを実行する方法](/ja/local-llms/run-70b-models-24gb-vram)を参照してください。',
+            '**デュアルカード構成を組まずに 64 GB を確保したい場合、VRAM 64 GB を搭載した単体 GPU も存在し、比較する価値があります。** この容量であれば、Q4_K_M の 70B モデル（約 40 GB）や Q5（45 GB 以上）も 1 枚のカードに収まり、KV cache とより長いコンテキストウィンドウの余裕も残ります。速度や互換性はカードごとに異なり、RTX 5090 の 2 枚構成とは差が出ることもあるため、購入前に各カードのメモリ帯域幅、ソフトウェア対応（CUDA、ROCm など）、消費電力、保証を確認してください。このクラスのカードを一覧できる例として、[Orange Hardwares の 64 GB グラフィックスカード コレクション](https://www.orangehardwares.com/collections/64-gb-graphics-cards)があります。',
+            '**開示：** このリンクは Orange Hardwares から提案されたものです。PromptQuorum は Orange Hardwares との間に商業的な関係はなく、このリンクに関して支払い、手数料、その他の報酬を一切受け取っていません。リンクにはスポンサー付きの表示を付けています。これは推奨ではなく、同ページに掲載されているカード、価格、在庫状況について、当サイトは動作確認も検証も行っていません。',
           ],
           rows: [
             { 'Model': 'Qwen 3.6 27B', 'Quantization': 'Q4_K_M', 'VRAM Required': '~16 GB', 'Fits 24 GB?': '✅ はい', 'Speed (RTX 4090)': '55 tok/sec', 'Notes': 'Best dense coding model, 77.2% SWE-bench' },
@@ -5396,7 +5417,7 @@ schema: {
             { q: 'M3と8 GB RAMのMacBookに最適なllama.cppモデルは何ですか？', a: 'M3と8 GB RAMのMacBookでは、3〜4BモデルをQ4_K_Mで実行しましょう：Phi-4 Mini 3.8B、Llama 3.2 3B、またはGemma 3 4B。OllamaまたはllamaCpp（どちらも自動的にMetal GPUバックエンドを使用）を使用してください。7Bモデルはぎりぎりで負荷時にスワップします。コンテキストを4096トークン未満に保ってください。Macで快適に7〜8Bを使うには、16 GBユニファイドメモリが実用的な最小値です。' },
             { q: 'GPUなしでローカルLLMに最適なCPUは何ですか？', a: '大きなL3キャッシュを備えた高コア数のCPU：AMD Ryzen 9 7950XまたはIntel Core i9-14900K。7Bモデルで5〜15トークン/秒を見込めます。CPU推論はGPUより3〜5倍遅いです。' },
             { q: 'ストレージ速度はローカルLLMの性能に影響しますか？', a: 'はい、モデルのロード時に。NVMe SSD（3〜7 GB/s）は7Bモデルを2〜5秒でロードします（HDDでは20〜60秒）。ロード後の推論速度はストレージの影響を受けません。' },
-            { q: '複数のGPUを使ってより大きなモデルを実行できますか？', a: 'はい、テンソル並列を介して。2つのRTX 5090（各32 GB）は64 GBのVRAMを提供し、Q4_K_Mでの70Bモデルに十分です。Ollamaとllama.cppは --n-gpu-layers をカード間で分割することでマルチGPUをサポートします。' },
+            { q: '複数のGPUを使ってより大きなモデルを実行できますか？', a: 'はい、テンソル並列を介して。2つのRTX 5090（各32 GB）は64 GBのVRAMを提供し、Q4_K_Mでの70Bモデルに十分です。Ollamaとllama.cppは --n-gpu-layers をカード間で分割することでマルチGPUをサポートします。 1 枚のカードを希望する場合、VRAM 64 GB の GPU でも、KV cache の余裕を残したまま Q4_K_M または Q5 の 70B モデルを載せられる可能性があります。まずメモリ帯域幅とソフトウェア対応を比較してください。本ガイドの 70B セクションでは、ベンダーから提案された一覧へのリンクを、開示文とともに掲載しています。' },
             { q: '2026年に16 GB VRAMに最適なローカルLLMは何ですか？', a: 'Mistral Small 3.1 24B Q4_K_M（13 GB、55 tok/sec）が、RTX 5080 / RTX 5070 Ti / RTX 4090ラップトップ向けの総合ベストです。エージェント型コーディングには：Devstral Small 24B Q4_K_M（16 GB、45 tok/sec）。推論には：DeepSeek-R1 14B（15 GB、40 tok/sec）。新しいMistral Small 4（2026年3月）は単一モデルの後継です。Llama 3.3 70Bは収まりません — Q4_K_Mで約40 GBを必要とします。' },
             { q: '単一のRTX 4090は70Bモデルを良い品質で実行できますか？', a: 'いいえ — Q4_K_M品質では無理です。Llama 3.3 70BのQ4_K_Mは約39 GBのVRAMを必要とします。RTX 4090は24 GBです。Q2_K（約24 GB）で実行できますが、品質が著しく低下します。より良い選択肢：Qwen 3.6 27B Q4_K_M（約16 GB、77.2% SWE-bench、最良の密結合コーディング）またはDeepSeek-R1 32B Q4_K_M（約19 GB、最良の推論）。' },
             { q: 'GPUなしの16 GBシステムRAMに最適なローカルLLMは何ですか？', a: 'Phi-4 Mini 3.8B Q4_K_M（2.5 GB RAM、Ryzen 9 7950Xで約25 tok/sec）が、16 GBシステムRAMでのCPUのみの推論に最適な選択肢です。Gemma 2 2B Q8が約28 tok/secで最速です。Llama 3.1 8B Q4_K_M（4.9 GB）も収まりますが約12 tok/secで動作します — インタラクティブな利用には遅いです。' },
@@ -5579,7 +5600,7 @@ schema: {
             'name': '複数のGPUを使ってより大きなモデルを実行できますか？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'はい、テンソル並列を介して。2つのRTX 5090（各32 GB）は64 GBのVRAMを提供し、Q4_K_Mでの70Bモデルに十分です。Ollamaとllama.cppは --n-gpu-layers をカード間で分割することでマルチGPUをサポートします。',
+              'text': 'はい、テンソル並列を介して。2つのRTX 5090（各32 GB）は64 GBのVRAMを提供し、Q4_K_Mでの70Bモデルに十分です。Ollamaとllama.cppは --n-gpu-layers をカード間で分割することでマルチGPUをサポートします。 1 枚のカードを希望する場合、VRAM 64 GB の GPU でも、KV cache の余裕を残したまま Q4_K_M または Q5 の 70B モデルを載せられる可能性があります。まずメモリ帯域幅とソフトウェア対応を比較してください。本ガイドの 70B セクションでは、ベンダーから提案された一覧へのリンクを、開示文とともに掲載しています。',
             },
           },
           {
@@ -5709,6 +5730,7 @@ schema: {
     },
     zh: {
       freshness_tier: 'monthly',
+      affiliateDisclosure: true,
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2026-10-01',
       last_full_refresh: '2026-09-01',
@@ -5995,6 +6017,8 @@ schema: {
           content: [
             '**以可用的 Q4_K_M 质量在本地运行 70B 模型的硬件要求是约 40 GB 显存——因此单张 24 GB 的 RTX 4090 不够用。** 2026年运行 70B 的真正选择是：2× RTX 5090（合计 64 GB）、配轻度 CPU 卸载的 RTX 5090（32 GB）、48-80 GB 的服务器 GPU（RTX 6000 Ada / A100），或 Apple M5 Max / 128 GB 统一内存系统。常见的误解是"Q4 很小"——在 70B 参数下，即使 Q4 也需要约 40 GB。',
             '在单张 24 GB 卡上，更好的策略是 27-32B 模型，它提供强劲质量并能舒适装入且有上下文余量。Q4_K_M 下的 Qwen3.6 27B 是最佳稠密编程模型（77.2% SWE-bench）；DeepSeek-R1 32B 是最佳推理选择。24 GB GPU 只能在 Q2_K 下容纳 70B，此时质量明显下降。参见[如何在 24 GB 显存上运行 70B 模型](/zh/local-llms/run-70b-models-24gb-vram)，了解卸载和双 GPU 技巧。',
+            '**如果想在不搭建双卡平台的情况下获得 64 GB 显存，市面上有单张配备 64 GB VRAM 的 GPU，值得比较。** 在这一容量下，Q4_K_M 量化的 70B 模型（约 40 GB）或 Q5（45 GB 以上）可以放进一张卡，并为 KV cache 和更长的上下文窗口留出余量。购买前请核对每张卡的显存带宽、软件支持（CUDA、ROCm 或其他）、功耗和保修，因为速度和兼容性各不相同，也可能与双 RTX 5090 方案存在差异。此类显卡的一份清单是 [Orange Hardwares 的 64 GB 显卡合集](https://www.orangehardwares.com/collections/64-gb-graphics-cards)。',
+            '**披露声明：** 该链接由 Orange Hardwares 向我们推荐。PromptQuorum 与 Orange Hardwares 没有商业关系，也不会因此链接收取任何付款、佣金或其他报酬。该链接已标注为赞助链接，并不构成推荐，我们也未对该页面列出的显卡、价格或库存情况进行测试或核实。',
           ],
           rows: [
             { '模型': 'Qwen 3.6 27B', '量化': 'Q4_K_M', '所需显存': '~16 GB', '是否装入 24 GB？': '✅ 是', '速度 (RTX 4090)': '55 tok/sec', '备注': '最佳稠密编程模型，77.2% SWE-bench' },
@@ -6207,7 +6231,7 @@ schema: {
             { q: '配 M3 和 8 GB 内存的 MacBook 最佳 llama.cpp 模型是什么？', a: '在配 8 GB 内存的 MacBook M3 上，运行 Q4_K_M 下的 3-4B 模型：Phi-4 Mini 3.8B、Llama 3.2 3B 或 Gemma 3 4B。使用 Ollama 或 llama.cpp——两者都自动使用 Metal GPU 后端。7B 模型处于临界且在负载下会交换；将上下文保持在 4096 token 以下。在 Mac 上舒适使用 7-8B，16 GB 统一内存是实际最低。' },
             { q: '无 GPU 时本地LLM最佳的 CPU 是什么？', a: '高核心数且大 L3 缓存的 CPU：AMD Ryzen 9 7950X 或 Intel Core i9-14900K。7B 模型预期 5-15 tokens/sec。CPU 推理比 GPU 慢 3-5 倍。' },
             { q: '存储速度会影响本地LLM性能吗？', a: '会，在模型加载时。NVMe SSD（3-7 GB/s）在 2-5 秒内加载 7B 模型，而 HDD 需 20-60 秒。加载后的推理速度不受存储影响。' },
-            { q: '我能用多个 GPU 运行更大的模型吗？', a: '能，通过张量并行。两张 RTX 5090（各 32 GB）提供 64 GB 显存，足以运行 Q4_K_M 下的 70B 模型。Ollama 和 llama.cpp 通过跨卡拆分 --n-gpu-layers 支持多 GPU。' },
+            { q: '我能用多个 GPU 运行更大的模型吗？', a: '能，通过张量并行。两张 RTX 5090（各 32 GB）提供 64 GB 显存，足以运行 Q4_K_M 下的 70B 模型。Ollama 和 llama.cpp 通过跨卡拆分 --n-gpu-layers 支持多 GPU。 如果您更倾向于单张显卡，配备 64 GB VRAM 的 GPU 同样可以容纳 Q4_K_M 或 Q5 量化的 70B 模型，并为 KV cache 留出余量；请先比较显存带宽和软件支持。本指南的 70B 部分链接到一份由厂商推荐的清单，并附有我们的披露声明。' },
             { q: '2026 年 16 GB 显存最佳本地LLM是什么？', a: 'Mistral Small 3.1 24B Q4_K_M（13 GB，55 tok/sec）是 RTX 5080 / RTX 5070 Ti / RTX 4090 笔记本的综合最佳。对于智能体编程：Devstral Small 24B Q4_K_M（16 GB，45 tok/sec）。对于推理：DeepSeek-R1 14B（15 GB，40 tok/sec）。更新的 Mistral Small 4（2026 年 3 月）是单一模型后继者。Llama 3.3 70B 无法装入——它在 Q4_K_M 下需要约 40 GB。' },
             { q: '单张 RTX 4090 能以良好质量运行 70B 模型吗？', a: '不能——在 Q4_K_M 质量下不行。Llama 3.3 70B 在 Q4_K_M 下需要约 39 GB 显存。RTX 4090 有 24 GB。你可以在 Q2_K（~24 GB）下运行它，但质量明显下降。更好的选择：Qwen 3.6 27B Q4_K_M（~16 GB，77.2% SWE-bench，最佳稠密编程）或 DeepSeek-R1 32B Q4_K_M（~19 GB，最佳推理）。' },
             { q: '无 GPU 时 16 GB 系统内存最佳本地LLM是什么？', a: 'Phi-4 Mini 3.8B Q4_K_M（2.5 GB 内存，在 Ryzen 9 7950X 上 ~25 tok/sec）是 16 GB 系统内存上纯CPU推理的最佳选择。Gemma 2 2B Q8 最快，约 28 tok/sec。Llama 3.1 8B Q4_K_M（4.9 GB）也能装入，但以约 12 tok/sec 运行——交互使用较慢。' },
@@ -6391,7 +6415,7 @@ schema: {
             'name': '我能用多个 GPU 运行更大的模型吗？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '能，通过张量并行。两张 RTX 5090（各 32 GB）提供 64 GB 显存，足以运行 Q4_K_M 下的 70B 模型。Ollama 和 llama.cpp 通过跨卡拆分 --n-gpu-layers 支持多 GPU。',
+              'text': '能，通过张量并行。两张 RTX 5090（各 32 GB）提供 64 GB 显存，足以运行 Q4_K_M 下的 70B 模型。Ollama 和 llama.cpp 通过跨卡拆分 --n-gpu-layers 支持多 GPU。 如果您更倾向于单张显卡，配备 64 GB VRAM 的 GPU 同样可以容纳 Q4_K_M 或 Q5 量化的 70B 模型，并为 KV cache 留出余量；请先比较显存带宽和软件支持。本指南的 70B 部分链接到一份由厂商推荐的清单，并附有我们的披露声明。',
             },
           },
           {
@@ -6529,6 +6553,7 @@ schema: {
     },
   ko: {
       freshness_tier: 'monthly',
+      affiliateDisclosure: true,
       next_seo_review_due: '2026-10-01',
       next_refresh_due: '2026-10-01',
       last_full_refresh: '2026-09-01',
@@ -6786,6 +6811,8 @@ schema: {
           content: [
             '**RTX 4090은 24GB VRAM을 탑재하고 있습니다 — 대부분의 70B 모델을 허용 가능한 품질로 실행하기에는 충분하지 않습니다.** Llama 3.3 70B Q4_K_M은 약 39GB가 필요합니다. 흔한 오해는 "Q4는 작다"는 것입니다 — 70B 파라미터에서 Q4조차 큽니다.',
             '단일 RTX 4090에서 최선의 전략은 27~32B 모델로, 강력한 품질을 제공하며 편안하게 맞습니다. Q4_K_M의 Qwen 3.6 27B는 최고의 밀집 코딩 모델입니다(SWE-bench 77.2%). 진정한 70B @ Q4+를 위해서는 2× RTX 4090 또는 48GB 서버 GPU가 필요합니다. 고급 기법은 [24GB VRAM에서 70B 모델 실행하는 방법](/ko/local-llms/run-70b-models-24gb-vram)을 참조하십시오.',
+            '**듀얼 카드 구성 없이 64 GB를 확보하고 싶다면, VRAM 64 GB를 탑재한 단일 GPU도 있으며 비교해 볼 만합니다.** 이 용량에서는 Q4_K_M의 70B 모델(약 40 GB)이나 Q5(45 GB 이상)도 카드 한 장에 들어가며, KV cache와 더 긴 컨텍스트 윈도우를 위한 여유도 남습니다. 속도와 호환성은 제품마다 다르고 RTX 5090 듀얼 구성과 차이가 날 수 있으므로, 구매 전에 각 카드의 메모리 대역폭, 소프트웨어 지원(CUDA, ROCm 또는 기타), 소비 전력, 보증을 확인하십시오. 이 등급의 카드를 모아 놓은 목록의 한 예로 [Orange Hardwares의 64 GB 그래픽 카드 컬렉션](https://www.orangehardwares.com/collections/64-gb-graphics-cards)이 있습니다.',
+            '**공개 고지:** 이 링크는 Orange Hardwares가 저희에게 제안한 것입니다. PromptQuorum은 Orange Hardwares와 어떠한 상업적 관계도 없으며, 이 링크와 관련하여 대가, 수수료 또는 기타 보상을 받지 않습니다. 이 링크는 스폰서 링크로 표시되어 있고, 추천이 아니며, 해당 페이지에 나열된 카드, 가격, 재고 여부를 저희가 테스트하거나 검증하지 않았습니다.',
           ],
           rows: [
             { '모델': 'Qwen 3.6 27B', '양자화': 'Q4_K_M', 'VRAM 필요': '~16GB', '24GB 적합?': '✅ 예', '속도(RTX 4090)': '55 tok/sec', '비고': '최고 밀집 코딩 모델, SWE-bench 77.2%' },
@@ -7023,7 +7050,7 @@ schema: {
             },
             {
               q: '더 큰 모델을 실행하기 위해 여러 GPU를 사용할 수 있습니까?',
-              a: '텐서 병렬성을 통해 가능합니다. 두 개의 RTX 4090(각 24GB)은 FP16에서 70B 모델을 위한 48GB VRAM을 제공합니다. Ollama와 llama.cpp는 --n-gpu-layers를 카드에 걸쳐 분할하여 멀티 GPU를 지원합니다.',
+              a: '텐서 병렬성을 통해 가능합니다. 두 개의 RTX 4090(각 24GB)은 FP16에서 70B 모델을 위한 48GB VRAM을 제공합니다. Ollama와 llama.cpp는 --n-gpu-layers를 카드에 걸쳐 분할하여 멀티 GPU를 지원합니다. 카드 한 장을 선호하신다면, VRAM 64 GB GPU도 KV cache를 위한 여유를 두고 Q4_K_M 또는 Q5의 70B 모델을 담을 수 있습니다. 먼저 메모리 대역폭과 소프트웨어 지원을 비교하십시오. 이 가이드의 70B 섹션은 공급업체가 제안한 목록으로 연결되며, 저희의 공개 고지가 함께 제공됩니다.',
             },
             {
               q: '2026년에 16GB VRAM에 최적화된 로컬 LLM은 무엇입니까?',

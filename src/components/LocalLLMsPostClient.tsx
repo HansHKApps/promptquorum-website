@@ -240,6 +240,9 @@ function renderInlineLinks(
   return renderInlineLinksNoBold(text, lang, slug)
 }
 
+// Vendor-suggested links: carry rel="sponsored nofollow" (see the on-page disclosure paragraph).
+const SPONSORED_HOSTS = ['orangehardwares.com']
+
 function renderInlineLinksNoBold(
   text: string,
   lang: Language = 'en',
@@ -253,12 +256,13 @@ function renderInlineLinksNoBold(
       const [, label, url] = markdownMatch
       // External links: open in new tab with security attributes
       if (url.startsWith('http://') || url.startsWith('https://')) {
+        const isSponsored = SPONSORED_HOSTS.some((h) => url.includes(h))
         return (
           <a
             key={i}
             href={url}
             target="_blank"
-            rel="noopener noreferrer"
+            rel={isSponsored ? 'sponsored nofollow noopener noreferrer' : 'noopener noreferrer'}
             className="text-primary font-medium hover:underline"
           >
             {label}
