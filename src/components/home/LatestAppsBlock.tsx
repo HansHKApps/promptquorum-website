@@ -25,7 +25,9 @@ export function LatestAppsBlock({ lang = 'en' }: { lang?: Language }) {
           url: a.url,
           description: `${a.tagline} — ${CATEGORY_SUB_LABEL[a.category as CategorySubKey]?.[lang] ?? CATEGORY_SUB_LABEL[a.category as CategorySubKey]?.en ?? a.category}`,
           date: formatDisplayDate(a.addedDate, lang),
-          freshLabel: freshAgeDays(a.addedDate) !== null ? t('freshNew', lang) : undefined,
+          freshText: t('freshNew', lang),
+          isoDate: a.addedDate,
+          freshAtBuild: freshAgeDays(a.addedDate) !== null,
         }))}
       />
     </HomeCard>

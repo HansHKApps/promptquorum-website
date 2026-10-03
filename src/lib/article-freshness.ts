@@ -1,3 +1,5 @@
+import { FRESH_DAYS } from '@/lib/home/fresh-age'
+
 const NEW_BADGE_DAYS = 14
 
 // Frozen at build time (next.config.ts) instead of read per-render, so badge
@@ -11,9 +13,6 @@ function daysSince(dateStr: string): number {
   date.setHours(0, 0, 0, 0)
   return Math.floor((today.getTime() - date.getTime()) / (1000 * 60 * 60 * 24))
 }
-
-/** Window for the homepage "Just published" highlight — a stricter, louder tier inside the 14-day "New" badge. */
-export const FRESH_DAYS = 3
 
 /**
  * Whole days between `dateStr` and the (build-frozen) current date when that is within the
