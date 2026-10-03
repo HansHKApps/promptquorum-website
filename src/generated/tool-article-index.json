@@ -5069,6 +5069,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "macwhisper-review",
+        "title": "MacWhisper Review: Local Speech-to-Text for Mac",
+        "url": "/power-local-llm/macwhisper-review",
+        "dateModified": "2026-10-03",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "funclip-review",
         "title": "FunClip Review: Self-Hosted AI Video Clipping With FunASR",
         "url": "/power-local-llm/funclip-review",
@@ -5089,14 +5097,6 @@
         "title": "Meetily Review: Local, Privacy-First AI Meeting Notes",
         "url": "/power-local-llm/meetily-review",
         "dateModified": "2026-09-18",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "macwhisper-review",
-        "title": "MacWhisper Review: Local Speech-to-Text for Mac",
-        "url": "/power-local-llm/macwhisper-review",
-        "dateModified": "2026-09-12",
         "tier": "mentioned"
       }
     ],
@@ -8826,7 +8826,7 @@
         "slug": "macwhisper-review",
         "title": "MacWhisper Review: Local Speech-to-Text for Mac",
         "url": "/power-local-llm/macwhisper-review",
-        "dateModified": "2026-09-12",
+        "dateModified": "2026-10-03",
         "tier": "about"
       },
       {
@@ -8882,9 +8882,17 @@
         "url": "/power-local-llm/aquavoice-review",
         "dateModified": "2026-10-03",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "macwhisper-review",
+        "title": "MacWhisper Review: Local Speech-to-Text for Mac",
+        "url": "/power-local-llm/macwhisper-review",
+        "dateModified": "2026-10-03",
+        "tier": "about"
       }
     ],
-    "totalCount": 1,
+    "totalCount": 2,
     "capped": false
   },
   "Solair AI": {
