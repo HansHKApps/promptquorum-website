@@ -296,10 +296,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-11',
     theme: 'Tools & Interfaces',
     heroImage: '/images/nextchat-review-hero-de.webp',
-    title: 'NextChat im Test 2026: Leichtgewichtige Chat-UI mit Ein-Klick-Deploy',
+    title: 'NextChat-Rezension 2026: Leichtgewichtige Chat-UI mit Ein-Klick-Deploy',
     dateModified: '2026-09-11',
-    seoTitle: 'NextChat im Test 2026: Ein-Klick-Deploy-Chat-UI',
-    intro: 'NextChat ([nextchat.club](https://nextchat.club), Quellcode auf [github.com/ChatGPTNextWeb/NextChat](https://github.com/ChatGPTNextWeb/NextChat)) ist eine kostenlose, quelloffene, MIT-lizenzierte Chat-Oberfläche, früher bekannt als ChatGPT-Next-Web. Sie verbindet sich von Haus aus mit OpenAI, Anthropic Claude, Google Gemini und DeepSeek, plus jedem OpenAI-kompatiblen Endpunkt, einschließlich eines lokalen [Ollama](/de/local-llms/how-to-install-ollama)- oder LM-Studio-Servers, und lässt sich per echtem Ein-Klick-Vercel-Button bei einer Erstladung von rund 100 KB deployen. Dieser Test zeigt, was NextChat wirklich kann, welche Lizenz gilt, wie Sie es per Docker oder Vercel selbst hosten, was es kostet und wie es im Vergleich zu anderen selbst gehosteten Chat-Oberflächen abschneidet.',
+    seoTitle: 'NextChat-Rezension 2026: Ein-Klick-Deploy-Chat-UI',
+    intro: 'NextChat ([nextchat.club](https://nextchat.club), Quellcode auf [github.com/ChatGPTNextWeb/NextChat](https://github.com/ChatGPTNextWeb/NextChat)) ist eine kostenlose, quelloffene, MIT-lizenzierte Chat-Oberfläche, früher bekannt als ChatGPT-Next-Web. Sie verbindet sich von Haus aus mit OpenAI, Anthropic Claude, Google Gemini und DeepSeek, plus jedem OpenAI-kompatiblen Endpunkt, einschließlich eines lokalen [Ollama](/de/local-llms/how-to-install-ollama)- oder LM-Studio-Servers, und lässt sich per echtem Ein-Klick-Vercel-Button bei einer Erstladung von rund 100 KB deployen. Diese Rezension zeigt, was NextChat wirklich kann, welche Lizenz gilt, wie Sie es per Docker oder Vercel selbst hosten, was es kostet und wie es im Vergleich zu anderen selbst gehosteten Chat-Oberflächen abschneidet.',
     metaDescription: 'NextChat ist eine kostenlose, MIT-lizenzierte Chat-Oberfläche mit 88.700+ GitHub-Sternen und Ein-Klick-Vercel-Deploy. Lizenz, Docker-Setup und Preise 2026.',
     publishDate: '2026-09-11',
     leadAnswerBlock: '**NextChat (88.700+ GitHub-Sterne, [github.com/ChatGPTNextWeb/NextChat](https://github.com/ChatGPTNextWeb/NextChat)) ist eine kostenlose, MIT-lizenzierte Chat-Oberfläche, früher ChatGPT-Next-Web genannt, die sich von Haus aus mit OpenAI, Anthropic Claude, Google Gemini und DeepSeek verbindet, plus jedem OpenAI-kompatiblen Endpunkt wie einem lokalen Ollama- oder LM-Studio-Server.** Das entscheidende Merkmal ist die Deploy-Geschwindigkeit: Ein echter Ein-Klick-Vercel-Button bringt eine private Instanz in unter zwei Minuten online, und die App selbst lädt mit rund 100 KB. Self-Hosting per Docker oder Vercel ist unter der MIT-Lizenz mit eigenen API-Schlüsseln kostenlos; eine Enterprise Edition mit Branding und privater Bereitstellung ist auf Anfrage verfügbar, Preise sind nicht veröffentlicht.',
@@ -311,7 +311,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'NextChat im Test 2026: Ein-Klick-Deploy-Chat-UI',
+      'headline': 'NextChat-Rezension 2026: Ein-Klick-Deploy-Chat-UI',
       'description': 'NextChat ist eine kostenlose, MIT-lizenzierte Chat-Oberfläche mit 88.700+ GitHub-Sternen und Ein-Klick-Vercel-Deploy. Lizenz, Docker-Setup und Preise 2026.',
       'url': 'https://www.promptquorum.com/de/local-llms/nextchat-review',
       'datePublished': '2026-09-11',
@@ -406,7 +406,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Self-Hosting ist unter der reinen MIT-Lizenz dauerhaft kostenlos; eine Enterprise Edition mit privater Bereitstellung und Branding ist auf Anfrage verfügbar, Preise sind nicht veröffentlicht.',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test ist der ausführliche Begleitartikel zum Eintrag von NextChat im [Local LLM Software Directory](/directory) -- dort sehen Sie auf einen Blick, wie NextChat im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Rezension ist der ausführliche Begleitartikel zum Eintrag von NextChat im [Local LLM Software Directory](/directory) -- dort sehen Sie auf einen Blick, wie NextChat im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       quickFacts: {
@@ -438,9 +438,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'NextChat wird vom quelloffenen Community-Projekt **ChatGPTNextWeb** betreut, nicht von einem einzelnen Unternehmen, und begann als **ChatGPT-Next-Web**, einer der frühesten selbst gehosteten Wrapper um die OpenAI-API, der nach dem öffentlichen Start von ChatGPT breite Verbreitung fand.',
           'Die öffentliche GitHub-Historie des Projekts zeigt, dass die Codebasis später in NextChat umbenannt wurde, wobei die ursprüngliche Repository-Linie erhalten blieb, und im Laufe der Zeit weitere Modellanbieter hinzukamen -- Anthropic Claude, Google Gemini und DeepSeek kamen zur ursprünglich reinen OpenAI-Integration hinzu, neben benutzerdefinierten OpenAI-kompatiblen Endpunkten für selbst gehostete Backends.',
-          'Ein wichtiger Punkt für alle, die NextChat kommerziell bewerten: die **Lizenz**. Es läuft unter der **reinen MIT-Lizenz**, ohne separate Kommerzialisierungsklausel -- Sie können es selbst hosten, verändern und weiterverteilen, auch kommerziell, ohne die Maintainer wegen einer separaten Lizenz zu kontaktieren. Das aktuellste getaggte Release auf GitHub zum Zeitpunkt dieses Tests ist **v2.16.1**; prüfen Sie den aktuellen Tag vor dem Deployment, da die Release-Frequenz variiert.',
+          'Ein wichtiger Punkt für alle, die NextChat kommerziell bewerten: die **Lizenz**. Es läuft unter der **reinen MIT-Lizenz**, ohne separate Kommerzialisierungsklausel -- Sie können es selbst hosten, verändern und weiterverteilen, auch kommerziell, ohne die Maintainer wegen einer separaten Lizenz zu kontaktieren. Das aktuellste getaggte Release auf GitHub zum Zeitpunkt dieser Rezension ist **v2.16.1**; prüfen Sie den aktuellen Tag vor dem Deployment, da die Release-Frequenz variiert.',
         ],
-        note: 'Sternezahlen, Release-Tags und das Enterprise-Edition-Angebot ändern sich mit der Zeit -- prüfen Sie direkt bei [github.com/ChatGPTNextWeb/NextChat](https://github.com/ChatGPTNextWeb/NextChat) und [nextchat.club](https://nextchat.club), was nach diesem Test veröffentlicht wurde.',
+        note: 'Sternezahlen, Release-Tags und das Enterprise-Edition-Angebot ändern sich mit der Zeit -- prüfen Sie direkt bei [github.com/ChatGPTNextWeb/NextChat](https://github.com/ChatGPTNextWeb/NextChat) und [nextchat.club](https://nextchat.club), was nach dieser Rezension veröffentlicht wurde.',
       },
       keyFeatures: {
         id: 'key-features',
@@ -564,9 +564,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Local LLM Software Directory](/de/directory) -- der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des eigenen Verzeichniseintrags von NextChat.',
-          '[LobeChat im Test](/de/local-llms/lobechat-review) -- eine selbst gehostete Alternative mit einem weiter entwickelten Plugin-Marktplatz und Agent-Builder.',
-          '[Big-AGI im Test](/de/local-llms/big-agi-review) -- eine selbst gehostete oder gehostete Alternative, die auf dem Vergleich mehrerer Modelle bei einem Prompt aufbaut.',
-          '[Open WebUI im Test](/de/local-llms/open-webui-review) -- eine selbst gehostete Alternative, die am engsten mit Ollama verbunden ist.',
+          '[LobeChat-Rezension](/de/local-llms/lobechat-review) -- eine selbst gehostete Alternative mit einem weiter entwickelten Plugin-Marktplatz und Agent-Builder.',
+          '[Big-AGI-Rezension](/de/local-llms/big-agi-review) -- eine selbst gehostete oder gehostete Alternative, die auf dem Vergleich mehrerer Modelle bei einem Prompt aufbaut.',
+          '[Open-WebUI-Rezension](/de/local-llms/open-webui-review) -- eine selbst gehostete Alternative, die am engsten mit Ollama verbunden ist.',
           '[LobeChat, Big-AGI, NextChat, Page Assist, Chatbox im Vergleich](/de/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared) -- wie NextChat im Vergleich zu vier weiteren Chat-Oberflächen-Apps abschneidet.',
         ],
       },

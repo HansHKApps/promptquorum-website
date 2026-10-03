@@ -367,10 +367,10 @@ print(generated_text[0])`,
     next_refresh_due: '2027-03-05',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/idefics-review-hero-de.webp',
-    title: 'Idefics-Test: HuggingFace\'s offene Vision-Language-Modelle, ehrlich bewertet',
-    seoTitle: 'Idefics-Test: Idefics vs Idefics2 vs Idefics3',
+    title: 'Idefics-Rezension: HuggingFace\'s offene Vision-Language-Modelle, ehrlich bewertet',
+    seoTitle: 'Idefics-Rezension: Idefics vs Idefics2 vs Idefics3',
     intro:
-      'Idefics ist eine Familie offener Vision-Language-Modelle des HuggingFace-M4-Teams, die ausdrücklich als offene Nachbildung von DeepMinds Flamingo konzipiert wurde. Die Familie umfasst drei Generationen — das ursprüngliche Idefics, Idefics2 und Idefics3 — und diese sind nicht austauschbar: Sie nutzen unterschiedliche Basis-Sprachmodelle, in der Praxis unterschiedliche Lizenzen und sehr unterschiedliche Hardwareanforderungen. Dieser Test behandelt die tatsächliche Geschichte, welche Version heute wirklich zu verwenden ist, ehrliche VRAM-Zahlen und wo Idefics nicht passt, insbesondere für ressourcenbeschränkte lokale Setups. Für ein vergleichbares offenes Vision-Language-Modell mit größerer bestehender Nutzerbasis siehe PromptQuorums [LLaVA-Test](/de/power-local-llm/llava-review); für das Ausführen von Vision-Modellen speziell über Ollama (Idefics ist derzeit nicht dafür verpackt) siehe den [Ollama-Vision-Modelle-Leitfaden](/de/power-local-llm/ollama-vision-models-review).',
+      'Idefics ist eine Familie offener Vision-Language-Modelle des HuggingFace-M4-Teams, die ausdrücklich als offene Nachbildung von DeepMinds Flamingo konzipiert wurde. Die Familie umfasst drei Generationen — das ursprüngliche Idefics, Idefics2 und Idefics3 — und diese sind nicht austauschbar: Sie nutzen unterschiedliche Basis-Sprachmodelle, in der Praxis unterschiedliche Lizenzen und sehr unterschiedliche Hardwareanforderungen. Diese Rezension behandelt die tatsächliche Geschichte, welche Version heute wirklich zu verwenden ist, ehrliche VRAM-Zahlen und wo Idefics nicht passt, insbesondere für ressourcenbeschränkte lokale Setups. Für ein vergleichbares offenes Vision-Language-Modell mit größerer bestehender Nutzerbasis siehe PromptQuorums [LLaVA-Rezension](/de/power-local-llm/llava-review); für das Ausführen von Vision-Modellen speziell über Ollama (Idefics ist derzeit nicht dafür verpackt) siehe den [Ollama-Vision-Modelle-Leitfaden](/de/power-local-llm/ollama-vision-models-review).',
     metaDescription:
       'Idefics-Test 2026: HuggingFace\'s offene Vision-Language-Modellfamilie. Idefics vs Idefics2 vs Idefics3 ehrlich verglichen — Lizenznuancen, echte VRAM-Anforderungen und welche Version heute zu nutzen ist.',
     twitterDescription:
@@ -393,7 +393,7 @@ print(generated_text[0])`,
     current_models_mentioned: ['Idefics', 'Idefics2', 'Idefics3', 'LLaVA', 'Mistral-7B', 'Llama 3.1', 'SigLIP', 'Flamingo'],
     current_hardware_mentioned: ['NVIDIA GPU', 'CPU'],
     leadAnswerBlock:
-      '**Idefics ist eine Familie offener Vision-Language-Modelle des HuggingFace-M4-Teams, konzipiert als ausdrückliche offene Nachbildung von DeepMinds Flamingo.** Es gibt drei Generationen: das ursprüngliche Idefics (9B/80B, 2023), Idefics2 (8B, April 2024) und Idefics3 (8B, August 2024). Für die tatsächliche Nutzung heute ist Idefics3 für die meisten Aufgaben die aktuelle Empfehlung — es verbessert OCR, Dokumentenverständnis und visuelles Denken gegenüber Idefics2 erheblich, das selbst bei vergleichbarer Leistung "10-mal kleiner" als das ursprüngliche Idefics war. Die Lizenz ist nuanciert: Idefics2s Mistral-7B-v0.1-Basis hält den gesamten Stack unter Apache-2.0, während Idefics3s Llama-3.1-8B-Instruct-Basis neben dem Apache-2.0-Tag des Modell-Repositorys selbst die Bedingungen von Metas Llama-3.1-Community-Lizenz mit sich bringt. Idefics ist derzeit nicht in [Ollamas Bibliothek](https://ollama.com/library) verpackt — die GGUF-Konvertierung hat zum Zeitpunkt dieses Tests offene Kompatibilitätsprobleme. Für ein vergleichbares offenes VLM mit breiterer Tool-Unterstützung siehe PromptQuorums [LLaVA-Test](/de/power-local-llm/llava-review).',
+      '**Idefics ist eine Familie offener Vision-Language-Modelle des HuggingFace-M4-Teams, konzipiert als ausdrückliche offene Nachbildung von DeepMinds Flamingo.** Es gibt drei Generationen: das ursprüngliche Idefics (9B/80B, 2023), Idefics2 (8B, April 2024) und Idefics3 (8B, August 2024). Für die tatsächliche Nutzung heute ist Idefics3 für die meisten Aufgaben die aktuelle Empfehlung — es verbessert OCR, Dokumentenverständnis und visuelles Denken gegenüber Idefics2 erheblich, das selbst bei vergleichbarer Leistung "10-mal kleiner" als das ursprüngliche Idefics war. Die Lizenz ist nuanciert: Idefics2s Mistral-7B-v0.1-Basis hält den gesamten Stack unter Apache-2.0, während Idefics3s Llama-3.1-8B-Instruct-Basis neben dem Apache-2.0-Tag des Modell-Repositorys selbst die Bedingungen von Metas Llama-3.1-Community-Lizenz mit sich bringt. Idefics ist derzeit nicht in [Ollamas Bibliothek](https://ollama.com/library) verpackt — die GGUF-Konvertierung hat zum Zeitpunkt dieser Rezension offene Kompatibilitätsprobleme. Für ein vergleichbares offenes VLM mit breiterer Tool-Unterstützung siehe PromptQuorums [LLaVA-Rezension](/de/power-local-llm/llava-review).',
     quickAnswerTop: {
       en: {
         question: 'Was ist Idefics und welche Version sollte ich tatsächlich verwenden — Idefics, Idefics2 oder Idefics3?',
@@ -436,7 +436,7 @@ print(generated_text[0])`,
           },
           {
             type: 'plain-terms',
-            text: 'Idefics ist eine Familie von KI-Modellen von HuggingFace, die Bilder betrachten und Fragen dazu beantworten können, ähnlich wie LLaVA — dieser Test erklärt, welche der drei Versionen tatsächlich zu verwenden ist, was sie an GPU-Speicher kostet und wo sie an ihre Grenzen stößt.',
+            text: 'Idefics ist eine Familie von KI-Modellen von HuggingFace, die Bilder betrachten und Fragen dazu beantworten können, ähnlich wie LLaVA — diese Rezension erklärt, welche der drei Versionen tatsächlich zu verwenden ist, was sie an GPU-Speicher kostet und wo sie an ihre Grenzen stößt.',
           },
         ],
         items: [
@@ -444,7 +444,7 @@ print(generated_text[0])`,
           'Idefics3 ist heute die aktuelle Empfehlung für die meisten Aufgaben; es verbessert OCR und Dokumentenverständnis gegenüber Idefics2 erheblich.',
           'Die Lizenz ist über die Generationen hinweg nuanciert: das ursprüngliche Idefics hat eine reine Forschungsbeschränkung; Idefics2 ist vollständig Apache-2.0 (Mistral-7B-Basis); Idefics3 trägt zusätzlich zu seinem Apache-2.0-Repository-Tag die Bedingungen der Llama-3.1-Community-Lizenz (Llama-3.1-8B-Instruct-Basis).',
           'VRAM: etwa 18-20 GB in Float16 für Idefics2/3, oder 6-7 GB mit aggressiver Quantisierung — schwerer als LLaVA 7B oder MiniCPM-V.',
-          'Zum Zeitpunkt dieses Tests nicht in Ollamas Bibliothek verpackt; offene GitHub-Issues verfolgen Schwierigkeiten bei der GGUF-Konvertierung.',
+          'Zum Zeitpunkt dieser Rezension nicht in Ollamas Bibliothek verpackt; offene GitHub-Issues verfolgen Schwierigkeiten bei der GGUF-Konvertierung.',
           'Am besten geeignet für: dokumentenlastige OCR- und Multi-Bild-Denkaufgaben mit ausreichendem GPU-Speicher, nicht für ressourcenbeschränkte oder Echtzeit-lokale Setups.',
         ],
         callouts: [
@@ -498,7 +498,7 @@ print(generated_text[0])`,
             'Hinweise': 'Bestes OCR/Dokumentenverständnis der drei; Llama-3.1-Lizenzbedingungen gelten',
           },
         ],
-        note: 'PromptQuorum fand zum Zeitpunkt dieses Tests kein öffentlich bestätigtes "Idefics4". Idefics3 ist die neueste Generation und die aktuelle Empfehlung für die meisten Aufgaben.',
+        note: 'PromptQuorum fand zum Zeitpunkt dieser Rezension kein öffentlich bestätigtes "Idefics4". Idefics3 ist die neueste Generation und die aktuelle Empfehlung für die meisten Aufgaben.',
       },
       license: {
         id: 'license',
@@ -572,7 +572,7 @@ print(generated_text[0])`,
           { 'Konfiguration': 'Float16 + Flash-Attention', 'Ca. VRAM': '~18-20 GB', 'Hinweise': 'Auf Idefics2s Modellkarte als Standardkonfiguration dokumentiert' },
           { 'Konfiguration': 'Ohne Optimierungen', 'Ca. VRAM': 'Bis zu ~55 GB Spitzenwert', 'Hinweise': 'Obergrenze auf Idefics2s Modellkarte für unoptimierte Inferenz' },
           { 'Konfiguration': 'Aggressive Quantisierung', 'Ca. VRAM': '~6-7 GB', 'Hinweise': 'Untergrenze auf Idefics2s Modellkarte dokumentiert; erwarten Sie einen Genauigkeitskompromiss' },
-          { 'Konfiguration': 'LLaVA 7B (zum Vergleich)', 'Ca. VRAM': '~6-8 GB', 'Hinweise': 'Siehe PromptQuorums [LLaVA-Test](/de/power-local-llm/llava-review)' },
+          { 'Konfiguration': 'LLaVA 7B (zum Vergleich)', 'Ca. VRAM': '~6-8 GB', 'Hinweise': 'Siehe PromptQuorums [LLaVA-Rezension](/de/power-local-llm/llava-review)' },
         ],
         callouts: [
           {
@@ -607,12 +607,12 @@ print(generated_text[0])`,
           },
           {
             'Tool': '[Ollamas Vision-Modelle](/de/power-local-llm/ollama-vision-models-review)',
-            'Am besten geeignet': 'Einfachstes lokales Setup über `ollama pull`/`ollama run`; Idefics ist zum Zeitpunkt dieses Tests nicht darunter',
+            'Am besten geeignet': 'Einfachstes lokales Setup über `ollama pull`/`ollama run`; Idefics ist zum Zeitpunkt dieser Rezension nicht darunter',
             'Lizenz': 'Je nach Modell unterschiedlich',
           },
           {
             'Tool': 'MLC Chat',
-            'Am besten geeignet': 'Plattformübergreifende On-Device-Bereitstellung; zum Zeitpunkt dieses Tests hauptsächlich textfokussiert — aktuelle Vision-Unterstützung vor Verlass darauf überprüfen',
+            'Am besten geeignet': 'Plattformübergreifende On-Device-Bereitstellung; zum Zeitpunkt dieser Rezension hauptsächlich textfokussiert — aktuelle Vision-Unterstützung vor Verlass darauf überprüfen',
             'Lizenz': 'Apache-2.0',
           },
           {
@@ -644,7 +644,7 @@ print(generated_text[0])`,
           },
           {
             q: 'Kann ich Idefics über Ollama ausführen?',
-            a: 'Zum Zeitpunkt dieses Tests nicht. Idefics ist derzeit nicht in Ollamas Modellbibliothek verpackt, und die GGUF-Konvertierung hat offene Kompatibilitätsprobleme, die auf Ollamas eigenem GitHub-Repository verfolgt werden. Idefics läuft stattdessen über Hugging Face Transformers.',
+            a: 'Zum Zeitpunkt dieser Rezension nicht. Idefics ist derzeit nicht in Ollamas Modellbibliothek verpackt, und die GGUF-Konvertierung hat offene Kompatibilitätsprobleme, die auf Ollamas eigenem GitHub-Repository verfolgt werden. Idefics läuft stattdessen über Hugging Face Transformers.',
           },
           {
             q: 'Basiert Idefics auf DeepMinds Flamingo?',
@@ -656,7 +656,7 @@ print(generated_text[0])`,
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Idefics ist eine tatsächlich nützliche Familie offener Vision-Language-Modelle, und Idefics3 hält sich speziell gut für dokumentenlastige OCR- und Multi-Bild-Denkaufgaben, bei denen sein VRAM-Bedarf von etwa 18-20 GB erschwinglich ist. Es ist jedoch kein direkter Ersatz für leichtere lokale Vision-Modelle: Es benötigt deutlich mehr GPU-Speicher als LLaVA 7B oder MiniCPM-V, hat zum Zeitpunkt dieses Tests keine Ollama- oder llama.cpp-Verpackung, und seine Lizenzsituation unterscheidet sich tatsächlich je nach Generation — Idefics2s sauberer Apache-2.0-Stack ist rechtlich etwas völlig anderes als Idefics3s Verpflichtungen aus der Llama-3.1-Community-Lizenz. Wählen Sie Idefics3 für Dokumentenverständnis und OCR-Qualität, wenn Sie den GPU-Speicher dafür haben; wählen Sie speziell Idefics2, wenn ein reiner Apache-2.0-Stack wichtig ist; und wählen Sie LLaVA, über PromptQuorums [LLaVA-Test](/de/power-local-llm/llava-review), oder eines der Modelle im [Ollama-Vision-Modelle-Leitfaden](/de/power-local-llm/ollama-vision-models-review), für leichtere lokale Hardware oder Ollama-basierte Workflows.',
+          'Idefics ist eine tatsächlich nützliche Familie offener Vision-Language-Modelle, und Idefics3 hält sich speziell gut für dokumentenlastige OCR- und Multi-Bild-Denkaufgaben, bei denen sein VRAM-Bedarf von etwa 18-20 GB erschwinglich ist. Es ist jedoch kein direkter Ersatz für leichtere lokale Vision-Modelle: Es benötigt deutlich mehr GPU-Speicher als LLaVA 7B oder MiniCPM-V, hat zum Zeitpunkt dieser Rezension keine Ollama- oder llama.cpp-Verpackung, und seine Lizenzsituation unterscheidet sich tatsächlich je nach Generation — Idefics2s sauberer Apache-2.0-Stack ist rechtlich etwas völlig anderes als Idefics3s Verpflichtungen aus der Llama-3.1-Community-Lizenz. Wählen Sie Idefics3 für Dokumentenverständnis und OCR-Qualität, wenn Sie den GPU-Speicher dafür haben; wählen Sie speziell Idefics2, wenn ein reiner Apache-2.0-Stack wichtig ist; und wählen Sie LLaVA, über PromptQuorums [LLaVA-Rezension](/de/power-local-llm/llava-review), oder eines der Modelle im [Ollama-Vision-Modelle-Leitfaden](/de/power-local-llm/ollama-vision-models-review), für leichtere lokale Hardware oder Ollama-basierte Workflows.',
       },
       sources: {
         id: 'sources',
@@ -674,7 +674,7 @@ print(generated_text[0])`,
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[LLaVA-Test (2026)](/de/power-local-llm/llava-review) — ein vergleichbares offenes Vision-Language-Modell mit breiterer Tool-Unterstützung.',
+          '[LLaVA-Rezension (2026)](/de/power-local-llm/llava-review) — ein vergleichbares offenes Vision-Language-Modell mit breiterer Tool-Unterstützung.',
           '[Ollama-Vision-Modelle (2026)](/de/power-local-llm/ollama-vision-models-review) — welche Vision-Modelle heute tatsächlich über Ollama abrufbar sind.',
           '[Lokale Vision-Modelle 2026: LLaVA, Llama 3.2 Vision, Qwen3-VL & Ollama-Multimodal-Setup](/de/power-local-llm/local-vision-models-llava-ollama-2026) — ein breiterer, aufgabenbezogener Vergleich aktueller lokaler Vision-Modelle.',
         ],

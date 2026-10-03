@@ -462,14 +462,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/chapper-review-hero-de.webp',
-    title: 'Chapper im Test: KI- und LM-Studio-Client für iPhone, iPad und Mac',
-    seoTitle: 'Chapper Test: LM-Studio-Client für iPhone & Mac',
+    title: 'Chapper-Rezension: KI- und LM-Studio-Client für iPhone, iPad und Mac',
+    seoTitle: 'Chapper-Rezension: LM-Studio-Client für iPhone & Mac',
     intro:
-      'Chapper, entwickelt von [Prevolut Ltd](https://prevolut.uk/products/chapper/), ist eine native App für iPhone, iPad und Mac zum Chatten mit lokalen und selbst gehosteten KI-Modellen. Der Download ist kostenlos mit einem Limit von 20 Unterhaltungen und wird durch den einmaligen Kauf von [Chapper Pro für 9,99 $](https://apps.apple.com/us/app/chapper-ai-lm-studio-client/id6760984679) vollständig freigeschaltet — echte On-Device-Inferenz (ein Modell direkt auf dem Gerät statt auf einem Server auszuführen) wird laut aktuellem App-Store-Eintrag als separater In-App-Kauf für 4,99 $ verkauft. App-Store-Preise können je nach Region variieren; prüfen Sie vor dem Kauf den aktuellen Preis im deutschen App Store. Chappers Kernkonzept ist ein ausgereifter Client für [LM Studio](https://lmstudio.ai/), [Ollama](https://ollama.com/), llama.cpp-Server und jeden OpenAI-kompatiblen API-Endpunkt — Sie richten ihn auf einen Server auf Ihrem Mac oder PC und chatten dann vom Smartphone aus —, ergänzt um On-Device-Unterstützung über MLX und Apple Foundation Models. Dieser Test prüft dieses gestaffelte Preismodell, die noch kleine Bewertungsbasis der App (3,3 von 5 bei 8 Bewertungen im App Store, Stand dieses Tests) und den Vergleich mit vollständig On-Device-Apps ohne Server wie [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) und [Private LLM](/de/power-local-llm/private-llm-review).',
+      'Chapper, entwickelt von [Prevolut Ltd](https://prevolut.uk/products/chapper/), ist eine native App für iPhone, iPad und Mac zum Chatten mit lokalen und selbst gehosteten KI-Modellen. Der Download ist kostenlos mit einem Limit von 20 Unterhaltungen und wird durch den einmaligen Kauf von [Chapper Pro für 9,99 $](https://apps.apple.com/us/app/chapper-ai-lm-studio-client/id6760984679) vollständig freigeschaltet — echte On-Device-Inferenz (ein Modell direkt auf dem Gerät statt auf einem Server auszuführen) wird laut aktuellem App-Store-Eintrag als separater In-App-Kauf für 4,99 $ verkauft. App-Store-Preise können je nach Region variieren; prüfen Sie vor dem Kauf den aktuellen Preis im deutschen App Store. Chappers Kernkonzept ist ein ausgereifter Client für [LM Studio](https://lmstudio.ai/), [Ollama](https://ollama.com/), llama.cpp-Server und jeden OpenAI-kompatiblen API-Endpunkt — Sie richten ihn auf einen Server auf Ihrem Mac oder PC und chatten dann vom Smartphone aus —, ergänzt um On-Device-Unterstützung über MLX und Apple Foundation Models. Diese Rezension prüft dieses gestaffelte Preismodell, die noch kleine Bewertungsbasis der App (3,3 von 5 bei 8 Bewertungen im App Store, Stand dieser Rezension) und den Vergleich mit vollständig On-Device-Apps ohne Server wie [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) und [Private LLM](/de/power-local-llm/private-llm-review).',
     metaDescription:
-      'Chapper Test 2026: kostenlos mit 20-Chat-Limit, 9,99 $ Pro-Einmalkauf, 4,99 $ On-Device-Zusatzkauf. LM-Studio- und Ollama-Client für iPhone/iPad/Mac — Preise, Datenschutz und Alternativen.',
+      'Chapper-Rezension 2026: kostenlos mit 20-Chat-Limit, 9,99 $ Pro-Einmalkauf, 4,99 $ On-Device-Zusatzkauf. LM-Studio- und Ollama-Client für iPhone/iPad/Mac — Preise, Datenschutz und Alternativen.',
     twitterDescription:
-      'Chapper Test 2026: eine iPhone/iPad/Mac-App zum Chatten mit LM Studio, Ollama und OpenAI-kompatiblen Endpunkten, On-Device-Inferenz als separater Zusatzkauf. Preise, Datenschutz und Vergleich mit PocketPal AI und Private LLM.',
+      'Chapper-Rezension 2026: eine iPhone/iPad/Mac-App zum Chatten mit LM Studio, Ollama und OpenAI-kompatiblen Endpunkten, On-Device-Inferenz als separater Zusatzkauf. Preise, Datenschutz und Vergleich mit PocketPal AI und Private LLM.',
     audience:
       'iPhone-, iPad- und Mac-Nutzer, die LM Studio oder Ollama auf einem Computer betreiben und einen nativen mobilen Client suchen, oder die zwischen Chappers gestaffeltem Preismodell (kostenlos/Pro/On-Device) und vollständig On-Device-Apps wie PocketPal AI oder Private LLM entscheiden.',
     readTime: '9 Min. Lesezeit',
@@ -545,7 +545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Backends: funktioniert nativ mit LM Studio, Ollama, llama.cpp-Server und jeder OpenAI-kompatiblen API; On-Device-Unterstützung nutzt Apples MLX-Framework und, wo verfügbar, Apple Foundation Models.',
           'Funktionen: MCP-Tool-Integration, ein sandboxed „C.A.S.H."-Terminal-Workflow-Tool, benutzerdefinierte Personas, strukturierte JSON-Ausgabe, Export in mehreren Formaten (TXT, PDF, HTML, Markdown, JSON, CSV, XML), Text-zu-Sprache und ein Inspector für rohe API-Anfragen.',
           'Datenschutz: Der Entwickler gibt an, dass keine Konten erforderlich sind und kein Tracking durch Dritte stattfindet; Chats bleiben auf dem Gerät, sofern iCloud-Sync oder eine Server-Verbindung nicht aktiviert ist.',
-          'Die Bewertungsbasis ist noch dünn: 3,3 von 5 Sternen bei 8 Bewertungen im App Store, Stand dieses Tests — eine sehr kleine Stichprobe, aus der keine starken Schlüsse gezogen werden sollten.',
+          'Die Bewertungsbasis ist noch dünn: 3,3 von 5 Sternen bei 8 Bewertungen im App Store, Stand dieser Rezension — eine sehr kleine Stichprobe, aus der keine starken Schlüsse gezogen werden sollten.',
           'Version 1.3.1 (App-Store-Eintrag, datiert auf den 6. August 2026) ist die aktuelle Version; die App scheint laut Versionsnummerierung und App-Store-ID im Jahr 2026 im App Store gestartet zu sein.',
         ],
       },
@@ -593,7 +593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preise: Kostenlose Stufe, Pro und der On-Device-Zusatzkauf',
         itemHeadings: true,
         content: [
-          '**Chapper nutzt ein dreistufiges Preismodell, das gestaffelter ist als bei den meisten Apps dieser Kategorie.** Die Basis-App ist kostenlos, ein einmaliger Kauf von Chapper Pro schaltet die meisten erweiterten Funktionen frei, und echte On-Device-Modellausführung wird nochmals separat bepreist. Diese Angaben wurden für diesen Test gegen den [App-Store-Eintrag](https://apps.apple.com/us/app/chapper-ai-lm-studio-client/id6760984679) und [chapper.app](https://chapper.app/) geprüft.',
+          '**Chapper nutzt ein dreistufiges Preismodell, das gestaffelter ist als bei den meisten Apps dieser Kategorie.** Die Basis-App ist kostenlos, ein einmaliger Kauf von Chapper Pro schaltet die meisten erweiterten Funktionen frei, und echte On-Device-Modellausführung wird nochmals separat bepreist. Diese Angaben wurden für diese Rezension gegen den [App-Store-Eintrag](https://apps.apple.com/us/app/chapper-ai-lm-studio-client/id6760984679) und [chapper.app](https://chapper.app/) geprüft.',
         ],
         columns: ['Stufe', 'Preis', 'Was freigeschaltet wird'],
         rows: [
@@ -618,14 +618,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Was freigeschaltet wird': 'Optionale einmalige Trinkgelder an den Entwickler; keine funktionale Freischaltung',
           },
         ],
-        note: 'Prevolut Ltds eigene Website beschreibt Chapper Pro als „kein Abo, keine versteckten Kosten", wobei jede künftige Pro-Funktion nach dem Kauf automatisch enthalten ist. App-Store-Preise können sich ändern und je nach Region variieren — prüfen Sie den aktuellen Preis im [App-Store-Eintrag](https://apps.apple.com/us/app/chapper-ai-lm-studio-client/id6760984679), bevor Sie kaufen. Für diesen Test geprüft am 06.09.2026.',
+        note: 'Prevolut Ltds eigene Website beschreibt Chapper Pro als „kein Abo, keine versteckten Kosten", wobei jede künftige Pro-Funktion nach dem Kauf automatisch enthalten ist. App-Store-Preise können sich ändern und je nach Region variieren — prüfen Sie den aktuellen Preis im [App-Store-Eintrag](https://apps.apple.com/us/app/chapper-ai-lm-studio-client/id6760984679), bevor Sie kaufen. Für diese Rezension geprüft am 06.09.2026.',
       },
       modelsAndBackends: {
         id: 'models-and-backends',
         title: 'Unterstützte Backends und Modelle',
         content: [
           '**Chappers primäre Integrationsfläche sind Remote-Backends, keine kuratierte On-Device-Modellbibliothek.** Laut eigener Website des Entwicklers „funktioniert es nativ mit LM Studio, Ollama, llama.cpp-Server und jeder OpenAI-kompatiblen API" — Sie können Chapper auf jeden Endpunkt richten, der dieses Protokoll spricht, einschließlich eines selbst gehosteten Servers in Ihrem eigenen Netzwerk.',
-          'Für die On-Device-Nutzung (der separate Zusatzkauf für 4,99 $) unterstützt die App Modelle über Apples **MLX**-Framework, ein für Apple Silicon entwickeltes Machine-Learning-Framework, sowie, wo das Betriebssystem es bereitstellt, **Apple Foundation Models** — Apples eigenes On-Device-Modell, das Drittanbieter-Apps auf unterstützter Hardware und OS-Version zur Verfügung gestellt wird. Weder der App-Store-Eintrag noch die Website des Entwicklers veröffentlichen eine feste, benannte Liste von On-Device-Modellen, wie es manche konkurrierenden Apps tun (etwa Private LLMs kuratierte Bibliothek mit 140+ Modellen); dieser Test behandelt die On-Device-Modellauswahl als enger und stärker von Apples eigenem MLX/Foundation-Models-Ökosystem abhängig als von einem großen kuratierten GGUF-Katalog.',
+          'Für die On-Device-Nutzung (der separate Zusatzkauf für 4,99 $) unterstützt die App Modelle über Apples **MLX**-Framework, ein für Apple Silicon entwickeltes Machine-Learning-Framework, sowie, wo das Betriebssystem es bereitstellt, **Apple Foundation Models** — Apples eigenes On-Device-Modell, das Drittanbieter-Apps auf unterstützter Hardware und OS-Version zur Verfügung gestellt wird. Weder der App-Store-Eintrag noch die Website des Entwicklers veröffentlichen eine feste, benannte Liste von On-Device-Modellen, wie es manche konkurrierenden Apps tun (etwa Private LLMs kuratierte Bibliothek mit 140+ Modellen); diese Rezension behandelt die On-Device-Modellauswahl als enger und stärker von Apples eigenem MLX/Foundation-Models-Ökosystem abhängig als von einem großen kuratierten GGUF-Katalog.',
           'Da Modellqualität und -geschwindigkeit im server-basierten Pfad vollständig davon abhängen, was Sie in LM Studio oder Ollama auf Ihrem eigenen Gerät betreiben, setzt Chapper selbst nicht die Obergrenze der Modellfähigkeiten, wie es eine vollständig On-Device-App tun würde — es ist eine Transport- und Oberflächenschicht, wobei Ihre eigene Hardware die eigentliche Inferenz übernimmt.',
         ],
       },
@@ -653,7 +653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plattform': 'Apple Vision Pro',
             'Was Sie erwartet': 'App-Store-Eintrag zeigt Kompatibilität mit visionOS 1.0+.',
-            'Wichtiger Hinweis': 'Dieser Test hat die Vision-Pro-Erfahrung nicht eigenständig geprüft; betrachten Sie dies als im App Store gelistete Kompatibilität, nicht als praktisch verifizierte Funktion.',
+            'Wichtiger Hinweis': 'Diese Rezension hat die Vision-Pro-Erfahrung nicht eigenständig geprüft; betrachten Sie dies als im App Store gelistete Kompatibilität, nicht als praktisch verifizierte Funktion.',
           },
           {
             'Plattform': 'Android, Windows, Linux',
@@ -670,7 +670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Kein Konto erforderlich.** Sie können Chapper herunterladen und nutzen, einschließlich In-App-Käufen über Apples Standard-Kaufablauf, ohne ein Chapper-spezifisches Profil zu erstellen.',
-          '**Kein Tracking durch Dritte, laut eigener Angabe des Entwicklers.** Dieser Test stützt sich auf diese Angabe, nicht auf eine unabhängige Prüfung des Netzwerkverkehrs der Closed-Source-App.',
+          '**Kein Tracking durch Dritte, laut eigener Angabe des Entwicklers.** Diese Rezension stützt sich auf diese Angabe, nicht auf eine unabhängige Prüfung des Netzwerkverkehrs der Closed-Source-App.',
           '**iCloud-Sync ist optional und laut Entwickler Ende-zu-Ende-verschlüsselt.** Sie ist standardmäßig deaktiviert; ihre Aktivierung ist der einzige dokumentierte Fall, in dem Chat-Daten das lokale Gerät verlassen — und zwar an das eigene iCloud-Konto des Lesers, nicht an Prevoluts Server.',
           '**Server-Verbindungen senden Daten an den von Ihnen konfigurierten Endpunkt.** Verbinden Sie Chapper mit einer Drittanbieter- oder cloud-gehosteten OpenAI-kompatiblen API statt Ihrem eigenen lokalen LM-Studio-/Ollama-Server, gehen Ihre Prompts an diesen Endpunkt gemäß dessen eigenen Datenschutzbedingungen — dies ist eine allgemeine Eigenschaft des Client-Server-Modells, nicht spezifisch für Chapper.',
           '**Datenschutzrichtlinie und Nutzungsbedingungen sind veröffentlicht** unter [prevolut.uk/products/chapper/privacy](https://prevolut.uk/products/chapper/privacy) und [prevolut.uk/products/chapper/terms](https://prevolut.uk/products/chapper/terms) — lesen Sie diese direkt für die aktuellen, vollständigen rechtlichen Bedingungen, statt sich allein auf Marketingtexte zu verlassen.',
@@ -683,11 +683,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Chapper wird von [Prevolut Ltd](https://prevolut.uk/products/chapper/) entwickelt, einem in England und Wales registrierten Unternehmen unter der Companies-House-Nummer 17058766.** Öffentliche App-Store-Daten nennen kein genaues Erstveröffentlichungsdatum, doch die relativ hohe App-Store-ID der App (6760984679) und ihre frühe Versionsnummerierung deuten auf einen Start im Jahr 2026 hin.',
         ],
         items: [
-          '**Version 1.1.0.** Vom Entwickler als eines der bisher größten Chapper-Releases beschrieben; genaues Datum in den für diesen Test verfügbaren Quellen nicht veröffentlicht.',
+          '**Version 1.1.0.** Vom Entwickler als eines der bisher größten Chapper-Releases beschrieben; genaues Datum in den für diese Rezension verfügbaren Quellen nicht veröffentlicht.',
           '**Version 1.2.0.** Ein großes Update rund um die Sandbox-Terminal-Workflow-Funktion „C.A.S.H." plus Qualitätsverbesserungen.',
-          '**Version 1.3.1 (6. August 2026).** Die aktuelle App-Store-Version zum Zeitpunkt dieses Tests, mit einem ersten Blick auf einen „Agent Mode", schnellerem Modellwechsel, einem größeren KI-Antwortfeld und mehreren kleinen Fehlerbehebungen.',
+          '**Version 1.3.1 (6. August 2026).** Die aktuelle App-Store-Version zum Zeitpunkt dieser Rezension, mit einem ersten Blick auf einen „Agent Mode", schnellerem Modellwechsel, einem größeren KI-Antwortfeld und mehreren kleinen Fehlerbehebungen.',
         ],
-        note: 'Die Versionsgeschichte stammt aus der öffentlichen „Neuigkeiten"-Liste der App im App Store. Dieser Test konnte das ursprüngliche 1.0-Startdatum der App nicht unabhängig bestätigen — betrachten Sie die Schätzung eines Starts im Jahr 2026 als aus Versionsnummerierung und App-Store-ID abgeleitet, nicht als vom Entwickler bestätigtes Datum.',
+        note: 'Die Versionsgeschichte stammt aus der öffentlichen „Neuigkeiten"-Liste der App im App Store. Diese Rezension konnte das ursprüngliche 1.0-Startdatum der App nicht unabhängig bestätigen — betrachten Sie die Schätzung eines Starts im Jahr 2026 als aus Versionsnummerierung und App-Store-ID abgeleitet, nicht als vom Entwickler bestätigtes Datum.',
       },
       tradeOffs: {
         id: 'tradeoffs',
@@ -756,9 +756,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'App': '[Backyard AI](/de/power-local-llm/backyard-ai-review-local-roleplay-2026)',
-            'Plattformen': 'Siehe vollständigen Test für aktuelle Plattformunterstützung',
+            'Plattformen': 'Siehe die vollständige Rezension für aktuelle Plattformunterstützung',
             'Preis': 'Siehe aktuellen Eintrag',
-            'Modellzugriff': 'Siehe vollständigen Test für aktuelle Modellunterstützung',
+            'Modellzugriff': 'Siehe die vollständige Rezension für aktuelle Modellunterstützung',
             'Wesentlicher Unterschied': 'Auf Rollenspiel/Charakter-Chat fokussierte Desktop-App, anders als Chappers universeller Client',
           },
           {
@@ -813,7 +813,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Leser, die bereits LM Studio oder Ollama auf einem Mac oder PC betreiben.** Chappers Kernwert ist ein natives mobiles Frontend für einen bereits laufenden Server — das ist ihr stärkster, am besten belegter Anwendungsfall.',
           '**Nur-Apple-Nutzer, die eine App für sowohl server-basierten als auch On-Device-Chat wünschen.** Wer bereit ist, sowohl für Pro als auch den On-Device-Zusatzkauf zu bezahlen, deckt mit Chapper ein breiteres Spektrum an Workflows ab als mit einer Einzweck-App.',
           '**Power-User, die MCP-Tools, Personas und strukturierte JSON-Ausgabe wünschen.** Die Funktionsliste der Pro-Stufe ist dichter als bei den meisten Apps dieser Kategorie — nützlich für Leser, die ihr lokales KI-Setup skripten oder automatisieren möchten.',
-          '**Leser, die bereit sind, eine kleine, junge App zu bewerten.** Mit nur 8 Bewertungen im App Store, Stand dieses Tests, steht Chapper noch am Anfang seiner öffentlichen Historie — akzeptabel für Leser, die gerne neuere Tools ausprobieren, weniger geeignet für Leser, die eine lange, bewährte Geschichte priorisieren.',
+          '**Leser, die bereit sind, eine kleine, junge App zu bewerten.** Mit nur 8 Bewertungen im App Store, Stand dieser Rezension, steht Chapper noch am Anfang seiner öffentlichen Historie — akzeptabel für Leser, die gerne neuere Tools ausprobieren, weniger geeignet für Leser, die eine lange, bewährte Geschichte priorisieren.',
         ],
       },
       whoShouldNotUse: {
@@ -833,7 +833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Wie viel kostet Chapper?',
-            a: 'Chapper ist kostenlos herunterladbar mit einem Limit von 20 Unterhaltungen. [Chapper Pro kostet 9,99 $ als Einmalkauf](https://apps.apple.com/us/app/chapper-ai-lm-studio-client/id6760984679) und entfernt das Limit sowie schaltet die meisten erweiterten Funktionen frei. On-Device-Inferenz ist laut aktuellem App-Store-Eintrag ein separater In-App-Kauf für 4,99 $, zusätzlich zu Pro. Für diesen Test geprüft am 06.09.2026 — App-Store-Preise können je nach Region variieren und sich mit der Zeit ändern.',
+            a: 'Chapper ist kostenlos herunterladbar mit einem Limit von 20 Unterhaltungen. [Chapper Pro kostet 9,99 $ als Einmalkauf](https://apps.apple.com/us/app/chapper-ai-lm-studio-client/id6760984679) und entfernt das Limit sowie schaltet die meisten erweiterten Funktionen frei. On-Device-Inferenz ist laut aktuellem App-Store-Eintrag ein separater In-App-Kauf für 4,99 $, zusätzlich zu Pro. Für diese Rezension geprüft am 06.09.2026 — App-Store-Preise können je nach Region variieren und sich mit der Zeit ändern.',
           },
           {
             q: 'Führt Chapper KI-Modelle vollständig auf meinem iPhone aus?',
@@ -857,7 +857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Sammelt Chapper meine Daten?',
-            a: 'Die eigene Website des Entwicklers gibt an, dass kein Tracking durch Dritte verwendet wird und Unterhaltungen auf dem Gerät bleiben, sofern iCloud-Sync nicht aktiviert oder eine Verbindung zu einem eigenen externen Server hergestellt wird. Dieser Test stützt sich auf diese Angabe; Chapper ist Closed Source und wurde für diesen Test nicht unabhängig code-geprüft.',
+            a: 'Die eigene Website des Entwicklers gibt an, dass kein Tracking durch Dritte verwendet wird und Unterhaltungen auf dem Gerät bleiben, sofern iCloud-Sync nicht aktiviert oder eine Verbindung zu einem eigenen externen Server hergestellt wird. Diese Rezension stützt sich auf diese Angabe; Chapper ist Closed Source und wurde für diese Rezension nicht unabhängig code-geprüft.',
           },
           {
             q: 'Wie schneidet Chapper im Vergleich zu PocketPal AI ab?',
@@ -865,11 +865,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist Chapper gut bewertet?',
-            a: 'Stand dieses Tests hat Chapper 3,3 von 5 Sternen bei 8 Bewertungen im App Store — eine sehr kleine Stichprobe, die nicht als starkes Signal in die eine oder andere Richtung gewertet werden sollte. Laut Versionsnummerierung und App-Store-ID scheint die App relativ neu zu sein.',
+            a: 'Stand dieser Rezension hat Chapper 3,3 von 5 Sternen bei 8 Bewertungen im App Store — eine sehr kleine Stichprobe, die nicht als starkes Signal in die eine oder andere Richtung gewertet werden sollte. Laut Versionsnummerierung und App-Store-ID scheint die App relativ neu zu sein.',
           },
           {
             q: 'Was ist die Funktion „C.A.S.H." in Chapper?',
-            a: 'C.A.S.H. ist ein in Chapper enthaltenes, sandboxed Terminal-/Shell-Workflow-Tool, das als Kernstück von Version 1.2.0 eingeführt wurde. Die Materialien des Entwicklers beschreiben es als Möglichkeit, sandboxed Workflows direkt aus der App heraus auszuführen; dieser Test hat den vollen Funktionsumfang oder die Sicherheitsgrenzen nicht eigenständig geprüft.',
+            a: 'C.A.S.H. ist ein in Chapper enthaltenes, sandboxed Terminal-/Shell-Workflow-Tool, das als Kernstück von Version 1.2.0 eingeführt wurde. Die Materialien des Entwicklers beschreiben es als Möglichkeit, sandboxed Workflows direkt aus der App heraus auszuführen; diese Rezension hat den vollen Funktionsumfang oder die Sicherheitsgrenzen nicht eigenständig geprüft.',
           },
         ],
       },
@@ -877,7 +877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'Chapper ist eine leistungsfähige, funktionsreiche App für Leser, die bereits LM Studio oder Ollama betreiben und einen nativen Apple-Client dafür wünschen — die MCP-Tools, Personas, strukturierte Ausgabe und der Mehrformat-Export in der Pro-Stufe gehen weiter als bei den meisten Apps dieser Kategorie. Die Preisgestaltung ist zugleich der größte Reibungspunkt: eine kostenlose Stufe mit einem Limit von 20 Unterhaltungen, ein Kauf von Chapper Pro für 9,99 $ und eine weitere Gebühr von 4,99 $, nur um Modelle vollständig On-Device auszuführen, ergeben eine gestaffeltere Kostenstruktur als die Festpreise von PocketPal AI (kostenlos) oder Private LLM (4,99 $). Zusammen mit einer noch dünnen öffentlichen Erfolgsgeschichte (8 App-Store-Bewertungen, ein offenbarer Start im Jahr 2026 und kein bestätigtes 1.0-Veröffentlichungsdatum in den für diesen Test verfügbaren Quellen) wirkt Chapper eher wie eine vielversprechende, junge App als eine etablierte. Leser, die bereits einen lokalen Server betreiben und eine ausgereifte Möglichkeit suchen, diesen vom iPhone oder iPad aus zu erreichen, sollten zunächst die kostenlose Stufe ausprobieren; Leser, die eine App mit einem einzigen Kauf wünschen, die vollständig On-Device läuft, sollten stattdessen mit [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) oder [Private LLM](/de/power-local-llm/private-llm-review) beginnen.',
+          'Chapper ist eine leistungsfähige, funktionsreiche App für Leser, die bereits LM Studio oder Ollama betreiben und einen nativen Apple-Client dafür wünschen — die MCP-Tools, Personas, strukturierte Ausgabe und der Mehrformat-Export in der Pro-Stufe gehen weiter als bei den meisten Apps dieser Kategorie. Die Preisgestaltung ist zugleich der größte Reibungspunkt: eine kostenlose Stufe mit einem Limit von 20 Unterhaltungen, ein Kauf von Chapper Pro für 9,99 $ und eine weitere Gebühr von 4,99 $, nur um Modelle vollständig On-Device auszuführen, ergeben eine gestaffeltere Kostenstruktur als die Festpreise von PocketPal AI (kostenlos) oder Private LLM (4,99 $). Zusammen mit einer noch dünnen öffentlichen Erfolgsgeschichte (8 App-Store-Bewertungen, ein offenbarer Start im Jahr 2026 und kein bestätigtes 1.0-Veröffentlichungsdatum in den für diese Rezension verfügbaren Quellen) wirkt Chapper eher wie eine vielversprechende, junge App als eine etablierte. Leser, die bereits einen lokalen Server betreiben und eine ausgereifte Möglichkeit suchen, diesen vom iPhone oder iPad aus zu erreichen, sollten zunächst die kostenlose Stufe ausprobieren; Leser, die eine App mit einem einzigen Kauf wünschen, die vollständig On-Device läuft, sollten stattdessen mit [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) oder [Private LLM](/de/power-local-llm/private-llm-review) beginnen.',
       },
       sources: {
         id: 'sources',
@@ -893,9 +893,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[PocketPal AI Test](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene, standardmäßig On-Device-Alternative.',
-          '[Private LLM Test](/de/power-local-llm/private-llm-review) — eine 4,99-$-Festpreis-App, vollständig On-Device mit 140+ kuratierten Modellen.',
-          '[Backyard AI Test](/de/power-local-llm/backyard-ai-review-local-roleplay-2026) — eine auf Rollenspiel fokussierte lokale KI-App für einen anderen Anwendungsfall als Chapper.',
+          '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene, standardmäßig On-Device-Alternative.',
+          '[Private-LLM-Rezension](/de/power-local-llm/private-llm-review) — eine 4,99-$-Festpreis-App, vollständig On-Device mit 140+ kuratierten Modellen.',
+          '[Backyard-AI-Rezension](/de/power-local-llm/backyard-ai-review-local-roleplay-2026) — eine auf Rollenspiel fokussierte lokale KI-App für einen anderen Anwendungsfall als Chapper.',
           '[SillyTavern vs. Agnai vs. RisuAI](/de/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — ein Vergleich selbst gehosteter Rollenspiel-Frontends.',
           '[Die besten Local-LLM-Apps für iPhone 2026](/de/power-local-llm/best-local-llm-apps-iphone-2026) — der vollständige iPhone-App-Überblick zur Einordnung von Chapper.',
           '[Das vollständige Local-LLM-Software-Verzeichnis](/de/directory) — ein breiteres Verzeichnis von Local-LLM-Tools über alle Plattformen hinweg.',

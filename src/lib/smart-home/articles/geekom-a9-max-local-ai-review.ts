@@ -400,18 +400,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Decision & Comparison',
     heroImage: '/images/geekom-a9-max-local-ai-review-overview-hero-de.webp',
     affiliateDisclosure: true,
-    title: 'GEEKOM A9 Max Test (2026): Der beste Mini-PC für lokale KI?',
-    seoTitle: 'GEEKOM A9 Max Test 2026 — Lokale KI & Heimserver',
+    title: 'GEEKOM-A9-Max-Rezension (2026): Der beste Mini-PC für lokale KI?',
+    seoTitle: 'GEEKOM-A9-Max-Rezension 2026 — Lokale KI & Heimserver',
     intro:
-      'Der GEEKOM A9 Max ist ein Premium-Mini-PC auf Basis des AMD Ryzen AI 9 HX 370 oder HX 470 (12 Kerne, Radeon 890M, bis zu 128 GB DDR5). Für ein Smart Home mit lokaler KI ist er die Wahl mit maximalem Spielraum: Er betreibt Home Assistant, Frigate und ein 7B–13B-Modell auf Ollama mit Reserve. Doch der Preis ist seit dem Launch deutlich gestiegen — GEEKOMs eigener aktueller Preis liegt bei 1.399–1.899 € (August 2026, je nach Konfiguration und Rabattcode), deutlich über den 1.199–1.399 €, die dieser Test ursprünglich nannte. Diese Lücke verändert die Empfehlung: Dieser Test prüft aktuelle Spezifikationen und Preise gegen GEEKOMs eigenen Store, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs und sagt genau, wer ihn zum heutigen Preis noch kaufen sollte — und wer stattdessen zum Beelink SER8 greifen sollte.',
+      'Der GEEKOM A9 Max ist ein Premium-Mini-PC auf Basis des AMD Ryzen AI 9 HX 370 oder HX 470 (12 Kerne, Radeon 890M, bis zu 128 GB DDR5). Für ein Smart Home mit lokaler KI ist er die Wahl mit maximalem Spielraum: Er betreibt Home Assistant, Frigate und ein 7B–13B-Modell auf Ollama mit Reserve. Doch der Preis ist seit dem Launch deutlich gestiegen — GEEKOMs eigener aktueller Preis liegt bei 1.399–1.899 € (August 2026, je nach Konfiguration und Rabattcode), deutlich über den 1.199–1.399 €, die diese Rezension ursprünglich nannte. Diese Lücke verändert die Empfehlung: Diese Rezension prüft aktuelle Spezifikationen und Preise gegen GEEKOMs eigenen Store, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs und sagt genau, wer ihn zum heutigen Preis noch kaufen sollte — und wer stattdessen zum Beelink SER8 greifen sollte.',
     metaDescription:
-      'GEEKOM A9 Max Test 2026: Ryzen AI 9 HX 370/HX 470, Radeon 890M, bis zu 128 GB DDR5, aktueller Preis je Konfiguration. Betreibt Home Assistant plus ein 7B–13B-LLM — ehrliches Urteil, ob sich der Aufpreis lohnt.',
+      'GEEKOM-A9-Max-Rezension 2026: Ryzen AI 9 HX 370/HX 470, Radeon 890M, bis zu 128 GB DDR5, aktueller Preis je Konfiguration. Betreibt Home Assistant plus ein 7B–13B-LLM — ehrliches Urteil, ob sich der Aufpreis lohnt.',
     twitterDescription:
       'GEEKOM A9 Max (2026): Ryzen AI 9 HX 370/HX 470, 128-GB-DDR5-Obergrenze, Wi-Fi 7, jetzt ab 1.399 €. Der NPU beschleunigt keine LLMs — RAM und iGPU tun das. Wer ihn wirklich kaufen sollte.',
     readTime: '10 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Käufer, die entscheiden, ob sich der Aufpreis des GEEKOM A9 Max für einen lokalen KI-Heimserver lohnt',
-    primaryTerm: 'GEEKOM A9 Max Test',
+    primaryTerm: 'GEEKOM A9 Max Rezension',
     targetKeywords: [
       'geekom a9 max test',
       'geekom a9 max lokale ki',
@@ -472,7 +472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'Der A9 Max betreibt Home Assistant, Frigate, Whisper und ein 7B–13B-lokales LLM auf einer Box mit echtem Spielraum',
           'Ryzen AI 9 HX 370/HX 470: 12 Kerne/24 Threads, Radeon-890M-iGPU, bis zu 128 GB DDR5 (zwei austauschbare SO-DIMMs)',
-          'Der Preis ist seit dem Launch deutlich gestiegen — GEEKOM verlangt jetzt 1.399–1.899 € (August 2026), nicht die 1.199–1.399 €, die dieser Test ursprünglich nannte',
+          'Der Preis ist seit dem Launch deutlich gestiegen — GEEKOM verlangt jetzt 1.399–1.899 € (August 2026), nicht die 1.199–1.399 €, die diese Rezension ursprünglich nannte',
           'Lokale-LLM-Geschwindigkeit kommt von iGPU und RAM-Bandbreite — der 80–86-TOPS-NPU beschleunigt Vision, nicht Chat-Modelle',
           'Zum aktuellen Preis kostet er etwa das 1,4- bis 1,9-Fache eines [Beelink SER8](/de/smart-home/beelink-ser8-local-ai-review) (999 €) — kaufen Sie ihn für die 128-GB-Obergrenze, doppeltes NVMe und Wi-Fi 7, nicht um zu sparen',
           'In China gefertigt — kalkulieren Sie die US-/EU-Importmaßnahmen 2026 in die Endkosten ein (siehe Zollhinweis)',
@@ -536,7 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'local-ai',
         title: 'Lokale KI & LLM-Leistung',
         content:
-          '**Mit 32 GB RAM betreibt der A9 Max komfortabel ein 7B–8B-Modell auf Ollama und passt ein 13B–14B-Modell in 4-Bit mit Raum für Kontext — alle Werte sind aus der geprüften Hardware geschätzt, kein gemessener Benchmark.** Der Umstieg auf 64 GB öffnet Modelle der 30B-Klasse, und die 128-GB-Obergrenze lässt ein 70B-Modell in 4-Bit laden, wobei große Modelle durch die Speicherbandbreite begrenzt sind (Dual-Channel-DDR5, kein dedizierter VRAM) und eher für Experimente als für schnelle Bereitstellung taugen. Hier muss dieser Test ehrlicher sein als eine typische Affiliate-Seite: NPU-TOPS-Werte sind nicht dasselbe wie LLM-Inferenzleistung.',
+          '**Mit 32 GB RAM betreibt der A9 Max komfortabel ein 7B–8B-Modell auf Ollama und passt ein 13B–14B-Modell in 4-Bit mit Raum für Kontext — alle Werte sind aus der geprüften Hardware geschätzt, kein gemessener Benchmark.** Der Umstieg auf 64 GB öffnet Modelle der 30B-Klasse, und die 128-GB-Obergrenze lässt ein 70B-Modell in 4-Bit laden, wobei große Modelle durch die Speicherbandbreite begrenzt sind (Dual-Channel-DDR5, kein dedizierter VRAM) und eher für Experimente als für schnelle Bereitstellung taugen. Hier muss diese Rezension ehrlicher sein als eine typische Affiliate-Seite: NPU-TOPS-Werte sind nicht dasselbe wie LLM-Inferenzleistung.',
         image: '/images/geekom-a9-max-local-ai-review-ram-model-fit-en.svg',
         imageCaption: 'GEEKOM-A9-Max-Modellpassung nach RAM: 32 GB betreiben 7B–8B komfortabel und passen ein 13B–14B-Modell bei Q4; 64 GB öffnen Modelle der 30B-Klasse; die 128-GB-Obergrenze lädt ein 70B-Modell bei Q4, aber langsam.',
         columns: ['Modellgröße', 'Passung auf A9 Max', 'Urteil'],
@@ -638,7 +638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '**Preisregel, die wir selbst anwenden würden:** Wenn der A9 Max zum Kaufzeitpunkt nur ~100–200 € mehr kostet als die nächstliegende Alternative, lohnt sich der zusätzliche Spielraum meist. Wenn der Aufpreis mehrere Hundert Euro beträgt — was bei GEEKOMs aktuellem Preis von 1.399–1.899 € gegenüber den 999 € des SER8 der Fall ist —, vergleichen Sie SER8 und UM890 Pro ernsthaft, bevor Sie kaufen.',
-          'GEEKOMs Preise sind seit der Erstveröffentlichung dieses Tests deutlich gestiegen — behandeln Sie jede Zahl auf dieser Seite als Momentaufnahme vom August 2026, nicht als Versprechen.',
+          'GEEKOMs Preise sind seit der Erstveröffentlichung dieser Rezension deutlich gestiegen — behandeln Sie jede Zahl auf dieser Seite als Momentaufnahme vom August 2026, nicht als Versprechen.',
         ],
       },
       prosCons: {
@@ -653,7 +653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Wi-Fi 7, doppeltes 2,5GbE, zwei USB4-Anschlüsse — gut vernetzt für einen Heimserver',
           'Läuft mit moderaten 54 W für eine Dauerbetrieb-Box',
           '**Nachteile**',
-          'Teuer — 1.399–1.899 € Stand August 2026, deutlich über der ursprünglichen Zahl von 1.199–1.399 € in diesem Test',
+          'Teuer — 1.399–1.899 € Stand August 2026, deutlich über der ursprünglichen Zahl von 1.199–1.399 € in dieser Rezension',
           'Der NPU beschleunigt keine lokalen LLMs — ein verbreiteter Irrtum, den diese Seite teilweise richtigstellen soll',
           'iGPU- und geteiltes-Speicher-Design ist für sehr große Modelle bandbreitenbegrenzt',
           'Aktive Kühlung — trotz Marketing-Sprache nicht lautlos unter Dauerlast',
@@ -668,7 +668,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           'USA: Die Section-301-Zölle auf chinesische Elektronik gelten 2026 weiterhin; die separaten „IEEPA"-Zölle von 2025 wurden im Februar 2026 vom Obersten Gerichtshof gekippt und durch einen befristeten, gedeckelten Section-122-Zoll ersetzt. Die zollfreie „De-minimis"-Ausnahme unter 800 USD für Direktimporte ist ebenfalls entfallen.',
           'EU (betrifft DE/FR): Es gibt keinen breiten EU-Zoll auf fertige Mini-PCs, aber ab Juli 2026 wurde die zollfreie 150-€-Grenze für geringwertige Direktsendungen aus China aufgehoben und eine kleine Bearbeitungsgebühr pro Sendung eingeführt.',
-          'Nettoeffekt: Prüfen Sie den aktuellen Preis beim Händler vor dem Kauf — die Zahlen in diesem Test sind indikativ und mit Stand August 2026 datiert.',
+          'Nettoeffekt: Prüfen Sie den aktuellen Preis beim Händler vor dem Kauf — die Zahlen in dieser Rezension sind indikativ und mit Stand August 2026 datiert.',
         ],
       },
       whereToBuy: {
@@ -710,7 +710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'methodology',
         title: 'Wie wir dieses Gerät bewerten',
         content:
-          '**Dieser Test wurde nicht praktisch an einem physischen Gerät von PromptQuorum getestet.** Er basiert auf GEEKOMs eigenen veröffentlichten Spezifikationen, unabhängigen Testquellen und Preisrecherche, klar getrennt, damit Sie wissen, was bestätigt und was geschätzt ist.',
+          '**Diese Rezension wurde nicht praktisch an einem physischen Gerät von PromptQuorum getestet.** Er basiert auf GEEKOMs eigenen veröffentlichten Spezifikationen, unabhängigen Testquellen und Preisrecherche, klar getrennt, damit Sie wissen, was bestätigt und was geschätzt ist.',
         items: [
           '**Herstellerbestätigt:** CPU-Varianten, RAM-Typ und -Obergrenze, Speicherschnittstellen, Anschlüsse, TDP, Abmessungen, offizieller Preis — direkt aus GEEKOMs eigenem Produktangebot.',
           '**Unabhängige Beobachtungen (Testquellen Dritter, nicht PromptQuorum):** Stromverbrauch unter Last, thermisches und Lautstärkeverhalten sowie reale Benchmark-Werte — abgeglichen mit unabhängigen Testern, die physische Geräte getestet haben.',
@@ -721,7 +721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
-          { q: 'Wie viel kostet der GEEKOM A9 Max aktuell?', a: 'GEEKOMs eigener Store listet die Konfiguration HX370/32GB/2TB ab etwa 1.563 € (Listenpreis 1.899 €, mit Rabattcode niedriger), Stand August 2026; geizhals.de zeigt eine HX370-Konfiguration bereits ab 1.399 €. Das liegt deutlich über den 1.199–1.399 €, die dieser Test ursprünglich nannte — prüfen Sie den Live-Preis und einen eventuell aktiven Rabattcode vor dem Kauf.' },
+          { q: 'Wie viel kostet der GEEKOM A9 Max aktuell?', a: 'GEEKOMs eigener Store listet die Konfiguration HX370/32GB/2TB ab etwa 1.563 € (Listenpreis 1.899 €, mit Rabattcode niedriger), Stand August 2026; geizhals.de zeigt eine HX370-Konfiguration bereits ab 1.399 €. Das liegt deutlich über den 1.199–1.399 €, die diese Rezension ursprünglich nannte — prüfen Sie den Live-Preis und einen eventuell aktiven Rabattcode vor dem Kauf.' },
           { q: 'Kann der GEEKOM A9 Max lokale LLMs betreiben?', a: 'Ja. Mit 32 GB RAM betreibt er komfortabel ein 7B–8B-Modell auf Ollama und passt ein 13B–14B-Modell in 4-Bit-Quantisierung mit Raum für Kontext. Dies ist aus seiner geprüften Hardware geschätzt, kein fester Benchmark, da die Geschwindigkeit vom Modell, der Quantisierung und dem Backend abhängt.' },
           { q: 'Wie groß darf ein Modell für seinen RAM sein?', a: 'Bei 32 GB ist ein 13B–14B-Modell in 4-Bit realistisch. Die Aufrüstung auf 64 GB öffnet Modelle der 30B-Klasse, und die 128-GB-Obergrenze lässt ein 70B-Modell in 4-Bit laden — sehr große Modelle laufen jedoch langsam, da die iGPU sich den Systemspeicher teilt und keinen dedizierten VRAM hat.' },
           { q: 'Macht der NPU lokale LLMs schneller?', a: 'Nein. Der NPU (80 TOPS gesamt beim HX370, 86 TOPS beim HX470) beschleunigt Vision- und einige Windows-KI-Funktionen, doch gängige lokale-LLM-Laufzeiten wie Ollama und llama.cpp führen das Modell auf CPU und Radeon-890M-iGPU aus. Betrachten Sie den NPU als Vorteil für die Frigate-Kameraerkennung, nicht für die Chat-Modell-Geschwindigkeit.' },
@@ -739,11 +739,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) — die Übersicht, zu der dieser Test gehört',
-          '[Beelink-SER8-Test](/de/smart-home/beelink-ser8-local-ai-review) — die Preis-Leistungs-Alternative',
-          '[Minisforum-UM890-Pro-Test](/de/smart-home/minisforum-um890-pro-local-ai-review) — die Preis-Leistungs-Alternative mit eGPU',
-          '[Beelink-EQ14-Test](/de/smart-home/beelink-eq14-local-ai-review) — die Budget-Alternative',
-          '[GMKtec-G3-Plus-Test](/de/smart-home/gmktec-g3-plus-local-ai-review) — die andere Budget-Alternative',
+          '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) — die Übersicht, zu der diese Rezension gehört',
+          '[Beelink-SER8-Rezension](/de/smart-home/beelink-ser8-local-ai-review) — die Preis-Leistungs-Alternative',
+          '[Minisforum-UM890-Pro-Rezension](/de/smart-home/minisforum-um890-pro-local-ai-review) — die Preis-Leistungs-Alternative mit eGPU',
+          '[Beelink-EQ14-Rezension](/de/smart-home/beelink-eq14-local-ai-review) — die Budget-Alternative',
+          '[GMKtec-G3-Plus-Rezension](/de/smart-home/gmktec-g3-plus-local-ai-review) — die andere Budget-Alternative',
           '[Hardware-Guide für lokale LLMs](/de/local-llms/local-llm-hardware-guide-2026) — clusterübergreifend: VRAM- und Quantisierungstiefe',
           '[Ollama mit Home Assistant verbinden](/de/smart-home/home-assistant-ollama-integration) — das Modell anbinden',
         ],
@@ -752,7 +752,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'Review',
-      name: 'GEEKOM A9 Max Test (2026): Der beste Mini-PC für lokale KI?',
+      name: 'GEEKOM-A9-Max-Rezension (2026): Der beste Mini-PC für lokale KI?',
       reviewBody:
         'Der GEEKOM A9 Max ist ein Premium-Mini-PC mit Ryzen AI 9, der Home Assistant plus ein 7B–13B-lokales LLM mit einer 128-GB-RAM-Obergrenze betreibt. Zum Preis von 1.399–1.899 € (Stand August 2026, gestiegen von 1.199–1.399 € beim Launch) ist er ein Kauf für Spielraum und Zukunftssicherheit, etwa das 1,4- bis 1,9-Fache eines Beelink SER8.',
       datePublished: '2026-07-03',

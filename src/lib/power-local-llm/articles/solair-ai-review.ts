@@ -246,7 +246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Beginner',
     audience: 'iPhone- und iPad-Nutzer, die eine lokale KI-Assistenten-App mit optionalem Cloud-Fallback evaluieren',
     primaryTerm: 'Solair AI',
-    title: 'Solair AI Review: Lokaler iOS-Assistent im Test',
+    title: 'Solair AI Review: Lokaler iOS-Assistent',
     seoTitle: 'Solair AI Review: iOS-App, Preise, Datenschutz',
     intro: "Solair AI ist eine kostenlose iOS-, iPadOS- und macOS-App des Entwicklers [Simon Majar](https://apps.apple.com/us/app/solair-local-ai/id6758450823), die Chat, Sprache, Bilderkennung und Dokumentenanalyse direkt auf dem Gerät ausführt, mit optionaler Anbindung an Cloud-Anbieter wie Claude, ChatGPT und Grok über einen eigenen API-Schlüssel. Diese Bewertung ist ein Begleitartikel zu Solair AIs Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/directory) und vergleicht die App mit drei weiteren lokalen iOS-Chat-Apps, die diese Seite bereits bewertet hat: [Liquid Apollo](/de/power-local-llm/liquid-apollo-review), [Noema](/de/power-local-llm/noema-review) und [Off Grid AI](/de/power-local-llm/off-grid-ai-review).",
     metaDescription: "Solair AI Review: kostenlose iOS/iPadOS/macOS-App mit über 60 lokalen Modellen, optionalem Cloud-Fallback (eigener API-Schlüssel) zu Claude, ChatGPT und Grok. Preise, Datenschutz, Voraussetzungen und Vergleich mit Liquid Apollo, Noema und Off Grid AI.",

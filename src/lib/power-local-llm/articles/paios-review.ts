@@ -372,20 +372,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-04-02',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/paios-review-hero-de.webp',
-    title: 'PAIOS Test: Offline-Chat mit Gemini Nano für Android',
-    seoTitle: 'PAIOS Test: Offline-Chat mit Gemini Nano',
+    title: 'PAIOS-Rezension: Offline-Chat mit Gemini Nano für Android',
+    seoTitle: 'PAIOS-Rezension: Offline-Chat mit Gemini Nano',
     intro:
-      'PAIOS (Personal AI Operating System) ist eine kostenlose, quelloffene Android-App, die Googles On-Device-Modell Gemini Nano um eine Chat-Oberfläche mit mehreren Chats, eigenen Prompts und Temperaturreglern ergänzt. Dieser Test beschreibt, was die App leistet, auf welchen Smartphones sie läuft und wo ihre Grenzen liegen — auf Grundlage von README, Changelog und Google-Play-Eintrag des Projekts.',
+      'PAIOS (Personal AI Operating System) ist eine kostenlose, quelloffene Android-App, die Googles On-Device-Modell Gemini Nano um eine Chat-Oberfläche mit mehreren Chats, eigenen Prompts und Temperaturreglern ergänzt. Diese Rezension beschreibt, was die App leistet, auf welchen Smartphones sie läuft und wo ihre Grenzen liegen — auf Grundlage von README, Changelog und Google-Play-Eintrag des Projekts.',
     metaDescription:
-      'PAIOS Test: kostenlose, quelloffene Android-Chat-App (Unlicense) für Googles On-Device-Modell Gemini Nano. Funktionen, unterstützte Geräte, Datenschutz, Grenzen und Vergleich mit Layla und PocketPal AI.',
+      'PAIOS-Rezension: kostenlose, quelloffene Android-Chat-App (Unlicense) für Googles On-Device-Modell Gemini Nano. Funktionen, unterstützte Geräte, Datenschutz, Grenzen und Vergleich mit Layla und PocketPal AI.',
     twitterDescription:
-      'PAIOS Test: ein Android-Client für Gemini Nano über Google AI Core. Welche Smartphones funktionieren, was der Changelog zur Netzwerknutzung sagt und wo die App an Grenzen stößt.',
+      'PAIOS-Rezension: ein Android-Client für Gemini Nano über Google AI Core. Welche Smartphones funktionieren, was der Changelog zur Netzwerknutzung sagt und wo die App an Grenzen stößt.',
     audience:
       'Android-Nutzer mit einem Pixel 9 oder neuer (oder einem anderen AICore-fähigen Smartphone), die eine kostenlose, quelloffene On-Device-Chat-App für Gemini Nano suchen — behandelt Funktionen, Geräteunterstützung, Datenschutz, Grenzen und den Vergleich von PAIOS mit anderen lokalen KI-Apps für Android.',
     readTime: '7 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: false,
-    primaryTerm: 'PAIOS Test',
+    primaryTerm: 'PAIOS Rezension',
     targetKeywords: [
       'paios test',
       'paios android app',
@@ -398,7 +398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     current_hardware_mentioned: ['Pixel 9', 'Pixel 10'],
     leadAnswerBlock:
-      '**PAIOS ist eine Chat-Oberfläche für Googles Modell Gemini Nano, das laut README über Google AI Core vollständig auf einem Android-Smartphone läuft; der Code ist unter der [Unlicense](https://github.com/Puzzaks/PAIOS) veröffentlicht, einer Lizenz im Stil der Gemeinfreiheit.** Die App ist ein Client, keine Modellbibliothek: Sie funktioniert nur auf Smartphones, auf denen AI Core unterstützt wird (die README nennt als Beispiele die Pixel-9- und Pixel-10-Reihe), und laut Dokumentation nur mit Gemini Nano. Das Projekt bezeichnet sich selbst als Alpha, und dieser Test (Version 1.1.8, das zum Zeitpunkt des Tests aktuelle GitHub-Release, veröffentlicht am 21. April 2026) beruht auf der öffentlichen Dokumentation, nicht auf praktischen Tests auf einem Gerät.',
+      '**PAIOS ist eine Chat-Oberfläche für Googles Modell Gemini Nano, das laut README über Google AI Core vollständig auf einem Android-Smartphone läuft; der Code ist unter der [Unlicense](https://github.com/Puzzaks/PAIOS) veröffentlicht, einer Lizenz im Stil der Gemeinfreiheit.** Die App ist ein Client, keine Modellbibliothek: Sie funktioniert nur auf Smartphones, auf denen AI Core unterstützt wird (die README nennt als Beispiele die Pixel-9- und Pixel-10-Reihe), und laut Dokumentation nur mit Gemini Nano. Das Projekt bezeichnet sich selbst als Alpha, und diese Rezension (Version 1.1.8, das zum Zeitpunkt des Tests aktuelle GitHub-Release, veröffentlicht am 21. April 2026) beruht auf der öffentlichen Dokumentation, nicht auf praktischen Tests auf einem Gerät.',
     quickAnswerTop: {
       de: {
         question: 'Lohnt sich die Installation von PAIOS auf einem Android-Smartphone?',
@@ -460,7 +460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'PAIOS herunterladen',
         content: [
           '**PAIOS gibt es bei Google Play und als direkte APK auf GitHub.** Beides ist kostenlos. Nutzen Sie den Play-Eintrag für automatische Updates oder die GitHub-APK, wenn Sie lieber außerhalb des Play Stores installieren.',
-          'Dieser Test ist ein Begleitartikel zum [Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory) von PromptQuorum, das PAIOS neben anderen On-Device- und lokalen KI-Tools listet.',
+          'Diese Rezension ist ein Begleitartikel zum [Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory) von PromptQuorum, das PAIOS neben anderen On-Device- und lokalen KI-Tools listet.',
         ],
         columns: ['Kanal', 'Download'],
         rows: [
@@ -501,7 +501,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**PAIOS ist eine Oberfläche für Gemini Nano, keine Inferenz-Engine.** Google AI Core, der Android-Systemdienst, der Gemini Nano bereitstellt, führt das Modell aus. PAIOS ergänzt die Chat-Oberfläche darum herum: getrennte Unterhaltungen, Prompts und Generierungseinstellungen.',
           'Die App wird hauptsächlich von einem Entwickler namens Puzzak, mit Übersetzungsbeiträgen aus der Community, in Dart geschrieben und als unabhängiges Projekt veröffentlicht, das nicht mit Google verbunden ist. Das Repository wurde im November 2025 angelegt und hat etwa 170 GitHub-Sterne.',
-          'Dieser Test stützt sich auf README, Changelog, Roadmap, GitHub-Releases und den Google-Play-Eintrag. Praktische Tests auf einem Gerät sind nicht enthalten, daher werden Geschwindigkeit und Antwortqualität hier nicht bewertet.',
+          'Diese Rezension stützt sich auf README, Changelog, Roadmap, GitHub-Releases und den Google-Play-Eintrag. Praktische Tests auf einem Gerät sind nicht enthalten, daher werden Geschwindigkeit und Antwortqualität hier nicht bewertet.',
         ],
       },
       howToGetStarted: {
@@ -558,7 +558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Datenschutz und Netzwerknutzung',
         content: [
           '**Laut README läuft PAIOS "vollständig auf dem Gerät mit Googles AI Core. Keine Daten verlassen Ihr Smartphone."** Der Google-Play-Eintrag zeigt die Datensicherheitsangaben des Entwicklers als "Keine Daten erhoben" und "Keine Daten weitergegeben".',
-          'Der Changelog enthält Details, die man kennen sollte. Version 1.1.2 führte optionale Analysen für Fehlersuche und Absturzberichte ein, Version 1.1.5 ergänzte Absturzberichte, und spätere Versionen erwähnen Firebase Remote Config für App-Einstellungen sowie von GitHub heruntergeladene Prompts. README und Play-Angabe erwähnen dies nicht, und dieser Test hat den Netzwerkverkehr der App nicht untersucht.',
+          'Der Changelog enthält Details, die man kennen sollte. Version 1.1.2 führte optionale Analysen für Fehlersuche und Absturzberichte ein, Version 1.1.5 ergänzte Absturzberichte, und spätere Versionen erwähnen Firebase Remote Config für App-Einstellungen sowie von GitHub heruntergeladene Prompts. README und Play-Angabe erwähnen dies nicht, und diese Rezension hat den Netzwerkverkehr der App nicht untersucht.',
           'Wenn Sie keinerlei Netzwerkkontakt wünschen, prüfen Sie die Einstellungen der App auf die Analyse-Option und untersuchen Sie den Datenverkehr selbst. Der Quellcode ist öffentlich, sodass die Angaben von jedem überprüft werden können.',
         ],
       },
@@ -715,10 +715,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Google AI Edge Gallery Test](/de/power-local-llm/google-ai-edge-gallery-review) — Googles eigene On-Device-App, ebenfalls für Android.',
-          '[Layla Test](/de/power-local-llm/layla-review) — ein Android-first-Assistent mit größerer Modellauswahl.',
-          '[PocketPal AI Test](/de/power-local-llm/pocketpal-ai-review) — der kostenlose, quelloffene GGUF-Chat-Client.',
-          '[Off Grid AI Test](/de/power-local-llm/off-grid-ai-review) — eine plattformübergreifende lokale KI-App.',
+          '[Google-AI-Edge-Gallery-Rezension](/de/power-local-llm/google-ai-edge-gallery-review) — Googles eigene On-Device-App, ebenfalls für Android.',
+          '[Layla-Rezension](/de/power-local-llm/layla-review) — ein Android-first-Assistent mit größerer Modellauswahl.',
+          '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — der kostenlose, quelloffene GGUF-Chat-Client.',
+          '[Off-Grid-AI-Rezension](/de/power-local-llm/off-grid-ai-review) — eine plattformübergreifende lokale KI-App.',
           '[Das vollständige Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory) — ein breiteres Verzeichnis lokaler LLM-Tools über alle Plattformen hinweg.',
         ],
       },

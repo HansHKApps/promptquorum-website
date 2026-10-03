@@ -288,9 +288,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'Entwickler, die einen kostenlosen, selbst gehosteten, OpenAI-kompatiblen Text-to-Speech-API-Endpunkt wollen, ohne für OpenAI-, Azure- oder ElevenLabs-TTS zu bezahlen',
     primaryTerm: 'openai-edge-tts',
-    title: 'openai-edge-tts im Test: Ein kostenloser OpenAI-kompatibler TTS-Server',
+    title: 'openai-edge-tts-Rezension: Ein kostenloser OpenAI-kompatibler TTS-Server',
     seoTitle: 'openai-edge-tts Review 2026: Kostenloser TTS-API-Server',
-    intro: 'openai-edge-tts ([github.com/travisvn/openai-edge-tts](https://github.com/travisvn/openai-edge-tts)) ist ein kostenloser, quelloffener, selbst gehosteter API-Server von Entwickler travisvn, der einen `/v1/audio/speech`-Endpunkt bereitstellt, der dem Text-to-Speech-API-Format von OpenAI entspricht. Er führt kein lokales Sprachmodell aus – er leitet jede Anfrage über die Python-Bibliothek `edge-tts` an die kostenlosen Online-Stimmen von Microsoft Edges „Vorlesen“-Funktion weiter und gibt das Audio dann in einer OpenAI-kompatiblen Antwort zurück. Dieser Test zeigt genau, wohin er weiterleitet, wie man ihn installiert und für wen er geeignet ist.',
+    intro: 'openai-edge-tts ([github.com/travisvn/openai-edge-tts](https://github.com/travisvn/openai-edge-tts)) ist ein kostenloser, quelloffener, selbst gehosteter API-Server von Entwickler travisvn, der einen `/v1/audio/speech`-Endpunkt bereitstellt, der dem Text-to-Speech-API-Format von OpenAI entspricht. Er führt kein lokales Sprachmodell aus – er leitet jede Anfrage über die Python-Bibliothek `edge-tts` an die kostenlosen Online-Stimmen von Microsoft Edges „Vorlesen“-Funktion weiter und gibt das Audio dann in einer OpenAI-kompatiblen Antwort zurück. Diese Rezension zeigt genau, wohin er weiterleitet, wie man ihn installiert und für wen er geeignet ist.',
     metaDescription: 'openai-edge-tts ist ein kostenloser, selbst gehosteter API-Server mit einem OpenAI-kompatiblen /v1/audio/speech-Endpunkt, der auf Microsoft Edges Online-Stimmen basiert, nicht auf einem lokalen Modell.',
     readTime: '10 Min. Lesezeit',
     targetKeywords: [
@@ -310,7 +310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Stellt `/v1/audio/speech` bereit, einen direkten Ersatz für OpenAI-, Azure-AI-Speech- oder ElevenLabs-TTS-Endpunkte',
           'Sprachsynthese wird über die edge-tts-Bibliothek an die kostenlosen Online-Stimmen von Microsoft Edges „Vorlesen“-Funktion weitergeleitet – kein lokales Modell, Text wird also an Microsofts Dienst gesendet',
           'Ordnet OpenAI-Stimmennamen (alloy, echo, fable, onyx, nova, shimmer) edge-tts-Stimmen zu, oder erlaubt die direkte Auswahl jeder edge-tts-Stimme',
-          'Über 2.100 GitHub-Stars und 316 Forks zum Zeitpunkt dieses Tests',
+          'Über 2.100 GitHub-Stars und 316 Forks zum Zeitpunkt dieser Rezension',
         ],
         updatedDate: '2026-09',
       },
@@ -345,10 +345,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPL-3.0-lizenziert, bestätigt über das Lizenzfeld des GitHub-Repositorys',
           'Stellt `/v1/audio/speech` bereit, das dem Anfrage-/Antwortformat der OpenAI-Text-to-Speech-API entspricht, sodass bestehender OpenAI-TTS-Client-Code mit einer geänderten Basis-URL darauf zeigen kann',
           'Sprachsynthese wird über die Python-Bibliothek `edge-tts` an die kostenlosen Online-Stimmen von Microsoft Edges „Vorlesen“-Funktion weitergeleitet – kein lokales Sprachmodell läuft auf Ihrer Hardware',
-          'Über 2.100 GitHub-Stars und 316 Forks zum Zeitpunkt dieses Tests',
+          'Über 2.100 GitHub-Stars und 316 Forks zum Zeitpunkt dieser Rezension',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test basiert auf dem eigenen GitHub-Repository, der README und den Release Notes von openai-edge-tts. PromptQuorum behauptet nicht, eigene Latenz- oder Qualitätstests gegenüber den zugrunde liegenden Microsoft-Edge-Stimmen durchgeführt zu haben.' },
+          { type: 'note', text: 'Diese Rezension basiert auf dem eigenen GitHub-Repository, der README und den Release Notes von openai-edge-tts. PromptQuorum behauptet nicht, eigene Latenz- oder Qualitätstests gegenüber den zugrunde liegenden Microsoft-Edge-Stimmen durchgeführt zu haben.' },
         ],
       },
       overview: {
@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Repository erstellt am 9. Oktober 2024, laut den Repository-Metadaten von GitHub',
           'Lizenz: GPL-3.0, bestätigt über die Lizenz-Metadaten des GitHub-Repositorys; die README weist zudem darauf hin, dass Unternehmen/kommerzielle Einsätze den Autor direkt kontaktieren sollten',
           'Lokalität: **hybrid, nicht lokal** – der Server-Prozess ist selbst gehostet, aber die eigentliche Text-to-Speech-Synthese wird an den Online-Stimmdienst von Microsoft Edge weitergeleitet, nicht auf Ihrer eigenen Hardware berechnet',
-          'Umfang: über 2.100 GitHub-Stars und 316 Forks zum Zeitpunkt dieses Tests',
+          'Umfang: über 2.100 GitHub-Stars und 316 Forks zum Zeitpunkt dieser Rezension',
         ],
         note: 'Verwechseln Sie „selbst gehostet“ hier nicht mit „lokal“. Der Betrieb des Docker-Containers auf Ihrem eigenen Server hält die API-Schlüssel-Prüfung und Anfrage-Formatierung auf Hardware, die Sie kontrollieren – aber jede tatsächliche Text-to-Speech-Umwandlung ist ein Netzwerkaufruf an Microsofts Dienst. Der zur Synthese gesendete Text wird nicht vollständig auf dem Gerät verarbeitet.',
       },
@@ -373,7 +373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { title: '9. Oktober 2024: Repository erstellt', whyItMatters: 'Markiert den Start des Projekts, laut den Repository-Metadaten von GitHub.' },
           { title: 'v2.0.0 — 28. Dezember 2024: Markdown-Filterung, erweiterte API-Unterstützung, vereinfachte Einrichtung', whyItMatters: 'Fügte optionale Markdown-Filterung des Ausgabetexts hinzu, Beta-Drop-in-Kompatibilität mit ElevenLabs- und Azure-AI-Speech-Endpunkten (neben dem bestehenden OpenAI-Format-Endpunkt) und machte das `/v1`-Routenpräfix optional, laut den offiziellen GitHub-Release-Notes.' },
         ],
-        note: 'Die Tag-Liste von GitHub zeigt v2.0.0 als bislang einzigen formal getaggten Release des Projekts; laufende Änderungen seither werden über reguläre Commits verfolgt, nicht über weitere Versions-Tags. Prüfen Sie die [GitHub-Releases-Seite](https://github.com/travisvn/openai-edge-tts/releases) direkt für alles, was nach dem Veröffentlichungsdatum dieses Tests erschienen ist.',
+        note: 'Die Tag-Liste von GitHub zeigt v2.0.0 als bislang einzigen formal getaggten Release des Projekts; laufende Änderungen seither werden über reguläre Commits verfolgt, nicht über weitere Versions-Tags. Prüfen Sie die [GitHub-Releases-Seite](https://github.com/travisvn/openai-edge-tts/releases) direkt für alles, was nach dem Veröffentlichungsdatum dieser Rezension erschienen ist.',
       },
       whatItDoes: {
         id: 'what-it-does',
@@ -429,7 +429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Aspekt': 'Lizenzierung', 'Was openai-edge-tts angibt': 'GPL-3.0, bestätigt über die Lizenz-Metadaten des GitHub-Repositorys.' },
           { 'Aspekt': 'Installationsmethode', 'Was openai-edge-tts angibt': 'Docker (`docker run` oder Docker Compose) ist der dokumentierte Hauptweg; ein Python-Virtualenv-plus-pip-Weg ist ebenfalls für den Betrieb ohne Docker dokumentiert.' },
         ],
-        note: 'Prüfen Sie die aktuellen Lizenz- und Nutzungsbedingungen für kommerzielle Zwecke direkt im GitHub-Repository, bevor Sie dies im Organisationsmaßstab einsetzen, da der Hinweis zur Unternehmenskontaktaufnahme in der README eine erklärte Absicht ist, kein separat veröffentlichter kommerzieller Lizenztext, den dieser Test unabhängig prüfen konnte.',
+        note: 'Prüfen Sie die aktuellen Lizenz- und Nutzungsbedingungen für kommerzielle Zwecke direkt im GitHub-Repository, bevor Sie dies im Organisationsmaßstab einsetzen, da der Hinweis zur Unternehmenskontaktaufnahme in der README eine erklärte Absicht ist, kein separat veröffentlichter kommerzieller Lizenztext, den diese Rezension unabhängig prüfen konnte.',
       },
       comparisonPiper: {
         id: 'vs-piper',
@@ -502,7 +502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Fehler 4: Annehmen, es gebe ein formales SLA oder Rate-Limit für den zugrunde liegenden Stimmdienst',
-            content: 'Das Projekt hängt vom kostenlosen „Vorlesen“-Stimmmechanismus von Microsoft Edge ab, den Microsoft nicht als ratenbegrenzte, garantierte öffentliche API veröffentlicht. Dieser Test fand in der eigenen README des Projekts keine dokumentierte Aussage zu Rate-Limits oder Nutzungsbedingungen für diese Abhängigkeit.',
+            content: 'Das Projekt hängt vom kostenlosen „Vorlesen“-Stimmmechanismus von Microsoft Edge ab, den Microsoft nicht als ratenbegrenzte, garantierte öffentliche API veröffentlicht. Diese Rezension fand in der eigenen README des Projekts keine dokumentierte Aussage zu Rate-Limits oder Nutzungsbedingungen für diese Abhängigkeit.',
           },
         ],
       },
@@ -532,7 +532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Kann openai-edge-tts ElevenLabs oder Azure AI Speech ersetzen, nicht nur OpenAI?', a: 'Das Projekt fügte in v2.0.0 (Dezember 2024) Beta-Drop-in-Kompatibilitätsendpunkte für ElevenLabs und Azure AI Speech hinzu, neben seinem primären OpenAI-Format-Endpunkt. Prüfen Sie das aktuelle Verhalten gegen Ihren spezifischen Client, bevor Sie sich in der Produktion darauf verlassen.' },
           { q: 'Wer hat openai-edge-tts erstellt?', a: 'Ein Einzelentwickler namens travisvn hat openai-edge-tts erstellt und pflegt es. Das GitHub-Repository wurde am 9. Oktober 2024 erstellt.' },
           { q: 'Unterstützt openai-edge-tts Stimmklonen?', a: 'Nein. Es bietet nur Microsoft Edges bestehende voreingestellte Stimmen; es gibt keine Funktion zum Trainieren oder Klonen einer individuellen Stimme aus eigenen Audioproben.' },
-          { q: 'Hat PromptQuorum die Angaben von openai-edge-tts unabhängig getestet?', a: 'Dieser Test basiert auf dem eigenen GitHub-Repository, der README und den Release Notes des Projekts, nicht auf eigenen Latenz- oder Audioqualitätstests von PromptQuorum.' },
+          { q: 'Hat PromptQuorum die Angaben von openai-edge-tts unabhängig getestet?', a: 'Diese Rezension basiert auf dem eigenen GitHub-Repository, der README und den Release Notes des Projekts, nicht auf eigenen Latenz- oder Audioqualitätstests von PromptQuorum.' },
         ],
       },
       sources: {

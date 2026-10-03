@@ -307,8 +307,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Beginner',
     audience: 'Mac-Besitzer und datenschutzbewusste Nutzer, die eine kostenlose, native Möglichkeit suchen, Open-Source-KI-Modelle auf Apple Silicon auszuführen — ohne Konto, Abonnement oder verpflichtenden Cloud-Anbieter',
     primaryTerm: 'Osaurus',
-    title: 'Osaurus im Test: Kostenlose On-Device-KI-App für Mac',
-    seoTitle: 'Osaurus im Test: Kostenlose On-Device-KI-App für Mac',
+    title: 'Osaurus-Rezension: Kostenlose On-Device-KI-App für Mac',
+    seoTitle: 'Osaurus-Rezension: Kostenlose On-Device-KI-App für Mac',
     intro: 'Osaurus ist eine kostenlose, MIT-lizenzierte, native Swift-App, die Open-Source-KI-Modelle direkt auf Apple-Silicon-Macs ausführt — ohne Konto, ohne Abonnement und standardmäßig ohne Datenübertragung. Sie funktioniert mit den Backends Ollama, MLX und LM Studio und kann optional mit Cloud-Anbietern wie OpenAI, Anthropic und Google Gemini verbunden werden, wenn Sie dies konfigurieren.',
     metaDescription: 'Osaurus ist eine kostenlose, MIT-lizenzierte native Swift-App, die Open-Source-KI-Modelle auf Apple-Silicon-Macs lokal ausführt. Kein Konto, kein Cloud-Zwang, Agenten-Tools integriert.',
     readTime: '11 Min. Lesezeit',
@@ -345,7 +345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'So starten Sie mit Osaurus', anchor: 'how-to-get-started' },
       { label: 'Für wen ist Osaurus geeignet', anchor: 'who-should-use-osaurus' },
       { label: 'Osaurus im Vergleich', anchor: 'osaurus-vs-alternatives' },
-      { label: 'Einschränkungen dieses Tests', anchor: 'limitations' },
+      { label: 'Einschränkungen dieser Rezension', anchor: 'limitations' },
       { label: 'Häufige Fehler', anchor: 'common-mistakes' },
       { label: 'Häufig gestellte Fragen', anchor: 'faq' },
     ],
@@ -368,7 +368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Native Swift-App speziell für Apple Silicon, kein plattformübergreifender Electron-Wrapper',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test basiert auf der offiziellen Website von Osaurus ([osaurus.ai](https://osaurus.ai/)) und öffentlichen Produktinformationen, nicht auf unabhängigen praktischen Benchmarks. Konkrete Geschwindigkeits- oder Genauigkeitswerte sind nicht enthalten, da sie für diesen Artikel nicht unabhängig gemessen wurden.' },
+          { type: 'note', text: 'Diese Rezension basiert auf der offiziellen Website von Osaurus ([osaurus.ai](https://osaurus.ai/)) und öffentlichen Produktinformationen, nicht auf unabhängigen praktischen Benchmarks. Konkrete Geschwindigkeits- oder Genauigkeitswerte sind nicht enthalten, da sie für diesen Artikel nicht unabhängig gemessen wurden.' },
         ],
       },
       pricing: {
@@ -526,8 +526,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       limitations: {
         id: 'limitations',
-        title: 'Was deckt dieser Test nicht ab?',
-        content: 'Dieser Test fasst die öffentlich dokumentierten Funktionen von Osaurus und die eigenen Angaben des Herstellers zusammen. Es handelt sich nicht um einen praktischen Benchmark-Bericht, und diese Lücke offen zu benennen ist wichtiger, als umfassend zu klingen.',
+        title: 'Was deckt diese Rezension nicht ab?',
+        content: 'Diese Rezension fasst die öffentlich dokumentierten Funktionen von Osaurus und die eigenen Angaben des Herstellers zusammen. Es handelt sich nicht um einen praktischen Benchmark-Bericht, und diese Lücke offen zu benennen ist wichtiger, als umfassend zu klingen.',
         items: [
           'Keine unabhängig gemessenen Tokens-pro-Sekunde- oder Latenzwerte — sie fehlen, weil sie für diesen Artikel nicht gemessen wurden',
           'Kein unabhängiges Sicherheitsaudit der Angabe "nichts verlässt Ihren Mac" — sie wird hier als Herstellerposition wiedergegeben, nicht als geprüftes Ergebnis',
@@ -585,10 +585,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Atomic Chat im Test](/de/power-local-llm/atomic-chat-review) — eine kostenlose, plattformübergreifende lokale KI-Chat-App mit eigener Inferenz-Engine.',
+          '[Atomic-Chat-Rezension](/de/power-local-llm/atomic-chat-review) — eine kostenlose, plattformübergreifende lokale KI-Chat-App mit eigener Inferenz-Engine.',
           '[LM Studio vs. Jan vs. GPT4All](/de/power-local-llm/lm-studio-vs-jan-vs-gpt4all-2026) — wie eigenständige lokale Chat-Apps im Vergleich zu einer Backend-abhängigen App wie Osaurus abschneiden.',
           '[Die einfachste lokale KI-App für Windows, Mac und Linux](/de/power-local-llm/easiest-local-ai-app-windows-mac-linux) — ein breiterer Blick auf lokale Chat-Apps ohne Einrichtungsaufwand über mehrere Plattformen.',
-          '[Loci AI im Test](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine weitere Offline-First-KI-App im Vergleich zu Plattform- und Datenschutzbedingungen.',
+          '[Loci-AI-Rezension](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine weitere Offline-First-KI-App im Vergleich zu Plattform- und Datenschutzbedingungen.',
           '[Verzeichnis lokaler KI-Software](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört.',
         ],
       },

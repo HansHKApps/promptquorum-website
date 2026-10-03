@@ -454,14 +454,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/private-llm-review-hero-de.webp',
-    title: 'Private LLM im Test: KI-Chat auf dem Gerät für iPhone, iPad und Mac',
-    seoTitle: 'Private LLM Test: On-Device-KI für iPhone & Mac',
+    title: 'Private-LLM-Rezension: KI-Chat auf dem Gerät für iPhone, iPad und Mac',
+    seoTitle: 'Private-LLM-Rezension: On-Device-KI für iPhone & Mac',
     intro:
       'Private LLM, entwickelt von [Numen Technologies Limited](https://privatellm.app/en), ist eine kostenpflichtige App mit einmaligem Kaufpreis für iPhone, iPad und Mac, die Open-Source-Sprachmodelle vollständig auf dem Gerät ausführt — ohne Konto, ohne Cloud-Fallback und ohne Abonnement. Sie kostet [4,99 $ im Apple App Store](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) — ein einmaliger Kauf, der alle drei Apple-Plattformen abdeckt und über Familienfreigabe bis zu sechs Personen einschließt. App-Store-Preise können je nach Region variieren; prüfen Sie vor dem Kauf den aktuellen Preis im deutschen App Store. Die App unterstützt mehr als 140 Open-Source-Modelle aus Familien wie Llama, Qwen, Gemma, Mistral und Phi-4 und nutzt ein Quantisierungsverfahren namens OmniQuant (kombiniert mit GPTQ), das laut Entwickler mehr Modellqualität erhält als die einfachere Round-to-Nearest-Quantisierung, die manche konkurrierende Apps verwenden. Die praktische Frage für Leser, die lokale KI-Apps vergleichen, ist nicht, ob On-Device-Chat auf einem iPhone funktioniert — mehrere auf dieser Seite behandelte Apps beweisen das bereits —, sondern ob ein einmaliger Kauf für 4,99 $ mit 140+ kuratierten Modellen sich gegenüber kostenlosen Alternativen wie [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) oder [Enclave AI](/de/power-local-llm/enclave-ai-review) lohnt.',
     metaDescription:
-      'Private LLM Test 2026: 4,99 $ Einmalkauf, nur iPhone/iPad/Mac, 140+ Modelle, OmniQuant-Quantisierung, kein Abo. Preise, Datenschutz und Vergleich mit PocketPal AI.',
+      'Private-LLM-Rezension 2026: 4,99 $ Einmalkauf, nur iPhone/iPad/Mac, 140+ Modelle, OmniQuant-Quantisierung, kein Abo. Preise, Datenschutz und Vergleich mit PocketPal AI.',
     twitterDescription:
-      'Private LLM Test 2026: eine App mit 4,99 $ Einmalkauf für KI-Chat auf dem Gerät für iPhone, iPad und Mac. OmniQuant-Quantisierung, 140+ Modelle und Vergleich mit PocketPal AI und Enclave AI.',
+      'Private-LLM-Rezension 2026: eine App mit 4,99 $ Einmalkauf für KI-Chat auf dem Gerät für iPhone, iPad und Mac. OmniQuant-Quantisierung, 140+ Modelle und Vergleich mit PocketPal AI und Enclave AI.',
     audience:
       'iPhone-, iPad- und Mac-Nutzer, die entscheiden möchten, ob eine App mit einmaligem Kaufpreis für lokale KI sich gegenüber kostenlosen Alternativen wie PocketPal AI, Enclave AI oder Locally AI lohnt — behandelt Preise, unterstützte Modelle, Quantisierungsansatz und Datenschutz.',
     readTime: '9 Min. Lesezeit',
@@ -544,7 +544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Preis: [4,99 $ Einmalkauf](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) im Apple App Store; kein Abonnement und keine In-App-Käufe zum Zeitpunkt dieses Tests gelistet.',
+          'Preis: [4,99 $ Einmalkauf](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) im Apple App Store; kein Abonnement und keine In-App-Käufe zum Zeitpunkt dieser Rezension gelistet.',
           'Plattformen: nur iPhone, iPad und Mac — keine Android-, Windows- oder Linux-App im App Store.',
           'Entwickler: [Numen Technologies Limited](https://privatellm.app/en), laut eigener Website ein kleines, eigenfinanziertes Team mit Sitz in der EU.',
           'Modellbibliothek: mehr als 140 Open-Source-Modelle, darunter Llama, Qwen, Gemma, Mistral, Phi-4 und auf DeepSeek-R1 Distill basierende Modelle.',
@@ -560,7 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Private LLM ist eine native Apple-App, die Open-Source-Sprachmodelle herunterlädt und direkt auf einem iPhone, iPad oder Mac ausführt, ohne serverseitige Komponente.** Sobald ein Modell heruntergeladen ist, benötigt die App keine Internetverbindung, um eine Antwort zu generieren — alles läuft lokal über CPU, GPU und Neural Engine des Geräts.',
           'Sie wird von [Numen Technologies Limited](https://privatellm.app/en) entwickelt und gepflegt, das sich auf der eigenen Website als "von zwei Ingenieuren gebaut, nicht von VCs" beschreibt — ein kleines, eigenfinanziertes Team statt eines Venture-Capital-finanzierten Unternehmens. Die App erschien erstmals im Juni 2023 im App Store als [Private LLM - Local AI Chat](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) (App-Store-ID 6448106860) und wurde seither kontinuierlich aktualisiert — die aktuelle Version 1.9.15 erschien im Juli 2026.',
-          'Anders als Apps, die Chat-Anfragen an eine entfernte API senden, beruht das gesamte Wertversprechen von Private LLM auf lokaler Inferenz: Der Entwickler wirbt mit den Aussagen "keine Cloud, kein Tracking, keine Logins" und dass Unterhaltungen "das Gerät nie verlassen". Dieser Test prüft diese Behauptung anhand dessen, was das App-Store-Datenschutzlabel und die FAQ des Entwicklers tatsächlich dokumentieren, statt den Slogan einfach zu übernehmen.',
+          'Anders als Apps, die Chat-Anfragen an eine entfernte API senden, beruht das gesamte Wertversprechen von Private LLM auf lokaler Inferenz: Der Entwickler wirbt mit den Aussagen "keine Cloud, kein Tracking, keine Logins" und dass Unterhaltungen "das Gerät nie verlassen". Diese Rezension prüft diese Behauptung anhand dessen, was das App-Store-Datenschutzlabel und die FAQ des Entwicklers tatsächlich dokumentieren, statt den Slogan einfach zu übernehmen.',
         ],
       },
       howToGetStarted: {
@@ -598,7 +598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preise: Der Einmalkauf erklärt',
         itemHeadings: true,
         content: [
-          '**Private LLM kostet 4,99 $ als einmaligen Kauf im Apple App Store — es gibt kein Abonnement und keine In-App-Käufe im aktuellen Eintrag.** Dieser Preis wurde für diesen Test direkt anhand des [App-Store-Eintrags](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) geprüft. App-Store-Preise können je nach Region abweichen; prüfen Sie den aktuellen Preis im deutschen App Store vor dem Kauf.',
+          '**Private LLM kostet 4,99 $ als einmaligen Kauf im Apple App Store — es gibt kein Abonnement und keine In-App-Käufe im aktuellen Eintrag.** Dieser Preis wurde für diese Rezension direkt anhand des [App-Store-Eintrags](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) geprüft. App-Store-Preise können je nach Region abweichen; prüfen Sie den aktuellen Preis im deutschen App Store vor dem Kauf.',
         ],
         columns: ['Was Sie zahlen', 'Was enthalten ist', 'Was nicht enthalten ist'],
         rows: [
@@ -608,7 +608,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Was nicht enthalten ist': 'Eine Android-, Windows- oder Linux-Version — der App-Store-Kauf schaltet keine plattformübergreifende Lizenz frei',
           },
         ],
-        note: 'App-Store-Preise können sich ohne Vorankündigung ändern und je nach Region unterscheiden. Prüfen Sie den aktuellen Preis im [App-Store-Eintrag](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) vor dem Kauf. Für diesen Test geprüft am 2026-09-05.',
+        note: 'App-Store-Preise können sich ohne Vorankündigung ändern und je nach Region unterscheiden. Prüfen Sie den aktuellen Preis im [App-Store-Eintrag](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) vor dem Kauf. Für diese Rezension geprüft am 2026-09-05.',
       },
       modelsAndQuantization: {
         id: 'models-and-quantization',
@@ -643,12 +643,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plattform': 'Apple Vision Pro',
             'Was Sie erwartet': 'Der App-Store-Eintrag zeigt Vision-Pro-Kompatibilität für dieselbe App.',
-            'Wichtiger Hinweis': 'Dieser Test hat die Vision-Pro-Erfahrung nicht eigenständig geprüft; behandeln Sie dies als im App Store gelistete Kompatibilität, nicht als praktisch verifiziertes Feature.',
+            'Wichtiger Hinweis': 'Diese Rezension hat die Vision-Pro-Erfahrung nicht eigenständig geprüft; behandeln Sie dies als im App Store gelistete Kompatibilität, nicht als praktisch verifiziertes Feature.',
           },
           {
             'Plattform': 'Android, Windows, Linux',
             'Was Sie erwartet': 'Kein offizieller Eintrag bei Google Play, im Microsoft Store oder in einem Linux-Paket-Repository.',
-            'Wichtiger Hinweis': 'Zeitweise kursierte eine inoffizielle Beta-APK außerhalb des Google Play Store; sie ist nicht Teil der primären Marketing-Website oder des unterstützten Release-Kanals des Entwicklers, daher behandelt dieser Test Android nicht als unterstützte Plattform.',
+            'Wichtiger Hinweis': 'Zeitweise kursierte eine inoffizielle Beta-APK außerhalb des Google Play Store; sie ist nicht Teil der primären Marketing-Website oder des unterstützten Release-Kanals des Entwicklers, daher behandelt diese Rezension Android nicht als unterstützte Plattform.',
           },
         ],
       },
@@ -662,7 +662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Kein Konto erforderlich.** Sie können die App herunterladen, kaufen und nutzen, ohne ein Profil anzulegen oder sich anzumelden.',
           '**Keine Datensammlung laut App-Store-Label.** Apples Datenschutz-Kennzeichnung für diesen Eintrag zeigt keine aus der App gesammelten Daten.',
-          '**iCloud-Synchronisierung des Chat-Verlaufs ist nicht dokumentiert.** Die öffentliche FAQ des Entwicklers beschreibt keine iCloud-Synchronisierung von Unterhaltungen zwischen Geräten — dieser Test behandelt dies als unbestätigt, statt es anzunehmen. Wenn geräteübergreifende Chat-Synchronisierung für Sie wichtig ist, prüfen Sie das aktuelle Verhalten direkt in der App, bevor Sie sich darauf verlassen.',
+          '**iCloud-Synchronisierung des Chat-Verlaufs ist nicht dokumentiert.** Die öffentliche FAQ des Entwicklers beschreibt keine iCloud-Synchronisierung von Unterhaltungen zwischen Geräten — diese Rezension behandelt dies als unbestätigt, statt es anzunehmen. Wenn geräteübergreifende Chat-Synchronisierung für Sie wichtig ist, prüfen Sie das aktuelle Verhalten direkt in der App, bevor Sie sich darauf verlassen.',
           '**Sandbox-Ausführung.** Die App läuft innerhalb der Standard-App-Sandbox von Apple, derselben Isolation, der jede App-Store-App unterliegt — dies ist eine Plattformgarantie von Apple, kein Private-LLM-spezifisches Feature.',
         ],
       },
@@ -680,7 +680,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Januar 2024.** Multi-Modell-Download eingeführt, wodurch die Bibliothek um TinyLlama, StableLM, Phi-2, Mistral, Llama und Gemma-Familienmodelle erweitert wurde.',
           '**Februar 2024.** macOS-spezifische Schreibdienste hinzugefügt: Grammatikkorrektur, Zusammenfassung und Umformulierung, die andere Mac-Apps aufrufen können.',
           '**März 2024.** Modellwechsel möglich, ohne die aktive Chat-Oberfläche zu verlassen.',
-          '**Juli 2026.** Version 1.9.15 verlagerte Modell-Downloads auf ein CDN statt Hugging Face, was laut Release Notes für schnellere Downloads sorgt; dies ist die aktuelle Version zum Zeitpunkt dieses Tests.',
+          '**Juli 2026.** Version 1.9.15 verlagerte Modell-Downloads auf ein CDN statt Hugging Face, was laut Release Notes für schnellere Downloads sorgt; dies ist die aktuelle Version zum Zeitpunkt dieser Rezension.',
         ],
         note: 'Versionsverlauf laut den eigenen [Release Notes](https://privatellm.app/en/release-notes) des Entwicklers. Daten und Versionsnummern entsprechen den dort veröffentlichten Angaben; prüfen Sie die aktuelle Version direkt im App Store, bevor Sie sich auf ein bestimmtes Feature verlassen.',
       },
@@ -746,7 +746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'App': '[Enclave AI](/de/power-local-llm/enclave-ai-review)',
             'Plattformen': 'Variiert je nach Release — aktuellen Eintrag prüfen',
             'Preis': 'Siehe aktueller Eintrag',
-            'Modellflexibilität': 'Siehe vollständiger Test für aktuelle Modellunterstützung',
+            'Modellflexibilität': 'Siehe die vollständige Rezension für aktuelle Modellunterstützung',
             'Wesentlicher Unterschied': 'Siehe vollständiger Enclave-AI-Test für einen detaillierten Vergleich',
           },
           {
@@ -758,9 +758,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'App': '[Arbiter](/de/power-local-llm/arbiter-local-ai-chat-review)',
-            'Plattformen': 'Siehe vollständiger Test für aktuelle Plattformunterstützung',
+            'Plattformen': 'Siehe die vollständige Rezension für aktuelle Plattformunterstützung',
             'Preis': 'Siehe aktueller Eintrag',
-            'Modellflexibilität': 'Siehe vollständiger Test für aktuelle Modellunterstützung',
+            'Modellflexibilität': 'Siehe die vollständige Rezension für aktuelle Modellunterstützung',
             'Wesentlicher Unterschied': 'Siehe vollständiger Arbiter-Test für einen detaillierten Vergleich',
           },
           {
@@ -829,11 +829,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Wie viel kostet Private LLM?',
-            a: 'Private LLM kostet [4,99 $ als Einmalkauf](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) im Apple App Store, für diesen Test geprüft am 2026-09-05. Es gibt kein Abonnement und keine In-App-Käufe im aktuellen App-Store-Eintrag. App-Store-Preise können je nach Region variieren und sich über die Zeit ändern — prüfen Sie den aktuellen Preis vor dem Kauf.',
+            a: 'Private LLM kostet [4,99 $ als Einmalkauf](https://apps.apple.com/us/app/private-llm-local-ai-chat/id6448106860) im Apple App Store, für diese Rezension geprüft am 2026-09-05. Es gibt kein Abonnement und keine In-App-Käufe im aktuellen App-Store-Eintrag. App-Store-Preise können je nach Region variieren und sich über die Zeit ändern — prüfen Sie den aktuellen Preis vor dem Kauf.',
           },
           {
             q: 'Ist Private LLM für Android oder Windows verfügbar?',
-            a: 'Es gibt keine offizielle Version bei Google Play, im Microsoft Store oder in einem Linux-Paket-Repository. Private LLM ist speziell für iPhone, iPad und Mac gebaut. Zeitweise kursierte eine inoffizielle Beta-APK außerhalb des Play Store, sie ist jedoch nicht Teil des primären, unterstützten Release-Kanals des Entwicklers, daher behandelt dieser Test Android als nicht unterstützt.',
+            a: 'Es gibt keine offizielle Version bei Google Play, im Microsoft Store oder in einem Linux-Paket-Repository. Private LLM ist speziell für iPhone, iPad und Mac gebaut. Zeitweise kursierte eine inoffizielle Beta-APK außerhalb des Play Store, sie ist jedoch nicht Teil des primären, unterstützten Release-Kanals des Entwicklers, daher behandelt diese Rezension Android als nicht unterstützt.',
           },
           {
             q: 'Wer entwickelt Private LLM?',
@@ -849,11 +849,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Sammelt Private LLM persönliche Daten?',
-            a: 'Apples Datenschutz-Kennzeichnung für diesen Eintrag im App Store gibt an, dass der Entwickler keine Daten aus der App sammelt. Zur Nutzung ist kein Konto oder Login erforderlich. Dieser Test stützt sich auf das App-Store-Datenschutzlabel und nicht auf ein unabhängiges Audit des Closed-Source-Codes der App.',
+            a: 'Apples Datenschutz-Kennzeichnung für diesen Eintrag im App Store gibt an, dass der Entwickler keine Daten aus der App sammelt. Zur Nutzung ist kein Konto oder Login erforderlich. Diese Rezension stützt sich auf das App-Store-Datenschutzlabel und nicht auf ein unabhängiges Audit des Closed-Source-Codes der App.',
           },
           {
             q: 'Synchronisiert Private LLM den Chat-Verlauf über iCloud zwischen Geräten?',
-            a: 'Dies ist in der öffentlichen FAQ des Entwicklers nicht dokumentiert. Dieser Test behandelt eine iCloud-Synchronisierung von Unterhaltungen als unbestätigt, statt sie anzunehmen — prüfen Sie das aktuelle Verhalten direkt in der App, bevor Sie sich auf geräteübergreifende Chat-Kontinuität verlassen.',
+            a: 'Dies ist in der öffentlichen FAQ des Entwicklers nicht dokumentiert. Diese Rezension behandelt eine iCloud-Synchronisierung von Unterhaltungen als unbestätigt, statt sie anzunehmen — prüfen Sie das aktuelle Verhalten direkt in der App, bevor Sie sich auf geräteübergreifende Chat-Kontinuität verlassen.',
           },
           {
             q: 'Welche Modelle kann ich auf einem iPhone mit Private LLM ausführen?',
@@ -889,12 +889,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[PocketPal AI Test](/de/power-local-llm/pocketpal-ai-review) — die kostenlose, quelloffene Alternative mit manuellem GGUF-Import.',
+          '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — die kostenlose, quelloffene Alternative mit manuellem GGUF-Import.',
           '[Die besten lokalen KI-Apps für iPhone 2026](/de/power-local-llm/best-local-llm-apps-iphone-2026) — der vollständige iPhone-App-Überblick, inklusive Private LLM, PocketPal AI und Locally AI.',
-          '[Enclave AI Test](/de/power-local-llm/enclave-ai-review) — eine weitere On-Device-KI-App zum Vergleich.',
-          '[Locally AI Test](/de/power-local-llm/locally-ai-review) — eine kostenlose, auf Apple MLX basierende Alternative.',
-          '[Chatty-mini Test](/de/power-local-llm/chatty-mini-review) — eine kleinere, weniger dokumentierte, ausschließlich für Android verfügbare Alternative zum Vergleich.',
-          '[Arbiter Local AI Chat Test](/de/power-local-llm/arbiter-local-ai-chat-review) — eine weitere auf dieser Seite behandelte lokale Chat-App.',
+          '[Enclave-AI-Rezension](/de/power-local-llm/enclave-ai-review) — eine weitere On-Device-KI-App zum Vergleich.',
+          '[Locally-AI-Rezension](/de/power-local-llm/locally-ai-review) — eine kostenlose, auf Apple MLX basierende Alternative.',
+          '[Chatty-mini-Rezension](/de/power-local-llm/chatty-mini-review) — eine kleinere, weniger dokumentierte, ausschließlich für Android verfügbare Alternative zum Vergleich.',
+          '[Arbiter-Local-AI-Chat-Rezension](/de/power-local-llm/arbiter-local-ai-chat-review) — eine weitere auf dieser Seite behandelte lokale Chat-App.',
           '[Das vollständige Verzeichnis lokaler LLM-Software](/de/directory) — ein breiteres Verzeichnis lokaler LLM-Tools über alle Plattformen hinweg.',
         ],
       },

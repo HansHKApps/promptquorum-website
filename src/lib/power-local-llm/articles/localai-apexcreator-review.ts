@@ -343,14 +343,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/localai-apexcreator-review-hero-de.webp',
-    title: 'LocalAI im Test: ApexCreators Offline-KI-Chat-App für Android',
-    seoTitle: 'LocalAI (ApexCreator) im Test: Offline-KI-Chat für Android',
+    title: 'LocalAI-Rezension: ApexCreators Offline-KI-Chat-App für Android',
+    seoTitle: 'LocalAI-Rezension (ApexCreator): Offline-KI-Chat für Android',
     intro:
-      '[LocalAI: Offline AI Chat LLM](https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp), vom Entwickler [ApexCreator](mailto:info@apexcreators.co.in), ist eine kostenlose Android-App, die GGUF-Sprachmodelle über llama.cpp auf dem Gerät ausführt, mit einer optionalen kostenpflichtigen Premium-Stufe. Laut eigenem Google-Play-Eintrag fügt sie Dokumenten-Chat über PDF-, Word-, Excel- und CSV-Dateien mittels On-Device-Vektorabruf, Unterstützung für vision-fähige Modelle, strukturierte JSON-/Grammatik-eingeschränkte Ausgabe und Echtzeit-Leistungstelemetrie hinzu. Anders als [ToolNeuron](/de/power-local-llm/toolneuron-review) ist diese App quellcodegeschlossen — für diesen Test wurde kein öffentliches Code-Repository gefunden. Jede Aussage unten stammt aus dem öffentlichen Play-Store-Eintrag, nicht aus einem unabhängigen Test oder einem Entwickler-Interview.',
+      '[LocalAI: Offline AI Chat LLM](https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp), vom Entwickler [ApexCreator](mailto:info@apexcreators.co.in), ist eine kostenlose Android-App, die GGUF-Sprachmodelle über llama.cpp auf dem Gerät ausführt, mit einer optionalen kostenpflichtigen Premium-Stufe. Laut eigenem Google-Play-Eintrag fügt sie Dokumenten-Chat über PDF-, Word-, Excel- und CSV-Dateien mittels On-Device-Vektorabruf, Unterstützung für vision-fähige Modelle, strukturierte JSON-/Grammatik-eingeschränkte Ausgabe und Echtzeit-Leistungstelemetrie hinzu. Anders als [ToolNeuron](/de/power-local-llm/toolneuron-review) ist diese App quellcodegeschlossen — für diese Rezension wurde kein öffentliches Code-Repository gefunden. Jede Aussage unten stammt aus dem öffentlichen Play-Store-Eintrag, nicht aus einem unabhängigen Test oder einem Entwickler-Interview.',
     metaDescription:
-      'LocalAI (ApexCreator) im Test 2026: kostenlose Android-App für offline KI-Chat, PDF-/Dokumenten-RAG und Vision-Modelle über llama.cpp, mit optionaler Premium-Stufe. Quellcodegeschlossen — was der Eintrag behauptet und was dieser Test nicht verifizieren konnte.',
+      'LocalAI-Rezension (ApexCreator) 2026: kostenlose Android-App für offline KI-Chat, PDF-/Dokumenten-RAG und Vision-Modelle über llama.cpp, mit optionaler Premium-Stufe. Quellcodegeschlossen — was der Eintrag behauptet und was diese Rezension nicht verifizieren konnte.',
     twitterDescription:
-      'LocalAI (ApexCreator) im Test: eine kostenlose Android-App, die GGUF-Modelle über llama.cpp auf dem Gerät ausführt, mit Dokumenten-RAG, Unterstützung für Vision-Modelle und strukturierter Ausgabe — laut eigenem Play-Store-Eintrag. Quellcodegeschlossen, kein öffentliches Repository gefunden.',
+      'LocalAI-Rezension (ApexCreator): eine kostenlose Android-App, die GGUF-Modelle über llama.cpp auf dem Gerät ausführt, mit Dokumenten-RAG, Unterstützung für Vision-Modelle und strukturierter Ausgabe — laut eigenem Play-Store-Eintrag. Quellcodegeschlossen, kein öffentliches Repository gefunden.',
     audience:
       'Android-Nutzer, die eine kostenlose, on-device laufende KI-Chat-App mit Dokumenten- und Vision-Funktionen in Betracht ziehen und eine unverblümte Einschätzung darüber wollen, was bestätigt ist und was nur der eigene Store-Eintrag der App behauptet.',
     readTime: '8 Min. Lesezeit',
@@ -370,7 +370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['SmolVLM', 'LLaVA', 'Qwen-VL'],
     current_hardware_mentioned: ['Android'],
     leadAnswerBlock:
-      '**LocalAI: Offline AI Chat LLM ist eine kostenlose Android-App des Entwicklers ApexCreator, die GGUF-Sprachmodelle über llama.cpp auf dem Gerät ausführt, mit einer optionalen kostenpflichtigen Premium-Stufe.** Laut eigenem Google-Play-Eintrag fügt sie Dokumenten-Chat über PDF-, Word-, Excel- und CSV-Dateien mittels On-Device-Vektorabruf (sqlite-vec), Unterstützung für vision-fähige Modelle und strukturierte JSON-/Grammatik-eingeschränkte Ausgabe hinzu. Die App ist quellcodegeschlossen, und für diesen Test wurde kein öffentliches Code-Repository dafür gefunden — jede technische Aussage hier stammt aus dem öffentlichen Play-Store-Eintrag, nicht aus einer unabhängigen Prüfung. Leser, die eine quelloffene Alternative mit einem öffentlichen Repository möchten, sollten stattdessen den [ToolNeuron-Test](/de/power-local-llm/toolneuron-review) lesen.',
+      '**LocalAI: Offline AI Chat LLM ist eine kostenlose Android-App des Entwicklers ApexCreator, die GGUF-Sprachmodelle über llama.cpp auf dem Gerät ausführt, mit einer optionalen kostenpflichtigen Premium-Stufe.** Laut eigenem Google-Play-Eintrag fügt sie Dokumenten-Chat über PDF-, Word-, Excel- und CSV-Dateien mittels On-Device-Vektorabruf (sqlite-vec), Unterstützung für vision-fähige Modelle und strukturierte JSON-/Grammatik-eingeschränkte Ausgabe hinzu. Die App ist quellcodegeschlossen, und für diese Rezension wurde kein öffentliches Code-Repository dafür gefunden — jede technische Aussage hier stammt aus dem öffentlichen Play-Store-Eintrag, nicht aus einer unabhängigen Prüfung. Leser, die eine quelloffene Alternative mit einem öffentlichen Repository möchten, sollten stattdessen den [ToolNeuron-Rezension](/de/power-local-llm/toolneuron-review) lesen.',
     quickAnswerTop: {
       en: {
         question: 'Is LocalAI (ApexCreator) worth installing?',
@@ -388,13 +388,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       de: {
         question: 'Lohnt sich die Installation von LocalAI (ApexCreator)?',
         answer:
-          'Das hängt davon ab, wie stark Sie Quellcode-Transparenz gewichten. Die App ist kostenlos, führt Modelle über llama.cpp auf dem Gerät aus und fügt laut eigenem Eintrag Dokumenten-Chat, Unterstützung für Vision-Modelle und strukturierte Ausgabe hinzu — ein breites Funktionsspektrum für eine kostenlose App. Sie ist jedoch quellcodegeschlossen, und dieser Test konnte kein öffentliches Repository dafür finden, sodass ihre Datenschutz- und Datenverarbeitungsangaben vollständig auf dem Eintrag selbst beruhen und nicht anhand unabhängig prüfbaren Codes verifiziert werden können. Wer dasselbe Funktionsspektrum mit veröffentlichtem Quellcode möchte, sollte zuerst ToolNeuron ausprobieren.',
+          'Das hängt davon ab, wie stark Sie Quellcode-Transparenz gewichten. Die App ist kostenlos, führt Modelle über llama.cpp auf dem Gerät aus und fügt laut eigenem Eintrag Dokumenten-Chat, Unterstützung für Vision-Modelle und strukturierte Ausgabe hinzu — ein breites Funktionsspektrum für eine kostenlose App. Sie ist jedoch quellcodegeschlossen, und diese Rezension konnte kein öffentliches Repository dafür finden, sodass ihre Datenschutz- und Datenverarbeitungsangaben vollständig auf dem Eintrag selbst beruhen und nicht anhand unabhängig prüfbaren Codes verifiziert werden können. Wer dasselbe Funktionsspektrum mit veröffentlichtem Quellcode möchte, sollte zuerst ToolNeuron ausprobieren.',
         bullets: [
-          'Kostenlos zum Herunterladen und Nutzen, mit einer optionalen kostenpflichtigen Premium-Stufe — der genaue Premium-Preis wurde für diesen Test nicht bestätigt; prüfen Sie den aktuellen Eintrag.',
+          'Kostenlos zum Herunterladen und Nutzen, mit einer optionalen kostenpflichtigen Premium-Stufe — der genaue Premium-Preis wurde für diese Rezension nicht bestätigt; prüfen Sie den aktuellen Eintrag.',
           'Führt GGUF-Sprachmodelle laut Google-Play-Eintrag über llama.cpp auf dem Gerät aus.',
           'Fügt laut Eintrag Dokumenten-Chat (RAG) über PDF-, Word-, Excel- und CSV-Dateien mittels On-Device-Vektorabruf sowie Unterstützung für vision-fähige Modelle hinzu.',
-          'Quellcodegeschlossen: Dieser Test fand kein öffentliches GitHub-Repository für die App, anders als bei ToolNeuron.',
-          'Die Google-Play-Bewertung lag zum Zeitpunkt der Recherche für diesen Test (September 2026) bei 3,0 von 5 aus 181 Bewertungen — dies ist eine Momentaufnahme des Eintrags, keine Empfehlung.',
+          'Quellcodegeschlossen: Diese Rezension fand kein öffentliches GitHub-Repository für die App, anders als bei ToolNeuron.',
+          'Die Google-Play-Bewertung lag zum Zeitpunkt der Recherche für diese Rezension (September 2026) bei 3,0 von 5 aus 181 Bewertungen — dies ist eine Momentaufnahme des Eintrags, keine Empfehlung.',
         ],
         updatedDate: '2026-09-12',
       },
@@ -432,18 +432,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         items: [
-          'Preis: kostenlos zum [Herunterladen](https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp) und Nutzen, mit einer optionalen kostenpflichtigen Premium-Stufe; der genaue Premium-Preis wurde für diesen Test nicht bestätigt.',
+          'Preis: kostenlos zum [Herunterladen](https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp) und Nutzen, mit einer optionalen kostenpflichtigen Premium-Stufe; der genaue Premium-Preis wurde für diese Rezension nicht bestätigt.',
           'Entwickler: ApexCreator (Kontakt: [info@apexcreators.co.in](mailto:info@apexcreators.co.in)).',
           'Engine: [llama.cpp](https://github.com/ggml-org/llama.cpp) für GGUF-Modelle, laut Google-Play-Eintrag auf dem Gerät ausgeführt.',
           'Funktionen über Chat hinaus: Dokumenten-RAG über PDF-, Word-, Excel- und CSV-Dateien via On-Device-Vektorabruf; Unterstützung für vision-fähige Modelle; GBNF-Grammatik und JSON-Schema-strukturierte Ausgabe; Echtzeit-Leistungstelemetrie, laut Eintrag.',
-          'Open-Source-Status: quellcodegeschlossen — dieser Test fand kein öffentliches Code-Repository für die App.',
-          'Google-Play-Bewertung: 3,0 von 5 aus 181 Bewertungen zum Zeitpunkt der Recherche für diesen Test (September 2026).',
+          'Open-Source-Status: quellcodegeschlossen — diese Rezension fand kein öffentliches Code-Repository für die App.',
+          'Google-Play-Bewertung: 3,0 von 5 aus 181 Bewertungen zum Zeitpunkt der Recherche für diese Rezension (September 2026).',
           'Vertrieb: nur über [Google Play](https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp) verfügbar.',
         ],
         callouts: [
           {
             type: 'note',
-            text: 'Dieser Test basiert auf dem öffentlichen Google-Play-Eintrag der App und allgemeinen Websuchergebnissen dazu, geprüft im September 2026. PromptQuorum hat keinen unabhängigen praktischen Test, keine Prüfung der Datenschutzerklärung und keine Code-Prüfung dieser App durchgeführt — da die App quellcodegeschlossen ist, war keine Code-Prüfung möglich.',
+            text: 'Diese Rezension basiert auf dem öffentlichen Google-Play-Eintrag der App und allgemeinen Websuchergebnissen dazu, geprüft im September 2026. PromptQuorum hat keinen unabhängigen praktischen Test, keine Prüfung der Datenschutzerklärung und keine Code-Prüfung dieser App durchgeführt — da die App quellcodegeschlossen ist, war keine Code-Prüfung möglich.',
           },
         ],
       },
@@ -452,7 +452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'LocalAI holen',
         content: [
           '**LocalAI: Offline AI Chat LLM ist nur über Google Play erhältlich.**',
-          'Dieser Test ist eine Ergänzung zu PromptQuorums [Verzeichnis lokaler LLM-Software](/de/directory), das lokale KI-Tools über Plattformen hinweg auflistet, einschließlich des eigenen Eintrags dieser App.',
+          'Diese Rezension ist eine Ergänzung zu PromptQuorums [Verzeichnis lokaler LLM-Software](/de/directory), das lokale KI-Tools über Plattformen hinweg auflistet, einschließlich des eigenen Eintrags dieser App.',
         ],
         columns: ['Kanal', 'Holen'],
         rows: [
@@ -461,14 +461,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Holen': '[LocalAI: Offline AI Chat LLM bei Google Play](https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp)',
           },
         ],
-        note: 'Die App selbst ist kostenlos herunterladbar; laut Eintrag ist eine In-App-Premium-Stufe verfügbar, aber dieser Test konnte deren genauen Preis nicht bestätigen — prüfen Sie vor einem Kauf den aktuellen Eintrag.',
+        note: 'Die App selbst ist kostenlos herunterladbar; laut Eintrag ist eine In-App-Premium-Stufe verfügbar, aber diese Rezension konnte deren genauen Preis nicht bestätigen — prüfen Sie vor einem Kauf den aktuellen Eintrag.',
       },
       whatIsLocalAI: {
         id: 'what-is-localai',
         title: 'Was LocalAI ist',
         content: [
           '**LocalAI: Offline AI Chat LLM ist laut eigenem Google-Play-Eintrag eine Android-App, die Sprachmodelle im GGUF-Format über llama.cpp auf dem Gerät ausführt.** Über den reinen Chat hinaus beschreibt der Eintrag Dokumentenabruf (RAG) über gängige Office-Dateiformate und Unterstützung für vision-fähige Modelle, was die App eher als breiteres On-Device-KI-Werkzeug denn als Einzelzweck-Chatbot positioniert.',
-          'Die App wird von einem Entwickler oder einem kleinen Studio unter dem Namen ApexCreator gemacht, erreichbar unter [info@apexcreators.co.in](mailto:info@apexcreators.co.in). Dieser Test stützt sich auf den öffentlichen Play-Store-Eintrag der App und allgemeine Websuchergebnisse dazu — kein öffentliches Quellcode-Repository, keine eigene Entwickler-Website und kein Datenschutzerklärungsdokument konnten für eine unabhängige Prüfung gefunden werden, was einen bedeutenden Unterschied zu quelloffenen Alternativen wie [ToolNeuron](/de/power-local-llm/toolneuron-review) darstellt.',
+          'Die App wird von einem Entwickler oder einem kleinen Studio unter dem Namen ApexCreator gemacht, erreichbar unter [info@apexcreators.co.in](mailto:info@apexcreators.co.in). Diese Rezension stützt sich auf den öffentlichen Play-Store-Eintrag der App und allgemeine Websuchergebnisse dazu — kein öffentliches Quellcode-Repository, keine eigene Entwickler-Website und kein Datenschutzerklärungsdokument konnten für eine unabhängige Prüfung gefunden werden, was einen bedeutenden Unterschied zu quelloffenen Alternativen wie [ToolNeuron](/de/power-local-llm/toolneuron-review) darstellt.',
         ],
       },
       howToGetStarted: {
@@ -496,10 +496,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Optional: auf die Premium-Stufe upgraden',
-            whyItMatters: 'Eine kostenpflichtige Premium-Stufe ist in der App verfügbar; dieser Test konnte deren genauen Preis oder Umfang über die kostenlosen Basisfunktionen hinaus nicht bestätigen — prüfen Sie den aktuellen Eintrag.',
+            whyItMatters: 'Eine kostenpflichtige Premium-Stufe ist in der App verfügbar; diese Rezension konnte deren genauen Preis oder Umfang über die kostenlosen Basisfunktionen hinaus nicht bestätigen — prüfen Sie den aktuellen Eintrag.',
           },
         ],
-        note: 'Die genaue Modellkompatibilität, Downloadgrößen und Inhalte der Premium-Stufe wurden für diesen Test nicht unabhängig bestätigt — prüfen Sie den eigenen Eintrag der App, bevor Sie einen großen Download oder einen Kauf tätigen.',
+        note: 'Die genaue Modellkompatibilität, Downloadgrößen und Inhalte der Premium-Stufe wurden für diese Rezension nicht unabhängig bestätigt — prüfen Sie den eigenen Eintrag der App, bevor Sie einen großen Download oder einen Kauf tätigen.',
       },
       features: {
         id: 'features',
@@ -507,14 +507,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Laut eigenem Google-Play-Eintrag führt LocalAI GGUF-Modelle über [llama.cpp](https://github.com/ggml-org/llama.cpp) aus und fügt mehrere Funktionen über den reinen Chat hinaus hinzu.** Der Dokumenten-Chat (RAG) deckt PDF-, Word-, Excel- und CSV-Dateien ab, die lokal geparst und in Abschnitte zerlegt werden, mit On-Device-Vektorabruf; der Eintrag beschreibt dies als vollständig offline laufend, ohne dass Dokumenteninhalte an einen Server gesendet werden.',
           'Der Eintrag beschreibt außerdem Unterstützung für vision-fähige Modelle — als Beispiele werden SmolVLM, LLaVA und Qwen-VL genannt — zum Analysieren von Fotos oder Bildern auf dem Gerät, zusammen mit GBNF-Grammatik und JSON-Schema-Unterstützung zur Einschränkung der Modellausgabe auf ein strukturiertes Format sowie Echtzeit-Leistungstelemetrie (Tokens pro Sekunde und ähnliche Metriken), die während des Chattens angezeigt wird.',
-          'Dieser Test hat diese Funktionen nicht durch eigene praktische Tests unabhängig verifiziert; sie werden hier als die vom Hersteller selbst angegebenen Fähigkeiten dargestellt, nicht als bestätigte Benchmarks.',
+          'Diese Rezension hat diese Funktionen nicht durch eigene praktische Tests unabhängig verifiziert; sie werden hier als die vom Hersteller selbst angegebenen Fähigkeiten dargestellt, nicht als bestätigte Benchmarks.',
         ],
       },
       pricing: {
         id: 'pricing',
         title: 'Preise',
         content: [
-          '**LocalAI ist laut eigenem Google-Play-Eintrag kostenlos herunterladbar und nutzbar, mit einer optionalen kostenpflichtigen Premium-Stufe.** Dieser Test konnte den genauen Preis der Premium-Stufe oder das, was sie über die kostenlosen Basisfunktionen hinaus freischaltet, nicht bestätigen — In-App-Preise im Play Store können außerdem je nach Region variieren.',
+          '**LocalAI ist laut eigenem Google-Play-Eintrag kostenlos herunterladbar und nutzbar, mit einer optionalen kostenpflichtigen Premium-Stufe.** Diese Rezension konnte den genauen Preis der Premium-Stufe oder das, was sie über die kostenlosen Basisfunktionen hinaus freischaltet, nicht bestätigen — In-App-Preise im Play Store können außerdem je nach Region variieren.',
         ],
         note: 'Bestätigen Sie den aktuellen Premium-Preis und dessen genauen Inhalt im [Google-Play-Eintrag](https://play.google.com/store/apps/details?id=com.ApexCreator.localaiapp), bevor Sie kaufen.',
       },
@@ -522,12 +522,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Datenschutz und Open-Source-Status',
         content: [
-          '**LocalAI ist quellcodegeschlossen: Dieser Test fand kein öffentliches Code-Repository für die App.** Der Eintrag beschreibt Chat-, Dokumenten-RAG- und Vision-Funktionen als auf dem Gerät laufend, aber da der Code nicht veröffentlicht ist, lassen sich diese Aussagen nicht wie bei einer quelloffenen App unabhängig gegen das tatsächliche Verhalten der App prüfen.',
+          '**LocalAI ist quellcodegeschlossen: Diese Rezension fand kein öffentliches Code-Repository für die App.** Der Eintrag beschreibt Chat-, Dokumenten-RAG- und Vision-Funktionen als auf dem Gerät laufend, aber da der Code nicht veröffentlicht ist, lassen sich diese Aussagen nicht wie bei einer quelloffenen App unabhängig gegen das tatsächliche Verhalten der App prüfen.',
           'Das ist ein bedeutender Unterschied zu einer App wie [ToolNeuron](/de/power-local-llm/toolneuron-review), deren gesamte Codebasis und Sicherheitsarchitektur veröffentlicht und prüfbar sind. Leser, denen unabhängige Überprüfbarkeit wichtig ist, sollten dies vor der Installation berücksichtigen.',
         ],
         items: [
           '**Quellcodegeschlossen.** Für diese App wurde kein öffentliches GitHub-Repository oder Äquivalent gefunden; Funktions- und Datenschutzangaben beruhen allein auf dem Play-Store-Eintrag.',
-          '**Keine Datenschutzerklärung gefunden.** Dieser Test konnte über den Datensicherheitsbereich des Play Store hinaus kein eigenes, detailliertes Datenschutzerklärungsdokument für die App finden.',
+          '**Keine Datenschutzerklärung gefunden.** Diese Rezension konnte über den Datensicherheitsbereich des Play Store hinaus kein eigenes, detailliertes Datenschutzerklärungsdokument für die App finden.',
           '**On-Device-Verarbeitung behauptet.** Der Eintrag gibt an, dass Chat und Dokumenten-RAG auf dem Gerät laufen, aber dies ist eine Herstellerangabe, keine unabhängig geprüfte Tatsache.',
         ],
       },
@@ -540,7 +540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Vorteil': 'Kostenlose Basis-App mit breitem Funktionsspektrum',
             'Was das in der Praxis bedeutet': 'Chat, Dokumenten-RAG und Unterstützung für Vision-Modelle kosten nichts zum Ausprobieren.',
-            'Einschränkung / Hinweis': 'Dieser Test hat nicht unabhängig verifiziert, wie gut jede Funktion tatsächlich funktioniert.',
+            'Einschränkung / Hinweis': 'Diese Rezension hat nicht unabhängig verifiziert, wie gut jede Funktion tatsächlich funktioniert.',
           },
           {
             'Vorteil': 'Dokumenten- und Vision-Funktionen über den reinen Chat hinaus',
@@ -555,7 +555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Vorteil': 'Optionale Premium-Stufe, keine harte Paywall',
             'Was das in der Praxis bedeutet': 'Kernfunktionen sind kostenlos nutzbar, bevor man sich für eine Zahlung entscheidet.',
-            'Einschränkung / Hinweis': 'Der genaue Premium-Preis und -Inhalt wurden für diesen Test nicht bestätigt.',
+            'Einschränkung / Hinweis': 'Der genaue Premium-Preis und -Inhalt wurden für diese Rezension nicht bestätigt.',
           },
         ],
         note: 'Quellcodegeschlossen, kein öffentliches Repository gefunden: Anders als bei ToolNeuron lässt sich keine der obigen Aussagen anhand veröffentlichten Codes prüfen.',
@@ -611,9 +611,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wer LocalAI nicht nutzen sollte',
         items: [
           '**iPhone-, Desktop- oder Web-Nutzer.** Die App ist reine Android-App, ausschließlich über Google Play vertrieben.',
-          '**Leser, die den Quellcode der App selbst prüfen möchten.** Dieser Test fand kein öffentliches Repository; eine quelloffene Alternative wie [ToolNeuron](/de/power-local-llm/toolneuron-review) erlaubt eine unabhängige Code-Prüfung.',
-          '**Leser, die vor der Installation eine detaillierte, unabhängig prüfbare Datenschutzerklärung benötigen.** Dieser Test konnte über den eigenen Datensicherheitsbereich des Play Store hinaus keine solche finden.',
-          '**Leser, die App-Store-Bewertungen stark gewichten.** Mit 3,0 von 5 aus 181 Bewertungen zum Zeitpunkt der Recherche für diesen Test liegt sie niedriger als mehrere hier verglichene Alternativen.',
+          '**Leser, die den Quellcode der App selbst prüfen möchten.** Diese Rezension fand kein öffentliches Repository; eine quelloffene Alternative wie [ToolNeuron](/de/power-local-llm/toolneuron-review) erlaubt eine unabhängige Code-Prüfung.',
+          '**Leser, die vor der Installation eine detaillierte, unabhängig prüfbare Datenschutzerklärung benötigen.** Diese Rezension konnte über den eigenen Datensicherheitsbereich des Play Store hinaus keine solche finden.',
+          '**Leser, die App-Store-Bewertungen stark gewichten.** Mit 3,0 von 5 aus 181 Bewertungen zum Zeitpunkt der Recherche für diese Rezension liegt sie niedriger als mehrere hier verglichene Alternativen.',
         ],
       },
       faq: {
@@ -622,19 +622,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Ist LocalAI (ApexCreator) kostenlos?',
-            a: 'Die Basis-App ist kostenlos herunterladbar und nutzbar. Laut Eintrag gibt es eine optionale kostenpflichtige Premium-Stufe, aber dieser Test konnte deren genauen Preis nicht bestätigen — prüfen Sie den aktuellen Google-Play-Eintrag.',
+            a: 'Die Basis-App ist kostenlos herunterladbar und nutzbar. Laut Eintrag gibt es eine optionale kostenpflichtige Premium-Stufe, aber diese Rezension konnte deren genauen Preis nicht bestätigen — prüfen Sie den aktuellen Google-Play-Eintrag.',
           },
           {
             q: 'Wer macht LocalAI: Offline AI Chat LLM?',
-            a: 'Ein Entwickler oder kleines Studio unter dem Namen ApexCreator, erreichbar unter [info@apexcreators.co.in](mailto:info@apexcreators.co.in). Dieser Test fand über diesen Kontakt hinaus keine öffentliche Entwickler-Website oder GitHub-Organisation.',
+            a: 'Ein Entwickler oder kleines Studio unter dem Namen ApexCreator, erreichbar unter [info@apexcreators.co.in](mailto:info@apexcreators.co.in). Diese Rezension fand über diesen Kontakt hinaus keine öffentliche Entwickler-Website oder GitHub-Organisation.',
           },
           {
             q: 'Was kann LocalAI über den Chat hinaus?',
-            a: 'Laut eigenem Google-Play-Eintrag: Dokumenten-Chat (RAG) über PDF-, Word-, Excel- und CSV-Dateien; Unterstützung für vision-fähige Modelle; GBNF-Grammatik und JSON-Schema-strukturierte Ausgabe; und Echtzeit-Leistungstelemetrie. Dies sind die vom Hersteller selbst angegebenen Funktionen, nicht von diesem Test unabhängig benchmarkt.',
+            a: 'Laut eigenem Google-Play-Eintrag: Dokumenten-Chat (RAG) über PDF-, Word-, Excel- und CSV-Dateien; Unterstützung für vision-fähige Modelle; GBNF-Grammatik und JSON-Schema-strukturierte Ausgabe; und Echtzeit-Leistungstelemetrie. Dies sind die vom Hersteller selbst angegebenen Funktionen, nicht von dieser Rezension unabhängig benchmarkt.',
           },
           {
             q: 'Ist LocalAI quelloffen?',
-            a: 'Nein. Dieser Test hat nach einem öffentlichen Code-Repository gesucht und keines gefunden — die App scheint quellcodegeschlossen zu sein.',
+            a: 'Nein. Diese Rezension hat nach einem öffentlichen Code-Repository gesucht und keines gefunden — die App scheint quellcodegeschlossen zu sein.',
           },
           {
             q: 'Funktioniert LocalAI offline?',
@@ -642,7 +642,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie schneidet LocalAI im Vergleich zu ToolNeuron ab?',
-            a: '[ToolNeuron](/de/power-local-llm/toolneuron-review) ist kostenlos und quelloffen, mit einem öffentlichen GitHub-Repository, das seine Sicherheitsarchitektur dokumentiert. LocalAI (ApexCreator) bietet laut Eintrag ein ähnlich breites Funktionsspektrum — einschließlich Dokumenten-RAG und Unterstützung für Vision-Modelle — ist aber quellcodegeschlossen, und dieser Test fand kein öffentliches Repository dafür. Wählen Sie danach, ob Ihnen unabhängig prüfbarer Quellcode wichtig ist.',
+            a: '[ToolNeuron](/de/power-local-llm/toolneuron-review) ist kostenlos und quelloffen, mit einem öffentlichen GitHub-Repository, das seine Sicherheitsarchitektur dokumentiert. LocalAI (ApexCreator) bietet laut Eintrag ein ähnlich breites Funktionsspektrum — einschließlich Dokumenten-RAG und Unterstützung für Vision-Modelle — ist aber quellcodegeschlossen, und diese Rezension fand kein öffentliches Repository dafür. Wählen Sie danach, ob Ihnen unabhängig prüfbarer Quellcode wichtig ist.',
           },
         ],
       },
@@ -651,7 +651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Fazit',
         content: [
           'LocalAI: Offline AI Chat LLM packt laut eigenem Google-Play-Eintrag ein wirklich breites Funktionsspektrum in eine kostenlose Android-App: On-Device-Chat über llama.cpp, Dokumenten-RAG über gängige Office-Dateiformate, Unterstützung für vision-fähige Modelle und strukturierte Ausgabe — Funktionen, die deutlich über einen reinen Chat-Client hinausgehen.',
-          'Was diesen Test vorsichtig bleiben lässt, ist, dass jede dieser Aussagen auf dem eigenen Store-Eintrag des Entwicklers beruht: Dieser Test fand keinen öffentlichen Quellcode, keine eigene Entwickler-Website und keine detaillierte Datenschutzerklärung, um sie dagegen zu prüfen. Das ist eine echte Lücke gegenüber einer quelloffenen Alternative wie ToolNeuron, deren entsprechende Aussagen sich im veröffentlichten Code verifizieren lassen.',
+          'Was diese Rezension vorsichtig bleiben lässt, ist, dass jede dieser Aussagen auf dem eigenen Store-Eintrag des Entwicklers beruht: Diese Rezension fand keinen öffentlichen Quellcode, keine eigene Entwickler-Website und keine detaillierte Datenschutzerklärung, um sie dagegen zu prüfen. Das ist eine echte Lücke gegenüber einer quelloffenen Alternative wie ToolNeuron, deren entsprechende Aussagen sich im veröffentlichten Code verifizieren lassen.',
           'Leser, die eine kostenlose, funktionsreiche Android-KI-App ausprobieren möchten und Quellcode-Transparenz nicht stark gewichten, können sie vertretbar ausprobieren; Leser, die unabhängig verifizieren möchten, was eine App tatsächlich mit lokalen Daten macht, sollten stattdessen mit [ToolNeuron](/de/power-local-llm/toolneuron-review) oder [RikkaHub](/de/power-local-llm/rikkahub-review) beginnen, die beide ihren Quellcode veröffentlichen.',
         ],
       },
@@ -667,10 +667,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[ToolNeuron-Test](/de/power-local-llm/toolneuron-review) — eine ähnlich breite, kostenlose, quelloffene Android-Alternative mit einem öffentlichen GitHub-Repository.',
-          '[Layla-Test](/de/power-local-llm/layla-review) — eine kostenpflichtige, plattformübergreifende On-Device-Begleit-App mit optionalem Cloud-Modus.',
-          '[RikkaHub-Test](/de/power-local-llm/rikkahub-review) — eine weitere kostenlose, quelloffene Android-Chat-App für lokale KI.',
-          '[PocketPal-AI-Test](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene lokale KI-App mit iOS- und teilweiser Android-Unterstützung.',
+          '[ToolNeuron-Rezension](/de/power-local-llm/toolneuron-review) — eine ähnlich breite, kostenlose, quelloffene Android-Alternative mit einem öffentlichen GitHub-Repository.',
+          '[Layla-Rezension](/de/power-local-llm/layla-review) — eine kostenpflichtige, plattformübergreifende On-Device-Begleit-App mit optionalem Cloud-Modus.',
+          '[RikkaHub-Rezension](/de/power-local-llm/rikkahub-review) — eine weitere kostenlose, quelloffene Android-Chat-App für lokale KI.',
+          '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene lokale KI-App mit iOS- und teilweiser Android-Unterstützung.',
           '[Das vollständige lokale LLM-Software-Verzeichnis](/de/directory) — ein umfassenderes Verzeichnis lokaler LLM-Tools über Plattformen hinweg.',
         ],
       },

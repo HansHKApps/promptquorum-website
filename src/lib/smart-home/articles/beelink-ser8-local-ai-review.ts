@@ -465,18 +465,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Decision & Comparison',
     heroImage: '/images/beelink-ser8-local-ai-review-overview-hero-de.webp',
     affiliateDisclosure: true,
-    title: 'Beelink SER8 Test: Specs, Preis & 32GB vs. 64GB (2026)',
-    seoTitle: 'Beelink SER8 Test 2026 — Specs, Preis, 32GB vs. 64GB',
+    title: 'Beelink-SER8-Rezension: Specs, Preis & 32GB vs. 64GB (2026)',
+    seoTitle: 'Beelink-SER8-Rezension 2026 — Specs, Preis, 32GB vs. 64GB',
     intro:
-      'Der Beelink SER8 (AMD Ryzen 7 8845HS, Radeon 780M, DDR5) ist der Mini-PC mit dem besten Preis-Leistungs-Verhältnis für ein lokales KI-Smart-Home im Jahr 2026 — die Konfiguration mit 32 GB / 1 TB betreibt Home Assistant, Frigate, Whisper und ein 7B-Modell auf Ollama auf einer leisen Box für rund 999 € (August 2026, je nach Händler und Konfiguration schwankend). Dieser Test prüft jede Spezifikation gegen Beelink und unabhängige Quellen, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs als Schätzung statt gemessenem Benchmark, und deckt ab, was sich seit dem Launch geändert hat — einschließlich der neueren Beelink-Serien SER9 und SER10.',
+      'Der Beelink SER8 (AMD Ryzen 7 8845HS, Radeon 780M, DDR5) ist der Mini-PC mit dem besten Preis-Leistungs-Verhältnis für ein lokales KI-Smart-Home im Jahr 2026 — die Konfiguration mit 32 GB / 1 TB betreibt Home Assistant, Frigate, Whisper und ein 7B-Modell auf Ollama auf einer leisen Box für rund 999 € (August 2026, je nach Händler und Konfiguration schwankend). Diese Rezension prüft jede Spezifikation gegen Beelink und unabhängige Quellen, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs als Schätzung statt gemessenem Benchmark, und deckt ab, was sich seit dem Launch geändert hat — einschließlich der neueren Beelink-Serien SER9 und SER10.',
     metaDescription:
-      'Beelink SER8 Test 2026: Ryzen 7 8845HS Specs, aktueller Preis je Konfiguration, 32GB vs. 64GB, Idle-Verbrauch, Abmessungen. Betreibt Home Assistant plus ein 7B-LLM lokal — komplette Analyse.',
+      'Beelink-SER8-Rezension 2026: Ryzen 7 8845HS Specs, aktueller Preis je Konfiguration, 32GB vs. 64GB, Idle-Verbrauch, Abmessungen. Betreibt Home Assistant plus ein 7B-LLM lokal — komplette Analyse.',
     twitterDescription:
       'Beelink SER8 (2026): Ryzen 7 8845HS, Radeon 780M, DDR5, ab ca. 999 €. Welche Konfiguration für Home Assistant plus lokales LLM — 32GB vs. 64GB, Specs und aktueller Preis.',
     readTime: '9 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Käufer, die einen preiswerten Mini-PC für Home Assistant und ein lokales LLM auswählen',
-    primaryTerm: 'Beelink SER8 Test',
+    primaryTerm: 'Beelink SER8 Rezension',
     targetKeywords: [
       'beelink ser8 test',
       'beelink ser8 specs',
@@ -493,7 +493,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ja, wenn Ihr Ziel Home Assistant plus Frigate plus ein lokales 7B–8B-LLM ist — kaufen Sie die Konfiguration mit 32 GB/1 TB (Ryzen 7 8845HS, Radeon 780M) für rund 999 € (August 2026, schwankend). Sie betreibt komfortabel ein 7B-Modell, lädt 13B–14B in 4-Bit, aber langsamer, und wird darüber hinaus knapp. Wählen Sie 64 GB/1 TB (ca. 1.499 €) nur, wenn Sie speziell wollen, dass 14B-Modelle sich komfortabel statt nur nutzbar anfühlen. Überspringen Sie ihn komplett für Modelle ab 32B — siehe den GPU-Server-Vergleich unten.',
         bullets: [
           'CPU: Ryzen 7 8845HS — 8 Kerne/16 Threads, Radeon 780M (12 CU, RDNA 3)',
-          'Prüfen Sie die CPU im Angebot: Beelink verkauft auch einen günstigeren SER8 mit dem 8745HS-Chip (niedrigerer Boost-Takt, gleicher Name) — dieser Test behandelt nur die 8845HS-Einheit',
+          'Prüfen Sie die CPU im Angebot: Beelink verkauft auch einen günstigeren SER8 mit dem 8745HS-Chip (niedrigerer Boost-Takt, gleicher Name) — diese Rezension behandelt nur die 8845HS-Einheit',
           'RAM: duales SO-DIMM, vom Nutzer austauschbar; 32 GB ist die Standardkonfiguration, 64 GB für Spielraum',
           'Lokales LLM (aus Specs geschätzt, nicht benchmarkt): 7B komfortabel; 13B–14B nutzbar, aber langsamer; ab 32B nicht empfohlen',
           'Preis: 32 GB/1 TB ca. 999 €; 64 GB/1 TB ca. 1.499 € (August 2026, aktuellen Preis prüfen — variiert je Händler und RAM-SKU)',
@@ -535,7 +535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kaufen Sie den SER8 mit 32 GB/1 TB (Ryzen 7 8845HS) — er betreibt Home Assistant, Frigate, Whisper und ein lokales 7B-LLM auf einer Box für rund 999 € (August 2026, schwankend)',
           'Prüfen Sie, dass im Angebot „8845HS" steht, nicht die günstigere „8745HS"-Variante, die Beelink unter demselben Namen SER8 verkauft',
           '32 GB ist die Standardkonfiguration für die meisten Käufer; wählen Sie 64 GB (ca. 1.499 €) nur, wenn 14B-Modelle komfortabel laufen sollen',
-          'Beelink hat seit der Erstveröffentlichung dieses Tests die neueren Serien SER9 und SER10 Pro/Max veröffentlicht — der SER8 ist nicht mehr das aktuelle Flaggschiff, bleibt aber für Home Assistant + Frigate + ein 7B-Modell die bessere Wahl',
+          'Beelink hat seit der Erstveröffentlichung dieser Rezension die neueren Serien SER9 und SER10 Pro/Max veröffentlicht — der SER8 ist nicht mehr das aktuelle Flaggschiff, bleibt aber für Home Assistant + Frigate + ein 7B-Modell die bessere Wahl',
           'Günstiger und einfacher als ein [GEEKOM A9 Max](/de/smart-home/geekom-a9-max-local-ai-review) (jetzt 1.099–1.799 $); weit leistungsfähiger als eine Intel-N150-Box',
           'Überspringen Sie ihn komplett für Modelle ab 32B — siehe den GPU-Server-Vergleich für diese Aufgabe',
         ],
@@ -590,7 +590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'specs',
         title: 'Spezifikationen',
         content:
-          '**Alle Spezifikationen unten wurden im August 2026 erneut gegen Beelinks eigenes Angebot und unabhängige Händler-/Testquellen geprüft.** Beelink verkauft den Namen SER8 unter zwei verschiedenen CPUs — prüfen Sie vor dem Kauf, ob im Angebot „8845HS" steht (Thema dieses Tests, 5,1-GHz-Boost) und nicht die günstigere „8745HS"-Variante (4,9-GHz-Boost, sonst ähnlich). Der ab Werk verbaute RAM variiert je nach SKU (16, 24, 32 oder 64 GB); diese Tabelle bildet die 32-GB-/1-TB-Einheit als Referenzkonfiguration ab.',
+          '**Alle Spezifikationen unten wurden im August 2026 erneut gegen Beelinks eigenes Angebot und unabhängige Händler-/Testquellen geprüft.** Beelink verkauft den Namen SER8 unter zwei verschiedenen CPUs — prüfen Sie vor dem Kauf, ob im Angebot „8845HS" steht (Thema dieser Rezension, 5,1-GHz-Boost) und nicht die günstigere „8745HS"-Variante (4,9-GHz-Boost, sonst ähnlich). Der ab Werk verbaute RAM variiert je nach SKU (16, 24, 32 oder 64 GB); diese Tabelle bildet die 32-GB-/1-TB-Einheit als Referenzkonfiguration ab.',
         columns: ['Spezifikation', 'Beelink SER8 (8845HS)'],
         rows: [
           { Spezifikation: 'CPU', 'Beelink SER8 (8845HS)': 'AMD Ryzen 7 8845HS (Zen 4, 4 nm)' },
@@ -655,7 +655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'home-assistant',
         title: 'Home Assistant, Frigate & ein lokaler Sprachassistent',
         content:
-          '**Der stärkste Einsatzzweck des SER8 ist ein Ein-Box-Smart-Home-Server: Home Assistant, Frigate für Kamera-KI, Whisper für Sprache und Ollama für einen lokalen LLM-Assistenten, alles auf einer Maschine.** Diese Kombination ist mit 32 GB realistisch und der Grund, warum dieser Test den SER8 überhaupt einer günstigeren N150-Box vorzieht.',
+          '**Der stärkste Einsatzzweck des SER8 ist ein Ein-Box-Smart-Home-Server: Home Assistant, Frigate für Kamera-KI, Whisper für Sprache und Ollama für einen lokalen LLM-Assistenten, alles auf einer Maschine.** Diese Kombination ist mit 32 GB realistisch und der Grund, warum diese Rezension den SER8 überhaupt einer günstigeren N150-Box vorzieht.',
         items: [
           'Home Assistant OS oder Home Assistant Container läuft komfortabel neben den anderen Diensten — CPU- und RAM-Spielraum sind der Engpass, nicht die reine Rechenleistung.',
           'Frigate (Kamera-Objekterkennung) profitiert von einem Hardware-Beschleuniger — die iGPU des SER8 kann Video dekodieren, aber ein dedizierter Beschleuniger wie der Hailo-8L (siehe Bundle unten) passt besser, wenn Sie mehr als 2–3 Kameras betreiben.',
@@ -844,7 +844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Beelink SER8: 32 GB oder 64 GB?', a: 'Kaufen Sie 32 GB, wenn Ihr Ziel ein 7B–8B-Modell neben Home Assistant und Frigate ist — das ist der komfortable Sweetspot. Kaufen Sie 64 GB nur, wenn Sie speziell wollen, dass 13B–14B-Modelle reaktionsschnell statt nur nutzbar wirken; der zusätzliche RAM beschleunigt die Inferenz nicht, er hebt nur die Obergrenze der Modellgröße an.' },
           { q: 'Wie hoch ist der Idle-Stromverbrauch des SER8?', a: 'Laut unabhängigen Messungen etwa 8–12 W — günstig im Dauerbetrieb als Heimserver. Unter Dauerlast zieht er bis zu 65 W. Genaue Werte hängen von der Arbeitslast und dem Energieprofil ab.' },
           { q: 'Beschleunigt die 16-TOPS-NPU lokale KI auf dem SER8?', a: 'Nein. Gängige LLM-Laufzeiten (Ollama, llama.cpp, LM Studio) nutzen die NPU 2026 nicht für Inferenz — sie laufen stattdessen auf der CPU und der Radeon-780M-iGPU. Die NPU beschleunigt bestimmte Vision-/Audio-Workloads in unterstützten Frameworks, nicht die allgemeine Chat-Inferenz.' },
-          { q: 'Gibt es ein neueres Beelink-Modell als den SER8?', a: 'Ja. Beelink hat den SER9 und, zur CES 2026, den SER10 Pro und SER10 Max veröffentlicht (Ryzen AI 9 HX 470, bis zu 10GbE-Netzwerk). Das ist die aktuelle Flaggschiff-Linie. Für die konkrete Aufgabe dieses Tests — Home Assistant, Frigate und ein lokales 7B–14B-Modell — bleibt der SER8 die bessere Preis-Leistungs-Wahl; die neuere NPU-Generation hilft dieser Aufgabe nicht spürbar (siehe den NPU-Hinweis oben).' },
+          { q: 'Gibt es ein neueres Beelink-Modell als den SER8?', a: 'Ja. Beelink hat den SER9 und, zur CES 2026, den SER10 Pro und SER10 Max veröffentlicht (Ryzen AI 9 HX 470, bis zu 10GbE-Netzwerk). Das ist die aktuelle Flaggschiff-Linie. Für die konkrete Aufgabe dieser Rezension — Home Assistant, Frigate und ein lokales 7B–14B-Modell — bleibt der SER8 die bessere Preis-Leistungs-Wahl; die neuere NPU-Generation hilft dieser Aufgabe nicht spürbar (siehe den NPU-Hinweis oben).' },
           { q: 'SER8 oder GEEKOM A9 Max?', a: 'Der SER8 ist die Preis-Leistungs-Wahl bei 999 € und deckt die meisten lokalen KI-Smart-Home-Anforderungen ab. Wählen Sie den A9 Max nur, wenn Sie seine 128-GB-RAM-Obergrenze oder Wi-Fi 7 brauchen — Stand August 2026 kostet er 1.010–1.650 €, spürbar mehr, aber inzwischen kein Vielfaches des SER8-Preises mehr — beide Live-Preise vor dem Kauf vergleichen.' },
           { q: 'Ist der RAM aufrüstbar?', a: 'Ja. Der SER8 nutzt zwei standardmäßige DDR5-SO-DIMM-Steckplätze, die vom Nutzer austauschbar sind, sodass Sie bei 32 GB beginnen und später auf 64 GB umsteigen können. Er hat außerdem zwei M.2-Steckplätze für die Speichererweiterung.' },
           { q: 'Wo wird der Beelink SER8 hergestellt, und beeinflusst das den Preis?', a: 'Er wird in China gefertigt. 2026 können US-Einfuhrmaßnahmen (Section-301-Zölle, das Ende der De-minimis-Ausnahme unter 800 $) und die EU-Streichung der Freigrenze von 150 € für geringwertige Pakete den Landepreis beeinflussen, prüfen Sie daher den aktuellen Händlerpreis, statt sich auf eine feste Zahl zu verlassen.' },
@@ -856,7 +856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) — der Überblick, zu dem dieser Test gehört',
+          '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) — der Überblick, zu dem diese Rezension gehört',
           '[Leitfaden zum Bau einer lokalen KI-Workstation](/de/power-local-llm/best-workstation-build-local-ai-2026) — der GPU-Server-Weg für Modelle ab 32B',
           '[Leitfaden zu lokaler LLM-Hardware](/de/local-llms/local-llm-hardware-guide-2026) — clusterübergreifend: VRAM- und Quantisierungstiefe',
           '[Ihr Smart Home auf einem lokalen LLM betreiben](/de/smart-home/local-llm-smart-home-complete-guide) — was die Box tatsächlich betreibt',
@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'Review',
-      name: 'Beelink SER8 Test: Specs, Preis & 32GB vs. 64GB (2026)',
+      name: 'Beelink-SER8-Rezension: Specs, Preis & 32GB vs. 64GB (2026)',
       reviewBody:
         'Der Beelink SER8 (Ryzen 7 8845HS, Radeon 780M) betreibt in der Konfiguration mit 32 GB/1 TB Home Assistant, Frigate und ein lokales 7B-LLM auf Ollama für rund 999 € (August 2026). Er ist die beste Preis-Leistungs-Wahl unter den lokalen KI-Mini-PCs für diese konkrete Aufgabe, auch wenn Beelink inzwischen die neueren Serien SER9 und SER10 veröffentlicht hat.',
       datePublished: '2026-07-03',

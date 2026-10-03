@@ -298,10 +298,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-11',
     theme: 'Tools & Interfaces',
     heroImage: '/images/big-agi-review-hero-de.webp',
-    title: 'Big-AGI im Test 2026: Selbst gehosteter Multi-Modell-Chat mit Beam-Vergleich',
+    title: 'Big-AGI-Rezension 2026: Selbst gehosteter Multi-Modell-Chat mit Beam-Vergleich',
     dateModified: '2026-09-11',
-    seoTitle: 'Big-AGI im Test 2026: Multi-Modell-Chat-UI',
-    intro: 'Big-AGI ([big-agi.com](https://big-agi.com), Quellcode auf [github.com/enricoros/big-AGI](https://github.com/enricoros/big-AGI)) ist eine kostenlose, quelloffene, MIT-lizenzierte Chat-Oberfläche des unabhängigen Maintainers Enrico Ros. Sie verbindet sich mit 20+ Modell-Anbietern -- OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure, Mistral, DeepSeek und jedem OpenAI-kompatiblen Endpunkt, einschließlich eines lokalen [Ollama](/de/local-llms/how-to-install-ollama)- oder LM-Studio-Servers -- und ergänzt eine markante Multi-Modell-Vergleichsfunktion namens Beam, Persona-Vorlagen, Echtzeit-Sprachanrufe und Websuche mit Quellenangaben. Dieser Test zeigt, was Big-AGI wirklich kann, welche Lizenz gilt, wie Sie es selbst hosten oder die gehostete Version nutzen, was es kostet und wie es im Vergleich zu anderen selbst gehosteten Chat-Oberflächen abschneidet.',
+    seoTitle: 'Big-AGI-Rezension 2026: Multi-Modell-Chat-UI',
+    intro: 'Big-AGI ([big-agi.com](https://big-agi.com), Quellcode auf [github.com/enricoros/big-AGI](https://github.com/enricoros/big-AGI)) ist eine kostenlose, quelloffene, MIT-lizenzierte Chat-Oberfläche des unabhängigen Maintainers Enrico Ros. Sie verbindet sich mit 20+ Modell-Anbietern -- OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure, Mistral, DeepSeek und jedem OpenAI-kompatiblen Endpunkt, einschließlich eines lokalen [Ollama](/de/local-llms/how-to-install-ollama)- oder LM-Studio-Servers -- und ergänzt eine markante Multi-Modell-Vergleichsfunktion namens Beam, Persona-Vorlagen, Echtzeit-Sprachanrufe und Websuche mit Quellenangaben. Diese Rezension zeigt, was Big-AGI wirklich kann, welche Lizenz gilt, wie Sie es selbst hosten oder die gehostete Version nutzen, was es kostet und wie es im Vergleich zu anderen selbst gehosteten Chat-Oberflächen abschneidet.',
     metaDescription: 'Big-AGI ist eine kostenlose, MIT-lizenzierte Chat-Oberfläche, die 20+ Modell-Anbieter abfragt und Antworten mit der Beam-Funktion nebeneinander vergleicht. Lizenz, Self-Hosting und Preise 2026.',
     publishDate: '2026-09-11',
     leadAnswerBlock: '**Big-AGI (7.100+ GitHub-Sterne, [github.com/enricoros/big-AGI](https://github.com/enricoros/big-AGI)) ist eine kostenlose, MIT-lizenzierte Chat-Oberfläche des unabhängigen Maintainers Enrico Ros, die sich mit 20+ Modell-Anbietern verbindet, darunter OpenAI, Anthropic, Google Gemini, AWS Bedrock und jeder OpenAI-kompatible Endpunkt wie ein lokaler Ollama- oder LM-Studio-Server.** Die zentrale Funktion ist Beam: Einen Prompt an mehrere Modelle gleichzeitig senden und die Antworten nebeneinander vergleichen oder zusammenführen. Self-Hosting per Docker oder Vercel ist unter der reinen MIT-Lizenz mit eigenen API-Schlüsseln kostenlos; eine gehostete Version unter [big-agi.com](https://big-agi.com) bietet eine kostenlose Stufe plus einen optionalen Pro-Plan für Cloud-Synchronisierung.',
@@ -313,7 +313,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'Big-AGI im Test 2026: Multi-Modell-Chat-UI',
+      'headline': 'Big-AGI-Rezension 2026: Multi-Modell-Chat-UI',
       'description': 'Big-AGI ist eine kostenlose, MIT-lizenzierte Chat-Oberfläche, die 20+ Modell-Anbieter abfragt und Antworten mit der Beam-Funktion nebeneinander vergleicht. Lizenz, Self-Hosting und Preise 2026.',
       'url': 'https://www.promptquorum.com/de/local-llms/big-agi-review',
       'datePublished': '2026-09-11',
@@ -411,7 +411,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Self-Hosting ist unter der reinen MIT-Lizenz dauerhaft kostenlos; eine gehostete Version unter big-agi.com bietet eine kostenlose Stufe plus einen optionalen Pro-Plan für 9 $/Monat, jährlich abgerechnet.',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test ist die Vertiefung zu Big-AGIs Eintrag im [Verzeichnis lokaler LLM-Software](/de/directory) -- dort sehen Sie auf einen Blick, wie Big-AGI im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Rezension ist die Vertiefung zu Big-AGIs Eintrag im [Verzeichnis lokaler LLM-Software](/de/directory) -- dort sehen Sie auf einen Blick, wie Big-AGI im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       quickFacts: {
@@ -445,7 +445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Die jüngste Entwicklung konzentrierte sich auf den Ausbau von Beam, mehr Modell-Anbieter (20+ Stand September 2026, darunter OpenAI, Anthropic, Google Gemini, AWS Bedrock, Azure, Mistral, DeepSeek, Groq, OpenRouter und weitere) sowie den Ausbau von Sprach-, Bild- und Websuchfunktionen neben dem zugrunde liegenden Multi-Provider-Chat-Kern.',
           'Ein wichtiger Punkt für jede kommerzielle Bewertung von Big-AGI ist die **Lizenz**. Anders als manche konkurrierenden selbst gehosteten Chat-Oberflächen, die eine Apache-2.0-Variante mit zusätzlicher Klausel für kommerziellen Vertrieb nutzen, läuft Big-AGI unter der **reinen MIT-Lizenz** -- Sie können es selbst hosten, modifizieren und weiterverbreiten, auch kommerziell, ohne den Maintainer für eine separate Lizenz zu kontaktieren.',
         ],
-        note: 'Sternezahlen, Release Notes und Preise ändern sich im Zeitverlauf -- prüfen Sie direkt [github.com/enricoros/big-AGI](https://github.com/enricoros/big-AGI) und [big-agi.com](https://big-agi.com) für alles, was nach diesem Test veröffentlicht wurde.',
+        note: 'Sternezahlen, Release Notes und Preise ändern sich im Zeitverlauf -- prüfen Sie direkt [github.com/enricoros/big-AGI](https://github.com/enricoros/big-AGI) und [big-agi.com](https://big-agi.com) für alles, was nach dieser Rezension veröffentlicht wurde.',
       },
       keyFeatures: {
         id: 'key-features',
@@ -571,9 +571,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Verzeichnis lokaler LLM-Software](/de/directory) -- der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, inklusive Big-AGIs eigenem Verzeichniseintrag.',
-          '[LobeChat im Test](/de/local-llms/lobechat-review) -- eine selbst gehostete Alternative mit weiter entwickeltem Plugin-Marktplatz und Agenten-Builder.',
-          '[Open WebUI im Test](/de/local-llms/open-webui-review) -- eine selbst gehostete Alternative, am engsten mit Ollama verzahnt.',
-          '[LibreChat im Test](/de/power-local-llm/librechat-review) -- eine selbst gehostete Alternative zur Verwaltung vieler Cloud-Anbieter-API-Schlüssel.',
+          '[LobeChat-Rezension](/de/local-llms/lobechat-review) -- eine selbst gehostete Alternative mit weiter entwickeltem Plugin-Marktplatz und Agenten-Builder.',
+          '[Open-WebUI-Rezension](/de/local-llms/open-webui-review) -- eine selbst gehostete Alternative, am engsten mit Ollama verzahnt.',
+          '[LibreChat-Rezension](/de/power-local-llm/librechat-review) -- eine selbst gehostete Alternative zur Verwaltung vieler Cloud-Anbieter-API-Schlüssel.',
           '[LobeChat vs. Big-AGI vs. NextChat vs. Page Assist vs. Chatbox](/de/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared) -- wie Big-AGI im Vergleich zu vier anderen Chat-Oberflächen-Apps abschneidet.',
         ],
       },

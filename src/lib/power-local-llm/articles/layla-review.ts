@@ -546,14 +546,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/layla-review-hero-de.webp',
-    title: 'Layla im Test: KI-Begleiter-App für Android und iOS auf dem Gerät',
-    seoTitle: 'Layla Test: Lokale KI-Begleiter-App, Preise & Datenschutz',
+    title: 'Layla-Rezension: KI-Begleiter-App für Android und iOS auf dem Gerät',
+    seoTitle: 'Layla-Rezension: Lokale KI-Begleiter-App, Preise & Datenschutz',
     intro:
-      'Layla, entwickelt von [Layla Network Pty Ltd](https://www.layla-network.ai) — einem in Australien registrierten Unternehmen, das auf GitHub auch mit dem Entwickler [l3utterfly](https://github.com/l3utterfly) verknüpft ist, der die "Layla"-Familie feinabgestimmter Open-Weight-Modelle veröffentlicht —, ist eine kostenpflichtige App für Android und iOS, die auf einem lokal auf dem Smartphone laufenden persönlichen KI-Begleiter aufbaut, mit Persona-, Rollenspiel- und Charakterfunktionen, die über einen einfachen Chat hinausgehen. Sie kostet [19,99 $ als einmaligen App-Kauf](https://apps.apple.com/us/app/layla/id6456886656) sowohl im App Store als auch bei Google Play; zusätzlich zeigt der App-Store-Eintrag drei benannte In-App-Kauf-Stufen. Laylas Kern-Chat ist so ausgelegt, dass er vollständig auf dem Gerät über GGUF-Modelle mit llama.cpp läuft, doch die App bietet zusätzlich einen optionalen, separat zustimmungspflichtigen Cloud-Modus namens Layla Cloud, der nicht standardmäßig aktiv ist — dieser Test zeigt genau, was tatsächlich lokal läuft, was nicht, was die App wirklich kostet und für wen sie geeignet ist, basierend auf der eigenen Datenschutzrichtlinie des Entwicklers, den App-Store-Einträgen und öffentlicher Dokumentation statt auf eigenständigen praktischen Tests.',
+      'Layla, entwickelt von [Layla Network Pty Ltd](https://www.layla-network.ai) — einem in Australien registrierten Unternehmen, das auf GitHub auch mit dem Entwickler [l3utterfly](https://github.com/l3utterfly) verknüpft ist, der die "Layla"-Familie feinabgestimmter Open-Weight-Modelle veröffentlicht —, ist eine kostenpflichtige App für Android und iOS, die auf einem lokal auf dem Smartphone laufenden persönlichen KI-Begleiter aufbaut, mit Persona-, Rollenspiel- und Charakterfunktionen, die über einen einfachen Chat hinausgehen. Sie kostet [19,99 $ als einmaligen App-Kauf](https://apps.apple.com/us/app/layla/id6456886656) sowohl im App Store als auch bei Google Play; zusätzlich zeigt der App-Store-Eintrag drei benannte In-App-Kauf-Stufen. Laylas Kern-Chat ist so ausgelegt, dass er vollständig auf dem Gerät über GGUF-Modelle mit llama.cpp läuft, doch die App bietet zusätzlich einen optionalen, separat zustimmungspflichtigen Cloud-Modus namens Layla Cloud, der nicht standardmäßig aktiv ist — diese Rezension zeigt genau, was tatsächlich lokal läuft, was nicht, was die App wirklich kostet und für wen sie geeignet ist, basierend auf der eigenen Datenschutzrichtlinie des Entwicklers, den App-Store-Einträgen und öffentlicher Dokumentation statt auf eigenständigen praktischen Tests.',
     metaDescription:
-      'Layla Test 2026: 19,99 $ KI-Begleiter-App für Android und iOS auf dem Gerät. Was tatsächlich lokal läuft vs. der optionale Layla-Cloud-Modus, genaue Preise, Modelle und für wen sie geeignet ist.',
+      'Layla-Rezension 2026: 19,99 $ KI-Begleiter-App für Android und iOS auf dem Gerät. Was tatsächlich lokal läuft vs. der optionale Layla-Cloud-Modus, genaue Preise, Modelle und für wen sie geeignet ist.',
     twitterDescription:
-      'Layla Test 2026: eine 19,99 $ lokale KI-Begleiter-App für Android und iOS mit Rollenspiel- und Persona-Funktionen. Was auf dem Gerät läuft, was der optionale Cloud-Modus sammelt, und der Vergleich mit PocketPal AI und Private LLM.',
+      'Layla-Rezension 2026: eine 19,99 $ lokale KI-Begleiter-App für Android und iOS mit Rollenspiel- und Persona-Funktionen. Was auf dem Gerät läuft, was der optionale Cloud-Modus sammelt, und der Vergleich mit PocketPal AI und Private LLM.',
     audience:
       'Android- und iOS-Nutzer, die eine kostenpflichtige KI-Begleiter-/Rollenspiel-App auf dem Gerät in Betracht ziehen und genau wissen müssen, was lokal bleibt und was ein optionaler Cloud-Modus sammelt, plus genaue Preise und Zuverlässigkeitshinweise aus öffentlichen App-Store-Bewertungen.',
     readTime: '11 Min. Lesezeit',
@@ -630,16 +630,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Der Kern-Chat läuft über GGUF-Modelle mit llama.cpp auf dem Gerät; die App unterstützt laut den technischen Blogbeiträgen des Entwicklers zusätzlich LiteRT-LM- und PTE-Modell-Backends (ExecuTorch) sowie lokale Stable-Diffusion-1.5-Bildgenerierung.',
           'Datenschutz: Laut der [Datenschutzrichtlinie](https://blog.layla-network.ai/privacy) des Entwicklers ist die Kernfunktion darauf ausgelegt, offline zu laufen, und die App warnt, bevor Daten das Gerät verlassen — mit Ausnahme des separaten, optionalen Layla-Cloud-Modus, der standardmäßig deaktiviert ist.',
           'Begleiter- und Rollenspiel-Fokus: individuell anpassbare Personas, Gruppenunterhaltungen, über 100 Stimmen und Live2D-Charakteranimation heben die App von schlichteren Chat-Apps in dieser Kategorie ab.',
-          'App-Store-Bewertung: 3,8/5 aus 31 Bewertungen zum Testzeitpunkt; manche Rezensenten berichten von Abstürzen und unzuverlässigem Offline-Verhalten — ein nutzergemeldetes Anliegen, das dieser Test nicht unabhängig überprüft hat.',
+          'App-Store-Bewertung: 3,8/5 aus 31 Bewertungen zum Testzeitpunkt; manche Rezensenten berichten von Abstürzen und unzuverlässigem Offline-Verhalten — ein nutzergemeldetes Anliegen, das diese Rezension nicht unabhängig überprüft hat.',
         ],
         callouts: [
           {
             type: 'note',
-            text: 'Hinweis zur Namensgleichheit: "Layla" wird von mehreren unabhängigen Apps und Unternehmen verwendet — darunter ein 2026 von der Expedia Group übernommenes KI-Reiseplanungsunternehmen sowie eine separate Social-App namens "Layla – Voice Chat & Party Rooms". Dieser Test behandelt ausschließlich die KI-Begleiter-App auf dem Gerät, die von Layla Network Pty Ltd veröffentlicht wird (App-Store-ID 6456886656, Google-Play-Paket com.layla), auch vermarktet unter [layla-network.ai](https://www.layla-network.ai).',
+            text: 'Hinweis zur Namensgleichheit: "Layla" wird von mehreren unabhängigen Apps und Unternehmen verwendet — darunter ein 2026 von der Expedia Group übernommenes KI-Reiseplanungsunternehmen sowie eine separate Social-App namens "Layla – Voice Chat & Party Rooms". Diese Rezension behandelt ausschließlich die KI-Begleiter-App auf dem Gerät, die von Layla Network Pty Ltd veröffentlicht wird (App-Store-ID 6456886656, Google-Play-Paket com.layla), auch vermarktet unter [layla-network.ai](https://www.layla-network.ai).',
           },
           {
             type: 'note',
-            text: 'Dieser Test basiert auf Laylas öffentlicher Datenschutzrichtlinie, den App-Store- und Google-Play-Einträgen, den eigenen technischen Blogbeiträgen des Entwicklers und öffentlich einsehbaren Nutzerbewertungen, geprüft im September 2026. PromptQuorum hat für diesen Test keine eigenständigen praktischen Tests oder Benchmarks von Layla durchgeführt.',
+            text: 'Diese Rezension basiert auf Laylas öffentlicher Datenschutzrichtlinie, den App-Store- und Google-Play-Einträgen, den eigenen technischen Blogbeiträgen des Entwicklers und öffentlich einsehbaren Nutzerbewertungen, geprüft im September 2026. PromptQuorum hat für diese Rezension keine eigenständigen praktischen Tests oder Benchmarks von Layla durchgeführt.',
           },
         ],
       },
@@ -695,7 +695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             whyItMatters: 'Lokaler Chat und Bildgenerierung benötigen nach dem Herunterladen eines Modells keine Netzwerkverbindung. Layla Cloud ist ein separater, optionaler Modus, den Sie ausdrücklich installieren oder aktivieren müssen — er ist nicht Teil der oben beschriebenen standardmäßigen lokalen Erfahrung.',
           },
         ],
-        note: 'Manche App-Store- und Google-Play-Rezensenten berichten, dass das Laden von Offline-Modellen und der Import eigener Modelle in früheren Versionen unzuverlässig waren, insbesondere unter iOS. Dieser Test hat die aktuelle Stabilität nicht unabhängig überprüft — testen Sie die Ersteinrichtung innerhalb des Rückgabefensters der jeweiligen Plattform, bevor Sie sich auf die App verlassen.',
+        note: 'Manche App-Store- und Google-Play-Rezensenten berichten, dass das Laden von Offline-Modellen und der Import eigener Modelle in früheren Versionen unzuverlässig waren, insbesondere unter iOS. Diese Rezension hat die aktuelle Stabilität nicht unabhängig überprüft — testen Sie die Ersteinrichtung innerhalb des Rückgabefensters der jeweiligen Plattform, bevor Sie sich auf die App verlassen.',
       },
       modelsSupported: {
         id: 'models-supported',
@@ -759,7 +759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was kostet Layla?',
         content: [
           '**Layla kostet 19,99 $ als einmaligen Kauf sowohl im [Apple App Store](https://apps.apple.com/us/app/layla/id6456886656) als auch bei [Google Play](https://play.google.com/store/apps/details?id=com.layla).** Zusätzlich zu diesem Basiskauf zeigt der App-Store-Eintrag drei benannte In-App-Kauf-Stufen — Monarch (4,99 $), Birdwing (19,99 $) und Blue Morpho (29,99 $) —, doch der öffentliche Store-Eintrag schlüsselt nicht vollständig auf, was jede Stufe freischaltet (zum Beispiel, ob sie Cloud-Nutzungsguthaben, Premium-Charaktere oder zusätzliche Stimmen abdecken). Bestätigen Sie vor dem Kauf in der App genau, was eine bestimmte Stufe enthält.',
-          'Eine separate, eingeschränktere kostenlose Version der App wurde laut den eigenen Blog-Inhalten des Entwicklers Berichten zufolge als direkter APK-Download von der eigenen Website des Entwicklers angeboten — das ist getrennt von den kostenpflichtigen App-Store- und Google-Play-Einträgen; die aktuelle Verfügbarkeit und der Funktionsumfang sollten direkt auf [layla-network.ai](https://www.layla-network.ai) geprüft werden, statt aus diesem Test übernommen zu werden.',
+          'Eine separate, eingeschränktere kostenlose Version der App wurde laut den eigenen Blog-Inhalten des Entwicklers Berichten zufolge als direkter APK-Download von der eigenen Website des Entwicklers angeboten — das ist getrennt von den kostenpflichtigen App-Store- und Google-Play-Einträgen; die aktuelle Verfügbarkeit und der Funktionsumfang sollten direkt auf [layla-network.ai](https://www.layla-network.ai) geprüft werden, statt aus dieser Rezension übernommen zu werden.',
           'Layla Cloud, der separate optionale Cloud-Chat-Modus, wird als eigene App in den Stores kostenlos zum Download angeboten; ob die fortlaufende Nutzung von Layla Cloud über die kostenlose Stufe hinaus ein Abonnement oder Guthaben erfordert, ist im für diesen Artikel geprüften öffentlichen Eintrag nicht aufgeschlüsselt.',
         ],
         items: [
@@ -786,7 +786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Dieser Test hat weder den Netzwerkverkehr noch den Quellcode von Layla unabhängig geprüft. Die obige Beschreibung gibt die veröffentlichte Datenschutzrichtlinie und die Store-Einträge des Entwicklers wieder, keine unabhängige Sicherheitsbewertung durch PromptQuorum.',
+            text: 'Diese Rezension hat weder den Netzwerkverkehr noch den Quellcode von Layla unabhängig geprüft. Die obige Beschreibung gibt die veröffentlichte Datenschutzrichtlinie und die Store-Einträge des Entwicklers wieder, keine unabhängige Sicherheitsbewertung durch PromptQuorum.',
           },
         ],
       },
@@ -910,9 +910,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'App': '[Enclave AI](/de/power-local-llm/enclave-ai-review)',
-            'Plattformen': 'Siehe vollständigen Test für aktuelle Plattformunterstützung',
+            'Plattformen': 'Siehe die vollständige Rezension für aktuelle Plattformunterstützung',
             'Preis': 'Siehe aktuellen Eintrag',
-            'Lokal vs. Cloud': 'Siehe vollständigen Test',
+            'Lokal vs. Cloud': 'Siehe die vollständige Rezension',
             'Wesentlicher Unterschied': 'Auf Apple ausgerichteter On-Device-Assistent mit Siri-/Shortcuts-Integration',
           },
           {
@@ -994,11 +994,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist Layla zuverlässig? Berichten Nutzer von Problemen?',
-            a: 'Layla hat zum Testzeitpunkt eine Bewertung von 3,8/5 aus 31 Bewertungen im App Store. Manche öffentlichen App-Store-Rezensenten berichten von Abstürzen und unzuverlässigen Offline-Funktionen, insbesondere beim Import eigener Modelle unter iOS. Dieser Test hat die aktuelle App-Stabilität nicht unabhängig überprüft — betrachten Sie dies als nutzergemeldete Beobachtungen und testen Sie die App innerhalb des Rückgabefensters Ihrer Plattform, bevor Sie sich darauf verlassen.',
+            a: 'Layla hat zum Testzeitpunkt eine Bewertung von 3,8/5 aus 31 Bewertungen im App Store. Manche öffentlichen App-Store-Rezensenten berichten von Abstürzen und unzuverlässigen Offline-Funktionen, insbesondere beim Import eigener Modelle unter iOS. Diese Rezension hat die aktuelle App-Stabilität nicht unabhängig überprüft — betrachten Sie dies als nutzergemeldete Beobachtungen und testen Sie die App innerhalb des Rückgabefensters Ihrer Plattform, bevor Sie sich darauf verlassen.',
           },
           {
             q: 'Ist die KI-Begleiter-App "Layla" dasselbe Unternehmen wie der von Expedia übernommene KI-Reiseplaner "Layla"?',
-            a: 'Nein. Dieser Test behandelt die KI-Begleiter-App auf dem Gerät, veröffentlicht von Layla Network Pty Ltd (App-Store-ID 6456886656, Google-Play-Paket com.layla). Sie steht in keiner Verbindung zu dem separaten, in Berlin ansässigen KI-Reiseplanungsunternehmen "Layla", dessen Übernahme die Expedia Group 2026 bekannt gab, und auch nicht zu anderen gleichnamigen Apps wie "Layla – Voice Chat & Party Rooms".',
+            a: 'Nein. Diese Rezension behandelt die KI-Begleiter-App auf dem Gerät, veröffentlicht von Layla Network Pty Ltd (App-Store-ID 6456886656, Google-Play-Paket com.layla). Sie steht in keiner Verbindung zu dem separaten, in Berlin ansässigen KI-Reiseplanungsunternehmen "Layla", dessen Übernahme die Expedia Group 2026 bekannt gab, und auch nicht zu anderen gleichnamigen Apps wie "Layla – Voice Chat & Party Rooms".',
           },
           {
             q: 'Wie schneidet Layla im Vergleich zu PocketPal AI oder Private LLM ab?',
@@ -1028,10 +1028,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[PocketPal AI Test](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, vollständig quelloffene, vollständig lokale Alternative ohne integrierte Cloud-Chat-Funktion.',
-          '[Private LLM Test](/de/power-local-llm/private-llm-review) — eine 4,99-$-App ausschließlich für Apple mit assistentenartigem Stil und größerer kuratierter Modellbibliothek.',
-          '[Enclave AI Test](/de/power-local-llm/enclave-ai-review) — eine weitere auf Apple ausgerichtete On-Device-KI-App zum Vergleich.',
-          '[Backyard AI Test: lokaler KI-Charakter-Chat und Rollenspiel](/de/power-local-llm/backyard-ai-review-local-roleplay) — eine desktop-erste Rollenspiel-Alternative mit deutlich größerer Charakterbibliothek und klar bepreister Cloud-Stufe.',
+          '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, vollständig quelloffene, vollständig lokale Alternative ohne integrierte Cloud-Chat-Funktion.',
+          '[Private-LLM-Rezension](/de/power-local-llm/private-llm-review) — eine 4,99-$-App ausschließlich für Apple mit assistentenartigem Stil und größerer kuratierter Modellbibliothek.',
+          '[Enclave-AI-Rezension](/de/power-local-llm/enclave-ai-review) — eine weitere auf Apple ausgerichtete On-Device-KI-App zum Vergleich.',
+          '[Backyard-AI-Rezension: lokaler KI-Charakter-Chat und Rollenspiel](/de/power-local-llm/backyard-ai-review-local-roleplay) — eine desktop-erste Rollenspiel-Alternative mit deutlich größerer Charakterbibliothek und klar bepreister Cloud-Stufe.',
           '[Beste lokale LLM-Apps für Android 2026](/de/power-local-llm/best-local-llm-apps-android-2026) — der breitere Android-App-Überblick zum Vergleich.',
           '[Beste lokale LLM-Apps für iPhone 2026](/de/power-local-llm/best-local-llm-apps-iphone-2026) — der breitere iOS-App-Überblick zum Vergleich.',
         ],

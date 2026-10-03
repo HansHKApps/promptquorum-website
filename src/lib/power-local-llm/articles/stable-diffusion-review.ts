@@ -327,14 +327,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Image & Video Generation',
     heroImage: '/images/stable-diffusion-review-hero-de.webp',
-    title: 'Stable Diffusion Test: Kostenlose lokale Text-zu-Bild-Modelle',
-    seoTitle: 'Stable Diffusion Test: Lokales Bildmodell & Lizenz-Guide',
+    title: 'Stable-Diffusion-Rezension: Kostenlose lokale Text-zu-Bild-Modelle',
+    seoTitle: 'Stable-Diffusion-Rezension: Lokales Bildmodell & Lizenz-Guide',
     intro:
-      'Stable Diffusion ist eine Familie offener Text-zu-Bild-Modelle — SD 1.5, SD 2.1, SDXL, SD 3 und SD 3.5 —, die ursprünglich im August 2022 von [Stability AI](https://stability.ai), der CompVis-Gruppe der LMU München und Runway ML veröffentlicht wurde. Es handelt sich nicht um eine fertige App: Stable Diffusion ist das Modell selbst, verteilt als Gewichte (Weights) und Code. Um lokal ein Bild zu erzeugen, ist zusätzlich eine eigenständige Oberfläche wie AUTOMATIC1111, ComfyUI, InvokeAI oder Fooocus nötig, die das Modell lädt und die Inferenz auf der eigenen GPU ausführt. Dieser Test erklärt, was Stable Diffusion tatsächlich ist, die realen Lizenzbedingungen (die sich je nach Version unterscheiden), die Hardware-Anforderungen, wo Sie die Gewichte herunterladen, und wie es sich mit neueren lokalen und Cloud-Alternativen vergleicht.',
+      'Stable Diffusion ist eine Familie offener Text-zu-Bild-Modelle — SD 1.5, SD 2.1, SDXL, SD 3 und SD 3.5 —, die ursprünglich im August 2022 von [Stability AI](https://stability.ai), der CompVis-Gruppe der LMU München und Runway ML veröffentlicht wurde. Es handelt sich nicht um eine fertige App: Stable Diffusion ist das Modell selbst, verteilt als Gewichte (Weights) und Code. Um lokal ein Bild zu erzeugen, ist zusätzlich eine eigenständige Oberfläche wie AUTOMATIC1111, ComfyUI, InvokeAI oder Fooocus nötig, die das Modell lädt und die Inferenz auf der eigenen GPU ausführt. Diese Rezension erklärt, was Stable Diffusion tatsächlich ist, die realen Lizenzbedingungen (die sich je nach Version unterscheiden), die Hardware-Anforderungen, wo Sie die Gewichte herunterladen, und wie es sich mit neueren lokalen und Cloud-Alternativen vergleicht.',
     metaDescription:
-      'Stable Diffusion Test 2026: reale Lizenzbedingungen je Version (RAIL-M vs. Community License), VRAM-Bedarf für SD 1.5/SDXL/SD 3.5, Downloads und ehrlicher Vergleich mit FLUX und Midjourney.',
+      'Stable-Diffusion-Rezension 2026: reale Lizenzbedingungen je Version (RAIL-M vs. Community License), VRAM-Bedarf für SD 1.5/SDXL/SD 3.5, Downloads und ehrlicher Vergleich mit FLUX und Midjourney.',
     twitterDescription:
-      'Stable Diffusion Test 2026: die offene Modellfamilie erklärt — Lizenzbedingungen je Version, VRAM-Bedarf, Download-Quellen und der Vergleich mit FLUX, Midjourney und DALL-E 3.',
+      'Stable-Diffusion-Rezension 2026: die offene Modellfamilie erklärt — Lizenzbedingungen je Version, VRAM-Bedarf, Download-Quellen und der Vergleich mit FLUX, Midjourney und DALL-E 3.',
     audience:
       'Leser, die entscheiden möchten, ob sie Stable Diffusion für lokale Bildgenerierung selbst hosten — inkl. benötigter UI, Lizenzbedingungen je Version, Hardware-Anforderungen und Vergleich mit FLUX und Cloud-Tools.',
     readTime: '11 Min. Lesezeit',
@@ -624,7 +624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Lokale KI-Bildgenerierung vs. Cloud: FLUX, SD 3.5, Qwen-Image vs. Adobe Firefly & getimg.ai](/de/power-local-llm/local-ai-image-generation-vs-cloud) — tieferer Vergleich lokaler Bildmodellfamilien bei Lizenz, VRAM und realen Anwendungsfällen.',
-          '[Real-ESRGAN Test: KI-Bild-Upscaler](/de/power-local-llm/real-esrgan-ai-image-upscaler-review) — ein ergänzendes lokales Tool zum Hochskalieren von mit Stable Diffusion oder einem anderen Modell erzeugten Bildern.',
+          '[Real-ESRGAN-Rezension: KI-Bild-Upscaler](/de/power-local-llm/real-esrgan-ai-image-upscaler-review) — ein ergänzendes lokales Tool zum Hochskalieren von mit Stable Diffusion oder einem anderen Modell erzeugten Bildern.',
           '[Local LLM Software-Verzeichnis 2026](/de/directory) — umfassendes App- und Tool-Verzeichnis für alle Plattformen.',
         ],
       },

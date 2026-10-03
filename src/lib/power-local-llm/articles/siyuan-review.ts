@@ -286,9 +286,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Menschen, die eine selbst gehostete, datenschutzfreundliche Notiz- und Wissensmanagement-App mit blockbasierter Verlinkung, einem Plugin-Ökosystem und optionalen KI-Funktionen suchen',
     primaryTerm: 'SiYuan',
-    title: 'SiYuan im Test: Die datenschutzfreundliche, blockbasierte Wissensdatenbank',
+    title: 'SiYuan-Rezension: Die datenschutzfreundliche, blockbasierte Wissensdatenbank',
     seoTitle: 'SiYuan Review: Datenschutzfreundliche Notiz-App',
-    intro: 'SiYuan ([b3log.org/siyuan](https://b3log.org/siyuan), Quellcode unter [github.com/siyuan-note/siyuan](https://github.com/siyuan-note/siyuan)) ist eine kostenlose, quelloffene, selbst gehostete Wissensmanagement-App, die um einen blockbasierten Editor herum aufgebaut ist: Jeder Absatz, jede Überschrift und jedes Listenelement ist ein eigener adressierbarer Block, den man von jeder anderen Stelle der eigenen Notizen aus referenzieren, einbetten oder verlinken kann. Notizen und Blöcke werden vollständig auf dem eigenen Gerät gespeichert — verschlüsselte Cloud-Synchronisierung ist ein optionales kostenpflichtiges Zusatzangebot, keine Voraussetzung. Dieser Test behandelt, was SiYuan tatsächlich leistet, woher es kommt, wie man es herunterlädt, was es kostet und wie es im Vergleich zu anderen lokal-first Wissenstools wie Obsidian und Logseq abschneidet.',
+    intro: 'SiYuan ([b3log.org/siyuan](https://b3log.org/siyuan), Quellcode unter [github.com/siyuan-note/siyuan](https://github.com/siyuan-note/siyuan)) ist eine kostenlose, quelloffene, selbst gehostete Wissensmanagement-App, die um einen blockbasierten Editor herum aufgebaut ist: Jeder Absatz, jede Überschrift und jedes Listenelement ist ein eigener adressierbarer Block, den man von jeder anderen Stelle der eigenen Notizen aus referenzieren, einbetten oder verlinken kann. Notizen und Blöcke werden vollständig auf dem eigenen Gerät gespeichert — verschlüsselte Cloud-Synchronisierung ist ein optionales kostenpflichtiges Zusatzangebot, keine Voraussetzung. Diese Rezension behandelt, was SiYuan tatsächlich leistet, woher es kommt, wie man es herunterlädt, was es kostet und wie es im Vergleich zu anderen lokal-first Wissenstools wie Obsidian und Logseq abschneidet.',
     metaDescription: 'SiYuan ist eine kostenlose, quelloffene, blockbasierte Notiz-App, die Notizen vollständig lokal speichert, mit optionaler kostenpflichtiger Cloud-Synchronisierung. Geprüfte Funktionen und Preise für 2026.',
     readTime: '11 Min. Lesezeit',
     targetKeywords: [
@@ -348,7 +348,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Das GitHub-Repository zeigt Stand September 2026 rund 46.400 Stars',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test ist der vertiefende Begleitartikel zu SiYuans Eintrag im [Local LLM Software Directory](/de/directory) — dort sieht man auf einen Blick, wie SiYuan im Vergleich zu Dutzenden anderer lokal-first KI- und Wissenstools abschneidet.' },
+          { type: 'note', text: 'Diese Rezension ist der vertiefende Begleitartikel zu SiYuans Eintrag im [Local LLM Software Directory](/de/directory) — dort sieht man auf einen Blick, wie SiYuan im Vergleich zu Dutzenden anderer lokal-first KI- und Wissenstools abschneidet.' },
         ],
       },
       overview: {
@@ -370,7 +370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'siyuan-history',
         title: 'Projektgeschichte und Versions-Meilensteine von SiYuan',
         content: 'SiYuan wird von der B3log-Organisation entwickelt, einer in China ansässigen Open-Source-Gruppe, die seit Mitte der 2010er-Jahre mehrere Entwickler- und Content-Tools pflegt. Das Projekt wird auf GitHub kontinuierlich weiterentwickelt, und die Release-Historie (einsehbar auf der [GitHub-Releases-Seite](https://github.com/siyuan-note/siyuan/releases)) zeigt häufige Punkt-Releases — allein der Changelog der aktuellen Stable-Linie dokumentiert Dutzende Alpha-, Beta- und Stable-Builds.',
-        note: 'Stand dieses Tests ist SiYuans aktuelles Stable-Release Version 3.8.4 (17. September 2026), mit Pre-Release-Builds bereits im Test für 3.8.5. Jüngere Stable-Releases haben Rich-Text-Bearbeitung innerhalb von Datenbank-Tabellenzellen, erweiterte KI-Agenten-/Skill-Datei-Workflows, Unterstützung für die Anthropic Messages API neben OpenAI-kompatiblen Endpunkten sowie Zuverlässigkeitsverbesserungen bei der Sync-Wiederherstellung und der PDF-Annotation hinzugefügt. PromptQuorum konnte kein exaktes "erstes Release"-Datum aus einer offiziellen B3log-Ankündigung verifizieren; die Versionshistorie oben stammt aus dem live geführten GitHub-Changelog und nicht aus einer Gründungsdatums-Angabe — prüfen Sie [github.com/siyuan-note/siyuan/releases](https://github.com/siyuan-note/siyuan/releases) direkt für alles, was nach dem Veröffentlichungsdatum dieses Tests erschienen ist.',
+        note: 'Stand dieser Rezension ist SiYuans aktuelles Stable-Release Version 3.8.4 (17. September 2026), mit Pre-Release-Builds bereits im Test für 3.8.5. Jüngere Stable-Releases haben Rich-Text-Bearbeitung innerhalb von Datenbank-Tabellenzellen, erweiterte KI-Agenten-/Skill-Datei-Workflows, Unterstützung für die Anthropic Messages API neben OpenAI-kompatiblen Endpunkten sowie Zuverlässigkeitsverbesserungen bei der Sync-Wiederherstellung und der PDF-Annotation hinzugefügt. PromptQuorum konnte kein exaktes "erstes Release"-Datum aus einer offiziellen B3log-Ankündigung verifizieren; die Versionshistorie oben stammt aus dem live geführten GitHub-Changelog und nicht aus einer Gründungsdatums-Angabe — prüfen Sie [github.com/siyuan-note/siyuan/releases](https://github.com/siyuan-note/siyuan/releases) direkt für alles, was nach dem Veröffentlichungsdatum dieser Rezension erschienen ist.',
       },
       features: {
         id: 'what-siyuan-does',
@@ -433,7 +433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Stufe': 'PRO', 'Preis': '64 $ einmalig (Listenpreis 96 $)', 'Was sie hinzufügt': 'Integration von Drittanbieter-Sync/-Backup, einschließlich Amazon S3 und WebDAV' },
           { 'Stufe': 'Abonnement', 'Preis': '148 $ einmalig / lebenslang (Listenpreis 296 $)', 'Was sie hinzufügt': 'Alles aus PRO, plus offizielle Ende-zu-Ende-verschlüsselte Cloud-Synchronisierung mit 8 GB Speicher, einem Cloud-Posteingang und automatischem Backup' },
         ],
-        note: 'Die oben genannten Preise entsprechen den lebenslangen/einmaligen Beträgen, die zum Zeitpunkt dieses Tests auf SiYuans eigener Preisseite veröffentlicht waren — aktuelle Preise und etwaige Rabattaktionen bitte direkt auf [b3log.org/siyuan/en/pricing.html](https://b3log.org/siyuan/en/pricing.html) prüfen, da sich Preise und Angebote ändern können. Die Nutzung eines eigenen KI-Anbieters (OpenAI, ein selbst gehostetes Modell usw.) wird separat von diesem Anbieter abgerechnet, nicht von SiYuan.',
+        note: 'Die oben genannten Preise entsprechen den lebenslangen/einmaligen Beträgen, die zum Zeitpunkt dieser Rezension auf SiYuans eigener Preisseite veröffentlicht waren — aktuelle Preise und etwaige Rabattaktionen bitte direkt auf [b3log.org/siyuan/en/pricing.html](https://b3log.org/siyuan/en/pricing.html) prüfen, da sich Preise und Angebote ändern können. Die Nutzung eines eigenen KI-Anbieters (OpenAI, ein selbst gehostetes Modell usw.) wird separat von diesem Anbieter abgerechnet, nicht von SiYuan.',
       },
       comparisonObsidian: {
         id: 'siyuan-vs-obsidian',
@@ -482,8 +482,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'SiYuan vs. andere Wissensmanagement-Tools',
         content: 'SiYuan bewegt sich in einem kleinen Feld local-first, block- oder dateibasierter Wissensmanagement-Apps. PromptQuorum hat bislang keine eigenen FeatureAppPost-Tests für Obsidian oder Logseq als eigenständige Apps — die nächstliegenden bestehenden Tests in diesem Teilsegment sind unten aufgeführt, zusammen mit den zwei relevantesten externen Vergleichen. Siehe das [Local LLM Software Directory](/de/directory) für den vollständigen Katalog.',
         items: [
-          '**[Khoj](https://khoj.dev)** — ein selbst gehosteter, quelloffener KI-Assistent als "zweites Gehirn", der die eigenen Notizen und Dokumente indexiert und darüber chattet; der nächstliegende bestehende PromptQuorum-Test im Segment persönlicher Wissensassistenten. Siehe den [Khoj-AI-Test](/de/power-local-llm/khoj-ai-second-brain-review).',
-          '**Logseq Copilot** — eine KI-Browsererweiterung/-Plugin-Ergänzung für die quelloffene Outliner-App Logseq, keine eigenständige Wissensdatenbank-App wie SiYuan; dennoch der nächstliegende bestehende PromptQuorum-Test, der blockbasierte, local-first Notizen berührt. Siehe den [Logseq-Copilot-Test](/de/power-local-llm/logseq-copilot-review).',
+          '**[Khoj](https://khoj.dev)** — ein selbst gehosteter, quelloffener KI-Assistent als "zweites Gehirn", der die eigenen Notizen und Dokumente indexiert und darüber chattet; der nächstliegende bestehende PromptQuorum-Test im Segment persönlicher Wissensassistenten. Siehe den [Khoj-AI-Rezension](/de/power-local-llm/khoj-ai-second-brain-review).',
+          '**Logseq Copilot** — eine KI-Browsererweiterung/-Plugin-Ergänzung für die quelloffene Outliner-App Logseq, keine eigenständige Wissensdatenbank-App wie SiYuan; dennoch der nächstliegende bestehende PromptQuorum-Test, der blockbasierte, local-first Notizen berührt. Siehe den [Logseq-Copilot-Rezension](/de/power-local-llm/logseq-copilot-review).',
           '**[Obsidian](https://obsidian.md)** — eine Closed-Source, aber weit verbreitete Notiz-App mit lokalen Markdown-Dateien und einem sehr großen Plugin-/Theme-Ökosystem; siehe den dedizierten Vergleichsabschnitt oben (noch kein eigener PromptQuorum-Test zu Obsidian vorhanden).',
           '**[Logseq](https://logseq.com)** — ein quelloffener, local-first Outliner mit einer blockbasierten, bidirektional verlinkten Struktur, die konzeptionell näher an SiYuan liegt als an Obsidians dateibasiertem Modell; siehe direkt [logseq.com](https://logseq.com), da PromptQuorum noch keinen eigenständigen Logseq-App-Test hat.',
         ],
@@ -525,7 +525,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Welche Plattformen unterstützt SiYuan?', a: 'Windows, macOS, Linux, Android, iOS und HarmonyOS, laut der [offiziellen Download-Seite](https://b3log.org/siyuan/en/download.html), plus ein selbst hostbarer Docker-basierter Server-/Web-Modus.' },
           { q: 'Kann ich die SiYuan-Synchronisierung selbst hosten, statt für die offizielle Cloud zu bezahlen?', a: 'Ja. SiYuans PRO-Stufe unterstützt die Synchronisierung mit eigenem Drittanbieter-Speicher wie Amazon S3 oder einem WebDAV-Server, und das offizielle Docker-Image erlaubt außerdem den Betrieb einer selbst gehosteten Server-/Web-Instanz.' },
           { q: 'Wer entwickelt SiYuan?', a: 'SiYuan wird von [B3log](https://b3log.org) (Yunnan Liandi Technology Co., Ltd.) entwickelt, einer Organisation, die auch andere Open-Source-Tools wie die Blog-Engine Solo pflegt.' },
-          { q: 'Was ist SiYuans aktuelle Version?', a: 'Stand dieses Tests ist das aktuelle Stable-Release Version 3.8.4 (17. September 2026) — für alles, was nach dem Veröffentlichungsdatum dieses Tests erschienen ist, siehe die [offizielle GitHub-Releases-Seite](https://github.com/siyuan-note/siyuan/releases).' },
+          { q: 'Was ist SiYuans aktuelle Version?', a: 'Stand dieser Rezension ist das aktuelle Stable-Release Version 3.8.4 (17. September 2026) — für alles, was nach dem Veröffentlichungsdatum dieser Rezension erschienen ist, siehe die [offizielle GitHub-Releases-Seite](https://github.com/siyuan-note/siyuan/releases).' },
           { q: 'Unterstützt SiYuan Spaced Repetition / Karteikarten?', a: 'Ja. SiYuan enthält ein integriertes Karteikartensystem basierend auf dem FSRS-Algorithmus (Free Spaced Repetition Scheduler), mit dem sich bestehende Blöcke in den eigenen Notizen in Wiederholungskarten verwandeln lassen.' },
         ],
       },
@@ -536,9 +536,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { url: 'https://b3log.org/siyuan', title: 'SiYuan', description: 'Die offizielle Homepage, die SiYuans Positionierung als datenschutzorientiertes, blockbasiertes Wissensmanagementsystem beschreibt.' },
           { url: 'https://github.com/siyuan-note/siyuan', title: 'SiYuan auf GitHub', description: 'Das kanonische Quellcode-Repository mit README, Star-Anzahl und Release-Historie.' },
           { url: 'https://github.com/siyuan-note/siyuan/blob/master/LICENSE', title: 'SiYuan LICENSE-Datei', description: 'Der Lizenztext der Anwendung: AGPL-3.0.' },
-          { url: 'https://github.com/siyuan-note/siyuan/releases', title: 'SiYuan GitHub Releases', description: 'Offizielle Versionshistorie, verwendet für die Meilenstein- und Versionsnummer-Details dieses Tests.' },
+          { url: 'https://github.com/siyuan-note/siyuan/releases', title: 'SiYuan GitHub Releases', description: 'Offizielle Versionshistorie, verwendet für die Meilenstein- und Versionsnummer-Details dieser Rezension.' },
           { url: 'https://b3log.org/siyuan/en/download.html', title: 'SiYuan-Download-Seite', description: 'Offizielle plattformspezifische Download-Links für Windows, macOS, Linux, Android und iOS.' },
-          { url: 'https://b3log.org/siyuan/en/pricing.html', title: 'SiYuan-Preisseite', description: 'Offizielle Preise für die kostenlose Stufe, PRO und Abonnement, verwendet in diesem Test.' },
+          { url: 'https://b3log.org/siyuan/en/pricing.html', title: 'SiYuan-Preisseite', description: 'Offizielle Preise für die kostenlose Stufe, PRO und Abonnement, verwendet in dieser Rezension.' },
         ],
       },
       relatedReading: {
@@ -546,8 +546,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich SiYuans Directory-Eintrag.',
-          '[Khoj-AI-Test](/de/power-local-llm/khoj-ai-second-brain-review) — ein selbst gehosteter KI-Assistent als "zweites Gehirn", der mit den eigenen Notizen und Dokumenten chattet.',
-          '[Logseq-Copilot-Test](/de/power-local-llm/logseq-copilot-review) — eine KI-Ergänzung für den quelloffenen, blockbasierten Outliner Logseq.',
+          '[Khoj-AI-Rezension](/de/power-local-llm/khoj-ai-second-brain-review) — ein selbst gehosteter KI-Assistent als "zweites Gehirn", der mit den eigenen Notizen und Dokumenten chattet.',
+          '[Logseq-Copilot-Rezension](/de/power-local-llm/logseq-copilot-review) — eine KI-Ergänzung für den quelloffenen, blockbasierten Outliner Logseq.',
         ],
       },
     },

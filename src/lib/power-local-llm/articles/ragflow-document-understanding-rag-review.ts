@@ -239,10 +239,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Entwickler und technische Teams, die selbst gehostete RAG-Tools für Geschäftsdokumente mit echter Struktur evaluieren — gescannte Verträge, Finanztabellen, Berichte mit Fußnoten —, bei denen zitierfähige Retrieval-Qualität wichtiger ist als das einfachste mögliche Setup',
     primaryTerm: 'RAGFlow',
-    title: 'RAGFlow Test: Dokumentenverständnis & Zitate ab 16 GB RAM',
-    seoTitle: 'RAGFlow Test: Dokumentenverständnis ab 16 GB RAM',
+    title: 'RAGFlow-Rezension: Dokumentenverständnis & Zitate ab 16 GB RAM',
+    seoTitle: 'RAGFlow-Rezension: Dokumentenverständnis ab 16 GB RAM',
     intro: 'Die meisten RAG-Tools wandeln ein PDF zuerst in eine reine Textwand um — und verlieren dabei jede Tabelle, Fußnote und Querverweis. RAGFlow analysiert zuerst das Layout eines Dokuments und beantwortet Fragen anschließend mit Zitaten, die sich bis zum exakten Quell-Chunk zurückverfolgen lassen.',
-    metaDescription: 'RAGFlow im Test 2026: Open-Source-RAG-Engine (Apache 2.0) mit layoutbewusster Dokumentenanalyse und nachvollziehbaren Zitaten. Self-Hosting, Setup und Vergleich zu Quivr, Dify, LlamaIndex.',
+    metaDescription: 'RAGFlow-Rezension 2026: Open-Source-RAG-Engine (Apache 2.0) mit layoutbewusster Dokumentenanalyse und nachvollziehbaren Zitaten. Self-Hosting, Setup und Vergleich zu Quivr, Dify, LlamaIndex.',
     readTime: '13 Min. Lesezeit',
     targetKeywords: [
       'RAGFlow Test',
@@ -293,7 +293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nachvollziehbare Zitate: Jede Antwort verweist mit Vorschau auf den konkreten Chunk, aus dem sie generiert wurde',
           'Self-Hosting via Docker; Mindesthardware sind 4 CPU-Kerne, 16 GB RAM, 50 GB Speicher',
           'Am besten geeignet für dokumentenlastige Workflows (Verträge, Finanzberichte, gescannte Dokumente); für reine Text-Q&A genügt ein schlankeres Tool',
-          'Eine kostenpflichtige, gehostete Cloud ([cloud.ragflow.io](https://cloud.ragflow.io)) existiert ebenfalls für Teams ohne eigenes Hosting — dieser Test behandelt die selbst gehostete, quelloffene Bereitstellung',
+          'Eine kostenpflichtige, gehostete Cloud ([cloud.ragflow.io](https://cloud.ragflow.io)) existiert ebenfalls für Teams ohne eigenes Hosting — diese Rezension behandelt die selbst gehostete, quelloffene Bereitstellung',
         ],
       },
       overview: {
@@ -308,7 +308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Unterstützt Word, Slides, Excel, TXT, Bilder, gescannte Kopien, strukturierte Daten, Webseiten und mehr als Quelldokumente',
           'Bereitstellbar über Docker zum Self-Hosting oder über InfiniFlows kostenpflichtige gehostete Cloud ([cloud.ragflow.io](https://cloud.ragflow.io)), falls Sie keine eigene Infrastruktur betreiben möchten',
         ],
-        note: 'Dieser Test behandelt die selbst gehostete, Apache-2.0-lizenzierte Bereitstellung. RAGFlow erscheint in häufigen Releases — prüfen Sie vor dem Deployment den aktuellen GitHub-Changelog des Projekts auf den aktuellen Funktionsumfang.',
+        note: 'Diese Rezension behandelt die selbst gehostete, Apache-2.0-lizenzierte Bereitstellung. RAGFlow erscheint in häufigen Releases — prüfen Sie vor dem Deployment den aktuellen GitHub-Changelog des Projekts auf den aktuellen Funktionsumfang.',
       },
       documentUnderstanding: {
         id: 'document-understanding-citations',
@@ -350,7 +350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       setupGuide: {
         id: 'how-to-self-host-ragflow',
         title: 'Wie hostet man RAGFlow selbst?',
-        content: 'RAGFlow wird über Docker bereitgestellt. Dies sind die dokumentierten Schritte aus dem offiziellen Quickstart-Guide des Projekts, aktuell zum Zeitpunkt dieses Tests — prüfen Sie vor dem Deployment stets die Doku des Repositories auf den neuesten Release-Tag.',
+        content: 'RAGFlow wird über Docker bereitgestellt. Dies sind die dokumentierten Schritte aus dem offiziellen Quickstart-Guide des Projekts, aktuell zum Zeitpunkt dieser Rezension — prüfen Sie vor dem Deployment stets die Doku des Repositories auf den neuesten Release-Tag.',
         numberedItems: [
           'Prüfen Sie, ob Ihr System die Mindestanforderungen erfüllt: CPU mit 4+ Kernen (x86), 16 GB+ RAM, 50 GB+ freier Speicher, Docker 24.0.0+ und Docker Compose v2.26.1+.',
           'Erhöhen Sie unter Linux das Kernel-Limit für Memory-Maps für die integrierte Suchkomponente: sudo sysctl -w vm.max_map_count=262144, dann vm.max_map_count=262144 in /etc/sysctl.conf eintragen, damit es einen Neustart übersteht.',
@@ -425,7 +425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           { q: 'Was ist RAGFlow?', a: 'RAGFlow ist eine quelloffene (Apache 2.0) RAG-Engine von InfiniFlow, spezialisiert auf tiefes Dokumentenverständnis. Ein layoutbewusster Parser extrahiert Tabellen, Abbildungen und Struktur aus komplexen Dokumenten, und jede generierte Antwort verweist auf den exakten Quell-Chunk, aus dem sie stammt.' },
-          { q: 'Ist RAGFlow kostenlos?', a: 'Die selbst gehostete, quelloffene Bereitstellung ist unter der Apache-2.0-Lizenz kostenlos. InfiniFlow bietet zusätzlich eine separate, kostenpflichtige gehostete Cloud ([cloud.ragflow.io](https://cloud.ragflow.io)) für Teams ohne eigene Infrastruktur — das ist ein eigenständiges Produkt, getrennt von der kostenlosen Self-Hosting-Software, die dieser Test behandelt.' },
+          { q: 'Ist RAGFlow kostenlos?', a: 'Die selbst gehostete, quelloffene Bereitstellung ist unter der Apache-2.0-Lizenz kostenlos. InfiniFlow bietet zusätzlich eine separate, kostenpflichtige gehostete Cloud ([cloud.ragflow.io](https://cloud.ragflow.io)) für Teams ohne eigene Infrastruktur — das ist ein eigenständiges Produkt, getrennt von der kostenlosen Self-Hosting-Software, die diese Rezension behandelt.' },
           { q: 'Unter welcher Lizenz steht RAGFlow?', a: 'Apache License 2.0, die freie Nutzung, Veränderung und Weiterverbreitung erlaubt, auch in kommerziellen Produkten.' },
           { q: 'Wie funktioniert das Zitat-Feature von RAGFlow?', a: 'Jede von RAGFlow generierte Antwort enthält Verweise auf die konkreten Chunks, aus denen sie erstellt wurde. Die Oberfläche erlaubt eine Vorschau der zitierten Textstelle im Originaldokument, sodass Sie die Antwort gegen ihre tatsächliche Quelle prüfen können, statt der Zusammenfassung allein zu vertrauen.' },
           { q: 'Was unterscheidet RAGFlow von einem typischen RAG-Tool?', a: 'Die meisten RAG-Tools wandeln ein Dokument vor dem Chunking in reinen Text um, wodurch Tabellenstruktur, Fußnoten und Layout verloren gehen. RAGFlow analysiert zuerst das Layout — Tabellen bleiben Tabellen —, was besonders bei komplexen Geschäftsdokumenten wie gescannten Verträgen und Finanzberichten zählt.' },

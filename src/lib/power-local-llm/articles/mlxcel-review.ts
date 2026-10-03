@@ -284,9 +284,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'Entwickler, die eine native, schlanke Inferenz-Runtime für Apple Silicon oder NVIDIA CUDA suchen – ohne Python-Interpreter im Anfragepfad',
     primaryTerm: 'mlxcel',
-    title: 'mlxcel im Test: Rust-native MLX-Inferenz-Runtime',
+    title: 'mlxcel-Rezension: Rust-native MLX-Inferenz-Runtime',
     seoTitle: 'mlxcel Review 2026: Rust-MLX-Server für Apple Silicon',
-    intro: 'mlxcel ([github.com/lablup/mlxcel](https://github.com/lablup/mlxcel)) ist eine kostenlose, quelloffene, Rust-native Inferenz-CLI und ein Server für große Sprachmodelle, Vision-Language-Modelle, Embeddings, Reranking und Audio, entwickelt von [Lablup](https://lablup.com), dem Unternehmen hinter Backend.AI. Es führt MLX-SafeTensors-Checkpoints direkt über native MLX-C++-Bindings aus – ohne Python-Interpreter im Anfragepfad und ohne separaten Checkpoint-Konvertierungsschritt. Dieser Test zeigt, was das Tool tatsächlich leistet, wie man es installiert und für wen es geeignet ist.',
+    intro: 'mlxcel ([github.com/lablup/mlxcel](https://github.com/lablup/mlxcel)) ist eine kostenlose, quelloffene, Rust-native Inferenz-CLI und ein Server für große Sprachmodelle, Vision-Language-Modelle, Embeddings, Reranking und Audio, entwickelt von [Lablup](https://lablup.com), dem Unternehmen hinter Backend.AI. Es führt MLX-SafeTensors-Checkpoints direkt über native MLX-C++-Bindings aus – ohne Python-Interpreter im Anfragepfad und ohne separaten Checkpoint-Konvertierungsschritt. Diese Rezension zeigt, was das Tool tatsächlich leistet, wie man es installiert und für wen es geeignet ist.',
     metaDescription: 'mlxcel ist eine kostenlose, quelloffene Rust-Inferenz-Runtime von Lablup für Apple Silicon und NVIDIA CUDA. Geprüfte Installation, Funktionen und Lizenzierung für 2026.',
     readTime: '11 Min. Lesezeit',
     targetKeywords: [
@@ -306,7 +306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Entwickelt von [Lablup](https://lablup.com), dem Unternehmen hinter der KI-Infrastrukturplattform Backend.AI',
           'Läuft vollständig nativ – Rust und MLX-C++-Bindings, kein Python-Interpreter im Anfragepfad, kein Checkpoint-Konvertierungsschritt',
           'Bietet OpenAI-, Anthropic- und Vertex-kompatible API-Routen sowie eine dokumentierte, `llama-server`-kompatible Routen-Oberfläche',
-          'Über 467 GitHub-Sterne zum Zeitpunkt dieses Tests',
+          'Über 467 GitHub-Sterne zum Zeitpunkt dieser Rezension',
         ],
         updatedDate: '2026-09',
       },
@@ -342,10 +342,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Bietet OpenAI-, Anthropic- und Vertex-AI-kompatible Routen sowie eine dokumentierte, versionsgebundene `llama-server`-kompatible Routen- und Flag-Oberfläche',
           'Primäres Ziel ist Apple Silicon (Metal); NVIDIA CUDA unter Linux ist ein sekundäres Ziel; AMD ROCm unter Linux ist experimentell und nur per Quellcode-Build verfügbar',
           'Deckt Textgenerierung, Vision-Language-Eingaben, Embeddings, Reranking und Audio (Transkription und Sprachsynthese) in einer Runtime ab',
-          'Über 467 GitHub-Sterne zum Zeitpunkt dieses Tests',
+          'Über 467 GitHub-Sterne zum Zeitpunkt dieser Rezension',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test basiert auf dem mlxcel-GitHub-Repository, dessen README und der verlinkten Dokumentation. Er übernimmt mlxcels eigene veröffentlichte Performance-Vergleiche mit mlx-lm und mlx-vlm nicht als unabhängig verifizierte Fakten – diese Zahlen stammen aus der eigenen Benchmark-Methodik des Projekts und sind als herstellerseitig gemeldet zu betrachten, nicht als von PromptQuorum getestet. Dieser Test ist der Deep-Dive-Begleiter zu mlxcels Eintrag im [Local LLM Software Directory](/de/directory).' },
+          { type: 'note', text: 'Diese Rezension basiert auf dem mlxcel-GitHub-Repository, dessen README und der verlinkten Dokumentation. Er übernimmt mlxcels eigene veröffentlichte Performance-Vergleiche mit mlx-lm und mlx-vlm nicht als unabhängig verifizierte Fakten – diese Zahlen stammen aus der eigenen Benchmark-Methodik des Projekts und sind als herstellerseitig gemeldet zu betrachten, nicht als von PromptQuorum getestet. Diese Rezension ist der Deep-Dive-Begleiter zu mlxcels Eintrag im [Local LLM Software Directory](/de/directory).' },
         ],
       },
       overview: {
@@ -359,7 +359,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Lizenz: Apache 2.0, bestätigt über die LICENSE-Datei des Repositorys',
           'Begleitprodukt: [Backend.AI Go](https://go.backend.ai), im eigenen README von mlxcel als optionale grafische Begleit-Oberfläche für lokalen Chat und Modellverwaltung beschrieben, die auf `mlxcel-server` aufsetzen kann',
         ],
-        note: 'Da mlxcel von einem Unternehmen mit einem bestehenden kommerziellen Produkt (Backend.AI) entwickelt wird statt von einem Einzelentwickler, verfügt es über mehr institutionelle Unterstützung als viele Ein-Personen-Open-Source-Inferenz-Tools – dieser Test fand jedoch keine separate mlxcel-spezifische Preis- oder Enterprise-Support-Seite, die sich von Backend.AIs eigenem Angebot unterscheidet.',
+        note: 'Da mlxcel von einem Unternehmen mit einem bestehenden kommerziellen Produkt (Backend.AI) entwickelt wird statt von einem Einzelentwickler, verfügt es über mehr institutionelle Unterstützung als viele Ein-Personen-Open-Source-Inferenz-Tools – diese Rezension fand jedoch keine separate mlxcel-spezifische Preis- oder Enterprise-Support-Seite, die sich von Backend.AIs eigenem Angebot unterscheidet.',
       },
       history: {
         id: 'mlxcel-history',
@@ -368,10 +368,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         numberedItems: [
           { title: 'Frühe Releases (bis v0.0.28) — Apple-Silicon-first-Inferenz', whyItMatters: 'Das README des Projekts verweist auf eine frühere Benchmark-Kampagne (im README-Text selbst auf Mai 2026 datiert), die mit mlxcel 0.0.28 durchgeführt wurde – ein Hinweis darauf, dass das Projekt bereits in frühen veröffentlichten Versionen funktionierendes Text-Decode- und Prefill-Benchmarking hatte.' },
           { title: 'v0.6.0 — Spekulatives Decoding mit Exaktheitsrichtlinie', whyItMatters: 'Laut README führte dieses Release eine Richtlinie ein, die die Greedy-Exaktheit prüft, bevor schnellere spekulative Decoding-Pfade aktiviert werden, statt immer den schnellsten verfügbaren Kernel unabhängig von der Ausgabekorrektheit zu verwenden.' },
-          { title: 'v0.7.0 — Aktuelle Release-Basis', whyItMatters: 'Das README beschreibt dies als das neueste getaggte Release zum Zeitpunkt dieses Tests, mit Unterstützung für die DeepSeek-V4-Architektur, erweiterter llama-server-Routen-Kompatibilität und dtype-Korrekturen, die die Half-Precision-Performance bei mehreren Modellfamilien verbesserten.' },
-          { title: 'Unveröffentlichter `main` — Experimentelle AMD-ROCm-Unterstützung', whyItMatters: 'Zum Zeitpunkt dieses Tests ist AMD-GPU-Unterstützung über `--features rocm` im `main`-Branch vorhanden, aber laut dem README-Abschnitt „Current main highlights" noch nicht Teil eines getaggten Releases.' },
+          { title: 'v0.7.0 — Aktuelle Release-Basis', whyItMatters: 'Das README beschreibt dies als das neueste getaggte Release zum Zeitpunkt dieser Rezension, mit Unterstützung für die DeepSeek-V4-Architektur, erweiterter llama-server-Routen-Kompatibilität und dtype-Korrekturen, die die Half-Precision-Performance bei mehreren Modellfamilien verbesserten.' },
+          { title: 'Unveröffentlichter `main` — Experimentelle AMD-ROCm-Unterstützung', whyItMatters: 'Zum Zeitpunkt dieser Rezension ist AMD-GPU-Unterstützung über `--features rocm` im `main`-Branch vorhanden, aber laut dem README-Abschnitt „Current main highlights" noch nicht Teil eines getaggten Releases.' },
         ],
-        note: 'Versionsnummern und Feature-Zuschreibungen oben stammen aus mlxcels eigenem [README](https://github.com/lablup/mlxcel) und [CHANGELOG](https://github.com/lablup/mlxcel/blob/main/CHANGELOG.md) — dort direkt nachsehen für alles, was nach dem Veröffentlichungsdatum dieses Tests hinzugekommen ist, da das Projekt eine aktive, laufende Entwicklung beschreibt.',
+        note: 'Versionsnummern und Feature-Zuschreibungen oben stammen aus mlxcels eigenem [README](https://github.com/lablup/mlxcel) und [CHANGELOG](https://github.com/lablup/mlxcel/blob/main/CHANGELOG.md) — dort direkt nachsehen für alles, was nach dem Veröffentlichungsdatum dieser Rezension hinzugekommen ist, da das Projekt eine aktive, laufende Entwicklung beschreibt.',
       },
       features: {
         id: 'what-mlxcel-does',
@@ -430,7 +430,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Keine Kosten für die Installation oder Ausführung von mlxcel selbst — sowohl die Homebrew-Formel als auch der Quellcode-Build sind kostenlos',
           'Die Apache-2.0-Lizenz erlaubt kommerzielle Nutzung, Modifikation und Weiterverbreitung, vorbehaltlich der Standardbedingungen der Lizenz (Namensnennung und Erhalt des Lizenzhinweises)',
           'Die einzigen echten Kosten sind die zum Betrieb erforderliche Hardware (ein Apple-Silicon-Mac oder eine CUDA-fähige GPU) und der Speicherplatz für separat heruntergeladene Modelle',
-          'Lablup, das Unternehmen hinter mlxcel, verkauft auch [Backend.AI](https://backend.ai) als kommerzielles KI-Infrastrukturprodukt, doch dieser Test fand keine Hinweise darauf, dass eine mlxcel-Funktion hinter einem Backend.AI-Kauf gesperrt ist — die optionale Begleit-App [Backend.AI Go](https://go.backend.ai) wird im README von mlxcel als separate, optionale GUI beschrieben, nicht als Voraussetzung',
+          'Lablup, das Unternehmen hinter mlxcel, verkauft auch [Backend.AI](https://backend.ai) als kommerzielles KI-Infrastrukturprodukt, doch diese Rezension fand keine Hinweise darauf, dass eine mlxcel-Funktion hinter einem Backend.AI-Kauf gesperrt ist — die optionale Begleit-App [Backend.AI Go](https://go.backend.ai) wird im README von mlxcel als separate, optionale GUI beschrieben, nicht als Voraussetzung',
         ],
         note: 'Da mlxcel von einem Unternehmen mit bestehender kommerzieller Produktlinie unterstützt wird statt von einem Einzelentwickler, verfügt es über etwas mehr institutionelle Kontinuität als ein Ein-Personen-Open-Source-Projekt — allerdings wurden keine Preis- oder Roadmap-Zusagen gefunden, die sich speziell auf mlxcel beziehen und von Lablups allgemeiner Open-Source-Praxis abweichen.',
       },
@@ -481,7 +481,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Die meiste Verwirrung über mlxcel entsteht durch die Annahme, dass die Plattform-Unterstützung oder das Checkpoint-Format breiter sind als dokumentiert.',
         subsections: [
           { title: 'Fehler 1: Annehmen, AMD-ROCm-Unterstützung sei produktionsreif', content: 'Das README kennzeichnet die ROCm-Unterstützung ausdrücklich als experimentell und nur per Quellcode-Build, wobei einige fusionierte Kernel auf langsamere Ausführungspfade zurückfallen und bekannte offene Lücken in der Installationsanleitung dokumentiert sind.' },
-          { title: 'Fehler 2: Dieses Repository mit anderen gleichnamigen „mlxcel"-Forks verwechseln', content: 'Unter anderen GitHub-Benutzernamen existieren mehrere Forks des Namens. Dieser Test behandelt speziell [github.com/lablup/mlxcel](https://github.com/lablup/mlxcel), das Originalprojekt, bestätigt dadurch, dass andere Kopien es als übergeordnetes Projekt listen.' },
+          { title: 'Fehler 2: Dieses Repository mit anderen gleichnamigen „mlxcel"-Forks verwechseln', content: 'Unter anderen GitHub-Benutzernamen existieren mehrere Forks des Namens. Diese Rezension behandelt speziell [github.com/lablup/mlxcel](https://github.com/lablup/mlxcel), das Originalprojekt, bestätigt dadurch, dass andere Kopien es als übergeordnetes Projekt listen.' },
           { title: 'Fehler 3: GGUF-Checkpoint-Unterstützung erwarten', content: 'mlxcel lädt MLX-SafeTensors-Checkpoints, nicht das von llama.cpp und vielen Ollama-artigen Tools verwendete GGUF-Format. Vor der Annahme, dass ein Modell lädt, prüfen, ob es im MLX-Format veröffentlicht ist (häufig unter der Hugging-Face-Organisation `mlx-community`).' },
           { title: 'Fehler 4: mlxcels eigene veröffentlichte Performance-Vergleiche als unabhängig verifiziert behandeln', content: 'Performance-Zahlen gegenüber mlx-lm und mlx-vlm im README von mlxcel sind vom Projekt selbst gemessen, auf bestimmter Hardware und mit bestimmten Modell-Aufstellungen. Den Vergleich vor jeder Behandlung einer veröffentlichten Prozentzahl als Garantie für ein bestimmtes Modell auf der eigenen Hardware und mit den eigenen Checkpoints erneut durchführen.' },
         ],
@@ -512,7 +512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Welches Checkpoint-Format verwendet mlxcel?', a: 'MLX-SafeTensors-Checkpoints, einschließlich jener, die unter der Hugging-Face-Organisation `mlx-community` veröffentlicht werden — nicht das von llama.cpp verwendete GGUF-Format.' },
           { q: 'Ist mlxcel mit der API von llama.cpp kompatibel?', a: 'Ja, teilweise und bewusst so gestaltet: mlxcel dokumentiert ein eingefrorenes, versionsgebundenes Kompatibilitätsmanifest für `llama-server`-Routen und -Flags neben den eigenen OpenAI-, Anthropic- und Vertex-kompatiblen Endpunkten.' },
           { q: 'Unterstützt mlxcel Audio- und Vision-Modelle?', a: 'Ja. Es verarbeitet Vision-Language-Eingaben, Speech-to-Text-Transkription und Text-to-Speech-Synthese (über Modelle der Kokoro-Familie) neben Textgenerierung, Embeddings und Reranking.' },
-          { q: 'Hat PromptQuorum die Benchmark-Aussagen von mlxcel unabhängig getestet?', a: 'Nein. Dieser Test basiert auf dem eigenen GitHub-Repository und README von mlxcel, nicht auf praktischem Benchmarking durch PromptQuorum. Die Performance-Vergleiche im README des Projekts sind selbst gemessen.' },
+          { q: 'Hat PromptQuorum die Benchmark-Aussagen von mlxcel unabhängig getestet?', a: 'Nein. Diese Rezension basiert auf dem eigenen GitHub-Repository und README von mlxcel, nicht auf praktischem Benchmarking durch PromptQuorum. Die Performance-Vergleiche im README des Projekts sind selbst gemessen.' },
         ],
       },
       sources: {

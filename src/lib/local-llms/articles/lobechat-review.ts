@@ -295,10 +295,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-11',
     theme: 'Tools & Interfaces',
     heroImage: '/images/lobechat-review-hero-de.webp',
-    title: 'LobeChat im Test 2026: Selbst gehostete KI-Chat-Oberfläche mit Agenten und Plugins',
+    title: 'LobeChat-Rezension 2026: Selbst gehostete KI-Chat-Oberfläche mit Agenten und Plugins',
     dateModified: '2026-09-11',
-    seoTitle: 'LobeChat im Test 2026: Selbst gehostete Chat-UI',
-    intro: 'LobeChat ([lobehub.com](https://lobehub.com), Quellcode auf [github.com/lobehub/lobe-chat](https://github.com/lobehub/lobe-chat)) ist eine kostenlose, quelloffene, selbst gehostete Chat-Oberfläche von LobeHub. Sie verbindet sich mit OpenAI, Anthropic, Google Gemini und jedem OpenAI-kompatiblen Endpunkt -- einschließlich eines lokalen [Ollama](/de/local-llms/how-to-install-ollama)- oder LM-Studio-Servers -- und ergänzt einen Agenten-/Persona-Builder, einen Plugin-Marktplatz, Dokumenten-Wissensdatenbanken und multimodale Funktionen (Bildverständnis, Text-zu-Sprache). Dieser Test zeigt, was LobeChat wirklich kann, welche Lizenz gilt, wie Sie es selbst hosten, was es kostet und wie es im Vergleich zu anderen selbst gehosteten Chat-Oberflächen abschneidet.',
+    seoTitle: 'LobeChat-Rezension 2026: Selbst gehostete Chat-UI',
+    intro: 'LobeChat ([lobehub.com](https://lobehub.com), Quellcode auf [github.com/lobehub/lobe-chat](https://github.com/lobehub/lobe-chat)) ist eine kostenlose, quelloffene, selbst gehostete Chat-Oberfläche von LobeHub. Sie verbindet sich mit OpenAI, Anthropic, Google Gemini und jedem OpenAI-kompatiblen Endpunkt -- einschließlich eines lokalen [Ollama](/de/local-llms/how-to-install-ollama)- oder LM-Studio-Servers -- und ergänzt einen Agenten-/Persona-Builder, einen Plugin-Marktplatz, Dokumenten-Wissensdatenbanken und multimodale Funktionen (Bildverständnis, Text-zu-Sprache). Diese Rezension zeigt, was LobeChat wirklich kann, welche Lizenz gilt, wie Sie es selbst hosten, was es kostet und wie es im Vergleich zu anderen selbst gehosteten Chat-Oberflächen abschneidet.',
     metaDescription: 'LobeChat ist eine kostenlose, selbst gehostete Chat-Oberfläche mit Agenten-Builder, Plugin-Marktplatz und RAG, die sich mit OpenAI, Anthropic und lokalen Modellen verbindet. Lizenz, Installation und Preise 2026.',
     publishDate: '2026-09-11',
     leadAnswerBlock: '**LobeChat (82.000+ GitHub-Sterne, [github.com/lobehub/lobe-chat](https://github.com/lobehub/lobe-chat)) ist eine kostenlose, selbst hostbare Chat-Oberfläche von LobeHub, die sich mit OpenAI, Anthropic, Google Gemini und jedem OpenAI-kompatiblen Endpunkt verbindet, einschließlich eines lokalen Ollama- oder LM-Studio-Servers.** Die Lizenz ist nicht reines MIT: Die LobeHub Community License (eine Variante der Apache License 2.0) erlaubt kostenloses Self-Hosting und kommerzielle Nutzung im Ist-Zustand, aber der Vertrieb eines modifizierten abgeleiteten Produkts erfordert eine kostenpflichtige kommerzielle Lizenz von LobeHub. LobeChat läuft als Docker-Container oder wird auf Vercel, Zeabur oder Alibaba Cloud bereitgestellt und ergänzt einen Agenten-/Persona-Builder, einen Plugin-Marktplatz, Dokumenten-Wissensdatenbanken (RAG) sowie Bildverständnis- und Sprachausgabe-Unterstützung.',
@@ -310,7 +310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'LobeChat im Test 2026: Selbst gehostete Chat-UI',
+      'headline': 'LobeChat-Rezension 2026: Selbst gehostete Chat-UI',
       'description': 'LobeChat ist eine kostenlose, selbst gehostete Chat-Oberfläche mit Agenten-Builder, Plugin-Marktplatz und RAG, die sich mit OpenAI, Anthropic und lokalen Modellen verbindet. Lizenz, Installation und Preise 2026.',
       'url': 'https://www.promptquorum.com/de/local-llms/lobechat-review',
       'datePublished': '2026-09-11',
@@ -409,7 +409,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Eine gehostete Alternative, LobeHub Cloud, startet bei 9,9 $/Monat für alle, die nicht selbst hosten wollen.',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test ist der ausführliche Begleitartikel zu LobeChats Eintrag im [Local LLM Software Directory](/de/directory) -- dort finden Sie einen Überblick, wie LobeChat im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Rezension ist der ausführliche Begleitartikel zu LobeChats Eintrag im [Local LLM Software Directory](/de/directory) -- dort finden Sie einen Überblick, wie LobeChat im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       quickFacts: {
@@ -442,7 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Das Projekt veröffentlicht häufig Updates: Die jüngste Entwicklung konzentrierte sich auf den Agenten-/Persona-Builder, einen wachsenden Plugin-Marktplatz mit Tool-Integrationen und Funktionen für Dokumenten-Wissensdatenbanken für Retrieval-Augmented Generation, neben dem zugrunde liegenden Multi-Anbieter-Chat-Kern.',
           'Ein wichtiger Punkt für jeden, der LobeChat kommerziell bewertet, ist die **Lizenz**. Der Code ist nicht reines MIT oder unverändertes Apache 2.0 -- er läuft unter der **LobeHub Community License**, die kostenloses Self-Hosting und kommerzielle Nutzung im Ist-Zustand erlaubt, aber eine separate kostenpflichtige kommerzielle Lizenz (Kontakt: [hello@lobehub.com](mailto:hello@lobehub.com)) für den Vertrieb eines modifizierten abgeleiteten Produkts verlangt.',
         ],
-        note: 'Sternezahlen, Release Notes und der aktuelle Lizenztext ändern sich mit der Zeit -- prüfen Sie direkt unter [github.com/lobehub/lobe-chat](https://github.com/lobehub/lobe-chat), was nach diesem Test veröffentlicht wurde.',
+        note: 'Sternezahlen, Release Notes und der aktuelle Lizenztext ändern sich mit der Zeit -- prüfen Sie direkt unter [github.com/lobehub/lobe-chat](https://github.com/lobehub/lobe-chat), was nach dieser Rezension veröffentlicht wurde.',
       },
       keyFeatures: {
         id: 'key-features',
@@ -568,8 +568,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Local LLM Software Directory](/de/directory) -- der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich LobeChats eigenem Directory-Eintrag.',
-          '[Open WebUI im Test](/de/local-llms/open-webui-review) -- eine selbst gehostete Alternative, am engsten mit Ollama verzahnt.',
-          '[LibreChat im Test](/de/power-local-llm/librechat-review) -- eine selbst gehostete Alternative zur Verwaltung vieler Cloud-Anbieter-API-Schlüssel.',
+          '[Open-WebUI-Rezension](/de/local-llms/open-webui-review) -- eine selbst gehostete Alternative, am engsten mit Ollama verzahnt.',
+          '[LibreChat-Rezension](/de/power-local-llm/librechat-review) -- eine selbst gehostete Alternative zur Verwaltung vieler Cloud-Anbieter-API-Schlüssel.',
           '[Cherry Studio](/de/local-llms/cherry-studio-ai-desktop-client) -- eine Einzelbenutzer-Desktop-Alternative, die keinen Server braucht.',
           '[LobeChat, Big-AGI, NextChat, Page Assist, Chatbox im Vergleich](/de/local-llms/lobechat-bigagi-nextchat-pageassist-chatbox-compared) -- wie LobeChat im Vergleich zu vier weiteren Chat-Oberflächen-Apps abschneidet.',
         ],

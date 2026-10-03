@@ -470,14 +470,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Local AI Agents & Tool Use',
     heroImage: '/images/rapr-ai-review-hero-de.webp',
-    title: 'RAPR AI im Test: Lokale Desktop-Kommandozentrale für Ollama, Claude und Gemini',
-    seoTitle: 'RAPR AI Test: Kommandozentrale für KI-Agenten',
+    title: 'RAPR-AI-Rezension: Lokale Desktop-Kommandozentrale für Ollama, Claude und Gemini',
+    seoTitle: 'RAPR-AI-Rezension: Kommandozentrale für KI-Agenten',
     intro:
-      'RAPR AI, entwickelt von RAPR AI und verfügbar unter [raprai.com](https://raprai.com/), positioniert sich als "lokale Desktop-Kommandozentrale für jede KI, die Sie nutzen". Die App ersetzt nicht Ollama, Claude, Gemini, Codex oder Cursor — sie legt sich vor diese Werkzeuge und bietet eine einzige Windows-Oberfläche, um Aufgaben zu verteilen, den Desktop zu automatisieren, Kontext zu behalten und Arbeit an das jeweils passende KI-Backend weiterzuleiten. Die praktische Frage, die dieser Test beantwortet, ist enger gefasst als die Marketing-Aussage: RAPR AI ist nur dann lokal und offline, wenn Sie sie auf Ollama auf Ihrem eigenen Rechner konfigurieren; jedes andere unterstützte Backend ist ein Cloud-API-Aufruf, der über die RAPR-AI-Oberfläche geleitet wird — genau wie bei direkter Nutzung des jeweiligen Dienstes.',
+      'RAPR AI, entwickelt von RAPR AI und verfügbar unter [raprai.com](https://raprai.com/), positioniert sich als "lokale Desktop-Kommandozentrale für jede KI, die Sie nutzen". Die App ersetzt nicht Ollama, Claude, Gemini, Codex oder Cursor — sie legt sich vor diese Werkzeuge und bietet eine einzige Windows-Oberfläche, um Aufgaben zu verteilen, den Desktop zu automatisieren, Kontext zu behalten und Arbeit an das jeweils passende KI-Backend weiterzuleiten. Die praktische Frage, die diese Rezension beantwortet, ist enger gefasst als die Marketing-Aussage: RAPR AI ist nur dann lokal und offline, wenn Sie sie auf Ollama auf Ihrem eigenen Rechner konfigurieren; jedes andere unterstützte Backend ist ein Cloud-API-Aufruf, der über die RAPR-AI-Oberfläche geleitet wird — genau wie bei direkter Nutzung des jeweiligen Dienstes.',
     metaDescription:
-      'RAPR AI im Test: eine kostenlose Windows-App im Early Access, die lokale Ollama-Modelle und Cloud-KI (Claude, Gemini, Codex, Cursor) orchestriert — mit Automatisierung, Gedächtnis und MCP-Konnektoren.',
+      'RAPR-AI-Rezension: eine kostenlose Windows-App im Early Access, die lokale Ollama-Modelle und Cloud-KI (Claude, Gemini, Codex, Cursor) orchestriert — mit Automatisierung, Gedächtnis und MCP-Konnektoren.',
     twitterDescription:
-      'RAPR AI im Test: kostenlose Windows-App im Early Access, die zwischen lokalen Ollama-Modellen und Cloud-KI (Claude, Gemini, Cursor) vermittelt — mit Workflow-Automatisierung, Gedächtnis und MCP-Konnektoren.',
+      'RAPR-AI-Rezension: kostenlose Windows-App im Early Access, die zwischen lokalen Ollama-Modellen und Cloud-KI (Claude, Gemini, Cursor) vermittelt — mit Workflow-Automatisierung, Gedächtnis und MCP-Konnektoren.',
     audience:
       'Windows-Nutzer, die bereits lokal Ollama betreiben und zusätzlich Konten bei Cloud-KI-Diensten (Claude, Gemini, Codex, Cursor) haben und einen gemeinsamen Arbeitsbereich für Orchestrierung, Automatisierung und Kontexthaltung über beide hinweg suchen.',
     readTime: '9 Min. Lesezeit',
@@ -581,7 +581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plattform / Tarif': 'Windows',
             'Status': 'Jetzt unterstützt',
-            'Was Sie erwarten können': 'RAPR AI läuft heute auf Windows 10 und neuer. Dies ist zum Zeitpunkt dieses Tests die einzige Plattform mit veröffentlichtem Release.',
+            'Was Sie erwarten können': 'RAPR AI läuft heute auf Windows 10 und neuer. Dies ist zum Zeitpunkt dieser Rezension die einzige Plattform mit veröffentlichtem Release.',
           },
           {
             'Plattform / Tarif': 'macOS',
@@ -618,7 +618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mac- oder Linux-Nutzer, die heute eine funktionierende App brauchen.** RAPR AI ist derzeit nur für Windows verfügbar; macOS- und Linux-Support werden als in Arbeit befindlich beschrieben, sind aber nicht verfügbar. Planen Sie nicht damit, bis ein Release für Ihre Plattform erscheint.',
           '**Nutzer, die ein rein offline arbeitendes, cloud-freies Werkzeug wollen.** RAPR AI ist ein hybrider Orchestrator. Sofern nicht jeder von Ihnen erstellte Workflow auf Ollama eingestellt ist, gehen einige Ihrer Unterhaltungen an Claude, Gemini, Codex, Cursor oder OpenRouter — genau wie bei direkter Nutzung dieser Dienste.',
           '**Nutzer, die heute einen stabilen, langfristig unterstützten Funktionsumfang benötigen.** Kostenlose Software im Early Access von einem kleinen Anbieter ändert Funktionen, Preise und Plattform-Support wahrscheinlicher als ein etabliertes Produkt. Kalkulieren Sie das ein, wenn Sie einen Workflow darauf aufbauen wollen.',
-          '**Nutzer, die unabhängig geprüfte Leistungs- oder Zuverlässigkeitszahlen benötigen.** Derzeit liegen keine unabhängigen Benchmark-, Verfügbarkeits- oder Nutzerbewertungsdaten zu RAPR AI vor; dieser Test hat die Angaben des Anbieters zu Funktionen und Datenumgang nicht unabhängig geprüft.',
+          '**Nutzer, die unabhängig geprüfte Leistungs- oder Zuverlässigkeitszahlen benötigen.** Derzeit liegen keine unabhängigen Benchmark-, Verfügbarkeits- oder Nutzerbewertungsdaten zu RAPR AI vor; diese Rezension hat die Angaben des Anbieters zu Funktionen und Datenumgang nicht unabhängig geprüft.',
         ],
       },
       faq: {
@@ -635,7 +635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Gibt es RAPR AI für Mac oder Linux?',
-            a: 'Noch nicht. Zum Zeitpunkt dieses Tests läuft RAPR AI ausschließlich auf Windows 10 und neuer. RAPR AI hat angekündigt, dass macOS- und Linux-Support in Arbeit sind, aber für keines der beiden gibt es ein veröffentlichtes Datum.',
+            a: 'Noch nicht. Zum Zeitpunkt dieser Rezension läuft RAPR AI ausschließlich auf Windows 10 und neuer. RAPR AI hat angekündigt, dass macOS- und Linux-Support in Arbeit sind, aber für keines der beiden gibt es ein veröffentlichtes Datum.',
           },
           {
             q: 'Was ist die AI-Council-Funktion in RAPR AI?',
@@ -643,7 +643,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Speichert RAPR AI meine Daten oder API-Schlüssel in der Cloud?',
-            a: 'RAPR AIs eigene Angabe lautet, dass Orchestrierungs- und Sitzungsdaten, der gemeinsame Gedächtnis-Speicher sowie Ihre API-Schlüssel und Zugangsdaten unabhängig davon, an welches KI-Backend (lokal oder Cloud) eine Aufgabe geroutet wird, auf Ihrem Rechner bleiben. Prüfen Sie vor der Nutzung für sensible Aufgaben direkt die aktuelle Datenschutzerklärung von RAPR AI — dieser Test hat diese Angabe nicht unabhängig geprüft. Dies ist keine Rechtsberatung.',
+            a: 'RAPR AIs eigene Angabe lautet, dass Orchestrierungs- und Sitzungsdaten, der gemeinsame Gedächtnis-Speicher sowie Ihre API-Schlüssel und Zugangsdaten unabhängig davon, an welches KI-Backend (lokal oder Cloud) eine Aufgabe geroutet wird, auf Ihrem Rechner bleiben. Prüfen Sie vor der Nutzung für sensible Aufgaben direkt die aktuelle Datenschutzerklärung von RAPR AI — diese Rezension hat diese Angabe nicht unabhängig geprüft. Dies ist keine Rechtsberatung.',
           },
           {
             q: 'Was ist die Funktion "Computer Use" bzw. Desktop-Automatisierung in RAPR AI?',

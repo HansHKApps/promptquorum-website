@@ -449,19 +449,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-05',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/pocketpal-ai-review-hero-de.webp',
-    title: 'PocketPal AI im Test: Kostenloser, quelloffener Chat auf dem Gerät',
-    seoTitle: 'PocketPal AI Test: Open-Source lokaler Chat',
+    title: 'PocketPal-AI-Rezension: Kostenloser, quelloffener Chat auf dem Gerät',
+    seoTitle: 'PocketPal-AI-Rezension: Open-Source lokaler Chat',
     intro:
-      'PocketPal AI ist eine kostenlose, unter der MIT-Lizenz quelloffene App für iPhone, iPad und Android, die GGUF-Sprachmodelle direkt auf dem Gerät ausführt — ohne Serverumweg und ohne Konto für den Chat. Entwickelt hat sie Asghar Ghorbani, der die App zunächst als privates Projekt startete, bevor er den Code auf [GitHub](https://github.com/a-ghorbani/pocketpal-ai) veröffentlichte. Dieser Test beschreibt, was die App heute leistet, welche Modelle sie mitbringt, welche Hardware wirklich nötig ist, wie das Preismodell tatsächlich aussieht (die Basis-App ist kostenlos; ein optionaler Community-Marktplatz namens PalsHub verkauft Premium-Presets) und für wen sie sich eignet — und für wen nicht.',
+      'PocketPal AI ist eine kostenlose, unter der MIT-Lizenz quelloffene App für iPhone, iPad und Android, die GGUF-Sprachmodelle direkt auf dem Gerät ausführt — ohne Serverumweg und ohne Konto für den Chat. Entwickelt hat sie Asghar Ghorbani, der die App zunächst als privates Projekt startete, bevor er den Code auf [GitHub](https://github.com/a-ghorbani/pocketpal-ai) veröffentlichte. Diese Rezension beschreibt, was die App heute leistet, welche Modelle sie mitbringt, welche Hardware wirklich nötig ist, wie das Preismodell tatsächlich aussieht (die Basis-App ist kostenlos; ein optionaler Community-Marktplatz namens PalsHub verkauft Premium-Presets) und für wen sie sich eignet — und für wen nicht.',
     metaDescription:
-      'PocketPal AI im Test: eine kostenlose, MIT-lizenzierte Open-Source-App, die GGUF-Modelle lokal auf iPhone und Android ausführt. Modelle, RAM-Bedarf, Preise und Zielgruppe.',
+      'PocketPal-AI-Rezension: eine kostenlose, MIT-lizenzierte Open-Source-App, die GGUF-Modelle lokal auf iPhone und Android ausführt. Modelle, RAM-Bedarf, Preise und Zielgruppe.',
     twitterDescription:
-      'PocketPal AI Test 2026: die kostenlose Open-Source-App, die GGUF-Modelle auf dem Gerät für iPhone und Android ausführt. Funktionsumfang, Kosten und für wen sich der Umstieg lohnt.',
+      'PocketPal-AI-Rezension 2026: die kostenlose Open-Source-App, die GGUF-Modelle auf dem Gerät für iPhone und Android ausführt. Funktionsumfang, Kosten und für wen sich der Umstieg lohnt.',
     audience:
       'Datenschutzbewusste iPhone- und Android-Nutzer, die offene KI-Modelle lokal ausführen möchten, ohne für eine kommerzielle App zu bezahlen.',
     readTime: '10 Min. Lesezeit',
     educationalLevel: 'Intermediate',
-    primaryTerm: 'PocketPal AI Test',
+    primaryTerm: 'PocketPal AI Rezension',
     targetKeywords: [
       'pocketpal ai test',
       'pocketpal ai android',
@@ -475,7 +475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Gemma 2', 'Qwen', 'Phi', 'Danube 3'],
     current_hardware_mentioned: ['iPhone', 'iPad', 'Android'],
     leadAnswerBlock:
-      '**PocketPal AI ist eine kostenlose, quelloffene App (MIT-Lizenz), die GGUF-Sprachmodelle vollständig auf Ihrem iPhone, iPad oder Android-Gerät ausführt — ohne Cloud-Abhängigkeit für den Chat.** Entwickelt von Asghar Ghorbani und auf [GitHub](https://github.com/a-ghorbani/pocketpal-ai) gehostet (zum Zeitpunkt dieses Tests über 8.000 Sterne), bietet die App den schnellen Download von Modellen wie Gemma 2, Qwen, Phi und Danube 3 sowie die Möglichkeit, jede andere GGUF-Datei von Hugging Face zu laden. Die Kern-App kostet nichts; ein optionaler In-App-Marktplace namens PalsHub verkauft Premium-Assistenten-Presets, aber das Chatten mit einem heruntergeladenen Modell ist kostenlos.',
+      '**PocketPal AI ist eine kostenlose, quelloffene App (MIT-Lizenz), die GGUF-Sprachmodelle vollständig auf Ihrem iPhone, iPad oder Android-Gerät ausführt — ohne Cloud-Abhängigkeit für den Chat.** Entwickelt von Asghar Ghorbani und auf [GitHub](https://github.com/a-ghorbani/pocketpal-ai) gehostet (zum Zeitpunkt dieser Rezension über 8.000 Sterne), bietet die App den schnellen Download von Modellen wie Gemma 2, Qwen, Phi und Danube 3 sowie die Möglichkeit, jede andere GGUF-Datei von Hugging Face zu laden. Die Kern-App kostet nichts; ein optionaler In-App-Marktplace namens PalsHub verkauft Premium-Assistenten-Presets, aber das Chatten mit einem heruntergeladenen Modell ist kostenlos.',
     quickAnswerTop: {
       de: {
         question: 'Lohnt sich PocketPal AI für privaten, offline lauffähigen KI-Chat?',
@@ -535,7 +535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Dieser Test basiert auf dem öffentlichen [GitHub-Repository](https://github.com/a-ghorbani/pocketpal-ai), der projektinternen Dokumentation sowie den Einträgen im App Store und bei Google Play, geprüft im September 2026. PromptQuorum hat für diesen Test keine eigenen Hands-on-Benchmarks von PocketPal AI durchgeführt — die Leistungsangaben unten sind allgemeine Hardware-Richtwerte für lokale LLMs, keine app-spezifischen Messungen.',
+            text: 'Diese Rezension basiert auf dem öffentlichen [GitHub-Repository](https://github.com/a-ghorbani/pocketpal-ai), der projektinternen Dokumentation sowie den Einträgen im App Store und bei Google Play, geprüft im September 2026. PromptQuorum hat für diese Rezension keine eigenen Hands-on-Benchmarks von PocketPal AI durchgeführt — die Leistungsangaben unten sind allgemeine Hardware-Richtwerte für lokale LLMs, keine app-spezifischen Messungen.',
           },
         ],
       },
@@ -553,13 +553,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Wer hat PocketPal AI entwickelt?',
         content: [
           '**PocketPal AI wurde von Asghar Ghorbani entwickelt, der die App zunächst als privates Nebenprojekt startete, um kleine Sprachmodelle auf seinem eigenen Handy auszuführen, bevor er sie nach wachsendem öffentlichen Interesse quelloffen veröffentlichte.** Ghorbani beschrieb den Ursprung und die Motivation des Projekts in einem [Medium-Beitrag, „PocketPal AI: Tiny LLMs in the Pocket"](https://medium.com/@ghorbani59/pocketpal-ai-tiny-llms-in-the-pocket-6a65d0271a75), in dem er das Ziel beschreibt, die Leistungsfähigkeit kleiner Sprachmodelle direkt in seine Tasche zu bringen.',
-          'Das Projekt wird in der Freizeit des Entwicklers gepflegt, nicht von einem finanzierten Unternehmen oder einem festen Team — die projekteigene Einrichtungsdokumentation weist ausdrücklich darauf hin, was wichtig zu wissen ist, bevor man Support-Reaktionszeiten wie bei einem Unternehmen erwartet. Das GitHub-Repository ([a-ghorbani/pocketpal-ai](https://github.com/a-ghorbani/pocketpal-ai)) hat zum Zeitpunkt dieses Tests über 8.000 Sterne und mehr als 850 Forks gesammelt und erhält weiterhin regelmäßig neue Versionen mit neuer Modellunterstützung, Oberflächenänderungen und Funktionserweiterungen wie Internetsuche im Chat, angehefteten Chats und Markdown-Export.',
+          'Das Projekt wird in der Freizeit des Entwicklers gepflegt, nicht von einem finanzierten Unternehmen oder einem festen Team — die projekteigene Einrichtungsdokumentation weist ausdrücklich darauf hin, was wichtig zu wissen ist, bevor man Support-Reaktionszeiten wie bei einem Unternehmen erwartet. Das GitHub-Repository ([a-ghorbani/pocketpal-ai](https://github.com/a-ghorbani/pocketpal-ai)) hat zum Zeitpunkt dieser Rezension über 8.000 Sterne und mehr als 850 Forks gesammelt und erhält weiterhin regelmäßig neue Versionen mit neuer Modellunterstützung, Oberflächenänderungen und Funktionserweiterungen wie Internetsuche im Chat, angehefteten Chats und Markdown-Export.',
         ],
         items: [
           'Entwickler: Asghar Ghorbani (GitHub: [a-ghorbani](https://github.com/a-ghorbani)), unabhängig tätig statt als Unternehmen.',
           'Gestartet als privates Projekt zum lokalen Ausführen kleiner Sprachmodelle; nach öffentlichem Interesse quelloffen veröffentlicht.',
           'Lizenz: MIT — permissiv, kostenlos nutzbar, veränderbar und weiterverwendbar.',
-          'Über 8.000 GitHub-Sterne und mehr als 850 Forks zum Zeitpunkt dieses Tests, mit aktivem Issue-Tracker und Pull-Request-Historie.',
+          'Über 8.000 GitHub-Sterne und mehr als 850 Forks zum Zeitpunkt dieser Rezension, mit aktivem Issue-Tracker und Pull-Request-Historie.',
           'Entwicklungstempo: häufige Punkt-Releases mit Laufzeit-Updates, neuen Oberflächenfunktionen und erweiterter Sprachunterstützung, ehrenamtlich gepflegt.',
         ],
       },
@@ -639,7 +639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Plattform': 'Mac / Windows / Linux',
-            'Verfügbarkeit': 'Zum Zeitpunkt dieses Tests keine Desktop-Version gefunden',
+            'Verfügbarkeit': 'Zum Zeitpunkt dieser Rezension keine Desktop-Version gefunden',
             'Hinweise': 'PocketPal AI ist eine reine Mobil-App. Desktop-Nutzer, die einen lokalen GGUF-Chat-Client suchen, sollten stattdessen Ollama, LM Studio oder Jan AI in Betracht ziehen.',
           },
         ],
@@ -801,7 +801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist PocketPal AI sicher für private Unterhaltungen?',
-            a: 'Da die Inferenz lokal läuft und der Quellcode unter der MIT-Lizenz öffentlich einsehbar und prüfbar ist, muss PocketPal AI keine Chat-Inhalte an einen Server senden, um zu funktionieren. Dieser Test umfasst kein eigenständiges Sicherheitsaudit der App; Nutzer, die diese Sicherheit benötigen, sollten das öffentliche Repository oder dessen Issue-Tracker selbst prüfen.',
+            a: 'Da die Inferenz lokal läuft und der Quellcode unter der MIT-Lizenz öffentlich einsehbar und prüfbar ist, muss PocketPal AI keine Chat-Inhalte an einen Server senden, um zu funktionieren. Diese Rezension umfasst kein eigenständiges Sicherheitsaudit der App; Nutzer, die diese Sicherheit benötigen, sollten das öffentliche Repository oder dessen Issue-Tracker selbst prüfen.',
           },
           {
             q: 'Wie schneidet PocketPal AI im Vergleich zu Private LLM oder Loci ab?',
@@ -823,7 +823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         items: [
-          '[PocketPal AI auf GitHub](https://github.com/a-ghorbani/pocketpal-ai) — Quellcode, Lizenz (MIT), Release-Historie sowie die in diesem Test genannten Stern-/Fork-Zahlen.',
+          '[PocketPal AI auf GitHub](https://github.com/a-ghorbani/pocketpal-ai) — Quellcode, Lizenz (MIT), Release-Historie sowie die in dieser Rezension genannten Stern-/Fork-Zahlen.',
           '[Einstiegsdokumentation von PocketPal AI](https://github.com/a-ghorbani/pocketpal-ai/blob/main/docs/getting_started.md) — Einrichtungsschritte, mitgelieferte Modelle und Hinweise zur GPU-Beschleunigung.',
           '[PocketPal AI im App Store](https://apps.apple.com/us/app/pocketpal-ai/id6502579498) — Verfügbarkeit für iOS/iPadOS.',
           '[PocketPal AI bei Google Play](https://play.google.com/store/apps/details?id=com.pocketpalai) — Verfügbarkeit für Android.',
@@ -836,18 +836,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Die besten Local-LLM-Apps für Android 2026](/de/power-local-llm/best-local-llm-apps-android-2026) — die Android-App-Übersicht, einschließlich PocketPal AI, MLC Chat, Maid und Layla.',
           '[Die besten Local-LLM-Apps für iPhone 2026](/de/power-local-llm/best-local-llm-apps-iphone-2026) — das iOS-Pendant, mit einem Vergleich von PocketPal AI zu Private LLM und Enclave AI.',
-          '[Loci im Test: Offline-KI für iPhone, Android, iPad, Mac und Windows](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine kostenpflichtige, Closed-Source-Alternative über fünf Plattformen mit kuratierter Modellbibliothek.',
+          '[Loci-Rezension: Offline-KI für iPhone, Android, iPad, Mac und Windows](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine kostenpflichtige, Closed-Source-Alternative über fünf Plattformen mit kuratierter Modellbibliothek.',
           '[Die besten mobilen KI-Modelle 2026: Phi-4 Mini vs. Gemma 4 vs. SmolLM](/de/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — der Modell-Begleitartikel zur Wahl des passenden GGUF-Modells für Ihr Handy.',
-          '[Enclave AI im Test](/de/power-local-llm/enclave-ai-review) — eine reine Apple-Alternative mit Siri- und Shortcuts-Automatisierung.',
+          '[Enclave-AI-Rezension](/de/power-local-llm/enclave-ai-review) — eine reine Apple-Alternative mit Siri- und Shortcuts-Automatisierung.',
         ],
       },
     },
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'PocketPal AI im Test (2026): Kostenloser, quelloffener Chat auf dem Gerät',
+      headline: 'PocketPal-AI-Rezension (2026): Kostenloser, quelloffener Chat auf dem Gerät',
       description:
-        'PocketPal AI im Test: eine kostenlose, MIT-lizenzierte Open-Source-App, die GGUF-Modelle lokal auf iPhone und Android ausführt. Modelle, RAM-Bedarf, Preise und Zielgruppe.',
+        'PocketPal-AI-Rezension: eine kostenlose, MIT-lizenzierte Open-Source-App, die GGUF-Modelle lokal auf iPhone und Android ausführt. Modelle, RAM-Bedarf, Preise und Zielgruppe.',
       url: 'https://promptquorum.com/de/power-local-llm/pocketpal-ai-review',
       inLanguage: 'de',
       datePublished: '2026-09-05',
@@ -872,7 +872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Start', item: 'https://promptquorum.com' },
         { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/de/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'PocketPal AI im Test (2026)', item: 'https://promptquorum.com/de/power-local-llm/pocketpal-ai-review' },
+        { '@type': 'ListItem', position: 3, name: 'PocketPal-AI-Rezension (2026)', item: 'https://promptquorum.com/de/power-local-llm/pocketpal-ai-review' },
       ],
     },
   },

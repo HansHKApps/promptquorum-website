@@ -302,9 +302,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Advanced',
     audience: 'Entwickler, die einen einzigen lokalen API-Endpunkt suchen, der mit mehreren KI-Anbieterprotokollen und CLI-basierten Abonnements kommuniziert',
     primaryTerm: 'AIClient2API',
-    title: 'AIClient2API im Test: Ein lokaler Proxy für jedes KI-Protokoll',
+    title: 'AIClient2API-Rezension: Ein lokaler Proxy für jedes KI-Protokoll',
     seoTitle: 'AIClient2API Review 2026: Multi-Protokoll-KI-Proxy',
-    intro: 'AIClient2API ([github.com/justlovemaki/AIClient2API](https://github.com/justlovemaki/AIClient2API)) ist ein kostenloser, quelloffener, selbst gehosteter Proxy-Server mit über 8.700 GitHub-Stars, der die Client-Protokolle von Gemini CLI, Codex, Grok, Kiro und Antigravity in eine einzige OpenAI-kompatible API umwandelt. Dieser Test ergänzt den Eintrag von AIClient2API im [Verzeichnis lokaler LLM-Software](/de/directory) und beschreibt, was das Tool tatsächlich leistet, wie man es betreibt und für wen es geeignet ist.',
+    intro: 'AIClient2API ([github.com/justlovemaki/AIClient2API](https://github.com/justlovemaki/AIClient2API)) ist ein kostenloser, quelloffener, selbst gehosteter Proxy-Server mit über 8.700 GitHub-Stars, der die Client-Protokolle von Gemini CLI, Codex, Grok, Kiro und Antigravity in eine einzige OpenAI-kompatible API umwandelt. Diese Rezension ergänzt den Eintrag von AIClient2API im [Verzeichnis lokaler LLM-Software](/de/directory) und beschreibt, was das Tool tatsächlich leistet, wie man es betreibt und für wen es geeignet ist.',
     metaDescription: 'AIClient2API ist ein kostenloser, selbst gehosteter Proxy mit über 8.700 GitHub-Stars, der Gemini CLI, Codex, Grok, Kiro und Antigravity hinter einer OpenAI-kompatiblen API vereint.',
     readTime: '10 Min. Lesezeit',
     targetKeywords: [
@@ -324,7 +324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Wandelt die Client-Protokolle von Gemini CLI, Codex, Grok, Kiro und Antigravity in eine einzige OpenAI-kompatible API um',
           'Entwickelt von justlovemaki; mehrere nahezu identische Forks existieren, aber dieses Repository ist die ursprüngliche Version mit den meisten Stars',
           'Läuft über Docker (empfohlen) oder Node.js/npm, mit einer Web-Konsole unter localhost:3000 für Konfiguration und Health-Checks',
-          'Über 8.700 GitHub-Stars und mehr als 1.380 Forks zum Zeitpunkt dieses Tests',
+          'Über 8.700 GitHub-Stars und mehr als 1.380 Forks zum Zeitpunkt dieser Rezension',
         ],
         updatedDate: '2026-09',
       },
@@ -359,10 +359,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Lizenziert unter GPL-3.0, laut dem eigenen Lizenzfeld des Repositorys',
           'Wandelt die Client-Protokolle von Gemini CLI, Codex, Grok, Kiro und Antigravity in eine einzige OpenAI-kompatible API um, mit bidirektionaler OpenAI/Claude/Gemini-Protokollkonvertierung',
           'Läuft über Docker (empfohlen) oder Node.js/npm; enthält eine Web-Konsole für Konfiguration und Health-Monitoring',
-          'Über 8.700 GitHub-Stars und mehr als 1.380 Forks zum Zeitpunkt dieses Tests, mit aktiven Releases (v3.5.0 erschien im September 2026)',
+          'Über 8.700 GitHub-Stars und mehr als 1.380 Forks zum Zeitpunkt dieser Rezension, mit aktiven Releases (v3.5.0 erschien im September 2026)',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test basiert auf dem eigenen GitHub-Repository, der README und der Release-Historie des Projekts. Er beinhaltet nicht die Behauptung, PromptQuorum habe eigene Lasttests oder Sicherheitsaudits des Proxy-Verhaltens von AIClient2API durchgeführt.' },
+          { type: 'note', text: 'Diese Rezension basiert auf dem eigenen GitHub-Repository, der README und der Release-Historie des Projekts. Er beinhaltet nicht die Behauptung, PromptQuorum habe eigene Lasttests oder Sicherheitsaudits des Proxy-Verhaltens von AIClient2API durchgeführt.' },
         ],
       },
       overview: {
@@ -374,16 +374,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Entwickler: justlovemaki (GitHub-Handle); das Repository unter github.com/justlovemaki/AIClient2API ist bestätigt die ursprüngliche Version mit den meisten Stars unter mehreren nahezu identischen Forks anderer Konten',
           'Lizenz: GPL-3.0, eine Copyleft-Lizenz — die Weitergabe modifizierter Versionen erfordert in der Regel die Veröffentlichung des Quellcodes unter derselben Lizenz',
           'Repository erstellt am 20. Juli 2025, laut GitHub-Metadaten',
-          'Umfang: über 8.700 GitHub-Stars, mehr als 1.380 Forks und rund 5 offene Issues zum Zeitpunkt dieses Tests — eine im Verhältnis zur Fork-Zahl kleine Anzahl offener Issues, was auf ein aktiv gepflegtes Projekt hindeutet',
+          'Umfang: über 8.700 GitHub-Stars, mehr als 1.380 Forks und rund 5 offene Issues zum Zeitpunkt dieser Rezension — eine im Verhältnis zur Fork-Zahl kleine Anzahl offener Issues, was auf ein aktiv gepflegtes Projekt hindeutet',
         ],
-        note: 'Dieser Test fand keine Hinweise auf eine Finanzierungsrunde, ein Unternehmen oder eine kommerzielle Unterstützung hinter AIClient2API — betrachten Sie es als unabhängig gepflegtes, community-getragenes Open-Source-Projekt.',
+        note: 'Diese Rezension fand keine Hinweise auf eine Finanzierungsrunde, ein Unternehmen oder eine kommerzielle Unterstützung hinter AIClient2API — betrachten Sie es als unabhängig gepflegtes, community-getragenes Open-Source-Projekt.',
       },
       history: {
         id: 'aiclient2api-history',
         title: 'Wie sieht die Versionshistorie von AIClient2API aus?',
         content: '**AIClient2API hat 2026 häufig Zwischenversionen veröffentlicht, die neueste getaggte Version v3.5.0 erschien im September 2026.**',
         items: [
-          'v3.5.0 (September 2026): neueste getaggte Version zum Zeitpunkt dieses Tests',
+          'v3.5.0 (September 2026): neueste getaggte Version zum Zeitpunkt dieser Rezension',
           'v3.4.9.1 und v3.4.8 (September 2026): inkrementelle Patch-Releases in den Tagen vor v3.5.0',
           'v3.0.0 (Mai 2026): laut den eigenen Release Notes des Projekts wurde hiermit eine tiefere KI-gestützte Integration ergänzt, darunter automatisierte Skill-Guides und Remote-API-Hilfe-Endpunkte',
           'April 2026: vollständige Unterstützung für OpenAI-Bilderzeugung und -bearbeitung mit Protokollkonvertierung, laut Changelog des Projekts',
@@ -420,7 +420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         codeBlock: 'docker run -d -p 3000:3000 -p 8086:8086 -p 1455:1455 -p 56121:56121 \\\n  -v "your_path/configs:/app/configs" \\\n  justlikemaki/aiclient-2-api',
         codeLanguage: 'bash',
-        note: 'Dies ist der Docker-Befehl aus der eigenen README des Projekts zum Zeitpunkt dieses Tests — prüfen Sie aktuelle Portnummern und Image-Tags im [GitHub-Repository](https://github.com/justlovemaki/AIClient2API), bevor Sie ihn ausführen, da sich diese Details zwischen Releases ändern können.',
+        note: 'Dies ist der Docker-Befehl aus der eigenen README des Projekts zum Zeitpunkt dieser Rezension — prüfen Sie aktuelle Portnummern und Image-Tags im [GitHub-Repository](https://github.com/justlovemaki/AIClient2API), bevor Sie ihn ausführen, da sich diese Details zwischen Releases ändern können.',
       },
       platformLicensing: {
         id: 'platform-and-licensing',
@@ -506,8 +506,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kein verwalteter oder gehosteter Dienst — Sie sind selbst für Betrieb, Aktualisierung und Absicherung Ihrer eigenen Instanz verantwortlich',
           'Nicht primär auf offizielle, lizenzierte Standard-Anbieter-APIs ausgerichtet — mehrere seiner Integrationen laufen über CLI-Tool- oder OAuth-Protokolle, die nicht für Third-Party-Proxying vorgesehen sind, was den Nutzungsbedingungen eines Anbieters widersprechen kann',
           'Nicht auf Enterprise-Governance-Funktionen (Budgets pro Team, Spend-Dashboards, SSO) ausgerichtet, wie es bei dedizierten LLM-Gateways der Fall ist',
-          'Nach dem, was dieser Test verifizieren konnte, nicht unabhängig sicherheitsgeprüft — behandeln Sie es wie jeden selbst gehosteten Proxy, der mit API-Zugangsdaten arbeitet, und prüfen Sie die Konfiguration von Account-Pool und Logging, bevor Sie es über die eigene Maschine hinaus zugänglich machen',
-          'Nach dem, was dieser Test verifizieren konnte, nicht durch ein Unternehmen oder eine Finanzierungsrunde unterstützt — behandeln Sie es als unabhängig gepflegtes, community-getragenes Projekt',
+          'Nach dem, was diese Rezension verifizieren konnte, nicht unabhängig sicherheitsgeprüft — behandeln Sie es wie jeden selbst gehosteten Proxy, der mit API-Zugangsdaten arbeitet, und prüfen Sie die Konfiguration von Account-Pool und Logging, bevor Sie es über die eigene Maschine hinaus zugänglich machen',
+          'Nach dem, was diese Rezension verifizieren konnte, nicht durch ein Unternehmen oder eine Finanzierungsrunde unterstützt — behandeln Sie es als unabhängig gepflegtes, community-getragenes Projekt',
         ],
       },
       commonMistakes: {
@@ -517,7 +517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Fehler 1: Einen Fork statt des Original-Repositorys installieren',
-            content: 'Mehrere nahezu identische Projekte mit derselben Beschreibung existieren unter verschiedenen GitHub-Konten. Dieser Test bestätigt github.com/justlovemaki/AIClient2API als das ursprüngliche Repository mit den meisten Stars — vergewissern Sie sich, dass Sie auf dieses Repository und nicht auf einen Fork verweisen, bevor Sie Probleme melden oder nach Updates suchen.',
+            content: 'Mehrere nahezu identische Projekte mit derselben Beschreibung existieren unter verschiedenen GitHub-Konten. Diese Rezension bestätigt github.com/justlovemaki/AIClient2API als das ursprüngliche Repository mit den meisten Stars — vergewissern Sie sich, dass Sie auf dieses Repository und nicht auf einen Fork verweisen, bevor Sie Probleme melden oder nach Updates suchen.',
           },
           {
             title: 'Fehler 2: Annehmen, es proxye nur standardmäßige, offizielle Anbieter-APIs',
@@ -560,7 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Benötigt AIClient2API eine GPU?', a: 'Nein. AIClient2API ist ein leichtgewichtiger Node.js-Proxy zur Protokollkonvertierung, keine Inferenz-Engine — es führt selbst keine Modelle aus und hat daher keine GPU-Anforderung.' },
           { q: 'Ist es sicher, Traffic über die CLI-Protokoll-Integrationen von AIClient2API zu leiten?', a: 'Mehrere seiner Integrationen laufen über CLI-Tool- oder Browser-OAuth-Protokolle, die offiziell nicht für Third-Party-Proxying vorgesehen sind, was den Nutzungsbedingungen eines Anbieters widersprechen kann. Prüfen Sie die Nutzungsbedingungen jedes Anbieters, bevor Sie es für Produktivverkehr einsetzen.' },
           { q: 'Unterstützt AIClient2API mehrere Konten pro Anbieter?', a: 'Ja, laut der Dokumentation des Projekts unterstützt es Account-Pool-Verwaltung mit Rotation, automatischem Failover und Health-Checks über mehrere Konten eines Anbieters hinweg.' },
-          { q: 'Hat PromptQuorum die Angaben von AIClient2API unabhängig getestet?', a: 'Dieser Test basiert auf dem eigenen GitHub-Repository, der README und der Release-Historie des Projekts, nicht auf eigenen Lasttests oder Sicherheitsaudits von PromptQuorum.' },
+          { q: 'Hat PromptQuorum die Angaben von AIClient2API unabhängig getestet?', a: 'Diese Rezension basiert auf dem eigenen GitHub-Repository, der README und der Release-Historie des Projekts, nicht auf eigenen Lasttests oder Sicherheitsaudits von PromptQuorum.' },
         ],
       },
       sources: {

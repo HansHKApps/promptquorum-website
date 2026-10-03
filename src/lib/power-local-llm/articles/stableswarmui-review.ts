@@ -333,14 +333,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-de.webp',
-    title: 'SwarmUI Test: Die Multi-GPU-Weboberfläche für Stable Diffusion',
-    seoTitle: 'SwarmUI Test: Multi-GPU-UI auf ComfyUI-Basis',
+    title: 'SwarmUI-Rezension: Die Multi-GPU-Weboberfläche für Stable Diffusion',
+    seoTitle: 'SwarmUI-Rezension: Multi-GPU-UI auf ComfyUI-Basis',
     intro:
-      'SwarmUI — früher StableSwarmUI genannt — ist eine kostenlose, quelloffene, modulare Weboberfläche für lokales Stable Diffusion, FLUX und andere Bild- und Videogenerierungsmodelle, die speziell dafür gebaut wurde, mehrere GPUs und mehrere Nutzer aus einer gemeinsamen Installation heraus anzusteuern. Es nutzt [ComfyUI](https://github.com/comfy-org/ComfyUI) als zugrunde liegende Inferenz-Engine: Statt ein konkurrierendes Bildgenerierungs-Backend von Grund auf neu zu bauen, umhüllt SwarmUI ComfyUI mit einem formularbasierten „Generate"-Tab für den Alltagsgebrauch und legt dabei den rohen ComfyUI-Node-Graph für Leser frei, die volle manuelle Kontrolle wollen. Dieser Test erklärt, was SwarmUI heute tatsächlich ist (inklusive der ehrlichen Geschichte seiner Umbenennung und seines inzwischen vollständig unabhängigen Verhältnisses zu Stability AI), seine Multi-GPU- und Multi-User-Architektur, die Modellunterstützung, die Installation, die Lizenz und den Vergleich mit Single-User-Tools wie AUTOMATIC1111 und Fooocus.',
+      'SwarmUI — früher StableSwarmUI genannt — ist eine kostenlose, quelloffene, modulare Weboberfläche für lokales Stable Diffusion, FLUX und andere Bild- und Videogenerierungsmodelle, die speziell dafür gebaut wurde, mehrere GPUs und mehrere Nutzer aus einer gemeinsamen Installation heraus anzusteuern. Es nutzt [ComfyUI](https://github.com/comfy-org/ComfyUI) als zugrunde liegende Inferenz-Engine: Statt ein konkurrierendes Bildgenerierungs-Backend von Grund auf neu zu bauen, umhüllt SwarmUI ComfyUI mit einem formularbasierten „Generate"-Tab für den Alltagsgebrauch und legt dabei den rohen ComfyUI-Node-Graph für Leser frei, die volle manuelle Kontrolle wollen. Diese Rezension erklärt, was SwarmUI heute tatsächlich ist (inklusive der ehrlichen Geschichte seiner Umbenennung und seines inzwischen vollständig unabhängigen Verhältnisses zu Stability AI), seine Multi-GPU- und Multi-User-Architektur, die Modellunterstützung, die Installation, die Lizenz und den Vergleich mit Single-User-Tools wie AUTOMATIC1111 und Fooocus.',
     metaDescription:
-      'SwarmUI Test 2026: die Multi-GPU-, Multi-User-Weboberfläche für Stable Diffusion auf ComfyUI-Basis. Umbenennung von StableSwarmUI, MIT-Lizenz, Modellunterstützung und Einrichtung.',
+      'SwarmUI-Rezension 2026: die Multi-GPU-, Multi-User-Weboberfläche für Stable Diffusion auf ComfyUI-Basis. Umbenennung von StableSwarmUI, MIT-Lizenz, Modellunterstützung und Einrichtung.',
     twitterDescription:
-      'SwarmUI Test 2026: früher StableSwarmUI, jetzt eine unabhängige, MIT-lizenzierte, ComfyUI-basierte Weboberfläche für Multi-GPU-Stable-Diffusion- und FLUX-Generierung. Einrichtung, Architektur und ehrliche Kompromisse.',
+      'SwarmUI-Rezension 2026: früher StableSwarmUI, jetzt eine unabhängige, MIT-lizenzierte, ComfyUI-basierte Weboberfläche für Multi-GPU-Stable-Diffusion- und FLUX-Generierung. Einrichtung, Architektur und ehrliche Kompromisse.',
     audience:
       'Leser mit mehreren GPUs oder gemeinsam genutzten Multi-User-Setups, die entscheiden möchten, ob SwarmUIs ComfyUI-basierte, formularbasierte Oberfläche besser passt als AUTOMATIC1111, Fooocus oder rohes ComfyUI.',
     readTime: '11 Min. Lesezeit',
@@ -429,7 +429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Das Projekt wurde zunächst unter der Stability-AI-GitHub-Organisation als „StableSwarmUI" veröffentlicht, primär entwickelt von Alex „mcmonkey" Goodwin.** Öffentliche Release-Notizen und Diskussions-Threads im ursprünglichen Repository [Stability-AI/StableSwarmUI](https://github.com/Stability-AI/StableSwarmUI) dokumentieren frühe Feature-Ankündigungen aus der Zeit, als es noch Name und Urheberrecht von Stability AI trug.',
           'Im Juni 2024 stellte Stability AI die Pflege von StableSwarmUI ein. Statt das Projekt einschlafen zu lassen, machte mcmonkey es unabhängig, veröffentlichte einen „Migration Guide From Stability\'s StableSwarmUI to independent SwarmUI" und benannte das Projekt in „SwarmUI" um, mit neuem Repository unter [mcmonkeyprojects/SwarmUI](https://github.com/mcmonkeyprojects/SwarmUI). Bestehende Installationen konnten migrieren, indem sie aktualisiert und ein bereitgestelltes Migrationsskript ausgeführt wurde (`migrate-windows.bat` unter Windows, oder manuelles Umbiegen der Git-Remote auf `mcmonkeyprojects/SwarmUI` unter Linux/Mac).',
-          '**Zum Zeitpunkt dieses Tests (2026-09-06) besteht keine laufende Zugehörigkeit von SwarmUI zu Stability AI** — es wird unabhängig von mcmonkey und Community-Mitwirkenden unter der MIT-Lizenz gepflegt, mit Urheberrechtszuordnung an „Alex \'mcmonkey\' Goodwin" für den Zeitraum 2024–2026, den die aktuelle Lizenzdatei abdeckt. Das ursprüngliche Repository Stability-AI/StableSwarmUI ist nicht mehr die aktiv entwickelte Codebasis; das aktuelle, gepflegte Projekt liegt bei mcmonkeyprojects/SwarmUI.',
+          '**Zum Zeitpunkt dieser Rezension (2026-09-06) besteht keine laufende Zugehörigkeit von SwarmUI zu Stability AI** — es wird unabhängig von mcmonkey und Community-Mitwirkenden unter der MIT-Lizenz gepflegt, mit Urheberrechtszuordnung an „Alex \'mcmonkey\' Goodwin" für den Zeitraum 2024–2026, den die aktuelle Lizenzdatei abdeckt. Das ursprüngliche Repository Stability-AI/StableSwarmUI ist nicht mehr die aktiv entwickelte Codebasis; das aktuelle, gepflegte Projekt liegt bei mcmonkeyprojects/SwarmUI.',
           '**Warum dieser Artikel den Slug „stableswarmui-review" trotz der Umbenennung behält:** Leser, die das Tool unter seinem ursprünglichen, bekannteren Namen suchen, landen weiterhin hier — Artikeltext und Titel verwenden durchgängig den aktuellen, korrekten Namen „SwarmUI", und dieser Abschnitt legt die Umbenennung klar dar, damit niemand über die heutige Projektpflege getäuscht wird.',
         ],
       },
@@ -482,7 +482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modellfamilie': 'FLUX (Black Forest Labs)', 'Typ': 'Bild', 'Hinweise': 'Unterstützt über ComfyUIs FLUX-Nodes; Lizenz hängt von der spezifischen FLUX-Variante ab (schnell vs. dev), nicht von SwarmUI' },
           { 'Modellfamilie': 'Video-/Audiomodelle', 'Typ': 'Video, Audio', 'Hinweise': 'Unterstützt, sobald ComfyUI selbst Unterstützung ergänzt und aktualisiert — prüfen Sie aktuelle ComfyUI- und SwarmUI-Release-Notizen für die genaue Modellabdeckung, bevor Sie sich auf ein bestimmtes Modell verlassen' },
         ],
-        note: 'Die Modellunterstützung folgt ComfyUIs eigener Kompatibilitätsliste, die sich mit der Zeit ändert — prüfen Sie die aktuelle Unterstützung für einen bestimmten Checkpoint im [SwarmUI-GitHub-Repository](https://github.com/mcmonkeyprojects/SwarmUI) oder [ComfyUI-GitHub-Repository](https://github.com/comfy-org/ComfyUI), bevor Sie einen Workflow darauf festlegen. Die jeweilige Lizenz eines Modells (RAIL-M, Stability AI Community License, Apache 2.0 usw.) gilt unabhängig davon, in welcher Oberfläche Sie es laden — siehe den [Stable-Diffusion-Test](/de/power-local-llm/stable-diffusion-review) für eine Aufschlüsselung dieser Lizenzunterschiede je Version.',
+        note: 'Die Modellunterstützung folgt ComfyUIs eigener Kompatibilitätsliste, die sich mit der Zeit ändert — prüfen Sie die aktuelle Unterstützung für einen bestimmten Checkpoint im [SwarmUI-GitHub-Repository](https://github.com/mcmonkeyprojects/SwarmUI) oder [ComfyUI-GitHub-Repository](https://github.com/comfy-org/ComfyUI), bevor Sie einen Workflow darauf festlegen. Die jeweilige Lizenz eines Modells (RAIL-M, Stability AI Community License, Apache 2.0 usw.) gilt unabhängig davon, in welcher Oberfläche Sie es laden — siehe den [Stable-Diffusion-Rezension](/de/power-local-llm/stable-diffusion-review) für eine Aufschlüsselung dieser Lizenzunterschiede je Version.',
       },
       installation: {
         id: 'installation',
@@ -506,7 +506,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**SwarmUI ist kostenlos und quelloffen unter der MIT-Lizenz — es gibt keine kostenpflichtige Stufe, kein Abonnement und keine vom Projekt selbst verkaufte gehostete Version.** Sie zahlen nur für Ihre eigene Hardware und den Strom, wie bei jedem selbst gehosteten Tool.',
           'Die MIT-Lizenz ist permissiv: Sie erlaubt kommerzielle Nutzung, Modifikation und Weiterverbreitung mit Namensnennung und enthält keine Umsatzgrenze oder Registrierungspflicht, wie sie für manche Modelle gilt, die Sie darüber ausführen könnten (zum Beispiel erfordert Stability AIs Community License für SD 3.5 eine Registrierung oberhalb bestimmter Umsatzgrenzen). Die eigene Lizenz von SwarmUI schreibt das nicht vor — aber die Lizenz des jeweils geladenen Modell-Checkpoints gilt weiterhin unabhängig davon, da SwarmUI die Lizenzbedingungen eines Modells nicht verändert.',
-          'Da es keinen offiziellen gehosteten SwarmUI-Dienst gibt, dreht sich „Preise" für dieses Tool ausschließlich um die Hardware, die Sie bereits besitzen oder kaufen möchten — es gibt keine Mitgliedschaftsstufe zum Vergleich, anders als bei Stability AIs eigenen gehosteten API- und Mitgliedschaftsplänen, die im [Stable-Diffusion-Test](/de/power-local-llm/stable-diffusion-review#pricing) behandelt werden.',
+          'Da es keinen offiziellen gehosteten SwarmUI-Dienst gibt, dreht sich „Preise" für dieses Tool ausschließlich um die Hardware, die Sie bereits besitzen oder kaufen möchten — es gibt keine Mitgliedschaftsstufe zum Vergleich, anders als bei Stability AIs eigenen gehosteten API- und Mitgliedschaftsplänen, die im [Stable-Diffusion-Rezension](/de/power-local-llm/stable-diffusion-review#pricing) behandelt werden.',
         ],
         note: 'Lizenzbedingungen können sich zwischen Releases ändern — prüfen Sie den aktuellen Lizenztext in der `LICENSE`-Datei im [SwarmUI-GitHub-Repository](https://github.com/mcmonkeyprojects/SwarmUI), bevor Sie eine kommerzielle Einsatzentscheidung treffen. Dies ist keine Rechtsberatung.',
       },
@@ -552,7 +552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Wichtigster Kompromiss': 'Bewusst eingeschränkte Konfigurierbarkeit zugunsten von Einfachheit; nicht auf Multi-GPU-Setups ausgelegt',
           },
         ],
-        note: 'Dies ist eine Einordnung, keine Benchmark-Rangliste — siehe den [Stable-Diffusion-Test](/de/power-local-llm/stable-diffusion-review) für Lizenz- und VRAM-Details zu den zugrunde liegenden Modellen, die alle diese Oberflächen ausführen, und [Lokale KI-Bildgenerierung vs. Cloud](/de/power-local-llm/local-ai-image-generation-vs-cloud) für einen breiteren Vergleich von lokal und Cloud.',
+        note: 'Dies ist eine Einordnung, keine Benchmark-Rangliste — siehe den [Stable-Diffusion-Rezension](/de/power-local-llm/stable-diffusion-review) für Lizenz- und VRAM-Details zu den zugrunde liegenden Modellen, die alle diese Oberflächen ausführen, und [Lokale KI-Bildgenerierung vs. Cloud](/de/power-local-llm/local-ai-image-generation-vs-cloud) für einen breiteren Vergleich von lokal und Cloud.',
       },
       whoShouldUse: {
         id: 'who-should-use',
@@ -586,7 +586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wird SwarmUI noch von Stability AI entwickelt oder gepflegt?',
-            a: 'Nein, Stand dieses Tests (2026-09-06). Stability AI veröffentlichte das Projekt ursprünglich als StableSwarmUI, stellte die Pflege aber ein; der ursprüngliche Entwickler machte es im Juni 2024 vollständig unabhängig. Es gibt keine laufende Beteiligung von Stability AI an der heutigen Entwicklung von SwarmUI.',
+            a: 'Nein, Stand dieser Rezension (2026-09-06). Stability AI veröffentlichte das Projekt ursprünglich als StableSwarmUI, stellte die Pflege aber ein; der ursprüngliche Entwickler machte es im Juni 2024 vollständig unabhängig. Es gibt keine laufende Beteiligung von Stability AI an der heutigen Entwicklung von SwarmUI.',
           },
           {
             q: 'Nutzt SwarmUI ComfyUI, oder ist es eine eigenständige Bildgenerierungs-Engine?',
@@ -635,7 +635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Stable Diffusion Test (2026)](/de/power-local-llm/stable-diffusion-review) — die zugrunde liegende Modellfamilie, die SwarmUI ausführt, inklusive Lizenzbedingungen und VRAM-Bedarf je Version.',
+          '[Stable-Diffusion-Rezension (2026)](/de/power-local-llm/stable-diffusion-review) — die zugrunde liegende Modellfamilie, die SwarmUI ausführt, inklusive Lizenzbedingungen und VRAM-Bedarf je Version.',
           '[Lokale KI-Bildgenerierung vs. Cloud](/de/power-local-llm/local-ai-image-generation-vs-cloud) — breiterer Vergleich lokaler Bildmodelle und Oberflächen mit Cloud-Tools wie Midjourney und Adobe Firefly.',
           '[Local LLM Software Directory 2026](/de/directory) — umfassendes Verzeichnis lokaler KI-Software für alle Plattformen.',
         ],

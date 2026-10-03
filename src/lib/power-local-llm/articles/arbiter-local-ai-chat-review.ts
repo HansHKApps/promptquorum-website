@@ -379,14 +379,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-04',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/arbiter-local-ai-chat-review-hero-de.webp',
-    title: 'Arbiter Local AI Chat im Test: Private KI offline auf dem iPhone',
-    seoTitle: 'Arbiter AI im Test: Private Offline-KI fürs iPhone',
+    title: 'Arbiter-Local-AI-Chat-Rezension: Private KI offline auf dem iPhone',
+    seoTitle: 'Arbiter-AI-Rezension: Private Offline-KI fürs iPhone',
     intro:
       'Arbiter, entwickelt von Jordan Stone, ist ein auf Privatsphäre ausgerichteter KI-Assistent fürs iPhone, der nach Angaben des Entwicklers auf einem einzigen Grundsatz beruht: Ihre Unterhaltungen verlassen niemals Ihr Gerät. Sie können leichtgewichtige Open-Source-Modelle (Gemma, Llama, DeepSeek, Qwen, Mistral) direkt auf Ihr iPhone herunterladen und dort ausführen, oder sich mit leistungsstärkeren Modellen verbinden, die auf Ihrem eigenen PC oder Mac laufen – über Tools wie LM Studio, Ollama oder die separate Begleit-App „Arbiter for Mac". Es gibt keine Konten, keine Server und keine Datenerfassung – die App ist so konzipiert, dass Unterhaltungen sowie hochgeladene Dokumente zur Zusammenfassung auf dem jeweils genutzten Gerät verbleiben. Die praktische Frage für alle, die On-Device-Chat-Apps vergleichen, lautet, ob Arbiter auf iPhone-Hardware genug Leistungsfähigkeit bietet, um ein echter täglicher Begleiter zu sein, oder ob es sich am besten als private Bedienoberfläche für größere Modelle eignet, die anderswo laufen.',
     metaDescription:
-      'Arbiter im Test: Lohnt sich diese auf Privatsphäre ausgerichtete Offline-KI-Chat-App fürs iPhone? On-Device-Modelle, Dokumentenzusammenfassungen, Verbindung zu LM Studio/Ollama, Hardware-Anforderungen und Preise.',
+      'Arbiter-Rezension: Lohnt sich diese auf Privatsphäre ausgerichtete Offline-KI-Chat-App fürs iPhone? On-Device-Modelle, Dokumentenzusammenfassungen, Verbindung zu LM Studio/Ollama, Hardware-Anforderungen und Preise.',
     twitterDescription:
-      'Arbiter Local AI Chat im Test 2026: Open-Source-Modelle direkt auf dem iPhone ausführen oder mit LM Studio/Ollama/Arbiter for Mac für größere Modelle verbinden. Keine Konten, keine Server, keine Datenerfassung.',
+      'Arbiter-Local-AI-Chat-Rezension 2026: Open-Source-Modelle direkt auf dem iPhone ausführen oder mit LM Studio/Ollama/Arbiter for Mac für größere Modelle verbinden. Keine Konten, keine Server, keine Datenerfassung.',
     audience:
       'iPhone-Nutzer, die entscheiden möchten, ob Arbiter für private, offline nutzbaren KI-Chat und Dokumentenzusammenfassungen geeignet ist – mit Fokus auf On-Device-Modellunterstützung, Hardware-Anforderungen, Verbindung zu Desktop-Inferenz-Tools und Vergleich mit anderen mobilen Local-AI-Apps.',
     readTime: '7 Min. Lesezeit',
@@ -519,7 +519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Punkt': 'Preise',
             'Was Arbiter angibt': 'Kostenlos, mit optionalen In-App-Käufen. Kategorie: Produktivität.',
-            'Was das in der Praxis bedeutet': 'Sie können die App installieren und nutzen, ohne zu bezahlen. Konkrete In-App-Kaufstufen, Preise und deren Inhalte sind im Ausgangsmaterial für diesen Test nicht veröffentlicht – prüfen Sie den aktuellen App-Store-Eintrag für tagesaktuelle Preise, bevor Sie annehmen, dass eine bestimmte Funktion kostenlos oder kostenpflichtig ist.',
+            'Was das in der Praxis bedeutet': 'Sie können die App installieren und nutzen, ohne zu bezahlen. Konkrete In-App-Kaufstufen, Preise und deren Inhalte sind im Ausgangsmaterial für diese Rezension nicht veröffentlicht – prüfen Sie den aktuellen App-Store-Eintrag für tagesaktuelle Preise, bevor Sie annehmen, dass eine bestimmte Funktion kostenlos oder kostenpflichtig ist.',
           },
           {
             'Punkt': 'Speicherplatz für On-Device-Modelle',
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Vorteil': 'Privatsphäre by Design',
             'Was das in der Praxis bedeutet': 'Keine Konten, keine von Arbiter betriebenen Server, die Ihre Chats verarbeiten – laut der vom Entwickler angegebenen Konzeption bleiben Unterhaltungen auf Ihrem Gerät oder dem verbundenen Desktop-Rechner.',
-            'Einschränkung / Vorbehalt': 'Dieser Test stützt sich auf die Angaben des Entwicklers und nicht auf eine unabhängige Prüfung durch Dritte; sehen Sie sich die aktuelle Datenschutzerklärung im App Store an, bevor Sie sensible Informationen verarbeiten.',
+            'Einschränkung / Vorbehalt': 'Diese Rezension stützt sich auf die Angaben des Entwicklers und nicht auf eine unabhängige Prüfung durch Dritte; sehen Sie sich die aktuelle Datenschutzerklärung im App Store an, bevor Sie sensible Informationen verarbeiten.',
           },
           {
             'Vorteil': 'Funktioniert vollständig offline, sobald ein Modell heruntergeladen ist',
@@ -562,7 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Vorteil': 'Einfache, kuratierte Modellliste',
             'Was das in der Praxis bedeutet': 'Gemma, Llama, DeepSeek, Qwen und Mistral decken eine Bandbreite an Open-Source-Modellfamilien ab, ohne dass Sie selbst auf Hugging Face suchen müssen.',
-            'Einschränkung / Vorbehalt': 'Die genaue Liste der spezifischen Modellgrößen/-varianten sowie ob ein benutzerdefinierter GGUF-Import unterstützt wird, ist im Ausgangsmaterial für diesen Test nicht angegeben – prüfen Sie den aktuellen App-Store-Eintrag für die tagesaktuelle Modellliste.',
+            'Einschränkung / Vorbehalt': 'Die genaue Liste der spezifischen Modellgrößen/-varianten sowie ob ein benutzerdefinierter GGUF-Import unterstützt wird, ist im Ausgangsmaterial für diese Rezension nicht angegeben – prüfen Sie den aktuellen App-Store-Eintrag für die tagesaktuelle Modellliste.',
           },
         ],
       },
@@ -617,7 +617,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Für wen sich Arbiter nicht eignet',
         items: [
-          '**Android- oder Windows-Nutzer.** Arbiter ist nur für iOS/iPhone verfügbar; es gibt im Ausgangsmaterial für diesen Test keine native Android- oder Windows-App.',
+          '**Android- oder Windows-Nutzer.** Arbiter ist nur für iOS/iPhone verfügbar; es gibt im Ausgangsmaterial für diese Rezension keine native Android- oder Windows-App.',
           '**Wer rein On-Device Reasoning auf Cloud-Spitzenniveau erwartet.** On-Device-Modelle der Familien Gemma, Llama, DeepSeek, Qwen und Mistral stoßen auf einem iPhone an dieselbe durch die Parameteranzahl bedingte Obergrenze wie in jeder anderen telefonbasierten Local-AI-App; für die größten Modelle müssen Sie sich weiterhin mit einem Desktop-Rechner verbinden oder einen Cloud-Dienst nutzen.',
           '**Nutzer mit einem älteren iPhone unterhalb der empfohlenen Hardware-Stufe.** Geräte, die älter sind als das iPhone 13 Pro oder weniger als 6 GB RAM haben, könnten eine langsamere On-Device-Leistung erleben.',
           '**Wer schon heute eine ausgereifte, vollständig dokumentierte eigenständige Mac-Chat-App möchte.** „Arbiter for Mac" wird als Möglichkeit beschrieben, sich vom Telefon aus mit größeren Modellen zu verbinden; es ist im Ausgangsmaterial nicht bestätigt, dass es sich um eine vollwertige eigenständige Mac-Chat-Anwendung handelt.',
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist Arbiter wirklich privat?',
-            a: 'Die vom Entwickler angegebene Konzeption sieht keine Konten, keine Server und keine Datenerfassung vor – Unterhaltungen sind so ausgelegt, dass sie das genutzte Gerät niemals verlassen, egal ob es sich um Ihr iPhone oder einen verbundenen Desktop-Rechner handelt. Wie bei jeder Datenschutzzusage sollten Sie die aktuelle Datenschutzerklärung im App-Store-Eintrag prüfen, bevor Sie sensible Informationen verarbeiten, da dieser Test auf den öffentlichen Angaben des Entwicklers beruht und nicht auf einer unabhängigen Prüfung.',
+            a: 'Die vom Entwickler angegebene Konzeption sieht keine Konten, keine Server und keine Datenerfassung vor – Unterhaltungen sind so ausgelegt, dass sie das genutzte Gerät niemals verlassen, egal ob es sich um Ihr iPhone oder einen verbundenen Desktop-Rechner handelt. Wie bei jeder Datenschutzzusage sollten Sie die aktuelle Datenschutzerklärung im App-Store-Eintrag prüfen, bevor Sie sensible Informationen verarbeiten, da diese Rezension auf den öffentlichen Angaben des Entwicklers beruht und nicht auf einer unabhängigen Prüfung.',
           },
           {
             q: 'Funktioniert Arbiter ohne Internetverbindung?',
@@ -654,7 +654,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Kostet Arbiter Geld?',
-            a: 'Arbiter steht kostenlos zum Download bereit, mit optionalen In-App-Käufen. Die App ist im App Store in der Kategorie Produktivität gelistet. Konkrete In-App-Kaufstufen und Preise sind im Ausgangsmaterial für diesen Test nicht detailliert angegeben – prüfen Sie den aktuellen App-Store-Eintrag für tagesaktuelle Preise.',
+            a: 'Arbiter steht kostenlos zum Download bereit, mit optionalen In-App-Käufen. Die App ist im App Store in der Kategorie Produktivität gelistet. Konkrete In-App-Kaufstufen und Preise sind im Ausgangsmaterial für diese Rezension nicht detailliert angegeben – prüfen Sie den aktuellen App-Store-Eintrag für tagesaktuelle Preise.',
           },
           {
             q: 'Kann Arbiter Dokumente zusammenfassen?',
@@ -662,7 +662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Gibt es eine Android- oder Windows-Version von Arbiter?',
-            a: 'Nein. Arbiter ist für iOS/iPhone verfügbar. Es gibt eine separate Begleit-App „Arbiter for Mac" zur Verbindung mit leistungsstärkeren Modellen, aber im Ausgangsmaterial für diesen Test keinen Android- oder Windows-Client.',
+            a: 'Nein. Arbiter ist für iOS/iPhone verfügbar. Es gibt eine separate Begleit-App „Arbiter for Mac" zur Verbindung mit leistungsstärkeren Modellen, aber im Ausgangsmaterial für diese Rezension keinen Android- oder Windows-Client.',
           },
           {
             q: 'Wie schneidet Arbiter im Vergleich zu Loci oder Private LLM ab?',
@@ -674,7 +674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist Arbiter für den deutschen Mittelstand geeignet?',
-            a: 'Für kleine und mittlere Unternehmen im deutschen Mittelstand kann die von Arbiter beschriebene Architektur ohne Konten und ohne herstellerseitige Server für einfache interne Anwendungsfälle interessant sein, etwa Chat oder Zusammenfassungen auf iPhones, bei denen Daten das Gerät nicht verlassen sollen. Für den professionellen Einsatz sollten IT-Verantwortliche vor der produktiven Nutzung dennoch eigenständig die aktuelle Datenschutzerklärung, mögliche Anforderungen an IT-Sicherheitsstandards wie die BSI-Grundschutz-Kataloge sowie interne Richtlinien prüfen, da dieser Test ausschließlich auf öffentlich zugänglichen Herstellerangaben beruht und keine eigene Sicherheitsprüfung ersetzt.',
+            a: 'Für kleine und mittlere Unternehmen im deutschen Mittelstand kann die von Arbiter beschriebene Architektur ohne Konten und ohne herstellerseitige Server für einfache interne Anwendungsfälle interessant sein, etwa Chat oder Zusammenfassungen auf iPhones, bei denen Daten das Gerät nicht verlassen sollen. Für den professionellen Einsatz sollten IT-Verantwortliche vor der produktiven Nutzung dennoch eigenständig die aktuelle Datenschutzerklärung, mögliche Anforderungen an IT-Sicherheitsstandards wie die BSI-Grundschutz-Kataloge sowie interne Richtlinien prüfen, da diese Rezension ausschließlich auf öffentlich zugänglichen Herstellerangaben beruht und keine eigene Sicherheitsprüfung ersetzt.',
           },
         ],
       },
@@ -698,7 +698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
-          '[Loci AI im Test: Private Offline-KI auf iPhone, Android, iPad und Mac](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine plattformübergreifende On-Device-KI-App zum Vergleich mit Arbiter.',
+          '[Loci-AI-Rezension: Private Offline-KI auf iPhone, Android, iPad und Mac](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine plattformübergreifende On-Device-KI-App zum Vergleich mit Arbiter.',
           '[Die besten Local-LLM-Apps fürs iPhone 2026](/de/power-local-llm/best-local-llm-apps-iphone-2026) — der iPhone-App-Überblick, inklusive PocketPal AI, Private LLM und Apple Intelligence.',
           '[Die besten mobilen LLM-Modelle 2026: Phi-4 Mini vs Gemma 4 vs SmolLM](/de/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — der modellseitige Begleitartikel zu denselben Modellfamilien, die Arbiter unterstützt.',
           '[Ein lokales LLM auf Ihrem Tablet ausführen: iPad und Android (2026)](/de/power-local-llm/run-ai-on-tablet-ipad-android) — geräteorientierter Leitfaden für On-Device- und Remote-Inferenz auf Tablets.',
@@ -709,8 +709,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'Arbiter Local AI Chat im Test (2026): Private KI offline auf dem iPhone',
-      'description': 'Arbiter im Test: Lohnt sich diese auf Privatsphäre ausgerichtete Offline-KI-Chat-App fürs iPhone? On-Device-Modelle, Dokumentenzusammenfassungen, Verbindung zu LM Studio/Ollama, Hardware-Anforderungen und Preise.',
+      'headline': 'Arbiter-Local-AI-Chat-Rezension (2026): Private KI offline auf dem iPhone',
+      'description': 'Arbiter-Rezension: Lohnt sich diese auf Privatsphäre ausgerichtete Offline-KI-Chat-App fürs iPhone? On-Device-Modelle, Dokumentenzusammenfassungen, Verbindung zu LM Studio/Ollama, Hardware-Anforderungen und Preise.',
       'datePublished': '2026-09-04',
       'dateModified': '2026-09-04',
       'author': {

@@ -484,19 +484,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-06',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/rikkahub-review-hero-de.webp',
-    title: 'RikkaHub im Test: KI-Chat für Android mit vielen Anbietern',
-    seoTitle: 'RikkaHub Test: Open-Source Android KI-Client',
+    title: 'RikkaHub-Rezension: KI-Chat für Android mit vielen Anbietern',
+    seoTitle: 'RikkaHub-Rezension: Open-Source Android KI-Client',
     intro:
-      'RikkaHub ist eine kostenlose, quelloffene Android-App, mit der Sie über eine einzige Oberfläche mit Cloud-KI-Anbietern chatten — OpenAI, Google Gemini, Anthropic und jedem OpenAI-kompatiblen Endpunkt — und dabei Ihre eigenen API-Schlüssel verwenden. Die App führt keine Sprachmodelle auf dem Smartphone selbst aus; sie ist ein Client, keine Inferenz-Engine auf dem Gerät, kann sich aber über dasselbe Feld für benutzerdefinierte Endpunkte mit einem selbst gehosteten Ollama- oder LM-Studio-Server im eigenen Netzwerk verbinden. Entwickelt wurde das Projekt hauptsächlich vom Entwickler re-ovo und wird inzwischen unter der [rikkahub-GitHub-Organisation](https://github.com/rikkahub/rikkahub) gepflegt. Es steht unter der GNU Affero General Public License v3.0 (AGPL-3.0) und hat seit der Erstellung des Repositorys im März 2025 über 7.400 Sterne gesammelt. Dieser Test beschreibt genau, was RikkaHub lokal ausführt und was nicht, den tatsächlichen Funktionsumfang, die Preisgestaltung sowie für wen sich die App eignet — und für wen eine On-Device-App wie PocketPal AI oder Private LLM die bessere Wahl ist.',
+      'RikkaHub ist eine kostenlose, quelloffene Android-App, mit der Sie über eine einzige Oberfläche mit Cloud-KI-Anbietern chatten — OpenAI, Google Gemini, Anthropic und jedem OpenAI-kompatiblen Endpunkt — und dabei Ihre eigenen API-Schlüssel verwenden. Die App führt keine Sprachmodelle auf dem Smartphone selbst aus; sie ist ein Client, keine Inferenz-Engine auf dem Gerät, kann sich aber über dasselbe Feld für benutzerdefinierte Endpunkte mit einem selbst gehosteten Ollama- oder LM-Studio-Server im eigenen Netzwerk verbinden. Entwickelt wurde das Projekt hauptsächlich vom Entwickler re-ovo und wird inzwischen unter der [rikkahub-GitHub-Organisation](https://github.com/rikkahub/rikkahub) gepflegt. Es steht unter der GNU Affero General Public License v3.0 (AGPL-3.0) und hat seit der Erstellung des Repositorys im März 2025 über 7.400 Sterne gesammelt. Diese Rezension beschreibt genau, was RikkaHub lokal ausführt und was nicht, den tatsächlichen Funktionsumfang, die Preisgestaltung sowie für wen sich die App eignet — und für wen eine On-Device-App wie PocketPal AI oder Private LLM die bessere Wahl ist.',
     metaDescription:
-      'RikkaHub im Test: eine kostenlose, quelloffene Android-App für den Chat mit Cloud-KI-Anbietern über eigene API-Schlüssel. Läuft sie lokal? Lizenz, Einrichtung und Fazit.',
+      'RikkaHub-Rezension: eine kostenlose, quelloffene Android-App für den Chat mit Cloud-KI-Anbietern über eigene API-Schlüssel. Läuft sie lokal? Lizenz, Einrichtung und Fazit.',
     twitterDescription:
-      'RikkaHub Test 2026: die kostenlose, AGPL-3.0-lizenzierte Android-App zum Wechseln zwischen OpenAI, Gemini, Claude und selbst gehosteten API-Endpunkten. Sie läuft nicht lokal auf dem Gerät — hier die Fakten.',
+      'RikkaHub-Rezension 2026: die kostenlose, AGPL-3.0-lizenzierte Android-App zum Wechseln zwischen OpenAI, Gemini, Claude und selbst gehosteten API-Endpunkten. Sie läuft nicht lokal auf dem Gerät — hier die Fakten.',
     audience:
       'Android-Nutzer, die bereits API-Schlüssel für Cloud-KI-Anbieter besitzen oder Ollama bzw. LM Studio selbst hosten und dafür eine mobile Oberfläche suchen.',
     readTime: '11 Min. Lesezeit',
     educationalLevel: 'Intermediate',
-    primaryTerm: 'RikkaHub Test',
+    primaryTerm: 'RikkaHub Rezension',
     targetKeywords: [
       'rikkahub test',
       'rikkahub android',
@@ -571,7 +571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Dieser Test basiert auf dem öffentlichen [GitHub-Repository](https://github.com/rikkahub/rikkahub) (Quellcode, README, Releases und GitHub-API-Metadaten), der Projekt-Website und dem Google-Play-Eintrag, geprüft im September 2026. PromptQuorum hat für diesen Test keine eigenen praktischen Benchmarks von RikkaHub durchgeführt — die Aussagen zur lokalen vs. Cloud-Architektur unten basieren auf der Analyse des öffentlichen Quellcodes und der Dokumentation, nicht auf einem Blackbox-Test.',
+            text: 'Diese Rezension basiert auf dem öffentlichen [GitHub-Repository](https://github.com/rikkahub/rikkahub) (Quellcode, README, Releases und GitHub-API-Metadaten), der Projekt-Website und dem Google-Play-Eintrag, geprüft im September 2026. PromptQuorum hat für diese Rezension keine eigenen praktischen Benchmarks von RikkaHub durchgeführt — die Aussagen zur lokalen vs. Cloud-Architektur unten basieren auf der Analyse des öffentlichen Quellcodes und der Dokumentation, nicht auf einem Blackbox-Test.',
           },
         ],
       },
@@ -692,7 +692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plattform': 'Android',
             'Verfügbarkeit': 'Erhältlich über die [offizielle Website](https://rikka-ai.com/download), [Google Play](https://play.google.com/store/apps/details?id=me.rerere.rikkahub) und direkten APK-Download über [GitHub Releases](https://github.com/rikkahub/rikkahub/releases)',
-            'Hinweise': 'Die native App; dieser Test bezieht sich auf diese Version.',
+            'Hinweise': 'Die native App; diese Rezension bezieht sich auf diese Version.',
           },
           {
             'Plattform': 'iPhone / iPad',
@@ -772,7 +772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Hinweis zu RikkaHub-Forks',
         content: [
           '**RikkaHubs eigenes README warnt ausdrücklich davor, dass „es viele geforkte Versionen von RikkaHub gibt" und dass Probleme mit Forks nichts mit dem offiziellen Projekt zu tun haben.** Das Projekt bittet Nutzer, „Forks mit Vorsicht zu verwenden, um Datenschutzlecks oder übermäßige Berechtigungsanfragen zu vermeiden" — ein Hinweis, der hier wiederholt sei, da eine geforkte App andere Berechtigungen anfordern oder Daten anders übertragen kann als das offizielle Release, ohne Prüfung oder Billigung durch den ursprünglichen Entwickler.',
-          'Da API-Schlüssel direkt in die App eingegeben werden, um einen Provider zu konfigurieren, bedeutet die Installation eines inoffiziellen Forks, dessen Code diese Zugangsdaten anzuvertrauen. Dieser Test bezieht sich ausschließlich auf das offizielle [rikkahub/rikkahub](https://github.com/rikkahub/rikkahub)-Projekt, vertrieben über die [offizielle Website](https://rikka-ai.com/download), den [Google-Play](https://play.google.com/store/apps/details?id=me.rerere.rikkahub)-Eintrag unter dem Paketnamen `me.rerere.rikkahub` und die eigene GitHub-Releases-Seite.',
+          'Da API-Schlüssel direkt in die App eingegeben werden, um einen Provider zu konfigurieren, bedeutet die Installation eines inoffiziellen Forks, dessen Code diese Zugangsdaten anzuvertrauen. Diese Rezension bezieht sich ausschließlich auf das offizielle [rikkahub/rikkahub](https://github.com/rikkahub/rikkahub)-Projekt, vertrieben über die [offizielle Website](https://rikka-ai.com/download), den [Google-Play](https://play.google.com/store/apps/details?id=me.rerere.rikkahub)-Eintrag unter dem Paketnamen `me.rerere.rikkahub` und die eigene GitHub-Releases-Seite.',
         ],
       },
       vsAlternatives: {
@@ -870,7 +870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Sind RikkaHub-Forks sicher zu verwenden?',
-            a: 'RikkaHubs eigenes README warnt ausdrücklich davor, dass geforkte Versionen existieren und nichts mit dem offiziellen Projekt zu tun haben, und rät Nutzern, „Forks mit Vorsicht zu verwenden, um Datenschutzlecks oder übermäßige Berechtigungsanfragen zu vermeiden". Dieser Test bezieht sich ausschließlich auf die offizielle rikkahub/rikkahub-App, vertrieben über die offizielle Website, Google Play unter dem Paketnamen me.rerere.rikkahub und die eigene GitHub-Releases-Seite.',
+            a: 'RikkaHubs eigenes README warnt ausdrücklich davor, dass geforkte Versionen existieren und nichts mit dem offiziellen Projekt zu tun haben, und rät Nutzern, „Forks mit Vorsicht zu verwenden, um Datenschutzlecks oder übermäßige Berechtigungsanfragen zu vermeiden". Diese Rezension bezieht sich ausschließlich auf die offizielle rikkahub/rikkahub-App, vertrieben über die offizielle Website, Google Play unter dem Paketnamen me.rerere.rikkahub und die eigene GitHub-Releases-Seite.',
           },
           {
             q: 'Wie schneidet RikkaHub im Vergleich zu PocketPal AI oder Private LLM ab?',
@@ -888,7 +888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sources',
         title: 'Quellen',
         items: [
-          '[RikkaHub auf GitHub](https://github.com/rikkahub/rikkahub) — Quellcode, README, Lizenz (AGPL-3.0), Release-Historie und in diesem Test genannte Stern-/Fork-Zahlen.',
+          '[RikkaHub auf GitHub](https://github.com/rikkahub/rikkahub) — Quellcode, README, Lizenz (AGPL-3.0), Release-Historie und in dieser Rezension genannte Stern-/Fork-Zahlen.',
           '[RikkaHub GitHub Releases](https://github.com/rikkahub/rikkahub/releases) — Release-Rhythmus und APK-Download.',
           '[RikkaHub CONTRIBUTING.md](https://github.com/rikkahub/rikkahub/blob/master/CONTRIBUTING.md) — Beitragsrichtlinie, referenziert für die meinungsstarke Haltung des Projekts zu Pull Requests.',
           '[Offizielle RikkaHub-Website](https://rikka-ai.com/download) — laut eigenem README die empfohlene Download-Quelle.',
@@ -899,8 +899,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[PocketPal AI im Test (2026)](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene App, die GGUF-Modelle tatsächlich auf dem Gerät ausführt, der direkte architektonische Gegensatz zu RikkaHub.',
-          '[Private LLM im Test](/de/power-local-llm/private-llm-review) — eine kostenpflichtige, Closed-Source-On-Device-Alternative für iPhone, iPad und Mac mit über 140 Modellen.',
+          '[PocketPal-AI-im-Rezension (2026)](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene App, die GGUF-Modelle tatsächlich auf dem Gerät ausführt, der direkte architektonische Gegensatz zu RikkaHub.',
+          '[Private-LLM-Rezension](/de/power-local-llm/private-llm-review) — eine kostenpflichtige, Closed-Source-On-Device-Alternative für iPhone, iPad und Mac mit über 140 Modellen.',
           '[Die besten Local-LLM-Apps für Android 2026](/de/power-local-llm/best-local-llm-apps-android-2026) — die Übersicht der On-Device-Android-Apps, für Leser, die gezielt lokale Inferenz statt eines Cloud-Clients suchen.',
           '[Die besten Local-LLM-Apps für iPhone 2026](/de/power-local-llm/best-local-llm-apps-iphone-2026) — das iOS-Pendant, für Leser, die eine On-Device-Option für Apple-Geräte benötigen, da RikkaHub keine anbietet.',
           '[Die besten mobilen KI-Modelle 2026: Phi-4 Mini vs. Gemma 4 vs. SmolLM](/de/power-local-llm/mobile-llm-models-phi4-gemma-smollm) — der Modell-Begleitartikel für alle, die sich für On-Device-Inferenz statt eines Cloud-Clients wie RikkaHub entscheiden.',
@@ -910,9 +910,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      headline: 'RikkaHub im Test (2026): KI-Chat für Android mit vielen Anbietern',
+      headline: 'RikkaHub-Rezension (2026): KI-Chat für Android mit vielen Anbietern',
       description:
-        'RikkaHub im Test: eine kostenlose, quelloffene Android-App für den Chat mit Cloud-KI-Anbietern über eigene API-Schlüssel. Läuft sie lokal? Lizenz, Einrichtung und Fazit.',
+        'RikkaHub-Rezension: eine kostenlose, quelloffene Android-App für den Chat mit Cloud-KI-Anbietern über eigene API-Schlüssel. Läuft sie lokal? Lizenz, Einrichtung und Fazit.',
       url: 'https://promptquorum.com/de/power-local-llm/rikkahub-review',
       inLanguage: 'de',
       datePublished: '2026-09-06',
@@ -937,7 +937,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://promptquorum.com' },
         { '@type': 'ListItem', position: 2, name: 'Power Local LLM', item: 'https://promptquorum.com/de/power-local-llm' },
-        { '@type': 'ListItem', position: 3, name: 'RikkaHub im Test (2026)', item: 'https://promptquorum.com/de/power-local-llm/rikkahub-review' },
+        { '@type': 'ListItem', position: 3, name: 'RikkaHub-Rezension (2026)', item: 'https://promptquorum.com/de/power-local-llm/rikkahub-review' },
       ],
     },
   },

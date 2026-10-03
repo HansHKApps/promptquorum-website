@@ -292,9 +292,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     audience: 'Entwickler und Self-Hoster, die einen fertigen docker-compose-Stack für lokale KI-Workflows ohne Cloud-Abhängigkeit suchen',
     primaryTerm: 'Self-hosted AI Starter Kit',
-    title: 'Self-Hosted AI Starter Kit im Test: n8n + Ollama + Qdrant in einer Compose-Datei',
-    seoTitle: 'Self-Hosted AI Starter Kit im Test',
-    intro: 'Das Self-hosted AI Starter Kit ([github.com/n8n-io/self-hosted-ai-starter-kit](https://github.com/n8n-io/self-hosted-ai-starter-kit)) ist eine Open-Source-Docker-Compose-Vorlage, kuratiert von [n8n](https://n8n.io), die n8ns Workflow-Automatisierungsplattform, [Ollama](https://ollama.com) für lokale Modell-Inferenz, [Qdrant](https://qdrant.tech) als Vektordatenbank und PostgreSQL in einem einzigen `docker compose up`-Befehl bündelt. Es handelt sich nicht um eine eigenständige Anwendung, sondern um einen vorverdrahteten Startpunkt zum Aufbau lokaler KI-Agenten, RAG-Pipelines und Automatisierungs-Workflows ganz ohne Cloud-Abhängigkeit. Dieser Test zeigt, was tatsächlich enthalten ist, wie die Installation abläuft und wie sich das Kit im Vergleich zum separaten Betrieb dieser Tools schlägt.',
+    title: 'Self-Hosted-AI-Starter-Kit-Rezension: n8n + Ollama + Qdrant in einer Compose-Datei',
+    seoTitle: 'Self-Hosted-AI-Starter-Kit-Rezension',
+    intro: 'Das Self-hosted AI Starter Kit ([github.com/n8n-io/self-hosted-ai-starter-kit](https://github.com/n8n-io/self-hosted-ai-starter-kit)) ist eine Open-Source-Docker-Compose-Vorlage, kuratiert von [n8n](https://n8n.io), die n8ns Workflow-Automatisierungsplattform, [Ollama](https://ollama.com) für lokale Modell-Inferenz, [Qdrant](https://qdrant.tech) als Vektordatenbank und PostgreSQL in einem einzigen `docker compose up`-Befehl bündelt. Es handelt sich nicht um eine eigenständige Anwendung, sondern um einen vorverdrahteten Startpunkt zum Aufbau lokaler KI-Agenten, RAG-Pipelines und Automatisierungs-Workflows ganz ohne Cloud-Abhängigkeit. Diese Rezension zeigt, was tatsächlich enthalten ist, wie die Installation abläuft und wie sich das Kit im Vergleich zum separaten Betrieb dieser Tools schlägt.',
     metaDescription: 'Self-hosted AI Starter Kit bündelt n8n, Ollama, Qdrant und PostgreSQL in einer docker-compose-Vorlage für lokale KI-Workflows. Geprüfte Installation und Funktionen für 2026.',
     readTime: '12 Min. Lesezeit',
     targetKeywords: [
@@ -353,7 +353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kuratiert und gepflegt von [n8n](https://n8n.io), dem Low-Code-Workflow-Automatisierungsunternehmen hinter der [n8n-Plattform selbst](/power-local-llm/n8n-review)',
         ],
         callouts: [
-          { type: 'note', text: 'Dieser Test ist das vertiefende Gegenstück zum Eintrag des Self-hosted AI Starter Kits im [Local LLM Software Directory](/directory) — dort finden Sie den Vergleich auf einen Blick mit Dutzenden anderen lokalen KI-Tools.' },
+          { type: 'note', text: 'Diese Rezension ist das vertiefende Gegenstück zum Eintrag des Self-hosted AI Starter Kits im [Local LLM Software Directory](/directory) — dort finden Sie den Vergleich auf einen Blick mit Dutzenden anderen lokalen KI-Tools.' },
         ],
       },
       overview: {
@@ -367,7 +367,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Qdrant: eine quelloffene Vektordatenbank zum Speichern und Abrufen von Embeddings in RAG-artigen Workflows',
           'PostgreSQL: die relationale Datenbank hinter n8ns eigener Speicherung von Workflows und Zugangsdaten',
           'Betreuer: [n8n](https://n8n.io), das Unternehmen hinter der n8n-Workflow-Automatisierungsplattform',
-          'Kanonisches Repository: [github.com/n8n-io/self-hosted-ai-starter-kit](https://github.com/n8n-io/self-hosted-ai-starter-kit) — Quelle der Installationsschritte und Versionshistorie in diesem Test',
+          'Kanonisches Repository: [github.com/n8n-io/self-hosted-ai-starter-kit](https://github.com/n8n-io/self-hosted-ai-starter-kit) — Quelle der Installationsschritte und Versionshistorie in dieser Rezension',
         ],
         note: 'Da es sich um eine Vorlage handelt, die auf unabhängig gepflegten Projekten aufbaut, sind Funktionsumfang und Stabilität durch diese zugrunde liegenden Tools begrenzt: n8ns eigener Release-Rhythmus, die von Ollama unterstützten Modelle und Qdrants eigene Fähigkeiten. Es gibt keine eigene „Starter-Kit"-Versionsnummer über die in der Compose-Datei fixierten Docker-Image-Tags jedes Dienstes hinaus.',
       },
@@ -441,7 +441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Komponente', 'Lizenz', 'Kosten'],
         rows: [
           { 'Komponente': 'Self-hosted AI Starter Kit (diese Vorlage)', 'Lizenz': 'Apache-2.0, laut der [LICENSE-Datei des Repositorys](https://github.com/n8n-io/self-hosted-ai-starter-kit/blob/main/LICENSE)', 'Kosten': 'Kostenlos' },
-          { 'Komponente': 'n8n (gebündelt)', 'Lizenz': 'Sustainable Use License (Source-available, nicht OSI-zertifiziert) für Self-Hosting; Details im [n8n-Test](/power-local-llm/n8n-review)', 'Kosten': 'Kostenlos für Self-Hosting gemäß n8ns Lizenzbedingungen' },
+          { 'Komponente': 'n8n (gebündelt)', 'Lizenz': 'Sustainable Use License (Source-available, nicht OSI-zertifiziert) für Self-Hosting; Details im [n8n-Rezension](/power-local-llm/n8n-review)', 'Kosten': 'Kostenlos für Self-Hosting gemäß n8ns Lizenzbedingungen' },
           { 'Komponente': 'Ollama (gebündelt)', 'Lizenz': 'MIT', 'Kosten': 'Kostenlos' },
           { 'Komponente': 'Qdrant (gebündelt)', 'Lizenz': 'Apache-2.0', 'Kosten': 'Kostenlos' },
           { 'Komponente': 'PostgreSQL (gebündelt)', 'Lizenz': 'PostgreSQL License (permissiv)', 'Kosten': 'Kostenlos' },
@@ -455,7 +455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         itemHeadings: true,
         columns: ['Aspekt', 'Self-Hosted AI Starter Kit', 'Reines n8n (Self-Hosted)'],
         rows: [
-          { 'Aspekt': 'Was installiert wird', 'Self-Hosted AI Starter Kit': 'n8n + Ollama + Qdrant + PostgreSQL, vorvernetzt in einer docker-compose.yml', 'Reines n8n (Self-Hosted)': 'Nur n8n — eigene Installationsschritte im [n8n-Test](/power-local-llm/n8n-review)' },
+          { 'Aspekt': 'Was installiert wird', 'Self-Hosted AI Starter Kit': 'n8n + Ollama + Qdrant + PostgreSQL, vorvernetzt in einer docker-compose.yml', 'Reines n8n (Self-Hosted)': 'Nur n8n — eigene Installationsschritte im [n8n-Rezension](/power-local-llm/n8n-review)' },
           { 'Aspekt': 'Lokale LLM-Inferenz', 'Self-Hosted AI Starter Kit': 'Standardmäßig enthalten über gebündeltes Ollama', 'Reines n8n (Self-Hosted)': 'Nicht enthalten; eigener Modell-Provider (lokal oder Cloud) wird manuell angebunden' },
           { 'Aspekt': 'Vektordatenbank für RAG', 'Self-Hosted AI Starter Kit': 'Standardmäßig enthalten über gebündeltes Qdrant', 'Reines n8n (Self-Hosted)': 'Nicht enthalten; eine Vektordatenbank müsste selbst ergänzt und vernetzt werden' },
           { 'Aspekt': 'Beispiel-Workflow', 'Self-Hosted AI Starter Kit': 'Beim ersten Start ist ein lokales RAG-Beispiel bereits geladen', 'Reines n8n (Self-Hosted)': 'Startet mit leerer Canvas; Vorlagen gibt es separat aus n8ns Template-Bibliothek' },
@@ -482,7 +482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             title: 'Lieber warten oder woanders schauen, wenn',
             list: [
               'Sie bereits n8n, Ollama oder eine Vektordatenbank unabhängig betreiben und die gebündelten Versionen des Starter Kits nicht mit der bestehenden Umgebung doppeln oder in Konflikt bringen möchten',
-              'Sie ein dediziertes RAG-Framework mit tieferen Dokumentenverarbeitungsfunktionen brauchen, als ein Workflow-Automatisierungstool bietet — siehe den [RAGFlow-Test](/power-local-llm/ragflow-document-understanding-rag-review) oder den [Haystack-Test](/power-local-llm/haystack-deepset-rag-framework-review) als zweckgebundene Alternativen',
+              'Sie ein dediziertes RAG-Framework mit tieferen Dokumentenverarbeitungsfunktionen brauchen, als ein Workflow-Automatisierungstool bietet — siehe den [RAGFlow-Rezension](/power-local-llm/ragflow-document-understanding-rag-review) oder den [Haystack-Rezension](/power-local-llm/haystack-deepset-rag-framework-review) als zweckgebundene Alternativen',
               'Sie möchten, dass n8ns Self-Hosted-Lizenzbedingungen (eine Source-available Sustainable Use License, nicht OSI-zertifiziert) eine reine permissive Open-Source-Lizenz für jede gebündelte Komponente wären — lesen Sie n8ns eigene Lizenz direkt, falls dieser Unterschied für Ihre Organisation relevant ist',
               'Sie Enterprise-Supportverträge statt Community-/GitHub-Issue-Support benötigen — dies ist eine Community-Vorlage, kein kommerziell unterstütztes Produkt',
             ],
@@ -494,10 +494,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Starter Kit vs. andere lokale KI-Workflow-Tools',
         content: 'Das Self-hosted AI Starter Kit ist im Bereich Workflow-Automatisierung und RAG-Frameworks neben mehreren anderen selbst hostbaren Optionen angesiedelt. So schneidet es im Vergleich zu verwandten Tools ab — den vollständigen Katalog liefert das [Local LLM Software Directory](/directory), und den direktesten Vergleich der [dedizierte Starter-Kit-vs.-reines-n8n-Vergleich](#starter-kit-vs-n8n) oben.',
         items: [
-          '**[n8n](https://n8n.io)** — die Workflow-Automatisierungsplattform, auf der dieses Kit aufbaut; siehe den dedizierten Vergleichsabschnitt oben sowie den vollständigen [n8n-Test](/power-local-llm/n8n-review) für eigene Installations- und Lizenzdetails.',
-          '**[LangChain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)** — eine Self-Hosted RAG- und Wissensdatenbank-Anwendung mit eigener integrierter Oberfläche statt einer universellen Workflow-Automatisierungs-Canvas; siehe den [LangChain-Chatchat-Test](/power-local-llm/langchain-chatchat-review), falls eine dedizierte Dokument-Chat-App besser passt als ein Workflow-Builder.',
-          '**[RAGFlow](https://github.com/infiniflow/ragflow)** — eine RAG-Engine für tiefes Dokumentenverständnis, fokussiert auf das gründlichere Parsen komplexer Dokumente (Tabellen, Layouts) als ein allgemeines Workflow-Tool; siehe den [RAGFlow-Test](/power-local-llm/ragflow-document-understanding-rag-review).',
-          '**[Haystack](https://haystack.deepset.ai)** — ein Python-first-RAG-Framework für Entwickler, die Pipeline-Code direkt schreiben möchten, statt einen visuellen Workflow-Builder zu nutzen; siehe den [Haystack-Test](/power-local-llm/haystack-deepset-rag-framework-review).',
+          '**[n8n](https://n8n.io)** — die Workflow-Automatisierungsplattform, auf der dieses Kit aufbaut; siehe den dedizierten Vergleichsabschnitt oben sowie den vollständigen [n8n-Rezension](/power-local-llm/n8n-review) für eigene Installations- und Lizenzdetails.',
+          '**[LangChain-Chatchat](https://github.com/chatchat-space/Langchain-Chatchat)** — eine Self-Hosted RAG- und Wissensdatenbank-Anwendung mit eigener integrierter Oberfläche statt einer universellen Workflow-Automatisierungs-Canvas; siehe den [LangChain-Chatchat-Rezension](/power-local-llm/langchain-chatchat-review), falls eine dedizierte Dokument-Chat-App besser passt als ein Workflow-Builder.',
+          '**[RAGFlow](https://github.com/infiniflow/ragflow)** — eine RAG-Engine für tiefes Dokumentenverständnis, fokussiert auf das gründlichere Parsen komplexer Dokumente (Tabellen, Layouts) als ein allgemeines Workflow-Tool; siehe den [RAGFlow-Rezension](/power-local-llm/ragflow-document-understanding-rag-review).',
+          '**[Haystack](https://haystack.deepset.ai)** — ein Python-first-RAG-Framework für Entwickler, die Pipeline-Code direkt schreiben möchten, statt einen visuellen Workflow-Builder zu nutzen; siehe den [Haystack-Rezension](/power-local-llm/haystack-deepset-rag-framework-review).',
         ],
         note: 'Dies ist keine erschöpfende Liste lokaler KI-Workflow- und RAG-Tools — den vollständigen, regelmäßig aktualisierten Katalog inklusive des Eintrags dieses Starter Kits liefert das [Local LLM Software Directory](/directory).',
       },
@@ -508,7 +508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         subsections: [
           {
             title: 'Fehler 1: Es als eigenständige App getrennt von n8n zu behandeln',
-            content: 'Das Starter Kit ist kein eigenes Produkt — es ist eine Docker-Compose-Vorlage, die n8n zusammen mit Ollama, Qdrant und PostgreSQL installiert und vernetzt. Jede Bewertung von n8n selbst (Funktionen, Lizenzierung, Release-Rhythmus) gilt für die innerhalb dieses Kits laufende n8n-Instanz; Details dazu im [n8n-Test](/power-local-llm/n8n-review).',
+            content: 'Das Starter Kit ist kein eigenes Produkt — es ist eine Docker-Compose-Vorlage, die n8n zusammen mit Ollama, Qdrant und PostgreSQL installiert und vernetzt. Jede Bewertung von n8n selbst (Funktionen, Lizenzierung, Release-Rhythmus) gilt für die innerhalb dieses Kits laufende n8n-Instanz; Details dazu im [n8n-Rezension](/power-local-llm/n8n-review).',
           },
           {
             title: 'Fehler 2: Anzunehmen, dass ein Cloud-LLM-Provider enthalten ist',
@@ -535,7 +535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Wie installiere ich das Self-hosted AI Starter Kit?', a: 'Repository klonen (`git clone https://github.com/n8n-io/self-hosted-ai-starter-kit.git`), Umgebungsdatei kopieren (`cp .env.example .env`), dann `docker compose --profile cpu up` (oder `gpu-nvidia`/`gpu-amd` für GPU-Beschleunigung) ausführen. Die vollständige Reihenfolge zeigt die Installationstabelle oben.' },
           { q: 'Unterstützt es GPU-Beschleunigung?', a: 'Ja, über separate Docker-Compose-Profile: `gpu-nvidia` für Nvidia-GPUs und `gpu-amd` für AMD-GPUs unter Linux, neben dem Standardprofil `cpu` für reine CPU-Inferenz.' },
           { q: 'Ist das dasselbe wie n8n?', a: 'Nein. n8n ist eine der vier gebündelten Komponenten. Das Starter Kit ist eine vorkonfigurierte Umgebung, die n8n zusammen mit Ollama, Qdrant und PostgreSQL installiert — die genauen Unterschiede zeigt der [Vergleich Self-Hosted AI Starter Kit vs. reines n8n](#starter-kit-vs-n8n) oben.' },
-          { q: 'Welche Lizenz nutzt n8n selbst innerhalb dieses Kits?', a: 'n8n ist unter seiner eigenen Sustainable Use License source-available, die nicht OSI-zertifiziert ist, für Self-Hosting-Nutzung — unabhängig von der Apache-2.0-Lizenz, unter der diese Starter-Kit-Vorlage selbst steht. Details im [n8n-Test](/power-local-llm/n8n-review).' },
+          { q: 'Welche Lizenz nutzt n8n selbst innerhalb dieses Kits?', a: 'n8n ist unter seiner eigenen Sustainable Use License source-available, die nicht OSI-zertifiziert ist, für Self-Hosting-Nutzung — unabhängig von der Apache-2.0-Lizenz, unter der diese Starter-Kit-Vorlage selbst steht. Details im [n8n-Rezension](/power-local-llm/n8n-review).' },
           { q: 'Wie viele Stars hat das Self-hosted AI Starter Kit auf GitHub?', a: 'Das GitHub-Repository zeigt rund 15.300 Stars und rund 3.800 Forks, Stand September 2026 — die aktuelle Zahl finden Sie im [Live-Repository](https://github.com/n8n-io/self-hosted-ai-starter-kit), da sie sich laufend ändert.' },
           { q: 'Wer pflegt das Self-hosted AI Starter Kit?', a: 'Es wird von [n8n](https://n8n.io) kuratiert und gepflegt, dem Unternehmen hinter der n8n-Workflow-Automatisierungsplattform, als begleitende Ressource, die lokale KI-Workflows mit n8ns AI- und LangChain-Nodes zeigt.' },
         ],
@@ -557,8 +557,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Local LLM Software Directory 2026](/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Verzeichniseintrags dieses Starter Kits neben anderen oben behandelten RAG- und Workflow-Tools.',
-          '[n8n-Test](/power-local-llm/n8n-review) — ein vollständiger Test der Workflow-Automatisierungsplattform, um die dieses Starter Kit gebaut ist, behandelt im dedizierten Vergleichsabschnitt oben.',
-          '[RAGFlow-Test](/power-local-llm/ragflow-document-understanding-rag-review) — eine zweckgebundene RAG-Engine für tiefes Dokumentenverständnis, falls mehr als eine Workflow-Automatisierungs-Canvas benötigt wird.',
+          '[n8n-Rezension](/power-local-llm/n8n-review) — eine vollständige Rezension der Workflow-Automatisierungsplattform, um die dieses Starter Kit gebaut ist, behandelt im dedizierten Vergleichsabschnitt oben.',
+          '[RAGFlow-Rezension](/power-local-llm/ragflow-document-understanding-rag-review) — eine zweckgebundene RAG-Engine für tiefes Dokumentenverständnis, falls mehr als eine Workflow-Automatisierungs-Canvas benötigt wird.',
           '[Lokales RAG auf Ihren PDFs, Schritt für Schritt](/power-local-llm/local-rag-on-your-pdfs-step-by-step) — eine praktische RAG-Anleitung, die gut zum lokalen Vektordatenbank-Setup dieses Kits passt.',
         ],
       },

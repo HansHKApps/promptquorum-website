@@ -9164,7 +9164,7 @@
   {
     "lang": "de",
     "title": "Cherry Studio 2.0 im Jahr 2026: Die kostenlose Agent-basierte KI-Desktop-App",
-    "excerpt": "Cherry Studio 2.0 baut die kostenlose AGPL-3.0-Desktop-App um KI-Agenten auf: MCP-Tools, Wissensdatenbanken, lokale Modelle, viele Anbieter. Test 2026.",
+    "excerpt": "Cherry Studio 2.0 baut die kostenlose AGPL-3.0-Desktop-App um KI-Agenten auf: MCP-Tools, Wissensdatenbanken, lokale Modelle, viele Anbieter. Rezension 2026.",
     "publishDate": "2026-09-03",
     "dateModified": "2026-09-20",
     "url": "/de/local-llms/cherry-studio-ai-desktop-client",
@@ -9325,7 +9325,7 @@
   },
   {
     "lang": "de",
-    "title": "LobeChat im Test 2026: Selbst gehostete KI-Chat-Oberfläche mit Agenten und Plugins",
+    "title": "LobeChat-Rezension 2026: Selbst gehostete KI-Chat-Oberfläche mit Agenten und Plugins",
     "excerpt": "LobeChat ist eine kostenlose, selbst gehostete Chat-Oberfläche mit Agenten-Builder, Plugin-Marktplatz und RAG, die sich mit OpenAI, Anthropic und lokalen Modellen verbindet. Lizenz, Installation und Preise 2026.",
     "publishDate": "2026-09-11",
     "dateModified": "2026-09-11",
@@ -9406,7 +9406,7 @@
   },
   {
     "lang": "de",
-    "title": "Big-AGI im Test 2026: Selbst gehosteter Multi-Modell-Chat mit Beam-Vergleich",
+    "title": "Big-AGI-Rezension 2026: Selbst gehosteter Multi-Modell-Chat mit Beam-Vergleich",
     "excerpt": "Big-AGI ist eine kostenlose, MIT-lizenzierte Chat-Oberfläche, die 20+ Modell-Anbieter abfragt und Antworten mit der Beam-Funktion nebeneinander vergleicht. Lizenz, Self-Hosting und Preise 2026.",
     "publishDate": "2026-09-11",
     "dateModified": "2026-09-11",
@@ -9487,7 +9487,7 @@
   },
   {
     "lang": "de",
-    "title": "NextChat im Test 2026: Leichtgewichtige Chat-UI mit Ein-Klick-Deploy",
+    "title": "NextChat-Rezension 2026: Leichtgewichtige Chat-UI mit Ein-Klick-Deploy",
     "excerpt": "NextChat ist eine kostenlose, MIT-lizenzierte Chat-Oberfläche mit 88.700+ GitHub-Sternen und Ein-Klick-Vercel-Deploy. Lizenz, Docker-Setup und Preise 2026.",
     "publishDate": "2026-09-11",
     "dateModified": "2026-09-11",
@@ -9568,8 +9568,8 @@
   },
   {
     "lang": "de",
-    "title": "Page Assist im Test 2026: Browser-Sidebar für lokale KI-Modelle",
-    "excerpt": "Page Assist ist eine kostenlose, MIT-lizenzierte Browser-Erweiterung mit 8.200+ GitHub-Sternen für den Chat mit lokalen KI-Modellen und Webseiten. Installationslinks und Test 2026.",
+    "title": "Page-Assist-Rezension 2026: Browser-Sidebar für lokale KI-Modelle",
+    "excerpt": "Page Assist ist eine kostenlose, MIT-lizenzierte Browser-Erweiterung mit 8.200+ GitHub-Sternen für den Chat mit lokalen KI-Modellen und Webseiten. Installationslinks und Rezension 2026.",
     "publishDate": "2026-09-11",
     "dateModified": "2026-09-11",
     "url": "/de/local-llms/page-assist-review",
@@ -9649,8 +9649,8 @@
   },
   {
     "lang": "de",
-    "title": "Chatbox im Test 2026: KI-Chat-Client für Desktop, Web und Mobilgeräte",
-    "excerpt": "Chatbox ist ein KI-Chat-Client mit GPLv3-Lizenz, 41.600+ GitHub-Sternen, nativen Apps auf 5 Plattformen plus Web, und bezahlten Chatbox-AI-Plänen ab 3,99 $/Monat. Test 2026.",
+    "title": "Chatbox-Rezension 2026: KI-Chat-Client für Desktop, Web und Mobilgeräte",
+    "excerpt": "Chatbox ist ein KI-Chat-Client mit GPLv3-Lizenz, 41.600+ GitHub-Sternen, nativen Apps auf 5 Plattformen plus Web, und bezahlten Chatbox-AI-Plänen ab 3,99 $/Monat. Rezension 2026.",
     "publishDate": "2026-09-11",
     "dateModified": "2026-09-11",
     "url": "/de/local-llms/chatbox-review",
@@ -22447,8 +22447,8 @@
   },
   {
     "lang": "de",
-    "title": "Backyard AI im Test: Lokaler KI-Charakter-Chat und Rollenspiel",
-    "excerpt": "Backyard AI Test 2026: kostenlose lokale Rollenspiel-App für Windows und Mac. Character Hub, Fimbulvetr 10.7B, Backyard-Cloud-Preise (7 $/18 $/35 $), Hardware-Bedarf und Vergleich mit Loci AI und SillyTavern.",
+    "title": "Backyard-AI-Rezension: Lokaler KI-Charakter-Chat und Rollenspiel",
+    "excerpt": "Backyard-AI-Rezension 2026: kostenlose lokale Rollenspiel-App für Windows und Mac. Character Hub, Fimbulvetr 10.7B, Backyard-Cloud-Preise (7 $/18 $/35 $), Hardware-Bedarf und Vergleich mit Loci AI und SillyTavern.",
     "publishDate": "2026-09-02",
     "dateModified": "2026-09-02",
     "url": "/de/power-local-llm/backyard-ai-review-local-roleplay",
@@ -25849,7 +25849,7 @@
   },
   {
     "lang": "de",
-    "title": "Flowise Test: Visueller LangChain-Workflow-Builder wird eingestellt",
+    "title": "Flowise-Rezension: Visueller LangChain-Workflow-Builder wird eingestellt",
     "excerpt": "Flowise ist ein Open-Source-Tool (Apache 2.0) für visuelle KI-Agenten, aber FlowiseAI löst sich auf: Entwicklung gestoppt, Flowise Cloud endet am 30. November 2026.",
     "publishDate": "2026-09-02",
     "dateModified": "2026-09-02",
@@ -25930,8 +25930,8 @@
   },
   {
     "lang": "de",
-    "title": "Haystack von deepset: Python-RAG-Framework mit Pipeline-Architektur im Test",
-    "excerpt": "Haystack ist deepsets Open-Source-Python-Framework (Apache 2.0) für produktive RAG- und Suchpipelines, aufgebaut auf expliziten Component- und Pipeline-Abstraktionen. Test mit lauffähigem Codebeispiel.",
+    "title": "Haystack-Rezension: Python-RAG-Framework von deepset mit Pipeline-Architektur",
+    "excerpt": "Haystack ist deepsets Open-Source-Python-Framework (Apache 2.0) für produktive RAG- und Suchpipelines, aufgebaut auf expliziten Component- und Pipeline-Abstraktionen. Rezension mit lauffähigem Codebeispiel.",
     "publishDate": "2026-09-02",
     "dateModified": "2026-09-02",
     "url": "/de/power-local-llm/haystack-deepset-rag-framework-review",
@@ -26092,7 +26092,7 @@
   },
   {
     "lang": "de",
-    "title": "Dify im Test: Lizenz, Preise & Self-Hosting im Detail",
+    "title": "Dify-Rezension: Lizenz, Preise & Self-Hosting im Detail",
     "excerpt": "Dify ist eine Open-Source-LLMOps-Plattform (Workflow-Builder, RAG, Agenten) unter modifizierter Apache-2.0-Lizenz, die Multi-Tenant-SaaS-Nutzung ohne Genehmigung untersagt.",
     "publishDate": "2026-09-02",
     "dateModified": "2026-09-02",
@@ -26173,7 +26173,7 @@
   },
   {
     "lang": "de",
-    "title": "n8n Test: KI-Workflow-Automatisierung mit lokaler Ollama-Unterstützung",
+    "title": "n8n-Rezension: KI-Workflow-Automatisierung mit lokaler Ollama-Unterstützung",
     "excerpt": "n8n ist eine selbst hostbare Workflow-Automatisierungsplattform mit nativem Ollama-Chat-Modell-Knoten für lokale LLMs sowie OpenAI-/Anthropic-API-Knoten. Lizenz, Installation und Einrichtung im Überblick.",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
@@ -26254,7 +26254,7 @@
   },
   {
     "lang": "de",
-    "title": "h2oGPT im Test: Funktionen, Setup und warum das Projekt archiviert ist",
+    "title": "h2oGPT-Rezension: Funktionen, Setup und warum das Projekt archiviert ist",
     "excerpt": "h2oGPT ist ein Apache-2.0-RAG- und Dokumenten-Chat-Tool von H2O.ai, seit dem 26. Februar 2026 archiviert (nur lesbar). Funktionen, Self-Hosting-Schritte und die gepflegte Alternative h2oGPTe.",
     "publishDate": "2026-09-03",
     "dateModified": "2026-09-03",
@@ -26416,7 +26416,7 @@
   },
   {
     "lang": "de",
-    "title": "LangChain: Funktionen, Preise, MIT-Lizenz im Test",
+    "title": "LangChain-Rezension: Funktionen, Preise, MIT-Lizenz",
     "excerpt": "LangChain ist ein kostenloses, MIT-lizenziertes Framework für LLM-Apps, RAG und Agenten von LangChain Inc. Geprüfte Preise, Code-Beispiele und Firmengeschichte.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-09-05",
@@ -26497,7 +26497,7 @@
   },
   {
     "lang": "de",
-    "title": "AutoGen im Test: Wartungsmodus-Status & AG2-Fork",
+    "title": "AutoGen-Rezension: Wartungsmodus-Status & AG2-Fork",
     "excerpt": "AutoGen, Microsofts ursprüngliches Multi-Agenten-Framework, befindet sich seit Oktober 2025 im Wartungsmodus. Diese Bewertung behandelt das Legacy-AutoGen-Projekt und seinen AG2-Fork.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-09-05",
@@ -26578,7 +26578,7 @@
   },
   {
     "lang": "de",
-    "title": "CrewAI Test: Funktionen, Preise, Alternativen",
+    "title": "CrewAI-Rezension: Funktionen, Preise, Alternativen",
     "excerpt": "CrewAI ist ein kostenloses, MIT-lizenziertes Framework für rollenbasierte Multi-Agenten-Systeme von der VC-finanzierten CrewAI, Inc. Verifizierte Preise, Gründerhistorie und Codebeispiele.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-09-05",
@@ -26659,7 +26659,7 @@
   },
   {
     "lang": "de",
-    "title": "LangGraph im Test: Funktionen, Preise, Alternativen",
+    "title": "LangGraph-Rezension: Funktionen, Preise, Alternativen",
     "excerpt": "LangGraph ist ein kostenloses, MIT-lizenziertes, graphbasiertes Framework für zustandsbehaftete KI-Agenten von LangChain Inc. Geprüfte Preise, Codebeispiel, Geschichte.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-09-05",
@@ -26740,7 +26740,7 @@
   },
   {
     "lang": "de",
-    "title": "Semantic Kernel: Funktionen, Preise, Alternativen im Test",
+    "title": "Semantic-Kernel-Rezension: Funktionen, Preise, Alternativen",
     "excerpt": "Semantic Kernel ist Microsofts kostenloses, MIT-lizenziertes SDK für LLM-Apps in .NET, Python und Java — jetzt im Wartungsmodus. Geprüfter Status, Preise, Code.",
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-06",
@@ -26821,7 +26821,7 @@
   },
   {
     "lang": "de",
-    "title": "Letta: Gedächtnis, ADE, Preise, Alternativen im Test",
+    "title": "Letta-Rezension: Gedächtnis, ADE, Preise, Alternativen",
     "excerpt": "Letta (ehemals MemGPT) ist ein kostenloses Apache-2.0-Framework für zustandsbehaftete Agenten mit selbstbearbeitendem Gedächtnis. Geprüfte Geschichte, ADE, Preise und Code-Beispiele.",
     "publishDate": "2026-09-07",
     "dateModified": "2026-09-07",
@@ -27550,7 +27550,7 @@
   },
   {
     "lang": "de",
-    "title": "Microsoft Agent Framework im Test: Funktionen, Preise, Alternativen",
+    "title": "Microsoft-Agent-Framework-Rezension: Funktionen, Preise, Alternativen",
     "excerpt": "Microsoft Agent Framework führt AutoGen und Semantic Kernel in einem MIT-lizenzierten SDK zusammen. Geprüftes GA-Datum, Preise auf Azure AI Foundry, Codebeispiele und Alternativen.",
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-06",
@@ -27631,7 +27631,7 @@
   },
   {
     "lang": "de",
-    "title": "LlamaIndex Test: Code-First-RAG-Framework mit MIT-Lizenz, kein No-Code-Builder",
+    "title": "LlamaIndex-Rezension: Code-First-RAG-Framework mit MIT-Lizenz, kein No-Code-Builder",
     "excerpt": "LlamaIndex ist ein kostenloses, quelloffenes (MIT) Python-Framework für RAG-Pipelines mit eigenen Daten. Kernkonzepte, LlamaCloud-Preise und ein funktionierendes Codebeispiel.",
     "publishDate": "2026-09-02",
     "dateModified": "2026-09-02",
@@ -27712,7 +27712,7 @@
   },
   {
     "lang": "de",
-    "title": "txtai im Test: Vektordatenbank ohne separaten Server (Apache 2.0)",
+    "title": "txtai-Rezension: Vektordatenbank ohne separaten Server (Apache 2.0)",
     "excerpt": "txtai ist eine kostenlose Open-Source-Python-Bibliothek (Apache 2.0), die eingebettete Vektordatenbank, RAG-Pipelines und LLM-Workflows in einem Paket vereint — ohne separaten Server.",
     "publishDate": "2026-09-02",
     "dateModified": "2026-09-02",
@@ -27793,7 +27793,7 @@
   },
   {
     "lang": "de",
-    "title": "Quivr Test: Python-Bibliothek statt Self-Hosted-Chat-App",
+    "title": "Quivr-Rezension: Python-Bibliothek statt Self-Hosted-Chat-App",
     "excerpt": "Quivr ist eine Apache-2.0-Python-Bibliothek für RAG, keine selbst gehostete Chat-App. Der Hauptzweig hat seit Juni 2025 keinen Commit — der Status 2026 im Detail.",
     "publishDate": "2026-09-02",
     "dateModified": "2026-09-02",
@@ -27874,8 +27874,8 @@
   },
   {
     "lang": "de",
-    "title": "RAGFlow Test: Dokumentenverständnis & Zitate ab 16 GB RAM",
-    "excerpt": "RAGFlow im Test 2026: Open-Source-RAG-Engine (Apache 2.0) mit layoutbewusster Dokumentenanalyse und nachvollziehbaren Zitaten. Self-Hosting, Setup und Vergleich zu Quivr, Dify, LlamaIndex.",
+    "title": "RAGFlow-Rezension: Dokumentenverständnis & Zitate ab 16 GB RAM",
+    "excerpt": "RAGFlow-Rezension 2026: Open-Source-RAG-Engine (Apache 2.0) mit layoutbewusster Dokumentenanalyse und nachvollziehbaren Zitaten. Self-Hosting, Setup und Vergleich zu Quivr, Dify, LlamaIndex.",
     "publishDate": "2026-09-02",
     "dateModified": "2026-09-02",
     "url": "/de/power-local-llm/ragflow-document-understanding-rag-review",
@@ -28279,7 +28279,7 @@
   },
   {
     "lang": "de",
-    "title": "Khoj Test: Selbst gehostetes KI-Zweitgehirn, keine Cloud mehr",
+    "title": "Khoj-Rezension: Selbst gehostetes KI-Zweitgehirn, keine Cloud mehr",
     "excerpt": "Khoj ist ein quelloffenes (AGPL 3.0), selbst hostbares KI-Zweitgehirn, das mit Obsidian und Notion synchronisiert. Khoj Cloud wurde eingestellt — nur noch Self-Hosting ist möglich.",
     "publishDate": "2026-09-02",
     "dateModified": "2026-09-02",
@@ -28441,7 +28441,7 @@
   },
   {
     "lang": "de",
-    "title": "Real-ESRGAN im Test: Kostenloser, lokaler KI-Bild-Upscaler",
+    "title": "Real-ESRGAN-Rezension: Kostenloser, lokaler KI-Bild-Upscaler",
     "excerpt": "Real-ESRGAN skaliert Bilder lokal und kostenlos unter Apache 2.0. Vergleich mit Upscayl, waifu2x und Topaz Gigapixel, inklusive exakter Installationsschritte.",
     "publishDate": "2026-09-02",
     "dateModified": "2026-09-02",
@@ -28927,8 +28927,8 @@
   },
   {
     "lang": "de",
-    "title": "Atomic Chat Test: Lokale KI, Agenten und API",
-    "excerpt": "Atomic Chat im Test: kostenlose, quelloffene lokale KI-App für Mac, Windows, Linux, iOS und Android mit Agenten, lokaler OpenAI-kompatibler API und optionalen Cloud-Modellen.",
+    "title": "Atomic-Chat-Rezension: Lokale KI, Agenten und API",
+    "excerpt": "Atomic-Chat-Rezension: kostenlose, quelloffene lokale KI-App für Mac, Windows, Linux, iOS und Android mit Agenten, lokaler OpenAI-kompatibler API und optionalen Cloud-Modellen.",
     "publishDate": "2026-09-03",
     "dateModified": "2026-09-05",
     "url": "/de/power-local-llm/atomic-chat-review",
@@ -29008,8 +29008,8 @@
   },
   {
     "lang": "de",
-    "title": "Atomic Agent im Test: Lokaler KI-Agent als CLI, kostenlos & MIT-lizenziert",
-    "excerpt": "Atomic Agent im Test: ein kostenloser, MIT-lizenzierter, lokal-first CLI-KI-Agent auf Basis von llama.cpp. Geprüfte Installationsschritte, Plattformen, Lizenz und ehrliche Grenzen.",
+    "title": "Atomic-Agent-Rezension: Lokaler KI-Agent als CLI, kostenlos & MIT-lizenziert",
+    "excerpt": "Atomic-Agent-Rezension: ein kostenloser, MIT-lizenzierter, lokal-first CLI-KI-Agent auf Basis von llama.cpp. Geprüfte Installationsschritte, Plattformen, Lizenz und ehrliche Grenzen.",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
     "url": "/de/power-local-llm/atomic-agent-review",
@@ -29251,7 +29251,7 @@
   },
   {
     "lang": "de",
-    "title": "LibreChat im Test: Selbst gehostete ChatGPT-Alternative für lokale LLMs",
+    "title": "LibreChat-Rezension: Selbst gehostete ChatGPT-Alternative für lokale LLMs",
     "excerpt": "LibreChat ist eine kostenlose, MIT-lizenzierte Self-Hosted-Chat-Plattform, die sich mit Ollama, LocalAI, vLLM und LM Studio verbindet — privater KI-Chat mit Agenten und RAG.",
     "publishDate": "2026-09-03",
     "dateModified": "2026-09-03",
@@ -29332,8 +29332,8 @@
   },
   {
     "lang": "de",
-    "title": "Bodega One Code im Test: Eine lokal-first BYOLLM-Coding-IDE",
-    "excerpt": "Bodega One Code im Test: eine lokal-first Coding-IDE mit BYOLLM-Anbieterwechsel, Monaco-Editor und autonomem Agenten. Preise, Lizenz, Air-Gap-Modus und Vergleich mit Continue.dev, Cline und Aider.",
+    "title": "Bodega-One-Code-Rezension: Eine lokal-first BYOLLM-Coding-IDE",
+    "excerpt": "Bodega-One-Code-Rezension: eine lokal-first Coding-IDE mit BYOLLM-Anbieterwechsel, Monaco-Editor und autonomem Agenten. Preise, Lizenz, Air-Gap-Modus und Vergleich mit Continue.dev, Cline und Aider.",
     "publishDate": "2026-09-03",
     "dateModified": "2026-09-03",
     "url": "/de/power-local-llm/bodega-one-code-review",
@@ -29413,7 +29413,7 @@
   },
   {
     "lang": "de",
-    "title": "Open Interpreter im Test: Rust-Kern statt Python, Apache statt AGPL",
+    "title": "Open-Interpreter-Rezension: Rust-Kern statt Python, Apache statt AGPL",
     "excerpt": "Open Interpreter hat sein Python/AGPL-Tool in Rust neu geschrieben, von OpenAI Codex abgeleitet und auf Apache 2.0 umgestellt. Was sich änderte, Installation und Vergleich mit Aider, Cline.",
     "publishDate": "2026-09-03",
     "dateModified": "2026-09-03",
@@ -29494,7 +29494,7 @@
   },
   {
     "lang": "de",
-    "title": "OpenClaw im Test: Zweimal umbenannt, jetzt von einer Stiftung geführt",
+    "title": "OpenClaw-Rezension: Zweimal umbenannt, jetzt von einer Stiftung geführt",
     "excerpt": "OpenClaw ist ein Open-Source-KI-Agenten-Gateway für WhatsApp, Discord und mehr. Was es tut, die Umbenennung von Clawdbot über Moltbot zu OpenClaw, und die Bilanz von 647 Sicherheitshinweisen.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-09-20",
@@ -31276,8 +31276,8 @@
   },
   {
     "lang": "de",
-    "title": "Noema im Test: Multi-Format-KI lokal für iPhone, iPad und Mac",
-    "excerpt": "Noema im Test: kostenlose iPhone/iPad/Mac-App mit 5 Modellformaten (GGUF, MLX, ExecuTorch, Core ML, Apple Foundation Models) plus PDF/EPUB-Dokument-Chat auf dem Gerät. Preis, Datenschutz und Alternativen.",
+    "title": "Noema-Rezension: Multi-Format-KI lokal für iPhone, iPad und Mac",
+    "excerpt": "Noema-Rezension: kostenlose iPhone/iPad/Mac-App mit 5 Modellformaten (GGUF, MLX, ExecuTorch, Core ML, Apple Foundation Models) plus PDF/EPUB-Dokument-Chat auf dem Gerät. Preis, Datenschutz und Alternativen.",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
     "url": "/de/power-local-llm/noema-review",
@@ -31357,8 +31357,8 @@
   },
   {
     "lang": "de",
-    "title": "AI on Device im Test: Eine 4,99-$-App nur für Apple Intelligence",
-    "excerpt": "AI on Device im Test: 4,99-$-Einmalkauf-App für iPhone/Mac mit offline laufendem 3B-2-Bit-Modell. Erfordert ein Apple-Intelligence-kompatibles Gerät (iOS/macOS 26+). Ehrlicher Blick auf Bewertungszahl und Update-Historie.",
+    "title": "AI-on-Device-Rezension: Eine 4,99-$-App nur für Apple Intelligence",
+    "excerpt": "AI-on-Device-Rezension: 4,99-$-Einmalkauf-App für iPhone/Mac mit offline laufendem 3B-2-Bit-Modell. Erfordert ein Apple-Intelligence-kompatibles Gerät (iOS/macOS 26+). Ehrlicher Blick auf Bewertungszahl und Update-Historie.",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
     "url": "/de/power-local-llm/ai-on-device-review",
@@ -31519,8 +31519,8 @@
   },
   {
     "lang": "de",
-    "title": "Aori AI Test: Local-First Persönlicher KI-Agent für Desktop und Mobilgeräte",
-    "excerpt": "Aori AI Test: ein local-first persönlicher Agent mit Gedächtnis, Personas und Routinen für Desktop und Android. Wann läuft er offline über Ollama, wann hängt er von Cloud-Anbietern ab?",
+    "title": "Aori-AI-Rezension: Local-First Persönlicher KI-Agent für Desktop und Mobilgeräte",
+    "excerpt": "Aori-AI-Rezension: ein local-first persönlicher Agent mit Gedächtnis, Personas und Routinen für Desktop und Android. Wann läuft er offline über Ollama, wann hängt er von Cloud-Anbietern ab?",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/de/power-local-llm/aori-ai-personal-agent-review",
@@ -31600,8 +31600,8 @@
   },
   {
     "lang": "de",
-    "title": "RAPR AI im Test: Lokale Desktop-Kommandozentrale für Ollama, Claude und Gemini",
-    "excerpt": "RAPR AI im Test: eine kostenlose Windows-App im Early Access, die lokale Ollama-Modelle und Cloud-KI (Claude, Gemini, Codex, Cursor) orchestriert — mit Automatisierung, Gedächtnis und MCP-Konnektoren.",
+    "title": "RAPR-AI-Rezension: Lokale Desktop-Kommandozentrale für Ollama, Claude und Gemini",
+    "excerpt": "RAPR-AI-Rezension: eine kostenlose Windows-App im Early Access, die lokale Ollama-Modelle und Cloud-KI (Claude, Gemini, Codex, Cursor) orchestriert — mit Automatisierung, Gedächtnis und MCP-Konnektoren.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/de/power-local-llm/rapr-ai-review",
@@ -31843,7 +31843,7 @@
   },
   {
     "lang": "de",
-    "title": "Osaurus im Test: Kostenlose On-Device-KI-App für Mac",
+    "title": "Osaurus-Rezension: Kostenlose On-Device-KI-App für Mac",
     "excerpt": "Osaurus ist eine kostenlose, MIT-lizenzierte native Swift-App, die Open-Source-KI-Modelle auf Apple-Silicon-Macs lokal ausführt. Kein Konto, kein Cloud-Zwang, Agenten-Tools integriert.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
@@ -31924,7 +31924,7 @@
   },
   {
     "lang": "de",
-    "title": "Hanoki im Test: Verzweigte KI-Chat-App für Mac",
+    "title": "Hanoki-Rezension: Verzweigte KI-Chat-App für Mac",
     "excerpt": "Hanoki ist eine hybride, verzweigte KI-Chat-App für Mac — Cloud-Modelle über eigene API-Schlüssel oder lokale Modelle über Ollama. Chats werden lokal in SQLite gespeichert.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
@@ -32248,8 +32248,8 @@
   },
   {
     "lang": "de",
-    "title": "Arbiter Local AI Chat im Test: Private KI offline auf dem iPhone",
-    "excerpt": "Arbiter im Test: Lohnt sich diese auf Privatsphäre ausgerichtete Offline-KI-Chat-App fürs iPhone? On-Device-Modelle, Dokumentenzusammenfassungen, Verbindung zu LM Studio/Ollama, Hardware-Anforderungen und Preise.",
+    "title": "Arbiter-Local-AI-Chat-Rezension: Private KI offline auf dem iPhone",
+    "excerpt": "Arbiter-Rezension: Lohnt sich diese auf Privatsphäre ausgerichtete Offline-KI-Chat-App fürs iPhone? On-Device-Modelle, Dokumentenzusammenfassungen, Verbindung zu LM Studio/Ollama, Hardware-Anforderungen und Preise.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/de/power-local-llm/arbiter-local-ai-chat-review",
@@ -32329,8 +32329,8 @@
   },
   {
     "lang": "de",
-    "title": "Chatty-mini im Test: Privater, lokaler GGUF-Chat für Android",
-    "excerpt": "Chatty-mini im Test: eine App im Hochformat, die GGUF-Modelle lokal auf Android ausführt. Was der Google-Play-Eintrag bestätigt, was nicht, und für wen sich die App eignet.",
+    "title": "Chatty-mini-Rezension: Privater, lokaler GGUF-Chat für Android",
+    "excerpt": "Chatty-mini-Rezension: eine App im Hochformat, die GGUF-Modelle lokal auf Android ausführt. Was der Google-Play-Eintrag bestätigt, was nicht, und für wen sich die App eignet.",
     "publishDate": "2026-09-04",
     "dateModified": "2026-09-04",
     "url": "/de/power-local-llm/chatty-mini-review",
@@ -32815,8 +32815,8 @@
   },
   {
     "lang": "de",
-    "title": "Whisper.cpp im Test: Lokale Spracherkennung in reinem C/C++",
-    "excerpt": "Whisper.cpp im Test: der MIT-lizenzierte C/C++-Port von OpenAI Whisper für lokale Spracherkennung. Geschichte, Installation, echte CLI-Befehle, Lizenz und wann faster-whisper die bessere Wahl ist.",
+    "title": "Whisper.cpp-Rezension: Lokale Spracherkennung in reinem C/C++",
+    "excerpt": "Whisper.cpp-Rezension: der MIT-lizenzierte C/C++-Port von OpenAI Whisper für lokale Spracherkennung. Geschichte, Installation, echte CLI-Befehle, Lizenz und wann faster-whisper die bessere Wahl ist.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-09-05",
     "url": "/de/power-local-llm/whisper-cpp-review",
@@ -32896,8 +32896,8 @@
   },
   {
     "lang": "de",
-    "title": "faster-whisper im Test: Lokale Spracherkennung mit CTranslate2-Beschleunigung",
-    "excerpt": "faster-whisper im Test: die MIT-lizenzierte, CTranslate2-basierte Python-Bibliothek für schnelle lokale Spracherkennung. Geschichte, Installation, echter Python-Code, Lizenz und wann whisper.cpp die bessere Wahl ist.",
+    "title": "faster-whisper-Rezension: Lokale Spracherkennung mit CTranslate2-Beschleunigung",
+    "excerpt": "faster-whisper-Rezension: die MIT-lizenzierte, CTranslate2-basierte Python-Bibliothek für schnelle lokale Spracherkennung. Geschichte, Installation, echter Python-Code, Lizenz und wann whisper.cpp die bessere Wahl ist.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-09-05",
     "url": "/de/power-local-llm/faster-whisper-review",
@@ -33139,8 +33139,8 @@
   },
   {
     "lang": "de",
-    "title": "Piper TTS im Test: Schnelle, lokale neuronale Sprachsynthese",
-    "excerpt": "Piper TTS im Test: die kostenlose, lokale neuronale Text-zu-Sprache-Engine aus dem Rhasspy-Projekt, heute von der Open Home Foundation gepflegt. Geschichte, Installation, echte Befehle, aktuelle GPL-3.0-Lizenz und wann XTTS v2 die bessere Wahl ist.",
+    "title": "Piper-TTS-Rezension: Schnelle, lokale neuronale Sprachsynthese",
+    "excerpt": "Piper-TTS-Rezension: die kostenlose, lokale neuronale Text-zu-Sprache-Engine aus dem Rhasspy-Projekt, heute von der Open Home Foundation gepflegt. Geschichte, Installation, echte Befehle, aktuelle GPL-3.0-Lizenz und wann XTTS v2 die bessere Wahl ist.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-09-05",
     "url": "/de/power-local-llm/piper-tts-review",
@@ -33787,8 +33787,8 @@
   },
   {
     "lang": "de",
-    "title": "Coqui TTS im Test: Das von der Community gepflegte Voice-Cloning-Toolkit",
-    "excerpt": "Coqui TTS im Test: das Open-Source-Toolkit für lokales Voice-Cloning, das von Mozilla TTS abstammt. Coqui AI schloss 2023; der aktiv gepflegte Fork ist idiap/coqui-ai-TTS. Geschichte, Installation, Verhältnis zu XTTS v2, MPL-2.0-Lizenz und ehrliche Grenzen.",
+    "title": "Coqui-TTS-Rezension: Das von der Community gepflegte Voice-Cloning-Toolkit",
+    "excerpt": "Coqui-TTS-Rezension: das Open-Source-Toolkit für lokales Voice-Cloning, das von Mozilla TTS abstammt. Coqui AI schloss 2023; der aktiv gepflegte Fork ist idiap/coqui-ai-TTS. Geschichte, Installation, Verhältnis zu XTTS v2, MPL-2.0-Lizenz und ehrliche Grenzen.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-09-05",
     "url": "/de/power-local-llm/coqui-tts-review",
@@ -33868,8 +33868,8 @@
   },
   {
     "lang": "de",
-    "title": "XTTS v2 im Test: Mehrsprachiges Voice-Cloning aus 6 Sekunden Audio",
-    "excerpt": "XTTS v2 im Test: Coquis mehrsprachiges Voice-Cloning-Modell, klont eine Stimme aus 6 Sekunden Audio in 17 Sprachen. Echte Befehle, die nicht-kommerzielle CPML-Lizenz und ehrliche Grenzen für 2026.",
+    "title": "XTTS-v2-Rezension: Mehrsprachiges Voice-Cloning aus 6 Sekunden Audio",
+    "excerpt": "XTTS-v2-Rezension: Coquis mehrsprachiges Voice-Cloning-Modell, klont eine Stimme aus 6 Sekunden Audio in 17 Sprachen. Echte Befehle, die nicht-kommerzielle CPML-Lizenz und ehrliche Grenzen für 2026.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-09-05",
     "url": "/de/power-local-llm/xtts-v2-review",
@@ -33949,8 +33949,8 @@
   },
   {
     "lang": "de",
-    "title": "Bark TTS im Test: Sunos MIT-lizenziertes Modell für Lachen, Seufzen und Sprache",
-    "excerpt": "Bark im Test: Sunos quelloffenes, MIT-lizenziertes generatives Audio-Modell erzeugt mehrsprachige Sprache plus Lachen, Seufzen und Musik aus Text. Echte Befehle, ehrliche Grenzen und sein Pflegestatus für 2026.",
+    "title": "Bark-TTS-Rezension: Sunos MIT-lizenziertes Modell für Lachen, Seufzen und Sprache",
+    "excerpt": "Bark-Rezension: Sunos quelloffenes, MIT-lizenziertes generatives Audio-Modell erzeugt mehrsprachige Sprache plus Lachen, Seufzen und Musik aus Text. Echte Befehle, ehrliche Grenzen und sein Pflegestatus für 2026.",
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-06",
     "url": "/de/power-local-llm/bark-tts-review",
@@ -34030,8 +34030,8 @@
   },
   {
     "lang": "de",
-    "title": "StyleTTS 2 im Test: Columbias MIT-lizenziertes Forschungsmodell für natürliche Sprache",
-    "excerpt": "StyleTTS 2 im Test: Columbia Universitys MIT-lizenziertes Style-Diffusion-Sprachmodell. Echte Installationsbefehle, die Lizenz-Nuance bei den Modellgewichten und sein Pflegestatus (keine Commits seit März 2024) für 2026.",
+    "title": "StyleTTS-2-Rezension: Columbias MIT-lizenziertes Forschungsmodell für natürliche Sprache",
+    "excerpt": "StyleTTS-2-Rezension: Columbia Universitys MIT-lizenziertes Style-Diffusion-Sprachmodell. Echte Installationsbefehle, die Lizenz-Nuance bei den Modellgewichten und sein Pflegestatus (keine Commits seit März 2024) für 2026.",
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-06",
     "url": "/de/power-local-llm/styletts-2-review",
@@ -34759,8 +34759,8 @@
   },
   {
     "lang": "de",
-    "title": "LLaVA im Test: Das Forschungsmodell, das lokale Vision-KI begründete",
-    "excerpt": "LLaVA im Test: das grundlegende Open-Source-Vision-Language-Modell von UW-Madison und Microsoft Research. Echte Ollama-Befehle, die Apache-2.0-plus-Basismodell-Lizenz und der Vergleich mit neueren lokalen VLMs 2026.",
+    "title": "LLaVA-Rezension: Das Forschungsmodell, das lokale Vision-KI begründete",
+    "excerpt": "LLaVA-Rezension: das grundlegende Open-Source-Vision-Language-Modell von UW-Madison und Microsoft Research. Echte Ollama-Befehle, die Apache-2.0-plus-Basismodell-Lizenz und der Vergleich mit neueren lokalen VLMs 2026.",
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-06",
     "url": "/de/power-local-llm/llava-review",
@@ -34921,7 +34921,7 @@
   },
   {
     "lang": "de",
-    "title": "Idefics-Test: HuggingFace's offene Vision-Language-Modelle, ehrlich bewertet",
+    "title": "Idefics-Rezension: HuggingFace's offene Vision-Language-Modelle, ehrlich bewertet",
     "excerpt": "Idefics-Test 2026: HuggingFace's offene Vision-Language-Modellfamilie. Idefics vs Idefics2 vs Idefics3 ehrlich verglichen — Lizenznuancen, echte VRAM-Anforderungen und welche Version heute zu nutzen ist.",
     "publishDate": "2026-09-07",
     "dateModified": "2026-09-07",
@@ -35002,7 +35002,7 @@
   },
   {
     "lang": "de",
-    "title": "MLC-Chat-Test: Die mobile App auf Basis von MLC LLM, ehrlich bewertet",
+    "title": "MLC-Chat-Rezension: Die mobile App auf Basis von MLC LLM, ehrlich bewertet",
     "excerpt": "MLC-Chat-Test 2026: die Mobile-/Desktop-Chat-App auf Basis von MLC LLM. Echte iOS-App-Store- und Android-APK-Download-Kanäle, tatsächliche Einrichtungsschritte, Apache-2.0-Lizenz und ehrliche Einschränkungen für KI-Chat auf dem Gerät.",
     "publishDate": "2026-09-07",
     "dateModified": "2026-09-07",
@@ -35083,8 +35083,8 @@
   },
   {
     "lang": "de",
-    "title": "PocketPal AI im Test: Kostenloser, quelloffener Chat auf dem Gerät",
-    "excerpt": "PocketPal AI im Test: eine kostenlose, MIT-lizenzierte Open-Source-App, die GGUF-Modelle lokal auf iPhone und Android ausführt. Modelle, RAM-Bedarf, Preise und Zielgruppe.",
+    "title": "PocketPal-AI-Rezension: Kostenloser, quelloffener Chat auf dem Gerät",
+    "excerpt": "PocketPal-AI-Rezension: eine kostenlose, MIT-lizenzierte Open-Source-App, die GGUF-Modelle lokal auf iPhone und Android ausführt. Modelle, RAM-Bedarf, Preise und Zielgruppe.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-09-05",
     "url": "/de/power-local-llm/pocketpal-ai-review",
@@ -35164,8 +35164,8 @@
   },
   {
     "lang": "de",
-    "title": "Private LLM im Test: KI-Chat auf dem Gerät für iPhone, iPad und Mac",
-    "excerpt": "Private LLM Test 2026: 4,99 $ Einmalkauf, nur iPhone/iPad/Mac, 140+ Modelle, OmniQuant-Quantisierung, kein Abo. Preise, Datenschutz und Vergleich mit PocketPal AI.",
+    "title": "Private-LLM-Rezension: KI-Chat auf dem Gerät für iPhone, iPad und Mac",
+    "excerpt": "Private-LLM-Rezension 2026: 4,99 $ Einmalkauf, nur iPhone/iPad/Mac, 140+ Modelle, OmniQuant-Quantisierung, kein Abo. Preise, Datenschutz und Vergleich mit PocketPal AI.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-09-05",
     "url": "/de/power-local-llm/private-llm-review",
@@ -35245,8 +35245,8 @@
   },
   {
     "lang": "de",
-    "title": "Google AI Edge Gallery im Test: Gemma 4 On-Device-Chat fürs iPhone",
-    "excerpt": "Google AI Edge Gallery Test 2026: kostenlose iOS-App (App-Store-ID 6749645337), Gemma-4-Chat auf dem Gerät via LiteRT-LM, 4,0 Sterne/160+ Bewertungen. Funktionen, Datenschutz und Vergleich mit Private LLM und PocketPal AI.",
+    "title": "Google-AI-Edge-Gallery-Rezension: Gemma 4 On-Device-Chat fürs iPhone",
+    "excerpt": "Google-AI-Edge-Gallery-Rezension 2026: kostenlose iOS-App (App-Store-ID 6749645337), Gemma-4-Chat auf dem Gerät via LiteRT-LM, 4,0 Sterne/160+ Bewertungen. Funktionen, Datenschutz und Vergleich mit Private LLM und PocketPal AI.",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
     "url": "/de/power-local-llm/google-ai-edge-gallery-review",
@@ -35326,8 +35326,8 @@
   },
   {
     "lang": "de",
-    "title": "Off Grid AI Test: Plattformübergreifende lokale KI für iOS, Android, macOS und Windows",
-    "excerpt": "Off Grid AI Test 2026: kostenlose, quelloffene, kontofreie lokale KI für iOS, Android, macOS und Windows. 180.000+ Downloads, 3.000+ GitHub-Sterne, aber nur 3,1 Sterne bei 26 Bewertungen im App Store. Vollständige Prüfung, Preise und Alternativen.",
+    "title": "Off-Grid-AI-Rezension: Plattformübergreifende lokale KI für iOS, Android, macOS und Windows",
+    "excerpt": "Off-Grid-AI-Rezension 2026: kostenlose, quelloffene, kontofreie lokale KI für iOS, Android, macOS und Windows. 180.000+ Downloads, 3.000+ GitHub-Sterne, aber nur 3,1 Sterne bei 26 Bewertungen im App Store. Vollständige Prüfung, Preise und Alternativen.",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
     "url": "/de/power-local-llm/off-grid-ai-review",
@@ -35407,8 +35407,8 @@
   },
   {
     "lang": "de",
-    "title": "Pocket AI im Test: Offline-KI-Chat auf dem Gerät für iPhone",
-    "excerpt": "Pocket AI - No Internet Test 2026: kostenlose iPhone-App für Offline-KI-Chat auf dem Gerät via llama.cpp, einmaliger Pro-Kauf für Whisper-Spracheingabe, kein Abo. Preise, Anforderungen und App-Store-Vertrieb.",
+    "title": "Pocket-AI-Rezension: Offline-KI-Chat auf dem Gerät für iPhone",
+    "excerpt": "Pocket-AI-No-Internet-Rezension 2026: kostenlose iPhone-App für Offline-KI-Chat auf dem Gerät via llama.cpp, einmaliger Pro-Kauf für Whisper-Spracheingabe, kein Abo. Preise, Anforderungen und App-Store-Vertrieb.",
     "publishDate": "2026-09-11",
     "dateModified": "2026-09-11",
     "url": "/de/power-local-llm/pocket-ai-review",
@@ -35488,8 +35488,8 @@
   },
   {
     "lang": "de",
-    "title": "PAIOS Test: Offline-Chat mit Gemini Nano für Android",
-    "excerpt": "PAIOS Test: kostenlose, quelloffene Android-Chat-App (Unlicense) für Googles On-Device-Modell Gemini Nano. Funktionen, unterstützte Geräte, Datenschutz, Grenzen und Vergleich mit Layla und PocketPal AI.",
+    "title": "PAIOS-Rezension: Offline-Chat mit Gemini Nano für Android",
+    "excerpt": "PAIOS-Rezension: kostenlose, quelloffene Android-Chat-App (Unlicense) für Googles On-Device-Modell Gemini Nano. Funktionen, unterstützte Geräte, Datenschutz, Grenzen und Vergleich mit Layla und PocketPal AI.",
     "publishDate": "2026-10-02",
     "dateModified": "2026-10-02",
     "url": "/de/power-local-llm/paios-review",
@@ -35569,8 +35569,8 @@
   },
   {
     "lang": "de",
-    "title": "Stable Diffusion Test: Kostenlose lokale Text-zu-Bild-Modelle",
-    "excerpt": "Stable Diffusion Test 2026: reale Lizenzbedingungen je Version (RAIL-M vs. Community License), VRAM-Bedarf für SD 1.5/SDXL/SD 3.5, Downloads und ehrlicher Vergleich mit FLUX und Midjourney.",
+    "title": "Stable-Diffusion-Rezension: Kostenlose lokale Text-zu-Bild-Modelle",
+    "excerpt": "Stable-Diffusion-Rezension 2026: reale Lizenzbedingungen je Version (RAIL-M vs. Community License), VRAM-Bedarf für SD 1.5/SDXL/SD 3.5, Downloads und ehrlicher Vergleich mit FLUX und Midjourney.",
     "publishDate": "2026-09-05",
     "dateModified": "2026-09-05",
     "url": "/de/power-local-llm/stable-diffusion-review",
@@ -35893,7 +35893,7 @@
   },
   {
     "lang": "de",
-    "title": "Hyperlink (Nexa AI) im Test: Lokale KI-Dateisuche",
+    "title": "Hyperlink-Rezension (Nexa AI): Lokale KI-Dateisuche",
     "excerpt": "Hyperlink ist eine kostenlose, lokal laufende KI-App, die eigene Dateien durchsucht und Fragen mit Quellenangaben beantwortet. Plattformen, Anforderungen und Lizenz für 2026, geprüft.",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
@@ -36217,7 +36217,7 @@
   },
   {
     "lang": "de",
-    "title": "KoboldCpp Test: Eine Datei, keine Installation, für Rollenspiel gebaut",
+    "title": "KoboldCpp-Rezension: Eine Datei, keine Installation, für Rollenspiel gebaut",
     "excerpt": "KoboldCpp ist eine kostenlose, AGPL-3.0-lizenzierte Single-File-App für lokale LLMs, aufgebaut auf llama.cpp. KoboldAI-Lite-Oberfläche, GPU-Backends, Downloads und Einordnung neben Ollama und LM Studio.",
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-20",
@@ -37675,8 +37675,8 @@
   },
   {
     "lang": "de",
-    "title": "Chapper im Test: KI- und LM-Studio-Client für iPhone, iPad und Mac",
-    "excerpt": "Chapper Test 2026: kostenlos mit 20-Chat-Limit, 9,99 $ Pro-Einmalkauf, 4,99 $ On-Device-Zusatzkauf. LM-Studio- und Ollama-Client für iPhone/iPad/Mac — Preise, Datenschutz und Alternativen.",
+    "title": "Chapper-Rezension: KI- und LM-Studio-Client für iPhone, iPad und Mac",
+    "excerpt": "Chapper-Rezension 2026: kostenlos mit 20-Chat-Limit, 9,99 $ Pro-Einmalkauf, 4,99 $ On-Device-Zusatzkauf. LM-Studio- und Ollama-Client für iPhone/iPad/Mac — Preise, Datenschutz und Alternativen.",
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-06",
     "url": "/de/power-local-llm/chapper-review",
@@ -37756,8 +37756,8 @@
   },
   {
     "lang": "de",
-    "title": "ControlNet Test: Strukturelle Kontrolle für Stable Diffusion",
-    "excerpt": "ControlNet Test 2026: was es wirklich ist (ein Stable-Diffusion-Add-on, keine App), das verifizierte ICCV-2023-Paper, Apache-2.0-Code vs. OpenRAIL/Community-License-Modellgewichte, und Installation in AUTOMATIC1111 oder ComfyUI.",
+    "title": "ControlNet-Rezension: Strukturelle Kontrolle für Stable Diffusion",
+    "excerpt": "ControlNet-Rezension 2026: was es wirklich ist (ein Stable-Diffusion-Add-on, keine App), das verifizierte ICCV-2023-Paper, Apache-2.0-Code vs. OpenRAIL/Community-License-Modellgewichte, und Installation in AUTOMATIC1111 oder ComfyUI.",
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-06",
     "url": "/de/power-local-llm/controlnet-review",
@@ -37837,8 +37837,8 @@
   },
   {
     "lang": "de",
-    "title": "Maid im Test: Open-Source-LLM-Chat-App für Android",
-    "excerpt": "Maid im Test: eine kostenlose, quelloffene (MIT) Android-App, die GGUF-Modelle lokal über llama.cpp ausführt oder sich mit KI-Anbietern verbindet. Plattformen, Historie und Zielgruppe.",
+    "title": "Maid-Rezension: Open-Source-LLM-Chat-App für Android",
+    "excerpt": "Maid-Rezension: eine kostenlose, quelloffene (MIT) Android-App, die GGUF-Modelle lokal über llama.cpp ausführt oder sich mit KI-Anbietern verbindet. Plattformen, Historie und Zielgruppe.",
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-06",
     "url": "/de/power-local-llm/maid-review",
@@ -37918,8 +37918,8 @@
   },
   {
     "lang": "de",
-    "title": "SwarmUI Test: Die Multi-GPU-Weboberfläche für Stable Diffusion",
-    "excerpt": "SwarmUI Test 2026: die Multi-GPU-, Multi-User-Weboberfläche für Stable Diffusion auf ComfyUI-Basis. Umbenennung von StableSwarmUI, MIT-Lizenz, Modellunterstützung und Einrichtung.",
+    "title": "SwarmUI-Rezension: Die Multi-GPU-Weboberfläche für Stable Diffusion",
+    "excerpt": "SwarmUI-Rezension 2026: die Multi-GPU-, Multi-User-Weboberfläche für Stable Diffusion auf ComfyUI-Basis. Umbenennung von StableSwarmUI, MIT-Lizenz, Modellunterstützung und Einrichtung.",
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-06",
     "url": "/de/power-local-llm/stableswarmui-review",
@@ -37999,8 +37999,8 @@
   },
   {
     "lang": "de",
-    "title": "Fooocus Test: Die einfachste lokale Stable-Diffusion-Oberfläche",
-    "excerpt": "Fooocus Test 2026: die einsteigerfreundliche lokale Stable-Diffusion-UI von ControlNet-Entwickler lllyasviel — reale VRAM-Anforderungen, GPL-3.0-Lizenz und ehrlicher Wartungsstatus (LTS/nur Bugfixes seit 2024).",
+    "title": "Fooocus-Rezension: Die einfachste lokale Stable-Diffusion-Oberfläche",
+    "excerpt": "Fooocus-Rezension 2026: die einsteigerfreundliche lokale Stable-Diffusion-UI von ControlNet-Entwickler lllyasviel — reale VRAM-Anforderungen, GPL-3.0-Lizenz und ehrlicher Wartungsstatus (LTS/nur Bugfixes seit 2024).",
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-06",
     "url": "/de/power-local-llm/fooocus-review",
@@ -38080,8 +38080,8 @@
   },
   {
     "lang": "de",
-    "title": "InvokeAI Test: Professionelles Stable-Diffusion-Studio",
-    "excerpt": "InvokeAI Test 2026: kostenloses Apache-2.0-Studio mit Unified Canvas für Stable Diffusion/FLUX. Mit der Adobe-Übernahme von Invoke, aktuellem Modell-Support, VRAM-Bedarf und ehrlichem Vergleich mit ComfyUI und AUTOMATIC1111.",
+    "title": "InvokeAI-Rezension: Professionelles Stable-Diffusion-Studio",
+    "excerpt": "InvokeAI-Rezension 2026: kostenloses Apache-2.0-Studio mit Unified Canvas für Stable Diffusion/FLUX. Mit der Adobe-Übernahme von Invoke, aktuellem Modell-Support, VRAM-Bedarf und ehrlichem Vergleich mit ComfyUI und AUTOMATIC1111.",
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-06",
     "url": "/de/power-local-llm/invokeai-review",
@@ -38161,8 +38161,8 @@
   },
   {
     "lang": "de",
-    "title": "AUTOMATIC1111 Test: Stable Diffusion WebUI erklärt",
-    "excerpt": "AUTOMATIC1111 Test 2026: was Stable Diffusion WebUI tatsächlich ist, verifizierter Wartungsstatus (letzte Commits und Release-Daten), AGPL-3.0-Lizenz, ControlNet-Extension, Hardware-Bedarf und Vergleich mit Forge, ComfyUI und InvokeAI.",
+    "title": "AUTOMATIC1111-Rezension: Stable Diffusion WebUI erklärt",
+    "excerpt": "AUTOMATIC1111-Rezension 2026: was Stable Diffusion WebUI tatsächlich ist, verifizierter Wartungsstatus (letzte Commits und Release-Daten), AGPL-3.0-Lizenz, ControlNet-Extension, Hardware-Bedarf und Vergleich mit Forge, ComfyUI und InvokeAI.",
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-06",
     "url": "/de/power-local-llm/automatic1111-review",
@@ -38242,8 +38242,8 @@
   },
   {
     "lang": "de",
-    "title": "LLM Farm im Test: Open-Source-GGUF-App, nicht mehr im App Store",
-    "excerpt": "LLM Farm im Test: die quelloffene, MIT-lizenzierte iOS/macOS-GGUF-App mit LoRA-Finetuning auf dem Gerät. Derzeit nicht im App Store — was das bedeutet und wie man sie baut.",
+    "title": "LLM-Farm-Rezension: Open-Source-GGUF-App, nicht mehr im App Store",
+    "excerpt": "LLM-Farm-Rezension: die quelloffene, MIT-lizenzierte iOS/macOS-GGUF-App mit LoRA-Finetuning auf dem Gerät. Derzeit nicht im App Store — was das bedeutet und wie man sie baut.",
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-06",
     "url": "/de/power-local-llm/llm-farm-review",
@@ -38323,8 +38323,8 @@
   },
   {
     "lang": "de",
-    "title": "Layla im Test: KI-Begleiter-App für Android und iOS auf dem Gerät",
-    "excerpt": "Layla Test 2026: 19,99 $ KI-Begleiter-App für Android und iOS auf dem Gerät. Was tatsächlich lokal läuft vs. der optionale Layla-Cloud-Modus, genaue Preise, Modelle und für wen sie geeignet ist.",
+    "title": "Layla-Rezension: KI-Begleiter-App für Android und iOS auf dem Gerät",
+    "excerpt": "Layla-Rezension 2026: 19,99 $ KI-Begleiter-App für Android und iOS auf dem Gerät. Was tatsächlich lokal läuft vs. der optionale Layla-Cloud-Modus, genaue Preise, Modelle und für wen sie geeignet ist.",
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-06",
     "url": "/de/power-local-llm/layla-review",
@@ -38404,8 +38404,8 @@
   },
   {
     "lang": "de",
-    "title": "Private Mind im Test: Quelloffene Offline-KI-Chat-App für iPhone und Android",
-    "excerpt": "Private Mind im Test: kostenlose, MIT-lizenzierte Offline-KI-Chat-App für iPhone und Android mit Dokumenten-Q&A. Modelle, Datenschutz, Websuche und Grenzen.",
+    "title": "Private-Mind-Rezension: Quelloffene Offline-KI-Chat-App für iPhone und Android",
+    "excerpt": "Private-Mind-Rezension: kostenlose, MIT-lizenzierte Offline-KI-Chat-App für iPhone und Android mit Dokumenten-Q&A. Modelle, Datenschutz, Websuche und Grenzen.",
     "publishDate": "2026-10-03",
     "dateModified": "2026-10-03",
     "url": "/de/power-local-llm/private-mind-review",
@@ -38485,8 +38485,8 @@
   },
   {
     "lang": "de",
-    "title": "Ollama Local AI im Test: Android-LLM-Runner und LAN-API-Proxy",
-    "excerpt": "Ollama Local AI im Test: Android-App führt GGUF-Modelle lokal aus und bietet im LAN eine OpenAI-kompatible API. Was der Eintrag bestätigt und was offen bleibt.",
+    "title": "Ollama-Local-AI-Rezension: Android-LLM-Runner und LAN-API-Proxy",
+    "excerpt": "Ollama-Local-AI-Rezension: Android-App führt GGUF-Modelle lokal aus und bietet im LAN eine OpenAI-kompatible API. Was der Eintrag bestätigt und was offen bleibt.",
     "publishDate": "2026-10-02",
     "dateModified": "2026-10-02",
     "url": "/de/power-local-llm/ollama-local-ai-review",
@@ -38566,8 +38566,8 @@
   },
   {
     "lang": "de",
-    "title": "ComfyUI Test: Kostenlose node-basierte Oberfläche für Stable Diffusion & Flux",
-    "excerpt": "ComfyUI Test 2026: GPL-3.0-Lizenz, Node-Graph-Workflow erklärt, VRAM-Bedarf für SD 1.5/SDXL/Flux, ComfyUI Manager, Comfy-Cloud-Preise und der Vergleich mit AUTOMATIC1111, InvokeAI und Fooocus.",
+    "title": "ComfyUI-Rezension: Kostenlose node-basierte Oberfläche für Stable Diffusion & Flux",
+    "excerpt": "ComfyUI-Rezension 2026: GPL-3.0-Lizenz, Node-Graph-Workflow erklärt, VRAM-Bedarf für SD 1.5/SDXL/Flux, ComfyUI Manager, Comfy-Cloud-Preise und der Vergleich mit AUTOMATIC1111, InvokeAI und Fooocus.",
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-06",
     "url": "/de/power-local-llm/comfyui-review",
@@ -38647,8 +38647,8 @@
   },
   {
     "lang": "de",
-    "title": "RikkaHub im Test: KI-Chat für Android mit vielen Anbietern",
-    "excerpt": "RikkaHub im Test: eine kostenlose, quelloffene Android-App für den Chat mit Cloud-KI-Anbietern über eigene API-Schlüssel. Läuft sie lokal? Lizenz, Einrichtung und Fazit.",
+    "title": "RikkaHub-Rezension: KI-Chat für Android mit vielen Anbietern",
+    "excerpt": "RikkaHub-Rezension: eine kostenlose, quelloffene Android-App für den Chat mit Cloud-KI-Anbietern über eigene API-Schlüssel. Läuft sie lokal? Lizenz, Einrichtung und Fazit.",
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-06",
     "url": "/de/power-local-llm/rikkahub-review",
@@ -38728,8 +38728,8 @@
   },
   {
     "lang": "de",
-    "title": "AnythingLLM Mobile im Test: Chat + RAG auf dem Gerät",
-    "excerpt": "AnythingLLM Mobile im Test: kostenlose, MIT-lizenzierte Android-App, die Modelle auf dem Gerät ausführt UND mit einer selbst gehosteten AnythingLLM-Instanz synchronisiert. iOS-Status, Preise, RAG.",
+    "title": "AnythingLLM-Mobile-Rezension: Chat + RAG auf dem Gerät",
+    "excerpt": "AnythingLLM-Mobile-Rezension: kostenlose, MIT-lizenzierte Android-App, die Modelle auf dem Gerät ausführt UND mit einer selbst gehosteten AnythingLLM-Instanz synchronisiert. iOS-Status, Preise, RAG.",
     "publishDate": "2026-09-06",
     "dateModified": "2026-09-06",
     "url": "/de/power-local-llm/anythingllm-mobile-review",
@@ -39538,7 +39538,7 @@
   },
   {
     "lang": "de",
-    "title": "SuperAGI im Test: Funktionen, Preise, Wartungsstatus",
+    "title": "SuperAGI-Rezension: Funktionen, Preise, Wartungsstatus",
     "excerpt": "SuperAGI ist ein kostenloses, MIT-lizenziertes, GUI-basiertes Framework für autonome Agenten. Geprüfter Stand 2026: letztes Release, GitHub-Aktivität, Preise, Installation.",
     "publishDate": "2026-09-07",
     "dateModified": "2026-09-07",
@@ -39619,8 +39619,8 @@
   },
   {
     "lang": "de",
-    "title": "ToolNeuron im Test: Open-Source-Android-App für verschlüsselte On-Device-KI",
-    "excerpt": "ToolNeuron Test 2026: kostenlose, quelloffene (MIT) Android-App für verschlüsselten On-Device-KI-Chat, Dokumenten-RAG, Sprache und lokale Bildgenerierung. Anforderungen, Sicherheitsmodell und Vergleich mit Layla und RikkaHub.",
+    "title": "ToolNeuron-Rezension: Open-Source-Android-App für verschlüsselte On-Device-KI",
+    "excerpt": "ToolNeuron-Rezension 2026: kostenlose, quelloffene (MIT) Android-App für verschlüsselten On-Device-KI-Chat, Dokumenten-RAG, Sprache und lokale Bildgenerierung. Anforderungen, Sicherheitsmodell und Vergleich mit Layla und RikkaHub.",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
     "url": "/de/power-local-llm/toolneuron-review",
@@ -39700,8 +39700,8 @@
   },
   {
     "lang": "de",
-    "title": "LocalAI im Test: ApexCreators Offline-KI-Chat-App für Android",
-    "excerpt": "LocalAI (ApexCreator) im Test 2026: kostenlose Android-App für offline KI-Chat, PDF-/Dokumenten-RAG und Vision-Modelle über llama.cpp, mit optionaler Premium-Stufe. Quellcodegeschlossen — was der Eintrag behauptet und was dieser Test nicht verifizieren konnte.",
+    "title": "LocalAI-Rezension: ApexCreators Offline-KI-Chat-App für Android",
+    "excerpt": "LocalAI-Rezension (ApexCreator) 2026: kostenlose Android-App für offline KI-Chat, PDF-/Dokumenten-RAG und Vision-Modelle über llama.cpp, mit optionaler Premium-Stufe. Quellcodegeschlossen — was der Eintrag behauptet und was diese Rezension nicht verifizieren konnte.",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
     "url": "/de/power-local-llm/localai-apexcreator-review",
@@ -40024,7 +40024,7 @@
   },
   {
     "lang": "de",
-    "title": "Solair AI Review: Lokaler iOS-Assistent im Test",
+    "title": "Solair AI Review: Lokaler iOS-Assistent",
     "excerpt": "Solair AI Review: kostenlose iOS/iPadOS/macOS-App mit über 60 lokalen Modellen, optionalem Cloud-Fallback (eigener API-Schlüssel) zu Claude, ChatGPT und Grok. Preise, Datenschutz, Voraussetzungen und Vergleich mit Liquid Apollo, Noema und Off Grid AI.",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
@@ -40186,8 +40186,8 @@
   },
   {
     "lang": "de",
-    "title": "Agnai im Test: Selbst hostbarer KI-Rollenspiel-Chat",
-    "excerpt": "Agnai Test 2026: Open-Source KI-Rollenspiel-Chat, Self-Hosting per npm oder Docker (MongoDB optional), 9 unterstützte KI-Dienste, Charakterkarten, Gruppenchat und Vergleich mit SillyTavern und RisuAI.",
+    "title": "Agnai-Rezension: Selbst hostbarer KI-Rollenspiel-Chat",
+    "excerpt": "Agnai-Rezension 2026: Open-Source KI-Rollenspiel-Chat, Self-Hosting per npm oder Docker (MongoDB optional), 9 unterstützte KI-Dienste, Charakterkarten, Gruppenchat und Vergleich mit SillyTavern und RisuAI.",
     "publishDate": "2026-09-12",
     "dateModified": "2026-09-12",
     "url": "/de/power-local-llm/agnai-review",
@@ -41482,7 +41482,7 @@
   },
   {
     "lang": "de",
-    "title": "SiYuan im Test: Die datenschutzfreundliche, blockbasierte Wissensdatenbank",
+    "title": "SiYuan-Rezension: Die datenschutzfreundliche, blockbasierte Wissensdatenbank",
     "excerpt": "SiYuan ist eine kostenlose, quelloffene, blockbasierte Notiz-App, die Notizen vollständig lokal speichert, mit optionaler kostenpflichtiger Cloud-Synchronisierung. Geprüfte Funktionen und Preise für 2026.",
     "publishDate": "2026-09-18",
     "dateModified": "2026-09-18",
@@ -41563,7 +41563,7 @@
   },
   {
     "lang": "de",
-    "title": "Milvus im Test: Die quelloffene Vektordatenbank für lokales RAG",
+    "title": "Milvus-Rezension: Die quelloffene Vektordatenbank für lokales RAG",
     "excerpt": "Milvus ist eine kostenlose, quelloffene, selbst hostbare Vektordatenbank für RAG und Ähnlichkeitssuche, von einem einzelnen pip install bis zu Kubernetes-Clustern. Geprüfte Fakten für 2026.",
     "publishDate": "2026-09-18",
     "dateModified": "2026-09-18",
@@ -42292,8 +42292,8 @@
   },
   {
     "lang": "de",
-    "title": "Weaviate Test: Die selbst hostbare Vektordatenbank für RAG",
-    "excerpt": "Weaviate ist eine Open-Source-Vektordatenbank zum Selbsthosten für RAG und semantische Suche. Lizenz, Installation und Funktionen im Test 2026.",
+    "title": "Weaviate-Rezension: Die selbst hostbare Vektordatenbank für RAG",
+    "excerpt": "Weaviate ist eine Open-Source-Vektordatenbank zum Selbsthosten für RAG und semantische Suche. Lizenz, Installation und Funktionen im Rezension 2026.",
     "publishDate": "2026-09-19",
     "dateModified": "2026-09-19",
     "url": "/de/power-local-llm/weaviate-review",
@@ -42373,7 +42373,7 @@
   },
   {
     "lang": "de",
-    "title": "Self-Hosted AI Starter Kit im Test: n8n + Ollama + Qdrant in einer Compose-Datei",
+    "title": "Self-Hosted-AI-Starter-Kit-Rezension: n8n + Ollama + Qdrant in einer Compose-Datei",
     "excerpt": "Self-hosted AI Starter Kit bündelt n8n, Ollama, Qdrant und PostgreSQL in einer docker-compose-Vorlage für lokale KI-Workflows. Geprüfte Installation und Funktionen für 2026.",
     "publishDate": "2026-09-19",
     "dateModified": "2026-09-19",
@@ -42778,7 +42778,7 @@
   },
   {
     "lang": "de",
-    "title": "AIClient2API im Test: Ein lokaler Proxy für jedes KI-Protokoll",
+    "title": "AIClient2API-Rezension: Ein lokaler Proxy für jedes KI-Protokoll",
     "excerpt": "AIClient2API ist ein kostenloser, selbst gehosteter Proxy mit über 8.700 GitHub-Stars, der Gemini CLI, Codex, Grok, Kiro und Antigravity hinter einer OpenAI-kompatiblen API vereint.",
     "publishDate": "2026-09-19",
     "dateModified": "2026-09-19",
@@ -42859,7 +42859,7 @@
   },
   {
     "lang": "de",
-    "title": "NVIDIA Dynamo im Test: Inferenz-Serving im Rechenzentrumsmaßstab",
+    "title": "NVIDIA-Dynamo-Rezension: Inferenz-Serving im Rechenzentrumsmaßstab",
     "excerpt": "NVIDIA Dynamo ist ein kostenloses, quelloffenes Framework für verteiltes Inferencing mit über 8.100 GitHub-Stars, gebaut für Multi-GPU-, Multi-Node-LLM-Serving — nicht für Laptops.",
     "publishDate": "2026-09-19",
     "dateModified": "2026-09-19",
@@ -43183,7 +43183,7 @@
   },
   {
     "lang": "de",
-    "title": "TurboFieldfare im Test: Gemma 4 26B-A4B mit 2 GB RAM ausführen",
+    "title": "TurboFieldfare-Rezension: Gemma 4 26B-A4B mit 2 GB RAM ausführen",
     "excerpt": "TurboFieldfare ist eine kostenlose, quelloffene Swift/Metal-Laufzeitumgebung, die Gemma 4 26B-A4B mit ca. 2 GB RAM auf jedem M-Series-Mac ausführt. So funktioniert es und für wen es sich eignet.",
     "publishDate": "2026-09-19",
     "dateModified": "2026-09-19",
@@ -43588,8 +43588,8 @@
   },
   {
     "lang": "de",
-    "title": "Mission Control im Test: Eine selbst gehostete Steuerzentrale für KI-Agenten",
-    "excerpt": "Mission Control ist eine kostenlose, quelloffene, selbst gehostete Steuerzentrale für Claude Code, Codex und OpenClaw. Installation, Funktionen und Eignung im Test.",
+    "title": "Mission-Control-Rezension: Eine selbst gehostete Steuerzentrale für KI-Agenten",
+    "excerpt": "Mission Control ist eine kostenlose, quelloffene, selbst gehostete Steuerzentrale für Claude Code, Codex und OpenClaw. Installation, Funktionen und Eignung in der Rezension.",
     "publishDate": "2026-09-19",
     "dateModified": "2026-09-19",
     "url": "/de/power-local-llm/mission-control-review",
@@ -43669,8 +43669,8 @@
   },
   {
     "lang": "de",
-    "title": "KServe im Test: Kubernetes-natives Model Serving im großen Maßstab",
-    "excerpt": "KServe ist eine kostenlose, quelloffene, bei der CNCF inkubierende Plattform für KI-Modell-Serving auf Kubernetes im großen Maßstab. Installation, Funktionen und Eignung im Test 2026.",
+    "title": "KServe-Rezension: Kubernetes-natives Model Serving im großen Maßstab",
+    "excerpt": "KServe ist eine kostenlose, quelloffene, bei der CNCF inkubierende Plattform für KI-Modell-Serving auf Kubernetes im großen Maßstab. Installation, Funktionen und Eignung im Rezension 2026.",
     "publishDate": "2026-09-19",
     "dateModified": "2026-09-19",
     "url": "/de/power-local-llm/kserve-review",
@@ -44074,7 +44074,7 @@
   },
   {
     "lang": "de",
-    "title": "Rapid-MLX im Test: Nativer MLX-Inferenzserver für Apple Silicon",
+    "title": "Rapid-MLX-Rezension: Nativer MLX-Inferenzserver für Apple Silicon",
     "excerpt": "Rapid-MLX ist ein kostenloser Open-Source-MLX-Inferenzserver für Apple Silicon mit über 3.773 GitHub-Stars. Hier erfahren Sie, wie die Installation funktioniert, was unterstützt wird und für wen es sich eignet.",
     "publishDate": "2026-09-19",
     "dateModified": "2026-09-19",
@@ -44155,7 +44155,7 @@
   },
   {
     "lang": "de",
-    "title": "Farfalle im Test: Eine selbst gehostete, quelloffene KI-Suchmaschine",
+    "title": "Farfalle-Rezension: Eine selbst gehostete, quelloffene KI-Suchmaschine",
     "excerpt": "Farfalle ist eine kostenlose, quelloffene, selbst gehostete KI-Suchmaschine (im Stil von Perplexity) mit über 3.541 GitHub-Stars. Hier erfahren Sie, wie die Installation funktioniert, wie sie mit lokalen LLMs arbeitet und für wen sie sich eignet.",
     "publishDate": "2026-09-19",
     "dateModified": "2026-09-19",
@@ -44560,7 +44560,7 @@
   },
   {
     "lang": "de",
-    "title": "little-coder im Test: Ein Coding-Agent-CLI für kleine lokale Modelle",
+    "title": "little-coder-Rezension: Ein Coding-Agent-CLI für kleine lokale Modelle",
     "excerpt": "little-coder ist ein kostenloser, quelloffener Coding-Agent-CLI für kleine lokale Modelle über llama.cpp, Ollama oder LM Studio. Installation, Funktionen und Lizenz für 2026.",
     "publishDate": "2026-09-19",
     "dateModified": "2026-09-19",
@@ -44641,7 +44641,7 @@
   },
   {
     "lang": "de",
-    "title": "TranslateBooksWithLLMs im Test: Ganze Bücher mit einem lokalen oder Cloud-LLM übersetzen",
+    "title": "TranslateBooksWithLLMs-Rezension: Ganze Bücher mit einem lokalen oder Cloud-LLM übersetzen",
     "excerpt": "TranslateBooksWithLLMs (TBL) ist eine kostenlose Open-Source-App, die ganze Bücher, EPUBs und Untertitel mit einem lokalen Ollama-Modell oder Cloud-LLMs übersetzt. Installation und Preise für 2026.",
     "publishDate": "2026-09-19",
     "dateModified": "2026-09-19",
@@ -44722,7 +44722,7 @@
   },
   {
     "lang": "de",
-    "title": "openai-edge-tts im Test: Ein kostenloser OpenAI-kompatibler TTS-Server",
+    "title": "openai-edge-tts-Rezension: Ein kostenloser OpenAI-kompatibler TTS-Server",
     "excerpt": "openai-edge-tts ist ein kostenloser, selbst gehosteter API-Server mit einem OpenAI-kompatiblen /v1/audio/speech-Endpunkt, der auf Microsoft Edges Online-Stimmen basiert, nicht auf einem lokalen Modell.",
     "publishDate": "2026-09-19",
     "dateModified": "2026-09-19",
@@ -44803,7 +44803,7 @@
   },
   {
     "lang": "de",
-    "title": "OlliteRT im Test: Android-Smartphone als lokaler LLM-Server",
+    "title": "OlliteRT-Rezension: Android-Smartphone als lokaler LLM-Server",
     "excerpt": "OlliteRT verwandelt ein Android-Smartphone über Googles LiteRT-LM-Laufzeit in einen vollständig lokalen, OpenAI-kompatiblen LLM-Inferenzserver. Anforderungen, Installation und Eignung für 2026.",
     "publishDate": "2026-09-19",
     "dateModified": "2026-09-19",
@@ -45046,7 +45046,7 @@
   },
   {
     "lang": "de",
-    "title": "vllm-mlx im Test: vLLM-Style-Serving für Apple Silicon",
+    "title": "vllm-mlx-Rezension: vLLM-Style-Serving für Apple Silicon",
     "excerpt": "vllm-mlx ist ein kostenloser, quelloffener Inferenzserver, der vLLM-artiges Batching über MLX auf Apple Silicon bringt. Geprüfte Installation, Funktionen und Lizenz für 2026.",
     "publishDate": "2026-09-19",
     "dateModified": "2026-09-19",
@@ -45127,7 +45127,7 @@
   },
   {
     "lang": "de",
-    "title": "mlxcel im Test: Rust-native MLX-Inferenz-Runtime",
+    "title": "mlxcel-Rezension: Rust-native MLX-Inferenz-Runtime",
     "excerpt": "mlxcel ist eine kostenlose, quelloffene Rust-Inferenz-Runtime von Lablup für Apple Silicon und NVIDIA CUDA. Geprüfte Installation, Funktionen und Lizenzierung für 2026.",
     "publishDate": "2026-09-19",
     "dateModified": "2026-09-19",
@@ -45451,7 +45451,7 @@
   },
   {
     "lang": "de",
-    "title": "candle-vllm im Test: Rust-natives LLM-Serving auf CUDA und Metal",
+    "title": "candle-vllm-Rezension: Rust-natives LLM-Serving auf CUDA und Metal",
     "excerpt": "candle-vllm ist eine kostenlose, quelloffene, Rust-native LLM-Serving-Engine auf Basis von Candle mit OpenAI-kompatibler API für CUDA und Apple Metal. So funktioniert sie und für wen sie geeignet ist.",
     "publishDate": "2026-09-19",
     "dateModified": "2026-09-19",
@@ -45532,7 +45532,7 @@
   },
   {
     "lang": "de",
-    "title": "SwiftLM im Test: Nativer Swift-MLX-Inferenzserver für Apple Silicon",
+    "title": "SwiftLM-Rezension: Nativer Swift-MLX-Inferenzserver für Apple Silicon",
     "excerpt": "SwiftLM ist ein kostenloser, quelloffener, Python-freier Swift-MLX-Inferenzserver für Apple Silicon mit iOS-Begleit-App. Verifizierte Fakten, Installationsschritte und Vergleiche für 2026.",
     "publishDate": "2026-09-19",
     "dateModified": "2026-09-19",
@@ -62542,8 +62542,8 @@
   },
   {
     "lang": "de",
-    "title": "GEEKOM A9 Max Test (2026): Der beste Mini-PC für lokale KI?",
-    "excerpt": "GEEKOM A9 Max Test 2026: Ryzen AI 9 HX 370/HX 470, Radeon 890M, bis zu 128 GB DDR5, aktueller Preis je Konfiguration. Betreibt Home Assistant plus ein 7B–13B-LLM — ehrliches Urteil, ob sich der Aufpreis lohnt.",
+    "title": "GEEKOM-A9-Max-Rezension (2026): Der beste Mini-PC für lokale KI?",
+    "excerpt": "GEEKOM-A9-Max-Rezension 2026: Ryzen AI 9 HX 370/HX 470, Radeon 890M, bis zu 128 GB DDR5, aktueller Preis je Konfiguration. Betreibt Home Assistant plus ein 7B–13B-LLM — ehrliches Urteil, ob sich der Aufpreis lohnt.",
     "publishDate": "2026-07-03",
     "dateModified": "2026-08-25",
     "url": "/de/smart-home/geekom-a9-max-local-ai-review",
@@ -62623,8 +62623,8 @@
   },
   {
     "lang": "de",
-    "title": "Beelink SER8 Test: Specs, Preis & 32GB vs. 64GB (2026)",
-    "excerpt": "Beelink SER8 Test 2026: Ryzen 7 8845HS Specs, aktueller Preis je Konfiguration, 32GB vs. 64GB, Idle-Verbrauch, Abmessungen. Betreibt Home Assistant plus ein 7B-LLM lokal — komplette Analyse.",
+    "title": "Beelink-SER8-Rezension: Specs, Preis & 32GB vs. 64GB (2026)",
+    "excerpt": "Beelink-SER8-Rezension 2026: Ryzen 7 8845HS Specs, aktueller Preis je Konfiguration, 32GB vs. 64GB, Idle-Verbrauch, Abmessungen. Betreibt Home Assistant plus ein 7B-LLM lokal — komplette Analyse.",
     "publishDate": "2026-07-03",
     "dateModified": "2026-08-25",
     "url": "/de/smart-home/beelink-ser8-local-ai-review",
@@ -62704,8 +62704,8 @@
   },
   {
     "lang": "de",
-    "title": "Beelink EQ14 N150 Test (2026): Bester günstiger Mini-PC für Home-Assistant-Netzwerk",
-    "excerpt": "Beelink EQ14 N150 Test 2026: reale Preise (Aug. 2026), Scorecard, LAN-Varianten-Warnung und direkter G3-Plus-Vergleich. Günstige Home-Assistant-Box mit zwei 2.5GbE.",
+    "title": "Beelink-EQ14-N150-Rezension (2026): Bester günstiger Mini-PC für Home-Assistant-Netzwerk",
+    "excerpt": "Beelink-EQ14-N150-Rezension 2026: reale Preise (Aug. 2026), Scorecard, LAN-Varianten-Warnung und direkter G3-Plus-Vergleich. Günstige Home-Assistant-Box mit zwei 2.5GbE.",
     "publishDate": "2026-07-03",
     "dateModified": "2026-08-25",
     "url": "/de/smart-home/beelink-eq14-local-ai-review",
@@ -62785,8 +62785,8 @@
   },
   {
     "lang": "de",
-    "title": "GMKtec G3 Plus N150 Test (2026): Bester günstiger Mini-PC für Home Assistant + lokale KI?",
-    "excerpt": "GMKtec G3 Plus N150 Test 2026: reale Preise (Aug. 2026), Bewertungstabelle, Konfigurationsleitfaden und direkter EQ14-Vergleich. Günstige Home-Assistant-Box mit aufrüstbarem RAM.",
+    "title": "GMKtec-G3-Plus-N150-Rezension (2026): Bester günstiger Mini-PC für Home Assistant + lokale KI?",
+    "excerpt": "GMKtec-G3-Plus-N150-Rezension 2026: reale Preise (Aug. 2026), Bewertungstabelle, Konfigurationsleitfaden und direkter EQ14-Vergleich. Günstige Home-Assistant-Box mit aufrüstbarem RAM.",
     "publishDate": "2026-07-03",
     "dateModified": "2026-08-25",
     "url": "/de/smart-home/gmktec-g3-plus-local-ai-review",
@@ -62866,7 +62866,7 @@
   },
   {
     "lang": "de",
-    "title": "Minisforum UM890 Pro Test (2026): Lokaler-KI-Heimserver",
+    "title": "Minisforum-UM890-Pro-Rezension (2026): Lokaler-KI-Heimserver",
     "excerpt": "Offizielle Minisforum UM890 Pro Specs 2026: Ryzen 9 8945HS, Radeon 780M, bis zu 96 GB DDR5, OCuLink-eGPU, zwei 2,5GbE. Für Home Assistant + 7B-LLM.",
     "publishDate": "2026-07-03",
     "dateModified": "2026-08-25",
@@ -64405,7 +64405,7 @@
   },
   {
     "lang": "de",
-    "title": "NVIDIA Jetson Orin Nano für Smart-Home-KI: Test (2026)",
+    "title": "NVIDIA Jetson Orin Nano für Smart-Home-KI: Rezension (2026)",
     "excerpt": "NVIDIA Jetson Orin Nano für Smart-Home-KI 2026: ein GPU-Inferenz-Edge-Board, das sich von den anderswo getesteten x86-Mini-PCs unterscheidet. Für wen es sich eignet und aktuelle Specs zum Nachprüfen.",
     "publishDate": "2026-07-16",
     "dateModified": "2026-07-16",

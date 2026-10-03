@@ -260,7 +260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'text-generation-webui im Jahr 2026: Wie Oobaboogas lokale LLM-Oberfläche zu „TextGen" wurde',
     dateModified: '2026-09-05',
-    seoTitle: 'text-generation-webui (TextGen) 2026: Vollständiger Test',
+    seoTitle: 'text-generation-webui (TextGen) 2026: Vollständige Rezension',
     intro: 'text-generation-webui ist die lokale LLM-Oberfläche für Power-User: kostenlos, quelloffen (AGPL 3.0) und seit Dezember 2022 von einem einzelnen Maintainer namens „oobabooga" entwickelt. Im April 2026 benannte sich das Projekt in „TextGen" um und brachte eine native Desktop-App heraus, doch das GitHub-Projekt, nach dem alle weiterhin als „text-generation-webui" suchen, ist dieselbe Codebasis mit 47.000 Sternen.',
     metaDescription: 'text-generation-webui (jetzt TextGen) unterstützt die Backends llama.cpp, ExLlamaV3 und Transformers mit LoRA-Training und einer Tool-Calling-API. Geschichte, die Umbenennung 2026, Installationslinks und ehrliche Grenzen.',
     publishDate: '2026-09-05',
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
-      'headline': 'text-generation-webui (TextGen) 2026: Vollständiger Test',
+      'headline': 'text-generation-webui (TextGen) 2026: Vollständige Rezension',
       'description': 'text-generation-webui (jetzt TextGen) unterstützt die Backends llama.cpp, ExLlamaV3 und Transformers mit LoRA-Training und einer Tool-Calling-API. Geschichte, die Umbenennung 2026, Installationslinks und ehrliche Grenzen.',
       'url': 'https://www.promptquorum.com/de/local-llms/text-generation-webui-review',
       'datePublished': '2026-09-05',

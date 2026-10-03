@@ -404,14 +404,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2027-03-12',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/google-ai-edge-gallery-review-hero-de.webp',
-    title: 'Google AI Edge Gallery im Test: Gemma 4 On-Device-Chat fürs iPhone',
-    seoTitle: 'Google AI Edge Gallery Test: iOS-Gemma-App',
+    title: 'Google-AI-Edge-Gallery-Rezension: Gemma 4 On-Device-Chat fürs iPhone',
+    seoTitle: 'Google-AI-Edge-Gallery-Rezension: iOS-Gemma-App',
     intro:
-      'Google AI Edge Gallery ist eine kostenlose App von [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337), die Open-Source-KI-Modelle vollständig auf dem iPhone, iPad oder Mac ausführt — mithilfe von Googles [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)-Laufzeitumgebung für On-Device-Inferenz. Dieser Test behandelt speziell den iOS-App-Store-Eintrag (App-Store-ID 6749645337, Version 1.0.10, 4,0 von 5 Sternen bei über 160 Bewertungen zum Zeitpunkt dieses Tests) — als Begleitartikel zu [Google AI Edge Gallerys Eintrag im lokalen KI-Software-Verzeichnis](/de/directory). Die App ist die Nutzerfront eines größeren Open-Source-Projekts, [google-ai-edge/gallery auf GitHub](https://github.com/google-ai-edge/gallery), das auch für Android und als direkter APK-Download erhältlich ist — diese Bewertung prüft die Android-Version nicht. Auf iOS führt sie Googles Gemma-Modellfamilie aus, einschließlich der aktuellen Gemma-4-Generation, vollständig offline nach dem Herunterladen eines Modells, und erlaubt den Import zusätzlicher Modelle von [Hugging Face](https://huggingface.co/) im LiteRT-Format. Die praktische Frage für Leser, die On-Device-iPhone-Apps vergleichen, ist, wie eine kostenlose, von Google gepflegte, offiziell als „experimentelle Beta" bezeichnete App gegenüber kostenpflichtigen, ausgereifteren Alternativen wie [Private LLM](/de/power-local-llm/private-llm-review) oder kostenlosen wie [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) abschneidet.',
+      'Google AI Edge Gallery ist eine kostenlose App von [Google LLC](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337), die Open-Source-KI-Modelle vollständig auf dem iPhone, iPad oder Mac ausführt — mithilfe von Googles [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM)-Laufzeitumgebung für On-Device-Inferenz. Diese Rezension behandelt speziell den iOS-App-Store-Eintrag (App-Store-ID 6749645337, Version 1.0.10, 4,0 von 5 Sternen bei über 160 Bewertungen zum Zeitpunkt dieser Rezension) — als Begleitartikel zu [Google AI Edge Gallerys Eintrag im lokalen KI-Software-Verzeichnis](/de/directory). Die App ist die Nutzerfront eines größeren Open-Source-Projekts, [google-ai-edge/gallery auf GitHub](https://github.com/google-ai-edge/gallery), das auch für Android und als direkter APK-Download erhältlich ist — diese Bewertung prüft die Android-Version nicht. Auf iOS führt sie Googles Gemma-Modellfamilie aus, einschließlich der aktuellen Gemma-4-Generation, vollständig offline nach dem Herunterladen eines Modells, und erlaubt den Import zusätzlicher Modelle von [Hugging Face](https://huggingface.co/) im LiteRT-Format. Die praktische Frage für Leser, die On-Device-iPhone-Apps vergleichen, ist, wie eine kostenlose, von Google gepflegte, offiziell als „experimentelle Beta" bezeichnete App gegenüber kostenpflichtigen, ausgereifteren Alternativen wie [Private LLM](/de/power-local-llm/private-llm-review) oder kostenlosen wie [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) abschneidet.',
     metaDescription:
-      'Google AI Edge Gallery Test 2026: kostenlose iOS-App (App-Store-ID 6749645337), Gemma-4-Chat auf dem Gerät via LiteRT-LM, 4,0 Sterne/160+ Bewertungen. Funktionen, Datenschutz und Vergleich mit Private LLM und PocketPal AI.',
+      'Google-AI-Edge-Gallery-Rezension 2026: kostenlose iOS-App (App-Store-ID 6749645337), Gemma-4-Chat auf dem Gerät via LiteRT-LM, 4,0 Sterne/160+ Bewertungen. Funktionen, Datenschutz und Vergleich mit Private LLM und PocketPal AI.',
     twitterDescription:
-      'Google AI Edge Gallery Test 2026: Googles kostenlose iOS-App für Gemma 4 vollständig auf dem Gerät via LiteRT-LM. Funktionen, App-Store-Datenschutzlabel und Vergleich mit Private LLM und PocketPal AI.',
+      'Google-AI-Edge-Gallery-Rezension 2026: Googles kostenlose iOS-App für Gemma 4 vollständig auf dem Gerät via LiteRT-LM. Funktionen, App-Store-Datenschutzlabel und Vergleich mit Private LLM und PocketPal AI.',
     audience:
       'iPhone- und iPad-Nutzer, die Googles kostenlose On-Device-KI-App bewerten möchten — behandelt Funktionen, Gemma-4-Unterstützung, das App-Store-Datenschutzlabel, das Verhältnis der iOS-App zum größeren Open-Source-Android/GitHub-Projekt und den Vergleich mit kostenpflichtigen und kostenlosen Alternativen.',
     readTime: '9 Min. Lesezeit',
@@ -441,7 +441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kostenlos im Apple App Store; kein Abonnement, keine In-App-Käufe.',
           'Führt Gemma 4 (E2B, E4B, 26B, 31B, 12B Unified) und andere Open-Source-Modelle über Googles LiteRT-LM-Laufzeitumgebung aus.',
           'iPhone, iPad, Mac und Apple Vision Pro — erfordert iOS 17.0+ oder macOS 14.0+ mit Apple Silicon.',
-          'Auch als Open-Source-Android-App und direkte APK auf github.com/google-ai-edge/gallery verfügbar — dieser Test behandelt nur die iOS-Version.',
+          'Auch als Open-Source-Android-App und direkte APK auf github.com/google-ai-edge/gallery verfügbar — diese Rezension behandelt nur die iOS-Version.',
           'App-Store-Datenschutzlabel nennt Geräte-ID, Leistungsdaten und Diagnosen als erfasst — Chat-Inhalte selbst bleiben auf dem Gerät, aber dies ist keine „Null-Daten"-App.',
         ],
         updatedDate: '2026-09-12',
@@ -484,7 +484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Entwickler: Google LLC, aktuelle Version 1.0.10 (veröffentlicht 4. September 2026), bewertet mit 4,0 von 5 bei über 160 Bewertungen.',
           'Plattformen (iOS-Eintrag): iPhone und iPad ab iOS 17.0, Mac ab macOS 14.0 mit Apple M1 oder neuer, Apple Vision Pro ab visionOS 1.0.',
           'Modelle: Gemma-4-Familie (E2B, E4B, 26B, 31B und die multimodale 12B-Unified-Variante) sowie Gemma 3n; eigene Modelle können im LiteRT-Format von Hugging Face importiert werden.',
-          'Open Source: das zugrunde liegende Projekt [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) steht unter Apache-2.0-Lizenz und erscheint auch für Android sowie als direkte APK — dieser Test behandelt die iOS-App-Store-Version.',
+          'Open Source: das zugrunde liegende Projekt [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) steht unter Apache-2.0-Lizenz und erscheint auch für Android sowie als direkte APK — diese Rezension behandelt die iOS-App-Store-Version.',
           'Status: Googles eigenes GitHub-README beschreibt das Projekt als „experimentelle Beta-Version".',
           'Datenschutz: Das App-Store-Datenschutzlabel nennt Geräte-ID, Leistungsdaten und Diagnosen als mit der Identität verknüpfte Daten sowie ungefähren Standort, Produktinteraktionsdaten und Absturzberichte als nicht verknüpfte Daten — Chat-Eingaben laufen auf dem Gerät, aber dies ist keine telemetriefreie App.',
         ],
@@ -495,7 +495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**Google AI Edge Gallery ist Googles eigene Showcase-App, um Open-Source-KI-Modelle direkt auf einem Smartphone, Tablet oder Mac auszuführen, ohne dass die Inferenz auf einen Server geht.** Sie basiert auf [LiteRT-LM](https://github.com/google-ai-edge/LiteRT-LM), Googles produktionsreifer Inferenz-Laufzeitumgebung für große Sprachmodelle auf Edge-Geräten, die selbst die ältere MediaPipe-LLM-Inference-API früherer Projektversionen ablöste.',
           'Die hier getestete iOS-Version ist [Google AI Edge Gallery im Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (App-Store-ID 6749645337), entwickelt und veröffentlicht von Google LLC, derzeit Version 1.0.10, bewertet mit 4,0 von 5 Sternen bei über 160 Bewertungen. Der Download ist kostenlos, es gibt keine Abo-Stufe.',
-          'Dieselbe App ist ein Vertriebskanal eines größeren Open-Source-Projekts, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), das Google als „das führende Ziel, um die leistungsstärksten Open-Source-Sprachmodelle der Welt auf dem eigenen Mobilgerät auszuführen" beschreibt. Das Projekt bietet auch eine Android-Version (über Google Play und direkten APK-Download) sowie Desktop-Builds. Googles eigene Projektdokumentation bezeichnet das gesamte Vorhaben als **„experimentelle Beta-Version"** und nicht als fertiges Verbraucherprodukt — eine Unterscheidung, die dieser Test als wesentlich und nicht als Formalität behandelt, da Google AI Edge Gallery in diesem Cluster durchgehend mit Apps verglichen wird, die gezielt als ausgereifte Verbraucherprodukte gebaut wurden.',
+          'Dieselbe App ist ein Vertriebskanal eines größeren Open-Source-Projekts, [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), das Google als „das führende Ziel, um die leistungsstärksten Open-Source-Sprachmodelle der Welt auf dem eigenen Mobilgerät auszuführen" beschreibt. Das Projekt bietet auch eine Android-Version (über Google Play und direkten APK-Download) sowie Desktop-Builds. Googles eigene Projektdokumentation bezeichnet das gesamte Vorhaben als **„experimentelle Beta-Version"** und nicht als fertiges Verbraucherprodukt — eine Unterscheidung, die diese Rezension als wesentlich und nicht als Formalität behandelt, da Google AI Edge Gallery in diesem Cluster durchgehend mit Apps verglichen wird, die gezielt als ausgereifte Verbraucherprodukte gebaut wurden.',
         ],
       },
       getItCTA: {
@@ -503,15 +503,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'App holen',
         itemHeadings: true,
         content: [
-          '**Google AI Edge Gallery ist kostenlos herunterladbar, ohne Kaufschritt.** Die CTA dieses Tests behandelt speziell die iOS-Version; die Android- und Quellcode-Kanäle sind separate Downloads desselben zugrunde liegenden Open-Source-Projekts, nicht dieselbe Installation.',
-          'Dieser Test ist ein Begleitartikel zu [Google AI Edge Gallerys Eintrag im lokalen KI-Software-Verzeichnis](/de/directory), das die App neben jeder anderen auf dieser Seite behandelten mobilen lokalen KI-App listet.',
+          '**Google AI Edge Gallery ist kostenlos herunterladbar, ohne Kaufschritt.** Die CTA dieser Rezension behandelt speziell die iOS-Version; die Android- und Quellcode-Kanäle sind separate Downloads desselben zugrunde liegenden Open-Source-Projekts, nicht dieselbe Installation.',
+          'Diese Rezension ist ein Begleitartikel zu [Google AI Edge Gallerys Eintrag im lokalen KI-Software-Verzeichnis](/de/directory), das die App neben jeder anderen auf dieser Seite behandelten mobilen lokalen KI-App listet.',
         ],
         columns: ['Plattform', 'Wo man sie bekommt', 'Hinweise'],
         rows: [
           {
             'Plattform': 'iPhone / iPad',
             'Wo man sie bekommt': '[Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)',
-            'Hinweise': 'Kostenlos. Erfordert iOS 17.0 oder neuer. Dies ist die in diesem Test bewertete Version.',
+            'Hinweise': 'Kostenlos. Erfordert iOS 17.0 oder neuer. Dies ist die in dieser Rezension bewertete Version.',
           },
           {
             'Plattform': 'Mac',
@@ -521,12 +521,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plattform': 'Apple Vision Pro',
             'Wo man sie bekommt': '[Apple App Store](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337)',
-            'Hinweise': 'Als kompatibel mit visionOS 1.0+ gelistet; für diesen Test nicht eigenständig getestet.',
+            'Hinweise': 'Als kompatibel mit visionOS 1.0+ gelistet; für diese Rezension nicht eigenständig getestet.',
           },
           {
             'Plattform': 'Android',
             'Wo man sie bekommt': '[google-ai-edge/gallery auf GitHub](https://github.com/google-ai-edge/gallery)',
-            'Hinweise': 'Eine separate Version desselben Open-Source-Projekts über Google Play oder direkte APK — nicht Teil dieses Tests.',
+            'Hinweise': 'Eine separate Version desselben Open-Source-Projekts über Google Play oder direkte APK — nicht Teil dieser Rezension.',
           },
           {
             'Plattform': 'Quellcode',
@@ -534,14 +534,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Hinweise': 'Apache-2.0-Lizenz; das Repository hinter allen oben genannten Vertriebskanälen.',
           },
         ],
-        note: 'Verfügbarkeit, Preise und Versionsnummern im App Store können sich ohne Vorankündigung ändern. Prüfen Sie den aktuellen Eintrag auf der [App-Store-Seite](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337), bevor Sie installieren. Verifiziert für diesen Test am 2026-09-12.',
+        note: 'Verfügbarkeit, Preise und Versionsnummern im App Store können sich ohne Vorankündigung ändern. Prüfen Sie den aktuellen Eintrag auf der [App-Store-Seite](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337), bevor Sie installieren. Verifiziert für diese Rezension am 2026-09-12.',
       },
       models: {
         id: 'models',
         title: 'Modelle: Gemma 4 und LiteRT-LM',
         content: [
           '**Google AI Edge Gallery konzentriert sich auf Googles Gemma-Modellfamilie, aktuell die am 2. April 2026 veröffentlichte Gemma-4-Generation.** Gemma 4 erscheint in mehreren Größen — E2B und E4B (für Smartphones konzipiert), eine 26B-Mixture-of-Experts-Variante, eine 31B-Variante sowie ein multimodales **Gemma 4 12B Unified**-Modell, das laut Googles eigener Dokumentation Text-, Bild- und Audioeingaben in einer einzigen Architektur verarbeitet. Die App unterstützt auch **Gemma 3n**, eine frühere Gemma-Version, die dem On-Device-Stack Audioverständnis hinzufügte, bevor Gemma 4 erschien.',
-          'Über die mitgelieferten Gemma-Modelle hinaus können Nutzer **eigene Modelle von Hugging Face im LiteRT-Format importieren**, über eine Modellkarten-URL im Modellverwaltungsbildschirm der App. Googles eigene Projektdokumentation bestätigt diese Hugging-Face-Integration für Modellsuche und -download, macht aber keine Angaben zu Details wie einem eventuell erforderlichen Hugging-Face-Zugangstoken für gesperrte Modell-Repositories — dieser Test behandelt das als unbestätigt statt einen bestimmten Token-Ablauf anzunehmen; Leser sollten die aktuellen App-Anleitungen prüfen, bevor sie ein gesperrtes Modell importieren.',
+          'Über die mitgelieferten Gemma-Modelle hinaus können Nutzer **eigene Modelle von Hugging Face im LiteRT-Format importieren**, über eine Modellkarten-URL im Modellverwaltungsbildschirm der App. Googles eigene Projektdokumentation bestätigt diese Hugging-Face-Integration für Modellsuche und -download, macht aber keine Angaben zu Details wie einem eventuell erforderlichen Hugging-Face-Zugangstoken für gesperrte Modell-Repositories — diese Rezension behandelt das als unbestätigt statt einen bestimmten Token-Ablauf anzunehmen; Leser sollten die aktuellen App-Anleitungen prüfen, bevor sie ein gesperrtes Modell importieren.',
           'Funktional bündelt die App mehrere Modi rund um diese Modelle: **AI Chat mit Thinking Mode** (zeigt die Zwischenschritte des Modell-Reasonings), **Ask Image** (multimodale Analyse eines Fotos aus Kamera oder Galerie), **Audio Scribe** (On-Device-Sprachtranskription und -übersetzung), **Agent Skills** (externer Werkzeugzugriff, etwa Wikipedia-Nachschlagen, oberhalb des Basismodells) und ein Bildschirm für **Modellverwaltung und Benchmarking**, um Downloadgröße und On-Device-Leistung verschiedener Modelle vor der Wahl zu vergleichen.',
         ],
       },
@@ -553,8 +553,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           {
             'Plattform': 'iPhone / iPad',
-            'Was Sie erwartet': 'Erfordert iOS 17.0 oder neuer, laut dem in diesem Test bewerteten App-Store-Eintrag.',
-            'Wichtiger Hinweis': 'Dies ist die primäre Plattform dieses Tests; unterstützte Chip-Generationen werden im Eintrag nicht separat von der OS-Anforderung aufgeführt.',
+            'Was Sie erwartet': 'Erfordert iOS 17.0 oder neuer, laut dem in dieser Rezension bewerteten App-Store-Eintrag.',
+            'Wichtiger Hinweis': 'Dies ist die primäre Plattform dieser Rezension; unterstützte Chip-Generationen werden im Eintrag nicht separat von der OS-Anforderung aufgeführt.',
           },
           {
             'Plattform': 'Mac',
@@ -564,12 +564,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plattform': 'Apple Vision Pro',
             'Was Sie erwartet': 'Als kompatibel gelistet, erfordert visionOS 1.0 oder neuer.',
-            'Wichtiger Hinweis': 'Dieser Test hat die Vision-Pro-Erfahrung nicht eigenständig getestet — als App-Store-gelistete Kompatibilität behandeln, nicht als praktisch verifiziertes Feature.',
+            'Wichtiger Hinweis': 'Diese Rezension hat die Vision-Pro-Erfahrung nicht eigenständig getestet — als App-Store-gelistete Kompatibilität behandeln, nicht als praktisch verifiziertes Feature.',
           },
           {
             'Plattform': 'Android',
             'Was Sie erwartet': 'Eine separate Version desselben Open-Source-Projekts ist über Google Play verfügbar (laut Google-Ankündigung vom 9. September 2025 von reinem GitHub-Vertrieb zu Open Beta auf Google Play gewechselt) oder als direkte APK von GitHub.',
-            'Wichtiger Hinweis': 'Nicht dieselbe Installation wie die iOS-App-Store-App dieses Tests; iOS-spezifisches Verhalten (z. B. das genaue App-Store-Datenschutzlabel) ist nicht automatisch auf die Android-Version übertragbar.',
+            'Wichtiger Hinweis': 'Nicht dieselbe Installation wie die iOS-App-Store-App dieser Rezension; iOS-spezifisches Verhalten (z. B. das genaue App-Store-Datenschutzlabel) ist nicht automatisch auf die Android-Version übertragbar.',
           },
           {
             'Plattform': 'Das größere OSS-Projekt',
@@ -583,7 +583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'privacy',
         title: 'Datenschutz: Was das App-Store-Label wirklich sagt',
         content: [
-          '**Die Inferenz erfolgt auf dem Gerät, sobald ein Modell heruntergeladen wurde — Chat-Eingaben und Modellausgaben werden nicht zur Antwortgenerierung an einen Google-Server gesendet.** Das ist jedoch nicht dieselbe Aussage wie „die App erfasst keine Daten", und dieser Test behandelt diese beiden Aussagen getrennt statt sie zu vermischen.',
+          '**Die Inferenz erfolgt auf dem Gerät, sobald ein Modell heruntergeladen wurde — Chat-Eingaben und Modellausgaben werden nicht zur Antwortgenerierung an einen Google-Server gesendet.** Das ist jedoch nicht dieselbe Aussage wie „die App erfasst keine Daten", und diese Rezension behandelt diese beiden Aussagen getrennt statt sie zu vermischen.',
           'Apples Datenschutz-Kennzeichnung für den [Google AI Edge Gallery App-Store-Eintrag](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) gibt an, dass **mit Ihrer Identität verknüpfte Daten** Geräte-ID, Leistungsdaten und Diagnosen umfassen und **nicht mit Ihrer Identität verknüpfte Daten** ungefähren Standort, Produktinteraktionsdaten und Absturzberichte umfassen. Dies ist Apples standardmäßiges, vom Entwickler selbst deklariertes Datenschutzlabel-Format, kein unabhängiges Audit des Netzwerkverkehrs der App durch PromptQuorum.',
           'Der praktische Unterschied für datenschutzbewusste Leser: Der Inhalt Ihrer Gespräche sowie Bilder oder Audio, die Sie dem Modell geben, verbleiben während der Inferenz auf dem Gerät, aber Google erfasst weiterhin telemetrieartige Daten (Gerätekennungen, Leistungs-/Diagnosedaten, ungefährer Standort, Absturzberichte) darüber, wie die App selbst genutzt wird. Leser, die eine strengere „erfasst überhaupt nichts"-Haltung benötigen, sollten dies mit [Private LLMs](/de/power-local-llm/private-llm-review) App-Store-Datenschutzlabel vergleichen, das angibt, dass keine Daten von dieser App erfasst werden.',
         ],
@@ -592,7 +592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Chat-Inhalte bleiben während der Inferenz auf dem Gerät.** Eingaben und Antworten werden lokal von LiteRT-LM verarbeitet, sobald ein Modell heruntergeladen ist.',
           '**Geräte-ID, Leistungsdaten und Diagnosen sind mit Ihrer Identität verknüpft**, laut Apples Datenschutzlabel für diesen Eintrag.',
           '**Ungefährer Standort, Produktinteraktionsdaten und Absturzberichte werden erfasst, aber nicht mit Ihrer Identität verknüpft**, laut demselben Label.',
-          '**Dieser Test stützt sich auf Apples deklariertes Datenschutzlabel**, nicht auf ein unabhängiges Netzwerkverkehrs-Audit der App.',
+          '**Diese Rezension stützt sich auf Apples deklariertes Datenschutzlabel**, nicht auf ein unabhängiges Netzwerkverkehrs-Audit der App.',
         ],
       },
       history: {
@@ -606,7 +606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**9. September 2025.** Googles eigener [Ankündigungs-Blogbeitrag](https://developers.googleblog.com/google-ai-edge-gallery-now-with-audio-and-on-google-play/) bestätigte den Wechsel von reinem GitHub-Vertrieb zu einer Open Beta im Google Play Store und fügte Audiounterstützung (Sprache-zu-Text und Sprache-zu-übersetztem-Text) über Gemma 3n via die MediaPipe-LLM-Inference-API hinzu. Googles eigener Beitrag gibt an, dass das Projekt innerhalb von zwei Monaten nach dem GitHub-Start 500.000 APK-Downloads erreichte, und beschrieb den Plan, „die App für iOS-Nutzer bereitzustellen".',
           '**2. April 2026.** Google DeepMind veröffentlichte **Gemma 4** unter Apache-2.0-Lizenz, in den Größen E2B, E4B, 26B und 31B, mit einer später folgenden multimodalen **Gemma 4 12B Unified**-Variante am 3. Juni 2026.',
           '**iOS-App-Store-Verfügbarkeit.** Google AI Edge Gallery erreichte den App Store als [Google AI Edge Gallery](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) (App-Store-ID 6749645337) und erfüllte damit den im September-2025-Blogbeitrag angekündigten iOS-Plan; unabhängige Berichterstattung beschrieb, wie die App um die Zeit des Gemma-4-Starts in die Top-Downloads unter Produktivitäts-Apps im App Store aufstieg.',
-          '**Version 1.0.10 (4. September 2026).** Die aktuelle Version zum Zeitpunkt dieses Tests, die laut Release-Notes „globale Übersetzungs- und Lokalisierungsunterstützung für 100 verschiedene Länder" sowie Fehlerbehebungen hinzufügt.',
+          '**Version 1.0.10 (4. September 2026).** Die aktuelle Version zum Zeitpunkt dieser Rezension, die laut Release-Notes „globale Übersetzungs- und Lokalisierungsunterstützung für 100 verschiedene Länder" sowie Fehlerbehebungen hinzufügt.',
         ],
         note: 'Versionsgeschichte und Daten stammen aus Googles eigenem Entwickler-Blog und dem GitHub-Repository des Projekts. Prüfen Sie die aktuelle Version und Release-Notes direkt im App Store, bevor Sie sich auf ein bestimmtes Feature verlassen.',
       },
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Vorteil': 'Open Source und plattformübergreifend',
             'Was das in der Praxis bedeutet': 'Dasselbe zugrunde liegende Projekt läuft auch auf Android, mit auf GitHub unter Apache 2.0 verfügbarem Quellcode.',
-            'Einschränkung / Hinweis': 'Dieser Test bewertet ausschließlich die iOS-App-Store-Version; Verhalten, Datenschutzlabel und Funktionsparität auf Android werden nicht als identisch angenommen.',
+            'Einschränkung / Hinweis': 'Diese Rezension bewertet ausschließlich die iOS-App-Store-Version; Verhalten, Datenschutzlabel und Funktionsparität auf Android werden nicht als identisch angenommen.',
           },
         ],
       },
@@ -708,7 +708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Leser, die ein ausgereiftes, aktiv kuratiertes Verbraucherprodukt wünschen.** [Private LLM](/de/power-local-llm/private-llm-review) und [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) haben beide eine längere Historie als gepflegte, nicht-Beta-Apps.',
           '**Leser, die das strengstmögliche Datenschutzlabel wünschen.** Der App-Store-Eintrag zeigt Geräte-ID, Leistungsdaten, Diagnosen, ungefähren Standort und Absturzberichte als erfasst — [Private LLMs](/de/power-local-llm/private-llm-review) Label gibt an, dass überhaupt keine Daten erfasst werden.',
-          '**Leser, die Android-Unterstützung in derselben Installation benötigen.** Die Android-Version ist ein separater Download von [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), nicht die iOS-App-Store-App dieses Tests.',
+          '**Leser, die Android-Unterstützung in derselben Installation benötigen.** Die Android-Version ist ein separater Download von [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery), nicht die iOS-App-Store-App dieser Rezension.',
           '**Leser, die die größten Gemma-4-Varianten auf einem Smartphone ausführen möchten.** Die 26B- und 31B-Varianten laufen im typischen iPhone-Speicher wahrscheinlich nicht komfortabel; die App nennt keinen festen RAM-Mindestwert pro Modell zur Bestätigung.',
           '**Teams, die eine zentral verwaltete Multi-User-Bereitstellung wünschen.** Dies ist eine Einzelnutzer-, Einzelgerät-Verbraucher-App ohne Admin-Konsole oder gemeinsame Lizenzverwaltung.',
         ],
@@ -719,7 +719,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Ist Google AI Edge Gallery kostenlos?',
-            a: 'Ja. Der [App-Store-Eintrag](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) ist kostenlos herunterladbar, ohne Abonnement und ohne In-App-Käufe, verifiziert für diesen Test am 2026-09-12.',
+            a: 'Ja. Der [App-Store-Eintrag](https://apps.apple.com/us/app/google-ai-edge-gallery/id6749645337) ist kostenlos herunterladbar, ohne Abonnement und ohne In-App-Käufe, verifiziert für diese Rezension am 2026-09-12.',
           },
           {
             q: 'Welche Modelle führt Google AI Edge Gallery aus?',
@@ -727,7 +727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Funktioniert Google AI Edge Gallery auch auf Android?',
-            a: 'Ja, aber als separate Verteilung. Das zugrunde liegende Open-Source-Projekt [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) bietet eine Android-Version über Google Play und direkten APK-Download, zusätzlich zum iOS-App-Store-Eintrag dieses Tests.',
+            a: 'Ja, aber als separate Verteilung. Das zugrunde liegende Open-Source-Projekt [google-ai-edge/gallery](https://github.com/google-ai-edge/gallery) bietet eine Android-Version über Google Play und direkten APK-Download, zusätzlich zum iOS-App-Store-Eintrag dieser Rezension.',
           },
           {
             q: 'Erfasst Google AI Edge Gallery meine Daten?',
@@ -779,10 +779,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Private LLM Test](/de/power-local-llm/private-llm-review) — eine kostenpflichtige, ausgereiftere Alternative mit größerer kuratierter Modellbibliothek.',
-          '[PocketPal AI Test](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene Alternative mit manuellem GGUF-Import.',
-          '[Locally AI Test](/de/power-local-llm/locally-ai-review) — eine kostenlose, auf Apple MLX basierende Alternative mit ähnlichen Modellfamilien.',
-          '[Loci AI Test](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine plattformübergreifende On-Device-App, die ebenfalls Gemma 4 unterstützt.',
+          '[Private-LLM-Rezension](/de/power-local-llm/private-llm-review) — eine kostenpflichtige, ausgereiftere Alternative mit größerer kuratierter Modellbibliothek.',
+          '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — eine kostenlose, quelloffene Alternative mit manuellem GGUF-Import.',
+          '[Locally-AI-Rezension](/de/power-local-llm/locally-ai-review) — eine kostenlose, auf Apple MLX basierende Alternative mit ähnlichen Modellfamilien.',
+          '[Loci-AI-Rezension](/de/power-local-llm/loci-ai-review-offline-local-ai) — eine plattformübergreifende On-Device-App, die ebenfalls Gemma 4 unterstützt.',
           '[Das vollständige lokale KI-Software-Verzeichnis](/de/directory) — ein umfassenderes Verzeichnis lokaler KI-Tools über alle Plattformen hinweg, einschließlich Google AI Edge Gallerys Eintrag.',
         ],
       },

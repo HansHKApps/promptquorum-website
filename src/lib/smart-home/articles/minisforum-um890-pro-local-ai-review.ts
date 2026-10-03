@@ -407,11 +407,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     affiliateLinks: [
       { label: 'Aktuellen Preis prüfen — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
     ],
-    title: 'Minisforum UM890 Pro Test (2026): Lokaler-KI-Heimserver',
+    title: 'Minisforum-UM890-Pro-Rezension (2026): Lokaler-KI-Heimserver',
     heroImage: '/images/minisforum-um890-pro-local-ai-review-overview-hero-de.webp',
-    seoTitle: 'Minisforum UM890 Pro Test 2026: Offizielle Specs & Preis',
+    seoTitle: 'Minisforum-UM890-Pro-Rezension 2026: Offizielle Specs & Preis',
     intro:
-      'Der Minisforum UM890 Pro (AMD Ryzen 9 8945HS, Radeon 780M, bis zu 96 GB DDR5) ist der vielseitige Aufstiegs-Mini-PC für ein Smart Home mit lokaler KI. Ab ca. 489 € als Barebone bis ca. 649 € mit 32 GB (August 2026, schwankend) erreicht er beim lokalen Modell das Niveau eines Beelink SER8, bietet aber zusätzlich zwei 2,5GbE-Ports, Wi-Fi 6E und einen OCuLink-Anschluss für eine externe GPU. Dieser Test prüft die Spezifikationen, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs und erklärt, wer den Aufpreis gegenüber einem SER8 zahlen sollte.',
+      'Der Minisforum UM890 Pro (AMD Ryzen 9 8945HS, Radeon 780M, bis zu 96 GB DDR5) ist der vielseitige Aufstiegs-Mini-PC für ein Smart Home mit lokaler KI. Ab ca. 489 € als Barebone bis ca. 649 € mit 32 GB (August 2026, schwankend) erreicht er beim lokalen Modell das Niveau eines Beelink SER8, bietet aber zusätzlich zwei 2,5GbE-Ports, Wi-Fi 6E und einen OCuLink-Anschluss für eine externe GPU. Diese Rezension prüft die Spezifikationen, setzt ehrliche Erwartungen an die Geschwindigkeit lokaler LLMs und erklärt, wer den Aufpreis gegenüber einem SER8 zahlen sollte.',
     metaDescription:
       'Offizielle Minisforum UM890 Pro Specs 2026: Ryzen 9 8945HS, Radeon 780M, bis zu 96 GB DDR5, OCuLink-eGPU, zwei 2,5GbE. Für Home Assistant + 7B-LLM.',
     twitterDescription:
@@ -419,7 +419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     readTime: '7 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Käufer, die einen erweiterbaren Mini-PC für Home Assistant und lokale KI suchen',
-    primaryTerm: 'Minisforum UM890 Pro Test',
+    primaryTerm: 'Minisforum UM890 Pro Rezension',
     targetKeywords: [
       'minisforum um890 pro test',
       'minisforum um890 pro lokale ki',
@@ -622,7 +622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Aus Spezifikationen geschätzt, nicht gemessen.** Die Leistung bei 7B-Modellen auf der iGPU ist praktisch identisch.',
           'Preise ändern sich wöchentlich — prüfen Sie beide Händler, bevor Sie entscheiden.',
-          'Siehe den vollständigen [Beelink SER8 Test](/de/smart-home/beelink-ser8-local-ai-review) für Details.',
+          'Siehe den vollständigen [Beelink-SER8-Rezension](/de/smart-home/beelink-ser8-local-ai-review) für Details.',
         ],
         affiliateLinks: [
           { label: 'Aktuellen Preis prüfen — Minisforum UM890 Pro', url: 'https://www.minisforum.com/products/minisforum-um890-pro', productName: 'Minisforum UM890 Pro', productCategory: 'Mini PC' },
@@ -631,7 +631,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verifiedEstimated: {
         id: 'verified-estimated',
         title: 'Was wir geprüft haben vs. was wir schätzen vs. was wir nicht testeten',
-        content: 'Dieser Test basiert auf geprüften Spezifikationen und fundierten Schätzungen — nicht auf unabhängigem Testen oder von PromptQuorum gemessenen Benchmarks.',
+        content: 'Diese Rezension basiert auf geprüften Spezifikationen und fundierten Schätzungen — nicht auf unabhängigem Testen oder von PromptQuorum gemessenen Benchmarks.',
         items: [
           '**Geprüft (gegen Spezifikationen und unabhängige Quellen):** CPU-/GPU-/RAM-Architektur, Speicher, OCuLink, Netzwerk, Anschlüsse, TDP-Basisspezifikation',
           '**Aus Hardware geschätzt (nicht unabhängig auf diesem Gerät gemessen):** Eignung für lokale LLMs (7B/13B-14B-Fit), typischer Durchsatz ~8–18 tok/s (7B Q4_K_M aus Drittanbieter-Vulkan-Berichten), Stromaufnahme 50–65 W nur iGPU, thermisches und Lärmverhalten',
@@ -695,14 +695,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Preise rangieren von ~489 € Barebone bis ~799 € für eine 64GB+1TB-SKU. Die genauen Kosten hängen vom Händler, Land und aktuellem Zoll-Pass-Through ab.',
           'In China gefertigt: US-Section-301-Zölle (Elektronik), EU-Bearbeitungsgebühr für geringwertige Pakete ab August 2026 und ähnliche Maßnahmen in anderen Regionen beeinflussen die Endkosten.',
           'Verfügbarkeit ist typisch von Minisforum.com und großen Händlern in den USA, EU und Asien-Pazifik.',
-          'Kein Affiliate-Programm: Dieser Test verdient keine Provision. Der CTA-Link geht zu Minisforum für Preistransparenz.',
+          'Kein Affiliate-Programm: Diese Rezension verdient keine Provision. Der CTA-Link geht zu Minisforum für Preistransparenz.',
         ],
       },
       whereToBuy: {
         id: 'where-to-buy',
         title: 'Wo kaufen',
         content:
-          '**Prüfen Sie den aktuellen Preis bei Minisforum.com — Preise ändern sich häufig und hängen von Ihrer Region und Importzöllen ab.** Auch die Verfügbarkeit schwankt: Bei der letzten Prüfung für diesen Test (August 2026) waren auf Minisforum.com alle Konfigurationen dieses Modells in den Storefronts für US, UK, EU und JP als ausverkauft gelistet — planen Sie also etwas Zeit ein oder prüfen Sie Amazon/Newegg als Alternative.',
+          '**Prüfen Sie den aktuellen Preis bei Minisforum.com — Preise ändern sich häufig und hängen von Ihrer Region und Importzöllen ab.** Auch die Verfügbarkeit schwankt: Bei der letzten Prüfung für diese Rezension (August 2026) waren auf Minisforum.com alle Konfigurationen dieses Modells in den Storefronts für US, UK, EU und JP als ausverkauft gelistet — planen Sie also etwas Zeit ein oder prüfen Sie Amazon/Newegg als Alternative.',
         items: [
           'Barebone (~489 €) ist günstiger, wenn Sie bereits DDR5-SO-DIMMs und eine NVMe-SSD besitzen.',
           '32GB+1TB (~649 €) ist die vorkonfigurierte Einstiegsoption; betriebsbereit für Home Assistant und ein 7B-Modell aus der Box.',
@@ -746,7 +746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) — der Überblick, zu dem dieser Test gehört',
+          '[Beste Mini-PCs für Home Assistant + lokale KI](/de/smart-home/best-mini-pc-home-assistant-local-ai) — der Überblick, zu dem diese Rezension gehört',
           '[Hardware-Guide für lokale LLMs](/de/local-llms/local-llm-hardware-guide-2026) — clusterübergreifend: VRAM und Quantisierungstiefe',
           '[Ihr Smart Home mit einem lokalen LLM betreiben](/de/smart-home/local-llm-smart-home-complete-guide) — was die Box tatsächlich ausführt',
           '[Ollama mit Home Assistant verbinden](/de/smart-home/home-assistant-ollama-integration) — das Modell einbinden',
@@ -757,7 +757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@context': 'https://schema.org',
       '@type': 'Review',
-      name: 'Minisforum UM890 Pro Test (2026): Lokaler-KI-Heimserver',
+      name: 'Minisforum-UM890-Pro-Rezension (2026): Lokaler-KI-Heimserver',
       reviewBody:
         'Der Minisforum UM890 Pro ist ein Ryzen-9-8945HS-Mini-PC mit Radeon-780M-iGPU, bis zu 96 GB DDR5 und einem OCuLink-Anschluss für eine externe GPU. Er betreibt Home Assistant plus ein lokales 7B-LLM und ist die erweiterbare Aufstiegs-Box, ab ca. 489 € als Barebone (August 2026).',
       datePublished: '2026-07-03',
