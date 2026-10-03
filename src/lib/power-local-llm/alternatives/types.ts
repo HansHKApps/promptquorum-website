@@ -1,4 +1,4 @@
-// Cloud-app → local-alternative mapping types (image-generation pilot, 2026-10-03).
+// Cloud-app → local-alternative mapping types (image-generation pilot 2026-10-03, voice/audio added 2026-10-03).
 // Tiers are editorial judgment about tool type and workflow, NOT image quality.
 
 export type MatchTier = 'closest' | 'similar' | 'partial'
@@ -18,8 +18,11 @@ export interface CloudAppSource {
   url: string
 }
 
+export type CloudAppCategory = 'image' | 'voice'
+
 export interface CloudApp {
   id: string
+  category: CloudAppCategory
   name: string
   vendor: string
   /** Case and punctuation are ignored. Keep aliases image-specific (plain "chatgpt" must NOT be an alias). */

@@ -2,10 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createHash, timingSafeEqual } from 'crypto'
 import { Ratelimit } from '@upstash/ratelimit'
 import { redis } from '@/lib/redis'
-import { isLoggableQuery, matchCloudApp, normalizeQuery, MAX_LOGGED_MISS_WORDS } from '@/lib/power-local-llm/alternatives/match'
-import { IMAGE_CLOUD_APPS } from '@/lib/power-local-llm/alternatives/cloud-apps.image'
+import { ALL_CLOUD_APPS, isLoggableQuery, matchCloudApp, normalizeQuery, MAX_LOGGED_MISS_WORDS } from '@/lib/power-local-llm/alternatives/match'
 
-// Cloud-app → local-alternative lookup: anonymous search log (image-generation pilot).
+// Cloud-app → local-alternative lookup: anonymous search log (image + voice/audio pilot).
 // Stores ONLY normalized query text + counters. No cookie, no user id, no hardware profile.
 // The rate limiter keeps a salted SHA-256 hash of the IP (never the raw IP) for the 1 h window; it is never
 // linked to the search text.
@@ -99,14 +98,15 @@ export async function GET(req: NextRequest) {
     }))
     .sort((x, y) => y.count - x.count)
 
-  const hits = IMAGE_CLOUD_APPS.map((app) => ({
+  const hits = ALL_CLOUD_APPS.map((app) => ({
     appId: app.id,
+    category: app.category,
     name: app.name,
     count: Number((hitCounts ?? {})[app.id] ?? 0),
     mappedLocalTools: app.localMatches.length,
   })).sort((x, y) => y.count - x.count)
 
-  const knownGaps = IMAGE_CLOUD_APPS.filter((a) => a.localMatches.length === 0).map((a) => ({ appId: a.id, name: a.name, gapNote: a.gapNote ?? '' }))
+  const knownGaps = ALL_CLOUD_APPS.filter((a) => a.localMatches.length === 0).map((a) => ({ appId: a.id, name: a.name, gapNote: a.gapNote ?? '' }))
 
   if (new URL(req.url).searchParams.get('format') === 'csv') {
     const lines = ['query,count,last_seen,status', ...misses.map((m) => [m.query, m.count, m.lastSeen, m.status].map(csvCell).join(','))]
