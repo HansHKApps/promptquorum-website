@@ -167,6 +167,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'toolneuron':                              'toolneuron',
   'diffusionbee':                            'diffusionbee',
   'macwhisper':                              'macwhisper',
+  'aquavoice':                               'aquavoice',
   'solair-ai':                               'solair-ai',
   'radiant-canvas':                          'radiant-canvas',
   'ollama-local-ai':                         'ollama-local-ai',

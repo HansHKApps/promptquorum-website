@@ -451,6 +451,8 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   'diffusionbee-review',
   // MacWhisper review — 2026-09-12
   'macwhisper-review',
+  // AquaVoice review — 2026-10-03
+  'aquavoice-review',
   // Solair AI review — 2026-09-12
   'solair-ai-review',
   'kilo-code-review',

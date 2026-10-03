@@ -819,6 +819,11 @@
     "urlSlug": "macwhisper-review",
     "url": "/power-local-llm/macwhisper-review"
   },
+  "aquavoice": {
+    "cluster": "power-local-llm",
+    "urlSlug": "aquavoice-review",
+    "url": "/power-local-llm/aquavoice-review"
+  },
   "solair-ai": {
     "cluster": "power-local-llm",
     "urlSlug": "solair-ai-review",

@@ -265,6 +265,7 @@ import { article as a_toolneuron_review } from './articles/toolneuron-review'
 import { article as a_localai_apexcreator_review } from './articles/localai-apexcreator-review'
 import { article as a_diffusionbee_review } from './articles/diffusionbee-review'
 import { article as a_macwhisper_review } from './articles/macwhisper-review'
+import { article as a_aquavoice_review } from './articles/aquavoice-review'
 import { article as a_solair_ai_review } from './articles/solair-ai-review'
 import { article as a_kilo_code_review } from './articles/kilo-code-review'
 // Agnai, MetaGPT, RisuAI single-subject reviews — 2026-09-12
@@ -639,6 +640,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'diffusionbee-review':                            a_diffusionbee_review,
   // MacWhisper review — 2026-09-12
   'macwhisper-review':                              a_macwhisper_review,
+  // AquaVoice review — 2026-10-03
+  'aquavoice-review':                               a_aquavoice_review,
   // Solair AI review — 2026-09-12
   'solair-ai-review':                               a_solair_ai_review,
   // Kilo Code review — 2026-09-12
