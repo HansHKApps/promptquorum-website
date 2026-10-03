@@ -21,6 +21,7 @@ import type { LLMArticle } from '@/lib/local-llms/types'
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     theme: 'Voice, Speech & Multimodal',
+    heroImage: '/images/aquavoice-review-hero-en.webp',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-04-03',
     publishDate: '2026-10-03',
