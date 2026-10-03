@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: 'Does AquaVoice work in German and French?', a: 'In the author\'s use it handled German and English well and understood French and Russian; the site lists 49 languages.' },
           { q: 'Why did my dictation come out in another language?', a: 'The author saw this two or three times; locking dictation to a single language in settings reduced it a lot. The cause is not yet known.' },
           { q: 'Why did the text not appear anywhere?', a: 'The window where the text should go must be active; otherwise AquaVoice does not know where to put it.' },
-          { q: 'Is AquaVoice free?', a: 'It has a free allowance of 1,000 words; unlimited use needs a paid tier, with current prices on [aquavoice.com](https://aquavoice.com/).' },
+          { q: 'Is AquaVoice free?', a: 'It has a free allowance of 1,000 words; unlimited use needs a paid tier, with current prices on its official site.' },
           { q: 'Is my dictated data sent to the cloud, and where is it hosted?', a: 'Yes, it is sent to AquaVoice\'s servers; the hosting location is not published and EU hosting is not stated, so review confidential use individually first.' },
           { q: 'Can I dictate confidential data with AquaVoice?', a: 'Not by default: assess it individually first, including its data-processing terms, hosting location and sub-processors, and enable Privacy Mode.' },
           { q: 'Was this review paid for?', a: 'AquaVoice gave PromptQuorum free access to the product; PromptQuorum receives no payment and no commission.' },
