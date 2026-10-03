@@ -17,6 +17,7 @@ import { useEffect, useMemo, useState } from 'react'
 import type { Language } from '@/lib/blog/blogContent'
 import type { ToolRecord } from '@/lib/power-local-llm/apps/types'
 import { McpConnectPanel } from './McpConnectPanel'
+import { CloudAlternativeLookup } from './CloudAlternativeLookup'
 import { StatsBar } from './StatsBar'
 import { WantChips, WANT_ORDER } from './WantChips'
 import { SubcategoryChips } from './SubcategoryChips'
@@ -246,6 +247,13 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
       {lang === 'en' && <McpConnectPanel />}
+      <CloudAlternativeLookup
+        apps={apps}
+        lang={lang}
+        ui={ui}
+        onOpenTool={setOpenSlug}
+        onBrowseImageApps={() => handleWant('image')}
+      />
       <div id="directory-toolbar" className="space-y-4 mb-6 scroll-mt-24">
         <StatsBar total={apps.length} visible={sorted.length} byLocality={localityCounts} lang={lang} />
         <WantChips counts={wantCounts} selected={want} onSelect={handleWant} ui={ui} />
