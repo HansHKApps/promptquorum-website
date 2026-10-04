@@ -10,6 +10,8 @@ export interface BatchedListItem {
   title: string
   url?: string
   meta?: string
+  /** Country flag emoji rendered after the title, with its accessible language name. */
+  flag?: { emoji: string; label: string }
 }
 
 export interface Batch {
@@ -59,7 +61,14 @@ function BatchSection({ batch }: { batch: Batch }) {
         {batch.items.map((item) => {
           const row = (
             <>
-              <span className="text-sm font-semibold text-text-primary line-clamp-1">{item.title}</span>
+              <span className="flex items-center gap-1.5">
+                <span className="min-w-0 truncate text-sm font-semibold text-text-primary">{item.title}</span>
+                {item.flag && (
+                  <span role="img" aria-label={item.flag.label} title={item.flag.label} className="shrink-0 text-base leading-none">
+                    {item.flag.emoji}
+                  </span>
+                )}
+              </span>
               {item.meta && <span className="block text-xs text-text-muted">{item.meta}</span>}
             </>
           )
