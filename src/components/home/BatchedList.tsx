@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { AppLink as Link } from '@/components/AppLink'
 import type { Language } from '@/lib/blog/blogContent'
+import { Flag } from '@/components/Flag'
 import { t } from './home-i18n'
 
 export interface BatchedListItem {
@@ -10,8 +11,8 @@ export interface BatchedListItem {
   title: string
   url?: string
   meta?: string
-  /** Country flag emoji rendered after the title, with its accessible language name. */
-  flag?: { emoji: string; label: string }
+  /** Country flag (public/flags code) rendered after the title, with its accessible language name. */
+  flag?: { country: string; label: string }
 }
 
 export interface Batch {
@@ -63,11 +64,7 @@ function BatchSection({ batch }: { batch: Batch }) {
             <>
               <span className="flex items-center gap-1.5">
                 <span className="min-w-0 truncate text-sm font-semibold text-text-primary">{item.title}</span>
-                {item.flag && (
-                  <span role="img" aria-label={item.flag.label} title={item.flag.label} className="shrink-0 text-base leading-none">
-                    {item.flag.emoji}
-                  </span>
-                )}
+                {item.flag && <Flag country={item.flag.country} label={item.flag.label} />}
               </span>
               {item.meta && <span className="block text-xs text-text-muted">{item.meta}</span>}
             </>
