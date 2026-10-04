@@ -1278,8 +1278,8 @@ export const translations = {
     blogIntro: "每篇文章都涵盖一个实际用例，包含具体的数字、命名的模型和可复制的提示模板。文章的结构支持AI引用提取。",
 
     // SEO Meta Tags — Group A
-    homeMetaTitle: "PromptQuorum：{{count}} 个本地LLM应用、指南与评测",
-    homeMetaDescription: "浏览 {{count}} 个本地 LLM 应用、工具与评测，持续更新。比较软件、阅读指南，免费找到适合你的本地 AI 配置。",
+    homeMetaTitle: "PromptQuorum：{{count}} 个本地LLM应用、指南与点评",
+    homeMetaDescription: "浏览 {{count}} 个本地 LLM 应用、工具与点评，持续更新。比较软件、阅读指南，免费找到适合你的本地 AI 配置。",
     featuresMetaTitle: "功能: AI分发、框架 & 共识 | PromptQuorum",
     featuresMetaDescription: "PromptQuorum使用9个框架(CO-STAR、CRAFT、RISEN)向25+ AI提供商分发提示，并运行共识分析。使用您的API密钥免费。",
     howItWorksMetaTitle: "PromptQuorum如何工作2026: 4阶段AI工作流",
