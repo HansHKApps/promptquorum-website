@@ -194,7 +194,7 @@ const TOOLS_UI = {
   },
   readFullReview: {
     en: 'Read the full review', de: 'Vollständige Bewertung lesen', fr: 'Lire l\'avis complet',
-    ja: '詳しいレビューを読む', zh: '阅读完整评测', es: 'Leer la reseña completa',
+    ja: '詳しいレビューを読む', zh: '阅读完整点评', es: 'Leer la reseña completa',
     pt: 'Ler a análise completa', ar: 'اقرأ المراجعة الكاملة', ko: '전체 리뷰 읽기',
   },
   browseDirectory: {
@@ -278,7 +278,7 @@ const TOOLS_UI = {
     de: 'Diese App ist eine Laufzeitumgebung — es gibt keine feste Hardware-Angabe, da das vom geladenen Modell abhängt. Nutzen Sie den VRAM-Rechner für ein bestimmtes Modell oder lesen Sie die Bewertung für Empfehlungen.',
     fr: 'Cette application est un moteur d\'exécution — il n\'y a pas de chiffre matériel unique, cela dépend du modèle chargé. Utilisez le calculateur de VRAM pour un modèle précis, ou consultez l\'avis pour des recommandations.',
     ja: 'このアプリはランタイムです。ロードするモデルによって必要なハードウェアが変わるため、単一の数値はありません。特定のモデルについてはVRAM計算ツールを、推奨についてはレビューをご覧ください。',
-    zh: '该应用是一个运行时环境——没有固定的硬件数值，因为这取决于你加载的模型。请针对具体模型使用 VRAM 计算器，或阅读评测获取建议。',
+    zh: '该应用是一个运行时环境——没有固定的硬件数值，因为这取决于你加载的模型。请针对具体模型使用 VRAM 计算器，或阅读点评获取建议。',
     es: 'Esta app es un runtime: no tiene un requisito de hardware único, porque depende del modelo que cargues. Usa la calculadora de VRAM para un modelo concreto, o lee la reseña para recomendaciones.',
     pt: 'Este app é um runtime — não há um número de hardware único, pois depende do modelo carregado. Use a calculadora de VRAM para um modelo específico, ou leia a análise para recomendações.',
     ar: 'هذا التطبيق عبارة عن بيئة تشغيل — لا يوجد رقم جهاز واحد لأن ذلك يعتمد على النموذج الذي تحمّله. استخدم حاسبة VRAM لنموذج محدد، أو اقرأ المراجعة للحصول على توصيات.',
