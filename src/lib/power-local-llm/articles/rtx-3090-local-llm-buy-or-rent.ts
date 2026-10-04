@@ -110,7 +110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': '[www.promptquorum.com/power-local-llm/rtx-3090-local-llm-buy-or-rent](https://www.promptquorum.com/power-local-llm/rtx-3090-local-llm-buy-or-rent)',
+        '@id': 'https://www.promptquorum.com/power-local-llm/rtx-3090-local-llm-buy-or-rent',
       },
     },
 
@@ -566,7 +566,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': '[www.promptquorum.com/de/power-local-llm/rtx-3090-local-llm-buy-or-rent](https://www.promptquorum.com/de/power-local-llm/rtx-3090-local-llm-buy-or-rent)',
+        '@id': 'https://www.promptquorum.com/de/power-local-llm/rtx-3090-local-llm-buy-or-rent',
       },
     },
 
@@ -1022,7 +1022,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': '[www.promptquorum.com/fr/power-local-llm/rtx-3090-local-llm-buy-or-rent](https://www.promptquorum.com/fr/power-local-llm/rtx-3090-local-llm-buy-or-rent)',
+        '@id': 'https://www.promptquorum.com/fr/power-local-llm/rtx-3090-local-llm-buy-or-rent',
       },
     },
 
@@ -1478,7 +1478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': '[www.promptquorum.com/es/power-local-llm/rtx-3090-local-llm-buy-or-rent](https://www.promptquorum.com/es/power-local-llm/rtx-3090-local-llm-buy-or-rent)',
+        '@id': 'https://www.promptquorum.com/es/power-local-llm/rtx-3090-local-llm-buy-or-rent',
       },
     },
 
@@ -1934,7 +1934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': '[www.promptquorum.com/pt/power-local-llm/rtx-3090-local-llm-buy-or-rent](https://www.promptquorum.com/pt/power-local-llm/rtx-3090-local-llm-buy-or-rent)',
+        '@id': 'https://www.promptquorum.com/pt/power-local-llm/rtx-3090-local-llm-buy-or-rent',
       },
     },
 
@@ -2389,7 +2389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': '[www.promptquorum.com/ar/power-local-llm/rtx-3090-local-llm-buy-or-rent](https://www.promptquorum.com/ar/power-local-llm/rtx-3090-local-llm-buy-or-rent)',
+        '@id': 'https://www.promptquorum.com/ar/power-local-llm/rtx-3090-local-llm-buy-or-rent',
       },
     },
 
@@ -2844,7 +2844,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': '[www.promptquorum.com/ja/power-local-llm/rtx-3090-local-llm-buy-or-rent](https://www.promptquorum.com/ja/power-local-llm/rtx-3090-local-llm-buy-or-rent)',
+        '@id': 'https://www.promptquorum.com/ja/power-local-llm/rtx-3090-local-llm-buy-or-rent',
       },
     },
 
@@ -3299,7 +3299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': '[www.promptquorum.com/zh/power-local-llm/rtx-3090-local-llm-buy-or-rent](https://www.promptquorum.com/zh/power-local-llm/rtx-3090-local-llm-buy-or-rent)',
+        '@id': 'https://www.promptquorum.com/zh/power-local-llm/rtx-3090-local-llm-buy-or-rent',
       },
     },
 
@@ -3754,7 +3754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       ],
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': '[www.promptquorum.com/ko/power-local-llm/rtx-3090-local-llm-buy-or-rent](https://www.promptquorum.com/ko/power-local-llm/rtx-3090-local-llm-buy-or-rent)',
+        '@id': 'https://www.promptquorum.com/ko/power-local-llm/rtx-3090-local-llm-buy-or-rent',
       },
     },
 

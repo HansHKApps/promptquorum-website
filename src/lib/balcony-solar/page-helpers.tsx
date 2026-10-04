@@ -332,7 +332,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
           position: i + 1,
           item: {
             '@type': 'Thing',
-            name: (row['Device'] ?? row['Tool'] ?? '').replace(/\*\*/g, '').trim(),
+            name: (row['Device'] ?? row['Tool'] ?? '').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/\*\*/g, '').trim(),
             ...(urlMatch && { url: urlMatch[1] }),
             description: row['Description'] ?? '',
           },

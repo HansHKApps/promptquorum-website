@@ -750,7 +750,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     },
     schema: {
       inLanguage: 'ko',
-      articleUrl: '[www.promptquorum.com/ko/prompt-bites/best-local-llm-16gb-ram-laptop](https://www.promptquorum.com/ko/prompt-bites/best-local-llm-16gb-ram-laptop)',
+      articleUrl: 'https://www.promptquorum.com/ko/prompt-bites/best-local-llm-16gb-ram-laptop',
       breadcrumbs: [
         { position: 1, name: '홈', item: '[www.promptquorum.com/ko](https://www.promptquorum.com/ko)' },
         { position: 2, name: '프롬프트 바이트', item: '[www.promptquorum.com/ko/prompt-bites](https://www.promptquorum.com/ko/prompt-bites)' },

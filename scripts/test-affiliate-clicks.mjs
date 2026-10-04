@@ -1,16 +1,20 @@
 #!/usr/bin/env node
 /**
  * test-affiliate-clicks.mjs
- * Playwright verification that affiliate link clicks fire tracking events.
+ * Playwright verification that affiliate link clicks fire the Umami `affiliate_click` event.
  *
  * Detection strategy:
- *  - GA4:     Patch window.dataLayer.push BEFORE page scripts run →
- *             captures every gtag('event', ...) call regardless of script order
- *  - Vercel:  Intercept /_vercel/insights/event same-origin POST
- *  - Umami:   Not configured in layout.tsx — expected to always be absent
+ *  - Umami: intercept the same-origin beacon POST /lib/s/api/send (rewritten to
+ *    cloud.umami.is in next.config.ts) and check the JSON body for
+ *    payload.name === 'affiliate_click'. This is the real network signal, so it
+ *    works regardless of how window.umami is initialised.
  *
- * Usage: node scripts/test-affiliate-clicks.mjs
- * Requires: npm run dev running on http://localhost:3000
+ * GA4 and Vercel Analytics were removed from the site; they are no longer checked.
+ *
+ * Usage:   BASE_URL=http://localhost:3000 [LIMIT=3] node scripts/test-affiliate-clicks.mjs
+ * Requires: a running server (prefer `npx next start`; `npm run dev` is broken)
+ *           reachable at BASE_URL (default http://localhost:3000), and the
+ *           Umami script must be able to load (it is fetched via /lib/s/script.js).
  */
 
 import { chromium } from 'playwright'
@@ -20,7 +24,7 @@ import { fileURLToPath } from 'url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
-const BASE_URL = 'http://localhost:3000'
+const BASE_URL = process.env.BASE_URL ?? 'http://localhost:3000'
 
 const ARTICLE_SOURCES = [
   { dir: 'src/lib/power-local-llm/articles', urlPrefix: '/power-local-llm' },
@@ -40,52 +44,25 @@ function extractAffiliateSlugs(dir) {
     .map(f => f.replace(/\.ts$/, ''))
 }
 
-async function checkDevServer() {
+async function checkServer() {
   try {
-    await fetch(`${BASE_URL}/power-local-llm/best-vpn-ai-privacy-local-llm-2026?lang=en`,
-      { signal: AbortSignal.timeout(5000) })
+    await fetch(`${BASE_URL}/`, { signal: AbortSignal.timeout(5000) })
     return true
   } catch { return false }
 }
 
+function isAffiliateBeacon(req) {
+  if (req.method() !== 'POST' || !req.url().includes('/lib/s/api/send')) return false
+  try {
+    const body = JSON.parse(req.postData() ?? '{}')
+    return body?.payload?.name === 'affiliate_click'
+  } catch { return false }
+}
+
 async function testPage(page, url, slug) {
-  const vercelEvents = []
-
-  // Intercept Vercel Analytics requests (same-origin POST)
+  const beacons = []
   page.on('request', req => {
-    const u = req.url()
-    if (u.includes('/_vercel/insights') || u.includes('vitals.vercel') || u.includes('vercel-analytics')) {
-      vercelEvents.push(u)
-    }
-  })
-
-  // Patch window.dataLayer BEFORE any page scripts run
-  // GA4 init script does: window.dataLayer = window.dataLayer || []
-  // It reuses our pre-existing array with the patched push.
-  await page.addInitScript(() => {
-    window.__affiliateGa4Events = []
-    window.__onClickFired = 0
-
-    // Pre-seed dataLayer with our patched push
-    const patchedArr = []
-    patchedArr.push = function(...args) {
-      for (const item of args) {
-        // gtag() calls push with arguments-object; item[0]='event', item[1]=eventName, item[2]=payload
-        if (item && item[0] === 'event' && item[1] === 'affiliate_click') {
-          window.__affiliateGa4Events.push(item[2])
-        }
-      }
-      return Array.prototype.push.apply(this, args)
-    }
-    window.dataLayer = patchedArr
-
-    // Also shim umami so we can detect if it ever loads
-    window.__umamiEvents = []
-    window.umami = {
-      track: function(name, payload) {
-        if (name === 'affiliate_click') window.__umamiEvents.push(payload)
-      }
-    }
+    if (isAffiliateBeacon(req)) beacons.push(req.url())
   })
 
   let httpStatus = null
@@ -110,12 +87,7 @@ async function testPage(page, url, slug) {
     const href = await link.getAttribute('href').catch(() => '?')
     const text = (await link.innerText().catch(() => '')).trim()
 
-    // Clear captured events before each click
-    await page.evaluate(() => {
-      window.__affiliateGa4Events = []
-      window.__umamiEvents = []
-    })
-    const vercelBefore = vercelEvents.length
+    const before = beacons.length
 
     // Dispatch click event (don't trigger navigation for target=_blank)
     await page.evaluate((idx) => {
@@ -123,20 +95,9 @@ async function testPage(page, url, slug) {
       if (links[idx]) links[idx].dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }))
     }, i)
 
-    await page.waitForTimeout(500)
+    await page.waitForTimeout(800)
 
-    const ga4Events = await page.evaluate(() => window.__affiliateGa4Events ?? [])
-    const umamiEvents = await page.evaluate(() => window.__umamiEvents ?? [])
-    const vercelFired = vercelEvents.length > vercelBefore
-
-    linkResults.push({
-      href,
-      text,
-      ga4Fired: ga4Events.length > 0,
-      umamiFired: umamiEvents.length > 0,
-      vercelFired,
-      ga4Payload: ga4Events[0] ?? null,
-    })
+    linkResults.push({ href, text, umamiFired: beacons.length > before })
   }
 
   return { slug, url, ok: true, httpStatus, links: linkResults }
@@ -144,25 +105,28 @@ async function testPage(page, url, slug) {
 
 async function main() {
   const today = new Date().toISOString().slice(0, 10)
-  console.log(`\n📊 Affiliate Click-Tracking Test — ${today}\n`)
+  console.log(`\n📊 Affiliate Click-Tracking Test (Umami) — ${today}\n`)
 
-  const serverUp = await checkDevServer()
-  if (!serverUp) {
-    console.error('🔴 Dev server not responding. Run: npm run dev')
+  if (!(await checkServer())) {
+    console.error(`🔴 Server not responding at ${BASE_URL}. Run: npx next start`)
     process.exit(1)
   }
-  console.log('✅ Dev server reachable\n')
+  console.log(`✅ Server reachable at ${BASE_URL}\n`)
 
   const testPages = []
   for (const { dir, urlPrefix } of ARTICLE_SOURCES) {
     for (const slug of extractAffiliateSlugs(dir)) {
-      testPages.push({ slug, url: `${BASE_URL}${urlPrefix}/${slug}?lang=en`, urlPrefix })
+      testPages.push({ slug, url: `${BASE_URL}${urlPrefix}/${slug}`, urlPrefix })
     }
   }
+  const limit = Number(process.env.LIMIT ?? 0)
+  if (limit > 0) testPages.splice(limit)
   console.log(`Testing ${testPages.length} pages...\n`)
 
   const browser = await chromium.launch({ headless: true })
   const context = await browser.newContext({ bypassCSP: true })
+  // Observe but never forward analytics beacons.
+  await context.route('**/lib/s/api/send', route => route.fulfill({ status: 200, contentType: 'application/json', body: '{}' }))
 
   const allResults = []
   let totalLinks = 0, totalOk = 0, totalFailed = 0
@@ -179,7 +143,7 @@ async function main() {
     } else if (result.noLinks) {
       process.stdout.write(` ⚠️  no .affiliate-link elements\n`)
     } else {
-      const failed = result.links.filter(l => !l.ga4Fired && !l.vercelFired)
+      const failed = result.links.filter(l => !l.umamiFired)
       totalLinks += result.links.length
       totalOk += result.links.length - failed.length
       totalFailed += failed.length
@@ -202,20 +166,13 @@ async function main() {
       console.log(`⚠️  ${r.slug} — No .affiliate-link elements rendered (HTTP ${r.httpStatus})\n`)
       continue
     }
-    const allOk = r.links.every(l => l.ga4Fired || l.vercelFired)
+    const allOk = r.links.every(l => l.umamiFired)
     console.log(`${allOk ? '✅' : '🔴'} ${r.slug} (${r.links.length} links, HTTP ${r.httpStatus})`)
     for (const l of r.links) {
       let domain = '?'
       try { domain = new URL(l.href).hostname } catch {}
-      const ga4Icon = l.ga4Fired ? '✅ GA4' : '🔴 GA4'
-      const vercelIcon = l.vercelFired ? '✅ Vercel' : '⚠️  Vercel'
-      const umamiIcon = l.umamiFired ? '✅ Umami' : '— Umami'
       console.log(`   ${domain}  "${l.text}"`)
-      console.log(`   ${ga4Icon}  ${vercelIcon}  ${umamiIcon}`)
-      if (l.ga4Payload) {
-        console.log(`   Payload: dest=${l.ga4Payload.destination_domain} cat=${l.ga4Payload.product_category}`)
-      }
-      console.log()
+      console.log(`   ${l.umamiFired ? '✅ Umami' : '🔴 Umami'}\n`)
     }
   }
 
@@ -223,9 +180,8 @@ async function main() {
   console.log('\nSUMMARY')
   console.log(`  Pages tested: ${testPages.length}`)
   console.log(`  Links total:  ${totalLinks}`)
-  console.log(`  ✅ GA4/Vercel firing: ${totalOk}`)
+  console.log(`  ✅ Umami firing: ${totalOk}`)
   console.log(`  🔴 Not firing: ${totalFailed}`)
-  console.log(`  ℹ️  Umami: not configured in layout.tsx (expected)`)
 
   const pageErrors = allResults.filter(r => !r.ok).length
   const noLinkPages = allResults.filter(r => r.ok && r.noLinks).length
