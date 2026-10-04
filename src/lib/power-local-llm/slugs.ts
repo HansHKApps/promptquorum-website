@@ -388,6 +388,8 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'llm-hub-review':                          'llm-hub-review',
   // TokForge review — 2026-10-03
   'tokforge-review':                         'tokforge-review',
+  'oscilla-review':                          'oscilla-review',
+  'tina-review':                             'tina-review',
   // Ollama Local AI review — 2026-10-02
   'ollama-local-ai-review':                  'ollama-local-ai-review',
   // ComfyUI review — 2026-09-06

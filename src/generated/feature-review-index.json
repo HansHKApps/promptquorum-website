@@ -1163,5 +1163,15 @@
     "cluster": "power-local-llm",
     "urlSlug": "tokforge-review",
     "url": "/power-local-llm/tokforge-review"
+  },
+  "oscilla": {
+    "cluster": "power-local-llm",
+    "urlSlug": "oscilla-review",
+    "url": "/power-local-llm/oscilla-review"
+  },
+  "tina": {
+    "cluster": "power-local-llm",
+    "urlSlug": "tina-review",
+    "url": "/power-local-llm/tina-review"
   }
 }
