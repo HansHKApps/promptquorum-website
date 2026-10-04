@@ -246,9 +246,9 @@ const HOME_UI = {
     pt: 'Mais recente', ar: 'الأحدث', ko: '최신',
   },
   snapshotAsOfTemplate: {
-    en: 'Snapshot as of {date}', de: 'Momentaufnahme vom {date}', fr: 'Instantané au {date}',
-    ja: '{date} 時点のスナップショット', zh: '截至 {date} 的快照', es: 'Instantánea al {date}',
-    pt: 'Instantâneo em {date}', ar: 'لقطة بتاريخ {date}', ko: '{date} 기준 스냅샷',
+    en: 'Snapshot as of {date} (last 28 days)', de: 'Momentaufnahme vom {date} (letzte 28 Tage)', fr: 'Instantané au {date} (28 derniers jours)',
+    ja: '{date} 時点のスナップショット (過去28日間)', zh: '截至 {date} 的快照 (最近28天)', es: 'Instantánea al {date} (últimos 28 días)',
+    pt: 'Instantâneo em {date} (últimos 28 dias)', ar: 'لقطة بتاريخ {date} (آخر 28 يومًا)', ko: '{date} 기준 스냅샷 (최근 28일)',
   },
   clicksLabel: {
     en: '{n} clicks', de: '{n} Klicks', fr: '{n} clics', ja: '{n} クリック', zh: '{n} 次点击', es: '{n} clics',
