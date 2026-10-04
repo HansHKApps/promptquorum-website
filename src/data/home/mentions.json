@@ -1,11 +1,92 @@
 {
-  "_comment": "Hand-maintained by Hans from manual backlink monitoring (Ahrefs export, DR>40 filtered). Shape: { id, outlet, title, url, date (ISO), domainRating, excerpt }. Honest framing only in `title`/`excerpt` -- never 'featured in' or implied editorial endorsement, these are citations/data-source mentions. Seeded 2026-09-20 from stored Ahrefs pulls: only the Hostinger row has a page URL; the other five link to the domain root and their dates are approximate (batch range 2026-08-14 to 08-31) -- replace with real page URLs and exact first-seen dates when available.",
+  "_comment": "Hand-maintained by Hans from manual backlink monitoring (Ahrefs export, DR>40 filtered). Shape: { id, outlet, title, url, date (ISO), domainRating, excerpt }. Honest framing only in `title`/`excerpt` -- never 'featured in' or implied editorial endorsement, these are citations/data-source mentions. Seeded 2026-09-20 from stored Ahrefs pulls: only the Hostinger row has a page URL; the other five link to the domain root and their dates are approximate (batch range 2026-08-14 to 08-31) -- replace with real page URLs and exact first-seen dates when available. `lang` is the language of the linking page (BCP-47 style, e.g. en, de, zh-TW); the Recent Mentions block shows its country flag.",
   "mentions": [
+    {
+      "id": "meta-preisvergleich-minisforum-um890-pro",
+      "outlet": "META Preisvergleich",
+      "title": "Minisforum um890 pro META Preisvergleich",
+      "url": "https://meta-preisvergleich.de/s/minisforum-um890-pro.htm",
+      "lang": "de",
+      "date": "2026-10-04",
+      "domainRating": 36,
+      "excerpt": "Price-comparison listing for the Minisforum UM890 Pro that cites PromptQuorum's UM890 Pro local AI review."
+    },
+    {
+      "id": "studioglobal-hi-amd-local-ai-pc",
+      "outlet": "Studio Global AI",
+      "title": "IFA 2026: AMD के लोकल AI PC में लैपटॉप से 192GB मेमोरी वाले NAS तक विकल्प",
+      "url": "https://www.studioglobal.ai/hi/discover/answers/what-amd-gorgon-point-and-gorgon-halo-6a9ceb43e4a498a915ed3d6d",
+      "lang": "hi",
+      "date": "2026-10-04",
+      "domainRating": 29,
+      "excerpt": "Image link to PromptQuorum's best mini PCs for local LLMs guide."
+    },
+    {
+      "id": "studioglobal-vi-openai-mac",
+      "outlet": "Studio Global AI",
+      "title": "OpenAI được cho là mua hàng chục nghìn máy Mac: Không phải để thay thế các cụm GPU Nvidia",
+      "url": "https://www.studioglobal.ai/vi/discover/answers/why-has-openai-reportedly-purchased-tens-of-6a9500b60d037f8f95be78b3",
+      "lang": "vi",
+      "date": "2026-10-04",
+      "domainRating": 29,
+      "excerpt": "Image link to PromptQuorum's guide to running 70B models on consumer hardware."
+    },
+    {
+      "id": "studioglobal-th-self-host-vs-api",
+      "outlet": "Studio Global AI",
+      "title": "ทางสายกลางของ AI ยุคใหม่: ใช้โมเดลจีน Self-Host เพื่อควบคุมข้อมูล หรือเช่า API สหรัฐฯ เพื่อความง่าย",
+      "url": "https://www.studioglobal.ai/th/discover/answers/search-6a806af210551e202b12d2d0",
+      "lang": "th",
+      "date": "2026-10-04",
+      "domainRating": 29,
+      "excerpt": "Image link to PromptQuorum's article on whether running DeepSeek locally solves the China data question."
+    },
+    {
+      "id": "hermes-agent-android-local-llm",
+      "outlet": "Hermes Agent",
+      "title": "Локальные LLM на Android: что и зачем реально можно гонять на телефоне",
+      "url": "https://hermes-agent.ru/news/mobile-llm-android/",
+      "lang": "ru",
+      "date": "2026-10-04",
+      "domainRating": 21,
+      "excerpt": "Links to PromptQuorum's best local LLM apps for Android guide."
+    },
+    {
+      "id": "most-tw-home-assistant-guide",
+      "outlet": "Dennis 技術視野洞察",
+      "title": "Home Assistant 完整教學 2026：9 萬星開源智慧家庭中樞，HAOS／Docker 安裝、Zigbee 與 Matter 設定",
+      "url": "https://most.tw/posts/blog/home-assistant-complete-guide-2026/",
+      "lang": "zh-TW",
+      "date": "2026-10-04",
+      "domainRating": 11,
+      "excerpt": "Links to PromptQuorum's Home Assistant getting-started guide."
+    },
+    {
+      "id": "better-computing-prompt-engineering",
+      "outlet": "better-computing.com",
+      "title": "Muss ich wirklich Prompt Engineering lernen? — KI einfach nutzen",
+      "url": "https://better-computing.com/ki-einfach-nutzen/muss-ich-wirklich-prompt-engineering-lernen",
+      "lang": "de",
+      "date": "2026-10-04",
+      "domainRating": 6,
+      "excerpt": "Links (nofollow) to PromptQuorum's German guide to the five building blocks of a prompt."
+    },
+    {
+      "id": "supercat-workstation-ai-vs-dgx-spark",
+      "outlet": "Supercat.dev",
+      "title": "Workstation AI vs DGX Spark",
+      "url": "https://supercat.dev/workstation-ai-vs-dgx-spark",
+      "lang": "it",
+      "date": "2026-10-04",
+      "domainRating": 0,
+      "excerpt": "Cites PromptQuorum's Best Local LLMs 2026 guide."
+    },
     {
       "id": "grokipedia-anythingllm",
       "outlet": "Grokipedia",
       "title": "AnythingLLM — Grokipedia article",
       "url": "https://grokipedia.com/page/AnythingLLM",
+      "lang": "en",
       "date": "2026-10-02",
       "domainRating": 79,
       "excerpt": "Links to PromptQuorum's AnythingLLM vs PrivateGPT vs Open WebUI RAG comparison."
@@ -15,6 +96,7 @@
       "outlet": "SMZDM",
       "title": "192GB统一内存加持，消费级硬件单台能跑2840亿参数大模型",
       "url": "https://post.smzdm.com/p/arzqx8xz/",
+      "lang": "zh",
       "date": "2026-10-02",
       "domainRating": 79,
       "excerpt": "Links to PromptQuorum's best mini PCs for local LLMs guide."
@@ -24,6 +106,7 @@
       "outlet": "mcpservers.org",
       "title": "HTTPS Www Promptquorum Com API MCP Server",
       "url": "https://mcpservers.org/servers/www-promptquorum-com-mcp-stats",
+      "lang": "en",
       "date": "2026-10-01",
       "domainRating": 71,
       "excerpt": "MCP server listing for PromptQuorum (nofollow link). Also listed in ES and PT-BR."
@@ -33,6 +116,7 @@
       "outlet": "Should I Use It",
       "title": "Comparison page \"PromptQuorum vs Arena AI\"",
       "url": "https://shouldiuse.io/",
+      "lang": "en",
       "date": "2026-09-29",
       "domainRating": 63
     },
@@ -41,6 +125,7 @@
       "outlet": "note.com (AikoMama)",
       "title": "私のMacに宿せた知能は、40億でした —— 16GBの天井から見えた、あの建物の理由",
       "url": "https://note.com/chifumi_ooisi/n/n8b265f9fffab",
+      "lang": "ja",
       "date": "2026-09-27",
       "domainRating": 92,
       "excerpt": "Cites PromptQuorum's small local LLM benchmark guide (nofollow link)."
@@ -50,6 +135,7 @@
       "outlet": "Veriwire",
       "title": "Link from AI news site",
       "url": "https://veriwire.news/",
+      "lang": "en",
       "date": "2026-09-26",
       "domainRating": 4
     },
@@ -58,6 +144,7 @@
       "outlet": "Hashnode (auditme)",
       "title": "Master Prompts in 2026: Stop Prompting Like It's 2023",
       "url": "https://auditme.hashnode.dev/markdown-master-prompts-in-2026-stop-prompting-like-it-s-2023",
+      "lang": "en",
       "date": "2026-09-25",
       "domainRating": 83,
       "excerpt": "Cites PromptQuorum's prompt engineering best practices (nofollow, UGC link)."
@@ -67,6 +154,7 @@
       "outlet": "HN Paper (gaidot.net)",
       "title": "Link from HN-mirror listing",
       "url": "https://gaidot.net/",
+      "lang": "en",
       "date": "2026-09-24",
       "domainRating": 8
     },
@@ -75,6 +163,7 @@
       "outlet": "AiNews247",
       "title": "MCP Server for Local AI Information",
       "url": "https://ainews247.org/",
+      "lang": "en",
       "date": "2026-09-23",
       "domainRating": 7
     },
@@ -83,6 +172,7 @@
       "outlet": "Watcha 观猹",
       "title": "Mac mini small-model research thread (ZH)",
       "url": "https://watcha.cn/",
+      "lang": "zh",
       "date": "2026-09-20",
       "domainRating": 43,
       "excerpt": "Link is nofollow."
@@ -92,6 +182,7 @@
       "outlet": "Hostinger",
       "title": "LLM statistics 2026: Adoption, market growth, and trust data",
       "url": "https://www.hostinger.com/in/tutorials/llm-statistics",
+      "lang": "en",
       "date": "2026-09-01",
       "domainRating": 92,
       "excerpt": "Cites PromptQuorum's tracker as a data source (nofollow link)."
@@ -101,6 +192,7 @@
       "outlet": "SMZDM",
       "title": "Backlinks from 3 pages",
       "url": "https://post.smzdm.com/",
+      "lang": "zh",
       "date": "2026-08-31",
       "domainRating": 79
     },
@@ -109,6 +201,7 @@
       "outlet": "DataForSEO",
       "title": "Listed in LLM tools directory",
       "url": "https://llm.dataforseo.com/",
+      "lang": "en",
       "date": "2026-08-31",
       "domainRating": 76
     },
@@ -117,6 +210,7 @@
       "outlet": "Groundy",
       "title": "Link from an Obsidian / local-LLM article",
       "url": "https://groundy.com/",
+      "lang": "en",
       "date": "2026-08-31",
       "domainRating": 69
     },
@@ -125,6 +219,7 @@
       "outlet": "Glarity Ask AI",
       "title": "Link from Q&A aggregator",
       "url": "https://askai.glarity.app/",
+      "lang": "en",
       "date": "2026-08-31",
       "domainRating": 54
     },
@@ -133,6 +228,7 @@
       "outlet": "PromptBuilder",
       "title": "Link flagged as a quality backlink",
       "url": "https://promptbuilder.cc/",
+      "lang": "en",
       "date": "2026-08-31",
       "domainRating": 48
     }

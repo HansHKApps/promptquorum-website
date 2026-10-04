@@ -4,6 +4,7 @@ import { formatDisplayDate, formatDisplayMonthYear } from '@/lib/formatDisplayDa
 import { HomeCard } from './HomeCard'
 import { BatchedList, type Batch } from './BatchedList'
 import { t } from './home-i18n'
+import { MENTION_LANG_COUNTRY } from '@/lib/i18n/constants'
 
 function monthKey(iso: string): string {
   return iso.slice(0, 7) // YYYY-MM
@@ -11,6 +12,11 @@ function monthKey(iso: string): string {
 
 export function RecentMentionsBlock({ lang = 'en' }: { lang?: Language }) {
   const mentions = getMentions()
+  const languageNames = new Intl.DisplayNames([lang], { type: 'language' })
+  const flagFor = (m: (typeof mentions)[number]) => ({
+    country: MENTION_LANG_COUNTRY[m.lang] ?? 'us',
+    label: languageNames.of(m.lang) ?? m.lang,
+  })
 
   if (mentions.length === 0) {
     return <HomeCard size="sm" variant="stat" icon="mentions" title={t('mentionsTitle', lang)} emptyState emptyMessage={t('mentionsEmpty', lang)} />
@@ -35,6 +41,7 @@ export function RecentMentionsBlock({ lang = 'en' }: { lang?: Language }) {
         title: `${m.title} — ${m.outlet}`,
         url: m.url,
         meta: `${formatDisplayDate(m.date, lang)} · DR ${m.domainRating}`,
+        flag: flagFor(m),
       })),
     },
     ...[...olderByMonth.entries()]
@@ -47,6 +54,7 @@ export function RecentMentionsBlock({ lang = 'en' }: { lang?: Language }) {
           title: `${m.title} — ${m.outlet}`,
           url: m.url,
           meta: `${formatDisplayDate(m.date, lang)} · DR ${m.domainRating}`,
+        flag: flagFor(m),
         })),
       })),
   ]

@@ -5,6 +5,8 @@ export interface Mention {
   outlet: string
   title: string
   url: string
+  /** Language of the linking page (en, de, zh-TW, hi, …) — drives the flag in the block. */
+  lang: string
   date: string
   domainRating: number
   excerpt?: string

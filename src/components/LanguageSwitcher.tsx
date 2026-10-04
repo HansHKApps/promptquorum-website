@@ -3,7 +3,8 @@
 import { useState } from 'react'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '../translations'
-import { LOCALE_ROUTED_ROOTS } from '@/lib/i18n/constants'
+import { LOCALE_ROUTED_ROOTS, LANG_COUNTRY } from '@/lib/i18n/constants'
+import { Flag } from '@/components/Flag'
 
 interface LanguageSwitcherProps {
   initialLang?: Language
@@ -74,7 +75,7 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-gray-200 hover:border-primary/30 transition-colors text-sm"
       >
-        <span>{current.flag}</span>
+        <Flag country={LANG_COUNTRY[current.code]} label={languageNames[currentLang][current.code]} />
         <span className="text-text-secondary">{current.code.toUpperCase()}</span>
       </button>
 
@@ -86,7 +87,7 @@ export function LanguageSwitcher({ initialLang }: LanguageSwitcherProps) {
               onClick={() => handleLanguageChange(lang.code)}
               className={`w-full px-4 py-2 text-left hover:bg-gray-50 flex items-center gap-2 ${currentLang === lang.code ? 'bg-primary/5 text-primary' : 'text-text-primary'}`}
             >
-              <span>{lang.flag}</span>
+              <Flag country={LANG_COUNTRY[lang.code]} label={languageNames[currentLang][lang.code]} />
               <span>{languageNames[currentLang][lang.code]}</span>
               {lang.comingSoon && (
                 <span className="ml-auto text-xs text-gray-400">soon</span>

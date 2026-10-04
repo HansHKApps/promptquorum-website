@@ -21,17 +21,29 @@ export type PathPrefixLang = typeof PATH_PREFIX_LANGS[number];
 export const ALL_LANGS = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'] as const;
 export type Lang = typeof ALL_LANGS[number];
 
-/** Country flag shown for each site language (same set the language switcher uses). */
-export const LANG_FLAG: Record<Lang, string> = {
-  en: '🇺🇸',
-  de: '🇩🇪',
-  fr: '🇫🇷',
-  ja: '🇯🇵',
-  zh: '🇨🇳',
-  es: '🇪🇸',
-  pt: '🇧🇷',
-  ar: '🇸🇦',
-  ko: '🇰🇷',
+/** Country (public/flags/<code>.svg) shown for each site language (same set the language switcher uses). */
+export const LANG_COUNTRY: Record<Lang, string> = {
+  en: 'us',
+  de: 'de',
+  fr: 'fr',
+  ja: 'jp',
+  zh: 'cn',
+  es: 'es',
+  pt: 'br',
+  ar: 'sa',
+  ko: 'kr',
+};
+
+/** Country for the language of an external page that links to us (broader than the 9 site languages). */
+export const MENTION_LANG_COUNTRY: Record<string, string> = {
+  ...LANG_COUNTRY,
+  'zh-TW': 'tw',
+  ru: 'ru',
+  it: 'it',
+  hi: 'in',
+  vi: 'vn',
+  th: 'th',
+  no: 'no',
 };
 
 /**
