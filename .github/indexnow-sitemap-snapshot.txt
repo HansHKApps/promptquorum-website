@@ -469,6 +469,7 @@ https://www.promptquorum.com/power-local-llm/opencode-review
 https://www.promptquorum.com/power-local-llm/openhands-review
 https://www.promptquorum.com/power-local-llm/openllm-review
 https://www.promptquorum.com/power-local-llm/osaurus-ai-review
+https://www.promptquorum.com/power-local-llm/oscilla-review
 https://www.promptquorum.com/power-local-llm/paios-review
 https://www.promptquorum.com/power-local-llm/parlor-review
 https://www.promptquorum.com/power-local-llm/pearai-review
@@ -525,6 +526,7 @@ https://www.promptquorum.com/power-local-llm/taskweaver-review
 https://www.promptquorum.com/power-local-llm/tensorrt-llm-explained
 https://www.promptquorum.com/power-local-llm/text-generator-review
 https://www.promptquorum.com/power-local-llm/tgpt-review
+https://www.promptquorum.com/power-local-llm/tina-review
 https://www.promptquorum.com/power-local-llm/tokforge-review
 https://www.promptquorum.com/power-local-llm/toolneuron-review
 https://www.promptquorum.com/power-local-llm/translate-books-with-llms-review
