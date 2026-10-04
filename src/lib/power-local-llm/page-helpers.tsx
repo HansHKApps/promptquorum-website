@@ -390,7 +390,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
               position: i + 1,
               item: {
                 '@type': 'SoftwareApplication',
-                name: (row['Tool'] ?? '').replace(/\*\*/g, '').trim(),
+                name: (row['Tool'] ?? '').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/\*\*/g, '').trim(),
                 ...(urlMatch && { url: urlMatch[1] }),
                 description: row['Description'] ?? '',
               },

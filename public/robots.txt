@@ -8,6 +8,7 @@ Allow: /api/og/
 Allow: /api/mcp
 Disallow: /api/
 Disallow: /presentations/
+Disallow: /*/null$
 
 # AI crawlers — same access as Googlebot (full site access)
 User-Agent: GPTBot
@@ -38,6 +39,7 @@ Allow: /api/og/
 Allow: /api/mcp
 Disallow: /api/
 Disallow: /presentations/
+Disallow: /*/null$
 
 # Bingbot — explicit rules for clarity
 User-Agent: Bingbot
@@ -46,6 +48,7 @@ Allow: /api/og/
 Allow: /api/mcp
 Disallow: /api/
 Disallow: /presentations/
+Disallow: /*/null$
 
 # Sitemaps
 Sitemap: https://www.promptquorum.com/sitemap.xml

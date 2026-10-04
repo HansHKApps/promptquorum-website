@@ -454,7 +454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datePublished': '2026-05-07',
       'dateModified': '2026-06-14',
       'url': 'https://www.promptquorum.com/power-local-llm/local-ai-app-with-built-in-rag',
-      'image': '[www.promptquorum.com/api/og/local-ai-app-with-built-in-rag](https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag)',
+      'image': 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -968,7 +968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datePublished': '2026-05-07',
       'dateModified': '2026-06-14',
       'url': 'https://www.promptquorum.com/de/power-local-llm/local-ai-app-with-built-in-rag',
-      'image': '[www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=de](https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=de)',
+      'image': 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=de',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1474,7 +1474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datePublished': '2026-05-07',
       'dateModified': '2026-06-14',
       'url': 'https://www.promptquorum.com/fr/power-local-llm/local-ai-app-with-built-in-rag',
-      'image': '[www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=fr](https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=fr)',
+      'image': 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=fr',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -1980,7 +1980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datePublished': '2026-05-07',
       'dateModified': '2026-06-14',
       'url': 'https://www.promptquorum.com/ja/power-local-llm/local-ai-app-with-built-in-rag',
-      'image': '[www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=ja](https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=ja)',
+      'image': 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=ja',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -2490,7 +2490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datePublished': '2026-05-07',
       'dateModified': '2026-06-14',
       'url': 'https://www.promptquorum.com/zh/power-local-llm/local-ai-app-with-built-in-rag',
-      'image': '[www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=zh](https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=zh)',
+      'image': 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=zh',
       'author': {
         '@type': 'Organization',
         'name': 'PromptQuorum',
@@ -3018,7 +3018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datePublished': '2026-05-07',
       'dateModified': '2026-06-14',
       'url': 'https://www.promptquorum.com/es/power-local-llm/local-ai-app-with-built-in-rag',
-      'image': '[www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=es](https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=es)',
+      'image': 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=es',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -3542,7 +3542,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'datePublished': '2026-05-07',
       'dateModified': '2026-06-14',
       'url': 'https://www.promptquorum.com/pt/power-local-llm/local-ai-app-with-built-in-rag',
-      'image': '[www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=pt](https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=pt)',
+      'image': 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=pt',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',
@@ -4576,7 +4576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'dateModified': '2026-06-14',
       'inLanguage': 'ko',
       'url': 'https://www.promptquorum.com/ko/power-local-llm/local-ai-app-with-built-in-rag',
-      'image': '[www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=ko](https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=ko)',
+      'image': 'https://www.promptquorum.com/api/og/local-ai-app-with-built-in-rag?lang=ko',
       'author': {
         '@type': 'Person',
         'name': 'Hans Kuepper',

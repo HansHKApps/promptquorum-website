@@ -1022,7 +1022,7 @@ schema: {
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'datePublished': '2026-04-04',
         'dateModified': '2026-07-14',
-        'image': '[www.promptquorum.com/og-image.png](https://www.promptquorum.com/og-image.png)',
+        'image': 'https://www.promptquorum.com/og-image.png',
         'about': [
           { '@type': 'Thing', 'name': 'Open WebUI' },
           { '@type': 'Thing', 'name': 'Enchanted UI' },
@@ -1341,7 +1341,7 @@ schema: {
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'datePublished': '2026-04-04',
         'dateModified': '2026-07-14',
-        'image': '[www.promptquorum.com/og-image.png](https://www.promptquorum.com/og-image.png)',
+        'image': 'https://www.promptquorum.com/og-image.png',
         'about': [
           { '@type': 'Thing', 'name': 'Open WebUI' },
           { '@type': 'Thing', 'name': 'Enchanted UI' },
@@ -1664,7 +1664,7 @@ schema: {
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'datePublished': '2026-04-04',
         'dateModified': '2026-07-14',
-        'image': '[www.promptquorum.com/og-image.png](https://www.promptquorum.com/og-image.png)',
+        'image': 'https://www.promptquorum.com/og-image.png',
         'about': [
           { '@type': 'Thing', 'name': 'Open WebUI' },
           { '@type': 'Thing', 'name': 'Enchanted UI' },

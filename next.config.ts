@@ -151,6 +151,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/prompt-engineering/ai-hallucinations-how-to-stop',
+        destination: '/:lang/prompt-engineering/ai-hallucinations-why-ai-makes-things-up',
+        permanent: true,
+      },
+      {
         source: '/local-llms/langchain-tutorial',
         destination: '/local-llms/local-ai-agents-langgraph-ollama',
         permanent: true,
