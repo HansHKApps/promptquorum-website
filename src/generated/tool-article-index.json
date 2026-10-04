@@ -11,6 +11,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "tina-review",
+        "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
+        "url": "/power-local-llm/tina-review",
+        "dateModified": "2026-10-04",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "ollama-local-ai-review",
         "title": "Ollama Local AI Review: Android LLM Runner and LAN API Proxy",
         "url": "/power-local-llm/ollama-local-ai-review",
@@ -72,17 +80,9 @@
         "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
         "dateModified": "2026-09-20",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "autogpt-local-review-2026",
-        "title": "AutoGPT Review: Classic Agent vs. Hosted Platform",
-        "url": "/power-local-llm/autogpt-local-review-2026",
-        "dateModified": "2026-09-20",
-        "tier": "about"
       }
     ],
-    "totalCount": 295,
+    "totalCount": 296,
     "capped": true
   },
   "llama.cpp": {
@@ -93,6 +93,14 @@
         "title": "llama.cpp Explained: The Engine Powering Ollama (2026)",
         "url": "/power-local-llm/llama-cpp-explained",
         "dateModified": "2026-09-20",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "tina-review",
+        "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
+        "url": "/power-local-llm/tina-review",
+        "dateModified": "2026-10-04",
         "tier": "about"
       },
       {
@@ -158,17 +166,9 @@
         "url": "/power-local-llm/little-coder-review",
         "dateModified": "2026-09-19",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-deep-research-review",
-        "title": "Local Deep Research Review: Self-Hosted, Cited AI Research Agent",
-        "url": "/power-local-llm/local-deep-research-review",
-        "dateModified": "2026-09-19",
-        "tier": "about"
       }
     ],
-    "totalCount": 156,
+    "totalCount": 158,
     "capped": true
   },
   "vLLM": {
@@ -1477,6 +1477,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "tina-review",
+        "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
+        "url": "/power-local-llm/tina-review",
+        "dateModified": "2026-10-04",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "sidekick-review",
         "title": "Sidekick Review: A Free, Native macOS Local AI Chat App",
         "url": "/power-local-llm/sidekick-review",
@@ -1514,17 +1522,9 @@
         "url": "/power-local-llm/msty-review",
         "dateModified": "2026-09-05",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "text-generation-webui-vs-vllm-vs-llamacpp",
-        "title": "Text-Generation-WebUI vs vLLM vs llama.cpp in 2026: Inference Engine Comparison",
-        "url": "/local-llms/text-generation-webui-vs-vllm-vs-llamacpp",
-        "dateModified": "2026-08-29",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 14,
+    "totalCount": 15,
     "capped": true
   },
   "h2oGPT": {
@@ -5753,6 +5753,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "oscilla-review",
+        "title": "Oscilla Review: Free On-Device AI Chat for iPhone",
+        "url": "/power-local-llm/oscilla-review",
+        "dateModified": "2026-10-04",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "paios-review",
         "title": "PAIOS Review: Offline Gemini Nano Chat for Android",
         "url": "/power-local-llm/paios-review",
@@ -5814,17 +5822,9 @@
         "url": "/power-local-llm/chapper-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "layla-review",
-        "title": "Layla Review: On-Device AI Companion App for Android and iOS",
-        "url": "/power-local-llm/layla-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 27,
+    "totalCount": 28,
     "capped": true
   },
   "Pocket AI": {
@@ -6125,6 +6125,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "tina-review",
+        "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
+        "url": "/power-local-llm/tina-review",
+        "dateModified": "2026-10-04",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "ollama-local-ai-review",
         "title": "Ollama Local AI Review: Android LLM Runner and LAN API Proxy",
         "url": "/power-local-llm/ollama-local-ai-review",
@@ -6156,7 +6164,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 9,
+    "totalCount": 10,
     "capped": false
   },
   "Chapper": {
@@ -6429,6 +6437,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "oscilla-review",
+        "title": "Oscilla Review: Free On-Device AI Chat for iPhone",
+        "url": "/power-local-llm/oscilla-review",
+        "dateModified": "2026-10-04",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -6445,6 +6461,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "tina-review",
+        "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
+        "url": "/power-local-llm/tina-review",
+        "dateModified": "2026-10-04",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "private-llm-review",
         "title": "Private LLM Review: On-Device AI Chat for iPhone, iPad, and Mac",
         "url": "/power-local-llm/private-llm-review",
@@ -6452,7 +6476,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 6,
     "capped": false
   },
   "Arbiter": {
@@ -6635,6 +6659,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "tina-review",
+        "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
+        "url": "/power-local-llm/tina-review",
+        "dateModified": "2026-10-04",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
@@ -6696,17 +6728,9 @@
         "url": "/power-local-llm/fooocus-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "invokeai-review",
-        "title": "InvokeAI Review: Professional-Grade Stable Diffusion Studio",
-        "url": "/power-local-llm/invokeai-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 19,
+    "totalCount": 20,
     "capped": true
   },
   "AUTOMATIC1111": {
@@ -11217,6 +11241,34 @@
         "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
         "url": "/power-local-llm/tokforge-review",
         "dateModified": "2026-10-03",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Oscilla": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "oscilla-review",
+        "title": "Oscilla Review: Free On-Device AI Chat for iPhone",
+        "url": "/power-local-llm/oscilla-review",
+        "dateModified": "2026-10-04",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Tina": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "tina-review",
+        "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
+        "url": "/power-local-llm/tina-review",
+        "dateModified": "2026-10-04",
         "tier": "about"
       }
     ],
