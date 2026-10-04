@@ -74,8 +74,8 @@ export const translations = {
     blogIntro: "Each article covers a practical use case with specific numbers, named models, and copy-ready prompt templates. Articles are structured for AI citation extraction.",
 
     // SEO Meta Tags — Group A
-    homeMetaTitle: "PromptQuorum: 224+ Local LLM Apps, Guides & Reviews",
-    homeMetaDescription: "Browse 224+ local LLM apps, tools, and reviews, updated continuously. Compare software, read guides, and find the right local AI setup, free.",
+    homeMetaTitle: "PromptQuorum: {{count}} Local LLM Apps, Guides & Reviews",
+    homeMetaDescription: "Browse {{count}} local LLM apps, tools, and reviews, updated continuously. Compare software, read guides, and find the right local AI setup, free.",
     featuresMetaTitle: "Prompt Optimization Features: AI Dispatch & Consensus | PromptQuorum",
     featuresMetaDescription: "PromptQuorum is a prompt optimization and management tool that dispatches to 25+ AI providers using 9 frameworks (CO-STAR, CRAFT, RISEN) and scores consensus.",
     howItWorksMetaTitle: "How PromptQuorum Works: Optimize, Dispatch & Score 2026",
@@ -373,8 +373,8 @@ export const translations = {
     blogIntro: "Jeder Artikel behandelt einen praktischen Anwendungsfall mit spezifischen Zahlen, benannten Modellen und einsatzbereiten Prompt-Vorlagen. Artikel sind für die KI-Zitierextraktion strukturiert.",
 
     // SEO Meta Tags — Group A
-    homeMetaTitle: "PromptQuorum: 224+ lokale LLM-Apps, Guides & Reviews",
-    homeMetaDescription: "Entdecken Sie 224+ lokale LLM-Apps, Tools und Reviews, laufend aktualisiert. Vergleichen Sie Software, lesen Sie Guides und finden Sie das passende lokale KI-Setup — kostenlos.",
+    homeMetaTitle: "PromptQuorum: {{count}} lokale LLM-Apps, Guides & Reviews",
+    homeMetaDescription: "Entdecken Sie {{count}} lokale LLM-Apps, Tools und Reviews, laufend aktualisiert. Vergleichen Sie Software, lesen Sie Guides und finden Sie das passende lokale KI-Setup — kostenlos.",
     featuresMetaTitle: "Funktionen: KI-Versand, Frameworks & Konsens | PromptQuorum",
     featuresMetaDescription: "PromptQuorum sendet Prompts an 25+ KI-Anbieter mit 9 Frameworks (CO-STAR, CRAFT, RISEN) und führt Konsensanalyse durch. Kostenlos mit eigenem API-Key.",
     howItWorksMetaTitle: "Wie PromptQuorum funktioniert: 4-Stufen-Pipeline 2026",
@@ -680,8 +680,8 @@ export const translations = {
     blogIntro: "Chaque article couvre un cas d'utilisation pratique avec des chiffres spécifiques, des modèles nommés et des modèles de prompts prêts à copier. Les articles sont structurés pour l'extraction de citations IA.",
 
     // SEO Meta Tags — Group A
-    homeMetaTitle: "PromptQuorum : 224+ applis de LLM locaux, guides et avis",
-    homeMetaDescription: "Parcourez plus de 224 applications, outils et avis de LLM locaux, mis à jour en continu. Comparez les logiciels, lisez les guides et trouvez la configuration IA locale idéale, gratuitement.",
+    homeMetaTitle: "PromptQuorum : {{count}} applis de LLM locaux, guides et avis",
+    homeMetaDescription: "Parcourez {{count}} applications, outils et avis de LLM locaux, mis à jour en continu. Comparez les logiciels, lisez les guides et trouvez la configuration IA locale idéale, gratuitement.",
     featuresMetaTitle: "Fonctionnalités: Envoi Multi-IA, Frameworks & Consensus",
     featuresMetaDescription: "PromptQuorum envoie des prompts à 25+ fournisseurs IA avec 9 frameworks (CO-STAR, CRAFT, RISEN) et analyse le consensus. Gratuit avec votre clé API.",
     howItWorksMetaTitle: "Comment fonctionne PromptQuorum: Pipeline en 4 étapes",
@@ -979,8 +979,8 @@ export const translations = {
     blogIntro: "各記事は、具体的な数字、名前付きモデル、そしてコピー可能なプロンプトテンプレートを含む実践的なユースケースをカバーしています。記事はAI引用抽出用に構成されています。",
 
     // SEO Meta Tags — Group A
-    homeMetaTitle: "PromptQuorum：224+件のローカルLLMアプリ・ガイド・レビュー",
-    homeMetaDescription: "224以上のローカルLLMアプリ、ツール、レビューを随時更新して掲載。ソフトウェアを比較し、ガイドを読んで、最適なローカルAI環境を無料で見つけられます。",
+    homeMetaTitle: "PromptQuorum：{{count}}件のローカルLLMアプリ・ガイド・レビュー",
+    homeMetaDescription: "{{count}}件のローカルLLMアプリ、ツール、レビューを随時更新して掲載。ソフトウェアを比較し、ガイドを読んで、最適なローカルAI環境を無料で見つけられます。",
     featuresMetaTitle: "機能: AI分発、フレームワーク & コンセンサス | PromptQuorum",
     featuresMetaDescription: "PromptQuorumは25+ のAIプロバイダーに9つのフレームワーク(CO-STAR、CRAFT、RISEN)を使用してプロンプトを送信し、コンセンサス分析を実行します。",
     howItWorksMetaTitle: "PromptQuorumの仕組み: 4段階のAIパイプライン",
@@ -1278,8 +1278,8 @@ export const translations = {
     blogIntro: "每篇文章都涵盖一个实际用例，包含具体的数字、命名的模型和可复制的提示模板。文章的结构支持AI引用提取。",
 
     // SEO Meta Tags — Group A
-    homeMetaTitle: "PromptQuorum：224+ 本地LLM应用、指南与点评",
-    homeMetaDescription: "浏览 224+ 个本地 LLM 应用、工具与点评，持续更新。比较软件、阅读指南，免费找到适合你的本地 AI 配置。",
+    homeMetaTitle: "PromptQuorum：{{count}} 个本地LLM应用、指南与点评",
+    homeMetaDescription: "浏览 {{count}} 个本地 LLM 应用、工具与点评，持续更新。比较软件、阅读指南，免费找到适合你的本地 AI 配置。",
     featuresMetaTitle: "功能: AI分发、框架 & 共识 | PromptQuorum",
     featuresMetaDescription: "PromptQuorum使用9个框架(CO-STAR、CRAFT、RISEN)向25+ AI提供商分发提示，并运行共识分析。使用您的API密钥免费。",
     howItWorksMetaTitle: "PromptQuorum如何工作2026: 4阶段AI工作流",
@@ -1577,8 +1577,8 @@ export const translations = {
     blogIntro: "Cada artículo cubre un caso de uso práctico con datos específicos, modelos nombrados y plantillas de prompts listas para usar. Los artículos están estructurados para la extracción de citas por IA.",
 
     // SEO Meta Tags — Group A
-    homeMetaTitle: "PromptQuorum: 224+ apps de LLM locales, guías y reseñas",
-    homeMetaDescription: "Explora más de 224 apps, herramientas y reseñas de LLM locales, actualizadas continuamente. Compara software, lee guías y encuentra la configuración de IA local ideal, gratis.",
+    homeMetaTitle: "PromptQuorum: {{count}} apps de LLM locales, guías y reseñas",
+    homeMetaDescription: "Explora {{count}} apps, herramientas y reseñas de LLM locales, actualizadas continuamente. Compara software, lee guías y encuentra la configuración de IA local ideal, gratis.",
     featuresMetaTitle: "Funciones: Despacho multi-IA y consenso | PromptQuorum",
     featuresMetaDescription: "PromptQuorum despacha prompts a 25+ proveedores de IA con 9 frameworks (CO-STAR, CRAFT, RISEN) y puntúa el consenso. Gratis con tu clave API.",
     howItWorksMetaTitle: "Cómo funciona PromptQuorum: Optimiza, envía y puntúa 2026",
@@ -1876,8 +1876,8 @@ export const translations = {
     blogIntro: "Cada artigo cobre um caso de uso prático com números específicos, modelos nomeados e modelos de prompts prontos para usar. Os artigos são estruturados para extração de citações por IA.",
 
     // SEO Meta Tags — Group A
-    homeMetaTitle: "PromptQuorum: 224+ apps de LLM locais, guias e avaliações",
-    homeMetaDescription: "Explore mais de 224 apps, ferramentas e avaliações de LLM locais, atualizados continuamente. Compare softwares, leia guias e encontre a configuração de IA local ideal, grátis.",
+    homeMetaTitle: "PromptQuorum: {{count}} apps de LLM locais, guias e avaliações",
+    homeMetaDescription: "Explore {{count}} apps, ferramentas e avaliações de LLM locais, atualizados continuamente. Compare softwares, leia guias e encontre a configuração de IA local ideal, grátis.",
     featuresMetaTitle: "Funcionalidades: Envio multi-IA e consenso | PromptQuorum",
     featuresMetaDescription: "O PromptQuorum envia prompts para mais de 25 provedores de IA com 9 frameworks (CO-STAR, CRAFT, RISEN) e pontua o consenso. Gratuito com sua chave de API.",
     howItWorksMetaTitle: "Como o PromptQuorum funciona: Otimize, envie e pontue 2026",
@@ -2175,8 +2175,8 @@ export const translations = {
     blogIntro: "يتناول كل مقال حالة استخدام عملية ببيانات محددة ونماذج مسمَّاة وقوالب برامج نصية جاهزة للاستخدام. المقالات مُهيكَلة لاستخلاص الاقتباسات بواسطة الذكاء الاصطناعي.",
 
     // SEO Meta Tags — Group A
-    homeMetaTitle: "PromptQuorum: أكثر من 224 تطبيق LLM محلي وأدلة ومراجعات",
-    homeMetaDescription: "تصفح أكثر من 224 تطبيقًا وأداة ومراجعة لنماذج اللغة المحلية، يتم تحديثها باستمرار. قارن البرامج، واقرأ الأدلة، واعثر على الإعداد المناسب للذكاء الاصطناعي المحلي، مجانًا.",
+    homeMetaTitle: "PromptQuorum: {{count}} تطبيق LLM محلي وأدلة ومراجعات",
+    homeMetaDescription: "تصفح {{count}} تطبيقًا وأداة ومراجعة لنماذج اللغة المحلية، يتم تحديثها باستمرار. قارن البرامج، واقرأ الأدلة، واعثر على الإعداد المناسب للذكاء الاصطناعي المحلي، مجانًا.",
     featuresMetaTitle: "الميزات: إرسال متعدد الأنظمة وتوافق الآراء | PromptQuorum",
     featuresMetaDescription: "يرسل PromptQuorum البرامج النصية إلى 25+ مزودًا للذكاء الاصطناعي بـ 9 أطر عمل (CO-STAR وCRAFT وRISEN) ويقيِّم توافق الآراء. مجاني مع مفتاح API الخاص بك.",
     howItWorksMetaTitle: "كيف يعمل PromptQuorum: حسِّن وأرسل وقيِّم 2026",
@@ -2474,8 +2474,8 @@ export const translations = {
     blogIntro: "각 기사는 구체적인 수치, 명명된 모델 및 즉시 사용 가능한 프롬프트 템플릿으로 실용적인 사용 사례를 다룹니다. 기사는 AI 인용 추출을 위해 구성되었습니다.",
 
     // SEO Meta Tags — Group A
-    homeMetaTitle: "PromptQuorum: 로컬 LLM 앱 224개+ 가이드 & 리뷰",
-    homeMetaDescription: "224개 이상의 로컬 LLM 앱, 도구, 리뷰를 지속적으로 업데이트하며 살펴보세요. 소프트웨어를 비교하고 가이드를 읽고 무료로 알맞은 로컬 AI 환경을 찾아보세요.",
+    homeMetaTitle: "PromptQuorum: 로컬 LLM 앱 {{count}}개 가이드 & 리뷰",
+    homeMetaDescription: "{{count}}개의 로컬 LLM 앱, 도구, 리뷰를 지속적으로 업데이트하며 살펴보세요. 소프트웨어를 비교하고 가이드를 읽고 무료로 알맞은 로컬 AI 환경을 찾아보세요.",
     featuresMetaTitle: "프롬프트 최적화 기능: AI 전송 및 합의 | PromptQuorum",
     featuresMetaDescription: "PromptQuorum은 9가지 프레임워크(CO-STAR, CRAFT, RISEN)를 사용하여 25개 이상의 AI 제공업체에 전송하고 합의 점수를 산출하는 프롬프트 최적화 도구입니다.",
     howItWorksMetaTitle: "PromptQuorum 작동 방식: 최적화, 전송 및 점수 산출 2026",
