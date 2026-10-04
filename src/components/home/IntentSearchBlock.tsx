@@ -16,7 +16,7 @@ const INTENTS: { key: Intent; labelKey: HomeUiKey; exampleKey: HomeUiKey }[] = [
   { key: 'compare', labelKey: 'intentCompare', exampleKey: 'exampleCompare' },
 ]
 
-export function IntentSearchBlock({ lang = 'en' }: { lang?: Language }) {
+export function IntentSearchBlock({ lang = 'en', appCount }: { lang?: Language; appCount: number }) {
   const [intent, setIntent] = useState<Intent>('find-app')
   const [query, setQuery] = useState('')
   const [hasSearched, setHasSearched] = useState(false)
@@ -46,7 +46,7 @@ export function IntentSearchBlock({ lang = 'en' }: { lang?: Language }) {
   const activeExample = t(INTENTS.find((i) => i.key === intent)!.exampleKey, lang)
 
   return (
-    <div className={`rounded-xl border ${SURFACE_CLASS.action} p-6 h-full`}>
+    <div className={`rounded-xl border ${SURFACE_CLASS.action} p-6 h-full flex flex-col`}>
       <h2 className="text-xl font-bold text-text-primary mb-1 flex items-center gap-2">
         <HomeIcon name="search" size={20} />
         {t('searchHeading', lang)}
@@ -99,6 +99,16 @@ export function IntentSearchBlock({ lang = 'en' }: { lang?: Language }) {
           ))}
         </ul>
       )}
+
+      <Link
+        href={lang === 'en' ? '/directory' : `/${lang}/directory`}
+        className="mt-6 lg:mt-auto block w-full rounded-xl bg-primary px-6 py-5 text-primary-foreground transition-colors hover:bg-primary/90"
+      >
+        <span className="block text-lg font-bold leading-snug">{t('directoryCtaTitle', lang)}</span>
+        <span className="mt-1 block text-sm font-semibold opacity-90">
+          {t('directoryCtaCount', lang, { count: appCount.toLocaleString(lang === 'pt' ? 'pt-BR' : lang) })}
+        </span>
+      </Link>
     </div>
   )
 }

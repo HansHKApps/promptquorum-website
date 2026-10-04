@@ -16,6 +16,7 @@ import { QuickTipBlock } from './QuickTipBlock'
 import { PqAppBannerBlock } from './PqAppBannerBlock'
 import { LocalAiToolsBlock } from './LocalAiToolsBlock'
 import { t } from './home-i18n'
+import { getHomeStats } from '@/lib/home/stats'
 
 /**
  * The dynamic homepage, shared across all 9 locales. Every block surfaces
@@ -48,7 +49,7 @@ export function Home({ lang }: { lang: Language }) {
 
         {/* Tier 1 — large, top of page */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-          <IntentSearchBlock lang={lang} />
+          <IntentSearchBlock lang={lang} appCount={getHomeStats(lang).totalApps} />
           <ComparisonToolShell groups={getComparableGroups(lang)} lang={lang} />
         </section>
 
