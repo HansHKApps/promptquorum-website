@@ -414,6 +414,10 @@ const HOME_UI = {
   pqBannerChip3: { en: 'Side-by-side comparison', de: "Direkter Vergleich", fr: "Comparaison côte à côte", ja: "並べて比較", zh: "并排对比", es: "Comparación lado a lado", pt: "Comparação lado a lado", ar: "مقارنة جنبًا إلى جنب", ko: "나란히 비교" },
   pqBannerChip4: { en: 'Consensus scoring', de: "Konsens-Bewertung", fr: "Score de consensus", ja: "コンセンサススコア", zh: "共识评分", es: "Puntuación de consenso", pt: "Pontuação de consenso", ar: "تقييم الإجماع", ko: "합의 점수" },
   pqBannerChip5: { en: 'Local LLM support', de: "Unterstützung für lokale LLMs", fr: "Prise en charge des LLM locaux", ja: "ローカルLLM対応", zh: "支持本地 LLM", es: "Compatibilidad con LLM locales", pt: "Suporte a LLMs locais", ar: "دعم النماذج المحلية", ko: "로컬 LLM 지원" },
+
+  // --- Directory CTA (inside the "Find What You Need" card) ---
+  directoryCtaTitle: { en: 'Largest local LLM app directory outside GitHub', de: "Größtes Verzeichnis für lokale LLM-Apps außerhalb von GitHub", fr: "Le plus grand annuaire d'applications LLM locales hors GitHub", ja: "GitHub 以外で最大のローカルLLMアプリディレクトリ", zh: "GitHub 之外最大的本地 LLM 应用目录", es: "El mayor directorio de apps de LLM locales fuera de GitHub", pt: "Maior diretório de apps de LLM locais fora do GitHub", ar: "أكبر دليل لتطبيقات النماذج المحلية خارج GitHub", ko: "GitHub 밖에서 가장 큰 로컬 LLM 앱 디렉터리" },
+  directoryCtaCount: { en: 'Browse {count} apps →', de: "{count} Apps durchsuchen →", fr: "Parcourir {count} applications →", ja: "{count} 個のアプリを見る →", zh: "浏览 {count} 个应用 →", es: "Explorar {count} apps →", pt: "Explorar {count} apps →", ar: "تصفّح {count} تطبيقًا ←", ko: "앱 {count}개 둘러보기 →" },
 } satisfies Record<string, Dict>
 
 export type HomeUiKey = keyof typeof HOME_UI
