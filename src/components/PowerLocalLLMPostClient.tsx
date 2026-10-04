@@ -1724,6 +1724,35 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
           })()}
         </article>
 
+        {/* Internal next-step cards: keeps readers on-site after the last
+            section. Data is per-locale in the article's `nextSteps` field
+            (hrefs already carry the locale prefix). */}
+        {(() => {
+          const ns = (article as any).nextSteps as
+            | { title: string; items: { title: string; description: string; href: string }[] }
+            | undefined
+          if (!ns || !ns.items?.length) return null
+          return (
+            <section className="mt-12 next-steps" aria-labelledby="next-steps-heading">
+              <h2 id="next-steps-heading" className="text-xl font-bold text-text-primary mb-4">{ns.title}</h2>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {ns.items.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="group block rounded-xl border border-primary/20 bg-primary/5 p-5 transition hover:border-primary/50 hover:bg-primary/10"
+                  >
+                    <span className="block font-semibold text-primary group-hover:underline">
+                      {item.title} <span aria-hidden="true" className="inline-block rtl:rotate-180">→</span>
+                    </span>
+                    <span className="mt-1 block text-sm text-text-secondary">{item.description}</span>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )
+        })()}
+
         {/* Slide deck / PDF reference card — replaces the above-the-fold
             carousel (audit item #9) with the single download link the
             prototype uses instead. */}

@@ -21,6 +21,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-en.webp',
     twitterDescription:
       'Best uncensored local LLMs for erotica writing: Hermes 3 vs Dolphin 3.0, Ollama setup, and what ethical responsibilities still apply to creative writers.',
+    nextSteps: {
+      title: 'Keep going: your next steps',
+      items: [
+        { title: 'Set up SillyTavern', description: 'Connect the frontend to your uncensored Ollama model and start character roleplay.', href: '/local-llms/sillytavern-review' },
+        { title: 'Set up Open WebUI', description: 'A self-hosted chat interface for Ollama with prompt presets and model switching.', href: '/local-llms/open-webui-review' },
+        { title: 'Pick a local model for fiction', description: 'Compare models for narrative quality, sampling settings and VRAM needs.', href: '/power-local-llm/best-local-llm-creative-writing-2026' },
+        { title: 'Use fiction prompt templates', description: 'Scene, dialogue and worldbuilding prompts that work on standard and uncensored models.', href: '/power-local-llm/local-llm-prompts-for-fiction-writers' },
+      ],
+    },
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Hermes 3 Llama 3.1',
@@ -264,7 +273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Ollama installation:** `brew install ollama` (macOS) or download from ollama.com (Windows/Linux). The `ollama serve` command starts the OpenAI-compatible API at `http://localhost:11434`.',
           '**LM Studio installation:** download from lmstudio.ai. Import GGUF model files directly; the local server tab exposes an OpenAI-compatible endpoint at `http://localhost:1234`.',
-          '**SillyTavern connection:** in the API settings, select "OpenAI-compatible" and point the base URL to `http://localhost:11434/v1` (Ollama) or `http://localhost:1234/v1` (LM Studio). Enter any string as the API key (required by the field but not validated locally).',
+          '**SillyTavern connection:** in the API settings, select "OpenAI-compatible" and point the base URL to `http://localhost:11434/v1` (Ollama) or `http://localhost:1234/v1` (LM Studio). Enter any string as the API key (required by the field but not validated locally). Step-by-step setup guides: [SillyTavern review](/local-llms/sillytavern-review) · [Open WebUI review](/local-llms/open-webui-review).',
           '**Agnai connection:** same OpenAI-compatible endpoint; enter the local URL in the adapter settings. Works identically to the SillyTavern setup.',
           '**Model switching:** switch between standard and uncensored models in Ollama with `ollama run [model-name]` — multiple models can be loaded simultaneously, and you can switch per session without restarting the server.',
         ],
@@ -403,9 +412,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local LLM Prompts for Fiction Writers: Templates & Techniques](/power-local-llm/local-llm-prompts-for-fiction-writers) — prompt templates for scene-writing, dialogue, worldbuilding, and style transfer that work on both standard and uncensored models.',
           '[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — frontend comparison for character-card roleplay, including setup instructions for Ollama backends.',
           '[How to Run a Local LLM for Screenwriting and Novel Drafting](/power-local-llm/local-llm-screenwriting-and-novel-drafting) — longer-form drafting workflows and chapter management for extended fiction projects.',
-          '[Prompt Injection and LLM Security](/prompt-engineering/prompt-injection-and-security) — how adversarial prompts interact with safety layers; useful background for understanding what uncensoring removes.',
-          '[System Prompt vs User Prompt: What\'s the Difference](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — the authority structure that governs model behaviour; the system prompt distinction matters more than model choice for consistent uncensored output.',
-          '[Local RAG for Private Business Data](/power-local-llm/local-rag-for-private-business-data) — local-only AI setup for privacy-sensitive use cases; same privacy principles as local fiction generation.',
+          '[SillyTavern in 2026: Free Frontend for AI Character Roleplay](/local-llms/sillytavern-review) — setup, character cards and long-form chat on top of an Ollama backend.',
+          '[Open WebUI in 2026: Self-Hosted Chat Interface for Ollama](/local-llms/open-webui-review) — a browser-based alternative with prompt presets and easy model switching.',
+          '[Locally Uncensored Review: Local Chat, Image, and Video in One App](/power-local-llm/locally-uncensored-review) — an all-in-one app built around uncensored local models.',
         ],
       },
     },
@@ -425,6 +434,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-de.webp',
     twitterDescription:
       'Uncensored lokale LLMs für Belletristik-Autoren — welche Modelle, Ollama-Einrichtung und die echten Ethik-Fragen: Wann sie geeignet sind und welche Verantwortung Autoren trotzdem tragen.',
+    nextSteps: {
+      title: 'Weiterlesen: deine nächsten Schritte',
+      items: [
+        { title: 'SillyTavern einrichten', description: 'Verbinde das Frontend mit deinem Uncensored-Ollama-Modell und starte mit Charakter-Roleplay.', href: '/de/local-llms/sillytavern-review' },
+        { title: 'Open WebUI einrichten', description: 'Eine selbst gehostete Chat-Oberfläche für Ollama mit Prompt-Presets und Modellwechsel.', href: '/de/local-llms/open-webui-review' },
+        { title: 'Ein lokales Modell für Fiktion auswählen', description: 'Vergleiche Modelle nach Erzählqualität, Sampling-Einstellungen und VRAM-Bedarf.', href: '/de/power-local-llm/best-local-llm-creative-writing-2026' },
+        { title: 'Prompt-Vorlagen für Fiktion nutzen', description: 'Prompts für Szenen, Dialoge und Weltenbau, die auf Standard- und Uncensored-Modellen funktionieren.', href: '/de/power-local-llm/local-llm-prompts-for-fiction-writers' },
+      ],
+    },
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Hermes 3 Llama 3.1',
@@ -659,7 +677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Ollama-Installation:** `brew install ollama` (macOS) oder Download von ollama.com (Windows/Linux). Der Befehl `ollama serve` startet die OpenAI-kompatible API unter `http://localhost:11434`.',
           '**LM Studio-Installation:** Download von lmstudio.ai. GGUF-Modelldateien direkt importieren; der lokale Server-Tab stellt einen OpenAI-kompatiblen Endpoint unter `http://localhost:1234` bereit.',
-          '**SillyTavern-Verbindung:** in den API-Einstellungen „OpenAI-kompatibel" auswählen und die Basis-URL auf `http://localhost:11434/v1` (Ollama) oder `http://localhost:1234/v1` (LM Studio) zeigen. Einen beliebigen String als API-Schlüssel eingeben (vom Feld benötigt, wird aber lokal nicht validiert).',
+          '**SillyTavern-Verbindung:** in den API-Einstellungen „OpenAI-kompatibel" auswählen und die Basis-URL auf `http://localhost:11434/v1` (Ollama) oder `http://localhost:1234/v1` (LM Studio) zeigen. Einen beliebigen String als API-Schlüssel eingeben (vom Feld benötigt, wird aber lokal nicht validiert). Schritt-für-Schritt-Anleitungen: [SillyTavern im Test](/de/local-llms/sillytavern-review) · [Open WebUI im Test](/de/local-llms/open-webui-review).',
           '**Agnai-Verbindung:** derselbe OpenAI-kompatible Endpoint; lokale URL in den Adapter-Einstellungen eingeben. Funktioniert identisch zur SillyTavern-Einrichtung.',
           '**Modellwechsel:** in Ollama zwischen Standard- und Uncensored-Modellen mit `ollama run [modell-name]` wechseln — mehrere Modelle können gleichzeitig geladen werden, und du kannst pro Session wechseln, ohne den Server neu zu starten.',
         ],
@@ -801,9 +819,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local LLM Prompts for Fiction Writers: Templates & Techniques](/de/power-local-llm/local-llm-prompts-for-fiction-writers) — Prompt-Vorlagen für Szenen-Schreiben, Dialog, Weltenbau und Stiltransfer, die auf Standard- und Uncensored-Modellen funktionieren.',
           '[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/de/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — Frontend-Vergleich für Charakter-Karten-Roleplay, einschließlich Einrichtungsanleitungen für Ollama-Backends.',
           '[How to Run a Local LLM for Screenwriting and Novel Drafting](/de/power-local-llm/local-llm-screenwriting-and-novel-drafting) — Langform-Entwurf-Workflows und Kapitel-Management für erweiterte Belletristik-Projekte.',
-          '[Prompt Injection and LLM Security](/de/prompt-engineering/prompt-injection-and-security) — wie adversarielle Prompts mit Sicherheitsschichten interagieren; nützlicher Hintergrund zum Verständnis, was Uncensoring entfernt.',
-          '[System Prompt vs User Prompt: What\'s the Difference](/de/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — die Autoritätsstruktur, die das Modellverhalten steuert; der System-Prompt-Unterschied ist wichtiger als die Modellwahl für konsistente Uncensored-Ausgabe.',
-          '[Local RAG for Private Business Data](/de/power-local-llm/local-rag-for-private-business-data) — lokale KI-Einrichtung für datenschutzsensible Anwendungsfälle; dieselben Datenschutzprinzipien wie bei lokaler Belletristik-Generierung.',
+          '[SillyTavern in 2026: Kostenloses Frontend für KI-Charakter-Roleplay](/de/local-llms/sillytavern-review) — Einrichtung, Charakterkarten und Langform-Chat auf einem Ollama-Backend.',
+          '[Open WebUI in 2026: Selbst gehostete Chat-Oberfläche für Ollama](/de/local-llms/open-webui-review) — eine browserbasierte Alternative mit Prompt-Presets und einfachem Modellwechsel.',
+          '[Locally Uncensored im Test: Lokaler Chat, Bild und Video in einer App](/de/power-local-llm/locally-uncensored-review) — eine All-in-one-App rund um lokale Uncensored-Modelle.',
         ],
       },
     },
@@ -823,6 +841,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-fr.webp',
     twitterDescription:
       'LLM locaux non censurés pour les auteurs de fiction — quels modèles, configuration Ollama et l\'éthique réelle : quand ils sont appropriés et quelles responsabilités subsistent.',
+    nextSteps: {
+      title: 'Pour aller plus loin : vos prochaines étapes',
+      items: [
+        { title: 'Configurer SillyTavern', description: 'Connectez le frontend à votre modèle Ollama non censuré et lancez le jeu de rôle avec personnages.', href: '/fr/local-llms/sillytavern-review' },
+        { title: 'Configurer Open WebUI', description: 'Une interface de chat auto-hébergée pour Ollama avec préréglages de prompts et changement de modèle.', href: '/fr/local-llms/open-webui-review' },
+        { title: 'Choisir un modèle local pour la fiction', description: 'Comparez les modèles selon la qualité narrative, les paramètres d\'échantillonnage et le besoin en VRAM.', href: '/fr/power-local-llm/best-local-llm-creative-writing-2026' },
+        { title: 'Utiliser des modèles de prompts pour la fiction', description: 'Prompts de scène, de dialogue et de construction d\'univers qui fonctionnent sur les modèles standard et non censurés.', href: '/fr/power-local-llm/local-llm-prompts-for-fiction-writers' },
+      ],
+    },
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Hermes 3 Llama 3.1',
@@ -1057,7 +1084,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Installation d\'Ollama :** `brew install ollama` (macOS) ou télécharger depuis ollama.com (Windows/Linux). La commande `ollama serve` démarre l\'API compatible OpenAI sur `http://localhost:11434`.',
           '**Installation de LM Studio :** télécharger depuis lmstudio.ai. Importer les fichiers GGUF directement ; l\'onglet serveur local expose un endpoint compatible OpenAI sur `http://localhost:1234`.',
-          '**Connexion SillyTavern :** dans les paramètres API, sélectionner « Compatible OpenAI » et pointer l\'URL de base sur `http://localhost:11434/v1` (Ollama) ou `http://localhost:1234/v1` (LM Studio). Saisir n\'importe quelle chaîne comme clé API (obligatoire dans le champ mais non validée localement).',
+          '**Connexion SillyTavern :** dans les paramètres API, sélectionner « Compatible OpenAI » et pointer l\'URL de base sur `http://localhost:11434/v1` (Ollama) ou `http://localhost:1234/v1` (LM Studio). Saisir n\'importe quelle chaîne comme clé API (obligatoire dans le champ mais non validée localement). Guides de configuration pas à pas : [avis SillyTavern](/fr/local-llms/sillytavern-review) · [avis Open WebUI](/fr/local-llms/open-webui-review).',
           '**Connexion Agnai :** même endpoint compatible OpenAI ; saisir l\'URL locale dans les paramètres de l\'adaptateur. Fonctionne de façon identique à la configuration SillyTavern.',
           '**Changement de modèle :** basculer entre modèles standard et non censurés dans Ollama avec `ollama run [model-name]` — plusieurs modèles peuvent être chargés simultanément, et tu peux changer par session sans redémarrer le serveur.',
         ],
@@ -1207,9 +1234,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Local LLM Prompts for Fiction Writers: Templates & Techniques](/fr/power-local-llm/local-llm-prompts-for-fiction-writers) — modèles de prompts pour l\'écriture de scènes, le dialogue, la construction d\'univers et le transfert de style, fonctionnant sur les modèles standard et non censurés.',
           '[SillyTavern vs Agnai vs RisuAI: Best Local Roleplay Frontend](/fr/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — comparaison de frontends pour le jeu de rôle par fiches de personnages, avec instructions de configuration pour les backends Ollama.',
           '[How to Run a Local LLM for Screenwriting and Novel Drafting](/fr/power-local-llm/local-llm-screenwriting-and-novel-drafting) — flux de travail de rédaction longue forme et gestion des chapitres pour les projets de fiction étendus.',
-          '[Prompt Injection and LLM Security](/fr/prompt-engineering/prompt-injection-and-security) — comment les prompts adversariaux interagissent avec les couches de sécurité ; contexte utile pour comprendre ce que la non-censure supprime.',
-          '[System Prompt vs User Prompt: What\'s the Difference](/fr/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — la structure d\'autorité qui gouverne le comportement du modèle ; la distinction de prompt système compte plus que le choix de modèle pour une sortie non censurée cohérente.',
-          '[Local RAG for Private Business Data](/fr/power-local-llm/local-rag-for-private-business-data) — configuration IA locale pour les cas d\'usage sensibles aux données ; mêmes principes de confidentialité que la génération locale de fiction.',
+          '[SillyTavern en 2026 : frontend gratuit pour le jeu de rôle avec personnages IA](/fr/local-llms/sillytavern-review) — configuration, fiches de personnages et chat long format sur un backend Ollama.',
+          '[Open WebUI en 2026 : interface de chat auto-hébergée pour Ollama](/fr/local-llms/open-webui-review) — une alternative dans le navigateur avec préréglages de prompts et changement de modèle facile.',
+          '[Avis Locally Uncensored : chat, image et vidéo locaux dans une seule application](/fr/power-local-llm/locally-uncensored-review) — une application tout-en-un centrée sur les modèles locaux non censurés.',
         ],
       },
     },
@@ -1229,6 +1256,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ja.webp',
     twitterDescription:
       '小説家のための無検閲ローカルLLM―推奨モデル、Ollama設定、本当の倫理問題：適切な場面と創作者に残る責任を解説。',
+    nextSteps: {
+      title: '次のステップへ進む',
+      items: [
+        { title: 'SillyTavernをセットアップする', description: '無検閲Ollamaモデルにフロントエンドを接続し、キャラクターロールプレイを始めましょう。', href: '/ja/local-llms/sillytavern-review' },
+        { title: 'Open WebUIをセットアップする', description: 'プロンプトプリセットとモデル切り替えを備えた、Ollama向けのセルフホスト型チャット画面。', href: '/ja/local-llms/open-webui-review' },
+        { title: '小説向けのローカルモデルを選ぶ', description: '物語の品質、サンプリング設定、必要VRAMでモデルを比較します。', href: '/ja/power-local-llm/best-local-llm-creative-writing-2026' },
+        { title: 'フィクション用プロンプトを使う', description: '標準モデルでも無検閲モデルでも使える、場面・対話・世界観構築のプロンプト集。', href: '/ja/power-local-llm/local-llm-prompts-for-fiction-writers' },
+      ],
+    },
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Hermes 3 Llama 3.1',
@@ -1494,7 +1530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Ollamaのインストール：** `brew install ollama`（macOS）またはollama.comからダウンロード（Windows/Linux）。`ollama serve`コマンドで`http://localhost:11434`にOpenAI互換APIが起動します。',
           '**LM Studioのインストール：** lmstudio.aiからダウンロード。GGUFモデルファイルを直接インポート。ローカルサーバータブが`http://localhost:1234`にOpenAI互換エンドポイントを公開します。',
-          '**SillyTavern接続：** API設定で「OpenAI互換」を選択し、ベースURLを`http://localhost:11434/v1`（Ollama）または`http://localhost:1234/v1`（LM Studio）に設定。APIキーフィールドには任意の文字列を入力（フィールドで必須ですがローカルでは検証されません）。',
+          '**SillyTavern接続：** API設定で「OpenAI互換」を選択し、ベースURLを`http://localhost:11434/v1`（Ollama）または`http://localhost:1234/v1`（LM Studio）に設定。APIキーフィールドには任意の文字列を入力（フィールドで必須ですがローカルでは検証されません）。 セットアップ手順は[SillyTavernレビュー](/ja/local-llms/sillytavern-review)と[Open WebUIレビュー](/ja/local-llms/open-webui-review)を参照してください。',
           '**Agnai接続：** 同じOpenAI互換エンドポイント。アダプター設定でローカルURLを入力。SillyTavernのセットアップと同一です。',
           '**モデル切り替え：** Ollamaで`ollama run [model-name]`で標準モデルと無検閲モデルを切り替え――複数のモデルを同時にロードでき、サーバーを再起動せずにセッション単位で切り替えられます。',
         ],
@@ -1661,9 +1697,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[フィクション作家向けローカルLLMプロンプト：テンプレートとテクニック](/ja/power-local-llm/local-llm-prompts-for-fiction-writers) ― 場面執筆、対話、世界構築、スタイル転換のプロンプトテンプレート。標準モデルと無検閲モデルの両方で機能する。',
           '[SillyTavern vs Agnai vs RisuAI：ベストローカルロールプレイフロントエンド](/ja/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) ― キャラクターカードロールプレイのフロントエンド比較。Ollamaバックエンドのセットアップ手順を含む。',
           '[小説執筆と脚本向けローカルLLMの使い方](/ja/power-local-llm/local-llm-screenwriting-and-novel-drafting) ― 長編フィクションプロジェクトのための長編草稿ワークフローとチャプター管理。',
-          '[プロンプトインジェクションとLLMセキュリティ](/ja/prompt-engineering/prompt-injection-and-security) ― 敵対的プロンプトがセキュリティ層とどう相互作用するか。無検閲化が何を除去するかを理解するための有用な背景。',
-          '[システムプロンプトとユーザープロンプトの違い](/ja/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) ― モデル動作を管理する権限構造。一貫した無検閲出力にはモデル選択よりシステムプロンプトの区別の方が重要。',
-          '[プライベートビジネスデータのためのローカルRAG](/ja/power-local-llm/local-rag-for-private-business-data) ― プライバシーに敏感なユースケースのためのローカル専用AIセットアップ。ローカルフィクション生成と同じプライバシー原則。',
+          '[2026年のSillyTavern：AIキャラクターロールプレイ向け無料フロントエンド](/ja/local-llms/sillytavern-review) ― Ollamaバックエンド上でのセットアップ、キャラクターカード、長編チャット。',
+          '[2026年のOpen WebUI：Ollama向けセルフホスト型チャット画面](/ja/local-llms/open-webui-review) ― プロンプトプリセットと簡単なモデル切り替えを備えたブラウザ型の代替手段。',
+          '[Locally Uncensoredレビュー：チャット・画像・動画を1つのアプリで](/ja/power-local-llm/locally-uncensored-review) ― 無検閲ローカルモデルを軸にしたオールインワンアプリ。',
         ],
       },
     },
@@ -1683,6 +1719,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-zh.webp',
     twitterDescription:
       '小说作家的无审查本地LLM——推荐模型、Ollama配置和真实伦理：何时适用，创作者还负有哪些责任。',
+    nextSteps: {
+      title: '继续阅读：下一步',
+      items: [
+        { title: '配置SillyTavern', description: '将前端连接到你的无审查Ollama模型，开始角色扮演。', href: '/zh/local-llms/sillytavern-review' },
+        { title: '配置Open WebUI', description: '面向Ollama的自托管聊天界面，支持提示词预设和模型切换。', href: '/zh/local-llms/open-webui-review' },
+        { title: '选择适合小说创作的本地模型', description: '按叙事质量、采样设置和显存需求对比模型。', href: '/zh/power-local-llm/best-local-llm-creative-writing-2026' },
+        { title: '使用小说提示词模板', description: '适用于标准和无审查模型的场景、对话与世界构建提示词。', href: '/zh/power-local-llm/local-llm-prompts-for-fiction-writers' },
+      ],
+    },
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Hermes 3 Llama 3.1',
@@ -1918,7 +1963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**安装Ollama：** `brew install ollama`（macOS）或从ollama.com下载（Windows/Linux）。`ollama serve`命令在`http://localhost:11434`启动OpenAI兼容API。',
           '**安装LM Studio：** 从lmstudio.ai下载。直接导入GGUF模型文件；本地服务器选项卡在`http://localhost:1234`提供OpenAI兼容端点。',
-          '**连接SillyTavern：** 在API设置中选择「OpenAI兼容」并将基础URL指向`http://localhost:11434/v1`（Ollama）或`http://localhost:1234/v1`（LM Studio）。在API密钥字段输入任意字符串（字段要求但本地不验证）。',
+          '**连接SillyTavern：** 在API设置中选择「OpenAI兼容」并将基础URL指向`http://localhost:11434/v1`（Ollama）或`http://localhost:1234/v1`（LM Studio）。在API密钥字段输入任意字符串（字段要求但本地不验证）。 分步配置指南：[SillyTavern评测](/zh/local-llms/sillytavern-review) · [Open WebUI评测](/zh/local-llms/open-webui-review)。',
           '**连接Agnai：** 同一OpenAI兼容端点；在适配器设置中输入本地URL。与SillyTavern设置完全相同。',
           '**切换模型：** 在Ollama中用`ollama run [model-name]`在标准模型和无审查模型之间切换——可同时加载多个模型，无需重启服务器即可按会话切换。',
         ],
@@ -2061,9 +2106,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[小说作家本地LLM提示词指南：模板与技巧](/zh/power-local-llm/local-llm-prompts-for-fiction-writers) — 场景写作、对话、世界构建和风格迁移的提示词模板，在标准和无审查模型上均有效。',
           '[SillyTavern vs Agnai vs RisuAI：最佳本地角色扮演前端](/zh/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — 角色卡角色扮演前端对比，包括Ollama后端配置说明。',
           '[如何用本地LLM进行剧本创作和小说起草](/zh/power-local-llm/local-llm-screenwriting-and-novel-drafting) — 长篇小说项目的长篇草稿工作流和章节管理。',
-          '[提示词注入与LLM安全](/zh/prompt-engineering/prompt-injection-and-security) — 对抗性提示词如何与安全层交互；理解无审查移除了什么的有用背景。',
-          '[系统提示词与用户提示词：有什么区别](/zh/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — 管理模型行为的权限结构；对于一致的无审查输出，系统提示词的区分比模型选择更重要。',
-          '[私有业务数据的本地RAG](/zh/power-local-llm/local-rag-for-private-business-data) — 隐私敏感使用场景的纯本地AI配置；与本地创作生成相同的隐私原则。',
+          '[2026年的SillyTavern：免费的AI角色扮演前端](/zh/local-llms/sillytavern-review) — 基于Ollama后端的配置、角色卡和长篇对话。',
+          '[2026年的Open WebUI：面向Ollama的自托管聊天界面](/zh/local-llms/open-webui-review) — 基于浏览器的替代方案，支持提示词预设和便捷的模型切换。',
+          '[Locally Uncensored评测：本地聊天、图像和视频合一应用](/zh/power-local-llm/locally-uncensored-review) — 围绕本地无审查模型打造的一体化应用。',
         ],
       },
     },
@@ -2083,6 +2128,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-es.webp',
     twitterDescription:
       'LLMs locales sin censura para escritores de ficción: qué modelos, configuración en Ollama y la ética real — cuándo son apropiados y qué responsabilidades siguen teniendo los escritores.',
+    nextSteps: {
+      title: 'Sigue leyendo: tus próximos pasos',
+      items: [
+        { title: 'Configura SillyTavern', description: 'Conecta el frontend a tu modelo de Ollama sin censura y empieza el roleplay con personajes.', href: '/es/local-llms/sillytavern-review' },
+        { title: 'Configura Open WebUI', description: 'Una interfaz de chat autoalojada para Ollama con ajustes preestablecidos de prompts y cambio de modelo.', href: '/es/local-llms/open-webui-review' },
+        { title: 'Elige un modelo local para ficción', description: 'Compara modelos por calidad narrativa, ajustes de muestreo y necesidades de VRAM.', href: '/es/power-local-llm/best-local-llm-creative-writing-2026' },
+        { title: 'Usa plantillas de prompts para ficción', description: 'Prompts de escena, diálogo y construcción de mundos que funcionan en modelos estándar y sin censura.', href: '/es/power-local-llm/local-llm-prompts-for-fiction-writers' },
+      ],
+    },
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Hermes 3 Llama 3.1',
@@ -2318,7 +2372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Instalación de Ollama:** `brew install ollama` (macOS) o descarga desde ollama.com (Windows/Linux). El comando `ollama serve` inicia la API compatible con OpenAI en `http://localhost:11434`.',
           '**Instalación de LM Studio:** descarga desde lmstudio.ai. Importa archivos de modelo GGUF directamente; la pestaña de servidor local expone un endpoint compatible con OpenAI en `http://localhost:1234`.',
-          '**Conexión de SillyTavern:** en los ajustes de API, selecciona "Compatible con OpenAI" y apunta la URL base a `http://localhost:11434/v1` (Ollama) o `http://localhost:1234/v1` (LM Studio). Introduce cualquier cadena como clave de API (requerida por el campo pero no validada localmente).',
+          '**Conexión de SillyTavern:** en los ajustes de API, selecciona "Compatible con OpenAI" y apunta la URL base a `http://localhost:11434/v1` (Ollama) o `http://localhost:1234/v1` (LM Studio). Introduce cualquier cadena como clave de API (requerida por el campo pero no validada localmente). Guías de configuración paso a paso: [reseña de SillyTavern](/es/local-llms/sillytavern-review) · [reseña de Open WebUI](/es/local-llms/open-webui-review).',
           '**Conexión de Agnai:** mismo endpoint compatible con OpenAI; introduce la URL local en los ajustes del adaptador. Funciona de forma idéntica a la configuración de SillyTavern.',
           '**Cambio de modelo:** cambia entre modelos estándar y sin censura en Ollama con `ollama run [nombre-del-modelo]` — se pueden cargar varios modelos simultáneamente y puedes cambiar por sesión sin reiniciar el servidor.',
         ],
@@ -2460,9 +2514,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Prompts de LLM local para escritores de ficción: plantillas y técnicas](/es/power-local-llm/local-llm-prompts-for-fiction-writers) — plantillas de prompts para escritura de escenas, diálogo, construcción de mundos y transferencia de estilo que funcionan en modelos estándar y sin censura.',
           '[SillyTavern vs Agnai vs RisuAI: mejor frontend de roleplay local](/es/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — comparación de frontends para roleplay con fichas de personajes, incluidas instrucciones de configuración para backends de Ollama.',
           '[Cómo ejecutar un LLM local para guión y redacción de novelas](/es/power-local-llm/local-llm-screenwriting-and-novel-drafting) — flujos de trabajo de redacción de formato largo y gestión de capítulos para proyectos de ficción extensa.',
-          '[Inyección de prompts y seguridad de LLM](/es/prompt-engineering/prompt-injection-and-security) — cómo interactúan los prompts adversariales con las capas de seguridad; contexto útil para entender qué elimina el descensurado.',
-          '[System Prompt vs User Prompt: ¿Cuál es la diferencia?](/es/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — la estructura de autoridad que rige el comportamiento del modelo; la distinción del system prompt importa más que la elección del modelo para una salida sin censura consistente.',
-          '[RAG local para datos empresariales privados](/es/power-local-llm/local-rag-for-private-business-data) — configuración de IA solo local para casos de uso sensibles a la privacidad; los mismos principios de privacidad que la generación de ficción local.',
+          '[SillyTavern en 2026: frontend gratuito para roleplay con personajes de IA](/es/local-llms/sillytavern-review) — configuración, fichas de personaje y chat de formato largo sobre un backend de Ollama.',
+          '[Open WebUI en 2026: interfaz de chat autoalojada para Ollama](/es/local-llms/open-webui-review) — una alternativa en el navegador con prompts preestablecidos y cambio de modelo sencillo.',
+          '[Reseña de Locally Uncensored: chat, imagen y vídeo locales en una sola app](/es/power-local-llm/locally-uncensored-review) — una app todo en uno construida en torno a modelos locales sin censura.',
         ],
       },
     },
@@ -2493,6 +2547,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ko.webp',
     twitterDescription:
       '픽션 작가를 위한 무검열 로컬 LLM — 어떤 모델, Ollama 설정, 실제 윤리: 언제 적합하며 작가가 여전히 갖는 책임.',
+    nextSteps: {
+      title: '계속 읽기: 다음 단계',
+      items: [
+        { title: 'SillyTavern 설정하기', description: '프론트엔드를 무검열 Ollama 모델에 연결하고 캐릭터 롤플레이를 시작하세요.', href: '/ko/local-llms/sillytavern-review' },
+        { title: 'Open WebUI 설정하기', description: '프롬프트 프리셋과 모델 전환을 지원하는 Ollama용 셀프호스팅 채팅 인터페이스.', href: '/ko/local-llms/open-webui-review' },
+        { title: '소설에 맞는 로컬 모델 고르기', description: '서사 품질, 샘플링 설정, 필요한 VRAM으로 모델을 비교합니다.', href: '/ko/power-local-llm/best-local-llm-creative-writing-2026' },
+        { title: '소설용 프롬프트 템플릿 사용하기', description: '표준 모델과 무검열 모델 모두에서 작동하는 장면·대화·세계관 구축 프롬프트.', href: '/ko/power-local-llm/local-llm-prompts-for-fiction-writers' },
+      ],
+    },
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Hermes 3 Llama 3.1',
@@ -2728,7 +2791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Ollama 설치:** `brew install ollama`(macOS) 또는 ollama.com에서 다운로드(Windows/Linux). `ollama serve` 명령이 `http://localhost:11434`에서 OpenAI 호환 API를 시작합니다.',
           '**LM Studio 설치:** lmstudio.ai에서 다운로드. GGUF 모델 파일을 직접 가져오기; 로컬 서버 탭은 `http://localhost:1234`에서 OpenAI 호환 엔드포인트를 노출합니다.',
-          '**SillyTavern 연결:** API 설정에서 "OpenAI 호환"을 선택하고 기본 URL을 `http://localhost:11434/v1`(Ollama) 또는 `http://localhost:1234/v1`(LM Studio)로 가리키십시오. API 키 필드에 임의의 문자열을 입력하십시오(필드에서 필요하지만 로컬에서 검증되지 않음).',
+          '**SillyTavern 연결:** API 설정에서 "OpenAI 호환"을 선택하고 기본 URL을 `http://localhost:11434/v1`(Ollama) 또는 `http://localhost:1234/v1`(LM Studio)로 가리키십시오. API 키 필드에 임의의 문자열을 입력하십시오(필드에서 필요하지만 로컬에서 검증되지 않음). 단계별 설정 가이드: [SillyTavern 리뷰](/ko/local-llms/sillytavern-review) · [Open WebUI 리뷰](/ko/local-llms/open-webui-review).',
           '**Agnai 연결:** 동일한 OpenAI 호환 엔드포인트; 어댑터 설정에 로컬 URL 입력. SillyTavern 설정과 동일하게 작동합니다.',
           '**모델 전환:** Ollama에서 `ollama run [모델명]`으로 표준 모델과 무검열 모델 사이를 전환합니다 — 여러 모델이 동시에 로드될 수 있으며 서버를 재시작하지 않고 세션별로 전환할 수 있습니다.',
         ],
@@ -2870,9 +2933,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[픽션 작가를 위한 로컬 LLM 프롬프트: 템플릿 및 기법](/ko/power-local-llm/local-llm-prompts-for-fiction-writers) — 표준 모델과 무검열 모델 모두에서 작동하는 장면 글쓰기, 대화, 세계 구축, 스타일 전이를 위한 프롬프트 템플릿.',
           '[SillyTavern vs Agnai vs RisuAI: 최고의 로컬 롤플레이 프론트엔드](/ko/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — Ollama 백엔드를 위한 설정 지침을 포함한 캐릭터 카드가 있는 롤플레이를 위한 프론트엔드 비교.',
           '[로컬 LLM으로 시나리오 및 소설 초안 작성하는 방법](/ko/power-local-llm/local-llm-screenwriting-and-novel-drafting) — 방대한 픽션 프로젝트를 위한 장형 초안 작성 워크플로우 및 챕터 관리.',
-          '[프롬프트 인젝션 및 LLM 보안](/ko/prompt-engineering/prompt-injection-and-security) — 적대적 프롬프트가 보안 레이어와 상호 작용하는 방법; 무검열화가 제거하는 것을 이해하기 위한 유용한 맥락.',
-          '[시스템 프롬프트 vs 사용자 프롬프트: 차이는 무엇입니까?](/ko/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — 모델 동작을 제어하는 권한 구조; 시스템 프롬프트 구별이 일관된 무검열 출력에서 모델 선택보다 더 중요합니다.',
-          '[사설 비즈니스 데이터를 위한 로컬 RAG](/ko/power-local-llm/local-rag-for-private-business-data) — 개인 정보 보호에 민감한 사용 사례를 위한 로컬 전용 AI 설정; 로컬 픽션 생성과 동일한 개인 정보 보호 원칙.',
+          '[2026년의 SillyTavern: AI 캐릭터 롤플레이용 무료 프론트엔드](/ko/local-llms/sillytavern-review) — Ollama 백엔드 기반의 설정, 캐릭터 카드, 장편 채팅.',
+          '[2026년의 Open WebUI: Ollama용 셀프호스팅 채팅 인터페이스](/ko/local-llms/open-webui-review) — 프롬프트 프리셋과 간편한 모델 전환을 지원하는 브라우저 기반 대안.',
+          '[Locally Uncensored 리뷰: 채팅·이미지·영상을 하나의 앱으로](/ko/power-local-llm/locally-uncensored-review) — 로컬 무검열 모델을 중심으로 만든 올인원 앱.',
         ],
       },
     },
@@ -2903,6 +2966,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-pt.webp',
     twitterDescription:
       'LLMs locais sem censura para escritores de ficção — quais modelos, configuração no Ollama e a ética real: quando são apropriados e quais responsabilidades os escritores ainda têm.',
+    nextSteps: {
+      title: 'Continue lendo: seus próximos passos',
+      items: [
+        { title: 'Configure o SillyTavern', description: 'Conecte o frontend ao seu modelo Ollama sem censura e comece o roleplay com personagens.', href: '/pt/local-llms/sillytavern-review' },
+        { title: 'Configure o Open WebUI', description: 'Uma interface de chat auto-hospedada para o Ollama com predefinições de prompts e troca de modelo.', href: '/pt/local-llms/open-webui-review' },
+        { title: 'Escolha um modelo local para ficção', description: 'Compare modelos por qualidade narrativa, configurações de amostragem e necessidade de VRAM.', href: '/pt/power-local-llm/best-local-llm-creative-writing-2026' },
+        { title: 'Use modelos de prompts para ficção', description: 'Prompts de cena, diálogo e construção de mundo que funcionam em modelos padrão e sem censura.', href: '/pt/power-local-llm/local-llm-prompts-for-fiction-writers' },
+      ],
+    },
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Hermes 3 Llama 3.1',
@@ -3138,7 +3210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Instalação do Ollama:** `brew install ollama` (macOS) ou baixe em ollama.com (Windows/Linux). O comando `ollama serve` inicia a API compatível com OpenAI em `http://localhost:11434`.',
           '**Instalação do LM Studio:** baixe em lmstudio.ai. Importe arquivos de modelo GGUF diretamente; a aba de servidor local expõe um endpoint compatível com OpenAI em `http://localhost:1234`.',
-          '**Conexão do SillyTavern:** nas configurações de API, selecione "Compatível com OpenAI" e aponte a URL base para `http://localhost:11434/v1` (Ollama) ou `http://localhost:1234/v1` (LM Studio). Insira qualquer string como chave de API (exigida pelo campo mas não validada localmente).',
+          '**Conexão do SillyTavern:** nas configurações de API, selecione "Compatível com OpenAI" e aponte a URL base para `http://localhost:11434/v1` (Ollama) ou `http://localhost:1234/v1` (LM Studio). Insira qualquer string como chave de API (exigida pelo campo mas não validada localmente). Guias de configuração passo a passo: [análise do SillyTavern](/pt/local-llms/sillytavern-review) · [análise do Open WebUI](/pt/local-llms/open-webui-review).',
           '**Conexão do Agnai:** mesmo endpoint compatível com OpenAI; insira a URL local nas configurações do adaptador. Funciona de forma idêntica à configuração do SillyTavern.',
           '**Troca de modelo:** alterne entre modelos padrão e sem censura no Ollama com `ollama run [nome-do-modelo]` — vários modelos podem ser carregados simultaneamente, e você pode trocar por sessão sem reiniciar o servidor.',
         ],
@@ -3280,9 +3352,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Prompts de LLM local para escritores de ficção: modelos e técnicas](/pt/power-local-llm/local-llm-prompts-for-fiction-writers) — modelos de prompts para escrita de cenas, diálogo, construção de mundos e transferência de estilo que funcionam em modelos padrão e sem censura.',
           '[SillyTavern vs Agnai vs RisuAI: melhor frontend de roleplay local](/pt/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — comparação de frontends para roleplay com fichas de personagens, incluindo instruções de configuração para backends do Ollama.',
           '[Como executar um LLM local para roteiro e redação de romances](/pt/power-local-llm/local-llm-screenwriting-and-novel-drafting) — fluxos de trabalho de redação de formato longo e gestão de capítulos para projetos de ficção extensa.',
-          '[Injeção de prompt e segurança de LLM](/pt/prompt-engineering/prompt-injection-and-security) — como prompts adversariais interagem com as camadas de segurança; contexto útil para entender o que a remoção de censura elimina.',
-          '[System Prompt vs User Prompt: qual é a diferença?](/pt/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — a estrutura de autoridade que rege o comportamento do modelo; a distinção do system prompt importa mais que a escolha do modelo para um resultado sem censura consistente.',
-          '[RAG local para dados empresariais privados](/pt/power-local-llm/local-rag-for-private-business-data) — configuração de IA somente local para casos de uso sensíveis à privacidade; os mesmos princípios de privacidade que a geração de ficção local.',
+          '[SillyTavern em 2026: frontend gratuito para roleplay com personagens de IA](/pt/local-llms/sillytavern-review) — configuração, fichas de personagem e chat longo sobre um backend Ollama.',
+          '[Open WebUI em 2026: interface de chat auto-hospedada para o Ollama](/pt/local-llms/open-webui-review) — uma alternativa no navegador com predefinições de prompts e troca de modelo fácil.',
+          '[Análise do Locally Uncensored: chat, imagem e vídeo locais em um só app](/pt/power-local-llm/locally-uncensored-review) — um app tudo-em-um construído em torno de modelos locais sem censura.',
         ],
       },
     },
@@ -3314,6 +3386,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-ar.webp',
     twitterDescription:
       'نماذج LLM المحلية بدون قيود لكتّاب الخيال: أي النماذج، إعداد Ollama والأخلاقيات الحقيقية — متى تكون مناسبة وما المسؤوليات التي تبقى على الكتّاب.',
+    nextSteps: {
+      title: 'واصل القراءة: خطواتك التالية',
+      items: [
+        { title: 'إعداد SillyTavern', description: 'اربط الواجهة بنموذج Ollama بدون قيود وابدأ لعب الأدوار مع الشخصيات.', href: '/ar/local-llms/sillytavern-review' },
+        { title: 'إعداد Open WebUI', description: 'واجهة محادثة مستضافة ذاتيًا لـ Ollama مع إعدادات مسبقة للـ prompts وتبديل سريع للنماذج.', href: '/ar/local-llms/open-webui-review' },
+        { title: 'اختر نموذجًا محليًا للخيال', description: 'قارن النماذج حسب جودة السرد وإعدادات العينات ومتطلبات VRAM.', href: '/ar/power-local-llm/best-local-llm-creative-writing-2026' },
+        { title: 'استخدم قوالب prompts للخيال', description: 'prompts للمشاهد والحوار وبناء العوالم تعمل على النماذج القياسية وغير المقيّدة.', href: '/ar/power-local-llm/local-llm-prompts-for-fiction-writers' },
+      ],
+    },
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Hermes 3 Llama 3.1',
@@ -3549,7 +3630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**تثبيت Ollama:** `brew install ollama` (macOS) أو التنزيل من ollama.com (Windows/Linux). أمر `ollama serve` يُشغّل الـ API المتوافقة مع OpenAI على `http://localhost:11434`.',
           '**تثبيت LM Studio:** التنزيل من lmstudio.ai. استيراد ملفات نموذج GGUF مباشرةً؛ تبويب الخادم المحلي يعرض نقطة نهاية متوافقة مع OpenAI على `http://localhost:1234`.',
-          '**توصيل SillyTavern:** في إعدادات الـ API، اختر "متوافق مع OpenAI" واضبط الـ URL الأساسية على `http://localhost:11434/v1` (Ollama) أو `http://localhost:1234/v1` (LM Studio). أدخل أي نص كمفتاح API (مطلوب في الحقل لكن غير مُتحقَّق منه محليًا).',
+          '**توصيل SillyTavern:** في إعدادات الـ API، اختر "متوافق مع OpenAI" واضبط الـ URL الأساسية على `http://localhost:11434/v1` (Ollama) أو `http://localhost:1234/v1` (LM Studio). أدخل أي نص كمفتاح API (مطلوب في الحقل لكن غير مُتحقَّق منه محليًا). أدلة إعداد خطوة بخطوة: [مراجعة SillyTavern](/ar/local-llms/sillytavern-review) · [مراجعة Open WebUI](/ar/local-llms/open-webui-review).',
           '**توصيل Agnai:** نفس نقطة النهاية المتوافقة مع OpenAI؛ أدخل الـ URL المحلية في إعدادات المحوّل. تعمل بنفس طريقة إعداد SillyTavern.',
           '**التبديل بين النماذج:** بدّل بين النماذج القياسية وبدون القيود في Ollama مع `ollama run [اسم-النموذج]` — يمكن تحميل نماذج متعددة في آنٍ واحد والتبديل لكل جلسة دون إعادة تشغيل الخادم.',
         ],
@@ -3691,9 +3772,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[موجّهات LLM المحلية لكتّاب الخيال: قوالب وتقنيات](/ar/power-local-llm/local-llm-prompts-for-fiction-writers) — قوالب موجّهات لكتابة المشاهد والحوار وبناء العوالم ونقل الأسلوب تعمل في النماذج القياسية وبدون القيود.',
           '[SillyTavern مقابل Agnai مقابل RisuAI: أفضل واجهة roleplay محلية](/ar/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay) — مقارنة الواجهات للـ roleplay ببطاقات الشخصيات، بما فيها تعليمات الإعداد لخلفيات Ollama.',
           '[كيفية تشغيل نموذج LLM محلي لكتابة السيناريو والروايات](/ar/power-local-llm/local-llm-screenwriting-and-novel-drafting) — سير عمل الكتابة الطويلة وإدارة الفصول لمشاريع الخيال الممتدة.',
-          '[حقن الموجّهات وأمان نماذج LLM](/ar/prompt-engineering/prompt-injection-and-security) — كيفية تفاعل الموجّهات العدائية مع طبقات الأمان؛ سياق مفيد لفهم ما تزيله إزالة القيود.',
-          '[System Prompt مقابل User Prompt: ما الفرق؟](/ar/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — بنية السلطة التي تحكم سلوك النموذج؛ التمييز بين الموجّهات أهم من اختيار النموذج لناتج متسق بدون قيود.',
-          '[RAG المحلي للبيانات التجارية الخاصة](/ar/power-local-llm/local-rag-for-private-business-data) — إعداد الذكاء الاصطناعي المحلي فقط لحالات الاستخدام الحساسة للخصوصية؛ نفس مبادئ الخصوصية المطبَّقة على توليد الخيال المحلي.',
+          '[SillyTavern في 2026: واجهة مجانية للعب أدوار الشخصيات بالذكاء الاصطناعي](/ar/local-llms/sillytavern-review) — الإعداد وبطاقات الشخصيات والمحادثات الطويلة فوق Ollama.',
+          '[Open WebUI في 2026: واجهة محادثة مستضافة ذاتيًا لـ Ollama](/ar/local-llms/open-webui-review) — بديل يعمل في المتصفح مع إعدادات prompts مسبقة وتبديل سهل للنماذج.',
+          '[مراجعة Locally Uncensored: محادثة وصور وفيديو محلية في تطبيق واحد](/ar/power-local-llm/locally-uncensored-review) — تطبيق متكامل مبني حول النماذج المحلية بدون قيود.',
         ],
       },
     },
