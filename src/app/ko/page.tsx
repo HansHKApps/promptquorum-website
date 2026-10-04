@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { translations } from '@/translations'
+import type { translations } from '@/translations'
+import { getHomeMeta } from '@/lib/home/meta'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { ConfirmedToast } from '@/components/ConfirmedToast'
@@ -7,23 +8,23 @@ import { Home } from '@/components/home/Home'
 
 export async function generateMetadata(): Promise<Metadata> {
   const lang = 'ko'
-  const t = translations[lang as keyof typeof translations]
+  const meta = getHomeMeta(lang as keyof typeof translations)
 
   return {
-    title: t.homeMetaTitle,
-    description: t.homeMetaDescription,
+    title: meta.title,
+    description: meta.description,
     alternates: generateAlternates('/', lang, true, undefined, [...PATH_PREFIX_LANGS]),
     openGraph: {
-      title: t.homeMetaTitle,
-      description: t.homeMetaDescription,
+      title: meta.title,
+      description: meta.description,
       images: [{ url: '/og-image.png', alt: 'PromptQuorum' }],
       type: 'website',
       siteName: 'PromptQuorum',
     },
     twitter: {
       card: 'summary_large_image',
-      title: t.homeMetaTitle,
-      description: t.homeMetaDescription,
+      title: meta.title,
+      description: meta.description,
     },
   }
 }
