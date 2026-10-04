@@ -18,7 +18,7 @@ export function TrendingBlock({ lang = 'en' }: { lang?: Language }) {
         batches={batches.map((b) => ({
           batchDate: b.batchDate,
           label: b.label,
-          items: b.pages.slice(0, 10).map((p) => ({
+          items: b.pages.slice(0, 20).map((p) => ({
             key: p.url,
             title: p.title,
             url: p.url,
