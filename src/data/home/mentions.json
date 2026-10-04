@@ -37,14 +37,6 @@
       "domainRating": 63
     },
     {
-      "id": "shouldiuse-anythingllm",
-      "outlet": "Should I Use It",
-      "title": "AnythingLLM docs comparison page",
-      "url": "https://shouldiuse.io/vs/anythingllm/docs-anythingllm",
-      "date": "2026-09-29",
-      "domainRating": 63
-    },
-    {
       "id": "note-aikomama-mac-4b",
       "outlet": "note.com (AikoMama)",
       "title": "私のMacに宿せた知能は、40億でした —— 16GBの天井から見えた、あの建物の理由",
@@ -77,15 +69,6 @@
       "url": "https://gaidot.net/",
       "date": "2026-09-24",
       "domainRating": 8
-    },
-    {
-      "id": "note-kiki-open-weight",
-      "outlet": "note.com (KiKi@AI)",
-      "title": "手元で動くAIの現在地 ─ オープンウェイトとローカルLLMの教科書",
-      "url": "https://note.com/_kihonushi",
-      "date": "2026-09-24",
-      "domainRating": 92,
-      "excerpt": "Cites PromptQuorum's local LLM hardware requirements guide (nofollow link)."
     },
     {
       "id": "ainews247-mcp",
