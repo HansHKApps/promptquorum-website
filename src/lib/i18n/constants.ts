@@ -21,6 +21,19 @@ export type PathPrefixLang = typeof PATH_PREFIX_LANGS[number];
 export const ALL_LANGS = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'] as const;
 export type Lang = typeof ALL_LANGS[number];
 
+/** Country flag shown for each site language (same set the language switcher uses). */
+export const LANG_FLAG: Record<Lang, string> = {
+  en: '🇺🇸',
+  de: '🇩🇪',
+  fr: '🇫🇷',
+  ja: '🇯🇵',
+  zh: '🇨🇳',
+  es: '🇪🇸',
+  pt: '🇧🇷',
+  ar: '🇸🇦',
+  ko: '🇰🇷',
+};
+
 /**
  * OUTPUT_LOCALE: Maps an internal language code to the outward-facing locale
  * that search engines and users see — hreflang values and schema `inLanguage`.

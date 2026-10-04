@@ -3,9 +3,11 @@ import { getTrendingBatches } from '@/lib/home/trending'
 import { HomeCard } from './HomeCard'
 import { BatchedList } from './BatchedList'
 import { t } from './home-i18n'
+import { LANG_FLAG, type Lang } from '@/lib/i18n/constants'
 
 export function TrendingBlock({ lang = 'en' }: { lang?: Language }) {
   const batches = getTrendingBatches(lang)
+  const languageNames = new Intl.DisplayNames([lang], { type: 'language' })
 
   if (batches.length === 0) {
     return <HomeCard size="md" icon="trending" title={t('trendingTitle', lang)} emptyState emptyMessage={t('trendingEmpty', lang)} />
@@ -23,6 +25,10 @@ export function TrendingBlock({ lang = 'en' }: { lang?: Language }) {
             title: p.title,
             url: p.url,
             meta: t('clicksLabel', lang, { n: p.clicks.toLocaleString() }),
+            flag: {
+              emoji: LANG_FLAG[(p.lang ?? 'en') as Lang],
+              label: languageNames.of(p.lang ?? 'en') ?? (p.lang ?? 'en'),
+            },
           })),
         }))}
       />
