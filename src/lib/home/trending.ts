@@ -6,6 +6,8 @@ import { t } from '@/components/home/home-i18n'
 export interface TrendingPage {
   url: string
   title: string
+  /** Set when the page is a non-English locale; `url` is then already locale-prefixed and `title` is in that language. */
+  lang?: Language
   clicks: number
   impressions: number
 }
@@ -19,13 +21,14 @@ export interface TrendingBatch {
 /**
  * Dated GSC snapshots, newest first. Each batch is one manual export Hans
  * hands off (a trailing-28-day window, not a calendar week — GSC's own
- * export shape, English pages only). The block shows the newest batch's
+ * export shape). The block shows the newest batch's
  * pages by default and reveals older batches, each still labeled with its
  * own date, on expand.
  *
- * Titles stay in English (this is raw GSC data, not per-locale content) —
- * only the URL is locale-prefixed, so a non-English visitor still lands on
- * that locale's version of the article. The batch `label` in the data file
+ * English pages keep English titles and get the viewer's locale prefix, so a
+ * non-English visitor lands on that locale's version of the article. Pages
+ * that ranked in a specific locale (`lang` set) keep their own native title
+ * and URL for every viewer. The batch `label` in the data file
  * is a hand-authored English fallback; it's rebuilt here from `batchDate`
  * via the localized "Snapshot as of {date}" template so the label itself
  * (unlike the page titles) is genuinely per-locale.
@@ -39,7 +42,7 @@ export function getTrendingBatches(lang: Language = 'en'): TrendingBatch[] {
       label: t('snapshotAsOfTemplate', lang, { date: formatDisplayDate(batch.batchDate, lang) }),
       pages: batch.pages.map((page) => ({
         ...page,
-        url: lang === 'en' ? page.url : `/${lang}${page.url}`,
+        url: lang === 'en' || page.lang ? page.url : `/${lang}${page.url}`,
       })),
     }))
 }

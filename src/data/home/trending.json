@@ -1,6 +1,32 @@
 {
-  "_comment": "Dated batches from Hans's manual GSC 'Performance on Search' exports. Each batch is one export snapshot (GSC's own trailing-28-day window, not a calendar week). English (unprefixed) URLs only, top 10 by clicks. Append a new batch object to the front of `batches` for each new export — do not overwrite prior batches, per the site's dated-stacked-history rule.",
+  "_comment": "Dated batches from Hans's manual GSC 'Performance on Search' exports. Each batch is one export snapshot (GSC's own trailing-28-day window, not a calendar week). Top 20 by clicks (batches before 2026-10-04 hold the top 10, English URLs only). A page may carry an optional `lang`; its `url` is then already locale-prefixed and its title is written in that language. Append a new batch object to the front of `batches` for each new export — do not overwrite prior batches, per the site's dated-stacked-history rule.",
   "batches": [
+    {
+      "batchDate": "2026-10-04",
+      "label": "Snapshot as of October 4, 2026 (last 28 days)",
+      "pages": [
+        { "url": "/power-local-llm/uncensored-local-llm-creative-writing-ethics", "title": "Uncensored Local LLMs for Creative Writing", "clicks": 4218, "impressions": 64859 },
+        { "url": "/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics", "title": "無検閲ローカルLLMと創作活動", "lang": "ja", "clicks": 1918, "impressions": 15899 },
+        { "url": "/zh/power-local-llm/uncensored-local-llm-creative-writing-ethics", "title": "无审查本地LLM与创意写作", "lang": "zh", "clicks": 1194, "impressions": 5866 },
+        { "url": "/ko/local-llms", "title": "로컬 LLM 순위·추천: VRAM 등급별 비교", "lang": "ko", "clicks": 790, "impressions": 5684 },
+        { "url": "/power-local-llm/best-local-llm-apps-android-2026", "title": "Best Local LLM Apps for Android", "clicks": 679, "impressions": 37650 },
+        { "url": "/local-llms/small-local-llm-models", "title": "Small Local LLM Models", "clicks": 648, "impressions": 29673 },
+        { "url": "/local-llms/fastest-local-llms-low-end-pcs", "title": "Fastest Local LLMs for Low-End PCs", "clicks": 570, "impressions": 37841 },
+        { "url": "/de/local-llms", "title": "Beste lokale LLMs im Vergleich", "lang": "de", "clicks": 563, "impressions": 11963 },
+        { "url": "/local-llms/best-cpu-only-llm", "title": "Best CPU-Only LLM", "clicks": 552, "impressions": 22029 },
+        { "url": "/power-local-llm/apple-mlx-vs-nvidia-cuda-local-llm-2026", "title": "Apple MLX vs. NVIDIA CUDA for Local LLMs", "clicks": 548, "impressions": 31528 },
+        { "url": "/local-llms/best-amd-mini-pc-local-llm-2026", "title": "Best AMD Mini PC for Local LLMs", "clicks": 491, "impressions": 21621 },
+        { "url": "/ja/power-local-llm/best-local-llm-apps-iphone-2026", "title": "iPhoneで使えるLocal LLMアプリ比較", "lang": "ja", "clicks": 458, "impressions": 3465 },
+        { "url": "/local-llms", "title": "Best Local LLMs by VRAM Tier", "clicks": 424, "impressions": 51846 },
+        { "url": "/ja/local-llms/best-local-llms-for-coding", "title": "コーディング用ローカルLLM：Kimi K2.6 vs Qwen vs Devstral", "lang": "ja", "clicks": 421, "impressions": 6195 },
+        { "url": "/local-llms/local-llm-hardware-guide-2026", "title": "Local LLM Hardware Guide", "clicks": 406, "impressions": 76243 },
+        { "url": "/ko/power-local-llm/uncensored-local-llm-creative-writing-ethics", "title": "창의적 글쓰기를 위한 무검열 로컬 LLM", "lang": "ko", "clicks": 370, "impressions": 4383 },
+        { "url": "/local-llms/apple-silicon-m5-local-llm", "title": "Apple Silicon M5 for Local LLMs", "clicks": 364, "impressions": 64717 },
+        { "url": "/ko/local-llms/what-are-local-llms", "title": "로컬 AI와 로컬 LLM이란?", "lang": "ko", "clicks": 348, "impressions": 12943 },
+        { "url": "/local-llms/best-local-llms-for-coding", "title": "Best Local LLMs for Coding", "clicks": 334, "impressions": 43704 },
+        { "url": "/local-llms/best-amd-gpus-local-llm", "title": "Best AMD GPUs for Local LLMs", "clicks": 327, "impressions": 27690 }
+      ]
+    },
     {
       "batchDate": "2026-09-20",
       "label": "Snapshot as of September 20, 2026",
