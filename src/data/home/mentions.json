@@ -2,12 +2,56 @@
   "_comment": "Hand-maintained by Hans from manual backlink monitoring (Ahrefs export, DR>40 filtered). Shape: { id, outlet, title, url, date (ISO), domainRating, excerpt }. Honest framing only in `title`/`excerpt` -- never 'featured in' or implied editorial endorsement, these are citations/data-source mentions. Seeded 2026-09-20 from stored Ahrefs pulls: only the Hostinger row has a page URL; the other five link to the domain root and their dates are approximate (batch range 2026-08-14 to 08-31) -- replace with real page URLs and exact first-seen dates when available.",
   "mentions": [
     {
+      "id": "grokipedia-anythingllm",
+      "outlet": "Grokipedia",
+      "title": "AnythingLLM — Grokipedia article",
+      "url": "https://grokipedia.com/page/AnythingLLM",
+      "date": "2026-10-02",
+      "domainRating": 79,
+      "excerpt": "Links to PromptQuorum's AnythingLLM vs PrivateGPT vs Open WebUI RAG comparison."
+    },
+    {
+      "id": "smzdm-192gb-unified-memory",
+      "outlet": "SMZDM",
+      "title": "192GB统一内存加持，消费级硬件单台能跑2840亿参数大模型",
+      "url": "https://post.smzdm.com/p/arzqx8xz/",
+      "date": "2026-10-02",
+      "domainRating": 79,
+      "excerpt": "Links to PromptQuorum's best mini PCs for local LLMs guide."
+    },
+    {
+      "id": "mcpservers-org",
+      "outlet": "mcpservers.org",
+      "title": "HTTPS Www Promptquorum Com API MCP Server",
+      "url": "https://mcpservers.org/servers/www-promptquorum-com-mcp-stats",
+      "date": "2026-10-01",
+      "domainRating": 71,
+      "excerpt": "MCP server listing for PromptQuorum (nofollow link). Also listed in ES and PT-BR."
+    },
+    {
       "id": "should-i-use-it-arena-ai",
       "outlet": "Should I Use It",
       "title": "Comparison page \"PromptQuorum vs Arena AI\"",
-      "url": "https://shouldiuseit.com/",
+      "url": "https://shouldiuse.io/",
       "date": "2026-09-29",
       "domainRating": 63
+    },
+    {
+      "id": "shouldiuse-anythingllm",
+      "outlet": "Should I Use It",
+      "title": "AnythingLLM docs comparison page",
+      "url": "https://shouldiuse.io/vs/anythingllm/docs-anythingllm",
+      "date": "2026-09-29",
+      "domainRating": 63
+    },
+    {
+      "id": "note-aikomama-mac-4b",
+      "outlet": "note.com (AikoMama)",
+      "title": "私のMacに宿せた知能は、40億でした —— 16GBの天井から見えた、あの建物の理由",
+      "url": "https://note.com/chifumi_ooisi/n/n8b265f9fffab",
+      "date": "2026-09-27",
+      "domainRating": 92,
+      "excerpt": "Cites PromptQuorum's small local LLM benchmark guide (nofollow link)."
     },
     {
       "id": "veriwire",
@@ -18,12 +62,30 @@
       "domainRating": 4
     },
     {
+      "id": "hashnode-master-prompts-2026",
+      "outlet": "Hashnode (auditme)",
+      "title": "Master Prompts in 2026: Stop Prompting Like It's 2023",
+      "url": "https://auditme.hashnode.dev/markdown-master-prompts-in-2026-stop-prompting-like-it-s-2023",
+      "date": "2026-09-25",
+      "domainRating": 83,
+      "excerpt": "Cites PromptQuorum's prompt engineering best practices (nofollow, UGC link)."
+    },
+    {
       "id": "gaidot-hn-paper",
       "outlet": "HN Paper (gaidot.net)",
       "title": "Link from HN-mirror listing",
       "url": "https://gaidot.net/",
       "date": "2026-09-24",
       "domainRating": 8
+    },
+    {
+      "id": "note-kiki-open-weight",
+      "outlet": "note.com (KiKi@AI)",
+      "title": "手元で動くAIの現在地 ─ オープンウェイトとローカルLLMの教科書",
+      "url": "https://note.com/_kihonushi",
+      "date": "2026-09-24",
+      "domainRating": 92,
+      "excerpt": "Cites PromptQuorum's local LLM hardware requirements guide (nofollow link)."
     },
     {
       "id": "ainews247-mcp",
