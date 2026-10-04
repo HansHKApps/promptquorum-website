@@ -31,7 +31,6 @@ const notoSansArabic = Noto_Sans_Arabic({
 // wrapper, and globals.css for the matching selector.
 
 import Script from 'next/script'
-import { Analytics } from '@vercel/analytics/react'
 import { Providers } from '@/components/Providers'
 import { HeaderClient } from '@/components/HeaderClient'
 import { Footer } from '@/components/Footer'
@@ -263,8 +262,8 @@ export default function RootLayout({
           <GooglePreferredSourcesCard />
 
           {/* Cookieless analytics — load for every visitor, no consent required.
-              Umami (cookieless by design), Vercel Analytics + Speed Insights (cookieless),
-              Microsoft Clarity (cookieless consentv2, afterInteractive so its history-API
+              Umami (cookieless by design, proxied same-origin via /lib/s) and
+              Microsoft Clarity (cookieless consentv2, loaded directly from clarity.ms, afterInteractive so its history-API
               patch installs post-hydration and catches App Router client-side navigations).
               GA4 removed. ConsentedAnalytics is a no-op stub kept for reversibility. */}
           <Script
@@ -280,8 +279,7 @@ export default function RootLayout({
           <Script
             id="clarity-init"
             strategy="afterInteractive"
-          >{`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="/api/clarity/tag/wtwpeavhum";y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wtwpeavhum");window.clarity("consentv2",{ad_Storage:"denied",analytics_Storage:"denied"});`}</Script>
-          <Analytics endpoint="/api/data" scriptSrc="/api/data/script.js" />
+          >{`(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wtwpeavhum");window.clarity("consentv2",{ad_Storage:"denied",analytics_Storage:"denied"});`}</Script>
           <ConsentedAnalytics />
         </Providers>
       </body>

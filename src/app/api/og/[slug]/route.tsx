@@ -31,7 +31,9 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
   // prompt-bites → smart-home → balcony-solar → frameworks. First match wins.
   // Watch for slug collisions across clusters when adding new articles.
   const peKey = PE_SLUG_TO_KEY[slug]
-  const llmKey = LLM_SLUG_TO_KEY[slug]
+  // Legacy OG URLs were built from the content key (e.g. "...-2026"), which differs from
+  // the URL slug for renamed local-llms articles; crawler caches still request them.
+  const llmKey = LLM_SLUG_TO_KEY[slug] ?? (Object.values(LLM_SLUG_TO_KEY).includes(slug) ? slug : undefined)
   const powerKey = POWER_LLM_SLUG_TO_KEY[slug]
   const bitesKey = PROMPT_BITES_SLUG_TO_KEY[slug]
   const smartHomeKey = SMART_HOME_SLUG_TO_KEY[slug]

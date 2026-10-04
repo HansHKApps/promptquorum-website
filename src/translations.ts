@@ -136,7 +136,7 @@ export const translations = {
     privacyS2Row1_3: "Beta launch notification; product update emails",
     privacyS2Row1_4: "Consent (Art. 6(1)(a) GDPR)",
     privacyS2Row2_1: "Anonymous usage analytics",
-    privacyS2Row2_2: "Cookieless analytics (Umami, Vercel Analytics, Microsoft Clarity)",
+    privacyS2Row2_2: "Cookieless analytics (Umami, Microsoft Clarity)",
     privacyS2Row2_3: "Understand which pages are visited; improve the site",
     privacyS2Row2_4: "Legitimate interest (Art. 6(1)(f) GDPR) — see §7",
     privacyS2Closure: "We do not collect names, phone numbers, payment information, IP addresses stored beyond session-level aggregation, or any special-category data under Art. 9 GDPR.",
@@ -146,7 +146,7 @@ export const translations = {
     privacyS3Sub1: "Consent — email address",
     privacyS3Para1: "When you enter your email and click \"Join Waitlist\", you give us explicit consent to contact you with beta launch announcements and product updates. Consent is the lawful basis under Art. 6(1)(a) GDPR. You may withdraw consent at any time by clicking the unsubscribe link in any email we send, or by emailing {{email}}. Withdrawal of consent does not affect the lawfulness of processing before withdrawal.",
     privacyS3Sub2: "Legitimate interest — analytics",
-    privacyS3Para2: "We use privacy-friendly analytics — Umami, Vercel Analytics, and Microsoft Clarity (in cookieless mode) — to understand how visitors use the site in aggregate. Device access (ePrivacy): these tools set no cookies and neither read from nor write to your terminal device, so they require no consent under the ePrivacy Directive. Data processing (GDPR): only aggregated, non-identifying usage data is processed, on the basis of our legitimate interest under Art. 6(1)(f) GDPR; you can object to this processing at any time by emailing us.",
+    privacyS3Para2: "We use privacy-friendly analytics — Umami and Microsoft Clarity (in cookieless mode) — to understand how visitors use the site in aggregate. Device access (ePrivacy): these tools set no cookies and neither read from nor write to your terminal device, so they require no consent under the ePrivacy Directive. Data processing (GDPR): only aggregated, non-identifying usage data is processed, on the basis of our legitimate interest under Art. 6(1)(f) GDPR; you can object to this processing at any time by emailing us.",
 
     // Section 4
     privacyS4Title: "Data processors and third parties",
@@ -171,21 +171,13 @@ export const translations = {
     privacyS4Row4Role: "Session replay and heatmaps — loaded only with your analytics consent",
     privacyS4Row4Data: "Interaction events and viewport data (set only after you grant analytics consent)",
     privacyS4Row4Loc: "United States",
-    privacyS4Row5Proc: "Vercel Analytics (Vercel Inc.)",
-    privacyS4Row5Role: "Page-view metrics — measures visit counts without setting cookies (loaded only with your analytics consent)",
-    privacyS4Row5Data: "Aggregated page-view counts, hashed visitor key (no cookies)",
-    privacyS4Row5Loc: "United States",
-    privacyS4Row6Proc: "Vercel Speed Insights (Vercel Inc.)",
-    privacyS4Row6Role: "Core Web Vitals measurement — page performance metrics (loaded only with your analytics consent)",
-    privacyS4Row6Data: "Performance timings only (no personal data, no cookies)",
-    privacyS4Row6Loc: "United States",
     privacyS4Closure: "We do not sell your data to any third party. We do not share your email address with advertisers.",
 
     // Section 5
     privacyS5Title: "International data transfers",
     privacyS5Intro: "Some of our processors are based in the United States. Transfers of personal data from the European Economic Area (EEA) or the United Kingdom (UK) to the United States are subject to appropriate safeguards:",
     privacyS5Bullet1: "Resend: Transfer is covered by Standard Contractual Clauses (SCCs) adopted by the European Commission under GDPR Art. 46(2)(c). Resend's Data Processing Agreement is available at resend.com/legal/dpa.",
-    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) and Vercel Analytics / Speed Insights (Vercel Inc.) are US-based and operate cookielessly. Transfers are safeguarded by Standard Contractual Clauses (SCCs) under GDPR Art. 46; Microsoft additionally participates in the EU–US Data Privacy Framework. Umami is hosted in the EU, so no transfer occurs.",
+    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) is US-based and operates cookielessly. Transfers are safeguarded by Standard Contractual Clauses (SCCs) under GDPR Art. 46; Microsoft additionally participates in the EU–US Data Privacy Framework. Umami is hosted in the EU, so no transfer occurs.",
     privacyS5Closure: "You may request a copy of the applicable SCCs by emailing {{email}}.",
 
     // Section 6
@@ -229,8 +221,8 @@ export const translations = {
     privacyS7Row7SetBy: "PromptQuorum (localStorage)",
     privacyS7Row7Purpose: "Remembers which machine type (Apple Silicon, discrete GPU, or CPU-only) you selected in the AI software directory, so the compatibility checker defaults to the same choice next time",
     privacyS7Row7Duration: "Until you clear browser data",
-    privacyS7Para2: "We do not use tracking pixels, fingerprinting, or third-party advertising cookies. Our analytics tools (Umami, Vercel Analytics, Microsoft Clarity) operate cookielessly and set no cookies on your device; no consent is required for them.",
-    privacyS7Para3: "Consent under the ePrivacy Directive (2002/58/EC): our analytics tools (Umami, Vercel Analytics, Microsoft Clarity) are cookieless and neither read from nor write to your terminal device, so they require no consent. For any non-essential device storage, we request your consent beforehand; you can change or withdraw it at any time via the \"Cookie Settings\" link in the footer. The competent supervisory authority is the Hessian Commissioner for Data Protection and Freedom of Information (Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI).",
+    privacyS7Para2: "We do not use tracking pixels, fingerprinting, or third-party advertising cookies. Our analytics tools (Umami, Microsoft Clarity) operate cookielessly and set no cookies on your device; no consent is required for them.",
+    privacyS7Para3: "Consent under the ePrivacy Directive (2002/58/EC): our analytics tools (Umami, Microsoft Clarity) are cookieless and neither read from nor write to your terminal device, so they require no consent. For any non-essential device storage, we request your consent beforehand; you can change or withdraw it at any time via the \"Cookie Settings\" link in the footer. The competent supervisory authority is the Hessian Commissioner for Data Protection and Freedom of Information (Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI).",
     privacyS7Para4: "When you save a hardware profile in the AI software directory, we may also record an anonymized, bucketed usage event (for example, \"RAM: 16–32 GB\") through the analytics tools above — never the exact figures you entered — and only if you have granted analytics consent.",
 
     // Section 8
@@ -443,7 +435,7 @@ export const translations = {
     privacyS2Row1_3: "Beta-Start-Benachrichtigung; Produkt-Update-E-Mails",
     privacyS2Row1_4: "Einwilligung (Art. 6(1)(a) DSGVO)",
     privacyS2Row2_1: "Anonyme Nutzungsanalytik",
-    privacyS2Row2_2: "Cookielose Analyse (Umami, Vercel Analytics, Microsoft Clarity)",
+    privacyS2Row2_2: "Cookielose Analyse (Umami, Microsoft Clarity)",
     privacyS2Row2_3: "Verstehen, welche Seiten besucht werden; Website verbessern",
     privacyS2Row2_4: "Berechtigtes Interesse (Art. 6(1)(f) DSGVO) — siehe §7",
     privacyS2Closure: "Wir sammeln keine Namen, Telefonnummern, Zahlungsinformationen, IP-Adressen, die über die Aggregation auf Sitzungsebene hinaus gespeichert werden, oder spezielle Kategorien von Daten gemäß Art. 9 DSGVO.",
@@ -453,7 +445,7 @@ export const translations = {
     privacyS3Sub1: "Einwilligung — E-Mail-Adresse",
     privacyS3Para1: "Wenn Sie Ihre E-Mail eingeben und auf \"Warteliste beitreten\" klicken, erteilen Sie uns ausdrückliche Zustimmung, Sie mit Beta-Start-Ankündigungen und Produkt-Updates zu kontaktieren. Die Einwilligung ist die rechtliche Grundlage nach Art. 6(1)(a) DSGVO. Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie auf den Abmeldelink in einer E-Mail klicken, die wir Ihnen senden, oder indem Sie uns unter {{email}} anschreiben. Der Widerruf der Einwilligung hat keine Auswirkungen auf die Rechtmäßigkeit der Verarbeitung vor dem Widerruf.",
     privacyS3Sub2: "Berechtigtes Interesse — Analytik",
-    privacyS3Para2: "Wir verwenden datenschutzfreundliche Analysewerkzeuge – Umami, Vercel Analytics und Microsoft Clarity (im cookielosen Modus) –, um die Nutzung der Website in aggregierter Form zu verstehen. Endgerätezugriff (§ 25 TDDDG): Diese Werkzeuge setzen keine Cookies und greifen weder lesend noch schreibend auf Ihr Endgerät zu, sodass hierfür keine Einwilligung nach § 25 TDDDG erforderlich ist. Datenverarbeitung (DSGVO): Verarbeitet werden ausschließlich aggregierte, nicht identifizierende Nutzungsdaten auf Grundlage unseres berechtigten Interesses gemäß Art. 6 Abs. 1 lit. f DSGVO; Sie können dieser Verarbeitung jederzeit per E-Mail widersprechen.",
+    privacyS3Para2: "Wir verwenden datenschutzfreundliche Analysewerkzeuge – Umami und Microsoft Clarity (im cookielosen Modus) –, um die Nutzung der Website in aggregierter Form zu verstehen. Endgerätezugriff (§ 25 TDDDG): Diese Werkzeuge setzen keine Cookies und greifen weder lesend noch schreibend auf Ihr Endgerät zu, sodass hierfür keine Einwilligung nach § 25 TDDDG erforderlich ist. Datenverarbeitung (DSGVO): Verarbeitet werden ausschließlich aggregierte, nicht identifizierende Nutzungsdaten auf Grundlage unseres berechtigten Interesses gemäß Art. 6 Abs. 1 lit. f DSGVO; Sie können dieser Verarbeitung jederzeit per E-Mail widersprechen.",
 
     // Section 4
     privacyS4Title: "Datenverarbeiter und Dritte",
@@ -478,21 +470,13 @@ export const translations = {
     privacyS4Row4Role: "Session-Aufzeichnung und Heatmaps – werden nur mit Ihrer Analyse-Einwilligung geladen",
     privacyS4Row4Data: "Interaktionsereignisse und Viewport-Daten (werden erst nach Ihrer Analyse-Einwilligung gesetzt)",
     privacyS4Row4Loc: "Vereinigte Staaten",
-    privacyS4Row5Proc: "Vercel Analytics (Vercel Inc.)",
-    privacyS4Row5Role: "Seitenaufruf-Metriken – misst Besucherzahlen ohne Cookies (wird nur mit Ihrer Analyse-Einwilligung geladen)",
-    privacyS4Row5Data: "Aggregierte Seitenaufruf-Zahlen, gehashter Besucherschlüssel (keine Cookies)",
-    privacyS4Row5Loc: "Vereinigte Staaten",
-    privacyS4Row6Proc: "Vercel Speed Insights (Vercel Inc.)",
-    privacyS4Row6Role: "Core-Web-Vitals-Messung – Leistungsmetriken der Seite (wird nur mit Ihrer Analyse-Einwilligung geladen)",
-    privacyS4Row6Data: "Nur Performance-Zeitmessungen (keine personenbezogenen Daten, keine Cookies)",
-    privacyS4Row6Loc: "Vereinigte Staaten",
     privacyS4Closure: "Wir verkaufen Ihre Daten nicht an Dritte. Wir geben Ihre E-Mail-Adresse nicht an Werbetreibende weiter.",
 
     // Section 5
     privacyS5Title: "Internationale Datenübertragungen",
     privacyS5Intro: "Einige unserer Verarbeiter sind in den USA ansässig. Übertragungen personenbezogener Daten aus dem Europäischen Wirtschaftsraum (EWR) oder dem Vereinigten Königreich (UK) in die USA unterliegen angemessenen Schutzmaßnahmen:",
     privacyS5Bullet1: "Resend: Die Übertragung wird durch Standardvertragsklauseln (SVK) abgedeckt, die von der Europäischen Kommission unter DSGVO Art. 46(2)(c) angenommen wurden. Die Datenverarbeitungsvereinbarung von Resend ist unter resend.com/legal/dpa verfügbar.",
-    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) und Vercel Analytics / Speed Insights (Vercel Inc.) haben ihren Sitz in den USA und arbeiten cookielos. Übermittlungen sind durch Standardvertragsklauseln (SVK) gemäß Art. 46 DSGVO abgesichert; Microsoft ist zusätzlich dem EU-USA-Datenschutzrahmen beigetreten. Umami wird in der EU gehostet, sodass keine Übermittlung stattfindet.",
+    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) hat seinen Sitz in den USA und arbeitet cookielos. Übermittlungen sind durch Standardvertragsklauseln (SVK) gemäß Art. 46 DSGVO abgesichert; Microsoft ist zusätzlich dem EU-USA-Datenschutzrahmen beigetreten. Umami wird in der EU gehostet, sodass keine Übermittlung stattfindet.",
     privacyS5Closure: "Sie können eine Kopie der geltenden SVK anfordern, indem Sie {{email}} eine E-Mail senden.",
 
     // Section 6
@@ -536,8 +520,8 @@ export const translations = {
     privacyS7Row7SetBy: "PromptQuorum (localStorage)",
     privacyS7Row7Purpose: "Merkt sich, welchen Gerätetyp (Apple Silicon, dedizierte GPU oder nur CPU) Sie im KI-Software-Verzeichnis ausgewählt haben, damit der Kompatibilitäts-Check diese Auswahl beim nächsten Mal vorschlägt",
     privacyS7Row7Duration: "Bis Sie Ihre Browserdaten löschen",
-    privacyS7Para2: "Wir verwenden keine Tracking-Pixel, kein Fingerprinting und keine Werbe-Cookies von Dritten. Unsere Analysewerkzeuge (Umami, Vercel Analytics, Microsoft Clarity) arbeiten cookielos und setzen keine Cookies auf Ihrem Gerät; eine Einwilligung ist hierfür nicht erforderlich.",
-    privacyS7Para3: "Einwilligung gemäß § 25 TDDDG (Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz, vormals TTDSG): Unsere Analysewerkzeuge (Umami, Vercel Analytics, Microsoft Clarity) arbeiten cookielos und greifen weder lesend noch schreibend auf Ihr Endgerät zu; hierfür ist keine Einwilligung nach § 25 TDDDG erforderlich. Für nicht-essentielle Speichertechnologien auf Ihrem Endgerät holen wir vorher Ihre Einwilligung ein; Sie können diese jederzeit über den Link \"Cookie-Einstellungen\" im Footer ändern oder widerrufen. Zuständige Aufsichtsbehörde ist der Hessische Beauftragte für Datenschutz und Informationsfreiheit (HBDI).",
+    privacyS7Para2: "Wir verwenden keine Tracking-Pixel, kein Fingerprinting und keine Werbe-Cookies von Dritten. Unsere Analysewerkzeuge (Umami, Microsoft Clarity) arbeiten cookielos und setzen keine Cookies auf Ihrem Gerät; eine Einwilligung ist hierfür nicht erforderlich.",
+    privacyS7Para3: "Einwilligung gemäß § 25 TDDDG (Telekommunikation-Digitale-Dienste-Datenschutz-Gesetz, vormals TTDSG): Unsere Analysewerkzeuge (Umami, Microsoft Clarity) arbeiten cookielos und greifen weder lesend noch schreibend auf Ihr Endgerät zu; hierfür ist keine Einwilligung nach § 25 TDDDG erforderlich. Für nicht-essentielle Speichertechnologien auf Ihrem Endgerät holen wir vorher Ihre Einwilligung ein; Sie können diese jederzeit über den Link \"Cookie-Einstellungen\" im Footer ändern oder widerrufen. Zuständige Aufsichtsbehörde ist der Hessische Beauftragte für Datenschutz und Informationsfreiheit (HBDI).",
     privacyS7Para4: "Wenn Sie ein Hardware-Profil im KI-Software-Verzeichnis speichern, erfassen wir über die oben genannten Analysewerkzeuge zusätzlich ein anonymisiertes, kategorisiertes Nutzungsereignis (z. B. \"RAM: 16–32 GB\") — niemals die von Ihnen eingegebenen genauen Werte — und nur, wenn Sie der Analyse zugestimmt haben.",
 
     // Section 8
@@ -758,7 +742,7 @@ export const translations = {
     privacyS2Row1_3: "Notification de lancement bêta; e-mails de mise à jour des produits",
     privacyS2Row1_4: "Consentement (Art. 6(1)(a) RGPD)",
     privacyS2Row2_1: "Analytique d'utilisation anonyme",
-    privacyS2Row2_2: "Analyse sans cookies (Umami, Vercel Analytics, Microsoft Clarity)",
+    privacyS2Row2_2: "Analyse sans cookies (Umami, Microsoft Clarity)",
     privacyS2Row2_3: "Comprendre quelles pages sont visitées; améliorer le site",
     privacyS2Row2_4: "Intérêt légitime (Art. 6(1)(f) RGPD) — voir §7",
     privacyS2Closure: "Nous ne collectons pas les noms, les numéros de téléphone, les informations de paiement, les adresses IP stockées au-delà de l'agrégation au niveau de la session, ou toute catégorie particulière de données en vertu de l'art. 9 RGPD.",
@@ -768,7 +752,7 @@ export const translations = {
     privacyS3Sub1: "Consentement — adresse e-mail",
     privacyS3Para1: "Lorsque vous entrez votre e-mail et cliquez sur \"Rejoindre la liste d'attente\", vous nous donnez un consentement explicite pour vous contacter avec les annonces de lancement bêta et les mises à jour de produits. Le consentement est le fondement juridique en vertu de l'art. 6(1)(a) RGPD. Vous pouvez retirer votre consentement à tout moment en cliquant sur le lien de désinscription dans tout e-mail que nous vous envoyons, ou en nous envoyant un e-mail à {{email}}. Le retrait du consentement n'affecte pas la licéité du traitement avant le retrait.",
     privacyS3Sub2: "Intérêt légitime — analytique",
-    privacyS3Para2: "Nous utilisons des outils d'analyse respectueux de la vie privée — Umami, Vercel Analytics et Microsoft Clarity (en mode sans cookies) — afin de comprendre, de manière agrégée, comment les visiteurs utilisent le site. Accès à l'appareil (ePrivacy) : ces outils ne déposent aucun cookie et n'effectuent aucune lecture ni écriture sur votre terminal, de sorte qu'aucun consentement n'est requis au titre de la directive ePrivacy. Traitement des données (RGPD) : seules des données d'utilisation agrégées et non identifiantes sont traitées, sur la base de notre intérêt légitime au titre de l'art. 6(1)(f) du RGPD ; vous pouvez vous opposer à ce traitement à tout moment en nous écrivant.",
+    privacyS3Para2: "Nous utilisons des outils d'analyse respectueux de la vie privée — Umami et Microsoft Clarity (en mode sans cookies) — afin de comprendre, de manière agrégée, comment les visiteurs utilisent le site. Accès à l'appareil (ePrivacy) : ces outils ne déposent aucun cookie et n'effectuent aucune lecture ni écriture sur votre terminal, de sorte qu'aucun consentement n'est requis au titre de la directive ePrivacy. Traitement des données (RGPD) : seules des données d'utilisation agrégées et non identifiantes sont traitées, sur la base de notre intérêt légitime au titre de l'art. 6(1)(f) du RGPD ; vous pouvez vous opposer à ce traitement à tout moment en nous écrivant.",
 
     // Section 4
     privacyS4Title: "Sous-traitants et tiers",
@@ -793,21 +777,13 @@ export const translations = {
     privacyS4Row4Role: "Relecture de session et cartes de chaleur — chargées uniquement avec votre consentement analytique",
     privacyS4Row4Data: "Événements d'interaction et données de fenêtre d'affichage (définis uniquement après votre consentement analytique)",
     privacyS4Row4Loc: "États-Unis",
-    privacyS4Row5Proc: "Vercel Analytics (Vercel Inc.)",
-    privacyS4Row5Role: "Métriques de pages vues — mesure les visites sans cookies (chargé uniquement avec votre consentement aux analyses)",
-    privacyS4Row5Data: "Comptages agrégés de pages vues, clé visiteur hachée (sans cookies)",
-    privacyS4Row5Loc: "États-Unis",
-    privacyS4Row6Proc: "Vercel Speed Insights (Vercel Inc.)",
-    privacyS4Row6Role: "Mesure des Core Web Vitals — métriques de performance de la page (chargé uniquement avec votre consentement aux analyses)",
-    privacyS4Row6Data: "Mesures de performance uniquement (aucune donnée personnelle, aucun cookie)",
-    privacyS4Row6Loc: "États-Unis",
     privacyS4Closure: "Nous ne vendons pas vos données à des tiers. Nous ne partageons pas votre adresse e-mail avec les annonceurs.",
 
     // Section 5
     privacyS5Title: "Transferts de données internationaux",
     privacyS5Intro: "Certains de nos sous-traitants sont basés aux États-Unis. Les transferts de données personnelles de l'Espace économique européen (EEE) ou du Royaume-Uni (RU) vers les États-Unis sont soumis à des garanties appropriées:",
     privacyS5Bullet1: "Resend: Le transfert est couvert par les clauses contractuelles types (CCT) adoptées par la Commission européenne en vertu de l'art. 46(2)(c) du RGPD. L'accord de traitement des données de Resend est disponible à resend.com/legal/dpa.",
-    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) et Vercel Analytics / Speed Insights (Vercel Inc.) sont basés aux États-Unis et fonctionnent sans cookies. Les transferts sont encadrés par les clauses contractuelles types (CCT) au titre de l'art. 46 du RGPD ; Microsoft adhère en outre au cadre de protection des données UE–États-Unis (EU–US Data Privacy Framework). Umami est hébergé dans l'UE, de sorte qu'aucun transfert n'a lieu.",
+    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) est basé aux États-Unis et fonctionne sans cookies. Les transferts sont encadrés par les clauses contractuelles types (CCT) au titre de l'art. 46 du RGPD ; Microsoft adhère en outre au cadre de protection des données UE–États-Unis (EU–US Data Privacy Framework). Umami est hébergé dans l'UE, de sorte qu'aucun transfert n'a lieu.",
     privacyS5Closure: "Vous pouvez demander une copie des CCT applicables en envoyant un e-mail à {{email}}.",
 
     // Section 6
@@ -851,8 +827,8 @@ export const translations = {
     privacyS7Row7SetBy: "PromptQuorum (localStorage)",
     privacyS7Row7Purpose: "Se souvient du type de machine (Apple Silicon, GPU dédié ou CPU uniquement) que vous avez sélectionné dans le répertoire de logiciels IA, afin que le vérificateur de compatibilité propose le même choix la prochaine fois",
     privacyS7Row7Duration: "Jusqu'à ce que vous effaciez les données de votre navigateur",
-    privacyS7Para2: "Nous n'utilisons pas de pixels de suivi, de prise d'empreinte numérique ni de cookies publicitaires tiers. Nos outils d'analyse (Umami, Vercel Analytics, Microsoft Clarity) fonctionnent sans cookies et ne déposent aucun cookie sur votre appareil ; aucun consentement n'est requis pour ces outils.",
-    privacyS7Para3: "Consentement au titre de la directive ePrivacy (2002/58/CE) : nos outils d'analyse (Umami, Vercel Analytics, Microsoft Clarity) fonctionnent sans cookies et n'effectuent aucune lecture ni écriture sur votre terminal ; aucun consentement n'est donc requis. Pour tout stockage non essentiel sur votre appareil, nous recueillons votre consentement au préalable ; vous pouvez le modifier ou le retirer à tout moment via le lien « Paramètres des cookies » dans le pied de page. L'autorité de contrôle compétente est le Commissaire de Hesse à la protection des données et à la liberté de l'information (Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI).",
+    privacyS7Para2: "Nous n'utilisons pas de pixels de suivi, de prise d'empreinte numérique ni de cookies publicitaires tiers. Nos outils d'analyse (Umami, Microsoft Clarity) fonctionnent sans cookies et ne déposent aucun cookie sur votre appareil ; aucun consentement n'est requis pour ces outils.",
+    privacyS7Para3: "Consentement au titre de la directive ePrivacy (2002/58/CE) : nos outils d'analyse (Umami, Microsoft Clarity) fonctionnent sans cookies et n'effectuent aucune lecture ni écriture sur votre terminal ; aucun consentement n'est donc requis. Pour tout stockage non essentiel sur votre appareil, nous recueillons votre consentement au préalable ; vous pouvez le modifier ou le retirer à tout moment via le lien « Paramètres des cookies » dans le pied de page. L'autorité de contrôle compétente est le Commissaire de Hesse à la protection des données et à la liberté de l'information (Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI).",
     privacyS7Para4: "Lorsque vous enregistrez un profil matériel dans le répertoire de logiciels IA, nous pouvons également enregistrer, via les outils d'analyse ci-dessus, un événement d'usage anonymisé et regroupé par tranches (par exemple « RAM : 16–32 Go ») — jamais les valeurs exactes que vous avez saisies — et uniquement si vous avez donné votre consentement pour l'analyse.",
 
     // Section 8
@@ -1065,7 +1041,7 @@ export const translations = {
     privacyS2Row1_3: "ベータ版起動通知; 製品更新メール",
     privacyS2Row1_4: "同意(GDPR第6条(1)(a))",
     privacyS2Row2_1: "匿名使用分析",
-    privacyS2Row2_2: "クッキーレス分析（Umami、Vercel Analytics、Microsoft Clarity）",
+    privacyS2Row2_2: "クッキーレス分析（Umami、Microsoft Clarity）",
     privacyS2Row2_3: "訪問されたページを理解する; サイトを改善する",
     privacyS2Row2_4: "正当な利益(GDPR第6条(1)(f)) — §7を参照",
     privacyS2Closure: "私たちは名前、電話番号、支払い情報、セッションレベルの集約を超えて保存されたIPアドレス、またはGDPR第9条の特別カテゴリーのデータを収集しません。",
@@ -1075,7 +1051,7 @@ export const translations = {
     privacyS3Sub1: "同意 — メールアドレス",
     privacyS3Para1: "メールを入力して\"ウェイティングリストに参加\"をクリックすると、ベータ版起動アナウンスと製品更新であなたに連絡する明示的な同意を与えます。同意はGDPR第6条(1)(a)に基づく法的根拠です。あなたが送信した電子メール内の登録解除リンクをクリックするか、{{email}}にメールを送信することで、いつでも同意を撤回できます。同意の撤回は、撤回前の処理の適法性に影響しません。",
     privacyS3Sub2: "正当な利益 — 分析",
-    privacyS3Para2: "当サイトでは、プライバシーに配慮した分析ツール（Umami、Vercel Analytics、Microsoft Clarity（クッキーレスモード））を使用し、訪問者のサイト利用状況を集計ベースで把握しています。端末へのアクセス（ePrivacy）：これらのツールはクッキーを一切設定せず、お客様の端末への読み取りも書き込みも行わないため、ePrivacy指令に基づく同意は必要ありません。データ処理（GDPR）：処理されるのは集計された識別不能な利用データのみであり、当社の正当な利益（GDPR第6条(1)(f)）に基づきます。この処理にはいつでもメールで異議を申し立てることができます。",
+    privacyS3Para2: "当サイトでは、プライバシーに配慮した分析ツール（Umami、Microsoft Clarity（クッキーレスモード））を使用し、訪問者のサイト利用状況を集計ベースで把握しています。端末へのアクセス（ePrivacy）：これらのツールはクッキーを一切設定せず、お客様の端末への読み取りも書き込みも行わないため、ePrivacy指令に基づく同意は必要ありません。データ処理（GDPR）：処理されるのは集計された識別不能な利用データのみであり、当社の正当な利益（GDPR第6条(1)(f)）に基づきます。この処理にはいつでもメールで異議を申し立てることができます。",
 
     // Section 4
     privacyS4Title: "データ処理業者と第三者",
@@ -1100,21 +1076,13 @@ export const translations = {
     privacyS4Row4Role: "セッションリプレイおよびヒートマップ — 分析の同意がある場合にのみ読み込まれます",
     privacyS4Row4Data: "操作イベントおよびビューポートデータ（分析への同意後にのみ設定されます）",
     privacyS4Row4Loc: "アメリカ合衆国",
-    privacyS4Row5Proc: "Vercel Analytics (Vercel Inc.)",
-    privacyS4Row5Role: "ページビュー指標 — クッキーを設定せず訪問数を計測（解析への同意があった場合のみ読み込み）",
-    privacyS4Row5Data: "集計ページビュー数、ハッシュ化された訪問者キー（クッキーなし）",
-    privacyS4Row5Loc: "アメリカ合衆国",
-    privacyS4Row6Proc: "Vercel Speed Insights (Vercel Inc.)",
-    privacyS4Row6Role: "Core Web Vitalsの測定 — ページパフォーマンス指標（解析への同意があった場合のみ読み込み）",
-    privacyS4Row6Data: "パフォーマンスタイミングのみ（個人データなし、クッキーなし）",
-    privacyS4Row6Loc: "アメリカ合衆国",
     privacyS4Closure: "私たちはあなたのデータを第三者に売却しません。あなたのメールアドレスを広告主と共有することはありません。",
 
     // Section 5
     privacyS5Title: "国際的なデータ転送",
     privacyS5Intro: "私たちの処理業者の一部は米国に拠点を置いています。ヨーロッパ経済地域(EEA)または英国(UK)から米国への個人データの転送には、適切な保護措置が適用されます:",
     privacyS5Bullet1: "Resend: 転送はGDPR第46条(2)(c)の下で欧州委員会により採択された標準契約条項(SCC)によってカバーされています。Resendのデータ処理契約はresend.com/legal/dpaで利用可能です。",
-    privacyS5Bullet2: "Microsoft Clarity（Microsoft Corporation）およびVercel Analytics / Speed Insights（Vercel Inc.）は米国に拠点を置き、クッキーレスで動作します。移転はGDPR第46条に基づく標準契約条項（SCC）によって保護されており、MicrosoftはさらにEU–米国データプライバシーフレームワーク（EU–US Data Privacy Framework）に参加しています。UmamiはEU内でホストされているため、移転は発生しません。",
+    privacyS5Bullet2: "Microsoft Clarity（Microsoft Corporation）は米国に拠点を置き、クッキーレスで動作します。移転はGDPR第46条に基づく標準契約条項（SCC）によって保護されており、MicrosoftはさらにEU–米国データプライバシーフレームワーク（EU–US Data Privacy Framework）に参加しています。UmamiはEU内でホストされているため、移転は発生しません。",
     privacyS5Closure: "{{email}}にメールを送信することで、適用されるSCCのコピーをリクエストできます。",
 
     // Section 6
@@ -1158,8 +1126,8 @@ export const translations = {
     privacyS7Row7SetBy: "PromptQuorum (localStorage)",
     privacyS7Row7Purpose: "AIソフトウェアディレクトリで選択したマシンタイプ（Apple Silicon、専用GPU、またはCPUのみ）を記憶し、互換性チェッカーが次回も同じ選択をデフォルトで表示できるようにします",
     privacyS7Row7Duration: "ブラウザデータを消去するまで",
-    privacyS7Para2: "当社はトラッキングピクセル、フィンガープリンティング、第三者の広告クッキーを使用していません。当社の分析ツール（Umami、Vercel Analytics、Microsoft Clarity）はクッキーレスで動作し、お客様の端末にクッキーを一切設定しないため、これらについて同意は必要ありません。",
-    privacyS7Para3: "ePrivacy指令（2002/58/EC）に基づく同意：当社の分析ツール（Umami、Vercel Analytics、Microsoft Clarity）はクッキーレスであり、お客様の端末への読み取りも書き込みも行わないため、同意は必要ありません。非必須の端末ストレージについては、事前にお客様の同意を取得します。同意はフッターの「Cookie設定」リンクからいつでも変更または撤回できます。所管の監督当局は、ヘッセン州データ保護・情報自由監督官（Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI）です。",
+    privacyS7Para2: "当社はトラッキングピクセル、フィンガープリンティング、第三者の広告クッキーを使用していません。当社の分析ツール（Umami、Microsoft Clarity）はクッキーレスで動作し、お客様の端末にクッキーを一切設定しないため、これらについて同意は必要ありません。",
+    privacyS7Para3: "ePrivacy指令（2002/58/EC）に基づく同意：当社の分析ツール（Umami、Microsoft Clarity）はクッキーレスであり、お客様の端末への読み取りも書き込みも行わないため、同意は必要ありません。非必須の端末ストレージについては、事前にお客様の同意を取得します。同意はフッターの「Cookie設定」リンクからいつでも変更または撤回できます。所管の監督当局は、ヘッセン州データ保護・情報自由監督官（Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI）です。",
     privacyS7Para4: "AIソフトウェアディレクトリでハードウェアプロファイルを保存すると、上記の分析ツールを通じて匿名化・区分化された利用イベント（例：「RAM：16〜32GB」）を記録する場合があります — 入力された正確な数値が記録されることはありません — また、分析への同意をいただいている場合に限ります。",
 
     // Section 8
@@ -1372,7 +1340,7 @@ export const translations = {
     privacyS2Row1_3: "测试版启动通知; 产品更新电子邮件",
     privacyS2Row1_4: "同意(GDPR第6条(1)(a))",
     privacyS2Row2_1: "匿名使用分析",
-    privacyS2Row2_2: "无Cookie分析（Umami、Vercel Analytics、Microsoft Clarity）",
+    privacyS2Row2_2: "无Cookie分析（Umami、Microsoft Clarity）",
     privacyS2Row2_3: "了解访问的页面; 改进网站",
     privacyS2Row2_4: "合法利益(GDPR第6条(1)(f)) — 参见§7",
     privacyS2Closure: "我们不收集姓名、电话号码、付款信息、超过会话级别汇总存储的IP地址或GDPR第9条下的任何特殊类别数据。",
@@ -1382,7 +1350,7 @@ export const translations = {
     privacyS3Sub1: "同意 — 电子邮件地址",
     privacyS3Para1: "当您输入电子邮件地址并点击\"加入候补名单\"时,您明确同意我们使用测试版启动公告和产品更新与您联系。同意是GDPR第6条(1)(a)下的法律依据。您可以通过点击我们发送给您的任何电子邮件中的取消订阅链接或向{{email}}发送电子邮件,随时撤回您的同意。撤回同意不影响撤回前处理的合法性。",
     privacyS3Sub2: "合法利益 — 分析",
-    privacyS3Para2: "我们使用注重隐私的分析工具（Umami、Vercel Analytics 和 Microsoft Clarity（无Cookie模式）），以汇总方式了解访问者如何使用本网站。设备访问（ePrivacy）：这些工具不设置任何Cookie，既不读取也不写入您的终端设备，因此依据ePrivacy指令无需征得同意。数据处理（GDPR）：仅处理汇总的、不可识别身份的使用数据，依据我们的合法利益（GDPR第6(1)(f)条）；您可以随时通过电子邮件反对此项处理。",
+    privacyS3Para2: "我们使用注重隐私的分析工具（Umami 和 Microsoft Clarity（无Cookie模式）），以汇总方式了解访问者如何使用本网站。设备访问（ePrivacy）：这些工具不设置任何Cookie，既不读取也不写入您的终端设备，因此依据ePrivacy指令无需征得同意。数据处理（GDPR）：仅处理汇总的、不可识别身份的使用数据，依据我们的合法利益（GDPR第6(1)(f)条）；您可以随时通过电子邮件反对此项处理。",
 
     // Section 4
     privacyS4Title: "数据处理人和第三方",
@@ -1407,21 +1375,13 @@ export const translations = {
     privacyS4Row4Role: "会话回放和热图——仅在您同意分析后加载",
     privacyS4Row4Data: "交互事件和视口数据（仅在您同意分析后设置）",
     privacyS4Row4Loc: "美利坚合众国",
-    privacyS4Row5Proc: "Vercel Analytics (Vercel Inc.)",
-    privacyS4Row5Role: "页面浏览指标——不设置 Cookie 即可统计访问量（仅在您同意分析后加载）",
-    privacyS4Row5Data: "聚合页面浏览次数、哈希访客标识（无 Cookie）",
-    privacyS4Row5Loc: "美利坚合众国",
-    privacyS4Row6Proc: "Vercel Speed Insights (Vercel Inc.)",
-    privacyS4Row6Role: "Core Web Vitals 测量——页面性能指标（仅在您同意分析后加载）",
-    privacyS4Row6Data: "仅性能时序数据（无个人数据，无 Cookie）",
-    privacyS4Row6Loc: "美利坚合众国",
     privacyS4Closure: "我们不向任何第三方出售您的数据。我们不与广告商分享您的电子邮件地址。",
 
     // Section 5
     privacyS5Title: "国际数据转移",
     privacyS5Intro: "我们的一些处理人位于美国。从欧洲经济区(EEA)或英国(UK)向美国转移个人数据受适当的保护措施约束:",
     privacyS5Bullet1: "Resend: 转移受欧盟委员会在GDPR第46条(2)(c)下采用的标准合同条款(SCC)的保护。Resend的数据处理协议可在resend.com/legal/dpa获取。",
-    privacyS5Bullet2: "Microsoft Clarity（Microsoft Corporation）和 Vercel Analytics / Speed Insights（Vercel Inc.）位于美国，以无Cookie方式运行。数据传输受GDPR第46条下的标准合同条款（SCC）保护；Microsoft还参与了欧盟–美国数据隐私框架（EU–US Data Privacy Framework）。Umami托管在欧盟境内，因此不发生数据传输。",
+    privacyS5Bullet2: "Microsoft Clarity（Microsoft Corporation）位于美国，以无Cookie方式运行。数据传输受GDPR第46条下的标准合同条款（SCC）保护；Microsoft还参与了欧盟–美国数据隐私框架（EU–US Data Privacy Framework）。Umami托管在欧盟境内，因此不发生数据传输。",
     privacyS5Closure: "您可以通过向{{email}}发送电子邮件来请求适用SCC的副本。",
 
     // Section 6
@@ -1465,8 +1425,8 @@ export const translations = {
     privacyS7Row7SetBy: "PromptQuorum (localStorage)",
     privacyS7Row7Purpose: "记住您在AI软件目录中选择的设备类型（Apple 芯片、独立显卡或仅CPU），以便兼容性检查器下次默认使用相同选择",
     privacyS7Row7Duration: "直到您清除浏览器数据",
-    privacyS7Para2: "我们不使用跟踪像素、指纹识别或第三方广告Cookie。我们的分析工具（Umami、Vercel Analytics、Microsoft Clarity）以无Cookie方式运行，不会在您的设备上设置任何Cookie；因此无需征得同意。",
-    privacyS7Para3: "依据ePrivacy指令（2002/58/EC）的同意：我们的分析工具（Umami、Vercel Analytics、Microsoft Clarity）不使用Cookie，既不读取也不写入您的终端设备，因此无需征得同意。对于任何非必要的设备存储，我们会事先征得您的同意；您可以随时通过页脚的\"Cookie 设置\"链接更改或撤回同意。主管监管机构是黑森州数据保护与信息自由专员（Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI）。",
+    privacyS7Para2: "我们不使用跟踪像素、指纹识别或第三方广告Cookie。我们的分析工具（Umami、Microsoft Clarity）以无Cookie方式运行，不会在您的设备上设置任何Cookie；因此无需征得同意。",
+    privacyS7Para3: "依据ePrivacy指令（2002/58/EC）的同意：我们的分析工具（Umami、Microsoft Clarity）不使用Cookie，既不读取也不写入您的终端设备，因此无需征得同意。对于任何非必要的设备存储，我们会事先征得您的同意；您可以随时通过页脚的\"Cookie 设置\"链接更改或撤回同意。主管监管机构是黑森州数据保护与信息自由专员（Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI）。",
     privacyS7Para4: "当您在AI软件目录中保存硬件配置时，我们可能会通过上述分析工具记录一个匿名化、分档处理的使用事件（例如\"RAM：16–32 GB\"）— 绝不会记录您输入的确切数值 — 且仅在您已同意分析Cookie的情况下才会记录。",
 
     // Section 8
@@ -1679,7 +1639,7 @@ export const translations = {
     privacyS2Row1_3: "Notificación de lanzamiento beta; emails de actualización del producto",
     privacyS2Row1_4: "Consentimiento (Art. 6(1)(a) RGPD)",
     privacyS2Row2_1: "Analítica de uso anónima",
-    privacyS2Row2_2: "Analítica sin cookies (Umami, Vercel Analytics, Microsoft Clarity)",
+    privacyS2Row2_2: "Analítica sin cookies (Umami, Microsoft Clarity)",
     privacyS2Row2_3: "Entender qué páginas se visitan; mejorar el sitio",
     privacyS2Row2_4: "Interés legítimo (Art. 6(1)(f) RGPD) — ver §7",
     privacyS2Closure: "No recopilamos nombres, números de teléfono, información de pago, direcciones IP almacenadas más allá de la agregación a nivel de sesión, ni datos de categorías especiales según el Art. 9 del RGPD.",
@@ -1689,7 +1649,7 @@ export const translations = {
     privacyS3Sub1: "Consentimiento — dirección de email",
     privacyS3Para1: "Cuando introduces tu email y haces clic en \"Unirse a la lista de espera\", nos das consentimiento explícito para contactarte con anuncios de lanzamiento beta y actualizaciones del producto. El consentimiento es la base jurídica según el Art. 6(1)(a) del RGPD. Puedes retirar el consentimiento en cualquier momento haciendo clic en el enlace de cancelación de suscripción de cualquier email que te enviemos, o enviando un email a {{email}}. La retirada del consentimiento no afecta a la licitud del tratamiento anterior.",
     privacyS3Sub2: "Interés legítimo — analítica",
-    privacyS3Para2: "Utilizamos herramientas de analítica respetuosas con la privacidad —Umami, Vercel Analytics y Microsoft Clarity (en modo sin cookies)— para entender de forma agregada cómo usan el sitio los visitantes. Acceso al dispositivo (ePrivacy): estas herramientas no establecen ninguna cookie y no leen ni escriben en tu dispositivo, por lo que no requieren consentimiento en virtud de la Directiva ePrivacy. Tratamiento de datos (RGPD): solo se tratan datos de uso agregados y no identificativos, sobre la base de nuestro interés legítimo (art. 6(1)(f) del RGPD); puedes oponerte a este tratamiento en cualquier momento escribiéndonos un correo.",
+    privacyS3Para2: "Utilizamos herramientas de analítica respetuosas con la privacidad —Umami y Microsoft Clarity (en modo sin cookies)— para entender de forma agregada cómo usan el sitio los visitantes. Acceso al dispositivo (ePrivacy): estas herramientas no establecen ninguna cookie y no leen ni escriben en tu dispositivo, por lo que no requieren consentimiento en virtud de la Directiva ePrivacy. Tratamiento de datos (RGPD): solo se tratan datos de uso agregados y no identificativos, sobre la base de nuestro interés legítimo (art. 6(1)(f) del RGPD); puedes oponerte a este tratamiento en cualquier momento escribiéndonos un correo.",
 
     // Section 4
     privacyS4Title: "Encargados del tratamiento y terceros",
@@ -1714,21 +1674,13 @@ export const translations = {
     privacyS4Row4Role: "Reproducción de sesiones y mapas de calor — se cargan únicamente con su consentimiento de analítica",
     privacyS4Row4Data: "Eventos de interacción y datos de viewport (se establecen solo tras su consentimiento de analítica)",
     privacyS4Row4Loc: "Estados Unidos",
-    privacyS4Row5Proc: "Vercel Analytics (Vercel Inc.)",
-    privacyS4Row5Role: "Métricas de vistas de página — mide visitas sin establecer cookies (cargado solo con tu consentimiento de analítica)",
-    privacyS4Row5Data: "Conteos de vistas de página agregados, clave de visitante hasheada (sin cookies)",
-    privacyS4Row5Loc: "Estados Unidos",
-    privacyS4Row6Proc: "Vercel Speed Insights (Vercel Inc.)",
-    privacyS4Row6Role: "Medición de Core Web Vitals — métricas de rendimiento de página (cargado solo con tu consentimiento de analítica)",
-    privacyS4Row6Data: "Solo tiempos de rendimiento (sin datos personales, sin cookies)",
-    privacyS4Row6Loc: "Estados Unidos",
     privacyS4Closure: "No vendemos tus datos a terceros. No compartimos tu dirección de email con anunciantes.",
 
     // Section 5
     privacyS5Title: "Transferencias internacionales de datos",
     privacyS5Intro: "Algunos de nuestros encargados del tratamiento tienen su sede en Estados Unidos. Las transferencias de datos personales desde el Espacio Económico Europeo (EEE) o el Reino Unido (RU) a Estados Unidos están sujetas a garantías adecuadas:",
     privacyS5Bullet1: "Resend: la transferencia está cubierta por Cláusulas Contractuales Tipo (CCT) adoptadas por la Comisión Europea en virtud del Art. 46(2)(c) del RGPD. El Acuerdo de Tratamiento de Datos de Resend está disponible en resend.com/legal/dpa.",
-    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) y Vercel Analytics / Speed Insights (Vercel Inc.) tienen su sede en Estados Unidos y funcionan sin cookies. Las transferencias están protegidas por las cláusulas contractuales tipo (CCT) en virtud del art. 46 del RGPD; además, Microsoft participa en el Marco de Privacidad de Datos UE–EE. UU. (EU–US Data Privacy Framework). Umami está alojado en la UE, por lo que no se produce ninguna transferencia.",
+    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) tiene su sede en Estados Unidos y funciona sin cookies. Las transferencias están protegidas por las cláusulas contractuales tipo (CCT) en virtud del art. 46 del RGPD; además, Microsoft participa en el Marco de Privacidad de Datos UE–EE. UU. (EU–US Data Privacy Framework). Umami está alojado en la UE, por lo que no se produce ninguna transferencia.",
     privacyS5Closure: "Puedes solicitar una copia de las CCT aplicables enviando un email a {{email}}.",
 
     // Section 6
@@ -1772,8 +1724,8 @@ export const translations = {
     privacyS7Row7SetBy: "PromptQuorum (localStorage)",
     privacyS7Row7Purpose: "Recuerda el tipo de equipo (Apple Silicon, GPU dedicada o solo CPU) que seleccionaste en el directorio de software de IA, para que el verificador de compatibilidad proponga la misma opción la próxima vez",
     privacyS7Row7Duration: "Hasta que borres los datos del navegador",
-    privacyS7Para2: "No utilizamos píxeles de rastreo, fingerprinting ni cookies publicitarias de terceros. Nuestras herramientas de analítica (Umami, Vercel Analytics, Microsoft Clarity) funcionan sin cookies y no establecen ninguna cookie en tu dispositivo; no se requiere consentimiento para ellas.",
-    privacyS7Para3: "Consentimiento en virtud de la Directiva ePrivacy (2002/58/CE): nuestras herramientas de analítica (Umami, Vercel Analytics, Microsoft Clarity) funcionan sin cookies y no leen ni escriben en tu dispositivo, por lo que no requieren consentimiento. Para cualquier almacenamiento no esencial en tu dispositivo, solicitamos tu consentimiento previo; puedes cambiarlo o retirarlo en cualquier momento desde el enlace \"Configuración de cookies\" en el pie de página. La autoridad supervisora competente es el Comisionado de Hesse para la Protección de Datos y la Libertad de Información (Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI).",
+    privacyS7Para2: "No utilizamos píxeles de rastreo, fingerprinting ni cookies publicitarias de terceros. Nuestras herramientas de analítica (Umami, Microsoft Clarity) funcionan sin cookies y no establecen ninguna cookie en tu dispositivo; no se requiere consentimiento para ellas.",
+    privacyS7Para3: "Consentimiento en virtud de la Directiva ePrivacy (2002/58/CE): nuestras herramientas de analítica (Umami, Microsoft Clarity) funcionan sin cookies y no leen ni escriben en tu dispositivo, por lo que no requieren consentimiento. Para cualquier almacenamiento no esencial en tu dispositivo, solicitamos tu consentimiento previo; puedes cambiarlo o retirarlo en cualquier momento desde el enlace \"Configuración de cookies\" en el pie de página. La autoridad supervisora competente es el Comisionado de Hesse para la Protección de Datos y la Libertad de Información (Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI).",
     privacyS7Para4: "Cuando guardas un perfil de hardware en el directorio de software de IA, también podemos registrar, mediante las herramientas de analítica anteriores, un evento de uso anonimizado y agrupado por rangos (por ejemplo, «RAM: 16–32 GB») — nunca las cifras exactas que introdujiste — y solo si has otorgado tu consentimiento para la analítica.",
 
     // Section 8
@@ -1986,7 +1938,7 @@ export const translations = {
     privacyS2Row1_3: "Notificação de lançamento beta; e-mails de atualização do produto",
     privacyS2Row1_4: "Consentimento (Art. 6(1)(a) GDPR / Art. 7 LGPD)",
     privacyS2Row2_1: "Análise de uso anônima",
-    privacyS2Row2_2: "Análise sem cookies (Umami, Vercel Analytics, Microsoft Clarity)",
+    privacyS2Row2_2: "Análise sem cookies (Umami, Microsoft Clarity)",
     privacyS2Row2_3: "Entender quais páginas são visitadas; melhorar o site",
     privacyS2Row2_4: "Interesse legítimo (Art. 6(1)(f) GDPR / Art. 10 LGPD) — ver §7",
     privacyS2Closure: "Não coletamos nomes, números de telefone, informações de pagamento, endereços IP armazenados além da agregação em nível de sessão, nem dados de categorias especiais nos termos do Art. 9 do GDPR / Art. 11 da LGPD.",
@@ -1996,7 +1948,7 @@ export const translations = {
     privacyS3Sub1: "Consentimento — endereço de e-mail",
     privacyS3Para1: "Quando você insere seu e-mail e clica em \"Entrar na lista de espera\", nos dá consentimento explícito para contatá-lo com anúncios de lançamento beta e atualizações do produto. O consentimento é a base jurídica nos termos do Art. 6(1)(a) do GDPR e do Art. 7 da LGPD. Você pode retirar o consentimento a qualquer momento clicando no link de cancelamento de inscrição em qualquer e-mail que enviamos, ou enviando um e-mail para {{email}}. A retirada do consentimento não afeta a licitude do tratamento anterior.",
     privacyS3Sub2: "Interesse legítimo — análise",
-    privacyS3Para2: "Usamos ferramentas de análise que respeitam a privacidade — Umami, Vercel Analytics e Microsoft Clarity (em modo sem cookies) — para entender, de forma agregada, como os visitantes usam o site. Acesso ao dispositivo (ePrivacy): essas ferramentas não definem nenhum cookie e não leem nem gravam no seu dispositivo, portanto não exigem consentimento nos termos da Diretiva ePrivacy. Tratamento de dados (GDPR): são tratados apenas dados de uso agregados e não identificáveis, com base em nosso interesse legítimo (art. 6(1)(f) do GDPR); você pode se opor a esse tratamento a qualquer momento enviando um e-mail para nós.",
+    privacyS3Para2: "Usamos ferramentas de análise que respeitam a privacidade — Umami e Microsoft Clarity (em modo sem cookies) — para entender, de forma agregada, como os visitantes usam o site. Acesso ao dispositivo (ePrivacy): essas ferramentas não definem nenhum cookie e não leem nem gravam no seu dispositivo, portanto não exigem consentimento nos termos da Diretiva ePrivacy. Tratamento de dados (GDPR): são tratados apenas dados de uso agregados e não identificáveis, com base em nosso interesse legítimo (art. 6(1)(f) do GDPR); você pode se opor a esse tratamento a qualquer momento enviando um e-mail para nós.",
 
     // Section 4
     privacyS4Title: "Processadores de dados e terceiros",
@@ -2021,21 +1973,13 @@ export const translations = {
     privacyS4Row4Role: "Reprodução de sessões e mapas de calor — carregadas apenas com o seu consentimento de análise",
     privacyS4Row4Data: "Eventos de interação e dados de viewport (definidos apenas após o seu consentimento de análise)",
     privacyS4Row4Loc: "Estados Unidos",
-    privacyS4Row5Proc: "Vercel Analytics (Vercel Inc.)",
-    privacyS4Row5Role: "Métricas de visualização de página — mede contagens de visitas sem definir cookies (carregado apenas com seu consentimento de análise)",
-    privacyS4Row5Data: "Contagens de visualização de página agregadas, chave de visitante com hash (sem cookies)",
-    privacyS4Row5Loc: "Estados Unidos",
-    privacyS4Row6Proc: "Vercel Speed Insights (Vercel Inc.)",
-    privacyS4Row6Role: "Medição de Core Web Vitals — métricas de desempenho de página (carregado apenas com seu consentimento de análise)",
-    privacyS4Row6Data: "Apenas tempos de desempenho (sem dados pessoais, sem cookies)",
-    privacyS4Row6Loc: "Estados Unidos",
     privacyS4Closure: "Não vendemos seus dados a terceiros. Não compartilhamos seu endereço de e-mail com anunciantes.",
 
     // Section 5
     privacyS5Title: "Transferências internacionais de dados",
     privacyS5Intro: "Alguns de nossos processadores estão sediados nos Estados Unidos. As transferências de dados pessoais da Área Econômica Europeia (AEE) ou do Reino Unido (RU) para os Estados Unidos estão sujeitas a salvaguardas adequadas:",
     privacyS5Bullet1: "Resend: a transferência é coberta por Cláusulas Contratuais Padrão (CCPs) adotadas pela Comissão Europeia nos termos do Art. 46(2)(c) do GDPR. O Contrato de Processamento de Dados da Resend está disponível em resend.com/legal/dpa.",
-    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) e Vercel Analytics / Speed Insights (Vercel Inc.) ficam nos Estados Unidos e operam sem cookies. As transferências são protegidas por cláusulas contratuais padrão (SCCs) nos termos do art. 46 do GDPR; além disso, a Microsoft participa do Quadro de Privacidade de Dados UE–EUA (EU–US Data Privacy Framework). O Umami é hospedado na UE, portanto nenhuma transferência ocorre.",
+    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) fica nos Estados Unidos e opera sem cookies. As transferências são protegidas por cláusulas contratuais padrão (SCCs) nos termos do art. 46 do GDPR; além disso, a Microsoft participa do Quadro de Privacidade de Dados UE–EUA (EU–US Data Privacy Framework). O Umami é hospedado na UE, portanto nenhuma transferência ocorre.",
     privacyS5Closure: "Você pode solicitar uma cópia das CCPs aplicáveis enviando um e-mail para {{email}}.",
 
     // Section 6
@@ -2079,8 +2023,8 @@ export const translations = {
     privacyS7Row7SetBy: "PromptQuorum (localStorage)",
     privacyS7Row7Purpose: "Lembra qual tipo de máquina (Apple Silicon, GPU dedicada ou somente CPU) você selecionou no diretório de software de IA, para que o verificador de compatibilidade sugira a mesma opção na próxima vez",
     privacyS7Row7Duration: "Até você limpar os dados do navegador",
-    privacyS7Para2: "Não usamos pixels de rastreamento, fingerprinting nem cookies de publicidade de terceiros. Nossas ferramentas de análise (Umami, Vercel Analytics, Microsoft Clarity) operam sem cookies e não definem nenhum cookie no seu dispositivo; nenhum consentimento é necessário para elas.",
-    privacyS7Para3: "Consentimento nos termos da Diretiva ePrivacy (2002/58/CE): nossas ferramentas de análise (Umami, Vercel Analytics, Microsoft Clarity) funcionam sem cookies e não leem nem gravam no seu dispositivo, portanto não exigem consentimento. Para qualquer armazenamento não essencial no seu dispositivo, solicitamos seu consentimento previamente; você pode alterá-lo ou retirá-lo a qualquer momento pelo link \"Configurações de cookies\" no rodapé. A autoridade de controle competente é o Comissário de Hesse para a Proteção de Dados e a Liberdade de Informação (Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI).",
+    privacyS7Para2: "Não usamos pixels de rastreamento, fingerprinting nem cookies de publicidade de terceiros. Nossas ferramentas de análise (Umami, Microsoft Clarity) operam sem cookies e não definem nenhum cookie no seu dispositivo; nenhum consentimento é necessário para elas.",
+    privacyS7Para3: "Consentimento nos termos da Diretiva ePrivacy (2002/58/CE): nossas ferramentas de análise (Umami, Microsoft Clarity) funcionam sem cookies e não leem nem gravam no seu dispositivo, portanto não exigem consentimento. Para qualquer armazenamento não essencial no seu dispositivo, solicitamos seu consentimento previamente; você pode alterá-lo ou retirá-lo a qualquer momento pelo link \"Configurações de cookies\" no rodapé. A autoridade de controle competente é o Comissário de Hesse para a Proteção de Dados e a Liberdade de Informação (Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI).",
     privacyS7Para4: "Quando você salva um perfil de hardware no diretório de software de IA, também podemos registrar, por meio das ferramentas de análise acima, um evento de uso anonimizado e agrupado por faixas (por exemplo, \"RAM: 16–32 GB\") — nunca os valores exatos que você inseriu — e somente se você tiver dado consentimento para análise.",
 
     // Section 8
@@ -2293,7 +2237,7 @@ export const translations = {
     privacyS2Row1_3: "إشعار إطلاق النسخة التجريبية؛ رسائل بريد إلكتروني بتحديثات المنتج",
     privacyS2Row1_4: "الموافقة (المادة 6(1)(أ) RGPD)",
     privacyS2Row2_1: "تحليلات استخدام مجهولة الهوية",
-    privacyS2Row2_2: "تحليلات بدون ملفات تعريف الارتباط (Umami وVercel Analytics وMicrosoft Clarity)",
+    privacyS2Row2_2: "تحليلات بدون ملفات تعريف الارتباط (Umami وMicrosoft Clarity)",
     privacyS2Row2_3: "فهم الصفحات التي يُزارها؛ تحسين الموقع",
     privacyS2Row2_4: "المصلحة المشروعة (المادة 6(1)(و) RGPD) — انظر §7",
     privacyS2Closure: "لا نجمع أسماء أو أرقام هاتف أو معلومات دفع أو عناوين IP مخزَّنة تتجاوز التجميع على مستوى الجلسة، ولا بيانات من الفئات الخاصة بموجب المادة 9 من RGPD.",
@@ -2303,7 +2247,7 @@ export const translations = {
     privacyS3Sub1: "الموافقة — عنوان البريد الإلكتروني",
     privacyS3Para1: "عندما تُدخل بريدك الإلكتروني وتنقر على \"الانضمام إلى قائمة الانتظار\"، تمنحنا موافقة صريحة للتواصل معك بشأن إعلانات إطلاق النسخة التجريبية وتحديثات المنتج. الموافقة هي الأساس القانوني بموجب المادة 6(1)(أ) من RGPD. يمكنك سحب الموافقة في أي وقت بالنقر على رابط إلغاء الاشتراك في أي بريد إلكتروني نرسله إليك، أو بإرسال بريد إلكتروني إلى {{email}}. لا يؤثر سحب الموافقة في مشروعية المعالجة السابقة.",
     privacyS3Sub2: "المصلحة المشروعة — التحليلات",
-    privacyS3Para2: "نستخدم أدوات تحليلات تحترم الخصوصية — Umami وVercel Analytics وMicrosoft Clarity (في وضع بدون ملفات تعريف الارتباط) — لفهم كيفية استخدام الزوار للموقع بصورة مجمَّعة. الوصول إلى الجهاز (ePrivacy): لا تُعيِّن هذه الأدوات أي ملفات تعريف ارتباط ولا تقرأ من جهازك ولا تكتب عليه، لذا لا تستلزم موافقة بموجب توجيه ePrivacy. معالجة البيانات (RGPD): تُعالَج فقط بيانات استخدام مجمَّعة وغير معرِّفة، استنادًا إلى مصلحتنا المشروعة (المادة 6(1)(و) من RGPD)؛ يمكنك الاعتراض على هذه المعالجة في أي وقت بمراسلتنا.",
+    privacyS3Para2: "نستخدم أدوات تحليلات تحترم الخصوصية — Umami وMicrosoft Clarity (في وضع بدون ملفات تعريف الارتباط) — لفهم كيفية استخدام الزوار للموقع بصورة مجمَّعة. الوصول إلى الجهاز (ePrivacy): لا تُعيِّن هذه الأدوات أي ملفات تعريف ارتباط ولا تقرأ من جهازك ولا تكتب عليه، لذا لا تستلزم موافقة بموجب توجيه ePrivacy. معالجة البيانات (RGPD): تُعالَج فقط بيانات استخدام مجمَّعة وغير معرِّفة، استنادًا إلى مصلحتنا المشروعة (المادة 6(1)(و) من RGPD)؛ يمكنك الاعتراض على هذه المعالجة في أي وقت بمراسلتنا.",
 
     // Section 4
     privacyS4Title: "المعالجون المفوَّضون والأطراف الثالثة",
@@ -2328,21 +2272,13 @@ export const translations = {
     privacyS4Row4Role: "إعادة تشغيل الجلسات وخرائط الحرارة — تُحمَّل فقط بموافقتك على التحليلات",
     privacyS4Row4Data: "أحداث التفاعل وبيانات نافذة العرض (تُعيَّن فقط بعد موافقتك على التحليلات)",
     privacyS4Row4Loc: "الولايات المتحدة",
-    privacyS4Row5Proc: "Vercel Analytics (Vercel Inc.)",
-    privacyS4Row5Role: "مقاييس مشاهدات الصفحات — تقيس الزيارات دون تعيين ملفات تعريف ارتباط (تُحمَّل فقط بموافقتك على التحليلات)",
-    privacyS4Row5Data: "إحصاءات مشاهدات الصفحات المجمَّعة، مفتاح الزائر المشفَّر (بدون ملفات تعريف ارتباط)",
-    privacyS4Row5Loc: "الولايات المتحدة",
-    privacyS4Row6Proc: "Vercel Speed Insights (Vercel Inc.)",
-    privacyS4Row6Role: "قياس Core Web Vitals — مقاييس أداء الصفحة (تُحمَّل فقط بموافقتك على التحليلات)",
-    privacyS4Row6Data: "أوقات الأداء فقط (بدون بيانات شخصية، بدون ملفات تعريف ارتباط)",
-    privacyS4Row6Loc: "الولايات المتحدة",
     privacyS4Closure: "لا نبيع بياناتك لأطراف ثالثة. لا نشارك عنوان بريدك الإلكتروني مع المعلنين.",
 
     // Section 5
     privacyS5Title: "النقل الدولي للبيانات",
     privacyS5Intro: "يتخذ بعض معالجينا المفوَّضين من الولايات المتحدة مقرًا لهم. تخضع نقلات البيانات الشخصية من المنطقة الاقتصادية الأوروبية (EEE) أو المملكة المتحدة إلى الولايات المتحدة لضمانات مناسبة:",
     privacyS5Bullet1: "Resend: النقل مشمول بالبنود التعاقدية القياسية (CCT) المعتمدة من المفوضية الأوروبية بموجب المادة 46(2)(ج) من RGPD. اتفاقية معالجة بيانات Resend متاحة على resend.com/legal/dpa.",
-    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) وVercel Analytics / Speed Insights (Vercel Inc.) متخذان من الولايات المتحدة مقرًا ويعملان بدون ملفات تعريف ارتباط. النقلات محمية بالبنود التعاقدية القياسية (CCT) بموجب المادة 46 من RGPD؛ علاوةً على ذلك، تشارك Microsoft في إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة (EU–US Data Privacy Framework). Umami مستضاف في الاتحاد الأوروبي، لذلك لا يحدث أي نقل.",
+    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) متخذة من الولايات المتحدة مقرًا وتعمل بدون ملفات تعريف ارتباط. النقلات محمية بالبنود التعاقدية القياسية (CCT) بموجب المادة 46 من RGPD؛ علاوةً على ذلك، تشارك Microsoft في إطار خصوصية البيانات بين الاتحاد الأوروبي والولايات المتحدة (EU–US Data Privacy Framework). Umami مستضاف في الاتحاد الأوروبي، لذلك لا يحدث أي نقل.",
     privacyS5Closure: "يمكنك طلب نسخة من CCT المعمول بها بإرسال بريد إلكتروني إلى {{email}}.",
 
     // Section 6
@@ -2386,8 +2322,8 @@ export const translations = {
     privacyS7Row7SetBy: "PromptQuorum (localStorage)",
     privacyS7Row7Purpose: "يتذكر نوع الجهاز (Apple Silicon أو بطاقة رسومات مخصصة أو معالج فقط) الذي اخترته في دليل برامج الذكاء الاصطناعي، حتى تقترح أداة فحص التوافق نفس الاختيار في المرة القادمة",
     privacyS7Row7Duration: "حتى تمسح بيانات المتصفح",
-    privacyS7Para2: "لا نستخدم بكسلات تتبع أو بصمات رقمية أو ملفات تعريف ارتباط إعلانية من أطراف ثالثة. تعمل أدوات التحليلات لدينا (Umami وVercel Analytics وMicrosoft Clarity) بدون ملفات تعريف ارتباط ولا تُعيِّن أي ملف تعريف ارتباط على جهازك؛ لا تستلزم موافقة عليها.",
-    privacyS7Para3: "الموافقة بموجب توجيه ePrivacy (2002/58/CE): تعمل أدوات التحليلات لدينا (Umami وVercel Analytics وMicrosoft Clarity) بدون ملفات تعريف ارتباط ولا تقرأ من جهازك ولا تكتب عليه، لذا لا تستلزم موافقة. لأي تخزين غير أساسي على جهازك، نطلب موافقتك المسبقة؛ يمكنك تغييرها أو سحبها في أي وقت من رابط \"إعدادات ملفات تعريف الارتباط\" في تذييل الصفحة. السلطة الإشرافية المختصة هي مفوض هيسن لحماية البيانات وحرية المعلومات (Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI).",
+    privacyS7Para2: "لا نستخدم بكسلات تتبع أو بصمات رقمية أو ملفات تعريف ارتباط إعلانية من أطراف ثالثة. تعمل أدوات التحليلات لدينا (Umami وMicrosoft Clarity) بدون ملفات تعريف ارتباط ولا تُعيِّن أي ملف تعريف ارتباط على جهازك؛ لا تستلزم موافقة عليها.",
+    privacyS7Para3: "الموافقة بموجب توجيه ePrivacy (2002/58/CE): تعمل أدوات التحليلات لدينا (Umami وMicrosoft Clarity) بدون ملفات تعريف ارتباط ولا تقرأ من جهازك ولا تكتب عليه، لذا لا تستلزم موافقة. لأي تخزين غير أساسي على جهازك، نطلب موافقتك المسبقة؛ يمكنك تغييرها أو سحبها في أي وقت من رابط \"إعدادات ملفات تعريف الارتباط\" في تذييل الصفحة. السلطة الإشرافية المختصة هي مفوض هيسن لحماية البيانات وحرية المعلومات (Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI).",
     privacyS7Para4: "عند حفظ ملف تعريف للأجهزة في دليل برامج الذكاء الاصطناعي، قد نسجّل أيضًا عبر أدوات التحليلات المذكورة أعلاه حدث استخدام مجهول الهوية ومُصنَّف ضمن فئات (مثل \"RAM: 16–32 GB\") — ولا نسجّل أبدًا القيم الدقيقة التي أدخلتها — وذلك فقط في حال منحت موافقتك على التحليلات.",
 
     // Section 8
@@ -2600,7 +2536,7 @@ export const translations = {
     privacyS2Row1_3: "베타 출시 알림, 제품 업데이트 이메일",
     privacyS2Row1_4: "동의(GDPR 제6조 제1항 (a)호)",
     privacyS2Row2_1: "익명 사용 분석",
-    privacyS2Row2_2: "쿠키 없는 분석(Umami, Vercel Analytics, Microsoft Clarity)",
+    privacyS2Row2_2: "쿠키 없는 분석(Umami, Microsoft Clarity)",
     privacyS2Row2_3: "방문 페이지 파악, 사이트 개선",
     privacyS2Row2_4: "정당한 이익(GDPR 제6조 제1항 (f)호) — §7 참조",
     privacyS2Closure: "당사는 이름, 전화번호, 결제 정보, 세션 수준 집계를 초과하여 저장된 IP 주소 또는 GDPR 제9조에 따른 특수 카테고리 데이터를 수집하지 않습니다.",
@@ -2610,7 +2546,7 @@ export const translations = {
     privacyS3Sub1: "동의 — 이메일 주소",
     privacyS3Para1: "이메일을 입력하고 \"대기자 명단 등록\"을 클릭하면 베타 출시 공지 및 제품 업데이트에 대한 명시적 동의를 제공하는 것입니다. 동의는 GDPR 제6조 제1항 (a)호에 따른 법적 근거입니다. 당사가 보내는 이메일의 수신 거부 링크를 클릭하거나 {{email}}로 이메일을 보내 언제든지 동의를 철회할 수 있습니다. 동의 철회는 철회 전 처리의 적법성에 영향을 미치지 않습니다.",
     privacyS3Sub2: "정당한 이익 — 분석",
-    privacyS3Para2: "당사는 집계 방식으로 방문자가 사이트를 사용하는 방법을 이해하기 위해 개인 정보 보호 친화적 분석 도구(Umami, Vercel Analytics, Microsoft Clarity(쿠키 없는 모드))를 사용합니다. 기기 접근(ePrivacy): 이 도구들은 쿠키를 설정하지 않으며 단말 기기에서 읽거나 쓰지 않으므로 ePrivacy 지침에 따른 동의가 필요하지 않습니다. 데이터 처리(GDPR): GDPR 제6조 제1항 (f)호에 따른 당사의 정당한 이익을 근거로 집계된 비식별 사용 데이터만 처리됩니다. 언제든지 이메일로 이 처리에 이의를 제기할 수 있습니다.",
+    privacyS3Para2: "당사는 집계 방식으로 방문자가 사이트를 사용하는 방법을 이해하기 위해 개인 정보 보호 친화적 분석 도구(Umami, Microsoft Clarity(쿠키 없는 모드))를 사용합니다. 기기 접근(ePrivacy): 이 도구들은 쿠키를 설정하지 않으며 단말 기기에서 읽거나 쓰지 않으므로 ePrivacy 지침에 따른 동의가 필요하지 않습니다. 데이터 처리(GDPR): GDPR 제6조 제1항 (f)호에 따른 당사의 정당한 이익을 근거로 집계된 비식별 사용 데이터만 처리됩니다. 언제든지 이메일로 이 처리에 이의를 제기할 수 있습니다.",
 
     // Section 4
     privacyS4Title: "데이터 처리자 및 제3자",
@@ -2635,21 +2571,13 @@ export const translations = {
     privacyS4Row4Role: "세션 재생 및 히트맵 — 분석 동의 시에만 로드됨",
     privacyS4Row4Data: "상호작용 이벤트 및 뷰포트 데이터(분석 동의 후에만 설정됨)",
     privacyS4Row4Loc: "미국",
-    privacyS4Row5Proc: "Vercel Analytics (Vercel Inc.)",
-    privacyS4Row5Role: "페이지 조회 지표 — 쿠키 없이 방문 수를 측정합니다(분석 동의 시에만 로드됨)",
-    privacyS4Row5Data: "집계된 페이지 조회 수, 해시된 방문자 키(쿠키 없음)",
-    privacyS4Row5Loc: "미국",
-    privacyS4Row6Proc: "Vercel Speed Insights (Vercel Inc.)",
-    privacyS4Row6Role: "Core Web Vitals 측정 — 페이지 성능 지표(분석 동의 시에만 로드됨)",
-    privacyS4Row6Data: "성능 타이밍만(개인 데이터 없음, 쿠키 없음)",
-    privacyS4Row6Loc: "미국",
     privacyS4Closure: "당사는 귀하의 데이터를 제3자에게 판매하지 않습니다. 귀하의 이메일 주소를 광고주와 공유하지 않습니다.",
 
     // Section 5
     privacyS5Title: "국제 데이터 이전",
     privacyS5Intro: "일부 처리자는 미국에 위치합니다. 유럽경제지역(EEA) 또는 영국(UK)에서 미국으로의 개인 데이터 이전은 적절한 보호 조치를 따릅니다:",
     privacyS5Bullet1: "Resend: 이전은 GDPR 제46조 제2항 (c)호에 따라 유럽 위원회가 채택한 표준 계약 조항(SCC)으로 보호됩니다. Resend의 데이터 처리 계약은 resend.com/legal/dpa에서 확인하실 수 있습니다.",
-    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation) 및 Vercel Analytics / Speed Insights (Vercel Inc.)는 미국에 기반하며 쿠키 없이 운영됩니다. 이전은 GDPR 제46조에 따른 표준 계약 조항(SCC)으로 보호됩니다. Microsoft는 추가로 EU-미국 데이터 개인 정보 보호 프레임워크에 참여합니다. Umami는 EU에 호스팅되므로 이전이 발생하지 않습니다.",
+    privacyS5Bullet2: "Microsoft Clarity (Microsoft Corporation)는 미국에 기반하며 쿠키 없이 운영됩니다. 이전은 GDPR 제46조에 따른 표준 계약 조항(SCC)으로 보호됩니다. Microsoft는 추가로 EU-미국 데이터 개인 정보 보호 프레임워크에 참여합니다. Umami는 EU에 호스팅되므로 이전이 발생하지 않습니다.",
     privacyS5Closure: "적용 가능한 SCC 사본은 {{email}}로 이메일을 보내 요청하실 수 있습니다.",
 
     // Section 6
@@ -2693,8 +2621,8 @@ export const translations = {
     privacyS7Row7SetBy: "PromptQuorum (localStorage)",
     privacyS7Row7Purpose: "AI 소프트웨어 디렉터리에서 선택한 기기 유형(Apple Silicon, 전용 GPU 또는 CPU 전용)을 기억하여 호환성 검사기가 다음에도 동일한 선택을 기본값으로 제공하도록 합니다",
     privacyS7Row7Duration: "브라우저 데이터를 삭제할 때까지",
-    privacyS7Para2: "당사는 추적 픽셀, 지문 인식 또는 제3자 광고 쿠키를 사용하지 않습니다. 당사의 분석 도구(Umami, Vercel Analytics, Microsoft Clarity)는 쿠키 없이 작동하며 귀하의 기기에 쿠키를 설정하지 않습니다. 이에 대한 동의는 필요하지 않습니다.",
-    privacyS7Para3: "ePrivacy 지침(2002/58/EC)에 따른 동의: 당사의 분석 도구(Umami, Vercel Analytics, Microsoft Clarity)는 쿠키 없이 작동하며 단말 기기에서 읽거나 쓰지 않으므로 동의가 필요하지 않습니다. 비필수 기기 저장에 대해서는 사전 동의를 요청합니다. 푸터의 \"쿠키 설정\" 링크를 통해 언제든지 변경하거나 철회할 수 있습니다. 관할 감독 기관은 헤센 데이터 보호 및 정보 자유 위원장(Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI)입니다.",
+    privacyS7Para2: "당사는 추적 픽셀, 지문 인식 또는 제3자 광고 쿠키를 사용하지 않습니다. 당사의 분석 도구(Umami, Microsoft Clarity)는 쿠키 없이 작동하며 귀하의 기기에 쿠키를 설정하지 않습니다. 이에 대한 동의는 필요하지 않습니다.",
+    privacyS7Para3: "ePrivacy 지침(2002/58/EC)에 따른 동의: 당사의 분석 도구(Umami, Microsoft Clarity)는 쿠키 없이 작동하며 단말 기기에서 읽거나 쓰지 않으므로 동의가 필요하지 않습니다. 비필수 기기 저장에 대해서는 사전 동의를 요청합니다. 푸터의 \"쿠키 설정\" 링크를 통해 언제든지 변경하거나 철회할 수 있습니다. 관할 감독 기관은 헤센 데이터 보호 및 정보 자유 위원장(Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, HBDI)입니다.",
     privacyS7Para4: "AI 소프트웨어 디렉터리에서 하드웨어 프로필을 저장하면, 위의 분석 도구를 통해 익명화되고 구간화된 사용 이벤트(예: \"RAM: 16–32GB\")를 기록할 수 있습니다 — 입력하신 정확한 수치는 기록되지 않습니다 — 그리고 이는 분석에 대한 동의를 하신 경우에만 해당됩니다.",
 
     // Section 8

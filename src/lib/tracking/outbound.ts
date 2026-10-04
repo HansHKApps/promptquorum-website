@@ -1,4 +1,3 @@
-import { track } from '@vercel/analytics'
 
 export type OutboundPosition = 'in-body' | 'cta-box' | 'comparison-table' | 'resources' | 'footer'
 export type OutboundCluster = 'local-llms' | 'prompt-engineering' | 'power-local-llm'
@@ -68,12 +67,6 @@ export function trackOutboundClick(p: OutboundClickParams): void {
     // silent — umami might be blocked
   }
 
-  // Vercel Analytics
-  try {
-    track('outbound_click', payload)
-  } catch {
-    // silent
-  }
 }
 
 // Alternative: use sendBeacon for guaranteed delivery when page unloads

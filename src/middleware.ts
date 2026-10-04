@@ -23,8 +23,7 @@ export function middleware(request: NextRequest) {
   // This path is rewritten to cloud.umami.is in next.config.ts to bypass ad blockers.
   // It must NEVER be touched by language redirects — a 302 on the /lib/s/api/send
   // event beacon sends it to /<lang>/lib/s/api/send (404) and the event is lost.
-  // Unlike the Vercel (/api/data) and Clarity (/api/clarity) proxies, this lives
-  // under /lib/ so it is not covered by the isApiRoute guard. Bail out early.
+  // This lives under /lib/ so it is not covered by the isApiRoute guard. Bail out early.
   if (url.pathname.startsWith('/lib/')) {
     return NextResponse.next()
   }
@@ -156,5 +155,5 @@ export function middleware(request: NextRequest) {
 // robots.txt, sitemap.xml, version.json, OG images, …). None need locale
 // handling, and all were paying an Edge Middleware invocation per request.
 export const config = {
-  matcher: ['/((?!api/|cron/|_next/|lib/|.*\\.[a-zA-Z0-9]+$).*)'],
+  matcher: ['/((?!api/|cron/|_next/|lib/|\\.well-known/|.*\\.[a-zA-Z0-9]+$).*)'],
 }

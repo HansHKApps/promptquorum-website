@@ -1,4 +1,3 @@
-import { track } from '@vercel/analytics'
 
 // ── Affiliate / product-link tracking ────────────────────────────────────────
 // Distinct from the editorial `outbound_click` event (see ./outbound.ts). This
@@ -66,7 +65,7 @@ export const isAffiliateUrl = (url: string): boolean => {
   }
 }
 
-/** Fire an `affiliate_click` event to Umami, Vercel Analytics, and GA4. */
+/** Fire an `affiliate_click` event to Umami. */
 export function trackAffiliateClick(p: AffiliateClickParams): void {
   const payload = {
     destination_domain: affiliateDestinationDomain(p.url),
@@ -83,11 +82,6 @@ export function trackAffiliateClick(p: AffiliateClickParams): void {
     if (process.env.NODE_ENV === 'development') console.warn('[affiliate] umami track failed:', err)
   }
 
-  try {
-    track('affiliate_click', payload)
-  } catch (err) {
-    if (process.env.NODE_ENV === 'development') console.warn('[affiliate] vercel track failed:', err)
-  }
 }
 
 // Affiliate disclosure shown near the top of each affiliate page.

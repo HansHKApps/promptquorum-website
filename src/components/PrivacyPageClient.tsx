@@ -177,18 +177,6 @@ export function PrivacyPageClient({ initialLang }: PrivacyPageClientProps) {
                     <Td>{t.privacyS4Row4Data}</Td>
                     <Td>{t.privacyS4Row4Loc}</Td>
                   </tr>
-                  <tr className="border-b border-gray-100">
-                    <Td><strong>{t.privacyS4Row5Proc}</strong></Td>
-                    <Td>{t.privacyS4Row5Role}</Td>
-                    <Td>{t.privacyS4Row5Data}</Td>
-                    <Td>{t.privacyS4Row5Loc}</Td>
-                  </tr>
-                  <tr>
-                    <Td><strong>{t.privacyS4Row6Proc}</strong></Td>
-                    <Td>{t.privacyS4Row6Role}</Td>
-                    <Td>{t.privacyS4Row6Data}</Td>
-                    <Td>{t.privacyS4Row6Loc}</Td>
-                  </tr>
                 </tbody>
               </table>
             </div>

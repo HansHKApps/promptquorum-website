@@ -118,7 +118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Language Group': 'Arabic (MSA)', 'Qwen3 8B': '★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 4 E2B': '★★★' },
           ],
           columns: ['Language Group', 'Qwen3 8B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 4 E2B'],
-          image: 'multilingual-llm-comparison-en.svg',
+          image: '/images/multilingual-llm-comparison-en.svg',
           imageCaption: 'Multilingual LLM comparison 2026: Qwen3 8B leads across all Asian languages (Chinese, Japanese, Korean with ★★★★-★★★★★ ratings). Mistral Small matches Qwen3 on European languages (French/German). Star ratings (1-5) reflect 2026 benchmarks.',
         },
         commonMistakes: {
@@ -291,7 +291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Grupo de idioma': 'Árabe (MSA)', 'Qwen3 8B': '★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 4 E2B': '★★★' },
           ],
           columns: ['Grupo de idioma', 'Qwen3 8B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 4 E2B'],
-          image: 'multilingual-llm-comparison-en.svg',
+          image: '/images/multilingual-llm-comparison-en.svg',
           imageCaption: 'Comparativa de LLM multilingues 2026: Qwen3 8B lidera en todos los idiomas asiáticos (chino, japonés, coreano con valoraciones ★★★★-★★★★★). Mistral Small iguala a Qwen3 en idiomas europeos (francés/alemán). Valoraciones en estrellas (1-5) reflejan benchmarks 2026.',
         },
         commonMistakes: {
@@ -625,7 +625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Grupo de idioma': 'العربية (الفصحى)', 'Qwen3 8B': '★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 4 E2B': '★★★' },
           ],
           columns: ['Grupo de idioma', 'Qwen3 8B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 4 E2B'],
-          image: 'multilingual-llm-comparison-en.svg',
+          image: '/images/multilingual-llm-comparison-en.svg',
           imageCaption: 'مقارنة نماذج LLM متعددة اللغات 2026: Qwen3 8B يتصدر في جميع اللغات الآسيوية (الصينية، اليابانية، الكورية بتقييمات ★★★★-★★★★★). Mistral Small يضاهي Qwen3 في اللغات الأوروبية (الفرنسية/الألمانية). تقييمات النجوم (1-5) تعكس اختبارات أداء 2026.',
         },
         commonMistakes: {
@@ -1225,7 +1225,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               'Gemma 4 E2B': '★★★'
             }
           ],
-          image: 'multilingual-llm-comparison-de.svg',
           imageCaption: 'Mehrsprachige LLM-Vergleichstabelle 2026: Qwen3 8B dominiert alle asiatischen Sprachen (Chinesisch, Japanisch, Koreanisch mit 4-5 Sternen); Mistral Small konkurriert bei französischen und deutschen Sprachen (4 Sterne). Bewertungen basieren auf JMT-bench, MMLU und sprachspezifischen Evaluierungen.'
         },
         commonMistakes: {
@@ -1353,7 +1352,7 @@ schema: {
         'url': 'https://www.promptquorum.com/de/local-llms/multilingual-local-llms',
         'headline': 'Beste mehrsprachige lokale LLMs 2026: Qwen3 vs. Mistral',
         'description': 'Vergleich mehrsprachiger lokaler Sprachmodelle: Qwen3 8B dominiert asiatische Sprachen. Mistral konkurriert bei europäischen Sprachen. Benchmarks, Hardware-Anforderungen.',
-        'image': '[www.promptquorum.com/images/multilingual-llm-comparison-de.svg](https://www.promptquorum.com/images/multilingual-llm-comparison-de.svg)',
+        'image': '[www.promptquorum.com/images/multilingual-llm-comparison-en.svg](https://www.promptquorum.com/images/multilingual-llm-comparison-en.svg)',
         'datePublished': '2025-12-10',
         'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1760,7 +1759,6 @@ schema: {
               'Gemma 4 E2B': '★★★'
             }
           ],
-          image: 'multilingual-llm-comparison-fr.svg',
           imageCaption: 'Tableau de comparaison des LLMs multilingues 2026 : Qwen3 8B domine toutes les langues asiatiques (chinois, japonais, coréen avec 4-5 étoiles) ; Mistral Small rivalise sur les langues françaises et allemandes (4 étoiles). Les évaluations sont basées sur JMT-bench, MMLU et les évaluations spécifiques aux langues.'
         },
         commonMistakes: {
@@ -1879,7 +1877,7 @@ schema: {
         'url': 'https://www.promptquorum.com/fr/local-llms/multilingual-local-llms',
         'headline': 'Meilleurs LLMs locaux multilingues 2026 : Qwen3 vs Mistral',
         'description': 'Comparaison des LLMs locaux multilingues : Qwen3 8B domine les langues asiatiques. Mistral rivalise sur les langues européennes. Benchmarks, exigences matérielles.',
-        'image': '[www.promptquorum.com/images/multilingual-llm-comparison-fr.svg](https://www.promptquorum.com/images/multilingual-llm-comparison-fr.svg)',
+        'image': '[www.promptquorum.com/images/multilingual-llm-comparison-en.svg](https://www.promptquorum.com/images/multilingual-llm-comparison-en.svg)',
         'datePublished': '2025-12-10',
         'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2270,7 +2268,6 @@ schema: {
               'Gemma 4 E2B': '★★★'
             }
           ],
-          image: 'multilingual-llm-comparison-ja.svg',
           imageCaption: '多言語LLM比較表 2026：Qwen3 8B はすべてのアジア言語を支配（中国語・日本語・韓国語で4-5つ星）；Mistral Small はフランス語・ドイツ語で競争（4つ星）。評価は JMT-bench、MMLU、言語固有評価に基づく。'
         },
         commonMistakes: {
@@ -2388,7 +2385,7 @@ schema: {
         'url': 'https://www.promptquorum.com/ja/local-llms/multilingual-local-llms',
         'headline': 'ベスト多言語ローカルLLM 2026：Qwen3 vs Mistral',
         'description': '多言語ローカルLLM比較：Qwen3 8B はアジア言語で支配的。Mistral はヨーロッパ言語で競争。ベンチマーク、ハードウェア要件。',
-        'image': '[www.promptquorum.com/images/multilingual-llm-comparison-ja.svg](https://www.promptquorum.com/images/multilingual-llm-comparison-ja.svg)',
+        'image': '[www.promptquorum.com/images/multilingual-llm-comparison-en.svg](https://www.promptquorum.com/images/multilingual-llm-comparison-en.svg)',
         'datePublished': '2025-12-10',
         'dateModified': '2026-08-28',
         'author': {
@@ -2687,7 +2684,6 @@ schema: {
             { '语言组': '西班牙语 / 意大利语', 'Qwen3 8B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral Small': '★★★', 'Gemma 4 E2B': '★★★' },
             { '语言组': '阿拉伯语（MSA）', 'Qwen3 8B': '★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 4 E2B': '★★★' }
           ],
-          image: 'multilingual-llm-comparison-zh.svg',
           imageCaption: '多语言LLM对比2026：Qwen3 8B主导所有亚洲语言（中文5星，日语/韩语4星）；Mistral Small在法语/德语上竞争（4星）。评级基于JMT-bench、MMLU及语言专项评估。'
         },
         commonMistakes: {
@@ -2910,7 +2906,7 @@ schema: {
             { 'Language Group': '아랍어(MSA)', 'Qwen3 8B': '★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 4 E2B': '★★★' },
           ],
           columns: ['Language Group', 'Qwen3 8B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 4 E2B'],
-          image: 'multilingual-llm-comparison-en.svg',
+          image: '/images/multilingual-llm-comparison-en.svg',
           imageCaption: '2026년 다국어 LLM 비교: Qwen3 8B는 모든 아시아 언어(중국어, 일본어, 한국어에서 ★★★★~★★★★★)에서 선두를 차지합니다. Mistral Small은 유럽 언어(프랑스어/독일어)에서 Qwen3에 필적합니다. 별점(1~5)은 2026년 벤치마크를 기반으로 합니다.',
         },
         commonMistakes: {

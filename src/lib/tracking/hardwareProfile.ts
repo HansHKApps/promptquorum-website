@@ -1,4 +1,3 @@
-import { track } from '@vercel/analytics'
 import type { HardwareProfile } from '@/components/local-ai-directory/types'
 
 // Fires one anonymous, bucketed event when a viewer explicitly saves their
@@ -6,7 +5,7 @@ import type { HardwareProfile } from '@/components/local-ai-directory/types'
 // identifying. Reuses the site's existing general "Analytics" consent
 // category (see CookieBanner.tsx's ConsentRecord.analytics) rather than
 // adding a new consent checkbox: that category is already described to
-// visitors as "anonymous usage stats" from Vercel Analytics/Umami/etc.,
+// visitors as "anonymous usage stats" from Umami/Clarity,
 // which is exactly what this is. If analytics consent was never granted,
 // this is a silent no-op — the profile itself already never leaves the
 // browser regardless of this function.
@@ -58,10 +57,5 @@ export function trackHardwareProfileSaved(profile: HardwareProfile): void {
     window.umami?.track('hardware_profile_saved', payload)
   } catch {
     // silent — umami might be blocked
-  }
-  try {
-    track('hardware_profile_saved', payload)
-  } catch {
-    // silent
   }
 }
