@@ -1,6 +1,7 @@
 import type { Language } from '@/lib/blog/blogContent'
 import { getFounderReviews } from '@/lib/home/founder-reviews'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
+import { freshAgeDays } from '@/lib/article-freshness'
 import { HomeCard } from './HomeCard'
 import { ExpandableList } from './ExpandableList'
 import { t } from './home-i18n'
@@ -30,6 +31,9 @@ export function FounderReviewsBlock({ lang = 'en' }: { lang?: Language }) {
           url: r.url,
           description: r.founderWho ? `${r.founderWho} — ${r.excerpt}` : r.excerpt,
           date: formatDisplayDate(r.date, lang),
+          freshText: t('freshNew', lang),
+          isoDate: r.date,
+          freshAtBuild: freshAgeDays(r.date) !== null,
         }))}
       />
     </HomeCard>
