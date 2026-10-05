@@ -417,7 +417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LLM Hub on Google Play](https://play.google.com/store/apps/details?id=com.llmhub.llmhub) — description, developer details, Data safety section, download count, rating, and last-updated date, checked 3 October 2026.',
           '[LLM Hub on the App Store](https://apps.apple.com/au/app/llm-hub/id6762511820) — price, Premium Lifetime purchase, version, platform requirements, and privacy label, checked 3 October 2026.',
           '[LLM-Hub on GitHub](https://github.com/timmyy123/LLM-Hub) — README, LICENSE file, and the Android and iOS build files for version numbers.',
-          '[LLM Hub privacy policy](https://www.llm-hub.app/privacy) — the developer's privacy policy, linked from the product website.',
+          '[LLM Hub privacy policy](https://www.llm-hub.app/privacy) — the developer\'s privacy policy, linked from the product website.',
         ],
       },
       relatedReading: {
