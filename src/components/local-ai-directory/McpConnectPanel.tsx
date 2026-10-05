@@ -169,6 +169,9 @@ export function McpConnectPanel() {
       <p className="mt-1 text-sm text-text-secondary">
         Connect your AI client to this directory. It asks what you need and what hardware you have, then recommends apps, all inside your own chat.
       </p>
+      <p className="mt-1 text-sm text-text-secondary">
+        Not sure which local AI app or LLM tool fits your needs? Search the directory by use case, device, hardware, platform, license, or price — or ask your AI assistant to recommend one.
+      </p>
       {highlighted && (
         <p className="mt-2 text-sm font-semibold text-primary">
           👇 Start here — click the AI assistant you use below.

@@ -15,13 +15,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-13',
     next_refresh_due: '2026-10-05',
     theme: 'Overview & Reference',
-    title: 'The Complete Local LLM Software Directory: ' + TOTAL_TOOL_COUNT + ' Tools to Run AI on Your Own Hardware (2026)',
-    seoTitle: 'Local LLM Tools 2026: ' + TOTAL_TOOL_COUNT + ' Apps Compared by ' + TOTAL_CATEGORY_GROUP_COUNT + ' Categories',
+    title: 'The Complete Local AI & LLM Software Directory: ' + TOTAL_TOOL_COUNT + ' Apps & Tools for Running AI Locally (2026)',
+    seoTitle: 'Local AI & LLM Apps: ' + TOTAL_TOOL_COUNT + ' Tools Compared',
     affiliateDisclosure: true,
     intro:
-      TOTAL_TOOL_COUNT + ' local LLM tools across ' + TOTAL_CATEGORY_GROUP_COUNT + ' categories — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, and Train & Operate. Filter, search, and compare below.',
+      '' + TOTAL_TOOL_COUNT + ' local AI and LLM apps and tools across ' + TOTAL_CATEGORY_GROUP_COUNT + ' categories, with licensing, pricing, platforms, hardware requirements, and use cases. Search, filter, compare, and find the right software for running AI locally on your Mac, Windows PC, Linux machine, or phone.',
     metaDescription:
-      TOTAL_TOOL_COUNT + ' local LLM tools compared across ' + TOTAL_CATEGORY_GROUP_COUNT + ' categories, filterable by your hardware. Licenses, links, and real stacks included — find your setup in minutes.',
+      '' + TOTAL_TOOL_COUNT + ' local AI and LLM apps and tools. Compare software by use case, platform, price, license, hardware and more for running AI on your own computer or phone.',
     twitterDescription:
       TOTAL_TOOL_COUNT + ' local-LLM tools across ' + TOTAL_CATEGORY_GROUP_COUNT + ' categories — run & serve, chat & assistants, code & development, knowledge & retrieval, voice & audio, images & video, train & operate. Licences, links & primary URLs. The "what exists" map before you commit to your stack.',
     advertiserHighlight: {
@@ -38,6 +38,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'local LLM software',
     targetKeywords: [
       'local llm software directory',
+      'local llm apps',
+      'local ai apps',
       'best local llm tools 2026',
       'local llm software list',
       'open source llm tools',
@@ -45,7 +47,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local ai software ecosystem',
     ],
     leadAnswerBlock:
-      '**' + TOTAL_TOOL_COUNT + ' local LLM tools across ' + TOTAL_CATEGORY_GROUP_COUNT + ' categories, each with its licence, price, and primary URL.** Use the filters below to find the right one for your stack.',
+      '**' + TOTAL_TOOL_COUNT + ' local AI and LLM apps and tools across ' + TOTAL_CATEGORY_GROUP_COUNT + ' categories, with licensing, pricing, platforms, hardware requirements, and use cases.** Search, filter, compare, and find the right software for running AI locally on your Mac, Windows PC, Linux machine, or phone.',
     quickAnswerTop: {
       en: {
         question: 'What are the best local LLM tools to run AI on my own hardware in 2026?',
@@ -488,7 +490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'How This Directory Stays Current',
         content:
-          '**This directory is reviewed every three months, with focused monthly updates in between reviews.** Recent expansions added dozens of new tools across every category, split voice/multimodal into three focused categories (speech-to-text, text-to-speech, vision), split coding assistants into IDE integrations and terminal tools, and added an entirely new Images & Video category. All links and licenses were reverified; new entries (PearAI, Windsurf, Sourcegraph Cody, SuperAGI, Leon AI, Draw Things, Fooocus, StableSwarmUI, and others) were validated for active maintenance. Inclusion criteria: project is actively maintained (commits in the last 90 days), has a verifiable open-source licence or a clear commercial-use statement, and either holds meaningful user share in 2026 or fills a category that would otherwise be empty. Projects that go inactive for more than two release cycles are removed; new entrants that pass the criteria are added at the next review. To suggest a project for inclusion, open an issue or PR against the PromptQuorum repository — include the project URL, licence, and a one-sentence description in the format above.',
+          '**This directory is continuously maintained, with individual entries updated as projects, pricing, licences, platforms, and hardware requirements change.** Larger structural reviews happen quarterly, with focused updates throughout the year. Recent expansions added dozens of new tools across every category, split voice/multimodal into three focused categories (speech-to-text, text-to-speech, vision), split coding assistants into IDE integrations and terminal tools, and added an entirely new Images & Video category. All links and licenses were reverified; new entries (PearAI, Windsurf, Sourcegraph Cody, SuperAGI, Leon AI, Draw Things, Fooocus, StableSwarmUI, and others) were validated for active maintenance. Inclusion criteria: project is actively maintained (commits in the last 90 days), has a verifiable open-source licence or a clear commercial-use statement, and either holds meaningful user share in 2026 or fills a category that would otherwise be empty. Projects that go inactive for more than two release cycles are removed; new entrants that pass the criteria are added at the next review. To suggest a project for inclusion, open an issue or PR against the PromptQuorum repository — include the project URL, licence, and a one-sentence description in the format above.',
       },
       sources: {
         id: 'sources',
@@ -544,7 +546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How often does this directory get updated?',
-            a: 'Every three months, with focused monthly updates in between. Monthly changes (a project goes inactive, a new tool gains meaningful share, a licence changes) get patched into the existing entry. Entirely new categories (like the Images & Video category) are added during the quarterly reviews to keep the structure stable. See the "Last updated" date at the top of this page for the most recent refresh. The "Sources" section above lists the community indexes used to spot-check what the ecosystem is actually doing between refreshes.',
+            a: 'Continuously — individual entries are updated as projects, pricing, licences, platforms, and hardware requirements change, with larger structural reviews every quarter. Individual changes (a project goes inactive, a new tool gains meaningful share, a licence changes) get patched into the existing entry. Entirely new categories (like the Images & Video category) are added during the quarterly reviews to keep the structure stable. See the "Last updated" date at the top of this page for the most recent refresh. The "Sources" section above lists the community indexes used to spot-check what the ecosystem is actually doing between refreshes.',
           },
           {
             q: 'Can I do image generation locally without cloud calls?',
@@ -588,13 +590,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-13',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
-    title: 'Das vollständige lokale LLM Software-Verzeichnis: ' + TOTAL_TOOL_COUNT + ' Tools für KI auf eigener Hardware (2026)',
-    seoTitle: 'Lokale LLM-Tools 2026: ' + TOTAL_TOOL_COUNT + ' Apps in ' + TOTAL_CATEGORY_GROUP_COUNT + ' Kategorien',
+    title: 'Das vollständige Verzeichnis für lokale KI- & LLM-Software: ' + TOTAL_TOOL_COUNT + ' Apps und Tools, um KI lokal auszuführen (2026)',
+    seoTitle: 'Lokale KI- & LLM-Apps: ' + TOTAL_TOOL_COUNT + ' Tools im Vergleich',
     affiliateDisclosure: true,
     intro:
-      TOTAL_TOOL_COUNT + ' lokale LLM-Tools über ' + TOTAL_CATEGORY_GROUP_COUNT + ' Kategorien — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video und Train & Operate. Filtern, suchen und vergleichen Sie unten.',
+      '' + TOTAL_TOOL_COUNT + ' lokale KI- und LLM-Apps und -Tools in ' + TOTAL_CATEGORY_GROUP_COUNT + ' Kategorien, mit Lizenz, Preis, Plattformen, Hardware-Anforderungen und Anwendungsfällen. Suchen, filtern, vergleichen und die passende Software finden, um KI lokal auf Mac, Windows-PC, Linux-Rechner oder Smartphone auszuführen.',
     metaDescription:
-      TOTAL_TOOL_COUNT + ' lokale LLM-Tools über ' + TOTAL_CATEGORY_GROUP_COUNT + ' Kategorien, filterbar nach Ihrer Hardware. Lizenzen, Links und reale Setups — finden Sie Ihr Setup in Minuten.',
+      '' + TOTAL_TOOL_COUNT + ' lokale KI- und LLM-Apps und -Tools. Vergleichen Sie Software nach Einsatzzweck, Plattform, Preis, Lizenz und Hardware — für KI auf Ihrem eigenen Rechner oder Smartphone.',
     twitterDescription:
       TOTAL_TOOL_COUNT + ' lokale LLM-Tools über ' + TOTAL_CATEGORY_GROUP_COUNT + ' Kategorien — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate. Lizenzen, Links & primäre URLs. Die Übersichtskarte, bevor Sie sich für einen Stack entscheiden.',
     advertiserHighlight: {
@@ -1064,7 +1066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'Aktualität des Verzeichnisses',
         content:
-          '**Dieses Verzeichnis wird alle drei Monate überprüft und zwischen den Überprüfungen mit gezielten monatlichen Updates aktualisiert — zuletzt aktualisiert im August 2026, nächste planmäßige Aktualisierung November 2026.** Die Erweiterung im August 2026 hat 72+ neue Tools über alle Schichten hinweg ergänzt, Sprache/Multimodal in drei fokussierte Schichten aufgeteilt (STT, TTS, Vision), Coding-Assistenten in IDE-Integrationen (4a) und Terminal-Tools (4b) aufgeteilt und eine vollständig neue Bildgenerierungs-Schicht hinzugefügt. Alle Links und Lizenzen wurden erneut geprüft; neue Einträge (PearAI, Windsurf, Sourcegraph Cody, SuperAGI, Leon AI, Draw Things, Fooocus, StableSwarmUI und weitere) wurden auf aktive Pflege verifiziert. Aufnahmekriterien: Das Projekt wird aktiv gepflegt (Commits in den letzten 90 Tagen), verfügt über eine nachweisbare Open-Source-Lizenz oder eine klare Aussage zur kommerziellen Nutzbarkeit, und hat entweder einen relevanten Nutzeranteil im Jahr 2026 oder füllt eine Schicht aus, die sonst leer bliebe. Projekte, die länger als zwei Release-Zyklen inaktiv bleiben, werden entfernt; neue Einträge, die die Kriterien erfüllen, werden bei der nächsten Überprüfung aufgenommen. Einen Vorschlag für die Aufnahme können Sie über ein Issue oder einen Pull Request im PromptQuorum-Repository einreichen — bitte Projekt-URL, Lizenz und eine Kurzbeschreibung im Format der Tabellen oben beifügen.\n\n**Hinweis für DACH-Unternehmen:** Für Organisationen in Deutschland, Österreich und der Schweiz empfiehlt sich der Einsatz von Tools mit MIT- oder Apache-2.0-Lizenz, da diese die klarste Rechtsgrundlage für den kommerziellen Einsatz bieten. Bei der Verarbeitung personenbezogener Daten ist zu prüfen, ob lokale Inferenz als Auftragsverarbeitung im Sinne von Art. 28 DSGVO einzustufen ist — in der Regel liegt sie außerhalb des Anwendungsbereichs, solange keine Daten das lokale System verlassen. Der BSI-Grundschutz-Katalog (insbesondere die Bausteine SYS und APP) bietet einen praxisnahen Rahmen für die Absicherung von Self-Hosted-LLM-Infrastruktur in deutschen Unternehmen. Diese Einschätzung ersetzt keine Rechtsberatung — für eine rechtsverbindliche Bewertung Ihrer konkreten Verarbeitungssituation konsultieren Sie einen auf DSGVO spezialisierten Rechtsanwalt oder Ihren Datenschutzbeauftragten.',
+          '**Dieses Verzeichnis wird fortlaufend gepflegt: Einzelne Einträge werden aktualisiert, sobald sich Projekte, Preise, Lizenzen, Plattformen und Hardware-Anforderungen ändern.** Größere strukturelle Überprüfungen finden vierteljährlich statt, dazwischen gibt es gezielte Updates über das ganze Jahr. Die Erweiterung im August 2026 hat 72+ neue Tools über alle Schichten hinweg ergänzt, Sprache/Multimodal in drei fokussierte Schichten aufgeteilt (STT, TTS, Vision), Coding-Assistenten in IDE-Integrationen (4a) und Terminal-Tools (4b) aufgeteilt und eine vollständig neue Bildgenerierungs-Schicht hinzugefügt. Alle Links und Lizenzen wurden erneut geprüft; neue Einträge (PearAI, Windsurf, Sourcegraph Cody, SuperAGI, Leon AI, Draw Things, Fooocus, StableSwarmUI und weitere) wurden auf aktive Pflege verifiziert. Aufnahmekriterien: Das Projekt wird aktiv gepflegt (Commits in den letzten 90 Tagen), verfügt über eine nachweisbare Open-Source-Lizenz oder eine klare Aussage zur kommerziellen Nutzbarkeit, und hat entweder einen relevanten Nutzeranteil im Jahr 2026 oder füllt eine Schicht aus, die sonst leer bliebe. Projekte, die länger als zwei Release-Zyklen inaktiv bleiben, werden entfernt; neue Einträge, die die Kriterien erfüllen, werden bei der nächsten Überprüfung aufgenommen. Einen Vorschlag für die Aufnahme können Sie über ein Issue oder einen Pull Request im PromptQuorum-Repository einreichen — bitte Projekt-URL, Lizenz und eine Kurzbeschreibung im Format der Tabellen oben beifügen.\n\n**Hinweis für DACH-Unternehmen:** Für Organisationen in Deutschland, Österreich und der Schweiz empfiehlt sich der Einsatz von Tools mit MIT- oder Apache-2.0-Lizenz, da diese die klarste Rechtsgrundlage für den kommerziellen Einsatz bieten. Bei der Verarbeitung personenbezogener Daten ist zu prüfen, ob lokale Inferenz als Auftragsverarbeitung im Sinne von Art. 28 DSGVO einzustufen ist — in der Regel liegt sie außerhalb des Anwendungsbereichs, solange keine Daten das lokale System verlassen. Der BSI-Grundschutz-Katalog (insbesondere die Bausteine SYS und APP) bietet einen praxisnahen Rahmen für die Absicherung von Self-Hosted-LLM-Infrastruktur in deutschen Unternehmen. Diese Einschätzung ersetzt keine Rechtsberatung — für eine rechtsverbindliche Bewertung Ihrer konkreten Verarbeitungssituation konsultieren Sie einen auf DSGVO spezialisierten Rechtsanwalt oder Ihren Datenschutzbeauftragten.',
       },
       sources: {
         id: 'sources',
@@ -1120,7 +1122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie häufig wird dieses Verzeichnis aktualisiert?',
-            a: 'Alle drei Monate, mit gezielten monatlichen Updates dazwischen — zuletzt überprüft im Juli 2026, die nächste planmäßige Aktualisierung ist im November 2026. Monatliche Änderungen (ein Projekt wird inaktiv, ein neues Tool gewinnt relevanten Marktanteil, eine Lizenz ändert sich) werden als Patch in den bestehenden Eintrag eingepflegt. Vollständig neue Kategorien oder Schichten warten auf die vierteljährliche Überarbeitung, um die Struktur stabil zu halten.',
+            a: 'Fortlaufend — einzelne Einträge werden aktualisiert, sobald sich Projekte, Preise, Lizenzen, Plattformen und Hardware-Anforderungen ändern; größere strukturelle Überprüfungen finden vierteljährlich statt. Einzelne Änderungen (ein Projekt wird inaktiv, ein neues Tool gewinnt relevanten Marktanteil, eine Lizenz ändert sich) werden als Patch in den bestehenden Eintrag eingepflegt. Vollständig neue Kategorien oder Schichten warten auf die vierteljährliche Überarbeitung, um die Struktur stabil zu halten.',
           },
           {
             q: 'Kann ich Bildgenerierung lokal ohne Cloud-Aufrufe durchführen?',
@@ -1170,13 +1172,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-13',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
-    title: 'Le répertoire complet des logiciels LLM locaux : ' + TOTAL_TOOL_COUNT + ' outils pour faire tourner l\'IA sur votre propre matériel (2026)',
-    seoTitle: 'Outils LLM locaux 2026 : ' + TOTAL_TOOL_COUNT + ' apps en ' + TOTAL_CATEGORY_GROUP_COUNT + ' catégories',
+    title: 'Le répertoire complet des logiciels d\'IA et de LLM locaux : ' + TOTAL_TOOL_COUNT + ' apps et outils pour exécuter l\'IA en local (2026)',
+    seoTitle: 'Apps IA & LLM locaux : ' + TOTAL_TOOL_COUNT + ' outils comparés',
     affiliateDisclosure: true,
     intro:
-      TOTAL_TOOL_COUNT + ' outils LLM locaux répartis en ' + TOTAL_CATEGORY_GROUP_COUNT + ' catégories — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video et Train & Operate. Filtrez, recherchez et comparez ci-dessous.',
+      '' + TOTAL_TOOL_COUNT + ' apps et outils d’IA et de LLM locaux répartis en ' + TOTAL_CATEGORY_GROUP_COUNT + ' catégories, avec licence, prix, plateformes, configuration matérielle requise et cas d’usage. Recherchez, filtrez, comparez et trouvez le bon logiciel pour exécuter l’IA en local sur votre Mac, PC Windows, machine Linux ou téléphone.',
     metaDescription:
-      TOTAL_TOOL_COUNT + ' outils LLM locaux sur ' + TOTAL_CATEGORY_GROUP_COUNT + ' catégories, filtrables selon votre matériel. Licences, liens et stacks réels — trouvez votre config en quelques minutes.',
+      '' + TOTAL_TOOL_COUNT + ' apps et outils d’IA et de LLM locaux. Comparez les logiciels par usage, plateforme, prix, licence et matériel pour exécuter l’IA sur votre ordinateur ou votre téléphone.',
     twitterDescription:
       TOTAL_TOOL_COUNT + ' outils LLM locaux en ' + TOTAL_CATEGORY_GROUP_COUNT + ' catégories — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate. Licences, liens & URL primaires. La carte d\'orientation avant de choisir votre stack.',
     advertiserHighlight: {
@@ -1645,7 +1647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'Mise à jour du répertoire',
         content:
-          '**Ce répertoire est révisé tous les trois mois, avec des mises à jour mensuelles ciblées entre les révisions — dernière mise à jour en août 2026, prochaine révision prévue en novembre 2026.** L\'extension d\'août 2026 a ajouté 72+ nouveaux outils dans tous les niveaux, divisé la couche voix/multimodal en trois couches distinctes (STT, TTS, vision), divisé les assistants de codage en intégrations IDE (4a) et outils terminal (4b), et ajouté une toute nouvelle couche de génération d\'images. Tous les liens et licences ont été revérifiés ; les nouvelles entrées (PearAI, Windsurf, Sourcegraph Cody, SuperAGI, Leon AI, Draw Things, Fooocus, StableSwarmUI et d\'autres) ont été validées pour leur maintenance active. Critères d\'inclusion : le projet est activement maintenu (commits dans les 90 derniers jours), dispose d\'une licence open source vérifiable ou d\'une déclaration claire sur l\'usage commercial, et détient soit une part d\'utilisateurs significative en 2026, soit occupe une couche qui serait autrement vide. Les projets inactifs depuis plus de deux cycles de version sont supprimés ; les nouveaux entrants satisfaisant les critères sont ajoutés à la prochaine révision. Pour suggérer un projet, ouvrez une issue ou une PR dans le dépôt PromptQuorum — indiquez l\'URL du projet, la licence et une description d\'une phrase dans le format ci-dessus.\n\nLa CNIL recommande le recours à l\'IA locale pour le traitement de données professionnelles sensibles (données médicales, juridiques, financières) afin de limiter les transferts hors de l\'espace économique européen.',
+          '**Ce répertoire est maintenu en continu : chaque fiche est mise à jour dès que les projets, les prix, les licences, les plateformes ou les exigences matérielles évoluent.** Des révisions structurelles plus larges ont lieu chaque trimestre, avec des mises à jour ciblées tout au long de l’année. L\'extension d\'août 2026 a ajouté 72+ nouveaux outils dans tous les niveaux, divisé la couche voix/multimodal en trois couches distinctes (STT, TTS, vision), divisé les assistants de codage en intégrations IDE (4a) et outils terminal (4b), et ajouté une toute nouvelle couche de génération d\'images. Tous les liens et licences ont été revérifiés ; les nouvelles entrées (PearAI, Windsurf, Sourcegraph Cody, SuperAGI, Leon AI, Draw Things, Fooocus, StableSwarmUI et d\'autres) ont été validées pour leur maintenance active. Critères d\'inclusion : le projet est activement maintenu (commits dans les 90 derniers jours), dispose d\'une licence open source vérifiable ou d\'une déclaration claire sur l\'usage commercial, et détient soit une part d\'utilisateurs significative en 2026, soit occupe une couche qui serait autrement vide. Les projets inactifs depuis plus de deux cycles de version sont supprimés ; les nouveaux entrants satisfaisant les critères sont ajoutés à la prochaine révision. Pour suggérer un projet, ouvrez une issue ou une PR dans le dépôt PromptQuorum — indiquez l\'URL du projet, la licence et une description d\'une phrase dans le format ci-dessus.\n\nLa CNIL recommande le recours à l\'IA locale pour le traitement de données professionnelles sensibles (données médicales, juridiques, financières) afin de limiter les transferts hors de l\'espace économique européen.',
       },
       sources: {
         id: 'sources',
@@ -1701,7 +1703,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'À quelle fréquence ce répertoire est-il mis à jour ?',
-            a: 'Tous les trois mois, avec des mises à jour mensuelles ciblées entre les révisions — dernière révision en août 2026, la prochaine révision planifiée est en novembre 2026. Les modifications mensuelles (un projet devient inactif, un nouvel outil gagne des parts de marché, une licence change) sont intégrées comme correctifs. Les catégories ou couches entièrement nouvelles (comme l\'ajout de la couche génération d\'images en août 2026) sont ajoutées lors des révisions trimestrielles pour maintenir la stabilité de la structure. La section « Sources » liste les index communautaires utilisés pour surveiller l\'écosystème entre les révisions.',
+            a: 'En continu — chaque fiche est mise à jour dès que les projets, les prix, les licences, les plateformes ou les exigences matérielles évoluent, avec des révisions structurelles plus larges chaque trimestre. Les modifications individuelles (un projet devient inactif, un nouvel outil gagne des parts de marché, une licence change) sont intégrées comme correctifs. Les catégories ou couches entièrement nouvelles (comme l\'ajout de la couche génération d\'images en août 2026) sont ajoutées lors des révisions trimestrielles pour maintenir la stabilité de la structure. La section « Sources » liste les index communautaires utilisés pour surveiller l\'écosystème entre les révisions.',
           },
           {
             q: 'Puis-je faire de la génération d\'images en local, sans appel cloud ?',
@@ -1743,13 +1745,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-13',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
-    title: 'ローカルLLMソフトウェア完全ディレクトリ：自分のハードウェアでAIを動かす' + TOTAL_TOOL_COUNT + 'のツール（2026年版）',
-    seoTitle: 'ローカルLLMツール2026：' + TOTAL_TOOL_COUNT + 'アプリを' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリで比較',
+    title: 'ローカルAI・LLMソフトウェア完全ディレクトリ：AIをローカルで動かす' + TOTAL_TOOL_COUNT + 'のアプリ＆ツール（2026年版）',
+    seoTitle: 'ローカルAI・LLMアプリ：' + TOTAL_TOOL_COUNT + 'ツールを比較',
     affiliateDisclosure: true,
     intro:
-      TOTAL_TOOL_COUNT + 'のローカルLLMツールを' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリ（Run & Serve、Chat & Assistants、Code & Development、Knowledge & Retrieval、Voice & Audio、Images & Video、Train & Operate）に整理しました。下の一覧で絞り込み・検索・比較できます。',
+      '' + TOTAL_TOOL_COUNT + 'のローカルAI・LLMアプリとツールを' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリに整理。ライセンス、価格、対応プラットフォーム、ハードウェア要件、用途を掲載しています。検索・絞り込み・比較して、Mac、Windows PC、Linux、スマートフォンでAIをローカル実行するのに最適なソフトウェアを見つけましょう。',
     metaDescription:
-      TOTAL_TOOL_COUNT + 'のローカルLLMツールを' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリで比較。ハードウェアで絞り込み可能、ライセンス・リンク・実際の構成例つき — 数分で自分のセットアップが見つかります。',
+      '' + TOTAL_TOOL_COUNT + 'のローカルAI・LLMアプリとツールを掲載。用途、プラットフォーム、価格、ライセンス、ハードウェアなどで比較し、自分のパソコンやスマートフォンでAIを動かすソフトを探せます。',
     twitterDescription:
       'ローカルLLMツール' + TOTAL_TOOL_COUNT + '件を' + TOTAL_CATEGORY_GROUP_COUNT + 'カテゴリで網羅 — Run & Serve、Chat & Assistants、Code & Development、Knowledge & Retrieval、Voice & Audio、Images & Video、Train & Operate。ライセンス・リンク・主要URL付き。スタックを決める前の「全体像」マップです。',
     advertiserHighlight: {
@@ -2220,7 +2222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'ディレクトリの最新性について',
         content:
-          '**このディレクトリは3か月ごとに見直され、見直しの合間には毎月の重点的なアップデートを行います — 最終更新は2026年8月、次回の予定更新は2026年11月です。** 2026年8月の拡張では、全層にわたって72以上の新規ツールを追加し、音声・マルチモーダル層を3つの専門層（STT・TTS・ビジョン）に分割、コーディングアシスタント層をIDE統合（4a）とターミナルツール（4b）に分割、さらに画像生成という新しい層をまるごと追加しました。すべてのリンクとライセンスを再検証し、新規エントリー（PearAI、Windsurf、Sourcegraph Cody、SuperAGI、Leon AI、Draw Things、Fooocus、StableSwarmUIほか）はアクティブなメンテナンス状況を確認済みです。掲載基準：直近90日間にコミットがあり活発にメンテナンスされていること、検証可能なオープンソースライセンスまたは商用利用の明確な声明があること、2026年に有意なユーザーシェアを持つか、それがなければ空白の層を埋めることです。2リリースサイクル以上非活性なプロジェクトは削除し、基準を満たす新規エントリーは次回見直し時に追加します。掲載を提案する場合は、PromptQuorumリポジトリのissueまたはPRを開いてください — プロジェクトURL、ライセンス、上記の形式による一文説明を添えてください。\n\n**日本・アジア太平洋地域のご利用について：** 経済産業省（METI）の「AI事業者ガイドライン」（2024年）は、企業がAI活用においてデータガバナンスとリスク管理を適切に実施することを求めています。ローカル推論はデータを自社システム内に留めるため、個人情報保護法（APPI）およびアジア太平洋地域のデータ越境規制（日本・シンガポール・マレーシア・韓国）への準拠において構造的に有利な構成です。エンタープライズ展開では、METIガイドラインに基づくリスク評価と、使用ツールのライセンス確認（特に商用利用時のAGPL条項）を推奨します。',
+          '**このディレクトリは継続的にメンテナンスされており、プロジェクト、価格、ライセンス、対応プラットフォーム、ハードウェア要件が変わるたびに個々のエントリーを更新しています。** より大きな構造的見直しは四半期ごとに行い、年間を通じて重点的な更新も実施します。 2026年8月の拡張では、全層にわたって72以上の新規ツールを追加し、音声・マルチモーダル層を3つの専門層（STT・TTS・ビジョン）に分割、コーディングアシスタント層をIDE統合（4a）とターミナルツール（4b）に分割、さらに画像生成という新しい層をまるごと追加しました。すべてのリンクとライセンスを再検証し、新規エントリー（PearAI、Windsurf、Sourcegraph Cody、SuperAGI、Leon AI、Draw Things、Fooocus、StableSwarmUIほか）はアクティブなメンテナンス状況を確認済みです。掲載基準：直近90日間にコミットがあり活発にメンテナンスされていること、検証可能なオープンソースライセンスまたは商用利用の明確な声明があること、2026年に有意なユーザーシェアを持つか、それがなければ空白の層を埋めることです。2リリースサイクル以上非活性なプロジェクトは削除し、基準を満たす新規エントリーは次回見直し時に追加します。掲載を提案する場合は、PromptQuorumリポジトリのissueまたはPRを開いてください — プロジェクトURL、ライセンス、上記の形式による一文説明を添えてください。\n\n**日本・アジア太平洋地域のご利用について：** 経済産業省（METI）の「AI事業者ガイドライン」（2024年）は、企業がAI活用においてデータガバナンスとリスク管理を適切に実施することを求めています。ローカル推論はデータを自社システム内に留めるため、個人情報保護法（APPI）およびアジア太平洋地域のデータ越境規制（日本・シンガポール・マレーシア・韓国）への準拠において構造的に有利な構成です。エンタープライズ展開では、METIガイドラインに基づくリスク評価と、使用ツールのライセンス確認（特に商用利用時のAGPL条項）を推奨します。',
       },
       sources: {
         id: 'sources',
@@ -2276,7 +2278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'このディレクトリはどのくらいの頻度で更新されますか？',
-            a: '3か月ごと、見直しの合間には毎月の重点的なアップデートを実施 — 最終見直しは2026年7月、次回の予定更新は2026年11月です。毎月の変更（プロジェクトが非活性になった、新しいツールが有意なシェアを獲得した、ライセンスが変わった）は既存エントリーへのパッチとして適用されます。新しいカテゴリや層は構造の安定性を保つため四半期ごとの見直しを待ちます。「参考文献」セクションに更新間のエコシステム監視に使用するコミュニティインデックスを掲載しています。',
+            a: '継続的に更新 — プロジェクト、価格、ライセンス、対応プラットフォーム、ハードウェア要件が変わるたびに個々のエントリーを更新し、より大きな構造見直しは四半期ごとに行います。 個別の変更（プロジェクトが非活性になった、新しいツールが有意なシェアを獲得した、ライセンスが変わった）は既存エントリーへのパッチとして適用されます。新しいカテゴリや層は構造の安定性を保つため四半期ごとの見直しを待ちます。「参考文献」セクションに更新間のエコシステム監視に使用するコミュニティインデックスを掲載しています。',
           },
           {
             q: '画像生成をクラウド呼び出しなしでローカルに行えますか？',
@@ -2318,13 +2320,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-13',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
-    title: '本地LLM软件完整目录：' + TOTAL_TOOL_COUNT + '款工具，在自有硬件上运行AI（2026）',
-    seoTitle: '本地LLM工具2026：' + TOTAL_TOOL_COUNT + '款应用，' + TOTAL_CATEGORY_GROUP_COUNT + '大类对比',
+    title: '本地AI与LLM软件完整目录：' + TOTAL_TOOL_COUNT + '款应用与工具，在本地运行AI（2026）',
+    seoTitle: '本地AI与LLM应用：' + TOTAL_TOOL_COUNT + '款工具对比',
     affiliateDisclosure: true,
     intro:
-      TOTAL_TOOL_COUNT + '款本地LLM工具，分为' + TOTAL_CATEGORY_GROUP_COUNT + '大类——Run & Serve、Chat & Assistants、Code & Development、Knowledge & Retrieval、Voice & Audio、Images & Video、Train & Operate。可在下方筛选、搜索与对比。',
+      '' + TOTAL_TOOL_COUNT + '款本地AI与LLM应用和工具，分为' + TOTAL_CATEGORY_GROUP_COUNT + '大类，附许可证、价格、支持平台、硬件要求与使用场景。可搜索、筛选、对比，找到适合在你的Mac、Windows电脑、Linux设备或手机上本地运行AI的软件。',
     metaDescription:
-      TOTAL_TOOL_COUNT + '款本地LLM工具，按' + TOTAL_CATEGORY_GROUP_COUNT + '大类对比，可按你的硬件筛选。附许可证、链接与真实技术栈——几分钟内找到适合你的方案。',
+      '' + TOTAL_TOOL_COUNT + '款本地AI与LLM应用和工具。按用途、平台、价格、许可证、硬件等对比软件，在自己的电脑或手机上运行AI。',
     twitterDescription:
       '本地LLM工具' + TOTAL_TOOL_COUNT + '款，覆盖' + TOTAL_CATEGORY_GROUP_COUNT + '大类——Run & Serve、Chat & Assistants、Code & Development、Knowledge & Retrieval、Voice & Audio、Images & Video、Train & Operate。含许可证、链接与主要网址。确定技术栈前的"现有工具"全景图。',
     advertiserHighlight: {
@@ -2795,7 +2797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: '本目录如何保持及时更新',
         content:
-          '**本目录每三个月审查一次，并在两次审查之间进行重点性的每月更新——最近更新于2026年8月，下次计划审查为2026年11月。**2026年8月的扩充在所有层级新增了72多款工具，将语音/多模态拆分为三个专注层级（STT、TTS、视觉），将编程助手拆分为IDE集成（4a）和终端工具（4b），并新增了一个全新的图像生成层级。所有链接与许可证均已重新核实；新增条目（PearAI、Windsurf、Sourcegraph Cody、SuperAGI、Leon AI、Draw Things、Fooocus、StableSwarmUI等）均已验证处于活跃维护状态。纳入标准：项目在过去90天内活跃维护、具备可验证的开源许可证或明确的商业使用声明，并在2026年拥有一定用户份额或填补了某一层原本的空缺。连续两个以上发布周期未活跃的项目将被移除；符合标准的新项目将在下次审查时纳入。如需建议纳入某个项目，请向PromptQuorum仓库提交issue或PR，附上项目URL、许可证及采用上述格式的一句话描述。',
+          '**本目录持续维护，项目、定价、许可证、平台或硬件要求发生变化时，会随时更新相应条目。** 更大的结构性审查每季度进行一次，全年还会进行有针对性的更新。2026年8月的扩充在所有层级新增了72多款工具，将语音/多模态拆分为三个专注层级（STT、TTS、视觉），将编程助手拆分为IDE集成（4a）和终端工具（4b），并新增了一个全新的图像生成层级。所有链接与许可证均已重新核实；新增条目（PearAI、Windsurf、Sourcegraph Cody、SuperAGI、Leon AI、Draw Things、Fooocus、StableSwarmUI等）均已验证处于活跃维护状态。纳入标准：项目在过去90天内活跃维护、具备可验证的开源许可证或明确的商业使用声明，并在2026年拥有一定用户份额或填补了某一层原本的空缺。连续两个以上发布周期未活跃的项目将被移除；符合标准的新项目将在下次审查时纳入。如需建议纳入某个项目，请向PromptQuorum仓库提交issue或PR，附上项目URL、许可证及采用上述格式的一句话描述。',
       },
       sources: {
         id: 'sources',
@@ -2851,7 +2853,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '本目录多久更新一次？',
-            a: '每三个月更新一次，两次审查之间还有重点性的每月更新——最近审查为2026年7月，下次计划更新为2026年11月。每月的变化（项目失活、新工具取得显著份额、许可证变更）将以补丁形式应用到现有条目。全新类别或层级等待季度审查以保持结构稳定。上方"参考来源"部分列出了更新之间用于监测生态系统动态的社区索引。',
+            a: '持续更新——项目、定价、许可证、平台或硬件要求发生变化时，会随时更新相应条目；更大的结构性审查每季度进行一次。 单个条目的变化（项目失活、新工具取得显著份额、许可证变更）将以补丁形式应用到现有条目。全新类别或层级等待季度审查以保持结构稳定。上方"参考来源"部分列出了更新之间用于监测生态系统动态的社区索引。',
           },
           {
             q: '我能否在不联网的情况下本地生成图像？',
@@ -2893,13 +2895,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-13',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
-    title: 'El directorio completo de software LLM local: ' + TOTAL_TOOL_COUNT + ' herramientas para ejecutar IA en tu propio hardware (2026)',
-    seoTitle: 'Herramientas LLM local 2026: ' + TOTAL_TOOL_COUNT + ' apps en ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorías',
+    title: 'El directorio completo de software de IA y LLM local: ' + TOTAL_TOOL_COUNT + ' apps y herramientas para ejecutar IA en local (2026)',
+    seoTitle: 'Apps de IA y LLM local: ' + TOTAL_TOOL_COUNT + ' herramientas comparadas',
     affiliateDisclosure: true,
     intro:
-      TOTAL_TOOL_COUNT + ' herramientas de LLM local en ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorías — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video y Train & Operate. Filtra, busca y compara a continuación.',
+      '' + TOTAL_TOOL_COUNT + ' apps y herramientas de IA y LLM local en ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorías, con licencia, precio, plataformas, requisitos de hardware y casos de uso. Busca, filtra, compara y encuentra el software adecuado para ejecutar IA en local en tu Mac, PC con Windows, equipo Linux o teléfono.',
     metaDescription:
-      TOTAL_TOOL_COUNT + ' herramientas LLM local en ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorías, filtrables por tu hardware. Licencias, enlaces y stacks reales — encuentra tu configuración en minutos.',
+      '' + TOTAL_TOOL_COUNT + ' apps y herramientas de IA y LLM local. Compara software por caso de uso, plataforma, precio, licencia y hardware para ejecutar IA en tu propio ordenador o teléfono.',
     twitterDescription:
       TOTAL_TOOL_COUNT + ' herramientas LLM local en ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorías — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate. Licencias, enlaces y URLs principales. El mapa de "qué existe" antes de elegir tu stack.',
     advertiserHighlight: {
@@ -3370,7 +3372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'Cómo se mantiene actualizado este directorio',
         content:
-          '**Este directorio se revisa cada tres meses, con actualizaciones mensuales específicas entre revisiones — última actualización en agosto de 2026, próxima revisión programada en noviembre de 2026.** La expansión de agosto de 2026 añadió 72+ herramientas nuevas en todos los niveles, dividió voz/multimodal en tres capas específicas (STT, TTS, visión), dividió los asistentes de código en integraciones IDE (4a) y herramientas de terminal (4b), y añadió un nivel completamente nuevo de generación de imágenes. Todos los enlaces y licencias se reverificaron; las nuevas entradas (PearAI, Windsurf, Sourcegraph Cody, SuperAGI, Leon AI, Draw Things, Fooocus, StableSwarmUI y otras) se validaron por mantenimiento activo. Criterios de inclusión: el proyecto está en mantenimiento activo (commits en los últimos 90 días), tiene una licencia open-source verificable o una declaración clara de uso comercial, y o bien tiene una cuota de usuarios significativa en 2026 o llena un nivel que de otro modo estaría vacío. Los proyectos que quedan inactivos durante más de dos ciclos de versión se eliminan; los nuevos participantes que cumplan los criterios se añaden en la próxima revisión. Para sugerir un proyecto para su inclusión, abre un issue o PR contra el repositorio de PromptQuorum — incluye la URL del proyecto, la licencia y una descripción de una oración en el formato anterior.',
+          '**Este directorio se mantiene de forma continua: las entradas individuales se actualizan cuando cambian los proyectos, los precios, las licencias, las plataformas o los requisitos de hardware.** Las revisiones estructurales más amplias se hacen cada trimestre, con actualizaciones específicas durante todo el año. La expansión de agosto de 2026 añadió 72+ herramientas nuevas en todos los niveles, dividió voz/multimodal en tres capas específicas (STT, TTS, visión), dividió los asistentes de código en integraciones IDE (4a) y herramientas de terminal (4b), y añadió un nivel completamente nuevo de generación de imágenes. Todos los enlaces y licencias se reverificaron; las nuevas entradas (PearAI, Windsurf, Sourcegraph Cody, SuperAGI, Leon AI, Draw Things, Fooocus, StableSwarmUI y otras) se validaron por mantenimiento activo. Criterios de inclusión: el proyecto está en mantenimiento activo (commits en los últimos 90 días), tiene una licencia open-source verificable o una declaración clara de uso comercial, y o bien tiene una cuota de usuarios significativa en 2026 o llena un nivel que de otro modo estaría vacío. Los proyectos que quedan inactivos durante más de dos ciclos de versión se eliminan; los nuevos participantes que cumplan los criterios se añaden en la próxima revisión. Para sugerir un proyecto para su inclusión, abre un issue o PR contra el repositorio de PromptQuorum — incluye la URL del proyecto, la licencia y una descripción de una oración en el formato anterior.',
       },
       sources: {
         id: 'sources',
@@ -3426,7 +3428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Con qué frecuencia se actualiza este directorio?',
-            a: 'Cada tres meses, con actualizaciones mensuales específicas entre revisiones — última revisión en julio de 2026, la próxima actualización programada es en noviembre de 2026. Los cambios mensuales (un proyecto queda inactivo, una nueva herramienta gana cuota significativa, una licencia cambia) se aplican como parches a la entrada existente. Las categorías o capas completamente nuevas esperan a la revisión trimestral para mantener estable la estructura. La sección "Fuentes" arriba lista los índices comunitarios utilizados para monitorear lo que el ecosistema está haciendo entre revisiones.',
+            a: 'De forma continua: las entradas individuales se actualizan cuando cambian los proyectos, los precios, las licencias, las plataformas o los requisitos de hardware, con revisiones estructurales más amplias cada trimestre. Los cambios individuales (un proyecto queda inactivo, una nueva herramienta gana cuota significativa, una licencia cambia) se aplican como parches a la entrada existente. Las categorías o capas completamente nuevas esperan a la revisión trimestral para mantener estable la estructura. La sección "Fuentes" arriba lista los índices comunitarios utilizados para monitorear lo que el ecosistema está haciendo entre revisiones.',
           },
           {
             q: '¿Puedo generar imágenes localmente sin llamadas a la nube?',
@@ -3482,13 +3484,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-13',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
-    title: 'O diretório completo de software LLM local: ' + TOTAL_TOOL_COUNT + ' ferramentas para executar IA no seu próprio hardware (2026)',
-    seoTitle: 'Ferramentas LLM local 2026: ' + TOTAL_TOOL_COUNT + ' apps em ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias',
+    title: 'O diretório completo de software de IA e LLM local: ' + TOTAL_TOOL_COUNT + ' apps e ferramentas para executar IA localmente (2026)',
+    seoTitle: 'Apps de IA e LLM local: ' + TOTAL_TOOL_COUNT + ' ferramentas comparadas',
     affiliateDisclosure: true,
     intro:
-      TOTAL_TOOL_COUNT + ' ferramentas de LLM local em ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video e Train & Operate. Filtre, pesquise e compare abaixo.',
+      '' + TOTAL_TOOL_COUNT + ' apps e ferramentas de IA e LLM local em ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias, com licença, preço, plataformas, requisitos de hardware e casos de uso. Pesquise, filtre, compare e encontre o software certo para executar IA localmente no seu Mac, PC com Windows, máquina Linux ou celular.',
     metaDescription:
-      TOTAL_TOOL_COUNT + ' ferramentas LLM local comparadas em ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias, filtráveis pelo seu hardware. Licenças, links e stacks reais — encontre sua configuração em minutos.',
+      '' + TOTAL_TOOL_COUNT + ' apps e ferramentas de IA e LLM local. Compare softwares por caso de uso, plataforma, preço, licença e hardware para executar IA no seu próprio computador ou celular.',
     twitterDescription:
       TOTAL_TOOL_COUNT + ' ferramentas LLM local em ' + TOTAL_CATEGORY_GROUP_COUNT + ' categorias — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate. Licenças, links e URLs principais. O mapa de "o que existe" antes de escolher seu stack.',
     advertiserHighlight: {
@@ -3959,7 +3961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'Como este diretório se mantém atualizado',
         content:
-          '**Este diretório é revisado a cada três meses, com atualizações mensais pontuais entre as revisões — última atualização em agosto de 2026, próxima revisão programada para novembro de 2026.** A expansão de agosto de 2026 adicionou mais de 72 novas ferramentas em todas as camadas, dividiu voz/multimodal em três camadas focadas (STT, TTS, visão), dividiu os assistentes de código em integrações IDE (4a) e ferramentas de terminal (4b), e adicionou uma camada inteiramente nova de geração de imagens. Todos os links e licenças foram reverificados; as novas entradas (PearAI, Windsurf, Sourcegraph Cody, SuperAGI, Leon AI, Draw Things, Fooocus, StableSwarmUI e outras) foram validadas quanto à manutenção ativa. Critérios de inclusão: o projeto está em manutenção ativa (commits nos últimos 90 dias), tem uma licença open-source verificável ou uma declaração clara de uso comercial, e ou tem uma participação de usuários significativa em 2026 ou preenche uma camada que de outra forma estaria vazia. Os projetos que ficam inativos por mais de dois ciclos de versão são removidos; os novos participantes que atendem aos critérios são adicionados na próxima revisão. Para sugerir um projeto para inclusão, abra um issue ou PR contra o repositório do PromptQuorum — inclua a URL do projeto, a licença e uma descrição de uma sentença no formato acima.',
+          '**Este diretório é mantido continuamente: as entradas individuais são atualizadas quando mudam projetos, preços, licenças, plataformas ou requisitos de hardware.** Revisões estruturais maiores acontecem a cada trimestre, com atualizações pontuais ao longo do ano. A expansão de agosto de 2026 adicionou mais de 72 novas ferramentas em todas as camadas, dividiu voz/multimodal em três camadas focadas (STT, TTS, visão), dividiu os assistentes de código em integrações IDE (4a) e ferramentas de terminal (4b), e adicionou uma camada inteiramente nova de geração de imagens. Todos os links e licenças foram reverificados; as novas entradas (PearAI, Windsurf, Sourcegraph Cody, SuperAGI, Leon AI, Draw Things, Fooocus, StableSwarmUI e outras) foram validadas quanto à manutenção ativa. Critérios de inclusão: o projeto está em manutenção ativa (commits nos últimos 90 dias), tem uma licença open-source verificável ou uma declaração clara de uso comercial, e ou tem uma participação de usuários significativa em 2026 ou preenche uma camada que de outra forma estaria vazia. Os projetos que ficam inativos por mais de dois ciclos de versão são removidos; os novos participantes que atendem aos critérios são adicionados na próxima revisão. Para sugerir um projeto para inclusão, abra um issue ou PR contra o repositório do PromptQuorum — inclua a URL do projeto, a licença e uma descrição de uma sentença no formato acima.',
       },
       sources: {
         id: 'sources',
@@ -4015,7 +4017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Com que frequência este diretório é atualizado?',
-            a: 'A cada três meses, com atualizações mensais pontuais entre as revisões — última revisão em julho de 2026, a próxima atualização programada é em novembro de 2026. As mudanças mensais (um projeto fica inativo, uma nova ferramenta ganha participação significativa, uma licença muda) são aplicadas como patches à entrada existente. Categorias ou camadas completamente novas aguardam a revisão trimestral para manter a estrutura estável.',
+            a: 'De forma contínua: as entradas individuais são atualizadas quando mudam projetos, preços, licenças, plataformas ou requisitos de hardware, com revisões estruturais maiores a cada trimestre. As mudanças individuais (um projeto fica inativo, uma nova ferramenta ganha participação significativa, uma licença muda) são aplicadas como patches à entrada existente. Categorias ou camadas completamente novas aguardam a revisão trimestral para manter a estrutura estável.',
           },
           {
             q: 'Posso fazer geração de imagens localmente sem chamadas à nuvem?',
@@ -4070,13 +4072,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-13',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
-    title: 'الدليل الشامل لبرامج النماذج اللغوية المحلية: ' + TOTAL_TOOL_COUNT + ' أداة لتشغيل الذكاء الاصطناعي على أجهزتك (2026)',
-    seoTitle: 'أدوات ⁨LLM⁩ محلية ⁨2026⁩: ⁨' + TOTAL_TOOL_COUNT + '⁩ تطبيقاً في ⁨' + TOTAL_CATEGORY_GROUP_COUNT + '⁩ فئات',
+    title: 'الدليل الشامل لبرامج الذكاء الاصطناعي والنماذج اللغوية المحلية: ' + TOTAL_TOOL_COUNT + ' تطبيقاً وأداة لتشغيل الذكاء الاصطناعي محلياً (2026)',
+    seoTitle: 'تطبيقات الذكاء الاصطناعي و⁨LLM⁩ المحلية: ⁨' + TOTAL_TOOL_COUNT + '⁩ أداة مقارنة',
     affiliateDisclosure: true,
     intro:
-      TOTAL_TOOL_COUNT + ' أداة للنماذج اللغوية المحلية موزعة على ' + TOTAL_CATEGORY_GROUP_COUNT + ' فئات — Run & Serve وChat & Assistants وCode & Development وKnowledge & Retrieval وVoice & Audio وImages & Video وTrain & Operate. صفِّ وابحث وقارِن في الأسفل.',
+      '' + TOTAL_TOOL_COUNT + ' تطبيقاً وأداة للذكاء الاصطناعي والنماذج اللغوية المحلية في ' + TOTAL_CATEGORY_GROUP_COUNT + ' فئات، مع الترخيص والسعر والمنصات ومتطلبات العتاد وحالات الاستخدام. ابحث وصفِّ وقارِن واعثر على البرنامج المناسب لتشغيل الذكاء الاصطناعي محلياً على جهاز Mac أو حاسوب Windows أو Linux أو هاتفك.',
     metaDescription:
-      TOTAL_TOOL_COUNT + ' أداة للنماذج اللغوية المحلية عبر ' + TOTAL_CATEGORY_GROUP_COUNT + ' فئات، قابلة للتصفية حسب جهازك. تراخيص وروابط وتجهيزات فعلية — اعثر على إعدادك خلال دقائق.',
+      '' + TOTAL_TOOL_COUNT + ' تطبيقاً وأداة للذكاء الاصطناعي والنماذج اللغوية المحلية. قارِن البرامج حسب حالة الاستخدام والمنصة والسعر والترخيص والعتاد لتشغيل الذكاء الاصطناعي على حاسوبك أو هاتفك.',
     twitterDescription:
       TOTAL_TOOL_COUNT + ' أداة للنماذج اللغوية المحلية في ' + TOTAL_CATEGORY_GROUP_COUNT + ' فئات — Run & Serve وChat & Assistants وCode & Development وKnowledge & Retrieval وVoice & Audio وImages & Video وTrain & Operate. التراخيص والروابط وعناوين URL الرئيسية. خريطة "ما الموجود" قبل اختيار stack.',
     advertiserHighlight: {
@@ -4547,7 +4549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: 'كيف يظل هذا الدليل محدَّثاً',
         content:
-          '**يُراجَع هذا الدليل كل ثلاثة أشهر، مع تحديثات شهرية مركَّزة بين المراجعات — آخر تحديث في أغسطس 2026، المراجعة المجدولة القادمة في نوفمبر 2026.** أضافت توسعة أغسطس 2026 أكثر من 72 أداة جديدة عبر جميع الطبقات، وقسَّمت الصوت/الوسائط المتعددة إلى ثلاث طبقات مركَّزة (STT وTTS والرؤية)، وقسَّمت مساعدي الكود إلى تكاملات IDE (4a) وأدوات طرفية (4b)، وأضافت طبقة جديدة كلياً لتوليد الصور. أُعيد التحقق من جميع الروابط والتراخيص؛ وتم التحقق من الصيانة النشطة للإدخالات الجديدة (PearAI وWindsurf وSourcegraph Cody وSuperAGI وLeon AI وDraw Things وFooocus وStableSwarmUI وغيرها). معايير الإدراج: المشروع في صيانة نشطة (commits في آخر 90 يوماً)، لديه ترخيص مفتوح المصدر قابل للتحقق أو بيان استخدام تجاري واضح، وله إما حصة مستخدمين ذات معنى في 2026 أو يملأ طبقة كانت ستبقى فارغة بدونه. المشاريع التي تصبح خاملة لأكثر من دورتي إصدار تُحذف؛ المشاركون الجدد الذين يستوفون المعايير يُضافون في المراجعة التالية. لاقتراح مشروع للإدراج، افتح issue أو PR على مستودع PromptQuorum — مع رابط المشروع والترخيص ووصف من جملة واحدة بالتنسيق أعلاه.',
+          '**يُصان هذا الدليل بشكل مستمر، وتُحدَّث الإدخالات الفردية كلما تغيّرت المشاريع أو الأسعار أو التراخيص أو المنصات أو متطلبات العتاد.** وتُجرى المراجعات الهيكلية الأكبر كل ربع سنة، مع تحديثات مركَّزة على مدار العام. أضافت توسعة أغسطس 2026 أكثر من 72 أداة جديدة عبر جميع الطبقات، وقسَّمت الصوت/الوسائط المتعددة إلى ثلاث طبقات مركَّزة (STT وTTS والرؤية)، وقسَّمت مساعدي الكود إلى تكاملات IDE (4a) وأدوات طرفية (4b)، وأضافت طبقة جديدة كلياً لتوليد الصور. أُعيد التحقق من جميع الروابط والتراخيص؛ وتم التحقق من الصيانة النشطة للإدخالات الجديدة (PearAI وWindsurf وSourcegraph Cody وSuperAGI وLeon AI وDraw Things وFooocus وStableSwarmUI وغيرها). معايير الإدراج: المشروع في صيانة نشطة (commits في آخر 90 يوماً)، لديه ترخيص مفتوح المصدر قابل للتحقق أو بيان استخدام تجاري واضح، وله إما حصة مستخدمين ذات معنى في 2026 أو يملأ طبقة كانت ستبقى فارغة بدونه. المشاريع التي تصبح خاملة لأكثر من دورتي إصدار تُحذف؛ المشاركون الجدد الذين يستوفون المعايير يُضافون في المراجعة التالية. لاقتراح مشروع للإدراج، افتح issue أو PR على مستودع PromptQuorum — مع رابط المشروع والترخيص ووصف من جملة واحدة بالتنسيق أعلاه.',
       },
       sources: {
         id: 'sources',
@@ -4603,7 +4605,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كم مرة يُحدَّث هذا الدليل؟',
-            a: 'كل ثلاثة أشهر، مع تحديثات شهرية مركَّزة بين المراجعات — آخر مراجعة في يوليو 2026، التحديث القادم المجدول في نوفمبر 2026. التغييرات الشهرية (مشروع يصبح خاملاً، أداة جديدة تكتسب حصة كبيرة، ترخيص يتغير) تُطبَّق كتصحيحات على الإدخال القائم.',
+            a: 'بشكل مستمر — تُحدَّث الإدخالات الفردية كلما تغيّرت المشاريع أو الأسعار أو التراخيص أو المنصات أو متطلبات العتاد، مع مراجعات هيكلية أكبر كل ربع سنة. التغييرات الفردية (مشروع يصبح خاملاً، أداة جديدة تكتسب حصة كبيرة، ترخيص يتغير) تُطبَّق كتصحيحات على الإدخال القائم.',
           },
           {
             q: 'هل يمكنني توليد الصور محلياً دون أي استدعاءات سحابية؟',
@@ -4658,13 +4660,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     dateModified: '2026-09-13',
     next_refresh_due: '2026-11-07',
     theme: 'Overview & Reference',
-    title: '로컬 LLM 소프트웨어 완전 디렉토리: 직접 소유한 하드웨어에서 AI를 실행하는 ' + TOTAL_TOOL_COUNT + ' 도구 (2026)',
-    seoTitle: '로컬 LLM 도구 2026: ' + TOTAL_TOOL_COUNT + '개 앱, ' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리 비교',
+    title: '로컬 AI·LLM 소프트웨어 완전 디렉토리: AI를 로컬에서 실행하는 ' + TOTAL_TOOL_COUNT + '개 앱과 도구 (2026)',
+    seoTitle: '로컬 AI·LLM 앱: ' + TOTAL_TOOL_COUNT + '개 도구 비교',
     affiliateDisclosure: true,
     intro:
-      '로컬 LLM 도구 ' + TOTAL_TOOL_COUNT + '개를 ' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리로 정리했습니다 — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate. 아래에서 필터링·검색·비교해 보세요.',
+      '로컬 AI·LLM 앱과 도구 ' + TOTAL_TOOL_COUNT + '개를 ' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리로 정리했습니다. 라이선스, 가격, 지원 플랫폼, 하드웨어 요구 사항, 사용 사례를 함께 제공합니다. 검색·필터링·비교로 Mac, Windows PC, Linux 컴퓨터, 스마트폰에서 AI를 로컬로 실행할 알맞은 소프트웨어를 찾아보세요.',
     metaDescription:
-      TOTAL_TOOL_COUNT + '개 로컬 LLM 도구를 ' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리로 비교. 내 하드웨어 기준으로 필터링 가능, 라이선스·링크·실제 구성 예시 포함 — 몇 분이면 내게 맞는 세팅을 찾을 수 있습니다.',
+      '로컬 AI·LLM 앱과 도구 ' + TOTAL_TOOL_COUNT + '개. 사용 사례, 플랫폼, 가격, 라이선스, 하드웨어 기준으로 비교해 내 컴퓨터나 스마트폰에서 AI를 실행해 보세요.',
     twitterDescription:
       '로컬 LLM 도구 ' + TOTAL_TOOL_COUNT + '개를 ' + TOTAL_CATEGORY_GROUP_COUNT + '개 카테고리로 정리 — Run & Serve, Chat & Assistants, Code & Development, Knowledge & Retrieval, Voice & Audio, Images & Video, Train & Operate. 라이선스·링크·주요 URL 수록. 스택 선택 전 전체 지도 확인.',
     advertiserHighlight: {
@@ -5139,7 +5141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-current',
         title: '이 디렉토리를 최신 상태로 유지하는 방법',
         content:
-          '**이 디렉토리는 3개월마다 검토되며 검토 사이에는 집중적인 월간 업데이트를 진행합니다 — 2026년 8월 마지막 업데이트, 다음 정기 검토는 2026년 11월 예정입니다.** 2026년 8월 확장에서는 모든 계층에 72개 이상의 신규 도구를 추가하고, 음성/멀티모달을 STT·TTS·비전의 세 가지 전문 계층으로 분리했으며, 코딩 어시스턴트를 IDE 연동(4a)과 터미널 도구(4b)로 분리하고, 완전히 새로운 이미지 생성 계층을 추가했습니다. 모든 링크와 라이선스를 재검증했으며, 신규 항목(PearAI, Windsurf, Sourcegraph Cody, SuperAGI, Leon AI, Draw Things, Fooocus, StableSwarmUI 등)이 활발히 유지 관리되고 있는지 확인했습니다. 포함 기준: 프로젝트가 활발히 유지 관리되고(최근 90일 내 커밋), 검증 가능한 오픈소스 라이선스 또는 명확한 상업적 사용 선언이 있으며, 2026년 기준으로 상당한 사용자 기반을 보유하거나 그렇지 않으면 비어 있을 계층을 채웁니다. 두 릴리스 주기 이상 비활성화된 프로젝트는 제거되며, 기준을 충족하는 신규 프로젝트는 다음 검토 시 추가됩니다. 포함을 위한 프로젝트 제안은 PromptQuorum 저장소에 이슈 또는 PR을 열어주십시오 — 프로젝트 URL, 라이선스, 위의 형식으로 한 문장 설명을 포함하십시오.',
+          '**이 디렉토리는 지속적으로 관리되며, 프로젝트·가격·라이선스·플랫폼·하드웨어 요구 사항이 바뀔 때마다 개별 항목을 업데이트합니다.** 더 큰 구조 검토는 분기마다 진행하며, 연중 집중 업데이트도 이어집니다. 2026년 8월 확장에서는 모든 계층에 72개 이상의 신규 도구를 추가하고, 음성/멀티모달을 STT·TTS·비전의 세 가지 전문 계층으로 분리했으며, 코딩 어시스턴트를 IDE 연동(4a)과 터미널 도구(4b)로 분리하고, 완전히 새로운 이미지 생성 계층을 추가했습니다. 모든 링크와 라이선스를 재검증했으며, 신규 항목(PearAI, Windsurf, Sourcegraph Cody, SuperAGI, Leon AI, Draw Things, Fooocus, StableSwarmUI 등)이 활발히 유지 관리되고 있는지 확인했습니다. 포함 기준: 프로젝트가 활발히 유지 관리되고(최근 90일 내 커밋), 검증 가능한 오픈소스 라이선스 또는 명확한 상업적 사용 선언이 있으며, 2026년 기준으로 상당한 사용자 기반을 보유하거나 그렇지 않으면 비어 있을 계층을 채웁니다. 두 릴리스 주기 이상 비활성화된 프로젝트는 제거되며, 기준을 충족하는 신규 프로젝트는 다음 검토 시 추가됩니다. 포함을 위한 프로젝트 제안은 PromptQuorum 저장소에 이슈 또는 PR을 열어주십시오 — 프로젝트 URL, 라이선스, 위의 형식으로 한 문장 설명을 포함하십시오.',
       },
       sources: {
         id: 'sources',
@@ -5195,7 +5197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '이 디렉토리는 얼마나 자주 업데이트됩니까?',
-            a: '3개월마다, 검토 사이에는 집중적인 월간 업데이트를 진행 — 2026년 8월 마지막 업데이트, 다음 예정 검토는 2026년 11월입니다. 매월의 변경사항(프로젝트가 비활성화, 새 도구가 상당한 점유율을 획득, 라이선스 변경)은 기존 항목에 패치로 적용됩니다. 완전히 새로운 카테고리나 레이어(2026년 8월의 이미지 생성 계층 추가와 같은)는 구조를 안정적으로 유지하기 위해 분기별 검토 시점에 추가됩니다. 위의 "출처" 섹션에는 검토 사이에 생태계 동향을 모니터링하는 데 사용되는 커뮤니티 인덱스가 나열되어 있습니다.',
+            a: '지속적으로 — 프로젝트, 가격, 라이선스, 플랫폼, 하드웨어 요구 사항이 바뀔 때마다 개별 항목을 업데이트하며, 더 큰 구조 검토는 분기마다 진행합니다. 개별 변경사항(프로젝트가 비활성화, 새 도구가 상당한 점유율을 획득, 라이선스 변경)은 기존 항목에 패치로 적용됩니다. 완전히 새로운 카테고리나 레이어(2026년 8월의 이미지 생성 계층 추가와 같은)는 구조를 안정적으로 유지하기 위해 분기별 검토 시점에 추가됩니다. 위의 "출처" 섹션에는 검토 사이에 생태계 동향을 모니터링하는 데 사용되는 커뮤니티 인덱스가 나열되어 있습니다.',
           },
           {
             q: '클라우드 호출 없이 로컬에서 이미지 생성을 할 수 있습니까?',
