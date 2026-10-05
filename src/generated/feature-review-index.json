@@ -1173,5 +1173,10 @@
     "cluster": "power-local-llm",
     "urlSlug": "tina-review",
     "url": "/power-local-llm/tina-review"
+  },
+  "mlxhub": {
+    "cluster": "power-local-llm",
+    "urlSlug": "mlxhub-review",
+    "url": "/power-local-llm/mlxhub-review"
   }
 }
