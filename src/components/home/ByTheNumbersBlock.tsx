@@ -14,9 +14,16 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
   const stats = getHomeStats(lang)
   const mcpUsage = await getMcpUsageSnapshotCached()
   const mcpStatsHref = lang === 'en' ? '/mcp-stats' : `/${lang}/mcp-stats`
+  const directoryHref = lang === 'en' ? '/directory' : `/${lang}/directory`
 
   const items: { label: string; value: string; icon: HomeIconName; href?: string; hint?: string }[] = [
-    { label: t('statAppsTracked', lang), value: stats.totalApps.toLocaleString(), icon: 'apps' },
+    {
+      label: t('statAppsTracked', lang),
+      value: stats.totalApps.toLocaleString(),
+      icon: 'apps',
+      href: directoryHref,
+      hint: t('statAppsTrackedHint', lang),
+    },
     { label: t('statLanguages', lang), value: stats.locales.toString(), icon: 'globe' },
     { label: t('statFounderVerified', lang), value: stats.founderVerified.toString(), icon: 'verified' },
     { label: t('statArticlesPublished', lang), value: stats.totalArticles.toLocaleString(), icon: 'posts' },
@@ -85,7 +92,7 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
             <Link
               key={item.label}
               href={item.href}
-              className="col-span-2 rounded-lg border border-tone-list-edge bg-tone-list p-3 transition hover:shadow-md hover:-translate-y-0.5"
+              className={`${item.href === mcpStatsHref ? 'col-span-2 ' : ''}rounded-lg border border-tone-list-edge bg-tone-list p-3 transition hover:shadow-md hover:-translate-y-0.5`}
             >
               {tile}
             </Link>

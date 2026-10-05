@@ -283,6 +283,11 @@ const HOME_UI = {
     en: 'Apps tracked', de: 'Erfasste Apps', fr: 'Applications suivies', ja: '登録アプリ数', zh: '收录应用数',
     es: 'Apps registradas', pt: 'Apps monitorados', ar: 'التطبيقات المتتبَّعة', ko: '추적 중인 앱',
   },
+  statAppsTrackedHint: {
+    en: 'Open directory →', de: 'Verzeichnis öffnen →', fr: "Ouvrir l'annuaire →", ja: 'ディレクトリを開く →',
+    zh: '打开目录 →', es: 'Abrir directorio →', pt: 'Abrir diretório →', ar: 'افتح الدليل ←',
+    ko: '디렉터리 열기 →',
+  },
   statLanguages: {
     en: 'Languages', de: 'Sprachen', fr: 'Langues', ja: '対応言語', zh: '语言数', es: 'Idiomas',
     pt: 'Idiomas', ar: 'اللغات', ko: '언어',
