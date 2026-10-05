@@ -2112,7 +2112,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 53,
+    "totalCount": 54,
     "capped": true
   },
   "LibreChat": {
@@ -5824,7 +5824,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 28,
+    "totalCount": 29,
     "capped": true
   },
   "Pocket AI": {
@@ -5844,9 +5844,17 @@
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
         "dateModified": "2026-09-20",
         "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "mlxhub-review",
+        "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
+        "url": "/power-local-llm/mlxhub-review",
+        "dateModified": "2026-10-05",
+        "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "Private LLM": {
@@ -10487,6 +10495,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "mlxhub-review",
+        "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
+        "url": "/power-local-llm/mlxhub-review",
+        "dateModified": "2026-10-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "aquavoice-review",
         "title": "AquaVoice Review: Voice Dictation for AI Prompts",
         "url": "/power-local-llm/aquavoice-review",
@@ -10548,17 +10564,9 @@
         "url": "/power-local-llm/local-llm-train-operate-compared",
         "dateModified": "2026-09-21",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "local-llms",
-        "slug": "cherry-studio-ai-desktop-client-2026",
-        "title": "Cherry Studio 2.0 in 2026: The Free Agent-Based AI Desktop App",
-        "url": "/local-llms/cherry-studio-ai-desktop-client-2026",
-        "dateModified": "2026-09-20",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 186,
+    "totalCount": 187,
     "capped": true
   },
   "Qdrant": {
@@ -11169,6 +11177,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "mlxhub-review",
+        "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
+        "url": "/power-local-llm/mlxhub-review",
+        "dateModified": "2026-10-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "llm-hub-review",
         "title": "LLM Hub Review: On-Device AI Suite for Android and iPhone",
         "url": "/power-local-llm/llm-hub-review",
@@ -11184,7 +11200,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 3,
+    "totalCount": 4,
     "capped": false
   },
   "LLM Hub": {
@@ -11269,6 +11285,20 @@
         "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
         "url": "/power-local-llm/tina-review",
         "dateModified": "2026-10-04",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "MLXHub": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "mlxhub-review",
+        "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
+        "url": "/power-local-llm/mlxhub-review",
+        "dateModified": "2026-10-05",
         "tier": "about"
       }
     ],

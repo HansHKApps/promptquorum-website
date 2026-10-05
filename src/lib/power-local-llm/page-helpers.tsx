@@ -1039,6 +1039,7 @@ const HUB_THEMES: Array<{
       'tokforge-review',
       'oscilla-review',
       'tina-review',
+      'mlxhub-review',
       'ollama-local-ai-review',
       'mlc-chat-review',
       'pocket-ai-review',
