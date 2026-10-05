@@ -4,6 +4,8 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
+import { localAiApps } from './apps-barrel'
+import { applyDirectoryDate, DIRECTORY_ARTICLE_KEY } from './directory-date'
 
 import { article as a_aori_ai_personal_agent_review } from './articles/aori-ai-personal-agent-review'
 import { article as a_rapr_ai_review } from './articles/rapr-ai-review'
@@ -728,3 +730,8 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'swiftlm-review':                                      a_swiftlm_review,
   'radiant-canvas':                                      a_radiant_canvas,
 }
+
+// The directory page's "Last updated" date follows the tool list: every 5 tools added after the article's own
+// dateModified move it to the day the 5th was added (see directory-date.ts). Runs once at import, so the page badge,
+// JSON-LD, OG modifiedTime, sitemap lastmod and the generated metadata all see the same date.
+applyDirectoryDate(powerLLMContent[DIRECTORY_ARTICLE_KEY], localAiApps)
