@@ -138,6 +138,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Platform': 'Source code',
             'Where to get it': '[GitHub](https://github.com/timmyy123/LLM-Hub) (PolyForm Noncommercial)',
           },
+          {
+            'Platform': 'Website',
+            'Where to get it': '[llm-hub.app](https://www.llm-hub.app)',
+          },
+          {
+            'Platform': 'Privacy policy',
+            'Where to get it': '[LLM Hub privacy policy](https://www.llm-hub.app/privacy)',
+          },
         ],
         note: 'This page is companion material to the app\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versions as verified on 3 October 2026: Android 4.4.2 / iOS 1.4.0 (Android from the repository\'s build file, since the Play text read shows no version; iOS from the App Store). The README says native Windows and macOS apps are planned, not released.',
       },
@@ -317,7 +325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hardware requirements.** No minimum RAM, Android version, or chipset list was found in the sources read.',
           '**What Premium unlocks.** The App Store gives a price; neither store text read lists the locked features, and the Play price was not shown.',
           '**Whether the free build shows ads.** Only an indirect mention in the README\'s setup notes.',
-          '**Product website.** The site at llm-hub.app loads only with JavaScript, so its content could not be read; facts here come from the stores and the repository.',
+          '**Product website.** The site at [llm-hub.app](https://www.llm-hub.app) loads only with JavaScript, so its content could not be read; facts here come from the stores and the repository.',
           '**Similarly named repositories.** Search results show other GitHub repositories with near-identical names; this review covers only [timmyy123/LLM-Hub](https://github.com/timmyy123/LLM-Hub), the one the app\'s README and the license-holder email point to.',
         ],
       },
@@ -409,6 +417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LLM Hub on Google Play](https://play.google.com/store/apps/details?id=com.llmhub.llmhub) — description, developer details, Data safety section, download count, rating, and last-updated date, checked 3 October 2026.',
           '[LLM Hub on the App Store](https://apps.apple.com/au/app/llm-hub/id6762511820) — price, Premium Lifetime purchase, version, platform requirements, and privacy label, checked 3 October 2026.',
           '[LLM-Hub on GitHub](https://github.com/timmyy123/LLM-Hub) — README, LICENSE file, and the Android and iOS build files for version numbers.',
+          '[LLM Hub privacy policy](https://www.llm-hub.app/privacy) — the developer\'s privacy policy, linked from the product website.',
         ],
       },
       relatedReading: {
@@ -585,6 +594,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plattform': 'Quellcode',
             'Bezugsquelle': '[GitHub](https://github.com/timmyy123/LLM-Hub) (PolyForm Noncommercial)',
+          },
+          {
+            'Plattform': 'Website',
+            'Bezugsquelle': '[llm-hub.app](https://www.llm-hub.app)',
+          },
+          {
+            'Plattform': 'Datenschutzerklärung',
+            'Bezugsquelle': '[Datenschutzerklärung von LLM Hub](https://www.llm-hub.app/privacy)',
           },
         ],
         note: 'Diese Seite ist Begleitmaterial zum Eintrag der App im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versionen, geprüft am 3. Oktober 2026: Android 4.4.2 / iOS 1.4.0 (Android aus der Build-Datei des Repositorys, da der gelesene Play-Text keine Version zeigt; iOS aus dem App Store). Laut README sind native Windows- und macOS-Apps geplant, aber nicht veröffentlicht.',
@@ -765,7 +782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hardwareanforderungen.** In den gelesenen Quellen fand sich keine Angabe zu Mindest-RAM, Android-Version oder Chipsatz.',
           '**Was Premium freischaltet.** Der App Store nennt einen Preis; keiner der gelesenen Store-Texte führt die gesperrten Funktionen auf, und der Play-Preis wurde nicht angezeigt.',
           '**Ob der kostenlose Build Werbung zeigt.** Nur ein indirekter Hinweis in den Einrichtungsnotizen des READMEs.',
-          '**Produkt-Website.** Die Seite llm-hub.app lädt nur mit JavaScript, sodass ihr Inhalt nicht gelesen werden konnte; die Angaben hier stammen aus den Stores und dem Repository.',
+          '**Produkt-Website.** Die Seite [llm-hub.app](https://www.llm-hub.app) lädt nur mit JavaScript, sodass ihr Inhalt nicht gelesen werden konnte; die Angaben hier stammen aus den Stores und dem Repository.',
           '**Ähnlich benannte Repositorys.** Suchergebnisse zeigen weitere GitHub-Repositorys mit nahezu identischen Namen; diese Rezension behandelt nur [timmyy123/LLM-Hub](https://github.com/timmyy123/LLM-Hub), auf das das README der App und die E-Mail des Lizenzinhabers verweisen.',
         ],
       },
@@ -857,6 +874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LLM Hub bei Google Play](https://play.google.com/store/apps/details?id=com.llmhub.llmhub) — Beschreibung, Entwicklerangaben, Abschnitt „Datensicherheit“, Download-Zahl, Bewertung und Datum der letzten Aktualisierung, geprüft am 3. Oktober 2026.',
           '[LLM Hub im App Store](https://apps.apple.com/au/app/llm-hub/id6762511820) — Preis, Kauf „Premium Lifetime“, Version, Plattformanforderungen und Datenschutzlabel, geprüft am 3. Oktober 2026.',
           '[LLM-Hub auf GitHub](https://github.com/timmyy123/LLM-Hub) — README, LICENSE-Datei sowie die Android- und iOS-Build-Dateien für die Versionsnummern.',
+          '[Datenschutzerklärung von LLM Hub](https://www.llm-hub.app/privacy) — die Datenschutzerklärung des Entwicklers, verlinkt von der Produkt-Website.',
         ],
       },
       relatedReading: {
@@ -1001,6 +1019,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plataforma': 'Código fuente',
             'Dónde obtenerla': '[GitHub](https://github.com/timmyy123/LLM-Hub) (PolyForm Noncommercial)',
+          },
+          {
+            'Plataforma': 'Sitio web',
+            'Dónde obtenerla': '[llm-hub.app](https://www.llm-hub.app)',
+          },
+          {
+            'Plataforma': 'Política de privacidad',
+            'Dónde obtenerla': '[Política de privacidad de LLM Hub](https://www.llm-hub.app/privacy)',
           },
         ],
         note: 'Esta página es material complementario de la entrada de la app en el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versiones verificadas el 3 de octubre de 2026: Android 4.4.2 / iOS 1.4.0 (la de Android procede del archivo de compilación del repositorio, ya que el texto de Play que se leyó no muestra versión; la de iOS, de la App Store). El README dice que las apps nativas para Windows y macOS están planificadas, no publicadas.',
@@ -1181,7 +1207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Requisitos de hardware.** En las fuentes leídas no se encontró una lista de RAM mínima, versión de Android ni chipsets.',
           '**Qué desbloquea Premium.** La App Store indica un precio; ninguno de los textos de las tiendas que se leyeron enumera las funciones bloqueadas, y el precio en Play no se mostraba.',
           '**Si la compilación gratuita muestra anuncios.** Solo hay una mención indirecta en las notas de configuración del README.',
-          '**Sitio web del producto.** El sitio llm-hub.app solo carga con JavaScript, por lo que no se pudo leer su contenido; los datos de aquí proceden de las tiendas y del repositorio.',
+          '**Sitio web del producto.** El sitio [llm-hub.app](https://www.llm-hub.app) solo carga con JavaScript, por lo que no se pudo leer su contenido; los datos de aquí proceden de las tiendas y del repositorio.',
           '**Repositorios con nombres parecidos.** Los resultados de búsqueda muestran otros repositorios de GitHub con nombres casi idénticos; este análisis cubre solo [timmyy123/LLM-Hub](https://github.com/timmyy123/LLM-Hub), el repositorio al que apuntan el README de la app y el correo del titular de la licencia.',
         ],
       },
@@ -1273,6 +1299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LLM Hub en Google Play](https://play.google.com/store/apps/details?id=com.llmhub.llmhub) — descripción, datos del desarrollador, sección Seguridad de los datos, número de descargas, valoración y fecha de última actualización, consultados el 3 de octubre de 2026.',
           '[LLM Hub en la App Store](https://apps.apple.com/au/app/llm-hub/id6762511820) — precio, compra Premium Lifetime, versión, requisitos de plataforma y etiqueta de privacidad, consultados el 3 de octubre de 2026.',
           '[LLM-Hub en GitHub](https://github.com/timmyy123/LLM-Hub) — README, archivo LICENSE y archivos de compilación de Android e iOS para los números de versión.',
+          '[Política de privacidad de LLM Hub](https://www.llm-hub.app/privacy) — la política de privacidad del desarrollador, enlazada desde el sitio web del producto.',
         ],
       },
       relatedReading: {
@@ -1417,6 +1444,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plateforme': 'Code source',
             'Où la trouver': '[GitHub](https://github.com/timmyy123/LLM-Hub) (PolyForm Noncommercial)',
+          },
+          {
+            'Plateforme': 'Site web',
+            'Où la trouver': '[llm-hub.app](https://www.llm-hub.app)',
+          },
+          {
+            'Plateforme': 'Politique de confidentialité',
+            'Où la trouver': '[Politique de confidentialité de LLM Hub](https://www.llm-hub.app/privacy)',
           },
         ],
         note: 'Cette page est un complément à l\'entrée de l\'application dans le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versions vérifiées le 3 octobre 2026 : Android 4.4.2 / iOS 1.4.0 (Android d\'après le fichier de build du dépôt, car le texte Play lu n\'indique aucune version ; iOS d\'après l\'App Store). Le README indique que des applications natives pour Windows et macOS sont prévues, mais non publiées.',
@@ -1597,7 +1632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Configuration matérielle requise.** Aucune liste de RAM minimale, de version d\'Android ou de processeurs n\'a été trouvée dans les sources lues.',
           '**Ce que Premium déverrouille.** L\'App Store indique un prix ; aucun des textes des boutiques lus ne détaille les fonctions verrouillées, et le prix sur Play n\'était pas affiché.',
           '**Si la version gratuite affiche des publicités.** Seule une mention indirecte figure dans les notes de configuration du README.',
-          '**Site du produit.** Le site llm-hub.app ne se charge qu\'avec JavaScript, son contenu n\'a donc pas pu être lu ; les faits présentés ici proviennent des boutiques et du dépôt.',
+          '**Site du produit.** Le site [llm-hub.app](https://www.llm-hub.app) ne se charge qu\'avec JavaScript, son contenu n\'a donc pas pu être lu ; les faits présentés ici proviennent des boutiques et du dépôt.',
           '**Dépôts aux noms similaires.** Les résultats de recherche montrent d\'autres dépôts GitHub aux noms quasi identiques ; cet avis ne couvre que [timmyy123/LLM-Hub](https://github.com/timmyy123/LLM-Hub), celui vers lequel pointent le README de l\'application et l\'adresse e-mail du titulaire de la licence.',
         ],
       },
@@ -1689,6 +1724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LLM Hub sur Google Play](https://play.google.com/store/apps/details?id=com.llmhub.llmhub) — description, informations sur le développeur, section Sécurité des données, nombre de téléchargements, note et date de dernière mise à jour, consultés le 3 octobre 2026.',
           '[LLM Hub sur l\'App Store](https://apps.apple.com/au/app/llm-hub/id6762511820) — prix, achat Premium Lifetime, version, configuration requise des plateformes et étiquette de confidentialité, consultés le 3 octobre 2026.',
           '[LLM-Hub sur GitHub](https://github.com/timmyy123/LLM-Hub) — README, fichier LICENSE, ainsi que les fichiers de build Android et iOS pour les numéros de version.',
+          '[Politique de confidentialité de LLM Hub](https://www.llm-hub.app/privacy) — la politique de confidentialité du développeur, liée depuis le site du produit.',
         ],
       },
       relatedReading: {
@@ -1833,6 +1869,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'プラットフォーム': 'ソースコード',
             '入手先': '[GitHub](https://github.com/timmyy123/LLM-Hub)(PolyForm Noncommercial)',
+          },
+          {
+            'プラットフォーム': '公式サイト',
+            '入手先': '[llm-hub.app](https://www.llm-hub.app)',
+          },
+          {
+            'プラットフォーム': 'プライバシーポリシー',
+            '入手先': '[LLM Hubのプライバシーポリシー](https://www.llm-hub.app/privacy)',
           },
         ],
         note: 'このページは、[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)にある本アプリの項目の補足資料です。2026年10月3日に確認したバージョン:Android 4.4.2 / iOS 1.4.0(Androidはリポジトリのビルドファイルによる。読み取れたPlayの文面にはバージョンが示されていないため。iOSはApp Storeによる)。READMEによれば、ネイティブのWindowsおよびmacOSアプリは計画中で、未リリースです。',
@@ -2013,7 +2057,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**ハードウェア要件。** 読み取れた情報源には、最小RAM、Androidバージョン、チップセットの一覧が見つからなかった。',
           '**Premiumで何が解除されるか。** App Storeには価格があるが、読み取れたどちらのストアの文面にも制限される機能の一覧はなく、Playの価格は表示されていなかった。',
           '**無料ビルドに広告が表示されるか。** READMEのセットアップ注記に間接的な言及があるだけ。',
-          '**製品ウェブサイト。** llm-hub.appのサイトはJavaScriptがないと読み込めず、内容を読み取れなかった。ここでの事実はストアとリポジトリに基づく。',
+          '**製品ウェブサイト。** [llm-hub.app](https://www.llm-hub.app)のサイトはJavaScriptがないと読み込めず、内容を読み取れなかった。ここでの事実はストアとリポジトリに基づく。',
           '**名前の似たリポジトリ。** 検索結果には、ほぼ同じ名前の他のGitHubリポジトリが表示される。本レビューが対象とするのは、アプリのREADMEとライセンス保有者のメールアドレスが指す[timmyy123/LLM-Hub](https://github.com/timmyy123/LLM-Hub)だけである。',
         ],
       },
@@ -2105,6 +2149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Google PlayのLLM Hub](https://play.google.com/store/apps/details?id=com.llmhub.llmhub) — 説明、開発者の詳細、データセーフティのセクション、ダウンロード数、評価、最終更新日。2026年10月3日確認。',
           '[App StoreのLLM Hub](https://apps.apple.com/au/app/llm-hub/id6762511820) — 料金、Premium Lifetimeの購入、バージョン、プラットフォーム要件、プライバシーラベル。2026年10月3日確認。',
           '[GitHubのLLM-Hub](https://github.com/timmyy123/LLM-Hub) — README、LICENSEファイル、バージョン番号を確認したAndroidとiOSのビルドファイル。',
+          '[LLM Hubのプライバシーポリシー](https://www.llm-hub.app/privacy) — 開発者のプライバシーポリシー。製品ウェブサイトからリンクされている。',
         ],
       },
       relatedReading: {
@@ -2249,6 +2294,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Plataforma': 'Código-fonte',
             'Onde obter': '[GitHub](https://github.com/timmyy123/LLM-Hub) (PolyForm Noncommercial)',
+          },
+          {
+            'Plataforma': 'Site',
+            'Onde obter': '[llm-hub.app](https://www.llm-hub.app)',
+          },
+          {
+            'Plataforma': 'Política de privacidade',
+            'Onde obter': '[Política de privacidade do LLM Hub](https://www.llm-hub.app/privacy)',
           },
         ],
         note: 'Esta página é material complementar à entrada do app no [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versões conforme verificadas em 3 de outubro de 2026: Android 4.4.2 / iOS 1.4.0 (Android a partir do arquivo de build do repositório, já que o texto do Play lido não mostra versão; iOS a partir da App Store). O README diz que apps nativos para Windows e macOS estão planejados, mas não foram lançados.',
@@ -2429,7 +2482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Requisitos de hardware.** Nenhuma lista de RAM mínima, versão do Android ou chipset foi encontrada nas fontes lidas.',
           '**O que o Premium libera.** A App Store informa um preço; nenhum dos textos das lojas lidos lista os recursos bloqueados, e o preço no Play não foi exibido.',
           '**Se a build gratuita exibe anúncios.** Há apenas uma menção indireta nas notas de configuração do README.',
-          '**Site do produto.** O site llm-hub.app só carrega com JavaScript, então seu conteúdo não pôde ser lido; os fatos aqui vêm das lojas e do repositório.',
+          '**Site do produto.** O site [llm-hub.app](https://www.llm-hub.app) só carrega com JavaScript, então seu conteúdo não pôde ser lido; os fatos aqui vêm das lojas e do repositório.',
           '**Repositórios com nomes parecidos.** Os resultados de busca mostram outros repositórios do GitHub com nomes quase idênticos; esta análise cobre apenas o [timmyy123/LLM-Hub](https://github.com/timmyy123/LLM-Hub), para o qual apontam o README do app e o e-mail do titular da licença.',
         ],
       },
@@ -2521,6 +2574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LLM Hub no Google Play](https://play.google.com/store/apps/details?id=com.llmhub.llmhub) — descrição, dados do desenvolvedor, seção Segurança dos dados, número de downloads, nota e data da última atualização, consultados em 3 de outubro de 2026.',
           '[LLM Hub na App Store](https://apps.apple.com/au/app/llm-hub/id6762511820) — preço, compra Premium Lifetime, versão, requisitos de plataforma e rótulo de privacidade, consultados em 3 de outubro de 2026.',
           '[LLM-Hub no GitHub](https://github.com/timmyy123/LLM-Hub) — README, arquivo LICENSE e os arquivos de build de Android e iOS para os números de versão.',
+          '[Política de privacidade do LLM Hub](https://www.llm-hub.app/privacy) — a política de privacidade do desenvolvedor, com link a partir do site do produto.',
         ],
       },
       relatedReading: {
@@ -2665,6 +2719,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'المنصة': 'الكود المصدري',
             'مكان الحصول عليه': '[GitHub](https://github.com/timmyy123/LLM-Hub) (PolyForm Noncommercial)',
+          },
+          {
+            'المنصة': 'الموقع الرسمي',
+            'مكان الحصول عليه': '[llm-hub.app](https://www.llm-hub.app)',
+          },
+          {
+            'المنصة': 'سياسة الخصوصية',
+            'مكان الحصول عليه': '[سياسة خصوصية LLM Hub](https://www.llm-hub.app/privacy)',
           },
         ],
         note: 'هذه الصفحة مادة مرافقة لإدخال التطبيق في [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). الإصدارات بحسب ما جرى التحقق منه في 3 أكتوبر 2026: Android 4.4.2 / iOS 1.4.0 (إصدار أندرويد من ملف البناء في المستودع لأن نص Play الذي قُرئ لا يُظهر رقم إصدار؛ وإصدار iOS من App Store). ويذكر README أن تطبيقين أصليين لـ Windows و macOS مخطَّط لهما ولم يصدرا بعد.',
@@ -2845,7 +2907,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**متطلبات العتاد.** لم يُعثر في المصادر التي قُرئت على حد أدنى للذاكرة RAM أو إصدار أندرويد أو قائمة بالشرائح.',
           '**ما الذي يفتحه Premium.** يذكر App Store سعراً؛ ولا يدرج نص أي من المتجرين الذي قُرئ الميزات المقفلة، ولم يظهر سعر Play.',
           '**هل تعرض النسخة المجانية إعلانات.** لا يوجد سوى إشارة غير مباشرة في ملاحظات الإعداد في README.',
-          '**موقع المنتج.** موقع llm-hub.app لا يُحمَّل إلا مع JavaScript، لذا تعذّرت قراءة محتواه؛ والحقائق هنا مأخوذة من المتجرين والمستودع.',
+          '**موقع المنتج.** موقع [llm-hub.app](https://www.llm-hub.app) لا يُحمَّل إلا مع JavaScript، لذا تعذّرت قراءة محتواه؛ والحقائق هنا مأخوذة من المتجرين والمستودع.',
           '**مستودعات متشابهة الأسماء.** تُظهر نتائج البحث مستودعات GitHub أخرى بأسماء شبه متطابقة؛ وتغطي هذه المراجعة [timmyy123/LLM-Hub](https://github.com/timmyy123/LLM-Hub) فقط، وهو المستودع الذي يشير إليه README التطبيق والبريد الإلكتروني لصاحب الترخيص.',
         ],
       },
@@ -2937,6 +2999,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[LLM Hub على Google Play](https://play.google.com/store/apps/details?id=com.llmhub.llmhub) — الوصف وتفاصيل المطوّر وقسم أمان البيانات وعدد التنزيلات والتقييم وتاريخ آخر تحديث، جرى التحقق منها في 3 أكتوبر 2026.',
           '[LLM Hub على App Store](https://apps.apple.com/au/app/llm-hub/id6762511820) — السعر وشراء Premium Lifetime والإصدار ومتطلبات المنصة وبطاقة الخصوصية، جرى التحقق منها في 3 أكتوبر 2026.',
           '[LLM-Hub على GitHub](https://github.com/timmyy123/LLM-Hub) — README وملف LICENSE وملفا البناء لأندرويد و iOS لمعرفة أرقام الإصدارات.',
+          '[سياسة خصوصية LLM Hub](https://www.llm-hub.app/privacy) — سياسة الخصوصية الخاصة بالمطوّر، وهي مرتبطة من موقع المنتج.',
         ],
       },
       relatedReading: {
@@ -3081,6 +3144,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '平台': '源代码',
             '获取途径': '[GitHub](https://github.com/timmyy123/LLM-Hub)(PolyForm Noncommercial)',
+          },
+          {
+            '平台': '官方网站',
+            '获取途径': '[llm-hub.app](https://www.llm-hub.app)',
+          },
+          {
+            '平台': '隐私政策',
+            '获取途径': '[LLM Hub 隐私政策](https://www.llm-hub.app/privacy)',
           },
         ],
         note: '本页是该应用在 [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) 中词条的配套资料。据 2026 年 10 月 3 日核实的版本:Android 4.4.2 / iOS 1.4.0(Android 版本来自代码仓库的构建文件,因为所读的 Play 文本未显示版本号;iOS 版本来自 App Store)。README 称原生 Windows 和 macOS 应用已在计划中,尚未发布。',
@@ -3261,7 +3332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**硬件要求。** 所读来源中没有找到最低内存、Android 版本或芯片清单。',
           '**Premium 解锁了什么。** App Store 给出了价格;所读的两个商店文本都没有列出被锁定的功能,Play 的价格也未显示。',
           '**免费版本是否显示广告。** 只有 README 设置说明中的间接提及。',
-          '**产品网站。** llm-hub.app 网站仅在启用 JavaScript 时才能加载,因此无法读取其内容;本文的事实来自应用商店和代码仓库。',
+          '**产品网站。** [llm-hub.app](https://www.llm-hub.app) 网站仅在启用 JavaScript 时才能加载,因此无法读取其内容;本文的事实来自应用商店和代码仓库。',
           '**名称相近的代码仓库。** 搜索结果中还有其他名称几乎相同的 GitHub 代码仓库;本评测仅涵盖 [timmyy123/LLM-Hub](https://github.com/timmyy123/LLM-Hub),即该应用的 README 和许可证持有者邮箱所指向的那一个。',
         ],
       },
@@ -3353,6 +3424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Google Play 上的 LLM Hub](https://play.google.com/store/apps/details?id=com.llmhub.llmhub) — 描述、开发者信息、数据安全部分、下载量、评分和最近更新日期,核实于 2026 年 10 月 3 日。',
           '[App Store 上的 LLM Hub](https://apps.apple.com/au/app/llm-hub/id6762511820) — 价格、Premium Lifetime 内购、版本、平台要求和隐私标签,核实于 2026 年 10 月 3 日。',
           '[GitHub 上的 LLM-Hub](https://github.com/timmyy123/LLM-Hub) — README、LICENSE 文件,以及用于确认版本号的 Android 和 iOS 构建文件。',
+          '[LLM Hub 隐私政策](https://www.llm-hub.app/privacy) — 开发者的隐私政策,链接自产品网站。',
         ],
       },
       relatedReading: {
@@ -3497,6 +3569,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '플랫폼': '소스 코드',
             '받는 곳': '[GitHub](https://github.com/timmyy123/LLM-Hub) (PolyForm Noncommercial)',
+          },
+          {
+            '플랫폼': '공식 웹사이트',
+            '받는 곳': '[llm-hub.app](https://www.llm-hub.app)',
+          },
+          {
+            '플랫폼': '개인정보 처리방침',
+            '받는 곳': '[LLM Hub 개인정보 처리방침](https://www.llm-hub.app/privacy)',
           },
         ],
         note: '이 페이지는 [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 이 앱 항목의 보조 자료입니다. 2026년 10월 3일에 확인한 버전: Android 4.4.2 / iOS 1.4.0 (Play 텍스트에는 버전이 나와 있지 않아 Android는 저장소의 빌드 파일에서, iOS는 App Store에서 가져옴). README에 따르면 네이티브 Windows·macOS 앱은 계획 단계이며 출시되지 않았습니다.',
@@ -3677,7 +3757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**하드웨어 요구 사항.** 확인한 출처에서는 최소 RAM, Android 버전, 칩셋 목록을 찾지 못했습니다.',
           '**Premium이 해제하는 기능.** App Store에는 가격이 나와 있지만, 확인한 두 스토어 텍스트 어디에도 잠긴 기능 목록이 없고 Play의 가격은 표시되지 않았습니다.',
           '**무료 빌드에 광고가 표시되는지 여부.** README의 설정 안내에 간접적인 언급이 있을 뿐입니다.',
-          '**제품 웹사이트.** llm-hub.app 사이트는 JavaScript가 있어야만 로드되어 내용을 읽을 수 없었으므로, 여기의 사실은 스토어와 저장소에서 가져왔습니다.',
+          '**제품 웹사이트.** [llm-hub.app](https://www.llm-hub.app) 사이트는 JavaScript가 있어야만 로드되어 내용을 읽을 수 없었으므로, 여기의 사실은 스토어와 저장소에서 가져왔습니다.',
           '**이름이 비슷한 저장소.** 검색 결과에는 거의 같은 이름의 다른 GitHub 저장소가 나타납니다. 이 리뷰는 앱 README와 라이선스 보유자 이메일이 가리키는 [timmyy123/LLM-Hub](https://github.com/timmyy123/LLM-Hub)만 다룹니다.',
         ],
       },
@@ -3769,6 +3849,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Google Play의 LLM Hub](https://play.google.com/store/apps/details?id=com.llmhub.llmhub) — 설명, 개발자 정보, 데이터 보안 섹션, 다운로드 수, 평점, 최종 업데이트 날짜. 2026년 10월 3일 확인.',
           '[App Store의 LLM Hub](https://apps.apple.com/au/app/llm-hub/id6762511820) — 가격, Premium Lifetime 구매, 버전, 플랫폼 요구 사항, 개인정보 라벨. 2026년 10월 3일 확인.',
           '[GitHub의 LLM-Hub](https://github.com/timmyy123/LLM-Hub) — README, LICENSE 파일, 버전 번호 확인용 Android·iOS 빌드 파일.',
+          '[LLM Hub 개인정보 처리방침](https://www.llm-hub.app/privacy) — 개발자의 개인정보 처리방침으로, 제품 웹사이트에서 링크되어 있습니다.',
         ],
       },
       relatedReading: {
