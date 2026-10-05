@@ -97,18 +97,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "tina-review",
-        "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
-        "url": "/power-local-llm/tina-review",
-        "dateModified": "2026-10-04",
+        "slug": "tokforge-review",
+        "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
+        "url": "/power-local-llm/tokforge-review",
+        "dateModified": "2026-10-05",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "tokforge-review",
-        "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
-        "url": "/power-local-llm/tokforge-review",
-        "dateModified": "2026-10-03",
+        "slug": "tina-review",
+        "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
+        "url": "/power-local-llm/tina-review",
+        "dateModified": "2026-10-04",
         "tier": "about"
       },
       {
@@ -5753,18 +5753,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "oscilla-review",
-        "title": "Oscilla Review: Free On-Device AI Chat for iPhone",
-        "url": "/power-local-llm/oscilla-review",
-        "dateModified": "2026-10-04",
+        "slug": "paios-review",
+        "title": "PAIOS Review: Offline Gemini Nano Chat for Android",
+        "url": "/power-local-llm/paios-review",
+        "dateModified": "2026-10-05",
         "tier": "about"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "paios-review",
-        "title": "PAIOS Review: Offline Gemini Nano Chat for Android",
-        "url": "/power-local-llm/paios-review",
-        "dateModified": "2026-10-02",
+        "slug": "oscilla-review",
+        "title": "Oscilla Review: Free On-Device AI Chat for iPhone",
+        "url": "/power-local-llm/oscilla-review",
+        "dateModified": "2026-10-04",
         "tier": "about"
       },
       {
@@ -6042,7 +6042,7 @@
         "slug": "paios-review",
         "title": "PAIOS Review: Offline Gemini Nano Chat for Android",
         "url": "/power-local-llm/paios-review",
-        "dateModified": "2026-10-02",
+        "dateModified": "2026-10-05",
         "tier": "about"
       },
       {
@@ -6562,7 +6562,7 @@
         "slug": "paios-review",
         "title": "PAIOS Review: Offline Gemini Nano Chat for Android",
         "url": "/power-local-llm/paios-review",
-        "dateModified": "2026-10-02",
+        "dateModified": "2026-10-05",
         "tier": "mentioned"
       }
     ],
@@ -11158,7 +11158,7 @@
         "slug": "paios-review",
         "title": "PAIOS Review: Offline Gemini Nano Chat for Android",
         "url": "/power-local-llm/paios-review",
-        "dateModified": "2026-10-02",
+        "dateModified": "2026-10-05",
         "tier": "about"
       }
     ],
@@ -11185,17 +11185,17 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "llm-hub-review",
-        "title": "LLM Hub Review: On-Device AI Suite for Android and iPhone",
-        "url": "/power-local-llm/llm-hub-review",
-        "dateModified": "2026-10-03",
+        "slug": "tokforge-review",
+        "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
+        "url": "/power-local-llm/tokforge-review",
+        "dateModified": "2026-10-05",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "tokforge-review",
-        "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
-        "url": "/power-local-llm/tokforge-review",
+        "slug": "llm-hub-review",
+        "title": "LLM Hub Review: On-Device AI Suite for Android and iPhone",
+        "url": "/power-local-llm/llm-hub-review",
         "dateModified": "2026-10-03",
         "tier": "mentioned"
       }
@@ -11256,7 +11256,7 @@
         "slug": "tokforge-review",
         "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
         "url": "/power-local-llm/tokforge-review",
-        "dateModified": "2026-10-03",
+        "dateModified": "2026-10-05",
         "tier": "about"
       }
     ],
