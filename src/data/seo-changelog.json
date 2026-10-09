@@ -1862,5 +1862,30 @@
       "ctr": 0.0011648223645894002,
       "period": "GSC top queries 2026-10-09"
     }
+  },
+  {
+    "id": "8a6a4f60-001a-4cae-a3c5-65c417f82e72",
+    "slug": "/power-local-llm/koboldcpp-review",
+    "date": "2026-10-09T18:47:04.503Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "KoboldCpp Review: One File, No Install Needed",
+        "new": "KoboldCpp Review 2026: Download, Setup and GPU Support"
+      },
+      {
+        "field": "metaDescription",
+        "old": "KoboldCpp is a free, AGPL 3.0, single-file local LLM app built on llama.cpp. See its KoboldAI Lite UI, GPU backend options, download links, and where it fits next to Ollama and LM Studio.",
+        "new": "KoboldCpp is a free, AGPL 3.0 single-file local LLM app built on llama.cpp. Download it, pick CUDA, Vulkan or ROCm, and compare it with llama.cpp and Ollama."
+      }
+    ],
+    "reason": "geo-meta-optimizer: intent alignment (download/install/GPU/vs llama.cpp queries), meta was 183 chars over budget; FAQ vs llama.cpp added (coherence-B3)",
+    "baseline": {
+      "position": 7.5,
+      "impressions": 1689,
+      "clicks": 5,
+      "ctr": 0.002960331557134399,
+      "period": "GSC top queries 2026-10-09"
+    }
   }
 ]
