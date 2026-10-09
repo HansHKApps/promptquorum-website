@@ -1,0 +1,1040 @@
+{
+  "id": "pq-test-bobe-2026-10-07",
+  "hero": "desktop_chat",
+  "date_human": "2026年10月7日",
+  "captured": "2026-10-07 or later; exact time not recorded",
+  "standard_version": "0.1",
+  "locale": "zh",
+  "app": {
+    "name": "BoBe",
+    "slug": "bobe",
+    "vendor": "Not recorded (website: bobebot.com)",
+    "category": "Local AI assistant with screen awareness",
+    "platform": "macOS (DMG download)",
+    "pricing_url": null
+  },
+  "title": "24 GB 的 Mac 上的 BoBe Alpha：安装容易，删除时会自己重启",
+  "page_title": "BoBe Test",
+  "dek": "在搭载 M3 Pro 的 MacBook Pro 上进行的实测。应用内助手没有说出它所需的 macOS 设置，测试者尝试删除时，应用还自行重启了。",
+  "status": "Abandoned",
+  "published": "2026-10-09",
+  "index": false,
+  "started": "2026-10-07",
+  "ended": null,
+  "meta": [
+    [
+      "应用",
+      "BoBe，一款会查看屏幕的本地 AI 助手（bobebot.com）",
+      "observed"
+    ],
+    [
+      "版本",
+      "v0.1.0-alpha，来自网站的下载横幅，由测试者粘贴。实际安装的版本未记录。",
+      "vendor-claim"
+    ],
+    [
+      "测试者",
+      "Hans Kuepper，PromptQuorum 创始人",
+      null
+    ],
+    [
+      "开始时间",
+      "2026 年 10 月 7 日（笔记写的是'7 October'；年份来自文件名和文档属性）。时间未记录。",
+      "observed"
+    ],
+    [
+      "结束时间",
+      "未记录。测试以卸载应用结束。",
+      null
+    ],
+    [
+      "硬件",
+      "MacBook Pro，Apple M3 Pro，24 GB 统一内存（笔记中写的是'24 GB RAM machine'）",
+      "observed"
+    ],
+    [
+      "系统",
+      "macOS，测试当日的最新版本；具体版本未记录",
+      null
+    ],
+    [
+      "来源",
+      "bobebot.com/#download。安装指南：bobebot.com/getting-started",
+      "observed"
+    ],
+    [
+      "下载",
+      "来自网站的 312 MB DMG（测试者所述）。设置过程随后下载了 4.9 GB 的语言模型和 5.7 GB 的视觉模型（qwen3-vl:8b）。",
+      "measured"
+    ],
+    [
+      "本地模型",
+      "Medium（8B），标注约 11 GB 和 24 GB+ 内存。哪一个下载文件对应它，未记录。",
+      "observed"
+    ],
+    [
+      "测试原因",
+      "未记录。",
+      null
+    ],
+    [
+      "目标",
+      "笔记中未说明。据笔记推断：看看一个会录制屏幕并据此推理的助手，能否在 24 GB 的 Mac 上配合本地模型完成安装并正常工作。",
+      "assumption"
+    ],
+    [
+      "使用的 AI 辅助",
+      "ChatGPT（安装前的一个安全问题）。测试的是 BoBe 自带的聊天助手。",
+      "observed"
+    ]
+  ],
+  "disclosure": "测试者创办了 PromptQuorum（promptquorum.com），这是一个关于本地 AI 应用的内容网站和目录。笔记中没有与厂商联系、付款或赞助的记录。测试者表示，与创始人交流后他可能会再试一次。",
+  "verdict": {
+    "general": "一个早期的 alpha 版本（据网站为 v0.1.0-alpha）。安装很容易，模型选择也很清晰。它的核心想法——一个盯着屏幕来提供帮助的助手——在这次测试中没能被证明可用：应用自己的助手没有说出授予屏幕录制权限所需的 macOS 设置，检查屏幕感知是否有效时也没有得到可用的回答。删除它需要用到活动监视器。",
+    "fit": "设置完成后卸载。'Concept I like. Concept is interesting. Implementation is missing.' 测试者可能在 3 到 6 个月后，或与创始人交流后再试一次。"
+  },
+  "scores": [
+    [
+      "安装",
+      4,
+      "312 MB DMG，一次 macOS 批准，据测试者称'so smooth'。"
+    ],
+    [
+      "上手与模型选择",
+      2,
+      "对话框清晰，列出三个模型及其内存需求。但宣称 11 GB，实际下载却是 4.9 GB 和 5.7 GB，没有时间预估，权限步骤也不清楚。"
+    ],
+    [
+      "核心功能",
+      1,
+      "屏幕感知无法确认可用。可见的聊天回复没有给出可用的答案。"
+    ],
+    [
+      "引导与迭代",
+      1,
+      "应用内助手在被问两次后仍没有说出 macOS 设置。未测试迭代。"
+    ],
+    [
+      "性能",
+      null,
+      "未测量。"
+    ],
+    [
+      "文档",
+      null,
+      "有分步安装指南（正面）。其内容未评估。"
+    ],
+    [
+      "信任与隐私",
+      null,
+      "未审计。这是一款录制屏幕的应用；用 ChatGPT 做的检查没有定论；应用称分析留在 Mac 上。"
+    ],
+    [
+      "卸载",
+      1,
+      "应用自行重启了。必须先在活动监视器中退出，才能删除。"
+    ]
+  ],
+  "scores_note": "评分是根据下文证据得出的建议（1 = 差，5 = 很好），需由测试者确认。",
+  "tldr": [
+    [
+      "observed",
+      "安装容易（312 MB DMG，一次 macOS 批准）。之后设置过程下载了 4.9 GB 和 5.7 GB，而宣称的是 11 GB，没有时间预估，macOS 屏幕录制这一步也不清楚。"
+    ],
+    [
+      "observed",
+      "应用内助手没有说出要更改的 macOS 设置。对'is screen reporting working?'的回复，在笔记中记录为'Bobe'。"
+    ],
+    [
+      "tester-view",
+      "测试者卸载了它：alpha 版，概念有意思，实现缺失。他尝试删除时，应用自行重启了。"
+    ]
+  ],
+  "quotes": [
+    "一个连这个问题都回答不了的系统，我怎么能放心把任何事交给它？",
+    "我喜欢这个概念。这个概念很有意思。[...] 实现缺失。"
+  ],
+  "quote_note": "测试者笔记，由语音转写稍作编辑。译自英文。",
+  "moments_title": "塑造这次测试的五个时刻",
+  "moments_md": "五个时刻",
+  "moments_nav": "五个时刻",
+  "moments": [
+    [
+      "三个模型，只有一个合适",
+      "对话框列出 Small、Medium 和 Large 及其内存需求。Medium 适合 24 GB。Large 标明 48 GB+，而测试者原以为它能运行。",
+      "model_choice",
+      "chapter-model"
+    ],
+    [
+      "宣称 11 GB，显示 4.9 GB",
+      "设置过程先下载了 4.9 GB 的语言模型，接着是 5.7 GB 的视觉模型。两个进度条都不显示剩余时间。",
+      "downloads",
+      "chapter-downloads"
+    ],
+    [
+      "一切都取决于的那项权限",
+      "屏幕录制显示'Not Granted'。测试者只能自己去 macOS 设置里找。",
+      "permission",
+      "chapter-permission"
+    ],
+    [
+      "问了两次，没有说出设置",
+      "应用内助手对一个明确的问题的回应，是让他澄清自己想要什么。",
+      "chat_clarify",
+      "chapter-help"
+    ],
+    [
+      "一个会自己重启的应用",
+      "测试者尝试删除它时，它又回来了。他先在活动监视器中退出了它。",
+      null,
+      "chapter-uninstall"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-website",
+      "title": "网站",
+      "items": [
+        [
+          "observed",
+          "测试者从 bobebot.com/#download 下载了该应用：一个适用于 Mac 的 312 MB DMG。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "测试者粘贴的下载横幅：'v0.1.0-alpha · Requires macOS 13+ · Apple Silicon · M2 or higher recommended for local models'。",
+          null
+        ],
+        [
+          "observed",
+          "网站提供分步安装指南（bobebot.com/getting-started）。测试者认为这是正面的。其内容未评估。",
+          null
+        ],
+        [
+          "assumption",
+          "测试者的印象：BoBe 不连接 LM Studio 或 Ollama（笔记中写的是'Llama'）。它下载一个模型并直接集成。未核实。",
+          null
+        ],
+        [
+          "tester-view",
+          "一个会录制屏幕并据此了解用户的助手，这个想法吸引了他。'So cool function.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-security",
+      "title": "安装之前：一个安全问题",
+      "items": [
+        [
+          "observed",
+          "测试者在安装前向 ChatGPT 询问了安全风险。",
+          null
+        ],
+        [
+          "third-party",
+          "据测试者转述，ChatGPT 既没找到负面信息，也没找到正面信息，也就是说两头都没有可用的信息。ChatGPT 的回答本身不在笔记中。",
+          null
+        ],
+        [
+          "observed",
+          "测试者决定冒险，照样安装。本次测试不包含任何独立的安全审查。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-install",
+      "title": "安装",
+      "items": [
+        [
+          "observed",
+          "从 DMG 安装。使用前唯一的一步，是在 macOS 中批准该应用来自互联网。测试者：'so smooth as hell, no problems'。",
+          null
+        ],
+        [
+          "observed",
+          "第一个界面询问要使用哪种模型。测试者选了本地模型。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-model",
+      "title": "选择模型",
+      "items": [
+        [
+          "observed",
+          "对话框首先给出云端选项（带'Continue with OpenAI'的 GPT-5.1 下拉菜单）。下面是三个本地模型：Small（4B），约 6 GB，适用于任何内存 16 GB+ 的 Apple Silicon Mac；Medium（8B），约 11 GB，适用于内存 24 GB+ 的 M1 Pro / M2 或更新机型；Large（14B），约 15 GB，适用于内存 48 GB+ 的 M2 Pro / M3 或更新机型。",
+          "model_choice"
+        ],
+        [
+          "observed",
+          "测试者选了 Medium，与他的 24 GB 相符。他注意到只有三个模型。",
+          null
+        ],
+        [
+          "tester-error",
+          "测试者写道，15 GB 的模型在 24 GB 的机器上'should also run'。对话框写明 Large 需要 48 GB+ 内存。这没有影响，因为他选了 Medium。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-downloads",
+      "title": "下载",
+      "items": [
+        [
+          "measured",
+          "设置分三步：AI 引擎、语言模型、初始化。语言模型的下载为 4.9 GB。截图显示已完成 59 MB，即 1%。",
+          "downloads"
+        ],
+        [
+          "observed",
+          "模型对话框曾宣称 Medium 约为 11 GB。",
+          null
+        ],
+        [
+          "measured",
+          "第一个下载结束后，第二个开始了：视觉模型 qwen3-vl:8b，5.7 GB（笔记中写的是'another five gigabytes'）。",
+          null
+        ],
+        [
+          "assumption",
+          "4.9 GB 加 5.7 GB 共 10.6 GB，与宣称的 11 GB 大致吻合。应用没有这么说。",
+          null
+        ],
+        [
+          "observed",
+          "进度条显示百分比和大小，不显示剩余时间。测试者在另一款应用里也见过同样的情况。",
+          null
+        ],
+        [
+          "tester-view",
+          "对于这么大的文件，应该显示时间预估；而先是 11 GB，再是 4.9 GB，然后又一个下载，这样的沟通很糟糕。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-permission",
+      "title": "授予屏幕录制权限",
+      "items": [
+        [
+          "vendor-claim",
+          "Screen Awareness 对话框称 BoBe 'glances at your screen periodically so it can offer relevant help, track your goals, and remember what you're working on'，并称 'screenshots are analyzed locally on your Mac and never uploaded'。未核实；未做网络检查。",
+          "permission"
+        ],
+        [
+          "observed",
+          "屏幕录制显示'Not Granted'，带有'Open System Settings'链接和文字'Grant permission to continue'。另有一个'Skip: disable screen capture'按钮。",
+          null
+        ],
+        [
+          "tester-view",
+          "测试者原本预期应用运行后屏幕设置会很简单。他没有找到清晰的路径，只能自己在 macOS 设置里搜索。",
+          null
+        ],
+        [
+          "observed",
+          "是否使用了'Open System Settings'链接、它指向哪里，均未记录。测试者称他自己找到了该设置并启用了它。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-help",
+      "title": "向 BoBe 求助",
+      "items": [
+        [
+          "observed",
+          "测试者在聊天中问 BoBe，如何授予它用于截图和监控屏幕的 macOS 权限。在可见的回复中，BoBe 请他澄清想设置什么，并表示愿意帮忙。",
+          "chat_clarify"
+        ],
+        [
+          "observed",
+          "他又问了一次，更加具体：'I don't know where I need to click in the Apple system to change this. Tell me please which setting this is.' 可见的回复问他想要完成什么（见本页顶部）。",
+          null
+        ],
+        [
+          "observed",
+          "他写道：'Is this supposed to be an answer or a joke?'",
+          "joke"
+        ],
+        [
+          "tester-view",
+          "他问，一个回答不了这个问题的系统怎么能被信任去做任何事，并说诚实地回答'我回答不了这个问题'会更好。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-works",
+      "title": "屏幕感知有效吗？",
+      "items": [
+        [
+          "observed",
+          "设置完成后，测试者问 BoBe 屏幕感知是否在工作。笔记把回答记录为'Bobe'。他把这视为没有回答。",
+          null
+        ],
+        [
+          "observed",
+          "没有记录对屏幕相关功能的进一步测试。",
+          null
+        ],
+        [
+          "tester-view",
+          "BoBe '连作为聊天智能体都不好用'。",
+          null
+        ],
+        [
+          "assumption",
+          "测试者想知道一个约 5 GB 的模型能做什么。小模型可能限制了助手的能力；未测试。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-uninstall",
+      "title": "删除",
+      "items": [
+        [
+          "observed",
+          "测试者尝试删除应用时，它自动重启，无法删除。他在活动监视器中退出后才删除成功。",
+          null
+        ],
+        [
+          "tester-view",
+          "'Just even for alpha level, this is not acceptable.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-alive",
+      "title": "项目还活着吗？",
+      "items": [
+        [
+          "vendor-claim",
+          "网站横幅写着'M2 or higher recommended'。下载的文件提到'February 26'。笔记没有说明这是某一天还是某一年。",
+          null
+        ],
+        [
+          "assumption",
+          "测试者的印象是项目可能已经停摆。'M2 or higher'也涵盖更新的芯片，构建日期不明，也没有查看代码仓库或发布历史，所以这个推断很弱。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "决定",
+      "items": [
+        [
+          "tester-view",
+          "'This is alpha.' 一个将来也许能实现的概念；他想知道今天是否有任何东西能用，还是说这只是一个概念应用。'Concept is beyond. Implementation is missing.'",
+          null
+        ],
+        [
+          "observed",
+          "测试者删除了该应用。他可能在三个月或六个月后，或与创始人交流后再试一次。",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "'Screenshots are analyzed locally on your Mac and never uploaded'",
+      "Screen Awareness 对话框",
+      "未测试。没有进行网络监控或独立核查。",
+      "vendor-claim"
+    ],
+    [
+      "'Download and run an AI model entirely on your Mac. No internet needed after setup.'",
+      "模型对话框",
+      "模型是通过应用下载的。离线运行未测试。",
+      "vendor-claim"
+    ],
+    [
+      "Medium（8B）约为 11 GB",
+      "模型对话框",
+      "设置过程先下载了 4.9 GB 的语言模型，接着是 5.7 GB 的视觉模型。合计 10.6 GB，可能就是宣称的数字（推测）。",
+      "measured"
+    ],
+    [
+      "需要 macOS 13+、Apple Silicon，推荐 M2 或更高",
+      "网站横幅，据粘贴内容",
+      "应用在 M3 Pro 上运行。测试者认为'M2'的说法已过时。'Or higher'包含更新的芯片。",
+      "observed"
+    ],
+    [
+      "根据屏幕上的内容提供相关帮助",
+      "Screen Awareness 对话框",
+      "测试者询问屏幕感知是否有效；回复记录为'Bobe'。笔记中没有展示任何基于屏幕的帮助。",
+      "observed"
+    ],
+    [
+      "分步安装指南",
+      "网站",
+      "指南存在，但其内容未评估。测试者觉得 macOS 权限这一步不清楚。",
+      "observed"
+    ]
+  ],
+  "fit": {
+    "title": "哪个本地模型能装进 24 GB？",
+    "nav": "24 GB",
+    "memory_gb": 24,
+    "scale": 60,
+    "memline": "24 GB 内存",
+    "above": "需要超过 24 GB",
+    "below": "在 24 GB 之内",
+    "cols": [
+      "模型",
+      "应用所述"
+    ],
+    "rows": [
+      [
+        "Small（4B），下载约 6 GB",
+        16,
+        "需要 16 GB+ 内存",
+        "observed"
+      ],
+      [
+        "Medium（8B），下载约 11 GB",
+        24,
+        "需要 24 GB+ 内存",
+        "observed"
+      ],
+      [
+        "Large（14B），下载约 15 GB",
+        48,
+        "需要 48 GB+ 内存",
+        "observed"
+      ]
+    ],
+    "note": "内存需求以应用在模型对话框中的说明为准。测试者认为 Large 在 24 GB 上'should also run'的假设，被该文字所否定。除 Medium 外，其余均未测试。"
+  },
+  "usage_log": [
+    [
+      "从 DMG 安装",
+      "-",
+      "已安装；对来自互联网的应用做了一次 macOS 批准",
+      "未记录",
+      "Pass",
+      []
+    ],
+    [
+      "选择并下载本地模型",
+      "Medium（8B），标注约 11 GB",
+      "已下载 4.9 GB 的语言模型和 5.7 GB 的视觉模型（由后续使用推断下载已完成）",
+      "未记录",
+      "Pass",
+      [
+        "model_choice",
+        "downloads"
+      ]
+    ],
+    [
+      "授予屏幕录制权限",
+      "-",
+      "测试者自己在 macOS 设置里查找；在他看来没有清晰的路径",
+      "未记录",
+      "Partial",
+      [
+        "permission"
+      ]
+    ],
+    [
+      "询问 BoBe 如何授予权限",
+      "本地模型",
+      "未说出设置；要求测试者澄清（可见回复中出现两次）",
+      "-",
+      "Fail",
+      [
+        "chat_clarify",
+        "joke",
+        "desktop_chat"
+      ]
+    ],
+    [
+      "询问屏幕感知是否有效",
+      "本地模型",
+      "回复记录为'Bobe'；无法确认",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "把 BoBe 当作聊天智能体使用",
+      "本地模型",
+      "在测试者看来无法使用",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "卸载",
+      "-",
+      "应用自行重启；在活动监视器中退出后删除",
+      "未记录",
+      "Partial",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "以为 15 GB 的 Large 模型能在 24 GB 上运行。对话框写明它需要 48 GB+ 内存。没有影响，因为选的是 Medium。"
+    ],
+    [
+      "tester-error",
+      "写道没有清晰的方法设置屏幕访问。对话框中有'Open System Settings'链接。是否试过该链接未记录。"
+    ],
+    [
+      "tester-error",
+      "记录中留有缺口：安装的版本、macOS 版本、开始和结束时间、哪个下载对应哪个模型，以及对屏幕感知问题的确切回复。"
+    ],
+    [
+      "assumption",
+      "'project is dead'的印象依据的是同样涵盖更新芯片的措辞（'M2 or higher'），以及含义不明的'February 26'。没有核查过发布历史。"
+    ],
+    [
+      "tester-view",
+      "在一次没有给出任何结论的安全检查之后，安装了一款录制屏幕的 alpha 版应用。测试者是在明知风险的情况下接受的。"
+    ]
+  ],
+  "findings": [
+    [
+      "BB-01",
+      "安装很简单：一个 312 MB 的 DMG 和一次 macOS 批准。",
+      "安装",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "BB-02",
+      "网站上有分步安装指南。内容未评估。",
+      "文档",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "BB-03",
+      "模型对话框很清晰：三个本地模型，附有下载大小、芯片和内存需求。",
+      "上手",
+      "observed",
+      "Positive",
+      [
+        "model_choice"
+      ]
+    ],
+    [
+      "BB-04",
+      "宣称约 11 GB；实际下载为 4.9 GB，然后是 5.7 GB。应用没有解释这个差异。",
+      "上手",
+      "measured",
+      "Medium",
+      [
+        "model_choice",
+        "downloads",
+        "permission"
+      ]
+    ],
+    [
+      "BB-05",
+      "下载进度条显示百分比和大小，没有剩余时间。",
+      "易用性",
+      "observed",
+      "Medium",
+      [
+        "downloads",
+        "permission"
+      ]
+    ],
+    [
+      "BB-06",
+      "屏幕录制为'Not Granted'；测试者没有找到清晰的路径，只能自己在 macOS 里搜索。有'Open System Settings'链接；是否使用未记录。",
+      "上手",
+      "tester-view",
+      "Medium",
+      [
+        "permission"
+      ]
+    ],
+    [
+      "BB-07",
+      "应用内助手在被问两次明确的问题后仍没有说出 macOS 设置。",
+      "核心功能",
+      "observed",
+      "High",
+      [
+        "chat_clarify",
+        "joke",
+        "desktop_chat"
+      ]
+    ],
+    [
+      "BB-08",
+      "被问到屏幕感知是否有效时，记录的回复是'Bobe'。未能证明屏幕感知可用。",
+      "核心功能",
+      "observed",
+      "High",
+      []
+    ],
+    [
+      "BB-09",
+      "在这次测试中无法作为聊天智能体使用；测试者怀疑约 5 GB 的模型能做什么。",
+      "核心功能",
+      "tester-view",
+      "Medium",
+      []
+    ],
+    [
+      "BB-10",
+      "删除时应用自行重启，必须在活动监视器中退出。",
+      "卸载",
+      "observed",
+      "High",
+      []
+    ],
+    [
+      "BB-11",
+      "隐私声明：截图在本地分析，从不上传。未核实。",
+      "信任",
+      "vendor-claim",
+      "Medium",
+      [
+        "permission"
+      ]
+    ],
+    [
+      "BB-12",
+      "安装前用 ChatGPT 做的安全检查没有定论；测试者仍然安装了。",
+      "信任",
+      "third-party",
+      "Medium",
+      []
+    ],
+    [
+      "BB-13",
+      "测试者怀疑项目已不活跃。证据单薄，并且与'or higher'的措辞部分矛盾。",
+      "维护",
+      "assumption",
+      "Low",
+      []
+    ],
+    [
+      "BB-14",
+      "该应用似乎不会连接 LM Studio 或 Ollama；它下载自己的模型。",
+      "集成",
+      "assumption",
+      "Low",
+      []
+    ]
+  ],
+  "severity_note": "严重程度指对首次使用者的影响。为建议值，并非实测。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "想尝试早期具备屏幕感知的本地助手、并能接受 alpha 品质的爱好者。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "今天就需要一个能用的助手的人。"
+      ],
+      [
+        "tester-view",
+        "对一款没有独立安全审查却会录制屏幕的应用感到不安的人。"
+      ]
+    ],
+    "retest": "3 到 6 个月后、与创始人交流后，或发布了比 v0.1.0-alpha 更新的版本时再测试（测试者的计划，外加一个新增的触发条件）。"
+  },
+  "background_intro": "",
+  "background": [],
+  "sources": [
+    "测试者的实测笔记，2026 年 10 月 7 日（原始文档；原始笔记 PDF 待补充）。",
+    "bobebot.com 的下载页面和安装指南，为测试者所见并粘贴。",
+    "ChatGPT 关于安全风险的回答，由测试者转述（回答本身不在笔记中）。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "观察",
+      "meaning": "在应用、截图或测试者笔记中亲眼所见。"
+    },
+    "measured": {
+      "label": "测量",
+      "meaning": "从对话框、计数器或工具中读取的数值，并给出具体数字。"
+    },
+    "tester-estimate": {
+      "label": "测试者估计",
+      "meaning": "测试者自己的估计；未计时或计数。"
+    },
+    "vendor-claim": {
+      "label": "厂商声明",
+      "meaning": "由应用、商店页面或其网站所述；未核实。"
+    },
+    "third-party": {
+      "label": "第三方",
+      "meaning": "来自其他来源（AI 助手、文章）；此处未核实。"
+    },
+    "assumption": {
+      "label": "假设",
+      "meaning": "一种推断，可能是错的。"
+    },
+    "tester-view": {
+      "label": "测试者观点",
+      "meaning": "测试者的判断或意见。"
+    },
+    "tester-error": {
+      "label": "测试者失误",
+      "meaning": "测试者出错或遗漏之处。"
+    }
+  },
+  "images": [
+    {
+      "id": "desktop_chat",
+      "figure": 1,
+      "file": "bobe-desktop-chat-no-macos-setting-given.webp",
+      "path": "images/bobe-desktop-chat-no-macos-setting-given.webp",
+      "alt": "macOS 桌面上的 BoBe 吉祥物和聊天窗口：被问到该改哪项 macOS 设置后，BoBe 反问用户想要做什么。",
+      "caption": "用户询问要更改哪项 macOS 设置。BoBe 的可见回复请他澄清想要完成什么。顶部条带和一个文档预览已被移除或模糊处理，以保护隐私。",
+      "role": "hero",
+      "width": 1100,
+      "height": 984,
+      "bytes": 139482,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image6.png"
+    },
+    {
+      "id": "model_choice",
+      "figure": 2,
+      "file": "bobe-model-choice-dialog-small-medium-large-local-models.webp",
+      "path": "images/bobe-model-choice-dialog-small-medium-large-local-models.webp",
+      "alt": "BoBe 的设置对话框，提供本地模型 Small 4B（6 GB）、Medium 8B（11 GB，24 GB+ 内存）和 Large 14B（15 GB，48 GB+ 内存）；已选中 Medium。",
+      "caption": "模型选择：三个本地模型。已选中 Medium（8B，约 11 GB），与测试者的 24 GB 相符。Large 标明 48 GB+ 内存。对话框之外的背景已模糊处理。",
+      "role": "inline",
+      "width": 572,
+      "height": 636,
+      "bytes": 24210,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-model",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image1.png"
+    },
+    {
+      "id": "downloads",
+      "figure": 3,
+      "file": "bobe-setup-downloading-ai-engine-and-language-model.webp",
+      "path": "images/bobe-setup-downloading-ai-engine-and-language-model.webp",
+      "alt": "BoBe 的设置进度：AI 引擎已完成，语言模型已下载 4.9 GB 的 1%，随后是初始化 BoBe；未显示时间预估。",
+      "caption": "设置分三步下载。语言模型为 4.9 GB，而模型对话框曾说约 11 GB。进度条只显示百分比和大小。背景已模糊处理。",
+      "role": "moment",
+      "width": 597,
+      "height": 654,
+      "bytes": 8234,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-downloads",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image2.png"
+    },
+    {
+      "id": "permission",
+      "figure": 4,
+      "file": "bobe-screen-awareness-dialog-screen-recording-not-granted.webp",
+      "path": "images/bobe-screen-awareness-dialog-screen-recording-not-granted.webp",
+      "alt": "BoBe 的 Screen Awareness 对话框：屏幕录制未授予，带有 Open System Settings 链接，一个 5.7 GB 的视觉模型正在下载，进度 1%。",
+      "caption": "Screen Awareness 步骤：屏幕录制为'Not Granted'，第二个模型 qwen3-vl:8b（5.7 GB）正在下载。有一个指向系统设置的链接。背景已模糊处理。",
+      "role": "moment",
+      "width": 613,
+      "height": 665,
+      "bytes": 25910,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-permission",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image3.png"
+    },
+    {
+      "id": "chat_clarify",
+      "figure": 5,
+      "file": "bobe-chat-asks-for-clarification-instead-of-macos-permission-steps.webp",
+      "path": "images/bobe-chat-asks-for-clarification-instead-of-macos-permission-steps.webp",
+      "alt": "BoBe 聊天：用户询问如何授予 macOS 屏幕权限；BoBe 的可见回复请用户澄清要设置什么。",
+      "caption": "用户询问如何给 BoBe 授予 macOS 屏幕权限。可见的回复请他澄清，而不是说出设置项。",
+      "role": "moment",
+      "width": 1429,
+      "height": 893,
+      "bytes": 37766,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-help",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image4.png"
+    },
+    {
+      "id": "joke",
+      "figure": 6,
+      "file": "bobe-chat-user-asks-answer-or-joke.webp",
+      "path": "images/bobe-chat-user-asks-answer-or-joke.webp",
+      "alt": "BoBe 聊天窗口，用户消息为'Is this supposed to be an answer or a joke?'，下方有折叠的'+2 more'回复列表。",
+      "caption": "测试者对这些回复的反应：'Is this supposed to be an answer or a joke?'",
+      "role": "inline",
+      "width": 1431,
+      "height": 349,
+      "bytes": 6336,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-help"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image5.png"
+    }
+  ],
+  "figure_order": [
+    "desktop_chat",
+    "model_choice",
+    "downloads",
+    "permission",
+    "chat_clarify",
+    "joke"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum 上手测试 · {app} · {date}",
+    "date_line": "2026年10月7日",
+    "nav_aria": "章节",
+    "nav": {
+      "verdict": "结论",
+      "moments": "六个时刻",
+      "story": "测试经过",
+      "claims": "说法核对",
+      "fit": "24 GB",
+      "log": "使用记录",
+      "errors": "测试者失误",
+      "findings": "发现项",
+      "background": "背景"
+    },
+    "related": "相关内容：",
+    "review_link": "PromptQuorum 对 {app} 的评测",
+    "directory_link": "本地 AI 应用目录",
+    "verdict_h": "结论",
+    "general_assessment": "总体评价",
+    "fit_for_tester": "是否适合测试者的使用场景",
+    "scorecard": "评分卡",
+    "status_prefix": "状态：",
+    "na": "不适用",
+    "score_aria": "满分 5 分，得 {n} 分",
+    "details_h": "测试详情",
+    "label_intro": "每条陈述都带有标签：",
+    "legend_link": "标签含义",
+    "disclosure_label": "利益披露。",
+    "raw_notes": "原始笔记 PDF：",
+    "to_be_added": "待补充",
+    "moments_h": "左右这次测试的六个时刻",
+    "see_context": "查看上下文",
+    "story_h": "测试经过",
+    "claims_h": "官方说法与测试者所见",
+    "claims_cols": [
+      "说法",
+      "来源",
+      "所见",
+      "标签"
+    ],
+    "fit_h": "能装进 24 GB 吗？",
+    "memory_line": "{gb} GB 内存",
+    "above": "高于 {gb} GB",
+    "below": "低于 {gb} GB",
+    "log_h": "使用记录",
+    "log_cols": [
+      "#",
+      "任务",
+      "模型",
+      "结果",
+      "用时",
+      "状态",
+      "图"
+    ],
+    "statuses": {
+      "Fail": "失败",
+      "Partial": "部分完成",
+      "Pass": "通过",
+      "Not completed": "未完成"
+    },
+    "errors_h": "测试者出错的地方",
+    "findings_h": "发现清单",
+    "filter_aria": "按标签筛选发现项",
+    "filter_all": "全部",
+    "findings_cols": [
+      "编号",
+      "发现项",
+      "类别",
+      "标签",
+      "严重程度",
+      "图"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "正面"
+    },
+    "fig_abbr": "图",
+    "figure": "图",
+    "enlarge": "放大：",
+    "audience_h": "适合谁",
+    "likely_fit": "可能适合",
+    "likely_poor_fit": "可能不适合",
+    "retest": "复测。",
+    "background_h": "开发方背景",
+    "gallery_h": "测试中的更多图片",
+    "legend_h": "如何理解标签",
+    "sources_h": "资料来源",
+    "footer_line": "测试编号 {id} · 测试标准 v{version} · 原始笔记 PDF：待补充",
+    "crumb_home": "首页",
+    "crumb_directory": "目录",
+    "crumb_test": "{app} 上手测试"
+  }
+}

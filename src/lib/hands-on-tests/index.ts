@@ -9,6 +9,14 @@ import drawThingsEs from './data/draw-things.es.json'
 import drawThingsPt from './data/draw-things.pt.json'
 import drawThingsAr from './data/draw-things.ar.json'
 import drawThingsKo from './data/draw-things.ko.json'
+import bobeDe from './data/bobe.de.json'
+import bobeFr from './data/bobe.fr.json'
+import bobeJa from './data/bobe.ja.json'
+import bobeZh from './data/bobe.zh.json'
+import bobeEs from './data/bobe.es.json'
+import bobePt from './data/bobe.pt.json'
+import bobeAr from './data/bobe.ar.json'
+import bobeKo from './data/bobe.ko.json'
 
 export type EvidenceKey =
   | 'observed'
@@ -154,7 +162,17 @@ const HANDS_ON_TESTS: Record<string, Partial<Record<Language, HandsOnTest>>> = {
     ar: drawThingsAr as unknown as HandsOnTest,
     ko: drawThingsKo as unknown as HandsOnTest,
   },
-  bobe: { en: bobe as unknown as HandsOnTest },
+  bobe: {
+    en: bobe as unknown as HandsOnTest,
+    de: bobeDe as unknown as HandsOnTest,
+    fr: bobeFr as unknown as HandsOnTest,
+    ja: bobeJa as unknown as HandsOnTest,
+    zh: bobeZh as unknown as HandsOnTest,
+    es: bobeEs as unknown as HandsOnTest,
+    pt: bobePt as unknown as HandsOnTest,
+    ar: bobeAr as unknown as HandsOnTest,
+    ko: bobeKo as unknown as HandsOnTest,
+  },
 }
 
 /** The test in `lang`, or null when that language has no translation (callers must 404, never fall back to English). */

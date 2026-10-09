@@ -1,0 +1,1040 @@
+{
+  "id": "pq-test-bobe-2026-10-07",
+  "hero": "desktop_chat",
+  "date_human": "7 octobre 2026",
+  "captured": "2026-10-07 or later; exact time not recorded",
+  "standard_version": "0.1",
+  "locale": "fr",
+  "app": {
+    "name": "BoBe",
+    "slug": "bobe",
+    "vendor": "Not recorded (website: bobebot.com)",
+    "category": "Local AI assistant with screen awareness",
+    "platform": "macOS (DMG download)",
+    "pricing_url": null
+  },
+  "title": "BoBe Alpha sur un Mac de 24 Go : facile à installer, relancé à la suppression",
+  "page_title": "BoBe Test",
+  "dek": "Test pratique sur un MacBook Pro avec puce M3 Pro. L'assistant intégré n'a pas nommé le réglage macOS dont il a besoin, et l'appli s'est relancée toute seule quand le testeur a essayé de la supprimer.",
+  "status": "Abandoned",
+  "published": "2026-10-09",
+  "index": false,
+  "started": "2026-10-07",
+  "ended": null,
+  "meta": [
+    [
+      "Appli",
+      "BoBe, un assistant d'IA local qui surveille l'écran (bobebot.com)",
+      "observed"
+    ],
+    [
+      "Version",
+      "v0.1.0-alpha, d'après la bannière de téléchargement du site, telle que collée par le testeur. La version installée n'a pas été consignée.",
+      "vendor-claim"
+    ],
+    [
+      "Testeur",
+      "Hans Kuepper, fondateur de PromptQuorum",
+      null
+    ],
+    [
+      "Début",
+      "7 octobre 2026 (les notes disent '7 October' ; l'année provient du nom du fichier et des propriétés du document). Heure non consignée.",
+      "observed"
+    ],
+    [
+      "Fin",
+      "Non consignée. Le test s'est terminé avec l'appli désinstallée.",
+      null
+    ],
+    [
+      "Matériel",
+      "MacBook Pro, Apple M3 Pro, 24 Go de mémoire unifiée (les notes parlent de '24 GB RAM machine')",
+      "observed"
+    ],
+    [
+      "Système",
+      "macOS, version courante à la date du test ; version exacte non consignée",
+      null
+    ],
+    [
+      "Source",
+      "bobebot.com/#download. Guide d'installation : bobebot.com/getting-started",
+      "observed"
+    ],
+    [
+      "Téléchargement",
+      "DMG de 312 Mo depuis le site web (testeur). La configuration a ensuite téléchargé un modèle de langage de 4.9 Go et un modèle de vision de 5.7 Go (qwen3-vl:8b).",
+      "measured"
+    ],
+    [
+      "Modèle local",
+      "Medium (8B), annoncé à environ 11 Go et 24 Go+ de RAM. Le fichier téléchargé qui lui correspond n'est pas consigné.",
+      "observed"
+    ],
+    [
+      "Raison du test",
+      "Non consignée.",
+      null
+    ],
+    [
+      "Objectif",
+      "Non indiqué dans les notes. Déduit de celles-ci : voir si un assistant qui enregistre l'écran et raisonne dessus s'installe et fonctionne sur un Mac de 24 Go avec un modèle local.",
+      "assumption"
+    ],
+    [
+      "Aides IA utilisées",
+      "ChatGPT (une question de sécurité avant l'installation). L'assistant de chat propre à BoBe a été testé.",
+      "observed"
+    ]
+  ],
+  "disclosure": "Le testeur a fondé PromptQuorum (promptquorum.com), un site de contenu et un annuaire consacrés aux applis d'IA locale. Les notes ne mentionnent aucun contact avec l'éditeur, aucun paiement et aucun parrainage. Le testeur dit qu'il pourrait réessayer après avoir parlé au fondateur.",
+  "verdict": {
+    "general": "Une alpha précoce (v0.1.0-alpha selon le site web). L'installation est facile et le choix du modèle clair. L'idée centrale, un assistant qui surveille l'écran pour aider, n'a pas pu être démontrée dans ce test : l'assistant de l'appli n'a pas nommé le réglage macOS nécessaire pour accorder l'enregistrement de l'écran, et la vérification du fonctionnement de la perception de l'écran n'a donné aucune réponse exploitable. La suppression a nécessité le Moniteur d'activité.",
+    "fit": "Désinstallée après la configuration. 'Concept I like. Concept is interesting. Implementation is missing.' Le testeur pourrait réessayer dans 3 à 6 mois, ou après avoir parlé au fondateur."
+  },
+  "scores": [
+    [
+      "Installation",
+      4,
+      "DMG de 312 Mo, une validation macOS, 'so smooth', selon le testeur."
+    ],
+    [
+      "Prise en main et choix du modèle",
+      2,
+      "Boîte de dialogue claire avec trois modèles et leurs besoins en RAM. Mais 11 Go annoncés contre 4.9 Go et 5.7 Go téléchargés, aucune estimation de durée et une étape d'autorisation peu claire."
+    ],
+    [
+      "Fonction principale",
+      1,
+      "Le fonctionnement de la perception de l'écran n'a pas pu être confirmé. Les réponses visibles du chat n'ont pas apporté de réponses exploitables."
+    ],
+    [
+      "Guidage et itération",
+      1,
+      "L'assistant de l'appli n'a pas nommé le réglage macOS après deux questions. Aucune itération testée."
+    ],
+    [
+      "Performance",
+      null,
+      "Non mesurée."
+    ],
+    [
+      "Documentation",
+      null,
+      "Un guide d'installation pas à pas existe (point positif). Son contenu n'a pas été évalué."
+    ],
+    [
+      "Confiance et confidentialité",
+      null,
+      "Non audité. Une appli qui enregistre l'écran ; la vérification avec ChatGPT n'a rien donné de concluant ; l'appli dit que l'analyse reste sur le Mac."
+    ],
+    [
+      "Désinstallation",
+      1,
+      "L'appli s'est relancée toute seule. Il a fallu la quitter dans le Moniteur d'activité avant de pouvoir la supprimer."
+    ]
+  ],
+  "scores_note": "Les notes sont des propositions déduites des éléments ci-dessous (1 = mauvais, 5 = très bon). Il revient au testeur de les confirmer.",
+  "tldr": [
+    [
+      "observed",
+      "S'installe facilement (DMG de 312 Mo, une validation macOS). La configuration télécharge ensuite 4.9 Go et 5.7 Go contre 11 Go annoncés, sans estimation de durée, et l'étape macOS d'enregistrement de l'écran est peu claire."
+    ],
+    [
+      "observed",
+      "L'assistant de l'appli n'a pas nommé le réglage macOS à modifier. La réponse à 'is screen reporting working?' est consignée dans les notes comme 'Bobe'."
+    ],
+    [
+      "tester-view",
+      "Le testeur l'a désinstallée : alpha, concept intéressant, mise en œuvre absente. L'appli s'est relancée toute seule quand il a essayé de la supprimer."
+    ]
+  ],
+  "quotes": [
+    "Un système qui ne peut même pas me donner de réponse sur cette question, comment pourrais-je lui confier quoi que ce soit ?",
+    "Le concept me plaît. Le concept est intéressant. [...] La mise en œuvre manque."
+  ],
+  "quote_note": "Notes du testeur, légèrement éditées à partir d'une transcription vocale. Traduit de l'anglais.",
+  "moments_title": "Cinq moments qui ont marqué ce test",
+  "moments_md": "Cinq moments",
+  "moments_nav": "Cinq moments",
+  "moments": [
+    [
+      "Trois modèles, un seul convient",
+      "La boîte de dialogue liste Small, Medium et Large avec leurs besoins en RAM. Medium convient à 24 Go. Large indique 48 Go+, alors que le testeur supposait qu'il fonctionnerait.",
+      "model_choice",
+      "chapter-model"
+    ],
+    [
+      "11 Go annoncés, 4.9 Go affichés",
+      "La configuration a téléchargé un modèle de langage de 4.9 Go, puis un modèle de vision de 5.7 Go. Aucune des deux barres n'affiche le temps restant.",
+      "downloads",
+      "chapter-downloads"
+    ],
+    [
+      "L'autorisation dont tout dépend",
+      "Enregistrement de l'écran indique 'Not Granted'. Le testeur a dû chercher lui-même dans les réglages de macOS.",
+      "permission",
+      "chapter-permission"
+    ],
+    [
+      "Demandé deux fois, aucun réglage nommé",
+      "L'assistant de l'appli a répondu à une question précise en lui demandant de préciser ce qu'il voulait.",
+      "chat_clarify",
+      "chapter-help"
+    ],
+    [
+      "Une appli qui se relance toute seule",
+      "Elle est revenue quand le testeur a essayé de la supprimer. Il l'a d'abord quittée dans le Moniteur d'activité.",
+      null,
+      "chapter-uninstall"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-website",
+      "title": "Le site web",
+      "items": [
+        [
+          "observed",
+          "Le testeur a téléchargé l'appli depuis bobebot.com/#download : un DMG de 312 Mo pour Mac.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "La bannière de téléchargement, telle que collée par le testeur : 'v0.1.0-alpha · Requires macOS 13+ · Apple Silicon · M2 or higher recommended for local models'.",
+          null
+        ],
+        [
+          "observed",
+          "Le site propose un guide d'installation pas à pas (bobebot.com/getting-started). Le testeur le juge positif. Son contenu n'a pas été évalué.",
+          null
+        ],
+        [
+          "assumption",
+          "L'impression du testeur : BoBe ne se connecte pas à LM Studio ni à Ollama (les notes disent 'Llama'). Il télécharge un modèle et l'intègre directement. Non vérifié.",
+          null
+        ],
+        [
+          "tester-view",
+          "L'idée d'un assistant qui enregistre l'écran et comprend l'utilisateur à partir de là lui plaît. 'So cool function.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-security",
+      "title": "Avant l'installation : une question de sécurité",
+      "items": [
+        [
+          "observed",
+          "Le testeur a interrogé ChatGPT sur les risques de sécurité avant l'installation.",
+          null
+        ],
+        [
+          "third-party",
+          "Selon la paraphrase du testeur, ChatGPT n'a rien trouvé de négatif ni de positif, donc aucune information dans un sens ou dans l'autre. La réponse de ChatGPT elle-même ne figure pas dans les notes.",
+          null
+        ],
+        [
+          "observed",
+          "Le testeur a décidé de prendre le risque et d'installer quand même. Aucune revue de sécurité indépendante n'a fait partie de ce test.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-install",
+      "title": "Installation",
+      "items": [
+        [
+          "observed",
+          "Installée depuis le DMG. La seule étape avant l'utilisation était d'approuver dans macOS que l'appli vient d'internet. Le testeur : 'so smooth as hell, no problems'.",
+          null
+        ],
+        [
+          "observed",
+          "Le premier écran demande quel type de modèle utiliser. Le testeur a choisi un modèle local.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-model",
+      "title": "Choisir un modèle",
+      "items": [
+        [
+          "observed",
+          "La boîte de dialogue place d'abord une option cloud (un menu GPT-5.1 avec 'Continue with OpenAI'). En dessous, trois modèles locaux : Small (4B) d'environ 6 Go pour tout Mac Apple Silicon avec 16 Go+ de RAM ; Medium (8B) d'environ 11 Go pour M1 Pro / M2 ou plus récent avec 24 Go+ de RAM ; Large (14B) d'environ 15 Go pour M2 Pro / M3 ou plus récent avec 48 Go+ de RAM.",
+          "model_choice"
+        ],
+        [
+          "observed",
+          "Le testeur a choisi Medium, qui correspond à ses 24 Go. Il note qu'il n'y a que trois modèles.",
+          null
+        ],
+        [
+          "tester-error",
+          "Le testeur a écrit que le modèle de 15 Go 'should also run' sur une machine de 24 Go. La boîte de dialogue indique que Large nécessite 48 Go+ de RAM. Cela n'a eu aucun effet, car il a pris Medium.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-downloads",
+      "title": "Téléchargements",
+      "items": [
+        [
+          "measured",
+          "La configuration se déroule en trois étapes : moteur d'IA, modèle de langage, initialisation. Le téléchargement du modèle de langage fait 4.9 Go. La capture montre 59 Mo, soit 1 pour cent.",
+          "downloads"
+        ],
+        [
+          "observed",
+          "La boîte de dialogue des modèles avait annoncé environ 11 Go pour Medium.",
+          null
+        ],
+        [
+          "measured",
+          "Quand le premier téléchargement s'est terminé, un second a démarré : un modèle de vision, qwen3-vl:8b, 5.7 Go (les notes disent 'another five gigabytes').",
+          null
+        ],
+        [
+          "assumption",
+          "4.9 Go et 5.7 Go font 10.6 Go au total, ce qui correspondrait aux 11 Go annoncés. L'appli ne le dit pas.",
+          null
+        ],
+        [
+          "observed",
+          "Les barres de progression affichent le pourcentage et la taille, pas le temps restant. Le testeur a vu la même chose dans une autre appli.",
+          null
+        ],
+        [
+          "tester-view",
+          "Pour des fichiers aussi volumineux, une estimation de durée devrait être affichée, et l'enchaînement 11 Go, 4.9 Go, puis un autre téléchargement est une mauvaise communication.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-permission",
+      "title": "Accorder l'enregistrement de l'écran",
+      "items": [
+        [
+          "vendor-claim",
+          "La boîte de dialogue Screen Awareness indique que BoBe 'glances at your screen periodically so it can offer relevant help, track your goals, and remember what you're working on', et que 'screenshots are analyzed locally on your Mac and never uploaded'. Non vérifié ; aucun contrôle du réseau n'a été effectué.",
+          "permission"
+        ],
+        [
+          "observed",
+          "Enregistrement de l'écran affiche 'Not Granted', avec un lien 'Open System Settings' et le texte 'Grant permission to continue'. Un bouton 'Skip: disable screen capture' existe.",
+          null
+        ],
+        [
+          "tester-view",
+          "Le testeur s'attendait à ce que la configuration de l'écran soit facile une fois l'appli lancée. Il n'a trouvé aucun chemin clair et a dû chercher lui-même dans les réglages de macOS.",
+          null
+        ],
+        [
+          "observed",
+          "On ne sait pas si le lien 'Open System Settings' a été utilisé, ni où il menait. Le testeur indique avoir trouvé le réglage lui-même et l'avoir activé.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-help",
+      "title": "Demander de l'aide à BoBe",
+      "items": [
+        [
+          "observed",
+          "Le testeur a demandé à BoBe dans le chat comment lui donner les droits macOS pour les captures d'écran et la surveillance de l'écran. Dans les réponses visibles, BoBe lui a demandé de préciser ce qu'il voulait configurer et a proposé son aide.",
+          "chat_clarify"
+        ],
+        [
+          "observed",
+          "Il a demandé à nouveau, plus précisément : 'I don't know where I need to click in the Apple system to change this. Tell me please which setting this is.' La réponse visible lui demandait ce qu'il essayait d'accomplir (en haut de cette page).",
+          null
+        ],
+        [
+          "observed",
+          "Il a écrit : 'Is this supposed to be an answer or a joke?'",
+          "joke"
+        ],
+        [
+          "tester-view",
+          "Il se demande comment faire confiance à un système qui ne sait pas répondre à cette question, et dit qu'un honnête 'je ne peux pas répondre à cela' vaudrait mieux.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-works",
+      "title": "La perception de l'écran fonctionne-t-elle ?",
+      "items": [
+        [
+          "observed",
+          "Après la configuration, le testeur a demandé à BoBe si la perception de l'écran fonctionnait. Les notes consignent la réponse comme 'Bobe'. Il la considère comme une absence de réponse.",
+          null
+        ],
+        [
+          "observed",
+          "Aucun autre test des fonctions liées à l'écran n'est consigné.",
+          null
+        ],
+        [
+          "tester-view",
+          "BoBe n'est 'même pas utilisable comme agent de chat'.",
+          null
+        ],
+        [
+          "assumption",
+          "Le testeur se demande ce que peut faire un modèle d'environ 5 Go. Un petit modèle peut limiter l'assistant ; non testé.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-uninstall",
+      "title": "Suppression",
+      "items": [
+        [
+          "observed",
+          "Quand le testeur a essayé de supprimer l'appli, elle s'est relancée automatiquement et n'a pas pu être supprimée. Il l'a quittée dans le Moniteur d'activité, puis supprimée.",
+          null
+        ],
+        [
+          "tester-view",
+          "'Just even for alpha level, this is not acceptable.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-alive",
+      "title": "Le projet est-il vivant ?",
+      "items": [
+        [
+          "vendor-claim",
+          "La bannière du site indique 'M2 or higher recommended'. Le fichier téléchargé fait référence à 'February 26'. Les notes ne précisent pas s'il s'agit d'un jour ou d'une année.",
+          null
+        ],
+        [
+          "assumption",
+          "Le testeur a l'impression que le projet est peut-être à l'abandon. 'M2 or higher' couvre aussi les puces plus récentes, la date de compilation est floue et ni dépôt de code ni historique de versions n'ont été vérifiés : la déduction est donc fragile.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "Décision",
+      "items": [
+        [
+          "tester-view",
+          "'This is alpha.' Un concept qui pourrait être réalisé à l'avenir ; il se demande si quoi que ce soit fonctionne aujourd'hui ou s'il s'agit d'une appli conceptuelle. 'Concept is beyond. Implementation is missing.'",
+          null
+        ],
+        [
+          "observed",
+          "Le testeur a supprimé l'appli. Il pourrait réessayer dans trois ou six mois, ou après avoir parlé au fondateur.",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "'Screenshots are analyzed locally on your Mac and never uploaded'",
+      "Boîte de dialogue Screen Awareness",
+      "Non testé. Aucune surveillance du réseau ni vérification indépendante n'a été effectuée.",
+      "vendor-claim"
+    ],
+    [
+      "'Download and run an AI model entirely on your Mac. No internet needed after setup.'",
+      "Boîte de dialogue des modèles",
+      "Le modèle a été téléchargé via l'appli. Le fonctionnement hors ligne n'a pas été testé.",
+      "vendor-claim"
+    ],
+    [
+      "Medium (8B) pèse environ 11 Go",
+      "Boîte de dialogue des modèles",
+      "La configuration a téléchargé un modèle de langage de 4.9 Go, puis un modèle de vision de 5.7 Go. La somme, 10.6 Go, pourrait correspondre au chiffre annoncé (hypothèse).",
+      "measured"
+    ],
+    [
+      "Nécessite macOS 13+, Apple Silicon, M2 ou supérieur recommandé",
+      "Bannière du site web, telle que collée",
+      "L'appli a tourné sur un M3 Pro. Le testeur a lu la mention 'M2' comme datée. 'Or higher' inclut les puces plus récentes.",
+      "observed"
+    ],
+    [
+      "Propose une aide pertinente à partir de ce qui s'affiche à l'écran",
+      "Boîte de dialogue Screen Awareness",
+      "Le testeur a demandé si la perception de l'écran fonctionne ; la réponse est consignée comme 'Bobe'. Aucune aide fondée sur l'écran n'a été démontrée dans les notes.",
+      "observed"
+    ],
+    [
+      "Un guide d'installation pas à pas",
+      "Site web",
+      "Le guide existe. Son contenu n'a pas été évalué. Le testeur a trouvé l'étape d'autorisation macOS peu claire.",
+      "observed"
+    ]
+  ],
+  "fit": {
+    "title": "Quel modèle local tient dans 24 Go ?",
+    "nav": "24 Go",
+    "memory_gb": 24,
+    "scale": 60,
+    "memline": "24 Go de RAM",
+    "above": "nécessite plus de 24 Go",
+    "below": "dans la limite de 24 Go",
+    "cols": [
+      "Modèle",
+      "Selon l'appli"
+    ],
+    "rows": [
+      [
+        "Small (4B), environ 6 Go à télécharger",
+        16,
+        "16 Go+ de RAM nécessaires",
+        "observed"
+      ],
+      [
+        "Medium (8B), environ 11 Go à télécharger",
+        24,
+        "24 Go+ de RAM nécessaires",
+        "observed"
+      ],
+      [
+        "Large (14B), environ 15 Go à télécharger",
+        48,
+        "48 Go+ de RAM nécessaires",
+        "observed"
+      ]
+    ],
+    "note": "Les besoins en RAM sont ceux indiqués par l'appli dans sa boîte de dialogue des modèles. L'hypothèse du testeur selon laquelle Large 'should also run' sur 24 Go est contredite par ce texte. Rien de tout cela n'a été testé au-delà de Medium."
+  },
+  "usage_log": [
+    [
+      "Installer depuis le DMG",
+      "-",
+      "Installée ; une validation macOS pour une appli venant d'internet",
+      "Non consignée",
+      "Pass",
+      []
+    ],
+    [
+      "Choisir un modèle local et le télécharger",
+      "Medium (8B), environ 11 Go annoncés",
+      "Modèle de langage de 4.9 Go et modèle de vision de 5.7 Go téléchargés (l'achèvement se déduit de l'usage ultérieur)",
+      "Non consignée",
+      "Pass",
+      [
+        "model_choice",
+        "downloads"
+      ]
+    ],
+    [
+      "Accorder l'enregistrement de l'écran",
+      "-",
+      "Le testeur a cherché lui-même dans les réglages macOS ; aucun chemin clair selon lui",
+      "Non consignée",
+      "Partial",
+      [
+        "permission"
+      ]
+    ],
+    [
+      "Demander à BoBe comment accorder l'autorisation",
+      "Modèle local",
+      "Aucun réglage nommé ; a demandé au testeur de préciser (deux fois dans les réponses visibles)",
+      "-",
+      "Fail",
+      [
+        "chat_clarify",
+        "joke",
+        "desktop_chat"
+      ]
+    ],
+    [
+      "Demander si la perception de l'écran fonctionne",
+      "Modèle local",
+      "Réponse consignée comme 'Bobe' ; aucune confirmation",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "Utiliser BoBe comme agent de chat",
+      "Modèle local",
+      "Inutilisable, selon le testeur",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "Désinstallation",
+      "-",
+      "L'appli s'est relancée toute seule ; quittée dans le Moniteur d'activité, puis supprimée",
+      "Non consignée",
+      "Partial",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "A supposé que le modèle Large de 15 Go fonctionnerait sur 24 Go. La boîte de dialogue indique 48 Go+ de RAM pour lui. Sans conséquence, puisque Medium a été choisi."
+    ],
+    [
+      "tester-error",
+      "A écrit qu'il n'y a pas de moyen clair de configurer l'accès à l'écran. La boîte de dialogue affiche un lien 'Open System Settings'. On ne sait pas s'il a été essayé."
+    ],
+    [
+      "tester-error",
+      "A laissé des lacunes dans le relevé : version installée, version de macOS, heures de début et de fin, quel téléchargement correspond à quel modèle, et la réponse exacte à la question sur la perception de l'écran."
+    ],
+    [
+      "assumption",
+      "L'impression 'project is dead' repose sur une formulation ('M2 or higher') qui couvre aussi les puces plus récentes, et sur un 'February 26' peu clair. Aucun historique de versions n'a été vérifié."
+    ],
+    [
+      "tester-view",
+      "A installé une alpha d'enregistrement d'écran après un contrôle de sécurité qui n'a donné aucune information dans un sens ou dans l'autre. Le testeur a accepté le risque en connaissance de cause."
+    ]
+  ],
+  "findings": [
+    [
+      "BB-01",
+      "L'installation est simple : un DMG de 312 Mo et une validation macOS.",
+      "Installation",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "BB-02",
+      "Un guide d'installation pas à pas existe sur le site web. Contenu non évalué.",
+      "Documentation",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "BB-03",
+      "La boîte de dialogue des modèles est claire : trois modèles locaux avec taille de téléchargement, puce et besoins en RAM.",
+      "Prise en main",
+      "observed",
+      "Positive",
+      [
+        "model_choice"
+      ]
+    ],
+    [
+      "BB-04",
+      "Environ 11 Go annoncés ; les téléchargements ont été de 4.9 Go, puis de 5.7 Go. L'appli n'explique pas l'écart.",
+      "Prise en main",
+      "measured",
+      "Medium",
+      [
+        "model_choice",
+        "downloads",
+        "permission"
+      ]
+    ],
+    [
+      "BB-05",
+      "Les barres de téléchargement affichent le pourcentage et la taille, pas le temps restant.",
+      "Ergonomie",
+      "observed",
+      "Medium",
+      [
+        "downloads",
+        "permission"
+      ]
+    ],
+    [
+      "BB-06",
+      "Enregistrement de l'écran est sur 'Not Granted' ; le testeur n'a trouvé aucun chemin clair et a cherché lui-même dans macOS. Un lien 'Open System Settings' est présent ; son usage n'est pas consigné.",
+      "Prise en main",
+      "tester-view",
+      "Medium",
+      [
+        "permission"
+      ]
+    ],
+    [
+      "BB-07",
+      "L'assistant de l'appli n'a pas nommé le réglage macOS après deux questions précises.",
+      "Fonction principale",
+      "observed",
+      "High",
+      [
+        "chat_clarify",
+        "joke",
+        "desktop_chat"
+      ]
+    ],
+    [
+      "BB-08",
+      "Interrogé sur le fonctionnement de la perception de l'écran, la réponse consignée est 'Bobe'. La perception de l'écran n'a pas été montrée en fonctionnement.",
+      "Fonction principale",
+      "observed",
+      "High",
+      []
+    ],
+    [
+      "BB-09",
+      "Inutilisable comme agent de chat dans ce test ; le testeur doute de ce que peut faire un modèle d'environ 5 Go.",
+      "Fonction principale",
+      "tester-view",
+      "Medium",
+      []
+    ],
+    [
+      "BB-10",
+      "L'appli s'est relancée toute seule à la suppression et a dû être quittée dans le Moniteur d'activité.",
+      "Désinstallation",
+      "observed",
+      "High",
+      []
+    ],
+    [
+      "BB-11",
+      "Affirmation de confidentialité : les captures d'écran sont analysées en local et jamais envoyées. Non vérifié.",
+      "Confiance",
+      "vendor-claim",
+      "Medium",
+      [
+        "permission"
+      ]
+    ],
+    [
+      "BB-12",
+      "Un contrôle de sécurité préalable avec ChatGPT n'a rien donné de concluant ; le testeur a installé quand même.",
+      "Confiance",
+      "third-party",
+      "Medium",
+      []
+    ],
+    [
+      "BB-13",
+      "Le testeur soupçonne un projet inactif. Les indices sont minces et en partie contredits par la mention 'or higher'.",
+      "Maintenance",
+      "assumption",
+      "Low",
+      []
+    ],
+    [
+      "BB-14",
+      "L'appli semble ne pas se connecter à LM Studio ni à Ollama ; elle télécharge son propre modèle.",
+      "Intégration",
+      "assumption",
+      "Low",
+      []
+    ]
+  ],
+  "severity_note": "La gravité mesure l'impact sur un utilisateur qui découvre l'appli. Proposée, non mesurée.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "Bricoleurs qui veulent essayer un assistant local précoce doté de perception de l'écran et acceptent une qualité alpha."
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "Toute personne qui a besoin d'un assistant fonctionnel dès aujourd'hui."
+      ],
+      [
+        "tester-view",
+        "Personnes mal à l'aise avec une appli qui enregistre l'écran sans revue de sécurité indépendante."
+      ]
+    ],
+    "retest": "Retester dans 3 à 6 mois, après avoir parlé au fondateur, ou lorsqu'une version plus récente que v0.1.0-alpha sortira (le plan du testeur, plus un déclencheur ajouté)."
+  },
+  "background_intro": "",
+  "background": [],
+  "sources": [
+    "Notes de test du testeur, 7 octobre 2026 (document original ; PDF des notes brutes à ajouter).",
+    "Page de téléchargement et guide d'installation de bobebot.com, tels que vus et collés par le testeur.",
+    "Réponse de ChatGPT sur les risques de sécurité, telle que paraphrasée par le testeur (la réponse elle-même ne figure pas dans les notes)."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "Observé",
+      "meaning": "Vu de première main dans l'appli, sur une capture ou dans les notes du testeur."
+    },
+    "measured": {
+      "label": "Mesuré",
+      "meaning": "Valeur lue dans une boîte de dialogue, un compteur ou un outil, avec le chiffre indiqué."
+    },
+    "tester-estimate": {
+      "label": "Estimation du testeur",
+      "meaning": "L'estimation propre du testeur ; ni chronométrée ni comptée."
+    },
+    "vendor-claim": {
+      "label": "Affirmation du fabricant",
+      "meaning": "Énoncé par l'appli, sa fiche de store ou son site web ; non vérifié."
+    },
+    "third-party": {
+      "label": "Source tierce",
+      "meaning": "Provient d'une autre source (un assistant IA, un article) ; non vérifié ici."
+    },
+    "assumption": {
+      "label": "Hypothèse",
+      "meaning": "Une déduction. Elle peut être fausse."
+    },
+    "tester-view": {
+      "label": "Avis du testeur",
+      "meaning": "Le jugement ou l'opinion du testeur."
+    },
+    "tester-error": {
+      "label": "Erreur du testeur",
+      "meaning": "Cas où le testeur s'est trompé ou a manqué quelque chose."
+    }
+  },
+  "images": [
+    {
+      "id": "desktop_chat",
+      "figure": 1,
+      "file": "bobe-desktop-chat-no-macos-setting-given.webp",
+      "path": "images/bobe-desktop-chat-no-macos-setting-given.webp",
+      "alt": "Mascotte BoBe et chat sur un bureau macOS : BoBe demande à l'utilisateur ce qu'il essaie de faire, après qu'on lui a demandé quel réglage macOS modifier.",
+      "caption": "L'utilisateur demande quel réglage macOS modifier. La réponse visible de BoBe lui demande de préciser ce qu'il essaie d'accomplir. Le bandeau supérieur et un aperçu de document ont été retirés ou floutés pour préserver la confidentialité.",
+      "role": "hero",
+      "width": 1100,
+      "height": 984,
+      "bytes": 139482,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image6.png"
+    },
+    {
+      "id": "model_choice",
+      "figure": 2,
+      "file": "bobe-model-choice-dialog-small-medium-large-local-models.webp",
+      "path": "images/bobe-model-choice-dialog-small-medium-large-local-models.webp",
+      "alt": "Boîte de dialogue de configuration de BoBe proposant les modèles locaux Small 4B (6 Go), Medium 8B (11 Go, 24 Go+ de RAM) et Large 14B (15 Go, 48 Go+ de RAM) ; Medium sélectionné.",
+      "caption": "Choix du modèle : trois modèles locaux. Medium (8B, environ 11 Go) est sélectionné et correspond aux 24 Go du testeur. Large indique 48 Go+ de RAM. Arrière-plan hors de la boîte de dialogue flouté.",
+      "role": "inline",
+      "width": 572,
+      "height": 636,
+      "bytes": 24210,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-model",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image1.png"
+    },
+    {
+      "id": "downloads",
+      "figure": 3,
+      "file": "bobe-setup-downloading-ai-engine-and-language-model.webp",
+      "path": "images/bobe-setup-downloading-ai-engine-and-language-model.webp",
+      "alt": "Progression de la configuration de BoBe : moteur d'IA terminé, modèle de langage à 1 pour cent de 4.9 Go, puis initialisation de BoBe ; aucune estimation de durée affichée.",
+      "caption": "La configuration télécharge en trois étapes. Le modèle de langage fait 4.9 Go, alors que la boîte de dialogue des modèles annonçait environ 11 Go. La barre n'affiche que le pourcentage et la taille. Arrière-plan flouté.",
+      "role": "moment",
+      "width": 597,
+      "height": 654,
+      "bytes": 8234,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-downloads",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image2.png"
+    },
+    {
+      "id": "permission",
+      "figure": 4,
+      "file": "bobe-screen-awareness-dialog-screen-recording-not-granted.webp",
+      "path": "images/bobe-screen-awareness-dialog-screen-recording-not-granted.webp",
+      "alt": "Boîte de dialogue Screen Awareness de BoBe : enregistrement de l'écran non accordé avec un lien Open System Settings, et un modèle de vision de 5.7 Go en cours de téléchargement à 1 pour cent.",
+      "caption": "Étape Screen Awareness : Screen Recording est sur 'Not Granted' et un second modèle, qwen3-vl:8b (5.7 Go), est en cours de téléchargement. Un lien vers les réglages système est présent. Arrière-plan flouté.",
+      "role": "moment",
+      "width": 613,
+      "height": 665,
+      "bytes": 25910,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-permission",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image3.png"
+    },
+    {
+      "id": "chat_clarify",
+      "figure": 5,
+      "file": "bobe-chat-asks-for-clarification-instead-of-macos-permission-steps.webp",
+      "path": "images/bobe-chat-asks-for-clarification-instead-of-macos-permission-steps.webp",
+      "alt": "Chat BoBe où l'utilisateur demande comment accorder l'autorisation d'écran de macOS ; la réponse visible de BoBe lui demande de préciser ce qu'il faut configurer.",
+      "caption": "L'utilisateur demande comment donner à BoBe les droits d'écran de macOS. Les réponses visibles lui demandent de préciser au lieu de nommer le réglage.",
+      "role": "moment",
+      "width": 1429,
+      "height": 893,
+      "bytes": 37766,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-help",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image4.png"
+    },
+    {
+      "id": "joke",
+      "figure": 6,
+      "file": "bobe-chat-user-asks-answer-or-joke.webp",
+      "path": "images/bobe-chat-user-asks-answer-or-joke.webp",
+      "alt": "Fenêtre de chat BoBe avec le message de l'utilisateur 'Is this supposed to be an answer or a joke?' et une liste de réponses repliée '+2 more'.",
+      "caption": "La réaction du testeur aux réponses : 'Is this supposed to be an answer or a joke?'",
+      "role": "inline",
+      "width": 1431,
+      "height": 349,
+      "bytes": 6336,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-help"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image5.png"
+    }
+  ],
+  "figure_order": [
+    "desktop_chat",
+    "model_choice",
+    "downloads",
+    "permission",
+    "chat_clarify",
+    "joke"
+  ],
+  "ui": {
+    "kicker": "Test pratique PromptQuorum · {app} · {date}",
+    "date_line": "7 octobre 2026",
+    "nav_aria": "Sections",
+    "nav": {
+      "verdict": "Verdict",
+      "moments": "Six moments",
+      "story": "Déroulé",
+      "claims": "Affirmations",
+      "fit": "24 GB",
+      "log": "Journal d’usage",
+      "errors": "Erreurs du testeur",
+      "findings": "Constats",
+      "background": "Contexte"
+    },
+    "related": "À lire aussi :",
+    "review_link": "Avis PromptQuorum sur {app}",
+    "directory_link": "Annuaire des applications d’IA locales",
+    "verdict_h": "Verdict",
+    "general_assessment": "Appréciation générale",
+    "fit_for_tester": "Adéquation à l’usage du testeur",
+    "scorecard": "Grille de scores",
+    "status_prefix": "Statut :",
+    "na": "n/d",
+    "score_aria": "{n} sur 5",
+    "details_h": "Détails du test",
+    "label_intro": "Chaque affirmation porte une étiquette :",
+    "legend_link": "Signification des étiquettes",
+    "disclosure_label": "Déclaration d’intérêts.",
+    "raw_notes": "PDF des notes brutes :",
+    "to_be_added": "à venir",
+    "moments_h": "Six moments qui ont façonné ce test",
+    "see_context": "Voir en contexte",
+    "story_h": "Déroulement du test",
+    "claims_h": "Affirmations et observations du testeur",
+    "claims_cols": [
+      "Affirmation",
+      "Source",
+      "Observé",
+      "Étiquette"
+    ],
+    "fit_h": "Tient-il dans 24 GB ?",
+    "memory_line": "{gb} GB de mémoire",
+    "above": "au-dessus de {gb} GB",
+    "below": "en dessous de {gb} GB",
+    "log_h": "Journal d’usage",
+    "log_cols": [
+      "#",
+      "Tâche",
+      "Modèle",
+      "Résultat",
+      "Durée",
+      "Statut",
+      "Figures"
+    ],
+    "statuses": {
+      "Fail": "Échec",
+      "Partial": "Partiel",
+      "Pass": "Réussi",
+      "Not completed": "Non abouti"
+    },
+    "errors_h": "Là où le testeur s’est trompé",
+    "findings_h": "Registre des constats",
+    "filter_aria": "Filtrer les constats par étiquette",
+    "filter_all": "Tous",
+    "findings_cols": [
+      "ID",
+      "Constat",
+      "Catégorie",
+      "Étiquette",
+      "Gravité",
+      "Figures"
+    ],
+    "severities": {
+      "High": "Élevée",
+      "Medium": "Moyenne",
+      "Low": "Faible",
+      "Positive": "Positive"
+    },
+    "fig_abbr": "Fig.",
+    "figure": "Figure",
+    "enlarge": "Agrandir :",
+    "audience_h": "À qui il s’adresse",
+    "likely_fit": "Adéquation probable",
+    "likely_poor_fit": "Mauvaise adéquation probable",
+    "retest": "Nouveau test.",
+    "background_h": "Contexte sur le créateur",
+    "gallery_h": "Autres images du test",
+    "legend_h": "Comment lire les étiquettes",
+    "sources_h": "Sources",
+    "footer_line": "ID du test {id} · Norme de test v{version} · PDF des notes brutes : à venir",
+    "crumb_home": "Accueil",
+    "crumb_directory": "Annuaire",
+    "crumb_test": "Test pratique de {app}"
+  }
+}
