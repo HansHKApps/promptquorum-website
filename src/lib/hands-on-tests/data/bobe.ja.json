@@ -1,0 +1,1040 @@
+{
+  "id": "pq-test-bobe-2026-10-07",
+  "hero": "desktop_chat",
+  "date_human": "2026年10月7日",
+  "captured": "2026-10-07 or later; exact time not recorded",
+  "standard_version": "0.1",
+  "locale": "ja",
+  "app": {
+    "name": "BoBe",
+    "slug": "bobe",
+    "vendor": "Not recorded (website: bobebot.com)",
+    "category": "Local AI assistant with screen awareness",
+    "platform": "macOS (DMG download)",
+    "pricing_url": null
+  },
+  "title": "24 GBのMacでBoBe Alpha：インストールは簡単、削除すると再起動する",
+  "page_title": "BoBe Test",
+  "dek": "M3 ProのMacBook Proでの実機テストです。アプリ内アシスタントは必要なmacOSの設定を示さず、テスターが削除しようとするとアプリは自動で再起動しました。",
+  "status": "Abandoned",
+  "published": "2026-10-09",
+  "index": false,
+  "started": "2026-10-07",
+  "ended": null,
+  "meta": [
+    [
+      "アプリ",
+      "BoBe、画面を見るローカルAIアシスタント（bobebot.com）",
+      "observed"
+    ],
+    [
+      "バージョン",
+      "v0.1.0-alpha。テスターが貼り付けたウェブサイトのダウンロードバナーによる。インストールされたバージョンは記録なし。",
+      "vendor-claim"
+    ],
+    [
+      "テスター",
+      "Hans Kuepper（PromptQuorum創設者）",
+      null
+    ],
+    [
+      "開始",
+      "2026年10月7日（メモには'7 October'とあり、年はファイル名とドキュメントのプロパティから）。時刻は記録なし。",
+      "observed"
+    ],
+    [
+      "終了",
+      "記録なし。テストはアプリをアンインストールして終了した。",
+      null
+    ],
+    [
+      "ハードウェア",
+      "MacBook Pro、Apple M3 Pro、24 GBのユニファイドメモリ（メモには'24 GB RAM machine'とあります）",
+      "observed"
+    ],
+    [
+      "システム",
+      "macOS（テスト日時点の最新リリース）。正確なバージョンは記録なし",
+      null
+    ],
+    [
+      "入手元",
+      "bobebot.com/#download。セットアップガイド：bobebot.com/getting-started",
+      "observed"
+    ],
+    [
+      "ダウンロード",
+      "ウェブサイトからの312 MBのDMG（テスター）。セットアップ後に、4.9 GBの言語モデルと5.7 GBのビジョンモデル（qwen3-vl:8b）がダウンロードされた。",
+      "measured"
+    ],
+    [
+      "ローカルモデル",
+      "Medium（8B）。約11 GB、24 GB以上のRAMと記載。どのダウンロードファイルが対応するかは記録なし。",
+      "observed"
+    ],
+    [
+      "テストの理由",
+      "記録なし。",
+      null
+    ],
+    [
+      "目的",
+      "メモには記載なし。メモから推定：画面を記録してそれをもとに推論するアシスタントが、24 GBのMacでローカルモデルとともにインストールでき、動作するかを確認する。",
+      "assumption"
+    ],
+    [
+      "使用したAI支援",
+      "ChatGPT（インストール前のセキュリティに関する質問）。BoBe自身のチャットアシスタントをテストした。",
+      "observed"
+    ]
+  ],
+  "disclosure": "テスターはPromptQuorum（promptquorum.com）の創設者です。PromptQuorumはローカルAIアプリに関するコンテンツサイト兼ディレクトリです。メモには、ベンダーとの接触、金銭の授受、スポンサー関係の記録はありません。テスターは、創業者と話した後に再度試すかもしれないと述べています。",
+  "verdict": {
+    "general": "初期のアルファ版です（ウェブサイトによればv0.1.0-alpha）。インストールは簡単で、モデルの選択も明快です。画面を見て手助けするというコアのアイデアは、このテストでは動作を確認できませんでした。アプリ自身のアシスタントは画面収録を許可するのに必要なmacOSの設定を示さず、画面認識が動作しているかの確認にも使える回答は返りませんでした。削除にはアクティビティモニタが必要でした。",
+    "fit": "セットアップ後にアンインストールしました。'Concept I like. Concept is interesting. Implementation is missing.' テスターは3〜6か月後、または創業者と話した後に再度試すかもしれません。"
+  },
+  "scores": [
+    [
+      "インストール",
+      4,
+      "312 MBのDMG、macOSの承認1回、'so smooth'（テスターによる）。"
+    ],
+    [
+      "導入とモデル選び",
+      2,
+      "3つのモデルとそのRAM要件を示す明快なダイアログ。ただし、案内は11 GBなのに実際のダウンロードは4.9 GBと5.7 GB、所要時間の表示がなく、権限の手順は分かりにくい。"
+    ],
+    [
+      "中核機能",
+      1,
+      "画面認識が動作していることは確認できなかった。表示されたチャットの返答は、使える回答にならなかった。"
+    ],
+    [
+      "ガイダンスと反復",
+      1,
+      "アプリ内アシスタントは、2回の質問の後もmacOSの設定を示さなかった。反復は未テスト。"
+    ],
+    [
+      "パフォーマンス",
+      null,
+      "未計測。"
+    ],
+    [
+      "ドキュメント",
+      null,
+      "ステップごとのセットアップガイドがある（良い点）。内容は評価していない。"
+    ],
+    [
+      "信頼性とプライバシー",
+      null,
+      "監査していません。画面を収録するアプリで、ChatGPTによる確認は決め手を欠き、アプリは分析がMac内に留まると述べています。"
+    ],
+    [
+      "アンインストール",
+      1,
+      "アプリは自動で再起動した。削除できるようになるまで、アクティビティモニタで終了させる必要があった。"
+    ]
+  ],
+  "scores_note": "スコアは、以下の根拠から導いた案です（1 = 低い、5 = 非常に良い）。確定はテスターが行います。",
+  "tldr": [
+    [
+      "observed",
+      "インストールは簡単（312 MBのDMG、macOSの承認1回）。その後のセットアップでは、案内された11 GBに対し4.9 GBと5.7 GBをダウンロードし、所要時間の表示がなく、macOSの画面収録の手順も分かりにくい。"
+    ],
+    [
+      "observed",
+      "アプリ内アシスタントは、変更すべきmacOSの設定を示さなかった。'is screen reporting working?'への返答は、メモには'Bobe'と記録されている。"
+    ],
+    [
+      "tester-view",
+      "テスターはアンインストールした：アルファ版で、コンセプトは興味深いが実装がない。削除しようとするとアプリは自動で再起動した。"
+    ]
+  ],
+  "quotes": [
+    "この質問にすら答えられないシステムを、どうして何かに信頼して任せられるでしょうか。",
+    "コンセプトは気に入っています。コンセプトは興味深いです。[...] 実装がありません。"
+  ],
+  "quote_note": "テスターのメモ。音声の文字起こしを軽く編集しています。英語から翻訳。",
+  "moments_title": "このテストを形づくった5つの場面",
+  "moments_md": "5つの場面",
+  "moments_nav": "5つの場面",
+  "moments": [
+    [
+      "3つのモデル、合うのは1つ",
+      "ダイアログにはSmall、Medium、LargeとそれぞれのRAM要件が並ぶ。Mediumは24 GBに合う。Largeは48 GB以上と記載されているが、テスターは動くと思っていた。",
+      "model_choice",
+      "chapter-model"
+    ],
+    [
+      "案内は11 GB、表示は4.9 GB",
+      "セットアップでは4.9 GBの言語モデルに続き、5.7 GBのビジョンモデルがダウンロードされた。どちらのバーにも残り時間は表示されない。",
+      "downloads",
+      "chapter-downloads"
+    ],
+    [
+      "すべてを左右する権限",
+      "Screen Recordingは'Not Granted'と表示されている。テスターはmacOSの設定を自分で探す必要があった。",
+      "permission",
+      "chapter-permission"
+    ],
+    [
+      "2回尋ねても、設定は示されず",
+      "アプリ内アシスタントは、的確な質問に対し、何をしたいのかを明確にするよう彼に求めて答えた。",
+      "chat_clarify",
+      "chapter-help"
+    ],
+    [
+      "自分で再起動するアプリ",
+      "テスターが削除しようとすると戻ってきた。彼はまずアクティビティモニタで終了させた。",
+      null,
+      "chapter-uninstall"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-website",
+      "title": "ウェブサイト",
+      "items": [
+        [
+          "observed",
+          "テスターはbobebot.com/#downloadからアプリをダウンロードした：Mac向けの312 MBのDMG。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "テスターが貼り付けたダウンロードバナー：'v0.1.0-alpha · Requires macOS 13+ · Apple Silicon · M2 or higher recommended for local models'。",
+          null
+        ],
+        [
+          "observed",
+          "サイトにはステップごとのセットアップガイド（bobebot.com/getting-started）がある。テスターはこれを良い点としている。内容は評価していない。",
+          null
+        ],
+        [
+          "assumption",
+          "テスターの印象：BoBeはLM StudioやOllama（メモには'Llama'とある）には接続せず、モデルをダウンロードして直接組み込む。未検証。",
+          null
+        ],
+        [
+          "tester-view",
+          "画面を記録し、そこからユーザーを理解するアシスタントというアイデアは、彼の関心を引いた。'So cool function.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-security",
+      "title": "インストール前：セキュリティに関する質問",
+      "items": [
+        [
+          "observed",
+          "テスターは、インストール前にChatGPTにセキュリティリスクを尋ねた。",
+          null
+        ],
+        [
+          "third-party",
+          "テスターの言い換えによると、ChatGPTは否定的なことも肯定的なことも見つけられず、どちらの方向の情報も得られなかった。ChatGPTの回答そのものはメモに含まれていない。",
+          null
+        ],
+        [
+          "observed",
+          "テスターはリスクを取ってそのままインストールすることにした。独立したセキュリティレビューは、このテストには含まれていない。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-install",
+      "title": "インストール",
+      "items": [
+        [
+          "observed",
+          "DMGからインストールした。使用前の手順は、アプリがインターネットから来たものであることをmacOSで承認することだけだった。テスター：'so smooth as hell, no problems'。",
+          null
+        ],
+        [
+          "observed",
+          "最初の画面は、どの種類のモデルを使うかを尋ねる。テスターはローカルモデルを選んだ。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-model",
+      "title": "モデルを選ぶ",
+      "items": [
+        [
+          "observed",
+          "ダイアログは最初にクラウドの選択肢を示す（'Continue with OpenAI'付きのGPT-5.1ドロップダウン）。その下に3つのローカルモデル：Small（4B）は約6 GBで、16 GB以上のRAMを持つあらゆるApple Silicon Mac向け。Medium（8B）は約11 GBで、24 GB以上のRAMを持つM1 Pro / M2以降向け。Large（14B）は約15 GBで、48 GB以上のRAMを持つM2 Pro / M3以降向け。",
+          "model_choice"
+        ],
+        [
+          "observed",
+          "テスターはMediumを選んだ。これは彼の24 GBに合う。モデルは3つしかないと彼は述べている。",
+          null
+        ],
+        [
+          "tester-error",
+          "テスターは、15 GBのモデルは24 GBのマシンでも'should also run'と書いた。ダイアログにはLargeに48 GB以上のRAMが必要と書かれている。彼はMediumを選んだので、影響はなかった。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-downloads",
+      "title": "ダウンロード",
+      "items": [
+        [
+          "measured",
+          "セットアップは3つのステップで進む：AIエンジン、言語モデル、初期化。言語モデルのダウンロードは4.9 GB。スクリーンショットには59 MB、1パーセントが写っている。",
+          "downloads"
+        ],
+        [
+          "observed",
+          "モデルのダイアログは、Mediumについて約11 GBと案内していた。",
+          null
+        ],
+        [
+          "measured",
+          "最初のダウンロードが終わると、2つ目が始まった：ビジョンモデルのqwen3-vl:8b、5.7 GB（メモには'another five gigabytes'とある）。",
+          null
+        ],
+        [
+          "assumption",
+          "4.9 GBと5.7 GBを足すと10.6 GBになり、案内された11 GBに合致しそうだ。アプリはそうは述べていない。",
+          null
+        ],
+        [
+          "observed",
+          "進行バーには割合とサイズが表示され、残り時間は表示されない。テスターは別のアプリでも同じものを見た。",
+          null
+        ],
+        [
+          "tester-view",
+          "これほど大きなファイルでは所要時間の見積もりを表示すべきで、11 GB、4.9 GB、さらに別のダウンロードという流れは、説明として不親切だ。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-permission",
+      "title": "画面収録を許可する",
+      "items": [
+        [
+          "vendor-claim",
+          "Screen Awarenessダイアログは、BoBeが'glances at your screen periodically so it can offer relevant help, track your goals, and remember what you're working on'し、'screenshots are analyzed locally on your Mac and never uploaded'と述べている。未検証。ネットワークの確認は行っていない。",
+          "permission"
+        ],
+        [
+          "observed",
+          "Screen Recordingは'Not Granted'と表示され、'Open System Settings'のリンクと'Grant permission to continue'の文言がある。'Skip: disable screen capture'のボタンもある。",
+          null
+        ],
+        [
+          "tester-view",
+          "テスターは、アプリが動けば画面の設定は簡単だろうと考えていた。明確な経路が見つからず、macOSの設定を自分で探す必要があった。",
+          null
+        ],
+        [
+          "observed",
+          "'Open System Settings'のリンクを使ったか、どこにつながったかは記録なし。テスターは、設定を自分で見つけて有効にしたと述べている。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-help",
+      "title": "BoBeに助けを求める",
+      "items": [
+        [
+          "observed",
+          "テスターはBoBeにチャットで、スクリーンショットと画面監視のためのmacOSの権限をどう与えるかを尋ねた。表示された返答で、BoBeは何を設定したいのかを明確にするよう求め、手助けを申し出た。",
+          "chat_clarify"
+        ],
+        [
+          "observed",
+          "彼はもう一度、より具体的に尋ねた：'I don't know where I need to click in the Apple system to change this. Tell me please which setting this is.' 表示された返答は、何を達成しようとしているのかを尋ねた（このページの冒頭）。",
+          null
+        ],
+        [
+          "observed",
+          "彼はこう書いた：'Is this supposed to be an answer or a joke?'",
+          "joke"
+        ],
+        [
+          "tester-view",
+          "この質問に答えられないシステムをどう信頼できるのかと彼は問い、正直な'それには答えられません'のほうがましだと述べている。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-works",
+      "title": "画面認識は動くか？",
+      "items": [
+        [
+          "observed",
+          "セットアップ後、テスターはBoBeに画面認識が動作しているかを尋ねた。メモは答えを'Bobe'と記録している。彼はこれを無回答と受け止めている。",
+          null
+        ],
+        [
+          "observed",
+          "画面連動機能のそれ以上のテストの記録はない。",
+          null
+        ],
+        [
+          "tester-view",
+          "BoBeは'チャットエージェントとしてすら使えない'。",
+          null
+        ],
+        [
+          "assumption",
+          "テスターは、約5 GBのモデルに何ができるのかと疑問に思っている。小さなモデルがアシスタントを制約している可能性はあるが、未検証。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-uninstall",
+      "title": "削除",
+      "items": [
+        [
+          "observed",
+          "テスターがアプリを削除しようとすると、アプリは自動で再起動し、削除できなかった。彼はアクティビティモニタで終了させてから削除した。",
+          null
+        ],
+        [
+          "tester-view",
+          "'Just even for alpha level, this is not acceptable.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-alive",
+      "title": "プロジェクトは生きているか？",
+      "items": [
+        [
+          "vendor-claim",
+          "ウェブサイトのバナーには'M2 or higher recommended'とある。ダウンロードしたファイルは'February 26'に言及している。それが日なのか年なのか、メモには書かれていない。",
+          null
+        ],
+        [
+          "assumption",
+          "テスターの印象では、プロジェクトは終わっているかもしれない。'M2 or higher'はより新しいチップも含み、ビルド日は不明で、リポジトリもリリース履歴も確認していないため、推論としては弱い。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "結論",
+      "items": [
+        [
+          "tester-view",
+          "'This is alpha.' 将来実装され得るコンセプト。今日動くものがあるのか、それともコンセプトアプリなのかと彼は考えている。'Concept is beyond. Implementation is missing.'",
+          null
+        ],
+        [
+          "observed",
+          "テスターはアプリを削除した。3〜6か月後、または創業者と話した後に、再度試すかもしれない。",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "'Screenshots are analyzed locally on your Mac and never uploaded'",
+      "Screen Awarenessダイアログ",
+      "未検証。ネットワークの監視や独立した確認は行っていない。",
+      "vendor-claim"
+    ],
+    [
+      "'Download and run an AI model entirely on your Mac. No internet needed after setup.'",
+      "モデルのダイアログ",
+      "モデルはアプリ経由でダウンロードされた。オフライン動作は未検証。",
+      "vendor-claim"
+    ],
+    [
+      "Medium（8B）は約11 GB",
+      "モデルのダイアログ",
+      "セットアップでは4.9 GBの言語モデルに続き、5.7 GBのビジョンモデルがダウンロードされた。合計10.6 GBは、案内された数値に一致する可能性がある（推測）。",
+      "measured"
+    ],
+    [
+      "macOS 13以降、Apple Silicon、M2以上を推奨",
+      "ウェブサイトのバナー（貼り付けたもの）",
+      "アプリはM3 Proで動作した。テスターは'M2'という表記を古いと受け止めた。'Or higher'には、より新しいチップが含まれる。",
+      "observed"
+    ],
+    [
+      "画面に表示されている内容に基づいて、役立つ支援を提供する",
+      "Screen Awarenessダイアログ",
+      "テスターは画面認識が動作しているかを尋ねたが、返答は'Bobe'と記録されている。メモには、画面を踏まえた支援が示された記録はない。",
+      "observed"
+    ],
+    [
+      "ステップごとのセットアップガイド",
+      "ウェブサイト",
+      "ガイドは存在する。内容は評価していない。テスターは、macOSの権限の手順を分かりにくいと感じた。",
+      "observed"
+    ]
+  ],
+  "fit": {
+    "title": "24 GBに合うローカルモデルは？",
+    "nav": "24 GB",
+    "memory_gb": 24,
+    "scale": 60,
+    "memline": "24 GBのRAM",
+    "above": "24 GB超が必要",
+    "below": "24 GB以内",
+    "cols": [
+      "モデル",
+      "アプリの記載"
+    ],
+    "rows": [
+      [
+        "Small（4B）、ダウンロード約6 GB",
+        16,
+        "16 GB以上のRAMが必要",
+        "observed"
+      ],
+      [
+        "Medium（8B）、ダウンロード約11 GB",
+        24,
+        "24 GB以上のRAMが必要",
+        "observed"
+      ],
+      [
+        "Large（14B）、ダウンロード約15 GB",
+        48,
+        "48 GB以上のRAMが必要",
+        "observed"
+      ]
+    ],
+    "note": "RAM要件は、アプリのモデルダイアログに記載されているとおりです。Largeは24 GBでも'should also run'というテスターの想定は、この文言と矛盾します。Medium以外は一切テストしていません。"
+  },
+  "usage_log": [
+    [
+      "DMGからインストール",
+      "-",
+      "インストール完了。インターネットから入手したアプリに対するmacOSの承認が1回",
+      "記録なし",
+      "Pass",
+      []
+    ],
+    [
+      "ローカルモデルを選んでダウンロード",
+      "Medium（8B）、約11 GBと記載",
+      "4.9 GBの言語モデルと5.7 GBのビジョンモデルをダウンロード（完了は後の使用から推定）",
+      "記録なし",
+      "Pass",
+      [
+        "model_choice",
+        "downloads"
+      ]
+    ],
+    [
+      "画面収録を許可する",
+      "-",
+      "テスターはmacOSの設定を自分で探した。彼の見方では明確な経路がない",
+      "記録なし",
+      "Partial",
+      [
+        "permission"
+      ]
+    ],
+    [
+      "権限の付与方法をBoBeに尋ねる",
+      "ローカルモデル",
+      "設定は示されず、テスターに明確化を求めた（表示された返答では2回）",
+      "-",
+      "Fail",
+      [
+        "chat_clarify",
+        "joke",
+        "desktop_chat"
+      ]
+    ],
+    [
+      "画面認識が動作しているかを尋ねる",
+      "ローカルモデル",
+      "返答は'Bobe'と記録。確認はできず",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "BoBeをチャットエージェントとして使う",
+      "ローカルモデル",
+      "テスターの見立てでは、使えない",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "アンインストール",
+      "-",
+      "アプリは自動で再起動した。アクティビティモニタで終了させてから削除",
+      "記録なし",
+      "Partial",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "15 GBのLargeモデルが24 GBで動くと思い込んでいた。ダイアログには、Largeに48 GB以上のRAMが必要と書かれている。Mediumを選んだため、影響はなかった。"
+    ],
+    [
+      "tester-error",
+      "画面アクセスを設定する明確な方法がないと書いた。ダイアログには'Open System Settings'のリンクがある。試したかどうかは記録なし。"
+    ],
+    [
+      "tester-error",
+      "記録に抜けがある：インストールしたバージョン、macOSのバージョン、開始・終了時刻、どのダウンロードがどのモデルに対応するか、画面認識の質問に対する正確な返答。"
+    ],
+    [
+      "assumption",
+      "'project is dead'という印象は、より新しいチップも含む表現（'M2 or higher'）と、はっきりしない'February 26'に基づいている。リリース履歴は確認していない。"
+    ],
+    [
+      "tester-view",
+      "いずれの方向の情報も得られなかったセキュリティ確認の後で、画面収録のアルファ版をインストールした。テスターは承知のうえでリスクを受け入れた。"
+    ]
+  ],
+  "findings": [
+    [
+      "BB-01",
+      "インストールは簡単：312 MBのDMGとmacOSの承認1回。",
+      "インストール",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "BB-02",
+      "ウェブサイトにステップごとのセットアップガイドがある。内容は未評価。",
+      "ドキュメント",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "BB-03",
+      "モデルのダイアログは明快：ダウンロードサイズ、チップ、RAM要件付きの3つのローカルモデル。",
+      "導入",
+      "observed",
+      "Positive",
+      [
+        "model_choice"
+      ]
+    ],
+    [
+      "BB-04",
+      "案内は約11 GB、実際のダウンロードは4.9 GBに続いて5.7 GB。アプリはその差を説明しない。",
+      "導入",
+      "measured",
+      "Medium",
+      [
+        "model_choice",
+        "downloads",
+        "permission"
+      ]
+    ],
+    [
+      "BB-05",
+      "ダウンロードバーには割合とサイズが表示され、残り時間はない。",
+      "操作性",
+      "observed",
+      "Medium",
+      [
+        "downloads",
+        "permission"
+      ]
+    ],
+    [
+      "BB-06",
+      "Screen Recordingは'Not Granted'。テスターは明確な経路を見つけられず、macOSの設定を自分で探した。'Open System Settings'のリンクはあるが、使用したかは記録なし。",
+      "導入",
+      "tester-view",
+      "Medium",
+      [
+        "permission"
+      ]
+    ],
+    [
+      "BB-07",
+      "アプリ内アシスタントは、的確な質問を2回しても、macOSの設定を示さなかった。",
+      "中核機能",
+      "observed",
+      "High",
+      [
+        "chat_clarify",
+        "joke",
+        "desktop_chat"
+      ]
+    ],
+    [
+      "BB-08",
+      "画面認識が動作しているかを尋ねたところ、記録された返答は'Bobe'。画面認識が動作していることは示されなかった。",
+      "中核機能",
+      "observed",
+      "High",
+      []
+    ],
+    [
+      "BB-09",
+      "このテストではチャットエージェントとして使えなかった。テスターは、約5 GBのモデルに何ができるのかを疑っている。",
+      "中核機能",
+      "tester-view",
+      "Medium",
+      []
+    ],
+    [
+      "BB-10",
+      "削除しようとするとアプリは自動で再起動し、アクティビティモニタで終了させる必要があった。",
+      "アンインストール",
+      "observed",
+      "High",
+      []
+    ],
+    [
+      "BB-11",
+      "プライバシーに関する主張：スクリーンショットはローカルで分析され、アップロードされない。未検証。",
+      "信頼性",
+      "vendor-claim",
+      "Medium",
+      [
+        "permission"
+      ]
+    ],
+    [
+      "BB-12",
+      "ChatGPTによるインストール前のセキュリティ確認は決め手を欠いた。テスターはそれでもインストールした。",
+      "信頼性",
+      "third-party",
+      "Medium",
+      []
+    ],
+    [
+      "BB-13",
+      "テスターは、プロジェクトが活動していないのではと疑っている。根拠は薄く、'or higher'という表現とは部分的に矛盾する。",
+      "メンテナンス",
+      "assumption",
+      "Low",
+      []
+    ],
+    [
+      "BB-14",
+      "アプリはLM StudioやOllamaには接続しないようで、独自のモデルをダウンロードする。",
+      "連携",
+      "assumption",
+      "Low",
+      []
+    ]
+  ],
+  "severity_note": "重大度は、初めて使う人への影響度です。案であり、実測値ではありません。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "画面認識機能を持つ初期のローカルアシスタントを試したく、アルファ版の品質を受け入れられる、いじるのが好きな人。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "今日、動作するアシスタントが必要な人。"
+      ],
+      [
+        "tester-view",
+        "独立したセキュリティレビューなしに画面を記録するアプリに不安を感じる人。"
+      ]
+    ],
+    "retest": "3〜6か月後、創業者と話した後、またはv0.1.0-alphaより新しいバージョンが出たときに再テストしてください（テスターの計画に、きっかけを1つ追加）。"
+  },
+  "background_intro": "",
+  "background": [],
+  "sources": [
+    "テスターの実機テストのメモ、2026年10月7日（元ドキュメント。元メモのPDFは追加予定）。",
+    "bobebot.comのダウンロードページとセットアップガイド（テスターが見て貼り付けたもの）。",
+    "セキュリティリスクに関するChatGPTの回答（テスターによる言い換え。回答そのものはメモに含まれていない）。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "観察",
+      "meaning": "アプリ、スクリーンショット、またはテスターのメモの中で、直接確認したもの。"
+    },
+    "measured": {
+      "label": "実測",
+      "meaning": "ダイアログ、カウンター、ツールから読み取った値。数値を併記。"
+    },
+    "tester-estimate": {
+      "label": "テスターの推定",
+      "meaning": "テスター自身の推定。計時や計数はしていない。"
+    },
+    "vendor-claim": {
+      "label": "ベンダーの主張",
+      "meaning": "アプリ、ストア掲載情報、またはウェブサイトが述べていること。未検証。"
+    },
+    "third-party": {
+      "label": "第三者情報",
+      "meaning": "別の情報源（AIアシスタント、記事など）によるもの。ここでは未検証。"
+    },
+    "assumption": {
+      "label": "推測",
+      "meaning": "推論です。誤りの可能性があります。"
+    },
+    "tester-view": {
+      "label": "テスターの見解",
+      "meaning": "テスターの判断または意見。"
+    },
+    "tester-error": {
+      "label": "テスターの誤り",
+      "meaning": "テスターが間違えた、または見落とした点。"
+    }
+  },
+  "images": [
+    {
+      "id": "desktop_chat",
+      "figure": 1,
+      "file": "bobe-desktop-chat-no-macos-setting-given.webp",
+      "path": "images/bobe-desktop-chat-no-macos-setting-given.webp",
+      "alt": "macOSのデスクトップ上のBoBeのマスコットとチャット：どのmacOS設定を変えるかを尋ねられた後、BoBeはユーザーに何をしたいのかを尋ねている。",
+      "caption": "ユーザーがどのmacOS設定を変えるのかを尋ねている。表示されたBoBeの返答は、何を達成したいのかを明確にするよう求めている。上部の帯とドキュメントのプレビューは、プライバシーのため削除またはぼかしてある。",
+      "role": "hero",
+      "width": 1100,
+      "height": 984,
+      "bytes": 139482,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image6.png"
+    },
+    {
+      "id": "model_choice",
+      "figure": 2,
+      "file": "bobe-model-choice-dialog-small-medium-large-local-models.webp",
+      "path": "images/bobe-model-choice-dialog-small-medium-large-local-models.webp",
+      "alt": "ローカルモデルのSmall 4B（6 GB）、Medium 8B（11 GB、24 GB以上のRAM）、Large 14B（15 GB、48 GB以上のRAM）を提示するBoBeのセットアップダイアログ。Mediumを選択中。",
+      "caption": "モデルの選択：3つのローカルモデル。Medium（8B、約11 GB）が選択されており、テスターの24 GBに合う。Largeは48 GB以上のRAMと記載。ダイアログ外の背景はぼかしてある。",
+      "role": "inline",
+      "width": 572,
+      "height": 636,
+      "bytes": 24210,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-model",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image1.png"
+    },
+    {
+      "id": "downloads",
+      "figure": 3,
+      "file": "bobe-setup-downloading-ai-engine-and-language-model.webp",
+      "path": "images/bobe-setup-downloading-ai-engine-and-language-model.webp",
+      "alt": "BoBeのセットアップの進行状況：AIエンジンは完了、言語モデルは4.9 GBの1パーセント、その後にBoBeの初期化。所要時間の表示なし。",
+      "caption": "セットアップのダウンロードは3つのステップ。言語モデルは4.9 GBだが、モデルのダイアログは約11 GBと案内していた。バーには割合とサイズしか表示されない。背景はぼかしてある。",
+      "role": "moment",
+      "width": 597,
+      "height": 654,
+      "bytes": 8234,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-downloads",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image2.png"
+    },
+    {
+      "id": "permission",
+      "figure": 4,
+      "file": "bobe-screen-awareness-dialog-screen-recording-not-granted.webp",
+      "path": "images/bobe-screen-awareness-dialog-screen-recording-not-granted.webp",
+      "alt": "BoBeのScreen Awarenessダイアログ：Screen Recordingは未許可で、Open System Settingsのリンクがあり、5.7 GBのビジョンモデルが1パーセントまでダウンロードされている。",
+      "caption": "Screen Awarenessのステップ：Screen Recordingは'Not Granted'で、2つ目のモデルqwen3-vl:8b（5.7 GB）がダウンロード中。システム設定へのリンクがある。背景はぼかしてある。",
+      "role": "moment",
+      "width": 613,
+      "height": 665,
+      "bytes": 25910,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-permission",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image3.png"
+    },
+    {
+      "id": "chat_clarify",
+      "figure": 5,
+      "file": "bobe-chat-asks-for-clarification-instead-of-macos-permission-steps.webp",
+      "path": "images/bobe-chat-asks-for-clarification-instead-of-macos-permission-steps.webp",
+      "alt": "ユーザーがmacOSの画面の権限を付与する方法を尋ねているBoBeのチャット。表示されたBoBeの返答は、何を設定するのかを明確にするようユーザーに求めている。",
+      "caption": "ユーザーが、BoBeにmacOSの画面の権限を与える方法を尋ねている。表示された返答は、設定を示す代わりに明確化を求めている。",
+      "role": "moment",
+      "width": 1429,
+      "height": 893,
+      "bytes": 37766,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-help",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image4.png"
+    },
+    {
+      "id": "joke",
+      "figure": 6,
+      "file": "bobe-chat-user-asks-answer-or-joke.webp",
+      "path": "images/bobe-chat-user-asks-answer-or-joke.webp",
+      "alt": "ユーザーのメッセージ'Is this supposed to be an answer or a joke?'と、折りたたまれた'+2 more'の返答リストがあるBoBeのチャットウィンドウ。",
+      "caption": "返答に対するテスターの反応：'Is this supposed to be an answer or a joke?'",
+      "role": "inline",
+      "width": 1431,
+      "height": 349,
+      "bytes": 6336,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-help"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image5.png"
+    }
+  ],
+  "figure_order": [
+    "desktop_chat",
+    "model_choice",
+    "downloads",
+    "permission",
+    "chat_clarify",
+    "joke"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum ハンズオンテスト · {app} · {date}",
+    "date_line": "2026年10月7日",
+    "nav_aria": "セクション",
+    "nav": {
+      "verdict": "結論",
+      "moments": "6つの場面",
+      "story": "経過",
+      "claims": "主張",
+      "fit": "24 GB",
+      "log": "利用ログ",
+      "errors": "テスターの誤り",
+      "findings": "所見",
+      "background": "背景"
+    },
+    "related": "関連：",
+    "review_link": "{app}のPromptQuorumレビュー",
+    "directory_link": "ローカルAIアプリディレクトリ",
+    "verdict_h": "結論",
+    "general_assessment": "総合評価",
+    "fit_for_tester": "テスターの用途への適合度",
+    "scorecard": "スコアカード",
+    "status_prefix": "ステータス：",
+    "na": "該当なし",
+    "score_aria": "5点満点中{n}点",
+    "details_h": "テストの詳細",
+    "label_intro": "すべての記述にラベルが付いています：",
+    "legend_link": "ラベルの意味",
+    "disclosure_label": "開示事項。",
+    "raw_notes": "元ノートのPDF：",
+    "to_be_added": "追加予定",
+    "moments_h": "このテストを形作った6つの場面",
+    "see_context": "文脈の中で見る",
+    "story_h": "テストの経過",
+    "claims_h": "主張とテスターが確認した内容",
+    "claims_cols": [
+      "主張",
+      "出典",
+      "確認した内容",
+      "ラベル"
+    ],
+    "fit_h": "24 GBに収まるか",
+    "memory_line": "{gb} GBメモリ",
+    "above": "{gb} GB超",
+    "below": "{gb} GB未満",
+    "log_h": "利用ログ",
+    "log_cols": [
+      "#",
+      "タスク",
+      "モデル",
+      "結果",
+      "時間",
+      "ステータス",
+      "図"
+    ],
+    "statuses": {
+      "Fail": "失敗",
+      "Partial": "一部成功",
+      "Pass": "合格",
+      "Not completed": "未完了"
+    },
+    "errors_h": "テスターが誤った点",
+    "findings_h": "所見一覧",
+    "filter_aria": "ラベルで所見を絞り込む",
+    "filter_all": "すべて",
+    "findings_cols": [
+      "ID",
+      "所見",
+      "カテゴリ",
+      "ラベル",
+      "重要度",
+      "図"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "良好"
+    },
+    "fig_abbr": "図",
+    "figure": "図",
+    "enlarge": "拡大：",
+    "audience_h": "こんな人に向いています",
+    "likely_fit": "向いている可能性が高い人",
+    "likely_poor_fit": "向いていない可能性が高い人",
+    "retest": "再テスト。",
+    "background_h": "開発元の背景",
+    "gallery_h": "テストからのその他の画像",
+    "legend_h": "ラベルの見方",
+    "sources_h": "出典",
+    "footer_line": "テストID {id} · テスト標準 v{version} · 元ノートのPDF：追加予定",
+    "crumb_home": "ホーム",
+    "crumb_directory": "ディレクトリ",
+    "crumb_test": "{app} ハンズオンテスト"
+  }
+}

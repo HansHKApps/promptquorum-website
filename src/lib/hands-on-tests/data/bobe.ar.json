@@ -1,0 +1,1040 @@
+{
+  "id": "pq-test-bobe-2026-10-07",
+  "hero": "desktop_chat",
+  "date_human": "7 أكتوبر 2026",
+  "captured": "2026-10-07 or later; exact time not recorded",
+  "standard_version": "0.1",
+  "locale": "ar",
+  "app": {
+    "name": "BoBe",
+    "slug": "bobe",
+    "vendor": "Not recorded (website: bobebot.com)",
+    "category": "Local AI assistant with screen awareness",
+    "platform": "macOS (DMG download)",
+    "pricing_url": null
+  },
+  "title": "BoBe Alpha على جهاز Mac بذاكرة 24 GB: سهل التثبيت، وأعاد تشغيل نفسه عند حذفه",
+  "page_title": "BoBe Test",
+  "dek": "اختبار عملي على MacBook Pro بمعالج M3 Pro. لم يذكر المساعد داخل التطبيق إعداد macOS الذي يحتاجه، وأعاد التطبيق تشغيل نفسه عندما حاول المختبِر حذفه.",
+  "status": "Abandoned",
+  "published": "2026-10-09",
+  "index": false,
+  "started": "2026-10-07",
+  "ended": null,
+  "meta": [
+    [
+      "التطبيق",
+      "BoBe، مساعد ذكاء اصطناعي محلي يراقب الشاشة (bobebot.com)",
+      "observed"
+    ],
+    [
+      "الإصدار",
+      "v0.1.0-alpha، من شريط التنزيل في الموقع كما لصقه المختبِر. لم يُسجَّل الإصدار المثبَّت.",
+      "vendor-claim"
+    ],
+    [
+      "المختبِر",
+      "Hans Kuepper، مؤسس PromptQuorum",
+      null
+    ],
+    [
+      "البداية",
+      "7 أكتوبر 2026 (تقول الملاحظات '7 October'؛ والسنة من اسم الملف وخصائص المستند). الوقت غير مسجَّل.",
+      "observed"
+    ],
+    [
+      "النهاية",
+      "غير مسجَّل. انتهى الاختبار بإزالة تثبيت التطبيق.",
+      null
+    ],
+    [
+      "العتاد",
+      "MacBook Pro، Apple M3 Pro، ذاكرة موحّدة 24 GB (تقول الملاحظات '24 GB RAM machine')",
+      "observed"
+    ],
+    [
+      "النظام",
+      "macOS، الإصدار الحالي وقت الاختبار؛ الإصدار الدقيق غير مسجَّل",
+      null
+    ],
+    [
+      "المصدر",
+      "bobebot.com/#download. دليل الإعداد: bobebot.com/getting-started",
+      "observed"
+    ],
+    [
+      "التنزيل",
+      "ملف DMG بحجم 312 MB من الموقع (بحسب المختبِر). ثم نزّل الإعداد نموذج لغة بحجم 4.9 GB ونموذج رؤية بحجم 5.7 GB (qwen3-vl:8b).",
+      "measured"
+    ],
+    [
+      "النموذج المحلي",
+      "Medium (8B)، مذكور بنحو 11 GB وذاكرة RAM بحجم 24 GB+. لم يُسجَّل أي الملفات المنزَّلة يقابله.",
+      "observed"
+    ],
+    [
+      "سبب الاختبار",
+      "غير مسجَّل.",
+      null
+    ],
+    [
+      "الهدف",
+      "غير مذكور في الملاحظات. مستنتج منها: معرفة ما إذا كان مساعد يسجّل الشاشة ويستدل منها يُثبَّت ويعمل على جهاز Mac بذاكرة 24 GB مع نموذج محلي.",
+      "assumption"
+    ],
+    [
+      "مساعدات الذكاء الاصطناعي المستخدمة",
+      "ChatGPT (سؤال أمني قبل التثبيت). واختُبر مساعد الدردشة الخاص بـ BoBe نفسه.",
+      "observed"
+    ]
+  ],
+  "disclosure": "أسّس المختبِر PromptQuorum (promptquorum.com)، وهو موقع محتوى ودليل لتطبيقات الذكاء الاصطناعي المحلي. لا تسجّل الملاحظات أي تواصل مع الجهة المصنِّعة ولا أي دفع ولا أي رعاية. ويقول المختبِر إنه قد يعيد المحاولة بعد التحدث مع المؤسس.",
+  "verdict": {
+    "general": "نسخة ألفا مبكرة (v0.1.0-alpha بحسب الموقع). التثبيت سهل واختيار النموذج واضح. أما الفكرة الأساسية، وهي مساعد يراقب الشاشة ليقدّم العون، فلم يمكن إظهار عملها في هذا الاختبار: فقد لم يذكر مساعد التطبيق نفسه إعداد macOS اللازم لمنح صلاحية تسجيل الشاشة، ولم يعطِ فحص عمل إدراك الشاشة إجابة قابلة للاستخدام. واحتاجت الإزالة إلى مراقب النشاط.",
+    "fit": "أُزيل التثبيت بعد الإعداد. 'Concept I like. Concept is interesting. Implementation is missing.' وقد يعيد المختبِر المحاولة بعد 3 إلى 6 أشهر، أو بعد التحدث مع المؤسس."
+  },
+  "scores": [
+    [
+      "التثبيت",
+      4,
+      "ملف DMG بحجم 312 MB، وموافقة واحدة من macOS، و'so smooth'، بحسب المختبِر."
+    ],
+    [
+      "البدء واختيار النموذج",
+      2,
+      "مربع حوار واضح بثلاثة نماذج واحتياجاتها من RAM. لكن أُعلن عن 11 GB بينما نُزّل 4.9 GB و5.7 GB، ولا يوجد تقدير للوقت، وخطوة الصلاحية غير واضحة."
+    ],
+    [
+      "الوظيفة الأساسية",
+      1,
+      "تعذّر تأكيد عمل إدراك الشاشة. ولم تعطِ ردود الدردشة المرئية إجابات قابلة للاستخدام."
+    ],
+    [
+      "الإرشاد والتكرار",
+      1,
+      "لم يذكر مساعد التطبيق إعداد macOS بعد سؤالين. لم يُختبر التكرار."
+    ],
+    [
+      "الأداء",
+      null,
+      "غير مقيس."
+    ],
+    [
+      "التوثيق",
+      null,
+      "يوجد دليل إعداد خطوة بخطوة (إيجابي). ولم يُقيَّم محتواه."
+    ],
+    [
+      "الثقة والخصوصية",
+      null,
+      "لم يُدقَّق. تطبيق يسجّل الشاشة؛ وكان فحص ChatGPT غير حاسم؛ ويقول التطبيق إن التحليل يبقى على جهاز Mac."
+    ],
+    [
+      "إزالة التثبيت",
+      1,
+      "أعاد التطبيق تشغيل نفسه. وكان لا بد من إنهائه في مراقب النشاط قبل أن يمكن حذفه."
+    ]
+  ],
+  "scores_note": "الدرجات مقترحات مستخلصة من الأدلة أدناه (1 = ضعيف، 5 = جيد جدًا). وعلى المختبِر تأكيدها.",
+  "tldr": [
+    [
+      "observed",
+      "يُثبَّت بسهولة (ملف DMG بحجم 312 MB، وموافقة واحدة من macOS). ثم ينزّل الإعداد 4.9 GB و5.7 GB مقابل 11 GB معلنة، دون تقدير للوقت، وخطوة تسجيل الشاشة في macOS غير واضحة."
+    ],
+    [
+      "observed",
+      "لم يذكر مساعد التطبيق إعداد macOS الذي ينبغي تغييره. والرد على 'is screen reporting working?' مسجَّل في الملاحظات بأنه 'Bobe'."
+    ],
+    [
+      "tester-view",
+      "أزال المختبِر التثبيت: نسخة ألفا، والفكرة مثيرة للاهتمام، والتنفيذ غائب. وأعاد التطبيق تشغيل نفسه عندما حاول حذفه."
+    ]
+  ],
+  "quotes": [
+    "نظام لا يستطيع حتى أن يعطيني جوابًا عن هذا السؤال، كيف أثق به في أي شيء؟",
+    "الفكرة تعجبني. الفكرة مثيرة للاهتمام. [...] التنفيذ غائب."
+  ],
+  "quote_note": "ملاحظات المختبِر، مع تحرير طفيف عن تفريغ صوتي. مترجمة من الإنجليزية.",
+  "moments_title": "خمس لحظات شكّلت هذا الاختبار",
+  "moments_md": "خمس لحظات",
+  "moments_nav": "خمس لحظات",
+  "moments": [
+    [
+      "ثلاثة نماذج، واحد يناسب",
+      "يسرد مربع الحوار Small وMedium وLarge مع احتياجاتها من RAM. يناسب Medium ذاكرة 24 GB. أما Large فيذكر 48 GB+، مع أن المختبِر افترض أنه سيعمل.",
+      "model_choice",
+      "chapter-model"
+    ],
+    [
+      "أُعلن عن 11 GB، وظهر 4.9 GB",
+      "نزّل الإعداد نموذج لغة بحجم 4.9 GB، ثم نموذج رؤية بحجم 5.7 GB. ولا يعرض أي من الشريطين الوقت المتبقي.",
+      "downloads",
+      "chapter-downloads"
+    ],
+    [
+      "الصلاحية التي يتوقف عليها كل شيء",
+      "تسجيل الشاشة يظهر 'Not Granted'. واضطر المختبِر إلى البحث بنفسه في إعدادات macOS.",
+      "permission",
+      "chapter-permission"
+    ],
+    [
+      "سُئل مرتين، ولم يُذكر أي إعداد",
+      "ردّ مساعد التطبيق على سؤال دقيق بأن طلب منه توضيح ما يريد.",
+      "chat_clarify",
+      "chapter-help"
+    ],
+    [
+      "تطبيق يعيد تشغيل نفسه",
+      "عاد حين حاول المختبِر حذفه. فأنهاه أولًا في مراقب النشاط.",
+      null,
+      "chapter-uninstall"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-website",
+      "title": "الموقع",
+      "items": [
+        [
+          "observed",
+          "نزّل المختبِر التطبيق من bobebot.com/#download: ملف DMG بحجم 312 MB لجهاز Mac.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "شريط التنزيل، كما لصقه المختبِر: 'v0.1.0-alpha · Requires macOS 13+ · Apple Silicon · M2 or higher recommended for local models'.",
+          null
+        ],
+        [
+          "observed",
+          "يقدّم الموقع دليل إعداد خطوة بخطوة (bobebot.com/getting-started). ويعدّ المختبِر ذلك إيجابيًا. ولم يُقيَّم محتواه.",
+          null
+        ],
+        [
+          "assumption",
+          "انطباع المختبِر: BoBe لا يتصل بـ LM Studio أو Ollama (تقول الملاحظات 'Llama'). بل ينزّل نموذجًا ويدمجه مباشرة. لم يُتحقَّق.",
+          null
+        ],
+        [
+          "tester-view",
+          "تروق له فكرة مساعد يسجّل الشاشة ويفهم المستخدم منها. 'So cool function.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-security",
+      "title": "قبل التثبيت: سؤال أمني",
+      "items": [
+        [
+          "observed",
+          "سأل المختبِر ChatGPT عن المخاطر الأمنية قبل التثبيت.",
+          null
+        ],
+        [
+          "third-party",
+          "بحسب إعادة صياغة المختبِر، لم يجد ChatGPT شيئًا سلبيًا ولا شيئًا إيجابيًا، أي لا معلومة في أي اتجاه. وإجابة ChatGPT نفسها ليست في الملاحظات.",
+          null
+        ],
+        [
+          "observed",
+          "قرر المختبِر المخاطرة والتثبيت على أي حال. ولم تكن أي مراجعة أمنية مستقلة جزءًا من هذا الاختبار.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-install",
+      "title": "التثبيت",
+      "items": [
+        [
+          "observed",
+          "ثُبّت من ملف DMG. وكانت الخطوة الوحيدة قبل الاستخدام الموافقة في macOS على أن التطبيق قادم من الإنترنت. المختبِر: 'so smooth as hell, no problems'.",
+          null
+        ],
+        [
+          "observed",
+          "تسأل الشاشة الأولى عن نوع النموذج المراد استخدامه. واختار المختبِر نموذجًا محليًا.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-model",
+      "title": "اختيار نموذج",
+      "items": [
+        [
+          "observed",
+          "يضع مربع الحوار خيارًا سحابيًا أولًا (قائمة منسدلة GPT-5.1 مع 'Continue with OpenAI'). وتحته ثلاثة نماذج محلية: Small (4B) بنحو 6 GB لأي جهاز Mac بمعالج Apple Silicon مع RAM بحجم 16 GB+؛ وMedium (8B) بنحو 11 GB لـ M1 Pro / M2 أو أحدث مع RAM بحجم 24 GB+؛ وLarge (14B) بنحو 15 GB لـ M2 Pro / M3 أو أحدث مع RAM بحجم 48 GB+.",
+          "model_choice"
+        ],
+        [
+          "observed",
+          "اختار المختبِر Medium، المناسب لذاكرته البالغة 24 GB. ويلاحظ أنه لا توجد سوى ثلاثة نماذج.",
+          null
+        ],
+        [
+          "tester-error",
+          "كتب المختبِر أن النموذج بحجم 15 GB 'should also run' على جهاز بذاكرة 24 GB. ويذكر مربع الحوار أن Large يحتاج إلى 48 GB+ من RAM. ولم يكن لذلك أثر، لأنه اختار Medium.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-downloads",
+      "title": "التنزيلات",
+      "items": [
+        [
+          "measured",
+          "يجري الإعداد في ثلاث خطوات: محرك الذكاء الاصطناعي، ونموذج اللغة، والتهيئة. وتنزيل نموذج اللغة 4.9 GB. وتُظهر لقطة الشاشة 59 MB، أي 1 بالمئة.",
+          "downloads"
+        ],
+        [
+          "observed",
+          "كان مربع حوار النماذج قد أعلن عن نحو 11 GB لنموذج Medium.",
+          null
+        ],
+        [
+          "measured",
+          "عندما انتهى التنزيل الأول، بدأ تنزيل ثانٍ: نموذج رؤية، qwen3-vl:8b، بحجم 5.7 GB (تقول الملاحظات 'another five gigabytes').",
+          null
+        ],
+        [
+          "assumption",
+          "يبلغ مجموع 4.9 GB و5.7 GB نحو 10.6 GB، وهو ما يوافق 11 GB المعلنة. ولا يقول التطبيق ذلك.",
+          null
+        ],
+        [
+          "observed",
+          "تعرض أشرطة التقدّم النسبة والحجم، لا الوقت المتبقي. ورأى المختبِر الأمر نفسه في تطبيق آخر.",
+          null
+        ],
+        [
+          "tester-view",
+          "ينبغي عرض تقدير للوقت لملفات بهذا الحجم، وتعاقب 11 GB ثم 4.9 GB ثم تنزيل آخر تواصلٌ سيئ.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-permission",
+      "title": "منح صلاحية تسجيل الشاشة",
+      "items": [
+        [
+          "vendor-claim",
+          "يقول مربع حوار Screen Awareness إن BoBe 'glances at your screen periodically so it can offer relevant help, track your goals, and remember what you're working on'، وإن 'screenshots are analyzed locally on your Mac and never uploaded'. لم يُتحقَّق؛ ولم يُجرَ أي فحص للشبكة.",
+          "permission"
+        ],
+        [
+          "observed",
+          "يعرض تسجيل الشاشة 'Not Granted'، مع رابط 'Open System Settings' والنص 'Grant permission to continue'. ويوجد زر 'Skip: disable screen capture'.",
+          null
+        ],
+        [
+          "tester-view",
+          "توقّع المختبِر أن يكون إعداد الشاشة سهلًا بعد أن يعمل التطبيق. ولم يجد مسارًا واضحًا واضطر إلى البحث بنفسه في إعدادات macOS.",
+          null
+        ],
+        [
+          "observed",
+          "لم يُسجَّل هل استُخدم رابط 'Open System Settings' ولا إلى أين قاد. ويذكر المختبِر أنه وجد الإعداد بنفسه وفعّله.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-help",
+      "title": "طلب المساعدة من BoBe",
+      "items": [
+        [
+          "observed",
+          "سأل المختبِر BoBe في الدردشة كيف يمنحه صلاحيات macOS للقطات الشاشة ومراقبتها. وفي الردود المرئية طلب BoBe منه توضيح ما يريد إعداده وعرض المساعدة.",
+          "chat_clarify"
+        ],
+        [
+          "observed",
+          "سأل مرة أخرى بدقة أكبر: 'I don't know where I need to click in the Apple system to change this. Tell me please which setting this is.' وسأل الرد المرئي عمّا يحاول إنجازه (أعلى هذه الصفحة).",
+          null
+        ],
+        [
+          "observed",
+          "كتب: 'Is this supposed to be an answer or a joke?'",
+          "joke"
+        ],
+        [
+          "tester-view",
+          "يسأل كيف يمكن الوثوق بنظام لا يستطيع الإجابة عن هذا السؤال، ويقول إن 'لا أستطيع الإجابة عن هذا' الصادقة ستكون أفضل.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-works",
+      "title": "هل يعمل إدراك الشاشة؟",
+      "items": [
+        [
+          "observed",
+          "بعد الإعداد سأل المختبِر BoBe عمّا إذا كان إدراك الشاشة يعمل. وتسجّل الملاحظات الإجابة بأنها 'Bobe'. ويعدّها بلا إجابة.",
+          null
+        ],
+        [
+          "observed",
+          "لا يُسجَّل أي اختبار آخر للميزات المرتبطة بالشاشة.",
+          null
+        ],
+        [
+          "tester-view",
+          "BoBe 'لا يصلح حتى وكيل دردشة'.",
+          null
+        ],
+        [
+          "assumption",
+          "يتساءل المختبِر عمّا يستطيع نموذج بحجم 5 GB تقريبًا فعله. وقد يحدّ نموذج صغير من قدرة المساعد؛ لم يُختبر.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-uninstall",
+      "title": "الإزالة",
+      "items": [
+        [
+          "observed",
+          "عندما حاول المختبِر حذف التطبيق أعاد تشغيل نفسه تلقائيًا ولم يمكن حذفه. فأنهاه في مراقب النشاط ثم حذفه.",
+          null
+        ],
+        [
+          "tester-view",
+          "'Just even for alpha level, this is not acceptable.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-alive",
+      "title": "هل المشروع حي؟",
+      "items": [
+        [
+          "vendor-claim",
+          "يقول شريط الموقع 'M2 or higher recommended'. ويشير الملف المنزَّل إلى 'February 26'. ولا تقول الملاحظات هل هذا يوم أم سنة.",
+          null
+        ],
+        [
+          "assumption",
+          "انطباع المختبِر أن المشروع ربما توقف. و'M2 or higher' تشمل الرقائق الأحدث أيضًا، وتاريخ البناء غير واضح، ولم يُفحص أي مستودع ولا سجل إصدارات، لذا فالاستنتاج ضعيف.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "القرار",
+      "items": [
+        [
+          "tester-view",
+          "'This is alpha.' فكرة يمكن تنفيذها مستقبلًا؛ ويتساءل هل يعمل شيء اليوم أم أنه تطبيق مفاهيمي. 'Concept is beyond. Implementation is missing.'",
+          null
+        ],
+        [
+          "observed",
+          "حذف المختبِر التطبيق. وقد يجرّبه مرة أخرى بعد ثلاثة أو ستة أشهر، أو بعد التحدث مع المؤسس.",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "'Screenshots are analyzed locally on your Mac and never uploaded'",
+      "مربع حوار Screen Awareness",
+      "لم يُختبر. لم تُجرَ مراقبة للشبكة ولا فحص مستقل.",
+      "vendor-claim"
+    ],
+    [
+      "'Download and run an AI model entirely on your Mac. No internet needed after setup.'",
+      "مربع حوار النماذج",
+      "نُزّل النموذج عبر التطبيق. ولم يُختبر العمل دون اتصال.",
+      "vendor-claim"
+    ],
+    [
+      "حجم Medium (8B) نحو 11 GB",
+      "مربع حوار النماذج",
+      "نزّل الإعداد نموذج لغة بحجم 4.9 GB، ثم نموذج رؤية بحجم 5.7 GB. وقد يكون المجموع، 10.6 GB، هو الرقم المعلن (افتراض).",
+      "measured"
+    ],
+    [
+      "يتطلب macOS 13+ وApple Silicon، ويوصى بـ M2 أو أحدث",
+      "شريط الموقع، كما لُصق",
+      "عمل التطبيق على M3 Pro. وقرأ المختبِر ذكر 'M2' على أنه قديم. و'Or higher' تشمل الرقائق الأحدث.",
+      "observed"
+    ],
+    [
+      "يقدّم مساعدة ذات صلة بناءً على ما يظهر على شاشتك",
+      "مربع حوار Screen Awareness",
+      "سأل المختبِر عمّا إذا كان إدراك الشاشة يعمل؛ والرد مسجَّل بأنه 'Bobe'. ولم تُظهر الملاحظات أي مساعدة قائمة على الشاشة.",
+      "observed"
+    ],
+    [
+      "دليل إعداد خطوة بخطوة",
+      "الموقع",
+      "الدليل موجود. ولم يُقيَّم محتواه. ووجد المختبِر خطوة صلاحية macOS غير واضحة.",
+      "observed"
+    ]
+  ],
+  "fit": {
+    "title": "أي نموذج محلي يتسع في 24 GB؟",
+    "nav": "24 GB",
+    "memory_gb": 24,
+    "scale": 60,
+    "memline": "ذاكرة RAM بحجم 24 GB",
+    "above": "يحتاج إلى أكثر من 24 GB",
+    "below": "ضمن 24 GB",
+    "cols": [
+      "النموذج",
+      "بحسب التطبيق"
+    ],
+    "rows": [
+      [
+        "Small (4B)، تنزيل بنحو 6 GB",
+        16,
+        "يلزم 16 GB+ من RAM",
+        "observed"
+      ],
+      [
+        "Medium (8B)، تنزيل بنحو 11 GB",
+        24,
+        "يلزم 24 GB+ من RAM",
+        "observed"
+      ],
+      [
+        "Large (14B)، تنزيل بنحو 15 GB",
+        48,
+        "يلزم 48 GB+ من RAM",
+        "observed"
+      ]
+    ],
+    "note": "احتياجات RAM هي ما يذكره التطبيق في مربع حوار النماذج. وافتراض المختبِر بأن Large 'should also run' على 24 GB يتعارض مع هذا النص. ولم يُختبر شيء من ذلك خارج Medium."
+  },
+  "usage_log": [
+    [
+      "التثبيت من ملف DMG",
+      "-",
+      "ثُبّت؛ مع موافقة واحدة من macOS على تطبيق قادم من الإنترنت",
+      "غير مسجَّل",
+      "Pass",
+      []
+    ],
+    [
+      "اختيار نموذج محلي وتنزيله",
+      "Medium (8B)، نحو 11 GB مذكورة",
+      "نُزّل نموذج لغة بحجم 4.9 GB ونموذج رؤية بحجم 5.7 GB (يُستنتج اكتمال التنزيل من الاستخدام اللاحق)",
+      "غير مسجَّل",
+      "Pass",
+      [
+        "model_choice",
+        "downloads"
+      ]
+    ],
+    [
+      "منح صلاحية تسجيل الشاشة",
+      "-",
+      "بحث المختبِر بنفسه في إعدادات macOS؛ ولا يوجد مسار واضح في رأيه",
+      "غير مسجَّل",
+      "Partial",
+      [
+        "permission"
+      ]
+    ],
+    [
+      "سؤال BoBe عن كيفية منح الصلاحية",
+      "النموذج المحلي",
+      "لم يُذكر أي إعداد؛ وطلب من المختبِر التوضيح (مرتين في الردود المرئية)",
+      "-",
+      "Fail",
+      [
+        "chat_clarify",
+        "joke",
+        "desktop_chat"
+      ]
+    ],
+    [
+      "السؤال عمّا إذا كان إدراك الشاشة يعمل",
+      "النموذج المحلي",
+      "الرد مسجَّل بأنه 'Bobe'؛ دون تأكيد",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "استخدام BoBe بوصفه وكيل دردشة",
+      "النموذج المحلي",
+      "غير قابل للاستخدام، في رأي المختبِر",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "إزالة التثبيت",
+      "-",
+      "أعاد التطبيق تشغيل نفسه؛ أُنهي في مراقب النشاط ثم حُذف",
+      "غير مسجَّل",
+      "Partial",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "افترض أن نموذج Large بحجم 15 GB سيعمل على ذاكرة 24 GB. ويذكر مربع الحوار أنه يحتاج إلى 48 GB+ من RAM. ولم يكن لذلك أثر، لأنه اختار Medium."
+    ],
+    [
+      "tester-error",
+      "كتب أنه لا توجد طريقة واضحة لإعداد الوصول إلى الشاشة. ويعرض مربع الحوار رابط 'Open System Settings'. ولم يُسجَّل هل جُرّب."
+    ],
+    [
+      "tester-error",
+      "ترك ثغرات في السجل: الإصدار المثبَّت، وإصدار macOS، ووقتي البداية والنهاية، وأي تنزيل يخص أي نموذج، والرد الدقيق على سؤال إدراك الشاشة."
+    ],
+    [
+      "assumption",
+      "ينبني انطباع 'project is dead' على صياغة ('M2 or higher') تشمل الرقائق الأحدث أيضًا، وعلى 'February 26' غير الواضحة. ولم يُفحص سجل الإصدارات."
+    ],
+    [
+      "tester-view",
+      "ثبّت نسخة ألفا تسجّل الشاشة بعد فحص أمني لم يعطِ أي معلومة في أي اتجاه. وقبل المختبِر المخاطرة عن علم."
+    ]
+  ],
+  "findings": [
+    [
+      "BB-01",
+      "التثبيت بسيط: ملف DMG بحجم 312 MB وموافقة واحدة من macOS.",
+      "التثبيت",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "BB-02",
+      "يوجد دليل إعداد خطوة بخطوة على الموقع. المحتوى غير مقيَّم.",
+      "التوثيق",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "BB-03",
+      "مربع حوار النماذج واضح: ثلاثة نماذج محلية مع حجم التنزيل والرقاقة واحتياجات RAM.",
+      "البدء",
+      "observed",
+      "Positive",
+      [
+        "model_choice"
+      ]
+    ],
+    [
+      "BB-04",
+      "أُعلن عن نحو 11 GB؛ وكانت التنزيلات 4.9 GB ثم 5.7 GB. ولا يشرح التطبيق الفرق.",
+      "البدء",
+      "measured",
+      "Medium",
+      [
+        "model_choice",
+        "downloads",
+        "permission"
+      ]
+    ],
+    [
+      "BB-05",
+      "تعرض أشرطة التنزيل النسبة والحجم، دون الوقت المتبقي.",
+      "سهولة الاستخدام",
+      "observed",
+      "Medium",
+      [
+        "downloads",
+        "permission"
+      ]
+    ],
+    [
+      "BB-06",
+      "تسجيل الشاشة 'Not Granted'؛ ولم يجد المختبِر مسارًا واضحًا وبحث بنفسه في macOS. يوجد رابط 'Open System Settings'؛ ولم يُسجَّل استخدامه.",
+      "البدء",
+      "tester-view",
+      "Medium",
+      [
+        "permission"
+      ]
+    ],
+    [
+      "BB-07",
+      "لم يذكر مساعد التطبيق إعداد macOS بعد سؤالين دقيقين.",
+      "الوظيفة الأساسية",
+      "observed",
+      "High",
+      [
+        "chat_clarify",
+        "joke",
+        "desktop_chat"
+      ]
+    ],
+    [
+      "BB-08",
+      "عند سؤاله عمّا إذا كان إدراك الشاشة يعمل، كان الرد المسجَّل 'Bobe'. ولم يُظهَر أن إدراك الشاشة يعمل.",
+      "الوظيفة الأساسية",
+      "observed",
+      "High",
+      []
+    ],
+    [
+      "BB-09",
+      "غير قابل للاستخدام وكيل دردشة في هذا الاختبار؛ ويشكّك المختبِر فيما يمكن لنموذج بحجم 5 GB تقريبًا أن يفعله.",
+      "الوظيفة الأساسية",
+      "tester-view",
+      "Medium",
+      []
+    ],
+    [
+      "BB-10",
+      "أعاد التطبيق تشغيل نفسه عند حذفه واضطُر إلى إنهائه في مراقب النشاط.",
+      "إزالة التثبيت",
+      "observed",
+      "High",
+      []
+    ],
+    [
+      "BB-11",
+      "ادعاء الخصوصية: تُحلَّل لقطات الشاشة محليًا ولا تُرفع أبدًا. لم يُتحقَّق.",
+      "الثقة",
+      "vendor-claim",
+      "Medium",
+      [
+        "permission"
+      ]
+    ],
+    [
+      "BB-12",
+      "كان فحص أمني مسبق عبر ChatGPT غير حاسم؛ وثبّت المختبِر التطبيق مع ذلك.",
+      "الثقة",
+      "third-party",
+      "Medium",
+      []
+    ],
+    [
+      "BB-13",
+      "يشتبه المختبِر في أن المشروع غير نشط. الأدلة ضعيفة وتتعارض جزئيًا مع صياغة 'or higher'.",
+      "الصيانة",
+      "assumption",
+      "Low",
+      []
+    ],
+    [
+      "BB-14",
+      "يبدو أن التطبيق لا يتصل بـ LM Studio أو Ollama؛ بل ينزّل نموذجه الخاص.",
+      "التكامل",
+      "assumption",
+      "Low",
+      []
+    ]
+  ],
+  "severity_note": "درجة الخطورة هي الأثر على مستخدم يجرّب التطبيق للمرة الأولى. مقترحة وغير مقيسة.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "الهواة الذين يريدون تجربة مساعد محلي مبكر بإدراك للشاشة ويقبلون جودة نسخة ألفا."
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "كل من يحتاج اليوم إلى مساعد يعمل."
+      ],
+      [
+        "tester-view",
+        "من يشعرون بعدم الارتياح تجاه تطبيق يسجّل الشاشة دون مراجعة أمنية مستقلة."
+      ]
+    ],
+    "retest": "أعد الاختبار بعد 3 إلى 6 أشهر، أو بعد التحدث مع المؤسس، أو عند صدور إصدار أحدث من v0.1.0-alpha (خطة المختبِر، مع محفّز واحد مضاف)."
+  },
+  "background_intro": "",
+  "background": [],
+  "sources": [
+    "ملاحظات المختبِر العملية، 7 أكتوبر 2026 (المستند الأصلي؛ سيُضاف ملف PDF للملاحظات الخام).",
+    "صفحة التنزيل ودليل الإعداد في bobebot.com، كما رآهما المختبِر ولصقهما.",
+    "إجابة ChatGPT عن المخاطر الأمنية، كما أعاد المختبِر صياغتها (الإجابة نفسها ليست في الملاحظات)."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "ملاحَظ",
+      "meaning": "شوهد مباشرة في التطبيق أو في لقطة شاشة أو في ملاحظات المختبِر."
+    },
+    "measured": {
+      "label": "مقيس",
+      "meaning": "قيمة قُرئت من مربع حوار أو عدّاد أو أداة، مع ذكر الرقم."
+    },
+    "tester-estimate": {
+      "label": "تقدير المختبِر",
+      "meaning": "تقدير المختبِر نفسه؛ دون قياس زمني أو عدّ."
+    },
+    "vendor-claim": {
+      "label": "ادعاء الجهة المصنِّعة",
+      "meaning": "ورد في التطبيق أو صفحته في المتجر أو موقعه؛ لم يُتحقَّق منه."
+    },
+    "third-party": {
+      "label": "مصدر خارجي",
+      "meaning": "من مصدر آخر (مساعد ذكاء اصطناعي أو مقال)؛ لم يُتحقَّق منه هنا."
+    },
+    "assumption": {
+      "label": "افتراض",
+      "meaning": "استنتاج. وقد يكون خاطئًا."
+    },
+    "tester-view": {
+      "label": "رأي المختبِر",
+      "meaning": "حكم المختبِر أو رأيه."
+    },
+    "tester-error": {
+      "label": "خطأ المختبِر",
+      "meaning": "حيث أخطأ المختبِر أو فاته شيء."
+    }
+  },
+  "images": [
+    {
+      "id": "desktop_chat",
+      "figure": 1,
+      "file": "bobe-desktop-chat-no-macos-setting-given.webp",
+      "path": "images/bobe-desktop-chat-no-macos-setting-given.webp",
+      "alt": "تميمة BoBe ودردشة على سطح مكتب macOS: يسأل BoBe المستخدم عمّا يحاول فعله بعد أن سُئل عن إعداد macOS الذي ينبغي تغييره.",
+      "caption": "يسأل المستخدم عن إعداد macOS الذي ينبغي تغييره. ويطلب الرد المرئي من BoBe منه توضيح ما يحاول إنجازه. أُزيل الشريط العلوي ومعاينة مستند أو طُمسا حفاظًا على الخصوصية.",
+      "role": "hero",
+      "width": 1100,
+      "height": 984,
+      "bytes": 139482,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image6.png"
+    },
+    {
+      "id": "model_choice",
+      "figure": 2,
+      "file": "bobe-model-choice-dialog-small-medium-large-local-models.webp",
+      "path": "images/bobe-model-choice-dialog-small-medium-large-local-models.webp",
+      "alt": "مربع حوار إعداد BoBe يعرض النماذج المحلية Small 4B (6 GB) وMedium 8B (11 GB، RAM بحجم 24 GB+) وLarge 14B (15 GB، RAM بحجم 48 GB+)؛ وMedium محدَّد.",
+      "caption": "اختيار النموذج: ثلاثة نماذج محلية. Medium (8B، نحو 11 GB) محدَّد ويناسب ذاكرة المختبِر البالغة 24 GB. ويذكر Large أنه يحتاج إلى RAM بحجم 48 GB+. والخلفية خارج مربع الحوار مطموسة.",
+      "role": "inline",
+      "width": 572,
+      "height": 636,
+      "bytes": 24210,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-model",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image1.png"
+    },
+    {
+      "id": "downloads",
+      "figure": 3,
+      "file": "bobe-setup-downloading-ai-engine-and-language-model.webp",
+      "path": "images/bobe-setup-downloading-ai-engine-and-language-model.webp",
+      "alt": "تقدّم إعداد BoBe: اكتمل محرك الذكاء الاصطناعي، ونموذج اللغة عند 1 بالمئة من 4.9 GB، ثم تهيئة BoBe؛ دون تقدير للوقت.",
+      "caption": "ينزّل الإعداد في ثلاث خطوات. نموذج اللغة 4.9 GB، بينما قال مربع حوار النماذج نحو 11 GB. ويعرض الشريط النسبة والحجم فقط. الخلفية مطموسة.",
+      "role": "moment",
+      "width": 597,
+      "height": 654,
+      "bytes": 8234,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-downloads",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image2.png"
+    },
+    {
+      "id": "permission",
+      "figure": 4,
+      "file": "bobe-screen-awareness-dialog-screen-recording-not-granted.webp",
+      "path": "images/bobe-screen-awareness-dialog-screen-recording-not-granted.webp",
+      "alt": "مربع حوار Screen Awareness في BoBe: لم تُمنح صلاحية تسجيل الشاشة، مع رابط Open System Settings، ونموذج رؤية بحجم 5.7 GB يُنزَّل عند 1 بالمئة.",
+      "caption": "خطوة Screen Awareness: تسجيل الشاشة 'Not Granted' ويُنزَّل نموذج ثانٍ، qwen3-vl:8b (5.7 GB). يوجد رابط إلى إعدادات النظام. الخلفية مطموسة.",
+      "role": "moment",
+      "width": 613,
+      "height": 665,
+      "bytes": 25910,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-permission",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image3.png"
+    },
+    {
+      "id": "chat_clarify",
+      "figure": 5,
+      "file": "bobe-chat-asks-for-clarification-instead-of-macos-permission-steps.webp",
+      "path": "images/bobe-chat-asks-for-clarification-instead-of-macos-permission-steps.webp",
+      "alt": "دردشة BoBe يسأل فيها المستخدم كيف يمنح صلاحية الشاشة في macOS؛ ويطلب الرد المرئي من BoBe من المستخدم توضيح ما ينبغي إعداده.",
+      "caption": "يسأل المستخدم كيف يمنح BoBe صلاحيات الشاشة في macOS. وتطلب الردود المرئية منه التوضيح بدل ذكر الإعداد.",
+      "role": "moment",
+      "width": 1429,
+      "height": 893,
+      "bytes": 37766,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-help",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image4.png"
+    },
+    {
+      "id": "joke",
+      "figure": 6,
+      "file": "bobe-chat-user-asks-answer-or-joke.webp",
+      "path": "images/bobe-chat-user-asks-answer-or-joke.webp",
+      "alt": "نافذة دردشة BoBe برسالة المستخدم 'Is this supposed to be an answer or a joke?' وقائمة ردود مطوية '+2 more'.",
+      "caption": "ردّ فعل المختبِر على الردود: 'Is this supposed to be an answer or a joke?'",
+      "role": "inline",
+      "width": 1431,
+      "height": 349,
+      "bytes": 6336,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-help"
+      ],
+      "subject": "Screenshot of the Draw Things app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-07 or later; exact time not recorded",
+      "original_docx_media": "image5.png"
+    }
+  ],
+  "figure_order": [
+    "desktop_chat",
+    "model_choice",
+    "downloads",
+    "permission",
+    "chat_clarify",
+    "joke"
+  ],
+  "ui": {
+    "kicker": "اختبار PromptQuorum العملي · {app} · {date}",
+    "date_line": "7 أكتوبر 2026",
+    "nav_aria": "الأقسام",
+    "nav": {
+      "verdict": "الحكم",
+      "moments": "ست لحظات",
+      "story": "كيف جرى الاختبار",
+      "claims": "الادعاءات",
+      "fit": "24 GB",
+      "log": "سجل الاستخدام",
+      "errors": "أخطاء المختبر",
+      "findings": "الملاحظات",
+      "background": "الخلفية"
+    },
+    "related": "ذات صلة:",
+    "review_link": "مراجعة PromptQuorum لـ {app}",
+    "directory_link": "دليل تطبيقات الذكاء الاصطناعي المحلية",
+    "verdict_h": "الحكم",
+    "general_assessment": "التقييم العام",
+    "fit_for_tester": "الملاءمة لاستخدام المختبر",
+    "scorecard": "بطاقة الدرجات",
+    "status_prefix": "الحالة:",
+    "na": "غير متاح",
+    "score_aria": "{n} من 5",
+    "details_h": "تفاصيل الاختبار",
+    "label_intro": "كل عبارة تحمل وسمًا:",
+    "legend_link": "معنى الوسوم",
+    "disclosure_label": "الإفصاح.",
+    "raw_notes": "ملف PDF للملاحظات الخام:",
+    "to_be_added": "سيُضاف",
+    "moments_h": "ست لحظات شكّلت هذا الاختبار",
+    "see_context": "اطّلع عليها في سياقها",
+    "story_h": "كيف جرى الاختبار",
+    "claims_h": "الادعاءات مقابل ما رآه المختبر",
+    "claims_cols": [
+      "الادعاء",
+      "المصدر",
+      "المُلاحَظ",
+      "الوسم"
+    ],
+    "fit_h": "هل يتسع في 24 GB؟",
+    "memory_line": "ذاكرة {gb} GB",
+    "above": "أعلى من {gb} GB",
+    "below": "أدنى من {gb} GB",
+    "log_h": "سجل الاستخدام",
+    "log_cols": [
+      "#",
+      "المهمة",
+      "النموذج",
+      "النتيجة",
+      "الزمن",
+      "الحالة",
+      "الأشكال"
+    ],
+    "statuses": {
+      "Fail": "فشل",
+      "Partial": "جزئي",
+      "Pass": "نجاح",
+      "Not completed": "لم يكتمل"
+    },
+    "errors_h": "أين أخطأ المختبر",
+    "findings_h": "سجل الملاحظات",
+    "filter_aria": "تصفية الملاحظات حسب الوسم",
+    "filter_all": "الكل",
+    "findings_cols": [
+      "المعرّف",
+      "الملاحظة",
+      "الفئة",
+      "الوسم",
+      "الخطورة",
+      "الأشكال"
+    ],
+    "severities": {
+      "High": "عالية",
+      "Medium": "متوسطة",
+      "Low": "منخفضة",
+      "Positive": "إيجابية"
+    },
+    "fig_abbr": "شكل",
+    "figure": "شكل",
+    "enlarge": "تكبير:",
+    "audience_h": "لمن هو مناسب",
+    "likely_fit": "ملاءمة محتملة",
+    "likely_poor_fit": "ملاءمة ضعيفة محتملة",
+    "retest": "إعادة الاختبار.",
+    "background_h": "خلفية عن الجهة المطوّرة",
+    "gallery_h": "المزيد من الاختبار",
+    "legend_h": "كيف تُقرأ الوسوم",
+    "sources_h": "المصادر",
+    "footer_line": "معرّف الاختبار {id} · معيار الاختبار v{version} · ملف PDF للملاحظات الخام: سيُضاف",
+    "crumb_home": "الرئيسية",
+    "crumb_directory": "الدليل",
+    "crumb_test": "اختبار {app} العملي"
+  }
+}

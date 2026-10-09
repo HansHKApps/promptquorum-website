@@ -52,7 +52,7 @@ function walk(en, tr, p, lang) {
       if (tr !== lang) errors.push(`${lang} locale must be "${lang}", got ${JSON.stringify(tr)}`)
       return
     }
-    if (tr.trim() === '') errors.push(`${lang} ${p}: empty`)
+    if (tr.trim() === '' && en.trim() !== '') errors.push(`${lang} ${p}: empty`)
     if (en === tr && /[A-Za-z]{4,}/.test(en) && en.split(/\s+/).length > 2 && !MAY_EQUAL.some((r) => r.test(np))) {
       warns.push(`${lang} ${p}: identical to EN (untranslated?) ${JSON.stringify(en.slice(0, 70))}`)
     }
