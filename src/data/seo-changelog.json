@@ -2064,5 +2064,142 @@
     ],
     "reason": "geo-meta-optimizer: coherence-B1 - GSC omlx/mlx-serve/distributed/version queries; added mlx-serve comparison, distributed section, 5 FAQs (body+meta together)",
     "baseline": null
+  },
+  {
+    "id": "cae14634-f448-4c01-8933-6301aba37be8",
+    "slug": "/local-llms/open-webui-review",
+    "date": "2026-10-09T19:04:39.664Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Open WebUI turns Ollama or any OpenAI-compatible API into a self-hosted ChatGPT interface with RAG, multi-user auth, and plugins. History, install links, pricing, and honest limits.",
+        "new": "What is Open WebUI? A self-hosted, multi-user ChatGPT-style interface for Ollama and any OpenAI-compatible API, with RAG, plugins, install steps and license."
+      }
+    ],
+    "reason": "geo-meta-optimizer: meta too long (>158), answer-first rewrite; added naming variants, Enterprise and customization FAQs (GSC: open webui / openwebui / enterprise / que es)",
+    "baseline": {
+      "position": 7.1,
+      "impressions": 613,
+      "clicks": 2,
+      "ctr": 0.0032626427406199023,
+      "period": "GSC top queries 2026-10-09"
+    }
+  },
+  {
+    "id": "de9780d3-05c1-4946-987f-04f194759dd6",
+    "slug": "/de/local-llms/open-webui-review",
+    "date": "2026-10-09T19:04:39.764Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Open WebUI macht aus Ollama oder jeder OpenAI-kompatiblen API eine selbst gehostete ChatGPT-Oberfläche mit RAG, Mehrbenutzer-Login und Plugins. Geschichte, Installation, Preise, ehrliche Grenzen.",
+        "new": "Was ist Open WebUI? Selbst gehostete, mehrbenutzerfähige ChatGPT-Oberfläche für Ollama und jede OpenAI-kompatible API mit RAG, Plugins, Installation, Lizenz."
+      }
+    ],
+    "reason": "geo-meta-optimizer: meta too long (>158), answer-first rewrite; added naming variants, Enterprise and customization FAQs (GSC: open webui / openwebui / enterprise / que es)",
+    "baseline": null
+  },
+  {
+    "id": "99adaf4f-4c3e-452f-85e3-6da76168d13d",
+    "slug": "/es/local-llms/open-webui-review",
+    "date": "2026-10-09T19:04:39.860Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Open WebUI 2026: reseña de la interfaz ChatGPT autoalojada",
+        "new": "Open WebUI 2026: qué es y reseña del ChatGPT autoalojado"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Open WebUI convierte Ollama o cualquier API compatible con OpenAI en una interfaz ChatGPT autoalojada con RAG, login multiusuario y plugins. Historia, enlaces de descarga, precios y límites reales.",
+        "new": "¿Qué es Open WebUI? Una interfaz autoalojada y multiusuario al estilo ChatGPT para Ollama y cualquier API compatible con OpenAI, con RAG, plugins y licencia."
+      }
+    ],
+    "reason": "geo-meta-optimizer: meta too long (>158), answer-first rewrite; added naming variants, Enterprise and customization FAQs (GSC: open webui / openwebui / enterprise / que es)",
+    "baseline": null
+  },
+  {
+    "id": "b16dbe0f-6b19-4838-867b-e18daf11e393",
+    "slug": "/fr/local-llms/open-webui-review",
+    "date": "2026-10-09T19:04:39.955Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Open WebUI transforme Ollama ou toute API compatible OpenAI en interface ChatGPT auto-hébergée avec RAG, authentification multi-utilisateur et plugins. Histoire, installation, tarifs et limites honnêtes.",
+        "new": "Qu'est-ce qu'Open WebUI ? Interface auto-hébergée multi-utilisateur façon ChatGPT pour Ollama et toute API compatible OpenAI : RAG, plugins, licence."
+      }
+    ],
+    "reason": "geo-meta-optimizer: meta too long (>158), answer-first rewrite; added naming variants, Enterprise and customization FAQs (GSC: open webui / openwebui / enterprise / que es)",
+    "baseline": null
+  },
+  {
+    "id": "d9641727-32a9-420e-a6c6-d9092c3b8087",
+    "slug": "/ja/local-llms/open-webui-review",
+    "date": "2026-10-09T19:04:40.055Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Open WebUIはOllamaやOpenAI互換APIを、RAG・マルチユーザー認証・プラグイン対応のセルフホスト型ChatGPTインターフェースに変えます。歴史、インストールリンク、料金、率直な制限をまとめました。",
+        "new": "Open WebUIとは？OllamaやOpenAI互換APIをChatGPT風のセルフホスト型マルチユーザー画面にするツール。RAG、プラグイン、導入手順、ライセンスを解説します。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: meta too long (>158), answer-first rewrite; added naming variants, Enterprise and customization FAQs (GSC: open webui / openwebui / enterprise / que es)",
+    "baseline": null
+  },
+  {
+    "id": "1868dff7-61ab-4c3f-8db6-f5d21d68b0a3",
+    "slug": "/zh/local-llms/open-webui-review",
+    "date": "2026-10-09T19:04:40.157Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Open WebUI 把 Ollama 或任何兼容 OpenAI 的 API 变成带 RAG、多用户认证和插件的自托管 ChatGPT 界面。历史、安装方式、定价与真实局限一次说清。",
+        "new": "Open WebUI是什么？可为Ollama和任何兼容OpenAI的API提供自托管、多用户的ChatGPT风格界面，含RAG、插件、安装步骤与许可证说明。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: meta too long (>158), answer-first rewrite; added naming variants, Enterprise and customization FAQs (GSC: open webui / openwebui / enterprise / que es)",
+    "baseline": null
+  },
+  {
+    "id": "aba72aec-1748-46aa-8a9e-9aa52270d9e5",
+    "slug": "/pt/local-llms/open-webui-review",
+    "date": "2026-10-09T19:04:40.258Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Open WebUI transforma o Ollama ou qualquer API compatível com OpenAI em uma interface ChatGPT auto-hospedada com RAG, autenticação multiusuário e plugins. História, links de instalação, preços e limitações honestas.",
+        "new": "O que é o Open WebUI? Interface auto-hospedada, multiusuário e estilo ChatGPT para Ollama e qualquer API compatível com OpenAI, com RAG, plugins e licença."
+      }
+    ],
+    "reason": "geo-meta-optimizer: meta too long (>158), answer-first rewrite; added naming variants, Enterprise and customization FAQs (GSC: open webui / openwebui / enterprise / que es)",
+    "baseline": null
+  },
+  {
+    "id": "3836b2de-4406-45a8-af75-75c44e3d6101",
+    "slug": "/ar/local-llms/open-webui-review",
+    "date": "2026-10-09T19:04:40.358Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "تحوّل Open WebUI أداة Ollama أو أي واجهة برمجية متوافقة مع OpenAI إلى واجهة ChatGPT ذاتية الاستضافة مع RAG ومصادقة متعددة المستخدمين وإضافات. التاريخ، روابط التثبيت، الأسعار، والحدود الصريحة.",
+        "new": "ما هو Open WebUI؟ واجهة ذاتية الاستضافة متعددة المستخدمين على طراز ChatGPT لـ Ollama وأي واجهة متوافقة مع OpenAI، مع RAG وإضافات وخطوات التثبيت والترخيص."
+      }
+    ],
+    "reason": "geo-meta-optimizer: meta too long (>158), answer-first rewrite; added naming variants, Enterprise and customization FAQs (GSC: open webui / openwebui / enterprise / que es)",
+    "baseline": null
+  },
+  {
+    "id": "3a29074e-c95c-49c4-853a-6e7a23f35491",
+    "slug": "/ko/local-llms/open-webui-review",
+    "date": "2026-10-09T19:04:40.460Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Open WebUI는 Ollama나 모든 OpenAI 호환 API를 RAG, 다중 사용자 인증, 플러그인을 갖춘 자체 호스팅 ChatGPT 인터페이스로 바꿔줍니다. 역사, 설치 링크, 가격, 솔직한 한계를 소개합니다.",
+        "new": "Open WebUI란? Ollama와 모든 OpenAI 호환 API를 위한 자체 호스팅 다중 사용자 ChatGPT 스타일 인터페이스. RAG, 플러그인, 설치 방법, 라이선스를 다룹니다."
+      }
+    ],
+    "reason": "geo-meta-optimizer: meta too long (>158), answer-first rewrite; added naming variants, Enterprise and customization FAQs (GSC: open webui / openwebui / enterprise / que es)",
+    "baseline": null
   }
 ]
