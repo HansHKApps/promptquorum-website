@@ -167,6 +167,8 @@ export interface AppSummary {
   bestFor?: string
   downloadUrl: string | null
   storeLinks?: Record<string, string>
+  /** Easiest verified install path: installer (download & run) | one-command | terminal-setup | hosted. Absent = not yet verified. */
+  installEffort?: string
   directoryUrl: string
   article: ArticleLink | null
   relatedArticles: ArticleLink[]
@@ -240,6 +242,7 @@ export function summarize(
     ...(app.verdict ? { bestFor: app.verdict } : {}),
     downloadUrl: app.url ? `https://${app.url}` : null,
     ...(app.storeLinks ? { storeLinks: app.storeLinks as Record<string, string> } : {}),
+    ...(app.installEffort ? { installEffort: app.installEffort } : {}),
     directoryUrl: directoryUrlFor(opts?.directoryFilters ?? { category: app.categories[0] }),
     ...articlesForApp(app),
     categoryGuide: group ? categoryGuideForGroup(group) : null,

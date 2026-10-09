@@ -23,6 +23,9 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['docs', 'build'],
   url: 'github.com/hydropix/TranslateBooksWithLLMs',
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installOn: ['win'],
+  installEvidence: 'README: download the release for your platform, unzip, run TranslateBook.exe (Windows) or ./TranslateBook (macOS, terminal); Releases v1.5.15 ships TranslateBook-Windows.zip and two macOS zips. Needs Ollama installed separately for local use. checked 2026-10-09',
   reviewSlug: 'translate-books-with-llms-review', // dedicated PromptQuorum review — added 2026-09-19
   tagline: {
     en: 'Translates full-length books and documents (EPUB, TXT, SRT) with a local Ollama model or cloud LLMs, preserving formatting and resuming where it left off',

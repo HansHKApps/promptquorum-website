@@ -19,6 +19,14 @@ at each step; this is the checklist that ties them together in order.
 
 Decide the `slug` (no year/month, ever — build-validated) and whether this is a downloadable
 app (needs Get It/Download CTA) or a framework/CLI/model (needs an Install block instead).
+
+**Judge "downloadable" by install effort, not by where the files are hosted.** A GitHub repo whose
+Releases page ships a `.dmg`/`.exe`/`.AppImage`/store build is an installer app — GitHub is only its
+CDN. Open the Releases page, the official website and any store listing (not just the README: a
+README that shows only `pip install` can hide a `.dmg`), then classify the EASIEST officially
+supported path as `installer` | `one-command` | `terminal-setup` | `hosted` (check 6 of the
+`feature-app-post` skill). Do not count preview/beta-labelled builds as the easy path unless that is
+the only one.
 Identify its category/sub-segment in `src/lib/power-local-llm/apps/compare-schema.ts`
 (`COMPARE_SEGMENTS`) — this determines which comparison table it lands in later.
 
@@ -30,6 +38,14 @@ Create `src/lib/power-local-llm/apps/<slug>.ts` exporting `app: ToolRecord`
 interfaces, locality, platforms, worksWith, engine, license, price, hardware, stars,
 addedDate, status, uses, url, tagline (all 9 locales), lastVerifiedDate`. Leave `reviewSlug`
 unset for now — added in step 4. `status: 'listed'` is fine before the review exists.
+
+Also set (only once verified — unset means "not yet checked", never "none"):
+- `installEffort` + `installEvidence` — the tier and what you actually saw (asset names, README line,
+  store listing) with the date. `installOn: [...]` when the tier only holds on some of `platforms`
+  (a Windows-only `.exe`, an Android-only APK). The validator rejects a tier with no evidence.
+- `url` = the official website when one exists; the repo goes in `storeLinks.github` (and store
+  listings in `storeLinks.appStore`/`googlePlay`, site in `storeLinks.web` — same host as `url`).
+  A `github.com/...` `url` is only right when there is no separate website.
 
 Register in:
 - `src/lib/power-local-llm/apps-slugs.ts`

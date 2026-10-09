@@ -3,6 +3,7 @@
 // (sticky first column, hover row highlight, overflow-x scroll container)
 // for visual parity with the rest of the article shell.
 
+import { INSTALL_EFFORT_UI, installOnSuffix } from './installEffort'
 import { useEffect, useRef, useState } from 'react'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
 import type { Language } from '@/lib/blog/blogContent'
@@ -66,6 +67,7 @@ export function ToolTable({
     { kind: 'sort', key: 'stars', label: t('colStars', lang) },
     { kind: 'sort', key: 'ram', label: t('detailHardware', lang) },
     { kind: 'static', key: 'price', label: t('detailPrice', lang) },
+    { kind: 'static', key: 'install', label: t('groupInstall', lang) },
     { kind: 'static', key: 'platforms', label: t('detailPlatforms', lang) },
     { kind: 'sort', key: 'added', label: t('colLastUpdated', lang) },
     { kind: 'sort', key: 'status', label: t('colStatus', lang) },
@@ -138,6 +140,13 @@ export function ToolTable({
                 </td>
                 <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">
                   {price ? PRICE_LABEL[price] : <span className="text-text-secondary/50">—</span>}
+                </td>
+                <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">
+                  {app.installEffort ? (
+                    <span title={t(INSTALL_EFFORT_UI[app.installEffort].tip, lang)}>{t(INSTALL_EFFORT_UI[app.installEffort].label, lang)}{installOnSuffix(app)}</span>
+                  ) : (
+                    <span className="text-text-secondary/50">—</span>
+                  )}
                 </td>
                 <td className="p-2 sm:p-3 text-text-secondary whitespace-nowrap">
                   {app.platforms && app.platforms.length > 0

@@ -14,6 +14,7 @@ import type { FilterOptionCount, FilterState } from './types'
 import { CATEGORY_SUB_LABEL, INTERFACE_LABEL } from '@/lib/power-local-llm/apps/categories'
 import type { Language } from '@/lib/blog/blogContent'
 import { t, type DirUi } from './directory-ui-client'
+import { INSTALL_EFFORT_UI } from './installEffort'
 
 // Platform values (macOS/Windows/Linux/iOS/Android/Web) are OS product
 // names — kept identical across locales, same as elsewhere on the site,
@@ -31,6 +32,7 @@ function getGroupLabels(ui: DirUi): Record<keyof FilterState, string> {
     category: t('groupCategory', ui),
     interface: t('groupInterface', ui),
     price: t('groupPrice', ui),
+    install: t('groupInstall', ui),
     mcp: t('groupMcp', ui),
   }
 }
@@ -44,6 +46,7 @@ export function getValueLabels(lang: Language, ui: DirUi): Partial<Record<keyof 
     platforms: PLATFORM_VALUE_LABEL,
     category: Object.fromEntries(Object.entries(CATEGORY_SUB_LABEL).map(([k, v]) => [k, v[lang]])),
     interface: Object.fromEntries(Object.entries(INTERFACE_LABEL).map(([k, v]) => [k, v[lang]])),
+    install: Object.fromEntries(Object.entries(INSTALL_EFFORT_UI).map(([k, v]) => [k, t(v.label, ui)])),
     mcp: { mcp: t('mcpSupported', ui) },
   }
 }
@@ -52,7 +55,7 @@ export function filterOptionLabel(group: keyof FilterState, value: string, lang:
   return getValueLabels(lang, ui)[group]?.[value] ?? value
 }
 
-const GROUPS: (keyof FilterState)[] = ['category', 'locality', 'engine', 'interface', 'worksWith', 'platforms', 'price', 'mcp']
+const GROUPS: (keyof FilterState)[] = ['category', 'locality', 'engine', 'interface', 'worksWith', 'platforms', 'price', 'install', 'mcp']
 
 function FilterGroup({
   group,

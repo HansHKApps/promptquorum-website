@@ -23,6 +23,8 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['chat', 'serve'],
   url: 'github.com/drumih/turbo-fieldfare',
+  installEffort: 'terminal-setup', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README: "On the first run, Swift Package Manager downloads and builds the Swift packages"; Releases 0.9.1 ships no binary assets. checked 2026-10-09',
   reviewSlug: 'turbo-fieldfare-review', // dedicated PromptQuorum review — added 2026-09-19
   tagline: {
     en: 'Native Swift and Metal runtime that runs Gemma 4 26B-A4B locally in about 2 GB of RAM on any M-series MacBook',

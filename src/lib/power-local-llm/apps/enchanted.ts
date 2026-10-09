@@ -22,6 +22,12 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['chat', 'phone'],
   url: 'github.com/AugustDev/enchanted',
+  storeLinks: {
+    appStore: 'https://apps.apple.com/us/app/enchanted-developers-only/id6474268307',
+    github: 'https://github.com/AugustDev/enchanted',
+  },
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README "Download Enchanted app from the App Store"; the live listing (iTunes lookup id6474268307) is currently titled "Enchanted Developers Only", v1.9.0 updated 2025-08-19; requires a separate Ollama server. Re-check the listing on refresh. checked 2026-10-09',
   tagline: {
     en: 'Native macOS/iOS minimal Ollama client',
     de: 'Nativer macOS/iOS-Minimal-Client für Ollama',

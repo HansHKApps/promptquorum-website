@@ -22,6 +22,8 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['serve'],
   url: 'github.com/h2oai/h2ogpt',
+  installEffort: 'terminal-setup', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README: Docker recommended, plus Linux script and Windows/macOS install scripts with fewer features; repository archived upstream. checked 2026-10-09',
   tagline: {
     en: 'Enterprise-feature-heavy desktop and server',
     de: 'Funktionsreiche Enterprise-Desktop- und Serveranwendung',

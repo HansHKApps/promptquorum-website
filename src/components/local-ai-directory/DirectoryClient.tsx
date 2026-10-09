@@ -34,12 +34,14 @@ import { emptyFilterState, machineCategory, type FilterState, type HardwareProfi
 import { cn } from '@/lib/utils'
 import { t, machineLabelsFromUi, deviceCategoryLabelsFromUi, type DirUi } from './directory-ui-client'
 import { CATEGORY_SUB_LABEL } from '@/lib/power-local-llm/apps/categories'
+import { INSTALL_EFFORT_KEYS } from '@/lib/power-local-llm/apps/types'
 
 const DESKTOP_MACHINES: readonly MachineType[] = ['dgpu', 'apple', 'cpu']
 const MOBILE_MACHINES: readonly MachineType[] = ['ios', 'android']
 
 const OS_FILTER_VALUES: readonly string[] = ['mac', 'win', 'linux', 'ios', 'android', 'web']
 const PRICE_FILTER_VALUES: readonly string[] = ['free', 'freemium', 'paid']
+const INSTALL_FILTER_VALUES: readonly string[] = INSTALL_EFFORT_KEYS
 
 // Reads a filtered-view deep link produced by the MCP server's search_apps/
 // get_app_details "directoryUrl" (see src/lib/power-local-llm/app-search.ts's
@@ -58,6 +60,8 @@ function filtersFromUrl(): FilterState {
   if (os && OS_FILTER_VALUES.includes(os)) state.platforms.add(os)
   const price = params.get('price')
   if (price && PRICE_FILTER_VALUES.includes(price)) state.price.add(price)
+  const install = params.get('install')
+  if (install && INSTALL_FILTER_VALUES.includes(install)) state.install.add(install)
   return state
 }
 
@@ -177,7 +181,7 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
   const sorted = useMemo(() => sortTools(filtered, sortKey, sortDir, machine), [filtered, sortKey, sortDir, machine])
 
   const countsByGroup = useMemo(() => {
-    const groups: (keyof FilterState)[] = ['category', 'locality', 'engine', 'interface', 'worksWith', 'platforms', 'price', 'mcp']
+    const groups: (keyof FilterState)[] = ['category', 'locality', 'engine', 'interface', 'worksWith', 'platforms', 'price', 'install', 'mcp']
     return Object.fromEntries(groups.map((g) => [g, countsForGroup(apps, query, g)])) as Record<keyof FilterState, ReturnType<typeof countsForGroup>>
   }, [apps, query])
 

@@ -22,6 +22,9 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['serve'],
   url: 'github.com/LostRuins/koboldcpp',
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installOn: ['win'],
+  installEvidence: 'README: "One executable file, no installation required"; on Windows download koboldcpp.exe and double-click it. Linux/macOS binaries need chmod +x and a terminal, so the tier is scoped to Windows. checked 2026-10-09',
   tagline: {
     en: 'Lightweight llama.cpp wrapper with built-in UI',
     de: 'Schlanker llama.cpp-Wrapper mit integrierter Benutzeroberfläche',

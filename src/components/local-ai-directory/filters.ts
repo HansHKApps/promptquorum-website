@@ -36,6 +36,7 @@ function fieldForGroup(app: ToolRecord, group: keyof FilterState): string | stri
     case 'interface': return app.interfaces
     case 'price': return app.price
     case 'mcp': return app.mcpSupport ? 'mcp' : null
+    case 'install': return app.installEffort ?? null
   }
 }
 

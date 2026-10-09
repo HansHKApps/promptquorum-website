@@ -23,7 +23,9 @@ export const app: ToolRecord = {
   addedDate: '2026-09-12',
   status: 'listed',
   uses: ['phone', 'chat', 'docs', 'image', 'audio'],
-  url: 'github.com/Siddhesh2377/ToolNeuron',
+  url: 'tool-neuron.vercel.app',
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README links the Play Store listing; Releases v3.0 ships app-release.apk; tool-neuron.vercel.app ("Free Offline AI for Android") has a /download page. checked 2026-10-09',
   storeLinks: {
     googlePlay: 'https://play.google.com/store/apps/details?id=com.dark.tool_neuron',
     github: 'https://github.com/Siddhesh2377/ToolNeuron',
