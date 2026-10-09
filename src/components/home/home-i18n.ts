@@ -314,6 +314,10 @@ const HOME_UI = {
     zh: '已发布文章数', es: 'Artículos publicados', pt: 'Artigos publicados', ar: 'المقالات المنشورة',
     ko: '게시된 글',
   },
+  statHandsOnTests: {
+    en: 'Hands-on tests', de: 'Praxistests', fr: 'Tests pratiques', ja: '実機テスト数', zh: '实测评测数',
+    es: 'Pruebas prácticas', pt: 'Testes práticos', ar: 'اختبارات عملية', ko: '직접 테스트',
+  },
   /** Links to /mcp-stats (see that page for the full per-tool breakdown). Label doubles as the pitch that PromptQuorum is queryable by AI assistants, not just browsers. */
   statMcpCalls: {
     en: 'AI assistant calls (MCP)', de: 'KI-Assistenten-Abrufe (MCP)', fr: 'Appels d\'assistants IA (MCP)',

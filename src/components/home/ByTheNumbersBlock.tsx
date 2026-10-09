@@ -27,6 +27,7 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
     { label: t('statLanguages', lang), value: stats.locales.toString(), icon: 'globe' },
     { label: t('statFounderVerified', lang), value: stats.founderVerified.toString(), icon: 'verified' },
     { label: t('statArticlesPublished', lang), value: stats.totalArticles.toLocaleString(), icon: 'posts' },
+    { label: t('statHandsOnTests', lang), value: stats.handsOnTests.toLocaleString(), icon: 'test' },
     {
       label: t('statMcpCalls', lang),
       value: mcpUsage.total.toLocaleString(),
@@ -39,7 +40,7 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
   if (layout === 'bar') {
     return (
       <section aria-label={t('statsTitle', lang)} className={`mb-8 rounded-xl border ${SURFACE_CLASS.stat} p-3`}>
-        <dl className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+        <dl className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
           {items.map((item) => {
             const tile = (
               <>
