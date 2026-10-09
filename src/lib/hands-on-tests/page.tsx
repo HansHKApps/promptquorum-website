@@ -10,6 +10,9 @@ import { appSlugFromHandsOnUrlSlug, handsOnTestLangs, handsOnTestUrlSlug } from 
 
 const BASE = 'https://www.promptquorum.com'
 
+/** Arabic data carries invisible bidi isolates (U+2066/U+2069) for on-page display; keep them out of <head> and JSON-LD. */
+const plain = (s: string) => s.replace(/[\u2066\u2069]/g, '')
+
 /** Slugs for generateStaticParams on /power-local-llm/[slug]. */
 export function getHandsOnStaticParams(slugs: readonly string[]) {
   return slugs.map((appSlug) => ({ slug: handsOnTestUrlSlug(appSlug) }))
@@ -32,13 +35,15 @@ export function buildHandsOnTestMetadata(urlSlug: string, lang: Language = 'en')
   const test = appSlug ? getHandsOnTest(appSlug, lang) : null
   if (!appSlug || !test) return null
   const url = `${BASE}${localizedPath(urlSlug, lang)}`
+  const title = plain(test.title)
+  const description = plain(test.dek)
   return {
-    title: test.title,
-    description: test.dek,
+    title,
+    description,
     robots: test.index === false ? { index: false, follow: false } : { index: true, follow: true },
     alternates: generateAlternates(pathFor(urlSlug), lang, true, [...handsOnTestLangs(appSlug)]),
-    openGraph: { title: test.title, description: test.dek, url, images: [{ url: '/og-image.png', alt: 'PromptQuorum' }], type: 'article', siteName: 'PromptQuorum' },
-    twitter: { card: 'summary_large_image', title: test.title, description: test.dek },
+    openGraph: { title, description, url, images: [{ url: '/og-image.png', alt: 'PromptQuorum' }], type: 'article', siteName: 'PromptQuorum' },
+    twitter: { card: 'summary_large_image', title, description },
   }
 }
 
@@ -57,16 +62,16 @@ export function buildHandsOnTestPageElement(urlSlug: string, lang: Language = 'e
         '@type': 'TechArticle',
         '@id': `${url}#article`,
         url,
-        headline: test.title,
-        description: test.dek,
+        headline: plain(test.title),
+        description: plain(test.dek),
         inLanguage: toOutputLocale(lang),
         datePublished: test.published,
         dateModified: test.published,
         author: { '@type': 'Person', name: 'Hans Kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: BASE },
         about: { '@id': `${url}#app` },
-        ...(hero && { image: buildImageObject(`/images/${hero.file}`, { caption: hero.caption }) }),
-        associatedMedia: test.images.map((i) => buildImageObject(`/images/${i.file}`, { caption: i.caption })),
+        ...(hero && { image: buildImageObject(`/images/${hero.file}`, { caption: plain(hero.caption) }) }),
+        associatedMedia: test.images.map((i) => buildImageObject(`/images/${i.file}`, { caption: plain(i.caption) })),
       },
       {
         '@type': 'SoftwareApplication',
@@ -80,9 +85,9 @@ export function buildHandsOnTestPageElement(urlSlug: string, lang: Language = 'e
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: test.ui.crumb_home, item: prefix ? `${BASE}${prefix}` : BASE },
-          { '@type': 'ListItem', position: 2, name: test.ui.crumb_directory, item: `${BASE}${prefix}/directory` },
-          { '@type': 'ListItem', position: 3, name: test.ui.crumb_test.replace('{app}', test.app.name), item: url },
+          { '@type': 'ListItem', position: 1, name: plain(test.ui.crumb_home), item: prefix ? `${BASE}${prefix}` : BASE },
+          { '@type': 'ListItem', position: 2, name: plain(test.ui.crumb_directory), item: `${BASE}${prefix}/directory` },
+          { '@type': 'ListItem', position: 3, name: plain(test.ui.crumb_test.replace('{app}', test.app.name)), item: url },
         ],
       },
     ],
