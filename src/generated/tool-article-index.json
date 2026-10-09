@@ -1064,7 +1064,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 41,
+    "totalCount": 42,
     "capped": true
   },
   "GPT4All": {
@@ -1150,7 +1150,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 27,
+    "totalCount": 28,
     "capped": true
   },
   "AnythingLLM": {
@@ -3279,14 +3279,14 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "ollama-local-ai-review",
-        "title": "Ollama Local AI Review: Android LLM Runner and LAN API Proxy",
-        "url": "/power-local-llm/ollama-local-ai-review",
-        "dateModified": "2026-10-02",
+        "slug": "friedrichai-review",
+        "title": "FriedrichAI Review: Offline Windows AI Assistant Sold on Steam",
+        "url": "/power-local-llm/friedrichai-review",
+        "dateModified": "2026-10-09",
         "tier": "mentioned"
       }
     ],
-    "totalCount": 35,
+    "totalCount": 36,
     "capped": true
   },
   "ShellGPT": {
@@ -11257,6 +11257,20 @@
         "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
         "url": "/power-local-llm/tokforge-review",
         "dateModified": "2026-10-05",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "FriedrichAI": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "friedrichai-review",
+        "title": "FriedrichAI Review: Offline Windows AI Assistant Sold on Steam",
+        "url": "/power-local-llm/friedrichai-review",
+        "dateModified": "2026-10-09",
         "tier": "about"
       }
     ],

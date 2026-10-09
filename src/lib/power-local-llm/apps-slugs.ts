@@ -175,6 +175,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'private-mind':                            'private-mind',
   'llm-hub':                                 'llm-hub',
   'tokforge':                                'tokforge',
+  'friedrichai':                             'friedrichai',
   'oscilla':                                 'oscilla',
   'tina':                                    'tina',
   'mlxhub':                                  'mlxhub',

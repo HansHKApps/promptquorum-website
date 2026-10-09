@@ -1164,6 +1164,11 @@
     "urlSlug": "tokforge-review",
     "url": "/power-local-llm/tokforge-review"
   },
+  "friedrichai": {
+    "cluster": "power-local-llm",
+    "urlSlug": "friedrichai-review",
+    "url": "/power-local-llm/friedrichai-review"
+  },
   "oscilla": {
     "cluster": "power-local-llm",
     "urlSlug": "oscilla-review",
