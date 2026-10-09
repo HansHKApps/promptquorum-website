@@ -24,6 +24,7 @@ import { DataDisclaimer } from '@/components/DataDisclaimer'
 import type { HardwareProfile, MachineType } from './types'
 import { getDownloadLinks } from './ToolCard'
 import { featureReviewUrl } from './reviewLinks'
+import { handsOnTestUrl } from '@/lib/hands-on-tests/links'
 import { guideForCategories } from '@/lib/power-local-llm/compare-guide'
 import { LicenseInfoModal } from './LicenseInfoModal'
 import { LastUpdatedBadge } from './LastUpdatedBadge'
@@ -174,6 +175,7 @@ export function ToolDrawer({
   const [copied, setCopied] = useState(false)
   const [licenseModalOpen, setLicenseModalOpen] = useState(false)
   const featureReview = app ? featureReviewUrl(app.slug, lang) : null
+  const handsOn = app ? handsOnTestUrl(app.slug, lang) : null
   const guide = app ? guideForCategories(app.categories, lang) : null
   const guideHref = guide ? `${lang === 'en' ? '' : `/${lang}`}/power-local-llm/${guide.slug}` : null
 
@@ -461,6 +463,11 @@ export function ToolDrawer({
                   >
                     {t('readReview', ui)}
                   </Link>
+                  {handsOn && (
+                    <Link href={handsOn} className="mt-2 block text-sm font-semibold underline underline-offset-2 text-primary hover:text-primary/80">
+                      {t('handsOnTest', ui)}
+                    </Link>
+                  )}
                   {guideHref && (
                     <Link href={guideHref} className="mt-2 block text-sm font-semibold underline underline-offset-2 text-primary hover:text-primary/80">
                       {t('readGuide', ui)}{guide ? ` — ${guide.label}` : ''}

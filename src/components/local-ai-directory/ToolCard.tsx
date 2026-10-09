@@ -21,6 +21,7 @@ import { founderText, founderParagraphs } from '@/lib/power-local-llm/founderTex
 import type { HardwareProfile, MachineType } from './types'
 import toolArticleIndex from '@/generated/tool-article-index.json'
 import { featureReviewUrl } from './reviewLinks'
+import { handsOnTestUrl } from '@/lib/hands-on-tests/links'
 import { guideForCategories } from '@/lib/power-local-llm/compare-guide'
 import { t } from './directory-i18n'
 import { LicenseInfoModal } from './LicenseInfoModal'
@@ -106,6 +107,7 @@ export function ToolCard({
   const price = app.price !== 'TODO' ? app.price : null
   const count = articleCount(app.name)
   const review = featureReviewUrl(app.slug, lang)
+  const handsOn = handsOnTestUrl(app.slug, lang)
   const guide = guideForCategories(app.categories, lang)
   const guideHref = guide ? `${lang === 'en' ? '' : `/${lang}`}/power-local-llm/${guide.slug}` : null
   const lastUpdatedIso = app.lastVerifiedDate ?? app.addedDate
@@ -336,6 +338,15 @@ export function ToolCard({
                 >
                   {t('readReview', lang)}
                 </Link>
+                {handsOn && (
+                  <Link
+                    href={handsOn}
+                    onClick={stop}
+                    className="w-full text-center rounded-lg border border-primary/40 px-3 py-1.5 text-xs font-semibold text-primary hover:bg-primary/5"
+                  >
+                    {t('handsOnTest', lang)}
+                  </Link>
+                )}
                 {guideHref && (
                   <Link
                     href={guideHref}
