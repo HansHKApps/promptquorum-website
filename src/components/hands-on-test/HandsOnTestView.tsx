@@ -31,20 +31,26 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
             <a href={`#fig-${f}`} className="text-primary underline">Fig. {figNo[f]}</a>
           </span>
         ))
-  const maxGb = 60
+  const maxGb = test.fit.scale ?? 60
+  const dateHuman = new Date(test.started).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
+  const momentsTitle = test.moments_title ?? 'Six moments that shaped this test'
+  const momentsNav = test.moments_nav ?? 'Six moments'
+  const fitTitle = test.fit.title ?? 'Does it fit in 24 GB?'
+  const fitNav = test.fit.nav ?? '24 GB'
+  const hasBackground = test.background.length > 0
 
   return (
     <div className="space-y-0 text-text-secondary">
       <header>
         <p className="mb-3 font-mono text-xs uppercase tracking-wider text-primary">
-          PromptQuorum hands-on test · {test.app.name} · 6 October 2026
+          PromptQuorum hands-on test · {test.app.name} · {dateHuman}
         </p>
         <h1 className="max-w-3xl text-3xl font-bold leading-tight text-text-primary sm:text-4xl">{test.title}</h1>
         <p className="mt-4 max-w-2xl text-lg text-text-secondary">{test.dek}</p>
         <nav aria-label="Sections" className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
           {[
-            ['verdict', 'Verdict'], ['moments', 'Six moments'], ['story', 'How it went'], ['claims', 'Claims'],
-            ['fit', '24 GB'], ['log', 'Usage log'], ['errors', 'Tester errors'], ['findings', 'Findings'], ['background', 'Background'],
+            ['verdict', 'Verdict'], ['moments', momentsNav], ['story', 'How it went'], ['claims', 'Claims'],
+            ['fit', fitNav], ['log', 'Usage log'], ['errors', 'Tester errors'], ['findings', 'Findings'], ...(hasBackground ? [['background', 'Background']] : []),
           ].map(([id, label]) => (
             <a key={id} href={`#${id}`} className="border-b border-border pb-0.5 text-text-primary hover:border-primary hover:text-primary">{label}</a>
           ))}
@@ -125,13 +131,13 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
       </section>
 
       <section id="moments">
-        <h2 className={H2}>Six moments that shaped this test</h2>
+        <h2 className={H2}>{momentsTitle}</h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {test.moments.map(([title, text, imgId, chapterId]) => {
-            const im = img(imgId)
+            const im = imgId ? img(imgId) : null
             return (
-              <a key={title} href={`#${chapterId}`} className="flex flex-col overflow-hidden rounded-md border border-border bg-white hover:border-primary">
-                <img src={`/images/${im.file}`} alt="" loading="lazy" decoding="async" className="aspect-[16/10] w-full bg-slate-200 object-cover object-top" />
+              <a key={title} href={`#${chapterId}`} className={`flex flex-col overflow-hidden rounded-md border border-border bg-white hover:border-primary ${im ? '' : 'border-t-4 border-t-primary'}`}>
+                {im && <img src={`/images/${im.file}`} alt="" loading="lazy" decoding="async" className="aspect-[16/10] w-full bg-slate-200 object-cover object-top" />}
                 <span className="flex flex-col gap-1.5 p-4 text-sm">
                   <strong className="text-lg leading-tight text-text-primary">{title}</strong>
                   <span>{text}</span>
@@ -186,13 +192,13 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
       </section>
 
       <section id="fit">
-        <h2 className={H2}>Does it fit in 24 GB?</h2>
+        <h2 className={H2}>{fitTitle}</h2>
         <div className="relative rounded-md border border-border bg-white px-5 pb-5 pt-11">
           <div
             className="pointer-events-none absolute bottom-4 top-9 border-l-2 border-dashed border-text-primary"
             style={{ left: `calc(1.25rem + (100% - 2.5rem) * ${test.fit.memory_gb / maxGb})` }}
           >
-            <span className="absolute -top-6 left-1.5 whitespace-nowrap font-mono text-xs uppercase">{test.fit.memory_gb} GB memory</span>
+            <span className="absolute -top-6 left-1.5 whitespace-nowrap font-mono text-xs uppercase">{test.fit.memline ?? `${test.fit.memory_gb} GB memory`}</span>
           </div>
           <ul className="space-y-4">
             {test.fit.rows.map(([name, gb, label, k]) => {
@@ -204,7 +210,7 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
                     <span className={`block h-full rounded ${over ? 'bg-red-600' : 'bg-emerald-600'}`} style={{ width: `${(gb / maxGb) * 100}%` }} />
                   </span>
                   <span className="text-sm text-text-muted">
-                    {label} <em className="mx-1.5 font-mono text-xs uppercase not-italic text-text-primary">{over ? 'above' : 'below'} {test.fit.memory_gb} GB</em> {chip(k)}
+                    {label} <em className="mx-1.5 font-mono text-xs uppercase not-italic text-text-primary">{over ? (test.fit.above ?? `above ${test.fit.memory_gb} GB`) : (test.fit.below ?? `below ${test.fit.memory_gb} GB`)}</em> {chip(k)}
                   </span>
                 </li>
               )
@@ -273,6 +279,7 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
         </blockquote>
       </section>
 
+      {hasBackground && (
       <section id="background" className="rounded-md border border-dashed border-slate-400 bg-slate-50 p-5">
         <h2 className="mb-2 text-2xl font-bold text-text-primary">Background on the maker</h2>
         <p className="mb-3 text-sm text-text-muted">{test.background_intro}</p>
@@ -282,6 +289,7 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
           ))}
         </ul>
       </section>
+      )}
 
       {gallery.length > 0 && (
         <section id="gallery">
