@@ -41,6 +41,7 @@ import { article as a_layla_review } from './articles/layla-review'
 import { article as a_private_mind_review } from './articles/private-mind-review'
 import { article as a_llm_hub_review } from './articles/llm-hub-review'
 import { article as a_tokforge_review } from './articles/tokforge-review'
+import { article as a_friedrichai_review } from './articles/friedrichai-review'
 import { article as a_oscilla_review } from './articles/oscilla-review'
 import { article as a_tina_review } from './articles/tina-review'
 import { article as a_mlxhub_review } from './articles/mlxhub-review'
@@ -623,6 +624,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'private-mind-review':                           a_private_mind_review,
   'llm-hub-review':                                a_llm_hub_review,
   'tokforge-review':                               a_tokforge_review,
+  'friedrichai-review':                            a_friedrichai_review,
   'oscilla-review':                                a_oscilla_review,
   'tina-review':                                   a_tina_review,
   'mlxhub-review':                                 a_mlxhub_review,

@@ -116,6 +116,7 @@ import { app as app_ollama_local_ai } from './apps/ollama-local-ai'
 import { app as app_private_mind } from './apps/private-mind'
 import { app as app_llm_hub } from './apps/llm-hub'
 import { app as app_tokforge } from './apps/tokforge'
+import { app as app_friedrichai } from './apps/friedrichai'
 import { app as app_oscilla } from './apps/oscilla'
 import { app as app_tina } from './apps/tina'
 import { app as app_mlxhub } from './apps/mlxhub'
@@ -483,6 +484,7 @@ export const localAiApps: ToolRecord[] = [
   app_private_mind,
   app_llm_hub,
   app_tokforge,
+  app_friedrichai,
   app_oscilla,
   app_tina,
   app_mlxhub,
