@@ -48,7 +48,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         answer:
           'Per its Google Play listing, yes: it is free with no login or API key, and chat and image generation run on the device once models are downloaded. The listing also shows a "Contains ads" label, and model downloads need a network connection.',
         bullets: [
-          'Free on [Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai); there is no iPhone or desktop version of this app listed.',
+          'Free on [Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai); there is no iPhone version, and no desktop version is listed for this app on Google Play (the developer\'s website separately advertises a Windows, macOS and Linux app whose download could not be verified).',
           'Chat with 20+ language models from 1B to 22B parameters, or generate images with Stable Diffusion (text-to-image, image-to-image, inpainting).',
           'Extras: 15 prompt toolkits ("Labs") such as Study, Code, Writing and Interview, plus LoRA support and an image upscaler.',
           'As checked on 9 October 2026: 5K+ Google Play downloads, released on 4 April 2026 and last updated on 30 September 2026.',
@@ -107,7 +107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Is Local AI: Offline Chat & Image?',
         content: [
           '**Local AI: Offline Chat & Image is an Android app that combines an offline chatbot, a Stable Diffusion image generator and a set of prompt-based writing and coding tools in one install.** According to its [Google Play listing](https://play.google.com/store/apps/details?id=com.geetmark.localai), it needs no login or API key and processes everything on the device.',
-          'The app shares its name with other products: it is not the open-source LocalAI inference server, and the developer\'s website, [Local AI Hub](https://localai.appsgm.com/), is a separate directory of models and prompts that also advertises its own "Local AI Hub Android" download. That download is not linked from the Play listing, so this review covers only the Google Play app.',
+          'The app shares its name with other products: it is not the open-source LocalAI inference server, and the developer\'s website, [Local AI Hub](https://localai.appsgm.com/), is a separate directory of models and prompts that also advertises its own "Local AI Hub Android" download. That download is not linked from the Play listing, so this review covers only the Google Play app. The same site also advertises a "Local AI Hub Desktop" app for Windows, macOS and Linux (v1.3.1, described as open-source), but its download button points to a GitHub repository that returns 404, so it could not be verified and is not covered here.',
         ],
       },
       getIt: {
@@ -408,7 +408,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Ist Local AI: Offline Chat & Image kostenlos, und läuft es offline?',
         answer: 'Laut Google-Play-Eintrag ja: Die App ist kostenlos, ohne Login und ohne API-Schlüssel, und Chat sowie Bildgenerierung laufen nach dem Herunterladen der Modelle auf dem Gerät. Der Eintrag trägt außerdem den Hinweis „Enthält Werbung“, und für Modell-Downloads ist eine Netzverbindung nötig.',
         bullets: [
-          'Kostenlos bei [Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai); eine iPhone- oder Desktop-Version dieser App ist nicht aufgeführt.',
+          'Kostenlos bei [Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai); eine iPhone-Version gibt es nicht, und für diese App ist bei Google Play keine Desktop-Version aufgeführt (die Website des Entwicklers bewirbt separat eine App für Windows, macOS und Linux, deren Download sich nicht überprüfen ließ).',
           'Chat mit über 20 Sprachmodellen von 1 bis 22 Milliarden Parametern oder Bildgenerierung mit Stable Diffusion (Text-zu-Bild, Bild-zu-Bild, Inpainting).',
           'Extras: 15 Prompt-Toolkits („Labs“) wie Study, Code, Writing und Interview sowie LoRA-Unterstützung und ein Bild-Upscaler.',
           'Geprüft am 9. Oktober 2026: über 5.000 Downloads bei Google Play, veröffentlicht am 4. April 2026 und zuletzt aktualisiert am 30. September 2026.',
@@ -512,7 +512,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was ist Local AI: Offline Chat & Image?',
         content: [
           '**Local AI: Offline Chat & Image ist eine Android-App, die einen Offline-Chatbot, einen Stable-Diffusion-Bildgenerator und eine Sammlung promptbasierter Schreib- und Programmierwerkzeuge in einer Installation vereint.** Laut [Google-Play-Eintrag](https://play.google.com/store/apps/details?id=com.geetmark.localai) braucht sie weder Login noch API-Schlüssel und verarbeitet alles auf dem Gerät.',
-          'Der Name wird von anderen Produkten geteilt: Die App ist nicht der quelloffene LocalAI-Inferenzserver, und die Website des Entwicklers, [Local AI Hub](https://localai.appsgm.com/), ist ein eigenständiges Verzeichnis für Modelle und Prompts, das zudem einen eigenen Download „Local AI Hub Android“ bewirbt. Dieser Download ist im Play-Eintrag nicht verlinkt, deshalb behandelt dieser Test ausschließlich die App aus Google Play.',
+          'Der Name wird von anderen Produkten geteilt: Die App ist nicht der quelloffene LocalAI-Inferenzserver, und die Website des Entwicklers, [Local AI Hub](https://localai.appsgm.com/), ist ein eigenständiges Verzeichnis für Modelle und Prompts, das zudem einen eigenen Download „Local AI Hub Android“ bewirbt. Dieser Download ist im Play-Eintrag nicht verlinkt, deshalb behandelt dieser Test ausschließlich die App aus Google Play. Dieselbe Website bewirbt außerdem eine App „Local AI Hub Desktop“ für Windows, macOS und Linux (v1.3.1, als Open Source beschrieben); ihr Download-Button verweist aber auf ein GitHub-Repository, das 404 zurückgibt. Sie ließ sich daher nicht überprüfen und wird hier nicht behandelt.',
         ],
       },
       getIt: {
@@ -780,7 +780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: '¿Local AI: Offline Chat & Image es gratis y funciona sin conexión?',
         answer: 'Según su ficha de Google Play, sí: es gratis, sin inicio de sesión ni clave de API, y el chat y la generación de imágenes se ejecutan en el dispositivo una vez descargados los modelos. La ficha también muestra la etiqueta «Contiene anuncios», y la descarga de modelos requiere conexión a la red.',
         bullets: [
-          'Gratis en [Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai); no figura ninguna versión para iPhone ni para escritorio de esta app.',
+          'Gratis en [Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai); no hay versión para iPhone y en Google Play no figura ninguna versión de escritorio de esta app (el sitio web del desarrollador anuncia aparte una app para Windows, macOS y Linux cuya descarga no se pudo verificar).',
           'Chat con más de 20 modelos de lenguaje de entre 1B y 22B parámetros, o generación de imágenes con Stable Diffusion (texto a imagen, imagen a imagen, inpainting).',
           'Extras: 15 kits de prompts («Labs») como Study, Code, Writing e Interview, además de compatibilidad con LoRA y un escalador de imágenes.',
           'Según lo comprobado el 9 de octubre de 2026: más de 5000 descargas en Google Play, lanzada el 4 de abril de 2026 y actualizada por última vez el 30 de septiembre de 2026.',
@@ -884,7 +884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Qué es Local AI: Offline Chat & Image?',
         content: [
           '**Local AI: Offline Chat & Image es una app para Android que combina un chatbot offline, un generador de imágenes con Stable Diffusion y un conjunto de herramientas de escritura y programación basadas en prompts en una sola instalación.** Según su [ficha de Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai), no necesita inicio de sesión ni clave de API y procesa todo en el dispositivo.',
-          'El nombre lo comparten otros productos: la app no es el servidor de inferencia de código abierto LocalAI, y el sitio web del desarrollador, [Local AI Hub](https://localai.appsgm.com/), es un directorio independiente de modelos y prompts que además anuncia su propia descarga «Local AI Hub Android». Esa descarga no está enlazada desde la ficha de Play, así que este análisis cubre solo la app de Google Play.',
+          'El nombre lo comparten otros productos: la app no es el servidor de inferencia de código abierto LocalAI, y el sitio web del desarrollador, [Local AI Hub](https://localai.appsgm.com/), es un directorio independiente de modelos y prompts que además anuncia su propia descarga «Local AI Hub Android». Esa descarga no está enlazada desde la ficha de Play, así que este análisis cubre solo la app de Google Play. El mismo sitio anuncia además una app «Local AI Hub Desktop» para Windows, macOS y Linux (v1.3.1, descrita como de código abierto), pero su botón de descarga apunta a un repositorio de GitHub que devuelve 404; por eso no se pudo verificar y no se cubre aquí.',
         ],
       },
       getIt: {
@@ -1152,7 +1152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Local AI: Offline Chat & Image est-elle gratuite et fonctionne-t-elle hors ligne ?',
         answer: 'Selon sa fiche Google Play, oui : elle est gratuite, sans connexion ni clé d\'API, et le chat comme la génération d\'images s\'exécutent sur l\'appareil une fois les modèles téléchargés. La fiche affiche aussi la mention « Contient des annonces », et le téléchargement des modèles nécessite une connexion réseau.',
         bullets: [
-          'Gratuite sur [Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai) ; aucune version iPhone ou ordinateur de cette application n\'est répertoriée.',
+          'Gratuite sur [Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai) ; il n\'existe pas de version iPhone et aucune version pour ordinateur de cette application n\'est répertoriée sur Google Play (le site web du développeur annonce séparément une application Windows, macOS et Linux dont le téléchargement n\'a pas pu être vérifié).',
           'Chat avec plus de 20 modèles de langage de 1 à 22 milliards de paramètres, ou génération d\'images avec Stable Diffusion (texte vers image, image vers image, inpainting).',
           'En plus : 15 kits de prompts (« Labs ») comme Study, Code, Writing et Interview, la prise en charge de LoRA et un agrandisseur d\'images.',
           'Vérifié le 9 octobre 2026 : plus de 5 000 téléchargements sur Google Play, publiée le 4 avril 2026 et mise à jour pour la dernière fois le 30 septembre 2026.',
@@ -1256,7 +1256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qu\'est-ce que Local AI: Offline Chat & Image ?',
         content: [
           '**Local AI: Offline Chat & Image est une application Android qui réunit en une seule installation un chatbot hors ligne, un générateur d\'images Stable Diffusion et un ensemble d\'outils d\'écriture et de programmation fondés sur des prompts.** D\'après sa [fiche Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai), elle ne demande ni connexion ni clé d\'API et traite tout sur l\'appareil.',
-          'Le nom est partagé par d\'autres produits : l\'application n\'est pas le serveur d\'inférence open source LocalAI, et le site du développeur, [Local AI Hub](https://localai.appsgm.com/), est un annuaire distinct de modèles et de prompts qui présente aussi son propre téléchargement « Local AI Hub Android ». Ce téléchargement n\'est pas lié depuis la fiche Play ; ce test ne couvre donc que l\'application Google Play.',
+          'Le nom est partagé par d\'autres produits : l\'application n\'est pas le serveur d\'inférence open source LocalAI, et le site du développeur, [Local AI Hub](https://localai.appsgm.com/), est un annuaire distinct de modèles et de prompts qui présente aussi son propre téléchargement « Local AI Hub Android ». Ce téléchargement n\'est pas lié depuis la fiche Play ; ce test ne couvre donc que l\'application Google Play. Le même site annonce aussi une application « Local AI Hub Desktop » pour Windows, macOS et Linux (v1.3.1, décrite comme open source), mais son bouton de téléchargement pointe vers un dépôt GitHub qui renvoie une erreur 404 ; elle n\'a donc pas pu être vérifiée et n\'est pas couverte ici.',
         ],
       },
       getIt: {
@@ -1524,7 +1524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Local AI: Offline Chat & Imageは無料で、オフラインで動作しますか?',
         answer: 'Google Playの掲載情報によれば、はい。ログインやAPIキーなしで無料で使え、モデルをダウンロードした後はチャットと画像生成が端末上で動作します。ただし「広告を含む」の表示があり、モデルのダウンロードにはネットワーク接続が必要です。',
         bullets: [
-          '[Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai)で無料。このアプリのiPhone版やデスクトップ版は掲載されていません。',
+          '[Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai)で無料。iPhone版はなく、Google Playにはこのアプリのデスクトップ版も掲載されていません(開発者のウェブサイトは別にWindows・macOS・Linux向けアプリを案内していますが、そのダウンロードは確認できませんでした)。',
           '1Bから22Bパラメータまでの20以上の言語モデルとのチャット、またはStable Diffusionによる画像生成(テキストから画像、画像から画像、インペインティング)。',
           '追加機能:Study、Code、Writing、Interviewなどの15種類のプロンプトツールキット(「Labs」)、LoRA対応、画像アップスケーラー。',
           '2026年10月9日時点の確認:Google Playで5,000回以上ダウンロード、2026年4月4日公開、2026年9月30日に最終更新。',
@@ -1628,7 +1628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Local AI: Offline Chat & Imageとは?',
         content: [
           '**Local AI: Offline Chat & Imageは、オフラインチャットボット、Stable Diffusion画像生成、プロンプトベースの執筆・コーディングツール群を1つのインストールにまとめたAndroidアプリです。** [Google Playの掲載情報](https://play.google.com/store/apps/details?id=com.geetmark.localai)によれば、ログインもAPIキーも不要で、すべて端末上で処理します。',
-          '同じ名前を使う別の製品があります。このアプリはオープンソースのLocalAI推論サーバーではなく、開発者のウェブサイト[Local AI Hub](https://localai.appsgm.com/)はモデルとプロンプトの別のディレクトリで、独自の「Local AI Hub Android」ダウンロードも案内しています。そのダウンロードはPlayの掲載ページからリンクされていないため、このレビューの対象はGoogle Playのアプリのみです。',
+          '同じ名前を使う別の製品があります。このアプリはオープンソースのLocalAI推論サーバーではなく、開発者のウェブサイト[Local AI Hub](https://localai.appsgm.com/)はモデルとプロンプトの別のディレクトリで、独自の「Local AI Hub Android」ダウンロードも案内しています。そのダウンロードはPlayの掲載ページからリンクされていないため、このレビューの対象はGoogle Playのアプリのみです。このサイトはWindows・macOS・Linux向けの「Local AI Hub Desktop」(v1.3.1、オープンソースと説明)も案内していますが、そのダウンロードボタンは404を返すGitHubリポジトリを指しているため、確認できず、ここでは扱いません。',
         ],
       },
       getIt: {
@@ -1894,7 +1894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'O Local AI: Offline Chat & Image é gratuito e funciona offline?',
         answer: 'Segundo a página do Google Play, sim: é gratuito, sem login nem chave de API, e o chat e a geração de imagens rodam no dispositivo depois que os modelos são baixados. A página também mostra o rótulo "Contém anúncios", e o download dos modelos exige conexão com a internet.',
         bullets: [
-          'Gratuito no [Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai); não há versão para iPhone nem para desktop listada para este app.',
+          'Gratuito no [Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai); não há versão para iPhone e nenhuma versão para desktop deste app consta no Google Play (o site do desenvolvedor anuncia separadamente um app para Windows, macOS e Linux cujo download não pôde ser verificado).',
           'Chat com mais de 20 modelos de linguagem de 1B a 22B parâmetros, ou geração de imagens com Stable Diffusion (texto para imagem, imagem para imagem, inpainting).',
           'Extras: 15 kits de prompts ("Labs") como Study, Code, Writing e Interview, além de suporte a LoRA e um ampliador de imagens.',
           'Verificado em 9 de outubro de 2026: mais de 5 mil downloads no Google Play, lançado em 4 de abril de 2026 e atualizado pela última vez em 30 de setembro de 2026.',
@@ -1998,7 +1998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que é o Local AI: Offline Chat & Image?',
         content: [
           '**O Local AI: Offline Chat & Image é um app para Android que combina um chatbot offline, um gerador de imagens Stable Diffusion e um conjunto de ferramentas de escrita e programação baseadas em prompts em uma única instalação.** Segundo a [página do Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai), ele não exige login nem chave de API e processa tudo no dispositivo.',
-          'O nome é compartilhado por outros produtos: o app não é o servidor de inferência de código aberto LocalAI, e o site do desenvolvedor, o [Local AI Hub](https://localai.appsgm.com/), é um diretório separado de modelos e prompts que também anuncia um download próprio, o "Local AI Hub Android". Esse download não está vinculado na página do Play, por isso esta análise cobre apenas o app do Google Play.',
+          'O nome é compartilhado por outros produtos: o app não é o servidor de inferência de código aberto LocalAI, e o site do desenvolvedor, o [Local AI Hub](https://localai.appsgm.com/), é um diretório separado de modelos e prompts que também anuncia um download próprio, o "Local AI Hub Android". Esse download não está vinculado na página do Play, por isso esta análise cobre apenas o app do Google Play. O mesmo site também anuncia um app "Local AI Hub Desktop" para Windows, macOS e Linux (v1.3.1, descrito como código aberto), mas o botão de download aponta para um repositório do GitHub que retorna 404; por isso não pôde ser verificado e não é abordado aqui.',
         ],
       },
       getIt: {
@@ -2266,7 +2266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'هل Local AI: Offline Chat & Image مجاني ويعمل دون اتصال؟',
         answer: 'بحسب صفحته على Google Play، نعم: هو مجاني دون تسجيل دخول أو مفتاح API، ويعمل كل من الدردشة وتوليد الصور على الجهاز بعد تنزيل النماذج. وتعرض الصفحة أيضًا وسم «يحتوي على إعلانات»، كما يتطلب تنزيل النماذج اتصالًا بالشبكة.',
         bullets: [
-          'مجاني على [Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai)؛ ولا توجد نسخة لـ iPhone أو لسطح المكتب مدرجة لهذا التطبيق.',
+          'مجاني على [Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai)؛ ولا توجد نسخة لـ iPhone، ولا نسخة لسطح المكتب مدرجة لهذا التطبيق على Google Play (ويعلن موقع المطوّر بشكل منفصل عن تطبيق لأنظمة Windows وmacOS وLinux تعذّر التحقق من تنزيله).',
           'دردشة مع أكثر من 20 نموذج لغة من 1B إلى 22B معامل، أو توليد صور عبر Stable Diffusion (نص إلى صورة، صورة إلى صورة، الإكمال الداخلي Inpainting).',
           'إضافات: 15 حزمة مطالبات («Labs») مثل Study وCode وWriting وInterview، ودعم LoRA، ومكبّر للصور.',
           'وفق الاطلاع في 9 أكتوبر 2026: أكثر من 5000 تنزيل على Google Play، وصدر في 4 أبريل 2026، وآخر تحديث في 30 سبتمبر 2026.',
@@ -2370,7 +2370,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما هو Local AI: Offline Chat & Image؟',
         content: [
           '**Local AI: Offline Chat & Image تطبيق Android يجمع في تثبيت واحد روبوت دردشة دون اتصال ومولّد صور Stable Diffusion ومجموعة أدوات كتابة وبرمجة قائمة على المطالبات.** وبحسب [صفحته على Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai) فهو لا يتطلب تسجيل دخول ولا مفتاح API ويعالج كل شيء على الجهاز.',
-          'يشترك في الاسم منتجات أخرى: فالتطبيق ليس خادم الاستدلال مفتوح المصدر LocalAI، وموقع المطوّر [Local AI Hub](https://localai.appsgm.com/) دليل منفصل للنماذج والمطالبات يعلن أيضًا عن تنزيل خاص به باسم «Local AI Hub Android». هذا التنزيل غير مرتبط من صفحة Play، ولذلك تغطي هذه المراجعة تطبيق Google Play فقط.',
+          'يشترك في الاسم منتجات أخرى: فالتطبيق ليس خادم الاستدلال مفتوح المصدر LocalAI، وموقع المطوّر [Local AI Hub](https://localai.appsgm.com/) دليل منفصل للنماذج والمطالبات يعلن أيضًا عن تنزيل خاص به باسم «Local AI Hub Android». هذا التنزيل غير مرتبط من صفحة Play، ولذلك تغطي هذه المراجعة تطبيق Google Play فقط. ويعلن الموقع نفسه أيضًا عن تطبيق «Local AI Hub Desktop» لأنظمة Windows وmacOS وLinux (الإصدار 1.3.1، ويوصف بأنه مفتوح المصدر)، لكن زر التنزيل فيه يشير إلى مستودع GitHub يعيد الخطأ 404، ولذلك تعذّر التحقق منه ولا تغطيه هذه المراجعة.',
         ],
       },
       getIt: {
@@ -2638,7 +2638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Local AI: Offline Chat & Image 免费吗?能完全离线运行吗?',
         answer: '根据其 Google Play 页面,是的:免费,无需登录或 API 密钥,模型下载完成后,聊天和图像生成都在设备上运行。页面同时显示“包含广告”标签,而下载模型需要网络连接。',
         bullets: [
-          '可在 [Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai) 免费获取;该应用未列出 iPhone 或桌面版本。',
+          '可在 [Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai) 免费获取;该应用没有 iPhone 版本,Google Play 上也未列出其桌面版本(开发者网站另行介绍了适用于 Windows、macOS 和 Linux 的应用,但其下载无法验证)。',
           '可与 20 多个参数规模从 1B 到 22B 的语言模型聊天,也可用 Stable Diffusion 生成图像(文生图、图生图、局部重绘)。',
           '附加功能:15 个提示词工具包(“Labs”),如 Study、Code、Writing 和 Interview,另有 LoRA 支持和图像放大器。',
           '截至 2026 年 10 月 9 日核实:Google Play 下载量 5000+,2026 年 4 月 4 日发布,2026 年 9 月 30 日最近一次更新。',
@@ -2742,7 +2742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Local AI: Offline Chat & Image 是什么?',
         content: [
           '**Local AI: Offline Chat & Image 是一款 Android 应用,在一次安装中集合了离线聊天机器人、Stable Diffusion 图像生成器和一组基于提示词的写作与编程工具。** 根据其 [Google Play 页面](https://play.google.com/store/apps/details?id=com.geetmark.localai),它无需登录或 API 密钥,所有处理都在设备上完成。',
-          '有其他产品与它同名:该应用不是开源的 LocalAI 推理服务器;开发者网站 [Local AI Hub](https://localai.appsgm.com/) 是一个独立的模型与提示词目录,还介绍了自己的“Local AI Hub Android”下载。Play 页面并未链接该下载,因此本评测只涵盖 Google Play 上的应用。',
+          '有其他产品与它同名:该应用不是开源的 LocalAI 推理服务器;开发者网站 [Local AI Hub](https://localai.appsgm.com/) 是一个独立的模型与提示词目录,还介绍了自己的“Local AI Hub Android”下载。Play 页面并未链接该下载,因此本评测只涵盖 Google Play 上的应用。该网站还介绍了适用于 Windows、macOS 和 Linux 的“Local AI Hub Desktop”(v1.3.1,称为开源),但其下载按钮指向一个返回 404 的 GitHub 仓库,因此无法验证,本评测不涵盖。',
         ],
       },
       getIt: {
@@ -3006,7 +3006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         question: 'Local AI: Offline Chat & Image는 무료이고 오프라인으로 작동하나요?',
         answer: 'Google Play 페이지에 따르면 그렇습니다. 로그인이나 API 키 없이 무료이며, 모델을 내려받은 뒤에는 채팅과 이미지 생성이 기기에서 실행됩니다. 페이지에는 “광고 포함” 표시도 있고, 모델 다운로드에는 네트워크 연결이 필요합니다.',
         bullets: [
-          '[Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai)에서 무료입니다. 이 앱의 iPhone 또는 데스크톱 버전은 목록에 없습니다.',
+          '[Google Play](https://play.google.com/store/apps/details?id=com.geetmark.localai)에서 무료입니다. iPhone 버전은 없으며, Google Play에는 이 앱의 데스크톱 버전도 올라와 있지 않습니다(개발자 웹사이트는 별도로 Windows, macOS, Linux용 앱을 소개하지만 그 다운로드는 확인할 수 없었습니다).',
           '1B~22B 파라미터의 언어 모델 20종 이상과 채팅하거나 Stable Diffusion으로 이미지를 생성합니다(텍스트→이미지, 이미지→이미지, 인페인팅).',
           '추가 기능: Study, Code, Writing, Interview 등 프롬프트 툴킷(“Labs”) 15종, LoRA 지원, 이미지 업스케일러.',
           '2026년 10월 9일 확인: Google Play 다운로드 5천 회 이상, 2026년 4월 4일 출시, 2026년 9월 30일 마지막 업데이트.',
@@ -3110,7 +3110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Local AI: Offline Chat & Image란?',
         content: [
           '**Local AI: Offline Chat & Image는 오프라인 챗봇, Stable Diffusion 이미지 생성기, 프롬프트 기반 글쓰기·코딩 도구 모음을 한 번의 설치로 제공하는 Android 앱입니다.** [Google Play 페이지](https://play.google.com/store/apps/details?id=com.geetmark.localai)에 따르면 로그인이나 API 키가 필요 없고 모든 처리를 기기에서 합니다.',
-          '같은 이름을 쓰는 다른 제품이 있습니다. 이 앱은 오픈소스 LocalAI 추론 서버가 아니며, 개발자 웹사이트 [Local AI Hub](https://localai.appsgm.com/)는 모델과 프롬프트를 모아 둔 별도의 디렉터리로 자체 “Local AI Hub Android” 다운로드도 안내합니다. 그 다운로드는 Play 페이지에서 링크되어 있지 않으므로, 이 리뷰는 Google Play 앱만 다룹니다.',
+          '같은 이름을 쓰는 다른 제품이 있습니다. 이 앱은 오픈소스 LocalAI 추론 서버가 아니며, 개발자 웹사이트 [Local AI Hub](https://localai.appsgm.com/)는 모델과 프롬프트를 모아 둔 별도의 디렉터리로 자체 “Local AI Hub Android” 다운로드도 안내합니다. 그 다운로드는 Play 페이지에서 링크되어 있지 않으므로, 이 리뷰는 Google Play 앱만 다룹니다. 같은 사이트는 Windows, macOS, Linux용 “Local AI Hub Desktop”(v1.3.1, 오픈소스로 설명)도 소개하지만, 다운로드 버튼이 404를 반환하는 GitHub 저장소를 가리키므로 확인할 수 없어 여기서는 다루지 않습니다.',
         ],
       },
       getIt: {
