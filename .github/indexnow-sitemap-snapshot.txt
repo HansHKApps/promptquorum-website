@@ -285,6 +285,7 @@ https://www.promptquorum.com/power-local-llm/best-workstation-build-local-ai-202
 https://www.promptquorum.com/power-local-llm/blackbox-ai-cli-review
 https://www.promptquorum.com/power-local-llm/blinko-review
 https://www.promptquorum.com/power-local-llm/bmo-chatbot-review
+https://www.promptquorum.com/power-local-llm/bobe-hands-on-test
 https://www.promptquorum.com/power-local-llm/bobe-review
 https://www.promptquorum.com/power-local-llm/bodega-one-code-review
 https://www.promptquorum.com/power-local-llm/boltai-review
