@@ -107,8 +107,6 @@ export type HandsOnTest = {
   dek: string
   status: string
   published: string
-  /** false = served noindex and left out of the sitemap (scaffold stage). Omitted/true = indexable. */
-  index?: boolean
   started: string
   meta: [string, string, EvidenceKey | null][]
   disclosure: string

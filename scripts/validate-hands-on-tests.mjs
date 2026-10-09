@@ -68,6 +68,15 @@ function walk(en, tr, p, lang) {
   }
 }
 
+// Hands-on tests are always indexable. A noindex flag ("index": false) is not supported and must never be added.
+for (const f of fs.readdirSync(dir).filter((n) => n.endsWith('.json'))) {
+  let data
+  try { data = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')) } catch { continue }
+  if (data && typeof data === 'object' && 'index' in data) {
+    errors.push(`${f}: has an "index" field - hands-on tests are always indexable, remove it`)
+  }
+}
+
 const only = process.argv.slice(2).filter((a) => LANGS.includes(a))
 const apps = fs.readdirSync(dir).filter((f) => f.endsWith('.json') && !LANGS.some((l) => f.endsWith(`.${l}.json`))).map((f) => f.replace(/\.json$/, ''))
 for (const app of apps) {
