@@ -3,8 +3,8 @@
 // of DirectoryClient's state wiring.
 
 import type { ToolRecord, UseCaseKey } from '@/lib/power-local-llm/apps/types'
-import type { FilterOptionCount, FilterState, MachineType, SortDir, SortKey } from './types'
-import { hardwareSortValue } from './hardware'
+import type { FilterOptionCount, FilterState, HardwareProfile, MachineType, SortDir, SortKey } from './types'
+import { computeCompatibilityVerdict, hardwareSortValue } from './hardware'
 import { CATEGORY_GROUPS, CATEGORY_SUB_GROUP } from '@/lib/power-local-llm/apps/categories'
 
 // Display order for the default "Category" sort — top-level group order, then
@@ -74,10 +74,42 @@ function matchesSearch(app: ToolRecord, search: string): boolean {
   return haystacks.some((h) => h.toLowerCase().includes(needle))
 }
 
+/** The viewer's machine, when "only apps that run on my machine" is on. */
+export interface FitQuery {
+  machine: MachineType
+  profile: HardwareProfile | null
+}
+
 export interface FilterQuery {
   filters: FilterState
   search: string
   want: string | null
+  fit?: FitQuery | null
+}
+
+// Which app platforms can run on each machine type. Desktop graphics-card/CPU
+// machines are Windows or Linux (a Mac is its own "apple" machine type). Web
+// apps run in any browser, so they fit every machine.
+const MACHINE_PLATFORMS: Record<MachineType, readonly string[]> = {
+  apple: ['mac', 'web'],
+  dgpu: ['win', 'linux', 'web'],
+  cpu: ['win', 'linux', 'web'],
+  ios: ['ios', 'web'],
+  android: ['android', 'web'],
+}
+
+/**
+ * "Runs on my machine": OS must match (apps with unresearched platforms are
+ * kept, not guessed away), and when a saved hardware profile exists for this
+ * machine, apps whose requirements exceed it ("wont-run") are dropped. The OS
+ * half steps aside when the viewer picked platforms in the Filters panel
+ * themselves — an explicit choice beats the automatic one.
+ */
+function matchesFit(app: ToolRecord, fit: FitQuery | null | undefined, filters: FilterState): boolean {
+  if (!fit) return true
+  if (filters.platforms.size === 0 && app.platforms && !app.platforms.some((p) => MACHINE_PLATFORMS[fit.machine].includes(p))) return false
+  if (fit.profile && computeCompatibilityVerdict(app.hardware, fit.profile, fit.machine, app.engine, { interfaces: app.interfaces, platforms: app.platforms }) === 'wont-run') return false
+  return true
 }
 
 /** Full filter pass: search + want-chip + all sidebar groups. */
@@ -86,6 +118,7 @@ export function filterTools(apps: ToolRecord[], query: FilterQuery): ToolRecord[
     (app) =>
       matchesSearch(app, query.search) &&
       matchesWant(app, query.want) &&
+      matchesFit(app, query.fit, query.filters) &&
       matchesAllGroupsExcept(app, query.filters)
   )
 }
@@ -100,7 +133,7 @@ export function filterTools(apps: ToolRecord[], query: FilterQuery): ToolRecord[
  */
 export function countsForGroup(apps: ToolRecord[], query: FilterQuery, group: keyof FilterState): FilterOptionCount[] {
   const candidates = apps.filter(
-    (app) => matchesSearch(app, query.search) && matchesWant(app, query.want) && matchesAllGroupsExcept(app, query.filters, group)
+    (app) => matchesSearch(app, query.search) && matchesWant(app, query.want) && matchesFit(app, query.fit, query.filters) && matchesAllGroupsExcept(app, query.filters, group)
   )
   const counts = new Map<string, number>()
   for (const app of candidates) {
@@ -120,7 +153,7 @@ export function countsForGroup(apps: ToolRecord[], query: FilterQuery, group: ke
 /** Counts for the "I want to…" chips, keyed by UseCaseKey, over the full (unfiltered-by-want) set. */
 export function countsForUses(apps: ToolRecord[], query: Omit<FilterQuery, 'want'>): FilterOptionCount[] {
   const candidates = apps.filter(
-    (app) => matchesSearch(app, query.search) && matchesAllGroupsExcept(app, query.filters)
+    (app) => matchesSearch(app, query.search) && matchesFit(app, query.fit, query.filters) && matchesAllGroupsExcept(app, query.filters)
   )
   const counts = new Map<string, number>()
   for (const app of candidates) {

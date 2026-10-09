@@ -62,6 +62,11 @@ const DIR_UI = {
     ja: '使用機器:', zh: '我的设备：', es: 'Mi equipo:',
     pt: 'Meu equipamento:', ar: 'جهازي:', ko: '내 기기:',
   },
+  fitMyMachineLabel: {
+    en: 'Only apps that run on my machine', de: 'Nur Apps, die auf meinem Gerät laufen', fr: 'Seulement les apps compatibles avec mon appareil',
+    ja: '使用機器で動くアプリのみ', zh: '仅显示可在我的设备上运行的应用', es: 'Solo apps que funcionan en mi equipo',
+    pt: 'Apenas apps que rodam no meu equipamento', ar: 'التطبيقات التي تعمل على جهازي فقط', ko: '내 기기에서 실행되는 앱만',
+  },
   deviceCategoryLabel: {
     en: 'Device:', de: 'Gerätetyp:', fr: 'Appareil :',
     ja: 'デバイス:', zh: '设备类型：', es: 'Dispositivo:',
