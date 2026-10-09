@@ -37954,6 +37954,21 @@
     "width": 1200,
     "height": 675
   },
+  "/images/page-assist-chat-gemma4-reply-empty-thought-0ms.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1598,
+    "height": 726
+  },
+  "/images/page-assist-chat-second-empty-reply-thought-0ms.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1024,
+    "height": 436
+  },
+  "/images/page-assist-chrome-web-store-install-dialog.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1428,
+    "height": 650
+  },
   "/images/page-assist-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -37998,6 +38013,31 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
+  },
+  "/images/page-assist-settings-menu-chrome-ai-page-action-webmcp.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1596,
+    "height": 722
+  },
+  "/images/page-assist-side-panel-no-answer-after-question.webp": {
+    "encodingFormat": "image/webp",
+    "width": 698,
+    "height": 714
+  },
+  "/images/page-assist-side-panel-search-console-no-ctr-found.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1535,
+    "height": 566
+  },
+  "/images/page-assist-side-panel-start-screen-chat-with-current-page.webp": {
+    "encodingFormat": "image/webp",
+    "width": 693,
+    "height": 580
+  },
+  "/images/page-assist-web-ui-opens-full-screen-ollama-running.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1269,
+    "height": 733
   },
   "/images/paios-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
@@ -40548,6 +40588,11 @@
     "encodingFormat": "image/svg+xml",
     "width": 800,
     "height": 420
+  },
+  "/images/promptquorum-optimizer-popup-offline-own-extension.webp": {
+    "encodingFormat": "image/webp",
+    "width": 408,
+    "height": 428
   },
   "/images/prompts-for-reliable-structured-data-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",

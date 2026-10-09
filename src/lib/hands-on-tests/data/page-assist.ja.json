@@ -1,0 +1,1250 @@
+{
+  "id": "pq-test-page-assist-2026-10-08",
+  "hero": "gsc_fail",
+  "date_human": "2026年10月8日〜9日",
+  "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+  "standard_version": "0.1",
+  "locale": "ja",
+  "app": {
+    "name": "Page Assist",
+    "slug": "page-assist",
+    "vendor": "Not recorded (repository: github.com/n4ze3m/page-assist)",
+    "category": "Browser extension: web UI and sidebar for local AI models (Ollama)",
+    "platform": "Chrome extension (also built for Edge and Firefox, per the README)",
+    "pricing_url": null
+  },
+  "title": "24 GBのMacでPage Assist：サイドバーは見つかったが、ページは理解されなかった",
+  "page_title": "Page Assist Test",
+  "dek": "M3 ProのMacで行った、Ollamaベースのブラウザ拡張機能の実機テストです。ツールバーのアイコンはサイドバーではなくフルスクリーンのページを開きました。サイドバーを見つけた後、単語数は数えられたものの、Search Consoleのページは読めず、ページ上での操作もできませんでした。",
+  "status": "Abandoned",
+  "published": "2026-10-09",
+  "started": "2026-10-08",
+  "ended": "2026-10-09",
+  "meta": [
+    [
+      "アプリ",
+      "Page Assist、'A Web UI for Local AI Models'：サイドバー、フルページのWeb UI、'chat with webpage'を備えたChrome拡張機能（github.com/n4ze3m/page-assist）",
+      "observed"
+    ],
+    [
+      "バージョン",
+      "記録なし（拡張機能も、Chrome、Ollama、macOSも）",
+      null
+    ],
+    [
+      "テスター",
+      "Hans Kuepper（PromptQuorum創設者）",
+      null
+    ],
+    [
+      "開始",
+      "2026年10月8日 11:00（タイムゾーンの記載なし。現地時間、ドイツと推定）",
+      "observed"
+    ],
+    [
+      "終了",
+      "2026年10月9日 19:00。経過時間は約32時間。実際にテストした時間は記録なし。",
+      "observed"
+    ],
+    [
+      "ハードウェア",
+      "MacBook Pro、Apple M3 Pro、24 GBのユニファイドメモリ（メモには'M3 24 GB'とあります）",
+      "observed"
+    ],
+    [
+      "システム",
+      "macOS（テスト日時点の最新リリース）。正確なバージョンは記録なし。ブラウザ：Chrome。",
+      null
+    ],
+    [
+      "インストール方法",
+      "2通り。最初はソースからビルド（git、Bun、'load unpacked'）。その後、Chrome Web Storeからインストール。",
+      "observed"
+    ],
+    [
+      "ローカルモデル",
+      "Ollama、起動中。スクリーンショットに写っていたモデル：gemma4:latestとqwen3-coder:30b。",
+      "observed"
+    ],
+    [
+      "テストの理由",
+      "テスターはサイドバーというコンセプトが好きで、Claude in Chromeを毎日使い、PromptQuorumアプリ用のサイドバーを作った。",
+      "observed"
+    ],
+    [
+      "目的",
+      "'主な目的はサイドバーと、サイドバーで何ができるかを見ることでした。'",
+      "observed"
+    ],
+    [
+      "使用したAI支援",
+      "Bunのセットアップ用にAIアシスタント（メモには名前なし）、サイドバーを探すためにChatGPT。",
+      "observed"
+    ]
+  ],
+  "disclosure": "テスターはPromptQuorum（promptquorum.com）の創設者です。PromptQuorumはローカルAIアプリに関するコンテンツサイト兼ディレクトリです。PromptQuorumにはすでにPage Assistのレビューがあります（メモでは'my Page Assist review'と呼んでいます）。このテストはテスター自身のセッションのみに基づいています。テスターは競合するツール（PromptQuorumアプリ用のサイドバーと、Chrome拡張機能のPromptQuorum Optimizer）を作っており、Anthropicの製品であるClaude in Chromeを比較の基準にしています。メモには、Page Assistの作者との接触、金銭の授受、スポンサー関係の記録はありません。",
+  "verdict": {
+    "general": "ローカルモデル向けの機能豊富なフロントエンドで、モデル、ナレッジ、プロンプト、MCPサーバー、Page Action、WebMCP、メモリの設定があります。ツールバーのアイコンはフルスクリーンのチャットページを開きます。サイドパネルは、テスターが右クリックを使い、ChatGPTの助けを借りて、後から見つけました。サイドパネルでは、ページの単語数のカウントは動作しました。Search Consoleのページは理解されず、サイト内検索は失敗し、ページを移動してもコンテキストは追従せず、Page Actionでスクロールやクリックをさせることもできませんでした。gemma4:latestとの初期の2回のチャットは空の返答でした。テストごとにモデルが異なったため、ここでは拡張機能とモデルを切り分けられません。",
+    "fit": "テスターの用途には合いません。彼が求めたのは、Claude in Chromeのように動くサイドバー、つまりタスクを受け取り、ページを巡り、データを入力するものでした。見えたのはチャットだけで、アンインストールする予定です。'今のところは、Claude Chrome拡張機能を使い続けます。'"
+  },
+  "scores": [
+    [
+      "インストール",
+      3,
+      "ストアからのインストールはダイアログ1つ。READMEはBunとターミナルが必要なソースビルドから始まり、テスターの最初の試行はPATHで失敗した。ストアへのリンクはページの下の方にある。"
+    ],
+    [
+      "導入と見つけやすさ",
+      2,
+      "ツールバーのアイコンはフルスクリーンのページを開き、サイドバーには別の方法で到達する。ウェルカム動画で示されたショートカットは、彼の環境では動作しなかった。"
+    ],
+    [
+      "中核機能",
+      2,
+      "単語数のカウントは動作した。Search Consoleのページ、サイト内検索、ページ間のコンテキスト、Page Actionは動作しなかった。初期の2回のチャットは空の返答だった。"
+    ],
+    [
+      "ガイダンスと反復",
+      2,
+      "強力なモデル設定があるが、貼り付けた項目のうち説明があるのは2つだけ。チャットの'Add MCP server'ボタンは、設定で追加するまでどこにも行かない。"
+    ],
+    [
+      "パフォーマンス",
+      null,
+      "未計測。時間の記録なし。"
+    ],
+    [
+      "ドキュメント",
+      3,
+      "READMEの手順は、ターミナルを使う人には明快。機能一覧はサイドバー、Web UI、chat with webpageを謳っている。ウェルカム動画のショートカットは動作しなかった。"
+    ],
+    [
+      "信頼性とプライバシー",
+      null,
+      "監査していません。ストアのダイアログは、すべてのウェブサイト上のすべてのデータの読み取りと変更を求めています。データがローカルに留まるかは未テストです。"
+    ],
+    [
+      "アンインストール",
+      null,
+      "テスターはアンインストールする予定。実際に行ったかは記録なし。"
+    ]
+  ],
+  "scores_note": "スコアは、以下の根拠から導いた案です（1 = 低い、5 = 非常に良い）。確定はテスターが行います。",
+  "tldr": [
+    [
+      "observed",
+      "ツールバーのアイコンはサイドバーではなくフルスクリーンのページを開く。テスターは、ChatGPTの助けを借りた後、右クリックでサイドパネルを見つけた。ウェルカム動画のCtrl+Shift+Yは、彼の環境では動作しなかった。"
+    ],
+    [
+      "observed",
+      "サイドパネルでは、ページの単語数のカウントは動作した。Search Consoleのページは理解されず（返答：CTRの情報なし）、サイト内検索は失敗し、ページを移動してもコンテキストは追従しなかった。"
+    ],
+    [
+      "tester-view",
+      "彼はアンインストールする。Claude in Chromeのように動くサイドバーを求めたが、得られたのはチャットだった。'サイドバーこそが大当たりになるでしょう。'"
+    ]
+  ],
+  "quotes": [
+    "設定の中にサイドバーの痕跡のようなものはありますが、本当はサイドバーこそが大当たりになるはずです。それ以外は、別の機能を持つ別のインターフェースです。",
+    "将来、Page Assistがこの水準のサポートに近づくことを期待しています。"
+  ],
+  "quote_note": "テスターのメモ。音声の文字起こしを軽く編集しています。英語から翻訳。",
+  "moments_title": "このテストを形づくった5つの場面",
+  "moments_md": "5つの場面",
+  "moments_nav": "5つの場面",
+  "moments": [
+    [
+      "サイドバーではなく、フルスクリーン",
+      "ツールバーのアイコンはフルページのチャットUIを開く。テスターが求めたサイドバーには、別の方法で到達する。",
+      "webui_full",
+      "chapter-opens"
+    ],
+    [
+      "見落としたストアのリンク",
+      "READMEの下の方にあるChrome Web Storeのリンクに気づく前に、ソースからビルドした。ストアのページには、245件の評価で4.8つ星、ユーザー200,000人と表示されている。",
+      "store_dialog",
+      "chapter-store"
+    ],
+    [
+      "'Thought for 0ms'、答えなし",
+      "gemma4:latestへの2つの質問に対し、空の返答ボックスが2つ返ってきた。",
+      "chat_empty2",
+      "chapter-chat"
+    ],
+    [
+      "サイドバーは右クリックの先にあった",
+      "最初の試行が失敗し、ChatGPTの助けを借りた後、テスターは右クリックメニューにサイドパネルを見つけた。開始画面にはChat with current page、Page Action、WebMCPが並ぶ。",
+      "sidebar_home",
+      "chapter-sidebar"
+    ],
+    [
+      "読めなかったページ、取れなかった操作",
+      "Search Consoleのページは理解されなかった。ページを移動してもコンテキストは追従しなかった。Page Actionはスクロールすらできなかった。",
+      null,
+      "chapter-page"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-why",
+      "title": "このアプリを選んだ理由",
+      "items": [
+        [
+          "tester-view",
+          "'サイドバーを持つというのは、なかなか面白いアイデアです。'彼はPromptQuorumアプリ用のサイドバーを作っており、ローカルモデルに接続するのに便利だと考えている。また、Claude Chrome拡張機能も'迷ったときはいつも'使っている。",
+          null
+        ],
+        [
+          "observed",
+          "彼の言葉による目的：サイドバーと、それで何ができるか。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-install",
+      "title": "ソースからのインストール",
+      "items": [
+        [
+          "vendor-claim",
+          "テスターが貼り付けたREADMEは、前提条件としてBun、Ollama、またはLM StudioやllamafileのようなOpenAI互換のエンドポイントを挙げている。手順：git clone、bun install、bun run build（'by default it will build for Chrome, Edge and Firefox'）、その後ビルドディレクトリを展開済みの拡張機能として読み込む。Bunで問題が出る場合はnpmを使うという注記がある。",
+          null
+        ],
+        [
+          "tester-view",
+          "'とても分かりやすいが、ターミナルが好きでない人には向かない。'",
+          null
+        ],
+        [
+          "observed",
+          "git cloneは完了した（14,361オブジェクト、9.93 MiB）。最初のbun installは'zsh: command not found: bun'で失敗した。テスターがAIアシスタントに尋ねると、Bunのインストールは成功しており、ターミナルが更新されたPATHを読み込んでいなかったという回答で、対処は'exec /bin/zsh'だった。",
+          null
+        ],
+        [
+          "observed",
+          "その後のインストールは'時間がかかり'、ターミナルで約1分、そして拡張機能は動作した。'load unpacked'の手順は、メモには記載がない。",
+          null
+        ],
+        [
+          "assumption",
+          "最初のスクリーンショットのアドレスバーにある拡張機能ID（ofcf...）は、ストア版のID（jfgf...）と異なり、展開済みのビルドであることと整合する。未確認。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-opens",
+      "title": "初回起動：フルスクリーンのページ",
+      "items": [
+        [
+          "observed",
+          "拡張機能をクリックすると、'Page Assist - A Web UI for Local AI Models'がブラウザのタブ全体で開く。'Ollama is running'と表示され、モデルとプロンプトの選択欄は空で、メッセージボックスがある。",
+          "webui_full"
+        ],
+        [
+          "tester-view",
+          "'サイドバーとして売られているが、サイドバーではない。'",
+          null
+        ],
+        [
+          "observed",
+          "設定メニューは長い：General、Pipeline、Ollama、Chrome AI、OpenAI Compatible API、MCP Servers、Page Action、WebMCP、Memory、Manage Models、Manage Knowledge、Manage Prompts、Manage Share、About。いくつかにはBetaバッジが付いている。'Chrome AI Settings'は約4 GBのGemini Nanoのダウンロードを提示し、トグルはオフ。",
+          "settings"
+        ],
+        [
+          "tester-view",
+          "'システム設定はとても印象的に見える。'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-store",
+      "title": "Chrome Web Storeからの入手",
+      "items": [
+        [
+          "observed",
+          "READMEはChrome Web Storeのリンクをページの下の方に載せている。テスターはそれを見落とし、ソースからの手順を選んだ。'下に載っていたのに、見落としました。'",
+          null
+        ],
+        [
+          "observed",
+          "インストールのダイアログには、拡張機能が'Read and change all your data on all websites'と'Display notifications'を行えると表示される。",
+          "store_dialog"
+        ],
+        [
+          "third-party",
+          "ストアの掲載情報には、テスト日時点で'Featured'、245件の評価で4.8つ星、ユーザー200,000人と表示されている。未検証。",
+          null
+        ],
+        [
+          "observed",
+          "テスターによると、リポジトリの最終更新はテストの4日前の2026年10月4日。スクリーンショットは撮っていない。",
+          null
+        ],
+        [
+          "tester-view",
+          "'このChrome拡張機能のダウンロードは、GitHubに比べてとても簡単。'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-chat",
+      "title": "最初のチャット：空の返答",
+      "items": [
+        [
+          "observed",
+          "ストア版で、テスターは次のように書いた：'Okay, I'm principle lost. Can you tell me what page assist actually does?' そしてウェブページの隣にサイドバーが出ると思っていたと説明した。モデル：gemma4:latest。返答は、答えのテキストがない、折りたたまれた'Thought for 0ms'ボックスだった。",
+          "chat_empty1"
+        ],
+        [
+          "observed",
+          "彼は'Okay, where's my answer?'と尋ねた。2回目の返答も、空の'Thought for 0ms'ボックスだった。",
+          "chat_empty2"
+        ],
+        [
+          "assumption",
+          "原因は切り分けていない。モデル、思考のトグル、Ollamaへの接続のいずれも関係している可能性がある。未テスト。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-sidebar",
+      "title": "サイドバーを探す",
+      "items": [
+        [
+          "observed",
+          "動画付きのウェルカムウィンドウが表示された。テスターによると、動画はこれがブラウザを占有するサイドバーを開く拡張機能ではないことを示し、開くにはショートカットが必要だと説明していた。テスターはCtrl+Shift+Yを試したが、動作しなかった。動画自体はメモに含まれていない。",
+          null
+        ],
+        [
+          "observed",
+          "彼は'設定の中にサイドバーの痕跡のようなもの'を見つけた（貼り付けた設定一覧にSidebar Positionの設定がある）。開くことはできなかった。",
+          null
+        ],
+        [
+          "observed",
+          "テスターが貼り付けたREADMEの機能一覧には、Sidebar（'can be opened on any webpage'）、Web UI（'like a ChatGPT website'）、Chat With Webpageとある。",
+          null
+        ],
+        [
+          "observed",
+          "比較のため、彼は自作のPromptQuorum Optimizer拡張機能を見せた：オフラインだったツールバーのポップアップ（'Start the PromptQuorum desktop app to enable optimization'）。メモはこれを彼のサイドバーと呼び、'it works'と書いているが、スクリーンショットにはオフライン状態が写っている。",
+          "pq_popup"
+        ],
+        [
+          "observed",
+          "Ahrefsのアラートで見つけたaihubmix.comの記事が、彼のPage Assistレビューに言及しており、もう一度試す気力を与えてくれた。テスターが記事を読んだかどうかは述べていない。",
+          null
+        ],
+        [
+          "observed",
+          "彼はChatGPTと作業し、サイドバーを開くスイッチは存在しないことを知った。彼のMacのChromeでは、サイドパネルはページ上の右クリックから開く。拡張機能のアイコンをクリックするとフルスクリーンのUIが開き、'まったく別の機能'である。",
+          null
+        ],
+        [
+          "assumption",
+          "設定一覧には、Betaの項目がほかに2つ、'Set Default Action for Extension Icon Clicks'と'Set Default action for Context Menu'がある。この挙動を制御している可能性がある。未テスト。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-sidebar-use",
+      "title": "サイドバーを使う",
+      "items": [
+        [
+          "observed",
+          "サイドパネルでの最初の質問は'what does the text talk about'だった。表示されたモデル：gemma4:latest。答えは表示されず、カーソルだけがあった。",
+          "sidebar_wait"
+        ],
+        [
+          "observed",
+          "テスターは比較している：彼自身のChromeアプリは、ローカルモデルに接続できるかを20秒ごとに確認する。ここでは、モデルが動いているかを教えてくれるものがなかった。'ローカルLLMが動いているのか、何が問題なのかを、これから調べる必要があります。'",
+          null
+        ],
+        [
+          "observed",
+          "'何度かクリックした後'、動作した。何が原因で直ったのかはメモに書かれていない。その後のスクリーンショットでは、gemma4:latestではなくqwen3-coder:30bが選択されている。",
+          "sidebar_home"
+        ],
+        [
+          "assumption",
+          "モデルの切り替えが解決策だった可能性がある。メモには書かれていない。",
+          null
+        ],
+        [
+          "observed",
+          "開始画面では、'Chat with current page'にチェックが入り、'Page Action'と'Page tools (WebMCP)'はチェックが外れている。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-page",
+      "title": "ページを読む、ページで操作する",
+      "items": [
+        [
+          "observed",
+          "彼はページの単語数を数えるよう頼んだ。'うまく数えた。'どのページでどのモデルだったかは記録なし。",
+          null
+        ],
+        [
+          "observed",
+          "Search Consoleのパフォーマンスのページで、返答は、提供されたコンテキストにCTRの情報は含まれておらず、内容は時間軸上の時間間隔のグラフ表現（このページの冒頭）だと説明した。ページには1.5%の平均CTRのカードが表示されている。テスターはこうまとめている：'データを読めず、理解もしなかった'。",
+          null
+        ],
+        [
+          "assumption",
+          "動的なグラフやカードの内容は、テキストとしてモデルに渡っていない可能性がある。小さなコンテキストウィンドウも関係しているかもしれない。どちらも未テスト。",
+          null
+        ],
+        [
+          "observed",
+          "彼はウェブサイトで手順を探すよう頼んだ。'結果は、だめ。失敗。'",
+          null
+        ],
+        [
+          "tester-view",
+          "'新しいページを読み込んでも、システムはそれを理解せず、古いページのまま動作する。'彼はこれを更新の問題と呼び、ページからページへ移ることはできないと結論づけている。試行回数と使用したページ：記録なし。スクリーンショットなし。",
+          null
+        ],
+        [
+          "observed",
+          "彼は、ツールがクリック、検索、データ入力をできることを示唆する設定（Page Action）を見つけた。'そのようなものはまったくない'：ページをスクロールさせることすらできなかった。",
+          null
+        ],
+        [
+          "assumption",
+          "そのテストの間にPage ActionやWebMCPがオンになっていたかは記録なし。スクリーンショットでは両方ともオフ。オフだったとすれば、これは製品の限界ではなく設定のミスである。",
+          null
+        ],
+        [
+          "tester-view",
+          "'今のところ、動作するのはチャット機能だけで、Claude Chrome拡張機能のような能動的な操作はないようだ。'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-ui",
+      "title": "インターフェースの詳細",
+      "items": [
+        [
+          "observed",
+          "読み上げは無音だった。テキスト読み上げがオンになっていたか、音声が選ばれていたかは記録なし。",
+          null
+        ],
+        [
+          "observed",
+          "'Current Chat Model Settings'パネルには、Keep Alive、Temperature、Seed、Context Window Size (num_ctx)、Max Tokens (num_predict)、Top K、Top P、Num GPU、Min P、Repeat Penalty、Repeat Last N、TFS-Z、Num Keep、Num Thread、useMmap、useMlock、Reasoning Effortが並ぶ。テスターが貼り付けたテキストで説明の行があるのは、Keep AliveとSeedだけ。ツールチップは確認していない。",
+          null
+        ],
+        [
+          "tester-view",
+          "'モデル設定は素晴らしいが、説明がないので、大半の人はこれが何なのか分からないだろう。'",
+          null
+        ],
+        [
+          "observed",
+          "チャットの'Add MCP server'ボタンは、目に見える動作をしない。先に設定でサーバーを追加することを前提にしている。テスターはこれをUIの問題と呼んでいる。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "結論",
+      "items": [
+        [
+          "tester-view",
+          "'関係ないので、これらはすべてアンインストールします。もうひとつの検索ツールも、検索エンジンも、ローカルLLMを使うための別のインターフェースも要りません。それならたくさん持っています。'",
+          null
+        ],
+        [
+          "tester-view",
+          "彼が求めたのは、自分が見ているページに付くサイドバーで、そこで質問すればローカルモデルが、ときにはインターネットから答えを返し、Claudeのサイドバーのようにタスクをこなしてページをたどるものだった。'これはサイドバーではない。新しいブラウザだ。'",
+          null
+        ],
+        [
+          "tester-view",
+          "'今のところは、Claude Chrome拡張機能を使い続ける。あれなら何でもできる。'",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "Sidebar：'can be opened on any webpage'",
+      "README機能一覧",
+      "サイドパネルは存在し、チャットが表示された。ツールバーのアイコンではなく、右クリックから開く。ウェルカム動画のショートカットは、テスターの環境では動作しなかった。",
+      "observed"
+    ],
+    [
+      "Web UI：'like a ChatGPT website'",
+      "README機能一覧",
+      "フルページのチャットUIが開いた。gemma4:latestとの2回のチャットは空の返答だった。",
+      "observed"
+    ],
+    [
+      "Chat With Webpage：'ask questions about the content'",
+      "README機能一覧",
+      "単語数のカウントは動作した。Search Consoleのページは理解されず、ページを移動してもコンテキストは追従しなかった。",
+      "observed"
+    ],
+    [
+      "Chrome、Edge、Firefox向けにビルド",
+      "README",
+      "使用したのはChromeのみ。EdgeとFirefoxは未テスト。",
+      "observed"
+    ],
+    [
+      "Featured、4.8つ星、245件の評価、ユーザー200,000人",
+      "Chrome Web Storeの掲載情報",
+      "テスト日時点で記載のとおりに表示されていた。未検証。",
+      "third-party"
+    ],
+    [
+      "Page Action（Beta）：ツールがページ上で操作する",
+      "設定メニュー",
+      "テスターはスクロールもクリックもさせられなかった。オンになっていたかは記録なし。",
+      "observed"
+    ],
+    [
+      "OllamaまたはOpenAI互換のエンドポイントが必要",
+      "READMEの前提条件",
+      "Ollamaは起動しており、検出された。ほかのエンドポイントは試していない。",
+      "observed"
+    ]
+  ],
+  "usage_log": [
+    [
+      "リポジトリをクローン",
+      "-",
+      "完了",
+      "記録なし",
+      "Pass",
+      []
+    ],
+    [
+      "bun install",
+      "-",
+      "初回：'command not found: bun'（PATH）。'exec /bin/zsh'の後、約1分で実行",
+      "約1分",
+      "Partial",
+      []
+    ],
+    [
+      "拡張機能をビルドして読み込む",
+      "-",
+      "拡張機能は動作した（ビルドの手順はメモに項目として記載なし）",
+      "記録なし",
+      "Pass",
+      [
+        "webui_full"
+      ]
+    ],
+    [
+      "ツールバーから拡張機能を開く",
+      "-",
+      "サイドバーではなく、フルスクリーンのWeb UI",
+      "-",
+      "Partial",
+      [
+        "webui_full",
+        "settings"
+      ]
+    ],
+    [
+      "Chrome Web Storeからインストール",
+      "-",
+      "ダイアログが表示され、拡張機能が追加された（その後のスクリーンショットはストア版のIDを使用）",
+      "記録なし",
+      "Pass",
+      [
+        "store_dialog"
+      ]
+    ],
+    [
+      "Web UIでチャット",
+      "gemma4:latest",
+      "空の'Thought for 0ms'の返答が2回",
+      "-",
+      "Fail",
+      [
+        "chat_empty1",
+        "chat_empty2"
+      ]
+    ],
+    [
+      "Ctrl+Shift+Yでサイドバーを開く",
+      "-",
+      "動作しなかった",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "右クリックメニューからサイドバーを開く",
+      "-",
+      "ChatGPTに教えられた後に動作した",
+      "記録なし",
+      "Pass",
+      [
+        "sidebar_home"
+      ]
+    ],
+    [
+      "サイドパネルでの最初の質問",
+      "gemma4:latest",
+      "答えなし、カーソルのみ。'何度かクリックした後'に解消（原因は記録なし）",
+      "-",
+      "Partial",
+      [
+        "sidebar_wait"
+      ]
+    ],
+    [
+      "ページの単語数を数える",
+      "記録なし",
+      "テスターによると、うまく数えた",
+      "記録なし",
+      "Pass",
+      []
+    ],
+    [
+      "Search ConsoleのページでCTRを尋ねる",
+      "qwen3-coder:30b",
+      "返答：コンテキストにCTRの情報なし",
+      "-",
+      "Fail",
+      [
+        "gsc_fail"
+      ]
+    ],
+    [
+      "ウェブサイトで手順を探す",
+      "記録なし",
+      "失敗",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "別のページに移ってもう一度尋ねる",
+      "記録なし",
+      "古いページのコンテキストが残った（テスターの印象）",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "Page Action：ページ上でスクロールまたはクリック",
+      "記録なし",
+      "スクロールできなかった。スイッチの状態は記録なし",
+      "-",
+      "Fail",
+      [
+        "sidebar_home"
+      ]
+    ],
+    [
+      "読み上げ",
+      "-",
+      "無音。設定は記録なし",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "チャットからMCPサーバーを追加",
+      "-",
+      "設定で追加するまで、ボタンはどこにも行かない",
+      "-",
+      "Partial",
+      []
+    ],
+    [
+      "アンインストール",
+      "-",
+      "予定。実際に行ったかは記録なし",
+      "-",
+      "Not completed",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "READMEにあるChrome Web Storeのリンクを見落とし、先に長いソースからの手順を選んだ。これはテスター自身が述べている。"
+    ],
+    [
+      "tester-error",
+      "ツールバーのアイコンからサイドバーを探したが、それはフルスクリーンのUIを開くものであり、右クリックという経路を長い間見つけられなかった。製品自身のウェルカム動画が動作しないショートカットを示していたため、見落としの責任は双方にある。"
+    ],
+    [
+      "assumption",
+      "クリックとスクロールのテストの間、Page ActionとWebMCPはオフだった可能性がある。唯一のスクリーンショットでは、両方ともチェックが外れている。そうであれば、この所見は製品の限界ではなく、設定のミスである。"
+    ],
+    [
+      "assumption",
+      "Claude in Chromeとの比較は、拡張機能とモデルを混同している。Page Assistはローカルモデル（gemma4:latest、名前からコード向けと分かるqwen3-coder:30b）で動かしたが、Claude in Chromeはクラウドのモデルで動く。READMEはPage AssistがOpenAI互換のエンドポイントを使えると述べているが、試していない。差の一部はモデルに由来する可能性がある。"
+    ],
+    [
+      "tester-error",
+      "記録に抜けがある：拡張機能、Chrome、Ollama、macOSのバージョン。最初のスクリーンショット以降の、各テストで使ったモデル。詰まった返答を何が直したのか。単語数のカウントとページ切り替えのテストで使ったページ。"
+    ],
+    [
+      "tester-view",
+      "テスターは自作のPromptQuorum Optimizerを、'動く'サイドバーと呼んだ。スクリーンショットに写っているのは、その時点でオフラインだったツールバーのポップアップである。したがって、比較の基準は述べられているより弱い。"
+    ]
+  ],
+  "findings": [
+    [
+      "PA-01",
+      "READMEにはソースビルドの明快な手順（git clone、bun install、bun run build）があるが、ターミナル、Bun、Ollamaが必要。",
+      "インストール",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "PA-02",
+      "Chrome Web StoreのリンクはREADMEの下の方にあり、テスターは見落としてソースからの手順を選んだ。",
+      "インストール",
+      "observed",
+      "Medium",
+      [
+        "store_dialog"
+      ]
+    ],
+    [
+      "PA-03",
+      "Bunをインストールした後、シェルを再読み込みするまで'bun: command not found'となった（Page Assist自体ではなく、Bun/PATHの問題）。",
+      "インストール",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-04",
+      "ツールバーのアイコンはサイドバーではなく、フルスクリーンのWeb UIを開く。サイドバーは右クリックメニューから開く。",
+      "導入",
+      "observed",
+      "High",
+      [
+        "webui_full",
+        "sidebar_home"
+      ]
+    ],
+    [
+      "PA-05",
+      "ウェルカム動画で示されたショートカット（試したのはCtrl+Shift+Y）は、テスターの環境では動作しなかった。",
+      "導入",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "PA-06",
+      "ストアからのインストールでは、すべてのウェブサイト上のすべてのデータの読み取りと変更、および通知の表示を求められる。",
+      "信頼性",
+      "observed",
+      "Medium",
+      [
+        "store_dialog"
+      ]
+    ],
+    [
+      "PA-07",
+      "gemma4:latestとの2回のチャットは、空の'Thought for 0ms'の返答だった。原因は切り分けていない。",
+      "中核機能",
+      "observed",
+      "High",
+      [
+        "chat_empty1",
+        "chat_empty2"
+      ]
+    ],
+    [
+      "PA-08",
+      "サイドパネルでの最初の質問ではカーソルだけが表示され、モデルに接続できているかを示すものがなかった。'何度かクリックした後'に動作した。",
+      "中核機能",
+      "observed",
+      "Medium",
+      [
+        "sidebar_wait"
+      ]
+    ],
+    [
+      "PA-09",
+      "Chat with current pageは、テスターによると、ページの単語数を正しく数えた。",
+      "中核機能",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "PA-10",
+      "Search Consoleのページで、ページにはCTRのカードがあるにもかかわらず、返答はCTRの情報がないと述べた。",
+      "中核機能",
+      "observed",
+      "High",
+      [
+        "gsc_fail"
+      ]
+    ],
+    [
+      "PA-11",
+      "テスターの印象では、ページを移動してもコンテキストは追従しなかった。スクリーンショットなし、試行回数は記録なし。",
+      "中核機能",
+      "tester-view",
+      "High",
+      []
+    ],
+    [
+      "PA-12",
+      "ウェブサイトで手順を探すよう頼んだが、失敗した。",
+      "中核機能",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "PA-13",
+      "Page Actionでスクロールもクリックもできなかった。オンになっていたかは記録なし。",
+      "中核機能",
+      "observed",
+      "High",
+      [
+        "sidebar_home"
+      ]
+    ],
+    [
+      "PA-14",
+      "モデル設定には多くのパラメータが並ぶ。貼り付けたテキストで説明があるのはKeep AliveとSeedだけ。",
+      "操作性",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-15",
+      "チャットの'Add MCP server'ボタンは、設定でサーバーを追加するまで、目に見える動作をしない。",
+      "操作性",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-16",
+      "読み上げは無音だった。設定の状態は記録なし。",
+      "操作性",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-17",
+      "テスターによると、リポジトリの最終更新は2026年10月4日（スクリーンショットなし）。",
+      "メンテナンス",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "PA-18",
+      "ストアの掲載情報：Featured、245件の評価で4.8つ星、ユーザー200,000人。未検証。",
+      "信頼性",
+      "third-party",
+      "Positive",
+      [
+        "store_dialog"
+      ]
+    ]
+  ],
+  "severity_note": "重大度は、初めて使う人への影響度です。案であり、実測値ではありません。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "フルページのチャットUIを求め、設定の操作に抵抗がなく、右クリックメニューからサイドパネルを見つけられるかもしれないOllamaユーザー。"
+      ],
+      [
+        "assumption",
+        "現在のページとローカルでチャットしたく、データの多いページには対応しきれない場合があることを受け入れられる人。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "Claude in Chromeのようにページを巡ってクリックするサイドバーエージェントを期待する人。"
+      ],
+      [
+        "assumption",
+        "ターミナルを開きたくない人：ソースビルドではなくストア版を使ってください。"
+      ]
+    ],
+    "retest": "Page ActionとWebMCPをオンにして記録し、テストごとにモデルを1つに固定し、同じページをより大きなモデルまたはクラウドのモデルでも試して、再テストしてください。アンインストールするテスターに、再テストの予定はありません。"
+  },
+  "background_intro": "ハンズオンのセッションには含まれていません。未検証です。",
+  "background": [
+    [
+      "third-party",
+      "aihubmix.comの記事（タイトルはアドレスから推定すると'Page Assist in practice: four everyday browser workflows with local and cloud models'）が、PromptQuorumのPage Assistレビューにリンクしている。このテストでは、記事の内容は確認していない。"
+    ]
+  ],
+  "sources": [
+    "テスターの実機テストのメモ、2026年10月8日〜9日（元ドキュメント。元メモのPDFは追加予定）。",
+    "github.com/n4ze3m/page-assistのREADME、インストール手順と機能一覧（テスターが貼り付けたもの）。",
+    "Chrome Web Storeの掲載情報とインストールダイアログ（テスターのスクリーンショットに写っていたもの）。",
+    "aihubmix.comの記事（アドレスはテスターのメモにあるもの）。内容は未確認。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "観察",
+      "meaning": "アプリ、スクリーンショット、またはテスターのメモの中で、直接確認したもの。"
+    },
+    "measured": {
+      "label": "実測",
+      "meaning": "ダイアログ、カウンター、ツールから読み取った値。数値を併記。"
+    },
+    "tester-estimate": {
+      "label": "テスターの推定",
+      "meaning": "テスター自身の推定。計時や計数はしていない。"
+    },
+    "vendor-claim": {
+      "label": "ベンダーの主張",
+      "meaning": "アプリ、ストア掲載情報、またはウェブサイトが述べていること。未検証。"
+    },
+    "third-party": {
+      "label": "第三者情報",
+      "meaning": "別の情報源（AIアシスタント、記事など）によるもの。ここでは未検証。"
+    },
+    "assumption": {
+      "label": "推測",
+      "meaning": "推論です。誤りの可能性があります。"
+    },
+    "tester-view": {
+      "label": "テスターの見解",
+      "meaning": "テスターの判断または意見。"
+    },
+    "tester-error": {
+      "label": "テスターの誤り",
+      "meaning": "テスターが間違えた、または見落とした点。"
+    }
+  },
+  "images": [
+    {
+      "id": "gsc_fail",
+      "figure": 1,
+      "file": "page-assist-side-panel-search-console-no-ctr-found.webp",
+      "path": "images/page-assist-side-panel-search-console-no-ctr-found.webp",
+      "alt": "Search Consoleのページの隣にあるPage Assistのサイドパネル。qwen3-coder:30bの返答は、提供された内容にCTRの情報はないと述べている。",
+      "caption": "Page Assistを隣に表示したSearch Consoleのパフォーマンスのページ。返答は、提供されたコンテキストにCTRの情報はなく、ページは'a graphical representation of time intervals on a timeline'だと述べている。ページ自体には平均CTRのカード（1.5%）がある。テスターの質問は見えない。スクリーンショットにはテスター自身のサイト指標が写っている。",
+      "role": "hero",
+      "width": 1535,
+      "height": 566,
+      "bytes": 63586,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI. Shows the tester's own Search Console figures.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image9.png"
+    },
+    {
+      "id": "webui_full",
+      "figure": 2,
+      "file": "page-assist-web-ui-opens-full-screen-ollama-running.webp",
+      "path": "images/page-assist-web-ui-opens-full-screen-ollama-running.webp",
+      "alt": "ブラウザのタブ全体で開いたPage AssistのWeb UI：'Ollama is running'、空のモデルとプロンプトの選択欄、下部のメッセージボックス。",
+      "caption": "ツールバーのアイコンが開くもの：フルページのチャットUI（ここではソースからビルドした版）。Ollamaは検出されているが、モデルはまだ選択されていない。ブックマークバーとプロフィール写真はぼかしてある。",
+      "role": "moment",
+      "width": 1269,
+      "height": 733,
+      "bytes": 17884,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-opens",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image1.png"
+    },
+    {
+      "id": "settings",
+      "figure": 3,
+      "file": "page-assist-settings-menu-chrome-ai-page-action-webmcp.webp",
+      "path": "images/page-assist-settings-menu-chrome-ai-page-action-webmcp.webp",
+      "alt": "Page Assistの設定メニュー：General、Pipeline、Ollama、Chrome AI、OpenAI Compatible API、MCP Servers、Page Action、WebMCP、Memory、Manage Modelsなど。",
+      "caption": "ソースからビルドした版の設定メニュー。'Chrome AI Settings'は約4 GBのGemini Nanoのダウンロードを提示し、トグルはオフ。MCP Servers、Page Action、WebMCP、MemoryにはBetaバッジが付いている。ブックマークバーとプロフィール写真はぼかしてある。",
+      "role": "inline",
+      "width": 1596,
+      "height": 722,
+      "bytes": 35920,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-opens"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image2.png"
+    },
+    {
+      "id": "store_dialog",
+      "figure": 4,
+      "file": "page-assist-chrome-web-store-install-dialog.webp",
+      "path": "images/page-assist-chrome-web-store-install-dialog.webp",
+      "alt": "Page AssistのChrome Web Storeページと'Add extension'ダイアログ：すべてのウェブサイト上のすべてのデータの読み取りと変更、通知の表示。",
+      "caption": "Chrome Web Storeの掲載情報：'Featured'、245件の評価で4.8つ星、ユーザー200,000人（ストアの数値。未検証）。インストールのダイアログには'Read and change all your data on all websites'と'Display notifications'が並ぶ。タブのタイトル、ブックマーク、プロフィール写真は非表示にしてある。",
+      "role": "moment",
+      "width": 1428,
+      "height": 650,
+      "bytes": 35064,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-store",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image3.png"
+    },
+    {
+      "id": "chat_empty1",
+      "figure": 5,
+      "file": "page-assist-chat-gemma4-reply-empty-thought-0ms.webp",
+      "path": "images/page-assist-chat-gemma4-reply-empty-thought-0ms.webp",
+      "alt": "gemma4:latestでのPage Assistのチャット：ユーザーがPage Assistの機能を尋ね、返答は答えのテキストがない折りたたまれた'Thought for 0ms'ボックス。",
+      "caption": "ストア版での最初のチャット。ユーザーはPage Assistが実際に何をするのかを尋ね、サイドバーを期待していたと述べている。返答は'Thought for 0ms'ボックスだけ。下部の2つのトグルはオンで、その意味は確認していない。ブックマークバーとプロフィール写真はぼかしてある。",
+      "role": "inline",
+      "width": 1598,
+      "height": 726,
+      "bytes": 45716,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-chat"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image4.png"
+    },
+    {
+      "id": "chat_empty2",
+      "figure": 6,
+      "file": "page-assist-chat-second-empty-reply-thought-0ms.webp",
+      "path": "images/page-assist-chat-second-empty-reply-thought-0ms.webp",
+      "alt": "Page Assistのチャット：ユーザーが'Okay, where's my answer?'と書いた後も、gemma4:latestは折りたたまれた'Thought for 0ms'ボックスだけを表示している。",
+      "caption": "2回目の試行。gemma4:latestの2つの返答は、どちらも空の'Thought for 0ms'ボックス。原因は切り分けていない。",
+      "role": "moment",
+      "width": 1024,
+      "height": 436,
+      "bytes": 10120,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-chat",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image5.png"
+    },
+    {
+      "id": "pq_popup",
+      "figure": 7,
+      "file": "promptquorum-optimizer-popup-offline-own-extension.webp",
+      "path": "images/promptquorum-optimizer-popup-offline-own-extension.webp",
+      "alt": "テスター自作のPromptQuorum Optimizer拡張機能のツールバーのポップアップ。'PromptQuorum offline'と空のプロンプト欄が表示されている。",
+      "caption": "Page Assistではない。比較のために示された、テスター自作のPromptQuorum Optimizer拡張機能。オフライン状態のツールバーのポップアップ（'Start the PromptQuorum desktop app to enable optimization'）で、メモはこれを彼のサイドバーと呼んでいる。周囲のページは切り取ってある。",
+      "role": "inline",
+      "width": 408,
+      "height": 428,
+      "bytes": 15586,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-sidebar"
+      ],
+      "subject": "Screenshot of the tester's own PromptQuorum Optimizer extension (not Page Assist)",
+      "rights": "Tester's own screenshot of the tester's own software.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image6.png"
+    },
+    {
+      "id": "sidebar_wait",
+      "figure": 8,
+      "file": "page-assist-side-panel-no-answer-after-question.webp",
+      "path": "images/page-assist-side-panel-no-answer-after-question.webp",
+      "alt": "ChromeのPage Assistのサイドパネル：ユーザーが'what does the text talk about'と尋ね、gemma4:latestには点滅するカーソルだけが表示され、答えはない。",
+      "caption": "サイドパネルでの最初の質問：'what does the text talk about'。表示されたモデル：gemma4:latest。カーソルだけが表示される。その後、テスターはローカルモデルが動いているかを確認した。パネルの隣の記事ページ（第三者のもの）は切り取ってある。",
+      "role": "inline",
+      "width": 698,
+      "height": 714,
+      "bytes": 13118,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-sidebar-use"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image7.png"
+    },
+    {
+      "id": "sidebar_home",
+      "figure": 9,
+      "file": "page-assist-side-panel-start-screen-chat-with-current-page.webp",
+      "path": "images/page-assist-side-panel-start-screen-chat-with-current-page.webp",
+      "alt": "Page Assistのサイドパネルの開始画面：Ollamaは起動中、モデルはqwen3-coder:30b、'Chat with current page'はチェック済み、Page ActionとWebMCPは未チェック。",
+      "caption": "qwen3-coder:30bを選択したサイドパネルの開始画面。'Chat with current page'はオン、'Page Action'と'Page tools (WebMCP)'はこのスクリーンショットではオフ。",
+      "role": "moment",
+      "width": 693,
+      "height": 580,
+      "bytes": 8832,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-sidebar-use",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image8.png"
+    }
+  ],
+  "figure_order": [
+    "gsc_fail",
+    "webui_full",
+    "settings",
+    "store_dialog",
+    "chat_empty1",
+    "chat_empty2",
+    "pq_popup",
+    "sidebar_wait",
+    "sidebar_home"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum ハンズオンテスト · {app} · {date}",
+    "date_line": "2026年10月8日〜9日",
+    "nav_aria": "セクション",
+    "nav": {
+      "verdict": "結論",
+      "moments": "5つの場面",
+      "story": "経過",
+      "claims": "主張",
+      "fit": "24 GB",
+      "log": "利用ログ",
+      "errors": "テスターの誤り",
+      "findings": "所見",
+      "background": "背景"
+    },
+    "related": "関連：",
+    "review_link": "{app}のPromptQuorumレビュー",
+    "directory_link": "ローカルAIアプリディレクトリ",
+    "verdict_h": "結論",
+    "general_assessment": "総合評価",
+    "fit_for_tester": "テスターの用途への適合度",
+    "scorecard": "スコアカード",
+    "status_prefix": "ステータス：",
+    "na": "該当なし",
+    "score_aria": "5点満点中{n}点",
+    "details_h": "テストの詳細",
+    "label_intro": "すべての記述にラベルが付いています：",
+    "legend_link": "ラベルの意味",
+    "disclosure_label": "開示事項。",
+    "raw_notes": "元ノートのPDF：",
+    "to_be_added": "追加予定",
+    "moments_h": "このテストを形作った6つの場面",
+    "see_context": "文脈の中で見る",
+    "story_h": "テストの経過",
+    "claims_h": "主張とテスターが確認した内容",
+    "claims_cols": [
+      "主張",
+      "出典",
+      "確認した内容",
+      "ラベル"
+    ],
+    "fit_h": "24 GBに収まるか",
+    "memory_line": "{gb} GBメモリ",
+    "above": "{gb} GB超",
+    "below": "{gb} GB未満",
+    "log_h": "利用ログ",
+    "log_cols": [
+      "#",
+      "タスク",
+      "モデル",
+      "結果",
+      "時間",
+      "ステータス",
+      "図"
+    ],
+    "statuses": {
+      "Fail": "失敗",
+      "Partial": "一部成功",
+      "Pass": "合格",
+      "Not completed": "未完了"
+    },
+    "errors_h": "テスターが誤った点",
+    "findings_h": "所見一覧",
+    "filter_aria": "ラベルで所見を絞り込む",
+    "filter_all": "すべて",
+    "findings_cols": [
+      "ID",
+      "所見",
+      "カテゴリ",
+      "ラベル",
+      "重要度",
+      "図"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "良好"
+    },
+    "fig_abbr": "図",
+    "figure": "図",
+    "enlarge": "拡大：",
+    "audience_h": "こんな人に向いています",
+    "likely_fit": "向いている可能性が高い人",
+    "likely_poor_fit": "向いていない可能性が高い人",
+    "retest": "再テスト。",
+    "background_h": "開発元の背景",
+    "gallery_h": "テストからのその他の画像",
+    "legend_h": "ラベルの見方",
+    "sources_h": "出典",
+    "footer_line": "テストID {id} · テスト標準 v{version} · 元ノートのPDF：追加予定",
+    "crumb_home": "ホーム",
+    "crumb_directory": "ディレクトリ",
+    "crumb_test": "{app} ハンズオンテスト"
+  }
+}

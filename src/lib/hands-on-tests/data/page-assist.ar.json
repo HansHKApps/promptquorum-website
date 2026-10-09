@@ -1,0 +1,1250 @@
+{
+  "id": "pq-test-page-assist-2026-10-08",
+  "hero": "gsc_fail",
+  "date_human": "8 إلى 9 أكتوبر 2026",
+  "captured": "⁦2026-10-08⁩ إلى ⁦2026-10-09⁩؛ الأوقات الدقيقة غير مسجَّلة",
+  "standard_version": "0.1",
+  "locale": "ar",
+  "app": {
+    "name": "Page Assist",
+    "slug": "page-assist",
+    "vendor": "Not recorded (repository: github.com/n4ze3m/page-assist)",
+    "category": "Browser extension: web UI and sidebar for local AI models (Ollama)",
+    "platform": "Chrome extension (also built for Edge and Firefox, per the README)",
+    "pricing_url": null
+  },
+  "title": "⁦Page Assist⁩ على جهاز ⁦Mac⁩ بذاكرة ⁦24 GB⁩: وُجد الشريط الجانبي، ولم تُفهم الصفحة",
+  "page_title": "Page Assist Test",
+  "dek": "اختبار عملي لإضافة المتصفح المعتمدة على ⁦Ollama⁩، على جهاز ⁦Mac⁩ بمعالج ⁦M3 Pro⁩. فتحت أيقونة شريط الأدوات صفحة بملء الشاشة بدل شريط جانبي. وبعد العثور على الشريط الجانبي، عدّ الكلمات لكنه لم يقرأ صفحة ⁦Search Console⁩ ولم ينفّذ إجراءً على أي صفحة.",
+  "status": "Abandoned",
+  "published": "2026-10-09",
+  "started": "2026-10-08",
+  "ended": "2026-10-09",
+  "meta": [
+    [
+      "التطبيق",
+      "⁦Page Assist⁩، ⁦'A Web UI for Local AI Models'⁩: إضافة لمتصفح ⁦Chrome⁩ بشريط جانبي وواجهة ويب بملء الصفحة و⁦'chat with webpage'⁩ (⁦github.com/n4ze3m/page-assist⁩)",
+      "observed"
+    ],
+    [
+      "الإصدار",
+      "غير مسجَّل (لا إصدار الإضافة ولا إصدارات ⁦Chrome⁩ أو ⁦Ollama⁩ أو ⁦macOS⁩)",
+      null
+    ],
+    [
+      "المختبِر",
+      "⁦Hans Kuepper⁩، مؤسس ⁦PromptQuorum⁩",
+      null
+    ],
+    [
+      "البداية",
+      "⁦8⁩ أكتوبر ⁦2026⁩، ⁦11:00⁩ (المنطقة الزمنية غير مذكورة؛ يُفترض التوقيت المحلي في ألمانيا)",
+      "observed"
+    ],
+    [
+      "النهاية",
+      "⁦9⁩ أكتوبر ⁦2026⁩، ⁦19:00⁩. المدة المنقضية نحو ⁦32⁩ ساعة؛ ولم يُسجَّل زمن الاختبار الفعلي.",
+      "observed"
+    ],
+    [
+      "العتاد",
+      "⁦MacBook Pro⁩، ⁦Apple M3 Pro⁩، ذاكرة موحّدة ⁦24 GB⁩ (تقول الملاحظات ⁦'M3 24 GB'⁩)",
+      "observed"
+    ],
+    [
+      "النظام",
+      "⁦macOS⁩، الإصدار الحالي وقت الاختبار؛ الإصدار الدقيق غير مسجَّل. المتصفح: ⁦Chrome⁩.",
+      null
+    ],
+    [
+      "طرق التثبيت",
+      "اثنتان. الأولى بناء من المصدر (⁦git⁩ و⁦Bun⁩ و⁦'load unpacked'⁩). ثم التثبيت لاحقًا من ⁦Chrome Web Store⁩.",
+      "observed"
+    ],
+    [
+      "النماذج المحلية",
+      "⁦Ollama⁩، قيد التشغيل. النماذج الظاهرة في لقطات الشاشة: ⁦gemma4:latest⁩ و⁦qwen3-coder:30b⁩.",
+      "observed"
+    ],
+    [
+      "سبب الاختبار",
+      "تعجب المختبِر فكرة الشريط الجانبي، ويستخدم ⁦Claude in Chrome⁩ يوميًا، وبنى شريطًا جانبيًا لتطبيق ⁦PromptQuorum⁩.",
+      "observed"
+    ],
+    [
+      "الهدف",
+      "'كان الهدف الرئيسي هو الشريط الجانبي ومعرفة ما يستطيع فعله.'",
+      "observed"
+    ],
+    [
+      "مساعدات الذكاء الاصطناعي المستخدمة",
+      "مساعد ذكاء اصطناعي لإعداد ⁦Bun⁩ (لم تذكر الملاحظات اسمه)؛ و⁦ChatGPT⁩ للعثور على الشريط الجانبي.",
+      "observed"
+    ]
+  ],
+  "disclosure": "أسّس المختبِر ⁦PromptQuorum⁩ (⁦promptquorum.com⁩)، وهو موقع محتوى ودليل لتطبيقات الذكاء الاصطناعي المحلي. ويحتوي ⁦PromptQuorum⁩ أصلًا على مراجعة لـ ⁦Page Assist⁩ (تسميها الملاحظات 'مراجعتي لـ ⁦Page Assist⁩')؛ ويقوم هذا الاختبار على جلسة المختبِر وحدها. وقد بنى المختبِر أدوات منافسة (شريطًا جانبيًا لتطبيق ⁦PromptQuorum⁩ وإضافة ⁦Chrome⁩ هي ⁦PromptQuorum Optimizer⁩)، ويستخدم ⁦Claude in Chrome⁩، وهو منتج من ⁦Anthropic⁩، معيارًا للمقارنة. ولا تسجّل الملاحظات أي تواصل مع مؤلف ⁦Page Assist⁩ ولا أي دفع ولا أي رعاية.",
+  "verdict": {
+    "general": "واجهة أمامية غنية بالميزات للنماذج المحلية، مع إعدادات للنماذج والمعرفة والمطالبات وخوادم ⁦MCP⁩ و⁦Page Action⁩ و⁦WebMCP⁩ والذاكرة. تفتح أيقونة شريط الأدوات صفحة دردشة بملء الشاشة؛ ولم يعثر المختبِر على اللوحة الجانبية إلا لاحقًا، عبر النقر بزر الماوس الأيمن وبمساعدة ⁦ChatGPT⁩. وفي اللوحة الجانبية نجح عدّ كلمات صفحة. أما صفحة ⁦Search Console⁩ فلم تُفهم، وفشل البحث في موقع، ولم يتبع السياق تغيّر الصفحة، ولم يستطع المختبِر جعل ⁦Page Action⁩ يمرّر الصفحة أو ينقر عليها. وأعادت دردشتان مبكرتان مع ⁦gemma4:latest⁩ ردودًا فارغة. ولأن النماذج اختلفت بين الاختبارات، لا يمكن هنا فصل الإضافة عن النموذج.",
+    "fit": "لا يناسب استخدامه. أراد شريطًا جانبيًا يعمل مثل ⁦Claude in Chrome⁩: يتلقى مهمة وينتقل بين الصفحات بالنقر ويُدخل البيانات. لكنه رأى دردشة فقط، ويخطط لإزالة التثبيت. 'في الوقت الحالي، سأبقى مع إضافة ⁦Claude⁩ لـ ⁦Chrome⁩.'"
+  },
+  "scores": [
+    [
+      "التثبيت",
+      3,
+      "التثبيت من المتجر مربع حوار واحد. أما ⁦README⁩ فيبدأ ببناء من المصدر يحتاج إلى ⁦Bun⁩ وطرفية؛ وفشلت محاولة المختبِر الأولى بسبب ⁦PATH⁩، ورابط المتجر أدنى في الصفحة."
+    ],
+    [
+      "البدء وسهولة الاكتشاف",
+      2,
+      "تفتح أيقونة شريط الأدوات صفحة بملء الشاشة، ويُبلغ الشريط الجانبي بطريقة أخرى، ولم يعمل الاختصار المذكور في فيديو الترحيب مع المختبِر."
+    ],
+    [
+      "الوظيفة الأساسية",
+      2,
+      "نجح عدّ الكلمات. ولم تنجح صفحة ⁦Search Console⁩ ولا البحث في موقع ولا السياق بين الصفحات ولا ⁦Page Action⁩. وأعادت دردشتان مبكرتان ردودًا فارغة."
+    ],
+    [
+      "الإرشاد والتكرار",
+      2,
+      "إعدادات نماذج قوية، مع وصف لحقلين فقط من الحقول الملصقة. وزر ⁦'Add MCP server'⁩ لا يقود إلى شيء ما لم يُعدّ الخادم في الإعدادات."
+    ],
+    [
+      "الأداء",
+      null,
+      "غير مقيس. لم تُسجَّل أي أزمنة."
+    ],
+    [
+      "التوثيق",
+      3,
+      "خطوات ⁦README⁩ واضحة لمستخدمي الطرفية. وتَعِد قائمة الميزات بشريط جانبي وواجهة ويب ودردشة مع صفحة الويب. ولم يعمل اختصار فيديو الترحيب."
+    ],
+    [
+      "الثقة والخصوصية",
+      null,
+      "لم يُدقَّق. يطلب مربع حوار المتجر قراءة جميع البيانات وتغييرها في جميع المواقع؛ ولم يُختبر هل تبقى البيانات محلية."
+    ],
+    [
+      "إزالة التثبيت",
+      null,
+      "يخطط المختبِر لإزالة التثبيت. ولم يُسجَّل هل تمت."
+    ]
+  ],
+  "scores_note": "الدرجات مقترحات مستخلصة من الأدلة أدناه (⁦1⁩ = ضعيف، ⁦5⁩ = جيد جدًا). وعلى المختبِر تأكيدها.",
+  "tldr": [
+    [
+      "observed",
+      "تفتح أيقونة شريط الأدوات صفحة بملء الشاشة لا شريطًا جانبيًا. وعثر المختبِر على اللوحة الجانبية عبر النقر بزر الماوس الأيمن، بعد مساعدة من ⁦ChatGPT⁩. ولم يعمل معه الاختصار ⁦Ctrl+Shift+Y⁩ المذكور في فيديو الترحيب."
+    ],
+    [
+      "observed",
+      "في اللوحة الجانبية نجح عدّ الكلمات في صفحة. ولم تُفهم صفحة ⁦Search Console⁩ (الرد: لا توجد معلومات عن ⁦CTR⁩)، وفشل البحث في موقع، ولم يتبع السياق تغيّر الصفحة."
+    ],
+    [
+      "tester-view",
+      "يزيل التثبيت. أراد شريطًا جانبيًا يعمل مثل ⁦Claude in Chrome⁩ فحصل على دردشة. 'الشريط الجانبي هو الجائزة الكبرى.'"
+    ]
+  ],
+  "quotes": [
+    "ثمة آثار للشريط الجانبي في الإعدادات، لكن الشريط الجانبي هو الجائزة الكبرى حقًا. أما الباقي فواجهة أخرى بوظائف مختلفة.",
+    "آمل أن يقترب ⁦Page Assist⁩ مستقبلًا من هذا المستوى من الدعم."
+  ],
+  "quote_note": "ملاحظات المختبِر، مع تحرير طفيف عن تفريغ صوتي. مترجمة من الإنجليزية.",
+  "moments_title": "خمس لحظات شكّلت هذا الاختبار",
+  "moments_md": "خمس لحظات",
+  "moments_nav": "خمس لحظات",
+  "moments": [
+    [
+      "بملء الشاشة لا شريطًا جانبيًا",
+      "تفتح أيقونة شريط الأدوات واجهة دردشة بملء الصفحة. ويُبلغ الشريط الجانبي الذي أراده المختبِر بطريقة أخرى.",
+      "webui_full",
+      "chapter-opens"
+    ],
+    [
+      "رابط المتجر الذي فاته",
+      "بنى من المصدر قبل أن يلاحظ رابط ⁦Chrome Web Store⁩ أدنى في ⁦README⁩. وتعرض صفحة المتجر ⁦4.8⁩ نجوم من ⁦245⁩ تقييمًا و⁦200,000⁩ مستخدم.",
+      "store_dialog",
+      "chapter-store"
+    ],
+    [
+      "⁦'Thought for 0ms'⁩، ولا جواب",
+      "أعاد سؤالان إلى ⁦gemma4:latest⁩ صندوقي رد فارغين.",
+      "chat_empty2",
+      "chapter-chat"
+    ],
+    [
+      "الشريط الجانبي على بعد نقرة يمنى",
+      "بعد فشل محاولة أولى ومساعدة ⁦ChatGPT⁩، وجد المختبِر اللوحة الجانبية في قائمة النقر بزر الماوس الأيمن. وتعرض شاشتها الأولى ⁦Chat with current page⁩ و⁦Page Action⁩ و⁦WebMCP⁩.",
+      "sidebar_home",
+      "chapter-sidebar"
+    ],
+    [
+      "صفحة لم يستطع قراءتها، وإجراء لم يستطع تنفيذه",
+      "لم تُفهم صفحة ⁦Search Console⁩. ولم يتبع السياق تغيّر الصفحة. ولم يستطع ⁦Page Action⁩ حتى التمرير.",
+      null,
+      "chapter-page"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-why",
+      "title": "لماذا هذا التطبيق",
+      "items": [
+        [
+          "tester-view",
+          "'فكرة مثيرة للاهتمام: أن يكون لديك شريط جانبي.' وقد بنى شريطًا جانبيًا لتطبيق ⁦PromptQuorum⁩ ويراه مفيدًا للاتصال بنموذج محلي. ويستخدم أيضًا إضافة ⁦Claude⁩ لـ ⁦Chrome⁩ 'دائمًا حين أضيع'.",
+          null
+        ],
+        [
+          "observed",
+          "الهدف بكلماته: الشريط الجانبي، وما يستطيع فعله.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-install",
+      "title": "التثبيت من المصدر",
+      "items": [
+        [
+          "vendor-claim",
+          "يسرد ⁦README⁩ (كما لصقه المختبِر) المتطلبات: ⁦Bun⁩ و⁦Ollama⁩، أو أي نقطة نهاية متوافقة مع ⁦OpenAI⁩ مثل ⁦LM Studio⁩ أو ⁦llamafile⁩. والخطوات: ⁦git clone⁩ ثم ⁦bun install⁩ ثم ⁦bun run build⁩ (⁦'by default it will build for Chrome, Edge and Firefox'⁩)، ثم تحميل مجلد البناء إضافةً غير مُحزَّمة. وتقول ملاحظة باستخدام ⁦npm⁩ إذا سبّب ⁦Bun⁩ مشكلات.",
+          null
+        ],
+        [
+          "tester-view",
+          "'مباشر جدًا، لكنه لا يناسب من لا يحبون الطرفية.'",
+          null
+        ],
+        [
+          "observed",
+          "اكتمل ⁦git clone⁩ (⁦14,361⁩ كائنًا، ⁦9.93 MiB⁩). وفشل أول تشغيل لـ ⁦bun install⁩ بالرسالة ⁦'zsh: command not found: bun'⁩. فسأل المختبِر مساعد ذكاء اصطناعي، فقال إن تثبيت ⁦Bun⁩ نجح وإن الطرفية لم تحمّل ⁦PATH⁩ المحدَّث؛ وكان الحل ⁦'exec /bin/zsh'⁩.",
+          null
+        ],
+        [
+          "observed",
+          "بعد ذلك 'استغرق التثبيت وقتًا'، نحو دقيقة في الطرفية، وعملت الإضافة. ولا تصف الملاحظات خطوة ⁦'load unpacked'⁩.",
+          null
+        ],
+        [
+          "assumption",
+          "يختلف معرّف الإضافة في شريط العنوان بلقطات الشاشة الأولى (⁦ofcf...⁩) عن معرّف نسخة المتجر (⁦jfgf...⁩)، وهذا يتسق مع بناء غير مُحزَّم. لم يُؤكَّد.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-opens",
+      "title": "التشغيل الأول: صفحة بملء الشاشة",
+      "items": [
+        [
+          "observed",
+          "يفتح النقر على الإضافة ⁦'Page Assist - A Web UI for Local AI Models'⁩ في علامة تبويب كاملة بالمتصفح. وتعرض ⁦'Ollama is running'⁩ ومحدّدَي نموذج ومطالبة فارغين وصندوق رسالة.",
+          "webui_full"
+        ],
+        [
+          "tester-view",
+          "'يُباع على أنه شريط جانبي، لكنه ليس شريطًا جانبيًا.'",
+          null
+        ],
+        [
+          "observed",
+          "قائمة الإعدادات طويلة: ⁦General⁩ و⁦Pipeline⁩ و⁦Ollama⁩ و⁦Chrome AI⁩ و⁦OpenAI Compatible API⁩ و⁦MCP Servers⁩ و⁦Page Action⁩ و⁦WebMCP⁩ و⁦Memory⁩ و⁦Manage Models⁩ و⁦Manage Knowledge⁩ و⁦Manage Prompts⁩ و⁦Manage Share⁩ و⁦About⁩. ويحمل عدد منها شارة ⁦Beta⁩. ويعرض ⁦'Chrome AI Settings'⁩ تنزيل ⁦Gemini Nano⁩ بنحو ⁦4 GB⁩ مع مفتاح تبديل متوقف.",
+          "settings"
+        ],
+        [
+          "tester-view",
+          "'تبدو إعدادات النظام مبهرة جدًا.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-store",
+      "title": "مسار ⁦Chrome Web Store⁩",
+      "items": [
+        [
+          "observed",
+          "يسرد ⁦README⁩ رابط ⁦Chrome Web Store⁩ أدنى في الصفحة. وفاته الرابط فسلك مسار المصدر. 'كان مذكورًا في الأسفل وفاتني.'",
+          null
+        ],
+        [
+          "observed",
+          "يقول مربع حوار التثبيت إن الإضافة يمكنها ⁦'Read and change all your data on all websites'⁩ و⁦'Display notifications'⁩.",
+          "store_dialog"
+        ],
+        [
+          "third-party",
+          "تعرض صفحة المتجر ⁦'Featured'⁩ و⁦4.8⁩ نجوم من ⁦245⁩ تقييمًا و⁦200,000⁩ مستخدم، كما ظهرت في تاريخ الاختبار. لم يُتحقَّق.",
+          null
+        ],
+        [
+          "observed",
+          "بحسب المختبِر، كان آخر تحديث للمستودع في ⁦4⁩ أكتوبر ⁦2026⁩، قبل الاختبار بأربعة أيام. ولم يُلتقط في لقطة شاشة.",
+          null
+        ],
+        [
+          "tester-view",
+          "'تنزيل إضافة ⁦Chrome⁩ هذا سهل جدًا مقارنةً بـ ⁦GitHub⁩.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-chat",
+      "title": "أولى الدردشات: ردود فارغة",
+      "items": [
+        [
+          "observed",
+          "في نسخة المتجر كتب المختبِر: 'حسنًا، أنا تائه من حيث المبدأ. هل يمكنك أن تخبرني ماذا يفعل ⁦Page Assist⁩ فعلًا؟' وشرح أنه توقع شريطًا جانبيًا بجوار صفحة ويب. النموذج: ⁦gemma4:latest⁩. والرد صندوق ⁦'Thought for 0ms'⁩ مطوي بلا نص جواب.",
+          "chat_empty1"
+        ],
+        [
+          "observed",
+          "سأل: 'حسنًا، أين جوابي؟'. وكان الرد الثاني صندوق ⁦'Thought for 0ms'⁩ فارغًا مرة أخرى.",
+          "chat_empty2"
+        ],
+        [
+          "assumption",
+          "لم يُعزل السبب. فقد يكون للنموذج أو لمفاتيح التفكير أو للاتصال بـ ⁦Ollama⁩ دور في ذلك. لم يُختبر.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-sidebar",
+      "title": "البحث عن الشريط الجانبي",
+      "items": [
+        [
+          "observed",
+          "ظهرت نافذة ترحيب بفيديو. وبحسب المختبِر، أوضح أن هذه ليست إضافة تفتح شريطًا جانبيًا يستولي على المتصفح، وقال إن الاختصار لازم لفتحه. فجرّب المختبِر ⁦Ctrl+Shift+Y⁩. ولم يعمل. والفيديو نفسه ليس في الملاحظات.",
+          null
+        ],
+        [
+          "observed",
+          "وجد 'آثارًا للشريط الجانبي في الإعدادات' (يوجد إعداد ⁦'Sidebar Position'⁩ في قائمة الإعدادات الملصقة). ولم يستطع فتحه.",
+          null
+        ],
+        [
+          "observed",
+          "تقول قائمة ميزات ⁦README⁩ التي لصقها المختبِر: ⁦Sidebar⁩ (⁦'can be opened on any webpage'⁩) و⁦'Web UI'⁩ (⁦'like a ChatGPT website'⁩) و⁦'Chat With Webpage'⁩.",
+          null
+        ],
+        [
+          "observed",
+          "وللمقارنة عرض إضافته ⁦PromptQuorum Optimizer⁩: نافذة منبثقة في شريط الأدوات كانت غير متصلة (⁦'Start the PromptQuorum desktop app to enable optimization'⁩). وتسميها الملاحظات شريطه الجانبي وتقول 'إنه يعمل'؛ أما لقطة الشاشة فتظهر حالة عدم الاتصال.",
+          "pq_popup"
+        ],
+        [
+          "observed",
+          "مقال على ⁦aihubmix.com⁩، وجده عبر تنبيهات ⁦Ahrefs⁩، أشار إلى مراجعته لـ ⁦Page Assist⁩ وأعطاه الحماسة لتجربة ثانية. ولم يقل المختبِر هل قرأ المقال.",
+          null
+        ],
+        [
+          "observed",
+          "عمل مع ⁦ChatGPT⁩ ووجد أنه لا يوجد مفتاح للشريط الجانبي. وعلى جهاز ⁦Mac⁩ لديه في ⁦Chrome⁩ تُفتح اللوحة الجانبية بالنقر بزر الماوس الأيمن على الصفحة؛ أما النقر على أيقونة الإضافة فيفتح الواجهة بملء الشاشة، 'وظيفة مختلفة تمامًا'.",
+          null
+        ],
+        [
+          "assumption",
+          "تضم قائمة الإعدادات أيضًا إدخالين ⁦Beta⁩ هما ⁦'Set Default Action for Extension Icon Clicks'⁩ و⁦'Set Default action for Context Menu'⁩. وربما يتحكمان في هذا السلوك. لم يُختبر.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-sidebar-use",
+      "title": "استخدام الشريط الجانبي",
+      "items": [
+        [
+          "observed",
+          "كان أول سؤال في اللوحة الجانبية ⁦'what does the text talk about'⁩. النموذج الظاهر: ⁦gemma4:latest⁩. ولم يظهر جواب، بل مؤشر فقط.",
+          "sidebar_wait"
+        ],
+        [
+          "observed",
+          "يقارن المختبِر: يتحقق تطبيق ⁦Chrome⁩ الخاص به كل ⁦20⁩ ثانية من إمكانية الوصول إلى النموذج المحلي. أما هنا فلم يخبره شيء هل يعمل النموذج. 'الآن عليّ أن أعرف هل يعمل النموذج المحلي أم ما المشكلة.'",
+          null
+        ],
+        [
+          "observed",
+          "بعد 'بضع نقرات أخرى' عمل. ولا تقول الملاحظات ما الذي أصلحه. وتظهر لقطات لاحقة ⁦qwen3-coder:30b⁩ محددًا بدل ⁦gemma4:latest⁩.",
+          "sidebar_home"
+        ],
+        [
+          "assumption",
+          "ربما كان تبديل النموذج هو الحل. لم يُذكر في الملاحظات.",
+          null
+        ],
+        [
+          "observed",
+          "تعرض الشاشة الأولى ⁦'Chat with current page'⁩ مفعّلًا، و⁦'Page Action'⁩ و⁦'Page tools (WebMCP)'⁩ غير مفعّلين.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-page",
+      "title": "قراءة الصفحات والعمل عليها",
+      "items": [
+        [
+          "observed",
+          "طلب منه عدّ الكلمات في الصفحة. 'عدّها جيدًا.' أي صفحة وأي نموذج: غير مسجَّل.",
+          null
+        ],
+        [
+          "observed",
+          "في صفحة الأداء في ⁦Search Console⁩ قال الرد إن السياق المقدَّم لا يتضمن أي معلومات عن ⁦CTR⁩ ووصف المحتوى بأنه تمثيل بياني لفترات زمنية على خط زمني (أعلى هذه الصفحة). وتعرض الصفحة بطاقة متوسط ⁦CTR⁩ بقيمة ⁦1.5%⁩. ويلخّص المختبِر: 'لم يستطع قراءة البيانات، ولم يفهمها'.",
+          null
+        ],
+        [
+          "assumption",
+          "قد لا يصل محتوى المخططات والبطاقات الديناميكية إلى النموذج نصًّا. وقد تسهم نافذة سياق صغيرة أيضًا. لم يُختبر أي منهما.",
+          null
+        ],
+        [
+          "observed",
+          "طلب منه العثور على تعليمات في موقع. 'ولا. فشل.'",
+          null
+        ],
+        [
+          "tester-view",
+          "'إذا حمّلت صفحة جديدة فإن النظام لا يفهمها ويظل يعمل على الصفحة القديمة.' ويسميها مشكلة تحديث ويستنتج أن الانتقال من صفحة إلى أخرى غير ممكن. عدد المحاولات والصفحات المستخدمة: غير مسجَّل؛ ولم يُلتقط في لقطة شاشة.",
+          null
+        ],
+        [
+          "observed",
+          "وجد إعدادًا يوحي بأن الأداة تستطيع النقر والبحث وإدخال البيانات (⁦'Page Action'⁩). 'لا شيء من هذا': لم يستطع حتى جعله يمرّر الصفحة.",
+          null
+        ],
+        [
+          "assumption",
+          "لا يُسجَّل هل كان ⁦Page Action⁩ أو ⁦WebMCP⁩ مفعّلًا أثناء ذلك الاختبار. وفي لقطة الشاشة كلاهما متوقف. وإن كانا متوقفين فهذا إغفال في الإعداد لا حدّ في المنتج.",
+          null
+        ],
+        [
+          "tester-view",
+          "'يبدو أن وظيفة الدردشة وحدها تعمل الآن، ولا تحكّم نشطًا كما في إضافة ⁦Claude⁩ لـ ⁦Chrome⁩.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-ui",
+      "title": "تفاصيل الواجهة",
+      "items": [
+        [
+          "observed",
+          "كانت القراءة بصوت عالٍ صامتة. ولا يُسجَّل هل فُعّل تحويل النص إلى كلام وهل اختير صوت.",
+          null
+        ],
+        [
+          "observed",
+          "تسرد لوحة ⁦'Current Chat Model Settings'⁩ ما يلي: ⁦Keep Alive⁩ و⁦Temperature⁩ و⁦Seed⁩ و⁦Context Window Size⁩ (⁦num_ctx⁩) و⁦Max Tokens⁩ (⁦num_predict⁩) و⁦Top K⁩ و⁦Top P⁩ و⁦Num GPU⁩ و⁦Min P⁩ و⁦Repeat Penalty⁩ و⁦Repeat Last N⁩ و⁦TFS-Z⁩ و⁦Num Keep⁩ و⁦Num Thread⁩ و⁦useMmap⁩ و⁦useMlock⁩ و⁦Reasoning Effort⁩. وفي النص الذي لصقه المختبِر لا يحمل سطر وصف إلا ⁦Keep Alive⁩ و⁦Seed⁩. ولم تُفحص التلميحات.",
+          null
+        ],
+        [
+          "tester-view",
+          "'إعدادات نماذج رائعة، لكن بلا شروح، فسيفوت معظم الناس فهم كل هذا.'",
+          null
+        ],
+        [
+          "observed",
+          "زر ⁦'Add MCP server'⁩ في الدردشة لا يفعل شيئًا ظاهرًا؛ فهو يتوقع أن يكون خادم قد أُضيف في الإعدادات أولًا. ويسمي المختبِر هذا مشكلة في الواجهة.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "القرار",
+      "items": [
+        [
+          "tester-view",
+          "'سأزيل تثبيت كل هذا الآن لأنه غير ذي صلة. لا أحتاج أداة بحث أخرى ولا محرك بحث ولا واجهة أخرى للعمل مع النماذج المحلية. لدي الكثير منها.'",
+          null
+        ],
+        [
+          "tester-view",
+          "أراد شريطًا جانبيًا للصفحات التي يتصفحها، يطرح فيه أسئلة ويحصل على إجابات من نموذج محلي، وأحيانًا من الإنترنت، وينتقل بين الصفحات لإنجاز المهام مثل الشريط الجانبي لـ ⁦Claude⁩. 'هذا ليس شريطًا جانبيًا. هذا متصفح جديد.'",
+          null
+        ],
+        [
+          "tester-view",
+          "'في الوقت الحالي، سأبقى مع إضافة ⁦Claude⁩ لـ ⁦Chrome⁩. هناك أستطيع فعل كل شيء.'",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "الشريط الجانبي: ⁦'can be opened on any webpage'⁩",
+      "قائمة ميزات ⁦README⁩",
+      "توجد لوحة جانبية وقد عرضت دردشة. وتُفتح بالنقر بزر الماوس الأيمن لا من أيقونة شريط الأدوات. ولم يعمل اختصار فيديو الترحيب مع المختبِر.",
+      "observed"
+    ],
+    [
+      "واجهة الويب: ⁦'like a ChatGPT website'⁩",
+      "قائمة ميزات ⁦README⁩",
+      "فُتحت واجهة دردشة بملء الصفحة. وأعادت دردشتان مع ⁦gemma4:latest⁩ ردودًا فارغة.",
+      "observed"
+    ],
+    [
+      "الدردشة مع صفحة الويب: ⁦'ask questions about the content'⁩",
+      "قائمة ميزات ⁦README⁩",
+      "نجح عدّ الكلمات. ولم تُفهم صفحة ⁦Search Console⁩، ولم يتبع السياق تغيّر الصفحة.",
+      "observed"
+    ],
+    [
+      "يُبنى لـ ⁦Chrome⁩ و⁦Edge⁩ و⁦Firefox⁩",
+      "⁦README⁩",
+      "استُخدم ⁦Chrome⁩ فقط. ولم يُختبر ⁦Edge⁩ ولا ⁦Firefox⁩.",
+      "observed"
+    ],
+    [
+      "⁦Featured⁩، و⁦4.8⁩ نجوم، و⁦245⁩ تقييمًا، و⁦200,000⁩ مستخدم",
+      "صفحة ⁦Chrome Web Store⁩",
+      "شوهد كما هو مذكور في تاريخ الاختبار. لم يُتحقَّق.",
+      "third-party"
+    ],
+    [
+      "⁦Page Action⁩ (⁦Beta⁩): الأداة تعمل على الصفحة",
+      "قائمة الإعدادات",
+      "لم يستطع المختبِر جعله يمرّر الصفحة أو ينقر عليها. ولا يُسجَّل هل كان مفعّلًا.",
+      "observed"
+    ],
+    [
+      "يحتاج إلى ⁦Ollama⁩ أو نقطة نهاية متوافقة مع ⁦OpenAI⁩",
+      "متطلبات ⁦README⁩",
+      "كان ⁦Ollama⁩ قيد التشغيل وجرى اكتشافه. ولم تُجرَّب نقاط نهاية أخرى.",
+      "observed"
+    ]
+  ],
+  "usage_log": [
+    [
+      "استنساخ المستودع",
+      "-",
+      "اكتمل",
+      "غير مسجَّل",
+      "Pass",
+      []
+    ],
+    [
+      "⁦bun install⁩",
+      "-",
+      "التشغيل الأول: ⁦'command not found: bun'⁩ (⁦PATH⁩). وبعد ⁦'exec /bin/zsh'⁩ عمل نحو دقيقة",
+      "نحو ⁦1⁩ دقيقة",
+      "Partial",
+      []
+    ],
+    [
+      "بناء الإضافة وتحميلها",
+      "-",
+      "عملت الإضافة (خطوات البناء غير مفصّلة في الملاحظات)",
+      "غير مسجَّل",
+      "Pass",
+      [
+        "webui_full"
+      ]
+    ],
+    [
+      "فتح الإضافة من شريط الأدوات",
+      "-",
+      "واجهة ويب بملء الشاشة لا شريط جانبي",
+      "-",
+      "Partial",
+      [
+        "webui_full",
+        "settings"
+      ]
+    ],
+    [
+      "التثبيت من ⁦Chrome Web Store⁩",
+      "-",
+      "ظهر مربع الحوار؛ وأُضيفت الإضافة (تستخدم اللقطات اللاحقة معرّف المتجر)",
+      "غير مسجَّل",
+      "Pass",
+      [
+        "store_dialog"
+      ]
+    ],
+    [
+      "الدردشة في واجهة الويب",
+      "⁦gemma4:latest⁩",
+      "ردّان فارغان ⁦'Thought for 0ms'⁩",
+      "-",
+      "Fail",
+      [
+        "chat_empty1",
+        "chat_empty2"
+      ]
+    ],
+    [
+      "فتح الشريط الجانبي بـ ⁦Ctrl+Shift+Y⁩",
+      "-",
+      "لم يعمل",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "فتح الشريط الجانبي من قائمة النقر بزر الماوس الأيمن",
+      "-",
+      "عمل بعد أن أشار إليه ⁦ChatGPT⁩",
+      "غير مسجَّل",
+      "Pass",
+      [
+        "sidebar_home"
+      ]
+    ],
+    [
+      "أول سؤال في اللوحة الجانبية",
+      "⁦gemma4:latest⁩",
+      "لا جواب، مؤشر فقط؛ وأُصلح بعد ⁦'some more clicks'⁩ (السبب غير مسجَّل)",
+      "-",
+      "Partial",
+      [
+        "sidebar_wait"
+      ]
+    ],
+    [
+      "عدّ الكلمات في الصفحة",
+      "غير مسجَّل",
+      "عدّها جيدًا، بحسب المختبِر",
+      "غير مسجَّل",
+      "Pass",
+      []
+    ],
+    [
+      "السؤال عن ⁦CTR⁩ في صفحة ⁦Search Console⁩",
+      "⁦qwen3-coder:30b⁩",
+      "الرد: لا توجد معلومات عن ⁦CTR⁩ في السياق",
+      "-",
+      "Fail",
+      [
+        "gsc_fail"
+      ]
+    ],
+    [
+      "العثور على تعليمات في موقع",
+      "غير مسجَّل",
+      "فشل",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "الانتقال إلى صفحة أخرى والسؤال مجددًا",
+      "غير مسجَّل",
+      "بقي سياق الصفحة القديمة (انطباع المختبِر)",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "⁦Page Action⁩: التمرير أو النقر في الصفحة",
+      "غير مسجَّل",
+      "لم يستطع التمرير؛ وحالة المفتاح غير مسجَّلة",
+      "-",
+      "Fail",
+      [
+        "sidebar_home"
+      ]
+    ],
+    [
+      "القراءة بصوت عالٍ",
+      "-",
+      "صامتة؛ والإعداد غير مسجَّل",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "إضافة خادم ⁦MCP⁩ من الدردشة",
+      "-",
+      "الزر لا يقود إلى شيء ما لم يُعدّ في الإعدادات",
+      "-",
+      "Partial",
+      []
+    ],
+    [
+      "إزالة التثبيت",
+      "-",
+      "مخطط لها؛ ولا يُسجَّل هل تمت",
+      "-",
+      "Not completed",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "فاته رابط ⁦Chrome Web Store⁩ في ⁦README⁩ فسلك مسار المصدر الأطول أولًا. ويقول المختبِر ذلك بنفسه."
+    ],
+    [
+      "tester-error",
+      "بحث عن الشريط الجانبي عبر أيقونة شريط الأدوات، وهي تفتح الواجهة بملء الشاشة، ولم يجد مسار النقر بزر الماوس الأيمن زمنًا طويلًا. وذكر فيديو الترحيب في المنتج نفسه اختصارًا لم يعمل، فالإغفال مشترك."
+    ],
+    [
+      "assumption",
+      "ربما كان ⁦Page Action⁩ و⁦WebMCP⁩ متوقفين أثناء اختبار النقر والتمرير. وتُظهر لقطة الشاشة الوحيدة كليهما غير مفعّل. وإن كان كذلك فهذه الملاحظة إغفال في الإعداد لا حدّ في المنتج."
+    ],
+    [
+      "assumption",
+      "تخلط المقارنة مع ⁦Claude in Chrome⁩ بين الإضافة والنموذج: شغّل ⁦Page Assist⁩ نماذج محلية (⁦gemma4:latest⁩ و⁦qwen3-coder:30b⁩، وهو نموذج موجَّه للبرمجة باسمه)، بينما يشغّل ⁦Claude in Chrome⁩ نموذجًا سحابيًا. ويقول ⁦README⁩ إن ⁦Page Assist⁩ يستطيع استخدام نقاط نهاية متوافقة مع ⁦OpenAI⁩؛ ولم تُجرَّب أي منها. وقد يعود جزء من الفجوة إلى النموذج."
+    ],
+    [
+      "tester-error",
+      "ترك ثغرات في السجل: إصدارات الإضافة و⁦Chrome⁩ و⁦Ollama⁩ و⁦macOS⁩؛ والنموذج المستخدم في كل اختبار بعد اللقطات الأولى؛ وما الذي أصلح الرد العالق؛ والصفحة المستخدمة في عدّ الكلمات واختبار تبديل الصفحة."
+    ],
+    [
+      "tester-view",
+      "وصف المختبِر إضافته ⁦PromptQuorum Optimizer⁩ بأنها شريط جانبي 'يعمل'. أما لقطة الشاشة فتُظهر نافذة منبثقة في شريط الأدوات كانت غير متصلة في تلك اللحظة. لذلك فنقطة المقارنة أضعف مما ذُكر."
+    ]
+  ],
+  "findings": [
+    [
+      "PA-01",
+      "⁦README⁩ فيه خطوات واضحة للبناء من المصدر (⁦git clone⁩ و⁦bun install⁩ و⁦bun run build⁩) لكنه يحتاج إلى طرفية و⁦Bun⁩ و⁦Ollama⁩.",
+      "التثبيت",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "PA-02",
+      "رابط ⁦Chrome Web Store⁩ مذكور أدنى في ⁦README⁩؛ وفاته الرابط فسلك مسار المصدر.",
+      "التثبيت",
+      "observed",
+      "Medium",
+      [
+        "store_dialog"
+      ]
+    ],
+    [
+      "PA-03",
+      "⁦'bun: command not found'⁩ بعد تثبيت ⁦Bun⁩ حتى أُعيد تحميل الصدفة (مسألة تخص ⁦Bun⁩ و⁦PATH⁩ لا ⁦Page Assist⁩ نفسه).",
+      "التثبيت",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-04",
+      "تفتح أيقونة شريط الأدوات واجهة ويب بملء الشاشة لا شريطًا جانبيًا. ويُفتح الشريط الجانبي من قائمة النقر بزر الماوس الأيمن.",
+      "البدء",
+      "observed",
+      "High",
+      [
+        "webui_full",
+        "sidebar_home"
+      ]
+    ],
+    [
+      "PA-05",
+      "لم يعمل مع المختبِر الاختصار المذكور في فيديو الترحيب (جرّب ⁦Ctrl+Shift+Y⁩).",
+      "البدء",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "PA-06",
+      "يطلب التثبيت من المتجر قراءة جميع البيانات وتغييرها في جميع المواقع وعرض الإشعارات.",
+      "الثقة",
+      "observed",
+      "Medium",
+      [
+        "store_dialog"
+      ]
+    ],
+    [
+      "PA-07",
+      "أعادت دردشتان مع ⁦gemma4:latest⁩ ردودًا فارغة ⁦'Thought for 0ms'⁩. لم يُعزل السبب.",
+      "الوظيفة الأساسية",
+      "observed",
+      "High",
+      [
+        "chat_empty1",
+        "chat_empty2"
+      ]
+    ],
+    [
+      "PA-08",
+      "أظهر أول سؤال في اللوحة الجانبية مؤشرًا فقط، دون أي دلالة على إمكانية الوصول إلى النموذج. وعمل بعد ⁦'some more clicks'⁩.",
+      "الوظيفة الأساسية",
+      "observed",
+      "Medium",
+      [
+        "sidebar_wait"
+      ]
+    ],
+    [
+      "PA-09",
+      "عدّت ميزة ⁦'Chat with current page'⁩ كلمات صفحة بشكل صحيح، بحسب المختبِر.",
+      "الوظيفة الأساسية",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "PA-10",
+      "في صفحة ⁦Search Console⁩ قال الرد إنه لا توجد معلومات عن ⁦CTR⁩، مع أن الصفحة تعرض بطاقة ⁦CTR⁩.",
+      "الوظيفة الأساسية",
+      "observed",
+      "High",
+      [
+        "gsc_fail"
+      ]
+    ],
+    [
+      "PA-11",
+      "لم يتبع السياق تغيّر الصفحة، بحسب انطباع المختبِر. لم يُلتقط، وعدد المحاولات غير مسجَّل.",
+      "الوظيفة الأساسية",
+      "tester-view",
+      "High",
+      []
+    ],
+    [
+      "PA-12",
+      "فشل طلب العثور على تعليمات في موقع.",
+      "الوظيفة الأساسية",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "PA-13",
+      "لم يستطع ⁦Page Action⁩ التمرير ولا النقر. ولا يُسجَّل هل كان مفعّلًا.",
+      "الوظيفة الأساسية",
+      "observed",
+      "High",
+      [
+        "sidebar_home"
+      ]
+    ],
+    [
+      "PA-14",
+      "تسرد إعدادات النموذج معاملات كثيرة؛ وفي النص الملصق لا يحمل وصفًا إلا ⁦Keep Alive⁩ و⁦Seed⁩.",
+      "تجربة الاستخدام",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-15",
+      "زر ⁦'Add MCP server'⁩ في الدردشة لا يفعل شيئًا ظاهرًا إلى أن يُعدّ خادم في الإعدادات.",
+      "تجربة الاستخدام",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-16",
+      "كانت القراءة بصوت عالٍ صامتة؛ وحالة الإعداد غير مسجَّلة.",
+      "تجربة الاستخدام",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-17",
+      "آخر تحديث للمستودع في ⁦4⁩ أكتوبر ⁦2026⁩، بحسب المختبِر (لم يُلتقط).",
+      "الصيانة",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "PA-18",
+      "صفحة المتجر: ⁦Featured⁩، و⁦4.8⁩ نجوم من ⁦245⁩ تقييمًا، و⁦200,000⁩ مستخدم. لم يُتحقَّق.",
+      "الثقة",
+      "third-party",
+      "Positive",
+      [
+        "store_dialog"
+      ]
+    ]
+  ],
+  "severity_note": "درجة الخطورة هي الأثر على مستخدم يجرّب التطبيق للمرة الأولى. مقترحة وغير مقيسة.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "مستخدمو ⁦Ollama⁩ الذين يريدون واجهة دردشة بملء الصفحة ولا يزعجهم التعامل مع الإعدادات، وقد يجدون اللوحة الجانبية عبر قائمة النقر بزر الماوس الأيمن."
+      ],
+      [
+        "assumption",
+        "من يريدون دردشة محلية مع الصفحة الحالية ويقبلون أنها قد تخطئ الصفحات الكثيفة بالبيانات."
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "كل من يتوقع وكيلًا في شريط جانبي ينتقل بين الصفحات بالنقر مثل ⁦Claude in Chrome⁩."
+      ],
+      [
+        "assumption",
+        "من لا يريدون فتح طرفية: يستخدمون نسخة المتجر بدل البناء من المصدر."
+      ]
+    ],
+    "retest": "أعد الاختبار مع تفعيل ⁦Page Action⁩ و⁦WebMCP⁩ وتسجيل ذلك، ومع نموذج واحد لكل اختبار، وبتجربة الصفحة نفسها على نموذج أكبر أو سحابي. ولا يخطط المختبِر لذلك، فهو يزيل التثبيت."
+  },
+  "background_intro": "ليس جزءًا من جلسة الاختبار العملي؛ لم يُتحقَّق.",
+  "background": [
+    [
+      "third-party",
+      "مقال على ⁦aihubmix.com⁩، يُستخلص عنوانه من رابطه على أنه '⁦Page Assist in practice⁩: ⁦four everyday browser workflows with local and cloud models⁩'، يرتبط بمراجعة ⁦PromptQuorum⁩ لـ ⁦Page Assist⁩. ولم يُراجَع محتواه لهذا الاختبار."
+    ]
+  ],
+  "sources": [
+    "ملاحظات المختبِر العملية، ⁦8⁩ إلى ⁦9⁩ أكتوبر ⁦2026⁩ (المستند الأصلي؛ سيُضاف ملف ⁦PDF⁩ للملاحظات الخام).",
+    "ملف ⁦README⁩ وخطوات التثبيت وقائمة الميزات في ⁦github.com/n4ze3m/page-assist⁩، كما لصقها المختبِر.",
+    "صفحة ⁦Chrome Web Store⁩ ومربع حوار التثبيت، كما ظهرا في لقطة شاشة المختبِر.",
+    "مقال ⁦aihubmix.com⁩ (العنوان مذكور في ملاحظات المختبِر)، لم يُراجَع."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "ملاحَظ",
+      "meaning": "شوهد مباشرة في التطبيق أو في لقطة شاشة أو في ملاحظات المختبِر."
+    },
+    "measured": {
+      "label": "مقيس",
+      "meaning": "قيمة قُرئت من مربع حوار أو عدّاد أو أداة، مع ذكر الرقم."
+    },
+    "tester-estimate": {
+      "label": "تقدير المختبِر",
+      "meaning": "تقدير المختبِر نفسه؛ دون قياس زمني أو عدّ."
+    },
+    "vendor-claim": {
+      "label": "ادعاء الجهة المصنِّعة",
+      "meaning": "ورد في التطبيق أو صفحته في المتجر أو موقعه؛ لم يُتحقَّق منه."
+    },
+    "third-party": {
+      "label": "مصدر خارجي",
+      "meaning": "من مصدر آخر (مساعد ذكاء اصطناعي أو مقال)؛ لم يُتحقَّق منه هنا."
+    },
+    "assumption": {
+      "label": "افتراض",
+      "meaning": "استنتاج. وقد يكون خاطئًا."
+    },
+    "tester-view": {
+      "label": "رأي المختبِر",
+      "meaning": "حكم المختبِر أو رأيه."
+    },
+    "tester-error": {
+      "label": "خطأ المختبِر",
+      "meaning": "حيث أخطأ المختبِر أو فاته شيء."
+    }
+  },
+  "images": [
+    {
+      "id": "gsc_fail",
+      "figure": 1,
+      "file": "page-assist-side-panel-search-console-no-ctr-found.webp",
+      "path": "images/page-assist-side-panel-search-console-no-ctr-found.webp",
+      "alt": "لوحة ⁦Page Assist⁩ الجانبية بجوار صفحة ⁦Search Console⁩؛ ويقول رد ⁦qwen3-coder:30b⁩ إن المحتوى المقدَّم لا يتضمن معلومات عن ⁦CTR⁩.",
+      "caption": "صفحة الأداء في ⁦Search Console⁩ وبجوارها ⁦Page Assist⁩. يقول الرد إن السياق المقدَّم لا يتضمن أي معلومات عن ⁦CTR⁩، ويصف الصفحة بأنها ⁦'a graphical representation of time intervals on a timeline'⁩. وتعرض الصفحة نفسها بطاقة متوسط ⁦CTR⁩ (⁦1.5%⁩). سؤال المختبِر غير ظاهر. وتُظهر لقطة الشاشة مقاييس موقع المختبِر نفسه.",
+      "role": "hero",
+      "width": 1535,
+      "height": 566,
+      "bytes": 63586,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI. Shows the tester's own Search Console figures.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image9.png"
+    },
+    {
+      "id": "webui_full",
+      "figure": 2,
+      "file": "page-assist-web-ui-opens-full-screen-ollama-running.webp",
+      "path": "images/page-assist-web-ui-opens-full-screen-ollama-running.webp",
+      "alt": "واجهة ويب ⁦Page Assist⁩ مفتوحة في علامة تبويب كاملة: ⁦Ollama is running⁩، ومحدّدا نموذج ومطالبة فارغان، وصندوق رسالة في الأسفل.",
+      "caption": "ما تفتحه أيقونة شريط الأدوات: واجهة دردشة بملء الصفحة (هنا النسخة المبنية من المصدر). جرى اكتشاف ⁦Ollama⁩ ولم يُحدَّد نموذج بعد. شريط الإشارات المرجعية وصورة الملف الشخصي مطموسان.",
+      "role": "moment",
+      "width": 1269,
+      "height": 733,
+      "bytes": 17884,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-opens",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image1.png"
+    },
+    {
+      "id": "settings",
+      "figure": 3,
+      "file": "page-assist-settings-menu-chrome-ai-page-action-webmcp.webp",
+      "path": "images/page-assist-settings-menu-chrome-ai-page-action-webmcp.webp",
+      "alt": "قائمة إعدادات ⁦Page Assist⁩: ⁦General⁩ و⁦Pipeline⁩ و⁦Ollama⁩ و⁦Chrome AI⁩ و⁦MCP Servers⁩ و⁦Page Action⁩ و⁦WebMCP⁩ و⁦Memory⁩ و⁦Manage Models⁩ وغيرها.",
+      "caption": "قائمة الإعدادات في النسخة المبنية من المصدر. يعرض ⁦'Chrome AI Settings'⁩ تنزيل ⁦Gemini Nano⁩ (نحو ⁦4 GB⁩) مع مفتاح تبديل متوقف. وتحمل ⁦MCP Servers⁩ و⁦Page Action⁩ و⁦WebMCP⁩ و⁦Memory⁩ شارة ⁦Beta⁩. شريط الإشارات المرجعية وصورة الملف الشخصي مطموسان.",
+      "role": "inline",
+      "width": 1596,
+      "height": 722,
+      "bytes": 35920,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-opens"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image2.png"
+    },
+    {
+      "id": "store_dialog",
+      "figure": 4,
+      "file": "page-assist-chrome-web-store-install-dialog.webp",
+      "path": "images/page-assist-chrome-web-store-install-dialog.webp",
+      "alt": "صفحة ⁦Page Assist⁩ في ⁦Chrome Web Store⁩ مع مربع حوار ⁦Add extension⁩: قراءة جميع البيانات وتغييرها في جميع المواقع، وعرض الإشعارات.",
+      "caption": "صفحة ⁦Chrome Web Store⁩: ⁦Featured⁩، و⁦4.8⁩ نجوم من ⁦245⁩ تقييمًا، و⁦200,000⁩ مستخدم (أرقام المتجر، لم يُتحقَّق منها). ويسرد مربع حوار التثبيت ⁦'Read and change all your data on all websites'⁩ و⁦'Display notifications'⁩. عناوين علامات التبويب والإشارات المرجعية وصورة الملف الشخصي مخفية.",
+      "role": "moment",
+      "width": 1428,
+      "height": 650,
+      "bytes": 35064,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-store",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image3.png"
+    },
+    {
+      "id": "chat_empty1",
+      "figure": 5,
+      "file": "page-assist-chat-gemma4-reply-empty-thought-0ms.webp",
+      "path": "images/page-assist-chat-gemma4-reply-empty-thought-0ms.webp",
+      "alt": "دردشة ⁦Page Assist⁩ مع ⁦gemma4:latest⁩: يسأل المستخدم عمّا يفعله ⁦Page Assist⁩؛ والرد صندوق ⁦Thought for 0ms⁩ مطوي بلا نص جواب.",
+      "caption": "أول دردشة في نسخة المتجر. يسأل المستخدم ماذا يفعل ⁦Page Assist⁩ فعلًا ويقول إنه توقع شريطًا جانبيًا. والرد صندوق ⁦'Thought for 0ms'⁩ فقط. مفتاحا تبديل في الأسفل في وضع ⁦On⁩؛ ولم يُفحص معناهما. شريط الإشارات المرجعية وصورة الملف الشخصي مطموسان.",
+      "role": "inline",
+      "width": 1598,
+      "height": 726,
+      "bytes": 45716,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-chat"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image4.png"
+    },
+    {
+      "id": "chat_empty2",
+      "figure": 6,
+      "file": "page-assist-chat-second-empty-reply-thought-0ms.webp",
+      "path": "images/page-assist-chat-second-empty-reply-thought-0ms.webp",
+      "alt": "دردشة ⁦Page Assist⁩: بعد أن يكتب المستخدم ⁦Okay⁩, ⁦where's my answer⁩?، يعرض ⁦gemma4:latest⁩ مرة أخرى صندوق ⁦Thought for 0ms⁩ مطويًا فقط.",
+      "caption": "المحاولة الثانية. كلا ردَّي ⁦gemma4:latest⁩ صندوقان فارغان ⁦'Thought for 0ms'⁩. ولم يُعزل السبب.",
+      "role": "moment",
+      "width": 1024,
+      "height": 436,
+      "bytes": 10120,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-chat",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image5.png"
+    },
+    {
+      "id": "pq_popup",
+      "figure": 7,
+      "file": "promptquorum-optimizer-popup-offline-own-extension.webp",
+      "path": "images/promptquorum-optimizer-popup-offline-own-extension.webp",
+      "alt": "نافذة شريط الأدوات المنبثقة لإضافة ⁦PromptQuorum Optimizer⁩ الخاصة بالمختبِر تعرض ⁦PromptQuorum offline⁩ وحقل مطالبة فارغًا.",
+      "caption": "ليست ⁦Page Assist⁩. هذه إضافة ⁦PromptQuorum Optimizer⁩ الخاصة بالمختبِر، معروضة للمقارنة. وهي نافذة منبثقة في شريط الأدوات في حالة عدم اتصال (⁦'Start the PromptQuorum desktop app to enable optimization'⁩)؛ وتسميها الملاحظات شريطه الجانبي. وقُصّت الصفحة المحيطة.",
+      "role": "inline",
+      "width": 408,
+      "height": 428,
+      "bytes": 15586,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-sidebar"
+      ],
+      "subject": "Screenshot of the tester's own PromptQuorum Optimizer extension (not Page Assist)",
+      "rights": "Tester's own screenshot of the tester's own software.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image6.png"
+    },
+    {
+      "id": "sidebar_wait",
+      "figure": 8,
+      "file": "page-assist-side-panel-no-answer-after-question.webp",
+      "path": "images/page-assist-side-panel-no-answer-after-question.webp",
+      "alt": "لوحة ⁦Page Assist⁩ الجانبية في ⁦Chrome⁩: سأل المستخدم ⁦what does the text talk about⁩؛ ويعرض ⁦gemma4:latest⁩ مؤشرًا وامضًا فقط، بلا جواب.",
+      "caption": "أول سؤال في اللوحة الجانبية: ⁦'what does the text talk about'⁩. النموذج الظاهر: ⁦gemma4:latest⁩. ويظهر مؤشر فقط. ثم تحقق المختبِر هل يعمل النموذج المحلي. وقُصّت صفحة المقال (من طرف ثالث) المجاورة للوحة.",
+      "role": "inline",
+      "width": 698,
+      "height": 714,
+      "bytes": 13118,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-sidebar-use"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image7.png"
+    },
+    {
+      "id": "sidebar_home",
+      "figure": 9,
+      "file": "page-assist-side-panel-start-screen-chat-with-current-page.webp",
+      "path": "images/page-assist-side-panel-start-screen-chat-with-current-page.webp",
+      "alt": "الشاشة الأولى للوحة ⁦Page Assist⁩ الجانبية: النموذج ⁦qwen3-coder:30b⁩، و⁦Chat with current page⁩ مفعّل، و⁦Page Action⁩ و⁦WebMCP⁩ غير مفعّلين.",
+      "caption": "الشاشة الأولى للوحة الجانبية مع تحديد ⁦qwen3-coder:30b⁩. خيار ⁦'Chat with current page'⁩ مفعّل؛ أما ⁦'Page Action'⁩ و⁦'Page tools (WebMCP)'⁩ فغير مفعّلين في لقطة الشاشة هذه.",
+      "role": "moment",
+      "width": 693,
+      "height": 580,
+      "bytes": 8832,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-sidebar-use",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image8.png"
+    }
+  ],
+  "figure_order": [
+    "gsc_fail",
+    "webui_full",
+    "settings",
+    "store_dialog",
+    "chat_empty1",
+    "chat_empty2",
+    "pq_popup",
+    "sidebar_wait",
+    "sidebar_home"
+  ],
+  "ui": {
+    "kicker": "اختبار ⁦PromptQuorum⁩ العملي · {app} · {date}",
+    "date_line": "⁦8⁩ إلى ⁦9⁩ أكتوبر ⁦2026⁩",
+    "nav_aria": "الأقسام",
+    "nav": {
+      "verdict": "الحكم",
+      "moments": "خمس لحظات",
+      "story": "كيف جرى الاختبار",
+      "claims": "الادعاءات",
+      "fit": "⁦24 GB⁩",
+      "log": "سجل الاستخدام",
+      "errors": "أخطاء المختبر",
+      "findings": "الملاحظات",
+      "background": "الخلفية"
+    },
+    "related": "ذات صلة:",
+    "review_link": "مراجعة ⁦PromptQuorum⁩ لـ {app}",
+    "directory_link": "دليل تطبيقات الذكاء الاصطناعي المحلية",
+    "verdict_h": "الحكم",
+    "general_assessment": "التقييم العام",
+    "fit_for_tester": "الملاءمة لاستخدام المختبر",
+    "scorecard": "بطاقة الدرجات",
+    "status_prefix": "الحالة:",
+    "na": "غير متاح",
+    "score_aria": "{n} من ⁦5⁩",
+    "details_h": "تفاصيل الاختبار",
+    "label_intro": "كل عبارة تحمل وسمًا:",
+    "legend_link": "معنى الوسوم",
+    "disclosure_label": "الإفصاح.",
+    "raw_notes": "ملف ⁦PDF⁩ للملاحظات الخام:",
+    "to_be_added": "سيُضاف",
+    "moments_h": "ست لحظات شكّلت هذا الاختبار",
+    "see_context": "اطّلع عليها في سياقها",
+    "story_h": "كيف جرى الاختبار",
+    "claims_h": "الادعاءات مقابل ما رآه المختبر",
+    "claims_cols": [
+      "الادعاء",
+      "المصدر",
+      "المُلاحَظ",
+      "الوسم"
+    ],
+    "fit_h": "هل يتسع في ⁦24 GB⁩؟",
+    "memory_line": "ذاكرة {gb} ⁦GB⁩",
+    "above": "أعلى من {gb} ⁦GB⁩",
+    "below": "أدنى من {gb} ⁦GB⁩",
+    "log_h": "سجل الاستخدام",
+    "log_cols": [
+      "#",
+      "المهمة",
+      "النموذج",
+      "النتيجة",
+      "الزمن",
+      "الحالة",
+      "الأشكال"
+    ],
+    "statuses": {
+      "Fail": "فشل",
+      "Partial": "جزئي",
+      "Pass": "نجاح",
+      "Not completed": "لم يكتمل"
+    },
+    "errors_h": "أين أخطأ المختبر",
+    "findings_h": "سجل الملاحظات",
+    "filter_aria": "تصفية الملاحظات حسب الوسم",
+    "filter_all": "الكل",
+    "findings_cols": [
+      "المعرّف",
+      "الملاحظة",
+      "الفئة",
+      "الوسم",
+      "الخطورة",
+      "الأشكال"
+    ],
+    "severities": {
+      "High": "عالية",
+      "Medium": "متوسطة",
+      "Low": "منخفضة",
+      "Positive": "إيجابية"
+    },
+    "fig_abbr": "شكل",
+    "figure": "شكل",
+    "enlarge": "تكبير:",
+    "audience_h": "لمن هو مناسب",
+    "likely_fit": "ملاءمة محتملة",
+    "likely_poor_fit": "ملاءمة ضعيفة محتملة",
+    "retest": "إعادة الاختبار.",
+    "background_h": "خلفية عن الجهة المطوّرة",
+    "gallery_h": "المزيد من الاختبار",
+    "legend_h": "كيف تُقرأ الوسوم",
+    "sources_h": "المصادر",
+    "footer_line": "معرّف الاختبار {id} · معيار الاختبار ⁦v⁩{version} · ملف ⁦PDF⁩ للملاحظات الخام: سيُضاف",
+    "crumb_home": "الرئيسية",
+    "crumb_directory": "الدليل",
+    "crumb_test": "اختبار {app} العملي"
+  }
+}

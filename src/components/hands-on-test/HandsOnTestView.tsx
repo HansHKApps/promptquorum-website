@@ -39,11 +39,12 @@ export function HandsOnTestView({ test, lang }: { test: HandsOnTest; lang: Langu
             <a href={`#fig-${f}`} className="text-primary underline">{ui.fig_abbr} {figNo[f]}</a>
           </span>
         ))
-  const maxGb = test.fit.scale ?? 60
+  const fit = test.fit
+  const maxGb = fit?.scale ?? 60
   const momentsTitle = test.moments_title ?? ui.moments_h
   const momentsNav = test.moments_nav ?? ui.nav.moments
-  const fitTitle = test.fit.title ?? ui.fit_h
-  const fitNav = test.fit.nav ?? ui.nav.fit
+  const fitTitle = fit?.title ?? ui.fit_h
+  const fitNav = fit?.nav ?? ui.nav.fit
   const hasBackground = test.background.length > 0
 
   return (
@@ -56,7 +57,7 @@ export function HandsOnTestView({ test, lang }: { test: HandsOnTest; lang: Langu
         <p className="mt-4 max-w-2xl text-lg text-text-secondary">{test.dek}</p>
         <nav aria-label={ui.nav_aria} className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
           {(Object.keys(ui.nav) as (keyof typeof ui.nav)[])
-            .filter((id) => id !== 'background' || hasBackground)
+            .filter((id) => (id !== 'background' || hasBackground) && (id !== 'fit' || fit))
             .map((id) => [id, id === 'moments' ? momentsNav : id === 'fit' ? fitNav : ui.nav[id]])
             .map(([id, label]) => (
             <a key={id} href={`#${id}`} className="border-b border-border pb-0.5 text-text-primary hover:border-primary hover:text-primary">{label}</a>
@@ -198,34 +199,36 @@ export function HandsOnTestView({ test, lang }: { test: HandsOnTest; lang: Langu
         </div>
       </section>
 
-      <section id="fit">
-        <h2 className={H2}>{fitTitle}</h2>
-        <div className="relative rounded-md border border-border bg-white px-5 pb-5 pt-11">
-          <div
-            className="pointer-events-none absolute bottom-4 top-9 border-l-2 border-dashed border-text-primary"
-            style={{ insetInlineStart: `calc(1.25rem + (100% - 2.5rem) * ${test.fit.memory_gb / maxGb})` }}
-          >
-            <span className="absolute -top-6 start-1.5 whitespace-nowrap font-mono text-xs uppercase">{test.fit.memline ?? fill(ui.memory_line, { gb: test.fit.memory_gb })}</span>
+      {fit && (
+        <section id="fit">
+          <h2 className={H2}>{fitTitle}</h2>
+          <div className="relative rounded-md border border-border bg-white px-5 pb-5 pt-11">
+            <div
+              className="pointer-events-none absolute bottom-4 top-9 border-l-2 border-dashed border-text-primary"
+              style={{ insetInlineStart: `calc(1.25rem + (100% - 2.5rem) * ${fit.memory_gb / maxGb})` }}
+            >
+              <span className="absolute -top-6 start-1.5 whitespace-nowrap font-mono text-xs uppercase">{fit.memline ?? fill(ui.memory_line, { gb: fit.memory_gb })}</span>
+            </div>
+            <ul className="space-y-4">
+              {fit.rows.map(([name, gb, label, k]) => {
+                const over = gb > fit.memory_gb
+                return (
+                  <li key={name} className="grid gap-1">
+                    <span className="font-semibold text-text-primary">{name}</span>
+                    <span className="block h-5 rounded bg-slate-200">
+                      <span className={`block h-full rounded ${over ? 'bg-red-600' : 'bg-emerald-600'}`} style={{ width: `${(gb / maxGb) * 100}%` }} />
+                    </span>
+                    <span className="text-sm text-text-muted">
+                      {label} <em className="mx-1.5 font-mono text-xs uppercase not-italic text-text-primary">{over ? (fit.above ?? fill(ui.above, { gb: fit.memory_gb })) : (fit.below ?? fill(ui.below, { gb: fit.memory_gb }))}</em> {chip(k)}
+                    </span>
+                  </li>
+                )
+              })}
+            </ul>
           </div>
-          <ul className="space-y-4">
-            {test.fit.rows.map(([name, gb, label, k]) => {
-              const over = gb > test.fit.memory_gb
-              return (
-                <li key={name} className="grid gap-1">
-                  <span className="font-semibold text-text-primary">{name}</span>
-                  <span className="block h-5 rounded bg-slate-200">
-                    <span className={`block h-full rounded ${over ? 'bg-red-600' : 'bg-emerald-600'}`} style={{ width: `${(gb / maxGb) * 100}%` }} />
-                  </span>
-                  <span className="text-sm text-text-muted">
-                    {label} <em className="mx-1.5 font-mono text-xs uppercase not-italic text-text-primary">{over ? (test.fit.above ?? fill(ui.above, { gb: test.fit.memory_gb })) : (test.fit.below ?? fill(ui.below, { gb: test.fit.memory_gb }))}</em> {chip(k)}
-                  </span>
-                </li>
-              )
-            })}
-          </ul>
-        </div>
-        <p className="mt-3 text-sm text-text-muted">{test.fit.note}</p>
-      </section>
+          <p className="mt-3 text-sm text-text-muted">{fit.note}</p>
+        </section>
+      )}
 
       <section id="log">
         <h2 className={H2}>{ui.log_h}</h2>

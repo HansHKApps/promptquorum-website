@@ -1,0 +1,1250 @@
+{
+  "id": "pq-test-page-assist-2026-10-08",
+  "hero": "gsc_fail",
+  "date_human": "8 y 9 de octubre de 2026",
+  "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+  "standard_version": "0.1",
+  "locale": "es",
+  "app": {
+    "name": "Page Assist",
+    "slug": "page-assist",
+    "vendor": "Not recorded (repository: github.com/n4ze3m/page-assist)",
+    "category": "Extensión de navegador: interfaz web y barra lateral para modelos de IA locales (Ollama)",
+    "platform": "Extensión de Chrome (también compilada para Edge y Firefox, según el README)",
+    "pricing_url": null
+  },
+  "title": "Page Assist en un Mac de 24 GB: se encontró la barra lateral, no entendió la página",
+  "page_title": "Page Assist Test",
+  "dek": "Prueba práctica de la extensión de navegador basada en Ollama en un Mac con M3 Pro. El icono de la barra de herramientas abrió una página a pantalla completa en lugar de una barra lateral. Una vez encontrada la barra lateral, contó palabras, pero no leyó una página de Search Console ni actuó sobre una página.",
+  "status": "Abandoned",
+  "published": "2026-10-09",
+  "started": "2026-10-08",
+  "ended": "2026-10-09",
+  "meta": [
+    [
+      "App",
+      "Page Assist, 'A Web UI for Local AI Models': una extensión de Chrome con barra lateral, una interfaz web a pantalla completa y 'chat with webpage' (github.com/n4ze3m/page-assist)",
+      "observed"
+    ],
+    [
+      "Versión",
+      "No registrada (ni la de la extensión ni la de Chrome, Ollama o macOS)",
+      null
+    ],
+    [
+      "Evaluador",
+      "Hans Kuepper, fundador de PromptQuorum",
+      null
+    ],
+    [
+      "Inicio",
+      "8 de octubre de 2026, 11:00 (zona horaria no indicada; se supone la local, Alemania)",
+      "observed"
+    ],
+    [
+      "Fin",
+      "9 de octubre de 2026, 19:00. Tiempo transcurrido: unas 32 horas; el tiempo de prueba activo no se registró.",
+      "observed"
+    ],
+    [
+      "Hardware",
+      "MacBook Pro, Apple M3 Pro, 24 GB de memoria unificada (las notas dicen 'M3 24 GB')",
+      "observed"
+    ],
+    [
+      "Sistema",
+      "macOS, versión vigente en la fecha de la prueba; versión exacta no registrada. Navegador: Chrome.",
+      null
+    ],
+    [
+      "Vías de instalación",
+      "Dos. Primero compilada desde el código fuente (git, Bun, 'load unpacked'). Más tarde instalada desde la Chrome Web Store.",
+      "observed"
+    ],
+    [
+      "Modelos locales",
+      "Ollama, en ejecución. Modelos vistos en las capturas: gemma4:latest y qwen3-coder:30b.",
+      "observed"
+    ],
+    [
+      "Por qué se probó",
+      "Al evaluador le gusta el concepto de barra lateral, usa Claude in Chrome a diario y creó una barra lateral para la app de PromptQuorum.",
+      "observed"
+    ],
+    [
+      "Objetivo",
+      "'El objetivo principal era la barra lateral y ver qué puede hacer la barra lateral.'",
+      "observed"
+    ],
+    [
+      "Ayuda de IA usada",
+      "Un asistente de IA para la configuración de Bun (no se nombra en las notas); ChatGPT para encontrar la barra lateral.",
+      "observed"
+    ]
+  ],
+  "disclosure": "El evaluador fundó PromptQuorum (promptquorum.com), un sitio de contenido y directorio sobre apps de IA local. PromptQuorum ya publica una reseña de Page Assist (las notas dicen 'my Page Assist review'); esta prueba se basa únicamente en la sesión del propio evaluador. El evaluador ha creado herramientas competidoras (una barra lateral para la app de PromptQuorum y una extensión de Chrome, PromptQuorum Optimizer) y usa Claude in Chrome, un producto de Anthropic, como vara de medir. Las notas no recogen ningún contacto con el autor de Page Assist, ningún pago ni ningún patrocinio.",
+  "verdict": {
+    "general": "Una interfaz con muchas funciones para modelos locales, con ajustes para modelos, conocimiento, prompts, servidores MCP, Page Action, WebMCP y memoria. El icono de la barra de herramientas abre una página de chat a pantalla completa; el evaluador encontró el panel lateral solo más tarde, mediante un clic derecho y con ayuda de ChatGPT. En el panel lateral, contar las palabras de una página funcionó. No entendió una página de Search Console, falló una búsqueda en un sitio web, el contexto no siguió a un cambio de página y el evaluador no logró que Page Action se desplazara ni hiciera clic. Dos chats iniciales con gemma4:latest devolvieron respuestas vacías. Como los modelos variaron entre pruebas, aquí no se pueden separar la extensión y el modelo.",
+    "fit": "No para su uso. Quería una barra lateral que funcione como Claude in Chrome: recibir una tarea, navegar por las páginas, introducir datos. Solo vio un chat y piensa desinstalarla. 'Por ahora, me quedo con la extensión Claude Chrome.'"
+  },
+  "scores": [
+    [
+      "Instalación",
+      3,
+      "La instalación desde la tienda es un único cuadro de diálogo. El README empieza con una compilación desde el código fuente que requiere Bun y una terminal; el primer intento del evaluador falló por el PATH y el enlace a la tienda aparece más abajo en la página."
+    ],
+    [
+      "Primeros pasos y facilidad de descubrimiento",
+      2,
+      "El icono de la barra de herramientas abre una página a pantalla completa, a la barra lateral se llega de otra forma y el atajo que menciona el vídeo de bienvenida no le funcionó."
+    ],
+    [
+      "Función principal",
+      2,
+      "Contar palabras funcionó. Una página de Search Console, la búsqueda en un sitio, el contexto entre páginas y Page Action no. Dos chats iniciales devolvieron respuestas vacías."
+    ],
+    [
+      "Guía e iteración",
+      2,
+      "Ajustes de modelo potentes, con descripción solo en dos de los campos pegados. Un botón 'Add MCP server' no lleva a ninguna parte hasta que se configura en los ajustes."
+    ],
+    [
+      "Rendimiento",
+      null,
+      "No medido. No se registraron tiempos."
+    ],
+    [
+      "Documentación",
+      3,
+      "Los pasos del README son claros para quien usa la terminal. La lista de funciones promete una barra lateral, una interfaz web y chat con la página web. El atajo del vídeo de bienvenida no funcionó."
+    ],
+    [
+      "Confianza y privacidad",
+      null,
+      "No auditado. El cuadro de la tienda pide permiso para leer y modificar todos los datos en todos los sitios web; no se probó si los datos permanecen en local."
+    ],
+    [
+      "Desinstalación",
+      null,
+      "El evaluador piensa desinstalarla. No se registra si lo hizo."
+    ]
+  ],
+  "scores_note": "Las puntuaciones son propuestas derivadas de las evidencias que aparecen más abajo (1 = malo, 5 = muy bueno). Corresponde al evaluador confirmarlas.",
+  "tldr": [
+    [
+      "observed",
+      "El icono de la barra de herramientas abre una página a pantalla completa, no una barra lateral. El evaluador encontró el panel lateral mediante un clic derecho, tras la ayuda de ChatGPT. Ctrl+Shift+Y, del vídeo de bienvenida, no le funcionó."
+    ],
+    [
+      "observed",
+      "En el panel lateral, contar palabras de una página funcionó. No entendió una página de Search Console (respuesta: sin información de CTR), falló una búsqueda en un sitio y el contexto no siguió a un cambio de página."
+    ],
+    [
+      "tester-view",
+      "Va a desinstalarla. Quería una barra lateral que actúe como Claude in Chrome y obtuvo un chat. 'La barra lateral sería el premio gordo.'"
+    ]
+  ],
+  "quotes": [
+    "Hay como rastros de la barra lateral en los ajustes, pero la barra lateral de verdad sería el premio gordo. Lo demás es otra interfaz con otra funcionalidad.",
+    "Espero que en el futuro Page Assist se acerque a este nivel de soporte."
+  ],
+  "quote_note": "Notas del evaluador, editadas ligeramente a partir de una transcripción de voz. Traducido del inglés.",
+  "moments_title": "Cinco momentos que marcaron esta prueba",
+  "moments_md": "Cinco momentos",
+  "moments_nav": "Cinco momentos",
+  "moments": [
+    [
+      "Pantalla completa, no barra lateral",
+      "El icono de la barra de herramientas abre una interfaz de chat a página completa. A la barra lateral que quería el evaluador se llega de otra forma.",
+      "webui_full",
+      "chapter-opens"
+    ],
+    [
+      "El enlace a la tienda que pasó por alto",
+      "Compiló desde el código fuente antes de ver el enlace a la Chrome Web Store, más abajo en el README. La página de la tienda muestra 4.8 estrellas con 245 valoraciones y 200,000 usuarios.",
+      "store_dialog",
+      "chapter-store"
+    ],
+    [
+      "'Thought for 0ms', sin respuesta",
+      "Dos preguntas a gemma4:latest devolvieron dos cuadros de respuesta vacíos.",
+      "chat_empty2",
+      "chapter-chat"
+    ],
+    [
+      "La barra lateral estaba a un clic derecho",
+      "Tras fallar un primer intento y con la ayuda de ChatGPT, el evaluador encontró el panel lateral en el menú contextual. Su pantalla de inicio ofrece Chat with current page, Page Action y WebMCP.",
+      "sidebar_home",
+      "chapter-sidebar"
+    ],
+    [
+      "Una página que no pudo leer, una acción que no pudo realizar",
+      "No entendió una página de Search Console. El contexto no siguió a un cambio de página. Page Action ni siquiera pudo desplazarse.",
+      null,
+      "chapter-page"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-why",
+      "title": "Por qué esta app",
+      "items": [
+        [
+          "tester-view",
+          "'Qué idea tan interesante tener básicamente una barra lateral.' Creó una barra lateral para la app de PromptQuorum y le resulta útil para conectarse a un modelo local. También usa la extensión Claude Chrome 'siempre que estoy perdido'.",
+          null
+        ],
+        [
+          "observed",
+          "Objetivo en sus palabras: la barra lateral y lo que puede hacer.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-install",
+      "title": "Instalación desde el código fuente",
+      "items": [
+        [
+          "vendor-claim",
+          "El README (pegado por el evaluador) enumera los requisitos previos: Bun, Ollama o cualquier endpoint compatible con OpenAI, como LM Studio o llamafile. Pasos: git clone, bun install, bun run build ('by default it will build for Chrome, Edge and Firefox') y luego cargar el directorio de compilación como extensión sin empaquetar. Una nota indica usar npm si Bun da problemas.",
+          null
+        ],
+        [
+          "tester-view",
+          "'Muy directo, pero no para quien no soporta las terminales.'",
+          null
+        ],
+        [
+          "observed",
+          "git clone se completó (14,361 objetos, 9.93 MiB). El primer 'bun install' falló con 'zsh: command not found: bun'. El evaluador preguntó a un asistente de IA, que dijo que la instalación de Bun había funcionado y que la terminal no había cargado el PATH actualizado; la solución fue 'exec /bin/zsh'.",
+          null
+        ],
+        [
+          "observed",
+          "Después la instalación 'tardó un rato', alrededor de un minuto en la terminal, y la extensión funcionó. El paso 'load unpacked' no se describe en las notas.",
+          null
+        ],
+        [
+          "assumption",
+          "El ID de la extensión en la barra de direcciones de las primeras capturas (ofcf...) difiere del de la versión de la tienda (jfgf...), lo que es coherente con una compilación sin empaquetar. No confirmado.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-opens",
+      "title": "Primer arranque: una página a pantalla completa",
+      "items": [
+        [
+          "observed",
+          "Al hacer clic en la extensión se abre 'Page Assist - A Web UI for Local AI Models' como una pestaña completa del navegador. Muestra 'Ollama is running', selectores de modelo y de prompt vacíos y un cuadro de mensaje.",
+          "webui_full"
+        ],
+        [
+          "tester-view",
+          "'Se vende como barra lateral, pero no es una barra lateral.'",
+          null
+        ],
+        [
+          "observed",
+          "El menú de ajustes es largo: General, Pipeline, Ollama, Chrome AI, OpenAI Compatible API, MCP Servers, Page Action, WebMCP, Memory, Manage Models, Manage Knowledge, Manage Prompts, Manage Share, About. Varios llevan una insignia Beta. 'Chrome AI Settings' ofrece una descarga de Gemini Nano de unos 4 GB con un interruptor desactivado.",
+          "settings"
+        ],
+        [
+          "tester-view",
+          "'Los ajustes del sistema tienen un aspecto muy impresionante.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-store",
+      "title": "La vía de la Chrome Web Store",
+      "items": [
+        [
+          "observed",
+          "El README enumera el enlace a la Chrome Web Store más abajo en la página. El evaluador no lo vio y tomó la vía del código fuente. 'Estaba más abajo y lo pasé por alto.'",
+          null
+        ],
+        [
+          "observed",
+          "El cuadro de instalación indica que la extensión puede 'Read and change all your data on all websites' y 'Display notifications'.",
+          "store_dialog"
+        ],
+        [
+          "third-party",
+          "La ficha de la tienda muestra 'Featured', 4.8 estrellas con 245 valoraciones y 200,000 usuarios, tal como se veía en la fecha de la prueba. No verificado.",
+          null
+        ],
+        [
+          "observed",
+          "Según el evaluador, la última actualización del repositorio fue el 4 de octubre de 2026, cuatro días antes de la prueba. No se captó en una captura de pantalla.",
+          null
+        ],
+        [
+          "tester-view",
+          "'Esta descarga de la extensión de Chrome, qué fácil comparada con GitHub.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-chat",
+      "title": "Primeros chats: respuestas vacías",
+      "items": [
+        [
+          "observed",
+          "En la versión de la tienda el evaluador escribió: 'Okay, I'm principle lost. Can you tell me what page assist actually does?' y explicó que esperaba una barra lateral junto a una página web. Modelo: gemma4:latest. La respuesta es un cuadro 'Thought for 0ms' plegado, sin texto de respuesta.",
+          "chat_empty1"
+        ],
+        [
+          "observed",
+          "Preguntó 'Okay, where's my answer?'. La segunda respuesta fue de nuevo un cuadro 'Thought for 0ms' vacío.",
+          "chat_empty2"
+        ],
+        [
+          "assumption",
+          "La causa no está aislada. El modelo, los interruptores de razonamiento o la conexión con Ollama podrían influir cada uno. No se probó.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-sidebar",
+      "title": "En busca de la barra lateral",
+      "items": [
+        [
+          "observed",
+          "Apareció una ventana de bienvenida con un vídeo. Según el evaluador, mostraba que esta no es una extensión que abre una barra lateral que se apodere del navegador, y decía que hace falta un atajo para abrirla. El evaluador probó Ctrl+Shift+Y. No funcionó. El vídeo en sí no está en las notas.",
+          null
+        ],
+        [
+          "observed",
+          "Encontró 'sort of traces of the sidebar in the settings' (en la lista de ajustes pegada figura un ajuste Sidebar Position). No pudo abrirla.",
+          null
+        ],
+        [
+          "observed",
+          "La lista de funciones del README, pegada por el evaluador, dice: Sidebar ('can be opened on any webpage'), Web UI ('like a ChatGPT website') y Chat With Webpage.",
+          null
+        ],
+        [
+          "observed",
+          "A modo de comparación mostró su propia extensión PromptQuorum Optimizer: una ventana emergente de la barra de herramientas que estaba sin conexión ('Start the PromptQuorum desktop app to enable optimization'). Las notas la llaman su barra lateral y dicen 'it works'; la captura muestra el estado sin conexión.",
+          "pq_popup"
+        ],
+        [
+          "observed",
+          "Un artículo en aihubmix.com, encontrado a través de sus alertas de Ahrefs, hacía referencia a su reseña de Page Assist y le dio energía para intentarlo de nuevo. El evaluador no ha dicho si leyó el artículo.",
+          null
+        ],
+        [
+          "observed",
+          "Trabajó con ChatGPT y averiguó que no existe un interruptor para la barra lateral. En su Mac, en Chrome, el panel lateral se abre con un clic derecho sobre la página; al hacer clic en el icono de la extensión se abre la interfaz a pantalla completa, 'una función totalmente distinta'.",
+          null
+        ],
+        [
+          "assumption",
+          "La lista de ajustes tiene además dos entradas Beta, 'Set Default Action for Extension Icon Clicks' y 'Set Default action for Context Menu'. Podrían controlar este comportamiento. No se probó.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-sidebar-use",
+      "title": "Uso de la barra lateral",
+      "items": [
+        [
+          "observed",
+          "La primera pregunta en el panel lateral fue 'what does the text talk about'. Modelo mostrado: gemma4:latest. No apareció ninguna respuesta, solo un cursor.",
+          "sidebar_wait"
+        ],
+        [
+          "observed",
+          "El evaluador compara: su propia app de Chrome comprueba cada 20 segundos si el modelo local está accesible. Aquí nada le indicaba si el modelo funcionaba. 'Ahora tengo que averiguar si el LLM local funciona o cuál es el problema.'",
+          null
+        ],
+        [
+          "observed",
+          "Tras 'some more clicks' funcionó. Las notas no dicen qué lo arregló. Las capturas posteriores muestran qwen3-coder:30b seleccionado en lugar de gemma4:latest.",
+          "sidebar_home"
+        ],
+        [
+          "assumption",
+          "Cambiar de modelo pudo ser la solución. No se indica en las notas.",
+          null
+        ],
+        [
+          "observed",
+          "La pantalla de inicio muestra 'Chat with current page' marcado, y 'Page Action' y 'Page tools (WebMCP)' sin marcar.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-page",
+      "title": "Lectura de páginas y acciones sobre ellas",
+      "items": [
+        [
+          "observed",
+          "Le pidió que contara las palabras de la página. 'Contó bien.' Qué página y qué modelo: no registrado.",
+          null
+        ],
+        [
+          "observed",
+          "En la página de rendimiento de Search Console, la respuesta decía que el contexto proporcionado no contenía información de CTR y describía el contenido como una representación gráfica de intervalos de tiempo en una línea temporal (parte superior de esa página). La página muestra una tarjeta de CTR medio de 1.5%. El evaluador resume: 'no pudo leer los datos, no los entendió'.",
+          null
+        ],
+        [
+          "assumption",
+          "Es posible que el contenido dinámico de gráficos y tarjetas no llegue al modelo como texto. Una ventana de contexto pequeña también podría influir. Ninguna de las dos cosas se probó.",
+          null
+        ],
+        [
+          "observed",
+          "Le pidió que encontrara instrucciones en un sitio web. 'Y no. Falló.'",
+          null
+        ],
+        [
+          "tester-view",
+          "'Si cargas una página nueva, el sistema no la entiende y sigue trabajando con la página anterior.' Lo llama un problema de actualización y concluye que saltar de una página a otra no es posible. Número de intentos y páginas usadas: no registrado; no se captó en una captura de pantalla.",
+          null
+        ],
+        [
+          "observed",
+          "Encontró un ajuste que sugiere que la herramienta puede hacer clic, buscar y rellenar datos (Page Action). 'Nada de eso': no consiguió ni siquiera que se desplazara por la página.",
+          null
+        ],
+        [
+          "assumption",
+          "No se registra si Page Action o WebMCP estaban activados durante esa prueba. En la captura ambos están desactivados. Si lo estaban, se trata de un fallo de configuración y no de un límite del producto.",
+          null
+        ],
+        [
+          "tester-view",
+          "'Parece que ahora solo funciona la función de chat, sin manipulación activa como con la extensión Claude Chrome.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-ui",
+      "title": "Detalles de la interfaz",
+      "items": [
+        [
+          "observed",
+          "La lectura en voz alta estuvo en silencio. No se registra si el texto a voz estaba activado y si se eligió una voz.",
+          null
+        ],
+        [
+          "observed",
+          "El panel 'Current Chat Model Settings' enumera Keep Alive, Temperature, Seed, Context Window Size (num_ctx), Max Tokens (num_predict), Top K, Top P, Num GPU, Min P, Repeat Penalty, Repeat Last N, TFS-Z, Num Keep, Num Thread, useMmap, useMlock y Reasoning Effort. En el texto pegado por el evaluador solo Keep Alive y Seed tienen una línea de descripción. No se revisaron los tooltips.",
+          null
+        ],
+        [
+          "tester-view",
+          "'Excelentes ajustes de modelo, pero sin explicaciones, así que la mayoría no sabrá qué es todo esto.'",
+          null
+        ],
+        [
+          "observed",
+          "El botón 'Add MCP server' del chat no hace nada visible; espera que antes se haya añadido un servidor en los ajustes. El evaluador lo califica de problema de interfaz.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "Decisión",
+      "items": [
+        [
+          "tester-view",
+          "'Voy a desinstalar todo esto ahora porque no es relevante. No necesito otra herramienta de búsqueda, otro buscador ni otra interfaz para trabajar con LLM locales. Tengo muchas.'",
+          null
+        ],
+        [
+          "tester-view",
+          "Quería una barra lateral junto a las páginas por las que navega, donde hacer preguntas y recibir respuestas de un modelo local, a veces de internet, y que recorra tareas haciendo clic como la barra lateral de Claude. 'Esto no es una barra lateral. Esto es un navegador nuevo.'",
+          null
+        ],
+        [
+          "tester-view",
+          "'Por ahora, me quedo con la extensión Claude Chrome. Con ella puedo hacerlo todo.'",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "Sidebar: 'can be opened on any webpage'",
+      "Lista de funciones del README",
+      "Existe un panel lateral y mostró un chat. Se abre con un clic derecho, no con el icono de la barra de herramientas. El atajo del vídeo de bienvenida no le funcionó al evaluador.",
+      "observed"
+    ],
+    [
+      "Web UI: 'like a ChatGPT website'",
+      "Lista de funciones del README",
+      "Se abrió una interfaz de chat a página completa. Dos chats con gemma4:latest devolvieron respuestas vacías.",
+      "observed"
+    ],
+    [
+      "Chat With Webpage: 'ask questions about the content'",
+      "Lista de funciones del README",
+      "Contar palabras funcionó. No entendió una página de Search Console y el contexto no siguió a un cambio de página.",
+      "observed"
+    ],
+    [
+      "Builds for Chrome, Edge and Firefox",
+      "README",
+      "Solo se usó Chrome. Edge y Firefox no se probaron.",
+      "observed"
+    ],
+    [
+      "Featured, 4.8 stars, 245 ratings, 200,000 users",
+      "Ficha de la Chrome Web Store",
+      "Visto tal como se indica en la fecha de la prueba. No verificado.",
+      "third-party"
+    ],
+    [
+      "Page Action (Beta): la herramienta actúa sobre la página",
+      "Menú de ajustes",
+      "El evaluador no logró que se desplazara ni hiciera clic. No se registra si estaba activada.",
+      "observed"
+    ],
+    [
+      "Needs Ollama or an OpenAI-compatible endpoint",
+      "Requisitos previos del README",
+      "Ollama estaba en ejecución y fue detectado. No se probaron otros endpoints.",
+      "observed"
+    ]
+  ],
+  "usage_log": [
+    [
+      "Clonar el repositorio",
+      "-",
+      "Completado",
+      "No registrado",
+      "Pass",
+      []
+    ],
+    [
+      "bun install",
+      "-",
+      "Primera ejecución: 'command not found: bun' (PATH). Tras 'exec /bin/zsh' se ejecutó durante aproximadamente un minuto",
+      "Aprox. 1 min",
+      "Partial",
+      []
+    ],
+    [
+      "Compilar y cargar la extensión",
+      "-",
+      "La extensión funcionó (los pasos de compilación no se detallan en las notas)",
+      "No registrado",
+      "Pass",
+      [
+        "webui_full"
+      ]
+    ],
+    [
+      "Abrir la extensión desde la barra de herramientas",
+      "-",
+      "Interfaz web a pantalla completa, no una barra lateral",
+      "-",
+      "Partial",
+      [
+        "webui_full",
+        "settings"
+      ]
+    ],
+    [
+      "Instalar desde la Chrome Web Store",
+      "-",
+      "Cuadro mostrado; extensión añadida (las capturas posteriores usan el ID de la tienda)",
+      "No registrado",
+      "Pass",
+      [
+        "store_dialog"
+      ]
+    ],
+    [
+      "Chatear en la interfaz web",
+      "gemma4:latest",
+      "Dos respuestas 'Thought for 0ms' vacías",
+      "-",
+      "Fail",
+      [
+        "chat_empty1",
+        "chat_empty2"
+      ]
+    ],
+    [
+      "Abrir la barra lateral con Ctrl+Shift+Y",
+      "-",
+      "No funcionó",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "Abrir la barra lateral desde el menú contextual",
+      "-",
+      "Funcionó después de que ChatGPT lo indicara",
+      "No registrado",
+      "Pass",
+      [
+        "sidebar_home"
+      ]
+    ],
+    [
+      "Primera pregunta en el panel lateral",
+      "gemma4:latest",
+      "Sin respuesta, solo un cursor; se arregló tras 'some more clicks' (causa no registrada)",
+      "-",
+      "Partial",
+      [
+        "sidebar_wait"
+      ]
+    ],
+    [
+      "Contar palabras de la página",
+      "No registrado",
+      "Contó bien, según el evaluador",
+      "No registrado",
+      "Pass",
+      []
+    ],
+    [
+      "Preguntar por el CTR en una página de Search Console",
+      "qwen3-coder:30b",
+      "Respuesta: no hay información de CTR en el contexto",
+      "-",
+      "Fail",
+      [
+        "gsc_fail"
+      ]
+    ],
+    [
+      "Encontrar instrucciones en un sitio web",
+      "No registrado",
+      "Falló",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "Pasar a otra página y volver a preguntar",
+      "No registrado",
+      "El contexto de la página anterior se mantuvo (impresión del evaluador)",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "Page Action: desplazarse o hacer clic en la página",
+      "No registrado",
+      "No pudo desplazarse; estado del interruptor no registrado",
+      "-",
+      "Fail",
+      [
+        "sidebar_home"
+      ]
+    ],
+    [
+      "Lectura en voz alta",
+      "-",
+      "Silenciosa; ajuste no registrado",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "Añadir un servidor MCP desde el chat",
+      "-",
+      "El botón no lleva a ninguna parte hasta que se configura en los ajustes",
+      "-",
+      "Partial",
+      []
+    ],
+    [
+      "Desinstalar",
+      "-",
+      "Prevista; no se registra si se hizo",
+      "-",
+      "Not completed",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "Pasó por alto el enlace a la Chrome Web Store en el README y tomó primero la vía más larga del código fuente. El propio evaluador lo reconoce."
+    ],
+    [
+      "tester-error",
+      "Buscó la barra lateral mediante el icono de la barra de herramientas, que abre la interfaz a pantalla completa, y tardó mucho en encontrar la vía del clic derecho. El propio vídeo de bienvenida del producto mencionaba un atajo que no funcionó, así que el fallo es compartido."
+    ],
+    [
+      "assumption",
+      "Page Action y WebMCP pudieron estar desactivados durante la prueba de clic y desplazamiento. La única captura muestra ambos sin marcar. Si fue así, ese hallazgo es un fallo de configuración, no un límite del producto."
+    ],
+    [
+      "assumption",
+      "La comparación con Claude in Chrome mezcla extensión y modelo: Page Assist ejecutó modelos locales (gemma4:latest, qwen3-coder:30b, un modelo orientado a código por su nombre), mientras que Claude in Chrome ejecuta un modelo en la nube. El README dice que Page Assist puede usar endpoints compatibles con OpenAI; no se probó ninguno. La diferencia puede deberse en parte al modelo."
+    ],
+    [
+      "tester-error",
+      "Dejó lagunas en el registro: versiones de la extensión, Chrome, Ollama y macOS; el modelo usado en cada prueba después de las primeras capturas; qué arregló la respuesta bloqueada; la página usada para el recuento de palabras y para la prueba de cambio de página."
+    ],
+    [
+      "tester-view",
+      "El evaluador llamó a su propio PromptQuorum Optimizer una barra lateral que 'funciona'. La captura muestra una ventana emergente de la barra de herramientas que en ese momento estaba sin conexión. El punto de comparación es por tanto más débil de lo indicado."
+    ]
+  ],
+  "findings": [
+    [
+      "PA-01",
+      "La README tiene pasos claros para compilar desde el código fuente (git clone, bun install, bun run build), pero requiere una terminal, Bun y Ollama.",
+      "Instalación",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "PA-02",
+      "El enlace a la Chrome Web Store aparece más abajo en el README; el evaluador no lo vio y tomó la vía del código fuente.",
+      "Instalación",
+      "observed",
+      "Medium",
+      [
+        "store_dialog"
+      ]
+    ],
+    [
+      "PA-03",
+      "'bun: command not found' tras instalar Bun hasta que se recargó el shell (una cuestión de Bun y del PATH, no de Page Assist en sí).",
+      "Instalación",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-04",
+      "El icono de la barra de herramientas abre una interfaz web a pantalla completa, no una barra lateral. La barra lateral se abre desde el menú contextual.",
+      "Primeros pasos",
+      "observed",
+      "High",
+      [
+        "webui_full",
+        "sidebar_home"
+      ]
+    ],
+    [
+      "PA-05",
+      "El atajo mencionado en el vídeo de bienvenida (probado: Ctrl+Shift+Y) no le funcionó al evaluador.",
+      "Primeros pasos",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "PA-06",
+      "La instalación desde la tienda pide permiso para leer y modificar todos los datos en todos los sitios web y mostrar notificaciones.",
+      "Confianza",
+      "observed",
+      "Medium",
+      [
+        "store_dialog"
+      ]
+    ],
+    [
+      "PA-07",
+      "Dos chats con gemma4:latest devolvieron respuestas 'Thought for 0ms' vacías. Causa no aislada.",
+      "Función principal",
+      "observed",
+      "High",
+      [
+        "chat_empty1",
+        "chat_empty2"
+      ]
+    ],
+    [
+      "PA-08",
+      "La primera pregunta del panel lateral mostró solo un cursor, sin indicar si el modelo estaba accesible. Funcionó tras 'some more clicks'.",
+      "Función principal",
+      "observed",
+      "Medium",
+      [
+        "sidebar_wait"
+      ]
+    ],
+    [
+      "PA-09",
+      "Chat with current page contó correctamente las palabras de una página, según el evaluador.",
+      "Función principal",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "PA-10",
+      "En una página de Search Console, la respuesta dijo que no había información de CTR, aunque la página muestra una tarjeta de CTR.",
+      "Función principal",
+      "observed",
+      "High",
+      [
+        "gsc_fail"
+      ]
+    ],
+    [
+      "PA-11",
+      "El contexto no siguió a un cambio de página, según la impresión del evaluador. No se captó; intentos no registrados.",
+      "Función principal",
+      "tester-view",
+      "High",
+      []
+    ],
+    [
+      "PA-12",
+      "Una petición para encontrar instrucciones en un sitio web falló.",
+      "Función principal",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "PA-13",
+      "Page Action no pudo desplazarse ni hacer clic. No se registra si estaba activada.",
+      "Función principal",
+      "observed",
+      "High",
+      [
+        "sidebar_home"
+      ]
+    ],
+    [
+      "PA-14",
+      "Los ajustes del modelo enumeran muchos parámetros; en el texto pegado solo Keep Alive y Seed tienen descripción.",
+      "UX",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-15",
+      "El botón 'Add MCP server' del chat no hace nada visible hasta que se configura un servidor en los ajustes.",
+      "UX",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-16",
+      "La lectura en voz alta estuvo en silencio; el estado del ajuste no se registra.",
+      "UX",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-17",
+      "Repositorio actualizado por última vez el 4 de octubre de 2026, según el evaluador (no captado).",
+      "Mantenimiento",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "PA-18",
+      "Ficha de la tienda: Featured, 4.8 estrellas con 245 valoraciones, 200,000 usuarios. No verificado.",
+      "Confianza",
+      "third-party",
+      "Positive",
+      [
+        "store_dialog"
+      ]
+    ]
+  ],
+  "severity_note": "La gravedad es el impacto sobre quien usa la app por primera vez. Propuesta, no medida.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "Usuarios de Ollama que quieran una interfaz de chat a página completa, se sientan cómodos con los ajustes y quizá encuentren el panel lateral mediante el menú contextual."
+      ],
+      [
+        "assumption",
+        "Personas que quieran un chat local con la página actual y acepten que puede fallar con páginas cargadas de datos."
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "Quien espere un agente en barra lateral que recorra páginas haciendo clic como Claude in Chrome."
+      ],
+      [
+        "assumption",
+        "Personas que no quieran abrir una terminal: usar la versión de la tienda en lugar de la compilación desde el código fuente."
+      ]
+    ],
+    "retest": "Volver a probar con Page Action y WebMCP activados y registrados, con un modelo por prueba y probando la misma página con un modelo mayor o basado en la nube. El evaluador, que la va a desinstalar, no lo tiene previsto."
+  },
+  "background_intro": "No forma parte de la sesión práctica; no verificado.",
+  "background": [
+    [
+      "third-party",
+      "Un artículo en aihubmix.com, con un título tomado de su dirección como 'Page Assist in practice: four everyday browser workflows with local and cloud models', enlaza a la reseña de Page Assist de PromptQuorum. Su contenido no se revisó para esta prueba."
+    ]
+  ],
+  "sources": [
+    "Notas de la prueba práctica del evaluador, 8 y 9 de octubre de 2026 (documento original; el PDF de las notas originales se añadirá).",
+    "README de github.com/n4ze3m/page-assist, pasos de instalación y lista de funciones, tal como las pegó el evaluador.",
+    "Ficha de la Chrome Web Store y cuadro de instalación, tal como se ven en la captura del evaluador.",
+    "Artículo de aihubmix.com (dirección indicada en las notas del evaluador), no revisado."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "Observado",
+      "meaning": "Visto de primera mano en la app, en una captura o en las notas del evaluador."
+    },
+    "measured": {
+      "label": "Medido",
+      "meaning": "Un valor leído en un cuadro de diálogo, contador o herramienta, con la cifra indicada."
+    },
+    "tester-estimate": {
+      "label": "Estimación del evaluador",
+      "meaning": "La estimación propia del evaluador; sin cronometrar ni contar."
+    },
+    "vendor-claim": {
+      "label": "Afirmación del fabricante",
+      "meaning": "Declarado por la app, su ficha de la tienda o su sitio web; no verificado."
+    },
+    "third-party": {
+      "label": "Fuente externa",
+      "meaning": "Procede de otra fuente (un asistente de IA, un artículo); no verificado aquí."
+    },
+    "assumption": {
+      "label": "Suposición",
+      "meaning": "Una inferencia. Puede ser errónea."
+    },
+    "tester-view": {
+      "label": "Opinión del evaluador",
+      "meaning": "El juicio o la opinión del evaluador."
+    },
+    "tester-error": {
+      "label": "Error del evaluador",
+      "meaning": "Donde el evaluador se equivocó o pasó algo por alto."
+    }
+  },
+  "images": [
+    {
+      "id": "gsc_fail",
+      "figure": 1,
+      "file": "page-assist-side-panel-search-console-no-ctr-found.webp",
+      "path": "images/page-assist-side-panel-search-console-no-ctr-found.webp",
+      "alt": "Panel lateral de Page Assist junto a una página de Search Console; la respuesta de qwen3-coder:30b dice que el contenido proporcionado no tiene información de CTR.",
+      "caption": "Página de rendimiento de Search Console con Page Assist al lado. La respuesta dice que el contexto proporcionado no contiene información de CTR y describe la página como 'a graphical representation of time intervals on a timeline'. La propia página muestra una tarjeta de CTR medio (1.5%). La pregunta del evaluador no es visible. La captura muestra las métricas del propio sitio del evaluador.",
+      "role": "hero",
+      "width": 1535,
+      "height": 566,
+      "bytes": 63586,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI. Shows the tester's own Search Console figures.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image9.png"
+    },
+    {
+      "id": "webui_full",
+      "figure": 2,
+      "file": "page-assist-web-ui-opens-full-screen-ollama-running.webp",
+      "path": "images/page-assist-web-ui-opens-full-screen-ollama-running.webp",
+      "alt": "Interfaz web de Page Assist abierta en una pestaña completa: 'Ollama is running', selectores de modelo y prompt vacíos y un cuadro de mensaje abajo.",
+      "caption": "Lo que abre el icono de la barra de herramientas: una interfaz de chat a página completa (aquí, la versión compilada desde el código fuente). Ollama se detecta; todavía no hay ningún modelo seleccionado. Barra de marcadores y foto de perfil difuminadas.",
+      "role": "moment",
+      "width": 1269,
+      "height": 733,
+      "bytes": 17884,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-opens",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image1.png"
+    },
+    {
+      "id": "settings",
+      "figure": 3,
+      "file": "page-assist-settings-menu-chrome-ai-page-action-webmcp.webp",
+      "path": "images/page-assist-settings-menu-chrome-ai-page-action-webmcp.webp",
+      "alt": "Menú de ajustes de Page Assist: General, Pipeline, Ollama, Chrome AI, OpenAI Compatible API, MCP Servers, Page Action, WebMCP, Memory, Manage Models y más.",
+      "caption": "Menú de ajustes de la versión compilada desde el código fuente. 'Chrome AI Settings' ofrece una descarga de Gemini Nano (unos 4 GB) con un interruptor desactivado. MCP Servers, Page Action, WebMCP y Memory llevan una insignia Beta. Barra de marcadores y foto de perfil difuminadas.",
+      "role": "inline",
+      "width": 1596,
+      "height": 722,
+      "bytes": 35920,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-opens"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image2.png"
+    },
+    {
+      "id": "store_dialog",
+      "figure": 4,
+      "file": "page-assist-chrome-web-store-install-dialog.webp",
+      "path": "images/page-assist-chrome-web-store-install-dialog.webp",
+      "alt": "Página de Page Assist en la Chrome Web Store con un cuadro 'Add extension': leer y modificar todos los datos en todos los sitios web, mostrar notificaciones.",
+      "caption": "Ficha de la Chrome Web Store: 'Featured', 4.8 estrellas con 245 valoraciones, 200,000 usuarios (cifras de la tienda, no verificadas). El cuadro de instalación indica 'Read and change all your data on all websites' y 'Display notifications'. Títulos de pestañas, marcadores y foto de perfil ocultos.",
+      "role": "moment",
+      "width": 1428,
+      "height": 650,
+      "bytes": 35064,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-store",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image3.png"
+    },
+    {
+      "id": "chat_empty1",
+      "figure": 5,
+      "file": "page-assist-chat-gemma4-reply-empty-thought-0ms.webp",
+      "path": "images/page-assist-chat-gemma4-reply-empty-thought-0ms.webp",
+      "alt": "Chat de Page Assist con gemma4:latest: el usuario pregunta qué hace Page Assist; la respuesta es un cuadro 'Thought for 0ms' plegado, sin texto de respuesta.",
+      "caption": "Primer chat en la versión de la tienda. El usuario pregunta qué hace realmente Page Assist y dice que esperaba una barra lateral. La respuesta es solo un cuadro 'Thought for 0ms'. Dos interruptores en la parte inferior están activados; no se comprobó su significado. Barra de marcadores y foto de perfil difuminadas.",
+      "role": "inline",
+      "width": 1598,
+      "height": 726,
+      "bytes": 45716,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-chat"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image4.png"
+    },
+    {
+      "id": "chat_empty2",
+      "figure": 6,
+      "file": "page-assist-chat-second-empty-reply-thought-0ms.webp",
+      "path": "images/page-assist-chat-second-empty-reply-thought-0ms.webp",
+      "alt": "Chat de Page Assist: tras escribir el usuario 'Okay, where's my answer?', gemma4:latest vuelve a mostrar solo un cuadro 'Thought for 0ms' plegado.",
+      "caption": "Segundo intento. Las dos respuestas de gemma4:latest son cuadros 'Thought for 0ms' vacíos. La causa no se aisló.",
+      "role": "moment",
+      "width": 1024,
+      "height": 436,
+      "bytes": 10120,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-chat",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image5.png"
+    },
+    {
+      "id": "pq_popup",
+      "figure": 7,
+      "file": "promptquorum-optimizer-popup-offline-own-extension.webp",
+      "path": "images/promptquorum-optimizer-popup-offline-own-extension.webp",
+      "alt": "Ventana emergente de la extensión PromptQuorum Optimizer del evaluador con 'PromptQuorum offline' y un campo de prompt vacío.",
+      "caption": "No es Page Assist. Es la propia extensión PromptQuorum Optimizer del evaluador, mostrada a modo de comparación. Es una ventana emergente de la barra de herramientas sin conexión ('Start the PromptQuorum desktop app to enable optimization'); las notas la llaman su barra lateral. La página circundante se recortó.",
+      "role": "inline",
+      "width": 408,
+      "height": 428,
+      "bytes": 15586,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-sidebar"
+      ],
+      "subject": "Screenshot of the tester's own PromptQuorum Optimizer extension (not Page Assist)",
+      "rights": "Tester's own screenshot of the tester's own software.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image6.png"
+    },
+    {
+      "id": "sidebar_wait",
+      "figure": 8,
+      "file": "page-assist-side-panel-no-answer-after-question.webp",
+      "path": "images/page-assist-side-panel-no-answer-after-question.webp",
+      "alt": "Panel lateral de Page Assist en Chrome: el usuario preguntó 'what does the text talk about'; gemma4:latest muestra solo un cursor parpadeante, sin respuesta.",
+      "caption": "Primera pregunta en el panel lateral: 'what does the text talk about'. Modelo mostrado: gemma4:latest. Solo aparece un cursor. Después el evaluador comprobó si el modelo local funcionaba. La página del artículo (de terceros) junto al panel se recortó.",
+      "role": "inline",
+      "width": 698,
+      "height": 714,
+      "bytes": 13118,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-sidebar-use"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image7.png"
+    },
+    {
+      "id": "sidebar_home",
+      "figure": 9,
+      "file": "page-assist-side-panel-start-screen-chat-with-current-page.webp",
+      "path": "images/page-assist-side-panel-start-screen-chat-with-current-page.webp",
+      "alt": "Pantalla de inicio del panel lateral de Page Assist: Ollama en ejecución, modelo qwen3-coder:30b, 'Chat with current page' marcado, Page Action y WebMCP sin marcar.",
+      "caption": "Pantalla de inicio del panel lateral con qwen3-coder:30b seleccionado. 'Chat with current page' está activado; 'Page Action' y 'Page tools (WebMCP)' están desactivados en esta captura.",
+      "role": "moment",
+      "width": 693,
+      "height": 580,
+      "bytes": 8832,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-sidebar-use",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image8.png"
+    }
+  ],
+  "figure_order": [
+    "gsc_fail",
+    "webui_full",
+    "settings",
+    "store_dialog",
+    "chat_empty1",
+    "chat_empty2",
+    "pq_popup",
+    "sidebar_wait",
+    "sidebar_home"
+  ],
+  "ui": {
+    "kicker": "Prueba práctica de PromptQuorum · {app} · {date}",
+    "date_line": "8 y 9 de octubre de 2026",
+    "nav_aria": "Secciones",
+    "nav": {
+      "verdict": "Veredicto",
+      "moments": "Cinco momentos",
+      "story": "Cómo fue",
+      "claims": "Afirmaciones",
+      "fit": "24 GB",
+      "log": "Registro de uso",
+      "errors": "Errores del evaluador",
+      "findings": "Hallazgos",
+      "background": "Contexto"
+    },
+    "related": "Relacionado:",
+    "review_link": "Reseña de {app} en PromptQuorum",
+    "directory_link": "Directorio de apps de IA local",
+    "verdict_h": "Veredicto",
+    "general_assessment": "Valoración general",
+    "fit_for_tester": "Encaje con el uso del evaluador",
+    "scorecard": "Puntuaciones",
+    "status_prefix": "Estado:",
+    "na": "n/d",
+    "score_aria": "{n} de 5",
+    "details_h": "Detalles de la prueba",
+    "label_intro": "Cada afirmación lleva una etiqueta:",
+    "legend_link": "Qué significan las etiquetas",
+    "disclosure_label": "Transparencia.",
+    "raw_notes": "PDF de las notas originales:",
+    "to_be_added": "pendiente de añadir",
+    "moments_h": "Seis momentos que marcaron esta prueba",
+    "see_context": "Verlo en contexto",
+    "story_h": "Cómo fue la prueba",
+    "claims_h": "Afirmaciones frente a lo que vio el evaluador",
+    "claims_cols": [
+      "Afirmación",
+      "Fuente",
+      "Observado",
+      "Etiqueta"
+    ],
+    "fit_h": "¿Cabe en 24 GB?",
+    "memory_line": "{gb} GB de memoria",
+    "above": "por encima de {gb} GB",
+    "below": "por debajo de {gb} GB",
+    "log_h": "Registro de uso",
+    "log_cols": [
+      "#",
+      "Tarea",
+      "Modelo",
+      "Resultado",
+      "Tiempo",
+      "Estado",
+      "Figuras"
+    ],
+    "statuses": {
+      "Fail": "Fallo",
+      "Partial": "Parcial",
+      "Pass": "Superado",
+      "Not completed": "No completado"
+    },
+    "errors_h": "Dónde se equivocó el evaluador",
+    "findings_h": "Registro de hallazgos",
+    "filter_aria": "Filtrar hallazgos por etiqueta",
+    "filter_all": "Todos",
+    "findings_cols": [
+      "ID",
+      "Hallazgo",
+      "Categoría",
+      "Etiqueta",
+      "Gravedad",
+      "Figuras"
+    ],
+    "severities": {
+      "High": "Alta",
+      "Medium": "Media",
+      "Low": "Baja",
+      "Positive": "Positiva"
+    },
+    "fig_abbr": "Fig.",
+    "figure": "Figura",
+    "enlarge": "Ampliar:",
+    "audience_h": "Para quién es",
+    "likely_fit": "Encaje probable",
+    "likely_poor_fit": "Encaje poco probable",
+    "retest": "Nueva prueba.",
+    "background_h": "Contexto sobre el desarrollador",
+    "gallery_h": "Más de la prueba",
+    "legend_h": "Cómo leer las etiquetas",
+    "sources_h": "Fuentes",
+    "footer_line": "ID de la prueba {id} · Estándar de pruebas v{version} · PDF de las notas originales: pendiente de añadir",
+    "crumb_home": "Inicio",
+    "crumb_directory": "Directorio",
+    "crumb_test": "Prueba práctica de {app}"
+  }
+}
