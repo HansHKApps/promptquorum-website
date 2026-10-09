@@ -1,4 +1,5 @@
 import type { EvidenceKey, HandsOnImage, HandsOnTest } from '@/lib/hands-on-tests'
+import type { Language } from '@/lib/blog/blogContent'
 import { EvidenceChip } from './EvidenceChip'
 import { TestFigure } from './TestFigure'
 import { FindingsTable } from './FindingsTable'
@@ -13,9 +14,16 @@ const STATUS: Record<string, string> = {
   'Not completed': 'border-slate-300 text-text-muted',
 }
 
-export function HandsOnTestView({ test }: { test: HandsOnTest }) {
+/** Fills {name} tokens in a ui string. */
+function fill(template: string, vars: Record<string, string | number>): string {
+  return template.replace(/\{(\w+)\}/g, (m, k: string) => (k in vars ? String(vars[k]) : m))
+}
+
+export function HandsOnTestView({ test, lang }: { test: HandsOnTest; lang: Language }) {
   const L = test.evidence_labels
-  const review = featureReviewUrl(test.app.slug, 'en')
+  const ui = test.ui
+  const prefix = lang === 'en' ? '' : `/${lang}`
+  const review = featureReviewUrl(test.app.slug, lang)
   const chip = (k: EvidenceKey) => <EvidenceChip kind={k} label={L[k].label} />
   const img = (id: string): HandsOnImage => test.images.find((i) => i.id === id) as HandsOnImage
   const figNo: Record<string, number> = Object.fromEntries(test.images.map((i) => [i.id, i.figure]))
@@ -28,52 +36,51 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
       : ids.map((f, i) => (
           <span key={f}>
             {i > 0 && ', '}
-            <a href={`#fig-${f}`} className="text-primary underline">Fig. {figNo[f]}</a>
+            <a href={`#fig-${f}`} className="text-primary underline">{ui.fig_abbr} {figNo[f]}</a>
           </span>
         ))
   const maxGb = test.fit.scale ?? 60
-  const dateHuman = new Date(test.started).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' })
-  const momentsTitle = test.moments_title ?? 'Six moments that shaped this test'
-  const momentsNav = test.moments_nav ?? 'Six moments'
-  const fitTitle = test.fit.title ?? 'Does it fit in 24 GB?'
-  const fitNav = test.fit.nav ?? '24 GB'
+  const momentsTitle = test.moments_title ?? ui.moments_h
+  const momentsNav = test.moments_nav ?? ui.nav.moments
+  const fitTitle = test.fit.title ?? ui.fit_h
+  const fitNav = test.fit.nav ?? ui.nav.fit
   const hasBackground = test.background.length > 0
 
   return (
     <div className="space-y-0 text-text-secondary">
       <header>
         <p className="mb-3 font-mono text-xs uppercase tracking-wider text-primary">
-          PromptQuorum hands-on test · {test.app.name} · {dateHuman}
+          {fill(ui.kicker, { app: test.app.name, date: ui.date_line })}
         </p>
         <h1 className="max-w-3xl text-3xl font-bold leading-tight text-text-primary sm:text-4xl">{test.title}</h1>
         <p className="mt-4 max-w-2xl text-lg text-text-secondary">{test.dek}</p>
-        <nav aria-label="Sections" className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
-          {[
-            ['verdict', 'Verdict'], ['moments', momentsNav], ['story', 'How it went'], ['claims', 'Claims'],
-            ['fit', fitNav], ['log', 'Usage log'], ['errors', 'Tester errors'], ['findings', 'Findings'], ...(hasBackground ? [['background', 'Background']] : []),
-          ].map(([id, label]) => (
+        <nav aria-label={ui.nav_aria} className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm">
+          {(Object.keys(ui.nav) as (keyof typeof ui.nav)[])
+            .filter((id) => id !== 'background' || hasBackground)
+            .map((id) => [id, id === 'moments' ? momentsNav : id === 'fit' ? fitNav : ui.nav[id]])
+            .map(([id, label]) => (
             <a key={id} href={`#${id}`} className="border-b border-border pb-0.5 text-text-primary hover:border-primary hover:text-primary">{label}</a>
           ))}
         </nav>
         <p className="mt-3 text-sm text-text-muted">
-          Related:{' '}
+          {ui.related}{' '}
           {review && (
             <>
-              <a href={review} className="text-primary underline">PromptQuorum review of {test.app.name}</a>
+              <a href={review} className="text-primary underline">{fill(ui.review_link, { app: test.app.name })}</a>
               {' · '}
             </>
           )}
-          <a href="/directory" className="text-primary underline">Local AI app directory</a>
+          <a href={`${prefix}/directory`} className="text-primary underline">{ui.directory_link}</a>
         </p>
       </header>
 
-      <TestFigure image={hero} />
+      <TestFigure image={hero} ui={ui} />
 
       <section id="verdict">
-        <h2 className={H2}>Verdict</h2>
+        <h2 className={H2}>{ui.verdict_h}</h2>
         <div className="grid gap-4 sm:grid-cols-2">
-          <div className={CARD}><h3 className="mb-2 font-semibold text-text-primary">General assessment</h3><p>{test.verdict.general}</p></div>
-          <div className={CARD}><h3 className="mb-2 font-semibold text-text-primary">Fit for the tester&apos;s use</h3><p>{test.verdict.fit}</p></div>
+          <div className={CARD}><h3 className="mb-2 font-semibold text-text-primary">{ui.general_assessment}</h3><p>{test.verdict.general}</p></div>
+          <div className={CARD}><h3 className="mb-2 font-semibold text-text-primary">{ui.fit_for_tester}</h3><p>{test.verdict.fit}</p></div>
         </div>
         <ul className="my-5 space-y-2">
           {test.tldr.map(([k, text]) => (
@@ -81,17 +88,17 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
           ))}
         </ul>
         <div className={CARD}>
-          <h3 className="mb-3 font-semibold text-text-primary">Scorecard <span className="ml-2 font-mono text-xs uppercase text-text-muted">Status: {test.status}</span></h3>
+          <h3 className="mb-3 font-semibold text-text-primary">{ui.scorecard} <span className="ms-2 font-mono text-xs uppercase text-text-muted">{ui.status_prefix} {test.status}</span></h3>
           <ul className="space-y-3">
             {test.scores.map(([dim, score, why]) => (
               <li key={dim} className="grid gap-1 sm:grid-cols-[200px_110px_1fr] sm:items-center sm:gap-4">
                 <span className="font-semibold text-text-primary">{dim}</span>
                 <span className="flex items-center gap-2">
                   {score === null ? (
-                    <span className="font-mono text-xs text-text-muted">n/a</span>
+                    <span className="font-mono text-xs text-text-muted">{ui.na}</span>
                   ) : (
                     <>
-                      <span role="img" aria-label={`${score} out of 5`} className="inline-flex gap-0.5">
+                      <span role="img" aria-label={fill(ui.score_aria, { n: score })} className="inline-flex gap-0.5">
                         {[1, 2, 3, 4, 5].map((n) => (
                           <i key={n} className={`block h-2 w-4 rounded-sm ${n <= score ? 'bg-primary' : 'bg-slate-200'}`} />
                         ))}
@@ -109,7 +116,7 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
       </section>
 
       <section id="details">
-        <h2 className={H2}>Test details</h2>
+        <h2 className={H2}>{ui.details_h}</h2>
         <dl className="grid gap-x-8 md:grid-cols-2">
           {test.meta.map(([k, v, ev]) => (
             <div key={k} className="grid grid-cols-1 gap-1 border-b border-border py-2.5 sm:grid-cols-[110px_1fr] sm:gap-3">
@@ -119,14 +126,14 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
           ))}
         </dl>
         <p className="mt-4 flex flex-wrap items-center gap-1.5 text-sm text-text-muted">
-          <span>Every statement carries a label:</span>
+          <span>{ui.label_intro}</span>
           {(Object.keys(L) as EvidenceKey[]).map((k) => <span key={k}>{chip(k)}</span>)}
-          <a href="#legend" className="text-primary underline">What the labels mean</a>
+          <a href="#legend" className="text-primary underline">{ui.legend_link}</a>
         </p>
-        <p className="mt-4 border-l-4 border-primary bg-white px-4 py-3 text-sm"><strong>Disclosure.</strong> {test.disclosure}</p>
+        <p className="mt-4 border-l-4 border-primary bg-white px-4 py-3 text-sm"><strong>{ui.disclosure_label}</strong> {test.disclosure}</p>
         <p className="mt-4 text-sm">
-          <span className="font-semibold text-text-primary">Raw notes PDF:</span>{' '}
-          <span className="text-text-muted">to be added</span>
+          <span className="font-semibold text-text-primary">{ui.raw_notes}</span>{' '}
+          <span className="text-text-muted">{ui.to_be_added}</span>
         </p>
       </section>
 
@@ -141,20 +148,20 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
                 <span className="flex flex-col gap-1.5 p-4 text-sm">
                   <strong className="text-lg leading-tight text-text-primary">{title}</strong>
                   <span>{text}</span>
-                  <em className="font-mono text-xs uppercase not-italic tracking-wide text-primary">See it in context</em>
+                  <em className="font-mono text-xs uppercase not-italic tracking-wide text-primary">{ui.see_context}</em>
                 </span>
               </a>
             )
           })}
         </div>
-        <blockquote className="mx-auto my-10 max-w-2xl border-l-4 border-primary pl-5">
+        <blockquote className="mx-auto my-10 max-w-2xl border-s-4 border-primary ps-5">
           <p className="text-2xl font-semibold leading-snug text-text-primary">{test.quotes[0]}</p>
           <cite className="mt-2 block font-mono text-xs uppercase not-italic tracking-wide text-text-muted">{test.quote_note}</cite>
         </blockquote>
       </section>
 
       <section id="story">
-        <h2 className={H2}>How the test went</h2>
+        <h2 className={H2}>{ui.story_h}</h2>
         {test.chapters.map((ch) => (
           <div key={ch.id} id={ch.id} className="mb-8">
             <h3 className="mb-3 text-xl font-semibold text-text-primary">{ch.title}</h3>
@@ -164,7 +171,7 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
                   <div className="pt-0.5">{chip(k)}</div>
                   <p className="max-w-prose">{text}</p>
                 </div>
-                {figId && <div className="sm:pl-[142px]"><TestFigure image={img(figId)} /></div>}
+                {figId && <div className="sm:ps-[142px]"><TestFigure image={img(figId)} ui={ui} /></div>}
               </div>
             ))}
           </div>
@@ -172,12 +179,12 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
       </section>
 
       <section id="claims">
-        <h2 className={H2}>Claims versus what the tester saw</h2>
+        <h2 className={H2}>{ui.claims_h}</h2>
         <div className="overflow-x-auto rounded-md border border-border bg-white">
           <table className="min-w-[640px] w-full text-sm">
             <thead>
-              <tr className="border-b-2 border-text-primary text-left text-xs uppercase tracking-wide text-text-muted">
-                {['Claim', 'Source', 'Observed', 'Label'].map((h) => <th key={h} className="px-3 py-2.5 font-semibold">{h}</th>)}
+              <tr className="border-b-2 border-text-primary text-start text-xs uppercase tracking-wide text-text-muted">
+                {ui.claims_cols.map((h) => <th key={h} className="px-3 py-2.5 font-semibold">{h}</th>)}
               </tr>
             </thead>
             <tbody>
@@ -196,9 +203,9 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
         <div className="relative rounded-md border border-border bg-white px-5 pb-5 pt-11">
           <div
             className="pointer-events-none absolute bottom-4 top-9 border-l-2 border-dashed border-text-primary"
-            style={{ left: `calc(1.25rem + (100% - 2.5rem) * ${test.fit.memory_gb / maxGb})` }}
+            style={{ insetInlineStart: `calc(1.25rem + (100% - 2.5rem) * ${test.fit.memory_gb / maxGb})` }}
           >
-            <span className="absolute -top-6 left-1.5 whitespace-nowrap font-mono text-xs uppercase">{test.fit.memline ?? `${test.fit.memory_gb} GB memory`}</span>
+            <span className="absolute -top-6 start-1.5 whitespace-nowrap font-mono text-xs uppercase">{test.fit.memline ?? fill(ui.memory_line, { gb: test.fit.memory_gb })}</span>
           </div>
           <ul className="space-y-4">
             {test.fit.rows.map(([name, gb, label, k]) => {
@@ -210,7 +217,7 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
                     <span className={`block h-full rounded ${over ? 'bg-red-600' : 'bg-emerald-600'}`} style={{ width: `${(gb / maxGb) * 100}%` }} />
                   </span>
                   <span className="text-sm text-text-muted">
-                    {label} <em className="mx-1.5 font-mono text-xs uppercase not-italic text-text-primary">{over ? (test.fit.above ?? `above ${test.fit.memory_gb} GB`) : (test.fit.below ?? `below ${test.fit.memory_gb} GB`)}</em> {chip(k)}
+                    {label} <em className="mx-1.5 font-mono text-xs uppercase not-italic text-text-primary">{over ? (test.fit.above ?? fill(ui.above, { gb: test.fit.memory_gb })) : (test.fit.below ?? fill(ui.below, { gb: test.fit.memory_gb }))}</em> {chip(k)}
                   </span>
                 </li>
               )
@@ -221,12 +228,12 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
       </section>
 
       <section id="log">
-        <h2 className={H2}>Usage log</h2>
+        <h2 className={H2}>{ui.log_h}</h2>
         <div className="overflow-x-auto rounded-md border border-border bg-white">
           <table className="min-w-[760px] w-full text-sm">
             <thead>
-              <tr className="border-b-2 border-text-primary text-left text-xs uppercase tracking-wide text-text-muted">
-                {['#', 'Task', 'Model', 'Result', 'Time', 'Status', 'Figures'].map((h) => <th key={h} className="px-3 py-2.5 font-semibold">{h}</th>)}
+              <tr className="border-b-2 border-text-primary text-start text-xs uppercase tracking-wide text-text-muted">
+                {ui.log_cols.map((h) => <th key={h} className="px-3 py-2.5 font-semibold">{h}</th>)}
               </tr>
             </thead>
             <tbody>
@@ -234,7 +241,7 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
                 <tr key={task} className="border-b border-border align-top last:border-0">
                   <td className="px-3 py-2.5 font-mono">{i + 1}</td><td className="px-3 py-2.5">{task}</td><td className="px-3 py-2.5">{model}</td>
                   <td className="px-3 py-2.5">{result}</td><td className="px-3 py-2.5">{time}</td>
-                  <td className="px-3 py-2.5"><span className={`inline-block whitespace-nowrap rounded-full border px-2 py-0.5 text-xs font-semibold ${STATUS[status] ?? ''}`}>{status}</span></td>
+                  <td className="px-3 py-2.5"><span className={`inline-block whitespace-nowrap rounded-full border px-2 py-0.5 text-xs font-semibold ${STATUS[status] ?? ''}`}>{ui.statuses[status] ?? status}</span></td>
                   <td className="px-3 py-2.5">{figLinks(figs)}</td>
                 </tr>
               ))}
@@ -244,7 +251,7 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
       </section>
 
       <section id="errors">
-        <h2 className={H2}>Where the tester got it wrong</h2>
+        <h2 className={H2}>{ui.errors_h}</h2>
         <ul className="space-y-2">
           {test.errors.map(([k, text]) => (
             <li key={text} className="grid grid-cols-1 gap-1 sm:grid-cols-[130px_1fr] sm:gap-3">{chip(k)}<span>{text}</span></li>
@@ -253,15 +260,15 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
       </section>
 
       <section id="findings">
-        <h2 className={H2}>Findings register</h2>
-        <FindingsTable findings={test.findings} labels={L} figureNumbers={figNo} />
+        <h2 className={H2}>{ui.findings_h}</h2>
+        <FindingsTable findings={test.findings} labels={L} figureNumbers={figNo} ui={ui} />
         <p className="mt-3 text-sm text-text-muted">{test.severity_note}</p>
       </section>
 
       <section id="audience">
-        <h2 className={H2}>Who it is for</h2>
+        <h2 className={H2}>{ui.audience_h}</h2>
         <div className="grid gap-6 md:grid-cols-2">
-          {([['Likely fit', test.audience.fits], ['Likely poor fit', test.audience.not_fits]] as const).map(([title, rows]) => (
+          {([[ui.likely_fit, test.audience.fits], [ui.likely_poor_fit, test.audience.not_fits]] as const).map(([title, rows]) => (
             <div key={title}>
               <h3 className="mb-2 font-semibold text-text-primary">{title}</h3>
               <ul className="space-y-2">
@@ -272,8 +279,8 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
             </div>
           ))}
         </div>
-        <p className="mt-4"><strong className="text-text-primary">Retest.</strong> {test.audience.retest}</p>
-        <blockquote className="mx-auto my-10 max-w-2xl border-l-4 border-primary pl-5">
+        <p className="mt-4"><strong className="text-text-primary">{ui.retest}</strong> {test.audience.retest}</p>
+        <blockquote className="mx-auto my-10 max-w-2xl border-s-4 border-primary ps-5">
           <p className="text-2xl font-semibold leading-snug text-text-primary">{test.quotes[1]}</p>
           <cite className="mt-2 block font-mono text-xs uppercase not-italic tracking-wide text-text-muted">{test.quote_note}</cite>
         </blockquote>
@@ -281,7 +288,7 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
 
       {hasBackground && (
       <section id="background" className="rounded-md border border-dashed border-slate-400 bg-slate-50 p-5">
-        <h2 className="mb-2 text-2xl font-bold text-text-primary">Background on the maker</h2>
+        <h2 className="mb-2 text-2xl font-bold text-text-primary">{ui.background_h}</h2>
         <p className="mb-3 text-sm text-text-muted">{test.background_intro}</p>
         <ul className="space-y-2">
           {test.background.map(([k, text]) => (
@@ -293,15 +300,15 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
 
       {gallery.length > 0 && (
         <section id="gallery">
-          <h2 className={H2}>More from the test</h2>
+          <h2 className={H2}>{ui.gallery_h}</h2>
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 lg:items-start">
-            {gallery.map((g) => <TestFigure key={g.id} image={g} />)}
+            {gallery.map((g) => <TestFigure key={g.id} image={g} ui={ui} />)}
           </div>
         </section>
       )}
 
       <footer id="legend">
-        <h2 className={H2}>How to read the labels</h2>
+        <h2 className={H2}>{ui.legend_h}</h2>
         <dl className="grid gap-x-8 md:grid-cols-2">
           {(Object.keys(L) as EvidenceKey[]).map((k) => (
             <div key={k} className="grid grid-cols-1 gap-1 border-b border-border py-2.5 sm:grid-cols-[140px_1fr] sm:gap-3">
@@ -309,9 +316,9 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
             </div>
           ))}
         </dl>
-        <h3 className="mb-2 mt-6 font-semibold text-text-primary">Sources</h3>
-        <ul className="mb-4 list-disc space-y-1 pl-5 text-sm">{test.sources.map((s) => <li key={s}>{s}</li>)}</ul>
-        <p className="font-mono text-xs text-text-muted">Test ID {test.id} · Test standard v0.1 · Raw notes PDF: to be added</p>
+        <h3 className="mb-2 mt-6 font-semibold text-text-primary">{ui.sources_h}</h3>
+        <ul className="mb-4 list-disc space-y-1 ps-5 text-sm">{test.sources.map((s) => <li key={s}>{s}</li>)}</ul>
+        <p className="font-mono text-xs text-text-muted">{fill(ui.footer_line, { id: test.id, version: test.standard_version })}</p>
       </footer>
     </div>
   )

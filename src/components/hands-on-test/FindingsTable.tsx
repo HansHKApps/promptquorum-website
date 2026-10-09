@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import type { EvidenceKey, HandsOnTest } from '@/lib/hands-on-tests'
+import type { EvidenceKey, HandsOnTest, HandsOnUi } from '@/lib/hands-on-tests'
 import { EvidenceChip } from './EvidenceChip'
 
 const SEV: Record<string, string> = {
@@ -15,17 +15,19 @@ export function FindingsTable({
   findings,
   labels,
   figureNumbers,
+  ui,
 }: {
   findings: HandsOnTest['findings']
   labels: HandsOnTest['evidence_labels']
   figureNumbers: Record<string, number>
+  ui: HandsOnUi
 }) {
   const [filter, setFilter] = useState<'all' | EvidenceKey>('all')
   const keys = Object.keys(labels) as EvidenceKey[]
   const rows = findings.filter((f) => filter === 'all' || f[3] === filter)
   return (
     <div>
-      <div role="group" aria-label="Filter findings by label" className="mb-3 flex flex-wrap gap-2">
+      <div role="group" aria-label={ui.filter_aria} className="mb-3 flex flex-wrap gap-2">
         {(['all', ...keys] as const).map((k) => (
           <button
             key={k}
@@ -36,15 +38,15 @@ export function FindingsTable({
               filter === k ? 'border-text-primary bg-text-primary text-white' : 'border-border bg-white text-text-primary'
             }`}
           >
-            {k === 'all' ? 'All' : labels[k].label}
+            {k === 'all' ? ui.filter_all : labels[k].label}
           </button>
         ))}
       </div>
       <div className="overflow-x-auto rounded-md border border-border bg-white">
         <table className="min-w-[640px] w-full text-sm">
           <thead>
-            <tr className="border-b-2 border-text-primary text-left text-xs uppercase tracking-wide text-text-muted">
-              {['ID', 'Finding', 'Category', 'Label', 'Severity', 'Figures'].map((h) => (
+            <tr className="border-b-2 border-text-primary text-start text-xs uppercase tracking-wide text-text-muted">
+              {ui.findings_cols.map((h) => (
                 <th key={h} className="px-3 py-2.5 font-semibold">{h}</th>
               ))}
             </tr>
@@ -57,7 +59,7 @@ export function FindingsTable({
                 <td className="px-3 py-2.5">{cat}</td>
                 <td className="px-3 py-2.5"><EvidenceChip kind={ev} label={labels[ev].label} /></td>
                 <td className="px-3 py-2.5">
-                  <span className={`inline-block rounded-full border px-2 py-0.5 text-xs font-semibold ${SEV[sev] ?? ''}`}>{sev}</span>
+                  <span className={`inline-block rounded-full border px-2 py-0.5 text-xs font-semibold ${SEV[sev] ?? ''}`}>{ui.severities[sev] ?? sev}</span>
                 </td>
                 <td className="px-3 py-2.5">
                   {figs.length === 0
@@ -65,7 +67,7 @@ export function FindingsTable({
                     : figs.map((f, i) => (
                         <span key={f}>
                           {i > 0 && ', '}
-                          <a href={`#fig-${f}`} className="text-primary underline">Fig. {figureNumbers[f]}</a>
+                          <a href={`#fig-${f}`} className="text-primary underline">{ui.fig_abbr} {figureNumbers[f]}</a>
                         </span>
                       ))}
                 </td>

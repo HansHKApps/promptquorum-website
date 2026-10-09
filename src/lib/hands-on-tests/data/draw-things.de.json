@@ -1,0 +1,1366 @@
+{
+  "id": "pq-test-draw-things-2026-10-06",
+  "standard_version": "0.1",
+  "locale": "de",
+  "app": {
+    "name": "Draw Things",
+    "slug": "draw-things",
+    "vendor": "Draw Things, Inc.",
+    "category": "Lokale KI-Bildgenerierung",
+    "platform": "macOS (Mac App Store)",
+    "pricing_url": "https://drawthings.ai/pricing/"
+  },
+  "title": "Draw Things auf 24-GB-Mac: blind, bis es läuft – dann schnell",
+  "page_title": "Draw Things im Test",
+  "dek": "Praxistest auf einem MacBook Pro mit M3 Pro. Der erste Prompt lieferte ein graues Quadrat. Das zweite Modell funktionierte.",
+  "status": "Abgeschlossen",
+  "published": "2026-10-09",
+  "started": "2026-10-06T20:00:00+02:00",
+  "ended": null,
+  "meta": [
+    [
+      "App",
+      "Draw Things von Draw Things, Inc. Store-Titel zum Testzeitpunkt: 'Offline AI Art'",
+      "observed"
+    ],
+    [
+      "Version",
+      "Nicht erfasst",
+      null
+    ],
+    [
+      "Tester",
+      "Hans Kuepper, Gründer von PromptQuorum",
+      null
+    ],
+    [
+      "Beginn",
+      "6. Oktober 2026, 20:00 Uhr (Europe/Berlin)",
+      "observed"
+    ],
+    [
+      "Ende",
+      "Nicht erfasst",
+      null
+    ],
+    [
+      "Hardware",
+      "MacBook Pro, Apple M3 Pro, 24 GB Unified Memory (die Notizen nennen '24 GB VRAM'; Apple Silicon teilt sich einen einzigen Speicherpool)",
+      "observed"
+    ],
+    [
+      "System",
+      "macOS, zum Testdatum aktuelle Version; genaue Version nicht erfasst",
+      null
+    ],
+    [
+      "Bezugsquelle",
+      "Mac App Store. Preisseite: drawthings.ai/pricing",
+      "observed"
+    ],
+    [
+      "Store-Eintrag",
+      "4,6 Sterne bei 175 Bewertungen, ab 18 Jahren, Platz 8 in Foto & Video, 471 MB",
+      "observed"
+    ],
+    [
+      "Anlass des Tests",
+      "Draw Things lag in den Google-Search-Console-Daten des Testers über die letzten 28 Tage bei den Klicks auf Platz 4 (Bezugsrahmen des Rankings nicht erfasst). Japanischsprachige Klicks übertrafen englischsprachige; Koreanisch lag an dritter, Chinesisch an vierter Stelle.",
+      "tester-estimate"
+    ],
+    [
+      "Ziel",
+      "In den Notizen nicht angegeben. Aus ihnen abgeleitet: Draw Things auf einem Mac mit 24 GB installieren, ein Modell zum Laufen bringen, Bilder erzeugen und eine reale Aufgabe ausprobieren (ein Hero-Bild für PromptQuorum).",
+      "assumption"
+    ],
+    [
+      "Genutzte KI-Hilfe",
+      "ChatGPT (Unternehmensrecherche, Prompt-Erstellung), Perplexity (Modellempfehlung für 24 GB), Grok (keine Antwort erhalten)",
+      "observed"
+    ]
+  ],
+  "disclosure": "Der Tester hat PromptQuorum (promptquorum.com) gegründet, eine Content-Website und ein Verzeichnis zu lokalen KI-Apps. Draw Things erhält auf dieser Website Klicks. Die Notizen verzeichnen keinen Kontakt zum Hersteller, keine Zahlung und kein Sponsoring.",
+  "verdict": {
+    "general": "Leistungsfähig, und die Preisseite führt eine kostenlose Edition auf. Auf einem M3 Pro mit 24 GB erzeugte die App schnell gut aussehende Bilder, sobald ein geeignetes Modell installiert war. Der Schwachpunkt ist der Erststart: Die Modellliste, die der Tester sah, nannte weder Größe noch Aufgabentyp noch Hardware-Eignung, und er fand nicht heraus, wie sich ein Ergebnis iterativ weiterentwickeln lässt.",
+    "fit": "Er setzt die Nutzung vorerst nicht fort („nichts für mich, nicht für jetzt“). Der Tester fand keinen klaren Weg, ein vorhandenes Bild zu verfeinern, und konnte mit den Bedienelementen nichts anfangen; für iterative Arbeit nutzt er weiterhin Cloud-Chatmodelle. Funktionen, die auf Screenshots zu sehen sind, aber nicht bewertet wurden: Version History, Edit-Werkzeuge, Image Interpreter."
+  },
+  "scores": [
+    [
+      "Installation",
+      4,
+      "Installation aus dem Mac App Store, 471 MB. Keine Probleme vermerkt."
+    ],
+    [
+      "Onboarding und Modellauswahl",
+      2,
+      "In der Modellliste nur Namen; keine Angaben zu Größe, Aufgabe oder Hardware-Eignung; FLUX.1 wurde beim ersten Start ohne Speicherhinweis vorgeschlagen."
+    ],
+    [
+      "Kernfunktion",
+      4,
+      "Gute Bilder, sobald ein geeignetes Modell lief. Text in Bildern ist verstümmelt; eine strikte Vier-Farben-Vorgabe wurde nicht befolgt."
+    ],
+    [
+      "Nutzerführung und Iteration",
+      2,
+      "Bedienelemente für den Tester unklar; Ablauf zur Überarbeitung nicht gefunden."
+    ],
+    [
+      "Leistung",
+      4,
+      "Unter einer Minute pro Bild (Schätzung des Testers); die Schätzungen der App von 10 bis 20 Minuten wurden für ein anderes Modell (SeedVR2 7B) angezeigt."
+    ],
+    [
+      "Dokumentation",
+      2,
+      "Bildplatzhalter, übrig gebliebener Text '[old version]', aus Sicht des Testers oberflächlich."
+    ],
+    [
+      "Vertrauen und Datenschutz",
+      null,
+      "Nicht geprüft. Die App gibt an, lokal zu generieren; der Offline-Betrieb wurde nicht getestet."
+    ],
+    [
+      "Deinstallation",
+      null,
+      "Nicht getestet."
+    ]
+  ],
+  "scores_note": "Die Bewertungen sind Vorschläge, abgeleitet aus den untenstehenden Belegen (1 = schlecht, 5 = sehr gut). Die Bestätigung liegt beim Tester.",
+  "tldr": [
+    [
+      "tester-estimate",
+      "Funktioniert gut, sobald das passende Modell installiert ist: Der Tester berichtet von unter einer Minute pro Bild auf dem M3 Pro."
+    ],
+    [
+      "observed",
+      "Der Weg dorthin ist die eigentliche Hürde: eine Modellliste ohne Größen- oder Hardware-Angaben, Downloads von 11 bis 16 GiB ohne Zeitschätzung und keine Warnung, als ein Video-Restaurierungsmodell für einen Text-Prompt verwendet wurde."
+    ],
+    [
+      "tester-view",
+      "Der Tester setzt die Nutzung nicht fort. Er fand keinen Weg, ein Bild zu überarbeiten, und verstand die Bedienelemente nicht, bewertete aber mehrere auf seinen Screenshots sichtbare Funktionen nicht."
+    ]
+  ],
+  "quotes": [
+    "Insgesamt ein sehr unbefriedigender Ablauf. [...] Man tappt im Dunkeln.",
+    "Es ist ein simpler Bildgenerator, und der macht seine Sache auf meinem MacBook mit 24 Gigabyte sehr gut. Es ging sehr schnell. Es ist okay, aber mehr auch nicht."
+  ],
+  "quote_note": "Notizen des Testers, leicht redigiert aus einer Sprachtranskription.",
+  "moments": [
+    [
+      "Ein graues Quadrat",
+      "Der erste Prompt, 'red ball please. with gold dot in middle', lieferte ein einfarbig graues Quadrat, nachdem die App etwa 11 Minuten geschätzt hatte.",
+      "gray_result",
+      "chapter-first-generation"
+    ],
+    [
+      "Im Dunkeln tappen",
+      "Die Modellliste zeigt nur Namen und Familienbezeichnungen. Keine Dateigröße, kein Aufgabentyp, keine Hardware-Eignung.",
+      "model_list",
+      "chapter-first-launch"
+    ],
+    [
+      "16 GiB, keine Uhr",
+      "Bei beiden Downloads des Testers (11 bis 16 GiB) zeigte der Dialog Prozent und MiB, aber keine Restzeit.",
+      "seedvr2_download",
+      "chapter-memory"
+    ],
+    [
+      "Die falsche Art von Modell",
+      "Die App beschreibt SeedVR2 7B selbst als Video-Restaurierungsmodell. Es war für beide Bild-Prompts verwendet worden.",
+      "seedvr2_desc",
+      "chapter-cause"
+    ],
+    [
+      "11,4 GiB später: Es zeichnet",
+      "Nach dem Wechsel zu ERNIE Image Turbo 1.0 berichtet der Tester von Bildern in unter einer Minute.",
+      "ernie_download",
+      "chapter-works"
+    ],
+    [
+      "Eine Überschrift ohne Buchstabensalat",
+      "Das endgültige PromptQuorum-Hero-Bild hat eine korrekte Überschrift. Die kleineren Beschriftungen sind weiterhin Unsinn.",
+      "pq_hero_3",
+      "chapter-hero-job"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-listing",
+      "title": "Der Store-Eintrag",
+      "items": [
+        [
+          "observed",
+          "Der Tester lud Draw Things aus dem Mac App Store herunter. Der Eintrag lautete 'Offline AI Art', Entwickler Draw Things, Inc., 4,6 Sterne bei 175 Bewertungen, ab 18 Jahren, Platz 8 in Foto & Video, 471 MB.",
+          null
+        ],
+        [
+          "observed",
+          "Der Eintrag sagt über 'Offline AI Art' hinaus nicht ausdrücklich, dass die App lokal läuft. Er nennt eine Optimierung für M1, M2 und M3 und erwähnt neuere Chips nicht (so vom Tester gelesen).",
+          null
+        ],
+        [
+          "tester-view",
+          "Technische Daten werden ohne Erläuterung aufgeführt, Einschränkungen sind nicht erkennbar.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-first-launch",
+      "title": "Erster Start: drei Schritte und eine lange Liste",
+      "items": [
+        [
+          "observed",
+          "Ein Willkommensdialog (Schritt 1 von 3, auf Englisch) fragt nach der Modellquelle: Cloud Compute (erfordert eine Apple-Anmeldung), Download über Draw Things oder Import aus dem lokalen Speicher. Er schlägt FLUX.1 als 'mighty and popular' vor.",
+          "welcome"
+        ],
+        [
+          "observed",
+          "Schritt 2 von 3 listet offizielle Modelle nach Name und Familie auf. Dateigröße, Aufgabentyp und Hardware-Hinweise erscheinen nicht in den Zeilen. Über der Liste befindet sich ein Suchfeld.",
+          "model_list"
+        ],
+        [
+          "tester-view",
+          "Nichts erklärt, welche Modelle Bilder und welche Videos erzeugen, worin sie sich unterscheiden oder ob sie in den Speicher passen. Der Tester nannte die Liste „endlos“ und den Ablauf „im Dunkeln tappen“.",
+          null
+        ],
+        [
+          "observed",
+          "Korrektur zu den Notizen des Testers: Die Notizen sagen, es gebe kein Suchfenster; der Screenshot zeigt eines. Der Befund beschränkt sich daher auf fehlende Filter nach Größe, Aufgabe und Hardware.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-memory",
+      "title": "Die Speichermauer",
+      "items": [
+        [
+          "observed",
+          "Der Tester suchte ein Modell, das in 24 GB passt. So, wie er es aus den Download-Dialogen las: ein FLUX-Modell mit etwa 32 GB, Chrono Edit 14B mit etwa 25 GB und LTX 2.3 22B distilled (6-bit) mit etwa 57 GB. Die Dialoge zu diesen drei Modellen sind nicht in den Notizen enthalten.",
+          null
+        ],
+        [
+          "measured",
+          "SeedVR2 7B wirkte mit 16.757,66 MiB (etwa 16,4 GiB) klein genug und wurde heruntergeladen.",
+          "seedvr2_download"
+        ],
+        [
+          "observed",
+          "Der Download-Dialog zeigt Prozent und MiB, aber keine Restzeit. Laut Tester ließ sich die übrige App während des Modell-Downloads nicht nutzen.",
+          null
+        ],
+        [
+          "tester-view",
+          "Bei einem Download dieser Größe sollte eine Zeitschätzung angezeigt werden, wie es die meisten Apps tun.",
+          null
+        ],
+        [
+          "observed",
+          "Setup-Schritt 3 von 3 fragt, wo erzeugte Bilder gespeichert werden sollen, im selben Fenster wie der Modell-Download. Der Schritt ist als optional gekennzeichnet. Der Tester fragte sich, warum er im Setup steht.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-pricing-docs",
+      "title": "Preise, Releases und Dokumentation",
+      "items": [
+        [
+          "vendor-claim",
+          "Die Preisseite führt eine Free Edition auf: 'Create prompts and download models from our servers to generate images locally and privately on your own device', mit lokaler Berechnung, Modell-Downloads, einer unendlichen Leinwand (infinite canvas) und lokalem LoRA-Training.",
+          null
+        ],
+        [
+          "assumption",
+          "Der Tester konnte nicht erkennen, worin sich ein kostenloses Konto ('Community') von der Free Edition unterscheidet. Seine Lesart: Die Free Edition läuft auf dem eigenen Mac, Community ergänzt Cloud-Rechenleistung mit Nutzungslimits. Nicht überprüft.",
+          null
+        ],
+        [
+          "observed",
+          "Die Release-Historie wirkte aktiv: nach Lesart des Testers etwa alle zwei Monate ein Release. Genaue Daten wurden nicht erfasst.",
+          null
+        ],
+        [
+          "observed",
+          "Die Dokumentation hat Seiten zu Basic UI, Models, LoRA, ControlNet, Textual inversion, Others, CoreML und Scripts. Die Seite Basic UI zeigt einen Bildplatzhalter, und in ihrer Gliederung steht eine Zeile '[old version]'.",
+          "docs"
+        ],
+        [
+          "tester-view",
+          "Die Dokumentation ist oberflächlich und setzt voraus, dass man weiß, was ein LoRA ist.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-first-generation",
+      "title": "Erste Generierung: ein graues Quadrat",
+      "items": [
+        [
+          "observed",
+          "Prompt: 'red ball please. with gold dot in middle'. Die App zeigte eine geschätzte Zeit von 11 Minuten an, und der Tester hörte den Rechner arbeiten. Das Ergebnis war ein einfarbig graues Quadrat.",
+          "gray_result"
+        ],
+        [
+          "observed",
+          "Ein Prompt-Feld 'Negative' war aktiv. Der Tester hatte es nicht hinzugefügt und wusste nicht, warum es dort stand.",
+          null
+        ],
+        [
+          "observed",
+          "Ein zweiter Versuch verwendete einen langen, von ChatGPT geschriebenen Prompt (Schloss Neuschwanstein, Stil von Keith Haring, genau vier Farben). Die Zeitschätzungen über die Versuche hinweg lagen bei etwa 11, 10 und 20 Minuten. Das Ergebnis dieses Versuchs nennen die Notizen nicht; der Tester machte sich anschließend auf die Suche nach der Ursache.",
+          null
+        ],
+        [
+          "assumption",
+          "Der Tester schließt daraus, dass die Schätzung nicht vom Prompt abhängt. Drei Datenpunkte; die Schätzung kann auch das gewählte Modell widerspiegeln.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-cause",
+      "title": "Die Ursache finden",
+      "items": [
+        [
+          "observed",
+          "Die App beschreibt SeedVR2 7B als einstufiges Diffusionsmodell zur Video-Restaurierung. Es war für beide Bildversuche ausgewählt.",
+          "seedvr2_desc"
+        ],
+        [
+          "tester-error",
+          "Der Tester wählte für einen Text-zu-Bild-Prompt ein Restaurierungsmodell.",
+          null
+        ],
+        [
+          "tester-view",
+          "Die App hätte darauf hinweisen sollen, dass das Modell nicht zu einem Text-Prompt passt. Die Notizen berichten von keiner Warnung.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-ask-ai",
+      "title": "Andere KIs befragen",
+      "items": [
+        [
+          "third-party",
+          "Grok antwortete nicht. Perplexity schon. Für ein MacBook mit 24 GB nannte es ERNIE Image Turbo 1.0 (6-bit S und 8-bit S) als sicherste Bildmodelle und SeedVR2 7B für Upscaling und Restaurierung. LTX-2.3 22B distilled (6-bit) stufte es als experimentell für kurze Videos in niedriger Auflösung ein und riet von den [dev]-Varianten von LTX und dem vollständigen ERNIE-Base-Modell ab. Seine Quellen wurden hier nicht geprüft.",
+          "model_dropdown"
+        ],
+        [
+          "tester-view",
+          "Die App sollte das anbieten: die eigene Hardware eingeben und eine vorgefilterte Liste erhalten.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-works",
+      "title": "Es funktioniert",
+      "items": [
+        [
+          "measured",
+          "Der Tester lud ERNIE Image Turbo 1.0 (8-bit S) herunter: 11.644,41 MiB, etwa 11,4 GiB, in 3 Dateien.",
+          "ernie_download"
+        ],
+        [
+          "assumption",
+          "Es wird angenommen, dass dies das Modell hinter den späteren Bildern ist. Die Notizen nennen es nicht.",
+          null
+        ],
+        [
+          "tester-estimate",
+          "Die Bilder brauchten jeweils unter einer Minute. Die Zeiten wurden nicht erfasst.",
+          null
+        ],
+        [
+          "observed",
+          "Der Neuschwanstein-Prompt lieferte ein erkennbares Schloss mit Figuren im Haring-Stil und Strahlenlinien (oben auf dieser Seite). Natürliche Stein-, Wald- und Himmelstöne bleiben erhalten, die Vorgabe „genau vier Farben“ wurde also nicht erfüllt.",
+          null
+        ],
+        [
+          "observed",
+          "Ein erzeugtes Wohnmobil sieht überzeugend aus, doch die Beschriftung an der Seite ist Unsinnstext. Der Prompt wurde nicht erfasst.",
+          "motorhome"
+        ],
+        [
+          "tester-view",
+          "Die Bildqualität ist großartig. Text in Bildern ist schwach.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-hero-job",
+      "title": "Eine echte Aufgabe: ein Hero-Bild für PromptQuorum",
+      "items": [
+        [
+          "observed",
+          "Der Tester bat um ein Hero-Bild, das PromptQuorum als 'the world's leading directory for local LLM and local AI apps' präsentiert. Der erste Versuch nutzte einen langen Prompt (Längenzähler 3.670) und ergab eine dunkle Collage aus Benutzeroberflächen mit mehreren verstümmelten Beschriftungen.",
+          null
+        ],
+        [
+          "observed",
+          "Nachdem Einstellungen geändert worden waren, wurde die Ausgabe zu mehrfarbigem Rauschen. Text Guidance zeigt im Panel 45,5.",
+          "noise"
+        ],
+        [
+          "assumption",
+          "Der hohe Guidance-Wert hat das Rauschen verursacht. Die Ursache wurde nicht isoliert.",
+          null
+        ],
+        [
+          "tester-estimate",
+          "Das Herunterdrehen der Einstellung 'iteration' half, nach Aussage des Testers.",
+          null
+        ],
+        [
+          "observed",
+          "Mit einem kürzeren Prompt (Zähler 51) wurde die Überschrift lesbar. Kleinere Beschriftungen blieben verstümmelt.",
+          "pq_hero_3"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-iteration",
+      "title": "Iteration und Bedienelemente",
+      "items": [
+        [
+          "tester-view",
+          "Der Tester fand keinen Weg, zu sagen: „Behalte dieses Bild und ändere dies“, wie es führende Chat-Modelle erlauben. Um ein neues Bild zu beginnen, löschte er den alten Prompt von Hand.",
+          null
+        ],
+        [
+          "observed",
+          "Version History (mit den Einträgen 'Generated image' und 'Cleared canvas'), eine Schaltfläche 'Edit', Canvas Tools, Image Interpreter und CLIP Score sind auf den Screenshots sichtbar. Keines davon wurde bewertet.",
+          null
+        ],
+        [
+          "tester-view",
+          "Ein Erstnutzer würde die Bedienelemente nicht verstehen, und der Zusammenhang zwischen Bedienelementen und Modellen ist unklar. Das Panel enthält allerdings Erläuterungstexte und vermerkt, dass die Controls zusätzliche Dateien sind, die auf Modelle aufgesetzt werden.",
+          "controls"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "Entscheidung",
+      "items": [
+        [
+          "tester-view",
+          "Der Tester wird die App nicht weiter nutzen, obwohl sie kostenlos ist. Gründe: kein einfacher Modus, Ergebnisse sind schwer anzupassen, und es ist unklar, wie man einen Hausstil anwendet oder das System zu einem ganz bestimmten Bild lenkt.",
+          null
+        ],
+        [
+          "assumption",
+          "Die Ansicht des Testers, ein lokales Modell könne Bilder erzeugen, die ein Cloud-Modell verweigern würde, wurde nicht getestet.",
+          null
+        ],
+        [
+          "tester-view",
+          "„Nichts für mich, nicht für jetzt.“ Möglicherweise fehlt ihm das Know-how, um mit einem solchen Werkzeug umzugehen.",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "'Offline AI Art'; Bilder privat auf dem eigenen Gerät erzeugen",
+      "Store-Eintrag; Preisseite",
+      "Modelle werden über die App von den Servern von Draw Things heruntergeladen. Die Erzeugung lief auf dem Mac (der Tester hörte ihn arbeiten). Der Offline-Betrieb wurde nicht getestet.",
+      "observed"
+    ],
+    [
+      "Optimiert für Apple Silicon, insbesondere M1, M2 und M3",
+      "Store-Eintrag, so vom Tester gelesen",
+      "Neuere Chips werden in dem Text, den der Tester las, nicht erwähnt. Die App lief auf einem M3 Pro.",
+      "observed"
+    ],
+    [
+      "FLUX.1 ist 'mighty and popular'",
+      "Willkommensdialog",
+      "FLUX-Downloads umfassten etwa 32 GB bei einem Tester mit 24 GB Speicher. Der Dialog zeigt keine Warnung, ob das Modell passt.",
+      "observed"
+    ],
+    [
+      "Free Edition generiert lokal",
+      "Preisseite",
+      "Die Notizen erwähnen keine Bezahlschranke. Nach Lesart des Testers sind alle Funktionen in der kostenlosen App enthalten. Nicht überprüft.",
+      "assumption"
+    ],
+    [
+      "Geschätzte Zeit von etwa 11 Minuten",
+      "App, erste Generierung",
+      "Das erste Ergebnis war ein graues Quadrat. Mit einem anderen Modell berichtet der Tester von unter einer Minute pro Bild.",
+      "tester-estimate"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "rows": [
+      [
+        "FLUX (Variante nicht erfasst)",
+        32,
+        "etwa 32 GB",
+        "observed"
+      ],
+      [
+        "LTX 2.3 22B distilled, 6-bit",
+        57,
+        "etwa 57 GB",
+        "observed"
+      ],
+      [
+        "Chrono Edit 14B",
+        25,
+        "etwa 25 GB",
+        "observed"
+      ],
+      [
+        "SeedVR2 7B (Restaurierungsmodell)",
+        16.4,
+        "16.757,66 MiB = 16,4 GiB",
+        "measured"
+      ],
+      [
+        "ERNIE Image Turbo 1.0, 8-bit S",
+        11.4,
+        "11.644,41 MiB = 11,4 GiB",
+        "measured"
+      ]
+    ],
+    "note": "Die Downloadgröße entspricht nicht dem Speicherbedarf zur Laufzeit. Die App lädt Gewichte möglicherweise bei Bedarf, und die Ergebnisse hängen von Quantisierung und Auflösung ab (Annahme, gestützt auf die obige Antwort der Drittquelle). Die ersten drei Größen sind so angegeben, wie der Tester sie vorgelesen hat, in GB."
+  },
+  "usage_log": [
+    [
+      "Roter Ball mit goldenem Punkt (Text zu Bild)",
+      "SeedVR2 7B",
+      "Einfarbig graues Quadrat",
+      "App-Schätzung etwa 11 Min.; nicht gestoppt",
+      "Fail",
+      [
+        "gray_result"
+      ]
+    ],
+    [
+      "Neuschwanstein, Haring-Stil, genau vier Farben",
+      "SeedVR2 7B",
+      "Ergebnis nicht genannt; der Tester untersuchte danach das Modell (Fehlschlag impliziert)",
+      "App-Schätzung 10 bis 20 Min.",
+      "Fail",
+      []
+    ],
+    [
+      "Derselbe Neuschwanstein-Prompt",
+      "ERNIE Image Turbo 1.0, angenommen 8-bit S",
+      "Erkennbares Schloss mit Figuren im Haring-Stil; Farbpalette nicht auf vier Farben begrenzt",
+      "Unter 1 Min. (Schätzung des Testers)",
+      "Partial",
+      [
+        "neuschwanstein"
+      ]
+    ],
+    [
+      "Weitere Prompts: Wohnmobil, Kathedrale am Strand",
+      "Dasselbe, angenommen",
+      "Überzeugende Szenen; Beschriftung am Wohnmobil ist Unsinn; Prompts nicht erfasst",
+      "Unter 1 Min. (Schätzung des Testers)",
+      "Partial",
+      [
+        "motorhome",
+        "cathedral"
+      ]
+    ],
+    [
+      "Hero-Bild für PromptQuorum",
+      "Dasselbe, angenommen",
+      "Gutes Layout; Beschriftungen verstümmelt; Überschrift nur mit kürzerem Prompt lesbar",
+      "Nicht erfasst",
+      "Partial",
+      [
+        "pq_hero_1",
+        "pq_hero_2",
+        "pq_hero_3"
+      ]
+    ],
+    [
+      "Einstellungen für besseren Text ändern",
+      "Dasselbe, angenommen",
+      "Mehrfarbiges Rauschen bei Text Guidance 45,5",
+      "Nicht erfasst",
+      "Fail",
+      [
+        "noise"
+      ]
+    ],
+    [
+      "Ein vorhandenes Bild überarbeiten",
+      "-",
+      "Ablauf vom Tester nicht gefunden",
+      "-",
+      "Not completed",
+      []
+    ],
+    [
+      "Die Control-Eingaben verstehen",
+      "-",
+      "Vom Tester nicht verstanden",
+      "-",
+      "Not completed",
+      [
+        "controls"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "Wählte SeedVR2 7B, ein Video-Restaurierungsmodell, für Text-zu-Bild. Die App-eigene Beschreibung sagt, worum es sich handelt."
+    ],
+    [
+      "tester-error",
+      "Ließ zwei Prompts auf diesem Modell laufen, bevor er dessen Beschreibung las."
+    ],
+    [
+      "tester-error",
+      "Schrieb, die Modellliste habe keine Suche. Der Screenshot zeigt ein Suchfeld."
+    ],
+    [
+      "tester-error",
+      "Beurteilte die Iteration, ohne Version History, die Edit-Werkzeuge oder Image Interpreter zu bewerten, die alle auf seinen Screenshots sichtbar sind."
+    ],
+    [
+      "tester-error",
+      "Ließ Lücken in der Aufzeichnung: App-Version, macOS-Version, Endzeit, die Prompts für zwei Bilder und das Modell hinter den späteren Bildern."
+    ],
+    [
+      "assumption",
+      "Eine strikte Vier-Farben-Vorgabe ist für Diffusionsmodelle generell schwierig, das Verfehlen muss also nicht spezifisch für Draw Things sein."
+    ]
+  ],
+  "findings": [
+    [
+      "DT-01",
+      "Die Modellliste zeigt Namen und Familienbezeichnungen, aber keine Größe, keinen Aufgabentyp und keine Hardware-Eignung.",
+      "Onboarding",
+      "observed",
+      "High",
+      [
+        "model_list"
+      ]
+    ],
+    [
+      "DT-02",
+      "Der Willkommensdialog schlägt FLUX.1 ohne Speicherhinweis vor; die vom Tester gelesenen Downloadgrößen (etwa 25 bis 57 GB) lagen über seinen 24 GB Speicher.",
+      "Onboarding",
+      "observed",
+      "High",
+      [
+        "welcome"
+      ]
+    ],
+    [
+      "DT-03",
+      "Kein Schutz davor, ein Video-Restaurierungsmodell für einen Text-Prompt zu verwenden; das Ergebnis war ein graues Quadrat.",
+      "Kernfunktion",
+      "observed",
+      "High",
+      [
+        "gray_result",
+        "seedvr2_desc"
+      ]
+    ],
+    [
+      "DT-04",
+      "Download-Dialoge zeigen Prozent und MiB, aber keine Restzeit.",
+      "UX",
+      "observed",
+      "Medium",
+      [
+        "seedvr2_download",
+        "ernie_download"
+      ]
+    ],
+    [
+      "DT-05",
+      "Laut Tester lässt sich die App nicht nutzen, während ein Modell heruntergeladen wird.",
+      "UX",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "DT-06",
+      "Ein optionaler Schritt zum Speicherort der Bilder sitzt im Setup des Modell-Downloads.",
+      "UX",
+      "observed",
+      "Low",
+      [
+        "seedvr2_download"
+      ]
+    ],
+    [
+      "DT-07",
+      "App-Schätzungen von 10 bis 20 Minuten für das falsche Modell; für das richtige werden unter einer Minute berichtet.",
+      "Leistung",
+      "tester-estimate",
+      "Medium",
+      [
+        "gray_result"
+      ]
+    ],
+    [
+      "DT-08",
+      "Eine strikte Vier-Farben-Vorgabe wurde nicht befolgt.",
+      "Kernfunktion",
+      "observed",
+      "Medium",
+      [
+        "neuschwanstein"
+      ]
+    ],
+    [
+      "DT-09",
+      "Text in Bildern wird verstümmelt dargestellt (Wohnmobil, Beschriftungen im Hero-Bild).",
+      "Kernfunktion",
+      "observed",
+      "Medium",
+      [
+        "motorhome",
+        "pq_hero_3"
+      ]
+    ],
+    [
+      "DT-10",
+      "Geänderte Einstellungen (Text Guidance 45,5 sichtbar) fielen mit einer Rauschausgabe zusammen; Ursache nicht isoliert.",
+      "Kernfunktion",
+      "assumption",
+      "Low",
+      [
+        "noise"
+      ]
+    ],
+    [
+      "DT-11",
+      "Die Bedienelemente tragen Erläuterungstexte, waren dem Tester aber dennoch unklar, einschließlich ihres Zusammenhangs mit den Modellen.",
+      "UX",
+      "tester-view",
+      "Medium",
+      [
+        "controls"
+      ]
+    ],
+    [
+      "DT-12",
+      "Der Tester fand nicht heraus, wie sich ein vorhandenes Bild überarbeiten lässt. Version History und Edit-Werkzeuge existieren und wurden nicht bewertet.",
+      "UX",
+      "tester-view",
+      "Medium",
+      []
+    ],
+    [
+      "DT-13",
+      "Die Dokumentation zeigt einen Bildplatzhalter und übrig gebliebenen Text '[old version]'; aus Sicht des Testers oberflächlich.",
+      "Dokumentation",
+      "observed",
+      "Medium",
+      [
+        "docs"
+      ]
+    ],
+    [
+      "DT-14",
+      "Der Unterschied zwischen Free Edition und Community-Konto war dem Tester unklar.",
+      "Preise",
+      "tester-view",
+      "Low",
+      []
+    ],
+    [
+      "DT-15",
+      "Der Store-Eintrag nennt laut Tester nur M1 bis M3.",
+      "Auffindbarkeit",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "DT-16",
+      "Releases erscheinen laut Tester etwa alle zwei Monate.",
+      "Wartung",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "DT-17",
+      "Sobald ein geeignetes Modell lief, bewertete der Tester die Bildqualität als großartig und schnell.",
+      "Kernfunktion",
+      "tester-view",
+      "Positive",
+      [
+        "neuschwanstein"
+      ]
+    ]
+  ],
+  "severity_note": "Der Schweregrad bezeichnet die Auswirkung auf Erstnutzer. Vorgeschlagen, nicht gemessen.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "Mac-Nutzer, die bereits wissen, welches Diffusionsmodell sie wollen, und einen kostenlosen lokalen Bildgenerator suchen."
+      ],
+      [
+        "vendor-claim",
+        "Menschen, die eine unendliche Leinwand und lokales LoRA-Training wünschen (wie auf der Preisseite aufgeführt)."
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "Erstnutzer, die erwarten, dass die App sie zu einem Modell führt, das zu ihrer Hardware passt."
+      ],
+      [
+        "tester-view",
+        "Nutzer, die ein Bild Schritt für Schritt in einem chatähnlichen Ablauf verfeinern wollen, nach Erfahrung des Testers."
+      ]
+    ],
+    "retest": "Neutest, sobald die Modellliste Größe oder Hardware-Eignung zeigt, oder nach dem nächsten Hauptrelease. Der Tester sagt „vielleicht später“; ein Abstand von 3 bis 6 Monaten würde mehrere Releases abdecken (Annahme)."
+  },
+  "background_intro": "Nicht aus eigener Erprobung. Dies stammt aus einer ChatGPT-Recherche, die der Tester in seine Notizen eingefügt hat; nichts davon wurde für diesen Test überprüft.",
+  "background": [
+    [
+      "third-party",
+      "Draw Things, Inc. wird als gründergeführt durch Liu Liu beschrieben. Die App erschien im November 2022 als kostenlose iPhone-App, die Stable Diffusion lokal ausführt (so von ChatGPT zitiert, Quelle angegeben als Ars Technica)."
+    ],
+    [
+      "third-party",
+      "Ein Profil in einer Unternehmensdatenbank bezeichnet das Unternehmen als selbstfinanziert (bootstrapped), mit 1 bis 5 Beschäftigten und Sitz in San Francisco. Öffentlich bekannte institutionelle Finanzierung wurde nicht gefunden. ChatGPT selbst weist darauf hin, dass private Finanzierung unveröffentlicht sein kann (Quelle angegeben als ToolJunction)."
+    ],
+    [
+      "third-party",
+      "Für ein Community-GitHub-Repository werden etwa 578 Sterne, über 2.100 Commits und 71 Releases angegeben (Quelle angegeben als Swift Package Index)."
+    ],
+    [
+      "third-party",
+      "Als Beleg werden Engineering-Artikel zu einem eigenen Swift-Inferenz-Stack und zu Arbeiten an Metal FlashAttention genannt (Quelle angegeben als Medium)."
+    ]
+  ],
+  "sources": [
+    "Hands-on-Notizen des Testers, begonnen am 6. Oktober 2026 (Originaldokument; PDF der Rohnotizen folgt).",
+    "Mac-App-Store-Eintrag und drawthings.ai/pricing, wie vom Tester gesehen und eingefügt.",
+    "ChatGPT-Unternehmensrecherche, wie vom Tester eingefügt. Darin genannte Quellen: Ars Technica, ToolJunction, Product Hunt, Swift Package Index, Medium.",
+    "Perplexity-Antwort zu Modellen für einen Mac mit 24 GB, wie vom Tester eingefügt."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "Beobachtet",
+      "meaning": "Aus erster Hand in der App, auf einem Screenshot oder in den Notizen des Testers gesehen."
+    },
+    "measured": {
+      "label": "Gemessen",
+      "meaning": "Ein Wert, der aus einem Dialog, Zähler oder Werkzeug abgelesen wurde, mit angegebener Zahl."
+    },
+    "tester-estimate": {
+      "label": "Tester-Schätzung",
+      "meaning": "Eigene Schätzung des Testers; nicht gestoppt oder gezählt."
+    },
+    "vendor-claim": {
+      "label": "Herstellerangabe",
+      "meaning": "Von der App, ihrem Store-Eintrag oder ihrer Website angegeben; nicht überprüft."
+    },
+    "third-party": {
+      "label": "Drittquelle",
+      "meaning": "Aus einer anderen Quelle (ein KI-Assistent, ein Artikel); hier nicht überprüft."
+    },
+    "assumption": {
+      "label": "Annahme",
+      "meaning": "Eine Schlussfolgerung. Sie kann falsch sein."
+    },
+    "tester-view": {
+      "label": "Tester-Meinung",
+      "meaning": "Urteil oder Meinung des Testers."
+    },
+    "tester-error": {
+      "label": "Tester-Fehler",
+      "meaning": "Wo dem Tester ein Fehler unterlaufen ist oder er etwas übersehen hat."
+    }
+  },
+  "images": [
+    {
+      "id": "welcome",
+      "figure": 2,
+      "file": "draw-things-first-launch-welcome-model-source-dialog.webp",
+      "path": "images/draw-things-first-launch-welcome-model-source-dialog.webp",
+      "alt": "Draw-Things-Willkommensdialog, Schritt 1 von 3, mit drei Modellquellen: Cloud Compute, Download über Draw Things oder Import aus dem lokalen Speicher.",
+      "caption": "Erster Start, Schritt 1 von 3. Der Dialog schlägt FLUX.1 als 'mighty and popular' vor; zum Speicherbedarf sagt er nichts.",
+      "role": "inline",
+      "width": 486,
+      "height": 573,
+      "bytes": 21930,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-first-launch"
+      ],
+      "subject": "Screenshot der Draw-Things-App oder -Website",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "6. Oktober 2026 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image1.png"
+    },
+    {
+      "id": "model_list",
+      "figure": 3,
+      "file": "draw-things-model-picker-list-ltx-names-without-sizes.webp",
+      "path": "images/draw-things-model-picker-list-ltx-names-without-sizes.webp",
+      "alt": "Download-Liste der Modelle in Draw Things mit LTX-2.3-22B-Varianten, die nur mit Namen aufgeführt sind, ohne Dateigröße und ohne Hardware-Hinweise.",
+      "caption": "Schritt 2 von 3. Jede Zeile zeigt Name und Familienbezeichnung. Dateigröße, Aufgabentyp und Hardware-Eignung werden nicht angezeigt. Ein Suchfeld ist vorhanden.",
+      "role": "moment",
+      "width": 475,
+      "height": 573,
+      "bytes": 20860,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-first-launch",
+        "moments-card"
+      ],
+      "subject": "Screenshot der Draw-Things-App oder -Website",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "6. Oktober 2026 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image2.png"
+    },
+    {
+      "id": "seedvr2_download",
+      "figure": 4,
+      "file": "draw-things-seedvr2-download-16gb-save-folder-step.webp",
+      "path": "images/draw-things-seedvr2-download-16gb-save-folder-step.webp",
+      "alt": "Draw-Things-Setup-Schritt 3 von 3 mit der Frage, wo Bilder gespeichert werden sollen, während SeedVR2 7B bei 5 Prozent von 16.757 MiB heruntergeladen wird.",
+      "caption": "SeedVR2 7B im Download: 762 von 16.757 MiB (etwa 16,4 GiB). Der Dialog zeigt Prozent und MiB, keine Restzeit. Der optionale Schritt zum Speicherort der Bilder sitzt darin.",
+      "role": "moment",
+      "width": 472,
+      "height": 571,
+      "bytes": 15812,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-memory",
+        "moments-card"
+      ],
+      "subject": "Screenshot der Draw-Things-App oder -Website",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "6. Oktober 2026 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image9.png"
+    },
+    {
+      "id": "docs",
+      "figure": 5,
+      "file": "draw-things-documentation-basic-ui-missing-image.webp",
+      "path": "images/draw-things-documentation-basic-ui-missing-image.webp",
+      "alt": "Draw-Things-Dokumentationsseite 'Basic UI' mit einem grauen Platzhalter an der Stelle, an der ein Screenshot erscheinen sollte.",
+      "caption": "Dokumentation, Seite 'Basic UI': Bildplatzhalter statt eines Screenshots und eine Zeile '[old version]' in der Seitengliederung.",
+      "role": "inline",
+      "width": 1477,
+      "height": 689,
+      "bytes": 27574,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-pricing-docs"
+      ],
+      "subject": "Screenshot der Draw-Things-App oder -Website",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "6. Oktober 2026 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image10.png"
+    },
+    {
+      "id": "gray_result",
+      "figure": 6,
+      "file": "draw-things-first-generation-red-ball-gray-result.webp",
+      "path": "images/draw-things-first-generation-red-ball-gray-result.webp",
+      "alt": "Draw-Things-Leinwand mit einem einfarbig grauen Quadrat als Ergebnis des Prompts 'red ball please. with gold dot in middle'.",
+      "caption": "Erste Generierung. Prompt: 'red ball please. with gold dot in middle'. Ergebnis: ein einfarbig graues Quadrat. Die Schätzung der App hatte etwa 11 Minuten betragen.",
+      "role": "moment",
+      "width": 909,
+      "height": 889,
+      "bytes": 43926,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-first-generation",
+        "moments-card"
+      ],
+      "subject": "Screenshot der Draw-Things-App oder -Website",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "6. Oktober 2026 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image11.png"
+    },
+    {
+      "id": "seedvr2_desc",
+      "figure": 7,
+      "file": "draw-things-seedvr2-7b-model-description-video-restoration.webp",
+      "path": "images/draw-things-seedvr2-7b-model-description-video-restoration.webp",
+      "alt": "Modellbeschreibung in Draw Things, laut der SeedVR2 7B ein einstufiges Diffusionsmodell zur Video-Restaurierung ist.",
+      "caption": "Die App-eigene Beschreibung des Modells, das für die ersten beiden Versuche verwendet wurde: 'one-step diffusion video restoration model'.",
+      "role": "moment",
+      "width": 315,
+      "height": 153,
+      "bytes": 8246,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-cause",
+        "moments-card"
+      ],
+      "subject": "Screenshot der Draw-Things-App oder -Website",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "6. Oktober 2026 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image12.png"
+    },
+    {
+      "id": "model_dropdown",
+      "figure": 8,
+      "file": "draw-things-model-dropdown-local-and-official-models.webp",
+      "path": "images/draw-things-model-dropdown-local-and-official-models.webp",
+      "alt": "Modell-Dropdown in Draw Things mit dem lokalen SeedVR2 7B sowie den offiziellen Modellen LTX-2.3, LTX-2 und ERNIE Image, jeweils mit Download-Symbol.",
+      "caption": "Modell-Dropdown nach dem ersten Download: SeedVR2 7B ist das einzige lokale Modell; offizielle Modelle sind mit Namen und einem Cloud-Download-Symbol aufgeführt.",
+      "role": "gallery",
+      "width": 470,
+      "height": 735,
+      "bytes": 44196,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-ask-ai"
+      ],
+      "subject": "Screenshot der Draw-Things-App oder -Website",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "6. Oktober 2026 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image13.png"
+    },
+    {
+      "id": "ernie_download",
+      "figure": 9,
+      "file": "draw-things-ernie-image-turbo-8bit-download-progress.webp",
+      "path": "images/draw-things-ernie-image-turbo-8bit-download-progress.webp",
+      "alt": "Download-Dialog für ERNIE Image Turbo 1.0 8-bit S bei 52 Prozent, 6.014 von 11.644 MiB, Datei 1 von 3, ohne Zeitschätzung.",
+      "caption": "ERNIE Image Turbo 1.0 (8-bit S): 6.014 von 11.644 MiB (etwa 11,4 GiB), Datei 1 von 3. Wieder keine Anzeige der Restzeit.",
+      "role": "moment",
+      "width": 527,
+      "height": 575,
+      "bytes": 14504,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-works",
+        "moments-card"
+      ],
+      "subject": "Screenshot der Draw-Things-App oder -Website",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "6. Oktober 2026 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image14.png"
+    },
+    {
+      "id": "neuschwanstein",
+      "figure": 1,
+      "file": "draw-things-neuschwanstein-keith-haring-style-result.webp",
+      "path": "images/draw-things-neuschwanstein-keith-haring-style-result.webp",
+      "alt": "KI-generiertes Schloss Neuschwanstein mit kräftigen Cartoon-Figuren und Strahlenlinien in Rot, Blau, Gelb und Schwarz, dargestellt auf der Draw-Things-Leinwand.",
+      "caption": "Schloss Neuschwanstein mit von Haring inspirierten Figuren. Der Prompt verlangte genau vier Farben; Schloss, Wald und Himmel behalten natürliche Töne. Ein graues Rechteck verdeckt einen Teil der Leinwand (Ursache nicht erfasst).",
+      "role": "hero",
+      "width": 884,
+      "height": 900,
+      "bytes": 144914,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "KI-generierte Ausgabe, wie auf der Draw-Things-Leinwand angezeigt (Screenshot)",
+      "rights": "Eigener Screenshot des Testers. Generierte Bilder: Lizenzbedingungen des Modells nicht geprüft.",
+      "captured": "6. Oktober 2026 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image15.png"
+    },
+    {
+      "id": "motorhome",
+      "figure": 10,
+      "file": "draw-things-generated-motorhome-with-garbled-text.webp",
+      "path": "images/draw-things-generated-motorhome-with-garbled-text.webp",
+      "alt": "KI-generiertes Bild im Fotostil von einem weißen Wohnmobil auf einem Parkplatz, dessen Beschriftung an der Seite als Unsinnstext dargestellt ist.",
+      "caption": "Erzeugtes Wohnmobil. Karosserie und Umgebung wirken überzeugend; die Beschriftung an der Seite ist kein echter Text. Prompt nicht erfasst.",
+      "role": "gallery",
+      "width": 638,
+      "height": 636,
+      "bytes": 82294,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-works"
+      ],
+      "subject": "KI-generierte Ausgabe, wie auf der Draw-Things-Leinwand angezeigt (Screenshot)",
+      "rights": "Eigener Screenshot des Testers. Generierte Bilder: Lizenzbedingungen des Modells nicht geprüft.",
+      "captured": "6. Oktober 2026 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image16.png"
+    },
+    {
+      "id": "cathedral",
+      "figure": 14,
+      "file": "draw-things-generated-gothic-cathedral-on-tropical-beach.webp",
+      "path": "images/draw-things-generated-gothic-cathedral-on-tropical-beach.webp",
+      "alt": "KI-generiertes Bild im Fotostil von einer gotischen Kathedrale an einem tropischen Strand mit Palmen, türkisfarbenem Wasser und einer Frau, die über den Sand geht.",
+      "caption": "Erzeugte gotische Kathedrale an einem tropischen Strand. Prompt nicht erfasst.",
+      "role": "gallery",
+      "width": 699,
+      "height": 664,
+      "bytes": 130276,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "KI-generierte Ausgabe, wie auf der Draw-Things-Leinwand angezeigt (Screenshot)",
+      "rights": "Eigener Screenshot des Testers. Generierte Bilder: Lizenzbedingungen des Modells nicht geprüft.",
+      "captured": "6. Oktober 2026 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image17.png"
+    },
+    {
+      "id": "pq_hero_1",
+      "figure": 15,
+      "file": "draw-things-promptquorum-hero-attempt-garbled-interface-text.webp",
+      "path": "images/draw-things-promptquorum-hero-attempt-garbled-interface-text.webp",
+      "alt": "Draw-Things-Leinwand mit einem dunklen generierten Hero-Bild einer PromptQuorum-Verzeichnisoberfläche auf einer Weltkarte, mit mehreren verstümmelten Beschriftungen.",
+      "caption": "Erster Hero-Versuch für PromptQuorum mit einem langen Prompt (der Längenzähler zeigt 3.670). Das Layout ist ansprechend; mehrere Beschriftungen sind verstümmelt.",
+      "role": "gallery",
+      "width": 972,
+      "height": 886,
+      "bytes": 80990,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "KI-generierte Ausgabe, wie auf der Draw-Things-Leinwand angezeigt (Screenshot)",
+      "rights": "Eigener Screenshot des Testers. Generierte Bilder: Lizenzbedingungen des Modells nicht geprüft.",
+      "captured": "6. Oktober 2026 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image18.png"
+    },
+    {
+      "id": "noise",
+      "figure": 11,
+      "file": "draw-things-noise-output-after-parameter-change.webp",
+      "path": "images/draw-things-noise-output-after-parameter-change.webp",
+      "alt": "Draw-Things-Leinwand voller mehrfarbigem Rauschen, nachdem Generierungseinstellungen geändert wurden; der Text-Guidance-Regler steht auf 45,5.",
+      "caption": "Nachdem Einstellungen geändert worden waren, war die Ausgabe mehrfarbiges Rauschen. Text Guidance zeigt im Panel 45,5. Die Ursache wurde nicht isoliert.",
+      "role": "inline",
+      "width": 1431,
+      "height": 837,
+      "bytes": 294308,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-hero-job"
+      ],
+      "subject": "Screenshot der Draw-Things-App oder -Website",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "6. Oktober 2026 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image19.png"
+    },
+    {
+      "id": "pq_hero_2",
+      "figure": 16,
+      "file": "draw-things-promptquorum-hero-attempt-readable-headline.webp",
+      "path": "images/draw-things-promptquorum-hero-attempt-readable-headline.webp",
+      "alt": "Generiertes Hero-Bild mit der Überschrift 'PromptQuorum as the world's leading directory for local LLM and local AI apps' und verstümmelten Unterbeschriftungen.",
+      "caption": "Kürzerer Prompt (Zähler zeigt 51). Die Überschrift ist nun lesbar; die kleineren Beschriftungen sind weiterhin verstümmelt.",
+      "role": "gallery",
+      "width": 1012,
+      "height": 802,
+      "bytes": 185748,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "KI-generierte Ausgabe, wie auf der Draw-Things-Leinwand angezeigt (Screenshot)",
+      "rights": "Eigener Screenshot des Testers. Generierte Bilder: Lizenzbedingungen des Modells nicht geprüft.",
+      "captured": "6. Oktober 2026 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image20.png"
+    },
+    {
+      "id": "controls",
+      "figure": 13,
+      "file": "draw-things-control-inputs-panel-image-depth-pose.webp",
+      "path": "images/draw-things-control-inputs-panel-image-depth-pose.webp",
+      "alt": "Bedienfeld 'Control Inputs' in Draw Things mit Image, Depth map, Pose, Scribble, Color Palette, Moodboard und Custom sowie einem Abschnitt Control, der auf Disabled steht.",
+      "caption": "Bedienfeld 'Control Inputs'. Erläuterungstexte sind vorhanden; der Tester fand die Bedienelemente und ihren Zusammenhang mit den Modellen dennoch unklar.",
+      "role": "inline",
+      "width": 307,
+      "height": 634,
+      "bytes": 23346,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-iteration"
+      ],
+      "subject": "Screenshot der Draw-Things-App oder -Website",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "6. Oktober 2026 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image21.png"
+    },
+    {
+      "id": "pq_hero_3",
+      "figure": 12,
+      "file": "draw-things-promptquorum-hero-final-cartoon-style.webp",
+      "path": "images/draw-things-promptquorum-hero-final-cartoon-style.webp",
+      "alt": "Generierte bunte Illustration eines App-Verzeichnisses mit der Überschrift 'PromptQuorum the world's leading directory for local LLM and local AI apps'.",
+      "caption": "Letzter Hero-Versuch für PromptQuorum: eine saubere Illustration mit korrekter Überschrift. Kleinere Beschriftungen wie 'Platforms' und 'Operating Systems' sind teils noch verstümmelt.",
+      "role": "moment",
+      "width": 1432,
+      "height": 716,
+      "bytes": 263830,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-hero-job",
+        "moments-card"
+      ],
+      "subject": "KI-generierte Ausgabe, wie auf der Draw-Things-Leinwand angezeigt (Screenshot)",
+      "rights": "Eigener Screenshot des Testers. Generierte Bilder: Lizenzbedingungen des Modells nicht geprüft.",
+      "captured": "6. Oktober 2026 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image22.png"
+    }
+  ],
+  "figure_order": [
+    "neuschwanstein",
+    "welcome",
+    "model_list",
+    "seedvr2_download",
+    "docs",
+    "gray_result",
+    "seedvr2_desc",
+    "model_dropdown",
+    "ernie_download",
+    "motorhome",
+    "noise",
+    "pq_hero_3",
+    "controls",
+    "cathedral",
+    "pq_hero_1",
+    "pq_hero_2"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum Praxistest · {app} · {date}",
+    "date_line": "6. Oktober 2026",
+    "nav_aria": "Abschnitte",
+    "nav": {
+      "verdict": "Fazit",
+      "moments": "Sechs Momente",
+      "story": "Ablauf",
+      "claims": "Angaben",
+      "fit": "24 GB",
+      "log": "Nutzungsprotokoll",
+      "errors": "Tester-Fehler",
+      "findings": "Befunde",
+      "background": "Hintergrund"
+    },
+    "related": "Siehe auch:",
+    "review_link": "PromptQuorum-Review zu {app}",
+    "directory_link": "Verzeichnis lokaler KI-Apps",
+    "verdict_h": "Fazit",
+    "general_assessment": "Gesamteinschätzung",
+    "fit_for_tester": "Eignung für den Einsatz des Testers",
+    "scorecard": "Bewertungsübersicht",
+    "status_prefix": "Status:",
+    "na": "k. A.",
+    "score_aria": "{n} von 5",
+    "details_h": "Testdetails",
+    "label_intro": "Jede Aussage trägt eine Kennzeichnung:",
+    "legend_link": "Was die Kennzeichnungen bedeuten",
+    "disclosure_label": "Offenlegung.",
+    "raw_notes": "PDF der Rohnotizen:",
+    "to_be_added": "folgt",
+    "moments_h": "Sechs Momente, die diesen Test geprägt haben",
+    "see_context": "Im Zusammenhang ansehen",
+    "story_h": "Wie der Test verlief",
+    "claims_h": "Angaben im Vergleich zu dem, was der Tester sah",
+    "claims_cols": [
+      "Angabe",
+      "Quelle",
+      "Beobachtung",
+      "Kennzeichnung"
+    ],
+    "fit_h": "Passt es in 24 GB?",
+    "memory_line": "{gb} GB Speicher",
+    "above": "über {gb} GB",
+    "below": "unter {gb} GB",
+    "log_h": "Nutzungsprotokoll",
+    "log_cols": [
+      "#",
+      "Aufgabe",
+      "Modell",
+      "Ergebnis",
+      "Zeit",
+      "Status",
+      "Abbildungen"
+    ],
+    "statuses": {
+      "Fail": "Fehlgeschlagen",
+      "Partial": "Teilweise",
+      "Pass": "Bestanden",
+      "Not completed": "Nicht abgeschlossen"
+    },
+    "errors_h": "Wo der Tester sich geirrt hat",
+    "findings_h": "Befundregister",
+    "filter_aria": "Befunde nach Kennzeichnung filtern",
+    "filter_all": "Alle",
+    "findings_cols": [
+      "ID",
+      "Befund",
+      "Kategorie",
+      "Kennzeichnung",
+      "Schweregrad",
+      "Abbildungen"
+    ],
+    "severities": {
+      "High": "Hoch",
+      "Medium": "Mittel",
+      "Low": "Niedrig",
+      "Positive": "Positiv"
+    },
+    "fig_abbr": "Abb.",
+    "figure": "Abbildung",
+    "enlarge": "Vergrößern:",
+    "audience_h": "Für wen es gedacht ist",
+    "likely_fit": "Voraussichtlich geeignet",
+    "likely_poor_fit": "Voraussichtlich weniger geeignet",
+    "retest": "Neutest.",
+    "background_h": "Hintergrund zum Hersteller",
+    "gallery_h": "Mehr aus dem Test",
+    "legend_h": "So lesen Sie die Kennzeichnungen",
+    "sources_h": "Quellen",
+    "footer_line": "Test-ID {id} · Teststandard v{version} · PDF der Rohnotizen: folgt",
+    "crumb_home": "Startseite",
+    "crumb_directory": "Verzeichnis",
+    "crumb_test": "{app} Praxistest"
+  }
+}

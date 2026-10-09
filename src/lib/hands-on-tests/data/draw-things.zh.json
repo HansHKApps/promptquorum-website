@@ -1,0 +1,1366 @@
+{
+  "id": "pq-test-draw-things-2026-10-06",
+  "standard_version": "0.1",
+  "locale": "zh",
+  "app": {
+    "name": "Draw Things",
+    "slug": "draw-things",
+    "vendor": "Draw Things, Inc.",
+    "category": "本地 AI 图像生成",
+    "platform": "macOS（Mac App Store）",
+    "pricing_url": "https://drawthings.ai/pricing/"
+  },
+  "title": "24 GB Mac 跑 Draw Things：能跑很快，上手靠盲猜",
+  "page_title": "Draw Things 上手测试",
+  "dek": "在搭载 M3 Pro 的 MacBook Pro 上进行的上手测试。第一条提示词返回了一张灰色方块，换用第二个模型后才正常出图。",
+  "status": "已完成",
+  "published": "2026-10-09",
+  "started": "2026-10-06T20:00:00+02:00",
+  "ended": null,
+  "meta": [
+    [
+      "应用",
+      "Draw Things，开发者 Draw Things, Inc.。测试时的商店标题：“Offline AI Art”",
+      "observed"
+    ],
+    [
+      "版本",
+      "未记录",
+      null
+    ],
+    [
+      "测试者",
+      "Hans Kuepper，PromptQuorum 创始人",
+      null
+    ],
+    [
+      "开始时间",
+      "2026年10月6日 20:00（Europe/Berlin）",
+      "observed"
+    ],
+    [
+      "结束时间",
+      "未记录",
+      null
+    ],
+    [
+      "硬件",
+      "MacBook Pro，Apple M3 Pro，24 GB 统一内存（笔记中写的是“24 GB VRAM”；Apple Silicon 共用同一个内存池）",
+      "observed"
+    ],
+    [
+      "系统",
+      "macOS，测试当日的最新正式版；具体版本号未记录",
+      null
+    ],
+    [
+      "来源",
+      "Mac App Store。定价页面：drawthings.ai/pricing",
+      "observed"
+    ],
+    [
+      "商店页面",
+      "4.6 星，175 个评分，年龄分级 18+，照片与视频类第 8 名，471 MB",
+      "observed"
+    ],
+    [
+      "测试原因",
+      "在测试者的 Google Search Console 数据中，Draw Things 在过去 28 天的点击量排名第 4（排名范围未记录）。日语点击量高于英语；韩语第三，中文第四。",
+      "tester-estimate"
+    ],
+    [
+      "测试目标",
+      "笔记中未写明。据笔记推断：在 24 GB 的 Mac 上安装 Draw Things，让一个模型跑起来，生成图像，并尝试一项真实任务（为 PromptQuorum 制作一张头图）。",
+      "assumption"
+    ],
+    [
+      "使用的 AI 辅助",
+      "ChatGPT（公司调研、撰写提示词），Perplexity（针对 24 GB 的模型建议），Grok（未得到回答）",
+      "observed"
+    ]
+  ],
+  "disclosure": "测试者创办了 PromptQuorum（promptquorum.com），一个介绍本地 AI 应用的内容网站和应用目录。Draw Things 在该网站上获得点击。笔记中没有与厂商联系、付款或赞助的记录。",
+  "verdict": {
+    "general": "能力够用，其定价页面列有免费版。在 24 GB 的 M3 Pro 上，装上合适的模型后，出图又快又好看。薄弱环节是首次使用：测试者看到的模型列表没有给出大小、任务类型或硬件适配信息，而且他没能找到如何在已有结果上继续迭代。",
+    "fit": "暂不继续使用（“不适合我，至少现在不适合”）。测试者没有找到明确的方式来修改已有图像，也看不懂各项控制，而迭代类工作他仍用云端对话模型。截图中出现但未评估的功能：Version History、Edit 工具、Image Interpreter。"
+  },
+  "scores": [
+    [
+      "安装",
+      4,
+      "通过 Mac App Store 安装，471 MB。未记录任何问题。"
+    ],
+    [
+      "引导与模型选择",
+      2,
+      "模型列表只有名称，没有大小、任务或硬件适配；首次启动时推荐了 FLUX.1，且没有内存提示。"
+    ],
+    [
+      "核心功能",
+      4,
+      "合适的模型跑起来后，出图质量好。图像内的文字是乱码；“严格只用四种颜色”的指令没有被遵守。"
+    ],
+    [
+      "引导与迭代",
+      2,
+      "测试者看不懂各项控制；没有找到修改结果的工作流程。"
+    ],
+    [
+      "性能",
+      4,
+      "每张图不到一分钟（测试者估计）；应用给出的 10 到 20 分钟预估针对的是另一个模型（SeedVR2 7B）。"
+    ],
+    [
+      "文档",
+      2,
+      "有占位图、残留的 “[old version]” 字样，在测试者看来内容浅显。"
+    ],
+    [
+      "信任与隐私",
+      null,
+      "未审计。应用声称在本地生成；离线运行未测试。"
+    ],
+    [
+      "卸载",
+      null,
+      "未测试。"
+    ]
+  ],
+  "scores_note": "评分是根据下方证据提出的建议值（1 = 差，5 = 很好），需由测试者确认。",
+  "tldr": [
+    [
+      "tester-estimate",
+      "装上合适的模型后效果不错：测试者报告在 M3 Pro 上每张图不到一分钟。"
+    ],
+    [
+      "observed",
+      "难的是走到这一步：模型列表没有大小或硬件适配信息，下载体积 11 到 16 GiB 且没有时间预估，把视频修复模型用于文字提示词时也没有任何警告。"
+    ],
+    [
+      "tester-view",
+      "测试者不会继续使用。他没找到修改图像的方式，也看不懂各项控制，但截图中可见的若干功能他并未评估。"
+    ]
+  ],
+  "quotes": [
+    "总体来说，这个过程非常令人不满。[...] 你完全是在盲目摸索。",
+    "它就是一个简单的图片生成器，在我这台 24 GB 的 MacBook 上做得非常好，速度很快。还不错，但也就这样了。"
+  ],
+  "quote_note": "测试者笔记，由语音转写稍作整理。",
+  "moments": [
+    [
+      "一张灰色方块",
+      "第一条提示词 “red ball please. with gold dot in middle” 在应用预估约 11 分钟后，返回了一张纯灰色方块。",
+      "gray_result",
+      "chapter-first-generation"
+    ],
+    [
+      "盲目摸索",
+      "模型列表只显示名称和系列标签，没有文件大小，没有任务类型，没有硬件适配信息。",
+      "model_list",
+      "chapter-first-launch"
+    ],
+    [
+      "16 GiB，没有倒计时",
+      "测试者进行的两次下载（11 到 16 GiB）中，对话框都只显示百分比和 MiB，没有剩余时间。",
+      "seedvr2_download",
+      "chapter-memory"
+    ],
+    [
+      "模型类型不对",
+      "应用自己的描述称 SeedVR2 7B 是视频修复模型，而两次图片提示词用的都是它。",
+      "seedvr2_desc",
+      "chapter-cause"
+    ],
+    [
+      "下载 11.4 GiB 之后，开始出图了",
+      "换成 ERNIE Image Turbo 1.0 后，测试者报告每张图不到一分钟。",
+      "ernie_download",
+      "chapter-works"
+    ],
+    [
+      "一个能拼对的标题",
+      "最终的 PromptQuorum 头图，标题文字正确，较小的标签仍是乱码。",
+      "pq_hero_3",
+      "chapter-hero-job"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-listing",
+      "title": "商店页面",
+      "items": [
+        [
+          "observed",
+          "测试者从 Mac App Store 下载了 Draw Things。页面显示 “Offline AI Art”，开发者 Draw Things, Inc.，4.6 星，175 个评分，年龄分级 18+，照片与视频类第 8 名，471 MB。",
+          null
+        ],
+        [
+          "observed",
+          "除了 “Offline AI Art” 之外，页面没有明确说明应用在本地运行。页面写明针对 M1、M2 和 M3 做了优化，没有提到更新的芯片（据测试者阅读所见）。",
+          null
+        ],
+        [
+          "tester-view",
+          "页面列出了技术规格但没有解释，限制条件也看不出来。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-first-launch",
+      "title": "首次启动：三个步骤和一份很长的列表",
+      "items": [
+        [
+          "observed",
+          "欢迎对话框（共 3 步中的第 1 步，英文）要求选择模型来源：Cloud Compute（需要 Apple 登录）、通过 Draw Things 下载，或从本地存储导入。它推荐 FLUX.1，称其为 “mighty and popular”。",
+          "welcome"
+        ],
+        [
+          "observed",
+          "第 2 步（共 3 步）按名称和系列列出官方模型。每一行都没有文件大小、任务类型和硬件提示。列表上方有一个搜索框。",
+          "model_list"
+        ],
+        [
+          "tester-view",
+          "没有任何地方说明哪些模型生成图片、哪些生成视频，它们有何区别，或者能否装进内存。测试者称这份列表“没完没了”，称这个过程是“盲目摸索”。",
+          null
+        ],
+        [
+          "observed",
+          "对测试者笔记的更正：笔记中写没有搜索窗口，而截图里有一个。因此这一发现仅限于缺少按大小、任务和硬件筛选的功能。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-memory",
+      "title": "内存这堵墙",
+      "items": [
+        [
+          "observed",
+          "测试者在找能装进 24 GB 的模型。据下载对话框所读：一个约 32 GB 的 FLUX 模型，约 25 GB 的 Chrono Edit 14B，以及约 57 GB 的 LTX 2.3 22B distilled（6-bit）。这三个模型的对话框不在笔记中。",
+          null
+        ],
+        [
+          "measured",
+          "SeedVR2 7B 为 16,757.66 MiB（约 16.4 GiB），看起来够小，于是下载了它。",
+          "seedvr2_download"
+        ],
+        [
+          "observed",
+          "下载对话框显示百分比和 MiB，没有剩余时间。据测试者所述，模型下载期间应用的其余部分无法使用。",
+          null
+        ],
+        [
+          "tester-view",
+          "这么大的下载应该像大多数应用那样显示时间预估。",
+          null
+        ],
+        [
+          "observed",
+          "设置的第 3 步（共 3 步）询问生成的图像保存在哪里，与模型下载在同一个窗口内。该步骤标为可选。测试者问为什么它放在设置里。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-pricing-docs",
+      "title": "定价、版本发布与文档",
+      "items": [
+        [
+          "vendor-claim",
+          "定价页面列出了 Free Edition：“Create prompts and download models from our servers to generate images locally and privately on your own device”，包含本地计算、模型下载、无限画布和本地 LoRA 训练。",
+          null
+        ],
+        [
+          "assumption",
+          "测试者分不清免费账户（“Community”）与 Free Edition 有什么区别。他的理解是：Free Edition 在你的 Mac 上运行，Community 增加有使用限额的云端计算。未经核实。",
+          null
+        ],
+        [
+          "observed",
+          "版本发布看起来很活跃：据测试者判断，大约每两个月一次发布。确切日期未记录。",
+          null
+        ],
+        [
+          "observed",
+          "文档包含 Basic UI、Models、LoRA、ControlNet、Textual inversion、Others、CoreML 和 Scripts 等页面。Basic UI 页面显示的是图片占位符，其目录中有一行 “[old version]”。",
+          "docs"
+        ],
+        [
+          "tester-view",
+          "文档内容浅显，默认读者已经知道 LoRA 是什么。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-first-generation",
+      "title": "首次生成：一张灰色方块",
+      "items": [
+        [
+          "observed",
+          "提示词：“red ball please. with gold dot in middle”。应用显示预估时间为 11 分钟，测试者能听到电脑在工作。结果是一张纯灰色方块。",
+          "gray_result"
+        ],
+        [
+          "observed",
+          "“Negative”提示词栏处于启用状态。测试者没有添加它，也不知道它为什么在那里。",
+          null
+        ],
+        [
+          "observed",
+          "第二次尝试使用了 ChatGPT 写的长提示词（新天鹅堡、Keith Haring 风格、恰好四种颜色）。几次尝试的时间预估约为 11、10 和 20 分钟。笔记没有说明这次尝试的结果；测试者随后开始查找原因。",
+          null
+        ],
+        [
+          "assumption",
+          "测试者推断预估时间与提示词无关。只有三个数据点；该预估也可能反映的是所选的模型。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-cause",
+      "title": "查找原因",
+      "items": [
+        [
+          "observed",
+          "应用将 SeedVR2 7B 描述为一步扩散视频修复模型。两次图片尝试选用的都是它。",
+          "seedvr2_desc"
+        ],
+        [
+          "tester-error",
+          "测试者为文生图提示词选了一个修复模型。",
+          null
+        ],
+        [
+          "tester-view",
+          "应用本应提示该模型不适用于文字提示词。笔记中没有报告任何警告。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-ask-ai",
+      "title": "询问其他 AI",
+      "items": [
+        [
+          "third-party",
+          "Grok 没有回答，Perplexity 回答了。针对 24 GB 的 MacBook，它将 ERNIE Image Turbo 1.0（6-bit S 和 8-bit S）列为最稳妥的图像模型，将 SeedVR2 7B 列为用于放大和修复的模型。它认为 LTX-2.3 22B distilled（6-bit）用于短时、低分辨率视频属于实验性质，并建议不要使用 [dev] 版 LTX 模型和完整的 ERNIE Base 模型。其信息来源在此未作核查。",
+          "model_dropdown"
+        ],
+        [
+          "tester-view",
+          "应用本应提供这个功能：输入你的硬件，得到预先筛选好的列表。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-works",
+      "title": "跑起来了",
+      "items": [
+        [
+          "measured",
+          "测试者下载了 ERNIE Image Turbo 1.0（8-bit S）：11,644.41 MiB，约 11.4 GiB，共 3 个文件。",
+          "ernie_download"
+        ],
+        [
+          "assumption",
+          "这被视为后续图像所用的模型。笔记中没有写出它的名称。",
+          null
+        ],
+        [
+          "tester-estimate",
+          "每张图用时不到一分钟。具体时间未记录。",
+          null
+        ],
+        [
+          "observed",
+          "新天鹅堡的提示词生成了一座可辨认的城堡，配有 Haring 风格的人物和放射线（见本页顶部）。岩石、森林和天空仍保留自然色调，因此“恰好四种颜色”的指令没有达成。",
+          null
+        ],
+        [
+          "observed",
+          "生成的房车看起来很逼真，但车身侧面的文字是无意义的乱码。提示词未记录。",
+          "motorhome"
+        ],
+        [
+          "tester-view",
+          "画面质量很棒。图像内的文字较弱。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-hero-job",
+      "title": "一项真实任务：为 PromptQuorum 制作头图",
+      "items": [
+        [
+          "observed",
+          "测试者要求生成一张头图，把 PromptQuorum 呈现为“全球领先的本地 LLM 与本地 AI 应用目录”（“the world's leading directory for local LLM and local AI apps”）。第一次尝试使用了很长的提示词（长度计数器显示 3,670），生成了一张深色界面拼贴图，其中有多处标签是乱码。",
+          null
+        ],
+        [
+          "observed",
+          "更改设置后，输出变成了多彩噪点。面板中 Text Guidance 显示为 45.5。",
+          "noise"
+        ],
+        [
+          "assumption",
+          "较高的 guidance 值导致了噪点。原因没有被单独验证。",
+          null
+        ],
+        [
+          "tester-estimate",
+          "用测试者的话说，调低“iteration”设置有帮助。",
+          null
+        ],
+        [
+          "observed",
+          "换成较短的提示词（计数器显示 51）后，标题变得可读。较小的标签仍是乱码。",
+          "pq_hero_3"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-iteration",
+      "title": "迭代与控制",
+      "items": [
+        [
+          "tester-view",
+          "测试者没有找到像前沿对话模型那样说出“保留这张图，只改这一处”的办法。要开始新的图像，他是手动删掉旧提示词的。",
+          null
+        ],
+        [
+          "observed",
+          "截图中可见 Version History（含 “Generated image” 和 “Cleared canvas” 条目）、“Edit” 按钮、Canvas Tools、Image Interpreter 和 CLIP Score。这些都没有评估。",
+          null
+        ],
+        [
+          "tester-view",
+          "第一次使用的用户看不懂这些控制，控制与模型之间的关系也不清楚。面板里确有说明文字，并注明控制是叠加在模型之上的附加文件。",
+          "controls"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "结论",
+      "items": [
+        [
+          "tester-view",
+          "测试者不会继续使用该应用，尽管它是免费的。原因：没有简易模式，结果很难调整，也不清楚如何套用统一风格，或引导系统生成某一张确切的图。",
+          null
+        ],
+        [
+          "assumption",
+          "测试者认为本地模型可以生成云端模型会拒绝的图片，这一看法未经测试。",
+          null
+        ],
+        [
+          "tester-view",
+          "“不适合我，至少现在不适合。”他可能缺少驾驭这类工具所需的知识。",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "“Offline AI Art”；在你自己的设备上私密地生成图像",
+      "商店页面；定价页面",
+      "模型是通过应用从 Draw Things 的服务器下载的。生成在 Mac 上运行（测试者能听到它在工作）。离线运行未测试。",
+      "observed"
+    ],
+    [
+      "针对 Apple Silicon 优化，尤其是 M1、M2 和 M3",
+      "商店页面，据测试者阅读所见",
+      "测试者读到的文字中没有提到更新的芯片。应用在 M3 Pro 上运行。",
+      "observed"
+    ],
+    [
+      "FLUX.1 “mighty and popular”",
+      "欢迎对话框",
+      "对于只有 24 GB 内存的测试者，FLUX 的下载体积约为 32 GB。对话框没有显示适配警告。",
+      "observed"
+    ],
+    [
+      "Free Edition 在本地生成",
+      "定价页面",
+      "笔记中没有提到付费墙。测试者的理解是所有功能都在免费应用中。未经核实。",
+      "assumption"
+    ],
+    [
+      "预估时间约 11 分钟",
+      "应用，首次生成",
+      "第一个结果是一张灰色方块。换用另一个模型后，测试者报告每张图不到一分钟。",
+      "tester-estimate"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "rows": [
+      [
+        "FLUX（具体版本未记录）",
+        32,
+        "约 32 GB",
+        "observed"
+      ],
+      [
+        "LTX 2.3 22B distilled，6-bit",
+        57,
+        "约 57 GB",
+        "observed"
+      ],
+      [
+        "Chrono Edit 14B",
+        25,
+        "约 25 GB",
+        "observed"
+      ],
+      [
+        "SeedVR2 7B（修复模型）",
+        16.4,
+        "16,757.66 MiB = 16.4 GiB",
+        "measured"
+      ],
+      [
+        "ERNIE Image Turbo 1.0,8-bit S",
+        11.4,
+        "11,644.41 MiB = 11.4 GiB",
+        "measured"
+      ]
+    ],
+    "note": "下载体积不等于运行时内存。应用可能按需加载权重，实际表现还取决于量化方式和分辨率（假设，依据上文第三方回答）。前三个体积是测试者口头读出的，单位为 GB。"
+  },
+  "usage_log": [
+    [
+      "红球加金点（文生图）",
+      "SeedVR2 7B",
+      "纯灰色方块",
+      "应用预估约 11 分钟；未计时",
+      "Fail",
+      [
+        "gray_result"
+      ]
+    ],
+    [
+      "新天鹅堡，Haring 风格，恰好四种颜色",
+      "SeedVR2 7B",
+      "结果未说明；测试者随后开始调查模型（推测为失败）",
+      "应用预估 10 到 20 分钟",
+      "Fail",
+      []
+    ],
+    [
+      "同一条新天鹅堡提示词",
+      "ERNIE Image Turbo 1.0，推测为 8-bit S",
+      "可辨认的城堡，配有 Haring 风格人物；配色不限于四种颜色",
+      "不到 1 分钟（测试者估计）",
+      "Partial",
+      [
+        "neuschwanstein"
+      ]
+    ],
+    [
+      "其他提示词：房车、海滩上的大教堂",
+      "同上（推测）",
+      "场景逼真；房车上的文字是无意义的乱码；提示词未记录",
+      "不到 1 分钟（测试者估计）",
+      "Partial",
+      [
+        "motorhome",
+        "cathedral"
+      ]
+    ],
+    [
+      "PromptQuorum 头图",
+      "同上（推测）",
+      "布局不错；标签是乱码；只有换成较短的提示词，标题才可读",
+      "未记录",
+      "Partial",
+      [
+        "pq_hero_1",
+        "pq_hero_2",
+        "pq_hero_3"
+      ]
+    ],
+    [
+      "调整设置以改善文字",
+      "同上（推测）",
+      "Text Guidance 为 45.5 时出现多彩噪点",
+      "未记录",
+      "Fail",
+      [
+        "noise"
+      ]
+    ],
+    [
+      "修改已有图像",
+      "-",
+      "测试者没有找到相应的工作流程",
+      "-",
+      "Not completed",
+      []
+    ],
+    [
+      "弄懂各项控制输入",
+      "-",
+      "测试者没有弄懂",
+      "-",
+      "Not completed",
+      [
+        "controls"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "为文生图选用了 SeedVR2 7B，而它是一个视频修复模型。应用自己的描述已经说明了它是什么。"
+    ],
+    [
+      "tester-error",
+      "在读它的描述之前，用该模型运行了两条提示词。"
+    ],
+    [
+      "tester-error",
+      "写下模型列表没有搜索功能。截图中有一个搜索框。"
+    ],
+    [
+      "tester-error",
+      "在没有评估 Version History、Edit 工具或 Image Interpreter 的情况下就对迭代功能下了判断，而这些在他的截图中都可以看到。"
+    ],
+    [
+      "tester-error",
+      "记录中留有空缺：应用版本、macOS 版本、结束时间、两张图的提示词，以及后续图像所用的模型。"
+    ],
+    [
+      "assumption",
+      "对扩散模型而言，严格的四色指令总体上很难做到，所以这次未达成未必是 Draw Things 特有的问题。"
+    ]
+  ],
+  "findings": [
+    [
+      "DT-01",
+      "模型列表显示名称和系列标签，但没有大小、任务类型或硬件适配信息。",
+      "引导",
+      "observed",
+      "High",
+      [
+        "model_list"
+      ]
+    ],
+    [
+      "DT-02",
+      "欢迎对话框推荐 FLUX.1 却没有任何内存提示；测试者读到的下载体积（约 25 到 57 GB）都超过了他的 24 GB 内存。",
+      "引导",
+      "observed",
+      "High",
+      [
+        "welcome"
+      ]
+    ],
+    [
+      "DT-03",
+      "没有防护措施阻止把视频修复模型用于文字提示词；结果是一张灰色方块。",
+      "核心功能",
+      "observed",
+      "High",
+      [
+        "gray_result",
+        "seedvr2_desc"
+      ]
+    ],
+    [
+      "DT-04",
+      "下载对话框显示百分比和 MiB，但没有剩余时间。",
+      "使用体验",
+      "observed",
+      "Medium",
+      [
+        "seedvr2_download",
+        "ernie_download"
+      ]
+    ],
+    [
+      "DT-05",
+      "据测试者所述，模型下载期间应用无法使用。",
+      "使用体验",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "DT-06",
+      "可选的“图像保存位置”步骤位于模型下载的设置流程之内。",
+      "使用体验",
+      "observed",
+      "Low",
+      [
+        "seedvr2_download"
+      ]
+    ],
+    [
+      "DT-07",
+      "应用对错误模型给出的预估是 10 到 20 分钟；对正确模型，据报告不到一分钟。",
+      "性能",
+      "tester-estimate",
+      "Medium",
+      [
+        "gray_result"
+      ]
+    ],
+    [
+      "DT-08",
+      "严格的四色指令没有被遵守。",
+      "核心功能",
+      "observed",
+      "Medium",
+      [
+        "neuschwanstein"
+      ]
+    ],
+    [
+      "DT-09",
+      "图像内渲染的文字是乱码（房车、头图标签）。",
+      "核心功能",
+      "observed",
+      "Medium",
+      [
+        "motorhome",
+        "pq_hero_3"
+      ]
+    ],
+    [
+      "DT-10",
+      "更改设置（可见 Text Guidance 为 45.5）与噪点输出同时出现；原因未单独验证。",
+      "核心功能",
+      "assumption",
+      "Low",
+      [
+        "noise"
+      ]
+    ],
+    [
+      "DT-11",
+      "控制项带有说明文字，但测试者仍觉得不清楚，包括它们与模型的关系。",
+      "使用体验",
+      "tester-view",
+      "Medium",
+      [
+        "controls"
+      ]
+    ],
+    [
+      "DT-12",
+      "测试者没有找到如何修改已有图像。Version History 和 Edit 工具确实存在，但未评估。",
+      "使用体验",
+      "tester-view",
+      "Medium",
+      []
+    ],
+    [
+      "DT-13",
+      "文档显示图片占位符和残留的 “[old version]” 字样；在测试者看来内容浅显。",
+      "文档",
+      "observed",
+      "Medium",
+      [
+        "docs"
+      ]
+    ],
+    [
+      "DT-14",
+      "测试者分不清 Free Edition 与 Community 账户的区别。",
+      "定价",
+      "tester-view",
+      "Low",
+      []
+    ],
+    [
+      "DT-15",
+      "据测试者所述，商店页面只提到 M1 到 M3。",
+      "可发现性",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "DT-16",
+      "据测试者所述，版本大约每两个月发布一次。",
+      "维护",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "DT-17",
+      "合适的模型跑起来后，测试者评价画面质量很棒、速度很快。",
+      "核心功能",
+      "tester-view",
+      "Positive",
+      [
+        "neuschwanstein"
+      ]
+    ]
+  ],
+  "severity_note": "严重程度指对第一次使用的用户的影响。为建议值，并非实测。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "已经知道自己想用哪个扩散模型、并想要一个免费本地图像生成器的 Mac 用户。"
+      ],
+      [
+        "vendor-claim",
+        "想要无限画布和本地 LoRA 训练的用户（定价页面列有这些功能）。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "期望应用引导自己选到适合其硬件的模型的首次使用者。"
+      ],
+      [
+        "tester-view",
+        "想以类似对话的方式逐步修改图片的用户，正如测试者的体会。"
+      ]
+    ],
+    "retest": "当模型列表显示大小或硬件适配信息时，或在下一个大版本发布后重新测试。测试者表示“也许以后再试”；间隔 3 到 6 个月可以覆盖数次发布（假设）。"
+  },
+  "background_intro": "非上手测试内容。以下来自测试者粘贴到笔记中的 ChatGPT 调研，其中没有任何一项为本次测试而核实。",
+  "background": [
+    [
+      "third-party",
+      "Draw Things, Inc. 被描述为由 Liu Liu 创办并主导。该应用于 2022 年 11 月作为免费 iPhone 应用推出，在本地运行 Stable Diffusion（据 ChatGPT 引述，来源标注为 Ars Technica）。"
+    ],
+    [
+      "third-party",
+      "一家公司数据库的资料称其为自筹资金（bootstrapped），员工 1 至 5 人，总部位于旧金山。未发现公开披露的机构融资。ChatGPT 本身提醒说，私人融资可能未被披露（来源标注为 ToolJunction）。"
+    ],
+    [
+      "third-party",
+      "据报告，一个社区 GitHub 仓库约有 578 颗星、2,100 多次提交和 71 个发布版本（来源标注为 Swift Package Index）。"
+    ],
+    [
+      "third-party",
+      "有工程类文章被引用，涉及自研的 Swift 推理栈和 Metal FlashAttention 方面的工作（来源标注为 Medium）。"
+    ]
+  ],
+  "sources": [
+    "测试者的上手测试笔记，始于 2026年10月6日（原始文档；原始笔记的 PDF 待补充）。",
+    "Mac App Store 页面和 drawthings.ai/pricing，由测试者查看并粘贴。",
+    "测试者粘贴的 ChatGPT 公司调研。其中引用的来源：Ars Technica、ToolJunction、Product Hunt、Swift Package Index、Medium。",
+    "测试者粘贴的 Perplexity 回答，内容为适合 24 GB Mac 的模型。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "已观察",
+      "meaning": "在应用、截图或测试者笔记中亲眼所见。"
+    },
+    "measured": {
+      "label": "已测量",
+      "meaning": "从对话框、计数器或工具中读取的数值，并给出了该数字。"
+    },
+    "tester-estimate": {
+      "label": "测试者估计",
+      "meaning": "测试者自己的估计；未计时或计数。"
+    },
+    "vendor-claim": {
+      "label": "厂商声明",
+      "meaning": "由应用、其商店页面或其网站所述；未经核实。"
+    },
+    "third-party": {
+      "label": "第三方",
+      "meaning": "来自其他来源（AI 助手、文章）；此处未核实。"
+    },
+    "assumption": {
+      "label": "假设",
+      "meaning": "一种推断，可能有误。"
+    },
+    "tester-view": {
+      "label": "测试者观点",
+      "meaning": "测试者的判断或看法。"
+    },
+    "tester-error": {
+      "label": "测试者失误",
+      "meaning": "测试者出错或遗漏之处。"
+    }
+  },
+  "images": [
+    {
+      "id": "welcome",
+      "figure": 2,
+      "file": "draw-things-first-launch-welcome-model-source-dialog.webp",
+      "path": "images/draw-things-first-launch-welcome-model-source-dialog.webp",
+      "alt": "Draw Things 欢迎对话框，共 3 步中的第 1 步，提供三种模型来源：Cloud Compute、通过 Draw Things 下载，或从本地存储导入。",
+      "caption": "首次启动，第 1 步（共 3 步）。对话框推荐 FLUX.1，称其为 “mighty and popular” 模型；对内存需求只字未提。",
+      "role": "inline",
+      "width": 486,
+      "height": 573,
+      "bytes": 21930,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-first-launch"
+      ],
+      "subject": "Draw Things 应用或网站的截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-06 或之后；具体时间未记录",
+      "original_docx_media": "image1.png"
+    },
+    {
+      "id": "model_list",
+      "figure": 3,
+      "file": "draw-things-model-picker-list-ltx-names-without-sizes.webp",
+      "path": "images/draw-things-model-picker-list-ltx-names-without-sizes.webp",
+      "alt": "Draw Things 模型下载列表，仅按名称显示 LTX-2.3 22B 的各个变体，没有文件大小或硬件指引。",
+      "caption": "第 2 步（共 3 步）。每一行显示名称和系列标签。文件大小、任务类型和硬件适配均未显示。界面中有搜索框。",
+      "role": "moment",
+      "width": 475,
+      "height": 573,
+      "bytes": 20860,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-first-launch",
+        "moments-card"
+      ],
+      "subject": "Draw Things 应用或网站的截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-06 或之后；具体时间未记录",
+      "original_docx_media": "image2.png"
+    },
+    {
+      "id": "seedvr2_download",
+      "figure": 4,
+      "file": "draw-things-seedvr2-download-16gb-save-folder-step.webp",
+      "path": "images/draw-things-seedvr2-download-16gb-save-folder-step.webp",
+      "alt": "Draw Things 设置第 3 步（共 3 步），在 SeedVR2 7B 下载进度为 16,757 MiB 的 5% 时询问图像保存位置。",
+      "caption": "SeedVR2 7B 下载中：762 / 16,757 MiB（约 16.4 GiB）。对话框显示百分比和 MiB，没有剩余时间。可选的“图像保存位置”步骤就在其中。",
+      "role": "moment",
+      "width": 472,
+      "height": 571,
+      "bytes": 15812,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-memory",
+        "moments-card"
+      ],
+      "subject": "Draw Things 应用或网站的截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-06 或之后；具体时间未记录",
+      "original_docx_media": "image9.png"
+    },
+    {
+      "id": "docs",
+      "figure": 5,
+      "file": "draw-things-documentation-basic-ui-missing-image.webp",
+      "path": "images/draw-things-documentation-basic-ui-missing-image.webp",
+      "alt": "Draw Things 文档的 “Basic UI” 页面，本应放截图的位置是一块灰色占位符。",
+      "caption": "文档 “Basic UI” 页面：用图片占位符代替截图，页面目录中有一行 “[old version]”。",
+      "role": "inline",
+      "width": 1477,
+      "height": 689,
+      "bytes": 27574,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-pricing-docs"
+      ],
+      "subject": "Draw Things 应用或网站的截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-06 或之后；具体时间未记录",
+      "original_docx_media": "image10.png"
+    },
+    {
+      "id": "gray_result",
+      "figure": 6,
+      "file": "draw-things-first-generation-red-ball-gray-result.webp",
+      "path": "images/draw-things-first-generation-red-ball-gray-result.webp",
+      "alt": "Draw Things 画布上显示一张纯灰色方块，是提示词 “red ball please. with gold dot in middle” 的结果。",
+      "caption": "首次生成。提示词：“red ball please. with gold dot in middle”。结果：一张纯灰色方块。应用的预估时间约为 11 分钟。",
+      "role": "moment",
+      "width": 909,
+      "height": 889,
+      "bytes": 43926,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-first-generation",
+        "moments-card"
+      ],
+      "subject": "Draw Things 应用或网站的截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-06 或之后；具体时间未记录",
+      "original_docx_media": "image11.png"
+    },
+    {
+      "id": "seedvr2_desc",
+      "figure": 7,
+      "file": "draw-things-seedvr2-7b-model-description-video-restoration.webp",
+      "path": "images/draw-things-seedvr2-7b-model-description-video-restoration.webp",
+      "alt": "Draw Things 的模型描述，写明 SeedVR2 7B 是一个一步扩散视频修复模型。",
+      "caption": "应用自己对前两次尝试所用模型的描述：“one-step diffusion video restoration model”。",
+      "role": "moment",
+      "width": 315,
+      "height": 153,
+      "bytes": 8246,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-cause",
+        "moments-card"
+      ],
+      "subject": "Draw Things 应用或网站的截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-06 或之后；具体时间未记录",
+      "original_docx_media": "image12.png"
+    },
+    {
+      "id": "model_dropdown",
+      "figure": 8,
+      "file": "draw-things-model-dropdown-local-and-official-models.webp",
+      "path": "images/draw-things-model-dropdown-local-and-official-models.webp",
+      "alt": "Draw Things 模型下拉菜单，列出本地的 SeedVR2 7B，以及带下载图标的官方 LTX-2.3、LTX-2 和 ERNIE Image 模型。",
+      "caption": "首次下载后的模型下拉菜单：SeedVR2 7B 是唯一的本地模型；官方模型按名称列出，旁边有云端下载图标。",
+      "role": "gallery",
+      "width": 470,
+      "height": 735,
+      "bytes": 44196,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-ask-ai"
+      ],
+      "subject": "Draw Things 应用或网站的截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-06 或之后；具体时间未记录",
+      "original_docx_media": "image13.png"
+    },
+    {
+      "id": "ernie_download",
+      "figure": 9,
+      "file": "draw-things-ernie-image-turbo-8bit-download-progress.webp",
+      "path": "images/draw-things-ernie-image-turbo-8bit-download-progress.webp",
+      "alt": "ERNIE Image Turbo 1.0 8-bit S 的下载对话框，进度 52%，已下载 6,014 / 11,644 MiB，第 1 个文件（共 3 个），没有时间预估。",
+      "caption": "ERNIE Image Turbo 1.0（8-bit S）：6,014 / 11,644 MiB（约 11.4 GiB），第 1 个文件（共 3 个）。同样没有剩余时间显示。",
+      "role": "moment",
+      "width": 527,
+      "height": 575,
+      "bytes": 14504,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-works",
+        "moments-card"
+      ],
+      "subject": "Draw Things 应用或网站的截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-06 或之后；具体时间未记录",
+      "original_docx_media": "image14.png"
+    },
+    {
+      "id": "neuschwanstein",
+      "figure": 1,
+      "file": "draw-things-neuschwanstein-keith-haring-style-result.webp",
+      "path": "images/draw-things-neuschwanstein-keith-haring-style-result.webp",
+      "alt": "AI 生成的新天鹅堡，带有红、蓝、黄、黑四色的粗线条卡通人物和放射线，显示在 Draw Things 画布上。",
+      "caption": "带有 Haring 风格人物的新天鹅堡。提示词要求恰好四种颜色；城堡、森林和天空保留了自然色调。画布上有一块灰色矩形遮住部分区域（原因未记录）。",
+      "role": "hero",
+      "width": 884,
+      "height": 900,
+      "bytes": 144914,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Draw Things 画布上显示的 AI 生成成果（截图）",
+      "rights": "测试者自己的截图。生成图像：未审查模型的许可条款。",
+      "captured": "2026-10-06 或之后；具体时间未记录",
+      "original_docx_media": "image15.png"
+    },
+    {
+      "id": "motorhome",
+      "figure": 10,
+      "file": "draw-things-generated-motorhome-with-garbled-text.webp",
+      "path": "images/draw-things-generated-motorhome-with-garbled-text.webp",
+      "alt": "AI 生成的照片风格图像：停车场上的一辆白色房车，车身侧面的文字被渲染成无意义的乱码。",
+      "caption": "生成的房车。车身和环境看起来很逼真；侧面的文字不是真正的文字。提示词未记录。",
+      "role": "gallery",
+      "width": 638,
+      "height": 636,
+      "bytes": 82294,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-works"
+      ],
+      "subject": "Draw Things 画布上显示的 AI 生成成果（截图）",
+      "rights": "测试者自己的截图。生成图像：未审查模型的许可条款。",
+      "captured": "2026-10-06 或之后；具体时间未记录",
+      "original_docx_media": "image16.png"
+    },
+    {
+      "id": "cathedral",
+      "figure": 14,
+      "file": "draw-things-generated-gothic-cathedral-on-tropical-beach.webp",
+      "path": "images/draw-things-generated-gothic-cathedral-on-tropical-beach.webp",
+      "alt": "AI 生成的照片风格图像：热带海滩上的一座哥特式大教堂，有棕榈树、青绿色海水，一名女子走在沙滩上。",
+      "caption": "生成的热带海滩上的哥特式大教堂。提示词未记录。",
+      "role": "gallery",
+      "width": 699,
+      "height": 664,
+      "bytes": 130276,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Draw Things 画布上显示的 AI 生成成果（截图）",
+      "rights": "测试者自己的截图。生成图像：未审查模型的许可条款。",
+      "captured": "2026-10-06 或之后；具体时间未记录",
+      "original_docx_media": "image17.png"
+    },
+    {
+      "id": "pq_hero_1",
+      "figure": 15,
+      "file": "draw-things-promptquorum-hero-attempt-garbled-interface-text.webp",
+      "path": "images/draw-things-promptquorum-hero-attempt-garbled-interface-text.webp",
+      "alt": "Draw Things 画布上一张深色的生成头图，内容是世界地图上的 PromptQuorum 目录界面，其中多处标签是乱码。",
+      "caption": "第一次 PromptQuorum 头图尝试，使用长提示词（长度计数器显示 3,670）。布局很吸引人；多处标签是乱码。",
+      "role": "gallery",
+      "width": 972,
+      "height": 886,
+      "bytes": 80990,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Draw Things 画布上显示的 AI 生成成果（截图）",
+      "rights": "测试者自己的截图。生成图像：未审查模型的许可条款。",
+      "captured": "2026-10-06 或之后；具体时间未记录",
+      "original_docx_media": "image18.png"
+    },
+    {
+      "id": "noise",
+      "figure": 11,
+      "file": "draw-things-noise-output-after-parameter-change.webp",
+      "path": "images/draw-things-noise-output-after-parameter-change.webp",
+      "alt": "更改生成设置后，Draw Things 画布被多彩噪点填满，text guidance 滑块位于 45.5。",
+      "caption": "更改设置后，输出是多彩噪点。面板中 Text Guidance 显示为 45.5。原因未单独验证。",
+      "role": "inline",
+      "width": 1431,
+      "height": 837,
+      "bytes": 294308,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-hero-job"
+      ],
+      "subject": "Draw Things 应用或网站的截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-06 或之后；具体时间未记录",
+      "original_docx_media": "image19.png"
+    },
+    {
+      "id": "pq_hero_2",
+      "figure": 16,
+      "file": "draw-things-promptquorum-hero-attempt-readable-headline.webp",
+      "path": "images/draw-things-promptquorum-hero-attempt-readable-headline.webp",
+      "alt": "生成的头图，标题为 “PromptQuorum as the world's leading directory for local LLM and local AI apps”，副标签是乱码。",
+      "caption": "较短的提示词（计数器显示 51）。标题现在可读；较小的标签仍是乱码。",
+      "role": "gallery",
+      "width": 1012,
+      "height": 802,
+      "bytes": 185748,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Draw Things 画布上显示的 AI 生成成果（截图）",
+      "rights": "测试者自己的截图。生成图像：未审查模型的许可条款。",
+      "captured": "2026-10-06 或之后；具体时间未记录",
+      "original_docx_media": "image20.png"
+    },
+    {
+      "id": "controls",
+      "figure": 13,
+      "file": "draw-things-control-inputs-panel-image-depth-pose.webp",
+      "path": "images/draw-things-control-inputs-panel-image-depth-pose.webp",
+      "alt": "Draw Things 的 Control Inputs 面板，列出 Image、Depth map、Pose、Scribble、Color Palette、Moodboard 和 Custom，以及一个设为 Disabled 的 Control 部分。",
+      "caption": "Control Inputs 面板。面板中有说明文字；测试者仍觉得这些控制及其与模型的关系不清楚。",
+      "role": "inline",
+      "width": 307,
+      "height": 634,
+      "bytes": 23346,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-iteration"
+      ],
+      "subject": "Draw Things 应用或网站的截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-06 或之后；具体时间未记录",
+      "original_docx_media": "image21.png"
+    },
+    {
+      "id": "pq_hero_3",
+      "figure": 12,
+      "file": "draw-things-promptquorum-hero-final-cartoon-style.webp",
+      "path": "images/draw-things-promptquorum-hero-final-cartoon-style.webp",
+      "alt": "生成的彩色应用目录插画，标题为 “PromptQuorum the world's leading directory for local LLM and local AI apps”。",
+      "caption": "最后一次 PromptQuorum 头图尝试：一幅干净的插画，标题正确。较小的标签（如 “Platforms” 和 “Operating Systems”）仍有部分是乱码。",
+      "role": "moment",
+      "width": 1432,
+      "height": 716,
+      "bytes": 263830,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-hero-job",
+        "moments-card"
+      ],
+      "subject": "Draw Things 画布上显示的 AI 生成成果（截图）",
+      "rights": "测试者自己的截图。生成图像：未审查模型的许可条款。",
+      "captured": "2026-10-06 或之后；具体时间未记录",
+      "original_docx_media": "image22.png"
+    }
+  ],
+  "figure_order": [
+    "neuschwanstein",
+    "welcome",
+    "model_list",
+    "seedvr2_download",
+    "docs",
+    "gray_result",
+    "seedvr2_desc",
+    "model_dropdown",
+    "ernie_download",
+    "motorhome",
+    "noise",
+    "pq_hero_3",
+    "controls",
+    "cathedral",
+    "pq_hero_1",
+    "pq_hero_2"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum 上手测试 · {app} · {date}",
+    "date_line": "2026年10月6日",
+    "nav_aria": "章节",
+    "nav": {
+      "verdict": "结论",
+      "moments": "六个时刻",
+      "story": "测试经过",
+      "claims": "说法核对",
+      "fit": "24 GB",
+      "log": "使用记录",
+      "errors": "测试者失误",
+      "findings": "发现项",
+      "background": "背景"
+    },
+    "related": "相关内容：",
+    "review_link": "PromptQuorum 对 {app} 的评测",
+    "directory_link": "本地 AI 应用目录",
+    "verdict_h": "结论",
+    "general_assessment": "总体评价",
+    "fit_for_tester": "是否适合测试者的使用场景",
+    "scorecard": "评分卡",
+    "status_prefix": "状态：",
+    "na": "不适用",
+    "score_aria": "满分 5 分，得 {n} 分",
+    "details_h": "测试详情",
+    "label_intro": "每条陈述都带有标签：",
+    "legend_link": "标签含义",
+    "disclosure_label": "利益披露。",
+    "raw_notes": "原始笔记 PDF：",
+    "to_be_added": "待补充",
+    "moments_h": "左右这次测试的六个时刻",
+    "see_context": "查看上下文",
+    "story_h": "测试经过",
+    "claims_h": "官方说法与测试者所见",
+    "claims_cols": [
+      "说法",
+      "来源",
+      "所见",
+      "标签"
+    ],
+    "fit_h": "能装进 24 GB 吗？",
+    "memory_line": "{gb} GB 内存",
+    "above": "高于 {gb} GB",
+    "below": "低于 {gb} GB",
+    "log_h": "使用记录",
+    "log_cols": [
+      "#",
+      "任务",
+      "模型",
+      "结果",
+      "用时",
+      "状态",
+      "图"
+    ],
+    "statuses": {
+      "Fail": "失败",
+      "Partial": "部分完成",
+      "Pass": "通过",
+      "Not completed": "未完成"
+    },
+    "errors_h": "测试者出错的地方",
+    "findings_h": "发现清单",
+    "filter_aria": "按标签筛选发现项",
+    "filter_all": "全部",
+    "findings_cols": [
+      "编号",
+      "发现项",
+      "类别",
+      "标签",
+      "严重程度",
+      "图"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "正面"
+    },
+    "fig_abbr": "图",
+    "figure": "图",
+    "enlarge": "放大：",
+    "audience_h": "适合谁",
+    "likely_fit": "可能适合",
+    "likely_poor_fit": "可能不适合",
+    "retest": "复测。",
+    "background_h": "开发方背景",
+    "gallery_h": "测试中的更多图片",
+    "legend_h": "如何理解标签",
+    "sources_h": "资料来源",
+    "footer_line": "测试编号 {id} · 测试标准 v{version} · 原始笔记 PDF：待补充",
+    "crumb_home": "首页",
+    "crumb_directory": "目录",
+    "crumb_test": "{app} 上手测试"
+  }
+}

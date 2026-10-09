@@ -1,5 +1,14 @@
+import type { Language } from '@/lib/blog/blogContent'
 import drawThings from './data/draw-things.json'
 import bobe from './data/bobe.json'
+import drawThingsDe from './data/draw-things.de.json'
+import drawThingsFr from './data/draw-things.fr.json'
+import drawThingsJa from './data/draw-things.ja.json'
+import drawThingsZh from './data/draw-things.zh.json'
+import drawThingsEs from './data/draw-things.es.json'
+import drawThingsPt from './data/draw-things.pt.json'
+import drawThingsAr from './data/draw-things.ar.json'
+import drawThingsKo from './data/draw-things.ko.json'
 
 export type EvidenceKey =
   | 'observed'
@@ -24,8 +33,66 @@ export type HandsOnImage = {
   loading: 'lazy' | 'eager'
 }
 
+/** Page chrome (nav, headings, table headers, aria text) in the test's language. {x} tokens are filled by the view. */
+export type HandsOnUi = {
+  kicker: string
+  date_line: string
+  nav_aria: string
+  nav: Record<'verdict' | 'moments' | 'story' | 'claims' | 'fit' | 'log' | 'errors' | 'findings' | 'background', string>
+  related: string
+  review_link: string
+  directory_link: string
+  verdict_h: string
+  general_assessment: string
+  fit_for_tester: string
+  scorecard: string
+  status_prefix: string
+  na: string
+  score_aria: string
+  details_h: string
+  label_intro: string
+  legend_link: string
+  disclosure_label: string
+  raw_notes: string
+  to_be_added: string
+  moments_h: string
+  see_context: string
+  story_h: string
+  claims_h: string
+  claims_cols: string[]
+  fit_h: string
+  memory_line: string
+  above: string
+  below: string
+  log_h: string
+  log_cols: string[]
+  statuses: Record<string, string>
+  errors_h: string
+  findings_h: string
+  filter_aria: string
+  filter_all: string
+  findings_cols: string[]
+  severities: Record<string, string>
+  fig_abbr: string
+  figure: string
+  enlarge: string
+  audience_h: string
+  likely_fit: string
+  likely_poor_fit: string
+  retest: string
+  background_h: string
+  gallery_h: string
+  legend_h: string
+  sources_h: string
+  footer_line: string
+  crumb_home: string
+  crumb_directory: string
+  crumb_test: string
+}
+
 export type HandsOnTest = {
   id: string
+  standard_version: string
   locale: string
   app: { name: string; slug: string; vendor: string; category: string; platform: string; pricing_url: string }
   title: string
@@ -71,16 +138,28 @@ export type HandsOnTest = {
   evidence_labels: Record<EvidenceKey, { label: string; meaning: string }>
   images: HandsOnImage[]
   figure_order: string[]
+  ui: HandsOnUi
 }
 
-/** Registry keyed by app slug (matches ToolRecord.slug). */
-const HANDS_ON_TESTS: Record<string, HandsOnTest> = {
-  'draw-things': drawThings as unknown as HandsOnTest,
-  bobe: bobe as unknown as HandsOnTest,
+/** Registry keyed by app slug, then language. English is the source of truth; the other eight are translations of it. */
+const HANDS_ON_TESTS: Record<string, Partial<Record<Language, HandsOnTest>>> = {
+  'draw-things': {
+    en: drawThings as unknown as HandsOnTest,
+    de: drawThingsDe as unknown as HandsOnTest,
+    fr: drawThingsFr as unknown as HandsOnTest,
+    ja: drawThingsJa as unknown as HandsOnTest,
+    zh: drawThingsZh as unknown as HandsOnTest,
+    es: drawThingsEs as unknown as HandsOnTest,
+    pt: drawThingsPt as unknown as HandsOnTest,
+    ar: drawThingsAr as unknown as HandsOnTest,
+    ko: drawThingsKo as unknown as HandsOnTest,
+  },
+  bobe: { en: bobe as unknown as HandsOnTest },
 }
 
-export function getHandsOnTest(appSlug: string): HandsOnTest | null {
-  return HANDS_ON_TESTS[appSlug] ?? null
+/** The test in `lang`, or null when that language has no translation (callers must 404, never fall back to English). */
+export function getHandsOnTest(appSlug: string, lang: Language = 'en'): HandsOnTest | null {
+  return HANDS_ON_TESTS[appSlug]?.[lang] ?? null
 }
 
-export { handsOnTestUrl, handsOnTestUrlSlug, appSlugFromHandsOnUrlSlug, HANDS_ON_TEST_SLUGS } from './links'
+export { handsOnTestUrl, handsOnTestUrlSlug, handsOnTestLangs, HANDS_ON_TEST_LANGS, appSlugFromHandsOnUrlSlug, HANDS_ON_TEST_SLUGS } from './links'
