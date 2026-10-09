@@ -211,6 +211,18 @@ const HOME_UI = {
     pt: 'Novos apps em breve.', ar: 'تطبيقات جديدة قادمة قريبًا.', ko: '새 앱이 곧 제공됩니다.',
   },
 
+  // --- Hands-on Tests ---
+  handsOnTitle: {
+    en: 'Latest Hands-on Tests', de: 'Neueste Praxistests', fr: 'Derniers tests pratiques', ja: '最新の実機テスト',
+    zh: '最新实测评测', es: 'Últimas pruebas prácticas', pt: 'Últimos testes práticos', ar: 'أحدث الاختبارات العملية',
+    ko: '최신 직접 테스트',
+  },
+  handsOnEmpty: {
+    en: 'Hands-on tests coming soon.', de: 'Praxistests folgen in Kürze.', fr: 'Tests pratiques bientôt disponibles.',
+    ja: '実機テストは近日公開予定です。', zh: '实测评测即将上线。', es: 'Pruebas prácticas próximamente.',
+    pt: 'Testes práticos em breve.', ar: 'اختبارات عملية قادمة قريبًا.', ko: '직접 테스트가 곧 제공됩니다.',
+  },
+
   // --- Founder Reviews ---
   founderReviewsTitle: {
     en: 'Latest Founder/Maker Reviews', de: 'Neueste Gründer-/Macher-Bewertungen',

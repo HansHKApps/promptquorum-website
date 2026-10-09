@@ -7,6 +7,7 @@ import { FreshStripBlock } from './FreshStripBlock'
 import { LatestPostsBlock } from './LatestPostsBlock'
 import { LatestAppsBlock } from './LatestAppsBlock'
 import { FounderReviewsBlock } from './FounderReviewsBlock'
+import { HandsOnTestsBlock } from './HandsOnTestsBlock'
 import { TrendingBlock } from './TrendingBlock'
 import { RecentlyUpdatedBlock } from './RecentlyUpdatedBlock'
 import { ByTheNumbersBlock } from './ByTheNumbersBlock'
@@ -62,6 +63,7 @@ export function Home({ lang }: { lang: Language }) {
           <LatestPostsBlock lang={lang} />
           <LatestAppsBlock lang={lang} />
           <FounderReviewsBlock lang={lang} />
+          <HandsOnTestsBlock lang={lang} />
           <TrendingBlock lang={lang} />
           <RecentlyUpdatedBlock lang={lang} />
         </section>
