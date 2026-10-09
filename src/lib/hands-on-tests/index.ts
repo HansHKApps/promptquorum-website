@@ -1,6 +1,7 @@
 import type { Language } from '@/lib/blog/blogContent'
 import drawThings from './data/draw-things.json'
 import bobe from './data/bobe.json'
+import pageAssist from './data/page-assist.json'
 import drawThingsDe from './data/draw-things.de.json'
 import drawThingsFr from './data/draw-things.fr.json'
 import drawThingsJa from './data/draw-things.ja.json'
@@ -122,7 +123,8 @@ export type HandsOnTest = {
   moments_nav?: string
   chapters: { id: string; title: string; items: [EvidenceKey, string, string | null][] }[]
   claims: [string, string, string, EvidenceKey][]
-  fit: {
+  /** Optional memory-fit chart; tests without one omit it (no section, no nav entry). */
+  fit?: {
     memory_gb: number
     rows: [string, number, string, EvidenceKey][]
     note: string
@@ -170,6 +172,9 @@ const HANDS_ON_TESTS: Record<string, Partial<Record<Language, HandsOnTest>>> = {
     pt: bobePt as unknown as HandsOnTest,
     ar: bobeAr as unknown as HandsOnTest,
     ko: bobeKo as unknown as HandsOnTest,
+  },
+  'page-assist': {
+    en: pageAssist as unknown as HandsOnTest,
   },
 }
 
