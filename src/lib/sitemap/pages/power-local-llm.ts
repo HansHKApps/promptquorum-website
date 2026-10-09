@@ -1,6 +1,8 @@
 import { POWER_LLM_PUBLISHED_SLUGS, POWER_LLM_HUB_PUBLISHED } from '@/lib/power-local-llm/published'
 import { POWER_LLM_SLUG_TO_KEY } from '@/lib/power-local-llm/slugs'
 import { DIRECTORY_ARTICLE_SLUG } from '@/lib/power-local-llm/metadata-helpers'
+import { getHandsOnTest } from '@/lib/hands-on-tests'
+import { HANDS_ON_TEST_SLUGS, handsOnTestUrlSlug } from '@/lib/hands-on-tests/links'
 import { metadata, articleLastmod, type Page } from '../sitemap-shared'
 
 export const PAGES: Page[] = [
@@ -13,4 +15,11 @@ export const PAGES: Page[] = [
     changefreq: 'monthly' as const,
     lastmod: articleLastmod(metadata['power-local-llm'], POWER_LLM_SLUG_TO_KEY[slug], '2026-05-26'),
   })),
+  // Hands-on tests are not articles (no slug-map entry); their lastmod is the page's own publish date.
+  ...HANDS_ON_TEST_SLUGS.flatMap((appSlug) => {
+    const test = getHandsOnTest(appSlug)
+    return test
+      ? [{ path: `/power-local-llm/${handsOnTestUrlSlug(appSlug)}`, priority: 0.7, changefreq: 'monthly' as const, lastmod: test.published }]
+      : []
+  }),
 ]

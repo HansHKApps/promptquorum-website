@@ -104,6 +104,15 @@ function readRedirectSources() {
 const slugSets = {}
 for (const [cluster, file] of Object.entries(CLUSTER_SLUGFILES)) slugSets[cluster] = readSlugSet(file)
 slugSets['frameworks'] = readFrameworkSlugs()
+// Hands-on tests are served at /power-local-llm/<app>-hands-on-test but have no slug-map entry;
+// derive their URL slugs from the data files so links to them resolve.
+const handsOnDir = path.join(ROOT, 'src/lib/hands-on-tests/data')
+if (fs.existsSync(handsOnDir)) {
+  for (const f of fs.readdirSync(handsOnDir).filter((n) => n.endsWith('.json'))) {
+    const appSlug = JSON.parse(fs.readFileSync(path.join(handsOnDir, f), 'utf8'))?.app?.slug
+    if (appSlug) slugSets['power-local-llm'].add(`${appSlug}-hands-on-test`)
+  }
+}
 const redirectSources = readRedirectSources()
 const clusterRoots = new Set(Object.keys(CLUSTER_SLUGFILES).concat(['frameworks']))
 
