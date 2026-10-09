@@ -1,0 +1,1250 @@
+{
+  "id": "pq-test-page-assist-2026-10-08",
+  "hero": "gsc_fail",
+  "date_human": "2026년 10월 8일~9일",
+  "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+  "standard_version": "0.1",
+  "locale": "ko",
+  "app": {
+    "name": "Page Assist",
+    "slug": "page-assist",
+    "vendor": "Not recorded (repository: github.com/n4ze3m/page-assist)",
+    "category": "Browser extension: web UI and sidebar for local AI models (Ollama)",
+    "platform": "Chrome extension (also built for Edge and Firefox, per the README)",
+    "pricing_url": null
+  },
+  "title": "24 GB Mac에서의 Page Assist: 사이드바는 찾았지만, 페이지는 이해하지 못했습니다",
+  "page_title": "Page Assist Test",
+  "dek": "M3 Pro Mac에서 Ollama 기반 브라우저 확장 프로그램을 직접 테스트했습니다. 툴바 아이콘은 사이드바 대신 전체 화면 페이지를 열었습니다. 사이드바를 찾은 뒤에는 단어 수는 셌지만 Search Console 페이지를 읽지 못했고 페이지에서 동작을 수행하지도 못했습니다.",
+  "status": "Abandoned",
+  "published": "2026-10-09",
+  "started": "2026-10-08",
+  "ended": "2026-10-09",
+  "meta": [
+    [
+      "앱",
+      "Page Assist, 'A Web UI for Local AI Models': 사이드바, 전체 페이지 웹 UI, 'chat with webpage'를 갖춘 Chrome 확장 프로그램(github.com/n4ze3m/page-assist)",
+      "observed"
+    ],
+    [
+      "버전",
+      "기록 없음(확장 프로그램도, Chrome, Ollama, macOS도 기록하지 않았습니다)",
+      null
+    ],
+    [
+      "테스터",
+      "Hans Kuepper, PromptQuorum 설립자",
+      null
+    ],
+    [
+      "시작",
+      "2026년 10월 8일 11:00(시간대는 명시되지 않았으며, 현지 시간인 독일 기준으로 가정)",
+      "observed"
+    ],
+    [
+      "종료",
+      "2026년 10월 9일 19:00. 경과 시간은 약 32시간이며, 실제 테스트 시간은 기록 없음.",
+      "observed"
+    ],
+    [
+      "하드웨어",
+      "MacBook Pro, Apple M3 Pro, 24 GB 통합 메모리(메모에는 'M3 24 GB'라고 되어 있습니다)",
+      "observed"
+    ],
+    [
+      "시스템",
+      "macOS, 테스트 날짜 기준 최신 릴리스. 정확한 버전은 기록 없음. 브라우저: Chrome.",
+      null
+    ],
+    [
+      "설치 경로",
+      "두 가지. 먼저 소스에서 빌드(git, Bun, 'load unpacked'). 이후 Chrome Web Store에서 설치.",
+      "observed"
+    ],
+    [
+      "로컬 모델",
+      "Ollama 실행 중. 스크린샷에 보이는 모델: gemma4:latest, qwen3-coder:30b.",
+      "observed"
+    ],
+    [
+      "테스트 이유",
+      "테스터는 사이드바 개념을 좋아하고, Claude in Chrome을 매일 사용하며, PromptQuorum 앱용 사이드바를 만들었습니다.",
+      "observed"
+    ],
+    [
+      "목표",
+      "'주된 목표는 사이드바였고, 사이드바로 무엇을 할 수 있는지 확인하는 것이었습니다.'",
+      "observed"
+    ],
+    [
+      "사용한 AI 도움",
+      "Bun 설정에 AI 어시스턴트(메모에는 이름이 없음), 사이드바를 찾는 데 ChatGPT.",
+      "observed"
+    ]
+  ],
+  "disclosure": "테스터는 PromptQuorum(promptquorum.com)의 설립자입니다. PromptQuorum은 로컬 AI 앱에 관한 콘텐츠 사이트이자 디렉터리입니다. PromptQuorum에는 이미 Page Assist 리뷰가 있으며(메모에서는 'my Page Assist review'라고 부릅니다), 이번 테스트는 테스터 본인의 세션에만 근거합니다. 테스터는 경쟁 도구(PromptQuorum 앱용 사이드바와 Chrome 확장 프로그램 PromptQuorum Optimizer)를 직접 만들었고, Anthropic의 제품인 Claude in Chrome을 기준으로 삼아 비교합니다. 메모에는 Page Assist 개발자와의 접촉, 금전 거래, 후원에 대한 기록이 없습니다.",
+  "verdict": {
+    "general": "로컬 모델을 위한 기능이 풍부한 프런트엔드입니다. 모델, 지식, 프롬프트, MCP 서버, Page Action, WebMCP, 메모리에 대한 설정이 있습니다. 툴바 아이콘은 전체 화면 채팅 페이지를 엽니다. 테스터는 사이드 패널을 한참 뒤에야, 마우스 오른쪽 클릭과 ChatGPT의 도움으로 찾았습니다. 사이드 패널에서는 페이지의 단어 수 세기가 작동했습니다. Search Console 페이지는 이해하지 못했고, 사이트 검색은 실패했으며, 페이지를 바꿔도 컨텍스트가 따라오지 않았고, 테스터는 Page Action으로 스크롤이나 클릭을 하게 만들지 못했습니다. gemma4:latest와의 초기 채팅 두 번은 빈 답변을 돌려주었습니다. 테스트마다 모델이 달랐기 때문에, 여기서는 확장 프로그램과 모델의 영향을 분리할 수 없습니다.",
+    "fit": "그의 사용 목적에는 맞지 않습니다. 그는 Claude in Chrome처럼 작업을 받아 페이지를 직접 클릭하며 데이터를 입력하는 사이드바를 원했습니다. 그가 본 것은 채팅뿐이었고, 삭제할 계획입니다. 'For now, stay with Claude Chrome extension.'"
+  },
+  "scores": [
+    [
+      "설치",
+      3,
+      "스토어 설치는 대화 상자 하나로 끝납니다. README는 Bun과 터미널이 필요한 소스 빌드를 먼저 안내하며, 테스터의 첫 시도는 PATH 문제로 실패했고 스토어 링크는 페이지 아래쪽에 있습니다."
+    ],
+    [
+      "온보딩과 발견 가능성",
+      2,
+      "툴바 아이콘은 전체 화면 페이지를 열고, 사이드바는 다른 경로로 열어야 하며, 환영 영상에서 안내한 단축키는 테스터에게 작동하지 않았습니다."
+    ],
+    [
+      "핵심 기능",
+      2,
+      "단어 수 세기는 작동했습니다. Search Console 페이지, 사이트 검색, 페이지 간 컨텍스트, Page Action은 작동하지 않았습니다. 초기 채팅 두 번은 빈 답변을 돌려주었습니다."
+    ],
+    [
+      "안내와 반복",
+      2,
+      "강력한 모델 설정이 있지만, 붙여 넣은 항목 중 설명이 있는 것은 둘뿐입니다. 'Add MCP server' 버튼은 설정에서 먼저 구성하기 전까지 아무 곳으로도 이어지지 않습니다."
+    ],
+    [
+      "성능",
+      null,
+      "측정하지 않았습니다. 기록된 시간이 없습니다."
+    ],
+    [
+      "문서",
+      3,
+      "README 단계는 터미널 사용자에게 명확합니다. 기능 목록은 사이드바, 웹 UI, chat with webpage를 약속합니다. 환영 영상의 단축키는 작동하지 않았습니다."
+    ],
+    [
+      "신뢰와 개인정보",
+      null,
+      "감사하지 않았습니다. 스토어 대화 상자는 모든 웹사이트의 모든 데이터를 읽고 변경할 권한을 요청하며, 데이터가 로컬에 머무는지는 테스트하지 않았습니다."
+    ],
+    [
+      "삭제",
+      null,
+      "테스터는 삭제할 계획입니다. 실제로 삭제했는지는 기록 없음."
+    ]
+  ],
+  "scores_note": "점수는 아래 근거에서 도출한 제안입니다(1 = 나쁨, 5 = 매우 좋음). 확정은 테스터가 합니다.",
+  "tldr": [
+    [
+      "observed",
+      "툴바 아이콘은 사이드바가 아니라 전체 화면 페이지를 엽니다. 테스터는 ChatGPT의 도움을 받은 뒤 마우스 오른쪽 클릭으로 사이드 패널을 찾았습니다. 환영 영상에 나온 Ctrl+Shift+Y는 그에게 작동하지 않았습니다."
+    ],
+    [
+      "observed",
+      "사이드 패널에서 페이지의 단어 수 세기는 작동했습니다. Search Console 페이지는 이해하지 못했고(답변: CTR 정보 없음), 사이트 검색은 실패했으며, 페이지를 바꿔도 컨텍스트가 따라오지 않았습니다."
+    ],
+    [
+      "tester-view",
+      "그는 삭제하고 있습니다. Claude in Chrome처럼 동작하는 사이드바를 원했지만 얻은 것은 채팅이었습니다. '사이드바가 있었다면 대박이었을 겁니다.'"
+    ]
+  ],
+  "quotes": [
+    "설정에 사이드바의 흔적 같은 것은 있지만, 사실 사이드바가 있었다면 대박이었을 겁니다. 나머지는 기능이 다른 또 하나의 인터페이스입니다.",
+    "앞으로 Page Assist가 이 수준의 지원에 더 가까워지기를 바랍니다."
+  ],
+  "quote_note": "테스터의 메모이며, 음성 받아쓰기를 가볍게 편집했습니다. 영어에서 번역했습니다.",
+  "moments_title": "이 테스트를 형성한 다섯 가지 순간",
+  "moments_md": "다섯 가지 순간",
+  "moments_nav": "다섯 가지 순간",
+  "moments": [
+    [
+      "사이드바가 아닌 전체 화면",
+      "툴바 아이콘은 전체 페이지 채팅 UI를 엽니다. 테스터가 원한 사이드바는 다른 경로로 열립니다.",
+      "webui_full",
+      "chapter-opens"
+    ],
+    [
+      "놓친 스토어 링크",
+      "그는 README 아래쪽에 있는 Chrome Web Store 링크를 알아채기 전에 소스에서 빌드했습니다. 스토어 페이지에는 별점 4.8, 평가 245개, 사용자 200,000명이 표시됩니다.",
+      "store_dialog",
+      "chapter-store"
+    ],
+    [
+      "'Thought for 0ms', 답변 없음",
+      "gemma4:latest에 던진 질문 두 개 모두 빈 답변 상자만 돌려주었습니다.",
+      "chat_empty2",
+      "chapter-chat"
+    ],
+    [
+      "사이드바는 마우스 오른쪽 클릭 한 번 거리에 있었습니다",
+      "첫 시도가 실패하고 ChatGPT의 도움을 받은 뒤, 테스터는 오른쪽 클릭 메뉴에서 사이드 패널을 찾았습니다. 시작 화면에는 Chat with current page, Page Action, WebMCP가 있습니다.",
+      "sidebar_home",
+      "chapter-sidebar"
+    ],
+    [
+      "읽지 못한 페이지, 수행하지 못한 동작",
+      "Search Console 페이지는 이해하지 못했습니다. 페이지를 바꿔도 컨텍스트가 따라오지 않았습니다. Page Action은 스크롤조차 하지 못했습니다.",
+      null,
+      "chapter-page"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-why",
+      "title": "이 앱을 선택한 이유",
+      "items": [
+        [
+          "tester-view",
+          "'사이드바를 갖춘다는 건 기본적으로 흥미로운 아이디어입니다.' 그는 PromptQuorum 앱용 사이드바를 만들었고, 로컬 모델에 연결하는 데 유용하다고 생각합니다. 또한 Claude Chrome 확장 프로그램도 '길을 잃을 때마다 늘' 사용합니다.",
+          null
+        ],
+        [
+          "observed",
+          "그의 표현에 따른 목표: 사이드바, 그리고 사이드바로 무엇을 할 수 있는지.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-install",
+      "title": "소스에서 설치",
+      "items": [
+        [
+          "vendor-claim",
+          "테스터가 붙여 넣은 README에는 사전 요구 사항이 나와 있습니다: Bun, Ollama, 또는 LM Studio나 llamafile 같은 OpenAI 호환 엔드포인트. 단계: git clone, bun install, bun run build('기본적으로 Chrome, Edge, Firefox용으로 빌드됩니다'), 이후 빌드 디렉터리를 압축 해제된 확장 프로그램으로 로드합니다. Bun에 문제가 있으면 npm을 사용하라는 안내도 있습니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "'아주 간단하지만, 터미널을 좋아하지 않는 사람에게는 맞지 않습니다.'",
+          null
+        ],
+        [
+          "observed",
+          "git clone은 완료되었습니다(객체 14,361개, 9.93 MiB). 첫 'bun install'은 'zsh: command not found: bun'으로 실패했습니다. 테스터가 AI 어시스턴트에게 묻자, Bun 설치는 성공했으나 터미널이 업데이트된 PATH를 불러오지 않았다는 답이 돌아왔고, 해결책은 'exec /bin/zsh'였습니다.",
+          null
+        ],
+        [
+          "observed",
+          "그 뒤 설치는 터미널에서 약 1분 '꽤 걸렸고' 확장 프로그램이 실행되었습니다. 'load unpacked' 단계는 메모에 설명되어 있지 않습니다.",
+          null
+        ],
+        [
+          "assumption",
+          "첫 스크린샷의 주소 표시줄에 보이는 확장 프로그램 ID(ofcf...)는 스토어 버전의 ID(jfgf...)와 다르며, 이는 압축 해제된 빌드라는 점과 부합합니다. 확인하지 않았습니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-opens",
+      "title": "첫 실행: 전체 화면 페이지",
+      "items": [
+        [
+          "observed",
+          "확장 프로그램을 클릭하면 'Page Assist - A Web UI for Local AI Models'가 브라우저 탭 전체로 열립니다. 'Ollama is running', 비어 있는 모델 및 프롬프트 선택기, 메시지 입력란이 표시됩니다.",
+          "webui_full"
+        ],
+        [
+          "tester-view",
+          "'사이드바로 홍보하지만, 사이드바가 아닙니다.'",
+          null
+        ],
+        [
+          "observed",
+          "설정 메뉴는 깁니다: General, Pipeline, Ollama, Chrome AI, OpenAI Compatible API, MCP Servers, Page Action, WebMCP, Memory, Manage Models, Manage Knowledge, Manage Prompts, Manage Share, About. 여러 항목에 Beta 배지가 붙어 있습니다. 'Chrome AI Settings'는 약 4 GB의 Gemini Nano 다운로드를 제공하며 토글은 꺼져 있습니다.",
+          "settings"
+        ],
+        [
+          "tester-view",
+          "'시스템 설정은 매우 인상적으로 보입니다.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-store",
+      "title": "Chrome Web Store 경로",
+      "items": [
+        [
+          "observed",
+          "README는 Chrome Web Store 링크를 페이지 아래쪽에 나열합니다. 테스터는 이를 놓치고 소스 경로를 택했습니다. '아래쪽에 있었는데 제가 놓쳤습니다.'",
+          null
+        ],
+        [
+          "observed",
+          "설치 대화 상자에는 확장 프로그램이 'Read and change all your data on all websites'와 'Display notifications'를 할 수 있다고 나옵니다.",
+          "store_dialog"
+        ],
+        [
+          "third-party",
+          "스토어 등록 정보에는 테스트 날짜 기준으로 'Featured', 별점 4.8, 평가 245개, 사용자 200,000명이 표시됩니다. 검증하지 않았습니다.",
+          null
+        ],
+        [
+          "observed",
+          "테스터에 따르면 저장소의 최근 업데이트는 테스트 나흘 전인 2026년 10월 4일입니다. 스크린샷으로 확인하지는 않았습니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "'이 Chrome 확장 프로그램 다운로드는 GitHub에 비하면 정말 쉽습니다.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-chat",
+      "title": "첫 채팅: 빈 답변",
+      "items": [
+        [
+          "observed",
+          "스토어 버전에서 테스터는 이렇게 썼습니다: 'Okay, I'm principle lost. Can you tell me what page assist actually does?' 그리고 웹 페이지 옆에 사이드바가 나올 것으로 예상했다고 설명했습니다. 모델: gemma4:latest. 답변은 답변 텍스트가 없는 접힌 'Thought for 0ms' 상자였습니다.",
+          "chat_empty1"
+        ],
+        [
+          "observed",
+          "그는 'Okay, where's my answer?'라고 물었습니다. 두 번째 답변도 비어 있는 'Thought for 0ms' 상자였습니다.",
+          "chat_empty2"
+        ],
+        [
+          "assumption",
+          "원인은 분리하지 못했습니다. 모델, 사고(thinking) 토글, 또는 Ollama와의 연결이 각각 영향을 줬을 수 있습니다. 테스트하지 않았습니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-sidebar",
+      "title": "사이드바 찾기",
+      "items": [
+        [
+          "observed",
+          "영상이 있는 환영 창이 나타났습니다. 테스터에 따르면 영상은 이것이 브라우저를 차지하는 사이드바를 여는 확장 프로그램이 아니며, 열려면 단축키가 필요하다고 설명했습니다. 테스터는 Ctrl+Shift+Y를 시도했으나 작동하지 않았습니다. 영상 자체는 메모에 없습니다.",
+          null
+        ],
+        [
+          "observed",
+          "그는 '설정에서 사이드바의 흔적 같은 것'을 찾았습니다(붙여 넣은 설정 목록에 Sidebar Position 설정이 있습니다). 열지는 못했습니다.",
+          null
+        ],
+        [
+          "observed",
+          "테스터가 붙여 넣은 README 기능 목록에는 Sidebar('can be opened on any webpage'), Web UI('like a ChatGPT website'), Chat With Webpage가 나와 있습니다.",
+          null
+        ],
+        [
+          "observed",
+          "비교를 위해 그는 자신의 PromptQuorum Optimizer 확장 프로그램을 보여 주었습니다. 오프라인 상태의 툴바 팝업('Start the PromptQuorum desktop app to enable optimization')이었습니다. 메모는 이를 자신의 사이드바라고 부르며 'it works'라고 적었지만, 스크린샷에는 오프라인 상태가 보입니다.",
+          "pq_popup"
+        ],
+        [
+          "observed",
+          "Ahrefs 알림으로 찾은 aihubmix.com의 한 기사가 그의 Page Assist 리뷰를 언급했고, 그것이 다시 시도할 힘을 주었습니다. 테스터가 그 기사를 읽었는지는 밝히지 않았습니다.",
+          null
+        ],
+        [
+          "observed",
+          "그는 ChatGPT와 함께 작업한 끝에 사이드바를 켜는 스위치가 없다는 것을 알게 되었습니다. 그의 Mac의 Chrome에서는 페이지에서 마우스 오른쪽 클릭으로 사이드 패널이 열리고, 확장 프로그램 아이콘을 클릭하면 전체 화면 UI가 열립니다. '완전히 다른 기능'입니다.",
+          null
+        ],
+        [
+          "assumption",
+          "설정 목록에는 Beta 항목 두 개, 'Set Default Action for Extension Icon Clicks'와 'Set Default action for Context Menu'도 있습니다. 이 동작을 제어할 수도 있습니다. 테스트하지 않았습니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-sidebar-use",
+      "title": "사이드바 사용",
+      "items": [
+        [
+          "observed",
+          "사이드 패널의 첫 질문은 'what does the text talk about'였습니다. 표시된 모델: gemma4:latest. 답변은 나타나지 않고 커서만 보였습니다.",
+          "sidebar_wait"
+        ],
+        [
+          "observed",
+          "테스터는 비교합니다. 그가 만든 Chrome 앱은 로컬 모델에 연결할 수 있는지 20초마다 확인합니다. 여기서는 모델이 작동하는지 알려 주는 것이 없었습니다. '이제 로컬 LLM이 작동하는지, 문제가 무엇인지 알아내야 합니다.'",
+          null
+        ],
+        [
+          "observed",
+          "'몇 번 더 클릭한' 뒤 작동했습니다. 무엇이 해결했는지는 메모에 없습니다. 이후 스크린샷에는 gemma4:latest 대신 qwen3-coder:30b가 선택되어 있습니다.",
+          "sidebar_home"
+        ],
+        [
+          "assumption",
+          "모델을 바꾼 것이 해결책이었을 수 있습니다. 메모에는 명시되어 있지 않습니다.",
+          null
+        ],
+        [
+          "observed",
+          "시작 화면에는 'Chat with current page'가 체크되어 있고, 'Page Action'과 'Page tools (WebMCP)'는 체크 해제되어 있습니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-page",
+      "title": "페이지 읽기와 페이지에서 동작하기",
+      "items": [
+        [
+          "observed",
+          "그는 페이지의 단어 수를 세 달라고 요청했습니다. '잘 셌습니다.' 어떤 페이지와 어떤 모델이었는지는 기록 없음.",
+          null
+        ],
+        [
+          "observed",
+          "Search Console 성능 페이지에서 답변은 제공된 컨텍스트에 CTR 정보가 없다고 말했고, 내용을 시간 구간을 타임라인으로 나타낸 그래픽 표현(이 페이지 맨 위)이라고 설명했습니다. 페이지에는 평균 CTR 1.5% 카드가 있습니다. 테스터는 이렇게 요약합니다: '데이터를 읽지 못했고, 이해하지 못했습니다'.",
+          null
+        ],
+        [
+          "assumption",
+          "동적 차트와 카드 내용이 텍스트로 모델에 전달되지 않을 수 있습니다. 작은 컨텍스트 윈도우도 영향을 줬을 수 있습니다. 둘 다 테스트하지 않았습니다.",
+          null
+        ],
+        [
+          "observed",
+          "그는 웹사이트에서 안내 문서를 찾아 달라고 요청했습니다. '그리고 아닙니다. 실패했습니다.'",
+          null
+        ],
+        [
+          "tester-view",
+          "'새 페이지를 불러오면 시스템이 그것을 이해하지 못하고 여전히 이전 페이지로 작업합니다.' 그는 이를 새로고침 문제라고 부르며 페이지에서 페이지로 이동하는 것은 불가능하다고 결론짓습니다. 시도 횟수와 사용한 페이지: 기록 없음. 스크린샷으로 확인하지 않았습니다.",
+          null
+        ],
+        [
+          "observed",
+          "그는 도구가 클릭, 검색, 데이터 입력을 할 수 있음을 시사하는 설정(Page Action)을 찾았습니다. '그런 건 전혀 없었습니다': 페이지를 스크롤하게 만들지조차 못했습니다.",
+          null
+        ],
+        [
+          "assumption",
+          "그 테스트 중 Page Action이나 WebMCP가 켜져 있었는지는 기록 없음. 스크린샷에서는 둘 다 꺼져 있습니다. 꺼져 있었다면 제품의 한계가 아니라 설정 누락입니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "'이제는 채팅 기능만 작동하고, Claude Chrome 확장 프로그램처럼 능동적으로 조작하는 기능은 없는 것 같습니다.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-ui",
+      "title": "인터페이스 세부 사항",
+      "items": [
+        [
+          "observed",
+          "소리 내어 읽기는 소리가 나지 않았습니다. 텍스트 음성 변환이 켜져 있었는지, 음성을 선택했는지는 기록 없음.",
+          null
+        ],
+        [
+          "observed",
+          "'Current Chat Model Settings' 패널에는 Keep Alive, Temperature, Seed, Context Window Size (num_ctx), Max Tokens (num_predict), Top K, Top P, Num GPU, Min P, Repeat Penalty, Repeat Last N, TFS-Z, Num Keep, Num Thread, useMmap, useMlock, Reasoning Effort가 나열됩니다. 테스터가 붙여 넣은 텍스트에서는 Keep Alive와 Seed에만 설명 줄이 있습니다. 툴팁은 확인하지 않았습니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "'훌륭한 모델 설정이지만 설명이 없어서 대부분은 이 모든 것이 무엇인지 놓칠 것입니다.'",
+          null
+        ],
+        [
+          "observed",
+          "채팅의 'Add MCP server' 버튼은 눈에 보이는 동작이 없습니다. 서버를 먼저 설정에서 추가해야 하는 것으로 보입니다. 테스터는 이를 UI 문제라고 부릅니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "결정",
+      "items": [
+        [
+          "tester-view",
+          "'지금 이 모든 것을 삭제하겠습니다. 저와 관련이 없기 때문입니다. 저는 또 다른 검색 도구나 검색 엔진, 로컬 LLM을 다루는 또 다른 인터페이스가 필요하지 않습니다. 이미 많이 가지고 있습니다.'",
+          null
+        ],
+        [
+          "tester-view",
+          "그는 자신이 탐색하는 페이지 옆에 사이드바가 있어서, 질문하면 로컬 모델이(때로는 인터넷에서) 답을 주고, Claude의 사이드바처럼 작업을 직접 클릭해 진행해 주기를 원했습니다. '이것은 사이드바가 아닙니다. 새로운 브라우저입니다.'",
+          null
+        ],
+        [
+          "tester-view",
+          "'당분간은 Claude Chrome 확장 프로그램을 계속 쓰겠습니다. 거기서는 모든 것을 할 수 있습니다.'",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "Sidebar: 'can be opened on any webpage'",
+      "README 기능 목록",
+      "사이드 패널이 있었고 채팅이 표시되었습니다. 툴바 아이콘이 아니라 마우스 오른쪽 클릭으로 열립니다. 환영 영상의 단축키는 테스터에게 작동하지 않았습니다.",
+      "observed"
+    ],
+    [
+      "Web UI: 'like a ChatGPT website'",
+      "README 기능 목록",
+      "전체 페이지 채팅 UI가 열렸습니다. gemma4:latest와의 채팅 두 번은 빈 답변을 돌려주었습니다.",
+      "observed"
+    ],
+    [
+      "Chat With Webpage: 'ask questions about the content'",
+      "README 기능 목록",
+      "단어 수 세기는 작동했습니다. Search Console 페이지는 이해하지 못했고, 페이지를 바꿔도 컨텍스트가 따라오지 않았습니다.",
+      "observed"
+    ],
+    [
+      "Chrome, Edge, Firefox용으로 빌드됨",
+      "README",
+      "Chrome만 사용했습니다. Edge와 Firefox는 테스트하지 않았습니다.",
+      "observed"
+    ],
+    [
+      "Featured, 별점 4.8, 평가 245개, 사용자 200,000명",
+      "Chrome Web Store 등록 정보",
+      "테스트 날짜 기준으로 표시된 그대로 확인했습니다. 검증하지 않았습니다.",
+      "third-party"
+    ],
+    [
+      "Page Action (Beta): 도구가 페이지에서 동작을 수행함",
+      "설정 메뉴",
+      "테스터는 스크롤이나 클릭을 하게 만들지 못했습니다. 켜져 있었는지는 기록 없음.",
+      "observed"
+    ],
+    [
+      "Ollama 또는 OpenAI 호환 엔드포인트 필요",
+      "README 사전 요구 사항",
+      "Ollama가 실행 중이었고 인식되었습니다. 다른 엔드포인트는 시도하지 않았습니다.",
+      "observed"
+    ]
+  ],
+  "usage_log": [
+    [
+      "저장소 복제",
+      "-",
+      "완료",
+      "기록 없음",
+      "Pass",
+      []
+    ],
+    [
+      "bun install",
+      "-",
+      "첫 실행: 'command not found: bun'(PATH). 'exec /bin/zsh' 이후 약 1분간 실행됨",
+      "약 1분",
+      "Partial",
+      []
+    ],
+    [
+      "확장 프로그램 빌드 및 로드",
+      "-",
+      "확장 프로그램이 실행됨(빌드 단계는 메모에 항목별로 기록되지 않음)",
+      "기록 없음",
+      "Pass",
+      [
+        "webui_full"
+      ]
+    ],
+    [
+      "툴바에서 확장 프로그램 열기",
+      "-",
+      "사이드바가 아닌 전체 화면 웹 UI",
+      "-",
+      "Partial",
+      [
+        "webui_full",
+        "settings"
+      ]
+    ],
+    [
+      "Chrome Web Store에서 설치",
+      "-",
+      "대화 상자가 표시되고 확장 프로그램이 추가됨(이후 스크린샷은 스토어 ID를 사용)",
+      "기록 없음",
+      "Pass",
+      [
+        "store_dialog"
+      ]
+    ],
+    [
+      "웹 UI에서 채팅",
+      "gemma4:latest",
+      "빈 'Thought for 0ms' 답변 두 개",
+      "-",
+      "Fail",
+      [
+        "chat_empty1",
+        "chat_empty2"
+      ]
+    ],
+    [
+      "Ctrl+Shift+Y로 사이드바 열기",
+      "-",
+      "작동하지 않음",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "오른쪽 클릭 메뉴에서 사이드바 열기",
+      "-",
+      "ChatGPT가 알려 준 뒤 작동함",
+      "기록 없음",
+      "Pass",
+      [
+        "sidebar_home"
+      ]
+    ],
+    [
+      "사이드 패널의 첫 질문",
+      "gemma4:latest",
+      "답변 없이 커서만 표시됨. '몇 번 더 클릭한' 뒤 해결됨(원인은 기록 없음)",
+      "-",
+      "Partial",
+      [
+        "sidebar_wait"
+      ]
+    ],
+    [
+      "페이지의 단어 수 세기",
+      "기록 없음",
+      "테스터에 따르면 잘 셌음",
+      "기록 없음",
+      "Pass",
+      []
+    ],
+    [
+      "Search Console 페이지의 CTR에 대해 질문",
+      "qwen3-coder:30b",
+      "답변: 컨텍스트에 CTR 정보 없음",
+      "-",
+      "Fail",
+      [
+        "gsc_fail"
+      ]
+    ],
+    [
+      "웹사이트에서 안내 문서 찾기",
+      "기록 없음",
+      "실패",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "다른 페이지로 이동해 다시 질문",
+      "기록 없음",
+      "이전 페이지의 컨텍스트가 남아 있음(테스터의 인상)",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "Page Action: 페이지에서 스크롤 또는 클릭",
+      "기록 없음",
+      "스크롤하지 못함. 스위치 상태는 기록 없음",
+      "-",
+      "Fail",
+      [
+        "sidebar_home"
+      ]
+    ],
+    [
+      "소리 내어 읽기",
+      "-",
+      "소리가 나지 않음. 설정은 기록 없음",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "채팅에서 MCP 서버 추가",
+      "-",
+      "설정에서 구성하기 전까지 버튼이 아무 곳으로도 이어지지 않음",
+      "-",
+      "Partial",
+      []
+    ],
+    [
+      "삭제",
+      "-",
+      "계획됨. 실제로 삭제했는지는 기록 없음",
+      "-",
+      "Not completed",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "README에서 Chrome Web Store 링크를 놓치고 더 긴 소스 경로를 먼저 택했습니다. 테스터 본인이 그렇게 말합니다."
+    ],
+    [
+      "tester-error",
+      "툴바 아이콘으로 사이드바를 찾으려 했으나 그 아이콘은 전체 화면 UI를 열며, 오른쪽 클릭 경로는 오랫동안 찾지 못했습니다. 제품의 환영 영상이 안내한 단축키가 작동하지 않았으므로, 이 실수는 제품과 함께 나눠 가질 부분이 있습니다."
+    ],
+    [
+      "assumption",
+      "클릭 및 스크롤 테스트 중 Page Action과 WebMCP가 꺼져 있었을 수 있습니다. 유일한 스크린샷에서는 둘 다 체크 해제되어 있습니다. 그렇다면 그 발견은 제품의 한계가 아니라 설정 누락입니다."
+    ],
+    [
+      "assumption",
+      "Claude in Chrome과의 비교는 확장 프로그램과 모델을 뒤섞습니다. Page Assist는 로컬 모델(gemma4:latest, 이름상 코드 중심 모델인 qwen3-coder:30b)을 실행했고, Claude in Chrome은 클라우드 모델을 실행합니다. README는 Page Assist가 OpenAI 호환 엔드포인트를 쓸 수 있다고 하지만 시도하지 않았습니다. 차이의 일부는 모델에서 비롯되었을 수 있습니다."
+    ],
+    [
+      "tester-error",
+      "기록에 빈틈이 있습니다: 확장 프로그램, Chrome, Ollama, macOS 버전, 첫 스크린샷 이후 각 테스트에서 사용한 모델, 멈춘 답변을 해결한 요인, 단어 수 세기와 페이지 전환 테스트에 사용한 페이지."
+    ],
+    [
+      "tester-view",
+      "테스터는 자신의 PromptQuorum Optimizer를 'works'하는 사이드바라고 불렀습니다. 스크린샷에는 그 순간 오프라인 상태였던 툴바 팝업이 보입니다. 따라서 비교 기준은 서술된 것보다 약합니다."
+    ]
+  ],
+  "findings": [
+    [
+      "PA-01",
+      "README에 명확한 소스 빌드 단계(git clone, bun install, bun run build)가 있지만 터미널, Bun, Ollama가 필요합니다.",
+      "설치",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "PA-02",
+      "Chrome Web Store 링크가 README 아래쪽에 있어 테스터가 놓치고 소스 경로를 택했습니다.",
+      "설치",
+      "observed",
+      "Medium",
+      [
+        "store_dialog"
+      ]
+    ],
+    [
+      "PA-03",
+      "Bun을 설치한 뒤 셸을 다시 불러오기 전까지 'bun: command not found'가 발생했습니다(Page Assist 자체가 아니라 Bun/PATH 문제).",
+      "설치",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-04",
+      "툴바 아이콘은 사이드바가 아니라 전체 화면 웹 UI를 엽니다. 사이드바는 오른쪽 클릭 메뉴에서 엽니다.",
+      "온보딩",
+      "observed",
+      "High",
+      [
+        "webui_full",
+        "sidebar_home"
+      ]
+    ],
+    [
+      "PA-05",
+      "환영 영상에서 안내한 단축키(시도: Ctrl+Shift+Y)는 테스터에게 작동하지 않았습니다.",
+      "온보딩",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "PA-06",
+      "스토어 설치 시 모든 웹사이트의 모든 데이터를 읽고 변경하는 권한과 알림 표시 권한을 요청합니다.",
+      "신뢰",
+      "observed",
+      "Medium",
+      [
+        "store_dialog"
+      ]
+    ],
+    [
+      "PA-07",
+      "gemma4:latest와의 채팅 두 번이 빈 'Thought for 0ms' 답변을 돌려주었습니다. 원인은 분리하지 못했습니다.",
+      "핵심 기능",
+      "observed",
+      "High",
+      [
+        "chat_empty1",
+        "chat_empty2"
+      ]
+    ],
+    [
+      "PA-08",
+      "사이드 패널의 첫 질문에는 커서만 표시되었고, 모델에 연결되어 있는지 알려 주는 표시가 없었습니다. '몇 번 더 클릭한' 뒤 작동했습니다.",
+      "핵심 기능",
+      "observed",
+      "Medium",
+      [
+        "sidebar_wait"
+      ]
+    ],
+    [
+      "PA-09",
+      "테스터에 따르면 Chat with current page는 페이지의 단어 수를 정확하게 셌습니다.",
+      "핵심 기능",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "PA-10",
+      "Search Console 페이지에서 답변은 CTR 정보가 없다고 말했지만, 페이지에는 CTR 카드가 있습니다.",
+      "핵심 기능",
+      "observed",
+      "High",
+      [
+        "gsc_fail"
+      ]
+    ],
+    [
+      "PA-11",
+      "테스터의 인상으로는 페이지를 바꿔도 컨텍스트가 따라오지 않았습니다. 스크린샷으로 확인하지 않았고 시도 횟수는 기록 없음.",
+      "핵심 기능",
+      "tester-view",
+      "High",
+      []
+    ],
+    [
+      "PA-12",
+      "웹사이트에서 안내 문서를 찾아 달라는 요청이 실패했습니다.",
+      "핵심 기능",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "PA-13",
+      "Page Action은 스크롤도 클릭도 하지 못했습니다. 켜져 있었는지는 기록 없음.",
+      "핵심 기능",
+      "observed",
+      "High",
+      [
+        "sidebar_home"
+      ]
+    ],
+    [
+      "PA-14",
+      "모델 설정에 많은 매개변수가 나열되어 있으며, 붙여 넣은 텍스트에서는 Keep Alive와 Seed에만 설명이 있습니다.",
+      "사용성",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-15",
+      "채팅의 'Add MCP server' 버튼은 설정에서 서버를 구성하기 전까지 눈에 보이는 동작이 없습니다.",
+      "사용성",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-16",
+      "소리 내어 읽기는 소리가 나지 않았습니다. 설정 상태는 기록 없음.",
+      "사용성",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-17",
+      "테스터에 따르면 저장소의 마지막 업데이트는 2026년 10월 4일입니다(스크린샷으로 확인하지 않음).",
+      "유지 관리",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "PA-18",
+      "스토어 등록 정보: Featured, 별점 4.8, 평가 245개, 사용자 200,000명. 검증하지 않았습니다.",
+      "신뢰",
+      "third-party",
+      "Positive",
+      [
+        "store_dialog"
+      ]
+    ]
+  ],
+  "severity_note": "심각도는 처음 사용하는 사람에게 미치는 영향입니다. 제안값이며 측정값이 아닙니다.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "전체 페이지 채팅 UI를 원하고 설정에 익숙한 Ollama 사용자. 오른쪽 클릭 메뉴로 사이드 패널을 찾을 수도 있습니다."
+      ],
+      [
+        "assumption",
+        "현재 페이지와 로컬로 채팅하고 싶고, 데이터가 많은 페이지는 놓칠 수 있음을 받아들이는 사람."
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "Claude in Chrome처럼 페이지를 직접 클릭하며 이동하는 사이드바 에이전트를 기대하는 사람."
+      ],
+      [
+        "assumption",
+        "터미널을 열고 싶지 않은 사람: 소스 빌드 대신 스토어 버전을 사용하십시오."
+      ]
+    ],
+    "retest": "Page Action과 WebMCP를 켜고 그 상태를 기록하며, 테스트마다 모델을 하나씩 사용하고, 같은 페이지를 더 큰 모델이나 클라우드 기반 모델로도 시도해 다시 테스트하십시오. 삭제 중인 테스터는 이를 계획하고 있지 않습니다."
+  },
+  "background_intro": "직접 사용 세션에 포함되지 않은 내용이며, 검증하지 않았습니다.",
+  "background": [
+    [
+      "third-party",
+      "aihubmix.com의 한 기사가 PromptQuorum의 Page Assist 리뷰로 연결됩니다. 기사 제목은 주소에서 가져온 것으로 'Page Assist in practice: four everyday browser workflows with local and cloud models'입니다. 기사 내용은 이번 테스트를 위해 검토하지 않았습니다."
+    ]
+  ],
+  "sources": [
+    "테스터의 직접 테스트 메모, 2026년 10월 8일~9일(원본 문서, 원본 메모 PDF는 추가 예정).",
+    "github.com/n4ze3m/page-assist README, 설치 단계와 기능 목록(테스터가 붙여 넣은 그대로).",
+    "Chrome Web Store 등록 정보와 설치 대화 상자(테스터의 스크린샷에서 확인한 그대로).",
+    "aihubmix.com 기사(주소는 테스터의 메모에 있음), 검토하지 않음."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "관찰",
+      "meaning": "앱, 스크린샷 또는 테스터의 메모에서 직접 확인한 내용입니다."
+    },
+    "measured": {
+      "label": "측정",
+      "meaning": "대화 상자, 카운터 또는 도구에서 읽은 값이며 숫자를 함께 제시합니다."
+    },
+    "tester-estimate": {
+      "label": "테스터 추정",
+      "meaning": "테스터 자신의 추정이며, 시간을 재거나 세지 않았습니다."
+    },
+    "vendor-claim": {
+      "label": "업체 주장",
+      "meaning": "앱, 스토어 등록 정보 또는 웹사이트가 밝힌 내용이며 검증하지 않았습니다."
+    },
+    "third-party": {
+      "label": "제3자",
+      "meaning": "다른 출처(AI 어시스턴트, 기사)에서 나온 내용이며 여기서는 검증하지 않았습니다."
+    },
+    "assumption": {
+      "label": "가정",
+      "meaning": "추론입니다. 틀릴 수 있습니다."
+    },
+    "tester-view": {
+      "label": "테스터 의견",
+      "meaning": "테스터의 판단 또는 의견입니다."
+    },
+    "tester-error": {
+      "label": "테스터 오류",
+      "meaning": "테스터가 실수했거나 놓친 부분입니다."
+    }
+  },
+  "images": [
+    {
+      "id": "gsc_fail",
+      "figure": 1,
+      "file": "page-assist-side-panel-search-console-no-ctr-found.webp",
+      "path": "images/page-assist-side-panel-search-console-no-ctr-found.webp",
+      "alt": "Search Console 페이지 옆의 Page Assist 사이드 패널. qwen3-coder:30b의 답변은 제공된 내용에 CTR 정보가 없다고 말합니다.",
+      "caption": "Page Assist가 옆에 열려 있는 Search Console 성능 페이지. 답변은 제공된 컨텍스트에 CTR 정보가 없다고 말하며, 페이지를 'a graphical representation of time intervals on a timeline'이라고 설명합니다. 실제 페이지에는 평균 CTR 카드(1.5%)가 있습니다. 테스터의 질문은 보이지 않습니다. 스크린샷에는 테스터 본인 사이트의 지표가 나옵니다.",
+      "role": "hero",
+      "width": 1535,
+      "height": 566,
+      "bytes": 63586,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI. Shows the tester's own Search Console figures.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image9.png"
+    },
+    {
+      "id": "webui_full",
+      "figure": 2,
+      "file": "page-assist-web-ui-opens-full-screen-ollama-running.webp",
+      "path": "images/page-assist-web-ui-opens-full-screen-ollama-running.webp",
+      "alt": "전체 브라우저 탭으로 열린 Page Assist 웹 UI: 'Ollama is running', 비어 있는 모델 및 프롬프트 선택기, 하단의 메시지 입력란.",
+      "caption": "툴바 아이콘이 여는 화면: 전체 페이지 채팅 UI(소스에서 빌드한 버전). Ollama가 인식되었고 아직 선택된 모델은 없습니다. 북마크 바와 프로필 사진은 흐리게 처리했습니다.",
+      "role": "moment",
+      "width": 1269,
+      "height": 733,
+      "bytes": 17884,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-opens",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image1.png"
+    },
+    {
+      "id": "settings",
+      "figure": 3,
+      "file": "page-assist-settings-menu-chrome-ai-page-action-webmcp.webp",
+      "path": "images/page-assist-settings-menu-chrome-ai-page-action-webmcp.webp",
+      "alt": "Page Assist 설정 메뉴: General, Pipeline, Ollama, Chrome AI, OpenAI Compatible API, MCP Servers, Page Action, WebMCP, Memory, Manage Models 등.",
+      "caption": "소스에서 빌드한 버전의 설정 메뉴. 'Chrome AI Settings'는 Gemini Nano 다운로드(약 4 GB)를 제공하며 토글은 꺼져 있습니다. MCP Servers, Page Action, WebMCP, Memory에는 Beta 배지가 붙어 있습니다. 북마크 바와 프로필 사진은 흐리게 처리했습니다.",
+      "role": "inline",
+      "width": 1596,
+      "height": 722,
+      "bytes": 35920,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-opens"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image2.png"
+    },
+    {
+      "id": "store_dialog",
+      "figure": 4,
+      "file": "page-assist-chrome-web-store-install-dialog.webp",
+      "path": "images/page-assist-chrome-web-store-install-dialog.webp",
+      "alt": "'Add extension' 대화 상자가 열린 Page Assist의 Chrome Web Store 페이지: 모든 웹사이트의 모든 데이터 읽기 및 변경, 알림 표시.",
+      "caption": "Chrome Web Store 등록 정보: 'Featured', 별점 4.8, 평가 245개, 사용자 200,000명(스토어 수치이며 검증하지 않음). 설치 대화 상자에는 'Read and change all your data on all websites'와 'Display notifications'가 나열됩니다. 탭 제목, 북마크, 프로필 사진은 가렸습니다.",
+      "role": "moment",
+      "width": 1428,
+      "height": 650,
+      "bytes": 35064,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-store",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image3.png"
+    },
+    {
+      "id": "chat_empty1",
+      "figure": 5,
+      "file": "page-assist-chat-gemma4-reply-empty-thought-0ms.webp",
+      "path": "images/page-assist-chat-gemma4-reply-empty-thought-0ms.webp",
+      "alt": "gemma4:latest와의 Page Assist 채팅: 사용자가 Page Assist가 무엇을 하는지 묻자 답변은 답변 텍스트 없이 접힌 'Thought for 0ms' 상자뿐입니다.",
+      "caption": "스토어 버전의 첫 채팅. 사용자는 Page Assist가 실제로 무엇을 하는지 묻고 사이드바를 예상했다고 말합니다. 답변은 'Thought for 0ms' 상자뿐입니다. 하단의 토글 두 개는 켜져 있으며, 그 의미는 확인하지 않았습니다. 북마크 바와 프로필 사진은 흐리게 처리했습니다.",
+      "role": "inline",
+      "width": 1598,
+      "height": 726,
+      "bytes": 45716,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-chat"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image4.png"
+    },
+    {
+      "id": "chat_empty2",
+      "figure": 6,
+      "file": "page-assist-chat-second-empty-reply-thought-0ms.webp",
+      "path": "images/page-assist-chat-second-empty-reply-thought-0ms.webp",
+      "alt": "Page Assist 채팅: 사용자가 'Okay, where's my answer?'라고 쓴 뒤, gemma4:latest가 다시 접힌 'Thought for 0ms' 상자만 표시합니다.",
+      "caption": "두 번째 시도. gemma4:latest의 답변 두 개 모두 빈 'Thought for 0ms' 상자입니다. 원인은 분리하지 못했습니다.",
+      "role": "moment",
+      "width": 1024,
+      "height": 436,
+      "bytes": 10120,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-chat",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image5.png"
+    },
+    {
+      "id": "pq_popup",
+      "figure": 7,
+      "file": "promptquorum-optimizer-popup-offline-own-extension.webp",
+      "path": "images/promptquorum-optimizer-popup-offline-own-extension.webp",
+      "alt": "테스터 본인의 PromptQuorum Optimizer 확장 프로그램 툴바 팝업. 'PromptQuorum offline'과 비어 있는 프롬프트 입력란이 보입니다.",
+      "caption": "Page Assist가 아닙니다. 비교를 위해 보여 준 테스터 본인의 PromptQuorum Optimizer 확장 프로그램입니다. 오프라인 상태의 툴바 팝업('Start the PromptQuorum desktop app to enable optimization')이며, 메모는 이를 자신의 사이드바라고 부릅니다. 주변 페이지는 잘라냈습니다.",
+      "role": "inline",
+      "width": 408,
+      "height": 428,
+      "bytes": 15586,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-sidebar"
+      ],
+      "subject": "Screenshot of the tester's own PromptQuorum Optimizer extension (not Page Assist)",
+      "rights": "Tester's own screenshot of the tester's own software.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image6.png"
+    },
+    {
+      "id": "sidebar_wait",
+      "figure": 8,
+      "file": "page-assist-side-panel-no-answer-after-question.webp",
+      "path": "images/page-assist-side-panel-no-answer-after-question.webp",
+      "alt": "Chrome의 Page Assist 사이드 패널: 사용자가 'what does the text talk about'라고 물었고, gemma4:latest는 깜박이는 커서만 표시하며 답변이 없습니다.",
+      "caption": "사이드 패널의 첫 질문: 'what does the text talk about'. 표시된 모델: gemma4:latest. 커서만 나타납니다. 이후 테스터는 로컬 모델이 작동하는지 확인했습니다. 패널 옆의 기사 페이지(제3자)는 잘라냈습니다.",
+      "role": "inline",
+      "width": 698,
+      "height": 714,
+      "bytes": 13118,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-sidebar-use"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image7.png"
+    },
+    {
+      "id": "sidebar_home",
+      "figure": 9,
+      "file": "page-assist-side-panel-start-screen-chat-with-current-page.webp",
+      "path": "images/page-assist-side-panel-start-screen-chat-with-current-page.webp",
+      "alt": "Page Assist 사이드 패널 시작 화면: Ollama 실행 중, 모델 qwen3-coder:30b, 'Chat with current page' 체크, Page Action과 WebMCP 체크 해제.",
+      "caption": "qwen3-coder:30b가 선택된 사이드 패널 시작 화면. 이 스크린샷에서 'Chat with current page'는 켜져 있고 'Page Action'과 'Page tools (WebMCP)'는 꺼져 있습니다.",
+      "role": "moment",
+      "width": 693,
+      "height": 580,
+      "bytes": 8832,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-sidebar-use",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image8.png"
+    }
+  ],
+  "figure_order": [
+    "gsc_fail",
+    "webui_full",
+    "settings",
+    "store_dialog",
+    "chat_empty1",
+    "chat_empty2",
+    "pq_popup",
+    "sidebar_wait",
+    "sidebar_home"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum 직접 사용 테스트 · {app} · {date}",
+    "date_line": "2026년 10월 8일~9일",
+    "nav_aria": "섹션",
+    "nav": {
+      "verdict": "결론",
+      "moments": "다섯 장면",
+      "story": "진행 과정",
+      "claims": "주장",
+      "fit": "24 GB",
+      "log": "사용 기록",
+      "errors": "테스터 오류",
+      "findings": "발견 사항",
+      "background": "배경"
+    },
+    "related": "관련 글:",
+    "review_link": "{app} PromptQuorum 리뷰",
+    "directory_link": "로컬 AI 앱 디렉터리",
+    "verdict_h": "결론",
+    "general_assessment": "종합 평가",
+    "fit_for_tester": "테스터의 사용 목적과의 적합성",
+    "scorecard": "점수표",
+    "status_prefix": "상태:",
+    "na": "해당 없음",
+    "score_aria": "5점 만점에 {n}점",
+    "details_h": "테스트 상세 정보",
+    "label_intro": "모든 진술에는 라벨이 붙습니다:",
+    "legend_link": "라벨의 의미",
+    "disclosure_label": "공개 사항.",
+    "raw_notes": "원본 노트 PDF:",
+    "to_be_added": "추가 예정",
+    "moments_h": "이 테스트를 좌우한 여섯 장면",
+    "see_context": "맥락 보기",
+    "story_h": "테스트는 이렇게 진행되었습니다",
+    "claims_h": "주장과 테스터가 확인한 내용",
+    "claims_cols": [
+      "주장",
+      "출처",
+      "확인한 내용",
+      "라벨"
+    ],
+    "fit_h": "24 GB에 들어갈까요?",
+    "memory_line": "{gb} GB 메모리",
+    "above": "{gb} GB 초과",
+    "below": "{gb} GB 미만",
+    "log_h": "사용 기록",
+    "log_cols": [
+      "#",
+      "작업",
+      "모델",
+      "결과",
+      "소요 시간",
+      "상태",
+      "그림"
+    ],
+    "statuses": {
+      "Fail": "실패",
+      "Partial": "부분 성공",
+      "Pass": "통과",
+      "Not completed": "미완료"
+    },
+    "errors_h": "테스터가 잘못한 부분",
+    "findings_h": "발견 사항 목록",
+    "filter_aria": "라벨별로 발견 사항 필터링",
+    "filter_all": "전체",
+    "findings_cols": [
+      "ID",
+      "발견 사항",
+      "분류",
+      "라벨",
+      "심각도",
+      "그림"
+    ],
+    "severities": {
+      "High": "높음",
+      "Medium": "보통",
+      "Low": "낮음",
+      "Positive": "긍정"
+    },
+    "fig_abbr": "그림",
+    "figure": "그림",
+    "enlarge": "확대:",
+    "audience_h": "추천 대상",
+    "likely_fit": "적합할 가능성이 높음",
+    "likely_poor_fit": "적합하지 않을 가능성이 높음",
+    "retest": "재테스트.",
+    "background_h": "개발사 배경",
+    "gallery_h": "테스트에서 나온 이미지 더 보기",
+    "legend_h": "라벨 읽는 법",
+    "sources_h": "출처",
+    "footer_line": "테스트 ID {id} · 테스트 표준 v{version} · 원본 노트 PDF: 추가 예정",
+    "crumb_home": "홈",
+    "crumb_directory": "디렉터리",
+    "crumb_test": "{app} 직접 사용 테스트"
+  }
+}

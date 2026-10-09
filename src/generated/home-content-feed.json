@@ -65140,5 +65140,86 @@
     "dateModified": "2026-10-09",
     "url": "/power-local-llm/bobe-hands-on-test",
     "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "⁦Page Assist⁩ على جهاز ⁦Mac⁩ بذاكرة ⁦24 GB⁩: وُجد الشريط الجانبي، ولم تُفهم الصفحة",
+    "excerpt": "اختبار عملي لإضافة المتصفح المعتمدة على ⁦Ollama⁩، على جهاز ⁦Mac⁩ بمعالج ⁦M3 Pro⁩. فتحت أيقونة شريط الأدوات صفحة بملء الشاشة بدل شريط جانبي. وبعد العثور على الشريط الجانبي، عدّ الكلمات لكنه لم يقرأ صفحة ⁦Search Console⁩ ولم ينفّذ إجراءً على أي صفحة.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/ar/power-local-llm/page-assist-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Page Assist auf einem Mac mit 24 GB: Sidebar gefunden, Seite nicht verstanden",
+    "excerpt": "Praxistest der Ollama-basierten Browser-Erweiterung auf einem Mac mit M3 Pro. Das Symbol in der Symbolleiste öffnete eine Vollbildseite statt einer Sidebar. Nachdem die Sidebar gefunden war, zählte sie Wörter, las aber keine Search-Console-Seite und handelte auch nicht auf einer Seite.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/de/power-local-llm/page-assist-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Page Assist en un Mac de 24 GB: se encontró la barra lateral, no entendió la página",
+    "excerpt": "Prueba práctica de la extensión de navegador basada en Ollama en un Mac con M3 Pro. El icono de la barra de herramientas abrió una página a pantalla completa en lugar de una barra lateral. Una vez encontrada la barra lateral, contó palabras, pero no leyó una página de Search Console ni actuó sobre una página.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/es/power-local-llm/page-assist-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Page Assist sur un Mac de 24 Go : barre latérale trouvée, page non comprise",
+    "excerpt": "Test pratique de l'extension de navigateur basée sur Ollama, sur un Mac M3 Pro. L'icône de la barre d'outils a ouvert une page plein écran au lieu d'une barre latérale. Une fois la barre latérale trouvée, elle a compté des mots, mais n'a ni lu une page de Search Console ni agi sur une page.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/fr/power-local-llm/page-assist-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "24 GBのMacでPage Assist：サイドバーは見つかったが、ページは理解されなかった",
+    "excerpt": "M3 ProのMacで行った、Ollamaベースのブラウザ拡張機能の実機テストです。ツールバーのアイコンはサイドバーではなくフルスクリーンのページを開きました。サイドバーを見つけた後、単語数は数えられたものの、Search Consoleのページは読めず、ページ上での操作もできませんでした。",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/ja/power-local-llm/page-assist-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Page Assist on a 24 GB Mac: Sidebar Found, Page Not Understood",
+    "excerpt": "Hands-on test of the Ollama-based browser extension on an M3 Pro Mac. The toolbar icon opened a full-screen page instead of a sidebar. Once the sidebar was found, it counted words but did not read a Search Console page or act on a page.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/power-local-llm/page-assist-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "24 GB Mac에서의 Page Assist: 사이드바는 찾았지만, 페이지는 이해하지 못했습니다",
+    "excerpt": "M3 Pro Mac에서 Ollama 기반 브라우저 확장 프로그램을 직접 테스트했습니다. 툴바 아이콘은 사이드바 대신 전체 화면 페이지를 열었습니다. 사이드바를 찾은 뒤에는 단어 수는 셌지만 Search Console 페이지를 읽지 못했고 페이지에서 동작을 수행하지도 못했습니다.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/ko/power-local-llm/page-assist-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Page Assist em um Mac de 24 GB: barra lateral encontrada, página não compreendida",
+    "excerpt": "Teste prático da extensão de navegador baseada no Ollama em um Mac com M3 Pro. O ícone da barra de ferramentas abriu uma página em tela cheia em vez de uma barra lateral. Depois que a barra lateral foi encontrada, ela contou palavras, mas não leu uma página do Search Console nem agiu sobre uma página.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/pt/power-local-llm/page-assist-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "24 GB Mac 上的 Page Assist：找到了侧边栏，却读不懂页面",
+    "excerpt": "在搭载 M3 Pro 的 Mac 上对这款基于 Ollama 的浏览器扩展进行的实测。点击工具栏图标打开的是全屏页面，而不是侧边栏。找到侧边栏后，它能统计字数，但读不懂 Search Console 页面，也无法对页面执行操作。",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/zh/power-local-llm/page-assist-hands-on-test",
+    "cluster": "power-local-llm"
   }
 ]

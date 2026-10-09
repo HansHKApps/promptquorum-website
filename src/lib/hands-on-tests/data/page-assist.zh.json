@@ -1,0 +1,1250 @@
+{
+  "id": "pq-test-page-assist-2026-10-08",
+  "hero": "gsc_fail",
+  "date_human": "2026年10月8日至9日",
+  "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+  "standard_version": "0.1",
+  "locale": "zh",
+  "app": {
+    "name": "Page Assist",
+    "slug": "page-assist",
+    "vendor": "Not recorded (repository: github.com/n4ze3m/page-assist)",
+    "category": "Browser extension: web UI and sidebar for local AI models (Ollama)",
+    "platform": "Chrome extension (also built for Edge and Firefox, per the README)",
+    "pricing_url": null
+  },
+  "title": "24 GB Mac 上的 Page Assist：找到了侧边栏，却读不懂页面",
+  "page_title": "Page Assist Test",
+  "dek": "在搭载 M3 Pro 的 Mac 上对这款基于 Ollama 的浏览器扩展进行的实测。点击工具栏图标打开的是全屏页面，而不是侧边栏。找到侧边栏后，它能统计字数，但读不懂 Search Console 页面，也无法对页面执行操作。",
+  "status": "Abandoned",
+  "published": "2026-10-09",
+  "started": "2026-10-08",
+  "ended": "2026-10-09",
+  "meta": [
+    [
+      "应用",
+      "Page Assist，'A Web UI for Local AI Models'：一款带有侧边栏、全页面网页界面和'chat with webpage'功能的 Chrome 扩展（github.com/n4ze3m/page-assist）",
+      "observed"
+    ],
+    [
+      "版本",
+      "未记录（扩展、Chrome、Ollama 和 macOS 的版本都没有记录）",
+      null
+    ],
+    [
+      "测试者",
+      "Hans Kuepper，PromptQuorum 创始人",
+      null
+    ],
+    [
+      "开始时间",
+      "2026 年 10 月 8 日 11:00（未说明时区；推测为当地时间，德国）",
+      "observed"
+    ],
+    [
+      "结束时间",
+      "2026 年 10 月 9 日 19:00。经过时间约 32 小时；实际测试时长未记录。",
+      "observed"
+    ],
+    [
+      "硬件",
+      "MacBook Pro，Apple M3 Pro，24 GB 统一内存（笔记中写的是'M3 24 GB'）",
+      "observed"
+    ],
+    [
+      "系统",
+      "macOS，测试当日的最新版本；具体版本未记录。浏览器：Chrome。",
+      null
+    ],
+    [
+      "安装方式",
+      "两种。先从源码构建（git、Bun、'load unpacked'），后来从 Chrome Web Store 安装。",
+      "observed"
+    ],
+    [
+      "本地模型",
+      "Ollama，运行中。截图中可见的模型：gemma4:latest 和 qwen3-coder:30b。",
+      "observed"
+    ],
+    [
+      "测试原因",
+      "测试者喜欢侧边栏这个概念，每天使用 Claude in Chrome，并且为 PromptQuorum 应用做过一个侧边栏。",
+      "observed"
+    ],
+    [
+      "目标",
+      "'主要目标是侧边栏，以及看看侧边栏能做什么。'",
+      "observed"
+    ],
+    [
+      "使用的 AI 辅助",
+      "一个 AI 助手，用于 Bun 的设置（笔记中未写明是哪一个）；ChatGPT，用于找到侧边栏。",
+      "observed"
+    ]
+  ],
+  "disclosure": "测试者创办了 PromptQuorum（promptquorum.com），这是一个关于本地 AI 应用的内容网站和目录。PromptQuorum 已经发布过一篇 Page Assist 评测（笔记中称之为'my Page Assist review'）；本次测试仅依据测试者自己的使用过程。测试者自己做过竞品工具（PromptQuorum 应用的侧边栏，以及一个 Chrome 扩展 PromptQuorum Optimizer），并把 Anthropic 的产品 Claude in Chrome 当作自己的参照标准。笔记中没有与 Page Assist 作者联系、付款或赞助的记录。",
+  "verdict": {
+    "general": "一个功能丰富的本地模型前端，设置项涵盖模型、知识库、提示词、MCP 服务器、Page Action、WebMCP 和记忆。工具栏图标打开的是全屏聊天页面；测试者很晚才通过右键菜单找到侧边面板，还借助了 ChatGPT 的帮助。在侧边面板中，统计页面字数是成功的。Search Console 页面没有被读懂，网站内搜索失败，上下文没有随页面切换而更新，测试者也无法让 Page Action 滚动或点击。与 gemma4:latest 的前两次聊天返回了空回复。由于各次测试使用的模型不同，这里无法把扩展和模型的影响区分开。",
+    "fit": "不适合他的使用方式。他想要一个像 Claude in Chrome 那样的侧边栏：接受任务、在页面间点击、输入数据。他看到的只有聊天，并打算卸载。'For now, stay with Claude Chrome extension.'"
+  },
+  "scores": [
+    [
+      "安装",
+      3,
+      "商店安装只需一个对话框。README 开头介绍的是源码构建，需要 Bun 和终端；测试者第一次尝试因 PATH 问题失败，而商店链接放在页面靠下的位置。"
+    ],
+    [
+      "上手与易发现性",
+      2,
+      "工具栏图标打开的是全屏页面，侧边栏要通过另一种方式才能打开，欢迎视频里提到的快捷键对他不起作用。"
+    ],
+    [
+      "核心功能",
+      2,
+      "统计字数成功。Search Console 页面、网站内搜索、跨页面上下文和 Page Action 均未成功。前两次聊天返回了空回复。"
+    ],
+    [
+      "引导与迭代",
+      2,
+      "模型设置很强大，但在粘贴的字段中只有两项带有说明。聊天中的'Add MCP server'按钮在到设置里配置之前不会有任何反应。"
+    ],
+    [
+      "性能",
+      null,
+      "未测量。没有记录用时。"
+    ],
+    [
+      "文档",
+      3,
+      "README 的步骤对会用终端的用户很清楚。功能列表承诺了侧边栏、网页界面和 chat with webpage。欢迎视频里的快捷键不起作用。"
+    ],
+    [
+      "信任与隐私",
+      null,
+      "未审计。商店对话框要求读取和更改所有网站上的所有数据；数据是否留在本地未测试。"
+    ],
+    [
+      "卸载",
+      null,
+      "测试者打算卸载。是否已经卸载未记录。"
+    ]
+  ],
+  "scores_note": "评分是根据下文证据得出的建议（1 = 差，5 = 很好），需由测试者确认。",
+  "tldr": [
+    [
+      "observed",
+      "工具栏图标打开的是全屏页面，而不是侧边栏。测试者在 ChatGPT 的帮助下，通过右键菜单找到了侧边面板。欢迎视频里提到的 Ctrl+Shift+Y 对他不起作用。"
+    ],
+    [
+      "observed",
+      "在侧边面板中，统计页面字数成功。Search Console 页面没有被读懂（回复称没有 CTR 信息），网站内搜索失败，上下文也没有随页面切换而更新。"
+    ],
+    [
+      "tester-view",
+      "他正在卸载。他想要一个像 Claude in Chrome 那样能执行操作的侧边栏，得到的却是一个聊天工具。'The sidebar would be the jackpot.'"
+    ]
+  ],
+  "quotes": [
+    "设置里算是有一点侧边栏的影子，但真正的大奖其实是侧边栏。其余的是另一个界面，功能也不同。",
+    "希望 Page Assist 将来能更接近这种水平的支持。"
+  ],
+  "quote_note": "测试者笔记，由语音转写稍作编辑。译自英文。",
+  "moments_title": "塑造这次测试的五个时刻",
+  "moments_md": "五个时刻",
+  "moments_nav": "五个时刻",
+  "moments": [
+    [
+      "全屏页面，而不是侧边栏",
+      "工具栏图标打开的是全页面聊天界面。测试者想要的侧边栏要通过另一种方式打开。",
+      "webui_full",
+      "chapter-opens"
+    ],
+    [
+      "他错过的商店链接",
+      "他在注意到 README 靠下位置的 Chrome Web Store 链接之前，就先从源码构建了。商店页面显示 4.8 星、245 个评分、200,000 名用户。",
+      "store_dialog",
+      "chapter-store"
+    ],
+    [
+      "'Thought for 0ms'，没有答案",
+      "向 gemma4:latest 提了两个问题，得到的是两个空的回复框。",
+      "chat_empty2",
+      "chapter-chat"
+    ],
+    [
+      "侧边栏就在右键一点之间",
+      "第一次尝试失败、ChatGPT 帮忙之后，测试者在右键菜单中找到了侧边面板。它的起始界面提供 Chat with current page、Page Action 和 WebMCP。",
+      "sidebar_home",
+      "chapter-sidebar"
+    ],
+    [
+      "读不懂的页面，执行不了的操作",
+      "Search Console 页面没有被读懂。上下文没有随页面切换而更新。Page Action 连滚动都做不到。",
+      null,
+      "chapter-page"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-why",
+      "title": "为什么选这款应用",
+      "items": [
+        [
+          "tester-view",
+          "'So interesting idea to basically have a sidebar.'（有一个侧边栏，这个想法真有意思。）他为 PromptQuorum 应用做过一个侧边栏，觉得它对连接本地模型很有用。他还'always when I am lost'（每当迷路时）都会用 Claude Chrome 扩展。",
+          null
+        ],
+        [
+          "observed",
+          "用他自己的话说，目标是侧边栏，以及它能做什么。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-install",
+      "title": "从源码安装",
+      "items": [
+        [
+          "vendor-claim",
+          "README（由测试者粘贴）列出的前提条件：Bun、Ollama，或任何兼容 OpenAI 的端点，例如 LM Studio 或 llamafile。步骤：git clone、bun install、bun run build（'by default it will build for Chrome, Edge and Firefox'），然后把构建目录作为未打包的扩展加载。另有说明：如果 Bun 出问题，改用 npm。",
+          null
+        ],
+        [
+          "tester-view",
+          "'很直接，但不适合不喜欢终端的人。'",
+          null
+        ],
+        [
+          "observed",
+          "git clone 完成（14,361 个对象，9.93 MiB）。第一次 'bun install' 失败，提示 'zsh: command not found: bun'。测试者询问了一个 AI 助手，它说 Bun 已经安装成功，只是终端没有加载更新后的 PATH；解决办法是 'exec /bin/zsh'。",
+          null
+        ],
+        [
+          "observed",
+          "之后安装'took a while'（花了一会儿），在终端里大约一分钟，扩展随即运行。笔记中没有描述 'load unpacked' 这一步。",
+          null
+        ],
+        [
+          "assumption",
+          "前几张截图地址栏里的扩展 ID（ofcf...）与商店版本的（jfgf...）不同，这与未打包构建相符。未经确认。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-opens",
+      "title": "首次启动：全屏页面",
+      "items": [
+        [
+          "observed",
+          "点击扩展，会以完整的浏览器标签页打开 'Page Assist - A Web UI for Local AI Models'。页面显示 'Ollama is running'、空的模型和提示词选择器，以及一个消息框。",
+          "webui_full"
+        ],
+        [
+          "tester-view",
+          "'它被宣传成侧边栏，但它不是侧边栏。'",
+          null
+        ],
+        [
+          "observed",
+          "设置菜单很长：General、Pipeline、Ollama、Chrome AI、OpenAI Compatible API、MCP Servers、Page Action、WebMCP、Memory、Manage Models、Manage Knowledge、Manage Prompts、Manage Share、About。其中几项带有 Beta 标记。'Chrome AI Settings' 提供约 4 GB 的 Gemini Nano 下载，开关处于关闭状态。",
+          "settings"
+        ],
+        [
+          "tester-view",
+          "'系统设置看起来非常出色。'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-store",
+      "title": "Chrome Web Store 途径",
+      "items": [
+        [
+          "observed",
+          "README 把 Chrome Web Store 链接列在页面靠下的位置。测试者没有注意到，走了源码途径。'It was listed below and I missed it.'",
+          null
+        ],
+        [
+          "observed",
+          "安装对话框称该扩展可以 'Read and change all your data on all websites' 和 'Display notifications'。",
+          "store_dialog"
+        ],
+        [
+          "third-party",
+          "商店页面在测试当日显示 'Featured'、4.8 星、245 个评分和 200,000 名用户。未核实。",
+          null
+        ],
+        [
+          "observed",
+          "据测试者称，代码仓库最近一次更新是 2026 年 10 月 4 日，即测试前四天。没有截图留存。",
+          null
+        ],
+        [
+          "tester-view",
+          "'这个 Chrome 扩展的下载，比 GitHub 简单太多了。'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-chat",
+      "title": "首次聊天：空回复",
+      "items": [
+        [
+          "observed",
+          "在商店版本中，测试者写道：'Okay, I'm principle lost. Can you tell me what page assist actually does?'，并解释说他原本期待的是网页旁边的侧边栏。模型：gemma4:latest。回复是一个折叠的 'Thought for 0ms' 框，没有答案文本。",
+          "chat_empty1"
+        ],
+        [
+          "observed",
+          "他问：'Okay, where's my answer?'。第二次回复同样是一个空的 'Thought for 0ms' 框。",
+          "chat_empty2"
+        ],
+        [
+          "assumption",
+          "原因没有查明。模型、思考开关或与 Ollama 的连接都可能起了作用。未测试。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-sidebar",
+      "title": "寻找侧边栏",
+      "items": [
+        [
+          "observed",
+          "出现了一个带视频的欢迎窗口。据测试者称，视频表明这不是一个会打开侧边栏并占满浏览器的扩展，并说明需要用快捷键来打开。测试者试了 Ctrl+Shift+Y，没有用。视频本身不在笔记中。",
+          null
+        ],
+        [
+          "observed",
+          "他发现'设置里算是有一点侧边栏的影子'（粘贴的设置列表中有一项 Sidebar Position 设置）。他无法打开侧边栏。",
+          null
+        ],
+        [
+          "observed",
+          "测试者粘贴的 README 功能列表写道：Sidebar（'can be opened on any webpage'）、Web UI（'like a ChatGPT website'）和 Chat With Webpage。",
+          null
+        ],
+        [
+          "observed",
+          "作为对比，他展示了自己的 PromptQuorum Optimizer 扩展：一个处于离线状态的工具栏弹窗（'Start the PromptQuorum desktop app to enable optimization'）。笔记中称它是他的侧边栏，并说'it works'；截图显示的是离线状态。",
+          "pq_popup"
+        ],
+        [
+          "observed",
+          "他通过 Ahrefs 提醒发现 aihubmix.com 上的一篇文章，其中提到了他写的 Page Assist 评测，这让他有了再试一次的动力。测试者没有说明是否读过这篇文章。",
+          null
+        ],
+        [
+          "observed",
+          "他借助 ChatGPT 发现侧边栏没有开关。在他的 Mac 上的 Chrome 中，侧边面板要通过在页面上右键打开；点击扩展图标打开的是全屏界面，'a totally different function'（一个完全不同的功能）。",
+          null
+        ],
+        [
+          "assumption",
+          "设置列表里还有两项 Beta 条目：'Set Default Action for Extension Icon Clicks' 和 'Set Default action for Context Menu'。它们可能控制这一行为。未测试。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-sidebar-use",
+      "title": "使用侧边栏",
+      "items": [
+        [
+          "observed",
+          "侧边面板中的第一个问题是 'what does the text talk about'。显示的模型：gemma4:latest。没有出现答案，只有一个光标。",
+          "sidebar_wait"
+        ],
+        [
+          "observed",
+          "测试者做了对比：他自己的 Chrome 应用每 20 秒检查一次本地模型是否可连接。而这里没有任何提示告诉他模型是否在工作。'Now I need to find out if the local LLM is working or what the issue is.'",
+          null
+        ],
+        [
+          "observed",
+          "'some more clicks'（再点了几下）之后它就能用了。笔记没有说明是什么修好的。后来的截图显示选中的是 qwen3-coder:30b，而不是 gemma4:latest。",
+          "sidebar_home"
+        ],
+        [
+          "assumption",
+          "切换模型可能就是解决办法。笔记中没有这样说明。",
+          null
+        ],
+        [
+          "observed",
+          "起始界面显示 'Chat with current page' 已勾选，'Page Action' 和 'Page tools (WebMCP)' 未勾选。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-page",
+      "title": "读取页面并对页面执行操作",
+      "items": [
+        [
+          "observed",
+          "他让它统计页面上的字数。'It counted well.' 具体是哪个页面、哪个模型：未记录。",
+          null
+        ],
+        [
+          "observed",
+          "在 Search Console 的效果页面上，回复称所提供的上下文中不包含任何 CTR 信息，并把内容描述为时间轴上时间间隔的图形表示（该页面顶部）。该页面实际显示着一张平均 CTR 为 1.5% 的卡片。测试者总结说：'could not read data, did not understand it'。",
+          null
+        ],
+        [
+          "assumption",
+          "动态图表和卡片内容可能不会以文本形式传给模型。上下文窗口较小也可能起了作用。两者均未测试。",
+          null
+        ],
+        [
+          "observed",
+          "他让它在某个网站上查找说明。'And no. Failed.'",
+          null
+        ],
+        [
+          "tester-view",
+          "'如果加载一个新页面，系统不理解它，仍然在处理旧页面。'他称这是刷新问题，并得出结论：无法在页面之间跳转。尝试次数和使用的页面：未记录；没有截图留存。",
+          null
+        ],
+        [
+          "observed",
+          "他发现一项设置似乎表明该工具可以点击、搜索和填写数据（Page Action）。'Nothing like this'：他连让它滚动页面都没做到。",
+          null
+        ],
+        [
+          "assumption",
+          "那次测试期间 Page Action 或 WebMCP 是否开启，未记录。截图中两者都是关闭的。如果当时是关闭的，这就是设置上的疏漏，而不是产品的局限。",
+          null
+        ],
+        [
+          "tester-view",
+          "'现在看起来只有聊天功能可用，没有像 Claude Chrome 扩展那样的主动操作。'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-ui",
+      "title": "界面细节",
+      "items": [
+        [
+          "observed",
+          "朗读没有声音。文字转语音是否开启、是否选了语音，未记录。",
+          null
+        ],
+        [
+          "observed",
+          "'Current Chat Model Settings' 面板列出 Keep Alive、Temperature、Seed、Context Window Size (num_ctx)、Max Tokens (num_predict)、Top K、Top P、Num GPU、Min P、Repeat Penalty、Repeat Last N、TFS-Z、Num Keep、Num Thread、useMmap、useMlock 和 Reasoning Effort。在测试者粘贴的文本中，只有 Keep Alive 和 Seed 带有说明行。工具提示未检查。",
+          null
+        ],
+        [
+          "tester-view",
+          "'模型设置很棒，但没有说明，所以大多数人看不懂这些都是什么。'",
+          null
+        ],
+        [
+          "observed",
+          "聊天中的 'Add MCP server' 按钮没有任何可见反应；它要求先在设置里添加服务器。测试者称这是界面问题。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "决定",
+      "items": [
+        [
+          "tester-view",
+          "'我现在要把这一切都卸载，因为它与我无关。我不需要另一个搜索工具、搜索引擎，或另一个用来使用本地 LLM 的界面。我已经有很多了。'",
+          null
+        ],
+        [
+          "tester-view",
+          "他想要的是一个位于所浏览页面旁的侧边栏：他在其中提问，由本地模型作答，有时从互联网获取答案，并且能像 Claude 的侧边栏那样逐步点击完成任务。'This is not a sidebar. This is a new browser.'",
+          null
+        ],
+        [
+          "tester-view",
+          "'For now, stay with Claude Chrome extension. There I can do all.'",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "Sidebar：'can be opened on any webpage'",
+      "README 功能列表",
+      "侧边面板存在，并显示了聊天。它通过右键打开，而不是通过工具栏图标。欢迎视频中提到的快捷键对测试者不起作用。",
+      "observed"
+    ],
+    [
+      "Web UI：'like a ChatGPT website'",
+      "README 功能列表",
+      "打开了全页面聊天界面。与 gemma4:latest 的两次聊天返回了空回复。",
+      "observed"
+    ],
+    [
+      "Chat With Webpage：'ask questions about the content'",
+      "README 功能列表",
+      "统计字数成功。Search Console 页面没有被读懂，上下文也没有随页面切换而更新。",
+      "observed"
+    ],
+    [
+      "可构建用于 Chrome、Edge 和 Firefox",
+      "README",
+      "只使用了 Chrome。Edge 和 Firefox 未测试。",
+      "observed"
+    ],
+    [
+      "Featured、4.8 星、245 个评分、200,000 名用户",
+      "Chrome Web Store 页面",
+      "测试当日所见与所述一致。未核实。",
+      "third-party"
+    ],
+    [
+      "Page Action (Beta)：该工具对页面执行操作",
+      "设置菜单",
+      "测试者无法让它滚动或点击。是否已开启未记录。",
+      "observed"
+    ],
+    [
+      "需要 Ollama 或兼容 OpenAI 的端点",
+      "README 前提条件",
+      "Ollama 正在运行并被检测到。未尝试其他端点。",
+      "observed"
+    ]
+  ],
+  "usage_log": [
+    [
+      "克隆代码仓库",
+      "-",
+      "已完成",
+      "未记录",
+      "Pass",
+      []
+    ],
+    [
+      "bun install",
+      "-",
+      "首次运行：'command not found: bun'（PATH）。执行 'exec /bin/zsh' 后运行了约一分钟",
+      "约 1 分钟",
+      "Partial",
+      []
+    ],
+    [
+      "构建并加载扩展",
+      "-",
+      "扩展运行（笔记中未逐项列出构建步骤）",
+      "未记录",
+      "Pass",
+      [
+        "webui_full"
+      ]
+    ],
+    [
+      "从工具栏打开扩展",
+      "-",
+      "全屏网页界面，而不是侧边栏",
+      "-",
+      "Partial",
+      [
+        "webui_full",
+        "settings"
+      ]
+    ],
+    [
+      "从 Chrome Web Store 安装",
+      "-",
+      "出现对话框；扩展已添加（后来的截图使用的是商店 ID）",
+      "未记录",
+      "Pass",
+      [
+        "store_dialog"
+      ]
+    ],
+    [
+      "在网页界面中聊天",
+      "gemma4:latest",
+      "两次空的 'Thought for 0ms' 回复",
+      "-",
+      "Fail",
+      [
+        "chat_empty1",
+        "chat_empty2"
+      ]
+    ],
+    [
+      "用 Ctrl+Shift+Y 打开侧边栏",
+      "-",
+      "没有用",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "从右键菜单打开侧边栏",
+      "-",
+      "ChatGPT 指出之后成功",
+      "未记录",
+      "Pass",
+      [
+        "sidebar_home"
+      ]
+    ],
+    [
+      "侧边面板中的第一个问题",
+      "gemma4:latest",
+      "没有答案，只有光标；'some more clicks' 之后好了（原因未记录）",
+      "-",
+      "Partial",
+      [
+        "sidebar_wait"
+      ]
+    ],
+    [
+      "统计页面上的字数",
+      "未记录",
+      "据测试者称，统计得不错",
+      "未记录",
+      "Pass",
+      []
+    ],
+    [
+      "在 Search Console 页面上询问 CTR",
+      "qwen3-coder:30b",
+      "回复：上下文中没有 CTR 信息",
+      "-",
+      "Fail",
+      [
+        "gsc_fail"
+      ]
+    ],
+    [
+      "在网站上查找说明",
+      "未记录",
+      "失败",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "跳转到另一个页面再提问",
+      "未记录",
+      "仍停留在旧页面的上下文（测试者的印象）",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "Page Action：在页面上滚动或点击",
+      "未记录",
+      "无法滚动；开关状态未记录",
+      "-",
+      "Fail",
+      [
+        "sidebar_home"
+      ]
+    ],
+    [
+      "朗读",
+      "-",
+      "没有声音；设置未记录",
+      "-",
+      "Fail",
+      []
+    ],
+    [
+      "从聊天中添加 MCP 服务器",
+      "-",
+      "按钮在到设置里配置之前没有反应",
+      "-",
+      "Partial",
+      []
+    ],
+    [
+      "卸载",
+      "-",
+      "已计划；是否完成未记录",
+      "-",
+      "Not completed",
+      []
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "漏看了 README 中的 Chrome Web Store 链接，先走了更长的源码途径。测试者自己也这样说。"
+    ],
+    [
+      "tester-error",
+      "通过工具栏图标寻找侧边栏，而它打开的是全屏界面，很长时间都没有找到右键菜单这条途径。产品自己的欢迎视频提到的快捷键并不起作用，所以这个疏漏责任是双方的。"
+    ],
+    [
+      "assumption",
+      "在点击和滚动测试期间，Page Action 和 WebMCP 可能是关闭的。唯一的截图显示两者都未勾选。如果是这样，这项发现就是设置上的疏漏，而不是产品的局限。"
+    ],
+    [
+      "assumption",
+      "与 Claude in Chrome 的对比把扩展和模型混在了一起：Page Assist 运行的是本地模型（gemma4:latest、qwen3-coder:30b，后者按名称看是面向代码的模型），而 Claude in Chrome 运行的是云端模型。README 称 Page Assist 可以使用兼容 OpenAI 的端点；一个也没有尝试。差距可能部分来自模型。"
+    ],
+    [
+      "tester-error",
+      "记录中留有空白：扩展、Chrome、Ollama 和 macOS 的版本；最初几张截图之后每次测试所用的模型；是什么修好了卡住的回复；用于字数统计和页面切换测试的页面。"
+    ],
+    [
+      "tester-view",
+      "测试者称自己的 PromptQuorum Optimizer 是一个'works'的侧边栏。截图显示的是一个当时处于离线状态的工具栏弹窗。因此这个对比点比他所说的要弱。"
+    ]
+  ],
+  "findings": [
+    [
+      "PA-01",
+      "README 有清晰的源码构建步骤（git clone、bun install、bun run build），但需要终端、Bun 和 Ollama。",
+      "安装",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "PA-02",
+      "Chrome Web Store 链接列在 README 靠下的位置；测试者没有注意到，走了源码途径。",
+      "安装",
+      "observed",
+      "Medium",
+      [
+        "store_dialog"
+      ]
+    ],
+    [
+      "PA-03",
+      "安装 Bun 之后，在重新加载 shell 之前出现 'bun: command not found'（这是 Bun 和 PATH 的问题，与 Page Assist 本身无关）。",
+      "安装",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-04",
+      "工具栏图标打开的是全屏网页界面，而不是侧边栏。侧边栏要通过右键菜单打开。",
+      "上手",
+      "observed",
+      "High",
+      [
+        "webui_full",
+        "sidebar_home"
+      ]
+    ],
+    [
+      "PA-05",
+      "欢迎视频中提到的快捷键（试了 Ctrl+Shift+Y）对测试者不起作用。",
+      "上手",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "PA-06",
+      "商店安装要求读取和更改所有网站上的所有数据，并显示通知。",
+      "信任",
+      "observed",
+      "Medium",
+      [
+        "store_dialog"
+      ]
+    ],
+    [
+      "PA-07",
+      "与 gemma4:latest 的两次聊天返回了空的 'Thought for 0ms' 回复。原因未查明。",
+      "核心功能",
+      "observed",
+      "High",
+      [
+        "chat_empty1",
+        "chat_empty2"
+      ]
+    ],
+    [
+      "PA-08",
+      "侧边面板中的第一个问题只显示一个光标，没有任何迹象表明模型是否可连接。'some more clicks' 之后就好了。",
+      "核心功能",
+      "observed",
+      "Medium",
+      [
+        "sidebar_wait"
+      ]
+    ],
+    [
+      "PA-09",
+      "据测试者称，Chat with current page 正确统计了页面上的字数。",
+      "核心功能",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "PA-10",
+      "在 Search Console 页面上，回复称没有 CTR 信息，尽管页面上有一张 CTR 卡片。",
+      "核心功能",
+      "observed",
+      "High",
+      [
+        "gsc_fail"
+      ]
+    ],
+    [
+      "PA-11",
+      "据测试者的印象，上下文没有随页面切换而更新。没有截图留存，尝试次数未记录。",
+      "核心功能",
+      "tester-view",
+      "High",
+      []
+    ],
+    [
+      "PA-12",
+      "在网站上查找说明的请求失败了。",
+      "核心功能",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "PA-13",
+      "Page Action 无法滚动或点击。是否已开启未记录。",
+      "核心功能",
+      "observed",
+      "High",
+      [
+        "sidebar_home"
+      ]
+    ],
+    [
+      "PA-14",
+      "模型设置列出了许多参数；在粘贴的文本中，只有 Keep Alive 和 Seed 带有说明。",
+      "体验",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-15",
+      "聊天中的 'Add MCP server' 按钮在到设置里配置服务器之前没有任何可见反应。",
+      "体验",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-16",
+      "朗读没有声音；设置状态未记录。",
+      "体验",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "PA-17",
+      "据测试者称，代码仓库最近一次更新是 2026 年 10 月 4 日（没有截图留存）。",
+      "维护",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "PA-18",
+      "商店页面：Featured、4.8 星、245 个评分、200,000 名用户。未核实。",
+      "信任",
+      "third-party",
+      "Positive",
+      [
+        "store_dialog"
+      ]
+    ]
+  ],
+  "severity_note": "严重程度指对首次使用者的影响。为建议值，并非实测。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "想要全页面聊天界面、能熟练使用设置，并且可能通过右键菜单找到侧边面板的 Ollama 用户。"
+      ],
+      [
+        "assumption",
+        "想要与当前页面进行本地聊天，并能接受它可能读不懂数据密集型页面的人。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "期望得到一个能像 Claude in Chrome 那样在页面间点击的侧边栏智能体的人。"
+      ],
+      [
+        "assumption",
+        "不想打开终端的人：请使用商店版本，而不是源码构建。"
+      ]
+    ],
+    "retest": "复测时应开启并记录 Page Action 和 WebMCP，每次测试只用一个模型，并用更大的模型或云端模型试同一个页面。测试者不打算复测，他正在卸载。"
+  },
+  "background_intro": "不属于上手测试过程；未核实。",
+  "background": [
+    [
+      "third-party",
+      "aihubmix.com 上的一篇文章（标题取自其网址，大意为 'Page Assist in practice: four everyday browser workflows with local and cloud models'）链接到了 PromptQuorum 的 Page Assist 评测。本次测试没有审阅其内容。"
+    ]
+  ],
+  "sources": [
+    "测试者的实测笔记，2026 年 10 月 8 日至 9 日（原始文档；原始笔记 PDF 待补充）。",
+    "github.com/n4ze3m/page-assist 的 README、安装步骤和功能列表，由测试者粘贴。",
+    "Chrome Web Store 页面和安装对话框，见测试者的截图。",
+    "aihubmix.com 上的文章（网址见测试者笔记），未审阅。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "观察",
+      "meaning": "在应用、截图或测试者笔记中亲眼所见。"
+    },
+    "measured": {
+      "label": "测量",
+      "meaning": "从对话框、计数器或工具中读取的数值，并给出具体数字。"
+    },
+    "tester-estimate": {
+      "label": "测试者估计",
+      "meaning": "测试者自己的估计；未计时或计数。"
+    },
+    "vendor-claim": {
+      "label": "厂商声明",
+      "meaning": "由应用、商店页面或其网站所述；未核实。"
+    },
+    "third-party": {
+      "label": "第三方",
+      "meaning": "来自其他来源（AI 助手、文章）；此处未核实。"
+    },
+    "assumption": {
+      "label": "假设",
+      "meaning": "一种推断，可能是错的。"
+    },
+    "tester-view": {
+      "label": "测试者观点",
+      "meaning": "测试者的判断或意见。"
+    },
+    "tester-error": {
+      "label": "测试者失误",
+      "meaning": "测试者出错或遗漏之处。"
+    }
+  },
+  "images": [
+    {
+      "id": "gsc_fail",
+      "figure": 1,
+      "file": "page-assist-side-panel-search-console-no-ctr-found.webp",
+      "path": "images/page-assist-side-panel-search-console-no-ctr-found.webp",
+      "alt": "Page Assist 侧边面板位于 Search Console 页面旁；qwen3-coder:30b 的回复称所提供的内容中没有 CTR 信息。",
+      "caption": "Search Console 效果页面，旁边是 Page Assist。回复称所提供的上下文中不包含 CTR 信息，并把页面描述为'a graphical representation of time intervals on a timeline'（时间轴上时间间隔的图形表示）。页面本身显示一张平均 CTR 卡片（1.5%）。测试者提出的问题不可见。截图显示的是测试者自己网站的指标。",
+      "role": "hero",
+      "width": 1535,
+      "height": 566,
+      "bytes": 63586,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI. Shows the tester's own Search Console figures.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image9.png"
+    },
+    {
+      "id": "webui_full",
+      "figure": 2,
+      "file": "page-assist-web-ui-opens-full-screen-ollama-running.webp",
+      "path": "images/page-assist-web-ui-opens-full-screen-ollama-running.webp",
+      "alt": "Page Assist 网页界面以完整浏览器标签页打开：'Ollama is running'，模型和提示词选择器为空，底部有消息框。",
+      "caption": "工具栏图标打开的内容：全页面聊天界面（此处为源码构建版本）。已检测到 Ollama，尚未选择模型。书签栏和头像已模糊处理。",
+      "role": "moment",
+      "width": 1269,
+      "height": 733,
+      "bytes": 17884,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-opens",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image1.png"
+    },
+    {
+      "id": "settings",
+      "figure": 3,
+      "file": "page-assist-settings-menu-chrome-ai-page-action-webmcp.webp",
+      "path": "images/page-assist-settings-menu-chrome-ai-page-action-webmcp.webp",
+      "alt": "Page Assist 设置菜单：General、Pipeline、Ollama、Chrome AI、OpenAI Compatible API、MCP Servers、Page Action、WebMCP、Memory、Manage Models 等。",
+      "caption": "源码构建版本的设置菜单。'Chrome AI Settings' 提供约 4 GB 的 Gemini Nano 下载，开关处于关闭状态。MCP Servers、Page Action、WebMCP 和 Memory 带有 Beta 标记。书签栏和头像已模糊处理。",
+      "role": "inline",
+      "width": 1596,
+      "height": 722,
+      "bytes": 35920,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-opens"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image2.png"
+    },
+    {
+      "id": "store_dialog",
+      "figure": 4,
+      "file": "page-assist-chrome-web-store-install-dialog.webp",
+      "path": "images/page-assist-chrome-web-store-install-dialog.webp",
+      "alt": "Page Assist 的 Chrome Web Store 页面与'添加扩展'对话框：读取和更改所有网站上的所有数据，显示通知。",
+      "caption": "Chrome Web Store 页面：'Featured'，4.8 星、245 个评分、200,000 名用户（商店数据，未核实）。安装对话框列出 'Read and change all your data on all websites' 和 'Display notifications'。标签页标题、书签和头像已隐藏。",
+      "role": "moment",
+      "width": 1428,
+      "height": 650,
+      "bytes": 35064,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-store",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image3.png"
+    },
+    {
+      "id": "chat_empty1",
+      "figure": 5,
+      "file": "page-assist-chat-gemma4-reply-empty-thought-0ms.webp",
+      "path": "images/page-assist-chat-gemma4-reply-empty-thought-0ms.webp",
+      "alt": "Page Assist 与 gemma4:latest 的聊天：用户问 Page Assist 是做什么的；回复是一个折叠的 'Thought for 0ms' 框，没有答案文本。",
+      "caption": "商店版本中的第一次聊天。用户问 Page Assist 到底是做什么的，并说他原本期待的是侧边栏。回复只有一个 'Thought for 0ms' 框。底部的两个开关处于开启状态；其含义未检查。书签栏和头像已模糊处理。",
+      "role": "inline",
+      "width": 1598,
+      "height": 726,
+      "bytes": 45716,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-chat"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image4.png"
+    },
+    {
+      "id": "chat_empty2",
+      "figure": 6,
+      "file": "page-assist-chat-second-empty-reply-thought-0ms.webp",
+      "path": "images/page-assist-chat-second-empty-reply-thought-0ms.webp",
+      "alt": "Page Assist 聊天：用户写下 'Okay, where's my answer?' 后，gemma4:latest 再次只显示一个折叠的 'Thought for 0ms' 框。",
+      "caption": "第二次尝试。gemma4:latest 的两次回复都是空的 'Thought for 0ms' 框。原因未查明。",
+      "role": "moment",
+      "width": 1024,
+      "height": 436,
+      "bytes": 10120,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-chat",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image5.png"
+    },
+    {
+      "id": "pq_popup",
+      "figure": 7,
+      "file": "promptquorum-optimizer-popup-offline-own-extension.webp",
+      "path": "images/promptquorum-optimizer-popup-offline-own-extension.webp",
+      "alt": "测试者自己的 PromptQuorum Optimizer 扩展的工具栏弹窗，显示 'PromptQuorum offline' 和一个空的提示词输入框。",
+      "caption": "这不是 Page Assist。这是测试者自己的 PromptQuorum Optimizer 扩展，用于对比。它是一个处于离线状态的工具栏弹窗（'Start the PromptQuorum desktop app to enable optimization'）；笔记中称之为他的侧边栏。周围的页面已被裁掉。",
+      "role": "inline",
+      "width": 408,
+      "height": 428,
+      "bytes": 15586,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-sidebar"
+      ],
+      "subject": "Screenshot of the tester's own PromptQuorum Optimizer extension (not Page Assist)",
+      "rights": "Tester's own screenshot of the tester's own software.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image6.png"
+    },
+    {
+      "id": "sidebar_wait",
+      "figure": 8,
+      "file": "page-assist-side-panel-no-answer-after-question.webp",
+      "path": "images/page-assist-side-panel-no-answer-after-question.webp",
+      "alt": "Chrome 中的 Page Assist 侧边面板：用户问了 'what does the text talk about'；gemma4:latest 只显示闪烁的光标，没有答案。",
+      "caption": "侧边面板中的第一个问题：'what does the text talk about'。显示的模型：gemma4:latest。只出现了一个光标。随后测试者检查了本地模型是否在工作。面板旁边的文章页面（第三方）已被裁掉。",
+      "role": "inline",
+      "width": 698,
+      "height": 714,
+      "bytes": 13118,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-sidebar-use"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image7.png"
+    },
+    {
+      "id": "sidebar_home",
+      "figure": 9,
+      "file": "page-assist-side-panel-start-screen-chat-with-current-page.webp",
+      "path": "images/page-assist-side-panel-start-screen-chat-with-current-page.webp",
+      "alt": "Page Assist 侧边面板起始界面：Ollama 运行中，模型 qwen3-coder:30b，'Chat with current page' 已勾选，Page Action 和 WebMCP 未勾选。",
+      "caption": "选中 qwen3-coder:30b 的侧边面板起始界面。'Chat with current page' 已开启；在这张截图中 'Page Action' 和 'Page tools (WebMCP)' 处于关闭状态。",
+      "role": "moment",
+      "width": 693,
+      "height": 580,
+      "bytes": 8832,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-sidebar-use",
+        "moments-card"
+      ],
+      "subject": "Screenshot of the Page Assist app or website",
+      "rights": "Tester's own screenshot of third-party software UI.",
+      "captured": "2026-10-08 to 2026-10-09; exact times not recorded",
+      "original_docx_media": "image8.png"
+    }
+  ],
+  "figure_order": [
+    "gsc_fail",
+    "webui_full",
+    "settings",
+    "store_dialog",
+    "chat_empty1",
+    "chat_empty2",
+    "pq_popup",
+    "sidebar_wait",
+    "sidebar_home"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum 上手测试 · {app} · {date}",
+    "date_line": "2026年10月8日至9日",
+    "nav_aria": "章节",
+    "nav": {
+      "verdict": "结论",
+      "moments": "五个时刻",
+      "story": "测试经过",
+      "claims": "说法核对",
+      "fit": "24 GB",
+      "log": "使用记录",
+      "errors": "测试者失误",
+      "findings": "发现项",
+      "background": "背景"
+    },
+    "related": "相关内容：",
+    "review_link": "PromptQuorum 对 {app} 的评测",
+    "directory_link": "本地 AI 应用目录",
+    "verdict_h": "结论",
+    "general_assessment": "总体评价",
+    "fit_for_tester": "是否适合测试者的使用场景",
+    "scorecard": "评分卡",
+    "status_prefix": "状态：",
+    "na": "不适用",
+    "score_aria": "满分 5 分，得 {n} 分",
+    "details_h": "测试详情",
+    "label_intro": "每条陈述都带有标签：",
+    "legend_link": "标签含义",
+    "disclosure_label": "利益披露。",
+    "raw_notes": "原始笔记 PDF：",
+    "to_be_added": "待补充",
+    "moments_h": "左右这次测试的六个时刻",
+    "see_context": "查看上下文",
+    "story_h": "测试经过",
+    "claims_h": "官方说法与测试者所见",
+    "claims_cols": [
+      "说法",
+      "来源",
+      "所见",
+      "标签"
+    ],
+    "fit_h": "能装进 24 GB 吗？",
+    "memory_line": "{gb} GB 内存",
+    "above": "高于 {gb} GB",
+    "below": "低于 {gb} GB",
+    "log_h": "使用记录",
+    "log_cols": [
+      "#",
+      "任务",
+      "模型",
+      "结果",
+      "用时",
+      "状态",
+      "图"
+    ],
+    "statuses": {
+      "Fail": "失败",
+      "Partial": "部分完成",
+      "Pass": "通过",
+      "Not completed": "未完成"
+    },
+    "errors_h": "测试者出错的地方",
+    "findings_h": "发现清单",
+    "filter_aria": "按标签筛选发现项",
+    "filter_all": "全部",
+    "findings_cols": [
+      "编号",
+      "发现项",
+      "类别",
+      "标签",
+      "严重程度",
+      "图"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "正面"
+    },
+    "fig_abbr": "图",
+    "figure": "图",
+    "enlarge": "放大：",
+    "audience_h": "适合谁",
+    "likely_fit": "可能适合",
+    "likely_poor_fit": "可能不适合",
+    "retest": "复测。",
+    "background_h": "开发方背景",
+    "gallery_h": "测试中的更多图片",
+    "legend_h": "如何理解标签",
+    "sources_h": "资料来源",
+    "footer_line": "测试编号 {id} · 测试标准 v{version} · 原始笔记 PDF：待补充",
+    "crumb_home": "首页",
+    "crumb_directory": "目录",
+    "crumb_test": "{app} 上手测试"
+  }
+}

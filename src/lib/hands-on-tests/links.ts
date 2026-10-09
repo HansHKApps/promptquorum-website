@@ -14,7 +14,7 @@ export const HANDS_ON_TEST_SLUGS: readonly string[] = ['draw-things', 'bobe', 'p
 export const HANDS_ON_TEST_LANGS: Record<string, readonly Language[]> = {
   'draw-things': ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'],
   bobe: ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'],
-  'page-assist': ['en'],
+  'page-assist': ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'],
 }
 
 export function handsOnTestLangs(appSlug: string): readonly Language[] {
