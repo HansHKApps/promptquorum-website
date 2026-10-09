@@ -11,14 +11,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-03',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-09',
     next_refresh_due: '2027-04-03',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/tokforge-review-hero-en.webp',
     title: 'TokForge Review: Offline Android AI Chat with Roleplay and Image Generation',
     seoTitle: 'TokForge Review: Offline Android AI Chat App',
     intro:
-      'TokForge is a free Android app, published by a developer listed on Google Play as [Defcon-One](https://play.google.com/store/apps/details?id=dev.tokforge), that runs language models on the phone and combines them with roleplay characters, on-device image generation, text-to-speech with voice cloning, document Q&A, and a built-in benchmark that can post speeds to a public leaderboard. Version 1.0 is on Google Play, while the iPhone and iPad version is a public beta on TestFlight. The app\'s source code is not published. This review is based on the Google Play listing and the developer\'s own website at [tokforge.ai](https://tokforge.ai), checked on 3 October 2026; PromptQuorum has not tested the app hands-on.',
+      'TokForge is a free Android app, published by a developer listed on Google Play as [Defcon-One](https://play.google.com/store/apps/details?id=dev.tokforge), that runs language models on the phone and combines them with roleplay characters, on-device image generation, text-to-speech with voice cloning, document Q&A, and a built-in benchmark that can post speeds to a public leaderboard. Version 1.3.6.1 is a production release on Google Play, while the iPhone and iPad version is a public TestFlight beta that anyone can join. The app is proprietary, closed-source software and its source code is not published. This review is based on the Google Play listing and the developer\'s own website at [tokforge.ai](https://tokforge.ai), checked on 3 October 2026; PromptQuorum has not tested the app hands-on.',
     metaDescription:
       'TokForge review: a free offline AI chat app for Android with roleplay characters, image generation, voice cloning, and a speed leaderboard. Models, privacy, limits.',
     twitterDescription:
@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Kokoro', 'GGUF models', 'MNN models'],
     current_hardware_mentioned: ['Android', 'Snapdragon', 'Adreno', 'Pixel 9 Pro XL'],
     leadAnswerBlock:
-      '**TokForge (version 1.0 as of 3 October 2026) is a free Android app by Defcon-One that runs local language models through llama.cpp or MNN and adds roleplay characters, on-device image generation, voice, and document Q&A, with no account.** Its listing says conversations never leave the device, that web search is off by default, and that a benchmark can optionally post results to a public leaderboard. The source code is not published and the license is not stated, and the iPhone and iPad version is still a TestFlight beta.',
+      '**TokForge (version 1.3.6.1, confirmed by the developer on 9 October 2026) is a free Android app by Defcon-One that runs local language models through llama.cpp or MNN and adds roleplay characters, on-device image generation, voice, and document Q&A, with no account.** Its listing says conversations never leave the device, that web search is off by default, and that a benchmark can optionally post results to a public leaderboard. The app is proprietary closed-source software, the developer states it has no ads, in-app purchases, or subscriptions, and the iPhone and iPad version is a public TestFlight beta that is not yet on the App Store.',
     quickAnswerTop: {
       en: {
         question: 'Is TokForge free and does it run fully offline?',
@@ -51,7 +51,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Free on [Google Play](https://play.google.com/store/apps/details?id=dev.tokforge); the iPhone and iPad version is a public beta on TestFlight, not on the App Store.',
           'Three inference paths: llama.cpp for GGUF, MNN, or your own OpenAI-compatible server.',
           'Extras: roleplay characters with imported cards, on-device image generation, Kokoro voices with voice cloning, and document Q&A.',
-          'As checked on 3 October 2026: version 1.0, 5K+ Google Play downloads, listing last updated on 20 September 2026.',
+          'Version 1.3.6.1 (confirmed by the developer on 9 October 2026); 5K+ Google Play downloads and a listing last updated on 20 September 2026 (checked 3 October 2026).',
         ],
         updatedDate: '2026-10',
       },
@@ -91,10 +91,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Developer: listed as Defcon-One on Google Play, with Isaac Maple and a United States location shown in the developer details and a contact email on the listing.',
-          'Price and license: free with no subscription or account; no license and no public source repository were found, and the developer\'s own comparison guide lists "No public repo".',
-          'Engines: llama.cpp (GGUF) with OpenCL and Vulkan paths, MNN with OpenCL, or an OpenAI-compatible server you connect yourself.',
+          'Price and license: free with no ads, in-app purchases, subscriptions, or account according to the developer\'s [FAQ](https://tokforge.ai/faq/); proprietary and closed source, with the license in section 2 of the [terms](https://tokforge.ai/terms/).',
+          'Engines: llama.cpp (GGUF) with OpenCL and Vulkan paths, MNN with OpenCL and Vulkan (which one is used depends on the phone), or an OpenAI-compatible server you connect yourself.',
           'Scope: roleplay characters, on-device images, Kokoro voices with cloning, document Q&A, a 52-model catalog with Hugging Face search, and an optional public speed leaderboard.',
-          'Signals as checked on 3 October 2026: version 1.0, 5K+ Google Play downloads, listing updated on 20 September 2026.',
+          'Signals: version 1.3.6.1 as confirmed by the developer on 9 October 2026, 5K+ Google Play downloads, and a listing updated on 20 September 2026 (checked 3 October 2026).',
         ],
         callouts: [
           {
@@ -108,7 +108,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Is TokForge?',
         content: [
           '**TokForge is an offline-first Android chat app that bundles a local model runner with roleplay, image, voice, and document tools.** According to its [Google Play listing](https://play.google.com/store/apps/details?id=dev.tokforge), it runs full models on the phone with no cloud or account, supports characters imported from chub.ai and TavernAI cards, and picks the fastest engine for your chip automatically.',
-          'The developer\'s website describes version 1.0 as the first full release and says the app is much smaller than established alternatives. That candor matters for expectations: it has a small install base, and its iPhone and iPad version is only in TestFlight beta.',
+          'The developer says the app is much smaller than established alternatives. That candor matters for expectations: it has a small install base, and its iPhone and iPad version is only in public TestFlight beta, not yet on the App Store.',
         ],
       },
       getIt: {
@@ -132,7 +132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Where to get it': 'Not published',
           },
         ],
-        note: 'This page is companion material to the app\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Version as verified on 3 October 2026: 1.0, from the Play description and the developer\'s website.',
+        note: 'This page is companion material to the app\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Version 1.3.6.1, confirmed by the developer on 9 October 2026; older pages and listings may still show 1.0.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -170,7 +170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Images.** On-device generation that runs on the CPU everywhere, with GPU acceleration on Adreno and NPU acceleration on supported Snapdragon devices. The developer cites about 31 seconds for a 512x512 image on a Pixel 9 Pro XL.',
           '**Voice.** Kokoro text-to-speech with several voices, voice cloning from about a minute of recorded audio, and voice input.',
           '**Documents and memory.** Questions about PDF, DOCX, EPUB, Markdown, CSV, and text files, plus long-term memory and a knowledge graph.',
-          '**Engines and models.** llama.cpp (GGUF) with OpenCL and Vulkan, MNN with OpenCL, or an OpenAI-compatible server, with automatic routing by chip and a 52-model catalog.',
+          '**Engines and models.** llama.cpp (GGUF) with OpenCL and Vulkan, MNN with OpenCL and Vulkan depending on the phone, or an OpenAI-compatible server, with automatic routing by chip and a 52-model catalog.',
           '**Developer API and backup.** Local API endpoints for automation (270+ per Google Play, 284 per the website) and backup and restore of conversations, characters, and settings.',
         ],
         note: 'The Play text and the website differ slightly (for example on the endpoint count), so the current build and its settings screen are the final authority.',
@@ -203,7 +203,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Isaac Maple, the developer behind TokForge, shared the following about the app and the reasons for building it. It is presented as the developer\'s own words, lightly edited for readability, not as PromptQuorum\'s independent editorial assessment:',
           '"I think our best feature is autoForge, which finds the best and fastest inference setup for each handset and model: CPU, OpenCL or Vulkan, thread count and context size.',
-          'I originally had 4 of these character cards from the get-go, but until maybe a month ago the app didn\'t offer the plain system default without a prompt, which annoyed some folks.',
           'The app is really just me and one other buddy, guardian37x in the Discord.',
           'I convert and try to optimize a lot of the smaller LLMs for Edge AI and upload them to my Hugging Face account. I think there are around 85 models there now.',
           'As for why I built it: when I started, there were a few other options for mobile inference, but most were llama/GGUF based, cost money, were filtered, had ads, and weren\'t really performance-based or didn\'t have an API backend to really dive in. I also hadn\'t seen any that used MNN, and as an engineer, MNN at that time was sometimes 50% faster than GGUF, which was really exciting.',
@@ -220,7 +219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Benefit': 'Free and no account',
             'What it means in real use': 'Install and use without sign-up or subscription.',
-            'Limitation / caveat': 'Source is not published and no license is stated.',
+            'Limitation / caveat': 'Proprietary and closed source; no public repository.',
           },
           {
             'Benefit': 'Roleplay and media in one app',
@@ -239,7 +238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Benefit': 'Android release is stable-labeled',
-            'What it means in real use': 'Version 1.0 is on Google Play.',
+            'What it means in real use': 'Version 1.3.6.1 is a normal production release on Google Play.',
             'Limitation / caveat': 'Small install base (5K+), and the iPhone version is a beta.',
           },
         ],
@@ -257,11 +256,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'What We Could Not Verify',
         items: [
-          '**License and source code.** No license text or public repository was found, and the developer\'s own guide lists "No public repo", so behavior cannot be checked against code.',
+          '**Source code.** TokForge is proprietary and closed source, with the license in section 2 of its [terms](https://tokforge.ai/terms/), so behavior cannot be checked against code.',
           '**Hands-on performance and quality.** PromptQuorum did not run the app, so speed, battery use, and output quality are not assessed.',
-          '**In-app purchases and ads.** The Play page read shows no such labels, but the sources do not explicitly rule them out.',
+          '**The no-ads claim.** The developer\'s [FAQ](https://tokforge.ai/faq/) says there are no ads, in-app purchases, or subscriptions; PromptQuorum did not install the app to confirm this.',
           '**Developer background.** Google Play names Defcon-One, with Isaac Maple and a United States location in the developer details; no company registration or track record was found in the sources read.',
-          '**Not for iPhone users yet.** The Apple version is a TestFlight beta, not an App Store release.',
+          '**iPhone and iPad.** The public TestFlight beta, open to anyone, was not tested, and the app is not yet on the App Store.',
         ],
       },
       vsAlternatives: {
@@ -303,11 +302,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Is TokForge free?',
-            a: 'Yes. Both Google Play and the developer\'s website describe it as free with no subscription or account. The Play page read shows no in-app-purchase label, though the sources do not explicitly rule purchases out.',
+            a: 'Yes. Google Play and the developer\'s website describe it as free with no account, and the developer\'s [FAQ](https://tokforge.ai/faq/) states there are no ads, in-app purchases, or subscriptions.',
           },
           {
             q: 'Is TokForge open source?',
-            a: 'No. No public source repository or license was found, and the developer\'s own comparison guide lists "No public repo".',
+            a: 'No. TokForge is proprietary, closed-source software; the license is in section 2 of its [terms](https://tokforge.ai/terms/), and no public source repository exists.',
           },
           {
             q: 'Who makes TokForge?',
@@ -319,7 +318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is there an iPhone version?',
-            a: 'Only as a public beta on TestFlight. The Android version is on Google Play.',
+            a: 'Yes, as a public beta on TestFlight that anyone can join; it is not on the App Store yet. The Android version is on Google Play.',
           },
           {
             q: 'What hardware does it need?',
@@ -343,7 +342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'TokForge packs roleplay characters, on-device images, voice cloning, document Q&A, and chip-aware engine routing into a free Android app, and its public benchmark leaderboard is an unusual attempt at transparency about speed. Against that, the source is not published and no license is stated, the install base is small at 5K+, the iPhone version is still in beta, performance figures come from the developer, and nothing here has been tested hands-on. It suits Android users who want a free offline roleplay-and-media app and accept those terms; readers who want auditable code can compare [PocketPal AI](/power-local-llm/pocketpal-ai-review) or [Private Mind](/power-local-llm/private-mind-review).',
+          'TokForge packs roleplay characters, on-device images, voice cloning, document Q&A, and chip-aware engine routing into a free Android app that, per the developer, has no ads, in-app purchases, or subscriptions, and its public benchmark leaderboard is an unusual attempt at transparency about speed. Against that, the software is proprietary and closed source, the install base is small at 5K+, the iPhone and iPad version is a public TestFlight beta that is not yet on the App Store, performance figures come from the developer, and nothing here has been tested hands-on. It suits Android users who want a free offline roleplay-and-media app and accept those terms; readers who want auditable code can compare [PocketPal AI](/power-local-llm/pocketpal-ai-review) or [Private Mind](/power-local-llm/private-mind-review).',
       },
       sources: {
         id: 'sources',
@@ -351,6 +350,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[TokForge on Google Play](https://play.google.com/store/apps/details?id=dev.tokforge) — description, developer details, Data safety section, download count, and last-updated date, checked 3 October 2026.',
           '[tokforge.ai](https://tokforge.ai) — version, platforms, hardware guidance, and the developer\'s own comparison guide, checked 3 October 2026.',
+          '[TokForge terms](https://tokforge.ai/terms/) — license (section 2): proprietary software, checked 9 October 2026.',
+          '[TokForge FAQ](https://tokforge.ai/faq/) — free, with no ads, in-app purchases, or subscriptions, and the public TestFlight beta, checked 9 October 2026.',
         ],
       },
       relatedReading: {
@@ -374,7 +375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://promptquorum.com/power-local-llm/tokforge-review',
       inLanguage: 'en',
       datePublished: '2026-10-03',
-      dateModified: '2026-10-05',
+      dateModified: '2026-10-09',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       educationalLevel: 'Intermediate',
@@ -401,14 +402,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-03',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-09',
     next_refresh_due: '2027-04-03',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/tokforge-review-hero-de.webp',
     title: 'TokForge-Rezension: Offline-KI-Chat für Android mit Rollenspiel und Bildgenerierung',
     seoTitle: 'TokForge-Rezension: Offline-KI-Chat-App für Android',
     intro:
-      'TokForge ist eine kostenlose Android-App eines Entwicklers, der bei Google Play als [Defcon-One](https://play.google.com/store/apps/details?id=dev.tokforge) geführt wird. Sie führt Sprachmodelle auf dem Smartphone aus und verbindet sie mit Rollenspiel-Charakteren, Bildgenerierung auf dem Gerät, Text-to-Speech mit Stimmklonen, Dokumenten-Q&A und einem integrierten Benchmark, der Geschwindigkeiten in einer öffentlichen Rangliste veröffentlichen kann. Version 1.0 ist bei Google Play erhältlich, während die Version für iPhone und iPad eine öffentliche Beta bei TestFlight ist. Der Quellcode der App ist nicht veröffentlicht. Diese Rezension stützt sich auf den Google-Play-Eintrag und die eigene Website des Entwicklers unter [tokforge.ai](https://tokforge.ai), geprüft am 3. Oktober 2026; PromptQuorum hat die App nicht praktisch getestet.',
+      'TokForge ist eine kostenlose Android-App eines Entwicklers, der bei Google Play als [Defcon-One](https://play.google.com/store/apps/details?id=dev.tokforge) geführt wird. Sie führt Sprachmodelle auf dem Smartphone aus und verbindet sie mit Rollenspiel-Charakteren, Bildgenerierung auf dem Gerät, Text-to-Speech mit Stimmklonen, Dokumenten-Q&A und einem integrierten Benchmark, der Geschwindigkeiten in einer öffentlichen Rangliste veröffentlichen kann. Version 1.3.6.1 ist eine Produktionsversion bei Google Play, während die Version für iPhone und iPad eine öffentliche TestFlight-Beta ist, an der jeder teilnehmen kann. Die App ist proprietäre Closed-Source-Software, ihr Quellcode ist nicht veröffentlicht. Diese Rezension stützt sich auf den Google-Play-Eintrag und die eigene Website des Entwicklers unter [tokforge.ai](https://tokforge.ai), geprüft am 3. Oktober 2026; PromptQuorum hat die App nicht praktisch getestet.',
     metaDescription:
       'TokForge-Rezension: kostenlose Offline-KI-App für Android mit Rollenspiel, Bildgenerierung, Stimmklonen und Speed-Rangliste. Modelle, Datenschutz, Grenzen.',
     twitterDescription:
@@ -431,7 +432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Kokoro', 'GGUF models', 'MNN models'],
     current_hardware_mentioned: ['Android', 'Snapdragon', 'Adreno', 'Pixel 9 Pro XL'],
     leadAnswerBlock:
-      '**TokForge (Version 1.0, Stand 3. Oktober 2026) ist eine kostenlose Android-App von Defcon-One, die lokale Sprachmodelle über llama.cpp oder MNN ausführt und Rollenspiel-Charaktere, Bildgenerierung auf dem Gerät, Sprache und Dokumenten-Q&A ergänzt, ohne Konto.** Laut Eintrag verlassen Unterhaltungen das Gerät nie, die Websuche ist standardmäßig aus, und ein Benchmark kann Ergebnisse optional in einer öffentlichen Rangliste veröffentlichen. Der Quellcode ist nicht veröffentlicht, die Lizenz wird nicht genannt, und die Version für iPhone und iPad ist noch eine TestFlight-Beta.',
+      '**TokForge (Version 1.3.6.1, vom Entwickler am 9. Oktober 2026 bestätigt) ist eine kostenlose Android-App von Defcon-One, die lokale Sprachmodelle über llama.cpp oder MNN ausführt und Rollenspiel-Charaktere, Bildgenerierung auf dem Gerät, Sprache und Dokumenten-Q&A ergänzt, ohne Konto.** Laut Eintrag verlassen Unterhaltungen das Gerät nie, die Websuche ist standardmäßig aus, und ein Benchmark kann Ergebnisse optional in einer öffentlichen Rangliste veröffentlichen. Die App ist proprietäre Closed-Source-Software, laut Entwickler gibt es keine Werbung, In-App-Käufe oder Abos, und die Version für iPhone und iPad ist eine öffentliche TestFlight-Beta, die noch nicht im App Store ist.',
     quickAnswerTop: {
       de: {
         question: 'Ist TokForge kostenlos, und läuft es vollständig offline?',
@@ -441,7 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kostenlos bei [Google Play](https://play.google.com/store/apps/details?id=dev.tokforge); die Version für iPhone und iPad ist eine öffentliche Beta bei TestFlight, nicht im App Store.',
           'Drei Inferenzwege: llama.cpp für GGUF, MNN oder ein eigener OpenAI-kompatibler Server.',
           'Extras: Rollenspiel-Charaktere mit importierten Karten, Bildgenerierung auf dem Gerät, Kokoro-Stimmen mit Stimmklonen und Dokumenten-Q&A.',
-          'Stand der Prüfung am 3. Oktober 2026: Version 1.0, 5K+ Downloads bei Google Play, Eintrag zuletzt aktualisiert am 20. September 2026.',
+          'Version 1.3.6.1 (vom Entwickler am 9. Oktober 2026 bestätigt); 5K+ Downloads bei Google Play und ein Eintrag, zuletzt aktualisiert am 20. September 2026 (geprüft am 3. Oktober 2026).',
         ],
         updatedDate: '2026-10',
       },
@@ -481,10 +482,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Entwickler: bei Google Play als Defcon-One geführt, mit Isaac Maple und einem Standort in den Vereinigten Staaten in den Entwicklerangaben sowie einer Kontakt-E-Mail im Eintrag.',
-          'Preis und Lizenz: kostenlos, ohne Abo und ohne Konto; es wurden weder eine Lizenz noch ein öffentliches Quellcode-Repository gefunden, und der eigene Vergleichsratgeber des Entwicklers führt „No public repo“.',
-          'Engines: llama.cpp (GGUF) mit OpenCL- und Vulkan-Pfaden, MNN mit OpenCL oder ein OpenAI-kompatibler Server, den Sie selbst anbinden.',
+          'Preis und Lizenz: laut [FAQ](https://tokforge.ai/faq/) des Entwicklers kostenlos, ohne Werbung, In-App-Käufe, Abos oder Konto; proprietär und Closed Source, die Lizenz steht in Abschnitt 2 der [Nutzungsbedingungen](https://tokforge.ai/terms/).',
+          'Engines: llama.cpp (GGUF) mit OpenCL- und Vulkan-Pfaden, MNN mit OpenCL und Vulkan (je nach Smartphone) oder ein OpenAI-kompatibler Server, den Sie selbst anbinden.',
           'Umfang: Rollenspiel-Charaktere, Bilder auf dem Gerät, Kokoro-Stimmen mit Klonen, Dokumenten-Q&A, ein Katalog mit 52 Modellen samt Hugging-Face-Suche und eine optionale öffentliche Geschwindigkeits-Rangliste.',
-          'Signale, Stand der Prüfung am 3. Oktober 2026: Version 1.0, 5K+ Downloads bei Google Play, Eintrag aktualisiert am 20. September 2026.',
+          'Signale: Version 1.3.6.1, vom Entwickler am 9. Oktober 2026 bestätigt, 5K+ Downloads bei Google Play und ein Eintrag, aktualisiert am 20. September 2026 (geprüft am 3. Oktober 2026).',
         ],
         callouts: [
           {
@@ -498,7 +499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was ist TokForge?',
         content: [
           '**TokForge ist eine Offline-first-Chat-App für Android, die einen lokalen Modell-Runner mit Werkzeugen für Rollenspiel, Bilder, Sprache und Dokumente bündelt.** Laut [Google-Play-Eintrag](https://play.google.com/store/apps/details?id=dev.tokforge) führt sie vollständige Modelle ohne Cloud und ohne Konto auf dem Smartphone aus, unterstützt Charaktere aus chub.ai und TavernAI-Karten und wählt automatisch die schnellste Engine für Ihren Chip.',
-          'Die Website des Entwicklers beschreibt Version 1.0 als erste vollständige Veröffentlichung und sagt, die App sei deutlich kleiner als etablierte Alternativen. Diese Offenheit ist für die Erwartungen wichtig: Die Nutzerbasis ist klein, und die Version für iPhone und iPad befindet sich nur in der TestFlight-Beta.',
+          'Der Entwickler sagt, die App sei deutlich kleiner als etablierte Alternativen. Diese Offenheit ist für die Erwartungen wichtig: Die Nutzerbasis ist klein, und die Version für iPhone und iPad befindet sich nur in der öffentlichen TestFlight-Beta, noch nicht im App Store.',
         ],
       },
       getIt: {
@@ -522,7 +523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Bezugsquelle': 'Nicht veröffentlicht',
           },
         ],
-        note: 'Diese Seite ist Begleitmaterial zum Eintrag der App im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Version, geprüft am 3. Oktober 2026: 1.0, laut Play-Beschreibung und Website des Entwicklers.',
+        note: 'Diese Seite ist Begleitmaterial zum Eintrag der App im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Version 1.3.6.1, vom Entwickler am 9. Oktober 2026 bestätigt; ältere Seiten und Einträge zeigen möglicherweise noch 1.0.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -560,7 +561,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Bilder.** Generierung auf dem Gerät, die überall auf der CPU läuft, mit GPU-Beschleunigung auf Adreno und NPU-Beschleunigung auf unterstützten Snapdragon-Geräten. Der Entwickler nennt rund 31 Sekunden für ein Bild mit 512x512 Pixeln auf einem Pixel 9 Pro XL.',
           '**Sprache.** Kokoro-Text-to-Speech mit mehreren Stimmen, Stimmklonen aus etwa einer Minute Aufnahme und Spracheingabe.',
           '**Dokumente und Gedächtnis.** Fragen zu PDF-, DOCX-, EPUB-, Markdown-, CSV- und Textdateien sowie ein Langzeitgedächtnis und ein Wissensgraph.',
-          '**Engines und Modelle.** llama.cpp (GGUF) mit OpenCL und Vulkan, MNN mit OpenCL oder ein OpenAI-kompatibler Server, mit automatischer Zuweisung nach Chip und einem Katalog mit 52 Modellen.',
+          '**Engines und Modelle.** llama.cpp (GGUF) mit OpenCL und Vulkan, MNN mit OpenCL und Vulkan je nach Smartphone oder ein OpenAI-kompatibler Server, mit automatischer Zuweisung nach Chip und einem Katalog mit 52 Modellen.',
           '**Entwickler-API und Backup.** Lokale API-Endpunkte für Automatisierung (270+ laut Google Play, 284 laut Website) sowie Sicherung und Wiederherstellung von Unterhaltungen, Charakteren und Einstellungen.',
         ],
         note: 'Der Play-Text und die Website weichen leicht voneinander ab (zum Beispiel bei der Zahl der Endpunkte); maßgeblich sind daher der aktuelle Build und sein Einstellungsbildschirm.',
@@ -593,7 +594,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Isaac Maple, der Entwickler hinter TokForge, hat Folgendes zur App und zu den Gründen für ihre Entwicklung mitgeteilt. Es wird als eigene Worte des Entwicklers wiedergegeben, zur besseren Lesbarkeit leicht redigiert, nicht als unabhängige redaktionelle Einschätzung von PromptQuorum:',
           '"Ich denke, unser bestes Feature ist autoForge, das für jedes Gerät und jedes Modell das beste und schnellste Inferenz-Setup findet: CPU, OpenCL oder Vulkan, Thread-Anzahl und Kontextgröße.',
-          'Ich hatte ursprünglich von Anfang an 4 dieser Charakterkarten, aber bis vor etwa einem Monat bot die App den reinen Systemstandard ohne Prompt nicht an, was einige Leute geärgert hat.',
           'Die App besteht eigentlich nur aus mir und einem weiteren Kumpel, guardian37x auf Discord.',
           'Ich konvertiere und optimiere viele der kleineren LLMs für Edge AI und lade sie in meinen Hugging-Face-Account hoch. Ich glaube, es sind dort inzwischen rund 85 Modelle.',
           'Warum ich sie gebaut habe: Als ich anfing, gab es einige andere Optionen für mobile Inferenz, aber die meisten basierten auf llama/GGUF, kosteten Geld, waren gefiltert, hatten Werbung und waren nicht wirklich leistungsorientiert oder hatten kein API-Backend, mit dem man richtig tief einsteigen konnte. Außerdem hatte ich noch keine gesehen, die MNN nutzte, und als Ingenieur fand ich es sehr spannend, dass MNN damals manchmal 50 % schneller war als GGUF.',
@@ -610,7 +610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Vorteil': 'Kostenlos und ohne Konto',
             'Bedeutung in der Praxis': 'Installieren und nutzen ohne Registrierung oder Abo.',
-            'Einschränkung / Hinweis': 'Der Quellcode ist nicht veröffentlicht, und es wird keine Lizenz genannt.',
+            'Einschränkung / Hinweis': 'Proprietär und Closed Source; kein öffentliches Repository.',
           },
           {
             'Vorteil': 'Rollenspiel und Medien in einer App',
@@ -629,7 +629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Vorteil': 'Android-Version als stabil gekennzeichnet',
-            'Bedeutung in der Praxis': 'Version 1.0 ist bei Google Play erhältlich.',
+            'Bedeutung in der Praxis': 'Version 1.3.6.1 ist eine normale Produktionsversion bei Google Play.',
             'Einschränkung / Hinweis': 'Kleine Nutzerbasis (5K+), und die iPhone-Version ist eine Beta.',
           },
         ],
@@ -647,11 +647,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Was wir nicht überprüfen konnten',
         items: [
-          '**Lizenz und Quellcode.** Es wurden weder ein Lizenztext noch ein öffentliches Repository gefunden, und der eigene Ratgeber des Entwicklers führt „No public repo“; das Verhalten lässt sich daher nicht am Code prüfen.',
+          '**Quellcode.** TokForge ist proprietär und Closed Source, die Lizenz steht in Abschnitt 2 der [Nutzungsbedingungen](https://tokforge.ai/terms/); das Verhalten lässt sich daher nicht am Code prüfen.',
           '**Praktische Leistung und Qualität.** PromptQuorum hat die App nicht ausgeführt; Geschwindigkeit, Akkuverbrauch und Ausgabequalität sind daher nicht bewertet.',
-          '**In-App-Käufe und Werbung.** Die gelesene Play-Seite zeigt keine solchen Hinweise, doch die Quellen schließen sie nicht ausdrücklich aus.',
+          '**Die Aussage „keine Werbung“.** Die [FAQ](https://tokforge.ai/faq/) des Entwicklers nennt keine Werbung, keine In-App-Käufe und keine Abos; PromptQuorum hat die App nicht installiert, um das zu bestätigen.',
           '**Hintergrund des Entwicklers.** Google Play nennt Defcon-One, mit Isaac Maple und einem Standort in den Vereinigten Staaten in den Entwicklerangaben; in den gelesenen Quellen fanden sich weder eine Firmenregistrierung noch Referenzen.',
-          '**Noch nichts für iPhone-Nutzer.** Die Apple-Version ist eine TestFlight-Beta und keine Veröffentlichung im App Store.',
+          '**iPhone und iPad.** Die öffentliche TestFlight-Beta, an der jeder teilnehmen kann, wurde nicht getestet, und die App ist noch nicht im App Store.',
         ],
       },
       vsAlternatives: {
@@ -693,11 +693,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Ist TokForge kostenlos?',
-            a: 'Ja. Sowohl Google Play als auch die Website des Entwicklers beschreiben die App als kostenlos, ohne Abo und ohne Konto. Die gelesene Play-Seite zeigt keinen Hinweis auf In-App-Käufe, doch die Quellen schließen Käufe nicht ausdrücklich aus.',
+            a: 'Ja. Google Play und die Website des Entwicklers beschreiben sie als kostenlos und ohne Konto, und die [FAQ](https://tokforge.ai/faq/) des Entwicklers nennt keine Werbung, keine In-App-Käufe und keine Abos.',
           },
           {
             q: 'Ist TokForge Open Source?',
-            a: 'Nein. Es wurden weder ein öffentliches Quellcode-Repository noch eine Lizenz gefunden, und der eigene Vergleichsratgeber des Entwicklers führt „No public repo“.',
+            a: 'Nein. TokForge ist proprietäre Closed-Source-Software; die Lizenz steht in Abschnitt 2 der [Nutzungsbedingungen](https://tokforge.ai/terms/), und es gibt kein öffentliches Quellcode-Repository.',
           },
           {
             q: 'Wer macht TokForge?',
@@ -709,7 +709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Gibt es eine iPhone-Version?',
-            a: 'Nur als öffentliche Beta bei TestFlight. Die Android-Version ist bei Google Play erhältlich.',
+            a: 'Ja, als öffentliche Beta bei TestFlight, an der jeder teilnehmen kann; im App Store ist sie noch nicht. Die Android-Version ist bei Google Play erhältlich.',
           },
           {
             q: 'Welche Hardware braucht sie?',
@@ -733,7 +733,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Fazit',
         content:
-          'TokForge packt Rollenspiel-Charaktere, Bilder auf dem Gerät, Stimmklonen, Dokumenten-Q&A und chipbezogene Engine-Zuweisung in eine kostenlose Android-App, und die öffentliche Benchmark-Rangliste ist ein ungewöhnlicher Versuch, bei der Geschwindigkeit Transparenz zu schaffen. Dem stehen gegenüber: Der Quellcode ist nicht veröffentlicht und es wird keine Lizenz genannt, die Nutzerbasis ist mit 5K+ klein, die iPhone-Version ist noch in der Beta, die Leistungsangaben stammen vom Entwickler, und nichts davon wurde praktisch getestet. Die App eignet sich für Android-Nutzer, die eine kostenlose Offline-App für Rollenspiel und Medien wollen und diese Bedingungen akzeptieren; wer prüfbaren Code möchte, kann [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) oder [Private Mind](/de/power-local-llm/private-mind-review) vergleichen.',
+          'TokForge packt Rollenspiel-Charaktere, Bilder auf dem Gerät, Stimmklonen, Dokumenten-Q&A und chipbezogene Engine-Zuweisung in eine kostenlose Android-App, die laut Entwickler keine Werbung, In-App-Käufe oder Abos hat, und die öffentliche Benchmark-Rangliste ist ein ungewöhnlicher Versuch, bei der Geschwindigkeit Transparenz zu schaffen. Dem stehen gegenüber: Die Software ist proprietär und Closed Source, die Nutzerbasis ist mit 5K+ klein, die iPhone- und iPad-Version ist eine öffentliche TestFlight-Beta und noch nicht im App Store, die Leistungsangaben stammen vom Entwickler, und nichts davon wurde praktisch getestet. Die App eignet sich für Android-Nutzer, die eine kostenlose Offline-App für Rollenspiel und Medien wollen und diese Bedingungen akzeptieren; wer prüfbaren Code möchte, kann [PocketPal AI](/de/power-local-llm/pocketpal-ai-review) oder [Private Mind](/de/power-local-llm/private-mind-review) vergleichen.',
       },
       sources: {
         id: 'sources',
@@ -741,6 +741,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[TokForge bei Google Play](https://play.google.com/store/apps/details?id=dev.tokforge) — Beschreibung, Entwicklerangaben, Abschnitt „Datensicherheit“, Download-Zahl und Datum der letzten Aktualisierung, geprüft am 3. Oktober 2026.',
           '[tokforge.ai](https://tokforge.ai) — Version, Plattformen, Hardwarehinweise und der eigene Vergleichsratgeber des Entwicklers, geprüft am 3. Oktober 2026.',
+          '[TokForge-Nutzungsbedingungen](https://tokforge.ai/terms/) — Lizenz (Abschnitt 2): proprietäre Software, geprüft am 9. Oktober 2026.',
+          '[TokForge-FAQ](https://tokforge.ai/faq/) — kostenlos, ohne Werbung, In-App-Käufe oder Abos, sowie die öffentliche TestFlight-Beta, geprüft am 9. Oktober 2026.',
         ],
       },
       relatedReading: {
@@ -759,14 +761,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-03',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-09',
     next_refresh_due: '2027-04-03',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/tokforge-review-hero-es.webp',
     title: 'Análisis de TokForge: chat de IA offline para Android con juegos de rol e imágenes',
     seoTitle: 'Análisis de TokForge: app de chat de IA offline',
     intro:
-      'TokForge es una app gratuita para Android, publicada por un desarrollador que figura en Google Play como [Defcon-One](https://play.google.com/store/apps/details?id=dev.tokforge), que ejecuta modelos de lenguaje en el teléfono y los combina con personajes de juegos de rol, generación de imágenes en el dispositivo, texto a voz con clonación de voz, preguntas sobre documentos y un benchmark integrado que puede publicar velocidades en un ranking público. La versión 1.0 está en Google Play, mientras que la versión para iPhone y iPad es una beta pública en TestFlight. El código fuente de la app no está publicado. Este análisis se basa en la ficha de Google Play y en el sitio web del propio desarrollador, [tokforge.ai](https://tokforge.ai), consultados el 3 de octubre de 2026; PromptQuorum no ha probado la app de forma práctica.',
+      'TokForge es una app gratuita para Android, publicada por un desarrollador que figura en Google Play como [Defcon-One](https://play.google.com/store/apps/details?id=dev.tokforge), que ejecuta modelos de lenguaje en el teléfono y los combina con personajes de juegos de rol, generación de imágenes en el dispositivo, texto a voz con clonación de voz, preguntas sobre documentos y un benchmark integrado que puede publicar velocidades en un ranking público. La versión 1.3.6.1 es una versión de producción en Google Play, mientras que la versión para iPhone y iPad es una beta pública en TestFlight a la que puede unirse cualquiera. La app es software propietario de código cerrado y su código fuente no está publicado. Este análisis se basa en la ficha de Google Play y en el sitio web del propio desarrollador, [tokforge.ai](https://tokforge.ai), consultados el 3 de octubre de 2026; PromptQuorum no ha probado la app de forma práctica.',
     metaDescription:
       'Análisis de TokForge: app gratuita de chat de IA offline para Android con personajes de rol, imágenes, voz y ranking de velocidad. Privacidad y límites.',
     twitterDescription:
@@ -789,7 +791,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Kokoro', 'GGUF models', 'MNN models'],
     current_hardware_mentioned: ['Android', 'Snapdragon', 'Adreno', 'Pixel 9 Pro XL'],
     leadAnswerBlock:
-      '**TokForge (versión 1.0 a fecha del 3 de octubre de 2026) es una app gratuita para Android de Defcon-One que ejecuta modelos de lenguaje locales con llama.cpp o MNN y añade personajes de juegos de rol, generación de imágenes en el dispositivo, voz y preguntas sobre documentos, sin necesidad de cuenta.** Su ficha dice que las conversaciones nunca salen del dispositivo, que la búsqueda web está desactivada por defecto y que un benchmark puede publicar resultados, de forma opcional, en un ranking público. El código fuente no está publicado y no se indica la licencia, y la versión para iPhone y iPad sigue siendo una beta en TestFlight.',
+      '**TokForge (versión 1.3.6.1, confirmada por el desarrollador el 9 de octubre de 2026) es una app gratuita para Android de Defcon-One que ejecuta modelos de lenguaje locales con llama.cpp o MNN y añade personajes de juegos de rol, generación de imágenes en el dispositivo, voz y preguntas sobre documentos, sin necesidad de cuenta.** Su ficha dice que las conversaciones nunca salen del dispositivo, que la búsqueda web está desactivada por defecto y que un benchmark puede publicar resultados, de forma opcional, en un ranking público. La app es software propietario de código cerrado, el desarrollador afirma que no tiene anuncios, compras dentro de la app ni suscripciones, y la versión para iPhone y iPad es una beta pública en TestFlight que aún no está en la App Store.',
     quickAnswerTop: {
       es: {
         question: '¿TokForge es gratis y funciona totalmente offline?',
@@ -799,7 +801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gratis en [Google Play](https://play.google.com/store/apps/details?id=dev.tokforge); la versión para iPhone y iPad es una beta pública en TestFlight, no está en la App Store.',
           'Tres vías de inferencia: llama.cpp para GGUF, MNN o tu propio servidor compatible con OpenAI.',
           'Extras: personajes de rol con tarjetas importadas, generación de imágenes en el dispositivo, voces Kokoro con clonación de voz y preguntas sobre documentos.',
-          'Según la consulta del 3 de octubre de 2026: versión 1.0, más de 5K descargas en Google Play y ficha actualizada por última vez el 20 de septiembre de 2026.',
+          'Versión 1.3.6.1 (confirmada por el desarrollador el 9 de octubre de 2026); más de 5K descargas en Google Play y una ficha actualizada por última vez el 20 de septiembre de 2026 (consultada el 3 de octubre de 2026).',
         ],
         updatedDate: '2026-10',
       },
@@ -839,10 +841,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Desarrollador: figura como Defcon-One en Google Play, con Isaac Maple y una ubicación en Estados Unidos en los datos del desarrollador y un correo de contacto en la ficha.',
-          'Precio y licencia: gratis, sin suscripción ni cuenta; no se encontró ninguna licencia ni un repositorio de código público, y la propia guía comparativa del desarrollador indica «No public repo».',
-          'Motores: llama.cpp (GGUF) con vías OpenCL y Vulkan, MNN con OpenCL, o un servidor compatible con OpenAI que conectas tú mismo.',
+          'Precio y licencia: según las [preguntas frecuentes](https://tokforge.ai/faq/) del desarrollador, gratis, sin anuncios, compras dentro de la app, suscripciones ni cuenta; propietaria y de código cerrado, con la licencia en la sección 2 de los [términos](https://tokforge.ai/terms/).',
+          'Motores: llama.cpp (GGUF) con vías OpenCL y Vulkan, MNN con OpenCL y Vulkan (según el teléfono), o un servidor compatible con OpenAI que conectas tú mismo.',
           'Alcance: personajes de rol, imágenes en el dispositivo, voces Kokoro con clonación, preguntas sobre documentos, un catálogo de 52 modelos con búsqueda en Hugging Face y un ranking público de velocidad opcional.',
-          'Indicadores según la consulta del 3 de octubre de 2026: versión 1.0, más de 5K descargas en Google Play, ficha actualizada el 20 de septiembre de 2026.',
+          'Indicadores: versión 1.3.6.1, confirmada por el desarrollador el 9 de octubre de 2026, más de 5K descargas en Google Play y una ficha actualizada el 20 de septiembre de 2026 (consultada el 3 de octubre de 2026).',
         ],
         callouts: [
           {
@@ -856,7 +858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Qué es TokForge?',
         content: [
           '**TokForge es una app de chat para Android, pensada para funcionar sin conexión, que reúne un ejecutor de modelos locales con herramientas de juegos de rol, imágenes, voz y documentos.** Según su [ficha de Google Play](https://play.google.com/store/apps/details?id=dev.tokforge), ejecuta modelos completos en el teléfono sin nube ni cuenta, admite personajes importados desde chub.ai y tarjetas TavernAI, y elige automáticamente el motor más rápido para tu chip.',
-          'El sitio web del desarrollador describe la versión 1.0 como la primera versión completa y dice que la app es mucho más pequeña que las alternativas consolidadas. Esa franqueza importa para las expectativas: tiene una base de instalaciones reducida, y su versión para iPhone y iPad solo está en beta en TestFlight.',
+          'El desarrollador dice que la app es mucho más pequeña que las alternativas consolidadas. Esa franqueza importa para las expectativas: tiene una base de instalaciones reducida, y su versión para iPhone y iPad solo está en beta pública en TestFlight, todavía no en la App Store.',
         ],
       },
       getIt: {
@@ -880,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Dónde obtenerla': 'No publicado',
           },
         ],
-        note: 'Esta página es material complementario de la entrada de la app en el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versión verificada el 3 de octubre de 2026: 1.0, según la descripción de Play y el sitio web del desarrollador.',
+        note: 'Esta página es material complementario de la entrada de la app en el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versión 1.3.6.1, confirmada por el desarrollador el 9 de octubre de 2026; páginas y fichas antiguas pueden seguir mostrando 1.0.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -918,7 +920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Imágenes.** Generación en el dispositivo que se ejecuta en la CPU en todos los casos, con aceleración por GPU en Adreno y por NPU en dispositivos Snapdragon compatibles. El desarrollador cita unos 31 segundos para una imagen de 512x512 en un Pixel 9 Pro XL.',
           '**Voz.** Texto a voz con Kokoro y varias voces, clonación de voz a partir de aproximadamente un minuto de audio grabado, y entrada de voz.',
           '**Documentos y memoria.** Preguntas sobre archivos PDF, DOCX, EPUB, Markdown, CSV y de texto, además de memoria a largo plazo y un grafo de conocimiento.',
-          '**Motores y modelos.** llama.cpp (GGUF) con OpenCL y Vulkan, MNN con OpenCL, o un servidor compatible con OpenAI, con enrutamiento automático según el chip y un catálogo de 52 modelos.',
+          '**Motores y modelos.** llama.cpp (GGUF) con OpenCL y Vulkan, MNN con OpenCL y Vulkan según el teléfono, o un servidor compatible con OpenAI, con enrutamiento automático según el chip y un catálogo de 52 modelos.',
           '**API para desarrolladores y copia de seguridad.** Endpoints de API locales para automatización (más de 270 según Google Play, 284 según el sitio web) y copia de seguridad y restauración de conversaciones, personajes y ajustes.',
         ],
         note: 'El texto de Play y el sitio web difieren ligeramente (por ejemplo, en el número de endpoints), así que la compilación actual y su pantalla de ajustes tienen la última palabra.',
@@ -951,7 +953,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Isaac Maple, el desarrollador de TokForge, compartió lo siguiente sobre la app y los motivos por los que la creó. Se presenta como las propias palabras del desarrollador, ligeramente editadas para facilitar la lectura, no como una evaluación editorial independiente de PromptQuorum:',
           '"Creo que nuestra mejor función es autoForge, que encuentra la mejor y más rápida configuración de inferencia para cada dispositivo y modelo: CPU, OpenCL o Vulkan, número de hilos y tamaño de contexto.',
-          'Originalmente tenía 4 de estas tarjetas de personaje desde el principio, pero hasta hace quizá un mes la app no ofrecía el comportamiento predeterminado del sistema sin un prompt, lo que molestaba a algunas personas.',
           'La app es en realidad solo yo y otro amigo, guardian37x en Discord.',
           'Convierto y trato de optimizar muchos de los LLM más pequeños para Edge AI y los subo a mi cuenta de Hugging Face. Creo que ahora hay unos 85 modelos allí.',
           'En cuanto a por qué la creé: cuando empecé, había algunas otras opciones para inferencia móvil, pero la mayoría se basaban en llama/GGUF, costaban dinero, estaban filtradas, tenían anuncios y no estaban realmente orientadas al rendimiento ni tenían un backend de API para profundizar de verdad. Tampoco había visto ninguna que usara MNN, y como ingeniero, MNN en ese momento era a veces un 50 % más rápido que GGUF, lo que me entusiasmaba mucho.',
@@ -968,7 +969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Ventaja': 'Gratis y sin cuenta',
             'En el uso real': 'Se instala y se usa sin registro ni suscripción.',
-            'Limitación / salvedad': 'El código no está publicado y no se indica licencia.',
+            'Limitación / salvedad': 'Propietaria y de código cerrado; sin repositorio público.',
           },
           {
             'Ventaja': 'Juegos de rol y multimedia en una app',
@@ -987,7 +988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Ventaja': 'Versión de Android marcada como estable',
-            'En el uso real': 'La versión 1.0 está en Google Play.',
+            'En el uso real': 'La versión 1.3.6.1 es una versión de producción normal en Google Play.',
             'Limitación / salvedad': 'Base de instalaciones pequeña (5K+) y la versión para iPhone es una beta.',
           },
         ],
@@ -1005,11 +1006,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Lo que no pudimos verificar',
         items: [
-          '**Licencia y código fuente.** No se encontró ningún texto de licencia ni repositorio público, y la propia guía del desarrollador indica «No public repo», por lo que el comportamiento no puede comprobarse con el código.',
+          '**Código fuente.** TokForge es propietaria y de código cerrado, con la licencia en la sección 2 de sus [términos](https://tokforge.ai/terms/), por lo que el comportamiento no puede comprobarse con el código.',
           '**Rendimiento y calidad en uso real.** PromptQuorum no ejecutó la app, así que no se evalúan la velocidad, el consumo de batería ni la calidad de las respuestas.',
-          '**Compras dentro de la app y anuncios.** La página de Play que se leyó no muestra esas etiquetas, pero las fuentes no las descartan de forma explícita.',
+          '**La afirmación de «sin anuncios».** Las [preguntas frecuentes](https://tokforge.ai/faq/) del desarrollador dicen que no hay anuncios, compras dentro de la app ni suscripciones; PromptQuorum no instaló la app para confirmarlo.',
           '**Trayectoria del desarrollador.** Google Play nombra a Defcon-One, con Isaac Maple y una ubicación en Estados Unidos en los datos del desarrollador; en las fuentes leídas no se encontró ningún registro de empresa ni trayectoria previa.',
-          '**Todavía no es para usuarios de iPhone.** La versión de Apple es una beta en TestFlight, no una versión de la App Store.',
+          '**iPhone y iPad.** La beta pública en TestFlight, abierta a cualquiera, no se probó, y la app todavía no está en la App Store.',
         ],
       },
       vsAlternatives: {
@@ -1051,11 +1052,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿TokForge es gratis?',
-            a: 'Sí. Tanto Google Play como el sitio web del desarrollador la describen como gratuita, sin suscripción ni cuenta. La página de Play que se leyó no muestra ninguna etiqueta de compras dentro de la app, aunque las fuentes no descartan de forma explícita las compras.',
+            a: 'Sí. Google Play y el sitio web del desarrollador la describen como gratuita y sin cuenta, y las [preguntas frecuentes](https://tokforge.ai/faq/) del desarrollador indican que no hay anuncios, compras dentro de la app ni suscripciones.',
           },
           {
             q: '¿TokForge es de código abierto?',
-            a: 'No. No se encontró ningún repositorio de código público ni licencia, y la propia guía comparativa del desarrollador indica «No public repo».',
+            a: 'No. TokForge es software propietario de código cerrado; la licencia está en la sección 2 de sus [términos](https://tokforge.ai/terms/) y no existe un repositorio de código público.',
           },
           {
             q: '¿Quién hace TokForge?',
@@ -1067,7 +1068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Hay versión para iPhone?',
-            a: 'Solo como beta pública en TestFlight. La versión para Android está en Google Play.',
+            a: 'Sí, como beta pública en TestFlight a la que puede unirse cualquiera; todavía no está en la App Store. La versión para Android está en Google Play.',
           },
           {
             q: '¿Qué hardware necesita?',
@@ -1091,7 +1092,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredicto',
         content:
-          'TokForge reúne personajes de juegos de rol, imágenes en el dispositivo, clonación de voz, preguntas sobre documentos y un enrutamiento de motores adaptado al chip en una app gratuita para Android, y su ranking público de benchmark es un intento poco habitual de transparencia sobre la velocidad. En contra, el código fuente no está publicado y no se indica ninguna licencia, la base de instalaciones es pequeña (5K+), la versión para iPhone sigue en beta, las cifras de rendimiento proceden del desarrollador y nada de esto se ha probado de forma práctica. Encaja con quienes usan Android y quieren una app gratuita y offline de juegos de rol y multimedia y aceptan esas condiciones; quienes quieran código auditable pueden comparar [PocketPal AI](/es/power-local-llm/pocketpal-ai-review) o [Private Mind](/es/power-local-llm/private-mind-review).',
+          'TokForge reúne personajes de juegos de rol, imágenes en el dispositivo, clonación de voz, preguntas sobre documentos y un enrutamiento de motores adaptado al chip en una app gratuita para Android que, según el desarrollador, no tiene anuncios, compras dentro de la app ni suscripciones, y su ranking público de benchmark es un intento poco habitual de transparencia sobre la velocidad. En contra, el software es propietario y de código cerrado, la base de instalaciones es pequeña (5K+), la versión para iPhone y iPad es una beta pública en TestFlight que aún no está en la App Store, las cifras de rendimiento proceden del desarrollador y nada de esto se ha probado de forma práctica. Encaja con quienes usan Android y quieren una app gratuita y offline de juegos de rol y multimedia y aceptan esas condiciones; quienes quieran código auditable pueden comparar [PocketPal AI](/es/power-local-llm/pocketpal-ai-review) o [Private Mind](/es/power-local-llm/private-mind-review).',
       },
       sources: {
         id: 'sources',
@@ -1099,6 +1100,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[TokForge en Google Play](https://play.google.com/store/apps/details?id=dev.tokforge) — descripción, datos del desarrollador, sección Seguridad de los datos, número de descargas y fecha de última actualización, consultados el 3 de octubre de 2026.',
           '[tokforge.ai](https://tokforge.ai) — versión, plataformas, orientación sobre hardware y la propia guía comparativa del desarrollador, consultados el 3 de octubre de 2026.',
+          '[Términos de TokForge](https://tokforge.ai/terms/) — licencia (sección 2): software propietario, consultado el 9 de octubre de 2026.',
+          '[Preguntas frecuentes de TokForge](https://tokforge.ai/faq/) — gratis, sin anuncios, compras dentro de la app ni suscripciones, y la beta pública en TestFlight, consultado el 9 de octubre de 2026.',
         ],
       },
       relatedReading: {
@@ -1117,14 +1120,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-03',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-09',
     next_refresh_due: '2027-04-03',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/tokforge-review-hero-fr.webp',
     title: 'Avis TokForge : chat IA hors ligne sur Android avec jeu de rôle et génération d\'images',
     seoTitle: 'Avis TokForge : appli de chat IA hors ligne, Android',
     intro:
-      'TokForge est une application Android gratuite, publiée par un développeur indiqué sur Google Play sous le nom [Defcon-One](https://play.google.com/store/apps/details?id=dev.tokforge), qui exécute des modèles de langage sur le téléphone et y ajoute des personnages de jeu de rôle, la génération d\'images sur l\'appareil, la synthèse vocale avec clonage de voix, des questions-réponses sur documents et un benchmark intégré qui peut publier les vitesses sur un classement public. La version 1.0 est disponible sur Google Play, tandis que la version pour iPhone et iPad est une bêta publique sur TestFlight. Le code source de l\'application n\'est pas publié. Cet avis se fonde sur la fiche Google Play et sur le site du développeur, [tokforge.ai](https://tokforge.ai), consultés le 3 octobre 2026 ; PromptQuorum n\'a pas testé l\'application en pratique.',
+      'TokForge est une application Android gratuite, publiée par un développeur indiqué sur Google Play sous le nom [Defcon-One](https://play.google.com/store/apps/details?id=dev.tokforge), qui exécute des modèles de langage sur le téléphone et y ajoute des personnages de jeu de rôle, la génération d\'images sur l\'appareil, la synthèse vocale avec clonage de voix, des questions-réponses sur documents et un benchmark intégré qui peut publier les vitesses sur un classement public. La version 1.3.6.1 est une version de production sur Google Play, tandis que la version pour iPhone et iPad est une bêta publique sur TestFlight que chacun peut rejoindre. L\'application est un logiciel propriétaire à code fermé et son code source n\'est pas publié. Cet avis se fonde sur la fiche Google Play et sur le site du développeur, [tokforge.ai](https://tokforge.ai), consultés le 3 octobre 2026 ; PromptQuorum n\'a pas testé l\'application en pratique.',
     metaDescription:
       'Avis TokForge : appli Android gratuite de chat IA hors ligne avec personnages de jeu de rôle, génération d\'images, clonage de voix et classement de vitesse.',
     twitterDescription:
@@ -1147,7 +1150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Kokoro', 'GGUF models', 'MNN models'],
     current_hardware_mentioned: ['Android', 'Snapdragon', 'Adreno', 'Pixel 9 Pro XL'],
     leadAnswerBlock:
-      '**TokForge (version 1.0 au 3 octobre 2026) est une application Android gratuite de Defcon-One qui exécute des modèles de langage locaux via llama.cpp ou MNN et ajoute des personnages de jeu de rôle, la génération d\'images sur l\'appareil, la voix et les questions-réponses sur documents, sans compte.** Selon sa fiche, les conversations ne quittent jamais l\'appareil, la recherche web est désactivée par défaut, et un benchmark peut, facultativement, publier ses résultats sur un classement public. Le code source n\'est pas publié et la licence n\'est pas indiquée, et la version pour iPhone et iPad reste une bêta sur TestFlight.',
+      '**TokForge (version 1.3.6.1, confirmée par le développeur le 9 octobre 2026) est une application Android gratuite de Defcon-One qui exécute des modèles de langage locaux via llama.cpp ou MNN et ajoute des personnages de jeu de rôle, la génération d\'images sur l\'appareil, la voix et les questions-réponses sur documents, sans compte.** Selon sa fiche, les conversations ne quittent jamais l\'appareil, la recherche web est désactivée par défaut, et un benchmark peut, facultativement, publier ses résultats sur un classement public. L\'application est un logiciel propriétaire à code fermé, le développeur affirme qu\'elle n\'a ni publicité, ni achats intégrés, ni abonnement, et la version pour iPhone et iPad est une bêta publique sur TestFlight, pas encore sur l\'App Store.',
     quickAnswerTop: {
       fr: {
         question: 'TokForge est-elle gratuite et fonctionne-t-elle entièrement hors ligne ?',
@@ -1157,7 +1160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gratuite sur [Google Play](https://play.google.com/store/apps/details?id=dev.tokforge) ; la version pour iPhone et iPad est une bêta publique sur TestFlight, pas sur l\'App Store.',
           'Trois voies d\'inférence : llama.cpp pour GGUF, MNN, ou votre propre serveur compatible OpenAI.',
           'Extras : personnages de jeu de rôle avec cartes importées, génération d\'images sur l\'appareil, voix Kokoro avec clonage de voix et questions-réponses sur documents.',
-          'Au 3 octobre 2026 : version 1.0, plus de 5 000 téléchargements sur Google Play (5K+), fiche mise à jour pour la dernière fois le 20 septembre 2026.',
+          'Version 1.3.6.1 (confirmée par le développeur le 9 octobre 2026) ; plus de 5 000 téléchargements sur Google Play (5K+) et une fiche mise à jour pour la dernière fois le 20 septembre 2026 (consultée le 3 octobre 2026).',
         ],
         updatedDate: '2026-10',
       },
@@ -1197,10 +1200,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Développeur : indiqué comme Defcon-One sur Google Play, avec Isaac Maple et une localisation aux États-Unis dans les informations sur le développeur, et une adresse e-mail de contact sur la fiche.',
-          'Prix et licence : gratuite, sans abonnement ni compte ; aucune licence ni dépôt de code public n\'a été trouvé, et le guide comparatif du développeur indique « No public repo ».',
-          'Moteurs : llama.cpp (GGUF) avec des voies OpenCL et Vulkan, MNN avec OpenCL, ou un serveur compatible OpenAI que vous connectez vous-même.',
+          'Prix et licence : gratuite, sans publicité, achats intégrés, abonnement ni compte selon la [FAQ](https://tokforge.ai/faq/) du développeur ; propriétaire et à code fermé, avec la licence à la section 2 des [conditions d\'utilisation](https://tokforge.ai/terms/).',
+          'Moteurs : llama.cpp (GGUF) avec des voies OpenCL et Vulkan, MNN avec OpenCL et Vulkan (selon le téléphone), ou un serveur compatible OpenAI que vous connectez vous-même.',
           'Périmètre : personnages de jeu de rôle, images sur l\'appareil, voix Kokoro avec clonage, questions-réponses sur documents, un catalogue de 52 modèles avec recherche Hugging Face et un classement public de vitesse facultatif.',
-          'Indicateurs au 3 octobre 2026 : version 1.0, plus de 5 000 téléchargements sur Google Play (5K+), fiche mise à jour le 20 septembre 2026.',
+          'Indicateurs : version 1.3.6.1, confirmée par le développeur le 9 octobre 2026, plus de 5 000 téléchargements sur Google Play (5K+) et une fiche mise à jour le 20 septembre 2026 (consultée le 3 octobre 2026).',
         ],
         callouts: [
           {
@@ -1214,7 +1217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qu\'est-ce que TokForge ?',
         content: [
           '**TokForge est une application de chat Android axée sur le hors ligne, qui réunit un exécuteur de modèles locaux et des outils de jeu de rôle, d\'image, de voix et de documents.** D\'après sa [fiche Google Play](https://play.google.com/store/apps/details?id=dev.tokforge), elle exécute des modèles complets sur le téléphone, sans cloud ni compte, prend en charge les personnages importés depuis chub.ai et les cartes TavernAI, et choisit automatiquement le moteur le plus rapide pour votre puce.',
-          'Le site du développeur décrit la version 1.0 comme la première version complète et indique que l\'application est beaucoup plus petite que les alternatives établies. Cette franchise compte pour les attentes : sa base d\'installations est réduite, et sa version pour iPhone et iPad n\'existe qu\'en bêta sur TestFlight.',
+          'Le développeur indique que l\'application est beaucoup plus petite que les alternatives établies. Cette franchise compte pour les attentes : la base d\'installations est réduite, et la version pour iPhone et iPad n\'existe qu\'en bêta publique sur TestFlight, pas encore sur l\'App Store.',
         ],
       },
       getIt: {
@@ -1238,7 +1241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Où la trouver': 'Non publié',
           },
         ],
-        note: 'Cette page est un complément à l\'entrée de l\'application dans le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Version vérifiée le 3 octobre 2026 : 1.0, d\'après la description Play et le site du développeur.',
+        note: 'Cette page est un complément à l\'entrée de l\'application dans le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Version 1.3.6.1, confirmée par le développeur le 9 octobre 2026 ; d\'anciennes pages et fiches peuvent encore afficher 1.0.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1276,7 +1279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Images.** Génération sur l\'appareil, qui fonctionne partout sur le CPU, avec une accélération GPU sur Adreno et une accélération NPU sur les appareils Snapdragon compatibles. Le développeur cite environ 31 secondes pour une image 512x512 sur un Pixel 9 Pro XL.',
           '**Voix.** Synthèse vocale Kokoro avec plusieurs voix, clonage de voix à partir d\'environ une minute d\'audio enregistré, et saisie vocale.',
           '**Documents et mémoire.** Questions sur des fichiers PDF, DOCX, EPUB, Markdown, CSV et texte, ainsi qu\'une mémoire à long terme et un graphe de connaissances.',
-          '**Moteurs et modèles.** llama.cpp (GGUF) avec OpenCL et Vulkan, MNN avec OpenCL, ou un serveur compatible OpenAI, avec un routage automatique selon la puce et un catalogue de 52 modèles.',
+          '**Moteurs et modèles.** llama.cpp (GGUF) avec OpenCL et Vulkan, MNN avec OpenCL et Vulkan selon le téléphone, ou un serveur compatible OpenAI, avec un routage automatique selon la puce et un catalogue de 52 modèles.',
           '**API développeur et sauvegarde.** Points d\'accès d\'API locaux pour l\'automatisation (plus de 270 selon Google Play, 284 selon le site) et sauvegarde et restauration des conversations, des personnages et des réglages.',
         ],
         note: 'Le texte de Play et le site diffèrent légèrement (par exemple sur le nombre de points d\'accès) ; la version actuelle de l\'application et son écran de réglages font donc foi.',
@@ -1309,7 +1312,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Isaac Maple, le développeur de TokForge, a partagé ce qui suit au sujet de l\'application et des raisons pour lesquelles il l\'a créée. Ce texte est présenté comme les propres mots du développeur, légèrement retouchés pour la lisibilité, et non comme une évaluation éditoriale indépendante de PromptQuorum :',
           '"Je pense que notre meilleure fonctionnalité est autoForge, qui trouve la configuration d\'inférence la meilleure et la plus rapide pour chaque appareil et chaque modèle : CPU, OpenCL ou Vulkan, nombre de threads et taille du contexte.',
-          'À l\'origine, j\'avais dès le départ 4 de ces cartes de personnages, mais jusqu\'à il y a peut-être un mois, l\'application ne proposait pas le comportement système par défaut sans prompt, ce qui agaçait certaines personnes.',
           'L\'application, c\'est en réalité juste moi et un autre ami, guardian37x sur Discord.',
           'Je convertis et j\'essaie d\'optimiser beaucoup de petits LLM pour l\'Edge AI et je les publie sur mon compte Hugging Face. Je crois qu\'il y a environ 85 modèles aujourd\'hui.',
           'Pourquoi je l\'ai créée : quand j\'ai commencé, il existait quelques autres options pour l\'inférence mobile, mais la plupart reposaient sur llama/GGUF, étaient payantes, filtrées, avaient des publicités et n\'étaient pas vraiment axées sur la performance ou n\'avaient pas de backend API permettant de creuser vraiment. Je n\'en avais en outre vu aucune qui utilise MNN, et en tant qu\'ingénieur, MNN était à l\'époque parfois 50 % plus rapide que GGUF, ce qui était vraiment enthousiasmant.',
@@ -1326,7 +1328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Avantage': 'Gratuite et sans compte',
             'En pratique': 'Installation et usage sans inscription ni abonnement.',
-            'Limite / réserve': 'Le code source n\'est pas publié et aucune licence n\'est indiquée.',
+            'Limite / réserve': 'Propriétaire et à code fermé ; pas de dépôt public.',
           },
           {
             'Avantage': 'Jeu de rôle et médias en un seul endroit',
@@ -1345,7 +1347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Avantage': 'Version Android étiquetée stable',
-            'En pratique': 'La version 1.0 est sur Google Play.',
+            'En pratique': 'La version 1.3.6.1 est une version de production normale sur Google Play.',
             'Limite / réserve': 'Base d\'installations réduite (5K+), et la version iPhone est une bêta.',
           },
         ],
@@ -1363,11 +1365,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'Ce que nous n\'avons pas pu vérifier',
         items: [
-          '**Licence et code source.** Aucun texte de licence ni dépôt public n\'a été trouvé, et le guide du développeur indique « No public repo » ; le comportement ne peut donc pas être vérifié dans le code.',
+          '**Code source.** TokForge est propriétaire et à code fermé, avec la licence à la section 2 de ses [conditions d\'utilisation](https://tokforge.ai/terms/) ; le comportement ne peut donc pas être vérifié dans le code.',
           '**Performances et qualité en conditions réelles.** PromptQuorum n\'a pas exécuté l\'application : la vitesse, la consommation de batterie et la qualité des résultats ne sont donc pas évaluées.',
-          '**Achats intégrés et publicités.** La page Play lue n\'affiche aucune mention de ce type, mais les sources ne les excluent pas explicitement.',
+          '**L\'affirmation « sans publicité ».** La [FAQ](https://tokforge.ai/faq/) du développeur indique qu\'il n\'y a ni publicité, ni achats intégrés, ni abonnement ; PromptQuorum n\'a pas installé l\'application pour le confirmer.',
           '**Parcours du développeur.** Google Play indique Defcon-One, avec Isaac Maple et une localisation aux États-Unis dans les informations sur le développeur ; aucune immatriculation d\'entreprise ni historique n\'a été trouvé dans les sources lues.',
-          '**Pas encore pour les utilisateurs d\'iPhone.** La version Apple est une bêta TestFlight, et non une version de l\'App Store.',
+          '**iPhone et iPad.** La bêta publique sur TestFlight, ouverte à tous, n\'a pas été testée, et l\'application n\'est pas encore sur l\'App Store.',
         ],
       },
       vsAlternatives: {
@@ -1409,11 +1411,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'TokForge est-elle gratuite ?',
-            a: 'Oui. Google Play et le site du développeur la décrivent comme gratuite, sans abonnement ni compte. La page Play lue n\'affiche aucune mention d\'achat intégré, mais les sources n\'excluent pas explicitement les achats.',
+            a: 'Oui. Google Play et le site du développeur la décrivent comme gratuite et sans compte, et la [FAQ](https://tokforge.ai/faq/) du développeur indique qu\'il n\'y a ni publicité, ni achats intégrés, ni abonnement.',
           },
           {
             q: 'TokForge est-elle open source ?',
-            a: 'Non. Aucun dépôt de code public ni licence n\'a été trouvé, et le guide comparatif du développeur indique « No public repo ».',
+            a: 'Non. TokForge est un logiciel propriétaire à code fermé ; la licence figure à la section 2 de ses [conditions d\'utilisation](https://tokforge.ai/terms/) et il n\'existe aucun dépôt de code public.',
           },
           {
             q: 'Qui crée TokForge ?',
@@ -1425,7 +1427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Existe-t-il une version pour iPhone ?',
-            a: 'Seulement en bêta publique sur TestFlight. La version Android est sur Google Play.',
+            a: 'Oui, en bêta publique sur TestFlight que chacun peut rejoindre ; elle n\'est pas encore sur l\'App Store. La version Android est sur Google Play.',
           },
           {
             q: 'De quel matériel a-t-elle besoin ?',
@@ -1449,7 +1451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Verdict',
         content:
-          'TokForge réunit des personnages de jeu de rôle, des images sur l\'appareil, le clonage de voix, des questions-réponses sur documents et un routage des moteurs adapté à la puce dans une application Android gratuite, et son classement public de benchmark est une tentative inhabituelle de transparence sur la vitesse. En face, le code source n\'est pas publié et aucune licence n\'est indiquée, la base d\'installations est réduite (5K+), la version iPhone est encore en bêta, les chiffres de performance viennent du développeur, et rien ici n\'a été testé en pratique. Elle convient aux utilisateurs d\'Android qui veulent une application gratuite de jeu de rôle et de médias hors ligne et acceptent ces conditions ; ceux qui veulent un code vérifiable peuvent comparer [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) ou [Private Mind](/fr/power-local-llm/private-mind-review).',
+          'TokForge réunit des personnages de jeu de rôle, des images sur l\'appareil, le clonage de voix, des questions-réponses sur documents et un routage des moteurs adapté à la puce dans une application Android gratuite qui, selon le développeur, n\'a ni publicité, ni achats intégrés, ni abonnement, et son classement public de benchmark est une tentative peu courante de transparence sur la vitesse. En contrepartie, le logiciel est propriétaire et à code fermé, la base d\'installations est petite (5K+), la version pour iPhone et iPad est une bêta publique sur TestFlight pas encore sur l\'App Store, les chiffres de performance viennent du développeur et rien de tout cela n\'a été testé en pratique. Elle convient aux utilisateurs d\'Android qui veulent une application gratuite de jeu de rôle et de médias hors ligne et acceptent ces conditions ; ceux qui veulent un code vérifiable peuvent comparer [PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) ou [Private Mind](/fr/power-local-llm/private-mind-review).',
       },
       sources: {
         id: 'sources',
@@ -1457,6 +1459,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[TokForge sur Google Play](https://play.google.com/store/apps/details?id=dev.tokforge) — description, informations sur le développeur, section Sécurité des données, nombre de téléchargements et date de dernière mise à jour, consultés le 3 octobre 2026.',
           '[tokforge.ai](https://tokforge.ai) — version, plateformes, indications matérielles et guide comparatif du développeur, consultés le 3 octobre 2026.',
+          '[Conditions d\'utilisation de TokForge](https://tokforge.ai/terms/) — licence (section 2) : logiciel propriétaire, consultées le 9 octobre 2026.',
+          '[FAQ de TokForge](https://tokforge.ai/faq/) — gratuite, sans publicité, achats intégrés ni abonnement, et la bêta publique TestFlight, consultée le 9 octobre 2026.',
         ],
       },
       relatedReading: {
@@ -1475,14 +1479,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-03',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-09',
     next_refresh_due: '2027-04-03',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/tokforge-review-hero-ja.webp',
     title: 'TokForgeレビュー:ロールプレイと画像生成を備えたオフラインのAndroid向けAIチャット',
     seoTitle: 'TokForgeレビュー:オフラインのAndroid向けAIチャットアプリ',
     intro:
-      'TokForgeは、Google Playで[Defcon-One](https://play.google.com/store/apps/details?id=dev.tokforge)と表記されている開発者が公開している無料のAndroidアプリで、スマートフォン上で言語モデルを動かし、ロールプレイのキャラクター、端末上での画像生成、音声クローンに対応したテキスト読み上げ、ドキュメントQ&A、そして速度を公開リーダーボードに投稿できる内蔵ベンチマークをひとまとめにしています。バージョン1.0がGoogle Playで公開されており、iPhoneとiPad向けのバージョンはTestFlightの公開ベータです。アプリのソースコードは公開されていません。本レビューは、2026年10月3日に確認したGoogle Playの掲載情報と開発者自身のウェブサイト[tokforge.ai](https://tokforge.ai)に基づいており、PromptQuorumはアプリを実際には試していません。',
+      'TokForgeは、Google Playで[Defcon-One](https://play.google.com/store/apps/details?id=dev.tokforge)と表記されている開発者が公開している無料のAndroidアプリで、スマートフォン上で言語モデルを動かし、ロールプレイのキャラクター、端末上での画像生成、音声クローンに対応したテキスト読み上げ、ドキュメントQ&A、そして速度を公開リーダーボードに投稿できる内蔵ベンチマークをひとまとめにしています。バージョン1.3.6.1はGoogle Playで公開されている通常の製品版で、iPhoneとiPad向けのバージョンは誰でも参加できるTestFlightの公開ベータです。アプリはプロプライエタリなクローズドソースのソフトウェアで、ソースコードは公開されていません。本レビューは、2026年10月3日に確認したGoogle Playの掲載情報と開発者自身のウェブサイト[tokforge.ai](https://tokforge.ai)に基づいており、PromptQuorumはアプリを実際には試していません。',
     metaDescription:
       'TokForgeレビュー:ロールプレイ、画像生成、音声クローン、速度リーダーボードを備えた、Android向けの無料オフラインAIチャットアプリ。モデル、プライバシー、制約を解説します。',
     twitterDescription:
@@ -1505,7 +1509,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Kokoro', 'GGUF models', 'MNN models'],
     current_hardware_mentioned: ['Android', 'Snapdragon', 'Adreno', 'Pixel 9 Pro XL'],
     leadAnswerBlock:
-      '**TokForge(2026年10月3日時点のバージョン1.0)は、Defcon-Oneによる無料のAndroidアプリで、llama.cppまたはMNNでローカルの言語モデルを動かし、ロールプレイのキャラクター、端末上での画像生成、音声、ドキュメントQ&Aを加えており、アカウントは不要です。** 掲載情報によれば、会話は端末の外に出ず、Web検索は初期状態でオフで、ベンチマークの結果を公開リーダーボードに投稿することもオプションです。ソースコードは公開されておらず、ライセンスも明記されておらず、iPhoneとiPad向けのバージョンはまだTestFlightのベータです。',
+      '**TokForge(開発者が2026年10月9日に確認したバージョン1.3.6.1)は、Defcon-Oneによる無料のAndroidアプリで、llama.cppまたはMNNでローカルの言語モデルを動かし、ロールプレイのキャラクター、端末上での画像生成、音声、ドキュメントQ&Aを加えており、アカウントは不要です。** 掲載情報によれば、会話は端末の外に出ず、Web検索は初期状態でオフで、ベンチマークの結果を公開リーダーボードに投稿することもオプションです。アプリはプロプライエタリなクローズドソースのソフトウェアで、開発者は広告、アプリ内課金、サブスクリプションはないと述べており、iPhoneとiPad向けのバージョンはApp Storeにはまだなく、TestFlightの公開ベータです。',
     quickAnswerTop: {
       ja: {
         question: 'TokForgeは無料ですか。完全にオフラインで動きますか?',
@@ -1515,7 +1519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Google Play](https://play.google.com/store/apps/details?id=dev.tokforge)で無料。iPhoneとiPad向けのバージョンはTestFlightの公開ベータで、App Storeにはありません。',
           '3つの推論経路:GGUF向けのllama.cpp、MNN、またはご自身のOpenAI互換サーバー。',
           '追加機能:取り込んだカードによるロールプレイのキャラクター、端末上での画像生成、音声クローンに対応したKokoroの音声、ドキュメントQ&A。',
-          '2026年10月3日の確認時点:バージョン1.0、Google Playで5K+ダウンロード、掲載情報の最終更新は2026年9月20日。',
+          'バージョン1.3.6.1(開発者が2026年10月9日に確認)、Google Playで5K+ダウンロード、掲載情報の最終更新は2026年9月20日(2026年10月3日に確認)。',
         ],
         updatedDate: '2026-10',
       },
@@ -1555,10 +1559,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '開発者:Google PlayではDefcon-Oneと表記され、開発者の詳細にはIsaac Mapleと米国の所在地が、掲載情報には連絡先メールアドレスが示されている。',
-          '料金とライセンス:サブスクリプションもアカウントも不要で無料。ライセンスも公開ソースリポジトリも見つからず、開発者自身の比較ガイドは「No public repo」と記載している。',
-          'エンジン:OpenCLとVulkanの経路を持つllama.cpp(GGUF)、OpenCLを使うMNN、またはご自身で接続するOpenAI互換サーバー。',
+          '価格とライセンス:開発者の[FAQ](https://tokforge.ai/faq/)によれば、無料で広告、アプリ内課金、サブスクリプション、アカウントはありません。プロプライエタリでクローズドソースであり、ライセンスは[利用規約](https://tokforge.ai/terms/)の第2項にあります。',
+          'エンジン:OpenCLとVulkanの経路を持つllama.cpp(GGUF)、OpenCLとVulkanを使うMNN(どちらを使うかは端末次第)、またはご自身で接続するOpenAI互換サーバー。',
           '機能の範囲:ロールプレイのキャラクター、端末上での画像生成、音声クローンに対応したKokoroの音声、ドキュメントQ&A、Hugging Face検索付きの52モデルのカタログ、オプションの公開速度リーダーボード。',
-          '2026年10月3日の確認時点の指標:バージョン1.0、Google Playで5K+ダウンロード、掲載情報の更新は2026年9月20日。',
+          '指標:開発者が2026年10月9日に確認したバージョン1.3.6.1、Google Playで5K+ダウンロード、掲載情報の更新は2026年9月20日(2026年10月3日に確認)。',
         ],
         callouts: [
           {
@@ -1572,7 +1576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'TokForgeとは?',
         content: [
           '**TokForgeは、ローカルのモデル実行環境に、ロールプレイ、画像、音声、ドキュメントのツールをまとめた、オフライン優先のAndroidチャットアプリです。** [Google Playの掲載情報](https://play.google.com/store/apps/details?id=dev.tokforge)によれば、クラウドもアカウントも使わずにスマートフォン上で完全なモデルを動かし、chub.aiやTavernAIのカードから取り込んだキャラクターに対応し、お使いのチップに最も速いエンジンを自動的に選びます。',
-          '開発者のウェブサイトは、バージョン1.0を最初の正式リリースと説明し、アプリは確立された代替アプリよりずっと小規模だと述べています。この率直さは期待値を考えるうえで重要で、インストール数は少なく、iPhoneとiPad向けのバージョンはTestFlightのベータにとどまっています。',
+          '開発者は、アプリは確立された代替アプリよりずっと小規模だと述べています。この率直さは期待値を考えるうえで重要で、インストール数は少なく、iPhoneとiPad向けのバージョンはTestFlightの公開ベータにとどまり、App Storeにはまだありません。',
         ],
       },
       getIt: {
@@ -1596,7 +1600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '入手先': '非公開',
           },
         ],
-        note: 'このページは、[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)にある本アプリの項目の補足資料です。2026年10月3日に確認したバージョン:1.0(Playの説明と開発者のウェブサイトによる)。',
+        note: 'このページは、[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)にある本アプリの項目の補足資料です。バージョン1.3.6.1(開発者が2026年10月9日に確認)。古いページや掲載情報には、まだ1.0と表示されている場合があります。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1634,7 +1638,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**画像。** どの端末でもCPUで動く端末上での生成で、AdrenoではGPUによる高速化、対応するSnapdragon端末ではNPUによる高速化がある。開発者は、Pixel 9 Pro XLで512x512の画像におよそ31秒かかると述べている。',
           '**音声。** 複数の声を持つKokoroのテキスト読み上げ、約1分の録音音声からの音声クローン、音声入力。',
           '**ドキュメントとメモリ。** PDF、DOCX、EPUB、Markdown、CSV、テキストファイルについての質問に加え、長期メモリとナレッジグラフ。',
-          '**エンジンとモデル。** OpenCLとVulkanを使うllama.cpp(GGUF)、OpenCLを使うMNN、またはOpenAI互換サーバーで、チップに応じた自動ルーティングと52モデルのカタログがある。',
+          '**エンジンとモデル。**llama.cpp(GGUF)はOpenCLとVulkan、MNNは端末に応じてOpenCLとVulkan、またはOpenAI互換サーバーに対応し、チップごとの自動ルーティングと52モデルのカタログを備えています。',
           '**開発者向けAPIとバックアップ。** 自動化のためのローカルAPIエンドポイント(Google Playでは270以上、ウェブサイトでは284)と、会話、キャラクター、設定のバックアップと復元。',
         ],
         note: 'Playの文面とウェブサイトにはわずかな違いがあり(たとえばエンドポイント数)、最終的な基準は現行のビルドとその設定画面です。',
@@ -1667,7 +1671,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'TokForgeの開発者であるIsaac Maple氏が、このアプリと開発の理由について次のように述べています。以下は、読みやすさのために軽く編集した開発者自身の言葉として提示するものであり、PromptQuorumによる独立した編集上の評価ではありません:',
           '"最大の特長はautoForgeだと思っています。端末とモデルの組み合わせごとに、CPU、OpenCL、Vulkanの選択、スレッド数、コンテキストサイズといった最適で最速の推論設定を見つけ出します。',
-          'このキャラクターカードは最初から4枚ありましたが、1か月ほど前まで、プロンプトなしの素のシステムデフォルトは用意しておらず、それを不満に思う方もいました。',
           'このアプリは実質的に私と、Discordのguardian37xというもう一人の仲間だけで作っています。',
           'Edge AI向けに小型のLLMを数多く変換・最適化し、自分のHugging Faceアカウントにアップロードしています。現在は約85モデルあると思います。',
           'なぜ作ったのかというと、私が始めた頃、モバイル推論の選択肢はいくつかありましたが、ほとんどがllama/GGUFベースで、有料だったり、フィルタリングされていたり、広告が表示されたりし、性能重視でもなく、深く掘り下げられるAPIバックエンドもありませんでした。MNNを使ったものも見たことがなく、エンジニアとして、当時のMNNはGGUFより最大50%速いこともあり、とてもわくわくしました。',
@@ -1684,7 +1687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '利点': '無料でアカウント不要',
             '実際の使用での意味': '登録やサブスクリプションなしでインストールして使える。',
-            '制約・注意点': 'ソースは公開されておらず、ライセンスも明記されていない。',
+            '制約・注意点': 'プロプライエタリでクローズドソース。公開リポジトリなし。',
           },
           {
             '利点': 'ロールプレイとメディアが1つのアプリに',
@@ -1703,7 +1706,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '利点': 'Android版は安定版の表記',
-            '実際の使用での意味': 'バージョン1.0がGoogle Playにある。',
+            '実際の使用での意味': 'バージョン1.3.6.1はGoogle Playの通常の製品版です。',
             '制約・注意点': 'インストール数は少なく(5K+)、iPhone版はベータ。',
           },
         ],
@@ -1721,11 +1724,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: '確認できなかった点',
         items: [
-          '**ライセンスとソースコード。** ライセンス文も公開リポジトリも見つからず、開発者自身のガイドは「No public repo」と記載しているため、動作をコードと照らして確認することはできない。',
+          '**ソースコード。** TokForgeはプロプライエタリでクローズドソースであり、ライセンスは[利用規約](https://tokforge.ai/terms/)の第2項にあるため、コードで挙動を確認することはできません。',
           '**実機での性能と品質。** PromptQuorumはアプリを実行していないため、速度、バッテリー消費、出力品質は評価していない。',
-          '**アプリ内課金と広告。** 読み取れたPlayのページにはそのような表示はないが、情報源はそれらを明確には否定していない。',
+          '**「広告なし」という主張。** 開発者の[FAQ](https://tokforge.ai/faq/)には、広告、アプリ内課金、サブスクリプションはないとありますが、PromptQuorumはアプリをインストールして確認していません。',
           '**開発者の背景。** Google PlayはDefcon-Oneを挙げ、開発者の詳細にはIsaac Mapleと米国の所在地が示されているが、読み取れた情報源には会社の登録情報も実績も見つからなかった。',
-          '**まだiPhoneユーザー向けではない。** Apple版はApp Storeのリリースではなく、TestFlightのベータ。',
+          '**iPhoneとiPad。** 誰でも参加できるTestFlightの公開ベータは試しておらず、アプリはまだApp Storeにありません。',
         ],
       },
       vsAlternatives: {
@@ -1767,11 +1770,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'TokForgeは無料ですか?',
-            a: 'はい。Google Playも開発者のウェブサイトも、サブスクリプションもアカウントも不要で無料と説明しています。読み取れたPlayのページにはアプリ内課金の表示はありませんが、情報源は課金を明確には否定していません。',
+            a: 'はい。Google Playと開発者のウェブサイトは、無料でアカウント不要と説明しており、開発者の[FAQ](https://tokforge.ai/faq/)には広告、アプリ内課金、サブスクリプションはないと記載されています。',
           },
           {
             q: 'TokForgeはオープンソースですか?',
-            a: 'いいえ。公開ソースリポジトリもライセンスも見つからず、開発者自身の比較ガイドは「No public repo」と記載しています。',
+            a: 'いいえ。TokForgeはプロプライエタリなクローズドソースのソフトウェアで、ライセンスは[利用規約](https://tokforge.ai/terms/)の第2項にあり、公開されたソースリポジトリはありません。',
           },
           {
             q: 'TokForgeを作っているのは誰ですか?',
@@ -1783,7 +1786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'iPhone版はありますか?',
-            a: 'TestFlightの公開ベータとしてのみです。Android版はGoogle Playにあります。',
+            a: 'はい。誰でも参加できるTestFlightの公開ベータとして提供されており、App Storeにはまだありません。Android版はGoogle Playにあります。',
           },
           {
             q: 'どんなハードウェアが必要ですか?',
@@ -1807,7 +1810,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '結論',
         content:
-          'TokForgeは、ロールプレイのキャラクター、端末上での画像生成、音声クローン、ドキュメントQ&A、チップに応じたエンジンのルーティングを無料のAndroidアプリにまとめており、公開のベンチマーク・リーダーボードは速度について透明性を保とうとする珍しい試みです。その一方で、ソースは公開されておらずライセンスも明記されていません。インストール数は5K+と少なく、iPhone版はまだベータで、性能の数値は開発者によるもので、ここで述べた内容は実機でテストされていません。無料のオフラインのロールプレイ&メディアアプリを求め、これらの条件を受け入れられるAndroidユーザーに向いています。検証可能なコードを求める読者は、[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)や[Private Mind](/ja/power-local-llm/private-mind-review)と比較できます。',
+          'TokForgeは、ロールプレイのキャラクター、端末上の画像生成、音声クローン、ドキュメントQ&A、チップに応じたエンジンの振り分けを、開発者によれば広告、アプリ内課金、サブスクリプションのない無料のAndroidアプリにまとめており、公開ベンチマークのリーダーボードは速度の透明性を高める珍しい試みです。一方で、ソフトウェアはプロプライエタリでクローズドソースであり、インストール数は5K+と少なく、iPhoneとiPad向けのバージョンはTestFlightの公開ベータでApp Storeにはまだなく、性能の数値は開発者によるもので、ここにあることは実機で試していません。検証可能なコードを求める読者は、[PocketPal AI](/ja/power-local-llm/pocketpal-ai-review)や[Private Mind](/ja/power-local-llm/private-mind-review)と比較できます。',
       },
       sources: {
         id: 'sources',
@@ -1815,6 +1818,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Google PlayのTokForge](https://play.google.com/store/apps/details?id=dev.tokforge) — 説明、開発者の詳細、データセーフティのセクション、ダウンロード数、最終更新日。2026年10月3日確認。',
           '[tokforge.ai](https://tokforge.ai) — バージョン、プラットフォーム、ハードウェアの目安、開発者自身の比較ガイド。2026年10月3日確認。',
+          '[TokForgeの利用規約](https://tokforge.ai/terms/) — ライセンス(第2項):プロプライエタリソフトウェア。2026年10月9日確認。',
+          '[TokForgeのFAQ](https://tokforge.ai/faq/) — 無料で広告、アプリ内課金、サブスクリプションなし、およびTestFlightの公開ベータ。2026年10月9日確認。',
         ],
       },
       relatedReading: {
@@ -1833,14 +1838,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-03',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-09',
     next_refresh_due: '2027-04-03',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/tokforge-review-hero-pt.webp',
     title: 'TokForge: Análise do App de Chat de IA Offline para Android com Roleplay e Imagens',
     seoTitle: 'TokForge Análise: App de Chat de IA Offline',
     intro:
-      'O TokForge é um app gratuito para Android, publicado por um desenvolvedor listado no Google Play como [Defcon-One](https://play.google.com/store/apps/details?id=dev.tokforge), que roda modelos de linguagem no celular e os combina com personagens de roleplay, geração de imagens no dispositivo, síntese de voz com clonagem de voz, perguntas sobre documentos e um benchmark integrado capaz de publicar velocidades em um ranking público. A versão 1.0 está no Google Play, enquanto a versão para iPhone e iPad é um beta público no TestFlight. O código-fonte do app não é publicado. Esta análise se baseia na ficha do Google Play e no site do próprio desenvolvedor, [tokforge.ai](https://tokforge.ai), consultados em 3 de outubro de 2026; a PromptQuorum não testou o app na prática.',
+      'O TokForge é um app gratuito para Android, publicado por um desenvolvedor listado no Google Play como [Defcon-One](https://play.google.com/store/apps/details?id=dev.tokforge), que roda modelos de linguagem no celular e os combina com personagens de roleplay, geração de imagens no dispositivo, síntese de voz com clonagem de voz, perguntas sobre documentos e um benchmark integrado capaz de publicar velocidades em um ranking público. A versão 1.3.6.1 é uma versão de produção no Google Play, enquanto a versão para iPhone e iPad é um beta público no TestFlight do qual qualquer pessoa pode participar. O app é um software proprietário de código fechado e seu código-fonte não é publicado. Esta análise se baseia na ficha do Google Play e no site do próprio desenvolvedor, [tokforge.ai](https://tokforge.ai), consultados em 3 de outubro de 2026; a PromptQuorum não testou o app na prática.',
     metaDescription:
       'Análise do TokForge: app gratuito de IA offline para Android com roleplay, imagens, clonagem de voz e ranking de velocidade. Privacidade, hardware e limites.',
     twitterDescription:
@@ -1863,7 +1868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Kokoro', 'GGUF models', 'MNN models'],
     current_hardware_mentioned: ['Android', 'Snapdragon', 'Adreno', 'Pixel 9 Pro XL'],
     leadAnswerBlock:
-      '**O TokForge (versão 1.0 em 3 de outubro de 2026) é um app gratuito para Android, da Defcon-One, que roda modelos de linguagem locais por meio do llama.cpp ou do MNN e acrescenta personagens de roleplay, geração de imagens no dispositivo, voz e perguntas sobre documentos, sem conta.** Segundo sua ficha, as conversas nunca saem do dispositivo, a busca na web vem desligada por padrão e um benchmark pode, opcionalmente, publicar resultados em um ranking público. O código-fonte não é publicado e a licença não é informada, e a versão para iPhone e iPad ainda é um beta no TestFlight.',
+      '**O TokForge (versão 1.3.6.1, confirmada pelo desenvolvedor em 9 de outubro de 2026) é um app gratuito para Android, da Defcon-One, que roda modelos de linguagem locais por meio do llama.cpp ou do MNN e acrescenta personagens de roleplay, geração de imagens no dispositivo, voz e perguntas sobre documentos, sem conta.** Segundo sua ficha, as conversas nunca saem do dispositivo, a busca na web vem desligada por padrão e um benchmark pode, opcionalmente, publicar resultados em um ranking público. O app é um software proprietário de código fechado, o desenvolvedor afirma que não há anúncios, compras no app nem assinaturas, e a versão para iPhone e iPad é um beta público no TestFlight, ainda fora da App Store.',
     quickAnswerTop: {
       pt: {
         question: 'O TokForge é gratuito e roda totalmente offline?',
@@ -1873,7 +1878,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gratuito no [Google Play](https://play.google.com/store/apps/details?id=dev.tokforge); a versão para iPhone e iPad é um beta público no TestFlight, e não está na App Store.',
           'Três caminhos de inferência: llama.cpp para GGUF, MNN ou o seu próprio servidor compatível com OpenAI.',
           'Extras: personagens de roleplay com cartões importados, geração de imagens no dispositivo, vozes Kokoro com clonagem de voz e perguntas sobre documentos.',
-          'Conforme consultado em 3 de outubro de 2026: versão 1.0, mais de 5 mil downloads no Google Play, ficha atualizada pela última vez em 20 de setembro de 2026.',
+          'Versão 1.3.6.1 (confirmada pelo desenvolvedor em 9 de outubro de 2026); mais de 5K downloads no Google Play e uma ficha atualizada pela última vez em 20 de setembro de 2026 (consultada em 3 de outubro de 2026).',
         ],
         updatedDate: '2026-10',
       },
@@ -1913,10 +1918,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'Desenvolvedor: listado como Defcon-One no Google Play, com Isaac Maple e uma localização nos Estados Unidos nos dados do desenvolvedor e um e-mail de contato na ficha.',
-          'Preço e licença: gratuito, sem assinatura nem conta; nenhuma licença e nenhum repositório de código público foram encontrados, e o guia de comparação do próprio desenvolvedor lista "No public repo".',
-          'Motores: llama.cpp (GGUF) com caminhos OpenCL e Vulkan, MNN com OpenCL ou um servidor compatível com OpenAI que você mesmo conecta.',
+          'Preço e licença: gratuito, sem anúncios, compras no app, assinaturas ou conta, segundo a [FAQ](https://tokforge.ai/faq/) do desenvolvedor; proprietário e de código fechado, com a licença na seção 2 dos [termos](https://tokforge.ai/terms/).',
+          'Motores: llama.cpp (GGUF) com caminhos OpenCL e Vulkan, MNN com OpenCL e Vulkan (conforme o celular) ou um servidor compatível com OpenAI que você mesmo conecta.',
           'Escopo: personagens de roleplay, imagens no dispositivo, vozes Kokoro com clonagem, perguntas sobre documentos, um catálogo de 52 modelos com busca no Hugging Face e um ranking público de velocidade opcional.',
-          'Sinais conforme consultados em 3 de outubro de 2026: versão 1.0, mais de 5 mil downloads no Google Play, ficha atualizada em 20 de setembro de 2026.',
+          'Indicadores: versão 1.3.6.1, confirmada pelo desenvolvedor em 9 de outubro de 2026, mais de 5K downloads no Google Play e uma ficha atualizada em 20 de setembro de 2026 (consultada em 3 de outubro de 2026).',
         ],
         callouts: [
           {
@@ -1930,7 +1935,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que é o TokForge?',
         content: [
           '**O TokForge é um app de chat para Android, offline em primeiro lugar, que reúne um executor de modelos locais com ferramentas de roleplay, imagem, voz e documentos.** Segundo sua [ficha no Google Play](https://play.google.com/store/apps/details?id=dev.tokforge), ele roda modelos completos no celular, sem nuvem nem conta, aceita personagens importados do chub.ai e cartões do TavernAI e escolhe automaticamente o motor mais rápido para o seu chip.',
-          'O site do desenvolvedor descreve a versão 1.0 como o primeiro lançamento completo e diz que o app é muito menor do que as alternativas já estabelecidas. Essa franqueza importa para as expectativas: a base de instalações é pequena, e a versão para iPhone e iPad está apenas em beta no TestFlight.',
+          'O desenvolvedor diz que o app é muito menor que as alternativas consolidadas. Essa franqueza importa para as expectativas: a base de instalações é pequena, e a versão para iPhone e iPad existe apenas como beta público no TestFlight, ainda não na App Store.',
         ],
       },
       getIt: {
@@ -1954,7 +1959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Onde obter': 'Não publicado',
           },
         ],
-        note: 'Esta página é material complementar à entrada do app no [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versão conforme verificada em 3 de outubro de 2026: 1.0, a partir da descrição do Play e do site do desenvolvedor.',
+        note: 'Esta página é material complementar à entrada do app no [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versão 1.3.6.1, confirmada pelo desenvolvedor em 9 de outubro de 2026; páginas e fichas antigas ainda podem mostrar 1.0.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1992,7 +1997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Imagens.** Geração no dispositivo que roda na CPU em qualquer aparelho, com aceleração por GPU em Adreno e por NPU em dispositivos Snapdragon compatíveis. O desenvolvedor cita cerca de 31 segundos para uma imagem de 512x512 em um Pixel 9 Pro XL.',
           '**Voz.** Síntese de voz Kokoro com várias vozes, clonagem de voz a partir de cerca de um minuto de áudio gravado e entrada por voz.',
           '**Documentos e memória.** Perguntas sobre arquivos PDF, DOCX, EPUB, Markdown, CSV e de texto, além de memória de longo prazo e um grafo de conhecimento.',
-          '**Motores e modelos.** llama.cpp (GGUF) com OpenCL e Vulkan, MNN com OpenCL ou um servidor compatível com OpenAI, com roteamento automático por chip e um catálogo de 52 modelos.',
+          '**Motores e modelos.** llama.cpp (GGUF) com OpenCL e Vulkan, MNN com OpenCL e Vulkan conforme o celular, ou um servidor compatível com OpenAI, com roteamento automático por chip e um catálogo de 52 modelos.',
           '**API para desenvolvedores e backup.** Endpoints de API locais para automação (mais de 270 segundo o Google Play, 284 segundo o site) e backup e restauração de conversas, personagens e configurações.',
         ],
         note: 'O texto do Play e o site diferem um pouco (por exemplo, na contagem de endpoints), então a build atual e sua tela de configurações são a referência final.',
@@ -2025,7 +2030,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'Isaac Maple, o desenvolvedor do TokForge, compartilhou o seguinte sobre o aplicativo e os motivos de tê-lo criado. É apresentado como as próprias palavras do desenvolvedor, levemente editadas para facilitar a leitura, não como uma avaliação editorial independente da PromptQuorum:',
           '"Acho que o nosso melhor recurso é o autoForge, que encontra a melhor e mais rápida configuração de inferência para cada aparelho e modelo: CPU, OpenCL ou Vulkan, número de threads e tamanho de contexto.',
-          'Originalmente eu tinha 4 desses cartões de personagem desde o início, mas até talvez um mês atrás o aplicativo não oferecia o padrão do sistema puro, sem prompt, o que incomodava algumas pessoas.',
           'O aplicativo é, na verdade, só eu e mais um amigo, o guardian37x no Discord.',
           'Eu converto e tento otimizar muitos dos LLMs menores para Edge AI e os envio para a minha conta no Hugging Face. Acho que hoje há cerca de 85 modelos lá.',
           'Quanto ao motivo de eu tê-lo criado: quando comecei, havia algumas outras opções de inferência móvel, mas a maioria era baseada em llama/GGUF, custava dinheiro, era filtrada, tinha anúncios e não era realmente focada em desempenho nem tinha um backend de API para se aprofundar de verdade. Também não tinha visto nenhuma que usasse MNN, e, como engenheiro, o MNN na época chegava a ser 50% mais rápido que o GGUF, o que era muito empolgante.',
@@ -2042,7 +2046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Benefício': 'Gratuito e sem conta',
             'Na prática': 'Instale e use sem cadastro nem assinatura.',
-            'Limitação / ressalva': 'O código-fonte não é publicado e nenhuma licença é informada.',
+            'Limitação / ressalva': 'Proprietário e de código fechado; sem repositório público.',
           },
           {
             'Benefício': 'Roleplay e mídia em um só app',
@@ -2061,7 +2065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'Benefício': 'Versão Android marcada como estável',
-            'Na prática': 'A versão 1.0 está no Google Play.',
+            'Na prática': 'A versão 1.3.6.1 é uma versão de produção normal no Google Play.',
             'Limitação / ressalva': 'Base de instalações pequena (5 mil+) e a versão para iPhone é um beta.',
           },
         ],
@@ -2079,11 +2083,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'O que não conseguimos verificar',
         items: [
-          '**Licença e código-fonte.** Nenhum texto de licença nem repositório público foi encontrado, e o guia do próprio desenvolvedor lista "No public repo", então o comportamento não pode ser conferido no código.',
+          '**Código-fonte.** O TokForge é proprietário e de código fechado, com a licença na seção 2 dos seus [termos](https://tokforge.ai/terms/), então o comportamento não pode ser verificado no código.',
           '**Desempenho e qualidade na prática.** A PromptQuorum não executou o app, então velocidade, consumo de bateria e qualidade das respostas não foram avaliados.',
-          '**Compras dentro do app e anúncios.** A página do Play lida não mostra esses rótulos, mas as fontes não os descartam de forma explícita.',
+          '**A afirmação de «sem anúncios».** A [FAQ](https://tokforge.ai/faq/) do desenvolvedor diz que não há anúncios, compras no app nem assinaturas; a PromptQuorum não instalou o app para confirmar.',
           '**Histórico do desenvolvedor.** O Google Play cita a Defcon-One, com Isaac Maple e uma localização nos Estados Unidos nos dados do desenvolvedor; nenhum registro de empresa nem histórico foi encontrado nas fontes lidas.',
-          '**Ainda não é para usuários de iPhone.** A versão para Apple é um beta no TestFlight, e não um lançamento na App Store.',
+          '**iPhone e iPad.** O beta público no TestFlight, aberto a qualquer pessoa, não foi testado, e o app ainda não está na App Store.',
         ],
       },
       vsAlternatives: {
@@ -2125,11 +2129,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'O TokForge é gratuito?',
-            a: 'Sim. Tanto o Google Play quanto o site do desenvolvedor o descrevem como gratuito, sem assinatura nem conta. A página do Play lida não mostra rótulo de compras dentro do app, embora as fontes não descartem as compras de forma explícita.',
+            a: 'Sim. O Google Play e o site do desenvolvedor o descrevem como gratuito e sem conta, e a [FAQ](https://tokforge.ai/faq/) do desenvolvedor afirma que não há anúncios, compras no app nem assinaturas.',
           },
           {
             q: 'O TokForge é open source?',
-            a: 'Não. Nenhum repositório de código público nem licença foi encontrado, e o guia de comparação do próprio desenvolvedor lista "No public repo".',
+            a: 'Não. O TokForge é um software proprietário de código fechado; a licença está na seção 2 dos seus [termos](https://tokforge.ai/terms/) e não existe repositório público de código-fonte.',
           },
           {
             q: 'Quem faz o TokForge?',
@@ -2141,7 +2145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Existe uma versão para iPhone?',
-            a: 'Apenas como beta público no TestFlight. A versão para Android está no Google Play.',
+            a: 'Sim, como beta público no TestFlight do qual qualquer pessoa pode participar; ele ainda não está na App Store. A versão para Android está no Google Play.',
           },
           {
             q: 'De que hardware ele precisa?',
@@ -2165,7 +2169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'Veredito',
         content:
-          'O TokForge reúne personagens de roleplay, imagens no dispositivo, clonagem de voz, perguntas sobre documentos e roteamento de motores adaptado ao chip em um app gratuito para Android, e seu ranking público de benchmark é uma tentativa incomum de transparência sobre velocidade. Em contrapartida, o código-fonte não é publicado e nenhuma licença é informada, a base de instalações é pequena, com 5 mil+, a versão para iPhone ainda está em beta, os números de desempenho vêm do desenvolvedor e nada aqui foi testado na prática. Ele serve a usuários de Android que querem um app gratuito de roleplay e mídia offline e aceitam esses termos; quem quer código auditável pode comparar o [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) ou o [Private Mind](/pt/power-local-llm/private-mind-review).',
+          'O TokForge reúne personagens de roleplay, imagens no dispositivo, clonagem de voz, perguntas sobre documentos e roteamento de motores adaptado ao chip em um app gratuito para Android que, segundo o desenvolvedor, não tem anúncios, compras no app nem assinaturas, e seu ranking público de benchmark é uma tentativa incomum de transparência sobre a velocidade. Em contrapartida, o software é proprietário e de código fechado, a base de instalações é pequena (5K+), a versão para iPhone e iPad é um beta público no TestFlight que ainda não está na App Store, os números de desempenho vêm do desenvolvedor e nada disso foi testado na prática. Ele serve a usuários de Android que querem um app gratuito de roleplay e mídia offline e aceitam esses termos; quem quer código auditável pode comparar o [PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) ou o [Private Mind](/pt/power-local-llm/private-mind-review).',
       },
       sources: {
         id: 'sources',
@@ -2173,6 +2177,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[TokForge no Google Play](https://play.google.com/store/apps/details?id=dev.tokforge) — descrição, dados do desenvolvedor, seção Segurança dos dados, número de downloads e data da última atualização, consultados em 3 de outubro de 2026.',
           '[tokforge.ai](https://tokforge.ai) — versão, plataformas, orientações de hardware e o guia de comparação do próprio desenvolvedor, consultados em 3 de outubro de 2026.',
+          '[Termos do TokForge](https://tokforge.ai/terms/) — licença (seção 2): software proprietário, consultado em 9 de outubro de 2026.',
+          '[FAQ do TokForge](https://tokforge.ai/faq/) — gratuito, sem anúncios, compras no app nem assinaturas, e o beta público no TestFlight, consultada em 9 de outubro de 2026.',
         ],
       },
       relatedReading: {
@@ -2191,14 +2197,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-03',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-09',
     next_refresh_due: '2027-04-03',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/tokforge-review-hero-ar.webp',
     title: 'مراجعة TokForge: دردشة ذكاء اصطناعي دون اتصال لأندرويد مع لعب الأدوار وتوليد الصور',
     seoTitle: 'مراجعة TokForge: دردشة ذكاء اصطناعي دون اتصال لأندرويد',
     intro:
-      'TokForge تطبيق مجاني لأندرويد ينشره مطوّر مدرج على Google Play باسم [Defcon-One](https://play.google.com/store/apps/details?id=dev.tokforge)، ويشغّل النماذج اللغوية على الهاتف ويجمعها مع شخصيات لعب الأدوار، وتوليد الصور على الجهاز، وتحويل النص إلى كلام مع استنساخ الصوت، والأسئلة والأجوبة على المستندات، واختبار أداء مدمج يمكنه نشر السرعات على لوحة متصدرين عامة. الإصدار 1.0 (version 1.0) متاح على Google Play، أما نسخة iPhone و iPad فهي نسخة تجريبية عامة على TestFlight. والكود المصدري للتطبيق غير منشور. تستند هذه المراجعة إلى صفحة Google Play وإلى موقع المطوّر نفسه [tokforge.ai](https://tokforge.ai)، جرى التحقق منهما في 3 أكتوبر 2026؛ ولم تختبر PromptQuorum التطبيق عملياً.',
+      'TokForge تطبيق مجاني لأندرويد ينشره مطوّر مدرج على Google Play باسم [Defcon-One](https://play.google.com/store/apps/details?id=dev.tokforge)، ويشغّل النماذج اللغوية على الهاتف ويجمعها مع شخصيات لعب الأدوار، وتوليد الصور على الجهاز، وتحويل النص إلى كلام مع استنساخ الصوت، والأسئلة والأجوبة على المستندات، واختبار أداء مدمج يمكنه نشر السرعات على لوحة متصدرين عامة. الإصدار 1.3.6.1 إصدار إنتاجي متاح على Google Play، أما نسخة iPhone و iPad فهي نسخة تجريبية عامة على TestFlight يمكن لأي شخص الانضمام إليها. والتطبيق برنامج مملوك بكود مغلق، وكوده المصدري غير منشور. تستند هذه المراجعة إلى صفحة Google Play وإلى موقع المطوّر نفسه [tokforge.ai](https://tokforge.ai)، جرى التحقق منهما في 3 أكتوبر 2026؛ ولم تختبر PromptQuorum التطبيق عملياً.',
     metaDescription:
       'مراجعة TokForge: تطبيق ذكاء اصطناعي مجاني دون اتصال لأندرويد بشخصيات لعب أدوار وتوليد صور واستنساخ صوت ولوحة متصدرين للسرعة. النماذج والخصوصية والقيود.',
     twitterDescription:
@@ -2221,7 +2227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Kokoro', 'GGUF models', 'MNN models'],
     current_hardware_mentioned: ['Android', 'Snapdragon', 'Adreno', 'Pixel 9 Pro XL'],
     leadAnswerBlock:
-      '**TokForge (الإصدار 1.0 اعتباراً من 3 أكتوبر 2026) تطبيق مجاني لأندرويد من Defcon-One يشغّل نماذج لغوية محلية عبر llama.cpp أو MNN ويضيف شخصيات لعب الأدوار وتوليد الصور على الجهاز والصوت والأسئلة والأجوبة على المستندات، دون حساب.** تذكر صفحته أن المحادثات لا تغادر الجهاز، وأن البحث على الويب معطَّل افتراضياً، وأن اختبار الأداء يمكنه اختيارياً نشر النتائج على لوحة متصدرين عامة. الكود المصدري غير منشور والترخيص غير مذكور، ونسخة iPhone و iPad لا تزال نسخة تجريبية على TestFlight.',
+      '**TokForge (الإصدار 1.3.6.1، أكّده المطوّر في 9 أكتوبر 2026) تطبيق مجاني لأندرويد من Defcon-One يشغّل نماذج لغوية محلية عبر llama.cpp أو MNN ويضيف شخصيات لعب الأدوار وتوليد الصور على الجهاز والصوت والأسئلة والأجوبة على المستندات، دون حساب.** تذكر صفحته أن المحادثات لا تغادر الجهاز، وأن البحث على الويب معطَّل افتراضياً، وأن اختبار الأداء يمكنه اختيارياً نشر النتائج على لوحة متصدرين عامة. التطبيق برنامج مملوك بكود مغلق، ويذكر المطوّر أنه بلا إعلانات أو مشتريات داخل التطبيق أو اشتراكات، ونسخة iPhone و iPad نسخة تجريبية عامة على TestFlight وليست بعد على App Store.',
     quickAnswerTop: {
       ar: {
         question: 'هل TokForge مجاني، وهل يعمل دون اتصال بالكامل؟',
@@ -2231,7 +2237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مجاني على [Google Play](https://play.google.com/store/apps/details?id=dev.tokforge)؛ ونسخة iPhone و iPad تجريبية عامة على TestFlight وليست على App Store.',
           'ثلاثة مسارات استدلال: llama.cpp لصيغة GGUF، أو MNN، أو خادمك المتوافق مع OpenAI.',
           'الإضافات: شخصيات لعب أدوار مع بطاقات مستوردة، وتوليد صور على الجهاز، وأصوات Kokoro مع استنساخ الصوت، وأسئلة وأجوبة على المستندات.',
-          'بحسب ما جرى التحقق منه في 3 أكتوبر 2026: الإصدار 1.0، وأكثر من 5K تنزيل على Google Play، وآخر تحديث للصفحة في 20 سبتمبر 2026.',
+          'الإصدار 1.3.6.1 (أكّده المطوّر في 9 أكتوبر 2026)؛ أكثر من 5K تنزيل على Google Play، وصفحة جرى تحديثها آخر مرة في 20 سبتمبر 2026 (جرى التحقق في 3 أكتوبر 2026).',
         ],
         updatedDate: '2026-10',
       },
@@ -2271,10 +2277,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           'المطوّر: مدرج باسم Defcon-One على Google Play، مع ظهور Isaac Maple وموقع في الولايات المتحدة في تفاصيل المطوّر، وبريد إلكتروني للتواصل في الصفحة.',
-          'السعر والترخيص: مجاني دون اشتراك أو حساب؛ ولم يُعثر على ترخيص ولا على مستودع كود عام، ويدرج دليل المقارنة الخاص بالمطوّر عبارة "No public repo".',
-          'المحركات: llama.cpp (GGUF) مع مساري OpenCL و Vulkan، أو MNN مع OpenCL، أو خادم متوافق مع OpenAI توصله بنفسك.',
+          'السعر والترخيص: مجاني بلا إعلانات أو مشتريات داخل التطبيق أو اشتراكات أو حساب بحسب [الأسئلة الشائعة](https://tokforge.ai/faq/) لدى المطوّر؛ برنامج مملوك بكود مغلق، والترخيص في البند 2 من [الشروط](https://tokforge.ai/terms/).',
+          'المحركات: llama.cpp (GGUF) بمساري OpenCL وVulkan، وMNN مع OpenCL وVulkan (بحسب الهاتف)، أو خادم متوافق مع OpenAI تربطه بنفسك.',
           'النطاق: شخصيات لعب أدوار، وصور على الجهاز، وأصوات Kokoro مع الاستنساخ، وأسئلة وأجوبة على المستندات، وكتالوج من 52 نموذجاً مع بحث في Hugging Face، ولوحة متصدرين عامة اختيارية للسرعة.',
-          'المؤشرات بحسب ما جرى التحقق منه في 3 أكتوبر 2026: الإصدار 1.0، وأكثر من 5K تنزيل على Google Play، وتحديث الصفحة في 20 سبتمبر 2026.',
+          'المؤشرات: الإصدار 1.3.6.1 الذي أكّده المطوّر في 9 أكتوبر 2026، وأكثر من 5K تنزيل على Google Play، وصفحة جرى تحديثها في 20 سبتمبر 2026 (جرى التحقق في 3 أكتوبر 2026).',
         ],
         callouts: [
           {
@@ -2288,7 +2294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما هو TokForge؟',
         content: [
           '**TokForge تطبيق دردشة لأندرويد يعمل دون اتصال أولاً، ويجمع مشغّل نماذج محلياً مع أدوات لعب الأدوار والصور والصوت والمستندات.** وبحسب [صفحته على Google Play](https://play.google.com/store/apps/details?id=dev.tokforge)، يشغّل نماذج كاملة على الهاتف دون سحابة أو حساب، ويدعم الشخصيات المستوردة من chub.ai وبطاقات TavernAI، ويختار تلقائياً أسرع محرك لشريحتك.',
-          'يصف موقع المطوّر الإصدار 1.0 بأنه أول إصدار كامل، ويذكر أن التطبيق أصغر بكثير من البدائل الراسخة. وهذه الصراحة مهمة لضبط التوقعات: قاعدة تثبيته صغيرة، ونسخة iPhone و iPad منه لا تزال تجريبية على TestFlight فقط.',
+          'يقول المطوّر إن التطبيق أصغر بكثير من البدائل الراسخة. وهذه الصراحة مهمة لضبط التوقعات: قاعدة التثبيت صغيرة، ونسخة iPhone و iPad موجودة فقط كنسخة تجريبية عامة على TestFlight، وليست بعد على App Store.',
         ],
       },
       getIt: {
@@ -2312,7 +2318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'مكان الحصول عليه': 'غير منشور',
           },
         ],
-        note: 'هذه الصفحة مادة مرافقة لإدخال التطبيق في [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). الإصدار بحسب ما جرى التحقق منه في 3 أكتوبر 2026: 1.0، من وصف Play ومن موقع المطوّر.',
+        note: 'هذه الصفحة مادة مرافقة لإدخال التطبيق في [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). الإصدار 1.3.6.1، أكّده المطوّر في 9 أكتوبر 2026؛ وقد تظهر في الصفحات والقوائم القديمة نسخة 1.0.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2350,7 +2356,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الصور.** توليد على الجهاز يعمل على المعالج المركزي في كل مكان، مع تسريع بوحدة GPU على Adreno وبوحدة NPU على أجهزة Snapdragon المدعومة. ويذكر المطوّر نحو 31 ثانية لصورة 512x512 على هاتف Pixel 9 Pro XL.',
           '**الصوت.** تحويل النص إلى كلام بواسطة Kokoro بعدة أصوات، واستنساخ الصوت من نحو دقيقة من الصوت المسجَّل، وإدخال صوتي.',
           '**المستندات والذاكرة.** أسئلة عن ملفات PDF و DOCX و EPUB و Markdown و CSV والنصوص، إضافة إلى ذاكرة طويلة الأمد ورسم معرفي (knowledge graph).',
-          '**المحركات والنماذج.** llama.cpp (GGUF) مع OpenCL و Vulkan، أو MNN مع OpenCL، أو خادم متوافق مع OpenAI، مع توجيه تلقائي بحسب الشريحة وكتالوج من 52 نموذجاً.',
+          '**المحركات والنماذج.** llama.cpp (GGUF) مع OpenCL وVulkan، وMNN مع OpenCL وVulkan بحسب الهاتف، أو خادم متوافق مع OpenAI، مع توجيه تلقائي بحسب الشريحة وكتالوج من 52 نموذجاً.',
           '**واجهة المطوّرين والنسخ الاحتياطي.** نقاط API محلية للأتمتة (270+ بحسب Google Play و 284 بحسب الموقع)، ونسخ احتياطي واستعادة للمحادثات والشخصيات والإعدادات.',
         ],
         note: 'يختلف نص Play عن الموقع قليلاً (مثلاً في عدد نقاط API)، لذا فإن الإصدار الحالي وشاشة إعداداته هما المرجع النهائي.',
@@ -2383,7 +2389,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'شارك Isaac Maple، مطور TokForge، ما يلي عن التطبيق وأسباب بنائه. يُعرض هنا بوصفه كلمات المطور نفسه بعد تحرير طفيف لتسهيل القراءة، وليس تقييمًا تحريريًا مستقلًا من PromptQuorum:',
           '"أعتقد أن أفضل ميزة لدينا هي autoForge، التي تجد أفضل وأسرع إعداد للاستدلال لكل جهاز ولكل نموذج: CPU أو OpenCL أو Vulkan، وعدد الخيوط (threads)، وحجم السياق.',
-          'كان لدي في الأصل 4 من بطاقات الشخصيات هذه منذ البداية، لكن حتى قبل نحو شهر لم يكن التطبيق يقدم الإعداد الافتراضي للنظام من دون موجّه (prompt)، وهذا أزعج بعض الناس.',
           'التطبيق في الواقع مجرد أنا وصديق آخر، هو guardian37x على Discord.',
           'أقوم بتحويل الكثير من نماذج LLM الأصغر وتحسينها لـ Edge AI وأرفعها إلى حسابي على Hugging Face. أظن أن هناك نحو 85 نموذجًا هناك الآن.',
           'أما لماذا بنيته: حين بدأت، كانت هناك بعض الخيارات الأخرى للاستدلال على الهاتف، لكن معظمها كان قائمًا على llama/GGUF، وبعضها مدفوع أو مفلتر أو يعرض إعلانات، ولم تكن موجهة فعلًا نحو الأداء ولا تملك واجهة API خلفية للتعمق حقًا. ولم أكن قد رأيت أيًا منها يستخدم MNN، وبصفتي مهندسًا، كان MNN في ذلك الوقت أسرع أحيانًا بنسبة 50% من GGUF، وكان ذلك مثيرًا حقًا.',
@@ -2400,7 +2405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'الميزة': 'مجاني ودون حساب',
             'المعنى في الاستخدام': 'تثبّته وتستخدمه دون تسجيل أو اشتراك.',
-            'القيد / التحفّظ': 'الكود المصدري غير منشور والترخيص غير مذكور.',
+            'القيد / التحفّظ': 'مملوك بكود مغلق؛ بلا مستودع عام.',
           },
           {
             'الميزة': 'لعب الأدوار والوسائط في تطبيق واحد',
@@ -2419,7 +2424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'الميزة': 'إصدار أندرويد موسوم بأنه مستقر',
-            'المعنى في الاستخدام': 'الإصدار 1.0 متاح على Google Play.',
+            'المعنى في الاستخدام': 'الإصدار 1.3.6.1 إصدار إنتاجي عادي على Google Play.',
             'القيد / التحفّظ': 'قاعدة تثبيت صغيرة (5K+)، ونسخة iPhone تجريبية.',
           },
         ],
@@ -2437,11 +2442,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: 'ما لم نتمكن من التحقق منه',
         items: [
-          '**الترخيص والكود المصدري.** لم يُعثر على نص ترخيص ولا على مستودع عام، ويدرج دليل المطوّر نفسه عبارة "No public repo"، لذا لا يمكن التحقق من السلوك بمقارنته بالكود.',
+          '**الكود المصدري.** TokForge برنامج مملوك بكود مغلق، والترخيص في البند 2 من [شروطه](https://tokforge.ai/terms/)، لذلك لا يمكن التحقق من سلوكه عبر الكود.',
           '**الأداء والجودة عملياً.** لم تشغّل PromptQuorum التطبيق، لذا لم تُقيَّم السرعة واستهلاك البطارية وجودة المخرجات.',
-          '**عمليات الشراء داخل التطبيق والإعلانات.** لا تُظهر صفحة Play التي قُرئت أي ملصقات بهذا الشأن، لكن المصادر لا تستبعدها صراحةً.',
+          '**ادعاء «بلا إعلانات».** تذكر [الأسئلة الشائعة](https://tokforge.ai/faq/) لدى المطوّر أنه لا توجد إعلانات أو مشتريات داخل التطبيق أو اشتراكات؛ ولم تثبّت PromptQuorum التطبيق لتأكيد ذلك.',
           '**خلفية المطوّر.** تسمّي Google Play الجهة Defcon-One، مع Isaac Maple وموقع في الولايات المتحدة في تفاصيل المطوّر؛ ولم يُعثر في المصادر التي قُرئت على تسجيل شركة ولا على سجل إنجازات.',
-          '**ليس لمستخدمي iPhone بعد.** نسخة Apple نسخة تجريبية على TestFlight وليست إصداراً على App Store.',
+          '**iPhone و iPad.** لم تُختبر النسخة التجريبية العامة على TestFlight المفتوحة للجميع، والتطبيق ليس بعد على App Store.',
         ],
       },
       vsAlternatives: {
@@ -2483,11 +2488,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل TokForge مجاني؟',
-            a: 'نعم. يصفه كل من Google Play وموقع المطوّر بأنه مجاني دون اشتراك أو حساب. ولا تُظهر صفحة Play التي قُرئت ملصق عمليات شراء داخل التطبيق، لكن المصادر لا تستبعد عمليات الشراء صراحةً.',
+            a: 'نعم. يصفه Google Play وموقع المطوّر بأنه مجاني وبلا حساب، وتذكر [الأسئلة الشائعة](https://tokforge.ai/faq/) لدى المطوّر أنه لا توجد إعلانات أو مشتريات داخل التطبيق أو اشتراكات.',
           },
           {
             q: 'هل TokForge مفتوح المصدر؟',
-            a: 'لا. لم يُعثر على مستودع كود عام ولا على ترخيص، ويدرج دليل المقارنة الخاص بالمطوّر عبارة "No public repo".',
+            a: 'لا. TokForge برنامج مملوك بكود مغلق؛ الترخيص في البند 2 من [شروطه](https://tokforge.ai/terms/)، ولا يوجد مستودع عام للكود المصدري.',
           },
           {
             q: 'من يصنع TokForge؟',
@@ -2499,7 +2504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل توجد نسخة لـ iPhone؟',
-            a: 'فقط كنسخة تجريبية عامة على TestFlight. أما نسخة أندرويد فهي على Google Play.',
+            a: 'نعم، كنسخة تجريبية عامة على TestFlight يمكن لأي شخص الانضمام إليها؛ وهي ليست بعد على App Store. أما نسخة أندرويد فهي على Google Play.',
           },
           {
             q: 'ما العتاد الذي يحتاجه؟',
@@ -2523,7 +2528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: 'الخلاصة',
         content:
-          'يجمع TokForge شخصيات لعب الأدوار وصور الجهاز واستنساخ الصوت والأسئلة والأجوبة على المستندات وتوجيه المحركات بحسب الشريحة في تطبيق مجاني لأندرويد، ولوحة المتصدرين العامة لاختبار الأداء محاولة غير معتادة للشفافية في السرعة. في المقابل، الكود المصدري غير منشور والترخيص غير مذكور، وقاعدة التثبيت صغيرة عند 5K+، ونسخة iPhone لا تزال تجريبية، وأرقام الأداء مصدرها المطوّر، ولم يُختبر شيء مما هنا عملياً. وهو يناسب مستخدمي أندرويد الذين يريدون تطبيق لعب أدوار ووسائط مجانياً دون اتصال ويقبلون هذه الشروط؛ أما من يريدون كوداً قابلاً للتدقيق فيمكنهم مقارنته بـ[PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) أو [Private Mind](/ar/power-local-llm/private-mind-review).',
+          'يجمع TokForge شخصيات لعب الأدوار وتوليد الصور على الجهاز واستنساخ الصوت والأسئلة والأجوبة على المستندات وتوجيه المحركات بحسب الشريحة في تطبيق أندرويد مجاني لا يحتوي، بحسب المطوّر، على إعلانات أو مشتريات داخل التطبيق أو اشتراكات، ولوحة المتصدرين العامة لاختبار الأداء محاولة غير معتادة للشفافية في السرعة. في المقابل، البرنامج مملوك بكود مغلق، وقاعدة التثبيت صغيرة (5K+)، ونسخة iPhone و iPad نسخة تجريبية عامة على TestFlight وليست بعد على App Store، وأرقام الأداء من المطوّر، ولم يُختبر شيء من ذلك عملياً. وهو يناسب مستخدمي أندرويد الذين يريدون تطبيق لعب أدوار ووسائط مجانياً دون اتصال ويقبلون هذه الشروط؛ أما من يريدون كوداً قابلاً للتدقيق فيمكنهم مقارنته بـ[PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) أو [Private Mind](/ar/power-local-llm/private-mind-review).',
       },
       sources: {
         id: 'sources',
@@ -2531,6 +2536,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[TokForge على Google Play](https://play.google.com/store/apps/details?id=dev.tokforge) — الوصف وتفاصيل المطوّر وقسم أمان البيانات وعدد التنزيلات وتاريخ آخر تحديث، جرى التحقق منها في 3 أكتوبر 2026.',
           '[tokforge.ai](https://tokforge.ai) — الإصدار والمنصات وإرشادات العتاد ودليل المقارنة الخاص بالمطوّر، جرى التحقق منها في 3 أكتوبر 2026.',
+          '[شروط TokForge](https://tokforge.ai/terms/) — الترخيص (البند 2): برنامج مملوك، جرى التحقق في 9 أكتوبر 2026.',
+          '[الأسئلة الشائعة لـ TokForge](https://tokforge.ai/faq/) — مجاني بلا إعلانات أو مشتريات داخل التطبيق أو اشتراكات، والنسخة التجريبية العامة على TestFlight، جرى التحقق في 9 أكتوبر 2026.',
         ],
       },
       relatedReading: {
@@ -2549,14 +2556,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-03',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-09',
     next_refresh_due: '2027-04-03',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/tokforge-review-hero-zh.webp',
     title: 'TokForge 评测:支持角色扮演与图像生成的 Android 离线 AI 聊天应用',
     seoTitle: 'TokForge 评测:Android 离线 AI 聊天应用',
     intro:
-      'TokForge 是一款免费的 Android 应用,由在 Google Play 上列为 [Defcon-One](https://play.google.com/store/apps/details?id=dev.tokforge) 的开发者发布,在手机上运行语言模型,并整合了角色扮演角色、设备端图像生成、带声音克隆的文字转语音、文档问答,以及可将速度结果发布到公开排行榜的内置基准测试。版本 1.0 已在 Google Play 上架,而 iPhone 和 iPad 版本是 TestFlight 上的公开测试版。该应用的源代码未公开。本评测基于 Google Play 页面和开发者自己的网站 [tokforge.ai](https://tokforge.ai),核实于 2026 年 10 月 3 日;PromptQuorum 没有对该应用进行实测。',
+      'TokForge 是一款免费的 Android 应用,由在 Google Play 上列为 [Defcon-One](https://play.google.com/store/apps/details?id=dev.tokforge) 的开发者发布,在手机上运行语言模型,并整合了角色扮演角色、设备端图像生成、带声音克隆的文字转语音、文档问答,以及可将速度结果发布到公开排行榜的内置基准测试。版本 1.3.6.1 是 Google Play 上的正式发布版,而 iPhone 和 iPad 版本是任何人都可加入的 TestFlight 公开测试版。该应用是专有闭源软件,源代码未公开。本评测基于 Google Play 页面和开发者自己的网站 [tokforge.ai](https://tokforge.ai),核实于 2026 年 10 月 3 日;PromptQuorum 没有对该应用进行实测。',
     metaDescription:
       'TokForge 评测:一款免费的 Android 离线 AI 聊天应用,含角色扮演、图像生成、声音克隆和速度排行榜。涵盖模型、隐私与局限。',
     twitterDescription:
@@ -2579,7 +2586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Kokoro', 'GGUF models', 'MNN models'],
     current_hardware_mentioned: ['Android', 'Snapdragon', 'Adreno', 'Pixel 9 Pro XL'],
     leadAnswerBlock:
-      '**TokForge(截至 2026 年 10 月 3 日为版本 1.0)是 Defcon-One 开发的一款免费 Android 应用,通过 llama.cpp 或 MNN 运行本地语言模型,并附带角色扮演角色、设备端图像生成、语音和文档问答,无需账号。** 其页面称对话不会离开设备,网页搜索默认关闭,基准测试可选择将结果发布到公开排行榜。源代码未公开,许可证也未说明,iPhone 和 iPad 版本仍是 TestFlight 测试版。',
+      '**TokForge(版本 1.3.6.1,开发者于 2026 年 10 月 9 日确认)是 Defcon-One 开发的一款免费 Android 应用,通过 llama.cpp 或 MNN 运行本地语言模型,并附带角色扮演角色、设备端图像生成、语音和文档问答,无需账号。** 其页面称对话不会离开设备,网页搜索默认关闭,基准测试可选择将结果发布到公开排行榜。该应用是专有闭源软件,开发者称其没有广告、应用内购买或订阅,iPhone 和 iPad 版本是 TestFlight 上的公开测试版,尚未登陆 App Store。',
     quickAnswerTop: {
       zh: {
         question: 'TokForge 免费吗?能完全离线运行吗?',
@@ -2589,7 +2596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '可在 [Google Play](https://play.google.com/store/apps/details?id=dev.tokforge) 免费获取;iPhone 和 iPad 版本是 TestFlight 上的公开测试版,不在 App Store 上架。',
           '三种推理路径:用于 GGUF 的 llama.cpp、MNN,或你自己的兼容 OpenAI 的服务器。',
           '附加功能:可导入角色卡的角色扮演、设备端图像生成、带声音克隆的 Kokoro 语音,以及文档问答。',
-          '据 2026 年 10 月 3 日核实:版本 1.0,Google Play 下载量 5K+,页面最近更新于 2026 年 9 月 20 日。',
+          '版本 1.3.6.1(开发者于 2026 年 10 月 9 日确认);Google Play 下载量 5K+,页面最后更新于 2026 年 9 月 20 日(核实于 2026 年 10 月 3 日)。',
         ],
         updatedDate: '2026-10',
       },
@@ -2629,10 +2636,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '开发者:在 Google Play 上列为 Defcon-One,开发者详情中显示 Isaac Maple 和美国地址,页面上有联系邮箱。',
-          '价格与许可证:免费,无需订阅或账号;未找到许可证和公开的源代码仓库,开发者自己的对比指南列出的是“No public repo”。',
-          '引擎:带 OpenCL 和 Vulkan 路径的 llama.cpp(GGUF)、带 OpenCL 的 MNN,或你自己连接的兼容 OpenAI 的服务器。',
+          '价格与许可证:据开发者的[常见问题](https://tokforge.ai/faq/),免费,没有广告、应用内购买、订阅或账号;专有闭源,许可证见[条款](https://tokforge.ai/terms/)第 2 节。',
+          '引擎:llama.cpp(GGUF),含 OpenCL 和 Vulkan 路径;MNN,支持 OpenCL 和 Vulkan(具体使用哪种取决于手机);或你自行连接的兼容 OpenAI 的服务器。',
           '范围:角色扮演角色、设备端图像、带克隆功能的 Kokoro 语音、文档问答、含 Hugging Face 搜索的 52 个模型目录,以及可选的公开速度排行榜。',
-          '据 2026 年 10 月 3 日核实的信号:版本 1.0,Google Play 下载量 5K+,页面更新于 2026 年 9 月 20 日。',
+          '指标:版本 1.3.6.1(开发者于 2026 年 10 月 9 日确认),Google Play 下载量 5K+,页面更新于 2026 年 9 月 20 日(核实于 2026 年 10 月 3 日)。',
         ],
         callouts: [
           {
@@ -2646,7 +2653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'TokForge 是什么?',
         content: [
           '**TokForge 是一款离线优先的 Android 聊天应用,把本地模型运行器与角色扮演、图像、语音和文档工具打包在一起。** 据其 [Google Play 页面](https://play.google.com/store/apps/details?id=dev.tokforge),它在手机上运行完整模型,无需云端或账号,支持导入来自 chub.ai 的角色和 TavernAI 角色卡,并会为你的芯片自动选择最快的引擎。',
-          '开发者网站将版本 1.0 描述为首个完整版本,并称该应用比成熟的替代品小得多。这种坦率有助于调整预期:它的安装基数较小,其 iPhone 和 iPad 版本也仅处于 TestFlight 测试阶段。',
+          '开发者表示,该应用比成熟的替代品小得多。这种坦率对设定预期很重要:安装基数较小,iPhone 和 iPad 版本目前只有 TestFlight 公开测试版,尚未登陆 App Store。',
         ],
       },
       getIt: {
@@ -2670,7 +2677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '获取途径': '未公开',
           },
         ],
-        note: '本页是该应用在 [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) 中词条的配套资料。据 2026 年 10 月 3 日核实的版本:1.0,来自 Play 描述和开发者网站。',
+        note: '本页是该应用在 [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) 中词条的配套资料。版本 1.3.6.1,开发者于 2026 年 10 月 9 日确认;较早的页面和商店页面可能仍显示 1.0。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2708,7 +2715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**图像。** 设备端生成,在任何设备上都可用 CPU 运行,在 Adreno 上有 GPU 加速,在受支持的 Snapdragon 设备上有 NPU 加速。开发者称在 Pixel 9 Pro XL 上生成 512x512 图像约需 31 秒。',
           '**语音。** 带多种声音的 Kokoro 文字转语音、可根据约一分钟录音进行的声音克隆,以及语音输入。',
           '**文档与记忆。** 可就 PDF、DOCX、EPUB、Markdown、CSV 和文本文件提问,另有长期记忆和知识图谱。',
-          '**引擎与模型。** 带 OpenCL 和 Vulkan 的 llama.cpp(GGUF)、带 OpenCL 的 MNN,或兼容 OpenAI 的服务器,按芯片自动路由,并有 52 个模型的目录。',
+          '**引擎与模型。**llama.cpp(GGUF),支持 OpenCL 和 Vulkan;MNN,按手机支持 OpenCL 和 Vulkan;或兼容 OpenAI 的服务器,并按芯片自动路由,附带 52 个模型的目录。',
           '**开发者 API 与备份。** 用于自动化的本地 API 端点(Google Play 称 270+,网站称 284),以及对话、角色和设置的备份与恢复。',
         ],
         note: 'Play 文本与网站略有出入(例如端点数量),因此应以当前构建版本及其设置界面为准。',
@@ -2741,7 +2748,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'TokForge的开发者Isaac Maple分享了以下关于这款应用及其开发原因的内容。以下内容以开发者本人的话呈现,为便于阅读略作编辑,并非PromptQuorum独立的编辑评估:',
           '"我认为我们最好的功能是autoForge,它会针对每台手机和每个模型找到最佳、最快的推理配置:CPU、OpenCL或Vulkan、线程数和上下文长度。',
-          '这类角色卡片最初就有4张,但直到大约一个月前,应用还没有提供不带提示词的纯系统默认模式,这让一些用户很不满。',
           '这款应用其实只有我和另一位朋友,也就是Discord上的guardian37x。',
           '我把许多较小的LLM转换并尽量优化,用于Edge AI,然后上传到我的Hugging Face账号。我想现在大约有85个模型。',
           '至于我为什么要做它:我刚开始时,移动端推理有几个其他选择,但大多基于llama/GGUF,要收费、有过滤、带广告,而且并不真正以性能为导向,也没有可以深入使用的API后端。我也没见过使用MNN的应用,而作为工程师,当时的MNN有时比GGUF快50%,这让我非常兴奋。',
@@ -2758,7 +2764,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '优点': '免费且无需账号',
             '实际使用中的含义': '无需注册或订阅即可安装使用。',
-            '局限 / 注意事项': '源代码未公开,也未说明许可证。',
+            '局限 / 注意事项': '专有闭源;没有公开代码仓库。',
           },
           {
             '优点': '角色扮演与媒体合一',
@@ -2777,7 +2783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '优点': 'Android 版本标为正式版',
-            '实际使用中的含义': '版本 1.0 已在 Google Play 上架。',
+            '实际使用中的含义': '版本 1.3.6.1 是 Google Play 上的正常正式发布版。',
             '局限 / 注意事项': '安装基数较小(5K+),iPhone 版本是测试版。',
           },
         ],
@@ -2795,11 +2801,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: '我们无法验证的内容',
         items: [
-          '**许可证与源代码。** 未找到许可证文本或公开代码仓库,开发者自己的指南列出的是“No public repo”,因此无法对照代码核查其行为。',
+          '**源代码。** TokForge 是专有闭源软件,许可证见其[条款](https://tokforge.ai/terms/)第 2 节,因此无法通过代码核实其行为。',
           '**实际使用的性能与质量。** PromptQuorum 没有运行该应用,因此速度、电池消耗和输出质量均未评估。',
-          '**应用内购买与广告。** 所读的 Play 页面没有显示此类标签,但来源并未明确排除它们。',
+          '**“无广告”的说法。** 开发者的[常见问题](https://tokforge.ai/faq/)称没有广告、应用内购买或订阅;PromptQuorum 没有安装该应用来确认。',
           '**开发者背景。** Google Play 列出 Defcon-One,开发者详情中有 Isaac Maple 和美国地址;在所读来源中未找到公司注册信息或过往记录。',
-          '**暂不适合 iPhone 用户。** Apple 版本是 TestFlight 测试版,而非 App Store 正式发布。',
+          '**iPhone 和 iPad。** 任何人都可加入的 TestFlight 公开测试版未经测试,且该应用尚未登陆 App Store。',
         ],
       },
       vsAlternatives: {
@@ -2841,11 +2847,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'TokForge 免费吗?',
-            a: '是的。Google Play 和开发者网站都将其描述为免费,无需订阅或账号。所读的 Play 页面没有显示应用内购买标签,但来源并未明确排除购买。',
+            a: '是的。Google Play 和开发者网站都称其免费且无需账号,开发者的[常见问题](https://tokforge.ai/faq/)称没有广告、应用内购买或订阅。',
           },
           {
             q: 'TokForge 是开源的吗?',
-            a: '不是。未找到公开的源代码仓库或许可证,开发者自己的对比指南列出的是“No public repo”。',
+            a: '不是。TokForge 是专有闭源软件;许可证见其[条款](https://tokforge.ai/terms/)第 2 节,且不存在公开的源代码仓库。',
           },
           {
             q: 'TokForge 是谁开发的?',
@@ -2857,7 +2863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '有 iPhone 版本吗?',
-            a: '仅有 TestFlight 上的公开测试版。Android 版本在 Google Play 上。',
+            a: '有,以任何人都可加入的 TestFlight 公开测试版形式提供;尚未登陆 App Store。Android 版本在 Google Play 上。',
           },
           {
             q: '它需要什么硬件?',
@@ -2881,7 +2887,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '结论',
         content:
-          'TokForge 把角色扮演角色、设备端图像、声音克隆、文档问答和适配芯片的引擎路由整合进一款免费的 Android 应用,其公开的基准测试排行榜是在速度透明度方面一次少见的尝试。另一方面,源代码未公开,许可证也未说明,安装基数仅为 5K+,iPhone 版本仍是测试版,性能数据来自开发者,这里的一切也都没有经过实测。它适合希望使用免费离线角色扮演与媒体应用并接受这些条件的 Android 用户;希望使用可审计代码的读者可以对比 [PocketPal AI](/zh/power-local-llm/pocketpal-ai-review) 或 [Private Mind](/zh/power-local-llm/private-mind-review)。',
+          'TokForge 把角色扮演角色、设备端图像、声音克隆、文档问答和按芯片路由的引擎整合进一款免费的 Android 应用,据开发者称没有广告、应用内购买或订阅,其公开基准排行榜是在速度透明度上一次不寻常的尝试。另一方面,该软件是专有闭源的,安装基数仅 5K+,iPhone 和 iPad 版本是尚未登陆 App Store 的 TestFlight 公开测试版,性能数据来自开发者,这里的内容均未经实测。它适合希望使用免费离线角色扮演与媒体应用并接受这些条件的 Android 用户;希望使用可审计代码的读者可以对比 [PocketPal AI](/zh/power-local-llm/pocketpal-ai-review) 或 [Private Mind](/zh/power-local-llm/private-mind-review)。',
       },
       sources: {
         id: 'sources',
@@ -2889,6 +2895,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Google Play 上的 TokForge](https://play.google.com/store/apps/details?id=dev.tokforge) — 描述、开发者信息、数据安全部分、下载量和最近更新日期,核实于 2026 年 10 月 3 日。',
           '[tokforge.ai](https://tokforge.ai) — 版本、平台、硬件指引和开发者自己的对比指南,核实于 2026 年 10 月 3 日。',
+          '[TokForge 条款](https://tokforge.ai/terms/) — 许可证(第 2 节):专有软件,核实于 2026 年 10 月 9 日。',
+          '[TokForge 常见问题](https://tokforge.ai/faq/) — 免费,无广告、应用内购买或订阅,以及 TestFlight 公开测试版,核实于 2026 年 10 月 9 日。',
         ],
       },
       relatedReading: {
@@ -2907,14 +2915,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-10-03',
-    dateModified: '2026-10-05',
+    dateModified: '2026-10-09',
     next_refresh_due: '2027-04-03',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/tokforge-review-hero-ko.webp',
     title: 'TokForge 리뷰: 롤플레이와 이미지 생성을 갖춘 오프라인 Android AI 채팅 앱',
     seoTitle: 'TokForge 리뷰: 오프라인 Android AI 채팅 앱',
     intro:
-      'TokForge는 Google Play에 [Defcon-One](https://play.google.com/store/apps/details?id=dev.tokforge)으로 표기된 개발자가 배포하는 무료 Android 앱으로, 휴대폰에서 언어 모델을 실행하고 롤플레이 캐릭터, 온디바이스 이미지 생성, 음성 복제를 지원하는 텍스트 음성 변환, 문서 Q&A, 그리고 속도를 공개 리더보드에 올릴 수 있는 내장 벤치마크를 하나로 묶었습니다. 버전 1.0은 Google Play에 있고, iPhone·iPad 버전은 TestFlight 공개 베타입니다. 앱의 소스 코드는 공개되어 있지 않습니다. 이 리뷰는 2026년 10월 3일에 확인한 Google Play 게재 정보와 개발자 본인의 웹사이트 [tokforge.ai](https://tokforge.ai)를 근거로 하며, PromptQuorum은 앱을 직접 테스트하지 않았습니다.',
+      'TokForge는 Google Play에 [Defcon-One](https://play.google.com/store/apps/details?id=dev.tokforge)으로 표기된 개발자가 배포하는 무료 Android 앱으로, 휴대폰에서 언어 모델을 실행하고 롤플레이 캐릭터, 온디바이스 이미지 생성, 음성 복제를 지원하는 텍스트 음성 변환, 문서 Q&A, 그리고 속도를 공개 리더보드에 올릴 수 있는 내장 벤치마크를 하나로 묶었습니다. 버전 1.3.6.1은 Google Play의 정식 배포 버전이고, iPhone·iPad 버전은 누구나 참여할 수 있는 TestFlight 공개 베타입니다. 앱은 독점(비공개 소스) 소프트웨어이며 소스 코드는 공개되어 있지 않습니다. 이 리뷰는 2026년 10월 3일에 확인한 Google Play 게재 정보와 개발자 본인의 웹사이트 [tokforge.ai](https://tokforge.ai)를 근거로 하며, PromptQuorum은 앱을 직접 테스트하지 않았습니다.',
     metaDescription:
       'TokForge 리뷰: 롤플레이 캐릭터, 이미지 생성, 음성 복제, 속도 리더보드를 갖춘 무료 오프라인 Android AI 채팅 앱입니다. 지원 엔진과 모델, 하드웨어 요구 사항, 개인정보 처리, 클로즈드 소스라는 한계, 그리고 확인하지 못한 사항까지 출처 기준으로 정리했습니다.',
     twitterDescription:
@@ -2937,7 +2945,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: ['Kokoro', 'GGUF models', 'MNN models'],
     current_hardware_mentioned: ['Android', 'Snapdragon', 'Adreno', 'Pixel 9 Pro XL'],
     leadAnswerBlock:
-      '**TokForge(2026년 10월 3일 기준 버전 1.0)는 Defcon-One이 만든 무료 Android 앱으로, llama.cpp 또는 MNN으로 로컬 언어 모델을 실행하고 롤플레이 캐릭터, 온디바이스 이미지 생성, 음성, 문서 Q&A를 더했으며 계정이 필요 없습니다.** 게재 정보에 따르면 대화는 기기 밖으로 나가지 않고, 웹 검색은 기본적으로 꺼져 있으며, 벤치마크 결과는 선택에 따라 공개 리더보드에 올릴 수 있습니다. 소스 코드는 공개되어 있지 않고 라이선스도 명시되어 있지 않으며, iPhone·iPad 버전은 아직 TestFlight 베타입니다.',
+      '**TokForge(개발자가 2026년 10월 9일에 확인한 버전 1.3.6.1)는 Defcon-One이 만든 무료 Android 앱으로, llama.cpp 또는 MNN으로 로컬 언어 모델을 실행하고 롤플레이 캐릭터, 온디바이스 이미지 생성, 음성, 문서 Q&A를 더했으며 계정이 필요 없습니다.** 게재 정보에 따르면 대화는 기기 밖으로 나가지 않고, 웹 검색은 기본적으로 꺼져 있으며, 벤치마크 결과는 선택에 따라 공개 리더보드에 올릴 수 있습니다. 앱은 독점 소프트웨어(비공개 소스)이며, 개발자는 광고, 인앱 결제, 구독이 없다고 밝혔고, iPhone·iPad 버전은 아직 App Store에 없는 TestFlight 공개 베타입니다.',
     quickAnswerTop: {
       ko: {
         question: 'TokForge는 무료이며 완전히 오프라인으로 실행됩니까?',
@@ -2947,7 +2955,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Google Play](https://play.google.com/store/apps/details?id=dev.tokforge)에서 무료이며, iPhone·iPad 버전은 App Store가 아니라 TestFlight 공개 베타임.',
           '추론 경로 세 가지: GGUF용 llama.cpp, MNN, 또는 직접 연결하는 OpenAI 호환 서버.',
           '부가 기능: 가져온 카드를 쓰는 롤플레이 캐릭터, 온디바이스 이미지 생성, 음성 복제를 지원하는 Kokoro 음성, 문서 Q&A.',
-          '2026년 10월 3일 확인 기준: 버전 1.0, Google Play 다운로드 5K+, 게재 정보 최종 업데이트 2026년 9월 20일.',
+          '버전 1.3.6.1(개발자가 2026년 10월 9일에 확인), Google Play 다운로드 5K+, 게재 정보 최종 업데이트 2026년 9월 20일(2026년 10월 3일 확인).',
         ],
         updatedDate: '2026-10',
       },
@@ -2987,10 +2995,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         items: [
           '개발자: Google Play에는 Defcon-One으로 표기되어 있고, 개발자 정보에 Isaac Maple과 미국 위치가 표시되며 게재 정보에 연락처 이메일이 있음.',
-          '가격과 라이선스: 구독이나 계정 없이 무료이며, 라이선스와 공개 소스 저장소는 찾지 못했고 개발자 본인의 비교 가이드에는 "No public repo"로 적혀 있음.',
-          '엔진: OpenCL·Vulkan 경로를 갖춘 llama.cpp(GGUF), OpenCL을 쓰는 MNN, 또는 직접 연결하는 OpenAI 호환 서버.',
+          '가격과 라이선스: 개발자의 [FAQ](https://tokforge.ai/faq/)에 따르면 무료이며 광고, 인앱 결제, 구독, 계정이 없습니다. 독점·비공개 소스이며 라이선스는 [약관](https://tokforge.ai/terms/) 2항에 있습니다.',
+          '엔진: OpenCL과 Vulkan 경로를 지원하는 llama.cpp(GGUF), OpenCL과 Vulkan을 지원하는 MNN(어느 쪽을 쓰는지는 휴대폰에 따라 다름), 또는 직접 연결하는 OpenAI 호환 서버.',
           '범위: 롤플레이 캐릭터, 온디바이스 이미지, 음성 복제를 지원하는 Kokoro 음성, 문서 Q&A, Hugging Face 검색이 되는 52개 모델 카탈로그, 선택형 공개 속도 리더보드.',
-          '2026년 10월 3일 확인 기준 지표: 버전 1.0, Google Play 다운로드 5K+, 게재 정보 업데이트 2026년 9월 20일.',
+          '지표: 개발자가 2026년 10월 9일에 확인한 버전 1.3.6.1, Google Play 다운로드 5K+, 2026년 9월 20일에 업데이트된 게재 정보(2026년 10월 3일 확인).',
         ],
         callouts: [
           {
@@ -3004,7 +3012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'TokForge란 무엇인가?',
         content: [
           '**TokForge는 로컬 모델 실행기에 롤플레이, 이미지, 음성, 문서 도구를 묶은 오프라인 우선 Android 채팅 앱입니다.** [Google Play 게재 정보](https://play.google.com/store/apps/details?id=dev.tokforge)에 따르면 클라우드나 계정 없이 휴대폰에서 전체 모델을 실행하고, chub.ai와 TavernAI 카드에서 가져온 캐릭터를 지원하며, 칩에 가장 빠른 엔진을 자동으로 고릅니다.',
-          '개발자의 웹사이트는 버전 1.0을 첫 정식 릴리스로 설명하고, 앱이 기존의 널리 쓰이는 대안보다 훨씬 작은 규모라고 밝힙니다. 이 솔직함은 기대치를 잡는 데 중요합니다. 설치 기반이 작고, iPhone·iPad 버전은 TestFlight 베타일 뿐입니다.',
+          '개발자는 이 앱이 이미 자리 잡은 대안들보다 훨씬 작다고 밝힙니다. 이런 솔직함은 기대치를 잡는 데 중요합니다. 설치 기반이 작고, iPhone·iPad 버전은 TestFlight 공개 베타에 그치며 아직 App Store에 없습니다.',
         ],
       },
       getIt: {
@@ -3028,7 +3036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '받는 곳': '공개되지 않음',
           },
         ],
-        note: '이 페이지는 [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 이 앱 항목의 보조 자료입니다. 2026년 10월 3일에 확인한 버전: 1.0 (Play 설명과 개발자 웹사이트 기준).',
+        note: '이 페이지는 [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 이 앱 항목의 보조 자료입니다. 버전 1.3.6.1(개발자가 2026년 10월 9일에 확인). 오래된 페이지와 스토어 정보에는 아직 1.0이 표시될 수 있습니다.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -3066,7 +3074,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**이미지.** 어디서나 CPU에서 실행되는 온디바이스 생성으로, Adreno에서는 GPU 가속, 지원되는 Snapdragon 기기에서는 NPU 가속을 씁니다. 개발자는 Pixel 9 Pro XL에서 512x512 이미지에 약 31초가 걸린다고 밝힙니다.',
           '**음성.** 여러 음성을 갖춘 Kokoro 텍스트 음성 변환, 약 1분 분량의 녹음으로 하는 음성 복제, 음성 입력.',
           '**문서와 메모리.** PDF, DOCX, EPUB, Markdown, CSV, 텍스트 파일에 대한 질문과 장기 메모리, 지식 그래프.',
-          '**엔진과 모델.** OpenCL·Vulkan을 쓰는 llama.cpp(GGUF), OpenCL을 쓰는 MNN, 또는 OpenAI 호환 서버이며, 칩에 따른 자동 라우팅과 52개 모델 카탈로그를 갖춥니다.',
+          '**엔진과 모델.** OpenCL과 Vulkan을 지원하는 llama.cpp(GGUF), 휴대폰에 따라 OpenCL과 Vulkan을 쓰는 MNN, 또는 OpenAI 호환 서버를 지원하며, 칩에 따른 자동 라우팅과 52개 모델 카탈로그를 제공합니다.',
           '**개발자 API와 백업.** 자동화용 로컬 API 엔드포인트(Google Play는 270개 이상, 웹사이트는 284개)와 대화, 캐릭터, 설정의 백업 및 복원.',
         ],
         note: 'Play 텍스트와 웹사이트는 엔드포인트 수처럼 조금씩 다르므로, 최종 기준은 현재 빌드와 그 설정 화면입니다.',
@@ -3099,7 +3107,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           'TokForge의 개발자 Isaac Maple이 앱과 개발 이유에 대해 다음과 같이 전했습니다. 가독성을 위해 가볍게 편집한 개발자 본인의 말로 제시하는 것이며, PromptQuorum의 독립적인 편집 평가가 아닙니다:',
           '"가장 좋은 기능은 autoForge라고 생각합니다. 기기와 모델마다 CPU, OpenCL 또는 Vulkan, 스레드 수, 컨텍스트 크기까지 가장 좋고 빠른 추론 설정을 찾아줍니다.',
-          '이 캐릭터 카드는 처음부터 4개가 있었지만, 한 달쯤 전까지는 프롬프트 없는 기본 시스템 상태를 제공하지 않아서 불편해하시는 분들이 있었습니다.',
           '이 앱은 사실 저와 Discord의 guardian37x라는 친구 한 명이 전부입니다.',
           'Edge AI용으로 작은 LLM을 많이 변환하고 최적화해서 제 Hugging Face 계정에 올리고 있습니다. 지금은 약 85개 모델이 있는 것 같습니다.',
           '제가 이 앱을 만든 이유는, 제가 시작했을 때 모바일 추론에는 몇 가지 다른 선택지가 있었지만 대부분 llama/GGUF 기반이었고, 유료이거나 필터링이 되어 있거나 광고가 있었으며, 성능 중심이 아니거나 깊이 파고들 수 있는 API 백엔드가 없었기 때문입니다. MNN을 쓰는 앱도 본 적이 없었고, 엔지니어로서 당시 MNN은 GGUF보다 때로는 50% 더 빨라서 정말 흥미로웠습니다.',
@@ -3116,7 +3123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '이점': '무료, 계정 불필요',
             '실제 사용에서의 의미': '가입이나 구독 없이 설치해 사용함.',
-            '한계 / 유의사항': '소스가 공개되어 있지 않고 라이선스도 명시되어 있지 않음.',
+            '한계 / 유의사항': '독점·비공개 소스. 공개 저장소 없음.',
           },
           {
             '이점': '롤플레이와 미디어를 한 앱에',
@@ -3135,7 +3142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '이점': 'Android 릴리스는 안정판으로 표시됨',
-            '실제 사용에서의 의미': '버전 1.0이 Google Play에 있음.',
+            '실제 사용에서의 의미': '버전 1.3.6.1은 Google Play의 일반 정식 배포 버전입니다.',
             '한계 / 유의사항': '설치 기반이 작고(5K+) iPhone 버전은 베타임.',
           },
         ],
@@ -3153,11 +3160,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'who-should-not-use',
         title: '확인하지 못한 사항',
         items: [
-          '**라이선스와 소스 코드.** 라이선스 본문이나 공개 저장소를 찾지 못했고 개발자 본인의 가이드에도 "No public repo"로 적혀 있으므로, 동작을 코드와 대조해 확인할 수 없습니다.',
+          '**소스 코드.** TokForge는 독점·비공개 소스이며 라이선스는 [약관](https://tokforge.ai/terms/) 2항에 있으므로, 동작을 코드로 확인할 수 없습니다.',
           '**실제 사용 성능과 품질.** PromptQuorum은 앱을 실행하지 않았으므로 속도, 배터리 소모, 출력 품질은 평가하지 않았습니다.',
-          '**인앱 구매와 광고.** 확인한 Play 페이지에는 그런 표시가 없지만, 출처가 이를 명시적으로 배제하지는 않습니다.',
+          '**\'광고 없음\' 주장.** 개발자의 [FAQ](https://tokforge.ai/faq/)는 광고, 인앱 결제, 구독이 없다고 밝히지만, PromptQuorum은 이를 확인하려고 앱을 설치하지는 않았습니다.',
           '**개발자 배경.** Google Play는 Defcon-One을 개발자로 밝히고 개발자 정보에 Isaac Maple과 미국 위치를 표시하지만, 확인한 출처에서는 회사 등록이나 이력을 찾지 못했습니다.',
-          '**아직 iPhone 이용자용이 아닙니다.** Apple 버전은 App Store 릴리스가 아니라 TestFlight 베타입니다.',
+          '**iPhone과 iPad.** 누구나 참여할 수 있는 TestFlight 공개 베타는 테스트하지 않았으며, 앱은 아직 App Store에 없습니다.',
         ],
       },
       vsAlternatives: {
@@ -3199,11 +3206,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'TokForge는 무료입니까?',
-            a: '네. Google Play와 개발자 웹사이트 모두 구독이나 계정 없이 무료라고 설명합니다. 확인한 Play 페이지에는 인앱 구매 표시가 없지만, 출처가 구매를 명시적으로 배제하지는 않습니다.',
+            a: '예. Google Play와 개발자 웹사이트는 무료이며 계정이 필요 없다고 설명하고, 개발자의 [FAQ](https://tokforge.ai/faq/)는 광고, 인앱 결제, 구독이 없다고 밝힙니다.',
           },
           {
             q: 'TokForge는 오픈 소스입니까?',
-            a: '아닙니다. 공개 소스 저장소나 라이선스를 찾지 못했고, 개발자 본인의 비교 가이드에는 "No public repo"로 적혀 있습니다.',
+            a: '아니요. TokForge는 독점·비공개 소스 소프트웨어이며, 라이선스는 [약관](https://tokforge.ai/terms/) 2항에 있고 공개된 소스 저장소는 없습니다.',
           },
           {
             q: 'TokForge는 누가 만드나요?',
@@ -3215,7 +3222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'iPhone 버전이 있나요?',
-            a: 'TestFlight 공개 베타로만 있습니다. Android 버전은 Google Play에 있습니다.',
+            a: '예, 누구나 참여할 수 있는 TestFlight 공개 베타로 제공됩니다. 아직 App Store에는 없습니다. Android 버전은 Google Play에 있습니다.',
           },
           {
             q: '어떤 하드웨어가 필요한가요?',
@@ -3239,7 +3246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'verdict',
         title: '결론',
         content:
-          'TokForge는 롤플레이 캐릭터, 온디바이스 이미지, 음성 복제, 문서 Q&A, 칩을 고려한 엔진 라우팅을 무료 Android 앱에 담았고, 공개 벤치마크 리더보드는 속도에 대한 투명성을 높이려는 보기 드문 시도입니다. 반면 소스는 공개되어 있지 않고 라이선스도 명시되어 있지 않으며, 설치 기반은 5K+로 작고, iPhone 버전은 아직 베타이고, 성능 수치는 개발자에게서 나왔으며, 여기서는 아무것도 직접 테스트하지 않았습니다. 무료 오프라인 롤플레이·미디어 앱을 원하고 이런 조건을 받아들이는 Android 이용자에게 적합하며, 감사할 수 있는 코드를 원한다면 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)나 [Private Mind](/ko/power-local-llm/private-mind-review)와 비교해 볼 수 있습니다.',
+          'TokForge는 롤플레이 캐릭터, 온디바이스 이미지, 음성 복제, 문서 Q&A, 칩 맞춤 엔진 라우팅을, 개발자에 따르면 광고·인앱 결제·구독이 없는 무료 Android 앱에 담았고, 공개 벤치마크 리더보드는 속도에 대한 투명성을 높이려는 드문 시도입니다. 반면 소프트웨어는 독점·비공개 소스이고, 설치 기반은 5K+로 작으며, iPhone·iPad 버전은 아직 App Store에 없는 TestFlight 공개 베타이고, 성능 수치는 개발자가 제시한 것이며, 여기 내용은 직접 테스트하지 않았습니다. 무료 오프라인 롤플레이·미디어 앱을 원하고 이런 조건을 받아들이는 Android 이용자에게 적합하며, 감사할 수 있는 코드를 원한다면 [PocketPal AI](/ko/power-local-llm/pocketpal-ai-review)나 [Private Mind](/ko/power-local-llm/private-mind-review)와 비교해 볼 수 있습니다.',
       },
       sources: {
         id: 'sources',
@@ -3247,6 +3254,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Google Play의 TokForge](https://play.google.com/store/apps/details?id=dev.tokforge) — 설명, 개발자 정보, 데이터 보안 섹션, 다운로드 수, 최종 업데이트 날짜. 2026년 10월 3일 확인.',
           '[tokforge.ai](https://tokforge.ai) — 버전, 플랫폼, 하드웨어 안내, 개발자 본인의 비교 가이드. 2026년 10월 3일 확인.',
+          '[TokForge 약관](https://tokforge.ai/terms/) — 라이선스(2항): 독점 소프트웨어, 2026년 10월 9일 확인.',
+          '[TokForge FAQ](https://tokforge.ai/faq/) — 무료, 광고·인앱 결제·구독 없음, TestFlight 공개 베타, 2026년 10월 9일 확인.',
         ],
       },
       relatedReading: {

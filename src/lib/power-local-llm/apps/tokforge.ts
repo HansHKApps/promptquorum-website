@@ -5,7 +5,9 @@
 // updated 2026-09-20, Entertainment category, Data safety: "No data shared with third parties" and "No data collected",
 // no in-app-purchase or ads labels on the page) and the developer's own site tokforge.ai (version 1.0, free, iPhone/iPad
 // as a TestFlight public beta, minimum 4 GB RAM for small models and 8 GB+ for larger ones, "No public repo" in the
-// developer's own comparison guide). No public source repository or license text found. Maker comment from Isaac Maple added 2026-10-05 (see `founder` below).
+// developer's own comparison guide). Maker comment from Isaac Maple added 2026-10-05 (see `founder` below).
+// Corrections 2026-10-09 from Isaac Maple, verified against tokforge.ai/terms and tokforge.ai/faq: version 1.3.6.1 (the site's 1.0 is a launch leftover),
+// proprietary license (terms §2), no ads/in-app purchases/subscriptions, public TestFlight beta, MNN on OpenCL and Vulkan.
 
 import type { ToolRecord } from './types'
 
@@ -15,11 +17,11 @@ export const app: ToolRecord = {
   categories: ['general-chat-clients', 'roleplay-companions', 'image-generation'],
   interfaces: ['mobile'],
   locality: 'local', // inference runs on-device; web search is off by default, and benchmark leaderboard posting is opt-in
-  platforms: ['android'], // iPhone/iPad is a TestFlight public beta only, not on the App Store — mentioned in the review, not listed as a platform
+  platforms: ['android'], // iPhone/iPad is a public TestFlight beta (open to anyone), not on the App Store — mentioned in the review, not listed as a platform
   worksWith: ['llama.cpp', 'MNN', 'Hugging Face', 'OpenAI-compatible servers'],
   engine: 'both', // built-in llama.cpp (GGUF) and MNN engines, plus connecting to your own OpenAI-compatible server
-  license: 'Not stated', // no license text and no public source repository found; the developer's own guide lists "No public repo"
-  price: 'free', // Play listing and tokforge.ai: free, no subscription, no account; no in-app-purchase label seen on the Play page
+  license: 'Proprietary', // closed source; license in section 2 of tokforge.ai/terms (limited personal, non-commercial use), confirmed by the developer 2026-10-09
+  price: 'free', // Play listing and tokforge.ai: free, no account; developer FAQ (tokforge.ai/faq, checked 2026-10-09): no ads, in-app purchases or subscriptions
   hardware: { ramGb: 4, vramGb: null, cpuOnly: null, variesByModel: true }, // tokforge.ai: minimum 4 GB RAM for small models, 8 GB+ for larger; speed depends on the SoC (Adreno GPU / Snapdragon NPU paths)
   stars: null,
   addedDate: '2026-10-03',
@@ -45,7 +47,7 @@ export const app: ToolRecord = {
   // modelDownloads = built-in downloader with Hugging Face search and a curated 52-model catalog; voice = Kokoro text-to-speech,
   // voice cloning and voice input. importModels / visionInput are not stated in the sources read and stay unset.
   compare: { offline: true, modelDownloads: true, voice: true },
-  lastVerifiedDate: '2026-10-03',
+  lastVerifiedDate: '2026-10-09',
   founderReviewedDate: '2026-10-05', // Isaac Maple supplied his own comment 2026-10-05; drives the amber Founder-reviewed banner + star on tile, drawer and review
   founder: {
     who: {
@@ -86,7 +88,6 @@ export const app: ToolRecord = {
     fullQuote: {
       en: [
         'I think our best feature is autoForge, which finds the best and fastest inference setup for each handset and model: CPU, OpenCL or Vulkan, thread count and context size.',
-        'I originally had 4 of these character cards from the get-go, but until maybe a month ago the app didn\'t offer the plain system default without a prompt, which annoyed some folks.',
         'The app is really just me and one other buddy, guardian37x in the Discord.',
         'I convert and try to optimize a lot of the smaller LLMs for Edge AI and upload them to my Hugging Face account. I think there are around 85 models there now.',
         'As for why I built it: when I started, there were a few other options for mobile inference, but most were llama/GGUF based, cost money, were filtered, had ads, and weren\'t really performance-based or didn\'t have an API backend to really dive in. I also hadn\'t seen any that used MNN, and as an engineer, MNN at that time was sometimes 50% faster than GGUF, which was really exciting.',
@@ -94,7 +95,6 @@ export const app: ToolRecord = {
       ],
       de: [
         'Ich denke, unser bestes Feature ist autoForge, das für jedes Gerät und jedes Modell das beste und schnellste Inferenz-Setup findet: CPU, OpenCL oder Vulkan, Thread-Anzahl und Kontextgröße.',
-        'Ich hatte ursprünglich von Anfang an 4 dieser Charakterkarten, aber bis vor etwa einem Monat bot die App den reinen Systemstandard ohne Prompt nicht an, was einige Leute geärgert hat.',
         'Die App besteht eigentlich nur aus mir und einem weiteren Kumpel, guardian37x auf Discord.',
         'Ich konvertiere und optimiere viele der kleineren LLMs für Edge AI und lade sie in meinen Hugging-Face-Account hoch. Ich glaube, es sind dort inzwischen rund 85 Modelle.',
         'Warum ich sie gebaut habe: Als ich anfing, gab es einige andere Optionen für mobile Inferenz, aber die meisten basierten auf llama/GGUF, kosteten Geld, waren gefiltert, hatten Werbung und waren nicht wirklich leistungsorientiert oder hatten kein API-Backend, mit dem man richtig tief einsteigen konnte. Außerdem hatte ich noch keine gesehen, die MNN nutzte, und als Ingenieur fand ich es sehr spannend, dass MNN damals manchmal 50 % schneller war als GGUF.',
@@ -102,7 +102,6 @@ export const app: ToolRecord = {
       ],
       fr: [
         'Je pense que notre meilleure fonctionnalité est autoForge, qui trouve la configuration d\'inférence la meilleure et la plus rapide pour chaque appareil et chaque modèle : CPU, OpenCL ou Vulkan, nombre de threads et taille du contexte.',
-        'À l\'origine, j\'avais dès le départ 4 de ces cartes de personnages, mais jusqu\'à il y a peut-être un mois, l\'application ne proposait pas le comportement système par défaut sans prompt, ce qui agaçait certaines personnes.',
         'L\'application, c\'est en réalité juste moi et un autre ami, guardian37x sur Discord.',
         'Je convertis et j\'essaie d\'optimiser beaucoup de petits LLM pour l\'Edge AI et je les publie sur mon compte Hugging Face. Je crois qu\'il y a environ 85 modèles aujourd\'hui.',
         'Pourquoi je l\'ai créée : quand j\'ai commencé, il existait quelques autres options pour l\'inférence mobile, mais la plupart reposaient sur llama/GGUF, étaient payantes, filtrées, avaient des publicités et n\'étaient pas vraiment axées sur la performance ou n\'avaient pas de backend API permettant de creuser vraiment. Je n\'en avais en outre vu aucune qui utilise MNN, et en tant qu\'ingénieur, MNN était à l\'époque parfois 50 % plus rapide que GGUF, ce qui était vraiment enthousiasmant.',
@@ -110,7 +109,6 @@ export const app: ToolRecord = {
       ],
       ja: [
         '最大の特長はautoForgeだと思っています。端末とモデルの組み合わせごとに、CPU、OpenCL、Vulkanの選択、スレッド数、コンテキストサイズといった最適で最速の推論設定を見つけ出します。',
-        'このキャラクターカードは最初から4枚ありましたが、1か月ほど前まで、プロンプトなしの素のシステムデフォルトは用意しておらず、それを不満に思う方もいました。',
         'このアプリは実質的に私と、Discordのguardian37xというもう一人の仲間だけで作っています。',
         'Edge AI向けに小型のLLMを数多く変換・最適化し、自分のHugging Faceアカウントにアップロードしています。現在は約85モデルあると思います。',
         'なぜ作ったのかというと、私が始めた頃、モバイル推論の選択肢はいくつかありましたが、ほとんどがllama/GGUFベースで、有料だったり、フィルタリングされていたり、広告が表示されたりし、性能重視でもなく、深く掘り下げられるAPIバックエンドもありませんでした。MNNを使ったものも見たことがなく、エンジニアとして、当時のMNNはGGUFより最大50%速いこともあり、とてもわくわくしました。',
@@ -118,7 +116,6 @@ export const app: ToolRecord = {
       ],
       zh: [
         '我认为我们最好的功能是autoForge,它会针对每台手机和每个模型找到最佳、最快的推理配置:CPU、OpenCL或Vulkan、线程数和上下文长度。',
-        '这类角色卡片最初就有4张,但直到大约一个月前,应用还没有提供不带提示词的纯系统默认模式,这让一些用户很不满。',
         '这款应用其实只有我和另一位朋友,也就是Discord上的guardian37x。',
         '我把许多较小的LLM转换并尽量优化,用于Edge AI,然后上传到我的Hugging Face账号。我想现在大约有85个模型。',
         '至于我为什么要做它:我刚开始时,移动端推理有几个其他选择,但大多基于llama/GGUF,要收费、有过滤、带广告,而且并不真正以性能为导向,也没有可以深入使用的API后端。我也没见过使用MNN的应用,而作为工程师,当时的MNN有时比GGUF快50%,这让我非常兴奋。',
@@ -126,7 +123,6 @@ export const app: ToolRecord = {
       ],
       es: [
         'Creo que nuestra mejor función es autoForge, que encuentra la mejor y más rápida configuración de inferencia para cada dispositivo y modelo: CPU, OpenCL o Vulkan, número de hilos y tamaño de contexto.',
-        'Originalmente tenía 4 de estas tarjetas de personaje desde el principio, pero hasta hace quizá un mes la app no ofrecía el comportamiento predeterminado del sistema sin un prompt, lo que molestaba a algunas personas.',
         'La app es en realidad solo yo y otro amigo, guardian37x en Discord.',
         'Convierto y trato de optimizar muchos de los LLM más pequeños para Edge AI y los subo a mi cuenta de Hugging Face. Creo que ahora hay unos 85 modelos allí.',
         'En cuanto a por qué la creé: cuando empecé, había algunas otras opciones para inferencia móvil, pero la mayoría se basaban en llama/GGUF, costaban dinero, estaban filtradas, tenían anuncios y no estaban realmente orientadas al rendimiento ni tenían un backend de API para profundizar de verdad. Tampoco había visto ninguna que usara MNN, y como ingeniero, MNN en ese momento era a veces un 50 % más rápido que GGUF, lo que me entusiasmaba mucho.',
@@ -134,7 +130,6 @@ export const app: ToolRecord = {
       ],
       pt: [
         'Acho que o nosso melhor recurso é o autoForge, que encontra a melhor e mais rápida configuração de inferência para cada aparelho e modelo: CPU, OpenCL ou Vulkan, número de threads e tamanho de contexto.',
-        'Originalmente eu tinha 4 desses cartões de personagem desde o início, mas até talvez um mês atrás o aplicativo não oferecia o padrão do sistema puro, sem prompt, o que incomodava algumas pessoas.',
         'O aplicativo é, na verdade, só eu e mais um amigo, o guardian37x no Discord.',
         'Eu converto e tento otimizar muitos dos LLMs menores para Edge AI e os envio para a minha conta no Hugging Face. Acho que hoje há cerca de 85 modelos lá.',
         'Quanto ao motivo de eu tê-lo criado: quando comecei, havia algumas outras opções de inferência móvel, mas a maioria era baseada em llama/GGUF, custava dinheiro, era filtrada, tinha anúncios e não era realmente focada em desempenho nem tinha um backend de API para se aprofundar de verdade. Também não tinha visto nenhuma que usasse MNN, e, como engenheiro, o MNN na época chegava a ser 50% mais rápido que o GGUF, o que era muito empolgante.',
@@ -142,7 +137,6 @@ export const app: ToolRecord = {
       ],
       ar: [
         'أعتقد أن أفضل ميزة لدينا هي autoForge، التي تجد أفضل وأسرع إعداد للاستدلال لكل جهاز ولكل نموذج: CPU أو OpenCL أو Vulkan، وعدد الخيوط (threads)، وحجم السياق.',
-        'كان لدي في الأصل 4 من بطاقات الشخصيات هذه منذ البداية، لكن حتى قبل نحو شهر لم يكن التطبيق يقدم الإعداد الافتراضي للنظام من دون موجّه (prompt)، وهذا أزعج بعض الناس.',
         'التطبيق في الواقع مجرد أنا وصديق آخر، هو guardian37x على Discord.',
         'أقوم بتحويل الكثير من نماذج LLM الأصغر وتحسينها لـ Edge AI وأرفعها إلى حسابي على Hugging Face. أظن أن هناك نحو 85 نموذجًا هناك الآن.',
         'أما لماذا بنيته: حين بدأت، كانت هناك بعض الخيارات الأخرى للاستدلال على الهاتف، لكن معظمها كان قائمًا على llama/GGUF، وبعضها مدفوع أو مفلتر أو يعرض إعلانات، ولم تكن موجهة فعلًا نحو الأداء ولا تملك واجهة API خلفية للتعمق حقًا. ولم أكن قد رأيت أيًا منها يستخدم MNN، وبصفتي مهندسًا، كان MNN في ذلك الوقت أسرع أحيانًا بنسبة 50% من GGUF، وكان ذلك مثيرًا حقًا.',
@@ -150,7 +144,6 @@ export const app: ToolRecord = {
       ],
       ko: [
         '가장 좋은 기능은 autoForge라고 생각합니다. 기기와 모델마다 CPU, OpenCL 또는 Vulkan, 스레드 수, 컨텍스트 크기까지 가장 좋고 빠른 추론 설정을 찾아줍니다.',
-        '이 캐릭터 카드는 처음부터 4개가 있었지만, 한 달쯤 전까지는 프롬프트 없는 기본 시스템 상태를 제공하지 않아서 불편해하시는 분들이 있었습니다.',
         '이 앱은 사실 저와 Discord의 guardian37x라는 친구 한 명이 전부입니다.',
         'Edge AI용으로 작은 LLM을 많이 변환하고 최적화해서 제 Hugging Face 계정에 올리고 있습니다. 지금은 약 85개 모델이 있는 것 같습니다.',
         '제가 이 앱을 만든 이유는, 제가 시작했을 때 모바일 추론에는 몇 가지 다른 선택지가 있었지만 대부분 llama/GGUF 기반이었고, 유료이거나 필터링이 되어 있거나 광고가 있었으며, 성능 중심이 아니거나 깊이 파고들 수 있는 API 백엔드가 없었기 때문입니다. MNN을 쓰는 앱도 본 적이 없었고, 엔지니어로서 당시 MNN은 GGUF보다 때로는 50% 더 빨라서 정말 흥미로웠습니다.',
@@ -161,8 +154,8 @@ export const app: ToolRecord = {
   reviewSlug: 'tokforge-review',
   pqReview: {
     date: '2026-10-03',
-    version: '1.0',
-    versionSourceUrl: 'https://tokforge.ai/',
+    version: '1.3.6.1', // confirmed by the developer 2026-10-09; the 1.0 on tokforge.ai and the Play listing is a launch leftover
+    versionSourceUrl: 'https://play.google.com/store/apps/details?id=dev.tokforge',
   },
-  verdict: 'Best for Android users who want a free offline chat app with roleplay characters, on-device image generation, voice and per-chip speed benchmarking; limited by closed, unpublished source, a small install base, and an iPhone version that is still a TestFlight beta.',
+  verdict: 'Best for Android users who want a free offline chat app with roleplay characters, on-device image generation, voice and per-chip speed benchmarking; limited by proprietary closed source, a small install base, and an iPhone version that is still a public TestFlight beta.',
 }
