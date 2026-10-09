@@ -5,7 +5,7 @@ import type { Language } from '@/lib/blog/blogContent'
  * Kept separate from the report data so client components (tile, drawer)
  * don't bundle the full test content.
  */
-export const HANDS_ON_TEST_SLUGS: readonly string[] = ['draw-things']
+export const HANDS_ON_TEST_SLUGS: readonly string[] = ['draw-things', 'bobe']
 
 const URL_SUFFIX = '-hands-on-test'
 

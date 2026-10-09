@@ -65131,5 +65131,14 @@
     "dateModified": "2026-10-09",
     "url": "/power-local-llm/draw-things-hands-on-test",
     "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "BoBe Alpha on a 24 GB Mac: Easy to Install, Restarted When Deleted",
+    "excerpt": "Hands-on test on a MacBook Pro with M3 Pro. The in-app assistant did not name the macOS setting it needs, and the app restarted itself when the tester tried to delete it.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/power-local-llm/bobe-hands-on-test",
+    "cluster": "power-local-llm"
   }
 ]

@@ -18,7 +18,7 @@ export const PAGES: Page[] = [
   // Hands-on tests are not articles (no slug-map entry); their lastmod is the page's own publish date.
   ...HANDS_ON_TEST_SLUGS.flatMap((appSlug) => {
     const test = getHandsOnTest(appSlug)
-    return test
+    return test && test.index !== false
       ? [{ path: `/power-local-llm/${handsOnTestUrlSlug(appSlug)}`, priority: 0.7, changefreq: 'monthly' as const, lastmod: test.published }]
       : []
   }),

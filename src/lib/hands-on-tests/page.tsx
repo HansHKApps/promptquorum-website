@@ -24,7 +24,7 @@ export function buildHandsOnTestMetadata(urlSlug: string): Metadata | null {
   return {
     title: test.title,
     description: test.dek,
-    robots: { index: true, follow: true },
+    robots: test.index === false ? { index: false, follow: false } : { index: true, follow: true },
     alternates: generateAlternates(pathFor(urlSlug), 'en', true, ['en']),
     openGraph: { title: test.title, description: test.dek, images: [{ url: '/og-image.png', alt: 'PromptQuorum' }], type: 'article', siteName: 'PromptQuorum' },
     twitter: { card: 'summary_large_image', title: test.title, description: test.dek },
@@ -60,9 +60,10 @@ export function buildHandsOnTestPageElement(urlSlug: string) {
         '@type': 'SoftwareApplication',
         '@id': `${url}#app`,
         name: test.app.name,
-        applicationCategory: 'MultimediaApplication',
-        operatingSystem: 'macOS',
-        publisher: { '@type': 'Organization', name: test.app.vendor },
+        applicationCategory: /image/i.test(test.app.category) ? 'MultimediaApplication' : 'UtilitiesApplication',
+        ...(/macos/i.test(test.app.platform) && { operatingSystem: 'macOS' }),
+        // A vendor that was not recorded must not be published as an organisation name.
+        ...(!/^not recorded/i.test(test.app.vendor) && { publisher: { '@type': 'Organization', name: test.app.vendor } }),
       },
       {
         '@type': 'BreadcrumbList',

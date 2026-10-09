@@ -1,4 +1,5 @@
 import drawThings from './data/draw-things.json'
+import bobe from './data/bobe.json'
 
 export type EvidenceKey =
   | 'observed'
@@ -31,6 +32,8 @@ export type HandsOnTest = {
   dek: string
   status: string
   published: string
+  /** false = served noindex and left out of the sitemap (scaffold stage). Omitted/true = indexable. */
+  index?: boolean
   started: string
   meta: [string, string, EvidenceKey | null][]
   disclosure: string
@@ -40,10 +43,23 @@ export type HandsOnTest = {
   tldr: [EvidenceKey, string][]
   quotes: string[]
   quote_note: string
-  moments: [string, string, string, string][]
+  /** [title, text, imageId | null, chapterId]; a moment without an image renders as a text card. */
+  moments: [string, string, string | null, string][]
+  moments_title?: string
+  moments_nav?: string
   chapters: { id: string; title: string; items: [EvidenceKey, string, string | null][] }[]
   claims: [string, string, string, EvidenceKey][]
-  fit: { memory_gb: number; rows: [string, number, string, EvidenceKey][]; note: string }
+  fit: {
+    memory_gb: number
+    rows: [string, number, string, EvidenceKey][]
+    note: string
+    title?: string
+    nav?: string
+    scale?: number
+    memline?: string
+    above?: string
+    below?: string
+  }
   usage_log: [string, string, string, string, string, string[]][]
   errors: [EvidenceKey, string][]
   findings: [string, string, string, EvidenceKey, string, string[]][]
@@ -60,6 +76,7 @@ export type HandsOnTest = {
 /** Registry keyed by app slug (matches ToolRecord.slug). */
 const HANDS_ON_TESTS: Record<string, HandsOnTest> = {
   'draw-things': drawThings as unknown as HandsOnTest,
+  bobe: bobe as unknown as HandsOnTest,
 }
 
 export function getHandsOnTest(appSlug: string): HandsOnTest | null {

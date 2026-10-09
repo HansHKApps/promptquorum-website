@@ -13639,6 +13639,26 @@
     "width": 1200,
     "height": 675
   },
+  "/images/bobe-chat-asks-for-clarification-instead-of-macos-permission-steps.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1429,
+    "height": 893
+  },
+  "/images/bobe-chat-user-asks-answer-or-joke.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1431,
+    "height": 349
+  },
+  "/images/bobe-desktop-chat-no-macos-setting-given.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1100,
+    "height": 984
+  },
+  "/images/bobe-model-choice-dialog-small-medium-large-local-models.webp": {
+    "encodingFormat": "image/webp",
+    "width": 572,
+    "height": 636
+  },
   "/images/bobe-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -13683,6 +13703,16 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
+  },
+  "/images/bobe-screen-awareness-dialog-screen-recording-not-granted.webp": {
+    "encodingFormat": "image/webp",
+    "width": 613,
+    "height": 665
+  },
+  "/images/bobe-setup-downloading-ai-engine-and-language-model.webp": {
+    "encodingFormat": "image/webp",
+    "width": 597,
+    "height": 654
   },
   "/images/bodega-one-code-review-2026-hero-ar.webp": {
     "encodingFormat": "image/webp",
