@@ -152,6 +152,27 @@ async function main() {
     pushAllLocales(entries, 'smart-home', slug, langMap)
   }
 
+  // Hands-on tests live under /power-local-llm/<app>-hands-on-test but are not
+  // articles (no slug-map entry), so they are added from their own data files.
+  // English only until their translations ship.
+  const testsDir = path.join(ROOT, 'src/lib/hands-on-tests/data')
+  for (const file of fs.readdirSync(testsDir).filter((f) => f.endsWith('.json'))) {
+    const test = JSON.parse(fs.readFileSync(path.join(testsDir, file), 'utf8'))
+    if (!test.title || !ISO_DATE_RE.test(test.published ?? '')) {
+      console.warn(`  [SKIP] hands-on test ${file}: missing title or ISO 'published' date`)
+      continue
+    }
+    entries.push({
+      lang: 'en',
+      title: test.title,
+      excerpt: test.dek ?? '',
+      publishDate: test.published,
+      dateModified: test.published,
+      url: articleUrl('power-local-llm', `${test.app.slug}-hands-on-test`, 'en'),
+      cluster: 'power-local-llm',
+    })
+  }
+
   fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true })
   fs.writeFileSync(OUTPUT_PATH, JSON.stringify(entries, null, 2) + '\n')
   const byLang = LOCALES.map((l) => `${l}:${entries.filter((e) => e.lang === l).length}`).join(' ')

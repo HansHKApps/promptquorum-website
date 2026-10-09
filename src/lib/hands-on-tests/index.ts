@@ -30,6 +30,7 @@ export type HandsOnTest = {
   title: string
   dek: string
   status: string
+  published: string
   started: string
   meta: [string, string, EvidenceKey | null][]
   disclosure: string
@@ -65,4 +66,4 @@ export function getHandsOnTest(appSlug: string): HandsOnTest | null {
   return HANDS_ON_TESTS[appSlug] ?? null
 }
 
-export { handsOnTestUrl, HANDS_ON_TEST_SLUGS } from './links'
+export { handsOnTestUrl, handsOnTestUrlSlug, appSlugFromHandsOnUrlSlug, HANDS_ON_TEST_SLUGS } from './links'

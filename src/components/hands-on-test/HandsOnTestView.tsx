@@ -2,6 +2,7 @@ import type { EvidenceKey, HandsOnImage, HandsOnTest } from '@/lib/hands-on-test
 import { EvidenceChip } from './EvidenceChip'
 import { TestFigure } from './TestFigure'
 import { FindingsTable } from './FindingsTable'
+import { featureReviewUrl } from '@/components/local-ai-directory/reviewLinks'
 
 const H2 = 'mt-12 mb-4 border-t-2 border-text-primary pt-3 text-2xl font-bold text-text-primary'
 const CARD = 'rounded-md border border-border bg-white p-5'
@@ -14,6 +15,7 @@ const STATUS: Record<string, string> = {
 
 export function HandsOnTestView({ test }: { test: HandsOnTest }) {
   const L = test.evidence_labels
+  const review = featureReviewUrl(test.app.slug, 'en')
   const chip = (k: EvidenceKey) => <EvidenceChip kind={k} label={L[k].label} />
   const img = (id: string): HandsOnImage => test.images.find((i) => i.id === id) as HandsOnImage
   const figNo: Record<string, number> = Object.fromEntries(test.images.map((i) => [i.id, i.figure]))
@@ -47,6 +49,16 @@ export function HandsOnTestView({ test }: { test: HandsOnTest }) {
             <a key={id} href={`#${id}`} className="border-b border-border pb-0.5 text-text-primary hover:border-primary hover:text-primary">{label}</a>
           ))}
         </nav>
+        <p className="mt-3 text-sm text-text-muted">
+          Related:{' '}
+          {review && (
+            <>
+              <a href={review} className="text-primary underline">PromptQuorum review of {test.app.name}</a>
+              {' · '}
+            </>
+          )}
+          <a href="/directory" className="text-primary underline">Local AI app directory</a>
+        </p>
       </header>
 
       <TestFigure image={hero} />

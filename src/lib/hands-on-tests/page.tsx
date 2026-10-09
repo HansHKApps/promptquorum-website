@@ -1,50 +1,43 @@
 import type { Metadata } from 'next'
-import { notFound } from 'next/navigation'
 import { generateAlternates } from '@/lib/hreflang'
-import { getHandsOnTest } from '@/lib/hands-on-tests'
-import { HANDS_ON_TEST_SLUGS } from '@/lib/hands-on-tests/links'
 import { buildImageObject } from '@/lib/imageObjectSchema'
 import { HandsOnTestView } from '@/components/hands-on-test/HandsOnTestView'
+import { getHandsOnTest } from './index'
+import { appSlugFromHandsOnUrlSlug, handsOnTestUrlSlug } from './links'
 
-const LANG = 'en' as const
 const BASE = 'https://www.promptquorum.com'
 
-export const dynamic = 'force-static'
-export const revalidate = 86400
-
-type Params = { slug: string }
-
-export function generateStaticParams(): Params[] {
-  return HANDS_ON_TEST_SLUGS.map((slug) => ({ slug }))
+/** Slugs for generateStaticParams on /power-local-llm/[slug]. */
+export function getHandsOnStaticParams(slugs: readonly string[]) {
+  return slugs.map((appSlug) => ({ slug: handsOnTestUrlSlug(appSlug) }))
 }
 
-function pathFor(slug: string) {
-  return `/hands-on-tests/${slug}`
+function pathFor(urlSlug: string) {
+  return `/power-local-llm/${urlSlug}`
 }
 
-export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
-  const { slug } = await params
-  const test = getHandsOnTest(slug)
-  if (!test) return {}
-  const title = test.title
-  const description = test.dek
+/** Returns null when `urlSlug` is not a hands-on test, so the caller falls through to the article builders. */
+export function buildHandsOnTestMetadata(urlSlug: string): Metadata | null {
+  const appSlug = appSlugFromHandsOnUrlSlug(urlSlug)
+  const test = appSlug ? getHandsOnTest(appSlug) : null
+  if (!test) return null
   return {
-    title,
-    description,
+    title: test.title,
+    description: test.dek,
     // Scaffold stage: noindex until the open items are confirmed and the indexing flip is approved.
     robots: { index: false, follow: false },
-    alternates: generateAlternates(pathFor(slug), LANG, true, ['en']),
-    openGraph: { title, description, images: [{ url: '/og-image.png', alt: 'PromptQuorum' }], type: 'article', siteName: 'PromptQuorum' },
-    twitter: { card: 'summary_large_image', title, description },
+    alternates: generateAlternates(pathFor(urlSlug), 'en', true, ['en']),
+    openGraph: { title: test.title, description: test.dek, images: [{ url: '/og-image.png', alt: 'PromptQuorum' }], type: 'article', siteName: 'PromptQuorum' },
+    twitter: { card: 'summary_large_image', title: test.title, description: test.dek },
   }
 }
 
-export default async function HandsOnTestPage({ params }: { params: Promise<Params> }) {
-  const { slug } = await params
-  const test = getHandsOnTest(slug)
-  if (!test) notFound()
+export function buildHandsOnTestPageElement(urlSlug: string) {
+  const appSlug = appSlugFromHandsOnUrlSlug(urlSlug)
+  const test = appSlug ? getHandsOnTest(appSlug) : null
+  if (!test || !appSlug) return null
 
-  const url = `${BASE}${pathFor(slug)}`
+  const url = `${BASE}${pathFor(urlSlug)}`
   const hero = test.images.find((i) => i.role === 'hero')
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -55,9 +48,9 @@ export default async function HandsOnTestPage({ params }: { params: Promise<Para
         url,
         headline: test.title,
         description: test.dek,
-        inLanguage: LANG,
-        datePublished: test.started,
-        dateModified: test.started,
+        inLanguage: 'en',
+        datePublished: test.published,
+        dateModified: test.published,
         author: { '@type': 'Person', name: 'Hans Kuepper' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: BASE },
         about: { '@id': `${url}#app` },
