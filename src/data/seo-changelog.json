@@ -2201,5 +2201,182 @@
     ],
     "reason": "geo-meta-optimizer: meta too long (>158), answer-first rewrite; added naming variants, Enterprise and customization FAQs (GSC: open webui / openwebui / enterprise / que es)",
     "baseline": null
+  },
+  {
+    "id": "8141d42a-ef13-4b2c-9f9e-26b2c0ff3aee",
+    "slug": "/power-local-llm/windsurf-review",
+    "date": "2026-10-09T19:07:49.051Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Windsurf Review 2026: What Happened, Now Devin Desktop",
+        "new": "Windsurf Is Now Devin Desktop: What Happened (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Windsurf is now Devin Desktop, owned by Cognition AI, after a collapsed $3B OpenAI deal and a $2.4B Google licensing deal in July 2025. Full history and current status.",
+        "new": "Yes. Cognition AI renamed Windsurf to Devin Desktop on June 2, 2026, after buying it in July 2025. Rebrand history, owners, downloads and pricing status."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-A/B1 - GSC rebrand queries (is windsurf now devin, what happened); answer-first title+meta, 4 FAQs (Devin/rename/old name)",
+    "baseline": {
+      "position": 0,
+      "impressions": null,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC top queries 2026-10-09"
+    }
+  },
+  {
+    "id": "fb1e2eb8-462f-4804-a695-c08e61c59c8e",
+    "slug": "/de/power-local-llm/windsurf-review",
+    "date": "2026-10-09T19:07:49.147Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Windsurf Review 2026: Was geschah, jetzt Devin Desktop",
+        "new": "Windsurf heißt jetzt Devin Desktop: Was geschah (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Windsurf heißt jetzt Devin Desktop, im Besitz von Cognition AI, nach einer gescheiterten 3-Mrd.-$-OpenAI-Übernahme und einem 2,4-Mrd.-$-Google-Lizenzdeal im Juli 2025. Vollständige Historie und aktueller Status.",
+        "new": "Ja, Windsurf heißt jetzt Devin Desktop: Cognition AI benannte es am 2. Juni 2026 um, nachdem es im Juli 2025 übernommen wurde. Historie, Download, Preise."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-A/B1 - GSC rebrand queries (is windsurf now devin, what happened); answer-first title+meta, 4 FAQs (Devin/rename/old name)",
+    "baseline": null
+  },
+  {
+    "id": "f8532d28-4e02-468f-b4af-c22e472fb59b",
+    "slug": "/fr/power-local-llm/windsurf-review",
+    "date": "2026-10-09T19:07:49.242Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Windsurf Review 2026 : ce qui s'est passé, désormais Devin Desktop",
+        "new": "Windsurf devient Devin Desktop : ce qui s'est passé (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Windsurf s'appelle désormais Devin Desktop, propriété de Cognition AI, après l'échec d'un deal OpenAI à 3 Md$ et un accord de licence Google à 2,4 Md$ en juillet 2025. Historique complet et statut actuel.",
+        "new": "Oui, Windsurf s'appelle désormais Devin Desktop : Cognition AI l'a renommé le 2 juin 2026, après son rachat en juillet 2025. Historique, téléchargement, prix."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-A/B1 - GSC rebrand queries (is windsurf now devin, what happened); answer-first title+meta, 4 FAQs (Devin/rename/old name)",
+    "baseline": null
+  },
+  {
+    "id": "667de898-9123-4a7b-af80-1fa89a61ab2a",
+    "slug": "/es/power-local-llm/windsurf-review",
+    "date": "2026-10-09T19:07:49.338Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Windsurf Review 2026: qué pasó, ahora Devin Desktop",
+        "new": "Windsurf ahora es Devin Desktop: qué pasó (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Windsurf ahora es Devin Desktop, propiedad de Cognition AI, tras el fracaso de un acuerdo de 3.000 M$ con OpenAI y un acuerdo de licencia de 2.400 M$ con Google en julio de 2025. Historia completa y estado actual.",
+        "new": "Sí, Windsurf ahora es Devin Desktop: Cognition AI lo renombró el 2 de junio de 2026 tras comprarlo en julio de 2025. Historia, dueños, descarga y precios."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-A/B1 - GSC rebrand queries (is windsurf now devin, what happened); answer-first title+meta, 4 FAQs (Devin/rename/old name)",
+    "baseline": null
+  },
+  {
+    "id": "ad5c08a9-54cb-48dc-b28c-6651e3ecc68c",
+    "slug": "/pt/power-local-llm/windsurf-review",
+    "date": "2026-10-09T19:07:49.434Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Windsurf Review 2026: o que aconteceu, agora Devin Desktop",
+        "new": "Windsurf agora é Devin Desktop: o que aconteceu (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "O Windsurf agora se chama Devin Desktop, propriedade da Cognition AI, após o fracasso de um acordo de US$ 3 bi com a OpenAI e um acordo de licenciamento de US$ 2,4 bi com o Google em julho de 2025. Histórico completo e status atual.",
+        "new": "Sim, o Windsurf agora é Devin Desktop: a Cognition AI o renomeou em 2 de junho de 2026, após comprá-lo em julho de 2025. Histórico, download e preços."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-A/B1 - GSC rebrand queries (is windsurf now devin, what happened); answer-first title+meta, 4 FAQs (Devin/rename/old name)",
+    "baseline": null
+  },
+  {
+    "id": "3a922d52-5d12-42b3-8275-8ae4ee61683a",
+    "slug": "/ja/power-local-llm/windsurf-review",
+    "date": "2026-10-09T19:07:49.529Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Windsurf レビュー2026: 何が起きたか、現在はDevin Desktop",
+        "new": "WindsurfがDevin Desktopに：経緯（2026）"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Windsurfは現在Devin Desktopと呼ばれ、Cognition AIが所有しています。2025年7月にOpenAIとの30億ドルの買収が破談し、Googleとの24億ドルのライセンス契約がありました。全体の経緯と現状を解説します。",
+        "new": "はい、WindsurfはDevin Desktopになりました。Cognition AIが2025年7月に買収し、2026年6月2日に改称。経緯、所有者、ダウンロード、料金の状況を解説します。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-A/B1 - GSC rebrand queries (is windsurf now devin, what happened); answer-first title+meta, 4 FAQs (Devin/rename/old name)",
+    "baseline": null
+  },
+  {
+    "id": "b91f9d77-d692-4cd6-90db-6af6b9ae8e06",
+    "slug": "/zh/power-local-llm/windsurf-review",
+    "date": "2026-10-09T19:07:49.623Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Windsurf 评测 2026：发生了什么，现更名 Devin Desktop",
+        "new": "Windsurf更名Devin Desktop：经过（2026）"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Windsurf 现已更名为 Devin Desktop，归 Cognition AI 所有。2025 年 7 月 OpenAI 30 亿美元收购告吹，谷歌以 24 亿美元达成许可协议。完整历史与当前状态。",
+        "new": "是的，Windsurf 现已更名为 Devin Desktop：Cognition AI 于 2025 年 7 月收购，并在 2026 年 6 月 2 日更名。含更名经过、所有者、下载与定价现状。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-A/B1 - GSC rebrand queries (is windsurf now devin, what happened); answer-first title+meta, 4 FAQs (Devin/rename/old name)",
+    "baseline": null
+  },
+  {
+    "id": "ed8d8fbb-5441-4f09-870d-85f95659f743",
+    "slug": "/ar/power-local-llm/windsurf-review",
+    "date": "2026-10-09T19:07:49.719Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة Windsurf 2026: ماذا حدث، والآن Devin Desktop",
+        "new": "Windsurf أصبح Devin Desktop: ماذا حدث (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "أصبح Windsurf الآن Devin Desktop، مملوكاً لـ Cognition AI، بعد فشل صفقة بقيمة 3 مليارات دولار مع OpenAI واتفاقية ترخيص بقيمة 2.4 مليار دولار مع Google في يوليو 2025. التاريخ الكامل والوضع الحالي.",
+        "new": "نعم، أصبح Windsurf هو Devin Desktop: أعادت Cognition AI تسميته في 2 يونيو 2026 بعد شرائه في يوليو 2025. التاريخ والتنزيل وحالة الأسعار."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-A/B1 - GSC rebrand queries (is windsurf now devin, what happened); answer-first title+meta, 4 FAQs (Devin/rename/old name)",
+    "baseline": null
+  },
+  {
+    "id": "deaabd65-6af1-4919-8e92-ba57fde4b8d9",
+    "slug": "/ko/power-local-llm/windsurf-review",
+    "date": "2026-10-09T19:07:49.814Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Windsurf 리뷰 2026: 무슨 일이 있었나, 현재는 Devin Desktop",
+        "new": "Windsurf→Devin Desktop 개명 (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Windsurf는 이제 Devin Desktop이라는 이름으로, Cognition AI가 소유하고 있습니다. 2025년 7월 OpenAI와의 30억 달러 규모 거래가 무산되고 Google과 24억 달러 규모 라이선스 계약이 체결되었습니다. 전체 역사와 현재 상태를 다룹니다.",
+        "new": "네, Windsurf는 이제 Devin Desktop입니다. Cognition AI가 2025년 7월 인수해 2026년 6월 2일 이름을 바꿨습니다. 개명 경위, 소유사, 다운로드, 요금 현황."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-A/B1 - GSC rebrand queries (is windsurf now devin, what happened); answer-first title+meta, 4 FAQs (Devin/rename/old name)",
+    "baseline": null
   }
 ]
