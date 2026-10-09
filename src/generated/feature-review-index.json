@@ -1183,5 +1183,10 @@
     "cluster": "power-local-llm",
     "urlSlug": "mlxhub-review",
     "url": "/power-local-llm/mlxhub-review"
+  },
+  "local-ai-geetmark": {
+    "cluster": "power-local-llm",
+    "urlSlug": "local-ai-geetmark-review",
+    "url": "/power-local-llm/local-ai-geetmark-review"
   }
 }

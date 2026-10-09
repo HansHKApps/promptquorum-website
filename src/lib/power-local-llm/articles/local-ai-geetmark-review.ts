@@ -290,14 +290,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           {
-            q: 'Is Local AI: Offline Chat & Image free?',
-            a: 'Yes, the Google Play price is EUR 0. The listing carries a "Contains ads" label, and the sources do not say whether paid upgrades exist.',
-          },
-          {
-            q: 'Is it open source?',
-            a: 'No source repository or license was found for the Play app. The developer\'s website mentions an open-source Android app, but its GitHub repositories returned 404 and the site does not link the Play listing.',
-          },
-          {
             q: 'Who makes it?',
             a: 'Google Play lists the publisher as GeetMark and links the developer\'s website and a privacy policy; no company background was found in the sources read.',
           },
@@ -703,14 +695,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           {
-            q: 'Ist Local AI: Offline Chat & Image kostenlos?',
-            a: 'Ja, der Preis bei Google Play beträgt 0 EUR. Der Eintrag trägt den Hinweis „Enthält Werbung“, und die Quellen sagen nicht, ob es kostenpflichtige Upgrades gibt.',
-          },
-          {
-            q: 'Ist sie quelloffen?',
-            a: 'Für die Play-App wurden weder ein Quellcode-Repository noch eine Lizenz gefunden. Die Website des Entwicklers erwähnt eine Open-Source-Android-App, doch deren GitHub-Repositories antworteten mit 404, und die Website verlinkt den Play-Eintrag nicht.',
-          },
-          {
             q: 'Wer steckt dahinter?',
             a: 'Google Play führt GeetMark als Herausgeber und verlinkt die Website des Entwicklers sowie eine Datenschutzerklärung; Hintergründe zum Unternehmen wurden in den gelesenen Quellen nicht gefunden.',
           },
@@ -1082,14 +1066,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
-          {
-            q: '¿Local AI: Offline Chat & Image es gratis?',
-            a: 'Sí, el precio en Google Play es de 0 EUR. La ficha lleva la etiqueta «Contiene anuncios», y las fuentes no dicen si existen mejoras de pago.',
-          },
-          {
-            q: '¿Es de código abierto?',
-            a: 'No se encontró ningún repositorio de código fuente ni licencia para la app de Play. El sitio web del desarrollador menciona una app de Android de código abierto, pero sus repositorios de GitHub devolvieron 404 y el sitio no enlaza la ficha de Play.',
-          },
           {
             q: '¿Quién la crea?',
             a: 'Google Play indica como publicador a GeetMark y enlaza el sitio web del desarrollador y una política de privacidad; en las fuentes consultadas no se encontraron antecedentes de la empresa.',
@@ -1463,14 +1439,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquentes',
         faqs: [
           {
-            q: 'Local AI: Offline Chat & Image est-elle gratuite ?',
-            a: 'Oui, le prix sur Google Play est de 0 EUR. La fiche porte la mention « Contient des annonces », et les sources ne disent pas s\'il existe des options payantes.',
-          },
-          {
-            q: 'Est-elle open source ?',
-            a: 'Aucun dépôt de code source ni licence n\'a été trouvé pour l\'application Play. Le site du développeur mentionne une application Android open source, mais ses dépôts GitHub ont renvoyé une erreur 404 et le site ne lie pas la fiche Play.',
-          },
-          {
             q: 'Qui l\'a créée ?',
             a: 'Google Play indique GeetMark comme éditeur et lie le site du développeur ainsi qu\'une politique de confidentialité ; aucune information sur l\'entreprise n\'a été trouvée dans les sources consultées.',
           },
@@ -1840,14 +1808,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
-          {
-            q: 'Local AI: Offline Chat & Imageは無料ですか?',
-            a: 'はい。Google Playの価格は0ユーロです。掲載情報に「広告を含む」の表示があり、有料アップグレードがあるかどうかは情報源に書かれていません。',
-          },
-          {
-            q: 'オープンソースですか?',
-            a: 'Playのアプリについては、ソースリポジトリもライセンスも見つかりませんでした。開発者のウェブサイトはオープンソースのAndroidアプリに触れていますが、そのGitHubリポジトリは404を返し、サイトはPlayの掲載ページにリンクしていません。',
-          },
           {
             q: '誰が作っていますか?',
             a: 'Google Playは提供元をGeetMarkとし、開発者のウェブサイトとプライバシーポリシーへのリンクを掲載しています。確認した情報源に企業の背景情報は見つかりませんでした。',
@@ -2221,14 +2181,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           {
-            q: 'O Local AI: Offline Chat & Image é gratuito?',
-            a: 'Sim, o preço no Google Play é de 0 EUR. A página traz o rótulo "Contém anúncios", e as fontes não dizem se existem upgrades pagos.',
-          },
-          {
-            q: 'É de código aberto?',
-            a: 'Nenhum repositório de código-fonte nem licença foi encontrado para o app do Play. O site do desenvolvedor menciona um app Android de código aberto, mas seus repositórios no GitHub retornaram 404 e o site não vincula a página do Play.',
-          },
-          {
             q: 'Quem faz o app?',
             a: 'O Google Play lista a GeetMark como publicadora e vincula o site do desenvolvedor e uma política de privacidade; nenhum histórico da empresa foi encontrado nas fontes lidas.',
           },
@@ -2601,14 +2553,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           {
-            q: 'هل Local AI: Offline Chat & Image مجاني؟',
-            a: 'نعم، السعر على Google Play هو 0 يورو. تحمل الصفحة وسم «يحتوي على إعلانات»، ولا تذكر المصادر ما إذا كانت هناك ترقيات مدفوعة.',
-          },
-          {
-            q: 'هل هو مفتوح المصدر؟',
-            a: 'لم يُعثر على مستودع شيفرة مصدرية ولا ترخيص لتطبيق Play. يذكر موقع المطوّر تطبيق Android مفتوح المصدر، لكن مستودعاته على GitHub أعادت الخطأ 404 والموقع لا يربط صفحة Play.',
-          },
-          {
             q: 'من يصنعه؟',
             a: 'تذكر Google Play الناشر GeetMark وتربط موقع المطوّر وسياسة خصوصية؛ ولم يُعثر على خلفية عن الشركة في المصادر المقروءة.',
           },
@@ -2976,14 +2920,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
-          {
-            q: 'Local AI: Offline Chat & Image 免费吗?',
-            a: '是的,Google Play 上的价格为 0 欧元。页面带有“包含广告”标签,来源未说明是否存在付费升级。',
-          },
-          {
-            q: '它是开源的吗?',
-            a: '未找到 Play 应用的源代码仓库或许可证。开发者网站提到一款开源 Android 应用,但其 GitHub 仓库返回 404,且网站没有链接 Play 页面。',
-          },
           {
             q: '是谁开发的?',
             a: 'Google Play 将发布者列为 GeetMark,并链接了开发者网站和隐私政策;所查阅的来源中未找到公司背景信息。',
@@ -3356,14 +3292,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
-          {
-            q: 'Local AI: Offline Chat & Image는 무료인가요?',
-            a: '네, Google Play 가격은 0유로입니다. 페이지에 “광고 포함” 표시가 있으며, 유료 업그레이드가 있는지는 출처에 나와 있지 않습니다.',
-          },
-          {
-            q: '오픈소스인가요?',
-            a: 'Play 앱의 소스 저장소도 라이선스도 찾지 못했습니다. 개발자 웹사이트는 오픈소스 Android 앱을 언급하지만 그 GitHub 저장소는 404를 반환했고, 웹사이트는 Play 페이지를 링크하지 않습니다.',
-          },
           {
             q: '누가 만들었나요?',
             a: 'Google Play는 게시자를 GeetMark로 표시하고 개발자 웹사이트와 개인정보 처리방침을 링크합니다. 확인한 출처에서는 회사 배경 정보를 찾지 못했습니다.',
