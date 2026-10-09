@@ -7,6 +7,19 @@ import type { Language } from '@/lib/blog/blogContent'
  */
 export const HANDS_ON_TEST_SLUGS: readonly string[] = ['draw-things', 'bobe']
 
+/**
+ * Languages each test is published in (a data/<app>.<lang>.json file must exist for every entry;
+ * scripts/validate-hands-on-tests.mjs checks it). English is the source and sits at the unprefixed root.
+ */
+export const HANDS_ON_TEST_LANGS: Record<string, readonly Language[]> = {
+  'draw-things': ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'],
+  bobe: ['en'],
+}
+
+export function handsOnTestLangs(appSlug: string): readonly Language[] {
+  return HANDS_ON_TEST_LANGS[appSlug] ?? []
+}
+
 const URL_SUFFIX = '-hands-on-test'
 
 /** URL slug under /power-local-llm/, next to the app's review (e.g. draw-things-hands-on-test). */
@@ -21,13 +34,9 @@ export function appSlugFromHandsOnUrlSlug(urlSlug: string): string | null {
   return HANDS_ON_TEST_SLUGS.includes(appSlug) ? appSlug : null
 }
 
-/**
- * Path to an app's hands-on test page, or null when the app has none.
- * Only the English page exists so far, so non-EN tiles hide the button
- * until their translation ships.
- */
+/** Path to an app's hands-on test page in `lang`, or null when the app has no test in that language. */
 export function handsOnTestUrl(appSlug: string, lang: Language): string | null {
-  if (!HANDS_ON_TEST_SLUGS.includes(appSlug)) return null
-  if (lang !== 'en') return null
-  return `/power-local-llm/${handsOnTestUrlSlug(appSlug)}`
+  if (!handsOnTestLangs(appSlug).includes(lang)) return null
+  const path = `/power-local-llm/${handsOnTestUrlSlug(appSlug)}`
+  return lang === 'en' ? path : `/${lang}${path}`
 }

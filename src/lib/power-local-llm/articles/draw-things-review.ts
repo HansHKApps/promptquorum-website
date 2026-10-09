@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich des Draw-Things-Verzeichniseintrags neben weiteren Bildgenerierungs-Apps.',
-          '[Draw Things Praxistest](/power-local-llm/draw-things-hands-on-test) — ein Praxistest auf einem MacBook Pro mit M3 Pro und 24 GB, bei dem jede Aussage danach gekennzeichnet ist, woher sie stammt (nur auf Englisch).',
+          '[Draw Things Praxistest](/de/power-local-llm/draw-things-hands-on-test) — ein Praxistest auf einem MacBook Pro mit M3 Pro und 24 GB, bei dem jede Aussage danach gekennzeichnet ist, woher sie stammt.',
           '[ComfyUI Review](/de/power-local-llm/comfyui-review) — ein direkter Blick auf das nächstliegende lokale Bildgenerierungs-Gegenstück zu Draw Things, den kostenlosen knotenbasierten Editor, mit dem eine offizielle Brücke besteht.',
           '[AUTOMATIC1111 Review](/de/power-local-llm/automatic1111-review) — die langjährige quelloffene, browserbasierte Stable-Diffusion-WebUI, für Leser, die eine reine Desktop-, vollständig quelloffene Alternative suchen.',
           '[Stable Diffusion Review](/de/power-local-llm/stable-diffusion-review) — ein genauerer Blick auf die zugrunde liegende Open-Weight-Modellfamilie, die Draw Things ausführt, unabhängig von der jeweiligen Anwendung.',
@@ -950,7 +950,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           '[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils d\'IA locale auquel appartient cet article, incluant la fiche de Draw Things aux côtés d\'autres applications de génération d\'images.',
-          '[Test pratique de Draw Things](/power-local-llm/draw-things-hands-on-test) — un test réalisé sur un MacBook Pro M3 Pro de 24 Go, où chaque affirmation est étiquetée selon son origine (en anglais uniquement).',
+          '[Test pratique de Draw Things](/fr/power-local-llm/draw-things-hands-on-test) — un test réalisé sur un MacBook Pro M3 Pro de 24 Go, où chaque affirmation est étiquetée selon son origine.',
           '[Test ComfyUI](/fr/power-local-llm/comfyui-review) — un regard direct sur l\'équivalent local de génération d\'images le plus proche de Draw Things, l\'éditeur gratuit à base de nœuds avec lequel il dispose d\'un pont officiel.',
           '[Test AUTOMATIC1111](/fr/power-local-llm/automatic1111-review) — la WebUI Stable Diffusion open source et basée sur navigateur de longue date, pour les lecteurs qui veulent une alternative réservée au bureau et entièrement open source.',
           '[Test Stable Diffusion](/fr/power-local-llm/stable-diffusion-review) — un regard plus approfondi sur la famille de modèles à poids ouverts sous-jacente que Draw Things exécute, indépendamment de l\'application spécifique.',
@@ -1266,7 +1266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[Local LLM Software Directory 2026](/ja/directory) — 本記事が属する、他の画像生成アプリと並ぶDraw Thingsのディレクトリエントリを含む、ローカルAIツールの完全カタログ。',
-          '[Draw Thingsの実機テスト](/power-local-llm/draw-things-hands-on-test) — 24 GBのMacBook Pro（M3 Pro）で行ったテスト。各記述に根拠のラベルを付けています（英語のみ）。',
+          '[Draw Thingsの実機テスト](/ja/power-local-llm/draw-things-hands-on-test) — 24 GBのMacBook Pro（M3 Pro）で行ったテスト。各記述に根拠のラベルを付けています。',
           '[ComfyUI レビュー](/ja/power-local-llm/comfyui-review) — Draw Thingsに最も近いローカル画像生成の同等品であり、公式にブリッジ接続されている無料ノードベースエディタを直接解説。',
           '[AUTOMATIC1111 レビュー](/ja/power-local-llm/automatic1111-review) — デスクトップ専用で完全にオープンソースな代替を求める読者向けに、長年運用されてきたオープンソースのブラウザベースStable Diffusion WebUI。',
           '[Stable Diffusion レビュー](/ja/power-local-llm/stable-diffusion-review) — 特定のアプリケーションとは切り離して、Draw Thingsが実行する基盤のオープンウェイトモデルファミリーを詳しく解説。',
@@ -1582,7 +1582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[2026本地LLM软件目录](/zh/directory) — 本文所属的本地AI工具完整目录，包括Draw Things的目录条目及其他图像生成应用。',
-          '[Draw Things实测](/power-local-llm/draw-things-hands-on-test) — 在24 GB内存的MacBook Pro（M3 Pro）上进行的测试，每条陈述都标明了依据（仅英文）。',
+          '[Draw Things实测](/zh/power-local-llm/draw-things-hands-on-test) — 在24 GB内存的MacBook Pro（M3 Pro）上进行的测试，每条陈述都标明了依据。',
           '[ComfyUI评测](/zh/power-local-llm/comfyui-review) — 直接了解Draw Things最接近的本地图像生成对应产品，即与其官方桥接的免费节点式编辑器。',
           '[AUTOMATIC1111评测](/zh/power-local-llm/automatic1111-review) — 历史悠久的开源、基于浏览器的Stable Diffusion WebUI，适合希望使用纯桌面、完全开源替代方案的读者。',
           '[Stable Diffusion评测](/zh/power-local-llm/stable-diffusion-review) — 深入了解Draw Things所运行的底层开放权重模型家族，与具体应用无关。',
@@ -1898,7 +1898,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Directorio de Software LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la ficha de directorio de Draw Things junto a otras apps de generación de imágenes.',
-          '[Prueba práctica de Draw Things](/power-local-llm/draw-things-hands-on-test) — una prueba en un MacBook Pro con M3 Pro y 24 GB, en la que cada afirmación indica cómo se sabe (solo en inglés).',
+          '[Prueba práctica de Draw Things](/es/power-local-llm/draw-things-hands-on-test) — una prueba en un MacBook Pro con M3 Pro y 24 GB, en la que cada afirmación indica cómo se sabe.',
           '[Reseña de ComfyUI](/es/power-local-llm/comfyui-review) — un vistazo directo al equivalente de generación de imágenes local más cercano a Draw Things, el editor gratuito basado en nodos con el que tiene un puente oficial.',
           '[Reseña de AUTOMATIC1111](/es/power-local-llm/automatic1111-review) — la WebUI de Stable Diffusion de código abierto y basada en navegador de larga trayectoria, para lectores que quieren una alternativa solo de escritorio y totalmente de código abierto.',
           '[Reseña de Stable Diffusion](/es/power-local-llm/stable-diffusion-review) — un vistazo más detallado a la familia de modelos de pesos abiertos subyacente que ejecuta Draw Things, independientemente de cualquier aplicación específica.',
@@ -2214,7 +2214,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a ficha de diretório do Draw Things ao lado de outros apps de geração de imagens.',
-          '[Teste prático do Draw Things](/power-local-llm/draw-things-hands-on-test) — um teste em um MacBook Pro com M3 Pro e 24 GB, em que cada afirmação indica como se sabe (somente em inglês).',
+          '[Teste prático do Draw Things](/pt/power-local-llm/draw-things-hands-on-test) — um teste em um MacBook Pro com M3 Pro e 24 GB, em que cada afirmação indica como se sabe.',
           '[Análise do ComfyUI](/pt/power-local-llm/comfyui-review) — um olhar direto sobre o equivalente de geração de imagens local mais próximo do Draw Things, o editor gratuito baseado em nós com o qual ele tem uma ponte oficial.',
           '[Análise do AUTOMATIC1111](/pt/power-local-llm/automatic1111-review) — a WebUI Stable Diffusion de código aberto e baseada em navegador de longa data, para leitores que querem uma alternativa apenas desktop e totalmente de código aberto.',
           '[Análise do Stable Diffusion](/pt/power-local-llm/stable-diffusion-review) — um olhar mais aprofundado sobre a família de modelos de pesos abertos subjacente que o Draw Things executa, separadamente de qualquer aplicativo específico.',
@@ -2530,7 +2530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[دليل برامج نماذج اللغة المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك إدخال دليل Draw Things إلى جانب تطبيقات توليد صور أخرى.',
-          '[اختبار Draw Things العملي](/power-local-llm/draw-things-hands-on-test) — اختبار على جهاز MacBook Pro بمعالج M3 Pro وذاكرة 24 جيجابايت، مع وسم كل عبارة بمصدر معرفتها (بالإنجليزية فقط).',
+          '[اختبار Draw Things العملي](/ar/power-local-llm/draw-things-hands-on-test) — اختبار على جهاز MacBook Pro بمعالج M3 Pro وذاكرة 24 جيجابايت، مع وسم كل عبارة بمصدر معرفتها.',
           '[مراجعة ComfyUI](/ar/power-local-llm/comfyui-review) — نظرة مباشرة على أقرب نظير لـDraw Things في توليد الصور المحلي، وهو المحرر المجاني القائم على العُقد الذي يرتبط به Draw Things عبر جسر رسمي.',
           '[مراجعة AUTOMATIC1111](/ar/power-local-llm/automatic1111-review) — واجهة Stable Diffusion العريقة المفتوحة المصدر والعاملة عبر المتصفح، للقراء الراغبين في بديل مخصص لسطح المكتب فقط ومفتوح المصدر بالكامل.',
           '[مراجعة Stable Diffusion](/ar/power-local-llm/stable-diffusion-review) — نظرة أعمق على عائلة النماذج مفتوحة الأوزان الأساسية التي يشغّلها Draw Things، بمعزل عن أي تطبيق محدد.',
@@ -2846,7 +2846,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[2026 로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, 다른 이미지 생성 앱들과 나란히 있는 Draw Things의 디렉터리 항목을 포함합니다.',
-          '[Draw Things 직접 테스트](/power-local-llm/draw-things-hands-on-test) — 24GB MacBook Pro(M3 Pro)에서 진행한 테스트로, 모든 서술에 근거 라벨을 붙였습니다(영어로만 제공).',
+          '[Draw Things 직접 테스트](/ko/power-local-llm/draw-things-hands-on-test) — 24GB MacBook Pro(M3 Pro)에서 진행한 테스트로, 모든 서술에 근거 라벨을 붙였습니다.',
           '[ComfyUI 리뷰](/ko/power-local-llm/comfyui-review) — Draw Things와 공식적으로 연결된, 가장 가까운 로컬 이미지 생성 대응 제품인 무료 노드 기반 편집기를 직접 살펴봅니다.',
           '[AUTOMATIC1111 리뷰](/ko/power-local-llm/automatic1111-review) — 데스크톱 전용의 완전한 오픈소스 대안을 원하는 독자를 위한, 오랜 역사를 가진 오픈소스 브라우저 기반 Stable Diffusion WebUI입니다.',
           '[Stable Diffusion 리뷰](/ko/power-local-llm/stable-diffusion-review) — 특정 애플리케이션과 무관하게, Draw Things가 실행하는 기반 오픈 웨이트 모델 계열을 더 깊이 살펴봅니다.',

@@ -154,7 +154,7 @@ async function main() {
 
   // Hands-on tests live under /power-local-llm/<app>-hands-on-test but are not
   // articles (no slug-map entry), so they are added from their own data files.
-  // English only until their translations ship.
+  // One file per language: <app>.json (en) and <app>.<lang>.json.
   const testsDir = path.join(ROOT, 'src/lib/hands-on-tests/data')
   for (const file of fs.readdirSync(testsDir).filter((f) => f.endsWith('.json'))) {
     const test = JSON.parse(fs.readFileSync(path.join(testsDir, file), 'utf8'))
@@ -162,13 +162,14 @@ async function main() {
       console.warn(`  [SKIP] hands-on test ${file}: missing title or ISO 'published' date`)
       continue
     }
+    const testLang = test.locale ?? 'en'
     entries.push({
-      lang: 'en',
+      lang: testLang,
       title: test.title,
       excerpt: test.dek ?? '',
       publishDate: test.published,
       dateModified: test.published,
-      url: articleUrl('power-local-llm', `${test.app.slug}-hands-on-test`, 'en'),
+      url: articleUrl('power-local-llm', `${test.app.slug}-hands-on-test`, testLang),
       cluster: 'power-local-llm',
     })
   }

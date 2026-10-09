@@ -1,9 +1,12 @@
 import type { Metadata } from 'next'
+import type { Language } from '@/lib/blog/blogContent'
 import { generateAlternates } from '@/lib/hreflang'
+import { getLangDir, toOutputLocale } from '@/lib/i18n/constants'
 import { buildImageObject } from '@/lib/imageObjectSchema'
 import { HandsOnTestView } from '@/components/hands-on-test/HandsOnTestView'
+import { LangLinksBar } from '@/components/LangLinksBar'
 import { getHandsOnTest } from './index'
-import { appSlugFromHandsOnUrlSlug, handsOnTestUrlSlug } from './links'
+import { appSlugFromHandsOnUrlSlug, handsOnTestLangs, handsOnTestUrlSlug } from './links'
 
 const BASE = 'https://www.promptquorum.com'
 
@@ -16,27 +19,36 @@ function pathFor(urlSlug: string) {
   return `/power-local-llm/${urlSlug}`
 }
 
-/** Returns null when `urlSlug` is not a hands-on test, so the caller falls through to the article builders. */
-export function buildHandsOnTestMetadata(urlSlug: string): Metadata | null {
+function localizedPath(urlSlug: string, lang: Language) {
+  return lang === 'en' ? pathFor(urlSlug) : `/${lang}${pathFor(urlSlug)}`
+}
+
+/**
+ * Returns null when `urlSlug` is not a hands-on test, or the test has no `lang` version,
+ * so the caller falls through to the article builders (which 404 an unknown slug).
+ */
+export function buildHandsOnTestMetadata(urlSlug: string, lang: Language = 'en'): Metadata | null {
   const appSlug = appSlugFromHandsOnUrlSlug(urlSlug)
-  const test = appSlug ? getHandsOnTest(appSlug) : null
-  if (!test) return null
+  const test = appSlug ? getHandsOnTest(appSlug, lang) : null
+  if (!appSlug || !test) return null
+  const url = `${BASE}${localizedPath(urlSlug, lang)}`
   return {
     title: test.title,
     description: test.dek,
     robots: test.index === false ? { index: false, follow: false } : { index: true, follow: true },
-    alternates: generateAlternates(pathFor(urlSlug), 'en', true, ['en']),
-    openGraph: { title: test.title, description: test.dek, images: [{ url: '/og-image.png', alt: 'PromptQuorum' }], type: 'article', siteName: 'PromptQuorum' },
+    alternates: generateAlternates(pathFor(urlSlug), lang, true, [...handsOnTestLangs(appSlug)]),
+    openGraph: { title: test.title, description: test.dek, url, images: [{ url: '/og-image.png', alt: 'PromptQuorum' }], type: 'article', siteName: 'PromptQuorum' },
     twitter: { card: 'summary_large_image', title: test.title, description: test.dek },
   }
 }
 
-export function buildHandsOnTestPageElement(urlSlug: string) {
+export function buildHandsOnTestPageElement(urlSlug: string, lang: Language = 'en') {
   const appSlug = appSlugFromHandsOnUrlSlug(urlSlug)
-  const test = appSlug ? getHandsOnTest(appSlug) : null
+  const test = appSlug ? getHandsOnTest(appSlug, lang) : null
   if (!test || !appSlug) return null
 
-  const url = `${BASE}${pathFor(urlSlug)}`
+  const prefix = lang === 'en' ? '' : `/${lang}`
+  const url = `${BASE}${localizedPath(urlSlug, lang)}`
   const hero = test.images.find((i) => i.role === 'hero')
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -47,7 +59,7 @@ export function buildHandsOnTestPageElement(urlSlug: string) {
         url,
         headline: test.title,
         description: test.dek,
-        inLanguage: 'en',
+        inLanguage: toOutputLocale(lang),
         datePublished: test.published,
         dateModified: test.published,
         author: { '@type': 'Person', name: 'Hans Kuepper' },
@@ -68,9 +80,9 @@ export function buildHandsOnTestPageElement(urlSlug: string) {
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: BASE },
-          { '@type': 'ListItem', position: 2, name: 'Directory', item: `${BASE}/directory` },
-          { '@type': 'ListItem', position: 3, name: `${test.app.name} hands-on test`, item: url },
+          { '@type': 'ListItem', position: 1, name: test.ui.crumb_home, item: prefix ? `${BASE}${prefix}` : BASE },
+          { '@type': 'ListItem', position: 2, name: test.ui.crumb_directory, item: `${BASE}${prefix}/directory` },
+          { '@type': 'ListItem', position: 3, name: test.ui.crumb_test.replace('{app}', test.app.name), item: url },
         ],
       },
     ],
@@ -78,9 +90,10 @@ export function buildHandsOnTestPageElement(urlSlug: string) {
 
   return (
     <>
-      <main dir="ltr" className="min-h-screen bg-surface pb-20 pt-24">
+      <main dir={getLangDir(lang)} lang={toOutputLocale(lang)} className="min-h-screen bg-surface pb-20 pt-24">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          <HandsOnTestView test={test} />
+          <LangLinksBar cluster="power-local-llm" slug={urlSlug} availableLangs={[...handsOnTestLangs(appSlug)]} initialLang={lang} />
+          <HandsOnTestView test={test} lang={lang} />
         </div>
       </main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

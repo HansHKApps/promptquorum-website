@@ -1,0 +1,1366 @@
+{
+  "id": "pq-test-draw-things-2026-10-06",
+  "standard_version": "0.1",
+  "locale": "ja",
+  "app": {
+    "name": "Draw Things",
+    "slug": "draw-things",
+    "vendor": "Draw Things, Inc.",
+    "category": "ローカルAI画像生成",
+    "platform": "macOS（Mac App Store）",
+    "pricing_url": "https://drawthings.ai/pricing/"
+  },
+  "title": "24 GB MacのDraw Things：動けば速いが、最初は手探り",
+  "page_title": "Draw Things ハンズオンテスト",
+  "dek": "M3 Pro搭載MacBook Proでのハンズオンテスト。最初のプロンプトで返ってきたのは灰色の四角形でした。2つ目のモデルに替えると、画像が生成されました。",
+  "status": "完了",
+  "published": "2026-10-09",
+  "started": "2026-10-06T20:00:00+02:00",
+  "ended": null,
+  "meta": [
+    [
+      "アプリ",
+      "Draw Things（開発元：Draw Things, Inc.）。テスト時点のストア上のタイトル：「Offline AI Art」",
+      "observed"
+    ],
+    [
+      "バージョン",
+      "未記録",
+      null
+    ],
+    [
+      "テスター",
+      "Hans Kuepper（PromptQuorum創設者）",
+      null
+    ],
+    [
+      "開始",
+      "2026年10月6日 20:00（Europe/Berlin）",
+      "observed"
+    ],
+    [
+      "終了",
+      "未記録",
+      null
+    ],
+    [
+      "ハードウェア",
+      "MacBook Pro、Apple M3 Pro、24 GBユニファイドメモリ（ノートには「24 GB VRAM」とありますが、Apple Siliconは1つのメモリプールを共有します）",
+      "observed"
+    ],
+    [
+      "システム",
+      "macOS、テスト日時点の最新リリース。正確なバージョンは未記録",
+      null
+    ],
+    [
+      "入手元",
+      "Mac App Store。料金ページ：drawthings.ai/pricing",
+      "observed"
+    ],
+    [
+      "ストア掲載情報",
+      "175件の評価で星4.6、対象年齢18歳以上、「Photo & Video」カテゴリで8位、471 MB",
+      "observed"
+    ],
+    [
+      "テスト理由",
+      "テスターのGoogle Search Consoleデータで、Draw Thingsは過去28日間のクリック数で4位でした（順位の集計範囲は未記録）。日本語でのクリック数は英語を上回り、3位は韓国語、4位は中国語でした。",
+      "tester-estimate"
+    ],
+    [
+      "目的",
+      "ノートには明記されていません。ノートから導いた内容：24 GBのMacにDraw Thingsをインストールし、モデルを動かして画像を生成し、実際の作業を1つ試す（PromptQuorumのヒーロー画像）。",
+      "assumption"
+    ],
+    [
+      "使用したAI支援",
+      "ChatGPT（企業調査、プロンプト作成）、Perplexity（24 GB向けのモデルに関する助言）、Grok（回答は得られず）",
+      "observed"
+    ]
+  ],
+  "disclosure": "テスターはPromptQuorum（promptquorum.com）の創設者です。PromptQuorumはローカルAIアプリに関するコンテンツサイト兼ディレクトリで、Draw Thingsはこのサイト上でクリックを集めています。ノートには、開発元との接触、支払い、スポンサー契約の記録はありません。",
+  "verdict": {
+    "general": "高機能で、料金ページには無料版が掲載されています。24 GBのM3 Proでは、適したモデルをインストールしたあと、見栄えのよい画像が素早く生成されました。弱点は初回の使い始めです。テスターが見たモデル一覧にはサイズ、用途、ハードウェアへの適合度が表示されておらず、結果を練り直す方法も見つけられませんでした。",
+    "fit": "当面は使い続けません（「自分向けではなく、今は使わない」）。テスターは既存の画像を修正する明確な方法を見つけられず、各種コントロールの意味も理解できませんでした。反復的な作業には、クラウド型のチャットモデルを引き続き使います。スクリーンショットには写っているものの評価していない機能：Version History、Editツール、Image Interpreter。"
+  },
+  "scores": [
+    [
+      "インストール",
+      4,
+      "Mac App Storeからインストール、471 MB。問題は記録されていません。"
+    ],
+    [
+      "初回体験とモデル選択",
+      2,
+      "モデル一覧には名前のみ。サイズ、用途、ハードウェア適合度の表示はなく、初回起動時にはメモリに関する注記なしでFLUX.1が提案されました。"
+    ],
+    [
+      "中核機能",
+      4,
+      "適したモデルが動いてからは良好な画像が得られました。画像内の文字は崩れ、4色に限定する厳密な指示には従いませんでした。"
+    ],
+    [
+      "ガイダンスと反復修正",
+      2,
+      "テスターにはコントロールの意味が不明で、修正の手順も見つかりませんでした。"
+    ],
+    [
+      "性能",
+      4,
+      "1枚あたり1分未満（テスターの推定）。アプリが示した10〜20分の見積もりは、別のモデル（SeedVR2 7B）に対するものでした。"
+    ],
+    [
+      "ドキュメント",
+      2,
+      "プレースホルダー画像、「[old version]」という文言の残存があり、テスターの見方では内容も浅いです。"
+    ],
+    [
+      "信頼性とプライバシー",
+      null,
+      "監査していません。アプリはローカル生成をうたっていますが、オフライン動作は試していません。"
+    ],
+    [
+      "アンインストール",
+      null,
+      "未テスト。"
+    ]
+  ],
+  "scores_note": "スコアは、以下の根拠から導いた案です（1 = 不良、5 = 非常に良い）。確定はテスターが行います。",
+  "tldr": [
+    [
+      "tester-estimate",
+      "適したモデルをインストールすれば快適に動きます。テスターによると、M3 Proでは1枚あたり1分未満です。"
+    ],
+    [
+      "observed",
+      "難しいのはそこに至るまでです。サイズもハードウェア適合度も表示されないモデル一覧、所要時間の目安がない11〜16 GiBのダウンロード、そしてテキストプロンプトに動画復元モデルを使っても警告が出なかったことです。"
+    ],
+    [
+      "tester-view",
+      "テスターは使い続けません。画像を修正する方法もコントロールの意味も理解できませんでしたが、スクリーンショットに写っている複数の機能は評価していません。"
+    ]
+  ],
+  "quotes": [
+    "全体として、とても不満の残る過程でした。[...] 手探り状態です。",
+    "単純な画像生成ツールで、それは24 GBのMacBookでとてもうまくこなします。とても速く動きました。悪くはないですが、それだけです。"
+  ],
+  "quote_note": "テスターのノートより。音声の文字起こしを軽く編集しています。",
+  "moments": [
+    [
+      "灰色の四角形",
+      "最初のプロンプト「red ball please. with gold dot in middle」に対し、アプリが約11分と見積もったあとで返ってきたのは、のっぺりした灰色の四角形でした。",
+      "gray_result",
+      "chapter-first-generation"
+    ],
+    [
+      "手探り状態",
+      "モデル一覧に表示されるのは名前とファミリー名だけです。ファイルサイズも、用途も、ハードウェア適合度もありません。",
+      "model_list",
+      "chapter-first-launch"
+    ],
+    [
+      "16 GiB、時計なし",
+      "テスターが行った2回のダウンロード（11〜16 GiB）では、いずれもダイアログに割合とMiBは表示されましたが、残り時間は表示されませんでした。",
+      "seedvr2_download",
+      "chapter-memory"
+    ],
+    [
+      "種類の違うモデル",
+      "アプリ自身の説明では、SeedVR2 7Bは動画復元モデルです。それを2回の画像プロンプトの両方に使っていました。",
+      "seedvr2_desc",
+      "chapter-cause"
+    ],
+    [
+      "11.4 GiBのあとで描画開始",
+      "ERNIE Image Turbo 1.0に切り替えると、テスターによれば画像は1分未満で生成されました。",
+      "ernie_download",
+      "chapter-works"
+    ],
+    [
+      "綴れる見出し",
+      "最終的なPromptQuorumのヒーロー画像では、見出しが正しく表示されました。小さなラベルは依然として意味不明な文字列です。",
+      "pq_hero_3",
+      "chapter-hero-job"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-listing",
+      "title": "ストア掲載情報",
+      "items": [
+        [
+          "observed",
+          "テスターはMac App StoreからDraw Thingsをダウンロードしました。掲載情報のタイトルは「Offline AI Art」、開発元はDraw Things, Inc.、175件の評価で星4.6、対象年齢18歳以上、「Photo & Video」カテゴリで8位、471 MBでした。",
+          null
+        ],
+        [
+          "observed",
+          "掲載情報には、「Offline AI Art」以外にアプリがローカルで動作するとはっきり書かれていません。M1、M2、M3向けの最適化には触れていますが、それ以降のチップへの言及はありません（テスターの読み取りによる）。",
+          null
+        ],
+        [
+          "tester-view",
+          "技術仕様は説明なしで並べられており、制約は見えません。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-first-launch",
+      "title": "初回起動：3つのステップと1本の長い一覧",
+      "items": [
+        [
+          "observed",
+          "ウェルカムダイアログ（3ステップ中のステップ1、英語）が、モデルの入手方法を尋ねます。Cloud Compute（Appleサインインが必要）、Draw Things経由のダウンロード、ローカルストレージからのインポートの3つです。FLUX.1が「mighty and popular」として提案されます。",
+          "welcome"
+        ],
+        [
+          "observed",
+          "3ステップ中のステップ2では、公式モデルが名前とファミリー名で一覧表示されます。各行にファイルサイズ、用途、ハードウェアに関する情報は表示されません。一覧の上には検索欄があります。",
+          "model_list"
+        ],
+        [
+          "tester-view",
+          "どのモデルが画像用でどれが動画用なのか、違いは何か、メモリに収まるのか、といった説明は一切ありません。テスターは一覧を「終わりがない」と表現し、この過程を「手探り状態」と呼びました。",
+          null
+        ],
+        [
+          "observed",
+          "テスターのノートの訂正：ノートには検索ウィンドウがないとありますが、スクリーンショットには検索欄が写っています。したがって、この所見は、サイズ・用途・ハードウェアによる絞り込みがないことに限られます。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-memory",
+      "title": "メモリの壁",
+      "items": [
+        [
+          "observed",
+          "テスターは24 GBに収まるモデルを探しました。ダウンロードダイアログの表示を読み取ったところ、FLUXモデルは約32 GB、Chrono Edit 14Bは約25 GB、LTX 2.3 22B distilled（6-bit）は約57 GBでした。この3つのダイアログはノートに含まれていません。",
+          null
+        ],
+        [
+          "measured",
+          "SeedVR2 7Bは16,757.66 MiB（約16.4 GiB）で、十分小さそうに見えたためダウンロードしました。",
+          "seedvr2_download"
+        ],
+        [
+          "observed",
+          "ダウンロードダイアログには割合とMiBが表示され、残り時間は表示されません。テスターによると、モデルのダウンロード中はアプリのほかの部分を使えませんでした。",
+          null
+        ],
+        [
+          "tester-view",
+          "このサイズのダウンロードには、多くのアプリと同じように所要時間の目安を表示すべきです。",
+          null
+        ],
+        [
+          "observed",
+          "セットアップのステップ3（3ステップ中）では、生成した画像の保存先を尋ねられます。モデルのダウンロードと同じウィンドウ内で表示され、任意とされています。テスターは、なぜセットアップの中にあるのか疑問に思いました。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-pricing-docs",
+      "title": "料金、リリース、ドキュメント",
+      "items": [
+        [
+          "vendor-claim",
+          "料金ページには「Free Edition」（無料版）が掲載されています。説明は「Create prompts and download models from our servers to generate images locally and privately on your own device」で、ローカル計算、モデルのダウンロード、無限キャンバス、ローカルでのLoRA学習が含まれるとあります。",
+          null
+        ],
+        [
+          "assumption",
+          "テスターは、無料アカウント（「Community」）とFree Editionの違いが分かりませんでした。テスターの解釈では、Free EditionはMac上で動作し、Communityには利用上限付きのクラウド計算が加わります。未検証です。",
+          null
+        ],
+        [
+          "observed",
+          "リリース履歴は活発に見えました。テスターの読み取りでは、およそ2か月に1回のリリースです。正確な日付は記録していません。",
+          null
+        ],
+        [
+          "observed",
+          "ドキュメントには、Basic UI、Models、LoRA、ControlNet、Textual inversion、Others、CoreML、Scriptsのページがあります。Basic UIのページには画像のプレースホルダーが表示され、アウトラインには「[old version]」という行が残っています。",
+          "docs"
+        ],
+        [
+          "tester-view",
+          "ドキュメントは内容が浅く、LoRAが何かを知っていることを前提にしています。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-first-generation",
+      "title": "最初の生成：灰色の四角形",
+      "items": [
+        [
+          "observed",
+          "プロンプト：「red ball please. with gold dot in middle」。アプリは所要時間を11分と見積もり、テスターはコンピューターが動いている音を聞き取れました。結果は、のっぺりした灰色の四角形でした。",
+          "gray_result"
+        ],
+        [
+          "observed",
+          "「Negative」プロンプト欄が有効になっていました。テスターが追加したものではなく、なぜあるのか分かりませんでした。",
+          null
+        ],
+        [
+          "observed",
+          "2回目の試行では、ChatGPTが書いた長いプロンプト（ノイシュヴァンシュタイン城、キース・ヘリング風、ちょうど4色）を使いました。各試行の時間見積もりは約11分、10分、20分でした。この試行の結果はノートに記載されていません。テスターはその後、原因を調べ始めました。",
+          null
+        ],
+        [
+          "assumption",
+          "テスターは、見積もり時間はプロンプトに依存しないと推測しています。データ点は3つで、見積もりは選択したモデルを反映している可能性もあります。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-cause",
+      "title": "原因の特定",
+      "items": [
+        [
+          "observed",
+          "アプリはSeedVR2 7Bを、1ステップ拡散の動画復元モデルと説明しています。このモデルが、2回の画像生成の試行の両方で選択されていました。",
+          "seedvr2_desc"
+        ],
+        [
+          "tester-error",
+          "テスターは、テキストから画像への生成プロンプトに復元モデルを選択しました。",
+          null
+        ],
+        [
+          "tester-view",
+          "アプリは、このモデルがテキストプロンプトに向かないことを知らせるべきでした。ノートには警告が出なかったと記されています。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-ask-ai",
+      "title": "ほかのAIに尋ねる",
+      "items": [
+        [
+          "third-party",
+          "Grokは回答しませんでした。Perplexityは回答しました。24 GBのMacBook向けとして、最も安全な画像モデルにERNIE Image Turbo 1.0（6-bit Sと8-bit S）、アップスケールと復元用にSeedVR2 7Bを挙げました。LTX-2.3 22B distilled（6-bit）は短い低解像度動画向けの実験的な選択肢と位置づけ、[dev]のLTXモデルとERNIE Base完全版は勧めないとしました。Perplexityが挙げた情報源は、ここでは確認していません。",
+          "model_dropdown"
+        ],
+        [
+          "tester-view",
+          "アプリはこれを備えるべきです。自分のハードウェアを入力すれば、絞り込み済みの一覧が得られる機能です。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-works",
+      "title": "動いた",
+      "items": [
+        [
+          "measured",
+          "テスターはERNIE Image Turbo 1.0（8-bit S）をダウンロードしました。11,644.41 MiB、約11.4 GiB、3ファイルです。",
+          "ernie_download"
+        ],
+        [
+          "assumption",
+          "これが、以降の画像を生成したモデルだと見なしています。ノートにはモデル名が記載されていません。",
+          null
+        ],
+        [
+          "tester-estimate",
+          "画像は1枚あたり1分未満でした。時間は記録していません。",
+          null
+        ],
+        [
+          "observed",
+          "ノイシュヴァンシュタイン城のプロンプトでは、ヘリング風の人物と放射状の線を伴う、城だと分かる画像が生成されました（このページの冒頭）。石材、森、空の自然な色調が残っているため、「ちょうど4色」という指示は満たされていません。",
+          null
+        ],
+        [
+          "observed",
+          "生成されたキャンピングカーは説得力のある見た目ですが、側面の文字は意味のないテキストです。プロンプトは記録していません。",
+          "motorhome"
+        ],
+        [
+          "tester-view",
+          "画像の品質は素晴らしいです。画像内の文字は弱いです。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-hero-job",
+      "title": "実作業：PromptQuorumのヒーロー画像",
+      "items": [
+        [
+          "observed",
+          "テスターは、PromptQuorumを「the world's leading directory for local LLM and local AI apps」として示すヒーロー画像を依頼しました。最初の試行では長いプロンプト（長さカウンターは3,670）を使い、複数の文字が崩れた暗色のインターフェースコラージュが生成されました。",
+          null
+        ],
+        [
+          "observed",
+          "設定を変更すると、出力は多色のノイズになりました。パネルではText Guidanceが45.5と表示されています。",
+          "noise"
+        ],
+        [
+          "assumption",
+          "ガイダンス値が高かったことがノイズの原因だと考えられます。原因の切り分けは行っていません。",
+          null
+        ],
+        [
+          "tester-estimate",
+          "テスターの言葉では、「iteration」設定を下げると改善しました。",
+          null
+        ],
+        [
+          "observed",
+          "プロンプトを短くすると（カウンターは51）、見出しが読めるようになりました。小さなラベルは崩れたままでした。",
+          "pq_hero_3"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-iteration",
+      "title": "反復修正とコントロール",
+      "items": [
+        [
+          "tester-view",
+          "テスターは、最先端のチャットモデルのように「この画像は残して、ここだけ変える」と指示する方法を見つけられませんでした。新しい画像を始めるために、古いプロンプトを手作業で削除しました。",
+          null
+        ],
+        [
+          "observed",
+          "Version History（「Generated image」と「Cleared canvas」の項目あり）、「Edit」ボタン、Canvas Tools、Image Interpreter、CLIP Scoreがスクリーンショットに写っています。いずれも評価していません。",
+          null
+        ],
+        [
+          "tester-view",
+          "初めて使う人はコントロールの意味を理解できないでしょう。コントロールとモデルの関係も不明確です。パネルには説明文があり、コントロールはモデルの上に追加するファイルだという注記もあります。",
+          "controls"
+        ]
+      ]
+    },
+    {
+      "id": "chapter-decision",
+      "title": "判断",
+      "items": [
+        [
+          "tester-view",
+          "テスターは、無料であってもこのアプリを使い続けません。理由は、簡単モードがないこと、結果を調整しにくいこと、自分のスタイル（ハウススタイル）を適用したり、システムを1枚の狙った画像に導いたりする方法が分からないことです。",
+          null
+        ],
+        [
+          "assumption",
+          "ローカルモデルなら、クラウドモデルが拒否するような画像を作れるのではないか、というテスターの見方は検証していません。",
+          null
+        ],
+        [
+          "tester-view",
+          "「自分向けではなく、今は使わない。」このようなツールを使いこなす知識が自分に足りないのかもしれない、とテスターは述べています。",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "「Offline AI Art」、自分のデバイス上でプライベートに画像を生成",
+      "ストア掲載情報、料金ページ",
+      "モデルはアプリ経由でDraw Thingsのサーバーからダウンロードされます。生成はMac上で実行されました（テスターは動作音を聞き取れました）。オフライン動作は試していません。",
+      "observed"
+    ],
+    [
+      "Apple Silicon向けに最適化（特にM1、M2、M3）",
+      "ストア掲載情報（テスターの読み取りによる）",
+      "テスターが読んだ文面には、それ以降のチップへの言及がありません。アプリはM3 Proで動作しました。",
+      "observed"
+    ],
+    [
+      "FLUX.1は「mighty and popular」",
+      "ウェルカムダイアログ",
+      "メモリ24 GBのテスターに対し、FLUXのダウンロードは約32 GBでした。ダイアログに適合性の警告は表示されません。",
+      "observed"
+    ],
+    [
+      "Free Editionはローカルで生成する",
+      "料金ページ",
+      "ノートに有料の制限への言及はありません。全機能が無料アプリで使えるというのがテスターの解釈です。未検証です。",
+      "assumption"
+    ],
+    [
+      "見積もり時間は約11分",
+      "アプリ、最初の生成時",
+      "最初の結果は灰色の四角形でした。別のモデルでは、テスターによると1枚あたり1分未満です。",
+      "tester-estimate"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "rows": [
+      [
+        "FLUX（バリアント未記録）",
+        32,
+        "約32 GB",
+        "observed"
+      ],
+      [
+        "LTX 2.3 22B distilled, 6-bit",
+        57,
+        "約57 GB",
+        "observed"
+      ],
+      [
+        "Chrono Edit 14B",
+        25,
+        "約25 GB",
+        "observed"
+      ],
+      [
+        "SeedVR2 7B（復元モデル）",
+        16.4,
+        "16,757.66 MiB = 16.4 GiB",
+        "measured"
+      ],
+      [
+        "ERNIE Image Turbo 1.0, 8-bit S",
+        11.4,
+        "11,644.41 MiB = 11.4 GiB",
+        "measured"
+      ]
+    ],
+    "note": "ダウンロードサイズは実行時メモリではありません。アプリが重みを必要に応じて読み込む可能性があり、結果は量子化や解像度にも左右されます（仮定。前述のサードパーティの回答に基づく）。最初の3つのサイズは、テスターが読み上げた値で、単位はGBです。"
+  },
+  "usage_log": [
+    [
+      "赤いボール、中央に金色の点（テキストから画像）",
+      "SeedVR2 7B",
+      "のっぺりした灰色の四角形",
+      "アプリの見積もりは約11分。計時はしていません",
+      "Fail",
+      [
+        "gray_result"
+      ]
+    ],
+    [
+      "ノイシュヴァンシュタイン城、ヘリング風、ちょうど4色",
+      "SeedVR2 7B",
+      "結果の記載なし。テスターはその後モデルを調べ始めた（失敗と推測される）",
+      "アプリの見積もりは10〜20分",
+      "Fail",
+      []
+    ],
+    [
+      "同じノイシュヴァンシュタイン城のプロンプト",
+      "ERNIE Image Turbo 1.0（8-bit Sと仮定）",
+      "ヘリング風の人物を伴う、城だと分かる画像。配色は4色に限定されていない",
+      "1分未満（テスターの推定）",
+      "Partial",
+      [
+        "neuschwanstein"
+      ]
+    ],
+    [
+      "そのほかのプロンプト：キャンピングカー、ビーチの大聖堂",
+      "同上（仮定）",
+      "説得力のある情景。キャンピングカーの文字は意味不明。プロンプトは未記録",
+      "1分未満（テスターの推定）",
+      "Partial",
+      [
+        "motorhome",
+        "cathedral"
+      ]
+    ],
+    [
+      "PromptQuorumのヒーロー画像",
+      "同上（仮定）",
+      "レイアウトは良好。ラベルは崩れ、見出しはプロンプトを短くしたときだけ読めた",
+      "未記録",
+      "Partial",
+      [
+        "pq_hero_1",
+        "pq_hero_2",
+        "pq_hero_3"
+      ]
+    ],
+    [
+      "文字をきれいにするために設定を変更",
+      "同上（仮定）",
+      "Text Guidance 45.5で多色のノイズ",
+      "未記録",
+      "Fail",
+      [
+        "noise"
+      ]
+    ],
+    [
+      "既存の画像を修正する",
+      "-",
+      "テスターは手順を見つけられなかった",
+      "-",
+      "Not completed",
+      []
+    ],
+    [
+      "コントロール入力を理解する",
+      "-",
+      "テスターには理解できなかった",
+      "-",
+      "Not completed",
+      [
+        "controls"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "動画復元モデルであるSeedVR2 7Bを、テキストから画像への生成に選びました。アプリ自身の説明に、このモデルが何であるかが書かれています。"
+    ],
+    [
+      "tester-error",
+      "そのモデルの説明を読む前に、2つのプロンプトを実行しました。"
+    ],
+    [
+      "tester-error",
+      "モデル一覧には検索がないと書きました。スクリーンショットには検索欄が写っています。"
+    ],
+    [
+      "tester-error",
+      "Version History、Editツール、Image Interpreterを評価しないまま、反復修正について判断しました。これらはすべてスクリーンショットに写っています。"
+    ],
+    [
+      "tester-error",
+      "記録に抜けがあります：アプリのバージョン、macOSのバージョン、終了時刻、2枚の画像のプロンプト、以降の画像を生成したモデル。"
+    ],
+    [
+      "assumption",
+      "4色に限定する厳密な指示は、拡散モデル全般にとって難しいと考えられます。したがって、この不一致はDraw Things固有のものではない可能性があります。"
+    ]
+  ],
+  "findings": [
+    [
+      "DT-01",
+      "モデル一覧には名前とファミリー名が表示されるが、サイズ、用途、ハードウェア適合度は表示されない。",
+      "初回体験",
+      "observed",
+      "High",
+      [
+        "model_list"
+      ]
+    ],
+    [
+      "DT-02",
+      "ウェルカムダイアログはメモリに関する注意なしでFLUX.1を提案する。テスターが読み取ったダウンロードサイズ（約25〜57 GB）は、テスターの24 GBのメモリより大きかった。",
+      "初回体験",
+      "observed",
+      "High",
+      [
+        "welcome"
+      ]
+    ],
+    [
+      "DT-03",
+      "動画復元モデルをテキストプロンプトに使うことを防ぐ仕組みがなく、結果は灰色の四角形だった。",
+      "中核機能",
+      "observed",
+      "High",
+      [
+        "gray_result",
+        "seedvr2_desc"
+      ]
+    ],
+    [
+      "DT-04",
+      "ダウンロードダイアログには割合とMiBが表示されるが、残り時間は表示されない。",
+      "UX",
+      "observed",
+      "Medium",
+      [
+        "seedvr2_download",
+        "ernie_download"
+      ]
+    ],
+    [
+      "DT-05",
+      "テスターによると、モデルのダウンロード中はアプリを使えない。",
+      "UX",
+      "observed",
+      "Medium",
+      []
+    ],
+    [
+      "DT-06",
+      "任意の「画像の保存先」ステップが、モデルダウンロードのセットアップの中にある。",
+      "UX",
+      "observed",
+      "Low",
+      [
+        "seedvr2_download"
+      ]
+    ],
+    [
+      "DT-07",
+      "不適切なモデルに対してアプリは10〜20分と見積もった。適切なモデルでは1分未満とテスターは報告している。",
+      "性能",
+      "tester-estimate",
+      "Medium",
+      [
+        "gray_result"
+      ]
+    ],
+    [
+      "DT-08",
+      "4色に限定する厳密な指示に従わなかった。",
+      "中核機能",
+      "observed",
+      "Medium",
+      [
+        "neuschwanstein"
+      ]
+    ],
+    [
+      "DT-09",
+      "画像内に描かれる文字が崩れる（キャンピングカー、ヒーロー画像のラベル）。",
+      "中核機能",
+      "observed",
+      "Medium",
+      [
+        "motorhome",
+        "pq_hero_3"
+      ]
+    ],
+    [
+      "DT-10",
+      "設定の変更とノイズ出力が同時に起きた（Text Guidance 45.5が表示）。原因は切り分けていない。",
+      "中核機能",
+      "assumption",
+      "Low",
+      [
+        "noise"
+      ]
+    ],
+    [
+      "DT-11",
+      "コントロールには説明文があるものの、テスターにはモデルとの関係も含めて分かりにくかった。",
+      "UX",
+      "tester-view",
+      "Medium",
+      [
+        "controls"
+      ]
+    ],
+    [
+      "DT-12",
+      "テスターは既存の画像を修正する方法を見つけられなかった。Version HistoryとEditツールは存在するが、評価していない。",
+      "UX",
+      "tester-view",
+      "Medium",
+      []
+    ],
+    [
+      "DT-13",
+      "ドキュメントに画像のプレースホルダーと「[old version]」の文言が残っている。テスターの見方では内容も浅い。",
+      "ドキュメント",
+      "observed",
+      "Medium",
+      [
+        "docs"
+      ]
+    ],
+    [
+      "DT-14",
+      "Free EditionとCommunityアカウントの違いが、テスターには分かりにくかった。",
+      "料金",
+      "tester-view",
+      "Low",
+      []
+    ],
+    [
+      "DT-15",
+      "テスターによると、ストア掲載情報はM1〜M3のみに言及している。",
+      "発見性",
+      "observed",
+      "Low",
+      []
+    ],
+    [
+      "DT-16",
+      "テスターによると、リリースはおよそ2か月に1回のペースに見える。",
+      "メンテナンス",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "DT-17",
+      "適したモデルが動いてからは、画像の品質は素晴らしく速いとテスターは評価した。",
+      "中核機能",
+      "tester-view",
+      "Positive",
+      [
+        "neuschwanstein"
+      ]
+    ]
+  ],
+  "severity_note": "重要度は、初めて使う人への影響度です。提案値であり、測定値ではありません。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "使いたい拡散モデルがすでに決まっていて、無料のローカル画像生成ツールを求めているMacユーザー。"
+      ],
+      [
+        "vendor-claim",
+        "無限キャンバスとローカルでのLoRA学習を求める人（料金ページの掲載内容による）。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "assumption",
+        "自分のハードウェアに合うモデルへアプリが案内してくれると期待する、初めて使う人。"
+      ],
+      [
+        "tester-view",
+        "テスターが体験したように、チャットのような流れで画像を段階的に磨き上げたい人。"
+      ]
+    ],
+    "retest": "モデル一覧にサイズやハードウェア適合度が表示されるようになったとき、または次のメジャーリリースの後に再テストします。テスターは「また今度」と述べています。3〜6か月の間隔であれば複数回のリリースをカバーできるはずです（仮定）。"
+  },
+  "background_intro": "ハンズオンではありません。テスターがノートに貼り付けたChatGPTの調査に基づく内容で、このテストでは一切検証していません。",
+  "background": [
+    [
+      "third-party",
+      "Draw Things, Inc.は、Liu Liu氏が率いる創業者主導の会社と説明されています。アプリは2022年11月に、Stable Diffusionをローカルで動かす無料のiPhoneアプリとして公開されました（ChatGPTによる引用で、出典はArs Technicaとされています）。"
+    ],
+    [
+      "third-party",
+      "企業データベースのプロフィールでは、自己資金運営で従業員1〜5人、所在地はサンフランシスコとされています。公表されている機関投資家からの資金調達は見つかりませんでした。非公開の資金調達がある可能性があるとChatGPT自身も注意を促しています（出典はToolJunctionとされています）。"
+    ],
+    [
+      "third-party",
+      "コミュニティのGitHubリポジトリは、約578スター、2,100件以上のコミット、71リリースと報告されています（出典はSwift Package Indexとされています）。"
+    ],
+    [
+      "third-party",
+      "カスタムのSwift推論スタックとMetal FlashAttentionに関する技術記事が引用されています（出典はMediumとされています）。"
+    ]
+  ],
+  "sources": [
+    "テスターのハンズオンノート、2026年10月6日開始（オリジナル文書。元ノートのPDFは追加予定）。",
+    "Mac App Storeの掲載情報とdrawthings.ai/pricing。テスターが閲覧し、貼り付けたもの。",
+    "ChatGPTによる企業調査。テスターが貼り付けたもの。その中で引用されている情報源：Ars Technica、ToolJunction、Product Hunt、Swift Package Index、Medium。",
+    "24 GBのMac向けモデルに関するPerplexityの回答。テスターが貼り付けたもの。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "観察",
+      "meaning": "アプリ、スクリーンショット、またはテスターのノートで直接確認した内容。"
+    },
+    "measured": {
+      "label": "実測",
+      "meaning": "ダイアログ、カウンター、ツールから読み取った値。数値を明記しています。"
+    },
+    "tester-estimate": {
+      "label": "テスター推定",
+      "meaning": "テスター自身の推定。計時も計数もしていません。"
+    },
+    "vendor-claim": {
+      "label": "開発元主張",
+      "meaning": "アプリ、ストア掲載情報、またはウェブサイトの記載。未検証です。"
+    },
+    "third-party": {
+      "label": "第三者情報",
+      "meaning": "ほかの情報源（AIアシスタントや記事）によるもの。ここでは未検証です。"
+    },
+    "assumption": {
+      "label": "仮定",
+      "meaning": "推論です。誤っている可能性があります。"
+    },
+    "tester-view": {
+      "label": "テスター見解",
+      "meaning": "テスターの判断または意見。"
+    },
+    "tester-error": {
+      "label": "テスター誤り",
+      "meaning": "テスターが間違えた、または見落とした点。"
+    }
+  },
+  "images": [
+    {
+      "id": "welcome",
+      "figure": 2,
+      "file": "draw-things-first-launch-welcome-model-source-dialog.webp",
+      "path": "images/draw-things-first-launch-welcome-model-source-dialog.webp",
+      "alt": "Draw Thingsのウェルカムダイアログ（3ステップ中のステップ1）。モデルの入手方法として、Cloud Compute、Draw Things経由のダウンロード、ローカルストレージからのインポートの3つが表示されている。",
+      "caption": "初回起動、3ステップ中のステップ1。ダイアログはFLUX.1を「mighty and popular」なモデルとして提案しているが、必要なメモリには触れていない。",
+      "role": "inline",
+      "width": 486,
+      "height": 573,
+      "bytes": 21930,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-first-launch"
+      ],
+      "subject": "Draw Thingsのアプリまたはウェブサイトのスクリーンショット",
+      "rights": "テスター自身が撮影した、サードパーティ製ソフトウェアUIのスクリーンショット。",
+      "captured": "2026-10-06以降。正確な時刻は未記録",
+      "original_docx_media": "image1.png"
+    },
+    {
+      "id": "model_list",
+      "figure": 3,
+      "file": "draw-things-model-picker-list-ltx-names-without-sizes.webp",
+      "path": "images/draw-things-model-picker-list-ltx-names-without-sizes.webp",
+      "alt": "Draw Thingsのモデルダウンロード一覧。LTX-2.3 22Bの各バリアントが名前のみで表示され、ファイルサイズもハードウェアの目安もない。",
+      "caption": "ステップ2（3ステップ中）。各行には名前とファミリー名が表示される。ファイルサイズ、用途、ハードウェア適合度は表示されない。検索欄はある。",
+      "role": "moment",
+      "width": 475,
+      "height": 573,
+      "bytes": 20860,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-first-launch",
+        "moments-card"
+      ],
+      "subject": "Draw Thingsのアプリまたはウェブサイトのスクリーンショット",
+      "rights": "テスター自身が撮影した、サードパーティ製ソフトウェアUIのスクリーンショット。",
+      "captured": "2026-10-06以降。正確な時刻は未記録",
+      "original_docx_media": "image2.png"
+    },
+    {
+      "id": "seedvr2_download",
+      "figure": 4,
+      "file": "draw-things-seedvr2-download-16gb-save-folder-step.webp",
+      "path": "images/draw-things-seedvr2-download-16gb-save-folder-step.webp",
+      "alt": "Draw Thingsのセットアップのステップ3（3ステップ中）。SeedVR2 7Bが16,757 MiBのうち5パーセントまでダウンロードされる間に、画像の保存先を尋ねている。",
+      "caption": "SeedVR2 7Bのダウンロード中：16,757 MiBのうち762 MiB（約16.4 GiB）。ダイアログには割合とMiBが表示され、残り時間は表示されない。任意の「画像の保存先」ステップがこの中に含まれている。",
+      "role": "moment",
+      "width": 472,
+      "height": 571,
+      "bytes": 15812,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-memory",
+        "moments-card"
+      ],
+      "subject": "Draw Thingsのアプリまたはウェブサイトのスクリーンショット",
+      "rights": "テスター自身が撮影した、サードパーティ製ソフトウェアUIのスクリーンショット。",
+      "captured": "2026-10-06以降。正確な時刻は未記録",
+      "original_docx_media": "image9.png"
+    },
+    {
+      "id": "docs",
+      "figure": 5,
+      "file": "draw-things-documentation-basic-ui-missing-image.webp",
+      "path": "images/draw-things-documentation-basic-ui-missing-image.webp",
+      "alt": "Draw Thingsのドキュメントの「Basic UI」ページ。スクリーンショットが入るはずの場所に灰色のプレースホルダーが表示されている。",
+      "caption": "ドキュメントの「Basic UI」ページ：スクリーンショットの代わりに画像のプレースホルダーがあり、ページのアウトラインに「[old version]」という行が残っている。",
+      "role": "inline",
+      "width": 1477,
+      "height": 689,
+      "bytes": 27574,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-pricing-docs"
+      ],
+      "subject": "Draw Thingsのアプリまたはウェブサイトのスクリーンショット",
+      "rights": "テスター自身が撮影した、サードパーティ製ソフトウェアUIのスクリーンショット。",
+      "captured": "2026-10-06以降。正確な時刻は未記録",
+      "original_docx_media": "image10.png"
+    },
+    {
+      "id": "gray_result",
+      "figure": 6,
+      "file": "draw-things-first-generation-red-ball-gray-result.webp",
+      "path": "images/draw-things-first-generation-red-ball-gray-result.webp",
+      "alt": "Draw Thingsのキャンバス。プロンプト「red ball please. with gold dot in middle」の結果として、のっぺりした灰色の四角形が表示されている。",
+      "caption": "最初の生成。プロンプト：「red ball please. with gold dot in middle」。結果：のっぺりした灰色の四角形。アプリの見積もりは約11分だった。",
+      "role": "moment",
+      "width": 909,
+      "height": 889,
+      "bytes": 43926,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-first-generation",
+        "moments-card"
+      ],
+      "subject": "Draw Thingsのアプリまたはウェブサイトのスクリーンショット",
+      "rights": "テスター自身が撮影した、サードパーティ製ソフトウェアUIのスクリーンショット。",
+      "captured": "2026-10-06以降。正確な時刻は未記録",
+      "original_docx_media": "image11.png"
+    },
+    {
+      "id": "seedvr2_desc",
+      "figure": 7,
+      "file": "draw-things-seedvr2-7b-model-description-video-restoration.webp",
+      "path": "images/draw-things-seedvr2-7b-model-description-video-restoration.webp",
+      "alt": "Draw Thingsのモデル説明。SeedVR2 7Bは1ステップ拡散の動画復元モデルであると書かれている。",
+      "caption": "最初の2回の試行に使ったモデルについてのアプリ自身の説明：「one-step diffusion video restoration model」。",
+      "role": "moment",
+      "width": 315,
+      "height": 153,
+      "bytes": 8246,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-cause",
+        "moments-card"
+      ],
+      "subject": "Draw Thingsのアプリまたはウェブサイトのスクリーンショット",
+      "rights": "テスター自身が撮影した、サードパーティ製ソフトウェアUIのスクリーンショット。",
+      "captured": "2026-10-06以降。正確な時刻は未記録",
+      "original_docx_media": "image12.png"
+    },
+    {
+      "id": "model_dropdown",
+      "figure": 8,
+      "file": "draw-things-model-dropdown-local-and-official-models.webp",
+      "path": "images/draw-things-model-dropdown-local-and-official-models.webp",
+      "alt": "Draw Thingsのモデルのドロップダウン。ローカルのSeedVR2 7Bと、公式のLTX-2.3、LTX-2、ERNIE Imageのモデルがダウンロードアイコン付きで並んでいる。",
+      "caption": "最初のダウンロード後のモデルのドロップダウン：ローカルモデルはSeedVR2 7Bのみで、公式モデルは名前とクラウドのダウンロードアイコンで一覧表示されている。",
+      "role": "gallery",
+      "width": 470,
+      "height": 735,
+      "bytes": 44196,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-ask-ai"
+      ],
+      "subject": "Draw Thingsのアプリまたはウェブサイトのスクリーンショット",
+      "rights": "テスター自身が撮影した、サードパーティ製ソフトウェアUIのスクリーンショット。",
+      "captured": "2026-10-06以降。正確な時刻は未記録",
+      "original_docx_media": "image13.png"
+    },
+    {
+      "id": "ernie_download",
+      "figure": 9,
+      "file": "draw-things-ernie-image-turbo-8bit-download-progress.webp",
+      "path": "images/draw-things-ernie-image-turbo-8bit-download-progress.webp",
+      "alt": "ERNIE Image Turbo 1.0 8-bit Sのダウンロードダイアログ。3ファイル中1ファイル目で、11,644 MiBのうち6,014 MiB、52パーセント。時間の目安は表示されない。",
+      "caption": "ERNIE Image Turbo 1.0（8-bit S）：11,644 MiB（約11.4 GiB）のうち6,014 MiB、3ファイル中1ファイル目。ここでも残り時間は表示されない。",
+      "role": "moment",
+      "width": 527,
+      "height": 575,
+      "bytes": 14504,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-works",
+        "moments-card"
+      ],
+      "subject": "Draw Thingsのアプリまたはウェブサイトのスクリーンショット",
+      "rights": "テスター自身が撮影した、サードパーティ製ソフトウェアUIのスクリーンショット。",
+      "captured": "2026-10-06以降。正確な時刻は未記録",
+      "original_docx_media": "image14.png"
+    },
+    {
+      "id": "neuschwanstein",
+      "figure": 1,
+      "file": "draw-things-neuschwanstein-keith-haring-style-result.webp",
+      "path": "images/draw-things-neuschwanstein-keith-haring-style-result.webp",
+      "alt": "Draw Thingsのキャンバスに表示された、AI生成のノイシュヴァンシュタイン城。赤、青、黄、黒の太い漫画風の人物と放射状の線が描かれている。",
+      "caption": "ヘリング風の人物を配したノイシュヴァンシュタイン城。プロンプトではちょうど4色を指定したが、城、森、空は自然な色調のまま。キャンバスの一部を灰色の長方形が覆っている（原因は未記録）。",
+      "role": "hero",
+      "width": 884,
+      "height": 900,
+      "bytes": 144914,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero"
+      ],
+      "subject": "Draw Thingsのキャンバスに表示された、AI生成の出力（スクリーンショット）",
+      "rights": "テスター自身が撮影したスクリーンショット。生成画像：モデルのライセンス条件は確認していません。",
+      "captured": "2026-10-06以降。正確な時刻は未記録",
+      "original_docx_media": "image15.png"
+    },
+    {
+      "id": "motorhome",
+      "figure": 10,
+      "file": "draw-things-generated-motorhome-with-garbled-text.webp",
+      "path": "images/draw-things-generated-motorhome-with-garbled-text.webp",
+      "alt": "AI生成の写真風画像。駐車場にある白いキャンピングカーで、側面の文字は意味のないテキストになっている。",
+      "caption": "生成されたキャンピングカー。車体と背景は説得力があるが、側面の文字は実際のテキストではない。プロンプトは未記録。",
+      "role": "gallery",
+      "width": 638,
+      "height": 636,
+      "bytes": 82294,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-works"
+      ],
+      "subject": "Draw Thingsのキャンバスに表示された、AI生成の出力（スクリーンショット）",
+      "rights": "テスター自身が撮影したスクリーンショット。生成画像：モデルのライセンス条件は確認していません。",
+      "captured": "2026-10-06以降。正確な時刻は未記録",
+      "original_docx_media": "image16.png"
+    },
+    {
+      "id": "cathedral",
+      "figure": 14,
+      "file": "draw-things-generated-gothic-cathedral-on-tropical-beach.webp",
+      "path": "images/draw-things-generated-gothic-cathedral-on-tropical-beach.webp",
+      "alt": "AI生成の写真風画像。ヤシの木、ターコイズ色の海、砂浜を歩く女性のいる熱帯のビーチにそびえるゴシック様式の大聖堂。",
+      "caption": "生成された、熱帯のビーチにあるゴシック様式の大聖堂。プロンプトは未記録。",
+      "role": "gallery",
+      "width": 699,
+      "height": 664,
+      "bytes": 130276,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Draw Thingsのキャンバスに表示された、AI生成の出力（スクリーンショット）",
+      "rights": "テスター自身が撮影したスクリーンショット。生成画像：モデルのライセンス条件は確認していません。",
+      "captured": "2026-10-06以降。正確な時刻は未記録",
+      "original_docx_media": "image17.png"
+    },
+    {
+      "id": "pq_hero_1",
+      "figure": 15,
+      "file": "draw-things-promptquorum-hero-attempt-garbled-interface-text.webp",
+      "path": "images/draw-things-promptquorum-hero-attempt-garbled-interface-text.webp",
+      "alt": "Draw Thingsのキャンバス。世界地図の上にPromptQuorumのディレクトリのインターフェースを描いた暗色の生成ヒーロー画像で、複数のラベルが崩れている。",
+      "caption": "PromptQuorumのヒーロー画像の最初の試行。長いプロンプトを使用（長さカウンターは3,670）。レイアウトは魅力的だが、複数のラベルが崩れている。",
+      "role": "gallery",
+      "width": 972,
+      "height": 886,
+      "bytes": 80990,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Draw Thingsのキャンバスに表示された、AI生成の出力（スクリーンショット）",
+      "rights": "テスター自身が撮影したスクリーンショット。生成画像：モデルのライセンス条件は確認していません。",
+      "captured": "2026-10-06以降。正確な時刻は未記録",
+      "original_docx_media": "image18.png"
+    },
+    {
+      "id": "noise",
+      "figure": 11,
+      "file": "draw-things-noise-output-after-parameter-change.webp",
+      "path": "images/draw-things-noise-output-after-parameter-change.webp",
+      "alt": "生成設定を変更した後、Draw Thingsのキャンバス全体が多色のノイズで埋まっている。Text Guidanceのスライダーは45.5。",
+      "caption": "設定を変更すると、出力は多色のノイズになった。パネルではText Guidanceが45.5と表示されている。原因は切り分けていない。",
+      "role": "inline",
+      "width": 1431,
+      "height": 837,
+      "bytes": 294308,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-hero-job"
+      ],
+      "subject": "Draw Thingsのアプリまたはウェブサイトのスクリーンショット",
+      "rights": "テスター自身が撮影した、サードパーティ製ソフトウェアUIのスクリーンショット。",
+      "captured": "2026-10-06以降。正確な時刻は未記録",
+      "original_docx_media": "image19.png"
+    },
+    {
+      "id": "pq_hero_2",
+      "figure": 16,
+      "file": "draw-things-promptquorum-hero-attempt-readable-headline.webp",
+      "path": "images/draw-things-promptquorum-hero-attempt-readable-headline.webp",
+      "alt": "見出し「PromptQuorum as the world's leading directory for local LLM and local AI apps」と、崩れたサブラベルが入った生成ヒーロー画像。",
+      "caption": "より短いプロンプト（カウンターは51）。見出しは読めるようになったが、小さなラベルは依然として崩れている。",
+      "role": "gallery",
+      "width": 1012,
+      "height": 802,
+      "bytes": 185748,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "gallery"
+      ],
+      "subject": "Draw Thingsのキャンバスに表示された、AI生成の出力（スクリーンショット）",
+      "rights": "テスター自身が撮影したスクリーンショット。生成画像：モデルのライセンス条件は確認していません。",
+      "captured": "2026-10-06以降。正確な時刻は未記録",
+      "original_docx_media": "image20.png"
+    },
+    {
+      "id": "controls",
+      "figure": 13,
+      "file": "draw-things-control-inputs-panel-image-depth-pose.webp",
+      "path": "images/draw-things-control-inputs-panel-image-depth-pose.webp",
+      "alt": "Draw Thingsの「Control Inputs」パネル。Image、Depth map、Pose、Scribble、Color Palette、Moodboard、Customが並び、Controlセクションは「Disabled」になっている。",
+      "caption": "「Control Inputs」パネル。説明文はあるが、テスターにはコントロールとモデルの関係は依然として分かりにくかった。",
+      "role": "inline",
+      "width": 307,
+      "height": 634,
+      "bytes": 23346,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-iteration"
+      ],
+      "subject": "Draw Thingsのアプリまたはウェブサイトのスクリーンショット",
+      "rights": "テスター自身が撮影した、サードパーティ製ソフトウェアUIのスクリーンショット。",
+      "captured": "2026-10-06以降。正確な時刻は未記録",
+      "original_docx_media": "image21.png"
+    },
+    {
+      "id": "pq_hero_3",
+      "figure": 12,
+      "file": "draw-things-promptquorum-hero-final-cartoon-style.webp",
+      "path": "images/draw-things-promptquorum-hero-final-cartoon-style.webp",
+      "alt": "カラフルなアプリディレクトリのイラスト。見出し「PromptQuorum the world's leading directory for local LLM and local AI apps」が入った生成画像。",
+      "caption": "PromptQuorumのヒーロー画像の最終試行：見出しが正しく表示された、すっきりしたイラスト。「Platforms」や「Operating Systems」などの小さなラベルは、いまだに一部が崩れている。",
+      "role": "moment",
+      "width": 1432,
+      "height": 716,
+      "bytes": 263830,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-hero-job",
+        "moments-card"
+      ],
+      "subject": "Draw Thingsのキャンバスに表示された、AI生成の出力（スクリーンショット）",
+      "rights": "テスター自身が撮影したスクリーンショット。生成画像：モデルのライセンス条件は確認していません。",
+      "captured": "2026-10-06以降。正確な時刻は未記録",
+      "original_docx_media": "image22.png"
+    }
+  ],
+  "figure_order": [
+    "neuschwanstein",
+    "welcome",
+    "model_list",
+    "seedvr2_download",
+    "docs",
+    "gray_result",
+    "seedvr2_desc",
+    "model_dropdown",
+    "ernie_download",
+    "motorhome",
+    "noise",
+    "pq_hero_3",
+    "controls",
+    "cathedral",
+    "pq_hero_1",
+    "pq_hero_2"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum ハンズオンテスト · {app} · {date}",
+    "date_line": "2026年10月6日",
+    "nav_aria": "セクション",
+    "nav": {
+      "verdict": "結論",
+      "moments": "6つの場面",
+      "story": "経過",
+      "claims": "主張",
+      "fit": "24 GB",
+      "log": "利用ログ",
+      "errors": "テスターの誤り",
+      "findings": "所見",
+      "background": "背景"
+    },
+    "related": "関連：",
+    "review_link": "{app}のPromptQuorumレビュー",
+    "directory_link": "ローカルAIアプリディレクトリ",
+    "verdict_h": "結論",
+    "general_assessment": "総合評価",
+    "fit_for_tester": "テスターの用途への適合度",
+    "scorecard": "スコアカード",
+    "status_prefix": "ステータス：",
+    "na": "該当なし",
+    "score_aria": "5点満点中{n}点",
+    "details_h": "テストの詳細",
+    "label_intro": "すべての記述にラベルが付いています：",
+    "legend_link": "ラベルの意味",
+    "disclosure_label": "開示事項。",
+    "raw_notes": "元ノートのPDF：",
+    "to_be_added": "追加予定",
+    "moments_h": "このテストを形作った6つの場面",
+    "see_context": "文脈の中で見る",
+    "story_h": "テストの経過",
+    "claims_h": "主張とテスターが確認した内容",
+    "claims_cols": [
+      "主張",
+      "出典",
+      "確認した内容",
+      "ラベル"
+    ],
+    "fit_h": "24 GBに収まるか",
+    "memory_line": "{gb} GBメモリ",
+    "above": "{gb} GB超",
+    "below": "{gb} GB未満",
+    "log_h": "利用ログ",
+    "log_cols": [
+      "#",
+      "タスク",
+      "モデル",
+      "結果",
+      "時間",
+      "ステータス",
+      "図"
+    ],
+    "statuses": {
+      "Fail": "失敗",
+      "Partial": "一部成功",
+      "Pass": "合格",
+      "Not completed": "未完了"
+    },
+    "errors_h": "テスターが誤った点",
+    "findings_h": "所見一覧",
+    "filter_aria": "ラベルで所見を絞り込む",
+    "filter_all": "すべて",
+    "findings_cols": [
+      "ID",
+      "所見",
+      "カテゴリ",
+      "ラベル",
+      "重要度",
+      "図"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "良好"
+    },
+    "fig_abbr": "図",
+    "figure": "図",
+    "enlarge": "拡大：",
+    "audience_h": "こんな人に向いています",
+    "likely_fit": "向いている可能性が高い人",
+    "likely_poor_fit": "向いていない可能性が高い人",
+    "retest": "再テスト。",
+    "background_h": "開発元の背景",
+    "gallery_h": "テストからのその他の画像",
+    "legend_h": "ラベルの見方",
+    "sources_h": "出典",
+    "footer_line": "テストID {id} · テスト標準 v{version} · 元ノートのPDF：追加予定",
+    "crumb_home": "ホーム",
+    "crumb_directory": "ディレクトリ",
+    "crumb_test": "{app} ハンズオンテスト"
+  }
+}
