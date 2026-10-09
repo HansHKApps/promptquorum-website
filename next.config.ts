@@ -113,10 +113,11 @@ const nextConfig: NextConfig = {
         destination: '/:lang/pq-apps#faq',
         permanent: true,
       },
-      // Hands-on tests exist in English only: locale-prefixed URLs send readers to the English page.
+      // Hands-on tests that exist in English only: locale-prefixed URLs send readers to the English page.
       // Temporary (not permanent) so translated pages can take over these URLs later.
+      // Add an app here only while it has no data/<app>.<lang>.json translations (draw-things has all 8).
       {
-        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/:slug(.+-hands-on-test)',
+        source: '/:lang(de|fr|ja|zh|es|pt|ar|ko)/power-local-llm/:slug(bobe-hands-on-test)',
         destination: '/power-local-llm/:slug',
         permanent: false,
       },
