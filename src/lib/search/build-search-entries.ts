@@ -5,6 +5,8 @@ import { peContent } from '@/lib/prompt-engineering/articles-barrel'
 import { llmContent } from '@/lib/local-llms/articles-barrel'
 import { powerLLMContent } from '@/lib/power-local-llm/articles-barrel'
 import { localAiApps } from '@/lib/power-local-llm/apps-barrel'
+import { getHandsOnTest } from '@/lib/hands-on-tests'
+import { HANDS_ON_TEST_SLUGS, handsOnTestUrlSlug } from '@/lib/hands-on-tests/links'
 import { promptBitesContent } from '@/lib/prompt-bites/articles-barrel'
 import { balconySolarContent } from '@/lib/balcony-solar/articles-barrel'
 import { smartHomeContent } from '@/lib/smart-home/articles-barrel'
@@ -249,6 +251,25 @@ export function buildAllSearchEntries(): SearchEntry[] {
         contentType: 'article',
       })
     }
+  }
+
+  // ── Hands-on tests (English only until translated) ────────────────────
+  for (const appSlug of HANDS_ON_TEST_SLUGS) {
+    const test = getHandsOnTest(appSlug)
+    if (!test) continue
+    entries.push({
+      id: `hot-en-${appSlug}`,
+      articleKey: `hot-${appSlug}`,
+      title: test.title,
+      description: test.dek,
+      section: 'Hands-on test',
+      hub: 'power-local-llm',
+      level: '',
+      tags: [test.app.name, 'hands-on test'],
+      url: `/power-local-llm/${handsOnTestUrlSlug(appSlug)}`,
+      lang: 'en',
+      contentType: 'article',
+    })
   }
 
   return entries

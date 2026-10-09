@@ -7,6 +7,7 @@ import { t, type HomeUiKey } from './home-i18n'
 
 const KIND_LABEL_KEY: Record<FreshItem['kind'], HomeUiKey> = {
   review: 'freshKindReview',
+  test: 'freshKindTest',
   app: 'freshKindApp',
   guide: 'freshKindGuide',
 }

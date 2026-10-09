@@ -65122,5 +65122,14 @@
     "dateModified": "2026-08-25",
     "url": "/ko/smart-home/best-energy-monitoring-smart-plugs-2027",
     "cluster": "smart-home"
+  },
+  {
+    "lang": "en",
+    "title": "Draw Things on a 24 GB Mac: Fast When It Works, Blind Until It Does",
+    "excerpt": "Hands-on test on a MacBook Pro with M3 Pro. The first prompt returned a gray square. The second model worked.",
+    "publishDate": "2026-10-09",
+    "dateModified": "2026-10-09",
+    "url": "/power-local-llm/draw-things-hands-on-test",
+    "cluster": "power-local-llm"
   }
 ]

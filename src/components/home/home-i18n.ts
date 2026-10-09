@@ -403,6 +403,7 @@ const HOME_UI = {
   freshNew: { en: 'New', de: 'Neu', fr: 'Nouveau', ja: '新着', zh: '新', es: 'Nuevo', pt: 'Novo', ar: 'جديد', ko: '신규' },
   freshUpdated: { en: 'Updated', de: 'Aktualisiert', fr: 'Mis à jour', ja: '更新', zh: '已更新', es: 'Actualizado', pt: 'Atualizado', ar: 'محدَّث', ko: '업데이트됨' },
   freshKindReview: { en: 'Review', de: 'Rezension', fr: 'Avis', ja: 'レビュー', zh: '点评', es: 'Reseña', pt: 'Análise', ar: 'مراجعة', ko: '리뷰' },
+  freshKindTest: { en: 'Hands-on test', de: 'Praxistest', fr: 'Test pratique', ja: '実機テスト', zh: '实测', es: 'Prueba práctica', pt: 'Teste prático', ar: 'اختبار عملي', ko: '직접 테스트' },
   freshKindApp: { en: 'App', de: 'App', fr: 'Appli', ja: 'アプリ', zh: '应用', es: 'App', pt: 'App', ar: 'تطبيق', ko: '앱' },
   freshKindGuide: { en: 'Guide', de: 'Ratgeber', fr: 'Guide', ja: 'ガイド', zh: '指南', es: 'Guía', pt: 'Guia', ar: 'دليل', ko: '가이드' },
   freshToday: { en: 'Today', de: 'Heute', fr: "Aujourd'hui", ja: '今日', zh: '今天', es: 'Hoy', pt: 'Hoje', ar: 'اليوم', ko: '오늘' },
