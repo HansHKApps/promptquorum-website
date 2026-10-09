@@ -24,8 +24,7 @@ export function buildHandsOnTestMetadata(urlSlug: string): Metadata | null {
   return {
     title: test.title,
     description: test.dek,
-    // Scaffold stage: noindex until the open items are confirmed and the indexing flip is approved.
-    robots: { index: false, follow: false },
+    robots: { index: true, follow: true },
     alternates: generateAlternates(pathFor(urlSlug), 'en', true, ['en']),
     openGraph: { title: test.title, description: test.dek, images: [{ url: '/og-image.png', alt: 'PromptQuorum' }], type: 'article', siteName: 'PromptQuorum' },
     twitter: { card: 'summary_large_image', title: test.title, description: test.dek },

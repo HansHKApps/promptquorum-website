@@ -3,6 +3,7 @@ import { SLUG_TO_POST_ID } from '@/lib/blogSlugs'
 import { LLM_SLUG_TO_KEY } from '@/lib/local-llms/slugs'
 import { POWER_LLM_PUBLISHED_SLUGS, POWER_LLM_HUB_PUBLISHED } from '@/lib/power-local-llm/published'
 import { POWER_LLM_SLUG_TO_KEY } from '@/lib/power-local-llm/slugs'
+import { HANDS_ON_TEST_SLUGS, handsOnTestUrlSlug } from '@/lib/hands-on-tests/links'
 import { PROMPT_BITES_PUBLISHED_SLUGS, PROMPT_BITES_HUB_PUBLISHED } from '@/lib/prompt-bites/published'
 import { PROMPT_BITES_SLUG_TO_KEY } from '@/lib/prompt-bites/slugs'
 import { SMART_HOME_PUBLISHED_SLUGS, SMART_HOME_HUB_PUBLISHED } from '@/lib/smart-home/published'
@@ -185,6 +186,7 @@ export function availableLangsForPath(path: string): readonly string[] | null {
 const POWER_LLM_PUBLISHED_PATHS: ReadonlySet<string> = new Set([
   ...(POWER_LLM_HUB_PUBLISHED ? ['/power-local-llm'] : []),
   ...Array.from(POWER_LLM_PUBLISHED_SLUGS).map(slug => `/power-local-llm/${slug}`),
+  ...HANDS_ON_TEST_SLUGS.map(appSlug => `/power-local-llm/${handsOnTestUrlSlug(appSlug)}`),
 ])
 
 const PROMPT_BITES_PUBLISHED_PATHS: ReadonlySet<string> = new Set([
