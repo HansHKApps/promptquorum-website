@@ -171,7 +171,11 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
     handleMachineChange(next === 'mobile' ? 'ios' : 'dgpu')
   }
 
-  const query = useMemo(() => ({ filters, search, want }), [filters, search, want])
+  // "Only apps that run on my machine" — on by default, so a Mac owner never
+  // sees Windows-only tools. Per-viewer convenience, not persisted.
+  const [fitMyMachine, setFitMyMachine] = useState(true)
+  const fit = useMemo(() => (fitMyMachine ? { machine, profile } : null), [fitMyMachine, machine, profile])
+  const query = useMemo(() => ({ filters, search, want, fit }), [filters, search, want, fit])
 
   const filtered = useMemo(() => filterTools(apps, query), [apps, query])
   const sorted = useMemo(() => sortTools(filtered, sortKey, sortDir, machine), [filtered, sortKey, sortDir, machine])
@@ -181,7 +185,7 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
     return Object.fromEntries(groups.map((g) => [g, countsForGroup(apps, query, g)])) as Record<keyof FilterState, ReturnType<typeof countsForGroup>>
   }, [apps, query])
 
-  const wantCounts = useMemo(() => countsForUses(apps, { filters, search }), [apps, filters, search])
+  const wantCounts = useMemo(() => countsForUses(apps, { filters, search, fit }), [apps, filters, search, fit])
 
   const localityCounts = useMemo(() => countByLocality(filtered), [filtered])
 
@@ -360,6 +364,16 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
                 <option key={m} value={m}>{MACHINE_LABEL[m]}</option>
               ))}
             </select>
+          </label>
+
+          <label className="flex items-center gap-2 text-sm text-text-secondary cursor-pointer">
+            <input
+              type="checkbox"
+              checked={fitMyMachine}
+              onChange={(e) => { setFitMyMachine(e.target.checked); resetPaging() }}
+              className="h-4 w-4 accent-primary"
+            />
+            {t('fitMyMachineLabel', ui)}
           </label>
 
           <HardwareProfileWidget
