@@ -100,7 +100,7 @@
         "slug": "tokforge-review",
         "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
         "url": "/power-local-llm/tokforge-review",
-        "dateModified": "2026-10-05",
+        "dateModified": "2026-10-09",
         "tier": "about"
       },
       {
@@ -1748,9 +1748,9 @@
       {
         "cluster": "power-local-llm",
         "slug": "draw-things-review",
-        "title": "Draw Things Review: Free Offline Image AI for Mac & iOS",
+        "title": "Draw Things Review: Local-First Image AI with Optional Cloud",
         "url": "/power-local-llm/draw-things-review",
-        "dateModified": "2026-09-07",
+        "dateModified": "2026-10-09",
         "tier": "about"
       },
       {
@@ -6581,6 +6581,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "draw-things-review",
+        "title": "Draw Things Review: Local-First Image AI with Optional Cloud",
+        "url": "/power-local-llm/draw-things-review",
+        "dateModified": "2026-10-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-ai-geetmark-review",
         "title": "Local AI: Offline Chat & Image Review: Free Android App with Stable Diffusion and Prompt Toolkits",
         "url": "/power-local-llm/local-ai-geetmark-review",
@@ -6609,14 +6617,6 @@
         "title": "DiffusionBee Review: Local Stable Diffusion for Mac",
         "url": "/power-local-llm/diffusionbee-review",
         "dateModified": "2026-09-12",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "draw-things-review",
-        "title": "Draw Things Review: Free Offline Image AI for Mac & iOS",
-        "url": "/power-local-llm/draw-things-review",
-        "dateModified": "2026-09-07",
         "tier": "about"
       },
       {
@@ -6667,6 +6667,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "draw-things-review",
+        "title": "Draw Things Review: Local-First Image AI with Optional Cloud",
+        "url": "/power-local-llm/draw-things-review",
+        "dateModified": "2026-10-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "tina-review",
         "title": "Tina Review: iPhone Client for Ollama, llama.cpp and ComfyUI",
         "url": "/power-local-llm/tina-review",
@@ -6703,14 +6711,6 @@
         "title": "DreamServer Review: One-Command Local AI Server Stack",
         "url": "/power-local-llm/dreamserver-review",
         "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "draw-things-review",
-        "title": "Draw Things Review: Free Offline Image AI for Mac & iOS",
-        "url": "/power-local-llm/draw-things-review",
-        "dateModified": "2026-09-07",
         "tier": "about"
       },
       {
@@ -6753,6 +6753,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "draw-things-review",
+        "title": "Draw Things Review: Local-First Image AI with Optional Cloud",
+        "url": "/power-local-llm/draw-things-review",
+        "dateModified": "2026-10-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-images-video-compared",
         "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
         "url": "/power-local-llm/local-llm-images-video-compared",
@@ -6765,14 +6773,6 @@
         "title": "Stable Diffusion WebUI Forge Review: Faster, Lower-VRAM AUTOMATIC1111 Fork",
         "url": "/power-local-llm/stable-diffusion-forge-review",
         "dateModified": "2026-09-19",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "draw-things-review",
-        "title": "Draw Things Review: Free Offline Image AI for Mac & iOS",
-        "url": "/power-local-llm/draw-things-review",
-        "dateModified": "2026-09-07",
         "tier": "about"
       },
       {
@@ -6901,18 +6901,18 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "stable-diffusion-forge-review",
-        "title": "Stable Diffusion WebUI Forge Review: Faster, Lower-VRAM AUTOMATIC1111 Fork",
-        "url": "/power-local-llm/stable-diffusion-forge-review",
-        "dateModified": "2026-09-19",
+        "slug": "draw-things-review",
+        "title": "Draw Things Review: Local-First Image AI with Optional Cloud",
+        "url": "/power-local-llm/draw-things-review",
+        "dateModified": "2026-10-09",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "draw-things-review",
-        "title": "Draw Things Review: Free Offline Image AI for Mac & iOS",
-        "url": "/power-local-llm/draw-things-review",
-        "dateModified": "2026-09-07",
+        "slug": "stable-diffusion-forge-review",
+        "title": "Stable Diffusion WebUI Forge Review: Faster, Lower-VRAM AUTOMATIC1111 Fork",
+        "url": "/power-local-llm/stable-diffusion-forge-review",
+        "dateModified": "2026-09-19",
         "tier": "mentioned"
       },
       {
@@ -7010,9 +7010,9 @@
       {
         "cluster": "power-local-llm",
         "slug": "draw-things-review",
-        "title": "Draw Things Review: Free Offline Image AI for Mac & iOS",
+        "title": "Draw Things Review: Local-First Image AI with Optional Cloud",
         "url": "/power-local-llm/draw-things-review",
-        "dateModified": "2026-09-07",
+        "dateModified": "2026-10-09",
         "tier": "mentioned"
       },
       {
@@ -9445,6 +9445,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
+        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
+        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026",
+        "dateModified": "2026-10-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-knowledge-retrieval-compared",
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -9465,14 +9473,6 @@
         "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
         "url": "/power-local-llm/anythingllm-review",
         "dateModified": "2026-09-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
-        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
-        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026",
-        "dateModified": "2026-09-03",
         "tier": "about"
       },
       {
@@ -10169,6 +10169,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
+        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
+        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026",
+        "dateModified": "2026-10-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-knowledge-retrieval-compared",
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -10189,14 +10197,6 @@
         "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
         "url": "/power-local-llm/anythingllm-review",
         "dateModified": "2026-09-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
-        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
-        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026",
-        "dateModified": "2026-09-03",
         "tier": "about"
       },
       {
@@ -10581,6 +10581,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
+        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
+        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026",
+        "dateModified": "2026-10-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-knowledge-retrieval-compared",
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -10641,14 +10649,6 @@
         "title": "SuperAGI Review: Features, Pricing, Is It Maintained?",
         "url": "/power-local-llm/superagi-review",
         "dateModified": "2026-09-07",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
-        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
-        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026",
-        "dateModified": "2026-09-03",
         "tier": "about"
       }
     ],
@@ -11005,6 +11005,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
+        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
+        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026",
+        "dateModified": "2026-10-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-knowledge-retrieval-compared",
         "title": "Local Knowledge & Retrieval Tools Compared (2026): RAG, Document Chat, Vector Databases, Notes and Search",
         "url": "/power-local-llm/local-llm-knowledge-retrieval-compared",
@@ -11017,14 +11025,6 @@
         "title": "AnythingLLM Review: Open-Source RAG and Document Chat",
         "url": "/power-local-llm/anythingllm-review",
         "dateModified": "2026-09-11",
-        "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "enterprise-rag-vector-database-deployment-guide-2026",
-        "title": "Enterprise RAG Vector Database Deployment: Self-Hosted vs Managed (2026)",
-        "url": "/power-local-llm/enterprise-rag-vector-database-deployment-guide-2026",
-        "dateModified": "2026-09-03",
         "tier": "about"
       },
       {
@@ -11185,17 +11185,17 @@
       },
       {
         "cluster": "power-local-llm",
-        "slug": "mlxhub-review",
-        "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
-        "url": "/power-local-llm/mlxhub-review",
-        "dateModified": "2026-10-05",
+        "slug": "tokforge-review",
+        "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
+        "url": "/power-local-llm/tokforge-review",
+        "dateModified": "2026-10-09",
         "tier": "mentioned"
       },
       {
         "cluster": "power-local-llm",
-        "slug": "tokforge-review",
-        "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
-        "url": "/power-local-llm/tokforge-review",
+        "slug": "mlxhub-review",
+        "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
+        "url": "/power-local-llm/mlxhub-review",
         "dateModified": "2026-10-05",
         "tier": "mentioned"
       },
@@ -11264,7 +11264,7 @@
         "slug": "tokforge-review",
         "title": "TokForge Review: Offline Android AI Chat with Roleplay and Image Generation",
         "url": "/power-local-llm/tokforge-review",
-        "dateModified": "2026-10-05",
+        "dateModified": "2026-10-09",
         "tier": "about"
       }
     ],

@@ -10,12 +10,12 @@ export const app: ToolRecord = {
   name: 'Draw Things',
   categories: ['image-generation'],
   interfaces: ['desktop', 'mobile'],
-  locality: 'local',
+  locality: 'hybrid', // on-device by default; optional Cloud Compute (account + Draw Things servers) per drawthings.ai/pricing, verified 2026-10-09
   platforms: ['mac', 'ios'],
   worksWith: null,
   engine: 'builtin',
   license: 'Closed source',
-  price: 'free',
+  price: 'freemium', // local generation free; Draw Things+ $8.99/mo and Boost Bundles are for cloud compute only
   hardware: { ramGb: 8, vramGb: null, cpuOnly: false }, // per wiki.drawthings.ai (How Powerful Is My Device / FAQ): 8GB unified memory is the practical floor for SD1.5-class image gen; Apple Silicon GPU/Neural Engine acceleration is used instead of discrete VRAM, verified 2026-09-13
   stars: null,
   addedDate: '2026-09-04',
