@@ -18,7 +18,6 @@
   "dek": "M3 Pro가 탑재된 MacBook Pro에서 진행한 직접 테스트입니다. 앱 내 어시스턴트는 필요한 macOS 설정을 알려 주지 못했고, 테스터가 삭제하려고 하자 앱이 스스로 다시 실행되었습니다.",
   "status": "Abandoned",
   "published": "2026-10-09",
-  "index": false,
   "started": "2026-10-07",
   "ended": null,
   "meta": [

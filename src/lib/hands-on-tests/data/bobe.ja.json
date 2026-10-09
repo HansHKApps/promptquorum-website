@@ -18,7 +18,6 @@
   "dek": "M3 ProのMacBook Proでの実機テストです。アプリ内アシスタントは必要なmacOSの設定を示さず、テスターが削除しようとするとアプリは自動で再起動しました。",
   "status": "Abandoned",
   "published": "2026-10-09",
-  "index": false,
   "started": "2026-10-07",
   "ended": null,
   "meta": [

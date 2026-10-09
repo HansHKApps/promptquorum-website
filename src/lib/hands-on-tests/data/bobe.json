@@ -18,7 +18,6 @@
   "dek": "Hands-on test on a MacBook Pro with M3 Pro. The in-app assistant did not name the macOS setting it needs, and the app restarted itself when the tester tried to delete it.",
   "status": "Abandoned",
   "published": "2026-10-09",
-  "index": false,
   "started": "2026-10-07",
   "ended": null,
   "meta": [

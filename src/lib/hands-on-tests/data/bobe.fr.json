@@ -18,7 +18,6 @@
   "dek": "Test pratique sur un MacBook Pro avec puce M3 Pro. L'assistant intégré n'a pas nommé le réglage macOS dont il a besoin, et l'appli s'est relancée toute seule quand le testeur a essayé de la supprimer.",
   "status": "Abandoned",
   "published": "2026-10-09",
-  "index": false,
   "started": "2026-10-07",
   "ended": null,
   "meta": [

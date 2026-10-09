@@ -40,7 +40,8 @@ export function buildHandsOnTestMetadata(urlSlug: string, lang: Language = 'en')
   return {
     title,
     description,
-    robots: test.index === false ? { index: false, follow: false } : { index: true, follow: true },
+    // Hands-on tests are always indexable; scripts/validate-hands-on-tests.mjs rejects an 'index' field.
+    robots: { index: true, follow: true },
     alternates: generateAlternates(pathFor(urlSlug), lang, true, [...handsOnTestLangs(appSlug)]),
     openGraph: { title, description, url, images: [{ url: '/og-image.png', alt: 'PromptQuorum' }], type: 'article', siteName: 'PromptQuorum' },
     twitter: { card: 'summary_large_image', title, description },
