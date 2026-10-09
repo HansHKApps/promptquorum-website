@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
+    dateModified: '2026-10-09',
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-en.webp',
@@ -64,6 +64,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'What SwarmUI Is', anchor: 'what-is-swarmui' },
       { label: 'History: From StableSwarmUI to Independent SwarmUI', anchor: 'history' },
       { label: 'How the ComfyUI-Backend Architecture Works', anchor: 'architecture' },
+      { label: 'SwarmUI vs. ComfyUI: Differences and When to Pick Each', anchor: 'swarmui-vs-comfyui' },
       { label: 'Multi-GPU and Multi-User Support', anchor: 'multi-gpu-multi-user' },
       { label: 'Supported Models', anchor: 'model-support' },
       { label: 'How to Install SwarmUI', anchor: 'installation' },
@@ -135,6 +136,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'SwarmUI can auto-install and self-start a ComfyUI backend for you on first run, or connect to one or more ComfyUI instances you already run yourself, including remote instances over a network. Each configured backend is treated as a worker: when you submit a generation request, SwarmUI\'s scheduler assigns it to an available backend instance.',
           'Because the underlying inference engine is unmodified ComfyUI, SwarmUI inherits ComfyUI\'s model compatibility, custom-node ecosystem, and workflow format almost entirely. The built-in "ComfyUI Backend Extension" also exposes a direct pass-through route (`ComfyBackendDirect`) so existing ComfyUI automation scripts and API integrations can keep working against a SwarmUI-managed backend.',
           'This is the key architectural difference from AUTOMATIC1111\'s Stable Diffusion WebUI, which ships its own, separate inference pipeline rather than wrapping ComfyUI. SwarmUI\'s trade-off is that it depends on ComfyUI staying compatible and installed correctly — if ComfyUI itself has an issue, SwarmUI inherits it, since SwarmUI is not doing its own independent inference.',
+        ],
+      },
+      vsComfyUI: {
+        id: 'swarmui-vs-comfyui',
+        title: 'SwarmUI vs. ComfyUI: Differences and When to Pick Each',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'SwarmUI and ComfyUI use the same inference engine, so the choice is about interface and scale: SwarmUI adds a form-based Generate tab, multi-GPU job distribution and multi-user accounts on top of ComfyUI, while ComfyUI alone offers a node graph for a single user.' },
+          { type: 'plain-terms', text: 'ComfyUI is the engine and SwarmUI is a control panel on top of it: pick SwarmUI for a simple form, several GPUs or several people, and ComfyUI alone when you want to build every step yourself.' },
+        ],
+        content: [
+          '**SwarmUI is not a replacement for ComfyUI — it runs ComfyUI as its backend.** Both produce images with the same models (Stable Diffusion, SDXL, SD 3.5, FLUX) because the inference engine underneath is the same unmodified ComfyUI.',
+          'Choose SwarmUI when you want a form-based Generate tab with dropdowns and sliders for routine generation, need to use several GPUs, or need built-in multi-user accounts. ComfyUI\'s node graph stays reachable through the built-in Comfy Workflow tab, so choosing SwarmUI does not mean giving up custom workflows.',
+          'Choose ComfyUI on its own when you are the only user, have one GPU, and want the fewest layers between you and the node graph. SwarmUI\'s trade-off is extra moving parts: it depends on ComfyUI staying compatible and installed correctly.',
+        ],
+        items: [
+          '**Interface:** SwarmUI — form-based Generate tab (plus a Comfy Workflow tab); ComfyUI — node graph',
+          '**Multi-GPU:** SwarmUI — built in, one backend per GPU; ComfyUI — no built-in job distribution',
+          '**Multi-user:** SwarmUI — accounts and per-user model access; ComfyUI — a single local user by default',
+          '**Models and custom nodes:** the same — SwarmUI inherits ComfyUI\'s',
+          '**Learning curve:** ComfyUI is the steepest; SwarmUI is simpler for routine generation',
         ],
       },
       multiGpuMultiUser: {
@@ -329,7 +350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
+    dateModified: '2026-10-09',
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-de.webp',
@@ -380,6 +401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Was SwarmUI ist', anchor: 'what-is-swarmui' },
       { label: 'Geschichte: Von StableSwarmUI zum unabhängigen SwarmUI', anchor: 'history' },
       { label: 'Wie die ComfyUI-Backend-Architektur funktioniert', anchor: 'architecture' },
+      { label: 'SwarmUI vs. ComfyUI: Unterschiede und Auswahl', anchor: 'swarmui-vs-comfyui' },
       { label: 'Multi-GPU- und Multi-User-Unterstützung', anchor: 'multi-gpu-multi-user' },
       { label: 'Unterstützte Modelle', anchor: 'model-support' },
       { label: 'SwarmUI installieren', anchor: 'installation' },
@@ -451,6 +473,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'SwarmUI kann beim ersten Start automatisch ein ComfyUI-Backend installieren und selbst starten, oder sich mit einer oder mehreren bereits selbst betriebenen ComfyUI-Instanzen verbinden, einschließlich entfernter Instanzen über ein Netzwerk. Jedes konfigurierte Backend wird als Worker behandelt: Wenn Sie eine Generierungsanfrage senden, weist der Scheduler von SwarmUI sie einer verfügbaren Backend-Instanz zu.',
           'Da die zugrunde liegende Inferenz-Engine unverändertes ComfyUI ist, übernimmt SwarmUI dessen Modellkompatibilität, Custom-Node-Ökosystem und Workflow-Format fast vollständig. Die eingebaute „ComfyUI Backend Extension" stellt zudem eine direkte Durchgangsroute (`ComfyBackendDirect`) bereit, damit bestehende ComfyUI-Automatisierungsskripte und API-Integrationen weiter gegen ein von SwarmUI verwaltetes Backend funktionieren.',
           'Das ist der zentrale architektonische Unterschied zu AUTOMATIC1111s Stable Diffusion WebUI, das eine eigene, separate Inferenz-Pipeline mitbringt, statt ComfyUI zu umhüllen. Der Kompromiss von SwarmUI: Es hängt davon ab, dass ComfyUI selbst kompatibel bleibt und korrekt installiert ist — hat ComfyUI selbst ein Problem, erbt SwarmUI es, da SwarmUI keine eigene unabhängige Inferenz durchführt.',
+        ],
+      },
+      vsComfyUI: {
+        id: 'swarmui-vs-comfyui',
+        title: 'SwarmUI vs. ComfyUI: Unterschiede und Auswahl',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'SwarmUI und ComfyUI nutzen dieselbe Inferenz-Engine, daher geht es bei der Wahl um Oberfläche und Skalierung: SwarmUI ergänzt ComfyUI um einen formularbasierten Generate-Tab, Multi-GPU-Jobverteilung und Mehrbenutzerkonten, während ComfyUI allein einen Node-Graphen für einen einzelnen Nutzer bietet.' },
+          { type: 'plain-terms', text: 'ComfyUI ist der Motor und SwarmUI das Bedienfeld darauf: Wählen Sie SwarmUI für ein einfaches Formular, mehrere GPUs oder mehrere Personen – und ComfyUI allein, wenn Sie jeden Schritt selbst aufbauen möchten.' },
+        ],
+        content: [
+          '**SwarmUI ersetzt ComfyUI nicht – es führt ComfyUI als Backend aus.** Beide erzeugen Bilder mit denselben Modellen (Stable Diffusion, SDXL, SD 3.5, FLUX), weil darunter dieselbe unveränderte ComfyUI-Engine arbeitet.',
+          'Wählen Sie SwarmUI, wenn Sie für die alltägliche Bildgenerierung einen formularbasierten Generate-Tab mit Dropdowns und Reglern wünschen, mehrere GPUs nutzen oder integrierte Mehrbenutzerkonten brauchen. Der Node-Graph von ComfyUI bleibt über den integrierten Tab „Comfy Workflow“ erreichbar – die Wahl von SwarmUI bedeutet also keinen Verzicht auf eigene Workflows.',
+          'Wählen Sie ComfyUI allein, wenn Sie der einzige Nutzer sind, eine GPU haben und möglichst wenige Schichten zwischen sich und dem Node-Graphen wollen. Der Preis von SwarmUI sind zusätzliche bewegliche Teile: Es hängt davon ab, dass ComfyUI kompatibel und korrekt installiert bleibt.',
+        ],
+        items: [
+          '**Oberfläche:** SwarmUI – formularbasierter Generate-Tab (plus Tab „Comfy Workflow“); ComfyUI – Node-Graph',
+          '**Multi-GPU:** SwarmUI – integriert, ein Backend pro GPU; ComfyUI – keine integrierte Jobverteilung',
+          '**Mehrbenutzer:** SwarmUI – Konten und Modellzugriff pro Nutzer; ComfyUI – standardmäßig ein einzelner lokaler Nutzer',
+          '**Modelle und Custom Nodes:** identisch – SwarmUI übernimmt die von ComfyUI',
+          '**Lernkurve:** ComfyUI am steilsten; SwarmUI einfacher für die routinemäßige Generierung',
         ],
       },
       multiGpuMultiUser: {
@@ -645,7 +687,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
+    dateModified: '2026-10-09',
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-es.webp',
@@ -696,6 +738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Qué es SwarmUI', anchor: 'what-is-swarmui' },
       { label: 'Historia: de StableSwarmUI al SwarmUI independiente', anchor: 'history' },
       { label: 'Cómo funciona la arquitectura basada en ComfyUI', anchor: 'architecture' },
+      { label: 'SwarmUI frente a ComfyUI: diferencias y cuándo elegir cada uno', anchor: 'swarmui-vs-comfyui' },
       { label: 'Soporte multi-GPU y multiusuario', anchor: 'multi-gpu-multi-user' },
       { label: 'Modelos compatibles', anchor: 'model-support' },
       { label: 'Cómo instalar SwarmUI', anchor: 'installation' },
@@ -767,6 +810,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'SwarmUI puede instalar e iniciar automáticamente un backend de ComfyUI en el primer arranque, o conectarse a una o más instancias de ComfyUI que ya ejecutes tú mismo, incluidas instancias remotas en red. Cada backend configurado se trata como un worker: cuando envías una solicitud de generación, el planificador de SwarmUI la asigna a una instancia de backend disponible.',
           'Como el motor de inferencia subyacente es ComfyUI sin modificar, SwarmUI hereda casi por completo la compatibilidad de modelos, el ecosistema de nodos personalizados y el formato de flujo de trabajo de ComfyUI. La "ComfyUI Backend Extension" integrada también expone una ruta de paso directo (`ComfyBackendDirect`) para que los scripts de automatización e integraciones API de ComfyUI existentes sigan funcionando contra un backend gestionado por SwarmUI.',
           'Esta es la diferencia arquitectónica clave respecto a Stable Diffusion WebUI de AUTOMATIC1111, que trae su propia canalización de inferencia separada en lugar de envolver ComfyUI. La contrapartida de SwarmUI es que depende de que ComfyUI se mantenga compatible e instalado correctamente — si ComfyUI mismo tiene un problema, SwarmUI lo hereda, ya que SwarmUI no realiza su propia inferencia independiente.',
+        ],
+      },
+      vsComfyUI: {
+        id: 'swarmui-vs-comfyui',
+        title: 'SwarmUI frente a ComfyUI: diferencias y cuándo elegir cada uno',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'SwarmUI y ComfyUI usan el mismo motor de inferencia, así que la elección depende de la interfaz y la escala: SwarmUI añade sobre ComfyUI una pestaña Generate basada en formularios, distribución de trabajos multi-GPU y cuentas multiusuario, mientras que ComfyUI por sí solo ofrece un grafo de nodos para un único usuario.' },
+          { type: 'plain-terms', text: 'ComfyUI es el motor y SwarmUI es un panel de control encima: elige SwarmUI si quieres un formulario sencillo, varias GPU o varias personas, y ComfyUI solo si quieres construir cada paso tú mismo.' },
+        ],
+        content: [
+          '**SwarmUI no sustituye a ComfyUI: ejecuta ComfyUI como backend.** Ambos generan imágenes con los mismos modelos (Stable Diffusion, SDXL, SD 3.5, FLUX) porque el motor de inferencia de fondo es el mismo ComfyUI sin modificar.',
+          'Elige SwarmUI si quieres una pestaña Generate basada en formularios, con menús y deslizadores, para la generación habitual, si necesitas usar varias GPU o si necesitas cuentas multiusuario integradas. El grafo de nodos de ComfyUI sigue accesible desde la pestaña Comfy Workflow integrada, así que elegir SwarmUI no implica renunciar a los flujos de trabajo personalizados.',
+          'Elige ComfyUI por separado si eres el único usuario, tienes una sola GPU y quieres el menor número de capas entre tú y el grafo de nodos. La contrapartida de SwarmUI son las piezas adicionales: depende de que ComfyUI siga siendo compatible y esté bien instalado.',
+        ],
+        items: [
+          '**Interfaz:** SwarmUI: pestaña Generate basada en formularios (más una pestaña Comfy Workflow); ComfyUI: grafo de nodos',
+          '**Multi-GPU:** SwarmUI: integrado, un backend por GPU; ComfyUI: sin distribución de trabajos integrada',
+          '**Multiusuario:** SwarmUI: cuentas y acceso a modelos por usuario; ComfyUI: un único usuario local por defecto',
+          '**Modelos y nodos personalizados:** los mismos; SwarmUI hereda los de ComfyUI',
+          '**Curva de aprendizaje:** ComfyUI es la más pronunciada; SwarmUI es más sencillo para la generación habitual',
         ],
       },
       multiGpuMultiUser: {
@@ -961,7 +1024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
+    dateModified: '2026-10-09',
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-fr.webp',
@@ -1012,6 +1075,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Qu\'est-ce que SwarmUI', anchor: 'what-is-swarmui' },
       { label: 'Histoire : de StableSwarmUI au SwarmUI indépendant', anchor: 'history' },
       { label: 'Comment fonctionne l\'architecture adossée à ComfyUI', anchor: 'architecture' },
+      { label: 'SwarmUI vs ComfyUI : différences et quand choisir chacun', anchor: 'swarmui-vs-comfyui' },
       { label: 'Prise en charge multi-GPU et multi-utilisateurs', anchor: 'multi-gpu-multi-user' },
       { label: 'Modèles pris en charge', anchor: 'model-support' },
       { label: 'Comment installer SwarmUI', anchor: 'installation' },
@@ -1083,6 +1147,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'SwarmUI peut installer et démarrer automatiquement un backend ComfyUI au premier lancement, ou se connecter à une ou plusieurs instances ComfyUI que vous exécutez déjà vous-même, y compris des instances distantes sur un réseau. Chaque backend configuré est traité comme un worker : lorsque vous soumettez une demande de génération, le planificateur de SwarmUI l\'attribue à une instance de backend disponible.',
           'Comme le moteur d\'inférence sous-jacent est un ComfyUI non modifié, SwarmUI hérite presque entièrement de la compatibilité des modèles, de l\'écosystème de nœuds personnalisés et du format de flux de travail de ComfyUI. L\'extension intégrée « ComfyUI Backend Extension » expose également une route de passage direct (`ComfyBackendDirect`) afin que les scripts d\'automatisation et intégrations API ComfyUI existants continuent de fonctionner avec un backend géré par SwarmUI.',
           'C\'est la différence architecturale clé avec Stable Diffusion WebUI d\'AUTOMATIC1111, qui embarque son propre pipeline d\'inférence séparé plutôt que d\'envelopper ComfyUI. Le compromis de SwarmUI est qu\'il dépend du maintien de la compatibilité et de l\'installation correcte de ComfyUI — si ComfyUI lui-même rencontre un problème, SwarmUI en hérite, puisque SwarmUI n\'effectue pas sa propre inférence indépendante.',
+        ],
+      },
+      vsComfyUI: {
+        id: 'swarmui-vs-comfyui',
+        title: 'SwarmUI vs ComfyUI : différences et quand choisir chacun',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'SwarmUI et ComfyUI utilisent le même moteur d\'inférence : le choix porte donc sur l\'interface et l\'échelle. SwarmUI ajoute à ComfyUI un onglet Generate à formulaires, la répartition des tâches multi-GPU et des comptes multi-utilisateurs, alors que ComfyUI seul propose un graphe de nœuds pour un seul utilisateur.' },
+          { type: 'plain-terms', text: 'ComfyUI est le moteur et SwarmUI le panneau de commande par-dessus : choisissez SwarmUI pour un formulaire simple, plusieurs GPU ou plusieurs personnes, et ComfyUI seul si vous voulez construire chaque étape vous-même.' },
+        ],
+        content: [
+          '**SwarmUI ne remplace pas ComfyUI : il exécute ComfyUI comme backend.** Les deux génèrent des images avec les mêmes modèles (Stable Diffusion, SDXL, SD 3.5, FLUX), car le moteur d\'inférence sous-jacent est le même ComfyUI non modifié.',
+          'Choisissez SwarmUI si vous voulez un onglet Generate à formulaires, avec menus déroulants et curseurs, pour la génération courante, si vous devez utiliser plusieurs GPU ou si vous avez besoin de comptes multi-utilisateurs intégrés. Le graphe de nœuds de ComfyUI reste accessible via l\'onglet Comfy Workflow intégré : choisir SwarmUI ne signifie donc pas renoncer aux workflows personnalisés.',
+          'Choisissez ComfyUI seul si vous êtes le seul utilisateur, n\'avez qu\'un GPU et voulez le moins de couches possible entre vous et le graphe de nœuds. Le compromis de SwarmUI tient à des éléments supplémentaires : il dépend du maintien de la compatibilité et de la bonne installation de ComfyUI.',
+        ],
+        items: [
+          '**Interface :** SwarmUI : onglet Generate à formulaires (plus un onglet Comfy Workflow) ; ComfyUI : graphe de nœuds',
+          '**Multi-GPU :** SwarmUI : intégré, un backend par GPU ; ComfyUI : pas de répartition des tâches intégrée',
+          '**Multi-utilisateurs :** SwarmUI : comptes et accès aux modèles par utilisateur ; ComfyUI : un seul utilisateur local par défaut',
+          '**Modèles et nœuds personnalisés :** identiques ; SwarmUI hérite de ceux de ComfyUI',
+          '**Courbe d\'apprentissage :** ComfyUI est la plus raide ; SwarmUI est plus simple pour la génération courante',
         ],
       },
       multiGpuMultiUser: {
@@ -1277,7 +1361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
+    dateModified: '2026-10-09',
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-ja.webp',
@@ -1328,6 +1412,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'SwarmUIとは', anchor: 'what-is-swarmui' },
       { label: '歴史:StableSwarmUIから独立SwarmUIへ', anchor: 'history' },
       { label: 'ComfyUIバックエンドアーキテクチャの仕組み', anchor: 'architecture' },
+      { label: 'SwarmUIとComfyUIの違いと選び方', anchor: 'swarmui-vs-comfyui' },
       { label: 'マルチGPU・マルチユーザー対応', anchor: 'multi-gpu-multi-user' },
       { label: '対応モデル', anchor: 'model-support' },
       { label: 'SwarmUIのインストール方法', anchor: 'installation' },
@@ -1399,6 +1484,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'SwarmUIは初回起動時にComfyUIバックエンドを自動でインストール・自動起動できるほか、既にネットワーク越しに自分で実行している1つ以上のComfyUIインスタンス(リモートインスタンスを含む)に接続することもできます。設定された各バックエンドはワーカーとして扱われ、生成リクエストを送信すると、SwarmUIのスケジューラーが利用可能なバックエンドインスタンスに割り当てます。',
           '基盤となる推論エンジンが未改変のComfyUIであるため、SwarmUIはComfyUIのモデル互換性、カスタムノードエコシステム、ワークフロー形式をほぼそのまま引き継ぎます。内蔵の「ComfyUI Backend Extension」は直接パススルー経路(`ComfyBackendDirect`)も公開しており、既存のComfyUI自動化スクリプトやAPI連携がSwarmUI管理下のバックエンドに対して引き続き動作するようにしています。',
           'これが、ComfyUIをラップするのではなく独自の別個の推論パイプラインを備えるAUTOMATIC1111のStable Diffusion WebUIとの主要なアーキテクチャ上の違いです。SwarmUIのトレードオフは、ComfyUI自体が互換性を保ち正しくインストールされていることに依存する点です — ComfyUI自体に問題があれば、SwarmUIはそれを引き継ぎます。SwarmUIは独自の独立した推論を行っていないためです。',
+        ],
+      },
+      vsComfyUI: {
+        id: 'swarmui-vs-comfyui',
+        title: 'SwarmUIとComfyUIの違いと選び方',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'SwarmUIとComfyUIは同じ推論エンジンを使うため、選択の基準はインターフェースと規模です。SwarmUIはComfyUIの上にフォーム式のGenerateタブ、マルチGPUのジョブ分散、マルチユーザーアカウントを追加し、ComfyUI単体は1人のユーザー向けのノードグラフを提供します。' },
+          { type: 'plain-terms', text: 'ComfyUIがエンジン、SwarmUIはその上に載るコントロールパネルです。シンプルなフォーム、複数のGPU、複数人での利用ならSwarmUI、すべての工程を自分で組み立てたいならComfyUI単体を選びます。' },
+        ],
+        content: [
+          '**SwarmUIはComfyUIの代替ではなく、ComfyUIをバックエンドとして実行します。** 内部の推論エンジンは同じ未改変のComfyUIなので、どちらも同じモデル(Stable Diffusion、SDXL、SD 3.5、FLUX)で画像を生成できます。',
+          '日常的な生成にドロップダウンとスライダーのフォーム式Generateタブを使いたい場合、複数のGPUを使う場合、またはマルチユーザーアカウントが必要な場合はSwarmUIを選びます。ComfyUIのノードグラフは内蔵のComfy Workflowタブから引き続き利用できるため、SwarmUIを選んでもカスタムワークフローを諦める必要はありません。',
+          '自分だけが使い、GPUが1枚で、ノードグラフとの間の層をできるだけ減らしたい場合はComfyUI単体を選びます。SwarmUIの代償は構成要素が増えることで、ComfyUIとの互換性と正しいインストールが保たれていることに依存します。',
+        ],
+        items: [
+          '**インターフェース:** SwarmUI — フォーム式Generateタブ(Comfy Workflowタブも利用可)、ComfyUI — ノードグラフ',
+          '**マルチGPU:** SwarmUI — 内蔵、GPUごとに1つのバックエンド、ComfyUI — ジョブ分散は非搭載',
+          '**マルチユーザー:** SwarmUI — アカウントとユーザーごとのモデルアクセス、ComfyUI — 標準では1人のローカルユーザー',
+          '**モデルとカスタムノード:** 同じ — SwarmUIはComfyUIのものを引き継ぎます',
+          '**学習コスト:** ComfyUIが最も高く、SwarmUIは日常的な生成なら簡単です',
         ],
       },
       multiGpuMultiUser: {
@@ -1593,7 +1698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
+    dateModified: '2026-10-09',
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-pt.webp',
@@ -1644,6 +1749,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'O que é o SwarmUI', anchor: 'what-is-swarmui' },
       { label: 'História: do StableSwarmUI ao SwarmUI independente', anchor: 'history' },
       { label: 'Como funciona a arquitetura baseada no ComfyUI', anchor: 'architecture' },
+      { label: 'SwarmUI vs ComfyUI: diferenças e quando escolher cada um', anchor: 'swarmui-vs-comfyui' },
       { label: 'Suporte a múltiplas GPUs e multiusuário', anchor: 'multi-gpu-multi-user' },
       { label: 'Modelos suportados', anchor: 'model-support' },
       { label: 'Como instalar o SwarmUI', anchor: 'installation' },
@@ -1715,6 +1821,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O SwarmUI pode instalar e iniciar automaticamente um backend do ComfyUI na primeira execução, ou se conectar a uma ou mais instâncias do ComfyUI que você já executa por conta própria, incluindo instâncias remotas em rede. Cada backend configurado é tratado como um worker: quando você envia uma solicitação de geração, o agendador do SwarmUI a atribui a uma instância de backend disponível.',
           'Como o mecanismo de inferência subjacente é o ComfyUI sem modificações, o SwarmUI herda quase por completo a compatibilidade de modelos, o ecossistema de nós personalizados e o formato de fluxo de trabalho do ComfyUI. A "ComfyUI Backend Extension" integrada também expõe uma rota de passagem direta (`ComfyBackendDirect`) para que scripts de automação e integrações de API do ComfyUI existentes continuem funcionando com um backend gerenciado pelo SwarmUI.',
           'Essa é a principal diferença arquitetônica em relação ao Stable Diffusion WebUI do AUTOMATIC1111, que traz seu próprio pipeline de inferência separado em vez de envolver o ComfyUI. O trade-off do SwarmUI é que ele depende da compatibilidade do próprio ComfyUI e de sua instalação correta — se o ComfyUI em si tiver um problema, o SwarmUI o herda, já que o SwarmUI não realiza sua própria inferência independente.',
+        ],
+      },
+      vsComfyUI: {
+        id: 'swarmui-vs-comfyui',
+        title: 'SwarmUI vs ComfyUI: diferenças e quando escolher cada um',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'O SwarmUI e o ComfyUI usam o mesmo mecanismo de inferência, então a escolha depende de interface e escala: o SwarmUI acrescenta ao ComfyUI uma aba Generate baseada em formulários, distribuição de tarefas entre várias GPUs e contas multiusuário, enquanto o ComfyUI sozinho oferece um grafo de nós para um único usuário.' },
+          { type: 'plain-terms', text: 'O ComfyUI é o motor e o SwarmUI é um painel de controle por cima dele: escolha o SwarmUI para um formulário simples, várias GPUs ou várias pessoas, e o ComfyUI sozinho se quiser montar cada etapa por conta própria.' },
+        ],
+        content: [
+          '**O SwarmUI não substitui o ComfyUI: ele executa o ComfyUI como backend.** Ambos geram imagens com os mesmos modelos (Stable Diffusion, SDXL, SD 3.5, FLUX), porque o mecanismo de inferência por baixo é o mesmo ComfyUI sem modificações.',
+          'Escolha o SwarmUI se quiser uma aba Generate baseada em formulários, com menus e controles deslizantes, para a geração do dia a dia, se precisar usar várias GPUs ou se precisar de contas multiusuário integradas. O grafo de nós do ComfyUI continua acessível pela aba Comfy Workflow integrada, então escolher o SwarmUI não significa abrir mão de fluxos de trabalho personalizados.',
+          'Escolha o ComfyUI sozinho se você for o único usuário, tiver uma só GPU e quiser o mínimo de camadas entre você e o grafo de nós. O custo do SwarmUI são as peças adicionais: ele depende de o ComfyUI continuar compatível e bem instalado.',
+        ],
+        items: [
+          '**Interface:** SwarmUI: aba Generate baseada em formulários (mais uma aba Comfy Workflow); ComfyUI: grafo de nós',
+          '**Multi-GPU:** SwarmUI: integrado, um backend por GPU; ComfyUI: sem distribuição de tarefas integrada',
+          '**Multiusuário:** SwarmUI: contas e acesso a modelos por usuário; ComfyUI: um único usuário local por padrão',
+          '**Modelos e nós personalizados:** os mesmos; o SwarmUI herda os do ComfyUI',
+          '**Curva de aprendizado:** o ComfyUI é a mais íngreme; o SwarmUI é mais simples para a geração do dia a dia',
         ],
       },
       multiGpuMultiUser: {
@@ -1909,7 +2035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
+    dateModified: '2026-10-09',
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-ar.webp',
@@ -1960,6 +2086,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'ما هو SwarmUI', anchor: 'what-is-swarmui' },
       { label: 'التاريخ: من StableSwarmUI إلى SwarmUI المستقل', anchor: 'history' },
       { label: 'كيف تعمل بنية الخلفية القائمة على ComfyUI', anchor: 'architecture' },
+      { label: 'SwarmUI مقابل ComfyUI: الفروق ومتى تختار كلًّا منهما', anchor: 'swarmui-vs-comfyui' },
       { label: 'دعم عدة وحدات GPU وعدة مستخدمين', anchor: 'multi-gpu-multi-user' },
       { label: 'النماذج المدعومة', anchor: 'model-support' },
       { label: 'كيفية تثبيت SwarmUI', anchor: 'installation' },
@@ -2031,6 +2158,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يمكن لـ SwarmUI تثبيت وتشغيل خلفية ComfyUI تلقائيًا عند أول تشغيل، أو الاتصال بنسخة واحدة أو أكثر من ComfyUI تشغّلها بنفسك بالفعل، بما في ذلك النسخ البعيدة عبر الشبكة. تُعامل كل خلفية تم تكوينها كوحدة عمل: عندما تُرسل طلب توليد، تقوم جدولة SwarmUI بتعيينه لنسخة خلفية متاحة.',
           'بما أن محرك الاستدلال الأساسي هو ComfyUI دون تعديل، يرث SwarmUI تقريبًا بالكامل توافق النماذج ونظام العقد المخصصة الإيكولوجي وتنسيق سير العمل الخاص بـ ComfyUI. يوفّر "ComfyUI Backend Extension" المدمج أيضًا مسار تمرير مباشر (`ComfyBackendDirect`) بحيث تستمر نصوص الأتمتة وتكاملات API الخاصة بـ ComfyUI الموجودة في العمل مع خلفية تديرها SwarmUI.',
           'هذا هو الاختلاف المعماري الرئيسي عن Stable Diffusion WebUI من AUTOMATIC1111، الذي يأتي بخط أنابيب استدلال منفصل خاص به بدلاً من تغليف ComfyUI. المقايضة في SwarmUI هي اعتماده على بقاء ComfyUI متوافقًا ومُثبَّتًا بشكل صحيح — إذا كانت هناك مشكلة في ComfyUI نفسه، يرثها SwarmUI، لأن SwarmUI لا يقوم باستدلاله المستقل الخاص.',
+        ],
+      },
+      vsComfyUI: {
+        id: 'swarmui-vs-comfyui',
+        title: 'SwarmUI مقابل ComfyUI: الفروق ومتى تختار كلًّا منهما',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'يستخدم SwarmUI وComfyUI محرك الاستدلال نفسه، لذا يرتبط الاختيار بالواجهة والحجم: يضيف SwarmUI فوق ComfyUI تبويب Generate قائمًا على النماذج، وتوزيع المهام على عدة وحدات GPU، وحسابات متعددة المستخدمين، بينما يقدّم ComfyUI وحده مخطط عُقد لمستخدم واحد.' },
+          { type: 'plain-terms', text: 'ComfyUI هو المحرك وSwarmUI لوحة تحكم فوقه: اختر SwarmUI إذا أردت نموذجًا بسيطًا أو عدة وحدات GPU أو عدة أشخاص، واختر ComfyUI وحده إذا أردت بناء كل خطوة بنفسك.' },
+        ],
+        content: [
+          '**SwarmUI ليس بديلًا عن ComfyUI، بل يشغّل ComfyUI كواجهة خلفية.** ينتج كلاهما الصور بالنماذج نفسها (Stable Diffusion وSDXL وSD 3.5 وFLUX) لأن محرك الاستدلال الكامن هو ComfyUI نفسه دون تعديل.',
+          'اختر SwarmUI إذا أردت تبويب Generate قائمًا على النماذج مع قوائم منسدلة ومنزلقات للتوليد المعتاد، أو احتجت إلى استخدام عدة وحدات GPU، أو إلى حسابات متعددة المستخدمين مدمجة. يبقى مخطط العُقد في ComfyUI متاحًا عبر تبويب Comfy Workflow المدمج، فاختيار SwarmUI لا يعني التخلي عن سير العمل المخصص.',
+          'اختر ComfyUI وحده إذا كنت المستخدم الوحيد ولديك وحدة GPU واحدة وتريد أقل عدد من الطبقات بينك وبين مخطط العُقد. مقابل ذلك يضيف SwarmUI أجزاء أخرى: فهو يعتمد على بقاء ComfyUI متوافقًا ومثبّتًا بشكل صحيح.',
+        ],
+        items: [
+          '**الواجهة:** SwarmUI — تبويب Generate قائم على النماذج (مع تبويب Comfy Workflow)؛ ComfyUI — مخطط العُقد',
+          '**تعدد وحدات GPU:** SwarmUI — مدمج، واجهة خلفية واحدة لكل GPU؛ ComfyUI — لا يوجد توزيع مهام مدمج',
+          '**تعدد المستخدمين:** SwarmUI — حسابات ووصول إلى النماذج لكل مستخدم؛ ComfyUI — مستخدم محلي واحد افتراضيًا',
+          '**النماذج والعُقد المخصصة:** متطابقة — يرث SwarmUI ما لدى ComfyUI',
+          '**منحنى التعلّم:** ComfyUI هو الأصعب؛ SwarmUI أبسط للتوليد المعتاد',
         ],
       },
       multiGpuMultiUser: {
@@ -2225,7 +2372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
+    dateModified: '2026-10-09',
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-zh.webp',
@@ -2276,6 +2423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'SwarmUI是什么', anchor: 'what-is-swarmui' },
       { label: '历史:从StableSwarmUI到独立的SwarmUI', anchor: 'history' },
       { label: 'ComfyUI后端架构的工作原理', anchor: 'architecture' },
+      { label: 'SwarmUI与ComfyUI的区别及选择建议', anchor: 'swarmui-vs-comfyui' },
       { label: '多GPU与多用户支持', anchor: 'multi-gpu-multi-user' },
       { label: '支持的模型', anchor: 'model-support' },
       { label: '如何安装SwarmUI', anchor: 'installation' },
@@ -2347,6 +2495,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'SwarmUI在首次运行时可以自动安装并自行启动一个ComfyUI后端,也可以连接到你自己已经运行的一个或多个ComfyUI实例,包括通过网络连接的远程实例。每个配置好的后端都被视为一个工作节点:当你提交一个生成请求时,SwarmUI的调度器会将其分配给一个可用的后端实例。',
           '由于底层推理引擎是未经修改的ComfyUI,SwarmUI几乎完整地继承了ComfyUI的模型兼容性、自定义节点生态系统和工作流格式。内置的"ComfyUI Backend Extension"还提供了一条直接透传路径(`ComfyBackendDirect`),让现有的ComfyUI自动化脚本和API集成能继续对接由SwarmUI管理的后端运行。',
           '这正是与AUTOMATIC1111的Stable Diffusion WebUI的关键架构区别——后者自带独立的推理管线,而非包裹ComfyUI。SwarmUI的权衡在于,它依赖于ComfyUI自身保持兼容并正确安装——如果ComfyUI本身出了问题,SwarmUI也会随之受影响,因为SwarmUI并不进行自己独立的推理。',
+        ],
+      },
+      vsComfyUI: {
+        id: 'swarmui-vs-comfyui',
+        title: 'SwarmUI与ComfyUI的区别及选择建议',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'SwarmUI与ComfyUI使用同一个推理引擎,因此选择取决于界面和规模:SwarmUI在ComfyUI之上增加了表单式Generate标签页、多GPU任务分配和多用户账户,而单独的ComfyUI为单个用户提供节点图。' },
+          { type: 'plain-terms', text: 'ComfyUI是引擎,SwarmUI是其上的控制面板:需要简单表单、多块GPU或多人使用时选SwarmUI;想亲手搭建每一步时单独使用ComfyUI。' },
+        ],
+        content: [
+          '**SwarmUI不是ComfyUI的替代品,它把ComfyUI作为后端运行。** 底层推理引擎是同一个未经修改的ComfyUI,因此两者可以用相同的模型(Stable Diffusion、SDXL、SD 3.5、FLUX)生成图像。',
+          '如果你想用带下拉菜单和滑块的表单式Generate标签页完成日常生成、需要使用多块GPU,或需要内置的多用户账户,请选择SwarmUI。ComfyUI的节点图仍可通过内置的Comfy Workflow标签页访问,因此选择SwarmUI并不意味着放弃自定义工作流。',
+          '如果你是唯一的用户、只有一块GPU,并希望自己与节点图之间的层级尽可能少,请单独使用ComfyUI。SwarmUI的代价是多了几个组成部分:它依赖ComfyUI保持兼容并正确安装。',
+        ],
+        items: [
+          '**界面:** SwarmUI — 表单式Generate标签页(另有Comfy Workflow标签页);ComfyUI — 节点图',
+          '**多GPU:** SwarmUI — 内置,每块GPU一个后端;ComfyUI — 无内置任务分配',
+          '**多用户:** SwarmUI — 账户及按用户划分的模型访问权限;ComfyUI — 默认仅限单个本地用户',
+          '**模型与自定义节点:** 相同 — SwarmUI沿用ComfyUI的',
+          '**学习曲线:** ComfyUI最陡;SwarmUI更适合日常生成',
         ],
       },
       multiGpuMultiUser: {
@@ -2541,7 +2709,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-09-06',
-    dateModified: '2026-09-06',
+    dateModified: '2026-10-09',
     next_refresh_due: '2027-03-06',
     theme: 'Image & Video Generation',
     heroImage: '/images/stableswarmui-review-hero-ko.webp',
@@ -2592,6 +2760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'SwarmUI란 무엇인가', anchor: 'what-is-swarmui' },
       { label: '역사: StableSwarmUI에서 독립적인 SwarmUI로', anchor: 'history' },
       { label: 'ComfyUI 백엔드 아키텍처의 작동 방식', anchor: 'architecture' },
+      { label: 'SwarmUI와 ComfyUI의 차이와 선택 기준', anchor: 'swarmui-vs-comfyui' },
       { label: '멀티 GPU 및 멀티 유저 지원', anchor: 'multi-gpu-multi-user' },
       { label: '지원 모델', anchor: 'model-support' },
       { label: 'SwarmUI 설치 방법', anchor: 'installation' },
@@ -2663,6 +2832,26 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'SwarmUI는 최초 실행 시 ComfyUI 백엔드를 자동으로 설치하고 스스로 시작할 수 있으며, 이미 직접 실행 중인 하나 이상의 ComfyUI 인스턴스(네트워크상의 원격 인스턴스 포함)에 연결할 수도 있습니다. 구성된 각 백엔드는 워커로 취급됩니다. 생성 요청을 제출하면 SwarmUI의 스케줄러가 이를 사용 가능한 백엔드 인스턴스에 할당합니다.',
           '기본 추론 엔진이 수정되지 않은 ComfyUI이기 때문에, SwarmUI는 ComfyUI의 모델 호환성, 커스텀 노드 생태계, 워크플로 형식을 거의 그대로 물려받습니다. 내장된 "ComfyUI Backend Extension"은 직접 전달 경로(`ComfyBackendDirect`)도 제공하여, 기존의 ComfyUI 자동화 스크립트와 API 통합이 SwarmUI가 관리하는 백엔드와 계속 연동될 수 있도록 합니다.',
           '이것이 자체 독립된 추론 파이프라인을 갖춘 AUTOMATIC1111의 Stable Diffusion WebUI와의 핵심적인 아키텍처 차이입니다. AUTOMATIC1111은 ComfyUI를 감싸지 않습니다. SwarmUI의 트레이드오프는 내부의 ComfyUI가 계속 호환성을 유지하고 올바르게 설치되어 있는지에 의존한다는 점입니다 — ComfyUI 자체에 문제가 생기면 SwarmUI도 그 영향을 그대로 받습니다. SwarmUI는 자체적으로 독립된 추론을 수행하지 않기 때문입니다.',
+        ],
+      },
+      vsComfyUI: {
+        id: 'swarmui-vs-comfyui',
+        title: 'SwarmUI와 ComfyUI의 차이와 선택 기준',
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'SwarmUI와 ComfyUI는 같은 추론 엔진을 쓰므로 선택 기준은 인터페이스와 규모입니다. SwarmUI는 ComfyUI 위에 폼 기반 Generate 탭, 멀티 GPU 작업 분산, 멀티 유저 계정을 더하고, ComfyUI 단독은 한 명의 사용자를 위한 노드 그래프를 제공합니다.' },
+          { type: 'plain-terms', text: 'ComfyUI가 엔진이고 SwarmUI는 그 위의 컨트롤 패널입니다. 간단한 폼, 여러 GPU, 여러 사용자가 필요하면 SwarmUI를, 모든 단계를 직접 구성하고 싶다면 ComfyUI 단독을 선택하세요.' },
+        ],
+        content: [
+          '**SwarmUI는 ComfyUI를 대체하지 않고 ComfyUI를 백엔드로 실행합니다.** 내부 추론 엔진이 수정되지 않은 동일한 ComfyUI이므로, 둘 다 같은 모델(Stable Diffusion, SDXL, SD 3.5, FLUX)로 이미지를 생성합니다.',
+          '일상적인 생성에 드롭다운과 슬라이더가 있는 폼 기반 Generate 탭을 쓰고 싶거나, 여러 GPU를 사용하거나, 내장 멀티 유저 계정이 필요하다면 SwarmUI를 선택하세요. ComfyUI의 노드 그래프는 내장된 Comfy Workflow 탭에서 계속 접근할 수 있으므로, SwarmUI를 선택해도 커스텀 워크플로를 포기할 필요는 없습니다.',
+          '혼자 사용하고 GPU가 하나이며 노드 그래프와의 사이에 층이 최대한 적기를 원한다면 ComfyUI 단독을 선택하세요. SwarmUI의 대가는 구성 요소가 늘어난다는 점으로, ComfyUI가 호환성을 유지하고 올바르게 설치되어 있어야 합니다.',
+        ],
+        items: [
+          '**인터페이스:** SwarmUI — 폼 기반 Generate 탭(Comfy Workflow 탭 포함), ComfyUI — 노드 그래프',
+          '**멀티 GPU:** SwarmUI — 내장, GPU당 백엔드 하나, ComfyUI — 내장 작업 분산 없음',
+          '**멀티 유저:** SwarmUI — 계정 및 사용자별 모델 접근, ComfyUI — 기본적으로 로컬 사용자 한 명',
+          '**모델과 커스텀 노드:** 동일 — SwarmUI는 ComfyUI의 것을 그대로 사용',
+          '**학습 곡선:** ComfyUI가 가장 가파르고, SwarmUI는 일상적인 생성에 더 간단',
         ],
       },
       multiGpuMultiUser: {
