@@ -1812,5 +1812,30 @@
       "ctr": 0.07807308970099668,
       "period": "2026-08-23 to 2026-09-20 (trailing 28 days)"
     }
+  },
+  {
+    "id": "a0ac8fd1-14b6-40a9-9733-0d51e944ae4a",
+    "slug": "/power-local-llm/lm-studio-review",
+    "date": "2026-10-09T18:36:10.798Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LM Studio Review: Features, Pricing & License",
+        "new": "LM Studio Review 2026: Free to Use, Not Open Source"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LM Studio is a free desktop app for running AI models locally with a built-in model browser and OpenAI-compatible server. Verified license, downloads, and features for 2026.",
+        "new": "Is LM Studio free? Yes, for personal and work use since July 2025, but it is closed-source. Pricing, license, system requirements and downloads."
+      }
+    ],
+    "reason": "geo-meta-optimizer: intent alignment (is lm studio free / open source / license / pricing queries), coherence-A",
+    "baseline": {
+      "position": 5.9,
+      "impressions": 1392,
+      "clicks": 1,
+      "ctr": 0.0007183908045977011,
+      "period": "GSC top queries 2026-10-09"
+    }
   }
 ]
