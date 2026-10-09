@@ -1887,5 +1887,182 @@
       "ctr": 0.002960331557134399,
       "period": "GSC top queries 2026-10-09"
     }
+  },
+  {
+    "id": "8630f7d4-b1db-4ce6-a4cd-f698df8b17b3",
+    "slug": "/power-local-llm/omlx-review",
+    "date": "2026-10-09T19:00:21.011Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "oMLX Review: MLX Inference Server for Mac",
+        "new": "oMLX Review (2026): Free Open-Source MLX Server for Mac"
+      },
+      {
+        "field": "metaDescription",
+        "old": "oMLX is a free, open-source MLX inference server for Apple Silicon with a menu-bar app, paged SSD caching, and OpenAI/Anthropic-compatible endpoints. 2026 review.",
+        "new": "What is oMLX? A free, open-source MLX server for Apple Silicon Macs with paged SSD caching. Install via Homebrew; compared with mlx-lm and mlx-serve."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B1 - GSC omlx/mlx-serve/distributed/version queries; added mlx-serve comparison, distributed section, 5 FAQs (body+meta together)",
+    "baseline": {
+      "position": 8.4,
+      "impressions": 1933,
+      "clicks": 3,
+      "ctr": 0.0015519917227108122,
+      "period": "GSC top queries 2026-10-09"
+    }
+  },
+  {
+    "id": "c72cdaba-bdf2-491f-81ea-78a0329523e2",
+    "slug": "/de/power-local-llm/omlx-review",
+    "date": "2026-10-09T19:00:21.105Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "oMLX Review: MLX-Inferenzserver für Mac",
+        "new": "oMLX Review (2026): Kostenloser MLX-Server für Mac"
+      },
+      {
+        "field": "metaDescription",
+        "old": "oMLX ist ein kostenloser, quelloffener MLX-Inferenzserver für Apple Silicon mit Menüleisten-App, paginiertem SSD-Cache und OpenAI-/Anthropic-kompatiblen Endpunkten. Review 2026.",
+        "new": "Was ist oMLX? Kostenloser, quelloffener MLX-Server für Apple-Silicon-Macs mit SSD-Cache. Installation per Homebrew; Vergleich mit mlx-lm und mlx-serve."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B1 - GSC omlx/mlx-serve/distributed/version queries; added mlx-serve comparison, distributed section, 5 FAQs (body+meta together)",
+    "baseline": null
+  },
+  {
+    "id": "efd99648-7165-4aab-b766-fb748ca01581",
+    "slug": "/fr/power-local-llm/omlx-review",
+    "date": "2026-10-09T19:00:21.199Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "oMLX Review: serveur d'inférence MLX pour Mac",
+        "new": "oMLX Review (2026) : serveur MLX gratuit et open source"
+      },
+      {
+        "field": "metaDescription",
+        "old": "oMLX est un serveur d'inférence MLX gratuit et open source pour Apple Silicon, avec app barre de menus, cache SSD paginé et points de terminaison OpenAI/Anthropic. Review 2026.",
+        "new": "Qu'est-ce qu'oMLX ? Serveur MLX gratuit et open source pour Mac Apple Silicon, avec cache SSD. Installation via Homebrew ; comparé à mlx-lm et mlx-serve."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B1 - GSC omlx/mlx-serve/distributed/version queries; added mlx-serve comparison, distributed section, 5 FAQs (body+meta together)",
+    "baseline": null
+  },
+  {
+    "id": "b62950ed-2a07-4138-8524-16dd884ccefd",
+    "slug": "/ja/power-local-llm/omlx-review",
+    "date": "2026-10-09T19:00:21.293Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "oMLXレビュー：Mac向けMLX推論サーバー",
+        "new": "oMLXレビュー（2026）：無料OSSのMLXサーバー"
+      },
+      {
+        "field": "metaDescription",
+        "old": "oMLXは、メニューバーアプリ、ページ化SSDキャッシュ、OpenAI/Anthropic互換エンドポイントを備えた、Apple Silicon向けの無料・オープンソースMLX推論サーバーです。2026年レビュー。",
+        "new": "oMLXとは？ページ化SSDキャッシュを備えた、Apple Silicon Mac向けの無料・オープンソースMLXサーバーです。Homebrewでの導入方法とmlx-lm・mlx-serveとの比較を解説します。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B1 - GSC omlx/mlx-serve/distributed/version queries; added mlx-serve comparison, distributed section, 5 FAQs (body+meta together)",
+    "baseline": null
+  },
+  {
+    "id": "2e7069b0-abdf-4527-8593-ae8aa12d7b9f",
+    "slug": "/zh/power-local-llm/omlx-review",
+    "date": "2026-10-09T19:00:21.387Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "oMLX评测：Mac用MLX推理服务器",
+        "new": "oMLX评测（2026）：Mac免费开源MLX推理服务器"
+      },
+      {
+        "field": "metaDescription",
+        "old": "oMLX是一款面向Apple Silicon的免费开源MLX推理服务器，拥有菜单栏应用、分页SSD缓存以及兼容OpenAI/Anthropic的端点。2026年评测。",
+        "new": "oMLX是什么？一款面向Apple Silicon Mac的免费开源MLX服务器，带分页SSD缓存。可通过Homebrew安装，并与mlx-lm、mlx-serve对比。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B1 - GSC omlx/mlx-serve/distributed/version queries; added mlx-serve comparison, distributed section, 5 FAQs (body+meta together)",
+    "baseline": null
+  },
+  {
+    "id": "8dcac341-aac8-4d50-b57d-db6e34441ad8",
+    "slug": "/es/power-local-llm/omlx-review",
+    "date": "2026-10-09T19:00:21.478Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "oMLX Review: servidor de inferencia MLX para Mac",
+        "new": "oMLX Review (2026): servidor MLX gratis y open source"
+      },
+      {
+        "field": "metaDescription",
+        "old": "oMLX es un servidor de inferencia MLX gratuito y de código abierto para Apple Silicon, con app en la barra de menús, caché SSD paginada y endpoints compatibles con OpenAI/Anthropic. Review 2026.",
+        "new": "¿Qué es oMLX? Servidor MLX gratuito y de código abierto para Mac con Apple Silicon y caché SSD. Instalación con Homebrew; comparado con mlx-lm y mlx-serve."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B1 - GSC omlx/mlx-serve/distributed/version queries; added mlx-serve comparison, distributed section, 5 FAQs (body+meta together)",
+    "baseline": null
+  },
+  {
+    "id": "277316fe-509c-4c60-bc2b-2aa8ced2e3b7",
+    "slug": "/pt/power-local-llm/omlx-review",
+    "date": "2026-10-09T19:00:21.572Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "oMLX Review: servidor de inferência MLX para Mac",
+        "new": "oMLX Review (2026): servidor MLX grátis e open source"
+      },
+      {
+        "field": "metaDescription",
+        "old": "O oMLX é um servidor de inferência MLX gratuito e de código aberto para Apple Silicon, com app na barra de menus, cache SSD paginado e endpoints compatíveis com OpenAI/Anthropic. Review 2026.",
+        "new": "O que é o oMLX? Servidor MLX gratuito e de código aberto para Macs Apple Silicon, com cache SSD. Instalação via Homebrew; comparado com mlx-lm e mlx-serve."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B1 - GSC omlx/mlx-serve/distributed/version queries; added mlx-serve comparison, distributed section, 5 FAQs (body+meta together)",
+    "baseline": null
+  },
+  {
+    "id": "8672c240-8e6c-4476-a86f-9616bf941ad2",
+    "slug": "/ar/power-local-llm/omlx-review",
+    "date": "2026-10-09T19:00:21.667Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "مراجعة oMLX: خادم استدلال MLX لأجهزة Mac",
+        "new": "مراجعة oMLX (2026): خادم MLX مجاني ومفتوح المصدر لـ Mac"
+      },
+      {
+        "field": "metaDescription",
+        "old": "oMLX خادم استدلال MLX مجاني ومفتوح المصدر لـ Apple Silicon، مع تطبيق شريط قوائم وذاكرة تخزين مؤقت SSD مقسّمة ونقاط نهاية متوافقة مع OpenAI/Anthropic. مراجعة 2026.",
+        "new": "ما هو oMLX؟ خادم MLX مجاني ومفتوح المصدر لأجهزة Mac بمعالجات Apple Silicon مع ذاكرة SSD مؤقتة. التثبيت عبر Homebrew ومقارنة مع mlx-lm وmlx-serve."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B1 - GSC omlx/mlx-serve/distributed/version queries; added mlx-serve comparison, distributed section, 5 FAQs (body+meta together)",
+    "baseline": null
+  },
+  {
+    "id": "21108c09-1d8a-4413-9a8b-ed5b69e94798",
+    "slug": "/ko/power-local-llm/omlx-review",
+    "date": "2026-10-09T19:00:21.758Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "oMLX 리뷰: Mac용 MLX 추론 서버",
+        "new": "oMLX 리뷰(2026): 무료 오픈소스 MLX 서버"
+      },
+      {
+        "field": "metaDescription",
+        "old": "oMLX는 메뉴 바 앱, 페이지 처리된 SSD 캐시, OpenAI/Anthropic 호환 엔드포인트를 갖춘 Apple Silicon용 무료 오픈소스 MLX 추론 서버입니다. 2026년 리뷰.",
+        "new": "oMLX란? 페이지 단위 SSD 캐시를 갖춘 Apple Silicon Mac용 무료 오픈소스 MLX 서버입니다. Homebrew 설치 방법과 mlx-lm, mlx-serve 비교까지 정리했습니다."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B1 - GSC omlx/mlx-serve/distributed/version queries; added mlx-serve comparison, distributed section, 5 FAQs (body+meta together)",
+    "baseline": null
   }
 ]
