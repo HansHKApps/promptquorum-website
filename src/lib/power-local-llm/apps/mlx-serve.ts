@@ -28,7 +28,14 @@ export const app: ToolRecord = {
   addedDate: '2026-09-18',
   status: 'listed',
   uses: ['chat', 'serve', 'image', 'audio'],
-  url: 'github.com/ddalcu/mlx-serve',
+  url: 'mlxserve.com',
+  storeLinks: {
+    appStore: 'https://apps.apple.com/us/app/mlx-serve/id6787603518',
+    web: 'https://mlxserve.com/',
+    github: 'https://github.com/ddalcu/mlx-serve',
+  },
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README: "signed, notarized macOS menu-bar app"; Releases v26.10.1 ships MLX-Serve.dmg; Mac App Store listing "MLX-Serve" by David Dalcu (iTunes lookup id6787603518); also brew install --cask mlx-serve. checked 2026-10-09',
   tagline: {
     en: 'Native Zig inference server for Apple Silicon serving MLX and GGUF models through OpenAI- and Anthropic-compatible APIs, with a bundled macOS menu-bar app.',
     de: 'Nativer Zig-Inferenz-Server für Apple Silicon, der MLX- und GGUF-Modelle über OpenAI- und Anthropic-kompatible APIs bereitstellt, inklusive macOS-Menüleisten-App.',

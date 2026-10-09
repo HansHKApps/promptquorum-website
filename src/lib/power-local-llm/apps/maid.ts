@@ -22,6 +22,9 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['phone', 'chat'],
   url: 'github.com/Mobile-Artificial-Intelligence/maid',
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installOn: ['android'],
+  installEvidence: 'GitHub Releases v3.0.0 ships maid-android-*.apk and .aab (sideload); v3.0.0 is Android-only (the older v2.0.7 had desktop and .ipa builds). checked 2026-10-09',
   tagline: {
     en: 'Open-source Flutter mobile LLM app',
     de: 'Open-Source-Flutter-App für mobile LLMs',

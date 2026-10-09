@@ -27,6 +27,8 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['chat', 'agent', 'docs'],
   url: 'github.com/odysseus-dev/odysseus', // corrected 2026-09-05: comment above already noted the repo moved; the url field was not updated to match
+  installEffort: 'terminal-setup', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README quick start is docker compose up -d --build from a checkout; native installs are in a separate setup guide; Releases has no binaries. checked 2026-10-09',
   tagline: {
     en: 'Self-hosted, local-first AI workspace for chat, agents, research, and documents — created by Felix Kjellberg (PewDiePie)',
     de: 'Selbstgehosteter, lokal-first KI-Arbeitsbereich für Chat, Agenten, Recherche und Dokumente – erstellt von Felix Kjellberg (PewDiePie)',

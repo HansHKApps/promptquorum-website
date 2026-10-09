@@ -24,7 +24,13 @@ export const app: ToolRecord = {
   addedDate: '2026-09-18',
   status: 'listed',
   uses: ['serve', 'code'],
-  url: 'github.com/jundot/omlx',
+  url: 'omlx.ai',
+  storeLinks: {
+    web: 'https://omlx.ai',
+    github: 'https://github.com/jundot/omlx',
+  },
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installEvidence: 'GitHub Releases v0.7.0 ships oMLX-0.7.0-macos15-sequoia.dmg and oMLX-0.7.0-macos26-27.dmg; omlx.ai links the Releases page. checked 2026-10-09',
   tagline: {
     en: 'MLX-based local inference server for Apple Silicon with paged SSD caching, built to power local coding agents',
     de: 'MLX-basierter lokaler Inferenzserver für Apple Silicon mit seitenweisem SSD-Caching, entwickelt zum Antrieb lokaler Coding-Agenten',

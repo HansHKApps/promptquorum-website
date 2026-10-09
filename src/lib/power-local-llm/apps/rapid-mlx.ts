@@ -11,7 +11,7 @@ export const app: ToolRecord = {
   slug: 'rapid-mlx',
   name: 'Rapid-MLX',
   categories: ['inference-engines', 'api-servers'],
-  interfaces: ['cli'],
+  interfaces: ['cli', 'desktop'],
   locality: 'local',
   platforms: ['mac'],
   worksWith: ['Claude Code', 'Cursor', 'Aider', 'Cline'],
@@ -23,7 +23,13 @@ export const app: ToolRecord = {
   addedDate: '2026-09-18',
   status: 'listed',
   uses: ['code', 'serve'],
-  url: 'github.com/raullenchai/Rapid-MLX',
+  url: 'rapidmlx.com',
+  storeLinks: {
+    web: 'https://rapidmlx.com',
+    github: 'https://github.com/raullenchai/Rapid-MLX',
+  },
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README Install lists "Download Rapid-MLX Desktop" (rapidmlx.com/desktop, signed Desktop releases; Releases asset rapid-mlx-desktop.dmg) first; alternatives are brew install rapid-mlx and a curl installer. checked 2026-10-09',
   tagline: {
     en: 'OpenAI-compatible local inference engine for Apple Silicon, built as a drop-in backend for Claude Code, Cursor, and Aider',
     de: 'OpenAI-kompatible lokale Inferenz-Engine für Apple Silicon, als direkt einsetzbares Backend für Claude Code, Cursor und Aider gebaut',

@@ -23,6 +23,7 @@ import { founderText, founderParagraphs } from '@/lib/power-local-llm/founderTex
 import { DataDisclaimer } from '@/components/DataDisclaimer'
 import type { HardwareProfile, MachineType } from './types'
 import { getDownloadLinks } from './ToolCard'
+import { INSTALL_EFFORT_UI, installOnSuffix } from './installEffort'
 import { featureReviewUrl } from './reviewLinks'
 import { handsOnTestUrl } from '@/lib/hands-on-tests/links'
 import { guideForCategories } from '@/lib/power-local-llm/compare-guide'
@@ -197,6 +198,7 @@ export function ToolDrawer({
       [t('detailInterface', ui), app.interfaces.map((i) => INTERFACE_LABEL[i][lang]).join(', ')],
       [t('detailRuns', ui), labelFor('locality', app.locality, lang, ui)],
       [t('detailEngine', ui), labelFor('engine', app.engine, lang, ui)],
+      ...(app.installEffort ? [[t('groupInstall', ui), t(INSTALL_EFFORT_UI[app.installEffort].label, ui) + installOnSuffix(app)] as [string, ReactNode]] : []),
       [t('detailPrice', ui), labelFor('price', app.price, lang, ui)],
       [t('detailLicense', ui), app.license === 'TODO' ? null : app.license],
       [t('detailPlatforms', ui), labelList('platforms', app.platforms, lang, ui)],
@@ -347,6 +349,7 @@ export function ToolDrawer({
                   <DetailRow label={t('detailRuns', ui)} value={labelFor('locality', app.locality, lang, ui)} />
                   <DetailRow label={t('detailEngine', ui)} value={labelFor('engine', app.engine, lang, ui)} />
                   <DetailRow label={t('detailPrice', ui)} value={labelFor('price', app.price, lang, ui)} />
+                  <DetailRow label={t('groupInstall', ui)} value={app.installEffort ? <span title={t(INSTALL_EFFORT_UI[app.installEffort].tip, ui)}>{t(INSTALL_EFFORT_UI[app.installEffort].label, ui)}{installOnSuffix(app)}</span> : null} />
                   <DetailRow
                     label={t('detailLicense', ui)}
                     value={

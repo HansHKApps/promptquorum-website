@@ -26,6 +26,7 @@ import { guideForCategories } from '@/lib/power-local-llm/compare-guide'
 import { t } from './directory-i18n'
 import { LicenseInfoModal } from './LicenseInfoModal'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
+import { INSTALL_EFFORT_UI, installOnSuffix } from './installEffort'
 
 /** Per-group accent so a grid of cards reads as a colour-coded map, not a wall of grey. */
 const GROUP_ACCENT: Record<CategoryGroupKey, { bar: string; chip: string; avatar: string }> = {
@@ -81,7 +82,13 @@ export function getDownloadLinks(app: ToolRecord, lang: Language): { href: strin
     }))
   }
   if (app.url) {
-    return [{ href: `https://${app.url}`, label: app.url.includes('github.com') ? t('githubLink', lang) : t('getItLink', lang) }]
+    const isGithub = app.url.includes('github.com')
+    // GitHub is a delivery channel, not an install experience: an installer-tier tool whose only link is its
+    // repo sends the reader to the Releases page (where the .dmg/.exe lives), labelled as a download.
+    if (isGithub && app.installEffort === 'installer' && /^github\.com\/[^/]+\/[^/]+$/.test(app.url)) {
+      return [{ href: `https://${app.url}/releases/latest`, label: t('downloadLink', lang) }]
+    }
+    return [{ href: `https://${app.url}`, label: isGithub ? t('githubLink', lang) : t('getItLink', lang) }]
   }
   return []
 }
@@ -210,7 +217,7 @@ export function ToolCard({
           </p>
         )}
 
-        {(engine || price || app.mcpSupport) && (
+        {(engine || price || app.mcpSupport || app.installEffort) && (
           <div className="flex flex-wrap gap-1.5 mb-2.5">
             {engine && (
               <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium ${ENGINE_BADGE[engine]}`}>
@@ -222,6 +229,14 @@ export function ToolCard({
               <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium ${PRICE_BADGE[price]}`}>
                 <TagIcon className="h-3 w-3" />
                 {PRICE_LABEL[price]}
+              </span>
+            )}
+            {app.installEffort && (
+              <span
+                className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-medium ${INSTALL_EFFORT_UI[app.installEffort].badge}`}
+                title={t(INSTALL_EFFORT_UI[app.installEffort].tip, lang)}
+              >
+                {t(INSTALL_EFFORT_UI[app.installEffort].label, lang)}{installOnSuffix(app)}
               </span>
             )}
             {app.mcpSupport && (

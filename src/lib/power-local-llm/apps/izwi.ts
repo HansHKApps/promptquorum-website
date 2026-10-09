@@ -24,6 +24,8 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['audio'],
   url: 'github.com/izwi-ai/izwi',
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installEvidence: 'GitHub Releases v0.1.0-beta-17 (pre-release) ships Izwi_0.1.0-beta-17_aarch64.dmg, _x64-setup.exe, _amd64.AppImage and _amd64.deb. checked 2026-10-09',
   reviewSlug: 'izwi-review', // dedicated PromptQuorum review — added 2026-09-19
   pqReview: { date: '2026-09-20', version: 'v0.1.0-beta-17', versionSourceUrl: 'https://github.com/izwi-ai/izwi/releases/tag/v0.1.0-beta-17' },
   tagline: {

@@ -22,6 +22,9 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['image'],
   url: 'github.com/lllyasviel/stable-diffusion-webui-forge',
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installOn: ['win'],
+  installEvidence: 'README Installing Forge: "one-click installation package (with git and python included)": download the .7z, extract, run update.bat then run.bat. Windows package only; the git/Python route is the "Advanced Install". checked 2026-10-09',
   tagline: {
     en: 'Optimized fork of the Stable Diffusion WebUI focused on faster inference and lower VRAM/resource use',
     de: 'Optimierter Fork der Stable Diffusion WebUI mit Fokus auf schnellere Inferenz und geringeren VRAM-/Ressourcenverbrauch',

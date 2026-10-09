@@ -22,6 +22,13 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['phone', 'chat'],
   url: 'github.com/a-ghorbani/pocketpal-ai',
+  storeLinks: {
+    appStore: 'https://apps.apple.com/us/app/pocketpal-ai/id6502579498',
+    googlePlay: 'https://play.google.com/store/apps/details?id=com.pocketpalai',
+    github: 'https://github.com/a-ghorbani/pocketpal-ai',
+  },
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README: "Install PocketPal from the App Store or Google Play" with both store links. checked 2026-10-09',
   tagline: {
     en: 'Free iOS and Android local LLM client',
     de: 'Kostenloser iOS- und Android-Client für lokale LLMs',

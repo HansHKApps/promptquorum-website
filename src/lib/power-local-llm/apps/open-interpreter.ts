@@ -21,7 +21,13 @@ export const app: ToolRecord = {
   addedDate: '2026-09-04',
   status: 'listed',
   uses: ['agent', 'code'],
-  url: 'github.com/OpenInterpreter/open-interpreter',
+  url: 'openinterpreter.com',
+  storeLinks: {
+    web: 'https://www.openinterpreter.com',
+    github: 'https://github.com/OpenInterpreter/open-interpreter',
+  },
+  installEffort: 'one-command', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README Installation is one line: curl -fsSL https://www.openinterpreter.com/install | sh (macOS/Linux) or irm https://www.openinterpreter.com/install.ps1 | iex (Windows). The .dmg/.exe assets on Releases are the Rust codex artifacts, not an Open Interpreter installer. checked 2026-10-09',
   tagline: {
     en: 'Lets local LLM control your computer and execute code',
     de: 'Erlaubt einem lokalen LLM, Ihren Computer zu steuern und Code auszuführen',

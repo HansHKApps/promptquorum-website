@@ -22,6 +22,8 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['chat'],
   url: 'github.com/aandrew-me/tgpt',
+  installEffort: 'one-command', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README Installation: curl -sSL .../install | bash, or brew install tgpt / pacman -S tgpt. checked 2026-10-09',
   tagline: {
     en: 'Terminal wrapper for local LLM chat',
     de: 'Terminal-Wrapper für lokalen LLM-Chat',

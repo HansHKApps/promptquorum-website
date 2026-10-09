@@ -49,6 +49,17 @@ export type StatusKey = 'planned' | 'listed' | 'verified' | 'tested'
 // use it). A tool can have more than one, e.g. an app on both the App Store and Google Play.
 export type StoreLinkKey = 'appStore' | 'googlePlay' | 'github' | 'web'
 
+// How much work it is for a user to get the tool running, judged by the EASIEST officially supported
+// path — NOT by where the files are hosted. A GitHub repo whose Releases page ships a .dmg/.exe/.AppImage
+// is `installer`; GitHub is only its delivery channel. Orthogonal to `interfaces` (how you use it),
+// `platforms` (which OS) and `storeLinks` (where you get it). Unset = not yet verified, never "none".
+//   installer       double-click install: .dmg/.exe/.msi/.AppImage/.deb, Microsoft Store, App Store, Google Play
+//   one-command     one documented command fully installs it (brew, winget, pip, npm, curl | sh, docker run)
+//   terminal-setup  multi-step: clone/build from source, Python/CUDA toolchain, config files, several services
+//   hosted          nothing to install: web app / SaaS / browser extension
+export type InstallEffortKey = 'installer' | 'one-command' | 'terminal-setup' | 'hosted'
+export const INSTALL_EFFORT_KEYS: readonly InstallEffortKey[] = ['installer', 'one-command', 'terminal-setup', 'hosted']
+
 export const STORE_LINK_LABEL: Record<StoreLinkKey, string> = {
   appStore: 'App Store',
   googlePlay: 'Google Play',
@@ -144,6 +155,16 @@ export interface ToolRecord {
   // 2+ entries, the UI renders one button per channel instead of a single "Get it" link
   // built from `url`. Omit entirely for tools that only need the single `url` field.
   storeLinks?: Partial<Record<StoreLinkKey, string>>
+  // Easiest verified install path (see InstallEffortKey). Set only after checking the website AND the
+  // GitHub Releases page / store listing — a README that shows only `pip install` can hide a .dmg on the
+  // Releases tab. `installEvidence` records what was seen so the next refresh can re-check it.
+  installEffort?: InstallEffortKey
+  // OSes on which `installEffort` is actually true, when narrower than `platforms` — e.g. a Windows-only
+  // .exe while macOS/Linux need a terminal, or an Android-only APK. Omit when the tier holds on every
+  // platform the tool lists. The UI appends these to the badge so a Mac user is never told "Download & run"
+  // for a Windows-only installer.
+  installOn?: OSKey[]
+  installEvidence?: string
   tagline: Partial<Record<Language, string>>
   founder?: ToolRecordFounder
   // ISO 8601 date the founder/maintainer reviewed THIS entry's technical specs and

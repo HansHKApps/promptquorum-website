@@ -25,6 +25,8 @@ export const app: ToolRecord = {
   status: 'listed',
   uses: ['chat', 'serve', 'phone'],
   url: 'github.com/NightMean/OlliteRT',
+  installEffort: 'installer', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README "Download & install the APK"; Releases v0.9.7-beta.1 (pre-release) ships OlliteRT-v0.9.7-beta.1-arm64-v8a.apk. checked 2026-10-09',
   tagline: {
     en: "Turns an Android phone into a fully local, OpenAI-compatible LLM inference server using Google's LiteRT-LM runtime.",
     de: 'Verwandelt ein Android-Smartphone mithilfe von Googles LiteRT-LM-Runtime in einen vollständig lokalen, OpenAI-kompatiblen LLM-Inferenz-Server.',

@@ -23,7 +23,13 @@ export const app: ToolRecord = {
   addedDate: '2026-09-18',
   status: 'listed',
   uses: ['docs', 'build', 'agent'],
-  url: 'github.com/baserow/baserow',
+  url: 'baserow.io',
+  storeLinks: {
+    web: 'https://baserow.io',
+    github: 'https://github.com/baserow/baserow',
+  },
+  installEffort: 'one-command', // see InstallEffortKey in ./types.ts
+  installEvidence: 'README: docker run -v baserow_data:/baserow/data -p 80:80 -p 443:443 baserow/baserow:2.4.0 for self-hosting (a hosted cloud also exists at baserow.io). checked 2026-10-09',
   tagline: {
     en: 'Self-hosted no-code database and app builder whose AI field can run on a local Ollama model instead of a cloud API',
     de: 'Selbst gehosteter No-Code-Datenbank- und App-Builder, dessen KI-Feld statt einer Cloud-API auch auf einem lokalen Ollama-Modell laufen kann',

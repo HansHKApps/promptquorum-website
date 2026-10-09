@@ -79,6 +79,59 @@ function validateFile(absPath, errors) {
   const platformsRaw = extractPlatforms(content);
   const badPlatforms = isBadPlatforms(platformsRaw);
   if (badPlatforms) errors.push({ file, slug, field: 'platforms', value: badPlatforms });
+
+  validateInstallEffort(content, file, slug, platformsRaw, errors);
+}
+
+// ── installEffort (see InstallEffortKey in apps/types.ts and check 6 of the feature-app-post skill) ──
+// Optional field: unset = "not yet verified", never an error. But once set it must be evidenced, scoped
+// to real platforms, and consistent with the tile's website — a tier with no evidence is a guess, and the
+// 2026-10-09 Unsloth incident (GitHub `url` hiding a .dmg) is exactly what this field exists to prevent.
+const INSTALL_EFFORT_KEYS = new Set(['installer', 'one-command', 'terminal-setup', 'hosted']);
+const OS_KEYS = new Set(['mac', 'win', 'linux', 'ios', 'android', 'web']);
+
+function parseStringList(raw) {
+  return (raw?.match(/'([^']+)'/g) ?? []).map(s => s.slice(1, -1));
+}
+
+function validateInstallEffort(content, file, slug, platformsRaw, errors) {
+  const effortRaw = extractScalarField(content, 'installEffort');
+  const onRaw = extractScalarField(content, 'installOn');
+  const evidenceRaw = extractScalarField(content, 'installEvidence');
+  const effort = effortRaw?.match(/^'([^']+)'/)?.[1];
+
+  if (effortRaw === undefined) {
+    if (onRaw !== undefined) errors.push({ file, slug, field: 'installOn', value: 'set without installEffort' });
+    if (evidenceRaw !== undefined) errors.push({ file, slug, field: 'installEvidence', value: 'set without installEffort' });
+    return;
+  }
+  if (!effort || !INSTALL_EFFORT_KEYS.has(effort)) {
+    errors.push({ file, slug, field: 'installEffort', value: `invalid (${effortRaw})` });
+    return;
+  }
+  if (!evidenceRaw || evidenceRaw.replace(/^'|',?$/g, '').trim().length < 40) {
+    errors.push({ file, slug, field: 'installEvidence', value: 'missing or too short — record what you saw (release assets, README line, store listing) and the date' });
+  }
+  if (onRaw !== undefined) {
+    const on = parseStringList(onRaw);
+    const platforms = parseStringList(platformsRaw);
+    for (const os of on) {
+      if (!OS_KEYS.has(os)) errors.push({ file, slug, field: 'installOn', value: `unknown OS '${os}'` });
+      else if (!platforms.includes(os)) errors.push({ file, slug, field: 'installOn', value: `'${os}' is not in platforms` });
+    }
+    if (on.length === 0) errors.push({ file, slug, field: 'installOn', value: 'empty array — omit the field instead' });
+  }
+
+  // Check 5 consistency: when storeLinks.web is set, it must be the same site as `url`.
+  const url = content.match(/\n  url: '([^']*)'/)?.[1];
+  const web = content.match(/storeLinks:\s*\{[^}]*?\bweb:\s*'([^']+)'/s)?.[1];
+  if (url && web) {
+    const urlHost = url.split('/')[0].replace(/^www\./, '');
+    let webHost = '';
+    try { webHost = new URL(web).host.replace(/^www\./, ''); } catch { /* reported below */ }
+    if (!webHost) errors.push({ file, slug, field: 'storeLinks.web', value: `not a valid URL (${web})` });
+    else if (webHost !== urlHost) errors.push({ file, slug, field: 'storeLinks.web', value: `host ${webHost} differs from url ${urlHost}` });
+  }
 }
 
 function main() {
@@ -88,7 +141,8 @@ function main() {
   for (const f of files) validateFile(f, errors);
 
   if (errors.length === 0) {
-    console.log(`✓ Local AI app directory data check passed (${files.length} tool records validated)`);
+    const set = files.filter(f => /\n  installEffort:/.test(fs.readFileSync(f, 'utf-8'))).length;
+    console.log(`✓ Local AI app directory data check passed (${files.length} tool records validated; installEffort verified on ${set}, unset on ${files.length - set})`);
     process.exit(0);
   }
 
