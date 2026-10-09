@@ -178,6 +178,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'friedrichai':                             'friedrichai',
   'oscilla':                                 'oscilla',
   'tina':                                    'tina',
+  'local-ai-geetmark':                       'local-ai-geetmark',
   'mlxhub':                                  'mlxhub',
 }
 

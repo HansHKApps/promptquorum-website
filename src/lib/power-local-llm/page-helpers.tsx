@@ -1038,6 +1038,7 @@ const HUB_THEMES: Array<{
       'private-mind-review',
       'llm-hub-review',
       'tokforge-review',
+      'local-ai-geetmark-review',
       'oscilla-review',
       'tina-review',
       'mlxhub-review',

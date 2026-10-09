@@ -269,6 +269,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-geetmark-review",
+        "title": "Local AI: Offline Chat & Image Review: Free Android App with Stable Diffusion and Prompt Toolkits",
+        "url": "/power-local-llm/local-ai-geetmark-review",
+        "dateModified": "2026-10-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "locally-uncensored-review",
         "title": "Locally Uncensored Review: Local Chat, Image, and Video in One App",
         "url": "/power-local-llm/locally-uncensored-review",
@@ -330,17 +338,9 @@
         "url": "/power-local-llm/bodega-one-code-review-2026",
         "dateModified": "2026-09-03",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-chat-assistants-compared",
-        "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
-        "url": "/power-local-llm/local-llm-chat-assistants-compared",
-        "dateModified": "2026-09-20",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 17,
+    "totalCount": 18,
     "capped": true
   },
   "TensorRT-LLM": {
@@ -5824,7 +5824,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 29,
+    "totalCount": 30,
     "capped": true
   },
   "Pocket AI": {
@@ -6581,6 +6581,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-geetmark-review",
+        "title": "Local AI: Offline Chat & Image Review: Free Android App with Stable Diffusion and Prompt Toolkits",
+        "url": "/power-local-llm/local-ai-geetmark-review",
+        "dateModified": "2026-10-09",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-images-video-compared",
         "title": "Local Image, Video & Vision Tools Compared (2026): Generation, Vision and OCR",
         "url": "/power-local-llm/local-llm-images-video-compared",
@@ -6642,17 +6650,9 @@
         "url": "/power-local-llm/fooocus-review",
         "dateModified": "2026-09-06",
         "tier": "about"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "invokeai-review",
-        "title": "InvokeAI Review: Professional-Grade Stable Diffusion Studio",
-        "url": "/power-local-llm/invokeai-review",
-        "dateModified": "2026-09-06",
-        "tier": "about"
       }
     ],
-    "totalCount": 30,
+    "totalCount": 31,
     "capped": true
   },
   "ComfyUI": {
@@ -10495,6 +10495,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-geetmark-review",
+        "title": "Local AI: Offline Chat & Image Review: Free Android App with Stable Diffusion and Prompt Toolkits",
+        "url": "/power-local-llm/local-ai-geetmark-review",
+        "dateModified": "2026-10-09",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "mlxhub-review",
         "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
         "url": "/power-local-llm/mlxhub-review",
@@ -10556,17 +10564,9 @@
         "url": "/power-local-llm/local-llm-code-development-compared",
         "dateModified": "2026-09-21",
         "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "local-llm-train-operate-compared",
-        "title": "Local Model Training & Operations Tools Compared (2026): Fine-Tuning and Observability",
-        "url": "/power-local-llm/local-llm-train-operate-compared",
-        "dateModified": "2026-09-21",
-        "tier": "mentioned"
       }
     ],
-    "totalCount": 187,
+    "totalCount": 188,
     "capped": true
   },
   "Qdrant": {
@@ -11177,6 +11177,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-geetmark-review",
+        "title": "Local AI: Offline Chat & Image Review: Free Android App with Stable Diffusion and Prompt Toolkits",
+        "url": "/power-local-llm/local-ai-geetmark-review",
+        "dateModified": "2026-10-09",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "mlxhub-review",
         "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
         "url": "/power-local-llm/mlxhub-review",
@@ -11200,7 +11208,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 4,
+    "totalCount": 5,
     "capped": false
   },
   "LLM Hub": {
