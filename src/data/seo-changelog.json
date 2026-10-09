@@ -1837,5 +1837,30 @@
       "ctr": 0.0007183908045977011,
       "period": "GSC top queries 2026-10-09"
     }
+  },
+  {
+    "id": "50478a10-afb1-4b2a-828e-26e94a2713fa",
+    "slug": "/power-local-llm/stableswarmui-review",
+    "date": "2026-10-09T18:39:38.679Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "SwarmUI Review: Multi-GPU ComfyUI-Based Image UI",
+        "new": "SwarmUI Review 2026: Multi-GPU Web UI vs ComfyUI"
+      },
+      {
+        "field": "metaDescription",
+        "old": "SwarmUI review 2026: the multi-GPU, multi-user Stable Diffusion web UI built on ComfyUI. Covers the StableSwarmUI rename, MIT license, model support, and setup.",
+        "new": "SwarmUI (formerly StableSwarmUI) is a free, MIT-licensed multi-GPU web UI built on ComfyUI. Setup, SwarmUI vs ComfyUI, supported models and install steps."
+      }
+    ],
+    "reason": "geo-meta-optimizer: intent alignment (swarmui vs comfyui queries), coherence-B1 (no dedicated vs-ComfyUI section)",
+    "baseline": {
+      "position": 7.3,
+      "impressions": 1717,
+      "clicks": 2,
+      "ctr": 0.0011648223645894002,
+      "period": "GSC top queries 2026-10-09"
+    }
   }
 ]
