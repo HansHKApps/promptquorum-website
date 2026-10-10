@@ -25,7 +25,6 @@ const { LLM_SLUG_TO_KEY } = jiti('@/lib/local-llms/slugs')
 
 const LANGS = ['en', 'de', 'fr', 'es', 'ja', 'zh', 'pt', 'ar', 'ko']
 const reviews = Object.values(index).map((v) => ({ cluster: v.cluster, urlSlug: v.urlSlug }))
-reviews.push({ cluster: 'power-local-llm', urlSlug: 'microsoft-agent-framework-review' })
 
 const total = emptyStats()
 const perLang = Object.fromEntries(LANGS.map((l) => [l, emptyStats()]))
@@ -47,7 +46,7 @@ for (const r of reviews) {
       for (const n of st.unresolved) unresolvedEn.set(n, (unresolvedEn.get(n) ?? 0) + 1)
     }
     for (const t of [total, perLang[lang]]) {
-      for (const k of ['sections', 'linkedPlain', 'retargetedExternal', 'keptInternal', 'linkedReviewOnly', 'self']) t[k] += st[k]
+      for (const k of ['sections', 'linkedPlain', 'retargetedExternal', 'keptInternal', 'self']) t[k] += st[k]
       t.unresolved.push(...st.unresolved)
     }
   }
@@ -55,7 +54,7 @@ for (const r of reviews) {
 }
 
 const fmt = (s) =>
-  `sections ${s.sections} | newly linked ${s.linkedPlain} | vendor→directory ${s.retargetedExternal} | review-only ${s.linkedReviewOnly} | kept internal ${s.keptInternal} | own tool ${s.self} | unresolved ${s.unresolved.length}`
+  `sections ${s.sections} | newly linked ${s.linkedPlain} | vendor→directory ${s.retargetedExternal} | kept internal ${s.keptInternal} | own tool ${s.self} | unresolved ${s.unresolved.length}`
 
 if (process.argv.includes('--json')) {
   console.log(JSON.stringify({ total, perLang, unresolvedEn: [...unresolvedEn], noCompetitorSection }, null, 2))

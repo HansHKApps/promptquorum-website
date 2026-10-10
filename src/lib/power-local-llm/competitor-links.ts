@@ -14,40 +14,32 @@
 //     directory entry (/directory?tool=<slug>), keeping the reader on-site —
 //     the vendor URL is on that entry;
 //   * a name that already links to a PromptQuorum page is kept as is;
-//   * a tool with no tile but its own review links to that review;
 //   * anything else is left untouched and reported by the stats.
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle, LLMSection } from '@/lib/local-llms/types'
 import { directoryEntryHref, directoryHref } from './directory-funnel'
 import { funnelT } from './directory-funnel-i18n'
-import { normalizeToolName, resolveToolSlug } from './tool-alias-map'
+import { resolveToolSlug } from './tool-alias-map'
 
 /** Section keys whose English and translated blocks hold competitor/comparison content. */
 const COMPETITOR_KEYS: ReadonlySet<string> = new Set(['competitors', 'vsAlternatives', 'alternatives', 'competitorsAndAlternatives'])
 export const isCompetitorSectionKey = (key: string): boolean => COMPETITOR_KEYS.has(key) || /^comparison/.test(key)
-
-/** Tools that have their own review page but no directory tile (path is unprefixed). */
-const REVIEW_ONLY_TOOLS: Readonly<Record<string, string>> = {
-  [normalizeToolName('Microsoft Agent Framework')]: '/power-local-llm/microsoft-agent-framework-review',
-}
 
 export interface CompetitorLinkStats {
   sections: number
   linkedPlain: number
   retargetedExternal: number
   keptInternal: number
-  linkedReviewOnly: number
   self: number
   /** Names that were looked at but could not be resolved. */
   unresolved: string[]
 }
 
 export const emptyStats = (): CompetitorLinkStats => ({
-  sections: 0, linkedPlain: 0, retargetedExternal: 0, keptInternal: 0, linkedReviewOnly: 0, self: 0, unresolved: [],
+  sections: 0, linkedPlain: 0, retargetedExternal: 0, keptInternal: 0, self: 0, unresolved: [],
 })
 
-const withLocale = (path: string, lang: Language) => (lang === 'en' ? path : `/${lang}${path}`)
 const isInternal = (url: string) => url.startsWith('/') || /^https?:\/\/(www\.)?promptquorum\.com\//.test(url)
 
 interface Ctx {
@@ -66,12 +58,6 @@ function linkFor(name: string, existingUrl: string | null, bold: boolean, ctx: C
     if (existingUrl) ctx.stats.retargetedExternal++
     else ctx.stats.linkedPlain++
     return wrap(directoryEntryHref(slug, ctx.lang))
-  }
-  const reviewPath = REVIEW_ONLY_TOOLS[normalizeToolName(name)]
-  if (reviewPath) {
-    if (existingUrl && isInternal(existingUrl)) { ctx.stats.keptInternal++; return null }
-    ctx.stats.linkedReviewOnly++
-    return wrap(withLocale(reviewPath, ctx.lang))
   }
   // Already a link to a PromptQuorum page: clickable, nothing to report.
   if (!(existingUrl && isInternal(existingUrl))) ctx.stats.unresolved.push(name)

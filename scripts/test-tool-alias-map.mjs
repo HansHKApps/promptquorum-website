@@ -117,10 +117,9 @@ test('list items: leading name only, rest of the text preserved', () => {
   assert.equal(out.sections.vsAlternatives.items[2], 'Plain start without markup — nothing to do.')
 })
 
-test('review-only tool links to its review', () => {
-  const art = fakeArticle({ competitors: { columns: ['Tool'], rows: [{ Tool: 'Microsoft Agent Framework' }] } })
-  const out = linkCompetitorSections(art, 'fr', null)
-  assert.equal(out.sections.competitors.rows[0].Tool, '[Microsoft Agent Framework](/fr/power-local-llm/microsoft-agent-framework-review)')
+test('Microsoft Agent Framework resolves to its own tile (no review-only fallback)', () => {
+  assert.equal(resolveToolSlug('Microsoft Agent Framework'), 'microsoft-agent-framework')
+  assert.equal(resolveToolSlug('microsoft-agent-framework'), 'microsoft-agent-framework')
 })
 
 test('lowercase / index row keys (local-llms) are handled', () => {

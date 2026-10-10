@@ -18,9 +18,6 @@ export type ReviewCluster = 'power-local-llm' | 'local-llms'
 
 type FeatureReviewIndex = Record<string, { cluster: string; urlSlug: string; url: string }>
 
-/** Review pages that have no directory tile, so the index cannot find them. */
-const REVIEWS_WITHOUT_TILE: ReadonlySet<string> = new Set(['power-local-llm:microsoft-agent-framework-review'])
-
 // urlSlug (per cluster) → directory tile slug. One review per tile, one tile per review.
 const APP_SLUG_BY_REVIEW: ReadonlyMap<string, string> = new Map(
   Object.entries(featureReviewIndex as FeatureReviewIndex).map(([appSlug, v]) => [`${v.cluster}:${v.urlSlug}`, appSlug]),
@@ -30,8 +27,7 @@ const APP_BY_SLUG: ReadonlyMap<string, ToolRecord> = new Map(localAiApps.map((a)
 
 /** Detection rule for "review page": the URL slug is some tile's review. */
 export function isReviewPage(cluster: ReviewCluster, urlSlug: string): boolean {
-  const k = `${cluster}:${urlSlug}`
-  return APP_SLUG_BY_REVIEW.has(k) || REVIEWS_WITHOUT_TILE.has(k)
+  return APP_SLUG_BY_REVIEW.has(`${cluster}:${urlSlug}`)
 }
 
 /** The tile a review page is about, or null (no tile, or not a review). */
@@ -98,9 +94,12 @@ export function getSimilarTools(app: ToolRecord, limit = 3): ToolRecord[] {
   const sameCategory = others.filter((t) => t.categories[0] === primary).sort(rank)
   if (sameCategory.length >= limit) return sameCategory.slice(0, limit)
 
+  // Group fill: tools sharing any of the app's other sub-categories (e.g. XTTS-v2's
+  // `text-to-speech`) come before the rest of the group, then the same ranking.
+  const shared = (t: ToolRecord) => t.categories.filter((c) => app.categories.includes(c)).length
   const sameGroup = others
     .filter((t) => t.categories[0] !== primary && t.categories.some((c) => CATEGORY_SUB_GROUP[c] === group))
-    .sort(rank)
+    .sort((a, b) => shared(b) - shared(a) || rank(a, b))
   return [...sameCategory, ...sameGroup].slice(0, limit)
 }
 

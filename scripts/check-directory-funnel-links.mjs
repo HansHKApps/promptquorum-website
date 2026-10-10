@@ -29,7 +29,6 @@ const toolSlugs = new Set(localAiApps.map((a) => a.slug))
 const LANGS = ['en', 'de', 'fr', 'es', 'ja', 'zh', 'pt', 'ar', 'ko']
 let pages = []
 for (const [appSlug, v] of Object.entries(index)) for (const l of LANGS) pages.push({ appSlug, lang: l, url: (l === 'en' ? '' : `/${l}`) + v.url })
-pages.push(...LANGS.map((l) => ({ appSlug: null, lang: l, url: (l === 'en' ? '' : `/${l}`) + '/power-local-llm/microsoft-agent-framework-review' })))
 if (SAMPLE > 0) pages = pages.filter((_, i) => i % Math.ceil(pages.length / SAMPLE) === 0)
 
 const NON_REVIEW = [
@@ -89,12 +88,8 @@ async function checkPage(p) {
   for (const m of html.matchAll(/href="((?:\/[a-z]{2})?\/directory\?[^"]*\btool=([a-z0-9._-]+)[^"]*)"/g)) {
     if (!toolSlugs.has(m[2])) fail(p.url, `deep link to unknown tool "${m[2]}"`)
   }
-  for (const m of html.matchAll(/href="((?:\/[a-z]{2})?\/power-local-llm\/microsoft-agent-framework-review)"/g)) {
-    const s = await status(m[1])
-    if (s !== 200) fail(p.url, `${m[1]} -> ${s}`)
-  }
   // the reviewed tool must not appear among the "similar" cards (anything but the first "View X" link)
-  if (p.appSlug) {
+  {
     for (const b of blocks) {
       const li = [...b.html.matchAll(/<li\b[\s\S]*?<\/li>/g)].map((x) => x[0])
       if (li.some((x) => x.includes(`tool=${p.appSlug}`))) fail(p.url, 'reviewed tool listed among similar tools')

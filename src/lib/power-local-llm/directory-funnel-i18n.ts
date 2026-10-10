@@ -12,8 +12,8 @@ type Dict = Record<Language, string>
 const FUNNEL_UI = {
   heading: {
     en: 'Part of the Local AI Directory',
-    de: 'Teil des Local-AI-Verzeichnisses',
-    fr: "Fait partie de l'annuaire Local AI",
+    de: 'Teil des Verzeichnisses für lokale KI',
+    fr: "Fait partie de l'annuaire d'IA locale",
     ja: 'ローカルAIディレクトリの一部',
     zh: '本地 AI 目录的一部分',
     es: 'Parte del directorio de IA local',
@@ -37,11 +37,11 @@ const FUNNEL_UI = {
     de: 'Ähnliche Tools',
     fr: 'Outils similaires',
     ja: '類似ツール',
-    zh: '类似工具',
+    zh: '同类工具',
     es: 'Herramientas similares',
     pt: 'Ferramentas semelhantes',
-    ar: 'أدوات مشابهة',
-    ko: '비슷한 도구',
+    ar: 'أدوات مماثلة',
+    ko: '유사한 도구',
   },
   compareAll: {
     en: 'Compare all {n} tools by platform, license, price',
@@ -126,11 +126,11 @@ const FUNNEL_UI = {
     de: 'Ähnlich wie {app}: {tools}',
     fr: 'Similaire à {app} : {tools}',
     ja: '{app}に近いツール：{tools}',
-    zh: '与 {app} 类似：{tools}',
+    zh: '与 {app} 同类：{tools}',
     es: 'Similar a {app}: {tools}',
     pt: 'Semelhante a {app}: {tools}',
-    ar: 'مشابه لـ {app}: {tools}',
-    ko: '{app}와(과) 비슷한 도구: {tools}',
+    ar: 'مماثل لـ {app}: {tools}',
+    ko: '{app}와(과) 유사한 도구: {tools}',
   },
 } satisfies Record<string, Dict>
 

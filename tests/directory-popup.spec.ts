@@ -1,5 +1,5 @@
 // Engagement popup on review pages (DirectoryPopup). Uses Playwright's fake
-// clock so the 30 s active-time rule is tested without waiting 30 s.
+// clock so the 60 s active-time rule is tested without waiting 60 s.
 //
 // Run against a running server (npm run dev is broken — see CLAUDE.md):
 //   npx next dev --webpack --port 3433
@@ -64,15 +64,15 @@ test.describe('directory popup', () => {
   test('stays hidden without analytics consent', async ({ page }) => {
     await open(page, REVIEW)
     await interact(page)
-    await page.clock.runFor(40_000)
+    await page.clock.runFor(70_000)
     await expect(page.locator(POPUP)).toHaveCount(0)
   })
 
-  test('appears only after 30 s of active time and 25% scroll', async ({ page }) => {
+  test('appears only after 60 s of active time and 25% scroll', async ({ page }) => {
     await grantConsent(page)
     await open(page, REVIEW)
     await interact(page)
-    await page.clock.runFor(29_000)
+    await page.clock.runFor(59_000)
     await expect(page.locator(POPUP)).toHaveCount(0)
     await page.clock.runFor(2_000)
     const dialog = page.getByRole('dialog')
@@ -85,7 +85,7 @@ test.describe('directory popup', () => {
     await grantConsent(page)
     await open(page, REVIEW)
     await interact(page, 0.05)
-    await page.clock.runFor(40_000)
+    await page.clock.runFor(70_000)
     await expect(page.locator(POPUP)).toHaveCount(0)
     await interact(page, 0.5)
     await page.clock.runFor(1_000)
@@ -100,7 +100,7 @@ test.describe('directory popup', () => {
     await page.clock.runFor(60_000)
     await expect(page.locator(POPUP)).toHaveCount(0)
     await page.evaluate(() => Object.defineProperty(document, 'visibilityState', { configurable: true, get: () => 'visible' }))
-    await page.clock.runFor(29_000)
+    await page.clock.runFor(59_000)
     await expect(page.locator(POPUP)).toHaveCount(0)
     await page.clock.runFor(2_000)
     await expect(page.locator(POPUP)).toBeVisible()
@@ -110,7 +110,7 @@ test.describe('directory popup', () => {
     await grantConsent(page)
     await open(page, REVIEW)
     await interact(page)
-    await page.clock.runFor(31_000)
+    await page.clock.runFor(61_000)
     await expect(page.locator(POPUP)).toBeVisible()
     await page.keyboard.press('Escape')
     await expect(page.locator(POPUP)).toHaveCount(0)
@@ -122,7 +122,7 @@ test.describe('directory popup', () => {
     await page.reload()
     await page.clock.runFor(5000)
     await interact(page)
-    await page.clock.runFor(40_000)
+    await page.clock.runFor(70_000)
     await expect(page.locator(POPUP)).toHaveCount(0)
   })
 
@@ -130,7 +130,7 @@ test.describe('directory popup', () => {
     await grantConsent(page)
     await open(page, REVIEW)
     await interact(page)
-    await page.clock.runFor(31_000)
+    await page.clock.runFor(61_000)
     await page.getByRole('dialog').getByRole('link').click()
     await expect(page).toHaveURL(/\/directory\?utm_source=review-popup/)
     const until = await page.evaluate(() => Number(localStorage.getItem('pq_dir_popup_dismissed_until')))
@@ -144,7 +144,7 @@ test.describe('directory popup', () => {
     // Neutralise navigation so we stay on the page; the capture-phase listener still sees the click.
     await page.evaluate(() => document.addEventListener('click', (e) => e.preventDefault(), false))
     await page.locator('[data-directory-block="start"] a').first().click()
-    await page.clock.runFor(40_000)
+    await page.clock.runFor(70_000)
     await expect(page.locator(POPUP)).toHaveCount(0)
   })
 
@@ -155,7 +155,7 @@ test.describe('directory popup', () => {
       ;(window as unknown as { __pqPromptSlot: { current: string | null } }).__pqPromptSlot = { current: 'google_preferred_sources' }
     })
     await interact(page)
-    await page.clock.runFor(40_000)
+    await page.clock.runFor(70_000)
     await expect(page.locator(POPUP)).toHaveCount(0)
     await page.evaluate(() => {
       ;(window as unknown as { __pqPromptSlot: { current: string | null } }).__pqPromptSlot.current = null
@@ -171,7 +171,7 @@ test.describe('directory popup', () => {
     })
     await open(page, REVIEW)
     await interact(page)
-    await page.clock.runFor(40_000)
+    await page.clock.runFor(70_000)
     await expect(page.locator(POPUP)).toHaveCount(0)
   })
 
@@ -179,7 +179,7 @@ test.describe('directory popup', () => {
     await grantConsent(page)
     await open(page, `${REVIEW}?nopopup=1`)
     await interact(page)
-    await page.clock.runFor(40_000)
+    await page.clock.runFor(70_000)
     await expect(page.locator(POPUP)).toHaveCount(0)
   })
 
@@ -187,7 +187,7 @@ test.describe('directory popup', () => {
     await grantConsent(page)
     await open(page, NON_REVIEW)
     await interact(page)
-    await page.clock.runFor(40_000)
+    await page.clock.runFor(70_000)
     await expect(page.locator(POPUP)).toHaveCount(0)
     await expect(page.locator('[data-directory-block]')).toHaveCount(0)
   })
@@ -196,7 +196,7 @@ test.describe('directory popup', () => {
     await grantConsent(page)
     await open(page, REVIEW)
     await interact(page)
-    await page.clock.runFor(31_000)
+    await page.clock.runFor(61_000)
     await expect(page.locator(POPUP)).toBeVisible()
     await page.emulateMedia({ media: 'print' })
     await expect(page.locator(POPUP)).toBeHidden()
@@ -206,7 +206,7 @@ test.describe('directory popup', () => {
     await grantConsent(page)
     await open(page, `/ar${REVIEW}`)
     await interact(page)
-    await page.clock.runFor(31_000)
+    await page.clock.runFor(61_000)
     const dialog = page.getByRole('dialog')
     await expect(dialog).toBeVisible()
     await expect(dialog).toHaveAttribute('dir', 'rtl')
@@ -221,7 +221,7 @@ test.describe('directory popup', () => {
     await grantConsent(page)
     await open(page, REVIEW)
     await interact(page)
-    await page.clock.runFor(31_000)
+    await page.clock.runFor(61_000)
     const dialog = page.getByRole('dialog')
     await expect(dialog).toBeVisible()
     // Tailwind's motion-reduce:transition-none sets transition-property: none (duration stays

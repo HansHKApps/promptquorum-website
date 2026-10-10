@@ -49,7 +49,6 @@ for (const app of localAiApps) {
 
 // --- review pages -------------------------------------------------------------
 const reviews = Object.entries(index).map(([appSlug, v]) => ({ appSlug, cluster: v.cluster, urlSlug: v.urlSlug }))
-reviews.push({ appSlug: null, cluster: 'power-local-llm', urlSlug: 'microsoft-agent-framework-review' })
 const appSlugs = new Set(localAiApps.map((a) => a.slug))
 
 for (const r of reviews) {
@@ -62,13 +61,9 @@ for (const r of reviews) {
       assert.equal(d.compareAll.href, `${prefix}/directory`)
       assert.ok(d.compareAll.label.includes(String(localAiApps.length)), 'count must come from the data')
       assert.ok(!/\{[a-z]+\}/i.test(JSON.stringify(d)), 'unresolved placeholder')
-      if (r.appSlug) {
-        assert.equal(d.entry?.href, `${prefix}/directory?tool=${r.appSlug}`)
-        assert.ok(!d.similar.some((c) => c.href.endsWith(`tool=${r.appSlug}`)), 'own entry among similar')
-      } else {
-        assert.equal(d.entry, undefined)
-        assert.equal(d.similar.length, 0)
-      }
+      assert.equal(d.entry?.href, `${prefix}/directory?tool=${r.appSlug}`, 'every review page has its own directory entry link')
+      assert.ok(d.similar.length > 0, 'at least one similar tool')
+      assert.ok(!d.similar.some((c) => c.href.endsWith(`tool=${r.appSlug}`)), 'own entry among similar')
       for (const c of d.similar) {
         const slug = new URL(c.href, 'https://x.test').searchParams.get('tool')
         assert.ok(appSlugs.has(slug), `card links to unknown tool ${slug}`)

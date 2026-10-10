@@ -1,8 +1,12 @@
 // Engagement popup on review pages (DirectoryPopup). Tunables live here so the
 // numbers in the brief are changed in exactly one place.
 
-/** Active time on the page before the popup may appear. */
-export const POPUP_DELAY_MS = 30_000
+/**
+ * Active time on the page before the popup may appear. 60 s, not 30: the site's
+ * Google-preferred-sources card fires at 30 s wall-clock and holds the shared prompt
+ * slot, so this keeps the popup out of its way for a reader who dismisses that card.
+ */
+export const POPUP_DELAY_MS = 60_000
 /** Minimum scroll progress (0–1) before the popup may appear. */
 export const POPUP_MIN_SCROLL = 0.25
 /** How long a dismissal (or a click on the CTA) suppresses the popup. */
