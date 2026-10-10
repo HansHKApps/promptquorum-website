@@ -1150,7 +1150,7 @@
         "tier": "about"
       }
     ],
-    "totalCount": 28,
+    "totalCount": 27,
     "capped": true
   },
   "AnythingLLM": {
@@ -1990,7 +1990,7 @@
         "slug": "cognira-review",
         "title": "Cognira Review: A Self-Learning AI Assistant With a Local Binary and Private Memory",
         "url": "/power-local-llm/cognira-review",
-        "dateModified": "2026-09-26",
+        "dateModified": "2026-10-05",
         "tier": "mentioned"
       },
       {
@@ -3556,7 +3556,7 @@
         "slug": "cognira-review",
         "title": "Cognira Review: A Self-Learning AI Assistant With a Local Binary and Private Memory",
         "url": "/power-local-llm/cognira-review",
-        "dateModified": "2026-09-26",
+        "dateModified": "2026-10-05",
         "tier": "mentioned"
       },
       {
@@ -7840,7 +7840,7 @@
         "slug": "cognira-review",
         "title": "Cognira Review: A Self-Learning AI Assistant With a Local Binary and Private Memory",
         "url": "/power-local-llm/cognira-review",
-        "dateModified": "2026-09-26",
+        "dateModified": "2026-10-05",
         "tier": "about"
       },
       {
@@ -9034,7 +9034,7 @@
         "slug": "cognira-review",
         "title": "Cognira Review: A Self-Learning AI Assistant With a Local Binary and Private Memory",
         "url": "/power-local-llm/cognira-review",
-        "dateModified": "2026-09-26",
+        "dateModified": "2026-10-05",
         "tier": "mentioned"
       }
     ],
@@ -9638,7 +9638,7 @@
         "slug": "cognira-review",
         "title": "Cognira Review: A Self-Learning AI Assistant With a Local Binary and Private Memory",
         "url": "/power-local-llm/cognira-review",
-        "dateModified": "2026-09-26",
+        "dateModified": "2026-10-05",
         "tier": "about"
       }
     ],
@@ -10597,6 +10597,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "cognira-review",
+        "title": "Cognira Review: A Self-Learning AI Assistant With a Local Binary and Private Memory",
+        "url": "/power-local-llm/cognira-review",
+        "dateModified": "2026-10-05",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "mlxhub-review",
         "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
         "url": "/power-local-llm/mlxhub-review",
@@ -10609,14 +10617,6 @@
         "title": "AquaVoice Review: Voice Dictation for AI Prompts",
         "url": "/power-local-llm/aquavoice-review",
         "dateModified": "2026-10-03",
-        "tier": "mentioned"
-      },
-      {
-        "cluster": "power-local-llm",
-        "slug": "cognira-review",
-        "title": "Cognira Review: A Self-Learning AI Assistant With a Local Binary and Private Memory",
-        "url": "/power-local-llm/cognira-review",
-        "dateModified": "2026-09-26",
         "tier": "mentioned"
       }
     ],

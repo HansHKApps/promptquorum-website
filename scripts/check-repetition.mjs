@@ -102,6 +102,35 @@ function extractProseStrings(body) {
   return strings
 }
 
+const MAX_FACT_TOKEN_OCCURRENCES = 2
+
+/** Fact tokens = the things readers notice when repeated: prices, quantities with units,
+ *  and multi-word proper names. Counted per occurrence across all prose, whatever the
+ *  surrounding wording — this catches "£15/month" restated in 6 different sentences, which
+ *  the 5-gram check misses because every sentence is phrased differently. */
+function findRepeatedFactTokens(strings) {
+  const counts = new Map()
+  const bump = (k) => counts.set(k, (counts.get(k) ?? 0) + 1)
+  for (const raw of strings) {
+    const s = raw.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*/g, '')
+    for (const m of s.matchAll(/[£$€¥]\s?\d[\d.,]*\s?[KMB]?|\b\d[\d.,]*\s?(?:K|M|B|GB|MB|TB|%|x|×)(?![A-Za-z])/g)) bump(m[0].replace(/\s/g, ''))
+    for (const m of s.matchAll(/\b[A-Z][a-z]+(?:\s[A-Z][a-zA-Z0-9]+)+\b/g)) bump(m[0])
+  }
+  return [...counts.entries()].filter(([, c]) => c > MAX_FACT_TOKEN_OCCURRENCES).sort((a, b) => b[1] - a[1])
+}
+
+/** Pointer clauses ("see X above", "as described in X") are themselves repetition when
+ *  one section is pointed at over and over. */
+function findOverusedPointers(strings) {
+  const counts = new Map()
+  for (const s of strings) {
+    for (const m of s.matchAll(/(?:see|described in|covered in|per)\s+([A-Z][^—.;,)]{3,40}?)\s+(?:above|below)/g)) {
+      counts.set(m[1], (counts.get(m[1]) ?? 0) + 1)
+    }
+  }
+  return [...counts.entries()].filter(([, c]) => c > 2).sort((a, b) => b[1] - a[1])
+}
+
 function findRepeatedPhrases(strings) {
   const counts = new Map() // normalized phrase -> count
   for (const s of strings) {
@@ -216,6 +245,8 @@ function checkFile(file, locale) {
 
   const strings = extractProseStrings(body)
   const repeated = findRepeatedPhrases(strings)
+  const factTokens = findRepeatedFactTokens(strings)
+  const pointers = findOverusedPointers(strings)
 
   const top = checkTopBlocks(body)
   const sections = extractSections(body)
@@ -224,11 +255,11 @@ function checkFile(file, locale) {
     .map((s) => ({ key: s.key, title: fieldStr(s.body, 'title') }))
   const tocIssues = checkToc(body, sections)
 
-  return { file, locale, repeated, top, emptySections, tocIssues }
+  return { file, locale, repeated, factTokens, pointers, top, emptySections, tocIssues }
 }
 
 function printReport(result) {
-  const { file, locale, repeated, top, emptySections, tocIssues } = result
+  const { file, locale, repeated, factTokens, pointers, top, emptySections, tocIssues } = result
   console.log(`\n=== ${file} (${locale}) ===`)
 
   console.log(`\n-- Top-of-page blocks above first non-TL;DR section: ${top.count} (budget: ${MAX_TOP_BLOCKS}) --`)
@@ -242,6 +273,14 @@ function printReport(result) {
     console.log('   count | phrase')
     for (const [phrase, count] of repeated) console.log(`   ${String(count).padStart(5)} | ${phrase}`)
   }
+
+  console.log(`\n-- Fact tokens (prices, quantities, proper names) used >${MAX_FACT_TOKEN_OCCURRENCES}x --`)
+  if (!factTokens.length) console.log('   none')
+  else for (const [tok, c] of factTokens) console.log(`   ${String(c).padStart(5)} | ${tok}`)
+
+  console.log(`\n-- "see X above/below" pointers aimed at one section >2x --`)
+  if (!pointers.length) console.log('   none')
+  else for (const [sec, c] of pointers) console.log(`   ${String(c).padStart(5)} | ${sec}`)
 
   console.log(`\n-- Empty sections (title, no body content) --`)
   if (!emptySections.length) {
@@ -258,7 +297,7 @@ function printReport(result) {
   }
 
   const violations =
-    (top.count > MAX_TOP_BLOCKS ? 1 : 0) + repeated.length + emptySections.length + tocIssues.length
+    (top.count > MAX_TOP_BLOCKS ? 1 : 0) + repeated.length + factTokens.length + pointers.length + emptySections.length + tocIssues.length
   return violations
 }
 
