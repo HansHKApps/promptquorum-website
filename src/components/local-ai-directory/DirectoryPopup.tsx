@@ -164,8 +164,14 @@ export default function DirectoryPopup({ popup, dir }: Props) {
       dir={dir}
       data-directory-popup
       className={[
-        'fixed z-40 print:hidden',
-        'bottom-0 inset-x-0 rounded-t-2xl sm:inset-x-auto sm:bottom-4 sm:end-4 sm:w-[22rem] sm:rounded-2xl',
+        // z-[90]: above the Beta (z-80) and table-of-contents (z-70) floating buttons. On narrow
+        // screens this is a full-width bottom sheet that simply covers them while it is open.
+        'fixed z-[90] print:hidden',
+        // From `sm` up it sits bottom-LEFT: the Beta and contents buttons own the bottom-right.
+        // Only one prompt is ever up (shared prompt slot), so the Google card on the same side
+        // never collides. In RTL the contents button moves to the left edge, so step inward.
+        'bottom-0 inset-x-0 rounded-t-2xl sm:inset-x-auto sm:bottom-6 sm:w-[22rem] sm:rounded-2xl',
+        dir === 'rtl' ? 'sm:left-24' : 'sm:left-6',
         'border border-border bg-white p-4 text-start shadow-lg',
         'transition duration-300 ease-out motion-reduce:transition-none',
         entered ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0 motion-reduce:translate-y-0 motion-reduce:opacity-100',
