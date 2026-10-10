@@ -16,6 +16,32 @@
   "title": "24 GB Mac 上的 Page Assist：找到了侧边栏，却读不懂页面",
   "page_title": "Page Assist Test",
   "dek": "在搭载 M3 Pro 的 Mac 上对这款基于 Ollama 的浏览器扩展进行的实测。点击工具栏图标打开的是全屏页面，而不是侧边栏。找到侧边栏后，它能统计字数，但读不懂 Search Console 页面，也无法对页面执行操作。",
+  "seo": {
+    "title": "Page Assist 实测：侧边栏要右键才找到",
+    "description": "在 24 GB 的 MacBook Pro（M3 Pro）上用 Ollama 实测 Page Assist：数单词可以，但没能看懂 Search Console 页面。"
+  },
+  "faq": [
+    [
+      "Page Assist 能当侧边栏用吗？",
+      "有侧边面板，但点工具栏图标打开的是一个全屏聊天页面。测试者靠右键找到了侧边面板，其间得到了 ChatGPT 的帮助。欢迎视频里提到的快捷键（Ctrl+Shift+Y）对他不起作用。",
+      "observed"
+    ],
+    [
+      "Page Assist 能读取我正在看的页面吗？",
+      "这次测试中只能部分做到。数一个页面的单词没问题。一个 Search Console 页面没有被看懂（回复说没有 CTR 信息，而页面上有一张 CTR 卡片），而且在测试者看来，换页面后上下文没有跟着变。各次测试用的模型不同。",
+      "observed"
+    ],
+    [
+      "Page Assist 能点击、滚动或填写页面吗？",
+      "测试者没能让 Page Action 滚动或点击。在唯一的截图里，Page Action 和 WebMCP 是关闭的，所以这可能是设置上的疏漏，而不是产品的限制。",
+      "observed"
+    ],
+    [
+      "Page Assist 需要 Ollama 吗？",
+      "其 README 把 Bun，加上 Ollama 或任何兼容 OpenAI 的端点，列为从源码构建的前提条件。这次测试中 Ollama 在运行并被检测到；没有试过其他端点。",
+      "vendor-claim"
+    ]
+  ],
   "status": "Abandoned",
   "published": "2026-10-09",
   "started": "2026-10-08",
@@ -1245,6 +1271,8 @@
     "footer_line": "测试编号 {id} · 测试标准 v{version} · 原始笔记 PDF：待补充",
     "crumb_home": "首页",
     "crumb_directory": "目录",
-    "crumb_test": "{app} 上手测试"
+    "crumb_test": "{app} 上手测试",
+    "faq_h": "常见问题",
+    "more_tests_h": "更多实测"
   }
 }

@@ -16,6 +16,32 @@
   "title": "24 GB Mac에서의 BoBe Alpha: 설치는 쉽지만, 삭제하면 다시 실행됩니다",
   "page_title": "BoBe Test",
   "dek": "M3 Pro가 탑재된 MacBook Pro에서 진행한 직접 테스트입니다. 앱 내 어시스턴트는 필요한 macOS 설정을 알려 주지 못했고, 테스터가 삭제하려고 하자 앱이 스스로 다시 실행되었습니다.",
+  "seo": {
+    "title": "BoBe Alpha 직접 테스트: 설치 쉬움, 삭제 시 재실행",
+    "description": "24 GB MacBook Pro(M3 Pro)에서 BoBe Alpha를 직접 테스트했습니다. 설치는 쉬웠지만 macOS 설정을 알려 주지 못했고 삭제하면 다시 실행되었습니다."
+  },
+  "faq": [
+    [
+      "BoBe는 24 GB Mac에서 실행됩니까?",
+      "테스터는 M3 Pro와 24 GB가 탑재된 MacBook Pro에 BoBe Alpha를 설치했습니다. 약 11 GB, RAM 24 GB+로 표기된 로컬 모델 Medium(8B)을 선택했습니다. 화면 인식이 작동하는지는 이번 테스트에서 확인하지 못했습니다.",
+      "observed"
+    ],
+    [
+      "BoBe Alpha는 설치가 쉽습니까?",
+      "설치는 312 MB DMG와 macOS 승인 1회였습니다(테스터에 따르면 'so smooth'). 이후 설정에서는 안내된 11 GB와 달리 4.9 GB와 5.7 GB가 다운로드되었고, 예상 시간 표시는 없었습니다.",
+      "observed"
+    ],
+    [
+      "BoBe는 정상적으로 삭제할 수 있습니까?",
+      "이번 테스트에서는 그렇지 않았습니다. 테스터가 삭제하려 하자 앱이 스스로 다시 실행되었습니다. 그는 먼저 활동 모니터에서 종료한 뒤 삭제했습니다. 설치는 한 번만 시도했고, 설치된 버전은 기록하지 않았습니다.",
+      "observed"
+    ],
+    [
+      "BoBe는 스크린샷을 업로드합니까?",
+      "BoBe의 Screen Awareness 대화 상자는 스크린샷이 Mac에서 로컬로 분석되며 업로드되지 않는다고 밝힙니다. 이번 테스트에서는 그 주장을 확인하지 않았습니다. 네트워크 모니터링이나 독립적인 확인은 하지 않았습니다.",
+      "vendor-claim"
+    ]
+  ],
   "status": "Abandoned",
   "published": "2026-10-09",
   "started": "2026-10-07",
@@ -1034,6 +1060,8 @@
     "footer_line": "테스트 ID {id} · 테스트 표준 v{version} · 원본 노트 PDF: 추가 예정",
     "crumb_home": "홈",
     "crumb_directory": "디렉터리",
-    "crumb_test": "{app} 직접 사용 테스트"
+    "crumb_test": "{app} 직접 사용 테스트",
+    "faq_h": "자주 묻는 질문",
+    "more_tests_h": "다른 직접 테스트"
   }
 }

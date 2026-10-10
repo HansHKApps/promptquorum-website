@@ -16,6 +16,32 @@
   "title": "BoBe Alpha on a 24 GB Mac: Easy to Install, Restarted When Deleted",
   "page_title": "BoBe Test",
   "dek": "Hands-on test on a MacBook Pro with M3 Pro. The in-app assistant did not name the macOS setting it needs, and the app restarted itself when the tester tried to delete it.",
+  "seo": {
+    "title": "BoBe Alpha Hands-on Test: Easy Install, Restarts on Delete",
+    "description": "Hands-on test of BoBe Alpha on a 24 GB MacBook Pro (M3 Pro): easy install, no answer on the macOS setting, and a restart on delete."
+  },
+  "faq": [
+    [
+      "Does BoBe run on a 24 GB Mac?",
+      "The tester installed BoBe Alpha on a MacBook Pro with an M3 Pro and 24 GB. He chose the Medium (8B) local model, listed at about 11 GB and 24 GB+ RAM. Whether screen awareness works could not be confirmed in this test.",
+      "observed"
+    ],
+    [
+      "Is BoBe Alpha easy to install?",
+      "Installation was a 312 MB DMG and one macOS approval ('so smooth', per the tester). Setup then downloaded 4.9 GB and 5.7 GB against an announced 11 GB, with no time estimate.",
+      "observed"
+    ],
+    [
+      "Can BoBe be uninstalled normally?",
+      "Not in this test: the app restarted itself when the tester tried to delete it. He quit it in Activity Monitor first and then deleted it. Only one install was tried, and the installed version was not recorded.",
+      "observed"
+    ],
+    [
+      "Does BoBe upload screenshots?",
+      "BoBe's Screen Awareness dialog says screenshots are analyzed locally on the Mac and never uploaded. This test did not check that claim: no network monitoring or independent check was done.",
+      "vendor-claim"
+    ]
+  ],
   "status": "Abandoned",
   "published": "2026-10-09",
   "started": "2026-10-07",
@@ -1034,6 +1060,8 @@
     "footer_line": "Test ID {id} · Test standard v{version} · Raw notes PDF: to be added",
     "crumb_home": "Home",
     "crumb_directory": "Directory",
-    "crumb_test": "{app} hands-on test"
+    "crumb_test": "{app} hands-on test",
+    "faq_h": "Frequently asked questions",
+    "more_tests_h": "More hands-on tests"
   }
 }

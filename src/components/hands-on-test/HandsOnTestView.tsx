@@ -4,6 +4,8 @@ import { EvidenceChip } from './EvidenceChip'
 import { TestFigure } from './TestFigure'
 import { FindingsTable } from './FindingsTable'
 import { featureReviewUrl } from '@/components/local-ai-directory/reviewLinks'
+import { getHandsOnTest } from '@/lib/hands-on-tests'
+import { HANDS_ON_TEST_SLUGS, handsOnTestUrl } from '@/lib/hands-on-tests/links'
 
 const H2 = 'mt-12 mb-4 border-t-2 border-text-primary pt-3 text-2xl font-bold text-text-primary'
 const CARD = 'rounded-md border border-border bg-white p-5'
@@ -46,6 +48,12 @@ export function HandsOnTestView({ test, lang }: { test: HandsOnTest; lang: Langu
   const fitTitle = fit?.title ?? ui.fit_h
   const fitNav = fit?.nav ?? ui.nav.fit
   const hasBackground = test.background.length > 0
+  // The other tests, in this page's language, for internal linking.
+  const otherTests = HANDS_ON_TEST_SLUGS.filter((slug) => slug !== test.app.slug).flatMap((slug) => {
+    const other = getHandsOnTest(slug, lang)
+    const href = handsOnTestUrl(slug, lang)
+    return other && href ? [{ slug, href, title: other.title, name: other.app.name }] : []
+  })
 
   return (
     <div className="space-y-0 text-text-secondary">
@@ -289,6 +297,20 @@ export function HandsOnTestView({ test, lang }: { test: HandsOnTest; lang: Langu
         </blockquote>
       </section>
 
+      {test.faq.length > 0 && (
+        <section id="faq">
+          <h2 className={H2}>{ui.faq_h}</h2>
+          <div className="space-y-5">
+            {test.faq.map(([q, a, k]) => (
+              <div key={q}>
+                <h3 className="mb-1.5 font-semibold text-text-primary">{q}</h3>
+                <p className="max-w-prose">{a} {chip(k)}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {hasBackground && (
       <section id="background" className="rounded-md border border-dashed border-slate-400 bg-slate-50 p-5">
         <h2 className="mb-2 text-2xl font-bold text-text-primary">{ui.background_h}</h2>
@@ -307,6 +329,19 @@ export function HandsOnTestView({ test, lang }: { test: HandsOnTest; lang: Langu
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 lg:items-start">
             {gallery.map((g) => <TestFigure key={g.id} image={g} ui={ui} />)}
           </div>
+        </section>
+      )}
+
+      {otherTests.length > 0 && (
+        <section id="more-tests">
+          <h2 className={H2}>{ui.more_tests_h}</h2>
+          <ul className="space-y-2">
+            {otherTests.map((o) => (
+              <li key={o.slug}>
+                <a href={o.href} className="text-primary underline">{o.title}</a>
+              </li>
+            ))}
+          </ul>
         </section>
       )}
 

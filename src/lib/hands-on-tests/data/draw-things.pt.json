@@ -13,6 +13,32 @@
   "title": "Draw Things em um Mac de 24 GB: rápido, mas às cegas no início",
   "page_title": "Teste do Draw Things",
   "dek": "Teste prático em um MacBook Pro com M3 Pro. O primeiro prompt devolveu um quadrado cinza. O segundo modelo funcionou.",
+  "seo": {
+    "title": "Teste do Draw Things com 24 GB: rápido se o modelo couber",
+    "description": "Teste prático do Draw Things em um MacBook Pro (M3 Pro, 24 GB): boas imagens com um modelo adequado, mas sem dicas de hardware na lista de modelos."
+  },
+  "faq": [
+    [
+      "O Draw Things roda em um Mac de 24 GB?",
+      "Sim, depois de instalar um modelo adequado. Em um MacBook Pro com M3 Pro e 24 GB, o ERNIE Image Turbo 1.0 (8-bit S, cerca de 11.4 GiB) gerou imagens em menos de um minuto, segundo o testador. Downloads de cerca de 25 a 57 GB (FLUX, Chrono Edit 14B, LTX 2.3 22B distilled) eram maiores que a memória dele; o tamanho do download, porém, não é a memória usada em execução.",
+      "tester-estimate"
+    ],
+    [
+      "Com qual modelo devo começar no Draw Things?",
+      "O teste não recomenda nenhum. A primeira escolha do testador, o SeedVR2 7B, é um modelo de restauração de vídeo e devolveu um quadrado cinza para um prompt de texto. O ERNIE Image Turbo 1.0 (8-bit S) funcionou. Um assistente de terceiros o citou entre os modelos de imagem mais seguros para 24 GB; isso não foi verificado.",
+      "observed"
+    ],
+    [
+      "O Draw Things é gratuito?",
+      "A página de preços lista uma Free Edition que gera imagens localmente. O testador não notou nenhum paywall, mas não conseguiu perceber como a conta gratuita 'Community' difere dela. Não verificado.",
+      "vendor-claim"
+    ],
+    [
+      "O Draw Things consegue refinar uma imagem existente?",
+      "O testador não encontrou como dizer 'mantenha esta imagem e mude isto'. O Version History e as ferramentas de edição estão visíveis no app, mas não foram avaliados.",
+      "observed"
+    ]
+  ],
   "status": "Concluído",
   "published": "2026-10-09",
   "started": "2026-10-06T20:00:00+02:00",
@@ -1361,6 +1387,8 @@
     "footer_line": "ID do teste {id} · Padrão de teste v{version} · PDF das anotações originais: a ser adicionado",
     "crumb_home": "Início",
     "crumb_directory": "Diretório",
-    "crumb_test": "Teste prático do {app}"
+    "crumb_test": "Teste prático do {app}",
+    "faq_h": "Perguntas frequentes",
+    "more_tests_h": "Mais testes práticos"
   }
 }

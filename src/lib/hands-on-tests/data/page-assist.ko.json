@@ -16,6 +16,32 @@
   "title": "24 GB Mac에서의 Page Assist: 사이드바는 찾았지만, 페이지는 이해하지 못했습니다",
   "page_title": "Page Assist Test",
   "dek": "M3 Pro Mac에서 Ollama 기반 브라우저 확장 프로그램을 직접 테스트했습니다. 툴바 아이콘은 사이드바 대신 전체 화면 페이지를 열었습니다. 사이드바를 찾은 뒤에는 단어 수는 셌지만 Search Console 페이지를 읽지 못했고 페이지에서 동작을 수행하지도 못했습니다.",
+  "seo": {
+    "title": "Page Assist 직접 테스트: 사이드바는 우클릭으로 발견",
+    "description": "24 GB MacBook Pro(M3 Pro)와 Ollama로 Page Assist를 직접 테스트했습니다. 단어 세기는 되었지만 Search Console 페이지는 이해하지 못했습니다."
+  },
+  "faq": [
+    [
+      "Page Assist는 사이드바로 작동합니까?",
+      "사이드 패널은 있지만, 도구 모음 아이콘을 누르면 대신 전체 화면 채팅 페이지가 열립니다. 테스터는 ChatGPT의 도움을 받아 우클릭으로 사이드 패널을 찾았습니다. 환영 영상에 나온 단축키(Ctrl+Shift+Y)는 그에게는 작동하지 않았습니다.",
+      "observed"
+    ],
+    [
+      "Page Assist는 지금 보고 있는 페이지를 읽을 수 있습니까?",
+      "이번 테스트에서는 부분적으로만 가능했습니다. 페이지의 단어 수를 세는 것은 되었습니다. Search Console 페이지는 이해하지 못했고(페이지에 CTR 카드가 있는데도 답변은 CTR 정보가 없다고 했습니다), 테스터의 인상으로는 페이지를 바꿔도 컨텍스트가 따라가지 않았습니다. 테스트마다 모델이 달랐습니다.",
+      "observed"
+    ],
+    [
+      "Page Assist는 페이지를 클릭하거나 스크롤하거나 입력할 수 있습니까?",
+      "테스터는 Page Action으로 스크롤하거나 클릭하게 하지 못했습니다. 유일한 스크린샷에서는 Page Action과 WebMCP가 꺼져 있으므로, 제품의 한계가 아니라 설정 누락일 수 있습니다.",
+      "observed"
+    ],
+    [
+      "Page Assist에는 Ollama가 필요합니까?",
+      "README는 소스에서 빌드하기 위한 전제 조건으로 Bun과, Ollama 또는 OpenAI 호환 엔드포인트를 듭니다. 이번 테스트에서는 Ollama가 실행 중이었고 감지되었습니다. 다른 엔드포인트는 시도하지 않았습니다.",
+      "vendor-claim"
+    ]
+  ],
   "status": "Abandoned",
   "published": "2026-10-09",
   "started": "2026-10-08",
@@ -1245,6 +1271,8 @@
     "footer_line": "테스트 ID {id} · 테스트 표준 v{version} · 원본 노트 PDF: 추가 예정",
     "crumb_home": "홈",
     "crumb_directory": "디렉터리",
-    "crumb_test": "{app} 직접 사용 테스트"
+    "crumb_test": "{app} 직접 사용 테스트",
+    "faq_h": "자주 묻는 질문",
+    "more_tests_h": "다른 직접 테스트"
   }
 }

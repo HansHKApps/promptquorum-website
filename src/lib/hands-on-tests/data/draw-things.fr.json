@@ -13,6 +13,32 @@
   "title": "Draw Things, Mac 24 GB : rapide ensuite, à l’aveugle avant",
   "page_title": "Test de Draw Things",
   "dek": "Test pratique sur un MacBook Pro M3 Pro. Le premier prompt a renvoyé un carré gris. Le deuxième modèle a fonctionné.",
+  "seo": {
+    "title": "Test de Draw Things sur 24 Go : rapide si le modèle convient",
+    "description": "Test pratique de Draw Things sur un MacBook Pro (M3 Pro, 24 Go) : de bonnes images avec un modèle adapté, mais aucune indication matérielle dans la liste."
+  },
+  "faq": [
+    [
+      "Draw Things fonctionne-t-il sur un Mac de 24 Go ?",
+      "Oui, une fois un modèle adapté installé. Sur un MacBook Pro avec puce M3 Pro et 24 Go, ERNIE Image Turbo 1.0 (8-bit S, environ 11.4 GiB) a produit des images en moins d'une minute, selon le testeur. Les téléchargements d'environ 25 à 57 GB (FLUX, Chrono Edit 14B, LTX 2.3 22B distilled) dépassaient sa mémoire ; la taille de téléchargement n'est toutefois pas la mémoire utilisée à l'exécution.",
+      "tester-estimate"
+    ],
+    [
+      "Quel modèle choisir pour commencer avec Draw Things ?",
+      "Le test n'en recommande aucun. Le premier choix du testeur, SeedVR2 7B, est un modèle de restauration vidéo et a renvoyé un carré gris pour un prompt texte. ERNIE Image Turbo 1.0 (8-bit S) a fonctionné. Un assistant tiers l'a cité parmi les modèles d'image les plus sûrs pour 24 Go ; cela n'a pas été vérifié.",
+      "observed"
+    ],
+    [
+      "Draw Things est-il gratuit ?",
+      "Sa page de tarifs indique une Free Edition qui génère les images en local. Le testeur n'a remarqué aucun accès payant, mais n'a pas pu distinguer le compte gratuit 'Community' de cette édition. Non vérifié.",
+      "vendor-claim"
+    ],
+    [
+      "Draw Things permet-il d'affiner une image existante ?",
+      "Le testeur n'a pas trouvé comment dire 'garde cette image et change ceci'. Version History et les outils d'édition sont visibles dans l'appli, mais n'ont pas été évalués.",
+      "observed"
+    ]
+  ],
   "status": "Terminé",
   "published": "2026-10-09",
   "started": "2026-10-06T20:00:00+02:00",
@@ -1361,6 +1387,8 @@
     "footer_line": "ID du test {id} · Norme de test v{version} · PDF des notes brutes : à venir",
     "crumb_home": "Accueil",
     "crumb_directory": "Annuaire",
-    "crumb_test": "Test pratique de {app}"
+    "crumb_test": "Test pratique de {app}",
+    "faq_h": "Questions fréquentes",
+    "more_tests_h": "Autres tests pratiques"
   }
 }

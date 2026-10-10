@@ -16,6 +16,32 @@
   "title": "BoBe Alpha sur un Mac de 24 Go : facile à installer, relancé à la suppression",
   "page_title": "BoBe Test",
   "dek": "Test pratique sur un MacBook Pro avec puce M3 Pro. L'assistant intégré n'a pas nommé le réglage macOS dont il a besoin, et l'appli s'est relancée toute seule quand le testeur a essayé de la supprimer.",
+  "seo": {
+    "title": "Test BoBe Alpha : facile à installer, relancé si supprimé",
+    "description": "Test pratique de BoBe Alpha sur un MacBook Pro (M3 Pro, 24 Go) : installation facile, pas de réponse sur le réglage macOS, relance à la suppression."
+  },
+  "faq": [
+    [
+      "BoBe fonctionne-t-il sur un Mac de 24 Go ?",
+      "Le testeur a installé BoBe Alpha sur un MacBook Pro avec puce M3 Pro et 24 Go. Il a choisi le modèle local Medium (8B), annoncé à environ 11 Go et 24 Go+ de RAM. Le fonctionnement de la perception de l'écran n'a pas pu être confirmé dans ce test.",
+      "observed"
+    ],
+    [
+      "BoBe Alpha est-il facile à installer ?",
+      "L'installation s'est limitée à un DMG de 312 Mo et une validation macOS ('so smooth', selon le testeur). La configuration a ensuite téléchargé 4.9 Go et 5.7 Go contre 11 Go annoncés, sans estimation de durée.",
+      "observed"
+    ],
+    [
+      "BoBe se désinstalle-t-il normalement ?",
+      "Pas dans ce test : l'appli s'est relancée toute seule quand le testeur a essayé de la supprimer. Il l'a d'abord quittée dans le Moniteur d'activité, puis supprimée. Une seule installation a été essayée, et la version installée n'a pas été consignée.",
+      "observed"
+    ],
+    [
+      "BoBe envoie-t-il des captures d'écran ?",
+      "La boîte de dialogue Screen Awareness de BoBe indique que les captures d'écran sont analysées en local sur le Mac et jamais envoyées. Ce test n'a pas vérifié cette affirmation : aucune surveillance du réseau ni vérification indépendante n'a été faite.",
+      "vendor-claim"
+    ]
+  ],
   "status": "Abandoned",
   "published": "2026-10-09",
   "started": "2026-10-07",
@@ -1034,6 +1060,8 @@
     "footer_line": "ID du test {id} · Norme de test v{version} · PDF des notes brutes : à venir",
     "crumb_home": "Accueil",
     "crumb_directory": "Annuaire",
-    "crumb_test": "Test pratique de {app}"
+    "crumb_test": "Test pratique de {app}",
+    "faq_h": "Questions fréquentes",
+    "more_tests_h": "Autres tests pratiques"
   }
 }

@@ -16,6 +16,32 @@
   "title": "24 GB 的 Mac 上的 BoBe Alpha：安装容易，删除时会自己重启",
   "page_title": "BoBe Test",
   "dek": "在搭载 M3 Pro 的 MacBook Pro 上进行的实测。应用内助手没有说出它所需的 macOS 设置，测试者尝试删除时，应用还自行重启了。",
+  "seo": {
+    "title": "BoBe Alpha 实测：安装容易，删除时会重启",
+    "description": "在 24 GB 的 MacBook Pro（M3 Pro）上实测 BoBe Alpha：安装容易，但没能说出所需的 macOS 设置，删除时应用会自行重启。"
+  },
+  "faq": [
+    [
+      "BoBe 能在 24 GB 的 Mac 上运行吗？",
+      "测试者在搭载 M3 Pro 和 24 GB 内存的 MacBook Pro 上安装了 BoBe Alpha。他选了本地模型 Medium（8B），标注约 11 GB 和 24 GB+ 内存。屏幕感知是否有效，在这次测试中无法确认。",
+      "observed"
+    ],
+    [
+      "BoBe Alpha 容易安装吗？",
+      "安装只需一个 312 MB 的 DMG 和一次 macOS 批准（据测试者称'so smooth'）。之后设置过程下载了 4.9 GB 和 5.7 GB，而宣称的是 11 GB，也没有时间预估。",
+      "observed"
+    ],
+    [
+      "BoBe 能正常卸载吗？",
+      "这次测试中不能：测试者尝试删除时，应用自行重启了。他先在活动监视器中退出，再删除。只试了一次安装，安装的版本也没有记录。",
+      "observed"
+    ],
+    [
+      "BoBe 会上传截图吗？",
+      "BoBe 的 Screen Awareness 对话框称，截图在 Mac 上本地分析，从不上传。这次测试没有核实该说法：没有做网络监控，也没有独立核查。",
+      "vendor-claim"
+    ]
+  ],
   "status": "Abandoned",
   "published": "2026-10-09",
   "started": "2026-10-07",
@@ -1034,6 +1060,8 @@
     "footer_line": "测试编号 {id} · 测试标准 v{version} · 原始笔记 PDF：待补充",
     "crumb_home": "首页",
     "crumb_directory": "目录",
-    "crumb_test": "{app} 上手测试"
+    "crumb_test": "{app} 上手测试",
+    "faq_h": "常见问题",
+    "more_tests_h": "更多实测"
   }
 }

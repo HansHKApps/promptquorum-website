@@ -13,6 +13,32 @@
   "title": "24 GB Mac의 Draw Things: 되면 빠르고, 되기 전엔 깜깜",
   "page_title": "Draw Things 테스트",
   "dek": "M3 Pro 탑재 MacBook Pro에서 진행한 직접 사용 테스트입니다. 첫 프롬프트는 회색 정사각형을 반환했고, 두 번째 모델은 제대로 작동했습니다.",
+  "seo": {
+    "title": "Draw Things 직접 테스트: 24 GB, 맞는 모델이면 빠름",
+    "description": "24 GB MacBook Pro(M3 Pro)에서 Draw Things를 직접 테스트했습니다. 적합한 모델에서는 좋은 이미지가 나왔지만 모델 목록에 하드웨어 안내가 없습니다."
+  },
+  "faq": [
+    [
+      "Draw Things는 24 GB Mac에서 실행됩니까?",
+      "적합한 모델을 설치하면 실행됩니다. M3 Pro와 24 GB가 탑재된 MacBook Pro에서 테스터에 따르면 ERNIE Image Turbo 1.0(8-bit S, 약 11.4 GiB)이 1분 미만에 이미지를 생성했습니다. 약 25~57 GB의 다운로드(FLUX, Chrono Edit 14B, LTX 2.3 22B distilled)는 그의 메모리보다 컸습니다. 다만 다운로드 크기는 실행 시 메모리와 같지 않습니다.",
+      "tester-estimate"
+    ],
+    [
+      "Draw Things에서는 어떤 모델로 시작해야 합니까?",
+      "이번 테스트는 특정 모델을 권하지 않습니다. 테스터가 처음 고른 SeedVR2 7B는 비디오 복원 모델이며 텍스트 프롬프트에는 회색 정사각형을 반환했습니다. ERNIE Image Turbo 1.0(8-bit S)은 작동했습니다. 제3자 어시스턴트는 이를 24 GB에서 가장 안전한 이미지 모델 중 하나로 꼽았으나, 검증하지는 않았습니다.",
+      "observed"
+    ],
+    [
+      "Draw Things는 무료입니까?",
+      "가격 페이지에는 이미지를 로컬에서 생성하는 Free Edition이 나와 있습니다. 테스터는 유료 장벽을 발견하지 못했지만, 무료 계정('Community')이 Free Edition과 어떻게 다른지는 알 수 없었습니다. 검증하지 않았습니다.",
+      "vendor-claim"
+    ],
+    [
+      "Draw Things에서 기존 이미지를 다듬을 수 있습니까?",
+      "테스터는 '이 그림은 두고 이것만 바꿔 줘'라고 말하는 방법을 찾지 못했습니다. Version History와 편집 도구는 앱에 보이지만 평가하지 않았습니다.",
+      "observed"
+    ]
+  ],
   "status": "완료",
   "published": "2026-10-09",
   "started": "2026-10-06T20:00:00+02:00",
@@ -1361,6 +1387,8 @@
     "footer_line": "테스트 ID {id} · 테스트 표준 v{version} · 원본 노트 PDF: 추가 예정",
     "crumb_home": "홈",
     "crumb_directory": "디렉터리",
-    "crumb_test": "{app} 직접 사용 테스트"
+    "crumb_test": "{app} 직접 사용 테스트",
+    "faq_h": "자주 묻는 질문",
+    "more_tests_h": "다른 직접 테스트"
   }
 }

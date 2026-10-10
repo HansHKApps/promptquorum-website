@@ -13,6 +13,32 @@
   "title": "Draw Things en un Mac de 24 GB: rápido si funciona, a ciegas antes",
   "page_title": "Prueba de Draw Things",
   "dek": "Prueba práctica en un MacBook Pro con M3 Pro. El primer prompt devolvió un cuadrado gris. El segundo modelo funcionó.",
+  "seo": {
+    "title": "Prueba de Draw Things con 24 GB: rápido si el modelo cabe",
+    "description": "Prueba práctica de Draw Things en un MacBook Pro (M3 Pro, 24 GB): buenas imágenes con un modelo adecuado, pero sin pistas de hardware en la lista de modelos."
+  },
+  "faq": [
+    [
+      "¿Funciona Draw Things en un Mac de 24 GB?",
+      "Sí, una vez instalado un modelo adecuado. En un MacBook Pro con M3 Pro y 24 GB, ERNIE Image Turbo 1.0 (8-bit S, unos 11.4 GiB) generó imágenes en menos de un minuto, según el evaluador. Las descargas de unos 25 a 57 GB (FLUX, Chrono Edit 14B, LTX 2.3 22B distilled) eran mayores que su memoria; el tamaño de descarga, sin embargo, no es la memoria en ejecución.",
+      "tester-estimate"
+    ],
+    [
+      "¿Con qué modelo conviene empezar en Draw Things?",
+      "La prueba no recomienda ninguno. La primera elección del evaluador, SeedVR2 7B, es un modelo de restauración de vídeo y devolvió un cuadrado gris para un prompt de texto. ERNIE Image Turbo 1.0 (8-bit S) funcionó. Un asistente externo lo citó entre los modelos de imagen más seguros para 24 GB; no se verificó.",
+      "observed"
+    ],
+    [
+      "¿Es gratis Draw Things?",
+      "Su página de precios muestra una Free Edition que genera imágenes en local. El evaluador no notó ningún muro de pago, pero no pudo distinguir en qué se diferencia de ella la cuenta gratuita 'Community'. No verificado.",
+      "vendor-claim"
+    ],
+    [
+      "¿Puede Draw Things refinar una imagen existente?",
+      "El evaluador no encontró forma de decir 'conserva esta imagen y cambia esto'. Version History y las herramientas de edición son visibles en la app, pero no se evaluaron.",
+      "observed"
+    ]
+  ],
   "status": "Completada",
   "published": "2026-10-09",
   "started": "2026-10-06T20:00:00+02:00",
@@ -1361,6 +1387,8 @@
     "footer_line": "ID de la prueba {id} · Estándar de pruebas v{version} · PDF de las notas originales: pendiente de añadir",
     "crumb_home": "Inicio",
     "crumb_directory": "Directorio",
-    "crumb_test": "Prueba práctica de {app}"
+    "crumb_test": "Prueba práctica de {app}",
+    "faq_h": "Preguntas frecuentes",
+    "more_tests_h": "Más pruebas prácticas"
   }
 }

@@ -16,6 +16,32 @@
   "title": "BoBe Alpha em um Mac de 24 GB: fácil de instalar, reiniciou ao ser apagado",
   "page_title": "BoBe Test",
   "dek": "Teste prático em um MacBook Pro com M3 Pro. O assistente do app não citou a configuração do macOS de que precisa, e o app reiniciou sozinho quando o testador tentou apagá-lo.",
+  "seo": {
+    "title": "Teste do BoBe Alpha: fácil de instalar, reinicia ao apagar",
+    "description": "Teste prático do BoBe Alpha em um MacBook Pro (M3 Pro, 24 GB): instalação fácil, sem resposta sobre a configuração do macOS e reinício ao apagar."
+  },
+  "faq": [
+    [
+      "O BoBe roda em um Mac de 24 GB?",
+      "O testador instalou o BoBe Alpha em um MacBook Pro com M3 Pro e 24 GB. Ele escolheu o modelo local Medium (8B), listado com cerca de 11 GB e 24 GB+ de RAM. Neste teste não foi possível confirmar se a percepção de tela funciona.",
+      "observed"
+    ],
+    [
+      "O BoBe Alpha é fácil de instalar?",
+      "A instalação foi um DMG de 312 MB e uma aprovação do macOS ('so smooth', segundo o testador). A configuração então baixou 4.9 GB e 5.7 GB contra 11 GB anunciados, sem estimativa de tempo.",
+      "observed"
+    ],
+    [
+      "O BoBe pode ser desinstalado normalmente?",
+      "Não neste teste: o app reiniciou sozinho quando o testador tentou apagá-lo. Ele o encerrou antes no Monitor de Atividade e depois o apagou. Só uma instalação foi tentada, e a versão instalada não foi registrada.",
+      "observed"
+    ],
+    [
+      "O BoBe envia capturas de tela?",
+      "A caixa de diálogo Screen Awareness do BoBe diz que as capturas de tela são analisadas localmente no Mac e nunca enviadas. Este teste não verificou essa alegação: não foi feito monitoramento de rede nem verificação independente.",
+      "vendor-claim"
+    ]
+  ],
   "status": "Abandoned",
   "published": "2026-10-09",
   "started": "2026-10-07",
@@ -1034,6 +1060,8 @@
     "footer_line": "ID do teste {id} · Padrão de teste v{version} · PDF das anotações originais: a ser adicionado",
     "crumb_home": "Início",
     "crumb_directory": "Diretório",
-    "crumb_test": "Teste prático do {app}"
+    "crumb_test": "Teste prático do {app}",
+    "faq_h": "Perguntas frequentes",
+    "more_tests_h": "Mais testes práticos"
   }
 }

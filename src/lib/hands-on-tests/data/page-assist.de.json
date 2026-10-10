@@ -16,6 +16,32 @@
   "title": "Page Assist auf einem Mac mit 24 GB: Sidebar gefunden, Seite nicht verstanden",
   "page_title": "Page Assist Test",
   "dek": "Praxistest der Ollama-basierten Browser-Erweiterung auf einem Mac mit M3 Pro. Das Symbol in der Symbolleiste öffnete eine Vollbildseite statt einer Sidebar. Nachdem die Sidebar gefunden war, zählte sie Wörter, las aber keine Search-Console-Seite und handelte auch nicht auf einer Seite.",
+  "seo": {
+    "title": "Page Assist Praxistest: Sidebar per Rechtsklick gefunden",
+    "description": "Praxistest von Page Assist mit Ollama auf einem MacBook Pro (M3 Pro, 24 GB): Wörterzählen klappte, eine Search-Console-Seite wurde nicht verstanden."
+  },
+  "faq": [
+    [
+      "Funktioniert Page Assist als Sidebar?",
+      "Ein Seitenpanel existiert, aber das Symbol in der Symbolleiste öffnet stattdessen eine Chat-Seite im Vollbild. Der Tester fand das Seitenpanel per Rechtsklick, mit Hilfe von ChatGPT. Das im Willkommensvideo genannte Tastenkürzel (Ctrl+Shift+Y) funktionierte bei ihm nicht.",
+      "observed"
+    ],
+    [
+      "Kann Page Assist die Seite lesen, auf der ich bin?",
+      "In diesem Test teilweise. Das Zählen der Wörter einer Seite funktionierte. Eine Search-Console-Seite wurde nicht verstanden (die Antwort nannte keine CTR-Informationen, obwohl die Seite eine CTR-Karte zeigt), und nach dem Eindruck des Testers folgte der Kontext einem Seitenwechsel nicht. Die Modelle unterschieden sich zwischen den Tests.",
+      "observed"
+    ],
+    [
+      "Kann Page Assist auf Seiten klicken, scrollen oder etwas ausfüllen?",
+      "Der Tester brachte Page Action nicht dazu, zu scrollen oder zu klicken. Im einzigen Screenshot sind Page Action und WebMCP ausgeschaltet; das kann also ein Einrichtungsfehler sein und keine Produktgrenze.",
+      "observed"
+    ],
+    [
+      "Braucht Page Assist Ollama?",
+      "Die README nennt Bun sowie Ollama oder einen beliebigen OpenAI-kompatiblen Endpunkt als Voraussetzungen für den Build aus dem Quellcode. In diesem Test lief Ollama und wurde erkannt; andere Endpunkte wurden nicht ausprobiert.",
+      "vendor-claim"
+    ]
+  ],
   "status": "Abandoned",
   "published": "2026-10-09",
   "started": "2026-10-08",
@@ -1245,6 +1271,8 @@
     "footer_line": "Test-ID {id} · Teststandard v{version} · PDF der Rohnotizen: folgt",
     "crumb_home": "Startseite",
     "crumb_directory": "Verzeichnis",
-    "crumb_test": "{app} Praxistest"
+    "crumb_test": "{app} Praxistest",
+    "faq_h": "Häufige Fragen",
+    "more_tests_h": "Weitere Praxistests"
   }
 }

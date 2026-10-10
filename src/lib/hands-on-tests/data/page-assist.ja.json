@@ -16,6 +16,32 @@
   "title": "24 GBのMacでPage Assist：サイドバーは見つかったが、ページは理解されなかった",
   "page_title": "Page Assist Test",
   "dek": "M3 ProのMacで行った、Ollamaベースのブラウザ拡張機能の実機テストです。ツールバーのアイコンはサイドバーではなくフルスクリーンのページを開きました。サイドバーを見つけた後、単語数は数えられたものの、Search Consoleのページは読めず、ページ上での操作もできませんでした。",
+  "seo": {
+    "title": "Page Assist実機テスト：サイドバーは右クリックで発見",
+    "description": "24 GBのMacBook Pro（M3 Pro）とOllamaでPage Assistを実機テスト。単語数の集計は成功し、Search Consoleのページは理解されなかった。"
+  },
+  "faq": [
+    [
+      "Page Assistはサイドバーとして使えますか？",
+      "サイドパネルはありますが、ツールバーのアイコンを押すと、代わりに全画面のチャットページが開きます。テスターは、ChatGPTの助けを借りて、右クリックからサイドパネルを見つけました。ウェルカム動画で示されたショートカット（Ctrl+Shift+Y）は、彼の環境では動きませんでした。",
+      "observed"
+    ],
+    [
+      "Page Assistは今見ているページを読めますか？",
+      "このテストでは部分的にです。ページの単語数の集計は成功しました。Search Consoleのページは理解されず（ページにはCTRのカードがあるのに、返答はCTRの情報がないというものでした）、テスターの印象では、ページを切り替えてもコンテキストは追従しませんでした。テストごとにモデルは異なっていました。",
+      "observed"
+    ],
+    [
+      "Page Assistはページをクリック、スクロール、入力できますか？",
+      "テスターはPage Actionでスクロールやクリックをさせることができませんでした。唯一のスクリーンショットではPage ActionとWebMCPがオフになっているため、製品の限界ではなく設定の見落としだった可能性があります。",
+      "observed"
+    ],
+    [
+      "Page AssistにはOllamaが必要ですか？",
+      "READMEは、ソースからビルドする前提条件として、Bunに加えて、Ollamaまたは任意のOpenAI互換エンドポイントを挙げています。このテストではOllamaが起動しており、検出されました。ほかのエンドポイントは試していません。",
+      "vendor-claim"
+    ]
+  ],
   "status": "Abandoned",
   "published": "2026-10-09",
   "started": "2026-10-08",
@@ -1245,6 +1271,8 @@
     "footer_line": "テストID {id} · テスト標準 v{version} · 元ノートのPDF：追加予定",
     "crumb_home": "ホーム",
     "crumb_directory": "ディレクトリ",
-    "crumb_test": "{app} ハンズオンテスト"
+    "crumb_test": "{app} ハンズオンテスト",
+    "faq_h": "よくある質問",
+    "more_tests_h": "ほかの実機テスト"
   }
 }

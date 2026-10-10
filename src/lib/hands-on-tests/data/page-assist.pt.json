@@ -16,6 +16,32 @@
   "title": "Page Assist em um Mac de 24 GB: barra lateral encontrada, página não compreendida",
   "page_title": "Page Assist Test",
   "dek": "Teste prático da extensão de navegador baseada no Ollama em um Mac com M3 Pro. O ícone da barra de ferramentas abriu uma página em tela cheia em vez de uma barra lateral. Depois que a barra lateral foi encontrada, ela contou palavras, mas não leu uma página do Search Console nem agiu sobre uma página.",
+  "seo": {
+    "title": "Teste do Page Assist: a barra lateral, com clique direito",
+    "description": "Teste prático do Page Assist com Ollama em um MacBook Pro (M3 Pro, 24 GB): contar palavras funcionou, uma página do Search Console não foi entendida."
+  },
+  "faq": [
+    [
+      "O Page Assist funciona como barra lateral?",
+      "Existe um painel lateral, mas o ícone da barra de ferramentas abre, em vez dele, uma página de chat em tela cheia. O testador encontrou o painel lateral com um clique direito, com ajuda do ChatGPT. O atalho citado no vídeo de boas-vindas (Ctrl+Shift+Y) não funcionou para ele.",
+      "observed"
+    ],
+    [
+      "O Page Assist consegue ler a página em que estou?",
+      "Em parte, neste teste. Contar as palavras de uma página funcionou. Uma página do Search Console não foi entendida (a resposta disse que não havia informação de CTR, embora a página mostre um cartão de CTR) e, na impressão do testador, o contexto não acompanhou uma mudança de página. Os modelos variaram entre os testes.",
+      "observed"
+    ],
+    [
+      "O Page Assist consegue clicar, rolar ou preencher páginas?",
+      "O testador não conseguiu fazer o Page Action rolar nem clicar. Na única captura de tela, Page Action e WebMCP estão desligados; portanto, pode ser uma falha de configuração, e não um limite do produto.",
+      "observed"
+    ],
+    [
+      "O Page Assist precisa do Ollama?",
+      "O README cita o Bun, mais o Ollama ou qualquer endpoint compatível com OpenAI, como pré-requisitos para compilar a partir do código-fonte. Neste teste o Ollama estava rodando e foi detectado; outros endpoints não foram testados.",
+      "vendor-claim"
+    ]
+  ],
   "status": "Abandoned",
   "published": "2026-10-09",
   "started": "2026-10-08",
@@ -1245,6 +1271,8 @@
     "footer_line": "ID do teste {id} · Padrão de teste v{version} · PDF das anotações originais: a ser adicionado",
     "crumb_home": "Início",
     "crumb_directory": "Diretório",
-    "crumb_test": "Teste prático do {app}"
+    "crumb_test": "Teste prático do {app}",
+    "faq_h": "Perguntas frequentes",
+    "more_tests_h": "Mais testes práticos"
   }
 }
