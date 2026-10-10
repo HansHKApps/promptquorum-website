@@ -101,7 +101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Get Tina',
         content: [
           '**Tina is distributed through the Apple App Store.** The download is 56.3 MB and the listing is rated 4+.',
-          'This review is a companion to PromptQuorum\'s [Local LLM Software Directory](/power-local-llm/local-llm-software-directory), which lists Tina alongside other mobile and desktop local AI tools.',
+          'This review is a companion to PromptQuorum\'s [Local LLM Software Directory](/directory), which lists Tina alongside other mobile and desktop local AI tools.',
         ],
         columns: ['Channel', 'Get It'],
         rows: [
@@ -338,7 +338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Maid Review](/power-local-llm/maid-review) — an open-source mobile client for local and remote models.',
           '[AnythingLLM Mobile Review](/power-local-llm/anythingllm-mobile-review) — remote access to your AnythingLLM workspace.',
           '[Locally AI Review](/power-local-llm/locally-ai-review) — a freemium on-device app for iOS and Mac.',
-          '[The Complete Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — a broader directory of local-LLM tools across platforms.',
+          '[The Complete Local LLM Software Directory](/directory) — a broader directory of local-LLM tools across platforms.',
         ],
       },
     },
@@ -438,7 +438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Tina herunterladen',
         content: [
           '**Tina wird über den Apple App Store vertrieben.** Der Download umfasst 56,3 MB, und der Eintrag ist ab 4 Jahren eingestuft.',
-          'Diese Rezension ist ein Begleitartikel zum [Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory) von PromptQuorum, das Tina neben anderen mobilen und Desktop-Tools für lokale KI listet.',
+          'Diese Rezension ist ein Begleitartikel zum [Verzeichnis lokaler LLM-Software](/de/directory) von PromptQuorum, das Tina neben anderen mobilen und Desktop-Tools für lokale KI listet.',
         ],
         columns: ['Kanal', 'Download'],
         rows: [
@@ -675,7 +675,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Maid-Rezension](/de/power-local-llm/maid-review) — ein quelloffener mobiler Client für lokale und entfernte Modelle.',
           '[AnythingLLM-Mobile-Rezension](/de/power-local-llm/anythingllm-mobile-review) — Fernzugriff auf Ihren AnythingLLM-Workspace.',
           '[Locally-AI-Rezension](/de/power-local-llm/locally-ai-review) — eine Freemium-On-Device-App für iOS und Mac.',
-          '[Das vollständige Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory) — ein breiteres Verzeichnis lokaler LLM-Tools über alle Plattformen hinweg.',
+          '[Das vollständige Verzeichnis lokaler LLM-Software](/de/directory) — ein breiteres Verzeichnis lokaler LLM-Tools über alle Plattformen hinweg.',
         ],
       },
     },
@@ -775,7 +775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Obtenir Tina',
         content: [
           '**Tina est distribuée par l\'Apple App Store.** Le téléchargement pèse 56.3 Mo et la fiche est classée 4+.',
-          'Cet avis est un complément au [répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) de PromptQuorum, qui recense Tina aux côtés d\'autres outils d\'IA locale mobiles et de bureau.',
+          'Cet avis est un complément au [répertoire des logiciels LLM locaux](/fr/directory) de PromptQuorum, qui recense Tina aux côtés d\'autres outils d\'IA locale mobiles et de bureau.',
         ],
         columns: ['Canal', 'Obtenir'],
         rows: [
@@ -1012,7 +1012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Avis Maid](/fr/power-local-llm/maid-review) — un client mobile open source pour modèles locaux et distants.',
           '[Avis AnythingLLM Mobile](/fr/power-local-llm/anythingllm-mobile-review) — accès distant à votre espace de travail AnythingLLM.',
           '[Avis Locally AI](/fr/power-local-llm/locally-ai-review) — une application freemium sur l\'appareil pour iOS et Mac.',
-          '[Le répertoire complet des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — un répertoire plus large d\'outils LLM locaux multiplateformes.',
+          '[Le répertoire complet des logiciels LLM locaux](/fr/directory) — un répertoire plus large d\'outils LLM locaux multiplateformes.',
         ],
       },
     },
@@ -1112,7 +1112,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Tinaを入手する',
         content: [
           '**TinaはApple App Storeで配布されています。** ダウンロードサイズは56.3 MBで、掲載情報の年齢区分は4+です。',
-          '本レビューは、PromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を補完するものです。このディレクトリはTinaを他のモバイルやデスクトップのローカルAIツールと並べて掲載しています。',
+          '本レビューは、PromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/directory)を補完するものです。このディレクトリはTinaを他のモバイルやデスクトップのローカルAIツールと並べて掲載しています。',
         ],
         columns: ['入手経路', '入手方法'],
         rows: [
@@ -1349,7 +1349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Maidレビュー](/ja/power-local-llm/maid-review) — ローカルとリモートのモデルに対応する、オープンソースのモバイルクライアント。',
           '[AnythingLLM Mobileレビュー](/ja/power-local-llm/anythingllm-mobile-review) — 自分のAnythingLLMワークスペースへのリモートアクセス。',
           '[Locally AIレビュー](/ja/power-local-llm/locally-ai-review) — iOSとMac向けのフリーミアムのオンデバイスアプリ。',
-          '[完全なローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — プラットフォームを横断するローカルLLMツールのより広範なディレクトリ。',
+          '[完全なローカルLLMソフトウェアディレクトリ](/ja/directory) — プラットフォームを横断するローカルLLMツールのより広範なディレクトリ。',
         ],
       },
     },
@@ -1449,7 +1449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '获取Tina',
         content: [
           '**Tina通过Apple App Store发布。** 应用大小为56.3 MB，页面分级为4+。',
-          '本评测是PromptQuorum[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)的配套文章，该目录将Tina与其他移动端和桌面端本地AI工具一并列出。',
+          '本评测是PromptQuorum[本地LLM软件目录](/zh/directory)的配套文章，该目录将Tina与其他移动端和桌面端本地AI工具一并列出。',
         ],
         columns: ['渠道', '获取方式'],
         rows: [
@@ -1686,7 +1686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Maid评测](/zh/power-local-llm/maid-review) — 面向本地和远程模型的开源移动客户端。',
           '[AnythingLLM Mobile评测](/zh/power-local-llm/anythingllm-mobile-review) — 远程访问您的AnythingLLM工作区。',
           '[Locally AI评测](/zh/power-local-llm/locally-ai-review) — 适用于iOS和Mac的免费增值设备端应用。',
-          '[完整本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 涵盖多平台本地LLM工具的更全面目录。',
+          '[完整本地LLM软件目录](/zh/directory) — 涵盖多平台本地LLM工具的更全面目录。',
         ],
       },
     },
@@ -1786,7 +1786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cómo conseguir Tina',
         content: [
           '**Tina se distribuye a través de la App Store de Apple.** La descarga ocupa 56.3 MB y la ficha tiene clasificación 4+.',
-          'Esta reseña complementa el [directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) de PromptQuorum, que incluye Tina junto a otras herramientas de IA local móviles y de escritorio.',
+          'Esta reseña complementa el [directorio de software LLM local](/es/directory) de PromptQuorum, que incluye Tina junto a otras herramientas de IA local móviles y de escritorio.',
         ],
         columns: ['Canal', 'Cómo conseguirla'],
         rows: [
@@ -2023,7 +2023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de Maid](/es/power-local-llm/maid-review) — un cliente móvil de código abierto para modelos locales y remotos.',
           '[Reseña de AnythingLLM Mobile](/es/power-local-llm/anythingllm-mobile-review) — acceso remoto a tu espacio de trabajo de AnythingLLM.',
           '[Reseña de Locally AI](/es/power-local-llm/locally-ai-review) — una app freemium en el dispositivo para iOS y Mac.',
-          '[El directorio completo de software LLM local](/es/power-local-llm/local-llm-software-directory) — un directorio más amplio de herramientas LLM locales en todas las plataformas.',
+          '[El directorio completo de software LLM local](/es/directory) — un directorio más amplio de herramientas LLM locales en todas las plataformas.',
         ],
       },
     },
@@ -2123,7 +2123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Como obter o Tina',
         content: [
           '**O Tina é distribuído pela Apple App Store.** O download tem 56,3 MB e a ficha tem classificação 4+.',
-          'Esta análise complementa o [diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) da PromptQuorum, que lista o Tina ao lado de outras ferramentas de IA local para celular e desktop.',
+          'Esta análise complementa o [diretório de software de LLM local](/pt/directory) da PromptQuorum, que lista o Tina ao lado de outras ferramentas de IA local para celular e desktop.',
         ],
         columns: ['Canal', 'Como obter'],
         rows: [
@@ -2360,7 +2360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do Maid](/pt/power-local-llm/maid-review) — um cliente móvel de código aberto para modelos locais e remotos.',
           '[Análise do AnythingLLM Mobile](/pt/power-local-llm/anythingllm-mobile-review) — acesso remoto ao seu workspace do AnythingLLM.',
           '[Análise do Locally AI](/pt/power-local-llm/locally-ai-review) — um aplicativo freemium no dispositivo para iOS e Mac.',
-          '[O diretório completo de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — um diretório mais amplo de ferramentas de LLM local em várias plataformas.',
+          '[O diretório completo de software de LLM local](/pt/directory) — um diretório mais amplo de ferramentas de LLM local em várias plataformas.',
         ],
       },
     },
@@ -2460,7 +2460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كيفية الحصول على Tina',
         content: [
           '**يُوزَّع Tina عبر متجر Apple App Store.** حجم التنزيل 56.3 MB، والتصنيف العمري للصفحة 4+.',
-          'تكمّل هذه المراجعة [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) من PromptQuorum، الذي يدرج Tina إلى جانب أدوات ذكاء اصطناعي محلي أخرى للجوال وسطح المكتب.',
+          'تكمّل هذه المراجعة [دليل برمجيات LLM المحلية](/ar/directory) من PromptQuorum، الذي يدرج Tina إلى جانب أدوات ذكاء اصطناعي محلي أخرى للجوال وسطح المكتب.',
         ],
         columns: ['القناة', 'كيفية الحصول عليه'],
         rows: [
@@ -2697,7 +2697,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة Maid](/ar/power-local-llm/maid-review) — عميل جوال مفتوح المصدر للنماذج المحلية والبعيدة.',
           '[مراجعة AnythingLLM Mobile](/ar/power-local-llm/anythingllm-mobile-review) — وصول عن بُعد إلى مساحة عمل AnythingLLM الخاصة بك.',
           '[مراجعة Locally AI](/ar/power-local-llm/locally-ai-review) — تطبيق يعمل على الجهاز لنظامي iOS وماك، مجاني مع ميزات مدفوعة.',
-          '[الدليل الكامل لبرمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — دليل أوسع لأدوات LLM المحلية عبر المنصات.',
+          '[الدليل الكامل لبرمجيات LLM المحلية](/ar/directory) — دليل أوسع لأدوات LLM المحلية عبر المنصات.',
         ],
       },
     },
@@ -2797,7 +2797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Tina 받기',
         content: [
           '**Tina는 Apple App Store로 배포됩니다.** 앱 용량은 56.3 MB이며 목록의 연령 등급은 4+입니다.',
-          '이 리뷰는 Tina를 다른 모바일 및 데스크톱 로컬 AI 도구와 함께 소개하는 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)와 짝을 이루는 콘텐츠입니다.',
+          '이 리뷰는 Tina를 다른 모바일 및 데스크톱 로컬 AI 도구와 함께 소개하는 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)와 짝을 이루는 콘텐츠입니다.',
         ],
         columns: ['경로', '받는 방법'],
         rows: [
@@ -3034,7 +3034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Maid 리뷰](/ko/power-local-llm/maid-review) — 로컬 및 원격 모델을 위한 오픈소스 모바일 클라이언트.',
           '[AnythingLLM Mobile 리뷰](/ko/power-local-llm/anythingllm-mobile-review) — AnythingLLM 워크스페이스에 대한 원격 접속.',
           '[Locally AI 리뷰](/ko/power-local-llm/locally-ai-review) — iOS와 Mac용 프리미엄 온디바이스 앱.',
-          '[완전한 로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 플랫폼 전반의 로컬 LLM 도구에 대한 더 광범위한 디렉터리.',
+          '[완전한 로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 플랫폼 전반의 로컬 LLM 도구에 대한 더 광범위한 디렉터리.',
         ],
       },
     },

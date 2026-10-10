@@ -135,7 +135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Where to get it': 'Not published',
           },
         ],
-        note: 'This page is companion material to the app\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Version as verified on 9 October 2026: 26.10.11, read from the Play listing\'s app data; the last Play update was on 30 September 2026.',
+        note: 'This page is companion material to the app\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory). Version as verified on 9 October 2026: 26.10.11, read from the Play listing\'s app data; the last Play update was on 30 September 2026.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -540,7 +540,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             Bezugsquelle: 'Nicht veröffentlicht',
           },
         ],
-        note: 'Diese Seite ist Begleitmaterial zum Eintrag der App im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Version, geprüft am 9. Oktober 2026: 26.10.11, aus den App-Daten des Play-Eintrags; die letzte Play-Aktualisierung war am 30. September 2026.',
+        note: 'Diese Seite ist Begleitmaterial zum Eintrag der App im [Local LLM Software Directory](https://www.promptquorum.com/directory). Version, geprüft am 9. Oktober 2026: 26.10.11, aus den App-Daten des Play-Eintrags; die letzte Play-Aktualisierung war am 30. September 2026.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -912,7 +912,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Dónde conseguirla': 'No publicado',
           },
         ],
-        note: 'Esta página es material complementario de la entrada de la app en el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versión verificada el 9 de octubre de 2026: 26.10.11, tomada de los datos de la ficha de Play; la última actualización en Play fue el 30 de septiembre de 2026.',
+        note: 'Esta página es material complementario de la entrada de la app en el [Local LLM Software Directory](https://www.promptquorum.com/directory). Versión verificada el 9 de octubre de 2026: 26.10.11, tomada de los datos de la ficha de Play; la última actualización en Play fue el 30 de septiembre de 2026.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1284,7 +1284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Où la trouver': 'Non publié',
           },
         ],
-        note: 'Cette page complète l\'entrée de l\'application dans le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Version vérifiée le 9 octobre 2026 : 26.10.11, lue dans les données de la fiche Play ; la dernière mise à jour sur Play date du 30 septembre 2026.',
+        note: 'Cette page complète l\'entrée de l\'application dans le [Local LLM Software Directory](https://www.promptquorum.com/directory). Version vérifiée le 9 octobre 2026 : 26.10.11, lue dans les données de la fiche Play ; la dernière mise à jour sur Play date du 30 septembre 2026.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1656,7 +1656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '入手先': '非公開',
           },
         ],
-        note: 'このページは、[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)に掲載されたこのアプリの項目の補足資料です。2026年10月9日に確認したバージョン:26.10.11(Play掲載ページの埋め込みデータから取得)。Playでの最終更新は2026年9月30日です。',
+        note: 'このページは、[Local LLM Software Directory](https://www.promptquorum.com/directory)に掲載されたこのアプリの項目の補足資料です。2026年10月9日に確認したバージョン:26.10.11(Play掲載ページの埋め込みデータから取得)。Playでの最終更新は2026年9月30日です。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2026,7 +2026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Onde obter': 'Não publicado',
           },
         ],
-        note: 'Esta página é material complementar à entrada do app no [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versão verificada em 9 de outubro de 2026: 26.10.11, lida nos dados da página do Play; a última atualização no Play foi em 30 de setembro de 2026.',
+        note: 'Esta página é material complementar à entrada do app no [Local LLM Software Directory](https://www.promptquorum.com/directory). Versão verificada em 9 de outubro de 2026: 26.10.11, lida nos dados da página do Play; a última atualização no Play foi em 30 de setembro de 2026.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2398,7 +2398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'أين تجده': 'غير منشورة',
           },
         ],
-        note: 'هذه الصفحة مادة مرافقة لإدخال التطبيق في [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). الإصدار الذي جرى التحقق منه في 9 أكتوبر 2026: 26.10.11، من بيانات صفحة Play المضمّنة؛ وكان آخر تحديث على Play في 30 سبتمبر 2026.',
+        note: 'هذه الصفحة مادة مرافقة لإدخال التطبيق في [Local LLM Software Directory](https://www.promptquorum.com/directory). الإصدار الذي جرى التحقق منه في 9 أكتوبر 2026: 26.10.11، من بيانات صفحة Play المضمّنة؛ وكان آخر تحديث على Play في 30 سبتمبر 2026.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2770,7 +2770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '获取渠道': '未公开',
           },
         ],
-        note: '本页是该应用在 [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) 中条目的配套资料。2026 年 10 月 9 日核实的版本:26.10.11,读取自 Play 页面的内嵌数据;Play 上的最近一次更新为 2026 年 9 月 30 日。',
+        note: '本页是该应用在 [Local LLM Software Directory](https://www.promptquorum.com/directory) 中条目的配套资料。2026 年 10 月 9 日核实的版本:26.10.11,读取自 Play 页面的内嵌数据;Play 上的最近一次更新为 2026 年 9 月 30 日。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -3138,7 +3138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '받는 곳': '공개되지 않음',
           },
         ],
-        note: '이 페이지는 [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 이 앱 항목의 보조 자료입니다. 2026년 10월 9일에 확인한 버전: 26.10.11(Play 페이지에 내장된 데이터에서 확인). Play에서의 마지막 업데이트는 2026년 9월 30일입니다.',
+        note: '이 페이지는 [Local LLM Software Directory](https://www.promptquorum.com/directory)에 있는 이 앱 항목의 보조 자료입니다. 2026년 10월 9일에 확인한 버전: 26.10.11(Play 페이지에 내장된 데이터에서 확인). Play에서의 마지막 업데이트는 2026년 9월 30일입니다.',
       },
       gettingStarted: {
         id: 'getting-started',

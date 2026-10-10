@@ -82,7 +82,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No public version number, changelog, or GitHub star count exists for this product as of this review',
         ],
         callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Cognira\'s entry in the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — see that page for how Cognira compares at a glance to other local and hybrid AI tools.' },
+          { type: 'note', text: 'This review is the deep-dive companion to Cognira\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Cognira compares at a glance to other local and hybrid AI tools.' },
         ],
       },
       overview: {
@@ -176,14 +176,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'cognira-competitors',
         title: 'Cognira vs. Other Personal AI Assistants',
-        content: 'Cognira sits in the same broad category as other personal-memory-focused AI assistants. Here is how it compares to the closest alternatives — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full catalog.',
+        content: 'Cognira sits in the same broad category as other personal-memory-focused AI assistants. Here is how it compares to the closest alternatives — see the [Local LLM Software Directory](/directory) for the full catalog.',
         items: [
           '**[Khoj](https://khoj.dev)** — an open-source personal AI with long-term memory and document search that can run against local models; unlike Cognira, its source code is publicly auditable. See the [Khoj review](/power-local-llm/khoj-ai-second-brain-review).',
           '**[Second Me](https://github.com/mindverse/Second-Me)** — an open-source project for building a persistent, personal AI memory model, with a public GitHub repository Cognira does not have an equivalent of. See the [Second Me review](/power-local-llm/second-me-review-2026).',
           '**[Aori](https://aori.so)** — a personal AI agent focused on task automation rather than Cognira\'s memory/chat focus, useful to compare if agent actions matter more to you than persistent memory. See the [Aori review](/power-local-llm/aori-ai-personal-agent-review).',
           '**[Jarvis](https://heyjarvis.ai)** — a macOS-only personal assistant, narrower in platform scope than Cognira\'s cross-platform Entity binary but from a similarly small independent team. See the [Jarvis review](/power-local-llm/jarvis-mac-review).',
         ],
-        note: 'This is not an exhaustive list of personal AI assistants — see the [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) for the full, regularly updated catalog, including Cognira\'s own directory entry.',
+        note: 'This is not an exhaustive list of personal AI assistants — see the [Local LLM Software Directory](/directory) for the full, regularly updated catalog, including Cognira\'s own directory entry.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -232,7 +232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Related Reading',
         items: [
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — the full catalog of local and hybrid AI tools this article belongs to, including Cognira\'s own directory entry.',
+          '[Local LLM Software Directory](/directory) — the full catalog of local and hybrid AI tools this article belongs to, including Cognira\'s own directory entry.',
           '[Khoj Review](/power-local-llm/khoj-ai-second-brain-review) — an open-source personal AI with long-term memory and a publicly auditable codebase, the closest open-source alternative.',
           '[Second Me Review](/power-local-llm/second-me-review-2026) — an open-source approach to a persistent personal AI memory model.',
           '[oMLX Review](/power-local-llm/omlx-review) — the MLX-based local inference server referenced in Cognira\'s own outreach; useful context for how MLX is used for on-device and single-machine inference on Apple Silicon.',
@@ -308,7 +308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Es existieren keine öffentliche Versionsnummer, kein Änderungsprotokoll und keine GitHub-Sternezahl für dieses Produkt zum Zeitpunkt dieser Review',
         ],
         callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zu Cogniras Eintrag im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — dort finden Sie den Überblick, wie Cognira im Vergleich zu anderen lokalen und hybriden KI-Tools abschneidet.' },
+          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zu Cogniras Eintrag im [Local LLM Software Directory](/directory) — dort finden Sie den Überblick, wie Cognira im Vergleich zu anderen lokalen und hybriden KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -402,14 +402,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'cognira-competitors',
         title: 'Cognira im Vergleich zu anderen persönlichen KI-Assistenten',
-        content: 'Cognira gehört zur selben groben Kategorie wie andere auf persönliches Gedächtnis fokussierte KI-Assistenten. So schneidet es im Vergleich zu den nächstliegenden Alternativen ab — den vollständigen Katalog finden Sie im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).',
+        content: 'Cognira gehört zur selben groben Kategorie wie andere auf persönliches Gedächtnis fokussierte KI-Assistenten. So schneidet es im Vergleich zu den nächstliegenden Alternativen ab — den vollständigen Katalog finden Sie im [Local LLM Software Directory](/directory).',
         items: [
           '**[Khoj](https://khoj.dev)** — eine Open-Source-persönliche KI mit Langzeitgedächtnis und Dokumentensuche, die gegen lokale Modelle laufen kann; anders als Cognira ist ihr Quellcode öffentlich einsehbar. Siehe die [Khoj Review](/power-local-llm/khoj-ai-second-brain-review).',
           '**[Second Me](https://github.com/mindverse/Second-Me)** — ein Open-Source-Projekt zum Aufbau eines dauerhaften, persönlichen KI-Gedächtnismodells, mit einem öffentlichen GitHub-Repository, wie es Cognira nicht besitzt. Siehe die [Second Me Review](/power-local-llm/second-me-review-2026).',
           '**[Aori](https://aori.so)** — ein persönlicher KI-Agent mit Fokus auf Aufgabenautomatisierung statt Cogniras Fokus auf Gedächtnis/Chat, nützlich zum Vergleich, wenn Agenten-Aktionen für Sie wichtiger sind als dauerhaftes Gedächtnis. Siehe die [Aori Review](/power-local-llm/aori-ai-personal-agent-review).',
           '**[Jarvis](https://heyjarvis.ai)** — ein reiner macOS-Assistent, im Plattformumfang enger gefasst als Cogniras plattformübergreifende Entity-Binärdatei, aber von einem ähnlich kleinen unabhängigen Team. Siehe die [Jarvis Review](/power-local-llm/jarvis-mac-review).',
         ],
-        note: 'Dies ist keine vollständige Liste persönlicher KI-Assistenten — den vollständigen, regelmäßig aktualisierten Katalog samt Cogniras eigenem Verzeichniseintrag finden Sie im [Local LLM Software Directory](/power-local-llm/local-llm-software-directory).',
+        note: 'Dies ist keine vollständige Liste persönlicher KI-Assistenten — den vollständigen, regelmäßig aktualisierten Katalog samt Cogniras eigenem Verzeichniseintrag finden Sie im [Local LLM Software Directory](/directory).',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -458,7 +458,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler und hybrider KI-Tools, zu dem dieser Artikel gehört, samt Cogniras eigenem Verzeichniseintrag.',
+          '[Local LLM Software Directory](/directory) — der vollständige Katalog lokaler und hybrider KI-Tools, zu dem dieser Artikel gehört, samt Cogniras eigenem Verzeichniseintrag.',
           '[Khoj Review](/power-local-llm/khoj-ai-second-brain-review) — eine Open-Source-persönliche KI mit Langzeitgedächtnis und öffentlich prüfbarem Quellcode, die nächstliegende Open-Source-Alternative.',
           '[Second Me Review](/power-local-llm/second-me-review-2026) — ein Open-Source-Ansatz für ein dauerhaftes persönliches KI-Gedächtnismodell.',
           '[oMLX Review](/power-local-llm/omlx-review) — der MLX-basierte lokale Inferenzserver, auf den Cogniras eigene Kontaktaufnahme verwies; nützlicher Kontext dazu, wie MLX für On-Device- und Einzelrechner-Inferenz auf Apple Silicon genutzt wird.',
@@ -534,7 +534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Aucun numéro de version public, journal des modifications ou nombre d\'étoiles GitHub n\'existe pour ce produit à la date de cet avis',
         ],
         callouts: [
-          { type: 'note', text: 'Cet avis est le complément détaillé de la fiche de Cognira dans le [Répertoire des logiciels d\'IA locale](/power-local-llm/local-llm-software-directory) — consultez cette page pour voir comment Cognira se compare en un coup d\'œil à d\'autres outils IA locaux et hybrides.' },
+          { type: 'note', text: 'Cet avis est le complément détaillé de la fiche de Cognira dans le [Répertoire des logiciels d\'IA locale](/directory) — consultez cette page pour voir comment Cognira se compare en un coup d\'œil à d\'autres outils IA locaux et hybrides.' },
         ],
       },
       overview: {
@@ -628,14 +628,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'cognira-competitors',
         title: 'Cognira face aux autres assistants IA personnels',
-        content: 'Cognira appartient à la même catégorie générale que d\'autres assistants IA centrés sur la mémoire personnelle. Voici comment il se compare aux alternatives les plus proches — consultez le [Répertoire des logiciels d\'IA locale](/power-local-llm/local-llm-software-directory) pour le catalogue complet.',
+        content: 'Cognira appartient à la même catégorie générale que d\'autres assistants IA centrés sur la mémoire personnelle. Voici comment il se compare aux alternatives les plus proches — consultez le [Répertoire des logiciels d\'IA locale](/directory) pour le catalogue complet.',
         items: [
           '**[Khoj](https://khoj.dev)** — une IA personnelle open source avec mémoire à long terme et recherche documentaire, pouvant fonctionner avec des modèles locaux ; contrairement à Cognira, son code source est publiquement vérifiable. Voir l\'[avis Khoj](/power-local-llm/khoj-ai-second-brain-review).',
           '**[Second Me](https://github.com/mindverse/Second-Me)** — un projet open source pour construire un modèle de mémoire IA personnelle et durable, avec un dépôt GitHub public que Cognira n\'a pas d\'équivalent. Voir l\'[avis Second Me](/power-local-llm/second-me-review-2026).',
           '**[Aori](https://aori.so)** — un agent IA personnel axé sur l\'automatisation de tâches plutôt que sur la mémoire/le chat comme Cognira, utile à comparer si les actions d\'agent comptent plus pour vous que la mémoire persistante. Voir l\'[avis Aori](/power-local-llm/aori-ai-personal-agent-review).',
           '**[Jarvis](https://heyjarvis.ai)** — un assistant personnel exclusivement macOS, à la portée plateforme plus étroite que le binaire Entity multiplateforme de Cognira, mais issu d\'une équipe indépendante de taille similaire. Voir l\'[avis Jarvis](/power-local-llm/jarvis-mac-review).',
         ],
-        note: 'Cette liste n\'est pas exhaustive — consultez le [Répertoire des logiciels d\'IA locale](/power-local-llm/local-llm-software-directory) pour le catalogue complet et régulièrement mis à jour, incluant la fiche de Cognira elle-même.',
+        note: 'Cette liste n\'est pas exhaustive — consultez le [Répertoire des logiciels d\'IA locale](/directory) pour le catalogue complet et régulièrement mis à jour, incluant la fiche de Cognira elle-même.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -684,7 +684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
-          '[Répertoire des logiciels d\'IA locale](/power-local-llm/local-llm-software-directory) — le catalogue complet d\'outils IA locaux et hybrides auquel appartient cet article, incluant la fiche de Cognira elle-même.',
+          '[Répertoire des logiciels d\'IA locale](/directory) — le catalogue complet d\'outils IA locaux et hybrides auquel appartient cet article, incluant la fiche de Cognira elle-même.',
           '[Avis Khoj](/power-local-llm/khoj-ai-second-brain-review) — une IA personnelle open source avec mémoire à long terme et code source public, l\'alternative open source la plus proche.',
           '[Avis Second Me](/power-local-llm/second-me-review-2026) — une approche open source pour un modèle de mémoire IA personnelle durable.',
           '[Avis oMLX](/power-local-llm/omlx-review) — le serveur d\'inférence local basé sur MLX mentionné dans le message initial de Cognira ; un contexte utile sur l\'usage de MLX pour l\'inférence sur l\'appareil et sur une seule machine sur Apple Silicon.',
@@ -760,7 +760,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No existe número de versión público, registro de cambios ni número de estrellas en GitHub para este producto a la fecha de este análisis',
         ],
         callouts: [
-          { type: 'note', text: 'Este análisis es el complemento en profundidad de la ficha de Cognira en el [Directorio de software de IA local](/power-local-llm/local-llm-software-directory) — consulta esa página para ver cómo se compara Cognira, de un vistazo, con otras herramientas de IA locales e híbridas.' },
+          { type: 'note', text: 'Este análisis es el complemento en profundidad de la ficha de Cognira en el [Directorio de software de IA local](/directory) — consulta esa página para ver cómo se compara Cognira, de un vistazo, con otras herramientas de IA locales e híbridas.' },
         ],
       },
       overview: {
@@ -854,14 +854,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'cognira-competitors',
         title: 'Cognira frente a otros asistentes de IA personales',
-        content: 'Cognira pertenece a la misma categoría general que otros asistentes de IA centrados en la memoria personal. Así se compara con las alternativas más cercanas — consulta el [Directorio de software de IA local](/power-local-llm/local-llm-software-directory) para el catálogo completo.',
+        content: 'Cognira pertenece a la misma categoría general que otros asistentes de IA centrados en la memoria personal. Así se compara con las alternativas más cercanas — consulta el [Directorio de software de IA local](/directory) para el catálogo completo.',
         items: [
           '**[Khoj](https://khoj.dev)** — una IA personal de código abierto con memoria a largo plazo y búsqueda de documentos, que puede ejecutarse con modelos locales; a diferencia de Cognira, su código fuente es públicamente auditable. Ver el [análisis de Khoj](/power-local-llm/khoj-ai-second-brain-review).',
           '**[Second Me](https://github.com/mindverse/Second-Me)** — un proyecto de código abierto para construir un modelo de memoria de IA personal y persistente, con un repositorio público de GitHub que Cognira no tiene equivalente. Ver el [análisis de Second Me](/power-local-llm/second-me-review-2026).',
           '**[Aori](https://aori.so)** — un agente de IA personal centrado en la automatización de tareas en lugar del enfoque de memoria/chat de Cognira, útil de comparar si las acciones de agente te importan más que la memoria persistente. Ver el [análisis de Aori](/power-local-llm/aori-ai-personal-agent-review).',
           '**[Jarvis](https://heyjarvis.ai)** — un asistente personal exclusivo de macOS, con un alcance de plataforma más estrecho que el binario Entity multiplataforma de Cognira, pero de un equipo independiente de tamaño similar. Ver el [análisis de Jarvis](/power-local-llm/jarvis-mac-review).',
         ],
-        note: 'Esta no es una lista exhaustiva de asistentes de IA personales — consulta el [Directorio de software de IA local](/power-local-llm/local-llm-software-directory) para el catálogo completo y actualizado regularmente, incluida la propia ficha de Cognira.',
+        note: 'Esta no es una lista exhaustiva de asistentes de IA personales — consulta el [Directorio de software de IA local](/directory) para el catálogo completo y actualizado regularmente, incluida la propia ficha de Cognira.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -910,7 +910,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Directorio de software de IA local](/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA locales e híbridas al que pertenece este artículo, incluida la propia ficha de Cognira.',
+          '[Directorio de software de IA local](/directory) — el catálogo completo de herramientas de IA locales e híbridas al que pertenece este artículo, incluida la propia ficha de Cognira.',
           '[Análisis de Khoj](/power-local-llm/khoj-ai-second-brain-review) — una IA personal de código abierto con memoria a largo plazo y código fuente públicamente auditable, la alternativa de código abierto más cercana.',
           '[Análisis de Second Me](/power-local-llm/second-me-review-2026) — un enfoque de código abierto para un modelo de memoria de IA personal persistente.',
           '[Análisis de oMLX](/power-local-llm/omlx-review) — el servidor de inferencia local basado en MLX mencionado en el propio mensaje de contacto de Cognira; contexto útil sobre cómo se usa MLX para inferencia en el dispositivo y en una sola máquina en Apple Silicon.',
@@ -986,7 +986,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Não existe número de versão público, changelog nem contagem de estrelas no GitHub para este produto até a data desta análise',
         ],
         callouts: [
-          { type: 'note', text: 'Esta análise é o complemento detalhado da ficha do Cognira no [Diretório de Software de IA Local](/power-local-llm/local-llm-software-directory) — veja essa página para comparar rapidamente o Cognira com outras ferramentas de IA locais e híbridas.' },
+          { type: 'note', text: 'Esta análise é o complemento detalhado da ficha do Cognira no [Diretório de Software de IA Local](/directory) — veja essa página para comparar rapidamente o Cognira com outras ferramentas de IA locais e híbridas.' },
         ],
       },
       overview: {
@@ -1080,14 +1080,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'cognira-competitors',
         title: 'Cognira vs. outros assistentes de IA pessoais',
-        content: 'O Cognira pertence à mesma categoria geral de outros assistentes de IA focados em memória pessoal. Veja como ele se compara às alternativas mais próximas — consulte o [Diretório de Software de IA Local](/power-local-llm/local-llm-software-directory) para o catálogo completo.',
+        content: 'O Cognira pertence à mesma categoria geral de outros assistentes de IA focados em memória pessoal. Veja como ele se compara às alternativas mais próximas — consulte o [Diretório de Software de IA Local](/directory) para o catálogo completo.',
         items: [
           '**[Khoj](https://khoj.dev)** — uma IA pessoal de código aberto com memória de longo prazo e busca em documentos, que pode rodar com modelos locais; diferentemente do Cognira, seu código-fonte é publicamente auditável. Veja a [análise do Khoj](/power-local-llm/khoj-ai-second-brain-review).',
           '**[Second Me](https://github.com/mindverse/Second-Me)** — um projeto de código aberto para construir um modelo de memória de IA pessoal e persistente, com um repositório público no GitHub que o Cognira não tem equivalente. Veja a [análise do Second Me](/power-local-llm/second-me-review-2026).',
           '**[Aori](https://aori.so)** — um agente de IA pessoal focado em automação de tarefas em vez do foco em memória/chat do Cognira, útil para comparar se ações de agente importam mais para você do que memória persistente. Veja a [análise do Aori](/power-local-llm/aori-ai-personal-agent-review).',
           '**[Jarvis](https://heyjarvis.ai)** — um assistente pessoal exclusivo para macOS, com um alcance de plataforma mais estreito que o binário Entity multiplataforma do Cognira, mas de uma equipe independente de tamanho semelhante. Veja a [análise do Jarvis](/power-local-llm/jarvis-mac-review).',
         ],
-        note: 'Esta não é uma lista exaustiva de assistentes de IA pessoais — consulte o [Diretório de Software de IA Local](/power-local-llm/local-llm-software-directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do Cognira.',
+        note: 'Esta não é uma lista exaustiva de assistentes de IA pessoais — consulte o [Diretório de Software de IA Local](/directory) para o catálogo completo e atualizado regularmente, incluindo a própria ficha do Cognira.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1136,7 +1136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Diretório de Software de IA Local](/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA locais e híbridas ao qual este artigo pertence, incluindo a própria ficha do Cognira.',
+          '[Diretório de Software de IA Local](/directory) — o catálogo completo de ferramentas de IA locais e híbridas ao qual este artigo pertence, incluindo a própria ficha do Cognira.',
           '[Análise do Khoj](/power-local-llm/khoj-ai-second-brain-review) — uma IA pessoal de código aberto com memória de longo prazo e código-fonte publicamente auditável, a alternativa de código aberto mais próxima.',
           '[Análise do Second Me](/power-local-llm/second-me-review-2026) — uma abordagem de código aberto para um modelo de memória de IA pessoal persistente.',
           '[Análise do oMLX](/power-local-llm/omlx-review) — o servidor de inferência local baseado em MLX mencionado no próprio contato do Cognira; contexto útil sobre como o MLX é usado para inferência no dispositivo e em máquina única em Apple Silicon.',
@@ -1212,7 +1212,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '本レビュー時点で、この製品に公開バージョン番号、変更履歴、GitHubスター数は存在しない',
         ],
         callouts: [
-          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)にあるCogniraのエントリを補完する詳細版です。他のローカル・ハイブリッドAIツールとCogniraが一目でどう比較されるかは、そのページを参照してください。' },
+          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/directory)にあるCogniraのエントリを補完する詳細版です。他のローカル・ハイブリッドAIツールとCogniraが一目でどう比較されるかは、そのページを参照してください。' },
         ],
       },
       overview: {
@@ -1306,14 +1306,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'cognira-competitors',
         title: 'Cognira対他の個人向けAIアシスタント',
-        content: 'Cogniraは、個人の記憶に焦点を当てた他のAIアシスタントと同じ大まかなカテゴリーに属します。最も近い代替製品との比較は以下の通りです — 完全なカタログは[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)を参照してください。',
+        content: 'Cogniraは、個人の記憶に焦点を当てた他のAIアシスタントと同じ大まかなカテゴリーに属します。最も近い代替製品との比較は以下の通りです — 完全なカタログは[ローカルLLMソフトウェアディレクトリ](/directory)を参照してください。',
         items: [
           '**[Khoj](https://khoj.dev)** — 長期記憶とドキュメント検索を備えたオープンソースの個人向けAIで、ローカルモデルに対して実行できる。Cogniraと異なり、ソースコードは公開監査可能。[Khojレビュー](/power-local-llm/khoj-ai-second-brain-review)を参照。',
           '**[Second Me](https://github.com/mindverse/Second-Me)** — 永続的な個人向けAI記憶モデルを構築するためのオープンソースプロジェクトで、Cogniraにはない公開GitHubリポジトリを持つ。[Second Meレビュー](/power-local-llm/second-me-review-2026)を参照。',
           '**[Aori](https://aori.so)** — Cogniraの記憶・チャットへの焦点とは異なり、タスク自動化に重点を置く個人向けAIエージェント。記憶の永続性よりもエージェントの動作を重視するなら比較する価値がある。[Aoriレビュー](/power-local-llm/aori-ai-personal-agent-review)を参照。',
           '**[Jarvis](https://heyjarvis.ai)** — macOS専用の個人向けアシスタントで、Cogniraのクロスプラットフォームなエンティティバイナリよりプラットフォーム範囲は狭いが、同様に小規模な独立チームによるもの。[Jarvisレビュー](/power-local-llm/jarvis-mac-review)を参照。',
         ],
-        note: 'これは個人向けAIアシスタントの網羅的なリストではありません — Cognira自身のディレクトリエントリを含む、完全かつ定期的に更新されるカタログについては[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory)を参照してください。',
+        note: 'これは個人向けAIアシスタントの網羅的なリストではありません — Cognira自身のディレクトリエントリを含む、完全かつ定期的に更新されるカタログについては[ローカルLLMソフトウェアディレクトリ](/directory)を参照してください。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1362,7 +1362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[ローカルLLMソフトウェアディレクトリ](/power-local-llm/local-llm-software-directory) — 本記事が属する、ローカル・ハイブリッドAIツールの完全なカタログ。Cognira自身のディレクトリエントリを含む。',
+          '[ローカルLLMソフトウェアディレクトリ](/directory) — 本記事が属する、ローカル・ハイブリッドAIツールの完全なカタログ。Cognira自身のディレクトリエントリを含む。',
           '[Khojレビュー](/power-local-llm/khoj-ai-second-brain-review) — 長期記憶と公開監査可能なコードベースを備えたオープンソースの個人向けAIで、最も近いオープンソースの代替。',
           '[Second Meレビュー](/power-local-llm/second-me-review-2026) — 永続的な個人向けAI記憶モデルへのオープンソースのアプローチ。',
           '[oMLXレビュー](/power-local-llm/omlx-review) — Cognira自身の連絡で言及されたMLXベースのローカル推論サーバー。Apple Siliconでのオンデバイス・単一マシン推論にMLXがどう使われるかについての有用な文脈。',
@@ -1438,7 +1438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至本评测发布，该产品不存在公开版本号、更新日志或GitHub星标数',
         ],
         callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/power-local-llm/local-llm-software-directory)中Cognira条目的深度补充——该页面展示了Cognira与其他本地及混合AI工具的一目了然的对比。' },
+          { type: 'note', text: '本评测是[本地LLM软件目录](/directory)中Cognira条目的深度补充——该页面展示了Cognira与其他本地及混合AI工具的一目了然的对比。' },
         ],
       },
       overview: {
@@ -1532,14 +1532,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'cognira-competitors',
         title: 'Cognira与其他个人AI助手对比',
-        content: 'Cognira与其他专注于个人记忆的AI助手属于同一大类。以下是它与最接近的替代方案的对比——完整目录见[本地LLM软件目录](/power-local-llm/local-llm-software-directory)。',
+        content: 'Cognira与其他专注于个人记忆的AI助手属于同一大类。以下是它与最接近的替代方案的对比——完整目录见[本地LLM软件目录](/directory)。',
         items: [
           '**[Khoj](https://khoj.dev)** — 一款开源的个人AI，具备长期记忆和文档搜索功能，可与本地模型配合运行；与Cognira不同，其源代码可公开审计。参见[Khoj评测](/power-local-llm/khoj-ai-second-brain-review)。',
           '**[Second Me](https://github.com/mindverse/Second-Me)** — 一个用于构建持久性个人AI记忆模型的开源项目，拥有Cognira所不具备的公开GitHub仓库。参见[Second Me评测](/power-local-llm/second-me-review-2026)。',
           '**[Aori](https://aori.so)** — 一款专注于任务自动化的个人AI代理，与Cognira的记忆/聊天定位不同；如果代理动作比持久记忆对你更重要，值得比较。参见[Aori评测](/power-local-llm/aori-ai-personal-agent-review)。',
           '**[Jarvis](https://heyjarvis.ai)** — 一款仅限macOS的个人助手，平台范围比Cognira跨平台的Entity二进制程序更窄，但来自规模相似的独立团队。参见[Jarvis评测](/power-local-llm/jarvis-mac-review)。',
         ],
-        note: '这并非个人AI助手的详尽列表——完整且定期更新的目录（包括Cognira自身的目录条目）见[本地LLM软件目录](/power-local-llm/local-llm-software-directory)。',
+        note: '这并非个人AI助手的详尽列表——完整且定期更新的目录（包括Cognira自身的目录条目）见[本地LLM软件目录](/directory)。',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1588,7 +1588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[本地LLM软件目录](/power-local-llm/local-llm-software-directory) — 本文所属的本地及混合AI工具完整目录，包括Cognira自身的目录条目。',
+          '[本地LLM软件目录](/directory) — 本文所属的本地及混合AI工具完整目录，包括Cognira自身的目录条目。',
           '[Khoj评测](/power-local-llm/khoj-ai-second-brain-review) — 一款具备长期记忆和可公开审计代码库的开源个人AI，是最接近的开源替代方案。',
           '[Second Me评测](/power-local-llm/second-me-review-2026) — 一种用于持久性个人AI记忆模型的开源方案。',
           '[oMLX评测](/power-local-llm/omlx-review) — Cognira自身联络信息中提到的基于MLX的本地推理服务器；有助于理解MLX如何用于Apple Silicon上的设备端和单机推理。',
@@ -1664,7 +1664,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'لا يوجد رقم إصدار عام أو سجل تغييرات أو عدد نجوم على GitHub لهذا المنتج حتى تاريخ نشر هذه المراجعة',
         ],
         callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمّق لإدخال Cognira في [دليل برمجيات الذكاء الاصطناعي المحلية](/power-local-llm/local-llm-software-directory) — راجع تلك الصفحة لمعرفة كيف يقارَن Cognira بلمحة سريعة مع أدوات الذكاء الاصطناعي المحلية والهجينة الأخرى.' },
+          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمّق لإدخال Cognira في [دليل برمجيات الذكاء الاصطناعي المحلية](/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن Cognira بلمحة سريعة مع أدوات الذكاء الاصطناعي المحلية والهجينة الأخرى.' },
         ],
       },
       overview: {
@@ -1758,14 +1758,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'cognira-competitors',
         title: 'Cognira مقابل مساعدي الذكاء الاصطناعي الشخصيين الآخرين',
-        content: 'ينتمي Cognira إلى الفئة العامة نفسها التي تنتمي إليها مساعدات الذكاء الاصطناعي الأخرى التي تركّز على الذاكرة الشخصية. إليك كيف يقارَن بأقرب البدائل — راجع [دليل برمجيات الذكاء الاصطناعي المحلية](/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل.',
+        content: 'ينتمي Cognira إلى الفئة العامة نفسها التي تنتمي إليها مساعدات الذكاء الاصطناعي الأخرى التي تركّز على الذاكرة الشخصية. إليك كيف يقارَن بأقرب البدائل — راجع [دليل برمجيات الذكاء الاصطناعي المحلية](/directory) للاطلاع على الكتالوج الكامل.',
         items: [
           '**[Khoj](https://khoj.dev)** — ذكاء اصطناعي شخصي مفتوح المصدر بذاكرة طويلة المدى وبحث في المستندات، يمكن تشغيله مع نماذج محلية؛ وبخلاف Cognira، شيفرته المصدرية قابلة للتدقيق العلني. انظر [مراجعة Khoj](/power-local-llm/khoj-ai-second-brain-review).',
           '**[Second Me](https://github.com/mindverse/Second-Me)** — مشروع مفتوح المصدر لبناء نموذج ذاكرة ذكاء اصطناعي شخصي ودائم، بمستودع GitHub علني لا يملك Cognira مثيلاً له. انظر [مراجعة Second Me](/power-local-llm/second-me-review-2026).',
           '**[Aori](https://aori.so)** — وكيل ذكاء اصطناعي شخصي يركّز على أتمتة المهام بدلاً من تركيز Cognira على الذاكرة/الدردشة، مفيد للمقارنة إذا كانت إجراءات الوكيل أهم بالنسبة لك من الذاكرة الدائمة. انظر [مراجعة Aori](/power-local-llm/aori-ai-personal-agent-review).',
           '**[Jarvis](https://heyjarvis.ai)** — مساعد شخصي حصري لنظام macOS، بنطاق منصات أضيق من ملف Entity متعدد المنصات الخاص بـ Cognira، لكنه من فريق مستقل بحجم مماثل. انظر [مراجعة Jarvis](/power-local-llm/jarvis-mac-review).',
         ],
-        note: 'هذه ليست قائمة شاملة لمساعدي الذكاء الاصطناعي الشخصيين — راجع [دليل برمجيات الذكاء الاصطناعي المحلية](/power-local-llm/local-llm-software-directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدخال Cognira نفسه.',
+        note: 'هذه ليست قائمة شاملة لمساعدي الذكاء الاصطناعي الشخصيين — راجع [دليل برمجيات الذكاء الاصطناعي المحلية](/directory) للاطلاع على الكتالوج الكامل والمحدَّث بانتظام، بما في ذلك إدخال Cognira نفسه.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -1814,7 +1814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[دليل برمجيات الذكاء الاصطناعي المحلية](/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية والهجينة الذي ينتمي إليه هذا المقال، بما في ذلك إدخال Cognira نفسه.',
+          '[دليل برمجيات الذكاء الاصطناعي المحلية](/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية والهجينة الذي ينتمي إليه هذا المقال، بما في ذلك إدخال Cognira نفسه.',
           '[مراجعة Khoj](/power-local-llm/khoj-ai-second-brain-review) — ذكاء اصطناعي شخصي مفتوح المصدر بذاكرة طويلة المدى وشيفرة مصدرية قابلة للتدقيق العلني، أقرب بديل مفتوح المصدر.',
           '[مراجعة Second Me](/power-local-llm/second-me-review-2026) — نهج مفتوح المصدر لنموذج ذاكرة ذكاء اصطناعي شخصي دائم.',
           '[مراجعة oMLX](/power-local-llm/omlx-review) — خادم الاستدلال المحلي القائم على MLX المذكور في رسالة تواصل Cognira نفسها؛ سياق مفيد حول كيفية استخدام MLX للاستدلال على الجهاز وعلى جهاز واحد على معالجات Apple Silicon.',
@@ -1890,7 +1890,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '이 리뷰 발행 시점 기준으로 이 제품에 대한 공개 버전 번호, 변경 이력, GitHub 스타 수가 존재하지 않음',
         ],
         callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)에 있는 Cognira 항목을 심층적으로 보완하는 글입니다 — Cognira가 다른 로컬 및 하이브리드 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참조하세요.' },
+          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/directory)에 있는 Cognira 항목을 심층적으로 보완하는 글입니다 — Cognira가 다른 로컬 및 하이브리드 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참조하세요.' },
         ],
       },
       overview: {
@@ -1984,14 +1984,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       competitors: {
         id: 'cognira-competitors',
         title: 'Cognira와 다른 개인용 AI 어시스턴트 비교',
-        content: 'Cognira는 개인 메모리에 초점을 맞춘 다른 AI 어시스턴트와 같은 넓은 범주에 속합니다. 가장 가까운 대안들과 어떻게 비교되는지 살펴보세요 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를 참조하세요.',
+        content: 'Cognira는 개인 메모리에 초점을 맞춘 다른 AI 어시스턴트와 같은 넓은 범주에 속합니다. 가장 가까운 대안들과 어떻게 비교되는지 살펴보세요 — 전체 카탈로그는 [로컬 LLM 소프트웨어 디렉터리](/directory)를 참조하세요.',
         items: [
           '**[Khoj](https://khoj.dev)** — 장기 메모리와 문서 검색을 갖춘 오픈소스 개인용 AI로, 로컬 모델로 실행할 수 있습니다. Cognira와 달리 소스 코드가 공개적으로 감사 가능합니다. [Khoj 리뷰](/power-local-llm/khoj-ai-second-brain-review) 참조.',
           '**[Second Me](https://github.com/mindverse/Second-Me)** — 지속적인 개인용 AI 메모리 모델을 구축하기 위한 오픈소스 프로젝트로, Cognira에는 없는 공개 GitHub 저장소를 갖추고 있습니다. [Second Me 리뷰](/power-local-llm/second-me-review-2026) 참조.',
           '**[Aori](https://aori.so)** — Cognira의 메모리/채팅 중심과 달리 작업 자동화에 초점을 맞춘 개인용 AI 에이전트로, 지속적인 메모리보다 에이전트 동작이 더 중요하다면 비교해 볼 가치가 있습니다. [Aori 리뷰](/power-local-llm/aori-ai-personal-agent-review) 참조.',
           '**[Jarvis](https://heyjarvis.ai)** — macOS 전용 개인용 어시스턴트로, Cognira의 크로스 플랫폼 Entity 바이너리보다 플랫폼 범위는 좁지만 비슷한 규모의 독립 팀이 만들었습니다. [Jarvis 리뷰](/power-local-llm/jarvis-mac-review) 참조.',
         ],
-        note: '이는 개인용 AI 어시스턴트의 완전한 목록이 아닙니다 — Cognira 자체 디렉터리 항목을 포함한 전체 카탈로그와 정기 업데이트는 [로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory)를 참조하세요.',
+        note: '이는 개인용 AI 어시스턴트의 완전한 목록이 아닙니다 — Cognira 자체 디렉터리 항목을 포함한 전체 카탈로그와 정기 업데이트는 [로컬 LLM 소프트웨어 디렉터리](/directory)를 참조하세요.',
       },
       commonMistakes: {
         id: 'common-mistakes',
@@ -2040,7 +2040,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[로컬 LLM 소프트웨어 디렉터리](/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 및 하이브리드 AI 도구의 전체 카탈로그로, Cognira 자체 디렉터리 항목을 포함합니다.',
+          '[로컬 LLM 소프트웨어 디렉터리](/directory) — 이 글이 속한 로컬 및 하이브리드 AI 도구의 전체 카탈로그로, Cognira 자체 디렉터리 항목을 포함합니다.',
           '[Khoj 리뷰](/power-local-llm/khoj-ai-second-brain-review) — 장기 메모리와 공개적으로 감사 가능한 코드베이스를 갖춘 오픈소스 개인용 AI로, 가장 가까운 오픈소스 대안입니다.',
           '[Second Me 리뷰](/power-local-llm/second-me-review-2026) — 지속적인 개인용 AI 메모리 모델에 대한 오픈소스 접근 방식.',
           '[oMLX 리뷰](/power-local-llm/omlx-review) — Cognira 자체 연락에서 언급된 MLX 기반 로컬 추론 서버로, Apple Silicon에서 온디바이스 및 단일 머신 추론에 MLX가 어떻게 사용되는지에 대한 유용한 맥락을 제공합니다.',

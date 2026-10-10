@@ -105,7 +105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Get PAIOS',
         content: [
           '**PAIOS is available from Google Play and as a direct APK on GitHub.** Both are free. Use the Play listing for automatic updates, or the GitHub APK to install directly. Either way, the Google Play Store must be on the phone, because AI Core requires it.',
-          'This review is a companion to PromptQuorum\'s [Local LLM Software Directory](/power-local-llm/local-llm-software-directory), which lists PAIOS alongside other on-device and local AI tools.',
+          'This review is a companion to PromptQuorum\'s [Local LLM Software Directory](/directory), which lists PAIOS alongside other on-device and local AI tools.',
         ],
         columns: ['Channel', 'Get It'],
         rows: [
@@ -398,7 +398,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Layla Review](/power-local-llm/layla-review) — an Android-first local assistant with wider model choice.',
           '[PocketPal AI Review](/power-local-llm/pocketpal-ai-review) — the free, open-source GGUF chat client.',
           '[Off Grid AI Review](/power-local-llm/off-grid-ai-review) — a cross-platform local AI app.',
-          '[The Complete Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — a broader directory of local-LLM tools across platforms.',
+          '[The Complete Local LLM Software Directory](/directory) — a broader directory of local-LLM tools across platforms.',
         ],
       },
     },
@@ -502,7 +502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'PAIOS herunterladen',
         content: [
           '**PAIOS gibt es bei Google Play und als direkte APK auf GitHub.** Beides ist kostenlos. Nutzen Sie den Play-Eintrag für automatische Updates oder die GitHub-APK, um direkt zu installieren. In beiden Fällen muss der Google Play Store auf dem Smartphone vorhanden sein, weil AI Core ihn voraussetzt.',
-          'Diese Rezension ist ein Begleitartikel zum [Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory) von PromptQuorum, das PAIOS neben anderen On-Device- und lokalen KI-Tools listet.',
+          'Diese Rezension ist ein Begleitartikel zum [Verzeichnis lokaler LLM-Software](/de/directory) von PromptQuorum, das PAIOS neben anderen On-Device- und lokalen KI-Tools listet.',
         ],
         columns: ['Kanal', 'Download'],
         rows: [
@@ -795,7 +795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Layla-Rezension](/de/power-local-llm/layla-review) — ein Android-first-Assistent mit größerer Modellauswahl.',
           '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — der kostenlose, quelloffene GGUF-Chat-Client.',
           '[Off-Grid-AI-Rezension](/de/power-local-llm/off-grid-ai-review) — eine plattformübergreifende lokale KI-App.',
-          '[Das vollständige Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory) — ein breiteres Verzeichnis lokaler LLM-Tools über alle Plattformen hinweg.',
+          '[Das vollständige Verzeichnis lokaler LLM-Software](/de/directory) — ein breiteres Verzeichnis lokaler LLM-Tools über alle Plattformen hinweg.',
         ],
       },
     },
@@ -899,7 +899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Obtenir PAIOS',
         content: [
           '**PAIOS est disponible sur Google Play et en APK direct sur GitHub.** Les deux sont gratuits. Utilisez la fiche Play pour les mises à jour automatiques, ou l\'APK GitHub pour une installation directe. Dans les deux cas, le Google Play Store doit être présent sur le téléphone, car AI Core l\'exige.',
-          'Cet avis est un complément au [répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) de PromptQuorum, qui recense PAIOS aux côtés d\'autres outils d\'IA locale et embarquée.',
+          'Cet avis est un complément au [répertoire des logiciels LLM locaux](/fr/directory) de PromptQuorum, qui recense PAIOS aux côtés d\'autres outils d\'IA locale et embarquée.',
         ],
         columns: ['Canal', 'Obtenir'],
         rows: [
@@ -1192,7 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Avis Layla](/fr/power-local-llm/layla-review) — un assistant local pensé d\'abord pour Android, avec un choix de modèles plus large.',
           '[Avis PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) — le client de chat GGUF gratuit et open source.',
           '[Avis Off Grid AI](/fr/power-local-llm/off-grid-ai-review) — une application d\'IA locale multiplateforme.',
-          '[Le répertoire complet des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — un répertoire plus large d\'outils LLM locaux multiplateformes.',
+          '[Le répertoire complet des logiciels LLM locaux](/fr/directory) — un répertoire plus large d\'outils LLM locaux multiplateformes.',
         ],
       },
     },
@@ -1296,7 +1296,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'PAIOSを入手する',
         content: [
           '**PAIOSはGoogle Playと、GitHub上の直接配布APKから入手できます。** どちらも無料です。自動更新を使いたい場合はPlayの掲載ページを、直接インストールしたい場合はGitHubのAPKを使ってください。いずれの場合も、AI CoreがGoogle Playストアを必要とするため、端末にPlayストアが入っている必要があります。',
-          '本レビューは、PromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を補完するものです。このディレクトリはPAIOSを他のオンデバイスAIやローカルAIツールと並べて掲載しています。',
+          '本レビューは、PromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/directory)を補完するものです。このディレクトリはPAIOSを他のオンデバイスAIやローカルAIツールと並べて掲載しています。',
         ],
         columns: ['入手経路', '入手方法'],
         rows: [
@@ -1589,7 +1589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Laylaレビュー](/ja/power-local-llm/layla-review) — モデルの選択肢が広い、Android優先のローカルアシスタント。',
           '[PocketPal AIレビュー](/ja/power-local-llm/pocketpal-ai-review) — 無料のオープンソースGGUFチャットクライアント。',
           '[Off Grid AIレビュー](/ja/power-local-llm/off-grid-ai-review) — クロスプラットフォームのローカルAIアプリ。',
-          '[完全なローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — プラットフォームを横断するローカルLLMツールのより広範なディレクトリ。',
+          '[完全なローカルLLMソフトウェアディレクトリ](/ja/directory) — プラットフォームを横断するローカルLLMツールのより広範なディレクトリ。',
         ],
       },
     },
@@ -1693,7 +1693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '获取PAIOS',
         content: [
           '**PAIOS可从Google Play获取，也可作为GitHub上的APK直接安装。** 两种方式都免费。想要自动更新请使用Google Play页面，或使用GitHub上的APK直接安装。无论哪种方式，手机上都必须有Google Play商店，因为AI Core需要它。',
-          '本评测是PromptQuorum[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)的配套文章，该目录将PAIOS与其他设备端和本地AI工具一并列出。',
+          '本评测是PromptQuorum[本地LLM软件目录](/zh/directory)的配套文章，该目录将PAIOS与其他设备端和本地AI工具一并列出。',
         ],
         columns: ['渠道', '获取方式'],
         rows: [
@@ -1986,7 +1986,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Layla评测](/zh/power-local-llm/layla-review) — Android优先的本地助手，模型选择更广。',
           '[PocketPal AI评测](/zh/power-local-llm/pocketpal-ai-review) — 免费、开源的GGUF聊天客户端。',
           '[Off Grid AI评测](/zh/power-local-llm/off-grid-ai-review) — 跨平台本地AI应用。',
-          '[完整本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 涵盖多平台本地LLM工具的更全面目录。',
+          '[完整本地LLM软件目录](/zh/directory) — 涵盖多平台本地LLM工具的更全面目录。',
         ],
       },
     },
@@ -2090,7 +2090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cómo conseguir PAIOS',
         content: [
           '**PAIOS está disponible en Google Play y como APK directo en GitHub.** Ambas opciones son gratuitas. Use la ficha de Play para recibir actualizaciones automáticas, o el APK de GitHub para instalar directamente. En ambos casos, Google Play Store debe estar en el teléfono, porque AI Core la requiere.',
-          'Esta reseña complementa el [directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) de PromptQuorum, que incluye PAIOS junto a otras herramientas de IA local y en el dispositivo.',
+          'Esta reseña complementa el [directorio de software LLM local](/es/directory) de PromptQuorum, que incluye PAIOS junto a otras herramientas de IA local y en el dispositivo.',
         ],
         columns: ['Canal', 'Cómo conseguirla'],
         rows: [
@@ -2383,7 +2383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de Layla](/es/power-local-llm/layla-review) — un asistente local centrado en Android con más variedad de modelos.',
           '[Reseña de PocketPal AI](/es/power-local-llm/pocketpal-ai-review) — el cliente de chat GGUF gratuito y de código abierto.',
           '[Reseña de Off Grid AI](/es/power-local-llm/off-grid-ai-review) — una app de IA local multiplataforma.',
-          '[El directorio completo de software LLM local](/es/power-local-llm/local-llm-software-directory) — un directorio más amplio de herramientas LLM locales en todas las plataformas.',
+          '[El directorio completo de software LLM local](/es/directory) — un directorio más amplio de herramientas LLM locales en todas las plataformas.',
         ],
       },
     },
@@ -2487,7 +2487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Como obter o PAIOS',
         content: [
           '**O PAIOS está disponível no Google Play e como APK direto no GitHub.** Os dois são gratuitos. Use a ficha do Play para receber atualizações automáticas, ou o APK do GitHub para instalar diretamente. De qualquer forma, a Google Play Store precisa estar no celular, porque o AI Core a exige.',
-          'Esta análise complementa o [diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) da PromptQuorum, que lista o PAIOS ao lado de outras ferramentas de IA local e no dispositivo.',
+          'Esta análise complementa o [diretório de software de LLM local](/pt/directory) da PromptQuorum, que lista o PAIOS ao lado de outras ferramentas de IA local e no dispositivo.',
         ],
         columns: ['Canal', 'Como obter'],
         rows: [
@@ -2780,7 +2780,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do Layla](/pt/power-local-llm/layla-review) — um assistente local voltado ao Android, com mais opções de modelos.',
           '[Análise do PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) — o cliente de chat GGUF gratuito e de código aberto.',
           '[Análise do Off Grid AI](/pt/power-local-llm/off-grid-ai-review) — um aplicativo de IA local multiplataforma.',
-          '[O diretório completo de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — um diretório mais amplo de ferramentas de LLM local em várias plataformas.',
+          '[O diretório completo de software de LLM local](/pt/directory) — um diretório mais amplo de ferramentas de LLM local em várias plataformas.',
         ],
       },
     },
@@ -2884,7 +2884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كيفية الحصول على PAIOS',
         content: [
           '**يتوفر PAIOS على Google Play وكملف APK مباشر على GitHub.** كلاهما مجاني. استخدم صفحة Play للحصول على التحديثات التلقائية، أو ملف APK من GitHub للتثبيت المباشر. وفي الحالتين يجب أن يكون متجر Google Play مثبّتًا على الهاتف، لأن AI Core يتطلبه.',
-          'تكمّل هذه المراجعة [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) من PromptQuorum، الذي يدرج PAIOS إلى جانب أدوات ذكاء اصطناعي أخرى تعمل على الجهاز وأدوات محلية.',
+          'تكمّل هذه المراجعة [دليل برمجيات LLM المحلية](/ar/directory) من PromptQuorum، الذي يدرج PAIOS إلى جانب أدوات ذكاء اصطناعي أخرى تعمل على الجهاز وأدوات محلية.',
         ],
         columns: ['القناة', 'كيفية الحصول عليه'],
         rows: [
@@ -3177,7 +3177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة Layla](/ar/power-local-llm/layla-review) — مساعد محلي يضع أندرويد أولًا مع خيارات نماذج أوسع.',
           '[مراجعة PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) — عميل دردشة GGUF المجاني ومفتوح المصدر.',
           '[مراجعة Off Grid AI](/ar/power-local-llm/off-grid-ai-review) — تطبيق ذكاء اصطناعي محلي متعدد المنصات.',
-          '[الدليل الكامل لبرمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — دليل أوسع لأدوات LLM المحلية عبر المنصات.',
+          '[الدليل الكامل لبرمجيات LLM المحلية](/ar/directory) — دليل أوسع لأدوات LLM المحلية عبر المنصات.',
         ],
       },
     },
@@ -3281,7 +3281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'PAIOS 받기',
         content: [
           '**PAIOS는 구글 플레이와 GitHub의 직접 APK로 받을 수 있습니다.** 둘 다 무료입니다. 자동 업데이트를 원하면 플레이 스토어 목록을, 직접 설치하고 싶다면 GitHub APK를 사용하세요. 어느 쪽이든 AI Core가 요구하므로 휴대전화에 구글 플레이 스토어가 있어야 합니다.',
-          '이 리뷰는 PAIOS를 다른 온디바이스 및 로컬 AI 도구와 함께 소개하는 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)와 짝을 이루는 콘텐츠입니다.',
+          '이 리뷰는 PAIOS를 다른 온디바이스 및 로컬 AI 도구와 함께 소개하는 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)와 짝을 이루는 콘텐츠입니다.',
         ],
         columns: ['경로', '받는 방법'],
         rows: [
@@ -3574,7 +3574,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Layla 리뷰](/ko/power-local-llm/layla-review) — 더 넓은 모델 선택을 제공하는 안드로이드 우선 로컬 어시스턴트.',
           '[PocketPal AI 리뷰](/ko/power-local-llm/pocketpal-ai-review) — 무료 오픈소스 GGUF 채팅 클라이언트.',
           '[Off Grid AI 리뷰](/ko/power-local-llm/off-grid-ai-review) — 크로스 플랫폼 로컬 AI 앱.',
-          '[완전한 로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 플랫폼 전반의 로컬 LLM 도구에 대한 더 광범위한 디렉터리.',
+          '[완전한 로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 플랫폼 전반의 로컬 LLM 도구에 대한 더 광범위한 디렉터리.',
         ],
       },
     },

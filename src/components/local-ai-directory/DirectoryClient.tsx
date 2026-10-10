@@ -45,8 +45,7 @@ const INSTALL_FILTER_VALUES: readonly string[] = INSTALL_EFFORT_KEYS
 
 // Reads a filtered-view deep link produced by the MCP server's search_apps/
 // get_app_details "directoryUrl" (see src/lib/power-local-llm/app-search.ts's
-// directoryUrlFor) — e.g. /power-local-llm/local-llm-software-directory-2026
-// ?category=editing-upscaling&os=mac&price=free. Same one-time
+// directoryUrlFor) — e.g. /directory?category=editing-upscaling&os=mac&price=free. Same one-time
 // hydration-divergence pattern as `want`/`hw` below: server always sees no
 // params, client may diverge once on first render. Unknown/invalid values
 // are dropped rather than passed through blindly.

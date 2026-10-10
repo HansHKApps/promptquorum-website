@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Radiant Canvas',
     title: 'Radiant Canvas Review: Local AI Image Generation for Mac',
     seoTitle: 'Radiant Canvas Review: Local AI Image Gen for Apple Silicon',
-    intro: "Radiant Canvas is a macOS application at [radiantbeargames.com/radiant-canvas](https://radiantbeargames.com/radiant-canvas), built by independent developer [Arnold Sallay](https://radiantbeargames.com) under Radiant Bear Games, that generates and edits images entirely on an Apple silicon Mac using seven downloadable AI model families. It is distributed exclusively through the [Mac App Store](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075), with a free base tier and a Radiant Canvas PRO tier sold as monthly, yearly, or lifetime in-app purchases. This review is a companion to Radiant Canvas's entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory), and compares it against two other local Mac image-generation apps this site has already reviewed: [Draw Things](/power-local-llm/draw-things-review) and [DiffusionBee](/power-local-llm/diffusionbee-review).",
+    intro: "Radiant Canvas is a macOS application at [radiantbeargames.com/radiant-canvas](https://radiantbeargames.com/radiant-canvas), built by independent developer [Arnold Sallay](https://radiantbeargames.com) under Radiant Bear Games, that generates and edits images entirely on an Apple silicon Mac using seven downloadable AI model families. It is distributed exclusively through the [Mac App Store](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075), with a free base tier and a Radiant Canvas PRO tier sold as monthly, yearly, or lifetime in-app purchases. This review is a companion to Radiant Canvas's entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory), and compares it against two other local Mac image-generation apps this site has already reviewed: [Draw Things](/power-local-llm/draw-things-review) and [DiffusionBee](/power-local-llm/diffusionbee-review).",
     metaDescription: "Radiant Canvas review 2026: freemium Mac App Store app for local AI image generation and reference-image editing on Apple silicon, seven model families, node-based Studio, and how it compares to Draw Things and DiffusionBee.",
     readTime: '9 min read',
     targetKeywords: [
@@ -84,7 +84,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Runs entirely on-device — no cloud processing, per the developer\'s own description',
         ],
         callouts: [
-          { type: 'note', text: "Radiant Canvas sits in the same sub-segment as [Draw Things](/power-local-llm/draw-things-review) and [DiffusionBee](/power-local-llm/diffusionbee-review) — all three run image generation locally on Apple silicon — but Radiant Canvas is App Store-only, freemium rather than fully free, and adds multi-model comparison plus a node-based Studio the other two don't have. See the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) for how it fits among other local image-generation tools." },
+          { type: 'note', text: "Radiant Canvas sits in the same sub-segment as [Draw Things](/power-local-llm/draw-things-review) and [DiffusionBee](/power-local-llm/diffusionbee-review) — all three run image generation locally on Apple silicon — but Radiant Canvas is App Store-only, freemium rather than fully free, and adds multi-model comparison plus a node-based Studio the other two don't have. See the [Local LLM Software Directory](https://www.promptquorum.com/directory) for how it fits among other local image-generation tools." },
         ],
       },
       overview: {
@@ -117,7 +117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'get-radiant-canvas',
         title: 'Get Radiant Canvas for Mac',
-        content: "**This review is a companion to Radiant Canvas's entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)** — check the directory for how it's classified alongside other local image-generation tools. Radiant Canvas is distributed exclusively through the Mac App Store; always confirm you're on the official Apple-verified listing before installing.",
+        content: "**This review is a companion to Radiant Canvas's entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory)** — check the directory for how it's classified alongside other local image-generation tools. Radiant Canvas is distributed exclusively through the Mac App Store; always confirm you're on the official Apple-verified listing before installing.",
         columns: ['Channel', 'Link'],
         rows: [
           { 'Channel': 'Mac App Store', 'Link': '[Radiant Canvas — AI Image Gen](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075)' },
@@ -223,7 +223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Draw Things Review: Free Local Stable Diffusion for macOS and iOS](/power-local-llm/draw-things-review) — a free alternative that also runs on iPhone and iPad.',
           '[DiffusionBee Review: Free, Open-Source Local Stable Diffusion for Mac](/power-local-llm/diffusionbee-review) — a free, AGPL-3.0 app that still supports Intel Macs.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) — the full catalog of local AI tools this article belongs to, including where Radiant Canvas fits among image-generation apps.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/directory) — the full catalog of local AI tools this article belongs to, including where Radiant Canvas fits among image-generation apps.',
         ],
       },
     },
@@ -240,7 +240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Radiant Canvas',
     title: 'Radiant Canvas Review: Lokale KI-Bilderzeugung für Mac',
     seoTitle: 'Radiant Canvas Review: Lokale KI-Bilder für Apple Silicon',
-    intro: "Radiant Canvas ist eine macOS-Anwendung unter [radiantbeargames.com/radiant-canvas](https://radiantbeargames.com/radiant-canvas), entwickelt vom unabhängigen Entwickler [Arnold Sallay](https://radiantbeargames.com) unter dem Label Radiant Bear Games, die Bilder vollständig lokal auf einem Apple-Silicon-Mac mit sieben herunterladbaren KI-Modellfamilien erzeugt und bearbeitet. Die App wird ausschließlich über den [Mac App Store](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075) vertrieben, mit einer kostenlosen Basisstufe und einer Radiant Canvas PRO-Stufe, die als monatlicher, jährlicher oder lebenslanger In-App-Kauf angeboten wird. Diese Bewertung ergänzt den Eintrag von Radiant Canvas im [Local LLM Software Directory](https://www.promptquorum.com/de/power-local-llm/local-llm-software-directory) und vergleicht die App mit zwei weiteren lokalen Mac-Bilderzeugungs-Apps, die diese Seite bereits bewertet hat: [Draw Things](/de/power-local-llm/draw-things-review) und [DiffusionBee](/de/power-local-llm/diffusionbee-review).",
+    intro: "Radiant Canvas ist eine macOS-Anwendung unter [radiantbeargames.com/radiant-canvas](https://radiantbeargames.com/radiant-canvas), entwickelt vom unabhängigen Entwickler [Arnold Sallay](https://radiantbeargames.com) unter dem Label Radiant Bear Games, die Bilder vollständig lokal auf einem Apple-Silicon-Mac mit sieben herunterladbaren KI-Modellfamilien erzeugt und bearbeitet. Die App wird ausschließlich über den [Mac App Store](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075) vertrieben, mit einer kostenlosen Basisstufe und einer Radiant Canvas PRO-Stufe, die als monatlicher, jährlicher oder lebenslanger In-App-Kauf angeboten wird. Diese Bewertung ergänzt den Eintrag von Radiant Canvas im [Local LLM Software Directory](https://www.promptquorum.com/de/directory) und vergleicht die App mit zwei weiteren lokalen Mac-Bilderzeugungs-Apps, die diese Seite bereits bewertet hat: [Draw Things](/de/power-local-llm/draw-things-review) und [DiffusionBee](/de/power-local-llm/diffusionbee-review).",
     metaDescription: "Radiant Canvas Review 2026: Freemium-App aus dem Mac App Store für lokale KI-Bilderzeugung und referenzbasierte Bildbearbeitung auf Apple Silicon, sieben Modellfamilien, node-basiertes Studio, im Vergleich zu Draw Things und DiffusionBee.",
     readTime: '9 Min. Lesezeit',
     targetKeywords: [
@@ -299,7 +299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Läuft vollständig auf dem Gerät — keine Cloud-Verarbeitung, laut Beschreibung des Entwicklers',
         ],
         callouts: [
-          { type: 'note', text: "Radiant Canvas gehört zum selben Teilsegment wie [Draw Things](/de/power-local-llm/draw-things-review) und [DiffusionBee](/de/power-local-llm/diffusionbee-review) — alle drei erzeugen Bilder lokal auf Apple Silicon —, ist aber ausschließlich über den App Store erhältlich, Freemium statt vollständig kostenlos, und bietet mit Multi-Modell-Vergleich sowie einem node-basierten Studio Funktionen, die die anderen beiden nicht haben. Das [Local LLM Software Directory](https://www.promptquorum.com/de/power-local-llm/local-llm-software-directory) zeigt, wie sich die App unter anderen lokalen Bilderzeugungs-Tools einordnet." },
+          { type: 'note', text: "Radiant Canvas gehört zum selben Teilsegment wie [Draw Things](/de/power-local-llm/draw-things-review) und [DiffusionBee](/de/power-local-llm/diffusionbee-review) — alle drei erzeugen Bilder lokal auf Apple Silicon —, ist aber ausschließlich über den App Store erhältlich, Freemium statt vollständig kostenlos, und bietet mit Multi-Modell-Vergleich sowie einem node-basierten Studio Funktionen, die die anderen beiden nicht haben. Das [Local LLM Software Directory](https://www.promptquorum.com/de/directory) zeigt, wie sich die App unter anderen lokalen Bilderzeugungs-Tools einordnet." },
         ],
       },
       overview: {
@@ -332,7 +332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'get-radiant-canvas',
         title: 'Radiant Canvas für Mac herunterladen',
-        content: "**Diese Bewertung ergänzt den Eintrag von Radiant Canvas im [Local LLM Software Directory](https://www.promptquorum.com/de/power-local-llm/local-llm-software-directory)** — dort nachsehen, wie die App neben anderen lokalen Bilderzeugungs-Tools eingeordnet ist. Radiant Canvas wird ausschließlich über den Mac App Store vertrieben; vor der Installation immer prüfen, dass es sich um das offizielle, von Apple verifizierte Listing handelt.",
+        content: "**Diese Bewertung ergänzt den Eintrag von Radiant Canvas im [Local LLM Software Directory](https://www.promptquorum.com/de/directory)** — dort nachsehen, wie die App neben anderen lokalen Bilderzeugungs-Tools eingeordnet ist. Radiant Canvas wird ausschließlich über den Mac App Store vertrieben; vor der Installation immer prüfen, dass es sich um das offizielle, von Apple verifizierte Listing handelt.",
         columns: ['Kanal', 'Link'],
         rows: [
           { 'Kanal': 'Mac App Store', 'Link': '[Radiant Canvas — AI Image Gen](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075)' },
@@ -438,7 +438,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Draw Things Review: Kostenloses lokales Stable Diffusion für macOS und iOS](/de/power-local-llm/draw-things-review) — eine kostenlose Alternative, die auch auf iPhone und iPad läuft.',
           '[DiffusionBee Review: Kostenloses, quelloffenes lokales Stable Diffusion für Mac](/de/power-local-llm/diffusionbee-review) — eine kostenlose, AGPL-3.0-lizenzierte App, die weiterhin Intel-Macs unterstützt.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/de/power-local-llm/local-llm-software-directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Radiant Canvas unter den Bilderzeugungs-Apps.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich der Einordnung von Radiant Canvas unter den Bilderzeugungs-Apps.',
         ],
       },
     },
@@ -455,7 +455,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Radiant Canvas',
     title: 'Radiant Canvas Review: génération d\'images IA locale pour Mac',
     seoTitle: 'Radiant Canvas Review: IA image locale sur Apple Silicon',
-    intro: "Radiant Canvas est une application macOS disponible sur [radiantbeargames.com/radiant-canvas](https://radiantbeargames.com/radiant-canvas), développée par le développeur indépendant [Arnold Sallay](https://radiantbeargames.com) sous le label Radiant Bear Games, qui génère et édite des images entièrement en local sur un Mac Apple Silicon grâce à sept familles de modèles IA téléchargeables. Elle est distribuée exclusivement via le [Mac App Store](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075), avec un palier gratuit et un palier Radiant Canvas PRO vendu en achat intégré mensuel, annuel ou à vie. Cette évaluation complète la fiche de Radiant Canvas dans le [Local LLM Software Directory](https://www.promptquorum.com/fr/power-local-llm/local-llm-software-directory) et la compare à deux autres applications locales de génération d'images pour Mac déjà évaluées sur ce site : [Draw Things](/fr/power-local-llm/draw-things-review) et [DiffusionBee](/fr/power-local-llm/diffusionbee-review).",
+    intro: "Radiant Canvas est une application macOS disponible sur [radiantbeargames.com/radiant-canvas](https://radiantbeargames.com/radiant-canvas), développée par le développeur indépendant [Arnold Sallay](https://radiantbeargames.com) sous le label Radiant Bear Games, qui génère et édite des images entièrement en local sur un Mac Apple Silicon grâce à sept familles de modèles IA téléchargeables. Elle est distribuée exclusivement via le [Mac App Store](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075), avec un palier gratuit et un palier Radiant Canvas PRO vendu en achat intégré mensuel, annuel ou à vie. Cette évaluation complète la fiche de Radiant Canvas dans le [Local LLM Software Directory](https://www.promptquorum.com/fr/directory) et la compare à deux autres applications locales de génération d'images pour Mac déjà évaluées sur ce site : [Draw Things](/fr/power-local-llm/draw-things-review) et [DiffusionBee](/fr/power-local-llm/diffusionbee-review).",
     metaDescription: "Radiant Canvas Review 2026 : application freemium du Mac App Store pour la génération d'images IA locale et l'édition par image de référence sur Apple Silicon, sept familles de modèles, Studio par nœuds, comparée à Draw Things et DiffusionBee.",
     readTime: '9 min de lecture',
     targetKeywords: [
@@ -514,7 +514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fonctionne entièrement sur l\'appareil — pas de traitement cloud, selon la description du développeur',
         ],
         callouts: [
-          { type: 'note', text: "Radiant Canvas appartient au même sous-segment que [Draw Things](/fr/power-local-llm/draw-things-review) et [DiffusionBee](/fr/power-local-llm/diffusionbee-review) — les trois génèrent des images en local sur Apple Silicon — mais Radiant Canvas est exclusif à l'App Store, freemium plutôt que totalement gratuit, et ajoute une comparaison multi-modèles ainsi qu'un Studio par nœuds que les deux autres n'ont pas. Voir le [Local LLM Software Directory](https://www.promptquorum.com/fr/power-local-llm/local-llm-software-directory) pour sa place parmi les autres outils locaux de génération d'images." },
+          { type: 'note', text: "Radiant Canvas appartient au même sous-segment que [Draw Things](/fr/power-local-llm/draw-things-review) et [DiffusionBee](/fr/power-local-llm/diffusionbee-review) — les trois génèrent des images en local sur Apple Silicon — mais Radiant Canvas est exclusif à l'App Store, freemium plutôt que totalement gratuit, et ajoute une comparaison multi-modèles ainsi qu'un Studio par nœuds que les deux autres n'ont pas. Voir le [Local LLM Software Directory](https://www.promptquorum.com/fr/directory) pour sa place parmi les autres outils locaux de génération d'images." },
         ],
       },
       overview: {
@@ -547,7 +547,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'get-radiant-canvas',
         title: 'Obtenir Radiant Canvas pour Mac',
-        content: "**Cette évaluation complète la fiche de Radiant Canvas dans le [Local LLM Software Directory](https://www.promptquorum.com/fr/power-local-llm/local-llm-software-directory)** — consultez le répertoire pour voir comment l'application est classée parmi les autres outils locaux de génération d'images. Radiant Canvas est distribué exclusivement via le Mac App Store ; vérifiez toujours que vous êtes sur la fiche officielle vérifiée par Apple avant d'installer.",
+        content: "**Cette évaluation complète la fiche de Radiant Canvas dans le [Local LLM Software Directory](https://www.promptquorum.com/fr/directory)** — consultez le répertoire pour voir comment l'application est classée parmi les autres outils locaux de génération d'images. Radiant Canvas est distribué exclusivement via le Mac App Store ; vérifiez toujours que vous êtes sur la fiche officielle vérifiée par Apple avant d'installer.",
         columns: ['Canal', 'Lien'],
         rows: [
           { 'Canal': 'Mac App Store', 'Lien': '[Radiant Canvas — AI Image Gen](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075)' },
@@ -653,7 +653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Draw Things Review : Stable Diffusion local gratuit pour macOS et iOS](/fr/power-local-llm/draw-things-review) — une alternative gratuite qui fonctionne aussi sur iPhone et iPad.',
           '[DiffusionBee Review : Stable Diffusion local gratuit et open source pour Mac](/fr/power-local-llm/diffusionbee-review) — une application gratuite sous licence AGPL-3.0 qui prend encore en charge les Mac Intel.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/fr/power-local-llm/local-llm-software-directory) — le catalogue complet des outils IA locaux auquel appartient cet article, incluant la place de Radiant Canvas parmi les applications de génération d\'images.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/fr/directory) — le catalogue complet des outils IA locaux auquel appartient cet article, incluant la place de Radiant Canvas parmi les applications de génération d\'images.',
         ],
       },
     },
@@ -670,7 +670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Radiant Canvas',
     title: 'Radiant Canvas Review: generación de imágenes IA local para Mac',
     seoTitle: 'Radiant Canvas Review: IA de imagen local en Apple Silicon',
-    intro: "Radiant Canvas es una aplicación de macOS disponible en [radiantbeargames.com/radiant-canvas](https://radiantbeargames.com/radiant-canvas), creada por el desarrollador independiente [Arnold Sallay](https://radiantbeargames.com) bajo el sello Radiant Bear Games, que genera y edita imágenes por completo en local en un Mac con Apple Silicon usando siete familias de modelos de IA descargables. Se distribuye exclusivamente a través de la [Mac App Store](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075), con un nivel gratuito y un nivel Radiant Canvas PRO que se vende como compra dentro de la app mensual, anual o de por vida. Esta reseña complementa la ficha de Radiant Canvas en el [Local LLM Software Directory](https://www.promptquorum.com/es/power-local-llm/local-llm-software-directory) y la compara con otras dos apps locales de generación de imágenes para Mac ya reseñadas en este sitio: [Draw Things](/es/power-local-llm/draw-things-review) y [DiffusionBee](/es/power-local-llm/diffusionbee-review).",
+    intro: "Radiant Canvas es una aplicación de macOS disponible en [radiantbeargames.com/radiant-canvas](https://radiantbeargames.com/radiant-canvas), creada por el desarrollador independiente [Arnold Sallay](https://radiantbeargames.com) bajo el sello Radiant Bear Games, que genera y edita imágenes por completo en local en un Mac con Apple Silicon usando siete familias de modelos de IA descargables. Se distribuye exclusivamente a través de la [Mac App Store](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075), con un nivel gratuito y un nivel Radiant Canvas PRO que se vende como compra dentro de la app mensual, anual o de por vida. Esta reseña complementa la ficha de Radiant Canvas en el [Local LLM Software Directory](https://www.promptquorum.com/es/directory) y la compara con otras dos apps locales de generación de imágenes para Mac ya reseñadas en este sitio: [Draw Things](/es/power-local-llm/draw-things-review) y [DiffusionBee](/es/power-local-llm/diffusionbee-review).",
     metaDescription: "Radiant Canvas review 2026: app freemium de la Mac App Store para generación de imágenes IA local y edición por imagen de referencia en Apple Silicon, siete familias de modelos, Studio por nodos, comparada con Draw Things y DiffusionBee.",
     readTime: '9 min de lectura',
     targetKeywords: [
@@ -729,7 +729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Funciona por completo en el dispositivo — sin procesamiento en la nube, según la propia descripción del desarrollador',
         ],
         callouts: [
-          { type: 'note', text: "Radiant Canvas pertenece al mismo subsegmento que [Draw Things](/es/power-local-llm/draw-things-review) y [DiffusionBee](/es/power-local-llm/diffusionbee-review) — las tres generan imágenes en local en Apple Silicon —, pero Radiant Canvas es exclusiva de la App Store, freemium en lugar de totalmente gratuita, y suma comparación multimodelo más un Studio por nodos que las otras dos no tienen. Consulta el [Local LLM Software Directory](https://www.promptquorum.com/es/power-local-llm/local-llm-software-directory) para ver cómo encaja entre otras herramientas locales de generación de imágenes." },
+          { type: 'note', text: "Radiant Canvas pertenece al mismo subsegmento que [Draw Things](/es/power-local-llm/draw-things-review) y [DiffusionBee](/es/power-local-llm/diffusionbee-review) — las tres generan imágenes en local en Apple Silicon —, pero Radiant Canvas es exclusiva de la App Store, freemium en lugar de totalmente gratuita, y suma comparación multimodelo más un Studio por nodos que las otras dos no tienen. Consulta el [Local LLM Software Directory](https://www.promptquorum.com/es/directory) para ver cómo encaja entre otras herramientas locales de generación de imágenes." },
         ],
       },
       overview: {
@@ -762,7 +762,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'get-radiant-canvas',
         title: 'Obtener Radiant Canvas para Mac',
-        content: "**Esta reseña complementa la ficha de Radiant Canvas en el [Local LLM Software Directory](https://www.promptquorum.com/es/power-local-llm/local-llm-software-directory)** — consulta el directorio para ver cómo está clasificada junto a otras herramientas locales de generación de imágenes. Radiant Canvas se distribuye exclusivamente a través de la Mac App Store; confirma siempre que estás en la ficha oficial verificada por Apple antes de instalar.",
+        content: "**Esta reseña complementa la ficha de Radiant Canvas en el [Local LLM Software Directory](https://www.promptquorum.com/es/directory)** — consulta el directorio para ver cómo está clasificada junto a otras herramientas locales de generación de imágenes. Radiant Canvas se distribuye exclusivamente a través de la Mac App Store; confirma siempre que estás en la ficha oficial verificada por Apple antes de instalar.",
         columns: ['Canal', 'Enlace'],
         rows: [
           { 'Canal': 'Mac App Store', 'Enlace': '[Radiant Canvas — AI Image Gen](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075)' },
@@ -868,7 +868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Draw Things Review: Stable Diffusion local gratis para macOS e iOS](/es/power-local-llm/draw-things-review) — una alternativa gratis que también funciona en iPhone y iPad.',
           '[DiffusionBee Review: Stable Diffusion local gratis y de código abierto para Mac](/es/power-local-llm/diffusionbee-review) — una app gratis con licencia AGPL-3.0 que todavía admite Mac Intel.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/es/power-local-llm/local-llm-software-directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja Radiant Canvas entre las apps de generación de imágenes.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluyendo dónde encaja Radiant Canvas entre las apps de generación de imágenes.',
         ],
       },
     },
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Radiant Canvas',
     title: 'Radiant Canvasレビュー：Mac向けローカルAI画像生成',
     seoTitle: 'Radiant Canvasレビュー：Apple SiliconのローカルAI画像生成',
-    intro: "Radiant Canvasは、独立系開発者[Arnold Sallay](https://radiantbeargames.com)がRadiant Bear Gamesレーベルの下で開発した、[radiantbeargames.com/radiant-canvas](https://radiantbeargames.com/radiant-canvas)にあるmacOSアプリケーションです。7つのダウンロード可能なAIモデルファミリーを使い、Apple Silicon Mac上で完全にローカルに画像を生成・編集します。配布は[Mac App Store](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075)限定で、無料の基本ティアと、月額・年額・買い切りのアプリ内課金として提供されるRadiant Canvas PROティアがあります。このレビューは[Local LLM Software Directory](https://www.promptquorum.com/ja/power-local-llm/local-llm-software-directory)内のRadiant Canvasのエントリーの姉妹記事で、当サイトが既にレビューした他の2つのローカルMac画像生成アプリ、[Draw Things](/ja/power-local-llm/draw-things-review)と[DiffusionBee](/ja/power-local-llm/diffusionbee-review)と比較します。",
+    intro: "Radiant Canvasは、独立系開発者[Arnold Sallay](https://radiantbeargames.com)がRadiant Bear Gamesレーベルの下で開発した、[radiantbeargames.com/radiant-canvas](https://radiantbeargames.com/radiant-canvas)にあるmacOSアプリケーションです。7つのダウンロード可能なAIモデルファミリーを使い、Apple Silicon Mac上で完全にローカルに画像を生成・編集します。配布は[Mac App Store](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075)限定で、無料の基本ティアと、月額・年額・買い切りのアプリ内課金として提供されるRadiant Canvas PROティアがあります。このレビューは[Local LLM Software Directory](https://www.promptquorum.com/ja/directory)内のRadiant Canvasのエントリーの姉妹記事で、当サイトが既にレビューした他の2つのローカルMac画像生成アプリ、[Draw Things](/ja/power-local-llm/draw-things-review)と[DiffusionBee](/ja/power-local-llm/diffusionbee-review)と比較します。",
     metaDescription: "Radiant Canvasレビュー2026：Apple Silicon上でローカルAI画像生成と参照画像編集ができるMac App Store限定のフリーミアムアプリ。7つのモデルファミリー、ノードベースのStudio、Draw ThingsやDiffusionBeeとの比較を解説。",
     readTime: '9分で読める',
     targetKeywords: [
@@ -944,7 +944,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '完全にデバイス上で動作 — クラウド処理なし、開発者自身の説明による',
         ],
         callouts: [
-          { type: 'note', text: "Radiant Canvasは[Draw Things](/ja/power-local-llm/draw-things-review)や[DiffusionBee](/ja/power-local-llm/diffusionbee-review)と同じサブセグメントに属している — 3つとも画像生成をApple Silicon上でローカルに実行する — が、Radiant CanvasはApp Store限定で、完全無料ではなくフリーミアムであり、他の2つにはないマルチモデル比較とノードベースのStudioを備えている点が異なる。他のローカル画像生成ツールとの位置づけについては[Local LLM Software Directory](https://www.promptquorum.com/ja/power-local-llm/local-llm-software-directory)を参照。" },
+          { type: 'note', text: "Radiant Canvasは[Draw Things](/ja/power-local-llm/draw-things-review)や[DiffusionBee](/ja/power-local-llm/diffusionbee-review)と同じサブセグメントに属している — 3つとも画像生成をApple Silicon上でローカルに実行する — が、Radiant CanvasはApp Store限定で、完全無料ではなくフリーミアムであり、他の2つにはないマルチモデル比較とノードベースのStudioを備えている点が異なる。他のローカル画像生成ツールとの位置づけについては[Local LLM Software Directory](https://www.promptquorum.com/ja/directory)を参照。" },
         ],
       },
       overview: {
@@ -977,7 +977,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'get-radiant-canvas',
         title: 'Mac向けRadiant Canvasの入手方法',
-        content: "**このレビューは[Local LLM Software Directory](https://www.promptquorum.com/ja/power-local-llm/local-llm-software-directory)内のRadiant Canvasのエントリーの姉妹記事です** — 他のローカル画像生成ツールとの位置づけについてはディレクトリを確認してください。Radiant CanvasはMac App Store限定で配布されています。インストール前に、必ずApple認証済みの公式掲載ページであることを確認してください。",
+        content: "**このレビューは[Local LLM Software Directory](https://www.promptquorum.com/ja/directory)内のRadiant Canvasのエントリーの姉妹記事です** — 他のローカル画像生成ツールとの位置づけについてはディレクトリを確認してください。Radiant CanvasはMac App Store限定で配布されています。インストール前に、必ずApple認証済みの公式掲載ページであることを確認してください。",
         columns: ['チャネル', 'リンク'],
         rows: [
           { 'チャネル': 'Mac App Store', 'リンク': '[Radiant Canvas — AI Image Gen](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075)' },
@@ -1083,7 +1083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Draw Thingsレビュー：macOSとiOS向けの無料ローカルStable Diffusion](/ja/power-local-llm/draw-things-review) — iPhoneやiPadでも動作する無料の代替アプリ。',
           '[DiffusionBeeレビュー：Mac向けの無料オープンソースローカルStable Diffusion](/ja/power-local-llm/diffusionbee-review) — Intel Macにも対応し続けている無料のAGPL-3.0アプリ。',
-          '[Local LLM Software Directory](https://www.promptquorum.com/ja/power-local-llm/local-llm-software-directory) — この記事が属するローカルAIツールの全カタログ。画像生成アプリの中でRadiant Canvasがどう位置づけられるかも含む。',
+          '[Local LLM Software Directory](https://www.promptquorum.com/ja/directory) — この記事が属するローカルAIツールの全カタログ。画像生成アプリの中でRadiant Canvasがどう位置づけられるかも含む。',
         ],
       },
     },
@@ -1100,7 +1100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Radiant Canvas',
     title: 'Radiant Canvas评测：Mac本地AI图像生成',
     seoTitle: 'Radiant Canvas评测：Apple Silicon本地AI图像生成',
-    intro: "Radiant Canvas是一款macOS应用，官网为[radiantbeargames.com/radiant-canvas](https://radiantbeargames.com/radiant-canvas)，由独立开发者[Arnold Sallay](https://radiantbeargames.com)在Radiant Bear Games旗下开发，使用七个可下载的AI模型系列，在Apple Silicon Mac上完全本地生成和编辑图像。该应用仅通过[Mac App Store](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075)分发，提供免费基础版，以及以月付、年付或买断制应用内购买形式出售的Radiant Canvas PRO版本。本评测是[Local LLM Software Directory](https://www.promptquorum.com/zh/power-local-llm/local-llm-software-directory)中Radiant Canvas条目的配套文章,并将其与本站已评测过的另外两款本地Mac图像生成应用进行比较:[Draw Things](/zh/power-local-llm/draw-things-review)和[DiffusionBee](/zh/power-local-llm/diffusionbee-review)。",
+    intro: "Radiant Canvas是一款macOS应用，官网为[radiantbeargames.com/radiant-canvas](https://radiantbeargames.com/radiant-canvas)，由独立开发者[Arnold Sallay](https://radiantbeargames.com)在Radiant Bear Games旗下开发，使用七个可下载的AI模型系列，在Apple Silicon Mac上完全本地生成和编辑图像。该应用仅通过[Mac App Store](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075)分发，提供免费基础版，以及以月付、年付或买断制应用内购买形式出售的Radiant Canvas PRO版本。本评测是[Local LLM Software Directory](https://www.promptquorum.com/zh/directory)中Radiant Canvas条目的配套文章,并将其与本站已评测过的另外两款本地Mac图像生成应用进行比较:[Draw Things](/zh/power-local-llm/draw-things-review)和[DiffusionBee](/zh/power-local-llm/diffusionbee-review)。",
     metaDescription: "Radiant Canvas评测2026:Mac App Store独家的免费增值应用,支持在Apple Silicon上本地AI图像生成和参考图像编辑,七个模型系列,节点式Studio,并与Draw Things和DiffusionBee对比。",
     readTime: '阅读约9分钟',
     targetKeywords: [
@@ -1159,7 +1159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '完全在设备本地运行——没有云端处理,据开发者自述',
         ],
         callouts: [
-          { type: 'note', text: "Radiant Canvas与[Draw Things](/zh/power-local-llm/draw-things-review)和[DiffusionBee](/zh/power-local-llm/diffusionbee-review)属于同一细分领域——三者都在Apple Silicon上本地运行图像生成——但Radiant Canvas仅限App Store销售,是免费增值而非完全免费,并新增了另外两款应用没有的多模型比较和节点式Studio。关于它在其他本地图像生成工具中的定位,可参考[Local LLM Software Directory](https://www.promptquorum.com/zh/power-local-llm/local-llm-software-directory)。" },
+          { type: 'note', text: "Radiant Canvas与[Draw Things](/zh/power-local-llm/draw-things-review)和[DiffusionBee](/zh/power-local-llm/diffusionbee-review)属于同一细分领域——三者都在Apple Silicon上本地运行图像生成——但Radiant Canvas仅限App Store销售,是免费增值而非完全免费,并新增了另外两款应用没有的多模型比较和节点式Studio。关于它在其他本地图像生成工具中的定位,可参考[Local LLM Software Directory](https://www.promptquorum.com/zh/directory)。" },
         ],
       },
       overview: {
@@ -1192,7 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'get-radiant-canvas',
         title: '获取适用于Mac的Radiant Canvas',
-        content: "**本评测是[Local LLM Software Directory](https://www.promptquorum.com/zh/power-local-llm/local-llm-software-directory)中Radiant Canvas条目的配套文章**——可在该目录中查看它在其他本地图像生成工具中的分类。Radiant Canvas仅通过Mac App Store分发;安装前请务必确认你所访问的是经Apple验证的官方页面。",
+        content: "**本评测是[Local LLM Software Directory](https://www.promptquorum.com/zh/directory)中Radiant Canvas条目的配套文章**——可在该目录中查看它在其他本地图像生成工具中的分类。Radiant Canvas仅通过Mac App Store分发;安装前请务必确认你所访问的是经Apple验证的官方页面。",
         columns: ['渠道', '链接'],
         rows: [
           { '渠道': 'Mac App Store', '链接': '[Radiant Canvas — AI Image Gen](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075)' },
@@ -1298,7 +1298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Draw Things评测:适用于macOS和iOS的免费本地Stable Diffusion](/zh/power-local-llm/draw-things-review) — 一款同样支持iPhone和iPad的免费替代应用。',
           '[DiffusionBee评测:适用于Mac的免费开源本地Stable Diffusion](/zh/power-local-llm/diffusionbee-review) — 一款仍支持Intel Mac的免费AGPL-3.0应用。',
-          '[Local LLM Software Directory](https://www.promptquorum.com/zh/power-local-llm/local-llm-software-directory) — 本文所属的本地AI工具完整目录,包含Radiant Canvas在图像生成应用中的定位。',
+          '[Local LLM Software Directory](https://www.promptquorum.com/zh/directory) — 本文所属的本地AI工具完整目录,包含Radiant Canvas在图像生成应用中的定位。',
         ],
       },
     },
@@ -1315,7 +1315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Radiant Canvas',
     title: 'Radiant Canvas Review: geração de imagens IA local para Mac',
     seoTitle: 'Radiant Canvas Review: IA de imagem local no Apple Silicon',
-    intro: "Radiant Canvas é um aplicativo de macOS disponível em [radiantbeargames.com/radiant-canvas](https://radiantbeargames.com/radiant-canvas), criado pelo desenvolvedor independente [Arnold Sallay](https://radiantbeargames.com) sob o selo Radiant Bear Games, que gera e edita imagens totalmente em local em um Mac com Apple Silicon usando sete famílias de modelos de IA baixáveis. É distribuído exclusivamente pela [Mac App Store](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075), com um nível gratuito e um nível Radiant Canvas PRO vendido como compra dentro do app mensal, anual ou vitalícia. Esta análise complementa a ficha do Radiant Canvas no [Local LLM Software Directory](https://www.promptquorum.com/pt/power-local-llm/local-llm-software-directory) e o compara com outros dois apps locais de geração de imagens para Mac já analisados neste site: [Draw Things](/pt/power-local-llm/draw-things-review) e [DiffusionBee](/pt/power-local-llm/diffusionbee-review).",
+    intro: "Radiant Canvas é um aplicativo de macOS disponível em [radiantbeargames.com/radiant-canvas](https://radiantbeargames.com/radiant-canvas), criado pelo desenvolvedor independente [Arnold Sallay](https://radiantbeargames.com) sob o selo Radiant Bear Games, que gera e edita imagens totalmente em local em um Mac com Apple Silicon usando sete famílias de modelos de IA baixáveis. É distribuído exclusivamente pela [Mac App Store](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075), com um nível gratuito e um nível Radiant Canvas PRO vendido como compra dentro do app mensal, anual ou vitalícia. Esta análise complementa a ficha do Radiant Canvas no [Local LLM Software Directory](https://www.promptquorum.com/pt/directory) e o compara com outros dois apps locais de geração de imagens para Mac já analisados neste site: [Draw Things](/pt/power-local-llm/draw-things-review) e [DiffusionBee](/pt/power-local-llm/diffusionbee-review).",
     metaDescription: "Radiant Canvas review 2026: app freemium da Mac App Store para geração de imagens IA local e edição por imagem de referência no Apple Silicon, sete famílias de modelos, Studio por nós, comparado com Draw Things e DiffusionBee.",
     readTime: '9 min de leitura',
     targetKeywords: [
@@ -1374,7 +1374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Roda totalmente no dispositivo — sem processamento na nuvem, segundo a própria descrição do desenvolvedor',
         ],
         callouts: [
-          { type: 'note', text: "O Radiant Canvas está no mesmo subsegmento do [Draw Things](/pt/power-local-llm/draw-things-review) e do [DiffusionBee](/pt/power-local-llm/diffusionbee-review) — os três geram imagens em local no Apple Silicon —, mas o Radiant Canvas é exclusivo da App Store, freemium em vez de totalmente gratuito, e soma comparação multimodelo mais um Studio por nós que os outros dois não têm. Veja o [Local LLM Software Directory](https://www.promptquorum.com/pt/power-local-llm/local-llm-software-directory) para saber como ele se encaixa entre outras ferramentas locais de geração de imagens." },
+          { type: 'note', text: "O Radiant Canvas está no mesmo subsegmento do [Draw Things](/pt/power-local-llm/draw-things-review) e do [DiffusionBee](/pt/power-local-llm/diffusionbee-review) — os três geram imagens em local no Apple Silicon —, mas o Radiant Canvas é exclusivo da App Store, freemium em vez de totalmente gratuito, e soma comparação multimodelo mais um Studio por nós que os outros dois não têm. Veja o [Local LLM Software Directory](https://www.promptquorum.com/pt/directory) para saber como ele se encaixa entre outras ferramentas locais de geração de imagens." },
         ],
       },
       overview: {
@@ -1407,7 +1407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'get-radiant-canvas',
         title: 'Obter o Radiant Canvas para Mac',
-        content: "**Esta análise complementa a ficha do Radiant Canvas no [Local LLM Software Directory](https://www.promptquorum.com/pt/power-local-llm/local-llm-software-directory)** — consulte o diretório para ver como ele está classificado junto a outras ferramentas locais de geração de imagens. Radiant Canvas é distribuído exclusivamente pela Mac App Store; sempre confirme que você está na ficha oficial verificada pela Apple antes de instalar.",
+        content: "**Esta análise complementa a ficha do Radiant Canvas no [Local LLM Software Directory](https://www.promptquorum.com/pt/directory)** — consulte o diretório para ver como ele está classificado junto a outras ferramentas locais de geração de imagens. Radiant Canvas é distribuído exclusivamente pela Mac App Store; sempre confirme que você está na ficha oficial verificada pela Apple antes de instalar.",
         columns: ['Canal', 'Link'],
         rows: [
           { 'Canal': 'Mac App Store', 'Link': '[Radiant Canvas — AI Image Gen](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075)' },
@@ -1513,7 +1513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Draw Things Review: Stable Diffusion local gratuito para macOS e iOS](/pt/power-local-llm/draw-things-review) — uma alternativa gratuita que também roda em iPhone e iPad.',
           '[DiffusionBee Review: Stable Diffusion local gratuito e de código aberto para Mac](/pt/power-local-llm/diffusionbee-review) — um app gratuito sob licença AGPL-3.0 que ainda é compatível com Macs Intel.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/pt/power-local-llm/local-llm-software-directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o Radiant Canvas se encaixa entre os apps de geração de imagens.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo onde o Radiant Canvas se encaixa entre os apps de geração de imagens.',
         ],
       },
     },
@@ -1530,7 +1530,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Radiant Canvas',
     title: 'مراجعة Radiant Canvas: توليد صور بالذكاء الاصطناعي محليًا على Mac',
     seoTitle: 'مراجعة Radiant Canvas: توليد صور محلي على Apple Silicon',
-    intro: "Radiant Canvas هو تطبيق macOS متاح على [radiantbeargames.com/radiant-canvas](https://radiantbeargames.com/radiant-canvas)، طوّره المطوّر المستقل [Arnold Sallay](https://radiantbeargames.com) تحت اسم Radiant Bear Games، ويقوم بتوليد وتحرير الصور بالكامل محليًا على جهاز Mac مزوّد بشريحة Apple Silicon باستخدام سبع عائلات من نماذج الذكاء الاصطناعي القابلة للتنزيل. يُوزَّع حصريًا عبر [Mac App Store](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075)، مع مستوى مجاني ومستوى Radiant Canvas PRO يُباع كشراء داخل التطبيق شهريًا أو سنويًا أو مدى الحياة. هذه المراجعة مكمّلة لإدراج Radiant Canvas في [دليل برامج Local LLM](https://www.promptquorum.com/ar/power-local-llm/local-llm-software-directory)، وتقارنه بتطبيقين آخرين لتوليد الصور محليًا على Mac سبق أن راجعهما هذا الموقع: [Draw Things](/ar/power-local-llm/draw-things-review) و[DiffusionBee](/ar/power-local-llm/diffusionbee-review).",
+    intro: "Radiant Canvas هو تطبيق macOS متاح على [radiantbeargames.com/radiant-canvas](https://radiantbeargames.com/radiant-canvas)، طوّره المطوّر المستقل [Arnold Sallay](https://radiantbeargames.com) تحت اسم Radiant Bear Games، ويقوم بتوليد وتحرير الصور بالكامل محليًا على جهاز Mac مزوّد بشريحة Apple Silicon باستخدام سبع عائلات من نماذج الذكاء الاصطناعي القابلة للتنزيل. يُوزَّع حصريًا عبر [Mac App Store](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075)، مع مستوى مجاني ومستوى Radiant Canvas PRO يُباع كشراء داخل التطبيق شهريًا أو سنويًا أو مدى الحياة. هذه المراجعة مكمّلة لإدراج Radiant Canvas في [دليل برامج Local LLM](https://www.promptquorum.com/ar/directory)، وتقارنه بتطبيقين آخرين لتوليد الصور محليًا على Mac سبق أن راجعهما هذا الموقع: [Draw Things](/ar/power-local-llm/draw-things-review) و[DiffusionBee](/ar/power-local-llm/diffusionbee-review).",
     metaDescription: "مراجعة Radiant Canvas 2026: تطبيق فريميوم حصري على Mac App Store لتوليد الصور بالذكاء الاصطناعي محليًا وتحرير الصور المرجعية على Apple Silicon، سبع عائلات نماذج، استوديو قائم على العقد، ومقارنة مع Draw Things وDiffusionBee.",
     readTime: '9 دقائق للقراءة',
     targetKeywords: [
@@ -1589,7 +1589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يعمل بالكامل على الجهاز — دون أي معالجة سحابية، وفقًا لوصف المطوّر نفسه',
         ],
         callouts: [
-          { type: 'note', text: "ينتمي Radiant Canvas إلى نفس الفئة الفرعية التي تضم [Draw Things](/ar/power-local-llm/draw-things-review) و[DiffusionBee](/ar/power-local-llm/diffusionbee-review) — تولّد التطبيقات الثلاثة الصور محليًا على Apple Silicon — إلا أن Radiant Canvas حصري على App Store، وهو فريميوم وليس مجانيًا بالكامل، ويضيف مقارنة متعددة النماذج واستوديو قائم على العقد لا يتوفران في التطبيقين الآخرين. راجع [دليل برامج Local LLM](https://www.promptquorum.com/ar/power-local-llm/local-llm-software-directory) لمعرفة موقعه بين أدوات توليد الصور المحلية الأخرى." },
+          { type: 'note', text: "ينتمي Radiant Canvas إلى نفس الفئة الفرعية التي تضم [Draw Things](/ar/power-local-llm/draw-things-review) و[DiffusionBee](/ar/power-local-llm/diffusionbee-review) — تولّد التطبيقات الثلاثة الصور محليًا على Apple Silicon — إلا أن Radiant Canvas حصري على App Store، وهو فريميوم وليس مجانيًا بالكامل، ويضيف مقارنة متعددة النماذج واستوديو قائم على العقد لا يتوفران في التطبيقين الآخرين. راجع [دليل برامج Local LLM](https://www.promptquorum.com/ar/directory) لمعرفة موقعه بين أدوات توليد الصور المحلية الأخرى." },
         ],
       },
       overview: {
@@ -1622,7 +1622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'get-radiant-canvas',
         title: 'الحصول على Radiant Canvas لجهاز Mac',
-        content: "**هذه المراجعة مكمّلة لإدراج Radiant Canvas في [دليل برامج Local LLM](https://www.promptquorum.com/ar/power-local-llm/local-llm-software-directory)** — راجع الدليل لمعرفة كيفية تصنيفه إلى جانب أدوات توليد الصور المحلية الأخرى. يُوزَّع Radiant Canvas حصريًا عبر Mac App Store؛ تأكد دائمًا من أنك في الصفحة الرسمية التي وثّقتها Apple قبل التثبيت.",
+        content: "**هذه المراجعة مكمّلة لإدراج Radiant Canvas في [دليل برامج Local LLM](https://www.promptquorum.com/ar/directory)** — راجع الدليل لمعرفة كيفية تصنيفه إلى جانب أدوات توليد الصور المحلية الأخرى. يُوزَّع Radiant Canvas حصريًا عبر Mac App Store؛ تأكد دائمًا من أنك في الصفحة الرسمية التي وثّقتها Apple قبل التثبيت.",
         columns: ['القناة', 'الرابط'],
         rows: [
           { 'القناة': 'Mac App Store', 'الرابط': '[Radiant Canvas — AI Image Gen](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075)' },
@@ -1728,7 +1728,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[مراجعة Draw Things: Stable Diffusion محلي مجاني لأنظمة macOS وiOS](/ar/power-local-llm/draw-things-review) — بديل مجاني يعمل أيضًا على iPhone وiPad.',
           '[مراجعة DiffusionBee: Stable Diffusion محلي مجاني ومفتوح المصدر لأجهزة Mac](/ar/power-local-llm/diffusionbee-review) — تطبيق مجاني بترخيص AGPL-3.0 لا يزال يدعم أجهزة Mac بمعالج Intel.',
-          '[دليل برامج Local LLM](https://www.promptquorum.com/ar/power-local-llm/local-llm-software-directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك موقع Radiant Canvas بين تطبيقات توليد الصور.',
+          '[دليل برامج Local LLM](https://www.promptquorum.com/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك موقع Radiant Canvas بين تطبيقات توليد الصور.',
         ],
       },
     },
@@ -1745,7 +1745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     primaryTerm: 'Radiant Canvas',
     title: 'Radiant Canvas 리뷰: Mac용 로컬 AI 이미지 생성',
     seoTitle: 'Radiant Canvas 리뷰: Apple Silicon 로컬 AI 이미지 생성',
-    intro: "Radiant Canvas는 [radiantbeargames.com/radiant-canvas](https://radiantbeargames.com/radiant-canvas)에서 제공되는 macOS 애플리케이션으로, 독립 개발자 [Arnold Sallay](https://radiantbeargames.com)가 Radiant Bear Games 레이블로 개발했습니다. 다운로드 가능한 7개의 AI 모델 계열을 사용하여 Apple Silicon Mac에서 완전히 로컬로 이미지를 생성하고 편집합니다. [Mac App Store](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075)를 통해서만 배포되며, 무료 기본 등급과 월간·연간·평생 앱 내 구매로 제공되는 Radiant Canvas PRO 등급이 있습니다. 이 리뷰는 [Local LLM Software Directory](https://www.promptquorum.com/ko/power-local-llm/local-llm-software-directory)에 등록된 Radiant Canvas 항목의 연관 글이며, 본 사이트가 이미 리뷰한 다른 두 로컬 Mac 이미지 생성 앱인 [Draw Things](/ko/power-local-llm/draw-things-review)와 [DiffusionBee](/ko/power-local-llm/diffusionbee-review)를 비교합니다.",
+    intro: "Radiant Canvas는 [radiantbeargames.com/radiant-canvas](https://radiantbeargames.com/radiant-canvas)에서 제공되는 macOS 애플리케이션으로, 독립 개발자 [Arnold Sallay](https://radiantbeargames.com)가 Radiant Bear Games 레이블로 개발했습니다. 다운로드 가능한 7개의 AI 모델 계열을 사용하여 Apple Silicon Mac에서 완전히 로컬로 이미지를 생성하고 편집합니다. [Mac App Store](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075)를 통해서만 배포되며, 무료 기본 등급과 월간·연간·평생 앱 내 구매로 제공되는 Radiant Canvas PRO 등급이 있습니다. 이 리뷰는 [Local LLM Software Directory](https://www.promptquorum.com/ko/directory)에 등록된 Radiant Canvas 항목의 연관 글이며, 본 사이트가 이미 리뷰한 다른 두 로컬 Mac 이미지 생성 앱인 [Draw Things](/ko/power-local-llm/draw-things-review)와 [DiffusionBee](/ko/power-local-llm/diffusionbee-review)를 비교합니다.",
     metaDescription: "Radiant Canvas 리뷰 2026: Apple Silicon에서 로컬 AI 이미지 생성과 참조 이미지 편집을 지원하는 Mac App Store 전용 프리미엄 앱, 7개 모델 계열, 노드 기반 Studio, Draw Things 및 DiffusionBee와의 비교를 다룹니다.",
     readTime: '9분 읽기',
     targetKeywords: [
@@ -1804,7 +1804,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '완전히 기기 내에서 실행 — 클라우드 처리 없음, 개발자 설명 기준',
         ],
         callouts: [
-          { type: 'note', text: "Radiant Canvas는 [Draw Things](/ko/power-local-llm/draw-things-review), [DiffusionBee](/ko/power-local-llm/diffusionbee-review)와 같은 하위 세그먼트에 속합니다 — 세 앱 모두 Apple Silicon에서 로컬로 이미지를 생성합니다 — 하지만 Radiant Canvas는 App Store 전용이며 완전 무료가 아닌 프리미엄 모델이고, 다른 두 앱에는 없는 다중 모델 비교와 노드 기반 Studio를 추가로 제공합니다. 다른 로컬 이미지 생성 도구들 사이에서의 위치는 [Local LLM Software Directory](https://www.promptquorum.com/ko/power-local-llm/local-llm-software-directory)를 참고하세요." },
+          { type: 'note', text: "Radiant Canvas는 [Draw Things](/ko/power-local-llm/draw-things-review), [DiffusionBee](/ko/power-local-llm/diffusionbee-review)와 같은 하위 세그먼트에 속합니다 — 세 앱 모두 Apple Silicon에서 로컬로 이미지를 생성합니다 — 하지만 Radiant Canvas는 App Store 전용이며 완전 무료가 아닌 프리미엄 모델이고, 다른 두 앱에는 없는 다중 모델 비교와 노드 기반 Studio를 추가로 제공합니다. 다른 로컬 이미지 생성 도구들 사이에서의 위치는 [Local LLM Software Directory](https://www.promptquorum.com/ko/directory)를 참고하세요." },
         ],
       },
       overview: {
@@ -1837,7 +1837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       downloads: {
         id: 'get-radiant-canvas',
         title: 'Mac용 Radiant Canvas 받기',
-        content: "**이 리뷰는 [Local LLM Software Directory](https://www.promptquorum.com/ko/power-local-llm/local-llm-software-directory)에 등록된 Radiant Canvas 항목의 연관 글입니다** — 다른 로컬 이미지 생성 도구들 사이에서 어떻게 분류되는지 디렉터리에서 확인하세요. Radiant Canvas는 Mac App Store를 통해서만 배포됩니다. 설치 전에는 항상 Apple이 검증한 공식 페이지인지 확인하세요.",
+        content: "**이 리뷰는 [Local LLM Software Directory](https://www.promptquorum.com/ko/directory)에 등록된 Radiant Canvas 항목의 연관 글입니다** — 다른 로컬 이미지 생성 도구들 사이에서 어떻게 분류되는지 디렉터리에서 확인하세요. Radiant Canvas는 Mac App Store를 통해서만 배포됩니다. 설치 전에는 항상 Apple이 검증한 공식 페이지인지 확인하세요.",
         columns: ['채널', '링크'],
         rows: [
           { '채널': 'Mac App Store', '링크': '[Radiant Canvas — AI Image Gen](https://apps.apple.com/us/app/radiant-canvas-ai-image-gen/id6802973075)' },
@@ -1943,7 +1943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Draw Things 리뷰: macOS와 iOS용 무료 로컬 Stable Diffusion](/ko/power-local-llm/draw-things-review) — iPhone과 iPad에서도 실행되는 무료 대안.',
           '[DiffusionBee 리뷰: Mac용 무료 오픈 소스 로컬 Stable Diffusion](/ko/power-local-llm/diffusionbee-review) — 여전히 Intel Mac을 지원하는 무료 AGPL-3.0 앱.',
-          '[Local LLM Software Directory](https://www.promptquorum.com/ko/power-local-llm/local-llm-software-directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, 이미지 생성 앱 중 Radiant Canvas의 위치도 포함합니다.',
+          '[Local LLM Software Directory](https://www.promptquorum.com/ko/directory) — 이 글이 속한 로컬 AI 도구의 전체 카탈로그로, 이미지 생성 앱 중 Radiant Canvas의 위치도 포함합니다.',
         ],
       },
     },

@@ -149,7 +149,9 @@ export function directoryUrlFor(filters: { category?: CategorySubKey; os?: OSKey
   if (filters.os) params.set('os', filters.os)
   if (filters.price) params.set('price', filters.price)
   const qs = params.toString()
-  return `${SITE}/power-local-llm/local-llm-software-directory-2026${qs ? `?${qs}` : ''}`
+  // Canonical path. The legacy /power-local-llm/local-llm-software-directory[-2026] URL only
+  // exists as a 301 (next.config.ts), so MCP clients should be handed the final URL directly.
+  return `${SITE}/directory${qs ? `?${qs}` : ''}`
 }
 
 export interface AppSummary {
