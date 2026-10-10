@@ -16,7 +16,7 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
   const mcpStatsHref = lang === 'en' ? '/mcp-stats' : `/${lang}/mcp-stats`
   const directoryHref = lang === 'en' ? '/directory' : `/${lang}/directory`
 
-  const items: { label: string; value: string; icon: HomeIconName; href?: string; hint?: string }[] = [
+  const items: { label: string; value: string; icon: HomeIconName; href?: string; hint?: string; desc?: string }[] = [
     {
       label: t('statAppsTracked', lang),
       value: stats.totalApps.toLocaleString(),
@@ -25,9 +25,19 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
       hint: t('statAppsTrackedHint', lang),
     },
     { label: t('statLanguages', lang), value: stats.locales.toString(), icon: 'globe' },
-    { label: t('statFounderVerified', lang), value: stats.founderVerified.toString(), icon: 'verified' },
+    {
+      label: t('statFounderVerified', lang),
+      value: stats.founderVerified.toString(),
+      icon: 'verified',
+      desc: t('statFounderVerifiedDesc', lang),
+    },
     { label: t('statArticlesPublished', lang), value: stats.totalArticles.toLocaleString(), icon: 'posts' },
-    { label: t('statHandsOnTests', lang), value: stats.handsOnTests.toLocaleString(), icon: 'test' },
+    {
+      label: t('statHandsOnTests', lang),
+      value: stats.handsOnTests.toLocaleString(),
+      icon: 'test',
+      desc: t('statHandsOnTestsDesc', lang),
+    },
     {
       label: t('statMcpCalls', lang),
       value: mcpUsage.total.toLocaleString(),
@@ -49,6 +59,7 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
                   {item.label}
                 </dt>
                 <dd className="mt-1 text-2xl font-semibold leading-none text-text-primary">{item.value}</dd>
+                {item.desc && <p className="mt-1.5 text-[11px] leading-snug text-text-secondary">{item.desc}</p>}
                 {item.hint && <p className="mt-1 text-[11px] font-medium text-primary">{item.hint}</p>}
               </>
             )
@@ -86,6 +97,7 @@ export async function ByTheNumbersBlock({ lang = 'en', layout = 'card' }: { lang
                 {item.label}
               </dt>
               <dd className="mt-1 text-3xl font-semibold leading-none text-text-primary">{item.value}</dd>
+              {item.desc && <p className="mt-1.5 text-[11px] leading-snug text-text-secondary">{item.desc}</p>}
               {item.hint && <p className="mt-1.5 text-[11px] font-medium text-primary">{item.hint}</p>}
             </>
           )
