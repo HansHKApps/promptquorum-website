@@ -4,116 +4,82 @@ import path from 'path'
 
 export const runtime = 'nodejs'
 
-// Article `tldr` bullets are authored with markdown `**bold**` emphasis for
-// the article page's own markdown renderer. Satori has no markdown support,
-// so without this the literal asterisks show up in the rendered PNG — split
-// on the marker and render matching spans with fontWeight 700 instead.
-function renderRich(text: string, boldColor: string) {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g).filter(Boolean)
-  return parts.map((part, i) => {
-    const m = part.match(/^\*\*([^*]+)\*\*$/)
-    if (m) {
-      return (
-        <span key={i} style={{ fontWeight: 700, color: boldColor }}>
-          {m[1]}
-        </span>
-      )
-    }
-    return <span key={i}>{part}</span>
-  })
-}
+// Google Discover cards are shown mostly on phones, at thumbnail size, next to
+// three other cards. Dense body copy (the old 3-5 line bullet layout) is
+// illegible there. The hero is therefore a poster: one huge headline plus at
+// most three short punch lines (~30 words in total), full-bleed gradient,
+// no body text smaller than ~40px at 1200px wide.
+//
+// Callers (113 gen-*-heroes.mjs scripts) still pass long prose bullets/tables.
+// Truncating prose mid-sentence produces nonsense fragments, so long bullets
+// are DROPPED, not cut: the poster falls back to short `facts` values
+// (license, RAM, price...) and, failing that, to the headline alone. Authors
+// who want punch lines set `highlights` explicitly.
 
-type HeroFact = {
-  label: string
-  value: string
-  tone?: 'emerald' | 'amber' | 'rose' | 'slate' | 'violet'
-}
+const CJK_LANGS = new Set(['zh', 'ja', 'ko'])
+const MAX_LINES = 3
+const MAX_WORDS_PER_LINE = 9
+const MAX_CJK_CHARS_PER_LINE = 20
 
 type HeroSpec = {
   lang: string
   title: string
-  subtitle: string
+  subtitle?: string
+  // Preferred: up to 3 hand-written lines, ~7 words each (~30 words total
+  // with the title). Anything over the per-line budget is dropped.
+  highlights?: string[]
   columns?: string[]
   rows?: string[][]
   callout?: { formula: string; note: string }
   bullets?: string[]
-  // Optional graphical fact-chip strip (min RAM/VRAM, license, price, platforms
-  // pulled from the app's directory tile data) rendered between the body and
-  // the footer. Purely additive — deliberately excluded from bodyCharCount()
-  // below, since chips are scannable metadata, not prose, and must not become
-  // a way to dodge the real-content floor with four short strings.
-  facts?: HeroFact[]
-  footer: string
+  // Short chips ("MIT", "6 GB RAM") — used as punch lines when no
+  // highlights/short bullets exist.
+  facts?: { label?: string; value: string }[]
+  footer?: string
 }
 
-// Matches the emerald/amber/rose/slate semantic vocabulary already used for
-// price/locality/compatibility badges in ToolCard.tsx and CompatibilityBadge.tsx
-// (Tailwind -50/-200/-700 hex triplets, since Satori doesn't process Tailwind
-// classes), plus a violet tone matching this route's own #6750A4 brand purple.
-const FACT_TONE: Record<NonNullable<HeroFact['tone']>, { bg: string; border: string; text: string }> = {
-  emerald: { bg: '#ECFDF5', border: '#A7F3D0', text: '#047857' },
-  amber: { bg: '#FFFBEB', border: '#FDE68A', text: '#B45309' },
-  rose: { bg: '#FFF1F2', border: '#FECDD3', text: '#BE123C' },
-  slate: { bg: '#F8FAFC', border: '#E2E8F0', text: '#475569' },
-  violet: { bg: '#F7F2FA', border: '#E8DEF8', text: '#6750A4' },
+const stripMarkdown = (t: string) => t.replace(/\*\*/g, '').replace(/\s+/g, ' ').trim()
+
+function fits(text: string, lang: string): boolean {
+  return CJK_LANGS.has(lang) ? text.length <= MAX_CJK_CHARS_PER_LINE : text.split(' ').length <= MAX_WORDS_PER_LINE
 }
 
-// Hard floor on rendered body content so a near-empty hero (the original bug:
-// title band + one line of text + a blank 500px void) can never ship again.
-// Counts only what actually fills the body — table cells, callout, or bullets
-// — not the header/subtitle, which is capped at 2 lines regardless of length.
-//
-// STANDING RULE: every hero's body content (whether that's the subtitle
-// fallback, bullets, table, or callout) must render at least 3 lines of
-// real, specific detail in the body — not just clear this floor by a
-// sentence fragment. At the body subtitle's fontSize:28px / maxWidth:1000px
-// (see the no-bullets/table/callout fallback below), ~65-70 Latin chars fit
-// per line, so ~220 chars is the practical 3-line floor; write closer to
-// 300-350 chars (4-5 lines) when the topic supports it — e.g. spell out
-// what each side of a comparison actually is, not just restate the title.
-// CJK/Korean text conveys far more per character than Latin scripts (a 78-char
-// Japanese sentence is a complete, substantial description, not a fragment),
-// so the floor is scaled down for those languages rather than applying one
-// Latin-calibrated threshold everywhere.
-const MIN_BODY_CHARS_DEFAULT = 220
-const MIN_BODY_CHARS_CJK = 85
-const CJK_LANGS = new Set(['zh', 'ja', 'ko'])
-
-function minBodyChars(lang: string): number {
-  return CJK_LANGS.has(lang) ? MIN_BODY_CHARS_CJK : MIN_BODY_CHARS_DEFAULT
+function punchLines(spec: HeroSpec): string[] {
+  const clean = (arr?: string[]) => (arr ?? []).map(stripMarkdown).filter((t) => t && fits(t, spec.lang))
+  const candidates = [
+    clean(spec.highlights),
+    clean(spec.bullets),
+    clean(spec.callout ? [spec.callout.note] : undefined),
+    clean(spec.facts?.map((f) => (f.label ? `${f.label}: ${f.value}` : f.value))),
+  ]
+  return (candidates.find((c) => c.length > 0) ?? []).slice(0, MAX_LINES)
 }
 
-// Deliberately does NOT count spec.facts — chip strings ("6 GB RAM", "MIT")
-// are scannable metadata, not prose, and must never let a caller satisfy this
-// floor with four short chips instead of real body content.
-function bodyCharCount(spec: HeroSpec): number {
-  if (spec.callout) return spec.callout.formula.length + spec.callout.note.length
-  if (spec.columns && spec.rows) {
-    return spec.rows.flat().join('').length + spec.columns.join('').length
-  }
-  if (spec.bullets && spec.bullets.length > 0) {
-    return spec.bullets.join('').length
-  }
-  return spec.subtitle?.length ?? 0
+// Scale the headline to its length so it always fills the width without
+// wrapping past 3 lines. CJK glyphs are wider per character.
+function titleSize(title: string, lang: string): number {
+  const n = CJK_LANGS.has(lang) ? title.length * 1.9 : title.length
+  if (n <= 24) return 92
+  if (n <= 40) return 80
+  if (n <= 56) return 68
+  return 58
 }
 
-// The brand mark (public/logo.svg) is 4 bars of fading opacity. Satori's
-// ImageResponse can't rasterize an <img> with an SVG data URI (throws deep
-// inside resvg), so reproduce the same 4-bar mark as plain divs instead —
-// simple enough that there's no real loss versus loading the actual file.
-function LogoMark({ color, barWidth = 6, barHeight = 28 }: { color: string; barWidth?: number; barHeight?: number }) {
+// The brand mark (public/logo.svg) is 4 bars of fading opacity. Satori can't
+// rasterize an <img> SVG data URI, so reproduce it as plain divs.
+function LogoMark({ color, barWidth = 10, barHeight = 44 }: { color: string; barWidth?: number; barHeight?: number }) {
   const opacities = [1, 0.75, 0.5, 0.3]
   return (
-    <div style={{ display: 'flex', gap: '3px', alignItems: 'flex-end' }}>
+    <div style={{ display: 'flex', gap: '4px', alignItems: 'flex-end' }}>
       {opacities.map((o, i) => (
-        <div key={i} style={{ display: 'flex', width: `${barWidth}px`, height: `${barHeight}px`, background: color, opacity: o, borderRadius: '1px' }} />
+        <div key={i} style={{ display: 'flex', width: `${barWidth}px`, height: `${barHeight}px`, background: color, opacity: o, borderRadius: '2px' }} />
       ))}
     </div>
   )
 }
 
 // Internal content-tooling route: renders Discover-compliant (1200x675 raster,
-// 16:9) hero images for article body/schema use, sharing the same
+// 16:9) poster-style hero images for article body/schema use, sharing the same
 // Satori+resvg pipeline as /api/og/[slug] so CJK and Arabic shaping render
 // correctly — unlike sharp's system-font SVG rasterization, which drops
 // katakana glyphs and fails to shape Arabic. Not linked from any page;
@@ -122,18 +88,17 @@ function LogoMark({ color, barWidth = 6, barHeight = 28 }: { color: string; barW
 export async function POST(request: Request) {
   const spec = (await request.json()) as HeroSpec
   const isRtl = spec.lang === 'ar'
-  const dir = isRtl ? 'rtl' : 'ltr'
   const rowDir = isRtl ? 'row-reverse' : 'row'
   const textAlign = isRtl ? 'right' : 'left'
 
-  const requiredChars = minBodyChars(spec.lang)
-  if (bodyCharCount(spec) < requiredChars) {
-    return new Response(
-      `Rejected: body content (${bodyCharCount(spec)} chars) is below the ${requiredChars}-char minimum for lang="${spec.lang}" — ` +
-        `supply richer bullets/table/callout data instead of a bare title+subtitle.`,
-      { status: 400 },
-    )
+  if (!spec.title?.trim()) {
+    return new Response('Rejected: title is required.', { status: 400 })
   }
+
+  const title = stripMarkdown(spec.title)
+  const lines = punchLines(spec)
+  const showFormula = !!spec.callout && !spec.bullets?.length
+  const fontSize = titleSize(title, spec.lang)
 
   return new ImageResponse(
     (
@@ -143,243 +108,77 @@ export async function POST(request: Request) {
           height: '675px',
           display: 'flex',
           flexDirection: 'column',
-          background: '#FFFFFF',
+          position: 'relative',
+          overflow: 'hidden',
+          background: 'linear-gradient(135deg, #1E0A4A 0%, #4C1D95 38%, #6750A4 62%, #C026D3 100%)',
+          color: '#FFFFFF',
           fontFamily: isRtl ? 'Beiruti' : 'Plus Jakarta Sans, system-ui, sans-serif',
-          direction: dir,
+          direction: isRtl ? 'rtl' : 'ltr',
+          padding: '56px 72px',
         }}
       >
-        {/* Header band */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            background: '#6750A4',
-            padding: '28px 60px',
-            color: '#FFFFFF',
-            position: 'relative',
-          }}
-        >
-          <div style={{ display: 'flex', flexDirection: rowDir, alignItems: 'center', gap: '14px' }}>
-            <LogoMark color="#FFFFFF" />
-            <div style={{ display: 'flex', fontSize: '30px', fontWeight: 700, textAlign }}>{spec.title}</div>
-          </div>
+        {/* Shine: soft glows plus a diagonal sheen band */}
+        <div style={{ display: 'flex', position: 'absolute', top: '-180px', ...(isRtl ? { left: '-120px' } : { right: '-120px' }), width: '620px', height: '620px', borderRadius: '9999px', background: 'radial-gradient(circle, rgba(251,191,36,0.55) 0%, rgba(251,191,36,0) 68%)' }} />
+        <div style={{ display: 'flex', position: 'absolute', bottom: '-240px', ...(isRtl ? { right: '-160px' } : { left: '-160px' }), width: '700px', height: '700px', borderRadius: '9999px', background: 'radial-gradient(circle, rgba(232,121,249,0.5) 0%, rgba(232,121,249,0) 70%)' }} />
+        <div style={{ display: 'flex', position: 'absolute', top: '-100px', left: '420px', width: '150px', height: '900px', background: 'linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.14) 50%, rgba(255,255,255,0) 100%)', transform: 'rotate(24deg)' }} />
+
+        {/* Headline */}
+        <div style={{ display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'center', gap: '34px' }}>
           <div
             style={{
-              display: '-webkit-box',
-              WebkitLineClamp: 2,
-              WebkitBoxOrient: 'vertical',
-              overflow: 'hidden',
-              fontSize: '18px',
-              fontWeight: 400,
-              color: '#E8DEF8',
-              marginTop: '6px',
+              display: 'flex',
+              fontSize: `${fontSize}px`,
+              fontWeight: 800,
+              lineHeight: 1.08,
+              letterSpacing: '-0.02em',
               textAlign,
+              textShadow: '0 4px 24px rgba(0,0,0,0.35)',
             }}
           >
-            {spec.subtitle}
+            {title}
           </div>
-        </div>
 
-        <div style={{ display: 'flex', flexDirection: 'column', flex: 1, padding: '32px 60px', position: 'relative' }}>
-          {/* Decorative background texture — purely cosmetic, low-opacity so
-              it never competes with text contrast. Fixed positions rather
-              than data-driven so it's identical (and safe) across all specs. */}
-          <div
-            style={{
-              display: 'flex',
-              position: 'absolute',
-              top: '-60px',
-              width: '260px',
-              height: '260px',
-              borderRadius: '9999px',
-              background: '#6750A4',
-              opacity: 0.06,
-              zIndex: -1,
-              ...(isRtl ? { left: '-60px' } : { right: '-60px' }),
-            }}
-          />
-          <div
-            style={{
-              display: 'flex',
-              position: 'absolute',
-              bottom: '-80px',
-              width: '200px',
-              height: '200px',
-              borderRadius: '9999px',
-              background: '#F59E0B',
-              opacity: 0.05,
-              zIndex: -1,
-              ...(isRtl ? { right: '-40px' } : { left: '-40px' }),
-            }}
-          />
-
-          {spec.callout && (
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                background: '#F7F2FA',
-                borderRadius: '16px',
-                padding: '20px',
-                marginBottom: '28px',
-              }}
-            >
-              <div style={{ display: 'flex', fontSize: '32px', fontWeight: 700, color: '#6750A4', fontFamily: 'SF Mono, Monaco, monospace' }}>
-                {spec.callout.formula}
-              </div>
-              <div style={{ display: 'flex', fontSize: '16px', color: '#79747E', marginTop: '8px' }}>{spec.callout.note}</div>
+          {showFormula && (
+            <div style={{ display: 'flex', fontSize: '60px', fontWeight: 800, color: '#FDE68A', fontFamily: 'SF Mono, Monaco, monospace', textAlign }}>
+              {spec.callout!.formula}
             </div>
           )}
 
-          {spec.columns && spec.rows && (
-            <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
-              <div style={{ display: 'flex', flexDirection: rowDir, borderBottom: '2px solid #E8DEF8', paddingBottom: '10px' }}>
-                {spec.columns.map((col, i) => (
-                  <div
-                    key={i}
-                    style={{
-                      display: 'flex',
-                      flex: i === 0 ? '1.4' : '1',
-                      fontSize: '15px',
-                      fontWeight: 700,
-                      color: '#79747E',
-                      textAlign,
-                    }}
-                  >
-                    {col}
-                  </div>
-                ))}
-              </div>
-              {spec.rows.map((row, ri) => (
-                <div
-                  key={ri}
-                  style={{
-                    display: 'flex',
-                    flexDirection: rowDir,
-                    alignItems: 'center',
-                    borderBottom: ri < spec.rows!.length - 1 ? '1px solid #F7F2FA' : 'none',
-                    padding: '16px 0',
-                  }}
-                >
-                  {row.map((cell, ci) => (
-                    <div
-                      key={ci}
-                      style={{
-                        display: 'flex',
-                        flex: ci === 0 ? '1.4' : '1',
-                        fontSize: ci === 0 ? '21px' : '19px',
-                        fontWeight: ci === 0 ? 600 : ci === row.length - 1 ? 700 : 400,
-                        color: ci === 0 ? '#1C1B1F' : ci === row.length - 1 ? '#6750A4' : '#49454F',
-                        textAlign,
-                      }}
-                    >
-                      {cell}
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-          )}
-
-          {spec.bullets && spec.bullets.length > 0 && (
-            <div style={{ display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'center', gap: '22px' }}>
-              {spec.bullets.slice(0, 5).map((bullet, i) => (
-                <div key={i} style={{ display: 'flex', flexDirection: rowDir, alignItems: 'flex-start', gap: '16px' }}>
+          {lines.length > 0 && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
+              {lines.map((line, i) => (
+                <div key={i} style={{ display: 'flex', flexDirection: rowDir, alignItems: 'center', gap: '22px' }}>
                   <div
                     style={{
                       display: 'flex',
                       flexShrink: 0,
-                      width: '32px',
-                      height: '32px',
-                      borderRadius: '8px',
-                      background: '#F7F2FA',
-                      color: '#6750A4',
-                      fontSize: '16px',
-                      fontWeight: 700,
+                      width: '52px',
+                      height: '52px',
+                      borderRadius: '9999px',
+                      background: '#FBBF24',
+                      color: '#3B0764',
+                      fontSize: '30px',
+                      fontWeight: 800,
                       alignItems: 'center',
                       justifyContent: 'center',
                     }}
                   >
                     {i + 1}
                   </div>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', fontSize: '22px', fontWeight: 500, color: '#1C1B1F', textAlign, lineHeight: '1.4' }}>
-                    {renderRich(bullet, '#6750A4')}
-                  </div>
+                  <div style={{ display: 'flex', fontSize: '44px', fontWeight: 700, lineHeight: 1.15, textAlign, textShadow: '0 2px 12px rgba(0,0,0,0.3)' }}>{line}</div>
                 </div>
               ))}
             </div>
           )}
+        </div>
 
-          {/* Fallback: no table, callout, or bullets supplied — render the
-              subtitle as a large lead-in statement instead of leaving the
-              body empty. This is the layout every "overview" hero used
-              before this fix, which rendered nothing here at all. */}
-          {!spec.callout && !(spec.columns && spec.rows) && !(spec.bullets && spec.bullets.length > 0) && (
-            <div style={{ display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'center' }}>
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  borderLeft: isRtl ? 'none' : '4px solid #6750A4',
-                  borderRight: isRtl ? '4px solid #6750A4' : 'none',
-                  paddingLeft: isRtl ? '0' : '24px',
-                  paddingRight: isRtl ? '24px' : '0',
-                }}
-              >
-                <div style={{ display: 'flex', fontSize: '28px', fontWeight: 500, color: '#1C1B1F', textAlign, lineHeight: '1.5', maxWidth: '1000px' }}>
-                  {spec.subtitle}
-                </div>
-              </div>
-            </div>
-          )}
-
-          {spec.facts && spec.facts.length > 0 && (
-            <div style={{ display: 'flex', flexDirection: rowDir, flexWrap: 'wrap', gap: '10px', marginTop: '20px' }}>
-              {spec.facts.slice(0, 4).map((fact, i) => {
-                const tone = FACT_TONE[fact.tone ?? 'slate']
-                return (
-                  <div
-                    key={i}
-                    style={{
-                      display: 'flex',
-                      flexDirection: rowDir,
-                      alignItems: 'baseline',
-                      gap: fact.label ? '5px' : '0',
-                      background: tone.bg,
-                      border: `1px solid ${tone.border}`,
-                      borderRadius: '9999px',
-                      padding: '6px 14px',
-                    }}
-                  >
-                    {fact.label && (
-                      <span
-                        style={{
-                          display: 'flex',
-                          fontSize: '10px',
-                          fontWeight: 700,
-                          textTransform: 'uppercase',
-                          letterSpacing: '0.02em',
-                          color: tone.text,
-                          opacity: 0.75,
-                        }}
-                      >
-                        {fact.label}
-                      </span>
-                    )}
-                    <span style={{ display: 'flex', fontSize: '13px', fontWeight: 700, color: tone.text }}>{fact.value}</span>
-                  </div>
-                )
-              })}
-            </div>
-          )}
-
-          <div style={{ display: 'flex', flexDirection: rowDir, justifyContent: 'space-between', alignItems: 'center', marginTop: '20px' }}>
-            <div style={{ display: 'flex', fontSize: '14px', fontWeight: 600, color: '#79747E', textAlign, maxWidth: '900px' }}>
-              {spec.footer}
-            </div>
-            <div style={{ display: 'flex', fontSize: '12px', fontWeight: 600, color: '#79747E' }}>promptquorum.com</div>
+        {/* Brand strip */}
+        <div style={{ display: 'flex', flexDirection: rowDir, justifyContent: 'space-between', alignItems: 'center', marginTop: '20px' }}>
+          <div style={{ display: 'flex', flexDirection: rowDir, alignItems: 'center', gap: '16px' }}>
+            <LogoMark color="#FFFFFF" />
+            <div style={{ display: 'flex', fontSize: '30px', fontWeight: 800 }}>PromptQuorum</div>
           </div>
+          <div style={{ display: 'flex', fontSize: '26px', fontWeight: 700, color: '#FDE68A' }}>promptquorum.com</div>
         </div>
       </div>
     ),
@@ -391,7 +190,10 @@ export async function POST(request: Request) {
             { name: 'Beiruti', data: fs.readFileSync(path.join(process.cwd(), 'public/fonts/Beiruti-Regular.ttf')), weight: 400, style: 'normal' },
             { name: 'Beiruti', data: fs.readFileSync(path.join(process.cwd(), 'public/fonts/Beiruti-Bold.ttf')), weight: 700, style: 'normal' },
           ]
-        : undefined,
+        : [
+            { name: 'Plus Jakarta Sans', data: fs.readFileSync(path.join(process.cwd(), 'public/fonts/PlusJakartaSans-700.woff')), weight: 700, style: 'normal' },
+            { name: 'Plus Jakarta Sans', data: fs.readFileSync(path.join(process.cwd(), 'public/fonts/PlusJakartaSans-800.woff')), weight: 800, style: 'normal' },
+          ],
       headers: {
         'Content-Type': 'image/png',
         'X-Robots-Tag': 'noindex, nofollow',
