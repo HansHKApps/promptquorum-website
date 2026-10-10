@@ -2378,5 +2378,212 @@
     ],
     "reason": "geo-meta-optimizer: coherence-A/B1 - GSC rebrand queries (is windsurf now devin, what happened); answer-first title+meta, 4 FAQs (Devin/rename/old name)",
     "baseline": null
+  },
+  {
+    "id": "383536c8-a1f4-42cd-af4f-c3b1918252b0",
+    "slug": "/power-local-llm/nanobot-review",
+    "date": "2026-10-10T06:20:14.584Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Nanobot Review: A Self-Hosted AI Agent Framework in",
+        "new": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Nanobot Review: Self-Hosted AI Agent Framework",
+        "new": "nanobot Review (2026): HKUDS Self-Hosted AI Agent Framework"
+      },
+      {
+        "field": "metaDescription",
+        "old": "nanobot is a free, open-source, self-hosted AI agent framework with persistent memory, MCP tools, and chat-app integrations. Here is how to install it and who it fits.",
+        "new": "nanobot is a free, MIT-licensed self-hosted AI agent framework by HKUDS with MCP, memory and chat channels. See what its README does and does not document."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-E/B2 - GSC README-feature queries (prompt caching, WhatsApp, multimodal, heartbeat, benchmarks); new README-documents section + 5 FAQs, truncated H1 fixed, meta shortened",
+    "baseline": {
+      "position": 8.6,
+      "impressions": 1400,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "GSC top queries 2026-10-10"
+    }
+  },
+  {
+    "id": "6bd790a7-7f20-49fd-b12b-0efc0d7cada9",
+    "slug": "/de/power-local-llm/nanobot-review",
+    "date": "2026-10-10T06:20:14.688Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Nanobot Review: Selbst gehostetes KI-Agent-Framework",
+        "new": "nanobot Review (2026): Selbst gehostetes KI-Agent-Framework"
+      },
+      {
+        "field": "metaDescription",
+        "old": "nanobot ist ein kostenloses, quelloffenes, selbst gehostetes KI-Agent-Framework mit dauerhaftem Gedächtnis, MCP-Tools und Chat-App-Integrationen. So installieren Sie es, und dafür eignet es sich.",
+        "new": "nanobot: kostenloses, MIT-lizenziertes, selbst gehostetes KI-Agent-Framework von HKUDS mit MCP und Chat-Kanälen. Was die README dokumentiert – und was nicht."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-E/B2 - GSC README-feature queries (prompt caching, WhatsApp, multimodal, heartbeat, benchmarks); new README-documents section + 5 FAQs, truncated H1 fixed, meta shortened",
+    "baseline": null
+  },
+  {
+    "id": "9de97f20-c71e-48d7-8ff5-43029d5abe04",
+    "slug": "/fr/power-local-llm/nanobot-review",
+    "date": "2026-10-10T06:20:14.787Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Nanobot: un framework d'agent IA auto-hébergé en",
+        "new": "Nanobot: un framework d'agent IA auto-hébergé en 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Nanobot: framework d'agent IA auto-hébergé",
+        "new": "nanobot Review (2026) : framework d'agent IA auto-hébergé"
+      },
+      {
+        "field": "metaDescription",
+        "old": "nanobot est un framework d'agent IA gratuit, open source et auto-hébergé, avec mémoire persistante, outils MCP et intégrations de chat. Installation et public cible expliqués.",
+        "new": "nanobot : framework d'agent IA auto-hébergé, gratuit (MIT), de HKUDS, avec MCP et canaux de chat. Ce que son README documente — et ce qu'il omet."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-E/B2 - GSC README-feature queries (prompt caching, WhatsApp, multimodal, heartbeat, benchmarks); new README-documents section + 5 FAQs, truncated H1 fixed, meta shortened",
+    "baseline": null
+  },
+  {
+    "id": "1c694c8a-fca0-4352-9802-e611a552a417",
+    "slug": "/es/power-local-llm/nanobot-review",
+    "date": "2026-10-10T06:20:14.889Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Nanobot: un framework de agente de IA autoalojado en",
+        "new": "Nanobot: un framework de agente de IA autoalojado en 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Nanobot: framework de agente IA autoalojado",
+        "new": "nanobot Review (2026): framework de agente IA autoalojado"
+      },
+      {
+        "field": "metaDescription",
+        "old": "nanobot es un framework de agente de IA gratuito, de código abierto y autoalojado, con memoria persistente, herramientas MCP e integraciones de chat. Instalación y público objetivo.",
+        "new": "nanobot: framework de agente de IA autoalojado, gratuito (MIT), de HKUDS, con MCP y canales de chat. Qué documenta su README y qué no."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-E/B2 - GSC README-feature queries (prompt caching, WhatsApp, multimodal, heartbeat, benchmarks); new README-documents section + 5 FAQs, truncated H1 fixed, meta shortened",
+    "baseline": null
+  },
+  {
+    "id": "3d871cf7-d8c0-4064-a80d-61ef60f0d652",
+    "slug": "/pt/power-local-llm/nanobot-review",
+    "date": "2026-10-10T06:20:14.990Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Nanobot: um framework de agente de IA auto-hospedado em",
+        "new": "Nanobot: um framework de agente de IA auto-hospedado em 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "Nanobot: framework de agente de IA auto-hospedado",
+        "new": "nanobot Review (2026): framework de agente IA auto-hospedado"
+      },
+      {
+        "field": "metaDescription",
+        "old": "nanobot é um framework de agente de IA gratuito, de código aberto e auto-hospedado, com memória persistente, ferramentas MCP e integrações de chat. Veja como instalar e para quem serve.",
+        "new": "nanobot: framework de agente de IA auto-hospedado, gratuito (MIT), da HKUDS, com MCP e canais de chat. O que o README documenta e o que não."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-E/B2 - GSC README-feature queries (prompt caching, WhatsApp, multimodal, heartbeat, benchmarks); new README-documents section + 5 FAQs, truncated H1 fixed, meta shortened",
+    "baseline": null
+  },
+  {
+    "id": "4e81ba1f-fc52-4f83-ab26-86da0e217707",
+    "slug": "/ja/power-local-llm/nanobot-review",
+    "date": "2026-10-10T06:20:15.089Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "nanobotレビュー：のセルフホスト型AIエージェントフレームワーク",
+        "new": "nanobotレビュー：2026年のセルフホスト型AIエージェントフレームワーク"
+      },
+      {
+        "field": "seoTitle",
+        "old": "nanobotレビュー：セルフホスト型AIエージェント",
+        "new": "nanobotレビュー2026：セルフホスト型AIエージェント"
+      },
+      {
+        "field": "metaDescription",
+        "old": "nanobotは永続メモリ、MCPツール、チャットアプリ連携を備えた無料・オープンソースのセルフホスト型AIエージェントフレームワークです。インストール方法と対象ユーザーを解説します。",
+        "new": "nanobotはHKUDS製の無料・MITライセンスのセルフホスト型AIエージェントフレームワーク。MCP、記憶、チャット連携を備える。READMEが記載している内容としていない内容を整理。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-E/B2 - GSC README-feature queries (prompt caching, WhatsApp, multimodal, heartbeat, benchmarks); new README-documents section + 5 FAQs, truncated H1 fixed, meta shortened",
+    "baseline": null
+  },
+  {
+    "id": "4148c45e-87a8-47d7-b212-92f5affd0f30",
+    "slug": "/zh/power-local-llm/nanobot-review",
+    "date": "2026-10-10T06:20:15.187Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "nanobot评测：自托管AI智能体框架",
+        "new": "nanobot评测（2026）：自托管AI智能体框架"
+      },
+      {
+        "field": "metaDescription",
+        "old": "nanobot是一款免费开源、自托管的AI智能体框架，具备持久记忆、MCP工具和聊天应用集成。了解安装方法及适用人群。",
+        "new": "nanobot是HKUDS开发的免费、MIT许可的自托管AI智能体框架，支持MCP、记忆与聊天渠道。梳理其README已记载与未记载的功能。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-E/B2 - GSC README-feature queries (prompt caching, WhatsApp, multimodal, heartbeat, benchmarks); new README-documents section + 5 FAQs, truncated H1 fixed, meta shortened",
+    "baseline": null
+  },
+  {
+    "id": "e8705073-7f47-41a3-b735-feba7c75a600",
+    "slug": "/ar/power-local-llm/nanobot-review",
+    "date": "2026-10-10T06:20:15.288Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "مراجعة nanobot: إطار عمل وكيل ذكاء اصطناعي مستضاف ذاتيًا في",
+        "new": "Nanobot Review: A Self-Hosted AI Agent Framework in 2026"
+      },
+      {
+        "field": "seoTitle",
+        "old": "مراجعة nanobot: إطار وكيل ذكاء اصطناعي ذاتي الاستضافة",
+        "new": "مراجعة nanobot (2026): إطار وكيل ذكاء اصطناعي"
+      },
+      {
+        "field": "metaDescription",
+        "old": "nanobot إطار عمل وكيل ذكاء اصطناعي مجاني ومفتوح المصدر ومستضاف ذاتيًا، بذاكرة دائمة وأدوات MCP وتكامل مع تطبيقات الدردشة. إليك كيفية تثبيته ومن يناسبه.",
+        "new": "nanobot إطار وكلاء ذكاء اصطناعي ذاتي الاستضافة ومجاني بترخيص MIT من HKUDS، مع MCP وذاكرة وقنوات دردشة. ما الذي يوثّقه README وما الذي لا يوثّقه."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-E/B2 - GSC README-feature queries (prompt caching, WhatsApp, multimodal, heartbeat, benchmarks); new README-documents section + 5 FAQs, truncated H1 fixed, meta shortened",
+    "baseline": null
+  },
+  {
+    "id": "39580146-5966-435a-9173-8a5a0fb4e2b4",
+    "slug": "/ko/power-local-llm/nanobot-review",
+    "date": "2026-10-10T06:20:15.391Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "nanobot 리뷰: 셀프호스팅 AI 에이전트 프레임워크",
+        "new": "nanobot 리뷰(2026): 셀프호스팅 AI 에이전트"
+      },
+      {
+        "field": "metaDescription",
+        "old": "nanobot은 영구 메모리, MCP 도구, 채팅 앱 연동을 갖춘 무료 오픈소스 셀프호스팅 AI 에이전트 프레임워크입니다. 설치 방법과 적합한 사용자를 알아보세요.",
+        "new": "nanobot은 HKUDS가 만든 무료 MIT 라이선스의 자체 호스팅 AI 에이전트 프레임워크로, MCP·메모리·채팅 채널을 지원합니다. README가 문서화한 것과 하지 않은 것을 정리합니다."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-E/B2 - GSC README-feature queries (prompt caching, WhatsApp, multimodal, heartbeat, benchmarks); new README-documents section + 5 FAQs, truncated H1 fixed, meta shortened",
+    "baseline": null
   }
 ]
