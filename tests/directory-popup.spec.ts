@@ -205,7 +205,7 @@ test.describe('directory popup', () => {
     await expect(page.locator(POPUP)).toBeHidden()
   })
 
-  test('arabic: rtl dialog, pinned to the inline end (left edge)', async ({ page }) => {
+  test('arabic: rtl dialog, on the left side', async ({ page }) => {
     await grantConsent(page)
     await open(page, `/ar${REVIEW}`)
     await interact(page)
@@ -215,8 +215,30 @@ test.describe('directory popup', () => {
     await expect(dialog).toHaveAttribute('dir', 'rtl')
     const box = await dialog.boundingBox()
     const vw = page.viewportSize()!.width
-    // desktop viewport: inline-end in RTL is the LEFT side
+    // desktop viewport: bottom-left in every language
     if (vw >= 640) expect(box!.x).toBeLessThan(vw / 2)
+  })
+
+  test('sits bottom-left and never covers the Beta / contents buttons', async ({ page, isMobile }) => {
+    test.skip(isMobile, 'below sm it is a full-width bottom sheet that covers them by design')
+    await grantConsent(page)
+    await open(page, REVIEW)
+    await interact(page)
+    await page.clock.runFor(61_000)
+    const dialog = page.getByRole('dialog')
+    await expect(dialog).toBeVisible()
+    const box = (await dialog.boundingBox())!
+    const vw = page.viewportSize()!.width
+    expect(box.x + box.width / 2, 'popup should be on the left half').toBeLessThan(vw / 2)
+    // The two floating buttons are the fixed elements with z-70 / z-80.
+    const floating = page.locator('div.fixed.z-\\[70\\], div.fixed.z-\\[80\\]')
+    const n = await floating.count()
+    for (let i = 0; i < n; i++) {
+      const b = await floating.nth(i).boundingBox()
+      if (!b || b.width === 0) continue
+      const overlap = box.x < b.x + b.width && b.x < box.x + box.width && box.y < b.y + b.height && b.y < box.y + box.height
+      expect(overlap, `popup overlaps floating button #${i}`).toBe(false)
+    }
   })
 
   test('reduced motion: shown without a slide transition', async ({ page }) => {
