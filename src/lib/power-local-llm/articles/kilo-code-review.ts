@@ -76,9 +76,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository ([github.com/Kilo-Org/kilocode](https://github.com/Kilo-Org/kilocode)) shows over 27,000 stars as of September 2026',
           'Acquired by [Anaconda in July 2026](https://www.anaconda.com/press/anaconda-acquires-kilo-code); Anaconda\'s own announcement describes Kilo Code as used by more than 3 million developers at the time of the deal',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Kilo Code\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory) — see that page for how Kilo Code compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-kilo-code',
@@ -341,9 +338,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Für Einzelpersonen kostenlos auf Bring-your-own-Key-Basis; Kilo Pass, Teams und Enterprise sind kostenpflichtige Pläne',
           'Das GitHub-Repository ([github.com/Kilo-Org/kilocode](https://github.com/Kilo-Org/kilocode)) zeigt über 27.000 Stars (Stand September 2026)',
           'Im Juli 2026 [von Anaconda übernommen](https://www.anaconda.com/press/anaconda-acquires-kilo-code); Anacondas eigene Ankündigung beschreibt Kilo Code als von mehr als 3 Millionen Entwicklern genutzt zum Zeitpunkt der Übernahme',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist der ausführliche Begleittext zu Kilo Codes Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/directory) — dort sehen Sie auf einen Blick, wie Kilo Code im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -608,9 +602,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub ([github.com/Kilo-Org/kilocode](https://github.com/Kilo-Org/kilocode)) affiche plus de 27 000 étoiles en septembre 2026',
           'Racheté par [Anaconda en juillet 2026](https://www.anaconda.com/press/anaconda-acquires-kilo-code) ; l\'annonce d\'Anaconda elle-même décrit Kilo Code comme utilisé par plus de 3 millions de développeurs au moment du rachat',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément détaillé de la fiche de Kilo Code dans le [Local LLM Software Directory](https://www.promptquorum.com/directory) — consultez cette page pour comparer Kilo Code en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-kilo-code',
@@ -873,9 +864,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gratuito para particulares con tu propia clave; Kilo Pass, Teams y Enterprise son planes de pago',
           'El repositorio de GitHub ([github.com/Kilo-Org/kilocode](https://github.com/Kilo-Org/kilocode)) muestra más de 27.000 estrellas a septiembre de 2026',
           'Adquirido por [Anaconda en julio de 2026](https://www.anaconda.com/press/anaconda-acquires-kilo-code); el propio anuncio de Anaconda describe a Kilo Code como usado por más de 3 millones de desarrolladores en el momento del acuerdo',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento detallado de la ficha de Kilo Code en el [Local LLM Software Directory](https://www.promptquorum.com/directory) — consulta esa página para comparar Kilo Code de un vistazo con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1140,9 +1128,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub ([github.com/Kilo-Org/kilocode](https://github.com/Kilo-Org/kilocode)) mostra mais de 27.000 estrelas em setembro de 2026',
           'Adquirido pela [Anaconda em julho de 2026](https://www.anaconda.com/press/anaconda-acquires-kilo-code); o próprio anúncio da Anaconda descreve o Kilo Code como usado por mais de 3 milhões de desenvolvedores no momento do negócio',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta review é o complemento detalhado da ficha do Kilo Code no [Local LLM Software Directory](https://www.promptquorum.com/directory) — veja essa página para comparar o Kilo Code rapidamente com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-kilo-code',
@@ -1405,9 +1390,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '個人はBring-your-own-Keyで無料。Kilo Pass、Teams、Enterpriseは有料プラン',
           'GitHubリポジトリ（[github.com/Kilo-Org/kilocode](https://github.com/Kilo-Org/kilocode)）は2026年9月時点で27,000以上のスターを獲得',
           '[2026年7月にAnacondaに買収された](https://www.anaconda.com/press/anaconda-acquires-kilo-code)。Anacondaの発表自体では、買収時点でKilo Codeは300万人を超える開発者に使われていたとされている',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](https://www.promptquorum.com/directory)にあるKilo Codeのエントリーの詳細版です。他の数十のローカルAIツールとKilo Codeを一目で比較するには、そのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1672,9 +1654,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub仓库（[github.com/Kilo-Org/kilocode](https://github.com/Kilo-Org/kilocode)）截至2026年9月已获得超过27,000颗星',
           '[已于2026年7月被Anaconda收购](https://www.anaconda.com/press/anaconda-acquires-kilo-code)；Anaconda自己的公告称，收购时Kilo Code的开发者用户已超过300万',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地大模型软件目录](https://www.promptquorum.com/directory)中Kilo Code条目的深度补充版——想一目了然地将Kilo Code与其他数十款本地AI工具比较，请查看该页面。' },
-        ],
       },
       overview: {
         id: 'what-is-kilo-code',
@@ -1938,9 +1917,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُظهر مستودع GitHub (‏[github.com/Kilo-Org/kilocode](https://github.com/Kilo-Org/kilocode)‏) أكثر من 27,000 نجمة حتى سبتمبر 2026',
           '[استحوذت عليه Anaconda في يوليو 2026](https://www.anaconda.com/press/anaconda-acquires-kilo-code)؛ ويصف إعلان Anaconda نفسه Kilo Code بأنه كان يُستخدم من قبل أكثر من 3 ملايين مطوّر وقت الصفقة',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي النسخة التفصيلية المرافقة لمدخل Kilo Code في [دليل برمجيات النماذج المحلية](https://www.promptquorum.com/directory) — راجع تلك الصفحة لمقارنة Kilo Code بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-kilo-code',
@@ -2203,9 +2179,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '개인 사용자에게는 Bring-your-own-key 방식으로 무료이며, Kilo Pass, Teams, Enterprise는 유료 요금제입니다',
           'GitHub 저장소([github.com/Kilo-Org/kilocode](https://github.com/Kilo-Org/kilocode))는 2026년 9월 기준 27,000개 이상의 스타를 보유하고 있습니다',
           '[2026년 7월 Anaconda에 인수](https://www.anaconda.com/press/anaconda-acquires-kilo-code)되었으며, Anaconda 자체 발표에서는 인수 당시 Kilo Code를 300만 명 이상의 개발자가 사용한 것으로 설명합니다',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 있는 Kilo Code 항목의 심층 보완판입니다 — 수십 개의 다른 로컬 AI 도구와 Kilo Code를 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

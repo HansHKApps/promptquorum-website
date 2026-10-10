@@ -73,9 +73,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Deployable via Docker (`docker.litellm.ai/berriai/litellm`), Helm charts, an official AWS ECS Fargate Terraform module, an official Google Cloud Run Terraform module, or one-click Render/Railway buttons',
           'A separate commercial Enterprise tier exists at [litellm.ai/enterprise](https://litellm.ai/enterprise), covering SSO, prioritized feature requests, and dedicated support — the open-source SDK and proxy remain fully usable without it',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to LiteLLM\'s entry in the [Local LLM Software Directory](/directory) — see that page for how LiteLLM compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-litellm',
@@ -337,9 +334,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Keine GPU nötig — LiteLLM leitet Anfragen weiter, statt Modellgewichte auszuführen; die produktive Bereitstellung des Proxys benötigt PostgreSQL (Schlüssel, Ausgabendaten) und Redis (instanzübergreifendes Rate-Limiting), keine GPU',
           'Bereitstellbar über Docker (`docker.litellm.ai/berriai/litellm`), Helm-Charts, ein offizielles AWS-ECS-Fargate-Terraform-Modul, ein offizielles Google-Cloud-Run-Terraform-Modul oder Ein-Klick-Buttons für Render/Railway',
           'Eine separate kostenpflichtige Enterprise-Stufe existiert unter [litellm.ai/enterprise](https://litellm.ai/enterprise) mit SSO, priorisierten Feature-Wünschen und dediziertem Support — SDK und Proxy bleiben ohne sie vollständig nutzbar',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu LiteLLMs Eintrag im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie LiteLLM im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -603,9 +597,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Déployable via Docker (`docker.litellm.ai/berriai/litellm`), des charts Helm, un module Terraform officiel pour AWS ECS Fargate, un module Terraform officiel pour Google Cloud Run, ou des boutons de déploiement en un clic Render/Railway',
           'Une offre commerciale Enterprise distincte existe sur [litellm.ai/enterprise](https://litellm.ai/enterprise), couvrant SSO, demandes de fonctionnalités prioritaires et support dédié — le SDK et le proxy open source restent pleinement utilisables sans elle',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche LiteLLM dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour comparer LiteLLM en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-litellm',
@@ -867,9 +858,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'No requiere GPU — LiteLLM reenvía solicitudes en lugar de ejecutar pesos del modelo; el despliegue en producción del proxy necesita PostgreSQL (claves, datos de gasto) y Redis (limitación de tasa entre instancias), no una GPU',
           'Desplegable vía Docker (`docker.litellm.ai/berriai/litellm`), charts de Helm, un módulo Terraform oficial para AWS ECS Fargate, un módulo Terraform oficial para Google Cloud Run, o botones de despliegue con un clic en Render/Railway',
           'Existe un nivel comercial Enterprise aparte en [litellm.ai/enterprise](https://litellm.ai/enterprise), que cubre SSO, solicitudes de funciones prioritarias y soporte dedicado — el SDK y el proxy de código abierto siguen siendo completamente utilizables sin él',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la ficha de LiteLLM en el [Directorio de Software LLM Local](/es/directory) — consulta esa página para ver cómo se compara LiteLLM de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1133,9 +1121,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Implantável via Docker (`docker.litellm.ai/berriai/litellm`), charts Helm, um módulo Terraform oficial para AWS ECS Fargate, um módulo Terraform oficial para Google Cloud Run, ou botões de implantação em um clique no Render/Railway',
           'Existe um nível comercial Enterprise separado em [litellm.ai/enterprise](https://litellm.ai/enterprise), cobrindo SSO, pedidos de funcionalidades prioritárias e suporte dedicado — o SDK e o proxy de código aberto continuam totalmente utilizáveis sem ele',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o aprofundamento complementar à ficha do LiteLLM no [Diretório de Software LLM Local](/pt/directory) — veja essa página para comparar o LiteLLM rapidamente com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-litellm',
@@ -1397,9 +1382,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPU不要 — LiteLLMはモデルの重みを実行するのではなくリクエストを転送する。プロキシの本番デプロイにはPostgreSQL（キー、支出データ）とRedis（インスタンス間のレート制限）が必要で、GPUは不要',
           'Docker（`docker.litellm.ai/berriai/litellm`）、Helmチャート、公式のAWS ECS Fargate Terraformモジュール、公式のGoogle Cloud Run Terraformモジュール、またはRender/Railwayのワンクリックボタン経由でデプロイ可能',
           '[litellm.ai/enterprise](https://litellm.ai/enterprise)には、SSO、優先機能リクエスト、専任サポートをカバーする別の有償Enterpriseティアが存在する — オープンソースのSDKとプロキシは、それなしでも完全に利用可能',
-        ],
-        callouts: [
-          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるLiteLLMのエントリーを深掘りする姉妹記事です — LiteLLMが他の数十のローカルAIツールと比べてどう位置づけられるかは、そちらのページで一覧できます。' },
         ],
       },
       overview: {
@@ -1663,9 +1645,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '可通过Docker（`docker.litellm.ai/berriai/litellm`）、Helm charts、官方AWS ECS Fargate Terraform模块、官方Google Cloud Run Terraform模块，或Render/Railway一键部署按钮进行部署',
           '[litellm.ai/enterprise](https://litellm.ai/enterprise)提供单独的商业Enterprise层级，涵盖SSO、优先功能请求和专属支持——开源SDK和代理无需它也能完全可用',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中LiteLLM条目的深度补充——该页面展示了LiteLLM与其他数十款本地AI工具的一览式对比。' },
-        ],
       },
       overview: {
         id: 'what-is-litellm',
@@ -1928,9 +1907,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'قابلة للنشر عبر Docker (`docker.litellm.ai/berriai/litellm`)، ومخططات Helm، ووحدة Terraform رسمية لـ AWS ECS Fargate، ووحدة Terraform رسمية لـ Google Cloud Run، أو أزرار نشر بنقرة واحدة على Render/Railway',
           'توجد فئة تجارية منفصلة بعنوان Enterprise على [litellm.ai/enterprise](https://litellm.ai/enterprise)، تشمل تسجيل الدخول الموحّد (SSO) وطلبات الميزات ذات الأولوية والدعم المخصص — تبقى حزمة SDK والوكيل مفتوحا المصدر قابلين للاستخدام الكامل دونها',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المقال المكمّل المتعمّق لمدخل LiteLLM في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تقارن LiteLLM بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-litellm',
@@ -2192,9 +2168,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPU가 필요 없음 — LiteLLM은 모델 가중치를 실행하는 대신 요청을 전달함; 프록시의 프로덕션 배포에는 GPU가 아니라 PostgreSQL(키, 지출 데이터)과 Redis(인스턴스 간 속도 제한)가 필요',
           'Docker(`docker.litellm.ai/berriai/litellm`), Helm 차트, 공식 AWS ECS Fargate Terraform 모듈, 공식 Google Cloud Run Terraform 모듈, 또는 Render/Railway 원클릭 버튼을 통해 배포 가능',
           '[litellm.ai/enterprise](https://litellm.ai/enterprise)에는 SSO, 우선 기능 요청, 전담 지원을 포함하는 별도의 상용 Enterprise 등급이 있음 — 오픈소스 SDK와 프록시는 그것 없이도 완전히 사용 가능',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 LiteLLM 항목의 심층 보완 자료입니다 — LiteLLM이 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 그 페이지에서 확인할 수 있습니다.' },
         ],
       },
       overview: {

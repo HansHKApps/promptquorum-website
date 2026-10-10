@@ -71,9 +71,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Three deployment modes: in-memory/ephemeral (prototyping), persistent local storage, and client-server architecture',
           'Commonly used as the vector-store backend inside LangChain and LlamaIndex RAG pipelines, paired with local embedding models via Ollama or cloud embedding APIs',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Chroma\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Chroma compares at a glance to dozens of other local and self-hosted AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-chroma',
@@ -381,9 +378,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Die Kern-API besteht aus vier Funktionen: `create_collection`, `add`, `query` und `delete`',
           'Drei Bereitstellungsmodi: ephemer im Arbeitsspeicher (Prototyping), persistenter lokaler Speicher und Client-Server-Architektur',
           'Wird häufig als Vektorspeicher-Backend in LangChain- und LlamaIndex-RAG-Pipelines eingesetzt, kombiniert mit lokalen Embedding-Modellen über Ollama oder Cloud-Embedding-APIs',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist der Deep-Dive-Begleiter zu Chromas Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie, wie sich Chroma im Vergleich zu Dutzenden anderer lokaler und selbst gehosteter KI-Tools auf einen Blick schlägt.' },
         ],
       },
       overview: {
@@ -693,9 +687,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Trois modes de déploiement : en mémoire/éphémère (prototypage), stockage local persistant, et architecture client-serveur',
           'Couramment utilisé comme backend de stockage vectoriel dans les pipelines RAG LangChain et LlamaIndex, associé à des modèles d\'embedding locaux via Ollama ou des API d\'embedding cloud',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de Chroma dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment Chroma se compare à des dizaines d\'autres outils IA locaux et auto-hébergés.' },
-        ],
       },
       overview: {
         id: 'what-is-chroma',
@@ -1003,9 +994,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'コアAPIは`create_collection`、`add`、`query`、`delete`の4つの関数のみ',
           '3つのデプロイモード:インメモリ/エフェメラル(プロトタイピング向け)、永続ローカルストレージ、クライアントサーバーアーキテクチャ',
           'LangChainやLlamaIndexのRAGパイプライン内でベクトルストアのバックエンドとしてよく使われ、Ollama経由のローカル埋め込みモデルやクラウド埋め込みAPIと組み合わされる',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるChromaのエントリーを深掘りする補完記事です——他の何十ものローカル/セルフホスト型AIツールとChromaを一目で比較したい場合はそちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1317,9 +1305,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '三种部署模式:内存/临时模式(用于原型开发)、持久本地存储,以及客户端-服务器架构',
           '常被用作 LangChain 和 LlamaIndex RAG 管道中的向量存储后端,搭配通过 Ollama 运行的本地嵌入模型或云端嵌入 API 使用',
         ],
-        callouts: [
-          { type: 'note', text: '本测评是 Chroma 在 [本地 LLM 软件目录](/zh/directory) 词条的深度补充——该页面可以让你一眼看清 Chroma 与其他数十款本地及自托管 AI 工具的对比情况。' },
-        ],
       },
       overview: {
         id: 'what-is-chroma',
@@ -1627,9 +1612,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La API principal consta de cuatro funciones: `create_collection`, `add`, `query` y `delete`',
           'Tres modos de despliegue: en memoria/efímero (prototipado), almacenamiento local persistente y arquitectura cliente-servidor',
           'Se usa habitualmente como backend de almacén de vectores dentro de pipelines RAG de LangChain y LlamaIndex, combinado con modelos de embedding locales vía Ollama o APIs de embedding en la nube',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de Chroma en el [Directorio de Software LLM Local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara Chroma con decenas de otras herramientas de IA locales y autoalojadas.' },
         ],
       },
       overview: {
@@ -1939,9 +1921,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Três modos de implantação: em memória/efêmero (prototipagem), armazenamento local persistente e arquitetura cliente-servidor',
           'Comumente usado como backend de vector store dentro de pipelines RAG do LangChain e do LlamaIndex, combinado com modelos de embedding locais via Ollama ou APIs de embedding na nuvem',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Chroma no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar o Chroma rapidamente com dezenas de outras ferramentas de IA locais e autohospedadas.' },
-        ],
       },
       overview: {
         id: 'what-is-chroma',
@@ -2250,9 +2229,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ثلاثة أوضاع نشر: مؤقت/في الذاكرة (للنماذج الأولية)، وتخزين محلي دائم، وبنية عميل-خادم',
           'تُستخدم عادة كطبقة تخزين متجهات خلفية داخل خطوط أنابيب RAG المبنية على LangChain وLlamaIndex، مقترنة بنماذج تضمين محلية عبر Ollama أو واجهات تضمين سحابية',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الرفيقة المعمّقة لمدخل Chroma في [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تقارَن Chroma بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية والذاتية الاستضافة الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-chroma',
@@ -2560,9 +2536,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '핵심 API는 네 가지 함수로 구성됨: `create_collection`, `add`, `query`, `delete`',
           '세 가지 배포 모드: 메모리 내/임시(프로토타이핑용), 로컬 영구 저장소, 클라이언트-서버 아키텍처',
           'LangChain과 LlamaIndex RAG 파이프라인 내부의 벡터 저장소 백엔드로 흔히 사용되며, Ollama를 통한 로컬 임베딩 모델이나 클라우드 임베딩 API와 함께 짝지어 사용됨',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등록된 Chroma 항목의 심층 분석판입니다 — Chroma가 수십 개의 다른 로컬 및 셀프 호스팅 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

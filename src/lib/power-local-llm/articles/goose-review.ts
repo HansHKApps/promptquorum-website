@@ -73,9 +73,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Connects to dozens of LLM providers with your own API key (Anthropic, OpenAI, Google, OpenRouter, Azure, Amazon Bedrock, and more), or a local Ollama model at no cost',
           'Extensible via the Model Context Protocol (MCP), the same open standard Anthropic contributed to the AAIF',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to goose\'s entry in the [Local LLM Software Directory](/directory) — see that page for how goose compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-goose',
@@ -356,9 +353,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Verfügbar als native Desktop-App (macOS, Linux, Windows), als CLI und als API',
           'Verbindet sich mit Dutzenden LLM-Anbietern über Ihren eigenen API-Schlüssel (Anthropic, OpenAI, Google, OpenRouter, Azure, Amazon Bedrock und mehr) oder einem lokalen Ollama-Modell ohne Kosten',
           'Erweiterbar über das Model Context Protocol (MCP), denselben offenen Standard, den Anthropic ebenfalls in die AAIF eingebracht hat',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Gooses Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie Goose im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -641,9 +635,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Se connecte à des dizaines de fournisseurs de LLM avec votre propre clé API (Anthropic, OpenAI, Google, OpenRouter, Azure, Amazon Bedrock, et plus), ou un modèle Ollama local sans coût',
           'Extensible via le Model Context Protocol (MCP), le même standard ouvert qu\'Anthropic a également contribué à l\'AAIF',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette revue est le complément approfondi de la fiche de goose dans l\'[annuaire des logiciels IA locaux](/fr/directory) — consultez cette page pour voir comment goose se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locaux.' },
-        ],
       },
       overview: {
         id: 'what-is-goose',
@@ -924,9 +915,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Disponible como app de escritorio nativa (macOS, Linux, Windows), CLI y API',
           'Se conecta a docenas de proveedores de LLM con tu propia clave de API (Anthropic, OpenAI, Google, OpenRouter, Azure, Amazon Bedrock, y más), o un modelo Ollama local sin coste',
           'Ampliable mediante el Model Context Protocol (MCP), el mismo estándar abierto que Anthropic también aportó a la AAIF',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la ficha de goose en el [directorio de software de IA local](/es/directory) — consulta esa página para ver cómo se compara goose de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1209,9 +1197,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Conecta-se a dezenas de provedores de LLM com sua própria chave de API (Anthropic, OpenAI, Google, OpenRouter, Azure, Amazon Bedrock, e mais), ou um modelo Ollama local sem custo',
           'Extensível via Model Context Protocol (MCP), o mesmo padrão aberto que a Anthropic também contribuiu para a AAIF',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do goose no [diretório de software de IA local](/pt/directory) — veja essa página para comparar rapidamente o goose com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-goose',
@@ -1492,9 +1477,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ネイティブデスクトップアプリ（macOS、Linux、Windows）、CLI、APIとして利用可能',
           '数十のLLMプロバイダーに自分のAPIキーで接続（Anthropic、OpenAI、Google、OpenRouter、Azure、Amazon Bedrockなど）、またはローカルOllamaモデルなら無料',
           'Model Context Protocol（MCP）で拡張可能。AnthropicがAAIFに提供したのと同じオープン標準',
-        ],
-        callouts: [
-          { type: 'note', text: '本レビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるgooseのエントリーの詳細版です。他の数十のローカルAIツールとgooseの比較についてはそちらをご覧ください。' },
         ],
       },
       overview: {
@@ -1777,9 +1759,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '可使用你自己的API密钥连接数十个LLM提供商（Anthropic、OpenAI、Google、OpenRouter、Azure、Amazon Bedrock 等），或免费使用本地 Ollama 模型',
           '可通过 Model Context Protocol（MCP）扩展——这与 Anthropic 同样贡献给 AAIF 的开放标准相同',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中 goose 条目的深度补充——请查看该页面，了解 goose 与其他数十款本地AI工具的一览式对比。' },
-        ],
       },
       overview: {
         id: 'what-is-goose',
@@ -2061,9 +2040,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يتصل بعشرات مزوّدي النماذج اللغوية الكبيرة باستخدام مفتاح API الخاص بك (Anthropic وOpenAI وGoogle وOpenRouter وAzure وAmazon Bedrock وغيرها)، أو نموذج Ollama محلي دون أي تكلفة',
           'قابل للتوسيع عبر Model Context Protocol (MCP)، وهو نفس المعيار المفتوح الذي ساهمت به Anthropic أيضًا في AAIF',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمّق لمُدخل goose في [دليل برمجيات النماذج اللغوية المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن goose بلمحة سريعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-goose',
@@ -2344,9 +2320,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '네이티브 데스크톱 앱(macOS, Linux, Windows), CLI, API 형태로 제공',
           '직접 API 키로 수십 개의 LLM 제공업체(Anthropic, OpenAI, Google, OpenRouter, Azure, Amazon Bedrock 등)에 연결하거나, 로컬 Ollama 모델은 무료로 사용',
           'Anthropic이 AAIF에 함께 기여한 것과 동일한 개방형 표준인 Model Context Protocol(MCP)로 확장 가능',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 goose 항목의 심층 버전입니다 — goose가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

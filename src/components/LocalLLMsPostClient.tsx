@@ -3,6 +3,8 @@
 import { useState, useRef, useEffect, Fragment } from 'react'
 import { ClusterBanner } from '@/components/ClusterBanner'
 import { AppLink as Link } from '@/components/AppLink'
+import { DirectoryBlock } from '@/components/local-ai-directory/DirectoryBlock'
+import type { DirectoryFunnelData } from '@/lib/power-local-llm/directory-funnel'
 import Image from 'next/image'
 import { useLang } from '@/hooks/useLang'
 import type { Language } from '@/lib/blog/blogContent'
@@ -26,6 +28,8 @@ import { StickyNextStepBar } from '@/components/StickyNextStepBar'
 import { getCalloutLabel } from '@/lib/calloutLabels'
 
 interface Props {
+  /** Review pages only (see buildDirectoryFunnel): data for the two directory-funnel blocks. */
+  directoryFunnel?: DirectoryFunnelData
   slug: string
   initialLang?: Language
   articleData: Partial<Record<Language, LLMArticle>>
@@ -875,7 +879,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
   )
 }
 
-function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs }: Props) {
+function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, directoryFunnel }: Props) {
   const clientLang = useLang(initialLang) as Language
   const lang: Language = clientLang
 
@@ -998,6 +1002,8 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs }
           )
         })()}
 
+        {directoryFunnel && <DirectoryBlock data={directoryFunnel} position="start" />}
+
         {/* Quick Answer Block — AI-crawler-optimized featured snippet */}
         {article.quickAnswer && (
           <section className="quick-answer bg-primary/5 border border-primary/20 rounded-xl p-6 mb-6">
@@ -1105,9 +1111,18 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs }
         <article className="key-takeaways-container">
           {Object.entries(article.sections).map(([key, section]) => {
             const sectionId = slugifySectionId(section, key)
-            return (
+            const sectionEl = (
               <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} renderLinks={renderLinks} />
             )
+            if (directoryFunnel && key === 'relatedReading') {
+              return (
+                <Fragment key={key}>
+                  <DirectoryBlock data={directoryFunnel} position="end" />
+                  {sectionEl}
+                </Fragment>
+              )
+            }
+            return sectionEl
           })}
         </article>
 

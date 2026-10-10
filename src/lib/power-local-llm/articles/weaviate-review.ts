@@ -72,9 +72,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository shows roughly 16,800 stars and around 1,400 forks as of September 2026',
           'Built and maintained by [Weaviate B.V.](https://weaviate.io), headquartered in Amsterdam, the Netherlands',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Weaviate\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Weaviate compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-weaviate',
@@ -356,9 +353,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Unterstützt integrierte Vectorizer-Module für OpenAI, Cohere, HuggingFace, Google und Ollama, oder eigene, bereits berechnete Vektoren',
           'Das GitHub-Repository zeigt Stand September 2026 rund 16.800 Sterne und rund 1.400 Forks',
           'Entwickelt und gepflegt von [Weaviate B.V.](https://weaviate.io) mit Sitz in Amsterdam, Niederlande',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Rezension ist der Deep-Dive-Begleiter zu Weaviates Eintrag im [Local LLM Software Directory](/directory) — dort finden sich Weaviates Kennzahlen im Vergleich zu Dutzenden anderer lokaler KI-Tools auf einen Blick.' },
         ],
       },
       overview: {
@@ -642,9 +636,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub affiche environ 16 800 étoiles et environ 1 400 forks en septembre 2026',
           'Développé et maintenu par [Weaviate B.V.](https://weaviate.io), société basée à Amsterdam, aux Pays-Bas',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de Weaviate dans le [Local LLM Software Directory](/directory) — consultez cette page pour comparer Weaviate en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-weaviate',
@@ -926,9 +917,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Admite módulos de vectorización integrados para OpenAI, Cohere, HuggingFace, Google y Ollama, o permite usar tus propios vectores ya calculados',
           'El repositorio en GitHub muestra aproximadamente 16.800 estrellas y unos 1.400 forks a septiembre de 2026',
           'Desarrollado y mantenido por [Weaviate B.V.](https://weaviate.io), con sede en Ámsterdam, Países Bajos',
-        ],
-        callouts: [
-          { type: 'note', text: 'Este análisis es el complemento en profundidad de la entrada de Weaviate en el [Local LLM Software Directory](/directory) — consulta esa página para ver cómo se compara Weaviate de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1212,9 +1200,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub mostra cerca de 16.800 estrelas e cerca de 1.400 forks em setembro de 2026',
           'Desenvolvido e mantido pela [Weaviate B.V.](https://weaviate.io), sediada em Amsterdã, Países Baixos',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Weaviate no [Local LLM Software Directory](/directory) — veja essa página para comparar o Weaviate rapidamente com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-weaviate',
@@ -1496,9 +1481,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OpenAI、Cohere、HuggingFace、Google、Ollama向けの統合ベクトライザモジュールをサポート、または自前で計算済みのベクトルを持ち込むことも可能',
           'GitHubリポジトリは2026年9月時点で約16,800スター、約1,400フォーク',
           '[Weaviate B.V.](https://weaviate.io)が開発・保守、本社はオランダ・アムステルダム',
-        ],
-        callouts: [
-          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/directory)内のWeaviateの項目を深掘りした補完記事です。他の数十のローカルAIツールとの比較概要はそちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1782,9 +1764,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至2026年9月，GitHub仓库约有16,800颗星、约1,400次分叉',
           '由总部位于荷兰阿姆斯特丹的[Weaviate B.V.](https://weaviate.io)构建和维护',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/directory)中Weaviate条目的深度补充——该页面提供Weaviate与数十款其他本地AI工具的一览式对比。' },
-        ],
       },
       overview: {
         id: 'what-is-weaviate',
@@ -2067,9 +2046,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُظهر مستودع GitHub نحو 16,800 نجمة وحوالي 1,400 تفرّع اعتبارًا من سبتمبر 2026',
           'تطوّرها وتصونها [Weaviate B.V.](https://weaviate.io)، ومقرها أمستردام، هولندا',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق التفصيلي لمدخل Weaviate في [دليل برمجيات نماذج اللغة المحلية](/directory) — راجع تلك الصفحة لمعرفة كيف تقارن Weaviate بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-weaviate',
@@ -2351,9 +2327,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OpenAI, Cohere, HuggingFace, Google, Ollama용 통합 벡터라이저 모듈을 지원하거나, 직접 계산한 벡터를 가져올 수도 있음',
           'GitHub 저장소는 2026년 9월 기준 약 16,800개의 스타와 약 1,400개의 포크 보유',
           '네덜란드 암스테르담에 본사를 둔 [Weaviate B.V.](https://weaviate.io)가 구축 및 유지 관리',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/directory)에 실린 Weaviate 항목의 심층 보완 자료입니다. 수십 개의 다른 로컬 AI 도구와 Weaviate를 한눈에 비교하려면 해당 페이지를 참조하세요.' },
         ],
       },
       overview: {

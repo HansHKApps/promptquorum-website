@@ -72,9 +72,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository ([github.com/blinkospace/blinko](https://github.com/blinkospace/blinko)) shows roughly 11,000 stars as of September 2026',
           'A separate paid option, Blinko Cloud, offers managed hosting for people who do not want to run their own server; the self-hosted edition remains fully free',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Blinko\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Blinko compares at a glance to dozens of other local and self-hosted AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-blinko',
@@ -354,9 +351,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Läuft per Docker; wird zudem als native Desktop-/Mobil-Builds über Tauri für macOS, Windows, Linux und Android ausgeliefert',
           'Das GitHub-Repository ([github.com/blinkospace/blinko](https://github.com/blinkospace/blinko)) zeigt Stand September 2026 rund 11.000 Sterne',
           'Eine separate kostenpflichtige Option, Blinko Cloud, bietet Managed-Hosting für alle, die keinen eigenen Server betreiben möchten; die selbst gehostete Edition bleibt vollständig kostenlos',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist der ausführliche Begleitartikel zu Blinkos Eintrag im [Local LLM Software Directory](/directory) — dort sehen Sie auf einen Blick, wie Blinko im Vergleich zu Dutzenden anderer lokaler und selbst gehosteter KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -638,9 +632,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub ([github.com/blinkospace/blinko](https://github.com/blinkospace/blinko)) affiche environ 11 000 étoiles en septembre 2026',
           'Une offre payante distincte, Blinko Cloud, propose un hébergement géré pour qui ne veut pas gérer son propre serveur ; l\'édition auto-hébergée reste entièrement gratuite',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de Blinko dans le [Répertoire de logiciels LLM locaux](/directory) — voir cette page pour comparer Blinko en un coup d\'œil à des dizaines d\'autres outils IA locaux et auto-hébergés.' },
-        ],
       },
       overview: {
         id: 'what-is-blinko',
@@ -920,9 +911,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Se ejecuta vía Docker; también se distribuye como compilaciones nativas de escritorio/móvil mediante Tauri para macOS, Windows, Linux y Android',
           'El repositorio de GitHub ([github.com/blinkospace/blinko](https://github.com/blinkospace/blinko)) muestra alrededor de 11.000 estrellas a septiembre de 2026',
           'Existe una opción de pago separada, Blinko Cloud, que ofrece alojamiento gestionado para quienes no quieren administrar su propio servidor; la edición autoalojada sigue siendo totalmente gratuita',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de Blinko en el [Directorio de Software LLM Local](/directory) — consulta esa página para ver cómo se compara Blinko de un vistazo con docenas de otras herramientas de IA local y autoalojada.' },
         ],
       },
       overview: {
@@ -1204,9 +1192,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHubリポジトリ([github.com/blinkospace/blinko](https://github.com/blinkospace/blinko))は2026年9月時点で約11,000スター',
           '自分でサーバーを運用したくない人向けに、別料金のBlinko Cloudというマネージドホスティングも用意されている——セルフホスト版は引き続き完全無料',
         ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/directory)にあるBlinkoの項目を深掘りする姉妹記事です。他の数十種類のローカル・セルフホストAIツールとの比較は同ページを参照してください。' },
-        ],
       },
       overview: {
         id: 'what-is-blinko',
@@ -1486,9 +1471,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '通过 Docker 运行;也通过 Tauri 发布原生桌面/移动端版本,支持 macOS、Windows、Linux 和 Android',
           'GitHub 仓库([github.com/blinkospace/blinko](https://github.com/blinkospace/blinko))截至 2026 年 9 月约有 11,000 颗星',
           '另有一个单独付费的 Blinko Cloud 选项,为不想自行运维服务器的用户提供托管服务;自托管版本依然完全免费',
-        ],
-        callouts: [
-          { type: 'note', text: '本评测是 [本地 LLM 软件目录](/directory) 中 Blinko 条目的深度补充——想了解 Blinko 与其他数十款本地及自托管 AI 工具的整体对比,请查看该页面。' },
         ],
       },
       overview: {
@@ -1770,9 +1752,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub ([github.com/blinkospace/blinko](https://github.com/blinkospace/blinko)) mostra cerca de 11.000 estrelas em setembro de 2026',
           'Uma opção paga separada, o Blinko Cloud, oferece hospedagem gerenciada para quem não quer manter o próprio servidor; a edição autohospedada continua totalmente gratuita',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Blinko no [Diretório de Software LLM Local](/directory) — veja essa página para comparar rapidamente o Blinko com dezenas de outras ferramentas de IA local e autohospedada.' },
-        ],
       },
       overview: {
         id: 'what-is-blinko',
@@ -2053,9 +2032,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مستودع GitHub ([github.com/blinkospace/blinko](https://github.com/blinkospace/blinko)) يُظهر نحو 11,000 نجمة حتى سبتمبر 2026',
           'خيار مدفوع منفصل، Blinko Cloud، يوفر استضافة مُدارة لمن لا يريدون تشغيل خادمهم الخاص؛ وتبقى نسخة الاستضافة الذاتية مجانية بالكامل',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الرفيقة المتعمقة لمدخل Blinko في [دليل برمجيات النماذج اللغوية المحلية](/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن Blinko بسرعة بعشرات الأدوات الأخرى للذكاء الاصطناعي المحلي وذاتي الاستضافة.' },
-        ],
       },
       overview: {
         id: 'what-is-blinko',
@@ -2335,9 +2311,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Docker로 실행되며, Tauri를 통해 macOS, Windows, Linux, Android용 네이티브 데스크톱/모바일 빌드로도 배포됨',
           'GitHub 저장소([github.com/blinkospace/blinko](https://github.com/blinkospace/blinko))는 2026년 9월 기준 약 11,000개의 스타를 기록',
           '별도의 유료 옵션인 Blinko Cloud는 서버를 직접 운영하고 싶지 않은 사용자를 위한 관리형 호스팅을 제공하며, 셀프 호스팅 버전은 계속 완전히 무료로 유지됨',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/directory)에 있는 Blinko 항목의 심층 분석 버전입니다 — Blinko가 수십 개의 다른 로컬 및 셀프 호스팅 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

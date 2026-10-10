@@ -83,9 +83,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Available on Windows, macOS (Apple Silicon), and Linux',
           'Developed by HilbertraumAI, per the GitHub organization hosting the code',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to HilbertRaum\'s entry in the [Local LLM Software Directory](/directory) — see that page for how HilbertRaum compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-hilbertraum',
@@ -344,9 +341,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Enthält außerdem optionale Offline-Wikipedia-Archive (Kiwix/ZIM-Format), Bildverständnis, Diktat (Spracheingabe über Whisper), OCR für gescannte Dokumente sowie Dokumentenübersetzung in 51 Sprachen',
           'Verfügbar für Windows, macOS (Apple Silicon) und Linux',
           'Entwickelt von HilbertraumAI, laut der GitHub-Organisation, die den Code hostet',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu HilbertRaums Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie HilbertRaum im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -607,9 +601,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Disponible sous Windows, macOS (Apple Silicon) et Linux',
           'Développé par HilbertraumAI, selon l\'organisation GitHub hébergeant le code',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette revue est le complément approfondi à la fiche de HilbertRaum dans l\'[annuaire des logiciels IA locaux](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment HilbertRaum se compare à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-hilbertraum',
@@ -868,9 +859,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'También incluye archivos de Wikipedia offline opcionales (formato Kiwix/ZIM), comprensión de imágenes, dictado (voz a texto mediante Whisper), OCR para documentos escaneados, y traducción de documentos en 51 idiomas',
           'Disponible en Windows, macOS (Apple Silicon) y Linux',
           'Desarrollado por HilbertraumAI, según la organización de GitHub que aloja el código',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la ficha de HilbertRaum en el [directorio de software de IA local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara HilbertRaum con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1131,9 +1119,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Disponível para Windows, macOS (Apple Silicon) e Linux',
           'Desenvolvido pela HilbertraumAI, conforme a organização no GitHub que hospeda o código',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do HilbertRaum no [diretório de software de IA local](/pt/directory) — veja essa página para comparar rapidamente o HilbertRaum com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-hilbertraum',
@@ -1392,9 +1377,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'オフラインWikipediaアーカイブ(Kiwix/ZIM形式)、画像理解、口述筆記(Whisperによる音声認識)、スキャン文書向けOCR、51言語対応の文書翻訳もオプションで利用可能',
           'Windows、macOS(Apple Silicon)、Linuxで利用可能',
           'HilbertraumAIが開発。コードをホストするGitHub組織による情報に基づく',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルAIソフトウェアディレクトリ](/ja/directory)にあるHilbertRaumのエントリーを深掘りする姉妹記事です。HilbertRaumが他の数十のローカルAIツールと比べてどう位置づけられるか、そのページで一目で確認できます。' },
         ],
       },
       overview: {
@@ -1655,9 +1637,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '适用于Windows、macOS(Apple Silicon)和Linux',
           '由HilbertraumAI开发,依据托管代码的GitHub组织信息',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地AI软件目录](/zh/directory)中HilbertRaum条目的深度补充文章——请查看该页面,一览HilbertRaum与其他数十款本地AI工具的对比情况。' },
-        ],
       },
       overview: {
         id: 'what-is-hilbertraum',
@@ -1917,9 +1896,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'متوفر لأنظمة Windows وmacOS (Apple Silicon) وLinux',
           'طوَّرته HilbertraumAI، وفق منظمة GitHub التي تستضيف الكود',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لإدخال HilbertRaum في [دليل برامج الذكاء الاصطناعي المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن HilbertRaum بسرعة بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-hilbertraum',
@@ -2178,9 +2154,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '선택적인 오프라인 위키백과 아카이브(Kiwix/ZIM 형식), 이미지 이해, 받아쓰기(Whisper 기반 음성 인식), 스캔 문서용 OCR, 51개 언어에 걸친 문서 번역도 제공합니다',
           'Windows, macOS(Apple Silicon), Linux에서 사용 가능합니다',
           '코드를 호스팅하는 GitHub 조직에 따르면 HilbertraumAI가 개발했습니다',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)에 있는 HilbertRaum 항목을 심층적으로 다루는 보완 자료입니다 — HilbertRaum이 수십 개의 다른 로컬 AI 도구와 비교해 어떤 위치에 있는지 한눈에 보려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

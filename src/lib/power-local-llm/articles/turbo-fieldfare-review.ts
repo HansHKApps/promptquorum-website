@@ -71,9 +71,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Requires an Apple Silicon Mac, macOS 26 with Metal 4, and Xcode 26 with Swift 6.2 or newer to build from source — the package is arm64-only',
           'Over 6,750 GitHub stars and 430+ forks as of this review',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to TurboFieldfare\'s entry in the [Local LLM Software Directory](/directory) — see that page for how TurboFieldfare compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-turbofieldfare',
@@ -340,9 +337,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Bringt drei Nutzungswege mit: eine native SwiftUI/AppKit-Mac-App, eine Kommandozeilen-Oberfläche (TurboFieldfareCLI) und einen experimentellen Loopback-OpenAI-kompatiblen Server (TurboFieldfareServer)',
           'Erfordert einen Apple-Silicon-Mac, macOS 26 mit Metal 4 sowie Xcode 26 mit Swift 6.2 oder neuer zum Bauen aus dem Quellcode – das Paket ist rein arm64',
           'Über 6.750 GitHub-Stars und 430+ Forks zum Zeitpunkt dieser Rezension',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Rezension ist der ausführliche Begleitartikel zum Eintrag von TurboFieldfare im [Local LLM Software Directory](/de/directory) – dort finden Sie einen schnellen Vergleich von TurboFieldfare mit Dutzenden anderer lokaler KI-Tools.' },
         ],
       },
       overview: {
@@ -611,9 +605,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Nécessite un Mac Apple Silicon, macOS 26 avec Metal 4, ainsi que Xcode 26 avec Swift 6.2 ou plus récent pour compiler depuis les sources — le paquet est exclusivement arm64',
           'Plus de 6 750 étoiles GitHub et 430+ forks au moment de ce test',
         ],
-        callouts: [
-          { type: 'note', text: 'Ce test est l\'article approfondi qui accompagne l\'entrée de TurboFieldfare dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour comparer rapidement TurboFieldfare à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-turbofieldfare',
@@ -880,9 +871,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Incluye tres formas de uso: una app nativa para Mac en SwiftUI/AppKit, una interfaz de línea de comandos (TurboFieldfareCLI) y un servidor experimental en loopback compatible con OpenAI (TurboFieldfareServer)',
           'Requiere un Mac con Apple Silicon, macOS 26 con Metal 4, y Xcode 26 con Swift 6.2 o superior para compilarlo desde el código fuente — el paquete es exclusivamente arm64',
           'Más de 6.750 estrellas en GitHub y 430+ forks al momento de esta reseña',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el artículo en profundidad que acompaña la entrada de TurboFieldfare en el [Local LLM Software Directory](/es/directory) — consulta esa página para ver cómo se compara TurboFieldfare, de un vistazo, con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1151,9 +1139,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Apple Silicon Mac、Metal 4搭載のmacOS 26、ビルドにはSwift 6.2以降のXcode 26が必要 — パッケージはarm64専用',
           'このレビュー時点でGitHubスター6,750超、フォーク430以上',
         ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](/ja/directory)にあるTurboFieldfareのエントリーの詳細版です — TurboFieldfareが他の数十のローカルAIツールと一目でどう比較されるかはそちらのページを参照してください。' },
-        ],
       },
       overview: {
         id: 'what-is-turbofieldfare',
@@ -1420,9 +1405,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '提供三种使用方式:原生SwiftUI/AppKit Mac应用、命令行界面(TurboFieldfareCLI),以及实验性的回环OpenAI兼容服务器(TurboFieldfareServer)',
           '需要Apple Silicon Mac、搭载Metal 4的macOS 26,以及Swift 6.2或更高版本的Xcode 26才能从源代码构建——该软件包仅支持arm64',
           '截至本评测,GitHub星标超过6,750,fork数超过430',
-        ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中TurboFieldfare条目的深度补充文章——该页面可让你快速比较TurboFieldfare与其他数十款本地AI工具。' },
         ],
       },
       overview: {
@@ -1691,9 +1673,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Exige um Mac com Apple Silicon, macOS 26 com Metal 4, e Xcode 26 com Swift 6.2 ou mais recente para compilar a partir do código-fonte — o pacote é exclusivamente arm64',
           'Mais de 6.750 estrelas no GitHub e mais de 430 forks até o momento deste review',
         ],
-        callouts: [
-          { type: 'note', text: 'Este review é o artigo aprofundado que acompanha a entrada do TurboFieldfare no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar rapidamente o TurboFieldfare com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-turbofieldfare',
@@ -1961,9 +1940,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تتطلب جهاز Mac بمعالج Apple Silicon، وmacOS 26 مع Metal 4، وXcode 26 مع Swift 6.2 أو أحدث للبناء من الكود المصدري — الحزمة مخصصة حصرياً لمعمارية arm64',
           'أكثر من 6,750 نجمة على GitHub وأكثر من 430 فرعاً (forks) وقت إعداد هذه المراجعة',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المقال المفصّل المرافق لإدخال TurboFieldfare في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تُقارَن TurboFieldfare بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-turbofieldfare',
@@ -2230,9 +2206,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '네이티브 SwiftUI/AppKit Mac 앱, 명령줄 인터페이스(TurboFieldfareCLI), 실험적인 루프백 OpenAI 호환 서버(TurboFieldfareServer)의 세 가지 사용 방식 제공',
           '소스에서 빌드하려면 Apple Silicon Mac, Metal 4가 탑재된 macOS 26, 그리고 Swift 6.2 이상의 Xcode 26이 필요 — 패키지는 arm64 전용',
           '이 리뷰 시점 기준 GitHub 스타 6,750개 이상, 포크 430개 이상',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 TurboFieldfare 항목을 상세히 다루는 심층 기사입니다 — TurboFieldfare가 다른 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

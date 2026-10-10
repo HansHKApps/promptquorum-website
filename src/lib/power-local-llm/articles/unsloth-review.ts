@@ -71,9 +71,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Can connect trained or downloaded models to coding agents (Claude Code, Codex, and others) via a one-command `unsloth start` integration, and exposes an OpenAI/Anthropic-compatible API',
           'Developed by Unsloth AI, a US-based organization per its GitHub profile; the repository was created in November 2023 and the `unsloth` PyPI package has shipped 241 releases since its first upload in August 2024',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Unsloth\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Unsloth compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-unsloth',
@@ -348,9 +345,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Multi-GPU-Unterstützung über NVIDIA-, AMD- und Intel-GPUs hinweg, plus reiner CPU-Betrieb über ein Vulkan-Backend, unter Windows, Linux, WSL und macOS',
           'Kann trainierte oder heruntergeladene Modelle über eine Ein-Befehl-Integration (`unsloth start`) mit Coding-Agenten (Claude Code, Codex u. a.) verbinden und bietet eine OpenAI-/Anthropic-kompatible API',
           'Entwickelt von Unsloth AI, laut GitHub-Profil ein in den USA ansässiges Unternehmen; das Repository wurde im November 2023 erstellt, und das `unsloth`-PyPI-Paket verzeichnet seit dem ersten Upload im August 2024 241 Releases',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu Unsloths Eintrag im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie Unsloth im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -627,9 +621,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "Peut connecter un modèle entraîné ou téléchargé à des agents de code (Claude Code, Codex, etc.) via une intégration en une commande (`unsloth start`), et expose une API compatible OpenAI/Anthropic",
           "Développé par Unsloth AI, une organisation basée aux États-Unis selon son profil GitHub ; le dépôt a été créé en novembre 2023, et le paquet PyPI `unsloth` compte 241 versions depuis son premier envoi en août 2024",
         ],
-        callouts: [
-          { type: 'note', text: "Ce test est le complément approfondi de la fiche d'Unsloth dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir en un coup d'œil comment Unsloth se compare à des dizaines d'autres outils d'IA locale." },
-        ],
       },
       overview: {
         id: 'what-is-unsloth',
@@ -904,9 +895,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Soporte Multi-GPU en GPUs NVIDIA, AMD e Intel, además de funcionamiento solo con CPU mediante un backend Vulkan, en Windows, Linux, WSL y macOS',
           'Puede conectar modelos entrenados o descargados a agentes de codificación (Claude Code, Codex y otros) mediante una integración de un solo comando `unsloth start`, y expone una API compatible con OpenAI/Anthropic',
           'Desarrollado por Unsloth AI, una organización con sede en EE. UU. según su perfil de GitHub; el repositorio se creó en noviembre de 2023 y el paquete `unsloth` de PyPI ha publicado 241 versiones desde su primera subida en agosto de 2024',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de Unsloth en el [Directorio de Software de LLM Local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara Unsloth con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1183,9 +1171,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pode conectar modelos treinados ou baixados a agentes de codificação (Claude Code, Codex e outros) por meio de uma integração de um único comando `unsloth start`, e expõe uma API compatível com OpenAI/Anthropic',
           'Desenvolvido pela Unsloth AI, uma organização sediada nos EUA segundo seu perfil no GitHub; o repositório foi criado em novembro de 2023 e o pacote `unsloth` no PyPI lançou 241 versões desde o primeiro upload em agosto de 2024',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Unsloth no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para uma comparação rápida entre o Unsloth e dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-unsloth',
@@ -1460,9 +1445,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'NVIDIA、AMD、Intel GPUをまたいだMulti-GPU対応、加えてVulkanバックエンド経由のCPU専用動作を、Windows、Linux、WSL、macOSでサポート',
           'トレーニング済みまたはダウンロード済みのモデルを、`unsloth start`のワンコマンド統合でコーディングエージェント（Claude Code、Codexなど）に接続でき、OpenAI/Anthropic互換のAPIも公開できる',
           'GitHubプロフィールによれば米国拠点の組織であるUnsloth AIが開発。リポジトリは2023年11月に作成され、`unsloth` PyPIパッケージは2024年8月の初回アップロード以来241回のリリースを重ねている',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)におけるUnslothの項目を掘り下げた記事です。他の数十のローカルAIツールとの一覧比較はそちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1739,9 +1721,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '可以通过一条`unsloth start`命令，将训练好或下载的模型连接到编码智能体（Claude Code、Codex 等），并公开一个兼容 OpenAI/Anthropic 的 API',
           '由 Unsloth AI 开发，根据其 GitHub 资料显示为美国注册的组织；仓库创建于 2023 年 11 月，`unsloth` PyPI 包自 2024 年 8 月首次发布以来已发布 241 个版本',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地 LLM 软件目录](/zh/directory)中 Unsloth 条目的深度解读——如需查看 Unsloth 与其他数十款本地 AI 工具的对比，请参阅该页面。' },
-        ],
       },
       overview: {
         id: 'what-is-unsloth',
@@ -2017,9 +1996,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`unsloth start`라는 단일 명령으로 학습했거나 다운로드한 모델을 코딩 에이전트(Claude Code, Codex 등)에 연결할 수 있으며, OpenAI/Anthropic 호환 API도 제공합니다',
           'GitHub 프로필에 따르면 미국 소재 조직인 Unsloth AI가 개발했으며, 저장소는 2023년 11월에 생성되었고, `unsloth` PyPI 패키지는 2024년 8월 최초 업로드 이후 241회의 릴리스를 기록했습니다',
         ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등재된 Unsloth 항목의 심층 분석 자료입니다 — 다른 수십 개의 로컬 AI 도구와 Unsloth를 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
-        ],
       },
       overview: {
         id: 'what-is-unsloth',
@@ -2294,9 +2270,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'دعم Multi-GPU عبر بطاقات NVIDIA وAMD وIntel، إضافة إلى التشغيل بالاعتماد على CPU فقط عبر خلفية Vulkan، على Windows وLinux وWSL وmacOS',
           'يمكنها ربط النماذج المدرَّبة أو المُنزَّلة بوكلاء البرمجة (Claude Code وCodex وغيرهما) عبر أمر واحد هو `unsloth start`، وتوفر واجهة برمجة تطبيقات متوافقة مع OpenAI/Anthropic',
           'طوّرتها Unsloth AI، وهي منظمة مقرها الولايات المتحدة وفقًا لملفها على GitHub؛ أُنشئ المستودع في نوفمبر 2023، وأصدرت حزمة `unsloth` على PyPI 241 إصدارًا منذ أول رفع لها في أغسطس 2024',
-        ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الشرح المتعمق المرافق لمدخل Unsloth في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة بين Unsloth وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {

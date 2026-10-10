@@ -10,6 +10,7 @@ import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { LocalLLMArticleJsonLd } from '@/lib/local-llms/jsonld'
 import { narrowArticleData } from '@/lib/narrowArticleData'
+import { buildDirectoryFunnel } from '@/lib/power-local-llm/directory-funnel'
 
 export const dynamic = 'force-static'
 export const revalidate = 86400
@@ -186,7 +187,7 @@ export default async function LocalLLMsArticlePage({ params }: PageProps) {
   return (
     <>
       <LocalLLMArticleJsonLd slug={slug} articleKey={key} lang={selectedLang} />
-      <LocalLLMsPostClient slug={slug} initialLang={selectedLang} {...narrowArticleData(llmContent[key], selectedLang)} />
+      <LocalLLMsPostClient slug={slug} initialLang={selectedLang} directoryFunnel={buildDirectoryFunnel('local-llms', slug, selectedLang)} {...narrowArticleData(llmContent[key], selectedLang)} />
     </>
   )
 }

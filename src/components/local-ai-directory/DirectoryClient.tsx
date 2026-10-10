@@ -139,7 +139,15 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
     setHwWidgetExpanded(true)
     document.getElementById('hw-profile-widget')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-  const [openSlug, setOpenSlug] = useState<string | null>(null)
+  // Deep-linkable from `?tool=<slug>` (the review pages' "View X in the
+  // directory" and similar-tool links): opens that tool's drawer on load. Same
+  // one-time hydration-divergence pattern as `want`/`hw` above — the server
+  // always sees null; an unknown slug is ignored rather than passed through.
+  const [openSlug, setOpenSlug] = useState<string | null>(() => {
+    if (typeof window === 'undefined') return null
+    const fromUrl = new URLSearchParams(window.location.search).get('tool')
+    return fromUrl && apps.some((a) => a.slug === fromUrl) ? fromUrl : null
+  })
   // Filter panel collapsed by default (page-redesign-v2.md §2: "sticky
   // filter bar ... panel (collapsed by default)").
   const [filtersOpen, setFiltersOpen] = useState(false)

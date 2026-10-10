@@ -74,9 +74,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Developed by Ollama Inc., a Palo Alto, California company founded in 2023 by Jeffrey Morgan and Michael Chiang',
           'Available on macOS, Windows, and Linux, plus Docker Hub (`ollama/ollama`) and package managers including Homebrew, Pacman, Nix, and Guix',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Ollama\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Ollama compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-ollama',
@@ -358,9 +355,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`ollama launch` verbindet ein lokal laufendes Modell direkt mit Coding-Tools wie Claude Code, Codex, VS Code, OpenCode und Droid',
           'Entwickelt von Ollama Inc., einem Unternehmen mit Sitz in Palo Alto, Kalifornien, gegründet 2023 von Jeffrey Morgan und Michael Chiang',
           'Verfügbar für macOS, Windows und Linux, zusätzlich über Docker Hub (`ollama/ollama`) und Paketmanager wie Homebrew, Pacman, Nix und Guix',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Ollamas Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie Ollama im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -644,9 +638,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Développé par Ollama Inc., une entreprise de Palo Alto, en Californie, fondée en 2023 par Jeffrey Morgan et Michael Chiang',
           'Disponible sur macOS, Windows et Linux, ainsi que sur Docker Hub (`ollama/ollama`) et via des gestionnaires de paquets dont Homebrew, Pacman, Nix et Guix',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément détaillé de la fiche d\'Ollama dans le [répertoire des logiciels d\'IA locale](/fr/directory) — consultez cette page pour voir comment Ollama se compare, en un coup d\'œil, à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-ollama',
@@ -928,9 +919,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`ollama launch` conecta directamente un modelo local con herramientas de código como Claude Code, Codex, VS Code, OpenCode y Droid',
           'Desarrollado por Ollama Inc., una empresa de Palo Alto, California, fundada en 2023 por Jeffrey Morgan y Michael Chiang',
           'Disponible en macOS, Windows y Linux, además de Docker Hub (`ollama/ollama`) y gestores de paquetes incluyendo Homebrew, Pacman, Nix y Guix',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de Ollama en el [directorio de software de IA local](/es/directory) — consulte esa página para ver de un vistazo cómo se compara Ollama con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1214,9 +1202,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desenvolvido pela Ollama Inc., uma empresa de Palo Alto, Califórnia, fundada em 2023 por Jeffrey Morgan e Michael Chiang',
           'Disponível para macOS, Windows e Linux, além do Docker Hub (`ollama/ollama`) e gerenciadores de pacotes incluindo Homebrew, Pacman, Nix e Guix',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Ollama no [diretório de software de IA local](/pt/directory) — veja essa página para comparar rapidamente o Ollama com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-ollama',
@@ -1498,9 +1483,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`ollama launch`により、Claude Code、Codex、VS Code、OpenCode、Droidなどのコーディングツールにローカルモデルを直接接続できる',
           '2023年にJeffrey MorganとMichael Chiangによって設立された、カリフォルニア州パロアルトの企業Ollama Inc.が開発',
           'macOS、Windows、Linuxに加え、Docker Hub（`ollama/ollama`）やHomebrew、Pacman、Nix、Guixなどのパッケージマネージャーからも利用可能',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルAIソフトウェアディレクトリ](/ja/directory)にあるOllamaのエントリーの詳細版です——他の数十のローカルAIツールとOllamaが一目でどう比較されるかは、そのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1784,9 +1766,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '由Ollama Inc.开发，这是一家位于加利福尼亚州帕洛阿尔托、由Jeffrey Morgan和Michael Chiang于2023年创立的公司',
           '可在macOS、Windows和Linux上使用，此外还提供Docker Hub镜像（`ollama/ollama`）以及Homebrew、Pacman、Nix、Guix等包管理器版本',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地AI软件目录](/zh/directory)中Ollama条目的深度配套文章——如需一目了然地了解Ollama与数十种其他本地AI工具的对比，请参阅该页面。' },
-        ],
       },
       overview: {
         id: 'what-is-ollama',
@@ -2069,9 +2048,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '2023년 Jeffrey Morgan과 Michael Chiang이 설립한 캘리포니아주 팔로알토 소재 기업 Ollama Inc.가 개발합니다',
           'macOS, Windows, Linux에서 사용 가능하며, Docker Hub(`ollama/ollama`)와 Homebrew, Pacman, Nix, Guix를 포함한 패키지 관리자로도 이용할 수 있습니다',
         ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)에 있는 Ollama 항목의 심층 보완 자료입니다 — Ollama가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
-        ],
       },
       overview: {
         id: 'what-is-ollama',
@@ -2353,9 +2329,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يربط الأمر `ollama launch` نموذجًا محليًا مباشرةً بأدوات برمجة مثل Claude Code وCodex وVS Code وOpenCode وDroid',
           'تُطوّرها شركة Ollama Inc.، ومقرها بالو ألتو بولاية كاليفورنيا، وقد أسّسها عام 2023 كلٌّ من Jeffrey Morgan وMichael Chiang',
           'متوفرة على macOS وWindows وLinux، بالإضافة إلى Docker Hub (`ollama/ollama`) ومديري حزم مثل Homebrew وPacman وNix وGuix',
-        ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافقة المتعمّقة لمدخل Ollama في [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تقارَن Ollama بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {

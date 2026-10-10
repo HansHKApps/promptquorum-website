@@ -87,9 +87,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Version 3.0.2 (a same-day follow-up to 3.0.1, released September 22, 2026), with roughly 1,750 GitHub stars as of that date; 3.0.1 added a LoRAs tab in Models with Civitai search and download, Qwen-Image 2.1 as a local generate/edit model, per-conversation sampling settings, and fixes to the Linux ComfyUI install',
           'Built by an independent developer using the GitHub handle [PurpleDoubleD](https://github.com/PurpleDoubleD), who goes by David and described the project\'s origin — switching between a terminal running Ollama and multiple ComfyUI browser tabs — in a [dev.to post](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda)',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Locally Uncensored\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-locally-uncensored',
@@ -385,9 +382,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ein separater, optionaler kostenpflichtiger Dienst, LU Labs Cloud, verkauft gehostete GPU-Inferenz per Abonnement oder Guthaben-Paket für die größten Bild-/Video-Modelle; laut Entwickler läuft er über Guthaben, das nicht verfällt, zeigt den Preis eines Laufs vor dem Start an und ist für die Nutzung der kostenlosen lokalen App nicht erforderlich',
           'Version 3.0.2 (ein Same-Day-Nachfolger zu 3.0.1, veröffentlicht am 22. September 2026), mit rund 1.750 GitHub-Sternen zu diesem Zeitpunkt; 3.0.1 fügte einen LoRAs-Tab in Models mit Civitai-Suche und -Download, Qwen-Image 2.1 als lokales Generierungs-/Bearbeitungsmodell, Sampling-Einstellungen pro Unterhaltung sowie Korrekturen an der Linux-ComfyUI-Installation hinzu',
           'Entwickelt von einem unabhängigen Entwickler unter dem GitHub-Namen [PurpleDoubleD](https://github.com/PurpleDoubleD), der den Ursprung des Projekts — der Wechsel zwischen einem Ollama-Terminal und mehreren ComfyUI-Browser-Tabs — in einem [dev.to-Beitrag](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda) beschreibt',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zum Eintrag von Locally Uncensored im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie die App im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -685,9 +679,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Version 3.0.2 (une mise à jour publiée le même jour que la 3.0.1, le 22 septembre 2026), avec environ 1 750 étoiles GitHub à cette date ; la 3.0.1 a ajouté un onglet LoRAs dans Models avec recherche et téléchargement Civitai, Qwen-Image 2.1 comme modèle local de génération/édition, des réglages d\'échantillonnage par conversation, et des corrections de l\'installation ComfyUI sous Linux',
           'Créée par un développeur indépendant sous le pseudonyme GitHub [PurpleDoubleD](https://github.com/PurpleDoubleD), qui décrit l\'origine du projet — jongler entre un terminal Ollama et plusieurs onglets ComfyUI — dans un [billet dev.to](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda)',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de Locally Uncensored dans l\'[Annuaire des logiciels IA locaux](/fr/directory) — consultez cette page pour voir comment l\'application se compare en un coup d\'œil à des dizaines d\'autres outils IA locaux.' },
-        ],
       },
       overview: {
         id: 'what-is-locally-uncensored',
@@ -983,9 +974,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Un servicio de pago independiente y opcional, LU Labs Cloud, vende inferencia en GPU alojada por suscripción o paquetes de créditos para los modelos de imagen/video más grandes; según el desarrollador, funciona mediante créditos que no caducan y muestra el precio de una ejecución antes de que comience, y no es necesario para usar la app local gratuita',
           'Versión 3.0.2 (una actualización publicada el mismo día que la 3.0.1, el 22 de septiembre de 2026), con alrededor de 1.750 estrellas en GitHub en esa fecha; la 3.0.1 añadió una pestaña de LoRAs en Models con búsqueda y descarga de Civitai, Qwen-Image 2.1 como modelo local de generación/edición, ajustes de muestreo por conversación, y correcciones a la instalación de ComfyUI en Linux',
           'Creada por un desarrollador independiente con el usuario de GitHub [PurpleDoubleD](https://github.com/PurpleDoubleD), que describe el origen del proyecto — alternar entre una terminal con Ollama y varias pestañas de ComfyUI — en una [publicación en dev.to](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda)',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de Locally Uncensored en el [Directorio de software de IA local](/es/directory) — consulta esa página para ver cómo se compara de un vistazo con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1283,9 +1271,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Versão 3.0.2 (uma atualização lançada no mesmo dia da 3.0.1, em 22 de setembro de 2026), com cerca de 1.750 estrelas no GitHub nessa data; a 3.0.1 adicionou uma aba de LoRAs em Models com busca e download no Civitai, o Qwen-Image 2.1 como modelo local de geração/edição, configurações de amostragem por conversa e correções na instalação do ComfyUI no Linux',
           'Criado por um desenvolvedor independente com o usuário do GitHub [PurpleDoubleD](https://github.com/PurpleDoubleD), que descreve a origem do projeto — alternar entre um terminal com Ollama e várias abas do ComfyUI no navegador — em uma [publicação no dev.to](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda)',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Locally Uncensored no [Diretório de Software de IA Local](/pt/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-locally-uncensored',
@@ -1581,9 +1566,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '別売りのオプション有料サービス「LU Labs Cloud」が、最大級の画像・動画モデル向けにサブスクリプションまたはクレジットパックでホスト型GPU推論を販売。開発者によれば、期限のないクレジットで運用され、実行開始前に料金を表示し、無料のローカルアプリを使うために必須ではない',
           'バージョン3.0.2（2026年9月22日にリリースされた3.0.1の当日フォローアップ）。この時点でGitHubスターは約1,750。3.0.1ではModelsにCivitai検索・ダウンロード対応のLoRAsタブ、ローカルの生成・編集モデルとしてのQwen-Image 2.1、会話ごとのサンプリング設定、LinuxでのComfyUIインストールの修正が追加された',
           'GitHubの[PurpleDoubleD](https://github.com/PurpleDoubleD)名義の個人開発者が制作。Ollamaのターミナルと複数のComfyUIブラウザタブを行き来する不便さがプロジェクトの発端だったと、[dev.toの投稿](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda)で説明している',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルAIソフトウェアディレクトリ](/ja/directory)に掲載されたLocally Uncensoredの項目を深掘りする内容です。他の数十種類のローカルAIツールとの一覧比較はそちらのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1881,9 +1863,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '版本3.0.2（2026年9月22日发布的3.0.1当天的后续更新）,截至该日期GitHub星标约1,750颗;3.0.1在Models中新增了支持Civitai搜索和下载的LoRAs标签页、作为本地生成/编辑模型的Qwen-Image 2.1、按对话设置的采样参数,以及针对Linux上ComfyUI安装的修复',
           '由GitHub用户名为[PurpleDoubleD](https://github.com/PurpleDoubleD)的独立开发者创建,在一篇[dev.to文章](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda)中描述了项目的起源——在运行Ollama的终端和多个ComfyUI浏览器标签之间来回切换的困扰',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Locally Uncensored条目的深度补充——请查看该页面,快速了解它与数十款其他本地AI工具相比的表现。' },
-        ],
       },
       overview: {
         id: 'what-is-locally-uncensored',
@@ -2180,9 +2159,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الإصدار 3.0.2 (تحديث تابع صدر في اليوم نفسه للإصدار 3.0.1، بتاريخ 22 سبتمبر 2026)، بنحو 1,750 نجمة على GitHub في ذلك التاريخ؛ وأضاف الإصدار 3.0.1 تبويب LoRAs في Models مع بحث وتنزيل من Civitai، وQwen-Image 2.1 كنموذج محلي للتوليد/التعديل، وإعدادات أخذ عينات لكل محادثة، وإصلاحات لتثبيت ComfyUI على Linux',
           'أنشأه مطوّر مستقل يستخدم اسم المستخدم [PurpleDoubleD](https://github.com/PurpleDoubleD) على GitHub، وقد وصف أصل المشروع — التنقّل بين طرفية تشغّل Ollama وعدة تبويبات متصفح لِComfyUI — في [منشور على dev.to](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda)',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمّق لمدخل Locally Uncensored في [دليل برامج الذكاء الاصطناعي المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن هذا التطبيق بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-locally-uncensored',
@@ -2478,9 +2454,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '별도의 선택적 유료 서비스인 LU Labs Cloud가 가장 큰 이미지/비디오 모델을 위해 구독 또는 크레딧 팩으로 호스팅된 GPU 추론을 판매하며, 개발자에 따르면 만료되지 않는 크레딧으로 운영되고 실행 시작 전 가격을 보여주며, 무료 로컬 앱을 사용하는 데 필수는 아님',
           '버전 3.0.2(2026년 9월 22일 출시된 3.0.1의 당일 후속 업데이트)이며 그 시점 기준 GitHub 스타는 약 1,750개; 3.0.1에서는 Civitai 검색·다운로드를 지원하는 Models의 LoRAs 탭, 로컬 생성·편집 모델로 추가된 Qwen-Image 2.1, 대화별 샘플링 설정, Linux ComfyUI 설치 관련 수정이 추가됨',
           'GitHub 사용자명 [PurpleDoubleD](https://github.com/PurpleDoubleD)를 쓰는 독립 개발자가 제작; Ollama 터미널과 여러 ComfyUI 브라우저 탭을 오가야 했던 것이 이 프로젝트의 시작이었다고 [dev.to 게시글](https://dev.to/purpledoubled/i-built-an-all-in-one-local-ai-app-chat-image-gen-and-video-gen-in-one-ui-2dda)에서 설명',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Locally Uncensored 항목의 심층 버전입니다 — 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

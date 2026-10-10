@@ -72,9 +72,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Available via `pip install local-deep-research` or Docker Compose (which also runs Ollama and SearXNG alongside it)',
           'GitHub repository ([github.com/LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research)) shows roughly 9,100 stars as of September 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Local Deep Research\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local and self-hosted AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-ldr',
@@ -353,9 +350,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Pro Nutzer AES-256-verschlüsselte Datenbanken, laut eigener Projektdokumentation ohne Telemetrie, Analytics oder Tracking im Tool selbst',
           'Verfügbar per `pip install local-deep-research` oder Docker Compose (das zusätzlich Ollama und SearXNG mitbringt)',
           'Das GitHub-Repository ([github.com/LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research)) zeigt Stand September 2026 rund 9.100 Sterne',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist der ausführliche Begleitartikel zum Eintrag von Local Deep Research im [Local LLM Software Directory](/directory) — dort sehen Sie auf einen Blick, wie es sich mit Dutzenden anderer lokaler und selbst gehosteter KI-Tools vergleicht.' },
         ],
       },
       overview: {
@@ -636,9 +630,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Disponible via `pip install local-deep-research` ou Docker Compose (qui exécute aussi Ollama et SearXNG en parallèle)',
           'Le dépôt GitHub ([github.com/LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research)) affiche environ 9 100 étoiles en septembre 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de Local Deep Research dans le [Répertoire de logiciels LLM locaux](/directory) — voir cette page pour comparer l\'outil en un coup d\'œil à des dizaines d\'autres outils IA locaux et auto-hébergés.' },
-        ],
       },
       overview: {
         id: 'what-is-ldr',
@@ -917,9 +908,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Bases de datos cifradas con AES-256 por usuario, sin telemetría, analítica ni seguimiento integrados en la propia herramienta, según la documentación del proyecto',
           'Disponible mediante `pip install local-deep-research` o Docker Compose (que también ejecuta Ollama y SearXNG junto a ella)',
           'El repositorio de GitHub ([github.com/LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research)) muestra alrededor de 9.100 estrellas a septiembre de 2026',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis en profundidad complementario a la entrada de Local Deep Research en el [Directorio de Software LLM Local](/directory) — consulta esa página para ver cómo se compara de un vistazo con docenas de otras herramientas de IA local y autoalojada.' },
         ],
       },
       overview: {
@@ -1200,9 +1188,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`pip install local-deep-research`またはDocker Compose(OllamaとSearXNGも同時に起動)で利用可能',
           'GitHubリポジトリ([github.com/LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research))は2026年9月時点で約9,100スター',
         ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/directory)にあるLocal Deep Researchの項目を深掘りする姉妹記事です。他の数十種類のローカル・セルフホストAIツールとの比較は同ページを参照してください。' },
-        ],
       },
       overview: {
         id: 'what-is-ldr',
@@ -1481,9 +1466,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '根据项目自身文档,每个用户对应的数据库均采用 AES-256 加密,工具本身不内置任何遥测、分析或跟踪功能',
           '可通过 `pip install local-deep-research` 或 Docker Compose 安装(后者会同时运行 Ollama 和 SearXNG)',
           'GitHub 仓库([github.com/LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research))截至 2026 年 9 月约有 9,100 颗星',
-        ],
-        callouts: [
-          { type: 'note', text: '本评测是 [本地 LLM 软件目录](/directory) 中 Local Deep Research 条目的深度补充——想了解它与其他数十款本地及自托管 AI 工具的整体对比,请查看该页面。' },
         ],
       },
       overview: {
@@ -1764,9 +1746,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Disponível via `pip install local-deep-research` ou Docker Compose (que também roda o Ollama e o SearXNG junto)',
           'O repositório no GitHub ([github.com/LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research)) mostra cerca de 9.100 estrelas em setembro de 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Local Deep Research no [Diretório de Software LLM Local](/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local e autohospedada.' },
-        ],
       },
       overview: {
         id: 'what-is-ldr',
@@ -2046,9 +2025,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'متاح عبر `pip install local-deep-research` أو Docker Compose (الذي يشغّل Ollama وSearXNG أيضاً إلى جانبه)',
           'مستودع GitHub ([github.com/LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research)) يُظهر نحو 9,100 نجمة حتى سبتمبر 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الرفيقة المتعمقة لمدخل Local Deep Research في [دليل برمجيات النماذج اللغوية المحلية](/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن بسرعة بعشرات الأدوات الأخرى للذكاء الاصطناعي المحلي وذاتي الاستضافة.' },
-        ],
       },
       overview: {
         id: 'what-is-ldr',
@@ -2327,9 +2303,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '프로젝트 자체 문서에 따르면 사용자별 AES-256 암호화 데이터베이스를 사용하며, 도구 자체에는 텔레메트리, 분석, 추적 기능이 내장되어 있지 않음',
           '`pip install local-deep-research` 또는 Docker Compose(Ollama와 SearXNG도 함께 실행)로 설치 가능',
           'GitHub 저장소([github.com/LearningCircuit/local-deep-research](https://github.com/LearningCircuit/local-deep-research))는 2026년 9월 기준 약 9,100개의 스타를 기록',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/directory)에 있는 Local Deep Research 항목의 심층 분석 버전입니다 — 수십 개의 다른 로컬 및 셀프 호스팅 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

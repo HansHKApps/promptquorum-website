@@ -73,9 +73,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository ([github.com/zed-industries/zed](https://github.com/zed-industries/zed)) shows 90,142 stars as of September 12, 2026, per the [GitHub API](https://api.github.com/repos/zed-industries/zed)',
           'Available on macOS, Linux, and — as a fully official, stable platform since October 2025 — Windows, via a DirectX-based rendering backend',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Zed\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Zed compares at a glance to dozens of other local-AI-capable tools.' },
-        ],
       },
       overview: {
         id: 'what-is-zed',
@@ -351,9 +348,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Business-Plan zu 30 $/Sitzplatz/Monat ergänzt unternehmensweite KI-Modellrichtlinien, Ausgabenübersicht und rollenbasierte Zugriffskontrollen',
           'GitHub-Repository ([github.com/zed-industries/zed](https://github.com/zed-industries/zed)) zeigt 90.142 Sterne mit Stand 12. September 2026, laut [GitHub API](https://api.github.com/repos/zed-industries/zed)',
           'Verfügbar für macOS, Linux und — seit Oktober 2025 als vollständig offizielle, stabile Plattform — Windows, über ein DirectX-basiertes Rendering-Backend',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zu Zeds Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie den Vergleich zu Dutzenden weiterer lokal-KI-fähiger Tools auf einen Blick.' },
         ],
       },
       overview: {
@@ -631,9 +625,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub ([github.com/zed-industries/zed](https://github.com/zed-industries/zed)) affiche 90 142 étoiles au 12 septembre 2026, selon l\'[API GitHub](https://api.github.com/repos/zed-industries/zed)',
           'Disponible sur macOS, Linux et — depuis octobre 2025 en tant que plateforme officielle et stable à part entière — Windows, via un backend de rendu basé sur DirectX',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément détaillé de la fiche de Zed dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour comparer Zed en un coup d\'œil à des dizaines d\'autres outils compatibles IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-zed',
@@ -909,9 +900,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'El plan Business a $30/asiento/mes añade políticas de modelos de IA a nivel de organización, visibilidad del gasto y controles de acceso basados en roles',
           'El repositorio de GitHub ([github.com/zed-industries/zed](https://github.com/zed-industries/zed)) muestra 90.142 estrellas a fecha del 12 de septiembre de 2026, según la [API de GitHub](https://api.github.com/repos/zed-industries/zed)',
           'Disponible en macOS, Linux y — desde octubre de 2025 como plataforma oficial y estable — Windows, mediante un backend de renderizado basado en DirectX',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento detallado de la ficha de Zed en el [Local LLM Software Directory](/es/directory) — consulta esa página para ver cómo se compara Zed de un vistazo con decenas de otras herramientas con capacidad de IA local.' },
         ],
       },
       overview: {
@@ -1189,9 +1177,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub ([github.com/zed-industries/zed](https://github.com/zed-industries/zed)) mostra 90.142 estrelas em 12 de setembro de 2026, segundo a [API do GitHub](https://api.github.com/repos/zed-industries/zed)',
           'Disponível para macOS, Linux e — desde outubro de 2025 como plataforma oficial e estável — Windows, via um backend de renderização baseado em DirectX',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do Zed no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar o Zed rapidamente com dezenas de outras ferramentas com IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-zed',
@@ -1467,9 +1452,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '1シートあたり月額30ドルのBusinessプランは、組織全体のAIモデルポリシー、支出の可視化、ロールベースのアクセス制御を追加',
           'GitHubリポジトリ（[github.com/zed-industries/zed](https://github.com/zed-industries/zed)）は、[GitHub API](https://api.github.com/repos/zed-industries/zed)によると2026年9月12日時点で90,142個のスターを表示',
           'macOS、Linux、そして2025年10月以降は完全に公式かつ安定したプラットフォームとなったWindowsで、DirectXベースのレンダリングバックエンドを通じて利用可能',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは[Local LLM Software Directory](/ja/directory)のZedの項目を掘り下げた記事です——他の数十のローカルAI対応ツールとの一覧比較はそのページを参照してください。' },
         ],
       },
       overview: {
@@ -1747,9 +1729,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '根据[GitHub API](https://api.github.com/repos/zed-industries/zed)，截至2026年9月12日，GitHub仓库（[github.com/zed-industries/zed](https://github.com/zed-industries/zed)）显示有90,142颗星标',
           '适用于macOS、Linux，以及——自2025年10月起作为完全正式、稳定的平台——通过基于DirectX的渲染后端支持的Windows',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Zed条目的深度补充——该页面可让你一览Zed与数十款其他本地AI工具的对比情况。' },
-        ],
       },
       overview: {
         id: 'what-is-zed',
@@ -2026,9 +2005,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُظهر مستودع GitHub ([github.com/zed-industries/zed](https://github.com/zed-industries/zed)) 90,142 نجمة اعتبارًا من 12 سبتمبر 2026، وفقًا لـ[واجهة برمجة تطبيقات GitHub](https://api.github.com/repos/zed-industries/zed)',
           'متوفر على macOS وLinux — ومنذ أكتوبر 2025 كمنصة رسمية ومستقرة بالكامل — على Windows، عبر خلفية عرض قائمة على DirectX',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لإدخال Zed في [دليل برامج LLM المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارَن Zed بلمحة سريعة بعشرات الأدوات الأخرى القادرة على العمل بذكاء اصطناعي محلي.' },
-        ],
       },
       overview: {
         id: 'what-is-zed',
@@ -2304,9 +2280,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '좌석당 월 $30인 Business 플랜은 조직 전체 AI 모델 정책, 지출 가시성, 역할 기반 접근 제어를 추가',
           'GitHub 저장소([github.com/zed-industries/zed](https://github.com/zed-industries/zed))는 [GitHub API](https://api.github.com/repos/zed-industries/zed)에 따르면 2026년 9월 12일 기준 90,142개의 스타를 표시',
           'macOS, Linux에서 사용 가능하며, 2025년 10월부터 완전히 공식적이고 안정적인 플랫폼이 된 Windows에서는 DirectX 기반 렌더링 백엔드를 통해 사용 가능',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 실린 Zed 항목을 깊이 있게 다룬 자매 콘텐츠입니다 — 로컬 AI를 지원하는 수십 가지 다른 도구와 Zed를 한눈에 비교하려면 해당 페이지를 참조하세요.' },
         ],
       },
       overview: {

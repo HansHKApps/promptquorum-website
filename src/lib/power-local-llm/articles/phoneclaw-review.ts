@@ -68,9 +68,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Installs via the official [TestFlight link](https://testflight.apple.com/join/YuUSwq78), or by cloning the repository and building with Xcode 16+',
           'Optional "PhoneClaw Gateway" pairs with a Mac on the same local network to use Mac-side Ollama, Codex CLI, or Antigravity CLI models for larger tasks',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to PhoneClaw\'s entry in the [Local LLM Software Directory](/directory) — see that page for how PhoneClaw compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-phoneclaw',
@@ -302,9 +299,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Benötigt iOS 17.0 oder neuer; das größere E4B-Modell wird für iPhone 15 Pro und neuer empfohlen',
           'Installation über den offiziellen [TestFlight-Link](https://testflight.apple.com/join/YuUSwq78) oder durch Klonen des Repositorys und Bauen mit Xcode 16+',
           'Optionales „PhoneClaw Gateway" koppelt sich mit einem Mac im selben lokalen Netzwerk, um Mac-seitige Ollama-, Codex-CLI- oder Antigravity-CLI-Modelle für größere Aufgaben zu nutzen',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu PhoneClaws Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie PhoneClaw im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -538,9 +532,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'S\'installe via le [lien TestFlight officiel](https://testflight.apple.com/join/YuUSwq78), ou en clonant le dépôt et en compilant avec Xcode 16+',
           'Le « PhoneClaw Gateway » optionnel se couple avec un Mac sur le même réseau local pour utiliser des modèles Mac côté Ollama, Codex CLI ou Antigravity CLI pour des tâches plus lourdes',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de PhoneClaw dans le [répertoire des logiciels d\'IA locale](/fr/directory) — consultez cette page pour voir comment PhoneClaw se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-phoneclaw',
@@ -772,9 +763,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Requiere iOS 17.0 o posterior; el modelo E4B más grande se recomienda para iPhone 15 Pro y más reciente',
           'Se instala mediante el [enlace oficial de TestFlight](https://testflight.apple.com/join/YuUSwq78), o clonando el repositorio y compilando con Xcode 16+',
           'El "PhoneClaw Gateway" opcional se empareja con un Mac en la misma red local para usar modelos de Mac vía Ollama, Codex CLI o Antigravity CLI en tareas más grandes',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de PhoneClaw en el [directorio de software de IA local](/es/directory) — consulte esa página para ver de un vistazo cómo se compara PhoneClaw con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1008,9 +996,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Instala-se via o [link oficial do TestFlight](https://testflight.apple.com/join/YuUSwq78), ou clonando o repositório e compilando com Xcode 16+',
           'O "PhoneClaw Gateway" opcional pareia com um Mac na mesma rede local para usar modelos do lado Mac via Ollama, Codex CLI ou Antigravity CLI em tarefas maiores',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da ficha do PhoneClaw no [diretório de software de IA local](/pt/directory) — veja essa página para comparar rapidamente o PhoneClaw com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-phoneclaw',
@@ -1242,9 +1227,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'iOS 17.0以降が必要。より大きなE4Bモデルは新しいiPhone 15 Pro向けに推奨',
           '公式[TestFlightリンク](https://testflight.apple.com/join/YuUSwq78)からインストール、またはリポジトリをクローンしXcode 16以降でビルド',
           'オプションの「PhoneClaw Gateway」が同一ローカルネットワーク上のMacとペアリングし、より大きなタスクにMac側のOllama、Codex CLI、Antigravity CLIモデルを利用可能',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルAIソフトウェアディレクトリ](/ja/directory)にあるPhoneClawのエントリーの詳細版です。PhoneClawが他の数十ものローカルAIツールと比べてどう位置づけられるかは、そちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1478,9 +1460,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '通过官方[TestFlight链接](https://testflight.apple.com/join/YuUSwq78)安装，或克隆仓库并用Xcode 16以上构建',
           '可选的"PhoneClaw Gateway"与同一局域网内的Mac配对，用于更大任务时使用Mac端的Ollama、Codex CLI或Antigravity CLI模型',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地AI软件目录](/zh/directory)中PhoneClaw条目的深度补充——该页面展示了PhoneClaw与数十种其他本地AI工具相比的一览对比。' },
-        ],
       },
       overview: {
         id: 'what-is-phoneclaw',
@@ -1713,9 +1692,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُثبَّت عبر [رابط TestFlight الرسمي](https://testflight.apple.com/join/YuUSwq78)، أو باستنساخ المستودع والبناء باستخدام Xcode 16 فأعلى',
           'ميزة "PhoneClaw Gateway" الاختيارية تقترن بجهاز Mac على نفس الشبكة المحلية لاستخدام نماذج جانب Mac مثل Ollama وCodex CLI وAntigravity CLI للمهام الأكبر',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المعمّق لإدخال PhoneClaw في [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن PhoneClaw بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-phoneclaw',
@@ -1947,9 +1923,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'iOS 17.0 이상 필요; 더 큰 E4B 모델은 iPhone 15 Pro 이상에 권장',
           '공식 [TestFlight 링크](https://testflight.apple.com/join/YuUSwq78)로 설치하거나 저장소를 복제해 Xcode 16 이상으로 빌드',
           '선택적 "PhoneClaw Gateway"가 같은 로컬 네트워크의 Mac과 페어링해 더 큰 작업에 Mac 측 Ollama, Codex CLI, Antigravity CLI 모델을 활용',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)에 있는 PhoneClaw 항목의 심층 보완판입니다 — PhoneClaw가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

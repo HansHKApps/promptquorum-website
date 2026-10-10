@@ -40,6 +40,8 @@ import { CopyButton } from '@/components/CopyButton'
 import toolArticleIndex from '@/generated/tool-article-index.json'
 import { getCalloutLabel } from '@/lib/calloutLabels'
 import { StarIcon } from '@/components/local-ai-directory/icons'
+import { DirectoryBlock } from '@/components/local-ai-directory/DirectoryBlock'
+import type { DirectoryFunnelData } from '@/lib/power-local-llm/directory-funnel'
 import { t as directoryT, type DirUi } from '@/components/local-ai-directory/directory-ui-client'
 
 // Lazy-loaded, client-only: EdgeHardwareSelector is a self-contained,
@@ -103,6 +105,13 @@ interface Props {
     siblings: { name: string; reviewPath: string }[]
     ui: { blockTitle: string; blockComparedIn: string; blockCategory: string; blockAlsoReviewed: string }
   }
+  /**
+   * Set only on a tool's dedicated review (page-helpers.tsx, via
+   * buildDirectoryFunnel): the pre-resolved data for the two "Part of the Local
+   * AI Directory" blocks (after Quick Answer, before Related Reading). Undefined
+   * on every non-review article, which therefore renders no block.
+   */
+  directoryFunnel?: DirectoryFunnelData
 }
 
 // Section header translations
@@ -1372,7 +1381,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks, compareData }: {
   )
 }
 
-function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs, directorySlot, founderReviewed, compareData, categoryLinks }: Props) {
+function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs, directorySlot, founderReviewed, compareData, categoryLinks, directoryFunnel }: Props) {
   if (!articleData) {
     return <div className="min-h-screen bg-surface pt-32 flex items-center justify-center"><p className="text-text-secondary">Article not found.</p></div>
   }
@@ -1575,6 +1584,8 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
           )
         })()}
 
+        {directoryFunnel && <DirectoryBlock data={directoryFunnel} position="start" />}
+
         {/* Quick Answer Block — AI-crawler-optimized featured snippet */}
         {article.quickAnswer && (
           <section className="quick-answer bg-primary/5 border border-primary/20 rounded-xl p-6 mb-6">
@@ -1717,9 +1728,18 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
                 // article data but must not render a second time here.
                 return null
               }
-              return (
+              const sectionEl = (
                 <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} renderLinks={renderLinks} compareData={compareData} />
               )
+              if (directoryFunnel && key === 'relatedReading') {
+                return (
+                  <Fragment key={key}>
+                    <DirectoryBlock data={directoryFunnel} position="end" />
+                    {sectionEl}
+                  </Fragment>
+                )
+              }
+              return sectionEl
             })
           })()}
         </article>

@@ -73,9 +73,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'AGPL-3.0 license; free to self-host; the GitHub repository ([github.com/karakeep-app/karakeep](https://github.com/karakeep-app/karakeep)) shows roughly 29,100 stars as of September 2026',
           'Also offers a first-party MCP server and CLI, plus a markdown-first REST API for scripting and AI-assistant integrations',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Karakeep\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Karakeep compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-karakeep',
@@ -357,9 +354,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Native iOS- und Android-Apps sowie Chrome-, Firefox- und Safari-Browser-Erweiterungen zum Erfassen per Klick',
           'AGPL-3.0-Lizenz; kostenlos selbst zu hosten; das GitHub-Repository ([github.com/karakeep-app/karakeep](https://github.com/karakeep-app/karakeep)) zeigt Stand September 2026 rund 29.100 Sterne',
           'Bietet zudem einen offiziellen MCP-Server und eine CLI sowie eine Markdown-first-REST-API für Skripting und KI-Assistenten-Integrationen',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu Karakeeps Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie Karakeep im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -643,9 +637,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Licence AGPL-3.0 ; gratuit à auto-héberger ; le dépôt GitHub ([github.com/karakeep-app/karakeep](https://github.com/karakeep-app/karakeep)) affiche environ 29 100 étoiles en septembre 2026',
           'Propose aussi un serveur MCP et une CLI officiels, plus une API REST « markdown-first » pour le scripting et les intégrations avec des assistants IA',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Karakeep dans l\'[annuaire des logiciels LLM locaux](/fr/directory) — consultez cette page pour voir comment Karakeep se compare en un coup d\'œil à des dizaines d\'autres outils IA locaux.' },
-        ],
       },
       overview: {
         id: 'what-is-karakeep',
@@ -927,9 +918,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Apps nativas para iOS y Android, y extensiones para Chrome, Firefox y Safari para capturar con un clic',
           'Licencia AGPL-3.0; gratis para autoalojar; el repositorio de GitHub ([github.com/karakeep-app/karakeep](https://github.com/karakeep-app/karakeep)) muestra unas 29,100 estrellas en septiembre de 2026',
           'También ofrece un servidor MCP y una CLI propios, más una API REST orientada a markdown para scripting e integraciones con asistentes de IA',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de Karakeep en el [Directorio de Software de LLM Local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara Karakeep con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1213,9 +1201,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Licença AGPL-3.0; gratuito para auto-hospedar; o repositório no GitHub ([github.com/karakeep-app/karakeep](https://github.com/karakeep-app/karakeep)) mostra cerca de 29.100 estrelas em setembro de 2026',
           'Também oferece um servidor MCP e uma CLI próprios, além de uma API REST voltada a markdown para scripts e integrações com assistentes de IA',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Karakeep no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar rapidamente o Karakeep com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-karakeep',
@@ -1497,9 +1482,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ネイティブのiOS・Androidアプリ、およびChrome・Firefox・Safariのブラウザ拡張機能でワンクリックキャプチャ',
           'AGPL-3.0ライセンス。セルフホストは無料。GitHubリポジトリ（[github.com/karakeep-app/karakeep](https://github.com/karakeep-app/karakeep)）は2026年9月時点で約29,100スター',
           '公式のMCPサーバーとCLI、さらにスクリプティングやAIアシスタント連携向けのmarkdown-firstなREST APIも提供',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)内のKarakeepの掲載情報を深掘りする補完記事です — Karakeepが他の数十件のローカルAIツールと比較してどう位置づけられるかは、そちらのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1783,9 +1765,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'AGPL-3.0许可证；自托管免费；GitHub仓库（[github.com/karakeep-app/karakeep](https://github.com/karakeep-app/karakeep)）截至2026年9月显示约29,100颗星',
           '还提供官方MCP服务器和CLI，以及一个以markdown为核心的REST API，便于脚本编写和AI助手集成',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Karakeep条目的深度补充——请查看该页面，一览Karakeep与其他几十款本地AI工具的对比情况。' },
-        ],
       },
       overview: {
         id: 'what-is-karakeep',
@@ -2068,9 +2047,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ترخيص AGPL-3.0؛ مجاني للاستضافة الذاتية؛ يُظهر مستودع GitHub ([github.com/karakeep-app/karakeep](https://github.com/karakeep-app/karakeep)) نحو 29,100 نجمة اعتبارًا من سبتمبر 2026',
           'يوفر أيضًا خادم MCP وواجهة سطر أوامر (CLI) رسميين، بالإضافة إلى واجهة برمجة REST قائمة على markdown للبرمجة النصية وتكاملات مساعدات الذكاء الاصطناعي',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الرفيق المتعمق لإدراج Karakeep في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يقارن Karakeep بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-karakeep',
@@ -2352,9 +2328,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '네이티브 iOS 및 Android 앱과 Chrome, Firefox, Safari 브라우저 확장 프로그램으로 원클릭 캡처가 가능합니다',
           'AGPL-3.0 라이선스이며 셀프호스팅은 무료입니다. GitHub 저장소([github.com/karakeep-app/karakeep](https://github.com/karakeep-app/karakeep))는 2026년 9월 기준 약 29,100개의 스타를 기록하고 있습니다',
           '공식 MCP 서버와 CLI, 그리고 스크립팅 및 AI 어시스턴트 연동을 위한 마크다운 우선 REST API도 제공합니다',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등록된 Karakeep 항목을 심층적으로 보완하는 글입니다 — Karakeep이 수십 개의 다른 로컬 AI 도구와 어떻게 비교되는지 한눈에 확인하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

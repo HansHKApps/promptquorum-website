@@ -75,9 +75,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository ([github.com/logancyang/obsidian-copilot](https://github.com/logancyang/obsidian-copilot)) shows approximately 7,700 stars as of September 12, 2026',
           'Agent mode (multi-step research and file editing) is desktop-only; the lighter Quick Chat mode also works on Obsidian\'s iOS and Android apps',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Copilot for Obsidian\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local-AI-capable tools.' },
-        ],
       },
       overview: {
         id: 'what-is-copilot-for-obsidian',
@@ -352,9 +349,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Ein einmaliger Self-Host-Supporter-Kauf (rund 349,99 $) fügt dauerhaften Self-Host-Modus plus zwei Jahre Plus-Tarif hinzu',
           'GitHub-Repository ([github.com/logancyang/obsidian-copilot](https://github.com/logancyang/obsidian-copilot)) zeigt mit Stand 12. September 2026 rund 7.700 Sterne',
           'Agent-Modus (mehrstufige Recherche und Dateibearbeitung) ist nur für Desktop; der leichtere Quick-Chat-Modus funktioniert auch auf Obsidians iOS- und Android-Apps',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zu Copilot for Obsidians Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie den Vergleich zu Dutzenden weiterer lokal-KI-fähiger Tools auf einen Blick.' },
         ],
       },
       overview: {
@@ -631,9 +625,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub ([github.com/logancyang/obsidian-copilot](https://github.com/logancyang/obsidian-copilot)) affiche environ 7 700 étoiles au 12 septembre 2026',
           'Le mode Agent (recherche en plusieurs étapes et modification de fichiers) est réservé au bureau ; le mode Quick Chat, plus léger, fonctionne aussi sur les applications iOS et Android d\'Obsidian',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de la fiche de Copilot for Obsidian dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour comparer d\'un coup d\'œil des dizaines d\'autres outils compatibles avec l\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-copilot-for-obsidian',
@@ -908,9 +899,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Una compra única de Self-Host Supporter (unos 349,99 $) añade modo autoalojado de por vida más dos años del plan Plus',
           'El repositorio de GitHub ([github.com/logancyang/obsidian-copilot](https://github.com/logancyang/obsidian-copilot)) muestra aproximadamente 7700 estrellas al 12 de septiembre de 2026',
           'El modo Agente (investigación en varios pasos y edición de archivos) es solo de escritorio; el modo Quick Chat, más ligero, también funciona en las apps de iOS y Android de Obsidian',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de Copilot for Obsidian en el [Local LLM Software Directory](/es/directory) — consulta esa página para comparar de un vistazo con decenas de otras herramientas compatibles con IA local.' },
         ],
       },
       overview: {
@@ -1187,9 +1175,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub ([github.com/logancyang/obsidian-copilot](https://github.com/logancyang/obsidian-copilot)) mostra aproximadamente 7.700 estrelas em 12 de setembro de 2026',
           'O modo Agente (pesquisa em várias etapas e edição de arquivos) é exclusivo para desktop; o modo Quick Chat, mais leve, também funciona nos apps iOS e Android do Obsidian',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Copilot for Obsidian no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas compatíveis com IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-copilot-for-obsidian',
@@ -1464,9 +1449,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '約349.99ドルの1回払いSelf-Host Supporterプランは永続的なセルフホストモードと2年分のPlusプランを追加',
           'GitHubリポジトリ（[github.com/logancyang/obsidian-copilot](https://github.com/logancyang/obsidian-copilot)）は2026年9月12日時点で約7,700のスターを表示',
           'Agentモード（複数ステップの調査とファイル編集）はデスクトップ専用；軽量なQuick ChatモードはObsidianのiOS・Androidアプリでも動作',
-        ],
-        callouts: [
-          { type: 'note', text: '本レビューは[Local LLM Software Directory](/ja/directory)にあるCopilot for Obsidianのエントリーを深掘りする補完記事です――他の数十のローカルAI対応ツールとの一覧比較はそちらのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1743,9 +1725,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub仓库([github.com/logancyang/obsidian-copilot](https://github.com/logancyang/obsidian-copilot))截至2026年9月12日显示约7,700个星标',
           'Agent模式(多步骤研究与文件编辑)仅限桌面端;更轻量的Quick Chat模式在Obsidian的iOS和Android应用上也可使用',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Copilot for Obsidian条目的深度补充——该页面提供与其他数十款支持本地AI的工具的一览对比。' },
-        ],
       },
       overview: {
         id: 'what-is-copilot-for-obsidian',
@@ -2021,9 +2000,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مستودع GitHub ([github.com/logancyang/obsidian-copilot](https://github.com/logancyang/obsidian-copilot)) يُظهر نحو 7700 نجمة اعتبارًا من 12 سبتمبر 2026',
           'وضع Agent (البحث متعدد الخطوات وتعديل الملفات) مخصص لسطح المكتب فقط؛ يعمل وضع Quick Chat الأخف أيضًا على تطبيقَي iOS وAndroid الخاصَّين بـObsidian',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمّق لمدخل Copilot for Obsidian في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمقارنته بلمحة سريعة مع عشرات الأدوات الأخرى الداعمة للذكاء الاصطناعي المحلي.' },
-        ],
       },
       overview: {
         id: 'what-is-copilot-for-obsidian',
@@ -2298,9 +2274,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '1회 결제 방식의 Self-Host Supporter(약 349.99달러)는 평생 셀프호스트 모드와 2년치 Plus 요금제를 추가',
           'GitHub 저장소([github.com/logancyang/obsidian-copilot](https://github.com/logancyang/obsidian-copilot))는 2026년 9월 12일 기준 약 7,700개의 스타를 표시',
           'Agent 모드(다단계 조사 및 파일 편집)는 데스크톱 전용; 더 가벼운 Quick Chat 모드는 Obsidian의 iOS·Android 앱에서도 작동',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Copilot for Obsidian 항목을 심층적으로 보완하는 글입니다 — 다른 수십 개의 로컬 AI 지원 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {
