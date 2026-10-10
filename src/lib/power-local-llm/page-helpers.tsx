@@ -891,6 +891,7 @@ const HUB_THEMES: Array<{
       'cognee-review',
       'chroma-review',
       'longmemory-review',
+      'return-editor-review',
     ],
   },
   {

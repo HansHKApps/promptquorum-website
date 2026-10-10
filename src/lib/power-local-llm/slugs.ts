@@ -393,6 +393,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'oscilla-review':                          'oscilla-review',
   'mlxhub-review':                           'mlxhub-review',
   'tina-review':                             'tina-review',
+  'return-editor-review':                    'return-editor-review',
   // Ollama Local AI review — 2026-10-02
   'ollama-local-ai-review':                  'ollama-local-ai-review',
   // ComfyUI review — 2026-09-06

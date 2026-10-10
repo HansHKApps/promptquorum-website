@@ -119,6 +119,7 @@ import { app as app_tokforge } from './apps/tokforge'
 import { app as app_friedrichai } from './apps/friedrichai'
 import { app as app_oscilla } from './apps/oscilla'
 import { app as app_tina } from './apps/tina'
+import { app as app_return_editor } from './apps/return-editor'
 import { app as app_mlxhub } from './apps/mlxhub'
 import { app as app_local_ai_geetmark } from './apps/local-ai-geetmark'
 import { app as app_layla } from './apps/layla'
@@ -488,6 +489,7 @@ export const localAiApps: ToolRecord[] = [
   app_friedrichai,
   app_oscilla,
   app_tina,
+  app_return_editor,
   app_mlxhub,
   app_local_ai_geetmark,
 ]

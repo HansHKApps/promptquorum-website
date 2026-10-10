@@ -565,6 +565,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
 
   // Tina review (Mobile & Edge LLMs) — 2026-10-04
   'tina-review',
+  'return-editor-review',
 
   // MLXHub review (Mobile & Edge LLMs) — 2026-10-05
   'mlxhub-review',

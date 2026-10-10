@@ -12,7 +12,7 @@ import type { Language } from '@/lib/blog/blogContent'
 //   `category`   — WHAT the tool does. Multi-assign, hierarchical: a
 //                   7-group top level (the stable public surface — meant
 //                   to hold for ~2 years without restructuring) and a
-//                   35-value subcategory level underneath (where new tool
+//                   36-value subcategory level underneath (where new tool
 //                   classes get absorbed as they appear). First entry in a
 //                   tool's `categories[]` array is its primary category.
 //   `interface`  — HOW you use the tool. desktop app / web app / CLI /
@@ -54,6 +54,7 @@ export type CategorySubKey =
   // Knowledge & Retrieval
   | 'rag-frameworks'
   | 'document-pdf-chat'
+  | 'contract-review'
   | 'vector-databases'
   | 'notes-integrations'
   | 'embeddings-indexing'
@@ -108,6 +109,7 @@ export const CATEGORY_SUB_LABEL: Record<CategorySubKey, Record<Language, string>
   'prompt-tooling-evals': { en: 'Prompt tooling & evals', de: 'Prompt-Tools & Evaluierungen', fr: 'Outils de prompt et évaluations', ja: 'プロンプトツール＆評価', zh: '提示词工具与评估', es: 'Herramientas de prompts y evaluaciones', pt: 'Ferramentas de prompt e avaliações', ar: 'أدوات البرومبت والتقييم', ko: '프롬프트 도구 및 평가' },
   'rag-frameworks': { en: 'RAG frameworks', de: 'RAG-Frameworks', fr: 'Frameworks RAG', ja: 'RAGフレームワーク', zh: 'RAG 框架', es: 'Frameworks RAG', pt: 'Frameworks RAG', ar: 'أطر عمل RAG', ko: 'RAG 프레임워크' },
   'document-pdf-chat': { en: 'Document & PDF chat', de: 'Dokument- & PDF-Chat', fr: 'Chat de documents et PDF', ja: 'ドキュメント＆PDFチャット', zh: '文档与 PDF 对话', es: 'Chat de documentos y PDF', pt: 'Chat de documentos e PDF', ar: 'الدردشة مع المستندات وملفات PDF', ko: '문서 및 PDF 채팅' },
+  'contract-review': { en: 'Contract review', de: 'Vertragsprüfung', fr: 'Revue de contrats', ja: '契約書レビュー', zh: '合同审查', es: 'Revisión de contratos', pt: 'Revisão de contratos', ar: 'مراجعة العقود', ko: '계약서 검토' },
   'vector-databases': { en: 'Vector databases', de: 'Vektordatenbanken', fr: 'Bases de données vectorielles', ja: 'ベクトルデータベース', zh: '向量数据库', es: 'Bases de datos vectoriales', pt: 'Bancos de dados vetoriais', ar: 'قواعد البيانات المتجهة', ko: '벡터 데이터베이스' },
   'notes-integrations': { en: 'Notes integrations', de: 'Notiz-Integrationen', fr: 'Intégrations de notes', ja: 'メモアプリ連携', zh: '笔记应用集成', es: 'Integraciones de notas', pt: 'Integrações de notas', ar: 'تكاملات تطبيقات الملاحظات', ko: '노트 앱 연동' },
   'embeddings-indexing': { en: 'Embeddings & indexing', de: 'Embeddings & Indexierung', fr: 'Embeddings et indexation', ja: '埋め込み＆インデックス作成', zh: '嵌入与索引', es: 'Embeddings e indexación', pt: 'Embeddings e indexação', ar: 'التضمينات والفهرسة', ko: '임베딩 및 인덱싱' },
@@ -147,6 +149,7 @@ export const CATEGORY_SUB_GROUP: Record<CategorySubKey, CategoryGroupKey> = {
   'prompt-tooling-evals': 'code-development',
   'rag-frameworks': 'knowledge-retrieval',
   'document-pdf-chat': 'knowledge-retrieval',
+  'contract-review': 'knowledge-retrieval',
   'vector-databases': 'knowledge-retrieval',
   'notes-integrations': 'knowledge-retrieval',
   'embeddings-indexing': 'knowledge-retrieval',
@@ -172,7 +175,7 @@ export const CATEGORY_GROUPS: { key: CategoryGroupKey; subs: CategorySubKey[] }[
   { key: 'run-serve', subs: ['inference-engines', 'runtimes-managers', 'api-servers', 'routers-gateways', 'quantization-conversion'] },
   { key: 'chat-assistants', subs: ['general-chat-clients', 'roleplay-companions', 'personal-assistants'] },
   { key: 'code-development', subs: ['code-assistants-ide-plugins', 'agent-frameworks', 'autonomous-agents', 'sdks-libraries', 'workflow-node-builders', 'prompt-tooling-evals'] },
-  { key: 'knowledge-retrieval', subs: ['rag-frameworks', 'document-pdf-chat', 'vector-databases', 'notes-integrations', 'embeddings-indexing', 'local-search'] },
+  { key: 'knowledge-retrieval', subs: ['rag-frameworks', 'document-pdf-chat', 'contract-review', 'vector-databases', 'notes-integrations', 'embeddings-indexing', 'local-search'] },
   { key: 'voice-audio', subs: ['speech-to-text', 'text-to-speech', 'voice-cloning', 'realtime-voice-agents', 'music-audio'] },
   { key: 'images-video', subs: ['image-generation', 'editing-upscaling', 'vision-ocr', 'video-generation', 'avatars-3d'] },
   { key: 'train-operate', subs: ['fine-tuning-lora', 'datasets-synthetic-data', 'evaluation-benchmarking', 'observability', 'model-hubs'] },
