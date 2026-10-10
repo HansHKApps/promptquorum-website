@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, Fragment } from 'react'
 import { ClusterBanner } from '@/components/ClusterBanner'
 import { AppLink as Link } from '@/components/AppLink'
 import { DirectoryBlock } from '@/components/local-ai-directory/DirectoryBlock'
+import { DirectoryPopupLoader } from '@/components/local-ai-directory/DirectoryPopupLoader'
 import type { DirectoryFunnelData } from '@/lib/power-local-llm/directory-funnel'
 import Image from 'next/image'
 import { useLang } from '@/hooks/useLang'
@@ -1017,6 +1018,7 @@ function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs, 
         })()}
 
         {directoryFunnel && <DirectoryBlock data={directoryFunnel} position="start" />}
+        {directoryFunnel && <DirectoryPopupLoader popup={directoryFunnel.popup} dir={directoryFunnel.dir} />}
 
         {/* Quick Answer Block — AI-crawler-optimized featured snippet */}
         {article.quickAnswer && (
