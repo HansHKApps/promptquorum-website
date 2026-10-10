@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import sharp from 'sharp';
 const BASE = 'http://localhost:3420';
 const SPECS = {
   'lemonade-review': {
@@ -25,16 +26,42 @@ const SPECS = {
   },
 };
 
+// Discover posters: <=7 words / <=16 CJK chars per line, ~30 words total with the title.
+const HIGHLIGHTS = {
+  'lemonade-review': {
+    en: ['Free and open source', 'Runs on NVIDIA, Apple, CPU', 'One OpenAI-compatible API'],
+    de: ['Kostenlos und quelloffen', 'Läuft auf NVIDIA, Apple, CPU', 'Eine OpenAI-kompatible API'],
+    fr: ['Gratuit et open source', 'Tourne sur NVIDIA, Apple, CPU', 'Une seule API compatible OpenAI'],
+    es: ['Gratis y de código abierto', 'Funciona en NVIDIA, Apple, CPU', 'Una API compatible con OpenAI'],
+    ja: ['無料のオープンソース', 'NVIDIA・Apple・CPUでも動作', 'OpenAI互換API'],
+    zh: ['免费开源', '支持NVIDIA、Apple、CPU', '统一的OpenAI兼容API'],
+    pt: ['Gratuito e de código aberto', 'Roda em NVIDIA, Apple, CPU', 'Uma API compatível com OpenAI'],
+    ar: ['مجاني ومفتوح المصدر', 'يعمل على NVIDIA وApple', 'واجهة متوافقة مع OpenAI'],
+    ko: ['무료 오픈소스', 'NVIDIA·Apple·CPU 지원', 'OpenAI 호환 API'],
+  },
+  'onyx-review': {
+    en: ['Open source, MIT license', '50+ data sources connected', 'Works with local Ollama'],
+    de: ['Quelloffen, MIT-Lizenz', 'Über 50 Datenquellen', 'Funktioniert mit lokalem Ollama'],
+    fr: ['Open source, licence MIT', 'Plus de 50 sources de données', 'Compatible avec Ollama local'],
+    es: ['Código abierto, licencia MIT', 'Más de 50 fuentes de datos', 'Funciona con Ollama local'],
+    ja: ['MITライセンスのOSS', '50以上のデータソース', 'ローカルOllama対応'],
+    zh: ['MIT许可证开源', '连接50多个数据源', '支持本地Ollama'],
+    pt: ['Código aberto, licença MIT', 'Mais de 50 fontes de dados', 'Funciona com Ollama local'],
+    ar: ['مفتوح المصدر برخصة MIT', 'أكثر من 50 مصدر بيانات', 'يعمل مع Ollama محلي'],
+    ko: ['MIT 오픈소스', '50개 이상 데이터 소스', '로컬 Ollama 지원'],
+  },
+};
+
 async function generate(basename, lang, spec) {
   const res = await fetch(`${BASE}/api/hero-image`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ lang, title: spec.title, subtitle: spec.subtitle, bullets: spec.bullets, footer: spec.footer }),
+    body: JSON.stringify({ lang, title: spec.title, subtitle: spec.subtitle, highlights: HIGHLIGHTS[basename][lang], footer: spec.footer }),
   });
   if (!res.ok) throw new Error(`${basename}/${lang}: HTTP ${res.status} ${await res.text()}`);
   const buf = Buffer.from(await res.arrayBuffer());
   const path = `public/images/${basename}-hero-${lang}.png`;
-  await import('node:fs/promises').then(fs => fs.writeFile(path, buf));
+  await sharp(buf).webp({ quality: 90, effort: 6 }).toFile(path.replace(/\.png$/, '.webp'));
   console.log(`  ${path} (${buf.length} bytes)`);
 }
 
