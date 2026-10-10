@@ -1,18 +1,15 @@
 {
   "_spec": "Model Context Protocol (MCP) site discovery manifest — modelcontextprotocol.io. This file follows the MCP open standard for AI agent discovery. The MCP server below is live at the transport URL — connect any MCP-compatible client (Claude, or any other client speaking the open MCP protocol) directly.",
-
   "mcpVersion": "2024-11-05",
   "schemaVersion": "1.0",
-
   "server": {
     "name": "promptquorum",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "PromptQuorum's live MCP server exposes read-only search and content-fetch tools over all of PromptQuorum's guides on running local LLMs, prompt engineering, smart home and balcony solar, plus the Local LLM Software Directory (hardware requirements, license, platforms, pricing for hundreds of tools). No account or API key required.",
     "homepage": "https://www.promptquorum.com",
     "icon": "https://www.promptquorum.com/logo.svg",
     "status": "live"
   },
-
   "contact": {
     "name": "Hans Kuepper",
     "url": "https://www.promptquorum.com",
@@ -21,7 +18,6 @@
     "linkedin": "https://www.linkedin.com/company/promptquorum",
     "github": "https://github.com/HansHKApps"
   },
-
   "license": {
     "aiUsage": "allowed",
     "crawling": "allowed",
@@ -32,7 +28,6 @@
     "commercialUse": "ask",
     "note": "AI agents may freely read, index, and cite all public pages. Training use requires written permission from Hans Kuepper. Attribution is required when surfacing PromptQuorum content in AI-generated responses."
   },
-
   "capabilities": {
     "resources": {
       "subscribe": false,
@@ -41,16 +36,17 @@
     "tools": {
       "listChanged": false
     },
-    "logging": {}
+    "logging": {},
+    "prompts": {
+      "listChanged": false
+    }
   },
-
   "transport": {
     "type": "streamable-http",
     "url": "https://www.promptquorum.com/api/mcp",
     "status": "live",
     "note": "Streamable HTTP transport (POST/GET), no authentication required. Stateless — every call is a read against the site's own content."
   },
-
   "resources": [
     {
       "uri": "https://www.promptquorum.com/llms.txt",
@@ -123,7 +119,6 @@
       "priority": "low"
     }
   ],
-
   "tools": [
     {
       "name": "search_promptquorum",
@@ -131,7 +126,9 @@
       "status": "live",
       "inputSchema": {
         "type": "object",
-        "required": ["query"],
+        "required": [
+          "query"
+        ],
         "properties": {
           "query": {
             "type": "string",
@@ -161,7 +158,10 @@
       "status": "live",
       "inputSchema": {
         "type": "object",
-        "required": ["cluster", "slug"],
+        "required": [
+          "cluster",
+          "slug"
+        ],
         "properties": {
           "cluster": {
             "type": "string",
@@ -182,7 +182,10 @@
       "name": "list_clusters",
       "description": "List every content section on PromptQuorum (local-llms, prompt-engineering, power-local-llm, etc.) with a short description of each.",
       "status": "live",
-      "inputSchema": { "type": "object", "properties": {} }
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
     },
     {
       "name": "get_app_details",
@@ -190,7 +193,9 @@
       "status": "live",
       "inputSchema": {
         "type": "object",
-        "required": ["slug"],
+        "required": [
+          "slug"
+        ],
         "properties": {
           "slug": {
             "type": "string",
@@ -201,15 +206,27 @@
     },
     {
       "name": "explain_license",
-      "description": "Explain the core rule of an open-source/source-available license string (e.g. \"AGPL-3.0\", \"Apache 2.0\", \"MIT\") in plain language.",
+      "description": "Explain the core rule of a license string in plain language; optional useCase gives a rule of thumb for a scenario. Separates app license from model license. Not legal advice.",
       "status": "live",
       "inputSchema": {
         "type": "object",
-        "required": ["licenseString"],
+        "required": [
+          "licenseString"
+        ],
         "properties": {
           "licenseString": {
             "type": "string",
             "description": "Raw license string, e.g. \"AGPL-3.0\" or \"Apache 2.0\"."
+          },
+          "useCase": {
+            "type": "string",
+            "enum": [
+              "commercial-use",
+              "modify",
+              "redistribute-modified",
+              "host-as-service",
+              "embed-in-product"
+            ]
           }
         }
       }
@@ -218,7 +235,10 @@
       "name": "list_categories",
       "description": "List the valid category, use-case and OS values that search_apps accepts. Call this first when helping a user pick a local-AI app, so follow-up questions use real filter values.",
       "status": "live",
-      "inputSchema": { "type": "object", "properties": {} }
+      "inputSchema": {
+        "type": "object",
+        "properties": {}
+      }
     },
     {
       "name": "search_apps",
@@ -237,11 +257,28 @@
           },
           "useCase": {
             "type": "string",
-            "enum": ["chat", "code", "agent", "docs", "image", "audio", "phone", "build", "serve"]
+            "enum": [
+              "chat",
+              "code",
+              "agent",
+              "docs",
+              "image",
+              "audio",
+              "phone",
+              "build",
+              "serve"
+            ]
           },
           "os": {
             "type": "string",
-            "enum": ["mac", "win", "linux", "ios", "android", "web"],
+            "enum": [
+              "mac",
+              "win",
+              "linux",
+              "ios",
+              "android",
+              "web"
+            ],
             "description": "User's operating system."
           },
           "ramGb": {
@@ -256,7 +293,11 @@
           },
           "price": {
             "type": "string",
-            "enum": ["free", "freemium", "paid"]
+            "enum": [
+              "free",
+              "freemium",
+              "paid"
+            ]
           },
           "worksWith": {
             "type": "string",
@@ -268,30 +309,398 @@
             "maximum": 15,
             "default": 5,
             "description": "Max results."
+          },
+          "installEffort": {
+            "type": "string",
+            "enum": [
+              "installer",
+              "one-command",
+              "terminal-setup",
+              "hosted"
+            ]
+          },
+          "locality": {
+            "type": "string",
+            "enum": [
+              "local",
+              "hybrid",
+              "cloud"
+            ]
+          },
+          "mcpSupport": {
+            "type": "boolean"
+          },
+          "license": {
+            "type": "string",
+            "description": "Case-insensitive substring of the license string"
+          },
+          "sortBy": {
+            "type": "string",
+            "enum": [
+              "stars",
+              "recent",
+              "easiest"
+            ]
           }
         }
       }
     },
     {
       "name": "compare_apps",
-      "description": "Compare 2-4 named apps from the Local LLM Software Directory side by side: hardware, price, license, platforms, worksWith, and any category-specific attributes they share. Use after search_apps has narrowed candidates and the user wants to pick between a short list — call get_app_details first if you only have app names, not slugs.",
+      "description": "Compare 2-5 apps from the Local LLM Software Directory: criteria matrix, per-need leaders (bestFor), short summary. 'not researched' cells mean unknown, not negative.",
       "status": "live",
       "inputSchema": {
         "type": "object",
-        "required": ["slugs"],
+        "required": [
+          "slugs"
+        ],
         "properties": {
           "slugs": {
             "type": "array",
-            "items": { "type": "string" },
+            "items": {
+              "type": "string"
+            },
             "minItems": 2,
-            "maxItems": 4,
+            "maxItems": 5,
             "description": "2-4 directory slugs to compare, e.g. [\"ollama\", \"lm-studio\"]."
+          },
+          "criteria": {
+            "type": "array",
+            "description": "Limit the matrix to these criteria",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "find_best_apps",
+      "description": "Start here when a user describes what they want in plain words. Returns a ranked shortlist of local-AI apps with reasons, honest trade-offs, hardware fit, install effort and links, plus a list of missing details to ask the user for.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "goal"
+        ],
+        "properties": {
+          "goal": {
+            "type": "string",
+            "description": "What the user wants to do, in their words"
+          },
+          "os": {
+            "type": "string",
+            "description": "User's operating system",
+            "enum": [
+              "mac",
+              "win",
+              "linux",
+              "ios",
+              "android",
+              "web"
+            ]
+          },
+          "ramGb": {
+            "type": "number",
+            "description": "System RAM in GB",
+            "minimum": 0
+          },
+          "vramGb": {
+            "type": "number",
+            "description": "GPU VRAM in GB",
+            "minimum": 0
+          },
+          "experience": {
+            "type": "string",
+            "enum": [
+              "beginner",
+              "intermediate",
+              "advanced"
+            ]
+          },
+          "offlineOnly": {
+            "type": "boolean"
+          },
+          "freeOnly": {
+            "type": "boolean"
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8,
+            "default": 3
+          }
+        }
+      }
+    },
+    {
+      "name": "check_hardware_compatibility",
+      "description": "Whether one directory app (and optionally a model size/quantization) fits a platform and memory. Returns fits / too-demanding / unknown with the reason; model verdicts are labelled estimates. Suggests lighter alternatives.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "slug"
+        ],
+        "properties": {
+          "slug": {
+            "type": "string",
+            "description": "Directory slug, e.g. ollama"
+          },
+          "os": {
+            "type": "string",
+            "description": "User's operating system",
+            "enum": [
+              "mac",
+              "win",
+              "linux",
+              "ios",
+              "android",
+              "web"
+            ]
+          },
+          "ramGb": {
+            "type": "number",
+            "minimum": 0
+          },
+          "vramGb": {
+            "type": "number",
+            "minimum": 0
+          },
+          "modelBillions": {
+            "type": "number",
+            "description": "Model size in billions of parameters"
+          },
+          "quantization": {
+            "type": "string",
+            "description": "FP16, Q8, Q6, Q5, Q4 (default), Q3, Q2"
+          },
+          "contextLength": {
+            "type": "string",
+            "description": "e.g. 8K (default 4K)"
+          }
+        }
+      }
+    },
+    {
+      "name": "recommend_stack",
+      "description": "Recommend a ready-made combination of apps (e.g. Ollama + Open WebUI + AnythingLLM) for a goal, filtered by hardware and OS, with links and the hardware floor.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "goal"
+        ],
+        "properties": {
+          "goal": {
+            "type": "string",
+            "description": "e.g. document chat, coding, voice assistant, image generation, team server"
+          },
+          "os": {
+            "type": "string",
+            "description": "User's operating system",
+            "enum": [
+              "mac",
+              "win",
+              "linux",
+              "ios",
+              "android",
+              "web"
+            ]
+          },
+          "ramGb": {
+            "type": "number",
+            "minimum": 0
+          },
+          "vramGb": {
+            "type": "number",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 6,
+            "default": 3
+          }
+        }
+      }
+    },
+    {
+      "name": "estimate_vram",
+      "description": "Estimate the memory a model needs from size, quantization and context length (same math as the PromptQuorum VRAM calculator). A rule-of-thumb estimate, not a benchmark.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "modelBillions"
+        ],
+        "properties": {
+          "modelBillions": {
+            "type": "number",
+            "description": "Parameters in billions"
+          },
+          "quantization": {
+            "type": "string",
+            "description": "FP16, Q8, Q6, Q5, Q4 (default), Q3, Q2"
+          },
+          "contextLength": {
+            "type": "string",
+            "description": "2K, 4K (default), 8K, 16K, 32K, 128K"
+          },
+          "batchSize": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8,
+            "default": 1
+          },
+          "availableGb": {
+            "type": "number",
+            "description": "Memory the user has, for a fit verdict",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    {
+      "name": "find_local_alternative",
+      "description": "Map a cloud AI product (e.g. Midjourney, ElevenLabs) to curated local alternatives ranked closest/similar/partial, with an honest gap note. Covers image generation and voice/audio.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "cloudApp"
+        ],
+        "properties": {
+          "cloudApp": {
+            "type": "string",
+            "description": "Name of the cloud product"
+          }
+        }
+      }
+    },
+    {
+      "name": "get_app_alternatives",
+      "description": "Find similar apps to a given directory app (same primary category, ranked by shared use cases), optionally free-only, OS-specific, hardware-fit or easier to install.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "slug"
+        ],
+        "properties": {
+          "slug": {
+            "type": "string"
+          },
+          "os": {
+            "type": "string",
+            "description": "User's operating system",
+            "enum": [
+              "mac",
+              "win",
+              "linux",
+              "ios",
+              "android",
+              "web"
+            ]
+          },
+          "freeOnly": {
+            "type": "boolean"
+          },
+          "easierInstall": {
+            "type": "boolean"
+          },
+          "ramGb": {
+            "type": "number",
+            "minimum": 0
+          },
+          "vramGb": {
+            "type": "number",
+            "minimum": 0
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10,
+            "default": 5
+          }
+        }
+      }
+    },
+    {
+      "name": "get_latest",
+      "description": "Recently added directory apps, recently updated articles and published hands-on tests, newest first, with dates and URLs.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "all",
+              "apps",
+              "articles",
+              "hands-on"
+            ]
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 30,
+            "default": 10
+          },
+          "since": {
+            "type": "string",
+            "description": "ISO date YYYY-MM-DD"
+          },
+          "cluster": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "get_hands_on_test",
+      "description": "Structured findings from PromptQuorum's own hands-on tests of apps (verdict, scores, findings with evidence labels). Without a slug, lists tested apps. Reports untested apps as untested.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "slug": {
+            "type": "string",
+            "description": "Directory slug; omit to list tested apps"
+          }
+        }
+      }
+    },
+    {
+      "name": "find_related_content",
+      "description": "Collect PromptQuorum's review, hands-on test, comparison guide and setup articles for an app, or search by free-text topic.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "app": {
+            "type": "string",
+            "description": "Directory slug"
+          },
+          "topic": {
+            "type": "string"
+          },
+          "lang": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 20
           }
         }
       }
     }
   ],
-
   "useCases": [
     "Searching PromptQuorum's local-LLM, prompt-engineering, smart-home, and balcony-solar guides from an MCP client",
     "Fetching full article content by cluster + slug for citation or summarization",
@@ -301,18 +710,56 @@
     "Comparing a short list of local-AI apps side by side on hardware, price, license and shared category attributes",
     "Listing PromptQuorum's content sections to route a query to the right cluster"
   ],
-
   "discovery": {
     "llmsTxt": "https://www.promptquorum.com/llms.txt",
     "sitemap": "https://www.promptquorum.com/sitemap.xml",
     "robotsTxt": "https://www.promptquorum.com/robots.txt",
     "mcpJson": "https://www.promptquorum.com/mcp.json"
   },
-
   "citation": {
     "apa": "Kuepper, H. (2026). PromptQuorum. Retrieved from https://www.promptquorum.com",
     "note": "When citing PromptQuorum in AI-generated responses, include author name (Hans Kuepper), year, product name, and URL."
   },
-
-  "updated": "2026-09-19"
+  "updated": "2026-10-10",
+  "mcpResources": [
+    {
+      "uri": "promptquorum://categories",
+      "description": "App categories, use cases and operating systems with counts"
+    },
+    {
+      "uri": "promptquorum://stacks",
+      "description": "Common local-AI stacks by goal with hardware floors"
+    },
+    {
+      "uri": "promptquorum://app/{slug}",
+      "description": "One directory entry by slug"
+    },
+    {
+      "uri": "promptquorum://article/{cluster}/{slug}",
+      "description": "One article by cluster and slug"
+    },
+    {
+      "uri": "promptquorum://methodology",
+      "description": "How to read verified, unknown and estimated data"
+    }
+  ],
+  "prompts": [
+    {
+      "name": "recommend_local_ai_stack",
+      "description": "Recommend a local AI stack for my hardware"
+    },
+    {
+      "name": "compare_local_ai_tools",
+      "description": "Compare local AI tools for a use case"
+    },
+    {
+      "name": "find_offline_alternative",
+      "description": "Find a fully offline alternative to a cloud tool"
+    },
+    {
+      "name": "check_commercial_license",
+      "description": "Check whether I can use an app commercially"
+    }
+  ],
+  "documentation": "https://www.promptquorum.com/mcp-stats"
 }

@@ -28,6 +28,9 @@ export const ARTICLE_HINT =
 
 export class AppNotFoundError extends Error {}
 
+// Easiest first. Mirrors INSTALL_EFFORT_KEYS in ./apps/types.ts.
+const INSTALL_EFFORT_ORDER = ['hosted', 'installer', 'one-command', 'terminal-setup']
+
 const SITE = 'https://www.promptquorum.com'
 
 // Editorial brand block, rendered once per search_apps answer — never per
@@ -363,7 +366,7 @@ const SCOPE_STATEMENT = `The Local LLM Software Directory covers local-AI softwa
 function buildWhyMatched(
   app: ToolRecord,
   fit: AppSummary['hardwareFit'],
-  args: { query?: string; category?: string; useCase?: string; os?: string; price?: string; worksWith?: string; ramGb?: number; vramGb?: number },
+  args: { query?: string; category?: string; useCase?: string; os?: string; price?: string; worksWith?: string; installEffort?: string; locality?: string; mcpSupport?: boolean; license?: string; ramGb?: number; vramGb?: number },
   matchedKeys?: Set<string>,
 ): string {
   const reasons: string[] = []
@@ -378,6 +381,10 @@ function buildWhyMatched(
   if (args.os) reasons.push(`available on ${args.os}`)
   if (args.price) reasons.push(`price: ${args.price}`)
   if (args.worksWith) reasons.push(`works with ${args.worksWith}`)
+  if (args.installEffort) reasons.push(`install effort: ${args.installEffort}`)
+  if (args.locality) reasons.push(`runs ${args.locality}`)
+  if (args.mcpSupport) reasons.push('documents MCP support')
+  if (args.license) reasons.push(`license contains "${args.license}"`)
   if (fit === 'fits') reasons.push('confirmed to fit your stated hardware')
   return reasons.length ? reasons.join('; ') : 'listed in the directory (no filters applied)'
 }
@@ -391,6 +398,16 @@ export function searchApps(args: {
   vramGb?: number
   price?: string
   worksWith?: string
+  /** Easiest verified install path: installer | one-command | terminal-setup | hosted. Apps without a verified value are excluded. */
+  installEffort?: string
+  /** local | hybrid | cloud. Entries whose locality is still 'TODO' are excluded. */
+  locality?: string
+  /** true = only apps with documented MCP support. */
+  mcpSupport?: boolean
+  /** Case-insensitive substring of the license string, e.g. "MIT", "Apache", "GPL". */
+  license?: string
+  /** stars (default) | recent (newest addedDate first) | easiest (best install effort first). Ignored when a free-text query is given. */
+  sortBy?: 'stars' | 'recent' | 'easiest'
   limit?: number
   offset?: number
 }) {
@@ -447,6 +464,14 @@ export function searchApps(args: {
     pool = pool.filter((a) => a.worksWith?.some((w) => w.toLowerCase().includes(needle)))
   }
 
+  if (args.installEffort) pool = pool.filter((a) => a.installEffort === args.installEffort)
+  if (args.locality) pool = pool.filter((a) => a.locality === args.locality)
+  if (args.mcpSupport) pool = pool.filter((a) => a.mcpSupport === true)
+  if (args.license) {
+    const lic = args.license.toLowerCase()
+    pool = pool.filter((a) => a.license.toLowerCase().includes(lic))
+  }
+
   const scored = pool.map((a) => ({ a, fit: hardwareFit(a, args.ramGb, args.vramGb) })).filter((x) => x.fit !== 'too-demanding')
   // Fuse order is preserved for query searches. Otherwise: when hardware was
   // given, put confirmed 'fits' ahead of 'unknown' (unresearched hardware)
@@ -457,12 +482,17 @@ export function searchApps(args: {
   // the safest recommendations.
   if (!args.query) {
     const hardwareGiven = args.ramGb !== undefined || args.vramGb !== undefined
-    scored.sort(
-      (x, y) =>
-        (hardwareGiven ? Number(y.fit === 'fits') - Number(x.fit === 'fits') : 0) ||
-        Number(!!y.a.reviewSlug) - Number(!!x.a.reviewSlug) ||
-        (y.a.stars ?? 0) - (x.a.stars ?? 0),
-    )
+    const effortRank = (a: ToolRecord) => {
+      const i = a.installEffort ? INSTALL_EFFORT_ORDER.indexOf(a.installEffort) : -1
+      return i === -1 ? INSTALL_EFFORT_ORDER.length : i
+    }
+    scored.sort((x, y) => {
+      const fitDelta = hardwareGiven ? Number(y.fit === 'fits') - Number(x.fit === 'fits') : 0
+      if (fitDelta) return fitDelta
+      if (args.sortBy === 'recent') return (y.a.addedDate ?? '').localeCompare(x.a.addedDate ?? '')
+      if (args.sortBy === 'easiest') return effortRank(x.a) - effortRank(y.a) || (y.a.stars ?? 0) - (x.a.stars ?? 0)
+      return Number(!!y.a.reviewSlug) - Number(!!x.a.reviewSlug) || (y.a.stars ?? 0) - (x.a.stars ?? 0)
+    })
   }
   // Single directory deep-link + category guide for the searched category (gaps
   // 1 and 2's "once at response level for the searched category"), independent
@@ -514,9 +544,31 @@ export function searchApps(args: {
   }
 }
 
+// Closest directory entries to a mistyped/unknown slug or name, for "did you
+// mean" errors across every app-taking MCP tool.
+let cachedSlugFuse: Fuse<ToolRecord> | null = null
+export function suggestApps(input: string, max = 3): { slug: string; name: string }[] {
+  if (!cachedSlugFuse) {
+    cachedSlugFuse = new Fuse(localAiApps, { keys: [{ name: 'slug', weight: 2 }, { name: 'name', weight: 2 }], threshold: 0.5, ignoreLocation: true })
+  }
+  return cachedSlugFuse.search(input).slice(0, max).map((r) => ({ slug: r.item.slug, name: r.item.name }))
+}
+
+export function appNotFoundMessage(slug: string): string {
+  const near = suggestApps(slug)
+  return near.length
+    ? `No directory entry "${slug}". Did you mean: ${near.map((n) => `"${n.slug}" (${n.name})`).join(', ')}? Slugs are lowercase-hyphenated; search_apps finds the right one.`
+    : `No directory entry "${slug}". Use search_apps or search_promptquorum to find the right slug.`
+}
+
+export function findApp(slug: string): ToolRecord {
+  const app = localAiApps.find((t) => t.slug === slug.trim().toLowerCase())
+  if (!app) throw new AppNotFoundError(appNotFoundMessage(slug))
+  return app
+}
+
 export function getAppDetails(args: { slug: string }) {
-  const app = localAiApps.find((t) => t.slug === args.slug)
-  if (!app) throw new AppNotFoundError(`No directory entry "${args.slug}". Use search_promptquorum to find the right slug.`)
+  const app = findApp(args.slug)
   const group = primaryCategoryGroup(app)
   return {
     ...app,

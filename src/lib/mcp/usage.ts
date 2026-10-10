@@ -6,7 +6,25 @@
 import { unstable_cache } from 'next/cache'
 import { redis } from '@/lib/redis'
 
-const MCP_TOOL_NAMES = ['search_promptquorum', 'get_article', 'list_clusters', 'get_app_details', 'explain_license', 'search_apps', 'list_categories', 'compare_apps'] as const
+export const MCP_TOOL_NAMES = [
+  'search_promptquorum',
+  'get_article',
+  'list_clusters',
+  'get_app_details',
+  'explain_license',
+  'search_apps',
+  'list_categories',
+  'compare_apps',
+  'find_best_apps',
+  'check_hardware_compatibility',
+  'recommend_stack',
+  'estimate_vram',
+  'find_local_alternative',
+  'get_app_alternatives',
+  'get_latest',
+  'get_hands_on_test',
+  'find_related_content',
+] as const
 export type McpToolName = (typeof MCP_TOOL_NAMES)[number]
 
 function todayUtc(): string {
