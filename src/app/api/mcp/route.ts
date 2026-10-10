@@ -11,6 +11,7 @@
 
 import { createMcpHandler } from 'mcp-handler'
 import { ResourceTemplate } from '@modelcontextprotocol/server'
+import { createHash } from 'crypto'
 import { Ratelimit } from '@upstash/ratelimit'
 import { z } from 'zod'
 import { redis } from '@/lib/redis'
@@ -397,7 +398,7 @@ const handler = createMcpHandler(
             '- **VRAM/model figures are estimates** (rule of thumb with a 25% margin), not benchmarks.',
             '- **Hands-on tests** carry evidence labels: observed / measured are from the test; vendor-claim was not verified by us; tester-view is opinion. Untested apps are reported as untested.',
             '- **Licenses**: the app\'s license differs from the model\'s license. Explanations are not legal advice.',
-            `- Full documentation: ${SITE}/mcp`,
+            `- Full documentation: ${SITE}/mcp-stats`,
           ].join('\n')
         )
     )
@@ -490,8 +491,9 @@ const handler = createMcpHandler(
 // reliable mechanism, so wrap the handler to add it directly. Every call is
 // a live tool invocation or protocol handshake; none of it is cacheable.
 // Generous per-IP limit: this server stays public and free; the limit only
-// protects against runaway loops and scraping. The IP is hashed into the
-// limiter key by Upstash's sliding window and never stored with usage counters.
+// protects against runaway loops and scraping. The limiter key is a salted
+// SHA-256 of the IP (never the raw IP), kept for the 1-minute window only and
+// never stored with the usage counters.
 // A Redis outage must never take the server down, so failures fail open.
 const mcpLimiter = new Ratelimit({
   redis,
@@ -503,7 +505,8 @@ async function rateLimited(request: Request): Promise<Response | null> {
   if (request.method !== 'POST') return null
   try {
     const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ?? 'unknown'
-    const { success, reset } = await mcpLimiter.limit(ip)
+    const key = createHash('sha256').update(`${process.env.ALTERNATIVES_LOG_TOKEN ?? ''}:${ip}`).digest('hex')
+    const { success, reset } = await mcpLimiter.limit(key)
     if (success) return null
     const retryAfter = Math.max(1, Math.ceil((reset - Date.now()) / 1000))
     return new Response(

@@ -39,6 +39,7 @@
     "freshness": "node scripts/freshness.mjs",
     "deploy:now": "bash scripts/deploy-now.sh",
     "validate-snippet-blocks": "node scripts/validate-snippet-blocks.mjs",
+    "check:mcp": "bun scripts/check-mcp-tools.ts",
     "validate-local-ai-apps": "node scripts/validate-local-ai-apps.mjs",
     "validate-app-versions": "node scripts/validate-app-versions.mjs",
     "validate-category-compare": "node scripts/validate-category-compare.mjs",

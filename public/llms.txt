@@ -83,14 +83,31 @@
 PromptQuorum runs a live, public, read-only [Model Context Protocol](https://modelcontextprotocol.io) server exposing the site's own content and software directory to any MCP-compatible client. No account, API key, or authentication required.
 
 - **Transport**: Streamable HTTP — `POST`/`GET` to `https://www.promptquorum.com/api/mcp`
-- **Protocol version**: 2024-11-05
+- **Server version**: 2.0.0 — 17 tools, 5 resources, 4 prompts; rate limit 120 requests/minute/IP
 - **Discovery manifest**: [https://www.promptquorum.com/mcp.json](https://www.promptquorum.com/mcp.json)
-- **Tools**:
-  - `search_promptquorum(query, lang?, cluster?, limit?)` — search all guides and the software directory; returns title/description/url/hub/lang
-  - `get_article(cluster, slug, lang?)` — fetch one article's full content by cluster + slug
-  - `list_clusters()` — list every content section (local-llms, prompt-engineering, power-local-llm, prompt-bites, smart-home, balcony-solar, blog) with a description
-  - `get_app_details(slug)` — fetch full directory data (license, hardware, platforms, price) for one tool in the Local LLM Software Directory
-  - `explain_license(licenseString)` — plain-language explanation of an open-source/source-available license string (e.g. "AGPL-3.0", "MIT")
+- **Documentation**: [https://www.promptquorum.com/mcp-stats](https://www.promptquorum.com/mcp-stats)
+- **Tools** (find apps):
+  - `find_best_apps(goal, os?, ramGb?, vramGb?, experience?, offlineOnly?, freeOnly?, limit?)` — plain-language goal + machine → ranked shortlist with reasons, trade-offs and missing details
+  - `search_apps(query?, category?, useCase?, os?, ramGb?, vramGb?, price?, worksWith?, installEffort?, locality?, mcpSupport?, license?, sortBy?, limit?, offset?)` — filter the Local LLM Software Directory
+  - `recommend_stack(goal, os?, ramGb?, vramGb?)` — ready-made multi-app stack with hardware floor
+  - `find_local_alternative(cloudApp)` — local alternatives to a cloud AI product (image, voice/audio)
+  - `get_app_alternatives(slug, os?, freeOnly?, easierInstall?)` — similar apps to one the user knows
+  - `get_app_details(slug)` — full directory data (license, hardware, platforms, price) for one tool
+  - `list_categories()` — valid category/use-case/OS filter values with counts
+- **Tools** (decide and check):
+  - `compare_apps(slugs[2-5], criteria?)` — criteria matrix, per-need leaders, summary
+  - `check_hardware_compatibility(slug, os?, ramGb?, vramGb?, modelBillions?, quantization?)` — fits / too-demanding / unknown, with estimate labelled
+  - `estimate_vram(modelBillions, quantization?, contextLength?, availableGb?)` — memory estimate for a model
+  - `explain_license(licenseString, useCase?)` — plain-language license rule of thumb; not legal advice
+- **Tools** (read and learn):
+  - `search_promptquorum(query, lang?, cluster?, limit?)` — search all guides and the software directory
+  - `get_article(cluster, slug, lang?)` — fetch one article's full content
+  - `find_related_content(app? | topic?)` — review, hands-on test, comparison and setup articles
+  - `get_hands_on_test(slug?)` — PromptQuorum's own hands-on findings with evidence labels; reports untested apps as untested
+  - `get_latest(type?, limit?, since?)` — recently added apps, updated articles, new tests
+  - `list_clusters()` — every content section with a description
+- **Resources**: `promptquorum://categories`, `promptquorum://stacks`, `promptquorum://app/{slug}`, `promptquorum://article/{cluster}/{slug}`, `promptquorum://methodology`
+- **Prompts**: `recommend_local_ai_stack`, `compare_local_ai_tools`, `find_offline_alternative`, `check_commercial_license`
 - **Example client config** (Claude Desktop / any MCP client that accepts a URL):
   ```json
   { "mcpServers": { "promptquorum": { "url": "https://www.promptquorum.com/api/mcp" } } }
