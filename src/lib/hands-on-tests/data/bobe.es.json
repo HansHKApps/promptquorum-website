@@ -16,6 +16,32 @@
   "title": "BoBe Alpha en un Mac de 24 GB: fácil de instalar, se reinició al borrarla",
   "page_title": "BoBe Test",
   "dek": "Prueba práctica en un MacBook Pro con M3 Pro. El asistente de la app no nombró el ajuste de macOS que necesita, y la app se reinició sola cuando el evaluador intentó borrarla.",
+  "seo": {
+    "title": "Prueba de BoBe Alpha: fácil de instalar, reinicia al borrar",
+    "description": "Prueba práctica de BoBe Alpha en un MacBook Pro (M3 Pro, 24 GB): instalación fácil, sin respuesta sobre el ajuste de macOS y reinicio al borrarla."
+  },
+  "faq": [
+    [
+      "¿Funciona BoBe en un Mac de 24 GB?",
+      "El evaluador instaló BoBe Alpha en un MacBook Pro con M3 Pro y 24 GB. Eligió el modelo local Medium (8B), indicado con unos 11 GB y 24 GB+ de RAM. En esta prueba no se pudo confirmar que funcione la percepción de pantalla.",
+      "observed"
+    ],
+    [
+      "¿Es fácil instalar BoBe Alpha?",
+      "La instalación fue un DMG de 312 MB y una aprobación de macOS ('so smooth', según el evaluador). La configuración descargó después 4.9 GB y 5.7 GB frente a 11 GB anunciados, sin estimación de tiempo.",
+      "observed"
+    ],
+    [
+      "¿Se puede desinstalar BoBe con normalidad?",
+      "No en esta prueba: la app se reinició sola cuando el evaluador intentó borrarla. Primero la cerró en el Monitor de Actividad y luego la eliminó. Solo se probó una instalación y no se registró la versión instalada.",
+      "observed"
+    ],
+    [
+      "¿Sube BoBe capturas de pantalla?",
+      "El cuadro Screen Awareness de BoBe dice que las capturas se analizan en local en el Mac y nunca se suben. Esta prueba no comprobó esa afirmación: no se hizo monitorización de red ni comprobación independiente.",
+      "vendor-claim"
+    ]
+  ],
   "status": "Abandoned",
   "published": "2026-10-09",
   "started": "2026-10-07",
@@ -1034,6 +1060,8 @@
     "footer_line": "ID de la prueba {id} · Estándar de pruebas v{version} · PDF de las notas originales: pendiente de añadir",
     "crumb_home": "Inicio",
     "crumb_directory": "Directorio",
-    "crumb_test": "Prueba práctica de {app}"
+    "crumb_test": "Prueba práctica de {app}",
+    "faq_h": "Preguntas frecuentes",
+    "more_tests_h": "Más pruebas prácticas"
   }
 }

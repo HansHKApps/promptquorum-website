@@ -77,16 +77,42 @@ for (const f of fs.readdirSync(dir).filter((n) => n.endsWith('.json'))) {
   }
 }
 
+// Search-result limits for each language: [max title chars, max description chars].
+// Latin scripts get ~60/158 before Google truncates; CJK and Arabic glyphs are wider, so they get less.
+const SEO_LIMITS = { en: [60, 158], de: [60, 158], fr: [60, 158], es: [60, 158], pt: [60, 158], ar: [55, 140], ko: [40, 120], ja: [36, 110], zh: [36, 110] }
+const plain = (s) => String(s).replace(/[\u2066\u2069]/g, '')
+
+function checkSeo(file, lang, data, enFaqLength) {
+  const [maxTitle, maxDesc] = SEO_LIMITS[lang] ?? SEO_LIMITS.en
+  const seo = data.seo
+  if (!seo || typeof seo.title !== 'string' || typeof seo.description !== 'string') {
+    errors.push(`${file}: missing seo.title / seo.description`)
+  } else {
+    const t = [...plain(seo.title)].length
+    const d = [...plain(seo.description)].length
+    if (t === 0 || t > maxTitle) errors.push(`${file}: seo.title is ${t} chars (limit ${maxTitle})`)
+    if (d === 0 || d > maxDesc) errors.push(`${file}: seo.description is ${d} chars (limit ${maxDesc})`)
+    if (!/test|prueba|teste|essai|実機|实测|직접|اختبار/i.test(seo.title)) warns.push(`${file}: seo.title has no "test" keyword`)
+  }
+  if (!Array.isArray(data.faq) || data.faq.length === 0) errors.push(`${file}: faq is missing or empty`)
+  else if (enFaqLength !== undefined && data.faq.length !== enFaqLength) errors.push(`${file}: faq has ${data.faq.length} entries, English has ${enFaqLength}`)
+  else for (const [i, row] of data.faq.entries()) {
+    if (!Array.isArray(row) || row.length !== 3 || !row[0] || !row[1] || !EVID.has(row[2])) errors.push(`${file}: faq[${i}] must be [question, answer, evidence-label]`)
+  }
+}
+
 const only = process.argv.slice(2).filter((a) => LANGS.includes(a))
 const apps = fs.readdirSync(dir).filter((f) => f.endsWith('.json') && !LANGS.some((l) => f.endsWith(`.${l}.json`))).map((f) => f.replace(/\.json$/, ''))
 for (const app of apps) {
   const en = JSON.parse(fs.readFileSync(path.join(dir, `${app}.json`), 'utf8'))
+  checkSeo(`${app}.json`, 'en', en)
   for (const lang of only.length ? only : LANGS) {
     const f = path.join(dir, `${app}.${lang}.json`)
     if (!fs.existsSync(f)) { (only.length ? errors : warns).push(`${lang} ${app}: translation file missing`); continue }
     let tr
     try { tr = JSON.parse(fs.readFileSync(f, 'utf8')) } catch (e) { errors.push(`${lang} ${app}: invalid JSON (${e.message})`); continue }
     walk(en, tr, '', lang)
+    checkSeo(`${app}.${lang}.json`, lang, tr, Array.isArray(en.faq) ? en.faq.length : undefined)
     // Script sanity per language (ratio of target-script chars in prose).
     const prose = JSON.stringify([tr.title, tr.dek, tr.verdict, tr.chapters, tr.ui])
     const SCRIPT = { ja: /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/gu, zh: /\p{Script=Han}/gu, ko: /\p{Script=Hangul}/gu, ar: /\p{Script=Arabic}/gu }

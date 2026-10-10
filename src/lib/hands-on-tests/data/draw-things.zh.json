@@ -13,6 +13,32 @@
   "title": "24 GB Mac 跑 Draw Things：能跑很快，上手靠盲猜",
   "page_title": "Draw Things 上手测试",
   "dek": "在搭载 M3 Pro 的 MacBook Pro 上进行的上手测试。第一条提示词返回了一张灰色方块，换用第二个模型后才正常出图。",
+  "seo": {
+    "title": "Draw Things 实测：24 GB 内存，模型合适才快",
+    "description": "在 24 GB 的 MacBook Pro（M3 Pro）上实测 Draw Things：模型合适时画质不错，但模型列表没有任何硬件适配提示。"
+  },
+  "faq": [
+    [
+      "Draw Things 能在 24 GB 的 Mac 上运行吗？",
+      "能，前提是装了合适的模型。在搭载 M3 Pro 和 24 GB 内存的 MacBook Pro 上，据测试者称，ERNIE Image Turbo 1.0（8-bit S，约 11.4 GiB）出图不到一分钟。约 25 到 57 GB 的下载（FLUX、Chrono Edit 14B、LTX 2.3 22B distilled）比他的内存还大；不过下载大小不等于运行时内存。",
+      "tester-estimate"
+    ],
+    [
+      "在 Draw Things 里应该先用哪个模型？",
+      "这次测试不推荐具体模型。测试者最先选的 SeedVR2 7B 是视频修复模型，对文本提示词返回了灰色方块。ERNIE Image Turbo 1.0（8-bit S）则可以用。一位第三方助手把它列为 24 GB 下最稳妥的图像模型之一；这一点未经核实。",
+      "observed"
+    ],
+    [
+      "Draw Things 免费吗？",
+      "其定价页面列出了在本地生成图像的免费版（Free Edition）。测试者没有发现付费墙，但分不清免费账户（'Community'）与免费版有什么区别。未核实。",
+      "vendor-claim"
+    ],
+    [
+      "Draw Things 能修改已有的图像吗？",
+      "测试者没有找到能说出'保留这张图，只改这一处'的办法。Version History 和编辑工具在应用中可见，但没有评估。",
+      "observed"
+    ]
+  ],
   "status": "已完成",
   "published": "2026-10-09",
   "started": "2026-10-06T20:00:00+02:00",
@@ -1361,6 +1387,8 @@
     "footer_line": "测试编号 {id} · 测试标准 v{version} · 原始笔记 PDF：待补充",
     "crumb_home": "首页",
     "crumb_directory": "目录",
-    "crumb_test": "{app} 上手测试"
+    "crumb_test": "{app} 上手测试",
+    "faq_h": "常见问题",
+    "more_tests_h": "更多实测"
   }
 }

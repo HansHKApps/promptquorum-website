@@ -16,6 +16,32 @@
   "title": "Page Assist en un Mac de 24 GB: se encontró la barra lateral, no entendió la página",
   "page_title": "Page Assist Test",
   "dek": "Prueba práctica de la extensión de navegador basada en Ollama en un Mac con M3 Pro. El icono de la barra de herramientas abrió una página a pantalla completa en lugar de una barra lateral. Una vez encontrada la barra lateral, contó palabras, pero no leyó una página de Search Console ni actuó sobre una página.",
+  "seo": {
+    "title": "Prueba de Page Assist: la barra lateral, con clic derecho",
+    "description": "Prueba práctica de Page Assist con Ollama en un MacBook Pro (M3 Pro, 24 GB): contar palabras funcionó, una página de Search Console no se entendió."
+  },
+  "faq": [
+    [
+      "¿Funciona Page Assist como barra lateral?",
+      "Existe un panel lateral, pero el icono de la barra de herramientas abre en su lugar una página de chat a pantalla completa. El evaluador encontró el panel lateral con un clic derecho, con ayuda de ChatGPT. El atajo citado en el vídeo de bienvenida (Ctrl+Shift+Y) no le funcionó.",
+      "observed"
+    ],
+    [
+      "¿Puede Page Assist leer la página en la que estoy?",
+      "En parte, en esta prueba. Contar las palabras de una página funcionó. Una página de Search Console no se entendió (la respuesta decía que no había información de CTR, aunque la página muestra una tarjeta de CTR) y, en la impresión del evaluador, el contexto no seguía un cambio de página. Los modelos diferían entre pruebas.",
+      "observed"
+    ],
+    [
+      "¿Puede Page Assist hacer clic, desplazarse o rellenar páginas?",
+      "El evaluador no consiguió que Page Action se desplazara ni hiciera clic. En la única captura, Page Action y WebMCP están desactivados, así que puede tratarse de un fallo de configuración y no de un límite del producto.",
+      "observed"
+    ],
+    [
+      "¿Necesita Page Assist a Ollama?",
+      "Su README cita Bun, además de Ollama o cualquier endpoint compatible con OpenAI, como requisitos para compilar desde el código fuente. En esta prueba Ollama estaba en marcha y se detectó; no se probaron otros endpoints.",
+      "vendor-claim"
+    ]
+  ],
   "status": "Abandoned",
   "published": "2026-10-09",
   "started": "2026-10-08",
@@ -1245,6 +1271,8 @@
     "footer_line": "ID de la prueba {id} · Estándar de pruebas v{version} · PDF de las notas originales: pendiente de añadir",
     "crumb_home": "Inicio",
     "crumb_directory": "Directorio",
-    "crumb_test": "Prueba práctica de {app}"
+    "crumb_test": "Prueba práctica de {app}",
+    "faq_h": "Preguntas frecuentes",
+    "more_tests_h": "Más pruebas prácticas"
   }
 }

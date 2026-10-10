@@ -13,6 +13,32 @@
   "title": "Draw Things on a 24 GB Mac: Fast When It Works, Blind Until It Does",
   "page_title": "Draw Things Test",
   "dek": "Hands-on test on a MacBook Pro with M3 Pro. The first prompt returned a gray square. The second model worked.",
+  "seo": {
+    "title": "Draw Things Test on a 24 GB Mac: Fast Once a Model Fits",
+    "description": "Hands-on test of Draw Things on a 24 GB MacBook Pro (M3 Pro): good images once a suitable model ran, but no hardware hints in the model list."
+  },
+  "faq": [
+    [
+      "Does Draw Things run on a 24 GB Mac?",
+      "Yes, once a suitable model was installed. On a MacBook Pro with an M3 Pro and 24 GB, ERNIE Image Turbo 1.0 (8-bit S, about 11.4 GiB) produced images in under a minute, per the tester. Downloads of about 25 to 57 GB (FLUX, Chrono Edit 14B, LTX 2.3 22B distilled) were larger than his memory; download size is not the same as runtime memory.",
+      "tester-estimate"
+    ],
+    [
+      "Which model should I start with in Draw Things?",
+      "The test does not recommend one. The tester's first choice, SeedVR2 7B, is a video restoration model and returned a gray square for a text prompt. ERNIE Image Turbo 1.0 (8-bit S) worked. A third-party assistant named it among the safest image models for 24 GB; that was not verified.",
+      "observed"
+    ],
+    [
+      "Is Draw Things free?",
+      "Its pricing page lists a Free Edition that generates images locally. The tester noticed no paywall but could not tell how the free 'Community' account differs from it. Not verified.",
+      "vendor-claim"
+    ],
+    [
+      "Can Draw Things refine an existing image?",
+      "The tester did not find a way to say 'keep this picture and change this'. Version History and Edit tools are visible in the app but were not evaluated.",
+      "observed"
+    ]
+  ],
   "status": "Completed",
   "published": "2026-10-09",
   "started": "2026-10-06T20:00:00+02:00",
@@ -1361,6 +1387,8 @@
     "footer_line": "Test ID {id} · Test standard v{version} · Raw notes PDF: to be added",
     "crumb_home": "Home",
     "crumb_directory": "Directory",
-    "crumb_test": "{app} hands-on test"
+    "crumb_test": "{app} hands-on test",
+    "faq_h": "Frequently asked questions",
+    "more_tests_h": "More hands-on tests"
   }
 }

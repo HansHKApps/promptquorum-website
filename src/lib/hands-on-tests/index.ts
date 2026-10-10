@@ -105,6 +105,8 @@ export type HandsOnUi = {
   crumb_home: string
   crumb_directory: string
   crumb_test: string
+  faq_h: string
+  more_tests_h: string
 }
 
 export type HandsOnTest = {
@@ -114,6 +116,10 @@ export type HandsOnTest = {
   app: { name: string; slug: string; vendor: string; category: string; platform: string; pricing_url: string }
   title: string
   dek: string
+  /** What search engines and social cards show: short, includes the word "test", no longer than the limits in validate-hands-on-tests.mjs. The H1 stays `title`. */
+  seo: { title: string; description: string }
+  /** Questions people search for, answered only from facts already in the report (each answer carries its evidence label). */
+  faq: [string, string, EvidenceKey][]
   status: string
   published: string
   started: string

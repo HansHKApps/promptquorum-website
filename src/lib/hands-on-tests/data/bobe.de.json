@@ -16,6 +16,32 @@
   "title": "BoBe Alpha auf einem Mac mit 24 GB: leicht zu installieren, startete beim Löschen neu",
   "page_title": "BoBe Test",
   "dek": "Praxistest auf einem MacBook Pro mit M3 Pro. Der Assistent in der App nannte die benötigte macOS-Einstellung nicht, und die App startete sich selbst neu, als der Tester versuchte, sie zu löschen.",
+  "seo": {
+    "title": "BoBe Alpha Test: Installation leicht, Neustart beim Löschen",
+    "description": "Praxistest von BoBe Alpha auf einem MacBook Pro (M3 Pro, 24 GB): leichte Installation, keine Antwort zur macOS-Einstellung, Neustart beim Löschen."
+  },
+  "faq": [
+    [
+      "Läuft BoBe auf einem Mac mit 24 GB?",
+      "Der Tester installierte BoBe Alpha auf einem MacBook Pro mit M3 Pro und 24 GB. Er wählte das lokale Modell Medium (8B), angegeben mit etwa 11 GB und 24 GB+ RAM. Ob die Bildschirmwahrnehmung funktioniert, ließ sich in diesem Test nicht bestätigen.",
+      "observed"
+    ],
+    [
+      "Ist BoBe Alpha leicht zu installieren?",
+      "Die Installation bestand aus einer 312-MB-DMG und einer macOS-Bestätigung ('so smooth', laut Tester). Das Setup lud danach 4,9 GB und 5,7 GB, angekündigt waren 11 GB, ohne Zeitangabe.",
+      "observed"
+    ],
+    [
+      "Lässt sich BoBe normal deinstallieren?",
+      "Nicht in diesem Test: Die App startete sich selbst neu, als der Tester sie löschen wollte. Er beendete sie zuerst in der Aktivitätsanzeige und löschte sie dann. Es wurde nur eine Installation versucht, die installierte Version wurde nicht erfasst.",
+      "observed"
+    ],
+    [
+      "Lädt BoBe Screenshots hoch?",
+      "Der Dialog 'Screen Awareness' von BoBe sagt, Screenshots würden lokal auf dem Mac analysiert und nie hochgeladen. Dieser Test hat die Angabe nicht geprüft: Es gab weder eine Netzwerküberwachung noch eine unabhängige Prüfung.",
+      "vendor-claim"
+    ]
+  ],
   "status": "Abandoned",
   "published": "2026-10-09",
   "started": "2026-10-07",
@@ -1034,6 +1060,8 @@
     "footer_line": "Test-ID {id} · Teststandard v{version} · PDF der Rohnotizen: folgt",
     "crumb_home": "Startseite",
     "crumb_directory": "Verzeichnis",
-    "crumb_test": "{app} Praxistest"
+    "crumb_test": "{app} Praxistest",
+    "faq_h": "Häufige Fragen",
+    "more_tests_h": "Weitere Praxistests"
   }
 }

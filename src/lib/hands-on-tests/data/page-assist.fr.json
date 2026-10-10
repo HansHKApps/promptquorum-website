@@ -16,6 +16,32 @@
   "title": "Page Assist sur un Mac de 24 Go : barre latérale trouvée, page non comprise",
   "page_title": "Page Assist Test",
   "dek": "Test pratique de l'extension de navigateur basée sur Ollama, sur un Mac M3 Pro. L'icône de la barre d'outils a ouvert une page plein écran au lieu d'une barre latérale. Une fois la barre latérale trouvée, elle a compté des mots, mais n'a ni lu une page de Search Console ni agi sur une page.",
+  "seo": {
+    "title": "Test de Page Assist : la barre latérale d'un clic droit",
+    "description": "Test pratique de Page Assist avec Ollama sur un MacBook Pro (M3 Pro, 24 Go) : le comptage de mots a marché, une page Search Console n'a pas été comprise."
+  },
+  "faq": [
+    [
+      "Page Assist fonctionne-t-il comme barre latérale ?",
+      "Un panneau latéral existe, mais l'icône de la barre d'outils ouvre à la place une page de chat en plein écran. Le testeur a trouvé le panneau latéral par un clic droit, avec l'aide de ChatGPT. Le raccourci cité dans la vidéo de bienvenue (Ctrl+Shift+Y) n'a pas fonctionné pour lui.",
+      "observed"
+    ],
+    [
+      "Page Assist peut-il lire la page où je me trouve ?",
+      "En partie, dans ce test. Compter les mots d'une page a fonctionné. Une page Search Console n'a pas été comprise (la réponse disait qu'il n'y avait aucune information sur le CTR, alors que la page affiche une carte CTR), et, d'après le testeur, le contexte ne suivait pas un changement de page. Les modèles différaient d'un test à l'autre.",
+      "observed"
+    ],
+    [
+      "Page Assist peut-il cliquer, faire défiler ou remplir des pages ?",
+      "Le testeur n'a pas réussi à faire défiler ou cliquer avec Page Action. Sur la seule capture, Page Action et WebMCP sont désactivés ; il peut donc s'agir d'une erreur de configuration plutôt que d'une limite du produit.",
+      "observed"
+    ],
+    [
+      "Page Assist a-t-il besoin d'Ollama ?",
+      "Son README cite Bun, ainsi qu'Ollama ou tout point de terminaison compatible OpenAI, comme prérequis pour la compilation depuis les sources. Dans ce test, Ollama tournait et a été détecté ; d'autres points de terminaison n'ont pas été essayés.",
+      "vendor-claim"
+    ]
+  ],
   "status": "Abandoned",
   "published": "2026-10-09",
   "started": "2026-10-08",
@@ -449,6 +475,8 @@
     "footer_line": "ID du test {id} · Norme de test v{version} · PDF des notes brutes : à venir",
     "crumb_home": "Accueil",
     "crumb_directory": "Annuaire",
-    "crumb_test": "Test pratique de {app}"
+    "crumb_test": "Test pratique de {app}",
+    "faq_h": "Questions fréquentes",
+    "more_tests_h": "Autres tests pratiques"
   }
 }

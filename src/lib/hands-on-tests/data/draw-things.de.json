@@ -13,6 +13,32 @@
   "title": "Draw Things auf 24-GB-Mac: blind, bis es läuft – dann schnell",
   "page_title": "Draw Things im Test",
   "dek": "Praxistest auf einem MacBook Pro mit M3 Pro. Der erste Prompt lieferte ein graues Quadrat. Das zweite Modell funktionierte.",
+  "seo": {
+    "title": "Draw Things Test auf 24 GB: schnell, sobald ein Modell passt",
+    "description": "Praxistest von Draw Things auf einem MacBook Pro (M3 Pro, 24 GB): gute Bilder mit passendem Modell, aber keine Hardware-Hinweise in der Modellliste."
+  },
+  "faq": [
+    [
+      "Läuft Draw Things auf einem Mac mit 24 GB?",
+      "Ja, sobald ein passendes Modell installiert war. Auf einem MacBook Pro mit M3 Pro und 24 GB erzeugte ERNIE Image Turbo 1.0 (8-bit S, etwa 11,4 GiB) laut Tester Bilder in unter einer Minute. Downloads von etwa 25 bis 57 GB (FLUX, Chrono Edit 14B, LTX 2.3 22B distilled) waren größer als sein Speicher; die Downloadgröße ist aber nicht der Laufzeitspeicher.",
+      "tester-estimate"
+    ],
+    [
+      "Mit welchem Modell sollte ich in Draw Things anfangen?",
+      "Der Test empfiehlt keines. Die erste Wahl des Testers, SeedVR2 7B, ist ein Videorestaurierungs-Modell und lieferte für einen Text-Prompt ein graues Quadrat. ERNIE Image Turbo 1.0 (8-bit S) funktionierte. Ein Drittanbieter-Assistent nannte es unter den sichersten Bildmodellen für 24 GB; das wurde nicht überprüft.",
+      "observed"
+    ],
+    [
+      "Ist Draw Things kostenlos?",
+      "Die Preisseite nennt eine Free Edition, die Bilder lokal erzeugt. Der Tester bemerkte keine Bezahlschranke, konnte aber nicht erkennen, wie sich das kostenlose Konto 'Community' davon unterscheidet. Nicht überprüft.",
+      "vendor-claim"
+    ],
+    [
+      "Kann Draw Things ein vorhandenes Bild überarbeiten?",
+      "Der Tester fand keinen Weg, zu sagen: 'keep this picture and change this'. Version History und Bearbeitungswerkzeuge sind in der App sichtbar, wurden aber nicht bewertet.",
+      "observed"
+    ]
+  ],
   "status": "Abgeschlossen",
   "published": "2026-10-09",
   "started": "2026-10-06T20:00:00+02:00",
@@ -1361,6 +1387,8 @@
     "footer_line": "Test-ID {id} · Teststandard v{version} · PDF der Rohnotizen: folgt",
     "crumb_home": "Startseite",
     "crumb_directory": "Verzeichnis",
-    "crumb_test": "{app} Praxistest"
+    "crumb_test": "{app} Praxistest",
+    "faq_h": "Häufige Fragen",
+    "more_tests_h": "Weitere Praxistests"
   }
 }

@@ -16,6 +16,32 @@
   "title": "Page Assist on a 24 GB Mac: Sidebar Found, Page Not Understood",
   "page_title": "Page Assist Test",
   "dek": "Hands-on test of the Ollama-based browser extension on an M3 Pro Mac. The toolbar icon opened a full-screen page instead of a sidebar. Once the sidebar was found, it counted words but did not read a Search Console page or act on a page.",
+  "seo": {
+    "title": "Page Assist Hands-on Test: Sidebar Found by Right-Click",
+    "description": "Hands-on test of Page Assist with Ollama on a 24 GB MacBook Pro (M3 Pro): counting words worked, a Search Console page was not understood."
+  },
+  "faq": [
+    [
+      "Does Page Assist work as a sidebar?",
+      "A side panel exists, but the toolbar icon opens a full-screen chat page instead. The tester found the side panel through a right-click, with help from ChatGPT. The shortcut named in the welcome video (Ctrl+Shift+Y) did not work for him.",
+      "observed"
+    ],
+    [
+      "Can Page Assist read the page I am on?",
+      "Partly, in this test. Counting the words of a page worked. A Search Console page was not understood (the reply said there was no CTR information, though the page shows a CTR card), and in the tester's impression context did not follow a page change. Models differed between tests.",
+      "observed"
+    ],
+    [
+      "Can Page Assist click, scroll or fill in pages?",
+      "The tester could not get Page Action to scroll or click. In the only screenshot, Page Action and WebMCP are switched off, so this may be a setup miss rather than a product limit.",
+      "observed"
+    ],
+    [
+      "Does Page Assist need Ollama?",
+      "Its README lists Bun, plus Ollama or any OpenAI-compatible endpoint, as prerequisites for the source build. In this test Ollama was running and detected; other endpoints were not tried.",
+      "vendor-claim"
+    ]
+  ],
   "status": "Abandoned",
   "published": "2026-10-09",
   "started": "2026-10-08",
@@ -449,6 +475,8 @@
     "footer_line": "Test ID {id} · Test standard v{version} · Raw notes PDF: to be added",
     "crumb_home": "Home",
     "crumb_directory": "Directory",
-    "crumb_test": "{app} hands-on test"
+    "crumb_test": "{app} hands-on test",
+    "faq_h": "Frequently asked questions",
+    "more_tests_h": "More hands-on tests"
   }
 }

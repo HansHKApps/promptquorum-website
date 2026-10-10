@@ -35,8 +35,8 @@ export function buildHandsOnTestMetadata(urlSlug: string, lang: Language = 'en')
   const test = appSlug ? getHandsOnTest(appSlug, lang) : null
   if (!appSlug || !test) return null
   const url = `${BASE}${localizedPath(urlSlug, lang)}`
-  const title = plain(test.title)
-  const description = plain(test.dek)
+  const title = plain(test.seo.title)
+  const description = plain(test.seo.description)
   return {
     title,
     description,
@@ -64,7 +64,7 @@ export function buildHandsOnTestPageElement(urlSlug: string, lang: Language = 'e
         '@id': `${url}#article`,
         url,
         headline: plain(test.title),
-        description: plain(test.dek),
+        description: plain(test.seo.description),
         inLanguage: toOutputLocale(lang),
         datePublished: test.published,
         dateModified: test.published,
@@ -82,6 +82,16 @@ export function buildHandsOnTestPageElement(urlSlug: string, lang: Language = 'e
         ...(/macos/i.test(test.app.platform) && { operatingSystem: 'macOS' }),
         // A vendor that was not recorded must not be published as an organisation name.
         ...(!/^not recorded/i.test(test.app.vendor) && { publisher: { '@type': 'Organization', name: test.app.vendor } }),
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `${url}#faq`,
+        inLanguage: toOutputLocale(lang),
+        mainEntity: test.faq.map(([q, a]) => ({
+          '@type': 'Question',
+          name: plain(q),
+          acceptedAnswer: { '@type': 'Answer', text: plain(a) },
+        })),
       },
       {
         '@type': 'BreadcrumbList',
