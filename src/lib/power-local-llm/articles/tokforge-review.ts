@@ -132,7 +132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Where to get it': 'Not published',
           },
         ],
-        note: 'This page is companion material to the app\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory). Version 1.3.6.1, confirmed by the developer on 9 October 2026; older pages and listings may still show 1.0.',
+        note: 'Version 1.3.6.1, confirmed by the developer on 9 October 2026; older pages and listings may still show 1.0.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -523,7 +523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Bezugsquelle': 'Nicht veröffentlicht',
           },
         ],
-        note: 'Diese Seite ist Begleitmaterial zum Eintrag der App im [Local LLM Software Directory](https://www.promptquorum.com/directory). Version 1.3.6.1, vom Entwickler am 9. Oktober 2026 bestätigt; ältere Seiten und Einträge zeigen möglicherweise noch 1.0.',
+        note: 'Version 1.3.6.1, vom Entwickler am 9. Oktober 2026 bestätigt; ältere Seiten und Einträge zeigen möglicherweise noch 1.0.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Dónde obtenerla': 'No publicado',
           },
         ],
-        note: 'Esta página es material complementario de la entrada de la app en el [Local LLM Software Directory](https://www.promptquorum.com/directory). Versión 1.3.6.1, confirmada por el desarrollador el 9 de octubre de 2026; páginas y fichas antiguas pueden seguir mostrando 1.0.',
+        note: 'Versión 1.3.6.1, confirmada por el desarrollador el 9 de octubre de 2026; páginas y fichas antiguas pueden seguir mostrando 1.0.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1241,7 +1241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Où la trouver': 'Non publié',
           },
         ],
-        note: 'Cette page est un complément à l\'entrée de l\'application dans le [Local LLM Software Directory](https://www.promptquorum.com/directory). Version 1.3.6.1, confirmée par le développeur le 9 octobre 2026 ; d\'anciennes pages et fiches peuvent encore afficher 1.0.',
+        note: 'Version 1.3.6.1, confirmée par le développeur le 9 octobre 2026 ; d\'anciennes pages et fiches peuvent encore afficher 1.0.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1600,7 +1600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '入手先': '非公開',
           },
         ],
-        note: 'このページは、[Local LLM Software Directory](https://www.promptquorum.com/directory)にある本アプリの項目の補足資料です。バージョン1.3.6.1(開発者が2026年10月9日に確認)。古いページや掲載情報には、まだ1.0と表示されている場合があります。',
+        note: 'バージョン1.3.6.1(開発者が2026年10月9日に確認)。古いページや掲載情報には、まだ1.0と表示されている場合があります。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1959,7 +1959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Onde obter': 'Não publicado',
           },
         ],
-        note: 'Esta página é material complementar à entrada do app no [Local LLM Software Directory](https://www.promptquorum.com/directory). Versão 1.3.6.1, confirmada pelo desenvolvedor em 9 de outubro de 2026; páginas e fichas antigas ainda podem mostrar 1.0.',
+        note: 'Versão 1.3.6.1, confirmada pelo desenvolvedor em 9 de outubro de 2026; páginas e fichas antigas ainda podem mostrar 1.0.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2318,7 +2318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'مكان الحصول عليه': 'غير منشور',
           },
         ],
-        note: 'هذه الصفحة مادة مرافقة لإدخال التطبيق في [Local LLM Software Directory](https://www.promptquorum.com/directory). الإصدار 1.3.6.1، أكّده المطوّر في 9 أكتوبر 2026؛ وقد تظهر في الصفحات والقوائم القديمة نسخة 1.0.',
+        note: 'الإصدار 1.3.6.1، أكّده المطوّر في 9 أكتوبر 2026؛ وقد تظهر في الصفحات والقوائم القديمة نسخة 1.0.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2677,7 +2677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '获取途径': '未公开',
           },
         ],
-        note: '本页是该应用在 [Local LLM Software Directory](https://www.promptquorum.com/directory) 中词条的配套资料。版本 1.3.6.1,开发者于 2026 年 10 月 9 日确认;较早的页面和商店页面可能仍显示 1.0。',
+        note: '版本 1.3.6.1,开发者于 2026 年 10 月 9 日确认;较早的页面和商店页面可能仍显示 1.0。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -3036,7 +3036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '받는 곳': '공개되지 않음',
           },
         ],
-        note: '이 페이지는 [Local LLM Software Directory](https://www.promptquorum.com/directory)에 있는 이 앱 항목의 보조 자료입니다. 버전 1.3.6.1(개발자가 2026년 10월 9일에 확인). 오래된 페이지와 스토어 정보에는 아직 1.0이 표시될 수 있습니다.',
+        note: '버전 1.3.6.1(개발자가 2026년 10월 9일에 확인). 오래된 페이지와 스토어 정보에는 아직 1.0이 표시될 수 있습니다.',
       },
       gettingStarted: {
         id: 'getting-started',

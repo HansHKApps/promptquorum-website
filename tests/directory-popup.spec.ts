@@ -48,7 +48,10 @@ async function open(page: Page, url: string) {
   await page.clock.install()
   await page.goto(url)
   await page.clock.runFor(5000) // fires requestIdleCallback -> mounts the dynamic popup
-  await page.waitForTimeout(1500) // real time: the lazy chunk downloads
+  // real time: the lazy popup chunk downloads. Wait for the network to settle instead of a fixed
+  // delay, which flaked when the machine was under load.
+  await page.waitForLoadState('networkidle', { timeout: 20_000 }).catch(() => {})
+  await page.waitForTimeout(500)
 }
 
 async function interact(page: Page, scrollFraction = 0.4) {

@@ -10,7 +10,7 @@ import type { Language } from '@/lib/blog/blogContent'
 import { getLangDir } from '@/lib/i18n/constants'
 import featureReviewIndex from '@/generated/feature-review-index.json'
 import { localAiApps } from './apps-barrel'
-import { CATEGORY_SUB_GROUP } from './apps/categories'
+import { CATEGORY_SUB_GROUP, CATEGORY_SUB_LABEL } from './apps/categories'
 import type { OSKey, ToolRecord } from './apps/types'
 import { funnelT } from './directory-funnel-i18n'
 
@@ -103,6 +103,30 @@ export function getSimilarTools(app: ToolRecord, limit = 3): ToolRecord[] {
   return [...sameCategory, ...sameGroup].slice(0, limit)
 }
 
+/**
+ * The block must agree with the page's own competitor table, so those tools come first (in table
+ * order); only if the table names fewer than `limit` resolvable tools is the rest filled by the
+ * deterministic category ranking above. Never contains the reviewed tool, never repeats a tool.
+ */
+export function pickSimilar(app: ToolRecord, preferredSlugs: readonly string[], limit = 3): ToolRecord[] {
+  const chosen: ToolRecord[] = []
+  const seen = new Set<string>([app.slug])
+  for (const slug of preferredSlugs) {
+    const tool = APP_BY_SLUG.get(slug)
+    if (!tool || seen.has(slug)) continue
+    seen.add(slug)
+    chosen.push(tool)
+    if (chosen.length === limit) return chosen
+  }
+  for (const tool of getSimilarTools(app, limit + chosen.length)) {
+    if (seen.has(tool.slug)) continue
+    seen.add(tool.slug)
+    chosen.push(tool)
+    if (chosen.length === limit) break
+  }
+  return chosen
+}
+
 // --- display helpers --------------------------------------------------------
 
 const OS_LABEL: Record<OSKey, string> = {
@@ -160,11 +184,17 @@ const POPUP_UTM = {
  * Everything the renderers need for one review page in one locale, or
  * undefined when the page is not a review (so non-review pages get nothing).
  */
-export function buildDirectoryFunnel(cluster: ReviewCluster, urlSlug: string, lang: Language): DirectoryFunnelData | undefined {
+export function buildDirectoryFunnel(
+  cluster: ReviewCluster,
+  urlSlug: string,
+  lang: Language,
+  /** Tools the review's own competitor table names, in table order (see competitorToolSlugs). */
+  preferredSimilar: readonly string[] = [],
+): DirectoryFunnelData | undefined {
   if (!isReviewPage(cluster, urlSlug)) return undefined
   const app = getReviewedTool(cluster, urlSlug)
   const n = directoryTotal()
-  const similarTools = app ? getSimilarTools(app, 3) : []
+  const similarTools = app ? pickSimilar(app, preferredSimilar, 3) : []
 
   const similar: FunnelCard[] = similarTools.map((t) => ({
     name: t.name,
@@ -174,14 +204,26 @@ export function buildDirectoryFunnel(cluster: ReviewCluster, urlSlug: string, la
     href: directoryEntryHref(t.slug, lang),
   }))
 
+  // End-of-page second line. Prefer the platform (one the app does not list) with the most tools in
+  // the app's own category, so the filtered view is never empty; if there is none, link the category.
   let otherPlatform: DirectoryFunnelData['otherPlatform']
-  if (app?.platforms?.length) {
-    const missing = OTHER_PLATFORM_ORDER.find((p) => !app.platforms!.includes(p))
-    if (missing) {
-      otherPlatform = {
-        label: funnelT('otherPlatform', lang, { platform: OS_LABEL[missing] }),
-        href: directoryHref(lang, { os: missing, category: app.categories[0] }),
+  if (app) {
+    const primary = app.categories[0]
+    const category = primary ? (CATEGORY_SUB_LABEL[primary]?.[lang] ?? CATEGORY_SUB_LABEL[primary]?.en) : undefined
+    if (primary && category) {
+      const listed = new Set(app.platforms ?? [])
+      let best: { platform: OSKey; count: number } | null = null
+      for (const platform of OTHER_PLATFORM_ORDER) {
+        if (listed.has(platform)) continue
+        const count = localAiApps.filter((t) => t.slug !== app.slug && t.categories[0] === primary && t.platforms?.includes(platform)).length
+        if (count > 0 && (!best || count > best.count)) best = { platform, count }
       }
+      otherPlatform = best
+        ? {
+            label: funnelT('otherPlatform', lang, { platform: OS_LABEL[best.platform], category }),
+            href: directoryHref(lang, { os: best.platform, category: primary }),
+          }
+        : { label: funnelT('categoryMore', lang, { category }), href: directoryHref(lang, { category: primary }) }
     }
   }
 

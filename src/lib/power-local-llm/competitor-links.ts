@@ -189,3 +189,72 @@ export function linkCompetitorsInArticleData<T extends Partial<Record<Language, 
   }
   return out as T
 }
+
+// --- tools named in a review's own competitor section, in reading order ------
+
+function nameFromCell(cell: string): string | null {
+  const text = cell.trim()
+  const link = text.match(CELL_LINK)
+  if (link) return link[2]
+  const bold = text.match(CELL_BOLD)
+  if (bold) return bold[1].trim()
+  return CELL_PLAIN.test(text) ? text : null
+}
+
+function nameFromItem(item: string): string | null {
+  return (item.match(ITEM_BOLD_LINK) ?? item.match(ITEM_LINK) ?? item.match(ITEM_BOLD))?.[1]?.trim() ?? null
+}
+
+function toolSlugsOfSection(section: LLMSection): string[] {
+  const out: string[] = []
+  const columns = Array.isArray(section.columns) ? section.columns : []
+  if (Array.isArray(section.rows) && columns.length > 0) {
+    const headerSlugs = section.itemHeadings ? [] : columns.slice(1).map((c) => resolveToolSlug(c.trim())).filter((s): s is string => !!s)
+    if (headerSlugs.length >= 2) {
+      out.push(...headerSlugs)
+    } else {
+      // Same key resolution as linkSection / the two renderers.
+      const col = columns[0]
+      const label = col.replace(/^\[([^\]]+)\]\([^)]+\)$/, '$1')
+      const candidates = [label.toLowerCase().replace(/\./g, ''), label, col, '0']
+      for (const row of section.rows) {
+        const key = candidates.find((k) => typeof row[k] === 'string')
+        const name = key === undefined ? null : nameFromCell(row[key])
+        const slug = name ? resolveToolSlug(name) : null
+        if (slug) out.push(slug)
+      }
+    }
+  }
+  if (Array.isArray(section.items)) {
+    for (const item of section.items) {
+      const name = nameFromItem(item)
+      const slug = name ? resolveToolSlug(name) : null
+      if (slug) out.push(slug)
+    }
+  }
+  return out
+}
+
+/**
+ * Directory slugs of the tools a review's competitor/alternatives section names, in the order a
+ * reader sees them, without duplicates and without the review's own tool. Sections named
+ * `competitors`/`vsAlternatives`/… win over `comparison*` sections. Empty when the review has none.
+ * This is the single source of truth for the "similar tools" cards in DirectoryBlock, so the block
+ * and the table can never disagree.
+ */
+export function competitorToolSlugs(article: LLMArticle | undefined, selfSlug: string | null): string[] {
+  const sections = (article?.sections ?? {}) as Record<string, LLMSection>
+  const entries = Object.entries(sections).filter(([key]) => isCompetitorSectionKey(key))
+  const primary = entries.filter(([key]) => COMPETITOR_KEYS.has(key))
+  const secondary = entries.filter(([key]) => !COMPETITOR_KEYS.has(key))
+  const seen = new Set<string>()
+  const out: string[] = []
+  for (const [, section] of [...primary, ...secondary]) {
+    for (const slug of toolSlugsOfSection(section)) {
+      if (slug === selfSlug || seen.has(slug)) continue
+      seen.add(slug)
+      out.push(slug)
+    }
+  }
+  return out
+}

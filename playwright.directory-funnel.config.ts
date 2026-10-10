@@ -7,7 +7,7 @@ import { defineConfig, devices } from '@playwright/test'
 
 export default defineConfig({
   testDir: './tests',
-  testMatch: /directory-popup\.spec\.ts/,
+  testMatch: /(directory-(popup|deeplink)|review-funnel-page)\.spec\.ts/,
   fullyParallel: false,
   workers: 1,
   retries: 0,

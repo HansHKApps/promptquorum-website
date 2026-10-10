@@ -97,6 +97,50 @@ for (const [cluster, slug] of [
   check(`non-review(${slug})`, () => assert.equal(funnel.buildDirectoryFunnel(cluster, slug, 'en'), undefined))
 }
 
+// --- block agrees with the page's own competitor table ------------------------------
+const { reviewPageProps } = jiti('@/lib/power-local-llm/review-page-props')
+const { competitorToolSlugs } = jiti('@/lib/power-local-llm/competitor-links')
+const { narrowArticleData } = jiti('@/lib/narrowArticleData')
+let withTable = 0
+for (const r of reviews) {
+  const content = r.cluster === 'power-local-llm' ? powerLLMContent[POWER_LLM_SLUG_TO_KEY[r.urlSlug]] : llmContent[LLM_SLUG_TO_KEY[r.urlSlug]]
+  for (const lang of LANGS) {
+    check(`block==table(${r.urlSlug}, ${lang})`, () => {
+      const narrowed = narrowArticleData(content, lang)
+      const props = reviewPageProps(r.cluster, r.urlSlug, lang, narrowed)
+      const d = props.directoryFunnel
+      assert.ok(d, 'no funnel data')
+      const cards = d.similar.map((c) => new URL(c.href, 'https://x.test').searchParams.get('tool'))
+      const expected = competitorToolSlugs(narrowed.articleData[lang] ?? narrowed.articleData.en, r.appSlug)
+      const n = Math.min(3, expected.length)
+      assert.deepEqual(cards.slice(0, n), expected.slice(0, n), 'first cards must be the first tools of the competitor table, in order')
+      assert.ok(!cards.includes(r.appSlug), 'own tool among similar')
+      assert.equal(new Set(cards).size, cards.length, 'duplicate card')
+      if (lang === 'en' && expected.length >= 3) withTable++
+    })
+  }
+}
+check('at least half of the reviews have 3+ resolvable competitors', () => assert.ok(withTable >= reviews.length / 2, `only ${withTable}`))
+
+// --- other-platform line is never an empty filter -------------------------------------
+for (const r of reviews) {
+  check(`otherPlatform(${r.urlSlug})`, () => {
+    const d = funnel.buildDirectoryFunnel(r.cluster, r.urlSlug, 'en')
+    const op = d.otherPlatform
+    assert.ok(op, 'every review gets a second line (platform or category)')
+    const u = new URL(op.href, 'https://x.test')
+    const os = u.searchParams.get('os')
+    const cat = u.searchParams.get('category')
+    assert.ok(cat, 'always filters by category')
+    const app = localAiApps.find((a) => a.slug === r.appSlug)
+    if (os) {
+      assert.ok(!(app.platforms ?? []).includes(os), 'suggests a platform the app already has')
+      const n = localAiApps.filter((t) => t.slug !== app.slug && t.categories[0] === cat && t.platforms?.includes(os)).length
+      assert.ok(n > 0, `os=${os}&category=${cat} would be empty`)
+    }
+  })
+}
+
 // --- license classes ---------------------------------------------------------------
 for (const [lic, cls] of [['MIT', 'open'], ['Apache 2.0', 'open'], ['AGPL-3.0', 'open'], ['Closed source', 'closed'], ['Proprietary (free, EULA)', 'closed'], ['Not stated', 'other']]) {
   check(`licenseClass(${lic})`, () => assert.equal(funnel.licenseClass(lic), cls))
