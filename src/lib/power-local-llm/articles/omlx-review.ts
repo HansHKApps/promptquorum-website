@@ -78,9 +78,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'One-click setup for coding-agent integrations — including Claude Code, Cursor, OpenClaw, OpenCode, Codex, Hermes Agent, Copilot, and Pi — from its built-in admin dashboard',
           'Built by a single developer, jundot, first announced publicly on [an MLX GitHub discussion thread](https://github.com/ml-explore/mlx/discussions/3203) in March 2026; canonical repository is [github.com/jundot/omlx](https://github.com/jundot/omlx) — several same-named forks exist under other GitHub usernames and are not the original project',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to oMLX\'s entry in the [Local LLM Software Directory](/directory) — see that page for how oMLX compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-omlx',
@@ -397,9 +394,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Stellt OpenAI-kompatible (`/v1/chat/completions`, `/v1/completions`, `/v1/embeddings`, `/v1/rerank`) und Anthropic-kompatible (`/v1/messages`) Endpunkte unter `http://localhost:8000` bereit',
           'Ein-Klick-Einrichtung für Coding-Agenten-Integrationen — darunter Claude Code, Cursor, OpenClaw, OpenCode, Codex, Hermes Agent, Copilot und Pi — direkt aus dem integrierten Admin-Dashboard',
           'Entwickelt von einem einzelnen Entwickler, jundot, erstmals öffentlich angekündigt in [einem MLX-GitHub-Diskussionsthread](https://github.com/ml-explore/mlx/discussions/3203) im März 2026; das kanonische Repository ist [github.com/jundot/omlx](https://github.com/jundot/omlx) — mehrere gleichnamige Forks existieren unter anderen GitHub-Benutzernamen und sind nicht das Originalprojekt',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu oMLXs Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie oMLX im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -720,9 +714,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Configuration en un clic pour les intégrations d\'agents de codage — dont Claude Code, Cursor, OpenClaw, OpenCode, Codex, Hermes Agent, Copilot et Pi — depuis son tableau de bord d\'administration intégré',
           'Développé par un développeur unique, jundot, annoncé publiquement pour la première fois sur [un fil de discussion GitHub de MLX](https://github.com/ml-explore/mlx/discussions/3203) en mars 2026 ; le dépôt canonique est [github.com/jundot/omlx](https://github.com/jundot/omlx) — plusieurs forks du même nom existent sous d\'autres identifiants GitHub et ne sont pas le projet original',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de l\'entrée d\'oMLX dans le [répertoire de logiciels IA locale](/fr/directory) — consultez cette page pour voir comment oMLX se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-omlx',
@@ -1039,9 +1030,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OpenAI互換（`/v1/chat/completions`、`/v1/completions`、`/v1/embeddings`、`/v1/rerank`）とAnthropic互換（`/v1/messages`）のエンドポイントを`http://localhost:8000`で公開します',
           '組み込みの管理ダッシュボードから、Claude Code、Cursor、OpenClaw、OpenCode、Codex、Hermes Agent、Copilot、Piを含むコーディングエージェント連携のワンクリックセットアップが可能です',
           '単独の開発者jundotによって開発され、[MLXのGitHubディスカッションスレッド](https://github.com/ml-explore/mlx/discussions/3203)で2026年3月に初めて公に発表されました。正式なリポジトリは[github.com/jundot/omlx](https://github.com/jundot/omlx)で、他のGitHubユーザー名の下に同名のフォークが複数存在しますが、それらはオリジナルのプロジェクトではありません',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)内のoMLXのエントリーに付随する詳細版です。oMLXが他の数十種類のローカルAIツールと比べてどうかを一目で確認するには、そのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1360,9 +1348,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '通过内置管理仪表盘为Claude Code、Cursor、OpenClaw、OpenCode、Codex、Hermes Agent、Copilot和Pi等编程代理集成提供一键配置',
           '由独立开发者jundot开发，于2026年3月在[一个MLX GitHub讨论帖](https://github.com/ml-explore/mlx/discussions/3203)中首次公开发布;正式仓库是[github.com/jundot/omlx](https://github.com/jundot/omlx)——其他GitHub用户名下存在多个同名分支，均非原始项目',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中oMLX条目的深度延伸内容——请查看该页面，快速了解oMLX与其他数十款本地AI工具的对比情况。' },
-        ],
       },
       overview: {
         id: 'what-is-omlx',
@@ -1679,9 +1664,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Expone endpoints compatibles con OpenAI (`/v1/chat/completions`, `/v1/completions`, `/v1/embeddings`, `/v1/rerank`) y compatibles con Anthropic (`/v1/messages`) en `http://localhost:8000`',
           'Configuración con un clic para integraciones de agentes de codificación — incluyendo Claude Code, Cursor, OpenClaw, OpenCode, Codex, Hermes Agent, Copilot y Pi — desde su panel de administración integrado',
           'Creado por un único desarrollador, jundot, anunciado públicamente por primera vez en [un hilo de discusión de GitHub de MLX](https://github.com/ml-explore/mlx/discussions/3203) en marzo de 2026; el repositorio canónico es [github.com/jundot/omlx](https://github.com/jundot/omlx) — existen varios forks con el mismo nombre bajo otros nombres de usuario de GitHub y no son el proyecto original',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de oMLX en el [directorio de software de LLM local](/es/directory) — consulta esa página para ver cómo se compara oMLX de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -2000,9 +1982,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Configuração com um clique para integrações de agentes de codificação — incluindo Claude Code, Cursor, OpenClaw, OpenCode, Codex, Hermes Agent, Copilot e Pi — direto do painel de administração integrado',
           'Criado por um único desenvolvedor, jundot, anunciado publicamente pela primeira vez em [uma thread de discussão do GitHub do MLX](https://github.com/ml-explore/mlx/discussions/3203) em março de 2026; o repositório canônico é [github.com/jundot/omlx](https://github.com/jundot/omlx) — vários forks com o mesmo nome existem sob outros nomes de usuário no GitHub e não são o projeto original',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do oMLX no [diretório de software de LLM local](/pt/directory) — veja essa página para comparar rapidamente o oMLX com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-omlx',
@@ -2320,9 +2299,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'إعداد بنقرة واحدة لتكاملات وكلاء البرمجة — بما في ذلك Claude Code وCursor وOpenClaw وOpenCode وCodex وHermes Agent وCopilot وPi — من لوحة الإدارة المدمجة',
           'طوّره مطوّر واحد يُدعى jundot، وأُعلن عنه علنًا لأول مرة في [سلسلة نقاش على GitHub الخاصة بـ MLX](https://github.com/ml-explore/mlx/discussions/3203) في مارس 2026؛ المستودع الرسمي هو [github.com/jundot/omlx](https://github.com/jundot/omlx) — وتوجد عدة نسخ متفرعة بنفس الاسم تحت أسماء مستخدمين أخرى على GitHub وهي ليست المشروع الأصلي',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي الشرح المتعمق المرافق لمدخل oMLX في [دليل برمجيات LLM المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة بين oMLX وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-omlx',
@@ -2639,9 +2615,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`http://localhost:8000`에서 OpenAI 호환(`/v1/chat/completions`, `/v1/completions`, `/v1/embeddings`, `/v1/rerank`) 및 Anthropic 호환(`/v1/messages`) 엔드포인트를 제공합니다',
           '내장된 관리 대시보드에서 Claude Code, Cursor, OpenClaw, OpenCode, Codex, Hermes Agent, Copilot, Pi를 포함한 코딩 에이전트 통합에 대한 원클릭 설정을 제공합니다',
           '단독 개발자 jundot이 개발했으며, 2026년 3월 [MLX GitHub 토론 스레드](https://github.com/ml-explore/mlx/discussions/3203)에서 처음으로 공개 발표되었습니다. 공식 저장소는 [github.com/jundot/omlx](https://github.com/jundot/omlx)이며, 다른 GitHub 사용자명 아래에 동일한 이름의 여러 포크가 존재하지만 이는 원본 프로젝트가 아닙니다',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 oMLX 항목의 심층 보완 자료입니다 — oMLX가 다른 수십 개의 로컬 AI 도구와 한눈에 어떻게 비교되는지 확인하려면 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {

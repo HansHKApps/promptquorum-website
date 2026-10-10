@@ -76,9 +76,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Models come from Docker Hub\'s AI model catalog, other OCI-compliant registries, or Hugging Face',
           'No separate cost — the feature ships with Docker Desktop; whether Docker Desktop itself needs a paid subscription depends on company size',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Docker Model Runner\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-docker-model-runner',
@@ -338,9 +335,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OpenAI-kompatible API unter `http://localhost:12434/engines/v1` vom Host aus, bzw. `http://model-runner.docker.internal/engines/v1` aus einem anderen Container',
           'Modelle stammen aus dem KI-Modellkatalog von Docker Hub, anderen OCI-kompatiblen Registries oder von Hugging Face',
           'Keine zusätzlichen Kosten — die Funktion ist Teil von Docker Desktop; ob Docker Desktop selbst ein kostenpflichtiges Abonnement benötigt, hängt von der Unternehmensgröße ab',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zum Eintrag von Docker Model Runner im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie es im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -602,9 +596,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Les modèles proviennent du catalogue de modèles IA de Docker Hub, d\'autres registres compatibles OCI, ou de Hugging Face',
           'Aucun coût supplémentaire — la fonctionnalité est livrée avec Docker Desktop ; la nécessité d\'un abonnement payant pour Docker Desktop lui-même dépend de la taille de l\'entreprise',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis est le complément détaillé de la fiche de Docker Model Runner dans le [Répertoire des logiciels d\'IA locale](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment il se compare à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-docker-model-runner',
@@ -864,9 +855,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'OpenAI互換APIをホストから`http://localhost:12434/engines/v1`、他のコンテナから`http://model-runner.docker.internal/engines/v1`で提供',
           'モデルはDocker Hubの厳選AIカタログ、他のOCI準拠レジストリ、またはHugging Faceから取得',
           '追加コストなし——この機能はDocker Desktopに付属。Docker Desktop自体に有料サブスクリプションが必要かどうかは企業規模による',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)におけるDocker Model Runnerの項目を掘り下げた記事です。他の数十のローカルAIツールとの一覧比較はそちらのページを参照してください。' },
         ],
       },
       overview: {
@@ -1128,9 +1116,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '模型来源于Docker Hub精选AI目录、其他兼容OCI的镜像仓库，或Hugging Face',
           '无额外费用——该功能随Docker Desktop提供；Docker Desktop本身是否需要付费订阅取决于企业规模',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Docker Model Runner条目的深度配套文章——该页面提供了它与数十款其他本地AI工具的一览式对比。' },
-        ],
       },
       overview: {
         id: 'what-is-docker-model-runner',
@@ -1390,9 +1375,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'API compatible con OpenAI en `http://localhost:12434/engines/v1` desde el host, o `http://model-runner.docker.internal/engines/v1` desde otro contenedor',
           'Los modelos provienen del catálogo de modelos de IA de Docker Hub, otros registros compatibles con OCI, o Hugging Face',
           'Sin costo adicional — la función viene con Docker Desktop; que Docker Desktop en sí necesite una suscripción de pago depende del tamaño de la empresa',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de Docker Model Runner en el [Directorio de Software de LLM Local](/es/directory) — consulta esa página para ver de un vistazo cómo se compara con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1654,9 +1636,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Os modelos vêm do catálogo de modelos de IA do Docker Hub, outros registries compatíveis com OCI, ou Hugging Face',
           'Sem custo adicional — o recurso vem com o Docker Desktop; se o Docker Desktop em si precisa de uma assinatura paga depende do porte da empresa',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Docker Model Runner no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-docker-model-runner',
@@ -1917,9 +1896,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تأتي النماذج من كتالوج نماذج الذكاء الاصطناعي في Docker Hub، أو سجلات أخرى متوافقة مع OCI، أو Hugging Face',
           'دون أي تكلفة إضافية — تأتي الميزة مع Docker Desktop؛ وحاجة Docker Desktop نفسه لاشتراك مدفوع تعتمد على حجم الشركة',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمّق لإدخال Docker Model Runner في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تقارن بسرعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-docker-model-runner',
@@ -2179,9 +2155,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '호스트에서는 `http://localhost:12434/engines/v1`, 다른 컨테이너에서는 `http://model-runner.docker.internal/engines/v1`로 OpenAI 호환 API 제공',
           '모델은 Docker Hub의 AI 모델 카탈로그, 다른 OCI 호환 레지스트리, 또는 Hugging Face에서 가져옴',
           '추가 비용 없음 — 이 기능은 Docker Desktop에 포함되어 있으며, Docker Desktop 자체의 유료 구독 필요 여부는 기업 규모에 따라 결정됨',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 등록된 Docker Model Runner 항목의 심층 분석 콘텐츠입니다 — 수십 개의 다른 로컬 AI 도구와 한눈에 비교해 보려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Where to get it': 'Not published',
           },
         ],
-        note: 'This page is companion material to the app\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Version as verified on 10 October 2026: 1.4.1, from the [changelog](https://returneditor.ai/changelog/). Windows SmartScreen may show a "Windows protected your PC" warning for the newly signed installer; the download page says to choose More info, then Run anyway.',
+        note: 'This page is companion material to the app\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory). Version as verified on 10 October 2026: 1.4.1, from the [changelog](https://returneditor.ai/changelog/). Windows SmartScreen may show a "Windows protected your PC" warning for the newly signed installer; the download page says to choose More info, then Run anyway.',
       },
       pricing: {
         id: 'plans-pricing',
@@ -672,7 +672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             Bezugsquelle: 'Nicht veröffentlicht',
           },
         ],
-        note: 'Diese Seite ergänzt den Eintrag der App im [Local-LLM-Software-Verzeichnis](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Version, geprüft am 10. Oktober 2026: 1.4.1, laut [Changelog](https://returneditor.ai/changelog/). Windows SmartScreen kann beim neu signierten Installationsprogramm die Warnung „Der Computer wurde durch Windows geschützt“ anzeigen; die Download-Seite empfiehlt, „Weitere Informationen“ und dann „Trotzdem ausführen“ zu wählen.',
+        note: 'Diese Seite ergänzt den Eintrag der App im [Local-LLM-Software-Verzeichnis](https://www.promptquorum.com/directory). Version, geprüft am 10. Oktober 2026: 1.4.1, laut [Changelog](https://returneditor.ai/changelog/). Windows SmartScreen kann beim neu signierten Installationsprogramm die Warnung „Der Computer wurde durch Windows geschützt“ anzeigen; die Download-Seite empfiehlt, „Weitere Informationen“ und dann „Trotzdem ausführen“ zu wählen.',
       },
       pricing: {
         id: 'plans-pricing',
@@ -1076,7 +1076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Dónde obtenerla': 'No publicado',
           },
         ],
-        note: 'Esta página complementa la ficha de la aplicación en el [directorio de software Local LLM](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versión verificada el 10 de octubre de 2026: 1.4.1, según el [changelog](https://returneditor.ai/changelog/). Windows SmartScreen puede mostrar el aviso «Windows protegió su PC» para el instalador recién firmado; la página de descarga indica elegir «Más información» y después «Ejecutar de todas formas».',
+        note: 'Esta página complementa la ficha de la aplicación en el [directorio de software Local LLM](https://www.promptquorum.com/directory). Versión verificada el 10 de octubre de 2026: 1.4.1, según el [changelog](https://returneditor.ai/changelog/). Windows SmartScreen puede mostrar el aviso «Windows protegió su PC» para el instalador recién firmado; la página de descarga indica elegir «Más información» y después «Ejecutar de todas formas».',
       },
       pricing: {
         id: 'plans-pricing',
@@ -1480,7 +1480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Où l\'obtenir': 'Non publié',
           },
         ],
-        note: 'Cette page complète la fiche de l\'application dans l\'[annuaire des logiciels Local LLM](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Version vérifiée le 10 octobre 2026 : 1.4.1, d\'après le [changelog](https://returneditor.ai/changelog/). Windows SmartScreen peut afficher l\'avertissement « Windows a protégé votre ordinateur » pour l\'installeur récemment signé ; la page de téléchargement indique de choisir « Informations complémentaires », puis « Exécuter quand même ».',
+        note: 'Cette page complète la fiche de l\'application dans l\'[annuaire des logiciels Local LLM](https://www.promptquorum.com/directory). Version vérifiée le 10 octobre 2026 : 1.4.1, d\'après le [changelog](https://returneditor.ai/changelog/). Windows SmartScreen peut afficher l\'avertissement « Windows a protégé votre ordinateur » pour l\'installeur récemment signé ; la page de téléchargement indique de choisir « Informations complémentaires », puis « Exécuter quand même ».',
       },
       pricing: {
         id: 'plans-pricing',
@@ -1884,7 +1884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '入手先': '非公開',
           },
         ],
-        note: 'このページは、[Local LLMソフトウェアディレクトリ](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)に掲載されたこのアプリの項目を補足するものです。2026年10月10日に確認したバージョンは、[変更履歴](https://returneditor.ai/changelog/)による1.4.1です。新しく署名されたインストーラーでは、Windows SmartScreenが「Windows によって PC が保護されました」と表示する場合があります。ダウンロードページでは「詳細情報」から「実行」を選ぶよう案内されています。',
+        note: 'このページは、[Local LLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)に掲載されたこのアプリの項目を補足するものです。2026年10月10日に確認したバージョンは、[変更履歴](https://returneditor.ai/changelog/)による1.4.1です。新しく署名されたインストーラーでは、Windows SmartScreenが「Windows によって PC が保護されました」と表示する場合があります。ダウンロードページでは「詳細情報」から「実行」を選ぶよう案内されています。',
       },
       pricing: {
         id: 'plans-pricing',
@@ -2288,7 +2288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Onde obter': 'Não publicado',
           },
         ],
-        note: 'Esta página complementa o cadastro do app no [diretório de software Local LLM](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versão verificada em 10 de outubro de 2026: 1.4.1, segundo o [changelog](https://returneditor.ai/changelog/). O Windows SmartScreen pode exibir o aviso «O Windows protegeu seu PC» para o instalador recém-assinado; a página de download orienta escolher «Mais informações» e depois «Executar assim mesmo».',
+        note: 'Esta página complementa o cadastro do app no [diretório de software Local LLM](https://www.promptquorum.com/directory). Versão verificada em 10 de outubro de 2026: 1.4.1, segundo o [changelog](https://returneditor.ai/changelog/). O Windows SmartScreen pode exibir o aviso «O Windows protegeu seu PC» para o instalador recém-assinado; a página de download orienta escolher «Mais informações» e depois «Executar assim mesmo».',
       },
       pricing: {
         id: 'plans-pricing',
@@ -2692,7 +2692,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'مكان الحصول عليه': 'غير منشورة',
           },
         ],
-        note: 'هذه الصفحة مادة مرافقة لإدراج التطبيق في [دليل برمجيات Local LLM](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). الإصدار الذي جرى التحقق منه في 10 أكتوبر 2026: 1.4.1، وفق [سجل التغييرات](https://returneditor.ai/changelog/). قد يعرض Windows SmartScreen تحذير «Windows protected your PC» للمثبّت الموقّع حديثًا؛ وتنصح صفحة التنزيل باختيار More info ثم Run anyway.',
+        note: 'هذه الصفحة مادة مرافقة لإدراج التطبيق في [دليل برمجيات Local LLM](https://www.promptquorum.com/directory). الإصدار الذي جرى التحقق منه في 10 أكتوبر 2026: 1.4.1، وفق [سجل التغييرات](https://returneditor.ai/changelog/). قد يعرض Windows SmartScreen تحذير «Windows protected your PC» للمثبّت الموقّع حديثًا؛ وتنصح صفحة التنزيل باختيار More info ثم Run anyway.',
       },
       pricing: {
         id: 'plans-pricing',
@@ -3096,7 +3096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '获取途径': '未公开',
           },
         ],
-        note: '本页是该应用在 [Local LLM 软件目录](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)中条目的配套资料。2026 年 10 月 10 日核实的版本：1.4.1，来自[更新日志](https://returneditor.ai/changelog/)。新签名的安装程序可能触发 Windows SmartScreen 的“Windows 已保护你的电脑”提示；下载页面建议依次选择“更多信息”和“仍要运行”。',
+        note: '本页是该应用在 [Local LLM 软件目录](https://www.promptquorum.com/directory)中条目的配套资料。2026 年 10 月 10 日核实的版本：1.4.1，来自[更新日志](https://returneditor.ai/changelog/)。新签名的安装程序可能触发 Windows SmartScreen 的“Windows 已保护你的电脑”提示；下载页面建议依次选择“更多信息”和“仍要运行”。',
       },
       pricing: {
         id: 'plans-pricing',
@@ -3500,7 +3500,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '받는 곳': '공개되지 않음',
           },
         ],
-        note: '이 페이지는 [Local LLM 소프트웨어 디렉터리](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 이 앱 항목의 보조 자료입니다. 2026년 10월 10일에 확인한 버전은 [변경 내역](https://returneditor.ai/changelog/)에 따른 1.4.1입니다. 새로 서명된 설치 프로그램에서는 Windows SmartScreen이 \'Windows의 PC 보호\' 경고를 표시할 수 있으며, 다운로드 페이지는 \'추가 정보\' 후 \'실행\'을 선택하도록 안내합니다.',
+        note: '이 페이지는 [Local LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 있는 이 앱 항목의 보조 자료입니다. 2026년 10월 10일에 확인한 버전은 [변경 내역](https://returneditor.ai/changelog/)에 따른 1.4.1입니다. 새로 서명된 설치 프로그램에서는 Windows SmartScreen이 \'Windows의 PC 보호\' 경고를 표시할 수 있으며, 다운로드 페이지는 \'추가 정보\' 후 \'실행\'을 선택하도록 안내합니다.',
       },
       pricing: {
         id: 'plans-pricing',

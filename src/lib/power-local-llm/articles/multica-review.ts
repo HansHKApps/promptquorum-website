@@ -71,9 +71,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'License is **not** plain Apache-2.0 — GitHub reports NOASSERTION; Multica uses a custom, Apache-2.0-derived license with added conditions',
           '49,736 GitHub stars is an unusually fast climb for a repository created January 13, 2026 — treat it as a caveated signal, not an unqualified one (see the dedicated section below)',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Multica\'s entry in the [Local LLM Software Directory](/directory) — see that page for how Multica compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-multica',
@@ -328,9 +325,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Git-Host-Integrationen (GitHub, GitLab, Gitea, selbst gehostetes Forgejo) und Chat-App-Integrationen (Slack, Lark, DingTalk, WeCom, Telegram)',
           'Lizenz ist **nicht** schlicht Apache-2.0 — GitHub meldet NOASSERTION; Multica nutzt eine eigene, von Apache-2.0 abgeleitete Lizenz mit zusätzlichen Bedingungen',
           '49.736 GitHub-Sterne sind ein ungewöhnlich schneller Anstieg für ein am 13. Januar 2026 erstelltes Repository — als vorbehaltbehaftetes Signal lesen, nicht als uneingeschränkte Tatsache (siehe eigenen Abschnitt unten)',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist der vertiefende Begleittext zu Multicas Eintrag im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie Multica im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -587,9 +581,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'La licence n\'est **pas** une simple Apache-2.0 — GitHub indique NOASSERTION ; Multica utilise une licence personnalisée dérivée d\'Apache-2.0 avec des conditions supplémentaires',
           '49 736 étoiles GitHub constituent une progression inhabituellement rapide pour un dépôt créé le 13 janvier 2026 — à lire comme un signal nuancé, pas comme un fait absolu (voir la section dédiée ci-dessous)',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis complète l\'entrée de Multica dans le [Répertoire des logiciels LLM locaux](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment Multica se compare à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-multica',
@@ -844,9 +835,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Gitホスト連携(GitHub、GitLab、Gitea、セルフホスト型Forgejo)とチャットアプリ連携(Slack、Lark、DingTalk、WeCom、Telegram)',
           'ライセンスは単純なApache-2.0**ではない** — GitHubはNOASSERTIONと報告しており、Multicaは追加条件付きの独自Apache-2.0派生ライセンスを使用',
           '49,736のGitHubスターは、2026年1月13日作成のリポジトリとしては異例な急成長 — 無条件の事実としてではなく、注意点付きのシグナルとして読むこと(詳細は下記の専用セクション)',
-        ],
-        callouts: [
-          { type: 'note', text: '本レビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるMulticaのエントリーを深掘りする補足記事です — 他の数十のローカルAIツールとの比較は同ページをご覧ください。' },
         ],
       },
       overview: {
@@ -1103,9 +1091,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '许可证**并非**单纯的Apache-2.0——GitHub显示为NOASSERTION;Multica使用的是附加了额外条款的自定义Apache-2.0衍生许可证',
           '49,736个GitHub星标对于一个2026年1月13日创建的仓库来说是异常快速的增长——请将其视为带保留条件的信号,而非无保留的事实(详见下方专门章节)',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Multica条目的深度补充——欲了解Multica与数十种其他本地AI工具的一览对比,请参阅该页面。' },
-        ],
       },
       overview: {
         id: 'what-is-multica',
@@ -1360,9 +1345,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Integraciones con alojadores Git (GitHub, GitLab, Gitea, Forgejo autoalojado) e integraciones de chat (Slack, Lark, DingTalk, WeCom, Telegram)',
           'La licencia **no** es Apache-2.0 sin más — GitHub reporta NOASSERTION; Multica usa una licencia personalizada derivada de Apache-2.0 con condiciones adicionales',
           '49.736 estrellas en GitHub son un aumento inusualmente rápido para un repositorio creado el 13 de enero de 2026 — léalo como una señal con matices, no como un hecho sin reservas (ver la sección dedicada más abajo)',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de Multica en el [Directorio de Software LLM Local](/es/directory) — consulte esa página para ver de un vistazo cómo se compara Multica con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1619,9 +1601,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A licença **não** é simplesmente Apache-2.0 — o GitHub reporta NOASSERTION; o Multica usa uma licença personalizada derivada da Apache-2.0 com condições adicionais',
           '49.736 estrelas no GitHub são um crescimento incomumente rápido para um repositório criado em 13 de janeiro de 2026 — leia como um sinal com ressalvas, não como um fato absoluto (veja a seção dedicada abaixo)',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Multica no [Diretório de Software LLM Local](/pt/directory) — veja essa página para comparar rapidamente o Multica com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-multica',
@@ -1877,9 +1856,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الترخيص **ليس** Apache-2.0 بسيطًا — يُظهر GitHub تصنيف NOASSERTION؛ يستخدم Multica ترخيصًا مخصصًا مشتقًا من Apache-2.0 بشروط إضافية',
           'يمثّل 49,736 نجمة على GitHub ارتفاعًا سريعًا بشكل غير معتاد لمستودع أُنشئ في 13 يناير 2026 — يُقرأ كإشارة مشروطة لا كحقيقة غير مشروطة (انظر القسم المخصص أدناه)',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المعمّق لإدراج Multica في [دليل برمجيات نماذج اللغة الكبيرة المحلية](/ar/directory) — راجع تلك الصفحة للاطلاع سريعًا على مقارنة Multica بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-multica',
@@ -2134,9 +2110,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Git 호스팅 연동(GitHub, GitLab, Gitea, 셀프호스팅 Forgejo)과 채팅 앱 연동(Slack, Lark, 딩톡, 기업 위챗, Telegram)',
           '라이선스는 단순한 Apache-2.0이 **아님** — GitHub는 NOASSERTION으로 표시; Multica는 추가 조건이 붙은 독자적인 Apache-2.0 파생 라이선스를 사용',
           'GitHub 스타 49,736개는 2026년 1월 13일 생성된 저장소치고 이례적으로 빠른 증가 — 무조건적인 사실이 아니라 유의사항이 붙은 신호로 읽을 것(아래 전용 섹션 참고)',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Multica 항목을 심층적으로 다루는 보충 콘텐츠입니다 — Multica가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

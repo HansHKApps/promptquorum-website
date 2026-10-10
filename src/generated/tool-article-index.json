@@ -4343,6 +4343,52 @@
     "totalCount": 21,
     "capped": true
   },
+  "Microsoft Agent Framework": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "microsoft-agent-framework-review",
+        "title": "Microsoft Agent Framework Review: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/microsoft-agent-framework-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "taskweaver-review",
+        "title": "TaskWeaver Review: Features, Status, Alternatives",
+        "url": "/power-local-llm/taskweaver-review",
+        "dateModified": "2026-09-11",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "semantic-kernel-review",
+        "title": "Semantic Kernel Review: Features, Pricing, Alternatives",
+        "url": "/power-local-llm/semantic-kernel-review",
+        "dateModified": "2026-09-06",
+        "tier": "about"
+      },
+      {
+        "cluster": "power-local-llm",
+        "slug": "autogen-review",
+        "title": "AutoGen Review: Maintenance-Mode Status & AG2 Fork",
+        "url": "/power-local-llm/autogen-review",
+        "dateModified": "2026-09-05",
+        "tier": "about"
+      },
+      {
+        "cluster": "local-llms",
+        "slug": "best-ai-agent-framework-2026",
+        "title": "Best AI Agent Framework 2026: LangGraph vs CrewAI vs n8n",
+        "url": "/local-llms/best-ai-agent-framework-2026",
+        "dateModified": "2026-08-28",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 5,
+    "capped": false
+  },
   "Semantic Kernel": {
     "articles": [
       {

@@ -83,9 +83,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'The app itself is closed-source, but Draw Things, Inc. maintains open-source companion repositories on GitHub, including a self-hostable gRPC server and an official [ComfyUI](/power-local-llm/comfyui-review) extension',
           'Made by Draw Things, Inc.; the app was built by developer Liu Liu, who publicly launched it in November 2022',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Draw Things\' entry in the [Local LLM Software Directory](/directory) — see that page for how Draw Things compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-draw-things',
@@ -398,9 +395,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Zwei Modi: Generierung auf dem Gerät (kein Konto, offline nutzbar, sobald ein Modell geladen ist) und optionales Cloud Compute (Konto erforderlich, läuft auf den Servern von Draw Things) — was Ihr Gerät verlässt, steht im Abschnitt „Lokal oder Cloud“',
           'Die App selbst ist Closed Source, doch Draw Things, Inc. pflegt Open-Source-Begleitprojekte auf GitHub, darunter einen selbst hostbaren gRPC-Server und eine offizielle [ComfyUI](/de/power-local-llm/comfyui-review)-Erweiterung',
           'Herausgegeben von Draw Things, Inc.; die App wurde von Entwickler Liu Liu programmiert, der sie im November 2022 öffentlich vorstellte',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist der Deep-Dive-Begleitartikel zum Draw-Things-Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie den Vergleich von Draw Things mit Dutzenden anderer lokaler KI-Tools auf einen Blick.' },
         ],
       },
       overview: {
@@ -715,9 +709,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'L\'application elle-même est à code source fermé, mais Draw Things, Inc. maintient des dépôts compagnons open source sur GitHub, dont un serveur gRPC auto-hébergeable et une extension [ComfyUI](/fr/power-local-llm/comfyui-review) officielle',
           'Éditée par Draw Things, Inc. ; l\'application a été créée par le développeur Liu Liu, qui l\'a lancée publiquement en novembre 2022',
         ],
-        callouts: [
-          { type: 'note', text: 'Ce test est le complément détaillé de la fiche Draw Things dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir comment Draw Things se compare, en un coup d\'œil, à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-draw-things',
@@ -1030,9 +1021,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '2つのモード：デバイス上の生成（アカウント不要、モデルをダウンロードすればオフラインで動作）と、任意のCloud Compute（アカウント必須、Draw Thingsのサーバーで実行）。端末の外へ出る情報は「ローカルかクラウドか」のセクションを参照',
           'アプリ自体はクローズドソースだが、Draw Things, Inc.はGitHub上でセルフホスト可能なgRPCサーバーや公式[ComfyUI](/ja/power-local-llm/comfyui-review)拡張機能を含むオープンソースの関連プロジェクトを維持している',
           'Draw Things, Inc.が提供。アプリは開発者Liu Liu氏が制作し、2022年11月に公開した',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](/ja/directory)にあるDraw Thingsのエントリーの詳細解説版です。他の数十のローカルAIツールとの比較は同ページを参照してください。' },
         ],
       },
       overview: {
@@ -1347,9 +1335,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '应用本身闭源，但Draw Things, Inc.在GitHub上维护开源配套项目，包括一个可自托管的gRPC服务器和一个官方[ComfyUI](/zh/power-local-llm/comfyui-review)扩展',
           '由Draw Things, Inc.出品；该应用由开发者Liu Liu打造，他于2022年11月公开发布该应用',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Draw Things条目的深度解析版——请前往该页面查看Draw Things与数十种其他本地AI工具的一览对比。' },
-        ],
       },
       overview: {
         id: 'what-is-draw-things',
@@ -1662,9 +1647,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Dos modos: generación en el dispositivo (sin cuenta, funciona sin conexión una vez descargado un modelo) y Cloud Compute opcional (requiere cuenta, se ejecuta en los servidores de Draw Things); la sección «Local o nube» detalla qué sale de tu dispositivo',
           'La app en sí es de código cerrado, pero Draw Things, Inc. mantiene repositorios complementarios de código abierto en GitHub, incluyendo un servidor gRPC autoalojable y una extensión oficial de [ComfyUI](/es/power-local-llm/comfyui-review)',
           'Desarrollada por Draw Things, Inc.; la app fue programada por Liu Liu, quien la lanzó públicamente en noviembre de 2022',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el análisis a fondo complementario a la ficha de Draw Things en el [Directorio de Software LLM Local](/es/directory); consulta esa página para ver cómo se compara Draw Things de un vistazo con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1979,9 +1961,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O aplicativo em si é de código fechado, mas a Draw Things, Inc. mantém repositórios complementares de código aberto no GitHub, incluindo um servidor gRPC auto-hospedável e uma extensão oficial do [ComfyUI](/pt/power-local-llm/comfyui-review)',
           'Desenvolvido pela Draw Things, Inc.; o app foi programado pelo desenvolvedor Liu Liu, que o lançou publicamente em novembro de 2022',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da ficha do Draw Things no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar o Draw Things rapidamente com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-draw-things',
@@ -2295,9 +2274,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'التطبيق نفسه مغلق المصدر، لكن Draw Things, Inc. تحافظ على مشاريع مصاحبة مفتوحة المصدر على GitHub، منها خادم gRPC قابل للاستضافة الذاتية وامتداد رسمي لـ[ComfyUI](/ar/power-local-llm/comfyui-review)',
           'من تطوير Draw Things, Inc.؛ برمجه المطور Liu Liu، الذي أطلقه علنًا في نوفمبر 2022',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمّق لإدخال Draw Things في [دليل برامج نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن Draw Things بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-draw-things',
@@ -2610,9 +2586,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '두 가지 모드: 기기 내 생성(계정 불필요, 모델을 내려받으면 오프라인 사용 가능)과 선택형 Cloud Compute(계정 필요, Draw Things 서버에서 실행) — 기기 밖으로 나가는 정보는 \'로컬 또는 클라우드\' 섹션 참고',
           '앱 자체는 폐쇄형 소스지만, Draw Things, Inc.는 GitHub에서 자체 호스팅 가능한 gRPC 서버와 공식 [ComfyUI](/ko/power-local-llm/comfyui-review) 확장 프로그램을 포함한 오픈소스 부속 프로젝트를 유지 관리함',
           'Draw Things, Inc.가 개발했으며, 이 앱은 개발자 Liu Liu가 제작해 2022년 11월에 공개적으로 출시함',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Draw Things 항목의 심층 분석 버전입니다 — Draw Things가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참조하세요.' },
         ],
       },
       overview: {

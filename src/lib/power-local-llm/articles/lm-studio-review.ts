@@ -76,9 +76,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Runs on Apple Silicon Macs, x64/ARM64 Windows PCs, and x64 Linux PCs',
           'Developed by Element Labs, Inc.; a separate companion product, Bionic (launched July 2026), adds an autonomous coding/work agent on top of LM Studio\'s model runtime, with its own paid tiers',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to LM Studio\'s entry in the [Local LLM Software Directory](/directory) — see that page for how LM Studio compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-lm-studio',
@@ -362,9 +359,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Kann headless (ohne GUI) über die `lms`-CLI und das server-native Paket `llmster` laufen, oder durch Aktivieren des Hintergrund-Server-Modus in der Desktop-App',
           'Läuft auf Apple-Silicon-Macs, x64/ARM64-Windows-PCs und x64-Linux-PCs',
           'Entwickelt von Element Labs, Inc.; ein separates Begleitprodukt namens Bionic (gestartet im Juli 2026) fügt einen autonomen Coding-/Arbeits-Agenten auf Basis von LM Studios Modell-Laufzeitumgebung hinzu, mit eigenen kostenpflichtigen Stufen',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu LM Studios Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie LM Studio im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -650,9 +644,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fonctionne sur les Mac Apple Silicon, les PC Windows x64/ARM64, et les PC Linux x64',
           'Développé par Element Labs, Inc. ; un produit compagnon distinct, Bionic (lancé en juillet 2026), ajoute un agent autonome de codage/travail par-dessus le moteur d\'exécution de modèles de LM Studio, avec ses propres offres payantes',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément détaillé de la fiche de LM Studio dans le [répertoire des logiciels d\'IA locale](/fr/directory) — consultez cette page pour voir comment LM Studio se compare, en un coup d\'œil, à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-lm-studio',
@@ -936,9 +927,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Puede ejecutarse en modo headless (sin GUI) mediante la CLI `lms` y su paquete server-native `llmster`, o activando el modo de servidor en segundo plano en la aplicación de escritorio',
           'Funciona en Macs con Apple Silicon, PCs Windows x64/ARM64, y PCs Linux x64',
           'Desarrollado por Element Labs, Inc.; un producto complementario independiente, Bionic (lanzado en julio de 2026), añade un agente autónomo de codificación/trabajo sobre el motor de ejecución de modelos de LM Studio, con sus propios niveles de pago',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de LM Studio en el [directorio de software de IA local](/es/directory) — consulte esa página para ver de un vistazo cómo se compara LM Studio con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1224,9 +1212,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Roda em Macs com Apple Silicon, PCs Windows x64/ARM64, e PCs Linux x64',
           'Desenvolvido pela Element Labs, Inc.; um produto complementar separado, Bionic (lançado em julho de 2026), adiciona um agente autônomo de codificação/trabalho sobre o motor de execução de modelos do LM Studio, com seus próprios níveis pagos',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do LM Studio no [diretório de software de IA local](/pt/directory) — veja essa página para comparar rapidamente o LM Studio com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-lm-studio',
@@ -1510,9 +1495,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`lms` CLIとそのサーバーネイティブなパッケージ`llmster`を通じて、あるいはデスクトップアプリでバックグラウンドサーバーモードを有効にすることで、ヘッドレス（GUIなし）で実行可能',
           'Apple Silicon Mac、x64/ARM64 Windows PC、x64 Linux PCで動作',
           'Element Labs, Inc.が開発。別の姉妹製品であるBionic（2026年7月に開始）は、LM Studioのモデルランタイムの上に自律的なコーディング/作業エージェントを追加し、独自の有料階層を持つ',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルAIソフトウェアディレクトリ](/ja/directory)にあるLM Studioのエントリーの詳細版です——他の数十のローカルAIツールとLM Studioが一目でどう比較されるかは、そのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1798,9 +1780,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '可在配备Apple Silicon的Mac、x64/ARM64 Windows PC以及x64 Linux PC上运行',
           '由Element Labs, Inc.开发；一款独立的配套产品Bionic（于2026年7月推出）在LM Studio的模型运行时之上增加了自主编码/工作智能体功能，拥有自己的付费层级',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地AI软件目录](/zh/directory)中LM Studio条目的深度配套文章——如需一目了然地了解LM Studio与数十种其他本地AI工具的对比，请参阅该页面。' },
-        ],
       },
       overview: {
         id: 'what-is-lm-studio',
@@ -2085,9 +2064,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Apple Silicon Mac, x64/ARM64 Windows PC, x64 Linux PC에서 실행됩니다',
           'Element Labs, Inc.가 개발했습니다; 별도의 동반 제품인 Bionic(2026년 7월 출시)은 LM Studio의 모델 런타임 위에 자율 코딩/작업 에이전트를 추가하며 자체 유료 계층을 가지고 있습니다',
         ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 AI 소프트웨어 디렉터리](/ko/directory)에 있는 LM Studio 항목의 심층 보완 자료입니다 — LM Studio가 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
-        ],
       },
       overview: {
         id: 'what-is-lm-studio',
@@ -2371,9 +2347,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يمكن تشغيله بدون واجهة رسومية عبر أداة CLI باسم `lms` وحزمتها الخادمية الأصلية `llmster`، أو عبر تفعيل وضع الخادم في الخلفية داخل تطبيق سطح المكتب',
           'يعمل على أجهزة Mac ذات شريحة Apple Silicon، وأجهزة Windows بمعمارية x64/ARM64، وأجهزة Linux بمعمارية x64',
           'تُطوّره شركة Element Labs, Inc.؛ يضيف منتج مرافق منفصل باسم Bionic (أُطلق في يوليو 2026) عميلًا ذكيًا مستقلًا للبرمجة/العمل فوق بيئة تشغيل نماذج LM Studio، وله مستويات مدفوعة خاصة به',
-        ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافقة المتعمّقة لمدخل LM Studio في [دليل برامج الذكاء الاصطناعي المحلي](/ar/directory) — راجع تلك الصفحة لمعرفة كيف تقارَن LM Studio بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
         ],
       },
       overview: {

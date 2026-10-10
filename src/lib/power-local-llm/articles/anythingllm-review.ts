@@ -77,9 +77,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Built by [Mintplex Labs](https://mintplex.com), a Y Combinator (Summer 2022) company founded by Timothy Carambat',
           'A separate, MIT-licensed [AnythingLLM Mobile](/power-local-llm/anythingllm-mobile-review) Android app can pair with a self-hosted AnythingLLM instance or run a small model on-device',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to AnythingLLM\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory) — see that page for how AnythingLLM compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-anythingllm',
@@ -318,9 +315,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Enthält einen No-Code-Builder für benutzerdefinierte KI-Agenten, aufgerufen im Chat per `@agent`-Befehl, für mehrstufige, werkzeugnutzende Workflows',
           'Entwickelt von [Mintplex Labs](https://mintplex.com), einem Y-Combinator-Unternehmen (Sommer 2022), gegründet von Timothy Carambat',
           'Eine separate, MIT-lizenzierte [AnythingLLM-Mobile](/de/power-local-llm/anythingllm-mobile-review)-Android-App kann sich mit einer selbst gehosteten AnythingLLM-Instanz koppeln oder ein kleines Modell auf dem Gerät ausführen',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu AnythingLLMs Eintrag im [lokalen KI-Software-Verzeichnis](https://www.promptquorum.com/directory) — dort finden Sie einen schnellen Überblick, wie AnythingLLM im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -561,9 +555,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Développé par [Mintplex Labs](https://mintplex.com), une entreprise issue de Y Combinator (été 2022) fondée par Timothy Carambat',
           'Une application Android séparée sous licence MIT, [AnythingLLM Mobile](/fr/power-local-llm/anythingllm-mobile-review), peut se coupler à une instance AnythingLLM auto-hébergée ou exécuter un petit modèle sur l\'appareil',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée d\'AnythingLLM dans le [répertoire de logiciels LLM locaux](https://www.promptquorum.com/directory) — consultez cette page pour voir en un coup d\'œil comment AnythingLLM se compare à des dizaines d\'autres outils d\'IA locaux.' },
-        ],
       },
       overview: {
         id: 'what-is-anythingllm',
@@ -802,9 +793,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Incluye un constructor de agentes de IA personalizados sin código, invocado en el chat con el comando `@agent`, para flujos de trabajo multipaso que usan herramientas',
           'Desarrollado por [Mintplex Labs](https://mintplex.com), una empresa de Y Combinator (verano de 2022) fundada por Timothy Carambat',
           'Una app Android separada bajo licencia MIT, [AnythingLLM Mobile](/es/power-local-llm/anythingllm-mobile-review), puede emparejarse con una instancia AnythingLLM autoalojada o ejecutar un modelo pequeño en el dispositivo',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad a la entrada de AnythingLLM en el [directorio de software LLM local](https://www.promptquorum.com/directory) — consulta esa página para ver de un vistazo cómo se compara AnythingLLM con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1045,9 +1033,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Desenvolvido pela [Mintplex Labs](https://mintplex.com), uma empresa da Y Combinator (verão de 2022) fundada por Timothy Carambat',
           'Um app Android separado sob licença MIT, o [AnythingLLM Mobile](/pt/power-local-llm/anythingllm-mobile-review), pode se conectar a uma instância AnythingLLM autogerenciada ou rodar um modelo pequeno no dispositivo',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do AnythingLLM no [diretório de software de LLM local](https://www.promptquorum.com/directory) — veja essa página para comparar rapidamente o AnythingLLM com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-anythingllm',
@@ -1286,9 +1271,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'チャット内で`@agent`コマンドを使って呼び出す、ノーコードのカスタムAIエージェントビルダーを搭載し、複数ステップのツール利用ワークフローに対応',
           '[Mintplex Labs](https://mintplex.com)が開発。Y Combinator（2022年夏バッチ）出身の企業で、Timothy Carambatが創業',
           '別のMITライセンスAndroidアプリ[AnythingLLM Mobile](/ja/power-local-llm/anythingllm-mobile-review)は、セルフホストのAnythingLLMインスタンスとペアリングするか、端末上で小さなモデルを実行できる',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)にあるAnythingLLMの項目を深掘りした補完記事です — AnythingLLMが他の数十のローカルAIツールと比べてどう位置づけられるか、そのページで概要を確認できます。' },
         ],
       },
       overview: {
@@ -1529,9 +1511,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '由 [Mintplex Labs](https://mintplex.com) 打造，这是一家来自 Y Combinator（2022 年夏季批次）的公司，创始人为 Timothy Carambat',
           '独立的 MIT 许可 Android 应用 [AnythingLLM Mobile](/zh/power-local-llm/anythingllm-mobile-review) 可与自托管的 AnythingLLM 实例配对，也可在设备端运行小型模型',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地 LLM 软件目录](https://www.promptquorum.com/directory)中 AnythingLLM 条目的深度补充——该页面提供了 AnythingLLM 与数十种其他本地 AI 工具相比的一览对照。' },
-        ],
       },
       overview: {
         id: 'what-is-anythingllm',
@@ -1771,9 +1750,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'من تطوير [Mintplex Labs](https://mintplex.com)، وهي شركة من دفعة Y Combinator (صيف 2022) أسسها Timothy Carambat',
           'يمكن لتطبيق أندرويد منفصل برخصة MIT، [AnythingLLM Mobile](/ar/power-local-llm/anythingllm-mobile-review)، الاقتران بمثيل AnythingLLM مستضاف ذاتيًا أو تشغيل نموذج صغير على الجهاز نفسه',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمق لمدخل AnythingLLM في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory) — راجع تلك الصفحة للاطلاع بسرعة على كيفية مقارنة AnythingLLM بعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-anythingllm',
@@ -2012,9 +1988,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '채팅에서 `@agent` 명령으로 호출하는, 코드 작성 없이 만드는 커스텀 AI 에이전트 빌더를 포함해 다단계 도구 사용 워크플로 지원',
           'Timothy Carambat가 설립한 Y Combinator(2022년 여름 기수) 출신 기업 [Mintplex Labs](https://mintplex.com)가 개발',
           '별도의 MIT 라이선스 Android 앱인 [AnythingLLM Mobile](/ko/power-local-llm/anythingllm-mobile-review)은 자체 호스팅 AnythingLLM 인스턴스와 페어링하거나 기기에서 작은 모델을 직접 실행할 수 있음',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 있는 AnythingLLM 항목을 심화 보완하는 자료입니다 — AnythingLLM이 수십 개의 다른 로컬 AI 도구와 비교해 어떤 위치에 있는지 한눈에 확인하려면 해당 페이지를 참조하세요.' },
         ],
       },
       overview: {

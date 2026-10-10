@@ -76,9 +76,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Self-hosted (Community) is free; n8n also sells hosted Cloud plans and an Enterprise tier with paid license-gated features',
           "n8n's own site cites Microsoft, Meta, NVIDIA, Dell, and Mercedes-Benz among organizations that have used n8n — a vendor marketing claim PromptQuorum has not independently verified beyond n8n's own publication of it",
         ],
-        callouts: [
-          { type: 'note', text: "This review is the deep-dive companion to n8n's entry in the [Local LLM Software Directory](/directory) — see that page for how n8n compares at a glance to dozens of other local AI tools." },
-        ],
       },
       overview: {
         id: 'what-is-n8n',
@@ -353,9 +350,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Unterstützung von Cloud-Modellen: Separate OpenAI-API- und Anthropic-API-Knoten existieren in derselben Knotenbibliothek — n8n ist hybrid, nicht nur lokal',
           'Selbst gehostet (Community) ist kostenlos; n8n verkauft außerdem gehostete Cloud-Tarife und eine Enterprise-Stufe mit kostenpflichtigen, lizenzgebundenen Funktionen',
           "n8ns eigene Website nennt Microsoft, Meta, NVIDIA, Dell und Mercedes-Benz als Organisationen, die n8n genutzt haben — eine Marketingaussage des Herstellers, die PromptQuorum über n8ns eigene Veröffentlichung hinaus nicht unabhängig verifiziert hat",
-        ],
-        callouts: [
-          { type: 'note', text: "Diese Rezension ist die vertiefende Ergänzung zum n8n-Eintrag im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie n8n im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet." },
         ],
       },
       overview: {
@@ -632,9 +626,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "L'auto-hébergement (Community) est gratuit ; n8n vend aussi des offres Cloud hébergées et un niveau Enterprise avec des fonctionnalités payantes sous licence",
           "Le site de n8n cite Microsoft, Meta, NVIDIA, Dell et Mercedes-Benz parmi les organisations ayant utilisé n8n — une affirmation marketing de l'éditeur que PromptQuorum n'a pas vérifiée indépendamment au-delà de sa publication par n8n lui-même",
         ],
-        callouts: [
-          { type: 'note', text: "Cet avis est le complément détaillé de la fiche n8n dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir en un coup d'œil comment n8n se compare à des dizaines d'autres outils d'IA locaux." },
-        ],
       },
       overview: {
         id: 'what-is-n8n',
@@ -909,9 +900,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Soporte de modelos en la nube: existen nodos independientes de API de OpenAI y Anthropic en la misma biblioteca de nodos — n8n es híbrido, no solo local',
           'El autoalojamiento (Community) es gratuito; n8n también vende planes Cloud alojados y un nivel Enterprise con funciones de pago bajo licencia',
           "El propio sitio de n8n cita a Microsoft, Meta, NVIDIA, Dell y Mercedes-Benz entre las organizaciones que han usado n8n —una afirmación de marketing del proveedor que PromptQuorum no ha verificado de forma independiente más allá de la propia publicación de n8n",
-        ],
-        callouts: [
-          { type: 'note', text: "Este análisis es el complemento en profundidad de la entrada de n8n en el [Local LLM Software Directory](/es/directory) — consulta esa página para ver de un vistazo cómo se compara n8n con docenas de otras herramientas de IA local." },
         ],
       },
       overview: {
@@ -1188,9 +1176,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'A hospedagem própria (Community) é gratuita; o n8n também vende planos Cloud hospedados e um nível Enterprise com recursos pagos sob licença',
           "O próprio site do n8n cita Microsoft, Meta, NVIDIA, Dell e Mercedes-Benz entre as organizações que usaram o n8n — uma afirmação de marketing do fornecedor que a PromptQuorum não verificou de forma independente além da própria publicação do n8n",
         ],
-        callouts: [
-          { type: 'note', text: "Esta análise é o complemento aprofundado da entrada do n8n no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar o n8n rapidamente com dezenas de outras ferramentas de IA local." },
-        ],
       },
       overview: {
         id: 'what-is-n8n',
@@ -1465,9 +1450,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'クラウドモデル対応：同じノードライブラリ内に別のOpenAI API・Anthropic APIノードが存在する——n8nはローカル専用ではなくハイブリッドである',
           'セルフホスト（Community）は無料。n8nはホスト型のCloudプランと、有料ライセンスで機能を追加できるEnterprise階層も販売している',
           "n8n自身のサイトはMicrosoft、Meta、NVIDIA、Dell、メルセデス・ベンツをn8n利用実績のある組織として挙げているが、これはベンダー自身のマーケティング上の主張であり、PromptQuorumはn8n自身の公表以上に独立した検証を行っていない",
-        ],
-        callouts: [
-          { type: 'note', text: "このレビューは[Local LLM Software Directory](/ja/directory)にあるn8nのエントリーを深掘りした補足記事である——n8nが他の数十のローカルAIツールと比べてどうかを一目で確認するにはそちらのページを参照してほしい。" },
         ],
       },
       overview: {
@@ -1744,9 +1726,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '自托管（Community）免费；n8n还销售托管的Cloud套餐以及带有付费授权功能的Enterprise层级',
           "n8n官网自称Microsoft、Meta、NVIDIA、戴尔和梅赛德斯-奔驰等机构曾使用过n8n——这是厂商自身的营销说法，PromptQuorum除n8n自行发布的内容外，未进行独立核实",
         ],
-        callouts: [
-          { type: 'note', text: "本文是[Local LLM Software Directory](/zh/directory)中n8n条目的深度补充——如需一目了然地了解n8n与其他数十种本地AI工具的对比，请参阅该页面。" },
-        ],
       },
       overview: {
         id: 'what-is-n8n',
@@ -2022,9 +2001,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'الاستضافة الذاتية (Community) مجانية؛ تبيع n8n أيضًا باقات Cloud مستضافة وفئة Enterprise بميزات مدفوعة مرتبطة بترخيص',
           "يذكر موقع n8n نفسه أن مؤسسات مثل Microsoft وMeta وNVIDIA وDell ومرسيدس-بنز استخدمت n8n — وهذا ادعاء تسويقي من الشركة نفسها لم تتحقق منه PromptQuorum بشكل مستقل بخلاف ما نشرته n8n عن نفسها",
         ],
-        callouts: [
-          { type: 'note', text: "هذه المراجعة هي المكمل التفصيلي لمدخل n8n في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة بين n8n وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى." },
-        ],
       },
       overview: {
         id: 'what-is-n8n',
@@ -2299,9 +2275,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '클라우드 모델 지원: 동일한 노드 라이브러리 안에 별도의 OpenAI API, Anthropic API 노드가 존재한다——n8n은 로컬 전용이 아니라 하이브리드다',
           '셀프 호스팅(Community)은 무료이며, n8n은 호스팅형 Cloud 플랜과 유료 라이선스 기능이 포함된 Enterprise 등급도 판매한다',
           "n8n 자체 사이트는 Microsoft, Meta, NVIDIA, Dell, 메르세데스-벤츠 등을 n8n을 사용한 조직으로 언급하고 있다——이는 공급업체 자체의 마케팅 주장이며, PromptQuorum은 n8n 자체 공개 내용 이상으로 독립적으로 검증하지 않았다",
-        ],
-        callouts: [
-          { type: 'note', text: "이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 n8n 항목의 심층 보완 자료다——n8n이 다른 수십 가지 로컬 AI 도구와 비교해 어떤 위치에 있는지 한눈에 보려면 해당 페이지를 참고하라." },
         ],
       },
       overview: {

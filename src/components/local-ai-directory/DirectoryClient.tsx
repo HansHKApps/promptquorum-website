@@ -45,8 +45,7 @@ const INSTALL_FILTER_VALUES: readonly string[] = INSTALL_EFFORT_KEYS
 
 // Reads a filtered-view deep link produced by the MCP server's search_apps/
 // get_app_details "directoryUrl" (see src/lib/power-local-llm/app-search.ts's
-// directoryUrlFor) — e.g. /power-local-llm/local-llm-software-directory-2026
-// ?category=editing-upscaling&os=mac&price=free. Same one-time
+// directoryUrlFor) — e.g. /directory?category=editing-upscaling&os=mac&price=free. Same one-time
 // hydration-divergence pattern as `want`/`hw` below: server always sees no
 // params, client may diverge once on first render. Unknown/invalid values
 // are dropped rather than passed through blindly.
@@ -139,7 +138,15 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
     setHwWidgetExpanded(true)
     document.getElementById('hw-profile-widget')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
-  const [openSlug, setOpenSlug] = useState<string | null>(null)
+  // Deep-linkable from `?tool=<slug>` (the review pages' "View X in the
+  // directory" and similar-tool links): opens that tool's drawer on load. Same
+  // one-time hydration-divergence pattern as `want`/`hw` above — the server
+  // always sees null; an unknown slug is ignored rather than passed through.
+  const [openSlug, setOpenSlug] = useState<string | null>(() => {
+    if (typeof window === 'undefined') return null
+    const fromUrl = new URLSearchParams(window.location.search).get('tool')
+    return fromUrl && apps.some((a) => a.slug === fromUrl) ? fromUrl : null
+  })
   // Filter panel collapsed by default (page-redesign-v2.md §2: "sticky
   // filter bar ... panel (collapsed by default)").
   const [filtersOpen, setFiltersOpen] = useState(false)

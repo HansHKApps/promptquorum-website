@@ -81,9 +81,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GitHub repository ([github.com/RunanywhereAI/runanywhere-sdks](https://github.com/RunanywhereAI/runanywhere-sdks)) shows roughly 10.3k stars and 376 forks as of this review',
           'Developer: RunAnywhere, Inc., which describes itself as "a research-first inference lab" building hand-written GPU/NPU kernels for consumer silicon',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to RunAnywhere\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-runanywhere',
@@ -357,9 +354,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Native SDKs für Swift (iOS 17.5+/macOS 14.5+), Kotlin (Android API 24+), Flutter, React Native, Web (TypeScript/WASM), Python sowie ein Terminal-CLI (`rcli`)',
           'Das GitHub-Repository ([github.com/RunanywhereAI/runanywhere-sdks](https://github.com/RunanywhereAI/runanywhere-sdks)) zeigt zum Zeitpunkt dieser Review rund 10.300 Sterne und 376 Forks',
           'Entwickler: RunAnywhere, Inc., das sich selbst als „research-first inference lab" beschreibt, das handgeschriebene GPU-/NPU-Kernel für Consumer-Silizium entwickelt',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu RunAnywheres Eintrag im [lokalen KI-Software-Verzeichnis](/de/directory) — dort finden Sie einen schnellen Überblick, wie RunAnywhere im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -635,9 +629,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Le dépôt GitHub ([github.com/RunanywhereAI/runanywhere-sdks](https://github.com/RunanywhereAI/runanywhere-sdks)) affiche environ 10 300 étoiles et 376 forks au moment de cette review',
           'Développeur : RunAnywhere, Inc., qui se décrit comme un « laboratoire d\'inférence axé sur la recherche » développant des noyaux GPU/NPU écrits à la main pour le matériel grand public',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de RunAnywhere dans le [répertoire des logiciels LLM locaux](/fr/directory) — consultez cette page pour voir comment RunAnywhere se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-runanywhere',
@@ -911,9 +902,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'SDK nativos para Swift (iOS 17.5+/macOS 14.5+), Kotlin (Android API 24+), Flutter, React Native, web (TypeScript/WASM), Python, y una CLI de terminal (`rcli`)',
           'El repositorio de GitHub ([github.com/RunanywhereAI/runanywhere-sdks](https://github.com/RunanywhereAI/runanywhere-sdks)) muestra alrededor de 10.300 estrellas y 376 forks al momento de esta review',
           'Desarrollador: RunAnywhere, Inc., que se describe a sí misma como un "laboratorio de inferencia enfocado en investigación" que construye kernels de GPU/NPU escritos a mano para silicio de consumo',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la entrada de RunAnywhere en el [Directorio de Software de LLM Local](/es/directory) — consulta esa página para ver cómo se compara RunAnywhere de un vistazo con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1189,9 +1177,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O repositório no GitHub ([github.com/RunanywhereAI/runanywhere-sdks](https://github.com/RunanywhereAI/runanywhere-sdks)) mostra cerca de 10.300 estrelas e 376 forks no momento desta review',
           'Desenvolvedor: RunAnywhere, Inc., que se descreve como um "laboratório de inferência voltado à pesquisa" que constrói kernels de GPU/NPU escritos à mão para silício de consumo',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da entrada do RunAnywhere no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar rapidamente o RunAnywhere com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-runanywhere',
@@ -1465,9 +1450,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Swift（iOS 17.5+/macOS 14.5+）、Kotlin（Android API 24+）、Flutter、React Native、Web（TypeScript/WASM）、Python向けのネイティブSDKと、ターミナルCLI（`rcli`）を提供',
           'GitHubリポジトリ（[github.com/RunanywhereAI/runanywhere-sdks](https://github.com/RunanywhereAI/runanywhere-sdks)）は、このレビュー時点で約1万300スター、376フォークを獲得',
           '開発元：RunAnywhere, Inc.——自社を「研究第一の推論ラボ」と位置づけ、コンシューマー向けシリコン向けに手書きのGPU/NPUカーネルを構築している',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)におけるRunAnywhereの項目を深掘りした関連記事です。他の数十のローカルAIツールとの比較は同ページを参照してください。' },
         ],
       },
       overview: {
@@ -1743,9 +1725,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '截至本评测撰写时，GitHub仓库（[github.com/RunanywhereAI/runanywhere-sdks](https://github.com/RunanywhereAI/runanywhere-sdks)）约有10,300个星标和376个分支（fork）',
           '开发方：RunAnywhere, Inc.，该公司将自身定位为"以研究为先的推理实验室"，为消费级芯片手写GPU/NPU内核',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中RunAnywhere条目的深度解读——如需一览RunAnywhere与其他数十种本地AI工具的对比，请查阅该页面。' },
-        ],
       },
       overview: {
         id: 'what-is-runanywhere',
@@ -2020,9 +1999,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يُظهر مستودع GitHub ([github.com/RunanywhereAI/runanywhere-sdks](https://github.com/RunanywhereAI/runanywhere-sdks)) نحو 10,300 نجمة و376 نسخة متفرعة (fork) وقت كتابة هذه المراجعة',
           'الجهة المطوّرة: RunAnywhere, Inc.، التي تصف نفسها بأنها "مختبر استدلال يضع البحث في المقام الأول" ويبني نُوى معالجات رسومية ووحدات NPU مكتوبة يدويًا لشرائح الأجهزة الاستهلاكية',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمّق لإدخال RunAnywhere في [دليل برامج النماذج اللغوية المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة بين RunAnywhere وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-runanywhere',
@@ -2296,9 +2272,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Swift(iOS 17.5+/macOS 14.5+), Kotlin(Android API 24+), Flutter, React Native, 웹(TypeScript/WASM), Python용 네이티브 SDK와 터미널 CLI(`rcli`) 제공',
           'GitHub 저장소([github.com/RunanywhereAI/runanywhere-sdks](https://github.com/RunanywhereAI/runanywhere-sdks))는 이 리뷰 작성 시점 기준 약 10,300개의 스타와 376개의 포크를 보유',
           '개발사: RunAnywhere, Inc. — 스스로를 "연구를 최우선으로 하는 추론 연구소"로 소개하며, 소비자용 실리콘을 위한 GPU/NPU 커널을 직접 손으로 작성',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 RunAnywhere 항목을 심층적으로 다룬 관련 글입니다. 수십 개의 다른 로컬 AI 도구와 RunAnywhere를 한눈에 비교하려면 해당 페이지를 참고하십시오.' },
         ],
       },
       overview: {

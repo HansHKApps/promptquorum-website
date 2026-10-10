@@ -73,9 +73,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Works on both desktop and Obsidian\'s mobile apps, per the plugin manifest (`isDesktopOnly: false`)',
           'Built and maintained by an independent developer using the GitHub handle Longy2k, funded through [Ko-fi](https://ko-fi.com/longy2k)',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to BMO Chatbot\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local-AI-capable tools.' },
-        ],
       },
       overview: {
         id: 'what-is-bmo-chatbot',
@@ -349,9 +346,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Laut eigenem [Commit-Verlauf](https://github.com/longy2k/obsidian-bmo-chatbot/commits/main) des Repositorys seit September 2024 keine Commits oder getaggten Releases mehr – bis zur eigenen Prüfung als derzeit unbetreut einzustufen',
           'Funktioniert laut Plugin-Manifest (`isDesktopOnly: false`) sowohl auf Desktop als auch in den mobilen Obsidian-Apps',
           'Entwickelt und gepflegt von einer unabhängigen Person unter dem GitHub-Namen Longy2k, finanziert über [Ko-fi](https://ko-fi.com/longy2k)',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zum Eintrag von BMO Chatbot im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie es im Vergleich zu Dutzenden anderer lokal-KI-fähiger Tools abschneidet.' },
         ],
       },
       overview: {
@@ -627,9 +621,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fonctionne sur desktop et sur les applications mobiles d\'Obsidian, selon le manifeste du plugin (`isDesktopOnly: false`)',
           'Développé et maintenu par une personne indépendante utilisant le pseudonyme GitHub Longy2k, financé via [Ko-fi](https://ko-fi.com/longy2k)',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche de BMO Chatbot dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment il se compare à des dizaines d\'autres outils IA locaux.' },
-        ],
       },
       overview: {
         id: 'what-is-bmo-chatbot',
@@ -903,9 +894,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Sin commits ni releases etiquetadas desde septiembre de 2024, según el propio [historial de commits](https://github.com/longy2k/obsidian-bmo-chatbot/commits/main) del repositorio — considérelo sin mantenimiento activo hasta verificarlo usted mismo',
           'Funciona tanto en escritorio como en las apps móviles de Obsidian, según el manifiesto del plugin (`isDesktopOnly: false`)',
           'Desarrollado y mantenido por una persona independiente bajo el usuario de GitHub Longy2k, financiado a través de [Ko-fi](https://ko-fi.com/longy2k)',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento a fondo de la ficha de BMO Chatbot en el [Local LLM Software Directory](/es/directory) — consulte esa página para ver de un vistazo cómo se compara con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1181,9 +1169,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Funciona tanto em desktop quanto nos aplicativos móveis do Obsidian, segundo o manifesto do plugin (`isDesktopOnly: false`)',
           'Desenvolvido e mantido por uma pessoa independente sob o nome de usuário do GitHub Longy2k, financiado via [Ko-fi](https://ko-fi.com/longy2k)',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da ficha do BMO Chatbot no [Local LLM Software Directory](/pt/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-bmo-chatbot',
@@ -1457,9 +1442,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'リポジトリ自身の[コミット履歴](https://github.com/longy2k/obsidian-bmo-chatbot/commits/main)によれば2024年9月以降コミットもタグ付きリリースも無し——自分で確認するまでは現在メンテナンスされていないものとして扱う',
           'プラグインのマニフェスト（`isDesktopOnly: false`）によればデスクトップとモバイルのObsidianアプリの両方で動作',
           'GitHubのハンドルLongy2kを使う独立した開発者によって開発・保守され、[Ko-fi](https://ko-fi.com/longy2k)経由で資金提供を受けている',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](/ja/directory)にあるBMO Chatbotのエントリーを深掘りした補足記事です——他の数十のローカルAI対応ツールとの比較は同ページを参照してください。' },
         ],
       },
       overview: {
@@ -1735,9 +1717,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '根据插件清单（`isDesktopOnly: false`），可在桌面端和Obsidian移动应用上运行',
           '由使用GitHub用户名Longy2k的独立开发者开发和维护，通过[Ko-fi](https://ko-fi.com/longy2k)获得资助',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中BMO Chatbot条目的深度补充——请查看该页面，快速了解它与数十款其他本地AI工具相比的表现。' },
-        ],
       },
       overview: {
         id: 'what-is-bmo-chatbot',
@@ -2012,9 +1991,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'تعمل على سطح المكتب وعلى تطبيقات Obsidian للجوال، وفق ملف مانيفست الإضافة (`isDesktopOnly: false`)',
           'طوّرها وصانها مطوّر مستقل يستخدم اسم المستخدم على GitHub وهو Longy2k، ويموَّل عبر [Ko-fi](https://ko-fi.com/longy2k)',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمّق لمدخل BMO Chatbot في [دليل برامج الذكاء الاصطناعي المحلية](/ar/directory) — راجعوا تلك الصفحة لمعرفة كيف تُقارَن هذه الإضافة بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-bmo-chatbot',
@@ -2288,9 +2264,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '저장소 자체의 [커밋 기록](https://github.com/longy2k/obsidian-bmo-chatbot/commits/main)에 따르면 2024년 9월 이후 커밋이나 태그가 붙은 릴리스가 없음 — 직접 확인하기 전까지는 현재 유지보수되지 않는 것으로 간주할 것',
           '플러그인 매니페스트(`isDesktopOnly: false`)에 따르면 데스크톱과 Obsidian 모바일 앱 모두에서 작동',
           'GitHub 아이디 Longy2k를 사용하는 독립 개발자가 개발 및 유지보수하며, [Ko-fi](https://ko-fi.com/longy2k)를 통해 후원을 받음',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 BMO Chatbot 항목의 심층 버전입니다 — 수십 개의 다른 로컬 AI 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

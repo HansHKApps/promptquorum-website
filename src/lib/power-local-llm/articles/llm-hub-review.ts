@@ -147,7 +147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Where to get it': '[LLM Hub privacy policy](https://www.llm-hub.app/privacy)',
           },
         ],
-        note: 'This page is companion material to the app\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versions as verified on 3 October 2026: Android 4.4.2 / iOS 1.4.0 (Android from the repository\'s build file, since the Play text read shows no version; iOS from the App Store). The README says native Windows and macOS apps are planned, not released.',
+        note: 'This page is companion material to the app\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory). Versions as verified on 3 October 2026: Android 4.4.2 / iOS 1.4.0 (Android from the repository\'s build file, since the Play text read shows no version; iOS from the App Store). The README says native Windows and macOS apps are planned, not released.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -604,7 +604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Bezugsquelle': '[Datenschutzerklärung von LLM Hub](https://www.llm-hub.app/privacy)',
           },
         ],
-        note: 'Diese Seite ist Begleitmaterial zum Eintrag der App im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versionen, geprüft am 3. Oktober 2026: Android 4.4.2 / iOS 1.4.0 (Android aus der Build-Datei des Repositorys, da der gelesene Play-Text keine Version zeigt; iOS aus dem App Store). Laut README sind native Windows- und macOS-Apps geplant, aber nicht veröffentlicht.',
+        note: 'Diese Seite ist Begleitmaterial zum Eintrag der App im [Local LLM Software Directory](https://www.promptquorum.com/directory). Versionen, geprüft am 3. Oktober 2026: Android 4.4.2 / iOS 1.4.0 (Android aus der Build-Datei des Repositorys, da der gelesene Play-Text keine Version zeigt; iOS aus dem App Store). Laut README sind native Windows- und macOS-Apps geplant, aber nicht veröffentlicht.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1029,7 +1029,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Dónde obtenerla': '[Política de privacidad de LLM Hub](https://www.llm-hub.app/privacy)',
           },
         ],
-        note: 'Esta página es material complementario de la entrada de la app en el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versiones verificadas el 3 de octubre de 2026: Android 4.4.2 / iOS 1.4.0 (la de Android procede del archivo de compilación del repositorio, ya que el texto de Play que se leyó no muestra versión; la de iOS, de la App Store). El README dice que las apps nativas para Windows y macOS están planificadas, no publicadas.',
+        note: 'Esta página es material complementario de la entrada de la app en el [Local LLM Software Directory](https://www.promptquorum.com/directory). Versiones verificadas el 3 de octubre de 2026: Android 4.4.2 / iOS 1.4.0 (la de Android procede del archivo de compilación del repositorio, ya que el texto de Play que se leyó no muestra versión; la de iOS, de la App Store). El README dice que las apps nativas para Windows y macOS están planificadas, no publicadas.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1454,7 +1454,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Où la trouver': '[Politique de confidentialité de LLM Hub](https://www.llm-hub.app/privacy)',
           },
         ],
-        note: 'Cette page est un complément à l\'entrée de l\'application dans le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versions vérifiées le 3 octobre 2026 : Android 4.4.2 / iOS 1.4.0 (Android d\'après le fichier de build du dépôt, car le texte Play lu n\'indique aucune version ; iOS d\'après l\'App Store). Le README indique que des applications natives pour Windows et macOS sont prévues, mais non publiées.',
+        note: 'Cette page est un complément à l\'entrée de l\'application dans le [Local LLM Software Directory](https://www.promptquorum.com/directory). Versions vérifiées le 3 octobre 2026 : Android 4.4.2 / iOS 1.4.0 (Android d\'après le fichier de build du dépôt, car le texte Play lu n\'indique aucune version ; iOS d\'après l\'App Store). Le README indique que des applications natives pour Windows et macOS sont prévues, mais non publiées.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1879,7 +1879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '入手先': '[LLM Hubのプライバシーポリシー](https://www.llm-hub.app/privacy)',
           },
         ],
-        note: 'このページは、[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)にある本アプリの項目の補足資料です。2026年10月3日に確認したバージョン:Android 4.4.2 / iOS 1.4.0(Androidはリポジトリのビルドファイルによる。読み取れたPlayの文面にはバージョンが示されていないため。iOSはApp Storeによる)。READMEによれば、ネイティブのWindowsおよびmacOSアプリは計画中で、未リリースです。',
+        note: 'このページは、[Local LLM Software Directory](https://www.promptquorum.com/directory)にある本アプリの項目の補足資料です。2026年10月3日に確認したバージョン:Android 4.4.2 / iOS 1.4.0(Androidはリポジトリのビルドファイルによる。読み取れたPlayの文面にはバージョンが示されていないため。iOSはApp Storeによる)。READMEによれば、ネイティブのWindowsおよびmacOSアプリは計画中で、未リリースです。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2304,7 +2304,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Onde obter': '[Política de privacidade do LLM Hub](https://www.llm-hub.app/privacy)',
           },
         ],
-        note: 'Esta página é material complementar à entrada do app no [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versões conforme verificadas em 3 de outubro de 2026: Android 4.4.2 / iOS 1.4.0 (Android a partir do arquivo de build do repositório, já que o texto do Play lido não mostra versão; iOS a partir da App Store). O README diz que apps nativos para Windows e macOS estão planejados, mas não foram lançados.',
+        note: 'Esta página é material complementar à entrada do app no [Local LLM Software Directory](https://www.promptquorum.com/directory). Versões conforme verificadas em 3 de outubro de 2026: Android 4.4.2 / iOS 1.4.0 (Android a partir do arquivo de build do repositório, já que o texto do Play lido não mostra versão; iOS a partir da App Store). O README diz que apps nativos para Windows e macOS estão planejados, mas não foram lançados.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2729,7 +2729,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'مكان الحصول عليه': '[سياسة خصوصية LLM Hub](https://www.llm-hub.app/privacy)',
           },
         ],
-        note: 'هذه الصفحة مادة مرافقة لإدخال التطبيق في [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). الإصدارات بحسب ما جرى التحقق منه في 3 أكتوبر 2026: Android 4.4.2 / iOS 1.4.0 (إصدار أندرويد من ملف البناء في المستودع لأن نص Play الذي قُرئ لا يُظهر رقم إصدار؛ وإصدار iOS من App Store). ويذكر README أن تطبيقين أصليين لـ Windows و macOS مخطَّط لهما ولم يصدرا بعد.',
+        note: 'هذه الصفحة مادة مرافقة لإدخال التطبيق في [Local LLM Software Directory](https://www.promptquorum.com/directory). الإصدارات بحسب ما جرى التحقق منه في 3 أكتوبر 2026: Android 4.4.2 / iOS 1.4.0 (إصدار أندرويد من ملف البناء في المستودع لأن نص Play الذي قُرئ لا يُظهر رقم إصدار؛ وإصدار iOS من App Store). ويذكر README أن تطبيقين أصليين لـ Windows و macOS مخطَّط لهما ولم يصدرا بعد.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -3154,7 +3154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '获取途径': '[LLM Hub 隐私政策](https://www.llm-hub.app/privacy)',
           },
         ],
-        note: '本页是该应用在 [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) 中词条的配套资料。据 2026 年 10 月 3 日核实的版本:Android 4.4.2 / iOS 1.4.0(Android 版本来自代码仓库的构建文件,因为所读的 Play 文本未显示版本号;iOS 版本来自 App Store)。README 称原生 Windows 和 macOS 应用已在计划中,尚未发布。',
+        note: '本页是该应用在 [Local LLM Software Directory](https://www.promptquorum.com/directory) 中词条的配套资料。据 2026 年 10 月 3 日核实的版本:Android 4.4.2 / iOS 1.4.0(Android 版本来自代码仓库的构建文件,因为所读的 Play 文本未显示版本号;iOS 版本来自 App Store)。README 称原生 Windows 和 macOS 应用已在计划中,尚未发布。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -3579,7 +3579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '받는 곳': '[LLM Hub 개인정보 처리방침](https://www.llm-hub.app/privacy)',
           },
         ],
-        note: '이 페이지는 [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 이 앱 항목의 보조 자료입니다. 2026년 10월 3일에 확인한 버전: Android 4.4.2 / iOS 1.4.0 (Play 텍스트에는 버전이 나와 있지 않아 Android는 저장소의 빌드 파일에서, iOS는 App Store에서 가져옴). README에 따르면 네이티브 Windows·macOS 앱은 계획 단계이며 출시되지 않았습니다.',
+        note: '이 페이지는 [Local LLM Software Directory](https://www.promptquorum.com/directory)에 있는 이 앱 항목의 보조 자료입니다. 2026년 10월 3일에 확인한 버전: Android 4.4.2 / iOS 1.4.0 (Play 텍스트에는 버전이 나와 있지 않아 Android는 저장소의 빌드 파일에서, iOS는 App Store에서 가져옴). README에 따르면 네이티브 Windows·macOS 앱은 계획 단계이며 출시되지 않았습니다.',
       },
       gettingStarted: {
         id: 'getting-started',

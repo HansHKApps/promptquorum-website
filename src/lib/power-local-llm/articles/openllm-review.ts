@@ -72,9 +72,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`openllm deploy` offers an optional, separately paid path to BentoCloud, BentoML\'s managed-cloud hosting product — not a requirement to use OpenLLM',
           'GitHub repository shows roughly 12,535 stars and 842 forks as of September 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to OpenLLM\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory) — see that page for how OpenLLM compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-openllm',
@@ -353,9 +350,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Modellnamen werden über das begleitende Repository [bentoml/openllm-models](https://github.com/bentoml/openllm-models) aufgelöst, benutzerdefinierte Repositories werden unterstützt',
           '`openllm deploy` bietet einen optionalen, separat kostenpflichtigen Weg zu BentoCloud, BentoMLs verwaltetem Cloud-Hosting-Produkt — keine Voraussetzung für die Nutzung von OpenLLM',
           'Das GitHub-Repository zeigt Stand September 2026 rund 12.535 Sterne und 842 Forks',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das vertiefende Begleitstück zu OpenLLMs Eintrag im [lokalen KI-Software-Verzeichnis](https://www.promptquorum.com/directory) — dort finden Sie einen schnellen Überblick, wie OpenLLM im Vergleich zu Dutzenden anderer lokaler KI-Tools abschneidet.' },
         ],
       },
       overview: {
@@ -636,9 +630,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`openllm deploy` offre un chemin optionnel, séparément payant, vers BentoCloud, le produit cloud géré de BentoML — pas une condition pour utiliser OpenLLM',
           'Le dépôt GitHub affiche environ 12 535 étoiles et 842 forks en septembre 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette review est le complément approfondi de la fiche d\'OpenLLM dans l\'[annuaire de logiciels LLM locaux](https://www.promptquorum.com/directory) — consultez cette page pour voir comment OpenLLM se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-openllm',
@@ -917,9 +908,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'モデル名は併設リポジトリ[bentoml/openllm-models](https://github.com/bentoml/openllm-models)を参照して解決され、カスタムリポジトリにも対応',
           '`openllm deploy`はBentoMLのマネージドクラウド製品BentoCloudへのオプションかつ別料金の経路を提供する — OpenLLM利用の必須条件ではない',
           'GitHubリポジトリは2026年9月時点で約12,535スター、842フォークを記録',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[ローカルLLMソフトウェアディレクトリ](https://www.promptquorum.com/directory)内のOpenLLMの項目を補完する詳細版です — 他の数十種類のローカルAIツールとの比較は同ページを参照してください。' },
         ],
       },
       overview: {
@@ -1200,9 +1188,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`openllm deploy`提供一条可选、单独付费的路径，接入BentoML的托管云产品BentoCloud——并非使用OpenLLM的必要条件',
           '截至2026年9月，GitHub仓库约有12,535颗星和842次分叉',
         ],
-        callouts: [
-          { type: 'note', text: '本文是[本地大模型软件目录](https://www.promptquorum.com/directory)中OpenLLM条目的深度补充版——想快速了解OpenLLM与其他数十款本地AI工具的对比，请参阅该页面。' },
-        ],
       },
       overview: {
         id: 'what-is-openllm',
@@ -1481,9 +1466,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Los nombres de modelo se resuelven contra el repositorio complementario [bentoml/openllm-models](https://github.com/bentoml/openllm-models), con soporte para repositorios personalizados',
           '`openllm deploy` ofrece una ruta opcional y de pago independiente hacia BentoCloud, el producto de nube gestionada de BentoML — no un requisito para usar OpenLLM',
           'El repositorio de GitHub muestra unas 12.535 estrellas y 842 forks en septiembre de 2026',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta review es el complemento en profundidad de la ficha de OpenLLM en el [Directorio de Software LLM Local](https://www.promptquorum.com/directory) — consulta esa página para ver de un vistazo cómo se compara OpenLLM con decenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1764,9 +1746,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`openllm deploy` oferece um caminho opcional e pago separadamente para o BentoCloud, o produto de nuvem gerenciada da BentoML — não um requisito para usar o OpenLLM',
           'O repositório no GitHub mostra cerca de 12.535 estrelas e 842 forks em setembro de 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta review é o complemento aprofundado da ficha do OpenLLM no [Diretório de Software LLM Local](https://www.promptquorum.com/directory) — veja essa página para comparar rapidamente o OpenLLM com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-openllm',
@@ -2046,9 +2025,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '`openllm deploy` يوفر مسارًا اختياريًا ومدفوعًا بشكل منفصل نحو BentoCloud، منتج BentoML السحابي المُدار — وليس شرطًا لاستخدام OpenLLM',
           'مستودع GitHub يُظهر نحو 12,535 نجمة و842 تفرعًا اعتبارًا من سبتمبر 2026',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة مكمّلة معمّقة لبطاقة OpenLLM في [دليل برمجيات نماذج اللغة المحلية](https://www.promptquorum.com/directory) — راجع تلك الصفحة لمقارنة سريعة بين OpenLLM وعشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-openllm',
@@ -2327,9 +2303,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '모델 이름은 함께 제공되는 저장소인 [bentoml/openllm-models](https://github.com/bentoml/openllm-models)를 참조해 해석되며, 커스텀 저장소도 지원합니다',
           '`openllm deploy`는 BentoML의 매니지드 클라우드 제품인 BentoCloud로 이어지는 선택적이고 별도로 유료인 경로를 제공합니다 — OpenLLM 사용의 필수 조건은 아닙니다',
           'GitHub 저장소는 2026년 9월 기준 약 12,535개의 스타와 842개의 포크를 기록하고 있습니다',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](https://www.promptquorum.com/directory)에 실린 OpenLLM 항목을 보완하는 심화 자료입니다 — OpenLLM이 수십 개의 다른 로컬 AI 도구와 한눈에 어떻게 비교되는지는 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

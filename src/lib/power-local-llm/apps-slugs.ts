@@ -78,6 +78,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'langchain':                               'langchain',
   'crewai':                                  'crewai',
   'autogen':                                 'autogen',
+  'microsoft-agent-framework':               'microsoft-agent-framework',
   'semantic-kernel':                         'semantic-kernel',
   'langgraph':                               'langgraph',
   'letta':                                   'letta',

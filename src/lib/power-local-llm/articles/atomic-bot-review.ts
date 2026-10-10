@@ -72,9 +72,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Available for macOS (DMG), Windows (EXE), and iOS (App Store)',
           'Cloud compute plans are tiered, starting around $19/month per [atomicbot.ai](https://atomicbot.ai/) — reconfirm current pricing before budgeting, since plan details change',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Atomic Bot\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-atomic-bot',
@@ -355,9 +352,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cloud-Modus: verbindet sich mit OpenAI, Anthropic, Mistral, Groq und anderen Anbietern, oder läuft auf Atomic Bots eigener bezahlter Cloud-Infrastruktur',
           'Verfügbar für macOS (DMG), Windows (EXE) und iOS (App Store)',
           'Cloud-Compute-Pläne sind gestaffelt, ab etwa 19 $/Monat laut [atomicbot.ai](https://atomicbot.ai/) — aktuelle Preise vor der Budgetierung erneut prüfen, da sich Plandetails ändern',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist der ausführliche Begleitartikel zu Atomic Bots Eintrag im [Local LLM Software Directory](/de/directory) — dort finden Sie den Vergleich auf einen Blick mit Dutzenden anderer lokaler KI-Tools.' },
         ],
       },
       overview: {
@@ -640,9 +634,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Disponible pour macOS (DMG), Windows (EXE) et iOS (App Store)',
           'Les plans de calcul cloud sont échelonnés, à partir d\'environ 19 $/mois selon [atomicbot.ai](https://atomicbot.ai/) — revérifiez les tarifs actuels avant de budgétiser, car les détails des plans changent',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette revue est le complément approfondi de l\'entrée d\'Atomic Bot dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir comment il se compare en un coup d\'œil à des dizaines d\'autres outils d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-atomic-bot',
@@ -923,9 +914,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'クラウドモード：OpenAI、Anthropic、Mistral、Groqなどのプロバイダーに接続、またはAtomic Bot独自の有料クラウドインフラ上で実行',
           'macOS（DMG）、Windows（EXE）、iOS（App Store）向けに提供',
           'クラウドコンピュートプランは段階制で、[atomicbot.ai](https://atomicbot.ai/)によると月額約19ドルから — プラン内容は変わるため予算化前に最新料金を再確認',
-        ],
-        callouts: [
-          { type: 'note', text: '本レビューは、[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるAtomic Botのエントリーを詳しく掘り下げた記事です。他の数十のローカルAIツールとの一覧比較はそちらをご覧ください。' },
         ],
       },
       overview: {
@@ -1208,9 +1196,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '提供macOS（DMG）、Windows（EXE）和iOS（App Store）版本',
           '云计算套餐按等级划分，据[atomicbot.ai](https://atomicbot.ai/)称起价约为每月19美元 — 由于套餐细节会变化，预算前请重新核实当前定价',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Atomic Bot条目的深度延伸阅读 — 关于它与其他数十种本地AI工具的一览对比，请参阅该页面。' },
-        ],
       },
       overview: {
         id: 'what-is-atomic-bot',
@@ -1491,9 +1476,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Modo en la nube: se conecta a OpenAI, Anthropic, Mistral, Groq y otros proveedores, o se ejecuta en la propia infraestructura de nube de pago de Atomic Bot',
           'Disponible para macOS (DMG), Windows (EXE) e iOS (App Store)',
           'Los planes de cómputo en la nube están escalonados, desde unos 19 $/mes según [atomicbot.ai](https://atomicbot.ai/) — reconfirme los precios actuales antes de presupuestar, ya que los detalles de los planes cambian',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento a fondo de la entrada de Atomic Bot en el [Directorio de software de LLM local](/es/directory) — consulte esa página para ver de un vistazo cómo se compara con docenas de otras herramientas de IA local.' },
         ],
       },
       overview: {
@@ -1776,9 +1758,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Disponível para macOS (DMG), Windows (EXE) e iOS (App Store)',
           'Os planos de computação em nuvem são escalonados, a partir de cerca de US$ 19/mês segundo [atomicbot.ai](https://atomicbot.ai/) — reconfirme os preços atuais antes de planejar o orçamento, já que os detalhes dos planos mudam',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Atomic Bot no [Diretório de Software de LLM Local](/pt/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-atomic-bot',
@@ -2060,9 +2039,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'متوفر لأنظمة macOS (‏DMG) وWindows (‏EXE) وiOS (متجر التطبيقات)',
           'خطط الحوسبة السحابية متدرّجة، وتبدأ وفقاً لـ[atomicbot.ai](https://atomicbot.ai/) من حوالي 19 دولاراً شهرياً — أعد التحقق من الأسعار الحالية قبل وضع الميزانية، لأن تفاصيل الخطط تتغير',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمّق لإدخال Atomic Bot في [دليل برامج نماذج اللغة الكبيرة المحلية](/ar/directory) — راجع تلك الصفحة لمعرفة كيف يُقارَن بلمحة سريعة مع عشرات أدوات الذكاء الاصطناعي المحلية الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-atomic-bot',
@@ -2343,9 +2319,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '클라우드 모드: OpenAI, Anthropic, Mistral, Groq 등의 제공업체에 연결하거나 Atomic Bot 자체의 유료 클라우드 인프라에서 실행',
           'macOS(DMG), Windows(EXE), iOS(App Store)용으로 제공',
           '클라우드 컴퓨팅 요금제는 등급별로 나뉘며, [atomicbot.ai](https://atomicbot.ai/) 기준 월 약 19달러부터 시작 — 요금제 세부 사항이 변경되므로 예산을 세우기 전 최신 가격을 다시 확인',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Atomic Bot 항목의 심층 보완 자료입니다 — 다른 수십 개의 로컬 AI 도구와 한눈에 비교한 내용은 해당 페이지를 참조하세요.' },
         ],
       },
       overview: {

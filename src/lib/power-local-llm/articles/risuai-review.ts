@@ -75,9 +75,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Mobile-friendly, customizable UI with text-to-speech output and multiple UI themes',
           'Developed by [kwaroran](https://github.com/kwaroran) as an open-source community project',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to RisuAI\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory) — see that page for how RisuAI compares at a glance to dozens of other roleplay and local AI tools.' },
-        ],
       },
       overview: {
         id: 'what-is-risuai',
@@ -320,9 +317,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Tiefgehende Prompt-Anpassung: neu anordenbare Prompt-Blöcke, ein "Impersonate"-Modus sowie Bedingungen/Variablen, die Prompt-Inhalte verzweigen können',
           'Mobilfreundliche, anpassbare Oberfläche mit Text-to-Speech-Ausgabe und mehreren UI-Themes',
           'Entwickelt von [kwaroran](https://github.com/kwaroran) als quelloffenes Community-Projekt',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist die vertiefende Ergänzung zu RisuAIs Eintrag im [Local LLM Software Directory](https://www.promptquorum.com/directory) — dort sehen Sie auf einen Blick, wie sich RisuAI mit Dutzenden anderer Rollenspiel- und lokaler KI-Tools vergleicht.' },
         ],
       },
       overview: {
@@ -567,9 +561,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Interface personnalisable et adaptée au mobile, avec sortie de synthèse vocale et plusieurs thèmes d\'interface',
           'Développé par [kwaroran](https://github.com/kwaroran) en tant que projet communautaire open source',
         ],
-        callouts: [
-          { type: 'note', text: 'Cet avis est le complément approfondi de l\'entrée de RisuAI dans le [Local LLM Software Directory](https://www.promptquorum.com/directory) — consultez cette page pour voir d\'un coup d\'œil comment RisuAI se compare à des dizaines d\'autres outils de jeu de rôle et d\'IA locale.' },
-        ],
       },
       overview: {
         id: 'what-is-risuai',
@@ -812,9 +803,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Personalización profunda de prompts: bloques de prompt reordenables, modo "impersonate", y condiciones/variables que pueden ramificar el contenido del prompt',
           'Interfaz personalizable y adaptada a móvil, con salida de texto a voz y varios temas de interfaz',
           'Desarrollado por [kwaroran](https://github.com/kwaroran) como proyecto comunitario de código abierto',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de RisuAI en el [Local LLM Software Directory](https://www.promptquorum.com/directory) — consulta esa página para ver de un vistazo cómo se compara RisuAI con docenas de otras herramientas de rol e IA local.' },
         ],
       },
       overview: {
@@ -1059,9 +1047,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Interface personalizável e adaptada para mobile, com saída de texto para voz e vários temas de interface',
           'Desenvolvido por [kwaroran](https://github.com/kwaroran) como projeto comunitário open source',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do RisuAI no [Local LLM Software Directory](https://www.promptquorum.com/directory) — veja essa página para comparar rapidamente o RisuAI com dezenas de outras ferramentas de roleplay e IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-risuai',
@@ -1304,9 +1289,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '詳細なプロンプトカスタマイズ:並べ替え可能なプロンプトブロック、「なりきり」モード、プロンプト内容を分岐させられる条件・変数',
           'テキスト読み上げ出力と複数のUIテーマを備えた、モバイルフレンドリーでカスタマイズ可能なインターフェース',
           '[kwaroran](https://github.com/kwaroran)によってオープンソースのコミュニティプロジェクトとして開発',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは、[Local LLM Software Directory](https://www.promptquorum.com/directory)にあるRisuAIのエントリーを深掘りする補完記事です——RisuAIが他の数十のロールプレイ・ローカルAIツールと一目でどう比較されるかは、そのページをご覧ください。' },
         ],
       },
       overview: {
@@ -1551,9 +1533,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '移动端友好、可自定义的界面,支持文字转语音输出和多种UI主题',
           '由[kwaroran](https://github.com/kwaroran)作为开源社区项目开发',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[Local LLM Software Directory](https://www.promptquorum.com/directory)中RisuAI条目的深度补充——请参阅该页面,一览RisuAI与其他数十款角色扮演和本地AI工具的对比情况。' },
-        ],
       },
       overview: {
         id: 'what-is-risuai',
@@ -1797,9 +1776,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'واجهة قابلة للتخصيص ومتكيفة مع الأجهزة المحمولة، مع إخراج تحويل النص إلى كلام وعدة سمات للواجهة',
           'طوّره [kwaroran](https://github.com/kwaroran) كمشروع مجتمعي مفتوح المصدر',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المرافق المتعمق لإدخال RisuAI في [دليل برامج LLM المحلية](https://www.promptquorum.com/directory) — راجع تلك الصفحة لمعرفة كيف يقارن RisuAI بسرعة بعشرات من أدوات لعب الأدوار والذكاء الاصطناعي المحلي الأخرى.' },
-        ],
       },
       overview: {
         id: 'what-is-risuai',
@@ -2042,9 +2018,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '깊이 있는 프롬프트 커스터마이징: 순서를 재배열할 수 있는 프롬프트 블록, "빙의(impersonate)" 모드, 프롬프트 내용을 분기시킬 수 있는 조건/변수',
           '텍스트 음성 변환 출력과 여러 UI 테마를 갖춘, 모바일 친화적이고 커스터마이징 가능한 인터페이스',
           '오픈소스 커뮤니티 프로젝트로서 [kwaroran](https://github.com/kwaroran)이 개발',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉토리](https://www.promptquorum.com/directory)에 있는 RisuAI 항목의 심층 보완 자료입니다 — RisuAI가 수십 개의 다른 롤플레이 및 로컬 AI 도구와 어떻게 비교되는지 한눈에 보려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

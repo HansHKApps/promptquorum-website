@@ -162,7 +162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Where to get it': 'Not published',
           },
         ],
-        note: 'This page is companion material to the app\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Version as verified on 9 October 2026: 1.0, from the Steam news post "FriedrichAI 1.0 Is Here". No dedicated product website or privacy-policy page was found; the Steam page is the official listing.',
+        note: 'This page is companion material to the app\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory). Version as verified on 9 October 2026: 1.0, from the Steam news post "FriedrichAI 1.0 Is Here". No dedicated product website or privacy-policy page was found; the Steam page is the official listing.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -625,7 +625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             Bezugsquelle: 'Nicht veröffentlicht',
           },
         ],
-        note: 'Diese Seite ist Begleitmaterial zum Eintrag der App im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Version, geprüft am 9. Oktober 2026: 1.0, laut Steam-Neuigkeitenbeitrag „FriedrichAI 1.0 Is Here“. Es wurden weder eine eigene Produkt-Website noch eine Datenschutzerklärung gefunden; die Steam-Seite ist der offizielle Eintrag.',
+        note: 'Diese Seite ist Begleitmaterial zum Eintrag der App im [Local LLM Software Directory](https://www.promptquorum.com/directory). Version, geprüft am 9. Oktober 2026: 1.0, laut Steam-Neuigkeitenbeitrag „FriedrichAI 1.0 Is Here“. Es wurden weder eine eigene Produkt-Website noch eine Datenschutzerklärung gefunden; die Steam-Seite ist der offizielle Eintrag.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1064,7 +1064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Dónde obtenerla': 'No publicado',
           },
         ],
-        note: 'Esta página es material complementario de la entrada de la app en el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versión verificada el 9 de octubre de 2026: 1.0, según la publicación de noticias de Steam «FriedrichAI 1.0 Is Here». No se encontró un sitio web de producto propio ni una página de política de privacidad; la página de Steam es la ficha oficial.',
+        note: 'Esta página es material complementario de la entrada de la app en el [Local LLM Software Directory](https://www.promptquorum.com/directory). Versión verificada el 9 de octubre de 2026: 1.0, según la publicación de noticias de Steam «FriedrichAI 1.0 Is Here». No se encontró un sitio web de producto propio ni una página de política de privacidad; la página de Steam es la ficha oficial.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1503,7 +1503,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Où l\'obtenir': 'Non publié',
           },
         ],
-        note: 'Cette page est un complément à l\'entrée de l\'application dans le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Version vérifiée le 9 octobre 2026 : 1.0, d\'après l\'article d\'actualités Steam « FriedrichAI 1.0 Is Here ». Aucun site produit dédié ni page de politique de confidentialité n\'a été trouvé ; la page Steam est la fiche officielle.',
+        note: 'Cette page est un complément à l\'entrée de l\'application dans le [Local LLM Software Directory](https://www.promptquorum.com/directory). Version vérifiée le 9 octobre 2026 : 1.0, d\'après l\'article d\'actualités Steam « FriedrichAI 1.0 Is Here ». Aucun site produit dédié ni page de politique de confidentialité n\'a été trouvé ; la page Steam est la fiche officielle.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1942,7 +1942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '入手先': '非公開',
           },
         ],
-        note: 'このページは、[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)にある本アプリの項目の補足資料です。2026年10月9日に確認したバージョン:1.0(Steamのニュース投稿「FriedrichAI 1.0 Is Here」による)。専用の製品ウェブサイトもプライバシーポリシーのページも見つからず、Steamのページが公式の掲載です。',
+        note: 'このページは、[Local LLM Software Directory](https://www.promptquorum.com/directory)にある本アプリの項目の補足資料です。2026年10月9日に確認したバージョン:1.0(Steamのニュース投稿「FriedrichAI 1.0 Is Here」による)。専用の製品ウェブサイトもプライバシーポリシーのページも見つからず、Steamのページが公式の掲載です。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2381,7 +2381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Onde obter': 'Não publicado',
           },
         ],
-        note: 'Esta página é material complementar à entrada do app no [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versão conforme verificada em 9 de outubro de 2026: 1.0, a partir do post de notícias da Steam "FriedrichAI 1.0 Is Here". Nenhum site de produto próprio nem página de política de privacidade foi encontrado; a página da Steam é a listagem oficial.',
+        note: 'Esta página é material complementar à entrada do app no [Local LLM Software Directory](https://www.promptquorum.com/directory). Versão conforme verificada em 9 de outubro de 2026: 1.0, a partir do post de notícias da Steam "FriedrichAI 1.0 Is Here". Nenhum site de produto próprio nem página de política de privacidade foi encontrado; a página da Steam é a listagem oficial.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2820,7 +2820,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'مكان الحصول عليه': 'غير منشور',
           },
         ],
-        note: 'هذه الصفحة مادة مرافقة لإدخال التطبيق في [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). الإصدار بحسب ما جرى التحقق منه في 9 أكتوبر 2026: 1.0، من منشور أخبار Steam بعنوان "FriedrichAI 1.0 Is Here". لم يُعثر على موقع منتج مخصص ولا على صفحة سياسة خصوصية؛ وصفحة Steam هي الإدراج الرسمي.',
+        note: 'هذه الصفحة مادة مرافقة لإدخال التطبيق في [Local LLM Software Directory](https://www.promptquorum.com/directory). الإصدار بحسب ما جرى التحقق منه في 9 أكتوبر 2026: 1.0، من منشور أخبار Steam بعنوان "FriedrichAI 1.0 Is Here". لم يُعثر على موقع منتج مخصص ولا على صفحة سياسة خصوصية؛ وصفحة Steam هي الإدراج الرسمي.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -3259,7 +3259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '获取途径': '未公开',
           },
         ],
-        note: '本页是该应用在 [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) 中词条的配套资料。据 2026 年 10 月 9 日核实的版本:1.0,来自 Steam 新闻帖“FriedrichAI 1.0 Is Here”。未找到专门的产品网站或隐私政策页面;Steam 页面是官方上架页面。',
+        note: '本页是该应用在 [Local LLM Software Directory](https://www.promptquorum.com/directory) 中词条的配套资料。据 2026 年 10 月 9 日核实的版本:1.0,来自 Steam 新闻帖“FriedrichAI 1.0 Is Here”。未找到专门的产品网站或隐私政策页面;Steam 页面是官方上架页面。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -3698,7 +3698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '받는 곳': '공개되지 않음',
           },
         ],
-        note: '이 페이지는 [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 이 앱 항목의 보조 자료입니다. 2026년 10월 9일에 확인한 버전: 1.0 (Steam 뉴스 게시물 "FriedrichAI 1.0 Is Here" 기준). 전용 제품 웹사이트나 개인정보 처리방침 페이지는 찾지 못했으며, Steam 페이지가 공식 게재 정보입니다.',
+        note: '이 페이지는 [Local LLM Software Directory](https://www.promptquorum.com/directory)에 있는 이 앱 항목의 보조 자료입니다. 2026년 10월 9일에 확인한 버전: 1.0 (Steam 뉴스 게시물 "FriedrichAI 1.0 Is Here" 기준). 전용 제품 웹사이트나 개인정보 처리방침 페이지는 찾지 못했으며, Steam 페이지가 공식 게재 정보입니다.',
       },
       gettingStarted: {
         id: 'getting-started',

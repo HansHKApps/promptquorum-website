@@ -73,9 +73,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Undo keeps up to ten runs for up to seven days; concurrency uses timestamp-based conflict detection',
           'Optional semantic search over notes (RAG) requires Joplin 3.7+',
         ],
-        callouts: [
-          { type: 'note', text: 'This review is the deep-dive companion to Joplin AI Agent\'s entry in the [Local LLM Software Directory](/directory) — see that page for how it compares at a glance to dozens of other local-AI-capable tools.' },
-        ],
       },
       overview: {
         id: 'what-is-joplin-ai-agent',
@@ -313,9 +310,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Jede Notiz- oder Dateiänderung wird vor der Anwendung als temporäres Diff-Dokument zur Prüfung angezeigt — nichts wird stillschweigend geschrieben',
           'Rückgängig-Funktion behält bis zu zehn Durchläufe für bis zu sieben Tage; Konfliktkontrolle basiert auf Zeitstempeln',
           'Optionale semantische Suche über Notizen (RAG) erfordert Joplin 3.7+',
-        ],
-        callouts: [
-          { type: 'note', text: 'Diese Review ist das Vertiefungsstück zum Eintrag von Joplin AI Agent im [Local LLM Software Directory](/de/directory) — dort sehen Sie auf einen Blick, wie es sich mit Dutzenden anderer lokal-KI-fähiger Tools vergleicht.' },
         ],
       },
       overview: {
@@ -555,9 +549,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'L\'annulation conserve jusqu\'à dix exécutions pendant sept jours ; la gestion de la concurrence repose sur une détection de conflit horodatée',
           'La recherche sémantique optionnelle sur les notes (RAG) nécessite Joplin 3.7+',
         ],
-        callouts: [
-          { type: 'note', text: 'Cette revue est le complément approfondi de la fiche de Joplin AI Agent dans le [Local LLM Software Directory](/fr/directory) — consultez cette page pour voir en un coup d\'œil comment il se compare à des dizaines d\'autres outils IA locaux.' },
-        ],
       },
       overview: {
         id: 'what-is-joplin-ai-agent',
@@ -795,9 +786,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ノートやファイルへの変更はすべて適用前に一時的な差分ドキュメントとして表示され、レビューされる — 無断で書き込まれることはない',
           '取り消しは最大10回分の実行を最大7日間保持。並行制御はタイムスタンプベースの競合検出を使用',
           'ノートに対するオプションのセマンティック検索（RAG）にはJoplin 3.7以上が必要',
-        ],
-        callouts: [
-          { type: 'note', text: 'このレビューは[ローカルLLMソフトウェアディレクトリ](/ja/directory)にあるJoplin AI Agentの掲載内容を掘り下げた記事です — 他の数十のローカルAI対応ツールとの比較は同ページを参照してください。' },
         ],
       },
       overview: {
@@ -1037,9 +1025,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '撤销功能最多保留十次运行、最长七天；并发处理采用基于时间戳的冲突检测',
           '对笔记的可选语义搜索（RAG）需要Joplin 3.7以上',
         ],
-        callouts: [
-          { type: 'note', text: '本评测是[本地LLM软件目录](/zh/directory)中Joplin AI Agent条目的深度补充——该页面可让您一目了然地比较它与数十款其他支持本地AI的工具。' },
-        ],
       },
       overview: {
         id: 'what-is-joplin-ai-agent',
@@ -1277,9 +1262,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Cada cambio en una nota o archivo se muestra como un documento diff temporal para revisión antes de aplicarse: nada se escribe en silencio',
           'Deshacer conserva hasta diez ejecuciones durante un máximo de siete días; la concurrencia usa detección de conflictos basada en marcas de tiempo',
           'La búsqueda semántica opcional sobre notas (RAG) requiere Joplin 3.7+',
-        ],
-        callouts: [
-          { type: 'note', text: 'Esta reseña es el complemento en profundidad de la entrada de Joplin AI Agent en el [Directorio de Software LLM Local](/es/directory): consulta esa página para ver de un vistazo cómo se compara con decenas de otras herramientas con capacidad de IA local.' },
         ],
       },
       overview: {
@@ -1519,9 +1501,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'O desfazer mantém até dez execuções por até sete dias; a concorrência usa detecção de conflitos baseada em carimbo de data/hora',
           'A pesquisa semântica opcional sobre notas (RAG) requer Joplin 3.7+',
         ],
-        callouts: [
-          { type: 'note', text: 'Esta análise é o complemento aprofundado da entrada do Joplin AI Agent no [Diretório de Software LLM Local](/pt/directory) — veja essa página para comparar rapidamente com dezenas de outras ferramentas com capacidade de IA local.' },
-        ],
       },
       overview: {
         id: 'what-is-joplin-ai-agent',
@@ -1760,9 +1739,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يحتفظ التراجع بما يصل إلى عشر عمليات تشغيل لمدة تصل إلى سبعة أيام؛ ويعتمد التزامن على كشف التعارض بالطابع الزمني',
           'يتطلب البحث الدلالي الاختياري في الملاحظات (RAG) إصدار Joplin 3.7 أو أحدث',
         ],
-        callouts: [
-          { type: 'note', text: 'هذه المراجعة هي المكمّل المتعمّق لمدخل Joplin AI Agent في [دليل برمجيات نماذج اللغة المحلية](/ar/directory) — راجع تلك الصفحة لمقارنة سريعة مع عشرات الأدوات الأخرى القادرة على الذكاء الاصطناعي المحلي.' },
-        ],
       },
       overview: {
         id: 'what-is-joplin-ai-agent',
@@ -2000,9 +1976,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '노트나 파일의 모든 변경 사항은 적용 전 임시 diff 문서로 표시되어 검토됨 — 아무것도 조용히 기록되지 않음',
           '실행 취소는 최대 10회 실행을 최대 7일간 보관; 동시성 처리는 타임스탬프 기반 충돌 감지 사용',
           '노트에 대한 선택적 시맨틱 검색(RAG)에는 Joplin 3.7 이상이 필요',
-        ],
-        callouts: [
-          { type: 'note', text: '이 리뷰는 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)에 있는 Joplin AI Agent 항목을 심층적으로 다룬 보완 자료입니다 — 수십 개의 다른 로컬 AI 지원 도구와 한눈에 비교하려면 해당 페이지를 참고하세요.' },
         ],
       },
       overview: {

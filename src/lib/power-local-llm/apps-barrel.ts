@@ -82,6 +82,7 @@ import { app as app_txtai } from './apps/txtai'
 import { app as app_langchain } from './apps/langchain'
 import { app as app_crewai } from './apps/crewai'
 import { app as app_autogen } from './apps/autogen'
+import { app as app_microsoft_agent_framework } from './apps/microsoft-agent-framework'
 import { app as app_semantic_kernel } from './apps/semantic-kernel'
 import { app as app_langgraph } from './apps/langgraph'
 import { app as app_letta } from './apps/letta'
@@ -325,6 +326,7 @@ export const localAiApps: ToolRecord[] = [
   app_langchain,
   app_crewai,
   app_autogen,
+  app_microsoft_agent_framework,
   app_semantic_kernel,
   app_langgraph,
   app_letta,

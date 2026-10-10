@@ -136,7 +136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Where to get it': '[GitHub](https://github.com/software-mansion-labs/private-mind) (MIT)',
           },
         ],
-        note: 'This page is companion material to the app\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Current version as verified on 3 October 2026: 1.3.0, published on the project\'s [releases page](https://github.com/software-mansion-labs/private-mind/releases) on 17 September 2026.',
+        note: 'This page is companion material to the app\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory). Current version as verified on 3 October 2026: 1.3.0, published on the project\'s [releases page](https://github.com/software-mansion-labs/private-mind/releases) on 17 September 2026.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -554,7 +554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Bezugsquelle': '[GitHub](https://github.com/software-mansion-labs/private-mind) (MIT)',
           },
         ],
-        note: 'Diese Seite ist Begleitmaterial zum Eintrag der App im [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Aktuelle Version, geprüft am 3. Oktober 2026: 1.3.0, veröffentlicht am 17. September 2026 auf der [Releases-Seite](https://github.com/software-mansion-labs/private-mind/releases) des Projekts.',
+        note: 'Diese Seite ist Begleitmaterial zum Eintrag der App im [Local LLM Software Directory](https://www.promptquorum.com/directory). Aktuelle Version, geprüft am 3. Oktober 2026: 1.3.0, veröffentlicht am 17. September 2026 auf der [Releases-Seite](https://github.com/software-mansion-labs/private-mind/releases) des Projekts.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -940,7 +940,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Dónde obtenerla': '[GitHub](https://github.com/software-mansion-labs/private-mind) (MIT)',
           },
         ],
-        note: 'Esta página es material complementario de la entrada de la app en el [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versión actual verificada el 3 de octubre de 2026: 1.3.0, publicada en la [página de versiones](https://github.com/software-mansion-labs/private-mind/releases) del proyecto el 17 de septiembre de 2026.',
+        note: 'Esta página es material complementario de la entrada de la app en el [Local LLM Software Directory](https://www.promptquorum.com/directory). Versión actual verificada el 3 de octubre de 2026: 1.3.0, publicada en la [página de versiones](https://github.com/software-mansion-labs/private-mind/releases) del proyecto el 17 de septiembre de 2026.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1326,7 +1326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Où la trouver': '[GitHub](https://github.com/software-mansion-labs/private-mind) (MIT)',
           },
         ],
-        note: 'Cette page est un complément à l\'entrée de l\'application dans le [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Version actuelle vérifiée le 3 octobre 2026 : 1.3.0, publiée sur la [page des versions](https://github.com/software-mansion-labs/private-mind/releases) du projet le 17 septembre 2026.',
+        note: 'Cette page est un complément à l\'entrée de l\'application dans le [Local LLM Software Directory](https://www.promptquorum.com/directory). Version actuelle vérifiée le 3 octobre 2026 : 1.3.0, publiée sur la [page des versions](https://github.com/software-mansion-labs/private-mind/releases) du projet le 17 septembre 2026.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1712,7 +1712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '入手先': '[GitHub](https://github.com/software-mansion-labs/private-mind)(MIT)',
           },
         ],
-        note: 'このページは、[Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)にある本アプリの項目の補足資料です。2026年10月3日に確認した現行バージョンは1.3.0で、プロジェクトの[リリースページ](https://github.com/software-mansion-labs/private-mind/releases)に2026年9月17日に公開されています。',
+        note: 'このページは、[Local LLM Software Directory](https://www.promptquorum.com/directory)にある本アプリの項目の補足資料です。2026年10月3日に確認した現行バージョンは1.3.0で、プロジェクトの[リリースページ](https://github.com/software-mansion-labs/private-mind/releases)に2026年9月17日に公開されています。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2098,7 +2098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Onde obter': '[GitHub](https://github.com/software-mansion-labs/private-mind) (MIT)',
           },
         ],
-        note: 'Esta página é material complementar à entrada do app no [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). Versão atual conforme verificada em 3 de outubro de 2026: 1.3.0, publicada na [página de releases](https://github.com/software-mansion-labs/private-mind/releases) do projeto em 17 de setembro de 2026.',
+        note: 'Esta página é material complementar à entrada do app no [Local LLM Software Directory](https://www.promptquorum.com/directory). Versão atual conforme verificada em 3 de outubro de 2026: 1.3.0, publicada na [página de releases](https://github.com/software-mansion-labs/private-mind/releases) do projeto em 17 de setembro de 2026.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2484,7 +2484,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'مكان الحصول عليه': '[GitHub](https://github.com/software-mansion-labs/private-mind) (MIT)',
           },
         ],
-        note: 'هذه الصفحة مادة مرافقة لإدخال التطبيق في [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory). الإصدار الحالي بحسب ما جرى التحقق منه في 3 أكتوبر 2026: 1.3.0، نُشر على [صفحة إصدارات](https://github.com/software-mansion-labs/private-mind/releases) المشروع في 17 سبتمبر 2026.',
+        note: 'هذه الصفحة مادة مرافقة لإدخال التطبيق في [Local LLM Software Directory](https://www.promptquorum.com/directory). الإصدار الحالي بحسب ما جرى التحقق منه في 3 أكتوبر 2026: 1.3.0، نُشر على [صفحة إصدارات](https://github.com/software-mansion-labs/private-mind/releases) المشروع في 17 سبتمبر 2026.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2870,7 +2870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '获取途径': '[GitHub](https://github.com/software-mansion-labs/private-mind)(MIT)',
           },
         ],
-        note: '本页是该应用在 [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory) 中词条的配套资料。据 2026 年 10 月 3 日核实的当前版本:1.3.0,已于 2026 年 9 月 17 日发布在项目的[发布页面](https://github.com/software-mansion-labs/private-mind/releases)。',
+        note: '本页是该应用在 [Local LLM Software Directory](https://www.promptquorum.com/directory) 中词条的配套资料。据 2026 年 10 月 3 日核实的当前版本:1.3.0,已于 2026 年 9 月 17 日发布在项目的[发布页面](https://github.com/software-mansion-labs/private-mind/releases)。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -3256,7 +3256,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '받는 곳': '[GitHub](https://github.com/software-mansion-labs/private-mind) (MIT)',
           },
         ],
-        note: '이 페이지는 [Local LLM Software Directory](https://www.promptquorum.com/power-local-llm/local-llm-software-directory)에 있는 이 앱 항목의 보조 자료입니다. 2026년 10월 3일에 확인한 현재 버전은 1.3.0이며, 프로젝트의 [릴리스 페이지](https://github.com/software-mansion-labs/private-mind/releases)에 2026년 9월 17일 게시되었습니다.',
+        note: '이 페이지는 [Local LLM Software Directory](https://www.promptquorum.com/directory)에 있는 이 앱 항목의 보조 자료입니다. 2026년 10월 3일에 확인한 현재 버전은 1.3.0이며, 프로젝트의 [릴리스 페이지](https://github.com/software-mansion-labs/private-mind/releases)에 2026년 9월 17일 게시되었습니다.',
       },
       gettingStarted: {
         id: 'getting-started',

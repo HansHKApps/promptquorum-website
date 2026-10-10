@@ -359,6 +359,11 @@
     "urlSlug": "autogen-review",
     "url": "/power-local-llm/autogen-review"
   },
+  "microsoft-agent-framework": {
+    "cluster": "power-local-llm",
+    "urlSlug": "microsoft-agent-framework-review",
+    "url": "/power-local-llm/microsoft-agent-framework-review"
+  },
   "semantic-kernel": {
     "cluster": "power-local-llm",
     "urlSlug": "semantic-kernel-review",

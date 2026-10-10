@@ -101,7 +101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Get Oscilla',
         content: [
           '**Oscilla is distributed through the Apple App Store only.** The download is 46.7 MB; models are downloaded separately inside the app.',
-          'This review is a companion to PromptQuorum\'s [Local LLM Software Directory](/power-local-llm/local-llm-software-directory), which lists Oscilla alongside other on-device and local AI tools.',
+          'This review is a companion to PromptQuorum\'s [Local LLM Software Directory](/directory), which lists Oscilla alongside other on-device and local AI tools.',
         ],
         columns: ['Channel', 'Get It'],
         rows: [
@@ -347,7 +347,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Private LLM Review](/power-local-llm/private-llm-review) — a paid on-device model app for iOS and Mac.',
           '[Enclave AI Review](/power-local-llm/enclave-ai-review-2026) — a paid iOS on-device assistant with voice.',
           '[PocketPal AI Review](/power-local-llm/pocketpal-ai-review) — the free, open-source GGUF chat client.',
-          '[The Complete Local LLM Software Directory](/power-local-llm/local-llm-software-directory) — a broader directory of local-LLM tools across platforms.',
+          '[The Complete Local LLM Software Directory](/directory) — a broader directory of local-LLM tools across platforms.',
         ],
       },
     },
@@ -447,7 +447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Oscilla herunterladen',
         content: [
           '**Oscilla wird nur über den Apple App Store vertrieben.** Der Download umfasst 46,7 MB; Modelle werden separat in der App heruntergeladen.',
-          'Diese Rezension ist ein Begleitartikel zum [Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory) von PromptQuorum, das Oscilla neben anderen On-Device- und lokalen KI-Tools listet.',
+          'Diese Rezension ist ein Begleitartikel zum [Verzeichnis lokaler LLM-Software](/de/directory) von PromptQuorum, das Oscilla neben anderen On-Device- und lokalen KI-Tools listet.',
         ],
         columns: ['Kanal', 'Download'],
         rows: [
@@ -693,7 +693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Private-LLM-Rezension](/de/power-local-llm/private-llm-review) — eine kostenpflichtige On-Device-Modell-App für iOS und Mac.',
           '[Enclave-AI-Rezension](/de/power-local-llm/enclave-ai-review-2026) — ein kostenpflichtiger iOS-On-Device-Assistent mit Sprache.',
           '[PocketPal-AI-Rezension](/de/power-local-llm/pocketpal-ai-review) — der kostenlose, quelloffene GGUF-Chat-Client.',
-          '[Das vollständige Verzeichnis lokaler LLM-Software](/de/power-local-llm/local-llm-software-directory) — ein breiteres Verzeichnis lokaler LLM-Tools über alle Plattformen hinweg.',
+          '[Das vollständige Verzeichnis lokaler LLM-Software](/de/directory) — ein breiteres Verzeichnis lokaler LLM-Tools über alle Plattformen hinweg.',
         ],
       },
     },
@@ -793,7 +793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Obtenir Oscilla',
         content: [
           '**Oscilla n\'est distribuée que par l\'Apple App Store.** Le téléchargement pèse 46.7 Mo ; les modèles se téléchargent séparément dans l\'application.',
-          'Cet avis est un complément au [répertoire des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) de PromptQuorum, qui recense Oscilla aux côtés d\'autres outils d\'IA locale et embarquée.',
+          'Cet avis est un complément au [répertoire des logiciels LLM locaux](/fr/directory) de PromptQuorum, qui recense Oscilla aux côtés d\'autres outils d\'IA locale et embarquée.',
         ],
         columns: ['Canal', 'Obtenir'],
         rows: [
@@ -1039,7 +1039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Avis Private LLM](/fr/power-local-llm/private-llm-review) — une application payante de modèles sur l\'appareil pour iOS et Mac.',
           '[Avis Enclave AI](/fr/power-local-llm/enclave-ai-review-2026) — un assistant payant sur l\'appareil pour iOS, avec voix.',
           '[Avis PocketPal AI](/fr/power-local-llm/pocketpal-ai-review) — le client de chat GGUF gratuit et open source.',
-          '[Le répertoire complet des logiciels LLM locaux](/fr/power-local-llm/local-llm-software-directory) — un répertoire plus large d\'outils LLM locaux multiplateformes.',
+          '[Le répertoire complet des logiciels LLM locaux](/fr/directory) — un répertoire plus large d\'outils LLM locaux multiplateformes.',
         ],
       },
     },
@@ -1139,7 +1139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Oscillaを入手する',
         content: [
           '**OscillaはApple App Storeでのみ配布されています。** ダウンロードサイズは46.7 MBで、モデルはアプリ内で別途ダウンロードします。',
-          '本レビューは、PromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory)を補完するものです。このディレクトリはOscillaを他のオンデバイスAIやローカルAIツールと並べて掲載しています。',
+          '本レビューは、PromptQuorumの[ローカルLLMソフトウェアディレクトリ](/ja/directory)を補完するものです。このディレクトリはOscillaを他のオンデバイスAIやローカルAIツールと並べて掲載しています。',
         ],
         columns: ['入手経路', '入手方法'],
         rows: [
@@ -1385,7 +1385,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Private LLMレビュー](/ja/power-local-llm/private-llm-review) — iOSとMac向けの有料のオンデバイスモデルアプリ。',
           '[Enclave AIレビュー](/ja/power-local-llm/enclave-ai-review-2026) — 音声に対応する、iOS向けの有料オンデバイスアシスタント。',
           '[PocketPal AIレビュー](/ja/power-local-llm/pocketpal-ai-review) — 無料のオープンソースGGUFチャットクライアント。',
-          '[完全なローカルLLMソフトウェアディレクトリ](/ja/power-local-llm/local-llm-software-directory) — プラットフォームを横断するローカルLLMツールのより広範なディレクトリ。',
+          '[完全なローカルLLMソフトウェアディレクトリ](/ja/directory) — プラットフォームを横断するローカルLLMツールのより広範なディレクトリ。',
         ],
       },
     },
@@ -1485,7 +1485,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '获取Oscilla',
         content: [
           '**Oscilla仅通过Apple App Store发布。** 应用大小为46.7 MB；模型需在应用内另行下载。',
-          '本评测是PromptQuorum[本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory)的配套文章，该目录将Oscilla与其他设备端和本地AI工具一并列出。',
+          '本评测是PromptQuorum[本地LLM软件目录](/zh/directory)的配套文章，该目录将Oscilla与其他设备端和本地AI工具一并列出。',
         ],
         columns: ['渠道', '获取方式'],
         rows: [
@@ -1731,7 +1731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Private LLM评测](/zh/power-local-llm/private-llm-review) — 适用于iOS和Mac的付费设备端模型应用。',
           '[Enclave AI评测](/zh/power-local-llm/enclave-ai-review-2026) — 支持语音的付费iOS设备端助手。',
           '[PocketPal AI评测](/zh/power-local-llm/pocketpal-ai-review) — 免费、开源的GGUF聊天客户端。',
-          '[完整本地LLM软件目录](/zh/power-local-llm/local-llm-software-directory) — 涵盖多平台本地LLM工具的更全面目录。',
+          '[完整本地LLM软件目录](/zh/directory) — 涵盖多平台本地LLM工具的更全面目录。',
         ],
       },
     },
@@ -1831,7 +1831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cómo conseguir Oscilla',
         content: [
           '**Oscilla se distribuye únicamente a través de la App Store de Apple.** La descarga ocupa 46.7 MB; los modelos se descargan por separado dentro de la app.',
-          'Esta reseña complementa el [directorio de software LLM local](/es/power-local-llm/local-llm-software-directory) de PromptQuorum, que incluye Oscilla junto a otras herramientas de IA local y en el dispositivo.',
+          'Esta reseña complementa el [directorio de software LLM local](/es/directory) de PromptQuorum, que incluye Oscilla junto a otras herramientas de IA local y en el dispositivo.',
         ],
         columns: ['Canal', 'Cómo conseguirla'],
         rows: [
@@ -2077,7 +2077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Reseña de Private LLM](/es/power-local-llm/private-llm-review) — una app de pago de modelos en el dispositivo para iOS y Mac.',
           '[Reseña de Enclave AI](/es/power-local-llm/enclave-ai-review-2026) — un asistente de pago en el dispositivo para iOS, con voz.',
           '[Reseña de PocketPal AI](/es/power-local-llm/pocketpal-ai-review) — el cliente de chat GGUF gratuito y de código abierto.',
-          '[El directorio completo de software LLM local](/es/power-local-llm/local-llm-software-directory) — un directorio más amplio de herramientas LLM locales en todas las plataformas.',
+          '[El directorio completo de software LLM local](/es/directory) — un directorio más amplio de herramientas LLM locales en todas las plataformas.',
         ],
       },
     },
@@ -2177,7 +2177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Como obter o Oscilla',
         content: [
           '**O Oscilla é distribuído somente pela Apple App Store.** O download tem 46,7 MB; os modelos são baixados separadamente dentro do aplicativo.',
-          'Esta análise complementa o [diretório de software de LLM local](/pt/power-local-llm/local-llm-software-directory) da PromptQuorum, que lista o Oscilla ao lado de outras ferramentas de IA local e no dispositivo.',
+          'Esta análise complementa o [diretório de software de LLM local](/pt/directory) da PromptQuorum, que lista o Oscilla ao lado de outras ferramentas de IA local e no dispositivo.',
         ],
         columns: ['Canal', 'Como obter'],
         rows: [
@@ -2423,7 +2423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Análise do Private LLM](/pt/power-local-llm/private-llm-review) — um aplicativo pago de modelos no dispositivo para iOS e Mac.',
           '[Análise do Enclave AI](/pt/power-local-llm/enclave-ai-review-2026) — um assistente pago no dispositivo para iOS, com voz.',
           '[Análise do PocketPal AI](/pt/power-local-llm/pocketpal-ai-review) — o cliente de chat GGUF gratuito e de código aberto.',
-          '[O diretório completo de software de LLM local](/pt/power-local-llm/local-llm-software-directory) — um diretório mais amplo de ferramentas de LLM local em várias plataformas.',
+          '[O diretório completo de software de LLM local](/pt/directory) — um diretório mais amplo de ferramentas de LLM local em várias plataformas.',
         ],
       },
     },
@@ -2523,7 +2523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'كيفية الحصول على Oscilla',
         content: [
           '**يُوزَّع Oscilla عبر متجر Apple App Store فقط.** حجم التنزيل 46.7 MB؛ وتُنزَّل النماذج بصورة منفصلة داخل التطبيق.',
-          'تكمّل هذه المراجعة [دليل برمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) من PromptQuorum، الذي يدرج Oscilla إلى جانب أدوات ذكاء اصطناعي أخرى تعمل على الجهاز وأدوات محلية.',
+          'تكمّل هذه المراجعة [دليل برمجيات LLM المحلية](/ar/directory) من PromptQuorum، الذي يدرج Oscilla إلى جانب أدوات ذكاء اصطناعي أخرى تعمل على الجهاز وأدوات محلية.',
         ],
         columns: ['القناة', 'كيفية الحصول عليه'],
         rows: [
@@ -2769,7 +2769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[مراجعة Private LLM](/ar/power-local-llm/private-llm-review) — تطبيق نماذج مدفوع يعمل على الجهاز لنظامي iOS وماك.',
           '[مراجعة Enclave AI](/ar/power-local-llm/enclave-ai-review-2026) — مساعد مدفوع يعمل على الجهاز لنظام iOS مع الصوت.',
           '[مراجعة PocketPal AI](/ar/power-local-llm/pocketpal-ai-review) — عميل دردشة GGUF المجاني ومفتوح المصدر.',
-          '[الدليل الكامل لبرمجيات LLM المحلية](/ar/power-local-llm/local-llm-software-directory) — دليل أوسع لأدوات LLM المحلية عبر المنصات.',
+          '[الدليل الكامل لبرمجيات LLM المحلية](/ar/directory) — دليل أوسع لأدوات LLM المحلية عبر المنصات.',
         ],
       },
     },
@@ -2869,7 +2869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Oscilla 받기',
         content: [
           '**Oscilla는 Apple App Store로만 배포됩니다.** 앱 용량은 46.7 MB이며, 모델은 앱 안에서 별도로 내려받습니다.',
-          '이 리뷰는 Oscilla를 다른 온디바이스 및 로컬 AI 도구와 함께 소개하는 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory)와 짝을 이루는 콘텐츠입니다.',
+          '이 리뷰는 Oscilla를 다른 온디바이스 및 로컬 AI 도구와 함께 소개하는 PromptQuorum의 [로컬 LLM 소프트웨어 디렉터리](/ko/directory)와 짝을 이루는 콘텐츠입니다.',
         ],
         columns: ['경로', '받는 방법'],
         rows: [
@@ -3115,7 +3115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[Private LLM 리뷰](/ko/power-local-llm/private-llm-review) — iOS와 Mac용 유료 온디바이스 모델 앱.',
           '[Enclave AI 리뷰](/ko/power-local-llm/enclave-ai-review-2026) — 음성을 지원하는 유료 iOS 온디바이스 어시스턴트.',
           '[PocketPal AI 리뷰](/ko/power-local-llm/pocketpal-ai-review) — 무료 오픈소스 GGUF 채팅 클라이언트.',
-          '[완전한 로컬 LLM 소프트웨어 디렉터리](/ko/power-local-llm/local-llm-software-directory) — 플랫폼 전반의 로컬 LLM 도구에 대한 더 광범위한 디렉터리.',
+          '[완전한 로컬 LLM 소프트웨어 디렉터리](/ko/directory) — 플랫폼 전반의 로컬 LLM 도구에 대한 더 광범위한 디렉터리.',
         ],
       },
     },
