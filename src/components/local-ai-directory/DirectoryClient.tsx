@@ -147,6 +147,36 @@ export function DirectoryClient({ apps, lang, ui }: Props) {
     const fromUrl = new URLSearchParams(window.location.search).get('tool')
     return fromUrl && apps.some((a) => a.slug === fromUrl) ? fromUrl : null
   })
+  // Client-side navigation (a <Link> from a review page, the About page, ...) renders this component
+  // BEFORE the router has updated window.location, so the lazy initialisers above read the PREVIOUS
+  // URL and miss every deep-link param — the link "worked" but opened the bare directory. Effects run
+  // after the URL has committed, so re-read it once on mount and apply whatever the initialisers
+  // missed. Direct loads are unaffected (the initialisers already matched), and a value the viewer
+  // already chose is never overridden.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    let scroll = false
+
+    const tool = params.get('tool')
+    if (tool && apps.some((a) => a.slug === tool)) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setOpenSlug((cur) => cur ?? tool)
+    }
+    const wantParam = params.get('want')
+    if (wantParam && (WANT_ORDER as readonly string[]).includes(wantParam)) {
+      setWant((cur) => cur ?? wantParam)
+      scroll = true
+    }
+    const fromUrl = filtersFromUrl()
+    if (fromUrl.category.size || fromUrl.platforms.size || fromUrl.price.size || fromUrl.install.size) {
+      setFilters((cur) => (cur.category.size || cur.platforms.size || cur.price.size || cur.install.size ? cur : fromUrl))
+      scroll = true
+    }
+    if (params.get('hw') === '1') setHwWidgetExpanded(true)
+    if (scroll) document.getElementById('directory-toolbar')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    // Mount-only on purpose: `apps` is a static prop and the filters/state are read via updaters.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
   // Filter panel collapsed by default (page-redesign-v2.md §2: "sticky
   // filter bar ... panel (collapsed by default)").
   const [filtersOpen, setFiltersOpen] = useState(false)

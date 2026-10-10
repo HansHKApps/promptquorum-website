@@ -8,7 +8,7 @@
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
-import { linkCompetitorsInArticleData } from './competitor-links'
+import { competitorToolSlugs, linkCompetitorsInArticleData } from './competitor-links'
 import { buildDirectoryFunnel, getReviewedTool, type DirectoryFunnelData, type ReviewCluster } from './directory-funnel'
 
 export function reviewPageProps<T extends Partial<Record<Language, LLMArticle>>>(
@@ -17,9 +17,12 @@ export function reviewPageProps<T extends Partial<Record<Language, LLMArticle>>>
   lang: Language,
   narrowed: { articleData: T; availableLangs: string[] },
 ): { articleData: T; availableLangs: string[]; directoryFunnel: DirectoryFunnelData | undefined } {
-  const directoryFunnel = buildDirectoryFunnel(cluster, urlSlug, lang)
-  if (!directoryFunnel) return { ...narrowed, directoryFunnel: undefined }
   const selfSlug = getReviewedTool(cluster, urlSlug)?.slug ?? null
+  // The block's "similar tools" come from the page's own competitor table (rendered locale block,
+  // `en` as the fallback the renderers also use), so block and table cannot disagree.
+  const block = narrowed.articleData[lang] ?? narrowed.articleData.en
+  const directoryFunnel = buildDirectoryFunnel(cluster, urlSlug, lang, competitorToolSlugs(block, selfSlug))
+  if (!directoryFunnel) return { ...narrowed, directoryFunnel: undefined }
   return {
     articleData: linkCompetitorsInArticleData(narrowed.articleData, lang, selfSlug),
     availableLangs: narrowed.availableLangs,

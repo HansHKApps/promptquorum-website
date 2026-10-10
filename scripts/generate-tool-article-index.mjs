@@ -184,6 +184,24 @@ async function main() {
   const { llmContent } = await jiti.import('@/lib/local-llms/articles-barrel')
   const contentByCluster = { 'local-llms': llmContent, 'power-local-llm': powerLLMContent }
 
+  // Article files are keyed by file name, but the public URL slug can differ (e.g. the file
+  // `cherry-studio-ai-desktop-client-2026` is served at `/local-llms/cherry-studio-ai-desktop-client`;
+  // the file-name URL only exists as a redirect). Link the canonical URL, not the redirect.
+  const { LLM_SLUG_TO_KEY } = await jiti.import('@/lib/local-llms/slugs')
+  const { POWER_LLM_SLUG_TO_KEY } = await jiti.import('@/lib/power-local-llm/slugs')
+  const urlSlugByKey = {
+    'local-llms': new Map(),
+    'power-local-llm': new Map(),
+  }
+  for (const [cluster, map] of [['local-llms', LLM_SLUG_TO_KEY], ['power-local-llm', POWER_LLM_SLUG_TO_KEY]]) {
+    for (const [urlSlug, key] of Object.entries(map)) {
+      const current = urlSlugByKey[cluster].get(key)
+      // Prefer an alias that differs from the file key (that is the renamed, canonical URL).
+      if (current === undefined || (current === key && urlSlug !== key)) urlSlugByKey[cluster].set(key, urlSlug)
+    }
+  }
+  const urlSlugFor = (cluster, key) => urlSlugByKey[cluster].get(key) ?? key
+
   const candidates = []
   for (const cluster of CLUSTERS) {
     const contentMap = contentByCluster[cluster.name]
@@ -216,7 +234,7 @@ async function main() {
         cluster: c.cluster,
         slug: c.slug,
         title: c.title,
-        url: enUrl(c.cluster, c.slug),
+        url: enUrl(c.cluster, urlSlugFor(c.cluster, c.slug)),
         dateModified: c.dateModified,
         tier: classifyTier(pattern, c.en),
       }))

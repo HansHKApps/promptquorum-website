@@ -642,12 +642,19 @@ interface LightboxImage {
 // Data is generated at build time by scripts/generate-tool-article-index.mjs
 // (src/generated/tool-article-index.json) — matched articles are always the
 // EN edition (first-pass scope, see TASK-related-articles-block.md Step 5).
-function RelatedArticlesDisclosure({ toolName, lang }: { toolName: string; lang: Language }) {
+function RelatedArticlesDisclosure({ toolName, lang, pageSlug }: { toolName: string; lang: Language; pageSlug?: string }) {
   const entry = (toolArticleIndex as ToolArticleIndex)[toolName]
   if (!entry || entry.articles.length === 0) return null
 
-  const about = entry.articles.filter((a) => a.tier === 'about')
-  const mentioned = entry.articles.filter((a) => a.tier === 'mentioned')
+  // A page must never list itself ("Return Editor Review" under PrivateGPT on the Return Editor
+  // review). The index stores canonical, unprefixed URLs, so compare on the URL.
+  const ownUrl = pageSlug ? `/power-local-llm/${pageSlug}` : null
+  const articles = ownUrl ? entry.articles.filter((a) => a.url !== ownUrl) : entry.articles
+  const hidden = entry.articles.length - articles.length
+  if (articles.length === 0) return null
+
+  const about = articles.filter((a) => a.tier === 'about')
+  const mentioned = articles.filter((a) => a.tier === 'mentioned')
   const hasAbout = about.length > 0
 
   const summaryTemplate = hasAbout
@@ -699,14 +706,14 @@ function RelatedArticlesDisclosure({ toolName, lang }: { toolName: string; lang:
       )}
       {entry.capped && (
         <p className="mt-1.5 text-xs text-text-secondary italic">
-          {moreTemplate.replace('{count}', String(entry.totalCount - entry.articles.length))}
+          {moreTemplate.replace('{count}', String(entry.totalCount - hidden - articles.length))}
         </p>
       )}
     </details>
   )
 }
 
-function SectionBlock({ section, colors, id, lang, renderLinks, compareData }: { section: LLMSection; colors: { dot: string; badge: string }; id?: string; lang: Language; renderLinks: (text: string) => React.ReactNode; compareData?: CategoryCompareData }) {
+function SectionBlock({ section, colors, id, lang, renderLinks, compareData, pageSlug }: { section: LLMSection; colors: { dot: string; badge: string }; id?: string; lang: Language; renderLinks: (text: string) => React.ReactNode; compareData?: CategoryCompareData; pageSlug?: string }) {
   const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null)
   const tableScrollRef = useRef<HTMLDivElement>(null)
   const [tableIsScrollable, setTableIsScrollable] = useState(false)
@@ -1120,7 +1127,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks, compareData }: {
                     )
                   })}
                 </dl>
-                <RelatedArticlesDisclosure toolName={plainName} lang={lang} />
+                <RelatedArticlesDisclosure toolName={plainName} lang={lang} pageSlug={pageSlug} />
               </div>
             )
           })}
@@ -1748,7 +1755,7 @@ function PowerLocalLLMPostContent({ slug, lang, ui, articleData, availableLangs,
                 return null
               }
               const sectionEl = (
-                <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} renderLinks={renderLinks} compareData={compareData} />
+                <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} renderLinks={renderLinks} compareData={compareData} pageSlug={slug} />
               )
               if (directoryFunnel && key === 'relatedReading') {
                 return (

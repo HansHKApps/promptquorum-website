@@ -132,7 +132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Where to get it': 'Not offered, per the listing',
           },
         ],
-        note: 'This page is companion material to the app\'s entry in the [Local LLM Software Directory](https://www.promptquorum.com/directory). No version number is shown in the listing text PromptQuorum could read, so none is stated here; check the Play listing for the build available when you read this.',
+        note: 'No version number is shown in the listing text PromptQuorum could read, so none is stated here; check the Play listing for the build available when you read this.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -498,7 +498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Bezugsquelle': 'Laut Eintrag nicht angeboten',
           },
         ],
-        note: 'Diese Seite ist Begleitmaterial zum Eintrag der App im [Local LLM Software Directory](https://www.promptquorum.com/directory). Im Eintragstext, den PromptQuorum lesen konnte, ist keine Versionsnummer angegeben, daher wird hier keine genannt; den zum Zeitpunkt Ihres Besuchs verfügbaren Build finden Sie im Play-Eintrag.',
+        note: 'Im Eintragstext, den PromptQuorum lesen konnte, ist keine Versionsnummer angegeben, daher wird hier keine genannt; den zum Zeitpunkt Ihres Besuchs verfügbaren Build finden Sie im Play-Eintrag.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -831,7 +831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Dónde obtenerla': 'No disponible, según la ficha',
           },
         ],
-        note: 'Esta página es material complementario de la entrada de la app en el [Local LLM Software Directory](https://www.promptquorum.com/directory). En el texto de la ficha que PromptQuorum pudo leer no aparece ningún número de versión, por lo que aquí no se indica ninguno; consulta la página de Play para ver la compilación disponible cuando leas esto.',
+        note: 'En el texto de la ficha que PromptQuorum pudo leer no aparece ningún número de versión, por lo que aquí no se indica ninguno; consulta la página de Play para ver la compilación disponible cuando leas esto.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1164,7 +1164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Où la trouver': 'Non proposée, selon la fiche',
           },
         ],
-        note: 'Cette page est un complément à l\'entrée de l\'application dans le [Local LLM Software Directory](https://www.promptquorum.com/directory). Aucun numéro de version n\'apparaît dans le texte de la fiche que PromptQuorum a pu lire ; il n\'en est donc indiqué aucun ici — consultez la page Play pour la version actuelle.',
+        note: 'Aucun numéro de version n\'apparaît dans le texte de la fiche que PromptQuorum a pu lire ; il n\'en est donc indiqué aucun ici — consultez la page Play pour la version actuelle.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1497,7 +1497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '入手先': '提供なし(掲載情報による)',
           },
         ],
-        note: 'このページは、[Local LLM Software Directory](https://www.promptquorum.com/directory)にある本アプリの項目の補足資料です。PromptQuorumが読み取れた掲載情報のテキストにはバージョン番号が示されていないため、ここでも記載していません。お読みの時点で入手できるビルドは、Playの掲載情報で確認してください。',
+        note: 'PromptQuorumが読み取れた掲載情報のテキストにはバージョン番号が示されていないため、ここでも記載していません。お読みの時点で入手できるビルドは、Playの掲載情報で確認してください。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -1830,7 +1830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Onde obter': 'Não oferecido, segundo a ficha',
           },
         ],
-        note: 'Esta página é material complementar à entrada do app no [Local LLM Software Directory](https://www.promptquorum.com/directory). O texto da ficha que a PromptQuorum conseguiu ler não mostra número de versão, então nenhum é informado aqui; confira a página do Play para ver a build disponível quando você ler isto.',
+        note: 'O texto da ficha que a PromptQuorum conseguiu ler não mostra número de versão, então nenhum é informado aqui; confira a página do Play para ver a build disponível quando você ler isto.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2163,7 +2163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'مكان الحصول عليه': 'غير متوفر، وفقاً للصفحة',
           },
         ],
-        note: 'هذه الصفحة مادة مرافقة لإدخال التطبيق في [Local LLM Software Directory](https://www.promptquorum.com/directory). لا يظهر رقم إصدار في نص الصفحة الذي استطاعت PromptQuorum قراءته، لذا لا يُذكر هنا أي رقم؛ راجع صفحة Play لمعرفة الإصدار المتاح وقت قراءتك.',
+        note: 'لا يظهر رقم إصدار في نص الصفحة الذي استطاعت PromptQuorum قراءته، لذا لا يُذكر هنا أي رقم؛ راجع صفحة Play لمعرفة الإصدار المتاح وقت قراءتك.',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2496,7 +2496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '获取渠道': '据页面信息,未提供',
           },
         ],
-        note: '本页是该应用在[本地 LLM 软件目录](https://www.promptquorum.com/directory)中条目的配套资料。PromptQuorum 能读取到的页面文字中没有显示版本号,因此本文不作说明;请在 Play 页面查看你阅读本文时可获取的版本。',
+        note: 'PromptQuorum 能读取到的页面文字中没有显示版本号,因此本文不作说明;请在 Play 页面查看你阅读本文时可获取的版本。',
       },
       gettingStarted: {
         id: 'getting-started',
@@ -2829,7 +2829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '받는 곳': '게재 정보 기준 미제공',
           },
         ],
-        note: '이 페이지는 [Local LLM Software Directory](https://www.promptquorum.com/directory)에 있는 이 앱 항목의 보조 자료입니다. PromptQuorum이 읽을 수 있었던 게재 정보 텍스트에는 버전 번호가 없어 여기에도 버전을 적지 않았으니, 이 글을 읽는 시점에 제공되는 빌드는 Play 게재 정보에서 확인하세요.',
+        note: 'PromptQuorum이 읽을 수 있었던 게재 정보 텍스트에는 버전 번호가 없어 여기에도 버전을 적지 않았으니, 이 글을 읽는 시점에 제공되는 빌드는 Play 게재 정보에서 확인하세요.',
       },
       gettingStarted: {
         id: 'getting-started',
