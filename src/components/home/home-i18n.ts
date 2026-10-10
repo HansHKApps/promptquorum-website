@@ -305,9 +305,21 @@ const HOME_UI = {
     pt: 'Idiomas', ar: 'اللغات', ko: '언어',
   },
   statFounderVerified: {
-    en: 'Founder-verified', de: 'Von Gründern bestätigt', fr: 'Vérifié par le fondateur', ja: '開発者確認済み',
-    zh: '创始人已验证', es: 'Verificado por el fundador', pt: 'Verificado pelo fundador',
-    ar: 'موثَّق من المؤسس', ko: '창업자 검증 완료',
+    en: 'Apps verified by their makers', de: 'Von ihren Machern bestätigte Apps',
+    fr: 'Applications vérifiées par leurs créateurs', ja: '開発元が確認したアプリ',
+    zh: '经开发者确认的应用', es: 'Apps verificadas por sus creadores', pt: 'Apps verificados por seus criadores',
+    ar: 'تطبيقات تحقق منها صانعوها', ko: '개발자가 직접 확인한 앱',
+  },
+  statFounderVerifiedDesc: {
+    en: 'The makers confirm the information presented about their apps.',
+    de: 'Die Macher bestätigen die Angaben zu ihren Apps.',
+    fr: 'Les créateurs confirment les informations présentées sur leurs applications.',
+    ja: '開発元が、掲載しているアプリ情報の内容を確認しています。',
+    zh: '开发者已确认本站所展示的应用信息。',
+    es: 'Los creadores confirman la información que mostramos sobre sus apps.',
+    pt: 'Os criadores confirmam as informações apresentadas sobre seus apps.',
+    ar: 'يؤكد صانعو التطبيقات صحة المعلومات المعروضة عن تطبيقاتهم.',
+    ko: '개발자가 앱에 대해 게재된 정보를 직접 확인했습니다.',
   },
   statArticlesPublished: {
     en: 'Articles published', de: 'Veröffentlichte Artikel', fr: 'Articles publiés', ja: '公開記事数',
@@ -315,8 +327,20 @@ const HOME_UI = {
     ko: '게시된 글',
   },
   statHandsOnTests: {
-    en: 'Hands-on tests', de: 'Praxistests', fr: 'Tests pratiques', ja: '実機テスト数', zh: '实测评测数',
-    es: 'Pruebas prácticas', pt: 'Testes práticos', ar: 'اختبارات عملية', ko: '직접 테스트',
+    en: 'Apps tested hands-on', de: 'Apps im Praxistest', fr: 'Applications testées en pratique',
+    ja: '実機でテストしたアプリ', zh: '亲自实测的应用', es: 'Apps probadas en la práctica',
+    pt: 'Apps testados na prática', ar: 'تطبيقات اختبرناها عمليًا', ko: '직접 테스트한 앱',
+  },
+  statHandsOnTestsDesc: {
+    en: 'PromptQuorum has installed and tested the software itself.',
+    de: 'PromptQuorum hat die Software selbst installiert und getestet.',
+    fr: 'PromptQuorum a installé et testé le logiciel lui-même.',
+    ja: 'PromptQuorum が自らソフトウェアをインストールし、テストしました。',
+    zh: 'PromptQuorum 已亲自安装并测试了这些软件。',
+    es: 'PromptQuorum ha instalado y probado el software por sí mismo.',
+    pt: 'O PromptQuorum instalou e testou o software por conta própria.',
+    ar: 'قام PromptQuorum بتثبيت البرنامج واختباره بنفسه.',
+    ko: 'PromptQuorum이 소프트웨어를 직접 설치하고 테스트했습니다.',
   },
   /** Links to /mcp-stats (see that page for the full per-tool breakdown). Label doubles as the pitch that PromptQuorum is queryable by AI assistants, not just browsers. */
   statMcpCalls: {
