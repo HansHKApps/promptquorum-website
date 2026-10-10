@@ -9,6 +9,7 @@ import type { Language } from '@/lib/blog/blogContent'
 import { getLangDir } from '@/lib/i18n/constants'
 import type { McpToolName, UsageSnapshot } from '@/lib/mcp/usage'
 import { t } from './mcp-stats-i18n'
+import { CopyEndpointButton } from './CopyEndpointButton'
 import { NEW_TOOL_COPY, TOOL_GROUPS, TOOL_GROUP_OF, tDocs, toolAsk, type ToolGroup } from './mcp-docs-i18n'
 
 // Title/description of the first eight tools come from mcp-stats-i18n.ts; the
@@ -81,6 +82,7 @@ export function McpStatsContent({ lang, snapshot }: { lang: Language; snapshot: 
         <code dir="ltr" className="inline-flex items-center rounded-lg border border-border bg-surface px-3 py-2 text-xs text-text-secondary">
           https://www.promptquorum.com/api/mcp
         </code>
+        <CopyEndpointButton text="https://www.promptquorum.com/api/mcp" lang={lang} />
       </div>
 
       <h2 className="mt-10 text-lg font-bold text-text-primary">{tDocs('howHeading', lang)}</h2>
