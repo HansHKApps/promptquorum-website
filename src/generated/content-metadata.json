@@ -921,7 +921,7 @@
       "images": []
     },
     "open-webui-review": {
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-10-09",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -6655,7 +6655,7 @@
       "images": [
         {
           "url": "/images/local-llm-software-directory-2026-layer-map-en.svg",
-          "title": "The 7 categories of a local LLM stack: 238 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and Train & Operate."
+          "title": "The 7 categories of a local LLM stack: 239 actively-maintained projects spanning Run & Serve (Ollama, llama.cpp, vLLM), Chat & Assistants (LM Studio, Jan, GPT4All), Code & Development (Cline, LangChain, CrewAI), Knowledge & Retrieval (AnythingLLM, PrivateGPT), Voice & Audio (Whisper.cpp, Piper), Images & Video (Stable Diffusion, ComfyUI), and Train & Operate."
         },
         {
           "url": "/images/local-llm-software-directory-2026-runtimes-comparison-en.svg",
@@ -7656,7 +7656,7 @@
       "images": []
     },
     "enterprise-rag-vector-database-deployment-guide-2026": {
-      "dateModified": "2026-09-03",
+      "dateModified": "2026-10-09",
       "lastFactChecked": null,
       "publishDate": "2026-09-03",
       "hasSections": true,
@@ -8192,7 +8192,7 @@
       "images": []
     },
     "nanobot-review": {
-      "dateModified": "2026-09-20",
+      "dateModified": "2026-10-10",
       "lastFactChecked": null,
       "publishDate": "2026-09-14",
       "hasSections": true,
@@ -8966,7 +8966,7 @@
       "images": []
     },
     "draw-things-review": {
-      "dateModified": "2026-09-07",
+      "dateModified": "2026-10-09",
       "lastFactChecked": null,
       "publishDate": "2026-09-07",
       "hasSections": true,
@@ -10231,7 +10231,7 @@
       "images": []
     },
     "koboldcpp-review": {
-      "dateModified": "2026-09-20",
+      "dateModified": "2026-10-09",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
@@ -10447,7 +10447,7 @@
       "images": []
     },
     "windsurf-review": {
-      "dateModified": "2026-09-05",
+      "dateModified": "2026-10-09",
       "lastFactChecked": null,
       "publishDate": "2026-09-05",
       "hasSections": true,
@@ -10609,7 +10609,7 @@
       "images": []
     },
     "stableswarmui-review": {
-      "dateModified": "2026-09-06",
+      "dateModified": "2026-10-09",
       "lastFactChecked": null,
       "publishDate": "2026-09-06",
       "hasSections": true,
@@ -10753,7 +10753,7 @@
       "images": []
     },
     "tokforge-review": {
-      "dateModified": "2026-10-05",
+      "dateModified": "2026-10-09",
       "lastFactChecked": null,
       "publishDate": "2026-10-03",
       "hasSections": true,
@@ -10828,6 +10828,24 @@
       "dateModified": "2026-10-04",
       "lastFactChecked": null,
       "publishDate": "2026-10-04",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "return-editor-review": {
+      "dateModified": "2026-10-10",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-10",
       "hasSections": true,
       "langs": [
         "en",
@@ -11689,7 +11707,7 @@
       "images": []
     },
     "omlx-review": {
-      "dateModified": "2026-09-18",
+      "dateModified": "2026-10-09",
       "lastFactChecked": null,
       "publishDate": "2026-09-18",
       "hasSections": true,
