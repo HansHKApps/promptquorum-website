@@ -666,6 +666,20 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
         </div>
       )}
 
+      {/* "Compare in directory" under a review's competitor/comparison table or list (competitor-links.ts) */}
+      {section.directoryCompare && (
+        <p className="my-3 text-sm">
+          <Link
+            href={section.directoryCompare.href}
+            className="font-medium text-primary underline underline-offset-2 hover:no-underline"
+            data-directory-compare
+          >
+            {section.directoryCompare.label}
+            <span aria-hidden="true" className="ms-1 inline-block rtl:rotate-180">→</span>
+          </Link>
+        </p>
+      )}
+
       {/* YouTube embed */}
       {section.youtubeUrl && (
         <div className="my-8">

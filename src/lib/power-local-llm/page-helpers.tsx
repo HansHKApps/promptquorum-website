@@ -5,7 +5,7 @@
 import { CATEGORY_COMPARE_ARTICLE } from '@/lib/power-local-llm/apps/compare-schema'
 import type { CategoryGroupKey } from '@/lib/power-local-llm/apps/categories'
 import { buildCategoryCompareData, getCategoryLinksForReview } from '@/lib/power-local-llm/compare-data'
-import { buildDirectoryFunnel } from '@/lib/power-local-llm/directory-funnel'
+import { reviewPageProps } from '@/lib/power-local-llm/review-page-props'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
@@ -430,8 +430,8 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
   const compareGroup = (Object.keys(CATEGORY_COMPARE_ARTICLE) as CategoryGroupKey[]).find((g) => CATEGORY_COMPARE_ARTICLE[g] === slug)
   const compareData = compareGroup ? buildCategoryCompareData(compareGroup, lang) : undefined
   const categoryLinks = getCategoryLinksForReview(slug, lang) ?? undefined
-  // Review pages only (undefined elsewhere): data for the two directory-funnel blocks.
-  const directoryFunnel = buildDirectoryFunnel('power-local-llm', slug, lang)
+  // Review pages only (untouched elsewhere): directory-funnel blocks + linked competitor tables.
+  const reviewProps = reviewPageProps('power-local-llm', slug, lang, narrowArticleData(articleData, lang))
 
   return (
     <>
@@ -446,7 +446,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       {itemListSchemas.map((schema, i) => (
         <script key={`itemlist-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <PowerLocalLLMPostClient slug={slug} lang={lang} ui={ui} directorySlot={directorySlot} founderReviewed={founderReviewed} compareData={compareData} categoryLinks={categoryLinks} directoryFunnel={directoryFunnel} {...narrowArticleData(articleData, lang)} />
+      <PowerLocalLLMPostClient slug={slug} lang={lang} ui={ui} directorySlot={directorySlot} founderReviewed={founderReviewed} compareData={compareData} categoryLinks={categoryLinks} {...reviewProps} />
     </>
   )
 }

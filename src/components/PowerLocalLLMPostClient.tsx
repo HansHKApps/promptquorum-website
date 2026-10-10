@@ -1087,7 +1087,10 @@ function SectionBlock({ section, colors, id, lang, renderLinks, compareData }: {
           {section.rows.map((row, i) => {
             const [nameCol, ...restCols] = section.columns!
             const name = row[nameCol] ?? row['0'] ?? ''
-            const itemId = slugifyAnchor(name.replace(/\*\*/g, ''))
+            // Plain text of the name: link markup (hand-authored or added by competitor-links.ts)
+            // must not leak into the anchor id or the related-articles lookup.
+            const plainName = name.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/\*\*/g, '')
+            const itemId = slugifyAnchor(plainName)
             return (
               <div key={i} id={itemId || undefined} className="border border-primary/10 rounded-xl p-4 scroll-mt-24">
                 <h3 className="text-lg font-bold text-text-primary mb-2">
@@ -1116,7 +1119,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks, compareData }: {
                     )
                   })}
                 </dl>
-                <RelatedArticlesDisclosure toolName={name.replace(/\*\*/g, '')} lang={lang} />
+                <RelatedArticlesDisclosure toolName={plainName} lang={lang} />
               </div>
             )
           })}
@@ -1182,6 +1185,20 @@ function SectionBlock({ section, colors, id, lang, renderLinks, compareData }: {
             </p>
           )}
         </div>
+      )}
+
+      {/* "Compare in directory" under a review's competitor/comparison table or list (competitor-links.ts) */}
+      {section.directoryCompare && (
+        <p className="my-3 text-sm">
+          <Link
+            href={section.directoryCompare.href}
+            className="font-medium text-primary underline underline-offset-2 hover:no-underline"
+            data-directory-compare
+          >
+            {section.directoryCompare.label}
+            <span aria-hidden="true" className="ms-1 inline-block rtl:rotate-180">→</span>
+          </Link>
+        </p>
       )}
 
       {/* Code block */}

@@ -65,6 +65,17 @@ const FUNNEL_UI = {
     ar: 'غير متوفر على {platform}؟ اطّلع على أدوات لمنصات أخرى',
     ko: '{platform}에서 쓸 수 없나요? 다른 플랫폼용 도구 보기',
   },
+  compareInDirectory: {
+    en: 'Compare in directory',
+    de: 'Im Verzeichnis vergleichen',
+    fr: "Comparer dans l'annuaire",
+    ja: 'ディレクトリで比較する',
+    zh: '在目录中比较',
+    es: 'Comparar en el directorio',
+    pt: 'Comparar no diretório',
+    ar: 'قارن في الدليل',
+    ko: '디렉터리에서 비교',
+  },
   // --- popup (Part C) ---
   popupHeadline: {
     en: 'Looking for more local AI apps?',

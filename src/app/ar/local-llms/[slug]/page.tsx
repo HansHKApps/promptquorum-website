@@ -8,7 +8,7 @@ import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { LocalLLMArticleJsonLd } from '@/lib/local-llms/jsonld'
 import { narrowArticleData } from '@/lib/narrowArticleData'
-import { buildDirectoryFunnel } from '@/lib/power-local-llm/directory-funnel'
+import { reviewPageProps } from '@/lib/power-local-llm/review-page-props'
 
 export const revalidate = 86400
 
@@ -138,8 +138,7 @@ export default async function ArLocalLLMsArticlePage({ params }: PageProps) {
       <LocalLLMsPostClient
         slug={slug}
         initialLang="ar"
-        directoryFunnel={buildDirectoryFunnel('local-llms', slug, 'ar')}
-        {...narrowArticleData(llmContent[key], "ar")}
+        {...reviewPageProps('local-llms', slug, 'ar', narrowArticleData(llmContent[key], 'ar'))}
       />
     </>
   )
