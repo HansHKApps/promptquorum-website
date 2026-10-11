@@ -30,8 +30,9 @@ const TOOLS: McpToolName[] = [
   'find_best_apps', 'search_apps', 'recommend_stack', 'find_local_alternative', 'get_app_alternatives', 'get_app_details', 'list_categories',
   'compare_apps', 'check_hardware_compatibility', 'estimate_vram', 'explain_license',
   'search_promptquorum', 'get_article', 'find_related_content', 'get_hands_on_test', 'get_latest', 'list_clusters',
+  'start', 'set_consent', 'my_profile', 'forget_me', 'set_language',
 ]
-const GROUP_ORDER: ToolGroup[] = ['find', 'decide', 'learn']
+const GROUP_ORDER: ToolGroup[] = ['find', 'decide', 'learn', 'profile']
 
 const RESOURCES: { uri: string; key: 'resCategories' | 'resStacks' | 'resApp' | 'resArticle' | 'resMethodology' }[] = [
   { uri: 'promptquorum://categories', key: 'resCategories' },
@@ -40,7 +41,8 @@ const RESOURCES: { uri: string; key: 'resCategories' | 'resStacks' | 'resApp' | 
   { uri: 'promptquorum://article/{cluster}/{slug}', key: 'resArticle' },
   { uri: 'promptquorum://methodology', key: 'resMethodology' },
 ]
-const PROMPTS: { name: string; key: 'promptStack' | 'promptCompare' | 'promptOffline' | 'promptLicense' }[] = [
+const PROMPTS: { name: string; key: 'promptStart' | 'promptStack' | 'promptCompare' | 'promptOffline' | 'promptLicense' }[] = [
+  { name: 'start', key: 'promptStart' },
   { name: 'recommend_local_ai_stack', key: 'promptStack' },
   { name: 'compare_local_ai_tools', key: 'promptCompare' },
   { name: 'find_offline_alternative', key: 'promptOffline' },

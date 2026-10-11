@@ -41,6 +41,19 @@ import {
 } from '@/lib/mcp/directory-tools'
 import { STACK_RECIPES } from '@/lib/power-local-llm/stacks'
 import { recordMcpCall, type McpToolName } from '@/lib/mcp/usage'
+import { TOTAL_TOOL_COUNT } from '@/lib/power-local-llm/apps-barrel'
+import { SUPPORTED_LANGS } from '@/components/search/search-utils'
+import { START_LANGS } from '@/lib/mcp/start/copy'
+import { profileStoreFromEnv } from '@/lib/mcp/start/profile-store'
+import {
+  handleStart,
+  handleSetConsent,
+  handleForgetMe,
+  handleMyProfile,
+  handleSetLanguage,
+  type StartDeps,
+  type StartResult,
+} from '@/lib/mcp/start/handlers'
 
 export const runtime = 'nodejs'
 
@@ -76,6 +89,31 @@ const SITE = 'https://www.promptquorum.com'
 const mdResource = (uri: URL, text: string) => ({ contents: [{ uri: uri.href, mimeType: 'text/markdown', text }] })
 const jsonResource = (uri: URL, data: unknown) => ({ contents: [{ uri: uri.href, mimeType: 'application/json', text: JSON.stringify(data, null, 2) }] })
 const userPrompt = (text: string) => ({ messages: [{ role: 'user' as const, content: { type: 'text' as const, text } }] })
+
+// --- start / consent flow (src/lib/mcp/start) ---
+// Profile storage is optional infrastructure: with no dedicated EU profile
+// Redis configured, startDeps().store is null and nothing is ever saved.
+function startDeps(): StartDeps {
+  const env = profileStoreFromEnv()
+  return {
+    store: env?.store ?? null,
+    region: env?.region ?? '',
+    counts: { apps: TOTAL_TOOL_COUNT, langs: SUPPORTED_LANGS.length },
+  }
+}
+
+function startToolResult(res: StartResult) {
+  const content: Array<{ type: 'text'; text: string; annotations?: { audience: ('user' | 'assistant')[]; priority: number } }> = [
+    { type: 'text', text: res.text, annotations: { audience: ['user'], priority: 1 } },
+  ]
+  if (res.assistantNote) content.push({ type: 'text', text: res.assistantNote, annotations: { audience: ['assistant'], priority: 0.5 } })
+  return res.isError ? { content, isError: true as const } : { content }
+}
+
+async function runStart(toolName: McpToolName, fn: (deps: StartDeps) => Promise<StartResult>) {
+  await recordMcpCall(toolName)
+  return startToolResult(await fn(startDeps()))
+}
 
 const handler = createMcpHandler(
   (server) => {
@@ -367,6 +405,83 @@ const handler = createMcpHandler(
       async (args) => run('find_related_content', () => findRelatedContent(args))
     )
 
+    // --- Guided entry point + privacy choice (release 1 of the start flow) ---
+    server.registerTool(
+      'start',
+      {
+        title: 'PromptQuorum — Start here',
+        description:
+          'Entry point for the PromptQuorum local-AI directory. Call this when the user types "start", "/start", "menu", "help", "what can you do", or opens a new conversation about local LLM apps with this server. Call it at most once per conversation unless the user asks for the menu again. Show the returned text to the user exactly as written (translate into the user\'s language if they are not writing in English, keep the layout). Do not summarize it. After showing it, wait for the user\'s answer. Never call set_consent without the user\'s explicit answer.',
+        inputSchema: z.object({
+          profile_code: z.string().optional().describe('Optional. Profile code from an earlier session (only if the user gives it).'),
+          lang: z.string().optional().describe("Optional BCP-47 code of the user's language (en, de, fr, es, pt, ja, zh, ko, ar)."),
+        }),
+        annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+      },
+      async (args) => runStart('start', (d) => handleStart(args, d))
+    )
+
+    server.registerTool(
+      'set_consent',
+      {
+        title: 'Save your privacy choice',
+        description:
+          "Records the user's answer to the PromptQuorum privacy question shown by start. Call only after the user has explicitly answered yes or no — never infer consent. accept stores a small pseudonymous profile (language + consent record, see the privacy notice) and returns a profile_code the user should save. decline stores nothing and all directory tools keep working; if a valid profile_code is passed with decline, the saved profile is deleted (consent withdrawal). Present the returned text to the user as written.",
+        inputSchema: z.object({
+          choice: z.enum(['accept', 'decline']).describe('The user\'s explicit answer: accept (yes) or decline (no).'),
+          profile_code: z.string().optional().describe('Optional existing profile code (to re-confirm or withdraw).'),
+          lang: z.string().optional().describe('Optional language code of the user.'),
+        }),
+        annotations: { readOnlyHint: false, destructiveHint: false, idempotentHint: true, openWorldHint: false },
+      },
+      async (args) => runStart('set_consent', (d) => handleSetConsent(args, d))
+    )
+
+    server.registerTool(
+      'forget_me',
+      {
+        title: 'Delete my saved profile',
+        description:
+          "Deletes the user's saved PromptQuorum profile and consent record. Call when the user asks to delete their data, forget them, or withdraw consent. Requires the profile_code.",
+        inputSchema: z.object({
+          profile_code: z.string().describe('The profile code to delete.'),
+          lang: z.string().optional().describe('Optional language code of the user.'),
+        }),
+        annotations: { readOnlyHint: false, destructiveHint: true, idempotentHint: true, openWorldHint: false },
+      },
+      async (args) => runStart('forget_me', (d) => handleForgetMe(args, d))
+    )
+
+    server.registerTool(
+      'my_profile',
+      {
+        title: 'Show what is stored in my profile',
+        description:
+          'Shows the user everything PromptQuorum has saved for their profile_code (consent date, consent text version, language, timestamps, expiry). Call when the user asks what is stored about them, or wants to review or export their data.',
+        inputSchema: z.object({
+          profile_code: z.string().describe('The profile code to look up.'),
+          lang: z.string().optional().describe('Optional language code of the user.'),
+        }),
+        annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
+      },
+      async (args) => runStart('my_profile', (d) => handleMyProfile(args, d))
+    )
+
+    server.registerTool(
+      'set_language',
+      {
+        title: 'Set your language',
+        description:
+          'Sets the language the user wants PromptQuorum menus and answers in. Call when the user asks to change language ("auf Deutsch", "en français", "change language") or picks it from the menu. Supported: en, de, fr, es, pt, ja, zh, ko, ar. Present the confirmation in the chosen language and continue the conversation in it. The language is saved to a profile only when a valid profile_code (with consent) is passed.',
+        inputSchema: z.object({
+          lang: z.enum(START_LANGS as unknown as [string, ...string[]]).describe('Language code: en, de, fr, es, pt, ja, zh, ko or ar.'),
+          profile_code: z.string().optional().describe('Optional profile code, to save the language to the profile.'),
+        }),
+        annotations: { readOnlyHint: false, idempotentHint: true, openWorldHint: false },
+      },
+      async (args) => runStart('set_language', (d) => handleSetLanguage({ lang: args.lang as (typeof START_LANGS)[number], profile_code: args.profile_code }, d))
+    )
+
     // --- Resources: stable reference data a host can load without tool calls ---
     server.registerResource(
       'categories',
@@ -418,6 +533,17 @@ const handler = createMcpHandler(
     )
 
     // --- Prompts: reusable user journeys the host can offer as templates ---
+    // `/start` in slash-command clients routes into the same `start` tool so
+    // there is one source of truth for the menu text.
+    server.registerPrompt(
+      'start',
+      {
+        title: 'Start PromptQuorum',
+        description: 'Open the PromptQuorum menu: privacy choice, what this connection can do, and a task menu.',
+      },
+      () => userPrompt('Call the PromptQuorum `start` tool now and show me its output exactly as returned.')
+    )
+
     server.registerPrompt(
       'recommend_local_ai_stack',
       {

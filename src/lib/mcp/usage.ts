@@ -24,6 +24,11 @@ export const MCP_TOOL_NAMES = [
   'get_latest',
   'get_hands_on_test',
   'find_related_content',
+  'start',
+  'set_consent',
+  'forget_me',
+  'my_profile',
+  'set_language',
 ] as const
 export type McpToolName = (typeof MCP_TOOL_NAMES)[number]
 
