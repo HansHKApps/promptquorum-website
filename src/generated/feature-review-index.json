@@ -1198,5 +1198,10 @@
     "cluster": "power-local-llm",
     "urlSlug": "local-ai-geetmark-review",
     "url": "/power-local-llm/local-ai-geetmark-review"
+  },
+  "local-ai-mail": {
+    "cluster": "power-local-llm",
+    "urlSlug": "local-ai-mail-review",
+    "url": "/power-local-llm/local-ai-mail-review"
   }
 }

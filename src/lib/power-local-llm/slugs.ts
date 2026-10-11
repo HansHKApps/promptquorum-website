@@ -389,6 +389,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   // TokForge review — 2026-10-03
   'tokforge-review':                         'tokforge-review',
   'local-ai-geetmark-review':                'local-ai-geetmark-review',
+  'local-ai-mail-review':                    'local-ai-mail-review',
   'friedrichai-review':                      'friedrichai-review',
   'oscilla-review':                          'oscilla-review',
   'mlxhub-review':                           'mlxhub-review',

@@ -123,6 +123,7 @@ import { app as app_tina } from './apps/tina'
 import { app as app_return_editor } from './apps/return-editor'
 import { app as app_mlxhub } from './apps/mlxhub'
 import { app as app_local_ai_geetmark } from './apps/local-ai-geetmark'
+import { app as app_local_ai_mail } from './apps/local-ai-mail'
 import { app as app_layla } from './apps/layla'
 import { app as app_maid } from './apps/maid'
 import { app as app_chapper } from './apps/chapper'
@@ -494,6 +495,7 @@ export const localAiApps: ToolRecord[] = [
   app_return_editor,
   app_mlxhub,
   app_local_ai_geetmark,
+  app_local_ai_mail,
 ]
 
 export const TOTAL_TOOL_COUNT = localAiApps.length
