@@ -558,6 +558,7 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // TokForge review (Mobile & Edge LLMs) — 2026-10-03
   'tokforge-review',
   'local-ai-geetmark-review',
+  'local-ai-mail-review',
   'friedrichai-review',
 
   // Oscilla review (Mobile & Edge LLMs) — 2026-10-04

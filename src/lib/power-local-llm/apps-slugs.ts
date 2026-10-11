@@ -181,6 +181,7 @@ export const LOCAL_AI_APP_SLUG_TO_KEY: Record<string, string> = {
   'tina':                                    'tina',
   'return-editor':                           'return-editor',
   'local-ai-geetmark':                       'local-ai-geetmark',
+  'local-ai-mail':                           'local-ai-mail',
   'mlxhub':                                  'mlxhub',
 }
 

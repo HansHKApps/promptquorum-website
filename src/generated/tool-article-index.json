@@ -9365,6 +9365,14 @@
       },
       {
         "cluster": "power-local-llm",
+        "slug": "local-ai-mail-review",
+        "title": "Local AI Mail Review: Brand-New Android Email Client with an On-Device AI",
+        "url": "/power-local-llm/local-ai-mail-review",
+        "dateModified": "2026-10-11",
+        "tier": "mentioned"
+      },
+      {
+        "cluster": "power-local-llm",
         "slug": "local-llm-chat-assistants-compared",
         "title": "Local Chat Apps & Assistants Compared (2026): Desktop, Mobile, Self-Hosted, Assistants and Roleplay",
         "url": "/power-local-llm/local-llm-chat-assistants-compared",
@@ -9372,7 +9380,7 @@
         "tier": "mentioned"
       }
     ],
-    "totalCount": 2,
+    "totalCount": 3,
     "capped": false
   },
   "AIClient2API": {
@@ -11389,6 +11397,20 @@
         "title": "MLXHub Review: On-Device MLX Chat and LAN Server for iPhone and iPad",
         "url": "/power-local-llm/mlxhub-review",
         "dateModified": "2026-10-05",
+        "tier": "about"
+      }
+    ],
+    "totalCount": 1,
+    "capped": false
+  },
+  "Local AI Mail": {
+    "articles": [
+      {
+        "cluster": "power-local-llm",
+        "slug": "local-ai-mail-review",
+        "title": "Local AI Mail Review: Brand-New Android Email Client with an On-Device AI",
+        "url": "/power-local-llm/local-ai-mail-review",
+        "dateModified": "2026-10-11",
         "tier": "about"
       }
     ],

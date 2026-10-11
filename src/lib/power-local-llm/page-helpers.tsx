@@ -1043,6 +1043,7 @@ const HUB_THEMES: Array<{
       'llm-hub-review',
       'tokforge-review',
       'local-ai-geetmark-review',
+      'local-ai-mail-review',
       'oscilla-review',
       'tina-review',
       'mlxhub-review',
