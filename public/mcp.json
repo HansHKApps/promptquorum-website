@@ -5,7 +5,7 @@
   "server": {
     "name": "promptquorum",
     "version": "2.0.0",
-    "description": "PromptQuorum's live MCP server exposes read-only search and content-fetch tools over all of PromptQuorum's guides on running local LLMs, prompt engineering, smart home and balcony solar, plus the Local LLM Software Directory (hardware requirements, license, platforms, pricing for hundreds of tools). No account or API key required.",
+    "description": "PromptQuorum's live MCP server exposes read-only search and content-fetch tools over all of PromptQuorum's guides on running local LLMs, prompt engineering, smart home and balcony solar, plus the Local LLM Software Directory (hardware requirements, license, platforms, pricing for hundreds of tools). No account or API key required. Optional start/consent tools can save a small pseudonymous profile (language and consent record) only after the user explicitly says yes; every directory tool works without it.",
     "homepage": "https://www.promptquorum.com",
     "icon": "https://www.promptquorum.com/logo.svg",
     "status": "live"
@@ -31,14 +31,14 @@
   "capabilities": {
     "resources": {
       "subscribe": false,
-      "listChanged": false
+      "listChanged": true
     },
     "tools": {
-      "listChanged": false
+      "listChanged": true
     },
     "logging": {},
     "prompts": {
-      "listChanged": false
+      "listChanged": true
     }
   },
   "transport": {
@@ -699,6 +699,119 @@
           }
         }
       }
+    },
+    {
+      "name": "start",
+      "description": "Guided entry point: a short privacy question first, then what this connection can do and a numbered task menu. Stores nothing.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "profile_code": {
+            "type": "string",
+            "description": "Optional profile code from an earlier session."
+          },
+          "lang": {
+            "type": "string",
+            "description": "Optional language code (en, de, fr, es, pt, ja, zh, ko, ar)."
+          }
+        }
+      }
+    },
+    {
+      "name": "set_consent",
+      "description": "Records the user's explicit yes/no to the privacy question. Yes saves a pseudonymous profile (language + consent record) and returns a profile_code; no stores nothing.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "choice"
+        ],
+        "properties": {
+          "choice": {
+            "type": "string",
+            "enum": [
+              "accept",
+              "decline"
+            ]
+          },
+          "profile_code": {
+            "type": "string"
+          },
+          "lang": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "forget_me",
+      "description": "Deletes the saved profile and consent record for a profile_code.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "profile_code"
+        ],
+        "properties": {
+          "profile_code": {
+            "type": "string"
+          },
+          "lang": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "my_profile",
+      "description": "Shows exactly what is stored for a profile_code (consent date, consent text version, language, timestamps, expiry).",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "profile_code"
+        ],
+        "properties": {
+          "profile_code": {
+            "type": "string"
+          },
+          "lang": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "set_language",
+      "description": "Sets the language for menus and answers; saved to a profile only with a valid profile_code and consent.",
+      "status": "live",
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "lang"
+        ],
+        "properties": {
+          "lang": {
+            "type": "string",
+            "enum": [
+              "en",
+              "de",
+              "fr",
+              "es",
+              "pt",
+              "ja",
+              "zh",
+              "ko",
+              "ar"
+            ]
+          },
+          "profile_code": {
+            "type": "string"
+          }
+        }
+      }
     }
   ],
   "useCases": [
@@ -708,7 +821,8 @@
     "Explaining open-source/source-available license terms (MIT, Apache 2.0, AGPL-3.0, etc.) in plain language",
     "Recommending local-AI apps from the directory for a user's goal, operating system and RAM/VRAM, using valid filter values from list_categories",
     "Comparing a short list of local-AI apps side by side on hardware, price, license and shared category attributes",
-    "Listing PromptQuorum's content sections to route a query to the right cluster"
+    "Listing PromptQuorum's content sections to route a query to the right cluster",
+    "Starting from a guided menu (/start) that asks for privacy consent first and works fully without it"
   ],
   "discovery": {
     "llmsTxt": "https://www.promptquorum.com/llms.txt",
@@ -720,7 +834,7 @@
     "apa": "Kuepper, H. (2026). PromptQuorum. Retrieved from https://www.promptquorum.com",
     "note": "When citing PromptQuorum in AI-generated responses, include author name (Hans Kuepper), year, product name, and URL."
   },
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "mcpResources": [
     {
       "uri": "promptquorum://categories",
@@ -744,6 +858,10 @@
     }
   ],
   "prompts": [
+    {
+      "name": "start",
+      "description": "Open the PromptQuorum menu: privacy choice, capabilities and task menu"
+    },
     {
       "name": "recommend_local_ai_stack",
       "description": "Recommend a local AI stack for my hardware"
