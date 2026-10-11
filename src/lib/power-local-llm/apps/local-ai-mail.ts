@@ -7,6 +7,9 @@
 // (co-hi-boy.blogspot.com, the developer's personal Blogspot blog, dated 2026-09-27: IMAP/SMTP only to the user's own server,
 // RECORD_AUDIO for voice prompts via Android system speech recognition, READ_CONTACTS for address autocompletion, on-device AI on
 // GPU/NPU, optional Gemini API with the user's own key sent directly to Google, no advertising or tracking SDKs).
+// Per-storefront Play prices (checked 2026-10-11, each shown with a 100% off offer ending 2026-10-18 1:59): US $12.99, DE/ES EUR 12,99,
+// JP JPY 1,980, BR R$ 64,99, KR KRW 19,000, SA SAR 53.99; the French storefront showed no price. The Japanese storefront titles the
+// app "PrivaMail: ローカルAIメール"; every other storefront checked uses "Local AI Mail: On-Device Email".
 // No product website, no source repository and no license text found; web search for the app name returned nothing.
 // The model(s) and inference engine are not named in any source read. Version 1.0.2 is from the Play "What's new" text.
 // Name variants: the Play title is "Local AI Mail: On-Device Email"; the Japanese privacy policy calls it "LocalMail".

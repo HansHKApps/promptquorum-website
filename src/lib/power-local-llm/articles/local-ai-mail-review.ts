@@ -19,7 +19,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Local AI Mail Review: Brand-New Android Email Client with an On-Device AI',
     seoTitle: 'Local AI Mail Review: On-Device AI Email (Android)',
     intro: 'Local AI Mail: On-Device Email is an Android email client published on Google Play by an individual developer, [コーヒー坊主 (CoffeeBozu)](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai), that adds AI summaries, translation and reply drafts using a model running on the phone, and can optionally switch to Google Gemini with your own API key. It is a very early release at version 1.0.2. This review is based on the Google Play listing and the developer\'s privacy policy, checked on 11 October 2026; PromptQuorum has not tested the app hands-on.',
-    metaDescription: 'Local AI Mail review: a brand-new Android email client that summarizes, translates and drafts replies with an on-device AI. 0+ downloads, source not published, untested.',
+    metaDescription: 'Local AI Mail review: a very early Android email client that summarizes, translates and drafts replies with on-device AI. 0+ downloads, untested.',
     twitterDescription: 'Local AI Mail review: very early Android email client with on-device AI summaries, translation and reply drafts. Paid app, source not published, not yet tested.',
     audience: 'Android users who are curious about an email client with on-device AI and want to know what the sources confirm, what the developer only claims, and how early the app is.',
     readTime: '5 min read',
@@ -46,7 +46,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Summarizes emails, translates them between seven languages and drafts replies in several tones, on any IMAP/SMTP account.',
           'Android only, through [Google Play](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai); no iPhone, desktop or web version is listed.',
           'The Data safety section declares no data collected or shared, and the privacy policy says the app contains no advertising or tracking SDKs.',
-          'Version 1.0.2, last updated on 10 October 2026, rated USK 16+ (state of the listing on 11 October 2026).',
+          'Version 1.0.2, last updated on 10 October 2026 (state of the listing on 11 October 2026).',
         ],
         updatedDate: '2026-10',
       },
@@ -130,7 +130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'What Is Local AI Mail?',
         content: [
           '**Local AI Mail: On-Device Email is an Android email client with built-in AI assistance that, by default, runs on the phone itself.** According to its [Google Play listing](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai), it handles standard IMAP and SMTP accounts and adds summaries, translation, reply drafting, calendar-event extraction and voice-dictated prompts.',
-          'The app has two names: the Play title is "Local AI Mail: On-Device Email", while the Japanese text of its privacy policy calls it "LocalMail". Both refer to the same package, jp.coffeebozu.mailerai.',
+          'The app has three names: the Play title is "Local AI Mail: On-Device Email", the Japanese store lists it as "PrivaMail: ローカルAIメール", and the Japanese text of its privacy policy calls it "LocalMail". All three refer to the same package, jp.coffeebozu.mailerai.',
         ],
       },
       getIt: {
@@ -147,7 +147,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Platform: 'Price',
-            'Where to get it': '€12.99 (German storefront); 100% off launch offer',
+            'Where to get it': '$12.99 (US storefront); 100% off launch offer',
           },
           {
             Platform: 'Developer blog',
@@ -359,9 +359,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/local-ai-mail-review-hero-de.webp',
     title: 'Local AI Mail im Test: brandneue Android-E-Mail-App mit KI auf dem Gerät',
-    seoTitle: 'Local AI Mail im Test: E-Mail mit KI auf dem Gerät (Android)',
+    seoTitle: 'Local AI Mail im Test: E-Mail-App mit KI auf dem Gerät',
     intro: 'Local AI Mail: On-Device Email ist eine Android-E-Mail-App, die bei Google Play von einem Einzelentwickler, [コーヒー坊主 (CoffeeBozu)](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai), veröffentlicht wird. Sie fasst Nachrichten zusammen, übersetzt sie und entwirft Antworten mit einem KI-Modell auf dem Smartphone und kann optional mit eigenem API-Schlüssel auf Google Gemini umschalten. Es ist eine sehr frühe Version (1.0.2). Dieser Test beruht auf dem Google-Play-Eintrag und der Datenschutzerklärung des Entwicklers, geprüft am 11. Oktober 2026; PromptQuorum hat die App nicht selbst getestet.',
-    metaDescription: 'Local AI Mail im Test: brandneue Android-E-Mail-App, die mit KI auf dem Gerät zusammenfasst, übersetzt und Antworten entwirft. 0+ Downloads, Quellcode nicht veröffentlicht, ungetestet.',
+    metaDescription: 'Local AI Mail im Test: sehr frühe Android-E-Mail-App mit KI auf dem Gerät für Zusammenfassungen, Übersetzung und Antworten. 0+ Downloads, ungetestet.',
     twitterDescription: 'Local AI Mail im Test: sehr frühe Android-E-Mail-App mit KI-Zusammenfassungen, Übersetzung und Antwortentwürfen auf dem Gerät. Kostenpflichtig, Quellcode nicht veröffentlicht, noch nicht getestet.',
     audience: 'Android-Nutzer, die sich für eine E-Mail-App mit KI auf dem Gerät interessieren und wissen möchten, was die Quellen bestätigen, was der Entwickler nur behauptet und wie früh das Projekt ist.',
     readTime: '5 Min. Lesezeit',
@@ -388,7 +388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Fasst E-Mails zusammen, übersetzt sie zwischen sieben Sprachen und entwirft Antworten in mehreren Tonlagen, für jedes IMAP/SMTP-Konto.',
           'Nur für Android über [Google Play](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai); eine Version für iPhone, Desktop oder Web ist nicht aufgeführt.',
           'Der Abschnitt „Datensicherheit“ erklärt, dass keine Daten erhoben oder weitergegeben werden, und die Datenschutzerklärung nennt keine Werbe- oder Tracking-SDKs.',
-          'Stand der Prüfung am 11. Oktober 2026: Version 1.0.2, zuletzt am 10. Oktober 2026 aktualisiert, USK ab 16.',
+          'Version 1.0.2, zuletzt am 10. Oktober 2026 aktualisiert (Stand des Eintrags am 11. Oktober 2026).',
         ],
         updatedDate: '2026-10',
       },
@@ -442,7 +442,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       tldr: {
         id: 'tldr',
-        title: 'Kurzfassung',
+        title: 'Zusammenfassung',
         isTldr: true,
         snippetBlocks: [
           {
@@ -472,7 +472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Was ist Local AI Mail?',
         content: [
           '**Local AI Mail: On-Device Email ist eine Android-E-Mail-App mit integrierter KI-Unterstützung, die standardmäßig auf dem Smartphone selbst läuft.** Laut [Google-Play-Eintrag](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai) verwaltet sie Standard-IMAP- und SMTP-Konten und ergänzt Zusammenfassungen, Übersetzung, Antwortentwürfe, das Erkennen von Terminen und per Sprache diktierte Anweisungen.',
-          'Die App hat zwei Namen: Der Play-Titel lautet „Local AI Mail: On-Device Email“, im japanischen Text der Datenschutzerklärung heißt sie „LocalMail“. Beide gehören zum selben Paket, jp.coffeebozu.mailerai.',
+          'Die App trägt drei Namen: Der Play-Titel lautet „Local AI Mail: On-Device Email“, im japanischen Store heißt sie „PrivaMail: ローカルAIメール“, und im japanischen Text der Datenschutzerklärung „LocalMail“. Alle drei gehören zum selben Paket, jp.coffeebozu.mailerai.',
         ],
       },
       getIt: {
@@ -553,19 +553,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['App', 'Plattformen', 'Preis / Lizenz', 'Wesentlicher Unterschied'],
         rows: [
           {
-            App: '[Agentic Inbox](/power-local-llm/agentic-inbox-review)',
+            App: '[Agentic Inbox](/de/power-local-llm/agentic-inbox-review)',
             Plattformen: 'Web (selbst gehostet)',
             'Preis / Lizenz': 'Kostenlos / Apache-2.0',
             'Wesentlicher Unterschied': 'Quelloffener E-Mail-Client mit KI-Agent im eigenen Cloudflare-Konto',
           },
           {
-            App: '[Aori](/power-local-llm/aori-ai-personal-agent-review)',
+            App: '[Aori](/de/power-local-llm/aori-ai-personal-agent-review)',
             Plattformen: 'Windows, macOS, Linux, Android',
             'Preis / Lizenz': 'Kostenlos (Beta)',
             'Wesentlicher Unterschied': 'Persönlicher Agent mit Local-first-Ansatz über Ollama; kein E-Mail-Client',
           },
           {
-            App: '[Atomic Bot](/power-local-llm/atomic-bot-review)',
+            App: '[Atomic Bot](/de/power-local-llm/atomic-bot-review)',
             Plattformen: 'Windows, macOS, Linux, iOS, Android',
             'Preis / Lizenz': 'Freemium / MIT',
             'Wesentlicher Unterschied': 'KI-Kollege auf dem OpenClaw-Agenten-Stack, lokal oder in der Cloud',
@@ -598,7 +598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: 'Fazit',
-        content: 'Local AI Mail: On-Device Email ist eine reizvolle Idee: eine Android-E-Mail-App, deren Zusammenfassungen, Übersetzungen und Antwortentwürfe auf dem Smartphone laufen, mit Cloud-KI nur, wenn Sie einen eigenen Schlüssel eintragen. Zugleich ist sie ein unerprobtes Produkt: Version 1.0.2, ein einzelner Entwickler, kein veröffentlichter Quellcode und ein nicht genanntes Modell samt Engine. Sie eignet sich für neugierige Android-Nutzer, die gern mit einem Zweitpostfach experimentieren; wer ein erprobtes, nachprüfbares E-Mail-Setup braucht, sollte zuerst [Agentic Inbox](/power-local-llm/agentic-inbox-review) vergleichen und diese App erneut ansehen, sobald es eine Nutzerbasis und unabhängige Rückmeldungen gibt.',
+        content: 'Local AI Mail: On-Device Email ist eine reizvolle Idee: eine Android-E-Mail-App, deren Zusammenfassungen, Übersetzungen und Antwortentwürfe auf dem Smartphone laufen, mit Cloud-KI nur, wenn Sie einen eigenen Schlüssel eintragen. Zugleich ist sie ein unerprobtes Produkt: Version 1.0.2, ein einzelner Entwickler, kein veröffentlichter Quellcode und ein nicht genanntes Modell samt Engine. Sie eignet sich für neugierige Android-Nutzer, die gern mit einem Zweitpostfach experimentieren; wer ein erprobtes, nachprüfbares E-Mail-Setup braucht, sollte zuerst [Agentic Inbox](/de/power-local-llm/agentic-inbox-review) vergleichen und diese App erneut ansehen, sobald es eine Nutzerbasis und unabhängige Rückmeldungen gibt.',
       },
       sources: {
         id: 'sources',
@@ -613,10 +613,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
-          '[Agentic Inbox im Test](/power-local-llm/agentic-inbox-review) — ein quelloffener, selbst gehosteter E-Mail-Client mit KI-Agent.',
-          '[Aori im Test](/power-local-llm/aori-ai-personal-agent-review) — ein persönlicher Agent mit Local-first-Ansatz, der auch unter Android läuft.',
-          '[E-Mail- und Kalenderautomatisierung mit lokalen LLMs](/power-local-llm/local-llm-email-and-calendar-automation) — E-Mail- und Kalender-Workflows mit lokalen Modellen aufbauen.',
-          '[Die besten lokalen LLM-Apps für Android](/power-local-llm/best-local-llm-apps-android-2026) — der breitere Android-Überblick.',
+          '[Agentic Inbox im Test](/de/power-local-llm/agentic-inbox-review) — ein quelloffener, selbst gehosteter E-Mail-Client mit KI-Agent.',
+          '[Aori im Test](/de/power-local-llm/aori-ai-personal-agent-review) — ein persönlicher Agent mit Local-first-Ansatz, der auch unter Android läuft.',
+          '[E-Mail- und Kalenderautomatisierung mit lokalen LLMs](/de/power-local-llm/local-llm-email-and-calendar-automation) — E-Mail- und Kalender-Workflows mit lokalen Modellen aufbauen.',
+          '[Die besten lokalen LLM-Apps für Android](/de/power-local-llm/best-local-llm-apps-android-2026) — der breitere Android-Überblick.',
         ],
       },
     },
@@ -629,9 +629,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/local-ai-mail-review-hero-es.webp',
     title: 'Análisis de Local AI Mail: un cliente de correo para Android recién salido con IA en el dispositivo',
-    seoTitle: 'Análisis de Local AI Mail: correo con IA en el dispositivo (Android)',
+    seoTitle: 'Local AI Mail: análisis de correo con IA en el dispositivo',
     intro: 'Local AI Mail: On-Device Email es un cliente de correo para Android publicado en Google Play por un desarrollador individual, [コーヒー坊主 (CoffeeBozu)](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai). Resume, traduce y redacta respuestas con un modelo de IA que se ejecuta en el teléfono y, como opción, puede cambiar a Google Gemini con tu propia clave de API. Es una versión muy temprana (1.0.2). Este análisis se basa en la ficha de Google Play y en la política de privacidad del desarrollador, consultadas el 11 de octubre de 2026; PromptQuorum no ha probado la aplicación.',
-    metaDescription: 'Análisis de Local AI Mail: un cliente de correo para Android recién lanzado que resume, traduce y redacta respuestas con IA en el dispositivo. 0+ descargas, código fuente no publicado, sin probar.',
+    metaDescription: 'Análisis de Local AI Mail: cliente de correo para Android muy temprano que resume, traduce y redacta respuestas con IA en el dispositivo. 0+ descargas.',
     twitterDescription: 'Análisis de Local AI Mail: cliente de correo para Android muy temprano con resúmenes, traducción y borradores de respuesta con IA en el dispositivo. De pago, código fuente no publicado, sin probar.',
     audience: 'Usuarios de Android curiosos por un cliente de correo con IA en el dispositivo que quieren saber qué confirman las fuentes, qué solo afirma el desarrollador y lo temprana que es la aplicación.',
     readTime: '5 min de lectura',
@@ -658,7 +658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Resume correos, los traduce entre siete idiomas y redacta respuestas en varios tonos, para cualquier cuenta IMAP/SMTP.',
           'Solo Android, a través de [Google Play](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai); no figura ninguna versión para iPhone, escritorio o web.',
           'La sección «Seguridad de los datos» declara que no se recopilan ni comparten datos, y la política de privacidad dice que la aplicación no contiene SDK de publicidad ni de seguimiento.',
-          'Comprobado el 11 de octubre de 2026: versión 1.0.2, actualizada el 10 de octubre de 2026, clasificada USK 16+.',
+          'Versión 1.0.2, actualizada el 10 de octubre de 2026 (estado de la ficha el 11 de octubre de 2026).',
         ],
         updatedDate: '2026-10',
       },
@@ -712,7 +712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       tldr: {
         id: 'tldr',
-        title: 'Resumen',
+        title: 'Puntos clave',
         isTldr: true,
         snippetBlocks: [
           {
@@ -742,7 +742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '¿Qué es Local AI Mail?',
         content: [
           '**Local AI Mail: On-Device Email es un cliente de correo para Android con asistencia de IA integrada que, por defecto, se ejecuta en el propio teléfono.** Según su [ficha de Google Play](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai), gestiona cuentas IMAP y SMTP estándar y añade resúmenes, traducción, redacción de respuestas, extracción de eventos del calendario e indicaciones dictadas por voz.',
-          'La aplicación tiene dos nombres: el título en Play es «Local AI Mail: On-Device Email», mientras que el texto japonés de su política de privacidad la llama «LocalMail». Ambos se refieren al mismo paquete, jp.coffeebozu.mailerai.',
+          'La aplicación tiene tres nombres: el título en Play es «Local AI Mail: On-Device Email», la tienda japonesa la muestra como «PrivaMail: ローカルAIメール» y el texto japonés de su política de privacidad la llama «LocalMail». Los tres se refieren al mismo paquete, jp.coffeebozu.mailerai.',
         ],
       },
       getIt: {
@@ -759,7 +759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Plataforma: 'Precio',
-            'Dónde conseguirla': '12,99 € (tienda alemana); oferta de lanzamiento −100 %',
+            'Dónde conseguirla': '12,99 € (tienda española); oferta de lanzamiento −100 %',
           },
           {
             Plataforma: 'Blog del desarrollador',
@@ -823,19 +823,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Aplicación', 'Plataformas', 'Precio / licencia', 'Diferencia clave'],
         rows: [
           {
-            'Aplicación': '[Agentic Inbox](/power-local-llm/agentic-inbox-review)',
+            'Aplicación': '[Agentic Inbox](/es/power-local-llm/agentic-inbox-review)',
             Plataformas: 'Web (autoalojado)',
             'Precio / licencia': 'Gratis / Apache-2.0',
             'Diferencia clave': 'Cliente de correo de código abierto con agente de IA en tu cuenta de Cloudflare',
           },
           {
-            'Aplicación': '[Aori](/power-local-llm/aori-ai-personal-agent-review)',
+            'Aplicación': '[Aori](/es/power-local-llm/aori-ai-personal-agent-review)',
             Plataformas: 'Windows, macOS, Linux, Android',
             'Precio / licencia': 'Gratis (beta)',
             'Diferencia clave': 'Agente personal local primero con Ollama; no es un cliente de correo',
           },
           {
-            'Aplicación': '[Atomic Bot](/power-local-llm/atomic-bot-review)',
+            'Aplicación': '[Atomic Bot](/es/power-local-llm/atomic-bot-review)',
             Plataformas: 'Windows, macOS, Linux, iOS, Android',
             'Precio / licencia': 'Freemium / MIT',
             'Diferencia clave': 'Compañero de IA sobre la pila de agentes OpenClaw, local o en la nube',
@@ -868,7 +868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: 'Veredicto',
-        content: 'Local AI Mail: On-Device Email es una idea atractiva: un cliente de correo para Android cuyos resúmenes, traducciones y borradores de respuesta se ejecutan en el teléfono, con IA en la nube solo cuando añades tu propia clave. También es un producto sin probar: versión 1.0.2, un único desarrollador individual, sin código fuente publicado y con un modelo y un motor que no se nombran. Encaja con usuarios de Android curiosos que quieran experimentar con un buzón secundario; quien necesite una configuración de correo probada y auditable debería comparar primero [Agentic Inbox](/power-local-llm/agentic-inbox-review) y volver a mirar esta aplicación cuando tenga una base de usuarios y opiniones independientes.',
+        content: 'Local AI Mail: On-Device Email es una idea atractiva: un cliente de correo para Android cuyos resúmenes, traducciones y borradores de respuesta se ejecutan en el teléfono, con IA en la nube solo cuando añades tu propia clave. También es un producto sin probar: versión 1.0.2, un único desarrollador individual, sin código fuente publicado y con un modelo y un motor que no se nombran. Encaja con usuarios de Android curiosos que quieran experimentar con un buzón secundario; quien necesite una configuración de correo probada y auditable debería comparar primero [Agentic Inbox](/es/power-local-llm/agentic-inbox-review) y volver a mirar esta aplicación cuando tenga una base de usuarios y opiniones independientes.',
       },
       sources: {
         id: 'sources',
@@ -883,10 +883,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
-          '[Análisis de Agentic Inbox](/power-local-llm/agentic-inbox-review) — un cliente de correo de código abierto y autoalojado con agente de IA.',
-          '[Análisis de Aori](/power-local-llm/aori-ai-personal-agent-review) — un agente personal local primero que también funciona en Android.',
-          '[Automatización de correo y calendario con LLM locales](/power-local-llm/local-llm-email-and-calendar-automation) — cómo montar flujos de correo y calendario con modelos locales.',
-          '[Las mejores apps de LLM local para Android](/power-local-llm/best-local-llm-apps-android-2026) — la guía más amplia para Android.',
+          '[Análisis de Agentic Inbox](/es/power-local-llm/agentic-inbox-review) — un cliente de correo de código abierto y autoalojado con agente de IA.',
+          '[Análisis de Aori](/es/power-local-llm/aori-ai-personal-agent-review) — un agente personal local primero que también funciona en Android.',
+          '[Automatización de correo y calendario con LLM locales](/es/power-local-llm/local-llm-email-and-calendar-automation) — cómo montar flujos de correo y calendario con modelos locales.',
+          '[Las mejores apps de LLM local para Android](/es/power-local-llm/best-local-llm-apps-android-2026) — la guía más amplia para Android.',
         ],
       },
     },
@@ -899,9 +899,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/local-ai-mail-review-hero-fr.webp',
     title: 'Avis Local AI Mail : un client e-mail Android tout récent avec une IA sur l\'appareil',
-    seoTitle: 'Avis Local AI Mail : e-mail avec IA sur l\'appareil (Android)',
+    seoTitle: 'Avis Local AI Mail : e-mail avec IA sur l\'appareil',
     intro: 'Local AI Mail: On-Device Email est un client e-mail Android publié sur Google Play par un développeur indépendant, [コーヒー坊主 (CoffeeBozu)](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai). Il résume, traduit et rédige des réponses avec un modèle d\'IA exécuté sur le téléphone, et peut passer en option à Google Gemini avec votre propre clé d\'API. Il s\'agit d\'une version très précoce (1.0.2). Cet avis s\'appuie sur la fiche Google Play et la politique de confidentialité du développeur, consultées le 11 octobre 2026 ; PromptQuorum n\'a pas testé l\'application.',
-    metaDescription: 'Avis Local AI Mail : un client e-mail Android tout récent qui résume, traduit et rédige des réponses avec une IA sur l\'appareil. 0+ téléchargements, code source non publié, non testé.',
+    metaDescription: 'Avis Local AI Mail : client e-mail Android très récent qui résume, traduit et rédige des réponses avec une IA sur l\'appareil. 0+ téléchargements.',
     twitterDescription: 'Avis Local AI Mail : client e-mail Android très récent avec résumés, traduction et brouillons de réponse par IA sur l\'appareil. Payant, code source non publié, non testé.',
     audience: 'Utilisateurs Android curieux d\'un client e-mail avec IA sur l\'appareil, qui veulent savoir ce que les sources confirment, ce que le développeur affirme seulement et à quel point l\'application est récente.',
     readTime: '5 min de lecture',
@@ -928,7 +928,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Résume les e-mails, les traduit entre sept langues et rédige des réponses sur plusieurs tons, pour tout compte IMAP/SMTP.',
           'Android uniquement, via [Google Play](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai) ; aucune version iPhone, ordinateur ou web n\'est indiquée.',
           'La section « Sécurité des données » déclare qu\'aucune donnée n\'est collectée ni partagée, et la politique de confidentialité indique que l\'application ne contient ni SDK publicitaire ni SDK de suivi.',
-          'Vérifié le 11 octobre 2026 : version 1.0.2, mise à jour le 10 octobre 2026, classée USK 16+.',
+          'Version 1.0.2, mise à jour le 10 octobre 2026 (état de la fiche au 11 octobre 2026).',
         ],
         updatedDate: '2026-10',
       },
@@ -982,7 +982,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       tldr: {
         id: 'tldr',
-        title: 'En bref',
+        title: 'Points clés',
         isTldr: true,
         snippetBlocks: [
           {
@@ -1012,7 +1012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Qu\'est-ce que Local AI Mail ?',
         content: [
           '**Local AI Mail: On-Device Email est un client e-mail Android doté d\'une assistance IA intégrée qui, par défaut, s\'exécute sur le téléphone lui-même.** D\'après sa [fiche Google Play](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai), il gère les comptes IMAP et SMTP standard et ajoute résumés, traduction, rédaction de réponses, extraction d\'événements du calendrier et consignes dictées à la voix.',
-          'L\'application porte deux noms : le titre Play est « Local AI Mail: On-Device Email », alors que le texte japonais de sa politique de confidentialité l\'appelle « LocalMail ». Les deux désignent le même paquet, jp.coffeebozu.mailerai.',
+          'L\'application porte trois noms : le titre Play est « Local AI Mail: On-Device Email », la boutique japonaise l\'affiche sous « PrivaMail: ローカルAIメール », et le texte japonais de la politique de confidentialité l\'appelle « LocalMail ». Les trois désignent le même paquet, jp.coffeebozu.mailerai.',
         ],
       },
       getIt: {
@@ -1029,7 +1029,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Plateforme: 'Prix',
-            'Où l\'obtenir': '12,99 € (boutique allemande) ; offre −100 %',
+            'Où l\'obtenir': '12,99 € (boutiques allemande/espagnole) ; offre −100 %',
           },
           {
             Plateforme: 'Blog du développeur',
@@ -1093,19 +1093,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['Application', 'Plateformes', 'Prix / licence', 'Différence clé'],
         rows: [
           {
-            Application: '[Agentic Inbox](/power-local-llm/agentic-inbox-review)',
+            Application: '[Agentic Inbox](/fr/power-local-llm/agentic-inbox-review)',
             Plateformes: 'Web (auto-hébergé)',
             'Prix / licence': 'Gratuit / Apache-2.0',
             'Différence clé': 'Client e-mail open source avec agent IA dans votre compte Cloudflare',
           },
           {
-            Application: '[Aori](/power-local-llm/aori-ai-personal-agent-review)',
+            Application: '[Aori](/fr/power-local-llm/aori-ai-personal-agent-review)',
             Plateformes: 'Windows, macOS, Linux, Android',
             'Prix / licence': 'Gratuit (bêta)',
             'Différence clé': 'Agent personnel local d\'abord via Ollama ; pas un client e-mail',
           },
           {
-            Application: '[Atomic Bot](/power-local-llm/atomic-bot-review)',
+            Application: '[Atomic Bot](/fr/power-local-llm/atomic-bot-review)',
             Plateformes: 'Windows, macOS, Linux, iOS, Android',
             'Prix / licence': 'Freemium / MIT',
             'Différence clé': 'Collègue IA sur la pile d\'agents OpenClaw, en local ou dans le cloud',
@@ -1138,7 +1138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: 'Verdict',
-        content: 'Local AI Mail: On-Device Email est une idée séduisante : un client e-mail Android dont les résumés, traductions et brouillons de réponse s\'exécutent sur le téléphone, avec l\'IA cloud seulement si vous ajoutez votre propre clé. C\'est aussi un produit non éprouvé : version 1.0.2, un seul développeur indépendant, aucun code source publié, et un modèle et un moteur non nommés. Elle convient aux utilisateurs Android curieux qui acceptent d\'expérimenter avec une boîte secondaire ; qui veut une configuration e-mail éprouvée et vérifiable devrait d\'abord comparer [Agentic Inbox](/power-local-llm/agentic-inbox-review) et revoir cette application quand elle aura une base d\'utilisateurs et des retours indépendants.',
+        content: 'Local AI Mail: On-Device Email est une idée séduisante : un client e-mail Android dont les résumés, traductions et brouillons de réponse s\'exécutent sur le téléphone, avec l\'IA cloud seulement si vous ajoutez votre propre clé. C\'est aussi un produit non éprouvé : version 1.0.2, un seul développeur indépendant, aucun code source publié, et un modèle et un moteur non nommés. Elle convient aux utilisateurs Android curieux qui acceptent d\'expérimenter avec une boîte secondaire ; qui veut une configuration e-mail éprouvée et vérifiable devrait d\'abord comparer [Agentic Inbox](/fr/power-local-llm/agentic-inbox-review) et revoir cette application quand elle aura une base d\'utilisateurs et des retours indépendants.',
       },
       sources: {
         id: 'sources',
@@ -1153,10 +1153,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Pour aller plus loin',
         items: [
-          '[Avis Agentic Inbox](/power-local-llm/agentic-inbox-review) — un client e-mail open source auto-hébergé avec agent IA.',
-          '[Avis Aori](/power-local-llm/aori-ai-personal-agent-review) — un agent personnel local d\'abord qui fonctionne aussi sous Android.',
-          '[Automatisation des e-mails et du calendrier avec des LLM locaux](/power-local-llm/local-llm-email-and-calendar-automation) — créer des flux e-mail et calendrier avec des modèles locaux.',
-          '[Les meilleures applications LLM locales pour Android](/power-local-llm/best-local-llm-apps-android-2026) — le panorama Android plus large.',
+          '[Avis Agentic Inbox](/fr/power-local-llm/agentic-inbox-review) — un client e-mail open source auto-hébergé avec agent IA.',
+          '[Avis Aori](/fr/power-local-llm/aori-ai-personal-agent-review) — un agent personnel local d\'abord qui fonctionne aussi sous Android.',
+          '[Automatisation des e-mails et du calendrier avec des LLM locaux](/fr/power-local-llm/local-llm-email-and-calendar-automation) — créer des flux e-mail et calendrier avec des modèles locaux.',
+          '[Les meilleures applications LLM locales pour Android](/fr/power-local-llm/best-local-llm-apps-android-2026) — le panorama Android plus large.',
         ],
       },
     },
@@ -1174,7 +1174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Local AI Mail レビュー：端末内AIでメールを要約・翻訳し返信を下書きする、公開直後のAndroidメールアプリ。ダウンロード数0+、ソース非公開、未検証。',
     twitterDescription: 'Local AI Mail レビュー：端末内AIによる要約・翻訳・返信下書きを備えた、ごく初期のAndroidメールアプリ。有料、ソース非公開、未検証。',
     audience: '端末内AIを備えたメールアプリに関心があり、情報源が裏付けている点、開発者の主張にとどまる点、そしてアプリがどれほど初期段階かを知りたいAndroidユーザー。',
-    readTime: '約5分で読めます',
+    readTime: '5分で読める',
     educationalLevel: 'Beginner',
     affiliateDisclosure: false,
     primaryTerm: 'Local AI Mail レビュー',
@@ -1198,7 +1198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'メールの要約、7言語間の翻訳、複数のトーンでの返信下書きに対応。IMAP/SMTPアカウントならどれでも利用可能。',
           'Androidのみで、[Google Play](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai)から入手します。iPhone、デスクトップ、Web版は掲載されていません。',
           '「データ セーフティ」ではデータの収集・共有なしと宣言され、プライバシーポリシーには広告・トラッキングSDKを含まないと記載されています。',
-          '2026年10月11日時点の確認：バージョン1.0.2、2026年10月10日更新、USK 16歳以上。',
+          'バージョン1.0.2、2026年10月10日更新（2026年10月11日時点の掲載状況）。',
         ],
         updatedDate: '2026-10',
       },
@@ -1252,7 +1252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       tldr: {
         id: 'tldr',
-        title: '要点まとめ',
+        title: '重要ポイント',
         isTldr: true,
         snippetBlocks: [
           {
@@ -1282,7 +1282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Local AI Mailとは',
         content: [
           '**Local AI Mail: On-Device Email は、既定ではスマートフォン上で動くAIアシスタント機能を内蔵したAndroidメールアプリです。** [Google Playの掲載情報](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai)によると、標準的なIMAP/SMTPアカウントに対応し、要約、翻訳、返信の下書き、予定の抽出、音声による指示を追加します。',
-          'アプリには2つの名前があります。Playでの名称は「Local AI Mail: On-Device Email」ですが、プライバシーポリシーの日本語部分では「LocalMail」と呼ばれています。どちらも同じパッケージ jp.coffeebozu.mailerai を指します。',
+          'アプリには3つの名前があります。Playでの名称は「Local AI Mail: On-Device Email」、日本のストアでは「PrivaMail: ローカルAIメール」と表示され、プライバシーポリシーの日本語部分では「LocalMail」と呼ばれています。いずれも同じパッケージ jp.coffeebozu.mailerai を指します。',
         ],
       },
       getIt: {
@@ -1297,7 +1297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'プラットフォーム': '価格',
-            '入手先': '12.99ユーロ（ドイツ版ストア）、100%オフの公開記念オファー',
+            '入手先': '¥1,980（日本のストア）、100%オフの公開記念オファー',
           },
           {
             'プラットフォーム': '開発者ブログ',
@@ -1359,19 +1359,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['アプリ', '対応環境', '価格／ライセンス', '主な違い'],
         rows: [
           {
-            'アプリ': '[Agentic Inbox](/power-local-llm/agentic-inbox-review)',
+            'アプリ': '[Agentic Inbox](/ja/power-local-llm/agentic-inbox-review)',
             '対応環境': 'Web（セルフホスト）',
             '価格／ライセンス': '無料／Apache-2.0',
             '主な違い': '自分のCloudflareアカウント上でAIエージェントが動くオープンソースのメールクライアント',
           },
           {
-            'アプリ': '[Aori](/power-local-llm/aori-ai-personal-agent-review)',
+            'アプリ': '[Aori](/ja/power-local-llm/aori-ai-personal-agent-review)',
             '対応環境': 'Windows、macOS、Linux、Android',
             '価格／ライセンス': '無料（ベータ）',
             '主な違い': 'Ollamaを使うローカル優先の個人エージェント。メールクライアントではない',
           },
           {
-            'アプリ': '[Atomic Bot](/power-local-llm/atomic-bot-review)',
+            'アプリ': '[Atomic Bot](/ja/power-local-llm/atomic-bot-review)',
             '対応環境': 'Windows、macOS、Linux、iOS、Android',
             '価格／ライセンス': 'フリーミアム／MIT',
             '主な違い': 'OpenClawエージェント基盤上のAIコワーカー。ローカルでもクラウドでも動作',
@@ -1404,7 +1404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: '総評',
-        content: 'Local AI Mail: On-Device Email は魅力的なアイデアです。要約・翻訳・返信の下書きがスマートフォン上で動き、クラウドAIは自分のキーを追加したときだけ使われます。一方で、バージョン1.0.2、個人開発者1人、ソースコード非公開、モデルとエンジンが不明という、実績のない製品でもあります。サブのメールボックスで試してみたい好奇心のあるAndroidユーザーには向いています。実績があり検証可能なメール環境が必要な方は、まず[Agentic Inbox](/power-local-llm/agentic-inbox-review)を比較し、このアプリはユーザー基盤と第三者の評価が出てきてから改めて確認するとよいでしょう。',
+        content: 'Local AI Mail: On-Device Email は魅力的なアイデアです。要約・翻訳・返信の下書きがスマートフォン上で動き、クラウドAIは自分のキーを追加したときだけ使われます。一方で、バージョン1.0.2、個人開発者1人、ソースコード非公開、モデルとエンジンが不明という、実績のない製品でもあります。サブのメールボックスで試してみたい好奇心のあるAndroidユーザーには向いています。実績があり検証可能なメール環境が必要な方は、まず[Agentic Inbox](/ja/power-local-llm/agentic-inbox-review)を比較し、このアプリはユーザー基盤と第三者の評価が出てきてから改めて確認するとよいでしょう。',
       },
       sources: {
         id: 'sources',
@@ -1419,10 +1419,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
-          '[Agentic Inbox レビュー](/power-local-llm/agentic-inbox-review) — AIエージェントを備えたオープンソースのセルフホスト型メールクライアント。',
-          '[Aori レビュー](/power-local-llm/aori-ai-personal-agent-review) — Androidでも動くローカル優先の個人エージェント。',
-          '[ローカルLLMによるメールとカレンダーの自動化](/power-local-llm/local-llm-email-and-calendar-automation) — ローカルモデルでメールとカレンダーのワークフローを構築する方法。',
-          '[Android向けローカルLLMアプリのおすすめ](/power-local-llm/best-local-llm-apps-android-2026) — Android向けのより広い比較ガイド。',
+          '[Agentic Inbox レビュー](/ja/power-local-llm/agentic-inbox-review) — AIエージェントを備えたオープンソースのセルフホスト型メールクライアント。',
+          '[Aori レビュー](/ja/power-local-llm/aori-ai-personal-agent-review) — Androidでも動くローカル優先の個人エージェント。',
+          '[ローカルLLMによるメールとカレンダーの自動化](/ja/power-local-llm/local-llm-email-and-calendar-automation) — ローカルモデルでメールとカレンダーのワークフローを構築する方法。',
+          '[Android向けローカルLLMアプリのおすすめ](/ja/power-local-llm/best-local-llm-apps-android-2026) — Android向けのより広い比較ガイド。',
         ],
       },
     },
@@ -1435,9 +1435,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/local-ai-mail-review-hero-pt.webp',
     title: 'Análise do Local AI Mail: cliente de e-mail para Android recém-lançado com IA no aparelho',
-    seoTitle: 'Análise do Local AI Mail: e-mail com IA no aparelho (Android)',
+    seoTitle: 'Análise do Local AI Mail: e-mail com IA no aparelho',
     intro: 'O Local AI Mail: On-Device Email é um cliente de e-mail para Android publicado no Google Play por um desenvolvedor individual, [コーヒー坊主 (CoffeeBozu)](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai). Ele resume, traduz e redige respostas com um modelo de IA executado no celular e pode, opcionalmente, mudar para o Google Gemini com a sua própria chave de API. É uma versão muito inicial (1.0.2). Esta análise se baseia na página do Google Play e na política de privacidade do desenvolvedor, consultadas em 11 de outubro de 2026; a PromptQuorum não testou o aplicativo.',
-    metaDescription: 'Análise do Local AI Mail: cliente de e-mail para Android recém-lançado que resume, traduz e redige respostas com IA no aparelho. 0+ downloads, código-fonte não publicado, não testado.',
+    metaDescription: 'Análise do Local AI Mail: cliente de e-mail para Android muito inicial que resume, traduz e redige respostas com IA no aparelho. 0+ downloads.',
     twitterDescription: 'Análise do Local AI Mail: cliente de e-mail para Android muito inicial com resumos, tradução e rascunhos de resposta por IA no aparelho. Pago, código-fonte não publicado, não testado.',
     audience: 'Usuários de Android curiosos sobre um cliente de e-mail com IA no aparelho que querem saber o que as fontes confirmam, o que o desenvolvedor apenas afirma e quão inicial é o aplicativo.',
     readTime: '5 min de leitura',
@@ -1464,7 +1464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Resume e-mails, traduz entre sete idiomas e redige respostas em vários tons, para qualquer conta IMAP/SMTP.',
           'Somente Android, pelo [Google Play](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai); não há versão listada para iPhone, desktop ou web.',
           'A seção “Segurança dos dados” declara que nenhum dado é coletado ou compartilhado, e a política de privacidade diz que o app não contém SDKs de publicidade nem de rastreamento.',
-          'Verificado em 11 de outubro de 2026: versão 1.0.2, atualizada em 10 de outubro de 2026, classificação USK 16+.',
+          'Versão 1.0.2, atualizada em 10 de outubro de 2026 (estado da página em 11 de outubro de 2026).',
         ],
         updatedDate: '2026-10',
       },
@@ -1518,7 +1518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       tldr: {
         id: 'tldr',
-        title: 'Resumo',
+        title: 'Pontos principais',
         isTldr: true,
         snippetBlocks: [
           {
@@ -1548,7 +1548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'O que é o Local AI Mail?',
         content: [
           '**O Local AI Mail: On-Device Email é um cliente de e-mail para Android com assistência de IA integrada que, por padrão, roda no próprio celular.** Segundo a [página do Google Play](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai), ele lida com contas IMAP e SMTP padrão e acrescenta resumos, tradução, redação de respostas, extração de eventos para o calendário e comandos ditados por voz.',
-          'O app tem dois nomes: o título no Play é “Local AI Mail: On-Device Email”, enquanto o texto em japonês da política de privacidade o chama de “LocalMail”. Ambos se referem ao mesmo pacote, jp.coffeebozu.mailerai.',
+          'O app tem três nomes: o título no Play é “Local AI Mail: On-Device Email”, a loja japonesa o exibe como “PrivaMail: ローカルAIメール” e o texto em japonês da política de privacidade o chama de “LocalMail”. Os três se referem ao mesmo pacote, jp.coffeebozu.mailerai.',
         ],
       },
       getIt: {
@@ -1565,7 +1565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             Plataforma: 'Preço',
-            'Onde obter': '€ 12,99 (loja alemã); oferta de lançamento −100 %',
+            'Onde obter': 'R$ 64,99 (loja brasileira); oferta de lançamento −100 %',
           },
           {
             Plataforma: 'Blog do desenvolvedor',
@@ -1629,19 +1629,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['App', 'Plataformas', 'Preço / licença', 'Diferença principal'],
         rows: [
           {
-            App: '[Agentic Inbox](/power-local-llm/agentic-inbox-review)',
+            App: '[Agentic Inbox](/pt/power-local-llm/agentic-inbox-review)',
             Plataformas: 'Web (hospedagem própria)',
             'Preço / licença': 'Grátis / Apache-2.0',
             'Diferença principal': 'Cliente de e-mail de código aberto com agente de IA na sua conta Cloudflare',
           },
           {
-            App: '[Aori](/power-local-llm/aori-ai-personal-agent-review)',
+            App: '[Aori](/pt/power-local-llm/aori-ai-personal-agent-review)',
             Plataformas: 'Windows, macOS, Linux, Android',
             'Preço / licença': 'Grátis (beta)',
             'Diferença principal': 'Agente pessoal local primeiro com Ollama; não é cliente de e-mail',
           },
           {
-            App: '[Atomic Bot](/power-local-llm/atomic-bot-review)',
+            App: '[Atomic Bot](/pt/power-local-llm/atomic-bot-review)',
             Plataformas: 'Windows, macOS, Linux, iOS, Android',
             'Preço / licença': 'Freemium / MIT',
             'Diferença principal': 'Colega de IA na pilha de agentes OpenClaw, local ou na nuvem',
@@ -1674,7 +1674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: 'Veredito',
-        content: 'O Local AI Mail: On-Device Email é uma ideia atraente: um cliente de e-mail para Android cujos resumos, traduções e rascunhos de resposta rodam no celular, com IA na nuvem somente quando você adiciona a sua própria chave. É também um produto não comprovado: versão 1.0.2, um único desenvolvedor individual, sem código-fonte publicado e com modelo e mecanismo não identificados. Serve para usuários de Android curiosos que aceitam experimentar com uma caixa secundária; quem precisa de uma configuração de e-mail comprovada e auditável deve comparar primeiro o [Agentic Inbox](/power-local-llm/agentic-inbox-review) e rever este app quando houver base de usuários e opiniões independentes.',
+        content: 'O Local AI Mail: On-Device Email é uma ideia atraente: um cliente de e-mail para Android cujos resumos, traduções e rascunhos de resposta rodam no celular, com IA na nuvem somente quando você adiciona a sua própria chave. É também um produto não comprovado: versão 1.0.2, um único desenvolvedor individual, sem código-fonte publicado e com modelo e mecanismo não identificados. Serve para usuários de Android curiosos que aceitam experimentar com uma caixa secundária; quem precisa de uma configuração de e-mail comprovada e auditável deve comparar primeiro o [Agentic Inbox](/pt/power-local-llm/agentic-inbox-review) e rever este app quando houver base de usuários e opiniões independentes.',
       },
       sources: {
         id: 'sources',
@@ -1689,10 +1689,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
-          '[Análise do Agentic Inbox](/power-local-llm/agentic-inbox-review) — um cliente de e-mail de código aberto e hospedagem própria com agente de IA.',
-          '[Análise do Aori](/power-local-llm/aori-ai-personal-agent-review) — um agente pessoal local primeiro que também roda no Android.',
-          '[Automação de e-mail e calendário com LLMs locais](/power-local-llm/local-llm-email-and-calendar-automation) — como montar fluxos de e-mail e calendário com modelos locais.',
-          '[Melhores apps de LLM local para Android](/power-local-llm/best-local-llm-apps-android-2026) — o panorama mais amplo para Android.',
+          '[Análise do Agentic Inbox](/pt/power-local-llm/agentic-inbox-review) — um cliente de e-mail de código aberto e hospedagem própria com agente de IA.',
+          '[Análise do Aori](/pt/power-local-llm/aori-ai-personal-agent-review) — um agente pessoal local primeiro que também roda no Android.',
+          '[Automação de e-mail e calendário com LLMs locais](/pt/power-local-llm/local-llm-email-and-calendar-automation) — como montar fluxos de e-mail e calendário com modelos locais.',
+          '[Melhores apps de LLM local para Android](/pt/power-local-llm/best-local-llm-apps-android-2026) — o panorama mais amplo para Android.',
         ],
       },
     },
@@ -1705,9 +1705,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/local-ai-mail-review-hero-ar.webp',
     title: 'مراجعة Local AI Mail: تطبيق بريد إلكتروني جديد كليًا لنظام Android بذكاء اصطناعي على الجهاز',
-    seoTitle: 'مراجعة Local AI Mail: بريد بذكاء اصطناعي على الجهاز (Android)',
+    seoTitle: 'مراجعة Local AI Mail: بريد بذكاء اصطناعي على الجهاز',
     intro: 'Local AI Mail: On-Device Email هو تطبيق بريد إلكتروني لنظام Android ينشره مطوّر فردي هو [コーヒー坊主 (CoffeeBozu)](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai) على Google Play. يلخّص الرسائل ويترجمها ويصيغ الردود بنموذج ذكاء اصطناعي يعمل على الهاتف، ويمكنه اختياريًا التحويل إلى Google Gemini بمفتاح API خاص بك. إنه إصدار مبكر جدًا (الإصدار 1.0.2). تستند هذه المراجعة إلى صفحة التطبيق على Google Play وسياسة الخصوصية الخاصة بالمطوّر، اللتين جرى الاطلاع عليهما في 11 أكتوبر 2026؛ ولم تختبر PromptQuorum التطبيق عمليًا.',
-    metaDescription: 'مراجعة Local AI Mail: تطبيق بريد إلكتروني جديد لنظام Android يلخّص الرسائل ويترجمها ويصيغ الردود بذكاء اصطناعي على الجهاز. 0+ تنزيل، شيفرته غير منشورة، لم يُختبر.',
+    metaDescription: 'مراجعة Local AI Mail: تطبيق بريد مبكر جدًا لنظام Android يلخّص الرسائل ويترجمها ويصيغ الردود بذكاء اصطناعي على الجهاز. 0+ تنزيل.',
     twitterDescription: 'مراجعة Local AI Mail: تطبيق بريد مبكر جدًا لنظام Android بتلخيص وترجمة ومسودات ردود بذكاء اصطناعي على الجهاز. مدفوع، شيفرته غير منشورة، لم يُختبر بعد.',
     audience: 'مستخدمو Android المهتمون بتطبيق بريد بذكاء اصطناعي على الجهاز، ويريدون معرفة ما تؤكده المصادر وما يدّعيه المطوّر فقط ومدى حداثة التطبيق.',
     readTime: '5 دقائق للقراءة',
@@ -1734,7 +1734,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'يلخّص الرسائل ويترجمها بين سبع لغات ويصيغ الردود بنبرات متعددة، لأي حساب IMAP/SMTP.',
           'لنظام Android فقط عبر [Google Play](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai)؛ ولا يُذكر إصدار لـ iPhone أو سطح المكتب أو الويب.',
           'يعلن قسم «أمان البيانات» عدم جمع أي بيانات أو مشاركتها، وتذكر سياسة الخصوصية أن التطبيق لا يحتوي على حزم SDK للإعلانات أو التتبع.',
-          'بحسب الاطلاع في 11 أكتوبر 2026: الإصدار 1.0.2، آخر تحديث في 10 أكتوبر 2026، وتصنيف USK 16+.',
+          'الإصدار 1.0.2، وآخر تحديث في 10 أكتوبر 2026 (حالة الصفحة في 11 أكتوبر 2026).',
         ],
         updatedDate: '2026-10',
       },
@@ -1788,7 +1788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       tldr: {
         id: 'tldr',
-        title: 'الخلاصة السريعة',
+        title: 'النقاط الرئيسية',
         isTldr: true,
         snippetBlocks: [
           {
@@ -1818,7 +1818,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'ما هو Local AI Mail؟',
         content: [
           '**Local AI Mail: On-Device Email هو تطبيق بريد إلكتروني لنظام Android مزوّد بمساعدة ذكاء اصطناعي مدمجة تعمل افتراضيًا على الهاتف نفسه.** بحسب [صفحته على Google Play](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai)، يتعامل مع حسابات IMAP وSMTP القياسية ويضيف التلخيص والترجمة وصياغة الردود واستخراج المواعيد والأوامر المُملاة صوتيًا.',
-          'للتطبيق اسمان: العنوان على Play هو «Local AI Mail: On-Device Email»، بينما يسميه النص الياباني في سياسة الخصوصية «LocalMail». وكلاهما يشير إلى الحزمة نفسها jp.coffeebozu.mailerai.',
+          'للتطبيق ثلاثة أسماء: العنوان على Play هو «Local AI Mail: On-Device Email»، ويظهر في المتجر الياباني باسم «PrivaMail: ローカルAIメール»، ويسميه النص الياباني في سياسة الخصوصية «LocalMail». وجميعها تشير إلى الحزمة نفسها jp.coffeebozu.mailerai.',
         ],
       },
       getIt: {
@@ -1835,7 +1835,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'المنصة': 'السعر',
-            'مكان الحصول عليه': '12.99 يورو (المتجر الألماني)؛ عرض إطلاق بخصم 100%',
+            'مكان الحصول عليه': '12.99 دولارًا (المتجر الأمريكي)؛ عرض إطلاق بخصم 100%',
           },
           {
             'المنصة': 'مدونة المطوّر',
@@ -1899,19 +1899,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['التطبيق', 'المنصات', 'السعر / الترخيص', 'الفرق الجوهري'],
         rows: [
           {
-            'التطبيق': '[Agentic Inbox](/power-local-llm/agentic-inbox-review)',
+            'التطبيق': '[Agentic Inbox](/ar/power-local-llm/agentic-inbox-review)',
             'المنصات': 'ويب (استضافة ذاتية)',
             'السعر / الترخيص': 'مجاني / Apache-2.0',
             'الفرق الجوهري': 'عميل بريد مفتوح المصدر بوكيل ذكاء اصطناعي في حساب Cloudflare الخاص بك',
           },
           {
-            'التطبيق': '[Aori](/power-local-llm/aori-ai-personal-agent-review)',
+            'التطبيق': '[Aori](/ar/power-local-llm/aori-ai-personal-agent-review)',
             'المنصات': 'Windows وmacOS وLinux وAndroid',
             'السعر / الترخيص': 'مجاني (تجريبي)',
             'الفرق الجوهري': 'وكيل شخصي محلي أولًا عبر Ollama؛ وليس عميل بريد',
           },
           {
-            'التطبيق': '[Atomic Bot](/power-local-llm/atomic-bot-review)',
+            'التطبيق': '[Atomic Bot](/ar/power-local-llm/atomic-bot-review)',
             'المنصات': 'Windows وmacOS وLinux وiOS وAndroid',
             'السعر / الترخيص': 'مجاني جزئيًا / MIT',
             'الفرق الجوهري': 'زميل ذكاء اصطناعي على حزمة وكلاء OpenClaw، محليًا أو سحابيًا',
@@ -1944,7 +1944,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: 'الخلاصة',
-        content: 'Local AI Mail: On-Device Email فكرة جذابة: تطبيق بريد لنظام Android تُنفَّذ ملخصاته وترجماته ومسودات ردوده على الهاتف، ولا يُستخدم الذكاء السحابي إلا عندما تضيف مفتاحك الخاص. لكنه أيضًا منتج لم يُجرَّب بعد: الإصدار 1.0.2، ومطوّر فردي واحد، وشيفرة غير منشورة، ونموذج ومحرك غير مذكورين. يناسب مستخدمي Android الفضوليين الراغبين في التجربة بصندوق بريد ثانوي؛ ومن يحتاج إلى إعداد بريد مجرَّب وقابل للتدقيق فعليه أن يقارن أولًا [Agentic Inbox](/power-local-llm/agentic-inbox-review) ثم يعود إلى هذا التطبيق عندما تتوافر له قاعدة مستخدمين وآراء مستقلة.',
+        content: 'Local AI Mail: On-Device Email فكرة جذابة: تطبيق بريد لنظام Android تُنفَّذ ملخصاته وترجماته ومسودات ردوده على الهاتف، ولا يُستخدم الذكاء السحابي إلا عندما تضيف مفتاحك الخاص. لكنه أيضًا منتج لم يُجرَّب بعد: الإصدار 1.0.2، ومطوّر فردي واحد، وشيفرة غير منشورة، ونموذج ومحرك غير مذكورين. يناسب مستخدمي Android الفضوليين الراغبين في التجربة بصندوق بريد ثانوي؛ ومن يحتاج إلى إعداد بريد مجرَّب وقابل للتدقيق فعليه أن يقارن أولًا [Agentic Inbox](/ar/power-local-llm/agentic-inbox-review) ثم يعود إلى هذا التطبيق عندما تتوافر له قاعدة مستخدمين وآراء مستقلة.',
       },
       sources: {
         id: 'sources',
@@ -1959,10 +1959,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
-          '[مراجعة Agentic Inbox](/power-local-llm/agentic-inbox-review) — عميل بريد مفتوح المصدر ذاتي الاستضافة بوكيل ذكاء اصطناعي.',
-          '[مراجعة Aori](/power-local-llm/aori-ai-personal-agent-review) — وكيل شخصي محلي أولًا يعمل أيضًا على Android.',
-          '[أتمتة البريد والتقويم بنماذج LLM محلية](/power-local-llm/local-llm-email-and-calendar-automation) — بناء سير عمل للبريد والتقويم بنماذج محلية.',
-          '[أفضل تطبيقات LLM المحلية لنظام Android](/power-local-llm/best-local-llm-apps-android-2026) — الدليل الأوسع لتطبيقات Android.',
+          '[مراجعة Agentic Inbox](/ar/power-local-llm/agentic-inbox-review) — عميل بريد مفتوح المصدر ذاتي الاستضافة بوكيل ذكاء اصطناعي.',
+          '[مراجعة Aori](/ar/power-local-llm/aori-ai-personal-agent-review) — وكيل شخصي محلي أولًا يعمل أيضًا على Android.',
+          '[أتمتة البريد والتقويم بنماذج LLM محلية](/ar/power-local-llm/local-llm-email-and-calendar-automation) — بناء سير عمل للبريد والتقويم بنماذج محلية.',
+          '[أفضل تطبيقات LLM المحلية لنظام Android](/ar/power-local-llm/best-local-llm-apps-android-2026) — الدليل الأوسع لتطبيقات Android.',
         ],
       },
     },
@@ -2004,7 +2004,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '可总结邮件、在七种语言之间翻译，并以多种语气起草回复，适用于任何 IMAP/SMTP 账户。',
           '仅支持 Android，通过 [Google Play](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai) 获取；未列出 iPhone、桌面或网页版本。',
           '“数据安全”部分声明不收集、不共享数据，隐私政策称应用不含广告或跟踪 SDK。',
-          '2026 年 10 月 11 日核实：版本 1.0.2，2026 年 10 月 10 日更新，USK 16+ 分级。',
+          '版本 1.0.2，2026 年 10 月 10 日更新（2026 年 10 月 11 日时的页面状态）。',
         ],
         updatedDate: '2026-10',
       },
@@ -2058,7 +2058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       tldr: {
         id: 'tldr',
-        title: '要点速览',
+        title: '核心要点',
         isTldr: true,
         snippetBlocks: [
           {
@@ -2088,7 +2088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Local AI Mail 是什么？',
         content: [
           '**Local AI Mail: On-Device Email 是一款内置 AI 辅助功能的 Android 邮件应用，默认情况下 AI 在手机本机上运行。** 根据其 [Google Play 页面](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai)，它支持标准的 IMAP 和 SMTP 账户，并提供总结、翻译、回复起草、日程提取和语音输入指令等功能。',
-          '这款应用有两个名字：Play 上的标题是“Local AI Mail: On-Device Email”，而隐私政策的日文部分称它为“LocalMail”。两者指的是同一个包 jp.coffeebozu.mailerai。',
+          '这款应用有三个名字：Play 上的标题是“Local AI Mail: On-Device Email”，日本商店中显示为“PrivaMail: ローカルAIメール”，隐私政策的日文部分称它为“LocalMail”。三者指的是同一个包 jp.coffeebozu.mailerai。',
         ],
       },
       getIt: {
@@ -2103,7 +2103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '平台': '价格',
-            '获取渠道': '12.99 欧元（德国商店）；上线优惠 100% 折扣',
+            '获取渠道': '$12.99（美国商店）；上线优惠 100% 折扣',
           },
           {
             '平台': '开发者博客',
@@ -2165,19 +2165,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['应用', '平台', '价格／许可证', '主要区别'],
         rows: [
           {
-            '应用': '[Agentic Inbox](/power-local-llm/agentic-inbox-review)',
+            '应用': '[Agentic Inbox](/zh/power-local-llm/agentic-inbox-review)',
             '平台': '网页（自托管）',
             '价格／许可证': '免费／Apache-2.0',
             '主要区别': '开源邮件客户端，AI 智能体运行在你自己的 Cloudflare 账户中',
           },
           {
-            '应用': '[Aori](/power-local-llm/aori-ai-personal-agent-review)',
+            '应用': '[Aori](/zh/power-local-llm/aori-ai-personal-agent-review)',
             '平台': 'Windows、macOS、Linux、Android',
             '价格／许可证': '免费（测试版）',
             '主要区别': '通过 Ollama 实现本地优先的个人智能体；不是邮件客户端',
           },
           {
-            '应用': '[Atomic Bot](/power-local-llm/atomic-bot-review)',
+            '应用': '[Atomic Bot](/zh/power-local-llm/atomic-bot-review)',
             '平台': 'Windows、macOS、Linux、iOS、Android',
             '价格／许可证': '免费增值／MIT',
             '主要区别': '基于 OpenClaw 智能体栈的 AI 同事，可本地或云端运行',
@@ -2210,7 +2210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: '结论',
-        content: 'Local AI Mail: On-Device Email 是个吸引人的想法：一款 Android 邮件应用，总结、翻译和回复草稿都在手机上完成，只有在你添加自己的密钥后才使用云端 AI。但它也是一款未经检验的产品：版本 1.0.2，只有一位个人开发者，源代码未公开，模型和引擎也未说明。它适合愿意用副邮箱尝鲜的好奇的 Android 用户；需要久经考验、可审计的邮件方案的人，应先比较 [Agentic Inbox](/power-local-llm/agentic-inbox-review)，等这款应用有了用户基础和独立反馈后再回头看。',
+        content: 'Local AI Mail: On-Device Email 是个吸引人的想法：一款 Android 邮件应用，总结、翻译和回复草稿都在手机上完成，只有在你添加自己的密钥后才使用云端 AI。但它也是一款未经检验的产品：版本 1.0.2，只有一位个人开发者，源代码未公开，模型和引擎也未说明。它适合愿意用副邮箱尝鲜的好奇的 Android 用户；需要久经考验、可审计的邮件方案的人，应先比较 [Agentic Inbox](/zh/power-local-llm/agentic-inbox-review)，等这款应用有了用户基础和独立反馈后再回头看。',
       },
       sources: {
         id: 'sources',
@@ -2225,10 +2225,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
-          '[Agentic Inbox 评测](/power-local-llm/agentic-inbox-review) — 带 AI 智能体的开源自托管邮件客户端。',
-          '[Aori 评测](/power-local-llm/aori-ai-personal-agent-review) — 同样可在 Android 上运行的本地优先个人智能体。',
-          '[用本地 LLM 实现邮件与日历自动化](/power-local-llm/local-llm-email-and-calendar-automation) — 用本地模型搭建邮件和日历工作流。',
-          '[Android 上最好的本地 LLM 应用](/power-local-llm/best-local-llm-apps-android-2026) — 更全面的 Android 应用盘点。',
+          '[Agentic Inbox 评测](/zh/power-local-llm/agentic-inbox-review) — 带 AI 智能体的开源自托管邮件客户端。',
+          '[Aori 评测](/zh/power-local-llm/aori-ai-personal-agent-review) — 同样可在 Android 上运行的本地优先个人智能体。',
+          '[用本地 LLM 实现邮件与日历自动化](/zh/power-local-llm/local-llm-email-and-calendar-automation) — 用本地模型搭建邮件和日历工作流。',
+          '[Android 上最好的本地 LLM 应用](/zh/power-local-llm/best-local-llm-apps-android-2026) — 更全面的 Android 应用盘点。',
         ],
       },
     },
@@ -2241,7 +2241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/local-ai-mail-review-hero-ko.webp',
     title: 'Local AI Mail 리뷰: 기기 내 AI를 갖춘 출시 직후의 Android 메일 앱',
-    seoTitle: 'Local AI Mail 리뷰: 기기 내 AI 메일 앱 (Android)',
+    seoTitle: 'Local AI Mail 리뷰: 기기 내 AI 메일 앱',
     intro: 'Local AI Mail: On-Device Email은 개인 개발자 [コーヒー坊主(CoffeeBozu)](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai)가 Google Play에 공개한 Android 메일 앱입니다. 휴대폰에서 실행되는 AI 모델로 메일을 요약·번역하고 답장 초안을 작성하며, 본인의 API 키로 Google Gemini로 전환할 수도 있습니다. 버전 1.0.2의 매우 초기 릴리스입니다. 이 리뷰는 2026년 10월 11일에 확인한 Google Play 등록 정보와 개발자의 개인정보처리방침을 바탕으로 하며, PromptQuorum은 앱을 직접 테스트하지 않았습니다.',
     metaDescription: 'Local AI Mail 리뷰: 기기 내 AI로 메일을 요약·번역하고 답장 초안을 쓰는 출시 직후의 Android 메일 앱. 다운로드 0+, 소스 미공개, 미검증.',
     twitterDescription: 'Local AI Mail 리뷰: 기기 내 AI 요약, 번역, 답장 초안을 제공하는 매우 초기 단계의 Android 메일 앱. 유료, 소스 미공개, 아직 테스트 전.',
@@ -2270,7 +2270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '메일을 요약하고, 7개 언어 사이에서 번역하며, 여러 어조로 답장 초안을 작성합니다. 모든 IMAP/SMTP 계정에서 사용할 수 있습니다.',
           'Android 전용이며 [Google Play](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai)에서 받을 수 있습니다. iPhone, 데스크톱, 웹 버전은 확인되지 않습니다.',
           '‘데이터 보안’ 항목은 수집·공유하는 데이터가 없다고 밝히고, 개인정보처리방침은 광고나 추적 SDK가 없다고 설명합니다.',
-          '2026년 10월 11일 확인 기준: 버전 1.0.2, 2026년 10월 10일 업데이트, USK 16세 이상 등급.',
+          '버전 1.0.2, 2026년 10월 10일 업데이트(2026년 10월 11일 기준 등록 정보).',
         ],
         updatedDate: '2026-10',
       },
@@ -2324,7 +2324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       tldr: {
         id: 'tldr',
-        title: '핵심 요약',
+        title: '핵심 내용',
         isTldr: true,
         snippetBlocks: [
           {
@@ -2354,7 +2354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Local AI Mail이란?',
         content: [
           '**Local AI Mail: On-Device Email은 AI 지원 기능을 내장한 Android 메일 앱이며, 기본적으로 AI가 휴대폰 자체에서 실행됩니다.** [Google Play 등록 정보](https://play.google.com/store/apps/details?id=jp.coffeebozu.mailerai)에 따르면 표준 IMAP·SMTP 계정을 지원하고 요약, 번역, 답장 초안 작성, 일정 추출, 음성 지시 입력 기능을 더합니다.',
-          '이 앱에는 두 가지 이름이 있습니다. Play 제목은 “Local AI Mail: On-Device Email”이고, 개인정보처리방침의 일본어 부분에서는 “LocalMail”이라고 부릅니다. 둘 다 같은 패키지 jp.coffeebozu.mailerai를 가리킵니다.',
+          '이 앱에는 세 가지 이름이 있습니다. Play 제목은 “Local AI Mail: On-Device Email”이고, 일본 스토어에서는 “PrivaMail: ローカルAIメール”로 표시되며, 개인정보처리방침의 일본어 부분에서는 “LocalMail”이라고 부릅니다. 셋 모두 같은 패키지 jp.coffeebozu.mailerai를 가리킵니다.',
         ],
       },
       getIt: {
@@ -2371,7 +2371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             '플랫폼': '가격',
-            '구하는 곳': '12.99유로(독일 스토어), 출시 기념 100% 할인',
+            '구하는 곳': '₩19,000(한국 스토어), 출시 기념 100% 할인',
           },
           {
             '플랫폼': '개발자 블로그',
@@ -2435,19 +2435,19 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         columns: ['앱', '플랫폼', '가격 / 라이선스', '핵심 차이'],
         rows: [
           {
-            '앱': '[Agentic Inbox](/power-local-llm/agentic-inbox-review)',
+            '앱': '[Agentic Inbox](/ko/power-local-llm/agentic-inbox-review)',
             '플랫폼': '웹(자체 호스팅)',
             '가격 / 라이선스': '무료 / Apache-2.0',
             '핵심 차이': '본인 Cloudflare 계정에서 AI 에이전트가 동작하는 오픈소스 메일 클라이언트',
           },
           {
-            '앱': '[Aori](/power-local-llm/aori-ai-personal-agent-review)',
+            '앱': '[Aori](/ko/power-local-llm/aori-ai-personal-agent-review)',
             '플랫폼': 'Windows, macOS, Linux, Android',
             '가격 / 라이선스': '무료(베타)',
             '핵심 차이': 'Ollama를 쓰는 로컬 우선 개인 에이전트이며 메일 클라이언트는 아님',
           },
           {
-            '앱': '[Atomic Bot](/power-local-llm/atomic-bot-review)',
+            '앱': '[Atomic Bot](/ko/power-local-llm/atomic-bot-review)',
             '플랫폼': 'Windows, macOS, Linux, iOS, Android',
             '가격 / 라이선스': '프리미엄 / MIT',
             '핵심 차이': 'OpenClaw 에이전트 스택 기반 AI 동료, 로컬 또는 클라우드 실행',
@@ -2480,7 +2480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verdict: {
         id: 'verdict',
         title: '총평',
-        content: 'Local AI Mail: On-Device Email은 매력적인 아이디어입니다. 요약, 번역, 답장 초안이 휴대폰에서 실행되고, 클라우드 AI는 본인의 키를 추가했을 때만 사용됩니다. 동시에 검증되지 않은 제품이기도 합니다. 버전 1.0.2, 개인 개발자 한 명, 소스 코드 비공개, 명시되지 않은 모델과 엔진이 그 이유입니다. 보조 메일함으로 실험해 보고 싶은 호기심 많은 Android 사용자에게 어울립니다. 검증되고 감사 가능한 메일 환경이 필요하다면 먼저 [Agentic Inbox](/power-local-llm/agentic-inbox-review)를 비교하고, 이 앱은 사용자 기반과 독립적인 평가가 생긴 뒤 다시 살펴보세요.',
+        content: 'Local AI Mail: On-Device Email은 매력적인 아이디어입니다. 요약, 번역, 답장 초안이 휴대폰에서 실행되고, 클라우드 AI는 본인의 키를 추가했을 때만 사용됩니다. 동시에 검증되지 않은 제품이기도 합니다. 버전 1.0.2, 개인 개발자 한 명, 소스 코드 비공개, 명시되지 않은 모델과 엔진이 그 이유입니다. 보조 메일함으로 실험해 보고 싶은 호기심 많은 Android 사용자에게 어울립니다. 검증되고 감사 가능한 메일 환경이 필요하다면 먼저 [Agentic Inbox](/ko/power-local-llm/agentic-inbox-review)를 비교하고, 이 앱은 사용자 기반과 독립적인 평가가 생긴 뒤 다시 살펴보세요.',
       },
       sources: {
         id: 'sources',
@@ -2495,10 +2495,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 글',
         items: [
-          '[Agentic Inbox 리뷰](/power-local-llm/agentic-inbox-review) — AI 에이전트를 갖춘 오픈소스 자체 호스팅 메일 클라이언트.',
-          '[Aori 리뷰](/power-local-llm/aori-ai-personal-agent-review) — Android에서도 실행되는 로컬 우선 개인 에이전트.',
-          '[로컬 LLM으로 메일과 캘린더 자동화하기](/power-local-llm/local-llm-email-and-calendar-automation) — 로컬 모델로 메일·캘린더 워크플로 구성하기.',
-          '[Android용 최고의 로컬 LLM 앱](/power-local-llm/best-local-llm-apps-android-2026) — 더 넓은 Android 앱 비교 가이드.',
+          '[Agentic Inbox 리뷰](/ko/power-local-llm/agentic-inbox-review) — AI 에이전트를 갖춘 오픈소스 자체 호스팅 메일 클라이언트.',
+          '[Aori 리뷰](/ko/power-local-llm/aori-ai-personal-agent-review) — Android에서도 실행되는 로컬 우선 개인 에이전트.',
+          '[로컬 LLM으로 메일과 캘린더 자동화하기](/ko/power-local-llm/local-llm-email-and-calendar-automation) — 로컬 모델로 메일·캘린더 워크플로 구성하기.',
+          '[Android용 최고의 로컬 LLM 앱](/ko/power-local-llm/best-local-llm-apps-android-2026) — 더 넓은 Android 앱 비교 가이드.',
         ],
       },
     },
