@@ -1,0 +1,1259 @@
+{
+  "id": "pq-test-msty-2026-10-13",
+  "standard_version": "0.1",
+  "locale": "zh",
+  "app": {
+    "name": "Msty Studio",
+    "slug": "msty",
+    "vendor": "CloudStack, LLC (per the vendor's site footer)",
+    "category": "本地与云端 AI 聊天工作区",
+    "platform": "macOS（桌面端）",
+    "pricing_url": "https://msty.ai/pricing"
+  },
+  "title": "24 GB Mac 上的 Msty Studio：它立刻找到了我的 Ollama 模型，但它是做什么用的，我始终没弄明白",
+  "page_title": "Msty Studio 测试",
+  "dek": "在配备 24 GB 的 M3 Mac 上的上手测试。已有的 Ollama 模型无需再次下载就出现了。没有生成图片。",
+  "seo": {
+    "title": "Msty Studio 实测：立即找到 Ollama 模型",
+    "description": "在 24 GB Mac 上测试 Msty Studio：Ollama 模型立即出现，文件上传陷入循环，Media Studio 用不了本地图像模型。"
+  },
+  "faq": [
+    [
+      "Msty Studio 能和 Ollama 一起用吗？",
+      "在这次测试中可以。把 Ollama 添加为提供方后，模型选择器里出现了五个 Ollama 模型，笔记中没有记录第二次模型下载。测试者起初以为连接失败了。",
+      "observed"
+    ],
+    [
+      "Msty Studio 能用本地 Ollama 模型生成图片吗？",
+      "这次测试中不能。Media Studio 能打开，但测试者没有找到在那里使用他的本地图像模型（x/flux2-klein）的办法，也没有生成任何图片。'Select image/video model'菜单的内容没有被截取，也没有试过托管的提供方。",
+      "observed"
+    ],
+    [
+      "Msty Studio 会告诉我某个模型能不能在我的 Mac 上运行吗？",
+      "Model Hub 里的模型卡片带有硬件提示，例如 Qwen3-VL 4B 上的'Should run fast on this Mac · ~3.2 GB memory needed, 16.8 GB available'。这是应用自己的估算；模型没有运行。",
+      "vendor-claim"
+    ],
+    [
+      "Msty Studio 要多少钱？",
+      "供应商的价格表（2026 年 10 月 16 日查阅）显示：Free 为 0 美元，Aurum 为每用户每年 149 美元，Aurum Lifetime 为一次性 349 美元。测试者使用的是哪个方案，没有记录。",
+      "vendor-claim"
+    ]
+  ],
+  "status": "部分完成",
+  "published": "2026-10-16",
+  "started": "2026-10-13",
+  "ended": null,
+  "meta": [
+    [
+      "应用",
+      "CloudStack, LLC 的 Msty Studio（桌面版）。笔记里写作'Mysty'和'Misty'（语音转写）；本报告采用供应商的写法。",
+      "vendor-claim"
+    ],
+    [
+      "版本",
+      "未记录。供参考：供应商的更新日志把 Msty Studio 3.0.0 Beta 15（2026 年 10 月 7 日）和 2.9.11（2026 年 9 月 15 日）列为近期版本。",
+      null
+    ],
+    [
+      "测试者",
+      "Hans Kuepper，PromptQuorum 创始人",
+      null
+    ],
+    [
+      "开始时间",
+      "2026 年 10 月 13 日（时间未记录）。笔记说测试会持续'over the next two days'。",
+      "observed"
+    ],
+    [
+      "结束时间",
+      "未记录",
+      null
+    ],
+    [
+      "硬件",
+      "Apple M3 系列 Mac，24 GB。笔记写的是'M3, 24 GB'。标准测试机是配备 M3 Pro 和 24 GB 统一内存的 MacBook Pro；假定是同一台。应用自己曾显示有 16.8 GB 可用。",
+      "assumption"
+    ],
+    [
+      "系统",
+      "macOS；版本未记录",
+      null
+    ],
+    [
+      "来源",
+      "供应商 Studio 产品页上的'Download Studio'按钮",
+      "observed"
+    ],
+    [
+      "下载",
+      "246 MB（安装包，按测试者读到的数值）",
+      "observed"
+    ],
+    [
+      "使用的方案",
+      "未记录。供应商 2026 年 10 月 16 日的价格表：Free 0 美元；Aurum 每用户每年 149 美元；Aurum Lifetime 一次性 349 美元；Enterprise 需咨询。",
+      "vendor-claim"
+    ],
+    [
+      "测试原因",
+      "测试者想知道 Msty 是做什么用的。他称它是早期的专业工具之一，看不出普通家庭用户为什么要用它。",
+      "tester-view"
+    ],
+    [
+      "测试目标",
+      "按笔记所述：弄清 Msty 是做什么的，并看它如何连接本地模型，希望能用 Ollama，这样就不必再下载别的模型。",
+      "observed"
+    ],
+    [
+      "使用的 AI 辅助",
+      "未记录",
+      null
+    ]
+  ],
+  "disclosure": "测试者创办了 PromptQuorum（promptquorum.com），一个关于本地 AI 应用的内容网站和目录。Msty 收录在该目录中，网站上另有一篇单独撰写的评测页。笔记中没有与供应商联系、付款或赞助的记录。",
+  "verdict": {
+    "general": "只测试了一部分。测试者试过的内容大多能用：Msty 识别了他已有的 Ollama 模型，文本聊天和图片上传都能运行，Model Hub 还会告诉你某个模型适不适合这台 Mac。没能顺利的地方：网站和最初几个界面没有说明这个应用是做什么用的，文件上传在知识库和聊天之间来回循环，Media Studio 里也没能用上任何图像模型。笔记止于 Model Matchmaker，没有对 Msty 给出结论。",
+    "fit": "未记录。测试者自己提出的问题'why should a home user use it'，笔记里没有回答。Word 文件结尾的最终评价写的是另一个应用，这里不采用。"
+  },
+  "scores": [
+    [
+      "安装",
+      null,
+      "已记录下载大小（246 MB）。安装步骤和 macOS 弹出的提示没有记录。"
+    ],
+    [
+      "引导与模型选择",
+      3,
+      "Ollama 模型与托管提供方并列显示，模型卡片带有硬件适配提示。最初的界面没有说明应用的用途，而且测试者一开始没看出 Ollama 已经连上。"
+    ],
+    [
+      "核心功能",
+      4,
+      "与 Ollama 模型聊天和图片输入都能用。只有一次文本回复、一次视觉测试和一次文件测试；回答质量没有评估。"
+    ],
+    [
+      "引导与迭代",
+      2,
+      "文件上传在知识库和聊天之间循环。仅限图像的模型和带云标记的模型，与聊天模型出现在同一个选择器里。"
+    ],
+    [
+      "性能",
+      null,
+      "只有一个数据点：一次回复 52.81 tok/s（模型名称被截掉一部分）。不足以打分。"
+    ],
+    [
+      "文档",
+      null,
+      "未测试。"
+    ],
+    [
+      "信任与隐私",
+      null,
+      "未做审计。供应商宣称是'privacy-first workspace'；选择器里也有一个':cloud'模型和托管的提供方。离线运行没有测试。"
+    ],
+    [
+      "卸载",
+      null,
+      "未测试。"
+    ]
+  ],
+  "scores_note": "评分是根据下方证据提出的建议值（1 = 差，5 = 很好），需由测试者确认。",
+  "tldr": [
+    [
+      "observed",
+      "已有的 Ollama 模型出现在 Msty 的模型选择器里。笔记中没有记录第二次模型下载。"
+    ],
+    [
+      "observed",
+      "有两件事没有像测试者期望的那样运行：文件上传在知识库和聊天之间循环，以及 Media Studio 里用不了本地图像模型。"
+    ],
+    [
+      "tester-view",
+      "测试者无法从网站看出 Msty 对家庭用户是做什么用的。笔记中没有对 Msty 的最终结论。"
+    ]
+  ],
+  "quotes": [
+    "每个应用都要下载 10 GB、20 GB 不同的模型，这根本不是出路。",
+    "好吧，这是在绕圈子。",
+    "Model Matchmaker。好主意。我喜欢。"
+  ],
+  "quote_note": "测试者笔记，由语音转写稍作整理。",
+  "moments": [
+    [
+      "它是做什么用的？",
+      "Studio 页面写着'One private AI workspace for real work'。测试者仍然说不清这个应用是做什么用的。",
+      "website",
+      "chapter-listing"
+    ],
+    [
+      "Ollama 早已在那里",
+      "五个 Ollama 模型（包括一个图像模型和一个':cloud'条目）出现在同一个选择器里。测试者起初以为连接失败了。",
+      "picker",
+      "chapter-ollama"
+    ],
+    [
+      "一个循环",
+      "上传用于分析的文件，没有被提问就开始分析了。在聊天里要求分析，应用又要求重新上传。",
+      "kstacks",
+      "chapter-files"
+    ],
+    [
+      "没有图像模型",
+      "Media Studio 打开时显示'Select image/video model'。测试者没有找到在那里使用他本地图像模型的办法。",
+      "media",
+      "chapter-media"
+    ],
+    [
+      "这台 Mac 能运行吗？",
+      "模型卡片上写着'~3.2 GB memory needed, 16.8 GB available'。之前测试的 Draw Things 没有这样的提示。",
+      "tooltip",
+      "chapter-hub"
+    ],
+    [
+      "昨天的排名？",
+      "Model Matchmaker 把两个 Claude Opus 4.x 模型排在最前面。Anthropic 当前页面把 Opus 5.5 列为最新的 Opus。",
+      "ranking",
+      "chapter-hub"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-listing",
+      "title": "网站：它是做什么用的？",
+      "items": [
+        [
+          "observed",
+          "测试者从 Studio 产品页开始。标题：'One private AI workspace for real work.' 副标题：'Chat with models, organize knowledge, create media, and reuse prompts in one privacy-first workspace.' 按钮：'Download Studio'。",
+          "website"
+        ],
+        [
+          "tester-view",
+          "他想弄明白 Msty 是做什么的：它是'最早的一批、专业级的工具之一'，对家庭用户有什么意义，他并不清楚。'这个界面清楚地表明：它到底是干什么的，并不清楚。'",
+          null
+        ],
+        [
+          "observed",
+          "测试者看到了好几种方案和产品，选了'Download Studio'，因为它看起来是在本地运行的那个。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "供应商的产品页列出了 Studio、Go（'bounded AI agents'）、Nexus（'AI control center'）和 Stack（'governed knowledge layer'）。2026 年 10 月 16 日查阅；测试者没有打开这些产品。",
+          null
+        ],
+        [
+          "observed",
+          "下载文件为 246 MB。测试者说：'这样就可以了'。",
+          null
+        ],
+        [
+          "tester-view",
+          "他希望能连接 Ollama 或 LM Studio，这样就不用再下载别的模型。他认为每个应用都应在内置模型之外提供这个选择，因为每个应用都下载 10 到 20 GB，'根本不是出路'。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-first-launch",
+      "title": "首次启动：一个本地模型或一个提供方",
+      "items": [
+        [
+          "observed",
+          "第一个界面（图 1，本页顶部）有一张标着'LOCAL AI · RUNS ON YOUR MACHINE'的卡片：Gemma 4 E2B，3.6 GB，被描述为 Google 带视觉能力的紧凑多模态模型。强度滑块从 Light 到 Powerful，停在'Capable'。按钮写着'Download & Get Started'。",
+          null
+        ],
+        [
+          "observed",
+          "其下的'Or connect an AI provider'列出 OpenAI、Claude、xAI、Gemini、OpenRouter 和'More'。一条黄色提示写着'Add at least one model before continuing with a connected provider.'，'Continue with connected provider'呈灰色。",
+          null
+        ],
+        [
+          "vendor-claim",
+          "'Runs on your machine'是应用自己的标签。测试者没有下载这个模型（他用的是 Ollama 里已有的模型），也没有检查网络流量。",
+          null
+        ],
+        [
+          "assumption",
+          "出现这条提示，是因为当时还没有添加任何模型。哪个操作能让'Continue'可用，没有测试。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-ollama",
+      "title": "连接 Ollama",
+      "items": [
+        [
+          "observed",
+          "'New Model Provider'列表把 Msty Remote 和 Ollama 归在'Msty Compatible'下，MLX Remote 归在'MLX Compatible'下，LLaMA.cpp 归在'OpenAI Compatible'下。截图中的列表是滚动过的，所以 xAI 之上的条目看不到。",
+          "provider"
+        ],
+        [
+          "observed",
+          "笔记：'它允许我连接 Ollama、选择 Ollama，但随后并没有选中它。'他回到本地下载界面，想看看到底怎么回事。",
+          null
+        ],
+        [
+          "tester-error",
+          "连接其实已经成功了。测试者没有意识到，因为按他的说法，应用显示的是模型名称，而不是'Ollama'这个词。随后选择器在 Ollama 标题下列出了五个模型。",
+          "picker"
+        ],
+        [
+          "observed",
+          "对笔记的更正：模型选择器的截图确实在列表上方显示了'Ollama'标题。笔记指的可能是之前一个没有截取的界面（假设）。",
+          null
+        ],
+        [
+          "observed",
+          "测试者的期望实现了：他已有的 Ollama 模型可以使用，笔记中没有记录再次下载模型。",
+          null
+        ],
+        [
+          "assumption",
+          "minimax-m2:cloud 的':cloud'后缀表明这是在云端而非 Mac 上运行的模型。未验证。如果是这样，Ollama 列表就把本地模型和云端模型混在一起，而且没有可见的标记。",
+          null
+        ],
+        [
+          "tester-view",
+          "'太好了，太好了。谢谢。'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-chat",
+      "title": "聊天测试",
+      "items": [
+        [
+          "observed",
+          "测试者要求生成一个二维码（提示词文本未记录；回复中提到 www.promptquorum.com）。回复说它是基于文本的 AI，不能生成图片，并给出了使用免费在线二维码生成器的五个步骤。",
+          "chat"
+        ],
+        [
+          "measured",
+          "回复下方显示 52.81 tok/s。模型名称被截掉一部分（顶部可见'gemma4:latest'；很可能是它，但不确定）。",
+          null
+        ],
+        [
+          "tester-error",
+          "让文本模型生成图片。对文本模型来说，这个回复是正确的。测试者把它说成是'与一个能用的模型之间的差别'。",
+          null
+        ],
+        [
+          "observed",
+          "测试者随后把先前工作中用过的图像模型（Ollama 里的 x/flux2-klein）选作聊天模型。按笔记，它'不支持聊天'。消息本身没有截取。",
+          null
+        ],
+        [
+          "assumption",
+          "测试者怀疑能否同时加载两三个模型（'我觉得不行'）。未测试。供应商页面列有'Split Chats: run models side by side'。",
+          null
+        ],
+        [
+          "observed",
+          "回到 gemma4:latest 后，他上传了一张图片，模型能读取它（仅见于笔记；图片和回答都没有记录）。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-files",
+      "title": "上传 Search Console 文件",
+      "items": [
+        [
+          "observed",
+          "测试者上传了一份 Google Search Console 导出文件。按笔记，应用没被要求就'just ran'了一次分析。笔记中引用的建议第一条：'Investigate High-CTR Regions: A rapid audit of Gambia, Saint Barthélemy, Bangladesh, and Gabon is essential.' 数字没有与文件核对。模型和文件大小未记录。",
+          null
+        ],
+        [
+          "observed",
+          "据描述，循环是这样的：上传会把文件放进'some background tool, knowledge base'。回到聊天后，应用自动分析，不给机会指定分析什么。在聊天里输入'I want this analyzed'，应用就会来要数据。",
+          "kstacks"
+        ],
+        [
+          "assumption",
+          "Knowledge Stacks 的截图接在这些笔记之后。文件是否经过了 Knowledge Stacks，是测试者的理解（'knowledge base'），未经证实。",
+          null
+        ],
+        [
+          "observed",
+          "Knowledge Stacks 界面提供：新建 stack、发现精选 stack、导入 .mstyks 文件，以及'Switch back to Classic Knowledge Stack'。显示的来源有：Notes、YouTube Links、Web Links、Conversation Projects、Conversations；顶部被截掉一半的一行似乎写着'Folders & Obsidian Vaults'。",
+          null
+        ],
+        [
+          "tester-view",
+          "'好吧，这是在绕圈子。'随后：'所以这看起来是个有意思的工具，不过再看看。'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-media",
+      "title": "Media Studio",
+      "items": [
+        [
+          "observed",
+          "侧边栏有一个'Media Studio'条目。界面写着'Create images and videos that follow your imagination wherever it leads.'，有一个可选的上下文拖放区、一个提示词框（'Describe your creation...'）、一个设为 1 的计数器，以及一个写着'Select image/video model'的菜单。",
+          "media"
+        ],
+        [
+          "tester-view",
+          "'太好了，也能做图片。'但连接他的本地 LLM 环境时，应用说他的 Ollama 里没有图像模型，而他认为 Flux 才是合适的。",
+          null
+        ],
+        [
+          "observed",
+          "在 Msty 里没有生成任何图片。笔记中没有记录对他起作用的图像模型选择项。",
+          null
+        ],
+        [
+          "assumption",
+          "Media Studio 没有列出 Ollama 的图像模型 x/flux2-klein。模型菜单的内容没有截取。供应商的更新日志把 Media Studio 记在 2.7.0 版（2026 年 4 月 29 日），并提到 xAI 和 OpenRouter 的图像与视频模型，这暗示它面向托管的提供方。未验证。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-hub",
+      "title": "Model Hub 和 Model Matchmaker",
+      "items": [
+        [
+          "observed",
+          "Model Hub 的侧边栏列有 Model Providers、Local Models、Model Squad、Model Matchmaker、Model Cost Calculator、VRAM Calculator 和 Context Explorer。Local Models 有 Featured、Installed、Search 和 Import 几个标签页。按笔记，只打开了 Matchmaker。",
+          "hub"
+        ],
+        [
+          "observed",
+          "模型卡片显示大小和量化。Qwen3-VL 4B（2.4 GB，4-bit）上的提示写着'Should run fast on this Mac · ~3.2 GB memory needed, 16.8 GB available'。",
+          "tooltip"
+        ],
+        [
+          "vendor-claim",
+          "这个适配估算是应用自己的。模型没有运行。",
+          null
+        ],
+        [
+          "tester-view",
+          "'Model Matchmaker。好主意。我喜欢。'但他没有找到用于图片生成的选择项。",
+          null
+        ],
+        [
+          "observed",
+          "下一张截图显示 Matchmaker 的排名列表：第 1 名 claude-opus-4-6-thinking-auto-high-effort，第 2 名 claude-opus-4-5-20251101-thinking-64k-high-effort，二者都是'Anthropic /remote'，得分 100。可以看到一条通知'Setting up MLX: Preparing engine setup...'；为何出现没有记录。",
+          "ranking"
+        ],
+        [
+          "tester-view",
+          "'都 2026 年 10 月了还看到这个，我没什么印象。更新这个是个 AI 流程。我自己网站上就有更新网站的工具。为什么这么难？'",
+          null
+        ],
+        [
+          "assumption",
+          "这里把'this'理解为截图中的排名已经过时。笔记没有说他指的是哪个界面。",
+          null
+        ],
+        [
+          "third-party",
+          "Anthropic 的模型页面（2026 年 10 月 16 日查阅）把 Claude Opus 5.5（claude-opus-5-5）列为最新的 Opus，没有把这两个 4.x 模型列为当前模型。截图中看不到排名的数据日期，所以是否过时尚未确认。",
+          null
+        ],
+        [
+          "observed",
+          "可见的 Featured 模型有 Mistral 7B Instruct v0.3、Llama 3.2 3B 和 1B、Meta Llama 3.1 8B。Mistral 7B 为 6.9 GB，比 4.5 GB 的 Llama 3.1 8B 大，两者都标为 4-bit；卡片上没有解释这个差异。",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-end",
+      "title": "笔记在哪里中断",
+      "items": [
+        [
+          "observed",
+          "笔记中关于 Msty 的部分止于 Model Matchmaker。Word 文件的其余部分（从'Generate similar images'那段起）写的是另一个应用，一个图像生成器，并附有自己的截图。本报告没有采用。",
+          null
+        ],
+        [
+          "observed",
+          "Msty 方面未记录：应用和 macOS 的版本、结束时间、使用的方案、结论、卸载检查。",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "'Chat with models, organize knowledge, create media, and reuse prompts in one privacy-first workspace.'",
+      "供应商 Studio 页面（也出现在测试者的截图中）",
+      "与 Ollama 模型聊天可以用。Knowledge Stacks 能打开。Media Studio 能打开，但没有产出图片。没有尝试重用提示词。没有审计隐私。",
+      "observed"
+    ],
+    [
+      "'Bring local inference engines like MLX, llama.cpp, and Ollama together with hosted providers in one organized hub.'",
+      "供应商 Studio 页面，2026 年 10 月 16 日查阅",
+      "Ollama 连接成功，其模型被列出。LLaMA.cpp 和 MLX Remote 出现在提供方列表中。只用了 Ollama。MLX 的设置通知出现过一次。",
+      "observed"
+    ],
+    [
+      "Split Chats：'run models side by side'",
+      "供应商 Studio 页面，2026 年 10 月 16 日查阅",
+      "未测试。测试者假定两三个模型不能同时加载。",
+      "assumption"
+    ],
+    [
+      "Media Studio：图像生成与视频创意构思",
+      "供应商 Studio 页面，2026 年 10 月 16 日查阅",
+      "这个界面存在。没有生成图片；没有找到可用的本地图像模型。",
+      "observed"
+    ],
+    [
+      "'LOCAL AI · RUNS ON YOUR MACHINE'（Gemma 4 E2B，3.6 GB）",
+      "首次启动界面",
+      "没有下载。测试者用的是 Ollama 里已有的模型。没有检查网络。",
+      "observed"
+    ],
+    [
+      "'Should run fast on this Mac · ~3.2 GB memory needed, 16.8 GB available'",
+      "Model Hub 提示",
+      "模型没有运行，因此估算没有被验证。",
+      "vendor-claim"
+    ],
+    [
+      "Free 方案：0 美元，包含本地和在线模型以及 Media Studio（部分功能受限）",
+      "供应商价格页面，2026 年 10 月 16 日查阅",
+      "测试者使用的方案没有记录。",
+      "vendor-claim"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale": 30,
+    "rows": [
+      [
+        "Llama 3.2 1B (4-bit)",
+        0.645,
+        "645 MB",
+        "observed"
+      ],
+      [
+        "Llama 3.2 3B (4-bit)",
+        1.7,
+        "1.7 GB",
+        "observed"
+      ],
+      [
+        "Qwen3-VL 4B (4-bit)",
+        2.4,
+        "文件 2.4 GB；应用称约需 3.2 GB 内存",
+        "vendor-claim"
+      ],
+      [
+        "Gemma 4 E2B（首次启动时的下载）",
+        3.6,
+        "3.6 GB",
+        "observed"
+      ],
+      [
+        "Meta Llama 3.1 8B (4-bit)",
+        4.5,
+        "4.5 GB",
+        "observed"
+      ],
+      [
+        "Mistral 7B Instruct v0.3 (4-bit)",
+        6.9,
+        "6.9 GB",
+        "observed"
+      ],
+      [
+        "Qwen3 14B (4-bit)",
+        9,
+        "9.0 GB",
+        "observed"
+      ]
+    ],
+    "note": "这些是模型卡片上显示的下载大小，不是运行时内存。上下文长度和引擎会改变模型所需的内存。在显示 Qwen3-VL 提示时，应用报告有 16.8 GB 可用。测试者实际使用的 Ollama 模型（Gemma 3 1B、gemma4:latest、Qwen3-Coder 30B）在选择器里没有显示大小。Qwen3 14B 的卡片在截图里只露出一部分（名称、大小和量化可以读到）。"
+  },
+  "usage_log": [
+    [
+      "把 Ollama 连接为提供方",
+      "-",
+      "已连接；Ollama 下列出五个模型。测试者起初以为失败了。",
+      "未记录",
+      "Pass",
+      [
+        "provider",
+        "picker"
+      ]
+    ],
+    [
+      "聊天：要求生成二维码",
+      "gemma4:latest（名称被截掉一部分）",
+      "仅文本回复，给出在线生成器的步骤；52.81 tok/s",
+      "未记录",
+      "Not completed",
+      [
+        "chat"
+      ]
+    ],
+    [
+      "与图像模型（x/flux2-klein）聊天",
+      "x/flux2-klein:latest",
+      "'Does not support chat'（笔记；消息未截取）",
+      "-",
+      "Not completed",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "向聊天上传图片",
+      "gemma4:latest",
+      "模型能读取这张图片（仅见于笔记）",
+      "未记录",
+      "Pass",
+      []
+    ],
+    [
+      "上传并分析 Search Console 导出文件",
+      "未记录",
+      "没被要求就进行了分析；在聊天里提出要求，应用又要求重新上传",
+      "未记录",
+      "Partial",
+      [
+        "kstacks"
+      ]
+    ],
+    [
+      "在 Media Studio 里生成图片",
+      "没有可用的",
+      "没有生成图片",
+      "-",
+      "Not completed",
+      [
+        "media"
+      ]
+    ],
+    [
+      "浏览 Model Hub，打开 Model Matchmaker",
+      "-",
+      "带大小和适配提示的卡片；显示了排名",
+      "未记录",
+      "Pass",
+      [
+        "hub",
+        "tooltip",
+        "ranking"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "以为与 Ollama 的连接失败了。其实已经连上，模型都列出来了。"
+    ],
+    [
+      "tester-error",
+      "向文本模型要图片（二维码），然后拿'functional model'来评判它。"
+    ],
+    [
+      "tester-error",
+      "写道应用没有显示'Ollama'。但他自己的截图在模型列表上方显示了'Ollama'标题。"
+    ],
+    [
+      "tester-error",
+      "记录有缺口：应用版本、macOS 版本、结束时间、使用的方案、提示词、回答文件测试的是哪个模型，以及对 Msty 的结论。"
+    ],
+    [
+      "tester-error",
+      "把两个应用混在一个文档里。Msty 文件的后半部分写的是图像生成器，使 Msty 测试在哪里结束变得不清楚。"
+    ],
+    [
+      "assumption",
+      "测试者怀疑能否同时运行多个模型。未测试，而供应商列有 Split Chats。"
+    ]
+  ],
+  "findings": [
+    [
+      "MS-01",
+      "Studio 页面和最初几个界面没有告诉家庭用户这个应用是做什么用的。",
+      "定位",
+      "tester-view",
+      "Medium",
+      [
+        "website",
+        "onboarding"
+      ]
+    ],
+    [
+      "MS-02",
+      "第一个界面提供一个本地模型（Gemma 4 E2B，3.6 GB）或一个托管提供方；那里没有显示 Ollama，它出现在提供方列表中。",
+      "引导",
+      "observed",
+      "Low",
+      [
+        "onboarding",
+        "provider"
+      ]
+    ],
+    [
+      "MS-03",
+      "已有的 Ollama 模型出现在选择器里；测试者希望避免再次下载模型的期望实现了。",
+      "设置",
+      "observed",
+      "Positive",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "MS-04",
+      "连接之后，测试者看不出 Ollama 已经连上（笔记中没有提到确认提示）。",
+      "设置",
+      "tester-view",
+      "Medium",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "MS-05",
+      "仅限图像的模型（x/flux2-klein）和':cloud'模型与聊天模型列在一起；图像模型无法用于聊天。",
+      "模型选择",
+      "observed",
+      "Medium",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "MS-06",
+      "文本模型对图片请求给出了合理的回答，并指向了一个在线生成器。",
+      "聊天",
+      "observed",
+      "Positive",
+      [
+        "chat"
+      ]
+    ],
+    [
+      "MS-07",
+      "按笔记，向 gemma4:latest 上传图片是可以的。",
+      "聊天",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "MS-08",
+      "文件上传陷入循环：没有提问就自动分析；在聊天里提出要求，应用又要求重新上传。",
+      "文件",
+      "tester-view",
+      "High",
+      [
+        "kstacks"
+      ]
+    ],
+    [
+      "MS-09",
+      "Knowledge Stacks 提供多种来源类型和一种导入格式（.mstyks）；只看到了起始界面。",
+      "文件",
+      "observed",
+      "Low",
+      [
+        "kstacks"
+      ]
+    ],
+    [
+      "MS-10",
+      "在 Media Studio 里选不到本地图像模型；没有生成图片。",
+      "媒体",
+      "observed",
+      "High",
+      [
+        "media"
+      ]
+    ],
+    [
+      "MS-11",
+      "模型卡片显示硬件适配提示，包含所需内存和可用内存。",
+      "Model Hub",
+      "observed",
+      "Positive",
+      [
+        "tooltip"
+      ]
+    ],
+    [
+      "MS-12",
+      "Model Hub 集合了七个工具（提供方、本地模型、squad、matchmaker、成本、VRAM、上下文）；只打开了 Matchmaker。",
+      "Model Hub",
+      "observed",
+      "Low",
+      [
+        "hub"
+      ]
+    ],
+    [
+      "MS-13",
+      "Matchmaker 的排名由两个 Claude Opus 4.x 模型领先，而 Anthropic 把 Opus 5.5 列为最新；是否过时尚未确认（没有显示数据日期）。",
+      "时效性",
+      "assumption",
+      "Medium",
+      [
+        "ranking"
+      ]
+    ],
+    [
+      "MS-14",
+      "'Setting up MLX'通知出现了，但没有记录触发原因。",
+      "Model Hub",
+      "observed",
+      "Low",
+      [
+        "ranking"
+      ]
+    ],
+    [
+      "MS-15",
+      "Mistral 7B（6.9 GB）列得比 Llama 3.1 8B（4.5 GB）大，两者都是'4-bit'，没有解释。",
+      "Model Hub",
+      "observed",
+      "Low",
+      [
+        "hub"
+      ]
+    ],
+    [
+      "MS-16",
+      "测试者对 Model Matchmaker 这个想法评价很高，并称这个工具'interesting'。",
+      "Model Hub",
+      "tester-view",
+      "Positive",
+      [
+        "ranking"
+      ]
+    ]
+  ],
+  "severity_note": "严重程度指对第一次使用的用户的影响。为建议值，并非实测。",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "已在运行 Ollama、想用一个桌面前端同时管理本地和托管模型的人（这次测试中重用 Ollama 是可行的）。"
+      ],
+      [
+        "vendor-claim",
+        "需要 SSO、审计日志和共享控制的团队（列在供应商的 Studio 页面上；未测试）。"
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "希望从最初几个界面就弄清应用用途的家庭用户。"
+      ],
+      [
+        "assumption",
+        "期望在 Media Studio 里用本地 Ollama 图像模型生成图片的用户（这次测试中没有成功）。"
+      ]
+    ],
+    "retest": "重新测试未测的部分（Split Chats、提示词、使用托管图像模型的 Media Studio、文件工作流、卸载），并先记录版本和 macOS。供应商的更新日志显示，3.0.0 在 2026 年 10 月 7 日仍是测试版，所以正式发布时界面可能改变（假设）。"
+  },
+  "background_intro": "不属于上手测试过程，未经验证。以下内容来自供应商自己的网站、更新日志和 PromptQuorum 目录，由一个会概述页面的网页抓取工具于 2026 年 10 月 16 日读取。其中没有任何一项为这次测试独立验证过。",
+  "background": [
+    [
+      "vendor-claim",
+      "供应商页脚写着'Msty is a product of CloudStack, LLC.'（2026）。"
+    ],
+    [
+      "vendor-claim",
+      "价格表：Free 0 美元；Aurum 每用户每年 149 美元；Aurum Lifetime 一次性 349 美元；Enterprise 和 Teams 需咨询，最少 5 个席位。价格页面没有说明软件许可证。"
+    ],
+    [
+      "third-party",
+      "PromptQuorum 目录把 Msty 列为闭源、免费增值，支持 macOS、Windows 和 Linux，最近一次上游更新为 2026 年 10 月 7 日。该条目未经验证（时效性：未验证）。"
+    ],
+    [
+      "vendor-claim",
+      "更新日志：Media Studio 在 2.7.0 版（2026 年 4 月 29 日）引入；对 Apple Silicon 的 MLX 支持最早出现在 2.0.0-alpha.10（2025 年 8 月 7 日），标为实验性；Knowledge Stacks 2.0 出现在 2.0.0-alpha.9（2025 年 7 月 31 日）。2026 年 10 月 7 日列出的最新版本：3.0.0 Beta 15。"
+    ]
+  ],
+  "sources": [
+    "测试者的上手笔记，2026 年 10 月 13 日开始（原始 Word 文档；原始笔记 PDF 待补充）。只使用其中关于 Msty 的部分。",
+    "供应商的 Studio 页面（msty.ai/products/studio）、价格页面（msty.ai/pricing）和更新日志（msty.ai/changelog），2026 年 10 月 16 日查阅。",
+    "Anthropic 模型概览（platform.claude.com/docs/en/models/overview），2026 年 10 月 16 日查阅。",
+    "PromptQuorum 目录中的 Msty 条目（slug：msty）。"
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "已观察",
+      "meaning": "在应用、截图或测试者笔记中亲眼所见。"
+    },
+    "measured": {
+      "label": "已测量",
+      "meaning": "从对话框、计数器或工具中读取的数值，并给出了该数字。"
+    },
+    "tester-estimate": {
+      "label": "测试者估计",
+      "meaning": "测试者自己的估计；未计时或计数。"
+    },
+    "vendor-claim": {
+      "label": "厂商声明",
+      "meaning": "由应用、其商店页面或其网站所述；未经核实。"
+    },
+    "third-party": {
+      "label": "第三方",
+      "meaning": "来自其他来源（AI 助手、文章）；此处未核实。"
+    },
+    "assumption": {
+      "label": "假设",
+      "meaning": "一种推断，可能有误。"
+    },
+    "tester-view": {
+      "label": "测试者观点",
+      "meaning": "测试者的判断或看法。"
+    },
+    "tester-error": {
+      "label": "测试者失误",
+      "meaning": "测试者出错或遗漏之处。"
+    }
+  },
+  "images": [
+    {
+      "id": "onboarding",
+      "figure": 1,
+      "file": "msty-first-launch-gemma-4-download-or-connect-provider.webp",
+      "path": "images/msty-first-launch-gemma-4-download-or-connect-provider.webp",
+      "alt": "Msty 首次启动界面，可下载 3.6 GB 的本地模型 Gemma 4 E2B，或连接 OpenAI、Claude、xAI、Gemini 或 OpenRouter。",
+      "caption": "首次启动。一个本地模型（Gemma 4 E2B，3.6 GB，强度滑块在'Capable'）或一个已连接的提供方。黄色提示写着'Add at least one model before continuing with a connected provider.'，Continue 按钮呈灰色。",
+      "role": "hero",
+      "width": 1282,
+      "height": 1042,
+      "bytes": 55538,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero",
+        "chapter-first-launch"
+      ],
+      "subject": "Msty 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-13 或之后；具体时间未记录",
+      "original_docx_media": "image3.png"
+    },
+    {
+      "id": "website",
+      "figure": 2,
+      "file": "msty-vendor-website-one-private-ai-workspace-headline.webp",
+      "path": "images/msty-vendor-website-one-private-ai-workspace-headline.webp",
+      "alt": "Msty Studio 产品页，标题为'One private AI workspace for real work'，带有 Download Studio 按钮。",
+      "caption": "测试者出发的 Studio 产品页。标题和'Chat with models, organize knowledge, create media, and reuse prompts in one privacy-first workspace.'这一行是供应商的原文。",
+      "role": "moment",
+      "width": 1405,
+      "height": 582,
+      "bytes": 37576,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-listing",
+        "moments-card"
+      ],
+      "subject": "Msty 网站截图",
+      "rights": "测试者对供应商网页的截图；页面文字属于供应商。",
+      "captured": "2026-10-13 或之后；具体时间未记录",
+      "original_docx_media": "image1.png"
+    },
+    {
+      "id": "provider",
+      "figure": 3,
+      "file": "msty-new-model-provider-list-with-ollama-and-mlx.webp",
+      "path": "images/msty-new-model-provider-list-with-ollama-and-mlx.webp",
+      "alt": "Msty 的 New Model Provider 列表：Msty Remote 和 Ollama 在 Msty Compatible 下，MLX Remote 在 MLX Compatible 下，LLaMA.cpp 在 OpenAI Compatible 下。",
+      "caption": "'New Model Provider'列表（已滚动）。Ollama 在'Msty Compatible'下，MLX Remote 在'MLX Compatible'下，LLaMA.cpp 在'OpenAI Compatible'下。xAI 之上的条目看不到。",
+      "role": "inline",
+      "width": 939,
+      "height": 626,
+      "bytes": 15652,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-ollama"
+      ],
+      "subject": "Msty 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-13 或之后；具体时间未记录",
+      "original_docx_media": "image2.png"
+    },
+    {
+      "id": "picker",
+      "figure": 4,
+      "file": "msty-model-picker-ollama-models-gemma-qwen-flux.webp",
+      "path": "images/msty-model-picker-ollama-models-gemma-qwen-flux.webp",
+      "alt": "Msty 模型选择器，Ollama 分组下列有 Gemma 3 1B、gemma4:latest、minimax-m2:cloud、Qwen3-Coder 30B 和 x/flux2-klein:latest。",
+      "caption": "连接 Ollama 之后的模型选择器：'Ollama'标题下有五个模型，其中包括一个图像模型（x/flux2-klein:latest）和一个':cloud'条目，与聊天模型在同一个列表里。",
+      "role": "moment",
+      "width": 939,
+      "height": 485,
+      "bytes": 16936,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-ollama",
+        "moments-card"
+      ],
+      "subject": "Msty 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-13 或之后；具体时间未记录",
+      "original_docx_media": "image4.png"
+    },
+    {
+      "id": "chat",
+      "figure": 5,
+      "file": "msty-chat-text-model-declines-qr-code-request.webp",
+      "path": "images/msty-chat-text-model-declines-qr-code-request.webp",
+      "alt": "Msty 中文本模型的聊天回复，称无法生成二维码图片，并列出使用在线生成器的五个步骤，52.81 tok/s。",
+      "caption": "对二维码请求的回复。模型名称在顶部被截断（'gemma4:latest'部分可见）。回复上方有一个'Thoughts (1)'折叠项。回复下方的计数器显示 52.81 tok/s。",
+      "role": "inline",
+      "width": 953,
+      "height": 539,
+      "bytes": 39282,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-chat"
+      ],
+      "subject": "Msty 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-13 或之后；具体时间未记录",
+      "original_docx_media": "image5.png"
+    },
+    {
+      "id": "kstacks",
+      "figure": 6,
+      "file": "msty-knowledge-stacks-start-screen-sources.webp",
+      "path": "images/msty-knowledge-stacks-start-screen-sources.webp",
+      "alt": "Msty Knowledge Stacks 起始界面，有创建、发现或导入 stack 的选项，以及 Notes、YouTube Links、Web Links 等来源类型。",
+      "caption": "Knowledge Stacks 起始界面：新建、发现、导入（.mstyks 文件）和'Switch back to Classic Knowledge Stack'。右侧的来源：Notes、YouTube Links、Web Links、Conversation Projects、Conversations。Search Console 文件是否经过这个界面，尚未确认。",
+      "role": "moment",
+      "width": 1428,
+      "height": 880,
+      "bytes": 46700,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-files",
+        "moments-card"
+      ],
+      "subject": "Msty 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-13 或之后；具体时间未记录",
+      "original_docx_media": "image6.png"
+    },
+    {
+      "id": "media",
+      "figure": 7,
+      "file": "msty-media-studio-prompt-box-and-model-selector.webp",
+      "path": "images/msty-media-studio-prompt-box-and-model-selector.webp",
+      "alt": "Msty Media Studio 界面，有可选的上下文拖放区、提示词框和'Select image/video model'菜单。",
+      "caption": "Media Studio。模型菜单仍显示'Select image/video model'。菜单内容没有截取；没有生成图片。",
+      "role": "moment",
+      "width": 1429,
+      "height": 860,
+      "bytes": 33996,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-media",
+        "moments-card"
+      ],
+      "subject": "Msty 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-13 或之后；具体时间未记录",
+      "original_docx_media": "image7.png"
+    },
+    {
+      "id": "hub",
+      "figure": 8,
+      "file": "msty-model-hub-local-models-featured-list.webp",
+      "path": "images/msty-model-hub-local-models-featured-list.webp",
+      "alt": "Msty Model Hub 的 Local Models，Featured 标签页，有 Mistral 7B Instruct v0.3、Llama 3.2 3B、Llama 3.2 1B 和 Meta Llama 3.1 8B 的卡片及大小。",
+      "caption": "Model Hub，Featured 本地模型（列表已滚动，只露出一部分）：Mistral 7B Instruct v0.3 6.9 GB、Llama 3.2 3B 1.7 GB、Llama 3.2 1B 645 MB、Meta Llama 3.1 8B 4.5 GB，全部标为 4-bit。侧边栏列有七个工具。",
+      "role": "inline",
+      "width": 1023,
+      "height": 603,
+      "bytes": 32002,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-hub"
+      ],
+      "subject": "Msty 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-13 或之后；具体时间未记录",
+      "original_docx_media": "image8.png"
+    },
+    {
+      "id": "tooltip",
+      "figure": 9,
+      "file": "msty-model-hub-qwen3-vl-fits-this-mac-tooltip.webp",
+      "path": "images/msty-model-hub-qwen3-vl-fits-this-mac-tooltip.webp",
+      "alt": "Msty Model Hub 中 Qwen3-VL 4B 的提示：'Should run fast on this Mac, about 3.2 GB memory needed, 16.8 GB available'。",
+      "caption": "模型卡片上的硬件提示：'Should run fast on this Mac · ~3.2 GB memory needed, 16.8 GB available'。卡片显示 Qwen3-VL 4B，2.4 GB，4-bit。估算来自应用本身；模型没有运行。",
+      "role": "moment",
+      "width": 940,
+      "height": 510,
+      "bytes": 28110,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-hub",
+        "moments-card"
+      ],
+      "subject": "Msty 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-13 或之后；具体时间未记录",
+      "original_docx_media": "image9.png"
+    },
+    {
+      "id": "ranking",
+      "figure": 10,
+      "file": "msty-model-matchmaker-ranking-claude-opus-top.webp",
+      "path": "images/msty-model-matchmaker-ranking-claude-opus-top.webp",
+      "alt": "Msty Model Matchmaker 的排名列表，前两名是得分 100 的两个 Claude Opus 模型，顶部有'Setting up MLX'通知。",
+      "caption": "Model Matchmaker，'Ranked Models'。第 1 名 claude-opus-4-6-thinking-auto-high-effort，第 2 名 claude-opus-4-5-20251101-thinking-64k-high-effort，提供方均为'Anthropic /remote'，归一化得分 100。正在显示一条通知'Setting up MLX: Preparing engine setup...'。排名的数据日期不可见。",
+      "role": "moment",
+      "width": 1431,
+      "height": 889,
+      "bytes": 41916,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-hub",
+        "moments-card"
+      ],
+      "subject": "Msty 应用截图",
+      "rights": "测试者自己对第三方软件界面的截图。",
+      "captured": "2026-10-13 或之后；具体时间未记录",
+      "original_docx_media": "image10.png"
+    }
+  ],
+  "figure_order": [
+    "onboarding",
+    "website",
+    "provider",
+    "picker",
+    "chat",
+    "kstacks",
+    "media",
+    "hub",
+    "tooltip",
+    "ranking"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum 上手测试 · {app} · {date}",
+    "date_line": "2026 年 10 月 13 日",
+    "nav_aria": "章节",
+    "nav": {
+      "verdict": "结论",
+      "moments": "六个时刻",
+      "story": "测试经过",
+      "claims": "说法核对",
+      "fit": "24 GB",
+      "log": "使用记录",
+      "errors": "测试者失误",
+      "findings": "发现项",
+      "background": "背景"
+    },
+    "related": "相关内容：",
+    "review_link": "PromptQuorum 对 {app} 的评测",
+    "directory_link": "本地 AI 应用目录",
+    "verdict_h": "结论",
+    "general_assessment": "总体评价",
+    "fit_for_tester": "是否适合测试者的使用场景",
+    "scorecard": "评分卡",
+    "status_prefix": "状态：",
+    "na": "不适用",
+    "score_aria": "满分 5 分，得 {n} 分",
+    "details_h": "测试详情",
+    "label_intro": "每条陈述都带有标签：",
+    "legend_link": "标签含义",
+    "disclosure_label": "利益披露。",
+    "raw_notes": "原始笔记 PDF：",
+    "to_be_added": "待补充",
+    "moments_h": "左右这次测试的六个时刻",
+    "see_context": "查看上下文",
+    "story_h": "测试经过",
+    "claims_h": "官方说法与测试者所见",
+    "claims_cols": [
+      "说法",
+      "来源",
+      "已观察",
+      "标签"
+    ],
+    "fit_h": "能装进 24 GB 吗？",
+    "memory_line": "{gb} GB 内存",
+    "above": "高于 {gb} GB",
+    "below": "低于 {gb} GB",
+    "log_h": "使用记录",
+    "log_cols": [
+      "#",
+      "任务",
+      "模型",
+      "结果",
+      "用时",
+      "状态",
+      "图"
+    ],
+    "statuses": {
+      "Fail": "失败",
+      "Partial": "部分完成",
+      "Pass": "通过",
+      "Not completed": "未完成"
+    },
+    "errors_h": "测试者出错的地方",
+    "findings_h": "发现清单",
+    "filter_aria": "按标签筛选发现项",
+    "filter_all": "全部",
+    "findings_cols": [
+      "编号",
+      "发现项",
+      "类别",
+      "标签",
+      "严重程度",
+      "图"
+    ],
+    "severities": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低",
+      "Positive": "正面"
+    },
+    "fig_abbr": "图",
+    "figure": "图",
+    "enlarge": "放大：",
+    "audience_h": "适合谁",
+    "likely_fit": "可能适合",
+    "likely_poor_fit": "可能不适合",
+    "retest": "复测。",
+    "background_h": "开发方背景",
+    "gallery_h": "测试中的更多图片",
+    "legend_h": "如何理解标签",
+    "sources_h": "资料来源",
+    "footer_line": "测试编号 {id} · 测试标准 v{version} · 原始笔记 PDF：待补充",
+    "crumb_home": "首页",
+    "crumb_directory": "目录",
+    "crumb_test": "{app} 上手测试",
+    "faq_h": "常见问题",
+    "more_tests_h": "更多实测"
+  }
+}

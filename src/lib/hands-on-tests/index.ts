@@ -10,6 +10,15 @@ import pageAssistEs from './data/page-assist.es.json'
 import pageAssistPt from './data/page-assist.pt.json'
 import pageAssistAr from './data/page-assist.ar.json'
 import pageAssistKo from './data/page-assist.ko.json'
+import msty from './data/msty.json'
+import mstyDe from './data/msty.de.json'
+import mstyFr from './data/msty.fr.json'
+import mstyJa from './data/msty.ja.json'
+import mstyZh from './data/msty.zh.json'
+import mstyEs from './data/msty.es.json'
+import mstyPt from './data/msty.pt.json'
+import mstyAr from './data/msty.ar.json'
+import mstyKo from './data/msty.ko.json'
 import drawThingsDe from './data/draw-things.de.json'
 import drawThingsFr from './data/draw-things.fr.json'
 import drawThingsJa from './data/draw-things.ja.json'
@@ -197,6 +206,17 @@ const HANDS_ON_TESTS: Record<string, Partial<Record<Language, HandsOnTest>>> = {
     pt: pageAssistPt as unknown as HandsOnTest,
     ar: pageAssistAr as unknown as HandsOnTest,
     ko: pageAssistKo as unknown as HandsOnTest,
+  },
+  msty: {
+    en: msty as unknown as HandsOnTest,
+    de: mstyDe as unknown as HandsOnTest,
+    fr: mstyFr as unknown as HandsOnTest,
+    ja: mstyJa as unknown as HandsOnTest,
+    zh: mstyZh as unknown as HandsOnTest,
+    es: mstyEs as unknown as HandsOnTest,
+    pt: mstyPt as unknown as HandsOnTest,
+    ar: mstyAr as unknown as HandsOnTest,
+    ko: mstyKo as unknown as HandsOnTest,
   },
 }
 
