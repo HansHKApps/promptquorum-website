@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Is balcony solar legal in Maryland?',
-        answer: 'Yes. Maryland HB 1532 (the Utility RELIEF Act) was signed May 12, 2026 and took effect immediately via an emergency clause — no waiting period before residents could legally install a qualifying device.',
+        answer: 'In effect. Maryland HB 1532 (the Utility RELIEF Act) was signed May 12, 2026 and took effect immediately via an emergency clause — no waiting period before residents could legally install a qualifying device.',
         bullets: [
           'HB 1532 signed May 12, 2026 with an emergency clause — effective immediately, no waiting period',
           '1,200W cap, with a lower 391W sub-threshold called out in the broader regulatory template',
@@ -143,7 +143,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Ist Balkonsolar in Maryland legal?',
-        answer: 'Ja. Marylands HB 1532 (der Utility RELIEF Act) wurde am 12. Mai 2026 unterzeichnet und trat durch eine Notstandsklausel sofort in Kraft — ohne Wartezeit, bevor Einwohner ein zulässiges Gerät legal installieren konnten.',
+        answer: 'In Kraft. Marylands HB 1532 (der Utility RELIEF Act) wurde am 12. Mai 2026 unterzeichnet und trat durch eine Notstandsklausel sofort in Kraft — ohne Wartezeit, bevor Einwohner ein zulässiges Gerät legal installieren konnten.',
         bullets: [
           'HB 1532 am 12. Mai 2026 mit Notstandsklausel unterzeichnet — sofort wirksam, keine Wartezeit',
           '1.200-W-Obergrenze, mit einer niedrigeren 391-W-Unterschwelle im breiteren regulatorischen Rahmenwerk',
@@ -249,7 +249,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Le solaire de balcon est-il légal dans le Maryland ?',
-        answer: "Oui. Le HB 1532 du Maryland (le Utility RELIEF Act) a été signé le 12 mai 2026 et est entré en vigueur immédiatement via une clause d'urgence — aucun délai d'attente avant que les résidents puissent légalement installer un appareil conforme.",
+        answer: "En vigueur. Le HB 1532 du Maryland (le Utility RELIEF Act) a été signé le 12 mai 2026 et est entré en vigueur immédiatement via une clause d'urgence — aucun délai d'attente avant que les résidents puissent légalement installer un appareil conforme.",
         bullets: [
           "HB 1532 signé le 12 mai 2026 avec une clause d'urgence — effectif immédiatement, aucun délai d'attente",
           "Plafond de 1 200 W, avec un seuil inférieur de 391 W mentionné dans le cadre réglementaire plus large",
@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'メリーランド州でバルコニーソーラーは合法ですか？',
-        answer: 'はい。メリーランド州のHB 1532（Utility RELIEF Act）は2026年5月12日に署名され、緊急条項により即座に発効しました——住民が適合機器を合法的に設置できるまでの待機期間はありませんでした。',
+        answer: '施行済み。メリーランド州のHB 1532（Utility RELIEF Act）は2026年5月12日に署名され、緊急条項により即座に発効しました——住民が適合機器を合法的に設置できるまでの待機期間はありませんでした。',
         bullets: [
           'HB 1532は緊急条項付きで2026年5月12日に署名——即座に発効、待機期間なし',
           '上限1,200W。より広い規制フレームワークでは391Wの下位しきい値にも言及',
@@ -461,7 +461,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '在马里兰州安装阳台太阳能合法吗？',
-        answer: '合法。马里兰州HB 1532（公用事业救济法案 Utility RELIEF Act）于2026年5月12日签署，并通过紧急条款立即生效——居民无需等待即可合法安装符合条件的设备。',
+        answer: '已生效。马里兰州HB 1532（公用事业救济法案 Utility RELIEF Act）于2026年5月12日签署，并通过紧急条款立即生效——居民无需等待即可合法安装符合条件的设备。',
         bullets: [
           'HB 1532于2026年5月12日签署，附带紧急条款——立即生效，无等待期',
           '功率上限1,200W，更广泛的监管框架中还提及了391W的较低门槛',
@@ -567,7 +567,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Es legal la energía solar de balcón en Maryland?',
-        answer: 'Sí. La HB 1532 de Maryland (la Utility RELIEF Act) se firmó el 12 de mayo de 2026 y entró en vigor de inmediato gracias a una cláusula de emergencia — sin período de espera antes de que los residentes pudieran instalar legalmente un dispositivo que cumpliera los requisitos.',
+        answer: 'En vigor. La HB 1532 de Maryland (la Utility RELIEF Act) se firmó el 12 de mayo de 2026 y entró en vigor de inmediato gracias a una cláusula de emergencia — sin período de espera antes de que los residentes pudieran instalar legalmente un dispositivo que cumpliera los requisitos.',
         bullets: [
           'HB 1532 firmada el 12 de mayo de 2026 con cláusula de emergencia — vigente de inmediato, sin período de espera',
           'Límite de 1,200 W, con un umbral inferior de 391 W mencionado en el marco regulatorio más amplio',
@@ -673,7 +673,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'A energia solar de varanda é legal em Maryland?',
-        answer: 'Sim. A HB 1532 de Maryland (a Utility RELIEF Act) foi assinada em 12 de maio de 2026 e entrou em vigor imediatamente por meio de uma cláusula de emergência — sem período de espera antes que os moradores pudessem instalar legalmente um dispositivo que atendesse aos requisitos.',
+        answer: 'Em vigor. A HB 1532 de Maryland (a Utility RELIEF Act) foi assinada em 12 de maio de 2026 e entrou em vigor imediatamente por meio de uma cláusula de emergência — sem período de espera antes que os moradores pudessem instalar legalmente um dispositivo que atendesse aos requisitos.',
         bullets: [
           'HB 1532 assinada em 12 de maio de 2026 com cláusula de emergência — em vigor imediatamente, sem período de espera',
           'Limite de 1.200 W, com um subpatamar menor de 391 W mencionado no marco regulatório mais amplo',
@@ -779,7 +779,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل الطاقة الشمسية للشرفات قانونية في ماريلاند؟',
-        answer: 'نعم. تم توقيع قانون HB 1532 في ماريلاند (المعروف باسم Utility RELIEF Act) في 12 مايو 2026، ودخل حيز التنفيذ فورًا بموجب بند طوارئ — دون أي فترة انتظار قبل أن يتمكن السكان من تركيب جهاز مستوفٍ للشروط بشكل قانوني.',
+        answer: 'ساري المفعول. تم توقيع قانون HB 1532 في ماريلاند (المعروف باسم Utility RELIEF Act) في 12 مايو 2026، ودخل حيز التنفيذ فورًا بموجب بند طوارئ — دون أي فترة انتظار قبل أن يتمكن السكان من تركيب جهاز مستوفٍ للشروط بشكل قانوني.',
         bullets: [
           'تم توقيع HB 1532 في 12 مايو 2026 مع بند طوارئ — سريان فوري دون فترة انتظار',
           'حد أقصى 1,200 واط، مع عتبة فرعية أقل تبلغ 391 واط مذكورة في الإطار التنظيمي الأوسع',
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '메릴랜드주에서 발코니 태양광은 합법입니까?',
-        answer: '합법입니다. 메릴랜드주 HB 1532(Utility RELIEF Act)는 2026년 5월 12일 서명되었으며, 긴급 조항에 따라 즉시 발효되었습니다 — 주민들이 적합한 기기를 합법적으로 설치할 수 있기까지 별도의 대기 기간이 없었습니다.',
+        answer: '시행 중입니다. 메릴랜드주 HB 1532(Utility RELIEF Act)는 2026년 5월 12일 서명되었으며, 긴급 조항에 따라 즉시 발효되었습니다 — 주민들이 적합한 기기를 합법적으로 설치할 수 있기까지 별도의 대기 기간이 없었습니다.',
         bullets: [
           'HB 1532는 긴급 조항과 함께 2026년 5월 12일 서명 — 즉시 발효, 대기 기간 없음',
           '상한선 1,200W이며, 더 넓은 규제 프레임워크에서는 391W의 하위 임계값도 언급됨',

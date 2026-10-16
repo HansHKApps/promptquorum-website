@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Is balcony solar legal in Virginia?',
-        answer: 'Yes. Virginia HB 395/SB 250 was signed April 22, 2026 and took effect July 1, 2026. Devices up to 1,200W qualify, and localities cannot enact their own ban within that state cap.',
+        answer: 'In effect. Virginia HB 395/SB 250 was signed April 22, 2026 and took effect July 1, 2026. Devices up to 1,200W qualify, and localities cannot enact their own ban within that state cap.',
         bullets: [
           'HB 395/SB 250 signed April 22, 2026, effective July 1, 2026 — already in force',
           '1,200W cap; localities cannot ban balcony solar within that cap',
@@ -144,7 +144,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Ist Balkonsolar in Virginia legal?',
-        answer: 'Ja. Virginias HB 395/SB 250 wurde am 22. April 2026 unterzeichnet und trat am 1. Juli 2026 in Kraft. Geräte bis 1.200 W sind zulässig, und Kommunen dürfen innerhalb dieser landesweiten Obergrenze kein eigenes Verbot erlassen.',
+        answer: 'In Kraft. Virginias HB 395/SB 250 wurde am 22. April 2026 unterzeichnet und trat am 1. Juli 2026 in Kraft. Geräte bis 1.200 W sind zulässig, und Kommunen dürfen innerhalb dieser landesweiten Obergrenze kein eigenes Verbot erlassen.',
         bullets: [
           'HB 395/SB 250 unterzeichnet am 22. April 2026, in Kraft seit 1. Juli 2026 – bereits geltendes Recht',
           '1.200-W-Obergrenze; Kommunen dürfen Balkonsolar innerhalb dieser Grenze nicht verbieten',
@@ -251,7 +251,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Le solaire de balcon est-il légal en Virginie ?',
-        answer: 'Oui. La loi HB 395/SB 250 de Virginie a été signée le 22 avril 2026 et est entrée en vigueur le 1er juillet 2026. Les appareils jusqu\'à 1 200 W sont éligibles, et les collectivités locales ne peuvent pas instaurer leur propre interdiction dans cette limite d\'État.',
+        answer: 'En vigueur. La loi HB 395/SB 250 de Virginie a été signée le 22 avril 2026 et est entrée en vigueur le 1er juillet 2026. Les appareils jusqu\'à 1 200 W sont éligibles, et les collectivités locales ne peuvent pas instaurer leur propre interdiction dans cette limite d\'État.',
         bullets: [
           'HB 395/SB 250 signée le 22 avril 2026, en vigueur depuis le 1er juillet 2026 — déjà applicable',
           'Plafond de 1 200 W ; les collectivités locales ne peuvent pas interdire le solaire de balcon dans cette limite',
@@ -358,7 +358,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'バージニア州でベランダソーラーは合法ですか？',
-        answer: 'はい。バージニア州のHB 395/SB 250は2026年4月22日に署名され、2026年7月1日に施行されました。1,200Wまでの機器が対象となり、この州の上限内では地方自治体が独自の禁止条例を制定することはできません。',
+        answer: '施行済み。バージニア州のHB 395/SB 250は2026年4月22日に署名され、2026年7月1日に施行されました。1,200Wまでの機器が対象となり、この州の上限内では地方自治体が独自の禁止条例を制定することはできません。',
         bullets: [
           'HB 395/SB 250は2026年4月22日に署名、2026年7月1日に施行済み — すでに発効中',
           '上限1,200W。この上限内でベランダソーラーを地方自治体が禁止することはできない',
@@ -465,7 +465,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '弗吉尼亚州的阳台太阳能合法吗？',
-        answer: '合法。弗吉尼亚州HB 395/SB 250法案于2026年4月22日签署，2026年7月1日起生效。功率不超过1,200瓦的设备符合条件，且地方政府不得在该州级上限内自行立法禁止。',
+        answer: '已生效。弗吉尼亚州HB 395/SB 250法案于2026年4月22日签署，2026年7月1日起生效。功率不超过1,200瓦的设备符合条件，且地方政府不得在该州级上限内自行立法禁止。',
         bullets: [
           'HB 395/SB 250于2026年4月22日签署，2026年7月1日起生效——已正式生效',
           '功率上限1,200瓦；地方政府不得在该上限内禁止阳台太阳能',
@@ -572,7 +572,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Es legal la energía solar de balcón en Virginia?',
-        answer: 'Sí. La ley HB 395/SB 250 de Virginia se firmó el 22 de abril de 2026 y entró en vigor el 1 de julio de 2026. Los dispositivos de hasta 1.200 W califican, y los gobiernos locales no pueden establecer su propia prohibición dentro de ese límite estatal.',
+        answer: 'En vigor. La ley HB 395/SB 250 de Virginia se firmó el 22 de abril de 2026 y entró en vigor el 1 de julio de 2026. Los dispositivos de hasta 1.200 W califican, y los gobiernos locales no pueden establecer su propia prohibición dentro de ese límite estatal.',
         bullets: [
           'HB 395/SB 250 firmada el 22 de abril de 2026, vigente desde el 1 de julio de 2026 — ya en vigor',
           'Límite de 1.200 W; los gobiernos locales no pueden prohibir la energía solar de balcón dentro de ese límite',
@@ -679,7 +679,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'A energia solar de varanda é legal na Virgínia?',
-        answer: 'Sim. A lei HB 395/SB 250 da Virgínia foi sancionada em 22 de abril de 2026 e entrou em vigor em 1º de julho de 2026. Dispositivos de até 1.200 W se qualificam, e os governos locais não podem criar sua própria proibição dentro desse limite estadual.',
+        answer: 'Em vigor. A lei HB 395/SB 250 da Virgínia foi sancionada em 22 de abril de 2026 e entrou em vigor em 1º de julho de 2026. Dispositivos de até 1.200 W se qualificam, e os governos locais não podem criar sua própria proibição dentro desse limite estadual.',
         bullets: [
           'HB 395/SB 250 sancionada em 22 de abril de 2026, em vigor desde 1º de julho de 2026 — já vigente',
           'Limite de 1.200 W; os governos locais não podem proibir a energia solar de varanda dentro desse limite',
@@ -786,7 +786,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل الطاقة الشمسية للشرفات قانونية في فيرجينيا؟',
-        answer: 'نعم. تم توقيع قانون HB 395/SB 250 في فيرجينيا بتاريخ 22 أبريل 2026، ودخل حيز التنفيذ في 1 يوليو 2026. تتأهل الأجهزة التي لا تتجاوز 1,200 واط، ولا يمكن للسلطات المحلية سن حظر خاص بها ضمن هذا الحد على مستوى الولاية.',
+        answer: 'ساري المفعول. تم توقيع قانون HB 395/SB 250 في فيرجينيا بتاريخ 22 أبريل 2026، ودخل حيز التنفيذ في 1 يوليو 2026. تتأهل الأجهزة التي لا تتجاوز 1,200 واط، ولا يمكن للسلطات المحلية سن حظر خاص بها ضمن هذا الحد على مستوى الولاية.',
         bullets: [
           'تم توقيع HB 395/SB 250 في 22 أبريل 2026، وأصبح ساري المفعول منذ 1 يوليو 2026 — نافذ بالفعل',
           'حد أقصى 1,200 واط؛ لا يمكن للسلطات المحلية حظر الطاقة الشمسية للشرفات ضمن هذا الحد',
@@ -893,7 +893,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '버지니아주에서 발코니 태양광은 합법입니까?',
-        answer: '예. 버지니아주 HB 395/SB 250은 2026년 4월 22일에 서명되었으며 2026년 7월 1일부터 시행되었습니다. 1,200W 이하의 기기가 해당되며, 지방정부는 이 주 전체 상한선 내에서 자체적인 금지 조치를 시행할 수 없습니다.',
+        answer: '시행 중입니다. 버지니아주 HB 395/SB 250은 2026년 4월 22일에 서명되었으며 2026년 7월 1일부터 시행되었습니다. 1,200W 이하의 기기가 해당되며, 지방정부는 이 주 전체 상한선 내에서 자체적인 금지 조치를 시행할 수 없습니다.',
         bullets: [
           'HB 395/SB 250은 2026년 4월 22일 서명, 2026년 7월 1일부터 시행 — 이미 발효 중',
           '상한선 1,200W; 지방정부는 이 상한선 내에서 발코니 태양광을 금지할 수 없음',

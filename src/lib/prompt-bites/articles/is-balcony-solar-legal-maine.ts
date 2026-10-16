@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Is balcony solar legal in Maine?',
-        answer: 'Yes. Maine LD 1730 was signed April 6, 2026 and took effect July 15, 2026. Maine is the only one of the 8 enacted states with a two-tier cap: up to 420W as a self-install, or up to 1,200W if a licensed electrician does the connection.',
+        answer: 'In effect. Maine LD 1730 was signed April 6, 2026 and took effect July 15, 2026. Maine is the only one of the 8 enacted states with a two-tier cap: up to 420W as a self-install, or up to 1,200W if a licensed electrician does the connection.',
         bullets: [
           'LD 1730 signed April 6, 2026, effective July 15, 2026',
           'Unique two-tier cap: 420W self-install vs. 1,200W with a licensed electrician',
@@ -143,7 +143,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Ist Balkonsolar in Maine legal?',
-        answer: 'Ja. Das Maine-Gesetz LD 1730 wurde am 6. April 2026 unterzeichnet und trat am 15. Juli 2026 in Kraft. Maine ist der einzige der 8 Bundesstaaten mit einem Gesetz, das eine zweistufige Leistungsgrenze vorsieht: bis zu 420 W bei Selbstinstallation oder bis zu 1.200 W, wenn ein lizenzierter Elektriker den Anschluss vornimmt.',
+        answer: 'In Kraft. Das Maine-Gesetz LD 1730 wurde am 6. April 2026 unterzeichnet und trat am 15. Juli 2026 in Kraft. Maine ist der einzige der 8 Bundesstaaten mit einem Gesetz, das eine zweistufige Leistungsgrenze vorsieht: bis zu 420 W bei Selbstinstallation oder bis zu 1.200 W, wenn ein lizenzierter Elektriker den Anschluss vornimmt.',
         bullets: [
           'LD 1730 unterzeichnet am 6. April 2026, in Kraft seit 15. Juli 2026',
           'Einzigartige zweistufige Grenze: 420 W Selbstinstallation vs. 1.200 W mit lizenziertem Elektriker',
@@ -249,7 +249,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Le solaire de balcon est-il légal dans le Maine ?',
-        answer: 'Oui. La loi LD 1730 du Maine a été signée le 6 avril 2026 et est entrée en vigueur le 15 juillet 2026. Le Maine est le seul des 8 États ayant adopté une loi à prévoir un plafond à deux niveaux : jusqu\'à 420 W en autoinstallation, ou jusqu\'à 1 200 W si un électricien agréé réalise le raccordement.',
+        answer: 'En vigueur. La loi LD 1730 du Maine a été signée le 6 avril 2026 et est entrée en vigueur le 15 juillet 2026. Le Maine est le seul des 8 États ayant adopté une loi à prévoir un plafond à deux niveaux : jusqu\'à 420 W en autoinstallation, ou jusqu\'à 1 200 W si un électricien agréé réalise le raccordement.',
         bullets: [
           'LD 1730 signée le 6 avril 2026, en vigueur depuis le 15 juillet 2026',
           'Plafond unique à deux niveaux : 420 W en autoinstallation contre 1 200 W avec un électricien agréé',
@@ -355,7 +355,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'メイン州でバルコニーソーラーは合法ですか?',
-        answer: 'はい。メイン州のLD 1730は2026年4月6日に署名され、2026年7月15日に施行されました。メイン州は、法制化された8州の中で唯一、2段階の上限を設けています。セルフインストールなら420Wまで、有資格の電気技師が接続を行う場合は1,200Wまでです。',
+        answer: '施行済み。メイン州のLD 1730は2026年4月6日に署名され、2026年7月15日に施行されました。メイン州は、法制化された8州の中で唯一、2段階の上限を設けています。セルフインストールなら420Wまで、有資格の電気技師が接続を行う場合は1,200Wまでです。',
         bullets: [
           'LD 1730は2026年4月6日に署名、2026年7月15日に施行',
           '独自の2段階上限:セルフインストールは420W、有資格電気技師による接続は1,200W',
@@ -461,7 +461,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '缅因州的阳台太阳能合法吗?',
-        answer: '合法。缅因州LD 1730法案于2026年4月6日签署,2026年7月15日生效。在已立法的8个州中,缅因州是唯一设有两级功率上限的州:自行安装最高420W,若由持证电工完成接线则可达1200W。',
+        answer: '已生效。缅因州LD 1730法案于2026年4月6日签署,2026年7月15日生效。在已立法的8个州中,缅因州是唯一设有两级功率上限的州:自行安装最高420W,若由持证电工完成接线则可达1200W。',
         bullets: [
           'LD 1730于2026年4月6日签署,2026年7月15日生效',
           '独特的两级上限:自行安装420W,持证电工接线1200W',
@@ -567,7 +567,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Es legal la energía solar de balcón en Maine?',
-        answer: 'Sí. La ley LD 1730 de Maine se firmó el 6 de abril de 2026 y entró en vigor el 15 de julio de 2026. Maine es el único de los 8 estados con ley aprobada que tiene un límite de dos niveles: hasta 420W en autoinstalación, o hasta 1200W si un electricista con licencia hace la conexión.',
+        answer: 'En vigor. La ley LD 1730 de Maine se firmó el 6 de abril de 2026 y entró en vigor el 15 de julio de 2026. Maine es el único de los 8 estados con ley aprobada que tiene un límite de dos niveles: hasta 420W en autoinstalación, o hasta 1200W si un electricista con licencia hace la conexión.',
         bullets: [
           'LD 1730 firmada el 6 de abril de 2026, en vigor desde el 15 de julio de 2026',
           'Límite único de dos niveles: 420W en autoinstalación frente a 1200W con electricista con licencia',
@@ -673,7 +673,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'A energia solar de varanda é legal no Maine?',
-        answer: 'Sim. A lei LD 1730 do Maine foi assinada em 6 de abril de 2026 e entrou em vigor em 15 de julho de 2026. O Maine é o único dos 8 estados com lei aprovada que tem um limite em dois níveis: até 420W em autoinstalação, ou até 1.200W se um eletricista licenciado fizer a conexão.',
+        answer: 'Em vigor. A lei LD 1730 do Maine foi assinada em 6 de abril de 2026 e entrou em vigor em 15 de julho de 2026. O Maine é o único dos 8 estados com lei aprovada que tem um limite em dois níveis: até 420W em autoinstalação, ou até 1.200W se um eletricista licenciado fizer a conexão.',
         bullets: [
           'LD 1730 assinada em 6 de abril de 2026, em vigor desde 15 de julho de 2026',
           'Limite único em dois níveis: 420W em autoinstalação vs. 1.200W com eletricista licenciado',
@@ -779,7 +779,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل الطاقة الشمسية للشرفات قانونية في ولاية مين؟',
-        answer: 'نعم. تم توقيع قانون LD 1730 في ولاية مين بتاريخ 6 أبريل 2026 ودخل حيز التنفيذ في 15 يوليو 2026. وتُعد ولاية مين الولاية الوحيدة من بين الولايات الثماني التي سنّت قوانين والتي تطبّق حدًا من مستويين: حتى 420W للتركيب الذاتي، أو حتى 1200W إذا قام كهربائي مرخص بالتوصيل.',
+        answer: 'ساري المفعول. تم توقيع قانون LD 1730 في ولاية مين بتاريخ 6 أبريل 2026 ودخل حيز التنفيذ في 15 يوليو 2026. وتُعد ولاية مين الولاية الوحيدة من بين الولايات الثماني التي سنّت قوانين والتي تطبّق حدًا من مستويين: حتى 420W للتركيب الذاتي، أو حتى 1200W إذا قام كهربائي مرخص بالتوصيل.',
         bullets: [
           'تم توقيع LD 1730 في 6 أبريل 2026، ودخل حيز التنفيذ في 15 يوليو 2026',
           'حد فريد من مستويين: 420W للتركيب الذاتي مقابل 1200W مع كهربائي مرخص',
@@ -885,7 +885,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '메인주에서 발코니 태양광이 합법입니까?',
-        answer: '네, 합법입니다. 메인주 LD 1730 법안은 2026년 4월 6일 서명되었으며 2026년 7월 15일부터 시행되었습니다. 메인주는 법제화된 8개 주 가운데 유일하게 2단계 상한을 적용합니다. 자가 설치 시 최대 420W까지, 면허를 소지한 전기기사가 연결을 시공하는 경우 최대 1,200W까지 허용됩니다.',
+        answer: '시행 중입니다. 메인주 LD 1730 법안은 2026년 4월 6일 서명되었으며 2026년 7월 15일부터 시행되었습니다. 메인주는 법제화된 8개 주 가운데 유일하게 2단계 상한을 적용합니다. 자가 설치 시 최대 420W까지, 면허를 소지한 전기기사가 연결을 시공하는 경우 최대 1,200W까지 허용됩니다.',
         bullets: [
           'LD 1730은 2026년 4월 6일 서명, 2026년 7월 15일부터 시행',
           '독특한 2단계 상한: 자가 설치 420W, 면허 전기기사 시공 1,200W',
