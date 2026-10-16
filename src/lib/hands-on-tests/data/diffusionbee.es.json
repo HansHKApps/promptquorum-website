@@ -1,0 +1,1894 @@
+{
+ "id": "pq-test-diffusionbee-2026-10-14",
+ "hero": "juggernaut_clown",
+ "date_human": "14 de octubre de 2026",
+ "captured": "2026-10-14 or later; exact times not recorded",
+ "standard_version": "0.1",
+ "locale": "es",
+ "app": {
+  "name": "DiffusionBee",
+  "slug": "diffusionbee",
+  "vendor": "Not stated on the vendor page (GitHub handle: divamgupta)",
+  "category": "Local AI image generation",
+  "platform": "macOS (DMG)",
+  "pricing_url": "https://diffusionbee.com"
+ },
+ "title": "DiffusionBee en un Mac de 24 GB: generar funcionó enseguida, editar casi nunca",
+ "page_title": "DiffusionBee Test",
+ "dek": "Prueba práctica en un Mac con M3 y 24 GB. Las imágenes salían en cerca de un minuto; las ediciones dirigidas sobre una imagen existente casi siempre fallaron.",
+ "seo": {
+  "title": "Prueba de DiffusionBee: editar imágenes casi siempre falló",
+  "description": "Prueba práctica de DiffusionBee en un Mac de 24 GB (M3): el texto a imagen funcionó en cerca de un minuto, pero las ediciones dirigidas casi siempre fallaron."
+ },
+ "faq": [
+  [
+   "¿DiffusionBee es gratis y funciona en el Mac?",
+   "El fabricante dice que es gratis y que funciona sin conexión. En la prueba no apareció ninguna petición de pago, los modelos se descargaron a través de la app y las imágenes se generaron en el Mac. No se probaron el uso sin conexión ni el tráfico de red.",
+   "observed"
+  ],
+  [
+   "¿Puede DiffusionBee editar una imagen existente?",
+   "En esta prueba, casi nunca. Quitar a un transeúnte con inpainting estuvo cerca; al quitar el logo quedaron manchas rosas, y el cambio de cielo, el cambio a pop art y añadir un crucero no funcionaron.",
+   "observed"
+  ],
+  [
+   "¿Cuánto tarda una imagen en un Mac de 24 GB?",
+   "El evaluador calcula cerca de un minuto por imagen a 1216 x 1216 con JuggernautXL en un Mac con M3 y 24 GB. No se cronometró.",
+   "tester-estimate"
+  ],
+  [
+   "¿DiffusionBee muestra el tamaño de un modelo antes de descargarlo?",
+   "No. Las tarjetas de la página Models muestran un nombre, una línea breve y una etiqueta, pero ningún tamaño, y los cuadros de descarga solo muestran un porcentaje.",
+   "observed"
+  ],
+  [
+   "¿Por qué los modelos FLUX.1 dicen que la app necesita una actualización?",
+   "Las tarjetas de FLUX.1-schnell y FLUX.1-dev muestran 'You need to update DiffusionBee to use this model', aunque el evaluador había descargado la app unos dos minutos antes. No se descargaron ni se usaron.",
+   "observed"
+  ]
+ ],
+ "status": "Completed",
+ "published": "2026-10-16",
+ "started": "2026-10-14",
+ "ended": null,
+ "meta": [
+  [
+   "App",
+   "DiffusionBee. Las notas lo escriben 'Diffusion B', 'Diffusion Bee' y 'DiffusionBee'; este informe usa la grafía de la propia app.",
+   "observed"
+  ],
+  [
+   "Versión",
+   "No registrada. La página del fabricante no muestra versión ni fecha de lanzamiento.",
+   null
+  ],
+  [
+   "Evaluador",
+   "Hans Kuepper, fundador de PromptQuorum",
+   null
+  ],
+  [
+   "Inicio",
+   "14 de octubre de 2026 (hora no registrada). Las notas dicen '14 Oktober 2027'; el año se interpreta como una errata porque la prueba se hizo en 2026 (una captura de información de archivo en el documento de Msty lleva la fecha 14 Oct 2026).",
+   "assumption"
+  ],
+  [
+   "Fin",
+   "No registrado",
+   null
+  ],
+  [
+   "Hardware",
+   "Mac de la familia Apple M3 con 24 GB. Las notas dicen 'M3 as usual'; otro pasaje dice '24 gigabyte Mac M3'. El equipo de pruebas estándar es un MacBook Pro con M3 Pro; se supone que es el mismo equipo.",
+   "assumption"
+  ],
+  [
+   "Sistema",
+   "macOS; versión no registrada",
+   null
+  ],
+  [
+   "Fuente",
+   "Página de descarga del sitio web de DiffusionBee (en la primera captura se ve, detrás de la app, una pestaña del navegador 'diffusionbee.com/download')",
+   "observed"
+  ],
+  [
+   "Descarga",
+   "DMG de 270 MB (según lo leyó el evaluador)",
+   "observed"
+  ],
+  [
+   "Motivo de la prueba",
+   "No se indica en las notas.",
+   null
+  ],
+  [
+   "Objetivo",
+   "No se indica. Deducido de las tareas: ejecutar generación de imágenes local en el Mac de 24 GB y probar después un lugar real, texto de marca, edición y un prompt negativo.",
+   "assumption"
+  ],
+  [
+   "Ayuda de IA utilizada",
+   "En las notas se pegó una respuesta de Google sobre Juggernaut XL. El prompt largo de la marca contiene marcas de negrita de Markdown, lo que sugiere que lo escribió una IA; no confirmado. El prompt de Heidelberg se escribió hace años, 'I think' con ChatGPT u otro modelo de frontera.",
+   "observed"
+  ]
+ ],
+ "disclosure": "El evaluador fundó PromptQuorum (promptquorum.com), un sitio de contenidos y un directorio sobre apps de IA local. DiffusionBee figura en ese directorio y tiene en el sitio una página de reseña propia, escrita por separado. Las notas no registran contacto con el fabricante, ningún pago ni patrocinio.",
+ "verdict": {
+  "general": "Gratis, local y fácil de empezar: una descarga de 270 MB, una pantalla de inicio con seis herramientas y una primera imagen en pocos minutos una vez descargado el modelo por defecto. Generar varias imágenes en una sola tanda en cola funciona bien, y un buen modelo (JuggernautXL) dio escenas convincentes en cerca de un minuto cada una. Puntos débiles: la página Models no muestra tamaños ni orientación, las descargas no muestran estimación de tiempo y una caducó, los modelos FLUX aparecen en la lista pero requieren actualizar la app, y el seguimiento del prompt depende del modelo (se ignoró un prompt negativo). Editar una imagen existente casi siempre falló: solo uno de seis intentos (quitar a una persona) estuvo cerca.",
+  "fit": "Mixto. El evaluador la calificó como la mejor app local de imágenes que ha probado y la primera app de imágenes que 'really works', y dijo también que el flujo creativo que quiere (conservar esta imagen, cambiar esto y esto, paso a paso) no le funcionó. Los motivos y sus palabras finales están en 'Cómo fue la prueba'. Su juicio final procede de notas encontradas en el documento de Msty (véase el capítulo 'Más pruebas y la valoración final')."
+ },
+ "scores": [
+  [
+   "Instalación",
+   4,
+   "DMG de 270 MB, 'just click open'. Aun así hay que descargar el primer modelo, y esa descarga caducó una vez."
+  ],
+  [
+   "Primeros pasos y elección de modelo",
+   2,
+   "La página Models muestra solo nombres y etiquetas, sin tamaños. Las tarjetas de FLUX necesitan una actualización de la app. Cada herramienta puede pedir otra descarga de modelo. Hay un botón de importar."
+  ],
+  [
+   "Función principal",
+   3,
+   "El texto a imagen funcionó y un buen modelo dio escenas convincentes. El texto de marca salió distorsionado, se ignoró un prompt negativo y cuatro de seis intentos de edición fallaron."
+  ],
+  [
+   "Guía e iteración",
+   2,
+   "Sin información sobre los modelos dentro de la app, sin un flujo de edición paso a paso que el evaluador encontrara, y Input Strength y Seed son difíciles de entender. Una cola y un botón Actions ayudan."
+  ],
+  [
+   "Rendimiento",
+   4,
+   "Cerca de un minuto por imagen en alta resolución y unos 5 GB de memoria para un modelo (ambas, estimaciones del evaluador); la app no muestra velocidad ni tiempo."
+  ],
+  [
+   "Documentación",
+   null,
+   "No probado."
+  ],
+  [
+   "Confianza y privacidad",
+   null,
+   "No auditado. El fabricante afirma un uso 100 por ciento sin conexión; los modelos se descargan a través de la app. El funcionamiento sin conexión no se probó."
+  ],
+  [
+   "Desinstalación",
+   null,
+   "No probado."
+  ]
+ ],
+ "scores_note": "Las puntuaciones son propuestas derivadas de las evidencias que aparecen más abajo (1 = malo, 5 = muy bueno). Corresponde al evaluador confirmarlas.",
+ "tldr": [
+  [
+   "observed",
+   "El texto a imagen funcionó rápido: un círculo sencillo con el modelo por defecto y escenas convincentes con JuggernautXL. La app permite poner varias imágenes en cola y seguir trabajando."
+  ],
+  [
+   "observed",
+   "Empezar tiene fricciones: sin tamaños de modelo, sin estimación del tiempo de descarga, una caducidad en la primera descarga y modelos FLUX que necesitan una actualización de la app que el evaluador acababa de instalar."
+  ],
+  [
+   "tester-view",
+   "Editar una imagen existente casi siempre falló: al quitar el logo quedaron restos, los cambios de cielo y de pop art no se aplicaron y no se pudo añadir ningún crucero."
+  ]
+ ],
+ "quotes": [
+  "¿Por qué no dice nada sobre el tamaño de los modelos para que pueda ver cuáles funcionan en mi ordenador?",
+  "Esa es la diferencia entre los modelos de frontera con acceso a internet y los LLM puros que solo generan imágenes.",
+  "La primera app de imágenes que de verdad funciona."
+ ],
+ "quote_note": "Notas del evaluador, editadas ligeramente a partir de una transcripción de voz. Traducido del inglés.",
+ "moments_title": "Seis momentos que marcaron esta prueba",
+ "moments_nav": "Seis momentos",
+ "moments": [
+  [
+   "Sin tamaños, y FLUX necesita una actualización",
+   "La página Models muestra nombres y etiquetas sin tamaños. Las tarjetas de FLUX.1 dicen 'You need to update DiffusionBee to use this model'.",
+   "models",
+   "chapter-models"
+  ],
+  [
+   "De vuelta a cero",
+   "La descarga del primer modelo falló con ESOCKETTIMEDOUT. El evaluador cuenta que iba al 65 por ciento y tuvo que empezar de nuevo.",
+   "timeout",
+   "chapter-install"
+  ],
+  [
+   "Un castillo, no Heidelberg",
+   "El prompt de Heidelberg del evaluador devolvió escenas de castillo bonitas pero genéricas.",
+   "heidelberg",
+   "chapter-heidelberg"
+  ],
+  [
+   "Logo fuera, espaguetis no",
+   "El inpainting quitó el logo legible y dejó manchas rosas y hebras emborronadas.",
+   "barilla_result",
+   "chapter-inpaint"
+  ],
+  [
+   "Cerca, cerca, cerca",
+   "Con la guía al máximo aparecen el payaso, el elefante y el volcán. La playa y el océano, no.",
+   "clown_guidance",
+   "chapter-clown"
+  ],
+  [
+   "Ni barco ni pareja",
+   "Al pedir que se añadiera un crucero a una imagen de playa, la app devolvió un barco visto desde una cubierta y perdió a la pareja.",
+   "cruise1",
+   "chapter-more"
+  ]
+ ],
+ "chapters": [
+  {
+   "id": "chapter-install",
+   "title": "Descarga, primer arranque y primer modelo",
+   "items": [
+    [
+     "observed",
+     "El instalador es un DMG de 270 MB del sitio web. El evaluador: 'Really nice startup. Looks fake [wording unclear in the notes]. Nothing to be done more. Just click open.'",
+     null
+    ],
+    [
+     "observed",
+     "La pantalla de inicio 'All AI Tools' muestra Text to image, Image to image, AI Canvas, Illusion Generator, Inpainting y Upscaler (lista desplazada; puede haber más debajo).",
+     "home"
+    ],
+    [
+     "observed",
+     "El primer uso pide un modelo: 'Download model to get started. You need to download the following models to generate: DiffusionBee Default 0.1'. La barra de progreso muestra solo un porcentaje: ni tamaño ni estimación de tiempo. Las notas dicen 2 por ciento tras menos de un minuto; la captura muestra 3 por ciento.",
+     "dl_progress"
+    ],
+    [
+     "tester-view",
+     "El cuadro debería indicar qué tamaño tiene el modelo y cuánto tarda la descarga.",
+     null
+    ],
+    [
+     "observed",
+     "Mientras se descarga un modelo, se pueden abrir y usar otras áreas de la app (notas).",
+     null
+    ],
+    [
+     "observed",
+     "La primera descarga falló con 'Please check your internet connection or firewall. ESOCKETTIMEDOUT' y la única opción 'Download Again'.",
+     "timeout"
+    ],
+    [
+     "assumption",
+     "El evaluador cree que la causa de la caducidad fue su conexión lenta en el lugar de la prueba. No verificado. Cuenta que la descarga iba al 65 por ciento y hubo que empezar de nuevo; no se comprobó si se reanudó desde cero.",
+     null
+    ],
+    [
+     "tester-view",
+     "'Come on, this is so unprofessional.' Tras la descarga: 'Hurray, after download it works.'",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "chapter-models",
+   "title": "La página Models",
+   "items": [
+    [
+     "observed",
+     "La página Models es una cuadrícula de tarjetas, cada una con un nombre, una descripción de una línea y una etiqueta como 'sdxl_base float8_1'. Incluye SDXL Base, Juggernaut XL, BluePencil XL, RealVis XL, Animagine XL V3.1, Anything XL, DreamShaper XL Turbo y más. Ninguna tarjeta muestra el tamaño de descarga.",
+     "models"
+    ],
+    [
+     "observed",
+     "FLUX.1-schnell y FLUX.1-dev muestran texto rojo: 'You need to update DiffusionBee to use this model.' El evaluador había descargado la app unos dos minutos antes.",
+     null
+    ],
+    [
+     "third-party",
+     "El directorio de PromptQuorum indica como última actualización upstream de DiffusionBee el 30 de octubre de 2024 (más de un año antes de esta prueba), y el pie de la página del fabricante dice '© 2024'. El README del proyecto menciona SD 1.x, SD 2.x, SD XL, Inpainting, ControlNet y LoRA, y no menciona FLUX. Leído el 16 de octubre de 2026; no se pudo leer la lista de versiones en GitHub.",
+     null
+    ],
+    [
+     "observed",
+     "En la página Models hay un botón 'Import From Computer'. El evaluador infiere que se pueden importar modelos que ya tenga (no probado).",
+     null
+    ],
+    [
+     "tester-view",
+     "Pregunta por qué la página no muestra los tamaños de los modelos para ver qué funciona en su ordenador, y por qué no hay una breve explicación de para qué sirve cada modelo. 'And as no instruction, it is just like the random downloads again.'",
+     null
+    ],
+    [
+     "observed",
+     "Una tarjeta de Samaritan 3d Cartoon mostraba una barra de descarga al 1 por ciento sin tamaño (notas y una captura pequeña).",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "chapter-first-images",
+   "title": "Primeras imágenes: un círculo y una imagen de marca",
+   "items": [
+    [
+     "observed",
+     "Prompt 'circle with green dot in the middle': un disco blanco con el centro verde sobre fondo verde. Ajustes: Default_SDB_0.1, 512 x 512, 1 imagen, seed -1, 25 pasos. Cada imagen lleva un botón 'Actions'.",
+     "first_gen"
+    ],
+    [
+     "observed",
+     "A continuación, 'a real challenge': un prompt largo y estructurado para una imagen de marca y un logo de PromptQuorum. Ajustes: Default_SDB_0.1, 1024 x 1024, 3 imágenes, 25 pasos. La pantalla muestra un indicador de carga, 'Add to Queue' y 'Stop all'.",
+     null
+    ],
+    [
+     "observed",
+     "Los tres resultados son cajas y tarjetas en blanco y negro con letras distorsionadas. No hay un 'PromptQuorum.com' legible ni un logo utilizable.",
+     "logo_result"
+    ],
+    [
+     "assumption",
+     "El evaluador escribe 'I assume the prompt failed because that was not requested'. El sentido no está claro en las notas.",
+     null
+    ],
+    [
+     "tester-view",
+     "Le gusta poder elegir el número de imágenes y el tamaño. Echa de menos un indicador de velocidad, una hora de finalización y 'some entertainment while it's working'.",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "chapter-heidelberg",
+   "title": "Un lugar real: Heidelberg",
+   "items": [
+    [
+     "observed",
+     "El prompt, escrito hace años para un modelo de frontera: una imagen fotorrealista desde el Heumarkt de Heidelberg mirando hacia el castillo, con pájaros y un amanecer detrás del castillo. Modelo y ajustes no registrados.",
+     null
+    ],
+    [
+     "observed",
+     "Los tres resultados muestran un castillo en una colina boscosa sobre casas antiguas de entramado de madera, con pájaros. Ninguno muestra la vista del Heumarkt ni el castillo de Heidelberg como tal.",
+     "heidelberg"
+    ],
+    [
+     "tester-error",
+     "El evaluador esperaba que un modelo de imágenes conociera un lugar real y su ángulo. Él mismo dice: 'too much expected from this tool'.",
+     null
+    ],
+    [
+     "tester-view",
+     "'I could have written, do a castle up the hill with a sunset and birds behind. That's the difference between frontier models with access to the internet and pure LLMs that are just generating pictures.'",
+     null
+    ],
+    [
+     "assumption",
+     "La diferencia es el acceso a internet o al conocimiento de lugares. No se probó en este informe.",
+     null
+    ],
+    [
+     "observed",
+     "El evaluador probó también imágenes que 'otros sistemas podrían rechazar'. Las notas dicen que la app 'did not say stop on anything'. Los prompts no se registraron y no hay captura.",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "chapter-inpaint",
+   "title": "Inpainting: logo y transeúnte",
+   "items": [
+    [
+     "observed",
+     "Al abrir Inpainting se pide otro modelo más: 'ControlNet Inpaint', al 3 por ciento, sin tamaño.",
+     "controlnet"
+    ],
+    [
+     "observed",
+     "Prueba 1: una foto de una caja de pasta. Prompt 'remove barillia logo' (marca mal escrita), con una máscara sobre el logo. El primer intento 'failed' según las notas.",
+     "barilla_ui"
+    ],
+    [
+     "observed",
+     "Tras un segundo intento, el texto del logo ya no se lee, pero quedan manchas rosas y las hebras de espagueti están emborronadas.",
+     "barilla_result"
+    ],
+    [
+     "tester-view",
+     "'Technically, removing worked, just not putting the spaghettis back together.'",
+     null
+    ],
+    [
+     "observed",
+     "Prueba 2: una foto de una calle con un transeúnte. En el resultado la persona ya no está. El evaluador: 'Nearly there. If you don't expect something and I don't look for it, you don't see it.'",
+     "church_result"
+    ],
+    [
+     "tester-error",
+     "La marca estaba mal escrita en el prompt ('barillia'). La máscara, no el prompt, hizo el trabajo, así que el efecto probablemente es pequeño (suposición).",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "chapter-canvas",
+   "title": "AI Canvas e imagen a imagen: cielo y pop art",
+   "items": [
+    [
+     "observed",
+     "AI Canvas con la foto de la calle y el prompt 'Make the sky dark blue, real summer day' con Input Strength 30. El resultado no se capturó.",
+     "canvas_sky"
+    ],
+    [
+     "tester-view",
+     "'Blue sky didn't work out, or I don't understand the mechanism.'",
+     null
+    ],
+    [
+     "observed",
+     "Imagen a imagen con 'make this into a pop art cartoon picture' en Samaritan_3d_Cartoon_v1_s2 con Input Strength 80.02. El resultado es una copia más suave y apagada de la foto, no pop art. Evaluador: 'Pop art also didn't work out. Not sure why.'",
+     "popart"
+    ],
+    [
+     "assumption",
+     "Esta captura está al final de las notas, después del comentario sobre la velocidad, y aquí se interpreta como el intento de pop art. No confirmado.",
+     null
+    ],
+    [
+     "assumption",
+     "Un Input Strength más alto conserva más de la imagen original. Datos: 21.07 y 21.46 cambiaron mucho la imagen, 90.13 la devolvió casi sin cambios, 80.02 dio una copia casi idéntica. Solo cuatro ajustes; no se registró la explicación de la propia app.",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "chapter-clown",
+   "title": "Payaso, elefante, volcán: modelos, guía y un prompt negativo",
+   "items": [
+    [
+     "observed",
+     "El evaluador comprobó el uso de memoria con Samaritan 3D Cartoon. Prompt 'draw a clown dancing on an elephant', 512 x 512, 1 imagen: un payaso de dibujos animados bailando con una forma de elefante beige fundida detrás de él.",
+     "clown_samaritan"
+    ],
+    [
+     "tester-estimate",
+     "Memoria necesaria con este modelo: unos 5 GB 'of my VRAM'. Método no registrado. Apple Silicon tiene un único conjunto de memoria compartida.",
+     null
+    ],
+    [
+     "observed",
+     "Prompt más largo (payaso sobre un elefante, playa, océano azul, volcán en erupción) con el prompt negativo 'No blue sky!!' a 1024 x 1024: una criatura azul y musculosa con chispas de fuego. No se distingue ningún payaso, elefante, playa ni volcán. Evaluador: 'a nice result, but not really what I outlined'.",
+     "clown_nobluesky"
+    ],
+    [
+     "observed",
+     "Con la escala de guía (guidance scale) al máximo (que, según la instrucción de la app, 'means it should really do what I ask'): aparecen un payaso, un animal parecido a un elefante y un volcán en erupción. No se distingue ninguna playa ni océano azul; el suelo es oscuro.",
+     "clown_guidance"
+    ],
+    [
+     "tester-view",
+     "'I would say close, close, close or maybe perfect.'",
+     null
+    ],
+    [
+     "observed",
+     "El mismo prompt en JuggernautXL_v7_f8 (otra descarga más): un payaso con globos sobre un elefante, una gran columna del volcán, una playa con sombrillas y agua azul. El cielo es azul, así que no se siguió el prompt negativo 'No blue sky!!'. Evaluador: 'Looks great, except the negative prompt was skipped.'",
+     null
+    ],
+    [
+     "tester-view",
+     "Desea que la ventana diga qué es un modelo, en lugar de tener que buscarlo en otro sitio. Una respuesta de Google pegada en las notas describe Juggernaut XL como un ajuste fino de SDXL para fotorrealismo (véase Contexto).",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "chapter-couple",
+   "title": "Una pareja fotorrealista, y la velocidad",
+   "items": [
+    [
+     "observed",
+     "Prompt: 'photorealist a couple in love on the beach, watching the sunset over the ocean, birds in the sky, some boats on the water, some palm trees seen'. JuggernautXL_v7_f8, 1216 x 1216, 6 imágenes solicitadas. Se capturaron dos resultados.",
+     "settings"
+    ],
+    [
+     "observed",
+     "Ambos muestran puesta de sol, palmeras y pájaros. El primero tiene un velero y una cámara sobre la arena; el segundo tiene varios barcos, pero tres personas en dos bancos donde el prompt pedía una pareja.",
+     "couple_a"
+    ],
+    [
+     "observed",
+     "Aquí se muestra el segundo resultado (Figura 19).",
+     "couple_b"
+    ],
+    [
+     "tester-view",
+     "'Looks a bit like AI, but well done, well done.' Le gusta poder elegir cuántas imágenes y de qué tamaño, y que la app 'just runs and runs' mientras uno hace otra cosa, y luego se elige la mejor.",
+     null
+    ],
+    [
+     "tester-estimate",
+     "Cerca de un minuto por imagen a la máxima resolución; un archivo de unos dos megabytes por imagen. Ninguna de las dos cifras se cronometró ni aparece en una captura. 'Not very fast, but it's okay.'",
+     null
+    ]
+   ]
+  },
+  {
+   "id": "chapter-more",
+   "title": "Más pruebas y la valoración final (notas encontradas en el documento de Msty)",
+   "items": [
+    [
+     "assumption",
+     "El archivo de Word de la prueba de Msty contiene también notas y capturas sobre DiffusionBee. Se usan aquí como segunda fuente. No se registra su fecha ni su orden respecto a las pruebas anteriores; una captura de información de archivo con fecha 14 de octubre de 2026, 17:58, sugiere que fue el mismo día.",
+     null
+    ],
+    [
+     "observed",
+     "'Generate similar images' produjo cuatro escenas parecidas de una pareja en la playa a partir de una imagen. Evaluador: una función muy buena; la llama 'really impressive'.",
+     "similar"
+    ],
+    [
+     "measured",
+     "Un PNG guardado en Descargas el 14 de octubre de 2026 a las 17:58 pesa 38 733 330 bytes (38.7 MB). No se registra de qué imagen se trata.",
+     null
+    ],
+    [
+     "observed",
+     "Imagen a imagen sobre la imagen de la pareja en la playa, prompt 'add a cruise ship to the picture', Input Strength 21.07: aparece un crucero al atardecer visto desde la barandilla de una cubierta. La pareja y las palmeras han desaparecido.",
+     "cruise1"
+    ],
+    [
+     "observed",
+     "Segundo intento (prompt largo, Input Strength 21.46): una vista del mar al atardecer desde una cubierta con una palmera y sillas; sin barco en el horizonte.",
+     null
+    ],
+    [
+     "observed",
+     "Tercer intento (Input Strength 90.13): resultado casi idéntico a la imagen de entrada; sin barco.",
+     "cruise3"
+    ],
+    [
+     "observed",
+     "Según las notas, poner Input Strength en 100 'crashes' la app. Sin captura; versión no registrada.",
+     null
+    ],
+    [
+     "observed",
+     "Prompt de la Torre Eiffel (JuggernautXL_v7_f8, 2 imágenes, seed 770465): dos torres casi idénticas vistas desde abajo. El evaluador dice que la torre está bien pero la dirección y las proporciones no, y que los árboles del jardín francés están 'spot on' mientras que el resto alrededor de la torre falla.",
+     "eiffel"
+    ],
+    [
+     "observed",
+     "Horizonte nocturno de Nueva York con 'add 3 helicopters flying' (epicrealismXL_v8, 75 pasos): se ven más de tres helicópteros. Evaluador: 'cannot count till three and created a second Manhattan Island'.",
+     "nyc"
+    ],
+    [
+     "observed",
+     "Una foto de comida con el prompt 'make this german dinner into a cartoon style, many colors, really funny': según las notas, la app 'gave me the same picture back several times'. El resultado no se capturó.",
+     null
+    ],
+    [
+     "observed",
+     "El campo Seed tiene un texto de ayuda que el evaluador cita como 'Starting point for iteration. Any number will do. [App?] will pick one if left blank.' Dice que 'not sure what the value is'. La palabra anterior a 'will pick one' no se entiende en las notas.",
+     null
+    ],
+    [
+     "tester-estimate",
+     "Con la app de Claude, Word, WhatsApp, Chrome y otras apps abiertas, calcula el uso de memoria en unos 20 GB de 24 GB. Su lectura: 'even on a 24 gigabyte Mac... it's at the limit again'. La verdadera lección de sus pruebas es la VRAM.",
+     null
+    ],
+    [
+     "tester-view",
+     "'Function-wise and interface-wise, this is so far the best local LLM app tool that I tried... Not sure I need to learn two or three of these functions, which I do not understand what they do.' 'The first picture app that really works.'",
+     null
+    ],
+    [
+     "tester-view",
+     "Falta: afinar una imagen paso a paso ('this a little bit, this a little bit'). 'Currently it's not working.' Puede que la esté manejando mal. 'In a year from now, this will be perfect.' Última línea: 'Smooth interface, works with smaller models, really mostly self-explanatory. Great functions that you can hand over one picture to another tool.'",
+     null
+    ],
+    [
+     "assumption",
+     "La previsión del evaluador de que los modelos locales estarán al nivel de los modelos en la nube en uno o dos años no se prueba aquí.",
+     null
+    ]
+   ]
+  }
+ ],
+ "claims": [
+  [
+   "'Runs 100% offline.' 'Your prompts, models and generated images never leave your device.'",
+   "Sitio web del fabricante, leído el 16 de octubre de 2026",
+   "Los modelos se descargaron a través de la app (hizo falta conexión, y una descarga caducó). La generación se ejecutó en el Mac. No se probaron el uso sin conexión ni el tráfico de red.",
+   "observed"
+  ],
+  [
+   "'Completely free of charge.'",
+   "Sitio web del fabricante (meta descripción)",
+   "En las notas y capturas no aparece ninguna petición de pago.",
+   "observed"
+  ],
+  [
+   "Unos 30 segundos por imagen en un MacBook Air M1 de 8 GB",
+   "Sitio web del fabricante",
+   "El evaluador cuenta cerca de un minuto por imagen a 1216 x 1216 con JuggernautXL en un M3 con 24 GB. Modelo y tamaño distintos; no comparable.",
+   "tester-estimate"
+  ],
+  [
+   "Caja de herramientas que incluye texto a imagen, imagen a imagen, inpainting, AI canvas, upscaler, generador de ilusiones, relleno generativo, herramientas de vídeo, variantes de imagen, entrenamiento de modelos, imágenes de control",
+   "Sitio web del fabricante, leído el 16 de octubre de 2026",
+   "La pantalla de inicio mostraba seis herramientas. Se usaron texto a imagen, imagen a imagen, inpainting, AI canvas y variantes. No se probaron Upscaler, Illusion Generator, las herramientas de vídeo ni el entrenamiento.",
+   "observed"
+  ],
+  [
+   "FLUX.1-schnell y FLUX.1-dev ofrecidos en la página Models",
+   "App",
+   "Ambos llevan 'You need to update DiffusionBee to use this model'. No se descargaron ni se usaron.",
+   "observed"
+  ],
+  [
+   "Escala de guía (guidance scale): al máximo, el modelo sigue el prompt con más fidelidad",
+   "Instrucción de la app, tal como la parafrasea el evaluador",
+   "Más cerca en un prompt (aparecen elefante y volcán); siguen faltando la playa y el océano. Una sola ejecución.",
+   "observed"
+  ],
+  [
+   "Prompt negativo 'No blue sky!!'",
+   "Prompt del evaluador",
+   "Ignorado por JuggernautXL (cielo azul). En Samaritan el resultado no mostraba cielo visible en ninguna de las dos ejecuciones.",
+   "observed"
+  ]
+ ],
+ "fit": {
+  "memory_gb": 24,
+  "scale": 30,
+  "rows": [
+   [
+    "Samaritan 3D Cartoon mientras genera",
+    5.0,
+    "unos 5 GB (método no registrado)",
+    "tester-estimate"
+   ],
+   [
+    "Todo el Mac con muchas apps abiertas, durante una generación",
+    20.0,
+    "unos 20 GB en uso (dicho en voz alta por el evaluador)",
+    "tester-estimate"
+   ]
+  ],
+  "note": "La app no muestra tamaños de modelo, así que no hay una fila de tamaño de descarga. DMG: 270 MB. La primera pantalla tras la descarga no ofrece ninguna indicación de memoria. Las dos cifras anteriores las dijo el evaluador en voz alta y no se capturaron; la cifra de 20 GB corresponde a todo el Mac, no solo a la app."
+ },
+ "usage_log": [
+  [
+   "Descargar el primer modelo y arrancar",
+   "DiffusionBee Default 0.1",
+   "Un fallo por caducidad (ESOCKETTIMEDOUT); funcionó tras reiniciar",
+   "No registrado",
+   "Partial",
+   [
+    "dl_progress",
+    "timeout"
+   ]
+  ],
+  [
+   "Texto a imagen: círculo con un punto verde",
+   "Default_SDB_0.1, 512",
+   "Disco blanco con el centro verde; coincide",
+   "No registrado",
+   "Pass",
+   [
+    "first_gen"
+   ]
+  ],
+  [
+   "Imagen de marca de PromptQuorum, prompt largo, 3 imágenes",
+   "Default_SDB_0.1, 1024",
+   "Cajas y tarjetas distorsionadas; sin logo utilizable",
+   "No registrado",
+   "Fail",
+   [
+    "logo_result"
+   ]
+  ],
+  [
+   "Heidelberg, vista del Heumarkt con castillo",
+   "No registrado",
+   "Escenas de castillo genéricas, no el lugar",
+   "No registrado",
+   "Partial",
+   [
+    "heidelberg"
+   ]
+  ],
+  [
+   "Inpainting: quitar el logo de una caja de pasta",
+   "Default_SDB_0.1 + ControlNet Inpaint",
+   "Logo ilegible; quedan manchas rosas y hebras emborronadas",
+   "No registrado",
+   "Partial",
+   [
+    "barilla_ui",
+    "barilla_result"
+   ]
+  ],
+  [
+   "Inpainting: quitar a un transeúnte de una foto de calle",
+   "No registrado",
+   "Persona eliminada; 'nearly there'",
+   "No registrado",
+   "Pass",
+   [
+    "church_result"
+   ]
+  ],
+  [
+   "AI Canvas: poner el cielo azul oscuro",
+   "Default_SDB_0.1, strength 30",
+   "No funcionó, según el evaluador; resultado no capturado",
+   "No registrado",
+   "Fail",
+   [
+    "canvas_sky"
+   ]
+  ],
+  [
+   "Imagen a imagen: pop art",
+   "Samaritan_3d_Cartoon_v1_s2, strength 80.02",
+   "Copia casi idéntica de la foto",
+   "No registrado",
+   "Fail",
+   [
+    "popart"
+   ]
+  ],
+  [
+   "Payaso sobre un elefante, prompt corto",
+   "Samaritan_3d_Cartoon_v1_s2, 512",
+   "Payaso con una forma de elefante",
+   "No registrado",
+   "Partial",
+   [
+    "clown_samaritan"
+   ]
+  ],
+  [
+   "Payaso, elefante, playa, océano, volcán + prompt negativo",
+   "Samaritan_3d_Cartoon_v1_s2, 1024",
+   "Criatura azul; ningún objeto reconocible",
+   "No registrado",
+   "Fail",
+   [
+    "clown_nobluesky"
+   ]
+  ],
+  [
+   "Mismo prompt, guía al máximo",
+   "Samaritan_3d_Cartoon_v1_s2, 1024",
+   "Payaso, animal parecido a un elefante, volcán; sin playa ni océano",
+   "No registrado",
+   "Partial",
+   [
+    "clown_guidance"
+   ]
+  ],
+  [
+   "Mismo prompt en un segundo modelo",
+   "JuggernautXL_v7_f8, 1024",
+   "Todos los objetos presentes; el cielo sigue azul",
+   "Cerca de un minuto (estimación del evaluador)",
+   "Partial",
+   [
+    "juggernaut_clown"
+   ]
+  ],
+  [
+   "Pareja en una playa, 6 imágenes",
+   "JuggernautXL_v7_f8, 1216",
+   "Escenas convincentes; una persona de más en una",
+   "Cerca de un minuto cada una (estimación del evaluador)",
+   "Pass",
+   [
+    "settings",
+    "couple_a",
+    "couple_b"
+   ]
+  ],
+  [
+   "Generate similar images",
+   "No registrado",
+   "Cuatro escenas parecidas",
+   "No registrado",
+   "Pass",
+   [
+    "similar"
+   ]
+  ],
+  [
+   "Imagen a imagen: añadir un crucero (3 intentos)",
+   "Default_SDB_0.1, strength 21.07 / 21.46 / 90.13",
+   "Barco en una cubierta sin la pareja; sin barco; copia casi idéntica",
+   "No registrado",
+   "Fail",
+   [
+    "cruise1",
+    "cruise3"
+   ]
+  ],
+  [
+   "Input Strength en 100",
+   "No registrado",
+   "La app se cerró de golpe (solo notas)",
+   "-",
+   "Fail",
+   []
+  ],
+  [
+   "Torre Eiffel, 2 imágenes",
+   "JuggernautXL_v7_f8, 1216",
+   "Torre reconocible; ángulo y proporciones erróneos; dos resultados casi idénticos",
+   "No registrado",
+   "Partial",
+   [
+    "eiffel"
+   ]
+  ],
+  [
+   "Horizonte de Nueva York con 3 helicópteros",
+   "epicrealismXL_v8, 75 pasos",
+   "Más de 3 helicópteros",
+   "No registrado",
+   "Partial",
+   [
+    "nyc"
+   ]
+  ],
+  [
+   "Foto de comida convertida en dibujo animado",
+   "No registrado",
+   "Se devolvió varias veces la misma imagen",
+   "No registrado",
+   "Fail",
+   []
+  ]
+ ],
+ "errors": [
+  [
+   "tester-error",
+   "Esperaba que un modelo de imágenes conociera un lugar real y su ángulo (Heidelberg). Él mismo lo dice."
+  ],
+  [
+   "tester-error",
+   "Escribió mal la marca en el prompt de inpainting ('barillia')."
+  ],
+  [
+   "tester-error",
+   "Escribió '14 Oktober 2027' como fecha de inicio; aquí se interpreta como 2026."
+  ],
+  [
+   "tester-error",
+   "Dejó huecos en el registro: versión de la app, versión de macOS, hora de finalización, los modelos y ajustes de varias imágenes, el resultado de la edición del cielo y cómo se midió el uso de memoria."
+  ],
+  [
+   "tester-error",
+   "Puso parte de esta prueba en el documento de Msty, de modo que las notas están en dos archivos y su orden no se registró."
+  ],
+  [
+   "assumption",
+   "El evaluador sospecha que quizá maneja mal el control Input Strength; los datos sugieren que los valores más altos conservan más del original, lo que podría explicar varios fallos (pop art con 80.02, barco con 90.13). No confirmado."
+  ],
+  [
+   "assumption",
+   "El veredicto 'close, close, close or maybe perfect' sobre la imagen del payaso es más positivo que la captura, donde no se distingue ninguna playa ni océano azul."
+  ]
+ ],
+ "findings": [
+  [
+   "DB-01",
+   "Las tarjetas de modelos muestran un nombre, una línea y una etiqueta, pero ni tamaño de descarga, ni tarea, ni adecuación al hardware.",
+   "Primeros pasos",
+   "observed",
+   "High",
+   [
+    "models"
+   ]
+  ],
+  [
+   "DB-02",
+   "Las tarjetas de FLUX.1 dicen 'You need to update DiffusionBee to use this model', aunque la app estaba recién instalada.",
+   "Primeros pasos",
+   "observed",
+   "High",
+   [
+    "models"
+   ]
+  ],
+  [
+   "DB-03",
+   "El directorio indica como última actualización upstream el 30 de octubre de 2024 (más de un año); el README no menciona FLUX.",
+   "Mantenimiento",
+   "third-party",
+   "Medium",
+   []
+  ],
+  [
+   "DB-04",
+   "La descarga del modelo muestra solo un porcentaje: ni tamaño ni estimación de tiempo. Según las notas, otras áreas siguen siendo utilizables mientras tanto.",
+   "Usabilidad",
+   "observed",
+   "Medium",
+   [
+    "dl_progress"
+   ]
+  ],
+  [
+   "DB-05",
+   "La primera descarga falló con ESOCKETTIMEDOUT; la única opción era 'Download Again' y el evaluador cuenta que empezó de nuevo desde el principio.",
+   "Usabilidad",
+   "observed",
+   "Medium",
+   [
+    "timeout"
+   ]
+  ],
+  [
+   "DB-06",
+   "El inpainting necesita otra descarga de modelo (ControlNet Inpaint), sin tamaño.",
+   "Usabilidad",
+   "observed",
+   "Medium",
+   [
+    "controlnet"
+   ]
+  ],
+  [
+   "DB-07",
+   "El texto a imagen funcionó al primer intento con el modelo por defecto.",
+   "Función principal",
+   "observed",
+   "Positive",
+   [
+    "first_gen"
+   ]
+  ],
+  [
+   "DB-08",
+   "Se pueden poner varias imágenes en cola ('Add to Queue', 'Stop all'); el evaluador sigue trabajando mientras tanto.",
+   "Función principal",
+   "observed",
+   "Positive",
+   [
+    "couple_a"
+   ]
+  ],
+  [
+   "DB-09",
+   "Sin indicación de velocidad ni hora de finalización mientras genera.",
+   "Usabilidad",
+   "tester-view",
+   "Low",
+   []
+  ],
+  [
+   "DB-10",
+   "Un prompt largo de marca devolvió letras distorsionadas y ningún logo utilizable.",
+   "Función principal",
+   "observed",
+   "Medium",
+   [
+    "logo_result"
+   ]
+  ],
+  [
+   "DB-11",
+   "No se reprodujo un lugar y una vista reales (Heidelberg); las imágenes fueron genéricas.",
+   "Función principal",
+   "observed",
+   "Low",
+   [
+    "heidelberg"
+   ]
+  ],
+  [
+   "DB-12",
+   "Al quitar el logo con inpainting quedaron manchas rosas y detalle emborronado.",
+   "Edición",
+   "observed",
+   "Medium",
+   [
+    "barilla_result"
+   ]
+  ],
+  [
+   "DB-13",
+   "Quitar a una persona con inpainting funcionó ('nearly there').",
+   "Edición",
+   "observed",
+   "Positive",
+   [
+    "church_result"
+   ]
+  ],
+  [
+   "DB-14",
+   "El cambio de cielo en AI Canvas no funcionó, según el evaluador.",
+   "Edición",
+   "tester-view",
+   "Medium",
+   [
+    "canvas_sky"
+   ]
+  ],
+  [
+   "DB-15",
+   "El pop art en imagen a imagen con strength 80.02 devolvió una copia casi idéntica.",
+   "Edición",
+   "observed",
+   "Medium",
+   [
+    "popart"
+   ]
+  ],
+  [
+   "DB-16",
+   "Añadir un crucero falló en tres intentos: un barco con la pareja perdida, ningún barco, copia casi idéntica.",
+   "Edición",
+   "observed",
+   "High",
+   [
+    "cruise1",
+    "cruise3"
+   ]
+  ],
+  [
+   "DB-17",
+   "Un Input Strength más alto conserva más del original (solo cuatro ajustes).",
+   "Controles",
+   "assumption",
+   "Medium",
+   [
+    "cruise1",
+    "cruise3",
+    "popart"
+   ]
+  ],
+  [
+   "DB-18",
+   "Poner Input Strength en 100 cierra la app de golpe, según las notas (sin captura).",
+   "Estabilidad",
+   "observed",
+   "High",
+   []
+  ],
+  [
+   "DB-19",
+   "El prompt negativo 'No blue sky!!' se ignoró en JuggernautXL.",
+   "Función principal",
+   "observed",
+   "Medium",
+   [
+    "juggernaut_clown"
+   ]
+  ],
+  [
+   "DB-20",
+   "La guía al máximo acercó el payaso, el elefante y el volcán al prompt en Samaritan.",
+   "Función principal",
+   "tester-view",
+   "Low",
+   [
+    "clown_guidance"
+   ]
+  ],
+  [
+   "DB-21",
+   "La app no dice nada sobre qué es un modelo; el evaluador lo buscó en Google.",
+   "Orientación",
+   "tester-view",
+   "Medium",
+   [
+    "models"
+   ]
+  ],
+  [
+   "DB-22",
+   "Seed e Input Strength no le quedaron claros al evaluador.",
+   "Orientación",
+   "tester-view",
+   "Low",
+   []
+  ],
+  [
+   "DB-23",
+   "Unos 5 GB de memoria en Samaritan y cerca de un minuto por imagen en JuggernautXL a 1216 x 1216.",
+   "Rendimiento",
+   "tester-estimate",
+   "Positive",
+   [
+    "settings"
+   ]
+  ],
+  [
+   "DB-24",
+   "'Generate similar images' produjo cuatro variantes muy parecidas; un botón Actions en cada imagen permite al evaluador pasarla a otras herramientas.",
+   "Función principal",
+   "observed",
+   "Positive",
+   [
+    "similar",
+    "first_gen"
+   ]
+  ],
+  [
+   "DB-25",
+   "El evaluador la considera la mejor app local de imágenes que ha probado.",
+   "Global",
+   "tester-view",
+   "Positive",
+   []
+  ]
+ ],
+ "severity_note": "La gravedad es el impacto sobre quien usa la app por primera vez. Propuesta, no medida.",
+ "audience": {
+  "fits": [
+   [
+    "assumption",
+    "Usuarios de Mac que quieren una herramienta gratuita y local de texto a imagen y están dispuestos a descargar y probar varios modelos."
+   ],
+   [
+    "vendor-claim",
+    "Personas que quieren tenerlo todo en su propio equipo, tal como lo describe el fabricante (no verificado)."
+   ]
+  ],
+  "not_fits": [
+   [
+    "tester-view",
+    "Creativos que quieren tomar una imagen y cambiarla paso a paso. El evaluador no consiguió que esto funcionara."
+   ],
+   [
+    "assumption",
+    "Usuarios primerizos que esperan que la app les diga qué modelo encaja con su Mac o para qué sirve un modelo."
+   ]
+  ],
+  "retest": "Repetir la prueba de las partes sin probar (Upscaler, Illusion Generator, herramientas de vídeo, importación de modelos, uso sin conexión, desinstalación) y registrar antes la versión y la de macOS. Repetirla tras la próxima versión; la última actualización upstream según el directorio es de octubre de 2024, así que una nueva versión puede tardar (suposición)."
+ },
+ "background_intro": "No es práctica directa. Lo que sigue procede del sitio web del fabricante y del proyecto de GitHub, del directorio de PromptQuorum y de una respuesta de Google que pegó el evaluador. Se leyó el 16 de octubre de 2026 con una herramienta de descarga web que resume las páginas, y no se verificó de forma independiente.",
+ "background": [
+  [
+   "vendor-claim",
+   "La página del fabricante no nombra ninguna empresa ni persona. Enlaza un repositorio de GitHub y una cuenta con el identificador 'divamgupta'. Dice que las imágenes generadas pueden usarse siempre que se cumpla la licencia CreativeML Open RAIL-M."
+  ],
+  [
+   "third-party",
+   "El directorio de PromptQuorum incluye DiffusionBee como gratuita, AGPL-3.0, solo macOS, con unas 13 600 estrellas en GitHub; GitHub muestra AGPL-3.0, 13.6k estrellas, 727 forks y 385 incidencias abiertas. Datos del directorio verificados por última vez el 12 de septiembre de 2026."
+  ],
+  [
+   "vendor-claim",
+   "Requisitos del sistema según el README: macOS 12.3.1 o posterior en Intel, macOS 11.0.0 o posterior en M1/M2. La página del fabricante dice macOS 13.1 y recomienda Apple silicon. No se indica ningún requisito de RAM."
+  ],
+  [
+   "third-party",
+   "Una respuesta de Google pegada por el evaluador describe Juggernaut XL como un ajuste fino de código abierto popular de Stable Diffusion XL, de KandooAI con RunDiffusion, orientado al fotorrealismo y la anatomía, con varias versiones. Fuentes citadas en ella: rundiffusion.com, openlaboratory.com, huggingface.co y otras; no se comprobaron aquí. No se revisaron los términos de licencia de los modelos usados."
+  ]
+ ],
+ "sources": [
+  "Notas de la prueba práctica del evaluador, 14 de octubre de 2026 (documento de Word original 'Diffusion Bee test'; el PDF de las notas originales se añadirá).",
+  "Notas y capturas adicionales sobre DiffusionBee del documento de Word de Msty del evaluador (segunda fuente, usada en 'Más pruebas y la valoración final').",
+  "Sitio web de DiffusionBee (diffusionbee.com) y proyecto de GitHub (divamgupta/diffusionbee-stable-diffusion-ui), leídos el 16 de octubre de 2026.",
+  "Ficha del directorio de PromptQuorum para DiffusionBee (slug: diffusionbee).",
+  "Respuesta de Google sobre Juggernaut XL, tal como la pegó el evaluador."
+ ],
+ "evidence_labels": {
+  "observed": {
+   "label": "Observado",
+   "meaning": "Visto de primera mano en la app, en una captura o en las notas del evaluador."
+  },
+  "measured": {
+   "label": "Medido",
+   "meaning": "Un valor leído en un cuadro de diálogo, contador o herramienta, con la cifra indicada."
+  },
+  "tester-estimate": {
+   "label": "Estimación del evaluador",
+   "meaning": "La estimación propia del evaluador; sin cronometrar ni contar."
+  },
+  "vendor-claim": {
+   "label": "Afirmación del fabricante",
+   "meaning": "Declarado por la app, su ficha de la tienda o su sitio web; no verificado."
+  },
+  "third-party": {
+   "label": "Fuente externa",
+   "meaning": "Procede de otra fuente (un asistente de IA, un artículo); no verificado aquí."
+  },
+  "assumption": {
+   "label": "Suposición",
+   "meaning": "Una inferencia. Puede ser errónea."
+  },
+  "tester-view": {
+   "label": "Opinión del evaluador",
+   "meaning": "El juicio o la opinión del evaluador."
+  },
+  "tester-error": {
+   "label": "Error del evaluador",
+   "meaning": "Donde el evaluador se equivocó o pasó algo por alto."
+  }
+ },
+ "images": [
+  {
+   "id": "juggernaut_clown",
+   "figure": 1,
+   "file": "diffusionbee-juggernaut-xl-clown-elephant-volcano-result.webp",
+   "path": "images/diffusionbee-juggernaut-xl-clown-elephant-volcano-result.webp",
+   "alt": "Pantalla de texto a imagen de DiffusionBee con un payaso con globos sobre un elefante, un volcán y una playa, creada por JuggernautXL_v7_f8 a 1024 por 1024.",
+   "caption": "JuggernautXL_v7_f8, 1024 x 1024, 1 imagen. Prompt: 'draw a clown dancing on top of an elephant, with a beach, blue ocean and an exploding volcano in the background'. Prompt negativo: 'No blue sky!!'. Todos los objetos pedidos están presentes; el cielo sigue siendo azul.",
+   "role": "hero",
+   "width": 828,
+   "height": 638,
+   "bytes": 59622,
+   "mime": "image/webp",
+   "loading": "eager",
+   "evidence": "observed",
+   "used_in": [
+    "hero",
+    "chapter-clown"
+   ],
+   "subject": "AI-generated output as shown in DiffusionBee (screenshot)",
+   "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image24.png"
+  },
+  {
+   "id": "home",
+   "figure": 2,
+   "file": "diffusionbee-home-all-ai-tools-text-to-image-inpainting.webp",
+   "path": "images/diffusionbee-home-all-ai-tools-text-to-image-inpainting.webp",
+   "alt": "Pantalla de inicio 'All AI Tools' de DiffusionBee con tarjetas de Text to image, Image to image, AI Canvas, Illusion Generator, Inpainting y Upscaler.",
+   "caption": "Pantalla de inicio tras el primer arranque, lista desplazada. Se ven seis herramientas: Text to image, Image to image, AI Canvas, Illusion Generator, Inpainting, Upscaler. Las imágenes de muestra de las tarjetas son del fabricante.",
+   "role": "inline",
+   "width": 1092,
+   "height": 714,
+   "bytes": 97588,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-install"
+   ],
+   "subject": "Screenshot of the DiffusionBee app",
+   "rights": "Tester's own screenshot of third-party software UI.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image1.png"
+  },
+  {
+   "id": "dl_progress",
+   "figure": 3,
+   "file": "diffusionbee-first-model-download-3-percent-no-size.webp",
+   "path": "images/diffusionbee-first-model-download-3-percent-no-size.webp",
+   "alt": "Cuadro 'Download model to get started' de DiffusionBee para DiffusionBee Default 0.1, con una barra de progreso al 3 por ciento y sin tamaño ni estimación de tiempo.",
+   "caption": "Primer arranque: un cuadro de descarga de 'DiffusionBee Default 0.1' con una barra al 3 por ciento. No se muestran ni el tamaño del archivo ni el tiempo restante.",
+   "role": "inline",
+   "width": 336,
+   "height": 244,
+   "bytes": 7274,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-install"
+   ],
+   "subject": "Screenshot of the DiffusionBee app",
+   "rights": "Tester's own screenshot of third-party software UI.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image3.png"
+  },
+  {
+   "id": "timeout",
+   "figure": 4,
+   "file": "diffusionbee-download-error-esockettimedout-download-again.webp",
+   "path": "images/diffusionbee-download-error-esockettimedout-download-again.webp",
+   "alt": "Cuadro de DiffusionBee con el error 'Please check your internet connection or firewall. ESOCKETTIMEDOUT' y un botón Download Again.",
+   "caption": "Error de descarga de 'DiffusionBee Default 0.1': 'Please check your internet connection or firewall. ESOCKETTIMEDOUT'. La única opción es 'Download Again'. El evaluador cuenta que la descarga había llegado al 65 por ciento.",
+   "role": "moment",
+   "width": 342,
+   "height": 334,
+   "bytes": 13578,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-install",
+    "moments-card"
+   ],
+   "subject": "Screenshot of the DiffusionBee app",
+   "rights": "Tester's own screenshot of third-party software UI.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image7.png"
+  },
+  {
+   "id": "models",
+   "figure": 5,
+   "file": "diffusionbee-models-page-flux-needs-app-update.webp",
+   "path": "images/diffusionbee-models-page-flux-needs-app-update.webp",
+   "alt": "Página Models de DiffusionBee con tarjetas de SDXL Base, Juggernaut XL, BluePencil XL y RealVis XL, y tarjetas de FLUX.1 marcadas con 'You need to update DiffusionBee'.",
+   "caption": "Página Models (desplazada). Cada tarjeta tiene un nombre, una línea breve y una etiqueta como 'sdxl_base float8_1'. No se muestra ningún tamaño de descarga. FLUX.1-schnell y FLUX.1-dev llevan el texto rojo 'You need to update DiffusionBee to use this model'.",
+   "role": "moment",
+   "width": 1057,
+   "height": 651,
+   "bytes": 79250,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-models",
+    "moments-card"
+   ],
+   "subject": "Screenshot of the DiffusionBee app",
+   "rights": "Tester's own screenshot of third-party software UI.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image4.png"
+  },
+  {
+   "id": "first_gen",
+   "figure": 6,
+   "file": "diffusionbee-first-image-circle-with-green-dot.webp",
+   "path": "images/diffusionbee-first-image-circle-with-green-dot.webp",
+   "alt": "Pantalla Text to image de DiffusionBee con el prompt 'circle with green dot in the middle' y un disco blanco con el centro verde sobre fondo verde.",
+   "caption": "Primera imagen. Prompt: 'circle with green dot in the middle'. Default_SDB_0.1, 512 x 512, 1 imagen, seed -1, 25 pasos de muestreo. El resultado coincide con el prompt. Sobre la imagen hay un botón 'Actions'.",
+   "role": "inline",
+   "width": 1055,
+   "height": 679,
+   "bytes": 64164,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-first-images"
+   ],
+   "subject": "Screenshot of the DiffusionBee app",
+   "rights": "Tester's own screenshot of third-party software UI.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image8.png"
+  },
+  {
+   "id": "logo_result",
+   "figure": 7,
+   "file": "diffusionbee-brand-logo-prompt-garbled-box-results.webp",
+   "path": "images/diffusionbee-brand-logo-prompt-garbled-box-results.webp",
+   "alt": "Tres imágenes generadas de cajas y tarjetas en blanco y negro con letras distorsionadas, devueltas para un prompt largo de logo de marca en DiffusionBee.",
+   "caption": "Tres resultados para el prompt largo de la marca PromptQuorum (Default_SDB_0.1, 1024 x 1024, 3 imágenes). Cajas y tarjetas con letras distorsionadas; ningún 'PromptQuorum.com' legible ni logo utilizable.",
+   "role": "inline",
+   "width": 637,
+   "height": 607,
+   "bytes": 30436,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-first-images"
+   ],
+   "subject": "AI-generated output as shown in DiffusionBee (screenshot)",
+   "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image10.png"
+  },
+  {
+   "id": "heidelberg",
+   "figure": 8,
+   "file": "diffusionbee-heidelberg-castle-prompt-generic-results.webp",
+   "path": "images/diffusionbee-heidelberg-castle-prompt-generic-results.webp",
+   "alt": "Tres imágenes generadas de un castillo en una colina boscosa sobre casas de entramado de madera con pájaros en el cielo, hechas para un prompt de Heidelberg.",
+   "caption": "Resultados del prompt de Heidelberg (el Heumarkt mirando hacia el castillo, pájaros y un amanecer detrás). Modelo y ajustes no registrados. Las imágenes muestran un castillo, una colina y casas antiguas, pero no ese lugar ni esa vista.",
+   "role": "moment",
+   "width": 657,
+   "height": 626,
+   "bytes": 54560,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-heidelberg",
+    "moments-card"
+   ],
+   "subject": "AI-generated output as shown in DiffusionBee (screenshot)",
+   "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image11.png"
+  },
+  {
+   "id": "controlnet",
+   "figure": 9,
+   "file": "diffusionbee-inpainting-controlnet-inpaint-model-download.webp",
+   "path": "images/diffusionbee-inpainting-controlnet-inpaint-model-download.webp",
+   "alt": "Pantalla Inpainting de DiffusionBee con un cuadro que descarga 'ControlNet Inpaint' al 3 por ciento, sin tamaño visible.",
+   "caption": "Al abrir Inpainting por primera vez se pide otra descarga de modelo: 'ControlNet Inpaint', 3 por ciento. Sin tamaño ni estimación de tiempo.",
+   "role": "inline",
+   "width": 1069,
+   "height": 590,
+   "bytes": 21420,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-inpaint"
+   ],
+   "subject": "Screenshot of the DiffusionBee app",
+   "rights": "Tester's own screenshot of third-party software UI.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image12.png"
+  },
+  {
+   "id": "barilla_ui",
+   "figure": 10,
+   "file": "diffusionbee-inpainting-remove-barilla-logo-prompt.webp",
+   "path": "images/diffusionbee-inpainting-remove-barilla-logo-prompt.webp",
+   "alt": "Pantalla Inpainting de DiffusionBee con el prompt 'remove barillia logo' sobre una foto de una caja de pasta con un logo ovalado rojo.",
+   "caption": "Inpainting sobre una foto de una caja de pasta. Prompt: 'remove barillia logo' (la marca está mal escrita). Default_SDB_0.1. Herramientas sobre la imagen: Stroke Size, Open, Save, Clear Mask.",
+   "role": "inline",
+   "width": 1092,
+   "height": 735,
+   "bytes": 59240,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-inpaint"
+   ],
+   "subject": "Screenshot of the DiffusionBee app",
+   "rights": "Tester's own screenshot of third-party software UI.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image13.png"
+  },
+  {
+   "id": "barilla_result",
+   "figure": 11,
+   "file": "diffusionbee-inpainting-logo-removed-with-pink-remnants.webp",
+   "path": "images/diffusionbee-inpainting-logo-removed-with-pink-remnants.webp",
+   "alt": "Foto de la caja de pasta tras el inpainting: el logo ha desaparecido, pero quedan manchas rosas y las hebras de espagueti están deformadas.",
+   "caption": "Resultado del segundo intento de inpainting. El texto del logo ya no se lee. Donde estaba quedan manchas rosas y hebras de espagueti emborronadas.",
+   "role": "moment",
+   "width": 339,
+   "height": 272,
+   "bytes": 12232,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-inpaint",
+    "moments-card"
+   ],
+   "subject": "AI-edited photo as shown in DiffusionBee (screenshot)",
+   "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image15.png"
+  },
+  {
+   "id": "church_result",
+   "figure": 12,
+   "file": "diffusionbee-inpainting-person-removed-from-street-photo.webp",
+   "path": "images/diffusionbee-inpainting-person-removed-from-street-photo.webp",
+   "alt": "Foto de calle de un callejón empedrado que lleva a una pequeña iglesia con reloj, tras quitar a una persona con inpainting.",
+   "caption": "Resultado de quitar a una persona que caminaba en una foto de calle. No se ve ninguna persona. El evaluador lo juzgó 'nearly there'. La foto original, en la que aparece la persona, no se publica.",
+   "role": "inline",
+   "width": 321,
+   "height": 629,
+   "bytes": 33760,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-inpaint"
+   ],
+   "subject": "AI-edited photo as shown in DiffusionBee (screenshot)",
+   "rights": "Tester's own photo, edited in DiffusionBee. The original (with a passer-by) is withheld.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image18.png"
+  },
+  {
+   "id": "canvas_sky",
+   "figure": 13,
+   "file": "diffusionbee-ai-canvas-sky-prompt-input-strength-30.webp",
+   "path": "images/diffusionbee-ai-canvas-sky-prompt-input-strength-30.webp",
+   "alt": "AI Canvas de DiffusionBee con una foto de calle colocada en el lienzo, el prompt 'Make the sky dark blue, real summer day' e Input Strength en 30.",
+   "caption": "AI Canvas. Prompt: 'Make the sky dark blue, real summer day'. Default_SDB_0.1, Input Strength 30, 25 pasos. El resultado no se capturó. Aquí un transeúnte de la foto está pixelado.",
+   "role": "inline",
+   "width": 1086,
+   "height": 662,
+   "bytes": 42348,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-canvas"
+   ],
+   "subject": "Screenshot of the DiffusionBee app",
+   "rights": "Tester's own screenshot of third-party software UI. A person in the photo is pixelated.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image19.png"
+  },
+  {
+   "id": "popart",
+   "figure": 14,
+   "file": "diffusionbee-image-to-image-pop-art-prompt-strength-80.webp",
+   "path": "images/diffusionbee-image-to-image-pop-art-prompt-strength-80.webp",
+   "alt": "Imagen a imagen de DiffusionBee con una foto de calle, el prompt 'make this into a pop art cartoon picture' y un resultado que parece casi sin cambios.",
+   "caption": "Imagen a imagen. Prompt: 'make this into a pop art cartoon picture'. Samaritan_3d_Cartoon_v1_s2, Input Strength 80.02. El resultado es algo más suave y apagado, no pop art. Aquí los transeúntes están pixelados.",
+   "role": "inline",
+   "width": 903,
+   "height": 738,
+   "bytes": 51296,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-canvas"
+   ],
+   "subject": "Screenshot of the DiffusionBee app",
+   "rights": "Tester's own screenshot of third-party software UI. Persons in the photo are pixelated.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image28.png"
+  },
+  {
+   "id": "clown_samaritan",
+   "figure": 15,
+   "file": "diffusionbee-samaritan-3d-cartoon-clown-dancing-on-elephant.webp",
+   "path": "images/diffusionbee-samaritan-3d-cartoon-clown-dancing-on-elephant.webp",
+   "alt": "DiffusionBee con el prompt 'draw a clown dancing on an elephant' y un payaso 3D de dibujos animados con una forma de elefante detrás de él.",
+   "caption": "Samaritan_3d_Cartoon_v1_s2, 512 x 512, 1 imagen. Prompt: 'draw a clown dancing on an elephant'. Un payaso de dibujos animados bailando con una forma de elefante beige fundida detrás de él.",
+   "role": "inline",
+   "width": 848,
+   "height": 641,
+   "bytes": 32322,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-clown"
+   ],
+   "subject": "Screenshot of the DiffusionBee app",
+   "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image20.png"
+  },
+  {
+   "id": "clown_nobluesky",
+   "figure": 16,
+   "file": "diffusionbee-samaritan-clown-prompt-no-blue-sky-monster-result.webp",
+   "path": "images/diffusionbee-samaritan-clown-prompt-no-blue-sky-monster-result.webp",
+   "alt": "DiffusionBee con un prompt largo de payaso, playa y volcán y el prompt negativo 'No blue sky!!', que produce una figura azul parecida a un monstruo con chispas de fuego.",
+   "caption": "Samaritan_3d_Cartoon_v1_s2, 1024 x 1024, 1 imagen. El prompt más largo y el prompt negativo 'No blue sky!!'. El resultado es una criatura azul y musculosa con chispas; no se distingue ningún payaso, elefante, playa ni volcán.",
+   "role": "inline",
+   "width": 835,
+   "height": 626,
+   "bytes": 44016,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-clown"
+   ],
+   "subject": "Screenshot of the DiffusionBee app",
+   "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image21.png"
+  },
+  {
+   "id": "clown_guidance",
+   "figure": 17,
+   "file": "diffusionbee-samaritan-clown-elephant-volcano-max-guidance.webp",
+   "path": "images/diffusionbee-samaritan-clown-elephant-volcano-max-guidance.webp",
+   "alt": "Payaso de dibujos animados 3D generado sobre un animal turquesa parecido a un elefante, con un volcán en erupción a la derecha sobre un fondo oscuro.",
+   "caption": "El mismo prompt con la escala de guía al máximo, según las notas (el control deslizante no se capturó). Aparecen un payaso, un animal parecido a un elefante y un volcán en erupción. No se distingue ninguna playa ni océano azul; el suelo es oscuro.",
+   "role": "moment",
+   "width": 493,
+   "height": 493,
+   "bytes": 36542,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-clown",
+    "moments-card"
+   ],
+   "subject": "AI-generated output as shown in DiffusionBee (screenshot)",
+   "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image22.png"
+  },
+  {
+   "id": "couple_a",
+   "figure": 18,
+   "file": "diffusionbee-juggernaut-couple-on-beach-sunset-palms-birds.webp",
+   "path": "images/diffusionbee-juggernaut-couple-on-beach-sunset-palms-birds.webp",
+   "alt": "Imagen generada de estilo fotográfico de una pareja sentada en una playa al atardecer con dos palmeras, pájaros, un velero y una cámara sobre la arena.",
+   "caption": "Primero de los dos resultados mostrados de la pareja en la playa (JuggernautXL_v7_f8, 1216 x 1216, 6 imágenes solicitadas). Hay palmeras, pájaros, puesta de sol y un velero; sobre la arena hay una cámara, que no se había pedido.",
+   "role": "inline",
+   "width": 1216,
+   "height": 1216,
+   "bytes": 175080,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-couple"
+   ],
+   "subject": "AI-generated output (screenshot)",
+   "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image25.png"
+  },
+  {
+   "id": "couple_b",
+   "figure": 19,
+   "file": "diffusionbee-juggernaut-couple-on-beach-three-people-boats.webp",
+   "path": "images/diffusionbee-juggernaut-couple-on-beach-three-people-boats.webp",
+   "alt": "Imagen generada de estilo fotográfico de tres personas en bancos de playa al atardecer con una palmera, pájaros y varios barcos en el agua.",
+   "caption": "Segundo resultado. Hay barcos, palmera, pájaros y puesta de sol, pero aparecen tres personas (un hombre solo en un banco aparte) donde el prompt pedía una pareja.",
+   "role": "inline",
+   "width": 1216,
+   "height": 1216,
+   "bytes": 164982,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-couple"
+   ],
+   "subject": "AI-generated output (screenshot)",
+   "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image26.png"
+  },
+  {
+   "id": "settings",
+   "figure": 20,
+   "file": "diffusionbee-settings-juggernaut-1216-by-1216-six-images.webp",
+   "path": "images/diffusionbee-settings-juggernaut-1216-by-1216-six-images.webp",
+   "alt": "Panel de ajustes de DiffusionBee: modelo JuggernautXL_v7_f8, resolución 1216 por 1216, número de imágenes 6, seed -1.",
+   "caption": "Ajustes de la tanda de la pareja: JuggernautXL_v7_f8, 1216 x 1216, 6 imágenes, seed -1.",
+   "role": "inline",
+   "width": 339,
+   "height": 292,
+   "bytes": 7740,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-couple"
+   ],
+   "subject": "Screenshot of the DiffusionBee app",
+   "rights": "Tester's own screenshot of third-party software UI.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "DiffusionBee doc image27.png"
+  },
+  {
+   "id": "similar",
+   "figure": 21,
+   "file": "diffusionbee-generate-similar-images-four-beach-couple-variants.webp",
+   "path": "images/diffusionbee-generate-similar-images-four-beach-couple-variants.webp",
+   "alt": "Cuatro escenas de playa generadas de una pareja al atardecer con palmeras, pájaros y barcos, producidas con la función 'generate similar images'.",
+   "caption": "Cuatro imágenes parecidas de la pareja en la playa con 'Generate similar images'. Fuente: el archivo de Word de la prueba de Msty; fecha y ajustes no registrados.",
+   "role": "inline",
+   "width": 451,
+   "height": 456,
+   "bytes": 48602,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-more"
+   ],
+   "subject": "AI-generated output (screenshot)",
+   "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "Msty doc image12.png"
+  },
+  {
+   "id": "cruise1",
+   "figure": 22,
+   "file": "diffusionbee-image-to-image-add-cruise-ship-result.webp",
+   "path": "images/diffusionbee-image-to-image-add-cruise-ship-result.webp",
+   "alt": "Imagen a imagen de DiffusionBee: entrada de la pareja en la playa, prompt 'add a cruise ship to the picture', resultado un crucero al atardecer visto desde una cubierta.",
+   "caption": "Imagen a imagen, primer intento. Entrada: la imagen de la pareja en la playa. Prompt: 'add a cruise ship to the picture'. Default_SDB_0.1, Input Strength 21.07. Aparece un crucero al atardecer, visto desde la barandilla de una cubierta; la pareja y las palmeras han desaparecido.",
+   "role": "moment",
+   "width": 1146,
+   "height": 708,
+   "bytes": 67928,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-more",
+    "moments-card"
+   ],
+   "subject": "Screenshot of the DiffusionBee app",
+   "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "Msty doc image13.png"
+  },
+  {
+   "id": "cruise3",
+   "figure": 23,
+   "file": "diffusionbee-image-to-image-strength-90-picture-unchanged.webp",
+   "path": "images/diffusionbee-image-to-image-strength-90-picture-unchanged.webp",
+   "alt": "Imagen a imagen de DiffusionBee con Input Strength 90.13 que devuelve la imagen de la pareja en la playa casi sin cambios, sin crucero.",
+   "caption": "Tercer intento, prompt largo ('Keep the picture exactly as is, but on the horizon next to the sunbeam add a big cruise ship'), Input Strength 90.13. El resultado es casi la imagen de entrada; sin barco.",
+   "role": "inline",
+   "width": 1134,
+   "height": 703,
+   "bytes": 88244,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-more"
+   ],
+   "subject": "Screenshot of the DiffusionBee app",
+   "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "Msty doc image15.png"
+  },
+  {
+   "id": "eiffel",
+   "figure": 24,
+   "file": "diffusionbee-juggernaut-eiffel-tower-two-similar-results.webp",
+   "path": "images/diffusionbee-juggernaut-eiffel-tower-two-similar-results.webp",
+   "alt": "Dos fotos generadas de la Torre Eiffel vista desde abajo contra un cielo azul con árboles y un estanque, casi idénticas entre sí.",
+   "caption": "Prompt: 'Eiffeltower in paris from the Marsfield with a blue sky, extra photorealistic'. JuggernautXL_v7_f8, 1216 x 1216, 2 imágenes, seed 770465, 25 pasos. Dos variantes muy parecidas; la torre es reconocible.",
+   "role": "inline",
+   "width": 1288,
+   "height": 618,
+   "bytes": 94204,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-more"
+   ],
+   "subject": "Screenshot of the DiffusionBee app",
+   "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "Msty doc image16.png"
+  },
+  {
+   "id": "nyc",
+   "figure": 25,
+   "file": "diffusionbee-epicrealism-new-york-night-skyline-helicopters.webp",
+   "path": "images/diffusionbee-epicrealism-new-york-night-skyline-helicopters.webp",
+   "alt": "Horizonte nocturno generado de Nueva York con helicópteros amarillos en el cielo, del modelo epicrealismXL_v8 con 75 pasos de muestreo.",
+   "caption": "Prompt: 'new york city skyline at night., photorealist, add 3 helicopters flying'. epicrealismXL_v8, 1216 x 1216, 1 imagen, seed 770465, 75 pasos, estilo 'enhance'. Se ven más de tres helicópteros.",
+   "role": "inline",
+   "width": 1139,
+   "height": 695,
+   "bytes": 141014,
+   "mime": "image/webp",
+   "loading": "lazy",
+   "evidence": "observed",
+   "used_in": [
+    "chapter-more"
+   ],
+   "subject": "Screenshot of the DiffusionBee app",
+   "rights": "Tester's own screenshot. Generated imagery: model license terms not reviewed.",
+   "captured": "2026-10-14 or later; exact time not recorded",
+   "original_docx_media": "Msty doc image17.png"
+  }
+ ],
+ "figure_order": [
+  "juggernaut_clown",
+  "home",
+  "dl_progress",
+  "timeout",
+  "models",
+  "first_gen",
+  "logo_result",
+  "heidelberg",
+  "controlnet",
+  "barilla_ui",
+  "barilla_result",
+  "church_result",
+  "canvas_sky",
+  "popart",
+  "clown_samaritan",
+  "clown_nobluesky",
+  "clown_guidance",
+  "couple_a",
+  "couple_b",
+  "settings",
+  "similar",
+  "cruise1",
+  "cruise3",
+  "eiffel",
+  "nyc"
+ ],
+ "ui": {
+  "kicker": "Prueba práctica de PromptQuorum · {app} · {date}",
+  "date_line": "14 de octubre de 2026",
+  "nav_aria": "Secciones",
+  "nav": {
+   "verdict": "Veredicto",
+   "moments": "Seis momentos",
+   "story": "Cómo fue",
+   "claims": "Afirmaciones",
+   "fit": "24 GB",
+   "log": "Registro de uso",
+   "errors": "Errores del evaluador",
+   "findings": "Hallazgos",
+   "background": "Contexto"
+  },
+  "related": "Relacionado:",
+  "review_link": "Reseña de {app} en PromptQuorum",
+  "directory_link": "Directorio de apps de IA local",
+  "verdict_h": "Veredicto",
+  "general_assessment": "Valoración general",
+  "fit_for_tester": "Encaje con el uso del evaluador",
+  "scorecard": "Puntuaciones",
+  "status_prefix": "Estado:",
+  "na": "n/d",
+  "score_aria": "{n} de 5",
+  "details_h": "Detalles de la prueba",
+  "label_intro": "Cada afirmación lleva una etiqueta:",
+  "legend_link": "Qué significan las etiquetas",
+  "disclosure_label": "Transparencia.",
+  "raw_notes": "PDF de las notas originales:",
+  "to_be_added": "pendiente de añadir",
+  "moments_h": "Seis momentos que marcaron esta prueba",
+  "see_context": "Verlo en contexto",
+  "story_h": "Cómo fue la prueba",
+  "claims_h": "Afirmaciones frente a lo que vio el evaluador",
+  "claims_cols": [
+   "Afirmación",
+   "Fuente",
+   "Observado",
+   "Etiqueta"
+  ],
+  "fit_h": "¿Cabe en 24 GB?",
+  "memory_line": "{gb} GB de memoria",
+  "above": "por encima de {gb} GB",
+  "below": "por debajo de {gb} GB",
+  "log_h": "Registro de uso",
+  "log_cols": [
+   "#",
+   "Tarea",
+   "Modelo",
+   "Resultado",
+   "Tiempo",
+   "Estado",
+   "Figuras"
+  ],
+  "statuses": {
+   "Fail": "Fallo",
+   "Partial": "Parcial",
+   "Pass": "Superado",
+   "Not completed": "No completado"
+  },
+  "errors_h": "Dónde se equivocó el evaluador",
+  "findings_h": "Registro de hallazgos",
+  "filter_aria": "Filtrar hallazgos por etiqueta",
+  "filter_all": "Todos",
+  "findings_cols": [
+   "ID",
+   "Hallazgo",
+   "Categoría",
+   "Etiqueta",
+   "Gravedad",
+   "Figuras"
+  ],
+  "severities": {
+   "High": "Alta",
+   "Medium": "Media",
+   "Low": "Baja",
+   "Positive": "Positiva"
+  },
+  "fig_abbr": "Fig.",
+  "figure": "Figura",
+  "enlarge": "Ampliar:",
+  "audience_h": "Para quién es",
+  "likely_fit": "Encaje probable",
+  "likely_poor_fit": "Encaje poco probable",
+  "retest": "Nueva prueba.",
+  "background_h": "Contexto sobre el desarrollador",
+  "gallery_h": "Más de la prueba",
+  "legend_h": "Cómo leer las etiquetas",
+  "sources_h": "Fuentes",
+  "footer_line": "ID de la prueba {id} · Estándar de pruebas v{version} · PDF de las notas originales: pendiente de añadir",
+  "crumb_home": "Inicio",
+  "crumb_directory": "Directorio",
+  "crumb_test": "Prueba práctica de {app}",
+  "faq_h": "Preguntas frecuentes",
+  "more_tests_h": "Más pruebas prácticas"
+ }
+}
