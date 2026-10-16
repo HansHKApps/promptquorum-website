@@ -38,4 +38,6 @@ export const app: ToolRecord = {
   reviewSlug: 'llm-farm-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   pqReview: { date: '2026-09-20', version: '1.4.3', versionSourceUrl: 'https://github.com/guinmoon/LLMFarm/releases/tag/1.4.3' },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-01-30', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/guinmoon/LLMFarm',
 }

@@ -48,6 +48,8 @@ export const app: ToolRecord = {
   // Only Gemini Nano via AICore is supported (no model import, no in-app model catalogue) and the interface is text-only, so those keys stay unset.
   compare: { offline: true },
   lastVerifiedDate: '2026-10-02',
+  lastUpstreamUpdate: '2026-05-17', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/Puzzaks/PAIOS',
   founderReviewedDate: '2026-10-05', // developer Puzzak read the review and supplied corrections 2026-10-05
   founder: {
     who: {

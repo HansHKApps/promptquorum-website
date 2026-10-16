@@ -41,4 +41,6 @@ export const app: ToolRecord = {
   // workflows, tool calling); a missing key = not stated, never false.
   compare: { mcp: true, multiAgent: true, toolCalling: true },
   lastVerifiedDate: null,
+  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/microsoft/agent-framework',
 }

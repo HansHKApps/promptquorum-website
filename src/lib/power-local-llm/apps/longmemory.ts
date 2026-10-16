@@ -43,4 +43,6 @@ export const app: ToolRecord = {
   // multiVector false — README describes SQLite-backed local-first storage plus a proprietary "Hydrograph" substrate, no pluggable vector-store backends documented.
   compare: { visualBuilder: false, localLlm: true, agents: true, multiVector: false, dockerDeploy: true, apiServer: true },
   lastVerifiedDate: '2026-09-25',
+  lastUpstreamUpdate: '2026-09-20', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/CaviraOSS/LongMemory',
 }

@@ -31,6 +31,7 @@
     "generate:pe-title-index": "node scripts/generate-pe-title-index.mjs > src/lib/prompt-engineering/articleTitleIndex.ts",
     "seo:log": "node scripts/seo-log-change.mjs",
     "test:directory-date": "node scripts/test-directory-date.mjs",
+    "test:app-activity": "node scripts/test-app-activity.mjs",
     "test:cluster-noindex": "node scripts/test-cluster-noindex.mjs",
     "check:affiliate-links": "node scripts/check-affiliate-links.mjs",
     "risk:scan": "node scripts/risk-scan.mjs",

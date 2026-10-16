@@ -35,4 +35,6 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'real-esrgan-ai-image-upscaler-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2024-08-06', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/xinntao/Real-ESRGAN',
 }

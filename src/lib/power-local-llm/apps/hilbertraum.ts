@@ -52,6 +52,8 @@ export const app: ToolRecord = {
   // endpoint as a client, and MCP support is not mentioned anywhere in the README or site.
   compare: { builtInEngine: true, fileChat: true, voice: true },
   lastVerifiedDate: '2026-09-25',
+  lastUpstreamUpdate: '2026-10-15', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/HilbertraumAI/HilbertRaum',
   reviewSlug: 'hilbertraum-review',
   pqReview: {
     date: '2026-09-25',

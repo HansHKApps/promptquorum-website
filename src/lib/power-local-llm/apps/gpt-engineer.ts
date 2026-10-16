@@ -40,4 +40,6 @@ export const app: ToolRecord = {
   // GitHub API archived=true, checked 2026-09-21
   upstreamStatus: { state: 'archived' },
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2025-05-14', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/AntonOsika/gpt-engineer',
 }

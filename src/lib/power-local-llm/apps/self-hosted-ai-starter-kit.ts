@@ -40,4 +40,6 @@ export const app: ToolRecord = {
   // apiServer confirmed via n8n's own REST API, exposed on every self-hosted n8n instance the kit bundles: https://docs.n8n.io/connect/n8n-api/
   compare: { visualBuilder: true, localLlm: true, agents: true, multiVector: false, dockerDeploy: true, apiServer: true, ollama: true },
   lastVerifiedDate: '2026-09-25',
+  lastUpstreamUpdate: '2026-10-12', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/n8n-io/self-hosted-ai-starter-kit',
 }
