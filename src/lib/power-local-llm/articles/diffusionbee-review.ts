@@ -444,6 +444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Weiterführende Artikel',
         items: [
+          '[DiffusionBee Praxistest](/de/power-local-llm/diffusionbee-hands-on-test) — ein Praxistest auf einem Mac mit M3 und 24 GB: Bilder erzeugen funktionierte, gezieltes Bearbeiten meist nicht; jede Aussage ist danach gekennzeichnet, woher sie stammt.',
           '[ComfyUI Review: Kostenlose Node-basierte UI für Stable Diffusion & Flux](/de/power-local-llm/comfyui-review) — die Node-Graph-Alternative für wiederverwendbare, teilbare Pipelines auf Mac, Windows und Linux.',
           '[Fooocus Review: Die einfachste lokale Stable-Diffusion-UI](/de/power-local-llm/fooocus-review) — eine weitere auf Einfachheit ausgelegte, plattformübergreifende Option mit browserbasierter statt nativer Oberfläche.',
           '[AUTOMATIC1111 Review: Stable Diffusion WebUI erklärt](/de/power-local-llm/automatic1111-review) — das Tool mit dem größten Erweiterungsökosystem für alle, die DiffusionBees eingebaute Funktionen übersteigen.',
@@ -664,6 +665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
+          "[Test pratique de DiffusionBee](/fr/power-local-llm/diffusionbee-hands-on-test) — un test sur un Mac M3 de 24 Go : la génération a fonctionné, les retouches ciblées ont presque toutes échoué ; chaque affirmation est étiquetée selon son origine.",
           "[ComfyUI Review : interface gratuite à base de nœuds pour Stable Diffusion & Flux](/fr/power-local-llm/comfyui-review) — l'alternative en graphe de nœuds pour des pipelines réutilisables et partageables sur Mac, Windows et Linux.",
           "[Fooocus Review : l'interface Stable Diffusion locale la plus simple](/fr/power-local-llm/fooocus-review) — une autre option axée sur la simplicité, multiplateforme, avec une interface web plutôt qu'une application native.",
           "[AUTOMATIC1111 Review : Stable Diffusion WebUI expliqué](/fr/power-local-llm/automatic1111-review) — l'outil avec le plus grand écosystème d'extensions pour ceux qui dépassent les fonctionnalités intégrées de DiffusionBee.",
@@ -884,6 +886,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '関連記事',
         items: [
+          '[DiffusionBeeの実機テスト](/ja/power-local-llm/diffusionbee-hands-on-test)——24 GBのMac（M3）で行ったテスト。画像生成は動作し、狙った編集はほとんど失敗。各記述に根拠のラベルを付けています。',
           '[ComfyUIレビュー: Stable Diffusion & Flux向けの無料ノードベースUI](/ja/power-local-llm/comfyui-review) — Mac、Windows、Linuxをまたいで再利用・共有可能なパイプラインを求める読者向けのノードグラフの代替。',
           '[Fooocusレビュー: 最もシンプルなローカルStable Diffusion UI](/ja/power-local-llm/fooocus-review) — ネイティブアプリではなくブラウザベースのインターフェースを持つ、もう一つのシンプルさ重視のクロスプラットフォームな選択肢。',
           '[AUTOMATIC1111レビュー: Stable Diffusion WebUIを解説](/ja/power-local-llm/automatic1111-review) — DiffusionBeeの内蔵機能セットでは物足りなくなった読者向けの、最大の拡張機能エコシステムを持つツール。',
@@ -1104,6 +1107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '相关阅读',
         items: [
+          '[DiffusionBee实测](/zh/power-local-llm/diffusionbee-hands-on-test)——在24 GB内存的Mac（M3）上进行的测试：生图可用，针对性改图基本失败，每条陈述都标明了依据。',
           '[ComfyUI评测:面向Stable Diffusion与Flux的免费节点式UI](/zh/power-local-llm/comfyui-review) —— 面向希望在Mac、Windows和Linux上使用可复用、可分享流程的读者的节点图替代方案。',
           '[Fooocus评测:最简单的本地Stable Diffusion UI](/zh/power-local-llm/fooocus-review) —— 另一款注重简洁、跨平台的选择,采用基于浏览器而非原生应用的界面。',
           '[AUTOMATIC1111评测:详解Stable Diffusion WebUI](/zh/power-local-llm/automatic1111-review) —— 面向那些超出DiffusionBee内置功能集需求的读者,拥有最大扩展生态的工具。',
@@ -1324,6 +1328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
+          '[Prueba práctica de DiffusionBee](/es/power-local-llm/diffusionbee-hands-on-test) — una prueba en un Mac con M3 y 24 GB: generar funcionó, las ediciones concretas casi siempre fallaron; cada afirmación indica cómo se sabe.',
           '[Reseña de ComfyUI: UI gratuita basada en nodos para Stable Diffusion y Flux](/es/power-local-llm/comfyui-review) — la alternativa en grafo de nodos para lectores que quieren pipelines reutilizables y compartibles en Mac, Windows y Linux.',
           '[Reseña de Fooocus: la UI local de Stable Diffusion más sencilla](/es/power-local-llm/fooocus-review) — otra opción centrada en la simplicidad, multiplataforma, con interfaz web en lugar de app nativa.',
           '[Reseña de AUTOMATIC1111: Stable Diffusion WebUI explicado](/es/power-local-llm/automatic1111-review) — la herramienta con el mayor ecosistema de extensiones para quienes se quedan cortos con las funciones integradas de DiffusionBee.',
@@ -1544,6 +1549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
+          '[Teste prático do DiffusionBee](/pt/power-local-llm/diffusionbee-hands-on-test) — um teste em um Mac com M3 e 24 GB: gerar funcionou, as edições pontuais quase sempre falharam; cada afirmação indica como se sabe.',
           '[ComfyUI Review: UI gratuita baseada em nós para Stable Diffusion & Flux](/pt/power-local-llm/comfyui-review) — a alternativa em grafo de nós para leitores que querem pipelines reutilizáveis e compartilháveis no Mac, Windows e Linux.',
           '[Fooocus Review: a UI local de Stable Diffusion mais simples](/pt/power-local-llm/fooocus-review) — outra opção focada em simplicidade, multiplataforma, com interface baseada em navegador em vez de app nativo.',
           '[AUTOMATIC1111 Review: Stable Diffusion WebUI explicado](/pt/power-local-llm/automatic1111-review) — a ferramenta com o maior ecossistema de extensões para leitores que ultrapassam o conjunto de funcionalidades embutidas do DiffusionBee.',
@@ -1764,6 +1770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: 'مقالات ذات صلة',
         items: [
+          '[اختبار DiffusionBee العملي](/ar/power-local-llm/diffusionbee-hands-on-test) — اختبار على جهاز Mac بمعالج M3 وذاكرة 24 جيجابايت: نجح توليد الصور وفشل التعديل الموجّه في الغالب، مع وسم كل عبارة بمصدر معرفتها.',
           '[مراجعة ComfyUI: واجهة مجانية قائمة على العُقد لـ Stable Diffusion وFlux](/ar/power-local-llm/comfyui-review) — البديل القائم على مخطط العُقد للقراء الراغبين في مسارات عمل قابلة لإعادة الاستخدام والمشاركة على Mac وWindows وLinux.',
           '[مراجعة Fooocus: أبسط واجهة محلية لـ Stable Diffusion](/ar/power-local-llm/fooocus-review) — خيار آخر يركز على البساطة، متعدد المنصات، بواجهة عبر المتصفح بدلاً من تطبيق أصلي.',
           '[مراجعة AUTOMATIC1111: شرح Stable Diffusion WebUI](/ar/power-local-llm/automatic1111-review) — الأداة ذات أكبر نظام بيئي للإضافات لمن تجاوزت احتياجاتهم مجموعة ميزات DiffusionBee المدمجة.',
@@ -1984,6 +1991,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
+          '[DiffusionBee 직접 테스트](/ko/power-local-llm/diffusionbee-hands-on-test) — 24GB Mac(M3)에서 진행한 테스트로, 이미지 생성은 되었지만 부분 편집은 대부분 실패했으며 모든 서술에 근거 라벨을 붙였습니다.',
           '[ComfyUI 리뷰: Stable Diffusion 및 Flux를 위한 무료 노드 기반 UI](/ko/power-local-llm/comfyui-review) — Mac, Windows, Linux 전반에서 재사용 및 공유 가능한 파이프라인을 원하는 독자를 위한 노드 그래프 대안.',
           '[Fooocus 리뷰: 가장 간단한 로컬 Stable Diffusion UI](/ko/power-local-llm/fooocus-review) — 네이티브 앱 대신 브라우저 기반 인터페이스를 사용하는, 단순함에 초점을 맞춘 또 다른 크로스 플랫폼 선택지.',
           '[AUTOMATIC1111 리뷰: Stable Diffusion WebUI 해설](/ko/power-local-llm/automatic1111-review) — DiffusionBee의 내장 기능 세트를 넘어서는 독자를 위한, 가장 큰 확장 기능 생태계를 가진 도구.',

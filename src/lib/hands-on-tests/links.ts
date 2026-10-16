@@ -17,7 +17,7 @@ export const HANDS_ON_TEST_LANGS: Record<string, readonly Language[]> = {
   'page-assist': ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'],
   msty: ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'],
   unsloth: ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'],
-  diffusionbee: ['en'],
+  diffusionbee: ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'],
 }
 
 export function handsOnTestLangs(appSlug: string): readonly Language[] {

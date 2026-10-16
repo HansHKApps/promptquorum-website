@@ -3,6 +3,14 @@ import drawThings from './data/draw-things.json'
 import bobe from './data/bobe.json'
 import pageAssist from './data/page-assist.json'
 import diffusionbee from './data/diffusionbee.json'
+import diffusionbeeDe from './data/diffusionbee.de.json'
+import diffusionbeeFr from './data/diffusionbee.fr.json'
+import diffusionbeeJa from './data/diffusionbee.ja.json'
+import diffusionbeeZh from './data/diffusionbee.zh.json'
+import diffusionbeeEs from './data/diffusionbee.es.json'
+import diffusionbeePt from './data/diffusionbee.pt.json'
+import diffusionbeeAr from './data/diffusionbee.ar.json'
+import diffusionbeeKo from './data/diffusionbee.ko.json'
 import pageAssistDe from './data/page-assist.de.json'
 import pageAssistFr from './data/page-assist.fr.json'
 import pageAssistJa from './data/page-assist.ja.json'
@@ -208,6 +216,14 @@ const HANDS_ON_TESTS: Record<string, Partial<Record<Language, HandsOnTest>>> = {
   },
   diffusionbee: {
     en: diffusionbee as unknown as HandsOnTest,
+    de: diffusionbeeDe as unknown as HandsOnTest,
+    fr: diffusionbeeFr as unknown as HandsOnTest,
+    ja: diffusionbeeJa as unknown as HandsOnTest,
+    zh: diffusionbeeZh as unknown as HandsOnTest,
+    es: diffusionbeeEs as unknown as HandsOnTest,
+    pt: diffusionbeePt as unknown as HandsOnTest,
+    ar: diffusionbeeAr as unknown as HandsOnTest,
+    ko: diffusionbeeKo as unknown as HandsOnTest,
   },
   'page-assist': {
     en: pageAssist as unknown as HandsOnTest,
