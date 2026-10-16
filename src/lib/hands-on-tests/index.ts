@@ -19,6 +19,15 @@ import mstyEs from './data/msty.es.json'
 import mstyPt from './data/msty.pt.json'
 import mstyAr from './data/msty.ar.json'
 import mstyKo from './data/msty.ko.json'
+import unsloth from './data/unsloth.json'
+import unslothDe from './data/unsloth.de.json'
+import unslothFr from './data/unsloth.fr.json'
+import unslothJa from './data/unsloth.ja.json'
+import unslothZh from './data/unsloth.zh.json'
+import unslothEs from './data/unsloth.es.json'
+import unslothPt from './data/unsloth.pt.json'
+import unslothAr from './data/unsloth.ar.json'
+import unslothKo from './data/unsloth.ko.json'
 import drawThingsDe from './data/draw-things.de.json'
 import drawThingsFr from './data/draw-things.fr.json'
 import drawThingsJa from './data/draw-things.ja.json'
@@ -217,6 +226,17 @@ const HANDS_ON_TESTS: Record<string, Partial<Record<Language, HandsOnTest>>> = {
     pt: mstyPt as unknown as HandsOnTest,
     ar: mstyAr as unknown as HandsOnTest,
     ko: mstyKo as unknown as HandsOnTest,
+  },
+  unsloth: {
+    en: unsloth as unknown as HandsOnTest,
+    de: unslothDe as unknown as HandsOnTest,
+    fr: unslothFr as unknown as HandsOnTest,
+    ja: unslothJa as unknown as HandsOnTest,
+    zh: unslothZh as unknown as HandsOnTest,
+    es: unslothEs as unknown as HandsOnTest,
+    pt: unslothPt as unknown as HandsOnTest,
+    ar: unslothAr as unknown as HandsOnTest,
+    ko: unslothKo as unknown as HandsOnTest,
   },
 }
 

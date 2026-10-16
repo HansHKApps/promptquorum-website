@@ -5,7 +5,7 @@ import type { Language } from '@/lib/blog/blogContent'
  * Kept separate from the report data so client components (tile, drawer)
  * don't bundle the full test content.
  */
-export const HANDS_ON_TEST_SLUGS: readonly string[] = ['draw-things', 'bobe', 'page-assist', 'msty']
+export const HANDS_ON_TEST_SLUGS: readonly string[] = ['draw-things', 'bobe', 'page-assist', 'msty', 'unsloth']
 
 /**
  * Languages each test is published in (a data/<app>.<lang>.json file must exist for every entry;
@@ -16,6 +16,7 @@ export const HANDS_ON_TEST_LANGS: Record<string, readonly Language[]> = {
   bobe: ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'],
   'page-assist': ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'],
   msty: ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'],
+  unsloth: ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko'],
 }
 
 export function handsOnTestLangs(appSlug: string): readonly Language[] {

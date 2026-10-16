@@ -270,6 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Related Reading',
         items: [
           '[Local LLM Software Directory 2026](/directory) — the full catalog of local AI tools this article belongs to, including Unsloth\'s directory entry.',
+          '[Unsloth Hands-on Test](/power-local-llm/unsloth-hands-on-test) — a first-hand test on a 24 GB M3 Mac, with every statement labelled by how it is known.',
           '[Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud](/local-llms/best-llm-fine-tuning-framework-2026) — a direct comparison covering Unsloth against Axolotl, MLX-LM, and cloud fine-tuning APIs in depth.',
           '[MLX-LM Explained](/power-local-llm/mlx-lm-explained) — a dedicated review of Apple\'s own Apple-Silicon-native alternative.',
           '[Fine-Tuning Local LLMs with LoRA](/local-llms/fine-tuning-local-llms-lora) — a deeper look at the LoRA technique Unsloth and others use to fine-tune efficiently.',
@@ -545,6 +546,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Weiterführende Artikel',
         items: [
           '[Local LLM Software Directory 2026](/de/directory) — der vollständige Katalog lokaler KI-Tools, zu dem dieser Artikel gehört, einschließlich Unsloths Directory-Eintrag.',
+          '[Unsloth Praxistest](/de/power-local-llm/unsloth-hands-on-test) — ein Praxistest auf einem M3-Mac mit 24 GB, bei dem jede Aussage danach gekennzeichnet ist, woher sie stammt.',
           '[Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud](/de/local-llms/best-llm-fine-tuning-framework-2026) — ein direkter Vergleich von Unsloth mit Axolotl, MLX-LM und Cloud-Fine-Tuning-APIs.',
           '[MLX-LM Explained](/de/power-local-llm/mlx-lm-explained) — eine dedizierte Review von Apples eigener, Apple-Silicon-nativer Alternative.',
           '[Fine-Tuning lokaler LLMs mit LoRA](/de/local-llms/fine-tuning-local-llms-lora) — ein tieferer Blick auf die LoRA-Technik, die Unsloth und andere zum effizienten Fine-Tuning nutzen.',
@@ -820,6 +822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lectures complémentaires',
         items: [
           "[Local LLM Software Directory 2026](/fr/directory) — le catalogue complet des outils d'IA locale auquel appartient cet article, incluant la fiche d'Unsloth dans le répertoire.",
+          "[Test pratique d'Unsloth](/fr/power-local-llm/unsloth-hands-on-test) — un test réalisé sur un Mac M3 de 24 GB, où chaque affirmation est étiquetée selon son origine.",
           "[Best LLM Fine-Tuning Framework 2026 : Unsloth vs Axolotl vs Cloud](/fr/local-llms/best-llm-fine-tuning-framework-2026) — une comparaison directe d'Unsloth face à Axolotl, MLX-LM et aux API de fine-tuning cloud.",
           "[MLX-LM Explained](/fr/power-local-llm/mlx-lm-explained) — un test dédié de l'alternative native Apple Silicon d'Apple.",
           "[Fine-Tuning Local LLMs with LoRA](/fr/local-llms/fine-tuning-local-llms-lora) — un regard plus approfondi sur la technique LoRA qu'Unsloth et d'autres utilisent pour un fine-tuning efficace.",
@@ -1095,6 +1098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Lecturas relacionadas',
         items: [
           '[Directorio de Software de LLM Local 2026](/es/directory) — el catálogo completo de herramientas de IA local al que pertenece este artículo, incluida la entrada de Unsloth en el directorio.',
+          '[Prueba práctica de Unsloth](/es/power-local-llm/unsloth-hands-on-test) — una prueba en un Mac M3 de 24 GB en la que cada afirmación se etiqueta según cómo se conoce.',
           '[Mejor Framework de Fine-Tuning de LLM 2026: Unsloth vs Axolotl vs Cloud](/es/local-llms/best-llm-fine-tuning-framework-2026) — una comparación directa que analiza a Unsloth frente a Axolotl, MLX-LM y las APIs de fine-tuning en la nube en profundidad.',
           '[MLX-LM Explained](/es/power-local-llm/mlx-lm-explained) — una reseña dedicada a la alternativa propia de Apple, nativa de Apple Silicon.',
           '[Fine-Tuning de LLMs Locales con LoRA](/es/local-llms/fine-tuning-local-llms-lora) — un análisis más profundo de la técnica LoRA que usan Unsloth y otros para hacer fine-tuning de forma eficiente.',
@@ -1370,6 +1374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Leituras relacionadas',
         items: [
           '[Diretório de Software de LLM Local 2026](/pt/directory) — o catálogo completo de ferramentas de IA local ao qual este artigo pertence, incluindo a entrada do Unsloth no diretório.',
+          '[Teste prático do Unsloth](/pt/power-local-llm/unsloth-hands-on-test) — um teste em um Mac M3 de 24 GB em que cada afirmação é rotulada conforme a origem.',
           '[Melhor Framework de Fine-Tuning de LLM 2026: Unsloth vs Axolotl vs Cloud](/pt/local-llms/best-llm-fine-tuning-framework-2026) — uma comparação direta que analisa o Unsloth em relação ao Axolotl, ao MLX-LM e às APIs de fine-tuning na nuvem em profundidade.',
           '[MLX-LM Explained](/pt/power-local-llm/mlx-lm-explained) — uma análise dedicada à alternativa própria da Apple, nativa de Apple Silicon.',
           '[Fine-Tuning de LLMs Locais com LoRA](/pt/local-llms/fine-tuning-local-llms-lora) — um olhar mais profundo sobre a técnica LoRA que o Unsloth e outros usam para fazer fine-tuning de forma eficiente.',
@@ -1645,6 +1650,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '関連記事',
         items: [
           '[ローカルLLMソフトウェアディレクトリ 2026](/ja/directory) — この記事が属する、ローカルAIツールの完全なカタログ。Unslothのディレクトリ項目を含む。',
+          '[Unslothの実機テスト](/ja/power-local-llm/unsloth-hands-on-test)——24 GBのM3 Macで行ったテスト。各記述に根拠のラベルを付けています。',
           '[ファインチューニングフレームワーク完全比較 2026：Unsloth vs Axolotl vs クラウド](/ja/local-llms/best-llm-fine-tuning-framework-2026) — Unslothを、Axolotl、MLX-LM、クラウドファインチューニングAPIと詳しく比較する記事。',
           '[MLX-LM 解説](/ja/power-local-llm/mlx-lm-explained) — AppleによるApple Siliconネイティブな代替ツールの専用レビュー。',
           '[LoRAによるローカルLLMのファインチューニング](/ja/local-llms/fine-tuning-local-llms-lora) — UnslothなどがLLMを効率よくファインチューニングするために使うLoRA手法をより深く掘り下げた記事。',
@@ -1920,6 +1926,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '相关阅读',
         items: [
           '[本地 LLM 软件目录 2026](/zh/directory) — 本文所属的本地 AI 工具完整目录，包含 Unsloth 的目录条目。',
+          '[Unsloth 上手测试](/zh/power-local-llm/unsloth-hands-on-test)——在 24 GB M3 Mac 上的实际测试，每条陈述都标注了其依据。',
           '[2026 年最佳 LLM 微调框架：Unsloth vs Axolotl vs 云端](/zh/local-llms/best-llm-fine-tuning-framework-2026) — 一篇将 Unsloth 与 Axolotl、MLX-LM 及云端微调 API 进行深入对比的文章。',
           '[MLX-LM 详解](/zh/power-local-llm/mlx-lm-explained) — 对 Apple 自家 Apple Silicon 原生替代方案的专门评测。',
           '[用 LoRA 微调本地 LLM](/zh/local-llms/fine-tuning-local-llms-lora) — 深入介绍 Unsloth 等工具用于高效微调的 LoRA 技术。',
@@ -2195,6 +2202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '관련 읽을거리',
         items: [
           '[로컬 LLM 소프트웨어 디렉터리 2026](/ko/directory) — Unsloth의 디렉터리 항목을 포함해 이 글이 속한 로컬 AI 도구의 전체 카탈로그입니다.',
+          '[Unsloth 직접 테스트](/ko/power-local-llm/unsloth-hands-on-test) — 24 GB M3 Mac에서 진행한 직접 사용 테스트로, 모든 진술에 근거 라벨이 붙어 있습니다.',
           '[최고의 LLM 파인튜닝 프레임워크 2026: Unsloth vs Axolotl vs Cloud](/ko/local-llms/best-llm-fine-tuning-framework-2026) — Unsloth를 Axolotl, MLX-LM, 클라우드 파인튜닝 API와 심도 있게 비교한 글입니다.',
           '[MLX-LM Explained](/ko/power-local-llm/mlx-lm-explained) — Apple 자체의 Apple Silicon 네이티브 대안을 전용으로 다룬 리뷰입니다.',
           '[LoRA로 로컬 LLM 파인튜닝하기](/ko/local-llms/fine-tuning-local-llms-lora) — Unsloth 등이 효율적인 파인튜닝을 위해 사용하는 LoRA 기법을 더 깊이 살펴보는 글입니다.',
@@ -2470,6 +2478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'قراءات ذات صلة',
         items: [
           '[دليل برمجيات LLM المحلية 2026](/ar/directory) — الكتالوج الكامل لأدوات الذكاء الاصطناعي المحلية الذي ينتمي إليه هذا المقال، بما في ذلك مدخل Unsloth في الدليل.',
+          '[اختبار Unsloth العملي](/ar/power-local-llm/unsloth-hands-on-test) — اختبار عملي على جهاز Mac بشريحة M3 وذاكرة 24 GB، وكل عبارة فيه موسومة بمصدر معرفتها.',
           '[أفضل إطار عمل لضبط نماذج LLM 2026: Unsloth مقابل Axolotl مقابل السحابة](/ar/local-llms/best-llm-fine-tuning-framework-2026) — مقارنة مباشرة تغطي Unsloth مقابل Axolotl وMLX-LM وواجهات برمجة التطبيقات السحابية للضبط الدقيق.',
           '[MLX-LM Explained](/ar/power-local-llm/mlx-lm-explained) — مراجعة مخصصة لبديل Apple الأصلي الخاص بـ Apple Silicon.',
           '[ضبط نماذج LLM المحلية باستخدام LoRA](/ar/local-llms/fine-tuning-local-llms-lora) — نظرة أعمق على تقنية LoRA التي تستخدمها Unsloth وغيرها للضبط الفعّال.',

@@ -65851,5 +65851,86 @@
     "dateModified": "2026-10-09",
     "url": "/zh/power-local-llm/page-assist-hands-on-test",
     "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ar",
+    "title": "⁦Unsloth⁩ على جهاز ⁦Mac⁩ بذاكرة ⁦24 GB⁩: تطبيق متقن، لكن نفدت الذاكرة قبل أول صورة",
+    "excerpt": "اختبار عملي على جهاز ⁦Mac⁩ بذاكرة ⁦24 GB⁩، هدفه توليد الصور. عملت الدردشة، لكن رُفضت نماذج الصور لقلة الذاكرة، ولم تُولَّد أي صورة.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ar/power-local-llm/unsloth-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "de",
+    "title": "Unsloth auf einem 24-GB-Mac: Eine ausgereifte App, aber Speicher voll, bevor das erste Bild entstand",
+    "excerpt": "Praxistest auf einem 24-GB-Mac, gedacht für die Bilderzeugung. Der Chat funktionierte; Bildmodelle wurden wegen fehlenden Speichers abgelehnt, und es entstand kein Bild.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/de/power-local-llm/unsloth-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "es",
+    "title": "Unsloth en un Mac de 24 GB: una app pulida, sin memoria antes de la primera imagen",
+    "excerpt": "Prueba práctica en un Mac de 24 GB, centrada en la generación de imágenes. El chat funcionó; los modelos de imagen fueron rechazados por falta de memoria y no se generó ninguna imagen.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/es/power-local-llm/unsloth-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "fr",
+    "title": "Unsloth sur un Mac de 24 GB : une application soignée, mais mémoire saturée avant la première image",
+    "excerpt": "Test pratique sur un Mac de 24 GB, centré sur la génération d'images. Le chat a fonctionné ; les modèles d'image ont été refusés faute de mémoire, et aucune image n'a été produite.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/fr/power-local-llm/unsloth-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ja",
+    "title": "24 GBのMacでUnsloth：洗練されたアプリだが、最初の画像を作る前にメモリ不足",
+    "excerpt": "24 GBのMacでのハンズオンテスト。狙いは画像生成。チャットは動作しましたが、画像モデルはメモリ不足を理由に拒否され、画像は生成されませんでした。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ja/power-local-llm/unsloth-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "en",
+    "title": "Unsloth on a 24 GB Mac: Polished App, Out of Memory Before the First Picture",
+    "excerpt": "Hands-on test on a 24 GB Mac, aimed at picture generation. Chat worked; picture models were refused for lack of memory, and no picture was made.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/power-local-llm/unsloth-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "ko",
+    "title": "24 GB Mac에서 쓴 Unsloth: 완성도 높은 앱이지만, 첫 이미지가 나오기 전에 메모리가 부족했습니다",
+    "excerpt": "이미지 생성을 목표로 24 GB Mac에서 해 본 직접 사용 테스트. 채팅은 동작했지만 이미지 모델은 메모리 부족으로 거부되었고, 이미지는 생성되지 않았습니다.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/ko/power-local-llm/unsloth-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "pt",
+    "title": "Unsloth em um Mac de 24 GB: app polido, sem memória antes da primeira imagem",
+    "excerpt": "Teste prático em um Mac de 24 GB, voltado à geração de imagens. O chat funcionou; os modelos de imagem foram recusados por falta de memória e nenhuma imagem foi gerada.",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/pt/power-local-llm/unsloth-hands-on-test",
+    "cluster": "power-local-llm"
+  },
+  {
+    "lang": "zh",
+    "title": "24 GB Mac 上的 Unsloth：界面精致，但在生成第一张图之前就内存不足",
+    "excerpt": "在 24 GB Mac 上的上手测试，目标是生成图片。聊天能用；图像模型因内存不足被拒绝加载，没有生成任何图片。",
+    "publishDate": "2026-10-16",
+    "dateModified": "2026-10-16",
+    "url": "/zh/power-local-llm/unsloth-hands-on-test",
+    "cluster": "power-local-llm"
   }
 ]

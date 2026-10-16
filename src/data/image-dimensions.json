@@ -47619,6 +47619,86 @@
     "width": 800,
     "height": 455
   },
+  "/images/unsloth-activity-monitor-memory-used-12-92-gb.webp": {
+    "encodingFormat": "image/webp",
+    "width": 701,
+    "height": 132
+  },
+  "/images/unsloth-activity-monitor-memory-used-9-67-gb.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1250,
+    "height": 208
+  },
+  "/images/unsloth-chat-5-times-866-answer-11-tokens-per-second.webp": {
+    "encodingFormat": "image/webp",
+    "width": 912,
+    "height": 308
+  },
+  "/images/unsloth-chat-out-of-memory-after-reading-web-page.webp": {
+    "encodingFormat": "image/webp",
+    "width": 838,
+    "height": 205
+  },
+  "/images/unsloth-chat-web-page-read-waiting-for-approval.webp": {
+    "encodingFormat": "image/webp",
+    "width": 927,
+    "height": 715
+  },
+  "/images/unsloth-download-progress-7gb-of-20gb-3h31m-left.webp": {
+    "encodingFormat": "image/webp",
+    "width": 424,
+    "height": 142
+  },
+  "/images/unsloth-download-z-image-bf16-20-5-gb-total.webp": {
+    "encodingFormat": "image/webp",
+    "width": 496,
+    "height": 438
+  },
+  "/images/unsloth-flux2-klein-load-refused-17gb-needed-2gb-usable.webp": {
+    "encodingFormat": "image/webp",
+    "width": 392,
+    "height": 334
+  },
+  "/images/unsloth-flux2-klein-load-refused-6gb-usable-after-reboot.webp": {
+    "encodingFormat": "image/webp",
+    "width": 415,
+    "height": 344
+  },
+  "/images/unsloth-heidelberg-search-out-of-memory-no-safetensors.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1227,
+    "height": 700
+  },
+  "/images/unsloth-loading-model-from-lmstudio-folder-qwen-27b-mlx.webp": {
+    "encodingFormat": "image/webp",
+    "width": 474,
+    "height": 140
+  },
+  "/images/unsloth-main-window-how-can-i-help-sidebar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1247,
+    "height": 728
+  },
+  "/images/unsloth-model-hub-hardware-24gib-download-3h47m.webp": {
+    "encodingFormat": "image/webp",
+    "width": 888,
+    "height": 681
+  },
+  "/images/unsloth-model-picker-recommended-list-parameter-counts.webp": {
+    "encodingFormat": "image/webp",
+    "width": 660,
+    "height": 536
+  },
+  "/images/unsloth-on-device-flux2-klein-4b-and-mistral-7b-sizes.webp": {
+    "encodingFormat": "image/webp",
+    "width": 538,
+    "height": 130
+  },
+  "/images/unsloth-on-device-models-custom-folders-lmstudio-ollama.webp": {
+    "encodingFormat": "image/webp",
+    "width": 826,
+    "height": 537
+  },
   "/images/unsloth-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -47663,6 +47743,26 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
+  },
+  "/images/unsloth-setup-window-getting-things-ready.webp": {
+    "encodingFormat": "image/webp",
+    "width": 814,
+    "height": 585
+  },
+  "/images/unsloth-starting-model-loading-cached-model-no-progress.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1114,
+    "height": 158
+  },
+  "/images/unsloth-switching-to-ollama-qwen3-coder-30b-gguf.webp": {
+    "encodingFormat": "image/webp",
+    "width": 991,
+    "height": 220
+  },
+  "/images/unsloth-voice-dictation-download-qwen3-asr-1gb.webp": {
+    "encodingFormat": "image/webp",
+    "width": 516,
+    "height": 233
   },
   "/images/used-gpus-for-local-llms-overview-hero-ar.webp": {
     "encodingFormat": "image/webp",
