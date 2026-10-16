@@ -54,7 +54,7 @@
     ],
     [
       "Version",
-      "v0.1.0-alpha, d'après la bannière de téléchargement du site, telle que collée par le testeur. La version installée n'a pas été consignée.",
+      "v0.1.0-alpha, d'après la bannière de téléchargement du site, telle que collée par le testeur. La version installée n'a pas été consignée. Depuis le test, le site et les versions ont été mis à jour : la dernière version est v0.9.1 (16 octobre 2026).",
       "vendor-claim"
     ],
     [
@@ -115,7 +115,7 @@
   ],
   "disclosure": "Le testeur a fondé PromptQuorum (promptquorum.com), un site de contenu et un annuaire consacrés aux applis d'IA locale. Les notes ne mentionnent aucun contact avec l'éditeur, aucun paiement et aucun parrainage. Le testeur dit qu'il pourrait réessayer après avoir parlé au fondateur.",
   "verdict": {
-    "general": "Une alpha précoce (v0.1.0-alpha selon le site web). L'installation est facile et le choix du modèle clair. L'idée centrale, un assistant qui surveille l'écran pour aider, n'a pas pu être démontrée dans ce test : l'assistant de l'appli n'a pas nommé le réglage macOS nécessaire pour accorder l'enregistrement de l'écran, et la vérification du fonctionnement de la perception de l'écran n'a donné aucune réponse exploitable. La suppression a nécessité le Moniteur d'activité.",
+    "general": "Une alpha précoce (v0.1.0-alpha selon le site web). L'installation est facile et le choix du modèle clair. L'idée centrale, un assistant qui surveille l'écran pour aider, n'a pas pu être démontrée dans ce test : l'assistant de l'appli n'a pas nommé le réglage macOS nécessaire pour accorder l'enregistrement de l'écran, et la vérification du fonctionnement de la perception de l'écran n'a donné aucune réponse exploitable. La suppression a nécessité le Moniteur d'activité. Ce test ne couvre que v0.1.0-alpha. Des versions plus récentes, jusqu'à v0.9.1 (16 octobre 2026), ont été publiées après le test et n'ont pas été testées.",
     "fit": "Désinstallée après la configuration. 'Concept I like. Concept is interesting. Implementation is missing.' Le testeur pourrait réessayer dans 3 à 6 mois, ou après avoir parlé au fondateur."
   },
   "scores": [
@@ -445,8 +445,8 @@
           null
         ],
         [
-          "assumption",
-          "Le testeur a l'impression que le projet est peut-être à l'abandon. 'M2 or higher' couvre aussi les puces plus récentes, la date de compilation est floue et ni dépôt de code ni historique de versions n'ont été vérifiés : la déduction est donc fragile.",
+          "third-party",
+          "Mise à jour après le test : l'impression du testeur selon laquelle le projet serait mort était erronée. Les GitHub Releases du projet (github.com/Sombrace/BoBe/releases) listent v0.2.0 (20 mars 2026), puis v0.8.1 (14 octobre 2026), v0.9.0 (15 octobre 2026) et v0.9.1 (16 octobre 2026). Le site propose désormais v0.9.1. La bannière v0.1.0-alpha vue pendant le test est obsolète, et ce test ne couvre pas les versions plus récentes.",
           null
         ]
       ]
@@ -621,8 +621,8 @@
       "A laissé des lacunes dans le relevé : version installée, version de macOS, heures de début et de fin, quel téléchargement correspond à quel modèle, et la réponse exacte à la question sur la perception de l'écran."
     ],
     [
-      "assumption",
-      "L'impression 'project is dead' repose sur une formulation ('M2 or higher') qui couvre aussi les puces plus récentes, et sur un 'February 26' peu clair. Aucun historique de versions n'a été vérifié."
+      "tester-error",
+      "L'impression « project is dead » était erronée. Elle reposait sur une formulation (« M2 or higher ») qui inclut aussi les puces plus récentes et sur un « February 26 » peu clair. L'historique des versions, vérifié ensuite sur GitHub, montre un développement actif : v0.8.1, v0.9.0 et v0.9.1 ont été publiées du 14 au 16 octobre 2026."
     ],
     [
       "tester-view",
@@ -778,7 +778,7 @@
         "Personnes mal à l'aise avec une appli qui enregistre l'écran sans revue de sécurité indépendante."
       ]
     ],
-    "retest": "Retester dans 3 à 6 mois, après avoir parlé au fondateur, ou lorsqu'une version plus récente que v0.1.0-alpha sortira (le plan du testeur, plus un déclencheur ajouté)."
+    "retest": "Nouveau test recommandé : des versions postérieures à v0.1.0-alpha ont été publiées depuis (dernière : v0.9.1, 16 octobre 2026). Plan initial du testeur : retester dans 3 à 6 mois ou après un échange avec le fondateur."
   },
   "background_intro": "",
   "background": [],
