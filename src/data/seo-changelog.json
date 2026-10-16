@@ -2756,5 +2756,182 @@
     ],
     "reason": "geo-meta-optimizer: No-GSC-position run on pasted GSC queries (generic \"llm apps/tools/software\" intent, 0 clicks) — title/meta rewritten around \"software directory\" + platforms; FAQ +3 (iOS/Android, Open WebUI alternatives, AnythingLLM vs Jan); dateModified bumped for visible FAQ addition",
     "baseline": null
+  },
+  {
+    "id": "d05692d8-2ddb-43b4-9f0b-3fa14d21f754",
+    "slug": "/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+    "date": "2026-10-16T16:51:50.859Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Local RAG 2026: AnythingLLM vs PrivateGPT vs Open WebUI",
+        "new": "AnythingLLM vs Open WebUI vs PrivateGPT: 3 RAG Tools 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "3 local RAG platforms tested on a 5,047-page corpus. AnythingLLM, PrivateGPT, Open WebUI benchmarked for accuracy, latency, citations. August 2026 verdict.",
+        "new": "AnythingLLM vs Open WebUI vs PrivateGPT on 5,047 pages: AnythingLLM has the best citations (6% hallucination), PrivateGPT the fastest retrieval (240 ms). 2026."
+      }
+    ],
+    "reason": "geo-meta-optimizer (GSC, EN): \"anythingllm vs open webui\" variants ~386 impr / 7 clicks @ pos ~7; title now leads with the AnythingLLM-vs-Open WebUI pair, month removed from meta, AR meta contradiction fixed, 2 FAQs added",
+    "baseline": {
+      "position": 7.3,
+      "impressions": 386,
+      "clicks": 7,
+      "ctr": 0.018134715025906734,
+      "period": "GSC top-10 queries paste 2026-10-16"
+    }
+  },
+  {
+    "id": "3ea2533f-abc4-4fba-9710-b3ab33d437e3",
+    "slug": "/de/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+    "date": "2026-10-16T16:51:50.951Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Lokales RAG 2026: AnythingLLM vs PrivateGPT vs Open WebUI",
+        "new": "AnythingLLM vs Open WebUI vs PrivateGPT: 3 lokale RAG 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "3 lokale RAG-Plattformen auf 5.047 Seiten getestet. AnythingLLM, PrivateGPT, Open WebUI: Genauigkeit, Latenz, Zitierqualität. Testergebnis August 2026.",
+        "new": "AnythingLLM vs Open WebUI vs PrivateGPT auf 5.047 Seiten getestet: AnythingLLM zitiert am besten (6 % Halluzination), PrivateGPT ruft am schnellsten ab (240 ms). 2026."
+      }
+    ],
+    "reason": "geo-meta-optimizer (GSC, EN): \"anythingllm vs open webui\" variants ~386 impr / 7 clicks @ pos ~7; title now leads with the AnythingLLM-vs-Open WebUI pair, month removed from meta, AR meta contradiction fixed, 2 FAQs added",
+    "baseline": null
+  },
+  {
+    "id": "db85102d-c986-467f-a07d-8d841683314a",
+    "slug": "/fr/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+    "date": "2026-10-16T16:51:51.043Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "AnythingLLM vs PrivateGPT vs Open WebUI : RAG 2026",
+        "new": "AnythingLLM vs Open WebUI vs PrivateGPT : 3 RAG 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "3 plateformes RAG locales testées sur 5 047 pages. AnythingLLM, PrivateGPT, Open WebUI : benchmarks de précision, latence, citations. Août 2026.",
+        "new": "AnythingLLM vs Open WebUI vs PrivateGPT sur 5 047 pages : AnythingLLM cite le mieux (6 % d'hallucinations), PrivateGPT récupère le plus vite (240 ms). 2026."
+      }
+    ],
+    "reason": "geo-meta-optimizer (GSC, EN): \"anythingllm vs open webui\" variants ~386 impr / 7 clicks @ pos ~7; title now leads with the AnythingLLM-vs-Open WebUI pair, month removed from meta, AR meta contradiction fixed, 2 FAQs added",
+    "baseline": null
+  },
+  {
+    "id": "e2dcaaba-3c36-4625-9cd7-60cc250907db",
+    "slug": "/ja/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+    "date": "2026-10-16T16:51:51.134Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "ローカルRAG 2026：AnythingLLM・PrivateGPT・Open WebUI比較",
+        "new": "AnythingLLM・Open WebUI・PrivateGPT比較：ローカルRAG 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "AnythingLLM、PrivateGPT、Open WebUIを5,047ページのコーパスでテスト。精度、レイテンシ、引用、スケーリング性能を比較。2026年8月の検証結果。",
+        "new": "AnythingLLM・Open WebUI・PrivateGPTを5,047ページで比較。引用はAnythingLLM（ハルシネーション6%）、検索速度はPrivateGPT（240ms）が最良。2026年版。"
+      }
+    ],
+    "reason": "geo-meta-optimizer (GSC, EN): \"anythingllm vs open webui\" variants ~386 impr / 7 clicks @ pos ~7; title now leads with the AnythingLLM-vs-Open WebUI pair, month removed from meta, AR meta contradiction fixed, 2 FAQs added",
+    "baseline": null
+  },
+  {
+    "id": "4673fddf-25fd-46b1-b866-3177e55b5ff1",
+    "slug": "/zh/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+    "date": "2026-10-16T16:51:51.227Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "本地RAG 2026：AnythingLLM vs PrivateGPT vs Open WebUI",
+        "new": "AnythingLLM vs Open WebUI vs PrivateGPT：本地RAG 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "在5,047页语料库上测试AnythingLLM、PrivateGPT和Open WebUI。比较准确性、延迟、引用和扩展性能。2026年8月的测试结果。",
+        "new": "AnythingLLM、Open WebUI、PrivateGPT在5,047页语料上的实测：AnythingLLM引用最佳（幻觉率6%），PrivateGPT检索最快（240毫秒）。2026年。"
+      }
+    ],
+    "reason": "geo-meta-optimizer (GSC, EN): \"anythingllm vs open webui\" variants ~386 impr / 7 clicks @ pos ~7; title now leads with the AnythingLLM-vs-Open WebUI pair, month removed from meta, AR meta contradiction fixed, 2 FAQs added",
+    "baseline": null
+  },
+  {
+    "id": "f46499d9-ff12-454e-a63a-ba85165906b8",
+    "slug": "/es/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+    "date": "2026-10-16T16:51:51.320Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "RAG local 2026: AnythingLLM vs PrivateGPT vs Open WebUI",
+        "new": "AnythingLLM vs Open WebUI vs PrivateGPT: 3 RAG locales 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "3 plataformas RAG locales probadas en un corpus de 5.047 páginas. AnythingLLM, PrivateGPT y Open WebUI: precisión, latencia y citas. Veredicto de 2026.",
+        "new": "AnythingLLM vs Open WebUI vs PrivateGPT en 5.047 páginas: AnythingLLM cita mejor (6 % de alucinaciones) y PrivateGPT recupera más rápido (240 ms). 2026."
+      }
+    ],
+    "reason": "geo-meta-optimizer (GSC, EN): \"anythingllm vs open webui\" variants ~386 impr / 7 clicks @ pos ~7; title now leads with the AnythingLLM-vs-Open WebUI pair, month removed from meta, AR meta contradiction fixed, 2 FAQs added",
+    "baseline": null
+  },
+  {
+    "id": "4ed5233e-c2ed-4f60-87c4-9a7a5c9e9478",
+    "slug": "/pt/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+    "date": "2026-10-16T16:51:51.412Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "RAG local 2026: AnythingLLM vs PrivateGPT vs Open WebUI",
+        "new": "AnythingLLM vs Open WebUI vs PrivateGPT: 3 RAGs locais 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "3 plataformas RAG locais testadas em um corpus de 5.047 páginas. AnythingLLM, PrivateGPT e Open WebUI: precisão, latência e citações. Veredito de 2026.",
+        "new": "AnythingLLM vs Open WebUI vs PrivateGPT em 5.047 páginas: AnythingLLM cita melhor (6% de alucinações) e PrivateGPT recupera mais rápido (240 ms). 2026."
+      }
+    ],
+    "reason": "geo-meta-optimizer (GSC, EN): \"anythingllm vs open webui\" variants ~386 impr / 7 clicks @ pos ~7; title now leads with the AnythingLLM-vs-Open WebUI pair, month removed from meta, AR meta contradiction fixed, 2 FAQs added",
+    "baseline": null
+  },
+  {
+    "id": "fb758d29-7e96-413e-8781-791fa1c20b17",
+    "slug": "/ar/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+    "date": "2026-10-16T16:51:51.504Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "⁨RAG⁩ محلي: ⁨AnythingLLM⁩ و⁨PrivateGPT⁩ و⁨Open WebUI 2026⁩",
+        "new": "⁨AnythingLLM⁩ و⁨Open WebUI⁩ و⁨PrivateGPT⁩: ⁨RAG⁩ محلي ⁨2026⁩"
+      },
+      {
+        "field": "metaDescription",
+        "old": "اختُبرت 3 منصات RAG محلية على مجموعة 5,047 صفحة: AnythingLLM تتفوق في الدقة، وOpen WebUI في السرعة، وPrivateGPT في الاستشهادات. نتائج أغسطس 2026.",
+        "new": "AnythingLLM وOpen WebUI وPrivateGPT على 5,047 صفحة: AnythingLLM الأفضل استشهادًا (هلوسة 6%) وPrivateGPT الأسرع استرجاعًا (240 مللي ثانية). 2026."
+      }
+    ],
+    "reason": "geo-meta-optimizer (GSC, EN): \"anythingllm vs open webui\" variants ~386 impr / 7 clicks @ pos ~7; title now leads with the AnythingLLM-vs-Open WebUI pair, month removed from meta, AR meta contradiction fixed, 2 FAQs added",
+    "baseline": null
+  },
+  {
+    "id": "623ce4a7-4063-4aba-9200-541a311fabcb",
+    "slug": "/ko/power-local-llm/anythingllm-vs-privategpt-vs-openwebui-rag",
+    "date": "2026-10-16T16:51:51.597Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "로컬 RAG 2026: AnythingLLM vs PrivateGPT vs Open WebUI",
+        "new": "AnythingLLM vs Open WebUI vs PrivateGPT: 로컬 RAG 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "5,047페이지 코퍼스에서 테스트한 로컬 RAG 플랫폼 3종 비교. AnythingLLM, PrivateGPT, Open WebUI의 정확도, 지연 시간, 인용 품질. 2026년 최종 평가.",
+        "new": "AnythingLLM·Open WebUI·PrivateGPT를 5,047페이지로 비교. 인용은 AnythingLLM(환각률 6%), 검색 속도는 PrivateGPT(240ms)가 가장 우수합니다. 2026년."
+      }
+    ],
+    "reason": "geo-meta-optimizer (GSC, EN): \"anythingllm vs open webui\" variants ~386 impr / 7 clicks @ pos ~7; title now leads with the AnythingLLM-vs-Open WebUI pair, month removed from meta, AR meta contradiction fixed, 2 FAQs added",
+    "baseline": null
   }
 ]
