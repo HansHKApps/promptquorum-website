@@ -49,10 +49,8 @@ export const app: ToolRecord = {
   // dockerDeploy / apiServer stay unset: neither is documented.
   compare: { localLlm: true, multiFormat: true, citations: true, desktopApp: true },
   lastVerifiedDate: '2026-10-10',
-<<<<<<< HEAD
   lastUpstreamUpdate: '2026-10-09', // official changelog, read 2026-10-16
   lastUpstreamUpdateSource: 'https://returneditor.ai/changelog/',
-=======
   founderReviewedDate: '2026-10-16', // Michał supplied his own comment 2026-10-16; drives the amber Founder-reviewed banner + star on tile, drawer and review
   founder: {
     who: {
@@ -156,7 +154,6 @@ export const app: ToolRecord = {
       ],
     },
   },
->>>>>>> b53b47acf (feat(return-editor): apply maker corrections + add From the Maker comment (9 locales, founder record, founderReviewedDate))
   reviewSlug: 'return-editor-review',
   pqReview: {
     date: '2026-10-10',
