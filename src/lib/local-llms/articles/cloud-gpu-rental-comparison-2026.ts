@@ -9,10 +9,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'RunPod vs Vast.ai vs Lambda Labs for LLM inference: RTX 4090, A100, H100, RTX 5090 hourly pricing, uptime SLA, and GDPR compliance compared.',
     intro: 'Renting cloud GPUs is 30–50% cheaper than buying hardware if you need occasional compute power. This canonical comparison tests three leading providers (RunPod, Vast.ai, Lambda Labs) for LLM inference by pricing, reliability, GDPR compliance, and ease of use. Refreshed monthly given how fast GPU rental pricing moves.',
     publishDate: '2026-05-17',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-16',
     theme: 'light',
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-29',
+    next_refresh_due: '2026-11-16',
     last_full_refresh: '2026-08-29',
     next_seo_review_due: '2026-10-01',
     last_seo_review: '2026-07-15',
@@ -286,7 +286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       gdprProviders: {
         id: 'gdpr-compliant-list',
         title: 'GDPR-Compliant Cloud GPU Providers (EU Native)',
-        content: 'These providers have EU data centers and can sign DPAs for EU personal data processing.',
+        content: 'These providers have EU data centers and can sign DPAs for EU personal data processing. Hyperstack, per provider data: SOC 2 Type 2 attested; its DPA covers EU GDPR, UK GDPR and SCCs; on-demand H100 SXM $3.20/hr, H100 NVLink $2.60/hr, H200 $3.99/hr, B200 $6.00/hr, billed per minute with no ingress or egress fees ([provider pricing](https://www.hyperstack.cloud/gpu-pricing)).',
         columns: ['Provider', 'Location', 'DPA', 'Note'],
         rows: [
           {
@@ -328,8 +328,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Provider': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
             'Location': 'Sweden, Norway',
-            'DPA': '✓ Available',
-            'Note': 'UK company, but EU data centers available',
+            'DPA': '✓ [Available](https://www.hyperstack.cloud/data-processing)',
+            'Note': 'UK company, but EU data centers available; SOC 2 Type 2 (per provider)',
           },
         ],
       },
@@ -521,7 +521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'RunPod vs Vast.ai vs Lambda Labs for LLM Inference: Cloud GPU Pricing Compared',
       description: 'Detailed pricing, uptime SLA, and feature comparison of the three leading cloud GPU rental providers for LLM inference.',
       datePublished: '2026-05-17',
-      dateModified: '2026-08-29',
+      dateModified: '2026-10-16',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -825,10 +825,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'RunPod vs Vast.ai vs Lambda Labs para inferencia LLM: precios por hora de RTX 4090, A100, H100 y RTX 5090, SLA de uptime y cumplimiento GDPR.',
     intro: 'Alquilar GPUs en la nube es un 30–50% más barato que comprar hardware si necesitas potencia de cómputo de forma ocasional. Esta comparativa canónica prueba tres proveedores líderes (RunPod, Vast.ai, Lambda Labs) para inferencia LLM en precio, fiabilidad, cumplimiento GDPR y facilidad de uso. Se actualiza mensualmente dado lo rápido que cambian los precios de alquiler de GPU.',
     publishDate: '2026-05-17',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-16',
     theme: 'light',
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-29',
+    next_refresh_due: '2026-11-16',
     last_full_refresh: '2026-08-29',
     next_seo_review_due: '2026-10-01',
     last_seo_review: '2026-07-15',
@@ -1061,7 +1061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       gdprProviders: {
         id: 'gdpr-compliant-list',
         title: 'Proveedores de GPU en la Nube Conformes con GDPR (Nativos EU)',
-        content: 'Estos proveedores tienen centros de datos en la EU y pueden firmar DPAs para el procesamiento de datos personales EU.',
+        content: 'Estos proveedores tienen centros de datos en la EU y pueden firmar DPAs para el procesamiento de datos personales EU. Hyperstack, según datos del proveedor: certificación SOC 2 Type 2; su DPA cubre RGPD de la UE, RGPD del Reino Unido y SCC; bajo demanda H100 SXM $3.20/h, H100 NVLink $2.60/h, H200 $3.99/h, B200 $6.00/h, facturación por minuto sin tarifas de entrada ni salida ([precios del proveedor](https://www.hyperstack.cloud/gpu-pricing)).',
         columns: ['Proveedor', 'Ubicación', 'DPA', 'Nota'],
         rows: [
           {
@@ -1103,8 +1103,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Proveedor': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
             'Ubicación': 'Suecia, Noruega',
-            'DPA': '✓ Disponible',
-            'Nota': 'Empresa británica, pero con centros de datos EU disponibles',
+            'DPA': '✓ [Disponible](https://www.hyperstack.cloud/data-processing)',
+            'Nota': 'Empresa británica, pero con centros de datos EU disponibles; SOC 2 Type 2 (según el proveedor)',
           },
         ],
       },
@@ -1295,7 +1295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'RunPod vs Vast.ai vs Lambda Labs para Inferencia LLM: Precios GPU Comparados',
       description: 'Comparativa detallada de precios, SLA de uptime y características de los tres principales proveedores de alquiler de GPU en la nube para inferencia LLM.',
       datePublished: '2026-05-17',
-      dateModified: '2026-08-29',
+      dateModified: '2026-10-16',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -1620,10 +1620,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'RunPod مقابل Vast.ai مقابل Lambda Labs لاستدلال LLM: أسعار RTX 4090 وA100 وH100 وRTX 5090 بالساعة، واتفاقية وقت التشغيل، وامتثال GDPR. محدَّثة أغسطس 2026.',
     intro: 'استئجار وحدات GPU سحابية أرخص بنسبة 30–50% من شراء العتاد إن كنت تحتاج قوة الحوسبة بشكل عَرَضي. تختبر هذه المقارنة المرجعية ثلاثة مزودين رائدين (RunPod، Vast.ai، Lambda Labs) لاستدلال LLM من حيث السعر والموثوقية وامتثال GDPR وسهولة الاستخدام. مُحدَّثة شهرياً نظراً لسرعة تغيّر أسعار استئجار GPU.',
     publishDate: '2026-05-17',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-16',
     theme: 'light',
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-29',
+    next_refresh_due: '2026-11-16',
     last_full_refresh: '2026-08-29',
     next_seo_review_due: '2026-10-01',
     last_seo_review: '2026-07-15',
@@ -1856,7 +1856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       gdprProviders: {
         id: 'gdpr-compliant-list',
         title: 'مزودو GPU سحابيون ممتثلون لـ GDPR (محليون في EU)',
-        content: 'لدى هؤلاء المزودين مراكز بيانات في EU ويمكنهم توقيع DPA لمعالجة البيانات الشخصية في EU.',
+        content: 'لدى هؤلاء المزودين مراكز بيانات في EU ويمكنهم توقيع DPA لمعالجة البيانات الشخصية في EU. Hyperstack، وفق بيانات المزود: شهادة SOC 2 Type 2؛ تغطي اتفاقية DPA الخاصة به اللائحة الأوروبية GDPR واللائحة البريطانية UK GDPR وSCC؛ عند الطلب H100 SXM بسعر 3.20$/ساعة، H100 NVLink بسعر 2.60$/ساعة، H200 بسعر 3.99$/ساعة، B200 بسعر 6.00$/ساعة، الفوترة بالدقيقة دون رسوم دخول أو خروج للبيانات ([أسعار المزود](https://www.hyperstack.cloud/gpu-pricing)).',
         columns: ['المزود', 'الموقع', 'DPA', 'ملاحظة'],
         rows: [
           {
@@ -1898,8 +1898,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'المزود': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
             'الموقع': 'السويد، النرويج',
-            'DPA': '✓ متاح',
-            'ملاحظة': 'شركة بريطانية، لكن مع مراكز بيانات EU متاحة',
+            'DPA': '✓ [متاح](https://www.hyperstack.cloud/data-processing)',
+            'ملاحظة': 'شركة بريطانية، لكن مع مراكز بيانات EU متاحة؛ SOC 2 Type 2 (وفق المزود)',
           },
         ],
       },
@@ -2091,7 +2091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'RunPod مقابل Vast.ai مقابل Lambda Labs لاستدلال LLM: مقارنة أسعار GPU',
       description: 'مقارنة مفصّلة للأسعار واتفاقيات وقت التشغيل وميزات المزودين الثلاثة الرئيسيين لاستئجار GPU السحابية لاستدلال LLM.',
       datePublished: '2026-05-17',
-      dateModified: '2026-08-29',
+      dateModified: '2026-10-16',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -2424,10 +2424,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Compare RunPod, Vast.ai e Lambda Labs para inferência LLM: preços ($0,34–$3,99/hr), SLA de uptime, conformidade LGPD e tempo de configuração. 2026.',
     intro: 'Alugar GPUs na nuvem é 30–50% mais barato que comprar hardware se você precisa de poder computacional ocasional. Esta comparativa canônica testa três provedores líderes (RunPod, Vast.ai, Lambda Labs) por preço, confiabilidade, conformidade com regulamentações e facilidade de uso. Atualizado mensalmente.',
     publishDate: '2026-05-17',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-16',
     theme: 'light',
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-29',
+    next_refresh_due: '2026-11-16',
     last_full_refresh: '2026-08-29',
     next_seo_review_due: '2026-10-01',
     last_seo_review: '2026-07-15',
@@ -2661,7 +2661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       gdprProviders: {
         id: 'gdpr-compliant-list',
         title: 'Provedores de GPU na Nuvem em Conformidade com o GDPR (Nativos da UE)',
-        content: 'Estes provedores têm data centers na UE e podem assinar DPAs para o processamento de dados pessoais da UE.',
+        content: 'Estes provedores têm data centers na UE e podem assinar DPAs para o processamento de dados pessoais da UE. Hyperstack, segundo dados do provedor: certificação SOC 2 Type 2; o DPA cobre o GDPR da UE, o UK GDPR e as SCCs; sob demanda H100 SXM $3.20/h, H100 NVLink $2.60/h, H200 $3.99/h, B200 $6.00/h, cobrança por minuto sem taxas de entrada ou saída ([preços do provedor](https://www.hyperstack.cloud/gpu-pricing)).',
         columns: ['Provedor', 'Localização', 'DPA', 'Observação'],
         rows: [
           {
@@ -2703,8 +2703,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Provedor': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
             'Localização': 'Suécia, Noruega',
-            'DPA': '✓ Disponível',
-            'Observação': 'Empresa do Reino Unido, mas com data centers na UE disponíveis',
+            'DPA': '✓ [Disponível](https://www.hyperstack.cloud/data-processing)',
+            'Observação': 'Empresa do Reino Unido, mas com data centers na UE disponíveis; SOC 2 Type 2 (segundo o provedor)',
           },
         ],
       },
@@ -2896,7 +2896,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'Aluguel de GPU na Nuvem 2026: RunPod vs Vast.ai vs Lambda Labs',
       description: 'Comparativa detalhada de preços, SLA de uptime e características dos três principais provedores de aluguel de GPU na nuvem.',
       datePublished: '2026-05-17',
-      dateModified: '2026-08-29',
+      dateModified: '2026-10-16',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Beginner',
@@ -2976,10 +2976,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'RunPod vs Vast.ai vs Lambda Labs für LLM-Inferenz: Stundenpreise für RTX 4090, A100, H100, RTX 5090, Verfügbarkeits-SLA und DSGVO-Konformität. Aktualisiert August 2026.',
     intro: 'Die Miete von Cloud-GPUs ist 30–50% billiger als der Kauf von Hardware, wenn Sie gelegentliche Rechenleistung benötigen. Dieser kanonische Vergleich testet drei führende Anbieter (RunPod, Vast.ai, Lambda Labs) für LLM-Inferenz nach Preisgestaltung, Zuverlässigkeit, DSGVO-Konformität und Benutzerfreundlichkeit. Wird monatlich aktualisiert, da sich Cloud-GPU-Preise schnell ändern.',
     publishDate: '2026-05-17',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-16',
     theme: 'light',
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-29',
+    next_refresh_due: '2026-11-16',
     last_full_refresh: '2026-08-29',
     next_seo_review_due: '2026-10-01',
     last_seo_review: '2026-07-15',
@@ -3138,7 +3138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       gdprCompliantProviders: {
         id: 'gdpr-compliant-list',
         title: 'DSGVO-konforme Cloud-GPU-Anbieter (EU-nativ)',
-        content: 'Diese Anbieter haben EU-Rechenzentren und können Auftragsverarbeitungsverträge (AVV) für die Verarbeitung personenbezogener EU-Daten unterzeichnen.',
+        content: 'Diese Anbieter haben EU-Rechenzentren und können Auftragsverarbeitungsverträge (AVV) für die Verarbeitung personenbezogener EU-Daten unterzeichnen. Hyperstack, laut Anbieterangaben: SOC 2 Type 2 attestiert; der AVV deckt EU-DSGVO, UK GDPR und SCCs ab; On-Demand H100 SXM $3.20/Std., H100 NVLink $2.60/Std., H200 $3.99/Std., B200 $6.00/Std., Abrechnung pro Minute ohne Ingress- oder Egress-Gebühren ([Anbieterpreise](https://www.hyperstack.cloud/gpu-pricing)).',
         columns: ['Anbieter', 'Standort', 'AVV', 'Anmerkung'],
         rows: [
           {
@@ -3180,8 +3180,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Anbieter': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
             'Standort': 'Schweden, Norwegen',
-            'AVV': '✓ Verfügbar',
-            'Anmerkung': 'Britisches Unternehmen, aber EU-Rechenzentren verfügbar',
+            'AVV': '✓ [Verfügbar](https://www.hyperstack.cloud/data-processing)',
+            'Anmerkung': 'Britisches Unternehmen, aber EU-Rechenzentren verfügbar; SOC 2 Type 2 (laut Anbieter)',
           },
         ],
       },
@@ -3386,7 +3386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'RunPod vs Vast.ai vs Lambda Labs für LLM-Inferenz: GPU-Preise im Vergleich',
       description: 'Detaillierter Preis-, Verfügbarkeits- und Funktionsvergleich der drei führenden Cloud-GPU-Mietanbieter für LLM-Inferenz.',
       datePublished: '2026-05-17',
-      dateModified: '2026-08-29',
+      dateModified: '2026-10-16',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -3473,10 +3473,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'RunPod vs Vast.ai vs Lambda Labs pour l\'inférence LLM : tarifs horaires RTX 4090, A100, H100, RTX 5090, SLA de disponibilité et conformité RGPD. Mis à jour août 2026.',
     intro: 'La location GPU cloud est 30–50% moins chère que l\'achat de matériel si vous avez besoin de puissance de calcul occasionnelle. Cette comparaison canonique teste trois fournisseurs leaders (RunPod, Vast.ai, Lambda Labs) pour l\'inférence LLM par tarification, fiabilité, conformité RGPD et facilité d\'utilisation. Mise à jour mensuellement, les prix de location GPU évoluant vite.',
     publishDate: '2026-05-17',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-16',
     theme: 'light',
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-29',
+    next_refresh_due: '2026-11-16',
     last_full_refresh: '2026-08-29',
     next_seo_review_due: '2026-10-01',
     last_seo_review: '2026-07-15',
@@ -3635,7 +3635,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       gdprCompliantProviders: {
         id: 'gdpr-compliant-list',
         title: 'Fournisseurs de GPU cloud conformes au RGPD (natifs UE)',
-        content: 'Ces fournisseurs disposent de centres de données UE et peuvent signer des DPA pour le traitement des données personnelles UE.',
+        content: 'Ces fournisseurs disposent de centres de données UE et peuvent signer des DPA pour le traitement des données personnelles UE. Hyperstack, selon les données du fournisseur : attestation SOC 2 Type 2 ; son DPA couvre le RGPD de l\'UE, le UK GDPR et les SCC ; à la demande H100 SXM 3,20 $/h, H100 NVLink 2,60 $/h, H200 3,99 $/h, B200 6,00 $/h, facturation à la minute sans frais d\'entrée ni de sortie ([tarifs du fournisseur](https://www.hyperstack.cloud/gpu-pricing)).',
         columns: ['Fournisseur', 'Localisation', 'DPA', 'Note'],
         rows: [
           {
@@ -3677,8 +3677,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Fournisseur': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
             'Localisation': 'Suède, Norvège',
-            'DPA': '✓ Disponible',
-            'Note': 'Entreprise britannique, mais centres de données UE disponibles',
+            'DPA': '✓ [Disponible](https://www.hyperstack.cloud/data-processing)',
+            'Note': 'Entreprise britannique, mais centres de données UE disponibles; SOC 2 Type 2 (selon le fournisseur)',
           },
         ],
       },
@@ -3795,7 +3795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'RunPod vs Vast.ai vs Lambda Labs pour l\'inférence LLM : prix GPU comparés',
       description: 'Comparaison détaillée des prix, SLA de disponibilité et fonctionnalités des trois principaux fournisseurs de location GPU cloud pour l\'inférence LLM.',
       datePublished: '2026-05-17',
-      dateModified: '2026-08-29',
+      dateModified: '2026-10-16',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -3882,10 +3882,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'LLM推論向けRunPod・Vast.ai・Lambda Labs比較:RTX 4090・A100・H100・RTX 5090の時間料金、稼働率SLA、GDPR対応。',
     intro: 'クラウドGPUレンタルは、たまに計算能力が必要な場合、ハードウェア購入より30～50%安価です。この完全ガイドは3つの主要プロバイダー(RunPod、Vast.ai、Lambda Labs)をLLM推論の観点から価格、信頼性、GDPR準拠、使いやすさで検証。クラウドGPU価格は変動が速いため毎月更新。',
     publishDate: '2026-05-17',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-16',
     theme: 'light',
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-29',
+    next_refresh_due: '2026-11-16',
     last_full_refresh: '2026-08-29',
     next_seo_review_due: '2026-10-01',
     last_seo_review: '2026-07-15',
@@ -4044,7 +4044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       gdprCompliantProviders: {
         id: 'gdpr-compliant-list',
         title: 'GDPR対応クラウドGPUプロバイダー(EU企業)',
-        content: 'これらのプロバイダーはEUデータセンターを持ち、EU個人データ処理用のDPAに署名できます。',
+        content: 'これらのプロバイダーはEUデータセンターを持ち、EU個人データ処理用のDPAに署名できます。 Hyperstack(提供元データ):SOC 2 Type 2認証取得、DPAはEU GDPR・UK GDPR・SCCに対応、オンデマンド料金は H100 SXM $3.20/時、H100 NVLink $2.60/時、H200 $3.99/時、B200 $6.00/時、分単位課金でイングレス/エグレス料金なし([プロバイダー料金](https://www.hyperstack.cloud/gpu-pricing))。',
         columns: ['プロバイダー', '場所', 'DPA', '注記'],
         rows: [
           {
@@ -4086,8 +4086,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'プロバイダー': '[Hyperstack](https://www.hyperstack.cloud)(NexGen Cloud)',
             '場所': 'スウェーデン、ノルウェー',
-            'DPA': '✓ 利用可能',
-            '注記': '英国企業だが、EUデータセンター利用可',
+            'DPA': '✓ [利用可能](https://www.hyperstack.cloud/data-processing)',
+            '注記': '英国企業だが、EUデータセンター利用可。SOC 2 Type 2(提供元情報)',
           },
         ],
       },
@@ -4204,7 +4204,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'RunPod vs Vast.ai vs Lambda Labs：LLM推論向けGPU価格比較',
       description: '3つの主要クラウドGPUレンタルプロバイダーのLLM推論における詳細な価格、稼働率SLA、および機能比較。',
       datePublished: '2026-05-17',
-      dateModified: '2026-08-29',
+      dateModified: '2026-10-16',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -4291,10 +4291,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: '面向LLM推理的RunPod、Vast.ai、Lambda Labs对比:RTX 4090、A100、H100、RTX 5090的每小时价格、正常运行时间SLA、GDPR合规性。',
     intro: '云GPU租赁是30–50%比购买硬件便宜如果您需要偶发计算能力。本权威对比针对LLM推理测试三个主要提供商(RunPod、Vast.ai、Lambda Labs)的价格、可靠性、GDPR合规性和易用性。鉴于云GPU价格变动很快,每月更新。',
     publishDate: '2026-05-17',
-    dateModified: '2026-08-29',
+    dateModified: '2026-10-16',
     theme: 'light',
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-09-29',
+    next_refresh_due: '2026-11-16',
     last_full_refresh: '2026-08-29',
     next_seo_review_due: '2026-10-01',
     last_seo_review: '2026-07-15',
@@ -4453,7 +4453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       gdprCompliantProviders: {
         id: 'gdpr-compliant-list',
         title: 'GDPR合规云GPU提供商(EU原生)',
-        content: '这些提供商拥有EU数据中心,可以签署EU个人数据处理的DPA。',
+        content: '这些提供商拥有EU数据中心,可以签署EU个人数据处理的DPA。 Hyperstack(服务商提供的数据):已获 SOC 2 Type 2 认证,其 DPA 涵盖欧盟 GDPR、英国 GDPR 和 SCC,按需价格 H100 SXM $3.20/小时、H100 NVLink $2.60/小时、H200 $3.99/小时、B200 $6.00/小时,按分钟计费,无入站或出站流量费([服务商定价](https://www.hyperstack.cloud/gpu-pricing))。',
         columns: ['提供商', '位置', 'DPA', '注释'],
         rows: [
           {
@@ -4495,8 +4495,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '提供商': '[Hyperstack](https://www.hyperstack.cloud)(NexGen Cloud)',
             '位置': '瑞典、挪威',
-            'DPA': '✓ 可用',
-            '注释': '英国公司,但EU数据中心可用',
+            'DPA': '✓ [可用](https://www.hyperstack.cloud/data-processing)',
+            '注释': '英国公司,但EU数据中心可用;SOC 2 Type 2(据服务商)',
           },
         ],
       },
@@ -4613,7 +4613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       headline: 'RunPod vs Vast.ai vs Lambda Labs：LLM推理GPU价格对比',
       description: '三个主要云GPU租赁提供商在LLM推理场景下的详细价格、正常运行时间SLA和功能对比。',
       datePublished: '2026-05-17',
-      dateModified: '2026-08-29',
+      dateModified: '2026-10-16',
       author: {
         '@type': 'Organization',
         name: 'PromptQuorum',
@@ -4695,7 +4695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ko: {
   freshness_tier: 'monthly',
-  next_refresh_due: '2026-09-29',
+  next_refresh_due: '2026-11-16',
   last_full_refresh: '2026-08-29',
   theme: 'light',
   title: '클라우드 GPU 렌탈 2026: RunPod vs Vast.ai vs Lambda Labs',
@@ -4704,7 +4704,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   metaDescription: '로컬 LLM 추론을 위한 RunPod, Vast.ai, Lambda Labs 비교: 가격($0.34–$3.99/시간), 가동률 SLA, GDPR 준수 여부, 설정 시간.',
   intro: '클라우드 GPU 렌탈은 간헐적으로 컴퓨팅 파워가 필요한 경우 하드웨어 구매 대비 30~50% 저렴합니다. 이 비교 가이드는 세 가지 주요 공급업체(RunPod, Vast.ai, Lambda Labs)를 가격, 신뢰성, GDPR 준수 여부, 사용 편의성 기준으로 실제 테스트한 결과입니다. 매월 업데이트됩니다.',
   publishDate: '2026-05-17',
-  dateModified: '2026-08-29',
+  dateModified: '2026-10-16',
   educationalLevel: '초급',
   readTime: '8분 분량',
   audience: '클라우드 GPU 렌탈을 고려하는 개발자, AI 연구자, ML 엔지니어',
@@ -4931,7 +4931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     gdprProviders: {
       id: 'gdpr-compliant-list',
       title: 'GDPR 준수 클라우드 GPU 공급업체 (EU 기반)',
-      content: 'EU 데이터센터를 보유하고 EU 개인 데이터 처리를 위한 DPA에 서명할 수 있는 공급업체입니다.',
+      content: 'EU 데이터센터를 보유하고 EU 개인 데이터 처리를 위한 DPA에 서명할 수 있는 공급업체입니다. Hyperstack(공급업체 제공 데이터): SOC 2 Type 2 인증, DPA는 EU GDPR·UK GDPR·SCC를 포함, 온디맨드 H100 SXM $3.20/시간, H100 NVLink $2.60/시간, H200 $3.99/시간, B200 $6.00/시간, 분 단위 청구, 인그레스·이그레스 요금 없음([공급업체 요금](https://www.hyperstack.cloud/gpu-pricing)).',
       columns: ['공급업체', '위치', 'DPA', '비고'],
       rows: [
         {
@@ -4973,8 +4973,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         {
           '공급업체': '[Hyperstack](https://www.hyperstack.cloud) (NexGen Cloud)',
           '위치': '스웨덴, 노르웨이',
-          'DPA': '✓ 제공 가능',
-          '비고': '영국 회사이지만 EU 데이터센터 이용 가능',
+          'DPA': '✓ [제공 가능](https://www.hyperstack.cloud/data-processing)',
+          '비고': '영국 회사이지만 EU 데이터센터 이용 가능; SOC 2 Type 2(공급업체 기준)',
         },
       ],
     },
