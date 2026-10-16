@@ -453,6 +453,7 @@ https://www.promptquorum.com/power-local-llm/mlxcel-review
 https://www.promptquorum.com/power-local-llm/mlxhub-review
 https://www.promptquorum.com/power-local-llm/mobile-llm-models-phi4-gemma-smollm
 https://www.promptquorum.com/power-local-llm/msty-go-review
+https://www.promptquorum.com/power-local-llm/msty-hands-on-test
 https://www.promptquorum.com/power-local-llm/msty-review
 https://www.promptquorum.com/power-local-llm/multica-review
 https://www.promptquorum.com/power-local-llm/n8n-review
