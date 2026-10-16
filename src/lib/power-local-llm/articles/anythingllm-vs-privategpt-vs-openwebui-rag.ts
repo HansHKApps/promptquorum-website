@@ -12,16 +12,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-10-16',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI: Best Local RAG in 2026',
-    seoTitle: 'Local RAG 2026: AnythingLLM vs PrivateGPT vs Open WebUI',
+    seoTitle: 'AnythingLLM vs Open WebUI vs PrivateGPT: 3 RAG Tools 2026',
     intro:
       'AnythingLLM, PrivateGPT, and Open WebUI are the three serious self-hosted RAG platforms in 2026. We loaded an identical 5,047-page corpus into each, ran 50 queries across 5 query types, and measured retrieval latency, hallucination rate, citation quality, and the hidden costs nobody talks about (re-embedding, vector DB storage, GPU spikes during indexing). The toy-demo champion is not the production champion.',
     metaDescription:
-      '3 local RAG platforms tested on a 5,047-page corpus. AnythingLLM, PrivateGPT, Open WebUI benchmarked for accuracy, latency, citations. August 2026 verdict.',
+      'AnythingLLM vs Open WebUI vs PrivateGPT on 5,047 pages: AnythingLLM has the best citations (6% hallucination), PrivateGPT the fastest retrieval (240 ms). 2026.',
     heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-en.webp',
     twitterDescription:
       'Local RAG showdown: AnythingLLM vs PrivateGPT vs Open WebUI on 5,047 pages. Different winners for accuracy, latency, scaling. Full benchmarks inside.',
@@ -475,6 +475,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Which has the most active development?',
             a: 'Open WebUI ships every 1–2 weeks and occasionally rewrites the RAG middleware between versions — fastest pace but the most upgrade churn. PrivateGPT bumps LlamaIndex roughly monthly, with periodic breaking changes. AnythingLLM ships every 2–3 weeks and is the most stable across versions. For long-running production deployments, AnythingLLM\'s release cadence is the most predictable.',
           },
+          {
+            q: 'Is AnythingLLM or Open WebUI better for local RAG?',
+            a: 'AnythingLLM for document-heavy RAG: 6% hallucination vs 14% for Open WebUI on 50 graded queries, page-level citations (Open WebUI cites the filename only), and a ceiling of ~10,000 pages vs ~8,000. Open WebUI is the better choice if you already run Ollama and need a multi-user chat UI with OAuth and per-user collections.',
+          },
+          {
+            q: 'What is the best AnythingLLM alternative for local RAG?',
+            a: 'PrivateGPT if you need an offline-by-design deployment, the fastest retrieval (240 ms p50 vs 310 ms) and an API-first service; Open WebUI if you want a multi-user Ollama chat front-end with optional RAG. Past ~10,000 pages none of the three fits: use a custom Ollama + Qdrant or Weaviate stack.',
+          },
         ],
       },
       relatedReading: {
@@ -502,16 +510,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-10-16',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI: Die beste lokale RAG 2026',
-    seoTitle: 'Lokales RAG 2026: AnythingLLM vs PrivateGPT vs Open WebUI',
+    seoTitle: 'AnythingLLM vs Open WebUI vs PrivateGPT: 3 lokale RAG 2026',
     intro:
       'AnythingLLM, PrivateGPT und Open WebUI sind die drei ernstzunehmenden lokalen RAG-Plattformen 2026. Wir haben ein identisches Korpus von 5.047 Seiten in jede Plattform geladen, 50 Abfragen über 5 Abfragetypen ausgeführt und Abruflatenz, Halluzinationsrate, Zitierqualität und die versteckten Kosten gemessen, über die niemand spricht (Neueinbettung, Vektor-DB-Speicher, GPU-Spitzen während der Indexierung). Der Toy-Demo-Champion ist nicht der Produktions-Champion.',
     metaDescription:
-      '3 lokale RAG-Plattformen auf 5.047 Seiten getestet. AnythingLLM, PrivateGPT, Open WebUI: Genauigkeit, Latenz, Zitierqualität. Testergebnis August 2026.',
+      'AnythingLLM vs Open WebUI vs PrivateGPT auf 5.047 Seiten getestet: AnythingLLM zitiert am besten (6 % Halluzination), PrivateGPT ruft am schnellsten ab (240 ms). 2026.',
     heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-de.webp',
     twitterDescription:
       'Lokales RAG-Duell: AnythingLLM vs PrivateGPT vs Open WebUI auf 5.047 Seiten. Unterschiedliche Gewinner bei Genauigkeit, Latenz, Skalierung. Vollständige Benchmarks eingebunden.',
@@ -919,6 +927,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Sind diese Plattformen für den Einsatz in deutschen KMUs geeignet?',
             a: 'AnythingLLM ist der beste Start für deutsche Mittelstand-Unternehmen mit 50–3.000 Dokumenten: schnelle Einrichtung (8 Minuten), intuitive GUI, minimale IT-Anforderungen, vollständig lokal gehostet. PrivateGPT ist die bessere Wahl für KMUs, die wachsen wollen (10.000+ Seiten): bessere Skalierbarkeit, Compliance-Audit-freundlich, Python-Service ist wartbar, wenn Sie Programmierer haben. Beide erfüllen BSI-Grundschutz und DSGVO, wenn lokal gehostet.',
           },
+          {
+            q: 'Ist AnythingLLM oder Open WebUI besser für lokales RAG?',
+            a: 'AnythingLLM für dokumentenlastiges RAG: 6 % Halluzinationsrate gegenüber 14 % bei Open WebUI (50 bewertete Abfragen), Zitate mit Seitenzahl (Open WebUI nennt nur den Dateinamen) und eine Obergrenze von ca. 10.000 statt ca. 8.000 Seiten. Open WebUI ist die bessere Wahl, wenn Sie bereits Ollama betreiben und ein Mehrbenutzer-Chat-Frontend mit OAuth und Sammlungen pro Nutzer brauchen.',
+          },
+          {
+            q: 'Was ist die beste Alternative zu AnythingLLM für lokales RAG?',
+            a: 'PrivateGPT, wenn Sie ein Offline-by-Design-Setup, den schnellsten Abruf (240 ms p50 gegenüber 310 ms) und einen API-first-Dienst brauchen; Open WebUI, wenn Sie ein Mehrbenutzer-Ollama-Frontend mit optionalem RAG wollen. Ab ca. 10.000 Seiten passt keine der drei Plattformen: Nutzen Sie dann einen eigenen Ollama-+-Qdrant- oder Weaviate-Stack.',
+          },
         ],
       },
       relatedReading: {
@@ -944,16 +960,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-10-16',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI : La meilleure RAG locale 2026',
-    seoTitle: 'AnythingLLM vs PrivateGPT vs Open WebUI : RAG 2026',
+    seoTitle: 'AnythingLLM vs Open WebUI vs PrivateGPT : 3 RAG 2026',
     intro:
       'AnythingLLM, PrivateGPT et Open WebUI sont les trois plateformes RAG locales sérieuses en 2026. Nous avons chargé un corpus identique de 5 047 pages dans chacune, lancé 50 requêtes sur 5 types, et mesuré la latence d\'extraction, le taux d\'hallucination, la qualité des citations et les coûts cachés (réindexation, stockage vectoriel, pics GPU). Le champion des démos jouet n\'est pas le champion de production.',
     metaDescription:
-      '3 plateformes RAG locales testées sur 5 047 pages. AnythingLLM, PrivateGPT, Open WebUI : benchmarks de précision, latence, citations. Août 2026.',
+      'AnythingLLM vs Open WebUI vs PrivateGPT sur 5 047 pages : AnythingLLM cite le mieux (6 % d\'hallucinations), PrivateGPT récupère le plus vite (240 ms). 2026.',
     heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-fr.webp',
     twitterDescription:
       'Duel RAG local : AnythingLLM vs PrivateGPT vs Open WebUI sur 5 047 pages. Gagnants différents en précision, latence, scalabilité. Benchmarks complets.',
@@ -1352,6 +1368,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Laquelle a le développement le plus actif ?',
             a: 'Open WebUI livre tous les 1–2 semaines et réécrit occasionnellement le middleware RAG entre versions — pace le plus rapide mais le plus churn de mise à jour. PrivateGPT fait bumper LlamaIndex environ mensuellement, avec changements cassants périodiques. AnythingLLM livre tous les 2–3 semaines et est le plus stable sur versions. Pour déploiements de production long-terme, le rythme de release d\'AnythingLLM est le plus prévisible.',
           },
+          {
+            q: 'AnythingLLM ou Open WebUI : lequel choisir pour le RAG local ?',
+            a: 'AnythingLLM pour un RAG centré sur les documents : 6 % d\'hallucinations contre 14 % pour Open WebUI (50 requêtes notées), des citations avec numéro de page (Open WebUI ne cite que le nom de fichier) et un plafond d\'environ 10 000 pages contre 8 000. Open WebUI est préférable si vous utilisez déjà Ollama et avez besoin d\'une interface de chat multi-utilisateurs avec OAuth et des collections par utilisateur.',
+          },
+          {
+            q: 'Quelle est la meilleure alternative à AnythingLLM pour le RAG local ?',
+            a: 'PrivateGPT si vous voulez un déploiement hors ligne par conception, la récupération la plus rapide (240 ms p50 contre 310 ms) et un service orienté API ; Open WebUI si vous voulez un frontend Ollama multi-utilisateurs avec RAG optionnel. Au-delà d\'environ 10 000 pages, aucune des trois ne convient : utilisez une pile Ollama + Qdrant ou Weaviate sur mesure.',
+          },
         ],
       },
       relatedReading: {
@@ -1377,16 +1401,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-10-16',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI：2026年のベストローカルRAG',
-    seoTitle: 'ローカルRAG 2026：AnythingLLM・PrivateGPT・Open WebUI比較',
+    seoTitle: 'AnythingLLM・Open WebUI・PrivateGPT比較：ローカルRAG 2026',
     intro:
       'AnythingLLM、PrivateGPT、Open WebUIは2026年における3つの本格的な自己ホスト型RAGプラットフォームです。同じ5,047ページのコーパスをそれぞれに読み込み、5つのクエリタイプにわたって50クエリを実行し、検索レイテンシ、ハルシネーション率、引用品質、および隠れたコスト（再埋め込み、ベクトルDB保存、インデックス作成時のGPUスパイク）を測定しました。デモの優勝者は本番運用の優勝者ではありません。',
     metaDescription:
-      'AnythingLLM、PrivateGPT、Open WebUIを5,047ページのコーパスでテスト。精度、レイテンシ、引用、スケーリング性能を比較。2026年8月の検証結果。',
+      'AnythingLLM・Open WebUI・PrivateGPTを5,047ページで比較。引用はAnythingLLM（ハルシネーション6%）、検索速度はPrivateGPT（240ms）が最良。2026年版。',
     heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-ja.webp',
     twitterDescription:
       'ローカルRAG対決：AnythingLLM vs PrivateGPT vs Open WebUI（5,047ページ）。精度、レイテンシ、スケーリングで異なる優勝者。完全ベンチマーク内蔵。',
@@ -1851,6 +1875,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'これらのプラットフォームは監査ログをサポートしていますか？',
             a: 'AnythingLLMはワークスペースのメタデータ（作成時刻、最終変更日時）をローカルに記録しますが、詳細な監査ログは備えていません。PrivateGPTは FastAPI サービスログを有効にできます（標準出力）。Open WebUIはユーザーのログインおよび文書アクセスを記録しますが、詳細な監査トレイル機能は最小限です。高監査要件（METI、GDPR）の場合、各ログを記録し、すべてのディスク上のステップを検証してください。',
           },
+          {
+            q: 'ローカルRAGにはAnythingLLMとOpen WebUIのどちらが適していますか？',
+            a: 'ドキュメント中心のRAGにはAnythingLLMです。50件の採点クエリでハルシネーション率は6%（Open WebUIは14%）、ページ番号付きの引用（Open WebUIはファイル名のみ）、上限は約10,000ページ（Open WebUIは約8,000ページ）でした。すでにOllamaを使っていて、OAuthやユーザーごとのコレクションを備えたマルチユーザーのチャットUIが必要な場合はOpen WebUIが適しています。',
+          },
+          {
+            q: 'ローカルRAGにおけるAnythingLLMの最良の代替は何ですか？',
+            a: 'オフライン前提の構成、最速の検索（p50 240ms、AnythingLLMは310ms）、API中心のサービスが必要ならPrivateGPT。Ollama向けのマルチユーザーフロントエンドにオプションのRAGが欲しいならOpen WebUIです。約10,000ページを超える場合は3つのいずれも不向きなので、Ollama＋QdrantまたはWeaviateの独自構成を使ってください。',
+          },
         ],
       },
       relatedReading: {
@@ -1986,14 +2018,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-10-16',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI：2026年最佳本地RAG平台',
-    seoTitle: '本地RAG 2026：AnythingLLM vs PrivateGPT vs Open WebUI',
+    seoTitle: 'AnythingLLM vs Open WebUI vs PrivateGPT：本地RAG 2026',
     intro: 'AnythingLLM、PrivateGPT和Open WebUI是2026年三个成熟的自托管RAG平台。我们将相同的5,047页语料库加载到每个平台，运行了50个跨5种查询类型的查询，测量了检索延迟、幻想率、引用质量和隐性成本（重新嵌入、向量DB存储、索引时GPU峰值）。演示冠军不是生产冠军。',
-    metaDescription: '在5,047页语料库上测试AnythingLLM、PrivateGPT和Open WebUI。比较准确性、延迟、引用和扩展性能。2026年8月的测试结果。',
+    metaDescription: 'AnythingLLM、Open WebUI、PrivateGPT在5,047页语料上的实测：AnythingLLM引用最佳（幻觉率6%），PrivateGPT检索最快（240毫秒）。2026年。',
     heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-zh.webp',
     twitterDescription: '本地RAG对决：AnythingLLM vs PrivateGPT vs Open WebUI（5,047页）。在准确性、延迟和扩展方面有不同的获胜者。完整基准。',
     current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'nomic-embed-text v1.5', 'BAAI/bge-m3', 'BAAI/bge-small-en-v1.5', 'mxbai-embed-large'],
@@ -2075,6 +2107,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { q: '有多少令牌用于典型的RAG查询？', a: '查询嵌入和搜索约500-700令牌等值计算。提示组装和回答生成取决于检索的块和模型的上下文窗口大小。' },
           { q: '这些平台之外还有其他RAG选择吗？', a: '是的。对于更高规模：自定义Ollama + Qdrant / Weaviate。对于更简单的设置：Docling + Qdrant CLI。使用Llamaindex或LangChain直接构建自定义RAG管道。' },
           { q: '这些平台支持审计日志吗？', a: 'AnythingLLM在工作空间元数据中记录。PrivateGPT可以启用FastAPI服务日志。Open WebUI记录用户登录和文档访问。' },
+          {
+            q: '本地RAG用AnythingLLM还是Open WebUI更好？',
+            a: '以文档为主的RAG选AnythingLLM：50个评分查询中幻觉率为6%（Open WebUI为14%），引用包含页码（Open WebUI仅显示文件名），规模上限约10,000页（Open WebUI约8,000页）。如果您已在使用Ollama，并需要带OAuth和按用户划分文档集合的多用户聊天界面，则Open WebUI更合适。',
+          },
+          {
+            q: '本地RAG中AnythingLLM的最佳替代方案是什么？',
+            a: '需要默认离线部署、最快检索（p50为240毫秒，AnythingLLM为310毫秒）和API优先服务时选PrivateGPT；想要带可选RAG的Ollama多用户前端时选Open WebUI。超过约10,000页后，三者都不合适：请使用自建的Ollama + Qdrant或Weaviate方案。',
+          },
         ],
       },
     },
@@ -2084,16 +2124,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-10-16',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI: El mejor RAG local en 2026',
-    seoTitle: 'RAG local 2026: AnythingLLM vs PrivateGPT vs Open WebUI',
+    seoTitle: 'AnythingLLM vs Open WebUI vs PrivateGPT: 3 RAG locales 2026',
     intro:
       'AnythingLLM, PrivateGPT y Open WebUI son las tres plataformas RAG autoalojadas más serias de 2026. Cargamos un corpus idéntico de 5.047 páginas en cada una, ejecutamos 50 consultas en 5 tipos de preguntas y medimos la latencia de recuperación, la tasa de alucinaciones, la calidad de las citas y los costos ocultos de los que nadie habla (re-embedding, almacenamiento en la base de datos vectorial, picos de GPU durante la indexación). El campeón de las demos no es el campeón en producción.',
     metaDescription:
-      '3 plataformas RAG locales probadas en un corpus de 5.047 páginas. AnythingLLM, PrivateGPT y Open WebUI: precisión, latencia y citas. Veredicto de 2026.',
+      'AnythingLLM vs Open WebUI vs PrivateGPT en 5.047 páginas: AnythingLLM cita mejor (6 % de alucinaciones) y PrivateGPT recupera más rápido (240 ms). 2026.',
     heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-es.webp',
     twitterDescription:
       'Duelo RAG local: AnythingLLM vs PrivateGPT vs Open WebUI en 5.047 páginas. Distintos ganadores en precisión, latencia y escalabilidad. Benchmarks completos.',
@@ -2547,6 +2587,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '¿Cuál tiene el desarrollo más activo?',
             a: 'Open WebUI publica cada 1–2 semanas y ocasionalmente reescribe el middleware de RAG entre versiones — el ritmo más rápido pero con mayor rotación en actualizaciones. PrivateGPT actualiza LlamaIndex aproximadamente cada mes, con cambios que rompen compatibilidad de forma periódica. AnythingLLM publica cada 2–3 semanas y es el más estable entre versiones. Para despliegues de producción de larga duración, el cadencia de publicación de AnythingLLM es la más predecible.',
           },
+          {
+            q: '¿Es mejor AnythingLLM u Open WebUI para RAG local?',
+            a: 'AnythingLLM para RAG centrado en documentos: 6 % de alucinaciones frente a 14 % en Open WebUI (50 consultas evaluadas), citas con número de página (Open WebUI solo cita el nombre del archivo) y un techo de unas 10.000 páginas frente a 8.000. Open WebUI es mejor si ya usas Ollama y necesitas una interfaz de chat multiusuario con OAuth y colecciones por usuario.',
+          },
+          {
+            q: '¿Cuál es la mejor alternativa a AnythingLLM para RAG local?',
+            a: 'PrivateGPT si necesitas un despliegue offline por diseño, la recuperación más rápida (240 ms p50 frente a 310 ms) y un servicio orientado a API; Open WebUI si quieres una interfaz multiusuario para Ollama con RAG opcional. Por encima de unas 10.000 páginas ninguna de las tres encaja: usa una pila propia de Ollama + Qdrant o Weaviate.',
+          },
         ],
       },
       relatedReading: {
@@ -2692,16 +2740,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-10-16',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI: O melhor RAG local em 2026',
-    seoTitle: 'RAG local 2026: AnythingLLM vs PrivateGPT vs Open WebUI',
+    seoTitle: 'AnythingLLM vs Open WebUI vs PrivateGPT: 3 RAGs locais 2026',
     intro:
       'AnythingLLM, PrivateGPT e Open WebUI são as três plataformas RAG auto-hospedadas mais sérias de 2026. Carregamos um corpus idêntico de 5.047 páginas em cada uma, executamos 50 consultas em 5 tipos de perguntas e medimos a latência de recuperação, a taxa de alucinações, a qualidade das citações e os custos ocultos dos quais ninguém fala (re-embedding, armazenamento no banco de dados vetorial, picos de GPU durante a indexação). O campeão das demos não é o campeão em produção.',
     metaDescription:
-      '3 plataformas RAG locais testadas em um corpus de 5.047 páginas. AnythingLLM, PrivateGPT e Open WebUI: precisão, latência e citações. Veredito de 2026.',
+      'AnythingLLM vs Open WebUI vs PrivateGPT em 5.047 páginas: AnythingLLM cita melhor (6% de alucinações) e PrivateGPT recupera mais rápido (240 ms). 2026.',
     heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-pt.webp',
     twitterDescription:
       'Duelo RAG local: AnythingLLM vs PrivateGPT vs Open WebUI em 5.047 páginas. Vencedores diferentes em precisão, latência e escalabilidade. Benchmarks completos.',
@@ -3155,6 +3203,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Qual tem o desenvolvimento mais ativo?',
             a: 'O Open WebUI publica a cada 1–2 semanas e ocasionalmente reescreve o middleware de RAG entre versões — o ritmo mais rápido mas com maior rotatividade nas atualizações. O PrivateGPT atualiza o LlamaIndex aproximadamente todo mês, com mudanças que quebram compatibilidade de forma periódica. O AnythingLLM publica a cada 2–3 semanas e é o mais estável entre versões. Para implantações de produção de longa duração, a cadência de publicação do AnythingLLM é a mais previsível.',
           },
+          {
+            q: 'AnythingLLM ou Open WebUI: qual é melhor para RAG local?',
+            a: 'AnythingLLM para RAG centrado em documentos: 6% de alucinações contra 14% no Open WebUI (50 consultas avaliadas), citações com número de página (o Open WebUI cita só o nome do arquivo) e um teto de cerca de 10.000 páginas contra 8.000. O Open WebUI é melhor se você já usa Ollama e precisa de uma interface de chat multiusuário com OAuth e coleções por usuário.',
+          },
+          {
+            q: 'Qual é a melhor alternativa ao AnythingLLM para RAG local?',
+            a: 'PrivateGPT se você precisa de implantação offline por design, a recuperação mais rápida (240 ms p50 contra 310 ms) e um serviço orientado a API; Open WebUI se quer uma interface multiusuário para Ollama com RAG opcional. Acima de cerca de 10.000 páginas nenhuma das três serve: use uma stack própria de Ollama + Qdrant ou Weaviate.',
+          },
         ],
       },
       relatedReading: {
@@ -3300,16 +3356,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-10-16',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     title: '⁨AnythingLLM⁩ مقابل ⁨PrivateGPT⁩ مقابل ⁨Open WebUI⁩: أفضل ⁨RAG⁩ محلي في ⁨2026⁩',
-    seoTitle: '⁨RAG⁩ محلي: ⁨AnythingLLM⁩ و⁨PrivateGPT⁩ و⁨Open WebUI 2026⁩',
+    seoTitle: '⁨AnythingLLM⁩ و⁨Open WebUI⁩ و⁨PrivateGPT⁩: ⁨RAG⁩ محلي ⁨2026⁩',
     intro:
       'تُعدّ AnythingLLM وPrivateGPT وOpen WebUI أبرز ثلاث منصات RAG ذاتية الاستضافة في عام 2026. قمنا بتحميل مجموعة نصوص متطابقة مؤلفة من 5.047 صفحة على كل منصة، ونفّذنا 50 استعلامًا موزعة على 5 أنواع من الأسئلة، وقسنا زمن الاسترجاع، ومعدل الهلوسة، وجودة الاستشهادات، إضافةً إلى التكاليف الخفية التي لا يتحدث عنها أحد (إعادة التضمين، والتخزين في قاعدة البيانات المتجهية، وذروات استهلاك GPU أثناء الفهرسة). البطل في العروض التجريبية ليس البطل في بيئات الإنتاج.',
     metaDescription:
-      'اختُبرت 3 منصات RAG محلية على مجموعة 5,047 صفحة: AnythingLLM تتفوق في الدقة، وOpen WebUI في السرعة، وPrivateGPT في الاستشهادات. نتائج أغسطس 2026.',
+      'AnythingLLM وOpen WebUI وPrivateGPT على 5,047 صفحة: AnythingLLM الأفضل استشهادًا (هلوسة 6%) وPrivateGPT الأسرع استرجاعًا (240 مللي ثانية). 2026.',
     heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-ar.webp',
     twitterDescription:
       'مقارنة RAG المحلي: AnythingLLM مقابل PrivateGPT مقابل Open WebUI على 5.047 صفحة. فائزون مختلفون في الدقة والاستجابة وقابلية التوسع. معايير أداء كاملة.',
@@ -3763,6 +3819,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'أيّها التطوير الأكثر نشاطًا؟',
             a: 'Open WebUI تنشر كل 1–2 أسبوع وأحيانًا تُعيد كتابة برمجيات RAG الوسيطة — الإيقاع الأسرع لكن مع أكبر دوران في التحديثات. PrivateGPT تُحدِّث LlamaIndex تقريبًا كل شهر، مع تغييرات تكسر التوافق بشكل دوري. AnythingLLM تنشر كل 2–3 أسابيع وهي الأكثر استقرارًا بين الإصدارات. للنشر الإنتاجي طويل الأمد، إيقاع نشر AnythingLLM هو الأكثر قابلية للتنبؤ.',
           },
+          {
+            q: 'هل AnythingLLM أم Open WebUI أفضل لـ RAG المحلي؟',
+            a: 'AnythingLLM للـ RAG المعتمد على المستندات: معدل هلوسة 6% مقابل 14% لدى Open WebUI (50 استعلامًا مُقيَّمًا)، واستشهادات برقم الصفحة (بينما يذكر Open WebUI اسم الملف فقط)، وسقف يبلغ نحو 10,000 صفحة مقابل 8,000. أما Open WebUI فهو الأفضل إن كنت تستخدم Ollama بالفعل وتحتاج واجهة محادثة متعددة المستخدمين مع OAuth ومجموعات مستندات لكل مستخدم.',
+          },
+          {
+            q: 'ما أفضل بديل لـ AnythingLLM للـ RAG المحلي؟',
+            a: 'PrivateGPT إذا كنت تحتاج نشرًا يعمل دون اتصال بالتصميم، وأسرع استرجاع (240 مللي ثانية p50 مقابل 310) وخدمة تعتمد على API أولًا؛ وOpen WebUI إذا أردت واجهة Ollama متعددة المستخدمين مع RAG اختياري. وبعد نحو 10,000 صفحة لا تناسب أي من المنصات الثلاث: استخدم حزمة Ollama مع Qdrant أو Weaviate مخصصة.',
+          },
         ],
       },
       relatedReading: {
@@ -3908,16 +3972,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-08-27',
+    dateModified: '2026-10-16',
     last_full_refresh: '2026-08-27',
     next_refresh_due: '2027-02-27',
     theme: 'RAG & Document Chat',
     title: 'AnythingLLM vs PrivateGPT vs Open WebUI: 2026년 최고의 로컬 RAG 플랫폼 비교',
-    seoTitle: '로컬 RAG 2026: AnythingLLM vs PrivateGPT vs Open WebUI',
+    seoTitle: 'AnythingLLM vs Open WebUI vs PrivateGPT: 로컬 RAG 2026',
     intro:
       'AnythingLLM, PrivateGPT, Open WebUI는 2026년 현재 가장 진지하게 고려할 수 있는 셀프 호스팅 RAG 플랫폼 세 가지입니다. 동일한 5,047페이지 분량의 코퍼스를 각 플랫폼에 로드하고, 5가지 유형의 질의에서 50개의 쿼리를 실행했으며, 검색 지연 시간, 환각 발생률, 인용 품질, 그리고 아무도 언급하지 않는 숨겨진 비용(재임베딩, 벡터 데이터베이스 스토리지, 인덱싱 중 GPU 사용량 급등)을 측정했습니다. 데모에서 우승한 플랫폼이 프로덕션에서도 우승하지는 않습니다.',
     metaDescription:
-      '5,047페이지 코퍼스에서 테스트한 로컬 RAG 플랫폼 3종 비교. AnythingLLM, PrivateGPT, Open WebUI의 정확도, 지연 시간, 인용 품질. 2026년 최종 평가.',
+      'AnythingLLM·Open WebUI·PrivateGPT를 5,047페이지로 비교. 인용은 AnythingLLM(환각률 6%), 검색 속도는 PrivateGPT(240ms)가 가장 우수합니다. 2026년.',
     heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-ko.webp',
     twitterDescription:
       '로컬 RAG 대결: 5,047페이지에서 AnythingLLM vs PrivateGPT vs Open WebUI. 정확도, 지연 시간, 확장성에서 각기 다른 승자. 전체 벤치마크 결과 공개.',
@@ -4370,6 +4434,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '어느 플랫폼이 가장 활발하게 개발됩니까?',
             a: 'Open WebUI는 1~2주마다 게시하며 가끔 버전 간 RAG 미들웨어를 재작성합니다 — 가장 빠른 속도이지만 업데이트 변동이 가장 큽니다. PrivateGPT는 약 한 달에 한 번 LlamaIndex를 업데이트하며 주기적으로 호환성을 깨는 변경이 있습니다. AnythingLLM은 2~3주마다 게시하며 버전 간 가장 안정적입니다. 장기 프로덕션 배포의 경우, AnythingLLM의 게시 주기가 가장 예측 가능합니다.',
+          },
+          {
+            q: '로컬 RAG에는 AnythingLLM과 Open WebUI 중 무엇이 더 좋나요?',
+            a: '문서 중심 RAG에는 AnythingLLM입니다. 평가한 50개 쿼리에서 환각률은 6%(Open WebUI는 14%), 페이지 번호가 포함된 인용(Open WebUI는 파일명만 표시), 한계는 약 10,000페이지(Open WebUI는 약 8,000페이지)였습니다. 이미 Ollama를 사용 중이고 OAuth와 사용자별 컬렉션을 갖춘 다중 사용자 채팅 UI가 필요하다면 Open WebUI가 더 적합합니다.',
+          },
+          {
+            q: '로컬 RAG에서 AnythingLLM의 가장 좋은 대안은 무엇인가요?',
+            a: '오프라인 우선 배포, 가장 빠른 검색(p50 240ms, AnythingLLM은 310ms), API 중심 서비스가 필요하면 PrivateGPT입니다. 선택형 RAG가 있는 Ollama용 다중 사용자 프런트엔드를 원하면 Open WebUI입니다. 약 10,000페이지를 넘으면 셋 모두 맞지 않으므로 Ollama + Qdrant 또는 Weaviate 맞춤 구성을 사용하세요.',
           },
         ],
       },
