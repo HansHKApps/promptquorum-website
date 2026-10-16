@@ -39,4 +39,6 @@ export const app: ToolRecord = {
   // multiVector confirmed via docker/docker-compose.yaml + docker/.env.example: separate service profiles for weaviate (default), qdrant, pgvector, pgvecto-rs, chroma, oceanbase, couchbase, and others.
   compare: { visualBuilder: true, localLlm: true, agents: true, multiVector: true, dockerDeploy: true, apiServer: true, mcp: true, toolCalling: true },
   lastVerifiedDate: '2026-09-25',
+  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/langgenius/dify',
 }

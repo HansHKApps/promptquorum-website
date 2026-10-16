@@ -33,5 +33,7 @@ export const app: ToolRecord = {
     ko: 'Claude Code, Cursor 같은 AI 코딩 에이전트의 작업을 배정·추적·검토하는 셀프호스팅 워크스페이스',
   },
   lastVerifiedDate: '2026-09-14',
+  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/multica-ai/multica',
   reviewSlug: 'multica-review', // dedicated PromptQuorum review
 }

@@ -38,5 +38,7 @@ export const app: ToolRecord = {
   // apiServer confirmed via the OpenAI-compatible per-application API key docs: https://docs.maxkb.pro/dev_manual/APIKey_chat/
   compare: { visualBuilder: true, localLlm: true, agents: true, multiVector: false, dockerDeploy: true, apiServer: true },
   lastVerifiedDate: '2026-09-25',
+  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/1Panel-dev/MaxKB',
   reviewSlug: 'maxkb-review', // dedicated PromptQuorum review — pinned to #1 in the article index
 }

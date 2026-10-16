@@ -41,4 +41,6 @@ export const app: ToolRecord = {
   // apiServer confirmed via Hayhooks, deepset-ai's own tool for deploying Haystack pipelines as local REST APIs: https://github.com/deepset-ai/hayhooks
   compare: { visualBuilder: false, localLlm: true, agents: true, multiVector: true, dockerDeploy: true, apiServer: true },
   lastVerifiedDate: '2026-09-25',
+  lastUpstreamUpdate: '2026-10-16', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/deepset-ai/haystack',
 }

@@ -35,4 +35,6 @@ export const app: ToolRecord = {
   },
   reviewSlug: 'anythingllm-mobile-review', // dedicated PromptQuorum review — pinned to #1 in the article index
   lastVerifiedDate: null, // TODO: not derivable from source article
+  lastUpstreamUpdate: '2026-10-05', // GitHub API (latest release or push, whichever is newer), read 2026-10-16
+  lastUpstreamUpdateSource: 'https://github.com/Mintplex-Labs/anythingllm-mobile',
 }
