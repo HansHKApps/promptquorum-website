@@ -1,0 +1,1259 @@
+{
+  "id": "pq-test-msty-2026-10-13",
+  "standard_version": "0.1",
+  "locale": "de",
+  "app": {
+    "name": "Msty Studio",
+    "slug": "msty",
+    "vendor": "CloudStack, LLC (per the vendor's site footer)",
+    "category": "Lokaler und Cloud-KI-Chat-Arbeitsbereich",
+    "platform": "macOS (Desktop)",
+    "pricing_url": "https://msty.ai/pricing"
+  },
+  "title": "Msty Studio auf einem 24-GB-Mac: Meine Ollama-Modelle waren sofort da, wofür die App gedacht ist, blieb mir unklar",
+  "page_title": "Msty Studio Test",
+  "dek": "Praxistest auf einem M3-Mac mit 24 GB. Vorhandene Ollama-Modelle erschienen ohne zweiten Download. Es wurde kein Bild erzeugt.",
+  "seo": {
+    "title": "Msty Studio Praxistest: Ollama-Modelle sofort gefunden",
+    "description": "Praxistest von Msty Studio auf einem 24-GB-Mac: Ollama-Modelle sofort da, ein Datei-Upload drehte sich im Kreis, kein lokales Bildmodell in Media Studio."
+  },
+  "faq": [
+    [
+      "Funktioniert Msty Studio mit Ollama?",
+      "Ja, in diesem Test. Nachdem Ollama als Anbieter hinzugefügt war, erschienen fünf Ollama-Modelle in der Modellauswahl, und die Notizen halten keinen zweiten Modell-Download fest. Der Tester glaubte zunächst, die Verbindung sei fehlgeschlagen.",
+      "observed"
+    ],
+    [
+      "Kann Msty Studio Bilder mit einem lokalen Ollama-Modell erzeugen?",
+      "In diesem Test nicht. Media Studio öffnete sich, aber der Tester fand dort keinen Weg, sein lokales Bildmodell (x/flux2-klein) zu nutzen, und es wurde kein Bild erzeugt. Der Inhalt des Menüs 'Select image/video model' wurde nicht festgehalten, und gehostete Anbieter wurden nicht ausprobiert.",
+      "observed"
+    ],
+    [
+      "Sagt Msty Studio, ob ein Modell auf meinen Mac passt?",
+      "Modellkarten im Model Hub tragen einen Hardware-Hinweis, zum Beispiel 'Should run fast on this Mac · ~3.2 GB memory needed, 16.8 GB available' bei Qwen3-VL 4B. Die Schätzung stammt von der App selbst; das Modell wurde nicht ausgeführt.",
+      "vendor-claim"
+    ],
+    [
+      "Was kostet Msty Studio?",
+      "Die Preisliste des Anbieters, gelesen am 16. Oktober 2026, nennt Free für 0 $, Aurum für 149 $ pro Nutzer und Jahr und Aurum Lifetime für 349 $ einmalig. Welchen Tarif der Tester nutzte, wurde nicht erfasst.",
+      "vendor-claim"
+    ]
+  ],
+  "status": "Teilweise",
+  "published": "2026-10-16",
+  "started": "2026-10-13",
+  "ended": null,
+  "meta": [
+    [
+      "App",
+      "Msty Studio (Desktop) von CloudStack, LLC. Die Notizen schreiben es 'Mysty' und 'Misty' (Spracherkennung); dieser Bericht verwendet die Schreibweise des Anbieters.",
+      "vendor-claim"
+    ],
+    [
+      "Version",
+      "Nicht erfasst. Zum Kontext: Das Changelog des Anbieters nennt Msty Studio 3.0.0 Beta 15 (7. Oktober 2026) und 2.9.11 (15. September 2026) als aktuelle Versionen.",
+      null
+    ],
+    [
+      "Tester",
+      "Hans Kuepper, Gründer von PromptQuorum",
+      null
+    ],
+    [
+      "Beginn",
+      "13. Oktober 2026 (Uhrzeit nicht erfasst). Die Notizen sagen, der Test laufe 'over the next two days'.",
+      "observed"
+    ],
+    [
+      "Ende",
+      "Nicht erfasst",
+      null
+    ],
+    [
+      "Hardware",
+      "Apple-M3-Mac, 24 GB. Die Notizen sagen 'M3, 24 GB'. Der Standard-Testrechner ist ein MacBook Pro mit M3 Pro und 24 GB Unified Memory; derselbe Rechner wird angenommen. Die App selbst meldete an einer Stelle 16,8 GB verfügbar.",
+      "assumption"
+    ],
+    [
+      "System",
+      "macOS; Version nicht erfasst",
+      null
+    ],
+    [
+      "Bezugsquelle",
+      "Button 'Download Studio' auf der Studio-Produktseite des Anbieters",
+      "observed"
+    ],
+    [
+      "Download",
+      "246 MB (Installer, wie vom Tester abgelesen)",
+      "observed"
+    ],
+    [
+      "Genutzter Tarif",
+      "Nicht erfasst. Preisliste des Anbieters am 16. Oktober 2026: Free 0 $; Aurum 149 $ pro Nutzer und Jahr; Aurum Lifetime 349 $ einmalig; Enterprise auf Anfrage.",
+      "vendor-claim"
+    ],
+    [
+      "Anlass des Tests",
+      "Der Tester wollte wissen, wofür Msty gedacht ist. Er nennt es eines der frühen, professionellen Werkzeuge und sah nicht, warum ein Privatnutzer es verwenden sollte.",
+      "tester-view"
+    ],
+    [
+      "Ziel",
+      "Laut Notizen: verstehen, worum es bei Msty geht, und sehen, wie es sich mit lokalen Modellen verbindet, in der Hoffnung auf Ollama, damit kein weiteres Modell heruntergeladen werden muss.",
+      "observed"
+    ],
+    [
+      "Genutzte KI-Hilfe",
+      "Nicht erfasst",
+      null
+    ]
+  ],
+  "disclosure": "Der Tester hat PromptQuorum (promptquorum.com) gegründet, eine Inhaltsseite und ein Verzeichnis über lokale KI-Apps. Msty ist in diesem Verzeichnis gelistet und hat auf der Seite eine bestehende, separat verfasste Rezensionsseite. Die Notizen halten keinen Kontakt zum Anbieter, keine Zahlung und kein Sponsoring fest.",
+  "verdict": {
+    "general": "Teilweise getestet. Was der Tester ausprobierte, funktionierte überwiegend: Msty übernahm seine vorhandenen Ollama-Modelle, ein Text-Chat und ein Bild-Upload liefen, und der Model Hub sagt, ob ein Modell auf den Mac passt. Nicht zusammen kam Folgendes: Die Website und die ersten Bildschirme sagen nicht, wofür die App gedacht ist, ein Datei-Upload pendelte zwischen einer Wissensdatenbank und dem Chat, und in Media Studio ließ sich kein Bildmodell nutzen. Die Notizen enden beim Model Matchmaker ohne Fazit zu Msty.",
+    "fit": "Nicht erfasst. Die eigene Frage des Testers, 'why should a home user use it', wird in den Notizen nicht beantwortet. Das Schlussurteil in der Word-Datei beschreibt eine andere App und wird hier nicht verwendet."
+  },
+  "scores": [
+    [
+      "Installation",
+      null,
+      "Downloadgröße erfasst (246 MB). Installationsschritte und macOS-Abfragen wurden nicht erfasst."
+    ],
+    [
+      "Onboarding und Modellauswahl",
+      3,
+      "Ollama-Modelle erscheinen neben gehosteten Anbietern, und Modellkarten tragen einen Hardware-Hinweis. Die ersten Bildschirme sagen nicht, wofür die App gedacht ist, und die Ollama-Verbindung war für den Tester nicht offensichtlich."
+    ],
+    [
+      "Kernfunktion",
+      4,
+      "Chat mit einem Ollama-Modell und Bildeingabe funktionierten. Nur eine Textantwort, ein Vision-Test und ein Dateitest; die Antwortqualität wurde nicht bewertet."
+    ],
+    [
+      "Nutzerführung und Iteration",
+      2,
+      "Der Datei-Upload pendelte zwischen einer Wissensdatenbank und dem Chat. Reine Bildmodelle und als Cloud markierte Modelle stehen in derselben Auswahl wie Chat-Modelle."
+    ],
+    [
+      "Leistung",
+      null,
+      "Ein Messwert: 52,81 tok/s bei einer Antwort (Modellname teilweise abgeschnitten). Zu wenig für eine Bewertung."
+    ],
+    [
+      "Dokumentation",
+      null,
+      "Nicht getestet."
+    ],
+    [
+      "Vertrauen und Datenschutz",
+      null,
+      "Nicht geprüft. Der Anbieter wirbt mit einem 'privacy-first workspace'; die Auswahl enthält außerdem ein ':cloud'-Modell und gehostete Anbieter. Der Offline-Betrieb wurde nicht getestet."
+    ],
+    [
+      "Deinstallation",
+      null,
+      "Nicht getestet."
+    ]
+  ],
+  "scores_note": "Die Bewertungen sind Vorschläge, abgeleitet aus den untenstehenden Belegen (1 = schlecht, 5 = sehr gut). Die Bestätigung liegt beim Tester.",
+  "tldr": [
+    [
+      "observed",
+      "Vorhandene Ollama-Modelle erschienen in der Modellauswahl von Msty. Die Notizen halten keinen zweiten Modell-Download fest."
+    ],
+    [
+      "observed",
+      "Zwei Dinge funktionierten nicht wie vom Tester erwartet: Der Datei-Upload pendelte zwischen Wissensdatenbank und Chat, und in Media Studio ließ sich kein lokales Bildmodell nutzen."
+    ],
+    [
+      "tester-view",
+      "Der Tester konnte der Website nicht entnehmen, wofür Msty für Privatnutzer gedacht ist. Die Notizen enthalten kein abschließendes Urteil zu Msty."
+    ]
+  ],
+  "quotes": [
+    "Für jede App 10 GB, 20 GB und andere Modelle herunterzuladen, ist einfach nicht der richtige Weg.",
+    "Okay, das dreht sich im Kreis.",
+    "Model Matchmaker. Tolle Idee. Gefällt mir."
+  ],
+  "quote_note": "Notizen des Testers, leicht redigiert aus einer Sprachtranskription.",
+  "moments": [
+    [
+      "Wofür ist es gedacht?",
+      "Die Studio-Seite sagt 'One private AI workspace for real work'. Der Tester konnte trotzdem nicht erkennen, wofür die App gedacht ist.",
+      "website",
+      "chapter-listing"
+    ],
+    [
+      "Ollama war schon da",
+      "Fünf Ollama-Modelle, darunter ein Bildmodell und ein ':cloud'-Eintrag, stehen in einer Auswahl. Der Tester hielt die Verbindung zunächst für fehlgeschlagen.",
+      "picker",
+      "chapter-ollama"
+    ],
+    [
+      "Eine Schleife",
+      "Eine zur Analyse hochgeladene Datei wurde ohne Frage analysiert. Die Bitte um die Analyse im Chat führte zur erneuten Aufforderung zum Upload.",
+      "kstacks",
+      "chapter-files"
+    ],
+    [
+      "Kein Bildmodell",
+      "Media Studio öffnet mit 'Select image/video model'. Der Tester fand keinen Weg, sein lokales Bildmodell dort zu nutzen.",
+      "media",
+      "chapter-media"
+    ],
+    [
+      "Passt es auf diesen Mac?",
+      "Eine Modellkarte sagt '~3.2 GB memory needed, 16.8 GB available'. Draw Things, früher getestet, hatte keinen solchen Hinweis.",
+      "tooltip",
+      "chapter-hub"
+    ],
+    [
+      "Ein Ranking von gestern?",
+      "Der Model Matchmaker führt zwei Claude-Opus-4.x-Modelle an erster Stelle. Die aktuelle Seite von Anthropic nennt Opus 5.5 als neuestes Opus.",
+      "ranking",
+      "chapter-hub"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-listing",
+      "title": "Die Website: Wofür ist es gedacht?",
+      "items": [
+        [
+          "observed",
+          "Der Tester begann auf der Studio-Produktseite. Überschrift: 'One private AI workspace for real work.' Unterzeile: 'Chat with models, organize knowledge, create media, and reuse prompts in one privacy-first workspace.' Button: 'Download Studio'.",
+          "website"
+        ],
+        [
+          "tester-view",
+          "Er wollte verstehen, worum es bei Msty geht: Es sei 'one of the early ones, one of the professional ones', und für einen Privatnutzer sei ihm der Sinn nicht klar. 'The screen makes it clear that it's not clear what it's actually for.'",
+          null
+        ],
+        [
+          "observed",
+          "Der Tester sah mehrere Lösungen und Produkte und wählte 'Download Studio', weil das offenbar die Variante war, die lokal läuft.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "Die Produktseite des Anbieters nennt Studio, Go ('bounded AI agents'), Nexus ('AI control center') und Stack ('governed knowledge layer'). Geprüft am 16. Oktober 2026; der Tester öffnete diese nicht.",
+          null
+        ],
+        [
+          "observed",
+          "Die Download-Datei ist 246 MB groß. Der Tester: 'so it's okay'.",
+          null
+        ],
+        [
+          "tester-view",
+          "Er hoffte auf eine Verbindung zu Ollama oder LM Studio, damit kein weiterer Modell-Download nötig ist. Seiner Ansicht nach sollte jede App diese Wahl neben eingebauten Modellen anbieten, denn 10 bis 20 GB pro App seien 'just not the way forward'.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-first-launch",
+      "title": "Erster Start: ein lokales Modell oder ein Anbieter",
+      "items": [
+        [
+          "observed",
+          "Der erste Bildschirm (Abbildung 1, oben auf dieser Seite) zeigt eine Karte mit dem Etikett 'LOCAL AI · RUNS ON YOUR MACHINE': Gemma 4 E2B, 3,6 GB, beschrieben als Googles kompaktes multimodales Modell mit Vision. Ein Stärke-Regler reicht von Light bis Powerful und steht auf 'Capable'. Der Button heißt 'Download & Get Started'.",
+          null
+        ],
+        [
+          "observed",
+          "Darunter zeigt 'Or connect an AI provider' OpenAI, Claude, xAI, Gemini, OpenRouter und 'More'. Ein gelber Hinweis lautet 'Add at least one model before continuing with a connected provider.', und 'Continue with connected provider' ist ausgegraut.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "'Runs on your machine' ist die eigene Bezeichnung der App. Der Tester lud dieses Modell nicht herunter (er nutzte Modelle, die bereits in Ollama lagen) und prüfte den Netzwerkverkehr nicht.",
+          null
+        ],
+        [
+          "assumption",
+          "Der Hinweis erscheint, weil zu diesem Zeitpunkt noch kein Modell hinzugefügt war. Welche Aktion 'Continue' freischaltet, wurde nicht getestet.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-ollama",
+      "title": "Ollama verbinden",
+      "items": [
+        [
+          "observed",
+          "Die Liste 'New Model Provider' gruppiert Msty Remote und Ollama unter 'Msty Compatible', MLX Remote unter 'MLX Compatible' und LLaMA.cpp unter 'OpenAI Compatible'. Die Liste im Screenshot ist gescrollt, daher sind Einträge oberhalb von xAI nicht sichtbar.",
+          "provider"
+        ],
+        [
+          "observed",
+          "Notizen: 'It allowed me to connect to Ollama, select Ollama, but then it didn't select it.' Er ging zum Bildschirm mit dem lokalen Download zurück, um zu sehen, was los war.",
+          null
+        ],
+        [
+          "tester-error",
+          "Die Verbindung hatte funktioniert. Der Tester bemerkte es nicht, weil die App, in seinen Worten, den Modellnamen zeigt und nicht das Wort Ollama. Die Auswahl listete dann fünf Modelle unter einer Ollama-Überschrift.",
+          "picker"
+        ],
+        [
+          "observed",
+          "Korrektur zu den Notizen: Der Screenshot der Auswahl zeigt sehr wohl eine Überschrift 'Ollama' über der Liste. Die Notizen beziehen sich vermutlich auf einen früheren Bildschirm, der nicht festgehalten wurde (Annahme).",
+          null
+        ],
+        [
+          "observed",
+          "Die erklärte Hoffnung des Testers erfüllte sich: Seine vorhandenen Ollama-Modelle waren nutzbar, und die Notizen halten keinen weiteren Modell-Download fest.",
+          null
+        ],
+        [
+          "assumption",
+          "Das Suffix ':cloud' bei minimax-m2:cloud deutet auf ein Modell hin, das in der Cloud und nicht auf dem Mac läuft. Nicht überprüft. Falls ja, mischt die Ollama-Liste lokale und Cloud-Modelle ohne sichtbare Kennzeichnung.",
+          null
+        ],
+        [
+          "tester-view",
+          "'So good, so good. Thanks.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-chat",
+      "title": "Chat-Tests",
+      "items": [
+        [
+          "observed",
+          "Der Tester bat um einen QR-Code (Prompt-Text nicht erfasst; die Antwort verweist auf www.promptquorum.com). Die Antwort lautete, es handle sich um eine textbasierte KI, die keine Bilder erzeugen kann, und nannte fünf Schritte für einen kostenlosen Online-QR-Generator.",
+          "chat"
+        ],
+        [
+          "measured",
+          "Unter der Antwort werden 52,81 tok/s angezeigt. Der Modellname ist teilweise abgeschnitten ('gemma4:latest' oben sichtbar; die Zuordnung ist wahrscheinlich, nicht sicher).",
+          null
+        ],
+        [
+          "tester-error",
+          "Ein Textmodell wurde nach einem Bild gefragt. Die Antwort war für ein Textmodell richtig. Der Tester beschrieb es als 'the difference to a functional model'.",
+          null
+        ],
+        [
+          "observed",
+          "Der Tester wählte dann ein Bildmodell aus früherer Arbeit (x/flux2-klein in Ollama) als Chat-Modell. Laut Notizen 'does not support chat'. Die Meldung selbst wurde nicht festgehalten.",
+          null
+        ],
+        [
+          "assumption",
+          "Der Tester bezweifelte, dass zwei oder drei Modelle gleichzeitig geladen sein können ('I don't think so'). Nicht getestet. Die Anbieterseite nennt 'Split Chats: run models side by side'.",
+          null
+        ],
+        [
+          "observed",
+          "Zurück bei gemma4:latest lud er ein Bild hoch, und das Modell konnte es lesen (nur laut Notizen; Bild und Antwort wurden nicht festgehalten).",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-files",
+      "title": "Eine Search-Console-Datei hochladen",
+      "items": [
+        [
+          "observed",
+          "Der Tester lud einen Export der Google Search Console hoch. Laut Notizen 'just ran' die App ungefragt eine Analyse. Der erste Punkt der Empfehlung, wie in den Notizen zitiert: 'Investigate High-CTR Regions: A rapid audit of Gambia, Saint Barthélemy, Bangladesh, and Gabon is essential.' Die Zahlen wurden nicht mit der Datei abgeglichen. Modell und Dateigröße nicht erfasst.",
+          null
+        ],
+        [
+          "observed",
+          "Die Schleife, wie beschrieben: Das Hochladen legt die Datei in 'some background tool, knowledge base'. Zurück im Chat analysiert die App automatisch und lässt keine Möglichkeit, zu sagen, was analysiert werden soll. Wer im Chat 'I want this analyzed' tippt, wird von der App nach den Daten gefragt.",
+          "kstacks"
+        ],
+        [
+          "assumption",
+          "Der Knowledge-Stacks-Screenshot folgt diesen Notizen. Dass die Datei durch Knowledge Stacks lief, ist die Lesart des Testers ('knowledge base'), nicht bestätigt.",
+          null
+        ],
+        [
+          "observed",
+          "Der Knowledge-Stacks-Bildschirm bietet: neuen Stack, kuratierte Stacks entdecken, .mstyks-Dateien importieren und 'Switch back to Classic Knowledge Stack'. Gezeigte Quellen: Notes, YouTube Links, Web Links, Conversation Projects, Conversations; eine oben teilweise abgeschnittene Zeile lautet offenbar 'Folders & Obsidian Vaults'.",
+          null
+        ],
+        [
+          "tester-view",
+          "'Okay, this goes in circles.' Dann: 'So this looks like an interesting tool, but let's see.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-media",
+      "title": "Media Studio",
+      "items": [
+        [
+          "observed",
+          "Die Seitenleiste hat einen Eintrag 'Media Studio'. Der Bildschirm lautet 'Create images and videos that follow your imagination wherever it leads.' Er hat eine optionale Ablagefläche für Kontext, ein Prompt-Feld ('Describe your creation...'), einen auf 1 gestellten Zähler und ein Menü mit dem Text 'Select image/video model'.",
+          "media"
+        ],
+        [
+          "tester-view",
+          "'Great, can do pictures too.' Doch beim Verbinden mit seinem lokalen LLM-Setup meldete die App, sein Ollama habe kein Bildmodell, und er hielt Flux für das richtige.",
+          null
+        ],
+        [
+          "observed",
+          "In Msty wurde kein Bild erzeugt. Die Notizen halten keine Bildmodell-Auswahl fest, die für ihn funktionierte.",
+          null
+        ],
+        [
+          "assumption",
+          "Media Studio listet das Ollama-Bildmodell x/flux2-klein nicht. Der Inhalt des Modellmenüs wurde nicht festgehalten. Das Changelog des Anbieters datiert Media Studio auf Version 2.7.0 (29. April 2026) und erwähnt Bild- und Videomodelle von xAI und OpenRouter, was auf gehostete Anbieter hindeutet. Nicht überprüft.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-hub",
+      "title": "Model Hub und Model Matchmaker",
+      "items": [
+        [
+          "observed",
+          "Die Seitenleiste des Model Hub listet Model Providers, Local Models, Model Squad, Model Matchmaker, Model Cost Calculator, VRAM Calculator und Context Explorer. Local Models hat die Tabs Featured, Installed, Search und Import. Laut Notizen wurde nur der Matchmaker geöffnet.",
+          "hub"
+        ],
+        [
+          "observed",
+          "Modellkarten zeigen Größe und Quantisierung. Ein Tooltip bei Qwen3-VL 4B (2,4 GB, 4-bit) lautet 'Should run fast on this Mac · ~3.2 GB memory needed, 16.8 GB available'.",
+          "tooltip"
+        ],
+        [
+          "vendor-claim",
+          "Diese Passung-Schätzung stammt von der App selbst. Das Modell wurde nicht ausgeführt.",
+          null
+        ],
+        [
+          "tester-view",
+          "'Model Matchmaker. Great idea. I like it.' Aber er fand keine Auswahl für die Bilderzeugung.",
+          null
+        ],
+        [
+          "observed",
+          "Der nächste Screenshot zeigt die Rangliste des Matchmakers: Platz 1 claude-opus-4-6-thinking-auto-high-effort und Platz 2 claude-opus-4-5-20251101-thinking-64k-high-effort, beide 'Anthropic /remote', Wert 100. Ein Hinweis 'Setting up MLX: Preparing engine setup...' ist sichtbar; warum er erschien, wurde nicht erfasst.",
+          "ranking"
+        ],
+        [
+          "tester-view",
+          "'In October 2026 and I see this, I'm not impressed. That is an AI process to update this. I have tools on my website to update the website. Why is it so difficult?'",
+          null
+        ],
+        [
+          "assumption",
+          "'This' wird hier so gelesen, dass das Ranking im Screenshot veraltet ist. Die Notizen sagen nicht, welchen Bildschirm er meinte.",
+          null
+        ],
+        [
+          "third-party",
+          "Die Modellseite von Anthropic (geprüft am 16. Oktober 2026) nennt Claude Opus 5.5 (claude-opus-5-5) als neuestes Opus und führt die beiden 4.x-Modelle nicht als aktuell. Das Datum der Ranking-Daten ist im Screenshot nicht sichtbar, daher ist nicht bestätigt, ob es veraltet ist.",
+          null
+        ],
+        [
+          "observed",
+          "Sichtbare Featured-Modelle sind Mistral 7B Instruct v0.3, Llama 3.2 3B und 1B sowie Meta Llama 3.1 8B. Mistral 7B mit 6,9 GB ist größer als Llama 3.1 8B mit 4,5 GB, beide als 4-bit gekennzeichnet; der Unterschied wird auf den Karten nicht erklärt.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-end",
+      "title": "Wo die Notizen enden",
+      "items": [
+        [
+          "observed",
+          "Der Msty-Teil der Notizen endet beim Model Matchmaker. Der Rest der Word-Datei (ab dem Abschnitt 'Generate similar images') beschreibt eine andere App, einen Bildgenerator, mit eigenen Screenshots. Er wurde in diesem Bericht weggelassen.",
+          null
+        ],
+        [
+          "observed",
+          "Für Msty nicht erfasst: App- und macOS-Version, Endzeit, genutzter Tarif, ein Urteil, eine Deinstallationsprüfung.",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "'Chat with models, organize knowledge, create media, and reuse prompts in one privacy-first workspace.'",
+      "Studio-Seite des Anbieters (auch im Screenshot des Testers)",
+      "Chat mit Ollama-Modellen funktionierte. Knowledge Stacks öffnete sich. Media Studio öffnete sich, erzeugte aber kein Bild. Das Wiederverwenden von Prompts wurde nicht versucht. Der Datenschutz wurde nicht geprüft.",
+      "observed"
+    ],
+    [
+      "'Bring local inference engines like MLX, llama.cpp, and Ollama together with hosted providers in one organized hub.'",
+      "Studio-Seite des Anbieters, geprüft am 16.10.2026",
+      "Ollama verband sich, und seine Modelle wurden aufgelistet. LLaMA.cpp und MLX Remote erscheinen in der Anbieterliste. Nur Ollama wurde genutzt. Ein MLX-Einrichtungshinweis erschien einmal.",
+      "observed"
+    ],
+    [
+      "Split Chats: 'run models side by side'",
+      "Studio-Seite des Anbieters, geprüft am 16.10.2026",
+      "Nicht getestet. Der Tester nahm an, dass zwei oder drei Modelle nicht gleichzeitig geladen werden können.",
+      "assumption"
+    ],
+    [
+      "Media Studio: Bilderzeugung und Gestaltung von Videokonzepten",
+      "Studio-Seite des Anbieters, geprüft am 16.10.2026",
+      "Der Bildschirm existiert. Es wurde kein Bild erzeugt; ein nutzbares lokales Bildmodell wurde nicht gefunden.",
+      "observed"
+    ],
+    [
+      "'LOCAL AI · RUNS ON YOUR MACHINE' (Gemma 4 E2B, 3,6 GB)",
+      "Bildschirm beim ersten Start",
+      "Nicht heruntergeladen. Der Tester nutzte Modelle, die bereits in Ollama lagen. Keine Netzwerkprüfung.",
+      "observed"
+    ],
+    [
+      "'Should run fast on this Mac · ~3.2 GB memory needed, 16.8 GB available'",
+      "Tooltip im Model Hub",
+      "Das Modell wurde nicht ausgeführt, die Schätzung wurde daher nicht überprüft.",
+      "vendor-claim"
+    ],
+    [
+      "Free-Tarif: 0 $, enthält lokale und Online-Modelle sowie Media Studio (einige Funktionen eingeschränkt)",
+      "Preisseite des Anbieters, geprüft am 16.10.2026",
+      "Der vom Tester genutzte Tarif ist nicht erfasst.",
+      "vendor-claim"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale": 30,
+    "rows": [
+      [
+        "Llama 3.2 1B (4-bit)",
+        0.645,
+        "645 MB",
+        "observed"
+      ],
+      [
+        "Llama 3.2 3B (4-bit)",
+        1.7,
+        "1,7 GB",
+        "observed"
+      ],
+      [
+        "Qwen3-VL 4B (4-bit)",
+        2.4,
+        "2,4 GB Datei; laut App etwa 3,2 GB Speicher nötig",
+        "vendor-claim"
+      ],
+      [
+        "Gemma 4 E2B (Download beim ersten Start)",
+        3.6,
+        "3,6 GB",
+        "observed"
+      ],
+      [
+        "Meta Llama 3.1 8B (4-bit)",
+        4.5,
+        "4,5 GB",
+        "observed"
+      ],
+      [
+        "Mistral 7B Instruct v0.3 (4-bit)",
+        6.9,
+        "6,9 GB",
+        "observed"
+      ],
+      [
+        "Qwen3 14B (4-bit)",
+        9,
+        "9,0 GB",
+        "observed"
+      ]
+    ],
+    "note": "Das sind Download-Größen von den Modellkarten, nicht der Speicherbedarf zur Laufzeit. Kontextlänge und Engine verändern, was ein Modell braucht. Die App meldete 16,8 GB verfügbar zum Zeitpunkt des Qwen3-VL-Tooltips. Die Ollama-Modelle, die der Tester tatsächlich nutzte (Gemma 3 1B, gemma4:latest, Qwen3-Coder 30B), zeigen in der Auswahl keine Größe. Die Karte von Qwen3 14B ist im Screenshot nur teilweise sichtbar (Name, Größe und Quantisierung sind lesbar)."
+  },
+  "usage_log": [
+    [
+      "Ollama als Anbieter verbinden",
+      "-",
+      "Verbunden; fünf Modelle unter Ollama aufgelistet. Der Tester glaubte zunächst, es sei fehlgeschlagen.",
+      "Nicht erfasst",
+      "Pass",
+      [
+        "provider",
+        "picker"
+      ]
+    ],
+    [
+      "Chat: nach einem QR-Code fragen",
+      "gemma4:latest (Name teilweise abgeschnitten)",
+      "Reine Textantwort mit Schritten für einen Online-Generator; 52,81 tok/s",
+      "Nicht erfasst",
+      "Not completed",
+      [
+        "chat"
+      ]
+    ],
+    [
+      "Chat mit einem Bildmodell (x/flux2-klein)",
+      "x/flux2-klein:latest",
+      "'Does not support chat' (Notizen; Meldung nicht festgehalten)",
+      "-",
+      "Not completed",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "Bild-Upload in den Chat",
+      "gemma4:latest",
+      "Das Modell konnte das Bild lesen (nur laut Notizen)",
+      "Nicht erfasst",
+      "Pass",
+      []
+    ],
+    [
+      "Search-Console-Export hochladen und analysieren",
+      "Nicht erfasst",
+      "Analyse lief ungefragt; eine Bitte im Chat führte zur erneuten Aufforderung zum Upload",
+      "Nicht erfasst",
+      "Partial",
+      [
+        "kstacks"
+      ]
+    ],
+    [
+      "Ein Bild in Media Studio erzeugen",
+      "Keines verfügbar",
+      "Kein Bild erzeugt",
+      "-",
+      "Not completed",
+      [
+        "media"
+      ]
+    ],
+    [
+      "Model Hub durchsehen, Model Matchmaker öffnen",
+      "-",
+      "Karten mit Größe und Passungshinweis; Ranking angezeigt",
+      "Nicht erfasst",
+      "Pass",
+      [
+        "hub",
+        "tooltip",
+        "ranking"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "Hielt die Ollama-Verbindung für fehlgeschlagen. Sie hatte funktioniert; die Modelle waren aufgelistet."
+    ],
+    [
+      "tester-error",
+      "Bat ein Textmodell um ein Bild (QR-Code) und beurteilte es dann an einem 'functional model'."
+    ],
+    [
+      "tester-error",
+      "Schrieb, die App nenne nicht 'Ollama'. Sein eigener Screenshot zeigt eine Überschrift 'Ollama' über der Modellliste."
+    ],
+    [
+      "tester-error",
+      "Lücken in der Dokumentation gelassen: App-Version, macOS-Version, Endzeit, genutzter Tarif, Prompts, welches Modell den Dateitest beantwortete, und ein Urteil zu Msty."
+    ],
+    [
+      "tester-error",
+      "Zwei Apps in einem Dokument vermischt. Die zweite Hälfte der Msty-Datei beschreibt einen Bildgenerator, was die Klarheit darüber kostete, wo der Msty-Test endet."
+    ],
+    [
+      "assumption",
+      "Der Tester bezweifelte, dass mehrere Modelle gleichzeitig laufen können. Nicht getestet, und der Anbieter nennt Split Chats."
+    ]
+  ],
+  "findings": [
+    [
+      "MS-01",
+      "Die Studio-Seite und die ersten Bildschirme sagen einem Privatnutzer nicht, wofür die App gedacht ist.",
+      "Positionierung",
+      "tester-view",
+      "Medium",
+      [
+        "website",
+        "onboarding"
+      ]
+    ],
+    [
+      "MS-02",
+      "Der erste Bildschirm bietet ein lokales Modell (Gemma 4 E2B, 3,6 GB) oder einen gehosteten Anbieter; Ollama wird dort nicht gezeigt und erscheint stattdessen in der Anbieterliste.",
+      "Onboarding",
+      "observed",
+      "Low",
+      [
+        "onboarding",
+        "provider"
+      ]
+    ],
+    [
+      "MS-03",
+      "Vorhandene Ollama-Modelle erscheinen in der Auswahl; die Hoffnung des Testers, einen zweiten Modell-Download zu vermeiden, erfüllte sich.",
+      "Einrichtung",
+      "observed",
+      "Positive",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "MS-04",
+      "Nach dem Verbinden konnte der Tester nicht erkennen, dass Ollama verbunden war (die Notizen erwähnen keine Bestätigung).",
+      "Einrichtung",
+      "tester-view",
+      "Medium",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "MS-05",
+      "Reine Bildmodelle (x/flux2-klein) und ':cloud'-Modelle stehen zusammen mit Chat-Modellen in der Liste; das Bildmodell funktionierte im Chat nicht.",
+      "Modellauswahl",
+      "observed",
+      "Medium",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "MS-06",
+      "Ein Textmodell beantwortete eine Bildanfrage sinnvoll und verwies auf einen Online-Generator.",
+      "Chat",
+      "observed",
+      "Positive",
+      [
+        "chat"
+      ]
+    ],
+    [
+      "MS-07",
+      "Der Bild-Upload zu gemma4:latest funktionierte, laut Notizen.",
+      "Chat",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "MS-08",
+      "Der Datei-Upload pendelte im Kreis: automatische Analyse ohne Frage; eine Bitte im Chat führte zur erneuten Aufforderung zum Upload.",
+      "Dateien",
+      "tester-view",
+      "High",
+      [
+        "kstacks"
+      ]
+    ],
+    [
+      "MS-09",
+      "Knowledge Stacks bietet mehrere Quellentypen und ein Importformat (.mstyks); nur der Startbildschirm wurde gesehen.",
+      "Dateien",
+      "observed",
+      "Low",
+      [
+        "kstacks"
+      ]
+    ],
+    [
+      "MS-10",
+      "In Media Studio ließ sich kein lokales Bildmodell auswählen; es wurde kein Bild erzeugt.",
+      "Medien",
+      "observed",
+      "High",
+      [
+        "media"
+      ]
+    ],
+    [
+      "MS-11",
+      "Modellkarten zeigen einen Hardware-Passungshinweis mit benötigtem und verfügbarem Speicher.",
+      "Model Hub",
+      "observed",
+      "Positive",
+      [
+        "tooltip"
+      ]
+    ],
+    [
+      "MS-12",
+      "Der Model Hub bündelt sieben Werkzeuge (Anbieter, lokale Modelle, Squad, Matchmaker, Kosten, VRAM, Kontext); nur der Matchmaker wurde geöffnet.",
+      "Model Hub",
+      "observed",
+      "Low",
+      [
+        "hub"
+      ]
+    ],
+    [
+      "MS-13",
+      "Das Matchmaker-Ranking wird von zwei Claude-Opus-4.x-Modellen angeführt, während Anthropic Opus 5.5 als neuestes nennt; Veraltung nicht bestätigt (kein Datenstand sichtbar).",
+      "Aktualität",
+      "assumption",
+      "Medium",
+      [
+        "ranking"
+      ]
+    ],
+    [
+      "MS-14",
+      "Der Hinweis 'Setting up MLX' erschien ohne erfassten Auslöser.",
+      "Model Hub",
+      "observed",
+      "Low",
+      [
+        "ranking"
+      ]
+    ],
+    [
+      "MS-15",
+      "Mistral 7B (6,9 GB) ist größer gelistet als Llama 3.1 8B (4,5 GB), beide '4-bit', ohne Erklärung.",
+      "Model Hub",
+      "observed",
+      "Low",
+      [
+        "hub"
+      ]
+    ],
+    [
+      "MS-16",
+      "Der Tester bewertete die Idee des Model Matchmaker hoch und das Werkzeug als 'interessant'.",
+      "Model Hub",
+      "tester-view",
+      "Positive",
+      [
+        "ranking"
+      ]
+    ]
+  ],
+  "severity_note": "Der Schweregrad bezeichnet die Auswirkung auf Erstnutzer. Vorgeschlagen, nicht gemessen.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "Menschen, die bereits Ollama betreiben und ein Desktop-Frontend für lokale und gehostete Modelle wollen (die Ollama-Wiederverwendung funktionierte in diesem Test)."
+      ],
+      [
+        "vendor-claim",
+        "Teams, die SSO, Audit-Logs und gemeinsame Kontrollen brauchen (auf der Studio-Seite des Anbieters aufgeführt; nicht getestet)."
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "Ein Privatnutzer, der schon auf den ersten Bildschirmen verstehen möchte, wofür die App gedacht ist."
+      ],
+      [
+        "assumption",
+        "Nutzer, die in Media Studio mit einem lokalen Ollama-Bildmodell Bilder erzeugen wollen (funktionierte in diesem Test nicht)."
+      ]
+    ],
+    "retest": "Die ungetesteten Teile (Split Chats, Prompts, Media Studio mit einem gehosteten Bildmodell, der Dateiablauf, Deinstallation) erneut testen und vorher Version und macOS erfassen. Laut Changelog war 3.0.0 am 7. Oktober 2026 noch in der Beta, die Oberfläche kann sich zur Veröffentlichung also ändern (Annahme)."
+  },
+  "background_intro": "Nicht Teil der Praxissitzung. Die folgenden Punkte stammen von der Website des Anbieters, seinem Changelog und dem PromptQuorum-Verzeichnis, gelesen am 16. Oktober 2026 mit einem Web-Fetch-Werkzeug, das Seiten zusammenfasst. Nichts davon wurde für diesen Test unabhängig überprüft.",
+  "background": [
+    [
+      "vendor-claim",
+      "Der Footer des Anbieters lautet 'Msty is a product of CloudStack, LLC.' (2026)."
+    ],
+    [
+      "vendor-claim",
+      "Preisliste: Free 0 $; Aurum 149 $ pro Nutzer und Jahr; Aurum Lifetime 349 $ einmalig; Enterprise und Teams auf Anfrage, mindestens 5 Plätze. Die Preisseite nennt keine Softwarelizenz."
+    ],
+    [
+      "third-party",
+      "Das PromptQuorum-Verzeichnis führt Msty als Closed Source, Freemium, für macOS, Windows und Linux, letztes Upstream-Update 7. Oktober 2026. Der Eintrag wurde nicht überprüft (Aktualität: ungeprüft)."
+    ],
+    [
+      "vendor-claim",
+      "Changelog: Media Studio mit Version 2.7.0 eingeführt (29. April 2026); MLX-Unterstützung für Apple Silicon erscheint erstmals in 2.0.0-alpha.10 (7. August 2025), als experimentell markiert; Knowledge Stacks 2.0 in 2.0.0-alpha.9 (31. Juli 2025). Zuletzt aufgeführt am 7. Oktober 2026: 3.0.0 Beta 15."
+    ]
+  ],
+  "sources": [
+    "Praxisnotizen des Testers, begonnen am 13. Oktober 2026 (ursprüngliches Word-Dokument; PDF der Rohnotizen folgt). Verwendet wird nur der Msty-Teil.",
+    "Studio-Seite (msty.ai/products/studio), Preisseite (msty.ai/pricing) und Changelog (msty.ai/changelog) des Anbieters, gelesen am 16. Oktober 2026.",
+    "Modellübersicht von Anthropic (platform.claude.com/docs/en/models/overview), gelesen am 16. Oktober 2026.",
+    "Eintrag im PromptQuorum-Verzeichnis für Msty (Slug: msty)."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "Beobachtet",
+      "meaning": "Aus erster Hand in der App, auf einem Screenshot oder in den Notizen des Testers gesehen."
+    },
+    "measured": {
+      "label": "Gemessen",
+      "meaning": "Ein Wert, der aus einem Dialog, Zähler oder Werkzeug abgelesen wurde, mit angegebener Zahl."
+    },
+    "tester-estimate": {
+      "label": "Tester-Schätzung",
+      "meaning": "Eigene Schätzung des Testers; nicht gestoppt oder gezählt."
+    },
+    "vendor-claim": {
+      "label": "Herstellerangabe",
+      "meaning": "Von der App, ihrem Store-Eintrag oder ihrer Website angegeben; nicht überprüft."
+    },
+    "third-party": {
+      "label": "Drittquelle",
+      "meaning": "Aus einer anderen Quelle (ein KI-Assistent, ein Artikel); hier nicht überprüft."
+    },
+    "assumption": {
+      "label": "Annahme",
+      "meaning": "Eine Schlussfolgerung. Sie kann falsch sein."
+    },
+    "tester-view": {
+      "label": "Tester-Meinung",
+      "meaning": "Urteil oder Meinung des Testers."
+    },
+    "tester-error": {
+      "label": "Tester-Fehler",
+      "meaning": "Wo dem Tester ein Fehler unterlaufen ist oder er etwas übersehen hat."
+    }
+  },
+  "images": [
+    {
+      "id": "onboarding",
+      "figure": 1,
+      "file": "msty-first-launch-gemma-4-download-or-connect-provider.webp",
+      "path": "images/msty-first-launch-gemma-4-download-or-connect-provider.webp",
+      "alt": "Erster Startbildschirm von Msty mit dem Download des lokalen Modells Gemma 4 E2B (3,6 GB) oder der Verbindung zu OpenAI, Claude, xAI, Gemini oder OpenRouter.",
+      "caption": "Erster Start. Ein lokales Modell (Gemma 4 E2B, 3,6 GB, Stärke-Regler auf 'Capable') oder ein verbundener Anbieter. Ein gelber Hinweis lautet 'Add at least one model before continuing with a connected provider.', und der Continue-Button ist ausgegraut.",
+      "role": "hero",
+      "width": 1282,
+      "height": 1042,
+      "bytes": 55538,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero",
+        "chapter-first-launch"
+      ],
+      "subject": "Screenshot der Msty-App",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "2026-10-13 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image3.png"
+    },
+    {
+      "id": "website",
+      "figure": 2,
+      "file": "msty-vendor-website-one-private-ai-workspace-headline.webp",
+      "path": "images/msty-vendor-website-one-private-ai-workspace-headline.webp",
+      "alt": "Studio-Produktseite von Msty mit der Überschrift 'One private AI workspace for real work' und einem Button 'Download Studio'.",
+      "caption": "Die Studio-Produktseite, von der der Tester ausging. Die Überschrift und die Zeile 'Chat with models, organize knowledge, create media, and reuse prompts in one privacy-first workspace.' sind die Formulierung des Anbieters.",
+      "role": "moment",
+      "width": 1405,
+      "height": 582,
+      "bytes": 37576,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-listing",
+        "moments-card"
+      ],
+      "subject": "Screenshot der Msty-Website",
+      "rights": "Eigener Screenshot des Testers von der Webseite des Anbieters; der Seitentext stammt vom Anbieter.",
+      "captured": "2026-10-13 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image1.png"
+    },
+    {
+      "id": "provider",
+      "figure": 3,
+      "file": "msty-new-model-provider-list-with-ollama-and-mlx.webp",
+      "path": "images/msty-new-model-provider-list-with-ollama-and-mlx.webp",
+      "alt": "Msty-Liste 'New Model Provider' mit Msty Remote und Ollama unter Msty Compatible, MLX Remote und LLaMA.cpp unter OpenAI Compatible.",
+      "caption": "Liste 'New Model Provider', gescrollt. Ollama steht unter 'Msty Compatible', MLX Remote unter 'MLX Compatible', LLaMA.cpp unter 'OpenAI Compatible'. Einträge oberhalb von xAI sind nicht sichtbar.",
+      "role": "inline",
+      "width": 939,
+      "height": 626,
+      "bytes": 15652,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-ollama"
+      ],
+      "subject": "Screenshot der Msty-App",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "2026-10-13 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image2.png"
+    },
+    {
+      "id": "picker",
+      "figure": 4,
+      "file": "msty-model-picker-ollama-models-gemma-qwen-flux.webp",
+      "path": "images/msty-model-picker-ollama-models-gemma-qwen-flux.webp",
+      "alt": "Msty-Modellauswahl mit einer Ollama-Gruppe, die Gemma 3 1B, gemma4:latest, minimax-m2:cloud, Qwen3-Coder 30B und x/flux2-klein:latest auflistet.",
+      "caption": "Modellauswahl nach dem Verbinden von Ollama: fünf Modelle unter einer Überschrift 'Ollama', darunter ein Bildmodell (x/flux2-klein:latest) und ein ':cloud'-Eintrag in derselben Liste wie Chat-Modelle.",
+      "role": "moment",
+      "width": 939,
+      "height": 485,
+      "bytes": 16936,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-ollama",
+        "moments-card"
+      ],
+      "subject": "Screenshot der Msty-App",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "2026-10-13 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image4.png"
+    },
+    {
+      "id": "chat",
+      "figure": 5,
+      "file": "msty-chat-text-model-declines-qr-code-request.webp",
+      "path": "images/msty-chat-text-model-declines-qr-code-request.webp",
+      "alt": "Msty-Chat-Antwort eines Textmodells, das sagt, es könne kein QR-Code-Bild erzeugen, und fünf Schritte für einen Online-Generator nennt, 52,81 tok/s.",
+      "caption": "Antwort auf die QR-Code-Anfrage. Der Modellname ist oben abgeschnitten ('gemma4:latest' teilweise sichtbar). Über der Antwort sitzt eine Falte 'Thoughts (1)'. Der Zähler unter der Antwort zeigt 52,81 tok/s.",
+      "role": "inline",
+      "width": 953,
+      "height": 539,
+      "bytes": 39282,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-chat"
+      ],
+      "subject": "Screenshot der Msty-App",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "2026-10-13 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image5.png"
+    },
+    {
+      "id": "kstacks",
+      "figure": 6,
+      "file": "msty-knowledge-stacks-start-screen-sources.webp",
+      "path": "images/msty-knowledge-stacks-start-screen-sources.webp",
+      "alt": "Startbildschirm von Msty Knowledge Stacks mit Optionen zum Erstellen, Entdecken oder Importieren von Stacks und Quellentypen wie Notes, YouTube Links und Web Links.",
+      "caption": "Startbildschirm von Knowledge Stacks: neu, entdecken, importieren (.mstyks-Dateien) und 'Switch back to Classic Knowledge Stack'. Quellen rechts: Notes, YouTube Links, Web Links, Conversation Projects, Conversations. Ob die Search-Console-Datei über diesen Bildschirm lief, ist nicht bestätigt.",
+      "role": "moment",
+      "width": 1428,
+      "height": 880,
+      "bytes": 46700,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-files",
+        "moments-card"
+      ],
+      "subject": "Screenshot der Msty-App",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "2026-10-13 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image6.png"
+    },
+    {
+      "id": "media",
+      "figure": 7,
+      "file": "msty-media-studio-prompt-box-and-model-selector.webp",
+      "path": "images/msty-media-studio-prompt-box-and-model-selector.webp",
+      "alt": "Msty-Bildschirm Media Studio mit einer optionalen Ablagefläche für Kontext, einem Prompt-Feld und einem Menü 'Select image/video model'.",
+      "caption": "Media Studio. Das Modellmenü zeigt weiterhin 'Select image/video model'. Der Inhalt des Menüs wurde nicht festgehalten; es wurde kein Bild erzeugt.",
+      "role": "moment",
+      "width": 1429,
+      "height": 860,
+      "bytes": 33996,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-media",
+        "moments-card"
+      ],
+      "subject": "Screenshot der Msty-App",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "2026-10-13 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image7.png"
+    },
+    {
+      "id": "hub",
+      "figure": 8,
+      "file": "msty-model-hub-local-models-featured-list.webp",
+      "path": "images/msty-model-hub-local-models-featured-list.webp",
+      "alt": "Msty Model Hub, Local Models, Tab Featured, mit Karten für Mistral 7B Instruct v0.3, Llama 3.2 3B, Llama 3.2 1B und Meta Llama 3.1 8B mit Größenangaben.",
+      "caption": "Model Hub, Featured-Modelle (Liste gescrollt, nur teilweise sichtbar): Mistral 7B Instruct v0.3 6,9 GB, Llama 3.2 3B 1,7 GB, Llama 3.2 1B 645 MB, Meta Llama 3.1 8B 4,5 GB, alle als 4-bit gekennzeichnet. Die Seitenleiste listet sieben Werkzeuge.",
+      "role": "inline",
+      "width": 1023,
+      "height": 603,
+      "bytes": 32002,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-hub"
+      ],
+      "subject": "Screenshot der Msty-App",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "2026-10-13 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image8.png"
+    },
+    {
+      "id": "tooltip",
+      "figure": 9,
+      "file": "msty-model-hub-qwen3-vl-fits-this-mac-tooltip.webp",
+      "path": "images/msty-model-hub-qwen3-vl-fits-this-mac-tooltip.webp",
+      "alt": "Tooltip im Msty Model Hub bei Qwen3-VL 4B: 'Should run fast on this Mac, about 3.2 GB memory needed, 16.8 GB available'.",
+      "caption": "Hardware-Hinweis auf einer Modellkarte: 'Should run fast on this Mac · ~3.2 GB memory needed, 16.8 GB available'. Die Karte zeigt Qwen3-VL 4B, 2,4 GB, 4-bit. Die Schätzung stammt von der App selbst; das Modell wurde nicht ausgeführt.",
+      "role": "moment",
+      "width": 940,
+      "height": 510,
+      "bytes": 28110,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-hub",
+        "moments-card"
+      ],
+      "subject": "Screenshot der Msty-App",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "2026-10-13 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image9.png"
+    },
+    {
+      "id": "ranking",
+      "figure": 10,
+      "file": "msty-model-matchmaker-ranking-claude-opus-top.webp",
+      "path": "images/msty-model-matchmaker-ranking-claude-opus-top.webp",
+      "alt": "Rangliste des Msty Model Matchmaker, angeführt von zwei Claude-Opus-Modellen mit dem Wert 100, und ein Hinweis 'Setting up MLX' oben.",
+      "caption": "Model Matchmaker, 'Ranked Models'. Platz 1 claude-opus-4-6-thinking-auto-high-effort, Platz 2 claude-opus-4-5-20251101-thinking-64k-high-effort, beide Anbieter 'Anthropic /remote', normalisierter Wert 100. Ein Hinweis 'Setting up MLX: Preparing engine setup...' wird angezeigt. Das Datum der Ranking-Daten ist nicht sichtbar.",
+      "role": "moment",
+      "width": 1431,
+      "height": 889,
+      "bytes": 41916,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-hub",
+        "moments-card"
+      ],
+      "subject": "Screenshot der Msty-App",
+      "rights": "Eigener Screenshot des Testers von der Benutzeroberfläche einer Drittsoftware.",
+      "captured": "2026-10-13 oder später; genaue Uhrzeit nicht erfasst",
+      "original_docx_media": "image10.png"
+    }
+  ],
+  "figure_order": [
+    "onboarding",
+    "website",
+    "provider",
+    "picker",
+    "chat",
+    "kstacks",
+    "media",
+    "hub",
+    "tooltip",
+    "ranking"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum Praxistest · {app} · {date}",
+    "date_line": "13. Oktober 2026",
+    "nav_aria": "Abschnitte",
+    "nav": {
+      "verdict": "Fazit",
+      "moments": "Sechs Momente",
+      "story": "Ablauf",
+      "claims": "Angaben",
+      "fit": "24 GB",
+      "log": "Nutzungsprotokoll",
+      "errors": "Tester-Fehler",
+      "findings": "Befunde",
+      "background": "Hintergrund"
+    },
+    "related": "Siehe auch:",
+    "review_link": "PromptQuorum-Review zu {app}",
+    "directory_link": "Verzeichnis lokaler KI-Apps",
+    "verdict_h": "Fazit",
+    "general_assessment": "Gesamteinschätzung",
+    "fit_for_tester": "Eignung für den Einsatz des Testers",
+    "scorecard": "Bewertungsübersicht",
+    "status_prefix": "Status:",
+    "na": "k. A.",
+    "score_aria": "{n} von 5",
+    "details_h": "Testdetails",
+    "label_intro": "Jede Aussage trägt eine Kennzeichnung:",
+    "legend_link": "Was die Kennzeichnungen bedeuten",
+    "disclosure_label": "Offenlegung.",
+    "raw_notes": "PDF der Rohnotizen:",
+    "to_be_added": "folgt",
+    "moments_h": "Sechs Momente, die diesen Test geprägt haben",
+    "see_context": "Im Zusammenhang ansehen",
+    "story_h": "Wie der Test verlief",
+    "claims_h": "Angaben im Vergleich zu dem, was der Tester sah",
+    "claims_cols": [
+      "Angabe",
+      "Bezugsquelle",
+      "Beobachtet",
+      "Kennzeichnung"
+    ],
+    "fit_h": "Passt es in 24 GB?",
+    "memory_line": "{gb} GB Speicher",
+    "above": "über {gb} GB",
+    "below": "unter {gb} GB",
+    "log_h": "Nutzungsprotokoll",
+    "log_cols": [
+      "#",
+      "Aufgabe",
+      "Modell",
+      "Ergebnis",
+      "Zeit",
+      "Status",
+      "Abbildungen"
+    ],
+    "statuses": {
+      "Fail": "Fehlgeschlagen",
+      "Partial": "Teilweise",
+      "Pass": "Bestanden",
+      "Not completed": "Nicht abgeschlossen"
+    },
+    "errors_h": "Wo der Tester sich geirrt hat",
+    "findings_h": "Befundregister",
+    "filter_aria": "Befunde nach Kennzeichnung filtern",
+    "filter_all": "Alle",
+    "findings_cols": [
+      "ID",
+      "Befund",
+      "Kategorie",
+      "Kennzeichnung",
+      "Schweregrad",
+      "Abbildungen"
+    ],
+    "severities": {
+      "High": "Hoch",
+      "Medium": "Mittel",
+      "Low": "Niedrig",
+      "Positive": "Positiv"
+    },
+    "fig_abbr": "Abb.",
+    "figure": "Abbildung",
+    "enlarge": "Vergrößern:",
+    "audience_h": "Für wen es gedacht ist",
+    "likely_fit": "Voraussichtlich geeignet",
+    "likely_poor_fit": "Voraussichtlich weniger geeignet",
+    "retest": "Neutest.",
+    "background_h": "Hintergrund zum Hersteller",
+    "gallery_h": "Mehr aus dem Test",
+    "legend_h": "So lesen Sie die Kennzeichnungen",
+    "sources_h": "Quellen",
+    "footer_line": "Test-ID {id} · Teststandard v{version} · PDF der Rohnotizen: folgt",
+    "crumb_home": "Startseite",
+    "crumb_directory": "Verzeichnis",
+    "crumb_test": "{app} Praxistest",
+    "faq_h": "Häufige Fragen",
+    "more_tests_h": "Weitere Praxistests"
+  }
+}

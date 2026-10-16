@@ -35614,6 +35614,16 @@
     "width": 1200,
     "height": 675
   },
+  "/images/msty-chat-text-model-declines-qr-code-request.webp": {
+    "encodingFormat": "image/webp",
+    "width": 953,
+    "height": 539
+  },
+  "/images/msty-first-launch-gemma-4-download-or-connect-provider.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1282,
+    "height": 1042
+  },
   "/images/msty-go-review-2026-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -35659,6 +35669,41 @@
     "width": 1200,
     "height": 675
   },
+  "/images/msty-knowledge-stacks-start-screen-sources.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1428,
+    "height": 880
+  },
+  "/images/msty-media-studio-prompt-box-and-model-selector.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1429,
+    "height": 860
+  },
+  "/images/msty-model-hub-local-models-featured-list.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1023,
+    "height": 603
+  },
+  "/images/msty-model-hub-qwen3-vl-fits-this-mac-tooltip.webp": {
+    "encodingFormat": "image/webp",
+    "width": 940,
+    "height": 510
+  },
+  "/images/msty-model-matchmaker-ranking-claude-opus-top.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1431,
+    "height": 889
+  },
+  "/images/msty-model-picker-ollama-models-gemma-qwen-flux.webp": {
+    "encodingFormat": "image/webp",
+    "width": 939,
+    "height": 485
+  },
+  "/images/msty-new-model-provider-list-with-ollama-and-mlx.webp": {
+    "encodingFormat": "image/webp",
+    "width": 939,
+    "height": 626
+  },
   "/images/msty-review-hero-ar.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
@@ -35703,6 +35748,11 @@
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
+  },
+  "/images/msty-vendor-website-one-private-ai-workspace-headline.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1405,
+    "height": 582
   },
   "/images/multi-gpu-local-llms-layer-splitting-de.svg": {
     "encodingFormat": "image/svg+xml",

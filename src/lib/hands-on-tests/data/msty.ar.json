@@ -1,0 +1,1259 @@
+{
+  "id": "pq-test-msty-2026-10-13",
+  "standard_version": "0.1",
+  "locale": "ar",
+  "app": {
+    "name": "Msty Studio",
+    "slug": "msty",
+    "vendor": "CloudStack, LLC (per the vendor's site footer)",
+    "category": "مساحة عمل للدردشة مع الذكاء الاصطناعي المحلي والسحابي",
+    "platform": "macOS (سطح المكتب)",
+    "pricing_url": "https://msty.ai/pricing"
+  },
+  "title": "⁦Msty Studio⁩ على جهاز ⁦Mac⁩ بذاكرة ⁦24 GB⁩: وجد نماذج ⁦Ollama⁩ الخاصة بي فورًا، وبقي الغرض منه غير واضح لي",
+  "page_title": "اختبار ⁦Msty Studio⁩",
+  "dek": "اختبار عملي على جهاز ⁦Mac⁩ بشريحة ⁦M3⁩ وذاكرة ⁦24 GB⁩. ظهرت نماذج ⁦Ollama⁩ الموجودة دون تنزيل ثانٍ. لم تُولَّد أي صورة.",
+  "seo": {
+    "title": "اختبار ⁦Msty Studio⁩ العملي: نماذج ⁦Ollama⁩ وُجدت فورًا",
+    "description": "اختبار عملي لـ ⁦Msty Studio⁩ على ⁦Mac⁩ بذاكرة ⁦24 GB⁩: نماذج ⁦Ollama⁩ ظهرت فورًا، ورفع الملف دار في حلقة، ولا نموذج صور محلي."
+  },
+  "faq": [
+    [
+      "هل يعمل ⁦Msty Studio⁩ مع ⁦Ollama⁩؟",
+      "نعم، في هذا الاختبار. بعد إضافة ⁦Ollama⁩ مزوّدًا، ظهرت خمسة نماذج من ⁦Ollama⁩ في منتقي النماذج، ولا تسجّل الملاحظات تنزيلًا ثانيًا لنموذج. ظنّ المختبِر في البداية أن الاتصال فشل.",
+      "observed"
+    ],
+    [
+      "هل يستطيع ⁦Msty Studio⁩ توليد صور بنموذج ⁦Ollama⁩ محلي؟",
+      "ليس في هذا الاختبار. فُتح ⁦Media Studio⁩، لكن المختبِر لم يجد طريقة لاستخدام نموذج الصور المحلي لديه (⁦x/flux2-klein⁩) هناك، ولم تُولَّد أي صورة. لم يُلتقط محتوى قائمة '⁦Select image/video model⁩'، ولم تُجرَّب المزوّدات المستضافة.",
+      "observed"
+    ],
+    [
+      "هل يخبرني ⁦Msty Studio⁩ ما إذا كان النموذج يناسب جهاز ⁦Mac⁩ لديّ؟",
+      "تحمل بطاقات النماذج في ⁦Model Hub⁩ تلميحًا عن العتاد، مثل '⁦Should run fast on this Mac⁩ · ~⁦3.2 GB memory needed⁩, ⁦16.8 GB available⁩' على ⁦Qwen3-VL 4B⁩. التقدير من التطبيق نفسه؛ ولم يُشغَّل النموذج.",
+      "vendor-claim"
+    ],
+    [
+      "كم يكلّف ⁦Msty Studio⁩؟",
+      "تُظهر قائمة أسعار المزوّد، التي قُرئت في ⁦16⁩ أكتوبر ⁦2026⁩، أن ⁦Free⁩ بسعر ⁦0⁩ دولار، و⁦Aurum⁩ بسعر ⁦149⁩ دولارًا للمستخدم سنويًا، و⁦Aurum Lifetime⁩ بسعر ⁦349⁩ دولارًا مرة واحدة. لم تُسجَّل الخطة التي استخدمها المختبِر.",
+      "vendor-claim"
+    ]
+  ],
+  "status": "جزئي",
+  "published": "2026-10-16",
+  "started": "2026-10-13",
+  "ended": null,
+  "meta": [
+    [
+      "التطبيق",
+      "⁦Msty Studio⁩ (سطح المكتب) من ⁦CloudStack⁩, ⁦LLC⁩. تكتبه الملاحظات '⁦Mysty⁩' و'⁦Misty⁩' (تفريغ صوتي)؛ ويعتمد هذا التقرير كتابة المزوّد.",
+      "vendor-claim"
+    ],
+    [
+      "الإصدار",
+      "غير مسجَّل. للسياق: يذكر سجل التغييرات لدى المزوّد ⁦Msty Studio 3.0.0 Beta 15⁩ (⁦7⁩ أكتوبر ⁦2026⁩) و⁦2.9.11⁩ (⁦15⁩ سبتمبر ⁦2026⁩) ضمن الإصدارات الحديثة.",
+      null
+    ],
+    [
+      "المختبر",
+      "⁦Hans Kuepper⁩، مؤسس ⁦PromptQuorum⁩",
+      null
+    ],
+    [
+      "البدء",
+      "⁦13⁩ أكتوبر ⁦2026⁩ (الوقت غير مسجَّل). تقول الملاحظات إن الاختبار سيستمر '⁦over the next two days⁩'.",
+      "observed"
+    ],
+    [
+      "الانتهاء",
+      "غير مسجّل",
+      null
+    ],
+    [
+      "العتاد",
+      "جهاز ⁦Mac⁩ من عائلة ⁦Apple M3⁩، بذاكرة ⁦24 GB⁩. تقول الملاحظات '⁦M3⁩, ⁦24 GB⁩'. جهاز الاختبار القياسي هو ⁦MacBook Pro⁩ بشريحة ⁦M3 Pro⁩ وذاكرة موحّدة ⁦24 GB⁩؛ ويُفترض أنه الجهاز نفسه. أظهر التطبيق نفسه في لحظة ما أن ⁦16.8 GB⁩ متاحة.",
+      "assumption"
+    ],
+    [
+      "النظام",
+      "⁦macOS⁩؛ الإصدار غير مسجَّل",
+      null
+    ],
+    [
+      "المصدر",
+      "زر '⁦Download Studio⁩' في صفحة منتج ⁦Studio⁩ لدى المزوّد",
+      "observed"
+    ],
+    [
+      "التنزيل",
+      "⁦246 MB⁩ (ملف التثبيت، كما قرأه المختبِر)",
+      "observed"
+    ],
+    [
+      "الخطة المستخدمة",
+      "غير مسجَّلة. قائمة أسعار المزوّد في ⁦16⁩ أكتوبر ⁦2026: Free⁩ بسعر ⁦0⁩ دولار؛ ⁦Aurum⁩ بسعر ⁦149⁩ دولارًا للمستخدم سنويًا؛ ⁦Aurum Lifetime⁩ بسعر ⁦349⁩ دولارًا مرة واحدة؛ ⁦Enterprise⁩ عند الطلب.",
+      "vendor-claim"
+    ],
+    [
+      "سبب الاختبار",
+      "أراد المختبِر أن يعرف لماذا يُستخدم ⁦Msty⁩. يصفه بأنه من الأدوات المبكرة والمهنية، ولم يرَ سببًا يدفع مستخدمًا منزليًا إلى استخدامه.",
+      "tester-view"
+    ],
+    [
+      "الهدف",
+      "بحسب الملاحظات: فهم موضوع ⁦Msty⁩ ومعرفة كيف يتصل بالنماذج المحلية، على أمل أن يعمل مع ⁦Ollama⁩ فلا يضطر إلى تنزيل نموذج آخر.",
+      "observed"
+    ],
+    [
+      "مساعدة الذكاء الاصطناعي",
+      "غير مسجّل",
+      null
+    ]
+  ],
+  "disclosure": "أسّس المختبِر ⁦PromptQuorum⁩ (⁦promptquorum.com⁩)، وهو موقع محتوى ودليل عن تطبيقات الذكاء الاصطناعي المحلية. ⁦Msty⁩ مدرج في هذا الدليل، ولديه صفحة مراجعة قائمة كُتبت على حدة في الموقع. لا تسجّل الملاحظات أي اتصال بالمزوّد ولا دفعًا ولا رعاية.",
+  "verdict": {
+    "general": "اختبار جزئي. ما جرّبه المختبِر عمل في معظمه: التقط ⁦Msty⁩ نماذج ⁦Ollama⁩ الموجودة لديه، وعملت دردشة نصية ورفع صورة، ويخبرك ⁦Model Hub⁩ ما إذا كان النموذج يناسب جهاز ⁦Mac⁩. أما ما لم ينجح فهو أن الموقع والشاشات الأولى لا تقولان لماذا صُمّم التطبيق، وأن رفع ملف دار في حلقة بين قاعدة معرفة والدردشة، وأنه لم يمكن استخدام أي نموذج صور في ⁦Media Studio⁩. تتوقف الملاحظات عند ⁦Model Matchmaker⁩ دون استنتاج عن ⁦Msty⁩.",
+    "fit": "غير مسجَّل. سؤال المختبِر نفسه، '⁦why should a home user use it⁩'، لا تجيب عنه الملاحظات. أما الحكم الختامي في ملف ⁦Word⁩ فيصف تطبيقًا آخر ولا يُستخدم هنا."
+  },
+  "scores": [
+    [
+      "التثبيت",
+      null,
+      "سُجّل حجم التنزيل (⁦246 MB⁩). لم تُسجَّل خطوات التثبيت ولا مطالبات ⁦macOS⁩."
+    ],
+    [
+      "البدء واختيار النموذج",
+      3,
+      "تظهر نماذج ⁦Ollama⁩ إلى جانب المزوّدات المستضافة، وتحمل بطاقات النماذج تلميح ملاءمة للعتاد. لا تقول الشاشات الأولى ما غرض التطبيق، ولم يكن اتصال ⁦Ollama⁩ واضحًا للمختبِر."
+    ],
+    [
+      "الوظيفة الأساسية",
+      4,
+      "عملت الدردشة مع نموذج ⁦Ollama⁩ وإدخال الصور. ردّ نصي واحد واختبار رؤية واحد واختبار ملف واحد فقط؛ ولم تُقيَّم جودة الإجابات."
+    ],
+    [
+      "الإرشاد والتكرار",
+      2,
+      "دار رفع الملف في حلقة بين قاعدة معرفة والدردشة. النماذج الخاصة بالصور فقط والنماذج الموسومة بالسحابة موجودة في المنتقي نفسه مع نماذج الدردشة."
+    ],
+    [
+      "الأداء",
+      null,
+      "نقطة بيانات واحدة: ⁦52.81 tok/s⁩ في ردّ واحد (اسم النموذج مقطوع جزئيًا). لا تكفي للتقييم."
+    ],
+    [
+      "التوثيق",
+      null,
+      "لم تُختبر."
+    ],
+    [
+      "الثقة والخصوصية",
+      null,
+      "لم يُدقَّق. يزعم المزوّد أنه '⁦privacy-first workspace⁩'؛ ويحتوي المنتقي أيضًا على نموذج ':⁦cloud⁩' ومزوّدات مستضافة. لم يُختبر التشغيل دون اتصال."
+    ],
+    [
+      "إزالة التثبيت",
+      null,
+      "لم تُختبر."
+    ]
+  ],
+  "scores_note": "الدرجات مقترحات مستخلصة من الأدلة أدناه (⁦1⁩ = ضعيف، ⁦5⁩ = جيد جدًا). وتأكيدها يعود إلى المختبر.",
+  "tldr": [
+    [
+      "observed",
+      "ظهرت نماذج ⁦Ollama⁩ الموجودة في منتقي النماذج في ⁦Msty⁩. لا تسجّل الملاحظات تنزيلًا ثانيًا لنموذج."
+    ],
+    [
+      "observed",
+      "لم يعمل أمران كما توقّع المختبِر: دار رفع الملف في حلقة بين قاعدة المعرفة والدردشة، ولم يمكن استخدام أي نموذج صور محلي في ⁦Media Studio⁩."
+    ],
+    [
+      "tester-view",
+      "لم يستطع المختبِر أن يعرف من الموقع ما غرض ⁦Msty⁩ للمستخدم المنزلي. لا تتضمن الملاحظات حكمًا نهائيًا على ⁦Msty⁩."
+    ]
+  ],
+  "quotes": [
+    "تنزيل ⁦10 GB⁩ و⁦20 GB⁩ ونماذج مختلفة لكل تطبيق ليس هو الطريق الصحيح ببساطة.",
+    "حسنًا، هذا يدور في حلقة.",
+    "⁦Model Matchmaker⁩. فكرة رائعة. تعجبني."
+  ],
+  "quote_note": "ملاحظات المختبر، مع تحرير طفيف عن النص المفرَّغ من تسجيل صوتي.",
+  "moments": [
+    [
+      "ما غرضه؟",
+      "تقول صفحة ⁦Studio⁩ '⁦One private AI workspace for real work⁩'. ومع ذلك لم يستطع المختبِر معرفة غرض التطبيق.",
+      "website",
+      "chapter-listing"
+    ],
+    [
+      "كان ⁦Ollama⁩ موجودًا بالفعل",
+      "خمسة نماذج من ⁦Ollama⁩، بينها نموذج صور وعنصر ':⁦cloud⁩'، في منتقٍ واحد. ظنّ المختبِر في البداية أن الاتصال فشل.",
+      "picker",
+      "chapter-ollama"
+    ],
+    [
+      "حلقة",
+      "حُلّل ملف رُفع للتحليل دون طرح سؤال. وعند طلب التحليل في الدردشة طلب التطبيق الرفع مرة أخرى.",
+      "kstacks",
+      "chapter-files"
+    ],
+    [
+      "لا نموذج صور",
+      "يُفتح ⁦Media Studio⁩ مع '⁦Select image/video model⁩'. لم يجد المختبِر طريقة لاستخدام نموذج الصور المحلي لديه هناك.",
+      "media",
+      "chapter-media"
+    ],
+    [
+      "هل يناسب هذا الـ ⁦Mac⁩؟",
+      "تقول بطاقة نموذج '~⁦3.2 GB memory needed⁩, ⁦16.8 GB available⁩'. لم يكن لدى ⁦Draw Things⁩، الذي اختُبر سابقًا، تلميح كهذا.",
+      "tooltip",
+      "chapter-hub"
+    ],
+    [
+      "ترتيب من الأمس؟",
+      "يضع ⁦Model Matchmaker⁩ نموذجَي ⁦Claude Opus 4.x⁩ في المقدمة. وتذكر صفحة ⁦Anthropic⁩ الحالية أن ⁦Opus 5.5⁩ هو أحدث ⁦Opus⁩.",
+      "ranking",
+      "chapter-hub"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-listing",
+      "title": "الموقع: ما غرضه؟",
+      "items": [
+        [
+          "observed",
+          "بدأ المختبِر من صفحة منتج ⁦Studio⁩. العنوان: '⁦One private AI workspace for real work⁩.' السطر الفرعي: '⁦Chat with models⁩, ⁦organize knowledge⁩, ⁦create media⁩, ⁦and reuse prompts in one privacy-first workspace⁩.' الزر: '⁦Download Studio⁩'.",
+          "website"
+        ],
+        [
+          "tester-view",
+          "أراد أن يفهم موضوع ⁦Msty⁩: إنه '⁦one of the early ones⁩, ⁦one of the professional ones⁩'، وبالنسبة إلى مستخدم منزلي لم يكن متأكدًا من الفائدة. 'الشاشة توضح أن الغرض الفعلي منه غير واضح.'",
+          null
+        ],
+        [
+          "observed",
+          "رأى المختبِر عدة حلول ومنتجات، واختار '⁦Download Studio⁩' لأنه بدا الخيار الذي يعمل محليًا.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "تذكر صفحة منتج المزوّد ⁦Studio⁩ و⁦Go⁩ ('⁦bounded AI agents⁩') و⁦Nexus⁩ ('⁦AI control center⁩') و⁦Stack⁩ ('⁦governed knowledge layer⁩'). فُحصت في ⁦16⁩ أكتوبر ⁦2026⁩؛ ولم يفتح المختبِر هذه المنتجات.",
+          null
+        ],
+        [
+          "observed",
+          "ملف التنزيل بحجم ⁦246 MB⁩. قال المختبِر: 'هذا مقبول'.",
+          null
+        ],
+        [
+          "tester-view",
+          "كان أمله اتصالًا مع ⁦Ollama⁩ أو ⁦LM Studio⁩ حتى لا يلزم تنزيل نموذج إضافي. في رأيه ينبغي أن يوفّر كل تطبيق هذا الخيار إلى جانب النماذج المدمجة، لأن تنزيل ⁦10⁩ إلى ⁦20 GB⁩ لكل تطبيق 'ليس هو الطريق إلى الأمام'.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-first-launch",
+      "title": "التشغيل الأول: نموذج محلي واحد أو مزوّد",
+      "items": [
+        [
+          "observed",
+          "تعرض الشاشة الأولى (الشكل ⁦1⁩، أعلى هذه الصفحة) بطاقة موسومة '⁦LOCAL AI⁩ · ⁦RUNS ON YOUR MACHINE⁩': ⁦Gemma 4 E2B⁩، حجمه ⁦3.6 GB⁩، ويُوصف بأنه نموذج ⁦Google⁩ المتعدد الوسائط المدمج ذو الرؤية. يمتد منزلق القوة من ⁦Light⁩ إلى ⁦Powerful⁩ ويقف عند '⁦Capable⁩'. ويقرأ الزر '⁦Download⁩ & ⁦Get Started⁩'.",
+          null
+        ],
+        [
+          "observed",
+          "وتحتها يعرض '⁦Or connect an AI provider⁩' كلًّا من ⁦OpenAI⁩ و⁦Claude⁩ و⁦xAI⁩ و⁦Gemini⁩ و⁦OpenRouter⁩ و'⁦More⁩'. ويقول إشعار أصفر '⁦Add at least one model before continuing with a connected provider⁩.' وزر '⁦Continue with connected provider⁩' رمادي.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "'⁦Runs on your machine⁩' هو وصف التطبيق نفسه. لم ينزّل المختبِر هذا النموذج (استخدم نماذج موجودة في ⁦Ollama⁩) ولم يفحص حركة الشبكة.",
+          null
+        ],
+        [
+          "assumption",
+          "يظهر الإشعار لأنه لم يكن قد أُضيف أي نموذج في ذلك الوقت. لم يُختبر أي إجراء يفعّل '⁦Continue⁩'.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-ollama",
+      "title": "ربط ⁦Ollama⁩",
+      "items": [
+        [
+          "observed",
+          "تجمع قائمة '⁦New Model Provider⁩' كلًّا من ⁦Msty Remote⁩ و⁦Ollama⁩ تحت '⁦Msty Compatible⁩'، و⁦MLX Remote⁩ تحت '⁦MLX Compatible⁩'، و⁦LLaMA.cpp⁩ تحت '⁦OpenAI Compatible⁩'. القائمة في لقطة الشاشة مُمرَّرة، لذا لا تظهر العناصر التي فوق ⁦xAI⁩.",
+          "provider"
+        ],
+        [
+          "observed",
+          "الملاحظات: '⁦It allowed me to connect to Ollama⁩, ⁦select Ollama⁩, ⁦but then it didn⁩'⁦t select it⁩.' عاد إلى شاشة التنزيل المحلي ليرى ما يحدث.",
+          null
+        ],
+        [
+          "tester-error",
+          "كان الاتصال قد نجح. لم ينتبه المختبِر لذلك لأن التطبيق، بحسب قوله، يعرض اسم النموذج وليس كلمة ⁦Ollama⁩. ثم عرض المنتقي خمسة نماذج تحت عنوان ⁦Ollama⁩.",
+          "picker"
+        ],
+        [
+          "observed",
+          "تصحيح للملاحظات: تُظهر لقطة المنتقي فعلًا عنوان '⁦Ollama⁩' فوق القائمة. ترجع الملاحظات على الأرجح إلى شاشة سابقة لم تُلتقط (افتراض).",
+          null
+        ],
+        [
+          "observed",
+          "تحقق أمل المختبِر المعلن: كانت نماذج ⁦Ollama⁩ الموجودة لديه قابلة للاستخدام، ولا تسجّل الملاحظات تنزيلًا آخر لنموذج.",
+          null
+        ],
+        [
+          "assumption",
+          "تشير اللاحقة ':⁦cloud⁩' في ⁦minimax-m2:cloud⁩ إلى نموذج يعمل في السحابة لا على جهاز ⁦Mac⁩. لم يُتحقق. وإن صح ذلك، فإن قائمة ⁦Ollama⁩ تخلط النماذج المحلية والسحابية دون علامة ظاهرة.",
+          null
+        ],
+        [
+          "tester-view",
+          "'رائع جدًا، رائع جدًا. شكرًا.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-chat",
+      "title": "اختبارات الدردشة",
+      "items": [
+        [
+          "observed",
+          "طلب المختبِر رمز ⁦QR⁩ (نص الطلب غير مسجَّل؛ يشير الرد إلى ⁦www.promptquorum.com⁩). قال الرد إنه ذكاء اصطناعي نصي لا يستطيع توليد صور، وأعطى خمس خطوات لاستخدام مولّد ⁦QR⁩ مجاني على الإنترنت.",
+          "chat"
+        ],
+        [
+          "measured",
+          "يظهر ⁦52.81 tok/s⁩ تحت الرد. اسم النموذج مقطوع جزئيًا ('⁦gemma4:latest⁩' ظاهر في الأعلى؛ والتطابق مرجّح لا مؤكد).",
+          null
+        ],
+        [
+          "tester-error",
+          "طُلبت صورة من نموذج نصي. كان الرد صحيحًا لنموذج نصي. وصف المختبِر ذلك بأنه 'الفرق عن نموذج وظيفي'.",
+          null
+        ],
+        [
+          "observed",
+          "ثم اختار المختبِر نموذج صور من عمل سابق (⁦x/flux2-klein⁩ في ⁦Ollama⁩) نموذجًا للدردشة. بحسب الملاحظات، 'لا يدعم الدردشة'. ولم تُلتقط الرسالة نفسها.",
+          null
+        ],
+        [
+          "assumption",
+          "شكّ المختبِر في إمكان تحميل نموذجين أو ثلاثة في وقت واحد ('لا أظن ذلك'). لم يُختبر. تذكر صفحة المزوّد '⁦Split Chats: run models side by side⁩'.",
+          null
+        ],
+        [
+          "observed",
+          "بعد العودة إلى ⁦gemma4:latest⁩ رفع صورة وتمكّن النموذج من قراءتها (من الملاحظات فقط؛ لم تُسجَّل الصورة ولا الإجابة).",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-files",
+      "title": "رفع ملف ⁦Search Console⁩",
+      "items": [
+        [
+          "observed",
+          "رفع المختبِر ملفًا مُصدَّرًا من ⁦Google Search Console⁩. بحسب الملاحظات، '⁦just ran⁩' التطبيق تحليلًا دون أن يُطلب منه. النقطة الأولى من النصيحة كما اقتُبست في الملاحظات: '⁦Investigate High-CTR Regions: A rapid audit of Gambia⁩, ⁦Saint Barth⁩é⁦lemy⁩, ⁦Bangladesh⁩, ⁦and Gabon is essential⁩.' لم تُقارن الأرقام بالملف. النموذج وحجم الملف غير مسجَّلين.",
+          null
+        ],
+        [
+          "observed",
+          "الحلقة كما وُصفت: يضع الرفع الملف في '⁦some background tool⁩, ⁦knowledge base⁩'. وبعد العودة إلى الدردشة يحلل التطبيق تلقائيًا ولا يتيح فرصة لتحديد ما يُحلَّل. وكتابة '⁦I want this analyzed⁩' في الدردشة تجعل التطبيق يطلب البيانات.",
+          "kstacks"
+        ],
+        [
+          "assumption",
+          "تأتي لقطة ⁦Knowledge Stacks⁩ بعد هذه الملاحظات. أن الملف مرّ عبر ⁦Knowledge Stacks⁩ هو قراءة المختبِر ('⁦knowledge base⁩') وليس مؤكدًا.",
+          null
+        ],
+        [
+          "observed",
+          "تعرض شاشة ⁦Knowledge Stacks⁩: إنشاء ⁦stack⁩ جديد، واستكشاف ⁦stacks⁩ منتقاة، واستيراد ملفات .⁦mstyks⁩، و'⁦Switch back to Classic Knowledge Stack⁩'. المصادر المعروضة: ⁦Notes⁩ و⁦YouTube Links⁩ و⁦Web Links⁩ و⁦Conversation Projects⁩ و⁦Conversations⁩؛ وسطر مقطوع جزئيًا في الأعلى يبدو أنه يقرأ '⁦Folders⁩ & ⁦Obsidian Vaults⁩'.",
+          null
+        ],
+        [
+          "tester-view",
+          "'⁦Okay⁩, ⁦this goes in circles⁩.' ثم: '⁦So this looks like an interesting tool⁩, ⁦but let⁩'⁦s see⁩.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-media",
+      "title": "⁦Media Studio⁩",
+      "items": [
+        [
+          "observed",
+          "في الشريط الجانبي عنصر '⁦Media Studio⁩'. وتقول الشاشة '⁦Create images and videos that follow your imagination wherever it leads⁩.' وفيها منطقة إفلات اختيارية للسياق، ومربع طلب ('⁦Describe your creation⁩...')، وعدّاد مضبوط على ⁦1⁩، وقائمة تقرأ '⁦Select image/video model⁩'.",
+          "media"
+        ],
+        [
+          "tester-view",
+          "'رائع، يمكنه رسم الصور أيضًا.' لكن عند الاتصال بإعداد ⁦LLM⁩ المحلي لديه، قال التطبيق إن ⁦Ollama⁩ لديه بلا نموذج صور، وكان يرى أن ⁦Flux⁩ هو المناسب.",
+          null
+        ],
+        [
+          "observed",
+          "لم تُولَّد أي صورة في ⁦Msty⁩. لا تسجّل الملاحظات أي منتقٍ لنموذج صور عمل لديه.",
+          null
+        ],
+        [
+          "assumption",
+          "لا يعرض ⁦Media Studio⁩ نموذج الصور ⁦x/flux2-klein⁩ من ⁦Ollama⁩. ولم يُلتقط محتوى قائمة النماذج. يؤرخ سجل التغييرات لدى المزوّد ⁦Media Studio⁩ بالإصدار ⁦2.7.0⁩ (⁦29⁩ أبريل ⁦2026⁩) ويذكر نماذج صور وفيديو من ⁦xAI⁩ و⁦OpenRouter⁩، مما يوحي بمزوّدات مستضافة. لم يُتحقق.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-hub",
+      "title": "⁦Model Hub⁩ و⁦Model Matchmaker⁩",
+      "items": [
+        [
+          "observed",
+          "يسرد الشريط الجانبي لـ ⁦Model Hub: Model Providers⁩ و⁦Local Models⁩ و⁦Model Squad⁩ و⁦Model Matchmaker⁩ و⁦Model Cost Calculator⁩ و⁦VRAM Calculator⁩ و⁦Context Explorer⁩. وفي ⁦Local Models⁩ علامات التبويب ⁦Featured⁩ و⁦Installed⁩ و⁦Search⁩ و⁦Import⁩. بحسب الملاحظات، فُتح ⁦Matchmaker⁩ وحده.",
+          "hub"
+        ],
+        [
+          "observed",
+          "تعرض بطاقات النماذج الحجم والتكميم. يقرأ تلميح على ⁦Qwen3-VL 4B⁩ (⁦2.4 GB⁩، ⁦4-bit⁩) '⁦Should run fast on this Mac⁩ · ~⁦3.2 GB memory needed⁩, ⁦16.8 GB available⁩'.",
+          "tooltip"
+        ],
+        [
+          "vendor-claim",
+          "تقدير الملاءمة هذا من التطبيق نفسه. ولم يُشغَّل النموذج.",
+          null
+        ],
+        [
+          "tester-view",
+          "'⁦Model Matchmaker⁩. فكرة رائعة. تعجبني.' لكنه لم يجد منتقيات لتوليد الصور.",
+          null
+        ],
+        [
+          "observed",
+          "تُظهر اللقطة التالية قائمة الترتيب في ⁦Matchmaker⁩: رقم ⁦1 claude-opus-4-6-thinking-auto-high-effort⁩ ورقم ⁦2 claude-opus-4-5-20251101-thinking-64k-high-effort⁩، كلاهما '⁦Anthropic⁩ /⁦remote⁩'، الدرجة ⁦100⁩. إشعار '⁦Setting up MLX: Preparing engine setup⁩...' ظاهر؛ ولم يُسجَّل سبب ظهوره.",
+          "ranking"
+        ],
+        [
+          "tester-view",
+          "'في أكتوبر ⁦2026⁩ وأرى هذا، لست منبهرًا. هذه عملية ذكاء اصطناعي لتحديث هذا. لديّ أدوات على موقعي لتحديث الموقع. لماذا الأمر صعب إلى هذا الحد؟'",
+          null
+        ],
+        [
+          "assumption",
+          "يُقرأ '⁦this⁩' هنا على أنه قِدَم الترتيب الظاهر في اللقطة. لا تذكر الملاحظات أي شاشة قصد.",
+          null
+        ],
+        [
+          "third-party",
+          "تذكر صفحة النماذج لدى ⁦Anthropic⁩ (فُحصت في ⁦16⁩ أكتوبر ⁦2026⁩) أن ⁦Claude Opus 5.5⁩ (⁦claude-opus-5-5⁩) هو أحدث ⁦Opus⁩ ولا تدرج النموذجين ⁦4.x⁩ بوصفهما حاليين. تاريخ بيانات الترتيب غير ظاهر في اللقطة، لذا لم يُؤكَّد أنه قديم.",
+          null
+        ],
+        [
+          "observed",
+          "النماذج المميزة الظاهرة هي ⁦Mistral 7B Instruct v0.3⁩ و⁦Llama 3.2 3B⁩ و⁦1B⁩ و⁦Meta Llama 3.1 8B⁩. حجم ⁦Mistral 7B⁩ هو ⁦6.9 GB⁩ وهو أكبر من ⁦Llama 3.1 8B⁩ بحجم ⁦4.5 GB⁩، وكلاهما موسوم ⁦4-bit⁩؛ ولا يُشرح الفرق على البطاقات.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-end",
+      "title": "أين تتوقف الملاحظات",
+      "items": [
+        [
+          "observed",
+          "ينتهي جزء ⁦Msty⁩ من الملاحظات عند ⁦Model Matchmaker⁩. أما بقية ملف ⁦Word⁩ (من مقطع '⁦Generate similar images⁩' فصاعدًا) فيصف تطبيقًا آخر، هو مولّد صور، بلقطاته الخاصة. وقد استُبعد من هذا التقرير.",
+          null
+        ],
+        [
+          "observed",
+          "غير مسجَّل لـ ⁦Msty⁩: إصدار التطبيق و⁦macOS⁩، ووقت الانتهاء، والخطة المستخدمة، وحكم، وفحص الإزالة.",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "'⁦Chat with models⁩, ⁦organize knowledge⁩, ⁦create media⁩, ⁦and reuse prompts in one privacy-first workspace⁩.'",
+      "صفحة ⁦Studio⁩ لدى المزوّد (وهي أيضًا في لقطة المختبِر)",
+      "عملت الدردشة مع نماذج ⁦Ollama⁩. فُتح ⁦Knowledge Stacks⁩. فُتح ⁦Media Studio⁩ لكنه لم ينتج صورة. لم تُجرَّب إعادة استخدام الطلبات. لم تُدقَّق الخصوصية.",
+      "observed"
+    ],
+    [
+      "'⁦Bring local inference engines like MLX⁩, ⁦llama.cpp⁩, ⁦and Ollama together with hosted providers in one organized hub⁩.'",
+      "صفحة ⁦Studio⁩ لدى المزوّد، فُحصت في ⁦16⁩‏/⁦10⁩‏/⁦2026⁩",
+      "اتصل ⁦Ollama⁩ وسُردت نماذجه. يظهر ⁦LLaMA.cpp⁩ و⁦MLX Remote⁩ في قائمة المزوّدات. استُخدم ⁦Ollama⁩ وحده. ظهر إشعار إعداد ⁦MLX⁩ مرة واحدة.",
+      "observed"
+    ],
+    [
+      "⁦Split Chats⁩: '⁦run models side by side⁩'",
+      "صفحة ⁦Studio⁩ لدى المزوّد، فُحصت في ⁦16⁩‏/⁦10⁩‏/⁦2026⁩",
+      "لم يُختبر. افترض المختبِر أنه لا يمكن تحميل نموذجين أو ثلاثة في وقت واحد.",
+      "assumption"
+    ],
+    [
+      "⁦Media Studio⁩: توليد الصور وصياغة مفاهيم الفيديو",
+      "صفحة ⁦Studio⁩ لدى المزوّد، فُحصت في ⁦16⁩‏/⁦10⁩‏/⁦2026⁩",
+      "الشاشة موجودة. لم تُولَّد أي صورة؛ ولم يوجد نموذج صور محلي صالح للاستخدام.",
+      "observed"
+    ],
+    [
+      "'⁦LOCAL AI⁩ · ⁦RUNS ON YOUR MACHINE⁩' (⁦Gemma 4 E2B⁩، ⁦3.6 GB⁩)",
+      "شاشة التشغيل الأول",
+      "لم يُنزَّل. استخدم المختبِر نماذج موجودة في ⁦Ollama⁩. دون فحص للشبكة.",
+      "observed"
+    ],
+    [
+      "'⁦Should run fast on this Mac⁩ · ~⁦3.2 GB memory needed⁩, ⁦16.8 GB available⁩'",
+      "تلميح في ⁦Model Hub⁩",
+      "لم يُشغَّل النموذج، لذا لم يُتحقق من التقدير.",
+      "vendor-claim"
+    ],
+    [
+      "خطة ⁦Free: 0⁩ دولار، تتضمن نماذج محلية وعلى الإنترنت و⁦Media Studio⁩ (بعض الميزات محدودة)",
+      "صفحة أسعار المزوّد، فُحصت في ⁦16⁩‏/⁦10⁩‏/⁦2026⁩",
+      "لم تُسجَّل الخطة التي استخدمها المختبِر.",
+      "vendor-claim"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale": 30,
+    "rows": [
+      [
+        "⁦Llama 3.2 1B⁩ (⁦4-bit⁩)",
+        0.645,
+        "⁦645 MB⁩",
+        "observed"
+      ],
+      [
+        "⁦Llama 3.2 3B⁩ (⁦4-bit⁩)",
+        1.7,
+        "⁦1.7 GB⁩",
+        "observed"
+      ],
+      [
+        "⁦Qwen3-VL 4B⁩ (⁦4-bit⁩)",
+        2.4,
+        "ملف بحجم ⁦2.4 GB⁩؛ ويقول التطبيق إن نحو ⁦3.2 GB⁩ من الذاكرة مطلوبة",
+        "vendor-claim"
+      ],
+      [
+        "⁦Gemma 4 E2B⁩ (تنزيل التشغيل الأول)",
+        3.6,
+        "⁦3.6 GB⁩",
+        "observed"
+      ],
+      [
+        "⁦Meta Llama 3.1 8B⁩ (⁦4-bit⁩)",
+        4.5,
+        "⁦4.5 GB⁩",
+        "observed"
+      ],
+      [
+        "⁦Mistral 7B Instruct v0.3⁩ (⁦4-bit⁩)",
+        6.9,
+        "⁦6.9 GB⁩",
+        "observed"
+      ],
+      [
+        "⁦Qwen3 14B⁩ (⁦4-bit⁩)",
+        9,
+        "⁦9.0 GB⁩",
+        "observed"
+      ]
+    ],
+    "note": "هذه أحجام تنزيل معروضة على بطاقات النماذج، وليست الذاكرة وقت التشغيل. يغيّر طول السياق والمحرك ما يحتاجه النموذج. أبلغ التطبيق عن ⁦16.8 GB⁩ متاحة وقت ظهور تلميح ⁦Qwen3-VL⁩. نماذج ⁦Ollama⁩ التي استخدمها المختبِر فعلًا (⁦Gemma 3 1B⁩ و⁦gemma4:latest⁩ و⁦Qwen3-Coder 30B⁩) لا تُظهر حجمًا في المنتقي. بطاقة ⁦Qwen3 14B⁩ ظاهرة جزئيًا فقط في اللقطة (اسمها وحجمها وتكميمها مقروءة)."
+  },
+  "usage_log": [
+    [
+      "ربط ⁦Ollama⁩ مزوّدًا",
+      "-",
+      "متصل؛ خمسة نماذج مسرودة تحت ⁦Ollama⁩. ظنّ المختبِر في البداية أنه فشل.",
+      "غير مسجّل",
+      "Pass",
+      [
+        "provider",
+        "picker"
+      ]
+    ],
+    [
+      "الدردشة: طلب رمز ⁦QR⁩",
+      "⁦gemma4:latest⁩ (الاسم مقطوع جزئيًا)",
+      "ردّ نصي فقط بخطوات لمولّد على الإنترنت؛ ⁦52.81 tok/s⁩",
+      "غير مسجّل",
+      "Not completed",
+      [
+        "chat"
+      ]
+    ],
+    [
+      "دردشة مع نموذج صور (⁦x/flux2-klein⁩)",
+      "⁦x/flux2-klein:latest⁩",
+      "'لا يدعم الدردشة' (الملاحظات؛ الرسالة غير ملتقطة)",
+      "-",
+      "Not completed",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "رفع صورة إلى الدردشة",
+      "⁦gemma4:latest⁩",
+      "تمكّن النموذج من قراءة الصورة (من الملاحظات فقط)",
+      "غير مسجّل",
+      "Pass",
+      []
+    ],
+    [
+      "رفع تصدير ⁦Search Console⁩ وتحليله",
+      "غير مسجّل",
+      "جرى التحليل دون طلب؛ وطلب في الدردشة جعل التطبيق يطلب الرفع مرة أخرى",
+      "غير مسجّل",
+      "Partial",
+      [
+        "kstacks"
+      ]
+    ],
+    [
+      "توليد صورة في ⁦Media Studio⁩",
+      "لا يوجد نموذج متاح",
+      "لم تُنشأ أي صورة",
+      "-",
+      "Not completed",
+      [
+        "media"
+      ]
+    ],
+    [
+      "تصفّح ⁦Model Hub⁩ وفتح ⁦Model Matchmaker⁩",
+      "-",
+      "بطاقات بحجم وتلميح ملاءمة؛ وظهر الترتيب",
+      "غير مسجّل",
+      "Pass",
+      [
+        "hub",
+        "tooltip",
+        "ranking"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "ظنّ أن اتصال ⁦Ollama⁩ فشل. لكنه كان قد نجح؛ وكانت النماذج مسرودة."
+    ],
+    [
+      "tester-error",
+      "طلب صورة (رمز ⁦QR⁩) من نموذج نصي ثم حكم عليه مقارنة بـ '⁦functional model⁩'."
+    ],
+    [
+      "tester-error",
+      "كتب أن التطبيق لا يذكر '⁦Ollama⁩'. لكن لقطته نفسها تُظهر عنوان '⁦Ollama⁩' فوق قائمة النماذج."
+    ],
+    [
+      "tester-error",
+      "ترك ثغرات في السجل: إصدار التطبيق، وإصدار ⁦macOS⁩، ووقت الانتهاء، والخطة المستخدمة، والطلبات، والنموذج الذي أجاب عن اختبار الملف، وحكمًا على ⁦Msty⁩."
+    ],
+    [
+      "tester-error",
+      "خلط تطبيقين في مستند واحد. يصف النصف الثاني من ملف ⁦Msty⁩ مولّد صور، مما أضعف الوضوح بشأن أين ينتهي اختبار ⁦Msty⁩."
+    ],
+    [
+      "assumption",
+      "شكّ المختبِر في إمكان تشغيل عدة نماذج في وقت واحد. لم يُختبر، والمزوّد يذكر ⁦Split Chats⁩."
+    ]
+  ],
+  "findings": [
+    [
+      "MS-01",
+      "لا تخبر صفحة ⁦Studio⁩ والشاشات الأولى المستخدم المنزلي بغرض التطبيق.",
+      "التموضع",
+      "tester-view",
+      "Medium",
+      [
+        "website",
+        "onboarding"
+      ]
+    ],
+    [
+      "MS-02",
+      "تعرض الشاشة الأولى نموذجًا محليًا واحدًا (⁦Gemma 4 E2B⁩، ⁦3.6 GB⁩) أو مزوّدًا مستضافًا؛ ولا يظهر ⁦Ollama⁩ هناك بل في قائمة المزوّدات.",
+      "البدء الأول",
+      "observed",
+      "Low",
+      [
+        "onboarding",
+        "provider"
+      ]
+    ],
+    [
+      "MS-03",
+      "تظهر نماذج ⁦Ollama⁩ الموجودة في المنتقي؛ وتحقق أمل المختبِر في تجنّب تنزيل ثانٍ لنموذج.",
+      "الإعداد",
+      "observed",
+      "Positive",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "MS-04",
+      "بعد الاتصال لم يستطع المختبِر أن يعرف أن ⁦Ollama⁩ متصل (لا تذكر الملاحظات أي تأكيد).",
+      "الإعداد",
+      "tester-view",
+      "Medium",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "MS-05",
+      "نماذج الصور فقط (⁦x/flux2-klein⁩) ونماذج ':⁦cloud⁩' مسرودة مع نماذج الدردشة؛ ولم يعمل نموذج الصور في الدردشة.",
+      "اختيار النموذج",
+      "observed",
+      "Medium",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "MS-06",
+      "أجاب نموذج نصي عن طلب صورة بطريقة معقولة وأشار إلى مولّد على الإنترنت.",
+      "الدردشة",
+      "observed",
+      "Positive",
+      [
+        "chat"
+      ]
+    ],
+    [
+      "MS-07",
+      "عمل رفع الصورة إلى ⁦gemma4:latest⁩، بحسب الملاحظات.",
+      "الدردشة",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "MS-08",
+      "دار رفع الملف في حلقة: تحليل تلقائي دون سؤال؛ وطلب في الدردشة جعل التطبيق يطلب الرفع مرة أخرى.",
+      "الملفات",
+      "tester-view",
+      "High",
+      [
+        "kstacks"
+      ]
+    ],
+    [
+      "MS-09",
+      "يوفّر ⁦Knowledge Stacks⁩ عدة أنواع من المصادر وصيغة استيراد (.⁦mstyks⁩)؛ ولم تُشاهد سوى شاشة البداية.",
+      "الملفات",
+      "observed",
+      "Low",
+      [
+        "kstacks"
+      ]
+    ],
+    [
+      "MS-10",
+      "تعذّر اختيار نموذج صور محلي في ⁦Media Studio⁩؛ ولم تُولَّد أي صورة.",
+      "الوسائط",
+      "observed",
+      "High",
+      [
+        "media"
+      ]
+    ],
+    [
+      "MS-11",
+      "تعرض بطاقات النماذج تلميح ملاءمة للعتاد مع الذاكرة المطلوبة والمتاحة.",
+      "⁦Model Hub⁩",
+      "observed",
+      "Positive",
+      [
+        "tooltip"
+      ]
+    ],
+    [
+      "MS-12",
+      "يجمع ⁦Model Hub⁩ سبع أدوات (المزوّدات، النماذج المحلية، ⁦Squad⁩، ⁦Matchmaker⁩، التكلفة، ⁦VRAM⁩، السياق)؛ ولم يُفتح سوى ⁦Matchmaker⁩.",
+      "⁦Model Hub⁩",
+      "observed",
+      "Low",
+      [
+        "hub"
+      ]
+    ],
+    [
+      "MS-13",
+      "يتصدر ترتيب ⁦Matchmaker⁩ نموذجان من ⁦Claude Opus 4.x⁩ بينما تذكر ⁦Anthropic⁩ أن ⁦Opus 5.5⁩ هو الأحدث؛ لم يُؤكَّد القِدَم (لا يظهر تاريخ للبيانات).",
+      "الحداثة",
+      "assumption",
+      "Medium",
+      [
+        "ranking"
+      ]
+    ],
+    [
+      "MS-14",
+      "ظهر إشعار '⁦Setting up MLX⁩' دون محفّز مسجَّل.",
+      "⁦Model Hub⁩",
+      "observed",
+      "Low",
+      [
+        "ranking"
+      ]
+    ],
+    [
+      "MS-15",
+      "يُدرج ⁦Mistral 7B⁩ (⁦6.9 GB⁩) أكبر من ⁦Llama 3.1 8B⁩ (⁦4.5 GB⁩)، وكلاهما '⁦4-bit⁩'، دون تفسير.",
+      "⁦Model Hub⁩",
+      "observed",
+      "Low",
+      [
+        "hub"
+      ]
+    ],
+    [
+      "MS-16",
+      "قيّم المختبِر فكرة ⁦Model Matchmaker⁩ تقييمًا عاليًا ووصف الأداة بأنها '⁦interesting⁩'.",
+      "⁦Model Hub⁩",
+      "tester-view",
+      "Positive",
+      [
+        "ranking"
+      ]
+    ]
+  ],
+  "severity_note": "الخطورة هي الأثر على المستخدم لأول مرة. مقترحة وغير مقيسة.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "من يشغّلون ⁦Ollama⁩ بالفعل ويريدون واجهة سطح مكتب واحدة للنماذج المحلية والمستضافة (نجحت إعادة استخدام ⁦Ollama⁩ في هذا الاختبار)."
+      ],
+      [
+        "vendor-claim",
+        "الفرق التي تحتاج إلى ⁦SSO⁩ وسجلات تدقيق وضوابط مشتركة (مذكورة في صفحة ⁦Studio⁩ لدى المزوّد؛ لم تُختبر)."
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "مستخدم منزلي يريد أن يفهم من الشاشات الأولى غرض التطبيق."
+      ],
+      [
+        "assumption",
+        "مستخدمون يتوقعون توليد صور في ⁦Media Studio⁩ بنموذج صور ⁦Ollama⁩ محلي (لم ينجح ذلك في هذا الاختبار)."
+      ]
+    ],
+    "retest": "أعد اختبار الأجزاء التي لم تُختبر (⁦Split Chats⁩ والطلبات و⁦Media Studio⁩ مع نموذج صور مستضاف وسير عمل الملفات والإزالة) وسجّل الإصدار و⁦macOS⁩ أولًا. يُظهر سجل التغييرات أن ⁦3.0.0⁩ كان ما يزال تجريبيًا في ⁦7⁩ أكتوبر ⁦2026⁩، لذا قد تتغير الواجهة عند الإصدار (افتراض)."
+  },
+  "background_intro": "ليس جزءًا من الجلسة العملية؛ ولم يُتحقق منه. تأتي البنود أدناه من موقع المزوّد نفسه وسجل تغييراته ودليل ⁦PromptQuorum⁩، وقد قُرئت في ⁦16⁩ أكتوبر ⁦2026⁩ بأداة جلب ويب تلخّص الصفحات. لم يُتحقق من أي منها بصورة مستقلة لهذا الاختبار.",
+  "background": [
+    [
+      "vendor-claim",
+      "يقرأ تذييل المزوّد '⁦Msty is a product of CloudStack⁩, ⁦LLC⁩.' (⁦2026⁩)."
+    ],
+    [
+      "vendor-claim",
+      "قائمة الأسعار: ⁦Free⁩ بسعر ⁦0⁩ دولار؛ ⁦Aurum⁩ بسعر ⁦149⁩ دولارًا للمستخدم سنويًا؛ ⁦Aurum Lifetime⁩ بسعر ⁦349⁩ دولارًا مرة واحدة؛ ⁦Enterprise⁩ و⁦Teams⁩ عند الطلب، بحد أدنى ⁦5⁩ مقاعد. لا تذكر صفحة الأسعار ترخيص البرنامج."
+    ],
+    [
+      "third-party",
+      "يدرج دليل ⁦PromptQuorum⁩ تطبيق ⁦Msty⁩ مغلق المصدر ومجانيًا جزئيًا (⁦freemium⁩)، لأنظمة ⁦macOS⁩ و⁦Windows⁩ و⁦Linux⁩، وآخر تحديث من المصدر في ⁦7⁩ أكتوبر ⁦2026⁩. لم يُتحقق من الإدراج (الحداثة: لم يُتحقق منها)."
+    ],
+    [
+      "vendor-claim",
+      "سجل التغييرات: أُدخل ⁦Media Studio⁩ في الإصدار ⁦2.7.0⁩ (⁦29⁩ أبريل ⁦2026⁩)؛ ويظهر دعم ⁦MLX⁩ لشرائح ⁦Apple Silicon⁩ أول مرة في ⁦2.0.0-alpha.10⁩ (⁦7⁩ أغسطس ⁦2025⁩) وهو موسوم تجريبيًا؛ و⁦Knowledge Stacks 2.0⁩ في ⁦2.0.0-alpha.9⁩ (⁦31⁩ يوليو ⁦2025⁩). آخر إدراج في ⁦7⁩ أكتوبر ⁦2026: 3.0.0 Beta 15⁩."
+    ]
+  ],
+  "sources": [
+    "ملاحظات المختبِر العملية، بدأت في ⁦13⁩ أكتوبر ⁦2026⁩ (مستند ⁦Word⁩ الأصلي؛ وملف ⁦PDF⁩ للملاحظات الخام سيُضاف). يُستخدم جزء ⁦Msty⁩ فقط.",
+    "صفحة ⁦Studio⁩ (⁦msty.ai/products/studio⁩) وصفحة الأسعار (⁦msty.ai/pricing⁩) وسجل التغييرات (⁦msty.ai/changelog⁩) لدى المزوّد، قُرئت في ⁦16⁩ أكتوبر ⁦2026⁩.",
+    "نظرة عامة على نماذج ⁦Anthropic⁩ (⁦platform.claude.com/docs/en/models/overview⁩)، قُرئت في ⁦16⁩ أكتوبر ⁦2026⁩.",
+    "إدراج ⁦Msty⁩ في دليل ⁦PromptQuorum⁩ (المعرّف: ⁦msty⁩)."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "مُلاحَظ",
+      "meaning": "شوهد مباشرةً في التطبيق أو في لقطة شاشة أو في ملاحظات المختبر."
+    },
+    "measured": {
+      "label": "مقيس",
+      "meaning": "قيمة مقروءة من مربع حوار أو عدّاد أو أداة، مع ذكر الرقم."
+    },
+    "tester-estimate": {
+      "label": "تقدير المختبر",
+      "meaning": "تقدير المختبر نفسه؛ لم يُقَس زمنه ولم يُعَدّ."
+    },
+    "vendor-claim": {
+      "label": "ادعاء الشركة",
+      "meaning": "ورد في التطبيق أو في صفحته بالمتجر أو في موقعه؛ لم يُتحقق منه."
+    },
+    "third-party": {
+      "label": "طرف ثالث",
+      "meaning": "من مصدر آخر (مساعد ذكاء اصطناعي أو مقال)؛ لم يُتحقق منه هنا."
+    },
+    "assumption": {
+      "label": "افتراض",
+      "meaning": "استنتاج. قد يكون خاطئًا."
+    },
+    "tester-view": {
+      "label": "رأي المختبر",
+      "meaning": "حكم المختبر أو رأيه."
+    },
+    "tester-error": {
+      "label": "خطأ المختبر",
+      "meaning": "موضع أخطأ فيه المختبر أو فاته أمر ما."
+    }
+  },
+  "images": [
+    {
+      "id": "onboarding",
+      "figure": 1,
+      "file": "msty-first-launch-gemma-4-download-or-connect-provider.webp",
+      "path": "images/msty-first-launch-gemma-4-download-or-connect-provider.webp",
+      "alt": "شاشة التشغيل الأول في ⁦Msty⁩ تعرض تنزيل النموذج المحلي ⁦Gemma 4 E2B⁩ بحجم ⁦3.6 GB⁩ أو الاتصال بـ ⁦OpenAI⁩ أو ⁦Claude⁩ أو ⁦xAI⁩ أو ⁦Gemini⁩ أو ⁦OpenRouter⁩.",
+      "caption": "التشغيل الأول. نموذج محلي واحد (⁦Gemma 4 E2B⁩، ⁦3.6 GB⁩، منزلق القوة عند '⁦Capable⁩') أو مزوّد متصل. يقول إشعار أصفر '⁦Add at least one model before continuing with a connected provider⁩.' وزر ⁦Continue⁩ رمادي.",
+      "role": "hero",
+      "width": 1282,
+      "height": 1042,
+      "bytes": 55538,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero",
+        "chapter-first-launch"
+      ],
+      "subject": "لقطة شاشة لتطبيق ⁦Msty⁩",
+      "rights": "لقطة شاشة من المختبر نفسه لواجهة برنامج تابع لطرف ثالث.",
+      "captured": "⁦2026-10-13⁩ أو بعده؛ الوقت الدقيق غير مسجَّل",
+      "original_docx_media": "image3.png"
+    },
+    {
+      "id": "website",
+      "figure": 2,
+      "file": "msty-vendor-website-one-private-ai-workspace-headline.webp",
+      "path": "images/msty-vendor-website-one-private-ai-workspace-headline.webp",
+      "alt": "صفحة منتج ⁦Msty Studio⁩ بعنوان '⁦One private AI workspace for real work⁩' وزر ⁦Download Studio⁩.",
+      "caption": "صفحة منتج ⁦Studio⁩ التي بدأ منها المختبِر. العنوان والسطر '⁦Chat with models⁩, ⁦organize knowledge⁩, ⁦create media⁩, ⁦and reuse prompts in one privacy-first workspace⁩.' هما صياغة المزوّد.",
+      "role": "moment",
+      "width": 1405,
+      "height": 582,
+      "bytes": 37576,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-listing",
+        "moments-card"
+      ],
+      "subject": "لقطة شاشة لموقع ⁦Msty⁩",
+      "rights": "لقطة شاشة من المختبِر نفسه لصفحة ويب تابعة للمزوّد؛ ونص الصفحة للمزوّد.",
+      "captured": "⁦2026-10-13⁩ أو بعده؛ الوقت الدقيق غير مسجَّل",
+      "original_docx_media": "image1.png"
+    },
+    {
+      "id": "provider",
+      "figure": 3,
+      "file": "msty-new-model-provider-list-with-ollama-and-mlx.webp",
+      "path": "images/msty-new-model-provider-list-with-ollama-and-mlx.webp",
+      "alt": "قائمة '⁦New Model Provider⁩' في ⁦Msty⁩ تُظهر ⁦Msty Remote⁩ و⁦Ollama⁩ تحت ⁦Msty Compatible⁩، و⁦MLX Remote⁩، و⁦LLaMA.cpp⁩ تحت ⁦OpenAI Compatible⁩.",
+      "caption": "قائمة '⁦New Model Provider⁩' مُمرَّرة. يقع ⁦Ollama⁩ تحت '⁦Msty Compatible⁩' و⁦MLX Remote⁩ تحت '⁦MLX Compatible⁩' و⁦LLaMA.cpp⁩ تحت '⁦OpenAI Compatible⁩'. لا تظهر العناصر التي فوق ⁦xAI⁩.",
+      "role": "inline",
+      "width": 939,
+      "height": 626,
+      "bytes": 15652,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-ollama"
+      ],
+      "subject": "لقطة شاشة لتطبيق ⁦Msty⁩",
+      "rights": "لقطة شاشة من المختبر نفسه لواجهة برنامج تابع لطرف ثالث.",
+      "captured": "⁦2026-10-13⁩ أو بعده؛ الوقت الدقيق غير مسجَّل",
+      "original_docx_media": "image2.png"
+    },
+    {
+      "id": "picker",
+      "figure": 4,
+      "file": "msty-model-picker-ollama-models-gemma-qwen-flux.webp",
+      "path": "images/msty-model-picker-ollama-models-gemma-qwen-flux.webp",
+      "alt": "منتقي النماذج في ⁦Msty⁩ مع مجموعة ⁦Ollama⁩ التي تسرد ⁦Gemma 3 1B⁩ و⁦gemma4:latest⁩ و⁦minimax-m2:cloud⁩ و⁦Qwen3-Coder 30B⁩ و⁦x/flux2-klein:latest⁩.",
+      "caption": "منتقي النماذج بعد ربط ⁦Ollama⁩: خمسة نماذج تحت عنوان '⁦Ollama⁩'، بينها نموذج صور (⁦x/flux2-klein:latest⁩) وعنصر ':⁦cloud⁩' في القائمة نفسها مع نماذج الدردشة.",
+      "role": "moment",
+      "width": 939,
+      "height": 485,
+      "bytes": 16936,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-ollama",
+        "moments-card"
+      ],
+      "subject": "لقطة شاشة لتطبيق ⁦Msty⁩",
+      "rights": "لقطة شاشة من المختبر نفسه لواجهة برنامج تابع لطرف ثالث.",
+      "captured": "⁦2026-10-13⁩ أو بعده؛ الوقت الدقيق غير مسجَّل",
+      "original_docx_media": "image4.png"
+    },
+    {
+      "id": "chat",
+      "figure": 5,
+      "file": "msty-chat-text-model-declines-qr-code-request.webp",
+      "path": "images/msty-chat-text-model-declines-qr-code-request.webp",
+      "alt": "ردّ دردشة في ⁦Msty⁩ من نموذج نصي يقول إنه لا يستطيع توليد صورة رمز ⁦QR⁩ ويسرد خمس خطوات لمولّد على الإنترنت، ⁦52.81 tok/s⁩.",
+      "caption": "الرد على طلب رمز ⁦QR⁩. اسم النموذج مقطوع في الأعلى ('⁦gemma4:latest⁩' ظاهر جزئيًا). يقع فوق الإجابة قسم مطوي '⁦Thoughts⁩ (⁦1⁩)'. يقرأ العدّاد تحت الرد ⁦52.81 tok/s⁩.",
+      "role": "inline",
+      "width": 953,
+      "height": 539,
+      "bytes": 39282,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-chat"
+      ],
+      "subject": "لقطة شاشة لتطبيق ⁦Msty⁩",
+      "rights": "لقطة شاشة من المختبر نفسه لواجهة برنامج تابع لطرف ثالث.",
+      "captured": "⁦2026-10-13⁩ أو بعده؛ الوقت الدقيق غير مسجَّل",
+      "original_docx_media": "image5.png"
+    },
+    {
+      "id": "kstacks",
+      "figure": 6,
+      "file": "msty-knowledge-stacks-start-screen-sources.webp",
+      "path": "images/msty-knowledge-stacks-start-screen-sources.webp",
+      "alt": "شاشة بداية ⁦Msty Knowledge Stacks⁩ بخيارات إنشاء ⁦stacks⁩ أو استكشافها أو استيرادها وأنواع مصادر مثل ⁦Notes⁩ و⁦YouTube Links⁩ و⁦Web Links⁩.",
+      "caption": "شاشة بداية ⁦Knowledge Stacks⁩: جديد، استكشاف، استيراد (ملفات .⁦mstyks⁩) و'⁦Switch back to Classic Knowledge Stack⁩'. المصادر على اليمين: ⁦Notes⁩ و⁦YouTube Links⁩ و⁦Web Links⁩ و⁦Conversation Projects⁩ و⁦Conversations⁩. لم يُؤكَّد أن ملف ⁦Search Console⁩ مرّ عبر هذه الشاشة.",
+      "role": "moment",
+      "width": 1428,
+      "height": 880,
+      "bytes": 46700,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-files",
+        "moments-card"
+      ],
+      "subject": "لقطة شاشة لتطبيق ⁦Msty⁩",
+      "rights": "لقطة شاشة من المختبر نفسه لواجهة برنامج تابع لطرف ثالث.",
+      "captured": "⁦2026-10-13⁩ أو بعده؛ الوقت الدقيق غير مسجَّل",
+      "original_docx_media": "image6.png"
+    },
+    {
+      "id": "media",
+      "figure": 7,
+      "file": "msty-media-studio-prompt-box-and-model-selector.webp",
+      "path": "images/msty-media-studio-prompt-box-and-model-selector.webp",
+      "alt": "شاشة ⁦Msty Media Studio⁩ بمنطقة إفلات اختيارية للسياق ومربع طلب وقائمة '⁦Select image/video model⁩'.",
+      "caption": "⁦Media Studio⁩. ما زالت قائمة النماذج تقرأ '⁦Select image/video model⁩'. لم يُلتقط محتوى القائمة؛ ولم تُولَّد أي صورة.",
+      "role": "moment",
+      "width": 1429,
+      "height": 860,
+      "bytes": 33996,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-media",
+        "moments-card"
+      ],
+      "subject": "لقطة شاشة لتطبيق ⁦Msty⁩",
+      "rights": "لقطة شاشة من المختبر نفسه لواجهة برنامج تابع لطرف ثالث.",
+      "captured": "⁦2026-10-13⁩ أو بعده؛ الوقت الدقيق غير مسجَّل",
+      "original_docx_media": "image7.png"
+    },
+    {
+      "id": "hub",
+      "figure": 8,
+      "file": "msty-model-hub-local-models-featured-list.webp",
+      "path": "images/msty-model-hub-local-models-featured-list.webp",
+      "alt": "⁦Msty Model Hub⁩، ⁦Local Models⁩، تبويب ⁦Featured⁩، ببطاقات ⁦Mistral 7B Instruct v0.3⁩ و⁦Llama 3.2 3B⁩ و⁦Llama 3.2 1B⁩ و⁦Meta Llama 3.1 8B⁩ مع الأحجام.",
+      "caption": "⁦Model Hub⁩، النماذج المحلية المميزة (القائمة مُمرَّرة، وجزء منها فقط ظاهر): ⁦Mistral 7B Instruct v0.3⁩ بحجم ⁦6.9 GB⁩ و⁦Llama 3.2 3B⁩ بحجم ⁦1.7 GB⁩ و⁦Llama 3.2 1B⁩ بحجم ⁦645 MB⁩ و⁦Meta Llama 3.1 8B⁩ بحجم ⁦4.5 GB⁩، وكلها موسومة ⁦4-bit⁩. يسرد الشريط الجانبي سبع أدوات.",
+      "role": "inline",
+      "width": 1023,
+      "height": 603,
+      "bytes": 32002,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-hub"
+      ],
+      "subject": "لقطة شاشة لتطبيق ⁦Msty⁩",
+      "rights": "لقطة شاشة من المختبر نفسه لواجهة برنامج تابع لطرف ثالث.",
+      "captured": "⁦2026-10-13⁩ أو بعده؛ الوقت الدقيق غير مسجَّل",
+      "original_docx_media": "image8.png"
+    },
+    {
+      "id": "tooltip",
+      "figure": 9,
+      "file": "msty-model-hub-qwen3-vl-fits-this-mac-tooltip.webp",
+      "path": "images/msty-model-hub-qwen3-vl-fits-this-mac-tooltip.webp",
+      "alt": "تلميح ⁦Msty Model Hub⁩ على ⁦Qwen3-VL 4B⁩: '⁦Should run fast on this Mac⁩, ⁦about 3.2 GB memory needed⁩, ⁦16.8 GB available⁩'.",
+      "caption": "تلميح العتاد على بطاقة نموذج: '⁦Should run fast on this Mac⁩ · ~⁦3.2 GB memory needed⁩, ⁦16.8 GB available⁩'. تعرض البطاقة ⁦Qwen3-VL 4B⁩ بحجم ⁦2.4 GB⁩ و⁦4-bit⁩. التقدير من التطبيق نفسه؛ ولم يُشغَّل النموذج.",
+      "role": "moment",
+      "width": 940,
+      "height": 510,
+      "bytes": 28110,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-hub",
+        "moments-card"
+      ],
+      "subject": "لقطة شاشة لتطبيق ⁦Msty⁩",
+      "rights": "لقطة شاشة من المختبر نفسه لواجهة برنامج تابع لطرف ثالث.",
+      "captured": "⁦2026-10-13⁩ أو بعده؛ الوقت الدقيق غير مسجَّل",
+      "original_docx_media": "image9.png"
+    },
+    {
+      "id": "ranking",
+      "figure": 10,
+      "file": "msty-model-matchmaker-ranking-claude-opus-top.webp",
+      "path": "images/msty-model-matchmaker-ranking-claude-opus-top.webp",
+      "alt": "قائمة ترتيب ⁦Msty Model Matchmaker⁩ يتصدرها نموذجا ⁦Claude Opus⁩ بدرجة ⁦100⁩، وإشعار '⁦Setting up MLX⁩' في الأعلى.",
+      "caption": "⁦Model Matchmaker⁩، '⁦Ranked Models⁩'. رقم ⁦1 claude-opus-4-6-thinking-auto-high-effort⁩، رقم ⁦2 claude-opus-4-5-20251101-thinking-64k-high-effort⁩، كلاهما المزوّد '⁦Anthropic⁩ /⁦remote⁩'، الدرجة المعيارية ⁦100⁩. يظهر إشعار '⁦Setting up MLX: Preparing engine setup⁩...'. تاريخ بيانات الترتيب غير ظاهر.",
+      "role": "moment",
+      "width": 1431,
+      "height": 889,
+      "bytes": 41916,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-hub",
+        "moments-card"
+      ],
+      "subject": "لقطة شاشة لتطبيق ⁦Msty⁩",
+      "rights": "لقطة شاشة من المختبر نفسه لواجهة برنامج تابع لطرف ثالث.",
+      "captured": "⁦2026-10-13⁩ أو بعده؛ الوقت الدقيق غير مسجَّل",
+      "original_docx_media": "image10.png"
+    }
+  ],
+  "figure_order": [
+    "onboarding",
+    "website",
+    "provider",
+    "picker",
+    "chat",
+    "kstacks",
+    "media",
+    "hub",
+    "tooltip",
+    "ranking"
+  ],
+  "ui": {
+    "kicker": "اختبار ⁦PromptQuorum⁩ العملي · {app} · {date}",
+    "date_line": "⁦13⁩ أكتوبر ⁦2026⁩",
+    "nav_aria": "الأقسام",
+    "nav": {
+      "verdict": "الحكم",
+      "moments": "ست لحظات",
+      "story": "كيف جرى الاختبار",
+      "claims": "الادعاءات",
+      "fit": "⁦24 GB⁩",
+      "log": "سجل الاستخدام",
+      "errors": "أخطاء المختبر",
+      "findings": "الملاحظات",
+      "background": "الخلفية"
+    },
+    "related": "ذات صلة:",
+    "review_link": "مراجعة ⁦PromptQuorum⁩ لـ {app}",
+    "directory_link": "دليل تطبيقات الذكاء الاصطناعي المحلية",
+    "verdict_h": "الحكم",
+    "general_assessment": "التقييم العام",
+    "fit_for_tester": "الملاءمة لاستخدام المختبر",
+    "scorecard": "بطاقة الدرجات",
+    "status_prefix": "الحالة:",
+    "na": "غير متاح",
+    "score_aria": "{n} من ⁦5⁩",
+    "details_h": "تفاصيل الاختبار",
+    "label_intro": "كل عبارة تحمل وسمًا:",
+    "legend_link": "معنى الوسوم",
+    "disclosure_label": "الإفصاح.",
+    "raw_notes": "ملف ⁦PDF⁩ للملاحظات الخام:",
+    "to_be_added": "سيُضاف",
+    "moments_h": "ست لحظات شكّلت هذا الاختبار",
+    "see_context": "اطّلع عليها في سياقها",
+    "story_h": "كيف جرى الاختبار",
+    "claims_h": "الادعاءات مقابل ما رآه المختبر",
+    "claims_cols": [
+      "الادعاء",
+      "المصدر",
+      "مُلاحَظ",
+      "الوسم"
+    ],
+    "fit_h": "هل يتسع في ⁦24 GB⁩؟",
+    "memory_line": "ذاكرة {gb} ⁦GB⁩",
+    "above": "أعلى من {gb} ⁦GB⁩",
+    "below": "أدنى من {gb} ⁦GB⁩",
+    "log_h": "سجل الاستخدام",
+    "log_cols": [
+      "#",
+      "المهمة",
+      "النموذج",
+      "النتيجة",
+      "الزمن",
+      "الحالة",
+      "الأشكال"
+    ],
+    "statuses": {
+      "Fail": "فشل",
+      "Partial": "جزئي",
+      "Pass": "نجاح",
+      "Not completed": "لم يكتمل"
+    },
+    "errors_h": "أين أخطأ المختبر",
+    "findings_h": "سجل الملاحظات",
+    "filter_aria": "تصفية الملاحظات حسب الوسم",
+    "filter_all": "الكل",
+    "findings_cols": [
+      "المعرّف",
+      "الملاحظة",
+      "الفئة",
+      "الوسم",
+      "الخطورة",
+      "الأشكال"
+    ],
+    "severities": {
+      "High": "عالية",
+      "Medium": "متوسطة",
+      "Low": "منخفضة",
+      "Positive": "إيجابية"
+    },
+    "fig_abbr": "شكل",
+    "figure": "شكل",
+    "enlarge": "تكبير:",
+    "audience_h": "لمن هو مناسب",
+    "likely_fit": "ملاءمة محتملة",
+    "likely_poor_fit": "ملاءمة ضعيفة محتملة",
+    "retest": "إعادة الاختبار.",
+    "background_h": "خلفية عن الجهة المطوّرة",
+    "gallery_h": "المزيد من الاختبار",
+    "legend_h": "كيف تُقرأ الوسوم",
+    "sources_h": "المصادر",
+    "footer_line": "معرّف الاختبار {id} · معيار الاختبار ⁦v⁩{version} · ملف ⁦PDF⁩ للملاحظات الخام: سيُضاف",
+    "crumb_home": "الرئيسية",
+    "crumb_directory": "الدليل",
+    "crumb_test": "اختبار {app} العملي",
+    "faq_h": "أسئلة شائعة",
+    "more_tests_h": "المزيد من الاختبارات العملية"
+  }
+}

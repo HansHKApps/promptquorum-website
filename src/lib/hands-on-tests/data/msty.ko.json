@@ -1,0 +1,1259 @@
+{
+  "id": "pq-test-msty-2026-10-13",
+  "standard_version": "0.1",
+  "locale": "ko",
+  "app": {
+    "name": "Msty Studio",
+    "slug": "msty",
+    "vendor": "CloudStack, LLC (per the vendor's site footer)",
+    "category": "로컬 및 클라우드 AI 채팅 작업 공간",
+    "platform": "macOS(데스크톱)",
+    "pricing_url": "https://msty.ai/pricing"
+  },
+  "title": "24 GB Mac에서 쓴 Msty Studio: Ollama 모델은 바로 찾았지만, 무엇에 쓰는 앱인지는 끝까지 불분명했습니다",
+  "page_title": "Msty Studio 테스트",
+  "dek": "24 GB M3 Mac에서 해 본 직접 사용 테스트. 기존 Ollama 모델이 두 번째 다운로드 없이 나타났습니다. 이미지는 생성되지 않았습니다.",
+  "seo": {
+    "title": "Msty Studio 직접 테스트: Ollama 모델 바로 인식",
+    "description": "24 GB Mac에서 Msty Studio를 직접 테스트했습니다. Ollama 모델은 바로 보였고, 파일 업로드는 맴돌았으며, 로컬 이미지 모델은 쓰지 못했습니다."
+  },
+  "faq": [
+    [
+      "Msty Studio는 Ollama와 함께 쓸 수 있나요?",
+      "이 테스트에서는 그랬습니다. Ollama를 공급자로 추가하자 모델 선택기에 Ollama 모델 5개가 나타났고, 메모에는 두 번째 모델 다운로드 기록이 없습니다. 테스터는 처음에 연결이 실패했다고 생각했습니다.",
+      "observed"
+    ],
+    [
+      "Msty Studio는 로컬 Ollama 모델로 이미지를 생성할 수 있나요?",
+      "이 테스트에서는 못 했습니다. Media Studio는 열렸지만, 테스터는 거기서 자신의 로컬 이미지 모델(x/flux2-klein)을 쓰는 방법을 찾지 못했고 이미지는 생성되지 않았습니다. 'Select image/video model' 메뉴의 내용은 캡처하지 않았으며, 호스팅 공급자는 시도하지 않았습니다.",
+      "observed"
+    ],
+    [
+      "Msty Studio는 모델이 내 Mac에 맞는지 알려 주나요?",
+      "Model Hub의 모델 카드에는 하드웨어 힌트가 있습니다. 예를 들어 Qwen3-VL 4B에는 'Should run fast on this Mac · ~3.2 GB memory needed, 16.8 GB available'이라고 표시됩니다. 이 추정치는 앱 자체의 것이며, 모델은 실행하지 않았습니다.",
+      "vendor-claim"
+    ],
+    [
+      "Msty Studio는 얼마인가요?",
+      "2026년 10월 16일에 확인한 공급자 가격표에는 Free 0달러, Aurum 사용자당 연 149달러, Aurum Lifetime 일시불 349달러로 나와 있습니다. 테스터가 쓴 요금제는 기록되지 않았습니다.",
+      "vendor-claim"
+    ]
+  ],
+  "status": "부분 성공",
+  "published": "2026-10-16",
+  "started": "2026-10-13",
+  "ended": null,
+  "meta": [
+    [
+      "앱",
+      "CloudStack, LLC의 Msty Studio(데스크톱). 메모에는 'Mysty'와 'Misty'로 적혀 있지만(음성 받아쓰기), 이 보고서는 공급자의 표기를 따릅니다.",
+      "vendor-claim"
+    ],
+    [
+      "버전",
+      "기록 없음. 참고: 공급자의 변경 내역에는 최근 릴리스로 Msty Studio 3.0.0 Beta 15(2026년 10월 7일)와 2.9.11(2026년 9월 15일)이 올라 있습니다.",
+      null
+    ],
+    [
+      "테스터",
+      "Hans Kuepper, PromptQuorum 설립자",
+      null
+    ],
+    [
+      "시작",
+      "2026년 10월 13일(시각은 기록 없음). 메모에는 테스트를 'over the next two days' 진행한다고 되어 있습니다.",
+      "observed"
+    ],
+    [
+      "종료",
+      "기록되지 않음",
+      null
+    ],
+    [
+      "하드웨어",
+      "Apple M3 계열 Mac, 24 GB. 메모에는 'M3, 24 GB'라고 적혀 있습니다. 표준 테스트 기기는 M3 Pro와 24 GB 통합 메모리를 갖춘 MacBook Pro이며, 같은 기기로 가정합니다. 앱은 한때 사용 가능 메모리를 16.8 GB로 표시했습니다.",
+      "assumption"
+    ],
+    [
+      "시스템",
+      "macOS. 버전은 기록 없음",
+      null
+    ],
+    [
+      "입수처",
+      "공급자의 Studio 제품 페이지에 있는 'Download Studio' 버튼",
+      "observed"
+    ],
+    [
+      "다운로드",
+      "246 MB(설치 파일, 테스터가 읽은 값)",
+      "observed"
+    ],
+    [
+      "사용한 요금제",
+      "기록 없음. 2026년 10월 16일 기준 공급자 가격표: Free 0달러, Aurum 사용자당 연 149달러, Aurum Lifetime 일시불 349달러, Enterprise 문의.",
+      "vendor-claim"
+    ],
+    [
+      "테스트 이유",
+      "테스터는 Msty가 무엇에 쓰는 것인지 알고 싶었습니다. 그는 이를 초기부터 있던 전문가용 도구 중 하나로 보며, 일반 가정 사용자가 왜 써야 하는지 알 수 없었다고 합니다.",
+      "tester-view"
+    ],
+    [
+      "목표",
+      "메모에 따른 목적: Msty가 무엇에 관한 것인지 이해하고, 로컬 모델과 어떻게 연결되는지 확인하는 것. 다른 모델을 더 내려받지 않아도 되도록 Ollama를 쓸 수 있기를 바랐습니다.",
+      "observed"
+    ],
+    [
+      "사용한 AI 도움",
+      "기록되지 않음",
+      null
+    ]
+  ],
+  "disclosure": "테스터는 로컬 AI 앱을 다루는 콘텐츠 사이트 겸 디렉터리인 PromptQuorum(promptquorum.com)을 창립했습니다. Msty는 그 디렉터리에 등록되어 있고, 사이트에는 따로 작성된 기존 리뷰 페이지가 있습니다. 메모에는 공급자와의 접촉, 대가 지급, 후원에 대한 기록이 없습니다.",
+  "verdict": {
+    "general": "일부만 테스트했습니다. 테스터가 시도한 것은 대체로 동작했습니다. Msty는 기존 Ollama 모델을 가져왔고, 텍스트 채팅과 이미지 업로드가 실행되었으며, Model Hub는 모델이 Mac에 맞는지 알려 줍니다. 잘 되지 않은 부분은 웹사이트와 첫 화면이 앱의 용도를 알려 주지 않는다는 점, 파일 업로드가 지식 베이스와 채팅 사이에서 맴돌았다는 점, Media Studio에서 이미지 모델을 쓰지 못했다는 점입니다. 메모는 Model Matchmaker에서 끝나며, Msty에 대한 결론은 없습니다.",
+    "fit": "기록 없음. 테스터 자신의 질문 'why should a home user use it'에 대한 답은 메모에 없습니다. Word 파일의 마지막 판단은 다른 앱에 관한 것이어서 여기서는 쓰지 않습니다."
+  },
+  "scores": [
+    [
+      "설치",
+      null,
+      "다운로드 크기는 기록됨(246 MB). 설치 단계와 macOS 안내 창은 기록되지 않았습니다."
+    ],
+    [
+      "온보딩과 모델 선택",
+      3,
+      "Ollama 모델이 호스팅 공급자와 나란히 나타나고 모델 카드에는 하드웨어 적합성 힌트가 있습니다. 첫 화면은 앱의 용도를 알려 주지 않으며, Ollama 연결도 테스터에게는 분명하지 않았습니다."
+    ],
+    [
+      "핵심 기능",
+      4,
+      "Ollama 모델과의 채팅과 이미지 입력은 동작했습니다. 텍스트 응답 1회, 비전 테스트 1회, 파일 테스트 1회뿐이며 답변 품질은 평가하지 않았습니다."
+    ],
+    [
+      "안내와 반복 작업",
+      2,
+      "파일 업로드가 지식 베이스와 채팅 사이에서 맴돌았습니다. 이미지 전용 모델과 클라우드 표시가 붙은 모델이 채팅 모델과 같은 선택기에 있습니다."
+    ],
+    [
+      "성능",
+      null,
+      "데이터는 한 건: 응답 1회에 52.81 tok/s(모델 이름은 일부 잘림). 점수를 매기기에는 부족합니다."
+    ],
+    [
+      "문서",
+      null,
+      "테스트하지 않았습니다."
+    ],
+    [
+      "신뢰와 개인정보",
+      null,
+      "감사하지 않았습니다. 공급자는 'privacy-first workspace'라고 내세우지만, 선택기에는 ':cloud' 모델과 호스팅 공급자도 있습니다. 오프라인 동작은 테스트하지 않았습니다."
+    ],
+    [
+      "삭제",
+      null,
+      "테스트하지 않았습니다."
+    ]
+  ],
+  "scores_note": "점수는 아래 증거에서 도출한 제안값입니다(1 = 나쁨, 5 = 매우 좋음). 확정은 테스터의 몫입니다.",
+  "tldr": [
+    [
+      "observed",
+      "기존 Ollama 모델이 Msty의 모델 선택기에 나타났습니다. 메모에는 두 번째 모델 다운로드 기록이 없습니다."
+    ],
+    [
+      "observed",
+      "테스터의 기대대로 되지 않은 것이 두 가지 있습니다. 파일 업로드가 지식 베이스와 채팅 사이에서 맴돌았고, Media Studio에서 로컬 이미지 모델을 쓸 수 없었습니다."
+    ],
+    [
+      "tester-view",
+      "테스터는 웹사이트에서 Msty가 가정 사용자에게 무엇에 쓰는 것인지 알 수 없었습니다. 메모에는 Msty에 대한 최종 평가가 없습니다."
+    ]
+  ],
+  "quotes": [
+    "앱마다 10 GB, 20 GB, 서로 다른 모델을 내려받는 것은 더 이상 나아갈 길이 아닙니다.",
+    "음, 이건 제자리를 맴도네요.",
+    "Model Matchmaker. 좋은 아이디어예요. 마음에 듭니다."
+  ],
+  "quote_note": "테스터 노트이며, 음성 받아쓰기 내용을 가볍게 다듬었습니다.",
+  "moments": [
+    [
+      "무엇에 쓰는 건가요?",
+      "Studio 페이지에는 'One private AI workspace for real work'라고 적혀 있습니다. 그래도 테스터는 앱의 용도를 알 수 없었습니다.",
+      "website",
+      "chapter-listing"
+    ],
+    [
+      "Ollama는 이미 거기 있었다",
+      "이미지 모델과 ':cloud' 항목을 포함한 Ollama 모델 5개가 하나의 선택기에 있습니다. 테스터는 처음에 연결이 실패했다고 생각했습니다.",
+      "picker",
+      "chapter-ollama"
+    ],
+    [
+      "맴도는 루프",
+      "분석하려고 올린 파일이 질문도 없이 분석되었습니다. 채팅에서 분석을 요청하자 다시 업로드를 요구했습니다.",
+      "kstacks",
+      "chapter-files"
+    ],
+    [
+      "이미지 모델 없음",
+      "Media Studio는 'Select image/video model'이 표시된 채로 열립니다. 테스터는 거기서 자신의 로컬 이미지 모델을 쓰는 방법을 찾지 못했습니다.",
+      "media",
+      "chapter-media"
+    ],
+    [
+      "이 Mac에 맞을까?",
+      "모델 카드에는 '~3.2 GB memory needed, 16.8 GB available'이라고 표시됩니다. 앞서 테스트한 Draw Things에는 이런 힌트가 없었습니다.",
+      "tooltip",
+      "chapter-hub"
+    ],
+    [
+      "어제의 순위?",
+      "Model Matchmaker는 Claude Opus 4.x 모델 두 개를 맨 위에 올립니다. Anthropic의 현재 페이지는 최신 Opus로 Opus 5.5를 올려 두었습니다.",
+      "ranking",
+      "chapter-hub"
+    ]
+  ],
+  "chapters": [
+    {
+      "id": "chapter-listing",
+      "title": "웹사이트: 무엇에 쓰는 건가요?",
+      "items": [
+        [
+          "observed",
+          "테스터는 Studio 제품 페이지에서 시작했습니다. 제목: 'One private AI workspace for real work.' 부제: 'Chat with models, organize knowledge, create media, and reuse prompts in one privacy-first workspace.' 버튼: 'Download Studio'.",
+          "website"
+        ],
+        [
+          "tester-view",
+          "그는 Msty가 무엇에 관한 것인지 이해하고 싶었습니다. 초기부터 있던 전문가용 도구 중 하나이고, 가정 사용자에게 어떤 의미가 있는지는 확신이 없었습니다. '이 화면은 이것이 실제로 무엇을 위한 것인지가 분명하지 않다는 점만 분명하게 보여 준다.'",
+          null
+        ],
+        [
+          "observed",
+          "테스터는 여러 솔루션과 제품을 보고, 로컬에서 실행되는 것으로 보이는 'Download Studio'를 골랐습니다.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "공급자의 제품 페이지에는 Studio, Go('bounded AI agents'), Nexus('AI control center'), Stack('governed knowledge layer')이 나와 있습니다. 2026년 10월 16일 확인. 테스터는 이들을 열어 보지 않았습니다.",
+          null
+        ],
+        [
+          "observed",
+          "내려받은 파일은 246 MB입니다. 테스터: '이 정도면 괜찮네요'.",
+          null
+        ],
+        [
+          "tester-view",
+          "그가 바란 것은 추가 모델 다운로드가 필요 없도록 Ollama 또는 LM Studio와 연결하는 것이었습니다. 그의 견해로는 모든 앱이 내장 모델과 함께 그 선택지를 제공해야 합니다. 앱마다 10~20 GB를 내려받는 것은 '앞으로 나아갈 길이 아니기' 때문입니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-first-launch",
+      "title": "첫 실행: 로컬 모델 하나 또는 공급자",
+      "items": [
+        [
+          "observed",
+          "첫 화면(그림 1, 이 페이지 맨 위)에는 'LOCAL AI · RUNS ON YOUR MACHINE' 태그가 붙은 카드가 있습니다. Gemma 4 E2B, 3.6 GB로, 비전을 갖춘 Google의 소형 멀티모달 모델이라고 설명되어 있습니다. 강도 슬라이더는 Light에서 Powerful까지이고 'Capable'에 있습니다. 버튼은 'Download & Get Started'입니다.",
+          null
+        ],
+        [
+          "observed",
+          "그 아래 'Or connect an AI provider'에는 OpenAI, Claude, xAI, Gemini, OpenRouter, 'More'가 있습니다. 노란 안내에는 'Add at least one model before continuing with a connected provider.'라고 적혀 있고 'Continue with connected provider'는 비활성(회색)입니다.",
+          null
+        ],
+        [
+          "vendor-claim",
+          "'Runs on your machine'은 앱 자체의 표기입니다. 테스터는 이 모델을 내려받지 않았고(이미 Ollama에 있던 모델을 사용) 네트워크 트래픽도 확인하지 않았습니다.",
+          null
+        ],
+        [
+          "assumption",
+          "이 안내는 그 시점에 모델이 하나도 추가되지 않았기 때문에 나타나는 것으로 보입니다. 어떤 동작으로 'Continue'가 활성화되는지는 테스트하지 않았습니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-ollama",
+      "title": "Ollama 연결",
+      "items": [
+        [
+          "observed",
+          "'New Model Provider' 목록은 Msty Remote와 Ollama를 'Msty Compatible' 아래에, MLX Remote를 'MLX Compatible' 아래에, LLaMA.cpp를 'OpenAI Compatible' 아래에 묶습니다. 스크린샷의 목록은 스크롤된 상태라 xAI 위의 항목은 보이지 않습니다.",
+          "provider"
+        ],
+        [
+          "observed",
+          "메모: '(앱이) Ollama에 연결하고 Ollama를 선택하게는 해 줬는데, 그다음에 선택되지 않았다.' 그는 무슨 일인지 보려고 로컬 다운로드 화면으로 돌아갔습니다.",
+          null
+        ],
+        [
+          "tester-error",
+          "연결은 성공했습니다. 테스터는 그것을 알아채지 못했는데, 그의 말로는 앱이 Ollama라는 단어가 아니라 모델 이름을 보여 주기 때문입니다. 이후 선택기에는 Ollama 제목 아래에 모델 5개가 나열되었습니다.",
+          "picker"
+        ],
+        [
+          "observed",
+          "메모의 정정: 모델 선택기 스크린샷에는 목록 위에 'Ollama' 제목이 분명히 있습니다. 메모는 캡처되지 않은 앞선 화면을 가리키는 것으로 보입니다(가정).",
+          null
+        ],
+        [
+          "observed",
+          "테스터가 말한 기대는 충족되었습니다. 기존 Ollama 모델을 쓸 수 있었고 메모에는 추가 모델 다운로드 기록이 없습니다.",
+          null
+        ],
+        [
+          "assumption",
+          "minimax-m2:cloud의 ':cloud' 접미사는 Mac이 아니라 클라우드에서 실행되는 모델임을 시사합니다. 확인하지 않았습니다. 그렇다면 Ollama 목록은 로컬 모델과 클라우드 모델을 눈에 띄는 표시 없이 섞어 놓은 셈입니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "'정말 좋네요, 정말 좋아요. 고맙습니다.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-chat",
+      "title": "채팅 테스트",
+      "items": [
+        [
+          "observed",
+          "테스터는 QR 코드를 요청했습니다(프롬프트 문구는 기록 없음. 응답에 www.promptquorum.com이 나옵니다). 응답은 자신이 텍스트 기반 AI라 이미지를 생성할 수 없다고 말하며, 무료 온라인 QR 생성기를 쓰는 5단계를 안내했습니다.",
+          "chat"
+        ],
+        [
+          "measured",
+          "응답 아래에 52.81 tok/s가 표시됩니다. 모델 이름은 일부가 잘렸습니다(위쪽에 'gemma4:latest'가 보이며, 일치할 가능성이 높지만 확실하지는 않습니다).",
+          null
+        ],
+        [
+          "tester-error",
+          "텍스트 모델에 그림을 요청했습니다. 텍스트 모델로서는 올바른 응답이었습니다. 테스터는 이를 '제대로 동작하는 모델과의 차이'라고 표현했습니다.",
+          null
+        ],
+        [
+          "observed",
+          "테스터는 이어서 이전 작업에서 쓰던 이미지 모델(Ollama의 x/flux2-klein)을 채팅 모델로 선택했습니다. 메모에 따르면 '채팅을 지원하지 않는다'고 합니다. 메시지 자체는 캡처되지 않았습니다.",
+          null
+        ],
+        [
+          "assumption",
+          "테스터는 모델 두세 개를 동시에 올릴 수 있는지 의심했습니다('그렇지 않을 것 같다'). 테스트하지 않았습니다. 공급자 페이지에는 'Split Chats: run models side by side'가 있습니다.",
+          null
+        ],
+        [
+          "observed",
+          "gemma4:latest로 돌아와 그림을 올리자 모델이 그것을 읽었습니다(메모만 있음. 그림과 답변은 기록 없음).",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-files",
+      "title": "Search Console 파일 업로드",
+      "items": [
+        [
+          "observed",
+          "테스터는 Google Search Console 내보내기 파일을 올렸습니다. 메모에 따르면 앱은 요청도 받지 않고 분석을 'just ran'했습니다. 메모에 인용된 조언의 첫 항목: 'Investigate High-CTR Regions: A rapid audit of Gambia, Saint Barthélemy, Bangladesh, and Gabon is essential.' 수치는 파일과 대조하지 않았습니다. 모델과 파일 크기는 기록 없음.",
+          null
+        ],
+        [
+          "observed",
+          "설명된 루프: 업로드하면 파일이 'some background tool, knowledge base'로 들어갑니다. 채팅으로 돌아오면 앱이 자동으로 분석하고, 무엇을 분석할지 지정할 기회를 주지 않습니다. 채팅에 'I want this analyzed'라고 입력하면 앱이 데이터를 요구합니다.",
+          "kstacks"
+        ],
+        [
+          "assumption",
+          "Knowledge Stacks 스크린샷은 이 메모에 이어지는 것입니다. 파일이 Knowledge Stacks를 거쳤다는 것은 테스터의 해석('knowledge base')이며 확인되지 않았습니다.",
+          null
+        ],
+        [
+          "observed",
+          "Knowledge Stacks 화면은 새 스택, 엄선된 스택 둘러보기, .mstyks 파일 가져오기, 'Switch back to Classic Knowledge Stack'을 제공합니다. 표시된 소스: Notes, YouTube Links, Web Links, Conversation Projects, Conversations. 위쪽에 일부가 잘린 줄은 'Folders & Obsidian Vaults'로 읽히는 것 같습니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "'좋아요, 이건 제자리를 맴돌고 있어요.' 그다음: '그러니까 흥미로운 도구 같긴 한데, 두고 보죠.'",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-media",
+      "title": "Media Studio",
+      "items": [
+        [
+          "observed",
+          "사이드바에 'Media Studio' 항목이 있습니다. 화면에는 'Create images and videos that follow your imagination wherever it leads.'라고 적혀 있고, 선택 사항인 컨텍스트 드롭 영역, 프롬프트 상자('Describe your creation...'), 1로 설정된 카운터, 'Select image/video model'이라고 적힌 메뉴가 있습니다.",
+          "media"
+        ],
+        [
+          "tester-view",
+          "'좋아요, 그림도 되네요.' 그런데 로컬 LLM 환경에 연결하자 앱은 그의 Ollama에 이미지 모델이 없다고 했고, 그는 Flux가 맞는 모델이라고 생각했습니다.",
+          null
+        ],
+        [
+          "observed",
+          "Msty에서는 이미지가 생성되지 않았습니다. 메모에는 그에게 동작한 이미지 모델 선택 항목이 기록되어 있지 않습니다.",
+          null
+        ],
+        [
+          "assumption",
+          "Media Studio는 Ollama 이미지 모델 x/flux2-klein을 목록에 올리지 않습니다. 모델 메뉴의 내용은 캡처되지 않았습니다. 공급자의 변경 내역은 Media Studio를 릴리스 2.7.0(2026년 4월 29일)으로 적고 xAI와 OpenRouter의 이미지·영상 모델을 언급하는데, 호스팅 공급자를 염두에 둔 것으로 보입니다. 확인하지 않았습니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-hub",
+      "title": "Model Hub와 Model Matchmaker",
+      "items": [
+        [
+          "observed",
+          "Model Hub 사이드바에는 Model Providers, Local Models, Model Squad, Model Matchmaker, Model Cost Calculator, VRAM Calculator, Context Explorer가 있습니다. Local Models에는 Featured, Installed, Search, Import 탭이 있습니다. 메모에 따르면 Matchmaker만 열어 보았습니다.",
+          "hub"
+        ],
+        [
+          "observed",
+          "모델 카드는 크기와 양자화를 보여 줍니다. Qwen3-VL 4B(2.4 GB, 4-bit)의 툴팁에는 'Should run fast on this Mac · ~3.2 GB memory needed, 16.8 GB available'이라고 나옵니다.",
+          "tooltip"
+        ],
+        [
+          "vendor-claim",
+          "이 적합성 추정은 앱 자체의 것입니다. 모델은 실행하지 않았습니다.",
+          null
+        ],
+        [
+          "tester-view",
+          "'Model Matchmaker. 좋은 아이디어예요. 마음에 듭니다.' 하지만 그는 이미지 생성을 위한 선택 항목을 찾지 못했습니다.",
+          null
+        ],
+        [
+          "observed",
+          "다음 스크린샷은 Matchmaker의 순위 목록입니다. 1위 claude-opus-4-6-thinking-auto-high-effort, 2위 claude-opus-4-5-20251101-thinking-64k-high-effort, 둘 다 'Anthropic /remote', 점수 100. 'Setting up MLX: Preparing engine setup...' 안내가 보이는데, 왜 나타났는지는 기록되지 않았습니다.",
+          "ranking"
+        ],
+        [
+          "tester-view",
+          "'2026년 10월인데 이런 걸 보다니 인상적이지 않네요. 이걸 업데이트하는 건 AI 프로세스예요. 저는 제 웹사이트를 업데이트하는 도구가 있어요. 왜 이렇게 어렵죠?'",
+          null
+        ],
+        [
+          "assumption",
+          "여기서 'this'는 스크린샷의 순위가 오래되었다는 뜻으로 읽었습니다. 메모에는 어느 화면을 말한 것인지 나와 있지 않습니다.",
+          null
+        ],
+        [
+          "third-party",
+          "Anthropic의 모델 페이지(2026년 10월 16일 확인)는 Claude Opus 5.5(claude-opus-5-5)를 최신 Opus로 올려 두었고, 두 4.x 모델은 현재 모델로 올리지 않았습니다. 순위의 데이터 날짜가 스크린샷에 보이지 않으므로 오래되었는지는 확인되지 않았습니다.",
+          null
+        ],
+        [
+          "observed",
+          "보이는 Featured 모델은 Mistral 7B Instruct v0.3, Llama 3.2 3B와 1B, Meta Llama 3.1 8B입니다. 6.9 GB인 Mistral 7B가 4.5 GB인 Llama 3.1 8B보다 크며, 둘 다 4-bit로 표시되어 있습니다. 이 차이는 카드에 설명되어 있지 않습니다.",
+          null
+        ]
+      ]
+    },
+    {
+      "id": "chapter-end",
+      "title": "메모가 끝나는 곳",
+      "items": [
+        [
+          "observed",
+          "메모 중 Msty 부분은 Model Matchmaker에서 끝납니다. Word 파일의 나머지('Generate similar images' 대목부터)는 다른 앱인 이미지 생성기에 관한 것이며 자체 스크린샷이 있습니다. 이 보고서에서는 제외했습니다.",
+          null
+        ],
+        [
+          "observed",
+          "Msty에 대해 기록이 없는 항목: 앱과 macOS 버전, 종료 시각, 사용한 요금제, 결론, 삭제 확인.",
+          null
+        ]
+      ]
+    }
+  ],
+  "claims": [
+    [
+      "'Chat with models, organize knowledge, create media, and reuse prompts in one privacy-first workspace.'",
+      "공급자의 Studio 페이지(테스터의 스크린샷에도 있음)",
+      "Ollama 모델과의 채팅은 동작했습니다. Knowledge Stacks는 열렸습니다. Media Studio는 열렸지만 이미지는 만들어지지 않았습니다. 프롬프트 재사용은 시도하지 않았습니다. 개인정보 보호는 감사하지 않았습니다.",
+      "observed"
+    ],
+    [
+      "'Bring local inference engines like MLX, llama.cpp, and Ollama together with hosted providers in one organized hub.'",
+      "공급자의 Studio 페이지, 2026년 10월 16일 확인",
+      "Ollama가 연결되어 모델이 나열되었습니다. LLaMA.cpp와 MLX Remote는 공급자 목록에 있습니다. 사용한 것은 Ollama뿐입니다. MLX 설정 안내가 한 번 나타났습니다.",
+      "observed"
+    ],
+    [
+      "Split Chats: 'run models side by side'",
+      "공급자의 Studio 페이지, 2026년 10월 16일 확인",
+      "테스트하지 않았습니다. 테스터는 모델 두세 개를 동시에 올릴 수 없다고 가정했습니다.",
+      "assumption"
+    ],
+    [
+      "Media Studio: 이미지 생성과 영상 콘셉트 구성",
+      "공급자의 Studio 페이지, 2026년 10월 16일 확인",
+      "화면은 있습니다. 이미지는 생성되지 않았고, 쓸 수 있는 로컬 이미지 모델도 찾지 못했습니다.",
+      "observed"
+    ],
+    [
+      "'LOCAL AI · RUNS ON YOUR MACHINE'(Gemma 4 E2B, 3.6 GB)",
+      "첫 실행 화면",
+      "내려받지 않았습니다. 테스터는 이미 Ollama에 있던 모델을 썼습니다. 네트워크 확인 없음.",
+      "observed"
+    ],
+    [
+      "'Should run fast on this Mac · ~3.2 GB memory needed, 16.8 GB available'",
+      "Model Hub 툴팁",
+      "모델을 실행하지 않았으므로 추정치는 검증되지 않았습니다.",
+      "vendor-claim"
+    ],
+    [
+      "Free 요금제: 0달러, 로컬·온라인 모델과 Media Studio 포함(일부 기능 제한)",
+      "공급자의 요금 페이지, 2026년 10월 16일 확인",
+      "테스터가 쓴 요금제는 기록되지 않았습니다.",
+      "vendor-claim"
+    ]
+  ],
+  "fit": {
+    "memory_gb": 24,
+    "scale": 30,
+    "rows": [
+      [
+        "Llama 3.2 1B (4-bit)",
+        0.645,
+        "645 MB",
+        "observed"
+      ],
+      [
+        "Llama 3.2 3B (4-bit)",
+        1.7,
+        "1.7 GB",
+        "observed"
+      ],
+      [
+        "Qwen3-VL 4B (4-bit)",
+        2.4,
+        "파일 2.4 GB. 앱은 약 3.2 GB의 메모리가 필요하다고 표시",
+        "vendor-claim"
+      ],
+      [
+        "Gemma 4 E2B(첫 실행 시 다운로드)",
+        3.6,
+        "3.6 GB",
+        "observed"
+      ],
+      [
+        "Meta Llama 3.1 8B (4-bit)",
+        4.5,
+        "4.5 GB",
+        "observed"
+      ],
+      [
+        "Mistral 7B Instruct v0.3 (4-bit)",
+        6.9,
+        "6.9 GB",
+        "observed"
+      ],
+      [
+        "Qwen3 14B (4-bit)",
+        9,
+        "9.0 GB",
+        "observed"
+      ]
+    ],
+    "note": "모델 카드에 표시된 다운로드 크기이며 실행 시 메모리가 아닙니다. 컨텍스트 길이와 엔진에 따라 모델에 필요한 양이 달라집니다. Qwen3-VL 툴팁이 나온 시점에 앱은 16.8 GB를 사용 가능으로 표시했습니다. 테스터가 실제로 쓴 Ollama 모델(Gemma 3 1B, gemma4:latest, Qwen3-Coder 30B)은 선택기에 크기가 표시되지 않습니다. Qwen3 14B 카드는 스크린샷에서 일부만 보입니다(이름, 크기, 양자화는 읽을 수 있음)."
+  },
+  "usage_log": [
+    [
+      "Ollama를 공급자로 연결",
+      "-",
+      "연결됨. Ollama 아래에 모델 5개가 나열됨. 테스터는 처음에 실패했다고 생각했습니다.",
+      "기록되지 않음",
+      "Pass",
+      [
+        "provider",
+        "picker"
+      ]
+    ],
+    [
+      "채팅: QR 코드 요청",
+      "gemma4:latest(이름 일부 잘림)",
+      "온라인 생성기 사용 단계를 안내하는 텍스트만의 응답. 52.81 tok/s",
+      "기록되지 않음",
+      "Not completed",
+      [
+        "chat"
+      ]
+    ],
+    [
+      "이미지 모델(x/flux2-klein)로 채팅",
+      "x/flux2-klein:latest",
+      "'채팅을 지원하지 않음'(메모. 메시지는 캡처 안 됨)",
+      "-",
+      "Not completed",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "채팅에 이미지 업로드",
+      "gemma4:latest",
+      "모델이 그림을 읽을 수 있었음(메모만 있음)",
+      "기록되지 않음",
+      "Pass",
+      []
+    ],
+    [
+      "Search Console 내보내기 파일 업로드 및 분석",
+      "기록되지 않음",
+      "요청하지 않았는데 분석이 실행됨. 채팅에서 요청하자 다시 업로드를 요구함",
+      "기록되지 않음",
+      "Partial",
+      [
+        "kstacks"
+      ]
+    ],
+    [
+      "Media Studio에서 그림 생성",
+      "사용 가능한 모델 없음",
+      "이미지가 만들어지지 않음",
+      "-",
+      "Not completed",
+      [
+        "media"
+      ]
+    ],
+    [
+      "Model Hub 둘러보기, Model Matchmaker 열기",
+      "-",
+      "크기와 적합성 힌트가 있는 카드. 순위가 표시됨",
+      "기록되지 않음",
+      "Pass",
+      [
+        "hub",
+        "tooltip",
+        "ranking"
+      ]
+    ]
+  ],
+  "errors": [
+    [
+      "tester-error",
+      "Ollama 연결이 실패했다고 믿었습니다. 실제로는 성공했고 모델이 나열되어 있었습니다."
+    ],
+    [
+      "tester-error",
+      "텍스트 모델에 그림(QR 코드)을 요청한 뒤, 'functional model'과 비교해 평가했습니다."
+    ],
+    [
+      "tester-error",
+      "앱이 'Ollama'라고 표시하지 않는다고 썼습니다. 그러나 본인의 스크린샷에는 모델 목록 위에 'Ollama' 제목이 보입니다."
+    ],
+    [
+      "tester-error",
+      "기록에 빈틈이 있습니다: 앱 버전, macOS 버전, 종료 시각, 사용한 요금제, 프롬프트, 파일 테스트에 답한 모델, Msty에 대한 결론."
+    ],
+    [
+      "tester-error",
+      "한 문서에 앱 두 개를 섞었습니다. Msty 파일의 후반부는 이미지 생성기에 관한 것이어서, Msty 테스트가 어디서 끝나는지 분명하지 않게 되었습니다."
+    ],
+    [
+      "assumption",
+      "테스터는 여러 모델을 동시에 실행할 수 있는지 의심했습니다. 테스트하지 않았으며, 공급자는 Split Chats를 내세웁니다."
+    ]
+  ],
+  "findings": [
+    [
+      "MS-01",
+      "Studio 페이지와 첫 화면은 가정 사용자에게 앱의 용도를 알려 주지 않는다.",
+      "포지셔닝",
+      "tester-view",
+      "Medium",
+      [
+        "website",
+        "onboarding"
+      ]
+    ],
+    [
+      "MS-02",
+      "첫 화면은 로컬 모델 하나(Gemma 4 E2B, 3.6 GB) 또는 호스팅 공급자를 제시한다. Ollama는 거기에 나오지 않고 대신 공급자 목록에 나타난다.",
+      "온보딩",
+      "observed",
+      "Low",
+      [
+        "onboarding",
+        "provider"
+      ]
+    ],
+    [
+      "MS-03",
+      "기존 Ollama 모델이 선택기에 나타났다. 두 번째 모델 다운로드를 피하려는 테스터의 기대는 충족되었다.",
+      "설정",
+      "observed",
+      "Positive",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "MS-04",
+      "연결한 뒤 테스터는 Ollama가 연결되었음을 알 수 없었다(메모에는 확인 표시에 대한 언급이 없다).",
+      "설정",
+      "tester-view",
+      "Medium",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "MS-05",
+      "이미지 전용 모델(x/flux2-klein)과 ':cloud' 모델이 채팅 모델과 함께 나열된다. 이미지 모델은 채팅에서 동작하지 않았다.",
+      "모델 선택",
+      "observed",
+      "Medium",
+      [
+        "picker"
+      ]
+    ],
+    [
+      "MS-06",
+      "텍스트 모델이 이미지 요청에 합리적으로 답하고 온라인 생성기를 안내했다.",
+      "채팅",
+      "observed",
+      "Positive",
+      [
+        "chat"
+      ]
+    ],
+    [
+      "MS-07",
+      "메모에 따르면 gemma4:latest로의 이미지 업로드는 동작했다.",
+      "채팅",
+      "observed",
+      "Positive",
+      []
+    ],
+    [
+      "MS-08",
+      "파일 업로드가 맴돌았다: 질문 없는 자동 분석, 채팅에서 요청하면 다시 업로드를 요구함.",
+      "파일",
+      "tester-view",
+      "High",
+      [
+        "kstacks"
+      ]
+    ],
+    [
+      "MS-09",
+      "Knowledge Stacks는 여러 소스 유형과 가져오기 형식(.mstyks)을 제공한다. 시작 화면만 확인했다.",
+      "파일",
+      "observed",
+      "Low",
+      [
+        "kstacks"
+      ]
+    ],
+    [
+      "MS-10",
+      "Media Studio에서 로컬 이미지 모델을 선택할 수 없었고, 그림은 생성되지 않았다.",
+      "미디어",
+      "observed",
+      "High",
+      [
+        "media"
+      ]
+    ],
+    [
+      "MS-11",
+      "모델 카드에는 필요한 메모리와 사용 가능한 메모리를 보여 주는 하드웨어 적합성 힌트가 있다.",
+      "Model Hub",
+      "observed",
+      "Positive",
+      [
+        "tooltip"
+      ]
+    ],
+    [
+      "MS-12",
+      "Model Hub는 일곱 가지 도구(공급자, 로컬 모델, 스쿼드, 매치메이커, 비용, VRAM, 컨텍스트)를 묶는다. Matchmaker만 열어 보았다.",
+      "Model Hub",
+      "observed",
+      "Low",
+      [
+        "hub"
+      ]
+    ],
+    [
+      "MS-13",
+      "Matchmaker 순위는 Claude Opus 4.x 모델 두 개가 이끌지만 Anthropic은 Opus 5.5를 최신으로 올려 두었다. 오래되었는지는 확인되지 않았다(데이터 날짜가 표시되지 않음).",
+      "최신성",
+      "assumption",
+      "Medium",
+      [
+        "ranking"
+      ]
+    ],
+    [
+      "MS-14",
+      "'Setting up MLX' 안내가 기록된 계기 없이 나타났다.",
+      "Model Hub",
+      "observed",
+      "Low",
+      [
+        "ranking"
+      ]
+    ],
+    [
+      "MS-15",
+      "Mistral 7B(6.9 GB)가 Llama 3.1 8B(4.5 GB)보다 크게 표시되며 둘 다 '4-bit'인데 설명이 없다.",
+      "Model Hub",
+      "observed",
+      "Low",
+      [
+        "hub"
+      ]
+    ],
+    [
+      "MS-16",
+      "테스터는 Model Matchmaker라는 발상을 높이 평가했고 이 도구를 'interesting'하다고 했다.",
+      "Model Hub",
+      "tester-view",
+      "Positive",
+      [
+        "ranking"
+      ]
+    ]
+  ],
+  "severity_note": "심각도는 처음 쓰는 사용자에게 미치는 영향입니다. 제안값이며 측정한 값이 아닙니다.",
+  "audience": {
+    "fits": [
+      [
+        "assumption",
+        "이미 Ollama를 쓰고 있고 로컬 모델과 호스팅 모델을 하나의 데스크톱 프런트엔드로 다루고 싶은 사람(이 테스트에서 Ollama 재사용은 동작했습니다)."
+      ],
+      [
+        "vendor-claim",
+        "SSO, 감사 로그, 공유 제어가 필요한 팀(공급자의 Studio 페이지에 나와 있음. 테스트하지 않음)."
+      ]
+    ],
+    "not_fits": [
+      [
+        "tester-view",
+        "첫 화면에서 앱의 용도를 이해하고 싶은 가정 사용자."
+      ],
+      [
+        "assumption",
+        "Media Studio에서 로컬 Ollama 이미지 모델로 이미지를 생성할 수 있기를 기대하는 사용자(이 테스트에서는 동작하지 않았습니다)."
+      ]
+    ],
+    "retest": "테스트하지 않은 부분(Split Chats, 프롬프트, 호스팅 이미지 모델을 쓴 Media Studio, 파일 워크플로, 삭제)을 다시 테스트하고, 먼저 버전과 macOS를 기록하세요. 공급자의 변경 내역에서 3.0.0은 2026년 10월 7일에도 베타였으므로, 정식 출시 때 인터페이스가 바뀔 수 있습니다(가정)."
+  },
+  "background_intro": "직접 사용 세션의 일부가 아니며 검증되지 않았습니다. 아래 항목은 공급자 자체 사이트, 변경 내역, PromptQuorum 디렉터리에서 가져온 것으로, 페이지를 요약하는 웹 가져오기 도구로 2026년 10월 16일에 읽었습니다. 이 테스트를 위해 독자적으로 검증한 것은 없습니다.",
+  "background": [
+    [
+      "vendor-claim",
+      "공급자의 푸터에는 'Msty is a product of CloudStack, LLC.'(2026)라고 적혀 있습니다."
+    ],
+    [
+      "vendor-claim",
+      "가격표: Free 0달러, Aurum 사용자당 연 149달러, Aurum Lifetime 일시불 349달러, Enterprise와 Teams는 문의(최소 5석). 가격 페이지에는 소프트웨어 라이선스가 명시되어 있지 않습니다."
+    ],
+    [
+      "third-party",
+      "PromptQuorum 디렉터리는 Msty를 클로즈드 소스, 프리미엄(freemium), macOS·Windows·Linux 지원, 마지막 업스트림 업데이트 2026년 10월 7일로 올려 두었습니다. 이 항목은 검증되지 않았습니다(최신성: 미검증)."
+    ],
+    [
+      "vendor-claim",
+      "변경 내역: Media Studio는 릴리스 2.7.0(2026년 4월 29일)에서 도입되었고, Apple Silicon용 MLX 지원은 2.0.0-alpha.10(2025년 8월 7일)에 처음 나타나며 실험적으로 표시되어 있습니다. Knowledge Stacks 2.0은 2.0.0-alpha.9(2025년 7월 31일)입니다. 2026년 10월 7일 기준 최신 항목: 3.0.0 Beta 15."
+    ]
+  ],
+  "sources": [
+    "테스터의 직접 사용 메모, 2026년 10월 13일 시작(원본 Word 문서, 원본 메모 PDF는 추가 예정). Msty 부분만 사용합니다.",
+    "공급자의 Studio 페이지(msty.ai/products/studio), 가격 페이지(msty.ai/pricing), 변경 내역(msty.ai/changelog). 2026년 10월 16일 확인.",
+    "Anthropic 모델 개요(platform.claude.com/docs/en/models/overview). 2026년 10월 16일 확인.",
+    "PromptQuorum 디렉터리의 Msty 항목(슬러그: msty)."
+  ],
+  "evidence_labels": {
+    "observed": {
+      "label": "관찰",
+      "meaning": "앱, 스크린샷 또는 테스터의 노트에서 직접 확인한 내용."
+    },
+    "measured": {
+      "label": "측정",
+      "meaning": "대화 상자, 카운터 또는 도구에서 읽은 값이며 수치가 함께 제시됨."
+    },
+    "tester-estimate": {
+      "label": "테스터 추정",
+      "meaning": "테스터 본인의 추정이며, 시간이나 수량을 실측하지 않음."
+    },
+    "vendor-claim": {
+      "label": "개발사 주장",
+      "meaning": "앱, 스토어 소개 페이지 또는 웹사이트가 밝힌 내용이며 확인하지 않음."
+    },
+    "third-party": {
+      "label": "제3자 출처",
+      "meaning": "다른 출처(AI 어시스턴트, 기사)에서 가져온 내용이며 여기서 확인하지 않음."
+    },
+    "assumption": {
+      "label": "가정",
+      "meaning": "추론한 내용입니다. 틀릴 수 있습니다."
+    },
+    "tester-view": {
+      "label": "테스터 의견",
+      "meaning": "테스터의 판단 또는 의견."
+    },
+    "tester-error": {
+      "label": "테스터 오류",
+      "meaning": "테스터가 실수했거나 놓친 부분."
+    }
+  },
+  "images": [
+    {
+      "id": "onboarding",
+      "figure": 1,
+      "file": "msty-first-launch-gemma-4-download-or-connect-provider.webp",
+      "path": "images/msty-first-launch-gemma-4-download-or-connect-provider.webp",
+      "alt": "3.6 GB 로컬 모델 Gemma 4 E2B를 내려받거나 OpenAI, Claude, xAI, Gemini, OpenRouter에 연결하도록 하는 Msty 첫 실행 화면.",
+      "caption": "첫 실행. 로컬 모델 하나(Gemma 4 E2B, 3.6 GB, 강도 슬라이더는 'Capable') 또는 연결된 공급자. 노란 안내에는 'Add at least one model before continuing with a connected provider.'라고 적혀 있고 Continue 버튼은 회색입니다.",
+      "role": "hero",
+      "width": 1282,
+      "height": 1042,
+      "bytes": 55538,
+      "mime": "image/webp",
+      "loading": "eager",
+      "evidence": "observed",
+      "used_in": [
+        "hero",
+        "chapter-first-launch"
+      ],
+      "subject": "Msty 앱 스크린샷",
+      "rights": "테스터가 직접 캡처한, 제3자 소프트웨어 UI의 스크린샷.",
+      "captured": "2026-10-13 이후, 정확한 시각은 기록되지 않음",
+      "original_docx_media": "image3.png"
+    },
+    {
+      "id": "website",
+      "figure": 2,
+      "file": "msty-vendor-website-one-private-ai-workspace-headline.webp",
+      "path": "images/msty-vendor-website-one-private-ai-workspace-headline.webp",
+      "alt": "'One private AI workspace for real work' 제목과 Download Studio 버튼이 있는 Msty Studio 제품 페이지.",
+      "caption": "테스터가 출발한 Studio 제품 페이지. 제목과 'Chat with models, organize knowledge, create media, and reuse prompts in one privacy-first workspace.' 문구는 공급자의 표현입니다.",
+      "role": "moment",
+      "width": 1405,
+      "height": 582,
+      "bytes": 37576,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-listing",
+        "moments-card"
+      ],
+      "subject": "Msty 웹사이트 스크린샷",
+      "rights": "테스터 본인이 찍은 공급자 웹 페이지 스크린샷. 페이지의 문구는 공급자의 것입니다.",
+      "captured": "2026-10-13 이후, 정확한 시각은 기록되지 않음",
+      "original_docx_media": "image1.png"
+    },
+    {
+      "id": "provider",
+      "figure": 3,
+      "file": "msty-new-model-provider-list-with-ollama-and-mlx.webp",
+      "path": "images/msty-new-model-provider-list-with-ollama-and-mlx.webp",
+      "alt": "Msty Remote와 Ollama가 Msty Compatible 아래에, MLX Remote가 MLX Compatible 아래에, LLaMA.cpp가 OpenAI Compatible 아래에 있는 Msty의 New Model Provider 목록.",
+      "caption": "'New Model Provider' 목록(스크롤된 상태). Ollama는 'Msty Compatible' 아래에, MLX Remote는 'MLX Compatible' 아래에, LLaMA.cpp는 'OpenAI Compatible' 아래에 있습니다. xAI 위의 항목은 보이지 않습니다.",
+      "role": "inline",
+      "width": 939,
+      "height": 626,
+      "bytes": 15652,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-ollama"
+      ],
+      "subject": "Msty 앱 스크린샷",
+      "rights": "테스터가 직접 캡처한, 제3자 소프트웨어 UI의 스크린샷.",
+      "captured": "2026-10-13 이후, 정확한 시각은 기록되지 않음",
+      "original_docx_media": "image2.png"
+    },
+    {
+      "id": "picker",
+      "figure": 4,
+      "file": "msty-model-picker-ollama-models-gemma-qwen-flux.webp",
+      "path": "images/msty-model-picker-ollama-models-gemma-qwen-flux.webp",
+      "alt": "Ollama 그룹에 Gemma 3 1B, gemma4:latest, minimax-m2:cloud, Qwen3-Coder 30B, x/flux2-klein:latest가 나열된 Msty 모델 선택기.",
+      "caption": "Ollama 연결 후의 모델 선택기: 'Ollama' 제목 아래 모델 5개, 이미지 모델(x/flux2-klein:latest)과 ':cloud' 항목이 채팅 모델과 같은 목록에 있습니다.",
+      "role": "moment",
+      "width": 939,
+      "height": 485,
+      "bytes": 16936,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-ollama",
+        "moments-card"
+      ],
+      "subject": "Msty 앱 스크린샷",
+      "rights": "테스터가 직접 캡처한, 제3자 소프트웨어 UI의 스크린샷.",
+      "captured": "2026-10-13 이후, 정확한 시각은 기록되지 않음",
+      "original_docx_media": "image4.png"
+    },
+    {
+      "id": "chat",
+      "figure": 5,
+      "file": "msty-chat-text-model-declines-qr-code-request.webp",
+      "path": "images/msty-chat-text-model-declines-qr-code-request.webp",
+      "alt": "QR 코드 이미지를 생성할 수 없다고 말하며 온라인 생성기를 쓰는 5단계를 나열하는 텍스트 모델의 Msty 채팅 응답. 52.81 tok/s.",
+      "caption": "QR 코드 요청에 대한 응답. 모델 이름은 위쪽에서 잘렸습니다('gemma4:latest'가 일부 보임). 응답 위에는 'Thoughts (1)' 접힘이 있습니다. 응답 아래 카운터에는 52.81 tok/s가 표시됩니다.",
+      "role": "inline",
+      "width": 953,
+      "height": 539,
+      "bytes": 39282,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "measured",
+      "used_in": [
+        "chapter-chat"
+      ],
+      "subject": "Msty 앱 스크린샷",
+      "rights": "테스터가 직접 캡처한, 제3자 소프트웨어 UI의 스크린샷.",
+      "captured": "2026-10-13 이후, 정확한 시각은 기록되지 않음",
+      "original_docx_media": "image5.png"
+    },
+    {
+      "id": "kstacks",
+      "figure": 6,
+      "file": "msty-knowledge-stacks-start-screen-sources.webp",
+      "path": "images/msty-knowledge-stacks-start-screen-sources.webp",
+      "alt": "스택 생성·탐색·가져오기 옵션과 Notes, YouTube Links, Web Links 같은 소스 유형이 있는 Msty Knowledge Stacks 시작 화면.",
+      "caption": "Knowledge Stacks 시작 화면: 새로 만들기, 둘러보기, 가져오기(.mstyks 파일), 'Switch back to Classic Knowledge Stack'. 오른쪽 소스: Notes, YouTube Links, Web Links, Conversation Projects, Conversations. Search Console 파일이 이 화면을 거쳤는지는 확인되지 않았습니다.",
+      "role": "moment",
+      "width": 1428,
+      "height": 880,
+      "bytes": 46700,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-files",
+        "moments-card"
+      ],
+      "subject": "Msty 앱 스크린샷",
+      "rights": "테스터가 직접 캡처한, 제3자 소프트웨어 UI의 스크린샷.",
+      "captured": "2026-10-13 이후, 정확한 시각은 기록되지 않음",
+      "original_docx_media": "image6.png"
+    },
+    {
+      "id": "media",
+      "figure": 7,
+      "file": "msty-media-studio-prompt-box-and-model-selector.webp",
+      "path": "images/msty-media-studio-prompt-box-and-model-selector.webp",
+      "alt": "선택 사항인 컨텍스트 드롭 영역, 프롬프트 상자, 'Select image/video model' 메뉴가 있는 Msty Media Studio 화면.",
+      "caption": "Media Studio. 모델 메뉴는 여전히 'Select image/video model'로 표시됩니다. 메뉴의 내용은 캡처되지 않았고 이미지는 생성되지 않았습니다.",
+      "role": "moment",
+      "width": 1429,
+      "height": 860,
+      "bytes": 33996,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-media",
+        "moments-card"
+      ],
+      "subject": "Msty 앱 스크린샷",
+      "rights": "테스터가 직접 캡처한, 제3자 소프트웨어 UI의 스크린샷.",
+      "captured": "2026-10-13 이후, 정확한 시각은 기록되지 않음",
+      "original_docx_media": "image7.png"
+    },
+    {
+      "id": "hub",
+      "figure": 8,
+      "file": "msty-model-hub-local-models-featured-list.webp",
+      "path": "images/msty-model-hub-local-models-featured-list.webp",
+      "alt": "Mistral 7B Instruct v0.3, Llama 3.2 3B, Llama 3.2 1B, Meta Llama 3.1 8B 카드와 크기가 보이는 Msty Model Hub의 Local Models, Featured 탭.",
+      "caption": "Model Hub, Featured 로컬 모델(스크롤된 목록, 일부만 보임): Mistral 7B Instruct v0.3 6.9 GB, Llama 3.2 3B 1.7 GB, Llama 3.2 1B 645 MB, Meta Llama 3.1 8B 4.5 GB, 모두 4-bit 표기. 사이드바에는 도구 일곱 가지가 있습니다.",
+      "role": "inline",
+      "width": 1023,
+      "height": 603,
+      "bytes": 32002,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-hub"
+      ],
+      "subject": "Msty 앱 스크린샷",
+      "rights": "테스터가 직접 캡처한, 제3자 소프트웨어 UI의 스크린샷.",
+      "captured": "2026-10-13 이후, 정확한 시각은 기록되지 않음",
+      "original_docx_media": "image8.png"
+    },
+    {
+      "id": "tooltip",
+      "figure": 9,
+      "file": "msty-model-hub-qwen3-vl-fits-this-mac-tooltip.webp",
+      "path": "images/msty-model-hub-qwen3-vl-fits-this-mac-tooltip.webp",
+      "alt": "Msty Model Hub에서 Qwen3-VL 4B의 툴팁: 'Should run fast on this Mac, about 3.2 GB memory needed, 16.8 GB available'.",
+      "caption": "모델 카드의 하드웨어 힌트: 'Should run fast on this Mac · ~3.2 GB memory needed, 16.8 GB available'. 카드에는 Qwen3-VL 4B, 2.4 GB, 4-bit가 표시됩니다. 추정치는 앱 자체의 것이며 모델은 실행하지 않았습니다.",
+      "role": "moment",
+      "width": 940,
+      "height": 510,
+      "bytes": 28110,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-hub",
+        "moments-card"
+      ],
+      "subject": "Msty 앱 스크린샷",
+      "rights": "테스터가 직접 캡처한, 제3자 소프트웨어 UI의 스크린샷.",
+      "captured": "2026-10-13 이후, 정확한 시각은 기록되지 않음",
+      "original_docx_media": "image9.png"
+    },
+    {
+      "id": "ranking",
+      "figure": 10,
+      "file": "msty-model-matchmaker-ranking-claude-opus-top.webp",
+      "path": "images/msty-model-matchmaker-ranking-claude-opus-top.webp",
+      "alt": "점수 100의 Claude Opus 모델 두 개가 선두에 있고 위쪽에 'Setting up MLX' 안내가 보이는 Msty Model Matchmaker 순위 목록.",
+      "caption": "Model Matchmaker, 'Ranked Models'. 1위 claude-opus-4-6-thinking-auto-high-effort, 2위 claude-opus-4-5-20251101-thinking-64k-high-effort, 둘 다 공급자 'Anthropic /remote', 정규화 점수 100. 'Setting up MLX: Preparing engine setup...' 안내가 표시되어 있습니다. 순위의 데이터 날짜는 보이지 않습니다.",
+      "role": "moment",
+      "width": 1431,
+      "height": 889,
+      "bytes": 41916,
+      "mime": "image/webp",
+      "loading": "lazy",
+      "evidence": "observed",
+      "used_in": [
+        "chapter-hub",
+        "moments-card"
+      ],
+      "subject": "Msty 앱 스크린샷",
+      "rights": "테스터가 직접 캡처한, 제3자 소프트웨어 UI의 스크린샷.",
+      "captured": "2026-10-13 이후, 정확한 시각은 기록되지 않음",
+      "original_docx_media": "image10.png"
+    }
+  ],
+  "figure_order": [
+    "onboarding",
+    "website",
+    "provider",
+    "picker",
+    "chat",
+    "kstacks",
+    "media",
+    "hub",
+    "tooltip",
+    "ranking"
+  ],
+  "ui": {
+    "kicker": "PromptQuorum 직접 사용 테스트 · {app} · {date}",
+    "date_line": "2026년 10월 13일",
+    "nav_aria": "섹션",
+    "nav": {
+      "verdict": "결론",
+      "moments": "여섯 장면",
+      "story": "진행 과정",
+      "claims": "주장",
+      "fit": "24 GB",
+      "log": "사용 기록",
+      "errors": "테스터 오류",
+      "findings": "발견 사항",
+      "background": "배경"
+    },
+    "related": "관련 글:",
+    "review_link": "{app} PromptQuorum 리뷰",
+    "directory_link": "로컬 AI 앱 디렉터리",
+    "verdict_h": "결론",
+    "general_assessment": "종합 평가",
+    "fit_for_tester": "테스터의 사용 목적과의 적합성",
+    "scorecard": "점수표",
+    "status_prefix": "상태:",
+    "na": "해당 없음",
+    "score_aria": "5점 만점에 {n}점",
+    "details_h": "테스트 상세 정보",
+    "label_intro": "모든 진술에는 라벨이 붙습니다:",
+    "legend_link": "라벨의 의미",
+    "disclosure_label": "공개 사항.",
+    "raw_notes": "원본 노트 PDF:",
+    "to_be_added": "추가 예정",
+    "moments_h": "이 테스트를 좌우한 여섯 장면",
+    "see_context": "맥락 보기",
+    "story_h": "테스트는 이렇게 진행되었습니다",
+    "claims_h": "주장과 테스터가 확인한 내용",
+    "claims_cols": [
+      "주장",
+      "입수처",
+      "관찰",
+      "라벨"
+    ],
+    "fit_h": "24 GB에 들어갈까요?",
+    "memory_line": "{gb} GB 메모리",
+    "above": "{gb} GB 초과",
+    "below": "{gb} GB 미만",
+    "log_h": "사용 기록",
+    "log_cols": [
+      "#",
+      "작업",
+      "모델",
+      "결과",
+      "소요 시간",
+      "상태",
+      "그림"
+    ],
+    "statuses": {
+      "Fail": "실패",
+      "Partial": "부분 성공",
+      "Pass": "통과",
+      "Not completed": "미완료"
+    },
+    "errors_h": "테스터가 잘못한 부분",
+    "findings_h": "발견 사항 목록",
+    "filter_aria": "라벨별로 발견 사항 필터링",
+    "filter_all": "전체",
+    "findings_cols": [
+      "ID",
+      "발견 사항",
+      "분류",
+      "라벨",
+      "심각도",
+      "그림"
+    ],
+    "severities": {
+      "High": "높음",
+      "Medium": "보통",
+      "Low": "낮음",
+      "Positive": "긍정"
+    },
+    "fig_abbr": "그림",
+    "figure": "그림",
+    "enlarge": "확대:",
+    "audience_h": "추천 대상",
+    "likely_fit": "적합할 가능성이 높음",
+    "likely_poor_fit": "적합하지 않을 가능성이 높음",
+    "retest": "재테스트.",
+    "background_h": "개발사 배경",
+    "gallery_h": "테스트에서 나온 이미지 더 보기",
+    "legend_h": "라벨 읽는 법",
+    "sources_h": "출처",
+    "footer_line": "테스트 ID {id} · 테스트 표준 v{version} · 원본 노트 PDF: 추가 예정",
+    "crumb_home": "홈",
+    "crumb_directory": "디렉터리",
+    "crumb_test": "{app} 직접 사용 테스트",
+    "faq_h": "자주 묻는 질문",
+    "more_tests_h": "다른 직접 테스트"
+  }
+}
