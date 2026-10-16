@@ -2873,7 +2873,7 @@
       ]
     },
     "cloud-gpu-rental-comparison-2026": {
-      "dateModified": "2026-08-29",
+      "dateModified": "2026-10-16",
       "lastFactChecked": null,
       "publishDate": "2026-05-17",
       "hasSections": true,
@@ -10738,6 +10738,24 @@
       "dateModified": "2026-10-03",
       "lastFactChecked": null,
       "publishDate": "2026-10-03",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "lm-playground-review": {
+      "dateModified": "2026-10-16",
+      "lastFactChecked": null,
+      "publishDate": "2026-10-16",
       "hasSections": true,
       "langs": [
         "en",

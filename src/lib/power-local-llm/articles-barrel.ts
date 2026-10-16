@@ -40,6 +40,7 @@ import { article as a_llm_farm_review } from './articles/llm-farm-review'
 import { article as a_layla_review } from './articles/layla-review'
 import { article as a_private_mind_review } from './articles/private-mind-review'
 import { article as a_llm_hub_review } from './articles/llm-hub-review'
+import { article as a_lm_playground_review } from './articles/lm-playground-review'
 import { article as a_tokforge_review } from './articles/tokforge-review'
 import { article as a_local_ai_geetmark_review } from './articles/local-ai-geetmark-review'
 import { article as a_local_ai_mail_review } from './articles/local-ai-mail-review'
@@ -627,6 +628,7 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'layla-review':                                  a_layla_review,
   'private-mind-review':                           a_private_mind_review,
   'llm-hub-review':                                a_llm_hub_review,
+  'lm-playground-review':                          a_lm_playground_review,
   'tokforge-review':                               a_tokforge_review,
   'local-ai-geetmark-review':                      a_local_ai_geetmark_review,
   'local-ai-mail-review':                         a_local_ai_mail_review,

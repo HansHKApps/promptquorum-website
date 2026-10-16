@@ -1164,6 +1164,11 @@
     "urlSlug": "llm-hub-review",
     "url": "/power-local-llm/llm-hub-review"
   },
+  "lm-playground": {
+    "cluster": "power-local-llm",
+    "urlSlug": "lm-playground-review",
+    "url": "/power-local-llm/lm-playground-review"
+  },
   "tokforge": {
     "cluster": "power-local-llm",
     "urlSlug": "tokforge-review",
