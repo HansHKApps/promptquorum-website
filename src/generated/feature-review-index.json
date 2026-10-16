@@ -1174,6 +1174,11 @@
     "urlSlug": "friedrichai-review",
     "url": "/power-local-llm/friedrichai-review"
   },
+  "spiritbox-ultimate": {
+    "cluster": "power-local-llm",
+    "urlSlug": "spiritbox-ultimate-review",
+    "url": "/power-local-llm/spiritbox-ultimate-review"
+  },
   "oscilla": {
     "cluster": "power-local-llm",
     "urlSlug": "oscilla-review",

@@ -391,6 +391,7 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'local-ai-geetmark-review':                'local-ai-geetmark-review',
   'local-ai-mail-review':                    'local-ai-mail-review',
   'friedrichai-review':                      'friedrichai-review',
+  'spiritbox-ultimate-review':               'spiritbox-ultimate-review',
   'oscilla-review':                          'oscilla-review',
   'mlxhub-review':                           'mlxhub-review',
   'tina-review':                             'tina-review',
